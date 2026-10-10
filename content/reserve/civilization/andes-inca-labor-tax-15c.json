@@ -25,7 +25,7 @@
   "body": [
     {
       "type": "p",
-      "text": "1549 年，西班牙官員在安地斯山區中部的瓦努科（Huánuco）一帶清查 Chupaychu 人，問他們過去替印加（Inca）國王做過哪些事。答案來自一串結繩（khipu）：一名安地斯人逐條讀出，歐洲書記照著寫下。第 1 條繩說，有 400 名男女常駐庫斯科（Cuzco）築牆，死了一個，就再補一個；第 2 條，另有 400 人在庫斯科種田，讓城裡的人有東西吃。這樣的條目一共 26 條。",
+      "text": "1549 年，西班牙官員在安地斯山區中部的瓦努科（Huánuco）一帶清查 Chupaychu 人，問他們過去替印加（Inca）國王做過哪些事。答案來自一串結繩（khipu）：一名安地斯人逐條讀出，歐洲書記寫下。第 1 條繩說，有 400 名男女常駐庫斯科（Cuzco）築牆，死了一個，就再補一個；第 2 條，另有 400 人在庫斯科種田，讓城裡的人有東西吃。這樣的條目共 26 條。",
       "tag": "史料"
     },
     {
@@ -44,17 +44,32 @@
     },
     {
       "type": "p",
-      "text": "Chupaychu 住在瓦努科一帶的瓦亞加河谷（Huallaga），文獻也拼作 Chupachu 或 Chupachos。印加把他們算作 4,000 戶，也就是四個 waranqa（千戶單位）。清單裡出現兩位印加君王：圖帕克・印加・尤潘基（Topa Inca Yupanqui）與瓦伊納・卡帕克（Huayna Capac）；依 World History Commons 註解採用的年表，兩人分別在 1471–1493 年、1493–1527 年在位。這個河谷頑強抵抗西班牙人，1542 年才被征服。",
+      "text": "Chupaychu 住在瓦努科一帶的瓦亞加河谷（Huallaga），文獻也拼作 Chupachu 或 Chupachos。印加把他們算作 4,000 戶，也就是四個 waranqa（千戶單位）。這個河谷頑強抵抗西班牙人，1542 年才被征服。",
       "tag": "史實"
     },
     {
       "type": "p",
-      "text": "我們靠四種材料認識這套制度，各有立場。第一是殖民官員的視察（visita）紀錄。1549 年那次，學界引作 Mori 與 Malpartida 的視察；1561–1562 年，奧爾蒂斯・德蘇尼加（Iñigo Ortiz de Zúñiga）再來，這次逐戶登記。Culagovski 1978 年分析後者時提醒：問話的人與書記都不懂受訪族群的語言，克丘亞語的回答經過翻譯才寫下，翻譯、解讀與抄寫的錯誤層層相乘；紀錄本身也不完整。",
+      "text": "清單裡點名的印加君王只有兩位：圖帕克・印加・尤潘基（Topa Inca Yupanqui）與瓦伊納・卡帕克（Huayna Capac），其餘提到君王的條目只說「印加」。依 World History Commons 註解採用的年表，兩人分別在 1471–1493 年、1493–1527 年在位。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "我們靠四種材料認識這套制度，各有立場。第一是殖民官員的視察（visita）紀錄。1549 年那次，學界引作 Mori 與 Malpartida 的視察；1561–1562 年，奧爾蒂斯・德蘇尼加（Iñigo Ortiz de Zúñiga）再來，這次逐戶登記。",
       "tag": "史料"
     },
     {
       "type": "p",
-      "text": "第二是西班牙軍人西耶薩・德萊昂（Pedro de Cieza de León）的《秘魯紀事》第二部。據 1880 年馬德里刊本的編者註，他 1549 年南下查爾卡斯（Charcas），1550 年 8 月前後在庫斯科；他寫明，制度的說法來自「在庫斯科向我講述的 orejones」，也就是印加貴族。這是統治階層對自家制度的描述，書中一再強調沒有詐欺。第三是瓜曼・波馬（Felipe Guaman Poma de Ayala）的圖文手稿，作者是秘魯南部受洗的安地斯原住民，手稿標 1615 年，離瓦伊納・卡帕克去世已近 90 年。第四是考古：印加在瓦努科潘帕（Huánuco Pampa）建的行政中心與倉庫。",
+      "text": "這類紀錄有先天的雜訊。Culagovski 1978 年分析後者時提醒：問話的人與書記都不懂受訪族群的語言，克丘亞語的回答經過翻譯才寫下，翻譯、解讀與抄寫的錯誤層層相乘；紀錄本身也不完整。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "第二是西班牙軍人西耶薩・德萊昂（Pedro de Cieza de León）的《秘魯紀事》第二部。據 1880 年馬德里刊本的編者註，他 1549 年南下查爾卡斯（Charcas），1550 年 8 月前後在庫斯科。他寫明，制度的說法來自「在庫斯科向我講述的 orejones」，也就是印加貴族。這是統治階層對自家制度的描述，書中一再強調沒有詐欺。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "第三是瓜曼・波馬（Felipe Guaman Poma de Ayala）的圖文手稿，作者是秘魯南部受洗的安地斯原住民，手稿標 1615 年，離瓦伊納・卡帕克去世已近 90 年。第四是考古：印加在瓦努科潘帕（Huánuco Pampa）建的行政中心與倉庫。",
       "tag": "史料"
     },
     {
@@ -125,14 +140,14 @@
     },
     {
       "type": "p",
-      "text": "把 26 條繩依去向分組（見下表），人數最多的一塊不在庫斯科，而在本地生產：織精細布料的 400 人、放牧駱馬類牲畜的 240 人、處理羽毛的 120 人，還有採蜜、製染料、製鹽、種辣椒與古柯、做鞋底、木器和陶器的人，合計 1,180 人。產物的去處也記在繩上：河谷田裡的玉米大多送庫斯科，其餘進倉庫；古柯送庫斯科與瓦努科的倉庫，有時一次 200 袋，有時 40 袋；陶罐送瓦努科。",
+      "text": "把 26 條繩依任務分組（見下表），人數最多的一塊是生產物資：織精細布料的 400 人、放牧駱馬類牲畜的 240 人、處理羽毛的 120 人，還有採蜜、製染料、製鹽、種辣椒與古柯、做鞋底、木器和陶器的人，合計 1,180 人。這些人在哪裡做工，清單幾乎沒寫；寫下的是部分產物的去處：河谷田裡的玉米大多送庫斯科，其餘進倉庫；古柯送庫斯科與瓦努科的倉庫；陶罐送瓦努科。",
       "tag": "史料"
     },
     {
       "type": "table",
       "title": "1549 年清單：26 條繩的分組",
       "head": [
-        "去向",
+        "分組",
         "繩號與任務（人數）",
         "合計"
       ],
@@ -143,7 +158,7 @@
           "800"
         ],
         [
-          "君王與宮廷",
+          "君王本人、遺體與女眷（地點未記）",
           "3 瓦伊納・卡帕克的貼身侍從（150）；4 守圖帕克・印加遺體（150）；5 守其武器（10）；8 守瓦伊納・卡帕克遺體（20）；18 隨印加獵鹿（40）；24 守印加女眷（40）",
           "410"
         ],
@@ -153,7 +168,7 @@
           "900"
         ],
         [
-          "本地生產，送庫斯科或倉庫",
+          "生產物資（工作地點多未記）",
           "9 羽毛（120）；10 採蜜（60）；11 織精細布（400）；12 染料（40）；13 放牧駱馬類（240）；14 看守河谷田地，玉米多送庫斯科（40）；15 種辣椒送庫斯科（40）；16 製鹽（60，有時 45）；17 古柯送庫斯科與瓦努科倉庫（60）；19 鞋底送庫斯科與倉庫（40）；20 木器送庫斯科（40）；21 陶罐送瓦努科（40）",
           "1,180"
         ],
@@ -173,11 +188,16 @@
           "3,938（製鹽取 45 則為 3,923）"
         ]
       ],
-      "caption": "依 Murra（1982）英譯、World History Commons 轉載的 1549 年視察紀錄整理；分組與合計為本文所做。"
+      "caption": "依 Murra（1982）英譯、World History Commons 轉載的 1549 年視察紀錄整理；分組與合計為本文所做。原文明寫在庫斯科的只有第 1、2 條；服侍君王的 410 人在哪裡當差，生產物資的人除第 14 條看守本河谷田地外在哪裡做工，原文都沒有記載。"
     },
     {
       "type": "p",
-      "text": "往外走的人分三路。去庫斯科的是築牆與種田的 800 人。服侍君王本人的有 410 人：瓦伊納・卡帕克生前的貼身侍從 150 人，圖帕克・印加死後守護遺體的 150 人、守其武器的 10 人，瓦伊納・卡帕克死後守遺體的 20 人，以及守印加女眷、隨印加獵鹿的各 40 人。往邊境與戰場的有 900 人：查查波亞斯（Chachapoya）與基多（Quito）的守衛各 200 人，另有 500 人隨印加出征、替他抬轎，「去過基多和其他地方」。",
+      "text": "另有三路人力派往庫斯科、君王身邊與邊境。去庫斯科的是築牆與種田的 800 人。服侍君王本人的有 410 人：瓦伊納・卡帕克生前的貼身侍從 150 人，圖帕克・印加死後守護遺體的 150 人、守其武器的 10 人，瓦伊納・卡帕克死後守遺體的 20 人，以及守印加女眷、隨印加獵鹿的各 40 人。他們在哪裡當差，清單沒有寫。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "往邊境與戰場的有 900 人：查查波亞斯（Chachapoya，帝國邊緣靠近森林的地區，在今秘魯東北部）與基多（Quito）的守衛各 200 人，另有 500 人隨印加出征、替他抬轎，「去過基多和其他地方」。",
       "tag": "史料"
     },
     {
@@ -203,14 +223,19 @@
     },
     {
       "type": "p",
-      "text": "這些倉庫在地面上找得到。瓦努科潘帕位在海拔約 3,600 公尺的高原，中央廣場長 540 公尺、寬 350 公尺。考古學家莫里斯（Craig Morris）把遺址分成八區，在西南側山坡的第 VIII 區登錄 497 座倉庫（qullqa），平面有圓有方，存放裝在陶罐裡的玉米粒、塊莖、布、草鞋與武器。秘魯文化部 Qhapaq Ñan 計畫的 Ordóñez 在 2013 年的報告中，又於周邊約 2 到 6 公里處找到幾處可能的倉庫群，其中兩處他較有把握，並建議發掘確認。",
+      "text": "這些倉庫在地面上找得到。瓦努科潘帕位在海拔約 3,600 公尺的高原，中央廣場長 540 公尺、寬 350 公尺。考古學家莫里斯（Craig Morris）把遺址分成八區，在西南側山坡的第 VIII 區登錄 497 座倉庫（qullqa），平面有圓有方，存放裝在陶罐裡的玉米粒、塊莖、布、草鞋與武器。",
       "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "倉庫可能不只這一群。秘魯文化部 Qhapaq Ñan 計畫的 Ordóñez 在 2013 年的報告中，又於周邊約 2 到 6 公里處找到幾處可能的倉庫群，其中兩處他較有把握，並建議發掘確認。",
+      "tag": "學者解釋"
     },
     {
       "type": "svg",
       "title": "從 4,000 戶到各地：1549 年清單的去向",
-      "svg": "<svg viewBox='0 0 360 606' xmlns='http://www.w3.org/2000/svg' font-size='11'>\n<defs>\n<marker id='ah' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='ink'/></marker>\n<marker id='ahg' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='gold'/></marker>\n<marker id='ahr' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='accent'/></marker>\n</defs>\n<text x='12' y='14' font-size='10.5' class='muted'>一｜人與物往哪裡去（單位：人）</text>\n<rect x='12' y='22' width='336' height='42' rx='3' class='soft'/>\n<text x='22' y='39' font-size='12'>Chupaychu 各村落：印加帳上 4,000 戶</text>\n<text x='22' y='56' font-size='10.5' class='muted'>4 個 waranqa；26 條繩合計 3,938 人</text>\n<path d='M24,64 V393' class='ink line'/>\n<line x1='24' y1='103' x2='36' y2='103' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='161' x2='36' y2='161' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='219' x2='36' y2='219' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='277' x2='36' y2='277' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='335' x2='36' y2='335' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='393' x2='36' y2='393' class='ink line' marker-end='url(#ah)'/>\n<rect x='38' y='80' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='99' font-size='11.5'>庫斯科工程與田地</text>\n<text x='182' y='99' font-size='13' font-weight='600' text-anchor='end'>800</text>\n<text x='46' y='116' font-size='10' class='muted'>築牆 400・種田 400</text>\n<rect x='38' y='138' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='157' font-size='11.5'>君王與宮廷</text>\n<text x='182' y='157' font-size='13' font-weight='600' text-anchor='end'>410</text>\n<text x='46' y='174' font-size='10' class='muted'>侍從、遺體與武器守衛等</text>\n<rect x='38' y='196' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='215' font-size='11.5'>本地生產</text>\n<text x='182' y='215' font-size='13' font-weight='600' text-anchor='end'>1,180</text>\n<text x='46' y='232' font-size='10' class='muted'>布、牲畜、古柯、鹽等</text>\n<rect x='38' y='254' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='273' font-size='11.5'>戍守與出征</text>\n<text x='182' y='273' font-size='13' font-weight='600' text-anchor='end'>900</text>\n<text x='46' y='290' font-size='10' class='muted'>查查波亞斯、基多、隨軍</text>\n<rect x='38' y='312' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='331' font-size='11.5'>驛站與搬運</text>\n<text x='182' y='331' font-size='13' font-weight='600' text-anchor='end'>148</text>\n<text x='46' y='348' font-size='10' class='muted'>看守驛站、揹貨</text>\n<rect x='38' y='370' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='389' font-size='11.5'>留在本地</text>\n<text x='182' y='389' font-size='13' font-weight='600' text-anchor='end'>500</text>\n<text x='46' y='406' font-size='10' class='muted'>耕作及其他</text>\n<line x1='188' y1='103' x2='224' y2='103' class='ink line' marker-end='url(#ah)'/>\n<line x1='188' y1='161' x2='224' y2='161' class='ink line' marker-end='url(#ah)'/>\n<path d='M188,209 L224,178' class='gold line' stroke-dasharray='3 3' marker-end='url(#ahg)'/>\n<path d='M188,226 H224' class='gold line' stroke-dasharray='3 3' marker-end='url(#ahg)'/>\n<line x1='188' y1='277' x2='224' y2='277' class='ink line' marker-end='url(#ah)'/>\n<line x1='188' y1='335' x2='224' y2='335' class='ink line' marker-end='url(#ah)'/>\n<line x1='188' y1='393' x2='224' y2='393' class='ink line' marker-end='url(#ah)'/>\n<rect x='226' y='80' width='122' height='104' rx='3' class='paper'/>\n<text x='234' y='100' font-size='12'>庫斯科</text>\n<text x='234' y='119' font-size='10' class='muted'>城牆、田地、宮廷</text>\n<text x='234' y='137' font-size='10' class='muted'>也收玉米、辣椒、</text>\n<text x='234' y='155' font-size='10' class='muted'>古柯、木器、鞋底</text>\n<rect x='226' y='196' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='215' font-size='11.5'>瓦努科潘帕倉庫</text>\n<text x='234' y='232' font-size='10' class='muted'>Morris 登錄 497 座</text>\n<rect x='226' y='254' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='273' font-size='11.5'>邊境與戰場</text>\n<text x='234' y='290' font-size='10' class='muted'>查查波亞斯、基多</text>\n<rect x='226' y='312' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='331' font-size='11'>瓦努科驛站→蓬普</text>\n<text x='234' y='348' font-size='10' class='muted'>揹貨約 5–6 天路程</text>\n<rect x='226' y='370' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='389' font-size='11.5'>本族領地</text>\n<text x='234' y='406' font-size='10' class='muted'>不離開領地</text>\n<line x1='14' y1='436' x2='36' y2='436' class='ink line' marker-end='url(#ah)'/>\n<text x='42' y='440' font-size='10'>派出人力</text>\n<path d='M112,436 H134' class='gold line' stroke-dasharray='3 3' marker-end='url(#ahg)'/>\n<text x='140' y='440' font-size='10'>產物去向</text>\n<path d='M210,436 H232' class='accent line' marker-end='url(#ahr)'/>\n<text x='238' y='440' font-size='10'>帳的傳遞</text>\n<text x='12' y='466' font-size='10.5' class='muted'>二｜帳怎麼走</text>\n<text x='12' y='484' font-size='10' class='muted'>印加時期（據西耶薩）</text>\n<rect x='12' y='490' width='100' height='40' rx='3' class='soft'/>\n<text x='20' y='507' font-size='11'>各地繳納</text>\n<text x='20' y='523' font-size='10' class='muted'>人力與物產</text>\n<path d='M113,510 H128' class='accent line' marker-end='url(#ahr)'/>\n<rect x='130' y='490' width='100' height='40' rx='3' class='soft'/>\n<text x='138' y='507' font-size='11'>省府結繩官</text>\n<text x='138' y='523' font-size='10' class='muted'>按繩記帳</text>\n<path d='M231,510 H246' class='accent line' marker-end='url(#ahr)'/>\n<rect x='248' y='490' width='100' height='40' rx='3' class='soft'/>\n<text x='256' y='507' font-size='11'>庫斯科對帳</text>\n<text x='256' y='523' font-size='10' class='muted'>來人查或送帳去</text>\n<text x='12' y='552' font-size='10' class='muted'>1549 年以後</text>\n<rect x='12' y='558' width='74' height='40' rx='3' class='soft'/>\n<text x='19' y='575' font-size='11'>結繩</text>\n<text x='19' y='591' font-size='10' class='muted'>26 條</text>\n<path d='M87,578 H98' class='accent line' marker-end='url(#ahr)'/>\n<rect x='100' y='558' width='74' height='40' rx='3' class='soft'/>\n<text x='107' y='575' font-size='11'>讀繩人</text>\n<text x='107' y='591' font-size='10' class='muted'>口頭報出</text>\n<path d='M175,578 H186' class='accent line' marker-end='url(#ahr)'/>\n<rect x='188' y='558' width='74' height='40' rx='3' class='soft'/>\n<text x='195' y='575' font-size='11'>西班牙書記</text>\n<text x='195' y='591' font-size='10' class='muted'>寫成文字</text>\n<path d='M263,578 H274' class='accent line' marker-end='url(#ahr)'/>\n<rect x='276' y='558' width='74' height='40' rx='3' class='soft'/>\n<text x='283' y='575' font-size='11'>穆拉英譯</text>\n<text x='283' y='591' font-size='10' class='muted'>1982 年</text>\n</svg>",
-      "caption": "示意，不按比例。人數依 1549 年視察紀錄（Murra 1982 英譯），分組為本文所做；倉庫數依 Ordóñez（2013）轉引 Morris（1985）；「帳怎麼走」的印加時期部分依西耶薩《秘魯紀事》第二部第 12、20 章。",
+      "svg": "<svg viewBox='0 0 360 606' xmlns='http://www.w3.org/2000/svg' font-size='11'>\n<defs>\n<marker id='ah' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='ink'/></marker>\n<marker id='ahg' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='gold'/></marker>\n<marker id='ahr' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='accent'/></marker>\n</defs>\n<text x='12' y='14' font-size='10.5' class='muted'>一｜人與物往哪裡去（單位：人）</text>\n<rect x='12' y='22' width='336' height='42' rx='3' class='soft'/>\n<text x='22' y='39' font-size='12'>Chupaychu 各村落：印加帳上 4,000 戶</text>\n<text x='22' y='56' font-size='10.5' class='muted'>4 個 waranqa；26 條繩合計 3,938 人</text>\n<path d='M24,64 V393' class='ink line'/>\n<line x1='24' y1='103' x2='36' y2='103' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='161' x2='36' y2='161' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='219' x2='36' y2='219' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='277' x2='36' y2='277' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='335' x2='36' y2='335' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='393' x2='36' y2='393' class='ink line' marker-end='url(#ah)'/>\n<rect x='38' y='80' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='99' font-size='11.5'>庫斯科工程與田地</text>\n<text x='182' y='99' font-size='13' font-weight='600' text-anchor='end'>800</text>\n<text x='46' y='116' font-size='10' class='muted'>築牆 400・種田 400</text>\n<rect x='38' y='138' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='157' font-size='11.5'>生產物資</text>\n<text x='182' y='157' font-size='13' font-weight='600' text-anchor='end'>1,180</text>\n<text x='46' y='174' font-size='10' class='muted'>布、牲畜、鹽等・地點多未記</text>\n<rect x='38' y='196' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='215' font-size='11.5'>君王、遺體與女眷</text>\n<text x='182' y='215' font-size='13' font-weight='600' text-anchor='end'>410</text>\n<text x='46' y='232' font-size='10' class='muted'>侍從、遺體與武器守衛等</text>\n<rect x='38' y='254' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='273' font-size='11.5'>戍守與出征</text>\n<text x='182' y='273' font-size='13' font-weight='600' text-anchor='end'>900</text>\n<text x='46' y='290' font-size='10' class='muted'>查查波亞斯、基多、隨軍</text>\n<rect x='38' y='312' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='331' font-size='11.5'>驛站與搬運</text>\n<text x='182' y='331' font-size='13' font-weight='600' text-anchor='end'>148</text>\n<text x='46' y='348' font-size='10' class='muted'>看守驛站、揹貨</text>\n<rect x='38' y='370' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='389' font-size='11.5'>留在本地</text>\n<text x='182' y='389' font-size='13' font-weight='600' text-anchor='end'>500</text>\n<text x='46' y='406' font-size='10' class='muted'>耕作及其他</text>\n<line x1='188' y1='103' x2='224' y2='103' class='ink line' marker-end='url(#ah)'/>\n<path d='M188,150 L224,118' class='gold line' stroke-dasharray='3 3' marker-end='url(#ahg)'/>\n<path d='M188,168 H224' class='gold line' stroke-dasharray='3 3' marker-end='url(#ahg)'/>\n<line x1='188' y1='219' x2='224' y2='219' class='ink line' marker-end='url(#ah)'/>\n<line x1='188' y1='277' x2='224' y2='277' class='ink line' marker-end='url(#ah)'/>\n<line x1='188' y1='335' x2='224' y2='335' class='ink line' marker-end='url(#ah)'/>\n<line x1='188' y1='393' x2='224' y2='393' class='ink line' marker-end='url(#ah)'/>\n<rect x='226' y='80' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='99' font-size='12'>庫斯科</text>\n<text x='234' y='116' font-size='10' class='muted'>城牆、田地；收產物</text>\n<rect x='226' y='138' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='157' font-size='11.5'>瓦努科潘帕倉庫</text>\n<text x='234' y='174' font-size='10' class='muted'>Morris 登錄 497 座</text>\n<rect x='226' y='196' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='215' font-size='11.5'>君王身邊</text>\n<text x='234' y='232' font-size='10' class='muted'>清單未記地點</text>\n<rect x='226' y='254' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='273' font-size='11.5'>邊境與戰場</text>\n<text x='234' y='290' font-size='10' class='muted'>查查波亞斯、基多</text>\n<rect x='226' y='312' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='331' font-size='11'>瓦努科驛站→蓬普</text>\n<text x='234' y='348' font-size='10' class='muted'>揹貨約 5–6 天路程</text>\n<rect x='226' y='370' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='389' font-size='11.5'>本族領地</text>\n<text x='234' y='406' font-size='10' class='muted'>不離開領地</text>\n<line x1='14' y1='436' x2='36' y2='436' class='ink line' marker-end='url(#ah)'/>\n<text x='42' y='440' font-size='10'>派出人力</text>\n<path d='M112,436 H134' class='gold line' stroke-dasharray='3 3' marker-end='url(#ahg)'/>\n<text x='140' y='440' font-size='10'>產物去向</text>\n<path d='M210,436 H232' class='accent line' marker-end='url(#ahr)'/>\n<text x='238' y='440' font-size='10'>帳的傳遞</text>\n<text x='12' y='466' font-size='10.5' class='muted'>二｜帳怎麼走</text>\n<text x='12' y='484' font-size='10' class='muted'>印加時期（據西耶薩）</text>\n<rect x='12' y='490' width='100' height='40' rx='3' class='soft'/>\n<text x='20' y='507' font-size='11'>各地繳納</text>\n<text x='20' y='523' font-size='10' class='muted'>人力與物產</text>\n<path d='M113,510 H128' class='accent line' marker-end='url(#ahr)'/>\n<rect x='130' y='490' width='100' height='40' rx='3' class='soft'/>\n<text x='138' y='507' font-size='11'>省府結繩官</text>\n<text x='138' y='523' font-size='10' class='muted'>按繩記帳</text>\n<path d='M231,510 H246' class='accent line' marker-end='url(#ahr)'/>\n<rect x='248' y='490' width='100' height='40' rx='3' class='soft'/>\n<text x='256' y='507' font-size='11'>庫斯科對帳</text>\n<text x='256' y='523' font-size='10' class='muted'>來人查或送帳去</text>\n<text x='12' y='552' font-size='10' class='muted'>1549 年以後</text>\n<rect x='12' y='558' width='74' height='40' rx='3' class='soft'/>\n<text x='19' y='575' font-size='11'>結繩</text>\n<text x='19' y='591' font-size='10' class='muted'>26 條</text>\n<path d='M87,578 H98' class='accent line' marker-end='url(#ahr)'/>\n<rect x='100' y='558' width='74' height='40' rx='3' class='soft'/>\n<text x='107' y='575' font-size='11'>讀繩人</text>\n<text x='107' y='591' font-size='10' class='muted'>口頭報出</text>\n<path d='M175,578 H186' class='accent line' marker-end='url(#ahr)'/>\n<rect x='188' y='558' width='74' height='40' rx='3' class='soft'/>\n<text x='195' y='575' font-size='11'>西班牙書記</text>\n<text x='195' y='591' font-size='10' class='muted'>寫成文字</text>\n<path d='M263,578 H274' class='accent line' marker-end='url(#ahr)'/>\n<rect x='276' y='558' width='74' height='40' rx='3' class='soft'/>\n<text x='283' y='575' font-size='11'>穆拉英譯</text>\n<text x='283' y='591' font-size='10' class='muted'>1982 年</text>\n</svg>",
+      "caption": "示意，不按比例。人數依 1549 年視察紀錄（Murra 1982 英譯），分組為本文所做；清單沒有記載服侍君王的 410 人在哪裡當差，生產物資的人除看守河谷田地者外也未記工作地點，所以「生產物資」只畫產物去向。倉庫數依 Ordóñez（2013）轉引 Morris（1985）；「帳怎麼走」的印加時期部分依西耶薩《秘魯紀事》第二部第 12、20 章。",
       "credit": "本報原創示意圖"
     },
     {
@@ -266,17 +291,22 @@
     },
     {
       "type": "p",
-      "text": "路程是硬限制。揹貨到蓬普要五、六天；去查查波亞斯、基多戍守，或常駐庫斯科築牆，都是長年離家。分散居住本身也是制度的一部分：Culagovski 在 1562 年的逐戶紀錄裡看到，許多家戶登記在村裡，人卻長住古柯田、鹽場等地。他認為這符合穆拉所說的「垂直群島」，也就是同一族群在不同海拔各據一塊土地，取得不同物產。",
+      "text": "路程是硬限制。揹貨到蓬普要五、六天；去查查波亞斯、基多戍守，或常駐庫斯科築牆，都得遠離家鄉。分散居住本身也是制度的一部分：Culagovski 在 1562 年的逐戶紀錄裡看到，許多家戶登記在村裡，人卻長住古柯田、鹽場等地。他認為這符合穆拉所說的「垂直群島」，也就是同一族群在不同海拔各據一塊土地，取得不同物產。",
       "tag": "史實"
     },
     {
       "type": "p",
-      "text": "帳掌握在讀繩的人手上。西耶薩說，這種帳「對我們是一本古怪而看不透的帳，對他們卻是絕妙的」。他原本把結繩記帳當成無稽之談，直到在豪哈（Xauxa）一帶，首領 Guacarapora 叫人取來結繩，向他逐項報出自皮薩羅（Francisco Pizarro）進入河谷以來，交給西班牙人的金、銀、布、玉米與牲畜，他才「大為驚訝」。他還記下，西班牙軍隊經過後，各地首領拿結繩對帳，出得少的補給出得多的，讓大家負擔相同；這種帳每四個月結算一次。",
+      "text": "帳掌握在讀繩的人手上。西耶薩說，這種帳「對我們是一本古怪而看不透的帳，對他們卻是絕妙的」。他原本把結繩記帳當成無稽之談，直到在豪哈（Xauxa）一帶，首領 Guacarapora 叫人取來結繩，向他逐項報出自皮薩羅（Francisco Pizarro）進入河谷以來，交給西班牙人的金、銀、布、玉米與牲畜，他才「大為驚訝」。",
       "tag": "史料"
     },
     {
       "type": "p",
-      "text": "人口銳減與逃避也讓帳失真。西耶薩把人口減少歸咎於西班牙人的失序與貪婪。1562 年的紀錄一再提到，1557 年 Diego Álvarez 來點算時有人逃走或躲起來；Culagovski 推測 1562 年也是如此，最怕被點到的正是能幹活的成年男子。他就已出版的部分逐戶數出 417 個家戶、1,835 人，平均每戶 4.40 人；但這份紀錄不完整，不能直接拿來和印加的 4,000 戶相比。",
+      "text": "同一套帳也用來分攤戰亂的負擔。西耶薩記下，西班牙軍隊經過後，沿路各地的首領聚在一起拿結繩對帳，出得少的補給出得多的，讓大家負擔相同。他說當時每個河谷都有這種帳，每四個月結算一次。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "人口銳減與逃避也讓帳失真。西耶薩把人口減少歸咎於西班牙人的失序與貪婪。1562 年的紀錄一再提到，1557 年 Diego Álvarez 來點算時有人逃走或躲起來；Culagovski 推測 1562 年也是如此，最怕被點到的正是能幹活的成年男子。他就已出版的部分數出 417 個家戶、1,835 人，平均每戶 4.40 人；但這份紀錄不完整，不能直接拿來和印加的 4,000 戶相比。",
       "tag": "史料"
     },
     {
@@ -309,13 +339,23 @@
     },
     {
       "type": "p",
-      "text": "把這份清單帶進學術討論的是穆拉。他 1955 年完成討論印加國家經濟組織的博士論文，1978 年才出版西班牙文版；1972 年的〈垂直控制〉一文，收在瓦努科出版的 16 世紀視察紀錄裡；1982 年，他把 1549 年的 26 條繩譯成英文。Contreras 2007 年的悼文這樣概括他的模型：安地斯人取得各種物產，不靠市場，而靠控制不同海拔的土地，這需要強有力的政治組織調度人力，「權威取代了市場」，成為分配物資的角色。Rivera 2018 年的書評則指出，穆拉談「互惠」，著眼的是勞力而不是貨物的交換，並強調輪役（mit'a）的重要。",
+      "text": "本文所據的英譯出自穆拉。他 1955 年完成討論印加國家經濟組織的博士論文，1978 年才出版西班牙文版；1972 年的〈垂直控制〉一文，收在瓦努科出版的 16 世紀視察紀錄裡；1982 年，他把 1549 年的 26 條繩譯成英文。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "Contreras 2007 年的悼文說，是這篇〈垂直控制〉讓模型確立，並這樣概括：安地斯人取得各種物產，不靠市場，而靠控制不同海拔的土地，這需要強有力的政治組織調度人力，「權威取代了市場」，成為分配物資的角色。Rivera 2018 年的書評則指出，穆拉談「互惠」，著眼的是勞力而不是貨物的交換，並強調輪役（mit'a）的重要。",
       "tag": "學者解釋"
     },
     {
       "type": "p",
-      "text": "後來的研究沒有全盤接受「只收勞力」的圖像。D'Altroy 與 Earle 1985 年在《當代人類學》（Current Anthropology）提出「主食財政」與「財富財政」之分，穆拉也是該文所附評論的作者之一。Sayre 2023 年整理學界看法時寫道：有充分證據顯示印加既徵勞力，也徵一部分農產，各處遺址的倉庫就是證據；他也提到，穆拉如何形塑安地斯經濟研究，本身仍有討論。Chupaychu 的清單其實容許兩種讀法：條目記的是人數，但第 14、17 條也記下了產物送去哪裡。",
+      "text": "後來的研究沒有全盤接受「只收勞力」的圖像。D'Altroy 與 Earle 1985 年在《當代人類學》（Current Anthropology）提出「主食財政」與「財富財政」之分，穆拉也是該文所附評論的作者之一。Sayre 2023 年寫道：有充分證據顯示印加既徵勞力，也徵一部分農產，各處遺址的倉庫就是證據；他也提到，穆拉如何形塑安地斯經濟研究，本身仍有討論。",
       "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，Chupaychu 的清單兩種解讀都容得下。條目記的是人數，看起來是按人頭派工；但第 14、15、17、19、20、21 條也記下產物送去哪裡，送進庫斯科與倉庫的是玉米、辣椒、古柯、鞋底、木器和陶罐。",
+      "tag": "本文讀法"
     },
     {
       "type": "p",
@@ -324,7 +364,17 @@
     },
     {
       "type": "p",
-      "text": "至於繩子能記什麼，Locke 1912 年研究紐約美國自然史博物館藏的一串結繩，指出單結離主繩最遠的一排是個位，往上依次是十位、百位；頂繩上的數等於下方各繩之和，可以驗算。他的結論是結繩只記數字。Urton 與 Brezine 2005 年用電腦分析秘魯中部海岸普魯丘科（Puruchuco）行政中心的 21 串結繩，認為它們呈現了人口與貢賦數據如何在不同會計層級之間彙總、轉送。Medrano 與 Urton 2018 年把聖塔河谷（Santa）的 6 串結繩對上一份 1670 年的殖民人口複查：文件列出 132 名納貢者，繩上分成 133 組，各組第一條繩的數值總和等於文件核定的貢額；他們推測，納貢者的名字可能以顏色編碼。",
+      "text": "至於繩子能記什麼，Locke 1912 年研究紐約美國自然史博物館藏、出自利馬以北海岸 Huando 的一串結繩，指出單結離主繩最遠的一排是個位，往上依次是十位、百位；頂繩上的數等於下方各繩之和，可以驗算。他的結論是結繩只記數字。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "Urton 與 Brezine 2005 年用電腦分析秘魯中部海岸普魯丘科（Puruchuco）行政中心的 21 串結繩，認為它們呈現了人口與貢賦數據如何在不同會計層級之間彙總、轉送。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "Medrano 與 Urton 2018 年把聖塔河谷（Santa）的 6 串結繩對上一份 1670 年的殖民人口複查：文件列出 132 名納貢者，繩上分成 133 組，各組第一條繩的數值總和等於文件核定的貢額；他們推測，納貢者的名字可能以顏色編碼。",
       "tag": "學者解釋"
     },
     {
@@ -349,7 +399,7 @@
       "publisher": "World History Commons（Roy Rosenzweig Center for History and New Media）",
       "date": "1549（英譯 1982）",
       "url": "https://worldhistorycommons.org/report-general-inspection-chupaychu",
-      "note": "26 條繩全文，以及 1542 年征服、4,000 戶的註解；英譯出自 Murra, The Inca and Aztec States 1400–1800（1982），pp. 240–243"
+      "note": "26 條繩全文，以及 1542 年征服、4,000 戶、查查波亞斯位置與君王在位年的註解；英譯出自 Murra, The Inca and Aztec States 1400–1800（1982），pp. 240–243"
     },
     {
       "title": "Mauricio J. Culagovski, La visitación de los Chupachu y la unidad doméstica andina",
@@ -440,7 +490,7 @@
       "publisher": "American Anthropologist 14(2), pp. 325–332（JSTOR Early Journal Content）",
       "date": "1912",
       "url": "https://archive.org/details/jstor-659935",
-      "note": "單結、長結與位數；頂繩加總；結論為只記數字"
+      "note": "AMNH B8713（出自利馬以北海岸 Huando）；單結、長結與位數；頂繩加總；結論為只記數字"
     },
     {
       "title": "Gary Urton and Carrie J. Brezine, Khipu Accounting in Ancient Peru",

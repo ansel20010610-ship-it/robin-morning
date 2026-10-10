@@ -3,10 +3,10 @@
   "date": "reserve",
   "reserve_written": "2026-10-10",
   "title": "開場從頭講起，還是切進事情中間",
-  "dek": "史詩奇幻常想先交代三百年歷史再讓主角登場。本文用原創示範比較兩種開場，再看《奧德賽》為何把主角的往事留到第 9 卷才讓他自己說。",
+  "dek": "史詩奇幻的初稿常先交代幾百年歷史，再讓主角登場。本文用原創示範比較兩種開場，再看《奧德賽》為何把主角最有名的漂泊留到第 9 卷才讓他自己說。",
   "topic_key": "fiction:in-medias-res-backstory",
   "updated_at": "2026-10-10T23:30:00+08:00",
-  "spoiler": null,
+  "spoiler": "本文後半談到《奧德賽》前 13 卷的情節，包括獨眼巨人的詛咒與奧德修斯回到伊塔卡。",
   "disclaimer": null,
   "hero": {
     "kind": "artwork",
@@ -45,7 +45,7 @@
     },
     {
       "type": "p",
-      "text": "敘事學把這件事拆成兩條時間：事件發生的順序，和事件被講出來的順序。依《敘事學線上手冊》（the living handbook of narratology）的〈時間〉（Time）條目，法國學者熱奈特（Gérard Genette）把兩者之間的錯位稱為「時序錯置」（anachrony），往回講的叫「倒敘」（analepsis），往前預告的叫「預敘」（prolepsis）。從中間切入，必然留下一段要倒回去講的過去。",
+      "text": "敘事學把這件事拆成兩條時間：事件發生的順序，和事件被講出來的順序。依漢堡大學 the living handbook of narratology 的〈Time〉條目，法國學者熱奈特（Gérard Genette）把兩者之間的錯位稱為「時序錯置」（anachrony），往回講的叫「倒敘」（analepsis），往前預告的叫「預敘」（prolepsis）。從中間切入，必然留下一段要倒回去講的過去。",
       "tag": "學者解釋"
     },
     {
@@ -116,17 +116,26 @@
       "tag": "本文讀法"
     },
     {
+      "type": "spoiler",
+      "text": "以下談到《奧德賽》前 13 卷的情節。"
+    },
+    {
       "type": "h",
-      "text": "《奧德賽》把背景留到第 9 卷才講"
+      "text": "《奧德賽》把主角最有名的漂泊留到第 9 卷"
     },
     {
       "type": "p",
-      "text": "被賀拉斯拿來當範例的荷馬，把這件事做得很徹底。《奧德賽》（Odyssey）第 1 卷開頭請繆思女神從這些事當中隨便哪一處講起，希臘原文是 ἁμόθεν（第 1 卷第 10 行），默里（A. T. Murray）1919 年的英譯作 beginning where thou wilt。第 1 到第 4 卷主要跟著奧德修斯（Odysseus）的兒子忒勒馬科斯（Telemachus）。奧德修斯本人到第 5 卷才出場，第一次被看見時，他坐在卡呂普索（Calypso）島上的海邊，眼淚沒有乾過（第 5 卷第 150–151 行）。",
+      "text": "被賀拉斯拿來當範例的荷馬，把這件事做得很徹底。《奧德賽》（Odyssey）第 1 卷開頭請繆思女神從這些事當中隨便哪一處講起，希臘原文是 ἁμόθεν（第 1 卷第 10 行），默里（A. T. Murray）1919 年的英譯作 beginning where thou wilt。第 1 到第 4 卷主要跟著奧德修斯（Odysseus）的兒子忒勒馬科斯（Telemachus）。奧德修斯本人到第 5 卷才出場，第一次被看見時，他坐在卡呂普索（Calypso）島上的海邊，望著海流淚（第 5 卷第 81–84 行）。",
       "tag": "史料"
     },
     {
       "type": "p",
-      "text": "他離開特洛伊之後那些有名的漂泊，獨眼巨人、女神喀耳刻（Circe）、冥府，荷馬一直沒講。到了第 8 卷，奧德修斯已漂到費埃克斯人（Phaeacians）的島上，在國王阿爾基諾奧斯（Alcinous）的宴席間，聽盲眼歌手得摩多科斯（Demodocus）唱木馬攻城，唱的正是他自己。他流下淚來，瞞過了所有人，只有國王注意到。國王讓歌手停下，接著問了四件事：你在家鄉被叫作什麼名字、從哪個國家來、漂泊到過哪些地方、為什麼聽到希臘人在特洛伊的命運就哭（第 8 卷第 521–585 行）。",
+      "text": "他離開特洛伊之後那些有名的漂泊，獨眼巨人、女神喀耳刻（Circe）、冥府，荷馬在前八卷只零星帶過：宙斯提到他弄瞎了獨眼巨人（第 1 卷第 68–75 行），敘述者說他的繩結是喀耳刻教的（第 8 卷第 448 行），從沒正面講述。第 7 卷他已漂到費埃克斯人（Phaeacians）的島上，王后問他是誰，他從卡呂普索的島講到海難上岸，就是不報名字（第 7 卷第 237–297 行）。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "第 8 卷，在國王阿爾基諾奧斯（Alcinous）的宴席間，他聽盲眼歌手得摩多科斯（Demodocus）唱木馬攻城。這首歌是他自己點的，唱的正是他自己。他流下淚來，瞞過了所有人，只有國王注意到。國王讓歌手停下，接著問了四件事：你在家鄉被叫作什麼名字、從哪個國家來、漂泊到過哪些地方、為什麼聽到希臘人在特洛伊的命運就哭（第 8 卷第 492–585 行）。",
       "tag": "史料"
     },
     {
@@ -139,11 +148,11 @@
         0.67
       ],
       "position": "畫面中央偏右，從中段到底邊，約佔寬度三分之一強",
-      "caption": "頭圖局部。依畫題，左側舉臂遮臉的是奧德修斯，前景抱著豎琴、白鬚的老人是歌手得摩多科斯，身旁戴花冠的年輕人湊近看他。海耶茲把歌聲和眼淚放進同一個畫面：別人正在唱他的故事，他還沒開口。遮臉的動作近於第 8 卷第 84–85 行：他聽第一首歌時，拉起紫色斗篷蓋住頭、遮住臉。"
+      "caption": "頭圖局部。依畫題，左側舉臂遮臉的是奧德修斯，前景抱著豎琴、白鬚的老人是歌手得摩多科斯，身旁一名戴花冠的年輕人倚在他肩邊。海耶茲把歌聲和眼淚放進同一個畫面：別人正在唱他的故事，他還沒開口。遮臉的動作近於第 8 卷第 84–85 行：他聽第一首歌時，拉起紫色斗篷蓋住頭、遮住臉。"
     },
     {
       "type": "p",
-      "text": "第 9 卷一開頭，奧德修斯先反問一句：",
+      "text": "到了第 9 卷，他先稱讚歌手與宴席，接著問：",
       "tag": "史料"
     },
     {
@@ -154,18 +163,28 @@
     },
     {
       "type": "p",
-      "text": "接著他報出名字：他是拉厄耳忒斯（Laertes）之子奧德修斯（第 9 卷第 19 行）。從這裡到第 12 卷末，整整四卷是他用第一人稱講的漂泊，也就是史詩裡最早發生的那一段。第 13 卷第一行，聽的人全都靜默無聲；之後費埃克斯人用船送他回伊塔卡（Ithaca），把還在熟睡的他放在沙灘上（第 13 卷第 116–119 行）。",
+      "text": "接著他報出名字：他是拉厄耳忒斯（Laertes）之子奧德修斯（第 9 卷第 19 行）。從這裡到第 12 卷末，整整四卷是他用第一人稱講的漂泊，從離開特洛伊講起。第 13 卷第一行，聽的人全都靜默無聲；之後費埃克斯人用船送他回伊塔卡（Ithaca），把還在熟睡的他放在沙灘上（第 13 卷第 116–119 行）。",
       "tag": "史料"
     },
     {
       "type": "svg",
       "title": "《奧德賽》的講述順序與事件順序",
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 290\" role=\"img\" aria-label=\"《奧德賽》講述順序與事件順序對照示意\"><text x=\"12\" y=\"56\" font-size=\"13\" font-weight=\"600\">講述順序</text><text class=\"muted\" x=\"12\" y=\"74\" font-size=\"11\">（卷次）</text><text x=\"12\" y=\"206\" font-size=\"13\" font-weight=\"600\">事件順序</text><text class=\"muted\" x=\"12\" y=\"224\" font-size=\"11\">（奧德修斯本人）</text><rect class=\"soft\" x=\"124\" y=\"38\" width=\"96\" height=\"46\" rx=\"4\" stroke-dasharray=\"4 3\"/><text class=\"muted\" x=\"172.0\" y=\"55\" font-size=\"11\" text-anchor=\"middle\">第 1–4 卷</text><text class=\"muted\" x=\"172.0\" y=\"73\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">忒勒馬科斯</text><rect class=\"soft\" x=\"226\" y=\"38\" width=\"80\" height=\"46\" rx=\"4\"/><text class=\"muted\" x=\"266.0\" y=\"55\" font-size=\"11\" text-anchor=\"middle\">第 5 卷</text><text x=\"266.0\" y=\"73\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">卡呂普索島</text><rect class=\"soft\" x=\"312\" y=\"38\" width=\"84\" height=\"46\" rx=\"4\"/><text class=\"muted\" x=\"354.0\" y=\"55\" font-size=\"11\" text-anchor=\"middle\">第 6–8 卷</text><text x=\"354.0\" y=\"73\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">費埃克斯</text><rect class=\"soft\" x=\"402\" y=\"38\" width=\"100\" height=\"46\" rx=\"4\"/><rect class=\"accent line\" x=\"402\" y=\"38\" width=\"100\" height=\"46\" rx=\"4\" stroke-width=\"2\"/><text class=\"accent\" x=\"452.0\" y=\"55\" font-size=\"11\" text-anchor=\"middle\">第 9–12 卷</text><text class=\"accent\" x=\"452.0\" y=\"73\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">自述漂泊</text><rect class=\"soft\" x=\"508\" y=\"38\" width=\"122\" height=\"46\" rx=\"4\"/><text class=\"muted\" x=\"569.0\" y=\"55\" font-size=\"11\" text-anchor=\"middle\">第 13–24 卷</text><text x=\"569.0\" y=\"73\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">伊塔卡</text><rect class=\"soft\" x=\"124\" y=\"188\" width=\"168\" height=\"46\" rx=\"4\"/><rect class=\"accent line\" x=\"124\" y=\"188\" width=\"168\" height=\"46\" rx=\"4\" stroke-width=\"2\"/><text class=\"accent\" x=\"208.0\" y=\"205\" font-size=\"11\" text-anchor=\"middle\">特洛伊陷落之後</text><text class=\"accent\" x=\"208.0\" y=\"223\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">漂泊多年</text><rect class=\"soft\" x=\"298\" y=\"188\" width=\"96\" height=\"46\" rx=\"4\"/><text class=\"muted\" x=\"346.0\" y=\"205\" font-size=\"11\" text-anchor=\"middle\">　</text><text x=\"346.0\" y=\"223\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">卡呂普索島</text><rect class=\"soft\" x=\"400\" y=\"188\" width=\"96\" height=\"46\" rx=\"4\"/><text class=\"muted\" x=\"448.0\" y=\"205\" font-size=\"11\" text-anchor=\"middle\">　</text><text x=\"448.0\" y=\"223\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">費埃克斯</text><rect class=\"soft\" x=\"502\" y=\"188\" width=\"128\" height=\"46\" rx=\"4\"/><text class=\"muted\" x=\"566.0\" y=\"205\" font-size=\"11\" text-anchor=\"middle\">　</text><text x=\"566.0\" y=\"223\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">回到伊塔卡</text><line class=\"ink line\" x1=\"266.0\" y1=\"84.0\" x2=\"340.4\" y2=\"178.9\" stroke-width=\"1.6\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"346.0,186.0 336.9,181.7 344.0,176.1\"/><line class=\"ink line\" x1=\"354.0\" y1=\"84.0\" x2=\"441.9\" y2=\"179.4\" stroke-width=\"1.6\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"448.0,186.0 438.6,182.4 445.2,176.3\"/><line class=\"ink line\" x1=\"566.0\" y1=\"84.0\" x2=\"566.0\" y2=\"177.0\" stroke-width=\"1.6\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"566.0,186.0 561.5,177.0 570.5,177.0\"/><line class=\"accent line\" x1=\"452.0\" y1=\"84.0\" x2=\"222.3\" y2=\"182.5\" stroke-width=\"2.2\"/><polygon class=\"accent\" stroke-width=\"0\" points=\"214.0,186.0 220.5,178.3 224.0,186.6\"/><text class=\"accent\" x=\"236\" y=\"152\" font-size=\"12\" text-anchor=\"end\">倒敘：第 9–12 卷</text><text class=\"accent\" x=\"236\" y=\"168\" font-size=\"12\" text-anchor=\"end\">講的是最早發生的事</text><text class=\"muted\" x=\"172\" y=\"112\" font-size=\"11\" text-anchor=\"middle\">這四卷是另一條線，</text><text class=\"muted\" x=\"172\" y=\"127\" font-size=\"11\" text-anchor=\"middle\">下方不列</text><line class=\"muted line\" x1=\"124.0\" y1=\"258.0\" x2=\"622.0\" y2=\"258.0\" stroke-width=\"1.2\"/><polygon class=\"muted\" stroke-width=\"0\" points=\"630.0,258.0 622.0,262.5 622.0,253.5\"/><text class=\"muted\" x=\"124\" y=\"278\" font-size=\"11\">較早</text><text class=\"muted\" x=\"630\" y=\"278\" font-size=\"11\" text-anchor=\"end\">較晚</text></svg>",
-      "caption": "原創示意，不按比例。上排是各卷的講述順序，下排是奧德修斯本人經歷的先後；第 9–12 卷的倒敘指回最早的漂泊。卷次依 Perseus 數位圖書館所收默里英譯本與希臘文本，第 1–4 卷與第 9–12 卷的分段另參考英文維基百科〈Odyssey〉條目。"
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 430\" role=\"img\" aria-label=\"《奧德賽》講述順序與事件順序對照示意\"><text x=\"72\" y=\"22\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\">講述順序</text><text class=\"muted\" x=\"72\" y=\"40\" font-size=\"12\" text-anchor=\"middle\">（卷次，由上而下）</text><text x=\"288\" y=\"22\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\">事件順序</text><text class=\"muted\" x=\"288\" y=\"40\" font-size=\"12\" text-anchor=\"middle\">（奧德修斯本人經歷）</text><rect class=\"soft\" x=\"8\" y=\"56\" width=\"128\" height=\"48\" rx=\"4\" stroke-dasharray=\"4 3\"/><text class=\"muted\" x=\"72.0\" y=\"75\" font-size=\"12\" text-anchor=\"middle\">第 1–4 卷</text><text class=\"muted\" x=\"72.0\" y=\"94\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">忒勒馬科斯</text><rect class=\"soft\" x=\"8\" y=\"120\" width=\"128\" height=\"48\" rx=\"4\"/><text class=\"muted\" x=\"72.0\" y=\"139\" font-size=\"12\" text-anchor=\"middle\">第 5 卷</text><text x=\"72.0\" y=\"158\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">卡呂普索島</text><rect class=\"soft\" x=\"8\" y=\"184\" width=\"128\" height=\"48\" rx=\"4\"/><text class=\"muted\" x=\"72.0\" y=\"203\" font-size=\"12\" text-anchor=\"middle\">第 6–8 卷</text><text x=\"72.0\" y=\"222\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">費埃克斯</text><rect class=\"soft\" x=\"8\" y=\"248\" width=\"128\" height=\"48\" rx=\"4\"/><rect class=\"accent line\" x=\"8\" y=\"248\" width=\"128\" height=\"48\" rx=\"4\" stroke-width=\"2\"/><text class=\"accent\" x=\"72.0\" y=\"267\" font-size=\"12\" text-anchor=\"middle\">第 9–12 卷</text><text class=\"accent\" x=\"72.0\" y=\"286\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">自述漂泊</text><rect class=\"soft\" x=\"8\" y=\"312\" width=\"128\" height=\"48\" rx=\"4\"/><text class=\"muted\" x=\"72.0\" y=\"331\" font-size=\"12\" text-anchor=\"middle\">第 13–24 卷</text><text x=\"72.0\" y=\"350\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">伊塔卡</text><rect class=\"soft\" x=\"224\" y=\"120\" width=\"128\" height=\"48\" rx=\"4\"/><rect class=\"accent line\" x=\"224\" y=\"120\" width=\"128\" height=\"48\" rx=\"4\" stroke-width=\"2\"/><text class=\"accent\" x=\"288.0\" y=\"139\" font-size=\"12\" text-anchor=\"middle\">特洛伊陷落後</text><text class=\"accent\" x=\"288.0\" y=\"158\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">漂泊多年</text><rect class=\"soft\" x=\"224\" y=\"184\" width=\"128\" height=\"48\" rx=\"4\"/><text x=\"288.0\" y=\"214\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">卡呂普索島</text><rect class=\"soft\" x=\"224\" y=\"248\" width=\"128\" height=\"48\" rx=\"4\"/><text x=\"288.0\" y=\"278\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">費埃克斯</text><rect class=\"soft\" x=\"224\" y=\"312\" width=\"128\" height=\"48\" rx=\"4\"/><text x=\"288.0\" y=\"342\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">回到伊塔卡</text><text class=\"muted\" x=\"288\" y=\"76\" font-size=\"12\" text-anchor=\"middle\">第 1–4 卷是另一條線，</text><text class=\"muted\" x=\"288\" y=\"93\" font-size=\"12\" text-anchor=\"middle\">本欄不列</text><line class=\"ink line\" x1=\"136.0\" y1=\"144.0\" x2=\"216.7\" y2=\"202.7\" stroke-width=\"1.6\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"224.0,208.0 214.1,206.3 219.4,199.1\"/><line class=\"ink line\" x1=\"136.0\" y1=\"208.0\" x2=\"216.7\" y2=\"266.7\" stroke-width=\"1.6\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"224.0,272.0 214.1,270.3 219.4,263.1\"/><line class=\"ink line\" x1=\"136.0\" y1=\"336.0\" x2=\"215.0\" y2=\"336.0\" stroke-width=\"1.6\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"224.0,336.0 215.0,340.5 215.0,331.5\"/><line class=\"accent line\" x1=\"136.0\" y1=\"272.0\" x2=\"218.9\" y2=\"151.4\" stroke-width=\"2.4\"/><polygon class=\"accent\" stroke-width=\"0\" points=\"224.0,144.0 222.6,154.0 215.2,148.9\"/><line class=\"muted line\" x1=\"366.0\" y1=\"120.0\" x2=\"366.0\" y2=\"348.0\" stroke-width=\"1.2\"/><polygon class=\"muted\" stroke-width=\"0\" points=\"366.0,356.0 361.5,348.0 370.5,348.0\"/><text class=\"muted\" x=\"366\" y=\"114\" font-size=\"12\" text-anchor=\"middle\">早</text><text class=\"muted\" x=\"366\" y=\"374\" font-size=\"12\" text-anchor=\"middle\">晚</text><text class=\"accent\" x=\"190\" y=\"398\" font-size=\"13\" text-anchor=\"middle\">紅線：第 9–12 卷的倒敘，</text><text class=\"accent\" x=\"190\" y=\"418\" font-size=\"13\" text-anchor=\"middle\">講的是離開特洛伊後最早的經歷</text></svg>",
+      "caption": "原創示意，不按比例。左欄是各卷的講述順序（由上而下），右欄是奧德修斯本人經歷的先後（由早到晚）；第 9–12 卷的倒敘，指回他離開特洛伊之後的漂泊。卷次依 Perseus 數位圖書館所收默里英譯本與希臘文本，第 1–4 卷與第 9–12 卷的分段另參考英文維基百科〈Odyssey〉條目。"
     },
     {
       "type": "p",
-      "text": "我的讀法是，荷馬讓這段背景同時滿足三個條件。第一，場景裡有人非問不可：國王要知道客人的國家和城市，船才能送他回去（第 8 卷第 554–556 行）。第二，說出來有代價：直到國王開口，費埃克斯人還不知道這位客人是誰。他接下來要講的往事裡，正有一場因報名字而起的大禍：刺瞎獨眼巨人之後，他向巨人報出自己的名字、父名和家鄉伊塔卡，巨人隨即向父親波塞頓（Poseidon）祈求，讓他回不了家；就算回得了，也要晚歸、失去所有同伴（第 9 卷第 503–535 行）。在陌生人面前再報一次名字，分量不輕。第三，讀者早就在等：我們看他在海邊哭、在宴席上哭，早想知道他經歷過什麼。背景在這裡不是作者的說明，而是一個角色的行動。",
+      "text": "我的讀法是，荷馬讓這段背景同時滿足三個條件。第一，場景裡有人非問不可：國王要知道客人的國家和城市，船才能送他回去（第 8 卷第 555–556 行）。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "第二，說出來有代價：直到國王開口，費埃克斯人還不知道這位客人是誰，連王后也沒問出來。他接下來要講的往事裡，正有一場因報名字而起的大禍：刺瞎獨眼巨人之後，他向巨人報出自己的名字、父名和家鄉伊塔卡，巨人隨即向父親波塞頓（Poseidon）祈求，讓他回不了家；就算回得了，也要晚歸、失去所有同伴（第 9 卷第 503–535 行）。在陌生人面前再報一次名字，分量不輕。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "第三，讀者早就在等：我們看他在海邊哭、在宴席上哭，早想知道他經歷過什麼。背景在這裡不是作者的說明，而是一個角色的行動。",
       "tag": "本文讀法"
     },
     {
@@ -184,12 +203,12 @@
     },
     {
       "type": "p",
-      "text": "**資訊。**這一場給出的背景，比版本 A 開頭那段還少：沒有年份、沒有戶數、沒有議事廳。可是給出的每一項都是答案：鑰匙從哪裡來、刻痕是誰的水、柯嬤為什麼不辯解。版本 B 開出的三條線，在這裡一起收束。",
+      "text": "**資訊。**這一場給出的背景，比版本 A 開頭那段還少，沒有年份，也沒有戶數和議事廳。可是版本 B 開出的三條線，在這裡一起收束：鑰匙從哪裡來、查驗官寫了什麼、刻痕是誰的水。另外補上一件 B 沒問過的事：柯嬤為什麼不辯解。",
       "tag": "本文讀法"
     },
     {
       "type": "p",
-      "text": "**期待與情緒。**舊問題解開，新問題馬上出現：沒有證據，查驗官會不會信？上游的堤真的裂過嗎？情緒來自交換：同一場水從兩邊講出來，一邊是屋頂上的兩天，一邊是一個家族四十年的沉默。",
+      "text": "**期待與情緒。**舊問題解開，新問題馬上出現：沒有證據，查驗官會不會信；上游的堤是否真的裂過。情緒來自交換：同一場水從兩邊講出來，一邊是屋頂上的兩天，一邊是一個家族四十年的沉默。",
       "tag": "本文讀法"
     },
     {
@@ -209,7 +228,7 @@
     {
       "type": "svg",
       "title": "兩種開場的資訊曲線",
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 320\" role=\"img\" aria-label=\"版本 A 與版本 B、C 的讀者已知與想知道程度示意曲線\"><line class=\"ink line\" x1=\"40\" y1=\"22\" x2=\"72\" y2=\"22\" stroke-width=\"2.2\"/><text x=\"80\" y=\"26\" font-size=\"12\">讀者已知的往事</text><line class=\"accent line\" x1=\"230\" y1=\"22\" x2=\"262\" y2=\"22\" stroke-width=\"2.2\" stroke-dasharray=\"6 4\"/><text x=\"270\" y=\"26\" font-size=\"12\">讀者想知道的程度</text><text x=\"40\" y=\"62\" font-size=\"13\" font-weight=\"600\">版本 A：從四十年前講起</text><line class=\"muted line\" x1=\"40\" y1=\"76\" x2=\"40\" y2=\"262\" stroke-width=\"1\"/><line class=\"muted line\" x1=\"40\" y1=\"262\" x2=\"300\" y2=\"262\" stroke-width=\"1\"/><text class=\"muted\" x=\"36\" y=\"88\" font-size=\"10\" text-anchor=\"end\">高</text><text class=\"muted\" x=\"36\" y=\"262\" font-size=\"10\" text-anchor=\"end\">低</text><text x=\"350\" y=\"62\" font-size=\"13\" font-weight=\"600\">版本 B → 版本 C</text><line class=\"muted line\" x1=\"350\" y1=\"76\" x2=\"350\" y2=\"262\" stroke-width=\"1\"/><line class=\"muted line\" x1=\"350\" y1=\"262\" x2=\"610\" y2=\"262\" stroke-width=\"1\"/><text class=\"muted\" x=\"346\" y=\"88\" font-size=\"10\" text-anchor=\"end\">高</text><text class=\"muted\" x=\"346\" y=\"262\" font-size=\"10\" text-anchor=\"end\">低</text><text class=\"muted\" x=\"40\" y=\"280\" font-size=\"11\">開場</text><text class=\"muted\" x=\"300\" y=\"280\" font-size=\"11\" text-anchor=\"end\">後文</text><polyline class=\"ink line\" stroke-width=\"2.2\" points=\"40,258 62,104 300,98\"/><polyline class=\"accent line\" stroke-width=\"2.2\" stroke-dasharray=\"6 4\" points=\"40,258 62,208 120,214 300,222\"/><text class=\"muted\" x=\"70\" y=\"196\" font-size=\"11\">「她沒有辯解」</text><line class=\"gold line\" x1=\"508\" y1=\"76\" x2=\"508\" y2=\"262\" stroke-width=\"1.2\" stroke-dasharray=\"2 3\"/><text class=\"gold\" x=\"502\" y=\"96\" font-size=\"11\" text-anchor=\"end\">版本 C 那一場</text><text class=\"muted\" x=\"350\" y=\"280\" font-size=\"11\">開場（版本 B）</text><text class=\"muted\" x=\"610\" y=\"280\" font-size=\"11\" text-anchor=\"end\">中段</text><polyline class=\"ink line\" stroke-width=\"2.2\" points=\"350,258 380,246 420,238 470,232 508,228 518,128 610,120\"/><polyline class=\"accent line\" stroke-width=\"2.2\" stroke-dasharray=\"6 4\" points=\"350,258 378,184 420,150 470,118 508,106 522,196 610,160\"/><text class=\"muted\" x=\"384\" y=\"200\" font-size=\"11\">鑰匙、姓氏、刻痕</text><text class=\"muted\" x=\"634\" y=\"226\" font-size=\"11\" text-anchor=\"end\">新問題：她說的是真的嗎</text><text class=\"muted\" x=\"40\" y=\"306\" font-size=\"10.5\">原創示意，曲線是本文的推想，不是讀者實測；不按比例。</text></svg>",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 500\" role=\"img\" aria-label=\"版本 A 與版本 B、C 的讀者已知與想知道程度示意曲線\"><line class=\"ink line\" x1=\"14\" y1=\"18\" x2=\"46\" y2=\"18\" stroke-width=\"2.4\"/><text x=\"54\" y=\"23\" font-size=\"13\">讀者已知的往事</text><line class=\"accent line\" x1=\"196\" y1=\"18\" x2=\"228\" y2=\"18\" stroke-width=\"2.4\" stroke-dasharray=\"6 4\"/><text x=\"236\" y=\"23\" font-size=\"13\">讀者想知道的程度</text><text x=\"14\" y=\"58\" font-size=\"14\" font-weight=\"600\">版本 A：從四十年前講起</text><line class=\"muted line\" x1=\"44\" y1=\"70\" x2=\"44\" y2=\"220\" stroke-width=\"1\"/><line class=\"muted line\" x1=\"44\" y1=\"220\" x2=\"364\" y2=\"220\" stroke-width=\"1\"/><text class=\"muted\" x=\"38\" y=\"80\" font-size=\"11\" text-anchor=\"end\">高</text><text class=\"muted\" x=\"38\" y=\"220\" font-size=\"11\" text-anchor=\"end\">低</text><text class=\"muted\" x=\"44\" y=\"240\" font-size=\"12\">開場</text><text class=\"muted\" x=\"364\" y=\"240\" font-size=\"12\" text-anchor=\"end\">後文</text><polyline class=\"ink line\" stroke-width=\"2.4\" points=\"44,218 72,88 364,82\"/><polyline class=\"accent line\" stroke-width=\"2.4\" stroke-dasharray=\"6 4\" points=\"44,218 72,170 150,178 364,188\"/><text class=\"muted\" x=\"84\" y=\"160\" font-size=\"12\">「她沒有辯解」</text><text x=\"14\" y=\"278\" font-size=\"14\" font-weight=\"600\">版本 B → 版本 C</text><line class=\"muted line\" x1=\"44\" y1=\"290\" x2=\"44\" y2=\"440\" stroke-width=\"1\"/><line class=\"muted line\" x1=\"44\" y1=\"440\" x2=\"364\" y2=\"440\" stroke-width=\"1\"/><text class=\"muted\" x=\"38\" y=\"300\" font-size=\"11\" text-anchor=\"end\">高</text><text class=\"muted\" x=\"38\" y=\"440\" font-size=\"11\" text-anchor=\"end\">低</text><line class=\"gold line\" x1=\"268\" y1=\"286\" x2=\"268\" y2=\"440\" stroke-width=\"1.4\" stroke-dasharray=\"2 3\"/><text class=\"gold\" x=\"262\" y=\"298\" font-size=\"12\" text-anchor=\"end\">版本 C 那一場</text><text class=\"muted\" x=\"44\" y=\"460\" font-size=\"12\">開場（版本 B）</text><text class=\"muted\" x=\"364\" y=\"460\" font-size=\"12\" text-anchor=\"end\">中段</text><polyline class=\"ink line\" stroke-width=\"2.4\" points=\"44,438 90,428 150,420 220,414 268,410 280,320 364,312\"/><polyline class=\"accent line\" stroke-width=\"2.4\" stroke-dasharray=\"6 4\" points=\"44,438 84,368 150,336 220,316 268,310 284,390 364,360\"/><text class=\"muted\" x=\"96\" y=\"394\" font-size=\"12\">鑰匙、本子上的字、刻痕</text><text class=\"muted\" x=\"364\" y=\"408\" font-size=\"12\" text-anchor=\"end\">新問題：</text><text class=\"muted\" x=\"364\" y=\"424\" font-size=\"12\" text-anchor=\"end\">她說的是真的嗎</text><text class=\"muted\" x=\"14\" y=\"490\" font-size=\"11\">原創示意：曲線是本文的推想，不是讀者實測；不按比例。</text></svg>",
       "caption": "原創示意，不按比例。實線是讀者對「四十年前那一夜」已知多少，虛線是讀者想知道的程度。版本 A 一開場就把已知推到最高；版本 B 讓想知道先升高，到版本 C 那一場才一次兌現，並立刻開出新問題。曲線是本文對三段原創示範的推想，不是讀者實測。"
     },
     {
@@ -230,7 +249,7 @@
         "把這段拆成一條條事實，只圈出讀者在第一章非知道不可的，最多 2 條；其餘標上「延後」。",
         "為每條延後的事實寫一行場景條件：在場誰非問不可、為什麼是這時候問、說出來的人要付出什麼。",
         "重寫開場：從主角正在做、而且可能做不成的一件事寫起；延後的背景只透過物件、稱呼、旁人的反應露出，每 300 字最多一個沒解釋的專有名詞。",
-        "把新舊兩個開場的前 1,000 字，分別交給兩位沒讀過設定的讀者，請他們各寫下兩句：「主角此刻想要什麼」「我最想知道的一件事」。"
+        "把新舊兩個開場的前 1,000 字，分別交給兩位沒讀過設定的讀者，請他們各寫下兩句：「主角此刻想要什麼」「我最想知道的一件事」，並圈出看不懂的專有名詞。"
       ],
       "criteria": [
         "讀新開場的人說得出主角此刻想要什麼、擋住主角的是什麼；說不出，代表切入點太早或衝突沒寫清楚。",
@@ -253,14 +272,14 @@
       "publisher": "Perseus Digital Library, Tufts University",
       "date": "1919",
       "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0135%3Abook%3D9%3Acard%3D1",
-      "note": "第 1 卷第 10 行 ἁμόθεν；第 9 卷第 14、19 行"
+      "note": "第 1 卷第 10 行 ἁμόθεν、第 68–75 行；第 5 卷第 81–84 行；第 7 卷第 237–297 行；第 8 卷第 448、555–556 行；第 9 卷第 2–19 行（第 14 行引文）"
     },
     {
       "title": "Homer, The Odyssey, translated by A. T. Murray（1919）",
       "publisher": "Perseus Digital Library, Tufts University",
       "date": "1919",
-      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0136%3Abook%3D8%3Acard%3D521",
-      "note": "第 1 卷第 10–11 行；第 5 卷第 150–151 行；第 8 卷第 63–64、84–95、499–585 行；第 9 卷第 503–535 行；第 13 卷第 1、116–119 行"
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0136%3Abook%3D8%3Acard%3D469",
+      "note": "第 1 卷第 10–11、68–75 行；第 5 卷第 81–84 行；第 7 卷第 237–297 行；第 8 卷第 63–64、84–95、448、492–585 行；第 9 卷第 1–19、503–535 行；第 13 卷第 1、116–119 行"
     },
     {
       "title": "Aristotle, Poetics, translated by W. H. Fyfe",

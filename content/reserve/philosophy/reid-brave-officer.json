@@ -1,0 +1,416 @@
+{
+  "column": "philosophy",
+  "date": "reserve",
+  "reserve_written": "2026-10-10",
+  "title": "不記得偷過芒果，他還是那個男孩嗎",
+  "dek": "80 歲的他記得 40 歲的自己，40 歲的他記得 10 歲偷芒果。從洛克、里德到動物論，追問忘記的事算不算自己做的，又該怎麼道歉。",
+  "topic_key": "philosophy:reid-brave-officer",
+  "updated_at": "2026-10-11T00:16:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "illustration",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/George_Morland_-_Set_of_Four%2C_Boys_Robbing_an_Orchard_-_B1985.36.1372_-_Yale_Center_for_British_Art.jpg/1280px-George_Morland_-_Set_of_Four%2C_Boys_Robbing_an_Orchard_-_B1985.36.1372_-_Yale_Center_for_British_Art.jpg",
+    "width": 1280,
+    "height": 1068,
+    "alt": "手工上色的版畫：林間果樹下，四個穿 18 世紀服裝的男孩在偷水果。一個攀在樹幹上，一個戴帽的抱著外套回頭奔逃，左邊一個跪地撿果子，右邊一個彎腰去拿地上的外套；畫面右側，一名男子站在木柵欄後張口呼喊，手邊牽著一隻戴口套的狗。下緣印著英法兩種文字的標題。",
+    "caption": "〈男孩們偷果園〉（Boys Robbing an Orchard），手工上色點刻版畫，1790 年，紙張 29.1 × 37.9 公分，耶魯英國藝術中心（Yale Center for British Art）保羅・梅隆收藏（B1985.36.1372）。版面下緣刻著原畫出自莫蘭（George Morland）、由 E. Scott 刻版。它和里德寫下勇敢軍官的例子同一個年代，兩者並無關聯；本文借它想像何振南 10 歲的那個夏天。",
+    "credit": "George Morland 原畫，E. Scott 刻版；Yale Center for British Art, Paul Mellon Collection",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:George_Morland_-_Set_of_Four,_Boys_Robbing_an_Orchard_-_B1985.36.1372_-_Yale_Center_for_British_Art.jpg",
+    "made": "1790"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "台南一家老咖啡館，80 歲的退休土木工程師何振南對面，坐著陌生女子陳以安。她的祖父陳阿德不久前過世；70 年前，阿德在鄭家芒果園當長工，果子接連被偷，他被當成小偷趕走。她推來一封信，寫於 30 年後，署名何振南：「那年夏天偷摘芒果的是我，不是你。我一直記得你被趕走那天的樣子。」字跡是他的。他記得 40 歲時主持的第一座橋、通車前夜睡在工地，卻想不起芒果、阿德和這封信；醫師說他的記憶符合這個年紀。陳以安請他在村裡長輩面前說清楚。"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "他有三個選項：以當事人身分說「是我偷的，對不起」；只以證人身分說「這封信證明阿德無辜」，不說「是我」；或者以不記得為由拒絕。本文假設：信是真的；40 歲時寫下的是真記憶，不是聽來的故事；當年沒有別人參與。"
+    },
+    {
+      "type": "p",
+      "text": "把條件攤開：80 歲的何振南記得 40 歲的事；40 歲的他在信裡寫明，記得 10 歲那個夏天；80 歲的他卻不記得 10 歲的事。三個年紀靠兩段記憶相連，第三段斷了。本文要問兩件事：咖啡館裡這位老人，和 70 年前偷摘芒果的男孩，是不是同一個人；如果是，他該用哪一種身分道歉。前者是「人格同一性」（personal identity）的問題，後者是責任的問題。兩者常被綁在一起，下文會看到它們也可能分開。"
+    },
+    {
+      "type": "h",
+      "text": "出處：洛克新增的一章，里德的勇敢軍官"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "用意識界定「同一個人」，經典出處是洛克（John Locke）《人類理解論》（*An Essay Concerning Human Understanding*）第二卷第二十七章〈論同一與差異〉。據史丹佛哲學百科（SEP）〈洛克論人格同一性〉，這一章是 1694 年第二版才加入的，起因是莫利紐茲（William Molyneux）的鼓勵。洛克在第 9 節把「人格」（person）定義為有理性、能反省、能把自己看成不同時地中同一個思考者的存在，接著說：意識能向後延伸到哪個過去的行動或思想，那個人格的同一就延伸到哪裡。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "他刻意把「人格」和「人」（man，指人類個體）分開。第 15 節設想王子的靈魂帶著記憶進入鞋匠的身體：人人都會說那是王子這個人格，只為王子的行為負責；但除了他自己，在所有人眼中他仍是那個鞋匠。洛克也說了這個區分為什麼要緊："
+    },
+    {
+      "type": "quote",
+      "original": "It is a forensic term, appropriating actions and their merit; and so belongs only to intelligent agents, capable of a law, and happiness, and misery.",
+      "text": "這是一個法庭用語，把行為及其功過歸屬給某人；因此只屬於能理解法律、能感受幸福與痛苦的智性行動者。",
+      "cite": "洛克，《人類理解論》第二卷第二十七章第 26 節（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "洛克預想過何振南這類處境。第 20 節他假設有人反駁：我完全忘了人生的某些片段，難道就不是做那些事的人？他回答，這時說的「我」指的只是那個人；平常同一個人被假定為同一個人格，才讓人以為這個「我」也指人格。第 22 節談醉漢：酒醒後不記得醉時所為，人間的法律照樣處罰，因為法律分不清真忘與假裝；至於最後審判，他認為合理的推想是，沒有人要為自己一無所知的事負責。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "91 年後，蘇格蘭哲學家里德（Thomas Reid）在《論人的理智能力》（*Essays on the Intellectual Powers of Man*，1785 年愛丁堡初版）第三篇〈論記憶〉第六章頁 333–334，構想了一位勇敢的軍官：小時候在學校因偷果園挨鞭子，第一次上戰場奪下敵軍軍旗，晚年升為將軍。奪旗時他記得挨打，當將軍時記得奪旗，挨打的事卻完全忘了。照洛克的學說，挨打的男孩就是奪旗的軍官，奪旗的軍官就是將軍；里德說，「如果邏輯還有任何真理」，將軍就是那個男孩。但將軍的意識到不了挨打那天，所以他又不是。"
+    },
+    {
+      "type": "quote",
+      "original": "Therefore the general is, and at the same time is not the same person with him who was flogged at school.",
+      "text": "所以，這位將軍既是、同時又不是那個在學校挨鞭子的人。",
+      "cite": "里德，《論人的理智能力》，1785，頁 334（本文自譯）"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "portrait",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Henry_Raeburn_%281756-1823%29_-_Reverend_Thomas_Reid_%281710%E2%80%931796%29%2C_Professor_of_Moral_Philosophy_at_the_University_of_Glasgow_-_GLAHA-44012_-_Hunterian_Museum_and_Art_Gallery.jpg",
+      "width": 986,
+      "height": 1200,
+      "alt": "油畫半身像：一位年長男子頭裹深紅色布巾，穿深灰色外衣與白色領巾，臉轉成四分之三側面，背景是深褐色。",
+      "caption": "雷本（Henry Raeburn）1796 年畫的里德，油彩、畫布，76.2 × 63.5 公分，格拉斯哥大學亨特博物館（The Hunterian）藏。據 SEP，里德 1781 年辭去格拉斯哥大學的教職以便專心寫作，1785 年出版《論人的理智能力》，勇敢軍官的例子就在書中。",
+      "credit": "Henry Raeburn；The Hunterian, University of Glasgow（GLAHA 44012），影像經 Art UK",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Henry_Raeburn_(1756-1823)_-_Reverend_Thomas_Reid_(1710%E2%80%931796),_Professor_of_Moral_Philosophy_at_the_University_of_Glasgow_-_GLAHA-44012_-_Hunterian_Museum_and_Art_Gallery.jpg",
+      "made": "1796"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這個反駁不是里德首創。SEP〈人格同一性〉指出，類似的批評可以上溯到 Sergeant 與柏克萊（George Berkeley），只是里德的版本最有名。里德把洛克的「意識」直接讀成記憶，這個讀法本身也有爭議：SEP〈洛克論人格同一性〉整理，有學者認為洛克說的意識不等於記憶，也有學者主張，人格延伸到自己認作己有的那些行為。本文下面說的「直接記憶說」，指的是里德攻擊的那個版本，不一定是洛克本人的主張。"
+    },
+    {
+      "type": "facts",
+      "title": "本文情境與原典的差異",
+      "items": [
+        [
+          "原典",
+          "里德《論人的理智能力》（愛丁堡 John Bell 與倫敦 G. G. J. & J. Robinson 發行，1785），第三篇第六章，頁 333–334"
+        ],
+        [
+          "原典用途",
+          "指出以意識（記憶）界定人格同一性，會推出同一人既是又不是的矛盾"
+        ],
+        [
+          "改動一",
+          "勇敢軍官換成退休工程師；挨打、奪旗、升將軍換成偷芒果、寫信、坐在咖啡館"
+        ],
+        [
+          "改動二",
+          "中間那段記憶留下書面證據（40 歲的信），不只是假設"
+        ],
+        [
+          "改動三",
+          "加入受冤的第三人阿德與三個道歉選項，把同一性連到責任"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "立場一：記憶不必直接相連，連成一條鏈就夠"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "心理連續論（psychological continuity）先補上里德找到的漏洞。依 SEP〈人格同一性〉，一是改用間接記憶：80 歲記得 40 歲、40 歲記得 10 歲，這條記憶之鏈就接起兩端。二是 Shoemaker 1984 年把記憶放寬成因果依存：現在的心理狀態大半由先前的狀態引起，就算心理連結，記憶只是其中一種。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "帕菲特（Derek Parfit）1984 年的《理與人》（*Reasons and Persons*）再分兩層：記憶、意圖、信念、欲望之間的直接「連結」，以及強連結重疊而成的「連續」。據 SEP〈人格同一性與倫理〉，連結有強有弱，也不能遞移；連續則須是全有或全無，才能當判準。照這個標準，何振南就是那個男孩。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這一方最強的理由有兩個。一是直覺：SEP 指出，多數西方哲學教師與學生一想到大腦移植，就傾向心理連續論；帶著你全部記憶與性格醒來的那個人，很難說不是你。二是它說明了責任為什麼跟著心靈走。洛克第 19 節說，如果醒著和睡著的蘇格拉底不共享意識，為睡著時的念頭懲罰醒著的他，就像因為長得太像，拿雙胞胎之一的作為去懲罰另一個。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "帕菲特再走一步。依 SEP〈人格同一性與倫理〉，他認為人與當年行為者的連結變弱，責任可能隨之減輕（《理與人》頁 325 起），同一性則沒那麼重要。談承諾時，他舉了一位 19 世紀俄國青年：打算把將來繼承的土地分給農民，又怕日後變心，便簽下須經妻子同意才能撤銷的文件，要她答應屆時不同意。中年的他果然要求撤銷。帕菲特認為，妻子可以視這個承諾為對年輕的他所許；中年的丈夫在某種意義上已不是她承諾的對象，無權解除（頁 327–328）。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "放回咖啡館：照心理連續論，何振南應該以當事人身分道歉；照帕菲特，70 年後他與那個男孩的直接連結已經很薄，記憶斷了，10 歲的嘴饞與膽怯也未必還在，責任可以打折，但不歸零。這一方的代價有二：它得解釋我們為什麼覺得自己曾是那個和任何人都沒有心理連續的 12 週胎兒，這是下一節動物論的主攻點；它也得回答巴特勒的循環指控，見變體一。"
+    },
+    {
+      "type": "h",
+      "text": "立場二：記憶只是證據，做過就是做過"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "里德自己的看法寫在同一篇第四章〈論同一性〉。他認為人格是不可分的，同一性沒有程度之分；記憶是確認自己身分最有力的證據，卻不是構成身分的條件。他的例子很日常：我知道誰生了我、誰哺育了我，雖然我不記得這些事（1785 年版頁 318）。"
+    },
+    {
+      "type": "quote",
+      "original": "it is not my remembering any action of mine that makes me to be the person who did it. This remembrance makes me to know assuredly that I did it; but I might have done it, though I did not remember it.",
+      "text": "使我成為做那件事的人的，不是我記得它。記得，只讓我確知那是我做的；就算不記得，那件事仍可能是我做的。",
+      "cite": "里德，《論人的理智能力》，1785，頁 319（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "巴特勒（Joseph Butler）更早就這麼看。他在 1736 年附於《宗教的類比》（*The Analogy of Religion*）書後的短文〈論人格同一性〉寫道，對人格同一性的意識「預設了，因而不能構成」人格同一性（presupposes, and therefore cannot constitute），正如知識預設真理，卻不能構成真理。照這個想法，何振南忘了，只是少了證據，身分並沒有少。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "當代的版本是動物論（animalism）。SEP 列出 van Inwagen 1990、Olson 1997 等代表：我們就是人類有機體，延續靠的是同一個生物生命，不需要任何心理條件。最強的理由有兩個。其一，看到 12 週胎兒的超音波照片，我們自然認為那就是將來會出生、學說話、長大成人的那一位，可是沒有人和 12 週的胎兒心理連續。其二是「思考者太多」的難題：如果我是隨心理走的非動物存在，那和我共用大腦、同樣在思考的那個人類動物又是誰？"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "照動物論，咖啡館裡的老人與當年的男孩是同一個有機體，身分問題當場解決。但動物論並不說身分決定責任。SEP〈人格同一性與倫理〉指出，動物論者通常主張，責任歸屬取決於當事人有沒有相應的心理狀態；Olson 也明說，決定我們是否延續的關係，和倫理上要緊的關係可以分開。這一方的代價在大腦移植：多數人覺得帶著大腦與記憶離開的才是我，動物論卻得說，我會留在原地，只是頭顱空了。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "兩方在何振南身上其實有共識：本文介紹的各家，除了直接記憶說，都認為他就是那個男孩。分歧在下一步。立場一把身分與責任綁在同一條心理之線上，線變細，責任跟著變輕；立場二讓身體或不可分的自我決定身分，責任另外計算。由此推想，第二個選項（只當證人）在兩方眼中都站不太穩：只要承認信是自己寫的，他就很難說那個男孩是別人。"
+    },
+    {
+      "type": "table",
+      "title": "五種看法怎麼回答原案",
+      "head": [
+        "看法",
+        "代表",
+        "80 歲的何振南是那個男孩嗎",
+        "理由",
+        "對道歉的含意（本文推論）"
+      ],
+      "rows": [
+        [
+          "直接記憶說",
+          "里德筆下的洛克（1694）",
+          "既是又不是",
+          "兩段直接記憶相連，第三段斷了",
+          "給不出一致的答案"
+        ],
+        [
+          "心理連續說",
+          "Shoemaker 1970、1984",
+          "是",
+          "重疊的心理連結一路接回 10 歲",
+          "以當事人身分道歉"
+        ],
+        [
+          "連續加上連結程度",
+          "帕菲特 1984",
+          "是，但連結很薄",
+          "70 年來各種直接連結都變弱",
+          "仍是當事人，責任可以打折"
+        ],
+        [
+          "里德的簡單觀",
+          "里德 1785；巴特勒 1736",
+          "是",
+          "人格不可分，記憶只是證據",
+          "忘記不改變事情是誰做的"
+        ],
+        [
+          "動物論",
+          "van Inwagen 1990；Olson 1997",
+          "是",
+          "同一個人類有機體",
+          "身分已定，責任多半另看心理狀態"
+        ]
+      ],
+      "caption": "五種看法對原案的回答。「代表」只列本文提到的學者；最後一欄是本文的推論，不是各家原話。原創整理，依據 SEP〈人格同一性〉〈人格同一性與倫理〉與原典。"
+    },
+    {
+      "type": "svg",
+      "title": "記憶之鏈與三種讀法",
+      "svg": "<svg viewBox=\"0 0 400 430\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\">\n<rect class=\"soft\" x=\"30\" y=\"10\" width=\"290\" height=\"52\" rx=\"4\"/>\n<text x=\"42\" y=\"30\" class=\"gold\" font-size=\"11\">10 歲</text>\n<text x=\"42\" y=\"50\">偷摘鄭家芒果，阿德被趕走</text>\n<rect class=\"soft\" x=\"30\" y=\"120\" width=\"290\" height=\"52\" rx=\"4\"/>\n<text x=\"42\" y=\"140\" class=\"gold\" font-size=\"11\">40 歲</text>\n<text x=\"42\" y=\"160\">寫信給阿德：「偷摘的是我」</text>\n<rect class=\"soft\" x=\"30\" y=\"230\" width=\"290\" height=\"52\" rx=\"4\"/>\n<text x=\"42\" y=\"250\" class=\"gold\" font-size=\"11\">80 歲</text>\n<text x=\"42\" y=\"270\">記得 40 歲的工地，不記得芒果與信</text>\n<path class=\"ink line\" d=\"M90 120 V72\" stroke-width=\"1.4\"/>\n<path class=\"ink\" d=\"M85 73 L90 64 L95 73 Z\"/>\n<text x=\"102\" y=\"98\" class=\"muted\" font-size=\"11\">記得（直接記憶）</text>\n<path class=\"ink line\" d=\"M90 230 V182\" stroke-width=\"1.4\"/>\n<path class=\"ink\" d=\"M85 183 L90 174 L95 183 Z\"/>\n<text x=\"102\" y=\"208\" class=\"muted\" font-size=\"11\">記得（直接記憶）</text>\n<path class=\"accent line\" d=\"M320 256 C 384 256, 384 36, 330 36\" stroke-width=\"1.4\" stroke-dasharray=\"5 4\"/>\n<path class=\"accent\" d=\"M331 31 L322 36 L331 41 Z\"/>\n<text x=\"262\" y=\"98\" class=\"accent\" font-size=\"11\">不記得</text>\n<line class=\"muted line\" x1=\"20\" y1=\"300\" x2=\"380\" y2=\"300\" stroke-width=\"0.8\"/>\n<text x=\"20\" y=\"322\" class=\"gold\" font-size=\"11\">三種讀法</text>\n<text x=\"20\" y=\"346\">直接記憶說：80＝40、40＝10，卻 80≠10，矛盾</text>\n<text x=\"20\" y=\"370\">心理連續說：重疊的連結接回 10 歲，80＝10</text>\n<text x=\"20\" y=\"394\">里德與動物論：記憶只是證據，80＝10</text>\n<text x=\"20\" y=\"418\" class=\"muted\" font-size=\"11\">原創示意；結構依里德 1785 年的勇敢軍官例</text>\n</svg>",
+      "caption": "何振南三個年紀之間的記憶關係。實線箭頭是直接記憶，虛線是斷掉的那一段。直接記憶說在這裡自相矛盾，心理連續說與里德、動物論都判他是那個男孩，理由不同。原創示意。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（一）：他「記得」，但記憶是借來的"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "這次只改記憶的來源：他的「記憶」不是親身經歷，因此沒有那封信，偷芒果的另有其人。何振南一見陳以安就說，記得自己爬上鄭家的芒果樹，果汁黏手。陳以安帶來的卻是他大哥的日記：偷芒果的是大哥，弟弟當年 10 歲，那天不在果園，後來在飯桌上聽了這故事幾十遍。這段「記憶」細節生動，來源卻是轉述；他仍堅持要道歉。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這是巴特勒循環指控的著力點。SEP〈人格同一性〉的說明是：要判斷某人是否真的記得一段經歷，得先知道經歷者是不是他，於是記憶說告訴不了我們什麼。心理連續論的回應是 Shoemaker 1970 年等人提出的「準記憶」（quasi-memory）：和記憶一樣，只是拿掉「經歷者必須是我」這項要求。不過依 SEP 的說明，記憶或準記憶之所以算一種心理連結，是因為那段經歷引起了它。何振南的印象是大哥的講述引起的，不是爬樹的經驗，連準記憶都不算。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "兩個立場在這裡結論相同：他不是偷芒果的人。立場一因為因果鏈不通，立場二因為爬樹的是另一個身體。我的讀法是，這個變體讓心理連續論往里德靠近了一步：撐起它的不是「覺得記得」，而是背後那條能從外部查核的因果來源，性質上更像里德說的證據。變體的他覺得記得卻沒做，原案的他做過卻沒印象：「覺得是我」決定不了「是不是我」。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（二）：記憶完好，人卻變了"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "回到原案，改另一個條件：何振南什麼都記得，包括他故意把芒果核丟在阿德床下，以及看著阿德被趕走時的一點得意。但從 20 多歲起，他在同事與家人眼中一向公正，幾十年如一日。他對陳以安說：「我記得那個孩子做的事，但那個孩子不是我。」這時他和男孩之間的記憶連結很強，性格與價值的連結卻幾乎斷了。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "直接記憶說與動物論在這裡都不猶豫：他記得，也是同一個身體，所以是他。帕菲特的分法則讓情況變得微妙：記憶連結強，意圖、欲望與性格的連結弱。實證研究顯示，一般人可能更看重後者。Strohminger 與 Nichols 2014 年在《認知》（*Cognition*）發表的五個實驗發現，受試者把道德特質看成身分、自我與靈魂中最核心的部分；記憶，尤其是情緒記憶與自傳記憶，也相當重要；低階認知與知覺的關係最弱。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "兩人 2015 年在《心理科學》（*Psychological Science*）的研究轉向真實病人：請額顳葉失智症、阿茲海默症與肌萎縮性脊髓側索硬化症（漸凍症）患者的家屬評估患者在身分上的改變，家屬多數是配偶或伴侶。結構方程模型顯示，道德能力受損是「他好像不再是他」的主要因素；包括失憶在內的其他認知缺損，沒有可測量的影響。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "責任理論也有一個可用的區分。SEP〈人格同一性與倫理〉整理：強意義的「問責」（accountability）要求當事人大致理解自己對別人做了什麼，也要能和過去的行為者認同；較弱的「可歸屬性」（attributability）只要求某些態度能恰當地歸給他。依此，有學者主張重度失智者一般不能再被問責，某些行為與態度卻仍可歸屬於他。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "變體二的何振南記得一切，有能力認同那個孩子；他說「不是我」，是不願，不是不能。若問責看的是能力，他的責任反而比原案更清楚。原案缺的正是能力：他記不起來，手上只有一封信。本文推想，人們對一個改過的人說「那已經不是你了」，常是一種原諒，不一定是形上學判斷。"
+    },
+    {
+      "type": "h",
+      "text": "三個版本之後"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "三個版本裡，阿德都是無辜的，何振南都坐在同一張桌子前。改變的只是連到 70 年前的那幾條線：記憶、記憶的來源、性格，以及一直沒換過的身體。立場一說身分就是心理之線，責任隨線的粗細而變；立場二說身分由身體或不可分的自我決定，責任另外計算。兩方最後都得承認，「是不是他」和「該怎麼道歉」是兩個問題。"
+    },
+    {
+      "type": "p",
+      "text": "剩下的問題落在陳以安這一邊。她要的是誰的道歉：一個和祖父的冤屈有因果關係的身體、一個記得那個夏天的心靈，還是一個願意說「是我」的人？當這三者在 80 歲的何振南身上分開，哪一個說的對不起才算數？"
+    }
+  ],
+  "sources": [
+    {
+      "title": "An Essay Concerning Humane Understanding, Volume 1",
+      "publisher": "John Locke／Project Gutenberg #10615",
+      "date": "1694",
+      "url": "https://www.gutenberg.org/ebooks/10615",
+      "note": "讀第二卷第二十七章（第二版 1694 年新增）。本文節號依通行的 Nidditch 版：第 9、15、19、20、22、26 節；此電子本的節號多 2（第 11、17、21、22、24、28 節），封面雖印 1690 年，內文已含第二十七章"
+    },
+    {
+      "title": "Essays on the Intellectual Powers of Man",
+      "publisher": "Thomas Reid／Edinburgh: John Bell; London: G. G. J. & J. Robinson（Internet Archive 掃描本）",
+      "date": "1785",
+      "url": "https://archive.org/details/bim_eighteenth-century_essays-on-the-intellectu_reid-thomas-d-d_1785",
+      "note": "讀第三篇第四章〈Of identity〉頁 318–319、第六章〈Of Mr Locke's account of our personal identity〉頁 332–334；OCR 文字另以 1852 年劍橋版 https://archive.org/details/essaysonintelle00reidgoog 對照"
+    },
+    {
+      "title": "The Analogy of Religion, with Dissertation I: Of Personal Identity",
+      "publisher": "Joseph Butler／Howard Malcolm 編，Project Gutenberg #53346",
+      "date": "1736",
+      "url": "https://www.gutenberg.org/ebooks/53346",
+      "note": "讀〈Of Personal Identity〉開頭三段：意識預設而不能構成人格同一性"
+    },
+    {
+      "title": "Locke on Personal Identity",
+      "publisher": "Jessica Gordon-Roth／Stanford Encyclopedia of Philosophy",
+      "date": "2025-09-29",
+      "url": "https://plato.stanford.edu/entries/locke-personal-identity/",
+      "note": "第二十七章 1694 年加入與 Molyneux；L-N 節號；意識與記憶的不同讀法；巴特勒與里德的反駁"
+    },
+    {
+      "title": "Personal Identity",
+      "publisher": "Eric T. Olson／Stanford Encyclopedia of Philosophy",
+      "date": "2023-06-30",
+      "url": "https://plato.stanford.edu/entries/identity-personal/",
+      "note": "§4 記憶說的兩個反駁、間接記憶、準記憶、因果依存；§6 思考者太多；§7 動物論與胎兒論證、大腦移植反駁"
+    },
+    {
+      "title": "Personal Identity and Ethics",
+      "publisher": "Annette Dufner／Stanford Encyclopedia of Philosophy",
+      "date": "2025-06-30",
+      "url": "https://plato.stanford.edu/entries/identity-ethics/",
+      "note": "§2 連結與連續（以里德的軍官例說明）、連續須為全有或全無；§4 動物論與責任；§6 責任：Parfit 1984 頁 325 起、問責與可歸屬性（俄國貴族例的讀法見《理與人》條）"
+    },
+    {
+      "title": "Thomas Reid",
+      "publisher": "Ryan Nichols、Gideon Yaffe／Stanford Encyclopedia of Philosophy",
+      "date": "2014-09-23",
+      "url": "https://plato.stanford.edu/entries/reid/",
+      "note": "生卒年、1781 年辭去格拉斯哥教職、1785 年出版《論人的理智能力》"
+    },
+    {
+      "title": "Persons and Their Pasts",
+      "publisher": "Sydney Shoemaker／American Philosophical Quarterly 7(4): 269–285",
+      "date": "1970-10",
+      "url": "https://philpapers.org/rec/SHOPAT",
+      "note": "未讀原文；準記憶的內容依 SEP〈人格同一性〉轉述"
+    },
+    {
+      "title": "Reasons and Persons",
+      "publisher": "Derek Parfit／Oxford: Clarendon Press",
+      "date": "1984",
+      "url": "https://doi.org/10.1093/019824908X.001.0001",
+      "note": "第 110 節俄國青年一例（頁 327–328）已對照原書文字核對：妻子可把承諾視為對年輕的他所許，中年丈夫「在某種意義上不是她承諾的對象」，不能解除承諾；SEP〈人格同一性與倫理〉§6 的「看連續仍受約束、看連結未必」與此方向不同，本文依原書。其餘未讀原書：連結與連續（頁 205–207）、責任隨連結減弱（頁 325 起）依 SEP〈人格同一性與倫理〉轉述；同一性不重要的主張依 SEP〈人格同一性〉"
+    },
+    {
+      "title": "Parfit, the Reductionist View, and Moral Commitment",
+      "publisher": "Daniel E. Palmer／Twentieth World Congress of Philosophy（Boston University Paideia Archive）",
+      "date": "1998-08",
+      "url": "https://www.bu.edu/wcp/Papers/PPer/PPerPalm.htm",
+      "note": "二手轉述，用來對照俄國青年一例：帕菲特認為妻子可視自己仍對年輕的他負有承諾，拒絕讓中年丈夫解除；引《理與人》頁 328"
+    },
+    {
+      "title": "The Human Animal: Personal Identity without Psychology",
+      "publisher": "Eric T. Olson／Oxford University Press",
+      "date": "1997",
+      "url": "https://doi.org/10.1093/0195134230.001.0001",
+      "note": "未讀原書；動物論立場與「延續關係和倫理上要緊的關係可以分開」（頁 70），依 SEP〈人格同一性與倫理〉轉述"
+    },
+    {
+      "title": "The essential moral self",
+      "publisher": "Nina Strohminger、Shaun Nichols／Cognition 131(1): 159–171",
+      "date": "2014-04",
+      "url": "https://doi.org/10.1016/j.cognition.2013.12.005",
+      "note": "讀 PubMed 摘要（PMID 24503450）：五個實驗，道德特質最核心，記憶次之，低階認知與知覺最弱"
+    },
+    {
+      "title": "Neurodegeneration and Identity",
+      "publisher": "Nina Strohminger、Shaun Nichols／Psychological Science 26(9): 1469–1479",
+      "date": "2015-09",
+      "url": "https://doi.org/10.1177/0956797615592381",
+      "note": "讀 PubMed 摘要（PMID 26270072）：三種疾病、結構方程模型，道德能力受損為主因，失憶等其他缺損無可測影響"
+    },
+    {
+      "title": "Who Are You? Identity and Dementia",
+      "publisher": "Wray Herbert／Association for Psychological Science",
+      "date": "2015-06-10",
+      "url": "https://www.psychologicalscience.org/news/were-only-human/who-are-you-identity-and-dementia.html",
+      "note": "評估者為患者家屬，多數是配偶或伴侶；漸凍症作為對照組"
+    },
+    {
+      "title": "Set of Four: Boys Robbing an Orchard",
+      "publisher": "Yale Center for British Art",
+      "date": "",
+      "url": "https://collections.britishart.yale.edu/catalog/tms:21433",
+      "note": "館藏資料：1790 年、手工上色點刻版畫、紙張 29.1 × 37.9 公分、Paul Mellon Collection、CC0"
+    },
+    {
+      "title": "Reverend Thomas Reid (1710–1796), Professor of Moral Philosophy at the University of Glasgow",
+      "publisher": "Art UK",
+      "date": "",
+      "url": "https://artuk.org/discover/artworks/reverend-thomas-reid-17101796-professor-of-moral-philosophy-at-the-university-of-glasgow-138862",
+      "note": "Henry Raeburn，1796 年，油彩、畫布，76.2 × 63.5 公分，The Hunterian 藏（GLAHA_44012）"
+    }
+  ]
+}

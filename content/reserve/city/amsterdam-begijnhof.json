@@ -3,9 +3,9 @@
   "date": "reserve",
   "reserve_written": "2026-10-10",
   "title": "阿姆斯特丹貝居安會院：兩道門與一圈後牆",
-  "dek": "阿姆斯特丹市中心有座比街面低近一公尺的院子，房子全部面朝內、背對舊水道。從 1574 年的舊門走到南側門樓，看這道邊界怎麼造、又怎麼打開。",
+  "dek": "阿姆斯特丹市中心有座比街面低近一公尺的院子，房子面朝內，三面背靠舊水道。從 1574 年的舊門到南側門樓，看這道邊界怎麼造、又怎麼打開。",
   "topic_key": "city:amsterdam-begijnhof",
-  "updated_at": "2026-10-10T23:30:00+08:00",
+  "updated_at": "2026-10-11T00:30:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -30,7 +30,11 @@
     },
     {
       "type": "p",
-      "text": "這座院子值得細看的，不只是哪一棟老房子，而是它的邊界怎麼做成：沒有另砌圍牆，四面是住宅自己的後牆，後牆外原本是水。本文沿一條路線走：從卡爾弗街（Kalverstraat）旁的窄巷進東側舊門，繞過北側草地與院子中央的教堂，經過 34 號木屋，從南邊 Spui 的門樓出去。"
+      "text": "這座院子最值得細看的是邊界的做法：沒有另砌圍牆，靠的是住宅自己的後牆；三面後牆外原本是水，北面貼著修道院。本文沿一條路線看：從卡爾弗街（Kalverstraat）旁的窄巷進東側舊門，繞過北側草地與院子中央的教堂，經過 34 號木屋，最後到南邊 Spui 的門樓。"
+    },
+    {
+      "type": "p",
+      "text": "這條路線是觀看順序，不是通行建議。截至 2026 年 10 月 11 日，OpenStreetMap 把 Spui 門樓的門與門洞通道都標為私人通行（access=private），東側舊門則標為業主許可通行（permissive）；小堂網站列出的遊客入口只有 Gedempte Begijnensloot 一處。"
     },
     {
       "type": "facts",
@@ -50,7 +54,7 @@
         ],
         [
           "建物年代",
-          "多數住宅為 15–16 世紀的木構架，臨院立面多屬 17–18 世紀；東側舊門 1574 年，1907 年整修；南側門樓約 1907 年（市古蹟局記為 19 世紀）"
+          "47 棟住宅多數立面屬 17–18 世紀，房子本身通常更老，其中 18 棟仍保有哥德式木構架（市古蹟局）；東側舊門 1574 年，1907 年整修；南側門樓約 1907 年（市古蹟局記為 19 世紀）"
         ],
         [
           "設計者",
@@ -62,7 +66,7 @@
         ],
         [
           "目前用途",
-          "住宅（市古蹟局 2000 年的網頁記為 105 名女性住戶）、英國歸正教會、天主教貝居安會院小堂。截至 2026 年 10 月 10 日，小堂網站列出的遊客入口在 Gedempte Begijnensloot，全年 09:30–18:00"
+          "住宅（市古蹟局 2000 年的網頁記為 105 名女性住戶）；英國歸正教會（教會網站記每週日 10:30 英語禮拜，網站動態最晚到 2020 年 12 月；截至 2026 年 10 月 11 日，I amsterdam 網站寫此堂在禮拜之外兼作古典與合唱音樂場地，並列出 2026 年 10、11 月的音樂會）；天主教貝居安會院小堂（截至 2026 年 10 月 11 日，小堂網站列出的遊客入口在 Gedempte Begijnensloot，全年 09:30–18:00）"
         ]
       ]
     },
@@ -78,7 +82,7 @@
     },
     {
       "type": "p",
-      "text": "卡爾弗街南北走向，從它往西彎進 Begijnensteeg（貝居安巷），巷底就是東側舊門。據市古蹟局，院子原本四面被水圍住：西邊是 Nieuwezijds Voorburgwal 運河，南邊是 Spui，東邊是貝居安溝（Begijnensloot）；唯一的通道是 Begijnensteeg 這頭的小門，門前有橋跨過貝居安溝。這條溝後來填平，街名多了「Gedempte」一字，意思是「已填平的」。",
+      "text": "卡爾弗街南北走向，從它往西彎進 Begijnensteeg（貝居安巷），巷底就是東側舊門。市古蹟局說院子原本完全被水包圍，列出的是三條水：西邊的 Nieuwezijds Voorburgwal 運河、南邊的 Spui、東邊的貝居安溝（Begijnensloot）；下節的版畫裡，北側緊鄰聖露西修道院，沒有水道。唯一的通道是這頭的小門，門前有橋跨過貝居安溝；溝後來填平，街名因此多了「Gedempte」（已填平的）一字。",
       "tag": "史實"
     },
     {
@@ -108,7 +112,7 @@
     },
     {
       "type": "h",
-      "text": "四面後牆：1760 年版畫裡的「分隔溝」"
+      "text": "一圈後牆：1760 年版畫裡的「分隔溝」"
     },
     {
       "type": "figure",
@@ -158,12 +162,12 @@
     },
     {
       "type": "p",
-      "text": "圖上看得最清楚的是邊界的做法。房子背靠水道排成一圈，正面全部朝內；第三條邊被標成「分隔溝」，明白寫出它的用途是把院子和卡爾弗街的房屋隔開。市古蹟局的說法相同：這些房子的後牆原本就立在水裡。",
+      "text": "圖上看得最清楚的是邊界的做法。房子排成一圈，正面全部朝內，三面背靠水道：Spui、Voorburgwal，以及被標成「分隔溝」的第三條水，圖例明白寫出它的用途是把院子和卡爾弗街的房屋隔開。市古蹟局也說，這些房子的後牆原本就立在水裡。第四面標的是聖露西修道院的一部分，圖上沒有水道。",
       "tag": "史料"
     },
     {
       "type": "p",
-      "text": "我的讀法是：貝居安會院用不著另砌圍牆，因為住宅本身就是牆。一間間房子的後牆接起來，外面再圍一圈水，等於一道有人住的城牆；能進出的只有一扇門和門前那座橋。",
+      "text": "我的讀法是：貝居安會院用不著另砌圍牆，因為住宅本身就是牆。一間間房子的後牆接起來，三面隔著水，北面貼著修道院，等於一道有人住的城牆；能進出的只有一扇門和門前那座橋。",
       "tag": "本文讀法"
     },
     {
@@ -204,12 +208,12 @@
     },
     {
       "type": "p",
-      "text": "這些立面也是招牌。19 號的立面石（gevelsteen）刻著聖家族從埃及返回的場景，配一句荷蘭文經句「UYT EGYPTEN HEBBE IK MIJNEN ZOON GEROEPEN」，意思是「我從埃及召出我的兒子」（本文自譯）；23 號的立面石刻聖烏蘇拉與她的同伴；27 號山牆頂端是戴冠的聖母。登錄把 19 號山牆定在 1721 年，23 號的石板定在 17 世紀。市古蹟局也說，院內的立面石大多帶有明顯的天主教色彩。",
+      "text": "這些立面也是招牌。19 號的立面石（gevelsteen）刻著聖家族從埃及返回的場景，配一句荷蘭文經句「UYT EGYPTEN HEBBE IK MIJNEN ZOON GEROEPEN」，出自《馬太福音》2 章 15 節，和合本譯作「我從埃及召出我的兒子來」；23 號的立面石刻聖烏蘇拉與她的同伴；27 號山牆頂端是戴冠的聖母。登錄把 19 號山牆定在 1721 年，23 號的石板定在 17 世紀。市古蹟局也說，院內的立面石大多帶有明顯的天主教色彩。",
       "tag": "史實"
     },
     {
       "type": "p",
-      "text": "1578 年後，天主教在阿姆斯特丹不能公開禮拜，院內這些 17、18 世紀的天主教圖像卻集中在朝內的立面上。由此推想，院外的人看不到，院裡的人天天看到；這圈後牆擋住的不只是路，也是視線。",
+      "text": "1578 年後，天主教在阿姆斯特丹不能公開禮拜，院內這些 17、18 世紀的天主教圖像卻集中在朝內的立面上。由此推想，院外的人看不到，院裡的人天天看到；這圈後牆擋住了路，也擋住了視線。",
       "tag": "推論"
     },
     {
@@ -273,7 +277,7 @@
     },
     {
       "type": "p",
-      "text": "它的年代沒有定論。1970 年的登錄寫「XV B」，即 15 世紀後半；荷蘭文維基百科的國家古蹟清單寫「1528 年或稍後」。市古蹟局只說，這樣的木屋在阿姆斯特丹僅剩兩棟。本文不在兩個年代之間取捨。",
+      "text": "它的年代沒有定論。1970 年的國家古蹟登錄寫「XV B」，即 15 世紀後半；市古蹟局寫約 1470 年，說它大概是荷蘭最古老的木屋，並指出這樣的木屋在阿姆斯特丹只剩兩棟（另一棟是 Zeedijk 1 號）；荷蘭文維基百科的國家古蹟清單則寫「1528 年或稍後」。前兩說都落在 15 世紀後半，第三說晚了半世紀以上；本文三說並列，不作取捨。",
       "tag": "史實"
     },
     {
@@ -283,7 +287,7 @@
     },
     {
       "type": "p",
-      "text": "由此推想，34 號留下的不只是一棟老房子，而是一種被法令一步步淘汰的外牆做法。院裡其他保有木構架的房子，多半走了另一條路：骨架留著，外牆換成磚。",
+      "text": "由此推想，34 號留下的，是一種被法令一步步淘汰的外牆做法。院裡其他保有木構架的房子，多半走了另一條路：骨架留著，外牆換成磚。",
       "tag": "推論"
     },
     {
@@ -307,7 +311,7 @@
     },
     {
       "type": "p",
-      "text": "34 號再往南就是院子南緣，這一排房子背對 Spui。市古蹟局說，Spui 這頭的入口要到 19 世紀才有，同一頁又說這裡原有一道約 1725 年的小門，在 19 世紀被現在的門樓取代。兩句的年代不容易對齊，本文照錄。",
+      "text": "34 號再往南就是院子南緣，這一排房子背對 Spui。市古蹟局說，Spui 這頭的入口要到 19 世紀才有，同一頁又說這裡原有一道約 1725 年的小門，在 19 世紀由門樓取代。兩句的年代不容易對齊，本文照錄。",
       "tag": "史實"
     },
     {
@@ -332,12 +336,12 @@
     },
     {
       "type": "p",
-      "text": "現在的門樓正面可見「1907」字樣與鐵製牆錨（2018 年的 Commons 照片），一張 1910 年的明信片稱它「新門」（Nieuwe poort）。維基共享資源的分類說明記它 1907 年建成，建築師 Anton J. Joling，雕刻 Rien Hack。這些都比市古蹟局寫的「19 世紀」晚了幾年。",
+      "text": "2018 年 9 月的 Commons 照片可見門樓正面有「1907」字樣與鐵製牆錨；一張 1910 年的明信片稱它「新門」（Nieuwe poort）。維基共享資源的分類說明記它 1907 年建成，建築師 Anton J. Joling，雕刻 Rien Hack。這些都比市古蹟局寫的「19 世紀」晚了幾年。",
       "tag": "史實"
     },
     {
       "type": "p",
-      "text": "由此推想，從水邊的後牆，到一座刻著院名、立著雕像的門樓，南側的邊界在 20 世紀初正式翻成了正面。拱門左側牆上那塊按鈕面板，本文推測是住戶的門鈴：這道門同時也是住家的大門。",
+      "text": "由此推想，從水邊的後牆，到一座刻著院名、立著雕像的門樓，南側的邊界在 20 世紀初正式翻成了正面。2018 年 8 月的照片裡，拱門左側牆上有一塊按鈕面板，本文推測是住戶的門鈴：這道門同時也是住家的大門。OSM 把這道門標為私人通行，和這個推測相合。",
       "tag": "推論"
     },
     {
@@ -356,7 +360,7 @@
     },
     {
       "type": "p",
-      "text": "截至 2026 年 10 月 10 日，小堂網站列出的遊客入口地址是 Gedempte Begijnensloot：1574 年那道舊門所在、曾經架橋跨過貝居安溝的那條街。",
+      "text": "截至 2026 年 10 月 11 日，小堂網站列出的遊客入口地址是 Gedempte Begijnensloot：1574 年那道舊門所在、曾經架橋跨過貝居安溝的那條街。",
       "tag": "官方說法"
     }
   ],
@@ -366,7 +370,7 @@
       "publisher": "Bureau Monumentenzorg Amsterdam（網頁存檔）",
       "date": "2000-12-06",
       "url": "https://web.archive.org/web/20001206073000/http://www.bmz.amsterdam.nl:80/adam/nl/hofjes/begijnhof.html",
-      "note": "地勢、四面環水與唯一入口、47 棟住宅與 18 棟木構架、兩道門、1578 年後存續、兩座教堂、Cornelia Arens、最後一位貝居安會女性、1979 年翻修與住戶數；日期為存檔日"
+      "note": "地勢、三條水（原文稱完全被水包圍）與唯一入口、47 棟住宅與 18 棟木構架、34 號約 1470 年且可能是荷蘭最古老的木屋、全市僅剩兩棟木屋（另一棟 Zeedijk 1）、兩道門、1578 年後存續、兩座教堂、Cornelia Arens、最後一位貝居安會女性、1979 年翻修與住戶數；日期為存檔日"
     },
     {
       "title": "Begijnhof 34, 1012 WV te Amsterdam（monument 371）",
@@ -434,9 +438,9 @@
     {
       "title": "History",
       "publisher": "English Reformed Church Amsterdam",
-      "date": "",
+      "date": "2009-07-17",
       "url": "https://www.ercadam.nl/history.shtml",
-      "note": "1397 年小堂、1417 年動工、1421 與 1452 年火災、1492 年完工、1607 年交付英語會眾"
+      "note": "1397 年小堂、1417 年動工、1421 與 1452 年火災、1492 年完工、1607 年交付英語會眾；日期為頁尾所記"
     },
     {
       "title": "Geschiedenis",
@@ -448,9 +452,9 @@
     {
       "title": "Toegang en openingstijden Begijnhof en Begijnhofkapel",
       "publisher": "Begijnhofkapel Amsterdam",
-      "date": "2026-10-10",
+      "date": "2026-10-11",
       "url": "https://begijnhofkapelamsterdam.nl/begijnhofkapel/toegang-entrance-begijnhof-en-begijnhofkapel/",
-      "note": "遊客入口地址與開放時間；日期為查閱日"
+      "note": "遊客入口地址（Gedempte Begijnensloot）與開放時間；日期為最近一次查閱日"
     },
     {
       "title": "Het nieuwe Amsterdam Museum",
@@ -468,8 +472,8 @@
     },
     {
       "title": "Voor de grote uitleg: stedelijke transformatie en huisbouw in Amsterdam, 1452-1578",
-      "publisher": "Gabri van Tussenbroek，UvA DARE",
-      "date": "",
+      "publisher": "Gabri van Tussenbroek，Stadsgeschiedenis 10(1): 1–23（UvA DARE 典藏）",
+      "date": "2015",
       "url": "https://dare.uva.nl/id/bd1835e0-920a-4842-8797-7b3dc2b5a4bd",
       "note": "1521 年查理五世敕令、1531 年建築規範、約 1530 年起的翻新；摘要頁"
     },
@@ -499,7 +503,7 @@
       "publisher": "Wikimedia Commons（Ceescamel 攝）",
       "date": "2018-09-21",
       "url": "https://commons.wikimedia.org/wiki/File:Poortgebouw,_Begijnhof,_anker_en_1907.jpg",
-      "note": "門樓正面的 1907 字樣與牆錨"
+      "note": "門樓正面的 1907 字樣與牆錨；拍攝日期 2018 年 9 月 21 日"
     },
     {
       "title": "Nieuwe poort met pomp op het Begijnhof（Afb ANWU01669000005）",
@@ -516,6 +520,13 @@
       "note": "34 號「1528 年或稍後」的年代、27 號山牆的年代換算；日期為查閱日"
     },
     {
+      "title": "馬太福音 2:15（和合本）",
+      "publisher": "信望愛聖經工具 FHL",
+      "date": "2026-10-10",
+      "url": "https://bible.fhl.net/json/qb.php?chineses=%E5%A4%AA&chap=2&sec=15&version=unv&gb=0&strong=0",
+      "note": "19 號立面石經句的和合本譯文；日期為核對日"
+    },
+    {
       "title": "Begijnhof (Amsterdam)",
       "publisher": "Wikipedia（荷蘭文）",
       "date": "2026-10-10",
@@ -528,6 +539,34 @@
       "date": "2026-10-10",
       "url": "https://www.openstreetmap.org/way/26658363",
       "note": "路線示意的位置關係；日期為查詢日"
+    },
+    {
+      "title": "English Reformed Church Amsterdam（首頁）",
+      "publisher": "English Reformed Church Amsterdam",
+      "date": "2015",
+      "url": "https://www.ercadam.nl/",
+      "note": "每週日 10:30 英語禮拜、地址 Begijnhof 48；日期為頁尾著作權年份，2026-10-11 查閱"
+    },
+    {
+      "title": "English Reformed Church Amsterdam（RSS）",
+      "publisher": "English Reformed Church Amsterdam",
+      "date": "2020-12-08",
+      "url": "https://www.ercadam.nl/feed/",
+      "note": "教會網站最新一則動態的日期；2026-10-11 查閱"
+    },
+    {
+      "title": "De Engelse Kerk",
+      "publisher": "I amsterdam（阿姆斯特丹城市行銷網站）",
+      "date": "2026-10-11",
+      "url": "https://www.iamsterdam.com/uit/agenda/attracties-en-bezienswaardigheden/bezienswaardigheden/de-engelse-kerk",
+      "note": "此堂在禮拜之外作為古典與合唱音樂場地；列出 2026 年 10 月 11、19、25 日與 11 月 22 日的音樂會；日期為查閱日"
+    },
+    {
+      "title": "Spui 門（node 2724001659）、門洞通道 Begijnhof（way 26679402）與東側舊門（node 1906717395）",
+      "publisher": "OpenStreetMap",
+      "date": "2026-10-11",
+      "url": "https://www.openstreetmap.org/node/2724001659",
+      "note": "Spui 門與門洞通道標 access=private，東側舊門標 access=permissive；日期為查詢日"
     }
   ]
 }

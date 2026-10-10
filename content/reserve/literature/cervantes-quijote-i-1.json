@@ -1,0 +1,483 @@
+{
+  "column": "literature",
+  "date": "reserve",
+  "reserve_written": "2026-10-10",
+  "title": "「村名我不想記起」：《唐吉訶德》的第一句",
+  "dek": "塞萬提斯在第一句就收走了村名。這個「不想」是隨口一說還是刻意隱瞞？英譯者各有判斷，十年後的第二部結尾給了另一個說法。",
+  "topic_key": "literature:cervantes-quijote-i-1",
+  "updated_at": "2026-10-11T00:30:00+08:00",
+  "spoiler": "本文後半談到《唐吉訶德》第二部的結局。",
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/El_ingenioso_hidalgo_Don_Quijote_de_la_Mancha.djvu/page29-1280px-El_ingenioso_hidalgo_Don_Quijote_de_la_Mancha.djvu.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/El_ingenioso_hidalgo_Don_Quijote_de_la_Mancha.djvu/page29-1920px-El_ingenioso_hidalgo_Don_Quijote_de_la_Mancha.djvu.jpg",
+    "width": 1280,
+    "height": 1976,
+    "alt": "一頁 17 世紀西班牙文印刷書頁。頂端是一條木刻橫飾，刻著兩個人物、花葉與徽飾；下方大字印著 PRIMERA PARTE DEL INGENIOSO Hidalgo don Quixote de la Mancha，再下是斜體的章名。正文左邊是一個方框木刻花體字母 E，框內刻著房屋與植物，右邊接著正文；右上角印著 Fol. 1。",
+    "caption": "1608 年馬德里 Juan de la Cuesta 版《唐吉訶德》第一部，第 1 葉正面（1897 年巴塞隆納複製本）。花體 E 右邊的六行，就是本文要讀的第一句；右上角的 Fol. 1 是葉碼，這個版本只在每葉正面編號。",
+    "credit": "Miguel de Cervantes 著；Juan de la Cuesta 印（馬德里，1608）。1897 年巴塞隆納 Montaner y Simón 複製本，多倫多大學 Robarts 圖書館藏，Internet Archive 掃描（elingenioso01cerv），經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:El_ingenioso_hidalgo_Don_Quijote_de_la_Mancha.djvu?page=29",
+    "made": "1608（原版）；1897（複製本）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "《唐吉訶德》（Don Quixote）第一部第 1 章的第一句，交代了地區、時間、身分，還點名了四件家當，只扣下一樣東西：村子的名字。1608 年馬德里 Juan de la Cuesta 印行的版本，第 1 葉正面用一個木刻花體 E 起頭；「拉曼查」（La Mancha）印成 Mãcha，a 上的波浪號代表省去的 n。"
+    },
+    {
+      "type": "quote",
+      "original": "EN Vn lugar dela Mãcha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que viuia vn hidalgo de los de lança en astillero, adarga antigua, rozin flaco, y galgo corredor.",
+      "text": "在拉曼查的一個小地方，它的名字我不想記起；不久以前，那裡住著一位紳士，就是那種長矛擱在架上、帶一面老皮盾、一匹瘦馬和一條快腿獵犬的紳士。",
+      "cite": "本文自譯。原文依 1608 年馬德里 Juan de la Cuesta 版第一部第 1 章，第 1 葉正面第 1–6 行（1897 年複製本掃描）；拼法照原版，長 s 改作 s。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.1, 0.54, 0.78, 0.145],
+      "position": "書頁中段偏下，花體 E 與右側六行正文",
+      "caption": "第 1 葉正面正文前六行。第一行印到 de cuyo，第二行開頭就是 nombre no quiero acordarme；第六行的 go corredor 結束這一句。"
+    },
+    {
+      "type": "facts",
+      "title": "作品與版本",
+      "items": [
+        ["作者", "塞萬提斯（Miguel de Cervantes Saavedra，1547–1616）"],
+        ["作品原名", "第一部 El ingenioso hidalgo don Quixote de la Mancha；第二部 Segunda parte del ingenioso cavallero don Quixote de la Mancha。兩部都由馬德里 Juan de la Cuesta 印刷、書商 Francisco de Robles 發售"],
+        ["首次出版", "第一部書名頁署 1605 年，Francisco Rico 版的版本說明指出實際在 1604 年 12 月印完；第二部 1615 年"],
+        ["本文依據版本", "第一部第 1 章：1608 年馬德里 Juan de la Cuesta 版（Rico 版代號 C），據 1897 年巴塞隆納 Montaner y Simón 複製本的掃描（Wikimedia Commons／Internet Archive elingenioso01cerv），第 1 葉正反面。第二部第 74 章：1615 年初版，西班牙國家圖書館藏本掃描（Wikimedia Commons PDF 第 570–573 頁，即第 278 葉正面至第 279 葉反面）"],
+        ["校勘與注釋", "Francisco Rico 主持的 Instituto Cervantes 版（Crítica，1998；注釋 Joaquín Forradellas），Centro Virtual Cervantes 線上版"],
+        ["引句位置", "第一部第 1 章第 1 句；1608 年版第 1 葉正面第 1–6 行"],
+        ["譯文", "中文引文皆為本文自譯，未使用出版中譯本；英譯本依正文表格所列版本"]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "一句話什麼都給了，只缺地圖上那個點"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "lugar 不是泛稱的「地方」。Francisco Rico 主持的 Instituto Cervantes 版（1998）注釋說，這裡的 lugar 指聚落，尤其是小型聚落；補充注釋引《權威辭典》（Autoridades）的定義：嚴格說來，lugar 比 villa（鎮）小，比 aldea（村）大。同一條注釋把這個 lugar 放在 Campo de Montiel 一帶。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "其餘細節都能拿來核對身分與家計。注釋說，hidalgo 在理論上要有一匹馬，以備國王徵召；連一匹 rocín（劣馬）都沒有的，實際上就保不住身分。下一句的燉菜「牛肉比羊肉多」，而當時牛肉比羊肉便宜約三分之一。長矛和皮盾都是 antigua（老舊的），注釋稱之為上一個時代的遺物，卻擺在「不久以前」（no ha mucho tiempo）的當代場景裡。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：這一段把一位手頭拮据的鄉紳寫得一清二楚，連他吃什麼、騎什麼都算得出價錢；唯獨讀者能拿去查地圖的那個名字，被敘事者收走了。"
+    },
+    {
+      "type": "h",
+      "text": "「不想」有多重"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "原文的結構是 de cuyo nombre（它的名字）接 no quiero acordarme。quiero 是 querer（想要）的第一人稱現在式，acordarme 是「記起」。照字面是「它的名字，我不想記起」。這一句的主角是 hidalgo，但句中最先出現的變位動詞是第一人稱的 quiero，屬於一個沒有名字的「我」；hidalgo 的 vivía 要等到後半句。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Rico 版注釋提出較輕的讀法：quiero 在這裡可能只有助動詞的作用，和 voy、llego 構成的說法相當，意思是 ‘no voy, no llego a acordarme ahora’（我這會兒不去記，也還沒記起來），甚至是 ‘no entro ahora en si me acuerdo o no’（我記不記得，這會兒先不談）。注釋又說，這種不交代地點的開頭在民間故事裡有許多類似的例子，和一些騎士小說開篇時鉅細靡遺的鋪陳正好相反。兩句注文皆本文自譯。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "同一條的補充注釋還找到塞萬提斯自己的平行句。他死後於 1617 年 1 月出版的最後一部小說《Los trabajos de Persiles y Sigismunda》，第三卷第 10 章寫一行朝聖者「來到一個不大也不小的地方，它的名字我記不得了」（de cuyo nombre no me acuerdo，本文自譯）。同一位作者、同一種開場，少了一個 quiero。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "兩句並排，差別只在一個動詞。《Persiles》說的是記憶有缺口；《唐吉訶德》在缺口前面多擺了一個「想不想」。就算 quiero 只是助動詞，讀者也分不出這位敘事者是記不起來、懶得去想，還是不肯說。翻到同一葉的背面，他又含糊了一次。"
+    },
+    {
+      "type": "h",
+      "text": "同一葉背面，連姓也有三種說法"
+    },
+    {
+      "type": "quote",
+      "original": "Quieren dezir, que tenia el sobre nombre de Quixada, ò Quesada (que en esto ay alguna diferencia en los autores que deste caso escriuen) aúnque por conjeturas verisimiles se dexa entender, que se llamaua Quixana. Pero esto importa poco a nuestro cuento, basta que en la narracion del no se salga vn punto de la verdad.",
+      "text": "有人說他姓 Quixada，也有人說是 Quesada（寫這件事的作者們在這點上有些出入），不過憑合理的推測，可以看出他叫 Quixana。但這對我們的故事無關緊要：只要講述時不偏離真相一分就夠了。",
+      "cite": "本文自譯。原文依 1608 年版第一部第 1 章，第 1 葉反面；拼法照原版，長 s 改作 s。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Rico 版注釋認為，塞萬提斯在這裡假裝各家史料有出入，套用的是人文主義語文學處理異文的辦法：比對文本，再用「合理的推測」（conjeturas verisímiles）裁定。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這段假裝的異文，後來成了真的異文。Rico 版校勘記錄：1605 年初版印作 Quexana；初版部分重排的書頁、同年的馬德里第二版、1607 年布魯塞爾版和 1608 年版都作 Quixana。Schevill 與 Bonilla 的版本（1928–1941）和 Flores 的版本（1988）則照初版。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "校勘記指出，第二版是照初版排的，並非照那批重排書頁，兩者卻不約而同改正，可見當時人把 Quexana 看成明顯的誤植，可能是受鄰近的 dexa 一字影響。Rico 版採 Quijana，理由之一是第 1 章以外，書中這個姓只以 Quijana 出現（包括第二部最後一章姪女的名字），也和主角最後確定的 Quijano 一致。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：一段假裝替讀者裁定異文的文字，自己成了版本問題。Project Gutenberg 流通的西班牙文本（第 2000 號）第 1 章作 Quejana，第 5 章卻作 Quijana，讀者翻幾頁就會撞上這個縫。頭圖那一葉的背面，1608 年版印的是 Quixana。"
+    },
+    {
+      "type": "figure",
+      "id": "tp1605",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/d8/El_ingenioso_hidalgo_don_Quijote_de_la_Mancha.jpg",
+      "width": 762,
+      "height": 1167,
+      "alt": "書名頁。上方大寫印著 EL INGENIOSO HIDALGO DON QVIXOTE DE LA MANCHA、作者名與獻詞對象貝哈爾公爵；中間是一枚橢圓木刻印記，一隻戴頭罩的獵鷹停在手上，下方臥著一頭獅子，框上刻著拉丁文 POST TENEBRAS SPERO LVCEM；兩側印著 Año, 1605；底部印著 CON PRIVILEGIO, EN MADRID Por Iuan de la Cuesta，以及書商 Francisco de Robles 的名字。",
+      "caption": "《唐吉訶德》第一部初版書名頁，署 1605 年，馬德里 Juan de la Cuesta 印，Francisco de Robles 發售。Rico 版的版本說明記載，同年的馬德里第二版書名頁印的是 Con privilegio de Castilla, Aragón y Portugal；這一張只印 CON PRIVILEGIO，不是第二版，Commons 說明標為初版。Quexana 就出在初版的第 1 章。",
+      "credit": "Juan de la Cuesta 印（馬德里）；Wikimedia Commons，標示圖源為西班牙國家圖書館數位館藏（Biblioteca Digital Hispánica）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:El_ingenioso_hidalgo_don_Quijote_de_la_Mancha.jpg",
+      "made": "1605（書名頁署年）"
+    },
+    {
+      "type": "h",
+      "text": "英譯本怎麼翻這個「不想」"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "這個 quiero 進了英文，各家給的強度不一樣。下表的英文照各版本原文，只把長 s 改為 s。"
+    },
+    {
+      "type": "table",
+      "title": "no quiero acordarme 的六種英譯",
+      "head": ["譯者與本文所據版本", "譯文", "落點"],
+      "rows": [
+        ["Thomas Shelton，1612 年倫敦初版（引自 1900 年 Macmillan 重排本）", "the name whereof I purposely omit", "刻意略去"],
+        ["Peter Motteux 主持的「多人合譯」，1725 年倫敦版", "which I shall not name", "不說出口"],
+        ["Charles Jervas（書上印作 Jarvis），1749 年倫敦 Tonson 版", "the name of which I purposely omit", "刻意略去，與 Shelton 同詞"],
+        ["Tobias Smollett，1755 年譯本（引自 1792 年倫敦 Harrison & Co. 版；Internet Archive 著錄為 1782 年版的逐頁重印本）","the name of which I do not chuse to remember", "不選擇記起"],
+        ["1848 年倫敦 James Burns「供一般閱讀」改訂本，未署譯者", "of which I cannot remember the name", "記不得"],
+        ["John Ormsby，1885 年譯本（Project Gutenberg 第 996 號）", "the name of which I have no desire to call to mind", "不想記起"]
+      ],
+      "caption": "原創整理。1848 年改訂本在同一句還多了原文沒有的 in the kingdom of Arragon（在亞拉岡王國）；Project Gutenberg 把這個版本著錄為 Motteux 譯，書上只寫「依塞萬提斯西班牙文本，為一般閱讀修訂」。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Ormsby 在 1885 年譯本的序言裡，把 Shelton 譯本稱為「任何語言中的第一個」譯本，說它大約 1608 年譯成、1612 年才出版。他又說，Jervas 被指抄襲 Shelton；Jervas 大多數地方比 Shelton 準確，但在少數難解的段落確實跟著 Shelton 走錯。至於 Smollett 1755 年的譯本，Ormsby 認為大量取用了 Jervas 的譯文。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "表格裡，purposely omit 從 Shelton 原樣出現在 Jervas 版；這算不算 Ormsby 說的「跟著走」，本文無法判定，只能指出兩者用詞相同。更清楚的是方向的分歧：Shelton 和 Jervas 把這句讀成作者刻意的決定，1848 年改訂本讀成記憶的缺口，Smollett 和 Ormsby 停在「不選擇、不想」。這些都是譯者的判斷，不是塞萬提斯的語言事實；no quiero acordarme 同時容得下兩頭相反的讀法。"
+    },
+    {
+      "type": "spoiler",
+      "text": "以下談到《唐吉訶德》第二部的結局。"
+    },
+    {
+      "type": "h",
+      "text": "十年後，「不想」換了主詞"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "第一部第 9 章，敘事者說他在托雷多（Toledo）的 Alcaná 市集，用半個 real 從一個男孩手上買下一疊阿拉伯文筆記，找來一位懂西班牙語的摩里斯科人（morisco）當場翻譯，開頭寫著：「拉曼查的唐吉訶德傳，阿拉伯史家 Cide Hamete Benengeli 著」（本文自譯）。從這一章起，說「我」的人成了譯稿的讀者，故事另有作者。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1614 年，第二部還沒問世，署名 Alonso Fernández de Avellaneda 的續作在塔拉戈納（Tarragona）出版。它也假託一位阿拉伯史家 Alisolán，第 1 章的標題就寫出主角的村子，正文說史料裡記載了無敵的紳士唐吉訶德「從 Argamesilla 村出發的第三次出遊」（la tercera salida que hizo del lugar del Argamesilla，本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "1615 年第二部的最後一章，主角臨終前說，他不再是拉曼查的唐吉訶德，而是 Alonso Quijano，因品行被人稱作「好人」。遺囑提到姪女 Antonia Quijana。他死後，神父請公證人出具證明：「好人 Alonso Quijano，通稱拉曼查的唐吉訶德」已經自然死亡；理由是免得「Cide Hamete Benengeli 以外的某位作者」假意讓他復活，再寫出沒完沒了的故事（皆本文自譯）。接下來就是這一句："
+    },
+    {
+      "type": "quote",
+      "original": "Este fin tuuo el ingenioso Hidalgo de la Mãcha, cuyo lugar no quiso poner Cide Hamete pũtualmente, por dexar que todas las villas y lugares de la Mancha contendiessen entre si, por ahijarsele y tenersele por suyo: como contendieron las siete ciudades de Grecia por Homero.",
+      "text": "拉曼查這位異想紳士的結局就是這樣。他住的村子，Cide Hamete 不願明確寫出，好讓拉曼查所有的鎮和村都去爭著認他、把他算作自己人，就像希臘七座城市爭荷馬一樣。",
+      "cite": "本文自譯。原文依 1615 年馬德里 Juan de la Cuesta 初版第二部第 74 章，第 279 葉反面第 5–10 行；拼法照原版，長 s 改作 s。"
+    },
+    {
+      "type": "figure",
+      "id": "f1615",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Segunda_parte_del_ingenioso_cavallero_Don_Quixote_de_la_Mancha_%281615%29.pdf/page573-1280px-Segunda_parte_del_ingenioso_cavallero_Don_Quixote_de_la_Mancha_%281615%29.pdf.jpg",
+      "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Segunda_parte_del_ingenioso_cavallero_Don_Quixote_de_la_Mancha_%281615%29.pdf/page573-1920px-Segunda_parte_del_ingenioso_cavallero_Don_Quixote_de_la_Mancha_%281615%29.pdf.jpg",
+      "width": 1280,
+      "height": 1958,
+      "alt": "一頁泛黃、有水漬的 17 世紀西班牙文書頁，頁首印著 Segunda parte de don。上半是一段正文，中間是兩節縮排的詩，下半又是正文，以一個段落符號起頭。右下角印著 Biblioteca Nacional de España。",
+      "caption": "1615 年《唐吉訶德》第二部初版，第 74 章，第 279 葉反面。第 5 至 10 行就是 Cide Hamete 不寫村名的那一句；中間的詩是 Sansón Carrasco 為主角寫的墓誌銘。拉曼查在這裡又印成 Mãcha，和第一部第一句同一種縮寫。",
+      "credit": "Miguel de Cervantes 著；Juan de la Cuesta 印（馬德里，1615）。西班牙國家圖書館藏本，Biblioteca Digital Hispánica 掃描，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Segunda_parte_del_ingenioso_cavallero_Don_Quixote_de_la_Mancha_(1615).pdf?page=573",
+      "made": "1615"
+    },
+    {
+      "type": "detail",
+      "of": "f1615",
+      "region": [0.13, 0.18, 0.83, 0.15],
+      "position": "書頁上方，正文第 5 到第 10 行",
+      "caption": "從 Este fin tuuo 到 Homero；cuyo lugar no quiso poner 在第 6 行，pũtualmente 在行尾斷成兩截。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Rico 版在第一句的注釋裡已經對照過：開頭的 quiero 也許只是助動詞，到了結尾，塞萬提斯「恢復了這個動詞的本義」，也就是 no quiso poner，「不願寫明」。第 74 章的注釋也說，這句話「回應並補足了全書的第一句」（皆本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：結尾把能確定的都確定了。姓氏從第 1 章的三種說法收束到 Quijano，死亡有公證人作證，唯獨村子依舊留白，而且第一次說出留白的理由。說「不想」的人也換了：1605 年是敘事者「我」，1615 年是 Cide Hamete。這時，Avellaneda 已經替主角挑好一個村子。"
+    },
+    {
+      "type": "timeline",
+      "title": "村名的四百年：誰寫了，誰沒寫",
+      "items": [
+        {"when": "1605 年（書名頁）", "label": "第一部出版", "note": "第 1 章：村名「我不想記起」；卷末墓誌銘署名「Argamasilla 的學士們」。Rico 版說明：實際在 1604 年 12 月印完。"},
+        {"when": "1608 年", "label": "Juan de la Cuesta 再版", "note": "第 1 章的姓印作 Quixana；初版作 Quexana。"},
+        {"when": "1612 年", "label": "Shelton 英譯出版", "note": "the name whereof I purposely omit。"},
+        {"when": "1614 年", "label": "Avellaneda 續作，塔拉戈納", "note": "假託阿拉伯史家 Alisolán，寫明主角從 Argamesilla 村出發。"},
+        {"when": "1615 年", "label": "第二部第 74 章", "note": "Cide Hamete「不願寫明」村子，讓拉曼查各地去爭。"},
+        {"when": "1617 年 1 月", "label": "《Persiles》出版", "note": "第三卷第 10 章：「它的名字我記不得了」。"},
+        {"when": "18 世紀末", "label": "Argamasilla de Alba 之說", "note": "據康普頓斯大學 2016 年新聞稿，由當地一位神父提出。"},
+        {"when": "2005 年", "label": "Parra Luna 等人出書", "note": "《El lugar de la Mancha es…》，Editorial Complutense 出版。據 arXiv 0807.3661 的參考文獻；該文說 Campo de Montiel 24 個候選村鎮的前提出自此書與後續修正。"},
+        {"when": "2008 年", "label": "Orden 與 Viaña 的兩版摘要", "note": "7 月：Puebla del Príncipe 或 Villanueva de los Infantes；10 月：Carrizosa 或 Villanueva de los Infantes，相對誤差最小的設定指向後者。"},
+        {"when": "2016 年 1 月", "label": "康普頓斯大學發表新書", "note": "新聞稿：26 個村鎮、24 項距離與時間變數，結論 Villanueva de los Infantes；新書是這項研究三部曲的最後一本。"}
+      ],
+      "caption": "原創整理。依據 Rico 版注釋與版本說明、1608 年與 1615 年版掃描、Avellaneda 與《Persiles》的 Wikisource 謄本、康普頓斯大學 2016 年新聞稿、arXiv 0807.3661 的兩版摘要與參考文獻。"
+    },
+    {
+      "type": "h",
+      "text": "拉曼查的村子真的爭了起來"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "第一部其實已經埋下一個名字。卷末幾首墓誌銘，署名「拉曼查的一個 lugar：Argamasilla 的學士們」。Rico 版注釋認為，把文學學院設在 Argamasilla 純屬戲謔，據此把這個地方和唐吉訶德或塞萬提斯連在一起的種種推想都是多餘的；第 1 章的補充注釋也說，從 Avellaneda 開始，把這個 lugar 認作 Argamasilla de Alba 或其他村鎮的說法，沒有一個能接受。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "不過，康普頓斯大學（Universidad Complutense de Madrid）2016 年 1 月 14 日的新聞稿說，Francisco Parra Luna 在 2002 年的研討會上提議用系統理論找村子。團隊假定它在 Campo de Montiel（書中五次寫唐吉訶德走過那裡），列出 26 個村鎮與 24 項距離、時間變數，答案是 Villanueva de los Infantes。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "新聞稿也記下 Parra Luna 的提醒：todo esto no hay que creérselo（這一切不必照單全收，本文自譯），並說至今沒有人推翻這個假說。同一份新聞稿引同校 Manuel Fernández Nieto 的說法：Argamasilla de Alba 之說始於 18 世紀末，出自當地一位神父。Avellaneda 則早在 1614 年就寫下了 Argamesilla。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "2008 年，阿爾卡拉大學（Universidad de Alcalá）的 David Orden 與 Raquel Viaña 改用地理資訊系統的資料重算。論文開頭說，常用的前提出自 Parra Luna 等人 2005 年在 Editorial Complutense 出版的書與後續修正：村子是 Campo de Montiel 的 24 個村鎮之一（新聞稿寫 26 個），和四個參照地點各隔 2 到 2.5 天路程。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "7 月貼上 arXiv 的第一版摘要說：計入坡度與地形的時間距離指向 Puebla del Príncipe，純空間距離指向 Villanueva de los Infantes。10 月的修訂版比較更多設定，摘要改成：依設定不同，是 Carrizosa 或 Villanueva de los Infantes；相對誤差最小、第一和第二候選村差距最大的那組設定，答案是後者。"
+    },
+    {
+      "type": "p",
+      "text": "1615 年，Cide Hamete 不寫村名，留下的理由是讓拉曼查的鎮和村去爭。2008 年，同一篇論文從第一版到修訂版，Villanueva de los Infantes 都在答案裡，和它並列的另一個村名卻從 Puebla del Príncipe 換成了 Carrizosa。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "File:El ingenioso hidalgo Don Quijote de la Mancha.djvu（1608 年馬德里版，1897 年複製本）",
+      "publisher": "Wikimedia Commons",
+      "date": "1608",
+      "url": "https://commons.wikimedia.org/wiki/File:El_ingenioso_hidalgo_Don_Quijote_de_la_Mancha.djvu",
+      "note": "掃描第 7 頁（1608 年 6 月 25 日勘誤證明）、第 29–30 頁（第一部第 1 葉正反面）"
+    },
+    {
+      "title": "El ingenioso hidalgo Don Quixote de la Mancha, v. 1（elingenioso01cerv）",
+      "publisher": "Internet Archive（University of Toronto, Robarts Library）",
+      "date": "1608",
+      "url": "https://archive.org/details/elingenioso01cerv",
+      "note": "著錄：Madrid, J. de la Cuesta, 1608；裝訂封面註記 Edición facsimile, Barcelona, Montaner y Simón, 1897"
+    },
+    {
+      "title": "File:Segunda parte del ingenioso cavallero Don Quixote de la Mancha (1615).pdf",
+      "publisher": "Wikimedia Commons（西班牙國家圖書館 Biblioteca Digital Hispánica 藏本）",
+      "date": "1615",
+      "url": "https://commons.wikimedia.org/wiki/File:Segunda_parte_del_ingenioso_cavallero_Don_Quixote_de_la_Mancha_(1615).pdf",
+      "note": "PDF 第 570–573 頁：第 278 葉正面至第 279 葉反面"
+    },
+    {
+      "title": "File:El ingenioso hidalgo don Quijote de la Mancha.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "1605",
+      "url": "https://commons.wikimedia.org/wiki/File:El_ingenioso_hidalgo_don_Quijote_de_la_Mancha.jpg",
+      "note": "第一部初版書名頁"
+    },
+    {
+      "title": "Don Quijote de la Mancha, Primera parte, Capítulo I（Instituto Cervantes 版，Francisco Rico 主持）",
+      "publisher": "Centro Virtual Cervantes（Instituto Cervantes）",
+      "date": "1998",
+      "url": "https://cvc.cervantes.es/literatura/clasicos/quijote/edicion/parte1/cap01/default.htm",
+      "note": "注釋 2、3、4、5、16，校勘記 II、III，補充注釋 2、3"
+    },
+    {
+      "title": "Don Quijote de la Mancha, Primera parte, Capítulo IX",
+      "publisher": "Centro Virtual Cervantes（Instituto Cervantes）",
+      "date": "1998",
+      "url": "https://cvc.cervantes.es/literatura/clasicos/quijote/edicion/parte1/cap09/default.htm",
+      "note": "Alcaná de Toledo 與 Cide Hamete Benengeli 的手稿"
+    },
+    {
+      "title": "Don Quijote de la Mancha, Primera parte, Capítulo LII（4 de 4）",
+      "publisher": "Centro Virtual Cervantes（Instituto Cervantes）",
+      "date": "1998",
+      "url": "https://cvc.cervantes.es/literatura/clasicos/quijote/edicion/parte1/cap52/cap52_04.htm",
+      "note": "Los académicos de la Argamasilla；注釋 49"
+    },
+    {
+      "title": "Don Quijote de la Mancha, Segunda parte, Capítulo LXXIV",
+      "publisher": "Centro Virtual Cervantes（Instituto Cervantes）",
+      "date": "1998",
+      "url": "https://cvc.cervantes.es/literatura/clasicos/quijote/edicion/parte2/cap74/default.htm",
+      "note": "Alonso Quijano 自稱「bueno」一段"
+    },
+    {
+      "title": "Don Quijote de la Mancha, Segunda parte, Capítulo LXXIV（2 de 2）",
+      "publisher": "Centro Virtual Cervantes（Instituto Cervantes）",
+      "date": "1998",
+      "url": "https://cvc.cervantes.es/literatura/clasicos/quijote/edicion/parte2/cap74/cap74_02.htm",
+      "note": "遺囑、公證證明、cuyo lugar no quiso poner；注釋 41–43"
+    },
+    {
+      "title": "Aparato crítico. Ediciones y siglas usadas",
+      "publisher": "Centro Virtual Cervantes（Instituto Cervantes）",
+      "date": "1998",
+      "url": "https://cvc.cervantes.es/literatura/clasicos/quijote/introduccion/aparato_critico/siglas.htm",
+      "note": "版本代號 A、A^B、B、B+、C、SB、FL；初版實際印完於 1604 年 12 月"
+    },
+    {
+      "title": "Don Quijote de la Mancha. Créditos",
+      "publisher": "Centro Virtual Cervantes（Instituto Cervantes）",
+      "date": "1998",
+      "url": "https://cvc.cervantes.es/literatura/clasicos/quijote/creditos.htm",
+      "note": "線上版依據 Instituto Cervantes／Crítica 1998 年版，Francisco Rico 主持，Joaquín Forradellas 注釋"
+    },
+    {
+      "title": "Los trabajos de Persiles y Sigismunda (1920), Tomo II, Libro tercero",
+      "publisher": "Wikisource（西班牙文）",
+      "date": "1920",
+      "url": "https://es.wikisource.org/wiki/Los_trabajos_de_Persiles_y_Sigismunda_(1920)/Tomo_II/Libro_tercero",
+      "note": "第三卷第 10 章：de cuyo nombre no me acuerdo"
+    },
+    {
+      "title": "The Trials of Persiles and Sigismunda",
+      "publisher": "Museo Casa Natal de Cervantes",
+      "date": "",
+      "url": "https://museocasanataldecervantes.org/the-trials-of-persiles-and-sigismunda/",
+      "note": "1617 年 1 月出版，作者已逝"
+    },
+    {
+      "title": "Segundo tomo del ingenioso hidalgo Don Quijote de la Mancha, Capítulo I（Avellaneda）",
+      "publisher": "Wikisource（西班牙文）",
+      "date": "1614",
+      "url": "https://es.wikisource.org/wiki/Segundo_tomo_del_ingenioso_hidalgo_Don_Quijote_de_la_Mancha/Cap%C3%ADtulo_I",
+      "note": "Alisolán；del lugar del Argamesilla"
+    },
+    {
+      "title": "Quijote de Avellaneda（版本頁）",
+      "publisher": "Wikisource（西班牙文）",
+      "date": "",
+      "url": "https://es.wikisource.org/wiki/Quijote_de_Avellaneda",
+      "note": "Tarragona: Felipe Roberto, 1614"
+    },
+    {
+      "title": "Don Quijote（西班牙文本，eBook #2000）",
+      "publisher": "Project Gutenberg",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/2000",
+      "note": "第 1 章作 Quejana，第 5 章作 Quijana"
+    },
+    {
+      "title": "The history of the valorous and wittie knight-errant, Don-Quixote of the Mancha（Thomas Shelton 譯，1612）",
+      "publisher": "Internet Archive（cervantessheltondonquixote01）",
+      "date": "1612",
+      "url": "https://archive.org/details/cervantessheltondonquixote01",
+      "note": "第一部第 1 章開頭"
+    },
+    {
+      "title": "The history of the valorous & witty knight-errant Don Quixote of the Mancha（Shelton 譯，Macmillan 重排本）",
+      "publisher": "Internet Archive（historyofvalorou00cerv）",
+      "date": "1900",
+      "url": "https://archive.org/details/historyofvalorou00cerv",
+      "note": "本文引用的 Shelton 譯文拼法依此本"
+    },
+    {
+      "title": "The history of the renowned Don Quixote de la Mancha, Vol. 1（Peter Motteux 等譯）",
+      "publisher": "Internet Archive",
+      "date": "1725",
+      "url": "https://archive.org/details/bim_eighteenth-century_don-quixote-english-_cervantes-saavedra-migu_1725_1",
+      "note": "第 1 章開頭"
+    },
+    {
+      "title": "The Life and Exploits of the Ingenious Gentleman Don Quixote de la Mancha（Charles Jarvis 譯）",
+      "publisher": "Internet Archive（J. and R. Tonson）",
+      "date": "1749",
+      "url": "https://archive.org/details/lifeandexploits01jarvgoog",
+      "note": "第 1 章開頭"
+    },
+    {
+      "title": "The history and adventures of the renowned Don Quixote（T. Smollett 譯）",
+      "publisher": "Project Gutenberg #77095（London: Harrison and Co., 1792）",
+      "date": "1792",
+      "url": "https://www.gutenberg.org/ebooks/77095",
+      "note": "第 1 章開頭。檔頭著錄 Original publication: London: Harrison & Co., 1782，但謄錄的書名頁印 M DCC XCII（1792）"
+    },
+    {
+      "title": "The history and adventures of the renowned Don Quixote（historyadventure00cerv）",
+      "publisher": "Internet Archive（Lincoln Financial Foundation Collection）",
+      "date": "1792",
+      "url": "https://archive.org/details/historyadventure00cerv",
+      "note": "書名頁印 Printed for Harrison and Co. … M DCC XCII；著錄註記：Title from the 1782 London ed. of which the present ed. is a page-for-page reprint"
+    },
+    {
+      "title": "The History of Don Quixote de la Mancha（London: James Burns, 1848）",
+      "publisher": "Project Gutenberg #35993",
+      "date": "1848",
+      "url": "https://www.gutenberg.org/ebooks/35993",
+      "note": "第 1 章開頭；書名頁 Revised for general reading"
+    },
+    {
+      "title": "Don Quixote（John Ormsby 譯）",
+      "publisher": "Project Gutenberg #996",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/996",
+      "note": "第 1 章開頭；譯序中關於 Shelton、Jervas、Smollett 的評述"
+    },
+    {
+      "title": "John Ormsby (translator)",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/John_Ormsby_(translator)",
+      "note": "Ormsby 譯本出版年 1885"
+    },
+    {
+      "title": "La ciencia desvela el Lugar de la Mancha",
+      "publisher": "Universidad Complutense de Madrid",
+      "date": "2016-01-14",
+      "url": "https://www.ucm.es/la-ciencia-desvela-el-lugar-de-la-mancha-15-de-enero",
+      "note": "2002 年提案、Campo de Montiel、26 個村鎮與 24 項變數、Villanueva de los Infantes、新書為三部曲最後一本、Parra Luna 的提醒；Fernández Nieto 談 18 世紀末 Argamasilla 之說。新聞稿未提 2005 年的書"
+    },
+    {
+      "title": "Análisis de distancias temporales y espaciales entre el Lugar de La Mancha y cuatro puntos de referencia（David Orden、Raquel Viaña）",
+      "publisher": "arXiv:0807.3661",
+      "date": "2008-10-20",
+      "url": "https://arxiv.org/abs/0807.3661",
+      "note": "v1（2008-07-22）與 v2（2008-10-20）摘要，v2 摘要末句：相對誤差最小的設定解為 Villanueva de los Infantes；v2 PDF 第 1 頁：依 [5] 並經 [6] 修正，候選為 Campo de Montiel 的 24 個村鎮，距四個參照點 2–2.5 日程；參考文獻 [5]：Parra Luna, F. et al. (2005), El lugar de la Mancha es…, Editorial Complutense"
+    }
+  ]
+}
