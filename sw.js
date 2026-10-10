@@ -4,7 +4,7 @@
 const CACHE = "robin-shell-__SHELL_HASH__";
 const CONTENT = "robin-content";
 const SHELL = ["index.html", "assets/style.css", "assets/app.js", "assets/util.js", "assets/blocks.js",
-  "assets/pitch.js", "assets/spotify.js", "assets/robin.svg", "manifest.webmanifest"];
+  "assets/pitch.js", "assets/spotify.js", "assets/speak.js", "assets/robin.svg", "manifest.webmanifest"];
 const DATA = ["content/config.json", "content/index.json"];
 const TIMEOUT = 4000; // ms to wait for the network before answering content from the cache
 const ROOT = new URL(self.registration.scope).pathname;

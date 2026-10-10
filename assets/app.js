@@ -3,6 +3,7 @@ import { $, esc, inline, store, toast, twNow, fmtDate, getJSON, ICON } from "./u
 import { renderBody, renderHero } from "./blocks.js";
 import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient, isWebKitITP } from "./spotify.js";
 import { pitchThumb } from "./pitch.js";
+import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -64,15 +65,20 @@ function markRead(k) { const r = store.get("read", []); if (!r.includes(k)) { r.
 const CONTAIN = new Set(["artwork", "document", "portrait", "illustration"]);
 function thumb(a, cls) {
   const h = a.hero;
-  if (h?.src) return `<div class="${cls}${CONTAIN.has(h.kind) ? " contain" : ""}"><img src="${esc(h.src)}" alt="${esc(h.alt || "")}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>`;
+  if (h?.src) return `<div class="${cls}${CONTAIN.has(h.kind) ? " contain" : ""}"><img src="${esc(cls === "ph" ? h.src : h.thumb || h.src)}" alt="${esc(h.alt || "")}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>`;
   if (h?.diagram === "pitch") return `<div class="${cls}"><div class="diagram-th">${pitchThumb()}</div></div>`;
   if (h?.diagram) return `<div class="${cls}"><div class="diagram-th">${ICON.diagram}</div></div>`;
   return "";
 }
-function kicker(c) { const k = col(c); return `<div class="kicker">${esc(k.name)}<span class="de">${esc(k.latin || "")}</span></div>`; }
+function kicker(c, link = false) {
+  const k = col(c);
+  const inner = `${esc(k.name)}<span class="de">${esc(k.latin || "")}</span>`;
+  return link ? `<a class="kicker" href="#/column/${esc(c)}">${inner}</a>` : `<div class="kicker">${inner}</div>`;
+}
 function metaLine(date, a, read) {
   const bits = [`約 ${a.minutes} 分鐘`];
   if (a.status === "undetermined") bits.unshift("查核未完成");
+  if (a.from_reserve) bits.push("備稿");
   if (read.has(`${date}/${a.column}`)) bits.push('<span class="read-mark">已讀</span>');
   return `<div class="meta-s">${bits.join("・")}</div>`;
 }
@@ -101,6 +107,7 @@ function masthead(issue) {
     <div class="latin">${esc(S.cfg.subtitle)}</div>
     <div class="dateline">${esc(fmtDate(date))}${issue ? `・第 ${issue.no} 期` : ""}・${esc(S.cfg.publish_time)} 出刊</div>
     <div class="checker" aria-hidden="true"></div>
+    ${issue?.epigraph ? `<p class="epigraph">${esc(issue.epigraph.text)}<span>${esc(issue.epigraph.ref)}（和合本）</span></p>` : ""}
   </div></header>`;
 }
 
@@ -111,6 +118,7 @@ function untilText(mins) {
 
 // The front page's status line: countdown before 07:30, then what has arrived today.
 function frontStatus() {
+  if (isPreview()) return "預覽模式：顯示尚未在 07:30 出刊的稿件。";
   const now = twNow();
   const todays = issueBy(now.date);
   if (now.minutes < publishMin()) return `今日刊期將於台灣時間 <b>${esc(S.cfg.publish_time)}</b> 出刊（還有 ${untilText(publishMin() - now.minutes)}）。先讀上一期。`;
@@ -156,6 +164,25 @@ function viewFront(dateParam) {
       每日台灣時間 ${esc(S.cfg.publish_time)} 出刊・稿件由排程編輯撰寫並逐篇核對來源<br>圖片皆為公版、開放授權或本報原創圖解，授權見各篇文末
     </footer>
   </div>`;
+  prefetch(issue);
+}
+
+// Load the issue's articles in the background: they open instantly and the service worker keeps them for offline reading.
+function prefetch(issue) {
+  const run = () => issue.articles.forEach((a) => article(issue.date, a.column).catch(() => {}));
+  if ("requestIdleCallback" in window) requestIdleCallback(run, { timeout: 4000 }); else setTimeout(run, 1500);
+}
+
+// When a news article was last updated after it went out, or its cut-off time.
+function updatedNote(date, a) {
+  if (!a.updated_at) return "";
+  const t = new Date(a.updated_at);
+  if (Number.isNaN(t.getTime())) return "";
+  const pub = new Date(`${date}T${S.cfg.publish_time || "07:30"}:00+08:00`);
+  const tw = new Date(t.getTime() + 8 * 3600 * 1000);
+  const hm = `${String(tw.getUTCHours()).padStart(2, "0")}:${String(tw.getUTCMinutes()).padStart(2, "0")}`;
+  if (t > pub) return `・更新於 ${tw.getUTCMonth() + 1}/${tw.getUTCDate()} ${hm}`;
+  return a.column === "football" ? `・截稿 ${hm}` : "";
 }
 
 // `my` is this route's number: if the reader has moved on while the article loads, draw nothing.
@@ -173,24 +200,33 @@ async function viewArticle(date, column, my) {
     <div class="topbar"><div class="in">
       <a class="icon-btn" href="${issue && date !== publishedIssues()[0]?.date ? `#/issue/${date}` : "#/"}" aria-label="回到本期">${ICON.back}</a>
       <div class="title">${esc(k.name)}</div>
+      ${canSpeak() ? `<button class="icon-btn" type="button" data-speak aria-pressed="false" aria-label="朗讀本文">${ICON.speak}</button>` : ""}
       <button class="icon-btn" type="button" data-fs aria-label="調整字級">${ICON.text}</button>
       <button class="icon-btn" type="button" data-save aria-pressed="${isSaved(key)}" aria-label="收藏">${isSaved(key) ? ICON.starOn : ICON.star}</button>
     </div><div class="progress"></div></div>
     <article class="wrap"><div class="read">
-      <header class="article-head">${kicker(column)}<h1>${esc(a.title)}</h1><p class="dek">${esc(a.dek)}</p>
-        <div class="meta">${esc(fmtDate(date))}・第 ${issue?.no ?? ""} 期${minutes ? `・閱讀約 ${minutes} 分鐘` : ""}</div>
+      <header class="article-head">${kicker(column, true)}<h1>${esc(a.title)}</h1><p class="dek">${esc(a.dek)}</p>
+        <div class="meta">${esc(fmtDate(date))}・第 ${issue?.no ?? ""} 期${minutes ? `・閱讀約 ${minutes} 分鐘` : ""}${updatedNote(date, a)}</div>
+        ${a.from_reserve && column === "football" ? `<div class="banner">今晨新聞稿未能如期完成，先刊出這篇備用專題；新聞稿完成後會更新本欄。</div>` : ""}
         ${a.status === "undetermined" ? `<div class="banner">本期查核未完成，無法判定是否有新進展；這不代表沒有新消息。</div>` : ""}
         ${a.spoiler ? `<div class="banner">劇透提醒：${esc(a.spoiler)}</div>` : ""}
         ${a.disclaimer ? `<div class="banner gold">${esc(a.disclaimer)}</div>` : ""}
       </header>
       <div class="hero-slot"></div>
+      <div class="toc-slot"></div>
       <div class="body"></div>
       ${a.sources?.length ? `<section class="sources"><h2>來源與閱讀範圍</h2><ol>${a.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}${s.publisher ? `，${esc(s.publisher)}` : ""}${s.date ? `，${esc(s.date)}` : ""}${s.note ? ` <span>— ${inline(s.note)}</span>` : ""}</li>`).join("")}</ol></section>` : ""}
+      ${"share" in navigator ? `<div class="share"><button class="btn ghost" type="button" data-share>${ICON.share}分享這篇</button></div>` : ""}
       <div class="next"></div>
-    </div></article>`;
+    </div></article>
+    <button class="resume" type="button" hidden>從上次讀到的地方繼續</button>`;
   const hero = renderHero(a.hero);
   if (hero) main.querySelector(".hero-slot").append(hero);
-  main.querySelector(".body").append(renderBody(a));
+  const body = main.querySelector(".body");
+  body.append(renderBody(a));
+  const firstP = body.firstElementChild;
+  if (firstP && firstP.tagName === "P" && !firstP.querySelector(".tag")) firstP.classList.add("lead-p");
+  buildToc(body, main.querySelector(".toc-slot"));
   if (issue) {
     const arts = sortArticles(issue.articles, date);
     const i = arts.findIndex((x) => x.column === column);
@@ -204,16 +240,99 @@ async function viewArticle(date, column, my) {
     toast(on ? "已收藏" : "已取消收藏");
   };
   main.querySelector("[data-fs]").onclick = cycleFont;
+  main.querySelector("[data-share]")?.addEventListener("click", () => {
+    navigator.share({ title: a.title, text: a.dek, url: location.href.replace(/\?[^#]*/, "") }).catch(() => {});
+  });
+
+  // Read aloud: the top-bar button starts and pauses; it stops when the reader leaves the article.
+  let reader = null;
+  const speakBtn = main.querySelector("[data-speak]");
+  const setSpeak = (on) => {
+    if (!speakBtn) return;
+    speakBtn.setAttribute("aria-pressed", String(on));
+    speakBtn.setAttribute("aria-label", on ? "暫停朗讀" : "朗讀本文");
+    speakBtn.innerHTML = on ? ICON.pause : ICON.speak;
+  };
+  speakBtn?.addEventListener("click", () => {
+    reader ||= createReader(main.querySelector(".read"), { onState: (st) => setSpeak(st === "playing") });
+    if (!reader.length) { toast("這篇沒有可朗讀的文字"); return; }
+    reader.toggle();
+  });
+  // opening the spoiler adds text: start a fresh reading queue next time
+  body.addEventListener("spoiler-open", () => { reader?.stop(); reader = null; });
+
+  // Progress bar, read mark, and the position to come back to.
   const bar = main.querySelector(".progress");
+  const posKey = `pos.${key}`;
+  let saveT = 0;
   const onScroll = () => {
     const h = document.documentElement, max = h.scrollHeight - h.clientHeight;
     const p = max > 0 ? h.scrollTop / max : 1;
     bar.style.width = `${Math.min(100, p * 100)}%`;
-    if (p > 0.85) markRead(key);
+    if (p > 0.85) { markRead(key); store.del(posKey); }
+    else if (p > 0.05 && Date.now() - saveT > 800) { saveT = Date.now(); store.set(posKey, Math.round(p * 1000) / 1000); }
   };
   window.addEventListener("scroll", onScroll, { passive: true });
-  cleanup = () => window.removeEventListener("scroll", onScroll);
+  const back = store.get(posKey, 0);
+  const resume = main.querySelector(".resume");
+  let resumeT = 0;
+  if (back > 0.08 && back < 0.85) {
+    resume.hidden = false;
+    resume.onclick = () => {
+      const h = document.documentElement;
+      window.scrollTo({ top: back * (h.scrollHeight - h.clientHeight), behavior: "smooth" });
+      resume.hidden = true;
+    };
+    resumeT = setTimeout(() => { resume.hidden = true; }, 7000);
+  }
+  cleanup = () => {
+    window.removeEventListener("scroll", onScroll);
+    clearTimeout(resumeT);
+    reader?.stop();
+  };
   document.title = `${a.title}｜${S.cfg.title}`;
+}
+
+// A short contents list for long articles (four or more section headings).
+function buildToc(body, slot) {
+  const heads = [...body.querySelectorAll(":scope > h2")];
+  if (heads.length < 4) return;
+  slot.innerHTML = `<details class="toc"><summary>本篇段落（${heads.length}）</summary><ol>${heads.map((h, i) => `<li><button type="button" data-i="${i}">${esc(h.textContent)}</button></li>`).join("")}</ol></details>`;
+  slot.querySelectorAll("button").forEach((b) => (b.onclick = () => {
+    heads[Number(b.dataset.i)].scrollIntoView({ behavior: "smooth", block: "start" });
+    slot.querySelector("details").open = false;
+  }));
+}
+
+// Every published article of one column, newest first.
+function viewColumn(c) {
+  const k = S.cfg.columns[c];
+  if (!k) { main.innerHTML = `<div class="wrap"><p class="empty">沒有這個專欄。</p></div>`; return; }
+  const read = readSet();
+  const rows = publishedIssues().flatMap((iss) => iss.articles.filter((a) => a.column === c)
+    .map((a) => itemCard(iss.date, a, read).replace('<div class="meta-s">', `<div class="meta-s">${esc(fmtDate(iss.date, "short"))}・`))).join("");
+  const music = c === "music" ? `<p class="col-note">每天一首古典作品。進入文章後可在 App 內收聽，或一鍵加入你的 Spotify 歌單「${esc(S.cfg.spotify?.playlist_name || "")}」。</p>` : "";
+  main.innerHTML = `<div class="wrap"><header class="page-title"><h1>${esc(k.name)}</h1><span class="de">${esc(k.latin || "")}</span>
+    ${k.full ? `<p class="col-note">${esc(k.full)}</p>` : ""}${music}</header>
+    ${rows || `<p class="empty">這個專欄還沒有刊出文章。</p>`}</div>`;
+  document.title = `${k.name}｜${S.cfg.title}`;
+}
+
+// Full-text search over content/search/<YYYY-MM>.json, newest month first.
+const searchCache = new Map();
+async function searchMonths() {
+  if (!searchCache.has("months")) searchCache.set("months", await getJSON("content/search/months.json").catch(() => []));
+  return searchCache.get("months");
+}
+async function searchMonth(m) {
+  if (!searchCache.has(m)) searchCache.set(m, await getJSON(`content/search/${m}.json`).catch(() => []));
+  return searchCache.get(m);
+}
+function snippet(text, q) {
+  const i = text.toLowerCase().indexOf(q);
+  if (i < 0) return esc(text.slice(0, 60)) + "……";
+  const a = Math.max(0, i - 28), b = Math.min(text.length, i + q.length + 40);
+  return `${a > 0 ? "……" : ""}${esc(text.slice(a, i))}<mark>${esc(text.slice(i, i + q.length))}</mark>${esc(text.slice(i + q.length, b))}${b < text.length ? "……" : ""}`;
 }
 
 function viewArchive() {
@@ -232,10 +351,35 @@ function viewArchive() {
     }).join("");
     main.querySelector(".list").innerHTML = rows || `<p class="empty">${ql ? "沒有符合的文章。" : "還沒有往期。"}</p>`;
   };
+  const chips = Object.entries(S.cfg.columns).map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span></header>
-    <input class="search" type="search" placeholder="搜尋標題、導言或欄名" aria-label="搜尋往期"><div class="list"></div></div>`;
-  const input = main.querySelector(".search");
-  input.addEventListener("input", () => draw(input.value));
+    <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
+    <div class="hits" aria-live="polite"></div>
+    <nav class="chips" aria-label="專欄">${chips}</nav><div class="list"></div></div>`;
+  const input = main.querySelector(".search"), hits = main.querySelector(".hits");
+  let seq = 0, timer = 0;
+  const fullText = async (q) => {
+    const my = ++seq;
+    if (q.length < 2) { hits.innerHTML = ""; return; }
+    hits.innerHTML = `<p class="hint">搜尋全文中……</p>`;
+    const found = [];
+    for (const m of await searchMonths()) {
+      for (const r of await searchMonth(m)) {
+        if (isPublished(r.d) && `${r.t} ${r.x}`.toLowerCase().includes(q)) found.push(r);
+      }
+      if (my !== seq) return;
+      if (found.length >= 40) break;
+    }
+    if (my !== seq) return;
+    hits.innerHTML = found.length
+      ? `<div class="sec-head"><h2>全文</h2><span class="note">${found.length} 篇</span></div>${found.map((r) => `<a class="hit" href="#/a/${r.d}/${r.c}"><span class="meta-s">${esc(fmtDate(r.d, "short"))}・${esc(col(r.c).name)}</span><b>${esc(r.t)}</b><span class="snip">${snippet(r.x, q)}</span></a>`).join("")}`
+      : `<p class="hint">全文沒有找到「${esc(q)}」。</p>`;
+  };
+  input.addEventListener("input", () => {
+    draw(input.value);
+    clearTimeout(timer);
+    timer = setTimeout(() => fullText(input.value.trim().toLowerCase()), 280);
+  });
   draw("");
 }
 
@@ -250,12 +394,7 @@ function viewSaved() {
     ${items || `<p class="empty">讀到喜歡的文章，按右上角的星號收進這裡。</p>`}</div>`;
 }
 
-function viewMusic() {
-  const rows = publishedIssues().flatMap((iss) => iss.articles.filter((a) => a.column === "music").map((a) => itemCard(iss.date, a, readSet()).replace('<div class="meta-s">', `<div class="meta-s">${esc(fmtDate(iss.date, "short"))}・`))).join("");
-  main.innerHTML = `<div class="wrap"><header class="page-title"><h1>音樂室</h1><span class="de">Musikzimmer</span></header>
-    <p class="set" style="font-family:var(--sans);font-size:14px;color:var(--ink-2);line-height:1.7">每天一首古典作品。進入文章後可在 App 內收聽，或一鍵加入你的 Spotify 歌單「${esc(S.cfg.spotify?.playlist_name || "")}」。</p>
-    ${rows || `<p class="empty">還沒有導聆。</p>`}</div>`;
-}
+function viewMusic() { viewColumn("music"); }
 
 const FS = ["16.5px", "18.5px", "20.5px", "23px"];
 function cycleFont() {
@@ -274,6 +413,8 @@ function viewSettings() {
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>設定</h1><span class="de">Einstellungen</span></header>
     <section class="set"><h2>字級</h2><div class="seg" data-g="fs">${FS.map((v, i) => `<button type="button" data-v="${v}" aria-pressed="${v === fs}">${["小", "標準", "大", "特大"][i]}</button>`).join("")}</div></section>
     <section class="set"><h2>外觀</h2><div class="seg" data-g="theme">${[["auto", "跟隨系統"], ["light", "日間"], ["dark", "夜間"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${v === theme}">${l}</button>`).join("")}</div></section>
+    ${canSpeak() ? `<section class="set"><h2>朗讀速度</h2><div class="seg" data-g="rate">${RATES.map((r) => `<button type="button" data-v="${r}" aria-pressed="${r === getRate()}">${r === 1 ? "標準" : `${r}×`}</button>`).join("")}</div>
+      <p>文章右上角的喇叭按鈕會用裝置內建的中文語音朗讀全文，不需網路服務。</p></section>` : ""}
     <section class="set"><h2>Spotify</h2>
       ${!hasClient() ? `<p>尚未設定 Spotify Client ID。設定後即可在 App 內收聽並一鍵加入歌單。</p>`
         : isLoggedIn() ? `<p>已連結。古典欄的「加入 Spotify 歌單」會加到你的歌單「${esc(S.cfg.spotify.playlist_name)}」或你選的歌單。</p><button class="btn ghost" data-sp-out>中斷連結</button>`
@@ -299,6 +440,7 @@ function viewSettings() {
     if (v === "auto") delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = v;
     redraw("theme", v);
   }));
+  main.querySelectorAll('[data-g="rate"] button').forEach((b) => (b.onclick = () => { setRate(Number(b.dataset.v)); redraw("rate", b.dataset.v); }));
   main.querySelector("[data-sp-in]")?.addEventListener("click", () => login("#/settings"));
   main.querySelector("[data-sp-out]")?.addEventListener("click", () => { logout(); viewSettings(); });
 }
@@ -314,10 +456,11 @@ async function route(ev) {
   document.title = S.cfg.title;
   const h = location.hash || "#/";
   let m;
-  const active = h.startsWith("#/archive") || h.startsWith("#/issue") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
+  const active = h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
   $("#nav").innerHTML = NAV.map(([href, label, icon]) => `<a href="${href}" ${href === active ? 'aria-current="page"' : ""}>${ICON[icon]}<span>${label}</span></a>`).join("");
   if ((m = h.match(/^#\/a\/(\d{4}-\d{2}-\d{2})\/([\w-]+)/))) await viewArticle(m[1], m[2], my);
   else if ((m = h.match(/^#\/issue\/(\d{4}-\d{2}-\d{2})/))) viewFront(m[1]);
+  else if ((m = h.match(/^#\/column\/([\w-]+)/))) viewColumn(m[1]);
   else if (h.startsWith("#/archive")) viewArchive();
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/music")) viewMusic();

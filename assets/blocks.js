@@ -208,8 +208,26 @@ export function renderBody(article) {
   const figs = {};
   if (article.hero && (article.hero.type || "figure") === "figure") figs.hero = article.hero;
   for (const b of article.body || []) if (b.type === "figure" && b.id) figs[b.id] = b;
+  // Everything after a spoiler marker stays folded until the reader asks for it.
+  let target = frag;
   for (const b of article.body || []) {
-    try { frag.append(block(b, figs)); } catch (e) { console.warn("block failed", b, e); }
+    try {
+      if (b.type === "spoiler") {
+        const wrap = html(`<div class="spoiler-gate"><div class="spoiler" role="note">${esc(b.text || "以下有劇透")}</div>
+          <button type="button" class="btn ghost">顯示劇透內容</button></div><div class="spoiler-body" data-spoiler-hidden hidden></div>`);
+        const gate = wrap.firstElementChild, inner = wrap.lastElementChild;
+        gate.querySelector("button").onclick = () => {
+          inner.hidden = false;
+          inner.removeAttribute("data-spoiler-hidden");
+          gate.querySelector("button").remove();
+          inner.dispatchEvent(new CustomEvent("spoiler-open", { bubbles: true }));
+        };
+        frag.append(wrap);
+        target = inner;
+        continue;
+      }
+      target.append(block(b, figs));
+    } catch (e) { console.warn("block failed", b, e); }
   }
   return frag;
 }
