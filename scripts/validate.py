@@ -136,7 +136,9 @@ def validate_file(cfg, d, col, path, check_urls=False, used_images=None, used_to
             if check_urls:
                 for u in [b.get("src")] + ([b["src_large"]] if b.get("src_large") else []):
                     ok, msg = check_image(u)
-                    if not ok:
+                    if ok is None:
+                        W("%s 圖片主機暫時限流（HTTP 429），這次無法確認能否開啟：%s。不要因此換圖；確認 commons.py 查得到這個檔案即可" % (where, u))
+                    elif not ok:
                         E("%s 圖片無法開啟：%s（%s）" % (where, u, msg))
         elif t == "detail":
             if b.get("of") not in ids:
@@ -285,15 +287,23 @@ def check_scripture(b, where, E, W, check_urls):
         W("%s 無法連線核對經文：%s" % (where, e))
 
 
+RATE_LIMITED = "rate-limited"
+
+
 def check_image(url):
+    import urllib.error
     try:
-        status, headers, _ = http_get(url, headers={"Range": "bytes=0-1023"}, timeout=25)
+        status, headers, _ = http_get(url, headers={"Range": "bytes=0-1023"}, timeout=25, retries=1)
         ctype = headers.get("Content-Type", headers.get("content-type", ""))
         if status not in (200, 206):
             return False, "HTTP %s" % status
         if not ctype.startswith("image/"):
             return False, "不是圖片（%s）" % ctype
         return True, ""
+    except urllib.error.HTTPError as e:
+        if e.code in (429, 503):
+            return None, RATE_LIMITED
+        return False, "HTTP %s" % e.code
     except Exception as e:  # noqa: BLE001
         return False, str(e)[:120]
 

@@ -28,6 +28,7 @@
 
 4. **研究與核對**
    用 WebSearch、WebFetch 找原始來源。數字、日期、人名、引文都要能在來源找到。找不到就不寫。
+   雲端的 WebSearch 結果常混入內容農場與搬運站：搜尋時盡量用 `allowed_domains` 限定可信網域（官方網站、主要媒體、學術資料庫、維基共享資源），或直接用 WebFetch 打開已知來源的頁面。來路不明的網站一律不當來源。
 
 5. **找圖**
    `python3 scripts/commons.py --search "<關鍵字>"` 找候選；`python3 scripts/commons.py "File:<檔名>"` 取得網址、寬高、授權、作者。依 `IMAGES.md`。
