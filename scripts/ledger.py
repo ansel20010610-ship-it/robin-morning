@@ -5,13 +5,14 @@ Usage:
   python3 scripts/ledger.py --column music      # past topics in a column
   python3 scripts/ledger.py --images            # every image already used
   python3 scripts/ledger.py --topics            # every topic_key
+Reserve articles (content/reserve/) are listed with the date "reserve": their topics and images count as used.
 """
 import argparse
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import figures_of, image_key, iter_articles, load_json  # noqa: E402
+from common import figures_of, image_key, iter_articles, iter_reserve, load_json  # noqa: E402
 
 
 def main():
@@ -21,7 +22,8 @@ def main():
     ap.add_argument("--topics", action="store_true")
     a = ap.parse_args()
     rows = []
-    for day, col, path in iter_articles():
+    entries = list(iter_articles()) + [("reserve", c, p) for c, p in iter_reserve()]
+    for day, col, path in entries:
         try:
             art = load_json(path)
         except Exception as e:  # noqa: BLE001
@@ -34,18 +36,18 @@ def main():
     if a.images:
         for day, col, art in rows:
             for f in figures_of(art):
-                print("%s  %-14s %s" % (day, col, image_key(f.get("src"))))
+                print("%-10s  %-14s %s" % (day, col, image_key(f.get("src"))))
         return
     if a.topics:
         for day, col, art in rows:
-            print("%s  %-14s %s" % (day, col, art.get("topic_key", "")))
+            print("%-10s  %-14s %s" % (day, col, art.get("topic_key", "")))
         return
     if a.column:
         hits = [(d, art) for d, c, art in rows if c == a.column]
         if not hits:
             print("（%s 尚無已刊文章）" % a.column)
         for day, art in hits:
-            print("%s  %s\n            %s" % (day, art.get("topic_key", ""), art.get("title", "")))
+            print("%-10s  %s\n            %s" % (day, art.get("topic_key", ""), art.get("title", "")))
         return
     ap.print_help()
 

@@ -17,7 +17,7 @@ import sys
 import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (BROWSER_IMAGE_TYPES, article_path, cjk_count, figures_of, http_get, image_key,  # noqa: E402
+from common import (iter_reserve, RESERVE, BROWSER_IMAGE_TYPES, article_path, cjk_count, figures_of, http_get, image_key,  # noqa: E402
                     image_page, iter_articles, load_config, load_json, raw_image_ext)
 
 LENGTH = {  # (min, max) CJK characters in body
@@ -37,6 +37,7 @@ TAGS = {"史實", "史料", "學者解釋", "推論", "本文讀法", "原創假
 AI_PHRASES = ["值得一提的是", "不可否認", "毋庸置疑", "總而言之", "綜上所述", "總的來說", "深入探討",
               "神秘面紗", "一場旅程", "的旅程", "交織出", "譜寫", "完美詮釋", "長河中", "時光荏苒",
               "歷久彌新", "嘆為觀止", "史詩級", "讓我們一起", "在這個資訊爆炸", "不禁讓人"]
+STALE_WORDS = ["今天", "今日", "今晨", "今早", "昨天", "昨晚", "昨日", "明天", "本週", "這週", "上週", "本月", "創刊"]
 DEVOTION_HEADS = ["今日經文", "經文釋義", "與我的生活連結", "今日禱告"]
 LINK_START = re.compile(r"\[[^\]]+\]\(")
 # Same pattern as inline() in assets/util.js: an http(s) URL without spaces, holding at most one level of
@@ -100,7 +101,18 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
         E("欄位代號 %s 不在 config.json" % col)
     if art.get("column") != col:
         E("column 應為 %s" % col)
-    if art.get("date") != str(d):
+    if d == "reserve":
+        if art.get("date") != "reserve":
+            E("備稿的 date 必須是 \"reserve\"")
+        rw = art.get("reserve_written")
+        if not (isinstance(rw, str) and re.match(r"^\d{4}-\d{2}-\d{2}$", rw)):
+            E("備稿需要 reserve_written（撰寫日期 YYYY-MM-DD）")
+        if col in ("fm-watch", "cosmere-watch"):
+            E("觀測站不做備稿")
+        stale = [w for w in STALE_WORDS if w in json.dumps(art.get("body", []), ensure_ascii=False) + art.get("title", "") + art.get("dek", "")]
+        if stale:
+            W("備稿要在任何一天都成立，避免會過期的字眼：%s" % "、".join(stale))
+    elif art.get("date") != str(d):
         E("date 應為 %s" % d)
     for k in ("title", "dek", "topic_key", "updated_at"):
         v = art.get(k)
@@ -568,38 +580,78 @@ def check_image(url):
 
 @functools.lru_cache(maxsize=None)
 def ledger_rows():
-    """(date, column, image keys, normalised topic_key) of every article; read once per run."""
+    """(date or "reserve", column, path, image keys, normalised topic_key) of every published and reserve
+    article; read once per run. Reserve articles count as used: their topics and images are spoken for."""
     rows = []
-    for d, c, p in iter_articles():
+    entries = [(d, c, p) for d, c, p in iter_articles()] + [("reserve", c, p) for c, p in iter_reserve()]
+    for d, c, p in entries:
         try:
             art = load_json(p)
             keys = tuple(image_key(f["src"]) for f in figures_of(art))
             tk = art.get("topic_key")
         except Exception:  # noqa: BLE001  # a broken article elsewhere must not stop this check
             continue
-        rows.append((d, c, keys, topic_norm(tk) if isinstance(tk, str) else ""))
+        rows.append((d, c, os.path.abspath(p), keys, topic_norm(tk) if isinstance(tk, str) else ""))
     return tuple(rows)
 
 
-def ledgers_excluding(day, col):
+def ledgers_excluding(day, col, paths=None):
+    """Images and topics used by every other article. With `paths`, exactly those files are left out
+    (a reserve article, or one being promoted); otherwise the article of `day`/`col`."""
     images, topics = {}, {}
-    for d, c, keys, tk in ledger_rows():
-        if d == day and c == col:
+    skip = {os.path.abspath(p) for p in paths} if paths else None
+    for d, c, p, keys, tk in ledger_rows():
+        if (p in skip) if skip is not None else (d == day and c == col):
             continue
+        where = "%s/%s" % (d, c) if d != "reserve" else "備稿 %s/%s" % (c, os.path.basename(p))
         for k in keys:
-            images.setdefault(k, "%s/%s" % (d, c))
-        if tk and d != day:
-            topics.setdefault(tk, "%s/%s" % (d, c))
+            images.setdefault(k, where)
+        if tk and (d != day or day == "reserve"):
+            topics.setdefault(tk, where)
     return images, topics
+
+
+def validate_reserve(cfg, column=None, check_urls=False):
+    """Validate content/reserve/; returns the number of files with errors."""
+    files = list(iter_reserve(column))
+    if not files:
+        print("備稿庫沒有稿件" + ("（%s）" % column if column else ""))
+        return 0
+    bad = 0
+    for col, p in files:
+        imgs, tops = ledgers_excluding("reserve", col, paths=[p])
+        errs, warns = validate_file(cfg, "reserve", col, p, check_urls, imgs, tops)
+        report(col + "/" + os.path.basename(p), p, errs, warns)
+        bad += bool(errs)
+    return bad
+
+
+def report(label, p, errs, warns):
+    try:
+        art = load_json(p)
+        title = art.get("title") if isinstance(art.get("title"), str) else ""
+        n = cjk_count(art)
+    except Exception:  # noqa: BLE001  # already reported by validate_file
+        title, n = "", 0
+    print("%s %s（%d 字）%s" % ("✗" if errs else "✓", label, n, "：" + title if title else ""))
+    for e in errs:
+        print("   ERROR " + e)
+    for w in warns:
+        print("   WARN  " + w)
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("date")
+    ap.add_argument("date", nargs="?", help="刊期日期 YYYY-MM-DD；用 --reserve 時省略")
     ap.add_argument("--column")
     ap.add_argument("--check-urls", action="store_true")
+    ap.add_argument("--reserve", action="store_true", help="驗證備稿庫 content/reserve/")
     a = ap.parse_args()
     cfg = load_config()
+    if a.reserve:
+        return 1 if validate_reserve(cfg, a.column, a.check_urls) else 0
+    if not a.date:
+        ap.error("需要刊期日期，或加 --reserve")
     d = dt.date.fromisoformat(a.date)
     ddir = os.path.dirname(article_path(d, "x"))
     if a.column:
@@ -618,17 +670,7 @@ def main():
             continue
         imgs, tops = ledgers_excluding(str(d), col)
         errs, warns = validate_file(cfg, d, col, p, a.check_urls, imgs, tops)
-        try:
-            art = load_json(p)
-            title = art.get("title") if isinstance(art.get("title"), str) else ""
-            n = cjk_count(art)
-        except Exception:  # noqa: BLE001  # already reported by validate_file
-            title, n = "", 0
-        print("%s %s（%d 字）%s" % ("✗" if errs else "✓", col, n, "：" + title if title else ""))
-        for e in errs:
-            print("   ERROR " + e)
-        for w in warns:
-            print("   WARN  " + w)
+        report(col, p, errs, warns)
         bad += bool(errs)
     return 1 if bad else 0
 

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Build content/index.json (issue list for the app). Runs in GitHub Actions on every push.
+"""Build content/index.json (issue list for the app) and content/search/<YYYY-MM>.json (full text for search).
+Runs in GitHub Actions on every push.
 
 A malformed article is skipped with a ::warning:: annotation; it must never fail the deploy, or every
 later issue would stay offline until someone fixes the file by hand.
@@ -7,20 +8,50 @@ later issue would stay offline until someone fixes the file by hand.
 import datetime as dt
 import json
 import math
+import re
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import (CONTENT, ROOT, WEEKDAY_ZH, cjk_count, issue_number, iter_articles,  # noqa: E402
-                    load_config, load_json)
+                    load_config, load_json, text_of_block, wm_thumb)
 
 
 def thumb(hero):
     if not isinstance(hero, dict):
         return None
     if hero.get("src"):
-        return {k: hero.get(k) for k in ("src", "width", "height", "alt", "kind") if hero.get(k) is not None}
+        out = {k: hero.get(k) for k in ("src", "width", "height", "alt", "kind") if hero.get(k) is not None}
+        small = wm_thumb(hero["src"], 500, hero.get("width") if isinstance(hero.get("width"), int) else None)
+        if small:
+            out["thumb"] = small  # front-page cards load a 500px image instead of the 1280px one
+        return out
     return {"diagram": hero.get("type")}
+
+
+def epigraph(art):
+    """The first verse of the day's scripture, for the masthead (e.g. 起初，　神創造天地。— 創世記 1:1)."""
+    for b in art.get("body") or []:
+        if isinstance(b, dict) and b.get("type") == "scripture" and b.get("verses"):
+            v = b["verses"][0]
+            text = re.sub(r"^（[^）]*）", "", str(v.get("text", ""))).strip()
+            if len(text) > 46:  # keep one sentence
+                m = re.match(r"^(.{12,46}?[。；！？])", text)
+                text = m.group(1) if m else text[:46] + "……"
+            book = re.sub(r"\s*\d.*$", "", str(b.get("ref", ""))).strip()
+            return {"text": text, "ref": "%s %s:%s" % (book, v.get("c", b.get("chapter")), v.get("n"))}
+    return None
+
+
+def plain_text(art):
+    parts = [art.get("title", ""), art.get("dek", "")]
+    for b in art.get("body") or []:
+        if isinstance(b, dict):
+            try:
+                parts.append(text_of_block(b))
+            except Exception:  # noqa: BLE001
+                pass
+    return re.sub(r"\s+", " ", " ".join(p for p in parts if isinstance(p, str)))
 
 
 def skip(path, why):
@@ -31,7 +62,7 @@ def skip(path, why):
 
 def main():
     cfg = load_config()
-    days = {}
+    days, epigraphs, search = {}, {}, {}
     for day, col, path in iter_articles():
         if col not in cfg["columns"]:
             continue
@@ -50,10 +81,19 @@ def main():
                 "spoiler": art.get("spoiler"),
                 "updated_at": art.get("updated_at"),
             }
+            if art.get("from_reserve"):
+                entry["from_reserve"] = True
+            if col == "devotion":
+                epi = epigraph(art)
+            else:
+                epi = None
+            search.setdefault(day[:7], []).append({"d": day, "c": col, "t": art.get("title", ""), "x": plain_text(art)})
         except Exception as e:  # noqa: BLE001
             skip(path, "%s: %s" % (type(e).__name__, e))
             continue
         days.setdefault(day, []).append(entry)
+        if epi:
+            epigraphs[day] = epi
     issues = []
     for day in sorted(days, reverse=True):
         try:
@@ -61,12 +101,21 @@ def main():
         except ValueError as e:  # e.g. a folder named 2026-02-30
             skip(os.path.join(CONTENT, "issues", day), e)
             continue
-        issues.append({"date": day, "no": issue_number(cfg, d), "weekday": WEEKDAY_ZH[d.weekday()],
-                       "articles": days[day]})
+        issue = {"date": day, "no": issue_number(cfg, d), "weekday": WEEKDAY_ZH[d.weekday()], "articles": days[day]}
+        if day in epigraphs:
+            issue["epigraph"] = epigraphs[day]
+        issues.append(issue)
     out = {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "issues": issues}
     with open(os.path.join(CONTENT, "index.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
-    print("index.json：%d 期，%d 篇" % (len(issues), sum(len(i["articles"]) for i in issues)))
+    sdir = os.path.join(CONTENT, "search")
+    os.makedirs(sdir, exist_ok=True)
+    for month, rows in search.items():
+        with open(os.path.join(sdir, month + ".json"), "w", encoding="utf-8") as f:
+            json.dump(sorted(rows, key=lambda r: r["d"], reverse=True), f, ensure_ascii=False, separators=(",", ":"))
+    with open(os.path.join(sdir, "months.json"), "w", encoding="utf-8") as f:
+        json.dump(sorted(search, reverse=True), f)
+    print("index.json：%d 期，%d 篇；搜尋資料 %d 個月" % (len(issues), sum(len(i["articles"]) for i in issues), len(search)))
 
 
 if __name__ == "__main__":

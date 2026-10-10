@@ -9,16 +9,20 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content")
 ISSUES = os.path.join(CONTENT, "issues")
+RESERVE = os.path.join(CONTENT, "reserve")
+RESERVE_TARGET = 2  # reserve articles kept per column (editorial/RESERVE.md)
 UA = "RobinMorningBot/1.0 (https://github.com/ansel20010610-ship-it/robin-morning) python-urllib"
 TW = dt.timezone(dt.timedelta(hours=8))
 WEEKDAY_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 WEEKDAY_ZH = ["一", "二", "三", "四", "五", "六", "日"]
 
+# Shifts (Taiwan time) — editorial/README.md. Shift 5 is the safety net: every column of the day.
 GROUPS = {
     1: ["devotion", "music", "perio"],
     2: ["civilization", "@supp0"],
-    3: ["@supp1", "@supp2"],
+    3: ["@supp1", "@supp2", "football"],
     4: ["football", "fm-watch", "cosmere-watch"],
+    5: ["@all"],
 }
 
 
@@ -57,8 +61,16 @@ def columns_for_group(cfg, d, group):
     supp = supplements_for(cfg, d)
     out = []
     for c in GROUPS[group]:
-        out.append(supp[int(c[-1])] if c.startswith("@supp") else c)
+        if c == "@all":
+            out += expected_columns(cfg, d)
+        else:
+            out.append(supp[int(c[-1])] if c.startswith("@supp") else c)
     return out
+
+
+def reserve_columns(cfg):
+    """Every column that must appear daily (all but the conditional watches) keeps a reserve."""
+    return [k for k, v in cfg["columns"].items() if v["group"] != "watch"]
 
 
 def expected_columns(cfg, d):
@@ -82,6 +94,19 @@ def iter_articles():
         for fn in sorted(os.listdir(ddir)):
             if fn.endswith(".json"):
                 yield day, fn[:-5], os.path.join(ddir, fn)
+
+
+def iter_reserve(column=None):
+    """Yield (column, path) for every reserve article in content/reserve/<column>/."""
+    if not os.path.isdir(RESERVE):
+        return
+    for col in sorted(os.listdir(RESERVE)):
+        cdir = os.path.join(RESERVE, col)
+        if (column and col != column) or not os.path.isdir(cdir):
+            continue
+        for fn in sorted(os.listdir(cdir)):
+            if fn.endswith(".json"):
+                yield col, os.path.join(cdir, fn)
 
 
 def load_json(path):
@@ -116,6 +141,33 @@ def image_key(url):
         if m:
             return u.netloc + ":" + m.group(1)
     return u.netloc + path
+
+
+WM_WIDTHS = (250, 330, 500, 960, 1280, 1920)  # widths Wikimedia serves; others are refused
+WM_THUMB = re.compile(r"^(/wikipedia/commons/thumb/[0-9a-f]/[0-9a-f]{2}/[^/]+)/((?:lossy-|lossless-)?(?:page\d+-)?)(\d+)px-([^/]+)$")
+WM_ORIG = re.compile(r"^/wikipedia/commons/([0-9a-f]/[0-9a-f]{2})/([^/]+)$")
+
+
+def wm_thumb(url, width, orig_width=None):
+    """The same Wikimedia Commons image at a smaller standard width, or None (not Commons, or already small)."""
+    if not url:
+        return None
+    u = urllib.parse.urlsplit(url)
+    if not u.netloc.endswith("wikimedia.org"):
+        return None
+    m = WM_THUMB.match(u.path)
+    if m:
+        if int(m.group(3)) <= width:
+            return None
+        return "%s://%s%s/%s%dpx-%s" % (u.scheme, u.netloc, m.group(1), m.group(2), width, m.group(4))
+    m = WM_ORIG.match(u.path)
+    if m:
+        name = m.group(2)
+        if name.lower().endswith(RAW_IMAGE_EXT) or (orig_width and orig_width <= width):
+            return None
+        thumb_name = name + ".png" if name.lower().endswith(".svg") else name
+        return "https://upload.wikimedia.org/wikipedia/commons/thumb/%s/%s/%dpx-%s" % (m.group(1), name, width, thumb_name)
+    return None
 
 
 def image_page(url):

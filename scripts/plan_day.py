@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """Tell the on-duty editor what to write today.
 
-Usage: python3 scripts/plan_day.py [--date YYYY-MM-DD] [--group 1-4]
+Usage: python3 scripts/plan_day.py [--date YYYY-MM-DD] [--group 1-5]
 """
 import argparse
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (GROUPS, WEEKDAY_ZH, article_path, columns_for_group, expected_columns,  # noqa: E402
-                    issue_number, load_config, parse_date, supplements_for, tw_now)
+from common import (GROUPS, RESERVE_TARGET, WEEKDAY_ZH, article_path, columns_for_group,  # noqa: E402
+                    expected_columns, issue_number, iter_reserve, load_config, load_json, parse_date,
+                    reserve_columns, supplements_for, tw_now)
 import validate  # noqa: E402
 
 
@@ -36,7 +37,7 @@ def main():
     print("今日副刊：" + "、".join("%s（%s）" % (cols[c]["name"], c) for c in supplements_for(cfg, d)))
     print()
     if a.group:
-        print("第 %d 班負責：" % a.group)
+        print("第 %d 班負責：" % a.group if a.group < 5 else "第 5 班（安全網）負責全刊：")
         for c in columns_for_group(cfg, d, a.group):
             print("  - %-14s %-12s %s" % (c, cols[c]["name"], status(cfg, d, c)))
             print("    規格：editorial/columns/%s.md" % c)
@@ -54,6 +55,14 @@ def main():
         print("  - %-14s %-12s %s" % (c, cols[c]["name"], "已刊出" if os.path.exists(p) else "未刊出（無新進展時靜默）"))
     if missing:
         print("\n缺稿：" + "、".join(missing))
+    stock = {c: 0 for c in reserve_columns(cfg)}
+    for c, _ in iter_reserve():
+        if c in stock:
+            stock[c] += 1
+    short = [c for c, n in stock.items() if n < RESERVE_TARGET]
+    print("\n備稿庫存（每欄目標 %d 篇）：%s" % (RESERVE_TARGET, "、".join("%s %d" % (c, n) for c, n in stock.items())))
+    if short:
+        print("備稿不足：" + "、".join(short))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,50 @@
+name: Fill from reserve
+
+# Last line of defence against a missing column: at 07:12 and 07:22 Taiwan time, any column of today's
+# issue that is still missing (or fails validation) is filled from content/reserve/. No AI involved.
+on:
+  schedule:
+    - cron: "12 23 * * *"
+    - cron: "22 23 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Issue date (YYYY-MM-DD, Taiwan). Empty = today."
+        required: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: fill
+  cancel-in-progress: false
+
+jobs:
+  fill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Fill missing columns
+        id: fill
+        run: |
+          D="${{ github.event.inputs.date }}"
+          [ -z "$D" ] && D=$(TZ=Asia/Taipei date +%F)
+          echo "date=$D" >> "$GITHUB_OUTPUT"
+          # exit code 2 = some column still has no usable reserve; commit what was filled anyway
+          python3 scripts/fill_from_reserve.py "$D" || echo "::warning::$D 仍有欄位缺稿（備稿不足），07:45 監看會開 issue"
+          if [ -n "$(git status --porcelain content)" ]; then echo "changed=yes" >> "$GITHUB_OUTPUT"; fi
+      - name: Commit and push
+        if: steps.fill.outputs.changed == 'yes'
+        run: |
+          git config user.name "robin-morning-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A content
+          git commit -m "${{ steps.fill.outputs.date }}：以備稿補上缺稿"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
+      - name: Deploy
+        # pushes made with GITHUB_TOKEN do not trigger other workflows, so start the deploy explicitly
+        if: steps.fill.outputs.changed == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publish.yml --ref main
