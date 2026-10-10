@@ -19,9 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deploy1.outputs.page_url || steps.deploy2.outputs.page_url }}
     steps:
+      # always build the newest main, so an older run finishing late cannot replace a newer deploy
       - uses: actions/checkout@v7
+        with:
+          ref: main
       - name: Build issue index
         run: python3 scripts/build_index.py
       - name: Validate today's issue (report only)
@@ -32,6 +35,7 @@ jobs:
         run: |
           mkdir _site
           cp -R index.html sw.js manifest.webmanifest .nojekyll assets content oauth _site/
+          git rev-parse HEAD > _site/content/version.txt   # watch.yml compares this with main
       - name: Version the service worker
         # Cache name = hash of the app shell, so sw.js (and the cached shell) changes only when the shell does.
         run: |
@@ -41,5 +45,11 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
-      - id: deployment
+      - id: deploy1
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+      - if: steps.deploy1.outcome == 'failure'
+        run: sleep 60
+      - id: deploy2
+        if: steps.deploy1.outcome == 'failure'
         uses: actions/deploy-pages@v5

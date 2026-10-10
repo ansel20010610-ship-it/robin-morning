@@ -1,10 +1,13 @@
 name: Fill from reserve
 
-# Last line of defence against a missing column: at 07:12 and 07:22 Taiwan time, any column of today's
-# issue that is still missing (or fails validation) is filled from content/reserve/. No AI involved.
+# Last line of defence against a missing column: from 07:12 Taiwan time, any column of today's issue that is
+# still missing (or fails validation) is filled from content/reserve/. No AI involved. Shift 5 runs the same
+# script itself at 07:05; these runs are the fallback. GitHub may start scheduled runs late, hence several.
 on:
   schedule:
     - cron: "12 23 * * *"
+    - cron: "15 23 * * *"
+    - cron: "18 23 * * *"
     - cron: "22 23 * * *"
   workflow_dispatch:
     inputs:
@@ -35,16 +38,29 @@ jobs:
           python3 scripts/fill_from_reserve.py "$D" || echo "::warning::$D 仍有欄位缺稿（備稿不足），07:45 監看會開 issue"
           if [ -n "$(git status --porcelain content)" ]; then echo "changed=yes" >> "$GITHUB_OUTPUT"; fi
       - name: Commit and push
+        id: push
         if: steps.fill.outputs.changed == 'yes'
         run: |
+          D="${{ steps.fill.outputs.date }}"
           git config user.name "robin-morning-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A content
-          git commit -m "${{ steps.fill.outputs.date }}：以備稿補上缺稿"
-          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
+          git commit -m "$D：以備稿補上缺稿"
+          for i in 1 2 3; do
+            if git push origin HEAD:main; then echo "pushed=yes" >> "$GITHUB_OUTPUT"; exit 0; fi
+            sleep 5
+            # someone pushed meanwhile: start again from the newest main (columns written since are skipped)
+            git fetch origin main && git reset --hard origin/main
+            python3 scripts/fill_from_reserve.py "$D" || true
+            if [ -z "$(git status --porcelain content)" ]; then echo "main 已齊備"; exit 0; fi
+            git add -A content
+            git commit -m "$D：以備稿補上缺稿"
+          done
+          echo "::error::$D 備稿補位推送三次都失敗"
+          exit 1
       - name: Deploy
         # pushes made with GITHUB_TOKEN do not trigger other workflows, so start the deploy explicitly
-        if: steps.fill.outputs.changed == 'yes'
+        if: steps.push.outputs.pushed == 'yes'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run publish.yml --ref main

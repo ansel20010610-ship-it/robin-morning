@@ -56,11 +56,11 @@ def main():
     if missing:
         print("\n缺稿：" + "、".join(missing))
     stock = {c: 0 for c in reserve_columns(cfg)}
-    for c, _ in iter_reserve():
+    for c, rows in validate.reserve_status(cfg).items():
         if c in stock:
-            stock[c] += 1
+            stock[c] += sum(1 for _, errs in rows if not errs)
     short = [c for c, n in stock.items() if n < RESERVE_TARGET]
-    print("\n備稿庫存（每欄目標 %d 篇）：%s" % (RESERVE_TARGET, "、".join("%s %d" % (c, n) for c, n in stock.items())))
+    print("\n可用備稿（每欄目標 %d 篇）：%s" % (RESERVE_TARGET, "、".join("%s %d" % (c, n) for c, n in stock.items())))
     if short:
         print("備稿不足：" + "、".join(short))
 

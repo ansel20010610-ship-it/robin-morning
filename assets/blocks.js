@@ -222,7 +222,7 @@ export function renderBody(article) {
           gate.querySelector("button").remove();
           inner.dispatchEvent(new CustomEvent("spoiler-open", { bubbles: true }));
         };
-        frag.append(wrap);
+        target.append(wrap); // a later spoiler opens only after the earlier one
         target = inner;
         continue;
       }

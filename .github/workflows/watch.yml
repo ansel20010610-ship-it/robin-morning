@@ -22,7 +22,10 @@ jobs:
           D=$(TZ=Asia/Taipei date +%F)
           echo "date=$D" >> "$GITHUB_OUTPUT"
           python3 scripts/plan_day.py --date "$D" > plan.txt 2>&1 || true
-          python3 scripts/validate.py "$D" > validate.txt 2>&1; V=$?
+          V=0; python3 scripts/validate.py "$D" > validate.txt 2>&1 || V=$?
+          # the live site must be serving the newest commit (a failed or late deploy leaves readers on old content)
+          LIVE=$(curl -fsS "https://wiener-morgen-private.duckdns.org/content/version.txt?t=$(date +%s)" 2>/dev/null || echo "（無法讀取）")
+          HEAD=$(git rev-parse HEAD)
           MISSING=$(grep '^缺稿：' plan.txt | sed 's/^缺稿：//' || true)
           {
             echo "台灣時間 07:45 檢查 $D 的刊期。"
@@ -37,12 +40,16 @@ jobs:
             cat validate.txt
             echo '```'
             echo
+            echo "### 線上版本"
+            echo "網站：$LIVE"
+            echo "main：$HEAD"
+            echo
             echo "排程執行紀錄：https://claude.ai/code/routines"
           } > report.md
-          if [ -n "$MISSING" ] || [ "$V" -ne 0 ]; then echo "problem=yes" >> "$GITHUB_OUTPUT"; fi
+          if [ -n "$MISSING" ] || [ "$V" -ne 0 ] || [ "$LIVE" != "$HEAD" ]; then echo "problem=yes" >> "$GITHUB_OUTPUT"; fi
           cat report.md
       - name: Open or update an issue
-        if: steps.check.outputs.problem == 'yes'
+        if: always() && steps.check.outputs.problem == 'yes'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

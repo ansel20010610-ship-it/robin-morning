@@ -17,8 +17,9 @@ function pickVoice() {
 }
 
 // Which elements are read, in reading order. Figures, tables, diagrams and source lists are skipped.
-const READ = [".article-head h1", ".article-head .dek", ".body > p", ".body > h2", ".body blockquote .zh",
-  ".body > ul > li", ".body > ol > li", ".body .scripture .ref", ".body .scripture .verses", ".body .prayer p",
+const B = ":is(.body, .body > .spoiler-body)"; // the body and a revealed spoiler section
+const READ = [".article-head h1", ".article-head .dek", `${B} > p`, `${B} > h2`, ".body blockquote .zh",
+  `${B} > ul > li`, `${B} > ol > li`, ".body .scripture .ref", ".body .scripture .verses", ".body .prayer p",
   ".body .news h3", ".body .news p:not(.src)", ".body .callout .lbl", ".body .callout p", ".body .callout li",
   ".body .exercise h3", ".body .exercise li", ".body .timeline li", ".body .spoiler"].join(",");
 
@@ -95,7 +96,13 @@ export function createReader(root, { onState } = {}) {
     if (k >= 0) { i = k; play(); }
   }
 
-  return { play, pause, stop, playFrom, toggle: () => (playing ? pause() : play()), get playing() { return playing; }, get length() { return queue.length; } };
+  // move the start point without playing (used when the queue is rebuilt while paused)
+  function seek(el) {
+    const k = queue.findIndex((q) => q.el === el);
+    if (k >= 0) i = k;
+  }
+
+  return { play, pause, stop, playFrom, seek, toggle: () => (playing ? pause() : play()), get playing() { return playing; }, get length() { return queue.length; } };
 }
 
 // Some browsers load voices asynchronously.

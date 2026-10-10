@@ -10,10 +10,10 @@
 | 2 | 01:37 | 文明如何運作（civilization）、當日第 1 個副刊 |
 | 3 | 02:37 | 當日第 2、3 個副刊；巴薩晨報**初稿**（football） |
 | 4 | 05:17 | FM 觀測站、迷霧之子與颶光影視化、巴薩晨報**更新**（前一晚比賽仍在進行就最後做）；全刊驗收，補寫缺稿 |
-| 5 | 06:27 | 安全網：補寫一切缺稿（平行子代理）、巴薩晨報最後更新；**07:08 前全部推送** |
+| 5 | 06:27 | 安全網：補寫一切缺稿（平行子代理）、巴薩晨報最後更新；**07:05 停手推送，接著執行備稿補位** |
 | 備 | 14:37 | 備稿班：把備稿庫補到每欄至少 2 篇（見 `RESERVE.md`） |
 
-07:12 與 07:22 由 GitHub Actions 自動以備稿補上仍缺的欄位（不經 AI）；07:45 再檢查一次，仍有問題就開 GitHub issue 通知社長。副刊依星期輪替（`content/config.json` 的 `rotation_by_weekday`）。
+07:05 第 5 班自己執行備稿補位；07:12、07:15、07:18、07:22 再由 GitHub Actions 補位（不經 AI，作為後備）；07:45 再檢查一次，仍有問題就開 GitHub issue 通知社長。副刊依星期輪替（`content/config.json` 的 `rotation_by_weekday`）。
 
 ## 每班流程
 
@@ -38,14 +38,22 @@
 ## 巴薩晨報的三個版本
 
 - 第 3 班寫**初稿**：以當時已有的新聞完成一篇完整、可刊出的稿件。
-- 第 4、5 班**更新**：從現有稿件的 `updated_at` 起，查有沒有新的重要消息（尤其前一晚剛結束的比賽）。有就更新內容、`updated_at` 與來源；沒有就不動。仍在進行中的比賽，先做其他工作，回頭再寫；07:08 仍未終場就寫當下比分並標明「比賽進行中」，最終結果由下一期補報（細節見 `columns/football.md`）。
-- 若當天的巴薩晨報是備稿（`from_reserve: true`），09:00 前完成新聞稿時可以覆蓋，並依 `RESERVE.md` 把備稿移回備稿庫。
+- 第 4、5 班**更新**：從現有稿件的 `updated_at` 起，查有沒有新的重要消息（尤其前一晚剛結束的比賽）。有就更新內容、`updated_at` 與來源；沒有就不動。仍在進行中的比賽，先做其他工作，回頭再寫；07:05 仍未終場就寫當下比分並標明「比賽進行中」，最終結果由下一期補報（細節見 `columns/football.md`）。
+- 若當天的巴薩晨報是備稿（`from_reserve: true`），當天不再覆蓋；漏掉的新聞由下一期補報（時間窗會從上一篇真正的新聞稿起算）。
 
 ## 第 4、5 班：全刊驗收與補稿
 
 - `python3 scripts/plan_day.py --group 4`（或 5）會列出全刊缺稿與驗證失敗的稿件。
 - 先完成本班欄位，再依「主欄 → 副刊」的順序補寫缺稿；第 5 班用平行子代理同時補。
-- 第 5 班 **07:08 前**一定要停手並推送已完成的稿件；來不及的欄位交給 07:12 的備稿補位。
+- 第 5 班 **07:05** 一定要停手：確認所有子代理都已結束、不再寫檔，推送已完成的稿件。接著執行備稿補位：
+  ```
+  git pull --rebase origin main
+  python3 scripts/fill_from_reserve.py <日期> || true
+  git add -A content/issues/<日期> content/reserve content/rejected
+  git commit -m "<日期>：以備稿補上缺稿"      # 沒有變更就略過
+  git pull --rebase origin main && git push origin HEAD:main
+  ```
+  補位會從備稿庫刪除用掉的備稿，並把驗證失敗、已被替換的稿件移到 `content/rejected/`，所以這一步要 `git add -A` 這三個資料夾。
 - 最後跑 `python3 scripts/validate.py <日期>`，在回報中列出：已刊出、補了哪些、觀測站結果（刊出／靜默／無法判定）、仍缺哪些與原因。
 
 ## 備稿班
@@ -54,7 +62,7 @@
 
 ## 不可以做的事
 
-- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/` 與 `state/`。
+- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/`、`content/rejected/`（只有備稿補位會寫）與 `state/`。
 - 不刪除或改寫過去日期的稿件。若發現過去稿件有事實錯誤，在當天相關欄位文末以「更正」說明，並在回報中提出。
 - 不讀取、不推測讀者的私人生活；不使用讀者自己的小說設定。
 - 不使用 AI 生成圖片。不呼叫任何需要付費的 API。

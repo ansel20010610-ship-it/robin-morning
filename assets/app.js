@@ -30,8 +30,17 @@ const col = (c) => S.cfg.columns[c] || { name: c, group: "supplement" };
 
 async function article(date, column) {
   const k = `${date}/${column}`;
-  if (!S.articles.has(k)) S.articles.set(k, await getJSON(`content/issues/${date}/${column}.json`));
-  return S.articles.get(k);
+  const have = S.articles.get(k);
+  const want = issueBy(date)?.articles.find((x) => x.column === column)?.updated_at;
+  if (have && (!want || have.updated_at === want)) return have;
+  try {
+    const a = await getJSON(`content/issues/${date}/${column}.json`, { fresh: Boolean(have) });
+    S.articles.set(k, a);
+    return a;
+  } catch (e) {
+    if (have) return have; // offline: the older copy beats an error page
+    throw e;
+  }
 }
 
 // Supplements follow that weekday's rotation (the settings table and the shifts use the same order).
@@ -175,8 +184,8 @@ function prefetch(issue) {
 
 // When a news article was last updated after it went out, or its cut-off time.
 function updatedNote(date, a) {
-  if (!a.updated_at) return "";
-  const t = new Date(a.updated_at);
+  if (!a.updated_at || /^\d{4}-\d{2}-\d{2}$/.test(a.updated_at)) return "";
+  const t = new Date(/(Z|[+-]\d{2}:?\d{2})$/i.test(a.updated_at) ? a.updated_at : `${a.updated_at}+08:00`);
   if (Number.isNaN(t.getTime())) return "";
   const pub = new Date(`${date}T${S.cfg.publish_time || "07:30"}:00+08:00`);
   const tw = new Date(t.getTime() + 8 * 3600 * 1000);
@@ -207,7 +216,7 @@ async function viewArticle(date, column, my) {
     <article class="wrap"><div class="read">
       <header class="article-head">${kicker(column, true)}<h1>${esc(a.title)}</h1><p class="dek">${esc(a.dek)}</p>
         <div class="meta">${esc(fmtDate(date))}・第 ${issue?.no ?? ""} 期${minutes ? `・閱讀約 ${minutes} 分鐘` : ""}${updatedNote(date, a)}</div>
-        ${a.from_reserve && column === "football" ? `<div class="banner">今晨新聞稿未能如期完成，先刊出這篇備用專題；新聞稿完成後會更新本欄。</div>` : ""}
+        ${a.from_reserve && column === "football" ? `<div class="banner">今晨新聞稿未能如期完成，先刊出這篇備用專題；最新消息併入下一期。</div>` : ""}
         ${a.status === "undetermined" ? `<div class="banner">本期查核未完成，無法判定是否有新進展；這不代表沒有新消息。</div>` : ""}
         ${a.spoiler ? `<div class="banner">劇透提醒：${esc(a.spoiler)}</div>` : ""}
         ${a.disclaimer ? `<div class="banner gold">${esc(a.disclaimer)}</div>` : ""}
@@ -258,25 +267,46 @@ async function viewArticle(date, column, my) {
     if (!reader.length) { toast("這篇沒有可朗讀的文字"); return; }
     reader.toggle();
   });
-  // opening the spoiler adds text: start a fresh reading queue next time
-  body.addEventListener("spoiler-open", () => { reader?.stop(); reader = null; });
+  // Opening a spoiler adds text and headings: rebuild the contents and the reading queue, keeping the place.
+  body.addEventListener("spoiler-open", () => {
+    buildToc(body, main.querySelector(".toc-slot"));
+    if (!reader) return;
+    const at = body.querySelector(".speaking"), was = reader.playing;
+    reader.stop();
+    reader = createReader(main.querySelector(".read"), { onState: (st) => setSpeak(st === "playing") });
+    if (at && was) reader.playFrom(at); else if (at) reader.seek(at);
+  });
 
   // Progress bar, read mark, and the position to come back to.
   const bar = main.querySelector(".progress");
   const posKey = `pos.${key}`;
-  let saveT = 0;
-  const onScroll = () => {
-    const h = document.documentElement, max = h.scrollHeight - h.clientHeight;
-    const p = max > 0 ? h.scrollTop / max : 1;
-    bar.style.width = `${Math.min(100, p * 100)}%`;
-    if (p > 0.85) { markRead(key); store.del(posKey); }
-    else if (p > 0.05 && Date.now() - saveT > 800) { saveT = Date.now(); store.set(posKey, Math.round(p * 1000) / 1000); }
+  let saveT = 0, trail = 0;
+  const ratio = () => { const h = document.documentElement, max = h.scrollHeight - h.clientHeight; return max > 0 ? h.scrollTop / max : 1; };
+  // Finished = the end of the body text is on screen above the bottom bar (and the player, if open).
+  const reachedEnd = () => {
+    const covered = (document.querySelector(".nav")?.offsetHeight || 0) + (document.querySelector(".dock:not([hidden])")?.offsetHeight || 0);
+    return body.getBoundingClientRect().bottom <= window.innerHeight - covered;
   };
+  const savePos = () => {
+    if (!body.isConnected) return;
+    if (reachedEnd()) { markRead(key); store.del(posKey); return; }
+    const p = ratio();
+    if (p > 0.05) { saveT = Date.now(); store.set(posKey, Math.round(p * 1000) / 1000); }
+  };
+  const onScroll = () => {
+    bar.style.width = `${Math.min(100, ratio() * 100)}%`;
+    if (Date.now() - saveT > 800) savePos();
+    clearTimeout(trail);
+    trail = setTimeout(savePos, 250); // also keep where the gesture ended
+  };
+  const onHide = () => { if (document.visibilityState === "hidden") savePos(); };
   window.addEventListener("scroll", onScroll, { passive: true });
+  document.addEventListener("visibilitychange", onHide);
+  window.addEventListener("pagehide", savePos);
   const back = store.get(posKey, 0);
   const resume = main.querySelector(".resume");
   let resumeT = 0;
-  if (back > 0.08 && back < 0.85) {
+  if (back > 0.08) {
     resume.hidden = false;
     resume.onclick = () => {
       const h = document.documentElement;
@@ -286,7 +316,11 @@ async function viewArticle(date, column, my) {
     resumeT = setTimeout(() => { resume.hidden = true; }, 7000);
   }
   cleanup = () => {
+    clearTimeout(trail);
+    savePos(); // route() runs this before drawing the next view, so the article is still on the page
     window.removeEventListener("scroll", onScroll);
+    document.removeEventListener("visibilitychange", onHide);
+    window.removeEventListener("pagehide", savePos);
     clearTimeout(resumeT);
     reader?.stop();
   };
@@ -295,12 +329,13 @@ async function viewArticle(date, column, my) {
 
 // A short contents list for long articles (four or more section headings).
 function buildToc(body, slot) {
-  const heads = [...body.querySelectorAll(":scope > h2")];
+  const heads = [...body.querySelectorAll(":scope > h2, :scope .spoiler-body:not([hidden]) > h2")];
+  slot.innerHTML = "";
   if (heads.length < 4) return;
   slot.innerHTML = `<details class="toc"><summary>本篇段落（${heads.length}）</summary><ol>${heads.map((h, i) => `<li><button type="button" data-i="${i}">${esc(h.textContent)}</button></li>`).join("")}</ol></details>`;
   slot.querySelectorAll("button").forEach((b) => (b.onclick = () => {
+    slot.querySelector("details").open = false; // collapse first, or the target moves up by the list's height
     heads[Number(b.dataset.i)].scrollIntoView({ behavior: "smooth", block: "start" });
-    slot.querySelector("details").open = false;
   }));
 }
 
@@ -320,14 +355,18 @@ function viewColumn(c) {
 
 // Full-text search over content/search/<YYYY-MM>.json, newest month first.
 const searchCache = new Map();
-async function searchMonths() {
-  if (!searchCache.has("months")) searchCache.set("months", await getJSON("content/search/months.json").catch(() => []));
-  return searchCache.get("months");
+let searchGen = "";
+function cachedJSON(key, url) {
+  if (searchGen !== (S.index.generated_at || "")) { searchCache.clear(); searchGen = S.index.generated_at || ""; }
+  if (!searchCache.has(key)) {
+    const p = getJSON(url);
+    searchCache.set(key, p);
+    p.catch(() => { if (searchCache.get(key) === p) searchCache.delete(key); }); // a failure is never remembered
+  }
+  return searchCache.get(key);
 }
-async function searchMonth(m) {
-  if (!searchCache.has(m)) searchCache.set(m, await getJSON(`content/search/${m}.json`).catch(() => []));
-  return searchCache.get(m);
-}
+const searchMonths = () => cachedJSON("months", "content/search/months.json");
+const searchMonth = (m) => cachedJSON(m, `content/search/${m}.json`);
 function snippet(text, q) {
   const i = text.toLowerCase().indexOf(q);
   if (i < 0) return esc(text.slice(0, 60)) + "……";
@@ -363,12 +402,17 @@ function viewArchive() {
     if (q.length < 2) { hits.innerHTML = ""; return; }
     hits.innerHTML = `<p class="hint">搜尋全文中……</p>`;
     const found = [];
-    for (const m of await searchMonths()) {
-      for (const r of await searchMonth(m)) {
-        if (isPublished(r.d) && `${r.t} ${r.x}`.toLowerCase().includes(q)) found.push(r);
+    try {
+      for (const m of await searchMonths()) {
+        for (const r of await searchMonth(m)) {
+          if (isPublished(r.d) && `${r.t} ${r.x}`.toLowerCase().includes(q)) found.push(r);
+        }
+        if (my !== seq) return;
+        if (found.length >= 40) break;
       }
-      if (my !== seq) return;
-      if (found.length >= 40) break;
+    } catch {
+      if (my === seq) hits.innerHTML = `<p class="hint">${found.length ? "部分月份暫時讀不到，" : ""}目前無法搜尋全文（可能是離線），請稍後再試。</p>`;
+      if (!found.length) return;
     }
     if (my !== seq) return;
     hits.innerHTML = found.length

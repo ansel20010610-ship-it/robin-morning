@@ -191,7 +191,7 @@ button { font: inherit; color: inherit; }
 .banner.gold { border-left-color: var(--gold); }
 
 .body { padding-bottom: 12px; }
-.body > p { margin: 0 0 1.15em; text-align: justify; text-justify: inter-ideograph; }
+:is(.body, .spoiler-body) > p { margin: 0 0 1.15em; text-align: justify; text-justify: inter-ideograph; }
 .body h2 { font-size: 1.2em; line-height: 1.5; margin: 2.1em 0 .8em; font-weight: 700; display: flex; align-items: baseline; gap: .6em; }
 .body h2::before { content: ""; flex: 0 0 auto; width: .42em; height: .42em; background: var(--gold); transform: translateY(-.12em); }
 .body strong { font-weight: 700; }
@@ -448,7 +448,7 @@ dialog.bottom { margin: auto auto 0; }
 /* ——— Chinese typography ——— */
 body { text-autospace: normal; text-spacing-trim: normal; line-break: strict; hanging-punctuation: allow-end; }
 h1, h2, h3, .lead h3, .item h3 { text-wrap: balance; }
-.body > p, .dek, .item p, .lead p { text-wrap: pretty; }
+:is(.body, .spoiler-body) > p, .dek, .item p, .lead p { text-wrap: pretty; }
 .body > p.lead-p::first-letter {
   float: left; font-size: 3.05em; line-height: .96; font-weight: 700; color: var(--wine);
   margin: .06em .14em -.05em 0; padding-top: .02em;
@@ -475,7 +475,7 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
 .spoiler-gate .spoiler { margin: 0 0 12px; }
 .speaking { background: color-mix(in srgb, var(--gold) 14%, transparent); box-shadow: -10px 0 0 color-mix(in srgb, var(--gold) 14%, transparent), 10px 0 0 color-mix(in srgb, var(--gold) 14%, transparent); border-radius: 2px; transition: background .2s; }
 .resume {
-  position: fixed; left: 50%; transform: translateX(-50%); z-index: 25;
+  position: fixed; left: 50%; translate: -50% 0; z-index: 25;
   bottom: calc(var(--nav-h) + var(--dock-h) + 14px + env(safe-area-inset-bottom));
   background: var(--ink); color: var(--paper); border: 0; font-family: var(--sans); font-size: 14px; letter-spacing: .04em;
   padding: 10px 16px; cursor: pointer; box-shadow: var(--shadow);
@@ -511,3 +511,5 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
 .code-in { display: flex; gap: 8px; margin: 8px 0; }
 .code-in input { flex: 1; min-width: 0; font: 15px var(--sans); padding: 9px 10px; border: 1px solid var(--rule); background: var(--paper-2); color: var(--ink); border-radius: 0; }
 .set details.more summary { cursor: pointer; font-family: var(--sans); font-size: 13px; color: var(--gold); margin-top: 10px; }
+
+.body h2 { scroll-margin-top: calc(60px + env(safe-area-inset-top)); }

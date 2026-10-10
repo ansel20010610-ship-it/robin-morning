@@ -120,6 +120,9 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             E("%s 需為字串（目前是%s）" % (k, jtype(v)))
         elif not v or not v.strip():
             E("缺少 %s" % k)
+    ua = art.get("updated_at")
+    if isinstance(ua, str) and ua.strip() and not re.match(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:\d{2})$", ua):
+        E("updated_at 需含時區，例如 2026-10-11T06:40:00+08:00（目前：%s）" % ua)
     title = art.get("title") if isinstance(art.get("title"), str) else ""
     dek = art.get("dek") if isinstance(art.get("dek"), str) else ""
     if len(title) > 32:
@@ -609,6 +612,18 @@ def ledgers_excluding(day, col, paths=None):
         if tk and (d != day or day == "reserve"):
             topics.setdefault(tk, where)
     return images, topics
+
+
+def reserve_status(cfg, column=None):
+    """{column: [(path, errors)]} for every reserve article: errors are empty when the article is ready to run.
+    Checked against published articles and the other reserves, so two reserves sharing a topic or an image
+    show up here (one of them would fail once the other has run)."""
+    out = {}
+    for col, p in iter_reserve(column):
+        imgs, tops = ledgers_excluding("reserve", col, paths=[p])
+        errs, _ = validate_file(cfg, "reserve", col, p, False, imgs, tops)
+        out.setdefault(col, []).append((p, errs))
+    return out
 
 
 def validate_reserve(cfg, column=None, check_urls=False):
