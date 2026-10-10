@@ -1,0 +1,16 @@
+{
+  "name": "知更鳥晨間記事",
+  "short_name": "知更鳥晨間記事",
+  "description": "每日台灣時間 07:30 出刊的私人晨報",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F5F0E6",
+  "theme_color": "#F5F0E6",
+  "lang": "zh-Hant-TW",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/robin.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

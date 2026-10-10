@@ -1,0 +1,39 @@
+name: Publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build issue index
+        run: python3 scripts/build_index.py
+      - name: Validate today's issue (report only)
+        run: |
+          D=$(TZ=Asia/Taipei date +%F)
+          python3 scripts/validate.py "$D" || echo "::warning::validate.py reported problems for $D"
+      - name: Assemble site
+        run: |
+          mkdir _site
+          cp -R index.html sw.js manifest.webmanifest .nojekyll assets content _site/
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v5

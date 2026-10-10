@@ -1,0 +1,38 @@
+{
+  "title": "知更鳥晨間記事",
+  "subtitle": "Rotkehlchens Morgenblatt",
+  "launch_date": "2026-10-11",
+  "timezone": "Asia/Taipei",
+  "publish_time": "07:30",
+  "spotify": {
+    "client_id": "",
+    "playlist_name": "知更鳥晨間記事・古典"
+  },
+  "columns": {
+    "football":     { "group": "main", "order": 1, "name": "巴薩晨報", "full": "巴薩與歐洲足壇", "latin": "Fußball" },
+    "perio":        { "group": "main", "order": 2, "name": "牙周經典導讀", "full": "每日一篇經典牙周論文", "latin": "Parodontologie" },
+    "music":        { "group": "main", "order": 3, "name": "今日古典", "full": "古典樂導聆", "latin": "Musik" },
+    "civilization": { "group": "main", "order": 4, "name": "文明如何運作", "full": "從具體歷史問題看制度", "latin": "Zivilisation" },
+    "devotion":     { "group": "main", "order": 5, "name": "晨光裡的一句話", "full": "基督信仰默想", "latin": "Andacht" },
+
+    "art":          { "group": "supplement", "name": "走進一幅畫", "latin": "Kunst" },
+    "photo":        { "group": "supplement", "name": "一格電影，一張照片", "latin": "Bild" },
+    "city":         { "group": "supplement", "name": "城市的第二層", "latin": "Stadt" },
+    "fiction":      { "group": "supplement", "name": "小說的骨架", "latin": "Erzählung" },
+    "literature":   { "group": "supplement", "name": "一句話，讀進一本書", "latin": "Literatur" },
+    "tactics":      { "group": "supplement", "name": "看懂一段比賽", "latin": "Taktik" },
+    "philosophy":   { "group": "supplement", "name": "咖啡館裡的思想實驗", "latin": "Philosophie" },
+
+    "fm-watch":      { "group": "watch", "name": "FM 觀測站", "latin": "Beobachtung" },
+    "cosmere-watch": { "group": "watch", "name": "迷霧之子與颶光影視化", "latin": "Beobachtung" }
+  },
+  "rotation_by_weekday": {
+    "mon": ["art", "photo", "city"],
+    "tue": ["fiction", "literature", "tactics"],
+    "wed": ["philosophy", "art", "photo"],
+    "thu": ["city", "fiction", "literature"],
+    "fri": ["tactics", "philosophy", "art"],
+    "sat": ["photo", "city", "fiction"],
+    "sun": ["literature", "tactics", "philosophy"]
+  }
+}

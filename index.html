@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F5F0E6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15120E" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="知更鳥晨間記事">
+<meta name="description" content="每日台灣時間 07:30 出刊的私人晨報">
+<title>知更鳥晨間記事</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/robin.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif+TC:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  try {
+    var t = localStorage.getItem("rm.theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    var f = localStorage.getItem("rm.fs"); if (f) document.documentElement.style.setProperty("--fs", f);
+  } catch (e) {}
+</script>
+<script type="module" src="assets/app.js"></script>
+</head>
+<body>
+<main id="main" tabindex="-1"><p class="loading">知更鳥正在送報……</p></main>
+<div class="dock" id="dock" hidden>
+  <div class="in">
+    <div class="bar"><span id="dock-title">正在播放</span><button type="button" id="dock-close" aria-label="關閉播放器">收起 ✕</button></div>
+    <iframe id="dock-frame" title="Spotify 播放器" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+</div>
+<nav class="nav" aria-label="主要導覽"><div class="in" id="nav"></div></nav>
+<dialog id="sheet" class="bottom"></dialog>
+<dialog id="viewer"></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

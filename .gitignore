@@ -1,0 +1,4 @@
+content/index.json
+.DS_Store
+__pycache__/
+_site/
