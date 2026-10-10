@@ -131,10 +131,13 @@ def validate_file(cfg, d, col, path, check_urls=False, used_images=None, used_to
             seen_in_article[key] = where
             if used_images is not None and key in used_images:
                 E("%s 圖片已在 %s 用過：%s" % (where, used_images[key], key))
+            if b.get("src_large") and image_key(b["src_large"]) != key:
+                E("%s src_large 必須是同一張圖的大尺寸版本" % where)
             if check_urls:
-                ok, msg = check_image(b.get("src"))
-                if not ok:
-                    E("%s 圖片無法開啟：%s（%s）" % (where, b.get("src"), msg))
+                for u in [b.get("src")] + ([b["src_large"]] if b.get("src_large") else []):
+                    ok, msg = check_image(u)
+                    if not ok:
+                        E("%s 圖片無法開啟：%s（%s）" % (where, u, msg))
         elif t == "detail":
             if b.get("of") not in ids:
                 E("%s detail.of 找不到圖片 id：%s" % (where, b.get("of")))
