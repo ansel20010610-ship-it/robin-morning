@@ -32,6 +32,39 @@ export async function login(returnHash = location.hash) {
   location.assign(`${AUTH}?${q}`);
 }
 
+// iPhone home-screen app: Spotify's sign-in page often fails inside its separate in-app browser
+// ("Oops! Something went wrong"), so the connection is made in Safari and handed over with a link code.
+export function isStandaloneIOS() {
+  const standalone = navigator.standalone === true || window.matchMedia?.("(display-mode: standalone)").matches;
+  return Boolean(standalone && isWebKitITP());
+}
+
+const encodeCode = (obj) => "RM1." + btoa(unescape(encodeURIComponent(JSON.stringify(obj)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+function decodeCode(code) {
+  const m = String(code || "").replace(/\s+/g, "").match(/^RM1\.([A-Za-z0-9_-]+)$/);
+  if (!m) return null;
+  try { return JSON.parse(decodeURIComponent(escape(atob(m[1].replace(/-/g, "+").replace(/_/g, "/"))))); } catch { return null; }
+}
+
+// Hand this browser's Spotify connection to another one (e.g. Safari → the home-screen app, whose storage is separate).
+// The connection moves: this browser disconnects, because a shared refresh token can be rotated out from under the other side.
+export async function exportLinkCode() {
+  const t = store.get("sp.token");
+  if (!t?.refresh) throw new Error("這個瀏覽器還沒有連結 Spotify");
+  const code = encodeCode({ r: t.refresh });
+  await navigator.clipboard.writeText(code);
+  store.del("sp.token");
+  return code;
+}
+
+export async function importLinkCode(code) {
+  const data = decodeCode(code);
+  if (!data?.r) throw new Error("連結碼不正確，請重新複製一次");
+  store.set("sp.token", { access: "", refresh: data.r, exp: 0 });
+  try { await api("/me"); }
+  catch (e) { store.del("sp.token"); throw e.code === "auth" ? new Error("連結碼已失效，請在 Safari 重新連結後再複製") : e; }
+}
+
 export function logout() {
   store.del("sp.token");
   for (const k of Object.keys(localStorage)) if (k.startsWith("rm.sp.resolve.")) localStorage.removeItem(k);
@@ -218,9 +251,17 @@ export function isWebKitITP() {
 }
 
 // Show an API error; a lost login goes back through Spotify's sign-in.
+// Start Spotify's sign-in, or send the home-screen app to the link-code form in settings.
+async function connect() {
+  if (isStandaloneIOS()) { toast("主畫面 App 請用「連結碼」連結 Spotify"); location.hash = "#/settings"; return; }
+  await login(location.hash);
+}
+
 function report(e) {
   toast(e.message);
-  if (e.code === "auth") setTimeout(() => login(location.hash), 900);
+  if (e.code !== "auth") return;
+  // the home-screen app reconnects with a link code (Spotify's sign-in page fails there)
+  setTimeout(connect, 900);
 }
 
 // ——— Playlist sheet ———
@@ -349,7 +390,7 @@ export function renderMusic(b) {
   async function pick(id) {
     try {
       const s = await resolve(sp, { albumId: id, candidates: state?.candidates, count: mv.length });
-      if (!s) { await login(location.hash); return; }
+      if (!s) { await connect(); return; }
       state = s;
       draw();
       if (s.source === "none") toast("這個版本找不到對應曲目，請換一個");
@@ -361,7 +402,7 @@ export function renderMusic(b) {
     if (state?.source === "none") return false; // already looked; the reader picks from the search results
     if (!sp.tracks?.length && !isLoggedIn()) {
       if (!hasClient()) { window.open(searchUrl, "_blank", "noopener"); return false; }
-      await login(location.hash);
+      await connect();
       return false;
     }
     state = await load();
@@ -374,7 +415,7 @@ export function renderMusic(b) {
       if (!(await ensure())) { if (state?.source === "none") toast("找不到相符錄音，請從搜尋結果挑選"); return; }
       if (kind === "listen") play(state.tracks[0], title(0));
       else {
-        if (!isLoggedIn()) { await login(location.hash); return; }
+        if (!isLoggedIn()) { await connect(); return; }
         await addToPlaylist(state.tracks.map((id) => `spotify:track:${id}`), `${b.work}｜${b.performers}`);
       }
     } catch (e) { report(e); }

@@ -1,7 +1,7 @@
 // 知更鳥晨間記事 — app shell, routing and views.
 import { $, esc, inline, store, toast, twNow, fmtDate, getJSON, ICON } from "./util.js";
 import { renderBody, renderHero } from "./blocks.js";
-import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient, isWebKitITP } from "./spotify.js";
+import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient, isWebKitITP, isStandaloneIOS, exportLinkCode, importLinkCode } from "./spotify.js";
 import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 
@@ -417,9 +417,17 @@ function viewSettings() {
       <p>文章右上角的喇叭按鈕會用裝置內建的中文語音朗讀全文，不需網路服務。</p></section>` : ""}
     <section class="set"><h2>Spotify</h2>
       ${!hasClient() ? `<p>尚未設定 Spotify Client ID。設定後即可在 App 內收聽並一鍵加入歌單。</p>`
-        : isLoggedIn() ? `<p>已連結。古典欄的「加入 Spotify 歌單」會加到你的歌單「${esc(S.cfg.spotify.playlist_name)}」或你選的歌單。</p><button class="btn ghost" data-sp-out>中斷連結</button>`
-        : `<p>連結後，App 會依每期指定的錄音自動找到曲目，並可一鍵加入歌單。</p><button class="btn" data-sp-in>${ICON.music}連結 Spotify</button>`}
-      <p style="font-size:12.5px;color:var(--muted)">${isWebKitITP() ? "iPhone／Safari 上內嵌播放器可能只能試聽 30 秒；完整收聽請按『在 Spotify 開啟』，加入歌單不受影響。"
+        : isLoggedIn() ? `<p>已連結。古典欄的「加入 Spotify 歌單」會加到你的歌單「${esc(S.cfg.spotify.playlist_name)}」或你選的歌單。</p>
+          <div class="btns"><button class="btn ghost" data-sp-out>中斷連結</button>${isStandaloneIOS() ? "" : `<button class="btn ghost" data-sp-code>移交給 iPhone 主畫面 App</button>`}</div>
+          ${isStandaloneIOS() ? "" : `<p class="small">按「移交」會複製一組連結碼，到 iPhone 主畫面 App 的設定頁貼上即可；移交後這個瀏覽器會中斷連結。連結碼等同你的 Spotify 授權，不要傳給別人。</p>`}`
+        : isStandaloneIOS() ? `<p>在主畫面 App 裡，Spotify 的登入頁常會出現「Something went wrong」。請改用連結碼：</p>
+          <ol class="steps"><li>用 <b>Safari</b> 打開 <b>${esc(location.host)}</b>，到「設定」按「連結 Spotify」並同意。</li>
+          <li>在 Safari 的設定頁按「移交給 iPhone 主畫面 App」。</li><li>回到這裡，把連結碼貼進下面的欄位。</li></ol>
+          <div class="code-in"><input type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="貼上連結碼（RM1. 開頭）" aria-label="Spotify 連結碼"><button class="btn" data-sp-paste>連結</button></div>
+          <p class="small">也可以在 Mac 上的瀏覽器移交，透過通用剪貼簿貼到 iPhone。</p>`
+        : `<p>連結後，App 會依每期指定的錄音自動找到曲目，並可一鍵加入歌單。</p><div class="btns"><button class="btn" data-sp-in>${ICON.music}連結 Spotify</button></div>
+          <details class="more"><summary>已有連結碼？</summary><div class="code-in"><input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="貼上連結碼（RM1. 開頭）" aria-label="Spotify 連結碼"><button class="btn" data-sp-paste>連結</button></div></details>`}
+      <p class="small">${isWebKitITP() ? "iPhone／Safari 上內嵌播放器可能只能試聽 30 秒；完整收聽請按『在 Spotify 開啟』，加入歌單不受影響。"
         : "若播放器只播 30 秒試聽，請在同一個瀏覽器登入 open.spotify.com。"}</p>
     </section>
     <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。正刊五欄每日刊出；副刊依星期輪值三篇；觀測站只在有重要新進展時刊出。</p>
@@ -443,6 +451,16 @@ function viewSettings() {
   main.querySelectorAll('[data-g="rate"] button').forEach((b) => (b.onclick = () => { setRate(Number(b.dataset.v)); redraw("rate", b.dataset.v); }));
   main.querySelector("[data-sp-in]")?.addEventListener("click", () => login("#/settings"));
   main.querySelector("[data-sp-out]")?.addEventListener("click", () => { logout(); viewSettings(); });
+  main.querySelector("[data-sp-code]")?.addEventListener("click", async () => {
+    try { await exportLinkCode(); toast("已複製連結碼；這個瀏覽器已中斷連結"); viewSettings(); }
+    catch (e) { toast(e.message || "無法複製，請再試一次"); }
+  });
+  main.querySelector("[data-sp-paste]")?.addEventListener("click", async (e) => {
+    const input = e.currentTarget.parentElement.querySelector("input");
+    e.currentTarget.disabled = true;
+    try { await importLinkCode(input.value); toast("已連結 Spotify"); viewSettings(); }
+    catch (err) { toast(err.message); e.currentTarget.disabled = false; }
+  });
 }
 
 // ——— Router ———

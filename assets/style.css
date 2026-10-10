@@ -504,3 +504,10 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
   .nav, .dock, .topbar, .resume, .share, .next, .toc { display: none !important; }
   body { padding: 0; background: #fff; color: #000; }
 }
+
+/* ——— Spotify link code ——— */
+.set .small { font-size: 12.5px; color: var(--muted); }
+.set .steps { font-family: var(--sans); font-size: 14px; line-height: 1.7; color: var(--ink-2); padding-left: 1.4em; margin: 6px 0 10px; }
+.code-in { display: flex; gap: 8px; margin: 8px 0; }
+.code-in input { flex: 1; min-width: 0; font: 15px var(--sans); padding: 9px 10px; border: 1px solid var(--rule); background: var(--paper-2); color: var(--ink); border-radius: 0; }
+.set details.more summary { cursor: pointer; font-family: var(--sans); font-size: 13px; color: var(--gold); margin-top: 10px; }
