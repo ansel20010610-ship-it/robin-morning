@@ -27,6 +27,9 @@ def main():
         except Exception as e:  # noqa: BLE001
             print("! 無法讀取 %s：%s" % (path, e), file=sys.stderr)
             continue
+        if not isinstance(art, dict):
+            print("! 無法讀取 %s：頂層不是 JSON 物件" % path, file=sys.stderr)
+            continue
         rows.append((day, col, art))
     if a.images:
         for day, col, art in rows:

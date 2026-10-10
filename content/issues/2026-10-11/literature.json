@@ -1,0 +1,267 @@
+{
+  "column": "literature",
+  "date": "2026-10-11",
+  "title": "「到底還要拖多久？」古斯特少尉一整夜都在問幾點",
+  "dek": "施尼茨勒《古斯特少尉》的第一句只問時間。順著這個問句讀下去，整篇小說是一連串報時；而最關鍵的那個鐘點，主角並不在場。",
+  "topic_key": "literature:schnitzler-lieutenant-gustl-p5",
+  "updated_at": "2026-10-10T22:00:00+08:00",
+  "spoiler": "本文後半談到《古斯特少尉》的結局。",
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Schnitzler_Leutnant_Gustl.djvu/page5-1280px-Schnitzler_Leutnant_Gustl.djvu.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Schnitzler_Leutnant_Gustl.djvu/page5-1920px-Schnitzler_Leutnant_Gustl.djvu.jpg",
+    "width": 1280,
+    "height": 1671,
+    "alt": "一頁德文尖角體印刷書頁。上方是對稱的捲草花框，框中印著 Lieutenant Gustl；下方正文以放大的花體 W 起頭，頁底印著頁碼 5。",
+    "caption": "S. Fischer 出版社 1906 年第 11 版《古斯特少尉》第 5 頁。書名花框下的第一行，就是本文要讀的句子；這時書名仍拼作 Lieutenant。",
+    "credit": "Arthur Schnitzler 著，S. Fischer Verlag（柏林）1906 年第 11 版；Wikimedia Commons 掃描檔第 5 頁（來源 ebooklit.de）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Schnitzler_Leutnant_Gustl.djvu?page=5",
+    "made": "1906"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "施尼茨勒（Arthur Schnitzler）的《古斯特少尉》（Lieutenant Gustl），第一頁沒有人物介紹，沒有地點，也沒有「他想」兩個字。書名花框底下，直接就是一個問句。1906 年柏林 S. Fischer 出版社第 11 版的第 5 頁，用尖角體（Fraktur）排著這一行，開頭的 W 放大成花體字母。這一句只問一件事：時間。"
+    },
+    {
+      "type": "quote",
+      "original": "Wie lange wird denn das noch dauern? Ich muß auf die Uhr schauen …",
+      "text": "這到底還要拖多久？我得看一下錶……",
+      "cite": "本文自譯。原文見施尼茨勒《Lieutenant Gustl》，S. Fischer 1906 年第 11 版，第 5 頁。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.15, 0.34, 0.71, 0.1],
+      "position": "書頁中段偏上，花框下方，約佔頁寬七成",
+      "caption": "第 5 頁開頭三行：放大的 W 接著 ie lange wird denn das noch dauern?，問號之後緊跟 Ich muß auf die Uhr schauen。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        ["作者", "亞圖爾・施尼茨勒（Arthur Schnitzler，1862–1931），維也納醫師、作家"],
+        ["作品原名", "Lieutenant Gustl（中譯通常作《古斯特少尉》）。1901 年初版與 1906 年第 11 版都拼作 Lieutenant，後來的版本多作 Leutnant Gustl"],
+        ["首次發表", "1900 年 12 月 25 日，維也納《新自由報》（Neue Freie Presse）聖誕副刊"],
+        ["首版單行本", "1901 年，柏林 S. Fischer 出版社，Moritz Coschell 插圖"],
+        ["本文依據版本", "S. Fischer 1906 年第 11 版。線上謄本：德文 Wikisource（https://de.wikisource.org/wiki/Lieutenant_Gustl）；第 5、13、17 頁另與 Wikimedia Commons 上同一版本的掃描檔對照"],
+        ["引句位置", "全篇第一句，1906 年版第 5 頁正文第 1 行。本文所有頁碼都依這個版本"],
+        ["寫作時間", "書末署「Reichenau, 13.–17. Juli 1900」；施尼茨勒日記記 1900 年 5 月 27 日草擬、7 月 19 日完成"],
+        ["譯文", "本文所有中文引文皆為本文自譯，未使用出版譯本"]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "「das」是什麼，他還不知道"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "句子的主詞是 das，「這個」。古斯特沒說「這場音樂會」，也沒說曲名。同一段稍後他才去翻節目單：*Was ist es denn eigentlich?*（這到底是什麼？）翻到了，才知道是神劇，「我還以為是彌撒」。也就是說，他問「還要多久」的時候，還不知道自己在聽什麼。第一句量的只有長度。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "語氣落在兩個小字上。denn 是德語口語問句裡的語氣詞，帶著不耐煩，中文只能用「到底」去接；noch 是「還」，表示已經等了一陣。動詞 wird … dauern 是未來式，問的是從此刻往後還剩多少。下一句的 schauen 是奧地利與南德口語慣用的「看」，同頁的 sieht’s、brauch’ 都是口語縮讀。第一行就是一個維也納年輕軍官說話的聲音。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：這一句把古斯特和音樂的關係壓成一道計量題，他只在等它結束。同一頁他還說，教堂有個好處，「隨時都可以走」；又勸自己 *Also Geduld, Geduld!*——「好吧，耐心，耐心！神劇也總會完。」演出對他只是一段要熬過去的時間。這句「耐心，耐心」，十二頁之後會有人原封不動地還給他。"
+    },
+    {
+      "type": "h",
+      "text": "第一行沒有敘述者"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這種寫法今天通稱「內心獨白」。施尼茨勒 1901 年 6 月 11 日寫信給丹麥評論家勃蘭兌斯（Georg Brandes），把它叫作「思緒獨白的技法」（Technik des Gedankenmonologs），並說這個形式的第一個啟發，來自法國作家 Édouard Dujardin 的小說《Les Lauriers sont coupés》。他接著補了一句：只是這位作者「沒能為他的形式找到合適的題材」（für seine Form nicht den rechten Stoff zu finden wußte）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "作者自述的來源未必是唯一來源。Jörg Pottbeckers 2012 年在《Studia austriaca》第 20 期發表〈Hatte Leutnant Gustl Hunger?〉，主張挪威作家漢姆生（Knut Hamsun）1890 年的小說《飢餓》（Sult），在世紀之交內心獨白的發展中其實扮演了重要角色，不該只沿著 Dujardin 這條線看。本文只讀過這篇論文的摘要，這裡轉述的是作者的主張。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "同時代讀者的反應也留了下來。里爾克（Rainer Maria Rilke）1901 年 6 月 24 日寫信給施尼茨勒，說若由作者親自敘述，作者得處處小心，免得越過主角那狹窄的人格；改用這個形式，主角的狹窄反而替效果服務，外在與內在的事件都只能在同一個有限的場地上發生。他替這個場地取了名字：*innere Schaubühne*，「內在的舞台」。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "把里爾克的話放回第一句，問句的功能就清楚了。沒有敘述者交代現在幾點、人在哪裡，古斯特只能自己看錶、自己翻節目單；讀者拿到的每一條時間與地點資訊，都得先通過他的不耐煩。由此推想，這篇小說裡的每個鐘點，都是主角一次次焦躁地查出來的。"
+    },
+    {
+      "type": "h",
+      "text": "「耐心，耐心」換了一個人說"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "演出結束，古斯特在衣帽間等著拿大衣，嫌前面的胖子擋路。對方開口：*Geduld, Geduld!*——「耐心，耐心！」接著是「只要一點點耐心！」「反正您也不會錯過什麼！」（第 17 頁）。古斯特回了句「您閉嘴！」，對方轉過身，是常到咖啡館的麵包師傅。他握住古斯特的刀柄，低聲說再鬧就把刀抽出來折斷，寄到團部，還叫他「蠢小子」（dummer Bub）。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "*Geduld, Geduld!* 這兩個詞，古斯特在第 5 頁對自己說過，一字不差。全篇只有第 5 頁和第 17 頁出現 Geduld 這個字。第一次是腦中的自我安慰，第二次是一個陌生人當面的訓誡。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "本文的讀法是：第一句的不耐煩，就是衝突的引信。他在座位上熬時間，熬完了在衣帽間接著急；麵包師傅說出口的，正是他先前壓下去的那句話。原文沒有任何地方點破這個呼應，因為沒有敘述者可以點破；接下來一整夜的念頭裡，古斯特也再沒想起「耐心」這個詞。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "排版也在分層。1906 年版裡，古斯特沒說出口的念頭不加引號，他說出口的話加一層引號（„Machen Sie doch Platz!“）；別人當場對他說的話加兩層（„‚Geduld, Geduld!‘“）；他回想起的別人的話，例如第 13 頁一位醫生先前說的話，只有一層。當下傳進耳朵的聲音多隔一層，像是先經過他的耳朵才被記下來。這是本文對這個版本的觀察；其他版本是否同樣排法，本文沒有逐一核對。"
+    },
+    {
+      "type": "h",
+      "text": "同一個問句，換了時態"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "「Wie lang」（多久）在全篇反覆出現。依頁碼排開，可以看到動詞的時態在移動：前半夜多用未來式，問「還要多久」；到了天亮前後，變成完成式，問「已經多久了」。"
+    },
+    {
+      "type": "table",
+      "title": "Wie lang 在 1906 年版裡的六次出現",
+      "head": ["頁", "原文", "本文自譯", "時態"],
+      "rows": [
+        ["5", "Wie lange wird denn das noch dauern?", "這到底還要拖多久？", "未來式"],
+        ["15", "Wie lang’ wird der da noch brauchen, um sein Glas ins Futteral zu stecken?", "那位把觀劇鏡收進套子，還要弄多久？", "未來式"],
+        ["34", "Wie lang ist das jetzt her?", "那是多久以前的事了？", "現在式"],
+        ["40", "Wie lang werd’ ich denn da noch sitzen bleiben?", "我到底還要在這裡坐多久？", "未來式"],
+        ["44", "Wie lang’ hab’ ich denn geschlafen?", "我到底睡了多久？", "現在完成式"],
+        ["52", "Wie lang’ hat denn die ganze G’schicht’ gedauert?", "那整段事到底持續了多久？", "現在完成式"]
+      ],
+      "caption": "原創整理，依德文 Wikisource 謄本檢索，頁碼為 S. Fischer 1906 年第 11 版。第 34 頁問的是少年時在森林裡害怕的那一次；第 52 頁問的是他和情人 Steffi 的關係。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "第 5 頁和第 52 頁用的是同一個動詞 dauern。開頭是 wird … dauern，等神劇結束；後來是 hat … gedauert，像站在終點回頭看一段感情。一個打算天亮後開槍的人，開始用完成式談自己的生活。第一句的問題沒有消失，只是被他從「還剩多久」改成「到此為止有多久」。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "他對時間的感覺也一直和錶對不上。第 5 頁錶上才九點多，他覺得「已經坐了三個小時」；第 24 頁他說，覺得自己「和一個小時以前已經是另一個人」；第 40 頁又說，好像「過了一百年」，其實「還不到兩個小時」。這些落差都由主角自己報出來，沒有人替他校正。"
+    },
+    {
+      "type": "spoiler",
+      "text": "以下談到《古斯特少尉》的結局。"
+    },
+    {
+      "type": "h",
+      "text": "決定一切的那個鐘點，他不在場"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "衣帽間之後，古斯特認定自己受辱而沒有當場還手，已經「失去決鬥資格」（satisfaktionsunfähig），連隔天下午四點和一位律師約好的決鬥都去不成，只剩自殺一途（第 23–24 頁）。他在街上亂走，過了 Aspernbrücke，進了普拉特公園（Prater），在長椅上定下「明天早上七點」（第 35 頁）。原文一路報時，下面依頁碼排出這一夜。"
+    },
+    {
+      "type": "timeline",
+      "title": "4 月 4 日夜到 5 日清晨",
+      "items": [
+        { "when": "晚上九點多", "label": "音樂廳裡第一次看錶", "note": "第 5 頁：Erst viertel auf zehn? 他覺得已經坐了三個小時。" },
+        { "when": "演出後", "label": "衣帽間", "note": "第 17–19 頁：「耐心，耐心」、刀柄、「蠢小子」。原文沒寫幾點。" },
+        { "when": "23 點", "label": "數鐘聲", "note": "第 25 頁：原文把 1 到 11 逐一印出來。" },
+        { "when": "夜裡", "label": "普拉特公園，定下七點", "note": "第 33–35 頁：他想起當天是 4 月 4 日，決定「明天早上七點」。" },
+        { "when": "午夜前後", "label": "「我還要在這裡坐多久？」", "note": "第 40–41 頁：他猜「一定過了午夜」。" },
+        { "when": "午夜 12 點", "label": "麵包師傅中風身亡", "note": "古斯特不知道；第 61–62 頁才由侍者說出。" },
+        { "when": "凌晨 3 點", "label": "醒來，劃火柴看錶", "note": "第 44 頁：Muß auf die Uhr schau’n。" },
+        { "when": "3 點半", "label": "北站的鐘", "note": "第 48 頁：照鐵路時間還是維也納時間？為什麼偏偏是七點？" },
+        { "when": "快 6 點", "label": "「六點了嗎？」", "note": "第 59 頁：「還沒：半……三刻。」" },
+        { "when": "清晨", "label": "咖啡館", "note": "第 60–64 頁：得知麵包師傅的死訊，重新排出下午四點的決鬥。" }
+      ],
+      "caption": "原創整理，依 S. Fischer 1906 年第 11 版（德文 Wikisource 謄本）。「午夜 12 點」一格是事後才揭曉的時刻，古斯特當下並不知道。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "決定性的鐘點卻不在古斯特的感知裡。清晨在咖啡館，侍者告訴他，麵包師傅 Habetswallner「昨夜十二點」中風，當場就死了（第 61–62 頁）。對照時間線，那時古斯特正坐在普拉特的長椅上，猜想「一定過了午夜」。他整夜在算時間，真正改變他處境的那一刻，卻發生在他看不到的地方。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "他自己也碰到了期限的任意。三點半，他看著北站（Nordbahnhof）的鐘，想的是該照「鐵路時間還是維也納時間」（nach Bahnzeit oder nach Wiener Zeit）七點開槍；接著自問：「為什麼偏偏是七點？」（warum grad’ sieben?）又說「好像不能是別的時間似的」。本文的讀法是，第一句的問題在這裡被他自己拆穿了一半：所謂期限，是他自己定、自己守的。"
+    },
+    {
+      "type": "h",
+      "text": "一半讀者沒拿到的結尾"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這篇小說首次見報，是 1900 年 12 月 25 日維也納《新自由報》的聖誕副刊。施尼茨勒當天的日記提到它：《新自由報》刊出了，但有一半的份數少了最後 3 欄。日記沒有說缺的是哪幾段，本文也未能核對報紙原件。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "本文推測：如果缺的正是咖啡館那幾段，那一半讀者的故事會停在一個準備七點開槍的少尉身上，看不到他重新排好下午的決鬥。這只是推測。可以確定的是，這篇小說到最後幾頁才翻轉，而少掉的偏偏是「最後 3 欄」。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Arthur_Schnitzler_Lieutenant_Gustl_%281901%29.jpg/1280px-Arthur_Schnitzler_Lieutenant_Gustl_%281901%29.jpg",
+      "width": 1280,
+      "height": 1882,
+      "alt": "書封上方印著 LIEUTENANT GUSTL von ARTHUR SCHNITZLER，下方印著 ILLUSTRIRT von M. COSCHELL。中間是夜裡的林蔭道，一名戴軍帽、穿長大衣的軍官斜靠在長椅上閉著眼，佩刀垂在腿邊。",
+      "caption": "1901 年柏林 S. Fischer 首版單行本封面，插圖者 Moritz Coschell。他畫的是古斯特在普拉特長椅上睡著的樣子，這是全篇唯一一段古斯特不知道時間的空白；醒來後他第一件事就是找錶（第 44 頁）。",
+      "credit": "Moritz Coschell（封面插圖）／S. Fischer Verlag，柏林",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Arthur_Schnitzler_Lieutenant_Gustl_(1901).jpg",
+      "made": "1901"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1901 年的單行本由柏林 S. Fischer 出版，封面與插圖出自 Moritz Coschell。同年 6 月 21 日，施尼茨勒在日記寫下軍方榮譽法庭（Ehrenrat）的決定：因為《古斯特少尉》，也因為他沒有對軍方報紙《Reichswehr》的人身攻擊採取行動，他被剝奪軍官階級。隔天的日記說，各報依黨派立場，有的支持、有的反對這個決定。"
+    },
+    {
+      "type": "h",
+      "text": "回到第一句"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "小說最後兩頁，古斯特在咖啡館重新排一天的行程：七點半槍械操練，九點半出操，寫信叫 Steffi 晚上空出來，下午四點去決鬥。全篇最後一句是對那位律師說的：*Dich hau’ ich zu Krenfleisch!*——「我要把你剁成辣根肉！」Krenfleisch 是維也納的辣根燉肉（本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：開頭那句「到底還要拖多久」，到這裡得到一個不舒服的答案：會一直這樣下去。他拿回了時間表，也拿回了看錶的日子；這一夜在普拉特想到的父母和姊姊，以及那句「有時候我自己都對自己發毛」，都沒有排進新的行程。小說停在下午四點之前，也就是停在下一次「還要多久」的開頭。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "書末署著寫作地點與日期：「Reichenau, 13.–17. Juli 1900」。施尼茨勒的日記另有一套紀錄：5 月 27 日在山上的 Baumgartnerhaus「草擬了少尉的故事」，7 月 17 日記「在寫……Gustl」，7 月 19 日下午完成，「感覺這是一部傑作」。一篇從「還要多久」開始的小說，連自己寫了多久，都有兩種說法。"
+    }
+  ],
+  "sources": [
+    { "title": "Lieutenant Gustl（S. Fischer 1906 年第 11 版謄本）", "publisher": "德文 Wikisource", "date": "2024-11-24", "url": "https://de.wikisource.org/wiki/Lieutenant_Gustl", "note": "全文；本文引文與頁碼皆依此版本" },
+    { "title": "File:Schnitzler Leutnant Gustl.djvu", "publisher": "Wikimedia Commons", "date": "1906", "url": "https://commons.wikimedia.org/wiki/File:Schnitzler_Leutnant_Gustl.djvu", "note": "同一版本的掃描檔；對照第 5、13、17 頁" },
+    { "title": "File:Arthur Schnitzler Lieutenant Gustl (1901).jpg", "publisher": "Wikimedia Commons", "date": "1901", "url": "https://commons.wikimedia.org/wiki/File:Arthur_Schnitzler_Lieutenant_Gustl_(1901).jpg", "note": "1901 年首版單行本封面" },
+    { "title": "Arthur Schnitzler an Georg Brandes, 11. 6. 1901（L01127）", "publisher": "Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren（ACDH, ÖAW）", "date": "1901-06-11", "url": "https://schnitzler-briefe.acdh.oeaw.ac.at/L01127.html", "note": "Technik des Gedankenmonologs；Dujardin" },
+    { "title": "Rainer Maria Rilke an Arthur Schnitzler, 24. 6. 1901（L04399）", "publisher": "Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren（ACDH, ÖAW）", "date": "1901-06-24", "url": "https://schnitzler-briefe.acdh.oeaw.ac.at/L04399.html", "note": "innere Schaubühne" },
+    { "title": "Arthur Schnitzler: Tagebuch, 25. 12. 1900", "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）", "date": "1900-12-25", "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1900-12-25.html", "note": "《新自由報》刊出，一半份數缺最後 3 欄" },
+    { "title": "Arthur Schnitzler: Tagebuch, 21. 6. 1901", "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）", "date": "1901-06-21", "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1901-06-21.html", "note": "榮譽法庭決定" },
+    { "title": "Arthur Schnitzler: Tagebuch, 22. 6. 1901", "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）", "date": "1901-06-22", "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1901-06-22.html", "note": "各報反應" },
+    { "title": "Arthur Schnitzler: Tagebuch, 27. 5. 1900", "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）", "date": "1900-05-27", "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1900-05-27.html", "note": "Baumgartnerhaus 草擬" },
+    { "title": "Arthur Schnitzler: Tagebuch, 17. 7. 1900", "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）", "date": "1900-07-17", "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1900-07-17.html", "note": "寫作中" },
+    { "title": "Arthur Schnitzler: Tagebuch, 19. 7. 1900", "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）", "date": "1900-07-19", "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1900-07-19.html", "note": "完成" },
+    { "title": "Hatte Leutnant Gustl Hunger? Einige späte Bemerkungen zur Entstehung des inneren Monologs bei Arthur Schnitzler und Knut Hamsun", "publisher": "Jörg Pottbeckers，Studia austriaca 20, S. 85–106", "date": "2012", "url": "https://riviste.unimi.it/index.php/StudiaAustriaca/article/view/2185", "note": "只讀摘要" },
+    { "title": "Lieutenant Gustl", "publisher": "德文維基百科", "date": "2026", "url": "https://de.wikipedia.org/wiki/Lieutenant_Gustl", "note": "首版單行本出版社與插圖者、書名拼寫的後續變化" }
+  ]
+}

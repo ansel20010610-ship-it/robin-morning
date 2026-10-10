@@ -1,0 +1,325 @@
+{
+  "column": "music",
+  "date": "2026-10-11",
+  "title": "第四小節就停下來：貝多芬《田園交響曲》",
+  "dek": "《田園》開頭四小節就停在延長記號上。本文以貝姆與維也納愛樂 1971 年的錄音，說明鳥鳴、鄉村樂隊與暴風雨各在哪裡出現。",
+  "topic_key": "music:beethoven-op68",
+  "updated_at": "2026-10-10T22:00:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Beethoven_Symphony_No_6_autograph.jpg",
+    "width": 1005,
+    "height": 781,
+    "alt": "泛黃的橫式手寫總譜頁，左側有裝訂邊。頁首一行潦草的德文樂章標題，下面十多行五線譜，左緣標著 Fl.、Ob.、Clar、Fag.、Corni 等樂器縮寫；中段偏右的一欄裡，每一行譜表上方都有一個弧形記號。頁底另有幾行手寫字，中央有淡淡的浮水印。",
+    "caption": "貝多芬《第六號交響曲》親筆總譜第一頁，1808 年。左上角寫著速度「Allo ma non troppo」（Allegro 的縮寫），中段偏右那一欄是第四小節，全團一起停在延長記號上。這份手稿共 280 頁，1910 年起由波昂貝多芬故居收藏。",
+    "credit": "Ludwig van Beethoven 手稿；Beethoven-Haus Bonn 藏；影像經 IMSLP 上傳至 Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Beethoven_Symphony_No_6_autograph.jpg",
+    "made": "1808"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "《田園交響曲》一開始只有弦樂，而且很輕。中提琴和大提琴在低處拉著 F 和 C 兩個音不動，像風笛的持續低音；第一小提琴在上面拉出一句短短的旋律，到了第四小節就停在一個長音上，弦樂一起停住。一首交響曲才起頭就先停下來，我的讀法是：貝多芬（Ludwig van Beethoven）用這個停頓把步調定下來，告訴聽的人這一章不趕路。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "這個停頓在手稿上看得很清楚。頭圖是貝多芬 1808 年親筆總譜的第一頁，現藏波昂貝多芬故居（Beethoven-Haus Bonn）。畫面中段偏右那一欄就是第四小節：最上面三行弦樂譜表各有一個音，上方畫著延長記號；往下標著 Fl.、Ob.、Clar、Fag.、Corni 的管樂譜表這時還沒有旋律，每一行上方同樣畫了延長記號，一路畫到下方的低音弦樂譜表。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.59, 0.10, 0.13, 0.60],
+      "position": "手稿中段偏右的一欄，約佔寬度八分之一，從頂端的小提琴一直延伸到下方的低音弦樂",
+      "caption": "第四小節：從上到下一整排延長記號。管樂還沒進場，譜表上也照樣標了，表示全團在這裡一起等。"
+    },
+    {
+      "type": "music",
+      "composer": "貝多芬（Ludwig van Beethoven）",
+      "work": "F 大調第六號交響曲《田園》，作品 68",
+      "work_original": "Symphony No. 6 in F major, Op. 68 \"Pastoral\"",
+      "composed": "1807–1808",
+      "performers": "卡爾・貝姆 指揮 維也納愛樂",
+      "recording": "Deutsche Grammophon，1971 年錄音於維也納音樂協會金色大廳（原版黑膠 2530 142）",
+      "duration": "約 46 分鐘（本錄音）",
+      "movements": [
+        "I. Erwachen heiterer Empfindungen bei der Ankunft auf dem Lande. Allegro ma non troppo",
+        "II. Szene am Bach. Andante molto mosso",
+        "III. Lustiges Zusammensein der Landleute. Allegro",
+        "IV. Gewitter, Sturm. Allegro",
+        "V. Hirtengesang. Frohe und dankbare Gefühle nach dem Sturm. Allegretto"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Beethoven Symphony No. 6 Pastoral Böhm Wiener Philharmoniker",
+        "artist_hint": "Karl Böhm",
+        "track_filter": ["Symphony No. 6", "Op. 68"]
+      }
+    },
+    {
+      "type": "p",
+      "text": "本期指定的錄音由卡爾・貝姆（Karl Böhm）指揮維也納愛樂（Wiener Philharmoniker），Deutsche Grammophon 在 1971 年錄製，地點是維也納音樂協會金色大廳（Großer Saal des Musikvereins），原版黑膠編號 2530 142，錄音師是 Günter Hermanns。選它的理由很直接：維也納的樂團、維也納的大廳，指揮是奧地利人。貝姆的速度寬鬆，依 2005 年 CD 版的曲目時間，光是第二樂章就約 14 分鐘，全曲約 46 分鐘，適合週日早上從頭聽到尾。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "英國《留聲機》（Gramophone）雜誌有兩篇文字評過這份錄音。DG 2024 年「Original Source」版的宣傳文字引了其中一段，說貝姆讓維也納愛樂奏出這個樂團、也是這首交響曲最好的錄音之一；另一篇評的是與舒伯特《第五號交響曲》同輯的 CD 再版，指出這份錄音在黑膠目錄上主導了十多年。兩段都是從唱片公司與唱片行的頁面轉引，查不到刊期與作者。DG 從 1970 年起為四聲道環繞音響預作準備，開始用四軌類比磁帶錄音，當年市面上的黑膠是混成雙聲道的版本；這次重發改從這份四軌母帶直接混音、刻片。"
+    },
+    {
+      "type": "h",
+      "text": "1807–1808 年的寫作：貝多芬自稱表達感受多於描繪"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "貝多芬從 1807 年夏天開始為這首交響曲打草稿，主要的寫作集中在 1808 年春夏，同時進行的還有 C 小調《第五號交響曲》。時任貝多芬故居檔案館館長的布蘭登堡（Sieghard Brandenburg）推定，親筆總譜大約在 1808 年 7 月完成。同年 6 月 8 日，貝多芬寫信給萊比錫的出版商 Breitkopf & Härtel，一次推銷兩首交響曲。"
+    },
+    {
+      "type": "quote",
+      "original": "Man überlässt es dem Zuhörer sich selbst die Situationen auszufinden",
+      "text": "讓聽者自己去找出那些情境。",
+      "cite": "貝多芬，《田園》草稿本第 2 葉，大英圖書館 Add MS 31766（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這行字寫在大英圖書館收藏的《田園》草稿本裡。館方目錄把這本草稿本定在 1808 年上半年，著錄的曲名是「Sinfonia caracteristica oder Erinnerungen an das Landleben」，意思是「性格交響曲，或鄉村生活的回憶」。曲子完成後，貝多芬在給出版商的信裡又強調，這首音樂是「mehr Ausdruck der Empfindung als Malerei」，表達感受多於描繪（本文自譯）；這句說明後來也印進了 1809 年的初版分譜。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "波昂貝多芬故居 2017 年的展覽《Im Freien – Beethoven und die Natur》提醒了一件容易忽略的事：1807 年開始打草稿時，貝多芬的聽力已經嚴重退化。展覽說明認為，曲中的雷聲、牧歌與鳥鳴是他記憶裡的聲音，不能解釋成在田野裡當場聽來就寫下的。同一份說明也把蘇黎世的 Franz Hegi 約 1839 年所畫、貝多芬坐在溪邊作曲的圖像，歸入浪漫化的想像。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "portrait",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Josef_Willibrord_M%C3%A4hler%2C_Ludwig_van_Beethoven_%28Komponist%29%2C_um_1804%E2%80%931805%2C_Sammlung_Wien_Museum_Inv._Nr._104650%2C_Foto_Birgit_und_Peter_Kainz%2C_Wien_Museum.jpg/1280px-Josef_Willibrord_M%C3%A4hler%2C_Ludwig_van_Beethoven_%28Komponist%29%2C_um_1804%E2%80%931805%2C_Sammlung_Wien_Museum_Inv._Nr._104650%2C_Foto_Birgit_und_Peter_Kainz%2C_Wien_Museum.jpg",
+      "width": 1280,
+      "height": 1612,
+      "alt": "金色畫框裡的油畫：一名深色頭髮、穿深色外套和白色領巾的男子坐在戶外，右手向身側舉起，左手扶著一把豎琴形狀的弦樂器。背景左方的樹林間有一座帶圓柱的圓形建築，天空雲層厚重。",
+      "caption": "Joseph Willibrord Mähler 所繪貝多芬肖像，約 1804–1805 年，油彩畫布，117.5 × 90 公分，維也納博物館（Wien Museum）藏，館藏號 104650。畫的是動筆寫《田園》之前幾年的貝多芬，背景是理想化的田園風景。",
+      "credit": "Josef Willibrord Mähler；Wien Museum 藏；攝影：Birgit und Peter Kainz, Wien Museum",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Josef_Willibrord_M%C3%A4hler,_Ludwig_van_Beethoven_(Komponist),_um_1804%E2%80%931805,_Sammlung_Wien_Museum_Inv._Nr._104650,_Foto_Birgit_und_Peter_Kainz,_Wien_Museum.jpg",
+      "made": "約 1804–1805"
+    },
+    {
+      "type": "h",
+      "text": "首演那一晚：四個小時，劇院裡很冷"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1808 年 12 月 22 日晚上 6 點半，貝多芬在維也納河畔劇院（Theater an der Wien）自辦音樂會，《田園》在這晚首演。這座劇院由席卡內德（Emanuel Schikaneder）申請興建，1801 年 6 月 13 日開幕；貝多芬 1803 到 1804 年間還在劇院大樓裡住過。當晚八個曲目分上下半場，兩首新交響曲各領一個半場，《田園》打頭陣。節目單上的編號和今天相反，要到 1809 年出版時才定下現在的號碼。"
+    },
+    {
+      "type": "table",
+      "title": "1808 年 12 月 22 日音樂會曲目",
+      "head": ["順序", "曲目", "備註"],
+      "rows": [
+        ["上半場 1", "F 大調交響曲《田園》，作品 68", "首演；節目單上標為第 5 號"],
+        ["上半場 2", "音樂會詠嘆調〈啊！負心人〉（Ah! perfido），作品 65", "—"],
+        ["上半場 3", "C 大調彌撒曲〈榮耀經〉，作品 86", "未以彌撒曲之名公告"],
+        ["上半場 4", "G 大調第四號鋼琴協奏曲，作品 58", "首次公開演出"],
+        ["下半場 5", "C 小調交響曲，作品 67（今稱第五號）", "首演；節目單上標為第 6 號"],
+        ["下半場 6", "C 大調彌撒曲〈聖哉經〉，作品 86", "未以彌撒曲之名公告"],
+        ["下半場 7", "鋼琴即興幻想", "貝多芬即興演奏"],
+        ["下半場 8", "《合唱幻想曲》，作品 80", "首演；排練不足，演到一半停下重來"]
+      ],
+      "caption": "依英文維基百科〈Beethoven concert of 22 December 1808〉整理；兩段彌撒曲因劇院演出宗教音樂受限，未以原名公告。交響曲在節目單上的編號依巴黎歌劇院的節目說明。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Das_Theater_an_der_Wien_1823.jpg/1280px-Das_Theater_an_der_Wien_1823.jpg",
+      "width": 1280,
+      "height": 938,
+      "alt": "淡彩版畫：一座三層樓的古典風格建築正面，中央有三角山牆和拱形大門，屋頂上有煙囪與小塔；門前空地上有幾名行人和一輛馬車。畫面下方印著「DAS THEATER AN DER WIEN」「THÉÂTRE SUR LA VIENNE」與編號 14。",
+      "caption": "維也納河畔劇院正面，維也納出版商 Tranquillo Mollo 1823 年發行的建築版畫系列第 14 號。製作年代比《田園》首演晚 15 年，畫的是同一棟劇院。",
+      "credit": "Tranquillo Mollo 出版（維也納）；影像來源：Wien Geschichte Wiki",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Das_Theater_an_der_Wien_1823.jpg",
+      "made": "1823"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "作曲家萊夏特（Johann Friedrich Reichardt）當晚坐在洛布科維茲親王（Franz Joseph Maximilian von Lobkowitz）的包廂裡。他在三天後的信裡抱怨，大家在刺骨的寒冷中從 6 點半坐到 10 點半，又說好東西也很容易嫌太多（據英譯轉述）。演出本身也不順：劇院樂團不少人當晚被城堡劇院（Burgtheater）另一場音樂家協會的音樂會借走，空缺由業餘樂手補上；據 Ignaz von Seyfried 回憶，《合唱幻想曲》在台上散掉，只好停下重來。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這場音樂會辦在貝多芬考慮離開維也納的時候。1808 年 11 月 1 日之前，拿破崙的弟弟、西發里亞國王傑羅姆・波拿巴（Jérôme Bonaparte）已經邀他去卡塞爾（Kassel）當宮廷樂長。維也納的贊助人隨後出手留人：1809 年 3 月 1 日，魯道夫大公、金斯基親王與洛布科維茲親王和他簽約，每年合付 4,000 弗羅林，唯一條件是回絕卡塞爾、留在維也納。《田園》後來題獻給洛布科維茲親王與拉蘇莫夫斯基伯爵（Andrei Razumovsky）。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "首演之後他還在改譜。1809 年 3 月 4 日，他寫信給出版商 Gottfried Christoph Härtel，說隔天會寄上演出時做的小修正，理由是「als ich sie ihnen gab, hatte ich noch keine davon gehört」：把這兩首交響曲交給您的時候，我一首都還沒聽過（本文自譯）。"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：樂器一章一章加進來，後三章不停頓"
+    },
+    {
+      "type": "table",
+      "title": "五個樂章的調性、拍子與樂器",
+      "head": ["樂章", "調性與拍子", "這一章新加入的樂器", "接下一章"],
+      "rows": [
+        ["I〈初到鄉間時愉快心情的甦醒〉", "F 大調，2/4", "—", "停頓"],
+        ["II〈溪畔景色〉", "降 B 大調，12/8", "—", "停頓"],
+        ["III〈鄉民歡樂的聚會〉", "F 大調，3/4；中段 2/4", "小號", "直接銜接"],
+        ["IV〈雷雨、暴風〉", "F 小調，4/4", "短笛、定音鼓、長號", "直接銜接"],
+        ["V〈牧歌：暴風雨後愉快而感恩的心情〉", "F 大調，6/8", "—（短笛與定音鼓退場，長號留下）", "—"]
+      ],
+      "caption": "依英文與德文維基百科〈第六號交響曲〉條目整理。短笛與定音鼓只在第四樂章出現，長號只在第四、五樂章出現。"
+    },
+    {
+      "type": "p",
+      "text": "**第一樂章**。開頭的持續低音和第四小節的停頓之後，留意發展部。從第 151 小節起，一個一小節長的短音型在降 B 大調上反覆十幾次，和聲不動，只有音量慢慢漲起又退下；接著和聲直接換到 D 大調，同樣的做法再來一遍。過一會兒，G 大調和 E 大調又照這個模式各來一段。這段發展部幾乎不拆解主題，只是讓開頭的動機一再重複，換個調性上色。"
+    },
+    {
+      "type": "p",
+      "text": "**第二樂章〈溪畔景色〉**。除了低音大提琴，弦樂都裝上弱音器，第二小提琴、中提琴與大提琴用連綿不斷的短音型模仿水流，旋律在上面慢慢走。重點在樂章尾聲：水聲停下來，木管輪流吹出三種鳥叫，長笛是夜鶯，雙簧管是鵪鶉，單簧管是布穀鳥。貝多芬把三種鳥的名字直接寫進總譜。單簧管的布穀聲是兩個音的大三度。鳥叫過後，溪水再流一小段，樂章輕輕結束。"
+    },
+    {
+      "type": "p",
+      "text": "**第三樂章〈鄉民歡樂的聚會〉**。第 91 小節起先聽雙簧管：它的旋律和小節線錯開，聽起來像樂手數錯了拍子；底下的低音管只吹 F、C、F 三個音，在樂句收尾時應付一下。接著拍子換成 2/4，全團踩著兩個和弦跳起粗獷的舞。舞曲回來、愈奏愈快之後，樂章沒有收尾，大提琴和低音大提琴輕聲顫動起來，直接把音樂帶進下一章。"
+    },
+    {
+      "type": "p",
+      "text": "**第四樂章〈雷雨、暴風〉**是全曲最短的一章，也是唯一的小調樂章。定音鼓只在這一章出現；短笛在第 82 小節第一次加入，聲音尖銳刺耳；長號在第 106 小節以強奏進場。暴風雨退去時，雙簧管唱出一段柔和的長句，最後是一段標著 dolce 的 C 大調和聲，像聖詠一樣安靜，不停頓地接進終樂章。"
+    },
+    {
+      "type": "p",
+      "text": "**第五樂章〈牧歌〉**。單簧管先在持續低音上吹出一個像阿爾卑斯長號的呼喚，法國號接過去，第 9 小節起由小提琴唱成完整的旋律。這個呼喚在樂章裡回來好幾次，最後一次是在全曲最後幾小節，由一支裝了弱音器的法國號獨奏，聲音像從遠處傳來。之後是最後的和弦；總譜在終止和弦後的休止符上，又畫了一個延長記號。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "頭圖那份手稿的最後一葉，不是貝多芬的筆跡。貝多芬死後，出版商 Domenico Artaria 在 1827 年 11 月 5 日的遺物拍賣會上買下這份總譜；據遺物清單推斷，手稿當時已經拆成幾份。Artaria 把它重新裝訂，缺少的最後一葉，也就是寫著全曲最後一小節的那一頁，由他的職員 Anton Graeffer 補寫。"
+    },
+    {
+      "type": "callout",
+      "label": "延伸聆聽",
+      "text": "想聽完全不同的音色，可以找諾林頓（Roger Norrington）指揮倫敦古典演奏家樂團（London Classical Players）的古樂器錄音（EMI，與第一號交響曲同輯）。BBC《音樂雜誌》2015 年 12 月號的《田園》導聆推薦這個版本，特別提到它的暴風雨。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Symphony No. 6 F major, Op. 68 (Pastorale)",
+      "publisher": "Beethoven-Haus Bonn",
+      "url": "https://www.beethoven.de/en/work/view/5758288851369984/",
+      "note": "作曲年代、1808 年 6 月 8 日致 Breitkopf & Härtel 信、題獻、手稿館藏號 BH 64；2026-10-10 查閱"
+    },
+    {
+      "title": "Das Autograph der „Pastorale“ wird faksimiliert（appassionato Nr. 3）",
+      "publisher": "Beethoven-Haus Bonn（Sieghard Brandenburg）",
+      "date": "1999-11",
+      "url": "https://internet.beethoven.de/pdf-web/appassionato_3.pdf",
+      "note": "手稿 280 頁、1827 年拍賣與 Anton Graeffer 補寫最後一小節、1808 年夏完成、1809 年 3 月 4 日致 Härtel 信"
+    },
+    {
+      "title": "Im Freien – Beethoven und die Natur（展覽簡介）",
+      "publisher": "Beethoven-Haus Bonn",
+      "date": "2017",
+      "url": "https://internet.beethoven.de/pdf-sonderausstellung/Im-Freien-Beethoven-und-die-Natur-Kurzfuehrer.pdf",
+      "note": "1807 年草稿與聽力、「mehr Ausdruck der Empfindung als Malerei」、Franz Hegi 圖像"
+    },
+    {
+      "title": "Ludwig van Beethoven: The Pastoral Symphony Sketchbook (Add MS 31766)",
+      "publisher": "British Library",
+      "url": "https://searcharchives.bl.uk/catalog/040-002023936",
+      "note": "第 2 葉筆記、草稿本年代與著錄標題；2026-10-10 查閱"
+    },
+    {
+      "title": "Rentenvertrag, Wien, 1. März 1809",
+      "publisher": "Beethoven-Haus Bonn",
+      "url": "https://www.beethoven.de/en/media/view/5462938445938688",
+      "note": "卡塞爾聘約與 4,000 弗羅林年金條件；2026-10-10 查閱"
+    },
+    {
+      "title": "Beethoven concert of 22 December 1808",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Beethoven_concert_of_22_December_1808",
+      "note": "曲目順序、萊夏特 12 月 25 日信件、樂團與排練狀況；2026-10-10 查閱"
+    },
+    {
+      "title": "Cycle Ludwig van Beethoven – Symphonie n°6",
+      "publisher": "Opéra national de Paris",
+      "date": "2015",
+      "url": "https://play.operadeparis.fr/en/p/cycle-ludwig-van-beethoven-symphonie-n6",
+      "note": "首演節目單上兩首交響曲的編號順序"
+    },
+    {
+      "title": "6. Sinfonie (Beethoven)",
+      "publisher": "Wikipedia（德文）",
+      "url": "https://de.wikipedia.org/wiki/6._Sinfonie_(Beethoven)",
+      "note": "各樂章小節位置：發展部調性、鳥鳴、鄉村樂隊、短笛與長號進場、終樂章弱音法國號；2026-10-10 查閱"
+    },
+    {
+      "title": "Symphony No. 6 (Beethoven)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Symphony_No._6_(Beethoven)",
+      "note": "各樂章使用的樂器、樂章銜接；2026-10-10 查閱"
+    },
+    {
+      "title": "Theater an der Wien",
+      "publisher": "Wien Geschichte Wiki",
+      "url": "https://www.geschichtewiki.wien.gv.at/Theater_an_der_Wien",
+      "note": "1801 年 6 月 13 日開幕、貝多芬 1803/04 年居住；2026-10-10 查閱"
+    },
+    {
+      "title": "Beethoven – Wiener Philharmoniker, Karl Böhm – Symphonie Nr. 6 \"Pastorale\"（DG 2530 142）",
+      "publisher": "Discogs",
+      "url": "https://www.discogs.com/release/3750564-Ludwig-Van-Beethoven-Wiener-Philharmoniker-Karl-B%C3%B6hm-Symphonie-Nr-6-Pastorale",
+      "note": "原版黑膠編號、1971 年發行、錄音師 Günter Hermanns"
+    },
+    {
+      "title": "Beethoven – Wiener Philharmoniker, Karl Böhm – Symphonie No. 6 »Pastorale«（Original Source，486 5625）",
+      "publisher": "Discogs",
+      "date": "2024-05-03",
+      "url": "https://www.discogs.com/release/30578539-Ludwig-Van-Beethoven-Wiener-Philharmoniker-Karl-B%C3%B6hm-Symphonie-No-6-Pastorale",
+      "note": "錄音地點：Großer Saal, Wiener Musikverein；2024 年重發資料"
+    },
+    {
+      "title": "Beethoven: Symphony No. 6 „Pastorale“ (Original Source)",
+      "publisher": "Deutsche Grammophon",
+      "url": "https://store.deutschegrammophon.com/en/products/karl-bohm-wiener-philharmoniker-beethoven-symphony-no-6-pastorale-original-source",
+      "note": "1971 年錄音、自原始四軌母帶類比重製；宣傳文字所引《留聲機》評語（未註明刊期與作者）"
+    },
+    {
+      "title": "Beethoven: Symphony No.6 'Pastoral' / Schubert: Symphony No.5",
+      "publisher": "HIGHRESAUDIO",
+      "url": "https://www.highresaudio.com/album/view/qv2rgq/wiener-philharmoniker-karl-bohm-beethoven-symphony-no-6-pastoral-schubert-symphony-no-5",
+      "note": "2005 年版各樂章時間；另一篇評貝多芬第六號與舒伯特第五號同輯 CD 的《留聲機》評論（未註明刊期與作者）"
+    },
+    {
+      "title": "Karl Böhm & Wiener Philharmoniker – Beethoven Symphony No. 6 (Original Source Series)",
+      "publisher": "Elusive Disc",
+      "url": "https://elusivedisc.com/karl-bohm-wiener-philharmoniker-beethoven-symphony-no-6-original-source-series-180g-numbered-limited-edition-lp/",
+      "note": "Rainer Maillard 說明 DG 1970 年起的四軌錄音；轉載 DG 宣傳文字中的《留聲機》評語"
+    },
+    {
+      "title": "Beethoven's Symphony No. 6 'Pastoral': a guide to this supremely evocative masterpiece",
+      "publisher": "BBC Music Magazine（classical-music.com），Chris de Souza",
+      "date": "2015-12",
+      "url": "https://www.classical-music.com/features/works/guide-beethovens-symphony-no-6-pastoral/",
+      "note": "推薦錄音：諾林頓與倫敦古典演奏家樂團"
+    },
+    {
+      "title": "Josef Willibrord Mähler, Ludwig van Beethoven (Komponist), um 1804–1805",
+      "publisher": "Wien Museum",
+      "url": "https://sammlung.wienmuseum.at/objekt/180001-ludwig-van-beethoven-komponist/",
+      "note": "材料、尺寸、館藏號 104650"
+    }
+  ]
+}

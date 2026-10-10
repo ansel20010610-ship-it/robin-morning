@@ -89,45 +89,81 @@ def load_json(path):
         return json.load(f)
 
 
+# IIIF Image API tail: {region}/{size}/{rotation}/{quality}.{format}; everything before it is the identifier
+# (LOC: /image-services/iiif/service:pnp:…/full/pct:25/0/default.jpg, NGA: /iiif/<uuid>/full/!1280,1280/0/default.jpg).
+IIIF_TAIL = re.compile(r"^(.*?/iiif/.+?)/(full|square|pct:[^/]+|\d+,\d+,\d+,\d+)/[^/]+/[^/]+/[^/]+\.[A-Za-z0-9]+$")
+# What every browser can draw in <img> and CSS background-image. Commons originals in other formats
+# (DjVu, TIFF, PDF, XCF) must be used through their JPEG/PNG thumbnails.
+BROWSER_IMAGE_TYPES = {"image/jpeg", "image/jpg", "image/pjpeg", "image/png", "image/gif", "image/webp",
+                       "image/avif", "image/svg+xml"}
+RAW_IMAGE_EXT = (".djvu", ".djv", ".tif", ".tiff", ".pdf", ".xcf")
+
+
 def image_key(url):
-    """Stable identity of an image regardless of thumbnail size or query string."""
+    """Stable identity of an image regardless of thumbnail size, page or query string."""
     if not url:
         return ""
     u = urllib.parse.urlsplit(url)
     path = urllib.parse.unquote(u.path)
     if u.netloc.endswith("wikimedia.org"):
         parts = path.split("/")
-        if "thumb" in parts:
+        if "thumb" in parts and len(parts) > parts.index("thumb") + 3:  # …/thumb/6/6e/<file>/<size>-<file>
             i = parts.index("thumb")
             return "commons:" + parts[i + 3]
         return "commons:" + parts[-1]
     if "/iiif/" in path:
-        m = re.search(r"/iiif/[^/]+/([^/]+)", path)
+        m = IIIF_TAIL.search(path)
         if m:
             return u.netloc + ":" + m.group(1)
     return u.netloc + path
 
 
+def image_page(url):
+    """Page of a Commons thumbnail of a multi-page file (…/page5-1280px-X.djvu.jpg → 5); None otherwise."""
+    if not url:
+        return None
+    name = urllib.parse.unquote(urllib.parse.urlsplit(url).path).rsplit("/", 1)[-1]
+    m = re.match(r"(?:lossy-|lossless-)?page(\d+)-\d+px-", name)
+    return int(m.group(1)) if m else None
+
+
+def raw_image_ext(url):
+    """The extension when url points straight at a file browsers cannot display (e.g. a .djvu original)."""
+    name = urllib.parse.unquote(urllib.parse.urlsplit(url or "").path).rsplit("/", 1)[-1].lower()
+    for ext in RAW_IMAGE_EXT:
+        if name.endswith(ext):
+            return ext
+    return None
+
+
 def walk_blocks(article):
-    """Yield every block, including hero, in reading order."""
+    """Yield every block, including hero, in reading order. Malformed parts are skipped (validate.py reports them)."""
+    if not isinstance(article, dict):
+        return
     hero = article.get("hero")
     if isinstance(hero, dict):
         h = dict(hero)
-        h.setdefault("type", "figure")
+        h["type"] = h.get("type") or "figure"  # like the App: an empty or null type is a figure too
         h.setdefault("id", "hero")
         yield h
-    for b in article.get("body", []) or []:
+    body = article.get("body")
+    for b in body if isinstance(body, list) else []:
         if isinstance(b, dict):
             yield b
 
 
 def figures_of(article):
     for b in walk_blocks(article):
-        if b.get("type", "figure") == "figure" and b.get("src"):
+        if b.get("type", "figure") == "figure" and isinstance(b.get("src"), str) and b["src"]:
             yield b
 
 
 CJK = re.compile(r"[㐀-鿿豈-﫿]")
+
+
+def _items(v, typ):
+    """The items of list v that are typ. Wrong shapes are skipped here; validate.py reports them as ERROR."""
+    return [x for x in v if isinstance(x, typ)] if isinstance(v, list) else []
 
 
 def text_of_block(b):
@@ -138,37 +174,57 @@ def text_of_block(b):
         if isinstance(v, str) and t not in ("figure",):
             parts.append(v)
     if t in ("list",):
-        parts += [x for x in b.get("items", []) if isinstance(x, str)]
+        parts += _items(b.get("items"), str)
     if t == "news":
-        for it in b.get("items", []):
+        for it in _items(b.get("items"), dict):
             parts += [it.get("headline", ""), it.get("summary", "")]
     if t == "scripture":
-        parts += [v.get("text", "") for v in b.get("verses", [])]
+        parts += [v.get("text", "") for v in _items(b.get("verses"), dict)]
     if t == "exercise":
-        parts += b.get("steps", []) + b.get("criteria", [])
+        parts += _items(b.get("steps"), str) + _items(b.get("criteria"), str)
     if t == "callout":
-        parts += [x for x in b.get("items", []) or [] if isinstance(x, str)]
+        parts += _items(b.get("items"), str)
     if t == "timeline":
-        for it in b.get("items", []):
+        for it in _items(b.get("items"), dict):
             parts += [it.get("label", ""), it.get("note", "")]
     if t == "table":
-        for row in b.get("rows", []):
+        for row in _items(b.get("rows"), list):
             parts += [str(c) for c in row]
     if t == "pitch":
-        parts += [s.get("note", "") for s in b.get("steps", [])]
-    return "\n".join(p for p in parts if p)
+        parts += [s.get("note", "") for s in _items(b.get("steps"), dict)]
+    return "\n".join(p for p in parts if isinstance(p, str) and p)
 
 
 def cjk_count(article):
     total = 0
-    for b in article.get("body", []) or []:
+    body = article.get("body") if isinstance(article, dict) else None
+    for b in body if isinstance(body, list) else []:
         if isinstance(b, dict):
             total += len(CJK.findall(text_of_block(b)))
     return total
 
 
+RETRY_STATUS = (429, 500, 502, 503, 504)
+
+
+def retry_after(value, attempt):
+    """Seconds to wait from a Retry-After header (seconds or an HTTP date), at most 20."""
+    import email.utils
+    try:
+        wait = int(value)
+    except (TypeError, ValueError):
+        try:
+            wait = (email.utils.parsedate_to_datetime(value) - dt.datetime.now(dt.timezone.utc)).total_seconds()
+        except (TypeError, ValueError, IndexError, OverflowError):
+            wait = 0
+    return min(wait, 20) if wait > 0 else 3 * (attempt + 1)
+
+
 def http_get(url, headers=None, timeout=20, data=None, method=None, retries=3):
-    """GET/POST with a descriptive User-Agent; retries politely on HTTP 429/503."""
+    """GET/POST with a descriptive User-Agent; retries politely on HTTP 429/5xx, and at most twice on
+    timeouts or dropped connections (a host that is down should not stall a whole run)."""
+    import http.client
+    import socket
     import time
     import urllib.error
     h = {"User-Agent": UA}
@@ -179,8 +235,13 @@ def http_get(url, headers=None, timeout=20, data=None, method=None, retries=3):
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return r.status, dict(r.headers), r.read()
         except urllib.error.HTTPError as e:
-            if e.code in (429, 503) and attempt < retries:
-                wait = int(e.headers.get("Retry-After", "0") or 0) or 3 * (attempt + 1)
-                time.sleep(min(wait, 20))
+            if e.code in RETRY_STATUS and attempt < retries:
+                time.sleep(retry_after((e.headers or {}).get("Retry-After"), attempt))
                 continue
             raise
+        except (OSError, http.client.HTTPException) as e:
+            # URLError, timeouts, ConnectionResetError/RemoteDisconnected, IncompleteRead.
+            # A DNS failure will not fix itself in a few seconds, so it is raised at once.
+            if isinstance(getattr(e, "reason", None), socket.gaierror) or attempt >= min(retries, 2):
+                raise
+            time.sleep(2 * (attempt + 1))

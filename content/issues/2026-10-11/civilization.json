@@ -1,0 +1,490 @@
+{
+  "column": "civilization",
+  "date": "2026-10-11",
+  "title": "羅馬城的水道：誰付錢、誰維修、誰能接水",
+  "dek": "公元 97 年，元老弗朗提努斯接管羅馬供水，在入水口量到比帳冊多約一萬單位的水。他的報告也記下：私人想接水，得先拿到皇帝的信。",
+  "topic_key": "civilization:rome-aqueducts-1c",
+  "updated_at": "2026-10-10T22:00:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "illustration",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Porta_Maggiore_te_Rome_Veduta_del_Monumento_eretto_dall%27Imperador_Tito_Vespasiano_%28titel_op_object%29_Gezichten_op_Rome_%28serietitel%29_Vedute_di_Roma_disegnate_ed_incise_da_Giambattista_Piranesi_architetto_Ve%28nez%29iano_%28se%2C_RP-P-OB-39.414.jpg/1280px-thumbnail.jpg",
+    "width": 1280,
+    "height": 898,
+    "alt": "黑白蝕刻版畫：一座雙拱石造城門，厚重的頂層刻滿三段長篇拉丁銘文，兩側連著殘破的拱廊，門前有幾名行人，左下有兩人坐在石塊上。",
+    "caption": "皮拉內西（Giovanni Battista Piranesi）〈馬焦雷門〉，《羅馬景觀》（Vedute di Roma）系列蝕刻版畫。這座拱門原是克勞狄亞與新阿尼奧兩條水道跨越兩條大路之處，頂上三段銘文分屬克勞狄烏斯（52 年）、維斯帕先（71 年）與提圖斯（81 年），三段都寫明「自費」。版畫標題把它稱作提圖斯所立的紀念物。",
+    "credit": "Giovanni Battista Piranesi；荷蘭國家博物館（Rijksmuseum）藏，RP-P-OB-39.414；蝕刻，版面 49 × 71 公分",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Porta_Maggiore_te_Rome_Veduta_del_Monumento_eretto_dall%27Imperador_Tito_Vespasiano_(titel_op_object)_Gezichten_op_Rome_(serietitel)_Vedute_di_Roma_disegnate_ed_incise_da_Giambattista_Piranesi_architetto_Ve(nez)iano_(se,_RP-P-OB-39.414.jpg",
+    "made": "1748–1778 年間（館方著錄；丹麥國家美術館的同版印本標 1775 年）",
+    "depicts": "公元 52 年完工的水道拱門，與 71、81 年的修復銘文"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "公元 97 年，新任水務官弗朗提努斯（Sextus Julius Frontinus）著手量測羅馬城外各條水道的入水口。皇帝檔案登記的總進水量是 12,755 quinaria（一種標準管口的截面單位），實際配出去的卻有 14,018；他在入口量到的，比帳冊多出大約 1 萬。這筆帳寫在他的《論羅馬城的供水》（De aquaeductu urbis Romae）第 64 節。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "本文要回答的是：從公元前 312 年到公元 97 年，羅馬城的水道建設與日常維修各由誰負擔。另一半問題在城裡：私人憑什麼把公家的水接進自己家，這套安排又在哪裡失靈。"
+    },
+    {
+      "type": "h",
+      "text": "定位：九條水道與一份有立場的官員報告"
+    },
+    {
+      "type": "p",
+      "text": "弗朗提努斯上任時，羅馬有九條水道入城：阿庇亞（Aqua Appia）、舊阿尼奧（Anio Vetus）、馬西亞（Aqua Marcia）、特普拉（Aqua Tepula）、朱利亞（Aqua Julia）、處女水道（Aqua Virgo）、阿爾西耶蒂納（Aqua Alsietina）、克勞狄亞（Aqua Claudia）與新阿尼奧（Anio Novus）。渠道靠緩坡讓水自流，多數路段埋在地下，接近城市才架上拱橋。統管這套系統的常設職位是水務官（curator aquarum），由元老出任，始於公元前 11 年。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "我們對這套制度的認識，大半來自弗朗提努斯一人。他是元老，先後在 73 或 74、98、100 年出任執政官，做過不列顛總督，97 年由皇帝涅爾瓦（Nerva）任命。書寫於上任初期，他自稱主要供自己掌握業務（第 2 節）。全書只靠一份手稿傳世：人文學者波焦（Poggio Bracciolini）1429 年在蒙特卡西諾（Monte Cassino）修道院找到它。第 78–86 節的配水數字在手稿裡錯誤很多，1925 年洛布版譯者 Charles E. Bennett 在註裡直說難以判定哪些是原貌。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "這位作者有立場。他稱頌涅爾瓦，把前朝圖密善（Domitian）時期寫成管理鬆散、收入被挪用的年代，舞弊責任主要歸給水工（aquarii）與皇帝的自由人。可以對照的材料有三類：老普林尼（Pliny the Elder）《博物志》（Naturalis Historia）第 36 卷記下幾條水道的造價；城門上的銘文記下皇帝出資修復；出土鉛管上的鑄字留下督造官員的名字。",
+      "tag": "史料"
+    },
+    {
+      "type": "timeline",
+      "title": "羅馬水道與管理制度大事",
+      "items": [
+        {
+          "when": "公元前 312 年",
+          "label": "阿庇亞水道",
+          "note": "監察官阿庇烏斯・克勞狄烏斯（Appius Claudius Caecus）主持，幾乎全程走地下。"
+        },
+        {
+          "when": "前 272 年",
+          "label": "舊阿尼奧水道發包",
+          "note": "監察官庫里烏斯（Manius Curius Dentatus）用對皮洛士（Pyrrhus）戰爭的戰利品支付。"
+        },
+        {
+          "when": "前 144–140 年",
+          "label": "馬西亞水道",
+          "note": "元老院委託法務官馬西烏斯（Quintus Marcius Rex）修舊線、引新水；據史家 Fenestella，撥款 1 億 8,000 萬塞斯特斯。"
+        },
+        {
+          "when": "前 33 年",
+          "label": "阿格里帕任市政官",
+          "note": "建朱利亞水道，修阿庇亞、舊阿尼奧、馬西亞三線，大量增設公共噴泉。"
+        },
+        {
+          "when": "前 19 年",
+          "label": "處女水道通水",
+          "note": "6 月 9 日開始在城內供水。"
+        },
+        {
+          "when": "前 11 年",
+          "label": "設立水務官",
+          "note": "元老院決議與奧古斯都敕令；首任梅薩拉（Messalla Corvinus），配有扈從、建築師與書記。"
+        },
+        {
+          "when": "前 9 年",
+          "label": "昆克提烏斯法（lex Quinctia）",
+          "note": "蓄意破壞水道、管線者罰 10 萬塞斯特斯。"
+        },
+        {
+          "when": "公元 38–52 年",
+          "label": "克勞狄亞與新阿尼奧水道",
+          "note": "卡利古拉（Caligula）動工，克勞狄烏斯（Claudius）完工；新設 460 人的皇帝奴隸隊與代理官。"
+        },
+        {
+          "when": "71、81 年",
+          "label": "皇帝出資修復",
+          "note": "克勞狄亞水道曾中斷 9 年，維斯帕先（Vespasian）與提圖斯（Titus）先後修復，銘文刻在今馬焦雷門（Porta Maggiore）。"
+        },
+        {
+          "when": "97 年",
+          "label": "弗朗提努斯接任水務官",
+          "note": "清查帳冊與管線，寫成《論羅馬城的供水》。"
+        }
+      ],
+      "caption": "依 Frontinus 第 4–13、98–99、116、129 節，Platner & Ashby（1929）與馬焦雷門銘文整理；年代依執政官紀年換算。"
+    },
+    {
+      "type": "h",
+      "text": "興建的錢：從國家撥款轉向統治者自費"
+    },
+    {
+      "type": "p",
+      "text": "共和時期，水道由監察官、法務官或元老院特設的委員主持興建，工程多半發包出去。舊阿尼奧用的是戰爭掠奪所得；馬西亞由元老院撥款，弗朗提努斯轉引史家 Fenestella 的數字是 1 億 8,000 萬塞斯特斯（sestertius），工期長到法務官任期被延一年（第 7 節）。老普林尼卻說馬西烏斯在任期內就把水引進城，兩份史料在這點上不一致。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "帝制初期，出錢的人換成統治者和他的親信。3 世紀史家卡西烏斯・狄奧（Cassius Dio）寫到，阿格里帕（Marcus Agrippa）前 33 年任市政官時「沒有從國庫拿錢」修繕公共建築與街道；同一年他修了三條舊水道（Frontinus 第 9 節）。老普林尼記克勞狄亞與新阿尼奧兩線共花 3 億 5,000 萬塞斯特斯。前 11 年的元老院決議則提到，奧古斯都向元老院承諾自費修復五條舊線（第 125 節）。",
+      "tag": "史實"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.19,
+        0.07,
+        0.61,
+        0.39
+      ],
+      "position": "畫面上半部，拱門頂層的石牆，約佔寬度六成",
+      "caption": "頂層銘文局部。最上四行屬克勞狄烏斯，說兩條水道由他「自費」（SVA IMPENSA）引入城中；中間三行屬維斯帕先，說水道中斷九年（PER ANNOS NOVEM）後由他自費修復；下方四行屬提圖斯。字形依皮拉內西的刻版，不是原石照片。"
+    },
+    {
+      "type": "quote",
+      "original": "aquas Curtiam et Caeruleam … cum a capite aquarum a solo vetustate dilapsae essent nova forma reducendas sua impensa curavit",
+      "text": "庫爾提烏斯泉與卡埃魯雷烏斯泉之水……因年久在水源處整段崩壞，（提圖斯）自費以新渠道重新引入。",
+      "cite": "馬焦雷門提圖斯銘文（公元 81 年），拉丁文據 Platner & Ashby（1929）引錄；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，建設費的來源從「國家的戰利品與撥款」轉成「統治者個人的慷慨」，刻在水道上的名字也跟著換人。這不只是會計科目的改變：誰付錢，誰就能把工程刻成自己的功績；而同一條克勞狄亞水道，啟用十年就斷水九年，兩代皇帝又各自以「自費修復」再刻一次名字。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "維修的人：兩支奴隸隊，兩個金庫"
+    },
+    {
+      "type": "p",
+      "text": "共和時期的日常維護也外包。弗朗提努斯讀到的舊規定是：承包商必須在城外、城內各保持固定人數的奴隸工人，並把派到各區的人名登記在公共檔案（第 96 節）。阿格里帕改了做法，用自己的奴隸組成一支水務隊；他死後這支隊伍由奧古斯都繼承，再轉為國有（第 98 節）。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "到弗朗提努斯的時代，共有兩支隊伍。公家隊約 240 人，源自阿格里帕；皇帝隊 460 人，是克勞狄烏斯引入新水道時設立的（第 116 節）。隊員分為工頭、分水塔看守、巡線員、鋪石工、抹灰工等工種，一部分駐在城外，一部分守在城內分水塔與噴泉旁，遇到突發狀況要把別區的水調過來（第 117 節）。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "薪餉走兩個口袋。公家隊由國庫（aerarium）支付，開支由一筆與水權相關的租稅抵減，來自水道、分水塔、噴泉與水池周邊的地點或建築，金額近 25 萬塞斯特斯（原文沒寫明是一年的數字）；這筆錢曾流入圖密善的私人錢袋，涅爾瓦才歸還公眾。皇帝隊由皇帝金庫（fiscus）支付，全部鉛料以及渠道、分水塔、水池的費用也從這裡出（第 118 節）。",
+      "tag": "史實"
+    },
+    {
+      "type": "svg",
+      "title": "從水源到用戶：公元 97 年前後的羅馬供水",
+      "svg": "<svg viewBox='0 0 360 776' xmlns='http://www.w3.org/2000/svg' font-size='11'>\n<defs>\n<marker id='ah' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='ink'/></marker>\n<marker id='ahr' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='accent'/></marker>\n<marker id='ahg' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='gold'/></marker>\n</defs>\n<text x='12' y='15' font-size='10.5' class='muted'>一｜水怎麼走（單位：quinaria）</text>\n<rect x='12' y='24' width='228' height='62' rx='3' class='soft'/>\n<text x='22' y='43' font-size='12'>水源・入水口：山泉、阿尼奧河、湖</text>\n<text x='22' y='60' font-size='10.5' class='muted'>9 條渠道，多走地下，近城上拱橋</text>\n<text x='22' y='77' font-size='10.5' class='muted'>入口實測比帳冊多約 1 萬（§64）</text>\n<line x1='126' y1='86' x2='126' y2='108' class='ink line' marker-end='url(#ah)'/>\n<path d='M128,97 H250' class='accent line' stroke-dasharray='3 3' marker-end='url(#ahr)'/>\n<rect x='252' y='72' width='96' height='54' rx='3' class='paper'/>\n<text x='260' y='88' font-size='10.5' class='accent'>漏失①</text>\n<text x='260' y='103' font-size='10.5' class='accent'>沿線地主</text>\n<text x='260' y='118' font-size='10.5' class='accent'>鑿渠澆園（§75）</text>\n<rect x='12' y='110' width='228' height='46' rx='3' class='soft'/>\n<text x='22' y='129' font-size='12'>沉澱池・量水點（第 7 里程碑內）</text>\n<text x='22' y='147' font-size='10.5' class='muted'>量到的水比入口少（§75）</text>\n<line x1='126' y1='156' x2='126' y2='178' class='ink line' marker-end='url(#ah)'/>\n<rect x='12' y='180' width='228' height='46' rx='3' class='soft'/>\n<text x='22' y='199' font-size='12'>城內 247 座分水塔（castella）</text>\n<text x='22' y='217' font-size='10.5' class='muted'>青銅管嘴（calix）蓋印才合法</text>\n<path d='M240,198 H256' class='accent line' stroke-dasharray='3 3' marker-end='url(#ahr)'/>\n<rect x='258' y='162' width='90' height='70' rx='3' class='paper'/>\n<text x='265' y='178' font-size='10.5' class='accent'>漏失②（城內）</text>\n<text x='265' y='193' font-size='10.5' class='accent'>舊管嘴照樣賣水</text>\n<text x='265' y='208' font-size='10.5' class='accent'>街下暗管接支管</text>\n<text x='265' y='223' font-size='10.5' class='accent'>（§112–115）</text>\n<path d='M126,226 V238' class='ink line'/>\n<path d='M66,238 H294' class='ink line'/>\n<line x1='66' y1='238' x2='66' y2='252' class='ink line' marker-end='url(#ah)'/>\n<line x1='180' y1='238' x2='180' y2='252' class='ink line' marker-end='url(#ah)'/>\n<line x1='294' y1='238' x2='294' y2='252' class='ink line' marker-end='url(#ah)'/>\n<rect x='12' y='254' width='108' height='62' rx='3' class='soft'/>\n<text x='66' y='272' font-size='11' text-anchor='middle'>以皇帝名義</text>\n<text x='66' y='291' font-size='15' font-weight='600' text-anchor='middle'>3,425½</text>\n<text x='66' y='308' font-size='10' text-anchor='middle' class='muted'>城內外合計</text>\n<rect x='126' y='254' width='108' height='62' rx='3' class='soft'/>\n<text x='180' y='272' font-size='11' text-anchor='middle'>私人受恩者</text>\n<text x='180' y='291' font-size='15' font-weight='600' text-anchor='middle'>6,192</text>\n<text x='180' y='308' font-size='10' text-anchor='middle' class='muted'>城內外合計</text>\n<rect x='240' y='254' width='108' height='62' rx='3' class='soft'/>\n<text x='294' y='272' font-size='11' text-anchor='middle'>公共用途</text>\n<text x='294' y='291' font-size='15' font-weight='600' text-anchor='middle'>4,401</text>\n<text x='294' y='308' font-size='10' text-anchor='middle' class='muted'>僅城內</text>\n<text x='12' y='334' font-size='10.5' class='muted'>公共用途細分：軍營 279｜75 處公共建築 2,301</text>\n<text x='12' y='350' font-size='10.5' class='muted'>39 座裝飾噴泉 386｜591 座居民取水的水池 1,335</text>\n<text x='12' y='366' font-size='10' class='muted'>總配水 14,018（§78）；唯一手稿的數字有訛誤</text>\n<line x1='12' y1='380' x2='348' y2='380' class='muted line' stroke-dasharray='2 4'/>\n<text x='12' y='400' font-size='10.5' class='muted'>二｜錢從哪裡來</text>\n<rect x='12' y='410' width='130' height='40' rx='3' class='soft'/>\n<text x='77' y='434' font-size='12' text-anchor='middle'>國庫（aerarium）</text>\n<line x1='142' y1='430' x2='198' y2='430' class='ink line' marker-end='url(#ah)'/>\n<text x='170' y='424' font-size='9.5' text-anchor='middle' class='muted'>薪餉</text>\n<rect x='200' y='410' width='148' height='40' rx='3' class='soft'/>\n<text x='274' y='427' font-size='11.5' text-anchor='middle'>公家隊 約 240 人</text>\n<text x='274' y='443' font-size='10' text-anchor='middle' class='muted'>源自阿格里帕的奴隸</text>\n<rect x='12' y='468' width='130' height='44' rx='3' class='paper'/>\n<text x='77' y='486' font-size='11' text-anchor='middle' class='gold'>水權相關租稅</text>\n<text x='77' y='503' font-size='10.5' text-anchor='middle' class='gold'>近 25 萬塞斯特斯</text>\n<line x1='77' y1='468' x2='77' y2='452' class='gold line' marker-end='url(#ahg)'/>\n<text x='84' y='463' font-size='9.5' class='muted'>抵減</text>\n<text x='156' y='482' font-size='10' class='muted'>這筆錢曾流入圖密善的</text>\n<text x='156' y='497' font-size='10' class='muted'>私人錢袋，涅爾瓦歸還</text>\n<text x='156' y='512' font-size='10' class='muted'>（§118；原文未寫期間）</text>\n<rect x='12' y='530' width='130' height='40' rx='3' class='soft'/>\n<text x='77' y='554' font-size='12' text-anchor='middle'>皇帝金庫（fiscus）</text>\n<line x1='142' y1='550' x2='198' y2='550' class='ink line' marker-end='url(#ah)'/>\n<rect x='200' y='530' width='148' height='56' rx='3' class='soft'/>\n<text x='274' y='547' font-size='11.5' text-anchor='middle'>皇帝隊 460 人</text>\n<text x='274' y='563' font-size='10' text-anchor='middle' class='muted'>另付全部鉛料，與渠道、</text>\n<text x='274' y='578' font-size='10' text-anchor='middle' class='muted'>分水塔、水池的費用</text>\n<line x1='12' y1='600' x2='348' y2='600' class='muted line' stroke-dasharray='2 4'/>\n<text x='12' y='620' font-size='10.5' class='muted'>三｜誰說了算：私人接水的程序（§105–106）</text>\n<rect x='12' y='630' width='100' height='40' rx='3' class='soft'/>\n<text x='62' y='654' font-size='12' text-anchor='middle'>皇帝</text>\n<line x1='112' y1='650' x2='128' y2='650' class='ink line' marker-end='url(#ah)'/>\n<rect x='130' y='630' width='100' height='40' rx='3' class='soft'/>\n<text x='180' y='647' font-size='11.5' text-anchor='middle'>授權信</text>\n<text x='180' y='662' font-size='10' text-anchor='middle' class='muted'>（epistula）</text>\n<line x1='230' y1='650' x2='246' y2='650' class='ink line' marker-end='url(#ah)'/>\n<rect x='248' y='630' width='100' height='40' rx='3' class='soft'/>\n<text x='298' y='647' font-size='11.5' text-anchor='middle'>水務官</text>\n<text x='298' y='662' font-size='10' text-anchor='middle' class='muted'>（元老）</text>\n<line x1='298' y1='670' x2='298' y2='686' class='ink line' marker-end='url(#ah)'/>\n<rect x='248' y='688' width='100' height='40' rx='3' class='soft'/>\n<text x='298' y='705' font-size='11.5' text-anchor='middle'>代理官</text>\n<text x='298' y='720' font-size='10' text-anchor='middle' class='muted'>（皇帝的自由人）</text>\n<line x1='248' y1='708' x2='232' y2='708' class='ink line' marker-end='url(#ah)'/>\n<rect x='130' y='688' width='100' height='40' rx='3' class='soft'/>\n<text x='180' y='705' font-size='11.5' text-anchor='middle'>量水員</text>\n<text x='180' y='720' font-size='10' text-anchor='middle' class='muted'>到場核印管嘴</text>\n<line x1='130' y1='708' x2='114' y2='708' class='ink line' marker-end='url(#ah)'/>\n<rect x='12' y='688' width='100' height='40' rx='3' class='soft'/>\n<text x='62' y='712' font-size='12' text-anchor='middle'>用戶接水</text>\n<text x='12' y='748' font-size='10.5' class='accent'>水權綁在原受讓人與原地塊：易主即失效（§107–109）</text>\n<text x='348' y='768' font-size='9.5' text-anchor='end' class='muted'>原創示意，不按比例</text>\n</svg>",
+      "caption": "原創示意，不按比例。水量單位 quinaria 是管口截面單位，不是流量；數字與程序依 Frontinus 第 64、75、78、105–118 節整理，第 78 節數字在唯一手稿中有訛誤。漏失②的手法發生在城內分水塔與街道下的管線；第 118 節的租稅金額，原文未寫明是否為年收。",
+      "credit": "本報原創示意圖"
+    },
+    {
+      "type": "p",
+      "text": "比一比數量級：若把這近 25 萬當成一年的收入（原文沒寫期間，這是本文的假設），要累積 1,400 年才抵得上克勞狄亞與新阿尼奧兩線 3 億 5,000 萬的造價。本文推測，這套系統的主體從來不是靠用水者付費維持：資本支出靠戰利品、元老院與統治者，運作支出靠國庫與皇帝金庫，與水權相關的租稅只是零頭。",
+      "tag": "推論"
+    },
+    {
+      "type": "table",
+      "title": "成本與風險由誰承擔",
+      "head": [
+        "項目",
+        "承擔者",
+        "依據"
+      ],
+      "rows": [
+        [
+          "興建（共和時期）",
+          "國家：戰利品、元老院撥款",
+          "Frontinus 第 6–7 節"
+        ],
+        [
+          "興建（帝制時期）",
+          "統治者與親信，銘文自稱「自費」",
+          "Dio 49.43；Pliny 36.122；馬焦雷門銘文"
+        ],
+        [
+          "日常維修人力",
+          "公家隊約 240 人（國庫）；皇帝隊 460 人（皇帝金庫）",
+          "第 116–118 節"
+        ],
+        [
+          "鉛料與分水塔、水池工程",
+          "皇帝金庫",
+          "第 118 節"
+        ],
+        [
+          "大修與重建",
+          "皇帝；奧古斯都曾承諾自費修五條舊線",
+          "第 125 節；銘文"
+        ],
+        [
+          "維修用土石與通道",
+          "沿線地主，由公道人估價後取用",
+          "第 125 節"
+        ],
+        [
+          "保護帶",
+          "地主：兩側 15 尺（城內地下段 5 尺）不得建屋、立墓、種樹",
+          "第 127 節"
+        ],
+        [
+          "私人用水費用",
+          "共和時期溢流水要繳費；帝制時期與水權相關的租稅性質有爭議；接水、管線、私人分水塔由受益者自付",
+          "第 94、118 節；Damon（2006）"
+        ],
+        [
+          "停水",
+          "城內居民：修渠一次只停一條；克勞狄亞曾斷 9 年",
+          "第 122 節；銘文"
+        ]
+      ],
+      "caption": "依 Frontinus《論羅馬城的供水》、老普林尼、卡西烏斯・狄奧、馬焦雷門銘文與 Damon（2006）書評整理。"
+    },
+    {
+      "type": "h",
+      "text": "誰能接水：公共水池優先，私人用水是皇帝的恩賜"
+    },
+    {
+      "type": "p",
+      "text": "弗朗提努斯翻到的古法很嚴：私人只能引用從水池溢到地上的水。這種溢流水叫 caduca，也只配給公共浴場與漂洗作坊，而且要向國庫繳費；少數權貴的住宅在其他人同意下也能分到一點（第 94 節）。發放權在監察官手上，沒有監察官時歸市政官（第 95 節）。奧古斯都把這件事收歸自己：他以敕令規定依阿格里帕帳冊用水的人享有什麼權利，弗朗提努斯說「整件事轉成了他的恩賜」（tota re in sua beneficia translata，第 99 節，本文自譯）。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "到 1 世紀末，程序是：想把水接進私宅或田莊的人向皇帝申請，把皇帝的信交給水務官；水務官指派一名皇帝的自由人為代理官，由代理官會同量水員替青銅管嘴（calix）蓋印，管嘴後 50 尺內必須接同口徑的鉛管，而且只能從分水塔接，不能直接鑿主渠（第 105–106 節）。",
+      "tag": "史實"
+    },
+    {
+      "type": "quote",
+      "original": "Ius impetratae aquae neque heredem neque emptorem neque ullum novum dominum praediorum sequitur.",
+      "text": "申請得來的用水權，不隨繼承人、買主或田產的任何新主人移轉。",
+      "cite": "Frontinus《論羅馬城的供水》第 107 節，本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "例外是公共浴場，以及以奧古斯都名義撥出的水；浴場的水權自古一經撥給就永久有效。前 11 年的元老院決議規定，其餘水權只在同一位地主繼續持有受水的那塊地時有效；另有規定，受讓的水不得引到原地塊以外。持有人一旦死亡或賣地，水權就空出來，登記後轉給下一位申請人。過去水工會立刻截斷，趁空檔把水賣給地主或旁人；涅爾瓦改成給 30 天緩衝（第 107–109 節）。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "分配結果如何？依第 78 節，14,018 quinaria 中，城外 4,063（以皇帝名義 1,718、私人 2,345）；城內 9,955 分到 247 座分水塔，其中以皇帝名義 1,707½、私人 3,847、公共用途 4,401。公共用途再分給軍營 279、75 處公共建築 2,301、39 座裝飾噴泉 386、591 座供居民取水的水池 1,335。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "Harry B. Evans 在 1994 年的《古羅馬的配水》（Water Distribution in Ancient Rome）據此指出，城內約 13% 的水進入多數居民取水的公共水池，私人用戶分到的約是它的三倍；書評者 John Humphrey 特別點出這組數字。Evans 只拿 quinaria 比較各水道的相對份額，不換算成實際流量。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "h",
+      "text": "制度在哪裡漏水"
+    },
+    {
+      "type": "p",
+      "text": "弗朗提努斯把差額分兩層解釋。帳冊比入口少，他歸咎於當初估算的人粗心；皇帝照帳冊上的數字發放恩賜，多出來的一萬單位就此不知去向（第 74 節）。入口、沉澱池、配水處的水量一路遞減，他歸咎於舞弊：水工把公家水導進私人用途，沿線地主也鑿開渠壁澆自家園子（第 75 節）。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "在城內，他找到比核准還大的管嘴、沒蓋印的管嘴、蓋了印卻直接接上粗管的管嘴，有些管子乾脆沒裝管嘴（第 112–113 節）。更精巧的手法有兩種。一是水權換主人時，水工裝上新管嘴，舊的留在分水塔裡繼續出水，賣給別人（第 114 節）。二是所謂「穿孔」（puncta）：城內街道石板下有長段暗管，沿途店家都被私接了支管，公共用水只剩一小部分。他說，拆掉這類支管收回的鉛料數量，可以讓人估出被偷的水有多少（第 115 節）。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "人力也會漏。兩支奴隸隊常因工頭徇私或疏忽，被調去做私人工程；弗朗提努斯的對策是前一天寫下次日的工作，每天記錄實際完成的事（第 117 節）。元老院給水務官配的扈從與助手，國庫照付薪水，卻因歷任水務官怠惰，早已不替他們辦事（第 101 節）。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "地理與工程的限制同樣真實。各水道入城高度不同，只有五條能送到城內所有山丘（第 18 節）。渠道內部的修理不能在夏天做，只能在春秋，而且一次只停一條，否則全城缺水（第 122 節）。凱里烏斯山與阿文提諾山原本只靠克勞狄亞一條支線，一修就斷水；涅爾瓦時期改由多條水道供水，多數水池接上兩根管（第 87 節）。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "法律給了強制手段，也給了告發誘因。前 11 年的元老院決議規定水道兩側 15 尺（城內地下段 5 尺）不得建屋、立墓、種樹，違者每項罰 1 萬塞斯特斯，一半給告發者（第 127 節）。前 9 年的昆克提烏斯法對蓄意鑿破渠道、管線者罰 10 萬，奴隸犯案由主人付錢（第 129 節）。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "但弗朗提努斯沒有大舉起訴。他在全書最後一節說，長期疏於執法讓人鬆懈，應該溫和地把人拉回正軌，他盡力讓犯錯的人不被公開，受警告後向皇帝求情的人得到寬免（第 130 節）。第 88 節說得更直接：過去提心吊膽偷接水的人，現在拿著皇帝的恩賜安心用水。他在同一節還說，新的配水安排要等工程完成再交代；現存文本裡沒有這份新表。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，這次清查的結果不是把偷水的人斷水，而是把他們轉成登記在案的受恩者。水量帳變清楚了，人情帳也重新記到皇帝名下。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "學界怎麼讀這份報告"
+    },
+    {
+      "type": "p",
+      "text": "1925 年洛布版的 Bennett 把弗朗提努斯寫成罕見的盡責公僕：接手一個長期被當閒差、管理敗壞的職位，一心為公。這是照作者自我形象讀的版本。Evans（1994）較保留，認為這本書遠不是供水系統的完整紀錄，寫作目的之一是彰顯作者與任命他的皇帝。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "Michael Peachin 2004 年的專書把它讀成政治小冊：在涅爾瓦重整官僚體系之際，向城中擁有產業的菁英宣告新的用水政策，也為這套政策辯護。書評意見不一。Rebecca Benefiel 認為這個解讀有說服力；Cynthia Damon 則指出，書中大量技術細節，像維修、管徑規格、歷任水務官名單，更像留給繼任者的資料，而且 Peachin 沒有處理受益者可能要付費的問題。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "Rabun Taylor 2024 年的論文走得更遠。他認為這部書是禁衛軍在 97 年夏天鬧事之後，幫涅爾瓦、再幫圖拉真（Trajan）爭取元老支持的政治文件；弗朗提努斯的改革延續了圖密善時期開始的工程，可能包括後來圖拉真水道（Aqua Traiana）的早期階段。照 Taylor 的推論，弗朗提努斯把水工在這些城外工程上的工作，寫成了小偷小摸。他的論文標題「新配水的安排」（Novae erogationis ordinatio），正借自第 88 節那份沒有寫出來的新表。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "行政面的爭論集中在誰真正掌權。Christer Bruun 1991 年的《古羅馬的供水》大量利用鉛管鑄字，認為代理官一職是為了主管克勞狄烏斯設立的皇帝奴隸隊。Renata Kamińska 2015 年的論文認為史料不足以確定這個關聯，並指出弗朗提努斯幾乎把這些自由人代理官寫成一切弊端的來源，他的說法要打折扣。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Lead_water_pipe%2C_Roman%2C_1-300_CE_Wellcome_L0058469.jpg/1280px-Lead_water_pipe%2C_Roman%2C_1-300_CE_Wellcome_L0058469.jpg",
+      "width": 1280,
+      "height": 852,
+      "alt": "黑色背景上斜放一段灰白色鉛管，管口在左下，管身一側有一排凸起的拉丁字母，右端貼著館藏編號。",
+      "caption": "羅馬鉛水管，管身鑄有銘文。依 Wellcome Images 的原說明（Commons 轉錄），銘文顯示這段管子由一名皇帝自由人出身的水務代理官督造；年代只著錄為公元 1–300 年間，原屬義大利男高音 Evan Gorga 的收藏。本報未能自行辨讀全文。這類鑄字是 Bruun、Kamińska 等人討論水務官員的主要材料之一。",
+      "credit": "Wellcome Images；倫敦科學博物館（Science Museum）藏，A635107",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lead_water_pipe,_Roman,_1-300_CE_Wellcome_L0058469.jpg",
+      "made": "鉛管約公元 1–300 年（Wellcome Images 著錄）；照片拍攝年份未註明"
+    },
+    {
+      "type": "p",
+      "text": "數字本身也有爭議。quinaria 量的是管口截面，不含流速，無法直接換成每日立方公尺。1929 年 Platner 與 Ashby 的《古羅馬地名辭典》仍把克勞狄亞水源處的 4,607 quinaria 換算成每日 191,190 立方公尺；Duncan Keenan-Jones 等人 2015 年改用渠壁上的石灰華沉積重建水位，估計新阿尼奧水道進城時每秒約 1.4±0.4 立方公尺，明顯低於先前的估計，並認為維修不足或用水改變可能是原因。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "這些爭論指向同一件事：「一萬 quinaria」既是量測結果，也是政治宣稱。本文推測，讀這份報告最穩的作法，是把制度規則（誰申請、誰蓋印、誰付薪）當成較可靠的部分，把數字與舞弊的歸因當成作者的論證。",
+      "tag": "推論"
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "取用公共資源是權利還是恩賜？它跟著土地走、跟著人走，還是跟著統治者的一封信走？主人一換，誰在空檔裡得利？",
+        "興建的錢和維修的錢是不是同一個口袋？名字刻在城門上的人，和每天巡線、抹灰的人，誰有動機讓系統持續運作？",
+        "帳冊與現場的差距掌握在誰手上？如果量測工具本身有盲點，誰能證明東西被偷了，誰又能把別人的正常工作說成偷竊？",
+        "新官清查舞弊時，選擇懲罰、赦免還是收編？這個選擇讓誰欠了誰的人情？"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Frontinus, De aquaeductu urbis Romae, Book I（拉丁文，Loeb 1925 年版）",
+      "publisher": "LacusCurtius（Bill Thayer）",
+      "date": "1925",
+      "url": "https://penelope.uchicago.edu/Thayer/L/Roman/Texts/Frontinus/De_Aquis/1*.html",
+      "note": "第 1–23 節：各水道的興建者、年代與高度"
+    },
+    {
+      "title": "Frontinus, De aquaeductu urbis Romae, Book II（拉丁文，Loeb 1925 年版）",
+      "publisher": "LacusCurtius（Bill Thayer）",
+      "date": "1925",
+      "url": "https://penelope.uchicago.edu/Thayer/L/Roman/Texts/Frontinus/De_Aquis/2*.html",
+      "note": "第 64–130 節：量水、配水、法規、奴隸隊與維修"
+    },
+    {
+      "title": "Frontinus: The Aqueducts of Rome, Book I（Charles E. Bennett 英譯）",
+      "publisher": "LacusCurtius（Loeb Classical Library）",
+      "date": "1925",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Frontinus/De_Aquis/Bennett/1*.html",
+      "note": "英譯與年代註"
+    },
+    {
+      "title": "Frontinus: The Aqueducts of Rome, Book II（Charles E. Bennett 英譯）",
+      "publisher": "LacusCurtius（Loeb Classical Library）",
+      "date": "1925",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Frontinus/De_Aquis/Bennett/2*.html",
+      "note": "英譯與註釋，含第 78–86 節手稿數字訛誤的說明"
+    },
+    {
+      "title": "Life and Works of Sextus Julius Frontinus",
+      "publisher": "LacusCurtius（Bennett 1925 年洛布版導論）",
+      "date": "1925",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Frontinus/life_and_works*.html",
+      "note": "仕途年代與 Bennett 對作者的評價"
+    },
+    {
+      "title": "The Manuscripts of Frontinus",
+      "publisher": "LacusCurtius（Bennett 1925 年洛布版導論）",
+      "date": "1925",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Frontinus/manuscripts*.html",
+      "note": "蒙特卡西諾手稿與波焦 1429 年的發現"
+    },
+    {
+      "title": "Pliny the Elder, Naturalis Historia, Book 36（拉丁文）",
+      "publisher": "LacusCurtius",
+      "date": "公元 77 年前後成書",
+      "url": "https://penelope.uchicago.edu/Thayer/L/Roman/Texts/Pliny_the_Elder/36*.html",
+      "note": "第 121–123 節：馬西烏斯、阿格里帕與克勞狄亞水道造價"
+    },
+    {
+      "title": "Cassius Dio, Roman History, Book 49（Earnest Cary 英譯）",
+      "publisher": "LacusCurtius（Loeb Classical Library）",
+      "date": "1917",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/49*.html",
+      "note": "第 43 節：阿格里帕任市政官時不動用國庫"
+    },
+    {
+      "title": "Aqua Claudia, in S. B. Platner & T. Ashby, A Topographical Dictionary of Ancient Rome",
+      "publisher": "Oxford University Press／LacusCurtius",
+      "date": "1929",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Gazetteer/Places/Europe/Italy/Lazio/Roma/Rome/_Texts/PLATOP*/Aqua_Claudia.html",
+      "note": "中斷九年、71 與 81 年修復、提圖斯銘文與流量換算"
+    },
+    {
+      "title": "Rabun Taylor, Novae erogationis ordinatio: Frontinus, Domitian, Nerva, and the Aqua Traiana",
+      "publisher": "Journal of Ancient History 12.1, pp. 100–163",
+      "date": "2024-03-14",
+      "url": "https://doi.org/10.1515/jah-2023-0025",
+      "note": "讀摘要：政治文件說與延續圖密善工程說"
+    },
+    {
+      "title": "Cynthia Damon, review of M. Peachin, Frontinus and the curae of the curator aquarum",
+      "publisher": "Bryn Mawr Classical Review 2006.01.15",
+      "date": "2006-01-15",
+      "url": "https://bmcr.brynmawr.edu/2006/2006.01.15/",
+      "note": "Peachin 的政治小冊說與書評批評；第 5 註：水權租稅的性質有爭議，接水、管線與私人分水塔由受益者自付"
+    },
+    {
+      "title": "Rebecca R. Benefiel, Rezension: M. Peachin, Frontinus and the curae of the curator aquarum",
+      "publisher": "sehepunkte 6 (2006), Nr. 7/8",
+      "date": "2006-07-15",
+      "url": "https://sehepunkte.de/2006/07/8200.html",
+      "note": "對 Peachin 解讀的肯定"
+    },
+    {
+      "title": "John Humphrey, review of H. B. Evans, Water Distribution in Ancient Rome: The Evidence of Frontinus",
+      "publisher": "Bryn Mawr Classical Review 1995.07.08",
+      "date": "1995-07",
+      "url": "https://bmcr.brynmawr.edu/1995/1995.07.08/",
+      "note": "Evans 對公共水池與私人用水比例的分析"
+    },
+    {
+      "title": "Renata Kamińska, Procuratores aquarum – the Guardians of Water or Crooks? The Procurators’ Activity in the Eyes of Frontinus",
+      "publisher": "Diritto @ Storia 13",
+      "date": "2015",
+      "url": "https://dirittoestoria.it/13/tradizione-romana/Kaminska-Procuratores-aquarum.htm",
+      "note": "代理官的職權、Bruun 的看法與弗朗提努斯的偏見"
+    },
+    {
+      "title": "Duncan Keenan-Jones, Davide Motta, Marcelo H. Garcia, Bruce W. Fouke, Travertine-based estimates of the amount of water supplied by ancient Rome's Anio Novus aqueduct",
+      "publisher": "Journal of Archaeological Science: Reports 3, pp. 1–10",
+      "date": "2015-09",
+      "url": "https://doi.org/10.1016/j.jasrep.2015.05.006",
+      "note": "讀摘要：以石灰華沉積估算新阿尼奧水道流量"
+    },
+    {
+      "title": "Giovanni Battista Piranesi, Porta Maggiore（Vedute di Roma），RP-P-OB-39.414",
+      "publisher": "Rijksmuseum",
+      "date": "1748–1778",
+      "url": "https://hdl.handle.net/10934/RM0001.COLLECT.66495",
+      "note": "頭圖"
+    },
+    {
+      "title": "File:Lead water pipe, Roman, 1-300 CE Wellcome L0058469.jpg",
+      "publisher": "Wikimedia Commons（Wellcome Images 原說明，Commons 轉錄）",
+      "date": "2014-10-17",
+      "url": "https://commons.wikimedia.org/wiki/File:Lead_water_pipe,_Roman,_1-300_CE_Wellcome_L0058469.jpg",
+      "note": "鉛管照片與 Wellcome Images 原說明；Wellcome Collection 館藏紀錄 wwbegzn2 已自館方目錄刪除"
+    }
+  ]
+}

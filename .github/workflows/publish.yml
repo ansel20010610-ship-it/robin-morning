@@ -31,7 +31,13 @@ jobs:
       - name: Assemble site
         run: |
           mkdir _site
-          cp -R index.html sw.js manifest.webmanifest .nojekyll assets content _site/
+          cp -R index.html sw.js manifest.webmanifest .nojekyll assets content oauth _site/
+      - name: Version the service worker
+        # Cache name = hash of the app shell, so sw.js (and the cached shell) changes only when the shell does.
+        run: |
+          H=$(cat _site/index.html _site/manifest.webmanifest _site/assets/* | sha256sum | cut -c1-12)
+          sed -i "s/__SHELL_HASH__/$H/" _site/sw.js
+          grep -q "\"robin-shell-$H\"" _site/sw.js || { echo "::error::sw.js has no __SHELL_HASH__ placeholder"; exit 1; }
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site

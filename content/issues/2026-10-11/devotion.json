@@ -1,0 +1,195 @@
+{
+  "column": "devotion",
+  "date": "2026-10-11",
+  "title": "晚上也算在頭一日裡：讀創世記 1:1–5",
+  "dek": "創刊這天從聖經第一段讀起：光怎樣出現、黑暗怎樣被命名，「有晚上，有早晨」又能怎樣放進今天的作息。",
+  "topic_key": "devotion:gen-1-1",
+  "updated_at": "2026-10-10T22:00:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "illustration",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/001.The_Creation_of_Light.jpg/1280px-001.The_Creation_of_Light.jpg",
+    "width": 1280,
+    "height": 1613,
+    "alt": "黑白木刻版畫。上半部厚雲中央破開一處亮點，放射狀的光線往左上方散開；下半部是層層暗雲、一片暗色水面和左下角的坡地。畫中沒有人物。",
+    "caption": "多雷（Gustave Doré）〈光的創造〉，1866 年聖經插圖，木刻版畫。這是後世畫家的詮釋：畫裡沒有太陽，也沒有人形的神，只有從雲層裡射出的光，下方是仍然昏暗的水面。經文裡太陽要到第 4 日才出現。右下角是刻版者 H. Pisan 的署名。",
+    "credit": "Gustave Doré（Doré's English Bible）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:001.The_Creation_of_Light.jpg",
+    "made": "1866"
+  },
+  "body": [
+    { "type": "h", "text": "今日經文" },
+    {
+      "type": "scripture",
+      "ref": "創世記 1 章 1–5 節",
+      "book": "創",
+      "chapter": 1,
+      "version": "和合本",
+      "verses": [
+        { "n": 1, "text": "起初，　神創造天地。" },
+        { "n": 2, "text": "地是空虛混沌，淵面黑暗；　神的靈運行在水面上。" },
+        { "n": 3, "text": "　神說：「要有光」，就有了光。" },
+        { "n": 4, "text": "　神看光是好的，就把光暗分開了。" },
+        { "n": 5, "text": "　神稱光為「晝」，稱暗為「夜」。有晚上，有早晨，這是頭一日。" }
+      ],
+      "source": "信望愛聖經工具 FHL 和合本（bible.fhl.net），2026-10-10 核對"
+    },
+
+    { "type": "h", "text": "經文釋義" },
+    {
+      "type": "p",
+      "tag": "背景",
+      "text": "創世記從 1 章 1 節到 2 章 3 節是一個完整段落：六日的工作，加上第七日的安息。今天讀的五節是開場。第 1 節總說神創造天地，第 2 節描寫光出現以前的狀態，第 3 到 5 節是第一輪「神說……就有了……」，最後用「有晚上，有早晨」收住。這句話在第 1 章出現六次，到第七日就不再出現。"
+    },
+    {
+      "type": "p",
+      "tag": "經文明言",
+      "text": "第 2 節有三個畫面：地是「空虛混沌」，深淵表面一片黑暗，神的靈在水面上運行。"
+    },
+    {
+      "type": "p",
+      "tag": "背景",
+      "text": "「空虛混沌」在希伯來文是押韻的兩個字 *tohu wa-bohu*。兩字這樣連用，舊約只在耶利米書 4:23 再出現一次：「我觀看地，不料，地是空虛混沌；我觀看天，天也無光。」耶利米用它描寫審判之後的荒地。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "由此推想，創世記 1:2 說的不是一堆中性的材料，而是一個還不能住人的地方。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "「深淵」原文是 *tehom*。曾有學者主張這個字借自巴比倫創世史詩《埃努瑪・埃利什》（Enuma Elish）裡被殺的鹹水女神提阿瑪特（Tiamat）。Gerhard F. Hasel 在 1972 年的論文整理這場討論，認為兩字較可能同出一個閃族語字根；他更看重的是，創世記的 *tehom* 沒有被人格化，只是宇宙裡沒有生命的一部分。巴比倫的故事要先打一場仗才有世界，創世記第 1 章沒有對手，神開口就夠了。"
+    },
+    {
+      "type": "p",
+      "tag": "詮釋",
+      "text": "「神的靈」的「靈」，原文 *ruach*，也可以譯作「風」或「氣息」。新修訂標準版更新版（NRSVue）正文作「從神而來的風吹過水面」，註腳另列「神的靈」與「大風」；新國際版（NIV）作「神的靈」。基督教傳統多讀作聖靈。描寫它的動詞在舊約只出現三次，其中申命記 32:11 用在老鷹於雛鳥上方振翅，和合本譯作「在雛鷹以上兩翅搧展」。不論譯成靈或風，這個動詞給的畫面是：任何東西成形之前，神已經在那片黑暗的水面上方。"
+    },
+    {
+      "type": "p",
+      "tag": "經文明言",
+      "text": "第 3 節是全段的轉折：「神說：要有光，就有了光。」接下來三個動作都圍著光：神看光是好的，把光暗分開，再為兩者命名，光叫「晝」，暗叫「夜」。經文沒有說黑暗被除掉。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "19 世紀德國註釋家凱爾（C. F. Keil）與德里慈（Franz Delitzsch）合編《舊約註釋》（Biblischer Commentar über das Alte Testament），創世記一卷由凱爾執筆。他特別指出，造光不是消滅黑暗，而是把光從黑暗中分出來，晝夜從此輪替。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "artwork",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Michelangelo_Buonarroti_019.jpg/1280px-Michelangelo_Buonarroti_019.jpg",
+      "width": 1280,
+      "height": 1723,
+      "alt": "濕壁畫。中央長方形畫框裡，一位白鬚、穿粉紅長袍的老人仰身向上，雙臂高舉推向頭頂的雲團；畫框四周有四名裸身青年和兩面銅色圓形徽章。",
+      "caption": "米開朗基羅（Michelangelo Buonarroti）〈分開光暗〉，梵蒂岡西斯汀禮拜堂天頂濕壁畫，約 1511–1512 年。天頂中央九幅創世記場景裡，這幅按經文順序排第一，卻是他最後畫成的一幅，位在《最後的審判》所在的那面牆上方。這是後世畫家的詮釋：經文只說神「把光暗分開」，畫家把這個動作畫成一個用全身推開黑暗的人形。此為天頂近代修復前的翻拍影像。",
+      "credit": "Michelangelo；影像：The Yorck Project (2002) 10.000 Meisterwerke der Malerei, DIRECTMEDIA Publishing GmbH",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Michelangelo_Buonarroti_019.jpg",
+      "made": "1508–1512（天頂工程）"
+    },
+    {
+      "type": "detail",
+      "of": "f2",
+      "region": [0.30, 0.29, 0.40, 0.42],
+      "position": "畫面正中的長方形畫框，約佔寬度四成、高度四成",
+      "caption": "神的雙手推向頭頂的雲團，頭往後仰，身體由下往上扭轉。米開朗基羅用仰視的透視（sotto in su），讓站在禮拜堂地面往上看的人覺得祂正升向高處。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "還有一個細節：這時還沒有太陽。太陽和月亮要到第 4 日（1:14–19）才被造，經文也不叫它們的名字，只說神造了「兩個大光，大的管晝，小的管夜」。Hasel 認為這是刻意的：在以色列的鄰邦，「太陽」「月亮」同時是神明的名字，創世記把它們寫成管理晝夜的光體，等於拒絕把它們當神。照這個讀法，頭一日的光不靠任何天體，只靠神的話。"
+    },
+    {
+      "type": "p",
+      "tag": "詮釋",
+      "text": "第 1 節本身有一個討論了近千年的文法問題。和合本照傳統讀成獨立的一句。11 世紀的猶太註釋家拉什（Rashi）認為，「起初」（*bereshit*）在希伯來文通常要接下文，照白話應讀成：「在神創造天地之初，地是空虛混沌……神說：要有光。」據路德神學院 Cameron B. R. Howard 2024 年的解說，共同英文譯本（CEB）、NRSVue 和 Robert Alter 的譯本都採「神開始創造天地的時候……」。"
+    },
+    {
+      "type": "p",
+      "tag": "詮釋",
+      "text": "兩種讀法差在第 1 節是全章的標題，還是第一個場景的時間背景。照後一種讀法，這一節本身不回答混沌從哪裡來；基督教「從無中創造」的教義也另外根據希伯來書 11:3 等經文，不只靠這一節。"
+    },
+    {
+      "type": "p",
+      "tag": "詮釋",
+      "text": "第 5 節的「有晚上，有早晨」也有兩種讀法。一種認為一日從晚上起算；以色列後來的節期確實這樣算，例如贖罪日要「從這月初九日晚上到次日晚上」守為安息日（利未記 23:32）。另一種是凱爾的看法：光造好之後，先來了晚上，再來了早晨，第一日要等到新的早晨才算完成，所以創造的日子是「從早晨到早晨」。"
+    },
+    {
+      "type": "p",
+      "tag": "詮釋",
+      "text": "「頭一日」的原文字面是「一日」（*yom echad*）。拉什引《創世記拉巴》說，那時只有神獨自一位，所以用「一」；凱爾則說，「一」放在數列開頭本來就可以當「第一」用。"
+    },
+    {
+      "type": "table",
+      "title": "三處譯法與讀法的分歧",
+      "head": ["經節", "和合本", "另一種譯法或讀法", "依據"],
+      "rows": [
+        ["1:1", "起初，神創造天地（獨立成句）", "神開始創造天地的時候……（時間子句）", "拉什；NRSVue、CEB、Alter 譯本"],
+        ["1:2", "神的靈運行在水面上", "從神而來的風吹過水面", "NRSVue 正文；NIV 作「神的靈」"],
+        ["1:5", "這是頭一日", "字面作「一日」", "希伯來原文；拉什與凱爾解釋不同"]
+      ],
+      "caption": "整理自本文所引譯本與註釋。"
+    },
+    {
+      "type": "p",
+      "tag": "詮釋",
+      "text": "這些「日」有多長，是另一個至今沒有共識的問題。美國長老會（PCA）創造研究委員會的報告並列了曆日、日代、架構、類比日等主要解釋，逐一說明支持的理由和受到的質疑。本欄不在這裡裁決，今天只取各種讀法都看得到的部分：經文用晚上和早晨，為神的工作標出節奏。"
+    },
+    {
+      "type": "p",
+      "tag": "詮釋",
+      "text": "新約作者把這段經文讀到基督身上。約翰福音以「太初」開篇，說「光照在黑暗裡，黑暗卻不接受光」；保羅在哥林多後書 4:6 寫道：「那吩咐光從黑暗裡照出來的神，已經照在我們心裡。」馬可福音記婦女到墳墓去，是「七日的第一日清早，出太陽的時候」。2 世紀中葉，游斯丁（Justin Martyr）在寫給羅馬皇帝的《第一護教辭》裡解釋基督徒為什麼在星期日聚會，把這兩個「第一日」放在一起："
+    },
+    {
+      "type": "quote",
+      "original": "it is the first day on which God, having wrought a change in the darkness and matter, made the world; and Jesus Christ our Saviour on the same day rose from the dead.",
+      "text": "這是頭一日，神在這一天改變了黑暗與物質，造了世界；我們的救主耶穌基督也在同一天從死裡復活。",
+      "cite": "游斯丁《第一護教辭》67 章，Marcus Dods 與 George Reith 英譯（1885），本文自譯"
+    },
+
+    { "type": "h", "text": "與我的生活連結" },
+    {
+      "type": "p",
+      "text": "如果今天手上有一件剛開始、還看不出形狀的事，例如新專案的第一份文件，或一門才讀到第一章的課，創世記 1:2 寫的正是成形之前的樣子。經文沒有說混沌會自己變好；它說神的靈在水面上，然後神開口。對信徒來說，動手之前先禱告，是承認這件事的第一句話不必由自己說出。"
+    },
+    {
+      "type": "p",
+      "text": "如果今天是在等待中度過，等一封回信、一份報告，或一個還沒有答案的決定，第 5 節的順序可以慢慢讀：晚上寫在早晨前面，而且晚上也算在「一日」裡。經文沒有保證每個夜晚都會照我們希望的方式結束。它說的是，黑暗已經被神分開、被命名，有它的界線。"
+    },
+    {
+      "type": "p",
+      "text": "今天是星期日。如果今天能停下手上的工作，可以把休息放在新一週的開頭，當作第一件事，而非上一週剩下的零頭。不論一日從晚上還是從早晨算，夜晚都在「一日」裡面；人睡著的時候，神的工作沒有停。詩篇 121:4 說：「保護以色列的，也不打盹也不睡覺。」"
+    },
+
+    { "type": "h", "text": "今日禱告" },
+    {
+      "type": "prayer",
+      "text": "創造天地的神，在還沒有光的時候，你的靈已經在水面上。今天早晨，我把這一日交在你手裡。我面前有些事還是空虛混沌，看不出形狀，我常想先自己整理好，才來找你。求你先說話。你說要有光，就有了光；求你讓我今天看得清楚該做的事，看得見身邊的人，也看得見自己的限度。你沒有抹去黑暗，卻給它界線和名字；在我還沒有答案的地方，求你讓我記得那裡仍在你的管理之下。主耶穌，你在七日的第一日清早從死裡復活，求你使我今天的工作和休息都在你面前。晚上來的時候，我願意放手去睡，因為一日的界線在你手中，不在我手中。奉耶穌的名禱告，阿們。"
+    }
+  ],
+  "sources": [
+    { "title": "創世記 1 章（和合本）", "publisher": "信望愛聖經工具 FHL", "date": "2026-10-10", "url": "https://bible.fhl.net/new/read.php?chineses=%E5%89%B5&chap=1&VERSION1=unv", "note": "以 scripts/bible.py 逐節核對 1:1–5；另核對 1:16" },
+    { "title": "交叉引用經文（和合本）", "publisher": "信望愛聖經工具 FHL", "date": "2026-10-10", "url": "https://bible.fhl.net/json/qb.php?chineses=%E8%80%B6&chap=4&sec=23&version=unv&gb=0", "note": "耶利米書 4:23、申命記 32:11、利未記 23:32、約翰福音 1:1–5、哥林多後書 4:6、馬可福音 16:2、希伯來書 11:3、詩篇 121:4，皆以 scripts/bible.py 取得" },
+    { "title": "The Significance of the Cosmology in Genesis 1 in Relation to Ancient Near Eastern Parallels", "publisher": "Andrews University Seminary Studies 10.1（Gerhard F. Hasel）", "date": "1972", "url": "https://digitalcommons.andrews.edu/auss/vol10/iss1/1/", "note": "tehom 與 Tiamat、日月不稱名、以話語創造三節" },
+    { "title": "Rashi on Genesis 1:1", "publisher": "Sefaria（Rosenbaum & Silbermann 英譯，1929–1934）", "date": "", "url": "https://www.sefaria.org/Rashi_on_Genesis.1.1", "note": "bereshit 作時間子句的白話解" },
+    { "title": "Rashi on Genesis 1:5", "publisher": "Sefaria（Rosenbaum & Silbermann 英譯，1929–1934）", "date": "", "url": "https://www.sefaria.org/Rashi_on_Genesis.1.5", "note": "「一日」而非「第一日」，引《創世記拉巴》3:8" },
+    { "title": "Commentary on Genesis 1:1-5（Cameron B. R. Howard）", "publisher": "Working Preacher, Luther Seminary", "date": "2024-01-07", "url": "https://www.workingpreacher.org/commentaries/revised-common-lectionary/baptism-of-our-lord-2/commentary-on-genesis-11-5-6", "note": "近年譯本改採 When God began to create" },
+    { "title": "Keil and Delitzsch Biblical Commentary on the Old Testament: Genesis 1", "publisher": "Bible Hub 線上版（Keil 與 Delitzsch 合編系列；創世記卷由 C. F. Keil 執筆，19 世紀）", "date": "", "url": "https://biblehub.com/commentaries/kad/genesis/1.htm", "note": "1:4–5：造光不是消滅黑暗；創造之日從早晨算到早晨；echad 作序數" },
+    { "title": "Carl Friedrich Keil", "publisher": "Wikipedia（德文版）", "date": "", "url": "https://de.wikipedia.org/wiki/Carl_Friedrich_Keil", "note": "《舊約註釋》與 Delitzsch 合編；所列 Keil 執筆卷冊含《摩西五經註釋》第 1 冊 Genesis und Exodus" },
+    { "title": "Franz Delitzsch", "publisher": "Wikipedia", "date": "", "url": "https://en.wikipedia.org/wiki/Franz_Delitzsch", "note": "Delitzsch 在該系列執筆約伯記、詩篇、箴言、傳道書、雅歌、以賽亞書；另著創世記註釋（1888）" },
+    { "title": "Genesis 1:1-5（NRSVue；NIV）", "publisher": "Bible Gateway", "date": "", "url": "https://www.biblegateway.com/passage/?search=Genesis%201%3A1-5&version=NRSVUE;NIV", "note": "1:1、1:2 正文與 NRSVue 註腳" },
+    { "title": "Strong's Hebrew 7363: rachaph", "publisher": "Bible Hub", "date": "", "url": "https://biblehub.com/hebrew/7363.htm", "note": "舊約三次用例：創 1:2、申 32:11、耶 23:9" },
+    { "title": "Strong's Hebrew 922: bohu", "publisher": "Bible Hub", "date": "", "url": "https://biblehub.com/hebrew/922.htm", "note": "tohu wa-bohu 連用見創 1:2、耶 4:23" },
+    { "title": "Report of the Creation Study Committee", "publisher": "Presbyterian Church in America（PCA Historical Center）", "date": "1999", "url": "https://www.pcahistory.org/pca/digest/studies/creation/report.html", "note": "第 IV 部分：曆日、日代、架構、類比日等解釋；頁面標為第 27 屆總會文件" },
+    { "title": "The First Apology, Chapter 67（Justin Martyr）", "publisher": "New Advent（Ante-Nicene Fathers Vol. 1, 1885，Dods & Reith 英譯）", "date": "", "url": "https://www.newadvent.org/fathers/0126.htm", "note": "第 67 章論星期日聚會" },
+    { "title": "Separation of Light from Darkness", "publisher": "Wikipedia", "date": "", "url": "https://en.wikipedia.org/wiki/Separation_of_Light_from_Darkness", "note": "繪製年代、在九幅中的順序、仰視透視" },
+    { "title": "Genesis in Reverse: The Hidden Meaning of the Sistine Chapel Ceiling（A. Dean McKenzie）", "publisher": "Biblical Archaeology Society Library", "date": "", "url": "https://library.biblicalarchaeology.org/sidebar/genesis-in-reverse-the-hidden-meaning-of-the-sistine-chapel-ceiling/", "note": "本幅位於《最後的審判》所在牆面上方" }
+  ]
+}

@@ -1,0 +1,500 @@
+{
+  "column": "philosophy",
+  "date": "2026-10-11",
+  "title": "停了的鐘剛好指對時間，算不算知道",
+  "dek": "維也納咖啡館一座停擺的鐘恰好指對時間。從羅素的例子到 Gettier 反例，追問「有理由的真信念」之外，知道還需要什麼。",
+  "topic_key": "philosophy:gettier-stopped-clock",
+  "updated_at": "2026-10-10T22:00:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Cafe-Griensteidl-1896.jpg/1280px-Cafe-Griensteidl-1896.jpg",
+    "width": 1280,
+    "height": 856,
+    "alt": "拱頂下的咖啡館大廳，兩盞多燈吊燈垂掛，戴禮帽或留鬍子的男性常客圍著圓桌攤開大張報紙閱讀，前景桌上散著報紙與咖啡杯，右下角有畫家簽名。",
+    "caption": "萊因霍德・弗爾克爾（Reinhold Völkel）1896 年畫的維也納格林斯坦德咖啡館（Café Griensteidl）：拱頂、吊燈、讀報的常客。這家店 1847 年遷入 Herrengasse 街角，1897 年 1 月因所在建築拆除而歇業。本文情境設在這類咖啡館，但萊娜、法蘭茲與那座鐘都是虛構的。",
+    "credit": "Reinhold Völkel（1873–1938）；Commons 影像翻拍自 Stadtchronik Wien（Verlag Christian Brandstädter），頁 360",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cafe-Griensteidl-1896.jpg",
+    "made": "1896"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "一個十月的星期日早上，萊娜坐在維也納一家老咖啡館靠窗的位子讀報。她要搭 10 點 15 分的火車去薩爾斯堡（Salzburg），從這裡走到車站約 20 分鐘。蛋糕櫃上方那座掛鐘沒有秒針，她在這家店看了它十幾年，每次拿手機對時都分毫不差。她抬頭：9 點 40 分。眼前兩個選項：再點一杯米朗琪（Melange）多坐 10 分鐘，或現在結帳出門。她選了前者。她不知道的是，這座鐘昨晚 9 點 40 分就停了，侍者法蘭茲還沒發現；而此刻，真的是早上 9 點 40 分。"
+    },
+    {
+      "type": "p",
+      "text": "把條件攤開：萊娜相信現在是 9 點 40 分；這個信念為真；她的理由也不差，一座多年準確、看不出異狀的鐘。這三項合起來，哲學課本叫「有理由的真信念」（justified true belief，以下簡稱 JTB）。她會準時上車，因為鐘恰好停在對的位置。本文要問的不是她趕不趕得上，而是她是否**知道**現在幾點；如果不算知道，「知道」在相信、為真、有理由之外，還多要了什麼。"
+    },
+    {
+      "type": "h",
+      "text": "出處：羅素 1948 年的停擺時鐘"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這個情境的骨架來自羅素（Bertrand Russell）1948 年在倫敦出版的《人類的知識：範圍與限度》（*Human Knowledge: Its Scope and Limits*）。書中兩度用到停擺的鐘。第二部第五章頁 113 說，有人把知識定義為「真信念」，這個定義太寬：你看一座你以為在走、其實已經停了的鐘，又恰好在它指對的那一刻看，你得到一個關於時間的真信念，卻不能說你有知識。"
+    },
+    {
+      "type": "quote",
+      "original": "you cannot be correctly said to have knowledge.",
+      "text": "不能正確地說你擁有知識。",
+      "cite": "羅素，《人類的知識》，1948，頁 113（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "第十一章頁 170–171 再用一次，旁邊還放了兩個例子。一個人以為 1906 年的英國首相是貝爾福（Balfour），所以相信首相的姓以 B 開頭；這個信念是真的，因為當時的首相坎貝爾－班納曼（Campbell-Bannerman）也姓 B。另一個人買了樂透，堅信自己會中，結果真的中了。羅素的結論是：不能只因為事後證明自己對了，就說自己當初知道。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "portrait",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Honourable_Bertrand_Russell.jpg",
+      "width": 1255,
+      "height": 1859,
+      "alt": "黑白橢圓框肖像，一位中年男子，灰白頭髮向後梳，穿深色西裝、高白領與深色領帶，正面看向鏡頭。",
+      "caption": "羅素的肖像，刊於他 1916 年在芝加哥 Open Court 出版的 *Justice in War-Time*。三十多年後，他在《人類的知識》裡寫下停擺時鐘的例子。",
+      "credit": "攝影者不詳；刊於 Bertrand Russell, Justice in War-Time（Chicago: The Open Court Publishing Co., 1916）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Honourable_Bertrand_Russell.jpg",
+      "made": "1916 年刊出"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "要分清楚的是，羅素反駁的是「知識＝真信念」，不是 JTB。他接著寫道，常人會補一句「還要有可靠的證據」；他認為這在多數實際情況說得通，當成完整定義卻不夠。把停擺時鐘當成 JTB 的反例，是後來的讀法：看鐘的人有理由信任那座鐘，他的信念不只為真，也算有理由。史丹佛哲學百科（SEP）〈知識的分析〉就把羅素的鐘，和印度哲學家法上（Dharmottara，約 770 年）的例子並列為前身：沙漠裡把海市蜃樓看成水，走到那裡卻真的在石頭下找到水。"
+    },
+    {
+      "type": "facts",
+      "title": "本文情境與原典的差異",
+      "items": [
+        [
+          "原典",
+          "羅素《人類的知識：範圍與限度》（倫敦：George Allen and Unwin，1948），第二部第五章頁 113；第十一章頁 170–171"
+        ],
+        [
+          "原典用途",
+          "反駁「知識＝真信念」"
+        ],
+        [
+          "改動一",
+          "看鐘的人改成萊娜，場景移到維也納咖啡館"
+        ],
+        [
+          "改動二",
+          "寫明她的理由：鐘多年準確、她對過時，使案例符合 JTB"
+        ],
+        [
+          "改動三",
+          "鐘沒有秒針，停擺從外觀看不出來"
+        ],
+        [
+          "改動四",
+          "加入行動選項（再坐 10 分鐘或立刻出門），讓判斷連到決定"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "Gettier 的三頁論文：有理由的真信念不夠"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "把這類例子推到知識論中心的，是美國哲學家 Edmund Gettier 1963 年發表在英國期刊 *Analysis* 第 23 卷第 6 期的〈有理由的真信念就是知識嗎？〉（Is Justified True Belief Knowledge?），正文只占頁 121–123。他先把 JTB 寫成三個條件：P 為真、S 相信 P、S 有理由相信 P；並在註腳點名 Chisholm 1957 年與 Ayer 1956 年的類似定義，也提到柏拉圖在《泰阿泰德篇》201 似乎考慮過、在《美諾篇》98 或許接受了這種定義。"
+    },
+    {
+      "type": "p",
+      "text": "他的兩個反例結構相同。第一例，Smith 有充分證據相信「Jones 會得到那份工作，而且 Jones 口袋裡有 10 枚硬幣」，於是推出「得到工作的人口袋裡有 10 枚硬幣」。結果得到工作的是 Smith 自己，他口袋裡碰巧也有 10 枚。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "第二例，Smith 有理由相信 Jones 擁有一輛福特，便隨手挑三個地名，造出「Jones 有福特，或 Brown 在波士頓」「……或 Brown 在巴塞隆納」「……或 Brown 在布列斯特－立托夫斯克（Brest-Litovsk）」三個選言句。Jones 其實開的是租來的車，Brown 卻恰好在巴塞隆納。兩例都是從一個有理由但為假的信念，推出一個碰巧為真的信念。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "萊娜也落在這個模式裡。她的信念靠一個假的背景信念撐著：「這座鐘在走」。SEP 提到，一個很自然的修補方案是「不可依賴假前提」（no false lemmas），它能處理停擺時鐘；但也有不經任何推論的反例，本文後面的第一個變體就屬於這一類。"
+    },
+    {
+      "type": "h",
+      "text": "立場一：她不知道，因為她對得太僥倖"
+    },
+    {
+      "type": "p",
+      "text": "這是主流立場。SEP 的描述是，當代知識論者幾乎一致接受 JTB 有反例。共同的想法是：知識要排除某種運氣。常見的說法有兩支。一支是「安全性」（safety），由 Sosa 1999 年提出，大意是：在所有和現實相近的情況裡，只要她相信 P，P 就不會是假的；後來的版本多半再加上「以同樣的方式形成信念」。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "萊娜的信念不安全：她晚 5 分鐘抬頭，鐘還是 9 點 40 分，她就錯了。據 SEP 轉述，Williamson 在 2000 年的 *Knowledge and Its Limits* 頁 126 也把安全性當成知識的必要條件，只是不把它當作定義的一部分。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "另一支是德性知識論。Sosa 常用射箭比喻（SEP 舉 2007 年的 *A Virtue Epistemology* 第二章為例）：一箭可以「準確」（命中）、可以「熟練」（出手有技術），更要緊的是「適切」（apt）：命中是因為技術。他把知識等同於適切的信念。萊娜讀鐘的能力沒有問題，但她說對時間，靠的是鐘恰好停在這個時刻，像一支箭被一陣怪風吹偏，又被另一陣怪風吹回靶心。Greco 2009 年的論文也把知識理解為出於能力的成功（依 SEP 轉述）。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "這一方最強的理由，可以回到柏拉圖。《美諾篇》97a–98a 裡，蘇格拉底指出，對通往拉里薩（Larisa）的路有正確看法的人，帶路帶得和真正知道路的人一樣好；美諾於是不解，知識為何比正確看法更受重視。蘇格拉底的回答是：正確的看法像代達洛斯（Daedalus）做的雕像，不綁住就會溜走；知識則是綁住了的。萊娜的信念正是一座沒綁的雕像，9 點 41 分它就溜了。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "另一個理由來自 Edward Craig。他 1990 年提出，「知道」這個概念的用處是幫人辨認可靠的消息來源（依 SEP 的摘要）。照這個想法，9 點 40 分有陌生人向萊娜問時間，她答對了，但此刻的她不是值得依賴的來源。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "直覺本身也有跨文化資料。Weinberg、Nichols 與 Stich 2001 年的問卷曾報告，東亞與南亞背景的受試者較願意把 Gettier 案例算成知識；網路哲學百科（IEP）稱這批資料是初步的。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "Machery 等人 2017 年在 23 個國家、24 個地點、以 17 種語言施測，結果取決於問法。問「真的知道」還是「只是覺得自己知道」時，24 個地點中有 23 個、17 種語言中有 16 種，多數受試者判斷 Gettier 案例裡的人不知道，例外是以色列貝都因人。只問「他知不知道」，各地不一致，有 5 個地點判為不知道的不到一半。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這一方的代價是：六十多年來沒有公認的第四個條件。Zagzebski 1994 年給過一個配方：任何「JTB 加 X」的定義，只要 X 不保證信念為真，就先找一個滿足 X 卻為假的信念，再加一點好運讓它變真，新的反例就做出來了。於是，要嘛新增的條件本身就得蘊含真（安全性與適切性都屬此類），要嘛像 Williamson 那樣，主張知識不能拆成更基本的成分，應該「知識優先」。安全性裡的「相近情況」到底多近，也很難說清楚。"
+    },
+    {
+      "type": "h",
+      "text": "立場二：她知道，或者「知道」沒那麼挑剔"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "本文引用的這幾位，並不主張萊娜和看著正常時鐘的人處境一樣好；他們的主張比較節制，大致有三種。第一種是 Sartwell 1992 年在 *The Journal of Philosophy* 發表的〈為什麼知識只是真信念〉（Why Knowledge Is Merely True Belief）。後續討論者把他的核心論證重述為：「有理由」之所以可貴，只因為它是通往真信念的手段；手段不是目的的一部分，所以知識就是真信念（本文依回應文獻的摘要轉述，未讀原文全文）。套用到本案，萊娜知道；她缺的是一條可靠的路，不是終點。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "第二種是「輕量的知道」。SEP 引 Hawthorne 2002 年的例子，恰好和維也納有關：問一班學生有幾人知道奧地利的首都是維也納，我們通常就數答出「維也納」的人，不追問各自的理由。主張有這種輕量意義的知識論者，多半也承認另有一個要求較高的意義。Hetherington 走得更遠，他在 1998 年的論文與 2001 年的專書主張，Gettier 案例裡的人確實知道，只是「僥倖地知道」，知識本身有品質高低。IEP 的〈Gettier 問題〉條目正是他寫的，條目也承認這個主張尚未被知識論者廣泛接受。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "第三種針對方法。Weatherson 2003 年的〈反例有什麼用？〉（What Good Are Counterexamples?）指出，直覺在許多領域並不可靠，而 Gettier 直覺比較像那些不可靠的直覺；為了它放棄一個簡單、有系統、大致成功的理論，換來一套複雜而零碎的條件，未必划算。本文推想，這一方也可以把 Zagzebski 的配方反過來用：如果每一塊補丁都會被新反例戳破，該懷疑的或許是製造反例的那個直覺。"
+    },
+    {
+      "type": "p",
+      "text": "這一方的代價同樣明顯。它得解釋，為什麼我們不會想依賴 9 點 40 分的萊娜；也得解釋，萊娜事後發現鐘停了，多半會說「我只是剛好看對」，而不是「我當時就知道」。本文推想，這句自我描述是立場一最直接的證據，而且出自當事人自己。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "跨文化資料也加重了 Weatherson 的負擔：至少在「真的知道還是只是覺得知道」的問法下，這個直覺在 24 個地點中的 23 個、17 種語言中的 16 種都占多數，要說它不可靠，需要更多理由。",
+      "tag": "推論"
+    },
+    {
+      "type": "table",
+      "title": "四種情境，三個檢驗",
+      "head": [
+        "情境",
+        "依賴假前提？",
+        "很容易出錯？",
+        "答對出於她的能力？",
+        "文獻中的判斷"
+      ],
+      "rows": [
+        [
+          "對照：正常走的鐘",
+          "否",
+          "否",
+          "是",
+          "知道，沒有爭議"
+        ],
+        [
+          "原案：停擺的鐘",
+          "是，以為鐘在走",
+          "是，晚 5 分鐘看就錯",
+          "否，對在巧合",
+          "多數認為不知道；Sartwell、Hetherington 認為知道"
+        ],
+        [
+          "變體一：二十座鐘挑一座",
+          "否",
+          "是，差點掛上壞鐘",
+          "有爭議，Sosa 認為是",
+          "哲學家分歧；一般受試者在同構的假穀倉案例中多判為知道"
+        ],
+        [
+          "變體二：侍者撥針",
+          "是，以為鐘在走",
+          "否，法蘭茲每次都撥對",
+          "部分，功勞多在法蘭茲",
+          "未定，介於 Pritchard 的 Temp（不知道）與 Lackey 的芝加哥旅客（知道）之間"
+        ]
+      ],
+      "caption": "四種情境裡，萊娜的信念都為真、都有理由，JTB 一律成立。三個檢驗依序對應「不可依賴假前提」、安全性、德性知識論；「文獻中的判斷」只摘要本文引用的學者與研究。原創整理。"
+    },
+    {
+      "type": "svg",
+      "title": "Gettier 式論證與三個出口",
+      "svg": "<svg viewBox=\"0 0 400 522\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\">\n<rect class=\"soft\" x=\"26\" y=\"8\" width=\"324\" height=\"52\" rx=\"4\"/>\n<text x=\"38\" y=\"27\" class=\"gold\" font-size=\"11\">前提一</text>\n<text x=\"38\" y=\"48\">若「知識＝有理由的真信念」，萊娜就知道</text>\n<path class=\"muted line\" d=\"M188 60 V71\" stroke-width=\"1.2\"/>\n<path class=\"muted\" d=\"M183 70 L188 78 L193 70 Z\"/>\n<rect class=\"soft\" x=\"26\" y=\"78\" width=\"324\" height=\"52\" rx=\"4\"/>\n<text x=\"38\" y=\"97\" class=\"gold\" font-size=\"11\">前提二</text>\n<text x=\"38\" y=\"118\">萊娜不知道（停擺時鐘的直覺）</text>\n<path class=\"muted line\" d=\"M188 130 V141\" stroke-width=\"1.2\"/>\n<path class=\"muted\" d=\"M183 140 L188 148 L193 140 Z\"/>\n<rect class=\"paper\" x=\"26\" y=\"148\" width=\"324\" height=\"52\" rx=\"4\"/>\n<rect class=\"accent line\" x=\"26\" y=\"148\" width=\"324\" height=\"52\" rx=\"4\" stroke-width=\"1.6\"/>\n<text x=\"38\" y=\"167\" class=\"accent\" font-size=\"11\">結論</text>\n<text x=\"38\" y=\"188\">知識不只是有理由的真信念</text>\n<path class=\"muted line\" d=\"M26 174 H12 V376\" stroke-width=\"1.2\"/>\n<path class=\"muted line\" d=\"M12 272 H20\" stroke-width=\"1.2\"/>\n<path class=\"muted\" d=\"M19 267 L26 272 L19 277 Z\"/>\n<path class=\"muted line\" d=\"M12 376 H20\" stroke-width=\"1.2\"/>\n<path class=\"muted\" d=\"M19 371 L26 376 L19 381 Z\"/>\n<rect class=\"soft\" x=\"26\" y=\"220\" width=\"324\" height=\"104\" rx=\"4\"/>\n<text x=\"38\" y=\"239\" class=\"gold\" font-size=\"11\">出口 A｜接受結論，補上第四個條件</text>\n<text x=\"38\" y=\"260\">安全性：相近情況裡不會輕易出錯</text>\n<text x=\"38\" y=\"277\" class=\"muted\" font-size=\"11\">Sosa 1999；Pritchard 2005</text>\n<text x=\"38\" y=\"298\">能力：答對要出於她自己的能力</text>\n<text x=\"38\" y=\"315\" class=\"muted\" font-size=\"11\">Sosa 2007；Greco 2009</text>\n<rect class=\"soft\" x=\"26\" y=\"342\" width=\"324\" height=\"68\" rx=\"4\"/>\n<text x=\"38\" y=\"361\" class=\"gold\" font-size=\"11\">出口 B｜接受結論，但不再拆解知識</text>\n<text x=\"38\" y=\"382\">知識優先：知識本身就是基本狀態</text>\n<text x=\"38\" y=\"399\" class=\"muted\" font-size=\"11\">Williamson 2000：承認安全性必要，但不當定義</text>\n<path class=\"muted line\" d=\"M350 104 H376 V469 H357\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/>\n<path class=\"muted\" d=\"M358 464 L350 469 L358 474 Z\"/>\n<rect class=\"soft\" x=\"26\" y=\"426\" width=\"324\" height=\"88\" rx=\"4\"/>\n<text x=\"38\" y=\"445\" class=\"gold\" font-size=\"11\">出口 C｜否認前提二</text>\n<text x=\"38\" y=\"466\">萊娜其實知道，或直覺不足以推翻理論</text>\n<text x=\"38\" y=\"483\" class=\"muted\" font-size=\"11\">Sartwell 1992；Hetherington 2001</text>\n<text x=\"38\" y=\"500\" class=\"muted\" font-size=\"11\">Weatherson 2003</text>\n</svg>",
+      "caption": "Gettier 式論證的結構與三種出路。原創示意圖，依 SEP〈知識的分析〉（Ichikawa 與 Steup，2026 年修訂）、IEP〈知識的安全性條件〉與文中引用文獻整理，所列專書未讀原書；每個出口只列代表學者，同一出口內的學者看法不盡相同。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（一）：二十座鐘裡挑到會走的那座"
+    },
+    {
+      "type": "p",
+      "text": "其他設定不變，只改一點：原本那座鐘沒停，但店主上週買回十九座外觀一模一樣的壞鐘，指針各自停在不同時間，擺在吧台後。今天早上法蘭茲取下牆上的鐘擦拭，擦完和那十九座混在一起，隨手拿一座掛上，碰巧拿到原本那座。萊娜抬頭，9 點 40 分，對；這次她的信念來自一座真的在走的鐘，正是她對時十幾年的那一座。",
+      "tag": "原創假設"
+    },
+    {
+      "type": "p",
+      "text": "這是「假穀倉」案例的結構。案例由 Carl Ginet 構想，Goldman 1976 年在〈辨別與知覺知識〉（Discrimination and Perceptual Knowledge）發表：Henry 開車經過一個郡，路邊滿是從路上看來和真穀倉無異的假門面，他恰好看著全郡唯一的真穀倉，相信那是穀倉。Henry 沒有依賴任何假前提，這個版本的萊娜也沒有：「鐘在走」這次是真的。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "但她仍然很容易出錯：法蘭茲隨手一拿，二十次裡有十九次會拿到壞鐘，她對時間的判斷就會落空。Pritchard 把這種叫「環境運氣」，和原案那種介入在信念與事實之間的「介入運氣」分開。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "立場一在這裡分裂。Sosa 選擇承擔後果：萊娜讀鐘的能力正常運作，讀的也是一座好鐘，她的信念是適切的，所以算知道；我們的遲疑，他用另一層「反思知識」來解釋，萊娜缺的是那一層（Sosa 2007，頁 31–32；依 SEP 轉述）。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "Pritchard 這類安全性理論者則判她不知道，並認為這顯示能力條件不夠。他在 2012 年的〈反運氣德性知識論〉（Anti-Luck Virtue Epistemology）主張，知識要同時滿足反運氣條件與能力條件。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "一般人的判斷則偏向 Sosa：SEP〈德性知識論〉整理，Colaço、Buckwalter、Stich 與 Machery 2014 年等實驗發現，非哲學家壓倒性地把假穀倉這類案例判為知道。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "這個變體只拿掉了一樣東西：信念和事實之間斷掉的那條線。運氣還在，她差一點就會看到一座壞鐘。若判斷因此鬆動，我的讀法是：原案讓人說「不知道」的，主要是那條斷線，而不只是「很容易出錯」。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（二）：侍者每分鐘偷偷撥針"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "回到那座停擺的鐘，改另一個條件：法蘭茲早就發現鐘壞了，但沒送修。鐘掛在吧台後方，他伸手可及；他知道萊娜每次都會抬頭看它，所以她在店裡時，他每分鐘照自己那支準確的手錶，把指針撥到正確位置。萊娜從沒察覺。現在她的信念一點也不脆弱：不管她幾點抬頭，鐘都是對的。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這個變體接近 Pritchard 2012 年的 Temp 案例（本文依 Wajnerman Paz 2017 年的轉述）：Temp 看溫度計判斷室溫，溫度計其實壞了、讀數在一個範圍內隨機跳動，但房裡藏著一個人操控恆溫器，確保每次 Temp 看的時候，室溫都恰好等於讀數。Pritchard 判斷 Temp 不知道（據轉述，理由見原文頁 261）：他的信念是安全的，但他答對不是因為他的認知能力。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "本文的版本和 Temp 有一處關鍵不同。Temp 的幫手改變世界去配合儀器；法蘭茲改變儀器去配合世界。Wajnerman Paz 指出，Pritchard 認為 Temp 不知道的主要理由，就和證據與事實之間這種「符合方向倒轉」有關。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "法蘭茲的方向是正常的，這讓萊娜更像 Lackey 2007 年提出、後來稱為「芝加哥旅客」的案例：Morris 剛到芝加哥車站，向第一個路人問西爾斯大樓怎麼走，熟悉城市的路人給了正確指引。Lackey 認為 Morris 顯然知道大樓在哪，儘管功勞主要屬於路人。Sosa 的回應是 Morris 仍有部分功勞，他的成功主要來自一種分散在多人身上的、社會性的能力，這足以讓他的信念算是適切，因此仍是知識。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "在這個版本裡，安全性滿足了，假前提還在（她仍以為鐘自己在走），功勞大半屬於法蘭茲。和芝加哥旅客相比，差別在於 Morris 知道自己在聽一個人說話，萊娜卻以為自己在讀一台機器。這個差別算不算數，各家理論的答案並不一致。"
+    },
+    {
+      "type": "h",
+      "text": "三個版本留下的問題"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "三個版本裡，萊娜的信念都為真、都有理由，她也都準時上了火車；改變的只是鐘和時間之間那條線怎麼接。第一個變體把線接回去，判斷就開始鬆動；第二個變體讓線的另一頭換成一個人，各家理論就說法分歧。立場一因此得說清楚，「知道」要排除的是運氣、是功勞不在自己，還是那條線斷了；立場二也得說清楚，為什麼萊娜自己會說「我只是剛好看對」。"
+    },
+    {
+      "type": "p",
+      "text": "兩方還得共同面對一個問題：如果線的那一頭可以是一位躲在吧台後撥針的侍者，萊娜和那位在芝加哥問路、聽得見路人聲音的旅客，差在哪裡？"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Human Knowledge: Its Scope and Limits",
+      "publisher": "Bertrand Russell／George Allen and Unwin（Digital Library of India 掃描本，Internet Archive）",
+      "date": "1948",
+      "url": "https://archive.org/details/in.ernet.dli.2015.461169",
+      "note": "讀第二部第五章頁 112–113、第十一章頁 170–171。SEP 書目把此書記為 1923 年；書中提到 1947 年 6 月 15 日，初版應為 1948 年。"
+    },
+    {
+      "title": "Is Justified True Belief Knowledge?",
+      "publisher": "Edmund L. Gettier／Analysis 23(6): 121–123",
+      "date": "1963-06",
+      "url": "https://doi.org/10.1093/analys/23.6.121",
+      "note": "全文三頁；閱讀時對照 Andrew Chrucky 的網路轉錄本 https://www.ditext.com/gettier/gettier.html"
+    },
+    {
+      "title": "The Analysis of Knowledge",
+      "publisher": "Jonathan Ichikawa、Matthias Steup／Stanford Encyclopedia of Philosophy",
+      "date": "2026-01-21",
+      "url": "https://plato.stanford.edu/entries/knowledge-analysis/",
+      "note": "讀 §2 輕量的知識、§3 反例（法上、羅素）、§4 假前提與假穀倉、§5.2 安全性、§7 Zagzebski、§9 Craig、§10 Sosa、§11 知識優先"
+    },
+    {
+      "title": "Virtue Epistemology",
+      "publisher": "John Turri、Mark Alfano、John Greco／Stanford Encyclopedia of Philosophy",
+      "date": "2021-10-26",
+      "url": "https://plato.stanford.edu/entries/epistemology-virtue/",
+      "note": "Lackey 芝加哥旅客案例與 Sosa 的回應；假穀倉案例的實驗研究整理"
+    },
+    {
+      "title": "The Value of Knowledge",
+      "publisher": "Duncan Pritchard、John Turri、J. Adam Carter／Stanford Encyclopedia of Philosophy",
+      "date": "2026-10-01",
+      "url": "https://plato.stanford.edu/entries/knowledge-value/",
+      "note": "《美諾篇》的價值問題；介入運氣與環境運氣的區分"
+    },
+    {
+      "title": "Meno 97a–98a（W. R. M. Lamb 英譯）",
+      "publisher": "Plato／Perseus Digital Library",
+      "date": "",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0178%3Atext%3DMeno%3Apage%3D97",
+      "note": "拉里薩之路與代達洛斯雕像段落"
+    },
+    {
+      "title": "Gettier Problems",
+      "publisher": "Stephen Hetherington／Internet Encyclopedia of Philosophy",
+      "date": "",
+      "url": "https://iep.utm.edu/gettier/",
+      "note": "§13「僥倖地知道」；Weinberg、Nichols、Stich 2001 的問卷結果"
+    },
+    {
+      "title": "How to Defeat Opposition to Moore",
+      "publisher": "Ernest Sosa／Noûs 33(s13): 141–153",
+      "date": "1999-10",
+      "url": "https://doi.org/10.1111/0029-4624.33.s13.7",
+      "note": "安全性條件；內容依 SEP 轉述"
+    },
+    {
+      "title": "Knowledge and Its Limits",
+      "publisher": "Timothy Williamson／Oxford University Press",
+      "date": "2000",
+      "url": "https://doi.org/10.1093/019925656X.001.0001",
+      "note": "未讀原書；頁 126 的安全性要求與知識優先立場，內容與頁碼依 SEP〈知識的分析〉§5.2、§11 轉述"
+    },
+    {
+      "title": "A Virtue Epistemology: Apt Belief and Reflective Knowledge, Volume I",
+      "publisher": "Ernest Sosa／Oxford University Press",
+      "date": "2007",
+      "url": "https://doi.org/10.1093/acprof:oso/9780199297023.001.0001",
+      "note": "未讀原書；射箭比喻（第二章）與假穀倉案例的「反思知識」回應（頁 31–32），內容與頁碼依 SEP〈知識的分析〉§10 轉述"
+    },
+    {
+      "title": "Knowledge and Success from Ability",
+      "publisher": "John Greco／Philosophical Studies 142(1): 17–26",
+      "date": "2009-01",
+      "url": "https://doi.org/10.1007/s11098-008-9307-0",
+      "note": "未讀原文；立場依 SEP〈知識的分析〉註 32 與 SEP〈知識的價值〉轉述"
+    },
+    {
+      "title": "The Inescapability of Gettier Problems",
+      "publisher": "Linda Zagzebski／The Philosophical Quarterly 44(174): 65–73",
+      "date": "1994-01",
+      "url": "https://doi.org/10.2307/2220147",
+      "note": "Gettier 案例的製造配方；內容依 SEP 轉述"
+    },
+    {
+      "title": "Discrimination and Perceptual Knowledge",
+      "publisher": "Alvin I. Goldman／The Journal of Philosophy 73(20): 771–791",
+      "date": "1976-11-18",
+      "url": "https://doi.org/10.2307/2025679",
+      "note": "假穀倉案例（Carl Ginet 構想）；內容依 SEP 轉述"
+    },
+    {
+      "title": "Epistemic Luck",
+      "publisher": "Duncan Pritchard／Oxford University Press",
+      "date": "2005",
+      "url": "https://doi.org/10.1093/019928038X.001.0001",
+      "note": "未讀原書；安全性條件依 IEP〈知識的安全性條件〉轉述，環境運氣依 SEP〈知識的價值〉轉述"
+    },
+    {
+      "title": "The Safety Condition for Knowledge",
+      "publisher": "Dani Rabinowitz／Internet Encyclopedia of Philosophy",
+      "date": "",
+      "url": "https://iep.utm.edu/safety-c/",
+      "note": "導言與第 2 節：Williamson、Pritchard、Sosa 三種安全性條件；Williamson 不把安全性用於知識的還原分析"
+    },
+    {
+      "title": "Anti-Luck Virtue Epistemology",
+      "publisher": "Duncan Pritchard／The Journal of Philosophy 109(3): 247–279",
+      "date": "2012",
+      "url": "https://doi.org/10.5840/jphil201210939",
+      "note": "未讀全文；Temp 案例依 Wajnerman Paz 2017 轉述"
+    },
+    {
+      "title": "La problemática de la epistemología anti-suerte",
+      "publisher": "Abel Wajnerman Paz／Ideas y Valores 66(165): 217–236",
+      "date": "2017-12",
+      "url": "https://www.redalyc.org/journal/809/80955136010/80955136010.pdf",
+      "note": "第二節：Temp 案例的描述與「符合方向倒轉」的討論"
+    },
+    {
+      "title": "Why We Don't Deserve Credit for Everything We Know",
+      "publisher": "Jennifer Lackey／Synthese 158(3): 345–361",
+      "date": "2007",
+      "url": "https://doi.org/10.1007/s11229-006-9044-x",
+      "note": "芝加哥旅客案例（頁 352）；內容依 SEP〈德性知識論〉轉述"
+    },
+    {
+      "title": "What Good Are Counterexamples?",
+      "publisher": "Brian Weatherson／Philosophical Studies 115(1): 1–31",
+      "date": "2003-07",
+      "url": "https://doi.org/10.1023/A:1024961917413",
+      "note": "讀摘要"
+    },
+    {
+      "title": "Why Knowledge Is Merely True Belief",
+      "publisher": "Crispin Sartwell／The Journal of Philosophy 89(4): 167–180",
+      "date": "1992-04",
+      "url": "https://doi.org/10.2307/2026639",
+      "note": "未取得全文；論證大意依 Aikin 2010 等回應文獻的摘要轉述"
+    },
+    {
+      "title": "'Knowledge is true belief' rebutted",
+      "publisher": "Scott F. Aikin／European Journal of Analytic Philosophy 6(2): 5–13",
+      "date": "2010",
+      "url": "https://hrcak.srce.hr/62639",
+      "note": "摘要：Sartwell 的兩條論證與回應"
+    },
+    {
+      "title": "The Gettier Intuition from South America to Asia",
+      "publisher": "Edouard Machery 等／Journal of Indian Council of Philosophical Research 34(3): 517–541",
+      "date": "2017-08-23",
+      "url": "https://doi.org/10.1007/s40961-017-0113-y",
+      "note": "讀摘要、方法、結果與討論（對照 Stich 個人網站的抽印本 https://www.stephenstich.com/_files/ugd/0ad9d7_b90ba78c9e9a4765b2787aff36e07c2c.pdf）：24 個地點、23 國、17 種語言；「真的知道／只是覺得知道」問法下 24 地中 23 地、17 語中 16 語多數有 Gettier 直覺（貝都因人例外），一般「知不知道」問法下 5 個地點顯著低於 50%"
+    },
+    {
+      "title": "Epistemic Intuitions in Fake-Barn Thought Experiments",
+      "publisher": "David Colaço、Wesley Buckwalter、Stephen Stich、Edouard Machery／Episteme 11(2): 199–212",
+      "date": "2014",
+      "url": "https://doi.org/10.1017/epi.2014.7",
+      "note": "結果依 SEP〈德性知識論〉轉述"
+    },
+    {
+      "title": "Café Griensteidl",
+      "publisher": "Wien Geschichte Wiki（維也納市）",
+      "date": "",
+      "url": "https://www.geschichtewiki.wien.gv.at/Café_Griensteidl",
+      "note": "咖啡館 1847 年遷址與 1897 年 1 月歇業"
+    }
+  ]
+}

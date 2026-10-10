@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>連結 Spotify</title>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#F5F0E6;color:#4A433A;font:16px/1.6 "Noto Serif TC","Songti TC",serif}</style>
+<p>正在連結 Spotify……</p>
+<script>
+  // Spotify returns here (the redirect URI registered for this app); hand the code back to the app.
+  var base = location.pathname.replace(/oauth\/spotify\/callback(\.html)?\/?$/, "");
+  location.replace(base + location.search);
+</script>
+</html>

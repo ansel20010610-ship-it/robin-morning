@@ -27,8 +27,11 @@ def token():
     return json.loads(raw)["access_token"]
 
 
+API = "https://api.spotify.com/v1"
+
+
 def get(tok, path, **params):
-    url = "https://api.spotify.com/v1" + path + ("?" + urllib.parse.urlencode(params) if params else "")
+    url = API + path + ("?" + urllib.parse.urlencode(params) if params else "")
     _, _, raw = http_get(url, headers={"Authorization": "Bearer " + tok})
     return json.loads(raw)
 
@@ -50,9 +53,18 @@ def main():
     elif cmd == "album":
         al = get(tok, "/albums/" + arg, market="TW")
         print("%s ｜ %s ｜ %s" % (al["name"], ", ".join(a["name"] for a in al["artists"]), al.get("release_date")))
-        for t in al["tracks"]["items"]:
-            print("  %2d  %s  %s  (%d:%02d)" % (t["track_number"], t["id"], t["name"],
-                                              t["duration_ms"] // 60000, t["duration_ms"] // 1000 % 60))
+        # The album object holds only the first 50 tracks; box sets need the following pages too.
+        items, nxt = list(al["tracks"]["items"]), al["tracks"].get("next")
+        while nxt and nxt.startswith(API):
+            page = get(tok, nxt[len(API):])  # next is an absolute URL; get() adds the API base itself
+            items += page["items"]
+            nxt = page.get("next")
+        discs = any(t.get("disc_number", 1) > 1 for t in items)  # box sets restart track numbers per disc
+        for t in items:
+            no = "%d-%02d" % (t.get("disc_number", 1), t["track_number"]) if discs else "%2d" % t["track_number"]
+            print("  %s  %s  %s  (%d:%02d)" % (no, t["id"], t["name"],
+                                             t["duration_ms"] // 60000, t["duration_ms"] // 1000 % 60))
+        print("共 %d 軌" % len(items))
     else:
         print(__doc__)
         return 1

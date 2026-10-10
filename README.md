@@ -9,7 +9,7 @@ Claude Code 雲端排程（routines，用 Claude 訂閱額度，不另付 API �
   02:37  第 1 班：晨光裡的一句話、今日古典、牙周經典導讀
   03:37  第 2 班：文明如何運作、副刊 ①
   04:37  第 3 班：副刊 ②③
-  05:47  第 4 班：巴薩晨報、FM 觀測站、迷霧之子與颶光影視化、全刊驗收補稿
+  05:47  第 4 班：FM 觀測站、迷霧之子與颶光影視化、巴薩晨報、全刊驗收補稿
         │  每篇寫完 → scripts/validate.py 核對 → 直接 push 到 main
         ▼
 GitHub Actions（.github/workflows/publish.yml）
@@ -17,6 +17,8 @@ GitHub Actions（.github/workflows/publish.yml）
         ▼
 網站（靜態 PWA）：07:30 前顯示上一期，07:30 起自動翻到當天
 ```
+
+routine 所用雲端環境的網路存取必須設為 **Full**（已設定）；若用預設的 Trusted，Wikimedia Commons、信望愛聖經、館藏圖庫與新聞、學術來源都會被擋（403 `host_not_allowed`），找圖、經文與查證都會失敗。
 
 - 製刊規則：`editorial/`（文風、格式、圖像守則、各欄規格、製刊手冊）
 - 稿件：`content/issues/<日期>/<欄位>.json`
@@ -34,4 +36,4 @@ python3 -m http.server 8765
 
 ## Spotify
 
-在 `content/config.json` 的 `spotify.client_id` 填入 Spotify Developer App 的 Client ID（公開值，不是 secret）。App 的 Redirect URI 要加上網站首頁網址（結尾有 `/`）。
+`content/config.json` 的 `spotify.client_id` 是 Spotify Developer App「Wiener Morgen Private」的 Client ID（公開值，不是 secret）。授權回呼網址沿用該 App 已登記的 `https://wiener-morgen-private.duckdns.org/oauth/spotify/callback`，由 `oauth/spotify/callback.html` 接收後轉回 App。

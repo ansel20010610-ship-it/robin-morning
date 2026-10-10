@@ -1,0 +1,51 @@
+name: Issue watch
+
+# 07:45 Taiwan time: check that today's issue is complete. If not, open (or update) a GitHub issue,
+# which GitHub emails to the repository owner.
+on:
+  schedule:
+    - cron: "45 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check today's issue
+        id: check
+        run: |
+          D=$(TZ=Asia/Taipei date +%F)
+          echo "date=$D" >> "$GITHUB_OUTPUT"
+          python3 scripts/plan_day.py --date "$D" > plan.txt 2>&1 || true
+          python3 scripts/validate.py "$D" > validate.txt 2>&1; V=$?
+          MISSING=$(grep '^缺稿：' plan.txt | sed 's/^缺稿：//' || true)
+          {
+            echo "台灣時間 07:45 檢查 $D 的刊期。"
+            echo
+            echo '### 出刊狀態'
+            echo '```'
+            cat plan.txt
+            echo '```'
+            echo
+            echo '### 驗證結果'
+            echo '```'
+            cat validate.txt
+            echo '```'
+            echo
+            echo "排程執行紀錄：https://claude.ai/code/routines"
+          } > report.md
+          if [ -n "$MISSING" ] || [ "$V" -ne 0 ]; then echo "problem=yes" >> "$GITHUB_OUTPUT"; fi
+          cat report.md
+      - name: Open or update an issue
+        if: steps.check.outputs.problem == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          T="出刊異常：${{ steps.check.outputs.date }}"
+          N=$(gh issue list --state open --search "in:title $T" --json number --jq '.[0].number')
+          if [ -n "$N" ]; then gh issue comment "$N" --body-file report.md; else gh issue create --title "$T" --body-file report.md; fi

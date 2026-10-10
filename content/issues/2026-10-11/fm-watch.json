@@ -1,0 +1,173 @@
+{
+  "column": "fm-watch",
+  "date": "2026-10-11",
+  "status": "update",
+  "title": "FM27 公布訓練改版與新系統「戰術效能」",
+  "dek": "Sports Interactive 10 月 9 日發布第五篇 FM27 深度介紹：一線隊訓練改為備戰下一場比賽，並用「戰術效能」串起訓練、戰術與招募。",
+  "topic_key": "fm-watch:2026-10-11-training-tactical-effectiveness",
+  "updated_at": "2026-10-10T22:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "timeline",
+    "title": "FM27 已知時程",
+    "caption": "依 Sports Interactive 官網、Steam 公告與 SEGA 新聞稿整理，截至 2026 年 10 月 10 日。日期以英國發布日為準；10 月 9 日那篇在台灣時間當晚 8 時上線。",
+    "items": [
+      { "when": "2026-08-27", "label": "宣布 11 月推出", "note": "日期與平台待公布，預告 9 月起陸續發布功能深度介紹" },
+      { "when": "2026-09-22", "label": "深度介紹一：介面與導覽", "note": "主選單改名，畫面方塊改以呈現資訊為主" },
+      { "when": "2026-09-25", "label": "深度介紹二：足球世界", "note": "盃賽抽籤、轉會截止日回歸，新聞頁重新分類" },
+      { "when": "2026-09-30", "label": "公布發售日；深度介紹三：比賽日", "note": "11 月 10 日全平台數位版；觀眾、光影、天氣、賽前過場鏡頭" },
+      { "when": "2026-10-05", "label": "深度介紹四：比賽引擎與戰術微調", "note": "Hawk-Eye 動作資料、Tactical Tweaks、喊話重做" },
+      { "when": "2026-10-09", "label": "深度介紹五：訓練與戰術效能", "note": "本期新增" },
+      { "when": "日期未定", "label": "下一篇：教練外觀與新生成球員外觀", "note": "官方說是書面介紹" },
+      { "when": "發售前 1–2 週", "label": "Launch Preview", "note": "給在 SEGA 認可通路預購 PC／Mac 版的玩家；官方尚未訂日期" },
+      { "when": "2026-11-10", "label": "全平台數位版與實體 PC 版發售", "note": "全球同一時刻上線，台灣可能落在 11 月 11 日" },
+      { "when": "2026-11-20", "label": "實體 PS5 版發售", "note": "官方 FAQ" }
+    ]
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "台灣時間 10 月 9 日晚間 8 時，英國開發商 Sports Interactive（SI）在 YouTube 與 Steam 發布《足球經理 27》（Football Manager 27，以下簡稱 FM27）第五篇功能深度介紹，官網同步有[同名專頁](https://www.footballmanager.com/fm27/features/fm27-training-and-tactical-effectiveness)。主題是訓練，以及一個新系統「戰術效能」（Tactical Effectiveness）。"
+    },
+    {
+      "type": "p",
+      "text": "前四篇從 9 月 22 日起陸續發布，依序處理介面、足球世界、比賽日畫面與比賽引擎。這一篇處理玩家每週都要碰的訓練排程，以及球員到底能不能把你的戰術踢出來。"
+    },
+    { "type": "h", "text": "新增了什麼：Units 被取代，一線隊訓練改以下一場比賽為目標" },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "先釐清一件舊事：訓練列入主選單，是 9 月 22 日介面篇已公布的改動，本篇 FAQ 再次說明訓練區在任何畫面都能直接切過去，也能設定點進訓練時先看到哪一頁。本篇新增的操作改動有兩項：訓練計畫可以「再次」複製貼上，排固定週期的課表會省事一些；畫面也會標出訓練對球隊造成的體能負荷，範圍包括本週與之後一段時間。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "內容面的改動更大。SI 在 FAQ 說，先前以「單位」（Units）分組、主要用來提升能力值的系統已被取代，換成以執行下一場比賽戰術為目標的選項，例如專練高位逼搶，或專練低位防守；官方說這更貼近真實球隊的訓練習慣，也參考了職業教練的回饋。不過官方正文另寫明，每支隊伍各有訓練目的，以比賽準備為重的是一線隊；預備隊與青年隊的訓練目的，官方尚未說明。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "個人訓練保留：仍可針對單一球員練能力值、學新特質、練新位置。國家隊則新增集訓期間的訓練計畫，官方註明這是依社群回饋加入。"
+    },
+    { "type": "h", "text": "戰術效能：四個來源，一組儀表" },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "戰術效能建立在舊有的「戰術熟悉度」（Tactical Familiarity）之上，由四個面向決定：戰術理解（Tactical Understanding）、球員能力（Player Ability）、球員認同（Player Buy-In）、下一場比賽資訊（Next Match Information）。結果以儀表顯示在戰術、訓練與招募三個畫面，球探報告也會標出轉會目標適不適合現有體系。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "這組儀表不是固定的。官方說，戰術效能會隨你的決策、球員表現與外部足球事件持續浮動；隨著生涯推進，你偏好的戰術可能越來越有效，但與之相剋的戰術風格也可能變得更有威脅。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "另一個新量測是「戰術複雜度」（Tactical Complexity），受你設定的位置與各類指令影響，也要看球員吃不吃得下。官方 FAQ 寫得很直接："
+    },
+    {
+      "type": "quote",
+      "original": "a detailed plan may not be effective when managing teams in lower divisions",
+      "text": "帶低級別聯賽球隊時，細緻的戰術計畫未必有效。",
+      "cite": "Sports Interactive，FM27 訓練深度介紹 FAQ，2026 年 10 月 9 日（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "同一段 FAQ 也說明取捨：簡單的戰術可能立刻見效，但上限有限；複雜的戰術一開始可能因球員還在適應而效果不彰，長期上限較高。"
+    },
+    {
+      "type": "table",
+      "title": "FM27 訓練與戰術：官方說了什麼",
+      "head": ["項目", "FM27 官方說法", "與先前相比（依官方用語）", "待實測"],
+      "rows": [
+        ["訓練入口", "列入主導覽列，可設定進入時的預設頁面", "9 月 22 日介面篇已公布", "日常操作實際少幾次點擊"],
+        ["課表排程", "訓練計畫可複製貼上", "官方說「再次可用」", "長期固定課表是否真的省時"],
+        ["團隊訓練（一線隊）", "一線隊以下一場比賽與對手為目標，例如高位逼搶、低位防守；預備隊與青年隊未說明","取代以 Units 為主、偏重能力值的系統", "訓練選擇對比賽表現的影響看不看得出來"],
+        ["個人訓練", "保留：練能力值、學特質、練新位置", "官方說仍可照舊培養球員", "團隊與個人訓練如何分配時間"],
+        ["體能負荷", "顯示本週與之後一段時間的負荷", "新增更多視覺指標", "疲勞與傷病是否更好掌握"],
+        ["戰術效能", "四個面向，儀表出現在戰術、訓練、招募與球探報告", "建立在先前的戰術熟悉度之上", "儀表高低和比賽結果的關聯多強"],
+        ["戰術複雜度", "簡單戰術見效快、上限低；複雜戰術上限高、需適應", "新的量測", "低級別球隊用複雜戰術的代價多大"],
+        ["國家隊集訓", "集訓期間可排訓練計畫", "新增，官方說依社群回饋", "集訓天數短，效果能有多少"]
+      ],
+      "caption": "整理自 SI 官網與 Steam 公告的 FM27 訓練深度介紹（2026 年 10 月 9 日）。「待實測」一欄是本報列出的觀察點，不是官方說法。"
+    },
+    { "type": "h", "text": "和先前相比：從比賽中調整，往前推到賽前一週" },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "10 月 5 日的比賽引擎篇，重點在比賽進行中：新的「戰術微調」（Tactical Tweaks）不必進戰術畫面就能開關，數量不設上限，教練組會提醒何時開、何時關；場邊喊話改為影響球員的心理狀態。10 月 9 日這篇則往前推到賽前一週：訓練排什麼、球員懂不懂、願不願意照做，都會反映在戰術效能上。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，SI 想把舊有的戰術熟悉度，擴成橫跨訓練、戰術、招募三個畫面的核心指標。官方 FAQ 自己用「overarching feature」形容戰術效能，並把它放進球探報告，等於要求玩家在簽人時也考慮戰術適配。另一個結構性改動是取消 Units：至少就一線隊而言，官方對新系統的描述，把團隊訓練的目的從「長能力」改成「準備下一場」。"
+    },
+    { "type": "h", "text": "對玩家可能的影響" },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "由此推想，最先感受到差別的會是兩類存檔。第一類是從低級別聯賽起家的長期存檔：如果戰術複雜度真的會讓細緻指令在弱隊身上打折，開局可能得先用較簡單的戰術，等球員水準上來再加指令。第二類是重視青訓與能力值成長的玩家，官方正文談新秀培養時這樣寫："
+    },
+    {
+      "type": "quote",
+      "original": "To really take your wonderkids to the next level, you’ll now need to balance their long-term Individual Training and personal development priorities with your short-term need to win matches.",
+      "text": "要讓天才新秀更上一層樓，現在你得在他們長期的個人訓練與個人發展，以及眼前贏球的需求之間取得平衡。",
+      "cite": "Sports Interactive，FM27 訓練深度介紹正文，2026 年 10 月 9 日（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "本文推測，一線隊的團隊訓練轉向比賽準備後，待在一線隊的年輕球員要提升能力值，會更依賴個人訓練，排課時兩者的取捨會更明顯。這個推論有前提：預備隊與青年隊的訓練目的，官方尚未說明；如果那些隊伍仍偏重培養，留在青年隊的新秀受到的影響可能較小。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "招募也可能跟著變。球探報告加上戰術效能，再加上 9 月 25 日公布的轉售分成欄位、年輕球員談轉會更重視上場時間，買人時要看的不只是能力值與身價，還有他進隊後會不會拉低全隊對戰術的掌握。至於國家隊集訓可排訓練，對 FM26 在 2026 年 5 月才以更新找回國家隊執教的玩家來說，是少數直接回應社群要求的項目。以上都是依官方描述的推論，實際權重要等遊戲上手才知道。"
+    },
+    { "type": "h", "text": "仍是官方宣稱、尚待實測的部分" },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "SI 在 FAQ 註明，影片畫面來自開發中版本，發售前仍會調整，部分資料仍在權利人審核中。本報沒有玩過 FM27，本文內容都來自官方說明。戰術效能儀表與比賽結果的關聯有多強、複雜度的懲罰有多大、取消 Units 之後長期培養球員會不會變慢，都要等 Launch Preview 或正式版由玩家實測。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "時程方面，官方確定的是 11 月 10 日全平台數位版發售；實體 PS5 版 11 月 20 日。依 10 月 5 日比賽引擎篇的 Steam 公告 FAQ，全球會在同一時刻上線，部分國家與時區屆時可能已是 11 月 11 日，台灣或在其中；確切時刻發售前公布。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "Launch Preview 給在 SEGA 認可數位通路預購 PC／Mac 版的玩家，官方說在發售前 1–2 週，日期未定。截至 10 月 10 日，Steam 與 Xbox 商店都還沒開放預購，也沒有標價；SEGA 英國新聞稿只寫 FM27 建議售價 49.99 英鎊。"
+    },
+    { "type": "h", "text": "接下來可觀察" },
+    {
+      "type": "list",
+      "items": [
+        "下一篇深度介紹：官方說是書面稿，主題為教練外觀自訂與新生成球員外觀，未給日期。",
+        "數位預購開放日、台灣區定價與預購折扣。",
+        "Launch Preview 的正式日期。",
+        "FM27 授權清單：官方 FAQ 說發售前仍在敲定授權協議。",
+        "11 月 10 日的確切上線時刻，官方說發售前公布。"
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "FM27: Training and Tactical Effectiveness", "publisher": "Sports Interactive（footballmanager.com）", "date": "2026-10-09", "url": "https://www.footballmanager.com/fm27/features/fm27-training-and-tactical-effectiveness", "note": "官網深度介紹專頁與 FAQ；正文談各隊訓練目的與新秀培養" },
+    { "title": "FM27: Training and Tactical Effectiveness（Steam 公告）", "publisher": "Sports Interactive／Steam", "date": "2026-10-09", "url": "https://store.steampowered.com/news/app/4530370/view/1846018067933073", "note": "2026-10-09 12:00 UTC 發布；FAQ 全文" },
+    { "title": "Training and Tactical Effectiveness | FM27 Feature Deep Dive", "publisher": "Football Manager（YouTube）", "date": "2026-10-09", "url": "https://www.youtube.com/watch?v=y9J_CEuAfzw", "note": "上傳時間 2026-10-09 12:00 UTC" },
+    { "title": "FM27: Tactical Tweaks and Match Engine Upgrades", "publisher": "Sports Interactive（footballmanager.com）", "date": "2026-10-05", "url": "https://www.footballmanager.com/fm27/features/fm27-tactical-tweaks-and-match-engine-upgrades", "note": "戰術微調、喊話" },
+    { "title": "FM27: Tactical Tweaks and Match Engine Upgrades（Steam 公告）", "publisher": "Sports Interactive／Steam", "date": "2026-10-05", "url": "https://store.steampowered.com/news/app/4530370/view/1845383656394121", "note": "2026-10-05 17:04 UTC 發布；FAQ：全球同一時刻上線、部分地區 11 月 11 日（官網專頁無此題）" },
+    { "title": "FM27: An Elevated Match Day Atmosphere", "publisher": "Sports Interactive（footballmanager.com）", "date": "2026-09-30", "url": "https://www.footballmanager.com/fm27/features/fm27-elevated-match-day-atmosphere", "note": "FAQ：實體版日期、Launch Preview" },
+    { "title": "FM27: A Deeper, More Immersive Football World", "publisher": "Sports Interactive（footballmanager.com）", "date": "2026-09-25", "url": "https://www.footballmanager.com/fm27/features/deeper-more-immersive-world", "note": "轉售分成、年輕球員重視上場時間" },
+    { "title": "FM27: Clearer Interface & Smoother Navigation", "publisher": "Sports Interactive（footballmanager.com）", "date": "2026-09-22", "url": "https://www.footballmanager.com/fm27/features/fm27-clearer-interface-smoother-navigation", "note": "介面改版、主選單含 Training、落地頁設定、平台 FAQ" },
+    { "title": "Football Manager 27 launches from 10 November", "publisher": "Sports Interactive（footballmanager.com）", "date": "2026-09-30", "url": "https://www.footballmanager.com/news/football-manager-27-launches-10-november", "note": "官網新聞列表標示 29.09.26；平台、Game Pass、Launch Preview" },
+    { "title": "Football Manager 27 Launches Across Platforms from 10 November", "publisher": "SEGA", "date": "2026-09-30", "url": "https://sega.prezly.com/football-manager-27-launches-across-platforms-from-10-november", "note": "建議售價 49.99 英鎊" },
+    { "title": "Getting ready for Football Manager 27", "publisher": "Sports Interactive（footballmanager.com）", "date": "2026-08-27", "url": "https://www.footballmanager.com/news/getting-ready-football-manager-27" },
+    { "title": "FM26 International Management Update Now Live", "publisher": "Sports Interactive（footballmanager.com）", "date": "2026-05-26", "url": "https://www.footballmanager.com/news/fm26-international-management-update-now-live", "note": "FM26 國家隊執教回歸的背景" },
+    { "title": "Football Manager 27 on Steam", "publisher": "Steam", "date": "2026-10-10", "url": "https://store.steampowered.com/app/4530370/Football_Manager_27/", "note": "2026-10-10 查核：未開放預購、未標價" }
+  ]
+}

@@ -1,7 +1,7 @@
 // 知更鳥晨間記事 — app shell, routing and views.
 import { $, esc, inline, store, toast, twNow, fmtDate, getJSON, ICON } from "./util.js";
 import { renderBody, renderHero } from "./blocks.js";
-import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient } from "./spotify.js";
+import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient, isWebKitITP } from "./spotify.js";
 import { pitchThumb } from "./pitch.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
@@ -19,9 +19,10 @@ async function loadData() {
 }
 
 // `?preview` shows issues before their 07:30 release (for checking a new issue).
-const PREVIEW = new URLSearchParams(location.search).has("preview");
+// Read on every call: coming back from Spotify, handleCallback restores the query after this module has loaded.
+const isPreview = () => new URLSearchParams(location.search).has("preview");
 const publishMin = () => { const [h, m] = (S.cfg.publish_time || "07:30").split(":").map(Number); return h * 60 + m; };
-const isPublished = (date) => { if (PREVIEW) return true; const n = twNow(); return date < n.date || (date === n.date && n.minutes >= publishMin()); };
+const isPublished = (date) => { if (isPreview()) return true; const n = twNow(); return date < n.date || (date === n.date && n.minutes >= publishMin()); };
 const publishedIssues = () => (S.index.issues || []).filter((i) => isPublished(i.date));
 const issueBy = (date) => (S.index.issues || []).find((i) => i.date === date);
 const col = (c) => S.cfg.columns[c] || { name: c, group: "supplement" };
@@ -32,12 +33,16 @@ async function article(date, column) {
   return S.articles.get(k);
 }
 
-function sortArticles(arts) {
+// Supplements follow that weekday's rotation (the settings table and the shifts use the same order).
+function sortArticles(arts, date) {
   const g = { main: 0, supplement: 1, watch: 2 };
-  const rot = S.cfg.rotation_by_weekday;
+  const wk = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"][new Date(`${date}T00:00:00Z`).getUTCDay()];
+  const rot = S.cfg.rotation_by_weekday?.[wk] || [];
+  const pos = (c) => { const i = rot.indexOf(c); return i < 0 ? Infinity : i; };
   return [...arts].sort((a, b) => {
     const ca = col(a.column), cb = col(b.column);
     if (g[ca.group] !== g[cb.group]) return g[ca.group] - g[cb.group];
+    if (ca.group === "supplement" && pos(a.column) !== pos(b.column)) return pos(a.column) - pos(b.column);
     return (ca.order ?? 9) - (cb.order ?? 9) || a.column.localeCompare(b.column);
   });
 }
@@ -104,31 +109,33 @@ function untilText(mins) {
   return h ? `${h} 小時 ${m} 分` : `${m} 分鐘`;
 }
 
+// The front page's status line: countdown before 07:30, then what has arrived today.
+function frontStatus() {
+  const now = twNow();
+  const todays = issueBy(now.date);
+  if (now.minutes < publishMin()) return `今日刊期將於台灣時間 <b>${esc(S.cfg.publish_time)}</b> 出刊（還有 ${untilText(publishMin() - now.minutes)}）。先讀上一期。`;
+  if (!todays) return "今日刊期還在排版，稿件到齊後會自動出現。先讀上一期。";
+  const expected = Object.values(S.cfg.columns).filter((c) => c.group === "main").length + 3;
+  const got = todays.articles.filter((a) => col(a.column).group !== "watch").length;
+  return got < expected ? `今日已刊出 ${got} 篇，其餘稿件陸續送達。` : "";
+}
+// Everything the latest-issue front page shows that can change while it stays open: [issue, status line].
+const frontState = () => [JSON.stringify(publishedIssues()[0] || null), frontStatus()];
+let shownFront = [];
+
 // ——— Views ———
 function viewFront(dateParam) {
   const pubs = publishedIssues();
-  const now = twNow();
   const issue = dateParam ? issueBy(dateParam) : pubs[0];
   if (dateParam && (!issue || !isPublished(issue.date))) { main.innerHTML = `${masthead(null)}<div class="wrap"><p class="empty">這一期尚未出刊。</p></div>`; return; }
-  let status = "";
-  if (!dateParam) {
-    const todays = issueBy(now.date);
-    if (now.minutes < publishMin()) {
-      status = `今日刊期將於台灣時間 <b>${esc(S.cfg.publish_time)}</b> 出刊（還有 ${untilText(publishMin() - now.minutes)}）。先讀上一期。`;
-    } else if (!todays) {
-      status = "今日刊期還在排版，稿件到齊後會自動出現。先讀上一期。";
-    } else {
-      const expected = Object.values(S.cfg.columns).filter((c) => c.group === "main").length + 3;
-      const got = todays.articles.filter((a) => col(a.column).group !== "watch").length;
-      if (got < expected) status = `今日已刊出 ${got} 篇，其餘稿件陸續送達。`;
-    }
-  }
+  const status = dateParam ? "" : frontStatus();
+  if (!dateParam) shownFront = [JSON.stringify(issue || null), status];
   if (!issue) {
     main.innerHTML = `${masthead(null)}<div class="wrap">${status ? `<div class="status">${status}</div>` : ""}<p class="empty">創刊號即將出刊。</p></div>`;
     return;
   }
   const read = readSet();
-  const arts = sortArticles(issue.articles);
+  const arts = sortArticles(issue.articles, issue.date);
   const mains = arts.filter((a) => col(a.column).group === "main");
   const supps = arts.filter((a) => col(a.column).group === "supplement");
   const watch = arts.filter((a) => col(a.column).group === "watch");
@@ -151,11 +158,13 @@ function viewFront(dateParam) {
   </div>`;
 }
 
-async function viewArticle(date, column) {
+// `my` is this route's number: if the reader has moved on while the article loads, draw nothing.
+async function viewArticle(date, column, my) {
   if (!isPublished(date)) { main.innerHTML = `<div class="wrap"><p class="empty">這篇文章尚未出刊。</p></div>`; return; }
   main.innerHTML = `<div class="wrap"><p class="loading">翻到這一頁……</p></div>`;
   let a;
-  try { a = await article(date, column); } catch { main.innerHTML = `<div class="wrap"><p class="empty">找不到這篇文章。<a href="#/">回到今日</a></p></div>`; return; }
+  try { a = await article(date, column); } catch { if (my === routeSeq) main.innerHTML = `<div class="wrap"><p class="empty">找不到這篇文章。<a href="#/">回到今日</a></p></div>`; return; }
+  if (my !== routeSeq) return;
   const key = `${date}/${column}`;
   const k = col(column);
   const issue = issueBy(date);
@@ -183,9 +192,9 @@ async function viewArticle(date, column) {
   if (hero) main.querySelector(".hero-slot").append(hero);
   main.querySelector(".body").append(renderBody(a));
   if (issue) {
-    const others = sortArticles(issue.articles).filter((x) => x.column !== column);
-    const i = sortArticles(issue.articles).findIndex((x) => x.column === column);
-    const nxt = sortArticles(issue.articles)[i + 1] || others[0];
+    const arts = sortArticles(issue.articles, date);
+    const i = arts.findIndex((x) => x.column === column);
+    const nxt = arts[i + 1] || arts.find((x) => x.column !== column);
     if (nxt) main.querySelector(".next").innerHTML = `<div class="lbl">接著讀</div>${itemCard(date, nxt, readSet())}`;
   }
   main.querySelector("[data-save]").onclick = (e) => {
@@ -213,7 +222,7 @@ function viewArchive() {
     const ql = q.trim().toLowerCase();
     let last = "";
     const rows = pubs.map((iss) => {
-      const arts = sortArticles(iss.articles).filter((a) => !ql || `${a.title} ${a.dek} ${col(a.column).name}`.toLowerCase().includes(ql));
+      const arts = sortArticles(iss.articles, iss.date).filter((a) => !ql || `${a.title} ${a.dek} ${col(a.column).name}`.toLowerCase().includes(ql));
       if (!arts.length) return "";
       const [y, m, d] = iss.date.split("-");
       const head = `${y}-${m}` !== last ? `<div class="month">${Number(m)} 月 ${y}</div>` : "";
@@ -269,23 +278,26 @@ function viewSettings() {
       ${!hasClient() ? `<p>尚未設定 Spotify Client ID。設定後即可在 App 內收聽並一鍵加入歌單。</p>`
         : isLoggedIn() ? `<p>已連結。古典欄的「加入 Spotify 歌單」會加到你的歌單「${esc(S.cfg.spotify.playlist_name)}」或你選的歌單。</p><button class="btn ghost" data-sp-out>中斷連結</button>`
         : `<p>連結後，App 會依每期指定的錄音自動找到曲目，並可一鍵加入歌單。</p><button class="btn" data-sp-in>${ICON.music}連結 Spotify</button>`}
-      <p style="font-size:12.5px;color:var(--muted)">若播放器只播 30 秒試聽，請在同一個瀏覽器登入 open.spotify.com。</p>
+      <p style="font-size:12.5px;color:var(--muted)">${isWebKitITP() ? "iPhone／Safari 上內嵌播放器可能只能試聽 30 秒；完整收聽請按『在 Spotify 開啟』，加入歌單不受影響。"
+        : "若播放器只播 30 秒試聽，請在同一個瀏覽器登入 open.spotify.com。"}</p>
     </section>
     <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。正刊五欄每日刊出；副刊依星期輪值三篇；觀測站只在有重要新進展時刊出。</p>
       <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>副刊</th></tr></thead><tbody>
       ${wd.map(([k, l]) => `<tr><td>${l}</td><td>${rot[k].map((c) => esc(col(c).name)).join("、")}</td></tr>`).join("")}</tbody></table></div></div>
     </section>
     <footer class="colophon"><div class="latin">${esc(S.cfg.subtitle)}</div>資料更新：${esc((S.index.generated_at || "").replace("T", " ").slice(0, 16))} UTC</footer></div>`;
+  // Redrawing replaces the buttons; put focus back on the one just pressed.
+  const redraw = (g, v) => { viewSettings(); main.querySelector(`[data-g="${g}"] [data-v="${v}"]`)?.focus(); };
   main.querySelectorAll('[data-g="fs"] button').forEach((b) => (b.onclick = () => {
     document.documentElement.style.setProperty("--fs", b.dataset.v);
     try { localStorage.setItem("rm.fs", b.dataset.v); } catch { /* ignore */ }
-    viewSettings();
+    redraw("fs", b.dataset.v);
   }));
   main.querySelectorAll('[data-g="theme"] button').forEach((b) => (b.onclick = () => {
     const v = b.dataset.v;
     try { v === "auto" ? localStorage.removeItem("rm.theme") : localStorage.setItem("rm.theme", v); } catch { /* ignore */ }
     if (v === "auto") delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = v;
-    viewSettings();
+    redraw("theme", v);
   }));
   main.querySelector("[data-sp-in]")?.addEventListener("click", () => login("#/settings"));
   main.querySelector("[data-sp-out]")?.addEventListener("click", () => { logout(); viewSettings(); });
@@ -294,26 +306,46 @@ function viewSettings() {
 // ——— Router ———
 const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/saved", "收藏", "saved"], ["#/music", "音樂", "music"], ["#/settings", "設定", "settings"]];
 let cleanup = () => {};
+let routeSeq = 0; // bumped on every route; an older route still loading must not draw over a newer one
 
-async function route() {
+async function route(ev) {
+  const my = ++routeSeq;
   cleanup(); cleanup = () => {};
   document.title = S.cfg.title;
   const h = location.hash || "#/";
   let m;
   const active = h.startsWith("#/archive") || h.startsWith("#/issue") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
   $("#nav").innerHTML = NAV.map(([href, label, icon]) => `<a href="${href}" ${href === active ? 'aria-current="page"' : ""}>${ICON[icon]}<span>${label}</span></a>`).join("");
-  if ((m = h.match(/^#\/a\/(\d{4}-\d{2}-\d{2})\/([\w-]+)/))) await viewArticle(m[1], m[2]);
+  if ((m = h.match(/^#\/a\/(\d{4}-\d{2}-\d{2})\/([\w-]+)/))) await viewArticle(m[1], m[2], my);
   else if ((m = h.match(/^#\/issue\/(\d{4}-\d{2}-\d{2})/))) viewFront(m[1]);
   else if (h.startsWith("#/archive")) viewArchive();
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/music")) viewMusic();
   else if (h.startsWith("#/settings")) viewSettings();
   else viewFront();
-  if (!h.startsWith("#/a/")) window.scrollTo(0, 0);
-  else window.scrollTo(0, 0);
+  if (my !== routeSeq) return;
+  window.scrollTo(0, 0);
+  // After a navigation (not on first load) start keyboard and screen-reader users at the new view.
+  if (ev) main.focus({ preventScroll: true });
+}
+
+// ——— Updates ———
+// sw.js activates a new deploy at once (skipWaiting + clients.claim). If that happens to a page that was already
+// controlled, reload once so the HTML and the modules come from the same version. A first install (no controller
+// when the page loaded) needs no reload.
+function watchUpdates() {
+  if (!("serviceWorker" in navigator)) return;
+  const had = Boolean(navigator.serviceWorker.controller);
+  let reloading = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (!had || reloading) return;
+    reloading = true;
+    location.reload();
+  });
 }
 
 async function boot() {
+  watchUpdates();
   try {
     await loadData();
   } catch (e) {
@@ -324,18 +356,24 @@ async function boot() {
   const back = await handleCallback();
   if (back) location.hash = back;
   window.addEventListener("hashchange", route);
-  await route();
-  // Flip to the new issue at 07:30 if the app is left open, and pick up late articles.
-  let lastPub = publishedIssues()[0]?.date;
+  try { await route(); } catch (e) { console.warn("route failed", e); }
+  // While the front page stays open: keep the countdown and the day change current, flip to the new issue at 07:30,
+  // and pick up late articles. Nothing changed: leave the page alone. Only the countdown moved: rewrite that line
+  // in place, so focus and the reader's position survive the minute-by-minute tick. Anything else redraws.
+  const refreshFront = () => {
+    if ((location.hash || "#/") !== "#/") return;
+    const [issue, status] = frontState();
+    if (issue === shownFront[0] && status === shownFront[1]) return;
+    const line = main.querySelector(".status");
+    if (issue === shownFront[0] && status && shownFront[1] && line) { line.innerHTML = status; shownFront[1] = status; }
+    else viewFront();
+  };
+  setInterval(refreshFront, 60 * 1000);
   setInterval(async () => {
-    try {
-      const idx = await getJSON("content/index.json", { fresh: true });
-      const changed = JSON.stringify(idx.issues?.[0]) !== JSON.stringify(S.index.issues?.[0]);
-      S.index = idx;
-      const nowPub = publishedIssues()[0]?.date;
-      if ((changed || nowPub !== lastPub) && (location.hash || "#/") === "#/") { lastPub = nowPub; viewFront(); }
-    } catch { /* offline */ }
+    try { S.index = await getJSON("content/index.json", { fresh: true }); } catch { /* offline: still redraw the clock */ }
+    refreshFront();
   }, 5 * 60 * 1000);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshFront(); });
   if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
 }
 

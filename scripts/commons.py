@@ -5,6 +5,7 @@ Usage:
   python3 scripts/commons.py "File:Gustav Klimt 016.jpg"        # one file, ready-to-use figure JSON
   python3 scripts/commons.py --search "Musikverein Wien 1900"     # candidates with licence
   python3 scripts/commons.py --width 1600 "File:..."
+  python3 scripts/commons.py --page 5 --width 2560 "File:....djvu"   # one page of a DjVu/PDF/TIFF scan
 """
 import argparse
 import html
@@ -15,9 +16,10 @@ import sys
 import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import http_get  # noqa: E402
+from common import BROWSER_IMAGE_TYPES, http_get, raw_image_ext  # noqa: E402
 
 API = "https://commons.wikimedia.org/w/api.php"
+MULTIPAGE = {"image/vnd.djvu", "application/pdf", "image/tiff"}
 
 
 def api(params):
@@ -32,9 +34,12 @@ def strip(s):
     return re.sub(r"\s+", " ", html.unescape(s)).strip()
 
 
-def info(titles, width):
-    d = api({"action": "query", "titles": "|".join(titles), "prop": "imageinfo",
-             "iiprop": "url|size|extmetadata|mime", "iiurlwidth": width})
+def info(titles, width, page=None):
+    params = {"action": "query", "titles": "|".join(titles), "prop": "imageinfo",
+              "iiprop": "url|size|extmetadata|mime", "iiurlwidth": width}
+    if page:
+        params["iiurlparam"] = "page%d-%dpx" % (page, width)
+    d = api(params)
     out = []
     for p in d.get("query", {}).get("pages", []):
         if "imageinfo" not in p:
@@ -46,7 +51,14 @@ def info(titles, width):
         src = ii.get("thumburl") or ii.get("url")
         src = src.split("?")[0]
         w, h = ii.get("thumbwidth") or ii["width"], ii.get("thumbheight") or ii["height"]
-        if ii["width"] <= width:
+        # Commons may serve another width than asked (standard sizes, pages of scans): trust the file name and keep
+        # the ratio of the original (or of the requested page, which can differ from page 1).
+        px = re.match(r"(?:lossy-|lossless-)?(?:page\d+-)?(\d+)px-", src.rsplit("/", 1)[-1])
+        if px and int(px.group(1)) != w:
+            bw, bh = (w, h) if page else (ii["width"], ii["height"])
+            w, h = int(px.group(1)), round(bh * int(px.group(1)) / bw)
+        # The original only when browsers can draw it; DjVu/TIFF/PDF stay as their JPEG/PNG thumbnails.
+        if ii["width"] <= width and ii.get("mime") in BROWSER_IMAGE_TYPES and not page:
             src, w, h = ii["url"].split("?")[0], ii["width"], ii["height"]
         out.append({
             "title": p["title"],
@@ -57,8 +69,10 @@ def info(titles, width):
             "artist": g("Artist"), "credit": g("Credit"), "date": g("DateTimeOriginal"),
             "description": g("ImageDescription")[:400],
             "restrictions": g("Restrictions"),
-            "source_url": ii.get("descriptionurl"),
+            "source_url": ii.get("descriptionurl", "") + ("?page=%d" % page if page else ""),
         })
+        if page:
+            out[-1]["page"] = page
     return out
 
 
@@ -68,6 +82,7 @@ def main():
     ap.add_argument("--search")
     ap.add_argument("--width", type=int, default=1280)
     ap.add_argument("--limit", type=int, default=12)
+    ap.add_argument("--page", type=int, help="DjVu/PDF/TIFF 的第幾頁（src 與 src_large 要用同一頁）")
     a = ap.parse_args()
     if a.search:
         d = api({"action": "query", "list": "search", "srsearch": a.search, "srnamespace": 6, "srlimit": a.limit})
@@ -85,11 +100,15 @@ def main():
         ap.print_help()
         return 1
     t = a.title if a.title.startswith("File:") else "File:" + a.title
-    r = info([t], a.width)[0]
+    r = info([t], a.width, a.page)[0]
     if "error" in r:
         print(r["error"])
         return 1
     print(json.dumps(r, ensure_ascii=False, indent=2))
+    if raw_image_ext(r["src"]):
+        print("\n⚠ src 是瀏覽器無法顯示的原檔（%s），不能直接用；請換一個檔案。" % raw_image_ext(r["src"]))
+    elif r["mime"] in MULTIPAGE and not a.page:
+        print("\nℹ 這是多頁檔（%s），src 是第 1 頁；要用別頁請加 --page N，src 與 src_large 用同一頁。" % r["mime"])
     lic = r["license"].lower()
     if not any(x in lic for x in ("public domain", "cc0", "cc by", "pd")):
         print("\n⚠ 授權為「%s」，請確認是否可用（只用 PD / CC0 / CC BY / CC BY-SA）。" % r["license"])

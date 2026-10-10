@@ -7,12 +7,20 @@ export function esc(s) {
 }
 
 // **bold**, *em*, [text](https://url) — applied after escaping.
-export function inline(s) {
-  let t = esc(s);
-  t = t.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, (_, a, u) => `<a href="${u}" target="_blank" rel="noopener">${a}</a>`);
+// A URL may hold one level of balanced parentheses (Wikipedia "Mistborn_(film)", Lancet DOIs).
+// Links are swapped out for placeholders first so bold/em never touch a URL; the link text still gets them.
+const LINK = /\[([^\]]+)\]\((https?:\/\/(?:[^()\s]|\([^()\s]*\))+)\)/g;
+function emphasis(t) {
   t = t.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
-  t = t.replace(/(^|[^*])\*([^*\n]+)\*/g, "$1<em>$2</em>");
-  return t;
+  return t.replace(/(^|[^*])\*([^*\n]+)\*/g, "$1<em>$2</em>");
+}
+export function inline(s) {
+  const links = [];
+  const t = esc(s).replace(/\u0000/g, "").replace(LINK, (_, a, u) => {
+    links.push(`<a href="${u}" target="_blank" rel="noopener">${emphasis(a)}</a>`);
+    return `\u0000${links.length - 1}\u0000`;
+  });
+  return emphasis(t).replace(/\u0000(\d+)\u0000/g, (_, i) => links[Number(i)]);
 }
 
 export function paragraphs(s) {

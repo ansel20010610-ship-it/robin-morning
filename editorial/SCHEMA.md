@@ -23,14 +23,14 @@
 }
 ```
 
-- `topic_key`：去重鍵，格式 `<欄位>:<穩定識別>`。牙周用 `perio:doi:<DOI>`；古典用 `music:<作曲者>-<作品編號>`；畫作用 `art:<收藏館>-<館藏號或題名>`；經文用 `devotion:<書卷>-<章>-<節>`。同一個鍵不得在不同日期重複出現（`scripts/ledger.py` 可查已用過的鍵）。
+- `topic_key`：去重鍵，格式 `<欄位>:<穩定識別>`。牙周用 `perio:doi:<DOI 小寫>`；古典用 `music:<作曲者>-<作品編號>`；畫作用 `art:<收藏館>-<館藏號或題名>`；經文用 `devotion:<書卷>-<章>-<節>`。同一個鍵不得在不同日期重複出現（`scripts/ledger.py` 可查已用過的鍵；比對不分大小寫、不計多餘空白）。
 - `spoiler`：有重大劇透時填一句提醒（例如「本文談到《迷霧之子》第一部結局」），App 會在標題下顯示。
 - `disclaimer`：牙周欄固定填「醫學教學導讀，非個別診療建議。」
 - 觀測站（`fm-watch`、`cosmere-watch`）另有 `"status": "update"` 或 `"status": "undetermined"`（查核失敗時用，見各欄規格）。
 
 ## 正文區塊（`body` 陣列）
 
-行內格式只支援：`**粗體**`、`*斜體*`、`[連結文字](https://...)`。
+行內格式只支援：`**粗體**`、`*斜體*`、`[連結文字](https://...)`。網址不可含空白；網址裡的括號只能一層且成對（如維基百科的 `Mistborn_(film)`），其他情況把 `(` `)` 寫成 `%28` `%29`。
 
 | type | 欄位 | 用途 |
 |---|---|---|
@@ -90,7 +90,9 @@
 
 `region` 是 `[左, 上, 寬, 高]`，以原圖寬高的比例（0–1）表示。App 會把局部放大，並在旁邊的縮圖上框出位置。局部不算新的圖片素材。
 
-要做局部放大的圖，請在該圖另填 `src_large`（用 `python3 scripts/commons.py --width 2560 "File:..."` 取得的網址），局部才會清楚；`src` 仍放 1280 寬的版本。
+`of` 只能指向 figure 圖片：頭圖（figure 型）一律寫 `"hero"`（即使頭圖另有 `id`），正文圖寫它的 `id`。圖解（pitch、table、svg 等）不能做局部。
+
+要做局部放大的圖，請在該圖另填 `src_large`（用 `python3 scripts/commons.py --width 2560 "File:..."` 取得的網址），局部才會清楚；`src` 仍放 1280 寬的版本。DjVu／PDF／TIFF 掃描檔（書頁、手稿）要用哪一頁就加 `--page N`，`src` 與 `src_large` 必須是同一頁；`src`、`src_large` 都不可直接指向 `.djvu`、`.pdf`、`.tif` 原檔（瀏覽器顯示不出來），一律用 commons.py 給的 JPEG／PNG 縮圖網址。
 
 ## 戰術圖 `pitch`
 
@@ -115,7 +117,7 @@
 ```
 
 - 座標：`x` 0（左邊線）到 100（右邊線）；`y` 0（藍隊自家球門）到 100（對方球門）。藍隊永遠往上攻。
-- `view`：`full` 全場、`half` 進攻半場（y 50–100）。
+- `view`：`full` 全場、`half` 進攻半場（y 50–100）。`half` 時所有球員、球與箭頭終點的 `y` 都要 ≥ 50，否則會被裁掉。
 - `kind`：`pass` 傳球（實線）、`run` 無球跑動（虛線）、`dribble` 帶球（波浪）、`press` 逼搶（紅色短線）。
 - 每一步都要寫 `note`；球的位置、箭頭順序要和文字一致。
 
@@ -150,4 +152,5 @@
 - 一律有 `viewBox`，不寫固定 `width`/`height`。
 - 只用這些 class 上色，App 會依日夜模式換色：`ink`（主線條與文字）、`muted`（次要）、`accent`（重點，酒紅）、`gold`（金）、`soft`（淺色填底）、`paper`（底色）。例：`<rect class="soft" .../>`、`<text class="ink">`。
 - 不用 `<script>`、`<foreignObject>`、外部連結、`on*` 屬性。
+- 也不用 `<style>`（會套到整頁）、`<base>`、`<meta>`、`<link>`、`http-equiv`，以及 SVG 以外的命名空間（`xmlns:` 只可用 xlink）。`href`／`xlink:href` 只能指向本圖內的 `#id`，`url()` 只能寫 `url(#id)`。
 - 地圖或路線示意要在圖上或 `caption` 寫「示意，不按比例」，並寫出依據的資料來源。

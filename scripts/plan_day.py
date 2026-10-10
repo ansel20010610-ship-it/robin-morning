@@ -17,7 +17,9 @@ def status(cfg, d, col):
     p = article_path(d, col)
     if not os.path.exists(p):
         return "未完成"
-    errs, _ = validate.validate_file(cfg, d, col, p, check_urls=False)
+    # Same checks as validate.py, including images and topic_keys already used elsewhere.
+    imgs, tops = validate.ledgers_excluding(str(d), col)
+    errs, _ = validate.validate_file(cfg, d, col, p, False, imgs, tops)
     return "已完成 ✓" if not errs else "已存在但驗證失敗（%d 個錯誤）" % len(errs)
 
 

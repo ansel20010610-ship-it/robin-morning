@@ -62,6 +62,8 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration-color: var(--gold); text-underline-offset: .22em; text-decoration-thickness: 1px; }
 button { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+/* The router focuses #main after each navigation; that shouldn't draw a frame round the whole page. */
+#main:focus, #main:focus-visible { outline: none; }
 
 .wrap { max-width: 46rem; margin: 0 auto; padding: 0 var(--gutter); }
 .read { max-width: var(--measure); margin: 0 auto; }
@@ -213,9 +215,9 @@ blockquote cite { display: block; font-style: normal; font-family: var(--sans); 
 
 .facts { margin: 1.6em 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); padding: 4px 0; }
 .facts .ft { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold); font-weight: 600; padding: 8px 0 2px; }
-.facts dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; column-gap: 16px; }
+.facts dl { margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 16px; }
 .facts dt { font-family: var(--sans); font-size: 13px; color: var(--muted); padding: 7px 0; border-top: 1px solid var(--rule); }
-.facts dd { margin: 0; font-size: .92em; line-height: 1.65; padding: 7px 0; border-top: 1px solid var(--rule); }
+.facts dd { margin: 0; font-size: .92em; line-height: 1.65; padding: 7px 0; border-top: 1px solid var(--rule); overflow-wrap: anywhere; }
 .facts dt:first-of-type, .facts dd:first-of-type { border-top: 0; }
 
 figure { margin: 1.8em 0; }
@@ -363,7 +365,7 @@ tr:first-child td { border-top: 0; }
 .page-title .de { font-family: var(--latin); font-style: italic; color: var(--gold); font-size: 18px; }
 .search { width: 100%; font: inherit; font-size: 16px; padding: 10px 12px; border: 1px solid var(--rule); background: var(--paper-2); color: var(--ink); margin: 16px 0 6px; border-radius: 0; }
 .month { font-family: var(--latin); font-size: 20px; color: var(--gold); margin: 26px 0 0; letter-spacing: .06em; border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
-.issue-row { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); text-decoration: none; }
+.issue-row { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); text-decoration: none; }
 .issue-row .d { font-family: var(--latin); text-align: center; line-height: 1.05; }
 .issue-row .d b { display: block; font-size: 32px; font-weight: 600; }
 .issue-row .d span { font-family: var(--sans); font-size: 11.5px; color: var(--muted); }

@@ -15,12 +15,22 @@ function credit(f) {
   return bits.length ? `<span class="credit">${bits.join(" · ")}</span>` : "";
 }
 
+// Click, or Enter/Space when focused, opens the zoom viewer. The target stays a div so the layout is unchanged.
+function zoomable(el, open) {
+  el.addEventListener("click", open);
+  el.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); } });
+}
+
 export function figureEl(f, { hero = false } = {}) {
+  // Reserve the image's box before it loads: the CSS width:auto would otherwise cancel the width/height attributes.
+  // Capped at the image's own width, so a small image is not blown up (as width:auto never did).
+  const sz = [f.width, f.height].every((n) => Number.isInteger(n) && n > 0)
+    ? ` style="aspect-ratio:${f.width}/${f.height};width:min(100%, ${f.width}px, calc(78vh * ${f.width} / ${f.height}))"` : "";
   const el = html(`<figure class="fig${hero ? " hero" : ""}">
-    <div class="frame"><img src="${esc(f.src)}" alt="${esc(f.alt || "")}" width="${f.width || ""}" height="${f.height || ""}"
+    <div class="frame" role="button" tabindex="0" aria-label="${esc(f.alt ? `放大圖片：${f.alt}` : "放大圖片")}"><img src="${esc(f.src)}" alt="${esc(f.alt || "")}" width="${esc(f.width || "")}" height="${esc(f.height || "")}"${sz}
       ${hero ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" referrerpolicy="no-referrer"></div>
     <figcaption>${inline(f.caption || "")}${credit(f)}</figcaption></figure>`).firstElementChild;
-  el.querySelector(".frame").addEventListener("click", () => openViewer(f.src_large || f.src, f.caption, f.alt));
+  zoomable(el.querySelector(".frame"), () => openViewer(f.src_large || f.src, f.caption, f.alt));
   return el;
 }
 
@@ -33,13 +43,58 @@ function detailEl(b, figs) {
   const posX = w >= 1 ? 0 : (x / (1 - w)) * 100, posY = h >= 1 ? 0 : (y / (1 - h)) * 100;
   const el = html(`<figure class="detail">
     <div class="pair">
-      <div class="crop" role="img" aria-label="${esc(b.caption)}" style="aspect-ratio:${ratio.toFixed(4)};background-image:url('${esc(src)}');background-size:${(100 / w).toFixed(3)}% auto;background-position:${posX.toFixed(3)}% ${posY.toFixed(3)}%"></div>
+      <div class="crop" role="button" tabindex="0" aria-label="${esc(`放大局部：${b.caption || ""}`)}" style="aspect-ratio:${ratio.toFixed(4)};background-image:url('${esc(src)}');background-size:${(100 / w).toFixed(3)}% auto;background-position:${posX.toFixed(3)}% ${posY.toFixed(3)}%"></div>
       <div><div class="mini"><img src="${esc(f.src)}" alt="" loading="lazy" referrerpolicy="no-referrer"><b style="left:${x * 100}%;top:${y * 100}%;width:${w * 100}%;height:${h * 100}%"></b></div>
       <div class="pos">局部・${esc(b.position || "")}</div></div>
     </div>
     <figcaption>${inline(b.caption || "")}<span class="credit">同一作品的局部放大，非另一張圖。${f.credit ? esc(f.credit) : ""}</span></figcaption></figure>`).firstElementChild;
-  el.querySelector(".crop").addEventListener("click", () => openViewer(src, b.caption, b.position));
+  zoomable(el.querySelector(".crop"), () => openViewer(src, b.caption, b.position));
   return el;
+}
+
+// SVG is a whitelist (editorial/SCHEMA.md「SVG 規則」): only SVG-namespace drawing elements and presentation
+// attributes survive. Other SVG elements are unwrapped so their text stays (an <a> becomes its text), except those
+// whose content is code, another document or never drawn, which go whole — as does anything in another namespace.
+const SVG_NS = "http://www.w3.org/2000/svg", XLINK_NS = "http://www.w3.org/1999/xlink";
+const SVG_TAGS = new Set(["svg", "g", "path", "rect", "circle", "ellipse", "line", "polyline", "polygon", "text", "tspan", "title", "desc",
+  "defs", "marker", "linearGradient", "radialGradient", "stop", "clipPath", "pattern", "symbol", "use"]);
+const SVG_DROP = new Set(["script", "style", "foreignObject", "image", "animate", "animateMotion", "animateTransform", "set", "mask", "filter", "metadata"]);
+const SVG_ATTRS = new Set(["id", "class", "x", "y", "x1", "y1", "x2", "y2", "cx", "cy", "r", "rx", "ry", "fx", "fy", "dx", "dy", "width", "height",
+  "d", "points", "transform", "viewBox", "preserveAspectRatio", "font-size", "font-weight", "font-family", "font-style", "letter-spacing",
+  "text-anchor", "dominant-baseline", "fill", "fill-opacity", "fill-rule", "stroke", "stroke-width", "stroke-dasharray", "stroke-dashoffset",
+  "stroke-linecap", "stroke-linejoin", "stroke-opacity", "opacity", "marker-start", "marker-mid", "marker-end", "refX", "refY",
+  "markerWidth", "markerHeight", "markerUnits", "orient", "offset", "stop-color", "stop-opacity", "gradientUnits", "gradientTransform",
+  "patternUnits", "patternTransform", "clip-path", "clipPathUnits", "clip-rule", "href"]);
+// Only the colour classes the app styles; any other class could pick up page CSS or match the app's own selectors.
+const SVG_CLASSES = new Set(["ink", "muted", "accent", "gold", "soft", "paper", "line"]);
+let svgSeq = 0;
+
+// Each svg block gets its own id prefix, so its ids can't collide with the page (#nav, #viewer…) or another svg;
+// url(#id) and href="#id" are rewritten to match, and any other url()/href is dropped.
+function cleanSvgAttrs(n, pre) {
+  for (const a of [...n.attributes]) {
+    const name = a.namespaceURI === XLINK_NS && a.localName === "href" ? "href" : a.namespaceURI ? "" : a.localName;
+    let v = a.value;
+    if (!SVG_ATTRS.has(name) || /\\|script:|data:/i.test(v)) { n.removeAttributeNode(a); continue; }
+    if (name === "id") v = pre + v;
+    else if (name === "href") v = v.startsWith("#") ? `#${pre}${v.slice(1)}` : null;
+    else if (name === "class") v = v.split(/\s+/).filter((c) => SVG_CLASSES.has(c)).join(" ");
+    else if (/url\s*\(/i.test(v)) {
+      v = v.replace(/url\(\s*(["']?)#([^"')\s]+)\1\s*\)/gi, (_, q, id) => `url(#${pre}${id})`);
+      if (/url\s*\((?!#)/i.test(v)) v = null;
+    }
+    if (v == null) n.removeAttributeNode(a); else a.value = v;
+  }
+}
+
+function cleanSvgTree(parent, pre) {
+  for (const n of [...parent.childNodes]) {
+    if (n.nodeType === Node.CDATA_SECTION_NODE) { n.replaceWith(n.data); continue; }
+    if (n.nodeType === Node.TEXT_NODE) continue;
+    if (n.nodeType !== Node.ELEMENT_NODE || n.namespaceURI !== SVG_NS || SVG_DROP.has(n.localName)) { n.remove(); continue; }
+    cleanSvgTree(n, pre);
+    if (SVG_TAGS.has(n.localName)) cleanSvgAttrs(n, pre); else n.replaceWith(...n.childNodes);
+  }
 }
 
 function sanitizeSvg(src) {
@@ -47,13 +102,10 @@ function sanitizeSvg(src) {
   if (!/^<svg[^>]*\sxmlns=/.test(text)) text = text.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"');
   const doc = new DOMParser().parseFromString(text, "image/svg+xml");
   const svg = doc.documentElement;
-  if (!svg || svg.nodeName !== "svg" || doc.querySelector("parsererror")) return null;
-  svg.querySelectorAll("script, foreignObject, iframe, image[href^='http'], a").forEach((n) => n.remove());
-  for (const n of [svg, ...svg.querySelectorAll("*")]) {
-    for (const a of [...n.attributes]) {
-      if (/^on/i.test(a.name) || /javascript:/i.test(a.value)) n.removeAttribute(a.name);
-    }
-  }
+  if (!svg || svg.namespaceURI !== SVG_NS || svg.localName !== "svg" || doc.querySelector("parsererror")) return null;
+  const pre = `s${++svgSeq}-`;
+  cleanSvgTree(svg, pre);
+  cleanSvgAttrs(svg, pre);
   svg.removeAttribute("width");
   svg.removeAttribute("height");
   svg.setAttribute("role", "img");
@@ -143,12 +195,12 @@ function block(b, figs) {
   }
 }
 
+// Like renderBody's blocks, a broken hero is skipped instead of stopping the whole article.
 export function renderHero(hero) {
   if (!hero) return null;
   const t = hero.type || "figure";
-  if (t === "figure") return figureEl(hero, { hero: true });
-  const el = block(hero, {});
-  return el;
+  try { return t === "figure" ? figureEl(hero, { hero: true }) : block(hero, {}); }
+  catch (e) { console.warn("hero failed", hero, e); return null; }
 }
 
 export function renderBody(article) {

@@ -1,0 +1,441 @@
+{
+  "column": "perio",
+  "date": "2026-10-11",
+  "title": "十二個人停止刷牙：1965 年實驗性牙齦炎",
+  "dek": "1965 年，奧胡斯 12 名牙齦健康的受試者停止一切口腔清潔，10 到 21 天內全數出現牙齦炎。這篇經典證明了什麼，又留下哪些問題？",
+  "topic_key": "perio:doi:10.1902/jop.1965.36.3.177",
+  "updated_at": "2026-10-10T23:01:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Healthy_gingiva.jpg/1280px-Healthy_gingiva.jpg",
+    "width": 1280,
+    "height": 649,
+    "alt": "下顎前牙區的口內近照：牙齦呈淡粉紅色，牙間乳頭填滿牙齒之間的空隙，邊緣薄而貼合牙面；下方可見牙齦黏膜交界，再往下是血管明顯、顏色較紅的齒槽黏膜。",
+    "caption": "臨床上健康的牙齦，是 1965 年實驗的起點，也是終點：12 名受試者開始時平均 GI 0.27，停止清潔後升到 1.05，恢復清潔約一週後降到 0.11。照片為 2006 年的臨床攝影，與該研究的受試者無關。",
+    "credit": "Mohamed Hamze 攝，Wikimedia Commons（上傳者註明攝於其私人診所）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Healthy_gingiva.jpg",
+    "made": "2006"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1965 年 5–6 月號的《Journal of Periodontology》第 36 卷，刊出一篇 11 頁的論文。丹麥奧胡斯（Aarhus）皇家牙醫學院的 12 個人，牙齦原本健康，接到的指示只有一條：不刷牙，也不用任何其他方法清潔口腔。3 個人在 10 天內出現牙齦炎，另外 9 人在第 15 到 21 天之間出現。恢復刷牙後，發炎大約一週就消退了。"
+    },
+    {
+      "type": "p",
+      "tag": "背景",
+      "text": "牙菌斑和牙周病有關，在當時不算新說法。論文前言列出幾條線索：流行病學調查發現牙周破壞與口腔沉積物密切相關（Lövdal 等 1958；Schei 等 1959）；光學與電子顯微鏡看到沉積物裡的細菌緊貼牙齦組織；Hine 在 1950 年的臨床實驗顯示軟垢堆積會引起牙齦發炎，但在他為期兩週的停刷實驗裡，多數人的牙齦看不出差別。細菌學研究則認為，健康與發炎牙齦的菌相差異主要在數量，組成只有小幅不同。缺的是一個從健康出發、能在同一個人身上重複的實驗。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "共同作者 Else Theilade 在 1987 年的回顧裡補了另一層背景。她指出，當時的口腔微生物學家沒有取樣部位的臨床定義，被拿來比較的「健康」與「疾病」，其實常是兩種程度不同的疾病，所以找不到質的差別。Löe 與 Silness 在 1963 年發表的牙齦指數（Gingival Index, GI），以及兩人在 1964 年發表的牙菌斑指數（Plaque Index, PlI），讓研究者能在個別牙面上先確立「沒有牙菌斑、牙齦健康」的基線，再量化之後的變化。"
+    },
+    {
+      "type": "p",
+      "text": "論文寫下的目的是：撤除牙齦健康者一切維持口腔清潔的努力，看能否誘發牙齦炎，並記錄牙齦與牙齦邊緣菌群的變化順序。本文依原論文全文整理，但原文表 1、表 2、表 6，以及細菌學結果與討論開頭的部分段落未能讀到；這些地方以原文圖說和同一團隊 1966 年續篇的摘要補足，並在文中註明。"
+    },
+    {
+      "type": "paper",
+      "citation": "Löe H, Theilade E, Jensen SB. Experimental gingivitis in man. *J Periodontol*. 1965;36(3):177–187.",
+      "doi": "10.1902/jop.1965.36.3.177",
+      "pmid": "14296927",
+      "link": "https://aap.onlinelibrary.wiley.com/doi/10.1902/jop.1965.36.3.177",
+      "question": "牙齦健康的人停止一切口腔清潔，會不會出現牙齦炎、要多久？牙齦邊緣的菌相依什麼順序改變？恢復清潔後能否回到原狀？",
+      "design": "單組前後介入實驗（停止清潔，再恢復清潔），無對照組；臨床指數加直接顯微鏡細菌學",
+      "sample": "12 人：9 名一年級臨床學生、1 名牙周科教師、2 名實驗室技術員；男 10、女 2，平均 23 歲；丹麥奧胡斯皇家牙醫學院"
+    },
+    {
+      "type": "h",
+      "text": "研究設計：12 人、三個指數、兩種顯微鏡標本"
+    },
+    {
+      "type": "p",
+      "text": "受試者是 9 名一年級臨床學生、1 名牙周科教師和 2 名實驗室技術員，男性 10 人、女性 2 人，平均 23 歲，全身健康、飲食正常。基線時檢查了約一千個牙齦單位，只找到一個病理性牙周囊袋。"
+    },
+    {
+      "type": "p",
+      "text": "臨床評估用三個指數。GI 每顆牙評頰側、近心、舌側三個單位：0 為無發炎；1 為輕度發炎，顏色略變、質地幾乎不變；2 為中度發炎，表面光亮、發紅、水腫、肥大，壓迫會出血；3 為重度，明顯發紅肥大，有自發出血傾向或潰瘍。"
+    },
+    {
+      "type": "p",
+      "text": "PlI 同樣評三面、0 到 3 分，1 分是要用顯示劑或探針刮過才看得見的薄膜。兩者都由單位平均成牙、牙群與個人分數。另以 Russell（1956）的牙周指數（Periodontal Index, PI）評牙周狀況。檢查前以氣槍吹乾，不用棉捲，以免擦掉軟垢；牙結石沒有系統性記錄。"
+    },
+    {
+      "type": "p",
+      "text": "細菌學用兩種直接顯微鏡方法。一是牙齦邊緣的印模標本，以龍膽紫（gentian violet）染色，觀察菌型與白血球聚集；二是用刮器從頰側牙齦邊緣取牙菌斑，懸浮於 0.5 毫升無菌生理食鹽水，均質化 1 分鐘後塗片做革蘭氏染色，每張計數 200 個微生物，算出各型態的百分比。Theilade 後來說明，這兩種方法源自 Gins 與 Bibby 約 25 年前發展的技術。"
+    },
+    {
+      "type": "p",
+      "text": "第一次檢查後，受試者停止刷牙與一切口腔清潔，之後在不固定的間隔回診，每次用同一套標準完整評估牙菌斑與牙齦。停止清潔期結束後恢復口腔清潔，再追蹤到發炎消退。"
+    },
+    {
+      "type": "svg",
+      "title": "研究流程（依原文重繪）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 564\"><rect class=\"soft\" x=\"12\" y=\"10\" width=\"336\" height=\"96\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"34\" font-size=\"18\" font-weight=\"700\">1</text><text x=\"50\" y=\"34\" font-size=\"15\" font-weight=\"700\">基線檢查（第 0 天）</text><text class=\"muted\" x=\"50\" y=\"54\" font-size=\"13\">GI、PlI、Russell PI；約一千個牙齦單位</text><text class=\"muted\" x=\"50\" y=\"72\" font-size=\"13\">平均 GI 0.27，PlI 0.43</text><text class=\"accent\" x=\"50\" y=\"92\" font-size=\"13\">菌相：稀疏，以球菌、短桿菌為主</text><line class=\"muted line\" x1=\"180\" y1=\"108\" x2=\"180\" y2=\"121\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,120 186,120 180,128\"/><rect class=\"soft\" x=\"12\" y=\"130\" width=\"336\" height=\"78\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"154\" font-size=\"18\" font-weight=\"700\">2</text><text x=\"50\" y=\"154\" font-size=\"15\" font-weight=\"700\">停止刷牙與一切口腔清潔</text><text class=\"muted\" x=\"50\" y=\"174\" font-size=\"13\">不定期回診，評估標準與基線相同</text><text class=\"accent\" x=\"50\" y=\"196\" font-size=\"13\">菌相：球菌劇增 → 絲狀菌、梭桿菌</text><line class=\"muted line\" x1=\"180\" y1=\"210\" x2=\"180\" y2=\"223\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,222 186,222 180,230\"/><rect class=\"soft\" x=\"12\" y=\"232\" width=\"336\" height=\"114\" rx=\"6\"/><rect class=\"accent\" x=\"12\" y=\"238\" width=\"4\" height=\"102\"/><text class=\"accent\" x=\"28\" y=\"256\" font-size=\"18\" font-weight=\"700\">3</text><text x=\"50\" y=\"256\" font-size=\"15\" font-weight=\"700\">全數出現臨床牙齦炎</text><text class=\"muted\" x=\"50\" y=\"276\" font-size=\"13\">3 人在 10 天內，9 人需 15–21 天</text><text class=\"muted\" x=\"50\" y=\"294\" font-size=\"13\">平均 GI 0.27 → 1.05；PlI 0.43 → 1.67</text><text class=\"muted\" x=\"50\" y=\"312\" font-size=\"13\">無人回報疼痛或出血，未見急性期</text><text class=\"accent\" x=\"50\" y=\"334\" font-size=\"13\">菌相：弧菌、螺旋體，早於臨床診斷</text><line class=\"muted line\" x1=\"180\" y1=\"348\" x2=\"180\" y2=\"361\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,360 186,360 180,368\"/><rect class=\"soft\" x=\"12\" y=\"370\" width=\"336\" height=\"62\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"394\" font-size=\"18\" font-weight=\"700\">4</text><text x=\"50\" y=\"394\" font-size=\"15\" font-weight=\"700\">恢復口腔清潔</text><text class=\"muted\" x=\"50\" y=\"416\" font-size=\"13\">軟垢未礦化，自行清除；約一週發炎消退</text><line class=\"muted line\" x1=\"180\" y1=\"434\" x2=\"180\" y2=\"447\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,446 186,446 180,454\"/><rect class=\"soft\" x=\"12\" y=\"456\" width=\"336\" height=\"96\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"480\" font-size=\"18\" font-weight=\"700\">5</text><text x=\"50\" y=\"480\" font-size=\"15\" font-weight=\"700\">最終檢查</text><text class=\"muted\" x=\"50\" y=\"500\" font-size=\"13\">平均 GI 0.11，Russell PI 0.01</text><text class=\"muted\" x=\"50\" y=\"518\" font-size=\"13\">平均 PlI 略低於起點</text><text class=\"accent\" x=\"50\" y=\"540\" font-size=\"13\">菌相：回到原本的稀疏菌群</text></svg>",
+      "caption": "Löe、Theilade、Jensen（1965）的研究流程示意，依原文方法、結果與圖說重繪，數字為原文數據；「菌相」一列是顯微鏡下的形態描述，不是菌種鑑定。"
+    },
+    {
+      "type": "h",
+      "text": "主要結果：12 人全數發炎，約一週回復"
+    },
+    {
+      "type": "p",
+      "text": "停止清潔期間，所有人都累積大量軟垢，全組平均 PlI 從 0.43 升到 1.67。上下顎之間、各牙群之間沒有明顯差異；以牙面分，期末鄰接面平均 2.03、頰側 1.77、舌側 1.23，上顎小臼齒舌側最少。恢復清潔後分數迅速下降，軟垢沒有礦化成臨床可見的牙結石，受試者自己就清得掉；實驗結束時，全組平均 PlI 略低於起點。"
+    },
+    {
+      "type": "p",
+      "text": "全部 12 人都出現牙齦炎，平均 GI 從 0.27 升到 1.05。3 人在 10 天內出現，9 人需要 15 到 21 天。沒有人回報疼痛或出血，檢查者也沒看到急性期，牙齦是從正常逐步轉為慢性發炎。上下顎、各牙群之間差異不大（期末上顎平均 1.03、下顎 1.07），但鄰接面分數高於頰側，舌側明顯較低；上顎臼齒的牙間區最嚴重，下顎小臼齒舌側通常最好。恢復清潔後約一週，平均 GI 降到 0.11。"
+    },
+    {
+      "type": "table",
+      "title": "全組平均指數",
+      "head": [
+        "指數",
+        "開始",
+        "停止清潔期末",
+        "恢復清潔後"
+      ],
+      "rows": [
+        [
+          "PlI（牙菌斑）",
+          "0.43",
+          "1.67",
+          "略低於開始（數值見原文表 1）"
+        ],
+        [
+          "GI（牙齦）",
+          "0.27",
+          "1.05",
+          "0.11"
+        ],
+        [
+          "Russell PI",
+          "0.19",
+          "0.93",
+          "0.01"
+        ]
+      ],
+      "caption": "依 Löe、Theilade、Jensen（1965）內文與表 4 整理。Russell PI 把牙齦發炎也計分（1、2 分為牙齦炎），期末上升不代表附連喪失。"
+    },
+    {
+      "type": "table",
+      "title": "每位受試者的平均 GI（原文表 4 重繪）",
+      "head": [
+        "受試者",
+        "開始",
+        "停止清潔期末",
+        "恢復清潔後"
+      ],
+      "rows": [
+        [
+          "1",
+          "0.49",
+          "1.23",
+          "0.11"
+        ],
+        [
+          "2",
+          "0.41",
+          "1.23",
+          "0.09"
+        ],
+        [
+          "3",
+          "0.15",
+          "0.92",
+          "0.13"
+        ],
+        [
+          "4",
+          "0.02",
+          "0.96",
+          "0.02"
+        ],
+        [
+          "5",
+          "0.24",
+          "0.90",
+          "0.12"
+        ],
+        [
+          "6",
+          "0.17",
+          "1.05",
+          "0.07"
+        ],
+        [
+          "7",
+          "0.43",
+          "1.12",
+          "0.14"
+        ],
+        [
+          "8",
+          "0.15",
+          "0.99",
+          "0.16"
+        ],
+        [
+          "9",
+          "0.08",
+          "0.90",
+          "0.06"
+        ],
+        [
+          "10",
+          "0.69",
+          "1.12",
+          "0.02"
+        ],
+        [
+          "11",
+          "0.38",
+          "0.98",
+          "0.29"
+        ],
+        [
+          "12",
+          "0.07",
+          "1.23",
+          "0.10"
+        ],
+        [
+          "全組平均",
+          "0.27",
+          "1.05",
+          "0.11"
+        ]
+      ],
+      "caption": "依原文表 4 數據重繪。GI 0 為無發炎，1 為輕度（不含出血），2 為中度（壓迫出血），3 為重度。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "本文讀到的結果只有平均值與個人數據，未見推論統計。本文用表 4 計算：停止清潔期間每人 GI 平均上升 0.78（標準差 0.18），範圍 +0.43 到 +1.16，12 人方向一致；只看方向的符號檢定，雙尾 p 約 0.0005。基線最高的 10 號（0.69）增加最少（+0.43）；增加最多的是 12 號（0.07→1.23，+1.16）；基線最低的 4 號（0.02）增加 0.94，居次。期末 12 人集中在 0.90 到 1.23 之間。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "討論寫道，恢復清潔幾天後，所有受試者的牙齦看起來都比開始時健康。表 4 大致支持這個說法：9 人的最終 GI 低於起點，4 號持平（0.02），8 號與 12 號略高（分別多 0.01 與 0.03）。差距很小，不影響結論，但「全部」是臨床印象，表格才是數據。"
+    },
+    {
+      "type": "p",
+      "text": "菌相的變化走在臨床症狀前面。健康牙齦邊緣的標本菌量極少，只見少數脫落上皮細胞、零星白血球和小群球菌、短桿菌。停止清潔後菌量大增，菌相大致分三期變化（依本文讀到的段落與原文圖說整理）。"
+    },
+    {
+      "type": "p",
+      "text": "第一期立即開始，球菌劇增，脫落上皮細胞被球菌整片覆蓋，牙齦邊緣出現小團白血球。第二期在數天後出現；原文圖 1 停刷第 7 天的標本，以絲狀菌、梭桿菌和白血球聚集為主。第三期的標本以弧菌與螺旋體為主（原文圖 1D、1E），圖說註明這張標本取自停刷兩週、臨床可診斷牙齦炎的 3 天前。恢復清潔後，菌相回到原本的樣子。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "作者在討論裡的結論是，牙菌斑是產生牙齦發炎的必要因素（本文轉述）。同一段裡，他們也寫明牙菌斑中究竟是哪些因素直接負責，仍是未解的問題。他們推測，正常牙齦沒有、且在臨床診斷前就出現的那些菌，可能參與發炎的起始；各人出現牙齦炎的時間不同，或許反映個體防禦機制的差異。"
+    },
+    {
+      "type": "h",
+      "text": "限制：樣本、對照、終點與測量"
+    },
+    {
+      "type": "p",
+      "text": "樣本只有 12 人，全部來自牙醫學院，平均 23 歲，10 男 2 女，全身健康、飲食正常，基線牙齦健康。本文讀到的段落沒有受試者吸菸狀況的資料。外推範圍因此很窄：結果能否套用到年長者、已有牙周炎或帶有全身性風險因子的人，這篇論文無法回答。"
+    },
+    {
+      "type": "p",
+      "text": "研究是單組前後比較，沒有同時期持續清潔的對照組，檢查者也知道受試者處在哪個階段。GI 靠肉眼判斷顏色、質地與壓迫出血；本文讀到的方法段落沒有提到檢查者盲化或校正。細菌學只看染色後的形態，球菌、絲狀菌、弧菌、螺旋體都是形態類別，不是菌種；每張塗片計數 200 個細胞，對少數菌群的估計誤差不小。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "終點的定義也要留意。停止清潔期的長短因人而異；從表 4 與內文推斷，各人大約是在出現臨床牙齦炎時結束停止期，期末 GI 才會集中在 0.90 到 1.23。「平均 GI 升到 1.05」描述的是「到出現牙齦炎為止」的狀態，不是固定天數後的狀態，不宜和固定 21 天的後續研究直接比較數值。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "抵銷這些弱點的，是設計本身的方向性：同一批人撤除清潔後發炎，恢復清潔後消退，介入一反轉，結果跟著反轉。這種可逆性，加上菌相變化先於臨床診斷的時間順序，讓這個單組、無對照的 12 人實驗仍能支撐因果推論。觀察期約三週，論文回答的是牙齦炎能否誘發、能否回復，沒有回答牙齦炎會不會走向附連喪失。"
+    },
+    {
+      "type": "h",
+      "text": "後來的研究：菌相分期、定序、個體差異與長期後果"
+    },
+    {
+      "type": "p",
+      "text": "Theilade 那篇 1987 年 2 月刊出的回顧附註，1965 年這篇已被引用 635 次（科學資訊研究所 ISI 統計）。她在同一篇回顧裡解釋續篇為何被大量引用，理由也適用於整個模型：它是牙菌斑在牙齦炎中致病角色的簡明示範，成了多數牙醫學院的必讀，有些學生還得在自己口中重做一次；它後來也大量用來測試抑制牙菌斑的化學製劑。以下四篇，各自修正或延伸了 1965 年的一個面向。"
+    },
+    {
+      "type": "p",
+      "text": "[Theilade 等（1966）](https://doi.org/10.1111/j.1600-0765.1966.tb01842.x)是同一團隊的續篇，刊在 Löe 主編的《Journal of Periodontal Research》創刊號。Theilade 回顧時把 1965 年的實驗看作一次成功的先導研究；續篇先安排一段受監督的口腔清潔期，讓受試者從極佳的牙齦狀態出發，再在固定部位重複取樣。11 名受試者停止清潔 9 到 21 天後都出現廣泛的輕度牙齦炎，個人牙齦炎的發展速度與牙菌斑累積速度密切相關。"
+    },
+    {
+      "type": "table",
+      "title": "菌相分期：1965 年原文與 1966 年續篇",
+      "head": [
+        "階段",
+        "1965 年（形態描述）",
+        "1966 年續篇（摘要數據）"
+      ],
+      "rows": [
+        [
+          "健康基線",
+          "菌量極少，以球菌、短桿菌為主",
+          "幾乎全是革蘭氏陽性球菌與桿菌"
+        ],
+        [
+          "第一期",
+          "停止清潔後立即開始；球菌劇增，覆滿脫落上皮細胞",
+          "前 2 天；革蘭氏陽性球菌與桿菌增生，另加入約 30% 革蘭氏陰性球菌與桿菌"
+        ],
+        [
+          "第二期",
+          "數天後出現；第 7 天標本以絲狀菌、梭桿菌與白血球聚集為主",
+          "1–4 天後；梭桿菌與絲狀菌出現並增加，各約佔 7%"
+        ],
+        [
+          "第三期",
+          "弧菌與螺旋體為主；見於臨床診斷前 3 天的標本",
+          "4–9 天後；加入螺菌與螺旋體，停止期末各約佔 2%"
+        ],
+        [
+          "恢復清潔後",
+          "回到原本菌相",
+          "多數牙面 1–2 天後只剩原本稀疏的革蘭氏陽性菌"
+        ]
+      ],
+      "caption": "依 Löe 等（1965）內文與圖說、Theilade 等（1966）摘要整理。兩篇都以顯微鏡形態分類，不是菌種鑑定。"
+    },
+    {
+      "type": "p",
+      "text": "續篇摘要還補了兩點。在特定部位，臨床上可診斷輕度牙齦炎的時間，大約就是複雜菌相建立的時間，但亞臨床發炎開始得早得多。恢復清潔後，多數部位的牙菌斑 1 到 2 天內消失，7 到 11 天後每位受試者的 PlI 回到實驗前水準；一個部位的發炎，通常在牙菌斑清除後一天就消失。"
+    },
+    {
+      "type": "p",
+      "text": "[Kistler 等（2013）](https://doi.org/10.1371/journal.pone.0071227)把同一個問題交給定序。倫敦國王學院的研究者讓 20 名健康志願者停止口腔清潔兩週，以 16S rRNA 基因的 454 焦磷酸定序分析基線、第 1 週與第 2 週的牙菌斑。兩週後 20 人全數出現牙齦炎，菌群結構明顯移動，多樣性在第 2 週顯著增加。與牙齦炎相關的類群包括 *Fusobacterium nucleatum* subsp. *polymorphum* 與 *Prevotella oulorum* 等，*Rothia dentocariosa* 則與健康相關。1965 年在顯微鏡下看到的由簡到繁，到了定序時代，成為整個群落組成與多樣性的轉移。"
+    },
+    {
+      "type": "p",
+      "text": "[Trombelli 等（2004）](https://doi.org/10.1111/j.1600-051x.2004.00478.x)處理的是個體差異。1965 年的作者只從發炎時間不同推測防禦機制有別；這項研究找來 96 名健康受試者，採分口設計，隨機讓一側上顎象限停止清潔 21 天、對側作為對照，在第 0、7、14、21 天記錄 PlI、GI、齦溝液（gingival crevicular fluid, GCF）量與角度探診出血分數。"
+    },
+    {
+      "type": "p",
+      "text": "研究者以累積牙菌斑暴露校正第 21 天的齦溝液量後，取殘差分布的上、下四分位各 24 人，定義為高反應者與低反應者。兩組第 21 天的牙齦炎指標都有顯著差異，牙菌斑量與累積速度卻沒有差別。對照象限也補上了 1965 年缺少的同期對照。"
+    },
+    {
+      "type": "p",
+      "text": "[Schätzle 等（2003）](https://doi.org/10.1034/j.1600-051x.2003.00414.x)回答了 1965 年無法回答的問題：牙齦發炎長期存在，會不會變成附連喪失。作者群包括 Löe，資料來自挪威 565 名男性跨越 26 年的世代研究，受試者每天自我清潔、接受良好牙科照護，觀察年齡 16 到 59 歲。只納入每次檢查 GI 都相同的部位：始終 GI 0 的部位，接近 60 歲時平均累積附連喪失 1.94 毫米；始終 GI 1 為 2.42 毫米；始終 GI 2 為 3.31 毫米，約多 70%。這是長期關聯，不是每個發炎部位都會進展的證明；作者也指出，始終不發炎的部位仍有少量附連喪失。"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Theilade E, Wright WH, Jensen SB, Löe H. Experimental gingivitis in man. II. A longitudinal clinical and bacteriological investigation. *J Periodontal Res*. 1966;1:1–13. [DOI 10.1111/j.1600-0765.1966.tb01842.x](https://doi.org/10.1111/j.1600-0765.1966.tb01842.x)；PMID 4224181",
+        "Schätzle M, Löe H, Bürgin W, Ånerud Å, Boysen H, Lang NP. Clinical course of chronic periodontitis. I. Role of gingivitis. *J Clin Periodontol*. 2003;30(10):887–901. [DOI 10.1034/j.1600-051x.2003.00414.x](https://doi.org/10.1034/j.1600-051x.2003.00414.x)；PMID 14710769",
+        "Trombelli L, Tatakis DN, Scapoli C, Bottega S, Orlandini E, Tosi M. Modulation of clinical expression of plaque-induced gingivitis. II. Identification of “high-responder” and “low-responder” subjects. *J Clin Periodontol*. 2004;31(4):239–252. [DOI 10.1111/j.1600-051x.2004.00478.x](https://doi.org/10.1111/j.1600-051x.2004.00478.x)；PMID 15016251",
+        "Kistler JO, Booth V, Bradshaw DJ, Wade WG. Bacterial community development in experimental gingivitis. *PLoS One*. 2013;8(8):e71227. [DOI 10.1371/journal.pone.0071227](https://doi.org/10.1371/journal.pone.0071227)；PMID 23967169"
+      ]
+    },
+    {
+      "type": "h",
+      "text": "今天怎麼讀：證明了什麼，沒有證明什麼"
+    },
+    {
+      "type": "p",
+      "text": "這篇論文證明的範圍很窄，也很扎實：在 12 名年輕、健康、原本清潔良好的成人身上，撤除一切口腔清潔會讓牙菌斑大量累積，10 到 21 天內全數出現臨床牙齦炎；恢復清潔後，發炎約一週消退，菌相回到原狀；菌相的轉變發生在臨床診斷之前。換句話說，在這些人身上，累積牙菌斑足以引起牙齦炎，清除牙菌斑足以讓它消退。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "它沒有證明的事同樣清楚。作者沒有指出哪一種細菌致病，這個問題他們自己留著。受試者的反應也不一致，同樣停止清潔，有人 10 天內發炎，有人要到第 21 天。附連喪失與牙周炎，更在這個實驗的範圍之外。把這篇讀成「牙菌斑多寡決定牙周病的一切」，等於把三週的結果外推到幾十年。"
+    },
+    {
+      "type": "p",
+      "text": "後來的研究補上了兩塊。Trombelli 等人顯示，同樣的牙菌斑量可以伴隨不同程度的發炎，個體反應是可以量測的變項；Schätzle 等人把時間拉長到 26 年，持續發炎的部位附連喪失較多。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "診斷標準也變了。2017 年世界研討會（World Workshop）的牙齦炎病例定義論文提出，牙周組織完整者，探診出血（bleeding on probing, BOP）部位達 10% 以上即為牙齦炎病例，10% 到 30% 為局部型，超過 30% 為廣泛型（[Trombelli 等，2018](https://doi.org/10.1002/JPER.17-0576)）；同次研討會第一工作小組的共識報告強調，病例定義主要以有無探診出血為據，而牙周炎病人即使目前只見牙齦發炎，仍是牙周炎病人（[Chapple 等，2018](https://doi.org/10.1002/JPER.17-0719)）。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "用今天的尺回看 1965 年，換算要小心。期末平均 GI 1.05，大致落在輕度發炎；在 GI 系統裡，壓迫出血是 2 分才有的條件。本文讀到的原文段落沒有出血部位的比例，因此無法換算成 BOP 百分比，也不能斷言這 12 人按 2017 年的定義都會被判為牙齦炎病例。"
+    },
+    {
+      "type": "p",
+      "text": "放回臨床思考，這篇論文留下的是時間尺度與可逆性：在健康的年輕成人身上，牙菌斑累積 10 天到 3 週，就足以出現臨床可見的發炎，清除後約一週回復；鄰接面最嚴重，舌側最輕。這些是一小群人的平均，不是任何一位病人的預測。"
+    },
+    {
+      "type": "p",
+      "text": "整段停止清潔期間，12 人都沒有回報疼痛或出血，而期末 12 人全數已有臨床牙齦炎。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Löe H, Theilade E, Jensen SB. Experimental gingivitis in man. J Periodontol 1965;36(3):177–187",
+      "publisher": "The Journal of Periodontology（American Academy of Periodontology／Wiley）",
+      "date": "1965-05",
+      "url": "https://doi.org/10.1902/jop.1965.36.3.177",
+      "note": "原論文。讀了前言、材料與方法、臨床結果與表 3–5、圖說、討論後半與摘要；表 1、2、6 與細菌學結果、討論開頭的部分段落未能取得"
+    },
+    {
+      "title": "PubMed 書目：Experimental gingivitis in man（PMID 14296927）",
+      "publisher": "National Library of Medicine",
+      "date": "1965-05",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14296927/",
+      "note": "核對作者、卷期頁（36:177–187，1965 年 5–6 月）與 DOI"
+    },
+    {
+      "title": "Theilade E, Wright WH, Jensen SB, Löe H. Experimental gingivitis in man. II. A longitudinal clinical and bacteriological investigation. J Periodontal Res 1966;1:1–13",
+      "publisher": "Journal of Periodontal Research（Wiley）",
+      "date": "1966",
+      "url": "https://doi.org/10.1111/j.1600-0765.1966.tb01842.x",
+      "note": "續篇；依摘要（PMID 4224181）"
+    },
+    {
+      "title": "This Week's Citation Classic：Theilade E 等，Experimental gingivitis in man. II（Else Theilade 撰寫的回顧）",
+      "publisher": "Current Contents（ISI），1987 年第 5 期，頁 16",
+      "date": "1987-02-02",
+      "url": "https://garfield.library.upenn.edu/classics1987/A1987F714600001.pdf",
+      "note": "研究背景、顯微鏡方法來源、續篇設計，以及 1965 年論文截至當時的被引次數"
+    },
+    {
+      "title": "Schätzle M, Löe H, Bürgin W, Ånerud Å, Boysen H, Lang NP. Clinical course of chronic periodontitis. I. Role of gingivitis. J Clin Periodontol 2003;30(10):887–901",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2003-10",
+      "url": "https://doi.org/10.1034/j.1600-051x.2003.00414.x",
+      "note": "依摘要（PMID 14710769）"
+    },
+    {
+      "title": "Trombelli L, Tatakis DN, Scapoli C, Bottega S, Orlandini E, Tosi M. Modulation of clinical expression of plaque-induced gingivitis. II. Identification of “high-responder” and “low-responder” subjects. J Clin Periodontol 2004;31(4):239–252",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2004-04",
+      "url": "https://doi.org/10.1111/j.1600-051x.2004.00478.x",
+      "note": "依摘要（PMID 15016251）"
+    },
+    {
+      "title": "Kistler JO, Booth V, Bradshaw DJ, Wade WG. Bacterial community development in experimental gingivitis. PLoS One 2013;8(8):e71227",
+      "publisher": "PLOS ONE",
+      "date": "2013-08-14",
+      "url": "https://doi.org/10.1371/journal.pone.0071227",
+      "note": "開放取用；依摘要（PMID 23967169）"
+    },
+    {
+      "title": "Trombelli L, Farina R, Silva CO, Tatakis DN. Plaque-induced gingivitis: Case definition and diagnostic considerations. J Periodontol 2018;89(Suppl 1):S46–S73",
+      "publisher": "Journal of Periodontology（AAP／EFP 2017 World Workshop）",
+      "date": "2018-06",
+      "url": "https://doi.org/10.1002/JPER.17-0576",
+      "note": "2017 年世界研討會牙齦炎病例定義；依摘要（PMID 29926936）"
+    },
+    {
+      "title": "Chapple ILC, Mealey BL, Van Dyke TE, et al. Periodontal health and gingival diseases and conditions on an intact and a reduced periodontium: Consensus report of workgroup 1 of the 2017 World Workshop. J Periodontol 2018;89(Suppl 1):S74–S84",
+      "publisher": "Journal of Periodontology（AAP／EFP 2017 World Workshop）",
+      "date": "2018-06",
+      "url": "https://doi.org/10.1002/JPER.17-0719",
+      "note": "第一工作小組共識報告；依摘要（PMID 29926944）"
+    }
+  ]
+}
