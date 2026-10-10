@@ -475,9 +475,11 @@ function viewSettings() {
         : "若播放器只播 30 秒試聽，請在同一個瀏覽器登入 open.spotify.com。"}</p>
     </section>
     <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。正刊五欄每日刊出；副刊依星期輪值三篇；觀測站只在有重要新進展時刊出。</p>
+      <p>稿件由雲端排程編輯在凌晨分班撰寫，每篇再由另一位編輯獨立查核事實、引文與圖片授權。若某一欄到 07:05 仍未完成，會自動換上預先寫好、查核過的備稿，本報不開天窗。</p>
       <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>副刊</th></tr></thead><tbody>
       ${wd.map(([k, l]) => `<tr><td>${l}</td><td>${rot[k].map((c) => esc(col(c).name)).join("、")}</td></tr>`).join("")}</tbody></table></div></div>
     </section>
+    ${isWebKitITP() && !isStandaloneIOS() ? `<section class="set"><h2>放到主畫面</h2><p>在 Safari 按下方的「分享」按鈕，選「加入主畫面」，知更鳥晨間記事就會像 App 一樣全螢幕開啟，也能離線讀已下載的文章。</p></section>` : ""}
     <footer class="colophon"><div class="latin">${esc(S.cfg.subtitle)}</div>資料更新：${esc((S.index.generated_at || "").replace("T", " ").slice(0, 16))} UTC</footer></div>`;
   // Redrawing replaces the buttons; put focus back on the one just pressed.
   const redraw = (g, v) => { viewSettings(); main.querySelector(`[data-g="${g}"] [data-v="${v}"]`)?.focus(); };
