@@ -1,0 +1,320 @@
+{
+  "column": "photo",
+  "date": "reserve",
+  "reserve_written": "2026-10-10",
+  "title": "光柱落在誰身上：德拉諾的芝加哥候車室",
+  "dek": "1943 年 1 月，傑克・德拉諾在芝加哥聯合車站拍下斜射的光柱。先看光落在哪裡、人站在哪裡，再比較底片數位檔與相紙印樣的差別。",
+  "topic_key": "photo:delano-lc-usw3-015486-e",
+  "updated_at": "2026-10-10T23:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://tile.loc.gov/storage-services/service/pnp/fsa/8d24000/8d24900/8d24901v.jpg",
+    "width": 1020,
+    "height": 1024,
+    "alt": "近正方形的黑白照片。挑高的室內大廳，上方偏左三扇鏤空格窗透進多道光柱，呈扇形斜射到地面，形成兩塊亮斑。左下兩名戴大盤帽的男子站在亮斑上交談，成為剪影；右側長椅坐著一排旅客，一名戴帽男子背對鏡頭走過。畫面四周可見底片片邊，右緣有手寫編號。",
+    "caption": "傑克・德拉諾攝，1943 年 1 月，芝加哥聯合車站候車室。這是美國國會圖書館由原始底片數位化的版本（數位檔 fsa 8d24901），保留了片邊與手寫底片號。本文的觀察以這個版本為準。",
+    "credit": "Jack Delano 攝；美國國會圖書館印刷與攝影部，FSA/OWI 攝影典藏（館藏號 LC-USW3-015486-E）",
+    "license": "Public domain（美國聯邦政府作品；館方標示 No known restrictions on publication）",
+    "license_url": "",
+    "source_url": "https://hdl.loc.gov/loc.pnp/fsa.8d24901",
+    "made": "1943 年 1 月"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "「Chicago, Illinois. In the waiting room of the Union Station」——美國國會圖書館（Library of Congress）目錄裡，這張照片的題名只有這一句，意思是「伊利諾州芝加哥，在聯合車站的候車室裡」（本文自譯）。拍攝者是傑克・德拉諾（Jack Delano），日期記為 1943 年 1 月，沒有記到哪一天。原件是一張硝酸片基黑白底片，館藏號 LC-USW3-015486-E。目錄註明題名與其他資料取自當年的圖說卡，底片在 1944 年由戰時新聞局（Office of War Information）海外圖片處移交國會圖書館。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這張照片屬於「農業安全局／戰時新聞局」（FSA/OWI）攝影典藏。這個政府攝影計畫由羅伊・史崔克（Roy Stryker）主持，先後隸屬重新安置局（1935–1937）、農業安全局（Farm Security Administration，1937–1942）與戰時新聞局（1942–1944），留下約 175,000 張黑白底片。德拉諾 1914 年生於今烏克蘭，1923 年隨家人移民美國，1940 年加入這個計畫，1946 年起定居波多黎各。據美國鐵道攝影與藝術中心（Center for Railroad Photography & Art）整理，他在 1942–1943 年受派記錄全國的鐵路，前後大約 6 個月；依日期與地點推斷，這張候車室的照片就落在這趟任務之中。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        ["攝影師", "傑克・德拉諾（Jack Delano，1914–1997）"],
+        ["題名", "Chicago, Illinois. In the waiting room of the Union Station（依圖說卡）"],
+        ["拍攝時間", "1943 年 1 月（目錄未記日）"],
+        ["地點", "美國伊利諾州芝加哥，聯合車站（Chicago Union Station）候車室"],
+        ["原件", "硝酸片基黑白底片 1 張，目錄記為 2 1/4 × 2 1/4 吋或更小"],
+        ["館藏號", "LC-USW3-015486-E；底片片邊手寫 OWI-15486-E"],
+        ["數位檔", "fsa 8d24901（由原始底片）、ppmsc 00251（由相紙印樣）、cph 3c30260（由印樣翻拍底片，複製號 LC-USZ62-130260）"],
+        ["收藏", "美國國會圖書館印刷與攝影部，FSA/OWI 攝影典藏；1944 年由戰時新聞局移交"],
+        ["權利", "美國聯邦政府作品，公版；館方標示 No known restrictions on publication"],
+        ["相機與曝光", "目錄未記載，本文不推測"]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "先看光：三扇高窗，一把展開的扇子"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "畫面上方偏左，三扇高窗並排，窗格是方格裡套著 X 形的鏤空花樣。鏤空處亮得發白，是全圖最亮的地方；窗框與窗格條則是黑的。光柱從窗口往下射，一出窗就分成好幾道，中間隔著較暗的縫，越往下越寬、越淡。左邊那扇窗的光柱幾乎垂直落向地面；越往右越斜，最右邊幾道斜得最厲害，一路伸到畫面右緣。整組光柱像一把從窗口展開的扇子。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.24, 0.12, 0.34, 0.24],
+      "position": "畫面上方偏左，約佔寬度三分之一",
+      "caption": "三扇高窗的鏤空窗格是全圖最亮處。光柱從窗口就分成好幾道，中間夾著較暗的縫。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "光柱落地的地方是兩塊亮斑：一塊在左下，正好托住兩名站著說話的男子；另一塊在右下角，上面沒有人。其餘的地板是灰的。越往畫面上方，牆面、柱子和天花板越暗，右上角幾乎全黑。中段遠處有三個直立的小亮塊和一盞小燈，看起來是遠方牆上的開口或燈具，細節辨認不出。左上的牆面上還有一盞亮著的壁燈。"
+    },
+    {
+      "type": "h",
+      "text": "再看人：兩個剪影，一排長椅"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "左下亮斑上的兩名男子面對面站著。兩人都戴大盤帽，左邊那位帽前有徽章、雙臂交叉；右邊那位穿長大衣，側身朝向同伴。光從他們身後來，朝向鏡頭的一面是暗的，輪廓卻被身後的亮處襯得很清楚。兩人的影子朝鏡頭方向，一路拖向畫面下緣。他們身後有兩塊發亮的招牌，放大後一塊讀得出「HARVEY」和「ETERIA」，中段被帽子擋住；另一塊寫著「PARMELEE LIMOUSINES」。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.25, 0.6, 0.26, 0.33],
+      "position": "畫面左下，約佔寬度四分之一",
+      "caption": "兩名戴大盤帽的男子站在亮斑上，背光成剪影，影子朝鏡頭拖長。身後招牌可辨認出 HARVEY、ETERIA 與 PARMELEE LIMOUSINES 等字。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "圖說卡沒有寫這兩人是誰，也沒有寫他們的職業。Wikimedia Commons 的編者把這張照片歸進「芝加哥警察局警員」分類，那是後人的判斷，不是 1943 年的紀錄。被擋住的那塊招牌，可能屬於 Fred Harvey 公司在站內經營的自助餐廳（cafeteria），英文維基百科的車站條目提到站內有過 Fred Harvey 餐廳；但這仍是本文的推測，照片上看不到完整的字。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "畫面右側的長椅上坐著一排旅客，看得出幾位女性：一位手托著臉頰，一位膝上放著東西。長椅前，一名戴帽、穿深色大衣的男子背對鏡頭，朝長椅走去。光柱從長椅前方斜穿而過，在人與鏡頭之間鋪了一層亮霧，越往右，坐著的人越淡。畫面最左邊是一片有直條溝紋的柱面，旁邊立著畫架式告示牌，放大後可讀出標題「Don't Waste Transportation」（別浪費運輸，本文自譯），內文太小，讀不出來；牌子前還站著一名戴帽的男子。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.5, 0.62, 0.42, 0.2],
+      "position": "畫面右側中下段，約佔寬度四成",
+      "caption": "長椅上的旅客坐在半暗處，光柱從他們前方斜穿過去，越往右人影越淡；一名戴帽男子背對鏡頭走向長椅。"
+    },
+    {
+      "type": "h",
+      "text": "光柱為什麼看得見，又為什麼呈扇形"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "光在空氣中前進，本身並不發亮；我們看得見光柱，是因為空氣裡的微粒和分子把一部分光散射進觀者眼中。大氣光學網站 Atmospheric Optics 解釋「雲隙光」（crepuscular rays）時，列出的散射物包括塵埃、無機鹽粒、有機氣溶膠與小水滴，空氣分子本身也有一份。同一個網站也說明，雲隙光看似從太陽向外散開，是透視造成的錯覺，實際的光線彼此平行。換個熟悉的例子：兩條平行的鐵軌，往遠處看也會收攏。照片無法告訴我們，候車室的空氣裡具體飄著什麼。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "把這個原理套到德拉諾的照片上，我的讀法是：光柱呈扇形，表示這些平行的光線大致朝鏡頭這一側射來，窗子在遠處，亮斑在近處。兩名男子的影子朝鏡頭拖長，指向同一件事——德拉諾是迎著光拍的。光柱看起來近乎垂直，也不代表太陽很高。在透視裡，平行光線會從同一個消失點向外輻射，正好落在消失點下方的那幾道，在畫面上就是直的。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "依芝加哥約北緯 41.9 度與 1 月的太陽赤緯推算，1 月正午的太陽高度只有約 25 到 31 度。我們不知道快門按下的時刻，這個推算只能說明：在這個季節，即使是一天裡太陽最高的時候，陽光也是低低地斜射進室內。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "照片裡看得到的光，全都出自那三扇高窗。國會圖書館的題名只說「候車室」；Commons 把這張照片歸在車站大廳（Great Hall）的分類下。大廳是車站的主候車室，挑高約 110 英尺（約 34 公尺），頂上是筒形拱天窗。英文維基百科引用芝加哥通勤鐵路 Metra 的資料，說這片天窗自第二次世界大戰起被遮黑，到 1990 年代才整修；但資料沒有說從哪一個月開始。拍攝時天窗是否已經遮黑，本文無法確定。"
+    },
+    {
+      "type": "h",
+      "text": "構圖：上方六成沒有人"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "從畫面上緣量到兩名男子的帽頂，大約佔全高的六成，這一段沒有任何人，只有牆、窗與光。德拉諾沒有把人拍大，空間的尺度先壓了下來。人在這裡比較像量尺：有了兩個站著的人，觀者才估得出窗有多高、光走了多遠。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "光柱也替視線鋪了路。眼睛容易先被最亮的窗口抓住，順著光柱往下滑，落到地上的亮斑，正好停在兩名制服男子身上。右下角那塊空著的亮斑是第二個落點，讓畫面不只一個焦點，也讓右側長椅上的旅客留在半暗處。我的讀法是：這像一座舞台，亮處站著演員，暗處坐著觀眾。至於德拉諾等了多久、有沒有請人站位，本文查不到文獻。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "正方形畫幅也有作用。目錄記載底片為 2 1/4 吋見方或更小，國會圖書館的底片數位檔幾乎是正方形。在正方形裡，左邊近乎垂直的光柱和右邊往外斜的光柱可以同時完整展開，扇形不會被切掉一邊。這是本文的推想；拍攝時用的是哪一台相機、什麼鏡頭、多快的快門，目錄沒有記載，本文不猜。"
+    },
+    {
+      "type": "h",
+      "text": "同一張底片，不只一種明暗"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "國會圖書館為這張照片保存了不只一個數位檔。fsa 8d24901 由原始底片直接數位化，本文頭圖用的就是它；ppmsc 00251 來自一張相紙印樣；cph 3c30260 則是先用黑白底片翻拍印樣，再數位化。目錄沒有記載這張印樣由誰、在何時放大。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "photo",
+      "src": "https://tile.loc.gov/storage-services/service/pnp/ppmsc/00200/00251v.jpg",
+      "width": 1024,
+      "height": 833,
+      "alt": "同一張照片的相紙印樣，裱在灰色卡紙上。上方貼著打字圖說條，寫有地點、日期、底片號與攝影者姓名，中間貼著一張標籤。照片比頭圖更暗，光柱與地上的亮斑更突出。",
+      "caption": "同一張底片的相紙印樣（國會圖書館數位檔 ppmsc 00251）。打字圖說條寫著 Chicago, Ill. Jan 1943. In the waiting room of the Union station. 與 PHOTO BY Jack Delano。印樣由誰、在何時放大，目錄沒有記載。",
+      "credit": "Jack Delano 攝；美國國會圖書館印刷與攝影部，FSA/OWI 攝影典藏",
+      "license": "Public domain（美國聯邦政府作品；館方標示 No known restrictions on publication）",
+      "license_url": "",
+      "source_url": "https://hdl.loc.gov/loc.pnp/ppmsc.00251",
+      "made": "底片 1943 年 1 月；印樣年代未載"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "印樣裱在灰色卡紙上，上方貼著打字圖說條：「Chicago, Ill. Jan 1943. In the waiting room of the Union station.」下一行先是「US OFFICE OF WAR INFORMA」，後半被一張印著「LC-USW 3- Negative No.」的標籤蓋住，接著是底片號「15486-E」與「PHOTO BY Jack Delano」；右上角另有手寫的「LC-USW3-15486」。照片的構圖和底片數位檔大致相同，但上緣收得較緊，窗子更靠近畫框頂端；片邊和手寫編號都不在印樣裡。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.9, 0.16, 0.08, 0.5],
+      "position": "頭圖右緣的底片片邊，由下往上讀",
+      "caption": "底片片邊上手寫的 OWI-15486-E，和館藏號 LC-USW3-015486-E 是同一組號碼。這行字只在底片數位檔裡看得到。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "兩者最大的差別在明暗。底片數位檔的灰階較平，左邊的溝紋柱面、遠處的牆和長椅後排都還看得出輪廓；印樣的暗部大多沉成全黑，光柱和地上的亮斑因此更搶眼，兩名男子更像剪紙。這個差別可能來自放大與顯影時的選擇，也可能來自兩次數位化的設定，目錄沒有交代，本文無法把兩者分開。"
+    },
+    {
+      "type": "table",
+      "title": "同一張照片的幾個版本",
+      "head": ["版本", "怎麼來的", "看得到的差別"],
+      "rows": [
+        ["底片數位檔 fsa 8d24901", "國會圖書館由原始硝酸片基底片數位化", "保留片邊與手寫底片號；灰階較平，暗部仍看得出柱面、牆與長椅後排"],
+        ["印樣數位檔 ppmsc 00251", "由一張裱在卡紙上的相紙印樣數位化", "附打字圖說條；上緣裁得較緊；暗部大多轉為全黑，光柱與亮斑更突出"],
+        ["翻拍底片 cph 3c30260", "先以黑白底片翻拍印樣，再數位化（複製號 LC-USZ62-130260）", "本文未取得館方檔案直接比對"],
+        ["網路上的重製檔", "使用者取用館方檔案後自行處理", "Wikimedia Commons 上幾個常見檔案的上傳紀錄，寫著裁切、降噪、提高對比或調整曲線"]
+      ],
+      "caption": "原創整理。資料依國會圖書館目錄（經 Wikimedia Commons 轉錄）、館方數位檔與 Commons 各檔案頁的上傳紀錄。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "那麼哪一個算原作？若以快門按下時留下的東西為準，是底片；若問 1940 年代的編輯與讀者可能看到什麼，則比較接近印樣。英文維基百科依國會圖書館資料指出，這批檔案當年為新聞用途放大過約 77,000 張不同的印樣。網路上流傳最廣的版本，又常是第三手處理過的檔案。本文頭圖選用底片數位檔，因為它保留的資訊最多，連片邊編號都在；但它未必是德拉諾或當年編輯想讓人看到的明暗。"
+    },
+    {
+      "type": "p",
+      "text": "圖說卡上那一行字沒有提到光，也沒有提到那兩名男子，只交代了地點：芝加哥，聯合車站，候車室。這張照片最讓人記得的東西，在官方紀錄裡一個字也沒有。"
+    },
+    {
+      "type": "exercise",
+      "title": "原創假設練習：找出光從哪裡來",
+      "steps": [
+        "找一個有窗、晴天時陽光會直射進來的室內空間；在光線斜射進來的時段前往。",
+        "先不拍。觀察空氣中看不看得到光柱，或只看得到地上的光斑，記下來。",
+        "分別背對窗、側對窗、面對窗各看一次，記下哪個位置最容易看見光柱。",
+        "面對窗拍一張，讓窗、光的路徑和地上的光斑同時進入畫面；再請一位同意入鏡的人站進光斑，或放一個物件代替。",
+        "把自己的照片和德拉諾的照片並排，比較三件事：影子朝哪裡、光柱是平行還是呈放射狀、人佔畫面多高。"
+      ],
+      "criteria": [
+        "能用影子的方向說明自己是順光、側光還是逆光拍攝。",
+        "畫面裡同時有光源、光的路徑與光的落點三者。",
+        "能說出自己的場景裡，光柱看得見或看不見的可能原因，並分清哪些是觀察、哪些是推測。"
+      ],
+      "note": "這是本報設計的原創練習，不是德拉諾的工作方法。不要為了讓光柱更明顯而在室內點菸或燃燒物品；在公共空間拍攝時遵守場地規定，避免拍下可辨識的陌生人正面。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Chicago, Illinois. In the waiting room of the Union Station",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "date": "1943-01",
+      "url": "https://www.loc.gov/item/2017843834/",
+      "note": "館藏目錄：攝影者、日期、底片規格、館藏號、移交紀錄與三個數位檔編號。館方網頁本次無法直接開啟，目錄內容經 Wikimedia Commons 檔案頁轉錄核對"
+    },
+    {
+      "title": "數位檔 fsa 8d24901（由原始底片）",
+      "publisher": "Library of Congress",
+      "url": "https://hdl.loc.gov/loc.pnp/fsa.8d24901",
+      "note": "頭圖；圖檔取自館方 tile.loc.gov 參考影像（1020 × 1024）"
+    },
+    {
+      "title": "數位檔 ppmsc 00251（由相紙印樣）",
+      "publisher": "Library of Congress",
+      "url": "https://hdl.loc.gov/loc.pnp/ppmsc.00251",
+      "note": "正文印樣圖；圖檔取自館方 tile.loc.gov 參考影像（1024 × 833）"
+    },
+    {
+      "title": "File:Chicago Union Station fsa.8d24901u.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2008-08-23",
+      "url": "https://commons.wikimedia.org/wiki/File:Chicago_Union_Station_fsa.8d24901u.jpg",
+      "note": "轉錄國會圖書館目錄全文（館藏號、複製號、數位檔編號、移交紀錄）；上傳紀錄註明裁切、縮小、提高對比等處理"
+    },
+    {
+      "title": "File:Chicago, Illinois. In the waiting room of the Union Station LOC 3548859587.jpg",
+      "publisher": "Wikimedia Commons（轉存國會圖書館 Flickr 帳號）",
+      "url": "https://commons.wikimedia.org/wiki/File:Chicago,_Illinois._In_the_waiting_room_of_the_Union_Station_LOC_3548859587.jpg",
+      "note": "國會圖書館著錄：Rights Info: No known restrictions on publication；底片 2 1/4 x 2 1/4 inches or smaller"
+    },
+    {
+      "title": "File:Chicago Union Station 1943.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Chicago_Union_Station_1943.jpg",
+      "note": "由 LC-USZ62-130260 翻拍底片製作；檔案說明寫明裁切、降噪與縮放"
+    },
+    {
+      "title": "File:Chicago Union Station 1943 v2.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2025-07-30",
+      "url": "https://commons.wikimedia.org/wiki/File:Chicago_Union_Station_1943_v2.jpg",
+      "note": "上傳紀錄註明調整曲線（Curve）與對比；本文用它的高解析度檔核對招牌文字，不作為刊出圖"
+    },
+    {
+      "title": "The Buildings That Linked the Nation: New Book on Railroad Stations",
+      "publisher": "Library of Congress, Picture This blog（Jeff Bridgers）",
+      "date": "2011-11-04",
+      "url": "https://blogs.loc.gov/picturethis/2011/11/the-buildings-that-linked-the-nation-new-book-on-railroad-stations/",
+      "note": "館方部落格以此照片配圖，標為 Jack Delano 攝，1943 年 1 月"
+    },
+    {
+      "title": "Railroaders: Jack Delano's Homefront Photography",
+      "publisher": "Center for Railroad Photography & Art",
+      "url": "https://railphoto-art.org/exhibits/delano/",
+      "note": "德拉諾 1942–1943 年受 FSA-OWI 指派記錄全國鐵路，約 6 個月"
+    },
+    {
+      "title": "Jack Delano",
+      "publisher": "International Center of Photography",
+      "url": "https://www.icp.org/browse/archive/constituents/jack-delano",
+      "note": "生卒年、生於烏克蘭、1923 年移民美國、1946 年定居波多黎各"
+    },
+    {
+      "title": "Farm Security Administration",
+      "publisher": "Wikipedia（英文）",
+      "url": "https://en.wikipedia.org/wiki/Farm_Security_Administration",
+      "note": "計畫隸屬機構與年份、約 175,000 張黑白底片、德拉諾 1940 年加入、約 77,000 張新聞用印樣；條目引用國會圖書館館藏說明"
+    },
+    {
+      "title": "Chicago Union Station",
+      "publisher": "Wikipedia（英文）",
+      "url": "https://en.wikipedia.org/wiki/Chicago_Union_Station",
+      "note": "大廳為主候車室、挑高 110 英尺與筒形拱天窗；天窗自二戰起遮黑（引 Metra）；站內 Fred Harvey 餐廳"
+    },
+    {
+      "title": "Crepuscular Rays",
+      "publisher": "Atmospheric Optics",
+      "date": "2024-12-16",
+      "url": "https://www.atoptics.co.uk/blog/crepuscular-rays/",
+      "note": "光柱可見的散射來源；光柱看似散開是透視效果"
+    },
+    {
+      "title": "General Solar Position Calculations",
+      "publisher": "NOAA Global Monitoring Division",
+      "url": "https://gml.noaa.gov/grad/solcalc/solareqns.PDF",
+      "note": "太陽赤緯與天頂角公式；本文以芝加哥北緯 41°52′55″（取自英文維基百科 Chicago 條目）代入，推得 1 月 1 日與 31 日正午太陽高度約 25 度與 31 度"
+    }
+  ]
+}

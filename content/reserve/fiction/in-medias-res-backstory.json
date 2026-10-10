@@ -1,0 +1,303 @@
+{
+  "column": "fiction",
+  "date": "reserve",
+  "reserve_written": "2026-10-10",
+  "title": "開場從頭講起，還是切進事情中間",
+  "dek": "史詩奇幻常想先交代三百年歷史再讓主角登場。本文用原創示範比較兩種開場，再看《奧德賽》為何把主角的往事留到第 9 卷才讓他自己說。",
+  "topic_key": "fiction:in-medias-res-backstory",
+  "updated_at": "2026-10-10T23:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Francesco_Hayez_028.jpg/1280px-Francesco_Hayez_028.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/6/63/Francesco_Hayez_028.jpg",
+    "width": 1280,
+    "height": 913,
+    "alt": "一幅橫幅油畫。古典柱廊下聚著許多穿長袍的人；左側一名穿紅袍、留鬍鬚的男子坐在台座上，伸手指向前方，身旁圍著幾位女子；畫面中央一名披紅褐色斗篷的男子站著，舉起手臂遮住臉；右前方一位白鬚老人坐著，懷裡抱著豎琴，抬頭向上；左後方立著一尊持盾持矛的青銅坐像，背景台階上另有幾個人影。",
+    "caption": "海耶茲（Francesco Hayez）《奧德修斯在阿爾基諾奧斯的宮廷》，油彩、畫布，約 1814–1816 年，為那不勒斯國王繆拉（Joachim Murat）訂製，現藏那不勒斯卡波迪蒙特博物館（Museo di Capodimonte）。畫的是《奧德賽》第 8 卷：盲眼歌手在宴席上唱特洛伊戰爭的往事，被唱到的人就在席間，還沒有人知道他是誰。",
+    "credit": "Francesco Hayez；那不勒斯卡波迪蒙特博物館藏；影像：The Yorck Project（2002）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Francesco_Hayez_028.jpg",
+    "made": "約 1814–1816"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "許多史詩奇幻的初稿，第一頁是一段歷史：哪個王朝在哪一年崩塌、哪條河改了道、哪個家族背上罪名。這些交代完了，主角才走進來。作者的理由不難懂：不先講清楚，怕讀者看不懂後面。這一篇只處理一個問題：長篇的開場該從事情的起點講起，還是直接切進事情中間；被跳過的那段過去，又該在什麼時候、由誰說出來。"
+    },
+    {
+      "type": "p",
+      "text": "這個問題有個兩千年前的說法。羅馬詩人賀拉斯（Horace）在《詩藝》（Ars Poetica）裡稱讚荷馬（Homer），說好的史詩詩人講特洛伊戰爭，不會從那顆蛋講起：",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "nec gemino bellum Troianum orditur ab ouo; / semper ad euentum festinat et in medias res / non secus ac notas auditorem rapit",
+      "text": "他講特洛伊戰爭，不從那顆雙生的蛋講起；他總是趕向結局，把聽者一把拉進事情中間，彷彿那些事聽者早已知道。",
+      "cite": "賀拉斯《詩藝》第 147–149 行，拉丁文依 The Latin Library 所收文本；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "那顆蛋是勒達（Leda）的蛋。神話裡宙斯化身天鵝與她結合，海倫（Helen）從蛋裡出生；從那顆蛋講特洛伊戰爭，等於從最遠的源頭講起。拉丁文 in medias res（進入事情中間）後來成了敘事術語。比賀拉斯更早，亞里斯多德（Aristotle）在《詩學》（Poetics）第 23 章也稱讚過荷馬：特洛伊戰爭明明有頭有尾，荷馬卻不打算把整場戰爭寫成一部詩，因為那太長，無法一次看完；硬要縮短，又會被太多事件纏住。他只取其中一段，再把別的事件當插曲帶進來。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "敘事學把這件事拆成兩條時間：事件發生的順序，和事件被講出來的順序。依《敘事學線上手冊》（the living handbook of narratology）的〈時間〉（Time）條目，法國學者熱奈特（Gérard Genette）把兩者之間的錯位稱為「時序錯置」（anachrony），往回講的叫「倒敘」（analepsis），往前預告的叫「預敘」（prolepsis）。從中間切入，必然留下一段要倒回去講的過去。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "所以「從中間切入」從來不等於「不交代背景」。被跳過的過去沒有消失，只是被挪到後面。真正要決定的是三件事：開場讓讀者知道多少、讓讀者想知道什麼、背景最後由誰在什麼壓力下說出來。下面用一個原創的示範世界，把同一個開場寫成兩個版本，再看荷馬怎麼處理，最後補上第三個版本。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "示範世界：蘆城的第三道水閘"
+    },
+    {
+      "type": "p",
+      "text": "以下設定為本文原創。蘆城建在一片蘆葦三角洲上，靠九道水閘擋住海潮。四十年前的大潮之夜，第三閘從城內被打開，地勢最低的下灣區整片淹沒。當晚值班的守閘人柯嬤被判是她開的閘，從此不得再碰閘門。主角葦生十七歲，是柯嬤的孫女，現在是第三閘的學徒；在城裡不少人眼中，這件事本身就是冒犯。故事最深的祕密，是那一晚柯嬤確實開了閘：上游的堤已經裂了，不開第三閘，淹的會是整座城。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "h",
+      "text": "版本 A：從四十年前講起"
+    },
+    {
+      "type": "p",
+      "text": "蘆城建在九河入海的三角洲上，城牆外是望不到邊的蘆葦，城牆內是九道水閘。四十年前的秋天，一場百年不遇的大潮撲向城東。就在潮頭最高的那一刻，第三閘從城內被打開了。下灣區一夜沒入水中，三百多戶人家只剩屋頂露在水面。值班的守閘人柯嬤被押上議事廳，她沒有辯解，被判終身不得再碰閘門。從那以後，城裡人提起柯家，總要壓低聲音。四十年後，柯嬤的孫女葦生成了第三閘的學徒。這一年雨季來得特別早，城裡派來了新的閘務查驗官。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "p",
+      "text": "**資訊。**不到兩百字，讀者已經拿到這個世界最重要的一件往事：哪一晚、誰、做了什麼、付出什麼。**期待。**期待反而很平。全段唯一的鉤子是「她沒有辯解」，可是它夾在一串摘要裡，和「三百多戶」「四十年後」用同樣的速度被帶過。讀者若有期待，期待的對象是一段已經結束的過去；葦生這個人到段末還沒做任何事。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**情緒。**距離很遠。淹水、審判、壓低聲音，都是敘述者用總結的口吻報告，讀者看見的是結果，不是任何人的反應。**代價。**這一段裡沒有角色在付代價。替背景買單的是讀者：先記住城名、閘數、區名、人名，才換到故事開始。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**失敗條件。**讀者還沒有理由在乎這個世界時，這種寫法最容易失敗，而長篇的第一頁通常正是這個時刻。它還有一個暗傷：讀者一開始就知道柯嬤被判了罪，後文再寫到審判，揭露的力量已經提前花掉。不過版本 A 不是錯的寫法。當這段過去本身就是一個沒解開的問題，而且敘述聲音自有吸引力，例如傳說、編年史或說書人的口吻，從頭講起可以成立。條件是短，並且在段末留下一個讀者帶得走的疑問。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "版本 B：從查驗官摸閘鏈寫起"
+    },
+    {
+      "type": "p",
+      "text": "雨下到第三天，查驗官才來。他不打傘，沿著第三閘的鐵鏈一節一節摸下去，摸到最底那節，停住，把手指湊到鼻前聞了聞。「新油。誰上的？」葦生站在閘房門口，手插在圍裙口袋裡，指尖碰到那把鑰匙冰涼的齒。「我。鏈子會鏽。」查驗官抬頭看她，看了很久，像在核對一張舊畫像。「姓什麼？」「柯。」閘房裡兩個老閘工同時停下手上的活。查驗官沒再問，只在本子上寫了一行字，走到牆邊，用指節敲了敲那道漆成黑色的刻痕。刻痕比葦生的頭頂還高一截。「這條線，妳知道是哪一年的水？」葦生沒有回答。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "p",
+      "text": "**資訊。**讀者拿到的事實少得多：一座水閘、一個學徒、一個查驗官、一把她不想讓人看見的鑰匙、一條比人還高的水位線、一個讓旁人停手的姓氏。四十年前、大潮、下灣區、審判，一個字都沒出現。讀者不知道發生過什麼，但知道「發生過什麼」，也知道那件事和「柯」這個姓有關。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**期待。**至少三條線同時打開：鑰匙從哪裡來、查驗官寫了什麼、刻痕是哪一年的水。關鍵在於三條線都指向同一段過去。懸念沒有散開，而是收向同一個點；讀者等的不是一堂歷史課，而是葦生被逼到非面對那段過去不可的時刻。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**情緒與代價。**距離很近。讀者跟著她的指尖碰到鑰匙，跟著老閘工停手而屏息。葦生已經在付代價：報出姓氏，換來一屋子沉默；不回答，等於讓查驗官自己下結論。開場的每個動作都有後果。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**失敗條件。**從中間切入最常見的失敗，是把「讀者不知道」誤當成「讀者想知道」。開場若同時丟出五個專有名詞、三個派系和兩段沒解釋的預言，讀者得到的是困惑，不是懸念。版本 B 靠兩個節制撐住：此刻的衝突看得懂，他懷疑她，她在隱瞞；沒解釋的東西只有一個方向。另一個失敗在後面：作者若把過去一直壓著，到第十章才用三頁說明一次倒出來，等於把版本 A 搬到第十章，問題並沒有解決。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "《奧德賽》把背景留到第 9 卷才講"
+    },
+    {
+      "type": "p",
+      "text": "被賀拉斯拿來當範例的荷馬，把這件事做得很徹底。《奧德賽》（Odyssey）第 1 卷開頭請繆思女神從這些事當中隨便哪一處講起，希臘原文是 ἁμόθεν（第 1 卷第 10 行），默里（A. T. Murray）1919 年的英譯作 beginning where thou wilt。第 1 到第 4 卷主要跟著奧德修斯（Odysseus）的兒子忒勒馬科斯（Telemachus）。奧德修斯本人到第 5 卷才出場，第一次被看見時，他坐在卡呂普索（Calypso）島上的海邊，眼淚沒有乾過（第 5 卷第 150–151 行）。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "他離開特洛伊之後那些有名的漂泊，獨眼巨人、女神喀耳刻（Circe）、冥府，荷馬一直沒講。到了第 8 卷，奧德修斯已漂到費埃克斯人（Phaeacians）的島上，在國王阿爾基諾奧斯（Alcinous）的宴席間，聽盲眼歌手得摩多科斯（Demodocus）唱木馬攻城，唱的正是他自己。他流下淚來，瞞過了所有人，只有國王注意到。國王讓歌手停下，接著問了四件事：你在家鄉被叫作什麼名字、從哪個國家來、漂泊到過哪些地方、為什麼聽到希臘人在特洛伊的命運就哭（第 8 卷第 521–585 行）。",
+      "tag": "史料"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.37,
+        0.33,
+        0.38,
+        0.67
+      ],
+      "position": "畫面中央偏右，從中段到底邊，約佔寬度三分之一強",
+      "caption": "頭圖局部。依畫題，左側舉臂遮臉的是奧德修斯，前景抱著豎琴、白鬚的老人是歌手得摩多科斯，身旁戴花冠的年輕人湊近看他。海耶茲把歌聲和眼淚放進同一個畫面：別人正在唱他的故事，他還沒開口。遮臉的動作近於第 8 卷第 84–85 行：他聽第一首歌時，拉起紫色斗篷蓋住頭、遮住臉。"
+    },
+    {
+      "type": "p",
+      "text": "第 9 卷一開頭，奧德修斯先反問一句：",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "τί πρῶτόν τοι ἔπειτα, τί δ᾽ ὑστάτιον καταλέξω;",
+      "text": "那麼，我先對你說什麼，最後說什麼？",
+      "cite": "《奧德賽》第 9 卷第 14 行，希臘文依 Perseus 數位圖書館所收默里 1919 年希英對照本；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "接著他報出名字：他是拉厄耳忒斯（Laertes）之子奧德修斯（第 9 卷第 19 行）。從這裡到第 12 卷末，整整四卷是他用第一人稱講的漂泊，也就是史詩裡最早發生的那一段。第 13 卷第一行，聽的人全都靜默無聲；之後費埃克斯人用船送他回伊塔卡（Ithaca），把還在熟睡的他放在沙灘上（第 13 卷第 116–119 行）。",
+      "tag": "史料"
+    },
+    {
+      "type": "svg",
+      "title": "《奧德賽》的講述順序與事件順序",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 290\" role=\"img\" aria-label=\"《奧德賽》講述順序與事件順序對照示意\"><text x=\"12\" y=\"56\" font-size=\"13\" font-weight=\"600\">講述順序</text><text class=\"muted\" x=\"12\" y=\"74\" font-size=\"11\">（卷次）</text><text x=\"12\" y=\"206\" font-size=\"13\" font-weight=\"600\">事件順序</text><text class=\"muted\" x=\"12\" y=\"224\" font-size=\"11\">（奧德修斯本人）</text><rect class=\"soft\" x=\"124\" y=\"38\" width=\"96\" height=\"46\" rx=\"4\" stroke-dasharray=\"4 3\"/><text class=\"muted\" x=\"172.0\" y=\"55\" font-size=\"11\" text-anchor=\"middle\">第 1–4 卷</text><text class=\"muted\" x=\"172.0\" y=\"73\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">忒勒馬科斯</text><rect class=\"soft\" x=\"226\" y=\"38\" width=\"80\" height=\"46\" rx=\"4\"/><text class=\"muted\" x=\"266.0\" y=\"55\" font-size=\"11\" text-anchor=\"middle\">第 5 卷</text><text x=\"266.0\" y=\"73\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">卡呂普索島</text><rect class=\"soft\" x=\"312\" y=\"38\" width=\"84\" height=\"46\" rx=\"4\"/><text class=\"muted\" x=\"354.0\" y=\"55\" font-size=\"11\" text-anchor=\"middle\">第 6–8 卷</text><text x=\"354.0\" y=\"73\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">費埃克斯</text><rect class=\"soft\" x=\"402\" y=\"38\" width=\"100\" height=\"46\" rx=\"4\"/><rect class=\"accent line\" x=\"402\" y=\"38\" width=\"100\" height=\"46\" rx=\"4\" stroke-width=\"2\"/><text class=\"accent\" x=\"452.0\" y=\"55\" font-size=\"11\" text-anchor=\"middle\">第 9–12 卷</text><text class=\"accent\" x=\"452.0\" y=\"73\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">自述漂泊</text><rect class=\"soft\" x=\"508\" y=\"38\" width=\"122\" height=\"46\" rx=\"4\"/><text class=\"muted\" x=\"569.0\" y=\"55\" font-size=\"11\" text-anchor=\"middle\">第 13–24 卷</text><text x=\"569.0\" y=\"73\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">伊塔卡</text><rect class=\"soft\" x=\"124\" y=\"188\" width=\"168\" height=\"46\" rx=\"4\"/><rect class=\"accent line\" x=\"124\" y=\"188\" width=\"168\" height=\"46\" rx=\"4\" stroke-width=\"2\"/><text class=\"accent\" x=\"208.0\" y=\"205\" font-size=\"11\" text-anchor=\"middle\">特洛伊陷落之後</text><text class=\"accent\" x=\"208.0\" y=\"223\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">漂泊多年</text><rect class=\"soft\" x=\"298\" y=\"188\" width=\"96\" height=\"46\" rx=\"4\"/><text class=\"muted\" x=\"346.0\" y=\"205\" font-size=\"11\" text-anchor=\"middle\">　</text><text x=\"346.0\" y=\"223\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">卡呂普索島</text><rect class=\"soft\" x=\"400\" y=\"188\" width=\"96\" height=\"46\" rx=\"4\"/><text class=\"muted\" x=\"448.0\" y=\"205\" font-size=\"11\" text-anchor=\"middle\">　</text><text x=\"448.0\" y=\"223\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">費埃克斯</text><rect class=\"soft\" x=\"502\" y=\"188\" width=\"128\" height=\"46\" rx=\"4\"/><text class=\"muted\" x=\"566.0\" y=\"205\" font-size=\"11\" text-anchor=\"middle\">　</text><text x=\"566.0\" y=\"223\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">回到伊塔卡</text><line class=\"ink line\" x1=\"266.0\" y1=\"84.0\" x2=\"340.4\" y2=\"178.9\" stroke-width=\"1.6\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"346.0,186.0 336.9,181.7 344.0,176.1\"/><line class=\"ink line\" x1=\"354.0\" y1=\"84.0\" x2=\"441.9\" y2=\"179.4\" stroke-width=\"1.6\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"448.0,186.0 438.6,182.4 445.2,176.3\"/><line class=\"ink line\" x1=\"566.0\" y1=\"84.0\" x2=\"566.0\" y2=\"177.0\" stroke-width=\"1.6\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"566.0,186.0 561.5,177.0 570.5,177.0\"/><line class=\"accent line\" x1=\"452.0\" y1=\"84.0\" x2=\"222.3\" y2=\"182.5\" stroke-width=\"2.2\"/><polygon class=\"accent\" stroke-width=\"0\" points=\"214.0,186.0 220.5,178.3 224.0,186.6\"/><text class=\"accent\" x=\"236\" y=\"152\" font-size=\"12\" text-anchor=\"end\">倒敘：第 9–12 卷</text><text class=\"accent\" x=\"236\" y=\"168\" font-size=\"12\" text-anchor=\"end\">講的是最早發生的事</text><text class=\"muted\" x=\"172\" y=\"112\" font-size=\"11\" text-anchor=\"middle\">這四卷是另一條線，</text><text class=\"muted\" x=\"172\" y=\"127\" font-size=\"11\" text-anchor=\"middle\">下方不列</text><line class=\"muted line\" x1=\"124.0\" y1=\"258.0\" x2=\"622.0\" y2=\"258.0\" stroke-width=\"1.2\"/><polygon class=\"muted\" stroke-width=\"0\" points=\"630.0,258.0 622.0,262.5 622.0,253.5\"/><text class=\"muted\" x=\"124\" y=\"278\" font-size=\"11\">較早</text><text class=\"muted\" x=\"630\" y=\"278\" font-size=\"11\" text-anchor=\"end\">較晚</text></svg>",
+      "caption": "原創示意，不按比例。上排是各卷的講述順序，下排是奧德修斯本人經歷的先後；第 9–12 卷的倒敘指回最早的漂泊。卷次依 Perseus 數位圖書館所收默里英譯本與希臘文本，第 1–4 卷與第 9–12 卷的分段另參考英文維基百科〈Odyssey〉條目。"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，荷馬讓這段背景同時滿足三個條件。第一，場景裡有人非問不可：國王要知道客人的國家和城市，船才能送他回去（第 8 卷第 554–556 行）。第二，說出來有代價：直到國王開口，費埃克斯人還不知道這位客人是誰。他接下來要講的往事裡，正有一場因報名字而起的大禍：刺瞎獨眼巨人之後，他向巨人報出自己的名字、父名和家鄉伊塔卡，巨人隨即向父親波塞頓（Poseidon）祈求，讓他回不了家；就算回得了，也要晚歸、失去所有同伴（第 9 卷第 503–535 行）。在陌生人面前再報一次名字，分量不輕。第三，讀者早就在等：我們看他在海邊哭、在宴席上哭，早想知道他經歷過什麼。背景在這裡不是作者的說明，而是一個角色的行動。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "版本 C：讓背景成為一場非說不可的戲"
+    },
+    {
+      "type": "p",
+      "text": "把這三個條件搬回蘆城。下面這一場設定在小說中段，查驗官已經查出第三閘的內鎖最近被人用鑰匙開過。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "閘房裡只剩他們兩個。查驗官把本子攤在桌上，那一頁只寫了一行：柯家，第三閘，鑰匙？「我七歲那年住在下灣。」他說，「水退以前，我在屋頂上待了兩天。」葦生把手從圍裙口袋裡拿出來，把鑰匙放上桌。這是她第一次讓人看見它。按城規，私藏閘鑰是死罪。「嬤嬤說，那天晚上上游的堤先裂了。不開第三閘，淹的就不只是下灣。」「證據呢？」「沒有。她說，開過閘的人，沒有資格替自己辯解。」查驗官盯著那把鑰匙，很久沒有碰它。「妳為什麼現在才說？」「因為你剛才也說了。」葦生說，「你在屋頂上待了兩天。」",
+      "tag": "原創示範"
+    },
+    {
+      "type": "p",
+      "text": "**資訊。**這一場給出的背景，比版本 A 開頭那段還少：沒有年份、沒有戶數、沒有議事廳。可是給出的每一項都是答案：鑰匙從哪裡來、刻痕是誰的水、柯嬤為什麼不辯解。版本 B 開出的三條線，在這裡一起收束。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**期待與情緒。**舊問題解開，新問題馬上出現：沒有證據，查驗官會不會信？上游的堤真的裂過嗎？情緒來自交換：同一場水從兩邊講出來，一邊是屋頂上的兩天，一邊是一個家族四十年的沉默。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**代價。**葦生把鑰匙放上桌，等於把命交到對方手上；查驗官先說出自己的童年，也是先交出一點東西。這段背景讀起來不像說明，是因為說出它的人正在冒險，和奧德修斯在第 9 卷報出名字時的處境相同。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**失敗條件。**這一場若來得太早，讀者還沒累積足夠的疑問，它只是一段比較生動的說明。查驗官若只負責發問，她答、他毫無反應，對話就退化成加了引號的設定說明。還有一點容易忽略：柯嬤的理由是轉述，讀者無從驗證。這保留了下一層揭露的空間，也留下一筆債，後文必須回答「她說的是真的嗎」。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "讀者知道多少，又想知道多少"
+    },
+    {
+      "type": "svg",
+      "title": "兩種開場的資訊曲線",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 320\" role=\"img\" aria-label=\"版本 A 與版本 B、C 的讀者已知與想知道程度示意曲線\"><line class=\"ink line\" x1=\"40\" y1=\"22\" x2=\"72\" y2=\"22\" stroke-width=\"2.2\"/><text x=\"80\" y=\"26\" font-size=\"12\">讀者已知的往事</text><line class=\"accent line\" x1=\"230\" y1=\"22\" x2=\"262\" y2=\"22\" stroke-width=\"2.2\" stroke-dasharray=\"6 4\"/><text x=\"270\" y=\"26\" font-size=\"12\">讀者想知道的程度</text><text x=\"40\" y=\"62\" font-size=\"13\" font-weight=\"600\">版本 A：從四十年前講起</text><line class=\"muted line\" x1=\"40\" y1=\"76\" x2=\"40\" y2=\"262\" stroke-width=\"1\"/><line class=\"muted line\" x1=\"40\" y1=\"262\" x2=\"300\" y2=\"262\" stroke-width=\"1\"/><text class=\"muted\" x=\"36\" y=\"88\" font-size=\"10\" text-anchor=\"end\">高</text><text class=\"muted\" x=\"36\" y=\"262\" font-size=\"10\" text-anchor=\"end\">低</text><text x=\"350\" y=\"62\" font-size=\"13\" font-weight=\"600\">版本 B → 版本 C</text><line class=\"muted line\" x1=\"350\" y1=\"76\" x2=\"350\" y2=\"262\" stroke-width=\"1\"/><line class=\"muted line\" x1=\"350\" y1=\"262\" x2=\"610\" y2=\"262\" stroke-width=\"1\"/><text class=\"muted\" x=\"346\" y=\"88\" font-size=\"10\" text-anchor=\"end\">高</text><text class=\"muted\" x=\"346\" y=\"262\" font-size=\"10\" text-anchor=\"end\">低</text><text class=\"muted\" x=\"40\" y=\"280\" font-size=\"11\">開場</text><text class=\"muted\" x=\"300\" y=\"280\" font-size=\"11\" text-anchor=\"end\">後文</text><polyline class=\"ink line\" stroke-width=\"2.2\" points=\"40,258 62,104 300,98\"/><polyline class=\"accent line\" stroke-width=\"2.2\" stroke-dasharray=\"6 4\" points=\"40,258 62,208 120,214 300,222\"/><text class=\"muted\" x=\"70\" y=\"196\" font-size=\"11\">「她沒有辯解」</text><line class=\"gold line\" x1=\"508\" y1=\"76\" x2=\"508\" y2=\"262\" stroke-width=\"1.2\" stroke-dasharray=\"2 3\"/><text class=\"gold\" x=\"502\" y=\"96\" font-size=\"11\" text-anchor=\"end\">版本 C 那一場</text><text class=\"muted\" x=\"350\" y=\"280\" font-size=\"11\">開場（版本 B）</text><text class=\"muted\" x=\"610\" y=\"280\" font-size=\"11\" text-anchor=\"end\">中段</text><polyline class=\"ink line\" stroke-width=\"2.2\" points=\"350,258 380,246 420,238 470,232 508,228 518,128 610,120\"/><polyline class=\"accent line\" stroke-width=\"2.2\" stroke-dasharray=\"6 4\" points=\"350,258 378,184 420,150 470,118 508,106 522,196 610,160\"/><text class=\"muted\" x=\"384\" y=\"200\" font-size=\"11\">鑰匙、姓氏、刻痕</text><text class=\"muted\" x=\"634\" y=\"226\" font-size=\"11\" text-anchor=\"end\">新問題：她說的是真的嗎</text><text class=\"muted\" x=\"40\" y=\"306\" font-size=\"10.5\">原創示意，曲線是本文的推想，不是讀者實測；不按比例。</text></svg>",
+      "caption": "原創示意，不按比例。實線是讀者對「四十年前那一夜」已知多少，虛線是讀者想知道的程度。版本 A 一開場就把已知推到最高；版本 B 讓想知道先升高，到版本 C 那一場才一次兌現，並立刻開出新問題。曲線是本文對三段原創示範的推想，不是讀者實測。"
+    },
+    {
+      "type": "p",
+      "text": "三個版本的差別，不在背景有沒有交代，而在交代的時機對不對得上讀者想知道的程度。版本 A 讓「已知」在開場衝到最高，「想知道」卻一直很低；版本 B 讓「已知」緩慢上升，「想知道」先被推高，到版本 C 那一場才一次兌現。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "開場真正需要的背景，大概只有兩種：讓讀者看懂此刻衝突的最少資訊，以及讓讀者想追下去的那一個問題。其餘都可以延後，延後到某個場景裡有人非問不可、說的人要付出代價的時候。賀拉斯那句話的後半常被略過：荷馬把聽者拉進事情中間，「彷彿那些事聽者早已知道」。切入中間的作者，要寫得像讀者已經知道該知道的，而不是把讀者丟在不知道裡。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "exercise",
+      "title": "把一段開場背景搬進場景",
+      "steps": [
+        "從自己的稿子挑出主角登場前的背景說明（歷史、設定、前情），整段抄出，記下字數。",
+        "把這段拆成一條條事實，只圈出讀者在第一章非知道不可的，最多 2 條；其餘標上「延後」。",
+        "為每條延後的事實寫一行場景條件：在場誰非問不可、為什麼是這時候問、說出來的人要付出什麼。",
+        "重寫開場：從主角正在做、而且可能做不成的一件事寫起；延後的背景只透過物件、稱呼、旁人的反應露出，每 300 字最多一個沒解釋的專有名詞。",
+        "把新舊兩個開場的前 1,000 字，分別交給兩位沒讀過設定的讀者，請他們各寫下兩句：「主角此刻想要什麼」「我最想知道的一件事」。"
+      ],
+      "criteria": [
+        "讀新開場的人說得出主角此刻想要什麼、擋住主角的是什麼；說不出，代表切入點太早或衝突沒寫清楚。",
+        "讀新開場的人寫下的「最想知道的一件事」，指向你標為延後的那段背景。",
+        "讀新開場的人標記看不懂的專有名詞不超過 2 個。",
+        "延後的背景在後文出場時，說出它的角色付出了一項可以指名的代價，例如身分、關係、安全或承諾。"
+      ],
+      "note": "這項練習比的是時機，不是字數。改寫後的開場可能更長，只要背景不再擋在主角前面就算做到。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Horace, Ars Poetica（拉丁文本）",
+      "publisher": "The Latin Library",
+      "url": "https://www.thelatinlibrary.com/horace/arspoet.shtml",
+      "note": "第 146–149 行：ab ouo、in medias res"
+    },
+    {
+      "title": "Homer, Odyssey（希臘文本，A. T. Murray 編譯，1919）",
+      "publisher": "Perseus Digital Library, Tufts University",
+      "date": "1919",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0135%3Abook%3D9%3Acard%3D1",
+      "note": "第 1 卷第 10 行 ἁμόθεν；第 9 卷第 14、19 行"
+    },
+    {
+      "title": "Homer, The Odyssey, translated by A. T. Murray（1919）",
+      "publisher": "Perseus Digital Library, Tufts University",
+      "date": "1919",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0136%3Abook%3D8%3Acard%3D521",
+      "note": "第 1 卷第 10–11 行；第 5 卷第 150–151 行；第 8 卷第 63–64、84–95、499–585 行；第 9 卷第 503–535 行；第 13 卷第 1、116–119 行"
+    },
+    {
+      "title": "Aristotle, Poetics, translated by W. H. Fyfe",
+      "publisher": "Perseus Digital Library, Tufts University",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0056%3Asection%3D1459a",
+      "note": "1459a（第 23 章）：荷馬不把整場特洛伊戰爭寫成一部詩"
+    },
+    {
+      "title": "Time",
+      "publisher": "the living handbook of narratology（Michael Scheffel、Antonius Weixler、Lukas Werner）",
+      "date": "2014-04-19",
+      "url": "https://www-archiv.fdm.uni-hamburg.de/lhn/node/106.html",
+      "note": "熱奈特的 order、anachrony、analepsis、prolepsis"
+    },
+    {
+      "title": "Ab ovo",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ab_ovo",
+      "note": "gemino ab ovo 指勒達的蛋與海倫的出生"
+    },
+    {
+      "title": "Odyssey",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Odyssey",
+      "note": "第 1–4 卷 Telemachy、第 9–12 卷 Apologoi 的分段；第 9–12 卷所述漂泊"
+    },
+    {
+      "title": "Odysseus at the Court of Alcinous",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Odysseus_at_the_Court_of_Alcinous",
+      "note": "海耶茲畫作的年代、訂製經過與收藏地"
+    },
+    {
+      "title": "File:Francesco Hayez 028.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Francesco_Hayez_028.jpg",
+      "note": "頭圖；作品資料與公版授權"
+    }
+  ]
+}

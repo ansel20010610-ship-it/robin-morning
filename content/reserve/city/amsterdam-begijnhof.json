@@ -1,0 +1,533 @@
+{
+  "column": "city",
+  "date": "reserve",
+  "reserve_written": "2026-10-10",
+  "title": "阿姆斯特丹貝居安會院：兩道門與一圈後牆",
+  "dek": "阿姆斯特丹市中心有座比街面低近一公尺的院子，房子全部面朝內、背對舊水道。從 1574 年的舊門走到南側門樓，看這道邊界怎麼造、又怎麼打開。",
+  "topic_key": "city:amsterdam-begijnhof",
+  "updated_at": "2026-10-10T23:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Amsterdam_%28NL%29%2C_Begijnhof_--_2015_--_7219.jpg/1280px-Amsterdam_%28NL%29%2C_Begijnhof_--_2015_--_7219.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Amsterdam_%28NL%29%2C_Begijnhof_--_2015_--_7219.jpg/3840px-Amsterdam_%28NL%29%2C_Begijnhof_--_2015_--_7219.jpg",
+    "width": 1280,
+    "height": 869,
+    "alt": "一片草地後方排著幾棟高窄的紅磚住宅，白色窗框，山牆頂端有白色石雕渦卷；左起第二棟的山牆頂上立著一尊戴金冠的彩色聖母像。前景草地上有一尊淺色石雕人像，右側有一棵深色葉子的垂枝樹。",
+    "caption": "貝居安會院北側草地與西側住宅，2015 年 6 月 27 日攝。左起依序是 28、27、26 號：28 號山牆有兩個圓窗，27 號山牆頂立著戴冠聖母。前景石像是 1920 年的聖心像，Johannes Petrus Maas 作。2015 年的樣子，不代表現況。",
+    "credit": "Dietmar Rabich／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Amsterdam_(NL),_Begijnhof_--_2015_--_7219.jpg",
+    "made": "2015"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "阿姆斯特丹的貝居安會院（Begijnhof）比周圍的市中心低將近一公尺。阿姆斯特丹市古蹟局（Bureau Monumentenzorg）的說明是：院子仍停在中世紀的街面高度。它也是中世紀阿姆斯特丹唯一建立的「hofje」（院落），因此落在最內圈的辛格運河（Singel）以內。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "這座院子值得細看的，不只是哪一棟老房子，而是它的邊界怎麼做成：沒有另砌圍牆，四面是住宅自己的後牆，後牆外原本是水。本文沿一條路線走：從卡爾弗街（Kalverstraat）旁的窄巷進東側舊門，繞過北側草地與院子中央的教堂，經過 34 號木屋，從南邊 Spui 的門樓出去。"
+    },
+    {
+      "type": "facts",
+      "title": "地點資料",
+      "items": [
+        [
+          "城市",
+          "荷蘭阿姆斯特丹，辛格運河以內的舊城區"
+        ],
+        [
+          "地點",
+          "Begijnhof（貝居安會院）。東側入口在 Begijnensteeg 與 Gedempte Begijnensloot 轉角，南側入口在 Spui"
+        ],
+        [
+          "建立",
+          "1346 年的文件稱貝居安會的「beghynhuys」（一棟房子）；1389 年的特許狀才首次稱為「hof」（院）"
+        ],
+        [
+          "建物年代",
+          "多數住宅為 15–16 世紀的木構架，臨院立面多屬 17–18 世紀；東側舊門 1574 年，1907 年整修；南側門樓約 1907 年（市古蹟局記為 19 世紀）"
+        ],
+        [
+          "設計者",
+          "沒有單一設計者，逐棟累積而成；天主教小堂由建築師 Philips Vingboons 設計，1671 年動工"
+        ],
+        [
+          "保護",
+          "本文查閱的各棟國家古蹟（rijksmonument）登錄日期均為 1970 年 4 月 2 日"
+        ],
+        [
+          "目前用途",
+          "住宅（市古蹟局 2000 年的網頁記為 105 名女性住戶）、英國歸正教會、天主教貝居安會院小堂。截至 2026 年 10 月 10 日，小堂網站列出的遊客入口在 Gedempte Begijnensloot，全年 09:30–18:00"
+        ]
+      ]
+    },
+    {
+      "type": "svg",
+      "title": "從舊門到 Spui 門樓",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 470\"><path class=\"ink line\" d=\"M352 40 L352 14\" stroke-width=\"1.4\"/><path class=\"ink\" d=\"M352 8 L347 18 L357 18 Z\" stroke-width=\"1\"/><text x=\"352\" y=\"53\" font-size=\"10\" text-anchor=\"middle\">北</text><path class=\"gold line\" d=\"M274.1 18.8 L267.7 79.0 L265.5 124.1 L261.2 147.8 L250.5 220.8 L250.5 244.5 L244.0 285.3 L241.9 319.8 L241.9 367.1\" stroke-width=\"2.2\" stroke-dasharray=\"5 4\" opacity=\"0.9\"/><path class=\"gold line\" d=\"M20.4 405.8 L59.1 375.6 L145.2 382.1 L239.8 386.4 L347.2 377.8\" stroke-width=\"2.2\" stroke-dasharray=\"5 4\" opacity=\"0.9\"/><path class=\"gold line\" d=\"M54.9 371.3 L52.7 261.7 L59.1 225.1 L69.9 186.4 L78.5 164.9 L106.5 83.2 L117.2 57.4 L136.6 10.2\" stroke-width=\"2.2\" stroke-dasharray=\"5 4\" opacity=\"0.9\"/><polygon class=\"soft\" points=\"143.0,137.0 153.8,106.9 177.4,55.3 192.4,23.0 201.0,8.0 347.2,8.0 308.6,14.4 299.9,48.9 293.5,94.0 263.4,124.1 244.0,117.6 229.0,96.1 190.3,89.7 179.5,113.3 162.3,124.1\" stroke-width=\"0.8\" stroke-dasharray=\"2 2\"/><path class=\"muted line\" d=\"M321.4 379.9 L319.3 326.2 L319.3 287.5 L321.4 274.6 L336.5 214.4 L364.4 94.0\" stroke-width=\"3\" opacity=\"0.55\"/><path class=\"muted line\" d=\"M241.9 244.5 L252.6 240.2 L282.8 229.4 L321.4 216.5 L336.5 214.4\" stroke-width=\"2.2\" opacity=\"0.55\"/><polygon class=\"soft\" points=\"252.6,128.4 235.4,229.4 237.6,248.8 229.0,287.5 226.8,313.3 160.2,345.6 121.5,358.4 115.0,341.2 110.8,315.4 110.8,268.1 119.3,231.6 155.9,147.8 220.4,117.6 229.0,130.6\" stroke-width=\"1.2\"/><polygon class=\"paper\" points=\"179.5,171.4 207.5,156.3 211.8,158.5 203.2,227.3 170.9,242.3 149.4,248.8 147.3,244.5 173.1,182.2\" stroke-width=\"0.8\"/><polygon class=\"paper\" points=\"147.3,276.8 155.9,278.9 162.3,296.1 181.7,289.6 186.0,293.9 183.8,298.2 149.4,313.3 140.8,283.2\" stroke-width=\"0.8\"/><polygon class=\"muted\" points=\"220.4,259.5 207.5,268.1 209.7,276.8 164.5,287.5 162.3,276.8 153.8,274.6 151.6,259.5 173.1,253.1 192.4,242.3 213.9,240.2 229.0,244.5 226.8,253.1\" stroke-width=\"0.6\" opacity=\"0.45\"/><polygon class=\"ink\" points=\"106.5,255.2 123.6,255.2 123.6,276.8 106.5,276.8\" stroke-width=\"0.6\" opacity=\"0.75\"/><path class=\"accent line\" d=\"M347.2 210.1 L336.5 214.4 L282.8 229.4 L252.6 240.2 L237.6 242.3 L213.9 238.0 L194.6 238.0 L143.0 255.2 L136.6 272.4 L136.6 281.1 L149.4 321.9 L153.8 328.3 L160.2 345.6 L160.2 371.3\" stroke-width=\"1.8\" stroke-dasharray=\"1.5 3.5\" stroke-linecap=\"round\"/><text class=\"muted\" x=\"256.9\" y=\"33.8\" font-size=\"9\" text-anchor=\"middle\">原聖露西修道院址</text><text class=\"muted\" x=\"256.9\" y=\"55.3\" font-size=\"9\" text-anchor=\"middle\">（後為孤兒院、博物館）</text><text class=\"muted\" x=\"330.1\" y=\"319.8\" font-size=\"9.5\" text-anchor=\"middle\" transform=\"rotate(-82 330.1 319.8)\">Kalverstraat</text><text class=\"muted\" x=\"306.4\" y=\"212.2\" font-size=\"8.5\" text-anchor=\"middle\" transform=\"rotate(-17 306.4 212.2)\">Begijnensteeg</text><text class=\"gold\" x=\"282.8\" y=\"152.0\" font-size=\"9\" text-anchor=\"middle\" transform=\"rotate(-82 282.8 152.0)\">原貝居安溝（已填平）</text><text class=\"gold\" x=\"42.0\" y=\"190.8\" font-size=\"9\" text-anchor=\"middle\" transform=\"rotate(-78 42.0 190.8)\">原 Nieuwezijds Voorburgwal 運河</text><text class=\"gold\" x=\"196.8\" y=\"405.8\" font-size=\"9\" text-anchor=\"middle\">原 Spui 運河（今街道與廣場）</text><text x=\"181.7\" y=\"199.3\" font-size=\"9.5\" text-anchor=\"middle\">北草地</text><text x=\"164.5\" y=\"304.7\" font-size=\"8.5\" text-anchor=\"middle\">南草地</text><text x=\"192.4\" y=\"270.3\" font-size=\"8.5\" text-anchor=\"middle\" font-weight=\"700\">英國歸正教會</text><text x=\"102.1\" y=\"246.6\" font-size=\"8.5\" text-anchor=\"end\">天主教小堂</text><text class=\"muted\" x=\"102.1\" y=\"268.1\" font-size=\"8.5\" text-anchor=\"end\">（29 號）</text><text class=\"muted\" x=\"175.2\" y=\"124.1\" font-size=\"8.5\" text-anchor=\"middle\">住宅圍成一圈，正面朝內</text><circle class=\"accent\" cx=\"237.6\" cy=\"242.3\" r=\"8\"/><text class=\"paper\" x=\"237.6\" y=\"245.8\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"700\" stroke=\"none\">1</text><circle class=\"accent\" cx=\"147.3\" cy=\"216.5\" r=\"8\"/><text class=\"paper\" x=\"147.3\" y=\"220.0\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"700\" stroke=\"none\">2</text><circle class=\"accent\" cx=\"136.6\" cy=\"268.1\" r=\"8\"/><text class=\"paper\" x=\"136.6\" y=\"271.6\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"700\" stroke=\"none\">3</text><circle class=\"accent\" cx=\"123.6\" cy=\"317.6\" r=\"8\"/><text class=\"paper\" x=\"123.6\" y=\"321.1\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"700\" stroke=\"none\">4</text><circle class=\"accent\" cx=\"160.2\" cy=\"347.7\" r=\"8\"/><text class=\"paper\" x=\"160.2\" y=\"351.2\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"700\" stroke=\"none\">5</text><circle class=\"accent\" cx=\"18\" cy=\"428.5\" r=\"7\"/><text class=\"paper\" x=\"18\" y=\"432\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"700\" stroke=\"none\">1</text><text x=\"29\" y=\"432\" font-size=\"9.5\">東側舊門（1574）</text><circle class=\"accent\" cx=\"142\" cy=\"428.5\" r=\"7\"/><text class=\"paper\" x=\"142\" y=\"432\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"700\" stroke=\"none\">2</text><text x=\"153\" y=\"432\" font-size=\"9.5\">26–28 號立面</text><circle class=\"accent\" cx=\"266\" cy=\"428.5\" r=\"7\"/><text class=\"paper\" x=\"266\" y=\"432\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"700\" stroke=\"none\">3</text><text x=\"277\" y=\"432\" font-size=\"9.5\">兩座教堂相對的入口</text><circle class=\"accent\" cx=\"18\" cy=\"448.5\" r=\"7\"/><text class=\"paper\" x=\"18\" y=\"452\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"700\" stroke=\"none\">4</text><text x=\"29\" y=\"452\" font-size=\"9.5\">34 號木屋</text><circle class=\"accent\" cx=\"142\" cy=\"448.5\" r=\"7\"/><text class=\"paper\" x=\"142\" y=\"452\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"700\" stroke=\"none\">5</text><text x=\"153\" y=\"452\" font-size=\"9.5\">Spui 側門樓</text><path class=\"gold line\" d=\"M260 448 L282 448\" stroke-width=\"2.2\" stroke-dasharray=\"5 4\"/><text x=\"287\" y=\"451\" font-size=\"9.5\">已填平的水道</text><text class=\"muted\" x=\"368\" y=\"466\" font-size=\"8.5\" text-anchor=\"end\">示意，不按比例</text></svg>",
+      "caption": "示意，不按比例。依 OpenStreetMap 圖資（2026 年 10 月 10 日查詢）、阿姆斯特丹市古蹟局網頁與 1760 年 Tirion 版畫繪製；虛線水道只標大致位置，不作導航用途。"
+    },
+    {
+      "type": "h",
+      "text": "舊門：1574 年，原本唯一的入口"
+    },
+    {
+      "type": "p",
+      "text": "卡爾弗街南北走向，從它往西彎進 Begijnensteeg（貝居安巷），巷底就是東側舊門。據市古蹟局，院子原本四面被水圍住：西邊是 Nieuwezijds Voorburgwal 運河，南邊是 Spui，東邊是貝居安溝（Begijnensloot）；唯一的通道是 Begijnensteeg 這頭的小門，門前有橋跨過貝居安溝。這條溝後來填平，街名多了「Gedempte」一字，意思是「已填平的」。",
+      "tag": "史實"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Amsterdam_%28NL%29%2C_Begijnensteeg_--_2015_--_7204.jpg/1280px-Amsterdam_%28NL%29%2C_Begijnensteeg_--_2015_--_7204.jpg",
+      "width": 1280,
+      "height": 1930,
+      "alt": "紅磚門樓的上半部：最上方三角形山牆內嵌一塊白色石板，刻著 ANNO 1574，兩旁各有一個小人像；下方磚砌拱圈正中是一尊戴冠女子的彩色雕像，她張開斗篷，護著身邊幾個小人像；拱下的石樑刻著 RENOV ANNO 1907。",
+      "caption": "東側舊門的門頭，2015 年 6 月 27 日攝。石板刻「ANNO 1574」，拱心是聖烏蘇拉以斗篷護住同伴的雕像，門下石樑刻「RENOV ANNO 1907」，即 1907 年整修。2015 年的樣子，不代表現況。",
+      "credit": "Dietmar Rabich／Wikimedia Commons",
+      "made": "2015",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Amsterdam_(NL),_Begijnensteeg_--_2015_--_7204.jpg"
+    },
+    {
+      "type": "p",
+      "text": "市古蹟局記錄這道門建於 1574 年、1907 年整修，門上的兩組年份正好對得上。拱心的石像是聖烏蘇拉（Saint Ursula），阿姆斯特丹貝居安會的主保聖人。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "1574 年離 1578 年只差四年。1578 年阿姆斯特丹發生「變革」（Alteratie），天主教市政府被撤換，新教掌握市政。院子北邊的聖露西修道院（Sint Luciënklooster）在這一年被沒收，建築歸市民孤兒院（Burgerweeshuis）使用，直到 1960 年；1975 年起改為阿姆斯特丹博物館。貝居安會院卻留了下來，市古蹟局給的理由很具體：院裡的房子是貝居安會女性各自的私產。",
+      "tag": "史實"
+    },
+    {
+      "type": "h",
+      "text": "四面後牆：1760 年版畫裡的「分隔溝」"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Begijnhof_te_Amsterdam%2C_ca._1544%2C_RP-P-2019-343.jpg/1280px-Begijnhof_te_Amsterdam%2C_ca._1544%2C_RP-P-2019-343.jpg",
+      "width": 1280,
+      "height": 1937,
+      "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Begijnhof_te_Amsterdam%2C_ca._1544%2C_RP-P-2019-343.jpg/3840px-Begijnhof_te_Amsterdam%2C_ca._1544%2C_RP-P-2019-343.jpg",
+      "alt": "一張直式版畫。上半部是一幅大帷幔，中間的渦卷飾框寫著三行圖例；帷幔上畫著鳥瞰的長方形院落：一圈尖頂房子圍住中間的空地，空地一側有一座帶尖塔的教堂，院落兩側是水道。下半部是從院外看過去的一排房屋與教堂尖塔。",
+      "caption": "〈't Begyn-Hof, Noch in wezen〉（貝居安會院，仍存，本文自譯），蝕刻與雕版，版面約 27.2 × 17 公分，作者不詳，Isaak Tirion 1760 年出版，收入 Jan Wagenaar 阿姆斯特丹史的第 1 冊。荷蘭國家博物館藏，RP-P-2019-343。",
+      "credit": "作者不詳；出版者 Isaak Tirion；荷蘭國家博物館（Rijksmuseum）藏",
+      "made": "1760",
+      "depicts": "約 1544 年",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Begijnhof_te_Amsterdam,_ca._1544,_RP-P-2019-343.jpg"
+    },
+    {
+      "type": "p",
+      "text": "這張版畫出版時，畫中的景象已經過去兩百多年。荷蘭國家博物館的著錄說明：Tirion 為 1578 年以前的修道院與教堂製作這一系列圖版時，依據的是 Cornelis Anthonisz. 1544 年的阿姆斯特丹地圖。所以它是 18 世紀對 16 世紀的重建，不是現場寫生。",
+      "tag": "史料"
+    },
+    {
+      "type": "detail",
+      "of": "f2",
+      "region": [
+        0.388,
+        0.198,
+        0.19,
+        0.036
+      ],
+      "position": "畫面上方帷幔中央的圖例，約佔寬度五分之一",
+      "caption": "圖例三行：1. 廣場；2. 教堂，現為英國教堂；3. 「Schey-sloot tusschen 't Hof en de Huysen in de Kalver-straat」，即「院子與卡爾弗街房屋之間的分隔溝」（本文自譯）。"
+    },
+    {
+      "type": "detail",
+      "of": "f2",
+      "region": [
+        0.2,
+        0.29,
+        0.6,
+        0.27
+      ],
+      "position": "畫面中段的鳥瞰圖，約佔寬度六成",
+      "caption": "鳥瞰局部。房子圍成長方形，正面朝向中間空地「1」，教堂「2」立在空地一側；左上標「't Spuy」，右上標「Voor-Burgwal」，兩邊都是水道；下方「3」那條溝外，標的是「Bintwyk，現為卡爾弗街」的房屋，右下角標「聖露西修道院的一部分」。"
+    },
+    {
+      "type": "p",
+      "text": "圖上看得最清楚的是邊界的做法。房子背靠水道排成一圈，正面全部朝內；第三條邊被標成「分隔溝」，明白寫出它的用途是把院子和卡爾弗街的房屋隔開。市古蹟局的說法相同：這些房子的後牆原本就立在水裡。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是：貝居安會院用不著另砌圍牆，因為住宅本身就是牆。一間間房子的後牆接起來，外面再圍一圈水，等於一道有人住的城牆；能進出的只有一扇門和門前那座橋。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "院內：立面比房子年輕"
+    },
+    {
+      "type": "p",
+      "text": "進了舊門，北側是一片草地。荷蘭文叫這種草地「bleekveld」，字面意思是漂白用的草地，舊時把洗好的布攤在草上曬白。市古蹟局記載院內有兩片這樣的草地，中間隔著教堂。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "草地四周不是常見的一排矮小救濟屋。市古蹟局數出 47 棟一般城市住宅，各有各的立面，多數立面屬於 17、18 世紀，房子本身通常更老：其中 18 棟仍保有哥德式木構架。這也是阿姆斯特丹唯一一個住戶地址直接用院名的 hofje，門牌寫的就是「Begijnhof」加號碼。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "國家古蹟登錄把這種「新臉舊骨」寫得很清楚。1 號是 15 世紀後半到 16 世紀上半的房子，配 18 世紀上半葉的頸狀山牆，內部仍是木構架；35 號同樣是 15、16 世紀之交的房子，立面則屬 18 世紀，登錄者還注明頂上的尖頂大概不是原物。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，換門面不必拆房子：木構架留在裡面，臨院子的一面隨時代改成磚造，再加上當時流行的山牆輪廓。走在院子裡看到的，多半是 17、18 世紀的臉。",
+      "tag": "推論"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.345,
+        0.08,
+        0.11,
+        0.14
+      ],
+      "position": "頭圖上方偏左，27 號山牆頂端，約佔寬度一成",
+      "caption": "27 號山牆頂端：戴冠的聖母抱著聖嬰，下方飾帶可見「S.MA」字樣。國家古蹟登錄寫作戴冠聖母與「S.MARIA」飾帶，山牆年代標為 18 世紀第二個二十五年。"
+    },
+    {
+      "type": "p",
+      "text": "這些立面也是招牌。19 號的立面石（gevelsteen）刻著聖家族從埃及返回的場景，配一句荷蘭文經句「UYT EGYPTEN HEBBE IK MIJNEN ZOON GEROEPEN」，意思是「我從埃及召出我的兒子」（本文自譯）；23 號的立面石刻聖烏蘇拉與她的同伴；27 號山牆頂端是戴冠的聖母。登錄把 19 號山牆定在 1721 年，23 號的石板定在 17 世紀。市古蹟局也說，院內的立面石大多帶有明顯的天主教色彩。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "1578 年後，天主教在阿姆斯特丹不能公開禮拜，院內這些 17、18 世紀的天主教圖像卻集中在朝內的立面上。由此推想，院外的人看不到，院裡的人天天看到；這圈後牆擋住的不只是路，也是視線。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "兩座教堂，入口相對"
+    },
+    {
+      "type": "p",
+      "text": "院子正中是英國歸正教會（English Reformed Church，荷蘭文稱 Engelse Kerk），原本是貝居安會的教堂。據該會的沿革，院內 1397 年已有小堂，1417 年在現址動工新教堂，經過 1421 年、1452 年兩場大火，1492 年完工。國家古蹟登錄說它是 15 世紀的單一中殿哥德式教堂，帶西塔，17 世紀向南加了一道側廊。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "1578 年到 1607 年間這座教堂的狀態，來源說法不一。英國歸正教會的沿革說，教堂藏在院內、外面看不見，貝居安會女性還能在裡面禮拜；市古蹟局只寫教堂必須讓出。可以確定的是，1607 年阿姆斯特丹的市長們把這座「閒置」的教堂交給說英語的長老會信徒，最早的會眾是英格蘭與蘇格蘭商人，以及宗教流亡者。荷蘭人從此叫它「英國教堂」。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "據天主教小堂自己的沿革，教堂讓出後，貝居安會女性先在教堂的聖器室望彌撒，後來連聖器室也不准用，只好在院內的住宅輪流舉行。1665 年開始規劃新堂，市府批准了，條件是從外面不能看出那是教堂；設計者是天主教建築師 Philips Vingboons。國家古蹟登錄把 29 號記為「1671 年開始興建的隱藏教堂」，市古蹟局則說它由兩棟住宅改成。",
+      "tag": "史實"
+    },
+    {
+      "type": "quote",
+      "original": "Voorgevel onder rechte lijst, enigszins in de trant van een woonhuisgevel",
+      "text": "正立面以平直的簷口收頂，有幾分住宅立面的樣子。",
+      "cite": "荷蘭國家古蹟登錄，第 368 號（Begijnhof 29）；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "市古蹟局寫明，這座隱藏教堂改建在英國教堂入口的正對面。兩個宗派的教堂，隔著院內一條小路門對門。為紀念 1345 年「阿姆斯特丹聖體奇蹟」而建的聖地教堂（Heilige Stede）在 1908 年拆除後，這座小堂成了奇蹟教堂（Mirakelkerk）。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "院裡也有一則關於教堂牆內牆外的故事。市古蹟局記載，貝居安會女性 Cornelia Arens 在 1654 年 10 月 14 日過世，遺願是葬在溝裡（goot，指排水溝），而不是她認為已被褻瀆的教堂裡；傳說她先被葬進教堂，棺木隔天卻出現在教堂旁的溝裡，前後三次，最後才如她所願。",
+      "tag": "傳聞"
+    },
+    {
+      "type": "h",
+      "text": "34 號木屋：被法令淘汰的外牆"
+    },
+    {
+      "type": "figure",
+      "id": "f3",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Huizen%2C_Houten_Huys_Het%2C_Bestanddeelnr_073-0013.jpg/1280px-Huizen%2C_Houten_Huys_Het%2C_Bestanddeelnr_073-0013.jpg",
+      "width": 1280,
+      "height": 2313,
+      "alt": "黑白照片：一棟窄長的房子，上兩層與尖頂山牆都由直條木板構成，二樓一整排小格窗，頂層略向前挑出；底層是淺色牆面與一扇門，門邊寫著 Het Houten Huys，左側有門牌 34；右側鄰屋是磚造。",
+      "caption": "34 號「木屋」（Het Houten Huys），1964 年 5 月 11 日 Joop van Bilsen 為 Anefo 通訊社攝，荷蘭國家檔案館藏。1964 年的樣子，不代表現況。",
+      "credit": "Joop van Bilsen／Anefo；荷蘭國家檔案館（Nationaal Archief）",
+      "made": "1964",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Huizen,_Houten_Huys_Het,_Bestanddeelnr_073-0013.jpg"
+    },
+    {
+      "type": "p",
+      "text": "往南走，院子西南角的 34 號立面全是木板。國家古蹟登錄的描述是：前後兩面都是立在石造基腳上的木造尖頂山牆，上層向外挑出，內部是哥德式木構架，屋內還留著建造當時繪製的「聖母與獨角獸」隔板畫。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "它的年代沒有定論。1970 年的登錄寫「XV B」，即 15 世紀後半；荷蘭文維基百科的國家古蹟清單寫「1528 年或稍後」。市古蹟局只說，這樣的木屋在阿姆斯特丹僅剩兩棟。本文不在兩個年代之間取捨。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "木立面為什麼這麼少？建築史學者 Gabri van Tussenbroek 的研究提供了背景：1452 年的大火燒掉阿姆斯特丹約四分之三，市府雖鼓勵用磚和瓦，城市大致仍以木構重建；1521 年，神聖羅馬帝國皇帝查理五世（Charles V）下令拆除既有木造建築、改建石造，市府在 1531 年訂出完整的建築規範。他根據建築考古與年輪定年指出，約 1530 年起房屋大量翻新，更早的房子在城裡幾乎找不到。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，34 號留下的不只是一棟老房子，而是一種被法令一步步淘汰的外牆做法。院裡其他保有木構架的房子，多半走了另一條路：骨架留著，外牆換成磚。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "Spui 門樓：從後牆開出的入口"
+    },
+    {
+      "type": "figure",
+      "id": "f4",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/George_Hendrik_Breitner%2C_Afb_010104000036.jpg/1280px-George_Hendrik_Breitner%2C_Afb_010104000036.jpg",
+      "width": 1280,
+      "height": 929,
+      "alt": "黑白照片：鋪石街道邊一排四、五層的老房子，立面樸素，窗戶大小不一；中間一棟底層有一道帶門框的門。前景有光禿的樹與兩根路燈柱，左側停著一輛馬拉的貨車，門邊有兩輛手推車。",
+      "caption": "布萊特納（George Hendrik Breitner）攝於 1904–1907 年間：從 Spui 看 Begijnhof 35 到 39 號的背面，阿姆斯特丹市檔案館著錄中間那道門為「舊門」。1904–1907 年的樣子，不代表現況。",
+      "credit": "George Hendrik Breitner；阿姆斯特丹市檔案館（Stadsarchief Amsterdam）藏，010104000036",
+      "made": "1904–1907",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:George_Hendrik_Breitner,_Afb_010104000036.jpg"
+    },
+    {
+      "type": "p",
+      "text": "34 號再往南就是院子南緣，這一排房子背對 Spui。市古蹟局說，Spui 這頭的入口要到 19 世紀才有，同一頁又說這裡原有一道約 1725 年的小門，在 19 世紀被現在的門樓取代。兩句的年代不容易對齊，本文照錄。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "畫家布萊特納（George Hendrik Breitner）在 1904 到 1907 年間拍下這一側：照片裡已是鋪石街道，有馬車和街燈，35 到 39 號的背面平直樸素，中間一道門，市檔案館的著錄稱它「舊門」。對照院內那些雕花山牆，同一排房子的兩面差別很大：朝院子的是門面，朝 Spui 的原本是泡在水裡的後牆。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "figure",
+      "id": "f5",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Poort_Begijnhof%2C_Spui.jpg/1280px-Poort_Begijnhof%2C_Spui.jpg",
+      "width": 1280,
+      "height": 2276,
+      "alt": "紅磚建築底層的一道圓拱門，拱上的石雕刻著 BEGIJNHOF，上方壁龕裡立著一尊長袍人像；木門敞開，門內是有拱頂的通道，地面鋪著圖案磚，通道盡頭可見綠樹。門左側牆上有一塊金屬按鈕面板。",
+      "caption": "Spui 側門樓的入口，2018 年 8 月 30 日攝，拱上刻「BEGIJNHOF」。2018 年的樣子，不代表現況。",
+      "credit": "Ceescamel／Wikimedia Commons",
+      "made": "2018",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Poort_Begijnhof,_Spui.jpg"
+    },
+    {
+      "type": "p",
+      "text": "現在的門樓正面可見「1907」字樣與鐵製牆錨（2018 年的 Commons 照片），一張 1910 年的明信片稱它「新門」（Nieuwe poort）。維基共享資源的分類說明記它 1907 年建成，建築師 Anton J. Joling，雕刻 Rien Hack。這些都比市古蹟局寫的「19 世紀」晚了幾年。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，從水邊的後牆，到一座刻著院名、立著雕像的門樓，南側的邊界在 20 世紀初正式翻成了正面。拱門左側牆上那塊按鈕面板，本文推測是住戶的門鈴：這道門同時也是住家的大門。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "住在這圈牆裡的人"
+    },
+    {
+      "type": "p",
+      "text": "市古蹟局的說明是：這座院子不是私人捐建的養老院，比較像修道院，但貝居安會女性比修女自由：她們發守貞誓，卻隨時可以離開院子去結婚。最後一位貝居安會女性 Antonia 修女（本名 Agatha Kaptein）在 1971 年 5 月 23 日過世，享年 84 歲。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "之後院子仍是女性的住宅。市古蹟局記載，1979 年翻修前院內有 140 戶，約 110 戶單房、約 25 戶兩房，住著同樣人數的女性；翻修後只剩兩房與三房的住宅，住戶人數從此固定為 105 人。這份記載所在的網頁，存檔時間是 2000 年。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "截至 2026 年 10 月 10 日，小堂網站列出的遊客入口地址是 Gedempte Begijnensloot：1574 年那道舊門所在、曾經架橋跨過貝居安溝的那條街。",
+      "tag": "官方說法"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Begijnhof (Spui/Begijnensloot), vr 1389",
+      "publisher": "Bureau Monumentenzorg Amsterdam（網頁存檔）",
+      "date": "2000-12-06",
+      "url": "https://web.archive.org/web/20001206073000/http://www.bmz.amsterdam.nl:80/adam/nl/hofjes/begijnhof.html",
+      "note": "地勢、四面環水與唯一入口、47 棟住宅與 18 棟木構架、兩道門、1578 年後存續、兩座教堂、Cornelia Arens、最後一位貝居安會女性、1979 年翻修與住戶數；日期為存檔日"
+    },
+    {
+      "title": "Begijnhof 34, 1012 WV te Amsterdam（monument 371）",
+      "publisher": "Rijksdienst voor het Cultureel Erfgoed，Rijksmonumentenregister",
+      "date": "1970-04-02",
+      "url": "https://monumentenregister.cultureelerfgoed.nl/monumenten/371",
+      "note": "木屋的登錄描述與 XV B 年代；日期為登錄日"
+    },
+    {
+      "title": "Begijnhof 29, 1012 WT te Amsterdam（monument 368）",
+      "publisher": "Rijksdienst voor het Cultureel Erfgoed，Rijksmonumentenregister",
+      "date": "1970-04-02",
+      "url": "https://monumentenregister.cultureelerfgoed.nl/monumenten/368",
+      "note": "1671 年動工的隱藏教堂、立面描述"
+    },
+    {
+      "title": "Begijnhof 48, 1012 WV te Amsterdam（monument 384）",
+      "publisher": "Rijksdienst voor het Cultureel Erfgoed，Rijksmonumentenregister",
+      "date": "1970-04-02",
+      "url": "https://monumentenregister.cultureelerfgoed.nl/monumenten/384",
+      "note": "英國歸正教會：單一中殿、西塔、南側廊"
+    },
+    {
+      "title": "Begijnhof 1 A（monument 342）",
+      "publisher": "Rijksdienst voor het Cultureel Erfgoed，Rijksmonumentenregister",
+      "date": "1970-04-02",
+      "url": "https://monumentenregister.cultureelerfgoed.nl/monumenten/342",
+      "note": "XV B/XVI A 的房子配 XVIII A 的頸狀山牆"
+    },
+    {
+      "title": "Begijnhof 35 A（monument 372）",
+      "publisher": "Rijksdienst voor het Cultureel Erfgoed，Rijksmonumentenregister",
+      "date": "1970-04-02",
+      "url": "https://monumentenregister.cultureelerfgoed.nl/monumenten/372",
+      "note": "18 世紀立面與可能非原物的尖頂"
+    },
+    {
+      "title": "Begijnhof 19（monument 358）",
+      "publisher": "Rijksdienst voor het Cultureel Erfgoed，Rijksmonumentenregister",
+      "date": "1970-04-02",
+      "url": "https://monumentenregister.cultureelerfgoed.nl/monumenten/358",
+      "note": "1721 年山牆與「從埃及返回」立面石"
+    },
+    {
+      "title": "Begijnhof 23 A（monument 363）",
+      "publisher": "Rijksdienst voor het Cultureel Erfgoed，Rijksmonumentenregister",
+      "date": "1970-04-02",
+      "url": "https://monumentenregister.cultureelerfgoed.nl/monumenten/363",
+      "note": "17 世紀聖烏蘇拉立面石"
+    },
+    {
+      "title": "Begijnhof 27 A（monument 366）",
+      "publisher": "Rijksdienst voor het Cultureel Erfgoed，Rijksmonumentenregister",
+      "date": "1970-04-02",
+      "url": "https://monumentenregister.cultureelerfgoed.nl/monumenten/366",
+      "note": "戴冠聖母與 S.MARIA 飾帶的山牆"
+    },
+    {
+      "title": "Begijnhof 28 A（monument 367）",
+      "publisher": "Rijksdienst voor het Cultureel Erfgoed，Rijksmonumentenregister",
+      "date": "1970-04-02",
+      "url": "https://monumentenregister.cultureelerfgoed.nl/monumenten/367",
+      "note": "兩個圓窗（oeils-de-boeuf）的山牆，用於辨認頭圖"
+    },
+    {
+      "title": "History",
+      "publisher": "English Reformed Church Amsterdam",
+      "date": "",
+      "url": "https://www.ercadam.nl/history.shtml",
+      "note": "1397 年小堂、1417 年動工、1421 與 1452 年火災、1492 年完工、1607 年交付英語會眾"
+    },
+    {
+      "title": "Geschiedenis",
+      "publisher": "Begijnhofkapel Amsterdam",
+      "date": "2026-10-10",
+      "url": "https://begijnhofkapelamsterdam.nl/begijnhofkapel/geschiedenis/",
+      "note": "1665 年規劃新堂、外觀不得像教堂、設計者 Philips Vingboons；日期為查閱日"
+    },
+    {
+      "title": "Toegang en openingstijden Begijnhof en Begijnhofkapel",
+      "publisher": "Begijnhofkapel Amsterdam",
+      "date": "2026-10-10",
+      "url": "https://begijnhofkapelamsterdam.nl/begijnhofkapel/toegang-entrance-begijnhof-en-begijnhofkapel/",
+      "note": "遊客入口地址與開放時間；日期為查閱日"
+    },
+    {
+      "title": "Het nieuwe Amsterdam Museum",
+      "publisher": "Amsterdam Museum",
+      "date": "2026-10-10",
+      "url": "https://www.amsterdammuseum.nl/het-nieuwe-amsterdam-museum",
+      "note": "聖露西修道院（1414 年首見）、1578 年沒收、孤兒院至 1960 年、1975 年開館；日期為查閱日"
+    },
+    {
+      "title": "The great rebuilding of Amsterdam (1521–1578)",
+      "publisher": "Gabri van Tussenbroek，Urban History（Cambridge University Press）",
+      "date": "2019",
+      "url": "https://openresearch.amsterdam/nl/id/74244",
+      "note": "1452 年大火與遲來的磚造化；摘要頁"
+    },
+    {
+      "title": "Voor de grote uitleg: stedelijke transformatie en huisbouw in Amsterdam, 1452-1578",
+      "publisher": "Gabri van Tussenbroek，UvA DARE",
+      "date": "",
+      "url": "https://dare.uva.nl/id/bd1835e0-920a-4842-8797-7b3dc2b5a4bd",
+      "note": "1521 年查理五世敕令、1531 年建築規範、約 1530 年起的翻新；摘要頁"
+    },
+    {
+      "title": "Gezichten op het Begijnhof te Amsterdam（RP-P-2019-343）",
+      "publisher": "Rijksmuseum",
+      "date": "1760",
+      "url": "https://www.rijksmuseum.nl/nl/collectie/RP-P-2019-343",
+      "note": "版畫著錄：Tirion 出版、收入 Wagenaar 史書、依 Cornelis Anthonisz. 1544 年地圖"
+    },
+    {
+      "title": "Spui met de achterzijde van de huizen Begijnhof 35-39 met oude poort（Afb 010104000036）",
+      "publisher": "Stadsarchief Amsterdam（經 Wikimedia Commons）",
+      "date": "1904",
+      "url": "https://commons.wikimedia.org/wiki/File:George_Hendrik_Breitner,_Afb_010104000036.jpg",
+      "note": "布萊特納照片的著錄，拍攝年代 1904–1907"
+    },
+    {
+      "title": "Category:Southern Entrance Begijnhof, Amsterdam",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-10-10",
+      "url": "https://commons.wikimedia.org/wiki/Category:Southern_Entrance_Begijnhof,_Amsterdam",
+      "note": "Spui 門樓 1907 年建成、建築師 Anton J. Joling、雕刻 Rien Hack；日期為查閱日"
+    },
+    {
+      "title": "Poortgebouw, Begijnhof, anker en 1907",
+      "publisher": "Wikimedia Commons（Ceescamel 攝）",
+      "date": "2018-09-21",
+      "url": "https://commons.wikimedia.org/wiki/File:Poortgebouw,_Begijnhof,_anker_en_1907.jpg",
+      "note": "門樓正面的 1907 字樣與牆錨"
+    },
+    {
+      "title": "Nieuwe poort met pomp op het Begijnhof（Afb ANWU01669000005）",
+      "publisher": "Stadsarchief Amsterdam（經 Wikimedia Commons）",
+      "date": "1910",
+      "url": "https://commons.wikimedia.org/wiki/File:Nieuwe_poort_met_pomp_op_het_Begijnhof._Uitgever_Wed._M.J._van_Dam,_Amsterdam,_Afb_ANWU01669000005.jpg",
+      "note": "1910 年明信片稱 Spui 門樓為「新門」"
+    },
+    {
+      "title": "Lijst van rijksmonumenten in het Begijnhof (Amsterdam)",
+      "publisher": "Wikipedia（荷蘭文）",
+      "date": "2026-10-10",
+      "url": "https://nl.wikipedia.org/wiki/Lijst_van_rijksmonumenten_in_het_Begijnhof_(Amsterdam)",
+      "note": "34 號「1528 年或稍後」的年代、27 號山牆的年代換算；日期為查閱日"
+    },
+    {
+      "title": "Begijnhof (Amsterdam)",
+      "publisher": "Wikipedia（荷蘭文）",
+      "date": "2026-10-10",
+      "url": "https://nl.wikipedia.org/wiki/Begijnhof_(Amsterdam)",
+      "note": "聖心像 1920 年，作者 Johannes Petrus Maas；日期為查閱日"
+    },
+    {
+      "title": "Begijnhof（way 26658363）及周邊街道",
+      "publisher": "OpenStreetMap",
+      "date": "2026-10-10",
+      "url": "https://www.openstreetmap.org/way/26658363",
+      "note": "路線示意的位置關係；日期為查詢日"
+    }
+  ]
+}

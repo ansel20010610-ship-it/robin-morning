@@ -1,0 +1,302 @@
+{
+  "column": "music",
+  "date": "reserve",
+  "reserve_written": "2026-10-10",
+  "title": "旋律不動，四把琴輪流：海頓《皇帝四重奏》",
+  "dek": "海頓把自己寫的頌歌放進弦樂四重奏，四段變奏裡旋律不動、伴奏一直換。本文以倫敦海頓四重奏的古樂器錄音，說明每一段該聽哪一把琴。",
+  "topic_key": "music:haydn-op76-3",
+  "updated_at": "2026-10-10T23:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Haydn_Kaiserlied_Reinschrift.jpg/1280px-Haydn_Kaiserlied_Reinschrift.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Haydn_Kaiserlied_Reinschrift.jpg",
+    "width": 1280,
+    "height": 952,
+    "alt": "泛黃的橫式樂譜紙，印著多行五線譜。上半部三組以大括號連起的雙行譜表，寫滿棕色墨水的手寫音符，上下兩行之間寫著德文歌詞；左上角有一個加了底線的字，右下角有簽名，右上角有數字 3，下半部幾行譜表空白。",
+    "caption": "海頓〈上帝保佑法蘭茲皇帝〉人聲與鋼琴版親筆清稿，只配第一段歌詞，約寫於 1796 年底至 1797 年初，奧地利國家圖書館藏（Mus.Hs.16501）。這條 G 大調旋律，就是《皇帝四重奏》第二樂章的主題。",
+    "credit": "Joseph Haydn 手稿；奧地利國家圖書館（Österreichische Nationalbibliothek）藏，掃描：ÖNB",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Haydn_Kaiserlied_Reinschrift.jpg",
+    "made": "約 1796–1797"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "《皇帝四重奏》第二樂章走到第四段變奏，第一小提琴又拉起那條頌歌旋律，第一個音照舊是 G。不同的是底下：大提琴墊的是 E，中提琴拉 G，第二小提琴拉 B，第一個和弦成了 E 小調。前面三段變奏，這條旋律從第二小提琴傳到大提琴、再傳到中提琴，旋律本身幾乎沒動，變的是周圍的聲部；到了最後一段，海頓（Joseph Haydn）連旋律底下的和聲也換了。我的讀法是：整個樂章都在試一件事，一條不准改的旋律，還能讓人聽出幾種樣子。"
+    },
+    {
+      "type": "p",
+      "text": "這條旋律是海頓 1797 年初才寫成的頌歌〈上帝保佑法蘭茲皇帝〉（Gott erhalte Franz den Kaiser），為神聖羅馬帝國皇帝法蘭茲二世而作；同一個曲調後來成了德國國歌的旋律。作品 76 之 3 就因為這個樂章，被叫作《皇帝四重奏》。"
+    },
+    {
+      "type": "music",
+      "composer": "海頓（Joseph Haydn）",
+      "work": "C 大調弦樂四重奏《皇帝》，作品 76 之 3（Hob. III:77）",
+      "work_original": "String Quartet in C major, Op. 76 No. 3, Hob. III:77 \"Emperor\"",
+      "composed": "1796–1797",
+      "performers": "倫敦海頓四重奏（Catherine Manson、Michael Gurevich 小提琴，John Crockatt 中提琴，Jonathan Manson 大提琴）",
+      "recording": "Hyperion CDA68335，2020 年 2 月 27 日至 3 月 3 日錄音於英國薩福克郡 Potton Hall，2021 年 2 月發行",
+      "duration": "約 32 分鐘（本錄音）",
+      "movements": [
+        "I. Allegro",
+        "II. Poco adagio, cantabile",
+        "III. Menuetto: Allegro",
+        "IV. Finale: Presto"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Haydn String Quartets Op. 76 Emperor London Haydn Quartet",
+        "artist_hint": "London Haydn Quartet",
+        "track_filter": ["Emperor", "Op. 76"]
+      }
+    },
+    {
+      "type": "p",
+      "text": "本篇指定的錄音，是倫敦海頓四重奏（The London Haydn Quartet）為 Hyperion 錄製的作品 76 全套六首，2020 年 2 月 27 日到 3 月 3 日錄於英國薩福克郡的 Potton Hall，製作與錄音工程都是 Philip Hobbs，2021 年 2 月發行。這個 2000 年成立的四重奏用古樂器演奏，唱片內頁寫明他們依據的是 1799 年倫敦 Longman, Clementi & Co. 與維也納 Artaria 的初版樂譜。選它的理由在版本：作品 76 的親筆總譜幾乎全部失傳（見後文），初版是最接近海頓的依據之一。這份錄音的第二樂章長 8 分 08 秒，全曲約 32 分鐘。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "Hyperion 網頁轉引了幾則樂評，其中 MusicWeb International 特別提到這個樂章，說就連第三號四重奏裡最有名的《皇帝頌歌》樂章，也被演奏得動人而熾烈，像是第一次聽到（本文自譯）。德國的 HörBar 則提到他們用的是裝羊腸弦的樂器。兩則評論都只標出處，沒有刊期與作者。"
+    },
+    {
+      "type": "h",
+      "text": "1797 年初：先有一首仿〈天佑吾王〉的頌歌"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1796 年，時任下奧地利政府首長的紹勞伯爵（Franz Josef von Saurau）請詩人哈什卡（Lorenz Leopold Haschka）寫詞、海頓譜曲，要一首仿效英國〈天佑吾王〉（God Save the King）的頌歌。奧地利國家圖書館的說明指出，當時哈布斯堡王朝正和革命後的法國交戰，傷亡慘重。1797 年 2 月 12 日，也就是法蘭茲二世的生日，這首歌在帝國許多城市同時首唱；維也納的場次在城堡劇院（Burgtheater），皇帝本人在場。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "頭圖是海頓為這首頌歌寫的人聲與鋼琴版清稿，只配第一段歌詞。左上角寫著「Langsam.」（慢）；調號是一個升記號，G 大調，和《皇帝四重奏》變奏樂章同一個調。歌詞寫在上下兩行譜表之間，從「Gott! erhalte Franz den Kaiser」開始；右下角是海頓的簽名。這批手稿 1820 年經紹勞伯爵轉到迪特里希施坦伯爵（Moritz von Dietrichstein）手上，他後來主掌宮廷圖書館，1829 年把手稿捐給館方，也就是現在的奧地利國家圖書館。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.02, 0.12, 0.91, 0.22],
+      "position": "手稿上半部第一組譜表，橫跨幾乎整個頁寬",
+      "caption": "第一行：「Gott! erhalte Franz den Kaiser, unsern guten Kaiser Franz!」，意思是「上帝保佑法蘭茲皇帝，我們的好皇帝法蘭茲」（本文自譯）。四重奏第二樂章開頭，第一小提琴拉的就是這一行旋律。"
+    },
+    {
+      "type": "h",
+      "text": "同一年：一位伯爵訂的六首四重奏"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "作品 76 的六首四重奏，由匈牙利宮廷大臣埃爾德迪伯爵（Joseph Erdődy，1754–1824）委託，也題獻給他。據 Henle 版樂譜序言（Horst Walter，2003 年），埃爾德迪住在布拉提斯拉瓦與維也納兩地，自己養著一個室內樂團。海頓寫這套曲子時 65 歲，同一段時間還在寫神劇《創世記》（Die Schöpfung）。Hyperion 唱片說明的作者 Richard Wigmore 認為，海頓從 1796 年秋天就開始動筆，而且整首《皇帝》似乎是圍繞著這個變奏樂章設計的。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這套曲子的寫作經過，留下的紀錄很少，其中一條來自訪客。1797 年 6 月 14 日，瑞典外交官 Fredrik Silverstolpe 從維也納寫信說，他前幾天又去了海頓家，海頓在鋼琴上彈了幾首弦樂四重奏給他聽，是「某位埃爾德迪伯爵」花 100 杜卡特訂的，而且要過幾年才准付印（本文自譯）。三個月後，據埃斯特哈齊家族秘書 J. C. Rosenbaum 的日記，艾森施塔特（Eisenstadt）演出了其中幾首新四重奏，也可能只有《皇帝》一首。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "Henle 版序言推斷，總譜大約在 1797 年 9 月交給伯爵；伯爵獨享一段時間後，1799 到 1800 年間才由維也納的 Artaria 和倫敦的 Longman, Clementi & Co. 各分兩冊出版。親筆總譜現已下落不明，海頓的手跡只留下《皇帝》第二樂章一份未完成的草稿。2008 年在格拉茨出版、由 Günter Brosche 編注的彩色摹本，書名寫明奧地利國家圖書館的合訂手稿 Mus.Hs.16501 同時收有這首頌歌與《皇帝四重奏》的變奏樂章。「皇帝」這個別名也不是海頓取的，Henle 版序言指出，這類暱稱要到 19 世紀後期才通行。"
+    },
+    {
+      "type": "quote",
+      "original": "they are full of invention, fire, good taste, and new effects",
+      "text": "這些四重奏充滿創意、熱力、好品味和新的效果。",
+      "cite": "伯尼（Charles Burney）1799 年 8 月 19 日致海頓信，據 Henle 版序言所引 Bartha 編《海頓書信與札記集》第 232 號（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "英國音樂史家伯尼是在聽過這套新四重奏的演出後寫這封信的。他在信裡說，自己從器樂曲得到的樂趣從沒這麼大過；又說這些曲子不像一位已經寫了那麼多、那麼好的大師之作，倒像一位還沒用掉半點火氣的才子寫的。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "portrait",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Johann_Carl_R%C3%B6ssler_%281775-1845%29_-_Joseph_Haydn_-_FMI.20_-_Bate_Collection_of_Musical_Instruments.jpg",
+      "width": 950,
+      "height": 1200,
+      "alt": "深色背景前的半身油畫：一名年長男子戴著兩側捲起的灰白假髮，穿深褐色翻領外套、繫白色領巾，身體朝畫面左方，臉轉向觀者，嘴唇緊閉。",
+      "caption": "Johann Carl Rössler 所繪海頓肖像，1799 年，油彩畫布，74.9 × 62.2 公分，牛津大學音樂學院暨 Bate 樂器收藏（Faculty of Music and Bate Collection of Musical Instruments）藏，館藏號 FMI.20。作品 76 正是在這一年開始出版。",
+      "credit": "Johann Carl Rössler；University of Oxford, Faculty of Music and Bate Collection of Musical Instruments 藏；影像經 Art UK 上傳至 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Johann_Carl_R%C3%B6ssler_(1775-1845)_-_Joseph_Haydn_-_FMI.20_-_Bate_Collection_of_Musical_Instruments.jpg",
+      "made": "1799"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：旋律不動，伴奏一段一段換"
+    },
+    {
+      "type": "p",
+      "text": "**第一樂章**（Allegro，C 大調）。開頭第一小提琴用 forte 奏出五個音：G、E、F、D、C，緊接著音量就降到 piano。Wigmore 提醒留意發展部的後段：這個短小的主題轉到相隔很遠的 E 大調，變成一段踏著重拍的農民舞曲。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "開頭這五個音可能另有含意。匈牙利音樂學者松法伊（László Somfai）1986 年提出，G、E、F、D、C 是「Gott erhalte Franz den Caesar」幾個字的字首：德文的 Kaiser 換成拉丁文的 Caesar，因為 K 不是音名。奧地利國家圖書館音樂部主任萊布尼茨（Thomas Leibnitz）2019 年的文章也採用這個讀法。這是推測，海頓本人沒有留下說明。"
+    },
+    {
+      "type": "p",
+      "text": "**第二樂章**（Poco adagio, cantabile，G 大調，2/2 拍）由主題和四段變奏組成，每段長度相同。主題先由四把琴輕聲合奏，旋律在第一小提琴，和聲很樸素，聽起來就是一首聖詠式的歌。接下來每一段誰拉旋律、旁邊發生什麼，整理如下表。"
+    },
+    {
+      "type": "table",
+      "title": "第二樂章：旋律在誰手上",
+      "head": ["段落", "拉旋律的樂器", "其他聲部在做什麼"],
+      "rows": [
+        ["主題", "第一小提琴", "四把琴一起輕聲合奏，和聲簡單"],
+        ["第一變奏", "第二小提琴", "只剩兩把小提琴：第一小提琴在高處繞著十六分音符，標 sempre piano；中提琴與大提琴整段休息"],
+        ["第二變奏", "大提琴", "第一小提琴拉一條常在弱拍起音的對位旋律，第二小提琴與中提琴伴奏"],
+        ["第三變奏", "中提琴", "其他聲部陸續加入，對位線條多半音；大提琴到第二句末尾才進來"],
+        ["第四變奏", "第一小提琴", "和聲改寫，第一個和弦是 E 小調；中段大提琴拉住一個 D 長達四小節；結尾轉為 pp"]
+      ],
+      "caption": "依 Mutopia Project 據 Kalmus 版重排的總譜整理；各段由哪一把琴拉旋律，與 Hyperion 唱片說明（Richard Wigmore）一致。"
+    },
+    {
+      "type": "p",
+      "text": "**第一變奏**是一段二重奏。第二小提琴把頌歌原樣拉一遍，第一小提琴在上方以連續的十六分音符繞行，譜上標著 sempre piano（始終輕聲）。中提琴和大提琴在這一整段裡完全不出聲，四重奏忽然只剩一半。"
+    },
+    {
+      "type": "p",
+      "text": "**第二變奏**換大提琴拉旋律。第一小提琴的對位常在弱拍上起音，再用連結線跨過小節線，和大提琴穩定的步伐錯開。**第三變奏**輪到中提琴，其他聲部是一個一個加進來的：第一小提琴幾乎和中提琴同時起步，第二小提琴隔了一小節多才加入，大提琴要到第二句末尾才開口。第一小提琴的對位用了不少臨時升記號，Wigmore 形容這些對位線條在半音與複音上愈來愈複雜。"
+    },
+    {
+      "type": "p",
+      "text": "**第四變奏**回到第一小提琴，也就是開頭說的那個 E 小調和弦。和聲改了，旋律仍然沒變。中段大提琴在 D 上連拉四小節，替旋律墊一個不動的底；最後一句重複時，第一小提琴用一串上行音階爬高八度。旋律唱完之後，四把琴轉為 pp：倒數第二個和弦裡，中提琴拉出降 E，和聲忽然一暗，然後落到 G 大調的最後一個和弦。這兩個和弦都標著延長記號。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Wigmore 說，第四變奏把旋律悄悄重新配上和聲，成了一個安靜而動人的頂點。據英文維基百科的引述，美國作曲家阿德勒（Samuel Adler）把這段當作弦樂配器的範例：他說作曲者常太早用掉音域的兩端，讓最後的推進落空；這一段則是把前面幾段變奏陸續加進來的和聲與對位元素，累積在一起。"
+    },
+    {
+      "type": "p",
+      "text": "**第三樂章**（Menuetto: Allegro）回到 C 大調。Wigmore 指出，這段小步舞曲的樂句長短不對稱，開頭三個音被一再糾纏地發展；中段的三重奏轉到 A 小調，中間夾著一段 pianissimo 的 A 大調插曲，他形容那像遠方的田園景象。"
+    },
+    {
+      "type": "p",
+      "text": "**第四樂章**（Finale: Presto）一開頭是 C 小調：全團用 forte 奏出短促的和弦，中間隔著休止，接著音量轉弱，第一小提琴拉出一句哀怨的回應，Wigmore 聽出這句和前一樂章的小步舞曲相呼應。這個樂章大部分時間都停在小調，要到再現部接近尾聲才轉進 C 大調，總譜在這裡改了調號。Wigmore 說，大調起初出現得很羞怯，之後才一路推向歡騰的結尾。"
+    },
+    {
+      "type": "h",
+      "text": "海頓最後彈的曲子，與旋律後來的去向"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "海頓晚年體弱，常到鋼琴前彈這首頌歌。據他的僕人兼抄譜員 Johann Elssler 記述，那陣子海頓一天仍要彈三次；1809 年 5 月 26 日中午 12 點半（維也納時間），他最後一次彈，連彈三遍，彈得連自己都吃驚，說很久沒這樣彈過了；傍晚 5 點起開始不舒服（據英譯轉述）。5 天後，5 月 31 日，海頓去世。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這條旋律後來有了別的用途。1841 年，詩人霍夫曼・馮・法勒斯雷本（August Heinrich Hoffmann von Fallersleben）在當時屬英國的黑爾戈蘭島（Helgoland），依這個曲調寫成〈德意志之歌〉（Das Lied der Deutschen），它的第三段就是德國國歌的歌詞。奧地利在帝國瓦解後一度棄用這個曲調，1929 年配上新詞恢復。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "萊布尼茨在 2019 年那篇文章裡記下一個場面：1938 年德奧合併前夕，奧地利總理許士尼格（Kurt Schuschnigg）在廣播中發表告別演說，講完之後播出的，就是《皇帝四重奏》的第二樂章。據奧地利抵抗運動文獻檔案館（DÖW）的展覽資料，那篇辭職演說在 1938 年 3 月 11 日晚上約 7 點 50 分（維也納時間）播出。"
+    },
+    {
+      "type": "callout",
+      "label": "延伸聆聽",
+      "text": "海頓自己把這個變奏樂章改編成鋼琴曲，1799 年由維也納的 Artaria 出版。聽過四重奏版再聽它，可以比較少了四個聲部的分工之後，同一條旋律聽起來有什麼不同。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Haydn: String Quartets Op 76（CDA68335）",
+      "publisher": "Hyperion Records",
+      "date": "2021-02",
+      "url": "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA68335",
+      "note": "錄音地點、製作與錄音工程、發行時間；Richard Wigmore 的唱片說明（作品 76 之 3 各樂章）；轉引的 MusicWeb International 與 HörBar 樂評；2026-10-10 查閱"
+    },
+    {
+      "title": "Haydn: String Quartets Op 76（CDA68335）數位內頁",
+      "publisher": "Hyperion Records",
+      "date": "2021",
+      "url": "https://www.hyperion-records.co.uk/notes/68335-B.pdf",
+      "note": "團員名單、2020 年 2 月 27 日至 3 月 3 日錄音、依 1799 年 Longman, Clementi & Co. 與 Artaria 初版演奏、各樂章時間；倫敦海頓四重奏簡介"
+    },
+    {
+      "title": "The London Haydn Quartet",
+      "publisher": "Hyperion Records",
+      "url": "https://www.hyperion-records.co.uk/a.asp?a=A1711",
+      "note": "2000 年成立的古樂器四重奏；2026-10-10 查閱"
+    },
+    {
+      "title": "Joseph Haydn, String Quartets op. 76 (Erdödy Quartets)，Preface",
+      "publisher": "G. Henle Verlag（Horst Walter）",
+      "date": "2003",
+      "url": "https://henle.de/media/b8/c1/ec/1690899704/9214-1690899704-sync.pdf",
+      "note": "Burney 1799 年 8 月 19 日信、Silverstolpe 1797 年 6 月 14 日信、Rosenbaum 日記、Erdődy 生平、親筆總譜失傳、初版 1799–1800、暱稱的來歷"
+    },
+    {
+      "title": "Sacred relics: Anton Schmid and Joseph Haydn's original manuscripts for the Imperial Anthem",
+      "publisher": "Österreichische Nationalbibliothek（Marko Deisinger）",
+      "url": "https://www.onb.ac.at/en/departments/department-of-music/200-years-of-the-department-of-music/sacred-relics-anton-schmid-and-joseph-haydns-original-manuscripts-for-the-imperial-anthem",
+      "note": "Saurau 1796 年委託、1797 年 2 月 12 日各地首唱、手稿 1820 年轉入 Dietrichstein 手中、1829 年捐贈、館藏號 Mus.Hs.16501、Brosche 2008 年摹本；2026-10-10 查閱"
+    },
+    {
+      "title": "Gott erhalte（Das besondere Objekt）",
+      "publisher": "Österreichische Nationalbibliothek 研究部落格（Thomas Leibnitz）",
+      "date": "2019-01-24",
+      "url": "https://www.onb.ac.at/forschung/forschungsblog/artikel/gott-erhalte",
+      "note": "變奏樂章中旋律始終不變、第一樂章開頭五音的字首讀法、1929 年奧地利恢復使用、1938 年許士尼格告別演說後播出第二樂章"
+    },
+    {
+      "title": "Joseph Haydn: Kaiserlied, Reinschrift (Hob. XXVIa:43)",
+      "publisher": "Österreichische Nationalbibliothek",
+      "url": "http://data.onb.ac.at/rec/AL00116278",
+      "note": "頭圖手稿的館藏紀錄；年代推定見 Wikimedia Commons 檔案說明"
+    },
+    {
+      "title": "String Quartets, Op. 76 (Haydn)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/String_Quartets,_Op._76_(Haydn)",
+      "note": "Somfai 1986 年的字首說、Samuel Adler 對第四變奏的評語、第二樂章調性與拍號；2026-10-10 查閱"
+    },
+    {
+      "title": "Gott erhalte Franz den Kaiser",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gott_erhalte_Franz_den_Kaiser",
+      "note": "維也納城堡劇院首演與皇帝在場、Johann Elssler 對 1809 年 5 月 26 日的記述、海頓的鋼琴改編版由 Artaria 於 1799 年出版、1841 年〈德意志之歌〉；2026-10-10 查閱"
+    },
+    {
+      "title": "Kaiserquartett",
+      "publisher": "Wikipedia（德文）",
+      "url": "https://de.wikipedia.org/wiki/Kaiserquartett",
+      "note": "第二樂章為四段定旋律變奏；Hoffmann von Fallersleben 在黑爾戈蘭島填詞；2026-10-10 查閱"
+    },
+    {
+      "title": "Haydn: String Quartet in C major, Op. 76 No. 3",
+      "publisher": "Mutopia Project（據 Kalmus 版重排，公眾領域）",
+      "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=385",
+      "note": "總譜：第一樂章開頭五音與力度、第二樂章各段配器與第四變奏和聲、終樂章開頭與調號變更"
+    },
+    {
+      "title": "Austria 1918–1938",
+      "publisher": "Dokumentationsarchiv des österreichischen Widerstandes（DÖW）",
+      "url": "https://ausstellung.en.doew.at/b102.html",
+      "note": "1938 年 3 月 11 日晚上約 7 點 50 分許士尼格在廣播中宣布辭職；2026-10-10 查閱"
+    },
+    {
+      "title": "(Franz) Joseph Haydn (1732–1809)",
+      "publisher": "Bate Collection of Musical Instruments, University of Oxford",
+      "url": "https://www.bate.ox.ac.uk/franz-joseph-haydn-1732-1809",
+      "note": "Rössler 肖像 1799 年繪於維也納"
+    },
+    {
+      "title": "Joseph Haydn（Johann Carl Rössler 繪）",
+      "publisher": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q119023343",
+      "note": "油彩畫布、74.9 × 62.2 公分、館藏號 FMI.20；Art UK 編號 joseph-haydn-221341"
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "column": "devotion",
+  "date": "reserve",
+  "reserve_written": "2026-10-10",
+  "title": "斷過奶的孩子：讀詩篇 131 篇",
+  "dek": "詩篇 131 篇只有三節，用一個斷了奶、靠在母親身邊的孩子，描寫不再索取之後的安靜。這份安靜從哪裡來，又怎樣帶進工作與等待？",
+  "topic_key": "devotion:ps-131-1",
+  "updated_at": "2026-10-10T23:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Young_Mother_Sewing_MET_DP139632.jpg/1280px-Young_Mother_Sewing_MET_DP139632.jpg",
+    "width": 1280,
+    "height": 1601,
+    "alt": "油畫。一位深色頭髮盤起、穿淺藍綠色長裙和黑白條紋外衣的年輕女子坐著，低頭縫一塊白布；一個穿白衣、棕色捲髮的小女孩靠在她腿上，一手托著臉，眼睛看向畫外。背景是大片窗戶外的綠色草地與樹幹，左側桌上有一只青花瓶，插著橘黃色的花。",
+    "caption": "卡薩特（Mary Cassatt）〈縫紉的年輕母親〉（Young Mother Sewing），1900 年，油彩畫布，92.4 × 73.7 公分，紐約大都會藝術博物館藏。這幅畫不是為詩篇而畫，本文借它看詩篇 131:2 的畫面：孩子已經過了吃奶的年紀，靠在專心做針線的母親腿上，沒有在討什麼，只是待在她身邊。",
+    "credit": "Mary Cassatt；紐約大都會藝術博物館（H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929，館藏號 29.100.48）",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Young_Mother_Sewing_MET_DP139632.jpg",
+    "made": "1900"
+  },
+  "body": [
+    {
+      "type": "h",
+      "text": "今日經文"
+    },
+    {
+      "type": "scripture",
+      "ref": "詩篇 131 篇 1–3 節",
+      "book": "詩",
+      "chapter": 131,
+      "version": "和合本",
+      "verses": [
+        {
+          "n": 1,
+          "text": "（大衛上行之詩。）耶和華啊，我的心不狂傲，我的眼不高大；重大和測不透的事，我也不敢行。"
+        },
+        {
+          "n": 2,
+          "text": "我的心平穩安靜，好像斷過奶的孩子在他母親的懷中；我的心在我裡面真像斷過奶的孩子。"
+        },
+        {
+          "n": 3,
+          "text": "以色列啊，你當仰望耶和華，從今時直到永遠！"
+        }
+      ],
+      "source": "信望愛聖經工具 FHL 和合本（bible.fhl.net），2026-10-10 核對"
+    },
+    {
+      "type": "h",
+      "text": "經文釋義"
+    },
+    {
+      "type": "p",
+      "tag": "背景",
+      "text": "詩篇 120 到 134 篇是一組 15 首短詩，標題都有「上行之詩」。131 篇是第 12 首，也是其中歸在大衛名下的 4 首之一，另外 3 首是 122、124、133 篇。「上行」的希伯來文 *ma'alot* 可以指往高處走，也可以指台階；和合本在 120 篇的標題裡就加註「或作登階，下同」。"
+    },
+    {
+      "type": "p",
+      "tag": "背景",
+      "text": "這組詩原本怎麼使用，學者有幾種說法。一種認為是朝聖者上耶路撒冷守節時沿路唱的歌；另一種連到聖殿的台階：猶太口傳律法《米示拿》（Mishnah）〈米多特〉2:5 記載，聖殿的婦女院有 15 級台階通往以色列院，對應 15 首上行之詩，利未人就在台階上歌唱。"
+    },
+    {
+      "type": "p",
+      "tag": "經文明言",
+      "text": "第 1 節連說了三個「不」：心不狂傲，眼不高大，重大和測不透的事也不敢行。前兩句講裡面的心和外露的眼神，第三句講做事。"
+    },
+    {
+      "type": "p",
+      "tag": "背景",
+      "text": "「狂傲」「高大」在原文分別是「高」和「抬起」。路德神學院（Luther Seminary）的舊約學者 Cameron B. R. Howard 在 2011 年的解經文章指出，舊約用抬高的心、抬起的眼睛比喻驕傲，箴言 16:5 和 6:17 都是例子。「測不透的事」原文是 *niphla'ot mimmenni*，字面是「對我來說太奇妙的事」。同一個詞組也出現在約伯記 42:3，約伯聽完神的回答後承認：「我所說的是我不明白的；這些事太奇妙，是我不知道的。」"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "16 世紀的改教家加爾文（John Calvin）把這節放在大衛的處境裡讀。大衛已經作王，地位本來就「重大」，所以加爾文認為重點不在職位高低，而在不越過神給他的呼召。他也補了一句平衡的話：神清楚交付的事，就不算「太高」或「測不透」，只要人預備好順服。照這個讀法，第 1 節不是叫人把責任推開。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "19 世紀倫敦的司布真（Charles H. Spurgeon）在詩篇註釋《大衛的寶庫》（The Treasury of David，連載二十年，1885 年出齊）解釋第 1 節時說，人要知道自己的身量（know his own size）。他為這首詩寫的題解是："
+    },
+    {
+      "type": "quote",
+      "original": "It is one of the shortest Psalms to read, but one of the longest to learn.",
+      "text": "這是讀起來最短的詩篇之一，卻是要學最久的詩篇之一。",
+      "cite": "司布真《大衛的寶庫》詩篇 131 篇題解，本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "背景",
+      "text": "第 2 節從「不」轉成「我使」。原文是兩個以「我」為主詞的動詞，大意是「我使我的心平順，使它靜默」。第二個動詞 *damam* 的基本意思是靜默，詩篇 37:7「你當默然倚靠耶和華」、62:5「你當默默無聲，專等候神」用的是同一個字根。這節開頭還帶著起誓的語氣，英王欽定本（KJV）譯作 Surely。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "由此推想，詩人說的安靜不是天生的性情，也不是忽然降臨的感覺，而是他對自己的心做的事，而且願意為它作保證。"
+    },
+    {
+      "type": "p",
+      "tag": "背景",
+      "text": "古代以色列的「斷奶的孩子」不是襁褓中的嬰兒。創世記 21:8 記載，以撒斷奶那天，亞伯拉罕擺了豐盛的筵席；撒母耳記上 1 章，哈拿要等撒母耳斷了奶，才帶他上示羅的耶和華殿；次經《馬加比二書》7:27，一位母親對兒子說，她哺乳他三年。Howard 也指出，以賽亞書 11:8 把「吃奶的孩子」和「斷奶的嬰兒」對舉，詩篇 131 篇說的是年紀較大的幼兒。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "artwork",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/66/Gerbrand_van_den_Eeckhout_-_Anna_toont_haar_zoon_Samu%C3%ABl_aan_de_priester_Eli.jpg",
+      "width": 1000,
+      "height": 810,
+      "alt": "油畫。昏暗高大的殿內，一位白鬚老人戴冠、穿金色長袍，坐在掛著藍色帷幔的寶座上；畫面下方一位穿橘褐色衣服的婦人跪著，扶著前面一個穿白衣、站著的幼兒；婦人身後站著戴頭巾的男子和兩名隨從，右側有牛，前景地上有一只銅鍋和一個玻璃瓶。",
+      "caption": "范登埃克豪特（Gerbrand van den Eeckhout）〈哈拿向大祭司以利獻上兒子撒母耳〉，約 1665 年，油彩畫布，117 × 143.5 公分，巴黎羅浮宮藏（INV 1267）。題材是撒母耳記上 1:24–28：哈拿等撒母耳斷了奶，才帶他上示羅。這是 17 世紀荷蘭畫家的詮釋：斷奶的撒母耳已經能站，母親在後面扶著他；右邊的牛對應經文裡帶去的祭牲。",
+      "credit": "Gerbrand van den Eeckhout；巴黎羅浮宮",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gerbrand_van_den_Eeckhout_-_Anna_toont_haar_zoon_Samu%C3%ABl_aan_de_priester_Eli.jpg",
+      "made": "約 1665"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "為什麼是斷過奶的孩子，而不是吃奶的嬰兒？加爾文《詩篇註釋》英譯本的註腳引了 Phillips 的看法：吃奶的嬰兒一直想要奶，剛斷奶的孩子也常為失去的東西哭鬧；詩人比的是斷奶夠久、忘了那份渴求、安靜讓母親照顧的孩子。Howard 則說，斷過奶的孩子已經嘗過一點世界的難處，知道庇護不會永不間斷，卻仍能回到母親身邊得安慰。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：斷過奶的孩子仍然靠在母親身上，但他靠過去不是為了奶，而是為了母親本身。詩人沒有說他不再需要神，他說的是，不再用哭鬧去索取自己認定非有不可的東西。"
+    },
+    {
+      "type": "p",
+      "tag": "詮釋",
+      "text": "第 2 節下半的原文很短，字面接近「像那斷了奶的孩子，在我身上，我的魂」，各譯本理解不同（見下表）。新修訂標準版更新版（NRSVue）作「我的魂像那在我身邊、已斷奶的孩子」，畫面變成說話的人自己帶著孩子。Howard 提到，這個譯法加上母子意象，使有些學者推想作者是一位女性；他不願只憑母子比喻下結論，並說這半節的希伯來文句法終究有歧義。"
+    },
+    {
+      "type": "p",
+      "tag": "背景",
+      "text": "古代譯本另有讀法。*gamal* 這個字根除了「斷奶」，也有「對待、報答」的意思；希臘文七十士譯本和拉丁文武加大譯本（Vulgate，此詩編為 130 篇）在這半節都出現「報答」。"
+    },
+    {
+      "type": "table",
+      "title": "詩篇 131:2 下半節的幾種譯法",
+      "head": [
+        "譯本",
+        "譯文",
+        "讀法"
+      ],
+      "rows": [
+        [
+          "希伯來原文（逐字）",
+          "像那斷了奶的孩子，在我身上，我的魂",
+          "孩子與「我」的關係未定"
+        ],
+        [
+          "七十士譯本（Brenton 英譯，1851）",
+          "so wilt thou recompense my soul：你必照樣報答我的魂",
+          "讀成「報答」"
+        ],
+        [
+          "武加大譯本（拉丁文）",
+          "ita retributio in anima mea：我魂中的報答也是如此",
+          "讀成「報答」"
+        ],
+        [
+          "和合本",
+          "我的心在我裡面真像斷過奶的孩子",
+          "心像孩子"
+        ],
+        [
+          "NRSVue",
+          "my soul is like the weaned child that is with me：我的魂像那在我身邊、已斷奶的孩子",
+          "說話的人帶著孩子"
+        ],
+        [
+          "新國際版（NIV）",
+          "like a weaned child I am content：像斷了奶的孩子，我心知足",
+          "強調知足"
+        ]
+      ],
+      "caption": "希伯來文逐字依 Bible Hub 逐字對照；英文與拉丁文的中文為本文自譯。NRSVue 註腳另列「我裡面的魂像斷了奶的孩子」。"
+    },
+    {
+      "type": "p",
+      "tag": "經文明言",
+      "text": "第 3 節忽然轉向群體：「以色列啊，你當仰望耶和華，從今時直到永遠！」前一首 130 篇第 7 節也用同一句開頭：「以色列啊，你當仰望耶和華！」詩人讓自己安靜下來之後，接著是叫眾人一起盼望。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "司布真在這節寫道，一個從「自我」斷了奶的人，會轉而顧念別人。"
+    },
+    {
+      "type": "p",
+      "tag": "詮釋",
+      "text": "新約沒有直接引用這首詩。英文標準版（ESV）的串珠把第 2 節連到馬太福音 18:3「你們若不回轉，變成小孩子的樣式，斷不得進天國」，加爾文註解這節時也引了這句話。保羅在腓立比書 4:11 說，知足「是我已經學會了」；本文推想，斷奶也是一種學會，而且通常不是一次學成。"
+    },
+    {
+      "type": "h",
+      "text": "與我的生活連結"
+    },
+    {
+      "type": "p",
+      "text": "如果手上的專案牽涉到不在自己職權裡的決定，例如主管還沒拍板的方向，或別的部門負責的環節，詩篇 131:1 可以幫忙分辨：哪些是交給我、該盡力做好的，哪些是「太奇妙」、不歸我決定的。照加爾文的提醒，這不是推卸責任，交給自己的事再大也不算越分；要放下的，是把每個結果都攬到自己身上的衝動。"
+    },
+    {
+      "type": "p",
+      "text": "如果正在等一件自己左右不了的事，一份檢查報告、一封錄取通知，或一個遲遲沒有答案的決定，第 2 節的動詞值得留意：「平穩安靜」是詩人對自己的心做的事。斷過奶的孩子不是不再有想要的東西，而是不再哭著索取。經文沒有保證等來的結果一定如願；它描寫的是，在結果出來之前，可以靠在誰身上。"
+    },
+    {
+      "type": "p",
+      "text": "如果身邊有人正焦急，同事為績效睡不著，家人為病情擔心，第 3 節的順序可以參考：詩人先讓自己的心安靜，再對眾人說「你當仰望耶和華」。先處理自己的慌亂，再陪別人一起盼望，比急著給建議更接近這首詩的次序。"
+    },
+    {
+      "type": "h",
+      "text": "今日禱告"
+    },
+    {
+      "type": "prayer",
+      "text": "耶和華啊，你知道我的心常往高處抬，眼睛也常望向不屬於我的事。我想把每件事都抓在手裡，好像所有結果都要由我決定。求你幫助我分辨：哪些是你交給我、該盡心去做的，哪些是太奇妙、不是我能測透的。我不求你立刻拿走所有掛慮，只求你教我像斷過奶的孩子，不再哭著要我以為非有不可的東西，而是安靜地靠在你身邊，因為你自己就是我的倚靠。在我還等不到答案的時候，求你使我的心平穩安靜。也求你讓我安靜下來以後，能陪伴身邊焦急的人，與他們一同仰望你，從現在直到永遠。奉耶穌的名禱告，阿們。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "詩篇 131 篇（和合本）",
+      "publisher": "信望愛聖經工具 FHL",
+      "date": "2026-10-10",
+      "url": "https://bible.fhl.net/new/read.php?chineses=%E8%A9%A9&chap=131&VERSION1=unv",
+      "note": "以 scripts/bible.py 逐節核對 131:1–3"
+    },
+    {
+      "title": "交叉引用經文（和合本）",
+      "publisher": "信望愛聖經工具 FHL",
+      "date": "2026-10-10",
+      "url": "https://bible.fhl.net/json/qb.php?chineses=%E4%BC%AF&chap=42&sec=3&version=unv&gb=0",
+      "note": "約伯記 42:3、詩篇 120:1、130:7、37:7、62:5、箴言 16:5、6:17、創世記 21:8、撒母耳記上 1:22–24、以賽亞書 11:8、馬太福音 18:3、腓立比書 4:11，皆以 scripts/bible.py 取得"
+    },
+    {
+      "title": "Psalm 131:1 / 131:2 Hebrew Text Analysis",
+      "publisher": "Bible Hub",
+      "date": "",
+      "url": "https://biblehub.com/text/psalms/131-2.htm",
+      "note": "逐字對照：gavah、ram、niphla'ot mimmenni、damam、gamul、'alay；131:1 見 https://biblehub.com/text/psalms/131-1.htm"
+    },
+    {
+      "title": "Job 42:3 Hebrew Text Analysis",
+      "publisher": "Bible Hub",
+      "date": "",
+      "url": "https://biblehub.com/text/job/42-3.htm",
+      "note": "niphla'ot mimmenni 詞組"
+    },
+    {
+      "title": "Strong's Hebrew 1826: damam",
+      "publisher": "Bible Hub",
+      "date": "",
+      "url": "https://biblehub.com/hebrew/1826.htm",
+      "note": "基本義為靜默；用例含詩 37:7、62:6（和合本 62:5）、131:2"
+    },
+    {
+      "title": "Strong's Hebrew 1580: gamal",
+      "publisher": "Bible Hub",
+      "date": "",
+      "url": "https://biblehub.com/hebrew/1580.htm",
+      "note": "對待、報答、斷奶、成熟等義"
+    },
+    {
+      "title": "Commentary on Psalm 131（Cameron B. R. Howard）",
+      "publisher": "Working Preacher, Luther Seminary",
+      "date": "2011-02-27",
+      "url": "https://www.workingpreacher.org/commentaries/revised-common-lectionary/eighth-sunday-after-epiphany/commentary-on-psalm-131",
+      "note": "抬高的心與眼為驕傲比喻；斷奶與吃奶孩子的對比；註 2 論 NRSV 譯法與女性作者說"
+    },
+    {
+      "title": "Commentary on Psalms, Volume 5: Psalm 131:1（John Calvin，James Anderson 英譯）",
+      "publisher": "Christian Classics Ethereal Library",
+      "date": "",
+      "url": "https://ccel.org/ccel/calvin/calcom12/calcom12.xv.i.html",
+      "note": "不越過呼召；神清楚呼召的事不算太高"
+    },
+    {
+      "title": "Commentary on Psalms, Volume 5: Psalm 131:2–3（John Calvin，James Anderson 英譯）",
+      "publisher": "Christian Classics Ethereal Library",
+      "date": "",
+      "url": "https://ccel.org/ccel/calvin/calcom12/calcom12.xv.ii.html",
+      "note": "斷奶孩子的比喻；註腳 125 引 Phillips；引馬太福音 18:3；第 3 節與大衛王位"
+    },
+    {
+      "title": "The Treasury of David: Psalm 131（C. H. Spurgeon）",
+      "publisher": "The Spurgeon Archive",
+      "date": "",
+      "url": "https://archive.spurgeon.org/treasury/ps131.php",
+      "note": "題解：shortest to read, longest to learn；第 1 節 know his own size；第 3 節"
+    },
+    {
+      "title": "The Treasury of David（簡介）",
+      "publisher": "The Spurgeon Archive",
+      "date": "",
+      "url": "https://archive.spurgeon.org/treasury/treasury.php",
+      "note": "連載二十年，第七卷 1885 年出版"
+    },
+    {
+      "title": "Mishnah Middot 2:5（Joshua Kulp 英譯，Mishnah Yomit）",
+      "publisher": "Sefaria",
+      "date": "",
+      "url": "https://www.sefaria.org/Mishnah_Middot.2.5",
+      "note": "婦女院 15 級台階對應 15 首上行之詩"
+    },
+    {
+      "title": "Song of Ascents",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Song_of_Ascents",
+      "note": "詩篇 120–134；朝聖、聖殿台階等說法；歸於大衛的 4 首"
+    },
+    {
+      "title": "Psalm 131:2（NRSVue；NIV；ESV；KJV）",
+      "publisher": "Bible Gateway",
+      "date": "",
+      "url": "https://www.biblegateway.com/passage/?search=Psalm%20131%3A2&version=NRSVUE;NIV;ESV;KJV",
+      "note": "第 2 節各譯本正文、NRSVue 註腳與 ESV 串珠"
+    },
+    {
+      "title": "Psalm 131（Brenton's Septuagint Translation, 1851）",
+      "publisher": "Bible Hub",
+      "date": "",
+      "url": "https://biblehub.com/sep/psalms/131.htm",
+      "note": "so wilt thou recompense my soul"
+    },
+    {
+      "title": "Psalm 130:2（Biblia Sacra Vulgata）",
+      "publisher": "Bible Gateway",
+      "date": "",
+      "url": "https://www.biblegateway.com/passage/?search=Psalm%20130%3A2&version=VULGATE",
+      "note": "ita retributio in anima mea"
+    },
+    {
+      "title": "2 Maccabees 7:27（NRSVue）",
+      "publisher": "Bible Gateway",
+      "date": "",
+      "url": "https://www.biblegateway.com/passage/?search=2%20Maccabees%207%3A27&version=NRSVUE",
+      "note": "nursed you for three years"
+    },
+    {
+      "title": "Young Mother Sewing（Mary Cassatt, 1900）",
+      "publisher": "The Metropolitan Museum of Art",
+      "date": "",
+      "url": "https://www.metmuseum.org/art/collection/search/10425",
+      "note": "年代、材質、尺寸、館藏號、來源"
+    },
+    {
+      "title": "Anna présentant au grand prêtre Eli son fils Samuel",
+      "publisher": "Musée du Louvre, Collections",
+      "date": "",
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010064893",
+      "note": "約 1665 年，油彩畫布，1.17 × 1.435 公尺，INV 1267；題材為撒母耳記上 1:24–28"
+    }
+  ]
+}

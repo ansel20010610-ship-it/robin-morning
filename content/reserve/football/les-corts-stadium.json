@@ -1,0 +1,363 @@
+{
+  "column": "football",
+  "date": "reserve",
+  "reserve_written": "2026-10-10",
+  "title": "勒科茨球場：同一塊奠基石，用了兩次",
+  "dek": "巴薩第一座自有球場怎麼在三個月內蓋好、怎麼因一陣噓聲被停權，又怎麼靠托羅哈的懸挑屋頂撐到諾坎普落成。",
+  "topic_key": "football:les-corts-stadium",
+  "updated_at": "2026-10-10T23:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/09/Camp_de_les_Corts._Aniversario_Academia_Gran%C3%A9s._25_de_abril_de_1964._2.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/0/09/Camp_de_les_Corts._Aniversario_Academia_Gran%C3%A9s._25_de_abril_de_1964._2.jpg",
+    "width": 1248,
+    "height": 851,
+    "alt": "黑白照片。前景是草皮稀疏的球場，兩名穿深色球衣與短褲的球員背對鏡頭並肩走開，左邊那人搭著同伴的肩，右邊那人伸手指向前方；右上方是一座有頂看台，巨大的屋頂從右後方往左伸出，端部底面呈弧形，屋頂下坐著觀眾；左側是沒有屋頂的空階梯看台，背景有一棟多層公寓和一座照明燈塔。",
+    "caption": "1964 年 4 月 25 日的勒科茨球場，當時巴薩已遷往諾坎普，這裡是第二球場；照片攝於一所學校（Academia Granés）的週年活動。右上方是主看台的屋頂，依位置與形式判斷，就是托羅哈設計、1945 年啟用的懸挑屋頂。歷史資料照片，攝於拆除前兩年。",
+    "credit": "Toni Sala／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Camp_de_les_Corts._Aniversario_Academia_Gran%C3%A9s._25_de_abril_de_1964._2.jpg",
+    "made": "1964"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "一塊方正的石頭，正面浮雕巴薩隊徽，下方刻著「19-2-1922」。它當過兩次奠基石：1922 年 2 月 19 日，它是勒科茨球場（Camp de Les Corts）的第一塊石頭；1954 年 3 月 28 日，球迷社團把它從勒科茨的球場上抬走，成為諾坎普（Camp Nou）的奠基石。兩次奠基之間的 32 年，正是巴薩第一座自有球場從興建、擴建到決定另起爐灶的過程。"
+    },
+    {
+      "type": "p",
+      "text": "勒科茨從 1922 年用到 1957 年，是巴薩在諾坎普之前的主場。它三個月就蓋好，1920 年代被稱為「足球大教堂」，也曾因看台上的一陣噓聲被當局停權；戰後一再擴建，最後靠工程師托羅哈（Eduardo Torroja）設計的懸挑屋頂撐起門面，仍然裝不下越來越多的會員。以下依巴薩官方的歷史文章，以及收錄托羅哈結構說明的作品集整理。"
+    },
+    {
+      "type": "timeline",
+      "title": "勒科茨的 44 年",
+      "items": [
+        { "when": "1909", "label": "工業街球場啟用", "note": "容量 4,000 人，到 1920 年代初已不敷使用" },
+        { "when": "1922.2.19", "label": "勒科茨奠基", "note": "2 月 8 日簽下地契，11 天後舉行奠基儀式" },
+        { "when": "1922.5.20", "label": "球場啟用", "note": "可容 22,000 人；揭幕戰 2–1 勝一支蘇格蘭球隊" },
+        { "when": "1925.6.14", "label": "噓國歌事件", "note": "6 月 24 日起停止俱樂部活動六個月，12 月 17 日解除；主席被迫離開" },
+        { "when": "1929", "label": "奠基石出土", "note": "降低場地高度時，場務 Manuel Torres 挖出並收藏" },
+        { "when": "1944–1950", "label": "戰後擴建", "note": "主看台（1944）、南端（1946）、北端（1950），容量最高到 48,000 人" },
+        { "when": "1945.6.2", "label": "托羅哈主看台啟用", "note": "屋頂懸挑 25.30 公尺，中間無柱" },
+        { "when": "1950.11", "label": "會員公投購地", "note": "7,835 票贊成、1,132 票反對" },
+        { "when": "1954.3.28", "label": "諾坎普奠基", "note": "用的是勒科茨那塊 1922 年的奠基石" },
+        { "when": "1957.9.24", "label": "諾坎普啟用", "note": "勒科茨退為第二球場" },
+        { "when": "1965.7.10", "label": "最後一場比賽", "note": "少年組錦標賽決賽，巴薩 3–1 勝 UB Catalonia" },
+        { "when": "1966.2.4", "label": "開始拆除", "note": "同年 5 月 18 日以 2.26 億比塞塔售地" }
+      ],
+      "caption": "依巴薩官網歷史文章整理。"
+    },
+    {
+      "type": "h",
+      "text": "三個月蓋好的第一座自有球場"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "在勒科茨之前，巴薩的主場在工業街（Carrer Indústria），1909 年啟用，只容得下 4,000 人。1920 年代初，薩米蒂爾（Josep Samitier）、阿爾坎塔拉（Paulino Alcántara）、薩莫拉（Ricardo Zamora）這一代球員把巴薩帶進第一個黃金期，舊場地明顯太小。1921 年 7 月 10 日，會員大會通過興建新球場；同年 12 月 8 日，臨時會員大會敲定財務條件。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "新址在勒科茨區，當地稱為 Can Ribot 或 Can Guerra，夾在 Numància 街與 Travessera de les Corts 之間，離日後的諾坎普不遠。土地花了 928,500 比塞塔，主席甘伯（Joan Gamper）在 1922 年 2 月 8 日簽下地契。2 月 19 日上午 11 點，會員與球迷從工業街舊址列隊出發，樂隊、隊旗、市政府與加泰隆尼亞聯合體（Mancomunitat）的代表同行；第 79 號會員 Lluís Sabaté 神父為奠基石祝福。甘伯在致詞中說："
+    },
+    {
+      "type": "quote",
+      "original": "on this ground, conquered by hard work and love, we will plant roots.",
+      "text": "在這片用辛勞與愛換來的土地上，我們要扎下根。",
+      "cite": "甘伯，1922 年勒科茨奠基儀式致詞，據巴薩官網英文版轉述（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "工程隔天就開工，大約三個月完成。1922 年 5 月 20 日球場啟用，可容 22,000 人；揭幕戰巴薩 2–1 擊敗蘇格蘭的聖米倫（St Mirren），六天前，巴薩才以 5–1 擊敗伊倫的皇家聯盟（Real Unión），拿下西班牙錦標賽冠軍。俱樂部的歷史頁記載，球場由 Santiago Mestres 與 Josep Alemany 設計，造價 991,984.05 比塞塔。"
+    },
+    {
+      "type": "h",
+      "text": "「足球大教堂」與一陣噓聲"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "勒科茨開幕正逢巴薩的第一個黃金期。整個 1920 年代，巴薩拿下 8 次加泰隆尼亞錦標賽、5 次西班牙錦標賽，以及 1929 年第一屆聯賽冠軍，球場也得到「足球大教堂」的外號。1925 年 4 月 12 日，巴薩在這裡和烏拉圭的國民（Club Nacional de Football）踢成 2–2；國民隊提供了 1924 年巴黎奧運金牌烏拉圭隊的大批主力。薩米蒂爾梅開二度，約 22,000 人進場，有些觀眾只能站在場邊。當時以角球數分勝負，兩隊角球一樣多，獎盃沒有頒出。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/4f/P%C3%BAblic_al_camp_de_les_Corts_del_Futbol_Club_Barcelona_%28AFCEC_FARGAS_X_03242%29.jpeg",
+      "width": 1024,
+      "height": 429,
+      "alt": "黑白立體照片，左右兩格幾乎相同。畫面幾乎被觀眾填滿：戴帽子的男性密密站滿一整片露天斜坡看台，看台邊有欄杆；右格前景可見石砌牆面，遠處有一根工廠煙囪、一根旗桿和低矮建築。",
+      "caption": "1923 年勒科茨的觀眾，球場啟用第二年。可見當時的看台多是露天斜坡，觀眾站著看球。原件是玻璃立體負片（4.5 × 10.7 公分），藏於加泰隆尼亞遠足中心（Centre Excursionista de Catalunya）的 Carles Fargas i Bonell 檔案。",
+      "credit": "Carles Fargas i Bonell 攝／Centre Excursionista de Catalunya，經 Memòria Digital de Catalunya",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:P%C3%BAblic_al_camp_de_les_Corts_del_Futbol_Club_Barcelona_(AFCEC_FARGAS_X_03242).jpeg",
+      "made": "1923"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "同年 6 月 14 日，巴薩在勒科茨和 CE Júpiter 踢友誼賽，同時向加泰隆尼亞合唱協會（Orfeó Català）致敬，約 14,000 人到場。中場休息時，停泊在巴塞隆納港的一艘英國軍艦派出水兵樂隊演奏西班牙國歌，大半觀眾報以噓聲與口哨；樂隊接著奏英國國歌〈天佑吾王〉（God Save the King），看台反而鼓掌。據俱樂部記述，樂手一度以為觀眾是在嫌他們奏得不好。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "當時西班牙處於普里莫・德里維拉（Miguel Primo de Rivera）的獨裁統治下。6 月 24 日，巴塞隆納民政總督 Joaquín Milans del Bosch 以有人宣揚危害國家的思想為由，下令停止巴薩一切活動六個月。俱樂部九天後去函抗辯，認為不該為球場裡發生的任何行為負責。甘伯被迫永久離開俱樂部，一度流亡瑞士，並被禁止再與巴薩有任何關聯。停權到 12 月 17 日才解除；這段期間約有 10,000 名會員照繳會費，沒有一名球員離隊。"
+    },
+    {
+      "type": "h",
+      "text": "托羅哈的 25 公尺懸挑屋頂"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "內戰之後，巴薩會員逐年增加，勒科茨一再擴建：主看台（1944 年）、南端球門後方（1946 年）、北端球門後方（1950 年）。分量最重的是主看台。托羅哈 1943 年為勒科茨設計新的有頂主看台；在此之前，他已設計馬德里薩蘇埃拉賽馬場（Hipódromo de la Zarzuela）的看台，那項工程 1934 年競圖得標，因內戰中斷，1941 年完工。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "據 Pilar Chías 與 Tomás Abad 在《Torroja: obras y proyectos》中的整理，這項工程要把原有主看台的階梯往後加深 8.40 公尺，看台有效長度 108 公尺。新屋頂不只蓋住新增的部分，也要罩住原有階梯，從後方一路伸出 25.30 公尺，中間不立任何柱子。看台下方另設一層深 7.85 公尺的鋼筋混凝土中間樓層。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "結構做法是一組鋼製懸臂樑撐起屋頂，剛性錨固在鋼筋混凝土門架上，門架再用拉桿施加預力。懸臂樑每 5.14 公尺一支，彼此以輕型鋼桁架串連，桁架與屋簷平行，分別距簷口 6 公尺與 15 公尺。後方的混凝土直柱必須很粗，才吃得下屋頂傳來的彎矩；但它們沒有一路落地，而是停在 4 公尺高處，架在細得多的柱子上，把街面的空間留下來。"
+    },
+    {
+      "type": "svg",
+      "title": "勒科茨主看台剖面",
+      "svg": "<svg viewBox='0 0 360 400' xmlns='http://www.w3.org/2000/svg' font-size='10.5'><defs><marker id='ar' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0,0 L8,4 L0,8 z' class='accent'/></marker></defs><text x='12' y='20' class='muted'>剖面示意：左為球場，右為後方街道側</text><line x1='86' y1='62' x2='300' y2='62' class='accent line' marker-start='url(#ar)' marker-end='url(#ar)'/><line x1='86' y1='54' x2='86' y2='70' class='accent line'/><line x1='302' y1='54' x2='302' y2='70' class='accent line'/><text x='194' y='52' text-anchor='middle' class='accent'>懸挑 25.30 m，中間無柱</text><path d='M302,84 Q200,92 84,122 L86,127 Q196,108 302,104 Z' class='accent'/><rect x='288' y='84' width='14' height='140' class='muted'/><line x1='295' y1='224' x2='295' y2='262' class='ink line' stroke-width='2'/><path d='M80,250 h15 v-7.1 h15 v-7.1 h15 v-7.1 h15 v-7.1 h15 v-7.1 h15 v-7.1 h15 v-7.1 h15 v-7.1 h15 v-7.1' class='ink line' stroke-width='1.6'/><path d='M215,186 h15 v-7.2 h15 v-7.2 h15 v-7.2 h15 v-7.2 h13 v-7.2' class='gold line' stroke-width='2.2'/><line x1='215' y1='186' x2='215' y2='262' class='ink line' stroke-width='2.5'/><line x1='215' y1='214' x2='288' y2='214' class='ink line' stroke-width='1.6'/><rect x='246' y='211' width='10' height='6' class='accent'/><line x1='10' y1='262' x2='350' y2='262' class='muted line'/><rect x='10' y='256' width='66' height='6' class='soft'/><text x='16' y='250'>球場</text><text x='318' y='276' font-size='9.5' class='muted'>街面</text><text x='144' y='101' font-size='11' class='accent'>①</text><text x='308' y='150' font-size='11' class='accent'>②</text><text x='302' y='246' font-size='11' class='accent'>③</text><text x='240' y='234' font-size='11' class='accent'>④</text><text x='196' y='240' font-size='11' class='accent'>⑤</text><text x='250' y='160' font-size='11' class='accent'>⑥</text><text x='12' y='296'>① 鋼構懸挑屋頂：伸出 25.30 m，中間不落柱</text><text x='12' y='312'>② 粗大的混凝土直柱：承受屋頂傳來的彎矩</text><text x='12' y='328'>③ 細柱：直柱停在 4 m 高處，下方留給街面</text><text x='12' y='344'>④ 中間樓層的受拉梁，附張緊器：抵消屋頂前傾</text><text x='12' y='360'>⑤ 門架的中間支點：位在舊看台後緣</text><text x='12' y='376'>⑥ 新增階梯（金色）：往後加深 8.40 m</text><text x='12' y='394' font-size='9.5' class='muted'>示意，不按比例</text></svg>",
+      "caption": "原創示意，不按比例。依 Pilar Chías、Tomás Abad《Torroja: obras y proyectos》對 1943 年勒科茨主看台的文字說明繪製；看台有效長度 108 公尺，懸臂樑每 5.14 公尺一支，圖中只畫一個剖面。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "拉桿要拉多緊是關鍵。托羅哈用自己發展的弦振動理論計算張力，再到實驗室驗證：把鋼拉桿調到不同張力，在旋轉圓盤上記錄它的振動。這個簡單的裝置後來也帶到工地，用來量測拉桿實際受力。看台下中間樓層的梁也裝上張緊器，可以預先拉緊，抵消屋頂把整座結構往前帶的傾向，又不讓門架變形開裂。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "從下方看，屋頂底面不是一整片平板，而是一條條橘色木板，彼此相隔 15 公分。托羅哈這樣解釋這個選擇："
+    },
+    {
+      "type": "quote",
+      "original": "de esta forma se enfatiza la inflexión en el perfil del intradós, confiriendo a la cubierta aspecto de fuerza y ligereza",
+      "text": "這樣能強調屋頂底面輪廓的轉折，讓屋頂看起來既有力量又輕盈。",
+      "cite": "托羅哈談屋頂底面的木板，引自 Chías、Abad《Torroja: obras y proyectos》（本文自譯）"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.22, 0.10, 0.44, 0.32],
+      "position": "頭圖中上偏左，約佔寬度四成",
+      "caption": "從看台端部看主看台屋頂：右側是錨固在後方結構上的厚實根部，往左逐漸收薄成懸空的簷尖，簷下看不到支柱；底面那道弧線就是屋頂的剖面輪廓。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "施工也顧及不能停賽：基礎與門架柱排在夏季休賽期施作，其餘結構可以邊比賽邊進行。新看台蓋在 1922 年的舊看台之上，舊看台成了多餘的結構，1944 年 10 月 31 日以 50,000 比塞塔賣給塔拉戈納體操（Gimnàstic de Tarragona），由對方拆下運回自家位於 Avinguda de Catalunya 的球場。新主看台 1945 年 6 月 2 日啟用，比原定時程晚了一些，總造價 2,938,128.10 比塞塔。啟用當天巴薩和塔拉戈納體操踢友誼賽，隊長 Josep Raich 領取 1944–45 球季聯賽冠軍獎盃。俱樂部的記述特別提到，這座懸臂屋頂沒有任何柱子支撐。"
+    },
+    {
+      "type": "h",
+      "text": "還是太小：從會員公投到諾坎普"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "擴建之後，勒科茨的容量到了 48,000 人（俱樂部 2017 年的一篇歷史頁寫過 60,000 人，2022 年以後的幾篇專文都寫 48,000 人），而且已經沒有再擴的餘地。巴薩在 1945、1948、1949 年拿下聯賽冠軍，看台每到週末就爆滿；皇家馬德里則在 1947 年啟用可容 75,000 人的查馬丁球場（Chamartín）。1950 年 11 月 8 日到 12 日，巴薩會員投票決定是否購買新球場用地，結果 7,835 票贊成、1,132 票反對、6 票無效。當時會員共 30,084 人，投票的不到三成；這次投票女性會員也能參加，1953 年的主席選舉反而不讓女性投票。土地花了 10,029,945 比塞塔，12 月 19 日完成購買。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "常見的說法是，庫巴拉（Ladislao Kubala）的到來讓董事會下定決心。他在 1950 年 6 月 15 日簽約，因手續拖延，到 1951 年才能踢正式比賽；1951–52 球季，巴薩拿下聯賽、西班牙盃、拉丁盃、Eva Duarte 盃與 Martini Rossi 盃五座獎盃。不過俱樂部自己的球場史也寫明，蓋新球場的決定同樣來自 1947–48 與 1948–49 兩座聯賽冠軍，對新球場的興趣從 1948 年就開始升高。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，庫巴拉讓這個決定變得急迫，卻不是起點。需求早已寫在勒科茨爆滿的看台上：三次聯賽冠軍與戰後持續增加的會員，已經讓一座擴建到極限的球場裝不下。"
+    },
+    {
+      "type": "h",
+      "text": "同一塊石頭，換一座球場"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "勒科茨的奠基石其實早就離開過原位。1929 年球場降低場地高度時，場務 Manuel Torres 挖到這塊石頭，把它收了起來。1954 年，諾坎普建設委員會想找一塊有象徵意義的石頭，找上 Torres，他把石頭交了出來。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Camp_de_les_Corts_-_Primera_pedra.JPG/1280px-Camp_de_les_Corts_-_Primera_pedra.JPG",
+      "width": 1280,
+      "height": 1707,
+      "alt": "一塊淺灰色的方形石塊放在深色展台上，邊緣粗鑿、中央磨平；正面上方浮雕圓框中的巴薩隊徽，下方刻著「19-2-1922」，頂部中央有一個凸起的小方塊。",
+      "caption": "勒科茨球場的奠基石，正面刻有隊徽與奠基日期「19-2-1922」。1929 年被場務人員挖出保存，1954 年再度用作諾坎普的奠基石。照片 2010 年攝於巴薩博物館。",
+      "credit": "Jordiferrer／Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Camp_de_les_Corts_-_Primera_pedra.JPG",
+      "made": "2010",
+      "depicts": "1922（石頭刻製年代）"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1954 年 3 月 28 日上午 11 點，約 60,000 名球迷到場。Círculo Barcelonista、Peña Solera 等七個球迷社團與巴薩前球員協會，把石頭從勒科茨的球場抬到新址；巴塞隆納總主教 Gregorio Modrego 先為它祝福，3,000 多名克拉韋合唱團（Cors de Clavé）成員在市立樂隊伴奏下演唱。諾坎普在 1957 年 9 月 24 日啟用；工程原本預算 66,620,000 比塞塔，實際花了 2.88 億。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "勒科茨退為第二球場。1958 年 6 月 4 日到 1961 年 11 月 8 日之間，一線隊還在這裡踢了 21 場友誼賽，多半是晚上對外國球隊。最後一場比賽是 1965 年 7 月 10 日的 O.A.R. 少年組錦標賽決賽，巴薩少年 A 隊 3–1 勝 UB Catalonia。"
+    },
+    {
+      "type": "h",
+      "text": "拆除那天的致詞，與一筆債"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1966 年 2 月 4 日當地時間下午 1 點，主席 Enric Llaudet 在約 500 名會員面前舉起十字鎬，拆除工程開始。俱樂部 2022 年的一篇文章把日期寫成 3 月 4 日；本文採 Llaudet 致詞本身提到的 2 月 4 日。在佛朗哥獨裁時期，他用加泰隆尼亞語致詞，稱舊球場是「加泰隆尼亞足球的大教堂」，其中一句是："
+    },
+    {
+      "type": "quote",
+      "original": "Tot s’acaba en aquest món, menys la continuïtat",
+      "text": "這世上一切都會結束，只有延續不會。",
+      "cite": "Enric Llaudet，1966 年勒科茨拆除儀式致詞，據巴薩官網加泰隆尼亞語版（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1966 年 5 月 18 日，俱樂部同意把這塊地以 2.26 億比塞塔賣給房地產公司 Habitat，款項用來償還興建諾坎普留下的債務。勒科茨為巴薩做的最後一件事，是用自己的地皮，替取代它的新球場還債。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "100 years since the first brick was put into place for the stadium in Les Corts",
+      "publisher": "FC Barcelona",
+      "date": "2022-02-19",
+      "url": "https://www.fcbarcelona.com/en/club/news/2491345/100-years-since-the-first-brick-was-put-into-place-for-the-stadium-in-les-corts",
+      "note": "1921 年會員大會、奠基與啟用、1920 年代戰績、48,000 人容量、拆除日期另一說（3 月 4 日）"
+    },
+    {
+      "title": "91 years since foundation laid for Les Corts Stadium",
+      "publisher": "FC Barcelona",
+      "date": "2013-02-18",
+      "url": "https://www.fcbarcelona.com/en/news/1144406/91-years-since-foundation-laid-for-les-corts-stadium",
+      "note": "工業街球場容量、土地位置與價格、奠基儀式、甘伯致詞"
+    },
+    {
+      "title": "1919-30. A golden age",
+      "publisher": "FC Barcelona（Barça Academy）",
+      "date": "2017-05-08",
+      "url": "https://barcaacademy.fcbarcelona.com/en/news/682835/191930-a-golden-age",
+      "note": "設計者 Santiago Mestres、Josep Alemany 與造價；60,000 人容量的說法"
+    },
+    {
+      "title": "100 years since a memorable match",
+      "publisher": "FC Barcelona",
+      "date": "2025-04-12",
+      "url": "https://www.fcbarcelona.com/en/news/4246031/100-years-since-a-memorable-match",
+      "note": "1925 年 4 月 12 日對國民隊"
+    },
+    {
+      "title": "100 years since shut down for protest against Spanish national anthem",
+      "publisher": "FC Barcelona",
+      "date": "2025-06-14",
+      "url": "https://www.fcbarcelona.com/en/club/news/4274672/100-years-since-shut-down-for-protest-against-spanish-national-anthem",
+      "note": "1925 年 6 月 14 日事件、停權與解除日期、甘伯的處境"
+    },
+    {
+      "title": "Tribuna del Campo de Las Corts, 1943（Pilar Chías、Tomás Abad《Torroja: obras y proyectos》）",
+      "publisher": "Instituto de Ciencias de la Construcción Eduardo Torroja（IETcc-CSIC）",
+      "url": "https://www.ietcc.csic.es/wp-content/uploads/2019/05/11-tribuna-camps.pdf",
+      "note": "主看台的尺寸、結構、拉桿量測、施工安排與托羅哈談屋頂底面的引文"
+    },
+    {
+      "title": "Eduardo Torroja: obra construida",
+      "publisher": "IETcc-CSIC",
+      "url": "https://www.ietcc.csic.es/en/general-information/history/eduardo-torroja-vida-obra-y-legado-de-un-genio/obra/obra-construida/",
+      "note": "勒科茨主看台列為 1943 年作品；薩蘇埃拉賽馬場的競圖與完工年份"
+    },
+    {
+      "title": "June 2, 1945: The new stand",
+      "publisher": "FC Barcelona",
+      "date": "2020-06-02",
+      "url": "https://www.fcbarcelona.com/en/club/news/1675843/june-2-1945-the-new-stand",
+      "note": "舊看台售予塔拉戈納體操、新看台啟用與造價"
+    },
+    {
+      "title": "Spotify Camp Nou History",
+      "publisher": "FC Barcelona",
+      "url": "https://www.fcbarcelona.com/en/club/facilities/spotify-camp-nou/history",
+      "note": "勒科茨各次擴建年份、建新球場的原因與庫巴拉的角色、諾坎普造價"
+    },
+    {
+      "title": "75 years since stadium referendum",
+      "publisher": "FC Barcelona",
+      "date": "2025-11-15",
+      "url": "https://www.fcbarcelona.com/en/club/news/4402394/75-years-since-stadium-referendum",
+      "note": "1950 年會員公投票數、土地價格、查馬丁球場容量"
+    },
+    {
+      "title": "75 years since László Kubala signed",
+      "publisher": "FC Barcelona",
+      "date": "2025-06-15",
+      "url": "https://www.fcbarcelona.com/en/news/4274716/75-years-since-laszlo-kubala-signed",
+      "note": "庫巴拉簽約日期"
+    },
+    {
+      "title": "1950-1961. The Kubala era",
+      "publisher": "FC Barcelona（Barça Academy）",
+      "date": "2018-03-13",
+      "url": "https://barcaacademy.fcbarcelona.com/en/news/643900/19501961-the-kubala-era",
+      "note": "1951–52 球季五座獎盃"
+    },
+    {
+      "title": "Seventy years since the first stone laid at Camp Nou",
+      "publisher": "FC Barcelona",
+      "date": "2024-03-28",
+      "url": "https://www.fcbarcelona.com/en/club/news/3939346/seventy-years-since-the-first-stone-laid-at-camp-nou",
+      "note": "奠基石 1929 年出土與 1954 年再用、諾坎普奠基儀式"
+    },
+    {
+      "title": "60 years since Les Corts stadium was demolished",
+      "publisher": "FC Barcelona",
+      "date": "2026-02-04",
+      "url": "https://www.fcbarcelona.com/en/club/news/4440891/60-years-since-les-corts-stadium-was-demolished",
+      "note": "拆除儀式、最後幾年的比賽、售地與諾坎普債務"
+    },
+    {
+      "title": "60 anys de l'enderroc de l'Estadi de Les Corts",
+      "publisher": "FC Barcelona",
+      "date": "2026-02-04",
+      "url": "https://www.fcbarcelona.cat/ca/club/noticies/4440891/60-anys-de-lenderroc-de-lestadi-de-les-corts",
+      "note": "Llaudet 致詞的加泰隆尼亞語原文"
+    },
+    {
+      "title": "File:Camp de les Corts. Aniversario Academia Granés. 25 de abril de 1964. 2.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Camp_de_les_Corts._Aniversario_Academia_Gran%C3%A9s._25_de_abril_de_1964._2.jpg",
+      "note": "頭圖"
+    },
+    {
+      "title": "File:Públic al camp de les Corts del Futbol Club Barcelona (AFCEC FARGAS X 03242).jpeg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:P%C3%BAblic_al_camp_de_les_Corts_del_Futbol_Club_Barcelona_(AFCEC_FARGAS_X_03242).jpeg",
+      "note": "1923 年觀眾照片"
+    },
+    {
+      "title": "File:Camp de les Corts - Primera pedra.JPG",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Camp_de_les_Corts_-_Primera_pedra.JPG",
+      "note": "奠基石照片（EXIF 拍攝日期 2010 年 12 月）"
+    }
+  ]
+}

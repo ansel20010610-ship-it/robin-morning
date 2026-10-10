@@ -1,0 +1,481 @@
+{
+  "column": "civilization",
+  "date": "reserve",
+  "reserve_written": "2026-10-10",
+  "title": "繩子上的稅：印加怎麼向四千戶派工",
+  "dek": "1549 年，一名安地斯人對西班牙書記讀出 26 條結繩：誰去庫斯科築牆、誰守君王遺體、誰製鹽採蜜。這是印加向四千戶收稅的帳。",
+  "topic_key": "civilization:andes-inca-labor-tax-15c",
+  "updated_at": "2026-10-10T23:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Peru%2C_Inca_Period%2C_15th-16th_Century_-_Inka_Khipu_%28Fiber_Recording_Device%29_-_1940.469_-_Cleveland_Museum_of_Art.tif/lossy-page1-1280px-Peru%2C_Inca_Period%2C_15th-16th_Century_-_Inka_Khipu_%28Fiber_Recording_Device%29_-_1940.469_-_Cleveland_Museum_of_Art.tif.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Peru%2C_Inca_Period%2C_15th-16th_Century_-_Inka_Khipu_%28Fiber_Recording_Device%29_-_1940.469_-_Cleveland_Museum_of_Art.tif/lossy-page1-3840px-Peru%2C_Inca_Period%2C_15th-16th_Century_-_Inka_Khipu_%28Fiber_Recording_Device%29_-_1940.469_-_Cleveland_Museum_of_Art.tif.jpg",
+    "width": 1280,
+    "height": 1063,
+    "alt": "米色底板上攤開一串結繩：上方一條彎成弧形的主繩，下方垂下許多棕、黑、白、米色的細繩，呈扇形散開；不少細繩上打著深色的結，另有幾條長繩從弧頂向上延伸並捲成圈。",
+    "caption": "印加結繩（khipu），棉與羊毛繩，打結與絞合，全幅約 113 × 137 公分。結繩是印加國家記帳的工具，垂繩的顏色、結的種類與位置都帶有資訊。館方只著錄「秘魯，印加時期」，沒有出土地點與內容說明。",
+    "credit": "克里夫蘭美術館（The Cleveland Museum of Art）藏，1940.469，John Wise 捐贈",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Peru,_Inca_Period,_15th-16th_Century_-_Inka_Khipu_(Fiber_Recording_Device)_-_1940.469_-_Cleveland_Museum_of_Art.tif",
+    "made": "約 1400–1532 年（館方定年）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1549 年，西班牙官員在安地斯山區中部的瓦努科（Huánuco）一帶清查 Chupaychu 人，問他們過去替印加（Inca）國王做過哪些事。答案來自一串結繩（khipu）：一名安地斯人逐條讀出，歐洲書記照著寫下。第 1 條繩說，有 400 名男女常駐庫斯科（Cuzco）築牆，死了一個，就再補一個；第 2 條，另有 400 人在庫斯科種田，讓城裡的人有東西吃。這樣的條目一共 26 條。",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "They were asked what full time services did [the Chupaychu] give to the Inca in Cuzco and they said that 400 Indian men and women remained in Cuzco full time to build walls and if one died they gave another.",
+      "text": "問他們（Chupaychu）在庫斯科為印加提供哪些常年勞役，他們說，有 400 名男女常駐庫斯科築牆，若死了一個，就再補一個。",
+      "cite": "1549 年 Chupaychu 視察紀錄，第 1 條繩；John V. Murra 1982 年英譯，World History Commons 轉載；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "本文要回答的是：印加國家怎麼向一個登記為 4,000 戶的族群收稅？收的是什麼、送到哪裡、誰記帳、誰強制，以及這本帳後來怎麼落到西班牙人手裡。"
+    },
+    {
+      "type": "h",
+      "text": "定位：瓦亞加河谷的四千戶，與四種有立場的史料"
+    },
+    {
+      "type": "p",
+      "text": "Chupaychu 住在瓦努科一帶的瓦亞加河谷（Huallaga），文獻也拼作 Chupachu 或 Chupachos。印加把他們算作 4,000 戶，也就是四個 waranqa（千戶單位）。清單裡出現兩位印加君王：圖帕克・印加・尤潘基（Topa Inca Yupanqui）與瓦伊納・卡帕克（Huayna Capac）；依 World History Commons 註解採用的年表，兩人分別在 1471–1493 年、1493–1527 年在位。這個河谷頑強抵抗西班牙人，1542 年才被征服。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "我們靠四種材料認識這套制度，各有立場。第一是殖民官員的視察（visita）紀錄。1549 年那次，學界引作 Mori 與 Malpartida 的視察；1561–1562 年，奧爾蒂斯・德蘇尼加（Iñigo Ortiz de Zúñiga）再來，這次逐戶登記。Culagovski 1978 年分析後者時提醒：問話的人與書記都不懂受訪族群的語言，克丘亞語的回答經過翻譯才寫下，翻譯、解讀與抄寫的錯誤層層相乘；紀錄本身也不完整。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "第二是西班牙軍人西耶薩・德萊昂（Pedro de Cieza de León）的《秘魯紀事》第二部。據 1880 年馬德里刊本的編者註，他 1549 年南下查爾卡斯（Charcas），1550 年 8 月前後在庫斯科；他寫明，制度的說法來自「在庫斯科向我講述的 orejones」，也就是印加貴族。這是統治階層對自家制度的描述，書中一再強調沒有詐欺。第三是瓜曼・波馬（Felipe Guaman Poma de Ayala）的圖文手稿，作者是秘魯南部受洗的安地斯原住民，手稿標 1615 年，離瓦伊納・卡帕克去世已近 90 年。第四是考古：印加在瓦努科潘帕（Huánuco Pampa）建的行政中心與倉庫。",
+      "tag": "史料"
+    },
+    {
+      "type": "timeline",
+      "title": "Chupaychu、印加與西班牙人：從派工到訴訟",
+      "items": [
+        {
+          "when": "1471–1493 年",
+          "label": "圖帕克・印加・尤潘基在位",
+          "note": "清單第 4、5 條：為他守護遺體與武器。"
+        },
+        {
+          "when": "15 世紀下半",
+          "label": "瓦努科潘帕興建",
+          "note": "Ordóñez 引 Varallanos（1959）：可能始於帕查庫特克（Pachacutec）征服此區之後，主要在圖帕克・印加時期。"
+        },
+        {
+          "when": "1493–1527 年",
+          "label": "瓦伊納・卡帕克在位",
+          "note": "清單第 3、8 條：他的貼身侍從與遺體守衛。"
+        },
+        {
+          "when": "1539 年 8 月 15 日",
+          "label": "西班牙人首次建立瓦努科城",
+          "note": "Puente Brunke 與 Janssen（1997）。"
+        },
+        {
+          "when": "1542 年",
+          "label": "瓦亞加河谷被西班牙征服",
+          "note": "此前抵抗多年（World History Commons；Culagovski 1978）。"
+        },
+        {
+          "when": "1549 年",
+          "label": "Mori 與 Malpartida 視察",
+          "note": "讀繩人報出 26 條派工。同年，依加斯卡（Pedro de la Gasca）之命，瓦努科的 Chinchaycocha 有了第一份詳細貢額表。"
+        },
+        {
+          "when": "1550 年 8 月前後",
+          "label": "西耶薩在庫斯科採訪",
+          "note": "向印加貴族打聽制度，寫進《秘魯紀事》第二部。"
+        },
+        {
+          "when": "1557 年",
+          "label": "Diego Álvarez 點算",
+          "note": "1562 年的紀錄一再提到，當時有人逃走或躲藏。"
+        },
+        {
+          "when": "1561–1562 年",
+          "label": "奧爾蒂斯・德蘇尼加逐戶視察",
+          "note": "收在 Chupaychu 控告監護主的訴訟卷宗中。"
+        },
+        {
+          "when": "1615 年",
+          "label": "瓜曼・波馬手稿",
+          "note": "18 世紀起藏於哥本哈根皇家圖書館，1908 年才被學界重新發現。"
+        },
+        {
+          "when": "1967、1972 年",
+          "label": "1562 年視察紀錄出版",
+          "note": "瓦努科的大學出版，穆拉（John V. Murra）編；他的〈垂直控制〉一文收在 1972 年那冊。"
+        }
+      ],
+      "caption": "年代依各條所註來源；印加君王在位年依 World History Commons 註解採用的年表。"
+    },
+    {
+      "type": "h",
+      "text": "追蹤：26 條繩把四千戶分到哪裡"
+    },
+    {
+      "type": "p",
+      "text": "把 26 條繩依去向分組（見下表），人數最多的一塊不在庫斯科，而在本地生產：織精細布料的 400 人、放牧駱馬類牲畜的 240 人、處理羽毛的 120 人，還有採蜜、製染料、製鹽、種辣椒與古柯、做鞋底、木器和陶器的人，合計 1,180 人。產物的去處也記在繩上：河谷田裡的玉米大多送庫斯科，其餘進倉庫；古柯送庫斯科與瓦努科的倉庫，有時一次 200 袋，有時 40 袋；陶罐送瓦努科。",
+      "tag": "史料"
+    },
+    {
+      "type": "table",
+      "title": "1549 年清單：26 條繩的分組",
+      "head": [
+        "去向",
+        "繩號與任務（人數）",
+        "合計"
+      ],
+      "rows": [
+        [
+          "庫斯科的工程與田地",
+          "1 築牆，常駐，死一補一（400）；2 種田供城中糧食（400）",
+          "800"
+        ],
+        [
+          "君王與宮廷",
+          "3 瓦伊納・卡帕克的貼身侍從（150）；4 守圖帕克・印加遺體（150）；5 守其武器（10）；8 守瓦伊納・卡帕克遺體（20）；18 隨印加獵鹿（40）；24 守印加女眷（40）",
+          "410"
+        ],
+        [
+          "戍守與出征",
+          "6 守查查波亞斯（200）；7 守基多（200）；25 隨印加出征、抬轎（500）",
+          "900"
+        ],
+        [
+          "本地生產，送庫斯科或倉庫",
+          "9 羽毛（120）；10 採蜜（60）；11 織精細布（400）；12 染料（40）；13 放牧駱馬類（240）；14 看守河谷田地，玉米多送庫斯科（40）；15 種辣椒送庫斯科（40）；16 製鹽（60，有時 45）；17 古柯送庫斯科與瓦努科倉庫（60）；19 鞋底送庫斯科與倉庫（40）；20 木器送庫斯科（40）；21 陶罐送瓦努科（40）",
+          "1,180"
+        ],
+        [
+          "驛站與搬運",
+          "22 看守瓦努科驛站（68）；23 從驛站揹貨到蓬普等地（80）",
+          "148"
+        ],
+        [
+          "留在本地",
+          "26 耕作及其他，不離開領地（500）",
+          "500"
+        ],
+        [
+          "總計",
+          "26 條繩",
+          "3,938（製鹽取 45 則為 3,923）"
+        ]
+      ],
+      "caption": "依 Murra（1982）英譯、World History Commons 轉載的 1549 年視察紀錄整理；分組與合計為本文所做。"
+    },
+    {
+      "type": "p",
+      "text": "往外走的人分三路。去庫斯科的是築牆與種田的 800 人。服侍君王本人的有 410 人：瓦伊納・卡帕克生前的貼身侍從 150 人，圖帕克・印加死後守護遺體的 150 人、守其武器的 10 人，瓦伊納・卡帕克死後守遺體的 20 人，以及守印加女眷、隨印加獵鹿的各 40 人。往邊境與戰場的有 900 人：查查波亞斯（Chachapoya）與基多（Quito）的守衛各 200 人，另有 500 人隨印加出征、替他抬轎，「去過基多和其他地方」。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "其餘的人守在路上和家裡。68 人看守瓦努科的驛站（tampu），80 人從驛站揹貨到蓬普（Pumpu），英譯者註明那是五到六天的路程。最後 500 人「不離開自己的領地」，在本地耕作、做其他事。清單沒有說這 500 人種的是誰的田。",
+      "tag": "史料"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Qullqa_%28Inca_Warehouse%29_by_Guaman_Poma.jpg",
+      "width": 379,
+      "height": 549,
+      "alt": "墨線手繪的一頁：頂端寫著 DEPOCITO DEL INGA 與 COLLCA；背景是上下兩排帶門的圓頂小屋；左側一名戴頭飾的男子手持頂端有花形裝飾的長杖，伸手指向右方；右側一名男子雙手捧著一束長長的垂繩。",
+      "caption": "瓜曼・波馬《新編年史與善政》（Nueva corónica y buen gobierno）第 335 [337] 頁，圖 132「印加的倉庫」（qullqa）。左邊的人物標為圖帕克・印加・尤潘基；右邊標為「管理者」（administrador, suyoyoc）與 apo Poma Chaua，手裡捧著一串結繩。畫的是 15 世紀的倉庫制度，畫成時已在西班牙統治之下。",
+      "credit": "Felipe Guaman Poma de Ayala；丹麥皇家圖書館（Det Kgl. Bibliotek）藏，GKS 2232 4°",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Qullqa_(Inca_Warehouse)_by_Guaman_Poma.jpg",
+      "made": "手稿標 1615 年",
+      "depicts": "15 世紀後半，圖帕克・印加・尤潘基在位時"
+    },
+    {
+      "type": "p",
+      "text": "這些倉庫在地面上找得到。瓦努科潘帕位在海拔約 3,600 公尺的高原，中央廣場長 540 公尺、寬 350 公尺。考古學家莫里斯（Craig Morris）把遺址分成八區，在西南側山坡的第 VIII 區登錄 497 座倉庫（qullqa），平面有圓有方，存放裝在陶罐裡的玉米粒、塊莖、布、草鞋與武器。秘魯文化部 Qhapaq Ñan 計畫的 Ordóñez 在 2013 年的報告中，又於周邊約 2 到 6 公里處找到幾處可能的倉庫群，其中兩處他較有把握，並建議發掘確認。",
+      "tag": "史實"
+    },
+    {
+      "type": "svg",
+      "title": "從 4,000 戶到各地：1549 年清單的去向",
+      "svg": "<svg viewBox='0 0 360 606' xmlns='http://www.w3.org/2000/svg' font-size='11'>\n<defs>\n<marker id='ah' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='ink'/></marker>\n<marker id='ahg' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='gold'/></marker>\n<marker id='ahr' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='accent'/></marker>\n</defs>\n<text x='12' y='14' font-size='10.5' class='muted'>一｜人與物往哪裡去（單位：人）</text>\n<rect x='12' y='22' width='336' height='42' rx='3' class='soft'/>\n<text x='22' y='39' font-size='12'>Chupaychu 各村落：印加帳上 4,000 戶</text>\n<text x='22' y='56' font-size='10.5' class='muted'>4 個 waranqa；26 條繩合計 3,938 人</text>\n<path d='M24,64 V393' class='ink line'/>\n<line x1='24' y1='103' x2='36' y2='103' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='161' x2='36' y2='161' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='219' x2='36' y2='219' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='277' x2='36' y2='277' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='335' x2='36' y2='335' class='ink line' marker-end='url(#ah)'/>\n<line x1='24' y1='393' x2='36' y2='393' class='ink line' marker-end='url(#ah)'/>\n<rect x='38' y='80' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='99' font-size='11.5'>庫斯科工程與田地</text>\n<text x='182' y='99' font-size='13' font-weight='600' text-anchor='end'>800</text>\n<text x='46' y='116' font-size='10' class='muted'>築牆 400・種田 400</text>\n<rect x='38' y='138' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='157' font-size='11.5'>君王與宮廷</text>\n<text x='182' y='157' font-size='13' font-weight='600' text-anchor='end'>410</text>\n<text x='46' y='174' font-size='10' class='muted'>侍從、遺體與武器守衛等</text>\n<rect x='38' y='196' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='215' font-size='11.5'>本地生產</text>\n<text x='182' y='215' font-size='13' font-weight='600' text-anchor='end'>1,180</text>\n<text x='46' y='232' font-size='10' class='muted'>布、牲畜、古柯、鹽等</text>\n<rect x='38' y='254' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='273' font-size='11.5'>戍守與出征</text>\n<text x='182' y='273' font-size='13' font-weight='600' text-anchor='end'>900</text>\n<text x='46' y='290' font-size='10' class='muted'>查查波亞斯、基多、隨軍</text>\n<rect x='38' y='312' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='331' font-size='11.5'>驛站與搬運</text>\n<text x='182' y='331' font-size='13' font-weight='600' text-anchor='end'>148</text>\n<text x='46' y='348' font-size='10' class='muted'>看守驛站、揹貨</text>\n<rect x='38' y='370' width='150' height='46' rx='3' class='soft'/>\n<text x='46' y='389' font-size='11.5'>留在本地</text>\n<text x='182' y='389' font-size='13' font-weight='600' text-anchor='end'>500</text>\n<text x='46' y='406' font-size='10' class='muted'>耕作及其他</text>\n<line x1='188' y1='103' x2='224' y2='103' class='ink line' marker-end='url(#ah)'/>\n<line x1='188' y1='161' x2='224' y2='161' class='ink line' marker-end='url(#ah)'/>\n<path d='M188,209 L224,178' class='gold line' stroke-dasharray='3 3' marker-end='url(#ahg)'/>\n<path d='M188,226 H224' class='gold line' stroke-dasharray='3 3' marker-end='url(#ahg)'/>\n<line x1='188' y1='277' x2='224' y2='277' class='ink line' marker-end='url(#ah)'/>\n<line x1='188' y1='335' x2='224' y2='335' class='ink line' marker-end='url(#ah)'/>\n<line x1='188' y1='393' x2='224' y2='393' class='ink line' marker-end='url(#ah)'/>\n<rect x='226' y='80' width='122' height='104' rx='3' class='paper'/>\n<text x='234' y='100' font-size='12'>庫斯科</text>\n<text x='234' y='119' font-size='10' class='muted'>城牆、田地、宮廷</text>\n<text x='234' y='137' font-size='10' class='muted'>也收玉米、辣椒、</text>\n<text x='234' y='155' font-size='10' class='muted'>古柯、木器、鞋底</text>\n<rect x='226' y='196' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='215' font-size='11.5'>瓦努科潘帕倉庫</text>\n<text x='234' y='232' font-size='10' class='muted'>Morris 登錄 497 座</text>\n<rect x='226' y='254' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='273' font-size='11.5'>邊境與戰場</text>\n<text x='234' y='290' font-size='10' class='muted'>查查波亞斯、基多</text>\n<rect x='226' y='312' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='331' font-size='11'>瓦努科驛站→蓬普</text>\n<text x='234' y='348' font-size='10' class='muted'>揹貨約 5–6 天路程</text>\n<rect x='226' y='370' width='122' height='46' rx='3' class='paper'/>\n<text x='234' y='389' font-size='11.5'>本族領地</text>\n<text x='234' y='406' font-size='10' class='muted'>不離開領地</text>\n<line x1='14' y1='436' x2='36' y2='436' class='ink line' marker-end='url(#ah)'/>\n<text x='42' y='440' font-size='10'>派出人力</text>\n<path d='M112,436 H134' class='gold line' stroke-dasharray='3 3' marker-end='url(#ahg)'/>\n<text x='140' y='440' font-size='10'>產物去向</text>\n<path d='M210,436 H232' class='accent line' marker-end='url(#ahr)'/>\n<text x='238' y='440' font-size='10'>帳的傳遞</text>\n<text x='12' y='466' font-size='10.5' class='muted'>二｜帳怎麼走</text>\n<text x='12' y='484' font-size='10' class='muted'>印加時期（據西耶薩）</text>\n<rect x='12' y='490' width='100' height='40' rx='3' class='soft'/>\n<text x='20' y='507' font-size='11'>各地繳納</text>\n<text x='20' y='523' font-size='10' class='muted'>人力與物產</text>\n<path d='M113,510 H128' class='accent line' marker-end='url(#ahr)'/>\n<rect x='130' y='490' width='100' height='40' rx='3' class='soft'/>\n<text x='138' y='507' font-size='11'>省府結繩官</text>\n<text x='138' y='523' font-size='10' class='muted'>按繩記帳</text>\n<path d='M231,510 H246' class='accent line' marker-end='url(#ahr)'/>\n<rect x='248' y='490' width='100' height='40' rx='3' class='soft'/>\n<text x='256' y='507' font-size='11'>庫斯科對帳</text>\n<text x='256' y='523' font-size='10' class='muted'>來人查或送帳去</text>\n<text x='12' y='552' font-size='10' class='muted'>1549 年以後</text>\n<rect x='12' y='558' width='74' height='40' rx='3' class='soft'/>\n<text x='19' y='575' font-size='11'>結繩</text>\n<text x='19' y='591' font-size='10' class='muted'>26 條</text>\n<path d='M87,578 H98' class='accent line' marker-end='url(#ahr)'/>\n<rect x='100' y='558' width='74' height='40' rx='3' class='soft'/>\n<text x='107' y='575' font-size='11'>讀繩人</text>\n<text x='107' y='591' font-size='10' class='muted'>口頭報出</text>\n<path d='M175,578 H186' class='accent line' marker-end='url(#ahr)'/>\n<rect x='188' y='558' width='74' height='40' rx='3' class='soft'/>\n<text x='195' y='575' font-size='11'>西班牙書記</text>\n<text x='195' y='591' font-size='10' class='muted'>寫成文字</text>\n<path d='M263,578 H274' class='accent line' marker-end='url(#ahr)'/>\n<rect x='276' y='558' width='74' height='40' rx='3' class='soft'/>\n<text x='283' y='575' font-size='11'>穆拉英譯</text>\n<text x='283' y='591' font-size='10' class='muted'>1982 年</text>\n</svg>",
+      "caption": "示意，不按比例。人數依 1549 年視察紀錄（Murra 1982 英譯），分組為本文所做；倉庫數依 Ordóñez（2013）轉引 Morris（1985）；「帳怎麼走」的印加時期部分依西耶薩《秘魯紀事》第二部第 12、20 章。",
+      "credit": "本報原創示意圖"
+    },
+    {
+      "type": "p",
+      "text": "把 26 條繩的人數相加，是 3,938 人（第 16 條製鹽取 60 人；若取「有時 45」，是 3,923）。這和 4,000 戶只差約 1.5%。本文的讀法是：這份清單可能是把每戶一名勞力分派到各項工作上的帳，所以總數貼近戶數。不過原文沒有這樣說，也沒有逐條交代是常年、輪班還是一次性的派遣；明寫「常駐」的只有第 1 條築牆和第 3 條侍從。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "權力：誰派工、誰記帳、誰補人"
+    },
+    {
+      "type": "p",
+      "text": "西耶薩描述的徵收方式，比 Chupaychu 的清單更像實物稅：有的地方按房屋數繳玉米，有的按已婚男子數交毯子，有的交上千擔長矛；也有省分要派數千人到庫斯科蓋公共建築與王宮，由國家供給口糧。他說這套制度嚴密到「百姓不拖欠應繳之物，收貢的人也不敢多拿一粒玉米」。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "帳記在結繩上。西耶薩寫道，繩結「從一數到十，從十到百，從百到千」，一條繩記一樣東西。他也說，各省每年年底把當年死亡與出生的人數打在結繩上，新年初帶到庫斯科，國王與總督因此知道誰窮、誰守寡、誰繳得起貢、能出多少兵。",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "En cada cabeza de provincia habia contadores á quien llamaban quiposcamayos, y por estos nudos tenian la cuenta y razon de lo que habian de tributar los questaban en aquel distrito … tan bien, que un par de alpargatas no se podian esconder.",
+      "text": "每個省的首府都有稱為結繩官的會計，憑這些結記下該區居民應繳之物……記得如此周全，連一雙草鞋都藏不住。",
+      "cite": "西耶薩・德萊昂，《秘魯紀事》第二部第 12 章（1880 年馬德里刊本），本文自譯"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.3,
+        0.38,
+        0.25,
+        0.3
+      ],
+      "position": "畫面中央偏左，弧形主繩下方，約佔寬度四分之一",
+      "caption": "頭圖局部：垂繩依顏色成組，黑、白、褐、米色與雙色絞繩分開排列；結有單結、長結等不同形狀，打在離主繩遠近不同的位置。依 Locke（1912）對另一串結繩的研究，離主繩最遠的一排是個位，往上依次是十位、百位。館方沒有著錄這串繩記的是什麼。"
+    },
+    {
+      "type": "p",
+      "text": "強制靠巡查與加罰。依西耶薩的記載，庫斯科每年派貴族擔任「委任法官」巡行各省，他們只負責聽申訴、查欠繳，回庫斯科報告後，再由另一位有權懲處的人出發。各族首領也定期到國王面前陳報收成，以及貢賦是否太重；若被查出欺瞞，「便重罰，並加重貢賦」。駐省總督多是在庫斯科附近有田產的貴族，各地繳來的東西交給掌管結繩的人記帳，帳由庫斯科派人來查，或送到庫斯科去對。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "成本落在誰身上？Chupaychu 清單裡最清楚的一句是「死了一個，就再補一個」：人力折損由族群自己吸收，國家握有的是固定名額。西耶薩說，到庫斯科做工的人由國家供給口糧；派去礦場的人，家裡的田由別省派人來種。但那是庫斯科貴族的說法，Chupaychu 的清單沒有提到誰養這 800 人。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "限制：路程、讀繩的人、逃避點算的人口"
+    },
+    {
+      "type": "p",
+      "text": "路程是硬限制。揹貨到蓬普要五、六天；去查查波亞斯、基多戍守，或常駐庫斯科築牆，都是長年離家。分散居住本身也是制度的一部分：Culagovski 在 1562 年的逐戶紀錄裡看到，許多家戶登記在村裡，人卻長住古柯田、鹽場等地。他認為這符合穆拉所說的「垂直群島」，也就是同一族群在不同海拔各據一塊土地，取得不同物產。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "帳掌握在讀繩的人手上。西耶薩說，這種帳「對我們是一本古怪而看不透的帳，對他們卻是絕妙的」。他原本把結繩記帳當成無稽之談，直到在豪哈（Xauxa）一帶，首領 Guacarapora 叫人取來結繩，向他逐項報出自皮薩羅（Francisco Pizarro）進入河谷以來，交給西班牙人的金、銀、布、玉米與牲畜，他才「大為驚訝」。他還記下，西班牙軍隊經過後，各地首領拿結繩對帳，出得少的補給出得多的，讓大家負擔相同；這種帳每四個月結算一次。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "人口銳減與逃避也讓帳失真。西耶薩把人口減少歸咎於西班牙人的失序與貪婪。1562 年的紀錄一再提到，1557 年 Diego Álvarez 來點算時有人逃走或躲起來；Culagovski 推測 1562 年也是如此，最怕被點到的正是能幹活的成年男子。他就已出版的部分逐戶數出 417 個家戶、1,835 人，平均每戶 4.40 人；但這份紀錄不完整，不能直接拿來和印加的 4,000 戶相比。",
+      "tag": "史料"
+    },
+    {
+      "type": "h",
+      "text": "失靈：同一本帳，換了收帳的人"
+    },
+    {
+      "type": "p",
+      "text": "加斯卡到任後，西班牙當局才開始為各監護徵貢區（encomienda）訂定貢額表，明定監護主能從原住民拿多少；在此之前，不論瓦努科或秘魯其他地方，收多少幾乎全憑監護主的意思。1549 年，瓦努科最富的 Chinchaycocha 監護區有了第一份詳細貢額：除了銀，還要交古柯、玉米、衣物等實物，並替監護主種田、在他瓦努科城的宅邸幫傭、放牧、揹貨。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "Rostworowski 認為，早期以銀繳貢對原住民是長期的煎熬：他們沒有礦，也不習慣這種貢賦，只好出賣勞力、變賣小田的收成，有時首領甚至盜掘祖先的墳墓來湊數（Puente Brunke 與 Janssen 1997 轉引）。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "Chupaychu 這邊，1561–1562 年的逐戶視察，收在他們於利馬皇家法院（Real Audiencia de Lima）控告監護主 Gómez Arias Dávila 的訴訟卷宗裡；秘魯文化部 2022 年將這批卷宗列為國家文化遺產，由秘魯國家檔案館保管。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，1549 年那串結繩之所以被問、被抄下，是因為新統治者需要一個基準：過去交多少，現在能要多少。印加的派工帳就這樣成了殖民貢賦的參照；同一套記帳本事，也讓安地斯首領能在戰亂與法庭上，算清自己被拿走了什麼。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "學界怎麼讀這份清單"
+    },
+    {
+      "type": "p",
+      "text": "把這份清單帶進學術討論的是穆拉。他 1955 年完成討論印加國家經濟組織的博士論文，1978 年才出版西班牙文版；1972 年的〈垂直控制〉一文，收在瓦努科出版的 16 世紀視察紀錄裡；1982 年，他把 1549 年的 26 條繩譯成英文。Contreras 2007 年的悼文這樣概括他的模型：安地斯人取得各種物產，不靠市場，而靠控制不同海拔的土地，這需要強有力的政治組織調度人力，「權威取代了市場」，成為分配物資的角色。Rivera 2018 年的書評則指出，穆拉談「互惠」，著眼的是勞力而不是貨物的交換，並強調輪役（mit'a）的重要。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "後來的研究沒有全盤接受「只收勞力」的圖像。D'Altroy 與 Earle 1985 年在《當代人類學》（Current Anthropology）提出「主食財政」與「財富財政」之分，穆拉也是該文所附評論的作者之一。Sayre 2023 年整理學界看法時寫道：有充分證據顯示印加既徵勞力，也徵一部分農產，各處遺址的倉庫就是證據；他也提到，穆拉如何形塑安地斯經濟研究，本身仍有討論。Chupaychu 的清單其實容許兩種讀法：條目記的是人數，但第 14、17 條也記下了產物送去哪裡。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "「4,000 戶」這個數字也要小心讀。殖民時期的編年史描述了一套從 10 戶到 10,000 戶的十進位層級，許多學者相信印加照此治理。Pärssinen 1992 年的研究（2003 年西班牙文版）則提醒，整數往往是理想模型，他舉欽查谷（Chincha）一個號稱萬戶的群體為例，實際約六千戶。本文推想，Chupaychu 的 4,000 戶也可能是派工的名目額度，而不是普查結果。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "至於繩子能記什麼，Locke 1912 年研究紐約美國自然史博物館藏的一串結繩，指出單結離主繩最遠的一排是個位，往上依次是十位、百位；頂繩上的數等於下方各繩之和，可以驗算。他的結論是結繩只記數字。Urton 與 Brezine 2005 年用電腦分析秘魯中部海岸普魯丘科（Puruchuco）行政中心的 21 串結繩，認為它們呈現了人口與貢賦數據如何在不同會計層級之間彙總、轉送。Medrano 與 Urton 2018 年把聖塔河谷（Santa）的 6 串結繩對上一份 1670 年的殖民人口複查：文件列出 132 名納貢者，繩上分成 133 組，各組第一條繩的數值總和等於文件核定的貢額；他們推測，納貢者的名字可能以顏色編碼。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "回到 Chupaychu。本文依據的不是那串繩，而是經過讀繩人口述、西班牙書記抄寫，再由穆拉英譯的文字。由此推想，最穩當的讀法是把人數與去向當成較可靠的骨架；「常駐」「死了就補」這類說明，則是讀繩人對規則的口頭補充，也正是光看繩結最難還原的部分。",
+      "tag": "推論"
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "你的世界收稅，收的是東西、錢，還是人的時間？如果收的是人，死了一個要補一個，這份風險落在國家、村落還是家戶身上？",
+        "帳記在只有少數人讀得懂的媒介上時，讀帳的人握有什麼權力？征服者來了，他們會成為新政權的助手、證人，還是對手？",
+        "整數額度（一千戶、一萬戶）和實際人口脫節時，差額由誰填補：地方首領自己吸收、向上虛報，還是讓帳一直維持虛數？",
+        "舊政權的徵收清單落到新統治者手裡，會被當成上限、下限，還是談判的籌碼？被統治者又能拿同一本帳做什麼？"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Report from the General Inspection of the Chupaychu（1549 年視察紀錄，John V. Murra 英譯）",
+      "publisher": "World History Commons（Roy Rosenzweig Center for History and New Media）",
+      "date": "1549（英譯 1982）",
+      "url": "https://worldhistorycommons.org/report-general-inspection-chupaychu",
+      "note": "26 條繩全文，以及 1542 年征服、4,000 戶的註解；英譯出自 Murra, The Inca and Aztec States 1400–1800（1982），pp. 240–243"
+    },
+    {
+      "title": "Mauricio J. Culagovski, La visitación de los Chupachu y la unidad doméstica andina",
+      "publisher": "Histórica 2(2), pp. 213–223（Pontificia Universidad Católica del Perú）",
+      "date": "1978-12",
+      "url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/7831",
+      "note": "1549、1557、1562 年三次視察；翻譯與抄寫誤差、逃避點算；417 戶、1,835 人；垂直群島"
+    },
+    {
+      "title": "Pedro de Cieza de León, Segunda parte de la crónica del Perú, que trata del señorío de los Incas Yupanquis（Marcos Jiménez de la Espada 編）",
+      "publisher": "Biblioteca Hispano-Ultramarina 第 5 冊，Madrid；Project Gutenberg #25255",
+      "date": "1880",
+      "url": "https://www.gutenberg.org/ebooks/25255",
+      "note": "第 12 章（結繩、Guacarapora 的帳、軍隊經過後的對帳）、第 18 章（徵收與巡查）、第 19 章（年度生死登記）、第 20 章（省總督與結繩官）；編者註 14、34 的年代"
+    },
+    {
+      "title": "Felipe Guaman Poma de Ayala, Nueva corónica y buen gobierno, 335 [337]：Drawing 132, Storehouses of the Inka",
+      "publisher": "Det Kgl. Bibliotek（丹麥皇家圖書館），GKS 2232 4°",
+      "date": "1615",
+      "url": "https://poma.kb.dk/permalink/2006/poma/337/en/text/",
+      "note": "圖中文字轉錄與圖號"
+    },
+    {
+      "title": "Rolena Adorno, Guaman Poma and His Illustrated Chronicle from Colonial Peru（出版社書目頁）",
+      "publisher": "Museum Tusculanum Press",
+      "date": "2001",
+      "url": "https://kodeks.dbk.dk/guaman-poma-and-his-illustrated-chronicle-from-colonial-peru.html",
+      "note": "作者身分；手稿 18 世紀起藏於哥本哈根，1908 年重新發現"
+    },
+    {
+      "title": "Carlo José Alonso Ordóñez Inga, Nuevos centros de almacenamiento inca en Huánuco Pampa",
+      "publisher": "Proyecto Qhapaq Ñan – Sede Nacional, Ministerio de Cultura del Perú",
+      "date": "2013",
+      "url": "https://qhapaqnan.cultura.pe/sites/default/files/articulos/179094598-Nuevos-Centros-de-Almacenamiento-Inca-en-Huanuco-Pampa.pdf",
+      "note": "海拔、廣場尺寸、興建年代、Morris 的八區與 497 座倉庫、存放物、周邊倉庫群"
+    },
+    {
+      "title": "José de la Puente Brunke y Fernando Janssen Frasson, Encomienda y riqueza en una zona marginal del Perú: el caso de Chinchaycocha (siglos XVI–XVII)",
+      "publisher": "Histórica 21(1), pp. 111–134",
+      "date": "1997",
+      "url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/8497",
+      "note": "1539 年建城、加斯卡的貢額表、1549 年 Chinchaycocha 貢額內容；轉引 Rostworowski（1993）論銀納之苦"
+    },
+    {
+      "title": "Resolución Viceministerial N° 000258-2022-VMPCIC/MC",
+      "publisher": "Ministerio de Cultura del Perú／El Peruano",
+      "date": "2022-11-30",
+      "url": "https://busquedas.elperuano.pe/dispositivo/NL/2130949-1",
+      "note": "宣告 Chupaychu 控告監護主 Gómez Arias Dávila 的卷宗（含 1561–1562 年視察）為國家文化遺產，由秘魯國家檔案館保管"
+    },
+    {
+      "title": "Carlos Contreras, John V. Murra (1916–2006), intérprete de la economía andina",
+      "publisher": "Economía 30(59–60), pp. 293–296",
+      "date": "2007",
+      "url": "https://revistas.pucp.edu.pe/index.php/economia/article/view/2375",
+      "note": "穆拉的垂直控制模型；1955 年論文與 1978 年出版；1972 年論文的出處"
+    },
+    {
+      "title": "Francisco Rivera, compte rendu de J. V. Murra et al., Formations économiques et politiques du monde andin",
+      "publisher": "Anthropologie et Sociétés 42(1)",
+      "date": "2018",
+      "url": "https://www.anthropologie-societes.ant.ulaval.ca/sites/anthropologie-societes.ant.ulaval.ca/files/comptes-rendus/murra_2012_-_rivera.pdf",
+      "note": "互惠、再分配、垂直群島與輪役的重要性"
+    },
+    {
+      "title": "Matthew P. Sayre, Plants and the Political Economy of Chavín de Huántar",
+      "publisher": "Senri Ethnological Studies 112, pp. 107–125（國立民族學博物館）",
+      "date": "2023",
+      "url": "https://doi.org/10.15021/00010047",
+      "note": "第 1 節：印加既徵勞力也徵農產（引 D'Altroy 與 Earle 1985）、倉庫作為證據、穆拉的影響仍有討論"
+    },
+    {
+      "title": "Terence N. D'Altroy and Timothy K. Earle, Staple Finance, Wealth Finance, and Storage in the Inka Political Economy [and Comments and Reply]",
+      "publisher": "Current Anthropology 26(2), pp. 187–206",
+      "date": "1985-04",
+      "url": "https://doi.org/10.1086/203249",
+      "note": "只核對書目與評論者名單（含 Murra）；論點依 Sayre（2023）轉述，本報未讀全文"
+    },
+    {
+      "title": "Martti Pärssinen, Tawantinsuyu: el estado inca y su organización política, cap. IX «Organización decimal: la teoría y la práctica»",
+      "publisher": "Institut français d'études andines（OpenEdition Books）",
+      "date": "2003",
+      "url": "https://books.openedition.org/ifea/861",
+      "note": "讀公開部分：十進位層級的史料、理想模型與欽查谷的例子（註 10）"
+    },
+    {
+      "title": "L. Leland Locke, The Ancient Quipu, a Peruvian Knot Record",
+      "publisher": "American Anthropologist 14(2), pp. 325–332（JSTOR Early Journal Content）",
+      "date": "1912",
+      "url": "https://archive.org/details/jstor-659935",
+      "note": "單結、長結與位數；頂繩加總；結論為只記數字"
+    },
+    {
+      "title": "Gary Urton and Carrie J. Brezine, Khipu Accounting in Ancient Peru",
+      "publisher": "Science 309(5737), pp. 1065–1067",
+      "date": "2005-08-12",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16099983/",
+      "note": "讀摘要：普魯丘科 21 串結繩的層級會計"
+    },
+    {
+      "title": "Manuel Medrano and Gary Urton, Toward the Decipherment of a Set of Mid-Colonial Khipus from the Santa Valley, Coastal Peru",
+      "publisher": "Ethnohistory 65(1), pp. 1–23",
+      "date": "2018-01",
+      "url": "https://doi.org/10.1215/00141801-4260638",
+      "note": "讀摘要：1670 年人口複查與 6 串結繩的對應"
+    },
+    {
+      "title": "Inka Khipu (Fiber Recording Device), 1940.469",
+      "publisher": "The Cleveland Museum of Art（Open Access）",
+      "date": "約 1400–1532",
+      "url": "https://clevelandart.org/art/1940.469",
+      "note": "頭圖：材質、尺寸、定年、捐贈者與 CC0 授權"
+    },
+    {
+      "title": "File:Peru, Inca Period, 15th-16th Century - Inka Khipu (Fiber Recording Device) - 1940.469 - Cleveland Museum of Art.tif",
+      "publisher": "Wikimedia Commons",
+      "date": "約 1400–1532",
+      "url": "https://commons.wikimedia.org/wiki/File:Peru,_Inca_Period,_15th-16th_Century_-_Inka_Khipu_(Fiber_Recording_Device)_-_1940.469_-_Cleveland_Museum_of_Art.tif",
+      "note": "頭圖檔案"
+    },
+    {
+      "title": "File:Qullqa (Inca Warehouse) by Guaman Poma.jpg",
+      "publisher": "Wikimedia Commons（取自丹麥皇家圖書館 POMA0337）",
+      "date": "1615",
+      "url": "https://commons.wikimedia.org/wiki/File:Qullqa_(Inca_Warehouse)_by_Guaman_Poma.jpg",
+      "note": "正文圖檔案"
+    }
+  ]
+}
