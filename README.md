@@ -41,3 +41,19 @@ python3 -m http.server 8765
 ## Spotify
 
 `content/config.json` 的 `spotify.client_id` 是 Spotify Developer App「Wiener Morgen Private」的 Client ID（公開值，不是 secret）。授權回呼網址沿用該 App 已登記的 `https://wiener-morgen-private.duckdns.org/oauth/spotify/callback`，由 `oauth/spotify/callback.html` 接收後轉回 App。
+
+## 日常維護
+
+| 想做的事 | 怎麼做 |
+|---|---|
+| 改某一欄的寫法、題材範圍、字數 | 編輯 `editorial/columns/<欄位>.md`，下一班排程就會照新規則寫 |
+| 改文風或圖像規則 | 編輯 `editorial/STYLE.md`、`editorial/IMAGES.md` |
+| 改副刊的星期輪值 | 編輯 `content/config.json` 的 `rotation_by_weekday`（每天三欄） |
+| 暫停或改時間 | 到 https://claude.ai/code/routines 停用或編輯各班排程 |
+| 看排程寫了什麼、有沒有出錯 | https://claude.ai/code/routines 點進該班的執行紀錄 |
+| 出刊異常 | 07:45 若仍缺稿、驗證失敗或網站不是最新版，GitHub 會開 issue 並寄信；看 repo 的 Issues |
+| 看備稿庫存 | `python3 scripts/reserve.py`（每欄目標 2 篇，下午 14:37 自動補） |
+| 手動補位 | GitHub → Actions → Fill from reserve → Run workflow |
+| 手動重新部署 | GitHub → Actions → Publish → Run workflow |
+
+網站從 GitHub Pages 提供，DuckDNS 網址指向 GitHub（185.199.108.153）。舊的 DigitalOcean 主機已不再使用，確認新版運作正常後可以關機停費。
