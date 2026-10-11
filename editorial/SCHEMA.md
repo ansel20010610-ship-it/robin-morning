@@ -41,7 +41,7 @@
 | `facts` | `items`：`[["欄名","內容"], ...]`，選填 `title` | 資料卡：作品資料、論文資料、比賽資料 |
 | `figure` | 見 Figure | 圖片 |
 | `detail` | `of`、`region`、`caption`、`position` | 同一張圖的局部放大（見下） |
-| `timeline` | `items`：`[{"when","label","note"}]`，選填 `title`、`caption` | 時間線 |
+| `timeline` | `items`：`[{"when","label","note"}]`，選填 `title`、`caption` | 時間線。`when` 欄很窄，可用精簡寫法：只有年寫「1922 年」，有月日寫「1922.2.19」「1950.11」；正文仍依 STYLE 寫「1922 年 2 月 19 日」 |
 | `table` | `head`、`rows`，選填 `title`、`caption` | 對照表、概念表 |
 | `pitch` | 見戰術圖 | 足球場形示意 |
 | `svg` | `svg`、`caption`，選填 `credit`、`title` | 原創示意圖（關係圖、路線示意、結構圖）。見下方 SVG 規則 |
