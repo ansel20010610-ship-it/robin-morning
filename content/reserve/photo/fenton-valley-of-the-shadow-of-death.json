@@ -1,0 +1,479 @@
+{
+  "column": "photo",
+  "date": "reserve",
+  "reserve_written": "2026-10-11",
+  "title": "路面上的砲彈：芬頓《死蔭的幽谷》兩個版本",
+  "dek": "1855 年 4 月 23 日下午，芬頓在克里米亞一條山溝拍下兩張幾乎相同的照片，差別在路面上的砲彈。先看畫面，再看後人怎麼排出先後。",
+  "topic_key": "photo:fenton-valley-of-the-shadow-of-death",
+  "updated_at": "2026-10-11T13:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/The_valley_of_the_shadow_of_death%2C_35546u.tif/lossy-page1-1280px-The_valley_of_the_shadow_of_death%2C_35546u.tif.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/The_valley_of_the_shadow_of_death%2C_35546u.tif/lossy-page1-3840px-The_valley_of_the_shadow_of_death%2C_35546u.tif.jpg",
+    "width": 1280,
+    "height": 1039,
+    "alt": "橫幅的褐色調老照片，裱在白色襯紙上。上方三分之一以上是空白的淺色天空。左右兩道布滿碎石的山坡夾著一條土路，土路從遠處坡上的 S 形彎道延伸到前景，路面有多道車轍。路旁淺溝裡密密堆著圓形砲彈，右側路面上也散落著一顆顆分開的砲彈，前景有幾顆特別大。畫面中沒有人。左側白邊有直行的鉛筆字。",
+    "caption": "羅傑・芬頓攝，1855 年 4 月 23 日，克里米亞塞瓦斯托波爾城外的一條山溝。這是美國國會圖書館所藏的鹽紙印相（數位檔 ppmsca 35546），路面上散著砲彈；芝加哥藝術博物館所藏、1856 年由 Agnew 出版的那一張也是這個版本。掃描連同四周白色襯紙一起拍入。",
+    "credit": "Roger Fenton 攝；美國國會圖書館印刷與攝影部，Roger Fenton Crimean War photograph collection（數位檔 ppmsca 35546，複製號 LC-USZC4-9217）",
+    "license": "Public domain（作者逝世逾百年；館方標示 No known restrictions on publication）",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_valley_of_the_shadow_of_death,_35546u.tif",
+    "made": "1855 年 4 月 23 日拍攝；印相年代未載"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1855 年 4 月 24 日，英國攝影師羅傑・芬頓（Roger Fenton）在克里米亞寫信給妻子 Grace，說他前一天拍完全景組照的最後一張，向 Sir John Campbell 借了兩頭騾子，把載著暗房的車拉下一條山溝。信裡這樣介紹那個地方："
+    },
+    {
+      "type": "quote",
+      "original": "a ravine known by the name of the valley of the shadow of Death from the quantity of Russian balls which have fallen in it.",
+      "text": "一條山溝，因為落在裡面的俄軍砲彈數量之多，被稱為「死蔭的幽谷」。",
+      "cite": "芬頓致妻子信，1855 年 4 月 24 日，據女兒 Annie Grace Fenton 的書信抄本（德蒙福特大學轉錄）；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "照片因此可以定在 1855 年 4 月 23 日下午。它後來以《死蔭的幽谷》（The Valley of the Shadow of Death）為題出版；這個說法出自《詩篇》23 篇，和合本第 4 節譯作「我雖然行過死蔭的幽谷」。美國國會圖書館（Library of Congress）、芝加哥藝術博物館（Art Institute of Chicago）、蓋蒂博物館（J. Paul Getty Museum）都藏有它的印相，頭圖是國會圖書館藏本。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "攝影師",
+          "羅傑・芬頓（Roger Fenton，1819–1869），英國"
+        ],
+        [
+          "題名",
+          "The Valley of the Shadow of Death（國會圖書館目錄註明題名抄自印相背面）"
+        ],
+        [
+          "拍攝時間",
+          "1855 年 4 月 23 日下午，約 3 點後的一個半小時內（依芬頓 4 月 24 日家書）"
+        ],
+        [
+          "地點",
+          "克里米亞半島，塞瓦斯托波爾（Sevastopol）城外英軍陣地附近的一條山溝"
+        ],
+        [
+          "底片",
+          "濕版火棉膠玻璃底片（芝加哥藝術博物館說明）"
+        ],
+        [
+          "頭圖版本",
+          "國會圖書館藏鹽紙印相 1 張，28 × 36 公分；1944 年購自 Frances M. Fenton；數位檔 ppmsca 35546"
+        ],
+        [
+          "出版",
+          "Thomas Agnew & Sons，1856 年 1 月 1 日；系列編號 No. 218（依芝加哥藝術博物館藏本裱紙）"
+        ],
+        [
+          "另一版本",
+          "同一天從幾乎相同位置拍攝、路面上沒有砲彈的一張"
+        ],
+        [
+          "相機、鏡頭與曝光",
+          "未見記載，本文不推測"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "先看畫面：兩道坡夾著一條路"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "照片是橫幅。上方三分之一以上是天空，顏色均勻、偏淺，看不出雲的形狀，只散著一些細小的黑點。地面被兩道坡夾住：左邊的坡離鏡頭近，顏色深，從畫面左緣斜斜升起；右邊的坡長而緩，顏色較淺，一路升到右上方，構成畫面右半的天際線。兩道坡上都布滿淺色碎石。畫面裡沒有人、馬或車，沒有樹，也沒有建築。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "兩坡之間有一條土路。在遠處，它沿著右坡彎成一道淺色的 S 形，翻過坡頂後不見；往鏡頭這邊，它越來越寬，路面壓出好幾道平行的車轍，一直延伸到畫面下緣。土路左邊另有一條窄窄的小徑，從中景斜斜通往左下角，兩條路之間夾著一道淺溝。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.3,
+        0.37,
+        0.32,
+        0.18
+      ],
+      "position": "畫面中段偏左上，地平線附近，約佔寬度三分之一",
+      "caption": "遠處的土路在右坡上彎成 S 形，翻過坡頂。坡面上滿是淺色碎石，天空沒有任何層次。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "砲彈的分布分成三種。最密的一種在那道淺溝裡：圓球一顆挨著一顆，夾雜著淺色碎石，從中景一路堆到前景。第二種在右邊的路面上：砲彈一顆一顆分開，大致順著車轍排成鬆散的幾列，越往遠處越小。第三種最靠近鏡頭：畫面下緣有幾顆特別大，右下角有幾顆靠在一起。左坡上的淺色石塊，大小和明暗都與遠處的砲彈相近，乍看不容易分辨。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.45,
+        0.6,
+        0.22,
+        0.28
+      ],
+      "position": "畫面中央偏下，土路與小徑之間的淺溝",
+      "caption": "淺溝裡的砲彈一顆挨著一顆，夾雜淺色碎石，是全圖砲彈最密的地方。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.56,
+        0.52,
+        0.35,
+        0.18
+      ],
+      "position": "畫面右側中段的路面",
+      "caption": "右側路面上的砲彈彼此分開，順著車轍散成幾列；路中央有兩塊淺色石頭。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "國會圖書館的掃描把印相連同四周的白色襯紙一起拍入。左側白邊上有三段轉了九十度的鉛筆字，分別讀得出「PH - Fenton, (R.) no. 218」「LC-DIG-ppmsca-35546」與「LC-USZ62-2322 / LC-USZC4-9217」，後兩段是館方編號。"
+    },
+    {
+      "type": "h",
+      "text": "信裡的那個下午"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "芬頓在 4 月 24 日的信裡把經過寫得很細。他們出發晚了，大約下午 3 點才到。他把車開到預定地點附近，先往前走去找選好的位置，才起步就看見前方砲台後方揚起塵土，一顆砲彈沿著路朝他們彈跳過來，在近處轉了方向；同一時間另一顆砲彈落在差不多的地方，信管被撞掉，沒有爆炸。他寫道："
+    },
+    {
+      "type": "quote",
+      "original": "It was plain that the line of fire was upon the very spot I had chosen, so very relunctantly I put up with another reach of the valley about 100 yds short of the best point.",
+      "text": "很明顯，火線正好落在我選定的那個位置上，所以我非常不情願地，將就著在離最佳地點還差約 100 碼的另一段山谷拍攝。",
+      "cite": "芬頓致妻子信，1855 年 4 月 24 日，據 Annie Grace Fenton 的書信抄本，拼寫依德蒙福特大學轉錄本照錄；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "架好相機、調水平時，又有一顆砲彈斜斜飛來，彈到他們左邊約 50 碼的山坡上，再滾下來，停在他們腳邊。芬頓把它撿起來放進車裡，說希望帶回家送給妻子。他們在那裡待了一個半小時，「got 2 good pictures」（拍到兩張好照片，本文自譯）。信裡沒有說這兩張有什麼不同，也沒有提到砲彈擺在哪裡。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這條山溝在信裡出現不只一次。4 月 4 日至 5 日的信寫到，他由同伴 Wilkinson 帶路，越往裡走砲彈越密，到了一條叫「Valley of Death」的山溝，「round shot & shell lay in a stream at the bottom of the hollow all the way down. You could not walk without treading on them.」（實心彈和開花彈像一條溪流，一路鋪在谷底；走路沒辦法不踩到它們。本文自譯）那一次，他們被一顆打在岩壁上的砲彈擋了回來。4 月 24 日的信則交代了砲彈的來處：射向英軍查普曼砲台（Chapman's battery）卻打得太高的砲彈，都會越過來落進這條谷。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這些信是以抄本的形式留下來的。芬頓從克里米亞寄回的信，後來由家人抄進書信簿，存世兩冊。據英國德蒙福特大學（De Montfort University）網站，一冊屬於女兒 Annie Grace Fenton，屬皇家攝影學會（Royal Photographic Society）典藏；一冊屬於兄弟 Joseph Fenton，藏於德州大學奧斯汀分校的哈利・蘭森中心（Harry Ransom Center）。該網站把兩冊共 25 封信全文轉錄公開，本文的引文取自 Annie Grace 那一冊。"
+    },
+    {
+      "type": "h",
+      "text": "一輛暗房車，四個月，360 張"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "芬頓 1853 年倫敦攝影學會（Photographic Society）成立時擔任榮譽秘書。克里米亞戰爭中，英、法、鄂圖曼等聯軍與俄國交戰，曼徹斯特的出版與版畫商 Thomas Agnew & Sons 出資支持他前往拍攝。據德蒙福特大學網站整理，他和助手 Marcus Sparling 等人在 1855 年 2 月 20 日從倫敦出發，帶了 700 片玻璃版和 5 台相機與鏡頭。國會圖書館的部落格寫道，他在 3 月 8 日到 6 月 26 日之間拍了 360 張照片。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "他用的是濕版火棉膠法，每一片底片都必須在現場準備。德蒙福特大學網站說明，芬頓因此把一輛原屬酒商的馬車改裝成「攝影車」：車窗裝黃色玻璃，車頂裝水箱，車內有沖洗底片的檯面。5 月 13 日的信回想帶車下山溝的那一趟，說那裡離城大約一英里多，要是他的車在那裡被看見，「I should have had small chance of writing this letter」（我大概沒什麼機會寫這封信了，本文自譯）。"
+    },
+    {
+      "type": "h",
+      "text": "空白的天空，沒有人的山溝"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "天空一片空白，不代表那天是陰天。據紀錄片導演埃洛・莫里斯（Errol Morris）的專欄，發明家 Dennis Purcell 向他解釋：19 世紀多數感光乳劑只對藍光敏感，記錄不了天空，陰天、多雲和晴天都會曝光過度，成為一片沒有特徵的白。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "畫面裡沒有人。蓋蒂博物館的說明寫道，荒涼的地景裡找不到一個人物，只有砲彈，代替了戰場上的傷亡。至於芬頓整批克里米亞照片為何不見戰鬥與死傷，兩館說法各有側重：芝加哥藝術博物館歸因於繁複的程序與較長的曝光時間；蓋蒂則說，他為了不冒犯維多利亞時代的觀眾，避免拍攝死者與傷者。蓋蒂也根據芬頓的信寫道，危險迫使他沿路往回退，才在這裡拍下這張照片。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：這張照片的危險，在畫面之外。信裡寫的是彈跳而來的砲彈、被迫退後的機位、滾到腳邊的那一顆；照片裡看得到的，只有已經落地、不再移動的砲彈。觀者要從這些靜止的圓球，自己倒推它們飛來的樣子。我們看到的視角，也不是芬頓原本選定的那一個。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "構圖上，那條路做了兩件事。它把視線從畫面下緣的大砲彈，沿著車轍帶到遠處的 S 形彎道，再越過坡頂。路面上一顆顆分開的砲彈則像刻度：觀者會把它們當成大小相近的東西，從畫面上由大到小的落差估出山溝的深度。蓋蒂博物館的說明提到，砲彈多到乍看像石頭；淺溝裡確實如此，但路面上那些彼此分開的砲彈，讓遠近重新讀得出來。"
+    },
+    {
+      "type": "h",
+      "text": "題名、編號與一張張印相"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這個名字在拍照之前就有了。芬頓 4 月初的信稱這裡為「Valley of Death」，4 月 24 日的信說這條山溝「known by the name of the valley of the shadow of Death」。它也不是輕騎兵衝鋒的那條山谷：丁尼生（Alfred Tennyson）的〈輕騎兵的衝鋒〉（The Charge of the Light Brigade）寫的是「the valley of Death」，名稱相近，莫里斯在專欄中特別區分了兩地。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "芝加哥藝術博物館的說明寫道，芬頓 1855 年秋天在倫敦展出這批照片，並以作品集的形式出版。該館藏本出自 1856 年的《Photographic Pictures of the Seat of War in the Crimea》，裱紙下緣印著「No. 218. Photographed by R. Fenton. Manchester, Published by T. Agnew & Sons, Jan'y 1st 1856.」，右下角是題名。頭圖左側白邊鉛筆字裡的「no. 218」，和這個編號相同。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "國會圖書館這一張是鹽紙印相，目錄記為 28 × 36 公分，題名抄自背面，1944 年購自 Frances M. Fenton。館方部落格說，國會圖書館藏有芬頓克里米亞照片 263 張，《死蔭的幽谷》則只有路面有砲彈的版本；兩個版本都收藏在哈利・蘭森中心。"
+    },
+    {
+      "type": "h",
+      "text": "另一張：路面上沒有砲彈"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Valley_of_the_Shadow_of_Death%2C_2.jpg/1280px-Valley_of_the_Shadow_of_Death%2C_2.jpg",
+      "src_large": "https://upload.wikimedia.org/wikipedia/commons/7/73/Valley_of_the_Shadow_of_Death%2C_2.jpg",
+      "width": 1280,
+      "height": 707,
+      "alt": "黑白照片，畫面比頭圖扁長，天空只剩上緣一窄條。同樣的兩道坡、遠處的 S 形土路與前景的車轍都在。砲彈集中在土路左側的淺溝裡，左坡上也有幾顆；右側路面上只有車轍和碎石，沒有分散的砲彈。",
+      "caption": "同一天、幾乎同一位置拍下的另一個版本：路面上沒有砲彈。這份 Commons 檔案的來源欄只標出《紐約時報》莫里斯專欄的圖檔網址，原件收藏處與處理經過沒有說明；上方的天空大半被裁掉，並轉成黑白，明暗和頭圖的印相差很多，本文只用它比對砲彈的位置。",
+      "credit": "Roger Fenton 攝；Wikimedia Commons 檔案，來源標為《紐約時報》Errol Morris 專欄圖檔",
+      "license": "Public domain（Commons 標示 PD-old-100）",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Valley_of_the_Shadow_of_Death,_2.jpg",
+      "made": "1855 年 4 月 23 日拍攝；此數位檔的來源印相未載"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "這一張的機位和頭圖幾乎相同：同一道左坡、同一段 S 形彎道，路中央那兩塊淺色石頭也在。不同的是右邊的路面，只剩車轍和碎石，看不到一顆顆分散的砲彈；砲彈集中在土路左側的淺溝裡，左坡上也散著幾顆。"
+    },
+    {
+      "type": "detail",
+      "of": "f2",
+      "region": [
+        0.5,
+        0.3,
+        0.5,
+        0.45
+      ],
+      "position": "畫面右半的路面",
+      "caption": "路面上只有車轍與碎石，和頭圖同一段路面相比，少了分散的砲彈；左下角是淺溝裡的砲彈。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "莫里斯 2007 年 9 月到 10 月在《紐約時報》網站發表三篇〈Which Came First?〉，把兩張照片分別稱為 OFF（砲彈在路外）與 ON（砲彈在路上），追問哪一張先拍。據他的訪談，前維多利亞與亞伯特博物館（V&A）攝影策展人 Mark Haworth-Booth 是偶然同時翻開兩本書，才發現兩張不同，並在 1981 年前後出版的《Old and Modern Masters of Photography》裡提出推測：芬頓和助手可能親手移動了砲彈。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "加州大學聖塔芭芭拉分校的學者 Ulrich Keller 在 2001 年的專著《The Ultimate Spectacle》中也寫到兩個版本；據莫里斯引述，Keller 認為 OFF 在先，芬頓「obviously rearranged the evidence」（顯然重新布置了證據，本文自譯）。美國作家蘇珊・桑塔格（Susan Sontag）2003 年的《旁觀他人之痛苦》（Regarding the Pain of Others）採用這個說法；同樣據莫里斯引述，她寫芬頓在拍第二張之前「oversaw the scattering of the cannonballs on the road itself」（督導把砲彈撒到路面上，本文自譯）。Haworth-Booth 對莫里斯說，他原本只是提出疑問，桑塔格卻把推測當成了事實。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "也有策展人主張順序相反。當時剛從蓋蒂博物館退休的 Gordon Baldwin 告訴莫里斯，他不認為芬頓搬過砲彈：士兵會收集落下的砲彈回收再用，路面上沒有砲彈的那張，應該是部分砲彈被收走之後拍的；芬頓當天身在砲火下，也不太可能有時間和心思去搬。時任大都會博物館攝影策展人的 Malcolm Daniel 同樣相信回收說，但也說「we don’t know which of the two pictures came first」（我們不知道兩張哪一張先拍，本文自譯）。寫過芬頓專著的 Richard Pare 則說自己「I go back and forth.」（來回搖擺，本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "莫里斯親赴塞瓦斯托波爾，認為自己找到了拍攝地點，並判斷芬頓當時面向北北西。他先試著從砲彈上的光影推算太陽角度，但受訪的影像專家前後得出相反的判斷，無法定案。說服他的是 Purcell：Purcell 比對兩張照片裡幾顆沒人在意的小石頭，發現它們從 OFF 到 ON 都往坡下移了一小段，像是有人走過時踢到。他寫給莫里斯：「I haven’t found any that went the other way.」（我沒找到任何一顆往反方向移動，本文自譯）他的推論是：石頭不會自己往坡上滾，所以 OFF 在先。他另舉一項自稱較不具決定性的佐證：兩張的砲彈數量相同，「如果沒記錯」約 250 顆，不像有人把砲彈撿走。"
+    },
+    {
+      "type": "table",
+      "title": "兩張照片孰先孰後：莫里斯訪問與引述的各方說法",
+      "head": [
+        "誰",
+        "主張的順序",
+        "根據"
+      ],
+      "rows": [
+        [
+          "Haworth-Booth（前 V&A 攝影策展人）",
+          "OFF 在先",
+          "覺得其中一張明顯更有表現力，推測芬頓與助手移動了砲彈；自稱是推測"
+        ],
+        [
+          "Keller（學者，2001 年專著）",
+          "OFF 在先",
+          "把溝裡的砲彈搬上路面，比反過來合理"
+        ],
+        [
+          "桑塔格（作家，2003 年）",
+          "OFF 在先",
+          "沿用 Keller 與 Haworth-Booth 的說法（據書末致謝），寫芬頓督導撒砲彈"
+        ],
+        [
+          "Baldwin（前蓋蒂博物館策展人）",
+          "ON 在先",
+          "士兵收集砲彈回收；芬頓身在砲火下，無暇搬運"
+        ],
+        [
+          "Daniel（時任大都會博物館攝影策展人）",
+          "傾向 ON 在先",
+          "相信回收說，但說無法確知哪張先拍"
+        ],
+        [
+          "Pare（芬頓專著作者）",
+          "反覆不定",
+          "曾寫第二張、出版的那張很可能經過安排；受訪時說自己來回搖擺"
+        ],
+        [
+          "Purcell（發明家）",
+          "OFF 在先",
+          "小石頭從 OFF 到 ON 都往坡下移；兩張砲彈數量相同"
+        ]
+      ],
+      "caption": "原創整理。各方說法均據莫里斯 2007 年《紐約時報》專欄的引述與訪談；排出先後，不等於證明是誰、為了什麼移動了砲彈。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "莫里斯的結論是「It is OFF before ON.」（OFF 先於 ON，本文自譯），和 Keller、桑塔格的順序一致。但他強調，這只排出了先後；兩張照片是否有一張或兩張經過擺布，「We know nothing about any such thing.」（我們對此一無所知，本文自譯）。維多利亞與亞伯特博物館 2013 年的展覽說明也只寫：芬頓「擺拍」到什麼程度，仍是推測。"
+    },
+    {
+      "type": "exercise",
+      "title": "原創假設練習：替兩張照片排先後",
+      "steps": [
+        "找一處有斜坡、地上有碎石或落葉的地方，把手機或相機固定在同一個位置。",
+        "拍第一張；請同伴走進畫面，把幾個顯眼的物件（例如網球或空罐）從邊緣移到中央，再拍第二張。",
+        "用截圖把兩張傳給不在現場的朋友，避免檔案裡的拍攝時間洩漏順序。",
+        "請朋友只根據畫面判斷先後，不准用那些顯眼物件當理由，只能找沒人刻意動過的東西：被踢動的小石頭、被踩扁的落葉、改變了的影子。"
+      ],
+      "criteria": [
+        "朋友能指出至少一處非刻意的變化，並說明它為什麼只會朝一個方向發生。",
+        "判斷與實際順序一致；若不一致，能說出是哪個線索誤導了判斷。",
+        "你能分清楚：這個練習只能排出先後，不能證明誰、為了什麼移動了物件。"
+      ],
+      "note": "這是本報設計的原創練習，不是芬頓、莫里斯或 Purcell 的方法。在公共空間進行時不要妨礙通行，結束後把物件帶走。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "24 April 1855 to Grace Fenton（Annie Grace Fenton letter-book 轉錄）",
+      "publisher": "Roger Fenton's Crimean letterbooks, De Montfort University（Roger Taylor、Kelley Wilder 編）",
+      "date": "1855-04-24",
+      "url": "https://fentonletterbooks.dmu.ac.uk/annTranscripts.php?letterNo=10",
+      "note": "拍攝經過：借騾子與暗房車、下午約 3 點抵達、退到最佳地點前約 100 碼、砲彈停在腳邊、停留一個半小時拍到兩張；山溝名稱與砲彈來處"
+    },
+    {
+      "title": "4–5 April 1855 to Grace Fenton（Annie Grace Fenton letter-book 轉錄）",
+      "publisher": "Roger Fenton's Crimean letterbooks, De Montfort University",
+      "date": "1855-04-05",
+      "url": "https://fentonletterbooks.dmu.ac.uk/annTranscripts.php?letterNo=7",
+      "note": "與 Wilkinson 同往、Valley of Death、砲彈鋪滿谷底的描述"
+    },
+    {
+      "title": "13 May 1855 to Grace Fenton（Annie Grace Fenton letter-book 轉錄）",
+      "publisher": "Roger Fenton's Crimean letterbooks, De Montfort University",
+      "date": "1855-05-13",
+      "url": "https://fentonletterbooks.dmu.ac.uk/annTranscripts.php?letterNo=13",
+      "note": "回想帶攝影車下山溝：離城大約一英里多、若被看見恐怕無法寫信"
+    },
+    {
+      "title": "Voyage & Letters",
+      "publisher": "Roger Fenton's Crimean letterbooks, De Montfort University",
+      "url": "https://fentonletterbooks.dmu.ac.uk/voyageletters.php",
+      "note": "濕版火棉膠須現場準備底片、攝影車改裝、1855 年 2 月 20 日出發與攜帶器材、兩冊書信抄本的來歷與收藏處"
+    },
+    {
+      "title": "Roger Fenton",
+      "publisher": "Roger Fenton's Crimean letterbooks, De Montfort University（轉載 Roger Taylor 撰 The Oxford Companion to the Photograph 條目）",
+      "url": "https://fentonletterbooks.dmu.ac.uk/rogerfenton.php",
+      "note": "生卒年、1853 年攝影學會榮譽秘書、Agnew 出資"
+    },
+    {
+      "title": "Witness to History: Roger Fenton's Photographs of the Crimean War",
+      "publisher": "Library of Congress, Picture This blog（Barbara Orbach Natanson）",
+      "date": "2017-03-23",
+      "url": "https://blogs.loc.gov/picturethis/2017/03/witness-to-history-roger-fentons-photographs-of-the-crimean-war/",
+      "note": "1855 年 3 月 8 日至 6 月 26 日拍攝 360 張；館藏 263 張；館藏只有路面有砲彈的版本"
+    },
+    {
+      "title": "The valley of the shadow of death（LCCN 2001698869）",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "date": "1855",
+      "url": "https://www.loc.gov/item/2001698869/",
+      "note": "鹽紙印相 28 × 36 公分、題名抄自背面、1944 年購自 Frances M. Fenton。館方網頁本次無法直接開啟，目錄內容經 Wikimedia Commons 檔案頁轉錄核對"
+    },
+    {
+      "title": "File:The valley of the shadow of death LCCN2001698869.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:The_valley_of_the_shadow_of_death_LCCN2001698869.jpg",
+      "note": "轉錄國會圖書館目錄（尺寸、題名來源、入藏紀錄）與 No known restrictions on publication"
+    },
+    {
+      "title": "File:The valley of the shadow of death, 35546u.tif",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:The_valley_of_the_shadow_of_death,_35546u.tif",
+      "note": "頭圖；國會圖書館數位檔 ppmsca 35546 的 TIFF。檔案頁描述欄另寫「Victoria and Albert Museum」與 27.6 × 34.9 公分，與國會圖書館目錄不符，本文不採用"
+    },
+    {
+      "title": "File:Valley of the Shadow of Death, 2.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Valley_of_the_Shadow_of_Death,_2.jpg",
+      "note": "路面無砲彈版本；來源欄為 graphics8.nytimes.com 的莫里斯專欄圖檔，授權標示 PD-old-100"
+    },
+    {
+      "title": "The Valley of the Shadow of Death（1959.611.17）",
+      "publisher": "Art Institute of Chicago",
+      "url": "https://www.artic.edu/artworks/123407/the-valley-of-the-shadow-of-death",
+      "note": "濕版玻璃底片、360 張、程序與曝光時間使他無法拍戰鬥、1855 年秋倫敦展出；藏本出自 1856 年作品集，裱紙印有 No. 218 與 Agnew 出版日期（經館方 API 核對）"
+    },
+    {
+      "title": "Valley of the Shadow of Death（84.XM.504.23）",
+      "publisher": "J. Paul Getty Museum",
+      "url": "https://www.getty.edu/art/collection/object/104GXR",
+      "note": "館方說明（CC BY 4.0）：避免拍攝死傷者、砲彈多到乍看像石頭、因危險往回退後拍攝。內容經館方 Linked Art 資料（data.getty.edu）核對"
+    },
+    {
+      "title": "Which Came First, the Chicken or the Egg? (Part One)",
+      "publisher": "The New York Times（Errol Morris 專欄，今收於 Opinionator）",
+      "date": "2007-09-25",
+      "url": "https://opinionator.blogs.nytimes.com/2007/09/25/which-came-first-the-chicken-or-the-egg-part-one/",
+      "note": "OFF／ON 命名；桑塔格、Keller 原文引述；Haworth-Booth、Baldwin、Malcolm Daniel、Richard Pare 訪談；兩張圖註明出自哈利・蘭森中心"
+    },
+    {
+      "title": "Which Came First? (Part Two)",
+      "publisher": "The New York Times（Errol Morris 專欄，今收於 Opinionator）",
+      "date": "2007-10-04",
+      "url": "https://opinionator.blogs.nytimes.com/2007/10/04/which-came-first-part-two/",
+      "note": "實地尋找拍攝地點、面向北北西、與輕騎兵衝鋒之谷的區別、丁尼生詩句；查普曼砲台屬英軍砲兵陣地"
+    },
+    {
+      "title": "Which Came First? (Part Three): Can George, Lionel and Marmaduke Help Us Order the Fenton Photographs?",
+      "publisher": "The New York Times（Errol Morris 專欄，今收於 Opinionator）",
+      "date": "2007-10-23",
+      "url": "https://opinionator.blogs.nytimes.com/2007/10/23/which-came-first-part-three-can-george-lionel-and-marmaduke-help-us-order-the-fenton-photographs/",
+      "note": "Dennis Purcell：感光乳劑對藍光敏感、小石頭往坡下移動、砲彈約 250 顆；莫里斯結論 It is OFF before ON 與 We know nothing about any such thing"
+    },
+    {
+      "title": "Errol Morris book highlights photos from Ransom Center's collections",
+      "publisher": "Harry Ransom Center Magazine",
+      "date": "2012-03-15",
+      "url": "https://sites.utexas.edu/ransomcentermagazine/2012/03/15/morris-crimea/",
+      "note": "兩張幾乎相同的照片藏於哈利・蘭森中心；拍攝於 1855 年 4 月 23 日下午"
+    },
+    {
+      "title": "Valley of the Shadow of Death（Museum no. 64:856）",
+      "publisher": "Victoria and Albert Museum",
+      "date": "2013",
+      "url": "https://collections.vam.ac.uk/item/O128022/",
+      "note": "2013 年展覽說明：兩個版本並存，擺拍程度仍屬推測（經館方 API 核對）"
+    },
+    {
+      "title": "詩篇 23 章（和合本）",
+      "publisher": "信望愛聖經工具 FHL",
+      "date": "2026-10-11",
+      "url": "https://bible.fhl.net/new/read.php?chineses=%E8%A9%A9&chap=23&VERSION1=unv",
+      "note": "以 scripts/bible.py 核對 23:4"
+    }
+  ]
+}
