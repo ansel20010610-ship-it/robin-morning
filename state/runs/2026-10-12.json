@@ -1,14 +1,8 @@
 {
   "1": {
-    "finished_at": "2026-10-11T13:17:28+08:00",
-    "missing": [
-      "football",
-      "civilization",
-      "art",
-      "photo",
-      "city"
-    ],
-    "note": "完成晨光（路加福音 10:38–42）、古典（佛漢・威廉斯《雲雀高飛》）、牙周（Socransky 1998 紅色複合體）；三篇皆經審稿修正後推送，validate 無 ERROR"
+    "finished_at": "2026-10-12T00:39:07+08:00",
+    "missing": [],
+    "note": "devotion、music、perio 三篇已於前一日完成並通過驗證（含 --check-urls；music 一張圖遇 429 限流，commons.py 確認檔案存在、授權公有領域），本班未重寫"
   },
   "2": {
     "finished_at": "2026-10-11T13:30:03+08:00",
