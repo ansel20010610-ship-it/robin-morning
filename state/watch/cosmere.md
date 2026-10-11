@@ -1,6 +1,6 @@
 # 迷霧之子與颶光影視化基準（cosmere-watch）
 
-最後更新：2026-10-10
+最後更新：2026-10-11
 
 - 類別：官宣（片商、平台或作者方正式公告）／作者說法（Sanderson 本人在影片、社群、訪談中的說法）／報導（產業媒體或可信媒體）／傳聞（未證實）。
 - 階段：權利／洽談／開發／greenlight／開拍／後期／發行。作者的期望不等於片商承諾；兩部作品分開記。
@@ -62,3 +62,4 @@
 ## 查核紀錄
 
 - 2026-10-10 建立基準：查 brandonsanderson.com「Film and TV News」頁與部落格列表、Sanderson YouTube 頻道上傳紀錄（至 2026-10-07 17:00 UTC 為止，最近三支影片未涉改編進展）、THR（1/28、2/3）、Weintraub Tobin 公告、Deseret News、《鹽湖論壇報》、Collider、CBR、MovieWeb、Screen Rant、9to5Mac、TheGamer、Reactor；Deadline、Variety 以站內限定搜尋未見 2026 年新稿。Reddit（r/Stormlight_Archive 作者帳號）被網路政策封鎖、無法查核；THR 正文付費牆只讀到摘要。台灣時間 2026-10-09 07:00（2026-10-08 23:00 UTC）之後，兩部作品都未見新公布的重要進展（最新一則為 Collider 2026-10-07 11:00 UTC 的訪談稿）→ 靜默，不成稿。
+- 2026-10-11 已查（刊期 2026-10-12）：無新增。來源與各自最新一則：Sanderson YouTube RSS（最新 2026-10-07 17:00 UTC〈Why Persona Is the Best — Intentionally Blank Ep. 279〉，之後無新上傳；10-06 每週更新未涉改編）；brandonsanderson.com「Film and TV News」頁（MOST RECENT UPDATE 仍為 2026-07-28）；部落格 Atom（最新 2026-06-23 Tolkien 講座）；Apple 新聞室 RSS（最新 2026-10-07 21:01 UTC，無 Sanderson 相關）；Deadline／Variety／THR 以 WordPress API 搜 sanderson、mistborn、stormlight、cosmere：THR 最新相關仍為 2026-02-03，Deadline 最新相關為 2026-06-09（Blue Marble 與 Fifth Season 首看約，非新進展），Variety 無 2026 年相關稿；Collider／CBR／Screen Rant／MovieWeb／Winter Is Coming 搜尋：唯一基準後新稿為 Winter Is Coming 2026-10-10 15:00 UTC，內容是 10-01《Blightfall》直播談話（第二季劇本目標等）的轉述，已在基準內，不算新進展。被封鎖：Reddit（403）；WebSearch 不接受 ign.com、polygon.com。→ 兩部作品皆靜默，不成稿。
