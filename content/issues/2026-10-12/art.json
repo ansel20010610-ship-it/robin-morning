@@ -1,0 +1,450 @@
+{
+  "column": "art",
+  "date": "2026-10-12",
+  "title": "《收割者》：樹下的午餐與角落裡的名字",
+  "dek": "布勒哲爾 1565 年的季節組畫之一，曾被當成無名畫家與他兒子的作品。從樹蔭裡的午餐看起，一路走到遠方的海，再回到右下角那行淡白字。",
+  "topic_key": "art:met-19.164",
+  "updated_at": "2026-10-12T01:55:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg/1280px-Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg/3840px-Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg",
+    "width": 1280,
+    "height": 932,
+    "alt": "橫幅油畫：右半邊一棵高大的梨樹從畫面下緣伸到上緣，樹下一群農民圍坐吃午餐，一人仰躺睡覺；左半邊是一大片金黃色的麥田，兩人在割麥，一個少年提著水罐從麥田中的小路走下來；遠處是綠色谷地、農舍、水塘、教堂，再遠是海灣與帆船，左上大片是淡灰色的天空。",
+    "caption": "老彼得・布勒哲爾《收割者》（The Harvesters）全圖，1565 年，橡木板油彩，原始畫面 116.5 × 159.5 公分，紐約大都會博物館藏（19.164）。後文的局部都從這張圖放大。",
+    "credit": "老彼得・布勒哲爾；大都會博物館藏，Rogers Fund, 1919；影像取自 Wikimedia Commons（Google Arts & Culture 掃描）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg",
+    "made": "1565"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1919 年，大都會博物館買下這塊橡木板時，它的歸屬是「布勒哲爾畫派」，或許出自他的兒子揚・布勒哲爾（Jan Bruegel）。其後館方清洗畫面，拆掉底邊一條後加的木條，在接縫上一層厚厚的褐色塗料底下，找到用淡白色寫成的署名（Burroughs 印作「BRUEGEL」）與殘缺的年份「LXV」。這段經過記在 1921 年 5 月號《大都會博物館館刊》（Bulletin of the Metropolitan Museum of Art）一篇署名「B. B.」的文章裡，JSTOR 著錄作者為 Bryson Burroughs。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "這篇照一條路線看畫：從右下角樹蔭裡的午餐開始，往左經過睡著的人與割麥者，沿麥田裡切出的通道往上，越過中景的村子，停在遠方的海。看得見的、學者說的、本文自己的讀法，下面分開標示。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作者",
+          "老彼得・布勒哲爾（Pieter Bruegel the Elder），尼德蘭畫家；大都會博物館作「約 1525 年生於布雷達（?），1569 年卒於布魯塞爾」"
+        ],
+        [
+          "題名",
+          "The Harvesters，本文譯作《收割者》"
+        ],
+        [
+          "年代",
+          "1565 年（大都會博物館）"
+        ],
+        [
+          "材料",
+          "橡木板油彩（大都會博物館開放資料作 Oil on oak；該館提供給 Google Arts & Culture 的資料作 Oil on wood）"
+        ],
+        [
+          "尺寸",
+          "連同上、下、右三邊後加的木條 119 × 162 公分；原始畫面 116.5 × 159.5 公分（大都會博物館）"
+        ],
+        [
+          "收藏",
+          "紐約大都會博物館，館藏號 19.164，Rogers Fund, 1919"
+        ],
+        [
+          "款識",
+          "右下：BRVEGEL / [MD]LXV，館方註明「現已大半難以辨識」"
+        ],
+        [
+          "歸屬",
+          "館方列為老布勒哲爾作品；1919 年購入時被當成畫派作品，1921 年因清洗出款識而改定（Burroughs 1921）"
+        ],
+        [
+          "系列",
+          "安特衛普商人 Niclaes Jongelinck 訂製的季節組畫之一，原有六幅，存世五幅（大都會博物館；維也納藝術史博物館拼作 Jonghelinck）"
+        ],
+        [
+          "影像",
+          "Wikimedia Commons 所收 Google Arts & Culture 掃描檔，原檔 30000 × 21851 像素，公版"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "第一眼：樹蔭裡的八個人"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.64,
+        0.69,
+        0.31,
+        0.27
+      ],
+      "position": "畫面右下，梨樹主幹右側到右緣之前，約佔全圖寬度三成、高度四分之一強",
+      "caption": "頭圖局部。八個人圍坐在一塊白布旁吃東西，有人舉罐喝、有人用湯匙舀碗裡的白色食物、有人切麵包；白布上放著幾顆梨形果子。"
+    },
+    {
+      "type": "p",
+      "text": "全畫最暗、人最密的一塊在右下角。梨樹的影子裡，八個人圍著一塊鋪在地上的白布：戴黑帽的男人把麵包塞到嘴邊；他身後穿紅衣的人仰頭，用雙手舉著一只陶罐喝；包白頭巾的婦人一手端碗、一手拿湯匙；戴褐色帽的男人張著嘴，湯匙正送到嘴前；戴寬邊黑帽、穿藍上衣的婦人抱著一只大碗；金髮少年捧碗喝；背對我們、戴草帽穿黃上衣的女子手裡拿著麵包；灰髮男人俯身從籃子裡拿出圓麵包，用刀切開。白布上散著幾顆粉紫與灰綠色的果子，地上還有一只碗和一支木湯匙。",
+      "tag": "可見"
+    },
+    {
+      "type": "quote",
+      "original": "With satire like that of Rabelais, the artist shows how the hungry people in the foreground cram food into mouths already full, or drink with great gulps from crocks and bowls.",
+      "text": "畫家帶著拉伯雷式的諷刺，讓前景這群餓壞的人把食物塞進已經塞滿的嘴，或捧著陶罐、木碗大口灌下。",
+      "cite": "Burroughs，〈The Harvesters by Pieter Bruegel the Elder〉，《大都會博物館館刊》第 16 卷，1921 年，頁 96；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "「諷刺」是 Burroughs 的判斷。畫面上看得到的是動作：張開的嘴、舉高的罐、舀到一半的湯匙，每個人都停在吃或喝的某一瞬間。這些動作是否帶著嘲弄，影像本身沒有給答案；同一篇文章也說，畫家把每個人都畫得「專注於手上的事」。本文只記下：這些人的頭大多朝著自己手上的食物或器皿。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "構圖：一棵梨樹把畫面切成兩半"
+    },
+    {
+      "type": "svg",
+      "title": "構圖骨架與本文的觀看路線",
+      "svg": "<svg viewBox=\"0 0 320 250\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs>\n<marker id=\"hvA\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 Z\" class=\"accent\"/></marker>\n</defs>\n<rect x=\"0\" y=\"0\" width=\"320\" height=\"233\" class=\"paper\" stroke-width=\"1\"/>\n<path d=\"M0,0 L166,0 L166,77 L0,77 Z\" class=\"soft\" stroke-width=\"0.5\"/>\n<text x=\"60\" y=\"40\" font-size=\"9\" class=\"muted\">天空（約佔左上三分之一）</text>\n<line x1=\"0\" y1=\"77\" x2=\"166\" y2=\"77\" class=\"muted line\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n<text x=\"4\" y=\"73\" font-size=\"8\" class=\"muted\">海平線</text>\n<path d=\"M0,148 L99,148 L99,200 L0,214 Z\" class=\"gold\" stroke-width=\"0.5\" opacity=\"0.55\"/>\n<path d=\"M112,148 L144,128 L179,112 L227,113 L222,165 L112,190 Z\" class=\"gold\" stroke-width=\"0.5\" opacity=\"0.55\"/>\n<text x=\"150\" y=\"150\" font-size=\"8\" class=\"ink\">未割的麥</text>\n<line x1=\"208\" y1=\"40\" x2=\"206\" y2=\"196\" class=\"ink\" stroke-width=\"5\"/>\n<text x=\"214\" y=\"60\" font-size=\"8\" class=\"ink\">梨樹主幹</text>\n<path d=\"M208,40 Q240,20 300,10\" class=\"ink line\" stroke-width=\"1.5\"/>\n<path d=\"M208,60 Q180,40 120,30\" class=\"ink line\" stroke-width=\"1.5\"/>\n<path d=\"M226,40 L320,30 L320,150 L226,150 Z\" class=\"muted\" stroke-width=\"0\" opacity=\"0.25\"/>\n<text x=\"250\" y=\"100\" font-size=\"8\" class=\"ink\">樹林、教堂</text>\n<circle cx=\"256\" cy=\"191\" r=\"4\" class=\"accent\" stroke-width=\"0.5\"/>\n<text x=\"262\" y=\"188\" font-size=\"8\" class=\"accent\">1 午餐</text>\n<circle cx=\"173\" cy=\"203\" r=\"3\" class=\"accent\" stroke-width=\"0.5\"/>\n<text x=\"150\" y=\"216\" font-size=\"8\" class=\"accent\">2 睡著的人</text>\n<circle cx=\"70\" cy=\"182\" r=\"3\" class=\"accent\" stroke-width=\"0.5\"/>\n<text x=\"40\" y=\"198\" font-size=\"8\" class=\"accent\">3 割麥者</text>\n<circle cx=\"109\" cy=\"163\" r=\"3\" class=\"accent\" stroke-width=\"0.5\"/>\n<text x=\"113\" y=\"176\" font-size=\"8\" class=\"accent\">4 送水少年</text>\n<circle cx=\"80\" cy=\"144\" r=\"3\" class=\"accent\" stroke-width=\"0.5\"/>\n<text x=\"30\" y=\"140\" font-size=\"8\" class=\"accent\">5 扛麥的人</text>\n<circle cx=\"128\" cy=\"112\" r=\"3\" class=\"accent\" stroke-width=\"0.5\"/>\n<text x=\"134\" y=\"108\" font-size=\"8\" class=\"accent\">6 村落</text>\n<circle cx=\"118\" cy=\"79\" r=\"3\" class=\"accent\" stroke-width=\"0.5\"/>\n<text x=\"124\" y=\"90\" font-size=\"8\" class=\"accent\">7 海與船</text>\n<path d=\"M251,193 L178,202\" class=\"accent line\" stroke-width=\"1.3\" marker-end=\"url(#hvA)\"/>\n<path d=\"M168,202 L75,184\" class=\"accent line\" stroke-width=\"1.3\" marker-end=\"url(#hvA)\"/>\n<path d=\"M74,179 L104,166\" class=\"accent line\" stroke-width=\"1.3\" marker-end=\"url(#hvA)\"/>\n<path d=\"M106,159 L84,147\" class=\"accent line\" stroke-width=\"1.3\" marker-end=\"url(#hvA)\"/>\n<path d=\"M83,141 L124,115\" class=\"accent line\" stroke-width=\"1.3\" marker-end=\"url(#hvA)\"/>\n<path d=\"M127,108 L119,83\" class=\"accent line\" stroke-width=\"1.3\" marker-end=\"url(#hvA)\"/>\n<text x=\"160\" y=\"246\" text-anchor=\"middle\" font-size=\"8\" class=\"muted\">原創示意，不按比例描摹；外框依原作約 159.5 × 116.5 公分的比例</text>\n</svg>",
+      "caption": "原創示意，簡化輪廓，不是摹本。各區位置依本文在 Commons 高解析影像上量得的比例畫出：海平線約在畫高三分之一，梨樹主幹約在畫寬 63%–66% 處。紅色編號 1→7 是本文建議的觀看順序，不是學者的說法。"
+    },
+    {
+      "type": "p",
+      "text": "梨樹的主幹從畫面下緣往上，大約落在畫寬三分之二的位置，一直伸出畫框上緣。樹的左邊是一大片開闊的視野：近處一塊方整的金黃麥田，中景是樹林、農舍、池塘，遠處是海灣與天空，海平線大約在畫高三分之一處。樹的右邊則被樹林、教堂和已割過的田地封住，看不到遠方。未割的麥田形成一塊斜向的色塊，左低右高，上緣從畫面左側一路爬到梨樹附近。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是：畫面裡沒有一條主角站立的中軸，眼睛只能沿著人物一個接一個走。右下角最暗、最擠，左上角最亮、最空，從暗處往亮處走的路線，剛好由一連串小人物接起來。示意圖上的七個點，就是照這個方向排的。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "睡著的人與一頂後加的帽子"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.44,
+        0.76,
+        0.21,
+        0.23
+      ],
+      "position": "畫面下緣中央偏右，午餐群左側、梨樹主幹左下，約佔全圖寬度五分之一",
+      "caption": "頭圖局部。男人仰躺在麥稈上，頭枕著一塊紅布靠在樹根旁，右臂彎到腦後，灰色帽子壓在手臂與樹幹相接處；樹幹上斜靠一支木叉。"
+    },
+    {
+      "type": "p",
+      "text": "午餐群的左邊，一個穿白襯衫、灰長褲的男人仰躺在地上。兩腿張開，左手垂在身側，右臂彎到腦後；頭枕在一團紅布上，雙眼閉著，嘴微張。腰間一條帶子斜掛，褲前有幾條細繩散開。一頂灰色帽子壓在他的手臂與樹幹相接的地方，一支三齒木叉斜靠在樹幹上，叉齒朝下。畫面上他的左上方是一捆立起來的麥束。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "Burroughs 在 1921 年的文章裡說，畫家在「睡著的人的右臂碰到樹幹的地方」遇到難處，於是事後在手腕上加畫一頂帽子，像是從頭上滑落，用來遮掉前臂連續的輪廓；這頂帽子剛畫好時是不透明的，年代久了變得半透明。他也把這個人比作德・科斯特（De Coster）筆下《烏倫施皮格爾歷險記》（Adventures of Ulenspiegel）裡的 Lamme Goedzak，並指出布勒哲爾 1567 年的《安樂鄉》（The Land of Cockaigne）裡也有一個張腿睡在地上的胖子，兩者構想相近，年代應該不遠：一個是吃過山珍美酒、穿毛皮滾邊斗篷的懶人，一個是吃過黑麵包和牛奶的勤勞農民。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "帽子的位置確實正好在手臂、樹幹與紅布三條輪廓交會處。至於帽子底下有沒有透出原來的手臂，在這份影像的解析度下，本文看不出明確的痕跡，只能記下 Burroughs 的觀察。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "麥田裡切出的通道"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.13,
+        0.6,
+        0.25,
+        0.36
+      ],
+      "position": "畫面左下到中段，未割麥田的左半塊與中間的通道，約佔全圖寬度四分之一、高度三分之一",
+      "caption": "頭圖局部。左下戴草帽的人一手攬住麥稈、一手握著彎鐮；他身後的人背對我們揮鐮；右邊通道裡，少年提著一紅一黑兩只水罐走下來；上方遠處的田埂上，兩人肩扛麥束，後面還跟著一人。"
+    },
+    {
+      "type": "p",
+      "text": "往左看。麥田被割出一道垂直的牆面，牆前兩個男人在工作：戴草帽的人彎著身，左臂攬住一把麥稈，右手拿著一把長刃彎鐮，刀刃平放在地上；他身後的人背對我們，雙手握著長柄，往牆腳揮去。草帽男人腳邊的麥稈裡，藏著一只陶壺。牆的右側，麥田被切開一條窄路，一個少年從路上走下來，右手提紅陶罐，左手提黑罐，頭微低。再往上，越過麥田的上緣，遠處另一塊田的埂上，兩個小小的人把麥束扛在肩上走過，後面跟著一人，左側還有一人在割麥。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "Burroughs 寫道，這個少年「沿著麥田中割出的小路把水提上坡，被沉重的水罐拖得吃力」；他又說割麥的人「有的熟練，有的笨拙」，一個彎腰拾穗的婦人姿勢「真實而彆扭」，會讓法國畫家米勒（Jean-François Millet）吃驚。他估計全畫有四十多個人物。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "這條窄路是左半邊唯一一條把近景和中景連起來的線。如果沒有它，眼睛很容易被那堵金色的麥牆擋下；有了它，視線可以跟著少年的反方向，從前景一路爬到遠處扛麥的人。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "中景：運草車、池塘和拿棍子的人"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.05,
+        0.42,
+        0.43,
+        0.16
+      ],
+      "position": "畫面左側中段，麥田上緣與海平線之間的谷地，約佔全圖寬度四成、高度六分之一",
+      "caption": "頭圖局部。左邊一輛裝滿的大車由一頭紅褐色牲口拉著；中間樹下的水塘裡有幾個裸身的人；右邊農舍前的草地上，一群人有的拿棍、有的奔跑。"
+    },
+    {
+      "type": "p",
+      "text": "麥田後面是一片綠色谷地。左側小路上，一輛四輪大車堆得像一塊麵包，由一頭紅褐色牲口拉著。中間樹蔭下有個水塘，幾個裸身的人坐在岸邊或泡在水裡，岸上放著衣物。再往右，茅草頂農舍和磚房前的草地上，十來個人散開：一人揮著棍子，一人奔跑，幾個婦人站成一團，還有人拿著手杖。左上方，一座圓塔的宅邸半掩在果園裡；農舍後面的草地上有幾頭牛。",
+      "tag": "可見"
+    },
+    {
+      "type": "h",
+      "text": "右邊：樹上的人和滾落的果子"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.8,
+        0.3,
+        0.2,
+        0.27
+      ],
+      "position": "畫面右緣中段，教堂後方的樹林到已割過的田地，約佔全圖寬度五分之一、高度四分之一強",
+      "caption": "頭圖局部。右上角樹幹分叉處攀著一個穿灰衣的人，幾顆果子懸在半空；樹下兩人跪著撿拾地上的紅色圓果，旁邊橫放一架梯子和一只籃子。"
+    },
+    {
+      "type": "p",
+      "text": "順著午餐群往右上看，畫面右緣有另一棵樹。樹幹分叉處攀著一個人，穿灰衣，身上有一圈白邊；他身邊有一顆紅色圓果懸在半空。樹下的田地上散著許多同樣的紅色果子，兩個人跪著、彎腰撿拾，地上橫放一架木梯，附近有一只空籃。中央那棵梨樹的枝葉間，也垂著許多褐綠色、上窄下寬的果子。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "把這三處放在一起看：樹上掛著果子，地上有人撿果子，午餐的白布上擺著果子。我的讀法是，這幅畫把「收」與「吃」排在同一個下午，麥子也是一樣：梨樹後方的田邊有人在割，田中央有人在紮束，右下角的人在吃麵包和碗裡的東西。畫裡沒有任何文字說這是安排好的，這只是畫面給出的對應。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "空間：從腳邊的麥稈到海上的船"
+    },
+    {
+      "type": "p",
+      "text": "遠景的海灣佔去畫面左上方一條橫帶。放大來看，水面上有四、五艘帆船，岸邊一座小城，中間一座尖頂教堂；海的另一邊是一道淡淡的岬角。顏色由近到遠一層層變淡：前景麥稈是黃褐，中景草地是灰綠，遠處的城和海變成藍灰，最後與天空的米白幾乎分不開。天空沒有雲的形狀，只有平塗的淡色，放大可以看到整面細密的龜裂紋。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "Burroughs 認為這是布拉班特（Brabant）一帶的鄉間，並指出畫中那座方塔矮尖頂的教堂，也出現在依布勒哲爾素描製作的版畫「大風景」系列裡，其中一幅題為《Pagus Nemorosus》。維也納藝術史博物館 2024 年的線上展「Zeiten der Natur」（撰文：Florian Köhler 等四人）則提醒，布勒哲爾的風景「看起來非常自然、真實，其實是虛構的風景」，例子是他畫中的高山：尼德蘭沒有那樣的岩山，那是他翻越阿爾卑斯山後帶回來的記憶。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "兩種說法不必互斥。《收割者》裡沒有岩山，地形起伏平緩，與 Burroughs 說的布拉班特相近；但畫中這些田、村、海是否真的同時出現在某一個地點，沒有證據可以回答。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "artwork",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/82/Pieter_Bruegel_the_Elder_-_Haymaking_%28July%29_-_WGA03445.jpg",
+      "width": 1223,
+      "height": 850,
+      "alt": "橫幅油畫：左上是灰白色的巨大岩山，右側一棵樹貫穿畫面上下；中景是草坡、運草車和村落，遠方有河谷；前景一條土路上，三個扛著草耙的婦人往左走，右邊幾個人頭頂裝滿蔬果的籃子，一人騎白馬。",
+      "caption": "同一組畫的《乾草收成》（Haymaking），1565 年，羅布科維茨收藏（The Lobkowicz Collections），藏於布拉格城堡的羅布科維茨宮。和《收割者》一樣把一棵樹放在畫面右側、從高處俯看田地，但左上加了一座岩山。Burroughs 在 1921 年就以兩幅畫的相似，論證《收割者》是這組畫遺失的一幅。此圖取自 Web Gallery of Art 的舊掃描，色彩偏濃，只供比對構圖。",
+      "credit": "老彼得・布勒哲爾；羅布科維茨收藏，布拉格；影像取自 Wikimedia Commons（Web Gallery of Art）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Haymaking_(July)_-_WGA03445.jpg",
+      "made": "1565"
+    },
+    {
+      "type": "p",
+      "text": "兩幅並排，可以看到相同的骨架：右側一棵直立的樹，從高處斜看下去的田地，中景一輛堆滿的車，遠方展開的谷地。差別在於《乾草收成》的近景人物還在土路上走動，《收割者》的近景人物則坐下來停住了。",
+      "tag": "可見"
+    },
+    {
+      "type": "h",
+      "text": "色彩：半幅金黃與幾點白和紅"
+    },
+    {
+      "type": "p",
+      "text": "金黃與黃褐的麥田佔了畫面近一半。在這片顏色上，最醒目的是幾塊白：割麥的兩人、送水的少年、睡著的人都穿白襯衫，午餐群裡還有白頭巾、白圍裙和那塊白布，白色大致沿著本文的觀看路線分布。紅色則是幾個小點：送水少年的紅陶罐、仰頭喝水者的紅衣、睡著的人頭下的紅布，還有右邊田裡紮麥束那人的紅背心。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "Burroughs 在同一篇文章裡記錄了當時的保存狀況：畫面有蠅糞與汙垢，部分凡尼斯變色，沿木板裂縫有窄條補彩。他推測梨樹下裸露地面上原有的一些罩染可能褪了色或被磨掉；麥田陰影裡的褐色罩染可能隨時間氧化，「現在看起來比畫家當時所見更熱、更暗」。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "因此，今天這片金黃與深褐的對比，可能比 1565 年更強。本文看到的是現在的顏色，不能據此推論畫家當時的配色意圖。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "材料：橡木板、後加的木條和一行淡白字"
+    },
+    {
+      "type": "p",
+      "text": "館方資料寫明，這塊畫板的上、下、右三邊都有後加的木條，連木條共 119 × 162 公分，原始畫面是 116.5 × 159.5 公分。Burroughs 記錄，1921 年以前底邊加過一條約 2.5 英寸（約 6.4 公分）寬的木條，可能是為了配合一個雕花橡木畫框；清洗時館方把它拆掉，只留下半英寸，好讓畫框的槽口少遮一點原畫。款識寫在右下角一塊褐色的突起上，原本被一層褐色塗料蓋住，上面還畫了一個編號「443」。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "在 Commons 的高解析影像上，右下角深褐色的陰影裡，可以讀出一行很淡的淺色大寫字母「BRVEGEL」，字母 U 寫成 V。字下方的年份，本文在這份影像上辨認不出來。這與館方「現已大半難以辨識」的註記相符。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "Burroughs 判斷這不是摹本的理由，來自畫面本身：顏料薄而平地塗在仔細的底稿上，透過薄色層看得見底下的素描，修改處也看得見，例如教堂的塔從一根後來才畫上去的枝幹底下透出來。他的推論是，摹本畫家照著表面畫，自由摹寫的人會在一開始就改，不會在畫作快完成時才改。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "h",
+      "text": "從安特衛普的餐廳到紐約"
+    },
+    {
+      "type": "timeline",
+      "title": "《收割者》的去向",
+      "items": [
+        {
+          "when": "1565",
+          "label": "畫成",
+          "note": "維也納藝術史博物館把同組現存五幅定在 1565 年；大都會博物館將本幅定年 1565。"
+        },
+        {
+          "when": "1566",
+          "label": "Jongelinck 收藏",
+          "note": "大都會博物館的流傳紀錄作「最晚 1566 年」在安特衛普商人 Jongelinck 手中；藝術史博物館的線上展描繪同年六幅掛在他城外別墅新裝修的餐廳裡。"
+        },
+        {
+          "when": "1594",
+          "label": "安特衛普市買下",
+          "note": "館方紀錄：此前在安特衛普的 Hane von Wijke 手中（館方以方括號標示，依該館體例指畫商經手），以 1,400 弗羅林賣給市議會，作為送給新任尼德蘭總督恩斯特大公（Archduke Ernst）的禮物。"
+        },
+        {
+          "when": "1595",
+          "label": "大公遺產清冊",
+          "note": "記為「Sechs Taffell, von 12 Monathenn des Jars」，即六塊板，畫一年十二個月。"
+        },
+        {
+          "when": "1659",
+          "label": "利奧波德・威廉大公（Archduke Leopold Wilhelm）清冊",
+          "note": "只剩「五件大幅」，畫「一年的時節」，註明是老布勒哲爾原作。"
+        },
+        {
+          "when": "1809",
+          "label": "離開維也納",
+          "note": "館方紀錄列入 Antoine-François Andréossy 伯爵的收藏（維也納與巴黎，1809–1816）。"
+        },
+        {
+          "when": "1816",
+          "label": "巴黎拍賣",
+          "note": "拍賣目錄稱作者為「古德意志畫派的一位大師」，並記「年份 1546」。"
+        },
+        {
+          "when": "1912 前",
+          "label": "Doucet 售予 Cels",
+          "note": "巴黎收藏家 Jacques Doucet 賣給布魯塞爾的 Paul Jean Cels。"
+        },
+        {
+          "when": "1919",
+          "label": "大都會博物館購入",
+          "note": "Rogers Fund，館藏號 19.164。"
+        }
+      ],
+      "caption": "依大都會博物館提供給 Google Arts & Culture 的流傳紀錄、維也納藝術史博物館線上展整理。"
+    },
+    {
+      "type": "p",
+      "text": "大都會博物館把這組畫說成「季節或一年的時節」系列，共六幅，存世五幅：《陰天》《雪中獵人》《牛群歸來》在維也納藝術史博物館，《乾草收成》在布拉格。館方的作品說明稱這組畫是「西方藝術史的分水嶺」，風景畫原本依附的宗教題材被壓下，讓位給一種新的人文主義，畫的是依自然觀察、不加美化的在地景象。維也納藝術史博物館的線上展則把一年分成六段：早春、晚春、初夏、晚夏、秋、冬，《收割者》是「晚夏（8／9 月）」，遺失的是晚春，大概在 17 世紀散失。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "1921 年的 Burroughs 還不知道這段流傳，他只看到 1659 年清冊裡的五件，於是傾向認為這是一套未完成的「十二個月」，把《收割者》定為八月。他引述學者 G. Hulin de Loo 的疑問：這五幅究竟是一套「季節」，還是一套不完整的「月份」？今天的答案大多落在六幅；1595 年清冊那句「六塊板，畫一年十二個月」，本文讀來正好說明兩種叫法為什麼並存：六幅畫，每幅分攤兩個月。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "這幅最晚 1566 年就在安特衛普商人手中的畫，在 1816 年的巴黎被當成一位無名「古德意志畫派」大師的作品，年份被讀成 1546 年，以 90.11 法郎成交。大約一百年後它到了紐約，被當成畫派作品、或許出自兒子之手；直到有人拆掉一條木板，清洗掉一層褐色塗料，才在角落找到那行淡白字。",
+      "tag": "史實"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Harvesters（Object ID 435809）",
+      "publisher": "The Metropolitan Museum of Art Collection API",
+      "date": "",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435809",
+      "note": "館藏號、年代、材料（Oil on oak）、含後加木條與原始畫面的尺寸、作者生卒、公版狀態"
+    },
+    {
+      "title": "Pieter Bruegel the Elder - The Harvesters",
+      "publisher": "The Metropolitan Museum of Art",
+      "date": "",
+      "url": "https://www.metmuseum.org/art/collection/search/435809",
+      "note": "館方作品頁；本次查核時被網站安全檢查擋下（HTTP 429），內容改由館方開放 API 與下一筆 Google Arts & Culture 上的館方資料核對"
+    },
+    {
+      "title": "The Harvesters - Pieter Bruegel the Elder",
+      "publisher": "Google Arts & Culture（資料提供：The Metropolitan Museum of Art）",
+      "date": "",
+      "url": "https://artsandculture.google.com/asset/the-harvesters-pieter-bruegel-the-elder/PAH1oMZ5dGBkxg",
+      "note": "館方作品說明（六幅存五、分水嶺之說）、款識「BRVEGEL / [MD]LXV」、完整流傳紀錄（1566–1919）"
+    },
+    {
+      "title": "The Harvesters by Pieter Bruegel the Elder",
+      "publisher": "Bulletin of the Metropolitan Museum of Art, Vol. 16, No. 5, pp. 96–103（署名 B. B.；JSTOR Early Journal Content，Internet Archive 存檔）",
+      "date": "1921-05",
+      "url": "https://archive.org/details/jstor-3254219",
+      "note": "購入時的歸屬、清洗發現款識、底邊木條、帽子的修改、Rabelais 引文、保存狀況、與《乾草收成》比較"
+    },
+    {
+      "title": "Chapter II: The seasons à la Bruegel（Zeiten der Natur 線上展）",
+      "publisher": "Kunsthistorisches Museum Wien（撰文：Florian Köhler、Una Matanović、Anna Nowak、Elisa Maria Wagner）",
+      "date": "2024",
+      "url": "https://zeitendernatur.khm.at/en/chapter-ii-the-seasons-a-la-bruegel/",
+      "note": "六季分法與月份、晚春一幅遺失、Jonghelinck 餐廳、1594 年安特衛普市致贈、「虛構的風景」"
+    },
+    {
+      "title": "Gloomy Day (Early Spring)",
+      "publisher": "Kunsthistorisches Museum Wien",
+      "date": "",
+      "url": "https://www.khm.at/en/artworks/gloomy-day-early-spring-325",
+      "note": "同組畫的年代 1565 與尺寸 118 × 163 公分"
+    },
+    {
+      "title": "File:Pieter Bruegel the Elder- The Harvesters - Google Art Project.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg",
+      "note": "頭圖與局部；授權 Public domain；本文逐區查看 3840 像素版本"
+    },
+    {
+      "title": "File:Pieter Bruegel the Elder - Haymaking (July) - WGA03445.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Haymaking_(July)_-_WGA03445.jpg",
+      "note": "比較圖；授權 Public domain"
+    }
+  ]
+}
