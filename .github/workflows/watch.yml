@@ -27,6 +27,8 @@ jobs:
           LIVE=$(curl -fsS "https://wiener-morgen-private.duckdns.org/content/version.txt?t=$(date +%s)" 2>/dev/null || echo "（無法讀取）")
           HEAD=$(git rev-parse HEAD)
           MISSING=$(grep '^缺稿：' plan.txt | sed 's/^缺稿：//' || true)
+          # every shift leaves a record in state/runs/<date>.json; a shift that ran but could not push leaves none
+          NOREPORT=$(python3 -c "import json,sys; d=json.load(open('state/runs/$D.json')) if __import__('os').path.exists('state/runs/$D.json') else {}; print('、'.join('第 %s 班' % g for g in '12345' if g not in d))")
           {
             echo "台灣時間 07:45 檢查 $D 的刊期。"
             echo
@@ -40,13 +42,17 @@ jobs:
             cat validate.txt
             echo '```'
             echo
+            echo "### 班次回報"
+            if [ -n "$NOREPORT" ]; then echo "沒有回報：$NOREPORT（可能沒執行完、或推送被拒；到 https://claude.ai/code/routines 看該班的執行紀錄）"; else echo "第 1–5 班都已回報。"; fi
+            [ -f "state/runs/$D.json" ] && { echo '```'; cat "state/runs/$D.json"; echo '```'; }
+            echo
             echo "### 線上版本"
             echo "網站：$LIVE"
             echo "main：$HEAD"
             echo
             echo "排程執行紀錄：https://claude.ai/code/routines"
           } > report.md
-          if [ -n "$MISSING" ] || [ "$V" -ne 0 ] || [ "$LIVE" != "$HEAD" ]; then echo "problem=yes" >> "$GITHUB_OUTPUT"; fi
+          if [ -n "$MISSING" ] || [ "$V" -ne 0 ] || [ "$LIVE" != "$HEAD" ] || [ -n "$NOREPORT" ]; then echo "problem=yes" >> "$GITHUB_OUTPUT"; fi
           cat report.md
       - name: Open or update an issue
         if: always() && steps.check.outputs.problem == 'yes'
