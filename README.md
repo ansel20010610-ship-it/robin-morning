@@ -12,14 +12,16 @@ Claude Code 雲端排程（routines，Opus 5.5，用 Claude 訂閱額度，不�
   05:17  第 4 班：FM 觀測站、迷霧之子與颶光影視化、巴薩晨報更新、全刊驗收補稿
   06:27  第 5 班：安全網——平行補寫一切缺稿、巴薩晨報最後更新（07:08 前推送）
   14:37  備稿班：把備稿庫補到每欄 2 篇
+  週日 15:37  品質稽核：抽查過去 7 期，事實錯誤加「更正」，反覆出現的問題寫進 editorial/LESSONS.md
         │  每篇：寫稿 → 獨立審稿子代理查核 → 修正 → scripts/validate.py → 直接 push 到 main
+        │  每班結束寫一筆班次回報（state/runs/<日期>.json）；只在需要社長處理時才發手機通知
         ▼
 GitHub Actions
-  publish.yml  每次 push：產生 content/index.json 與搜尋資料 → 部署 GitHub Pages
-  fill.yml     07:12、07:22：仍缺稿的欄位自動以備稿補上（不經 AI）
-  watch.yml    07:45：仍有缺稿或驗證失敗 → 開 GitHub issue（寄 email 通知）
+  publish.yml  每次 push：產生 content/index.json 與搜尋資料 → 替程式檔網址加版本號 → 部署 GitHub Pages
+  fill.yml     07:12、07:15、07:18、07:22：仍缺稿的欄位自動以備稿補上（不經 AI）
+  watch.yml    07:45：缺稿、驗證失敗、有班次沒回報、或網站不是最新版 → 開 GitHub issue（寄 email 通知）
         ▼
-網站（靜態 PWA）：07:30 前顯示上一期，07:30 起自動翻到當天
+網站（靜態 PWA）：07:30 前顯示上一期，07:30 起自動翻到當天；讀過的文章、圖片與字型存在手機上，離線也能讀
 ```
 
 routine 所用雲端環境的網路存取必須設為 **Full**（已設定）；若用預設的 Trusted，Wikimedia Commons、信望愛聖經、館藏圖庫與新聞、學術來源都會被擋（403 `host_not_allowed`），找圖、經文與查證都會失敗。
@@ -28,7 +30,7 @@ routine 所用雲端環境的網路存取必須設為 **Full**（已設定）；
 - 稿件：`content/issues/<日期>/<欄位>.json`；備稿：`content/reserve/<欄位>/`
 - 欄位設定與副刊輪替：`content/config.json`
 - 觀測站基準：`state/watch/`
-- 工具：`scripts/`（plan_day、validate、ledger、reserve、fill_from_reserve、commons、bible、spotify、build_index）
+- 工具：`scripts/`（plan_day、validate、ledger、reserve、fill_from_reserve、report_run、commons、bible、spotify、build_index、version_shell）
 
 ## 本機預覽
 
