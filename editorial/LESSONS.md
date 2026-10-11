@@ -20,3 +20,4 @@
 
 11. **被封鎖的網站會讓整次搜尋失敗**：WebSearch 的 `allowed_domains` 只要含一個封鎖我們抓取程式的網站，整次就回 400「not accessible to our user agent」，什麼結果都拿不到。已知不可用（搜尋與 WebFetch 皆然）：mundodeportivo.com、sport.es、as.com、marca.com、bbc.com、theguardian.com、theathletic.com、reuters.com、apnews.com、elpais.com、lavanguardia.com、rtve.es。遇到 400 就把錯誤訊息點名的網域拿掉重搜。（第 5 班・巴薩、環境測試）
 12. **PubMed 網頁讀不到時改用 API**：WebFetch 打開 pubmed.ncbi.nlm.nih.gov 常只拿到「請啟用 Cookie」的空頁；改用 E-utilities、Europe PMC 或 Crossref（指令見 `columns/perio.md`）。（環境測試・牙周）
+13. **請求裡不放社長的個人資料**：一位審稿子代理為了下載芝加哥藝術博物館的圖，把社長的 email 放進 `AIC-User-Agent` 標頭送出。需要聯絡資訊的 API 一律用專案網址（`scripts/common.py` 的 `UA`），見 README「不可以做的事」。（備稿・攝影）
