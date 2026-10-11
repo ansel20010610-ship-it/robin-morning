@@ -68,7 +68,7 @@ export async function importLinkCode(code) {
 export function logout() {
   store.del("sp.token");
   store.del("sp.playlist");
-  for (const k of Object.keys(localStorage)) if (k.startsWith("rm.sp.resolve.")) localStorage.removeItem(k);
+  for (const k of Object.keys(localStorage)) if (k.startsWith("rm.sp.resolve")) localStorage.removeItem(k);
   toast("已中斷 Spotify 連結");
 }
 
@@ -183,14 +183,20 @@ function rememberPlaylist(p) {
 
 // ——— Matching the editor's recording description to Spotify ———
 const norm = (s) => String(s || "").toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9㐀-鿿]+/g, " ").trim();
-const cacheKey = (sp) => "sp.resolve." + norm(sp.query).slice(0, 80);
+// v2: matches made before the performer was enforced may name another recording, so they are looked up again.
+const cacheKey = (sp) => "sp.resolve2." + norm(sp.query).slice(0, 80);
 // Whole-word match, so "Symphony No. 4" doesn't also hit No. 40 and "Op. 6" doesn't hit Op. 61.
 const hasTok = (hay, w) => (" " + norm(hay) + " ").includes(" " + norm(w) + " ");
 const filterWords = (filter) => (filter || []).filter((w) => norm(w));
 
+// Compilations carry cut-down versions under the same title; the article is about the whole piece. A word the editor
+// put in the filter is part of the title (Glass's "Opening"), not a sign of a cut.
+const PARTIAL = /\b(excerpts?|opening|highlights?|edit|abridged|ausschnitt|auszug|extrait)\b/i;
+
 function tracksMatching(items, filter) {
   const f = filterWords(filter);
-  return items.filter((t) => f.every((w) => hasTok(t.name, w)));
+  const cut = (name) => PARTIAL.test(name) && !f.some((w) => PARTIAL.test(w));
+  return items.filter((t) => f.every((w) => hasTok(t.name, w)) && !cut(t.name));
 }
 
 async function albumTracks(id, filter) {
@@ -217,9 +223,25 @@ async function searchAlbums(sp) {
   }).sort((a, b) => b.score - a.score);
 }
 
-const found = (album, tracks, cands) => ({ album: album.id, albumName: album.name, artists: album.artists.map((x) => x.name).join(", "),
+// Albums holding the editor's performer's recording, found track by track: the album search misses reissues and
+// compilations whose album artist is someone else. Albums whose matching tracks run longest come first.
+async function albumsByPerformer(sp) {
+  const hint = norm(sp.artist_hint);
+  if (!hint) return [];
+  const q = `${filterWords(sp.track_filter).join(" ")} ${sp.artist_hint}`.trim();
+  const res = await api(`/search?${new URLSearchParams({ q, type: "track", limit: "20" })}`);
+  const length = new Map();
+  for (const t of res.tracks?.items || []) {
+    if (!t?.album?.id || !norm(t.artists.map((x) => x.name).join(", ")).includes(hint)) continue;
+    if (!tracksMatching([t], sp.track_filter).length) continue;
+    length.set(t.album.id, (length.get(t.album.id) || 0) + (t.duration_ms || 0));
+  }
+  return [...length.entries()].sort((a, b) => b[1] - a[1]).map(([id]) => id);
+}
+
+const found = (album, tracks, cands, substitute = false) => ({ album: album.id, albumName: album.name, artists: album.artists.map((x) => x.name).join(", "),
   year: (album.release_date || "").slice(0, 4), tracks: tracks.map((t) => t.id), trackNames: tracks.map((t) => t.name),
-  candidates: cands, source: "search" });
+  candidates: cands, source: "search", ...(substitute ? { substitute: true } : {}) });
 
 // `albumId`: the reader picked this album in the version sheet. `candidates`: reuse an earlier search.
 // `count`: how many movements the article lists (caps a picked album whose track titles don't pass the filter).
@@ -240,14 +262,21 @@ export async function resolve(sp, { force = false, albumId = null, candidates = 
   }
   // No track_filter: every track of any album would "match", so let the reader choose the recording.
   if (!filtered) return { tracks: [], candidates: cands, source: "none" };
-  for (const c of cands.slice(0, 6)) {
-    const { album, tracks } = await albumTracks(c.id, sp.track_filter);
-    if (tracks.length) {
-      const out = found(album, tracks, cands);
-      store.set(key, out);
-      return out;
-    }
-  }
+  // The article is about one performance: look for the editor's performer first, by album and then by track,
+  // and only then settle for someone else's recording, saying so.
+  const hint = norm(sp.artist_hint);
+  const byPerformer = (c) => Boolean(hint) && (norm(c.artists).includes(hint) || norm(c.name).includes(hint));
+  const tryAlbum = async (id, substitute) => {
+    const { album, tracks } = await albumTracks(id, sp.track_filter);
+    if (!tracks.length) return null;
+    const out = found(album, tracks, cands, substitute);
+    store.set(key, out);
+    return out;
+  };
+  for (const c of cands.slice(0, 6).filter(byPerformer)) { const out = await tryAlbum(c.id, false); if (out) return out; }
+  const seen = new Set(cands.filter(byPerformer).map((c) => c.id));
+  for (const id of (await albumsByPerformer(sp)).filter((x) => !seen.has(x)).slice(0, 4)) { const out = await tryAlbum(id, false); if (out) return out; }
+  for (const c of cands.slice(0, 6).filter((c) => !byPerformer(c))) { const out = await tryAlbum(c.id, Boolean(hint)); if (out) return out; }
   return { tracks: [], candidates: cands, source: "none" };
 }
 
@@ -388,7 +417,7 @@ export function renderMusic(b) {
 
   function draw() {
     const ready = state?.tracks?.length;
-    const match = state?.source === "search" ? `<p class="match">已對應錄音：${esc(state.albumName)}｜${esc(state.artists)}${state.year ? `（${esc(state.year)}）` : ""}${state.loose ? "（曲名未能逐一核對，依專輯曲序對應）" : ""}・<a href="#" data-ver>換一個版本</a></p>`
+    const match = state?.source === "search" ? `<p class="match">${state.substitute ? `本期指定的錄音（${esc(sp.artist_hint)}）在 Spotify 上找不到，先對應到另一個版本：` : "已對應錄音："}${esc(state.albumName)}｜${esc(state.artists)}${state.year ? `（${esc(state.year)}）` : ""}${state.loose ? "（曲名未能逐一核對，依專輯曲序對應）" : ""}・<a href="#" data-ver>換一個版本</a></p>`
       : state?.source === "none" ? `<p class="match">在 Spotify 找不到完全相符的錄音・<a href="#" data-ver>從搜尋結果挑選</a></p>` : "";
     // Where WebKit limits the embed to previews, opening Spotify itself (first movement first) is the main way to listen.
     const openUrl = itp && state?.tracks?.[0] ? `https://open.spotify.com/track/${state.tracks[0]}` : state?.album ? `https://open.spotify.com/album/${state.album}` : searchUrl;
