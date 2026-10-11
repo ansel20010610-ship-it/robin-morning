@@ -80,6 +80,34 @@ def topic_norm(key):
     return re.sub(r"\s+", " ", key).strip().lower()
 
 
+# Commons often holds one picture under several names: "X.jpg", "X - Google Art Project.jpg", "X (cropped).jpg".
+NAME_NOISE = set("jpg jpeg png tif tiff svg gif webp djvu pdf the and for from with file image photo photograph "
+                 "illustration google art project edit edited crop cropped detail version scan scanned restored "
+                 "retouched museum high resolution full color colour".split())
+
+
+@functools.lru_cache(maxsize=None)
+def name_words(key):
+    if not key.startswith("commons:"):
+        return frozenset()
+    name = key.split(":", 1)[1].rsplit(".", 1)[0].lower()
+    return frozenset(t for t in re.split(r"[^0-9a-z\u00c0-\u024f\u4e00-\u9fff]+", name) if len(t) >= 3 and t not in NAME_NOISE)
+
+
+def near_duplicate(key, used):
+    """A used Commons image whose distinctive file-name words all appear in `key`'s, or the other way round, or None.
+    Containment, not mere overlap: two painters' "Christ in the House of Martha and Mary" differ by one word and are
+    two pictures, while "X - Google Art Project.jpg" only adds words to "X.jpg"."""
+    a = name_words(key)
+    if len(a) < 3:
+        return None
+    for other in used:
+        b = name_words(other)
+        if len(b) >= 3 and (a <= b or b <= a):
+            return other
+    return None
+
+
 def validate_file(cfg, d, col, path, check_urls=False, used_images=None, used_topics=None):
     """Return (errors, warnings) for one article file. Never raises on malformed content."""
     errs, warns = [], []
@@ -231,6 +259,11 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             seen_in_article[key] = where
             if key and used_images is not None and key in used_images:
                 E("%s 圖片已在 %s 用過：%s" % (where, used_images[key], key))
+            elif key and used_images:
+                near = near_duplicate(key, used_images)
+                if near:
+                    W("%s 圖片檔名和 %s 用過的 %s 幾乎相同，可能是同一張圖的裁切、修復或另一份掃描；"
+                      "請打開兩張比對，是同一張就換圖（IMAGES.md「不重複」）" % (where, used_images[near], near))
             if large and image_key(large) != key:
                 E("%s src_large 必須是同一張圖的大尺寸版本" % where)
             elif large and image_page(large) != image_page(src):
