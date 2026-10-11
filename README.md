@@ -11,7 +11,7 @@ Claude Code 雲端排程（routines，Opus 5.5，用 Claude 訂閱額度，不�
   02:37  第 3 班：副刊 ②③、巴薩晨報初稿
   05:17  第 4 班：FM 觀測站、迷霧之子與颶光影視化、巴薩晨報更新、全刊驗收補稿
   06:27  第 5 班：安全網——平行補寫一切缺稿、巴薩晨報最後更新（07:08 前推送）
-  14:37  備稿班：把備稿庫補到每欄 2 篇
+  14:37  備稿班：把備稿庫補到正刊每欄 3 篇、副刊每欄 2 篇
   週日 15:37  品質稽核：抽查過去 7 期，事實錯誤加「更正」，反覆出現的問題寫進 editorial/LESSONS.md
         │  每篇：寫稿 → 獨立審稿子代理查核 → 修正 → scripts/validate.py → 直接 push 到 main
         │  每班結束寫一筆班次回報（state/runs/<日期>.json）；只在需要社長處理時才發手機通知
@@ -54,7 +54,7 @@ python3 -m http.server 8765
 | 暫停或改時間 | 到 https://claude.ai/code/routines 停用或編輯各班排程 |
 | 看排程寫了什麼、有沒有出錯 | https://claude.ai/code/routines 點進該班的執行紀錄 |
 | 出刊異常 | 07:45 若仍缺稿、驗證失敗或網站不是最新版，GitHub 會開 issue 並寄信；看 repo 的 Issues |
-| 看備稿庫存 | `python3 scripts/reserve.py`（每欄目標 2 篇，下午 14:37 自動補） |
+| 看備稿庫存 | `python3 scripts/reserve.py`（正刊每欄 3 篇、副刊每欄 2 篇，下午 14:37 自動補） |
 | 手動補位 | GitHub → Actions → Fill from reserve → Run workflow |
 | 手動重新部署 | GitHub → Actions → Publish → Run workflow |
 

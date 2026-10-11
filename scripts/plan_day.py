@@ -8,7 +8,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (GROUPS, RESERVE_TARGET, WEEKDAY_ZH, article_path, columns_for_group,  # noqa: E402
+from common import (GROUPS, TARGET_NOTE, WEEKDAY_ZH, reserve_target, article_path, columns_for_group,  # noqa: E402
                     expected_columns, issue_number, iter_reserve, load_config, load_json, parse_date,
                     reserve_columns, supplements_for, tw_now)
 import validate  # noqa: E402
@@ -59,8 +59,8 @@ def main():
     for c, rows in validate.reserve_status(cfg).items():
         if c in stock:
             stock[c] += sum(1 for _, errs in rows if not errs)
-    short = [c for c, n in stock.items() if n < RESERVE_TARGET]
-    print("\n可用備稿（每欄目標 %d 篇）：%s" % (RESERVE_TARGET, "、".join("%s %d" % (c, n) for c, n in stock.items())))
+    short = [c for c, n in stock.items() if n < reserve_target(cfg, c)]
+    print("\n可用備稿（目標：%s）：%s" % (TARGET_NOTE, "、".join("%s %d" % (c, n) for c, n in stock.items())))
     if short:
         print("備稿不足：" + "、".join(short))
 

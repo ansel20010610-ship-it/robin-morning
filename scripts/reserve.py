@@ -7,7 +7,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import RESERVE_TARGET, load_config, load_json, reserve_columns  # noqa: E402
+from common import TARGET_NOTE, load_config, load_json, reserve_columns, reserve_target  # noqa: E402
 import validate  # noqa: E402
 
 
@@ -30,20 +30,21 @@ def main():
     for c in cols:
         items = sorted(stock[c], key=lambda x: (x[0], x[1]))
         ok = [x for x in items if not x[3]]
-        flag = "" if len(ok) >= RESERVE_TARGET else "  ← 不足 %d 篇" % (RESERVE_TARGET - len(ok))
+        target = reserve_target(cfg, c)
+        flag = "" if len(ok) >= target else "  ← 不足 %d 篇" % (target - len(ok))
         print("%-14s %-12s 可用 %d 篇%s" % (c, cfg["columns"][c]["name"], len(ok), flag))
         for written, fn, title, errs in items:
             print("    %s  %s  %s%s" % (written or "????-??-??", fn, title, "" if not errs else "\n      ✗ 需修正：" + errs[0]))
             if errs:
                 broken.append("%s/%s" % (c, fn))
-        if len(ok) < RESERVE_TARGET:
+        if len(ok) < target:
             need.append((len(ok), c))
     if broken:
         print("\n需修正的備稿（修好前不算庫存）：" + "、".join(broken))
     if need:
         print("\n優先補寫（庫存少的先寫）：" + "、".join(c for _, c in sorted(need)))
     else:
-        print("\n每欄都已達 %d 篇。" % RESERVE_TARGET)
+        print("\n每欄都已達標（%s）。" % TARGET_NOTE)
 
 
 if __name__ == "__main__":

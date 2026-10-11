@@ -10,7 +10,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content")
 ISSUES = os.path.join(CONTENT, "issues")
 RESERVE = os.path.join(CONTENT, "reserve")
-RESERVE_TARGET = 2  # reserve articles kept per column (editorial/RESERVE.md)
+# Reserve articles kept per column (editorial/RESERVE.md): a main column runs every day, a supplement two or three
+# days a week, so the main columns keep one more.
+RESERVE_TARGET = {"main": 3, "supplement": 2}
+TARGET_NOTE = "正刊每欄 3 篇、副刊每欄 2 篇"
+
+
+def reserve_target(cfg, col):
+    return RESERVE_TARGET.get(cfg["columns"][col]["group"], 2)
 UA = "RobinMorningBot/1.0 (https://github.com/ansel20010610-ship-it/robin-morning) python-urllib"
 TW = dt.timezone(dt.timedelta(hours=8))
 WEEKDAY_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
