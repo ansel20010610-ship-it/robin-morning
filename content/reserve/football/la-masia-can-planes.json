@@ -1,0 +1,401 @@
+{
+  "column": "football",
+  "date": "reserve",
+  "reserve_written": "2026-10-11",
+  "title": "拉瑪西亞：一棟 1702 年的農舍怎麼變成青訓代名詞",
+  "dek": "諾坎普旁的石造農舍當過工地辦公室、俱樂部總部，1979 年才住進第一批少年球員。這個名字後來比建築本身走得更遠。",
+  "topic_key": "football:la-masia-can-planes",
+  "updated_at": "2026-10-11T15:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/La_Masia_%28Can_Planas%29_%28Barcelona%29_-_1.jpg/1280px-La_Masia_%28Can_Planas%29_%28Barcelona%29_-_1.jpg",
+    "width": 1280,
+    "height": 851,
+    "alt": "晴天下的一棟兩層石造房屋，屋頂鋪橘紅色筒瓦，右側較高的一段頂上有一排小拱窗，正面有拱形石框大門與幾扇木窗，牆上嵌著一塊彩繪瓷磚。屋前是一片弧形草坪，以矮石牆圍起，草坪上有幾棵高大的楊樹與柏樹、一根街燈；左側草叢中立著一尊深色人像雕塑，右側是一條往上彎的柏油車道。",
+    "caption": "諾坎普旁的拉瑪西亞農舍（Masia de Can Planes），2011 年 5 月 6 日拍攝。這是它作為少年宿舍的最後幾週：同年 6 月 30 日宿舍關閉；10 月 20 日，聖胡安德斯皮的新樓啟用。資料照片，攝於 2011 年。",
+    "credit": "MARIA ROSA FERRE／Flickr，經 Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:La_Masia_(Can_Planas)_(Barcelona)_-_1.jpg",
+    "made": "2011"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "一棟加泰隆尼亞鄉間的石造農舍，建於 1702 年，比巴薩早了將近兩百年。它叫 Can Planes，後來全世界只叫它「拉瑪西亞」（La Masia），也就是加泰隆尼亞語的「農舍」。如今說起巴薩青訓，人們用的也是這個詞；但這棟房子真正住著少年球員的時間，只有 1979 到 2011 年的 32 年。"
+    },
+    {
+      "type": "p",
+      "text": "以下依巴薩官網的設施頁與歷年歷史文章，整理這棟農舍的幾次轉手：從諾坎普的工地辦公室、俱樂部總部，到西班牙最早的足球宿舍之一；再看「拉瑪西亞」這個名字，怎麼從一棟建築變成一套青訓的代稱。"
+    },
+    {
+      "type": "timeline",
+      "title": "Can Planes 農舍的幾種用途",
+      "items": [
+        {
+          "when": "1702 年",
+          "label": "農舍建成",
+          "note": "加泰隆尼亞鄉間的石造農舍"
+        },
+        {
+          "when": "1950 年",
+          "label": "隨球場用地買下",
+          "note": "巴薩購入興建諾坎普的土地，農舍包含在內"
+        },
+        {
+          "when": "1950 年代",
+          "label": "工地辦公室",
+          "note": "建築師與營造人員的工作室、模型工坊"
+        },
+        {
+          "when": "1957.9.24",
+          "label": "諾坎普啟用",
+          "note": "農舍關閉，等待新用途"
+        },
+        {
+          "when": "1966–1978",
+          "label": "俱樂部辦公室",
+          "note": "Llaudet 任內改建擴建；1978 年辦公室遷往冰宮旁"
+        },
+        {
+          "when": "1979.10.20",
+          "label": "少年宿舍啟用",
+          "note": "努涅斯董事會主導；第一批 11 名住宿生"
+        },
+        {
+          "when": "2007.11.22",
+          "label": "決定另建新樓",
+          "note": "董事會通過在聖胡安德斯皮的訓練基地興建新宿舍"
+        },
+        {
+          "when": "2011.6.30",
+          "label": "舊宿舍關閉",
+          "note": "最後只住 12 人，另有 48 人住在諾坎普北看台"
+        },
+        {
+          "when": "2011.10.20",
+          "label": "新拉瑪西亞啟用",
+          "note": "以 Oriol Tort 命名，可住 83 人"
+        },
+        {
+          "when": "2021.8.1",
+          "label": "第一批女性住宿生",
+          "note": "九名巴薩 B 隊女足球員入住新樓"
+        },
+        {
+          "when": "2024.4",
+          "label": "舊農舍改建計畫",
+          "note": "選定建築事務所，預定改為會員總部"
+        }
+      ],
+      "caption": "依巴薩官網設施頁與 2019、2021、2024 年的俱樂部文章整理。"
+    },
+    {
+      "type": "h",
+      "text": "先當工地辦公室，再當俱樂部總部"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1950 年，巴薩買下興建新球場的土地，Can Planes 農舍就在這片地上。諾坎普施工期間，它成了建築師與營造人員的工作室，也做過模型工坊，還是相關人士參觀工地的出發點。1957 年 9 月 24 日諾坎普啟用，工地不再需要辦公室，農舍隨之關閉。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "下一個用途來自主席 Enric Llaudet 任內的決定：農舍經過改建，同時擴建，用來安置俱樂部總部。巴薩的辦公室原本在市中心的 Via Laietana，這時搬到球場旁邊。據俱樂部 2024 年的文章，農舍從 1966 到 1978 年都是俱樂部辦公室，1978 年辦公室才遷到冰宮（Palau de Gel）旁。"
+    },
+    {
+      "type": "h",
+      "text": "1979 年 10 月 20 日：第一批 11 名住宿生"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "辦公室一搬走，努涅斯（Josep Lluís Núñez）領導的新董事會很快替農舍找到新用途：給巴塞隆納以外來的少年球員住。在這之前，這些孩子分散住在各處的旅社與民宅，俱樂部和家長都很難照顧得到。整修工程很快完成，宿舍在 1979 年 10 月 20 日正式啟用。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "第一批住進來的是 Romà Albarrán、Betriu、Pep Boada、Òscar Lausín、José Fernández、Guillermo Amor、Esteve Castañer、Manuel Bautista「Bata」、César Redondo、Manolo Muñoz 與 Ricardo Arnal。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "俱樂部在 2019 年的文章中稱它是「西班牙第一座足球宿舍」。這是巴薩自己的說法，本文未能獨立查證。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "巴薩的青年隊比宿舍早得多。1901 年，董事會秘書、一線隊前鋒 Lluís d'Ossó 就組成了第二、第三、第四隊；宿舍啟用前，青年隊已經送出 Carles Rexach 等一批一線隊球員。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "俱樂部 2024 年的文章這樣描寫那 32 年：一代代少年球員在這裡夢想踏上諾坎普的草皮，而那座球場，從他們臥室的窗戶就看得到。"
+    },
+    {
+      "type": "h",
+      "text": "Oriol Tort：「我們不辦測試」"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "宿舍啟用後的二十年，巴薩青訓的核心人物之一是 Oriol Tort。他生於 1929 年 1 月 31 日，1946 到 1949 年在巴薩踢業餘隊，1958 年 8 月 19 日取得地區教練資格，1959 年 9 月 29 日、埃雷拉（Helenio Herrera）執教時期加入巴薩。1959 到 1977 年，他帶的是巴薩少年隊（Infantil）。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1977 年他因髖部受傷不再帶隊，轉入技術團隊；從 1980 年到 1999 年 9 月 10 日在巴塞隆納過世為止，他擔任青訓（Futbol Base）統籌，多年與 Joan Martínez Vilaseca 共同負責。俱樂部說，他擅長找出「不太突出、但符合巴薩輪廓」的球員；有人提議簽下某個孩子時，他的回答是："
+    },
+    {
+      "type": "quote",
+      "original": "We don't test, we will look at them in their own environment.",
+      "text": "我們不辦測試，我們去他們自己的環境裡看他們。",
+      "cite": "Oriol Tort，據巴薩官網英文版 2019 年 9 月 10 日文章轉述（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "俱樂部列出經他發掘、很快踢上職業賽的球員，包括瓜迪奧拉（Josep Guardiola）、Sergi Barjuán、Guillermo Amor、Iván de la Peña、哈維（Xavi Hernández）、阿特塔（Mikel Arteta）與普約爾（Carles Puyol）。Amor 正是 1979 年第一批住進農舍的 11 人之一。Tort 自己的說法是："
+    },
+    {
+      "type": "quote",
+      "original": "The discoverers do not exist, it's the players who discover themselves.",
+      "text": "沒有什麼發掘者，是球員自己發現了自己。",
+      "cite": "Oriol Tort，據巴薩官網英文版 2019 年 9 月 10 日文章轉述（本文自譯）"
+    },
+    {
+      "type": "h",
+      "text": "2011 年搬家：舊農舍只剩 12 人"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "新樓啟用前，俱樂部共安置 60 名年輕運動員：舊農舍只住 12 人，其餘 48 人住在諾坎普北端球門後方的改裝空間。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "2007 年 11 月 22 日，拉波爾塔（Joan Laporta）任主席時，董事會通過在聖胡安德斯皮（Sant Joan Despí）的甘伯訓練基地（Ciutat Esportiva Joan Gamper）另建新宿舍，把分住兩處的孩子集中起來。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "2011 年 6 月 30 日，Can Planes 的宿舍正式關閉。同年 10 月 20 日，新樓啟用，距舊宿舍開張正好 32 年。新樓定名「La Masia－Oriol Tort 培訓中心」（Centre de Formació Oriol Tort），沿用舊名，也紀念 Tort。"
+    },
+    {
+      "type": "table",
+      "title": "兩座拉瑪西亞",
+      "head": [
+        "",
+        "Can Planes 農舍",
+        "Oriol Tort 培訓中心"
+      ],
+      "rows": [
+        [
+          "位置",
+          "諾坎普旁",
+          "聖胡安德斯皮，甘伯訓練基地內"
+        ],
+        [
+          "建成",
+          "1702 年",
+          "2009 年 12 月至 2011 年 7 月施工，共 19 個月"
+        ],
+        [
+          "作為宿舍",
+          "1979 年 10 月 20 日至 2011 年 6 月 30 日",
+          "2011 年 10 月 20 日起"
+        ],
+        [
+          "住宿人數",
+          "關閉前住 12 人（另 48 人住北看台）",
+          "官網列容量 83 人"
+        ],
+        [
+          "規模",
+          "—",
+          "近 6,000 平方公尺、5 層樓，78 間臥室"
+        ],
+        [
+          "造價",
+          "—",
+          "建築 880 萬歐元，含執照、設計、設備約 1,100 萬歐元"
+        ]
+      ],
+      "caption": "依巴薩官網拉瑪西亞設施頁與 2024 年 4 月 27 日文章整理。官網把 5 層樓中的 3 層列為青訓使用，2 層保留供日後之用。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/La_Masia_-_Centre_de_Formaci%C3%B3_Oriol_Tort_01.jpg/1280px-La_Masia_-_Centre_de_Formaci%C3%B3_Oriol_Tort_01.jpg",
+      "width": 1280,
+      "height": 960,
+      "alt": "一棟方正的現代建築，上半部覆著一層半透明的玻璃格柵立面，透出後方一排排窗戶；右側是一塊酒紅色牆面，以黃色大字寫著「LA MASIA」，下方黑色招牌寫「LA MASIA Centre de Formació Oriol Tort」。建築下半部是深灰色牆面，前方是深棕色直條圍籬、一個禁止停車標誌和停在路邊的汽車，左上角有樹葉遮住天空。",
+      "caption": "聖胡安德斯皮甘伯訓練基地內的「La Masia－Oriol Tort 培訓中心」，2015 年 11 月 23 日拍攝。新樓沿用了舊農舍的名字。資料照片，攝於 2015 年。",
+      "credit": "Electro07／Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:La_Masia_-_Centre_de_Formaci%C3%B3_Oriol_Tort_01.jpg",
+      "made": "2015"
+    },
+    {
+      "type": "h",
+      "text": "名字比房子走得遠"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "宿舍搬家前後，「拉瑪西亞」早已不只是一棟建築的名字。2010 年 12 月 6 日，國際足總金球獎（FIFA Ballon d'Or）公布三名決選人：梅西（Lionel Messi）、伊涅斯塔（Andrés Iniesta）、哈維，三人都出自巴薩青訓。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "2011 年 1 月 10 日在蘇黎世揭曉，梅西以 22.65% 的票數連莊，伊涅斯塔 17.36% 第二，哈維 16.48% 第三。巴薩官網 2020 年的文章說，這仍是唯一一次，同一家俱樂部、出自該俱樂部青訓的三名球員包辦前三名。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "2012 年 11 月 25 日的西甲客場對萊萬特（Levante），比拉諾瓦（Tito Vilanova）執教的巴薩先發中只有阿爾維斯（Dani Alves）不是青訓出身。他開賽第 14 分鐘受傷（巴薩官網寫第 15 分鐘），由蒙托亞（Martín Montoya）替補上場，場上 11 人從此全是拉瑪西亞出身。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這 11 人是巴爾德斯（Víctor Valdés）、阿爾巴（Jordi Alba）、普約爾、皮克（Gerard Piqué）、蒙托亞、法布雷加斯（Cesc Fàbregas）、布斯克茨（Sergio Busquets）、哈維、伊涅斯塔、梅西、佩德羅（Pedro Rodríguez）。據 ESPN 與 Sky Sports 的比賽紀錄，這個陣容維持到第 75 分鐘阿爾巴被 Adriano Correia 換下為止（巴薩官網 2022 年的文章寫第 61 分鐘）。巴薩那場 4–0 獲勝，梅西進兩球，伊涅斯塔、法布雷加斯各進一球，四球都在換人之前。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，這兩件事裡的「拉瑪西亞」指的是一套體系，而不是那棟農舍。官網用的詞是「trained at La Masia」「graduates of La Masia」（拉瑪西亞出身），並不區分這些球員有沒有在 Can Planes 住過。俱樂部 2019 年的文章也寫明，這個概念已從「一棟建築、一間宿舍，而且只收足球」擴大到男女足、籃球、手球、輪式曲棍球與室內五人制足球的青年隊。名字的意思就這樣從一個地點，變成一種培養方式。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "新樓也住進了舊農舍沒住過的人。2021 年 8 月 1 日，九名巴薩 B 隊女足球員搬進 Oriol Tort 培訓中心，成為拉瑪西亞第一批女性住宿生；她們住在三樓的專屬寢室，上午在隔壁的訓練場練球，下午上高中課程。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "早在 2015 年，Patri Guijarro 已是第一位在拉瑪西亞修讀高中課程的女足球員。"
+    },
+    {
+      "type": "h",
+      "text": "舊農舍的改建計畫"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "2011 年宿舍關閉後，Can Planes 農舍不再住人。俱樂部 2024 年 4 月 27 日宣布，經過招標，選定 ABR Arquitectes Barcelona Rio 主持改建，要把農舍改成巴薩的會員總部（social headquarters）。依巴塞隆納都會總體規劃的修正案（MPGM），這棟建築必須恢復原本的樣貌。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "由此推想，若依 2024 年公布的計畫完成，這棟農舍在 300 多年裡的每一次改裝，模型工坊、辦公室、少年宿舍，都將讓位給 1702 年的原貌；而它借給巴薩的名字，已經留在另一棟玻璃立面的大樓上。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "La Masia（設施頁：新舊拉瑪西亞）",
+      "publisher": "FC Barcelona",
+      "url": "https://www.fcbarcelona.com/en/club/facilities/la-masia",
+      "note": "農舍 1702 年建成、工地辦公室與模型工坊、1957 年關閉、Llaudet 任內改為總部；新樓 2011 年 10 月 20 日啟用、面積、樓層、施工期、造價、容量；舊宿舍 12 人與北看台 48 人"
+    },
+    {
+      "title": "La Masia（俱樂部識別頁）",
+      "publisher": "FC Barcelona",
+      "url": "https://www.fcbarcelona.com/en/club/identity/la-masia",
+      "note": "與設施頁內容相同，交叉核對面積、施工期與造價"
+    },
+    {
+      "title": "FC Barcelona move forward with the project to redevelop the Masia de Can Planes",
+      "publisher": "FC Barcelona",
+      "date": "2024-04-27",
+      "url": "https://www.fcbarcelona.com/en/news/3983230/fc-barcelona-move-forward-with-the-project-to-redevelop-the-masia-de-can-planes",
+      "note": "1950 年隨球場用地購入、1966–1978 年作辦公室、努涅斯董事會改為宿舍的原因、2007 年 11 月 22 日決議、2011 年 6 月 30 日關閉、改建為會員總部與 MPGM 的規定、從臥室窗戶看得到球場"
+    },
+    {
+      "title": "La Masia is 40 years old",
+      "publisher": "FC Barcelona",
+      "date": "2019-10-20",
+      "url": "https://www.fcbarcelona.com/en/club/news/1457129/la-masia-is-40-years-old",
+      "note": "1979 年 10 月 20 日啟用、第一批 11 名住宿生名單、「西班牙第一座足球宿舍」的說法、概念擴大到其他項目、1901 年 Lluís d'Ossó 組成二三四隊、宿舍前的青訓出身球員"
+    },
+    {
+      "title": "20th anniversary of the death of Oriol Tort",
+      "publisher": "FC Barcelona",
+      "date": "2019-09-10",
+      "url": "https://www.fcbarcelona.com/en/news/1339963/20th-anniversary-of-the-death-of-oriol-tort",
+      "note": "Tort 的生平、任職年份、兩句引文、經他發掘的球員名單、新樓以他命名"
+    },
+    {
+      "title": "La Masia is modernised",
+      "publisher": "FC Barcelona",
+      "date": "2019-11-07",
+      "url": "https://www.fcbarcelona.com/en/news/1486803/la-masia-is-modernised",
+      "note": "Oriol Tort 培訓中心 2011 年啟用，2019 年內部整修"
+    },
+    {
+      "title": "10 years since a unique Ballon d'Or podium",
+      "publisher": "FC Barcelona",
+      "date": "2020-12-06",
+      "url": "https://www.fcbarcelona.com/en/news/1924303/10-years-since-a-unique-ballon-dor-podium",
+      "note": "2010 年 12 月 6 日三名決選人、2011 年 1 月 10 日票數、「唯一一次」的說法"
+    },
+    {
+      "title": "10 years to the day since the Barça Ballon d'Or",
+      "publisher": "FC Barcelona",
+      "date": "2021-01-10",
+      "url": "https://www.fcbarcelona.com/en/news/1968428/10-years-to-the-day-since-the-barca-ballon-dor",
+      "note": "蘇黎世頒獎、名次，交叉核對"
+    },
+    {
+      "title": "10 years since 11 from La Masia appeared in the line-up",
+      "publisher": "FC Barcelona",
+      "date": "2022-11-25",
+      "url": "https://www.fcbarcelona.com/en/news/2914090/10-years-since-11-from-la-masia-appeared-in-the-line-up",
+      "note": "2012 年 11 月 25 日對萊萬特：阿爾維斯第 15 分鐘受傷由蒙托亞替補、11 人名單、官網寫維持到第 61 分鐘（與 ESPN、Sky Sports 的第 75 分鐘不同）、進球者"
+    },
+    {
+      "title": "Levante 0–4 Barcelona（比賽紀錄）",
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/soccer/match/_/gameId/348388",
+      "note": "比分、進球時間；阿爾維斯第 14 分鐘由蒙托亞替補、阿爾巴第 75 分鐘由 Adriano 替補"
+    },
+    {
+      "title": "La Masia opens doors to first female residents",
+      "publisher": "FC Barcelona",
+      "date": "2021-08-01",
+      "url": "https://www.fcbarcelona.com/en/football/womens-football/news/2203775/la-masia-opens-doors-to-first-female-residents",
+      "note": "九名巴薩 B 隊女足球員入住、Patri Guijarro 2015 年修讀高中課程"
+    },
+    {
+      "title": "La Masia now fully mixed",
+      "publisher": "FC Barcelona",
+      "date": "2021-09-07",
+      "url": "https://www.fcbarcelona.com/en/news/2245343/la-masia-now-fully-mixed",
+      "note": "8 月 1 日入住、三樓寢室、上午訓練下午上課"
+    },
+    {
+      "title": "File:La Masia (Can Planas) (Barcelona) - 1.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:La_Masia_(Can_Planas)_(Barcelona)_-_1.jpg",
+      "note": "頭圖，2011 年 5 月 6 日"
+    },
+    {
+      "title": "File:La Masia - Centre de Formació Oriol Tort 01.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:La_Masia_-_Centre_de_Formaci%C3%B3_Oriol_Tort_01.jpg",
+      "note": "新樓照片，2015 年 11 月 23 日"
+    },
+    {
+      "title": "Levante v Barcelona: teams",
+      "publisher": "Sky Sports",
+      "url": "https://www.skysports.com/football/levante-vs-barcelona/teams/268315",
+      "note": "換人時間：14' Alves→Montoya、75' Alba→Adriano"
+    }
+  ]
+}
