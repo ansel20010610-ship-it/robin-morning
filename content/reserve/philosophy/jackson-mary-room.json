@@ -1,0 +1,381 @@
+{
+  "column": "philosophy",
+  "date": "reserve",
+  "reserve_written": "2026-10-11",
+  "title": "看過紅色之後，色覺全書要不要多寫一章",
+  "dek": "讀遍色覺物理學的瑪莉第一次看見紅色。從傑克森的黑白房間到物理主義的回應，追問她多了什麼、那能不能寫進書裡。",
+  "topic_key": "philosophy:jackson-mary-room",
+  "updated_at": "2026-10-11T13:16:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Le_caf%C3%A9_de_nuit_%28The_Night_Caf%C3%A9%29_by_Vincent_van_Gogh.jpeg/1280px-Le_caf%C3%A9_de_nuit_%28The_Night_Caf%C3%A9%29_by_Vincent_van_Gogh.jpeg",
+    "width": 1280,
+    "height": 1010,
+    "alt": "油畫：深夜的咖啡館內部，牆面是濃重的紅色，上方天花板是綠色。幾盞黃色吊燈外圍畫著一圈圈光暈，正中央一張綠色撞球檯在地板上投出長影。穿白衣的男子站在球檯右後方，左右兩側桌邊有幾個客人趴著或坐著，後方吧檯上排著酒瓶與一束粉紅色的花，牆上掛著一座圓鐘，右下角有「Vincent」簽名。",
+    "caption": "梵谷（Vincent van Gogh）《夜間咖啡館》（Le café de nuit），1888 年 9 月，油彩、畫布，72.4 × 92.1 公分，耶魯大學美術館（Yale University Art Gallery）藏（1961.18.34）。畫的是法國亞爾（Arles）拉馬丁廣場（Place Lamartine）上通宵營業的車站咖啡館（Café de la Gare）。梵谷在 1888 年 9 月 8 日給弟弟西奧（Theo van Gogh）的信中說，他熬夜畫了三個晚上，想用紅與綠表現人類可怕的激情。本文情境的紅牆與綠天花板借自這幅畫；書、編輯與那家咖啡館都是虛構的。",
+    "credit": "Vincent van Gogh；Yale University Art Gallery，Bequest of Stephen Carlton Clark, B.A. 1903",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Le_caf%C3%A9_de_nuit_(The_Night_Caf%C3%A9)_by_Vincent_van_Gogh.jpeg",
+    "made": "1888"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "瑪莉（Mary）在一間只有黑、白、灰的房間裡長大，35 年來透過黑白螢幕與書本研究色覺，寫成一本《色覺全書》：光落在視網膜哪種錐細胞，訊號怎麼傳進大腦，人看見熟番茄時腦中發生什麼。物理學、化學、神經生理學說得出的，書裡都有。出房間那天，出版社編輯約她在一家咖啡館見面。牆漆成深紅，天花板是綠的，桌上一杯洛神花茶。編輯指著牆說：「這就是紅。再版要不要加一章？」"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "她有三個選項：一字不改；加一章，寫下書裡沒有的事；或只在書末附一份練習，因為她得到的是本事，不是知識。本文假設：書裡寫盡了關於色覺的一切物理事實；她在房間裡從沒有過顏色經驗；她的眼睛與大腦都正常。"
+    },
+    {
+      "type": "p",
+      "text": "編輯問的是書，其實問的是物理主義（physicalism）：世界完全是物理的，知道全部物理事實就知道一切。如果瑪莉出房間後學到書裡沒有的事實，物理主義就漏了東西；如果她沒學到，或學到的不算事實，它就還站得住。本文要問：她在咖啡館裡多了什麼，那能不能寫進書裡。"
+    },
+    {
+      "type": "h",
+      "text": "出處：傑克森 1982 年的黑白房間"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "瑪莉出自傑克森（Frank Jackson）1982 年 4 月在《哲學季刊》（*The Philosophical Quarterly*）發表的〈副現象的感質〉（Epiphenomenal Qualia）。他自稱「感質迷」（qualia freak）：疼痛的痛、聞到玫瑰的感覺，再多物理資訊也不包含。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "頁 130 的瑪莉被迫透過黑白電視螢幕研究世界，專攻視覺神經生理學，掌握人看見熟番茄或天空時的全部物理資訊。他還補一句：黑白電視若學不到這些，英國的空中大學（Open University）就非得用彩色電視不可。接著他問，她被放出來或拿到彩色螢幕時，會不會學到什麼："
+    },
+    {
+      "type": "quote",
+      "original": "It seems just obvious that she will learn something about the world and our visual experience of it.",
+      "text": "她會學到一些關於世界、也關於我們視覺經驗的事，這似乎再明顯不過。",
+      "cite": "傑克森，〈副現象的感質〉，1982，頁 130（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "接下來只有三步：那麼她先前的知識不完整；但她擁有全部物理資訊；所以還有更多可知的事，物理主義是錯的。1986 年，任教於澳洲蒙納許大學（Monash University）的傑克森在《哲學期刊》（*The Journal of Philosophy*）發表〈瑪莉不知道的事〉（What Mary Didn't Know），回應丘奇蘭（Paul Churchland）。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這一次設定說得更滿：瑪莉從黑白書本與黑白電視課程學到完整物理學、化學、神經生理學的一切，連同由此而來的因果、關係與功能角色。出來時，她會學到看見紅色是什麼樣子，不會只說一聲「ho, hum」（喔，就這樣；頁 291，本文自譯）。他強調，關鍵不在她對自己新經驗的認識，而在她會發現，自己對別人心靈生活的理解一直很貧乏（頁 292）。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "傑克森之前已有人這樣設想。布洛德（C. D. Broad）1925 年的《心靈及其在自然中的位置》（*The Mind and Its Place in Nature*）頁 70–71 寫到一位能看見原子結構的數學大天使：他推得出氨的分子結構，卻預言不了它進了人的鼻子是什麼氣味，「unless someone told him so or he had smelled it for himself」（除非有人告訴他，或他親自聞過；本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "把光和顏色感覺分開，物理學做得更早。牛頓（Isaac Newton）1704 年的《光學》（*Opticks*）說，光線嚴格說來沒有顏色，只有激起某種顏色感覺的能力。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/1704-ia-newton-optickstreatise00newta.pdf/page108-1280px-1704-ia-newton-optickstreatise00newta.pdf.jpg",
+      "width": 1280,
+      "height": 1626,
+      "alt": "泛黃的書頁，頁首印著「[90]」。上方一小段英文正文，中間是斜體大寫標題「DEFINITION.」，下方一大段以長 s 字母排印的英文。",
+      "caption": "牛頓《光學》1704 年倫敦初版，第一卷第二部命題二之後的「定義」，頁 90。他把讓物體顯得紅的光叫作「造紅的」（rubrific, red-making），並說「For the rays to speak properly are not coloured」（嚴格說來，光線沒有顏色；本文自譯）：光線裡只有激起顏色感覺的能力與傾向，就像鐘聲在鐘裡只是震動，到了感覺中樞才成為聲音。這頁是黑白印刷，瑪莉在房間裡也讀得到。",
+      "credit": "Isaac Newton，London: Sam. Smith and Benj. Walford；Smithsonian Libraries 藏本，Internet Archive 掃描",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:1704-ia-newton-optickstreatise00newta.pdf?page=108",
+      "made": "1704"
+    },
+    {
+      "type": "facts",
+      "title": "本文情境與原典的差異",
+      "items": [
+        [
+          "原典",
+          "傑克森〈副現象的感質〉，《哲學季刊》第 32 卷第 127 期（1982 年 4 月），頁 127–136；〈瑪莉不知道的事〉，《哲學期刊》第 83 卷第 5 期（1986 年 5 月），頁 291–295"
+        ],
+        [
+          "原典用途",
+          "論證物理主義遺漏了感質。1982 年先舉能多看見一種紅的弗雷德（Fred），再說同一點也能用正常人與熟悉的顏色來講，於是有了瑪莉"
+        ],
+        [
+          "原典情境",
+          "瑪莉被放出房間，或拿到彩色電視；1986 年以她看見的第一顆熟番茄為例"
+        ],
+        [
+          "本文改了哪裡",
+          "《色覺全書》、出版社編輯、紅牆咖啡館、洛神花茶，以及「要不要加一章」的三個選項，都是本文虛構的"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "立場一：她學到一件書裡沒有的事實"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這一方的第一個理由，是直覺很穩。依論文摘要，Gregory、Hendrickx 與 Turner 2022 年在《哲學心理學》（*Philosophical Psychology*）報告，以美國一般民眾為對象，82.1% 的受訪者認為瑪莉在真正看見紅色之前，不知道看見紅色是什麼感覺；這個直覺在各人口群體中都普遍可見。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "第二個理由，是傑克森 1986 年對「她只是多了本事」的回應（頁 294）；這個挑戰來自路易斯（David Lewis）與涅米羅（Laurence Nemirow），下一節再談。他設想瑪莉在房間裡聽過一堂講他人心靈懷疑論的課。出來看見熟番茄，她先覺得自己更了解別人看番茄時的經驗，接著想起那堂課，開始動搖：是真的知道，還是從自己一例胡亂推廣？最後她認定自己確實知道。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "傑克森問：她來回掂量的是什麼？不會是她的能力，那些能力自始至終都清楚；她猶豫的，只能是自己有沒有得到關於別人的事實知識。他也承認這一點無法證明，只說知識論證是從高度可信、但無法證明的前提出發的有效論證（頁 295）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "代價寫在論文標題裡。傑克森 1982 年論證，感質是「副現象」這種看法完全說得通：有沒有感質，可以對物理世界毫無影響。史丹佛哲學百科（*Stanford Encyclopedia of Philosophy*，以下簡稱 SEP）〈感質：知識論證〉說，依主流看法，性質二元論最嚴重的難題，正是被推向副現象論：感質若不在大腦裡造成任何事，人怎麼知道自己正有某種經驗？"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "依 SEP，傑克森後來改變想法：1995 年他論證，若感質是副現象，就不可能有關於感質的知識，可見論證有哪裡出錯；2003 與 2007 年他改採強表徵論，主張現象經驗是在表徵客觀性質，可以用物理方式說明。SEP 也指出，當代為二元論辯護的哲學家不多，查默斯（David Chalmers）1996 年的《有意識的心靈》（*The Conscious Mind*）是著名例外。"
+    },
+    {
+      "type": "h",
+      "text": "立場二：她多了東西，但不是新事實"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "物理主義者的回應分兩路。第一路否認她得到事實知識。依 SEP 整理，路易斯 1983、1988 年與涅米羅 1980、1990 年提出「能力假說」：知道某種經驗是什麼樣子，就是擁有記住、想像、辨認它的能力，屬於「知道怎麼做」，不是「知道某件事」。柯尼（Earl Conee）1994 年的「親知假說」則說，她得到的是對顏色性質最直接的熟悉，既非事實知識，也不等於一組能力。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "能力假說的弱點是能力和知道似乎分得開。SEP 轉述柯尼的反例：瑪莎（Martha）見過酒紅與火紅，又擅長想像兩色之間的中間色，聽說櫻桃紅正好在兩者中間，於是有能力想像櫻桃紅；但在真的想像之前，她不知道櫻桃紅看起來如何。反過來，完全無法想像顏色的人，盯著綠色東西時似乎仍知道看見綠色是什麼樣子。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "第二路承認她學到新知識，但否認那是新事實。SEP 稱之為「新知識／舊事實」觀點，說這是多數物理主義哲學家的策略，代表包括霍根（Terence Horgan）1984、洛爾（Brian Loar）1990、佩里（John Perry）2001 等。同一件事可以用兩種概念認識：知道「昏星是行星」的人，未必知道「晨星是行星」，兩句說的都是金星。瑪莉出房間後得到紅色的「現象概念」，能想著「原來看見紅色是這樣」；讓這句話為真的，仍是她早已用物理概念知道的事實。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這一路的長處是能解釋論證為何看似有力：兩種概念彼此獨立，無法先驗看出指向同一件事，我們便以為能想像物理事實全都成立、紅色卻不是這個樣子；依此觀點，這是錯覺。SEP 記錄的反駁是：晨星與昏星能分開認識，是因為兩個概念靠不同性質鎖定金星，一個靠清晨出現，一個靠黃昏出現；若現象概念也得靠某種現象性質鎖定紅色經驗，非物理性質又從後門回來。洛爾的方案是現象概念直接指涉、不經鎖定性質，這點仍有爭議。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "放回咖啡館，三個選項各有主人。新知識／舊事實一派會說一字不改：事實都在書裡，她多的是認識同一批事實的新方式。能力假說會選附練習，親知假說大概只能請讀者自己去看；本事與熟悉都印不進書裡，就像游泳的本事印不進手冊。傑克森 1982 年的立場要加一章，卻寫不出來；他 1986 年自己說過，就算有二元論者用黑白電視講授感質，也不能告訴瑪莉關於感質的一切（頁 295）。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "由此推想，除了認為她在房間裡就推得出顏色樣貌的丹尼特（Daniel Dennett）一派，上面幾種看法都不認為房間裡的讀者能從那一章學到瑪莉在咖啡館學到的東西；爭的是原因：缺的是一件事實，還是一種本事、一個新概念。"
+    },
+    {
+      "type": "table",
+      "title": "各家怎麼回答編輯",
+      "head": [
+        "看法",
+        "代表",
+        "瑪莉出房間得到什麼",
+        "給編輯的答案（本文推論）",
+        "主要難題"
+      ],
+      "rows": [
+        [
+          "知識論證",
+          "傑克森 1982、1986；查默斯 1996",
+          "一件書裡沒有的事實：別人看見紅色時，經驗是什麼樣子",
+          "該加一章，但黑白文字寫不出來",
+          "感質若是副現象，人如何知道自己正有這種經驗；傑克森本人後來放棄"
+        ],
+        [
+          "能力假說",
+          "路易斯 1983、1988；涅米羅 1980、1990",
+          "記住、想像、辨認紅色的本事",
+          "不加章，附練習",
+          "有能力未必就知道（柯尼的瑪莎）；她在掂量什麼（傑克森）"
+        ],
+        [
+          "親知假說",
+          "柯尼 1994",
+          "對紅色性質最直接的熟悉",
+          "不加章，請讀者自己去看",
+          "親知之後，似乎就能形成新的事實判斷"
+        ],
+        [
+          "新知識／舊事實",
+          "霍根 1984、洛爾 1990、佩里 2001 等",
+          "新的現象概念，用來重新認識舊的物理事實",
+          "一字不改",
+          "兩種認識方式若靠不同性質鎖定，非物理性質又回來"
+        ],
+        [
+          "質疑情境：她在房間裡就推得出來",
+          "丹尼特 1991 等",
+          "沒有書外的東西：她早能推出顏色看起來如何，藍香蕉騙不了她",
+          "一字不改",
+          "和 82.1% 受訪者的直覺相反"
+        ]
+      ]
+    },
+    {
+      "type": "svg",
+      "title": "知識論證的三個攻擊點",
+      "svg": "<svg viewBox=\"0 0 400 470\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"12\">\n<rect class=\"soft\" x=\"10\" y=\"10\" width=\"180\" height=\"78\" rx=\"4\"/>\n<text x=\"20\" y=\"30\" class=\"gold\" font-size=\"11\">前提一</text>\n<text x=\"20\" y=\"52\">出房間前，瑪莉擁有關於</text>\n<text x=\"20\" y=\"72\">人類色覺的完整物理知識</text>\n<rect class=\"soft\" x=\"210\" y=\"10\" width=\"180\" height=\"78\" rx=\"4\"/>\n<text x=\"220\" y=\"30\" class=\"gold\" font-size=\"11\">前提二</text>\n<text x=\"220\" y=\"52\">有些關於人類色覺的知識，</text>\n<text x=\"220\" y=\"72\">她出房間前沒有</text>\n<path class=\"ink line\" d=\"M100 88 V142\" stroke-width=\"1.4\"/>\n<path class=\"ink\" d=\"M95 141 L100 150 L105 141 Z\"/>\n<path class=\"ink line\" d=\"M300 88 V142\" stroke-width=\"1.4\"/>\n<path class=\"ink\" d=\"M295 141 L300 150 L305 141 Z\"/>\n<rect class=\"soft\" x=\"10\" y=\"152\" width=\"180\" height=\"62\" rx=\"4\"/>\n<text x=\"20\" y=\"176\">所以：她知道關於色覺的</text>\n<text x=\"20\" y=\"198\">所有物理事實</text>\n<rect class=\"soft\" x=\"210\" y=\"152\" width=\"180\" height=\"62\" rx=\"4\"/>\n<text x=\"220\" y=\"176\">所以：有些關於色覺的事實，</text>\n<text x=\"220\" y=\"198\">她出房間前不知道</text>\n<path class=\"ink line\" d=\"M100 214 L185 262\" stroke-width=\"1.4\"/>\n<path class=\"ink line\" d=\"M300 214 L215 262\" stroke-width=\"1.4\"/>\n<path class=\"ink\" d=\"M192 258 L200 268 L187 267 Z\"/>\n<path class=\"ink\" d=\"M208 258 L200 268 L213 267 Z\"/>\n<rect class=\"paper\" x=\"60\" y=\"270\" width=\"280\" height=\"56\" rx=\"4\"/>\n<text x=\"74\" y=\"293\" class=\"accent\">結論：有些關於人類色覺的事實，</text>\n<text x=\"74\" y=\"314\" class=\"accent\">不是物理事實</text>\n<circle class=\"paper\" cx=\"122\" cy=\"116\" r=\"10\"/>\n<text x=\"116\" y=\"120\" class=\"accent\" font-size=\"11\">甲</text>\n<circle class=\"paper\" cx=\"378\" cy=\"30\" r=\"10\"/>\n<text x=\"372\" y=\"34\" class=\"accent\" font-size=\"11\">乙</text>\n<circle class=\"paper\" cx=\"322\" cy=\"116\" r=\"10\"/>\n<text x=\"316\" y=\"120\" class=\"accent\" font-size=\"11\">丙</text>\n<line class=\"muted line\" x1=\"10\" y1=\"344\" x2=\"390\" y2=\"344\" stroke-width=\"0.8\"/>\n<text x=\"10\" y=\"366\" class=\"accent\" font-size=\"11\">甲</text>\n<text x=\"28\" y=\"366\" font-size=\"11\">少數：物理知識完整，不等於知道所有物理事實</text>\n<text x=\"10\" y=\"390\" class=\"accent\" font-size=\"11\">乙</text>\n<text x=\"28\" y=\"390\" font-size=\"11\">能力假說、親知假說：否認前提二，她得到的不是事實知識</text>\n<text x=\"10\" y=\"414\" class=\"accent\" font-size=\"11\">丙</text>\n<text x=\"28\" y=\"414\" font-size=\"11\">多數：新知識／舊事實，她多了新知識，但不等於新事實</text>\n<text x=\"10\" y=\"450\" class=\"muted\" font-size=\"10\">原創示意；結構依 SEP〈感質：知識論證〉§3.1 的展開式</text>\n</svg>",
+      "caption": "依 SEP〈感質：知識論證〉§3.1 的展開式重繪。甲、乙、丙是物理主義者可以下手的三處：甲質疑完整的物理知識是否涵蓋所有物理事實，乙否認她缺少事實知識，丙阻斷「新知識」推到「新事實」。丹尼特另從情境本身質疑，未列入。原創示意。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（一）：三張色紙，不貼標籤"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "這次只改線索：編輯不說哪個是紅，店裡也沒有任何她從書上知道顏色的東西。他拿出三張大小、材質相同的色紙，紅、綠、藍各一，問她：哪一張是紅的？她只能靠眼睛和那本書。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "依 SEP 轉述，丹尼特 1991 年的《意識的解釋》（*Consciousness Explained*）主張，有人拿藍色香蕉想騙她，她會識破，知道這根香蕉的顏色不對；哈丁（C. L. Hardin）1992 年等人也主張，她憑完整的色覺物理知識，第一眼就認得出紅色。SEP 指出，常見的反應是直接懷疑這些說法；它另外提出一種可能的回應：就算如此，她在看見的那一刻得到新的現象概念，並用它形成一批新信念，這仍表示她先前的知識不完整。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "妮達－呂梅林（Martine Nida-Rümelin）1996 年的瑪莉安娜（Marianna）指向另一種可能。依 SEP 轉述，她起初也住在黑白環境裡，後來先看到一些隨意上色的東西：抽象畫、紅椅子、藍桌子，沒有黃香蕉，也沒有藍天的照片。此時她在某種意義上知道各種顏色經驗是什麼樣子，卻不知道一般人看無雲天空時的經驗像四張色片（紅、藍、綠、黃）的哪一張，甚至可能誤以為像紅色那張；要等最後被放出去、看見天空才知道。SEP 據此把進展拆成兩步：先有現象概念，再用它得到關於別人經驗的知識。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，這個變體把編輯的問題拆成兩半。前一半是紅色看起來如何，誰都寫不進書裡。後一半是「人看見那張紅紙時，經驗是這個樣子」，這是關於別人的命題，正是傑克森 1986 年說的關鍵。若丹尼特對，後一半早已藏在書裡，只待她推出來；若瑪莉安娜的處境才是常態，後一半得等她把看見的東西和世界對上號。爭點於是從「她學到什麼」移到「物理知識能不能讓人從內部認出一種經驗」。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（二）：被關在房間裡的是我們"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "傑克森 1982 年先講的其實是弗雷德（頁 128–130）。他能把一批熟番茄分成兩堆；蒙上他的眼、打亂番茄，再拿掉眼罩讓他重分，結果完全相同。他說自己看到兩種紅，差別就像黃與藍。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "我們之於他，就像完全紅綠色盲的人之於我們。我們也許查出他的錐細胞對光譜紅色段某些光波有我們沒有的反應，或者他多了一種錐細胞；就算知道他身體、行為與生理的一切物理事實，仍不知道那種顏色是什麼樣子。傑克森說，若能把他的視覺系統移植給別人，大家會說：終於要知道那多出來的顏色是什麼樣子了。"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "把他放進咖啡館：弗雷德坐在隔壁桌，把一盤小番茄分成兩堆。這次被關在房間裡的是編輯、瑪莉和所有讀者；除非把他的視覺系統移植過來，沒有門可以打開。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "真實世界也有接近的人。挪威視覺科學家諾德比（Knut Nordby）1942 年生於奧斯陸（Oslo），天生完全色盲，只看得到黑、白、灰，紅色在他眼中是近乎黑色的深灰。他在一篇自述中寫道："
+    },
+    {
+      "type": "quote",
+      "original": "Although I have acquired a thorough theoretical knowledge of the physics of colours and the physiology of the colour receptor mechanisms, nothing of this can help me to understand the true nature of colours.",
+      "text": "雖然我對顏色的物理學與色覺受器機制的生理學，已有透徹的理論知識，這些都無法幫助我理解顏色的真正本質。",
+      "cite": "諾德比，〈一位完全色盲者的視覺：個人自述〉，原收於 1990 年劍橋大學出版社《夜視》（*Night Vision*）（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "傑克森也說明了這和內格爾（Thomas Nagel）1974 年的蝙蝠有何不同。他抱怨的不是我們不知道「當弗雷德是什麼感覺」，而是弗雷德的經驗有一種性質，我們一無所知，而那是關於他經驗的一件事實。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "SEP 則指出，內格爾本人並不主張物理主義是錯的，只說我們目前不懂它怎麼可能為真。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "這個變體改變了什麼？對知識論證，它離開了虛構的房間：在弗雷德面前，每個人都缺同一塊，除了移植，沒有人能出門補上。對物理主義者，判斷不變：我們和諾德比缺的，仍可說是能力、親知或現象概念，不是事實。諾德比的話是這個直覺最真實的證詞，卻替哪一方都定不了案。"
+    },
+    {
+      "type": "h",
+      "text": "那一章，寫不寫得出來"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "三個版本裡，瑪莉的書都完整得無可挑剔，問題都落在書頁之外。知識論證說，書頁之外還有事實；物理主義者說，書頁之外只有另一種把握同一批事實的方式，或一種讀不出來的本事。除了丹尼特一派，兩邊都承認，沒有任何黑白文字能讓房間裡的人知道紅色看起來如何；傑克森本人，則從前一方走到了後一方。"
+    },
+    {
+      "type": "p",
+      "text": "編輯還在等答案。如果瑪莉在再版序言只寫一句「請去看一眼洛神花茶」，這句話是在補上書裡漏掉的一件事，還是在承認，有些知道本來就不屬於書？"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Epiphenomenal Qualia",
+      "publisher": "Frank Jackson／The Philosophical Quarterly 32(127): 127–136",
+      "date": "1982-04",
+      "url": "https://doi.org/10.2307/2960077",
+      "note": "讀 JSTOR 掃描本：頁 127 自稱感質迷；頁 128–130 弗雷德與熟番茄、移植一例；頁 130 瑪莉、空中大學一句與引文；第三節與內格爾論證的區別"
+    },
+    {
+      "title": "What Mary Didn't Know",
+      "publisher": "Frank Jackson／The Journal of Philosophy 83(5): 291–295",
+      "date": "1986-05",
+      "url": "https://doi.org/10.2307/2026143",
+      "note": "讀 JSTOR 掃描本：頁 291 設定與「ho, hum」；頁 292 對他人心靈生活的理解；頁 293 三步論證；頁 294 他人心靈懷疑論一例；頁 295 黑白電視講授感質；文末署名 Monash University"
+    },
+    {
+      "title": "Qualia: The Knowledge Argument",
+      "publisher": "Martine Nida-Rümelin、Donnchadh O Conaill／Stanford Encyclopedia of Philosophy",
+      "date": "2024-03-01",
+      "url": "https://plato.stanford.edu/entries/qualia-knowledge/",
+      "note": "§1 布洛德與內格爾；§3.1 展開式與三種回應；§3.3 瑪莉安娜；§4.1 藍香蕉、哈丁、諾德比；§4.3–4.5 能力假說、親知假說與瑪莎；§4.6–4.8 新知識／舊事實、晨星昏星與反駁；§5 查默斯與傑克森改變想法。路易斯、涅米羅、柯尼、霍根、洛爾、佩里、丹尼特、妮達－呂梅林、查默斯的原著未讀，依此條目轉述"
+    },
+    {
+      "title": "The Mind and Its Place in Nature",
+      "publisher": "C. D. Broad／London: Kegan Paul, Trench, Trubner（Internet Archive 1929 年再刷掃描本）",
+      "date": "1925",
+      "url": "https://archive.org/details/in.ernet.dli.2015.54573",
+      "note": "讀第二章〈Mechanism and its Alternatives〉頁 70–71 的數學大天使與氨"
+    },
+    {
+      "title": "Opticks: or, A Treatise of the Reflexions, Refractions, Inflexions and Colours of Light",
+      "publisher": "Isaac Newton／London: Sam. Smith and Benj. Walford（Smithsonian Libraries 藏本，Internet Archive）",
+      "date": "1704",
+      "url": "https://archive.org/details/optickstreatise00newta",
+      "note": "第一卷第二部命題二之後的「定義」，頁 90；對照 Commons PDF 第 108 頁影像"
+    },
+    {
+      "title": "Who knows what Mary knew? An experimental study",
+      "publisher": "Daniel Gregory、Malte Hendrickx、Cameron Turner／Philosophical Psychology 35(4): 522–545",
+      "date": "2022",
+      "url": "https://doi.org/10.1080/09515089.2021.2001448",
+      "note": "讀澳洲國立大學典藏庫摘要（http://hdl.handle.net/1885/315759）：美國一般民眾、82.1% 有此直覺、跨人口群體普遍"
+    },
+    {
+      "title": "Vision in a Complete Achromat: A Personal Account",
+      "publisher": "Knut Nordby／原收於 R. F. Hess、L. T. Sharpe、K. Nordby 編《Night Vision: Basic, Clinical and Applied Aspects》（Cambridge University Press）；網路版見 consc.net",
+      "date": "1990",
+      "url": "https://consc.net/misc/achromat.html",
+      "note": "讀網路版：1942 年生於奧斯陸、完全色盲、紅色看來是近乎黑色的深灰、理論知識無助於理解顏色本質一段"
+    },
+    {
+      "title": "676: To Theo van Gogh. Arles, Saturday, 8 September 1888",
+      "publisher": "Van Gogh Museum、Huygens ING／Vincent van Gogh: The Letters",
+      "date": "1888-09-08",
+      "url": "https://vangoghletters.org/vg/letters/let676/letter.html",
+      "note": "讀英譯：熬夜畫了三個晚上，想用紅與綠表現人類可怕的激情"
+    },
+    {
+      "title": "Le café de nuit (The Night Café)",
+      "publisher": "Yale University Art Gallery",
+      "date": "",
+      "url": "https://artgallery.yale.edu/collections/objects/12507",
+      "note": "館藏資料：1888 年，油彩、畫布，72.4 × 92.1 公分，1961.18.34，Stephen Carlton Clark 遺贈；畫亞爾拉馬丁廣場通宵營業的 Café de la Gare；影像標示 CC0"
+    }
+  ]
+}
