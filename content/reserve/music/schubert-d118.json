@@ -1,0 +1,362 @@
+{
+  "column": "music",
+  "date": "reserve",
+  "reserve_written": "2026-10-11",
+  "title": "紡車停下的三小節：舒伯特〈紡車旁的葛麗卿〉",
+  "dek": "17 歲的舒伯特讓鋼琴當紡車，只在「啊，他的吻」處停住。本文依樂譜說明它停在哪、怎麼再轉起來，並指定舒瓦茲柯芙與費雪 1952 年的錄音。",
+  "topic_key": "music:schubert-d118",
+  "updated_at": "2026-10-11T16:45:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Scheffer%2C_Ary_-_Marguerite_au_rouet_-_2003.5_-_Mus%C3%A9e_de_la_Vie_romantique.jpg/1280px-Scheffer%2C_Ary_-_Marguerite_au_rouet_-_2003.5_-_Mus%C3%A9e_de_la_Vie_romantique.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Scheffer%2C_Ary_-_Marguerite_au_rouet_-_2003.5_-_Mus%C3%A9e_de_la_Vie_romantique.jpg",
+    "width": 1280,
+    "height": 1623,
+    "alt": "一位年輕女子坐在罩著紅布的高背扶手椅上，頭戴深色小帽，身穿白色寬袖上衣與黑色背心，雙手在胸前交握，眼睛望向右下方，膝上搭著一塊白布。椅背左側垂著一塊金黃色的布，右上角暗處有一只插著花的瓶子，左下角露出木製紡車的一部分。",
+    "caption": "謝弗（Ary Scheffer）《紡車旁的瑪格麗特》（Marguerite au rouet），1831 年，油彩、畫布，114.5 × 90 公分，巴黎浪漫生活博物館藏（館藏號 2003.5）。畫的是歌德《浮士德》第一部紡車旁的這一場，比舒伯特寫這首歌晚 17 年；畫中她的手不在紡車上。",
+    "credit": "Ary Scheffer；巴黎浪漫生活博物館（Musée de la Vie romantique）藏；影像：Paris Musées（CC0），經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Scheffer,_Ary_-_Marguerite_au_rouet_-_2003.5_-_Mus%C3%A9e_de_la_Vie_romantique.jpg",
+    "made": "1831"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "〈紡車旁的葛麗卿〉（Gretchen am Spinnrade）一開頭，鋼琴右手就在原地繞圈：F、A、F、E、D、E，六個十六分音符繞一圈，再繞一圈。左手壓著一個低音 D，上面的 A 用「敲、停、敲敲、停、敲」的步子一再點著。歌聲還沒進來，這個音型已經轉了一小節多。"
+    },
+    {
+      "type": "p",
+      "text": "為 Hyperion 唱片錄製舒伯特（Franz Schubert）歌曲全集的鋼琴家強森（Graham Johnson），在解說裡把右手聽成轉動的輪子，左手聽成線軸喀噠作響。依 Peters 版樂譜的小節數，全曲 120 小節，右手這串音型只在一處停下：第 66 小節，葛麗卿唱到「ach」（啊），右手改成一個長和弦；第 68 小節，她在「Kuß」（吻）這個字上停在高音 G，鋼琴的和弦一起延長。接下來四小節沒有歌聲，紡車一頓一頓地重新轉起來。"
+    },
+    {
+      "type": "p",
+      "text": "梅努斯大學（Maynooth University）的音樂學者 Lorraine Byrne Bodley 著有《Schubert's Goethe Settings》（2003）。她收在牛津藝術歌曲節（Oxford Lieder Festival）2014 年出版的《The Schubert Project》裡的一篇專文，用一句話說了這件事：",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "quote",
+      "original": "Gretchen stops spinning when lost in reverie about Faust.",
+      "text": "葛麗卿沉入對浮士德的遐想時，就停下了紡車。",
+      "cite": "Lorraine Byrne Bodley，〈The Poetic Muse: Goethe, Schubert and the Art of Song〉，2014（本文自譯）"
+    },
+    {
+      "type": "p",
+      "text": "頭圖是荷蘭出生、在巴黎工作的畫家謝弗（Ary Scheffer）1831 年的油畫。巴黎浪漫生活博物館（Musée de la Vie romantique）把它記為歌德（Johann Wolfgang von Goethe）《浮士德》（Faust）第一部裡，瑪格麗特（Marguerite）在紡車旁的一場；瑪格麗特就是暱稱葛麗卿的那位女孩。館方的說明是，她坐在紡車旁的高背扶手椅上，為被浮士德拋棄而哭泣。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "畫中她雙手在胸前交握，眼睛望向右下方；紡車只在左下角露出一角，沉在暗處，她的手不在紡車上。",
+      "tag": "可見"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.0,
+        0.62,
+        0.45,
+        0.38
+      ],
+      "position": "畫面左下角，約佔寬度四成半、高度四成",
+      "caption": "左下角的紡車：車柱、一團淺色的捲狀物和大輪的弧形邊緣，大半沒入陰影。館方紀錄寫明，畫家的簽名與年份「Ary Scheffer 1831」寫在左下方的紡車上。"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是：畫家選的也是紡車不轉的時刻，和這首歌對照，最接近第 66 到 68 小節。館方把畫中的她讀成已被拋棄；至於舒伯特這首歌，下文會提到強森的看法：舒伯特讀到的版本，比較容易讀成她的清白受到威脅、但還沒失去。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "music",
+      "composer": "舒伯特（Franz Schubert）",
+      "work": "〈紡車旁的葛麗卿〉，作品 2（D 118），詞：歌德《浮士德》第一部",
+      "work_original": "Gretchen am Spinnrade, Op. 2, D 118",
+      "composed": "1814 年 10 月 19 日（親筆清稿日期）",
+      "performers": "舒瓦茲柯芙（Elisabeth Schwarzkopf）女高音，費雪（Edwin Fischer）鋼琴",
+      "recording": "EMI，1952 年 10 月 4–7 日錄音於倫敦 Abbey Road 錄音室；EMI Classics 5 62754 2、Naxos Historical 8.111287 等版本再版",
+      "duration": "約 3 分半（MusicWeb 樂評所列 Naxos Historical 版為 3 分 24 秒）",
+      "movements": [
+        "單曲：Gretchen am Spinnrade, D 118"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Schubert Lieder Schwarzkopf Edwin Fischer",
+        "artist_hint": "Elisabeth Schwarzkopf",
+        "track_filter": [
+          "Gretchen am Spinnrade"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "本篇指定的錄音，是女高音舒瓦茲柯芙與鋼琴家費雪 1952 年 10 月 4 日至 7 日在倫敦 Abbey Road 錄音室為 EMI 錄下的 12 首舒伯特歌曲之一。這批錄音一再重發，例如 EMI Classics 的 5 62754 2 與 Naxos Historical 的 8.111287；MusicWeb 樂評所列的 Naxos 版曲目時間，這首歌是 3 分 24 秒。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "樂評人 Göran Forsling 2008 年 10 月在 MusicWeb International 評 Naxos 版時寫道，這 12 首構成 LP 初期最著名的舒伯特獨唱會錄音之一，舒瓦茲柯芙很少唱得比這更好、更不造作；他推想，靈感來源之一可能是傳奇的費雪在場。他也說，據他所知，費雪很少擔任伴奏，但一旦擔任，就能替鋼琴聲部添上那麼一點東西，成為了不起的演出的種子（本文自譯）。"
+    },
+    {
+      "type": "p",
+      "text": "選它的理由在鋼琴。這首歌的伴奏不只是陪襯：紡車從頭轉到尾，第 69 到 72 小節更是鋼琴獨自重新起動。本文的考量是，這首歌有一半的戲在鋼琴上，而樂評把這份錄音的光彩，部分歸於很少當伴奏的費雪；聽的時候，可以留一半注意力給右手。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "1814 年 10 月 19 日：第一首歌德歌曲"
+    },
+    {
+      "type": "p",
+      "text": "Walther Dürr 依新舒伯特全集（Neue Schubert-Ausgabe）編訂 Bärenreiter 版舒伯特歌曲集，他在 2004 年的序言裡說，舒伯特顯然是在 1814 年秋天第一次細讀歌德的《浮士德》，把其中兩場寫成音樂：一場是〈葛麗卿的房間〉（Gretchens Stube），另一場是大教堂的一場（D 126）。〈葛麗卿的房間〉開頭的舞台指示，是葛麗卿獨自在紡車旁（見下圖）。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "這首歌留下一份舒伯特親筆清稿，署 1814 年 10 月 19 日，藏於維也納的 Wiener Stadt- und Landesbibliothek，和後來的印刷版有不少細節不同。那年舒伯特 17 歲，再三個月就滿 18 歲。強森指出，這是他第一首以歌德詩作寫成的歌；Dürr 也說，從這首歌開始，舒伯特在之後幾年一再回頭寫歌德。",
+      "tag": "史實"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/5/52/Faust_I_%28Goethe%29_223.jpg",
+      "width": 1280,
+      "height": 1670,
+      "alt": "攤開的舊書右頁，紙色泛黃，以德文尖角體印刷。上方一道粗橫線；中段一行字距拉開的小標「Gretchens Stube.」，下面一條短橫線；接著是較大的「Gretchen」與一行小字「am Spinnrade allein.」；再下面是兩段各四行的詩，第一段以「Meine Ruh' ist hin,」開頭。左緣露出前一頁，右緣是書口與大理石紋封皮。",
+      "caption": "1808 年在 Tübingen 由 Cotta 出版的《浮士德》，第 223 頁：〈葛麗卿的房間〉一場的開頭。舞台指示寫著「Gretchen am Spinnrade allein」（葛麗卿獨自在紡車旁），舒伯特的歌名正是這行字的前三個詞；下面是這首詩的前兩段。",
+      "credit": "Johann Wolfgang von Goethe，《Faust. Eine Tragödie》，Tübingen：J. G. Cotta'sche Buchhandlung，1808；Herzogin Anna Amalia Bibliothek 掃描，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Faust_I_(Goethe)_223.jpg",
+      "made": "1808"
+    },
+    {
+      "type": "p",
+      "text": "《浮士德》第一部在 1808 年出版。劇中的葛麗卿是 Margarete 的暱稱，她被浮士德引誘、懷了孩子，後來在神智錯亂中溺死新生兒，被判死刑。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "強森指出，從歌德 1774–75 年的早期稿本（Urfaust）看，這段紡車旁的苦悶看來發生在她失身之後，她已知道自己懷孕；舒伯特讀到的版本，則比較容易讀成她的清白受到威脅、但還沒失去。他認為兩種讀法，舒伯特的音樂都容得下。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "這首歌要到 1821 年才出版。Dürr 的序言說，1816 年春天，舒伯特和朋友第一次擬定出版計畫，打算依詩人分冊印行他的歌，並把一冊工整謄寫的歌德歌曲寄到威瑪（Weimar），希望歌德支持；附信由好友史鮑恩（Josef von Spaun）在 4 月 17 日寫成。據 Byrne Bodley 的專文，這冊稿子後來被退了回來，沒有附任何回覆。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "這冊稿子裡的〈紡車旁的葛麗卿〉，如今只剩第一頁（第 1–16 小節）；Dürr 推測其餘幾頁被舒伯特抽出，當作初版刻版的底稿。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "1821 年 4 月，舒伯特自費出版這首歌，交維也納的 Cappi & Diabelli 代售，編為作品 2，獻給莫里茨・馮・弗里斯伯爵（Moritz von Fries），貝多芬（Ludwig van Beethoven）的《第七號交響曲》也是獻給這位贊助人。作品 1 是同年 3 月底出版的〈魔王〉（Erlkönig），同樣是歌德的詩。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "Byrne Bodley 在同一篇專文裡指出，音樂學者寫德語藝術歌曲（Lied）的歷史，通常就從〈紡車旁的葛麗卿〉起算。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：紡車轉、停、再轉"
+    },
+    {
+      "type": "table",
+      "title": "〈紡車旁的葛麗卿〉段落地圖",
+      "head": [
+        "小節",
+        "歌詞",
+        "聽什麼"
+      ],
+      "rows": [
+        [
+          "1–11",
+          "Meine Ruh' ist hin（疊句）",
+          "鋼琴先轉一小節多；前兩行低音是 D，第 7 小節換到 C"
+        ],
+        [
+          "13–29",
+          "Wo ich ihn nicht hab'／Mein armer Kopf",
+          "和聲開始移動；第 21 小節人聲跳高八度"
+        ],
+        [
+          "31–40",
+          "疊句",
+          "與第 2–11 小節同一段音樂"
+        ],
+        [
+          "42–50",
+          "Nach ihm nur schau' ich",
+          "仍在 D 小調附近，左手照舊用跛腳的步子點著 A 或 E"
+        ],
+        [
+          "51–68",
+          "Sein hoher Gang … sein Kuß!",
+          "第 51 小節轉 F 大調、左手改成長音；第 66 小節右手停下，第 68 小節「Kuß」延長"
+        ],
+        [
+          "69–72",
+          "（鋼琴獨奏）",
+          "紡車分三次起動，第 72 小節才連成一串"
+        ],
+        [
+          "73–82",
+          "疊句",
+          "回到 D 小調"
+        ],
+        [
+          "84–112",
+          "Mein Busen drängt … vergehen sollt",
+          "第 85 小節轉降 B 大調；第 107、111 小節兩個最高的 A"
+        ],
+        [
+          "114–120",
+          "疊句前兩行（舒伯特加回）",
+          "人聲停在 A；最後一小節是延長的 D 小調和弦"
+        ]
+      ],
+      "caption": "小節編號依 Mutopia Project 據 C. F. Peters 版重排的樂譜（全曲 120 小節，6/8 拍，速度標示 Nicht zu geschwind，意為「不要太快」）；歌詞與 1808 年版《浮士德》對照。"
+    },
+    {
+      "type": "quote",
+      "original": "Meine Ruh' ist hin, / Mein Herz ist schwer, / Ich finde sie nimmer / Und nimmermehr.",
+      "text": "我的平靜沒了，／我的心好沉；／我再也找不回它，／永遠找不回。",
+      "cite": "歌德《浮士德》第一部〈葛麗卿的房間〉，1808 年版第 223 頁（本文自譯）"
+    },
+    {
+      "type": "p",
+      "text": "**第 1–11 小節，疊句**。開頭兩行，每一行唱完都空一下，強森形容這是兩句話之間短短的一口氣。前兩行底下是低音 D；第 7 小節唱到「ich finde」（我找），低音換成 C，強森說這個出乎意料的 C 大調帶來一點古老調式的味道。原詩只寫一次「Ich finde」，舒伯特唱了兩次。"
+    },
+    {
+      "type": "p",
+      "text": "**第 13–29 小節**。從「Wo ich ihn nicht hab'」（他不在的地方）起，和聲開始移動。第 21 小節，人聲在「vergällt」（變得苦澀）落到較低的 E，緊接著在「Mein armer Kopf」（我可憐的頭）跳高八度，停在高八度的 E 上反覆。這一段在第 29 小節「zerstückt」（碎了）落下，接著疊句原樣回來（第 31–40 小節）。"
+    },
+    {
+      "type": "p",
+      "text": "**第 42–68 小節，想起他**。「Nach ihm nur schau' ich」（只為了他，我望向窗外）還在 D 小調附近。第 51 小節「Sein hoher Gang」（他高昂的步態）轉進 F 大調，左手不再點那個跛腳的音，改成一小節一個長音，和聲幾乎一小節一換。第 61–62 小節「Zauberfluß」（言語的魔力之流），人聲一個半音一個半音往下滑：F、E、降 E、D。"
+    },
+    {
+      "type": "p",
+      "text": "**第 63–68 小節，紡車停下**。唱到「Sein Händedruck」（他握手）時，右手還在轉。第 66 小節「ach」（啊），十六分音符停了，右手換成一個長和弦；第 67 小節「sein」，第 68 小節「Kuß」（吻），人聲停在高音 G，底下是 D 小調的屬和弦，上面有延長記號。"
+    },
+    {
+      "type": "p",
+      "text": "**第 69–72 小節，重新起動**。歌聲停了四小節。右手先空半小節，才轉出六個音，落在降 B 上停住；第二次也一樣；第三次沒有停，一路連進第 72 小節的一整串，往上接回第 73 小節的 D 小調。強森寫道，紡車是她的工作和苦差，出於機械的習慣，她讓它再轉起來。"
+    },
+    {
+      "type": "p",
+      "text": "**第 84–112 小節，最後八行**。第 85 小節「Mein Busen drängt sich nach ihm hin」（我的胸口向他湧去）轉進降 B 大調。左手又換了步子：每小節開頭先空一下，之後才敲和弦；低音一小節換一個：降 B、降 E，C、F，D、G，兩個一組，一組比一組高。第 93 小節起，人聲在高音的升 F、E、升 D 之間打轉，唱的是「und küssen ihn, so wie ich wollt」（想怎麼吻他，就怎麼吻）。"
+    },
+    {
+      "type": "p",
+      "text": "原詩到「An seinen Küssen / Vergehen sollt'!」（在他的吻裡消逝也甘願）就結束。舒伯特加了一句原詩沒有的「o könnt ich ihn küssen」（啊，但願我能吻他），「an seinen Küssen vergehen sollt」一共唱了三遍；第 107 與第 111 小節，人聲兩次衝上全曲最高的 A，都落在「vergehen」（消逝）上。第 112 小節唱完「sollt」，右手已回到開頭的音型，歌聲大約兩小節後就唱回疊句。"
+    },
+    {
+      "type": "p",
+      "text": "強森認為這首傑作唯一的缺點出在實務：從兩個 A 的高點下來，多數歌手會希望再多一小節紡車間奏，好緩過來再唱回疊句。他提到，男中音佛格爾（Johann Michael Vogl）曾為〈魔王〉裡類似的段落請舒伯特通融，舒伯特也照改了。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "據 Dürr 的序言，〈魔王〉1821 年 3 月 7 日在維也納克恩頓門劇院（Kärntnertortheater）公演，由佛格爾演唱、Anselm Hüttenbrenner 伴奏。Hüttenbrenner 後來回憶，排練時舒伯特應佛格爾的要求，在鋼琴伴奏裡各處加了幾小節，讓歌手有更多時間緩過氣來。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "**第 114–120 小節，加回來的疊句**。原詩在「Vergehen sollt'!」結束，舒伯特卻讓開頭兩行再回來一次：「Meine Ruh' ist hin, mein Herz ist schwer」。後兩行沒有唱，人聲停在 A，不在主音 D 上。右手的紡車一直轉到第 119 小節，最後一小節才停成一個延長的 D 小調和弦。"
+    },
+    {
+      "type": "callout",
+      "label": "延伸聆聽",
+      "text": "同一首歌，強森自己彈的版本：女高音 Marie McLaughlin 與強森，Hyperion 舒伯特歌曲全集第 13 輯（CDJ33013），1990 年 12 月錄於倫敦漢普斯特德（Hampstead）的 Rosslyn Hill Unitarian Chapel，長 3 分 56 秒，比 MusicWeb 樂評所列 Naxos 版的舒瓦茲柯芙與費雪錄音（3 分 24 秒）長 32 秒。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Gretchen am Spinnrade, D118（CDJ33013，The Hyperion Schubert Edition, Vol. 13）",
+      "publisher": "Hyperion Records（Graham Johnson 解說，© 1991）",
+      "date": "1992-02",
+      "url": "https://www.hyperion-records.co.uk/dw.asp?dc=W2157_GBAJY9201304",
+      "note": "Johnson 的解說：右手為轉動的輪子、左手為線軸聲；第一首歌德歌曲；Urfaust 與 1808 年版的兩種讀法；每行後的休止、意外的 C 大調、高八度的「Mein armer Kopf」、「Zauberfluß」的半音音階、吻之後的沉默與紡車重轉、降 B 大調、兩個最高的 A、間奏太短與〈魔王〉的前例；McLaughlin 與 Johnson 錄音資料（1990 年 12 月、Rosslyn Hill Unitarian Chapel、3 分 56 秒、1992 年 2 月發行）；1821 年作品 2；2026-10-11 查閱"
+    },
+    {
+      "title": "Schubert, Lieder Band 1（BA 9141），Vorwort / Preface",
+      "publisher": "Bärenreiter（Walther Dürr，依新舒伯特全集）",
+      "date": "2004",
+      "url": "https://www.barenreiter.co.uk/prefaces/9790006525713_Innenansicht.pdf",
+      "note": "1816 年出版計畫與史鮑恩 4 月 17 日附信、歌德歌曲集被退回；1814 年秋初讀《浮士德》並寫兩場（Gretchens Stube 與 D 126）；1814 年 10 月 19 日親筆清稿（Wiener Stadt- und Landesbibliothek）、1816 年 4 月清稿只剩第 1–16 小節、1821 年 4 月自費出版由 Cappi & Diabelli 代售並獻給 Moritz von Fries；〈魔王〉作品 1 於 1821 年 3 月底出版、3 月 7 日克恩頓門劇院演出、排練時應 Vogl 要求加小節（Hüttenbrenner 回憶）；英文序言 XXI–XXIII 頁（PDF 第 20–22 頁）"
+    },
+    {
+      "title": "The Poetic Muse: Goethe, Schubert and the Art of Song",
+      "publisher": "Lorraine Byrne Bodley，收入 Oxford Lieder Festival《The Schubert Project: Bringing Schubert's Vienna to Oxford》（Maynooth University MURAL 典藏預印本）",
+      "date": "2014",
+      "url": "https://mural.maynoothuniversity.ie/id/eprint/7465/2/OxfordLiederFestival2014.pdf",
+      "note": "藝術歌曲史通常從這首歌起算；1816 年 4 月 17 日寄給歌德的歌曲集被退回、未獲回覆；「Gretchen stops spinning when lost in reverie about Faust」；1814 年 10 月 19 日；作者著作列表（Schubert's Goethe Settings, 2003）"
+    },
+    {
+      "title": "Schubert Lieder（Naxos Historical 8.111287）樂評",
+      "publisher": "MusicWeb International（Göran Forsling）",
+      "date": "2008-10",
+      "url": "https://musicweb-international.com/classRev/2008/Oct08/Schubert_Lieder_8111287.htm",
+      "note": "1952 年 10 月 4–7 日於 EMI Abbey Road 錄音室錄音；樂評抬頭曲目表所列 Gretchen am Spinnrade 3 分 24 秒；LP 初期最著名的舒伯特獨唱會錄音之一、舒瓦茲柯芙很少唱得更好、靈感可能來自費雪在場、費雪很少擔任伴奏；2026-10-11 查閱"
+    },
+    {
+      "title": "Schubert Lieder（EMI Classics 5 62754 2）樂評",
+      "publisher": "MusicWeb International（Michael Cookson）",
+      "date": "2004-04",
+      "url": "https://www.musicweb-international.com/classrev/2004/Apr04/Schubert_Schwarzkopf.htm",
+      "note": "曲目與錄音資料：第 3–14 軌由費雪伴奏，1952 年 10 月 4–7 日錄於倫敦 Abbey Road 錄音室，Gretchen am Spinnrade 在其中"
+    },
+    {
+      "title": "Gretchen am Spinnrade, D.118（Op. 2）",
+      "publisher": "Mutopia Project（Maurizio Tomasi 據 C. F. Peters 版 Band I 重排，公眾領域）",
+      "date": "2013-02-21",
+      "url": "https://www.mutopiaproject.org/ftp/SchubertF/D118/gretchen/gretchen-lys.zip",
+      "note": "小節編號與段落：全曲 120 小節、6/8 拍、Nicht zu geschwind；右手音型第 66–68 小節停止、第 69–72 小節重新起動；第 7 小節低音轉 C；第 21 小節人聲跳高八度；第 51 小節轉 F 大調與左手長音；第 61–62 小節半音下行；第 68 小節 G 與延長記號；第 85 小節轉降 B 大調與左手低音進行；第 107、111 小節的 A；第 112 小節右手回到開頭音型、歌聲於第 114 小節重唱疊句；第 69–71 小節前兩次起動停在降 B、第三次連進第 72 小節；第 114–118 小節的疊句與結尾的 A；第 120 小節的延長和弦；舒伯特所唱歌詞"
+    },
+    {
+      "title": "Faust I (Goethe) 223、224、225（1808 年版書頁掃描）",
+      "publisher": "Wikimedia Commons（Herzogin Anna Amalia Bibliothek 掃描）",
+      "url": "https://commons.wikimedia.org/wiki/File:Faust_I_(Goethe)_223.jpg",
+      "note": "1808 年 Tübingen Cotta 版第 223–225 頁：舞台指示「Gretchen am Spinnrade allein」與全詩；詩以「Vergehen sollt'!」結束，原文只有一次「Ich finde」，沒有「o könnt ich ihn küssen」"
+    },
+    {
+      "title": "Marguerite au rouet（2003.5）",
+      "publisher": "Paris Musées／Musée de la Vie romantique",
+      "url": "https://www.parismuseescollections.paris.fr/en/node/214959",
+      "note": "1831 年、油彩畫布、114.5 × 90 公分、2003 年 4 月入藏、紡車上簽名「Ary Scheffer 1831」、館方描述（坐在紡車旁的高背扶手椅上，為被浮士德拋棄而哭泣）、影像 CC0；2026-10-11 查閱"
+    },
+    {
+      "title": "Gretchen am Spinnrade",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gretchen_am_Spinnrade",
+      "note": "1814 年 10 月 19 日寫成，距 18 歲生日三個月（引 Bodley 2003、Cooper 2017）；2026-10-11 查閱"
+    },
+    {
+      "title": "Faust, Part One",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Faust,_Part_One",
+      "note": "1808 年首度出版；Margarete 暱稱 Gretchen；她在神智錯亂中溺死新生兒、被判死刑；2026-10-11 查閱"
+    },
+    {
+      "title": "Count Moritz von Fries",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Count_Moritz_von_Fries",
+      "note": "貝多芬把作品 29 弦樂五重奏與《第七號交響曲》獻給他；2026-10-11 查閱"
+    },
+    {
+      "title": "Scheffer, Ary - Marguerite au rouet - 2003.5 - Musée de la Vie romantique.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Scheffer,_Ary_-_Marguerite_au_rouet_-_2003.5_-_Mus%C3%A9e_de_la_Vie_romantique.jpg",
+      "note": "畫家生平（Dordrecht 出生、1811–1858 年在巴黎工作）、影像授權（PD-Art，Paris Musées CC0）"
+    }
+  ]
+}
