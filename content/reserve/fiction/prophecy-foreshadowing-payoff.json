@@ -1,0 +1,359 @@
+{
+  "column": "fiction",
+  "date": "reserve",
+  "reserve_written": "2026-10-11",
+  "title": "預言兌現時，怎樣才不算作弊",
+  "dek": "奇幻小說的預言常在結局靠字面漏洞成真。本文用原創示範比較兩種兌現，再看《馬克白》怎麼替勃南森林與麥克德夫埋線。",
+  "topic_key": "fiction:prophecy-foreshadowing-payoff",
+  "updated_at": "2026-10-11T13:40:00+08:00",
+  "spoiler": "本文後半談到莎士比亞《馬克白》第 4、5 幕與結局，並提到《魔戒》裡樹人參戰的情節。",
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Macbeth_recoiling_from_the_apparition_of_the_crowned_child.jpg/1280px-Macbeth_recoiling_from_the_apparition_of_the_crowned_child.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/1/14/Macbeth_recoiling_from_the_apparition_of_the_crowned_child.jpg",
+    "width": 1280,
+    "height": 1038,
+    "alt": "一幅深色調的油畫。畫面左側三名頭髮披散的女巫圍著一口冒著火光的大鍋，其中一人伸手指向上方；火光裡升起一個發亮的赤裸孩童，頭上戴著一圈冠，一隻手高舉一根帶葉的細枝。畫面右側一名戴金冠、穿土黃色長衫的男子側身後仰，一隻手臂伸向左方，另一手按在腰間；畫面中央、他伸出的手臂上方的暗處，還有一個舉起一隻手臂的深色人影。",
+    "caption": "約翰・懷特・阿博特（John White Abbott）的油畫，Commons 題名作 Macbeth recoiling from the apparition of the crowned child（馬克白被戴冠孩童的幻影嚇退），1829 年，油彩、木板，19.7 × 23.7 公分，華盛頓特區福爾傑莎士比亞圖書館（Folger Shakespeare Library）藏，館藏號 FPa1（作品資料依 Wikimedia Commons 檔案頁）。畫的是《馬克白》第 4 幕第 1 景的第三個幻影：預言說出口的同一刻，孩子手上已經拿著一棵樹。",
+    "credit": "John White Abbott；Folger Shakespeare Library 藏；影像：Folger Shakespeare Library Digital Image Collection",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Macbeth_recoiling_from_the_apparition_of_the_crowned_child.jpg",
+    "made": "1829"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "奇幻小說的預言，常在最後一章靠一個字面漏洞成真：說城在夏天下雪之前不會陷落，結果夏天真的落了一場「雪」；說他不會死在任何人手下，結果動手的不算「人」。這一篇只處理一個問題：預言式的伏筆，兌現時要滿足哪些條件，讀者才會回頭說「原來早就寫在那裡」，而不是「作者臨時改了規則」。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "預言是最顯眼的伏筆：它先把結果說出來，讀者握著答案的字面，只差解法。也因此它最容易作弊，作者可以在最後一刻，替那句話找一個前文沒有的解釋。下面先在原創的示範世界裡把同一場高潮寫成兩個版本，再看莎士比亞（William Shakespeare）怎麼處理他從史書繼承來的兩則預言。"
+    },
+    {
+      "type": "h",
+      "text": "示範世界：霜隘門楣上的八個字"
+    },
+    {
+      "type": "p",
+      "tag": "原創示範",
+      "text": "以下設定為本文原創。霜隘是北方山口上的一座關城，守著從草原南下的唯一一條路。百年前，一位盲眼的巡禮者在關門的門楣上刻了八個字：「夏不飛雪，隘不失守。」此後霜隘被圍過四次，都沒有破。叛軍多是山口兩側的本地人，打著舊王族的旗號。這一年春天，朝廷派來新的守將顧鐸，帶著一營從南方調來的新兵。顧鐸不信預言，但他知道士兵信。故事的高潮，是入夏之後的一場圍城。"
+    },
+    {
+      "type": "h",
+      "text": "版本 A：雪從敵陣裡來"
+    },
+    {
+      "type": "p",
+      "tag": "原創示範",
+      "text": "圍城第七天，入夏已經半個月。顧鐸站在門樓上，看著城下叛軍的營火一夜比一夜多。他伸手摸了摸門楣上的刻字，對副將說：「只要不下雪，他們就進不來。」話音剛落，叛軍陣中走出一個披白袍的老人，舉起一根骨杖，低聲吟唱。正午的天色暗了下來，北風捲過山口，鵝毛大雪一片一片積上城垛。守軍看著雪，一個接一個放下長矛。顧鐸拔劍大吼，沒有人回頭。天亮時，關門已經從裡面打開了。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "**資訊。**預言的字句早就擺在讀者面前，兌現需要的那樣東西，卻在兌現的同一段才第一次出現：一個能召雪的人。**期待。**讀者等了大半本書的問題是「夏天怎麼可能下雪」。版本 A 的答案是「有人會法術」，這個答案回頭取消了問題：召雪若一直可能，預言就從來不是限制，只是倒數。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "**情緒。**有驚訝，沒有「原來如此」。讀者回到前文找不到任何東西，驚訝之後接的是被告知，不是被說服。**代價。**沒有角色為這個結局付出自己選擇的代價。顧鐸怎麼守都一樣，召雪的老人一來，結果相同。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "**失敗條件。**兌現所需的人、物或規則若在兌現當下才登場，這種寫法幾乎必然失敗。前文若早讓讀者見過召雪的術，那其實已是版本 B；只有在故事要的正是「命運不講理」的恐懼時，A 才站得住，而且角色和讀者都得承受無從理解的代價。"
+    },
+    {
+      "type": "h",
+      "text": "版本 B：雪早就種在牆根"
+    },
+    {
+      "type": "p",
+      "text": "版本 B 的高潮和 A 同一天，差別在故事前段多了一場。"
+    },
+    {
+      "type": "p",
+      "tag": "原創示範",
+      "text": "顧鐸到任第一天，先巡灶房。在關下長大的伍嬸蹲在灶前撈湯面上的浮沫，嘴裡沒停過：「鹽只剩九袋，柴是濕的，井水也發渾。等入了夏，牆根那排老楊樹又要下夏雪，湯裡、被窩裡、弓弦上全是，掃都掃不完。」顧鐸只聽進了鹽和柴，叫書記記下。走出灶房，他抬頭看見門楣上的八個字，站了一會兒，回頭吩咐副將：「往後每天點卯，讓全營對著這道門念一遍。新兵怕北方，讓他們知道這座關從來沒破過。」"
+    },
+    {
+      "type": "p",
+      "text": "中間隔著大半本書。以下是高潮那一場。"
+    },
+    {
+      "type": "p",
+      "tag": "原創示範",
+      "text": "圍城第七天，入夏已經半個月，起了南風。午後，牆根那排老楊樹一齊放絮，白絮貼著城牆往上翻，落滿城垛、盔頂和弓弦。城下的叛軍裡，有人用本地口音拉長了嗓子喊：「下——夏——雪——囉！」新兵阿陶伸手接住一片，那東西在掌心不化。他身邊的人已經在念每天早上念的那句話，念到「夏不飛雪」就停住了。顧鐸在門樓上吼：「那是樹絮！不是雪！」可是三個月來，全營每天早上念的是「雪」。天黑以前，西側哨塔空了。第二天清晨，關門從裡面打開。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "**資訊。**兌現需要的每一樣東西，第一場就都在了：預言的八個字、牆根的老楊樹、本地人把楊絮叫「夏雪」、全營每天念預言。但「夏雪」夾在鹽、柴、井水中間，用抱怨的口氣說出來，敘述沒有停下來看它。讀者拿到了線索，卻沒被告知那是線索。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "**期待。**第一場真正打開的期待，在顧鐸的命令上：全營每天念預言，等於把士氣綁在一句話上。到了第二場，白絮飄起來時，留心的讀者會比顧鐸早一步明白；不留心的讀者，在叛軍喊出「夏雪」時也會想起灶房。驚訝和「原來如此」幾乎同時到達。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "**情緒與代價。**這一場的情緒是眼睜睜，不是嚇一跳。阿陶掌心那片不化的絮，證據就在手上，信念卻跑得比證據快。代價來自顧鐸自己的兩個選擇：他把預言變成每天的口令，又把伍嬸的話當成灶房閒話。叛軍喊得出「夏雪」，是因為他們聽得懂本地話，而顧鐸沒有聽。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "**失敗條件。**第一，埋得太響：第一場若寫成「顧鐸沒有注意到，這句話將決定霜隘的命運」，讀者在前段就猜到結局，後面只剩等待。第二，埋得太淺：幾百頁前的一句抱怨，多數讀者記不住；比較穩的做法是在中段換個情境再出現一次，例如阿陶發現被褥裡塞的是去年掃起的白絮，軟得像雪，仍不點破。第三，回收太巧：若只靠楊絮「看起來像雪」就讓城破，讀者會覺得作者在玩文字遊戲。讓霜隘失守的不是絮，是三個月來每天念的那句話。"
+    },
+    {
+      "type": "spoiler",
+      "text": "以下談到《馬克白》第 4、5 幕與結局，並提到《魔戒》（The Lord of the Rings）裡樹人參戰的情節。"
+    },
+    {
+      "type": "h",
+      "text": "《馬克白》：預言出場時，樹已經在手上"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "莎士比亞的《馬克白》（Macbeth）現存唯一的文本來源，是 1623 年的《第一對開本》（First Folio）。第 4 幕第 1 景，馬克白去找女巫，看見三個幻影。第一個是戴盔的頭，叫他提防麥克德夫（Macduff），提防費夫（Fife）領主（第 78–79 行）。第二個是流血的孩子，說沒有一個女人生的人能傷害馬克白（第 87–89 行）。第三個，《第一對開本》的舞台指示寫的是「一個戴冠的孩子，手裡拿著一棵樹」（a Childe Crowned, with a Tree in his hand；本文自譯），它說出勃南森林（Birnam Wood）與鄧西嫩（Dunsinane）的預言："
+    },
+    {
+      "type": "quote",
+      "original": "Macbeth shall never vanquish'd be until / Great Birnam wood to high Dunsinane hill / Shall come against him.",
+      "text": "馬克白永遠不會被擊敗，除非大勃南森林朝著高高的鄧西嫩山，向他攻來。",
+      "cite": "《馬克白》第 4 幕第 1 景第 102–104 行，英文與行號依 MIT 莎士比亞全集線上版；舞台指示依 Internet Shakespeare Editions 所收《第一對開本》轉錄（TLN 1628）；本文自譯"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.22,
+        0.17,
+        0.2,
+        0.45
+      ],
+      "position": "畫面左半中段、大鍋正上方，約佔寬度五分之一",
+      "caption": "頭圖局部：從鍋上火光裡升起的孩子，頭上一圈冠，一隻手高舉帶葉的枝條。《第一對開本》的舞台指示只寫「手裡拿著一棵樹」，阿博特畫成一根細枝。在這一景，它只是幻影手上的東西；到第 5 幕，舉著樹枝的是一整支軍隊。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "馬克白的反應是：這不可能，誰能徵召森林，叫樹拔起扎在土裡的根（第 105–107 行）。在這之前，他聽完第二個幻影時先說，那就讓麥克德夫活著，何必怕他；下一句就轉向「但我還是要加倍確定」（But yet I'll make assurance double sure；本文自譯），要和命運立約，不讓麥克德夫活（第 90–92 行）。同一景結尾，他得知麥克德夫已逃往英格蘭，當場決定突襲麥克德夫的城堡，殺他的妻子、孩子和所有血親（第 158–170 行）；下一景，麥克德夫的兒子死在台上。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這幾則預言不是莎士比亞發明的。本劇的故事來源是霍林斯赫德（Raphael Holinshed）的《編年史》（Chronicles）。依 Macbeth Navigator 網站所收的 1808 年重印本，書裡的馬克白從「某些巫師」那裡聽說要提防麥克德夫，本想殺他，只因「某個女巫」說他不會被女人生的人殺死、勃南森林不來到鄧西嫩城堡就不會被擊敗，才沒有動手；麥克德夫出逃後，他殺了麥克德夫的妻兒（第 274 頁）。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "決戰前夜，馬爾康（Malcolm）命每個士兵帶一根勃南森林的樹枝，好在第二天不被看見地接近；最後麥克德夫說自己 neuer borne of my mother, but ripped out of her wombe，不是母親生下，是從她腹中剖出（本文自譯；第 276–277 頁）。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "對照兩份文本，劇本改了兩處。第一，在上述幾頁裡，霍林斯赫德只用轉述交代：巫師要他提防麥克德夫，女巫說了兩則預言；劇本把這些話變成三個看得見的形象，其中一個孩子手上就拿著一棵樹。觀眾在預言出場的同一刻，已經看見兌現的形狀，只是還不知道那是什麼。第二，霍林斯赫德的馬克白因為信預言而暫時放過麥克德夫；劇本讓他剛說完可以讓麥克德夫活著，下一句就要「加倍確定」。"
+    },
+    {
+      "type": "h",
+      "text": "勃南森林：每一步都有自己的理由"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "勃南森林的回收，劇本分幾步走。第 5 幕第 2 景，蘇格蘭貴族說，要在勃南森林附近和英格蘭軍會合（第 6–7 行）。第 3 景，馬克白在城裡兩次重念這則預言：勃南森林不移到鄧西嫩，他就不會被恐懼沾染（第 2–3 行），也不怕死亡與毀滅（第 68–69 行）。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "第 4 景，軍隊到了林邊，馬爾康下令每個士兵砍一根樹枝舉在身前，理由是遮住兵力，讓敵方斥候報錯人數（第 4–9 行）。第 5 景，信差向馬克白報告，他在山上守望時，看見森林開始移動（第 36–38 行）。馬克白這才說，他開始懷疑魔鬼的模稜兩可（equivocation），說它「說謊說得像真話」（That lies like truth；本文自譯；第 47–51 行）。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Liebigbilder_1912%2C_Serie_852._Macbeth_-_5_Anmarsch_der_englischen_Hilfsv%C3%B6lker.jpg",
+      "width": 1280,
+      "height": 850,
+      "alt": "一張彩色的橫幅收藏卡。左上角紅底標題寫著 MACBETH. 5. Anmarsch der englischen Hilfsvölker。一隊戴鎖子甲頭巾、背著盾的士兵沿林間小路向右行進，好幾個人手裡舉著或肩上扛著帶葉的樹枝和小樹；左後方有一個騎馬、戴翼盔的人和幾面三角旗；右側遠處，一列背著紅底黑十字盾的士兵背對畫面沿路走遠；右上方遠處山頂有一座城堡。右下角印著一罐肉汁精的廣告圖，底部金框寫著 LIEBIG's FLEISCH-EXTRAKT。",
+      "caption": "Liebig 肉汁精（Liebig's Fleisch-Extrakt）德文版收藏卡，《馬克白》系列第 5 張〈英格蘭援軍進軍〉（Anmarsch der englischen Hilfsvölker），1912 年，作者不詳。士兵把砍下的樹枝和小樹舉在身前前進，遠處山頂是城堡。這是後人的圖解，不是哪一次演出的紀錄；劇本只寫了每人砍一根樹枝。",
+      "credit": "作者不詳；Liebig 收藏卡；影像：The Yorck Project",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Liebigbilder_1912,_Serie_852._Macbeth_-_5_Anmarsch_der_englischen_Hilfsv%C3%B6lker.jpg",
+      "made": "1912"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "這幾步各有自己的理由：會合地點剛好在勃南；砍樹枝是為了掩護兵力，馬爾康下令時沒提預言。觀眾卻在第 4 景就看懂了，比馬克白早一景。這段時間差是戲劇反諷，懸念從「會不會」變成「他什麼時候發現」。馬克白在第 3 景兩次重念預言，則是在兌現前再把字句送進觀眾耳裡一次，做的正是霜隘版本 B 裡「中段再出現一次」的工作。"
+    },
+    {
+      "type": "svg",
+      "title": "《馬克白》第 4–5 幕的埋設與回收",
+      "caption": "原創示意，不按篇幅比例。左欄是勃南森林的線，右欄是麥克德夫的線；方框內是本文的摘述，不是原文。勃南森林一路有埋設，觀眾在第 5 幕第 4 景已看見樹枝，馬克白到第 5 景才聽說；麥克德夫的方向從第 4 幕就點明，出生的事實到第 5 幕第 8 景才揭露。場次依 MIT 莎士比亞全集線上版。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 478\" role=\"img\" aria-label=\"《馬克白》第 4 到第 5 幕，勃南森林與麥克德夫兩條線的埋設與回收示意\"><text class=\"muted\" x=\"34\" y=\"22\" font-size=\"12\" text-anchor=\"middle\">場次</text><text x=\"138\" y=\"22\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\">勃南森林</text><text x=\"298\" y=\"22\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\">麥克德夫</text><text class=\"muted\" x=\"34\" y=\"64\" font-size=\"12\" text-anchor=\"middle\">4.1</text><text class=\"muted\" x=\"34\" y=\"124\" font-size=\"12\" text-anchor=\"middle\">4.1–4.2</text><text class=\"muted\" x=\"34\" y=\"184\" font-size=\"12\" text-anchor=\"middle\">5.2–5.3</text><text class=\"muted\" x=\"34\" y=\"244\" font-size=\"12\" text-anchor=\"middle\">5.4</text><text class=\"muted\" x=\"34\" y=\"304\" font-size=\"12\" text-anchor=\"middle\">5.5</text><text class=\"muted\" x=\"34\" y=\"364\" font-size=\"12\" text-anchor=\"middle\">5.8</text><line class=\"gold line\" x1=\"10\" y1=\"216\" x2=\"10\" y2=\"322\" stroke-width=\"2.4\"/><line class=\"gold line\" x1=\"10\" y1=\"216\" x2=\"17\" y2=\"216\" stroke-width=\"2.4\"/><line class=\"gold line\" x1=\"10\" y1=\"322\" x2=\"17\" y2=\"322\" stroke-width=\"2.4\"/><rect class=\"soft\" x=\"66\" y=\"36\" width=\"144\" height=\"46\" rx=\"4\"/><text x=\"138\" y=\"55\" font-size=\"12\" text-anchor=\"middle\">戴冠孩子手持一棵樹</text><text x=\"138\" y=\"73\" font-size=\"12\" text-anchor=\"middle\">森林來，才會敗</text><rect class=\"soft\" x=\"66\" y=\"156\" width=\"144\" height=\"46\" rx=\"4\"/><text x=\"138\" y=\"175\" font-size=\"12\" text-anchor=\"middle\">會合點在勃南</text><text x=\"138\" y=\"193\" font-size=\"12\" text-anchor=\"middle\">馬克白重念預言</text><rect class=\"soft\" x=\"66\" y=\"216\" width=\"144\" height=\"46\" rx=\"4\"/><text x=\"138\" y=\"235\" font-size=\"12\" text-anchor=\"middle\">每人砍一根樹枝</text><text x=\"138\" y=\"253\" font-size=\"12\" text-anchor=\"middle\">理由：遮住兵力</text><rect class=\"soft\" x=\"66\" y=\"276\" width=\"144\" height=\"46\" rx=\"4\"/><rect class=\"accent line\" x=\"66\" y=\"276\" width=\"144\" height=\"46\" rx=\"4\" stroke-width=\"2\"/><text class=\"accent\" x=\"138\" y=\"295\" font-size=\"12\" text-anchor=\"middle\">信差：森林在移動</text><text class=\"accent\" x=\"138\" y=\"313\" font-size=\"12\" text-anchor=\"middle\">馬克白開始起疑</text><line class=\"ink line\" x1=\"138\" y1=\"82\" x2=\"138\" y2=\"150\" stroke-width=\"1.4\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"134,149 142,149 138,156\"/><line class=\"ink line\" x1=\"138\" y1=\"202\" x2=\"138\" y2=\"210\" stroke-width=\"1.4\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"134,209 142,209 138,216\"/><line class=\"ink line\" x1=\"138\" y1=\"262\" x2=\"138\" y2=\"270\" stroke-width=\"1.4\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"134,269 142,269 138,276\"/><rect class=\"soft\" x=\"226\" y=\"36\" width=\"144\" height=\"46\" rx=\"4\"/><text x=\"298\" y=\"55\" font-size=\"12\" text-anchor=\"middle\">「提防麥克德夫」</text><text x=\"298\" y=\"73\" font-size=\"12\" text-anchor=\"middle\">女人生的傷不了他</text><rect class=\"soft\" x=\"226\" y=\"96\" width=\"144\" height=\"46\" rx=\"4\"/><text x=\"298\" y=\"115\" font-size=\"12\" text-anchor=\"middle\">要麥克德夫死</text><text x=\"298\" y=\"133\" font-size=\"12\" text-anchor=\"middle\">撲空，改殺妻兒</text><rect class=\"soft\" x=\"226\" y=\"156\" width=\"144\" height=\"46\" rx=\"4\"/><text x=\"298\" y=\"175\" font-size=\"12\" text-anchor=\"middle\">馬克白重念</text><text x=\"298\" y=\"193\" font-size=\"12\" text-anchor=\"middle\">「女人生的」那句</text><rect class=\"soft\" x=\"226\" y=\"336\" width=\"144\" height=\"46\" rx=\"4\"/><rect class=\"accent line\" x=\"226\" y=\"336\" width=\"144\" height=\"46\" rx=\"4\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><text class=\"accent\" x=\"298\" y=\"355\" font-size=\"12\" text-anchor=\"middle\">「從母親腹中剖出」</text><text class=\"accent\" x=\"298\" y=\"373\" font-size=\"12\" text-anchor=\"middle\">出生的事實此刻才揭露</text><line class=\"ink line\" x1=\"298\" y1=\"82\" x2=\"298\" y2=\"90\" stroke-width=\"1.4\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"294,89 302,89 298,96\"/><line class=\"ink line\" x1=\"298\" y1=\"142\" x2=\"298\" y2=\"150\" stroke-width=\"1.4\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"294,149 302,149 298,156\"/><line class=\"ink line\" x1=\"298\" y1=\"202\" x2=\"298\" y2=\"330\" stroke-width=\"1.4\"/><polygon class=\"ink\" stroke-width=\"0\" points=\"294,329 302,329 298,336\"/><rect class=\"soft\" x=\"14\" y=\"398\" width=\"22\" height=\"14\" rx=\"2\"/><text x=\"44\" y=\"410\" font-size=\"12\">埋設</text><rect class=\"soft\" x=\"196\" y=\"398\" width=\"22\" height=\"14\" rx=\"2\"/><rect class=\"accent line\" x=\"196\" y=\"398\" width=\"22\" height=\"14\" rx=\"2\" stroke-width=\"2\"/><text x=\"226\" y=\"410\" font-size=\"12\">回收</text><rect class=\"soft\" x=\"14\" y=\"424\" width=\"22\" height=\"14\" rx=\"2\"/><rect class=\"accent line\" x=\"14\" y=\"424\" width=\"22\" height=\"14\" rx=\"2\" stroke-width=\"2\" stroke-dasharray=\"4 2\"/><text x=\"44\" y=\"436\" font-size=\"12\">回收時才揭露的新事實</text><line class=\"gold line\" x1=\"196\" y1=\"431\" x2=\"218\" y2=\"431\" stroke-width=\"2.4\"/><text x=\"226\" y=\"436\" font-size=\"12\">觀眾先知、馬克白未知</text><text class=\"muted\" x=\"14\" y=\"464\" font-size=\"11\">原創示意，不按比例；方框內是本文摘述，不是原文。</text></svg>"
+    },
+    {
+      "type": "h",
+      "text": "麥克德夫：新的事實，舊的角色"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "麥克德夫這條線，回收的機制在台詞裡事前沒有交代。第 5 幕第 8 景，馬克白對他說，自己有魔法護身，不會向女人生的人屈服（第 15–16 行）；麥克德夫答，讓你一直侍奉的那個天使告訴你，麥克德夫是未到時候就從母親腹中剖出來的（第 17–20 行）。在 MIT 線上版的全劇文本裡，這之前沒有一句台詞提到他的出生。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "這算作弊嗎？我的讀法是不算，差別在回收帶來的是什麼。版本 A 的召雪老人是一個新的人；麥克德夫的出生，是一個舊角色身上的新事實。這個人從第 4 幕起就被幻影點名，又被馬克白殺了妻兒，觀眾早就等著他回來。到了第 5 幕第 8 景，觀眾的問題已經不是「誰會打敗馬克白」，而是「那句話要怎麼成立」。回收可以揭露新事實，但這件事實最好長在一個早已就位的人或物身上。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "馬克白先咒罵說出這話的舌頭（第 21 行），接著說，別再相信這些用雙關語矇人的魔鬼（第 23–24 行），它們："
+    },
+    {
+      "type": "quote",
+      "original": "That keep the word of promise to our ear, / And break it to our hope.",
+      "text": "對我們的耳朵守住承諾的字句，對我們的希望卻背棄了它。",
+      "cite": "《馬克白》第 5 幕第 8 景第 25–26 行，英文與行號依 MIT 莎士比亞全集線上版；本文自譯"
+    },
+    {
+      "type": "h",
+      "text": "公平的回收，也可能讓人失望"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "並不是每個讀者都買帳。托爾金（J. R. R. Tolkien）1955 年 6 月 7 日寫給詩人奧登（W. H. Auden）一封信，收在 Humphrey Carpenter 編的《托爾金書信集》（The Letters of J. R. R. Tolkien）第 163 封。以下依托爾金研究者羅斯伯里（Brian Rosebury）2002 年在 SHAKSPER 討論區轉引的信文，與英文維基百科〈Shakespeare's influence on Tolkien〉條目。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "信裡說，他認為《魔戒》裡樹人（Ents）的角色，源於他從學生時代起對莎士比亞處理勃南森林的失望與厭惡，他稱之為 shabby use（寒酸的用法，本文自譯）；他想設計一個場景，讓樹「真的」出征（the trees might really march to war，本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "同一條目依希比（Tom Shippey）2005 年與羅斯伯里 2003 年的著作，把莎士比亞的處理稱為平淡的（prosaic）解決，士兵砍樹枝舉著走，不靠魔法；托爾金的樹人進軍則是神話與魔法的解決。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "托爾金的不滿和「有沒有埋伏筆」無關，勃南森林埋得很周到。順著這個解釋，我的讀法是：失望出在兌現的層次。馬克白自己也是用聽奇蹟的耳朵去聽的，所以才問誰能徵召森林；觀眾若和他一樣期待奇蹟，平淡的解決就像降了一級。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "對奇幻作者，這一點更要緊：你的世界裡奇蹟是真的，讀者有理由期待字面上的兌現。霜隘的版本 B 也是不靠魔法的兌現，楊絮不是雪；它能成立，是因為故事寫的是信念。若霜隘的世界早已出現過呼風喚雪的術士，讀者等的就是一場真雪。預言要用哪一種方式成真，最好在書的前段先立下規矩，例如讓一則小預言，先以同樣的方式應驗一次。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "回頭看，預言兌現時不像作弊，大致要過三關：字句早就擺在讀者面前，兌現時一字未改；兌現所需的人、物或規則，前文已為了別的理由存在；被預言的人為了躲開或利用預言所做的選擇，在兌現時推了一把。馬克白在最後一景罵魔鬼守住字句、背棄希望，可是殺麥克德夫妻兒的命令是他自己下的；麥克德夫在戰場上找他，說的是妻兒的鬼魂（第 5 幕第 7 景第 19–20 行）。"
+    },
+    {
+      "type": "exercise",
+      "title": "替一則預言做回收檢查",
+      "steps": [
+        "從自己的稿子挑一則預言（或誓言、詛咒、遺言），逐字抄出，圈出每個可以有兩種解讀的詞。",
+        "用一句話寫下兌現方式：「讓這句話成真的是＿＿」，查它第一次出現在第幾章、當時為何出現；若在兌現那一章才登場，就改寫或換掉。",
+        "找出被預言的人為了躲開或利用預言而做的一個選擇，確認它在兌現時出了力；找不到，就替他補一個。",
+        "安排兩次埋設：第一次放在讀者注意力在別處的場景（例如談補給），第二次在中段換一個情境再出現；兩次都不由敘述者點破。",
+        "請一位沒讀過大綱的讀者讀到兌現前一章停下，寫下他猜的兌現方式；讀完再請他回頭找線索。"
+      ],
+      "criteria": [
+        "兌現所需的人、物、規則，沒有一項是在兌現那一章才第一次出現；新揭露的事實，都附在早已出場的人或物身上。",
+        "預言的字句前後完全一致，兌現時沒有改動或補上任何一個字。",
+        "試讀者事前沒有猜中確切的兌現方式，事後能指出至少一處埋設。",
+        "刪掉被預言者的那個選擇，結局就不會以同樣的方式發生。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Macbeth（全劇）",
+      "publisher": "The Complete Works of William Shakespeare, MIT",
+      "url": "https://shakespeare.mit.edu/macbeth/full.html",
+      "note": "行號依各景頁面：第 4 幕第 1 景第 78–79、87–92、102–107、158–170 行；第 4 幕第 2 景；第 5 幕第 2 景第 6–7 行、第 3 景第 2–7、68–69 行、第 4 景第 4–9 行、第 5 景第 36–38、47–51 行、第 7 景第 18–20 行、第 8 景第 15–26 行"
+    },
+    {
+      "title": "Macbeth, Act 4, Scene 1",
+      "publisher": "The Complete Works of William Shakespeare, MIT",
+      "url": "https://shakespeare.mit.edu/macbeth/macbeth.4.1.html",
+      "note": "三個幻影、馬克白的反應與屠殺命令"
+    },
+    {
+      "title": "Macbeth, Act 5, Scene 8",
+      "publisher": "The Complete Works of William Shakespeare, MIT",
+      "url": "https://shakespeare.mit.edu/macbeth/macbeth.5.8.html",
+      "note": "麥克德夫的出生（第 17–20 行）；keep the word of promise（第 25–26 行）"
+    },
+    {
+      "title": "Macbeth (Folio 1, 1623), Act 4, Scene 1",
+      "publisher": "Internet Shakespeare Editions, University of Victoria",
+      "date": "1623",
+      "url": "https://internetshakespeare.uvic.ca/doc/Mac_F1/scene/4.1/index.html",
+      "note": "三個幻影的舞台指示：TLN 1604、1616、1628"
+    },
+    {
+      "title": "Holinshed's Chronicles, Volume V: Scotland, page 274（1808 年重印本摘錄）",
+      "publisher": "Macbeth Navigator, Eastern Washington University",
+      "date": "1808",
+      "url": "https://shakespeare-navigators.ewu.edu/macbeth/Holinshed/Holin274.html",
+      "note": "巫師提醒提防麥克德夫；女巫的兩則預言；屠殺麥克德夫妻兒"
+    },
+    {
+      "title": "Holinshed's Chronicles, Volume V: Scotland, page 276",
+      "publisher": "Macbeth Navigator, Eastern Washington University",
+      "date": "1808",
+      "url": "https://shakespeare-navigators.ewu.edu/macbeth/Holinshed/Holin276.html",
+      "note": "決戰前夜在勃南森林命每人帶一根樹枝"
+    },
+    {
+      "title": "Holinshed's Chronicles, Volume V: Scotland, page 277",
+      "publisher": "Macbeth Navigator, Eastern Washington University",
+      "date": "1808",
+      "url": "https://shakespeare-navigators.ewu.edu/macbeth/Holinshed/Holin277.html",
+      "note": "neuer borne of my mother, but ripped out of her wombe"
+    },
+    {
+      "title": "Macbeth",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Macbeth",
+      "note": "《第一對開本》（1623）是唯一文本來源；故事來源為 Holinshed《編年史》（1587）"
+    },
+    {
+      "title": "Shakespeare's influence on Tolkien",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Shakespeare%27s_influence_on_Tolkien",
+      "note": "托爾金 1955 年 6 月 7 日致奧登信（Carpenter 編書信集第 163 封）：shabby use、the trees might really march to war；依 Shippey 2005 與 Rosebury 2003 的 prosaic／mythic-magical resolution 對照"
+    },
+    {
+      "title": "Re: Tolkien and Shakespeare（SHK 13.2452）",
+      "publisher": "SHAKSPER: The Shakespeare Conference",
+      "date": "2002-12-20",
+      "url": "https://shaksper.net/archive/2002/192-december/17383-re-tolkien-and-shakespeare-sp-155016940",
+      "note": "Brian Rosebury 轉引第 163 封信關於樹人的段落"
+    },
+    {
+      "title": "File:Macbeth recoiling from the apparition of the crowned child.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2015-06-10",
+      "url": "https://commons.wikimedia.org/wiki/File:Macbeth_recoiling_from_the_apparition_of_the_crowned_child.jpg",
+      "note": "頭圖；作者、年代、材質、尺寸、館藏號與 CC BY-SA 4.0 授權"
+    },
+    {
+      "title": "File:Liebigbilder 1912, Serie 852. Macbeth - 5 Anmarsch der englischen Hilfsvölker.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2020-05-02",
+      "url": "https://commons.wikimedia.org/wiki/File:Liebigbilder_1912,_Serie_852._Macbeth_-_5_Anmarsch_der_englischen_Hilfsv%C3%B6lker.jpg",
+      "note": "正文圖；1912 年、作者不詳、公版（PD-anon-expired）"
+    }
+  ]
+}
