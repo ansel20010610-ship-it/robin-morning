@@ -176,9 +176,14 @@ function viewFront(dateParam) {
   prefetch(issue);
 }
 
-// Load the issue's articles in the background: they open instantly and the service worker keeps them for offline reading.
+// Load the issue's articles in the background: they open instantly and the service worker keeps them for offline reading,
+// together with each article's opening picture (the other pictures are kept once they have been seen).
 function prefetch(issue) {
-  const run = () => issue.articles.forEach((a) => article(issue.date, a.column).catch(() => {}));
+  const saveData = navigator.connection?.saveData;
+  const run = () => issue.articles.forEach((a) => {
+    article(issue.date, a.column).catch(() => {});
+    if (a.hero?.src && !saveData) { const im = new Image(); im.referrerPolicy = "no-referrer"; im.src = a.hero.src; }
+  });
   if ("requestIdleCallback" in window) requestIdleCallback(run, { timeout: 4000 }); else setTimeout(run, 1500);
 }
 
@@ -583,5 +588,22 @@ async function boot() {
   document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshFront(); });
   if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
 }
+
+// A picture that cannot load (offline and not kept yet, or the image host briefly refusing) leaves a quiet placeholder
+// instead of a broken-image icon. Online, it is tried once more a little later; offline, again when the connection is back.
+const reloadImg = (img) => { const n = img.cloneNode(); n.classList.remove("img-off"); img.replaceWith(n); return n; };
+document.addEventListener("error", (e) => {
+  const img = e.target;
+  if (!(img instanceof HTMLImageElement)) return;
+  img.classList.add("img-off");
+  if (navigator.onLine && !img.dataset.retried) {
+    setTimeout(() => { if (img.isConnected && img.classList.contains("img-off")) reloadImg(img).dataset.retried = "1"; }, 5000);
+  }
+}, true);
+window.addEventListener("offline", () => toast("目前離線：已存下的文章照常可讀"));
+window.addEventListener("online", () => {
+  toast("已恢復連線");
+  document.querySelectorAll("img.img-off").forEach(reloadImg);
+});
 
 boot();

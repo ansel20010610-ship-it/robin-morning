@@ -3,6 +3,12 @@
 // publish.yml swaps the placeholder in CACHE for a hash of the shell files, so sw.js only changes when the shell does.
 const CACHE = "robin-shell-__SHELL_HASH__";
 const CONTENT = "robin-content";
+// Pictures and font files, kept as they are seen so an article read once still shows its images offline.
+const IMAGES = "robin-images";
+const FONTS = "robin-fonts";
+const KEEP = [CACHE, CONTENT, IMAGES, FONTS];
+const LIMIT = { [IMAGES]: 400, [FONTS]: 400 }; // entries; the oldest go first
+const IMAGE_HOSTS = new Set(["upload.wikimedia.org", "thumb.wikimedia.org", "tile.loc.gov"]);
 const SHELL = ["index.html", "assets/style.css", "assets/app.js", "assets/util.js", "assets/blocks.js",
   "assets/pitch.js", "assets/spotify.js", "assets/speak.js", "assets/robin.svg", "manifest.webmanifest"];
 const DATA = ["content/config.json", "content/index.json"];
@@ -17,7 +23,7 @@ self.addEventListener("install", (e) => {
   ]).then(() => self.skipWaiting()));
 });
 self.addEventListener("activate", (e) => {
-  e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k.startsWith("robin-") && k !== CACHE && k !== CONTENT)
+  e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k.startsWith("robin-") && !KEEP.includes(k))
     .map((k) => caches.delete(k)))).then(() => self.clients.claim()));
 });
 
@@ -40,9 +46,40 @@ async function networkFirst(e) {
   return Promise.race([net.catch(() => hit), new Promise((res) => setTimeout(() => res(hit), TIMEOUT))]);
 }
 
+// A picture or font file never changes at its URL: answer from the cache, else fetch it with CORS (these hosts allow it)
+// so the cache holds a real response rather than an opaque one, which browsers count as megabytes against the quota.
+// If the CORS request fails, the browser's own request goes ahead uncached.
+async function kept(e, name) {
+  const c = await caches.open(name);
+  const hit = await c.match(e.request.url);
+  if (hit) return hit;
+  let r;
+  try { r = await fetch(e.request.url, { mode: "cors", credentials: "omit", referrerPolicy: "no-referrer" }); }
+  catch { return fetch(e.request); }
+  if (r.ok) e.waitUntil(c.put(e.request.url, r.clone()).then(() => trim(c, LIMIT[name])).catch(() => {}));
+  return r;
+}
+// The Google Fonts stylesheet can change (new font files): answer from the cache at once and refresh it behind.
+async function revalidated(e, name) {
+  const c = await caches.open(name);
+  const hit = await c.match(e.request.url);
+  const net = fetch(e.request.url, { mode: "cors", credentials: "omit" })
+    .then(async (r) => { if (r.ok) await c.put(e.request.url, r.clone()).catch(() => {}); return r; });
+  e.waitUntil(net.catch(() => {}));
+  return hit || net.catch(() => fetch(e.request));
+}
+async function trim(c, max) {
+  const keys = await c.keys(); // in the order they were stored
+  for (const k of keys.slice(0, Math.max(0, keys.length - max))) await c.delete(k);
+}
+
 self.addEventListener("fetch", (e) => {
   const u = new URL(e.request.url);
-  if (e.request.method !== "GET" || u.origin !== location.origin || !u.pathname.startsWith(ROOT)) return;
+  if (e.request.method !== "GET") return;
+  if (IMAGE_HOSTS.has(u.hostname)) return e.respondWith(kept(e, IMAGES));
+  if (u.hostname === "fonts.gstatic.com") return e.respondWith(kept(e, FONTS));
+  if (u.hostname === "fonts.googleapis.com") return e.respondWith(revalidated(e, FONTS));
+  if (u.origin !== location.origin || !u.pathname.startsWith(ROOT)) return;
   const p = u.pathname.slice(ROOT.length);
   // Other pages (oauth/spotify/callback) are left to the network.
   if (e.request.mode === "navigate") { if (p === "" || p === "index.html") e.respondWith(appPage(e.request)); }

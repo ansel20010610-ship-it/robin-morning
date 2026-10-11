@@ -513,3 +513,11 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
 .set details.more summary { cursor: pointer; font-family: var(--sans); font-size: 13px; color: var(--gold); margin-top: 10px; }
 
 .body h2 { scroll-margin-top: calc(60px + env(safe-area-inset-top)); }
+
+/* A picture that could not load (offline, or the host refused): keep its box, hide the broken icon. */
+img.img-off { visibility: hidden; }
+:is(.frame, .ph, .th, .vi):has(> img.img-off) { position: relative; }
+:is(.frame, .ph):has(> img.img-off)::after {
+  content: "圖片暫時無法顯示"; position: absolute; inset: 0; display: grid; place-items: center;
+  font-family: var(--sans); font-size: 12px; letter-spacing: .08em; color: var(--muted);
+}

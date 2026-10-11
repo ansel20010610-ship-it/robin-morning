@@ -7,6 +7,7 @@
 - 牙周病學與牙周植體學史上被大量引用、改變觀念或臨床做法的論文。例：實驗性牙齦炎（Löe 1965）、牙周病自然病程（Löe 1986 斯里蘭卡）、致病機轉（Page & Schroeder 1976）、紅色複合菌群（Socransky 1998）、維護治療與牙齒喪失（Hirschfeld & Wasserman 1978；Axelsson & Lindhe）、臨界探測深度（Lindhe 1982）、GTR（Nyman 1982）、生物寬度（Gargiulo 1961）、牙齦退縮分類（Miller 1985；Cairo 2011）、2017 世界研討會分類（Papapanou 2018；Tonetti 2018）、植體周圍病（Berglundh 2018）、牙周與全身疾病的關聯研究等。
 - 跑 `python3 scripts/ledger.py --column perio` 查已導讀過的 DOI，不重複。
 - **必須核對**：PubMed 或期刊官網的書目資料（作者、年份、期刊、卷期頁、DOI、PMID）。讀得到全文或摘要才寫；只讀到摘要時在文中寫明「本文依摘要與後續文獻整理」。
+- **怎麼讀到書目與摘要**：pubmed.ncbi.nlm.nih.gov 的網頁用 WebFetch 常只拿到「請啟用 Cookie」的空頁，改用 Bash 呼叫公開 API：`curl -s "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=<PMID>&rettype=abstract&retmode=text"`（PubMed 摘要）、`curl -s "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:<DOI>&resultType=core&format=json"`（Europe PMC：PMID、摘要、開放全文連結）、`curl -s "https://api.crossref.org/works/<DOI>"`（卷期頁）。用 DOI 查到的 PMID 要再用 efetch 回查一次標題，確認是同一篇。
 
 ## 結構（小標題可依內容微調，但順序不變）
 1. 開頭：這篇論文回答什麼問題，為什麼那時候需要回答它。

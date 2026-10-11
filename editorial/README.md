@@ -21,7 +21,7 @@
 2. **讀規則**（每次都讀，不憑記憶）：`editorial/STYLE.md`、`editorial/SCHEMA.md`、`editorial/IMAGES.md`、`editorial/LESSONS.md`（編輯部教訓，過去反覆出現的錯）、`editorial/columns/<欄位>.md`。
 3. **分工**：本班有兩篇以上時，用 Agent 工具為每一欄各派一個子代理**同時**撰寫。給子代理的指示要包含：專案路徑、日期、欄位、要先讀的規則檔、第 4–7 步、只寫自己那一個檔、不要 git commit。你負責第 8–10 步。第 5 班一律平行。
 4. **查重**：`python3 scripts/ledger.py --column <欄位>`、`python3 scripts/ledger.py --images`（已含備稿用過的主題與圖片）。
-5. **研究與核對**：用 WebSearch、WebFetch 找原始來源。數字、日期、人名、引文都要能在來源找到，找不到就不寫。雲端的 WebSearch 結果常混入內容農場：搜尋時盡量用 `allowed_domains` 限定可信網域，或直接用 WebFetch 打開已知來源。
+5. **研究與核對**：用 WebSearch、WebFetch 找原始來源。數字、日期、人名、引文都要能在來源找到，找不到就不寫。雲端的 WebSearch 結果常混入內容農場：搜尋時盡量用 `allowed_domains` 限定可信網域，或直接用 WebFetch 打開已知來源。注意：`allowed_domains` 裡只要有一個網站封鎖了我們的抓取程式，整次搜尋就會報錯（400 “not accessible to our user agent”）——遇到這個錯誤就把該網域拿掉重搜，不要放棄搜尋；已知不可用的網站列在 `columns/football.md`。
 6. **找圖**：`python3 scripts/commons.py --search "<關鍵字>"`、`python3 scripts/commons.py "File:<檔名>"`。依 `IMAGES.md`。
 7. **寫稿並驗證**：寫到 `content/issues/<日期>/<欄位>.json`，跑 `python3 scripts/validate.py <日期> --column <欄位> --check-urls`，修到沒有 ERROR。
 8. **審稿（必做）**：每篇另派一個**新的**子代理當審稿編輯，不可由寫稿者自己審。指示它：以懷疑的態度核對至少 8 個關鍵事實與所有直接引文（打開原始來源逐字比對）、用 `commons.py` 核對每張圖的授權與圖說、逐條檢查欄位規格與 `STYLE.md`、找出把推論寫成事實的地方；只回報有證據的問題，不改檔案。
