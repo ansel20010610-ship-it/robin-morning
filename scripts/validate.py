@@ -125,6 +125,14 @@ def validate_file(cfg, d, col, path, check_urls=False, used_images=None, used_to
 
 
 def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
+    # A day's article and a reserve written at the same time can pick the same topic or picture. The day's article
+    # stands; the reserve gives way (reserve.py lists it as needing a fix, and the reserve shift fixes those first).
+    def clash(other, msg):
+        if str(d) != "reserve" and str(other).startswith("備稿"):
+            W(msg + "；以刊出稿為準，這篇備稿要改（reserve.py 會列為需修正）")
+        else:
+            E(msg)
+
     if col not in cfg["columns"]:
         E("欄位代號 %s 不在 config.json" % col)
     if art.get("column") != col:
@@ -161,7 +169,7 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
     if tk and not tk.startswith(col + ":"):
         E("topic_key 要以「%s:」開頭" % col)
     if tk and used_topics is not None and topic_norm(tk) in used_topics:
-        E("topic_key 已在 %s 用過：%s" % (used_topics[topic_norm(tk)], tk))
+        clash(used_topics[topic_norm(tk)], "topic_key 已在 %s 用過：%s" % (used_topics[topic_norm(tk)], tk))
 
     is_watch = col in ("fm-watch", "cosmere-watch")
     undetermined = is_watch and art.get("status") == "undetermined"
@@ -258,7 +266,7 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
                 E("%s 同一張圖重複出現（請用 detail）：%s" % (where, key))
             seen_in_article[key] = where
             if key and used_images is not None and key in used_images:
-                E("%s 圖片已在 %s 用過：%s" % (where, used_images[key], key))
+                clash(used_images[key], "%s 圖片已在 %s 用過：%s" % (where, used_images[key], key))
             elif key and used_images:
                 near = near_duplicate(key, used_images)
                 if near:
