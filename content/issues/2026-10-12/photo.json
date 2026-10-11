@@ -1,0 +1,404 @@
+{
+  "column": "photo",
+  "date": "2026-10-12",
+  "title": "沙塵裡的三個人：羅斯坦 1936 年的錫馬龍郡",
+  "dek": "1936 年 4 月，羅斯坦在奧克拉荷馬拍下一個父親與兩個孩子走過沙塵。先看沙怎樣擦掉遠景，再看這張照片的底片為何早已不在。",
+  "topic_key": "photo:rothstein-lc-usf34-004052",
+  "updated_at": "2026-10-11T13:45:24+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Farmer_and_sons_walking_in_the_face_of_a_dust_storm%2C_Cimarron_County%2C_Oklahoma%2C_00241u.tif/lossy-page1-1280px-Farmer_and_sons_walking_in_the_face_of_a_dust_storm%2C_Cimarron_County%2C_Oklahoma%2C_00241u.tif.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Farmer_and_sons_walking_in_the_face_of_a_dust_storm%2C_Cimarron_County%2C_Oklahoma%2C_00241u.tif/lossy-page1-3840px-Farmer_and_sons_walking_in_the_face_of_a_dust_storm%2C_Cimarron_County%2C_Oklahoma%2C_00241u.tif.jpg",
+    "width": 1280,
+    "height": 1263,
+    "alt": "近正方形的黑白照片，裱在深灰色卡紙上。上半部是一片均勻的灰色天空，看不到地平線。畫面左中是一間低矮的木板棚屋，屋頂鋪著波浪鐵皮，牆上貼著一塊破掉的深色布或油氈。棚屋右側，一名戴寬邊帽、穿深色外套的男人彎著身子大步往右走，旁邊一個淺色頭髮的男孩跟著走。更右邊一個較小的孩子單獨走著，一隻手臂抬起擋在臉前。前景是一片沙地，幾根木樁只露出頂端，有的斷裂，一根纏著鐵絲。",
+    "caption": "亞瑟・羅斯坦《迎著沙塵暴走路的農夫與兒子》，1936 年 4 月，奧克拉荷馬州錫馬龍郡。這是國會圖書館 FSA 檔案中的相紙印樣（數位檔 ppmsc 00241）；原始底片已不存，本文的觀察以這個版本為準。",
+    "credit": "Arthur Rothstein 攝；美國國會圖書館印刷與攝影部，FSA/OWI 攝影典藏（LC-USF34-004052；數位檔 LC-DIG-ppmsc-00241）；影像取自 Wikimedia Commons",
+    "license": "Public domain（美國聯邦政府作品；國會圖書館標示 No known restrictions on images made by the U.S. government）",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Farmer_and_sons_walking_in_the_face_of_a_dust_storm,_Cimarron_County,_Oklahoma,_00241u.tif",
+    "made": "底片 1936 年 4 月；印樣年代未載"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "這張照片的原始底片已經不在了。美國國會圖書館的館藏目錄引了 1952 年 11 月號《國會圖書館新進館藏季刊》的一段話：這張底片被拿去放印的次數太多，最後再也印不出照片，館方只好丟棄；攝影師亞瑟・羅斯坦（Arthur Rothstein）用他自己手上的一張好印樣，替館方翻拍了一張新底片。今天在網路上流傳的版本，都得從這段經過往回追。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "下面先只看國會圖書館 FSA 檔案裡的那張相紙印樣：看得見什麼、亮暗怎麼分布、人站在哪裡。接著談沙塵怎樣改寫了這張照片的構圖，再看同一批底片裡天晴時拍的另一格，最後回到名字與版本：照片裡的人是誰，我們看到的又是哪一次放印。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "攝影師",
+          "亞瑟・羅斯坦（Arthur Rothstein，1915–1985），當時任職美國移墾管理局（Resettlement Administration）攝影組"
+        ],
+        [
+          "題名",
+          "Farmer and sons walking in the face of a dust storm. Cimarron County, Oklahoma（依圖說卡；本文譯作《迎著沙塵暴走路的農夫與兒子》）"
+        ],
+        [
+          "拍攝時間",
+          "1936 年 4 月（目錄未記日）"
+        ],
+        [
+          "地點",
+          "美國奧克拉荷馬州錫馬龍郡（Cimarron County）"
+        ],
+        [
+          "館藏號",
+          "LC-USF34-004052；對應印樣歸入 LOT 521"
+        ],
+        [
+          "原始底片",
+          "目錄註記 1986 年 8 月已不在架上，2026 年 6 月依 1952 年的刊載確認已丟棄"
+        ],
+        [
+          "現存數位檔",
+          "ppmsc 00241（FSA 檔案中的印樣）、cph 3a53274（羅斯坦後來一張印樣的翻拍底片，LC-USZ62-11491）、cph 3g04840（FSA 印樣的彩色翻拍正片）"
+        ],
+        [
+          "收藏",
+          "美國國會圖書館印刷與攝影部，FSA/OWI 攝影典藏；1944 年由戰時新聞局移交"
+        ],
+        [
+          "權利",
+          "美國聯邦政府作品；館方標示 No known restrictions on images made by the U.S. government"
+        ],
+        [
+          "相機與曝光",
+          "目錄未記載，本文不推測"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "先看畫面：天空、棚屋、三個人、木樁"
+    },
+    {
+      "type": "p",
+      "text": "印樣接近正方形，四周留著深灰色的卡紙邊，邊緣散布幾個小白點。畫面上方將近一半是灰色的天空，從上到下幾乎是同一種灰，看不到雲的輪廓。天和地之間沒有清楚的地平線：只有在畫面右側，一排細細的柱子和鐵絲連成的線，讓人勉強分得出地面在哪裡結束。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "畫面左中是一間低矮的木板棚屋，佔去畫面寬度約四成。屋頂鋪著波浪鐵皮，上面壓著幾條深色的木條，屋脊上擱著一個方形的箱子。正面牆上釘著一塊破掉的深色布料或油氈，旁邊是一扇木門。棚屋底部看不到地基，木板直接沒入沙裡；左端的牆比右端更淡，輪廓和背後的灰色混在一起。",
+      "tag": "可見"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.05,
+        0.44,
+        0.43,
+        0.22
+      ],
+      "position": "畫面左中，約佔寬度四成",
+      "caption": "棚屋的鐵皮屋頂、牆上破掉的深色覆蓋物與木門。木板下緣直接埋進沙裡，左端的牆比右端淡。"
+    },
+    {
+      "type": "p",
+      "text": "棚屋右側有三個人。一個戴寬邊帽、穿深色外套和淺色長褲的男人，上身往前傾、頭低著，正跨出一大步往右走；他的左手邊、離鏡頭較近的位置，一個淺色頭髮、沒戴帽子的男孩跟著同方向走。兩人身後是一道木頭圍欄。男人的深色外套是整張照片裡面積最大的一塊暗色。",
+      "tag": "可見"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.52,
+        0.44,
+        0.17,
+        0.23
+      ],
+      "position": "畫面中央偏右，約佔寬度六分之一",
+      "caption": "男人低頭、前傾，帽簷朝下；旁邊的男孩沒戴帽子。兩人的步伐都朝畫面右方。"
+    },
+    {
+      "type": "p",
+      "text": "更右邊，隔著一段空沙地，還有一個更小的孩子單獨走著。他的右臂抬起橫在臉前，頭部是一團深色，看不清是頭髮還是帽子；另一隻手垂在身側。他和前面兩人之間沒有任何東西，只有沙。",
+      "tag": "可見"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.76,
+        0.52,
+        0.12,
+        0.16
+      ],
+      "position": "畫面右側中段，約佔寬度八分之一",
+      "caption": "最小的孩子抬起手臂擋在臉前，和前面兩人隔著一段距離。腳邊有一道淡淡的影子。"
+    },
+    {
+      "type": "p",
+      "text": "前景下方三分之一幾乎全是沙。幾根木樁從沙裡露出頂端，有的斷成斜口，有一根纏著鐵絲和一團枯枝。放大看，木樁和小孩腳邊都有一道很淡的影子，朝畫面左方延伸。",
+      "tag": "可見"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.64,
+        0.58,
+        0.3,
+        0.16
+      ],
+      "position": "畫面右下，約佔寬度三成",
+      "caption": "露出沙面的木樁，一根纏著鐵絲與枯枝。木樁左側可見淡影，表示當時仍有微弱的陽光從畫面右方照來。"
+    },
+    {
+      "type": "h",
+      "text": "沙塵把遠景擦掉，畫面只剩前景的人"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是：這張照片的構圖，有一半是空氣裡的沙完成的。越遠的東西越淡，所以棚屋左端比右端模糊，地平線則完全消失。沒有遠景，眼睛就找不到可以停下來的遠處，只能回到畫面裡最暗、最清楚的東西，也就是男人的深色外套和帽子。整張照片的明暗範圍很窄，大部分是中間灰，這塊暗色因此特別突出。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "位置也在幫忙。男人大約落在畫面寬度六成、高度一半的地方，上方是將近半幅的空白天空，下方是三分之一的空沙地。人物被夾在兩大片沒有細節的灰色之間，看起來比實際的比例更小。由此推想，如果天氣晴朗、遠方的田地和房舍都清楚可見，同樣的站位不會給人這麼孤立的感覺；下一節那張天晴時的照片可以拿來對照。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "另一個讀法和那段空隙有關。父親和大一點的男孩走在一起，最小的孩子卻落在右邊，身邊沒有大人。從左下角的斷木樁到右邊的柱子，一排木樁的頂端把視線往右帶，帶到這個抬手擋臉的孩子身上。這些木樁原本有多高，照片沒有交代，但它們露出沙面的長短，讓人不讀圖說也能猜到地面已經被沙堆高了。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "單張照片也有它說不出的事。圖說卡寫的是「迎著沙塵暴走路」，最小的孩子抬手擋臉的姿勢和這句話一致；但風從哪個方向吹、三個人走了多遠、男人回頭了沒有，一格靜止的畫面都無法回答。木樁的淡影只說明當時還有一點日光穿過沙塵，不能用來推算時刻。國會圖書館的目錄也沒有記載羅斯坦用的相機、鏡頭和曝光，本文不推測。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "同一批底片：天晴時拍的另一格"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "photo",
+      "src": "https://tile.loc.gov/storage-services/service/pnp/fsa/8b38000/8b38200/8b38283v.jpg",
+      "width": 1024,
+      "height": 994,
+      "alt": "黑白底片的完整畫面，四周是黑色片邊，右緣有反寫的編號 RA 4047-E。一個穿吊帶工作褲、戴條紋布帽的男孩側身站在前景，用袖子摀住口鼻、低著頭。背後是一片平坦的沙地，遠處有一間小木屋，天空明亮，男孩腳邊的沙地上有一塊深色陰影。",
+      "caption": "羅斯坦，《這個農家孩子受不了沙塵》（Dust is too much for this farmer's son），1936 年 4 月，錫馬龍郡，館藏號 LC-USF34-004047-E。國會圖書館由原始底片數位化（fsa 8b38283），保留了片邊與手寫底片號。圖說卡沒有寫這個男孩的名字，本文不認定他和頭圖是同一人。",
+      "credit": "Arthur Rothstein 攝；美國國會圖書館印刷與攝影部，FSA/OWI 攝影典藏",
+      "license": "Public domain（美國聯邦政府作品；國會圖書館標示 No known restrictions on images made by the U.S. government）",
+      "license_url": "",
+      "source_url": "https://www.loc.gov/item/2017760331/",
+      "made": "1936 年 4 月"
+    },
+    {
+      "type": "p",
+      "text": "這格底片的館藏號是 LC-USF34-004047-E，和頭圖的 004052 只差五號，兩者的印樣都歸在 LOT 521。國會圖書館對 LOT 521 的著錄是「Cimarron County, Oklahoma. April, 1936. Dust Bowl」，共 44 張印樣，由桃樂絲・蘭格（Dorothea Lange）與羅斯坦拍攝，摘要列出「沙塵暴進行中」「農夫與孩子走向棚屋」「雞群躲避」等畫面。目錄只記到月份，沒有記這幾格是否同一天拍攝。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "兩張並排，差別一眼可見。這一格的天空是亮白色，遠方的木屋輪廓清楚，男孩腳邊的影子又黑又硬；頭圖的影子則淡到要放大才看得見。這格底片也保留了片邊：畫面接近正方形，右緣有反寫的「RA 4047-E」，RA 是移墾管理局的縮寫。頭圖那張印樣看不到片邊，因為它是從已經丟棄的底片放印、再裱上卡紙的。",
+      "tag": "可見"
+    },
+    {
+      "type": "h",
+      "text": "名字在二十五年後才回到照片上"
+    },
+    {
+      "type": "p",
+      "text": "1936 年的圖說卡只寫「農夫與兒子」，沒有名字。國會圖書館另藏有《展望》（Look）雜誌的攝影檔案，其中一筆工作紀錄寫著：1961 年 6 月 27 日，羅斯坦回到錫馬龍郡，拍下 38 歲的米爾頓・科布爾（Milton Coble）帶著兒子比爾，走過他家曾經擁有的田地，意在重現 25 年前那張照片；著錄說明，當年的照片拍的是還是孩子的米爾頓、他的父親亞瑟（Arthur）和弟弟達瑞爾（Darrel）。其中一張刊在 1961 年 10 月 24 日出版的《展望》第 25 卷第 22 期第 41 頁，標題是〈The dust bowl turns to gold〉。這批《展望》照片館方標示可能有權利限制，本文不轉載。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "奧克拉荷馬市《405 Magazine》2013 年 3 月 25 日刊出攝影師 M. J. 亞歷山大（M.J. Alexander）的報導，補上更多細節：亞瑟・科布爾 1896 年生於伊利諾州，1956 年過世；米爾頓是哥哥，達瑞爾當時還不滿 3 歲；一家人在租來的地上耕作。報導也提到，一直有人懷疑這張照片是安排過的，但科布爾家人與羅斯坦始終堅持那是當場拍下的一刻。報導轉引羅斯坦在 1961 年《展望》訪談裡的話：「One photograph, one shot, one negative.」（一張照片，一次按快門，一張底片；本文自譯）。這句話本文未能查到《展望》原刊核對。",
+      "tag": "報導"
+    },
+    {
+      "type": "p",
+      "text": "國會圖書館 2026 年 4 月的部落格文章裡，印刷與攝影部的泰倫・烏勒特（Taren Ouellette）說，羅斯坦「據說」是用當天相機裡的最後一格拍下這個場景。她用了「據說」，本文也照樣保留這層不確定。我的讀法是：這些說法都來自事後的回憶與轉述，照片本身既不能證明、也不能否定它沒有經過安排；它能提供的，只有前面看到的那些姿勢、距離與影子。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "底片印到報廢：今天看到的是哪一次放印"
+    },
+    {
+      "type": "quote",
+      "original": "One of the negatives, showing a farmer and his two little sons walking in the face of the storm, was used so many times that eventually prints could no longer be made from it. Mr. Rothstein very generously made a good copy negative from his own perfect print to replace the Library's discarded one.",
+      "text": "其中一張底片拍的是一個農夫和他的兩個小兒子迎著風暴走路，因為被使用了太多次，最後再也無法從它放印照片。羅斯坦先生很慷慨地用他自己一張完好的印樣，翻拍了一張品質良好的底片，取代館方已丟棄的那一張。",
+      "cite": "《國會圖書館新進館藏季刊》（Library of Congress Quarterly Journal of Current Acquisitions），1952 年 11 月，第 60 頁；轉引自國會圖書館館藏目錄。本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "國會圖書館目錄因此替同一張照片列了三個數位檔：ppmsc 00241，掃描自 FSA 檔案裡的那張印樣，也就是本文頭圖；cph 3a53274，掃描自羅斯坦後來那張印樣的黑白翻拍底片（複製號 LC-USZ62-11491）；cph 3g04840，則是 FSA 印樣的彩色翻拍正片。目錄另有兩條內部註記：1986 年 8 月，原始底片「不在架上，可能已不存在」；2026 年 6 月，依 1952 年那段刊載確認底片已被丟棄。",
+      "tag": "史實"
+    },
+    {
+      "type": "figure",
+      "id": "f3",
+      "kind": "photo",
+      "src": "https://tile.loc.gov/storage-services/service/pnp/cph/3a50000/3a53000/3a53200/3a53274v.jpg",
+      "width": 1024,
+      "height": 830,
+      "alt": "同一張照片的另一個版本，四周是翻拍底片的白色片邊，左右兩側各有一排打孔。畫面內容和頭圖相同：左側棚屋、中間的男人與男孩、右邊抬手擋臉的小孩、前景木樁。整體色調比頭圖淺，天空與沙地接近淺灰白色。",
+      "caption": "國會圖書館數位檔 cph 3a53274：從羅斯坦後來的一張印樣翻拍的黑白底片（LC-USZ62-11491）。片邊的打孔屬於翻拍用的底片，不是 1936 年拍攝時的底片。這張後來的印樣由羅斯坦在何時放大，目錄沒有記載。",
+      "credit": "Arthur Rothstein 攝；美國國會圖書館印刷與攝影部，FSA/OWI 攝影典藏",
+      "license": "Public domain（美國聯邦政府作品；國會圖書館標示 No known restrictions on images made by the U.S. government）",
+      "license_url": "",
+      "source_url": "https://www.loc.gov/resource/cph.3a53274/",
+      "made": "原攝 1936 年 4 月；翻拍年代未載"
+    },
+    {
+      "type": "p",
+      "text": "把這個版本和頭圖並排，取景幾乎一樣：棚屋、男人、小孩與木樁在畫面中的相對位置都對得上。不同的是色調。翻拍版的天空和沙地更白，棚屋的木板與男人的外套沒有頭圖那麼深，前景沙地上的紋理也比較少。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，讀者心中「沙塵有多濃」的印象，有一部分取決於看到的是哪一次放印、哪一次翻拍。Wikimedia Commons 上還有好幾個標示出自 ppmsc 00241 的檔案，有的裁掉了卡紙邊，有的調成較暖的褐色。它們都源自同一張印樣，但沒有一張是 1936 年那張底片本身：那張底片在 1952 年以前，就因為被印了太多次而報廢。",
+      "tag": "推論"
+    },
+    {
+      "type": "timeline",
+      "title": "一張照片與它的底片",
+      "items": [
+        {
+          "when": "1935 年",
+          "label": "羅斯坦受僱",
+          "note": "羅伊・史崔克（Roy Stryker）在移墾管理局成立攝影組，僱用曾在哥倫比亞大學受教於他的羅斯坦（國際攝影中心 ICP）"
+        },
+        {
+          "when": "1936.4",
+          "label": "錫馬龍郡拍攝",
+          "note": "底片號 LC-USF34-004052；同批底片號 4029–4108"
+        },
+        {
+          "when": "1944 年",
+          "label": "移交國會圖書館",
+          "note": "由戰時新聞局海外圖片處移交"
+        },
+        {
+          "when": "1952.11",
+          "label": "底片報廢的記載",
+          "note": "館方季刊記載原底片無法再放印、已丟棄；羅斯坦以自己的印樣翻拍新底片"
+        },
+        {
+          "when": "1961.6.27",
+          "label": "羅斯坦重訪",
+          "note": "為《展望》雜誌拍攝 38 歲的米爾頓・科布爾與兒子；同年 10 月 24 日刊出"
+        },
+        {
+          "when": "1986.8",
+          "label": "底片不在架上",
+          "note": "目錄註記「可能已不存在」"
+        },
+        {
+          "when": "2026.6",
+          "label": "確認已丟棄",
+          "note": "目錄依 1952 年刊載補記"
+        }
+      ],
+      "caption": "依國會圖書館館藏目錄與 ICP 資料整理。"
+    },
+    {
+      "type": "exercise",
+      "title": "原創假設練習：讓天氣替你刪掉遠景",
+      "steps": [
+        "挑一個有霧、霾或大雨的日子，找一處平常能看到遠方建築或山的開闊地點。",
+        "先不拍。記下哪些東西在這天看不見了、哪些變淡了，以及畫面裡最暗的是什麼。",
+        "請一位同意入鏡的人，或放一個深色物件，放在畫面寬度約六成、高度約一半的位置，上方留大片天空。",
+        "拍一張；等到晴天，在同一地點、同一站位再拍一張。",
+        "把兩張並排，比較三件事：地平線看不看得到、最暗的區塊在哪裡、人或物件看起來有多孤立。"
+      ],
+      "criteria": [
+        "能指出霧或霾天那張照片裡，哪些遠景被抹去或變淡。",
+        "能說明兩張照片中，視線第一眼落在哪裡，並用明暗解釋原因。",
+        "描述時分清楚哪些是照片裡看得見的，哪些是自己的感受或推測。"
+      ],
+      "note": "這是本報設計的原創練習，不是羅斯坦的工作方法。不要在沙塵暴、颱風或能見度極低的天氣外出拍攝；在公共場所拍攝時，避免拍下可辨識的陌生人正面。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Farmer and sons walking in the face of a dust storm. Cimarron County, Oklahoma",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "date": "1936-04",
+      "url": "https://www.loc.gov/item/2017760335/",
+      "note": "館藏目錄（以 loc.gov JSON 介面讀取）：館藏號、三個數位檔與複製號、1952 年季刊引文、1944 年移交、1986 與 2026 年底片註記"
+    },
+    {
+      "title": "數位檔 ppmsc 00241（FSA 檔案中的印樣）",
+      "publisher": "Library of Congress",
+      "url": "https://hdl.loc.gov/loc.pnp/ppmsc.00241",
+      "note": "頭圖所據版本"
+    },
+    {
+      "title": "數位檔 cph 3a53274（羅斯坦後來印樣的翻拍底片）",
+      "publisher": "Library of Congress",
+      "url": "https://www.loc.gov/resource/cph.3a53274/",
+      "note": "正文版本比較圖；圖檔取自館方 tile.loc.gov 參考影像（1024 × 830）"
+    },
+    {
+      "title": "File:Farmer and sons walking in the face of a dust storm, Cimarron County, Oklahoma, 00241u.tif",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Farmer_and_sons_walking_in_the_face_of_a_dust_storm,_Cimarron_County,_Oklahoma,_00241u.tif",
+      "note": "頭圖檔案；標示 Public domain，出自國會圖書館 ppmsc.00241"
+    },
+    {
+      "title": "Dust is too much for this farmer's son in Cimarron County, Oklahoma",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "date": "1936-04",
+      "url": "https://www.loc.gov/item/2017760331/",
+      "note": "館藏號 LC-USF34-004047-E；數位檔 fsa 8b38283（由原始底片）"
+    },
+    {
+      "title": "Cimarron County, Oklahoma. April, 1936. Dust Bowl（LOT 521）",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "url": "https://www.loc.gov/item/2004674127/",
+      "note": "44 張印樣、拍攝者蘭格與羅斯坦、底片號 4029–4108、內容摘要"
+    },
+    {
+      "title": "Cimarron County, Oklahoma (dustbowl)（LOOK Job 61-9380）",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "date": "1961-06-27",
+      "url": "https://www.loc.gov/item/2016715937/",
+      "note": "羅斯坦 1961 年重訪；米爾頓、亞瑟、達瑞爾・科布爾的身分；刊於 Look 第 25 卷第 22 期第 41 頁；權利可能受限"
+    },
+    {
+      "title": "Oklahoma's True Grit Dust Bowl Family, 77 Years Later",
+      "publisher": "405 Magazine（M.J. Alexander）",
+      "date": "2013-03-25",
+      "url": "https://www.405magazine.com/oklahomas-true-grit-dust-bowl-family-77-years-later",
+      "note": "科布爾一家生卒年、租地耕作、對擺拍質疑的回應；轉引羅斯坦 1961 年《展望》訪談"
+    },
+    {
+      "title": "Finding Pictures: Arthur Rothstein's Photographic Legacy",
+      "publisher": "Library of Congress, Picture This blog（Melissa Lindberg）",
+      "date": "2026-04-08",
+      "url": "https://blogs.loc.gov/picturethis/2026/04/finding-pictures-arthur-rothsteins-photographic-legacy/",
+      "note": "Taren Ouellette：據說是當天相機裡最後一格"
+    },
+    {
+      "title": "FSA and OWI Popular Requests",
+      "publisher": "Library of Congress",
+      "url": "https://www.loc.gov/collections/fsa-owi-black-and-white-negatives/articles-and-essays/fsa-and-owi-popular-requests/",
+      "note": "館方常被索取影像清單，列有本照片（LC-DIG-ppmsc-00241）"
+    },
+    {
+      "title": "Arthur Rothstein",
+      "publisher": "International Center of Photography",
+      "url": "https://www.icp.org/browse/archive/constituents/arthur-rothstein",
+      "note": "1915 年生於紐約、哥倫比亞大學、1935 年由史崔克僱用為首位專職攝影師、1940–1971 年任職《展望》"
+    }
+  ]
+}
