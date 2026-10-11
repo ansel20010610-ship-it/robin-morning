@@ -162,6 +162,14 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
     ua = art.get("updated_at")
     if isinstance(ua, str) and ua.strip() and not re.match(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:\d{2})$", ua):
         E("updated_at 需含時區，例如 2026-10-11T06:40:00+08:00（目前：%s）" % ua)
+    elif isinstance(ua, str) and ua.strip():
+        # The news window of the next Barça update starts here, so a guessed (future) time hides news.
+        try:
+            when = dt.datetime.fromisoformat(ua.replace("Z", "+00:00"))
+        except ValueError:
+            when = None
+        if when and when > dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=10):
+            E("updated_at（%s）晚於現在：填實際完稿時間，用 TZ=Asia/Taipei date +%%Y-%%m-%%dT%%H:%%M:00+08:00" % ua)
     title = art.get("title") if isinstance(art.get("title"), str) else ""
     dek = art.get("dek") if isinstance(art.get("dek"), str) else ""
     if len(title) > 32:
