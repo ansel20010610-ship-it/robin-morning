@@ -1,0 +1,503 @@
+{
+  "column": "art",
+  "date": "reserve",
+  "reserve_written": "2026-10-11",
+  "title": "《阿諾菲尼肖像》：鏡子裡走進來的兩個人",
+  "dek": "范艾克 1434 年的雙人肖像，牆上寫著「揚・范艾克曾在此」。順著手、鏡子、吊燈與地板看，再問：這兩人是誰，畫的真是婚禮嗎？",
+  "topic_key": "art:nglondon-ng186",
+  "updated_at": "2026-10-11T13:23:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Van_Eyck_-_Arnolfini_Portrait.jpg/1280px-Van_Eyck_-_Arnolfini_Portrait.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Van_Eyck_-_Arnolfini_Portrait.jpg/3840px-Van_Eyck_-_Arnolfini_Portrait.jpg",
+    "width": 1280,
+    "height": 1751,
+    "alt": "一間木地板的房間。左邊一名男子戴寬簷黑色大帽、穿深紫褐色毛邊長袍，右手舉起；右邊一名女子披白色頭紗、穿綠色長裙，把右手放在他伸出的左掌上。兩人之間的後牆掛著一面圓形凸面鏡和一串珠子，鏡子上方有一行花體字，天花板垂下金黃色吊燈。左邊是窗戶，窗台和木箱上有橘子；右邊是紅色床帳；地板上有一隻棕色小狗和一雙木底套鞋。",
+    "caption": "揚・范艾克《阿諾菲尼肖像》全幅，1434 年，木板油畫，畫面 82.2 × 60 公分，倫敦國家美術館藏，NG186。影像只含畫面，不含畫框與未上色的木板邊緣。後文的局部都從這張圖放大。",
+    "credit": "揚・范艾克；倫敦國家美術館藏，NG186；數位影像經 Wikimedia Commons，來源註明為國家美術館網站",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Van_Eyck_-_Arnolfini_Portrait.jpg",
+    "made": "1434"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1516 年 7 月 17 日，奧地利的瑪格麗特（Margaret of Austria）在梅赫倫（Mechelen）的宮中當面清點畫作。清單第一件是一幅「大畫」，由迪耶戈・德・格瓦拉（Diego de Guevara）所贈，畫家記作 Johannes；頁邊註明得加一把鎖把它關起來，夫人已下令照辦。"
+    },
+    {
+      "type": "quote",
+      "original": "ung grant tableau qu’on appelle Hernoul le Fin avec sa femme dedens une chambre",
+      "text": "一幅大畫，人稱 Hernoul le Fin 與他的妻子，在一個房間裡。",
+      "cite": "瑪格麗特 1516 年畫作清單，法文據倫敦國家美術館坎貝爾目錄註 3 轉錄；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "這件畫就是倫敦國家美術館（The National Gallery）館藏 NG186，揚・范艾克（Jan van Eyck）1434 年的雙人肖像。館方給它的全名是 Portrait of Giovanni(?) Arnolfini and his Wife：男人的名字後面帶著問號，女人沒有名字。它也常被稱為 The Arnolfini Marriage（阿諾菲尼的婚禮），這個「婚禮」正是本文要檢查的說法。"
+    },
+    {
+      "type": "p",
+      "text": "以下照一條路線看畫：手、簽名與鏡子、吊燈、窗邊、地板，再回到這兩人是誰、畫的是不是婚禮。主要依據是國家美術館作品頁、坎貝爾（Lorne Campbell）為該館編寫的目錄（1998 年出版，2021 年增補），以及他和比林奇（Rachel Billinge）1995 年的紅外線反射成像報告。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作者",
+          "揚・范艾克，國家美術館記為活動於 1422 年、卒於 1441 年"
+        ],
+        [
+          "題名",
+          "The Arnolfini Portrait（《阿諾菲尼肖像》）；館方全名 Portrait of Giovanni(?) Arnolfini and his Wife"
+        ],
+        [
+          "年代",
+          "1434 年（畫中署年）"
+        ],
+        [
+          "材料",
+          "木板油畫；館方作品頁作 Oil on wood (probably oak)，坎貝爾目錄記為三塊橡木板拼成、白堊底層"
+        ],
+        [
+          "尺寸",
+          "畫面 82.2 × 60 公分，整塊木板 84.5 × 62.5 公分（坎貝爾目錄）；Commons 檔案頁標 82 × 59.5 公分"
+        ],
+        [
+          "收藏",
+          "倫敦國家美術館 NG186，1842 年購入；館方說是該館第一件尼德蘭繪畫"
+        ],
+        [
+          "歸屬",
+          "有范艾克署名；比林奇與坎貝爾認為底稿與所有修改都出自他本人。畫中人身分未定"
+        ],
+        [
+          "影像",
+          "Wikimedia Commons，標示公有領域（PD-Art），來源註明為國家美術館網站"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "第一眼：舉起的手，相疊的手"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.2,
+        0.275,
+        0.43,
+        0.18
+      ],
+      "position": "畫面中段，從男人舉起的右手到兩人相疊的手，約佔全圖寬度四成、高度不到兩成",
+      "caption": "頭圖局部。左上是男人舉起的右手，手背朝向觀者；右邊是他的左手托著女人的右手，兩隻手的掌心都朝上。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "男人身體正對觀者，頭略轉向畫面右方。他的右手舉在胸前，手背朝外，四指向上；左手伸向畫面中央，掌心朝上，托著女人的右手，她的手也是掌心朝上。女人側身向他，頭微低，左手按在腹前一大把綠色裙料上。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "紅外線反射成像能照出顏料底下的底稿。比林奇與坎貝爾指出，這幾隻手都改過：底稿裡男人的右手較靠左、掌心朝向觀者，左手把女人的手握得更緊；整條右臂後來重畫，兩肩也往下移。他們推測，那隻攤開的手掌原本顯得拒人，畫家決定在鏡中畫出兩位來客之後，才把它轉成較歡迎的姿勢。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "潘諾夫斯基（Erwin Panofsky）1934 年把舉手讀成婚禮宣誓，稱為 fides levata；坎貝爾指出這個術語是潘諾夫斯基自己造的。他舉的對照是約 1400 年在法國繪製的《法蘭西大編年史》（Grandes Chroniques de France）：插圖裡查理曼舉起右手、左手牽著幼子，把他引見給主教。坎貝爾據此認為，阿諾菲尼是在舉手致意，把妻子介紹給鏡中進門的客人。"
+    },
+    {
+      "type": "h",
+      "text": "一條中軸：吊燈、簽名、鏡子"
+    },
+    {
+      "type": "svg",
+      "title": "構圖骨架與本文的觀看順序",
+      "svg": "<svg viewBox=\"0 0 300 411\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs>\n<marker id=\"ngA\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 Z\" class=\"gold\"/></marker>\n</defs>\n<rect x=\"1\" y=\"1\" width=\"298\" height=\"409\" class=\"paper\" stroke-width=\"1\"/>\n<rect x=\"13\" y=\"1\" width=\"25\" height=\"192\" class=\"soft\" stroke-width=\"1\"/>\n<line x1=\"13\" y1=\"62\" x2=\"38\" y2=\"62\" class=\"muted\" stroke-width=\"0.6\"/>\n<rect x=\"3\" y=\"220\" width=\"32\" height=\"76\" class=\"soft\" stroke-width=\"0.8\"/>\n<circle cx=\"31\" cy=\"185\" r=\"2.6\" class=\"gold\" stroke-width=\"0\"/>\n<circle cx=\"19\" cy=\"217\" r=\"2.6\" class=\"gold\" stroke-width=\"0\"/>\n<circle cx=\"25\" cy=\"218\" r=\"2.6\" class=\"gold\" stroke-width=\"0\"/>\n<circle cx=\"31\" cy=\"217\" r=\"2.6\" class=\"gold\" stroke-width=\"0\"/>\n<rect x=\"214\" y=\"1\" width=\"85\" height=\"324\" class=\"soft\" stroke-width=\"1\"/>\n<rect x=\"140\" y=\"165\" width=\"40\" height=\"88\" class=\"soft\" stroke-width=\"0.8\"/>\n<rect x=\"190\" y=\"76\" width=\"22\" height=\"100\" class=\"soft\" stroke-width=\"0.8\"/>\n<rect x=\"159\" y=\"261\" width=\"15\" height=\"64\" class=\"soft\" stroke-width=\"0.6\"/>\n<rect x=\"146\" y=\"255\" width=\"20\" height=\"6\" class=\"accent\" stroke-width=\"0\"/>\n<line x1=\"152\" y1=\"1\" x2=\"152\" y2=\"76\" class=\"muted\" stroke-width=\"2.4\"/>\n<path d=\"M112,52 Q152,86 196,52\" class=\"muted line\" stroke-width=\"1.6\"/>\n<line x1=\"127\" y1=\"29\" x2=\"127\" y2=\"41\" class=\"ink\" stroke-width=\"2\"/>\n<circle cx=\"127\" cy=\"25\" r=\"2.6\" class=\"accent\" stroke-width=\"0\"/>\n<path d=\"M134,84 q6,-7 12,0 t12,0 t12,0\" class=\"ink line\" stroke-width=\"0.9\"/>\n<line x1=\"124\" y1=\"101\" x2=\"124\" y2=\"136\" class=\"gold\" stroke-width=\"2.2\"/>\n<path d=\"M184,98 L178,124 L190,124 Z\" class=\"muted\" stroke-width=\"0.5\"/>\n<circle cx=\"152\" cy=\"122\" r=\"24\" class=\"soft\" stroke-width=\"1\"/>\n<circle cx=\"152\" cy=\"122\" r=\"14\" class=\"paper\" stroke-width=\"1\"/>\n<circle cx=\"149\" cy=\"121\" r=\"1.8\" class=\"ink\" stroke-width=\"0\"/>\n<circle cx=\"154\" cy=\"119\" r=\"1.8\" class=\"accent\" stroke-width=\"0\"/>\n<path d=\"M214,96 C214,70 248,64 257,90 L262,128 L280,250 L299,330 L299,398 L168,398 L178,330 L196,260 L205,170 L207,128 Z\" class=\"soft\" stroke-width=\"1\"/>\n<path d=\"M214,96 C214,70 248,64 257,90 L262,128 L280,250 L299,330 L299,398 L168,398 L178,330 L196,260 L205,170 L207,128 Z\" class=\"ink line\" stroke-width=\"0.8\"/>\n<path d=\"M48,104 L122,104 L138,170 L152,322 L22,322 L38,170 Z\" class=\"soft\" stroke-width=\"1\"/>\n<path d=\"M48,104 L122,104 L138,170 L152,322 L22,322 L38,170 Z\" class=\"ink line\" stroke-width=\"0.8\"/>\n<rect x=\"76\" y=\"322\" width=\"12\" height=\"48\" class=\"muted\" stroke-width=\"0\"/>\n<rect x=\"96\" y=\"322\" width=\"12\" height=\"44\" class=\"muted\" stroke-width=\"0\"/>\n<rect x=\"64\" y=\"46\" width=\"44\" height=\"32\" rx=\"6\" class=\"ink\" stroke-width=\"0\"/>\n<ellipse cx=\"86\" cy=\"80\" rx=\"35\" ry=\"10\" class=\"ink\" stroke-width=\"0\"/>\n<ellipse cx=\"82\" cy=\"94\" rx=\"9\" ry=\"12\" class=\"paper\" stroke-width=\"0.8\"/>\n<ellipse cx=\"231\" cy=\"100\" rx=\"9\" ry=\"12\" class=\"paper\" stroke-width=\"0.8\"/>\n<path d=\"M122,112 L168,172\" class=\"ink line\" stroke-width=\"1.4\"/>\n<path d=\"M206,150 L174,174\" class=\"ink line\" stroke-width=\"1.4\"/>\n<circle cx=\"77\" cy=\"136\" r=\"4.5\" class=\"paper\" stroke-width=\"1\"/>\n<circle cx=\"171\" cy=\"173\" r=\"5\" class=\"paper\" stroke-width=\"1\"/>\n<ellipse cx=\"141\" cy=\"372\" rx=\"28\" ry=\"24\" class=\"soft\" stroke-width=\"1\"/>\n<rect x=\"6\" y=\"352\" width=\"32\" height=\"10\" rx=\"3\" class=\"soft\" stroke-width=\"0.8\"/>\n<rect x=\"4\" y=\"378\" width=\"20\" height=\"22\" rx=\"3\" class=\"soft\" stroke-width=\"0.8\"/>\n<line x1=\"152\" y1=\"2\" x2=\"152\" y2=\"409\" class=\"accent line\" stroke-width=\"1.1\" stroke-dasharray=\"5 3\"/>\n<path d=\"M40,70 L92,96\" class=\"gold line\" stroke-width=\"1.3\" marker-end=\"url(#ngA)\"/>\n<path d=\"M40,160 L198,160\" class=\"gold line\" stroke-width=\"1.3\" marker-end=\"url(#ngA)\"/>\n<g font-size=\"8\" text-anchor=\"middle\">\n<text x=\"25\" y=\"40\" class=\"muted\">窗</text>\n<text x=\"276\" y=\"300\" class=\"muted\">床</text>\n<text x=\"126\" y=\"152\" class=\"muted\">鏡</text>\n<text x=\"158\" y=\"242\" class=\"accent\" text-anchor=\"start\">中軸</text>\n<text x=\"60\" y=\"156\" class=\"gold\">窗光</text>\n</g>\n<g font-size=\"9\" text-anchor=\"middle\">\n<circle cx=\"188\" cy=\"190\" r=\"7\" class=\"paper\" stroke-width=\"1\"/><text x=\"188\" y=\"193\">1</text>\n<circle cx=\"176\" cy=\"74\" r=\"7\" class=\"paper\" stroke-width=\"1\"/><text x=\"176\" y=\"77\">2</text>\n<circle cx=\"180\" cy=\"142\" r=\"7\" class=\"paper\" stroke-width=\"1\"/><text x=\"180\" y=\"145\">3</text>\n<circle cx=\"110\" cy=\"22\" r=\"7\" class=\"paper\" stroke-width=\"1\"/><text x=\"110\" y=\"25\">4</text>\n<circle cx=\"17\" cy=\"250\" r=\"7\" class=\"paper\" stroke-width=\"1\"/><text x=\"17\" y=\"253\">5</text>\n<circle cx=\"182\" cy=\"360\" r=\"7\" class=\"paper\" stroke-width=\"1\"/><text x=\"182\" y=\"363\">6</text>\n</g>\n</svg>",
+      "caption": "原創示意，簡化輪廓，不是摹本。各物件位置依本文在 Commons 影像上量得的比例，按畫面 82.2 × 60 公分的長寬比畫出。紅色虛線是坎貝爾指出的中軸，金色箭頭是窗光方向。數字為本文的觀看順序：1 手、2 簽名、3 鏡子、4 吊燈與蠟燭、5 窗與橘子、6 地板上的套鞋與小狗。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "已有學者注意到這個房間的透視並不準確；坎貝爾認為偏差是刻意的，讓范艾克能沿一條中軸排出對稱構圖：吊燈、簽名、鏡子，往下到地板正中兩塊木板的接縫；他也避開重疊，讓每個人與物件都清楚完整。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "在高解析影像上量，吊燈中柱、簽名與鏡子圓心都落在畫面寬度約一半處，小狗身後也確實有一道木板接縫往上延伸。光從左邊窗戶進來，照亮男人的臉和女人的白色頭紗，一直落到右邊的紅色床幔。"
+    },
+    {
+      "type": "h",
+      "text": "牆上的字：揚・范艾克曾在此"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.4,
+        0.17,
+        0.22,
+        0.2
+      ],
+      "position": "畫面正中偏上，從吊燈底部到鏡框下緣，約佔全圖寬度與高度各五分之一",
+      "caption": "頭圖局部。上方是花體簽名 Johannes de eyck fuit hic 與年份 1434；下方是十邊形框的凸面鏡，框上嵌著十個小圓畫；左邊掛著一串琥珀色珠子，右緣露出一把刷子。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "簽名用深色顏料寫在灰牆上，字母帶著大圈花飾，開頭的 J 往左下拉出長長的捲線，第二行是 1434。整行字的寬度接近下方的鏡框。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "坎貝爾指出，牆上寫裝飾銘文在當時並不稀奇，但寫的是畫家簽名，而不是徽記或箴言，則完全是例外。潘諾夫斯基把它讀成婚禮證人的署名；坎貝爾反駁，fuit hic（曾在此）是塗鴉的用語，法律文書列證人用的是 coram his testibus（在下列證人面前）一類套語。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "比林奇與坎貝爾還發現，簽名沒有用直尺打參考線，整行從左往右微微上揚，而且要等鏡框和吊燈畫好才定得下位置。坎貝爾的讀法是，這行字可能一面宣稱畫中所見為真，一面也可能暗示房間出自想像，「曾在此」的只有范艾克一人。"
+    },
+    {
+      "type": "h",
+      "text": "鏡子裡：兩位來客"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.452,
+        0.262,
+        0.1,
+        0.075
+      ],
+      "position": "畫面中軸偏上，約在畫面高度四分之一到三分之一之間；鏡框內的凸面鏡玻璃，直徑約佔全圖寬度十分之一",
+      "caption": "頭圖局部，放大倍率接近這份影像的極限。鏡中是兩位主角的背影；兩人之間的門口，有一個藍衣、一個紅衣的小人影。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "凸面鏡把房間彎成一個圓：左邊是窗，上方是吊燈，右邊是紅色的床，中間是兩人的背影。背影之間是一扇門，門口站著兩個極小的人，前面一身藍，後面一身紅。鏡框上的十個小圓畫，正上方那一幅看得出十字架。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "坎貝爾記述，小圓畫是基督受難十景，從最下方的〈園中祈禱〉順時針繞到〈復活〉。他認為藍衣人正踏下台階進門、舉手致意，簽名暗示他就是范艾克；紅衣人可能是隨從：范艾克身為勃艮第公爵的宮廷侍從（varlet de chambre），至少在宮中有權帶自己的僕從。這不是定論：因斯布魯克大學的藝術家自我描繪資料庫 Metapictor，把「鏡中人是范艾克」列為「爭議中」。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "鏡子也改過。底稿裡的鏡子更大，框分八段、各有一個圓形；定稿把鏡面縮小，框改成十邊，嵌上受難圖。鏡框直徑約等於長凳座面到地板的高度，坎貝爾以這段高度約 45 公分推算，鏡面直徑至少 28 公分，在當時大得異常；阿諾菲尼是否真有這麼大的鏡子，或是畫家放大了它，無從判斷。"
+    },
+    {
+      "type": "h",
+      "text": "吊燈：白天點著的一根蠟燭"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.36,
+        0.0,
+        0.3,
+        0.21
+      ],
+      "position": "畫面頂端正中，從天花板到簽名上緣，約佔全圖寬度三成、高度五分之一",
+      "caption": "頭圖局部。六臂吊燈只有左前方一座燭台插著點燃的蠟燭；右下角露出椅背頂端的小雕像。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "金黃色的六臂吊燈布滿鏤空葉飾，底端垂著一個圓環。六座燭台只有左前方那一座插著點燃的蠟燭，其餘看來沒有插蠟燭，右前方那座的頂端泛著灰白。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "坎貝爾記錄，吊燈不在底稿裡，是直接畫在牆面上的；右前方的燭台空著，有蠟淌下的痕跡，右後方那座則可能留著一截沒點的殘燭（館方語音導覽說是一根已熄滅的蠟燭）。照鏡中的反射，吊燈上方容不下當時升降用的繩索與滑輪；黃銅吊燈也多見於教堂，住家少見。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "那根點著的蠟燭，潘諾夫斯基稱為「婚禮蠟燭」，卻拿不出婚禮點燭的證據。坎貝爾提出兩種可能：范艾克想對比日光與燭光，或是點燭禮遇來客。15 世紀末記錄勃艮第宮廷禮儀的阿利耶諾・德・普瓦捷（Aliénor de Poitiers）寫道，貴婦產房備有兩根大蠟燭，有人來訪時點燃。"
+    },
+    {
+      "type": "h",
+      "text": "窗邊：櫻桃、橘子與毛皮"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "畫面左緣的窗戶，上半鑲著圓形玻璃與彩色玻璃，下半沒有玻璃，木窗板向內打開。窗外是磚牆和一棵樹的樹頂，葉間掛著紅色小果。窗台上一顆橘子，下方木箱上還有三顆。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "坎貝爾指出窗外是結果的櫻桃樹，判斷季節是夏天，又因只看得到樹頂，推知房間在樓上。夏天裡兩人卻穿著毛皮：男人的外袍可能是絲絨，襯棕色毛皮；女人的綠色細羊毛長裙鑲白毛皮。坎貝爾認為毛皮和昂貴的橘子都在展示財力。館方的結論是，這是富商宅邸的接待廳，不是臥室；床是最貴的家具，本就擺在待客的房間，而木地板與灰泥牆又讓它不像宮殿。"
+    },
+    {
+      "type": "h",
+      "text": "地板：脫下的套鞋，還有一隻狗"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.0,
+        0.78,
+        0.62,
+        0.22
+      ],
+      "position": "畫面底部，從左下角到中央偏右，約佔全圖寬度六成、高度五分之一",
+      "caption": "頭圖局部。左邊是男人脫下的兩隻木底套鞋，濺著泥點；中間是他深色的靴子；右邊的小狗站在兩人之間，望向畫外。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "左下角擺著一雙淺色木底套鞋，黑皮帶扣著，鞋面濺著泥點；男人腳上穿深色長靴。畫面正中、兩人之間，一隻棕色長毛小狗四腳站定，頭朝向觀者，毛一縷縷分開，有些帶紅。長凳前地毯的一端，還有一雙紅色的女用套鞋。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "比林奇與坎貝爾發現，底稿的陰影線直接穿過狗和吊燈，底下沒有畫牠們。常被當作象徵解讀的細節，多數沒有底稿、是後期才加的，包括狗、脫下的鞋、吊燈、單獨點燃的蠟燭、橘子、念珠與椅背上的聖瑪格麗特雕像。他們的結論是，不能再說范艾克照著預先擬好的象徵方案作畫。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "潘諾夫斯基說男人脫鞋是因為站在「聖地」；坎貝爾指出他脫的只是戶外木套鞋，腳上仍穿著靴子。坎貝爾也記錄，畫家用手指抹柔狗後腿陰影的輪廓，留下可辨認的指印，不過這份公開影像看不出來。"
+    },
+    {
+      "type": "h",
+      "text": "綠裙底下：她沒有懷孕"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "女人的綠色長裙在地上堆成厚褶，她用左手把身前的裙料攏起、按在腹前，腰帶下方鼓起一團。袖口剪成一層層十字形花邊，裡面露出藍色內袖。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "國家美術館與坎貝爾都明說她沒有懷孕：把過長的裙子提在身前，是當時仕女常見的姿勢。坎貝爾的對照是范艾克 1437 年德勒斯登三聯畫裡的童貞聖人聖凱瑟琳，姿勢與衣著相近，身形幾乎相同。但從 1700 到 1811 年，西班牙王宮的清單至少三次把她寫成孕婦。"
+    },
+    {
+      "type": "h",
+      "text": "色彩與筆觸"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "整幅畫的大色塊只有幾種：右邊的紅色床幔與長凳上的紅坐墊、女人的綠裙、男人近乎黑色的深紫褐外袍，中間夾著灰牆與木地板的褐色。最亮的是女人的白頭紗和袖口的白毛皮；金黃色集中在吊燈、念珠和橘子上；鮮明的藍色則在女人的袖子、裙下的內裙，以及鏡中那位來客身上。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "坎貝爾強調，這幅畫的顏料沒有特別之處。女人的綠裙是銅綠罩染，調在加熱稠化的亞麻仁油裡，加了少許松脂；藍袖是天然群青；男人的外袍原是深紅紫色，部分含群青的顏料可能已經變灰。它看似一絲不苟，其實畫得相當快：綠色罩染上有按壓的痕跡，多處濕中濕，窗上彩色玻璃的筆觸越出輪廓，刷子的細枝是刮出來的，畫家似乎還把一支沾了藍色的小筆掉在鏡框上。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "改得最多的是兩張臉。比林奇與坎貝爾發現，底稿裡男人的臉大得多、五官更高，望向妻子；女人的眼睛更低、額頭更高，視線朝下，定稿才轉向丈夫。底稿比定稿扭曲得更厲害，畫到最後才收斂。國家美術館作品頁寫成女人「原本抬眼望向丈夫」，與技術報告不同，本文依技術報告。"
+    },
+    {
+      "type": "timeline",
+      "title": "清單與目錄怎麼描述這幅畫",
+      "items": [
+        {
+          "when": "1516",
+          "label": "Hernoul le Fin 與妻子",
+          "note": "瑪格麗特的清單；格瓦拉所贈，蓋板上有他的紋章。"
+        },
+        {
+          "when": "1558 前後",
+          "label": "一男一女互執其手",
+          "note": "匈牙利的瑪麗（Mary of Hungary）遺物清單，記有映出兩人的鏡子；畫後來歸西班牙國王腓力二世。"
+        },
+        {
+          "when": "1599",
+          "label": "「像在許諾未來的婚姻」",
+          "note": "萊比錫人奎爾維茨（Jakob Quelviz）在馬德里王宮所記，還抄下兩句奧維德（Ovid）《愛的藝術》（Ars amatoria）；1700 年清單記這兩句寫在畫框上，坎貝爾認為是後加的。"
+        },
+        {
+          "when": "1700",
+          "label": "「懷孕的德意志女子」",
+          "note": "卡洛斯二世遺物清單：una Alemana preñada 與一個年輕人「似乎在夜裡成婚」。"
+        },
+        {
+          "when": "1794",
+          "label": "作者成了「油畫的發明者」",
+          "note": "估價清單把作者記為 Juan de Encinas。"
+        },
+        {
+          "when": "1808、1811",
+          "label": "歸到霍爾拜因名下",
+          "note": "約瑟夫・波拿巴（Joseph Bonaparte）治下的清單，把畫歸給霍爾拜因（Holbein），女子仍被寫成孕婦。"
+        },
+        {
+          "when": "1842",
+          "label": "國家美術館購入",
+          "note": "理事會以 600 基尼這個「適中的價格」建議購入。"
+        },
+        {
+          "when": "1998／2021",
+          "label": "一幅雙人肖像",
+          "note": "坎貝爾排除婚禮與訂婚說，回到 1516 年的描述。"
+        }
+      ],
+      "caption": "史料原文據坎貝爾目錄（1998 年出版，2021 年增補）的轉錄與英譯，中文為本文自譯。"
+    },
+    {
+      "type": "h",
+      "text": "他們是誰"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1857 年，克勞與卡瓦爾卡塞萊（Crowe and Cavalcaselle）最早把這幅畫和清單裡的 Hernoul le Fin 連起來，認為那很可能是義大利姓氏 Arnolfini 在尼德蘭與法國的拼法 Arnoulfin；這個家族來自盧卡（Lucca），不少成員在北方經商。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1861 年，威爾（W. H. J. Weale）把畫中人定為喬凡尼・迪・阿里戈・阿諾菲尼（Giovanni di Arrigo Arnolfini）與妻子喬凡娜・切納米（Giovanna Cenami），此說廣為採用。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "問題出在年份。帕維奧（Jacques Paviot）找到一筆公爵付款紀錄：1447 年，勃艮第公爵好人腓力（Philip the Good）向布魯日的金匠買了兩只銀壺，送給商人 Jehan Arnoulphin 作為婚禮當天的賀禮。坎貝爾認定此人就是阿里戈之子喬凡尼，據此認為他 1447 年才結婚，而且看來只娶過切納米一人。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "坎貝爾比較約 1425 至 1450 年間住在布魯日的五位阿諾菲尼，認為最可能的是喬凡尼・迪・尼可拉奧・阿諾菲尼（Giovanni di Nicolao Arnolfini）。他 1419 年已住在布魯日（Bruges），1426 年娶了 13 歲的康斯坦札・特倫塔（Costanza Trenta），而她母親 1433 年 2 月 26 日的信已提到女兒過世。若是他，畫中女子應是續弦，但坎貝爾說還沒找到任何關於她的記載。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "artwork",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Jan_van_Eyck_088.jpg",
+      "width": 1062,
+      "height": 1500,
+      "alt": "半身男子肖像：黑色背景前，一名面色蒼白的男子戴著纏成一大團的紅色頭巾帽，穿深綠色外衣，領口與袖口鑲棕色毛皮，右手在胸前捏著一小片淺色的摺紙狀物。",
+      "caption": "揚・范艾克《一位男子的肖像（出自阿諾菲尼家族？）》（Bildnis eines Mannes [aus der Familie Arnolfini?]），橡木板，畫面 30 × 21.6 公分，柏林國立博物館群畫廊（Gemäldegalerie）藏，523A，館方定年 1438–1441 年。館方認為他無疑就是倫敦雙人肖像裡的男人。Commons 檔案頁記為約 1435 年、29 × 20 公分。這份掃描色彩偏濃。",
+      "credit": "揚・范艾克；柏林國立博物館群畫廊藏；數位影像為 The Yorck Project（2002）掃描，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_088.jpg",
+      "made": "1438–1441（館方定年）"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "范艾克還畫過同一個男人。柏林畫廊的說明指出，這在早期尼德蘭繪畫裡幾乎是孤例，此人大概是畫家的朋友或熟人；但館方在說明（2025 年更新）中也提醒，「阿諾菲尼」的身分遠不如一般以為的確定，在較晚近的研究裡一再受到質疑。坎貝爾則認為，柏林像裡的同一人穿得較樸素、看來較老，或許對應尼可拉奧之子喬凡尼在 1430 年代的生意挫敗。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "坎貝爾指出，1516 年清點時贈畫的格瓦拉還在世，Hernoul le Fin 這個名字大概就是他傳給瑪格麗特的；他也說，還沒有任何文件把阿諾菲尼家族的任何一人和范艾克連在一起。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：最站得住的名字，仍是 1516 年清單裡的 Hernoul le Fin；其餘的全名，都是後人從檔案推出的候選人。"
+    },
+    {
+      "type": "h",
+      "text": "婚禮之說從哪裡來"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "已知最早把它說成婚禮的記載，是根特編年史家范瓦內韋克（Marcus van Vaernewijck）1568 年的書：匈牙利的瑪麗有一塊范艾克的「很小的板畫」，畫一男一女由 Fides（信德）證婚，是從一位理髮師手上得來的。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "坎貝爾指出，畫並不小，瑪麗也是從姑母瑪格麗特那裡繼承的，作者顯然沒見過這幅畫；三件事錯了兩件，第三件也就不足採信。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "1934 年，潘諾夫斯基以這段話為起點，在《伯靈頓雜誌》（The Burlington Magazine）發表影響深遠的論文，說畫面是阿里戈之子喬凡尼與切納米私密婚禮的「圖像式結婚證書」，鏡中兩人是證人。坎貝爾逐點反駁：新郎的婚期對不上，所謂象徵物多半沒有底稿，手勢在作畫中還在改，不像照規矩做出的儀式動作，鏡中藍衣人也正在走動，是訪客而非觀禮的證人。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "霍爾（E. Hall）1994 年改主張訂婚，坎貝爾同樣不接受，主張回到 1516 年的描述，把它當作沒有重要敘事內容的雙人肖像。國家美術館網頁的語音導覽，則仍說狗是婚姻忠誠常見的象徵。"
+    },
+    {
+      "type": "h",
+      "text": "1843 年的一句話"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1843 年 3 月，這幅畫裝在玻璃櫃裡首次在國家美術館展出，立刻引來人群。同年的館藏目錄寫道："
+    },
+    {
+      "type": "quote",
+      "original": "The subject of this Picture has not been clearly ascertained.",
+      "text": "本畫的主題尚未確切查明。",
+      "cite": "國家美術館 1843 年館藏目錄，據坎貝爾目錄引錄；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "一百八十多年後，館方的目錄已排除婚禮說與訂婚說，全名仍寫作 Portrait of Giovanni(?) Arnolfini and his Wife：問號留在男人的名字後面，女人仍然沒有名字。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Jan van Eyck, 'The Arnolfini Portrait', 1434（NG186）",
+      "publisher": "The National Gallery, London",
+      "date": "",
+      "url": "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait",
+      "note": "作品資料、Overview 與 In-depth 說明、Audio description 文字稿、Provenance（1842 年 600 基尼、館內第一件尼德蘭繪畫）"
+    },
+    {
+      "title": "Lorne Campbell, Portrait of Giovanni(?) Arnolfini and his Wife（NG 186）, catalogue entry",
+      "publisher": "The National Gallery, London（The Fifteenth Century Netherlandish Schools, 1998）",
+      "date": "1998；2021-09 增補",
+      "url": "https://www.nationalgallery.org.uk/paintings/catalogues/campbell-1998/the-arnolfini-portrait",
+      "note": "Signature、Provenance（含註 3–8 的清單原文）、註 211（帕維奧發現的 1447 年付款紀錄）、Technical Notes、Description、The Identity of the Couple、The Marriage Theory、The Interpretation of the Portrait、Curator’s update"
+    },
+    {
+      "title": "Rachel Billinge and Lorne Campbell, The Infra-red Reflectograms of Jan van Eyck's Portrait of Giovanni(?) Arnolfini and his Wife Giovanna Cenami(?)",
+      "publisher": "National Gallery Technical Bulletin, vol. 16, pp. 47–60",
+      "date": "1995",
+      "url": "https://www.nationalgallery.org.uk/research/research-resources/technical-bulletin/the-infra-red-reflectograms-of-jan-van-eycks-portrait-of-giovanni-arnolfini-and-his-wife-giovanna-cenami",
+      "note": "讀館方提供的全文 RTF 版：底稿、手、臉、鏡子與未打底稿的物件"
+    },
+    {
+      "title": "Bildnis eines Mannes (aus der Familie Arnolfini?)［523A］",
+      "publisher": "Gemäldegalerie, Staatliche Museen zu Berlin（museum-digital）",
+      "date": "2025-02-07（資訊更新）",
+      "url": "https://smb.museum-digital.de/object/226804",
+      "note": "定年 1438–1441、橡木、30 × 21.6 公分；作品說明對身分的保留"
+    },
+    {
+      "title": "Arnolfini-Doppelbildnis（Eyck, Jan van）",
+      "publisher": "METAPICTOR, Universität Innsbruck",
+      "date": "",
+      "url": "https://explore-research.uibk.ac.at/arts/metapictor/katalogeintrag/eyck-jan-van-arnolfini-doppelbildnis-1434-london-national-gallery/",
+      "note": "鏡中人是否為范艾克的研究狀態：kontrovers diskutiert"
+    },
+    {
+      "title": "File:Van Eyck - Arnolfini Portrait.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Van_Eyck_-_Arnolfini_Portrait.jpg",
+      "note": "頭圖影像，PD-Art／PD-old-100；原檔 4386 × 6000 像素，本文逐區查看所據"
+    },
+    {
+      "title": "File:Jan van Eyck 088.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_088.jpg",
+      "note": "柏林肖像影像，PD-Art（The Yorck Project）"
+    }
+  ]
+}
