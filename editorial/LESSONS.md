@@ -15,3 +15,8 @@
 8. **圖解要和文字完全一致**：場形圖的站位、箭頭順序、圖說描述要和正文同一個情境，替代情境要明寫「不是先後發生」。（戰術）
 9. **「第一座／唯一／最」要查反例**：俱樂部自己的其他文章可能說法不同，有衝突就寫出來或改用不會錯的說法。（備稿・巴薩）
 10. **不在時間窗內的舊聞不要寫進新聞欄**；轉會傳聞要寫明是誰、哪天報的。（巴薩）
+
+## 來自雲端環境實測（2026-10-11）
+
+11. **被封鎖的網站會讓整次搜尋失敗**：WebSearch 的 `allowed_domains` 只要含一個封鎖我們抓取程式的網站，整次就回 400「not accessible to our user agent」，什麼結果都拿不到。已知不可用（搜尋與 WebFetch 皆然）：mundodeportivo.com、sport.es、as.com、marca.com、bbc.com、theguardian.com、theathletic.com、reuters.com、apnews.com、elpais.com、lavanguardia.com、rtve.es。遇到 400 就把錯誤訊息點名的網域拿掉重搜。（第 5 班・巴薩、環境測試）
+12. **PubMed 網頁讀不到時改用 API**：WebFetch 打開 pubmed.ncbi.nlm.nih.gov 常只拿到「請啟用 Cookie」的空頁；改用 E-utilities、Europe PMC 或 Crossref（指令見 `columns/perio.md`）。（環境測試・牙周）
