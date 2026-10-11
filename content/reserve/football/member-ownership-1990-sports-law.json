@@ -1,0 +1,414 @@
+{
+  "column": "football",
+  "date": "reserve",
+  "reserve_written": "2026-10-11",
+  "title": "巴薩為什麼沒有股東：1990 年那道例外條款",
+  "dek": "西班牙 1990 年要職業球會改制為股份公司，只有淨資產連年為正的四家可以不改。巴薩靠這一條保住會員制，也為此付出代價。",
+  "topic_key": "football:member-ownership-1990-sports-law",
+  "updated_at": "2026-10-11T14:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Carnet_soci_Bar%C3%A7a.JPG/1280px-Carnet_soci_Bar%C3%A7a.JPG",
+    "width": 1280,
+    "height": 960,
+    "alt": "深色木框裡的展示板，左半深藍、右半深紅的底板上排著九排巴薩會員證，每張卡下方有一塊小銘牌。最上面幾排是泛黃的紙卡，有印刷字、手寫字跡與打孔；中段換成印著隊徽與紅藍色塊的彩色卡；下方是設計各異的彩色印刷卡，最後一排可見印著大字「1991」的卡，以及附照片與條碼的卡片。",
+    "caption": "歷年的巴薩會員證排在同一面展示板上，從手寫姓名的紙卡到附照片的塑膠卡。巴薩是會員組成的協會，沒有股份可以買賣，會員證就是成員身分的憑證。照片攝於 2009 年，攝影者未註明拍攝地點。",
+    "credit": "Prades／Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carnet_soci_Bar%C3%A7a.JPG",
+    "made": "2009"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1990 年 10 月 15 日，西班牙頒布第 10/1990 號法律《體育法》（Ley del Deporte）。過渡條款第一條規定，參加職業賽事的現有俱樂部一律改制為運動股份有限公司（Sociedad Anónima Deportiva，SAD）。同一部法律的第七附加條款卻留了一道門：財務紀錄合格的可以不改。最後過關的足球俱樂部只有四家，巴薩是其中之一。"
+    },
+    {
+      "type": "p",
+      "text": "這道例外讓巴薩保住了原有的樣子：俱樂部沒有股東，最高權力機關是會員代表大會，主席由會員投票選出，也可以被會員投票罷免。代價寫在同一條裡：董事會要為任內虧損負責，每個會計年度開始前得先存入銀行保證，這項法定義務到 2022 年才取消。稅率上的差別，後來還被歐盟認定為違法的國家補助。"
+    },
+    {
+      "type": "p",
+      "text": "以下依西班牙官方公報（BOE）的法律原文、歐盟執委會與歐盟法院的新聞稿，以及巴薩官網與章程整理。"
+    },
+    {
+      "type": "timeline",
+      "title": "會員制與兩部《體育法》",
+      "items": [
+        {
+          "when": "1899.11.29",
+          "label": "巴薩成立",
+          "note": "章程第 1 條：由自然人組成的私人運動協會"
+        },
+        {
+          "when": "1978.5.6",
+          "label": "俱樂部所稱首次民主選舉",
+          "note": "會員直接、普選、秘密投票，努涅斯（Josep Lluís Núñez）當選，擔任主席到 2000 年"
+        },
+        {
+          "when": "1985–86",
+          "label": "審計起算",
+          "note": "例外條款看的是這個球季起、職業足球聯盟委託的每一次審計"
+        },
+        {
+          "when": "1990.10.15",
+          "label": "《體育法》頒布",
+          "note": "職業球會須改制為 SAD；淨資產連年為正者可以例外"
+        },
+        {
+          "when": "1998.3.7",
+          "label": "不信任投票",
+          "note": "針對努涅斯的董事會，未通過"
+        },
+        {
+          "when": "2008.7.6",
+          "label": "不信任投票",
+          "note": "針對拉波爾塔（Joan Laporta）的董事會，贊成約 60.6%，未過門檻"
+        },
+        {
+          "when": "2016.7.4",
+          "label": "歐盟執委會決定",
+          "note": "四家俱樂部的較低稅率被認定為違法國家補助"
+        },
+        {
+          "when": "2019.2.26",
+          "label": "普通法院一審",
+          "note": "巴薩案撤銷執委會決定；畢爾包競技（Athletic Club）的訴訟被駁回"
+        },
+        {
+          "when": "2021.3.4",
+          "label": "歐盟法院判決",
+          "note": "撤銷一審判決，駁回巴薩的訴訟"
+        },
+        {
+          "when": "2021.12.28",
+          "label": "預算法修改《體育法》",
+          "note": "改制為 SAD 變成選項，董事資格與保證交由章程規定；2022 年 1 月 1 日生效"
+        },
+        {
+          "when": "2022.12.30",
+          "label": "新《體育法》",
+          "note": "取代 1990 年的法律，沿用前一年的做法；2023 年 1 月 1 日生效"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "門檻：1985–86 球季起，每一次審計都要是正數"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "第七附加條款寫明：本法生效時參加職業足球賽事的俱樂部，若自 1985–86 球季起，在西班牙職業足球聯盟（Liga de Fútbol Profesional，LFP）委託的每一次審計中，淨資產都是正數，就可以保留現有的法律結構。條文的關鍵句是："
+    },
+    {
+      "type": "quote",
+      "original": "podrán mantener su actual estructura jurídica, salvo acuerdo contrario de sus Asambleas",
+      "text": "可以保留現有的法律結構，除非其會員大會另有決議。",
+      "cite": "第 10/1990 號法律《體育法》第七附加條款，BOE 1990 年 10 月 17 日刊登的原始條文（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "緊接著的第八附加條款，把同樣的規則套用到職業籃球。至於為什麼要強制改制，法律前言說得直接：要為從事職業活動的俱樂部建立一套「法律與經濟責任的模式」。32 年後取代它的新《體育法》在前言回顧，1990 年的背景是許多參加職業賽事的球會負債沉重，財務困難到危及賽事本身的存續。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "新法前言也點名了過關的俱樂部：只有四家符合條件。足球與籃球兩項都過關的是巴薩與皇家馬德里（Real Madrid），只有足球的是畢爾包競技與奧薩蘇納（Osasuna）。其他職業球會若要留在職業賽事，就得改制，或把職業球隊交給另設的 SAD 經營。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1985–86 球季到 1990 年這段審計期間，巴薩的主席是努涅斯。他在 1978 年 5 月 6 日的選舉中上任，俱樂部把那次選舉稱為史上第一次民主選舉：直接、普選、秘密投票。選民名冊共 53,688 人，限年滿 21 歲、入會超過 4 年的會員；努涅斯得 10,352 票，以 800 多票之差勝過第二名的 Ferran Ariño（9,537 票）。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "會員投票選主席並不是從 1978 年才開始。據俱樂部另一篇記述，1953 年 11 月 14 日的選舉首度讓所有男性會員投票，但女性會員被排除，而且持有幾張會員證就能投幾票，證件主人不必在場。"
+    },
+    {
+      "type": "h",
+      "text": "代價：董事會先押上銀行保證"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "第七附加條款不是無條件放行，它附帶四項規定。年度預算要由會員大會通過，並附上職業聯賽的報告；有多個運動部門的俱樂部，各部門分開編預算、分開記帳；職業聯賽、國家體育委員會（Consejo Superior de Deportes，CSD）與自治區政府可以指定加做審計。分量最重的是第 4 項，董事責任："
+    },
+    {
+      "type": "facts",
+      "title": "第七附加條款第 4 項",
+      "items": [
+        [
+          "誰負責",
+          "董事會成員分擔任內產生的虧損責任（原文 mancomunadamente），金額依審計的保留意見調整"
+        ],
+        [
+          "會計年度",
+          "每年 7 月 1 日到翌年 6 月 30 日"
+        ],
+        [
+          "銀行保證",
+          "每個會計年度開始前，董事會要以俱樂部為受益人，向職業聯賽存入銀行保證，金額達支出預算的 15%；聯賽可以執行，任內每年都要提出"
+        ],
+        [
+          "誰能追究",
+          "會員大會以出席者簡單多數決議；其次是佔全體會員 5% 的會員；會計年度結束四個月後，職業聯賽與 CSD 也可以"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "巴薩把這一條寫進了自己的章程。2021 年 10 月 23 日會員代表大會修訂的章程第 38 條，明文援引 1990 年《體育法》第七附加條款第 4 項，並規定除非董事之間另有協議，全體董事對銀行保證的全額負同等責任；中途離職的董事，也不能因此免除離職前已承擔的保證責任，除非留任的董事同意承接。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "以 2021 年為例。那年 3 月的選舉，拉波爾塔在投出的 55,611 票中拿下 30,184 票，第二度出任主席。據巴薩官網，西甲聯盟（LaLiga）確認 1.246 億歐元的財務保證之後，他和新的董事會才在 3 月 17 日正式就任。"
+    },
+    {
+      "type": "h",
+      "text": "會員能做的事：選主席，也能投票罷免"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "依 2021 年 10 月版章程，巴薩是由自然人組成的私人加泰隆尼亞運動協會。最高權力機關是會員代表大會，決議對全體會員與董事會都有約束力。代表除了參議員（入會最早的 1,000 名會員）、現任董事、前主席等當然成員，還有從入會滿 5 年的成年會員中抽籤選出的 2.5%，代表總數不得超過 6,000 人。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "主席與董事會由會員直選：成年、入會滿 1 年的會員可以投票；要競選主席，得入會滿 10 年，並具加泰隆尼亞民事居民身分。同一版章程把董事會任期改為 5 年，但不影響修訂時在任的董事會；主席最多連續擔任兩屆。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "會員也可以把董事會拉下來。章程第 55 條規定，發動不信任投票須取得 15% 有投票權會員的連署；投票時要有三分之二以上贊成，且贊成票至少達全體會員的 10%，才算通過。連署門檻原本是 5%，2013 年 10 月 5 日的會員代表大會把它提高到 15%。"
+    },
+    {
+      "type": "table",
+      "title": "三次不信任投票",
+      "head": [
+        "時間",
+        "對象",
+        "結果"
+      ],
+      "rows": [
+        [
+          "1998 年 3 月 7 日",
+          "努涅斯的董事會",
+          "反對罷免 24,863 票（61.5%），贊成 14,358 票（35.5%），未通過"
+        ],
+        [
+          "2008 年 7 月 6 日",
+          "拉波爾塔的董事會",
+          "贊成 39,389 票，約 60.6%，未達當時章程規定須超過 66.6% 的門檻；結果公布後 8 名董事辭職"
+        ],
+        [
+          "2020 年",
+          "巴托梅烏（Josep Maria Bartomeu）的董事會",
+          "取得 19,390 份連署，足以啟動投票；10 月 27 日巴托梅烏宣布與董事會總辭，投票沒有舉行"
+        ]
+      ],
+      "caption": "依巴薩官網兩篇俱樂部史整理，不代表俱樂部史上只有這三次。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1998 年那一次，發起的是拉波爾塔等人組成的「藍色大象」（Elefant Blau）。據俱樂部記述，他們抗議董事會不透明、負債增加，也抗議被指可能危及俱樂部所有權模式的私有化嘗試。投票沒有通過，十年後被投票的，換成了已是主席的拉波爾塔。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Joan_Laporta_-_001.jpg/1280px-Joan_Laporta_-_001.jpg",
+      "width": 1280,
+      "height": 1837,
+      "alt": "半身照片：一名深色短髮的中年男子穿深色西裝、淺藍襯衫、紅藍格紋領帶，脖子上掛著螢光黃綠色掛繩，掛繩上印著「FCBARCELONA」，他面向鏡頭微笑，背景昏暗。",
+      "caption": "拉波爾塔。Commons 檔案標示的拍攝日期是 2008 年 7 月 6 日，相機記錄的時間是當天上午，也就是會員對他的董事會進行不信任投票那天；檔案沒有註明拍攝地點與場合。資料照片。",
+      "credit": "Mutari／Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Joan_Laporta_-_001.jpg",
+      "made": "2008"
+    },
+    {
+      "type": "h",
+      "text": "稅率差 5 個百分點，一路打到歐盟法院"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "保留協會形式，在稅法上也有差別。據歐盟執委會 2016 年 7 月 4 日的新聞稿，西班牙的職業足球俱樂部在稅務上一般視同有限公司，但這四家被當成非營利組織，公司所得稅率是 25%，SAD 則是 30%；西班牙已修法，自 2016 年 1 月起取消差別待遇。歐盟普通法院後來的新聞稿指出，這個名目上的優惠稅率適用於 1990 到 2015 年。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "執委會認定這是違反歐盟規則的國家補助，命令西班牙追回。它估計每家俱樂部要退的金額有限，約 0 到 500 萬歐元，確切數字由西班牙當局計算。主管競爭政策的執委維斯塔格（Margrethe Vestager）說："
+    },
+    {
+      "type": "quote",
+      "original": "Professional football is a commercial activity with significant money involved and public money must comply with fair competition rules.",
+      "text": "職業足球是牽涉大筆金錢的商業活動，公共資金必須遵守公平競爭的規則。",
+      "cite": "維斯塔格，歐盟執委會新聞稿 IP/16/2401，2016 年 7 月 4 日（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "巴薩與畢爾包競技提起訴訟。2019 年 2 月 26 日，歐盟普通法院駁回畢爾包競技的訴訟，卻在巴薩提起的案件中撤銷了執委會的決定。法院認為，非營利組織在非常態利得再投資上能享的扣抵比 SAD 少，執委會沒有充分評估這項不利是否抵銷了較低的稅率。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這個論點在調查期間就出現過。據普通法院新聞稿，皇家馬德里曾主張，球員轉會的利得可以再投資買新球員，因此 2000 到 2013 年間，非營利的稅制對它「明顯更不利」（significantly more disadvantageous）。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "執委會上訴。2021 年 3 月 4 日，歐盟法院撤銷普通法院的判決：這是一套補助制度，從通過那一刻起就讓符合資格的俱樂部適用較低稅率；執委會在認定階段不必逐年計算扣抵是否把優惠抵銷，那是追回個別補助時才要算的事。法院隨即自行判決，駁回巴薩的訴訟，新聞稿稱之為終局駁回。"
+    },
+    {
+      "type": "h",
+      "text": "2021–2022 年：會員制不再是例外"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "轉折比新《體育法》早了一年。2021 年 12 月 28 日頒布的《2022 年國家總預算法》（第 22/2021 號法律），在最終條款中修改 1990 年的《體育法》：參加職業賽事的俱樂部「可以」採用 SAD 形式，決定不改制的可以保留原有結構；董事的資格條件，例如入會年資與保證，改由各俱樂部在章程中自行訂定。修正自 2022 年 1 月 1 日生效。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這套新的責任制度溯及 2020–21 球季適用。依同法過渡條款，2020–21 或 2021–22 球季依舊制提出、尚未被執行的保證，除非章程另有規定，董事可以註銷。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "2022 年 12 月 30 日，西班牙頒布第 39/2022 號法律，取代 1990 年的《體育法》，2023 年 1 月 1 日生效。新法同樣讓俱樂部與 SAD 都能參加職業賽事，並在前言回頭評價舊制：強制改制原本是要終結球會無力清償的問題，但法律生效後幾年負債反而增加，暴露了這個模式的不足。前言寫道："
+    },
+    {
+      "type": "quote",
+      "original": "La fundamentación jurídica de esta prohibición parece quedar vacía de justificación actualmente",
+      "text": "這項禁止規定的法律基礎，如今看來已失去正當理由。",
+      "cite": "第 39/2022 號法律《體育法》前言（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "前言也說明了保證為何可以拿掉：聯賽內部的財務控管規則等機制已能有效監督俱樂部財務，1990 年法定的保證不再必要，這樣可以讓結構更民主，讓更多人有機會競選主席。條文第 74 條沿用前一年的寫法：不改制的俱樂部，自行在章程中訂定董事的資格條件，例如保證或入會年資。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，1990 年的法律把會員制當成一項要用帳本換來的例外；2021 與 2022 年的兩次立法把它還原成一個普通選項，董事要不要押保證、要有多少入會年資，交給各俱樂部自己決定。會員制還在不在，從此不再看國家給不給例外，而是看會員自己。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "以 2021 年版章程為例，第 85 條規定，要把俱樂部改制為股份有限公司或其他形式，須經會員代表大會出席者四分之三贊成，而且贊成者至少要佔全體代表的過半數。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ley 10/1990, de 15 de octubre, del Deporte（原始條文）",
+      "publisher": "Boletín Oficial del Estado（BOE）",
+      "date": "1990-10-17",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1990-25037",
+      "note": "前言（法律與經濟責任的模式）、第七與第八附加條款、過渡條款第一條"
+    },
+    {
+      "title": "Ley 22/2021, de 28 de diciembre, de Presupuestos Generales del Estado para el año 2022（原始條文）",
+      "publisher": "Boletín Oficial del Estado（BOE）",
+      "date": "2021-12-29",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-21653",
+      "note": "最終條款第三條修改 Ley 10/1990 第 19.1 條與第七附加條款；過渡條款第七條（溯及 2020–21 球季、未執行的保證可註銷）；2022 年 1 月 1 日生效"
+    },
+    {
+      "title": "Ley 10/1990, de 15 de octubre, del Deporte（整合版）",
+      "publisher": "Boletín Oficial del Estado（BOE）",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1990-25037",
+      "note": "第七附加條款的修正紀錄：1998 年增列第 5 項，2021 年修改首段與第 4 項"
+    },
+    {
+      "title": "Ley 39/2022, de 30 de diciembre, del Deporte",
+      "publisher": "Boletín Oficial del Estado（BOE）",
+      "date": "2022-12-31",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-24430",
+      "note": "前言對舊制與四家例外俱樂部的回顧、保證不再必要、第 74 條、廢止 Ley 10/1990、2023 年 1 月 1 日生效"
+    },
+    {
+      "title": "State aid: Commission decides Spanish professional football clubs have to pay back incompatible aid（IP/16/2401）",
+      "publisher": "European Commission",
+      "date": "2016-07-04",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/IP_16_2401",
+      "note": "25% 與 30% 稅率、2016 年 1 月起修法、每家 0 至 500 萬歐元的估計、維斯塔格引文"
+    },
+    {
+      "title": "Press Release No 17/19: Judgments in Cases T-679/16 Athletic Club v Commission and T-865/16 Fútbol Club Barcelona v Commission",
+      "publisher": "General Court of the European Union",
+      "date": "2019-02-26",
+      "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2019-02/cp190017en.pdf",
+      "note": "一審撤銷巴薩案、駁回畢爾包競技；1990 至 2015 年適用優惠稅率；皇家馬德里關於再投資扣抵的主張"
+    },
+    {
+      "title": "Press Release No 32/21: Judgment in Case C-362/19 P Commission v Fútbol Club Barcelona",
+      "publisher": "Court of Justice of the European Union",
+      "date": "2021-03-04",
+      "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2021-03/cp210032en.pdf",
+      "note": "上訴判決理由、駁回巴薩訴訟"
+    },
+    {
+      "title": "FC Barcelona Statutes, 23th October 2021（English）",
+      "publisher": "FC Barcelona",
+      "date": "2021-10-23",
+      "url": "https://www.fcbarcelona.com/fcbarcelona/document/2021/12/09/ff6a6d19-dd14-4d0a-8c9e-eb0f5b3998c1/202112-Estatuts-FCB-A5-3-ENG_01.pdf",
+      "note": "第 1、19、22、23、34、38、41、42、55、56、85 條"
+    },
+    {
+      "title": "Opening up and the fight for democracy (1952-1977)",
+      "publisher": "FC Barcelona",
+      "date": "2021-02-17",
+      "url": "https://www.fcbarcelona.com/en/news/1974331/opening-up-and-the-fight-for-democracy-1952-1977",
+      "note": "1953 年 11 月 14 日首度讓所有男性會員投票，以及當時投票方式的問题"
+    },
+    {
+      "title": "Barça and democracy (1978-2003)",
+      "publisher": "FC Barcelona",
+      "date": "2021-02-23",
+      "url": "https://www.fcbarcelona.com/en/club/news/2024257/barca-and-democracy-1978-2003",
+      "note": "1978 年俱樂部所稱首次民主選舉、1998 年不信任投票與藍色大象"
+    },
+    {
+      "title": "FC Barcelona in the 21st century (2003-2021)",
+      "publisher": "FC Barcelona",
+      "date": "2021-03-02",
+      "url": "https://www.fcbarcelona.com/en/news/2024210/fc-barcelona-in-the-21st-century-2003-2021",
+      "note": "2008 年不信任投票、2013 年連署門檻改為 15%、2020 年連署與巴托梅烏辭職"
+    },
+    {
+      "title": "Joan Laporta takes office as FC Barcelona president",
+      "publisher": "FC Barcelona",
+      "date": "2021-03-17",
+      "url": "https://www.fcbarcelona.com/en/club/news/2070667/joan-laporta-takes-office-as-fc-barcelona-president",
+      "note": "1.246 億歐元財務保證、得票數、就任日期"
+    },
+    {
+      "title": "File:Carnet soci Barça.JPG",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Carnet_soci_Bar%C3%A7a.JPG",
+      "note": "頭圖（EXIF 拍攝日期 2009 年 8 月 10 日）"
+    },
+    {
+      "title": "File:Joan Laporta - 001.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Joan_Laporta_-_001.jpg",
+      "note": "拉波爾塔照片（檔案日期與 EXIF 拍攝時間皆為 2008 年 7 月 6 日）"
+    }
+  ]
+}
