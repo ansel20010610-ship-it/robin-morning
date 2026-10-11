@@ -5,13 +5,9 @@
     "note": "devotion、music、perio 三篇已於前一日完成並通過驗證（含 --check-urls；music 一張圖遇 429 限流，commons.py 確認檔案存在、授權公有領域），本班未重寫"
   },
   "2": {
-    "finished_at": "2026-10-11T13:30:03+08:00",
-    "missing": [
-      "football",
-      "photo",
-      "city"
-    ],
-    "note": "文明（明代漕運）與走進一幅畫（布勒哲爾《收割者》）完成並推送；審稿修正 art 9 處、civilization 11 處；另把撞圖的晨光備稿 mk-4-26 換成梵谷〈午睡〉"
+    "finished_at": "2026-10-12T01:37:57+08:00",
+    "missing": [],
+    "note": "civilization、art 兩篇已存在且驗證通過，依手冊不重寫；本班無新稿"
   },
   "3": {
     "finished_at": "2026-10-11T14:04:45+08:00",
