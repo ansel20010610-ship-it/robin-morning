@@ -5,22 +5,22 @@
   "title": "撒了種，照常睡覺起來：讀馬可福音 4:26–29",
   "dek": "四福音書裡只有馬可記載這個比喻：人撒了種，照常睡覺起來，種子自己發芽長大，他卻不曉得如何。種下之後、收割之前，撒種的人做什麼？",
   "topic_key": "devotion:mk-4-26",
-  "updated_at": "2026-10-11T13:30:00+08:00",
+  "updated_at": "2026-10-12T02:45:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
     "kind": "artwork",
-    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg/1280px-Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg",
-    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg/3840px-Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Noon_%E2%80%93_Rest_from_Work_%28after_Millet%29.jpg/1280px-Noon_%E2%80%93_Rest_from_Work_%28after_Millet%29.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Noon_%E2%80%93_Rest_from_Work_%28after_Millet%29.jpg",
     "width": 1280,
-    "height": 932,
-    "alt": "油畫。金黃的麥田占滿畫面下半，左側兩個穿白衣的男人用長柄鐮刀割麥，另一人提著紅色水罐從麥田中的小路走出；右側已割下的麥子綁成一捆捆立在地上，一群農人坐在大樹下吃東西，一名男子仰躺在樹根旁睡著。遠景是丘陵、村舍、教堂和一片海灣。",
-    "caption": "老彼得・布勒哲爾（Pieter Bruegel the Elder）〈收割者〉（The Harvesters），1565 年，油彩橡木板，119 × 162 公分（含後加的木條），紐約大都會藝術博物館藏（館藏號 19.164）。這是 16 世紀尼德蘭畫家筆下的麥收，不是為馬可福音而畫；本文借它看第 29 節「收成的時候到了」。",
-    "credit": "Pieter Bruegel the Elder；紐約大都會藝術博物館（Rogers Fund, 1919，館藏號 19.164）",
+    "height": 1002,
+    "alt": "油畫。割過的麥地上，一男一女躺在高大的麥垛陰影裡睡著：男人戴草帽、雙手枕在腦後，女人側臥靠著他。右下角放著一雙木鞋和一把彎鐮。遠處兩頭牛停在一輛車旁，車後是另一座麥垛，天空是筆觸濃重的藍色。",
+    "caption": "文森・梵谷（Vincent van Gogh）〈午睡（仿米勒）〉（La Méridienne），1889–1890 年，油彩畫布，73 × 91 公分，巴黎奧塞美術館藏（RF 1952 17）。梵谷依據米勒素描的版畫複製而成，畫的是 19 世紀法國的麥收午休，不是為馬可福音而畫；本文借它看第 27 節「黑夜睡覺，白日起來」。",
+    "credit": "Vincent van Gogh；巴黎奧塞美術館（RF 1952 17）",
     "license": "Public domain",
     "license_url": "",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg",
-    "made": "1565"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Noon_%E2%80%93_Rest_from_Work_(after_Millet).jpg",
+    "made": "1889–1890"
   },
   "body": [
     {
@@ -183,13 +183,13 @@
       "type": "detail",
       "of": "hero",
       "region": [
-        0.44,
-        0.76,
-        0.22,
-        0.22
+        0.62,
+        0.72,
+        0.35,
+        0.15
       ],
-      "position": "畫面下方正中略偏右，大樹根旁，約佔寬度五分之一",
-      "caption": "局部：大樹根旁，一名農人仰躺在割過的麥地上睡著，頭邊的樹幹上靠著一把長柄叉。布勒哲爾畫的是收割中間的歇息，不是比喻裡撒種之後的夜晚；本文借它看「睡覺」本來就排在農人的工作之間。"
+      "position": "畫面右下角，兩人腳邊到右緣，約佔寬度三分之一",
+      "caption": "局部：睡著的兩人腳邊，一雙木鞋脫在地上，旁邊放著一把彎鐮。畫的是收割中間的午休，不是比喻裡撒種之後的夜晚；本文借它看「睡覺」本來就排在農人的工作之間。"
     },
     {
       "type": "p",
@@ -363,11 +363,18 @@
       "note": "1908 年麥卡利斯特發掘出土；石灰岩；年代因地層不明而不確定；字體與語言歸屬有爭議"
     },
     {
-      "title": "The Harvesters（Pieter Bruegel the Elder, 1565）",
-      "publisher": "The Metropolitan Museum of Art",
+      "title": "La Méridienne（Vincent van Gogh, 1889–1890）",
+      "publisher": "Wikimedia Commons／Wikidata",
       "date": "",
-      "url": "https://www.metmuseum.org/art/collection/search/435809",
-      "note": "油彩橡木板；含後加木條 119 × 162 公分；Rogers Fund, 1919；館藏號 19.164；資料經 Met Open Access API（collectionapi.metmuseum.org/public/collection/v1/objects/435809）核對"
+      "url": "https://www.wikidata.org/wiki/Q11826275",
+      "note": "油彩畫布，73 × 91 公分；奧塞美術館館藏號 RF 1952 17；仿米勒（F 686, JH 1881）；Commons 檔案頁與 Wikidata 核對"
+    },
+    {
+      "title": "La Méridienne - Vincent van Gogh",
+      "publisher": "Musée d'Orsay",
+      "date": "",
+      "url": "https://www.musee-orsay.fr/en/artworks/la-meridienne-750",
+      "note": "館方資料：1889–1890 年，油彩畫布，73 × 91 公分；依 Lavieille 據米勒素描所刻的木版畫繪成"
     }
   ]
 }
