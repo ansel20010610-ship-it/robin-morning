@@ -229,7 +229,7 @@ async function albumsByPerformer(sp) {
   const hint = norm(sp.artist_hint);
   if (!hint) return [];
   const q = `${filterWords(sp.track_filter).join(" ")} ${sp.artist_hint}`.trim();
-  const res = await api(`/search?${new URLSearchParams({ q, type: "track", limit: "20" })}`);
+  const res = await api(`/search?${new URLSearchParams({ q, type: "track", limit: "10" })}`); // 10 is the cap since February 2026
   const length = new Map();
   for (const t of res.tracks?.items || []) {
     if (!t?.album?.id || !norm(t.artists.map((x) => x.name).join(", ")).includes(hint)) continue;
@@ -275,7 +275,8 @@ export async function resolve(sp, { force = false, albumId = null, candidates = 
   };
   for (const c of cands.slice(0, 6).filter(byPerformer)) { const out = await tryAlbum(c.id, false); if (out) return out; }
   const seen = new Set(cands.filter(byPerformer).map((c) => c.id));
-  for (const id of (await albumsByPerformer(sp)).filter((x) => !seen.has(x)).slice(0, 4)) { const out = await tryAlbum(id, false); if (out) return out; }
+  const more = await albumsByPerformer(sp).catch((e) => { if (e.code === "auth") throw e; return []; });
+  for (const id of more.filter((x) => !seen.has(x)).slice(0, 4)) { const out = await tryAlbum(id, false); if (out) return out; }
   for (const c of cands.slice(0, 6).filter((c) => !byPerformer(c))) { const out = await tryAlbum(c.id, Boolean(hint)); if (out) return out; }
   return { tracks: [], candidates: cands, source: "none" };
 }
