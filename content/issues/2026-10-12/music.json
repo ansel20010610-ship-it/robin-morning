@@ -1,0 +1,316 @@
+{
+  "column": "music",
+  "date": "2026-10-12",
+  "title": "沒有小節線的獨奏：佛漢・威廉斯《雲雀高飛》",
+  "dek": "今天是佛漢・威廉斯 154 歲冥誕。本文以 1967 年 Hugh Bean 與鮑爾特的錄音，說明《雲雀高飛》三段無伴奏獨奏各在哪裡。",
+  "topic_key": "music:vaughan-williams-lark-ascending",
+  "updated_at": "2026-10-11T14:10:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Vaughan_Williams_and_Holst_walking_in_the_Malvern_Hills_1921.jpg/1280px-Vaughan_Williams_and_Holst_walking_in_the_Malvern_Hills_1921.jpg",
+    "width": 1280,
+    "height": 1962,
+    "alt": "裱在深色卡紙上的直式舊照片，色調泛黃。一棵大樹下有一道木頭柵門，左邊的男子戴淺色軟帽、穿西裝與及膝褲，坐在柵門上；右邊的男子戴扁平草帽，穿著外套、肩後背著一件衣物，一手拄著手杖，斜靠在同一道柵門旁，面向鏡頭。左後方有一根石柱，背景是樹叢與天空。",
+    "caption": "1921 年 9 月，霍爾斯特（左，坐在柵門上）與佛漢・威廉斯（右，倚著柵門）在英格蘭馬爾文丘陵（Malvern Hills）健行。同年 6 月，《雲雀高飛》管弦樂版在倫敦首演，同一場音樂會也演出了霍爾斯特的《行星組曲》。",
+    "credit": "William G. Whittaker 攝；原件藏於大英圖書館，經 Wikimedia Commons 收錄",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vaughan_Williams_and_Holst_walking_in_the_Malvern_Hills_1921.jpg",
+    "made": "1921"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "樂曲一開始，木管和裝上弱音器的弦樂只奏兩小節，輕輕鋪一個和弦。接著樂團停下，小提琴獨自拉出一串往上爬的短音，愈爬愈高，再折回來。總譜在這裡沒有畫小節線，標著 senza misura，意思是不按拍子；力度是極弱，弓要放在指板上方拉（sur la touche），聲音因此比平常薄、比平常遠。我的讀法是：佛漢・威廉斯（Ralph Vaughan Williams）先拿掉節拍，讓獨奏者自己決定這隻鳥在空中停多久。"
+    },
+    {
+      "type": "music",
+      "composer": "佛漢・威廉斯（Ralph Vaughan Williams）",
+      "work": "《雲雀高飛》，為小提琴與管弦樂團的浪漫曲",
+      "work_original": "The Lark Ascending, Romance for violin and orchestra",
+      "composed": "1914 年起寫作小提琴與鋼琴版，戰後修訂；1920 年前後改編為管弦樂版",
+      "performers": "Hugh Bean（小提琴）；艾卓安・鮑爾特 指揮 新愛樂管弦樂團",
+      "recording": "EMI／His Master's Voice，1967 年 3 月 1 日錄音於倫敦艾比路錄音室第一錄音間（原版黑膠 ASD 2329，與《第六號交響曲》同輯；今由 Warner Classics 發行）",
+      "duration": "約 15 分鐘（本錄音 14 分 42 秒）",
+      "movements": [
+        "單樂章：The Lark Ascending (Romance)"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Vaughan Williams The Lark Ascending Hugh Bean Boult New Philharmonia",
+        "artist_hint": "Hugh Bean",
+        "track_filter": [
+          "Lark Ascending"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "本期指定的錄音由 Hugh Bean 獨奏，艾卓安・鮑爾特（Adrian Boult）指揮新愛樂管弦樂團（New Philharmonia Orchestra），EMI 在 1967 年 3 月 1 日錄於倫敦艾比路錄音室（Abbey Road Studios）第一錄音間，製作人是 Ronald Kinloch Anderson。原版黑膠是 His Master's Voice 的 ASD 2329，A 面與 B 面前半是作曲家的《第六號交響曲》，這首曲子在 B 面第 2 軌。選它有兩個理由。第一，鮑爾特正是 1921 年管弦樂版首演的指揮，錄音時離首演已經 46 年。第二，Hugh Bean 先任愛樂管弦樂團（Philharmonia Orchestra）副首席，1956–1967 年任首席；樂團 1964 年起改名新愛樂，所以錄音時他正是這支樂團的首席。全曲 14 分 42 秒，落在常見演奏長度的中間。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "這份錄音的名聲有兩個轉引來源。英文維基百科引述，英國《留聲機》（Gramophone）雜誌 2015 年 10 月 13 日刊出 David Gutman 的比較評選，從 24 份錄音裡把它列為首選；本報無法直接開啟《留聲機》原文。另一處是 BBC《音樂雜誌》網站 2025 年 5 月 13 日的推薦錄音清單（未註明作者），說 Hugh Bean 是為了填補錄音室多出來的時段，在幾個小時內把曲子學起來的；這段軼事本報查不到更早的出處，只能當作該刊的說法。"
+    },
+    {
+      "type": "h",
+      "text": "1914 年動筆，戰後才上台：作曲家從軍，六年後才首演"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "佛漢・威廉斯 1872 年 10 月 12 日生於英格蘭格洛斯特郡的唐安普尼（Down Ampney）牧師宅邸，今天是他 154 歲冥誕。《雲雀高飛》原本是小提琴與鋼琴的二重奏，英文維基百科記為 1914 年完成，佛漢・威廉斯協會的年表則說 1914 年只寫了一部分，戰後幾年才修訂完成；確切寫於何時何地並不清楚，原始手稿也已遺失。同一年他以二等兵身分入伍，加入陸軍醫療部隊；依佛漢・威廉斯協會的年表，1916 年他隨部隊到法國，經歷索姆河戰役，後來又調往希臘的薩洛尼卡，1917 年受任軍官，1918 年擔任英國遠征軍第一軍團的音樂指導。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "常有人說這首曲子是在一戰爆發時、作曲家住在海邊小鎮馬蓋特（Margate）那段時間寫的。英國《獨立報》2007 年引述過導演 Tony Palmer 的這個說法。作曲家的遺孀烏蘇拉（Ursula Vaughan Williams）在 1964 年的傳記裡確實寫到他當時人在馬蓋特，還因為在筆記本上寫東西，被一名童子軍當成間諜「逮捕」；但她沒有說那些筆記是《雲雀高飛》，反而引用作曲家的朋友巴特沃斯（George Butterworth）的話，說那是一場普賽爾講座的筆記。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這首曲子題獻給英國小提琴家瑪麗・霍爾（Marie Hall）。她 1884 年生於紐卡索（Newcastle upon Tyne），父親是歌劇團的豎琴手；十歲左右曾跟艾爾加（Edward Elgar）學過一年琴，1901 年起到布拉格隨謝夫契克（Otakar Ševčík）學習，1903 年在倫敦首次登台。首演前她和作曲家一起修整這首曲子；她是否影響了譜面細節、影響多少，無從得知。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "portrait",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Marie_Hall_1884_-_1956.jpg/1280px-Marie_Hall_1884_-_1956.jpg",
+      "width": 1280,
+      "height": 1748,
+      "alt": "印刷網點明顯的黑白半身肖像。一名年輕女子蓬鬆的頭髮向上梳起，正面望向鏡頭，神情平靜；她穿著高領、肩部有大片蕾絲與刺繡的上衣，背景是深色的霧狀布景。",
+      "caption": "瑪麗・霍爾的肖像，刊於 J. Cuthbert Hadden 1913 年出版的《現代音樂家》（Modern Musicians），此為 1918 年再版的掃描。照片拍攝者未署名。七年後，她在布里斯托郊外首演了《雲雀高飛》。",
+      "credit": "攝影者不詳；翻拍自 J. Cuthbert Hadden《Modern Musicians》（T. N. Foulis，1913 年初版，1918 年再版）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Marie_Hall_1884_-_1956.jpg",
+      "made": "1913 年以前"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "戰後，作曲家把伴奏改寫成管弦樂。小提琴與鋼琴的原版先在 1920 年 12 月 15 日首演，地點是布里斯托郊外的榭爾漢普頓公共會堂（Shirehampton Public Hall），由霍爾與鋼琴家 Geoffrey Mendham 演出。管弦樂版在 1921 年 6 月 14 日於倫敦女王廳（Queen's Hall）首演，霍爾獨奏，鮑爾特指揮英國交響樂團（British Symphony Orchestra），由英國音樂協會（British Music Society）主辦。那一晚的重頭戲不是它，而是霍爾斯特（Gustav Holst）的《行星組曲》。"
+    },
+    {
+      "type": "quote",
+      "original": "stood apart from the rest as the only work in the programme which showed serene disregard of the fashions of to-day or of yesterday",
+      "text": "在整場節目裡自成一格，是唯一一首對今天或昨天的流行都泰然不理的作品。",
+      "cite": "《泰晤士報》1921 年 6 月 15 日第 8 版樂評，未署名；轉引自英文維基百科（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "音樂學者佛爾曼（Lewis Foreman）2018 年為 Onyx 唱片撰寫的解說，提醒聽眾別忘了這首曲子放在 1914 年的英國音樂裡有多新：節奏自由流動，又避開主音與屬音的終止式（據英文維基百科轉引）。另一位解說作者 Jeffrey Davis 則認為，因為寫在一戰前夕，這幅英格蘭鄉間的田園景象底下或許有一層哀傷。這兩種說法都是事後的解讀，本報未查到作曲家本人對此的說明。"
+    },
+    {
+      "type": "h",
+      "text": "梅瑞狄斯的詩有 122 行，總譜只抄了 12 行"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "曲名取自英國作家梅瑞狄斯（George Meredith）1881 年的同名詩，後來收進他 1883 年由 Macmillan 出版的詩集《大地之樂的詩與抒情詩》（Poems and Lyrics of the Joy of Earth）。整首詩 122 行，用兩兩押韻的短句寫一隻雲雀邊唱邊往上飛。佛漢・威廉斯在總譜卷首抄了三段共 12 行：開頭 4 行、中段 6 行，以及最後 2 行。"
+    },
+    {
+      "type": "quote",
+      "original": "He rises and begins to round, / He drops the silver chain of sound, / Of many links without a break",
+      "text": "牠升起，開始盤旋，／垂下一條銀色的聲音之鏈，／環環相扣，沒有斷處。",
+      "cite": "梅瑞狄斯〈雲雀高飛〉第 1–3 行，佛漢・威廉斯抄在總譜卷首（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "最後兩行是「Till lost on his aërial rings / In light, and then the fancy sings」：直到牠消失在空中的一圈圈光裡，然後換想像接著唱（本文自譯）。《泰晤士報》1921 年那篇樂評也引了詩句，還指出音樂從頭到尾沒有升到詩中「孩子的舞蹈、播種者的謝意」那幾行的力道。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "portrait",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/fa/George_Meredith%27s_Portrait.jpg",
+      "width": 1273,
+      "height": 1769,
+      "alt": "黑白側面半身照。一名年長男子朝左側望，頭髮捲曲蓬鬆，留著修剪過的灰白鬍子，穿深色雙排扣外套、白色硬領，背景全黑。",
+      "caption": "梅瑞狄斯側面照，Messrs. Thomson 照相館拍攝，翻拍自一本 1913 年以前出版、與史蒂文生（Robert Louis Stevenson）相關的書籍（Internet Archive 掃描）。他 1909 年過世，沒能聽到這首以他的詩命名的曲子。",
+      "credit": "Messrs. Thomson 攝；經 Internet Archive 書籍掃描收錄於 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:George_Meredith%27s_Portrait.jpg",
+      "made": "1909 年以前"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "烏蘇拉在 1964 年的傳記裡說，這首曲子讓小提琴「both the bird's song and its flight」：同時是鳥的歌聲，也是鳥的飛行（本文自譯，轉引自英文維基百科）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "副標題「浪漫曲」是佛漢・威廉斯常用來稱呼沉思性慢板音樂的詞。樂評人豪斯（Frank Howes）說，這個詞在他筆下不帶情愛意味；豪斯也認為整首曲子「在音樂裡獨一無二」，最接近的類比是貝多芬的兩首小提琴浪漫曲（皆據英文維基百科轉引，本文自譯）。"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：三段無伴奏獨奏，把全曲切成兩次起飛"
+    },
+    {
+      "type": "table",
+      "title": "《雲雀高飛》的段落",
+      "head": [
+        "段落",
+        "聽什麼",
+        "拍子、調性或標記"
+      ],
+      "rows": [
+        [
+          "引子",
+          "木管與加弱音器的弦樂，只有兩小節",
+          "6/8"
+        ],
+        [
+          "第一段獨奏",
+          "小提琴無伴奏、無小節線，極弱，弓在指板上",
+          "不按拍子"
+        ],
+        [
+          "樂團進場",
+          "小提琴接著唱獨奏尾聲引出的旋律，樂團在底下伴奏",
+          "2/4；調性在模糊的 G 大調"
+        ],
+        [
+          "第二段獨奏",
+          "較短的無伴奏段落",
+          "不按拍子"
+        ],
+        [
+          "中段（Allegretto tranquillo quasi andante）",
+          "長笛吹出新的旋律",
+          "—"
+        ],
+        [
+          "Allegro tranquillo",
+          "獨奏顫音，三角鐵在弱拍上輕敲；五小節後雙簧管加入，標 scherzando",
+          "6/8，轉到 F 大調"
+        ],
+        [
+          "再現",
+          "長笛的旋律回來，改由小提琴拉，接著 6/8 段落再出現",
+          "Allegretto molto tranquillo"
+        ],
+        [
+          "尾聲獨奏",
+          "小提琴再度無伴奏，爬到高音 D，落下小三度到 B",
+          "不按拍子"
+        ]
+      ],
+      "caption": "依英文維基百科〈The Lark Ascending (Vaughan Williams)〉的樂曲分析整理，該條目引用 1925 年 Oxford University Press 版總譜。段落名稱為本報所加。"
+    },
+    {
+      "type": "p",
+      "text": "**第一段獨奏**。留意小提琴不是一口氣往上衝，而是在幾個音之間來回盤旋、停頓，再往上一點。這段沒有小節線，長短由小提琴家決定。這首曲子的錄音，全長從 13 分鐘出頭到 16 分鐘以上都有；本文推測，差別有一部分就在這幾段獨奏的鬆緊。獨奏快結束時，小提琴悄悄帶出一句旋律，樂團進來後它就接著唱下去，這是獨奏開始後第一次回到穩定的拍子。"
+    },
+    {
+      "type": "p",
+      "text": "**樂團那一段**。樂團編制很小：兩支長笛、一支雙簧管、兩支單簧管、兩支低音管、兩支法國號、三角鐵與弦樂，沒有小號、長號，也沒有定音鼓。我的讀法是，這樣的編制讓樂團的聲音貼著地面，小提琴在上方。學者 Christopher Mark 分析，曲子從多利安調式開始，在多利安與愛奧利安調式之間來回，並大量使用五聲音階。另一位解說作者 Philip Borg-Wheeler 2014 年指出，全曲沒有直接借用任何民歌，作曲家是把民歌的特徵吸收成自己的旋律。"
+    },
+    {
+      "type": "p",
+      "text": "**中段**。第二段較短的獨奏之後，長笛吹出一首新的旋律，標記是 Allegretto tranquillo quasi andante。再往下，三角鐵第一次出聲，而且敲在弱拍上，這是全曲唯一的打擊樂器；調性從原本模糊的 G 大調移到 F 大調，拍子換成 6/8，雙簧管帶著一段標 scherzando（詼諧地）的旋律進來。Christopher Mark 認為，長笛那首像民歌的旋律把焦點從天空拉回地面與人的活動。"
+    },
+    {
+      "type": "p",
+      "text": "**尾聲**。長笛的旋律回來，這次由小提琴獨奏拉出，6/8 的段落也再出現一次。然後樂團退下，小提琴第三次獨奏，一路往上，爬到高音譜表上方兩個八度的 D，再落下一個小三度停在 B。B 不是 G 大調的主音；我的讀法是，樂曲刻意不落地，停在半空中。"
+    },
+    {
+      "type": "callout",
+      "label": "延伸聆聽",
+      "text": "想聽 1920 年首演時的原始樣貌，可以找小提琴家 Jennifer Pike 與鋼琴家 Martin Roscoe 的小提琴與鋼琴原始版錄音（Chandos CHAN 20156，2019 年 10 月錄於 Potton Hall，2020 年 8 月發行）。據 BBC《音樂雜誌》2020 年 11 月 20 日的預告，Pike 獲邀在首演滿 100 年的 2020 年 12 月 15 日，於榭爾漢普頓公共會堂舉行線上直播的百年紀念演出。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Lark Ascending (Vaughan Williams)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Lark_Ascending_(Vaughan_Williams)",
+      "note": "創作年代與手稿遺失、馬蓋特說法、兩次首演、《泰晤士報》1921 年樂評、總譜卷首詩行、樂曲分析、編制、Ursula Vaughan Williams／Howes／Foreman／Davis／Mark 的說法、《留聲機》2015 年比較評選；2026-10-11 查閱"
+    },
+    {
+      "title": "Timeline",
+      "publisher": "Ralph Vaughan Williams Society",
+      "url": "https://www.rvwsociety.com/timeline/",
+      "note": "1872 年 10 月 12 日生於 Down Ampney、1914 年入伍、1916–1918 年軍旅、1920 年 12 月 15 日榭爾漢普頓首演；2026-10-11 查閱"
+    },
+    {
+      "title": "Marie Hall",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Marie_Hall",
+      "note": "生年與出生地、師承、1903 年倫敦首演、參與《雲雀高飛》定稿；2026-10-11 查閱"
+    },
+    {
+      "title": "Hugh Bean",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hugh_Bean",
+      "note": "先任愛樂管弦樂團副首席，1956–1967 年任首席；2026-10-11 查閱"
+    },
+    {
+      "title": "Poems and Lyrics of the Joy of Earth（1883）",
+      "publisher": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/files/63672/63672-h/63672-h.htm",
+      "note": "〈The Lark Ascending〉全文；本報據此核對全詩 122 行與段落位置；總譜卷首的抄錄文字依英文維基百科轉引"
+    },
+    {
+      "title": "George Meredith",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/George_Meredith",
+      "note": "1909 年逝世；2026-10-11 查閱"
+    },
+    {
+      "title": "Sir Adrian Boult conducts Vaughan Williams – Symphony No. 6 / The Lark Ascending（HMV ASD 2329）",
+      "publisher": "Discogs",
+      "url": "https://www.discogs.com/release/1794783",
+      "note": "原版黑膠編號、1967 年發行；A1–B1 為第六號交響曲，B2 為《雲雀高飛》"
+    },
+    {
+      "title": "Vaughan Williams – Sir Adrian Boult – Serenade to Music • The Lark Ascending …（EMI CDM 7 64022 2）",
+      "publisher": "Discogs",
+      "url": "https://www.discogs.com/release/8424139",
+      "note": "唱片內頁資料：1967 年 3 月 1 日錄於艾比路第一錄音間、製作人 Ronald Kinloch Anderson、演奏時間 14:42"
+    },
+    {
+      "title": "Sir Adrian Boult – The Complete EMI Recordings（2013）",
+      "publisher": "Discogs",
+      "url": "https://www.discogs.com/release/29318683",
+      "note": "套裝內頁：The Lark Ascending 錄於 1.III.1967, No.1 Studio, Abbey Road"
+    },
+    {
+      "title": "Sir Adrian Boult: The Warner Classics Edition（曲目表）",
+      "publisher": "Warner Classics",
+      "date": "2025-11",
+      "url": "https://www.warnerclassics.com/sites/default/files/2025-11/Sir%20Adrian%20Boult%20stereo%20recordings.pdf",
+      "note": "廠牌曲目表：CD 24 為 Vaughan Williams Symphony No. 6 · The Lark Ascending (Bean)"
+    },
+    {
+      "title": "The Lark Ascending: the origin story of Vaughan Williams's atmospheric masterpiece",
+      "publisher": "BBC Music Magazine（classical-music.com）",
+      "date": "2025-05-13",
+      "url": "https://www.classical-music.com/features/works/lark-ascending",
+      "note": "推薦錄音清單；Hugh Bean 在幾小時內學會此曲的說法（未註明作者）"
+    },
+    {
+      "title": "Jennifer Pike to appear as soloist in centenary performance of The Lark Ascending at Shirehampton Public Hall, where it was premiered",
+      "publisher": "BBC Music Magazine（classical-music.com）",
+      "url": "https://www.classical-music.com/news/jennifer-pike-to-appear-as-soloist-in-centenary-performance-of-the-lark-ascending-in-shirehampton-public-hall-where-it-was-premiered",
+      "note": "百年紀念演出的事前預告（線上直播）",
+      "date": "2020-11-20"
+    },
+    {
+      "title": "Vaughan Williams: The Lark Ascending (Original Version) and other works – Jennifer Pike, Martin Roscoe（CHAN 20156）",
+      "publisher": "Chandos Records",
+      "date": "2020-08",
+      "url": "https://www.chandos.net/products/catalogue/CHAN%2020156",
+      "note": "小提琴與鋼琴原始版、Potton Hall 錄音、2020 年 8 月發行"
+    }
+  ]
+}
