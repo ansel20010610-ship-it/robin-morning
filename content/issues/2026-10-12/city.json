@@ -1,0 +1,402 @@
+{
+  "column": "city",
+  "date": "2026-10-12",
+  "title": "錫耶納田野廣場：九片磚面與一條窗戶規定",
+  "dek": "錫耶納的主廣場不在大街上，要穿過巷子走下坡才到。從 1297 年的窗戶規定、九片磚面到外圈跑道，看這片斜坡怎樣被管成一個整體。",
+  "topic_key": "city:siena-piazza-del-campo",
+  "updated_at": "2026-10-11T13:54:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Italy_Siena_Piazza_del_Campo_BW_2021-09-23_15-11-48_1.jpg/1280px-Italy_Siena_Piazza_del_Campo_BW_2021-09-23_15-11-48_1.jpg",
+    "width": 1280,
+    "height": 1063,
+    "alt": "晴天下一片向右下方傾斜的紅磚廣場，許多人坐在磚地上。右側是一棟下層石造、上層紅磚的宮殿，頂上有城垛，旁邊一座細高的磚塔頂端是白色石造的鐘樓；塔腳前有一座白色石造的開放式小亭。左側是一排弧形排列的四、五層樓房，底層有紅色遮陽篷。",
+    "caption": "田野廣場東南側，2021 年 9 月 23 日攝。右邊是市政廳與 Torre del Mangia，塔腳的白色小亭是廣場禮拜堂；左邊弧形的紅磚樓是 Sansedoni 宮。前景坐著許多人的紅磚斜面，就是本文要走的扇形坡面。2021 年的樣子，不代表現況。",
+    "credit": "Berthold Werner／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Italy_Siena_Piazza_del_Campo_BW_2021-09-23_15-11-48_1.jpg",
+    "made": "2021"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "錫耶納（Siena）的田野廣場（Piazza del Campo，當地簡稱 Il Campo）是一片朝市政廳傾斜的窪地。義大利《中世紀藝術百科》（Enciclopedia dell'Arte Medievale）1999 年的「錫耶納」條目這樣定位它：13 世紀下半葉經一連串徵收與拆除闢成，佔據市政廳（Palazzo Pubblico）與 Via di Città、Banchi di Sotto 這條大幹道之間的谷坡，卻「完全隔離於交通流之外」；兩條主軸約 100 公尺與 150 公尺。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "這篇只看這一座廣場，沿一條路線走：從城中大街交會的路口，走巷子下到廣場上緣的噴泉，順著磚面走到市政廳門前，看塔腳的禮拜堂，最後沿外圈環道從西南角的窄巷離開。一路看三件事：人從哪裡進來、地面怎麼分、四周的牆受什麼規定約束。"
+    },
+    {
+      "type": "p",
+      "text": "這條路線是觀看順序，不是導航建議。本文不提供開放時間與通行建議；賽馬節期間的安排，以錫耶納市府的公告為準。"
+    },
+    {
+      "type": "facts",
+      "title": "地點資料",
+      "items": [
+        [
+          "城市",
+          "義大利托斯卡尼大區錫耶納，舊城中心"
+        ],
+        [
+          "地點",
+          "Piazza del Campo（田野廣場）；環繞廣場的街道與門牌都叫「Il Campo」"
+        ],
+        [
+          "形成",
+          "13 世紀下半葉經徵收與拆除闢成；1297 年已有條文規範沿廣場新邊界建屋的窗戶（Treccani）"
+        ],
+        [
+          "主要構件",
+          "市政廳 1297 年動工；Torre del Mangia 依中世紀編年史 1325 年秋奠基，文件所見付款始於 1338 年，可能在 1344 年 12 月 18 日完工；廣場禮拜堂 1352 年動工；Fonte Gaia 自 1343 年起是市營新引水道的出口，1419 年由 Jacopo della Quercia 重做完成，今日廣場上的是 19 世紀複製品；九片放射狀磚石鋪面，Guidoni 定在 14 到 15 世紀之間"
+        ],
+        [
+          "設計者",
+          "沒有單一設計者。市政廳由九人政府（Governo dei Nove）下令興建；參與塔樓工程的有錫耶納雕刻家兼建築師 Agostino di Giovanni，以及佩魯賈的 Minuccio、Francesco di Rinaldo 兄弟"
+        ],
+        [
+          "目前用途",
+          "截至 2026 年 10 月 11 日可確認：市政廳仍是錫耶納市府政治機構的所在，部分空間為市立博物館（Museo Civico），館方網站寫每日 10:00–19:00 開放；廣場是每年 7 月 2 日與 8 月 16 日賽馬節（Palio）的賽場，市府賽馬節網站列有 2026 年這兩場"
+        ]
+      ]
+    },
+    {
+      "type": "svg",
+      "title": "從 Croce del Travaglio 走到市政廳門前",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 350\"><path class=\"muted line\" d=\"M307.2 32.9 L410.0 79.2\" stroke-width=\"5\" opacity=\"0.35\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M250.6 16.2 L240.6 14.8 L232.0 13.9 L219.5 13.1 L208.3 12.7 L197.6 12.7 L190.3 13.0 L186.2 13.3\" stroke-width=\"5\" opacity=\"0.35\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M186.2 13.3 L167.7 17.1 L108.6 29.3\" stroke-width=\"5\" opacity=\"0.35\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M307.2 32.9 L301.1 30.3 L294.5 27.7\" stroke-width=\"5\" opacity=\"0.35\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M294.5 27.7 L272.7 21.5 L262.8 18.9 L250.6 16.2\" stroke-width=\"5\" opacity=\"0.35\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M108.6 29.3 L106.3 33.4 L103.1 37.4 L68.1 68.5 L57.4 78.8 L41.8 93.3\" stroke-width=\"5\" opacity=\"0.35\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M16.6 169.4 L21.0 194.6 L28.2 228.8 L31.0 241.8 L33.6 255.9 L36.5 274.6\" stroke-width=\"5\" opacity=\"0.35\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M36.5 274.6 L43.4 308.9 L50.8 347.9 L51.9 355.9 L52.3 362.7 L52.4 368.4 L52.2 373.8 L51.7 380.9 L50.7 386.7 L48.9 394.1 L47.5 398.5 L45.3 402.8 L40.8 409.9 L29.4 427.4\" stroke-width=\"5\" opacity=\"0.35\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M41.8 93.3 L35.1 103.6 L29.1 113.9 L20.4 131.2 L18.9 134.9 L17.5 138.6\" stroke-width=\"5\" opacity=\"0.35\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M17.5 138.6 L16.7 142.2 L16.3 145.8 L15.8 152.2\" stroke-width=\"5\" opacity=\"0.35\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M15.8 152.2 L15.8 156.9 L15.9 161.5 L16.6 169.4\" stroke-width=\"5\" opacity=\"0.35\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M108.6 29.3 L108.5 24.3 L108.8 19.3 L110.0 13.4 L117.2 -10.9 L119.3 -19.1 L121.0 -27.3 L123.3 -39.2 L123.8 -43.8 L124.3 -49.9 L124.6 -55.3 L124.6 -60.5 L124.2 -65.6 L123.6 -70.0\" stroke-width=\"5\" opacity=\"0.35\" stroke-linecap=\"round\"/><polygon class=\"soft\" points=\"43.0,162.3 59.0,183.0 64.0,191.2 76.5,211.7 79.7,216.8 89.0,233.6 94.8,247.6 96.6,251.9 97.1,253.7 99.3,261.7 100.9,267.6 102.4,273.0 111.1,269.4 120.5,272.0 160.7,254.2 165.6,247.2 189.3,234.9 215.5,211.1 216.5,210.2 228.3,195.0 229.4,193.6 231.5,192.8 222.6,185.9 228.0,179.0 229.2,177.5 232.2,173.7 241.1,180.4 245.6,177.3 246.7,175.6 248.6,175.5 261.3,161.6 262.9,162.8 277.2,144.9 285.0,134.5 294.1,128.8 297.6,101.7 291.3,99.3 291.0,100.3 289.0,99.6 282.1,98.4 258.5,87.8 237.7,73.8 236.1,72.7 235.5,73.9 226.6,67.6 226.9,66.5 209.8,57.8 198.5,51.8 194.0,50.7 183.8,50.2 173.4,50.4 163.2,51.9 143.3,57.6 128.6,69.3 127.7,68.4 126.0,69.4 123.4,71.7 124.1,72.7 96.0,97.1 93.5,99.3 91.2,101.2 90.9,100.8 75.6,114.8 63.6,129.4 64.8,130.4 58.2,141.1 56.5,140.1 47.2,154.5 43.0,162.3\" stroke-width=\"1.2\"/><polygon class=\"muted\" points=\"223.1,282.8 259.0,250.3 264.0,244.8 278.9,256.4 277.3,257.6 318.8,305.9 317.0,307.6 318.4,309.5 320.2,311.6 322.2,309.6 325.0,312.6 327.5,310.6 326.4,309.2 343.9,293.1 342.5,292.0 342.7,287.1 342.7,283.3 345.3,280.7 302.2,228.9 241.1,180.4 214.1,213.3 189.3,234.9 165.6,247.2 195.7,298.9 201.4,295.5 223.1,282.8\" opacity=\"0.55\" stroke-width=\"0.6\"/><polygon class=\"paper\" points=\"242.1,215.7 259.9,229.9 268.6,218.8 250.9,204.7 242.1,215.7\" stroke-width=\"0.6\"/><polygon class=\"ink\" points=\"240.9,179.4 243.4,181.3 244.6,182.2 246.2,183.5 247.4,184.5 248.9,185.6 250.2,186.7 251.9,188.0 250.7,189.6 249.2,191.5 247.8,193.4 246.2,195.5 244.6,197.7 243.0,199.7 241.6,201.6 239.7,200.1 238.9,199.5 237.6,198.4 235.6,196.9 234.0,195.7 232.6,194.7 230.5,193.0 232.4,190.4 234.4,187.9 235.6,186.3 236.6,185.0 237.8,183.4 239.0,181.9 240.9,179.4\" opacity=\"0.85\"/><polygon class=\"gold\" points=\"231.4,193.0 221.9,185.7 224.0,183.0 224.4,183.3 230.1,176.0 229.9,175.8 231.9,173.2 241.2,180.3 241.1,180.4 239.6,182.3 238.4,183.8 237.2,185.4 236.2,186.7 235.0,188.3 233.0,190.9 231.7,192.6 231.5,192.8 231.4,193.0\"/><polygon class=\"muted\" points=\"245.0,21.7 243.1,32.5 238.6,55.8 236.1,72.7 235.5,73.9 226.6,67.6 226.9,66.5 209.8,57.8 198.5,51.8 194.0,50.7 183.8,50.2 173.4,50.4 163.2,51.9 143.3,57.6 135.3,43.0 129.9,37.3 124.4,40.5 120.0,31.6 129.1,29.6 167.8,21.3 182.2,18.6 188.2,18.6 191.1,18.5 193.3,18.6 224.7,18.7 245.0,21.7\" opacity=\"0.3\" stroke-width=\"0.6\"/><polygon class=\"muted\" points=\"253.6,23.2 250.9,33.4 244.6,57.3 241.3,56.5 238.6,55.8 236.1,72.7 237.7,73.8 258.5,87.8 282.1,98.4 300.5,36.1 253.6,22.4 253.6,23.2\" opacity=\"0.3\" stroke-width=\"0.6\"/><path class=\"gold line\" d=\"M172.2 214.6 L103.2 199.9\" stroke-width=\"0.9\" opacity=\"0.8\"/><path class=\"gold line\" d=\"M173.4 211.6 L90.0 163.4\" stroke-width=\"0.9\" opacity=\"0.8\"/><path class=\"gold line\" d=\"M175.4 209.1 L111.0 137.5\" stroke-width=\"0.9\" opacity=\"0.8\"/><path class=\"gold line\" d=\"M178.1 207.3 L136.1 113.0\" stroke-width=\"0.9\" opacity=\"0.8\"/><path class=\"gold line\" d=\"M181.2 206.5 L169.2 91.8\" stroke-width=\"0.9\" opacity=\"0.8\"/><path class=\"gold line\" d=\"M184.5 206.6 L207.0 100.6\" stroke-width=\"0.9\" opacity=\"0.8\"/><path class=\"gold line\" d=\"M187.5 207.8 L237.4 121.4\" stroke-width=\"0.9\" opacity=\"0.8\"/><path class=\"gold line\" d=\"M190.0 209.8 L265.4 141.9\" stroke-width=\"0.9\" opacity=\"0.8\"/><path class=\"muted line\" d=\"M281.5 111.8 L269.7 104.8 L259.7 99.0 L233.5 82.8 L222.3 76.1 L210.2 69.3 L203.6 66.1 L198.2 64.1 L192.4 62.7 L182.3 62.6 L175.5 63.2 L169.9 64.4 L161.9 66.5 L151.2 70.4 L140.9 75.0 L133.3 80.0 L101.4 107.1 L93.1 115.2 L85.5 123.3 L78.6 132.1 L75.7 136.7 L73.3 140.9 L71.5 144.8 L70.3 148.7 L69.8 151.8 L69.6 158.1\" stroke-width=\"2.4\" opacity=\"0.6\"/><path class=\"muted line\" d=\"M153.1 239.0 L165.0 231.7 L171.3 227.6 L176.9 223.4 L184.9 216.8 L192.8 209.4 L232.3 167.8 L270.3 132.3 L274.2 128.0 L277.4 123.7\" stroke-width=\"2.4\" opacity=\"0.6\"/><path class=\"muted line\" d=\"M277.4 123.7 L280.0 117.0 L281.5 111.8\" stroke-width=\"2.4\" opacity=\"0.6\"/><path class=\"muted line\" d=\"M118.8 258.5 L153.1 239.0\" stroke-width=\"2.4\" opacity=\"0.6\"/><path class=\"muted line\" d=\"M69.6 158.1 L71.0 167.3 L73.8 176.5 L77.2 183.4 L81.0 190.5 L111.0 244.9\" stroke-width=\"2.4\" opacity=\"0.6\"/><path class=\"muted line\" d=\"M111.0 244.9 L118.8 258.5\" stroke-width=\"2.4\" opacity=\"0.6\"/><polygon class=\"accent\" points=\"119.0,109.3 132.1,98.9 136.9,105.0 123.8,115.4 119.0,109.3\"/><path class=\"ink line\" d=\"M9.8 571.1 L28.5 544.8 L35.7 534.6 L44.9 523.9 L55.0 513.3 L65.9 502.5 L70.9 497.8 L78.4 490.6 L96.8 472.9 L120.4 447.9 L129.0 437.3 L133.1 431.9 L136.8 426.7 L140.1 421.5 L142.8 415.9 L144.4 411.3 L145.6 407.1 L146.1 402.8 L146.2 398.6 L146.1 392.9 L145.7 387.2 L144.0 368.9 L142.8 360.2 L141.3 351.4 L139.8 344.6 L137.8 337.7 L116.6 270.7 L115.9 267.3 L116.0 264.4 L117.0 261.5 L118.8 258.5\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M15.8 152.2 L21.2 153.0 L30.6 154.5 L36.0 155.3 L43.1 156.1 L55.4 157.1 L69.6 158.1\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M277.4 123.7 L288.2 129.7 L298.7 134.3 L305.1 136.6 L313.7 139.2 L323.3 141.7 L333.9 143.9 L356.6 146.7 L365.9 148.3\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M281.5 111.8 L307.2 32.9\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M237.7 73.8 L233.5 82.8\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M241.3 56.5 L237.7 73.8\" stroke-width=\"1.3\" stroke-dasharray=\"2 2\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M83.1 86.9 L93.5 99.3\" stroke-width=\"1.3\" stroke-dasharray=\"2 2\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M68.1 68.5 L83.1 86.9\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M93.5 99.3 L101.4 107.1\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M126.0 69.4 L133.3 80.0\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M103.1 37.4 L117.5 57.3\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M117.5 57.3 L126.0 69.4\" stroke-width=\"1.3\" stroke-dasharray=\"2 2\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M194.0 50.7 L192.4 62.7\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M191.1 18.5 L194.0 50.7\" stroke-width=\"1.3\" stroke-dasharray=\"2 2\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M88.0 255.8 L96.6 251.9\" stroke-width=\"1.3\" stroke-dasharray=\"2 2\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M55.6 269.2 L62.2 266.9 L88.0 255.8\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M40.6 273.4 L55.6 269.2\" stroke-width=\"1.3\" stroke-dasharray=\"2 2\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M36.5 274.6 L40.6 273.4\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M96.6 251.9 L111.0 244.9\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M153.1 239.0 L188.7 294.3 L201.7 314.2\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"ink line\" d=\"M232.3 167.8 L264.0 194.2 L269.2 198.1 L275.3 202.4 L293.2 214.4 L299.9 219.1 L307.4 225.0\" stroke-width=\"1.3\" opacity=\"0.8\"/><path class=\"accent line\" d=\"M108.4 29.2 L103.2 37.8 L132.4 80.8 L150 104 L178 205 L218 196 M178 212 L111.8 244.2 L72 260 L36.1 275.2\" stroke-width=\"1.9\" stroke-dasharray=\"1.5 3.5\" stroke-linecap=\"round\"/><circle class=\"accent\" cx=\"150\" cy=\"96\" r=\"7.5\"/><text class=\"paper\" x=\"150\" y=\"99.3\" font-size=\"9.5\" text-anchor=\"middle\" font-weight=\"700\">1</text><circle class=\"accent\" cx=\"170\" cy=\"214\" r=\"7.5\"/><text class=\"paper\" x=\"170\" y=\"217.3\" font-size=\"9.5\" text-anchor=\"middle\" font-weight=\"700\">2</text><circle class=\"accent\" cx=\"214\" cy=\"206\" r=\"7.5\"/><text class=\"paper\" x=\"214\" y=\"209.3\" font-size=\"9.5\" text-anchor=\"middle\" font-weight=\"700\">3</text><circle class=\"accent\" cx=\"92\" cy=\"244\" r=\"7.5\"/><text class=\"paper\" x=\"92\" y=\"247.3\" font-size=\"9.5\" text-anchor=\"middle\" font-weight=\"700\">4</text><text class=\"ink\" x=\"108\" y=\"22\" font-size=\"8.5\" text-anchor=\"middle\">Croce del Travaglio</text><text class=\"muted\" x=\"258\" y=\"10\" font-size=\"8.5\" text-anchor=\"middle\">Banchi di Sotto</text><text class=\"muted\" x=\"14\" y=\"200\" font-size=\"8.5\" text-anchor=\"middle\" transform=\"rotate(-82 14 200)\">Via di Città</text><text class=\"muted\" x=\"100\" y=\"50\" font-size=\"8\" text-anchor=\"end\">Vicolo di San Pietro</text><text class=\"muted\" x=\"100\" y=\"59\" font-size=\"7.5\" text-anchor=\"end\">（台階、穿過建築）</text><text class=\"ink\" x=\"182\" y=\"52\" font-size=\"8.5\" text-anchor=\"middle\">Sansedoni 宮</text><text class=\"ink\" x=\"114\" y=\"124\" font-size=\"8.5\" text-anchor=\"end\">Fonte Gaia</text><text class=\"muted\" x=\"114\" y=\"134\" font-size=\"7.5\" text-anchor=\"end\">（今為 19 世紀複製品）</text><text class=\"gold\" x=\"172\" y=\"150\" font-size=\"8.5\" text-anchor=\"middle\">九片扇形鋪面</text><text class=\"gold\" x=\"172\" y=\"160\" font-size=\"7.5\" text-anchor=\"middle\">（分隔線位置為示意）</text><text class=\"ink\" x=\"254\" y=\"262\" font-size=\"8.5\" text-anchor=\"middle\">Palazzo Pubblico</text><text class=\"muted\" x=\"254\" y=\"273\" font-size=\"7.5\" text-anchor=\"middle\">（市政廳，今市府與市立博物館）</text><text class=\"ink\" x=\"268\" y=\"184\" font-size=\"8\" text-anchor=\"start\">Torre del Mangia</text><text class=\"ink\" x=\"226\" y=\"170\" font-size=\"8\" text-anchor=\"middle\">Cappella di Piazza</text><text class=\"muted\" x=\"40\" y=\"290\" font-size=\"8\" text-anchor=\"middle\">Chiasso del Bargello</text><text class=\"muted\" x=\"40\" y=\"300\" font-size=\"7.5\" text-anchor=\"middle\">（往 Via di Città）</text><text class=\"muted\" x=\"338\" y=\"98\" font-size=\"7.5\" text-anchor=\"middle\">外圈石鋪環道</text><text class=\"muted\" x=\"338\" y=\"108\" font-size=\"7.5\" text-anchor=\"middle\">賽馬前鋪土作跑道</text><path class=\"muted line\" d=\"M312 104 L284 114\" stroke-width=\"0.8\"/><path class=\"ink line\" d=\"M360 334 L360 306\" stroke-width=\"1.4\"/><path class=\"ink\" d=\"M360 300 L355 310 L365 310 Z\"/><text class=\"ink\" x=\"360\" y=\"346\" font-size=\"9.5\" text-anchor=\"middle\">北</text><path class=\"ink line\" d=\"M196 326 L214 326\" stroke-width=\"1.3\" stroke-dasharray=\"2 2\"/><text class=\"muted\" x=\"218\" y=\"329\" font-size=\"7.5\">穿過建築底下的巷道</text><path class=\"accent line\" d=\"M196 338 L214 338\" stroke-width=\"1.9\" stroke-dasharray=\"1.5 3.5\" stroke-linecap=\"round\"/><text class=\"muted\" x=\"218\" y=\"341\" font-size=\"7.5\">本文觀看路線</text><text class=\"muted\" x=\"8\" y=\"342\" font-size=\"7.5\">示意，不按比例；依 OpenStreetMap 繪製</text></svg>",
+      "caption": "示意，不按比例。依 OpenStreetMap 圖資（2026 年 10 月 11 日下載）繪製廣場範圍、外圈環道、建物輪廓與通往環道的街巷，虛線是 OSM 標為穿過建築底下的巷段。九片扇形鋪面的分隔線依 Treccani 的描述與下文空拍照片示意，只表示收攏的方向，位置不精確。不作導航用途。",
+      "credit": "本報繪製；地圖資料 © OpenStreetMap 貢獻者（ODbL）"
+    },
+    {
+      "type": "h",
+      "text": "進場：從大街路口走巷子往下"
+    },
+    {
+      "type": "p",
+      "text": "《中世紀藝術百科》的同一條目指出，錫耶納三大托缽修會（方濟會、道明會、奧斯定會）的教堂位置構成一個三角形，幾何重心落在 Banchi di Sopra 與 Banchi di Sotto 的交會處，也就是 Croce del Travaglio 路口。條目並特別提到「田野廣場這個市政核心的分離」：廣場就在這個路口南邊的坡下，卻不在任何一條大街上。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "依 OpenStreetMap 圖資，通往廣場外圈環道的街巷共有 11 條，其中 5 條有一段標為穿過建築底下的通道，Vicolo di San Pietro、Vicolo di San Paolo、Chiasso del Bargello 這 3 條有台階。路線圖上的 ① 走的是 Vicolo di San Pietro：從 Croce del Travaglio 旁的 Via di Città 轉進去，下台階、穿過樓房底下，出口就在廣場上緣、噴泉的北側。"
+    },
+    {
+      "type": "p",
+      "text": "同一條目還記載，14、15 世紀時廣場用鐵鍊和周圍的街道隔開。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，窄口、台階、過街樓，再加上鐵鍊，讓大街上的人車從廣場上方經過，而不是穿過它。要進廣場，得刻意轉進巷子，所以它是目的地，不是捷徑。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "上緣：噴泉是引水道的終點"
+    },
+    {
+      "type": "p",
+      "text": "站在 ① 的位置，最先看到的是長方形的 Fonte Gaia。據《中世紀藝術百科》，這裡自 1343 年起是市營新引水道的出口；錫耶納有中世紀最複雜的地下引水渠系統之一，當地稱為「bottini」，主幹一路通到這座噴泉。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "今天看到的不是原件。現藏原件的 Santa Maria della Scala 博物館說明，Jacopo della Quercia 的噴泉在 1419 年完成，距開工十多年；浮雕是城市的守護者聖母，兩側配置美德像。石材用的是錫耶納附近 Montagnola 的大理石，館方稱之為脆弱的材料，再加上廣場上的日常活動，噴泉逐漸損壞。1743 年有人為了看賽馬爬上其中一尊立像 Rea Silvia，雕像碎裂，人也跟著摔落。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "1859 年，市府決定改用較耐久的卡拉拉大理石複製整座噴泉，委託錫耶納雕刻家 Tito Sarrocchi（1824–1900）製作。複製品十年後才揭幕，外圍加上建築師 Giuseppe Partini 設計的圍欄。原件殘塊在 1904 年移到市政廳的 Loggia dei Nove，1989 年開始修復，前後約 20 年，現與 Sarrocchi 的石膏模型一起陳列在 Santa Maria della Scala。",
+      "tag": "史實"
+    },
+    {
+      "type": "figure",
+      "id": "f1870",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/1870_Fratelli_Alinari_Siena%2C_Piazza_del_Campo_anagoria.JPG/1280px-1870_Fratelli_Alinari_Siena%2C_Piazza_del_Campo_anagoria.JPG",
+      "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/1870_Fratelli_Alinari_Siena%2C_Piazza_del_Campo_anagoria.JPG/3840px-1870_Fratelli_Alinari_Siena%2C_Piazza_del_Campo_anagoria.JPG",
+      "width": 1280,
+      "height": 961,
+      "alt": "黑白照片。一片幾乎無人的寬闊廣場，右側是有城垛的宮殿與一座高塔，塔腳有一座小亭；左側是一排弧形的多層樓房。廣場邊緣立著一排細柱與幾盞路燈，左下角是一座被矮欄圍起的長方形噴泉。",
+      "caption": "Fratelli Alinari 攝影工作室拍攝的田野廣場，Wikimedia Commons 著錄為 1870 年，影像來源為法蘭克福 Städel 博物館。右為市政廳、塔樓與廣場禮拜堂，左為 Sansedoni 宮等弧形立面，左下角是噴泉。1870 年前後的樣子，不代表現況。",
+      "credit": "Fratelli Alinari 攝影工作室；Städel 博物館／Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:1870_Fratelli_Alinari_Siena,_Piazza_del_Campo_anagoria.JPG",
+      "made": "約 1870"
+    },
+    {
+      "type": "detail",
+      "of": "f1870",
+      "region": [
+        0.0,
+        0.84,
+        0.24,
+        0.16
+      ],
+      "position": "照片左下角，約佔寬度四分之一",
+      "caption": "照片左下角的噴泉。水池三面的石牆刻有浮雕，外圍一圈鐵欄杆；右邊是一塊斜面平台，上面站著兩個人。"
+    },
+    {
+      "type": "p",
+      "text": "Commons 把這張照片記為 1870 年。若年代無誤，照片裡被欄杆圍住的噴泉，應該就是剛揭幕不久的 Sarrocchi 複製品與 Partini 的圍欄；本文沒有查到這張照片拍攝的確切月份，這只是推測。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "坡面：九片磚面往市政廳收攏"
+    },
+    {
+      "type": "figure",
+      "id": "faerial",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Siena_Torre_del_Mangia_Vista_su_la_Piazza_del_Campo_06.jpg/1280px-Siena_Torre_del_Mangia_Vista_su_la_Piazza_del_Campo_06.jpg",
+      "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Siena_Torre_del_Mangia_Vista_su_la_Piazza_del_Campo_06.jpg/3840px-Siena_Torre_del_Mangia_Vista_su_la_Piazza_del_Campo_06.jpg",
+      "width": 1280,
+      "height": 960,
+      "alt": "從高處俯拍的廣場。紅磚地面被幾條淺灰色石條分成扇形，石條往畫面下方收攏；扇形外緣是一圈灰色石鋪的弧形環道，環道外是一排樓房與紅色遮陽篷。畫面上方中央有一座長方形的白色噴泉，水池呈淺綠色。地面上散布著行人與成群的遊客。",
+      "caption": "從 Torre del Mangia 上往下拍，2023 年 4 月 19 日攝。淺色石條把紅磚坡面分成扇形，往畫面下方（塔腳與市政廳前）收攏；上方中央是 Fonte Gaia，右側弧形立面是 Sansedoni 宮。2023 年的樣子，不代表現況。",
+      "credit": "Zairon／Wikimedia Commons",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Siena_Torre_del_Mangia_Vista_su_la_Piazza_del_Campo_06.jpg",
+      "made": "2023"
+    },
+    {
+      "type": "detail",
+      "of": "faerial",
+      "region": [
+        0.62,
+        0.365,
+        0.338,
+        0.347
+      ],
+      "position": "照片右側中段，約佔寬度三分之一",
+      "caption": "坡面與環道的交界。左半是人字形（魚骨紋）鋪砌的紅磚，中間一條淺色石條分出兩片扇面；扇面外緣是一道白色石緣，上面隔一段立一根矮石柱；石緣外是灰色石塊鋪的環道，2023 年照片中擺著桌椅與紅色陽傘。右上角樓面的窗以細柱分格。"
+    },
+    {
+      "type": "p",
+      "text": "從噴泉往坡下走，腳下的紅磚以人字形鋪砌，每隔一段就跨過一條淺色石條。站在坡上看，這些石條全部朝市政廳門前收攏。《中世紀藝術百科》的描述是：磚與石的放射狀鋪面，分成九片，對應錫耶納的「九人」政府。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "同一部百科的「廣場」條目（Enrico Guidoni 撰，1998 年）說法較保留：它把「最終的」九片磚石鋪面放在 14 到 15 世紀之間，並說九片是「可能」指向九人政府。網路上常見的「1349 年鋪成」，本文查閱的上述來源都沒有寫，所以不採用。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "九人政府是什麼？Treccani《歷史辭典》的錫耶納條目記載：1287 年組成新的九人政府，成員全出自富有的平民與商人家族，對外親近佛羅倫斯；錫耶納在這段期間達到最繁榮的時候。1355 年，一場平民與豪族的起事推翻了它。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "Guidoni 對廣場輪廓還有一個解釋：錫耶納奉聖母為守護者，1260 年在 Montaperti 戰勝佛羅倫斯之後尤然；他認為廣場的弧形取自當時錫耶納繪畫裡的聖母斗篷，斗篷罩住市政廳，也罩住集會時站滿空地的市民。這是 Guidoni 的詮釋，不是文件上的設計說明。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法比較樸素：坡面本身就在指方向。不論從哪一條巷子進場，石條都朝同一點收攏，那一點是市政廳門前；坐在坡上的人，視線很自然落在那面牆上。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "坡底：市政廳、塔與禮拜堂"
+    },
+    {
+      "type": "p",
+      "text": "走到 ②，就是頭圖右邊那棟下石上磚的宮殿。市立博物館的說明是：市政廳 1297 年在九人政府主導下動工，到 1311 年完成中段的「torrione」和面對立面右側、供九人使用的部分；停工十多年後，1325 到 1331 年完成左側，作為行政長官（Podestà）的駐所，立面因此拉長成今天的樣子。《中世紀藝術百科》補充，它建在先前的鹽稅局（dogana del Sale）原址上。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "塔在左翼的盡頭。錫耶納市府的資料寫得很細：依中世紀編年史，塔基在 1325 年秋天奠下，但文件所見的付款要到 1338 年才開始；塔可能在 1344 年 12 月 18 日已經完成，工程紀錄則延續到 1349 年。塔身是邊長 7 公尺、牆厚近 2 公尺的方形，從廣場地面算起將近 87 公尺，算到避雷針是 102 公尺，登頂約 400 階。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "塔名來自第一位敲鐘人 Giovanni di Balduccio。市府的說法是，他揮霍出名，人稱「Mangiaguadagni」，字面是「吃光收入的人」（本文意譯），簡稱 Mangia。塔頂那口 6,764 公斤的大鐘自 1666 年掛上，錫耶納人叫它「Sunto」（取自它所奉獻的聖母升天），或因為體積叫它「Campanone」。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "③ 是塔腳那座白色石亭，廣場禮拜堂（市立博物館稱 Cappella del Campo）。館方記載，它在 1352 年動工，是 1348 年那場瘟疫結束後的還願；1376 年以前立起四根柱子，成為哥德式涼廊的樣子；文藝復興時期，錫耶納建築師兼雕刻家 Antonio Federighi 加上了相對的獅鷲頂飾。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "禮拜堂旁邊是市政廳的 Cortile del Podestà，錫耶納人叫它「Entrone」。博物館說，賽馬節時馬匹在這座院子裡等待分配給各個城區（contrada），比賽當天也從這裡出場；博物館、塔樓的入口都要經過這座院子。",
+      "tag": "史實"
+    },
+    {
+      "type": "h",
+      "text": "一條 1297 年的窗戶規定"
+    },
+    {
+      "type": "p",
+      "text": "回頭看廣場的弧形邊緣。據《中世紀藝術百科》，1297 年有一條法規條文，要求沿著廣場新邊界興建的房屋只能開「a colonnelli」的窗，也就是用小柱分隔的雙聯、三聯或多聯窗，而且不得設外挑的走廊（ballatoi）。Guidoni 據此推斷，廣場的弧形輪廓在 1297 年已經定案。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "同一條目的建築部分，引 1903 年出版的《Il Costituto》第 2 冊第 29 頁，說窗戶「si debiano fare a colonnelli」（應做成小柱分隔的窗，本文自譯），並說這個以市政廳為範本的窗式被加在臨廣場的建築上。條目也引了錫耶納國家檔案館的一份文件，說錫耶納人認為自己的廣場是世上最美的一座：",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "che è la più bela che si truovi",
+      "text": "是能找到的最美的一座",
+      "cite": "錫耶納國家檔案館，Concistoro 2111，c. 197r；轉引自《中世紀藝術百科》「錫耶納」條（Treccani，1999），本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "市政廳自己就照這條規定走了幾百年。市立博物館記載，外觀在 14 世紀末大致定型，最後一次重要的增建在 1687 年：中段兩側各加高一層，新開三組三聯窗，做成「與原有相符的哥德式」。",
+      "tag": "史實"
+    },
+    {
+      "type": "figure",
+      "id": "fsansedoni",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Palazzo_Sansedoni_Siena.jpg/1280px-Palazzo_Sansedoni_Siena.jpg",
+      "width": 1280,
+      "height": 1064,
+      "alt": "一棟紅磚宮殿的正面，牆面微微向內彎曲。頂上一排城垛，左側伸出一座較高的方形磚塔。三層樓的窗全是尖拱下以細白柱分成三格的窗，每扇窗上方有一道磚砌的尖拱。底層是一排店面與遮陽傘，前景是廣場的石柱與噴泉一角。",
+      "caption": "Sansedoni 宮朝田野廣場的立面，2005 年攝。三層樓的窗都是細柱分隔的三聯窗，立面順著廣場的弧線彎曲。依該宮現任所有者 Fondazione MPS 的說明，這面牆出自 18 世紀 Ferdinando Ruggieri 的新哥德式改建。2005 年的樣子，不代表現況。",
+      "credit": "Jastrow／Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Palazzo_Sansedoni_Siena.jpg",
+      "made": "2005"
+    },
+    {
+      "type": "p",
+      "text": "弧形另一端的 Sansedoni 宮也是。現任所有者 Fondazione MPS 的說明是：舊塔約建於 1243 年，塔樓住宅在 1339 年由 Agostino di Giovanni 帶領的工匠以哥德式完成；家族買下相鄰的房子後，三棟建築排齊成一棟，形成今天順著廣場彎曲的立面。朝廣場的這面牆，則出自 18 世紀建築師 Ferdinando Ruggieri 的新哥德式改建；舊塔在 1760 年 4 月到 10 月間拆除。《中世紀藝術百科》另提到，這座宮朝 Banchi di Sotto 的立面留有一份 1340 年的文件。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，1297 年的條文在九人政府 1355 年倒台後，並沒有跟著消失。1687 年市政廳加層、18 世紀 Sansedoni 宮改面，都還用細柱分隔的三聯窗，也都順著廣場的弧線。本文沒有查到這兩次工程是否直接援引那條規定，所以這只能算推論：規定定下的樣子，比定規定的政府活得久。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "回到外圈：石環是賽馬的跑道"
+    },
+    {
+      "type": "p",
+      "text": "往 ④ 走時，看腳下的分界。2023 年那張空拍的局部裡，紅磚扇面的外緣是一道白色石緣，隔一段立一根矮石柱；石緣外是灰色石塊鋪的環道，貼著四周的樓房繞成一圈。OpenStreetMap 把這圈環道的多數路段標為名叫「Il Campo」的步行街，機動車輛僅限獲准者通行。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "賽馬節跑的就是這一圈。市府賽馬節網站的說明是：17 個城區中，每場有 10 個參賽；騎師不用馬鞍，沿廣場跑三圈，約 1000 公尺。觀眾可以付費坐看台、從臨廣場的窗戶和陽台看，也可以免費進到廣場內圈看。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "跑道上會先鋪一層土，當地稱為「tufo」。市府 2024 年 6 月 25 日的公告說，這是砂質、黏質與粉質土的混合，用量約 350 立方公尺，依一套精確的程序在環道不同位置鋪成不同厚度，平時存放在市府所有的場地並持續監測。那一年的鋪設從凌晨 3 點左右開始，約 40 名工人在市府技術人員協調下作業。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "本文的讀法是：外圈石環和內圈扇面是兩種用法。平日環道給人繞行，扇面給人坐；賽馬日環道蓋上土變成跑道，扇面成了免費觀眾進場的地方。1743 年那個爬上噴泉雕像看賽馬的人，找的也是一個看得到這圈跑道的位置。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "路線的終點是西南角的 Chiasso del Bargello：走一小段巷子，經過一段穿過樓房底下的台階，回到 Via di Città。比賽當天，馬從禮拜堂旁那座院子出場，踏上鋪了土的這圈石環；九片磚面朝它收攏的那棟市政廳，也是馬匹出場的地方。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Siena（Urbanistica、Architettura 等節）",
+      "publisher": "Treccani，Enciclopedia dell'Arte Medievale（E. Guidoni、I. Moretti 等撰）",
+      "date": "1999",
+      "url": "https://www.treccani.it/enciclopedia/siena_(Enciclopedia-dell'-Arte-Medievale)/",
+      "note": "廣場的形成、谷坡位置與隔離交通、主軸約 100 × 150 公尺、1297 年窗戶條文、鐵鍊、Fonte Gaia 1343 與 1419、禮拜堂 1352、九片鋪面、聖母斗篷解釋、托缽修會三角形與 Croce del Travaglio、《Il Costituto》1903 II p. 29 與 Concistoro 2111 c. 197r 的轉引、Sansedoni 1340 年文件"
+    },
+    {
+      "title": "Piazza",
+      "publisher": "Treccani，Enciclopedia dell'Arte Medievale（E. Guidoni 撰）",
+      "date": "1998",
+      "url": "https://www.treccani.it/enciclopedia/piazza_(Enciclopedia-dell'-Arte-Medievale)/",
+      "note": "田野廣場一段：最終鋪面在 14–15 世紀、九片「可能」指九人政府、窗戶規範"
+    },
+    {
+      "title": "Siena",
+      "publisher": "Treccani，Dizionario di Storia",
+      "date": "2011",
+      "url": "https://www.treccani.it/enciclopedia/siena_(Dizionario-di-Storia)/",
+      "note": "九人政府 1287 年組成、1355 年被推翻"
+    },
+    {
+      "title": "Il Palazzo",
+      "publisher": "Museo Civico di Siena（錫耶納市立博物館）",
+      "date": "2026-10-11",
+      "url": "https://museocivico.comune.siena.it/il-palazzo",
+      "note": "市政廳 1297、1311、1325–1331 的工程階段；禮拜堂 1352、1376 與 Federighi；1687 年加層與三聯窗；日期為查閱日"
+    },
+    {
+      "title": "Gli Ambienti al livello del Campo",
+      "publisher": "Museo Civico di Siena",
+      "date": "2026-10-11",
+      "url": "https://museocivico.comune.siena.it/gli-ambienti-al-livello-del-campo",
+      "note": "Cortile del Podestà（Entrone）與賽馬節馬匹、政治機構仍在使用的廳室、每日 10:00–19:00 開放；日期為查閱日"
+    },
+    {
+      "title": "Torre del Mangia",
+      "publisher": "Comune di Siena（錫耶納市府）",
+      "date": "2026-10-11",
+      "url": "https://www.comune.siena.it/luogo/torre-del-mangia",
+      "note": "尺寸、階數、1325／1338／1344／1349 年代、工匠、塔名由來、1666 年大鐘；日期為查閱日"
+    },
+    {
+      "title": "The Fonte Gaia",
+      "publisher": "Santa Maria della Scala",
+      "date": "2026-10-11",
+      "url": "https://www.santamariadellascala.com/en/structure/a/la-fonte-gaia",
+      "note": "1419 年完成、Montagnola 大理石、1743 年 Rea Silvia、1859 年決定複製、Sarrocchi 與 Partini、1904 與 1989；日期為查閱日"
+    },
+    {
+      "title": "Il Palazzo",
+      "publisher": "Palazzo Sansedoni，Fondazione Monte dei Paschi di Siena",
+      "date": "2026-10-11",
+      "url": "https://palazzosansedoni.fondazionemps.it/about-us-2-2-3/",
+      "note": "約 1243 年的舊塔、1339 年完成的塔樓住宅、弧形立面、Ruggieri 的 18 世紀新哥德式改建、1760 年拆塔；日期為查閱日"
+    },
+    {
+      "title": "Tufo in Piazza del Campo, lavori iniziati regolarmente",
+      "publisher": "Comune di Siena",
+      "date": "2024-06-25",
+      "url": "https://www.comune.siena.it/novita/tufo-piazza-del-campo-lavori-iniziati-regolarmente",
+      "note": "tufo 的成分、約 350 立方公尺、鋪設程序與存放"
+    },
+    {
+      "title": "Siena e il Palio",
+      "publisher": "Comune di Siena，Il Palio di Siena",
+      "date": "2026-10-11",
+      "url": "https://palio.comune.siena.it/node/75",
+      "note": "17 個城區中 10 個參賽、跑三圈、觀賽方式、2026 年 7 月 2 日與 8 月 16 日兩場；日期為查閱日"
+    },
+    {
+      "title": "La Corsa",
+      "publisher": "Comune di Siena，Il Palio di Siena",
+      "date": "2026-10-11",
+      "url": "https://palio.comune.siena.it/node/5795",
+      "note": "三圈約 1000 公尺；日期為查閱日"
+    },
+    {
+      "title": "OpenStreetMap 地圖資料（bbox 11.3290,43.3170,11.3335,43.3200）",
+      "publisher": "OpenStreetMap 貢獻者（ODbL）",
+      "date": "2026-10-11",
+      "url": "https://www.openstreetmap.org/relation/5965021",
+      "note": "廣場範圍（relation 5965021）、市政廳（relation 3757203）、環道「Il Campo」、通往環道的 11 條街巷及其 tunnel=building_passage 與 highway=steps 標記；用於示意圖與通道計數"
+    }
+  ]
+}
