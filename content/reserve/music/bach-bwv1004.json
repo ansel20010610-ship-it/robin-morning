@@ -1,0 +1,365 @@
+{
+  "column": "music",
+  "date": "reserve",
+  "reserve_written": "2026-10-11",
+  "title": "一行譜、一件小樂器：巴哈〈夏康舞曲〉",
+  "dek": "巴哈第二號無伴奏小提琴組曲以一首 257 小節的〈夏康舞曲〉作結。本文以伊布拉吉莫娃的錄音，說明琶音段、大調段落與開頭主題在哪裡。",
+  "topic_key": "music:bach-bwv1004",
+  "updated_at": "2026-10-11T14:20:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/6_Violin_Sonatas_and_Partitas%2C_BWV_1001-1006_%28IA_imslp-violin-sonatas-and-partitas-bwv-1001-1006-bach-johann-sebastian%29.pdf/page28-1280px-6_Violin_Sonatas_and_Partitas%2C_BWV_1001-1006_%28IA_imslp-violin-sonatas-and-partitas-bwv-1001-1006-bach-johann-sebastian%29.pdf.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/6_Violin_Sonatas_and_Partitas%2C_BWV_1001-1006_%28IA_imslp-violin-sonatas-and-partitas-bwv-1001-1006-bach-johann-sebastian%29.pdf/page28-1920px-6_Violin_Sonatas_and_Partitas%2C_BWV_1001-1006_%28IA_imslp-violin-sonatas-and-partitas-bwv-1001-1006-bach-johann-sebastian%29.pdf.jpg",
+    "width": 1280,
+    "height": 1951,
+    "alt": "一頁泛黃的手寫樂譜，上面有 12 行五線譜，音符以深棕色墨水寫成。左上角以花體寫著 Ciaccona.；每行開頭有高音譜號和一個降記號。第一行的音符多半上下疊成和弦，往下各行則是成串連在一起的快速音符。頁面右緣露出相鄰一頁的窄條，紙張左下角有破損，頁面右側上下各有一個透明夾片。",
+    "caption": "巴哈無伴奏小提琴奏鳴曲與組曲親筆清稿中，〈夏康舞曲〉的第一頁，1720 年，柏林國家圖書館藏（Mus.ms. Bach P 967）。標題「Ciaccona.」下面的第一行，就是開頭的和弦主題。",
+    "credit": "Johann Sebastian Bach 手稿；Staatsbibliothek zu Berlin – Preußischer Kulturbesitz 藏；IMSLP 掃描檔經 Internet Archive 轉存至 Wikimedia Commons（PDF 第 28 頁）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:6_Violin_Sonatas_and_Partitas,_BWV_1001-1006_(IA_imslp-violin-sonatas-and-partitas-bwv-1001-1006-bach-johann-sebastian).pdf?page=28",
+    "made": "1720"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "〈夏康舞曲〉（Ciaccona）不從第一拍開始。小提琴在第二拍才進來，第一個聲音就是和弦：D、F、A 三個音疊在一起，一個 D 小調和弦；最上面的 A 拉長之後，再短短補一下。接下來的第 2、3 小節是同一種步伐：第一拍一個和弦，第二拍再一個和弦，一直拉長到第三拍，最後補一個短音。"
+    },
+    {
+      "type": "p",
+      "text": "這樣的和弦一連走了八小節，把主題說了兩遍。之後的兩百多小節，巴哈（Johann Sebastian Bach）只用一把小提琴，在同一條四小節的下行低音和它的各種變形上，一路變下去。我的讀法是：先把開頭這八小節聽熟，因為全曲最後幾小節，它會幾乎原樣再回來一次。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "頭圖是巴哈親筆清稿裡〈夏康〉的第一頁。左上角寫著「Ciaccona.」。第一行譜先是高音譜號、一個降記號的調號和 3/4 拍號，接著就是開頭的和弦：第一條小節線之前只有一個和弦加一個短音，那就是從第二拍起步的地方。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.18,
+        0.145,
+        0.7,
+        0.08
+      ],
+      "position": "頁面上方，標題與第一行譜，橫跨約七成頁寬",
+      "caption": "標題「Ciaccona.」與第一行譜。音符多半上下疊成三、四個音的和弦，這就是開頭的主題；第一條小節線前只有一個和弦加一個短音。"
+    },
+    {
+      "type": "music",
+      "composer": "巴哈（Johann Sebastian Bach）",
+      "work": "D 小調第二號無伴奏小提琴組曲，BWV 1004",
+      "work_original": "Partita No. 2 in D minor for solo violin, BWV 1004",
+      "composed": "1720 年或更早（親筆清稿署 1720 年）",
+      "performers": "伊布拉吉莫娃（Alina Ibragimova）小提琴",
+      "recording": "Hyperion CDA67691/2，2008 年 12 月至 2009 年 2 月分三次錄音於倫敦 Henry Wood Hall，2009 年 10 月發行",
+      "duration": "約 30 分鐘（本錄音 29 分 46 秒）",
+      "movements": [
+        "I. Allemanda",
+        "II. Corrente",
+        "III. Sarabanda",
+        "IV. Giga",
+        "V. Ciaccona"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Bach Sonatas and Partitas for solo violin Ibragimova",
+        "artist_hint": "Alina Ibragimova",
+        "track_filter": [
+          "Partita",
+          "No. 2"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "本篇指定的錄音，是伊布拉吉莫娃（Alina Ibragimova）為 Hyperion 錄製的六首無伴奏奏鳴曲與組曲全集，兩張 CD。據唱片內頁，錄音分三次在倫敦的 Henry Wood Hall 進行：2008 年 12 月 22–23 日、2009 年 1 月 17–18 日與 2 月 17–18 日；製作人 Andrew Keener，錄音工程 Simon Eadon，2009 年 10 月發行。第二號組曲在這套錄音裡長 29 分 46 秒。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "選它的理由在速度。依唱片內頁的時間，她的前四個樂章加起來 15 分 28 秒，〈夏康〉一首就拉了 14 分 10 秒；佛斯特（Isabelle Faust）2010 年 4 月由 harmonia mundi 發行的錄音，〈夏康〉是 12 分 26 秒，短了 1 分 44 秒。本文的考量是，第一次照著段落細聽，慢一點的版本比較容易聽出每一段在哪裡換。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "Hyperion 網頁列出這套唱片獲得的推薦，包括《留聲機》（Gramophone）的編輯推薦與 BBC《音樂雜誌》（BBC Music Magazine）的器樂類推薦。網頁轉引的 BBC《音樂雜誌》評語說，她的〈吉格〉一路小跑，像是知道轉角就是那首巨大的〈夏康〉；等〈夏康〉真的來了，她時而踮著腳走，時而高高揚起（本文自譯）。這段評語只標出處，沒有刊期與作者。"
+    },
+    {
+      "type": "h",
+      "text": "1720 年的清稿：六首沒有低音伴奏的獨奏"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "巴哈為無伴奏小提琴寫的三首奏鳴曲與三首組曲（BWV 1001–1006），留下一份他親手謄寫的清稿，現藏柏林國家圖書館（Staatsbibliothek zu Berlin – Preußischer Kulturbesitz），館藏號 Mus.ms. Bach P 967。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "據 Henle 版樂譜序言（Klaus Rönnau），題頁寫著「Sei Solo / â / Violino / senza / Basso / accompagnato / Libro primo / da / Joh. Seb. Bach. / ao. 1720.」，意思是「六首小提琴獨奏，沒有低音伴奏，第一冊，巴哈作，1720 年」（本文自譯）。這批曲子在巴哈生前沒有出版，這份清稿是最主要的依據；要到 1802 年，才由出版商 Simrock 首度印行。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Title_page_BWV1001-1006_autograph_manuscript_1720.jpg",
+      "width": 1188,
+      "height": 1877,
+      "alt": "畫面偏綠的紙面上，以深色墨水手寫的題頁，字句由上而下分成幾組：最上方是較大的 Sei Solo.，中段是幾行較小的字，接著是較大的 Libro Primo.，下方是 da 與署名、年份，最底下有一道花飾筆劃；左下方有一塊灰色斑塊。",
+      "caption": "巴哈無伴奏小提琴奏鳴曲與組曲（BWV 1001–1006）親筆清稿的題頁，署「ao. 1720」，柏林國家圖書館藏（Mus.ms. Bach P 967）。中段幾行小字是「â Violino senza Basso accompagnato」，下面的「Libro Primo」意思是「第一冊」。",
+      "credit": "Johann Sebastian Bach 手稿；Staatsbibliothek zu Berlin – Preußischer Kulturbesitz 藏；Bach digital 數位影像，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Title_page_BWV1001-1006_autograph_manuscript_1720.jpg",
+      "made": "1720"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "清稿裡每首奏鳴曲後面接一首組曲，第二號組曲排在第四，〈夏康〉是它的最後一個樂章。為 Hyperion 唱片撰寫說明的 Nicholas Anderson 指出，這份手稿在科滕（Köthen）完成；他也認為，題頁所稱「第一冊」之後的「第二冊」，很可能就是六首無伴奏大提琴組曲。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "巴哈此時是科滕宮廷的樂長。據萊比錫巴哈檔案館（Bach-Archiv Leipzig）的年表，他 1717 年 8 月和利奧波德親王（Leopold von Anhalt-Köthen）簽約，卻沒有先取得威瑪方面的離職許可；辭呈被拒，他因抗命被關了一個月，12 月獲釋、被不光彩地解職後，才到科滕上任。他在科滕待到 1723 年，接著轉任萊比錫聖多馬教堂的合唱長（Thomaskantor）。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這些曲子在巴哈家裡的評價，留有一條紀錄。據 Anderson 在唱片說明裡引用的英譯，巴哈的次子 C. P. E. Bach 1774 年寫信給第一位巴哈傳記作者佛克爾（Johann Nikolaus Forkel），說父親完全懂得所有弦樂器的可能；最偉大的小提琴家之一曾告訴他，要成為好的小提琴手，沒見過比這些無低音伴奏的小提琴獨奏更完美的教材（據英譯轉述）。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "清稿寫成的 1720 年，巴哈家裡出了事。1754 年刊出的巴哈訃文（由 C. P. E. Bach 與 Johann Friedrich Agricola 執筆）說，他和第一任妻子瑪麗亞・芭芭拉（Maria Barbara）過了 13 年美滿的婚姻；1720 年他隨親王前往卡爾斯巴德（Carlsbad，今捷克卡羅維瓦利）溫泉，回到科滕時，才發現她已經過世下葬，而他出發時她還健康。巴哈檔案館的年表補充，她是短暫生病後過世的，確切死因已無從得知。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "德國音樂學者托內（Helga Thoene）從 1990 年代起提出一種讀法：這首組曲，尤其是〈夏康〉，是悼念瑪麗亞・芭芭拉的作品，曲中藏著幾首聖詠旋律。英文維基百科的條目指出這個說法有爭議，並列出多篇質疑的評論。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "小提琴家波彭（Christoph Poppen）與希利亞德合唱團（The Hilliard Ensemble）依她的研究錄了《Morimur》（ECM 1765，2000 年 9 月錄於奧地利 St. Gerold 修院，2001 年發行）。唱片在各樂章之間穿插〈基督躺在死亡的枷鎖中〉（Christ lag in Todesbanden）等聖詠；〈夏康〉拉兩遍，第二遍由四位歌手把她找出的聖詠和小提琴交織在一起。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "本文的看法是：清稿題頁只寫年份「ao. 1720」，沒有月份；單憑這份手稿，看不出〈夏康〉寫在她過世之前還是之後。荷蘭巴哈協會（Netherlands Bach Society）的介紹也保留了這一點，只說即使這首組曲早已寫好，她的死也不難想像會讓這首音樂對巴哈有完全不同的意義。"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：四首舞曲之後，多出來的第五樂章"
+    },
+    {
+      "type": "p",
+      "text": "卡普蘭（Lewis Kaplan）2021 年 8 月在弦樂雜誌《The Strad》撰文說，這首組曲乍看完全照規矩來：阿勒曼、庫朗、薩拉邦德、吉格四首舞曲，然後是一個嚇人的意外，最後多了一首〈夏康〉。五個樂章都在 D 小調。"
+    },
+    {
+      "type": "p",
+      "text": "**前四個樂章**。Anderson 指出，〈阿勒曼舞曲〉（Allemanda）、〈庫朗舞曲〉（Corrente）和〈吉格舞曲〉（Giga）都是一條連綿的旋律線，幾乎不用雙音或和弦撐出和聲；〈薩拉邦德舞曲〉（Sarabanda）則相反，和弦寫得很滿。荷蘭巴哈協會的介紹提醒，〈薩拉邦德〉開頭的節奏和寬幅運弓的和弦，已經明白指向後面的〈夏康〉。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "**〈夏康〉的骨架**。卡普蘭說，夏康是三拍子的舞曲，性格、速度與姿態都和薩拉邦德相近；不同的是，它是主題與變奏，建在一條反覆的低音上，這條低音實際上就是一串和弦進行。巴哈用的是一個下行四音的音型，大致是 D、C（或升 C）、降 B、A，和柯雷里（Arcangelo Corelli）的〈福利亞〉（La folia）同樣的音、同樣的調。Anderson 則指出，全曲 257 小節，是 64 段連續的變奏。"
+    },
+    {
+      "type": "table",
+      "title": "〈夏康〉段落地圖",
+      "head": [
+        "小節",
+        "聽什麼"
+      ],
+      "rows": [
+        [
+          "1–8",
+          "主題以和弦連說兩遍，重心多半落在第二拍"
+        ],
+        [
+          "9–88",
+          "低音音型與和聲不斷變形，音符大致一步步變短：附點節奏、八分音符、十六分音符，再到三十二分音符的快速音階"
+        ],
+        [
+          "89–120",
+          "琶音段：譜上只寫和弦，標著 arpeggio"
+        ],
+        [
+          "121–132",
+          "第 121–125 小節仍是快速音型；第 126 小節起，開頭的和弦步伐回來，接著上聲部從 G 一個半音一個半音降到 D"
+        ],
+        [
+          "133–208",
+          "轉入 D 大調：先是一條從容的旋律，中段上聲部反覆同一個音，第 201 小節起再次標 arpeggio"
+        ],
+        [
+          "209–248",
+          "回到 D 小調；第 229–240 小節，每隔一個音就回到同一個 A"
+        ],
+        [
+          "249–257",
+          "開頭的和弦主題幾乎原樣再現，結束在 D"
+        ]
+      ],
+      "caption": "小節編號依 Mutopia Project 據 1879 年 Bach-Gesellschaft 版重排的總譜（開頭從第二拍起的不完整小節算第 1 小節）；段落內容依該總譜整理，第 89 小節的 arpeggio 字樣另與親筆清稿核對。"
+    },
+    {
+      "type": "p",
+      "text": "**開頭到第 88 小節**。主題說完兩遍之後，和弦先換成附點節奏，再變成八分音符、十六分音符的連綿音型，第 65 小節前後出現三十二分音符的快速音階。變的不只是節奏：例如第 33 到 36 小節，低音改成一個半音一個半音往下走。卡普蘭也提醒，巴哈隨意改換和弦進行。荷蘭巴哈協會的介紹把這一路形容成一趟旅程：經過琶音與快速音符，再回到開頭的和弦。"
+    },
+    {
+      "type": "p",
+      "text": "**第 89 到 120 小節，琶音段**。親筆清稿上，巴哈只把第一拍的分解方式用三十二分音符寫出來，接下來就只寫和弦，上方寫了一個字：arpeggio。演奏時聽到的是連續的快速分解音，譜上看到的卻是一個個和弦；這一段整整 32 小節。"
+    },
+    {
+      "type": "p",
+      "text": "**第 121 到 132 小節**。快速音型一直延續到第 125 小節；第 126 小節，開頭那種「第一拍、拉長的第二拍、短音」的和弦步伐回來了。第 129 到 131 小節，最上面的聲部從 G 開始，一次降半音：升 F、F、E、降 E，落到 D。第 132 小節在 D 小調收住，第 133 小節，調號換成兩個升記號。"
+    },
+    {
+      "type": "p",
+      "text": "**第 133 到 208 小節，D 大調**。荷蘭巴哈協會形容這個轉折是突然轉進大調，像一道天上的光。音樂先變成兩條線：上面一條步伐從容的旋律，底下一條低音一步步走。中段上聲部常在同一個音上反覆，例如第 189 到 191 小節，升 F 連續出現六次；第 201 小節起，譜上又出現 arpeggio。這一段長 76 小節，約佔全曲三成。"
+    },
+    {
+      "type": "p",
+      "text": "**第 209 小節到結尾**。調號回到一個降記號。第 229 到 240 小節值得專心聽：每隔一個音就回到同一個 A，其他的音在它旁邊移動；這 12 小節裡，這個 A 一直沒有離開。最後在第 249 小節，開頭的和弦主題幾乎原樣回來，再過幾小節收束到 D。荷蘭巴哈協會指出，最後一個音是同一個音，在兩條弦上同時拉出。"
+    },
+    {
+      "type": "h",
+      "text": "布拉姆斯：只用左手彈的〈夏康〉"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "布拉姆斯（Johannes Brahms）認識這首曲子，靠的是小提琴家的演奏和自己研讀。據 Henle 版布拉姆斯改編曲的序言（Valerie Woodring Goertzen），1853 年 5 月 1 日，小提琴家雷梅尼（Eduard Reményi）在策勒（Celle）和他同台時拉過〈夏康〉；同年 7 月起，他又多次聽好友約阿希姆（Joseph Joachim）演奏，這首曲子也成了約阿希姆的招牌曲目。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1856 年 11 月，布拉姆斯和約阿希姆在漢堡一場紀念舒曼（Robert Schumann）的音樂會上合奏〈夏康〉，用的是舒曼寫的鋼琴伴奏。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "二十多年後，1877 年 6 月底，布拉姆斯從奧地利的佩爾查赫（Pörtschach）寫信給克拉拉・舒曼（Clara Schumann），附上自己改編的手稿，說明為什麼只給左手彈。"
+    },
+    {
+      "type": "quote",
+      "original": "Auf ein System, für ein kleines Instrument schreibt der Mann eine ganze Welt von tiefsten Gedanken u. gewaltigsten Empfindungen.",
+      "text": "在一行譜上，為一件小樂器，這個人寫出一整個世界：最深的思想，最強烈的感受。",
+      "cite": "布拉姆斯 1877 年 6 月底致克拉拉・舒曼信，據 Henle 版序言所引 Berthold Litzmann 編《克拉拉・舒曼與布拉姆斯書信集》第 2 卷，第 111 頁起（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "同一封信裡，他說如果要想像這首曲子是自己寫出來的，那份過度的激動和震撼一定會讓他發瘋。用管弦樂或鋼琴來演，他總覺得樂趣被破壞；只有一種辦法，能讓他得到雖然縮小很多、卻接近而純粹的享受：只用左手彈。相近的難度、同類的技巧、琶音，加在一起讓他覺得自己像個小提琴手。他還叮嚀克拉拉別累壞了手，暫時用 mezza voce（半聲）彈（據 Henle 版序言轉述）。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這份改編在 1878 年底由萊比錫的 Senff 出版。據同一篇序言，布拉姆斯退回合約時堅持標題要寫「von Bach」（巴哈作），不要寫「nach Bach」（仿巴哈）。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "沒有證據顯示他公開演奏過；已知最早的演出，是 1881 年 12 月 8 日 Emil Śmietański 在維也納彈的。後來，在第一次世界大戰中失去右臂的奧地利鋼琴家保羅・維根斯坦（Paul Wittgenstein）把它當成重要曲目，布拉姆斯這份改編的手稿也歸他所有。"
+    },
+    {
+      "type": "callout",
+      "label": "延伸聆聽",
+      "text": "布拉姆斯為左手改編的鋼琴版〈夏康〉（1878 年由萊比錫 Senff 出版）。他把巴哈的小提琴聲部移低一個八度，放到中音與次中音的音域。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bach: Sonatas and Partitas for solo violin（CDA67691/2）",
+      "publisher": "Hyperion Records",
+      "date": "2009-10",
+      "url": "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67691/2",
+      "note": "錄音地點、製作人與錄音工程、2009 年 10 月發行（網頁只寫錄音於 2009 年 2 月，詳細日期見數位內頁）；Nicholas Anderson 的唱片說明（手稿在科滕完成、Libro Secondo 可能是大提琴組曲、C. P. E. Bach 1774 年致 Forkel 信的英譯、1802 年首度出版、各樂章織體、257 小節與 64 段變奏）；獲獎列表與轉引的 BBC Music Magazine 評語；2026-10-11 查閱"
+    },
+    {
+      "title": "Bach: Sonatas and Partitas for solo violin（CDA67691/2）數位內頁",
+      "publisher": "Hyperion Records",
+      "date": "2009",
+      "url": "https://www.hyperion-records.co.uk/notes/67691-B.pdf",
+      "note": "錄音日期：2008 年 12 月 22–23 日、2009 年 1 月 17–18 日、2 月 17–18 日，倫敦 Henry Wood Hall；各樂章時間：第二號組曲 29'46，Allemanda 5'17、Corrente 2'26、Sarabanda 4'19、Giga 3'26、Ciaccona 14'10"
+    },
+    {
+      "title": "Johann Sebastian Bach, Sonatas and Partitas BWV 1001–1006 for Violin solo（HN 9356），Preface",
+      "publisher": "G. Henle Verlag（Klaus Rönnau）",
+      "url": "https://www.henle.de/media/62/c7/19/1690899701/9356-1690899701-sync.pdf",
+      "note": "親筆清稿現藏柏林國家圖書館 Mus. Ms. Bach P 967、題頁全文與「ao. 1720」、巴哈生前未出版；2026-10-11 查閱"
+    },
+    {
+      "title": "Johannes Brahms, Chaconne by J. S. Bach arranged for piano left hand（HN 1187），Preface",
+      "publisher": "G. Henle Verlag（Valerie Woodring Goertzen）",
+      "date": "2018",
+      "url": "https://www.henle.de/media/ec/91/f8/1697725831/1187-1697725831-sync.pdf",
+      "note": "Reményi 1853 年 5 月 1 日在 Celle 演出、Joachim、1856 年 11 月漢堡紀念舒曼音樂會、1877 年 6 月底自 Pörtschach 致 Clara Schumann 信原文（Litzmann 編，第 2 卷第 111 頁起）、移低八度、Simrock 1802 年首版、Senff 1878 年底出版與「von Bach」、1881 年 12 月 8 日 Śmietański 首演、Paul Wittgenstein"
+    },
+    {
+      "title": "Partita II BWV 1004, 5. Chaconne",
+      "publisher": "Mutopia Project（Hajo Dezelski 據 1879 年 Bach-Gesellschaft 版第 27.1 卷重排，CC BY-SA 3.0）",
+      "url": "https://www.mutopiaproject.org/ftp/BachJS/BWV1004/bwv-1004_5/bwv-1004_5.ly",
+      "note": "小節編號與段落：第 33–36 小節的半音下行低音、第 89 與 201 小節的 arpeggio、第 126 小節和弦步伐回來、第 129–131 小節上聲部半音下行、第 133 小節轉 D 大調、第 189–191 小節反覆的升 F、第 209 小節回 D 小調、第 229–240 小節反覆的 A、第 249–252 小節與開頭相同、第 257 小節結束"
+    },
+    {
+      "title": "6 Violin Sonatas and Partitas, BWV 1001-1006（D-B Mus. ms. Bach P 967 掃描）",
+      "publisher": "Wikimedia Commons（IMSLP 掃描檔，Internet Archive 轉存）",
+      "url": "https://commons.wikimedia.org/wiki/File:6_Violin_Sonatas_and_Partitas,_BWV_1001-1006_(IA_imslp-violin-sonatas-and-partitas-bwv-1001-1006-bach-johann-sebastian).pdf",
+      "note": "PDF 第 3 頁為題頁（與 f1 題頁圖同一頁）；第 28 頁為〈夏康〉第一頁（頭圖）；第 29 頁可見巴哈寫的 arpeggio 字樣"
+    },
+    {
+      "title": "Johann Sebastian Bach ─ Chronology",
+      "publisher": "Bach-Archiv Leipzig",
+      "url": "https://www.bach-leipzig.de/en/neutral/johann-sebastian-bach-%E2%94%80-chronology",
+      "note": "1717 年 8 月簽約、拘禁一個月、12 月獲釋後到科滕上任；1720 年隨親王赴卡爾斯巴德，返回時妻子已過世下葬、確切死因不明；1723 年轉任萊比錫；2026-10-11 查閱"
+    },
+    {
+      "title": "Musikalische Bibliothek, Bd. IV, Teil 1（含巴哈訃文 Nekrolog，第 158–176 頁）",
+      "publisher": "Lorenz Christoph Mizler 編，Leipzig 1754（Internet Archive 掃描）",
+      "date": "1754",
+      "url": "https://archive.org/details/bub_gb_lfQ4AAAAIAAJ",
+      "note": "訃文中與瑪麗亞・芭芭拉 13 年婚姻、1720 年自卡爾斯巴德返回科滕時發現她已過世下葬的段落；執筆者據英文維基百科 Bach's Nekrolog 條目"
+    },
+    {
+      "title": "Violin Partita no. 2 in D minor, BWV 1004",
+      "publisher": "Netherlands Bach Society（All of Bach）",
+      "url": "https://bachvereniging.nl/en/bwv/bwv-1004",
+      "note": "所有樂章都在小調、Sarabande 指向 Ciaccona、四小節低音動機、主題兩遍與轉入大調的描述、最後一個音在兩條弦上同時拉出、即使早已寫好也可能因喪妻而有不同意義；2026-10-11 查閱"
+    },
+    {
+      "title": "'A shocking surprise': uncovering Bach's Partita for Solo Violin no.2 in D minor BWV1004",
+      "publisher": "The Strad（Lewis Kaplan）",
+      "date": "2021-08-05",
+      "url": "https://www.thestrad.com/playing-hub/a-shocking-surprise-uncovering-bachs-partita-for-solo-violin-no2-in-d-minor-bwv1004/13409.article",
+      "note": "四首舞曲後多出 Chaconne、與薩拉邦德相近、反覆低音即和弦進行、D–C（升 C）–降 B–A 與 Corelli〈La folia〉相同、巴哈隨意改換和弦進行"
+    },
+    {
+      "title": "Morimur（ECM 1765）",
+      "publisher": "ECM Records",
+      "date": "2001-09-14",
+      "url": "https://ecmrecords.com/product/morimur-christoph-poppen-the-hilliard-ensemble/",
+      "note": "以 Helga Thoene 研究為基礎、2000 年 9 月錄於 Propstei St. Gerold、曲目（Ciaccona 兩遍、Christ lag in Todesbanden 等聖詠）；2026-10-11 查閱"
+    },
+    {
+      "title": "Partita for Violin No. 2 (Bach)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Partita_for_Violin_No._2_(Bach)",
+      "note": "Helga Thoene 的悼亡曲說（1994、2001、2003）與質疑的文獻列表；2026-10-11 查閱"
+    },
+    {
+      "title": "Bach: Sonatas & Partitas for solo violin BWV 1004-1006（HMC902059）",
+      "publisher": "harmonia mundi",
+      "date": "2010-04",
+      "url": "https://www.harmoniamundi.com/en/albums/sonatas-partitas-for-solo-violin/",
+      "note": "Isabelle Faust 錄音，2010 年 4 月發行，Ciaccona 長 12'26；2026-10-11 查閱"
+    }
+  ]
+}
