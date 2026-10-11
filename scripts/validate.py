@@ -145,7 +145,10 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             E("備稿需要 reserve_written（撰寫日期 YYYY-MM-DD）")
         if col in ("fm-watch", "cosmere-watch"):
             E("觀測站不做備稿")
-        stale = [w for w in STALE_WORDS if w in json.dumps(art.get("body", []), ensure_ascii=False) + art.get("title", "") + art.get("dek", "")]
+        text = json.dumps(art.get("body", []), ensure_ascii=False) + art.get("title", "") + art.get("dek", "")
+        for head in DEVOTION_HEADS:  # the devotion column's fixed headings (今日經文, 今日禱告) are not a dated word
+            text = text.replace(head, "")
+        stale = [w for w in STALE_WORDS if w in text]
         if stale:
             W("備稿要在任何一天都成立，避免會過期的字眼：%s" % "、".join(stale))
     elif art.get("date") != str(d):
