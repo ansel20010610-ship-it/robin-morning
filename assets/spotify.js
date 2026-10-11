@@ -239,7 +239,9 @@ async function albumsByPerformer(sp) {
   return [...length.entries()].sort((a, b) => b[1] - a[1]).map(([id]) => id);
 }
 
-const found = (album, tracks, cands, substitute = false) => ({ album: album.id, albumName: album.name, artists: album.artists.map((x) => x.name).join(", "),
+// The matched track's own performers, not the album's: a compilation lists every orchestra on it.
+const found = (album, tracks, cands, substitute = false) => ({ album: album.id, albumName: album.name,
+  artists: (tracks[0]?.artists?.length ? tracks[0].artists : album.artists).map((x) => x.name).join(", "),
   year: (album.release_date || "").slice(0, 4), tracks: tracks.map((t) => t.id), trackNames: tracks.map((t) => t.name),
   candidates: cands, source: "search", ...(substitute ? { substitute: true } : {}) });
 
