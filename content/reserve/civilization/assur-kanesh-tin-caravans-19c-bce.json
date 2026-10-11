@@ -1,0 +1,474 @@
+{
+  "column": "civilization",
+  "date": "reserve",
+  "reserve_written": "2026-10-11",
+  "title": "七頭黑驢的帳：亞述城到卡內什的錫路",
+  "dek": "公元前 19 世紀，亞述城的代理人替遠在安納托利亞的商人買錫、買布、買七頭黑驢，也繳了出口稅。從這封帳信看錫路誰出錢、誰抽稅、誰裁決。",
+  "topic_key": "civilization:assur-kanesh-tin-caravans-19c-bce",
+  "updated_at": "2026-10-11T13:21:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Cuneiform_tablet-_caravan_account_MET_DP-13441-005.jpg/1280px-Cuneiform_tablet-_caravan_account_MET_DP-13441-005.jpg",
+    "width": 1280,
+    "height": 1542,
+    "alt": "黑色背景前一塊直立的長方形淺褐色泥板，四角圓鈍，表面由上到下排滿一行行楔形文字，筆畫是壓進泥土的楔形刻痕；左上角邊緣有紅色手寫的館藏編號。",
+    "caption": "寫給商人 Imdī-ilum 的商隊帳信，泥板，8.5 × 6.5 × 2.4 公分。四名在亞述城的代理人在信裡逐項報帳：收到多少銀子、買了多少錫與布、幾頭驢、繳了多少出口稅。Larsen 1988 年刊布為 CTMMA 1, 75，標為出自卡內什的古亞述私人信件；館方著錄為可能出自庫爾泰佩（卡內什的卡魯姆）。",
+    "credit": "大都會藝術博物館（The Metropolitan Museum of Art）藏，66.245.10，Mr. and Mrs. J. J. Klejman 1966 年捐贈",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cuneiform_tablet-_caravan_account_MET_DP-13441-005.jpg",
+    "made": "約公元前 20–19 世紀（館方定年）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "一塊巴掌大的泥板，開頭是四個人的名字，收信人是住在安納托利亞卡內什（Kanesh）的商人 Imdī-ilum。四人在亞述城（Assur）向他報帳：Āmur-Ištar 帶來 1 他連得（talent）銀子，Aššur-malik 帶來 12 彌那（mina），都封著 Imdī-ilum 的印。其中約 50 彌那換成了第一批貨：8 他連得 40 彌那封好印的錫、50 彌那路上花用的零錫、100 件 kutānum 布、7 頭黑驢，以及驢的鞍具和飼料。帳上另列一筆出口稅：⅓ 彌那 5 舍客勒（shekel）。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "信裡還有第二批貨，只用 1 頭驢：2 他連得 10 彌那錫、10 彌那零錫、10 件布；押運的 Aššur-malik 領了 8 舍客勒，帳上寫明是嚮導工錢的一半；出口稅 5 舍客勒。兩批共花約 60 彌那；代理人另為買青金石的 2 彌那銀子付了 5 舍客勒 nisḫātum 稅。他們還替 Imdī-ilum 買了兩棟房子，錢先從女子 Šīmat-Aššur 那裡拿來支付，這批銀子撥 5 彌那給她；另 5 彌那付給年名官，作為 Šu-Ḫabura 房子的價錢，最後剩 1⅚ 彌那。這塊泥板今藏紐約大都會藝術博物館，1988 年由 Mogens Trolle Larsen 刊布，附英譯與帳表。"
+    },
+    {
+      "type": "p",
+      "text": "本文要回答的是：公元前 19 世紀，一座本身不產錫的小城邦，它的商人怎麼把東方的錫和南方的布運過近千公里，在安納托利亞換成金銀？誰出資、誰押運、沿路誰抽稅、出了糾紛誰裁決，這套安排又在哪裡失靈。"
+    },
+    {
+      "type": "h",
+      "text": "定位：底格里斯河邊的小城，與兩萬多塊商人泥板"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "亞述城在底格里斯河西岸，約在今伊拉克摩蘇爾（Mosul）以南 100 公里；卡內什就是今土耳其開塞利（Kayseri）附近的庫爾泰佩（Kültepe），兩地相距近千公里。依 Dercksen 2022 年的整理，卡內什的「舊宮」約建於公元前 2020 年，下城約在前 2000 年形成；約前 1950 年，亞述人在這裡由往來的冒險買賣轉為常駐。他們在商路沿線與安納托利亞各城設商人聚落（kārum，音譯卡魯姆）與較小的貿易站（wabartum）；依 D'Alfonso 與 Highcock 2023 年的統計，已知的卡魯姆有 23 處、貿易站 15 處。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "我們靠的幾乎全是商人自己的文書。考古學家在卡內什找到約 23,000 塊泥板（各家計數略有出入，Barjamovic 等作約 23,500 塊），多是商業書信、運貨單、帳目與契約。Dercksen 寫道，已出版的近 7,500 塊，另有約 17,000 塊待刊。依 Barjamovic 等人 2019 年的整理，文書年代約在公元前 1930 到 1775 年，約 90% 出自約前 1895 至 1865 年的一代商人。檔案能留下，是因為一場大火燒毀下城所有亞述商人的住宅，把泥板封在原地；他們定在約前 1840 年，Dercksen 則把這次毀城定在前 1834 年。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這批史料有明顯的偏向。Dercksen 指出，亞述城本身雖經發掘，幾乎找不到這些商人的痕跡；安納托利亞一方沒有留下宮廷檔案，在地統治者怎麼記帳看不到；文書多半不記日期，每個商人的檔案也只殘存一部分。我們讀到的，是商人寫給商人的信，記的是他們在意的價錢、稅與風險。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Kultepe_Karum_excavations_%281993%29_01.jpg/1280px-Kultepe_Karum_excavations_%281993%29_01.jpg",
+      "width": 1280,
+      "height": 827,
+      "alt": "晴天下的考古遺址：前景是大片挖開的房屋遺構，石塊砌成的低矮牆基圍出一間間方室；中景長著一棵枯樹與幾叢樹；遠處是一道長滿青草、頂部平緩的高丘。",
+      "caption": "1993 年 5 月的庫爾泰佩下城發掘區，向西拍攝。前景是下城的房屋牆基，亞述商人的住宅與檔案就出在這一帶；背景隆起的是土丘。依發掘主持人 Kulakoğlu 2017 年的演講摘要，土丘高 21 公尺，多為宮殿、神廟等官方與宗教建築，下城稱為「卡內什的卡魯姆」。",
+      "credit": "Mark Landon 攝",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kultepe_Karum_excavations_(1993)_01.jpg",
+      "made": "1993 年 5 月 7 日"
+    },
+    {
+      "type": "h",
+      "text": "追蹤：銀子回到亞述，變成錫、布和驢"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "錫和大部分的布都不產在亞述城。錫的產地至今沒有定論，學者推測在伊朗或中亞；Dercksen 認為主要轉運點是伊朗西南部的蘇薩（Susa）。布主要來自南美索不達米亞，亞述人稱為「阿卡德」布；亞述城的婦女也在家織布，交給男性親屬帶去安納托利亞賣，Dercksen 引 Michel 的估計，每人每年約 2.5 件。驢也在亞述城買。整套生意的目的，是把錫和布賣成銀子和金子，Dercksen 估計淨利約 50%。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "Imdī-ilum 的帳信讓這條流向有了價錢（見下表）。在亞述城，錫以 16 比 1 用銀子買，也就是 16 舍客勒錫值 1 舍客勒銀；7 頭驢共 1⅚ 彌那 3 舍客勒，平均每頭約 16 舍客勒；布每件約 5 到 6 舍客勒。帳上還有兩筆半彌那的「營運本錢」（Larsen 譯作 working capital），領的是 Saklānum 與 Āmur-Ištar 的僕人。"
+    },
+    {
+      "type": "table",
+      "title": "Imdī-ilum 帳信：兩批貨在亞述城的開銷",
+      "head": [
+        "項目",
+        "第一批（Āmur-Ištar 帶回，7 頭驢）",
+        "第二批（Aššur-malik 押運，1 頭驢）"
+      ],
+      "rows": [
+        [
+          "封印的錫",
+          "8 他連得 40 彌那（約 260 公斤）",
+          "2 他連得 10 彌那（約 65 公斤），8 彌那 7½ 舍客勒"
+        ],
+        [
+          "路上花用的零錫",
+          "50 彌那；與上項合計以 16:1 折銀 35⅔ 彌那",
+          "10 彌那，⅔ 彌那"
+        ],
+        [
+          "kutānum 布（含包裝用）",
+          "100 件，9⅓ 彌那",
+          "10 件，⅚ 彌那"
+        ],
+        [
+          "驢",
+          "7 頭黑驢，1⅚ 彌那 3 舍客勒",
+          "1 頭，17 舍客勒"
+        ],
+        [
+          "鞍具與飼料",
+          "鞍具 ⅓ 彌那；飼料 2½ 舍客勒",
+          "鞍具 2½ 舍客勒"
+        ],
+        [
+          "人員開銷",
+          "Saklānum 與 Āmur-Ištar 的僕人各 ½ 彌那營運本錢，衣服各 2 舍客勒；另有雇工錢等小額開銷",
+          "付給 Aššur-malik 嚮導工錢的一半，8 舍客勒"
+        ],
+        [
+          "出口稅",
+          "⅓ 彌那 5 舍客勒",
+          "5 舍客勒"
+        ],
+        [
+          "合計（Larsen 帳表）",
+          "約 49⅚ 彌那",
+          "約 10⅙ 彌那"
+        ]
+      ],
+      "caption": "依 Larsen（1988）CTMMA 1, 75 的英譯與帳表整理，未註明者為所付銀價。1 舍客勒略多於 8 公克（Larsen 註），1 彌那 = 60 舍客勒；公斤數依 Dercksen（2022）數字隱含的 1 他連得約 30 公斤換算，只是約數。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "兩批錫正好對得上 Dercksen 所說的標準馱量：一頭驢馱 2 他連得 10 彌那錫。第二批的 1 頭驢恰好一馱；第一批的 8 他連得 40 彌那是四馱。若第一批有 4 頭驢馱錫，剩下 3 頭要馱 100 件布與零錫，每頭三十多件，比 Dercksen 估算時假設的每驢 25 件多；信裡沒有寫怎麼分配。出口稅相對於貨價很輕：第一批的錫、布與驢共值約 47 彌那銀，稅是 25 舍客勒，不到 1%；第二批也不到 1%。這是本文用帳上數字自算的比例，帳信沒有寫稅率。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "「零錫」說明了路上怎麼付錢。依 Barjamovic 等人 2019 年引用的英譯，另一份帳（AKT 8/151）記下，從 Timelkiya 到 Hurama 雇一頭驢，付了 2 舍客勒銀和 2 舍客勒錫；從 Hurama 到卡內什，雇驢加一名裝貨工，付了各 4.5 舍客勒的銀和錫。路費有一半是用錫付的。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "到了卡內什，貨還要再被扣一輪。哈佛藝術博物館藏的一份帳（1983.98），經 Ragavan 2010 年刊布：52 件布裡，2½ 件是 nisḫātum 稅，5 件「供優先購買」，1 件遺失，卡魯姆辦事處取走 3½ 件，最後放行 40 件。同一份帳的另一批 54 件布，也是 2½ 件稅、5 件優先購買、1 件遺失。優先購買權屬於誰，這份帳沒有寫。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Ragavan 在註解中說，nisḫātum 是安納托利亞地方統治者向亞述商隊課的進口稅，約為 5%，帳上數字也吻合。不過這個稅名不只出現在卡內什：Imdī-ilum 在亞述城的代理人，也為買青金石付過 nisḫātum。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "放行的貨在卡內什和其他城鎮賣成銀子與金子。Dercksen 指出，有些商號先把錫和布送到銅的集散地 Durhumit 換銅，再把銅運到卡內什、Purušhattum 等大城賣成金銀。驢也是貨：Barjamovic 寫道，亞述人多半在抵達安納托利亞後把驢賣掉。銀子封好印，由押運者帶回亞述，再買下一批貨。"
+    },
+    {
+      "type": "svg",
+      "title": "一圈錫路：貨、銀與每一道抽成",
+      "svg": "<svg viewBox='0 0 360 512' xmlns='http://www.w3.org/2000/svg' font-size='11'>\n<defs>\n<marker id='ka' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='ink'/></marker>\n<marker id='kg' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='gold'/></marker>\n<marker id='kr' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='accent'/></marker>\n</defs>\n<text x='12' y='14' font-size='10.5' class='muted'>貨往西北走，銀往東南回（示意，不按比例）</text>\n<rect x='12' y='22' width='106' height='40' rx='3' class='paper'/>\n<text x='20' y='39' font-size='11.5'>錫</text>\n<text x='20' y='54' font-size='10' class='muted'>經蘇薩轉運</text>\n<rect x='127' y='22' width='106' height='40' rx='3' class='paper'/>\n<text x='135' y='39' font-size='11.5'>「阿卡德」布</text>\n<text x='135' y='54' font-size='10' class='muted'>南美索不達米亞</text>\n<rect x='242' y='22' width='106' height='40' rx='3' class='paper'/>\n<text x='250' y='39' font-size='11.5'>家織布、驢</text>\n<text x='250' y='54' font-size='10' class='muted'>亞述城內</text>\n<line x1='65' y1='62' x2='65' y2='82' class='ink line' marker-end='url(#ka)'/>\n<line x1='180' y1='62' x2='180' y2='82' class='ink line' marker-end='url(#ka)'/>\n<line x1='295' y1='62' x2='295' y2='82' class='ink line' marker-end='url(#ka)'/>\n<rect x='12' y='84' width='336' height='66' rx='3' class='soft'/>\n<text x='22' y='102' font-size='12' font-weight='600'>亞述城（Assur）</text>\n<text x='22' y='119' font-size='10' class='muted'>代理人用銀買貨：錫 16:1，布每件 5–6 舍客勒</text>\n<text x='22' y='136' font-size='10' class='accent'>出城繳出口稅：Imdī-ilum 這筆不到貨價 1%</text>\n<line x1='60' y1='150' x2='60' y2='370' class='ink line' marker-end='url(#ka)'/>\n<text x='70' y='172' font-size='11'>商隊：錫、布、驢</text>\n<text x='70' y='188' font-size='10' class='muted'>近千公里；路費用零錫與銀支付</text>\n<rect x='76' y='204' width='176' height='46' rx='3' class='paper'/>\n<line x1='60' y1='227' x2='76' y2='227' class='ink line'/>\n<text x='84' y='222' font-size='11'>沿途統治者</text>\n<text x='84' y='239' font-size='10' class='muted'>收過路稅，立誓保護商隊</text>\n<path d='M60,262 C104,266 112,280 112,300 C112,322 104,338 60,348' class='accent line' stroke-dasharray='4 3' marker-end='url(#kr)'/>\n<text x='120' y='296' font-size='10.5' class='accent'>「窄路」：繞過關卡</text>\n<text x='120' y='311' font-size='10' class='muted'>走私，風險自負</text>\n<line x1='304' y1='370' x2='304' y2='154' class='gold line' stroke-dasharray='5 3' marker-end='url(#kg)'/>\n<text x='296' y='266' font-size='10.5' text-anchor='end'>銀、金封印</text>\n<text x='296' y='281' font-size='10.5' text-anchor='end'>送回亞述</text>\n<text x='296' y='296' font-size='10' class='muted' text-anchor='end'>再買下一批貨</text>\n<rect x='12' y='372' width='336' height='100' rx='3' class='soft'/>\n<text x='22' y='390' font-size='12' font-weight='600'>卡內什（Kanesh）</text>\n<text x='22' y='407' font-size='10' class='muted'>進城帳：52 件布，統治者抽 nisḫātum 稅 2½ 件（約 5%）</text>\n<text x='22' y='422' font-size='10' class='muted'>優先購買 5 件、遺失 1 件、卡魯姆辦事處取 3½ 件</text>\n<text x='22' y='437' font-size='10' class='muted'>放行 40 件，在卡內什與其他城鎮賣成金銀</text>\n<text x='22' y='454' font-size='10' class='accent'>下城的卡魯姆（商人聚落）：裁決糾紛，頒定年息 30%</text>\n<line x1='14' y1='494' x2='36' y2='494' class='ink line' marker-end='url(#ka)'/>\n<text x='42' y='498' font-size='10'>貨物</text>\n<line x1='92' y1='494' x2='114' y2='494' class='gold line' stroke-dasharray='5 3' marker-end='url(#kg)'/>\n<text x='120' y='498' font-size='10'>銀與金</text>\n<path d='M180,494 H202' class='accent line' stroke-dasharray='4 3' marker-end='url(#kr)'/>\n<text x='208' y='498' font-size='10'>繞過關卡的路</text>\n</svg>",
+      "caption": "示意，不按比例，方位只取大概。亞述城的價錢與出口稅依 Larsen（1988）CTMMA 1, 75，「不到 1%」是本文換算；卡內什的扣除依 Ragavan（2010）刊布的哈佛 1983.98 號帳；沿途稅與誓約依 Barjamovic 等（2019）與 Dercksen（2022）；「窄路」依 Touillon-Ricci（2018）；卡魯姆的裁決與利率依 Barjamovic 等（2019）與 Dercksen（2022）。"
+    },
+    {
+      "type": "h",
+      "text": "權力：誰出錢、誰立約、誰裁決"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "出錢的是家族與合夥人。Dercksen 描述，19 世紀典型的亞述商號以父親和兒子為核心，常有人長住卡內什，妻子與其他親屬在亞述城或安納托利亞支援。亞述城裡有替多名商人採購貨物、裝備商隊的「銀行家」（ummeānum）。資本也可以來自「皮袋」（naruqqum）合夥：約 12 人上下把銀子以金價計入股，交給一名商人經營 10 年以上，股份可繼承、可轉賣。Elamma 的皮袋約 28 彌那金，自前 1895 年起為期 10 年；Amur-Ištar 的約 30 彌那金，自前 1908 年起為期 12 年。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "管商人的是城邦。依 Dercksen，亞述城的國王稱「城主」，城邦議會的分量日增，富商在議會裡有席位，也常出任年名官（līmum）；這個官職首見於前 1972 年，年名官同時主持「市政廳」（bēt ālim）。從南方運來的「阿卡德」布，就在市政廳出售。Imdī-ilum 的帳信裡，代理人也付了 5 彌那銀給年名官，作為一棟房子的價錢。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "D'Alfonso 與 Highcock 2023 年指出，在商人的文書裡國王很少露面；市政廳是城邦的經濟與財政中心（他們引 Veenhof 的說法），城邦議會則做出大多數涉及商人的法律決定。他們也提醒，這些文書出自商人的視角。他們認為，這種不由國王獨攬的權力結構，讓亞述城的長程貿易能有那樣的規模與彈性。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "在外面，靠的是誓約。Dercksen 說，亞述與各地統治者以誓約締結條約，為商人聚落提供法律框架；Barjamovic 等人寫道，地方統治者保護過路商隊、維護道路橋梁，換取過境貿易的過路稅與其他稅。Sasson 2012 年整理當時已知的四份文本，指出它們是單方面的條款，列的是亞述人要對方宣誓遵守的事；這些泥板可能是副本、草案，甚至是被拒絕的提案。最早的一份屬卡內什第 II 層時期，是卡內什的亞述聚落向一位安納托利亞王公提出的條款：保證賠償損失、讓亞述人獨占貿易、限制稅額，並禁止「阿卡德人」來做生意，來了就要交出處死。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "2000 年出土、約前 1800 年的一份卡內什條約文本寫得更直接：亞述人在當地流了血，統治者要付血償，由亞述人處死兇手，不准拿別人頂替；也不准覬覦、強占任何亞述公民的好房子、奴僕、田地與果園，或轉給自己的手下。另一份與幼發拉底河渡口 Hahhum 的條約，點名三名官員有權從亞述商隊抽取布匹與銀子；據 Dercksen 轉引 Veenhof，條文說過路商隊有 50 或 100 頭載貨的驢，甚至更多。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "裁決在卡魯姆。Barjamovic 等人說，卡內什是安納托利亞亞述商人糾紛的主要法庭所在，大商人因此在這裡設宅、設倉。Dercksen 指出，至遲從前 1906 年起，商人間通行年息 30%，由卡內什的商人聚落頒定。卡魯姆也替母城籌錢：一封亞述當局寫給卡內什的信，要聚落送 10 彌那銀子，分擔修築城牆的費用。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "把兩份帳和其他史料放在一起，本文推想成本大致這樣分攤：出亞述城時繳一小筆出口稅，沿途統治者收過路錢，卡內什的統治者扣約 5% 的布，另有約一成的布供優先購買（帳上沒寫歸誰），卡魯姆辦事處再取一份；路上的風險，落在出資的合夥人和押運者身上。能賺錢的前提，是每一道抽成都可預期。"
+    },
+    {
+      "type": "h",
+      "text": "限制：窄路、斷貨，與一代人的離場"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "稅可以預期，也就可以繞過。大英博物館中東部的博士研究員 Touillon-Ricci 2018 年介紹過商人 Buzazu 的一封指示信：運貨的人若「窄路」暢通，就從那裡把錫帶進來；不行的話，就把錫分成小包，藏在內衣裡，一點一點帶進卡內什。這封信其實是在情勢轉為不利後取消行動，順帶交代了原本的做法。"
+    },
+    {
+      "type": "quote",
+      "original": "Let them … bring the tin via the narrow track … if it is clear.",
+      "text": "讓他們……走窄路把錫帶進來，如果那條路暢通的話。",
+      "cite": "Buzazu 致合夥人的信，Touillon-Ricci（2018）英譯，大英博物館部落格；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "她也寫到，商人 Kunilum 叫合夥人等報過關的貨從稅關回來，再混進沒申報的貨一起運；Buzazu 的父親 Pušu-ken 的家曾被搜出走私貨，因此坐牢。罰則從罰銀、軟禁到監禁都有。她也提醒，窄路避開了官道上的關卡，也就沒有官道的保護，野獸、盜匪與天候都要自己擔。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "路況與貨源也會斷。同樣依該文引用的英譯，一封信（POAT 28）說，因為路上危險，寫信人沒有把貨送出，要等路通了、第一支商隊平安到達，才讓 Hutka 帶銀子上路；另一封從亞述城寄出的信（VS 26/17）說，「阿卡德人」自從對方離開後就沒進城，他們的地方在造反，如果冬天前來了，而且買得划算，才替他代買布匹。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "亞述城也用排擠來保護這門生意。Dercksen 指出，亞述看來成功阻止巴比倫的競爭者越過幼發拉底河、進入安納托利亞市場；亞述商人後來在當地轉賣安納托利亞自產的布，亞述當局也曾試圖禁止，因為這會搶走進口布的生意。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "最脆弱的環節是人。Dercksen 指出，商號基本上綁在一個人身上，他死了，商號也就結束，沒有可以由兒子接手延續的「公司」。約前 1870 年，Pušu-ken、Imdī-ilum、Elamma 這一代長住安納托利亞的商人從文獻中消失；Barjamovic、Hertel 與 Larsen 認為，互相依賴的商號接連斷鏈，約在前 1865 年造成陸路貿易的衰退。前 1834 年卡內什毀城，之後雖重建，長期的皮袋合夥已不再出現。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Sasson 從條約讀出另一面：亞述離得遠，軍事上無足輕重，商人只能定期要地方統治者宣誓，把希望寄託在繳稅、行賄與忍受勒索上；違約多半只能個案處理。"
+    },
+    {
+      "type": "timeline",
+      "title": "古亞述貿易：從常駐到終結",
+      "caption": "年代依 Dercksen（2022）所用的年表，皆為公元前；文書最密集的 30 年，Barjamovic 等（2019）作約前 1895–1865 年。",
+      "items": [
+        {
+          "when": "約前 2020 年",
+          "label": "卡內什「舊宮」興建",
+          "note": "下城約在前 2000 年形成。"
+        },
+        {
+          "when": "前 1972 年",
+          "label": "年名官首見記載",
+          "note": "Erišum I 在位（前 1972–1933 年），年名官同時主持市政廳。"
+        },
+        {
+          "when": "約前 1950 年",
+          "label": "亞述商人在卡內什常駐",
+          "note": "由往來的冒險買賣轉為長期據點。Dercksen 認為亞述由此獨占錫與布輸入安納托利亞；Barjamovic 認為在卡內什的獨占只限於錫。"
+        },
+        {
+          "when": "前 1908、1895 年",
+          "label": "兩個已知的皮袋合夥開張",
+          "note": "Amur-Ištar 約 30 彌那金、12 年；Elamma 約 28 彌那金、10 年。"
+        },
+        {
+          "when": "約前 1893–1863 年",
+          "label": "文書最密集的 30 年",
+          "note": "多數主要檔案出自這段時間。"
+        },
+        {
+          "when": "約前 1870 年",
+          "label": "一代大商人離場",
+          "note": "Pušu-ken、Imdī-ilum、Elamma 從文獻消失；約前 1865 年陸路貿易衰退。"
+        },
+        {
+          "when": "前 1834 年",
+          "label": "卡內什與下城被毀",
+          "note": "不久重建；之後的第 Ib 層文書少，皮袋合夥不再出現。"
+        },
+        {
+          "when": "前 1808 年",
+          "label": "沙姆希阿達德一世奪取亞述",
+          "note": "Šamši-Adad I（Samsi-Addu）併亞述入其王國，貿易仍持續。"
+        },
+        {
+          "when": "前 1728 年",
+          "label": "商路上的 Apum 被毀",
+          "note": "巴比倫王薩姆蘇伊盧納（Samsu-iluna）摧毀今 Tell Leilan 一帶，那裡也有亞述人聚落。"
+        },
+        {
+          "when": "前 1717 年",
+          "label": "卡內什最晚的亞述年名",
+          "note": "不久卡內什再毀，下一層沒有亞述人存在的證據。"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "學界怎麼說：市場、規模與誰撐起這條路"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "D'Alfonso 與 Highcock 寫道，經濟學家博蘭尼（Karl Polanyi）1957 年對古亞述貿易的分析，影響了此後約 30 年的古代經濟模型；之後 Garelli、Larsen、Veenhof、Dercksen 等人的重建，呈現出一套完全出乎預料的複雜體系，在演化論式的社會發展模型與「亞細亞生產方式」的停滯觀上都打開了缺口。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "怎麼稱呼這套制度，仍有分歧。Barjamovic 與三位經濟學者 2019 年在《經濟學季刊》（The Quarterly Journal of Economics）上，把它描述為以自由企業與私人主動為基礎、有精細金融契約與運作良好司法撐腰的市場經濟；他們估計青銅時代貿易的距離彈性為 1.9，接近現代的估計。Barjamovic 在 2023 年出版、2017 年定稿的文章裡則強調另一面：條約顯示這是重商主義式的保護體制，類似後來的漢薩同盟，整個亞述城邦可視為一個對外競爭的共同體，而且背後必有文書裡看不見的養驢、製鞍、紡織等產業。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "規模也沒有定論。每年從亞述城出發多少頭驢，估計從 100 多馱到 5,000 馱都有（見下表）。Dercksen 指出，困難在於不知道一年有幾支商隊出發，文書又殘缺不全；依他的概括，Larsen 與 Stratford 推出的每年回流銀量，一個是 1 噸多，一個是 33 噸。"
+    },
+    {
+      "type": "table",
+      "title": "每年從亞述城出發多少驢馱：幾種估計",
+      "head": [
+        "估計者",
+        "依據",
+        "每年驢馱（約）",
+        "說明"
+      ],
+      "rows": [
+        [
+          "Veenhof（1972，2008 年補充）",
+          "189 份商隊文書加總",
+          "未換算成每年",
+          "文書合計約 17,500 件布、13,500 公斤錫，約 850 馱；他後來說至少要乘三"
+        ],
+        [
+          "Larsen（2015）",
+          "由 Veenhof 的數字外推 30 年",
+          "約 165（布 110、錫 55）",
+          "30 年約 110 噸錫、115,000 件布；他認為可放心加倍"
+        ],
+        [
+          "Barjamovic（2018，Dercksen 轉述）",
+          "每年 10 支商隊、每支 150 頭驢",
+          "1,500",
+          "約 15 噸錫、32,000 件布"
+        ],
+        [
+          "Barjamovic（2023 自述）",
+          "前 1895–1865 年的保守估計",
+          "750",
+          "2016 年演講、2017 年定稿；同樣引其 2018 年論文，數字與上列不同，本報未讀該文"
+        ],
+        [
+          "Stratford（2017）",
+          "以富商 Šalim-ahum 一年 41 馱為起點，估計同時在安納托利亞的商人約 900–1,000 人",
+          "5,000",
+          "約 62,500 件布、200 噸錫；Dercksen 認為這是未說明來由的設定"
+        ],
+        [
+          "Dercksen（2022）",
+          "兩份申報價值清單，重建出 108 與 348 頭驢的商隊",
+          "至少 1,000",
+          "一年應有數支商隊出發，以此為合理下限"
+        ]
+      ],
+      "caption": "依 Dercksen（2022）第 3 節與 Barjamovic（2023）整理；本報未讀 Veenhof、Larsen、Stratford 與 Barjamovic 2018 的原文，數字皆依 Dercksen 轉述。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Dercksen 稱這段繁榮為「外延式」（extensive）的成長。他認為成因是亞述城的地利與經商傳統、幾個商人家族、制度改革，以及一段相對長的和平；在安納托利亞賺到的利潤，相當大一部分再投入買貨，貨量因此擴大。他也提醒，在亞述城買房子不算投資，因為房價高，買來的房子也沒有再高價賣出或出租。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，Imdī-ilum 的帳信兩種說法都容得下。銀子是他封印寄來的，價錢隨行情變動，代理人連漏記的 4⅓ 舍客勒都在信裡交代；可是這筆錢從寄出到變成貨，每一步都經過制度的關口：封印、出口稅；換到哈佛那份帳，進了卡內什還有進口稅、優先購買與卡魯姆辦事處。由此推想，這是一個靠誓約與分稅換來保護的市場，保護是談來的，不是亞述城能強制的；而它最難保護的，是商號主人自己的壽命。"
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "你的世界裡，跨境商人靠什麼讓沿途統治者守約：誓約、分稅、送禮，還是背後有軍隊？哪一種最先失效？",
+        "稅抽在出城、過路還是進城最容易？有沒有一條繞過關卡的「窄路」，誰知道它、誰從中得利？",
+        "合夥資本綁在一個商人身上時，他死了，帳由誰結、股份怎麼處理、遠方的債由誰承擔？",
+        "外來商人社群自設法庭、自訂利率，當地統治者能容忍到什麼程度？他們用什麼換來這份容忍？"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Mogens Trolle Larsen, Old Assyrian Texts, no. 75 (MMA 66.245.10): Private letter, caravan account",
+      "publisher": "Ira Spar (ed.), Cuneiform Texts in the Metropolitan Museum of Art, Vol. I, pp. 98–103（Internet Archive 掃描本）",
+      "date": "1988",
+      "url": "https://archive.org/details/CuneiformTextsinTheMetropolitanMuseumofArtVolumeITabletsConesandBricksoftheThird",
+      "note": "轉寫、英譯與帳表：兩批貨的錫、布、驢、鞍具、本錢、嚮導工錢、出口稅、nisḫātum、購屋與付給年名官的 5 彌那；「1 舍客勒略多於 8 公克」"
+    },
+    {
+      "title": "CTMMA 1, 075 artifact entry (P273580)",
+      "publisher": "Cuneiform Digital Library Initiative",
+      "date": "2024-10-27",
+      "url": "https://cdli.earth/P273580",
+      "note": "MMA 66.245.10 的轉寫，用來核對 9⅓ 彌那、⅓ 彌那 5 舍客勒等數字"
+    },
+    {
+      "title": "Cuneiform tablet: caravan account, 66.245.10",
+      "publisher": "The Metropolitan Museum of Art（Open Access）",
+      "date": "",
+      "url": "https://www.metmuseum.org/art/collection/search/325851",
+      "note": "尺寸、年代、來源著錄（Gift of Mr. and Mrs. J. J. Klejman, 1966）；經館方 API 讀取"
+    },
+    {
+      "title": "Deena Ragavan, Cuneiform Texts and Fragments in the Harvard Art Museum / Arthur M. Sackler Museum, §6.2 (1983.98)",
+      "publisher": "Cuneiform Digital Library Journal 2010:1",
+      "date": "2010",
+      "url": "https://cdli.mpiwg-berlin.mpg.de/articles/cdlj/2010-1.pdf",
+      "note": "商隊帳的轉寫、英譯與註解：52 件與 54 件布的扣除；nisḫātum 為地方統治者課的進口稅，約 5%。哈佛藝術博物館網頁（hvrd.art/o/289653）轉載的譯文作 42 件、Adi-Ištar，與刊本及 CDLI P393097 不同，本文依刊本"
+    },
+    {
+      "title": "Jan Gerrit Dercksen, The Golden Interval of Old Assyrian Trade (2000–1700 BC)",
+      "publisher": "D. A. Warburton (ed.), The Earliest Economic Growth in World History, pp. 75–104（NINO／Peeters；萊頓大學典藏）",
+      "date": "2022",
+      "url": "https://hdl.handle.net/1887/3721453",
+      "note": "泥板數、近千公里、舊宮與下城年代、淨利約五成、錫與布的來源、婦女織布、商號與皮袋合夥、年息 30%、年名官與市政廳、條約、城牆攤款、驢馱標準與價格、各家規模估計、衰退與終結年表"
+    },
+    {
+      "title": "Gojko Barjamovic, Thomas Chaney, Kerem Coşar, Ali Hortaçsu, Trade, Merchants, and the Lost Cities of the Bronze Age",
+      "publisher": "The Quarterly Journal of Economics 134(3), pp. 1455–1503",
+      "date": "2019",
+      "url": "https://doi.org/10.1093/qje/qjz009",
+      "note": "第 I–II 節：亞述城位置、約 23,500 塊文書與約 12,000 件已編校、年代分布、約前 1840 年大火、卡內什的法庭、地方統治者的保護與過路稅、AKT 8/151、POAT 28、VS 26/17 的英譯；距離彈性 1.9。讀作者自存版（keremcosar.uvacreate.virginia.edu）"
+    },
+    {
+      "title": "Gojko Barjamovic, States, Markets and Overland Trade in the Early and Middle Bronze Age",
+      "publisher": "A. Hausleiter (ed.), Material Worlds, pp. 13–20（Archaeopress，CC BY-NC-ND 4.0）",
+      "date": "2023",
+      "url": "https://www.archaeopress.com/Archaeopress/Products/9781803276489",
+      "note": "約 23,000 件文書、至少 500 名商人；每年 750 馱的保守估計；重商主義保護、類比漢薩同盟、城邦作為共同體、看不見的支撐產業"
+    },
+    {
+      "title": "Lorenzo D'Alfonso and Nancy A. Highcock, Dynamism and Scale in Western Asian Bronze Age Trade Networks",
+      "publisher": "A. Hausleiter (ed.), Material Worlds, pp. 21–27（Archaeopress）",
+      "date": "2023",
+      "url": "https://www.archaeopress.com/Archaeopress/Products/9781803276489",
+      "note": "博蘭尼 1957 年的分析及其影響；23 處卡魯姆與 15 處貿易站；市政廳與城邦議會；國王在文書中少見"
+    },
+    {
+      "title": "Jack M. Sasson, Another Look at the Tenth Commandment",
+      "publisher": "J. L. Berquist and A. Hunt (eds.), Focusing Biblical Studies (T&T Clark), pp. 3–18（作者自存版）",
+      "date": "2012",
+      "url": "https://cdn.vanderbilt.edu/t2-my/my-prd/wp-content/uploads/sites/240/2012/12/Tenth-Commandment-printed-version1.pdf",
+      "note": "古亞述條約四份文本的性質；卡內什第 II 層條約的條款；Kt 00/k 6 的血償與不得覬覦條款；Hahhum 條約的三名官員；商人以誓約、稅與送禮求保護"
+    },
+    {
+      "title": "Mathilde Touillon-Ricci, Trade and contraband in ancient Assyria",
+      "publisher": "British Museum Blog",
+      "date": "2018-04-02",
+      "url": "https://www.britishmuseum.org/blog/trade-and-contraband-ancient-assyria",
+      "note": "Buzazu 的走私指示信、窄路、Kunilum 混貨、Pušu-ken 入獄、各種稅與罰則；約 23,000 塊泥板。本報讀 Internet Archive 2025 年存檔"
+    },
+    {
+      "title": "Fikri Kulakoğlu, New Term Excavations at Kültepe: The First International Trade Center in Anatolia（演講摘要）",
+      "publisher": "Institute for the Study of the Ancient World, New York University",
+      "date": "2017-03-28",
+      "url": "https://isaw.nyu.edu/events/archive/2016/anatolia-before-assyrians",
+      "note": "土丘高 21 公尺，多為宮殿、神廟；下城稱卡內什的卡魯姆"
+    }
+  ]
+}
