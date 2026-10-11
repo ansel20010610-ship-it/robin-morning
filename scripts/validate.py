@@ -162,8 +162,9 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
     ua = art.get("updated_at")
     if isinstance(ua, str) and ua.strip() and not re.match(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:\d{2})$", ua):
         E("updated_at 需含時區，例如 2026-10-11T06:40:00+08:00（目前：%s）" % ua)
-    elif isinstance(ua, str) and ua.strip():
+    elif isinstance(ua, str) and ua.strip() and d != "reserve":
         # The news window of the next Barça update starts here, so a guessed (future) time hides news.
+        # (A reserve's updated_at is replaced when it runs.)
         try:
             when = dt.datetime.fromisoformat(ua.replace("Z", "+00:00"))
         except ValueError:
