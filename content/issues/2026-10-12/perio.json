@@ -1,0 +1,368 @@
+{
+  "column": "perio",
+  "date": "2026-10-12",
+  "title": "13,261 份菌斑樣本：1998 年的紅色複合體",
+  "dek": "Socransky 團隊用 DNA 探針與群聚分析，把齦下菌分成五個複合體。紅色複合體怎麼來的，後來又被怎麼修正？",
+  "topic_key": "perio:doi:10.1111/j.1600-051x.1998.tb02419.x",
+  "updated_at": "2026-10-11T14:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/20100926_180124_DentalPlaque.jpg/1280px-20100926_180124_DentalPlaque.jpg",
+    "width": 1280,
+    "height": 960,
+    "alt": "顯微鏡下的牙菌斑塗片，革蘭氏染色：粉紅色的背景上布滿深藍紫色的短桿狀與球狀細菌，左側和右下角各有一團紅色的大顆粒；畫面中央橫跨一把刻度尺，標有數字 5 與 6，左下角有拍攝日期 2010/09/26。",
+    "caption": "光學顯微鏡下，牙菌斑裡的細菌只能依形狀與染色粗分，認不出是哪一種菌。1998 年的研究改用 DNA 探針，才能在上萬份樣本裡逐一判讀 40 個菌種。此為 2010 年拍攝的牙菌斑革蘭氏染色塗片（100 倍物鏡，相鄰數字刻度相距 11 微米，依上傳者說明），與該研究的受試者及樣本無關。",
+    "credit": "Bob Blaylock 攝，Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:20100926_180124_DentalPlaque.jpg",
+    "made": "2010"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "牙周袋裡的細菌是一個一個單獨作案，還是成群出現？1998 年 2 月，波士頓福賽斯牙科中心（Forsyth Dental Center）的 Sigmund Socransky 與 Anne Haffajee 等五位作者，在《Journal of Clinical Periodontology》第 25 卷發表〈Microbial complexes in subgingival plaque〉。他們用 DNA 探針檢測了 185 人的 13,261 份齦下菌斑樣本，每份樣本查 40 種菌，再用統計方法找出哪些菌傾向一起出現。答案是 5 個穩定的群，其中一群只有三種菌，論文以紅色標示，也就是後來通稱的「紅色複合體」（red complex）；摘要只用序號，顏色命名依後續文獻轉述。"
+    },
+    {
+      "type": "p",
+      "text": "摘要的第一句寫得很平實：細菌在齦下菌斑中以複合體的形式存在，學界早已知道。問題在於怎麼把「一起出現」定義清楚。Hajishengallis 與 Lamont 在 2012 年的回顧中整理了這段背景：1970 年代末到 1980 年代初的培養研究，顯示牙周炎與健康的菌相組成差異很大，一種合理的解讀是病灶裡有健康時幾乎測不到的特定致病菌，於是學界開始尋找個別的「牙周致病菌」。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "培養法一次只能處理少量樣本；要回答「誰和誰一起出現」，需要能同時檢測大量樣本與大量菌種的方法。"
+    },
+    {
+      "type": "p",
+      "text": "Socransky 團隊在 1994 年的《BioTechniques》發表了那個方法：棋盤式 DNA-DNA 雜交（checkerboard DNA-DNA hybridization）。依該文摘要，最多 43 份樣本的變性 DNA 以平行橫條固定在同一片膜上，膜轉 90 度後，再以直條同時和最多 43 種 DNA 探針雜交。一片膜就是一張「樣本 × 菌種」的方格表。1998 年的論文，是把這套方法放大到上萬份樣本的結果。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "本文依摘要與後續文獻整理。原論文全文未能取得，以下凡是摘要沒有寫的數字（例如各複合體的盛行率、與臨床指標的相關係數），本文不寫；轉引自後續綜述的說法，會標明出處。"
+    },
+    {
+      "type": "paper",
+      "citation": "Socransky SS, Haffajee AD, Cugini MA, Smith C, Kent RL Jr. Microbial complexes in subgingival plaque. *J Clin Periodontol*. 1998;25(2):134–144.",
+      "doi": "10.1111/j.1600-051x.1998.tb02419.x",
+      "pmid": "9495612",
+      "link": "https://doi.org/10.1111/j.1600-051x.1998.tb02419.x",
+      "question": "齦下菌斑裡的細菌，能不能用大量樣本與多種群聚、排序方法，界定出穩定共存的菌群？這些菌群與牙周病的臨床指標有什麼關係？",
+      "design": "觀察性研究（共現的橫斷面分析；摘要提到每次回診皆有臨床評估）；棋盤式 DNA-DNA 雜交檢測 40 種菌；phi 係數、平均連結群聚、主成分分析、對應分析",
+      "sample": "185 人（牙周炎 160、無牙周炎 25），平均 51 ± 16 歲；13,261 份齦下菌斑樣本"
+    },
+    {
+      "type": "h",
+      "text": "研究設計：185 人、13,261 份樣本、40 種菌"
+    },
+    {
+      "type": "p",
+      "text": "依摘要，研究納入 185 名受試者，平均年齡 51 ± 16 歲，其中 160 人有牙周炎、25 人沒有。研究者從每顆牙的近心面採集齦下菌斑，每次回診都在每顆牙的 6 個位點做臨床評估。摘要提到的臨床指標包括探測深度與探診出血（bleeding on probing, BOP）。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "13,261 份樣本除以 185 人，平均每人約 72 份，超過一個人可能有的牙齒數。可知至少有部分牙齒或位點被採樣不只一次。回診幾次、間隔多久、中間是否接受治療，摘要都沒有說明，本文無法核對。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "每份樣本以全基因組 DNA 探針（whole genomic DNA probes）檢測 40 種齦下菌，記錄有無與數量。這 40 種菌是研究者事先挑選的；全基因組探針要用菌株的 DNA 製作，本文推論名單只能涵蓋已培養的菌種。探針名單之外的菌，這個方法看不到。"
+    },
+    {
+      "type": "svg",
+      "title": "棋盤式 DNA-DNA 雜交的原理（原創示意）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 300\"><rect class=\"paper\" x=\"0\" y=\"0\" width=\"360\" height=\"300\"/><rect class=\"soft\" x=\"90\" y=\"51\" width=\"194\" height=\"10\" rx=\"2\"/><rect class=\"soft\" x=\"90\" y=\"77\" width=\"194\" height=\"10\" rx=\"2\"/><rect class=\"soft\" x=\"90\" y=\"103\" width=\"194\" height=\"10\" rx=\"2\"/><rect class=\"soft\" x=\"90\" y=\"129\" width=\"194\" height=\"10\" rx=\"2\"/><rect class=\"soft\" x=\"90\" y=\"155\" width=\"194\" height=\"10\" rx=\"2\"/><rect class=\"soft\" x=\"90\" y=\"181\" width=\"194\" height=\"10\" rx=\"2\"/><rect class=\"soft\" x=\"90\" y=\"207\" width=\"194\" height=\"10\" rx=\"2\"/><rect class=\"soft\" x=\"90\" y=\"233\" width=\"194\" height=\"10\" rx=\"2\"/><rect class=\"muted\" opacity=\"0.18\" x=\"91\" y=\"44\" width=\"10\" height=\"206\" rx=\"2\"/><rect class=\"muted\" opacity=\"0.18\" x=\"117\" y=\"44\" width=\"10\" height=\"206\" rx=\"2\"/><rect class=\"muted\" opacity=\"0.18\" x=\"143\" y=\"44\" width=\"10\" height=\"206\" rx=\"2\"/><rect class=\"muted\" opacity=\"0.18\" x=\"169\" y=\"44\" width=\"10\" height=\"206\" rx=\"2\"/><rect class=\"muted\" opacity=\"0.18\" x=\"195\" y=\"44\" width=\"10\" height=\"206\" rx=\"2\"/><rect class=\"muted\" opacity=\"0.18\" x=\"221\" y=\"44\" width=\"10\" height=\"206\" rx=\"2\"/><rect class=\"muted\" opacity=\"0.18\" x=\"247\" y=\"44\" width=\"10\" height=\"206\" rx=\"2\"/><rect class=\"muted\" opacity=\"0.18\" x=\"273\" y=\"44\" width=\"10\" height=\"206\" rx=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"96\" cy=\"56\" r=\"2\"/><circle class=\"accent\" cx=\"122\" cy=\"56\" r=\"6\"/><circle class=\"accent\" cx=\"148\" cy=\"56\" r=\"6\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"174\" cy=\"56\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"200\" cy=\"56\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"226\" cy=\"56\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"252\" cy=\"56\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"278\" cy=\"56\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"96\" cy=\"82\" r=\"2\"/><circle class=\"accent\" cx=\"122\" cy=\"82\" r=\"6\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"148\" cy=\"82\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"174\" cy=\"82\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"200\" cy=\"82\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"226\" cy=\"82\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"252\" cy=\"82\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"278\" cy=\"82\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"96\" cy=\"108\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"122\" cy=\"108\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"148\" cy=\"108\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"174\" cy=\"108\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"200\" cy=\"108\" r=\"2\"/><circle class=\"accent\" cx=\"226\" cy=\"108\" r=\"6\"/><circle class=\"accent\" cx=\"252\" cy=\"108\" r=\"6\"/><circle class=\"accent\" cx=\"278\" cy=\"108\" r=\"6\"/><circle class=\"accent\" cx=\"96\" cy=\"134\" r=\"6\"/><circle class=\"accent\" cx=\"122\" cy=\"134\" r=\"6\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"148\" cy=\"134\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"174\" cy=\"134\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"200\" cy=\"134\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"226\" cy=\"134\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"252\" cy=\"134\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"278\" cy=\"134\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"96\" cy=\"160\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"122\" cy=\"160\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"148\" cy=\"160\" r=\"2\"/><circle class=\"accent\" cx=\"174\" cy=\"160\" r=\"6\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"200\" cy=\"160\" r=\"2\"/><circle class=\"accent\" cx=\"226\" cy=\"160\" r=\"6\"/><circle class=\"accent\" cx=\"252\" cy=\"160\" r=\"6\"/><circle class=\"accent\" cx=\"278\" cy=\"160\" r=\"6\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"96\" cy=\"186\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"122\" cy=\"186\" r=\"2\"/><circle class=\"accent\" cx=\"148\" cy=\"186\" r=\"6\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"174\" cy=\"186\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"200\" cy=\"186\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"226\" cy=\"186\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"252\" cy=\"186\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"278\" cy=\"186\" r=\"2\"/><circle class=\"accent\" cx=\"96\" cy=\"212\" r=\"6\"/><circle class=\"accent\" cx=\"122\" cy=\"212\" r=\"6\"/><circle class=\"accent\" cx=\"148\" cy=\"212\" r=\"6\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"174\" cy=\"212\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"200\" cy=\"212\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"226\" cy=\"212\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"252\" cy=\"212\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"278\" cy=\"212\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"96\" cy=\"238\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"122\" cy=\"238\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"148\" cy=\"238\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"174\" cy=\"238\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"200\" cy=\"238\" r=\"2\"/><circle class=\"muted\" opacity=\"0.35\" cx=\"226\" cy=\"238\" r=\"2\"/><circle class=\"accent\" cx=\"252\" cy=\"238\" r=\"6\"/><circle class=\"accent\" cx=\"278\" cy=\"238\" r=\"6\"/><text class=\"ink\" x=\"187\" y=\"24\" font-size=\"13\" text-anchor=\"middle\">直向：DNA 探針（每條一種菌）</text><text class=\"ink\" x=\"12\" y=\"54\" font-size=\"13\">橫向：</text><text class=\"ink\" x=\"12\" y=\"72\" font-size=\"13\">菌斑</text><text class=\"ink\" x=\"12\" y=\"90\" font-size=\"13\">樣本</text><text class=\"muted\" x=\"12\" y=\"108\" font-size=\"12\">（每條</text><text class=\"muted\" x=\"12\" y=\"124\" font-size=\"12\">一份）</text><text class=\"muted\" x=\"12\" y=\"282\" font-size=\"12\">紅點：雜交訊號＝該樣本含該菌；原法每片膜可達 43 × 43</text></svg>",
+      "caption": "原創示意，不按比例，點的位置為隨意示範。依 Socransky 等（1994）《BioTechniques》摘要描述繪製：樣本 DNA 以橫條固定在膜上，膜轉 90 度後以直條和不同菌種的探針雜交，交點出現訊號代表該樣本含有該菌。",
+      "credit": "本報原創圖解"
+    },
+    {
+      "type": "p",
+      "text": "分析分三步。第一步，兩兩菌種計算 phi 係數（phi coefficient）。phi 是兩個「有／無」變項之間的相關係數，在這裡衡量兩種菌是否傾向在同一份樣本裡同時出現；摘要沒有說明「有」的判定門檻。第二步，以平均連結法（averaged unweighted linkage sort，即 UPGMA）把菌種依相似度聚成樹狀群。第三步，用主成分分析與對應分析做群落排序（community ordination），從另一個角度檢查菌種在多維空間裡怎麼靠攏。"
+    },
+    {
+      "type": "p",
+      "text": "三種方法的數學假設不同。群聚分析一定會把資料切成群，即使資料裡其實沒有群；排序方法則不強迫分群。本文的讀法是：如果不同方法給出同樣的分組，分組就比較可能反映資料本身，而不是某個演算法的產物。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "svg",
+      "title": "研究流程（依摘要重繪）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 560\"><rect class=\"soft\" x=\"12\" y=\"10\" width=\"336\" height=\"78\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"34\" font-size=\"18\" font-weight=\"700\">1</text><text class=\"ink\" x=\"50\" y=\"34\" font-size=\"15\" font-weight=\"700\">受試者 185 人</text><text class=\"muted\" x=\"50\" y=\"54\" font-size=\"13\">牙周炎 160 人、無牙周炎 25 人</text><text class=\"muted\" x=\"50\" y=\"72\" font-size=\"13\">平均年齡 51 ± 16 歲</text><line class=\"muted line\" x1=\"180\" y1=\"90\" x2=\"180\" y2=\"102\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,101 186,101 180,109\"/><rect class=\"soft\" x=\"12\" y=\"112\" width=\"336\" height=\"96\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"136\" font-size=\"18\" font-weight=\"700\">2</text><text class=\"ink\" x=\"50\" y=\"136\" font-size=\"15\" font-weight=\"700\">取樣：每顆牙的近心面齦下菌斑</text><text class=\"muted\" x=\"50\" y=\"156\" font-size=\"13\">共 13,261 份樣本</text><text class=\"muted\" x=\"50\" y=\"174\" font-size=\"13\">臨床檢查：每顆牙 6 點，每次回診都測</text><text class=\"accent\" x=\"50\" y=\"194\" font-size=\"13\">平均每人約 72 份（本文推算）</text><line class=\"muted line\" x1=\"180\" y1=\"210\" x2=\"180\" y2=\"222\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,221 186,221 180,229\"/><rect class=\"soft\" x=\"12\" y=\"232\" width=\"336\" height=\"78\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"256\" font-size=\"18\" font-weight=\"700\">3</text><text class=\"ink\" x=\"50\" y=\"256\" font-size=\"15\" font-weight=\"700\">檢測 40 種菌</text><text class=\"muted\" x=\"50\" y=\"276\" font-size=\"13\">全基因組 DNA 探針</text><text class=\"muted\" x=\"50\" y=\"294\" font-size=\"13\">棋盤式 DNA-DNA 雜交：測有無與量</text><line class=\"muted line\" x1=\"180\" y1=\"312\" x2=\"180\" y2=\"324\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,323 186,323 180,331\"/><rect class=\"soft\" x=\"12\" y=\"334\" width=\"336\" height=\"96\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"358\" font-size=\"18\" font-weight=\"700\">4</text><text class=\"ink\" x=\"50\" y=\"358\" font-size=\"15\" font-weight=\"700\">分析：誰和誰一起出現</text><text class=\"muted\" x=\"50\" y=\"378\" font-size=\"13\">兩兩菌種算 phi 係數</text><text class=\"muted\" x=\"50\" y=\"396\" font-size=\"13\">平均連結群聚（UPGMA）</text><text class=\"muted\" x=\"50\" y=\"414\" font-size=\"13\">主成分分析、對應分析，交叉比對</text><line class=\"muted line\" x1=\"180\" y1=\"432\" x2=\"180\" y2=\"444\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,443 186,443 180,451\"/><rect class=\"soft\" x=\"12\" y=\"454\" width=\"336\" height=\"96\" rx=\"6\"/><rect class=\"accent\" x=\"12\" y=\"460\" width=\"4\" height=\"84\"/><text class=\"accent\" x=\"28\" y=\"478\" font-size=\"18\" font-weight=\"700\">5</text><text class=\"ink\" x=\"50\" y=\"478\" font-size=\"15\" font-weight=\"700\">結果：5 個主要複合體</text><text class=\"muted\" x=\"50\" y=\"498\" font-size=\"13\">各種分析方法都得到同樣的 5 群</text><text class=\"muted\" x=\"50\" y=\"516\" font-size=\"13\">另有 3 種菌是離群值</text><text class=\"accent\" x=\"50\" y=\"536\" font-size=\"13\">第 1 群（紅）與探測深度、BOP 關係明顯</text></svg>",
+      "caption": "依 Socransky 等（1998）摘要整理的流程，不是原文圖。「平均每人約 72 份」為本文以 13,261 ÷ 185 推算。摘要只以序號稱呼各群，顏色名稱據後續文獻所述出自原文全文。",
+      "credit": "本報原創圖解"
+    },
+    {
+      "type": "h",
+      "text": "主要結果：5 個複合體，第 1 群和牙周袋深度一起變化"
+    },
+    {
+      "type": "p",
+      "text": "摘要的核心結論是：不論用哪一種分析方法，都穩定觀察到 5 個主要複合體。摘要依序稱為第 1 到第 5 個複合體；據後續文獻轉述，原論文全文以紅、橘、黃、綠、紫為這五群命名（Fernandes 等 2024 寫明原文描述的是這五色；Mohanty 等 2019 說這些複合體以顏色編碼以便討論）。下表把摘要列出的成員與顏色名稱放在一起。",
+      "tag": "史實"
+    },
+    {
+      "type": "table",
+      "title": "五個複合體與離群菌（依摘要）",
+      "head": [
+        "摘要序號",
+        "顏色名（據後續文獻）",
+        "成員（摘要原名）",
+        "後來的分類名"
+      ],
+      "rows": [
+        [
+          "第 1 群",
+          "紅色",
+          "*Bacteroides forsythus*、*Porphyromonas gingivalis*、*Treponema denticola*（關係緊密）",
+          "*B. forsythus* 今為 *Tannerella forsythia*"
+        ],
+        [
+          "第 2 群",
+          "橘色",
+          "核心：*Fusobacterium nucleatum*／*periodonticum* 各亞種、*Prevotella intermedia*、*P. nigrescens*、*Peptostreptococcus micros*；相關：*Eubacterium nodatum*、*Campylobacter rectus*、*C. showae*、*Streptococcus constellatus*、*C. gracilis*",
+          "*P. micros* 今為 *Parvimonas micra*"
+        ],
+        [
+          "第 3 群",
+          "黃色",
+          "*Streptococcus sanguis*、*S. oralis*、*S. mitis*、*S. gordonii*、*S. intermedius*",
+          "*S. sanguis* 今多作 *S. sanguinis*（本文未核對命名文獻）"
+        ],
+        [
+          "第 4 群",
+          "綠色",
+          "3 種 *Capnocytophaga*、*Campylobacter concisus*、*Eikenella corrodens*、*Actinobacillus actinomycetemcomitans* 血清型 a",
+          "*A. actinomycetemcomitans* 今為 *Aggregatibacter actinomycetemcomitans*"
+        ],
+        [
+          "第 5 群",
+          "紫色",
+          "*Veillonella parvula*、*Actinomyces odontolyticus*",
+          "（本文未核對）"
+        ],
+        [
+          "離群",
+          "—",
+          "*A. actinomycetemcomitans* 血清型 b、*Selenomonas noxia*、*Actinomyces naeslundii* 基因種 2（*A. viscosus*）；彼此及與 5 群關係都弱",
+          "*A. naeslundii* 基因種 2 今為 *Actinomyces oris*（Henssge 等 2009）"
+        ]
+      ],
+      "caption": "成員依 Socransky 等（1998）摘要；顏色名稱依 Fernandes 等（2024）與 Santi-Rocca 等（2025）。*B. forsythus* 先由 Sakamoto 等（2002）移入 *Tannerella* 屬，Maiden 等（2003）提議保留形容詞形式種名 *T. forsythia*；其餘改名依 Nørskov-Lauritsen 與 Kilian（2006）、Tindall 與 Euzéby（2006）、Henssge 等（2009）。"
+    },
+    {
+      "type": "p",
+      "text": "摘要對臨床關聯只寫了一句：第 1 個複合體與牙周病的臨床指標「關係十分明顯」（related strikingly），特別是探測深度與探診出血。摘要沒有給相關係數、勝算比或 p 值，也沒有說其他複合體與臨床指標的關係如何，本文因此不列效果量。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "同一菌種的不同血清型，可以落在不同的群：*A. actinomycetemcomitans* 血清型 a 歸入第 4 群，血清型 b 卻是離群值。這提醒讀者，「複合體」是統計上的共現關係，分群的單位是探針，不是生物學上的親緣。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "Mohanty 等在 2019 年的綜述寫道，紅色複合體的成員很少在沒有橘色複合體成員的情況下出現，橘色複合體定殖越多，被紅色複合體定殖的位點也越多。這段沒有標示出自 Socransky 原文（鄰近引用的是 Carranza《Clinical Periodontology》教科書），同一篇綜述其他段落也有菌名誤植；本文無法確認它是否為原文的觀察。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "Hajishengallis 與 Lamont 在 2012 年描述這套系統的影響：",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "quote",
+      "original": "The convenience and appeal of the concept of red, and other color-coded, complex(es) led to widespread adoption up to the present day.",
+      "text": "紅色以及其他以顏色編碼的複合體，概念方便又有吸引力，因此一直被廣泛採用到今天。",
+      "cite": "Hajishengallis G, Lamont RJ. *Mol Oral Microbiol* 2012（本文自譯）"
+    },
+    {
+      "type": "h",
+      "text": "限制：關聯、預選菌種與樣本結構"
+    },
+    {
+      "type": "p",
+      "text": "第一，這是關聯研究。紅色複合體和較深的牙周袋、較多的探診出血一起出現，可以解讀為這些菌造成破壞，也可以解讀為深牙周袋與發炎環境（厭氧、有組織滲出液作養分）選擇了這些菌，或兩者互為因果。橫斷面的共現無法分辨方向。Hajishengallis 與 Lamont 則提出另一種解讀：致病的不是特定三種菌，而是整體菌群的失衡（見下節）。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "第二，答案受限於問題。40 種探針是研究者事先挑出的菌種；名單外的菌即使大量存在、與疾病高度相關，也不可能出現在任何一個複合體裡。後來的定序研究證明，這個盲區不小（見下節 Griffen 等）。"
+    },
+    {
+      "type": "p",
+      "text": "第三，樣本不是獨立的。平均每人約 72 份樣本，同一個人口腔內各部位的菌相彼此相關，同一部位在不同回診的樣本也相關。摘要沒有說明 phi 係數是以樣本、位點還是受試者為單位計算，也沒有說明是否處理了這種群聚結構，本文無法核對。若沒有處理，菌種之間的相似度可能部分反映「同一個人」，而不只是「同一個生態位」。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "第四，測量方式。全基因組探針測的是 DNA，不分活菌與死菌；近緣菌種之間理論上可能交叉雜交。原文如何驗證探針專一性、數量分級怎麼定，摘要沒有寫。受試者以牙周炎病人為主（160 比 25），健康組只有 25 人，與健康相關的菌群結構，資料相對少。外推到其他族群、年齡層或治療後的口腔，也需要另外的證據。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "後來的研究：定序、關鍵致病菌與新的分群"
+    },
+    {
+      "type": "p",
+      "text": "[Griffen 等（2012）](https://doi.org/10.1038/ismej.2011.191)用 16S rRNA 基因的 454 定序，比較 29 名牙周健康者與 29 名慢性牙周炎病人的齦下菌群，不預設要找哪些菌。依摘要，共得到約 139 萬條序列，對應到 16 個門、106 個屬、596 個種，其中 81% 可對應到已培養的菌種。健康與疾病的菌群在每個分類層級都不同，疾病組的多樣性較高；123 個種在疾病中較豐富，53 個種在健康中較豐富。一些先前不受重視的菌，例如 *Filifactor alocis* 與多種螺旋體，與先前已知的目標菌相比，佔了相當大比例的序列。"
+    },
+    {
+      "type": "p",
+      "text": "[Hajishengallis、Darveau、Curtis（2012）](https://doi.org/10.1038/nrmicro2873)在《Nature Reviews Microbiology》提出「關鍵致病菌假說」（keystone-pathogen hypothesis）：某些豐度很低的致病菌，可以把原本無害的菌群改造成失衡（dysbiotic）的菌群，從而主導發炎性疾病。這篇觀點文章以 *P. gingivalis* 為主要例證。紅色複合體的三種菌，在這個框架下不再只是「一起出現的壞菌」，其中一種被看作改變整個群落的槓桿。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "[Hajishengallis 與 Lamont（2012）](https://doi.org/10.1111/j.2041-1014.2012.00663.x)把這個想法擴大成「多菌協同與失衡」（polymicrobial synergy and dysbiosis, PSD）模型，標題直接寫「超越紅色複合體」。他們整理的反證有兩類：紅色複合體菌種也能在沒有疾病的人身上找到；齦下菌相比原先想像的更多樣，許多新認識的菌與疾病的相關程度和紅色複合體相當，甚至更高。文中引述 Hajishengallis 等 2011 年的小鼠實驗：*P. gingivalis* 在總菌量不到 0.01% 時就能讓菌群失衡、引起發炎性骨流失，但在無菌小鼠身上不會引起牙周炎。他們的結論是，三種菌組成的紅色複合體作為牙周炎主要病因單位的概念「需要修正」。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "[Santi-Rocca 等（2025）](https://doi.org/10.1111/jcpe.14138)在同一本期刊、以幾乎相同的標題，回頭重做這件事。依摘要，他們以 16S rRNA V3–V4 定序分析 135 人（健康 41、牙齦炎 47、牙周炎 47）的齦下菌斑，偵測到 394 個可明確歸類的分類群，群聚得到 10 個複合體。與疾病最相關的第 10 群有 29 個分類群，包含 Socransky 紅色複合體的三種菌、另外 8 個密螺旋體（*Treponema*）分類群，以及橘色複合體的菌種；與健康相關的第 6 群，則收納了原本綠、黃、紫三群的菌種。牙齦炎在菌相上介於健康與牙周炎之間，研究者另分出 5 種與疾病進展相關的菌相型態。"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Socransky SS, Smith C, Martin L, Paster BJ, Dewhirst FE, Levin AE. \"Checkerboard\" DNA-DNA hybridization. *BioTechniques*. 1994;17(4):788–792. [PMID 7833043](https://pubmed.ncbi.nlm.nih.gov/7833043/)",
+        "Griffen AL, Beall CJ, Campbell JH, Firestone ND, Kumar PS, Yang ZK, Podar M, Leys EJ. Distinct and complex bacterial profiles in human periodontitis and health revealed by 16S pyrosequencing. *ISME J*. 2012;6(6):1176–1185. [DOI 10.1038/ismej.2011.191](https://doi.org/10.1038/ismej.2011.191)；PMID 22170420",
+        "Hajishengallis G, Darveau RP, Curtis MA. The keystone-pathogen hypothesis. *Nat Rev Microbiol*. 2012;10(10):717–725. [DOI 10.1038/nrmicro2873](https://doi.org/10.1038/nrmicro2873)；PMID 22941505",
+        "Hajishengallis G, Lamont RJ. Beyond the red complex and into more complexity: the polymicrobial synergy and dysbiosis (PSD) model of periodontal disease etiology. *Mol Oral Microbiol*. 2012;27(6):409–419. [DOI 10.1111/j.2041-1014.2012.00663.x](https://doi.org/10.1111/j.2041-1014.2012.00663.x)；PMID 23134607",
+        "Santi-Rocca J, Martín-García DF, Lorca-Alonso I, et al. Microbial complexes in subgingival plaque: a bacterial meta-taxonomic study. *J Clin Periodontol*. 2025;52(7):983–998. [DOI 10.1111/jcpe.14138](https://doi.org/10.1111/jcpe.14138)；PMID 40467115"
+      ]
+    },
+    {
+      "type": "h",
+      "text": "今天怎麼讀：證明了共現，沒有證明病因"
+    },
+    {
+      "type": "p",
+      "text": "這篇論文證明的事情可以說得很精確：在 185 名以牙周炎病人為主的成人、13,261 份齦下菌斑中，40 種預選菌種的共現關係，能用不同的群聚與排序方法重複得到同樣的 5 個群；其中 *B. forsythus*、*P. gingivalis*、*T. denticola* 三者構成關係緊密的一群，並與探測深度、探診出血關係明顯。它把「細菌成群出現」從印象變成可重複的統計結構，也給教學一套好記的顏色語言。"
+    },
+    {
+      "type": "p",
+      "text": "它沒有證明的事也一樣清楚。共現不等於致病，關聯不等於先後；從摘要看，這篇論文沒有直接檢驗定殖順序。課堂上常見「橘色複合體先來、紅色複合體後到」的說法，出處需回查原文全文，本文無法判定；讀者引用時應該分清楚出處。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "後來的共識，大致從「哪幾種菌是壞菌」移向「整個群落怎麼失衡」。定序研究顯示，與疾病相關的菌遠不止三種；關鍵致病菌與 PSD 模型則把重點放在菌與宿主反應的互動。2025 年用定序重做的分析，最與疾病相關的那一群裡仍然包含紅色複合體的三種菌。被修正的是「三種菌就是病因單位」這個解讀，不是 1998 年觀察到的共現本身。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "對臨床思考，這篇論文提供的是一張菌相地圖，不是診斷工具。Santi-Rocca 等人提議把菌相型態當作微生物風險量尺，補充現行的分期與分級系統，這仍是研究者的提案。從 1998 年到 2025 年，檢測對象從 40 種預選菌，變成定序後可辨認的 394 個分類群，複合體從 5 個變成 10 個，而 *P. gingivalis*、*T. denticola* 與 *T. forsythia* 依然落在同一群。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Socransky SS, Haffajee AD, Cugini MA, Smith C, Kent RL Jr. Microbial complexes in subgingival plaque. J Clin Periodontol 1998;25(2):134–144",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1998-02",
+      "url": "https://doi.org/10.1111/j.1600-051x.1998.tb02419.x",
+      "note": "原論文；全文需訂閱未能取得，依摘要"
+    },
+    {
+      "title": "PubMed 書目與摘要：Microbial complexes in subgingival plaque（PMID 9495612）",
+      "publisher": "National Library of Medicine（E-utilities efetch）",
+      "date": "1998-02",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9495612/",
+      "note": "核對作者、卷期頁 25(2):134–144、DOI；PMID 由 Europe PMC 依 DOI 查得後以 efetch 回查標題一致；摘要全文"
+    },
+    {
+      "title": "Crossref 書目紀錄：10.1111/j.1600-051x.1998.tb02419.x",
+      "publisher": "Crossref",
+      "date": "1998-02",
+      "url": "https://api.crossref.org/works/10.1111/j.1600-051x.1998.tb02419.x",
+      "note": "核對作者（含 Kent RL Jr.）、卷期頁"
+    },
+    {
+      "title": "Socransky SS, Smith C, Martin L, Paster BJ, Dewhirst FE, Levin AE. \"Checkerboard\" DNA-DNA hybridization. BioTechniques 1994;17(4):788–792",
+      "publisher": "BioTechniques",
+      "date": "1994-10",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7833043/",
+      "note": "檢測方法原理；依摘要"
+    },
+    {
+      "title": "Griffen AL, et al. Distinct and complex bacterial profiles in human periodontitis and health revealed by 16S pyrosequencing. ISME J 2012;6(6):1176–1185",
+      "publisher": "The ISME Journal",
+      "date": "2011-12-15",
+      "url": "https://doi.org/10.1038/ismej.2011.191",
+      "note": "依摘要（PMID 22170420）"
+    },
+    {
+      "title": "Hajishengallis G, Darveau RP, Curtis MA. The keystone-pathogen hypothesis. Nat Rev Microbiol 2012;10(10):717–725",
+      "publisher": "Nature Reviews Microbiology",
+      "date": "2012-09-03",
+      "url": "https://doi.org/10.1038/nrmicro2873",
+      "note": "讀 PMC 作者稿全文（PMC3498498）；PMID 22941505"
+    },
+    {
+      "title": "Hajishengallis G, Lamont RJ. Beyond the red complex and into more complexity: the PSD model of periodontal disease etiology. Mol Oral Microbiol 2012;27(6):409–419",
+      "publisher": "Molecular Oral Microbiology（Wiley）",
+      "date": "2012-09-03",
+      "url": "https://doi.org/10.1111/j.2041-1014.2012.00663.x",
+      "note": "讀 PMC 作者稿全文（PMC3653317）；背景、引文與反證整理；PMID 23134607"
+    },
+    {
+      "title": "Santi-Rocca J, et al. Microbial complexes in subgingival plaque: a bacterial meta-taxonomic study. J Clin Periodontol 2025;52(7):983–998",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2025-06-04",
+      "url": "https://doi.org/10.1111/jcpe.14138",
+      "note": "依摘要（PMID 40467115）"
+    },
+    {
+      "title": "Fernandes GVO, Mosley GA, Ross W, Dagher A, Martins BGDS, Fernandes JCH. Revisiting Socransky's Complexes: A Review Suggesting Updated New Bacterial Clusters (GF-MoR Complexes) for Periodontal and Peri-Implant Diseases and Conditions. Microorganisms 2024;12(11):2214",
+      "publisher": "Microorganisms（MDPI，CC BY 4.0）",
+      "date": "2024-10-31",
+      "url": "https://doi.org/10.3390/microorganisms12112214",
+      "note": "開放全文；五色名稱與原文複合體的對應；PMID 39597602"
+    },
+    {
+      "title": "Mohanty R, et al. Red complex: polymicrobial conglomerate in oral flora: a review. J Family Med Prim Care 2019;8(11):3480–3486",
+      "publisher": "Journal of Family Medicine and Primary Care",
+      "date": "2019-11",
+      "url": "https://doi.org/10.4103/jfmpc.jfmpc_759_19",
+      "note": "開放全文；只用於轉引紅、橘複合體共現的描述；PMID 31803640"
+    },
+    {
+      "title": "Maiden MFJ, Cohee P, Tanner ACR. Proposal to conserve the adjectival form of the specific epithet in the reclassification of Bacteroides forsythus … as Tannerella forsythia. Int J Syst Evol Microbiol 2003;53(6):2111–2112",
+      "publisher": "IJSEM",
+      "date": "2003-11",
+      "url": "https://doi.org/10.1099/ijs.0.02641-0",
+      "note": "菌名變更；依 PubMed 書目（PMID 14657155）"
+    },
+    {
+      "title": "Nørskov-Lauritsen N, Kilian M. Reclassification of Actinobacillus actinomycetemcomitans … as Aggregatibacter actinomycetemcomitans. Int J Syst Evol Microbiol 2006;56(9):2135–2146",
+      "publisher": "IJSEM",
+      "date": "2006-09",
+      "url": "https://doi.org/10.1099/ijs.0.64207-0",
+      "note": "菌名變更；依 PubMed 書目（PMID 16957111）"
+    },
+    {
+      "title": "Tindall BJ, Euzéby JP. Proposal of Parvimonas gen. nov. and Quatrionicoccus gen. nov. Int J Syst Evol Microbiol 2006;56(11):2711–2713",
+      "publisher": "IJSEM",
+      "date": "2006-11",
+      "url": "https://doi.org/10.1099/ijs.0.64338-0",
+      "note": "菌名變更；依 PubMed 書目（PMID 17082417）"
+    },
+    {
+      "title": "Henssge U, Do T, Radford DR, Gilbert SC, Clark D, Beighton D. Emended description of Actinomyces naeslundii and descriptions of Actinomyces oris sp. nov. and Actinomyces johnsonii sp. nov. Int J Syst Evol Microbiol 2009;59(3):509–516",
+      "publisher": "PubMed（PMID 19244431）",
+      "date": "2009-03",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19244431/",
+      "note": "A. naeslundii genospecies 2 命名為 A. oris；依 PubMed 書目與摘要"
+    },
+    {
+      "title": "File:20100926 180124 DentalPlaque.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2010-09-26",
+      "url": "https://commons.wikimedia.org/wiki/File:20100926_180124_DentalPlaque.jpg",
+      "note": "頭圖，CC BY-SA 3.0"
+    }
+  ]
+}
