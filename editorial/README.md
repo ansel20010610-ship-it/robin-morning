@@ -18,7 +18,7 @@
 ## 每班流程
 
 1. **確認任務**：`python3 scripts/plan_day.py --group <班號>`。會印出刊期日期、期數、本班欄位、全刊狀態。已存在且驗證通過的稿件**不要重寫**（巴薩晨報的更新除外，見下）。
-2. **讀規則**（每次都讀，不憑記憶）：`editorial/STYLE.md`、`editorial/SCHEMA.md`、`editorial/IMAGES.md`、`editorial/columns/<欄位>.md`。
+2. **讀規則**（每次都讀，不憑記憶）：`editorial/STYLE.md`、`editorial/SCHEMA.md`、`editorial/IMAGES.md`、`editorial/LESSONS.md`（編輯部教訓，過去反覆出現的錯）、`editorial/columns/<欄位>.md`。
 3. **分工**：本班有兩篇以上時，用 Agent 工具為每一欄各派一個子代理**同時**撰寫。給子代理的指示要包含：專案路徑、日期、欄位、要先讀的規則檔、第 4–7 步、只寫自己那一個檔、不要 git commit。你負責第 8–10 步。第 5 班一律平行。
 4. **查重**：`python3 scripts/ledger.py --column <欄位>`、`python3 scripts/ledger.py --images`（已含備稿用過的主題與圖片）。
 5. **研究與核對**：用 WebSearch、WebFetch 找原始來源。數字、日期、人名、引文都要能在來源找到，找不到就不寫。雲端的 WebSearch 結果常混入內容農場：搜尋時盡量用 `allowed_domains` 限定可信網域，或直接用 WebFetch 打開已知來源。
@@ -69,10 +69,17 @@
 
 依 `RESERVE.md`。先跑 `python3 scripts/reserve.py` 看各欄庫存；從庫存最少的欄位開始，每次最多寫 3 篇，流程同上（含審稿子代理），驗證改用 `python3 scripts/validate.py --reserve --check-urls`，推送訊息用「備稿 <欄位>：<標題>」。
 
+## 每週品質稽核（週日 15:37）
+
+1. 讀過去 7 期（`content/issues/` 最近 7 個日期）的全部稿件；每篇派一個審稿子代理（可平行），以懷疑的態度抽查關鍵事實、引文、圖片授權與規格。
+2. **事實錯誤**：不改寫原文，在該篇 `body` 末尾加一個 `callout` 區塊，`label` 為「更正（<稽核日期>）」，寫明哪裡錯、正確內容與來源，並在 `sources` 補上來源、把 `updated_at` 改成稽核時間。跑 `python3 scripts/validate.py <該日期> --column <欄位>` 確認沒有 ERROR。
+3. **反覆出現的問題**（兩篇以上、或同一欄連續出現）：寫進 `editorial/LESSONS.md`，一條一個問題，附出現位置與正確做法。
+4. 推送，訊息用「品質稽核 <日期>：更正 N 篇、新增教訓 M 條」，最後做班次回報（`--group audit`）。
+
 ## 不可以做的事
 
-- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/`、`content/rejected/`（只有備稿補位會寫）與 `state/`。
-- 不刪除或改寫過去日期的稿件。若發現過去稿件有事實錯誤，在當天相關欄位文末以「更正」說明，並在回報中提出。
+- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`（每週品質稽核可以寫 `editorial/LESSONS.md`）、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/`、`content/rejected/`（只有備稿補位會寫）與 `state/`。
+- 不刪除或改寫過去日期的稿件。若發現過去稿件有事實錯誤，在該篇文末加「更正」區塊（見「每週品質稽核」第 2 步），並在回報中提出。
 - 不讀取、不推測讀者的私人生活；不使用讀者自己的小說設定。
 - 不使用 AI 生成圖片。不呼叫任何需要付費的 API。
 
