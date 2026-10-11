@@ -1,10 +1,10 @@
 {
   "column": "football",
   "date": "2026-10-11",
-  "title": "巴薩拚 8 連勝開季，拉菲尼亞缺陣",
-  "dek": "巴薩台灣時間今晨 00:30 主場對赫塔費，贏球即追平隊史聯賽最佳開局。本報截稿時比賽尚未開踢。",
+  "title": "巴薩 3 比 0 赫塔費，8 連勝追平隊史聯賽最佳開局",
+  "dek": "戈登、熱蘇斯與孔德各進一球，巴薩台灣時間今晨主場完勝赫塔費，西甲 8 戰全勝，領先第二名馬德里競技 5 分。",
   "topic_key": "football:2026-10-11",
-  "updated_at": "2026-10-10T23:30:00+08:00",
+  "updated_at": "2026-10-11T12:27:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -14,7 +14,7 @@
     "width": 1280,
     "height": 960,
     "alt": "巴薩總教練弗利克坐在記者會長桌後方，身穿深色球隊外套，背後是印滿贊助商標誌的背板；左側坐著一名戴眼鏡的男子，前景有攝影機。",
-    "caption": "巴薩總教練弗利克 2025 年 4 月在球隊記者會上。資料照片，非當日畫面。",
+    "caption": "巴薩總教練弗利克 2025 年 4 月在球隊記者會上。資料照片，非當日比賽畫面。",
     "credit": "JaflaumS05／Wikimedia Commons",
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -24,50 +24,102 @@
   "body": [
     {
       "type": "p",
-      "text": "巴薩在台灣時間今天（10 月 11 日）00:30 於主場 Spotify 諾坎普迎戰赫塔費（Getafe），這是國際比賽週後的第一場比賽。賽前巴薩西甲 7 戰全勝，進 31 球、失 7 球，領先並列第二的馬德里競技與皇家貝提斯 5 分。再贏一場就是 8 連勝開季，追平隊史聯賽最佳開局，也就是 2013–14 球季馬蒂諾（Gerardo Martino）執教時的紀錄。本報截稿於台灣時間 10 月 10 日深夜，比賽尚未開踢，比分未及刊出。"
+      "text": "巴薩台灣時間今天（10 月 11 日）00:30 在主場 Spotify 諾坎普以 3 比 0 擊敗赫塔費（Getafe），半場已經 2 比 0 領先。戈登（Anthony Gordon）第 2 分鐘破門，熱蘇斯（Gabriel Jesus）第 30 分鐘、孔德（Jules Koundé）第 73 分鐘各進一球。"
+    },
+    {
+      "type": "p",
+      "text": "巴薩西甲 8 戰全勝積 24 分，進 34 球、失 7 球，追平 2013–14 球季馬蒂諾（Gerardo Martino）執教時創下的隊史聯賽最佳開局。連同歐冠首輪，本季各項賽事 9 戰全勝，ESPN 10 月 10 日指出這在巴薩隊史是第一次。同輪馬德里競技與皇家馬德里也都贏球，巴薩領先馬競 5 分、皇馬 6 分。"
     },
     {
       "type": "h",
-      "text": "巴薩：拉菲尼亞缺兩場，熱蘇斯頂上"
+      "text": "巴薩：戈登與熱蘇斯頂替拉菲尼亞，兩人都進球"
     },
     {
       "type": "p",
-      "tag": "官方說法",
-      "text": "巴薩 10 月 10 日公布 22 人名單。拉菲尼亞（Raphinha）在國家隊期間大腿輕傷，總教練弗利克（Hansi Flick）10 月 9 日賽前記者會確認，他將缺席本場與台灣時間 10 月 14 日客場對加拉塔沙雷（Galatasaray）的歐冠。拉菲尼亞本季西甲已進 12 球，暫居射手榜第一，國際比賽週前最後兩場聯賽都是帽子戲法。"
+      "text": "隊長拉菲尼亞（Raphinha）因大腿傷缺陣，總教練弗利克（Hansi Flick）讓 9 月 1 日從阿森納加盟的熱蘇斯首次先發踢中鋒，戈登與亞馬爾（Lamine Yamal）分居兩翼。開賽不到兩分鐘，戈登在禁區弧頂連過兩名防守球員後起腳，球折射赫塔費中場 Mario Martín 入網，這是他加盟巴薩後的第一個進球。第 30 分鐘，赫塔費後衛 Zaid Romero 想從擁擠的禁區前沿把球帶出來，在巴薩的逼搶下丟球，熱蘇斯拿到球後調整、低射遠角，先發首戰就進球。"
+    },
+    {
+      "type": "p",
+      "text": "赫塔費門將索里亞（David Soria）多次撲救，第 57 分鐘擋下奧爾莫（Dani Olmo）的射門，巴薩官網 10 月 10 日的賽報說下半場巴薩控球接近 85%。第 73 分鐘，亞馬爾在角球後送出弧線傳中，孔德在門前近距離左腳推射；裁判經 VAR 檢查禁區內是否有犯規後，確認進球有效。ESPN 與西甲官網的數據都是射門 23 比 4，全場控球約 83%。赫塔費中後衛 Zaid Romero 在第 37 分鐘傷退。"
+    },
+    {
+      "type": "facts",
+      "title": "比賽資料",
+      "items": [
+        [
+          "賽事",
+          "西甲第 8 輪，巴塞隆納主場 Spotify 諾坎普"
+        ],
+        [
+          "開球",
+          "台灣時間 10 月 11 日 00:30（西班牙時間 10 月 10 日 18:30）"
+        ],
+        [
+          "比分",
+          "巴塞隆納 3：0 赫塔費（半場 2：0）"
+        ],
+        [
+          "進球",
+          "戈登 2'、熱蘇斯 30'、孔德 73'（亞馬爾助攻）"
+        ],
+        [
+          "巴薩先發",
+          "霍安・加西亞（Joan Garcia）；孔德、埃里克・加西亞（Eric García）、傑拉德・馬丁（Gerard Martín）、Xavi Espart；羅德里（Rodri）、加維（Gavi）、奧爾莫；亞馬爾、熱蘇斯、戈登"
+        ],
+        [
+          "換人",
+          "61' 費爾明（Fermín López）換加維、佩德里（Pedri）換奧爾莫；71' Marc Bernal 換羅德里、阿德耶米（Karim Adeyemi）換戈登；82' Hamza Abdelkarim 換熱蘇斯"
+        ],
+        [
+          "黃牌",
+          "巴薩 2 張（奧爾莫、費爾明），赫塔費 4 張"
+        ],
+        [
+          "主裁",
+          "希爾・曼薩諾（Jesús Gil Manzano）"
+        ],
+        [
+          "觀眾",
+          "59,465 人（巴薩官網、ESPN；西甲官網比賽頁標示 59,463）"
+        ],
+        [
+          "數據",
+          "控球約 83%，射門 23 比 4（ESPN、西甲官網）"
+        ]
+      ]
     },
     {
       "type": "quote",
-      "original": "It's not a serious injury, but we have to be careful because he had injuries last season.",
-      "text": "傷勢不嚴重，但我們必須小心，因為他上季受過傷。",
-      "cite": "弗利克，10 月 9 日賽前記者會，巴薩官網英文版（本文自譯）"
+      "original": "Today it was very important to score the first goal very early, it gives us confidence. Normally it isn't easy after three weeks' break to come back.",
+      "text": "今天很早就進第一球非常重要，這給了我們信心。休息三週之後要找回狀態，通常並不容易。",
+      "cite": "弗利克賽後談話，ESPN 10 月 10 日引述（本文自譯）"
+    },
+    {
+      "type": "p",
+      "text": "弗利克賽後對西班牙轉播商 DAZN 說，現在每個位置都有兩到三名水準夠高的球員，大家都為球隊踢球，最後靠的是團隊，不是個人，也不是教練。他在記者會上說戈登狀態很好、很有自信，帶給球隊很多東西。據 ESPN 10 月 10 日報導，戈登在國際比賽週替英格蘭進了 3 球，本季西甲此前已有 4 次助攻。熱蘇斯賽後對 DAZN 表示，來巴薩是他的夢想，也希望拉菲尼亞早日歸隊。"
     },
     {
       "type": "p",
       "tag": "官方說法",
-      "text": "其他傷停：中後衛克里斯滕森（Andreas Christensen）在國際比賽週前的塞維亞之戰受傷；德容（Frenkie de Jong）已回到訓練，但還未獲准出賽；邊鋒 Roony Bardghji 也不在名單內。好消息是門將霍安・加西亞（Joan Garcia）獲醫療放行，弗利克說他「可以先發」。"
-    },
-    {
-      "type": "p",
-      "text": "拉菲尼亞的位置，弗利克屬意 9 月 1 日從阿森納加盟的巴西前鋒熱蘇斯（Gabriel Jesus）。弗利克在記者會上說，熱蘇斯過去三週練得很好，「已經準備好了」。名單上的攻擊手還有亞馬爾（Lamine Yamal）、阿德耶米（Karim Adeyemi）、戈登（Anthony Gordon）與 Hamza Abdelkarim。"
-    },
-    {
-      "type": "p",
-      "tag": "官方說法",
-      "text": "對手赫塔費賽前排第 11 名，總教練是博達拉斯（José Bordalás）。據巴薩官網賽前資料，赫塔費本季客場還沒進球，在西甲作客巴薩 21 次，17 負 4 和，從未贏過；巴薩近 8 次交手全勝，最近 4 場零失球。"
-    },
-    {
-      "type": "p",
-      "tag": "官方說法",
-      "text": "本場還有兩個個人紀錄可期：孔德（Jules Koundé）目前以 193 場與阿比達爾（Eric Abidal）並列巴薩出賽最多的法國球員，只要上場就單獨居首；傑拉德・馬丁（Gerard Martín）則可能迎來巴薩生涯第 100 場。"
+      "text": "這場比賽還有幾個里程碑。孔德第 194 次代表巴薩出賽，超越阿比達爾（Eric Abidal），成為隊史出賽最多的法國球員，當天還進了球；傑拉德・馬丁迎來巴薩生涯第 100 場。賽前，10 月 7 日宣布退休的前巴薩邊鋒佩德羅（Pedro Rodríguez）在場上開球致意，拉菲尼亞領取西甲 9 月最佳球員獎，坎塞洛（João Cancelo）對桑坦德競技（Racing Santander）的進球獲選 9 月最佳進球。"
     },
     {
       "type": "p",
       "tag": "報導",
-      "text": "孔德的處境並不輕鬆。據《世界體育報》（Mundo Deportivo）10 月 9 日報導，他本季 7 場西甲只先發 1 場，拜仁慕尼黑與切爾西都在評估 1 月出價；報導引述德國記者法爾克（Christian Falk）與義大利記者莫雷托（Matteo Moretto）的消息，稱拜仁要先賣掉右後衛 Sacha Boey。巴薩與孔德本人都未回應。"
+      "text": "孔德的處境本來不算輕鬆。賽前，西班牙足球新聞網站 Get Spanish Football News 10 月 9 日轉述《世界體育報》（Mundo Deportivo）的報導，說他本季 7 場西甲只先發 1 場，拜仁慕尼黑與切爾西都在評估 1 月出價，消息來源包括德國記者法爾克（Christian Falk）與義大利記者莫雷托（Matteo Moretto）。對赫塔費一戰他先發踢滿全場並進球。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "傷停方面，弗利克賽前已確認拉菲尼亞也會缺席台灣時間 10 月 14 日客場對加拉塔沙雷（Galatasaray）的歐冠，他說傷勢不嚴重，但因為拉菲尼亞上季受過傷，必須小心。門將霍安・加西亞傷癒後回到先發。克里斯滕森（Andreas Christensen）、德容（Frenkie de Jong）與 Roony Bardghji 本場都不在名單內。截至台灣時間 10 月 11 日中午，巴薩官網沒有發布新的醫療報告。"
+    },
+    {
+      "type": "p",
+      "text": "女足方面，巴薩中場 Patri Guijarro 美國時間 10 月 10 日在華盛頓替西班牙開賽第 3 分鐘禁區外遠射破門，Eva Navarro 第 14 分鐘接 Salma Paralluelo 傳中再進一球，西班牙 2 比 0 擊敗美國。下半場美國獲得 12 碼，被西班牙門將 Adriana Nanclares 撲出。兩隊美國時間 10 月 13 日在賓州切斯特再戰。"
     },
     {
       "type": "table",
-      "title": "西甲積分榜前 6 名（第 8 輪開賽前）",
+      "title": "西甲積分榜前 6 名（第 8 輪進行中）",
       "head": [
         "名次",
         "球隊",
@@ -79,30 +131,30 @@
         [
           "1",
           "巴塞隆納",
-          "7",
-          "21",
-          "+24"
+          "8",
+          "24",
+          "+27"
         ],
         [
           "2",
           "馬德里競技",
-          "7",
-          "16",
-          "+9"
+          "8",
+          "19",
+          "+10"
         ],
         [
           "3",
+          "皇家馬德里",
+          "8",
+          "18",
+          "+11"
+        ],
+        [
+          "4",
           "皇家貝提斯",
           "7",
           "16",
           "+2"
-        ],
-        [
-          "4",
-          "皇家馬德里",
-          "7",
-          "15",
-          "+10"
         ],
         [
           "5",
@@ -114,58 +166,86 @@
         [
           "6",
           "阿拉維斯",
-          "7",
+          "8",
           "11",
-          "+5"
+          "+4"
         ]
       ],
-      "caption": "資料來源：法新社 10 月 8 日發布的積分榜（Unitel 轉載）與 Claro Sports 10 月 9 日報導，兩者前 6 名數字一致。第 8 輪馬德里競技客場對阿拉維斯、皇馬主場對比利亞雷亞爾、貝提斯主場對奧薩蘇納，名次可能在本報出刊前變動。"
+      "caption": "資料來源：西甲官網積分榜與 ESPN，台灣時間 10 月 11 日中午查閱，兩者數字一致。第 8 輪還有 5 場未踢，巴列卡諾（Rayo Vallecano）對畢爾包競技（Athletic Club）中止待補；貝提斯台灣時間 10 月 12 日 00:30 主場對奧薩蘇納，塞維亞台灣時間 10 月 13 日 03:00 客場對萊萬特。"
     },
     {
       "type": "news",
       "title": "歐洲足壇速覽",
       "items": [
         {
-          "headline": "西甲巴列卡諾對畢爾包競技，因球迷抗議被腰斬",
-          "summary": "西甲第 8 輪巴列卡諾（Rayo Vallecano）主場對畢爾包競技（Athletic Club），第 13 分鐘起主場球迷把小球和紙飛機丟進場內，抗議俱樂部主席 Raúl Martín Presa，看台並拉出「Presa，球在你那邊」的布條（本文意譯）。比賽中斷約半小時後恢復，丟擲物再度出現，裁判 Sánchez Martínez 在 0 比 0 時宣布比賽終止。這是巴列卡諾本季第一次回自家球場踢聯賽；剩下的時間怎麼補踢、主隊會受什麼處分，要等主管機關決定。",
-          "source": "Infobae、FútbolFantasy、巴列卡諾官網",
-          "url": "https://www.infobae.com/america/agencias/2026/10/10/suspendido-el-rayo-athletic-en-vallecas-por-el-lanzamiento-de-bolas-y-aviones-de-papel/",
-          "when": "10 月 10 日，西班牙時間 14:00 開賽"
+          "headline": "皇馬 1 比 0 比利亞雷亞爾，維尼修斯扯頭髮吃紅牌",
+          "summary": "迪奧曼德（Yan Diomande）第 62 分鐘接瓦爾貝德（Federico Valverde）直塞破門，原判越位、經 VAR 改判有效，這是他替皇馬的第一個進球。第 52 分鐘替補上場的維尼修斯（Vinícius Júnior）第 72 分鐘看似再進一球，VAR 卻發現他推進時扯了比利亞雷亞爾球員薩利巴（Nathan Saliba）的頭髮，進球取消並被直接紅牌罰下；總教練穆里尼奧（José Mourinho）賽後沒有出席記者會，維尼修斯在 Instagram 向隊友與球迷道歉。皇馬 8 場 18 分暫居第三；維尼修斯的停賽場數，待西班牙足協紀律委員會確認。",
+          "source": "ESPN、半島電視台、Goal",
+          "url": "https://www.espn.com/soccer/story/_/id/50150534/vinicius-junior-red-card-real-madrid-villarreal",
+          "when": "台灣時間 10 月 11 日 03:00 開賽"
         },
         {
-          "headline": "葡萄牙足協對羅納度展開紀律程序",
-          "summary": "葡萄牙足協紀律委員會 10 月 10 日公布，對 41 歲的羅納度（Cristiano Ronaldo）展開紀律程序，並在原本的自動停賽之外追加預防性停賽，案件列為緊急。羅納度 9 月 30 日在哥本哈根離開國家隊集訓，事後說他對總教練若熱・熱蘇斯（Jorge Jesus）失去信任，之後已公開道歉。據葡萄牙 Sport TV 整理，足協紀律規章對這類違規的罰則是停賽 1 到 6 個月。",
-          "source": "Sport TV、RTP、ESPN",
-          "url": "https://www.sporttv.pt/noticias/825502/conselho-de-disciplina-determina-processo-disciplinar-a-cristiano-ronaldo",
-          "when": "10 月 10 日"
+          "headline": "馬德里競技 2 比 1 客勝阿拉維斯，保住第二",
+          "summary": "格里馬爾多（Alejandro Grimaldo）第 33 分鐘先進球，阿拉維斯在上半場補時由博耶（Lucas Boyé）罰進 12 碼扳平。阿拉維斯的 Ángel Pérez 第 61 分鐘經 VAR 檢視後被紅牌罰下，羅梅羅（Cristian Romero）第 87 分鐘頭球接巴埃納（Álex Baena）傳中，替馬競拿下勝利；馬競 8 場 19 分，落後巴薩 5 分。",
+          "source": "ESPN、馬德里競技官網",
+          "url": "https://www.espn.com/soccer/match/_/gameId/401882856",
+          "when": "台灣時間 10 月 10 日 22:15 開賽"
+        },
+        {
+          "headline": "巴列卡諾對畢爾包競技因球迷抗議被腰斬",
+          "summary": "西甲第 8 輪巴列卡諾（Rayo Vallecano）主場對畢爾包競技（Athletic Club），主場球迷把小球和紙飛機丟進場內，抗議俱樂部主席 Raúl Martín Presa；比賽中斷後恢復，丟擲物再度出現，裁判 Sánchez Martínez 在 0 比 0 時宣布比賽終止。巴列卡諾說，終止比賽是依警方建議；球迷團體 Bukaneros 當晚發表聲明，表示會繼續抗議。這是巴列卡諾本季第一次回自家球場踢聯賽，剩下的時間怎麼補踢、主隊會受什麼處分，要等主管機關決定。",
+          "source": "Infobae、FútbolFantasy、巴列卡諾官網、ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50147316/rayo-vallecano-vs-athletic-club-suspended-fans-launch-paper-plane-protest",
+          "when": "台灣時間 10 月 10 日 20:00 開賽"
+        },
+        {
+          "headline": "曼聯 1 比 1 十人熱刺，6 場只拿 6 分",
+          "summary": "姆貝烏莫（Bryan Mbeumo）第 73 分鐘替曼聯先進球，熱刺替補本坦庫爾（Rodrigo Bentancur）5 分鐘後對肖（Luke Shaw）做出頭槌動作被紅牌罰下，索蘭克（Dominic Solanke）卻在補時第 2 分鐘頭球扳平。據 ESPN 與 Sky Sports 10 月 10 日報導，曼聯 6 場 6 分是 1986–87 球季以來同期最少；總教練卡里克（Michael Carrick）承認主場球迷的噓聲讓他難受。",
+          "source": "Sky Sports、ESPN",
+          "url": "https://www.skysports.com/football/manchester-united-vs-tottenham-hotspur/report/559502",
+          "when": "台灣時間 10 月 11 日 00:30 開賽"
+        },
+        {
+          "headline": "切爾西 5 比 1 伯恩茅斯，帕爾默同日續約到 2034 年",
+          "summary": "今夏自由轉會加盟的 36 歲老將亨德森（Jordan Henderson）在主場首秀第 2 分鐘就進球，隨即助攻羅傑斯（Morgan Rogers），第 70 分鐘再罰進自由球；若昂・佩德羅（João Pedro）也進兩球，切爾西升到英超第 5。同一天，切爾西宣布 24 歲的帕爾默（Cole Palmer）續約至 2034 年，原合約到 2033 年。",
+          "source": "英超官網、ESPN、半島電視台",
+          "url": "https://www.premierleague.com/en/news/4730396/henderson-stars-on-home-debut-as-chelsea-thrash-bournemouth",
+          "when": "台灣時間 10 月 10 日 22:00 開賽"
         },
         {
           "headline": "阿森納主場逆轉里茲聯，積分追平曼城",
-          "summary": "英超衛冕冠軍阿森納主場 2 比 1 擊敗里茲聯。里茲聯下半場由賈斯汀（James Justin）先進球，阿森納靠卡拉菲奧里（Riccardo Calafiori）扳平，替補上場的吉馬良斯（Bruno Guimarães）打進致勝球。阿森納 6 戰 15 分，與 5 戰全勝的曼城同分；里茲聯吞下本季英超首敗。",
+          "summary": "英超阿森納主場 2 比 1 擊敗里茲聯。里茲聯下半場由賈斯汀（James Justin）先進球，阿森納靠卡拉菲奧里（Riccardo Calafiori）扳平，替補上場的吉馬良斯（Bruno Guimarães）打進致勝球。阿森納 6 戰 15 分，與 5 戰全勝的曼城同分。",
           "source": "NBC Sports、VAVEL",
           "url": "https://www.nbcsports.com/soccer/live/arsenal-vs-leeds-live-updates-score-goals-highlights-stats-2026-october-10",
-          "when": "10 月 10 日，英國時間 12:30 開賽"
+          "when": "台灣時間 10 月 10 日 19:30 開賽"
         },
         {
-          "headline": "帕爾默與切爾西續約到 2034 年",
-          "summary": "切爾西 10 月 10 日宣布，24 歲的帕爾默（Cole Palmer）續約至 2034 年，原合約到 2033 年。他因鼠蹊部傷勢缺席剛結束的國際比賽週，總教練阿隆索（Xabi Alonso）說帕爾默仍願意為英格蘭效力，但「必須完全健康才能上場」。",
-          "source": "ESPN、半島電視台",
-          "url": "https://www.espn.com/football/story/_/id/50146352/chelsea-cole-palmer-premier-league-xabi-alonso",
+          "headline": "巴黎聖日耳曼 3 比 1 勒芒，替補扭轉戰局",
+          "summary": "巴薩台灣時間 10 月 21 日的歐冠對手大幅輪換，貝拉爾多（Lucas Beraldo）第 19 分鐘罰進 12 碼，升級隊勒芒第 54 分鐘扳平。替補上場的克瓦拉茨赫利亞（Khvicha Kvaratskhelia）第 61 分鐘補射破門，先發的阿克留什（Maghnes Akliouche）第 68 分鐘再進一球，杜埃（Désiré Doué）補時罰失 12 碼；巴黎聖日耳曼台灣時間 10 月 15 日 03:00 在歐冠作客曼城。",
+          "source": "ESPN（PA）、巴黎聖日耳曼官網",
+          "url": "https://www.espn.com/soccer/report/_/gameId/401876442",
+          "when": "台灣時間 10 月 11 日 02:45 開賽"
+        },
+        {
+          "headline": "葡萄牙足協對羅納度展開紀律程序",
+          "summary": "葡萄牙足協紀律委員會 10 月 10 日公布 9 日的決議，對 41 歲的羅納度（Cristiano Ronaldo）展開紀律程序；他原本的自動預防性停賽持續到程序展開為止，之後改為非自動的預防性停賽，案件列為緊急。羅納度 9 月 30 日在哥本哈根離開國家隊集訓，事後說他對總教練若熱・熱蘇斯（Jorge Jesus）失去信任，之後已公開道歉。據葡萄牙 Sport TV 10 月 10 日整理，這類違規的罰則是停賽 1 到 6 個月。",
+          "source": "Sport TV、RTP、ESPN",
+          "url": "https://www.sporttv.pt/noticias/825502/conselho-de-disciplina-determina-processo-disciplinar-a-cristiano-ronaldo",
           "when": "10 月 10 日"
         }
       ]
     },
     {
       "type": "h",
-      "text": "接下來：10 月五連戰，月底國家德比"
+      "text": "接下來：歐冠作客伊斯坦堡，再戰貝提斯挑戰紀錄"
     },
     {
       "type": "p",
-      "text": "巴薩下一場是台灣時間 10 月 14 日（星期三）03:00 客場對加拉塔沙雷，歐冠聯賽階段第 2 輪，地點在伊斯坦堡 RAMS Park。巴薩首輪主場 5 比 1 贏費耶諾德（Feyenoord），加拉塔沙雷首輪 1 比 3 輸給葡萄牙體育。拉菲尼亞確定缺陣；據 Goal 引述，弗利克說計畫讓德容在之後對貝提斯的聯賽復出。"
+      "text": "巴薩下一場是台灣時間 10 月 14 日（星期三）03:00 客場對加拉塔沙雷，歐冠聯賽階段第 2 輪，地點在伊斯坦堡 RAMS Park。巴薩首輪主場 5 比 1 贏費耶諾德（Feyenoord），加拉塔沙雷首輪 1 比 3 輸給葡萄牙體育（Sporting CP）。拉菲尼亞確定缺陣；據 Goal 10 月 9 日引述，弗利克說計畫讓德容在之後對貝提斯的聯賽復出。"
     },
     {
       "type": "p",
-      "text": "赫塔費之後，巴薩 10 月還有 5 場：連續 3 場客場，對加拉塔沙雷、貝提斯、巴黎聖日耳曼，再回主場踢國家德比與阿拉維斯。弗利克 10 月 9 日談到這段賽程時說：「我不喜歡，但這是我們工作的一部分。」國家德比隔天，2026 年金球獎 10 月 26 日（倫敦時間）在倫敦帕拉狄恩劇院頒獎，亞馬爾在 30 人候選名單上。"
+      "text": "台灣時間 10 月 18 日 00:30 客場對皇家貝提斯，巴薩若再贏就是 9 連勝開季，單獨改寫隊史聯賽最佳開局。之後巴薩客場踢巴黎聖日耳曼，再回主場迎戰皇家馬德里與阿拉維斯。國家德比前，皇馬只剩一場聯賽（對塞維亞），維尼修斯會停賽幾場，要看西班牙足協紀律委員會的決定。國家德比隔天，2026 年金球獎 10 月 26 日（倫敦時間）在倫敦帕拉狄恩劇院（London Palladium）頒獎，亞馬爾在 30 人候選名單上。"
     },
     {
       "type": "table",
@@ -178,13 +258,6 @@
         "地點"
       ],
       "rows": [
-        [
-          "10/11（日）",
-          "00:30",
-          "赫塔費",
-          "西甲第 8 輪",
-          "主場，Spotify 諾坎普"
-        ],
         [
           "10/14（三）",
           "03:00",
@@ -226,6 +299,97 @@
   ],
   "sources": [
     {
+      "title": "FC Barcelona 3-0 Getafe: Still on target",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-10",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4590143/fc-barcelona-3-0-getafe-still-on-target",
+      "note": "賽事報導：進球過程、觀眾、下半場控球、隊史最佳開局"
+    },
+    {
+      "title": "FC Barcelona - Getafe（比賽頁）",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-10",
+      "url": "https://www.fcbarcelona.com/en/matches/138352/fc-barcelona-getafe-la-liga-2026-2027-0",
+      "note": "比分、進球分鐘、主裁、觀眾"
+    },
+    {
+      "title": "Anthony Gordon opens Barcelona account in win against Getafe",
+      "publisher": "ESPN（PA）",
+      "date": "2026-10-10",
+      "url": "https://www.espn.com/soccer/report/_/gameId/401882853",
+      "note": "賽事報導；比賽頁的先發、換人、黃牌、數據與 VAR 紀錄"
+    },
+    {
+      "title": "FC Barcelona vs Getafe CF - LALIGA EA SPORTS",
+      "publisher": "LaLiga",
+      "date": "2026-10-10",
+      "url": "https://www.laliga.com/en-GB/match/temporada-2026-2027-laliga-ea-sports-fc-barcelona-getafe-cf-8",
+      "note": "核對進球、先發、換人、黃牌與數據"
+    },
+    {
+      "title": "Barcelona set record start as Gordon, Gabriel Jesus fill Raphinha void",
+      "publisher": "ESPN",
+      "date": "2026-10-10",
+      "url": "https://www.espn.com/soccer/story/_/id/50150044/barcelona-record-start-anthony-gordon-gabriel-jesus",
+      "note": "弗利克、熱蘇斯賽後談話；各項賽事 9 連勝"
+    },
+    {
+      "title": "Barcelona beat Getafe as Gordon scores his first goal",
+      "publisher": "Al Jazeera",
+      "date": "2026-10-10",
+      "url": "https://www.aljazeera.com/sports/2026/10/10/barcelona-beat-getafe-as-gordon-scores-his-first-goal",
+      "note": "核對進球時間與孔德紀錄"
+    },
+    {
+      "title": "Kounde overtakes Abidal and gets on scoresheet",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-10",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4576643/kounde-overtakes-abidal-to-become-the-frenchman-with-the-most-appearances-for-fc-barcelona",
+      "note": "孔德第 194 場"
+    },
+    {
+      "title": "Gerard Martín century maker",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-10",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4590133/gerard-martin-reaches-a-century-of-appearances-for-fc-barcelona",
+      "note": "傑拉德・馬丁第 100 場"
+    },
+    {
+      "title": "A special build-up",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-10",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4590127/a-special-build-up",
+      "note": "佩德羅開球、拉菲尼亞與坎塞洛獲獎"
+    },
+    {
+      "title": "Flick: \"Hemos controlado el partido\"（影片）",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-10",
+      "url": "https://www.fcbarcelona.es/es/barca-play/videos/4590265",
+      "note": "弗利克賽後談話"
+    },
+    {
+      "title": "LALIGA EA SPORTS standings",
+      "publisher": "LaLiga",
+      "date": "2026-10-11",
+      "url": "https://www.laliga.com/en-GB/laliga-easports/standing",
+      "note": "積分榜（查閱日期）"
+    },
+    {
+      "title": "Results of LALIGA EA SPORTS 2026/27",
+      "publisher": "LaLiga",
+      "date": "2026-10-11",
+      "url": "https://www.laliga.com/en-GB/laliga-easports/results",
+      "note": "第 8 輪賽果、未賽場次與主裁（查閱日期）"
+    },
+    {
+      "title": "Spanish LALIGA Standings",
+      "publisher": "ESPN",
+      "date": "2026-10-11",
+      "url": "https://www.espn.com/soccer/table/_/league/esp.1",
+      "note": "核對積分榜（查閱日期）"
+    },
+    {
       "title": "Barça squad for visit of Getafe",
       "publisher": "FC Barcelona",
       "date": "2026-10-10",
@@ -233,32 +397,18 @@
       "note": "22 人名單與缺陣名單"
     },
     {
-      "title": "PREVIEW | Barça v Getafe",
-      "publisher": "FC Barcelona",
-      "date": "2026-10-10",
-      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4589547/preview-fc-barcelona-v-getafe",
-      "note": "開球時間、傷情、對戰紀錄、隊史最佳開局"
-    },
-    {
       "title": "Flick: 'Raphinha not available for Getafe'",
       "publisher": "FC Barcelona",
       "date": "2026-10-09",
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4589429/hansi-flick-raphinha-not-available-for-getafe",
-      "note": "弗利克賽前記者會引述"
-    },
-    {
-      "title": "Five things about Barça v Getafe",
-      "publisher": "FC Barcelona",
-      "date": "2026-10-08",
-      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4588143/five-interesting-facts-about-barca-v-getafe",
-      "note": "孔德、傑拉德・馬丁里程碑；拉菲尼亞進球數"
+      "note": "拉菲尼亞傷情"
     },
     {
       "title": "'The idea is for him to start!'",
       "publisher": "Goal",
       "date": "2026-10-09",
       "url": "https://www.goal.com/en/lists/gabriel-jesus-barcelona-starting-debut-hansi-flick-getafe/blt057537f867f93a37",
-      "note": "弗利克談熱蘇斯先發"
+      "note": "弗利克談熱蘇斯先發與德容復出"
     },
     {
       "title": "Gabriel Jesus completes transfer to Barcelona from Arsenal",
@@ -275,18 +425,24 @@
       "note": "轉述《世界體育報》對孔德的報導"
     },
     {
-      "title": "Programa de la octava jornada de LaLiga y clasificación",
-      "publisher": "法新社（Unitel 轉載）",
-      "date": "2026-10-08",
-      "url": "https://unitel.bo/noticias/agencias/programa-de-la-octava-jornada-de-laliga-y-clasificacion-JB23992920",
-      "note": "第 8 輪賽程與賽前積分榜"
+      "title": "USWNT gets lesson from Spain in loss to world champions",
+      "publisher": "ESPN（AP）",
+      "date": "2026-10-10",
+      "url": "https://www.espn.com/soccer/report/_/gameId/401890785"
     },
     {
-      "title": "¿Cómo quedó la tabla de posiciones de LaLiga tras la fecha 8?",
-      "publisher": "Claro Sports",
-      "date": "2026-10-09",
-      "url": "https://www.clarosports.com/futbol/laliga/tabla-de-posiciones-de-laliga-al-momento-barcelona-tiene-el-liderato-asegurado-y-el-malaga-llega-a-ocho-partidos-sin-ganar/",
-      "note": "核對積分榜前段"
+      "title": "U.S. Women's National Team Falls 2-0 to Spain in Washington, D.C.",
+      "publisher": "U.S. Soccer",
+      "date": "2026-10-10",
+      "url": "https://www.ussoccer.com/stories/2026/10/uswnt/us-womens-national-team-falls-2-0-to-spain-washington-dc-match-recap-highlights",
+      "note": "進球時間、下一場地點與日期"
+    },
+    {
+      "title": "Patri Guijarro - Barcelona Midfielder",
+      "publisher": "ESPN",
+      "date": "2026-10-11",
+      "url": "https://www.espn.com/soccer/player/_/id/264734/patri-guijarro",
+      "note": "所屬球隊（查閱日期）"
     },
     {
       "title": "Schedule",
@@ -317,6 +473,46 @@
       "note": "金球獎日期、地點與候選名單"
     },
     {
+      "title": "Vinícius Júnior 'sorry' after red card for hair pull; Mourinho skips Madrid presser",
+      "publisher": "ESPN",
+      "date": "2026-10-10",
+      "url": "https://www.espn.com/soccer/story/_/id/50150534/vinicius-junior-red-card-real-madrid-villarreal"
+    },
+    {
+      "title": "Yan Diomande's first goal gives 10-man Real Madrid narrow win over Villarreal",
+      "publisher": "ESPN（PA）",
+      "date": "2026-10-10",
+      "url": "https://www.espn.com/soccer/report/_/gameId/401882848",
+      "note": "進球與紅牌分鐘"
+    },
+    {
+      "title": "Real Madrid beat Villarreal 1-0 but Vinicius sent off for hair pull",
+      "publisher": "Al Jazeera",
+      "date": "2026-10-10",
+      "url": "https://www.aljazeera.com/sports/2026/10/10/real-madrid-beat-villarreal-but-vinicius-sent-off-for-hair-pull"
+    },
+    {
+      "title": "For the Clásico: Mourinho refuses to hold a press conference after the Villarreal match!",
+      "publisher": "Goal",
+      "date": "2026-10-11",
+      "url": "https://www.goal.com/en-za/news/for-the-sake-of-the-clasico-mourinho-refuses-to-hold-a-press-conference-after-the-villarreal-match/bltbb08f75301095bf4",
+      "note": "穆里尼奧缺席記者會"
+    },
+    {
+      "title": "Alavés vs. Atlético Madrid（比賽頁）",
+      "publisher": "ESPN",
+      "date": "2026-10-10",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401882856",
+      "note": "進球、12 碼與紅牌分鐘"
+    },
+    {
+      "title": "Directo: Alavés 1-2 Atlético de Madrid",
+      "publisher": "Atlético de Madrid",
+      "date": "2026-10-10",
+      "url": "https://en.atleticodemadrid.com/directos/alaves-atletico-de-madrid-11-10-2026-21-57",
+      "note": "官方文字直播，核對進球者與分鐘"
+    },
+    {
       "title": "Suspendido el Rayo-Athletic en Vallecas por el lanzamiento de bolas y aviones de papel",
       "publisher": "Infobae",
       "date": "2026-10-10",
@@ -336,6 +532,75 @@
       "note": "官方比賽紀錄"
     },
     {
+      "title": "Rayo Vallecano vs. Athletic Club suspended after fans launch paper plane protest",
+      "publisher": "ESPN",
+      "date": "2026-10-10",
+      "url": "https://www.espn.com/soccer/story/_/id/50147316/rayo-vallecano-vs-athletic-club-suspended-fans-launch-paper-plane-protest",
+      "note": "依警方建議終止、Bukaneros 聲明"
+    },
+    {
+      "title": "Man Utd 1-1 Tottenham: Dominic Solanke rescues dramatic draw for 10-man Spurs at Old Trafford",
+      "publisher": "Sky Sports",
+      "date": "2026-10-10",
+      "url": "https://www.skysports.com/football/manchester-united-vs-tottenham-hotspur/report/559502"
+    },
+    {
+      "title": "Michael Carrick 'hurt' by boos as Man United fall to worst start in 40 years",
+      "publisher": "ESPN",
+      "date": "2026-10-10",
+      "url": "https://www.espn.com/soccer/story/_/id/50149326/man-united-tottenham-dominic-solanke-bryan-mbeumo-premier-league-result"
+    },
+    {
+      "title": "Henderson stars on home debut as Chelsea thrash Bournemouth",
+      "publisher": "Premier League",
+      "date": "2026-10-10",
+      "url": "https://www.premierleague.com/en/news/4730396/henderson-stars-on-home-debut-as-chelsea-thrash-bournemouth"
+    },
+    {
+      "title": "Xabi Alonso lauds Chelsea hero Jordan Henderson after brace in Bournemouth thrashing",
+      "publisher": "ESPN（PA）",
+      "date": "2026-10-10",
+      "url": "https://www.espn.com/soccer/story/_/id/50148979/xabi-alonso-lauds-chelsea-hero-jordan-henderson-brace-bournemouth-thrashing",
+      "note": "亨德森年齡與轉會背景"
+    },
+    {
+      "title": "Chelsea's Cole Palmer signs new contract until 2034",
+      "publisher": "ESPN",
+      "date": "2026-10-10",
+      "url": "https://www.espn.com/football/story/_/id/50146352/chelsea-cole-palmer-premier-league-xabi-alonso"
+    },
+    {
+      "title": "England international Cole Palmer signs new Chelsea deal until 2034",
+      "publisher": "Al Jazeera",
+      "date": "2026-10-10",
+      "url": "https://www.aljazeera.com/sports/2026/10/10/england-international-cole-palmer-signs-new-chelsea-deal-until-2034"
+    },
+    {
+      "title": "Arsenal 2-1 Leeds live updates",
+      "publisher": "NBC Sports",
+      "date": "2026-10-10",
+      "url": "https://www.nbcsports.com/soccer/live/arsenal-vs-leeds-live-updates-score-goals-highlights-stats-2026-october-10"
+    },
+    {
+      "title": "Arsenal 2-1 Leeds United: Gunners come from behind to claim all three points",
+      "publisher": "VAVEL",
+      "date": "2026-10-10",
+      "url": "https://www.vavel.com/en/football/2026/10/10/arsenal/1274668-arsenal-2-1-leeds-united-gunners-come-from-behind-to-claim-all-three-points.html"
+    },
+    {
+      "title": "PSG stroll to third straight league win against Le Mans",
+      "publisher": "ESPN（PA）",
+      "date": "2026-10-10",
+      "url": "https://www.espn.com/soccer/report/_/gameId/401876442"
+    },
+    {
+      "title": "¡París supera a Le Mans y suma una nueva victoria en la Ligue 1!",
+      "publisher": "Paris Saint-Germain",
+      "date": "2026-10-10",
+      "url": "https://www.psg.fr/es/content/par%C3%ADs-supera-a-le-mans-y-suma-una-nueva-victoria-en-la-ligue-1-cr%C3%B3nica-paris-saint-germain-le-mans-fc-ligue-1-2026-2027",
+      "note": "核對進球者與分鐘"
+    },
+    {
       "title": "Conselho de Disciplina abre processo disciplinar a Cristiano Ronaldo",
       "publisher": "Sport TV",
       "date": "2026-10-10",
@@ -353,30 +618,6 @@
       "publisher": "ESPN",
       "date": "2026-10-10",
       "url": "https://www.espn.com/soccer/story/_/id/50146841"
-    },
-    {
-      "title": "Arsenal 2-1 Leeds live updates",
-      "publisher": "NBC Sports",
-      "date": "2026-10-10",
-      "url": "https://www.nbcsports.com/soccer/live/arsenal-vs-leeds-live-updates-score-goals-highlights-stats-2026-october-10"
-    },
-    {
-      "title": "Arsenal 2-1 Leeds United: Gunners come from behind to claim all three points",
-      "publisher": "VAVEL",
-      "date": "2026-10-10",
-      "url": "https://www.vavel.com/en/football/2026/10/10/arsenal/1274668-arsenal-2-1-leeds-united-gunners-come-from-behind-to-claim-all-three-points.html"
-    },
-    {
-      "title": "Chelsea's Cole Palmer signs new contract until 2034",
-      "publisher": "ESPN",
-      "date": "2026-10-10",
-      "url": "https://www.espn.com/football/story/_/id/50146352/chelsea-cole-palmer-premier-league-xabi-alonso"
-    },
-    {
-      "title": "England international Cole Palmer signs new Chelsea deal until 2034",
-      "publisher": "Al Jazeera",
-      "date": "2026-10-10",
-      "url": "https://www.aljazeera.com/sports/2026/10/10/england-international-cole-palmer-signs-new-chelsea-deal-until-2034"
     },
     {
       "title": "Hans-Dieter Flick during a press conference in April 2025 at FC Barcelona",
