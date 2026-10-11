@@ -1,6 +1,6 @@
 // Offline reading. The app shell lives in a cache versioned per deploy, so the page and its JS always come from the
 // same version; content (config, issue index, articles) lives in its own cache, kept across versions and checked online first.
-// publish.yml swaps the placeholder in CACHE for a hash of the shell files, so sw.js only changes when the shell does.
+// scripts/version_shell.py swaps the placeholder in CACHE for a hash of the shell files, so sw.js only changes when the shell does.
 const CACHE = "robin-shell-__SHELL_HASH__";
 const CONTENT = "robin-content";
 // Pictures and font files, kept as they are seen so an article read once still shows its images offline.
@@ -31,9 +31,10 @@ self.addEventListener("activate", (e) => {
 async function appPage(req) {
   return (await (await caches.open(CACHE)).match("index.html")) || fetch(req);
 }
+// Shell URLs carry ?v=<this version> (scripts/version_shell.py); the precached copies are stored without it.
 async function cacheFirst(req) {
   const c = await caches.open(CACHE);
-  return (await c.match(req)) || fetch(req).then((r) => { if (r.ok) c.put(req, r.clone()); return r; });
+  return (await c.match(req, { ignoreSearch: true })) || fetch(req).then((r) => { if (r.ok) c.put(req, r.clone()); return r; });
 }
 // On a stalled connection, answer from the cache after TIMEOUT; a late network copy is still stored.
 // With nothing cached, wait for the network; JSON never falls back to index.html.

@@ -1,7 +1,7 @@
 // 知更鳥晨間記事 — app shell, routing and views.
 import { $, esc, inline, store, toast, twNow, fmtDate, getJSON, ICON } from "./util.js";
 import { renderBody, renderHero } from "./blocks.js";
-import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient, isWebKitITP, isStandaloneIOS, exportLinkCode, importLinkCode } from "./spotify.js";
+import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient, isWebKitITP, isStandaloneIOS, exportLinkCode, importLinkCode, defaultPlaylist } from "./spotify.js";
 import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 
@@ -356,6 +356,14 @@ function viewColumn(c) {
     ${k.full ? `<p class="col-note">${esc(k.full)}</p>` : ""}${music}</header>
     ${rows || `<p class="empty">這個專欄還沒有刊出文章。</p>`}</div>`;
   document.title = `${k.name}｜${S.cfg.title}`;
+  if (c === "music" && isLoggedIn()) {
+    const my = routeSeq;
+    defaultPlaylist().then((pl) => {
+      if (!pl || my !== routeSeq) return;
+      main.querySelector(".page-title")?.insertAdjacentHTML("beforeend",
+        `<p class="col-note"><a class="pl-link" href="${esc(pl.url)}" target="_blank" rel="noopener">在 Spotify 開啟「${esc(pl.name)}」→</a></p>`);
+    });
+  }
 }
 
 // Full-text search over content/search/<YYYY-MM>.json, newest month first.

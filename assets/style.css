@@ -521,3 +521,5 @@ img.img-off { visibility: hidden; }
   content: "圖片暫時無法顯示"; position: absolute; inset: 0; display: grid; place-items: center;
   font-family: var(--sans); font-size: 12px; letter-spacing: .08em; color: var(--muted);
 }
+
+.pl-link { color: var(--wine); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; }

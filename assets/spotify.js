@@ -67,6 +67,7 @@ export async function importLinkCode(code) {
 
 export function logout() {
   store.del("sp.token");
+  store.del("sp.playlist");
   for (const k of Object.keys(localStorage)) if (k.startsWith("rm.sp.resolve.")) localStorage.removeItem(k);
   toast("已中斷 Spotify 連結");
 }
@@ -153,6 +154,31 @@ async function api(path, opts = {}) {
   if (r.status === 429) throw new Error("Spotify 請求太頻繁，請稍後再試");
   if (!r.ok) throw new Error(`Spotify 錯誤 ${r.status}`);
   return r.status === 204 ? null : r.json();
+}
+
+// The reader's own 「知更鳥晨間記事・古典」 playlist, for the music page's "open in Spotify" link: looked up once, then
+// remembered. Null when it does not exist yet (nothing added so far) or anything goes wrong; never starts a login.
+export async function defaultPlaylist() {
+  const known = store.get("sp.playlist");
+  if (known?.url) return known;
+  if (!isLoggedIn()) return null;
+  try {
+    const me = await api("/me");
+    const isDef = (p) => p && (p.owner?.id === me.id || p.collaborative) && p.name === cfg.playlist_name;
+    let page = await api("/me/playlists?limit=50");
+    let pls = page.items || [];
+    while (page.next && !pls.some(isDef) && pls.length < 500) {
+      page = await api(page.next.replace(API, ""));
+      pls = pls.concat(page.items || []);
+    }
+    const def = pls.find(isDef);
+    return def ? rememberPlaylist(def) : null;
+  } catch { return null; }
+}
+function rememberPlaylist(p) {
+  const v = { id: p.id, name: p.name, url: p.external_urls?.spotify || `https://open.spotify.com/playlist/${p.id}` };
+  store.set("sp.playlist", v);
+  return v;
 }
 
 // ——— Matching the editor's recording description to Spotify ———
@@ -322,6 +348,7 @@ async function addToPlaylist(uris, label) {
       let p;
       try { p = await api("/me/playlists", { method: "POST", body: JSON.stringify({ name: cfg.playlist_name, public: false, description: "知更鳥晨間記事每日古典導聆的錄音" }) }); }
       catch (e) { fail(e); return; }
+      rememberPlaylist(p);
       // The button now stands for the new playlist, so a retry adds to it instead of creating another.
       nb.removeAttribute("data-new");
       nb.dataset.id = p.id;
