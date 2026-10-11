@@ -1,0 +1,561 @@
+{
+  "column": "perio",
+  "date": "reserve",
+  "reserve_written": "2026-10-11",
+  "title": "41 名維護期病人：探診出血的 6% 與 98%",
+  "dek": "41 名完成治療的病人追蹤兩年半：頻繁出血的部位只有 6% 後來失去 2 mm 以上附著，陰性預測值 98%。這組數字證明了什麼？",
+  "topic_key": "perio:doi:10.1111/j.1600-051x.1990.tb01059.x",
+  "updated_at": "2026-10-11T16:32:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Periodontalprobes09-09-2005.jpg",
+    "width": 932,
+    "height": 1305,
+    "alt": "灰褐色背景前，兩支牙科器械的尖端特寫，下方是金屬握柄。左邊一支細桿彎折兩次，尖端那段有幾道黑色刻線；右邊一支沒有刻線，細長的工作端向上彎成弧形鉤狀。",
+    "caption": "兩支牙周探針：左為有 Williams 刻度的 Michigan O 探針，右為 Nabers 探針。2005 年 9 月 9 日攝於美國田納西大學健康科學中心牙醫學院（曼菲斯）。探診出血就是用牙周探針探入囊袋後，看是否出血。照片與 Lang 等人的研究無關；摘要沒有寫該研究用哪一種探針、多大的探測力。",
+    "credit": "Dozenist（Commons 依版權聲明推定的作者），Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Periodontalprobes09-09-2005.jpg",
+    "made": "2005"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1990 年 11 月號的《Journal of Clinical Periodontology》刊出一篇 8 頁的研究：41 名完成積極牙周治療的病人進入維護期，追蹤兩年半，每次回診先探診，記下哪些部位出血。結果，頻繁出血的部位只有 6% 在之後失去 2 mm 以上的探測附著；摘要報告的陰性預測值是 98%。"
+    },
+    {
+      "type": "p",
+      "text": "作者 Niklaus P. Lang、Rolf Adler、Andreas Joss 與 Sture Nyman 據此主張：持續不出血，是牙周狀況維持穩定的可靠指標。"
+    },
+    {
+      "type": "h",
+      "text": "問題：出血的部位很多，會再壞的很少"
+    },
+    {
+      "type": "p",
+      "text": "探診出血（bleeding on probing, BOP）是診斷牙齦發炎的常用標準，Lang 等人 1986 年那篇論文的摘要，第一句就這樣寫。難的是預後：一個部位在回診時出血，之後會不會失去附著？維護期病人每次回診都有部位出血，臨床上要決定的是，哪些部位需要重新器械治療，哪些可以只做齦上清潔。"
+    },
+    {
+      "type": "p",
+      "text": "1983 年，Haffajee、Socransky 與 Goodson 在 22 名受試者的 3,414 個部位，每 2 個月量一次附著程度：牙齦發紅、牙菌斑、溢膿與探診出血的敏感度在 0.03 到 0.42 之間，特異度在 0.71 到 0.97 之間。他們假設可能發病部位的破壞活動率為 3%，算出各項指標的偽陽性機率都在 0.95 到 0.97；結論是這些臨床指標無論單獨或合併使用，都無法預測個別部位的破壞活動。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "1985 年，Badersten、Nilvéus 與 Egelberg 追蹤 49 名晚期慢性牙周炎病人非手術治療後的 24 個月，也發現牙菌斑、出血、溢膿與探測深度的診斷敏感度與預測力普遍偏低，不能取代附著程度的測量。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "Lang 等人 1986 年的回溯研究分析 55 名接受晚期牙周炎治療、在維護期回診至少 4 年的病人，回診間隔 3 到 5 個月，每次回診一開始在每顆牙的 4 個部位探到囊袋底，記錄是否出血。研究者從中隨機選出 1,054 個囊袋，依最後 4 次回診出血的次數分成 5 類，再看附著程度是否維持，失去 2 mm 以上算附著喪失。"
+    },
+    {
+      "type": "p",
+      "text": "結果隨出血次數遞減：4 次都出血的囊袋，失去附著的機會是 30%；3 次 14%，2 次 6%，1 次 3%，一次都沒出血 1.5%。全口出血部位達 16% 以上的病人，失去附著的機會也比較高。作者的評語是，探診出血作為預後指標 limited but yet useful（「有限，但仍然有用」，本文自譯）。"
+    },
+    {
+      "type": "svg",
+      "title": "Lang 等 1986：出血次數與附著喪失（依摘要數據重繪）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\"><text x=\"12\" y=\"18\" font-size=\"13\" font-weight=\"700\">最後 4 次回診出血幾次，之後失去附著的機會</text><text x=\"12\" y=\"47\" font-size=\"12\">出血 4/4</text><rect class=\"accent\" x=\"92\" y=\"33\" width=\"220.0\" height=\"18\"/><text x=\"318.0\" y=\"47\" font-size=\"12\">30%</text><text x=\"12\" y=\"79\" font-size=\"12\">出血 3/4</text><rect class=\"accent\" x=\"92\" y=\"65\" width=\"102.7\" height=\"18\"/><text x=\"200.7\" y=\"79\" font-size=\"12\">14%</text><text x=\"12\" y=\"111\" font-size=\"12\">出血 2/4</text><rect class=\"gold\" x=\"92\" y=\"97\" width=\"44.0\" height=\"18\"/><text x=\"142.0\" y=\"111\" font-size=\"12\">6%</text><text x=\"12\" y=\"143\" font-size=\"12\">出血 1/4</text><rect class=\"gold\" x=\"92\" y=\"129\" width=\"22.0\" height=\"18\"/><text x=\"120.0\" y=\"143\" font-size=\"12\">3%</text><text x=\"12\" y=\"175\" font-size=\"12\">出血 0/4</text><rect class=\"gold\" x=\"92\" y=\"161\" width=\"11.0\" height=\"18\"/><text x=\"109.0\" y=\"175\" font-size=\"12\">1.5%</text><line class=\"muted line\" x1=\"92\" y1=\"196\" x2=\"312\" y2=\"196\" stroke-width=\"1\"/><line class=\"muted line\" x1=\"92.0\" y1=\"196\" x2=\"92.0\" y2=\"200\" stroke-width=\"1\"/><text class=\"muted\" x=\"92.0\" y=\"212\" font-size=\"11\" text-anchor=\"middle\">0%</text><line class=\"muted line\" x1=\"165.3\" y1=\"196\" x2=\"165.3\" y2=\"200\" stroke-width=\"1\"/><text class=\"muted\" x=\"165.3\" y=\"212\" font-size=\"11\" text-anchor=\"middle\">10%</text><line class=\"muted line\" x1=\"238.7\" y1=\"196\" x2=\"238.7\" y2=\"200\" stroke-width=\"1\"/><text class=\"muted\" x=\"238.7\" y=\"212\" font-size=\"11\" text-anchor=\"middle\">20%</text><line class=\"muted line\" x1=\"312.0\" y1=\"196\" x2=\"312.0\" y2=\"200\" stroke-width=\"1\"/><text class=\"muted\" x=\"312.0\" y=\"212\" font-size=\"11\" text-anchor=\"middle\">30%</text><rect class=\"accent\" x=\"12\" y=\"222\" width=\"11\" height=\"11\"/><text x=\"28\" y=\"232\" font-size=\"11.5\">收入全部部位</text><rect class=\"gold\" x=\"130\" y=\"222\" width=\"11\" height=\"11\"/><text x=\"146\" y=\"232\" font-size=\"11.5\">只取鄰接面部位</text></svg>",
+      "caption": "依 Lang 等 1986 年摘要的百分比重繪。酒紅色兩類（4/4、3/4）收入所有部位；金色三類（2/4、1/4、0/4）只取鄰接面部位。附著喪失定義為 2 mm 以上；摘要沒有寫各類的部位數。"
+    },
+    {
+      "type": "p",
+      "text": "這張圖有兩個讀法。從出血這一邊看，即使 4 次回診都出血，仍有七成的囊袋沒有失去附著；從不出血這一邊看，1.5% 已經很低。另外，五類部位的組成不同：4/4 與 3/4 收入所有部位，2/4、1/4、0/4 只取鄰接面，類別之間的差距未必全是出血次數造成的。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "Lang 等人這篇刊出前幾個月，同一期刊 1990 年 2 月號已有兩篇方向相近的研究。隆德大學（Lund University）的 Badersten 等追蹤 39 人非手術治療後 5 年，累積出血分數的預測力最高約 30%，探測深度增加 1.0 mm 以上的預測力在 60 個月時約達 80%。"
+    },
+    {
+      "type": "p",
+      "text": "羅馬琳達大學（Loma Linda University）的 Claffey 等追蹤 42 個月，累積出血分數的預測價值屬於 modest（「中等」，本文自譯）；維護幾年後，探測深度增加、特別是合併高頻率出血時，預測力最高。"
+    },
+    {
+      "type": "p",
+      "text": "1990 年 11 月這篇把焦點移到不出血這一邊。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "paper",
+      "citation": "Lang NP, Adler R, Joss A, Nyman S. Absence of bleeding on probing. An indicator of periodontal stability. *J Clin Periodontol*. 1990;17(10):714–721.",
+      "doi": "10.1111/j.1600-051x.1990.tb01059.x",
+      "pmid": "2262585",
+      "link": "https://doi.org/10.1111/j.1600-051x.1990.tb01059.x",
+      "question": "在完成積極治療、進入維護期的牙周病人身上，探診出血能不能預測哪些部位會失去附著？不出血又代表什麼？",
+      "design": "縱向追蹤 2 年半；每次回診記錄探診出血，只重新治療出血的部位；以探測附著喪失 ≥2 mm 定義進展，計算敏感度、特異度、準確度與預測值",
+      "sample": "完成積極牙周治療、進入維護計畫的 41 名病人；部位數摘要未載"
+    },
+    {
+      "type": "p",
+      "text": "說明：本文依摘要與後續文獻整理，未能取得原論文全文。摘要依 PubMed 與 Crossref 的著錄，兩者內容相同。摘要沒有交代部位數、進展的部位數、「頻繁出血」的定義、所用探針與探測力，也沒有交代統計方法；本文不推測實際的部位數，下文的四格表是依摘要百分比反推的示意。第一作者的單位，PubMed 著錄為瑞士伯恩大學牙醫學院（University of Berne, School of Dental Medicine）。"
+    },
+    {
+      "type": "h",
+      "text": "研究設計：41 人、兩年半、只重新治療出血的部位"
+    },
+    {
+      "type": "p",
+      "text": "依摘要，41 名病人在積極牙周治療後進入維護計畫，追蹤 2 年半，回診間隔 2 到 6 個月不等。每次維護回診一開始，先以探診出血評估牙周組織；只有出血的部位才重新器械治療（reinstrumentation），齦上牙菌斑與牙結石則每次都清除。"
+    },
+    {
+      "type": "p",
+      "text": "探測深度與探測附著水準在積極治療結束後與研究結束時記錄，摘要沒有提到其他時間點。疾病進展的定義是觀察到探測附著喪失 2 mm 以上。作者再計算探診出血作為預測指標的敏感度、特異度、準確度，以及陽性與陰性預測值。"
+    },
+    {
+      "type": "svg",
+      "title": "研究流程（依摘要繪製）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 356\"><text x=\"12\" y=\"18\" font-size=\"13\" font-weight=\"700\">依摘要繪製：何時量、何時記錄、誰被重新治療</text><rect class=\"soft\" x=\"20\" y=\"28\" width=\"320\" height=\"46\" rx=\"6\"/><text x=\"180\" y=\"47\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"middle\">積極牙周治療完成：41 名病人</text><text class=\"muted\" x=\"180\" y=\"65\" font-size=\"11\" text-anchor=\"middle\">記錄探測深度與探測附著水準</text><line class=\"muted line\" x1=\"180\" y1=\"74\" x2=\"180\" y2=\"88\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"175,88 185,88 180,94\"/><rect class=\"paper\" x=\"20\" y=\"94\" width=\"320\" height=\"140\" rx=\"6\"/><text x=\"180\" y=\"114\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"middle\">維護期 2.5 年，回診間隔 2–6 個月</text><text x=\"180\" y=\"133\" font-size=\"12\" text-anchor=\"middle\">每次回診一開始，先記錄探診出血（BOP）</text><rect class=\"soft\" x=\"32\" y=\"143\" width=\"142\" height=\"54\" rx=\"4\"/><rect class=\"accent\" x=\"32\" y=\"143\" width=\"4\" height=\"54\"/><text class=\"accent\" x=\"105\" y=\"165\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">出血的部位</text><text x=\"105\" y=\"185\" font-size=\"12\" text-anchor=\"middle\">重新器械治療</text><rect class=\"soft\" x=\"186\" y=\"143\" width=\"142\" height=\"54\" rx=\"4\"/><rect class=\"muted\" x=\"186\" y=\"143\" width=\"4\" height=\"54\"/><text class=\"muted\" x=\"259\" y=\"165\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">不出血的部位</text><text x=\"259\" y=\"185\" font-size=\"12\" text-anchor=\"middle\">不重新器械治療</text><text x=\"180\" y=\"220\" font-size=\"11.5\" text-anchor=\"middle\">所有部位：每次都清除齦上牙菌斑與牙結石</text><line class=\"muted line\" x1=\"180\" y1=\"234\" x2=\"180\" y2=\"248\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"175,248 185,248 180,254\"/><rect class=\"soft\" x=\"20\" y=\"254\" width=\"320\" height=\"46\" rx=\"6\"/><text x=\"180\" y=\"273\" font-size=\"12\" text-anchor=\"middle\">研究結束：再記錄探測深度與附著水準</text><text class=\"accent\" x=\"180\" y=\"291\" font-size=\"11.5\" text-anchor=\"middle\">和治療後相比，探測附著喪失 ≥ 2 mm＝進展</text><line class=\"muted line\" x1=\"180\" y1=\"300\" x2=\"180\" y2=\"312\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"175,312 185,312 180,318\"/><rect class=\"paper\" x=\"20\" y=\"318\" width=\"320\" height=\"28\" rx=\"6\"/><text x=\"180\" y=\"337\" font-size=\"11.5\" text-anchor=\"middle\">計算敏感度、特異度、準確度、陽性與陰性預測值</text></svg>",
+      "caption": "依 Lang 等 1990 年摘要繪製。探診出血每次回診都記錄；探測深度與附著水準，摘要只提到積極治療結束後與研究結束時兩個時間點。摘要沒有寫部位數與每人回診次數。"
+    },
+    {
+      "type": "p",
+      "text": "這個設計等於把一條臨床規則直接放進研究：出血才處理，不出血只做齦上清潔。如果 98% 那一組指的是從未出血的部位（摘要的結論用「持續不出血」，但沒有定義陰性組），這個數字也在回答另一個問題：這些部位一直沒有重新刮治，兩年半下來有沒有付出代價。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "主要結果：敏感度 29%，陰性預測值 98%"
+    },
+    {
+      "type": "p",
+      "text": "摘要報告的數字是：以「頻繁出血」（frequent bleeding）預測進展，敏感度只有 29%，特異度 88%；陽性預測值 6%，陰性預測值 98%。作者的結論是："
+    },
+    {
+      "type": "quote",
+      "text": "疾病進展的陽性預測值只有 6%，陰性預測值則為 98%，這使得持續沒有探診出血，成為維持牙周健康的可靠預測指標。",
+      "original": "The fact that the positive predictive value for disease progression was only 6% and the negative predictive value was 98% renders continuous absence of BOP a reliable predictor for the maintenance of periodontal health.",
+      "cite": "Lang 等，《Journal of Clinical Periodontology》1990 年摘要；本文自譯"
+    },
+    {
+      "type": "table",
+      "title": "四個指標各在問什麼（依摘要）",
+      "head": [
+        "指標",
+        "數值",
+        "問的是"
+      ],
+      "rows": [
+        [
+          "敏感度",
+          "29%",
+          "後來進展的部位裡，事前頻繁出血的比例"
+        ],
+        [
+          "特異度",
+          "88%",
+          "沒有進展的部位裡，事前沒有頻繁出血的比例"
+        ],
+        [
+          "陽性預測值",
+          "6%",
+          "頻繁出血的部位裡，後來真的進展的比例"
+        ],
+        [
+          "陰性預測值",
+          "98%",
+          "不屬於頻繁出血的部位裡，後來沒有進展的比例"
+        ],
+        [
+          "準確度",
+          "摘要未載",
+          "全部部位裡，預測與結果一致的比例"
+        ]
+      ],
+      "caption": "進展＝探測附著喪失 ≥2 mm。摘要寫明敏感度與特異度針對「頻繁出血」計算；結論則說「持續沒有探診出血」。陰性一組是指沒有頻繁出血，還是一次都沒出血，摘要沒有逐字說明，本表依四格表的一般定義解讀。"
+    },
+    {
+      "type": "p",
+      "text": "摘要沒有寫部位總數、進展的部位數，也沒有說「頻繁」是幾次回診裡出血幾次。準確度算了，數值沒有列在摘要裡；信賴區間與統計檢定也不在摘要中。論文列了 9 篇參考文獻，其中包括 1986 年那篇與 Badersten 等 1985 年的研究。"
+    },
+    {
+      "type": "h",
+      "text": "98% 怎麼讀：進展本來就少"
+    },
+    {
+      "type": "p",
+      "text": "預測值會隨盛行率改變，這是讀 98% 時要先想到的事。如果這四個數字出自同一張四格表（摘要沒有明說，但四個數字彼此相容），由敏感度 29%、特異度 88% 與陽性預測值 6% 可以反推：觀察期間進展的部位約佔 2.6%；考慮四捨五入，大約落在 2% 到 3% 之間。下表把這個比例換算成每 1,000 個部位。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "table",
+      "title": "每 1,000 個部位的示意（本文推算）",
+      "head": [
+        "",
+        "後來進展",
+        "沒有進展",
+        "合計"
+      ],
+      "rows": [
+        [
+          "頻繁出血",
+          "約 7–8",
+          "約 117",
+          "約 125"
+        ],
+        [
+          "沒有頻繁出血",
+          "約 18",
+          "約 857",
+          "約 875"
+        ],
+        [
+          "合計",
+          "約 26",
+          "約 974",
+          "1,000"
+        ]
+      ],
+      "caption": "本文依摘要的敏感度、特異度與陽性預測值反推進展比例約 2.6%，再換算成 1,000 個部位；由此算回的陰性預測值約 97.9%，與摘要的 98% 相符。這是示意，不是論文的實際部位數。"
+    },
+    {
+      "type": "p",
+      "text": "換成機率來看：任一部位在兩年半內進展的機會約 2.6%；屬於頻繁出血，這個機會升到約 6%；不屬於頻繁出血，降到約 2.1%。用概似比（likelihood ratio）表示，陽性約 2.4，陰性約 0.81。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "98% 有很大一部分來自進展本來就少：在這樣的維護族群裡，就算對每個部位都猜「不會進展」，也會有九成七左右猜對。Haffajee 等人 1983 年假設 3% 活動率算出的偽陽性機率是 0.95 到 0.97；這裡 6% 的陽性預測值，換成偽陽性就是 94%，在同一個量級。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "所以 1990 年的貢獻不在區辨力。1983 年同樣低的陽性預測值，被讀成臨床指標無法預測個別部位的破壞；1990 年摘要的結論強調的是另一面：持續不出血，是維持牙周健康的可靠預測指標。我的讀法是，這個數字比較適合回答「哪些部位可以先不重新器械治療」，而不是「哪些部位會壞」；不過論文沒有拿兩種處置做比較。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "限制：小樣本、被治療過的陽性、兩個時間點"
+    },
+    {
+      "type": "p",
+      "text": "第一是樣本。41 人、兩年半；摘要沒有寫病人的年齡、原始診斷與吸菸狀況，也沒有寫每人有多少部位進入分析。同一人的多個部位可能彼此相關，摘要沒有交代分析時怎麼處理。"
+    },
+    {
+      "type": "p",
+      "text": "第二是處置。出血的部位都被重新器械治療了。如果治療有效，一些原本會進展的出血部位會被擋下來，陽性預測值就會偏低；不出血的部位沒有重新刮治，比較接近不處理時的病程。6% 因此不能讀成「出血的部位本來只有 6% 會壞」。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "第三是測量。摘要只列出積極治療結束後與研究結束時兩個時間點；如果附著水準只量這兩次，期間的變化就看不到。同一團隊 1994 年的追蹤報告發現，失去 2 mm 以上附著的部位，約一半屬於疾病進展，另一半伴隨牙齦退縮；1990 年的摘要以附著喪失定義進展，沒有把這兩種情形分開。"
+    },
+    {
+      "type": "p",
+      "text": "第四是外推性。這是一群完成積極治療、規律回診、出血部位都會被處理的病人。98% 是這種照護條件下的數字，換到沒有規律回診的族群，進展比例不同，預測值也會跟著變。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "後來的研究：探測力、全口出血比例與吸菸"
+    },
+    {
+      "type": "p",
+      "text": "Lang 的團隊接著補上探測力。Lang、Nyman、Senn 與 Joss 1991 年找來 12 名口腔衛生極佳的女性牙科衛生系學生，在四個象限分別以 0.25、0.5、0.75 與 1.0 N 探診，間隔 10 天做兩次。"
+    },
+    {
+      "type": "p",
+      "text": "以 0.25 N 探診時，一組 6 人幾乎不出血（平均 0.9%），另一組平均 13.4%；力量加到 1.0 N，兩組分別升到 36.1% 與 47.0%，出血比例和探測力近乎線性相關。作者的結論是：不控制力量的探診可能產生一部分偽陽性，探測力超過 0.25 N 時，很可能傷及臨床上健康的牙齦。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/02/Prd12579-fig-0001-m.webp",
+      "width": 500,
+      "height": 365,
+      "alt": "牙齒與牙齦的剖面示意圖：左上灰色牙冠，左下黃色牙根，右側粉紅色牙齦。一支黑白相間的牙周探針沿牙根表面插入，尖端停在囊袋底。右側三條虛線標出牙齦邊緣、牙骨質琺瑯質交界與囊袋底，兩個雙向箭頭分別標示臨床附著喪失與探測囊袋深度。",
+      "caption": "探測囊袋深度從牙齦邊緣量到囊袋底，臨床附著喪失從牙骨質琺瑯質交界（cementoenamel junction）量到囊袋底。Lang 等 1986 年的寫法是把探針探到囊袋底，再記錄是否出血。這是 Heitz-Mayfield 2024 年回顧論文中的一般教學示意，不是 1990 年研究的圖。",
+      "credit": "Lisa J. A. Heitz-Mayfield，《Periodontology 2000》2024 年回顧論文，經 Wikimedia Commons",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Prd12579-fig-0001-m.webp",
+      "made": "2024"
+    },
+    {
+      "type": "p",
+      "text": "接著是從部位轉到病人。Joss、Adler 與 Lang 1994 年的追蹤報告，39 名病人在支持性牙周治療中追蹤 53 個月，回診 7 到 14 次，同樣只重新治療出血的部位。期間 4.2% 的部位失去 2 mm 以上附著；失去附著的部位有三分之二出現在平均 BOP 30% 以上的病人，平均 BOP 20% 以下的病人只佔五分之一。作者認為，平均 BOP 20% 以下的病人，單一部位再失去附著的風險明顯較低。"
+    },
+    {
+      "type": "p",
+      "text": "4.2% 也替前面的推算提供一個參照：在同類的維護族群裡，會失去附著的部位本來就只有幾個百分點。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "病人層級的出血比例後來進了風險評估。Lang 與 Tonetti 2003 年提出的牙周風險評估（periodontal risk assessment, PRA），第一項就是以全口出血分數評估感染程度，再加上殘餘囊袋的盛行、失牙數、相對於年齡的支持組織喪失、全身狀況，以及吸菸等環境與行為因素，可用來調整支持性治療的回診頻率與內容。"
+    },
+    {
+      "type": "p",
+      "text": "Matuliene 等 2008 年分析 172 名維護 3 到 27 年（平均 11.3 年）的病人：在病人層級，殘餘探測深度 6 mm 以上與 BOP 30% 以上是失牙的風險因子；在部位層級，和 3 mm 以下相比，殘餘探測深度 5 mm 的失牙勝算比為 5.8，7 mm 以上達 37.9。"
+    },
+    {
+      "type": "p",
+      "text": "出血本身也有盲點。Dietrich、Bernimoulin 與 Glynn 2004 年分析美國第三次全國健康與營養調查（NHANES III）12,385 人的 141,967 個近中頰側部位，發現吸菸以劑量相關的方式抑制探診出血。"
+    },
+    {
+      "type": "p",
+      "text": "在健康部位（沒有牙結石、探測深度 3 mm 以下），每天超過 10 支菸者出血的勝算是從不吸菸者的 0.56 倍（95% 信賴區間 0.45–0.70）。在從不吸菸者身上，有牙結石或探測深度 4 mm 以上的部位比健康部位容易出血得多（勝算比 5.7）；在重度吸菸者身上，這個差別就不明顯（勝算比 1.3，95% 信賴區間 0.8–1.9）。"
+    },
+    {
+      "type": "p",
+      "text": "對重度吸菸者，「不出血」能提供的保證會打折扣；1990 年的摘要沒有寫受試者的吸菸狀況。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "timeline",
+      "title": "探診出血的研究線",
+      "items": [
+        {
+          "when": "1983 年",
+          "label": "Haffajee 等",
+          "note": "單一或合併的臨床指標，都無法預測個別部位的破壞活動"
+        },
+        {
+          "when": "1985.7",
+          "label": "Badersten 等",
+          "note": "非手術治療後，出血等指標的敏感度與預測力普遍偏低"
+        },
+        {
+          "when": "1986.7",
+          "label": "Lang 等",
+          "note": "4 次都出血的囊袋 30% 失去附著，都沒出血的 1.5%"
+        },
+        {
+          "when": "1990.2",
+          "label": "Badersten 等、Claffey 等",
+          "note": "探測深度增加的預測力高於累積出血分數"
+        },
+        {
+          "when": "1990.11",
+          "label": "Lang 等（本篇）",
+          "note": "陽性預測值 6%，陰性預測值 98%"
+        },
+        {
+          "when": "1991.4",
+          "label": "Lang 等",
+          "note": "探測力超過 0.25 N 可能造成偽陽性與組織創傷"
+        },
+        {
+          "when": "1994.7",
+          "label": "Joss 等",
+          "note": "平均 BOP 20% 以下的病人，再失去附著的風險明顯較低"
+        },
+        {
+          "when": "2003 年",
+          "label": "Lang 與 Tonetti",
+          "note": "牙周風險評估以全口出血分數為第一項"
+        },
+        {
+          "when": "2004.1",
+          "label": "Dietrich 等",
+          "note": "吸菸以劑量相關方式抑制探診出血"
+        },
+        {
+          "when": "2008.8",
+          "label": "Matuliene 等",
+          "note": "BOP 30% 以上與殘餘探測深度 6 mm 以上是失牙風險"
+        },
+        {
+          "when": "2018.6",
+          "label": "2017 年世界研討會",
+          "note": "牙齦炎病例以 BOP 10% 為界"
+        },
+        {
+          "when": "2020.7",
+          "label": "EFP S3 指引",
+          "note": "治療終點：探測深度 4 mm 以下且不出血"
+        }
+      ],
+      "caption": "依各篇摘要與指引全文整理；月份為期刊卷期月份。"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Haffajee AD, Socransky SS, Goodson JM. Clinical parameters as predictors of destructive periodontal disease activity. *J Clin Periodontol*. 1983;10(3):257–265. [DOI 10.1111/j.1600-051x.1983.tb01274.x](https://doi.org/10.1111/j.1600-051x.1983.tb01274.x)；PMID 6575980",
+        "Lang NP, Joss A, Orsanic T, Gusberti FA, Siegrist BE. Bleeding on probing. A predictor for the progression of periodontal disease? *J Clin Periodontol*. 1986;13(6):590–596. [DOI 10.1111/j.1600-051x.1986.tb00852.x](https://doi.org/10.1111/j.1600-051x.1986.tb00852.x)；PMID 3489010",
+        "Lang NP, Nyman S, Senn C, Joss A. Bleeding on probing as it relates to probing pressure and gingival health. *J Clin Periodontol*. 1991;18(4):257–261. [DOI 10.1111/j.1600-051x.1991.tb00424.x](https://doi.org/10.1111/j.1600-051x.1991.tb00424.x)；PMID 1856306",
+        "Joss A, Adler R, Lang NP. Bleeding on probing. A parameter for monitoring periodontal conditions in clinical practice. *J Clin Periodontol*. 1994;21(6):402–408. [DOI 10.1111/j.1600-051x.1994.tb00737.x](https://doi.org/10.1111/j.1600-051x.1994.tb00737.x)；PMID 8089242",
+        "Dietrich T, Bernimoulin JP, Glynn RJ. The effect of cigarette smoking on gingival bleeding. *J Periodontol*. 2004;75(1):16–22. [DOI 10.1902/jop.2004.75.1.16](https://doi.org/10.1902/jop.2004.75.1.16)；PMID 15025212",
+        "Matuliene G, Pjetursson BE, Salvi GE, et al. Influence of residual pockets on progression of periodontitis and tooth loss: results after 11 years of maintenance. *J Clin Periodontol*. 2008;35(8):685–695. [DOI 10.1111/j.1600-051X.2008.01245.x](https://doi.org/10.1111/j.1600-051X.2008.01245.x)；PMID 18549447",
+        "Trombelli L, Farina R, Silva CO, Tatakis DN. Plaque-induced gingivitis: Case definition and diagnostic considerations. *J Clin Periodontol*. 2018;45(Suppl 20):S44–S67. [DOI 10.1111/jcpe.12939](https://doi.org/10.1111/jcpe.12939)；PMID 29926492",
+        "Sanz M, Herrera D, Kebschull M, et al. Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline. *J Clin Periodontol*. 2020;47(Suppl 22):4–60. [DOI 10.1111/jcpe.13290](https://doi.org/10.1111/jcpe.13290)；PMID 32383274"
+      ]
+    },
+    {
+      "type": "h",
+      "text": "回到診間怎麼讀：它證明了什麼，後來的共識加了什麼"
+    },
+    {
+      "type": "p",
+      "text": "這篇論文證明的是：在一群完成積極治療、規律回診、以出血決定是否重新器械治療的病人裡，摘要報告的陰性預測值是 98%，不在陽性組的部位，兩年半內絕大多數沒有失去 2 mm 以上的附著；陰性組怎麼定義，摘要沒有說。它沒有證明出血的部位就會進展，陽性預測值只有 6%，而且出血的部位都接受了治療；它也沒有比較「不出血就不刮治」與「全部刮治」兩種做法。"
+    },
+    {
+      "type": "p",
+      "text": "2017 年世界研討會的論文集在 2018 年 6 月刊出。Trombelli 等提出的牙齦炎病例定義，以全口 BOP 為準：牙周完整的病人，BOP 10% 以上為牙齦炎病例，10% 到 30% 為局部型，超過 30% 為廣泛型；牙周支持組織已減少的病人，若 BOP 10% 以上、但探測深度 4 mm 以上的部位都不出血，也歸為牙齦炎病例。工作小組 1 的共識報告寫道：",
+      "tag": "官方說法"
+    },
+    {
+      "type": "quote",
+      "text": "牙齦健康與牙齦炎有許多臨床特徵，但病例定義主要建立在探診出血的有無上。",
+      "original": "While gingival health and gingivitis have many clinical features, case definitions are primarily predicated on presence or absence of bleeding on probing.",
+      "cite": "Chapple 等，2017 年世界研討會工作小組 1 共識報告摘要，2018；本文自譯。Lang 是共同作者之一"
+    },
+    {
+      "type": "p",
+      "text": "歐洲牙周病學會（European Federation of Periodontology, EFP）2020 年的 S3 臨床指引把這一點寫成治療終點：齦下器械治療的終點是囊袋閉合，定義為探測深度 4 mm 以下且探診不出血；指引整理的治療前後比較研究中，治療後平均有 74% 的囊袋達到閉合。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "治療完成後的「穩定的牙周炎病人」，指引的定義是出血部位少於 10%、探測深度都在 4 mm 以下，而且沒有任何 4 mm 的部位出血；持續 4 mm 以上又出血的部位，被視為可能不穩定、需要進一步治療。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "Loos 與 Needleman 2020 年在同一期增刊討論治療終點時，提到 Lang 等 1990 年屬於以「不出血」對應附著穩定的 classical papers（經典論文，本文自譯）。他們說明，自己這篇立場論文只看病人層級的終點，因此這類以牙齒或個別部位為單位的經典論文沒有被檢索進來。"
+    },
+    {
+      "type": "p",
+      "text": "1990 年的「不出血」到這裡成了治療終點的一半：深度之外，還要不出血。我的讀法是，指引把出血與深度綁在一起，正好補上單看出血時敏感度不足的缺口；Claffey 等 1990 年也發現，探測深度增加合併高頻率出血時預測力最高。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "同一份摘要裡還有另一個數字：敏感度 29%。後來失去附著的部位，七成事前並沒有頻繁出血。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lang NP, Adler R, Joss A, Nyman S. Absence of bleeding on probing. An indicator of periodontal stability. J Clin Periodontol 1990;17(10):714–721",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1990-11",
+      "url": "https://doi.org/10.1111/j.1600-051x.1990.tb01059.x",
+      "note": "原論文；未能取得全文，依摘要"
+    },
+    {
+      "title": "PubMed 書目與摘要：Absence of bleeding on probing. An indicator of periodontal stability（PMID 2262585）",
+      "publisher": "National Library of Medicine",
+      "date": "1990-11",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2262585/",
+      "note": "作者、卷期頁、DOI、PMID、第一作者單位與摘要全文"
+    },
+    {
+      "title": "Crossref 書目資料：10.1111/j.1600-051X.1990.tb01059.x",
+      "publisher": "Crossref",
+      "date": "1990-11",
+      "url": "https://api.crossref.org/works/10.1111/j.1600-051X.1990.tb01059.x",
+      "note": "作者全名、出版月份、頁碼 714–721、摘要與 9 篇參考文獻清單"
+    },
+    {
+      "title": "Haffajee AD, Socransky SS, Goodson JM. Clinical parameters as predictors of destructive periodontal disease activity. J Clin Periodontol 1983;10(3):257–265",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "1983",
+      "url": "https://doi.org/10.1111/j.1600-051x.1983.tb01274.x",
+      "note": "依 Crossref 所載摘要（PubMed 6575980 無摘要）"
+    },
+    {
+      "title": "Badersten A, Nilvéus R, Egelberg J. Effect of nonsurgical periodontal therapy. VII. Bleeding, suppuration and probing depth in sites with probing attachment loss. J Clin Periodontol 1985;12(6):432–440",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "1985-07",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3874887/",
+      "note": "依 PubMed 摘要"
+    },
+    {
+      "title": "Lang NP, Joss A, Orsanic T, Gusberti FA, Siegrist BE. Bleeding on probing. A predictor for the progression of periodontal disease? J Clin Periodontol 1986;13(6):590–596",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "1986-07",
+      "url": "https://doi.org/10.1111/j.1600-051x.1986.tb00852.x",
+      "note": "依 Crossref 所載完整摘要（PubMed 3489010 摘要截斷於 250 字）；作者評語出自摘要末句"
+    },
+    {
+      "title": "Badersten A, Nilvéus R, Egelberg J. Scores of plaque, bleeding, suppuration and probing depth to predict probing attachment loss. 5 years of observation following nonsurgical periodontal therapy. J Clin Periodontol 1990;17(2):102–107",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "1990-02",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2406291/",
+      "note": "依 PubMed 摘要；作者單位 University of Lund"
+    },
+    {
+      "title": "Claffey N, Nylund K, Kiger R, Garrett S, Egelberg J. Diagnostic predictability of scores of plaque, bleeding, suppuration and probing depth for probing attachment loss. 3 1/2 years of observation following initial periodontal therapy. J Clin Periodontol 1990;17(2):108–114",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "1990-02",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2406292/",
+      "note": "依 PubMed 摘要；作者單位 Loma Linda University"
+    },
+    {
+      "title": "Lang NP, Nyman S, Senn C, Joss A. Bleeding on probing as it relates to probing pressure and gingival health. J Clin Periodontol 1991;18(4):257–261",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "1991-04",
+      "url": "https://doi.org/10.1111/j.1600-051x.1991.tb00424.x",
+      "note": "依 Crossref 所載完整摘要（PubMed 1856306 摘要截斷於 250 字）"
+    },
+    {
+      "title": "Joss A, Adler R, Lang NP. Bleeding on probing. A parameter for monitoring periodontal conditions in clinical practice. J Clin Periodontol 1994;21(6):402–408",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "1994-07",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8089242/",
+      "note": "依 PubMed 摘要"
+    },
+    {
+      "title": "Lang NP, Tonetti MS. Periodontal risk assessment (PRA) for patients in supportive periodontal therapy (SPT). Oral Health Prev Dent 2003;1(1):7–16",
+      "publisher": "Oral Health & Preventive Dentistry",
+      "date": "2003",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15643744/",
+      "note": "依 PubMed 摘要"
+    },
+    {
+      "title": "Dietrich T, Bernimoulin JP, Glynn RJ. The effect of cigarette smoking on gingival bleeding. J Periodontol 2004;75(1):16–22",
+      "publisher": "Journal of Periodontology",
+      "date": "2004-01",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15025212/",
+      "note": "依 PubMed 摘要"
+    },
+    {
+      "title": "Matuliene G, Pjetursson BE, Salvi GE, et al. Influence of residual pockets on progression of periodontitis and tooth loss: results after 11 years of maintenance. J Clin Periodontol 2008;35(8):685–695",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "2008-07-23",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18549447/",
+      "note": "依 PubMed 摘要；日期為線上刊出日（卷期為 2008 年 8 月）"
+    },
+    {
+      "title": "Trombelli L, Farina R, Silva CO, Tatakis DN. Plaque-induced gingivitis: Case definition and diagnostic considerations. J Clin Periodontol 2018;45(Suppl 20):S44–S67",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "2018-06-20",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29926492/",
+      "note": "依 PubMed 摘要：BOP 10% 與 30% 的病例分界"
+    },
+    {
+      "title": "Chapple ILC, Mealey BL, Van Dyke TE, et al. Periodontal health and gingival diseases and conditions on an intact and a reduced periodontium: Consensus report of workgroup 1 of the 2017 World Workshop. J Clin Periodontol 2018;45(Suppl 20):S68–S77",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "2018-06",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29926499/",
+      "note": "依 PubMed 摘要；引文出自摘要；作者名單含 Lang NP"
+    },
+    {
+      "title": "Sanz M, Herrera D, Kebschull M, et al. Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline. J Clin Periodontol 2020;47(Suppl 22):4–60",
+      "publisher": "Journal of Clinical Periodontology（開放取用，CC BY-NC 4.0）",
+      "date": "2020-07",
+      "url": "https://europepmc.org/article/PMC/PMC7891343",
+      "note": "全文（Europe PMC 所載）：牙周健康與穩定牙周炎病人的定義、囊袋閉合的終點、平均 74% 囊袋閉合"
+    },
+    {
+      "title": "Loos BG, Needleman I. Endpoints of active periodontal therapy. J Clin Periodontol 2020;47(Suppl 22):61–71",
+      "publisher": "Journal of Clinical Periodontology（開放取用，CC BY-NC-ND 4.0）",
+      "date": "2020-07",
+      "url": "https://europepmc.org/article/PMC/PMC7670400",
+      "note": "全文（Europe PMC 所載）：把 Lang 等 1990 列為未納入檢索的經典論文"
+    },
+    {
+      "title": "Heitz-Mayfield LJA. Conventional diagnostic criteria for periodontal diseases (plaque-induced gingivitis and periodontitis). Periodontol 2000 2024;95(1):10–19",
+      "publisher": "Periodontology 2000（開放取用，CC BY 4.0）",
+      "date": "2024-06-03",
+      "url": "https://doi.org/10.1111/prd.12579",
+      "note": "正文示意圖的出處；授權依 Crossref 與 Commons 標示"
+    }
+  ]
+}
