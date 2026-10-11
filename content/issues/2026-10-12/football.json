@@ -4,7 +4,7 @@
   "title": "拉菲尼亞瞄準巴黎之戰，巴薩先赴伊斯坦堡",
   "dek": "拉波爾塔說醫療團隊預計拉菲尼亞趕上 10 月 21 日對巴黎聖日耳曼；巴薩台灣時間週三凌晨先作客加拉塔沙雷，德甲拜仁開賽 8 秒失球。",
   "topic_key": "football:2026-10-12",
-  "updated_at": "2026-10-11T13:44:00+08:00",
+  "updated_at": "2026-10-11T15:51:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -205,6 +205,11 @@
         ]
       ],
       "caption": "依巴薩官網賽程（西班牙時間）與 ESPN 賽程（UTC）換算，兩者一致。10 月 25 日起歐洲改回冬令時間，國家德比台灣時間比西班牙快 7 小時，其餘快 6 小時。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-10-11）",
+      "text": "頭圖圖說說拉菲尼亞這次的大腿傷是「10 月國際比賽週」在巴西國家隊時受的，有誤。他是在 2026 年 9 月 29 日（週二）巴西於澳洲布里斯本以 4 比 2 勝澳洲的友誼賽中受傷，上半場結束前罰進 12 碼後，下半場沒有再上場；巴西足協 9 月 30 日說檢查顯示右大腿後側輕微肌肉水腫，讓他提前歸隊。依據：ESPN 2026 年 9 月 29 日、9 月 30 日報導。"
     }
   ],
   "sources": [
@@ -389,6 +394,20 @@
       "date": "2026-06-13",
       "url": "https://commons.wikimedia.org/wiki/File:Raphinha_Brazil_V_Morocco_13_June_2026-125.jpg",
       "note": "頭圖"
+    },
+    {
+      "title": "Raphinha returns to Barcelona after injury on Brazil duty",
+      "publisher": "ESPN",
+      "date": "2026-09-30",
+      "url": "https://www.espn.com/soccer/story/_/id/50066024",
+      "note": "更正：受傷時間與比賽（9 月 29 日對澳洲友誼賽）、巴西足協的檢查說法"
+    },
+    {
+      "title": "Barcelona await updates after Brazil's Raphinha substituted due to thigh discomfort",
+      "publisher": "ESPN",
+      "date": "2026-09-29",
+      "url": "https://www.espn.com/soccer/story/_/id/50058601",
+      "note": "更正：9 月 29 日布里斯本友誼賽半場被換下"
     }
   ]
 }
