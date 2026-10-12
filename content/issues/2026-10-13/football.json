@@ -4,7 +4,7 @@
   "title": "巴薩抵伊斯坦堡，22 人名單缺四名傷兵",
   "dek": "弗利克與庫巴西在加拉塔沙雷主場出席賽前記者會，拉菲尼亞、德容等四人因傷缺陣；阿森納兩將訓練受傷，里爾考慮為一記鏟球提告。",
   "topic_key": "football:2026-10-13",
-  "updated_at": "2026-10-13T02:55:00+08:00",
+  "updated_at": "2026-10-13T06:31:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -56,6 +56,11 @@
     },
     {
       "type": "p",
+      "tag": "官方說法",
+      "text": "西班牙時間週一 18:00（土耳其時間 19:00，台灣時間 10 月 13 日 00:00），巴薩在加拉塔沙雷主場 Ali Sami Yen 體育園區進行賽前訓練。巴薩官網說，弗利克手上所有可用的一線隊球員都參加了，巴薩二隊的 Hamza Abdelkarim 也在其中；一起練的克魯伊維特（Shane Kluivert）則會代表巴薩 U19 踢歐洲青年聯賽。官網沒有提到新的傷情。"
+    },
+    {
+      "type": "p",
       "text": "轉會方面只有延續中的傳聞。ESPN 10 月 12 日的轉會快訊引述英國網站 Football Insider，說利物浦擔心右後衛弗林蓬（Jeremie Frimpong）與布拉德利（Conor Bradley）的狀況，考慮在冬季轉會窗補人，孔德在名單之列。這和前一期報過的利物浦傳聞是同一個消息來源；ESPN 沒有提到雙方有任何接觸。",
       "tag": "傳聞"
     },
@@ -83,6 +88,20 @@
           "source": "ESPN 比賽紀錄、Sky Sports 賽果",
           "url": "https://www.espn.com/soccer/match/_/gameId/401875005",
           "when": "台灣時間 10 月 13 日 00:30 開賽"
+        },
+        {
+          "headline": "塞維亞補時進球、球員慶祝吃第二張黃牌，萊萬特第 100 分鐘追成 3 比 3",
+          "summary": "台灣時間今天凌晨的西甲第 8 輪，塞維亞靠 Robbie Ure 與 Félix Correia 先以 2 比 0 領先，萊萬特由 Iván Romero 扳回一球，Adrián de la Fuente 第 92 分鐘左腳凌空抽射扳平。塞維亞的 Isaac Romero 第 95 分鐘遠射再度超前，卻因朝看台慶祝、要觀眾安靜，吃下第二張黃牌被罰下；補時第 10 分鐘，萊萬特的 Ndukwe 進球（經 VAR 確認）把比分追成 3 比 3。塞維亞以 14 分排第 5，落後榜首巴薩 10 分；萊萬特 6 分，跳出降級區。塞維亞總教練加西亞・普拉薩（Luis García Plaza）賽後說：「Con el reglamento es amarilla, pero vamos a ver si cuando lo haga un jugador de un equipo de arriba también lo expulsan」——照規則那是黃牌，但要看看排名前段球隊的球員這麼做，會不會也被罰下；他接著說，換成萊萬特的球員這麼做，也會被罰下（本文自譯）。",
+          "source": "ESPN 比賽紀錄、Infobae（Europa Press、EFE）",
+          "url": "https://www.espn.com/soccer/match/_/gameId/401882852",
+          "when": "台灣時間 10 月 13 日 03:00 開賽"
+        },
+        {
+          "headline": "考文垂 4 比 1 大勝紐卡索，拿下本季首場主場勝利",
+          "summary": "英超台灣時間今天凌晨，考文垂主場由 Jack Rudoni 第 6 分鐘罰進 12 碼，Sidiki Cherif、Ellis Simms 與 Stephen Mfuni 下半場再進三球；紐卡索只靠博特曼（Sven Botman）第 70 分鐘遠射扳回一球。英超官網說，蘭帕德（Frank Lampard）的球隊拿下兩連勝、跳出降級區；考文垂 6 場 6 分，紐卡索 8 分排第 11。",
+          "source": "ESPN 比賽紀錄、英超官網",
+          "url": "https://www.premierleague.com/en/news/4730413/coventry-hit-four-to-beat-newcastle-for-first-home-win",
+          "when": "台灣時間 10 月 13 日 03:00 開賽"
         },
         {
           "headline": "西蒙尼：曼聯戰績不佳，仍是強隊",
@@ -409,6 +428,48 @@
       "date": "2026-07-14",
       "url": "https://commons.wikimedia.org/wiki/File:Pau_Cubarsi_France_v_Spain_7.24.26-082.jpg",
       "note": "頭圖"
+    },
+    {
+      "title": "First contact with Ali Sami Yen",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-12",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4591186/first-contact-with-ali-sami-yen",
+      "note": "伊斯坦堡賽前訓練"
+    },
+    {
+      "title": "Levante vs. Sevilla（比賽頁）",
+      "publisher": "ESPN",
+      "date": "2026-10-12",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401882852",
+      "note": "3 比 3、進球者、紅牌"
+    },
+    {
+      "title": "(Crónica) El Levante sale del descenso con un final de locura ante el Sevilla",
+      "publisher": "Infobae（Europa Press）",
+      "date": "2026-10-12",
+      "url": "https://www.infobae.com/america/agencias/2026/10/12/cronica-el-levante-sale-del-descenso-con-un-final-de-locura-ante-el-sevilla/",
+      "note": "比賽經過、積分"
+    },
+    {
+      "title": "Luis García Plaza: “Vamos a ver si cuando un jugador de arriba mande callar lo expulsan\"",
+      "publisher": "Infobae（EFE）",
+      "date": "2026-10-12",
+      "url": "https://www.infobae.com/espana/agencias/2026/10/12/luis-garcia-plaza-vamos-a-ver-si-cuando-un-jugador-de-arriba-mande-callar-lo-expulsan",
+      "note": "塞維亞總教練賽後說法"
+    },
+    {
+      "title": "Coventry City vs. Newcastle United（比賽頁）",
+      "publisher": "ESPN",
+      "date": "2026-10-12",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401879267",
+      "note": "4 比 1、進球者"
+    },
+    {
+      "title": "Coventry hit FOUR to beat Newcastle for first home win",
+      "publisher": "Premier League",
+      "date": "2026-10-12",
+      "url": "https://www.premierleague.com/en/news/4730413/coventry-hit-four-to-beat-newcastle-for-first-home-win",
+      "note": "兩連勝、跳出降級區"
     }
   ]
 }
