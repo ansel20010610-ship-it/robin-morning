@@ -1,0 +1,380 @@
+{
+  "column": "perio",
+  "date": "2026-10-13",
+  "title": "2.9 與 4.2 毫米：1982 年臨界探測深度",
+  "dek": "Lindhe 團隊以 15 人的半口對照，算出刮治與翻瓣手術各自開始帶來附著增加的深度。這兩個數字怎麼來，後來又怎麼被修正？",
+  "topic_key": "perio:doi:10.1111/j.1600-051x.1982.tb02099.x",
+  "updated_at": "2026-10-13T00:53:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Dr_ScharpCam_IntraOral_Camera_Perio_Probe.jpg",
+    "width": 720,
+    "height": 576,
+    "alt": "口內近照：上下顎前牙咬合，一支細長的金屬牙周探針從畫面上方垂直往下，貼著牙面，尖端抵在一顆下顎前牙唇側的牙齦邊緣；探針上有數道黑色刻度環。",
+    "caption": "探測深度是本文的主角：探針從齦緣探到袋底的距離，以毫米計。1982 年的研究用治療前的這個數字，預測治療後附著會增加還是喪失。此為上傳者以口內攝影機拍攝的探針示範照，Commons 標示日期為 2012 年 10 月，與該研究的受試者無關。",
+    "credit": "Wlstrong 攝，Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dr_ScharpCam_IntraOral_Camera_Perio_Probe.jpg",
+    "made": "2012"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "同一種治療，用在 3 毫米和 7 毫米的牙周袋，結果可以方向相反。1982 年，Lindhe、Socransky、Nyman、Haffajee 與 Westfelt 五位作者在《Journal of Clinical Periodontology》第 9 卷發表〈“Critical probing depths” in periodontal therapy〉，把這個現象壓成兩個數字：只做刮治與根面整平（scaling and root planing, SRP）時是 2.9 毫米，SRP 加上改良式 Widman 翻瓣（modified Widman flap, MWF）時是 4.2 毫米。治療前的探測深度（probing depth）低於這個值，位點平均會失去附著；高於它，才會得到附著。"
+    },
+    {
+      "type": "p",
+      "text": "這篇論文要回答的是當時臨床上很實際的問題：翻瓣手術比非手術治療好，是對所有牙周袋都成立，還是只對某些深度成立？比較的手術組用的是改良式 Widman 翻瓣，Ramfjord 與 Nissle 在 1974 年於《Journal of Periodontology》以此為題發表過這個術式。同一時期，也有團隊在測試只靠非手術治療能處理多深的牙周袋（見後文 Badersten 等 1984）。",
+      "tag": "背景"
+    },
+    {
+      "type": "p",
+      "text": "本文依摘要與後續文獻整理。原論文全文需訂閱，未能取得；PubMed 收錄的摘要在 400 個英文字處截斷。凡是摘要沒有寫的數字（例如各深度組的平均附著變化、位點數、迴歸係數），本文不寫；轉引自後續文獻的數字，會標明出處。"
+    },
+    {
+      "type": "paper",
+      "citation": "Lindhe J, Socransky SS, Nyman S, Haffajee A, Westfelt E. “Critical probing depths” in periodontal therapy. *J Clin Periodontol*. 1982;9(4):323–336.",
+      "doi": "10.1111/j.1600-051x.1982.tb02099.x",
+      "pmid": "6764782",
+      "link": "https://doi.org/10.1111/j.1600-051x.1982.tb02099.x",
+      "question": "手術（SRP＋改良式 Widman 翻瓣）與非手術（只做 SRP）治療，對不同初始探測深度的位點，臨床附著的變化有何不同？能否找出一個「低於它治療反而造成附著喪失」的深度門檻？",
+      "design": "半口對照（split-mouth）臨床研究：一側象限 SRP＋改良式 Widman 翻瓣，對側象限只做 SRP；治療後 6、12、24 個月複查；以迴歸分析計算臨界探測深度",
+      "sample": "15 名因中度進展牙周病轉診治療的病人（依摘要）"
+    },
+    {
+      "type": "h",
+      "text": "研究設計：15 人、半口對照、24 個月"
+    },
+    {
+      "type": "p",
+      "text": "依摘要，研究納入 15 名轉診來治療中度進展（moderately advanced）牙周病的病人。所有人先做基線檢查，項目包括口腔衛生、牙齦狀況、探測深度與臨床附著水準（clinical attachment level）。接著做病情說明與口腔衛生指導，然後以半口設計治療：一側（左或右）的象限做 SRP 合併改良式 Widman 翻瓣，對側象限只做 SRP。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "治療後分兩段。治療完成到 6 個月是「癒合期」，病人每 2 週回診接受一次專業潔牙（professional tooth cleaning）；6 到 24 個月是「維護期」，回診間隔延長為 3 個月。複查時間點是主動治療完成後 6、12、24 個月。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "摘要沒有寫的設計細節不少：兩側由誰決定做手術、是否隨機分配、檢查者是否知道位點接受哪一種治療、附著水準以何種參考點測量、分析單位是位點還是病人。這些都會影響結果的可信度，本文無法核對。",
+      "tag": "推論"
+    },
+    {
+      "type": "svg",
+      "title": "研究流程（依摘要重繪）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 584\"><rect class=\"soft\" x=\"12\" y=\"10\" width=\"336\" height=\"78\" rx=\"6\"/><text class=\"accent\" x=\"26\" y=\"34\" font-size=\"17\" font-weight=\"700\">1</text><text x=\"48\" y=\"34\" font-size=\"14\" font-weight=\"700\">基線檢查：15 名病人</text><text class=\"muted\" x=\"48\" y=\"54\" font-size=\"12.5\">口腔衛生、牙齦狀況</text><text class=\"muted\" x=\"48\" y=\"72\" font-size=\"12.5\">探測深度、臨床附著水準</text><line class=\"muted line\" x1=\"180\" y1=\"90\" x2=\"180\" y2=\"100\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,99 186,99 180,107\"/><rect class=\"soft\" x=\"12\" y=\"110\" width=\"336\" height=\"60\" rx=\"6\"/><text class=\"accent\" x=\"26\" y=\"134\" font-size=\"17\" font-weight=\"700\">2</text><text x=\"48\" y=\"134\" font-size=\"14\" font-weight=\"700\">病情說明與口腔衛生指導</text><text class=\"muted\" x=\"48\" y=\"154\" font-size=\"12.5\">治療前先建立自我潔牙</text><line class=\"muted line\" x1=\"180\" y1=\"172\" x2=\"180\" y2=\"182\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,181 186,181 180,189\"/><rect class=\"soft\" x=\"12\" y=\"192\" width=\"336\" height=\"118\" rx=\"6\"/><text class=\"accent\" x=\"26\" y=\"216\" font-size=\"17\" font-weight=\"700\">3</text><text x=\"48\" y=\"216\" font-size=\"14\" font-weight=\"700\">半口設計（split-mouth）</text><rect class=\"paper\" x=\"24\" y=\"230\" width=\"150\" height=\"68\" rx=\"4\"/><rect class=\"accent\" x=\"24\" y=\"230\" width=\"4\" height=\"68\"/><text x=\"36\" y=\"252\" font-size=\"13\" font-weight=\"700\">一側象限</text><text class=\"muted\" x=\"36\" y=\"271\" font-size=\"12\">SRP＋改良式</text><text class=\"muted\" x=\"36\" y=\"288\" font-size=\"12\">Widman 翻瓣</text><rect class=\"paper\" x=\"186\" y=\"230\" width=\"150\" height=\"68\" rx=\"4\"/><text x=\"198\" y=\"252\" font-size=\"13\" font-weight=\"700\">對側象限</text><text class=\"muted\" x=\"198\" y=\"271\" font-size=\"12\">只做刮治與</text><text class=\"muted\" x=\"198\" y=\"288\" font-size=\"12\">根面整平（SRP）</text><line class=\"muted line\" x1=\"180\" y1=\"312\" x2=\"180\" y2=\"322\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,321 186,321 180,329\"/><rect class=\"soft\" x=\"12\" y=\"332\" width=\"336\" height=\"78\" rx=\"6\"/><text class=\"accent\" x=\"26\" y=\"356\" font-size=\"17\" font-weight=\"700\">4</text><text x=\"48\" y=\"356\" font-size=\"14\" font-weight=\"700\">癒合期：治療後 0–6 個月</text><text class=\"muted\" x=\"48\" y=\"376\" font-size=\"12.5\">每 2 週回診做專業潔牙</text><text class=\"muted\" x=\"48\" y=\"394\" font-size=\"12.5\">（professional tooth cleaning）</text><line class=\"muted line\" x1=\"180\" y1=\"412\" x2=\"180\" y2=\"422\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,421 186,421 180,429\"/><rect class=\"soft\" x=\"12\" y=\"432\" width=\"336\" height=\"60\" rx=\"6\"/><text class=\"accent\" x=\"26\" y=\"456\" font-size=\"17\" font-weight=\"700\">5</text><text x=\"48\" y=\"456\" font-size=\"14\" font-weight=\"700\">維護期：6–24 個月</text><text class=\"muted\" x=\"48\" y=\"476\" font-size=\"12.5\">回診間隔延長為每 3 個月</text><line class=\"muted line\" x1=\"180\" y1=\"494\" x2=\"180\" y2=\"504\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,503 186,503 180,511\"/><rect class=\"soft\" x=\"12\" y=\"514\" width=\"336\" height=\"60\" rx=\"6\"/><rect class=\"accent\" x=\"12\" y=\"520\" width=\"4\" height=\"48\"/><text class=\"accent\" x=\"26\" y=\"538\" font-size=\"17\" font-weight=\"700\">6</text><text x=\"48\" y=\"538\" font-size=\"14\" font-weight=\"700\">複查：治療完成後 6、12、24 個月</text><text class=\"muted\" x=\"48\" y=\"558\" font-size=\"12.5\">以迴歸分析算出兩種治療的臨界探測深度</text></svg>",
+      "caption": "依 Lindhe 等（1982）摘要整理的流程，不是原文圖。摘要未說明手術側是否隨機分配。",
+      "credit": "本報原創圖解"
+    },
+    {
+      "type": "h",
+      "text": "主要結果：淺袋做治療會失去附著，深袋才得到附著"
+    },
+    {
+      "type": "p",
+      "text": "摘要的核心發現是一個方向的翻轉：治療前探測深度淺的位點，治療後失去臨床附著；初始深度深的位點，則得到附著。研究者以迴歸分析，為兩種治療各自算出「臨界探測深度」（critical probing depth, CPD）。只做 SRP 的臨界值是 2.9 毫米，SRP 加翻瓣是 4.2 毫米，摘要說兩者差異達統計顯著。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "依 Choi 等人在 2015 年的轉述，臨界探測深度是一個門檻：初始深度高於它，治療結果是附著增加；低於它，則是附著喪失。用迴歸直線的語言說，就是預測附著變化為零的那一點。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "兩個臨界值相差 1.3 毫米（4.2 − 2.9，本文計算）。我的讀法是：翻瓣手術要用在更深的位點，才開始對附著有淨好處；在兩個臨界值之間的位點，只做 SRP 已能得到附著，翻瓣卻可能還在喪失附著。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "table",
+      "title": "兩種治療的比較（依摘要；標明者為轉引）",
+      "head": [
+        "項目",
+        "只做 SRP",
+        "SRP＋改良式 Widman 翻瓣",
+        "出處"
+      ],
+      "rows": [
+        [
+          "臨界探測深度",
+          "2.9 mm",
+          "4.2 mm",
+          "摘要：兩者差異顯著"
+        ],
+        [
+          "臨界值的誤差範圍",
+          "± 0.3 mm",
+          "± 0.2 mm",
+          "Choi 等 2015 轉述；未說明 ± 為標準差或標準誤"
+        ],
+        [
+          "初始較淺的位點",
+          "附著喪失",
+          "附著喪失較多",
+          "摘要"
+        ],
+        [
+          "初始較深的位點",
+          "附著增加",
+          "高於臨界值時附著增加較多",
+          "摘要"
+        ],
+        [
+          "手術附著增加多於 SRP 的深度",
+          "—",
+          "> 5.4 mm",
+          "Choi 等 2015 轉述"
+        ],
+        [
+          "治療後 12、24 個月",
+          "大致維持",
+          "大致維持",
+          "摘要：每 3 個月專業潔牙"
+        ],
+        [
+          "比治療方式更關鍵的因素",
+          "病人自我維持的口腔衛生",
+          "同左",
+          "摘要"
+        ]
+      ],
+      "caption": "摘要沒有提供各深度組的平均附著變化與位點數，因此本表只列方向與臨界值。"
+    },
+    {
+      "type": "p",
+      "text": "表中有一處要小心。摘要原句是：初始探測深度「高於臨界探測深度」的位點，翻瓣後的附著增加多於 SRP。Choi 等轉述的則是，深度超過 5.4 毫米時，翻瓣的附著增加多於 SRP。前者沒有說是哪一個臨界值；若兩種治療的結果都是直線迴歸，後者相當於兩條線的交點，但這是本文推論，原文是否這樣算出 5.4 毫米無從得知。兩種說法如何對應，要看原文的圖表，本文無法核對。",
+      "tag": "推論"
+    },
+    {
+      "type": "svg",
+      "title": "臨界探測深度的概念（原創示意）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 290\"><line class=\"muted line\" x1=\"56\" y1=\"44.39999999999999\" x2=\"56\" y2=\"223.60000000000002\" stroke-width=\"1\"/><line class=\"muted line\" x1=\"56\" y1=\"134\" x2=\"322\" y2=\"134\" stroke-width=\"1.2\"/><line class=\"muted line\" x1=\"56\" y1=\"223.6\" x2=\"56\" y2=\"227.6\" stroke-width=\"1\"/><line class=\"muted line\" x1=\"56\" y1=\"223.6\" x2=\"322\" y2=\"223.6\" stroke-width=\"1\"/><text class=\"muted\" x=\"56\" y=\"239.60000000000002\" font-size=\"11\" text-anchor=\"middle\">1</text><line class=\"muted line\" x1=\"94\" y1=\"223.6\" x2=\"94\" y2=\"227.6\" stroke-width=\"1\"/><text class=\"muted\" x=\"94\" y=\"239.60000000000002\" font-size=\"11\" text-anchor=\"middle\">2</text><line class=\"muted line\" x1=\"132\" y1=\"223.6\" x2=\"132\" y2=\"227.6\" stroke-width=\"1\"/><text class=\"muted\" x=\"132\" y=\"239.60000000000002\" font-size=\"11\" text-anchor=\"middle\">3</text><line class=\"muted line\" x1=\"170\" y1=\"223.6\" x2=\"170\" y2=\"227.6\" stroke-width=\"1\"/><text class=\"muted\" x=\"170\" y=\"239.60000000000002\" font-size=\"11\" text-anchor=\"middle\">4</text><line class=\"muted line\" x1=\"208\" y1=\"223.6\" x2=\"208\" y2=\"227.6\" stroke-width=\"1\"/><text class=\"muted\" x=\"208\" y=\"239.60000000000002\" font-size=\"11\" text-anchor=\"middle\">5</text><line class=\"muted line\" x1=\"246\" y1=\"223.6\" x2=\"246\" y2=\"227.6\" stroke-width=\"1\"/><text class=\"muted\" x=\"246\" y=\"239.60000000000002\" font-size=\"11\" text-anchor=\"middle\">6</text><line class=\"muted line\" x1=\"284\" y1=\"223.6\" x2=\"284\" y2=\"227.6\" stroke-width=\"1\"/><text class=\"muted\" x=\"284\" y=\"239.60000000000002\" font-size=\"11\" text-anchor=\"middle\">7</text><line class=\"muted line\" x1=\"322\" y1=\"223.6\" x2=\"322\" y2=\"227.6\" stroke-width=\"1\"/><text class=\"muted\" x=\"322\" y=\"239.60000000000002\" font-size=\"11\" text-anchor=\"middle\">8</text><text class=\"muted\" x=\"189.0\" y=\"257.6\" font-size=\"12\" text-anchor=\"middle\">治療前探測深度（mm）</text><text class=\"muted\" x=\"48\" y=\"66.8\" font-size=\"11\" text-anchor=\"end\">增加</text><text class=\"muted\" x=\"48\" y=\"201.2\" font-size=\"11\" text-anchor=\"end\">喪失</text><text class=\"muted\" x=\"48\" y=\"138\" font-size=\"11\" text-anchor=\"end\">0</text><text class=\"muted\" x=\"60\" y=\"38.39999999999999\" font-size=\"11\">臨床附著變化</text><line class=\"ink line\" x1=\"56\" y1=\"159.5\" x2=\"322\" y2=\"65.5\" stroke-width=\"2\"/><line class=\"accent line\" x1=\"63.599999999999994\" y1=\"218.0\" x2=\"287.79999999999995\" y2=\"52.8\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><circle class=\"ink\" cx=\"128.2\" cy=\"134\" r=\"4\"/><circle class=\"accent\" cx=\"177.6\" cy=\"134\" r=\"4\"/><text x=\"128.2\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"700\">2.9</text><text class=\"accent\" x=\"181.60000000000002\" y=\"152\" font-size=\"12\" font-weight=\"700\">4.2</text><circle class=\"gold\" cx=\"223.2\" cy=\"100.4\" r=\"4\"/><text class=\"muted\" x=\"217.20000000000002\" y=\"90.4\" font-size=\"11\" text-anchor=\"end\">5.4（轉引）</text><text x=\"322\" y=\"89.5\" font-size=\"12\" text-anchor=\"end\">SRP</text><text class=\"accent\" x=\"293.79999999999995\" y=\"56.8\" font-size=\"12\">SRP＋MWF</text></svg>",
+      "caption": "原創示意，不是依原文數據重繪。橫軸為治療前探測深度，縱軸為臨床附著變化；兩條直線與零線的交點取摘要的 2.9 與 4.2 毫米，5.4 毫米取自 Choi 等（2015）的轉述（該文只說深度超過 5.4 毫米時手術附著增加較多），畫成兩線交點是本文推論，斜率為任意示意值。",
+      "credit": "本報原創圖解"
+    },
+    {
+      "type": "p",
+      "text": "在附著水準之外，摘要還報告兩件事。第一，主動治療與癒合後得到的探測深度與附著水準，在 12 與 24 個月的複查中「大致不變」；這段維護期間，病人每 3 個月接受一次仔細的專業潔牙。第二，研究者寫道，病人在癒合期與維護期維持的口腔衛生水準，對最終的探測深度與附著水準來說，比最初用哪一種治療更關鍵。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "摘要給了臨界值和顯著性，但沒有給效果大小：每個深度組平均得到或失去多少毫米、手術與非手術的差距有多大，都不在摘要裡。讀者若要引用「手術在深袋多得多少附著」，必須回到原文表格。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "限制：樣本小、單位是位點、測量本身會動"
+    },
+    {
+      "type": "p",
+      "text": "第一，樣本只有 15 人。半口設計讓同一個人當自己的對照，能抵銷吸菸、全身狀況、自我潔牙習慣等個人因素，這是它的長處；代價是兩側共用同一張嘴，手術側與非手術側的口腔衛生、回診處理並不獨立。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "第二，臨界探測深度是位點層級的迴歸結果。同一個人的幾十個位點彼此相關，若以位點為獨立樣本計算，信賴區間會顯得比實際窄。摘要沒有說明怎麼處理這種群聚結構。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "第三，迴歸向平均值（regression to the mean）。以治療前的探測深度分組，本身就會讓測量誤差偏大的位點落到兩端：基線偶然量得偏深的位點，複查時傾向「變淺、得到附著」；偶然量得偏淺的，傾向「變深、失去附著」。即使治療完全無效，「淺袋失附著、深袋得附著」的斜線也會出現一部分。這不否定研究結論，但臨界值的精確位置可能受到影響。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "第四，探針量到的不完全是組織學附著。發炎的組織讓探針穿得更深，消炎後組織較緊，同樣的力量探不到那麼深；所謂「附著增加」有一部分可能是組織張力改變，而不是新的結締組織附著。翻瓣後的牙齦退縮與邊緣骨重塑，也可能是淺袋手術側失去附著的原因之一。這些機轉本文是依一般探測原理推想，摘要未討論。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "第五，外推性。癒合期每 2 週一次專業潔牙，維護期每 3 個月一次，這是研究條件下的高強度照護。一般診所的病人很難複製；臨界值換到照護較鬆的情境，未必是同一個數字。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "後來的研究：技術不是重點，清創品質才是"
+    },
+    {
+      "type": "p",
+      "text": "[Lindhe 等（1984）](https://doi.org/10.1111/j.1600-051x.1984.tb01344.x)由同一組作者發表 5 年追蹤。依摘要，主動治療後 6 個月每 2 週專業潔牙，接下來 18 個月每 12 週回診，24 個月後放寬為每 4–6 個月，且只做口腔衛生指導與齦上潔牙，不再做齦下器械治療。這套時程與 1982 年的設計前段相同，但摘要沒有寫人數，是否為同一批病人，本文無法確認。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "這篇的結論比 1982 年更進一步。自我口腔衛生好的病人，5 年間很少出現復發；口腔衛生差的病人，有較多位點繼續失去附著。對初始深度超過 3 毫米、且各次複查都無菌斑的位點，非手術與手術治療的反應「同樣好」。作者據此提出：牙周治療的關鍵決定因素不是用手術或非手術去除齦下感染，而是根面清創的品質。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "[Badersten、Nilvéus 與 Egelberg（1984）](https://doi.org/10.1111/j.1600-051x.1984.tb01309.x)從非手術這一側提供對照。依摘要，16 名重度牙周炎病人的門牙、犬齒與小臼齒（探測深度最深到 12 毫米）只接受菌斑控制與齦上、齦下清創，基線有 305 個探測深度 ≥ 7 毫米的位點，24 個月時這類位點剩 43 個（兩數相除約 14%，本文計算）。作者的結論是：找不到某個初始深度，超過它非手術治療就不再有效。這項研究沒有納入臼齒。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "[Heitz-Mayfield 等（2002）](https://doi.org/10.1034/j.1600-051x.29.s3.5.x)的系統性回顧把問題交給統合分析。依摘要，他們從 589 篇摘要篩出 6 篇至少追蹤 12 個月的隨機對照試驗，比較手術與非手術治療慢性牙周炎，結果依初始深度分成三層（見下表）。方向與 1982 年一致：淺袋手術造成較多附著喪失，中等深度 SRP 得到較多附著，深袋手術在探測深度減少與附著增加上略占優勢。",
+      "tag": "史實"
+    },
+    {
+      "type": "table",
+      "title": "12 個月時手術與非手術治療的差異（Heitz-Mayfield 等 2002，依摘要）",
+      "head": [
+        "初始探測深度",
+        "探測深度減少",
+        "臨床附著",
+        "較有利的一方"
+      ],
+      "rows": [
+        [
+          "1–3 mm",
+          "—",
+          "非手術少喪失 0.51 mm（95% CI 0.29–0.74）",
+          "非手術"
+        ],
+        [
+          "4–6 mm",
+          "手術多減少 0.35 mm（0.23–0.47）",
+          "SRP 多增加 0.37 mm（0.26–0.49）",
+          "看指標而定"
+        ],
+        [
+          "> 6 mm",
+          "手術多減少 0.58 mm（0.38–0.79）",
+          "手術多增加 0.19 mm（0.04–0.35）",
+          "手術"
+        ]
+      ],
+      "caption": "數字為加權平均差（weighted mean difference, WMD）與 95% 信賴區間，依該文摘要整理；1–3 mm 層的探測深度差異摘要未報告。"
+    },
+    {
+      "type": "p",
+      "text": "[Sanz 等（2020）](https://doi.org/10.1111/jcpe.13290)的歐洲牙周病學會（European Federation of Periodontology, EFP）S3 臨床指引，則把問題的位置換了。指引採階段式治療：先做行為與齦上菌斑控制，再做齦下器械治療，複評後才針對殘留牙周袋考慮手術。依指引全文，第 3 階段的建議 3.1 是：Stage III 牙周炎在完成前兩階段後，殘留探測深度 ≥ 6 毫米者，建議做翻瓣清創手術（access flap surgery）；4–5 毫米者，建議重複齦下器械治療。證據為 13 篇隨機對照試驗、500 名病人，偏差風險中到高，建議等級 B。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "指引整理的數字也和 1982 年的方向相符：初始深位點（≥ 6 毫米），翻瓣在 1 年時的探測深度減少多 0.67 毫米（95% CI 0.37–0.97），但附著增加沒有顯著差異；中等深度位點，齦下清創得到較多附著；初始 ≤ 4 毫米的位點，翻瓣造成顯著較多的附著喪失。需要再治療的比例，齦下清創組為 8%–29%，翻瓣組為 0%–14%。",
+      "tag": "史實"
+    },
+    {
+      "type": "h",
+      "text": "今天怎麼讀：證明了深度門檻，沒有給出手術指徵"
+    },
+    {
+      "type": "p",
+      "text": "這篇論文證明的事情可以說得很精確：在 15 名中度牙周病病人、高強度回診照護的條件下，治療對附著的影響取決於初始探測深度；淺袋治療會失去附著，深袋才會得到附著，而翻瓣手術的這個門檻（4.2 毫米）比只做 SRP（2.9 毫米）更深。它也報告了治療方式之外的另一個變因：病人自己維持的口腔衛生。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "它沒有證明的事也一樣清楚。臨界探測深度是一群位點的迴歸平均，不是單一位點的預測；它是 1982 年把手術當作初始治療之一的比較，而不是今天「先做非手術、複評後處理殘留袋」的流程。EFP 指引的 6 毫米門檻，針對的是非手術治療後仍殘留的牙周袋，和 1982 年的 4.2 毫米不是同一個問題的答案。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "引用時也要留意版本。同一題名在 1982 年 11–12 月另刊於《Compendium of Continuing Education in Dentistry》（第 3 卷第 6 期，421–430 頁），作者順序不同。2022 年 El Mobadder 等人的一篇研究把這個概念寫成「大於 5 毫米的牙周袋」，所引書目把 Compendium 的卷期配上 JCP 的 DOI。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "從 JCP 版的摘要看，原意是一個附著由喪失轉為增加的門檻，兩個數值分別是 2.9 與 4.2 毫米，不是「5 毫米以上的深袋」。概念被反覆轉引後，數字與定義都可能走樣；要用這個詞，最好回到 1982 年 JCP 的原文。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "對臨床思考，這篇論文留下一個不分年代都成立的提醒：治療本身有代價，對淺的位點做器械治療或翻瓣，可能換來附著喪失。它沒有說的是，某個毫米數以上就該開刀。後來的追蹤把重點從術式移向清創品質與病人的菌斑控制；同一組作者在 1984 年的摘要中提出，關鍵可能不在手術或非手術，而在根面清創做得好不好。",
+      "tag": "本文讀法"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lindhe J, Socransky SS, Nyman S, Haffajee A, Westfelt E. “Critical probing depths” in periodontal therapy. J Clin Periodontol 1982;9(4):323–336",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1982-07",
+      "url": "https://doi.org/10.1111/j.1600-051x.1982.tb02099.x",
+      "note": "原論文；全文需訂閱未能取得，依摘要（摘要於 400 字處截斷）"
+    },
+    {
+      "title": "PubMed 書目與摘要：“Critical probing depths” in periodontal therapy（PMID 6764782）",
+      "publisher": "National Library of Medicine（E-utilities efetch）",
+      "date": "1982-07",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/6764782/",
+      "note": "核對作者、卷期頁 9(4):323–336、DOI；PMID 由 Europe PMC 依題名查得後以 efetch 回查標題一致；PubMed 刊期標 1982 年 7 月，Crossref 標 1982 年 8 月"
+    },
+    {
+      "title": "Crossref 書目紀錄：10.1111/j.1600-051x.1982.tb02099.x",
+      "publisher": "Crossref",
+      "date": "1982-08",
+      "url": "https://api.crossref.org/works/10.1111/j.1600-051x.1982.tb02099.x",
+      "note": "核對作者順序與卷期頁"
+    },
+    {
+      "title": "Lindhe J, Nyman S, Westfelt E, Socransky SS, Haffajee A. Critical probing depths in periodontal therapy. Compend Contin Educ Dent 1982;3(6):421–430",
+      "publisher": "PubMed（PMID 6759025）",
+      "date": "1982-11",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/6759025/",
+      "note": "同題名另刊版本；只有書目，無摘要"
+    },
+    {
+      "title": "Ramfjord SP, Nissle RR. The modified Widman flap. J Periodontol 1974;45(8):601–607",
+      "publisher": "Journal of Periodontology",
+      "date": "1974-08",
+      "url": "https://doi.org/10.1902/jop.1974.45.8.2.601",
+      "note": "術式出處；只核對書目（PMID 4529305），未讀內文"
+    },
+    {
+      "title": "Choi YM, Lee JY, Choi J, Joo JY. Effect of root planing on the reduction of probing depth and the gain of clinical attachment depending on the mode of interproximal bone resorption. J Periodontal Implant Sci 2015;45(5):184–189",
+      "publisher": "Journal of Periodontal & Implant Science",
+      "date": "2015-10",
+      "url": "https://doi.org/10.5051/jpis.2015.45.5.184",
+      "note": "開放全文（PMC4635440）；轉引臨界探測深度的定義、± 範圍與約 5.4 mm 交叉點；PMID 26550527"
+    },
+    {
+      "title": "Lindhe J, Westfelt E, Nyman S, Socransky SS, Haffajee AD. Long-term effect of surgical/non-surgical treatment of periodontal disease. J Clin Periodontol 1984;11(7):448–458",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1984-08",
+      "url": "https://doi.org/10.1111/j.1600-051x.1984.tb01344.x",
+      "note": "依摘要（PMID 6378986）"
+    },
+    {
+      "title": "Badersten A, Nilveus R, Egelberg J. Effect of nonsurgical periodontal therapy. II. Severely advanced periodontitis. J Clin Periodontol 1984;11(1):63–76",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1984-01",
+      "url": "https://doi.org/10.1111/j.1600-051x.1984.tb01309.x",
+      "note": "依摘要（PMID 6363463）"
+    },
+    {
+      "title": "Heitz-Mayfield LJA, Trombelli L, Heitz F, Needleman I, Moles D. A systematic review of the effect of surgical debridement vs non-surgical debridement for the treatment of chronic periodontitis. J Clin Periodontol 2002;29(Suppl 3):92–102",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2002-12",
+      "url": "https://doi.org/10.1034/j.1600-051x.29.s3.5.x",
+      "note": "依摘要（PMID 12787211）"
+    },
+    {
+      "title": "Sanz M, Herrera D, Kebschull M, Chapple I, Jepsen S, Berglundh T, Sculean A, Tonetti MS, et al. Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline. J Clin Periodontol 2020;47(Suppl 22):4–60",
+      "publisher": "Journal of Clinical Periodontology（Wiley，CC BY-NC）",
+      "date": "2020-07-27",
+      "url": "https://doi.org/10.1111/jcpe.13290",
+      "note": "讀開放全文（PMC7891343）：階段式治療、建議 3.1 與其證據摘要；PMID 32383274"
+    },
+    {
+      "title": "El Mobadder M, Nammour S, Namour M, Namour A, Grzech-Leśniak K. Disinfection potential of 980 nm diode laser and hydrogen peroxide (3%) in “critical probing depths” periodontal pockets: retrospective study. Life 2022;12(3):370",
+      "publisher": "Life（MDPI，CC BY）",
+      "date": "2022-03-03",
+      "url": "https://doi.org/10.3390/life12030370",
+      "note": "開放全文（PMC8953835）；只用於說明引用時的版本混淆；PMID 35330121"
+    },
+    {
+      "title": "File:Dr ScharpCam IntraOral Camera Perio Probe.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2012-10-12",
+      "url": "https://commons.wikimedia.org/wiki/File:Dr_ScharpCam_IntraOral_Camera_Perio_Probe.jpg",
+      "note": "頭圖，CC BY-SA 3.0"
+    }
+  ]
+}
