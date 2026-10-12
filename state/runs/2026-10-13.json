@@ -18,5 +18,10 @@
       "tactics"
     ],
     "note": "完成 civilization（鄂圖曼蒂瑪爾騎兵）與 fiction（戲劇反諷），兩篇皆經審稿修正後推送；validate 無 ERROR"
+  },
+  "3": {
+    "finished_at": "2026-10-13T02:58:22+08:00",
+    "missing": [],
+    "note": "寫完並推送 literature（巴托比）、tactics（倒三角回傳）、football 初稿（巴薩赴伊斯坦堡）；三篇皆經審稿修正，validate 全刊無 ERROR；萊萬特對塞維亞等三場留給第 4 班補結果"
   }
 }
