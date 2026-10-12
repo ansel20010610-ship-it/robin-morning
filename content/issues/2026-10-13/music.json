@@ -1,0 +1,359 @@
+{
+  "column": "music",
+  "date": "2026-10-13",
+  "title": "引子停在一個不和諧音：蕭邦《第一號敘事曲》",
+  "dek": "七小節的引子停在不和諧的降 E，德國版還把它改掉。本文以齊瑪曼 1987 年的錄音，從初版樂譜一路聽到尾聲。",
+  "topic_key": "music:chopin-op23",
+  "updated_at": "2026-10-13T01:01:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "portrait",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Fr%C3%A9d%C3%A9ric_Chopin_-_d%27apr%C3%A8s_Pierre-Roch_Vigneron_-_btv1b84164722.jpg/1280px-Fr%C3%A9d%C3%A9ric_Chopin_-_d%27apr%C3%A8s_Pierre-Roch_Vigneron_-_btv1b84164722.jpg",
+    "width": 1280,
+    "height": 1711,
+    "alt": "黑白石版畫半身肖像，印在泛白的紙上。一名年輕男子頭髮捲曲蓬鬆，臉微微偏向左側，直視前方；他穿深色外套與背心，白色高領外繫著深色領巾，身後是一圈深色的網點陰影。紙張左上角有手寫體標題「Le Pianiste, 2e Année, No 23」，肖像下方印著「CHOPIN」，旁邊有兩枚紅色館藏章。",
+    "caption": "蕭邦肖像，石版畫，依 Pierre-Roch Vigneron 的原作製版，紙上標著「Le Pianiste, 2e Année, No 23」，由 Vaugirard 的 J. Delacour 印刷廠印製。Commons 與法國國家圖書館將年代標為 1835 年，與國家蕭邦研究院推定《第一號敘事曲》定稿的 1834／1835 年間相近。",
+    "credit": "依 Pierre-Roch Vigneron 原作；法國國家圖書館音樂部藏（Est.Chopin002），經 Gallica 收錄於 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr%C3%A9d%C3%A9ric_Chopin_-_d%27apr%C3%A8s_Pierre-Roch_Vigneron_-_btv1b84164722.jpg",
+    "made": "1835"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "曲子開頭沒有和弦。左右手隔著八度齊奏同一條線，從低音的 C 起步，在強音上用 pesante（沉重地）往上爬。這條線勾出的是降 A 大調和弦的第一轉位；對 G 小調來說，降 A 大調是拿坡里和弦，它的根音降 A 只比主音 G 高半音。"
+    },
+    {
+      "type": "p",
+      "text": "七小節之後，引子停在左手一個由 D、G、降 E 疊成的和弦上，最上面的降 E 和底下的 D 隔著一個八度加半音（小九度），是不和諧音。蕭邦（Fryderyk Chopin）就讓它懸在那裡，接著換成 6/4 拍，標 Moderato，第一主題才開始。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這個降 E 不是每份樂譜都有。英文維基百科記載，手稿最上面寫的是降 E，Karl Klindworth 編的版本則另附一個 D、G、D 的替代寫法。波蘭音樂學者 Mieczysław Tomaszewski 為國家蕭邦研究院（Narodowy Instytut Fryderyka Chopina）撰寫的作品解說說得更直接：德國版把這個不和諧的降 E 改成了協和的 D。他的讀法是，這個降 E「並不預告好結局」（本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "本文推想，這一個音的差別，決定了聽者是帶著疑問、還是帶著答案進入接下來的故事。"
+    },
+    {
+      "type": "music",
+      "composer": "蕭邦（Fryderyk Chopin）",
+      "work": "G 小調第一號敘事曲，作品 23",
+      "work_original": "Ballade No. 1 in G minor, Op. 23",
+      "composed": "初稿約 1831 年，定稿約 1834–1835 年（傳統說法為維也納起稿、巴黎完成）；1836 年出版",
+      "performers": "克里斯提安・齊瑪曼（Krystian Zimerman），鋼琴",
+      "recording": "Deutsche Grammophon 423 090-2（《4 Balladen · Barcarolle · Fantasie》），1987 年 7 月錄音於德國比勒費爾德 Rudolf-Oetker-Halle 大廳，1988 年發行",
+      "duration": "約 9–10 分鐘（本錄音 9 分 33 秒）",
+      "movements": [
+        "單樂章：Largo — Moderato — Presto con fuoco"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Chopin Ballade No. 1 in G minor Op. 23 Krystian Zimerman",
+        "artist_hint": "Zimerman",
+        "track_filter": [
+          "Ballade No. 1",
+          "Op. 23"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "本期指定的錄音是齊瑪曼（Krystian Zimerman）為德意志留聲機（Deutsche Grammophon）錄的蕭邦四首敘事曲，加上《船歌》與《F 小調幻想曲》。據 Discogs 著錄的原版 CD 內頁資料，錄音在 1987 年 7 月於德國比勒費爾德（Bielefeld）的 Rudolf-Oetker-Halle 大廳進行，製作人 Hanno Rinke，錄音監製兼平衡工程師 Helmut Burk；"
+    },
+    {
+      "type": "p",
+      "text": "這張唱片的原版 CD 編號 423 090-2，1988 年發行，《第一號敘事曲》在第 1 軌，長 9 分 33 秒。"
+    },
+    {
+      "type": "p",
+      "text": "選它有三個理由，都是可以核對的事。第一，齊瑪曼 1956 年生於波蘭札布熱（Zabrze），1975 年贏得第九屆蕭邦國際鋼琴大賽首獎，錄這張唱片時 30 歲。第二，四首敘事曲依序排在第 1 到第 4 軌，聽完第一號可以直接接著聽題獻給舒曼的第二號。第三，這份錄音至今仍列在廠牌目錄上，2017 年還出過重新製作母帶的黑膠版。至於他怎麼處理開頭那個降 E，請讀者自己聽，本報不代替耳朵下結論。"
+    },
+    {
+      "type": "h",
+      "text": "維也納起稿、巴黎定稿：1836 年在倫敦、巴黎、萊比錫出版"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1830 年 11 月 2 日，20 歲的蕭邦離開華沙，原本打算經維也納前往義大利。同月，華沙爆發十一月起義，他困在維也納；1831 年 9 月在前往巴黎的路上，得知起義已被鎮壓。他在 1831 年 10 月 5 日抵達巴黎，此後再也沒有回到波蘭。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這首敘事曲寫於何時，沒有確切文件。國家蕭邦研究院的作品資料把初稿標為「1831 年（？）」、定稿標為「1834／1835 年（？）」，兩個年份都帶問號。Tomaszewski 說，能確定的只有它在 1833 年以前已經寫成、三年後出版；傳記作者的傳統說法把它和維也納那段日子連在一起，推測在維也納起稿、在巴黎完成。他也指出，這首曲子的氣質更接近同時期的《B 小調第一號詼諧曲》和最早的夜曲、練習曲，和蕭邦初到巴黎時寫的炫技作品沒有共同點。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1836 年，這首曲子由三家出版商分別在巴黎、萊比錫、倫敦印行：巴黎的 Maurice Schlesinger（版號 M.S. 1928）、萊比錫的布萊特科普夫與黑特爾（Breitkopf & Härtel，版號 5706）、倫敦的 Wessel & Co.（版號 1644）。英國版另外加了「La Favorite」的標題。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "三地並不是同時出版。「蕭邦初版線上」（Chopin's First Editions Online，CFEO）的著錄是：倫敦版 1836 年 5 月 30 日登記，巴黎版 1836 年 7 月登記，萊比錫版 1836 年 9 月出版。法國國家圖書館所藏的一份巴黎版（館藏號 Ac.p. 2677）書名頁上有出版商簽章，另有一行註記「Déposé à la Direction Juillet 1836 - No 135」；這一冊不是本文下面兩張圖所用的那一冊。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Ballade_pour_le_piano_-_Op._23_-_par_F._Chopin_%3B_d%C3%A9di%C3%A9e_%C3%A0_Mr._le_Baron_de_Stockhausen_-_btv1b52500440h_%2801_of_18%29.jpg/1280px-Ballade_pour_le_piano_-_Op._23_-_par_F._Chopin_%3B_d%C3%A9di%C3%A9e_%C3%A0_Mr._le_Baron_de_Stockhausen_-_btv1b52500440h_%2801_of_18%29.jpg",
+      "width": 1280,
+      "height": 1661,
+      "alt": "泛黃的樂譜書名頁，紙面有零星褐色斑點。中央以花體與裝飾線條排出「Ballade / pour le Piano / dédiée à / M.r Le B.on de Stockhausen / PAR / F. CHOPIN」，左下印「Op: 23」，右下印「Pr: 7 f. 50 c.」。頁面下方一行小字列出巴黎、萊比錫、倫敦三家出版商；右上角有紅色圓形館藏章，左下角有鉛筆寫的館藏號。",
+      "caption": "巴黎 Maurice Schlesinger 版的書名頁：題獻給「史托克豪森男爵先生」，下方同時印出巴黎 Schlesinger、萊比錫布萊特科普夫與黑特爾、倫敦 Wessel 三家出版商。此本為法國國家圖書館藏本（館藏號 RESF-980 (2,10)），經 Gallica 數位化；據 CFEO 著錄，這一冊是 1836 年 8 月登記的巴黎版修訂再刷（23–1a-Sm），書名頁有後來接手的出版商 Brandus 的簽章痕跡，同一書名頁沿用到約 1860 年，因此實際印行年份無法確定。",
+      "credit": "Maurice Schlesinger 出版（巴黎）；法國國家圖書館藏，經 Gallica 收錄於 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ballade_pour_le_piano_-_Op._23_-_par_F._Chopin_;_d%C3%A9di%C3%A9e_%C3%A0_Mr._le_Baron_de_Stockhausen_-_btv1b52500440h_(01_of_18).jpg",
+      "made": "1836–約 1860"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "受題獻的史托克豪森男爵（Nathaniel von Stockhausen）是漢諾威王國駐法國大使。據 Tomaszewski 的解說，男爵和夫人都跟蕭邦上鋼琴課，他稱男爵是蕭邦當時的朋友之一。"
+    },
+    {
+      "type": "h",
+      "text": "1836 年秋天的萊比錫：舒曼說這是他最喜歡的一首"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1836 年，蕭邦從德勒斯登轉往萊比錫，拜訪舒曼（Robert Schumann），舒曼收到了他的一首敘事曲；英文維基百科依 Zamoyski 的蕭邦傳記，認定是這首 G 小調敘事曲。舒曼在那年秋天寫信給友人、作曲家多恩（Heinrich Dorn），提到這次見面。下面這段依 Tomaszewski 文中的英譯轉引，中文為本文自譯："
+    },
+    {
+      "type": "quote",
+      "original": "It seems to me to be the work closest to his genius (though not the most brilliant).",
+      "text": "在我看來，這是最接近他天才的一部作品（雖然不是最炫目的）。",
+      "cite": "舒曼致多恩書信，1836 年秋；據 Mieczysław Tomaszewski 為國家蕭邦研究院所撰解說中的英譯轉引（本文自譯）"
+    },
+    {
+      "type": "p",
+      "text": "同一封信接著寫，舒曼告訴蕭邦，在他寫過的所有作品裡，這首最打動自己；據舒曼轉述，蕭邦沉默了很久，才加重語氣回答："
+    },
+    {
+      "type": "quote",
+      "original": "I am glad, because I too like it the best, it is my dearest work.",
+      "text": "我很高興，因為我也最喜歡它，這是我最珍愛的作品。",
+      "cite": "舒曼致多恩書信中轉述的蕭邦答話；據 Tomaszewski 英譯轉引（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Tomaszewski 提醒，兩人談的是哪一首敘事曲並非沒有疑問。《F 大調第二號敘事曲》當時已有初稿，後來題獻給舒曼，但要到 1839 年在馬約卡島才定稿、1840 年出版，1836 年在萊比錫聽到的是較早、不同的版本。他的判斷是，一切跡象都指向 G 小調這首。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "常聽到的另一個說法是，這首曲子的靈感來自波蘭詩人密茨凱維奇（Adam Mickiewicz）的敘事詩。Tomaszewski 的說明是：蕭邦在萊比錫那段時間顯然對舒曼說過，他的敘事曲受到密茨凱維奇敘事詩的啟發，舒曼後來在評論《第二號敘事曲》時明白寫了這件事。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "但他也認為，把第一號對應到密茨凱維奇長詩《康拉德・華倫洛德》（Konrad Wallenrod）的種種嘗試，都是「沒有意義、沒有結果」的（本文自譯）。依他的說法，蕭邦借的是敘事詩這種文體的語氣：講一件過去發生的、帶著奇異色彩的事，而不是某一首詩的情節。"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：慢引子、兩個主題、倒過來的再現、急板尾聲"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Ballade_pour_le_piano_-_Op._23_-_par_F._Chopin_%3B_d%C3%A9di%C3%A9e_%C3%A0_Mr._le_Baron_de_Stockhausen_-_btv1b52500440h_%2804_of_18%29.jpg/1280px-Ballade_pour_le_piano_-_Op._23_-_par_F._Chopin_%3B_d%C3%A9di%C3%A9e_%C3%A0_Mr._le_Baron_de_Stockhausen_-_btv1b52500440h_%2804_of_18%29.jpg",
+      "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Ballade_pour_le_piano_-_Op._23_-_par_F._Chopin_%3B_d%C3%A9di%C3%A9e_%C3%A0_Mr._le_Baron_de_Stockhausen_-_btv1b52500440h_%2804_of_18%29.jpg/3840px-Ballade_pour_le_piano_-_Op._23_-_par_F._Chopin_%3B_d%C3%A9di%C3%A9e_%C3%A0_Mr._le_Baron_de_Stockhausen_-_btv1b52500440h_%2804_of_18%29.jpg",
+      "width": 1280,
+      "height": 1681,
+      "alt": "泛黃的鋼琴樂譜頁，上下兩行譜表一組，共五組。左上角印著頁碼 2 與「F. CHOPIN Op: 23. Ballade.」，第一組譜表左邊印「LARGO」，並有 f、pesante、dim. 等記號；第二組譜表右上方印「Moderato.」，拍號改為 6/4，下方有踏板記號。頁面最下方中央印著「M. S. 1928.」。",
+      "caption": "同一冊巴黎版（1836 年 8 月登記的修訂再刷）的樂譜第一頁（頁碼 2）。頂端是七小節的 Largo 引子，第二組譜表後段換成 6/4 拍、標 Moderato，第一主題從這裡開始；頁底的「M. S. 1928」就是 Schlesinger 的版號。法國國家圖書館藏本，經 Gallica 數位化。",
+      "credit": "Maurice Schlesinger 出版（巴黎）；法國國家圖書館藏，經 Gallica 收錄於 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ballade_pour_le_piano_-_Op._23_-_par_F._Chopin_;_d%C3%A9di%C3%A9e_%C3%A0_Mr._le_Baron_de_Stockhausen_-_btv1b52500440h_(04_of_18).jpg",
+      "made": "1836–約 1860"
+    },
+    {
+      "type": "detail",
+      "of": "f2",
+      "region": [
+        0.1,
+        0.08,
+        0.82,
+        0.35
+      ],
+      "position": "頁面上方約三分之一：前兩組譜表",
+      "caption": "引子的七小節：第一組譜表是兩手相隔八度齊奏的上行線，標 f 與 pesante，接著 dim.；第二組譜表轉為 p，停在一個琶音記號的和弦上，隨後雙縱線、6/4 拍、Moderato。"
+    },
+    {
+      "type": "table",
+      "title": "《第一號敘事曲》的段落",
+      "head": [
+        "段落",
+        "聽什麼",
+        "調性、拍子或標記"
+      ],
+      "rows": [
+        [
+          "引子（第 1–7 小節）",
+          "兩手八度齊奏的上行線，最後停在含降 E 的不和諧和弦",
+          "Largo，4/4；從降 A 大調（拿坡里和弦）開口"
+        ],
+        [
+          "第一主題（約第 8 小節起）",
+          "起伏的歌唱旋律，接著出現新的動機，音樂轉趨戲劇化",
+          "Moderato，6/4，G 小調"
+        ],
+        [
+          "第二主題（約第 68 小節起）",
+          "轉入大調，起初很輕",
+          "降 E 大調"
+        ],
+        [
+          "發展",
+          "兩個主題移到別的調上變形，第二主題一度散發力量",
+          "A 小調、A 大調"
+        ],
+        [
+          "再現",
+          "兩個主題回到原調，但順序倒過來：先第二、後第一",
+          "降 E 大調 → G 小調"
+        ],
+        [
+          "尾聲",
+          "一個重擊的和弦開場，拿坡里和聲再次出現，最後以雙手八度音階衝下鍵盤",
+          "Presto con fuoco，2/2"
+        ]
+      ],
+      "caption": "依英文維基百科〈Ballade No. 1 (Chopin)〉與 Mieczysław Tomaszewski 的作品解說整理；小節數是約略位置，以樂譜為準。"
+    },
+    {
+      "type": "p",
+      "text": "**引子。** 先聽兩隻手是不是同一條線。Largo 的七小節沒有伴奏，只有一個聲部被八度加厚。到第 7 小節的和弦，注意最上面那個音：照手稿與巴黎版，它是降 E，聽起來沒有「落地」。"
+    },
+    {
+      "type": "p",
+      "text": "**第一主題。** 拍子改成 6/4 之後，旋律在 G 小調上一句一句起伏。Tomaszewski 認為 6/4 拍這種規律的搖動，是「敘事的語氣」不可分割的一部分。英文維基百科則指出，其他三首敘事曲都用 6/8 拍，第一號用 6/4 拍是它與眾不同之處。主題說完之後，Tomaszewski 指出會有一個新的主題（或者說動機）進來，局面帶上戲劇性的重音，「彷彿過去的事忽然成了現在」（本文自譯）。"
+    },
+    {
+      "type": "p",
+      "text": "**第二主題。** 調性轉到降 E 大調，力度很輕。Tomaszewski 形容它「起初輕微……可以說如夢一般」（本文自譯）。這裡值得記住它的樣子，因為後面它會換一副面孔出現。"
+    },
+    {
+      "type": "p",
+      "text": "**發展與再現。** 兩個主題移到 A 小調與 A 大調，Tomaszewski 說，那個輕微的第二主題會以「散發力量」的面貌出現，主題也會有升到 appassionato（激情地）的時刻。接著是全曲最特別的安排：再現時兩個主題回到原調，但順序倒過來，先是第二主題，最後才是 G 小調的第一主題。英文維基百科的說法是，這首曲子同時帶有奏鳴曲式和變奏曲的特徵。"
+    },
+    {
+      "type": "p",
+      "text": "**尾聲。** 一個重擊的和弦把拍子切成 2/2，標 Presto con fuoco（火熱的急板）。英文維基百科記載，拿坡里和聲在這裡再次出現，最後是雙手八度的音階一路衝下鍵盤。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：開頭讓全曲從降 A 大調開口的那個和聲，到了尾聲又回來，等於把第一句話在結束前再說一次，只是這次沒有停下來的空間。"
+    },
+    {
+      "type": "h",
+      "text": "延伸：電影裡的這首曲子，與唱片的下一軌"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這首敘事曲也進過電影。依英文維基百科，羅曼・波蘭斯基（Roman Polański）2002 年的《戰地琴人》（The Pianist）裡，主角斯皮爾曼（Władysław Szpilman）在德軍軍官霍森菲爾德（Wilm Hosenfeld）面前彈的正是這首曲子；電影原聲中的演奏者是波蘭鋼琴家 Janusz Olejniczak。"
+    },
+    {
+      "type": "callout",
+      "label": "延伸聆聽",
+      "text": "同一張齊瑪曼唱片的第 2 軌是《F 大調第二號敘事曲》，作品 38，也就是蕭邦後來題獻給舒曼、1840 年出版的那一首。舒曼在評論這首曲子時，寫下了蕭邦提到密茨凱維奇的那段話。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ballade in G minor, Op. 23",
+      "publisher": "Narodowy Instytut Fryderyka Chopina（Mieczysław Tomaszewski 撰，原為波蘭廣播二台《蕭邦全集》節目解說）",
+      "url": "https://chopin.nifc.pl/en/chopin/kompozycja/74",
+      "note": "未標發布日期；初稿與定稿年代、題獻與史托克豪森夫婦學琴、舒曼致多恩書信英譯、《第二號敘事曲》1839 年定稿與 1840 年出版、密茨凱維奇與《康拉德・華倫洛德》、德國版改降 E 為 D、6/4 拍與段落描述、三家初版出版商；2026-10-12 查閱"
+    },
+    {
+      "title": "Ballade No. 1 (Chopin)",
+      "publisher": "Wikipedia",
+      "date": "2026-06-10",
+      "url": "https://en.wikipedia.org/wiki/Ballade_No._1_(Chopin)",
+      "note": "date 為查閱時所見最新修訂日期；拿坡里和弦開頭、手稿降 E 與 Klindworth 版替代寫法、第 8 與第 68 小節、發展與倒序再現、尾聲 Presto con fuoco、各段拍號、奏鳴曲式與變奏曲特徵、《戰地琴人》與 Janusz Olejniczak"
+    },
+    {
+      "title": "Frédéric Chopin",
+      "publisher": "Wikipedia",
+      "date": "2026-10-07",
+      "url": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin",
+      "note": "date 為最新修訂日期；1830 年 11 月 2 日離開華沙、十一月起義、1831 年 10 月 5 日抵達巴黎、1836 年在萊比錫把 G 小調敘事曲交給舒曼"
+    },
+    {
+      "title": "23–1-Sm：Ballade pour le Piano dédiée à M.r Le Baron de Stockhausen（Schlesinger 巴黎初版著錄）",
+      "publisher": "Chopin's First Editions Online（CFEO）",
+      "date": "2013-11-09",
+      "url": "https://chopinonline.ac.uk/media/documents/23--1-Sm.v.1.pdf",
+      "note": "date 為 PDF 建檔日期；版號 M.S. 1928、PD: 7/1836；館藏 Ac.p. 2677 書名頁有出版商簽章與註記「Déposé à la Direction Juillet 1836 - No 135」"
+    },
+    {
+      "title": "Ballade No.1, Op.23 (Chopin, Frédéric)",
+      "publisher": "IMSLP",
+      "url": "https://imslp.org/wiki/Ballade_No.1,_Op.23_(Chopin,_Fr%C3%A9d%C3%A9ric)",
+      "note": "未標發布日期；三種初版的出版商與版號（Breitkopf & Härtel 5706、Wessel & Co. 1644、Schlesinger M.S. 1928）"
+    },
+    {
+      "title": "Krystian Zimerman",
+      "publisher": "Wikipedia",
+      "date": "2026-09-16",
+      "url": "https://en.wikipedia.org/wiki/Krystian_Zimerman",
+      "note": "date 為最新修訂日期；1956 年 12 月 5 日生於札布熱、1975 年第九屆蕭邦國際鋼琴大賽首獎"
+    },
+    {
+      "title": "CHOPIN Ballades / Zimerman",
+      "publisher": "Deutsche Grammophon",
+      "date": "1988-07-08",
+      "url": "https://www.deutschegrammophon.com/en/catalogue/products/chopin-ballades-zimerman-2333",
+      "note": "廠牌目錄頁；date 為頁面所列發行日期"
+    },
+    {
+      "title": "Chopin, Krystian Zimerman – 4 Balladen · Barcarolle · Fantasie（DG 423 090-2）",
+      "publisher": "Discogs",
+      "date": "1988",
+      "url": "https://www.discogs.com/release/7258208",
+      "note": "Discogs 著錄的原版 CD 內頁資料（本文轉引）：1987 年 7 月錄於比勒費爾德 Rudolf-Oetker-Halle 大廳、製作人 Hanno Rinke、錄音監製與平衡工程師 Helmut Burk、第 1 軌 9:33"
+    },
+    {
+      "title": "Chopin, Krystian Zimerman – 4 Balladen, Barcarolle, Fantasie（DG 479 7214，黑膠重發）",
+      "publisher": "Discogs",
+      "date": "2017",
+      "url": "https://www.discogs.com/release/10166593",
+      "note": "2017 年重新製作母帶的 180 克黑膠重發版"
+    },
+    {
+      "title": "23–1a-Sm：Ballade Op. 23 巴黎 Schlesinger 版修訂再刷著錄",
+      "publisher": "Chopin's First Editions Online（CFEO）",
+      "date": "",
+      "url": "https://chopinonline.ac.uk/media/documents/23--1a-Sm_eFqAVEQ.pdf",
+      "note": "Corrected reprint of 23–1-Sm. PD: 8/1836；available with this TP until c. 1860；館藏 Rés. F. 980 (II, 10)，TP: traces of Brandus signature stamp"
+    },
+    {
+      "title": "23–1-W：Ballade Op. 23 倫敦 Wessel 版著錄",
+      "publisher": "Chopin's First Editions Online（CFEO）",
+      "date": "",
+      "url": "https://chopinonline.ac.uk/media/documents/23--1-W.v.1.pdf",
+      "note": "EFE. RD: 30/5/1836"
+    },
+    {
+      "title": "23–1-B&H：Ballade Op. 23 萊比錫 Breitkopf & Härtel 版著錄",
+      "publisher": "Chopin's First Editions Online（CFEO）",
+      "date": "",
+      "url": "https://chopinonline.ac.uk/media/documents/23--1-BH.pdf",
+      "note": "GFE. PD: 9/1836 (MlM)"
+    }
+  ]
+}
