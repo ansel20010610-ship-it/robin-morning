@@ -1,0 +1,490 @@
+{
+  "column": "civilization",
+  "date": "2026-10-13",
+  "title": "按收入出兵：鄂圖曼蒂瑪爾騎兵的帳與義務",
+  "dek": "16 世紀鄂圖曼的蒂瑪爾騎兵不領薪，靠幾個村子的稅過活，收入越高要帶的兵越多。國家怎樣用簿冊與點名管住三萬多名持有人？",
+  "topic_key": "civilization:ottoman-timar-sipahi-16c",
+  "updated_at": "2026-10-13T02:04:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "illustration",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Battle_of_Moh%C3%A1cs.jpg/1280px-Battle_of_Moh%C3%A1cs.jpg",
+    "width": 1280,
+    "height": 1978,
+    "alt": "細密畫，粉紅色點花的地面與綠色山丘上擠滿騎兵。上半部與左側是戴頭盔、披灰色鎧甲、手持長槍與旗幟的密集騎兵隊伍；畫面中下方有幾名騎手正在交鋒，其中一名纏白頭巾的騎手策馬拉弓，地上倒著人與馬。",
+    "caption": "阿里菲（Ârifî Fethullah Çelebi）《蘇萊曼之書》（Süleymannâme）中的摩哈赤會戰圖。阿里菲是宮廷的「王書作者」（şehnâmeci），這部波斯文韻文史書記事到 1555 年，是勝利一方對戰爭的描繪，著重陣勢與英勇，不是戰場紀錄。畫中鄂圖曼與匈牙利兩軍都在；本文用它看 16 世紀騎兵在會戰中的分量。",
+    "credit": "作者不詳（Commons 標 unknown）；伊斯坦堡托普卡匹皇宮博物館圖書館藏，Hazine 1517",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Battle_of_Moh%C3%A1cs.jpg",
+    "made": "16 世紀中葉（文本記事止於 1555 年；Commons 標 16 世紀）",
+    "depicts": "1526 年 8 月 29 日"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1526 年 8 月 29 日，鄂圖曼軍與匈牙利軍在摩哈赤（Mohács）平原交戰。據費里敦・埃梅金（Feridun Emecen）為《伊斯蘭百科全書》（TDV İslâm Ansiklopedisi）寫的條目，當天率先推進的部隊，由大維齊爾兼魯米利亞（Rumeli，巴爾幹）總督易卜拉欣帕夏（İbrâhim Paşa）帶領，主體是魯米利亞的西帕希（sipahi，騎兵）與一隊火槍兵。這些騎兵不領國庫薪餉。他們每個人的收入，來自帝國劃給他的一個或幾個村子。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "戰後一兩年，帝國在回曆 933–934 年（1527–1528 年）整理出一份收支帳。照這份帳，靠這種方式維生的「蒂瑪爾持有人」共 37,521 人。本文要回答的是：16 世紀鄂圖曼的一名蒂瑪爾（timar）騎兵，收入從哪裡來、有多少；他欠國家什麼；國家又靠什麼確定他真的會在春天帶著馬和盔甲出現。"
+    },
+    {
+      "type": "h",
+      "text": "定位：不能繼承的「照料」，與一套靠簿冊運轉的制度"
+    },
+    {
+      "type": "p",
+      "text": "土耳其文 timar 原意是「照料、看顧」，和 dirlik（生計）同義。鄂圖曼史學者哈利勒・伊納爾哲克（Halil İnalcık）在 2012 年出版的《伊斯蘭百科全書》第 41 冊〈Timar〉條（下稱 伊納爾哲克條目）中，把它定義為：在中央各省為支持一支騎兵與軍政階層而做的、不經繼承轉移的收入分配。國家把一塊土地上的稅收權「撥」給騎兵，土地本身仍屬國有（mîrî）。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "依伊納爾哲克，蒂瑪爾按職能分為哈斯、扎俄梅特、蒂瑪爾三類；早期蘇巴什的分配，是依他在軍階中的位置、而不是依大小，被稱作蒂瑪爾或哈斯。收入門檻方面，條目寫道：簿冊上記為 2 萬阿克切（akçe，鄂圖曼銀幣）的分配，後來才被稱作扎俄梅特（zeâmet），持有人稱 zaîm 或 subaşı，屬帶「貝伊」頭銜的指揮層；扎俄梅特經升遷累加，最高可到 10 萬阿克切；州長（sancak beyi）與總督（beylerbeyi）的「哈斯」（has）則被認為從 10 萬阿克切起算。數字並非一刀切：伊納爾哲克也舉出，1609 年前後最低的一份州長哈斯只有 96,750 阿克切。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "這套制度不是全帝國通行。伊納爾哲克條目指出，埃及、巴格達、葉門、巴斯拉、阿爾及爾等省份不分配蒂瑪爾，而是由省庫按年撥款（sâlyâneli）。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "我們靠什麼知道這些？主要是三類文書。第一是普查簿冊（tahrir defterleri）：中央派出的專員（emin）帶著書記，會同各地法官（kadı）逐村登記成年男子、耕地與應繳稅項，寫成逐戶的詳冊（mufassal），再整理成按持有人列出收入總額的摘要冊（icmal）。第二是法典（kanunnâme），通常就放在各省簿冊的開頭。第三是授予與點名的行政紀錄，加上 17 世紀官員為朝廷整理的制度說明，例如曾任簿冊庫主管的艾因・阿里（Ayn Ali）在 1607 年寫成的《鄂圖曼王朝法典》（Kavânîn-i Âl-i Osmân），以及索菲亞的阿里・查烏什（Sofyalı Ali Çavuş）的法典。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "這些文書是政府寫給自己看的，偏差也來自這裡。梅赫梅特・厄茲（Mehmet Öz）在〈Tahrir〉條（2010）中說明，簿冊上的稅額是以普查前三年的產量估出的預期值，不是實際收到的錢；阿克切的換算與各村總額由中央核定。他也記下普查時常見的情形：村民隱匿收成、離村躲避登記，持有人把登記在自己名下的農戶（raiyyet）藏起來不讓專員登記。換句話說，簿冊上的數字反映的是國家「認為」一個村該繳多少。",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "efrâd-ı nâstan bir ferd ve ebvâb-ı mahsûlâttan bir habbe cüz’î ve küllî hâric-ez-defter nesne kalmayıp",
+      "text": "人之中一人、各項收成之中一粒，無論大小，都不可留在簿冊之外。",
+      "cite": "發給各省普查官的敕令常用語，轉引自 Mehmet Öz〈Tahrir〉，TDV İslâm Ansiklopedisi，2010；本文自譯"
+    },
+    {
+      "type": "h",
+      "text": "追蹤：一個村子的稅，怎樣變成一名騎兵"
+    },
+    {
+      "type": "p",
+      "text": "伊納爾哲克條目描述，簿冊上的一個蒂瑪爾構成一個稱為「kılıç」（劍）的財政兼軍事單位，邊界和所屬村莊一致。單位內登記的農戶在法律上是這名持有人的屬民（reâyâ），他被稱為「sâhib-i arz」（土地之主）。他自己去村裡收稅，直到下一次普查重新核定為止。每個蒂瑪爾在摘要冊末尾都記一個總收入數「hâsıl」，國家就用這個數字衡量他。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "錢從哪裡來？主要是兩種。一是按戶按地課的現金稅「çift resmi」。埃梅金在〈Çift Resmi〉條（1993）中說明，一個 çift 是兩頭牛能耕的土地，依地力約 60 到 150 dönüm；法提赫・蘇丹梅赫梅德二世（Fâtih Sultan Mehmed）的法典把它解釋為農民對騎兵的勞役折現：三天勞動折 3 阿克切、一車乾草 7 阿克切、半車麥稈 7 阿克切、一車柴 3 阿克切、車運服務 2 阿克切，合計 22 阿克切。非穆斯林農民則繳另一種稅「ispence」。二是收成的什一稅（öşür），歸對耕地有權的騎兵。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "稅額並非全國一致。埃梅金寫道，1458 年梅赫梅德二世為了把安納托利亞騎兵在作戰季節以外也留在魯米利亞防備匈牙利，把安納托利亞各省的 çift resmi 提高約五成，到 30–33 阿克切；16 世紀時布爾薩（Bursa）一帶為 33，安卡拉 37，喬魯姆（Çorum）、開塞利（Kayseri）等地高達 57；魯米利亞則維持 22。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "埃梅金認為，伊斯坦堡周邊對外來墾戶只課 22 阿克切，應是為了在肥沃而人口稀少的地方鼓勵耕作、吸引移民。"
+    },
+    {
+      "type": "p",
+      "text": "錢的另一端是義務。伊納爾哲克條目引 1432 年前後已完整施行的法規：收入 1,000 到不滿 2,000 阿克切的持有人，出征時自己穿一件「cebe」（以金屬片構成的簡單護甲）；升到 2,000，要再帶一名「gulâm」（少年隨從，通常是買來或俘來的奴僕）；一般騎兵收入每多 3,000 阿克切，就要多裝備一名全副武裝的騎兵「cebelü」；收入超過 2 萬的 subaşı 以上軍官，則是每 5,000 阿克切一名。收入 5,000 的持有人須穿鎖子甲（bürüme），帶一名 cebelü、一名 gulâm 和一頂帳篷。",
+      "tag": "史實"
+    },
+    {
+      "type": "table",
+      "title": "蒂瑪爾的收入級距與出征義務",
+      "head": [
+        "每年帳面收入（阿克切）",
+        "出征時要帶的人與裝備"
+      ],
+      "rows": [
+        [
+          "1,000 至不滿 2,000",
+          "本人，穿 cebe（金屬片護甲）"
+        ],
+        [
+          "2,000",
+          "本人＋1 名 gulâm"
+        ],
+        [
+          "3,000",
+          "本人穿 bürüme（鎖子甲）＋1 名 cebelü"
+        ],
+        [
+          "5,000",
+          "本人穿 bürüme＋1 名 cebelü＋1 名 gulâm＋1 頂帳篷"
+        ],
+        [
+          "一般騎兵，每多 3,000",
+          "多 1 名 cebelü"
+        ],
+        [
+          "2 萬以上的軍官，每 5,000",
+          "1 名 cebelü"
+        ]
+      ],
+      "caption": "依 İnalcık〈Timar〉（TDV，2012）所述 15 世紀法規整理。級距之間的情形（例如 4,000 阿克切）條目沒有逐一列出，本表不補。"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，對一名小持有人來說，帳面收入不是可支配收入。馬、盔甲、隨從、路上的糧食都要自己出；伊納爾哲克條目寫明，騎兵出征必須自己帶齊裝備與食物。收入表越往上，帶的人越多，蒂瑪爾在帳面上是一筆收入，在實際上更接近一張「按收入攤派兵力」的訂單。",
+      "tag": "推論"
+    },
+    {
+      "type": "svg",
+      "title": "稅、騎兵與簿冊的流向",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 560\">\n<defs><marker id=\"ar\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10 z\" class=\"ink\"/></marker><marker id=\"ag\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10 z\" class=\"accent\"/></marker></defs>\n<g font-size=\"13\" text-anchor=\"middle\">\n<text x=\"340\" y=\"22\" class=\"muted\" font-size=\"12\">上半：錢與糧往哪裡流　下半：人與文書往哪裡走</text>\n<rect x=\"20\" y=\"40\" width=\"180\" height=\"96\" rx=\"6\" class=\"soft\"/>\n<text x=\"110\" y=\"64\" class=\"ink\">村民（reaya）</text>\n<text x=\"110\" y=\"84\" class=\"muted\" font-size=\"11\">一個「çift」約 60–150 dönüm</text>\n<text x=\"110\" y=\"102\" class=\"muted\" font-size=\"11\">繳 çift resmi（現金）</text>\n<text x=\"110\" y=\"120\" class=\"muted\" font-size=\"11\">與 öşür（收成什一）</text>\n<rect x=\"250\" y=\"40\" width=\"180\" height=\"96\" rx=\"6\" class=\"soft\"/>\n<text x=\"340\" y=\"64\" class=\"ink\">蒂瑪爾持有人</text>\n<text x=\"340\" y=\"84\" class=\"muted\" font-size=\"11\">sâhib-i arz</text>\n<text x=\"340\" y=\"102\" class=\"muted\" font-size=\"11\">直接收稅，帳面「hâsıl」</text>\n<text x=\"340\" y=\"120\" class=\"muted\" font-size=\"11\">決定他要出幾人</text>\n<rect x=\"480\" y=\"40\" width=\"180\" height=\"96\" rx=\"6\" class=\"soft\"/>\n<text x=\"570\" y=\"64\" class=\"ink\">自備出征</text>\n<text x=\"570\" y=\"84\" class=\"muted\" font-size=\"11\">馬、盔甲、糧</text>\n<text x=\"570\" y=\"102\" class=\"muted\" font-size=\"11\">依收入帶 cebelü、</text>\n<text x=\"570\" y=\"120\" class=\"muted\" font-size=\"11\">gulâm、帳篷</text>\n<line x1=\"200\" y1=\"88\" x2=\"246\" y2=\"88\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ar)\"/>\n<line x1=\"430\" y1=\"88\" x2=\"476\" y2=\"88\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ar)\"/>\n<text x=\"340\" y=\"160\" class=\"accent\" font-size=\"12\">中央國庫不經手這筆錢：稅在村裡收，在村裡變成騎兵</text>\n<line x1=\"20\" y1=\"180\" x2=\"660\" y2=\"180\" class=\"muted\" stroke=\"currentColor\" stroke-dasharray=\"4 4\"/>\n<rect x=\"20\" y=\"200\" width=\"200\" height=\"70\" rx=\"6\" class=\"paper\" stroke=\"currentColor\"/>\n<text x=\"120\" y=\"226\" class=\"ink\">普查（tahrir）</text>\n<text x=\"120\" y=\"246\" class=\"muted\" font-size=\"11\">emin＋書記＋各地 kadı</text>\n<text x=\"120\" y=\"262\" class=\"muted\" font-size=\"11\">三年平均產量估稅</text>\n<rect x=\"240\" y=\"200\" width=\"200\" height=\"70\" rx=\"6\" class=\"paper\" stroke=\"currentColor\"/>\n<text x=\"340\" y=\"226\" class=\"ink\">簿冊（defter）</text>\n<text x=\"340\" y=\"246\" class=\"muted\" font-size=\"11\">mufassal 逐戶、icmal 逐持有人</text>\n<text x=\"340\" y=\"262\" class=\"muted\" font-size=\"11\">一份存 Defterhâne</text>\n<rect x=\"460\" y=\"200\" width=\"200\" height=\"70\" rx=\"6\" class=\"paper\" stroke=\"currentColor\"/>\n<text x=\"560\" y=\"226\" class=\"ink\">授予</text>\n<text x=\"560\" y=\"246\" class=\"muted\" font-size=\"11\">tahvil tezkiresi →</text>\n<text x=\"560\" y=\"262\" class=\"muted\" font-size=\"11\">Beylikçi 發 berat</text>\n<line x1=\"220\" y1=\"235\" x2=\"236\" y2=\"235\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ar)\"/>\n<line x1=\"440\" y1=\"235\" x2=\"456\" y2=\"235\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ar)\"/>\n<rect x=\"60\" y=\"310\" width=\"140\" height=\"56\" rx=\"6\" class=\"soft\"/>\n<text x=\"130\" y=\"334\" class=\"ink\">çeribaşı</text>\n<text x=\"130\" y=\"352\" class=\"muted\" font-size=\"11\">召集同區騎兵</text>\n<rect x=\"215\" y=\"310\" width=\"140\" height=\"56\" rx=\"6\" class=\"soft\"/>\n<text x=\"285\" y=\"334\" class=\"ink\">subaşı／zaîm</text>\n<text x=\"285\" y=\"352\" class=\"muted\" font-size=\"11\">zeâmet 持有人</text>\n<rect x=\"370\" y=\"310\" width=\"140\" height=\"56\" rx=\"6\" class=\"soft\"/>\n<text x=\"440\" y=\"334\" class=\"ink\">sancak beyi</text>\n<text x=\"440\" y=\"352\" class=\"muted\" font-size=\"11\">一個 sancak</text>\n<rect x=\"525\" y=\"310\" width=\"140\" height=\"56\" rx=\"6\" class=\"soft\"/>\n<text x=\"595\" y=\"334\" class=\"ink\">beylerbeyi</text>\n<text x=\"595\" y=\"352\" class=\"muted\" font-size=\"11\">檢閱後會合御軍</text>\n<line x1=\"200\" y1=\"338\" x2=\"211\" y2=\"338\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ar)\"/>\n<line x1=\"355\" y1=\"338\" x2=\"366\" y2=\"338\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ar)\"/>\n<line x1=\"510\" y1=\"338\" x2=\"521\" y2=\"338\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ar)\"/>\n<text x=\"20\" y=\"300\" text-anchor=\"start\" class=\"muted\" font-size=\"11\">春季（約 3–4 月）集結的路線</text>\n<rect x=\"160\" y=\"410\" width=\"360\" height=\"70\" rx=\"6\" class=\"paper\" stroke=\"currentColor\"/>\n<text x=\"340\" y=\"436\" class=\"accent\">點名（yoklama）</text>\n<text x=\"340\" y=\"456\" class=\"muted\" font-size=\"11\">缺席名單送回中央 → 收回蒂瑪爾、轉給候補者</text>\n<text x=\"340\" y=\"472\" class=\"muted\" font-size=\"11\">被免者 7 年內須隨軍效力，否則降為納稅村民</text>\n<path d=\"M595 366 L595 445 L524 445\" fill=\"none\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ag)\"/>\n<path d=\"M160 445 L40 445 L40 284 L560 284 L560 274\" fill=\"none\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ag)\"/>\n<text x=\"340\" y=\"520\" class=\"muted\" font-size=\"11\">示意，不按比例。依 İnalcık〈Timar〉（TDV，2012）、Öz〈Tahrir〉（TDV，2010）、Emecen〈Çift Resmi〉（TDV，1993）整理</text>\n</g>\n</svg>",
+      "caption": "上半是資源：村民繳的稅不送到伊斯坦堡，由持有人就地收取，再轉成馬、盔甲與隨從。下半是控制：普查定出每份蒂瑪爾的帳面收入，授予憑證確定誰持有，出征點名決定誰保得住。示意，不按比例。"
+    },
+    {
+      "type": "h",
+      "text": "全帝國的帳：一半的收入，綁在騎兵身上"
+    },
+    {
+      "type": "p",
+      "text": "1527–1528 年那份帳，伊納爾哲克條目依厄梅爾・呂特菲・巴爾坎（Ömer Lütfi Barkan）在舊版《伊斯蘭百科全書》〈Timar〉條的資料列表。全帝國收入約 5.377 億阿克切，其中 51% 歸蘇丹私產（havâss-ı hümâyun），12% 屬宗教基金與私產，37% 分給各級貝伊與騎兵作為哈斯、扎俄梅特與蒂瑪爾。埃及一省就有 1.354 億，全數不分蒂瑪爾；伊納爾哲克指出，扣掉埃及，帝國公共收入幾乎有一半撥給了蒂瑪爾。",
+      "tag": "史料"
+    },
+    {
+      "type": "table",
+      "title": "1527–1528 年帳冊中的蒂瑪爾分配",
+      "head": [
+        "地區",
+        "總收入（百萬阿克切）",
+        "撥給貝伊與騎兵的比例",
+        "持有人數"
+      ],
+      "rows": [
+        [
+          "魯米利亞",
+          "198.2",
+          "46%",
+          "17,288"
+        ],
+        [
+          "安納托利亞",
+          "129.6",
+          "56%",
+          "16,468"
+        ],
+        [
+          "卡拉曼、杜卡迪爾、魯姆、迪亞巴克爾",
+          "22.7",
+          "63%",
+          "1,071"
+        ],
+        [
+          "敘利亞（阿勒坡、大馬士革）",
+          "51.8",
+          "38%",
+          "2,694"
+        ],
+        [
+          "埃及",
+          "135.4",
+          "—",
+          "—"
+        ],
+        [
+          "合計",
+          "537.7",
+          "37%",
+          "37,521"
+        ]
+      ],
+      "caption": "依 İnalcık〈Timar〉表 1，該表以 Barkan 在舊版《伊斯蘭百科全書》（İA）的〈Timar〉條為本。持有人中有 9,563 人是守城兵（hisar eri），其餘是隨軍出征的騎兵。"
+    },
+    {
+      "type": "p",
+      "text": "持有人之外還要算隨從。伊納爾哲克引史家伊德里斯・比特利西（İdrîs-i Bitlisî）的《八天堂》（Heşt Bihişt），1473 年安納托利亞的蒂瑪爾軍約 2 萬、魯米利亞約 2.4 萬，並認為這些數字應已包含 cebelü。阿里・查烏什的法典記 56,455 名持有人、118,135 名 cebelü；法典成於 1653 年，伊納爾哲克判斷它依據的材料屬 1560–1580 年。依他的讀法，cebelü 大約是持有人的兩倍，但他也說確切人數難以判定。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "h",
+      "text": "權力：誰給、誰收回、靠什麼強制"
+    },
+    {
+      "type": "p",
+      "text": "授予走的是書面程序。伊納爾哲克條目描述，中央的 Tahvil 辦公室收下分配文件（tahvil tezkiresi），轉給 Beylikçi 辦公室，由那裡開出蘇丹的特許狀（berat 或 nişan）交給受領人。厄茲的條目補充，普查簿冊謄清為兩份，一份留在伊斯坦堡的簿冊庫（Defterhâne），一份送到該省總督處；專員與書記的報酬，是向每戶收 2 阿克切。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "國家也刻意不讓騎兵把村子變成私產。伊納爾哲克條目寫道，摘要冊的編者會把一份哈斯或扎俄梅特拆散在省內不同角落，一般蒂瑪爾的份額也分佈在不同村子；他的解釋是，這既為了治安，也為了防止持有人把村子據為己有。登記的單位不得拆分、贈與或合併；父親在世時，兒子原則上不能另領蒂瑪爾。伊納爾哲克認為，不經繼承轉移是蒂瑪爾和西歐封建作法的基本差別之一；不過法律仍承認，兒子可依起始額分得亡父蒂瑪爾的一部分。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "村民也受法律約束，但不歸騎兵任意處置。農民不得棄地，持有人可在 10 年內（後改為 15 年）追回逃走的農民。另一方面，法典詳細列出騎兵能向村民收什麼；伊納爾哲克的評價是，在這個意義上鄂圖曼農民是自由的，騎兵不能隨意強迫他們勞動，舊制留下的勞役多已改成付費工作。他也承認，雙方關係隨時可能破裂，因為兩邊都在顧自己的利益、設法逃避義務。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "強制靠的是點名。據 伊納爾哲克條目，總督在出征途中點名（yoklama），缺席名單送回中央；艾因・阿里強調，這份紀錄是判定哪些蒂瑪爾出缺、避免一缺兩授的依據。不出征是喪失蒂瑪爾的首要原因，殺人、竊盜或虐待村民也會被收回。被免職者（mâzul）要恢復資格，必須在總督麾下隨軍效力；7 年內不歸隊，就失去騎兵身分，降為納稅的村民。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "成本由誰承擔？從法規看，村民負擔稅；騎兵負擔裝備、隨從與遠征的花費；國家負擔的是文書與監督。本文的讀法是：這套安排讓中央不必每年把巨額現銀運到各省再發下去，代價是國家對騎兵的控制，只能靠幾十年一次的普查和每逢出征的點名維持。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Ralamb_Sipahi.jpg/1280px-Ralamb_Sipahi.jpg",
+      "width": 1280,
+      "height": 1911,
+      "alt": "紙上以紅線框出的人物畫。一名留八字鬍的男子站立，戴尖頂盔，盔沿綁白色布條；身穿由橫向片狀構成的深灰色護甲，下襬露出綠色長袍，腰繫紫紅腰帶。左肩後揹紅色圓盾，右側掛著裝滿箭的箭袋，腰間斜掛一把紅鞘彎刀。右上角寫著頁碼 106，左下有一行手寫說明。",
+      "caption": "瑞典使節克拉斯・羅蘭姆（Claes Rålamb）1657–1658 年在伊斯坦堡取得的服飾畫冊中，標為西帕希的一頁（第 106 頁）。這是 17 世紀中葉的畫，比本文討論的時代晚一百年左右；畫冊沒有說明畫的是領蒂瑪爾的省區騎兵，還是領薪的宮廷騎兵（kapıkulu sipahileri）。可以看的是一名騎兵自己要準備的東西：護甲、盾、弓箭與刀。",
+      "credit": "佚名畫家；羅蘭姆服飾畫冊，Commons 標示影像來源為瑞典國家圖書館（Kungliga biblioteket）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ralamb_Sipahi.jpg",
+      "made": "1657 年以前（1657–1658 年取得）",
+      "depicts": "17 世紀中葉的鄂圖曼騎兵"
+    },
+    {
+      "type": "h",
+      "text": "限制：火槍、通膨與等不到缺的人"
+    },
+    {
+      "type": "p",
+      "text": "第一個限制在戰場上。伊納爾哲克條目寫道，直到 1593–1606 年對奧地利的戰爭，對火槍部隊的需求迫使國家僱用領薪士兵，在此之前西帕希一直是鄂圖曼軍制的基本單位。他也指出，面對奧地利軍日增的火力，騎兵在戰場上的不足顯露出來，出征越來越多由近衛步兵（yeniçeri）、塞克班（sekban）與薩魯賈（saruca）等傭兵取代。即使在摩哈赤，埃梅金的條目也記載，擊散匈牙利騎兵衝鋒的是分組輪番射擊的近衛軍火槍手。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "第二個限制在帳上。蒂瑪爾的價值固定在普查時的估額。伊納爾哲克寫道，1584 年之後蒂瑪爾的帳面價值不變，物價卻上漲了一倍；裝備昂貴、收入縮水，使遠距離出征對一名持有人來說變得困難甚至不可能。檔案顯示騎兵越來越常向農民強徵稅款，許多人加入盜匪。厄茲的條目則轉引史家塞拉尼基（Selânikî）的記載：費爾哈德帕夏（Ferhad Paşa）在 1591–1592 年第一次任大維齊爾時禁止各省普查，改為必要時每 30 年一次。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "本文推測，停止定期普查之後，帳面與現實的差距更難修正。"
+    },
+    {
+      "type": "p",
+      "text": "第三個限制是人。等著補缺的人很多：被免職的騎兵、隨軍等候分配的騎兵之子。伊納爾哲克形容這群人沒有耐心、容易生事，隨時準備加入反中央的叛亂。1578–1618 年對奧地利與伊朗的長期戰爭需要兵員，指揮官放寬標準，數以千計原本是納稅身分的安納托利亞人得以進入騎兵階層。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "埃梅金在〈Haçova Meydan Savaşı〉條（1996）中記載，鄂圖曼軍在 10 月 26 日的邁澤克雷斯泰什（Mezőkeresztes，土耳其文 Haçova）會戰獲勝；戰後第二天出任大維齊爾的奇加拉札德・錫南帕夏（Cigalazâde Sinan Paşa）下令點名，查出臨陣脫逃或未參戰者，收回他們的蒂瑪爾與薪餉。這些人在安納托利亞加入傑拉里（Celâlî）叛亂團體，使動亂擴大。伊納爾哲克條目也說，未參加這次蘇丹親征的安納托利亞騎兵被永久逐出騎兵行列。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "伊納爾哲克條目列出 17 世紀幾次出征的蒂瑪爾騎兵人數：1616 年出征 14,867 人，1621 年 15,058 人，1655 年 6,052 人。1621 年的紀錄還顯示，有 2,882 名查烏什（çavuş，宮廷傳令）及其子、681 名宮廷侍從（müteferrika）及其子、522 名書記持有蒂瑪爾——收入仍在撥出，領的卻不再是戰場上的騎兵。",
+      "tag": "史料"
+    },
+    {
+      "type": "timeline",
+      "title": "蒂瑪爾制度的幾個時間點",
+      "items": [
+        {
+          "when": "1431–1432",
+          "label": "現存最早的摘要冊",
+          "note": "阿爾巴尼亞 Arvanid 省簿冊（回曆 835 年），已記載持有人的軍事義務；İnalcık 於 1954 年刊行。"
+        },
+        {
+          "when": "1458 年",
+          "label": "安納托利亞提高 çift resmi",
+          "note": "梅赫梅德二世把 22 阿克切提高約五成，以維持派駐魯米利亞的騎兵。"
+        },
+        {
+          "when": "1473 年",
+          "label": "比特利西估算蒂瑪爾軍",
+          "note": "安納托利亞約 2 萬、魯米利亞約 2.4 萬。"
+        },
+        {
+          "when": "1526.8.29",
+          "label": "摩哈赤會戰",
+          "note": "魯米利亞西帕希為前鋒；近衛軍火槍擊散匈牙利騎兵。"
+        },
+        {
+          "when": "1527–1528",
+          "label": "全帝國收支帳",
+          "note": "37,521 名持有人；扣除埃及，近半公共收入撥給蒂瑪爾。"
+        },
+        {
+          "when": "1584 年後",
+          "label": "物價上漲一倍",
+          "note": "蒂瑪爾帳面價值不變（İnalcık）。"
+        },
+        {
+          "when": "1591–1592",
+          "label": "費爾哈德帕夏停止各省普查",
+          "note": "改為必要時每 30 年一次（據 Selânikî，轉引自 Öz）。"
+        },
+        {
+          "when": "1596.10.26",
+          "label": "邁澤克雷斯泰什會戰",
+          "note": "會戰次日起點名，缺席者被收回蒂瑪爾，部分加入傑拉里叛亂。"
+        },
+        {
+          "when": "1621 年",
+          "label": "出征紀錄 15,058 名騎兵",
+          "note": "同年 2,882 名查烏什及其子持有蒂瑪爾。"
+        },
+        {
+          "when": "1655 年",
+          "label": "出征紀錄剩 6,052 人",
+          "note": "約為 1621 年的四成。"
+        },
+        {
+          "when": "1827 年",
+          "label": "改編為新式騎兵",
+          "note": "53 個州（sancak）約 5,200 名蒂瑪爾騎兵連同收入編入 Asâkir-i Mansûre。"
+        }
+      ],
+      "caption": "依 İnalcık〈Timar〉（2012）、Emecen〈Çift Resmi〉（1993）、〈Haçova Meydan Savaşı〉（1996）、〈Mohaç Muharebesi〉（2020）、Öz〈Tahrir〉（2010）整理。"
+    },
+    {
+      "type": "h",
+      "text": "學界怎麼說：封建、分配，還是轉型"
+    },
+    {
+      "type": "p",
+      "text": "第一種讀法把蒂瑪爾放進歐亞大陸的長期脈絡。伊納爾哲克條目認為，在貨幣經濟與中央國庫不夠發達、軍隊又以騎兵為主的國家，封建制度或分配制度幾乎必然出現：騎兵的需要只能在鄉間滿足，什一稅也只能在地方市場收取、換成現金。他把拜占庭的普羅尼亞（pronoia）、伊斯蘭國家的伊克塔（iqta）與蒂瑪爾並列，指出 timar（照料）正是希臘文 pronoia 的對譯，鄂圖曼人在巴爾幹也把許多原本的普羅尼亞持有人直接收編為蒂瑪爾騎兵；部分州（sancak）的基督徒持有人比例高達三成五。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "但同一篇條目也強調差別：蒂瑪爾不繼承、可因缺勤或罪行收回、份額分散在各村，持有人只能照法典收稅。巴爾坎寫過〈封建秩序與鄂圖曼蒂瑪爾〉（Feodal Düzen ve Osmanlı Timarı，1975），題目本身就說明這是土耳其史學界的老問題：這套制度該不該叫「封建」。本文只讀到 伊納爾哲克條目中的書目，未讀巴爾坎原文，不轉述他的結論。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "第二個爭論在結局。伊納爾哲克的條目沿用一條較傳統的線索：火器、傭兵、通膨與賄賂使蒂瑪爾制「衰退」（gerilemiştir），17 世紀末它已逐漸失去軍事功能，1827 年正式改編。巴基・泰茲詹（Baki Tezcan）在《第二鄂圖曼帝國》（The Second Ottoman Empire，劍橋大學出版社，2010）的導論中則說，近幾十年的研究已經拋棄「16 世紀末起帝國長期衰落」的傳統敘事，並轉引道格拉斯・霍華德（Douglas Howard）把鄂圖曼衰落稱為「untrue myth」（不真實的神話，本文自譯）。泰茲詹主張，從 16 世紀末到 19 世紀初是一個自有性格的「第二帝國」：更市場化的經濟、更多出身平民與財務背景的人進入政府。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "本文的讀法是：兩種說法未必互斥。從騎兵的角度看，1655 年出征的蒂瑪爾騎兵只剩 6,052 人，制度的軍事功能確實萎縮；從國家財政的角度看，收入改由國庫收回、改發薪餉、改給宮廷人員，可以讀成國家換了一種方式動員資源。本文讀到的泰茲詹導論段落沒有談到蒂瑪爾，這個連結是本文的推論，不是他的原話。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "你的世界裡，士兵的收入是國庫發的錢，還是直接從某幾個村子收來的稅？兩者之間，中央能看到、能控制的東西有什麼不同？",
+        "如果軍事義務按帳面收入攤派，而帳面幾十年才更新一次，物價上漲或村子荒廢時，誰先撐不住？",
+        "要防止戰士把封給他的土地變成家產，你的國家用什麼手段：分散份額、禁止繼承、定期點名，還是別的？這些手段各自要付出什麼代價？",
+        "當等待補缺的人比空出的位置多，被拒於門外的人會去哪裡？"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "TİMAR",
+      "publisher": "Halil İnalcık；TDV İslâm Ansiklopedisi 第 41 冊，頁 168–173",
+      "date": "2012",
+      "url": "https://islamansiklopedisi.org.tr/timar",
+      "note": "定義、等級與門檻、cebelü 義務、1527–1528 年收支表（據 Barkan）、Bitlisî 與 Ali Çavuş 數字、授予程序、點名與免職、1596 年、1616/1621/1655 年出征人數、1621 年非軍人持有者、1827 年改編、封建比較"
+    },
+    {
+      "title": "TAHRİR",
+      "publisher": "Mehmet Öz；TDV İslâm Ansiklopedisi",
+      "date": "2010",
+      "url": "https://islamansiklopedisi.org.tr/tahrir",
+      "note": "普查程序、三年平均估稅、簿冊種類、敕令用語、每戶 2 阿克切、Ferhad Paşa 停止普查（據 Selânikî）、隱匿與逃避登記"
+    },
+    {
+      "title": "ÇİFT RESMİ",
+      "publisher": "Feridun Emecen；TDV İslâm Ansiklopedisi",
+      "date": "1993",
+      "url": "https://islamansiklopedisi.org.tr/cift-resmi",
+      "note": "çift 面積、22 阿克切的勞役折算、1458 年調高、各省稅額"
+    },
+    {
+      "title": "MOHAÇ MUHAREBESİ",
+      "publisher": "Feridun Emecen；TDV İslâm Ansiklopedisi",
+      "date": "2020",
+      "url": "https://islamansiklopedisi.org.tr/mohac-muharebesi",
+      "note": "會戰日期、易卜拉欣帕夏與魯米利亞西帕希為前鋒、近衛軍火槍"
+    },
+    {
+      "title": "HAÇOVA MEYDAN SAVAŞI",
+      "publisher": "Feridun Emecen；TDV İslâm Ansiklopedisi",
+      "date": "1996",
+      "url": "https://islamansiklopedisi.org.tr/hacova-meydan-savasi",
+      "note": "1596 年 10 月 26 日會戰、奇加拉札德的點名與收回蒂瑪爾、傑拉里"
+    },
+    {
+      "title": "ÂRİFÎ FETHULLAH ÇELEBİ",
+      "publisher": "Tahsin Yazıcı；TDV İslâm Ansiklopedisi",
+      "date": "1991",
+      "url": "https://islamansiklopedisi.org.tr/arifi-fethullah-celebi",
+      "note": "《蘇萊曼之書》記事 1520–1555 年、69 幅細密畫、托普卡匹 Hazine 1517"
+    },
+    {
+      "title": "The Second Ottoman Empire: Political and Social Transformation in the Early Modern World（導論試閱）",
+      "publisher": "Baki Tezcan；Cambridge University Press",
+      "date": "2010",
+      "url": "https://assets.cambridge.org/97805215/19496/excerpt/9780521519496_excerpt.pdf",
+      "note": "導論頁 1、9–10：衰落敘事被拋棄、轉引 Douglas Howard「untrue myth」、「第二帝國」定義；Howard 原文（Aksan & Goffman 編，2007）未讀"
+    },
+    {
+      "title": "File:Battle of Mohács.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2016-05-16",
+      "url": "https://commons.wikimedia.org/wiki/File:Battle_of_Moh%C3%A1cs.jpg",
+      "note": "頭圖資料：Süleymanname，托普卡匹 Hazine 1517"
+    },
+    {
+      "title": "File:Ralamb Sipahi.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2010-06-13",
+      "url": "https://commons.wikimedia.org/wiki/File:Ralamb_Sipahi.jpg",
+      "note": "羅蘭姆服飾畫冊第 106 頁"
+    },
+    {
+      "title": "Timar（舊版《伊斯蘭百科全書》İA XII/1，頁 286–333）；Feodal Düzen ve Osmanlı Timarı（1975）",
+      "publisher": "Ömer Lütfi Barkan；書目據 İnalcık〈Timar〉",
+      "date": "1975",
+      "url": "https://islamansiklopedisi.org.tr/timar",
+      "note": "1527–1528 年收支表經 İnalcık 條目表 1 轉引；Barkan 原文未讀"
+    },
+    {
+      "title": "Heşt Bihişt（伊德里斯・比特利西）；Sofyalı Ali Çavuş Kanunnâmesi；Ayn Ali, Kavânîn-i Âl-i Osmân",
+      "publisher": "均轉引自 İnalcık〈Timar〉，TDV İslâm Ansiklopedisi",
+      "date": "2012",
+      "url": "https://islamansiklopedisi.org.tr/timar",
+      "note": "1473 年兵力估計、1653 年法典的持有人與 cebelü 數、點名紀錄的用途；原典未讀"
+    },
+    {
+      "title": "AYN ALİ EFENDİ",
+      "publisher": "Mehmet İpşirli；TDV İslâm Ansiklopedisi",
+      "date": "1991",
+      "url": "https://islamansiklopedisi.org.tr/ayn-ali-efendi",
+      "note": "Kavânîn-i Âl-i Osmân 1607 年呈 Kuyucu Murad Paşa；作者曾任 defter-i hâkānî emini"
+    },
+    {
+      "title": "Fâtih Sultan Mehmed Kanunnâmesi（çift resmi 勞役折算條）",
+      "publisher": "轉引自 Feridun Emecen〈Çift Resmi〉，TDV İslâm Ansiklopedisi",
+      "date": "1993",
+      "url": "https://islamansiklopedisi.org.tr/cift-resmi",
+      "note": "原典未讀"
+    },
+    {
+      "title": "Selânikî, Târih（費爾哈德帕夏停止普查）",
+      "publisher": "轉引自 Mehmet Öz〈Tahrir〉，TDV İslâm Ansiklopedisi",
+      "date": "2010",
+      "url": "https://islamansiklopedisi.org.tr/tahrir",
+      "note": "原典未讀"
+    },
+    {
+      "title": "Genre and myth in the Ottoman advice for kings literature",
+      "publisher": "Douglas A. Howard，收於 Aksan & Goffman 編 The Early Modern Ottomans（Cambridge University Press）；轉引自 Tezcan 2010 導論",
+      "date": "2007",
+      "url": "https://assets.cambridge.org/97805215/19496/excerpt/9780521519496_excerpt.pdf",
+      "note": "「untrue myth」一語，頁 144；原文未讀"
+    }
+  ]
+}
