@@ -1,0 +1,225 @@
+{
+  "column": "fiction",
+  "date": "2026-10-13",
+  "title": "讀者比角色多知道時，緊張從哪裡來",
+  "dek": "先讓讀者看見背叛，主角卻還不知道，這一場還有什麼好看？本文用原創示範比較知情與不知情的同一場戲，再看《奧賽羅》怎麼經營落差。",
+  "topic_key": "fiction:dramatic-irony",
+  "updated_at": "2026-10-13T01:50:00+08:00",
+  "spoiler": "本文談到莎士比亞《奧賽羅》全劇情節，包括第 5 幕結局。",
+  "disclaimer": null,
+  "hero": {
+    "kind": "illustration",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/40/Othello_-_Iago_and_Roderigo_by_H._C._Selous.jpg",
+    "width": 1188,
+    "height": 1086,
+    "alt": "一幅黑白線刻插圖。左側一名留短鬚、披斗篷的男子站著，一手搭在旁人手臂上，眼睛斜向畫面外；右側一名穿荷葉領、蓬袖上衣的年輕男子半躺在高背扶手椅上，一手托著下巴，望向右方。背景有拱門與柱子。",
+    "caption": "塞盧斯（Henry Courtney Selous）為《奧賽羅》第 1 幕第 3 景畫的插圖：伊阿古（左）與羅德利哥（右）。依 Commons 檔案說明，出自 Charles 與 Mary Cowden Clarke 編注、塞盧斯插圖的《莎士比亞劇集》第 529 頁。這一景結尾，伊阿古打發走羅德利哥，獨自對觀眾說出計畫的雛形：要讓奧賽羅疑心凱西奧與苔絲狄蒙娜。從這裡起，觀眾知道的比奧賽羅與苔絲狄蒙娜多。",
+    "credit": "Henry Courtney Selous 繪；The Plays of William Shakespeare，Charles 與 Mary Cowden Clarke 編注，1864 年版，第 529 頁（依 Wikimedia Commons）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Othello_-_Iago_and_Roderigo_by_H._C._Selous.jpg",
+    "made": "1868 年以前"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "群像奇幻寫到中段，常有這樣的安排：第 7 章換到驛長的視角，讀者看見他收下敵軍的錢；第 9 章回到主角，主角還把他當成最可靠的長輩。寫到這裡，作者容易心虛：讀者已經知道了，這一場還有什麼好看？要不要乾脆刪掉第 7 章，把背叛留到最後當反轉？這一篇只處理一個問題：讀者比角色多知道的時候，張力從哪裡來，怎樣把它用滿，又在什麼情況下會變成讀者對角色的不耐煩。"
+    },
+    {
+      "type": "p",
+      "text": "這種安排叫戲劇反諷（dramatic irony）。《韋氏詞典》（Merriam-Webster）的定義是：一種文學手法，在角色所知與觀眾所知之間製造落差，讓角色的話語和行動帶上不同、往往相反的意義；詞典記錄的最早用例在 1811 年。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，這個定義的重心在後半句：落差本身不是目的，目的是讓角色說的普通話，在讀者耳中多出一層意思。"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，長篇裡的緊張大致有兩種來源。一種是讀者不知道，等著知道：門後是什麼、兇手是誰。另一種是讀者已經知道，等著看角色什麼時候知道，以及知道之前會付出什麼。前一種靠隱藏，用完就沒了；後一種靠落差，只要角色還蒙在鼓裡，每一場同框的戲都能再收一次利息。下面用同一場戲寫兩個版本，差別只在讀者事先知道多少。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "示範世界：鹽隘驛的一壺茶"
+    },
+    {
+      "type": "p",
+      "text": "以下設定為本文原創。鹽隘是兩國之間唯一的冬季山道，隘口下有一座驛站。朝廷的封隘令要送到北關，守將見令就放下鐵柵，擋住正往山道集結的河東軍；令必須在天亮前送到。送令的是十九歲的信使阿桐。驛站只有驛長閔叔一人和三匹馬，從這裡騎快馬到北關要兩個時辰。閔叔是阿桐亡父當年的同袍，看著她長大，她叫他一聲叔。河東軍要的只是一夜：封隘令只要晚到幾個時辰，鐵柵就來不及落下。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "h",
+      "text": "版本 A：讀者不知道茶裡有什麼"
+    },
+    {
+      "type": "p",
+      "text": "阿桐進驛站時，靴底的雪已經結成冰殼。閔叔沒問來意，先把她按在爐邊，提壺倒茶。「喝了再說。山上那段冰坡，妳爹當年也摔過。」阿桐雙手捧著碗，從懷裡摸出油布包，放在桌上：「北關的令，天亮前要到。」閔叔看了一眼封泥，沒有碰它，轉身往後院走。「黑鬃的蹄鐵鬆了，換栗色那匹。」阿桐喝了一口，茶有點苦，她以為是爐上煮久了。風聲壓在窗紙上，她聽見閔叔在馬廄裡跟馬說話，聲音很低。等他回來，她已經靠著牆，碗還在手裡，半邊身子讓爐火烤得發燙。「睡一刻鐘，」閔叔把毯子蓋到她肩上，「令我替妳看著。」",
+      "tag": "原創示範"
+    },
+    {
+      "type": "p",
+      "text": "**資訊。**讀者知道的和阿桐一樣多：一份要在天亮前送到的令、一位熟悉的長輩、一碗有點苦的茶。苦味、換馬、低聲說話都在場，但讀者沒有理由把它們串起來。**期待。**讀者期待的是路上的事：冰坡、風雪、她趕不趕得上。這一場被讀成中途歇腳。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**情緒。**溫暖，帶著倦意。毯子那一句，多數讀者是放鬆的。**代價。**阿桐此刻沒有察覺任何代價，讀者也沒有。**失敗條件。**版本 A 的價值全押在後面：幾章之後揭穿茶裡有藥，讀者回頭重讀，苦味和低聲說話才會亮起來。這是驚奇，只能用一次，而且全靠揭穿那一刻寫得好。線索埋得太淺，讀者會覺得被作者瞞了，而不是被閔叔騙了。更直接的損失是：這一場本身沒有張力，只是在替將來存錢。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "版本 B：先讓讀者看見閔叔磨藥"
+    },
+    {
+      "type": "p",
+      "text": "午後，河東來的皮貨商在驛站喝了兩碗酒，走的時候把一只錢袋留在櫃檯下。閔叔沒有數。他在後屋把一把罌粟殼碾碎，混進茶罐，碾得很細，細到看不出顏色。碾的時候他想起阿桐她爹：那年在北關城下，兩個人分過一塊凍硬的餅。皮貨商說得很清楚，令只要晚到幾個時辰，沒有人會死，河東軍只想借路。閔叔把茶罐放回爐邊最順手的位置，又把栗色那匹馬的鞍子擦了一遍。那是驛站裡跑得最慢的馬。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "p",
+      "text": "阿桐進驛站時，靴底的雪已經結成冰殼。閔叔沒問來意，先把她按在爐邊，提壺倒茶。「喝了再說。山上那段冰坡，妳爹當年也摔過。」阿桐雙手捧著碗，從懷裡摸出油布包：「北關的令，天亮前要到。我爹說過，這條路上只有閔叔信得過。」閔叔看了一眼封泥，沒有碰它。「黑鬃的蹄鐵鬆了，換栗色那匹。」阿桐喝了一口，皺起眉。「苦。」「煮久了。」閔叔伸手去拿她的碗，「倒了，我重泡一壺。」阿桐把碗往懷裡收了收：「別麻煩，閔叔泡的我都喝。」她一口喝乾。閔叔站在那裡，手還伸著，過了一會兒才收回去，轉身去了馬廄。她聽見他在裡面跟馬說話，聲音很低。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "p",
+      "text": "**資訊。**交茶這一段的句子大半和版本 A 相同，讀者手上卻多了三件事：茶裡有藥、栗色馬最慢、閔叔收了錢也給了自己一個理由。同一句「換栗色那匹」，在 A 是照顧，在 B 是佈局。讀者不必猜，只需要看。**期待。**問題從「會發生什麼」換成「她會不會發現」「他會不會收手」。版本 A 只有一條線，版本 B 有兩條，兩條都繫在同一碗茶上。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**情緒。**溫暖的句子變得難受。「這條路上只有閔叔信得過」，在 A 是一句平常話，在 B 扎在閔叔身上，也扎在讀者身上。最重的一拍不是阿桐喝下去，而是閔叔伸手要拿回那碗茶：讀者看見他差一點收手。這一筆只有讀者知情時才寫得出效果，不知情的讀者會把它讀成客氣。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**代價。**阿桐在不知情中付出代價，而且是她自己堅持要喝的；她的信任成了下藥的最後一步。閔叔也付出代價：阿桐一句話把退路遞到他手邊，他沒有接。前一段那句「沒有人會死」是一筆債，讀者會記著，等它被證明是錯的。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**失敗條件。**有三種。一是知情與同場隔得太遠：磨藥若在十章以前，讀者記不清，就得讓茶罐在別人的場景裡再出現一次。二是角色看不見的理由站不住：阿桐若是精明的老信使，嘗到苦味還照喝，讀者會罵她笨。這裡她看不見，是因為她信他，而且苦味有現成的解釋；盲點要來自角色的性格與處境，而不是作者需要她笨。三是作者把讀者請進知情的位置，又另藏一張底牌，例如最後揭曉茶裡其實沒藥。讀者被拉進來又被推出去，會覺得受騙。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "spoiler",
+      "text": "以下談到《奧賽羅》全劇情節，包括第 5 幕的結局。"
+    },
+    {
+      "type": "h",
+      "text": "《奧賽羅》讓觀眾從第一景就知情"
+    },
+    {
+      "type": "p",
+      "text": "莎士比亞（William Shakespeare）的悲劇《奧賽羅》（Othello）從第一景就讓觀眾知情。第 1 幕第 1 景，在任何人起疑之前，旗官伊阿古（Iago）先對同夥羅德利哥（Roderigo）說明，他跟隨主帥奧賽羅只是為了自己的目的，表面的忠誠只是做給人看。那段話停在這半句：",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "I am not what I am.",
+      "text": "我並不是我看起來的那個人。",
+      "cite": "《奧賽羅》第 1 幕第 1 景，英文依 Project Gutenberg 電子書 #1531；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "同一幕第 3 景，奧賽羅奉命出征賽普勒斯（Cyprus），臨行把新婚妻子苔絲狄蒙娜（Desdemona）託給伊阿古護送，說他是「a man he is of honesty and trust」（一個正直可靠的人；本文自譯），接著又叫了一聲「Honest Iago」。這一景結尾，伊阿古獨自留在台上，把計畫說給觀眾聽：他恨奧賽羅，要讓奧賽羅相信副將凱西奧（Cassio）和苔絲狄蒙娜過從太密。他也說出自己為什麼有把握：",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "The Moor is of a free and open nature / That thinks men honest that but seem to be so",
+      "text": "這摩爾人天性坦蕩，不設防；人只要看起來正直，他就當那人是正直的。",
+      "cite": "《奧賽羅》第 1 幕第 3 景，英文依 Project Gutenberg 電子書 #1531；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "第 2 幕第 3 景，凱西奧酒後鬧事被革職，伊阿古勸他去求苔絲狄蒙娜說情。凱西奧道別時說「Good night, honest Iago」。他一走，伊阿古又對觀眾說出下一步：她愈替凱西奧求情，奧賽羅就愈會懷疑她，他要「out of her own goodness make the net / That shall enmesh them all」（用她自己的善良織成網，把他們全網住；本文自譯）。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "於是第 3 幕第 3 景一開場，苔絲狄蒙娜對凱西奧保證會盡全力，要讓丈夫不得安寧，把凱西奧的請求摻進他做的每件事，還說「For thy solicitor shall rather die / Than give thy cause away」（你的說情人寧可死，也不會丟下你的事；本文自譯）。同一段裡，她稱伊阿古是「an honest fellow」。稍後奧賽羅問伊阿古，凱西奧「Is he not honest?」，伊阿古只把那個字反問回去：「Honest, my lord?」",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，這一景每一句好話都在替伊阿古工作，而觀眾看得一清二楚，因為伊阿古在前兩幕的獨白裡（第 1 幕第 3 景、第 2 幕第 1 景與第 3 景）一再把盤算說給觀眾聽。莎士比亞沒有拿「會不會出事」吊觀眾，他讓觀眾提早知道伊阿古要做什麼，再看角色一句一句把好話送到他手上。苔絲狄蒙娜那句「寧可死」本來只是熱心的誇口，在知情的觀眾耳中卻像一句預言。這和版本 B 的「閔叔泡的我都喝」是同一種結構：角色的善意，正是陷阱的最後一個零件。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "svg",
+      "title": "知情落差：誰知道、誰不知道",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 500\" role=\"img\" aria-label=\"知情落差示意：上圖為《奧賽羅》觀眾與奧賽羅的已知程度，下圖為本文原創示範版本 A 與版本 B 的讀者知情位置\"><text x=\"14\" y=\"22\" font-size=\"14\" font-weight=\"600\">《奧賽羅》：誰知道伊阿古的計畫</text><line class=\"ink line\" x1=\"14\" y1=\"40\" x2=\"42\" y2=\"40\" stroke-width=\"2.4\"/><text x=\"48\" y=\"44\" font-size=\"12\">觀眾</text><line class=\"accent line\" x1=\"90\" y1=\"40\" x2=\"118\" y2=\"40\" stroke-width=\"2.4\" stroke-dasharray=\"6 4\"/><text x=\"124\" y=\"44\" font-size=\"12\">奧賽羅</text><circle class=\"gold\" cx=\"190\" cy=\"40\" r=\"4\"/><text x=\"198\" y=\"44\" font-size=\"12\">有人稱伊阿古 honest</text><polygon class=\"soft\" points=\"70,118 125,84 160,76 195,70 260,68 338,68 338,196 70,196\"/><line class=\"muted line\" x1=\"50\" y1=\"62\" x2=\"50\" y2=\"196\" stroke-width=\"1\"/><line class=\"muted line\" x1=\"50\" y1=\"196\" x2=\"364\" y2=\"196\" stroke-width=\"1\"/><text class=\"muted\" x=\"44\" y=\"72\" font-size=\"11\" text-anchor=\"end\">多</text><text class=\"muted\" x=\"44\" y=\"196\" font-size=\"11\" text-anchor=\"end\">少</text><polyline class=\"ink line\" stroke-width=\"2.4\" points=\"50,194 70,118 125,84 160,76 195,70 260,68 364,68\"/><polyline class=\"accent line\" stroke-width=\"2.4\" stroke-dasharray=\"6 4\" points=\"50,194 330,194 342,72 364,70\"/><circle class=\"gold\" cx=\"125\" cy=\"182\" r=\"4\"/><circle class=\"gold\" cx=\"195\" cy=\"182\" r=\"4\"/><circle class=\"gold\" cx=\"340\" cy=\"182\" r=\"4\"/><text class=\"muted\" x=\"196\" y=\"128\" font-size=\"12\" text-anchor=\"middle\">落差：觀眾已知、奧賽羅未知</text><text class=\"muted\" x=\"196\" y=\"146\" font-size=\"12\" text-anchor=\"middle\">每一句好話都多一層意思</text><text x=\"70\" y=\"214\" font-size=\"12\" text-anchor=\"middle\">1.1</text><text class=\"muted\" x=\"70\" y=\"230\" font-size=\"11\" text-anchor=\"middle\">自白</text><text x=\"125\" y=\"214\" font-size=\"12\" text-anchor=\"middle\">1.3</text><text class=\"muted\" x=\"125\" y=\"230\" font-size=\"11\" text-anchor=\"middle\">獨白</text><text x=\"160\" y=\"214\" font-size=\"12\" text-anchor=\"middle\">2.1</text><text class=\"muted\" x=\"160\" y=\"230\" font-size=\"11\" text-anchor=\"middle\">獨白</text><text x=\"195\" y=\"214\" font-size=\"12\" text-anchor=\"middle\">2.3</text><text class=\"muted\" x=\"195\" y=\"230\" font-size=\"11\" text-anchor=\"middle\">獨白</text><text x=\"260\" y=\"214\" font-size=\"12\" text-anchor=\"middle\">3.3</text><text class=\"muted\" x=\"260\" y=\"230\" font-size=\"11\" text-anchor=\"middle\">說情</text><text x=\"340\" y=\"214\" font-size=\"12\" text-anchor=\"middle\">5.2</text><text class=\"muted\" x=\"340\" y=\"230\" font-size=\"11\" text-anchor=\"middle\">揭穿</text><text class=\"muted\" x=\"364\" y=\"248\" font-size=\"11\" text-anchor=\"end\">幕.景</text><text x=\"14\" y=\"290\" font-size=\"14\" font-weight=\"600\">鹽隘驛（原創示範）：讀者站在哪裡</text><text class=\"muted\" x=\"106\" y=\"314\" font-size=\"12\" text-anchor=\"middle\">午後・後屋</text><text class=\"muted\" x=\"210\" y=\"314\" font-size=\"12\" text-anchor=\"middle\">爐邊交茶</text><text class=\"muted\" x=\"314\" y=\"314\" font-size=\"12\" text-anchor=\"middle\">後文</text><text x=\"14\" y=\"352\" font-size=\"14\" font-weight=\"600\">A</text><text x=\"14\" y=\"422\" font-size=\"14\" font-weight=\"600\">B</text><rect class=\"paper line\" x=\"58\" y=\"328\" width=\"96\" height=\"44\" rx=\"4\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><text class=\"muted\" x=\"106\" y=\"355\" font-size=\"12\" text-anchor=\"middle\">（不寫）</text><rect class=\"paper line\" x=\"162\" y=\"328\" width=\"96\" height=\"44\" rx=\"4\" stroke-width=\"1.4\"/><text x=\"210\" y=\"347\" font-size=\"12\" text-anchor=\"middle\">讀者＝阿桐</text><text class=\"muted\" x=\"210\" y=\"363\" font-size=\"11\" text-anchor=\"middle\">落差為零</text><rect class=\"soft\" x=\"266\" y=\"328\" width=\"96\" height=\"44\" rx=\"4\"/><rect class=\"accent line\" x=\"266\" y=\"328\" width=\"96\" height=\"44\" rx=\"4\" stroke-width=\"2\" fill=\"none\"/><text class=\"accent\" x=\"314\" y=\"347\" font-size=\"12\" text-anchor=\"middle\">揭穿：驚奇</text><text class=\"muted\" x=\"314\" y=\"363\" font-size=\"11\" text-anchor=\"middle\">只能用一次</text><rect class=\"soft\" x=\"58\" y=\"398\" width=\"96\" height=\"44\" rx=\"4\"/><text x=\"106\" y=\"417\" font-size=\"12\" text-anchor=\"middle\">閔叔磨藥</text><text class=\"muted\" x=\"106\" y=\"433\" font-size=\"11\" text-anchor=\"middle\">落差打開</text><rect class=\"soft\" x=\"162\" y=\"398\" width=\"96\" height=\"44\" rx=\"4\"/><rect class=\"accent line\" x=\"162\" y=\"398\" width=\"96\" height=\"44\" rx=\"4\" stroke-width=\"2\" fill=\"none\"/><text class=\"accent\" x=\"210\" y=\"417\" font-size=\"12\" text-anchor=\"middle\">同一場戲</text><text class=\"muted\" x=\"210\" y=\"433\" font-size=\"11\" text-anchor=\"middle\">好話變雙義</text><rect class=\"soft\" x=\"266\" y=\"398\" width=\"96\" height=\"44\" rx=\"4\"/><text x=\"314\" y=\"417\" font-size=\"12\" text-anchor=\"middle\">誰、何時</text><text class=\"muted\" x=\"314\" y=\"433\" font-size=\"11\" text-anchor=\"middle\">關上落差</text><line class=\"ink line\" x1=\"154\" y1=\"420\" x2=\"158\" y2=\"420\" stroke-width=\"1.6\"/><line class=\"ink line\" x1=\"258\" y1=\"420\" x2=\"262\" y2=\"420\" stroke-width=\"1.6\"/><text class=\"muted\" x=\"14\" y=\"478\" font-size=\"11\">原創示意，不按比例；高低是本文的讀法，不是讀者實測。</text></svg>",
+      "caption": "原創示意，不按比例。上圖：實線是觀眾對伊阿古計畫的已知程度，第 1 幕第 1 景起就升高，第 1 幕第 3 景、第 2 幕第 1 景與第 2 幕第 3 景的獨白把它推滿；虛線是奧賽羅，直到第 5 幕第 2 景才被揭穿。兩線之間的色塊就是落差，金點只標出劇中有人稱伊阿古 honest 的部分例子（第 1 幕第 3 景、第 2 幕第 3 景、第 5 幕第 2 景）；第 3 幕第 3 景、第 5 幕第 1 景另有幾處，未另標。幕景依 Project Gutenberg #1531。下圖：本文原創示範中，版本 A 讓讀者和阿桐站在同一處，只換得最後一次驚奇；版本 B 先讓讀者知情，交茶那一場才有雙重意義。高低是本文的讀法，不是讀者實測。"
+    },
+    {
+      "type": "h",
+      "text": "落差怎麼打開、撐住、關上"
+    },
+    {
+      "type": "p",
+      "text": "把《奧賽羅》拆開來看，它對落差做了三件事，都可以搬回小說。**打開要早而清楚。**伊阿古第一景就說「我並不是我看起來的那個人」，第 1 幕結束前已經說出要對付誰、怎麼對付。觀眾不必推理，只需要看。小說裡對應的做法，是給知情者一段視角，讓他做一件具體的事，例如交錢、下藥、改信，而不是只留一個曖昧的眼神。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**撐住要靠角色的盲點，不靠作者的方便。**伊阿古親口說明奧賽羅為什麼看不穿：他天性坦蕩，把看起來正直的人當成正直。觀眾因此不會只罵奧賽羅笨，而是看著一個優點被拿來對付他。撐住的另一個辦法是讓一個詞反覆出現。據 Gutenberg 本，從第 1 幕到第 5 幕，奧賽羅、凱西奧等人一再用 honest 稱呼伊阿古，每出現一次，觀眾就多聽見一次反面。版本 B 裡的茶也是這樣一個物件。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**關上要有人付代價。**第 5 幕第 2 景，苔絲狄蒙娜已經死在奧賽羅手裡。奧賽羅對伊阿古的妻子艾米莉亞（Emilia）說，是她丈夫最先告訴他的，「My friend, thy husband, honest, honest Iago」（我的朋友，妳的丈夫，正直的、正直的伊阿古；本文自譯）。艾米莉亞當場說伊阿古撒謊；她在同一景被伊阿古刺死。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，落差在這裡關上，但不是由奧賽羅自己看穿，而是由最不該站出來的人說破。依劇本，這是全劇最後一次有人用 honest 稱呼伊阿古，正是落差關上的時刻。"
+    },
+    {
+      "type": "p",
+      "text": "回到鹽隘驛。版本 B 寫到這裡，作者手上已經有一筆帳：讀者知道茶裡有藥，阿桐不知道，閔叔差一點收手。接下來要決定的不是要不要揭穿，而是由誰揭穿、在哪一場、讓誰付出什麼。若讓阿桐醒來時發現令還在，閔叔卻不見了，揭穿的代價落在閔叔身上；若讓北關的鐵柵沒有落下，代價落在一整座關城上。讀者等待的那一刻，越晚來、代價越大，就越要寫得清楚。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "exercise",
+      "title": "把一個祕密提早交給讀者",
+      "steps": [
+        "從自己的稿子找一個目前讀者和主角同時才知道的祕密（背叛、身世、陷阱），記下它在第幾章揭曉。",
+        "另寫一段 150–300 字的場景，讓讀者至少提前兩章知道：用知情者的視角，讓他做一件具體的事（交錢、動手、說謊），並給他一句自我辯解的理由。",
+        "在這兩章之間挑一場主角與知情者同場的戲，不改情節，只改三處：讓一個物件或一個詞同時碰到祕密；讓知情者有一個差點收手的動作；讓主角說一句在讀者耳中變了意思的話。",
+        "用一句話寫下主角看不見的理由，這句話必須來自主角的性格或處境。",
+        "決定落差在哪一場、由誰關上，寫下關上它的人付出什麼。",
+        "請一位讀者分別讀改寫前後的同一場戲，各標出他覺得最緊張的一句。"
+      ],
+      "criteria": [
+        "改寫版裡，讀者標出的最緊張句子，是一句在角色口中無害的話，而不是動作或懸念句。",
+        "第 4 步那句理由不含「剛好」「沒注意到」；把主角換成一個多疑的人，這個理由就不成立。",
+        "知情者至少有一處動作，讓讀者以為他可能收手。",
+        "落差關上的那一場，至少一個角色付出可以指名的代價，例如關係、地位、安全或性命。"
+      ],
+      "note": "這項練習不要求刪掉原來的反轉。讀者提早知道的是一件事；角色何時知道、知道時失去什麼，仍然可以留到最後。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "William Shakespeare, Othello（Project Gutenberg eBook #1531）",
+      "publisher": "Project Gutenberg",
+      "date": "1998-11-01",
+      "url": "https://www.gutenberg.org/ebooks/1531",
+      "note": "第 1 幕第 1、3 景；第 2 幕第 3 景；第 3 幕第 3 景；第 5 幕第 2 景。電子書最近更新於 2025-09-19"
+    },
+    {
+      "title": "dramatic irony",
+      "publisher": "Merriam-Webster Dictionary",
+      "url": "https://www.merriam-webster.com/dictionary/dramatic%20irony",
+      "note": "定義與最早用例年份（1811）；2026-10-13 查閱"
+    },
+    {
+      "title": "File:Othello - Iago and Roderigo by H. C. Selous.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Othello_-_Iago_and_Roderigo_by_H._C._Selous.jpg",
+      "note": "頭圖出處、作者與授權；2026-10-13 查閱"
+    }
+  ]
+}
