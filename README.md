@@ -19,7 +19,8 @@ Claude Code 雲端排程（routines，Opus 5.5，用 Claude 訂閱額度，不�
 GitHub Actions
   publish.yml  每次 push：產生 content/index.json 與搜尋資料 → 替程式檔網址加版本號 → 部署 GitHub Pages
   fill.yml     07:12、07:15、07:18、07:22：仍缺稿的欄位自動以備稿補上（不經 AI）
-  watch.yml    07:45：缺稿、驗證失敗、有班次沒回報、或網站不是最新版 → 開 GitHub issue（寄 email 通知）
+               （GitHub 排程實測常晚 10–15 分鐘，實際約 07:25–07:35；第一道補位是第 5 班自己在 07:05 執行，這裡是獨立平台上的第二道）
+  watch.yml    07:45（實際約 07:55）：缺稿、驗證失敗、有班次沒回報、或網站不是最新版 → 開 GitHub issue（寄 email 通知）
         ▼
 網站（靜態 PWA）：07:30 前顯示上一期，07:30 起自動翻到當天；讀過的文章、圖片與字型存在手機上，離線也能讀
 ```
