@@ -1,0 +1,336 @@
+{
+  "column": "literature",
+  "date": "2026-10-13",
+  "title": "「我寧可不要」：巴托比一句話傳染了律師與錄事",
+  "dek": "梅爾維爾〈錄事巴托比〉的抄寫員總用一句「I would prefer not to」回答：文法無誤，卻沒說拒絕什麼。不久，律師和錄事也說起 prefer。",
+  "topic_key": "literature:melville-bartleby-putnams-p550",
+  "updated_at": "2026-10-13T02:57:00+08:00",
+  "spoiler": "本文後半談到〈錄事巴托比〉的結局。",
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Putnam%27s_Monthly_%28Volume_2%29.djvu/page562-1280px-Putnam%27s_Monthly_%28Volume_2%29.djvu.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Putnam%27s_Monthly_%28Volume_2%29.djvu/page562-1920px-Putnam%27s_Monthly_%28Volume_2%29.djvu.jpg",
+    "width": 1280,
+    "height": 2194,
+    "alt": "一頁雙欄的英文雜誌內頁，頁首印著 550、Bartleby, the Scrivener. 與 [November。左欄下方一段對話以引號標出 I would prefer not to.，右欄上方再出現同一句。",
+    "caption": "《普特南月刊》1853 年 11 月號第 550 頁。巴托比的第一句「I would prefer not to.」在左欄下方；同一頁裡，這句話一共出現四次。",
+    "credit": "Putnam's Monthly Magazine 第 2 卷（1853）；Commons 作者欄：Making of America Project；Google 自密西根大學圖書館藏本數位化，經 Internet Archive 上傳至 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Putnam%27s_Monthly_(Volume_2).djvu?page=562",
+    "made": "1853"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "律師低著頭看桌上的原件，右手往旁邊伸，捏著抄本，等新來的抄寫員一出來就接過去。這大約是巴托比（Bartleby）上班的第三天（敘事者說「我想」），律師要他一起核對一份短文件。屏風後面傳來的回答，《普特南月刊》（Putnam's Monthly Magazine）1853 年 11 月號第 550 頁印得很清楚：巴托比「沒有離開他的隱蔽處」，用「一種格外溫和、堅定的聲音」回了一句。"
+    },
+    {
+      "type": "quote",
+      "original": "“I would prefer not to.”",
+      "text": "「我寧可不要。」",
+      "cite": "本文自譯。原文見梅爾維爾〈Bartleby, the Scrivener. A Story of Wall-Street.〉，《Putnam's Monthly Magazine》第 2 卷第 11 期（1853 年 11 月），第 550 頁左欄。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.08,
+        0.81,
+        0.42,
+        0.05
+      ],
+      "position": "左欄下方，約佔頁寬四成",
+      "caption": "左欄下方：…Bartleby in a singularly mild, firm voice, replied, “I would prefer not to.”"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作者",
+          "赫曼・梅爾維爾（Herman Melville，1819–1891）"
+        ],
+        [
+          "作品原名",
+          "Bartleby, the Scrivener. A Story of Wall-Street.（中譯常作〈錄事巴托比〉或〈抄寫員巴托比〉）"
+        ],
+        [
+          "首次發表",
+          "《Putnam's Monthly Magazine》第 2 卷，分兩期連載：1853 年 11 月號第 546–557 頁、12 月號第 609–615 頁。雜誌頁面上沒有作者署名"
+        ],
+        [
+          "收入單行本",
+          "1856 年 5 月，紐約 Dix, Edwards & Co. 出版的短篇集《The Piazza Tales》"
+        ],
+        [
+          "本文依據版本",
+          "1853 年《普特南月刊》原刊。英文 Wikisource 謄本（Putnam's Monthly/Volume 2/Bartleby, the Scrivener，Part 1、Part 2），引文另與 Wikimedia Commons 上同一卷的掃描頁逐字對照"
+        ],
+        [
+          "引句位置",
+          "第 550 頁左欄末段，巴托比在全篇說的第一句話。本文所有頁碼都依 1853 年原刊"
+        ],
+        [
+          "譯文",
+          "本文中文引文皆為本文自譯，未使用出版譯本；德勒茲文字依英譯本轉譯"
+        ]
+      ]
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/3/39/Putnam%27s_Monthly-_vol_2%2C_November_1853%2C_no._XI.png",
+      "width": 680,
+      "height": 1088,
+      "alt": "一頁雜誌首頁。上方大字印著 PUTNAM'S MONTHLY，下一行是花體副標，再下是 VOL. II.—NOVEMBER 1853.—NO. XI.，正文雙欄，首篇標題為 A MOOSEHEAD JOURNAL。",
+      "caption": "《普特南月刊》第 2 卷第 11 期（1853 年 11 月）首頁，副標是「文學、科學與藝術雜誌」。〈錄事巴托比〉的上半篇刊在這一期的第 546 頁起，篇名下沒有作者署名。",
+      "credit": "Putnam's Monthly Magazine 1853 年 11 月號；影像來源 Cornell University Library 數位館藏（digital.library.cornell.edu），經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Putnam%27s_Monthly-_vol_2,_November_1853,_no._XI.png",
+      "made": "1853"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "讀者第一次讀到這句話，是在一本月刊的中段。1853 年 11 月號的上半篇從第 546 頁開始，緊接在一篇批評市府撲殺街上無口套之狗的法令的文章後面；篇名是全大寫的 BARTLEBY, THE SCRIVENER，副題「華爾街的故事」，底下直接進入正文，沒有梅爾維爾的名字。三年後，這篇小說收進 1856 年 5 月出版的短篇集《The Piazza Tales》。本文讀的是雜誌上的初刊文字，頁碼也依雜誌。"
+    },
+    {
+      "type": "h",
+      "text": "說話的人：一個相信「最輕鬆的活法最好」的律師"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "要聽懂這句話的分量，得先認識聽到它的人。故事的敘事者開頭就自稱「是個上了年紀的人」，後文說火雞和他差不多歲數，「離六十不遠」。他說自己從年輕時就深信「最輕鬆的活法就是最好的」，從不在陪審團前辯論，只在安靜的事務所裡替有錢人處理債券、抵押和地契；認識他的人都說他是個「穩當」的人。他還特意提到，已故的富商阿斯特（John Jacob Astor）說過他的長處第一是審慎，第二是有條理；說自己「不是出於虛榮」，又坦承愛重複阿斯特這個名字。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "這樣一個靠「審慎」與「條理」吃飯的人，最習慣處理的是明確的文件：誰欠誰、誰該做什麼。巴托比給他的卻是一句沒有受詞的話。我的讀法是，律師後來的種種反應——反覆追問、找旁人背書、一再延後處理——都是想把這句話改寫成他熟悉的格式，改寫成一個可以據以開除的「拒絕」。"
+    },
+    {
+      "type": "h",
+      "text": "他拒絕的是「核對」，不是「抄寫」"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "這句話出現的位置很具體。同一頁，敘事者先交代了錄事這一行的規矩：抄完要「逐字」核對抄本是否正確；事務所裡有兩個以上錄事時，就互相幫忙，一人念抄本，一人拿原件。他自己也承認這件事「非常乏味、累人、昏沉」，還說很難想像詩人拜倫肯坐下來陪巴托比對一份五百頁的法律文件。巴托比被叫去做的，正是這件事。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "而巴托比並不懶。同一頁前段寫他剛來時抄了「數量驚人」的文件，「彷彿久餓之人」吞食律師的檔案，日光下抄、燭光下也抄；只是他抄得「沉默、蒼白、機械」。原文特別交代，這時「還沒有需要核對他自己抄的東西」。所以第一次「寧可不要」，是一個拚命抄寫的人，拒絕幫老闆核對一份小文件。幾天後，律師召集四個人核對巴托比自己抄的四份副本，他還是那句話；律師提醒他「這些是你自己的抄本」，他改口成更短的「I prefer not to」，敘事者形容那聲音「像笛子」。"
+    },
+    {
+      "type": "h",
+      "text": "would、prefer、not to：每個詞都往後退一步"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，這句話的每個成分都在減弱力道。would 把「偏好」放進條件語氣，是一種客氣的、假設性的說法，像是「如果由我選的話」。prefer 是本身含有比較意味的動詞：它說的是兩個選項中我比較傾向哪一個，而不是「我不做」。最後的 not to 是不定詞符號 to 後面空著，動詞沒有說出口。巴托比沒有說「我寧可不核對」，他只說「我寧可不要——」，要什麼，留給問的人自己填。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "律師的反應恰好把這幾層剝掉。他第一次重複時，只抓住後半截：*“Prefer not to,” echoed I*——「寧可不要」，我跟著唸了一遍；接著就問「你是什麼意思？中邪了嗎？」到了下一頁，他直接改用另一個動詞發問：*“Why do you refuse?”*——「你為什麼拒絕？」refuse 是律師的字。巴托比從頭到尾沒有說過自己「拒絕」，他的回答仍是「I would prefer not to」。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "中文很難保留這個懸空的 to。「我寧可不要」已經比原文多了一個「要」字；寫成「我寧可不」，又不像人說的話。譯者若依上下文補出動詞，讀起來順，卻等於把巴托比沒說的那半句替他說完了。這也是本文把原文放在前面的原因：英文讀者聽到的，是一句文法完整、卻在最該出現動詞的地方停住的話。"
+    },
+    {
+      "type": "h",
+      "text": "德勒茲：文法正確，卻在結尾留空"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "法國哲學家德勒茲（Gilles Deleuze）有一篇專文〈巴托比，或句式〉，英譯收在 1997 年明尼蘇達大學出版社的《Essays Critical and Clinical》（Daniel W. Smith、Michael A. Greco 譯，第 68–90 頁）。他先指出 prefer 這樣用相當少見，律師和其他錄事平常都不這麼說；一般的說法會是 *I had rather not*。接著他談到結尾。"
+    },
+    {
+      "type": "quote",
+      "original": "Certainly it is grammatically correct, syntactically correct, but its abrupt termination, NOT TO, which leaves what it rejects undetermined, confers upon it the character of a radical, a kind of limit-function.",
+      "text": "它當然合乎文法、合乎句法，但它那突兀的結尾 NOT TO，讓它所拒絕的東西懸而未定，使它帶有一個根式（radical）的性質，一種極限函數。",
+      "cite": "本文自譯，依 Smith 與 Greco 的英譯本轉譯。德勒茲〈Bartleby; or, The Formula〉，《Essays Critical and Clinical》，University of Minnesota Press，1997，第 68–90 頁；文本見 OnCurating 第 40 期轉載。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "德勒茲在同一篇裡也引述前人的觀察：這個句式「既不是肯定，也不是否定」。依他的說法，律師要是聽到巴托比說「不想做」，反而會鬆一口氣；麻煩在於巴托比不拒絕，也不接受。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，這和第 550、551 頁律師的處境吻合：他先後兩次決定把這個難題「留到將來有空時」再想，因為他沒有一個可以據以處置的「不」。"
+    },
+    {
+      "type": "h",
+      "text": "一個字，從屏風後面漏出來"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "律師事務所原本有三個人：兩個錄事「火雞」（Turkey）、「鉗子」（Nippers），和跑腿的少年「薑餅」（Ginger Nut），都是彼此取的綽號。第 555 頁，鉗子聽見巴托比又一句「現在我寧可不要稍微講點道理」，咬著牙說：「*Prefer not*，是吧？我要是你，先生，我就 *prefer* 他；我就給他點 preferences，這頭倔騾子！」原刊把他嘴裡的 prefer 都排成斜體。這一頁在 Commons 掃描檔第 567 頁，可以對照斜體的位置。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "接下來是律師自己。他對鉗子說：「鉗子先生，我寧可（I'd prefer）你先退下。」緊接著一段自白：「不知怎的，最近我不由自主地把『prefer』這個字用在各種不太恰當的場合。」他說想到自己已經在精神上被這個錄事影響，就發起抖來。然後火雞進來，建議巴托比「要是肯 prefer 每天喝一夸脫好麥酒」就會好些。律師脫口而出：「原來你也染上這個字了。」"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "第 556 頁把這個傳染寫到最細。火雞說：「喔，*prefer*？對——怪字。我自己從來不用。」話沒說完又是一句「要是他肯 prefer——」；被請出去時，他答「當然，先生，如果您 prefer 我這麼做」。火雞開門出去時，鉗子從座位上問律師，某份文件 prefer 用藍紙還是白紙抄。這一次敘事者特別說明，鉗子「一點也沒有調侃地加重」這個字，它是「不由自主地從他舌頭上滾出來的」。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "由此推想，這一段的笑點和寒意是同一件事。鉗子第一次說 prefer 時加了斜體，是有意識的模仿；一頁之後，同一個字不再有斜體，也不再有嘲弄，只是一個普通的、用錯了地方的動詞。巴托比什麼都沒做，他的語言卻已經住進了整間事務所。律師說他得擺脫一個「已經某種程度上轉了我和錄事們的舌頭，若不是腦袋的話」的瘋子；他怕的與其說是巴托比，不如說是自己嘴裡的那個字。"
+    },
+    {
+      "type": "spoiler",
+      "text": "以下談到結局"
+    },
+    {
+      "type": "table",
+      "title": "巴托比的句子怎麼變（依 1853 年原刊頁碼）",
+      "head": [
+        "頁碼",
+        "情境",
+        "巴托比的回答"
+      ],
+      "rows": [
+        [
+          "550",
+          "第三天，被叫去核對短文件",
+          "I would prefer not to.（同頁共四次）"
+        ],
+        [
+          "551",
+          "被問「你為什麼拒絕？」之後",
+          "I would prefer not to. ／ I prefer not to"
+        ],
+        [
+          "555",
+          "被問出生地、身世",
+          "I would prefer not to. ／ At present I prefer to give no answer"
+        ],
+        [
+          "555",
+          "被勸「稍微講點道理」",
+          "At present I would prefer not to be a little reasonable"
+        ],
+        [
+          "556",
+          "六天期限到，被要求離開",
+          "I would prefer not"
+        ],
+        [
+          "612",
+          "被問要不要再替人抄寫",
+          "No; I would prefer not to make any change."
+        ],
+        [
+          "614",
+          "在監獄被邀去用餐",
+          "I prefer not to dine to-day"
+        ]
+      ],
+      "caption": "依英文 Wikisource 謄本整理，並與 Commons 掃描頁對照。只列有代表性的句子，不是全部出現次數。"
+    },
+    {
+      "type": "h",
+      "text": "最後一次，動詞終於說出口"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "巴托比後來停止抄寫，也不肯離開。律師搬走了事務所，新房客、房東先後找上門。第 612 頁，律師一連提出幾個出路：回去當錄事、到布料行當店員、當酒保、替商人四處收帳、陪年輕紳士去歐洲。巴托比的回答在 prefer 之外多了一句新的話：「我不挑。」（I am not particular.）他說自己「喜歡固定不動」（I like to be stationary）。最後他被當成遊民，送進俗稱「墳墓」（the Tombs）、正式名稱是「司法大廳」（Halls of Justice）的監獄。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "第 614 頁，律師付錢請監獄裡的包飯人給巴托比準備好一點的伙食。包飯人殷勤地邀他吃飯，巴托比說：*“I prefer not to dine to-day.”*——「我今天寧可不吃飯。」又補一句：「那會讓我不舒服；我不習慣吃飯。」在此之前，空著的動詞已經被填過幾次（第 555 頁的「講點道理」、第 609 頁的「離開你」、第 612、613 頁的「改變」）；這一次填進去的是吃飯。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "幾天後，律師在監獄的院子裡發現他蜷在牆腳，眼睛睜著，已經死了。包飯人問：「他今天也不吃嗎？還是他不吃飯也能活？」律師回答：「不吃飯也活著」（Lives without dining），替他闔上眼睛。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，第 550 頁那個空著的 to，後來被一次次填上，到第 614 頁，填進去的是 dine，吃飯。這個空格一路從核對文件、回答身世、講道理、搬離事務所，擴大到吃飯這件維持生命的事。句式沒有變，變的只是後面能放進去的東西。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "故事的最後，律師說他在巴托比死後幾個月聽到一則傳聞：巴托比曾在華盛頓的「死信局」（Dead Letter Office）當低階職員，因為政府換人而突然被裁。律師自己說，這則傳聞「根據什麼，我始終查不清」。他接著想像那些寄不到的信，裡面有戒指、有救急的鈔票、有給絕望而死之人的赦免，然後寫下全篇最後一行：「啊，巴托比！啊，人性！」"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "第一頁他就說過，關於巴托比，除了親眼所見，他什麼都不知道；到了最後一頁，他仍說無法滿足人們對巴托比是誰、過著什麼生活的好奇。我的讀法是，他始終不知道巴托比寧可不要的，究竟是什麼。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Putnam's Monthly/Volume 2/Bartleby, the Scrivener (Part 1)",
+      "publisher": "英文 Wikisource",
+      "date": "1853-11",
+      "url": "https://en.wikisource.org/wiki/Putnam%27s_Monthly/Volume_2/Bartleby,_the_Scrivener_(Part_1)",
+      "note": "1853 年 11 月號第 546–557 頁謄本；本文第 546、550、551、555、556 頁引文"
+    },
+    {
+      "title": "Putnam's Monthly/Volume 2/Bartleby, the Scrivener (Part 2)",
+      "publisher": "英文 Wikisource",
+      "date": "1853-12",
+      "url": "https://en.wikisource.org/wiki/Putnam%27s_Monthly/Volume_2/Bartleby,_the_Scrivener_(Part_2)",
+      "note": "1853 年 12 月號第 609–615 頁謄本；本文第 612–615 頁引文"
+    },
+    {
+      "title": "File:Putnam's Monthly (Volume 2).djvu",
+      "publisher": "Wikimedia Commons",
+      "date": "1853",
+      "url": "https://commons.wikimedia.org/wiki/File:Putnam%27s_Monthly_(Volume_2).djvu",
+      "note": "同卷掃描檔；逐字對照第 546、550、555、556、612、614 頁（掃描檔第 558、562、567、568、624、626 頁）"
+    },
+    {
+      "title": "Bartleby; or, The Formula（Gilles Deleuze，Daniel W. Smith、Michael A. Greco 英譯）",
+      "publisher": "OnCurating 第 40 期轉載自《Essays Critical and Clinical》（University of Minnesota Press，1997，第 68–90 頁）",
+      "date": "1997",
+      "url": "https://on-curating.org/issue-40-reader/bartleby-or-the-formula.html",
+      "note": "prefer 少見、I had rather not、NOT TO 結尾、既非肯定亦非否定"
+    },
+    {
+      "title": "The Piazza Tales",
+      "publisher": "The Life and Works of Herman Melville（melville.org）",
+      "date": "",
+      "url": "http://www.melville.org/hmpiazza.htm",
+      "note": "1856 年 5 月 Dix, Edwards & Co. 初版；其餘五篇先刊於 Putnam's"
+    },
+    {
+      "title": "Herman Melville（首頁生平欄）",
+      "publisher": "The Life and Works of Herman Melville（melville.org）",
+      "date": "",
+      "url": "http://www.melville.org/",
+      "note": "生卒年 1819–1891"
+    },
+    {
+      "title": "Putnam's Monthly Magazine, November 1853",
+      "publisher": "The Grolier Club",
+      "date": "",
+      "url": "https://grolierclub.omeka.net/items/show/1137",
+      "note": "本期刊出梅爾維爾〈Bartleby the Scrivener〉兩期連載的第一期"
+    }
+  ]
+}
