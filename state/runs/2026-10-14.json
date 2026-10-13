@@ -10,6 +10,15 @@
     ],
     "note": "完成 devotion（林後 4:7–10）、music（伯恩斯坦《奇切斯特詩篇》）、perio（Nyman 1982 新附著），皆經審稿修正後推送，validate 無 ERROR"
   },
+  "2": {
+    "finished_at": "2026-10-14T02:05:40+08:00",
+    "missing": [
+      "football",
+      "art",
+      "photo"
+    ],
+    "note": "civilization（波斯波利斯城防泥板口糧帳）與 philosophy（Frankfurt 案例）完成，經審稿修正後推送；validate 無 ERROR"
+  },
   "reserve": {
     "finished_at": "2026-10-14T00:44:21+08:00",
     "missing": [
