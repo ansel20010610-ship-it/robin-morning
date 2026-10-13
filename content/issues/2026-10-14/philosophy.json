@@ -1,0 +1,541 @@
+{
+  "column": "philosophy",
+  "date": "2026-10-14",
+  "title": "她只能勾那一格，還該不該被責怪",
+  "dek": "咖啡館店長在檢查表上說了謊，卻不知道自己其實別無選擇。從 Frankfurt 1969 年的反例出發，追問責任是否需要「本來可以不這樣做」。",
+  "topic_key": "philosophy:frankfurt-alternate-possibilities",
+  "updated_at": "2026-10-14T02:05:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/An_essay_concerning_humane_understanding._1690_%28IA_bim_early-english-books-1641-1700_an-essay-concerning-huma_locke-john_1690%29.pdf/page130-960px-An_essay_concerning_humane_understanding._1690_%28IA_bim_early-english-books-1641-1700_an-essay-concerning-huma_locke-john_1690%29.pdf.jpg",
+    "width": 960,
+    "height": 1714,
+    "alt": "微縮膠片翻拍的 17 世紀英文書頁，頁眉左為頁碼 118，中為 Power，右為 Book II。正文為密排的舊式字體，段首標有 §. 9.、§. 10.、§. 11.，中段一段以「Again, suppose a Man be carried, whilst fast asleep, into a Room」開頭。",
+    "caption": "洛克《人類理解論》1690 年倫敦初版，第二卷〈論能力〉頁 118。中段的 §. 10. 就是上鎖房間的例子：熟睡的人被抬進房間、門被鎖上，他醒來後情願留下。",
+    "credit": "John Locke；Eliz. Holt 印刷、Thomas Basset 發行；Commons 影像取自 Internet Archive 的 Early English Books 1641–1700 微縮膠片掃描",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:An_essay_concerning_humane_understanding._1690_(IA_bim_early-english-books-1641-1700_an-essay-concerning-huma_locke-john_1690).pdf?page=130",
+    "made": "1690"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "某個週三早上 7 點 50 分，台北一家連鎖咖啡館還沒開門。店長怡君在平板上填每週的食品衛生自主檢查表，其中一欄問：「本週是否使用逾期原料？」上週五，她把兩公升過期一天的鮮奶拿去做了拿鐵。她有兩個選項：勾「是」並寫說明，店裡可能被總公司記點；或勾「否」，沒有人會知道。她想了大約一分鐘，認為記點不划算，勾了「否」，按下送出。再加一個只在思想實驗裡成立的設定：她上個月動過一次小手術，主刀醫師出於本文不必交代的理由，在她腦中留下一個監測裝置。只要裝置偵測到她要決定勾「是」，就會介入，讓她改為決定勾「否」。這個早上，裝置一次也沒有啟動。"
+    },
+    {
+      "type": "p",
+      "text": "把條件攤開：怡君說了謊，而且是她自己盤算過後決定的；但她不可能做出另一個決定，只要她一傾向誠實，裝置就會讓她改主意。本文要問的是：她該不該為這個謊受責備？多數人的第一反應大概是「當然該」。可是同一批人多半也相信另一句話：一個人只為他本來可以避免的事負責。兩句話在怡君身上撞在一起，至少得放棄一句。"
+    },
+    {
+      "type": "h",
+      "text": "出處：Frankfurt 1969 年的 Black 與 Jones"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這個結構來自美國哲學家法蘭克福（Harry G. Frankfurt，1929–2023）1969 年發表在《哲學期刊》（*The Journal of Philosophy*）第 66 卷第 23 期的〈替代可能與道德責任〉（Alternate Possibilities and Moral Responsibility），頁 829–839；他當時任教於洛克菲勒大學。文章第一段先替要攻擊的對象命名：「替代可能原則」（principle of alternate possibilities，以下簡稱 PAP），內容是一個人只有在本來能夠做別的事時，才對他做過的事負道德責任。他說幾乎沒有人質疑這條原則，有些哲學家甚至把它當成先驗真理。第二段開頭就翻案："
+    },
+    {
+      "type": "quote",
+      "original": "But the principle of alternate possibilities is false. A person may well be morally responsible for what he has done even though he could not have done otherwise.",
+      "text": "但替代可能原則是錯的。一個人很可能要為他做過的事負道德責任，即使他本來無法做別的事。",
+      "cite": "Frankfurt，〈替代可能與道德責任〉，1969，頁 829–830（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "論證分兩步。第一步談脅迫：Jones 先為自己的理由決定做某件事，接著有人以極嚴厲的懲罰威脅他非做不可。Frankfurt 把 Jones 拆成三種人。Jones1 根本不理會威脅，威脅對他沒有作用；Jones2 被嚇壞了，忘了原先的決定，只因恐懼而行動；Jones3 被威脅打動，也會屈服，但他實際上是依照威脅出現前自己的理由去做。Frankfurt 認為，Jones2 很難說要為行動負責，Jones3 的責任卻不因威脅而改變，儘管威脅已經讓他無法不做。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "第二步才是 Black。為了擋掉「Jones3 終究還能抗拒威脅」這類反駁，他把例子改成：某人，「就叫他 Black 吧」，想要 Jones4 做某個動作，願意大費周章，卻不想在不必要時出手。Black 可以發出可怕的威脅、給 Jones4 喝藥水、催眠他，或直接操弄他的腦與神經；讀者認為什麼條件足以讓 Jones4「無法做別的」，就讓 Black 備妥那個條件。結果 Black 從頭到尾不必出手，因為 Jones4「為了他自己的理由」做了 Black 要他做的事。"
+    },
+    {
+      "type": "quote",
+      "original": "This fact played no role at all in leading him to act as he did.",
+      "text": "這個事實（他無法做別的）在促使他如此行動這件事上，完全沒有起作用。",
+      "cite": "Frankfurt，1969，第 IV 節；SEP 標此例在頁 835–836（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "有兩個細節常在後來的轉述中消失。其一，原文的 Black 沒有職業。教科書裡那位替 Jones 開腦瘤時順手裝進監控機制、確保他投票給共和黨候選人的神經外科醫師 Black，出自 Fischer 1982 年〈責任與控制〉（Responsibility and Control）的改寫，SEP 標在該文頁 26。其二，Frankfurt 在註 2 說，他想出這個例子後才得知諾齊克（Robert Nozick）幾年前在演講中提過同類型的例子；註 4 又說，Black 可以換成一台機器，甚至換成不帶任何意圖或設計的自然力量。"
+    },
+    {
+      "type": "facts",
+      "title": "本文情境與原典的差異",
+      "items": [
+        [
+          "原典",
+          "Harry G. Frankfurt，〈Alternate Possibilities and Moral Responsibility〉，*The Journal of Philosophy* 66(23)，1969，頁 829–839；Black 與 Jones4 在第 IV 節"
+        ],
+        [
+          "常見改寫",
+          "John Martin Fischer 1982：Black 成為神經外科醫師，行動改成投票"
+        ],
+        [
+          "改動一",
+          "「某個動作」換成有明確對錯的謊報"
+        ],
+        [
+          "改動二",
+          "介入者換成手術留下的監測裝置，接近 Fischer 的版本，不是 Frankfurt 原版"
+        ],
+        [
+          "改動三",
+          "場景放進咖啡館，方便後文逐項替換條件"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "更早的影子：洛克的上鎖房間"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "史丹佛哲學百科（SEP）〈道德責任與替代可能原則〉（Moral Responsibility and the Principle of Alternative Possibilities，David Robb 撰，2020）把一個 17 世紀的例子當作早期的 Frankfurt 式案例。洛克（John Locke）《人類理解論》（*An Essay Concerning Humane Understanding*）第二卷〈論能力〉第 10 節：一個人在熟睡中被抬進一個房間，房裡有他渴望見面交談的人；門被鎖死，他出不去。他醒來，很高興有這樣的同伴，情願留下。即第 21 章 §10，1690 年初版頁 118；SEP 引作 II.xxi.10。"
+    },
+    {
+      "type": "quote",
+      "original": "I ask, Is not this stay voluntary? I think, no Body will doubt it; and yet being locked fast in, 'tis evident he is not at liberty not to stay, he has not freedom to be gone.",
+      "text": "我要問：這樣留下不是自願的嗎？我想沒有人會懷疑。然而他被鎖在裡面，顯然他沒有不留下的自由，他沒有離去的自由。",
+      "cite": "洛克，《人類理解論》，倫敦，1690 年初版，頁 118（本文自譯）"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.2,
+        0.455,
+        0.73,
+        0.185
+      ],
+      "position": "書頁中段，約佔頁高五分之一，從 §. 10. 開始",
+      "caption": "§. 10. 全段。初版拼寫是 chuse（後來版本作 choose），長 s 寫成近似 f 的字形；「Liberty is not an Idea belonging to Volition」一句大部分以斜體排出。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "洛克要分辨的是「自願」與「自由」，談的不是道德責任。SEP 也認為這個例子駁不倒 PAP，因為要分開兩件事（這個區分 SEP 註明取自 Lowe 1995）：「留在房裡」他避免不了，但也很難因此責怪他；「決定留下」他避免得了，他可以抗議或設法出去。Frankfurt 的案例改進的正是這一點：無法避免的，是決定本身。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "portrait",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Godfrey_Kneller_-_Portrait_of_John_Locke_%28Hermitage%29.jpg/1280px-Godfrey_Kneller_-_Portrait_of_John_Locke_%28Hermitage%29.jpg",
+      "width": 1280,
+      "height": 1560,
+      "alt": "橢圓畫框內的油畫半身像：一位清瘦的老年男子，灰白長髮及肩，眉頭微皺，望向畫面左方；白襯衫外披褐色寬袍，背景是暗褐色。右下角有紅色館藏編號 2709。",
+      "caption": "克內勒（Godfrey Kneller）1697 年畫的洛克肖像，艾米塔吉博物館藏（ГЭ-1345）。洛克用上鎖的房間說明「自願」不等於「自由」，比 Frankfurt 早了將近三個世紀。",
+      "credit": "Godfrey Kneller（1646–1723）；Commons 影像來源標示為 arthermitage.org、艾米塔吉博物館（聖彼得堡）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Godfrey_Kneller_-_Portrait_of_John_Locke_(Hermitage).jpg",
+      "made": "1697"
+    },
+    {
+      "type": "h",
+      "text": "立場一：責任看實際發生了什麼"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Frankfurt 的診斷是：讓一個行動無法避免的條件，和實際促成這個行動的原因，可以是兩回事。PAP 把兩者綁在一起，所以出錯。他在第 V 節提議用另一條原則取代 PAP："
+    },
+    {
+      "type": "quote",
+      "original": "a person is not morally responsible for what he has done if he did it only because he could not have done otherwise.",
+      "text": "一個人若只是因為無法做別的才那樣做，他就不必為所做的事負道德責任。",
+      "cite": "Frankfurt，1969，第 V 節（本文自譯）"
+    },
+    {
+      "type": "p",
+      "text": "套到怡君身上：她勾「否」，不是因為裝置，裝置沒動；是因為她算過記點不划算。照這條原則，她要負責。Frankfurt 還補了一句：這條原則看來和「道德責任與決定論相容」的看法並不衝突。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "把這個想法做成完整理論的，是 Fischer 與 Ravizza 1998 年的《責任與控制》（*Responsibility and Control*）。依 SEP 的整理，他們區分兩種控制：「調控控制」（regulative control）是手上真有別條路可走；「導引控制」（guidance control）是行動出自一個會回應理由的機制。他們認為 Frankfurt 案例顯示，道德責任只需要後者。本文套用到本案：假如總公司宣布下週抽驗，怡君同樣的盤算就會讓她勾「是」；她的推理對理由有反應，即使在實際情境裡另一條路已被裝置封住。"
+    },
+    {
+      "type": "quote",
+      "original": "A person's moral responsibility concerns what she does do and her basis for doing it, not what else she could have done.",
+      "text": "一個人的道德責任，關乎她實際做了什麼、憑什麼去做，而不是她本來還能做什麼。",
+      "cite": "McKenna，*Noûs* 42，2008，頁 785；依 Pereboom 手冊條目轉引（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這一方並不都站在相容論那邊。Pereboom 在 2001 年的《沒有自由意志的生活》（*Living without Free Will*）裡接受 Frankfurt 案例，卻主張「來源不相容論」：責任要求行動的來源在行為者自己，如果行動是由她無法控制的、可以一路追溯到出生之前的因素決定的，她就不是來源。Pereboom 的手冊條目也提到，Fischer 早已指出 Frankfurt 案例並沒有挑戰不相容論的這個主張：責任要求行動的因果史不是被決定的。案例拆掉的只是「另一條路」這個條件，決定論的問題還在原地。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "立場一的代價在細節裡。裝置要在怡君「傾向誠實」時介入，就得事先讀出她的傾向；這個「讀出」怎麼運作，正是反方下手的地方。"
+    },
+    {
+      "type": "h",
+      "text": "立場二：沒有別條路，就沒有可責之處"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Widerker 的反問最直接。他針對 Frankfurt 式案例裡一位違背承諾的 Jones 說："
+    },
+    {
+      "type": "quote",
+      "original": "tell me what, in your opinion, should he have done instead?",
+      "text": "那就告訴我，依你看，他本來應該改做什麼？",
+      "cite": "Widerker，*Philosophical Perspectives* 14，2000，頁 191；依 Pereboom 手冊條目轉引（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "據 Pereboom，Widerker 把這個反問稱為「W 辯護」。責備一個人，等於說他本該做別的；如果別的根本做不到，這句話就沒有對象。對怡君說「你不該勾否」，而她勾不了「是」。Pereboom 引 Moya 的說法：要受責備，得有一條「能讓她免責的另類可能」，只要走那條路，她就不會受到正當的責備。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這一方很有影響力的論證是兩難，版本見於 Kane 1985 與 1996、Widerker 1995、Ginet 1996 等。裝置必須靠某個訊號判斷她要往哪邊走；Frankfurt 自己在註 3 舉過例子：Jones4 每次要選 A 之前臉都會抽動，Black 看到抽動就能預測。那麼，這個訊號是否決定了她的選擇？如果是，她的決定在發生前就被定住，相信自由需要非決定論的人（PAP 的支持者多半是）不會同意她有責任，案例等於預設了爭點。如果不是，訊號出現之後她仍可能決定勾「是」，裝置來不及介入，她就有另一條路。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "SEP 的總結是，兩支都保不住「她有責任」和「她沒有別條路」這兩個條件，而案例要成功，兩者缺一不可。Frankfurt 在註 3 已承認抽動與後來的決定之間有某種因果關係，只說案例不要求這些早期階段被更早的事件決定。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "另一條防線叫「自由的微光」（flicker of freedom，這個名稱來自 Fischer 1994），早期版本見 van Inwagen 1978、Naylor 1984。怡君至少還有一件事可以不做：「自己決定勾否」。若她傾向誠實，裝置會推著她勾「否」，那就不是她自己決定的。Fischer 的回應是，這道微光不夠「強健」：在另一條路上她什麼也沒做，只是被操縱，這樣的可能性無法解釋她為什麼該受責備。PAP 的支持者則反問，可能性是否非得強健不可。"
+    },
+    {
+      "type": "svg",
+      "title": "兩難論證與 Frankfurt 一方的修補",
+      "svg": "<svg viewBox=\"0 0 400 500\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"12\">\n<rect class=\"soft\" x=\"30\" y=\"8\" width=\"340\" height=\"52\" rx=\"4\"/>\n<text x=\"200\" y=\"29\" class=\"ink\" text-anchor=\"middle\" font-size=\"13\">裝置靠什麼判斷要不要介入？</text>\n<text x=\"200\" y=\"48\" class=\"muted\" text-anchor=\"middle\" font-size=\"11\">假設：靠一個先於決定的訊號（Frankfurt 註 3 的臉部抽動）</text>\n<line x1=\"200\" y1=\"60\" x2=\"102\" y2=\"92\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.2\"/>\n<line x1=\"200\" y1=\"60\" x2=\"298\" y2=\"92\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.2\"/>\n<rect x=\"10\" y=\"92\" width=\"184\" height=\"62\" rx=\"4\" fill=\"none\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"20\" y=\"110\" class=\"gold\" font-size=\"11\">第一支</text>\n<text x=\"20\" y=\"127\" class=\"ink\">訊號決定了她的選擇</text>\n<text x=\"20\" y=\"144\" class=\"muted\" font-size=\"11\">決定在發生前就被定住</text>\n<rect x=\"206\" y=\"92\" width=\"184\" height=\"62\" rx=\"4\" fill=\"none\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"216\" y=\"110\" class=\"gold\" font-size=\"11\">第二支</text>\n<text x=\"216\" y=\"127\" class=\"ink\">訊號不決定她的選擇</text>\n<text x=\"216\" y=\"144\" class=\"muted\" font-size=\"11\">訊號出現後她仍可能勾「是」</text>\n<line x1=\"102\" y1=\"154\" x2=\"102\" y2=\"176\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.2\"/>\n<line x1=\"298\" y1=\"154\" x2=\"298\" y2=\"176\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.2\"/>\n<rect class=\"soft\" x=\"10\" y=\"176\" width=\"184\" height=\"58\" rx=\"4\"/>\n<text x=\"20\" y=\"198\" class=\"accent\">她的責任變得可疑</text>\n<text x=\"20\" y=\"218\" class=\"muted\" font-size=\"11\">非決定論者不會同意她有責任</text>\n<rect class=\"soft\" x=\"206\" y=\"176\" width=\"184\" height=\"58\" rx=\"4\"/>\n<text x=\"216\" y=\"198\" class=\"accent\">她其實有另一條路</text>\n<text x=\"216\" y=\"218\" class=\"muted\" font-size=\"11\">PAP 沒有被駁倒</text>\n<text x=\"200\" y=\"262\" class=\"ink\" text-anchor=\"middle\" font-size=\"13\">兩支都保不住「有責任」加「沒別條路」</text>\n<line x1=\"20\" y1=\"282\" x2=\"380\" y2=\"282\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-dasharray=\"4 3\"/>\n<text x=\"200\" y=\"304\" class=\"gold\" text-anchor=\"middle\" font-size=\"11\">Frankfurt 一方的兩種修補</text>\n<rect x=\"10\" y=\"316\" width=\"184\" height=\"104\" rx=\"4\" fill=\"none\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"20\" y=\"336\" class=\"ink\" font-size=\"13\">緩衝案例</text>\n<text x=\"20\" y=\"353\" class=\"muted\" font-size=\"11\">Pereboom 2001</text>\n<text x=\"20\" y=\"372\" class=\"ink\" font-size=\"11\">不看先兆，只盯住誠實的</text>\n<text x=\"20\" y=\"390\" class=\"ink\" font-size=\"11\">必要條件：夠強的道德理由</text>\n<text x=\"20\" y=\"408\" class=\"ink\" font-size=\"11\">一浮現就介入</text>\n<rect x=\"206\" y=\"316\" width=\"184\" height=\"104\" rx=\"4\" fill=\"none\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"216\" y=\"336\" class=\"ink\" font-size=\"13\">阻斷案例</text>\n<text x=\"216\" y=\"353\" class=\"muted\" font-size=\"11\">Mele 與 Robb 1998</text>\n<text x=\"216\" y=\"372\" class=\"ink\" font-size=\"11\">不看訊號，預先啟動一個</text>\n<text x=\"216\" y=\"390\" class=\"ink\" font-size=\"11\">過程，除非她在那一刻</text>\n<text x=\"216\" y=\"408\" class=\"ink\" font-size=\"11\">自己決定勾「否」</text>\n<text x=\"200\" y=\"446\" class=\"muted\" text-anchor=\"middle\" font-size=\"11\">批評者（Ginet、Widerker、Kane 等）：修補後的案例</text>\n<text x=\"200\" y=\"463\" class=\"muted\" text-anchor=\"middle\" font-size=\"11\">仍偷偷藏著決定，或仍留著另一條路</text>\n<text x=\"200\" y=\"488\" class=\"muted\" text-anchor=\"middle\" font-size=\"10\">原創論證圖，依 SEP〈道德責任與替代可能原則〉§4.3 整理</text>\n</svg>",
+      "caption": "原創論證圖。上半是 Kane、Widerker、Ginet 等人的兩難；下半是 Pereboom、Mele 與 Robb 不靠先兆訊號的改版。圖中的「勾是／勾否」沿用本文情境，原文案例分別是逃稅（Pereboom）與偷車（Mele 與 Robb）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Frankfurt 一方的修補也有兩種。Pereboom 2001 年的「逃稅」案例讓裝置不看先兆，只盯住誠實的必要條件：Joe 只有在一個夠強的道德理由浮現時才可能決定不逃稅，裝置一偵測到這種理由就介入；實際上理由沒有浮現。Mele 與 Robb 1998 年則完全拿掉訊號：Black 預先啟動一個過程，到了決定的時刻就會讓 Bob 決定偷 Ann 的車，除非他在那一刻自己這樣決定。批評者認為這些改版若不是偷偷藏著決定，就是仍留著另一條路。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "SEP 對整場辯論的評估很保守：「到目前為止，關於 PAP 的文獻沒有形成多少共識」（So far not much consensus has emerged from the literature on PAP，本文自譯）。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（一）：裝置真的啟動了"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "其他設定不變，只改一點：怡君想了一分鐘，其實傾向誠實，正要勾「是」；裝置偵測到，介入，她「決定」勾「否」並送出。表單上的結果和原案一模一樣：同一格，同一個謊，同一個時間。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "幾乎沒有人會責怪這個版本的怡君。麻煩在於，兩個版本裡她都無法做出另一個決定，PAP 若只看「有沒有別條路」，就給兩版同樣的答案，說不出直覺為什麼翻轉。Frankfurt 的替代原則說得出來：這一版她勾「否」，是「只因為」無法做別的；原版不是。這正是 Jones2 與 Jones3 的差別。PAP 一方可以回答：原版其實沒有封死另一條路（兩難的第二支），或至少留著一道微光。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：判斷翻轉的位置，落在實際發生的那條因果線上，而不在可能性的多寡。這是立場一最有力的證據，但它只證明實際序列很重要，沒有證明另一條路完全不重要。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（二）：裝置拿掉，表單被動了手腳"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "這次怡君腦中沒有裝置，她完全可以決定勾「是」。但總公司的系統被人動過手腳：不管她勾哪一格，送出的紀錄都是「否」。她照樣盤算一分鐘，勾了「否」。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "SEP 介紹一條改寫自 van Inwagen 1978 的原則：一個人只為他能防止的後果負責。照它，這筆假紀錄反正會出現，她不必為紀錄本身負責。Rowe 1989 年的反例是：你親手扳動道岔，讓火車轉進綁著一隻狗的軌道，狗死了；你不扳，另有一個 Peter 準備好要扳。Rowe 認為你仍要為狗的死負責（依 SEP 轉述）。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "現在無法避免的是結果，不是決定，結構接近洛克的房間。多數讀者大概仍會責怪她「決定說謊」；問題在於，她要不要為「總公司收到一筆假紀錄」負責。換到怡君身上，差別在於她的勾選有沒有「造成」那筆紀錄。在這個版本裡，系統不看她勾什麼，她的勾選不是紀錄的原因，這比 Rowe 的道岔更接近 van Inwagen 的判斷。可見「她能不能做別的」得拆成兩問：能不能做出別的決定，能不能改變結果。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（三）：不是說謊，是沒有出聲"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "回到沒有裝置、系統也正常的世界，換成一件沒做的事。怡君看見新進同事拿那瓶過期鮮奶做了一杯拿鐵，交給外送員。她想了想，決定不出聲。她不知道的是，外送員早已騎車離開，她就算當場喊住同事，也追不回那杯飲料。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這是 van Inwagen 1978 年一個案例的翻版（依 SEP 轉述）：Bob 看見屋外有人被搶，盤算之後決定不報警；他不知道全市電話正好全部故障。直覺上 Bob 不必為「沒報警」負責。Fischer 與 Ravizza 1991 年用類似案例提出不對稱：為一個行動負責，不需要能夠不做；為沒做某件事負責，卻需要本來做得到。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "他們後來在 1998 年的書裡收回這個不對稱，Frankfurt 1994 年則主張兩者一起倒。SEP 舉的反例是：救生員 Luke 因為懶散而沒有去救溺水的人；他不知道，只要他一動念要救，就會被一陣無法抗拒的恐懼癱瘓。那陣恐懼從未發作，就像怡君腦中那個沒啟動的裝置。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：這一版的怡君仍可為「決定不出聲」受責，這是她自己的決定；但要她為「客人喝到過期奶」負責，就顯得勉強，因為她出不出聲，結果都一樣。另一條路在作為上似乎可有可無，在不作為上卻像是必要條件，至少看起來如此。"
+    },
+    {
+      "type": "table",
+      "title": "四個版本，兩條原則",
+      "head": [
+        "版本",
+        "她能做出別的決定嗎",
+        "實際促成結果的是",
+        "PAP 的判斷",
+        "Frankfurt 替代原則",
+        "本文推想的常見直覺"
+      ],
+      "rows": [
+        [
+          "原案：裝置未啟動",
+          "不能",
+          "她自己的盤算",
+          "不必負責（除非原案其實留有另一條路或微光）",
+          "要負責",
+          "要負責"
+        ],
+        [
+          "改一：裝置啟動",
+          "不能",
+          "裝置",
+          "不必負責",
+          "不必負責",
+          "不必負責"
+        ],
+        [
+          "改二：系統被動手腳",
+          "能，但改不了紀錄",
+          "決定出自她，紀錄出自系統",
+          "對決定負責；對紀錄不必負責（後果版 PAP）",
+          "對決定負責",
+          "對決定負責；紀錄有爭議"
+        ],
+        [
+          "改三：沒有出聲",
+          "能出聲，但攔不住",
+          "外送員早已出發",
+          "對結果不必負責（不作為版 PAP）",
+          "原文未處理不作為",
+          "對沉默負責；對結果較少人責怪"
+        ]
+      ],
+      "caption": "「PAP 的判斷」一欄依各版本最相關的 PAP 變體填寫；最後一欄是本文推想，不是問卷結果。"
+    },
+    {
+      "type": "h",
+      "text": "還沒解決的事"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "幾個版本走下來，比較穩的只有一件事：責任的判斷，對「實際是什麼促成了行動」非常敏感。至於「另一條路」是否也是必要條件，要看那條路要多強健、說的是決定還是結果、是作為還是不作為。兩方都還欠一筆帳：立場一得說清楚，一台從未啟動的裝置為什麼完全無關；立場二得說清楚，若另一條路真被封死（如緩衝或阻斷案例），為什麼原案仍和「改一」不同。"
+    },
+    {
+      "type": "p",
+      "text": "還有一個問題，Frankfurt 的案例沒有回答。怡君腦中的裝置沒動，所以她要負責。可是如果讓她覺得「記點不划算」的那一連串原因，早在她出生前就已經排定，那台沒動的裝置和這串因果之間，差別到底在哪裡？"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Alternate Possibilities and Moral Responsibility",
+      "publisher": "Harry G. Frankfurt／The Journal of Philosophy 66(23): 829–839",
+      "date": "1969-12-04",
+      "url": "https://doi.org/10.2307/2023833",
+      "note": "頁 829–830 依 Reclam 英德對照本試閱 PDF 核對（https://lesejury.de/media/samples/789/9783150195789_leseprobe.pdf）；第 II–V 節與註 2–4 依「Determinism and Freedom Philosophy Website」的全文轉錄本核對，轉錄本有錯字；第 IV、V 節引文頁碼未逐頁核對，Black 一例的頁碼 835–836 依 SEP"
+    },
+    {
+      "title": "HARRY FRANKFURT: ALTERNATE POSSIBILITIES AND MORAL RESPONSIBILITY（全文轉錄）",
+      "publisher": "The Determinism and Freedom Philosophy Website（UCL 個人網頁）",
+      "date": "",
+      "url": "https://www.homepages.ucl.ac.uk/~uctytho/dfwCompatFrankfurt.htm",
+      "note": "讀 Jones1–Jones4、第 V 節替代原則與註 2–4"
+    },
+    {
+      "title": "Moral Responsibility and the Principle of Alternative Possibilities",
+      "publisher": "David Robb／Stanford Encyclopedia of Philosophy",
+      "date": "2020-07-09",
+      "url": "https://plato.stanford.edu/entries/alternative-possibilities/",
+      "note": "讀 §3.4.2 洛克、§3.4.3 Fischer 版 Black 案例、§4.1、§4.2.2 微光、§4.3 兩難與回應、§5.1–5.3；Lowe 1995、Rowe 1989、van Inwagen 1978、Fischer 與 Ravizza 1991 的案例依此轉述"
+    },
+    {
+      "title": "Moral Responsibility, Alternative Possibilities, and Frankfurt Examples（定稿前版本）",
+      "publisher": "Derk Pereboom／The Oxford Handbook of Moral Responsibility（Dana Nelkin、Derk Pereboom 編）",
+      "date": "2021-06",
+      "url": "https://derkpereboom.philosophy.cornell.edu/files/2021/04/Penultimate-Pereboom-Frankfurt-Handbook-Entry-June-221.pdf",
+      "note": "讀導言、第 1–2 節：W 辯護、Moya 的免責另類可能、McKenna 的引文、Fischer 對來源不相容論的提醒"
+    },
+    {
+      "title": "An Essay Concerning Humane Understanding（1690 年初版掃描）",
+      "publisher": "John Locke／London: Eliz. Holt for Thomas Basset（Wikimedia Commons，Internet Archive 微縮膠片）",
+      "date": "1690",
+      "url": "https://commons.wikimedia.org/wiki/File:An_essay_concerning_humane_understanding._1690_(IA_bim_early-english-books-1641-1700_an-essay-concerning-huma_locke-john_1690).pdf?page=130",
+      "note": "第二卷第 21 章〈Of Power〉§9–11，頁 118（PDF 第 130 頁）；章名見頁 115，頁 117 頁眉誤印 Chap. XIX"
+    },
+    {
+      "title": "An Essay Concerning Humane Understanding, Volume 1",
+      "publisher": "John Locke／Project Gutenberg #10615",
+      "date": "2004-01-01",
+      "url": "https://www.gutenberg.org/ebooks/10615",
+      "note": "II.xxi.10 的後期版本文字，用於和初版對照"
+    },
+    {
+      "title": "Responsibility and Control",
+      "publisher": "John Martin Fischer／The Journal of Philosophy 79(1): 24–40",
+      "date": "1982-01",
+      "url": "https://doi.org/10.5840/jphil198279159",
+      "note": "未讀原文；神經外科醫師與投票的改寫（頁 26）依 SEP 轉述"
+    },
+    {
+      "title": "The Metaphysics of Free Will",
+      "publisher": "John Martin Fischer／Blackwell",
+      "date": "1994",
+      "url": "https://openlibrary.org/works/OL2642912W",
+      "note": "未讀原書；「自由的微光」與強健性（頁 134–147）依 SEP 與 Pereboom 轉述"
+    },
+    {
+      "title": "Responsibility and Control: A Theory of Moral Responsibility",
+      "publisher": "John Martin Fischer、Mark Ravizza／Cambridge University Press",
+      "date": "1998",
+      "url": "https://doi.org/10.1017/CBO9780511814594",
+      "note": "未讀原書；導引控制與調控控制、收回不對稱，依 SEP §5.1、§5.3.3 轉述"
+    },
+    {
+      "title": "Responsibility and Inevitability",
+      "publisher": "John Martin Fischer、Mark Ravizza／Ethics 101(2): 258–278",
+      "date": "1991-01",
+      "url": "https://doi.org/10.1086/293288",
+      "note": "未讀原文；作為與不作為的不對稱（頁 262）依 SEP 轉述"
+    },
+    {
+      "title": "Libertarianism and Frankfurt's Attack on the Principle of Alternative Possibilities",
+      "publisher": "David Widerker／The Philosophical Review 104(2): 247–261",
+      "date": "1995-04",
+      "url": "https://doi.org/10.2307/2185979",
+      "note": "未讀原文；兩難論證依 SEP 轉述"
+    },
+    {
+      "title": "Frankfurt's Attack on the Principle of Alternative Possibilities: A Further Look",
+      "publisher": "David Widerker／Philosophical Perspectives 14: 181–201",
+      "date": "2000-10",
+      "url": "https://doi.org/10.1111/0029-4624.34.s14.10",
+      "note": "未讀原文；頁 191 引文依 Pereboom 手冊條目轉引"
+    },
+    {
+      "title": "The Significance of Free Will",
+      "publisher": "Robert Kane／Oxford University Press",
+      "date": "1996",
+      "url": "https://doi.org/10.1093/0195126564.001.0001",
+      "note": "未讀原書；兩難論證（頁 142–143、191–192）依 SEP 轉述"
+    },
+    {
+      "title": "Free Will and Values",
+      "publisher": "Robert Kane／State University of New York Press",
+      "date": "1985",
+      "url": "https://openlibrary.org/works/OL2981867W",
+      "note": "未讀原書；兩難論證（頁 51）依 SEP 轉述"
+    },
+    {
+      "title": "In Defense of the Principle of Alternative Possibilities: Why I Don't Find Frankfurt's Argument Convincing",
+      "publisher": "Carl Ginet／Philosophical Perspectives 10: 403–417",
+      "date": "1996",
+      "url": "https://doi.org/10.2307/2216254",
+      "note": "未讀原文；依 SEP 轉述"
+    },
+    {
+      "title": "Living without Free Will",
+      "publisher": "Derk Pereboom／Cambridge University Press",
+      "date": "2001",
+      "url": "https://doi.org/10.1017/CBO9780511498824",
+      "note": "未讀原書；逃稅案例（第一章，頁 19）與來源不相容論依 SEP 與 Pereboom 手冊條目轉述"
+    },
+    {
+      "title": "Rescuing Frankfurt-Style Cases",
+      "publisher": "Alfred R. Mele、David Robb／The Philosophical Review 107(1): 97–112",
+      "date": "1998-01",
+      "url": "https://doi.org/10.2307/2998316",
+      "note": "未讀原文；依 SEP §4.3.2 轉述"
+    },
+    {
+      "title": "Ability and Responsibility",
+      "publisher": "Peter van Inwagen／The Philosophical Review 87(2): 201–224",
+      "date": "1978-04",
+      "url": "https://doi.org/10.2307/2184752",
+      "note": "未讀原文；後果版原則與 Bob 報警案例（頁 204–205）依 SEP 轉述"
+    },
+    {
+      "title": "Frankfurt on the Principle of Alternate Possibilities",
+      "publisher": "Margery Bedford Naylor／Philosophical Studies 46(2): 249–258",
+      "date": "1984-09",
+      "url": "https://doi.org/10.1007/BF00373108",
+      "note": "未讀原文；微光策略依 SEP 轉述"
+    },
+    {
+      "title": "Causing and Being Responsible for What Is Inevitable",
+      "publisher": "William L. Rowe／American Philosophical Quarterly 26(2): 153–159；重刊於 Fischer、Ravizza 編《Perspectives on Moral Responsibility》（Cornell University Press，1993），頁 310–321",
+      "date": "1989-04",
+      "url": "https://doi.org/10.7591/9781501721564-014",
+      "note": "未讀原文；火車與狗的例子依 SEP 轉述；網址為重刊本"
+    },
+    {
+      "title": "An Alleged Asymmetry Between Actions and Omissions",
+      "publisher": "Harry G. Frankfurt／Ethics 104(3): 620–623",
+      "date": "1994-04",
+      "url": "https://doi.org/10.1086/293633",
+      "note": "未讀原文；立場依 SEP §5.3.3 轉述"
+    },
+    {
+      "title": "Frankfurt's Argument against Alternative Possibilities: Looking Beyond the Examples",
+      "publisher": "Michael McKenna／Noûs 42(4): 770–793",
+      "date": "2008-11-27",
+      "url": "https://doi.org/10.1111/j.1468-0068.2008.00701.x",
+      "note": "未讀原文；頁 785 引文依 Pereboom 手冊條目轉引"
+    },
+    {
+      "title": "Routledge Philosophy Guidebook to Locke on Human Understanding",
+      "publisher": "E. J. Lowe／Routledge",
+      "date": "1995",
+      "url": "https://doi.org/10.4324/9780203010358",
+      "note": "未讀原書；「留下」與「決定留下」的區分（頁 131）依 SEP 轉述"
+    },
+    {
+      "title": "Harry Frankfurt",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Harry_Frankfurt",
+      "note": "生卒年與 1969 年任教於洛克菲勒大學"
+    },
+    {
+      "title": "File:Godfrey Kneller - Portrait of John Locke (Hermitage).jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Godfrey_Kneller_-_Portrait_of_John_Locke_(Hermitage).jpg",
+      "note": "肖像作者、年代與影像來源"
+    },
+    {
+      "title": "Moral Responsibility: The Ways of Scepticism",
+      "publisher": "Carlos J. Moya／Routledge",
+      "date": "2006",
+      "url": "https://bpb-us-e1.wpmucdn.com/blogs.cornell.edu/dist/9/9616/files/2021/04/Penultimate-Pereboom-Frankfurt-Handbook-Entry-June-221.pdf",
+      "note": "未讀原書；「免責的另類可能」（頁 67）依 Pereboom 手冊條目定稿前版本頁 1 轉引"
+    }
+  ]
+}
