@@ -1,0 +1,352 @@
+{
+  "column": "perio",
+  "date": "2026-10-14",
+  "title": "一顆門牙的 3 個月：1982 年的新附著實驗",
+  "dek": "Nyman 等人設法讓牙周韌帶細胞優先佔據根面，切片看到新牙骨質長到骨嵴冠方 5 毫米。只有一顆牙，它證明了什麼？",
+  "topic_key": "perio:doi:10.1111/j.1600-051x.1982.tb02095.x",
+  "updated_at": "2026-10-14T00:57:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Eruptingtoothwithlabels11-24-05.jpg",
+    "width": 847,
+    "height": 1308,
+    "alt": "顯微組織切片，粉紅與藍紫色染色。中央是一顆直立的牙齒（標 A），上方兩側是牙齦（標 B），下方兩側是帶紅色骨髓腔的齒槽骨（標 C），牙根與骨之間有一條淺色窄帶，以兩條線標為 D。",
+    "caption": "癒合時誰先到根面，是 1982 年這篇論文的核心問題。這張萌發中牙齒的組織切片把可能的候選放在同一個畫面：牙齦（B）、齒槽骨（C），以及牙根與骨之間的牙周韌帶（D）。照片由 Commons 使用者 Dozenist 於 2005 年拍攝上傳，檔案說明未註明物種與染色法；與 Nyman 等人的病例無關，也不是牙周炎組織。",
+    "credit": "Dozenist 攝，Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Eruptingtoothwithlabels11-24-05.jpg",
+    "made": "2005"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1982 年出版的《Journal of Clinical Periodontology》第 9 卷第 4 期，有一篇只有 7 頁、只處理一顆牙的報告。Nyman、Lindhe、Karring 與 Rylander 四位作者選了一顆長期患有重度牙周病的下顎門牙，從牙骨質琺瑯質交界（cemento-enamel junction, CEJ）到齒槽骨嵴的距離是 9 毫米。他們施行手術、刮治根面，並以一種方法讓牙齦上皮和牙齦結締組織在癒合期間碰不到根面。3 個月後連牙帶周圍組織整塊切下做組織切片，看到刮過的根面上長出新的牙骨質，主纖維（principal fibers）插入其中。"
+    },
+    {
+      "type": "p",
+      "text": "這篇論文要回答的問題是：一段曾經暴露在牙周袋裡、被細菌和發炎侵犯過的根面，還能不能重新長出結締組織附著（new connective tissue attachment）？摘要最後一句把作者的立場寫得很直接：「the concept that the periodontitis affected root surface is a major preventive factor for new attachment is invalid」，意思是「認為受牙周炎侵犯的根面是阻礙新附著主因的觀念，並不成立」（本文自譯）。換句話說，作者認為問題不在根面本身，而在癒合時是哪一種細胞先到根面。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "這個「誰先到」的想法有更早的來源。Ausenda 等人 2019 年在《Materials》的回顧把它追溯到 Melcher 1976 年發表於《Journal of Periodontology》的〈On the repair potential of periodontal tissues〉：手術後的根面可能被上皮細胞、牙齦結締組織細胞、骨細胞或牙周韌帶細胞重新佔據，佔據者決定了最後形成哪一種附著，而上皮細胞移動得最快。Melcher 的原文本報未能讀到，以上依 Ausenda 等人的轉述。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "1982 年之前，同一個團隊已經用動物實驗檢驗過其中兩種來源。Karring、Nyman 與 Lindhe 1980 年讓 3 隻米格魯犬的 12 顆牙先以結紮線誘發牙周破壞，截冠、分根、根管充填並刮治後，把每個牙根取出植入骨內，結果沒有形成新的結締組織附著，主要是牙根吸收與骨黏連（ankylosis）。同年 Nyman 等人把牙根植入時讓一半貼著牙齦結締組織，同樣沒有形成新的纖維附著；兩篇都觀察到，取根時保留了牙周韌帶的部位，則重新形成附著。兩篇的作者據此認為，重新佔據傷口的細胞種類可能妨礙新結締組織附著，而牙齦結締組織不具備建立新附著的條件。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是：到 1982 年，骨與牙齦結締組織在這個團隊的動物實驗裡都沒有長出新附著，剩下的候選就是牙周韌帶。這篇單一病例報告，是把動物實驗的推論拿到人身上檢驗；Ausenda 等人（2019）與 Kormas 等人（2022）兩篇回顧，都把它寫成牙周引導組織再生（guided tissue regeneration, GTR）的第一例。順帶一提，本欄 10 月 13 日導讀的 Lindhe 等人〈“Critical probing depths” in periodontal therapy〉也刊在同一期（第 323–336 頁）。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "本文依摘要與後續文獻整理。原論文全文需訂閱，未能取得。病人的年齡與性別、屏障材料的規格、組織切片的數量與測量方法，摘要都沒有寫，本文也不寫。摘要本身沒有出現「翻瓣」或「屏障」等字：屏障是 Millipore 濾膜，Ausenda 等人（2019）與 Kormas 等人（2022）兩篇回顧都這樣寫；放置位置（牙齦瓣與根面之間）依 Ausenda 等人轉述。Ausenda 等人另稱這個病例的新牙骨質、牙周韌帶與骨都再生了，但原論文摘要沒有提到骨，本文不採用這一點。"
+    },
+    {
+      "type": "paper",
+      "citation": "Nyman S, Lindhe J, Karring T, Rylander H. New attachment following surgical treatment of human periodontal disease. *J Clin Periodontol*. 1982;9(4):290–296.",
+      "doi": "10.1111/j.1600-051x.1982.tb02095.x",
+      "pmid": "6964676",
+      "link": "https://doi.org/10.1111/j.1600-051x.1982.tb02095.x",
+      "question": "如果在癒合期間讓牙周韌帶來源的細胞優先重新佔據根面，受牙周炎侵犯過的人類根面能否形成新的結締組織附著？",
+      "design": "單一病例的實驗性手術與組織學評估：手術中以特殊方法阻隔上皮與牙齦結締組織（後來的回顧轉述為置於牙齦瓣與根面之間的 Millipore 濾膜），癒合 3 個月後整塊切片（block biopsy）",
+      "sample": "1 名病人的 1 顆下顎門牙（CEJ 至齒槽骨嵴 9 毫米；依摘要）"
+    },
+    {
+      "type": "h",
+      "text": "研究設計：一顆門牙、阻隔上皮、3 個月後整塊切片"
+    },
+    {
+      "type": "p",
+      "text": "依摘要，作者先寫明假說：只要讓來自牙周韌帶的細胞在癒合期間重新佔據根面，曾受牙周炎侵犯的根面就可能形成新的結締組織附著。實驗對象是一顆「長期且重度」牙周病的下顎門牙，CEJ 到齒槽骨嵴 9 毫米。手術方式的關鍵在於癒合期間阻止牙齦上皮（dentogingival epithelium）與牙齦結締組織接觸已刮治的根面，讓牙周韌帶細胞取得優先。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "癒合 3 個月後，作者取下包含這顆門牙與周圍組織的整塊組織（block biopsy），做組織學分析。也就是說，這顆牙在實驗結束時被拔除；研究終點是切片上看得到的組織，不是探針量到的附著水準。摘要只描述這一顆牙，沒有提到對照牙或統計檢定。"
+    },
+    {
+      "type": "svg",
+      "title": "實驗構想示意（原創示意圖）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 500\"><rect class=\"paper\" x=\"30\" y=\"20\" width=\"70\" height=\"360\" rx=\"4\"/><text x=\"44\" y=\"215\" font-size=\"13\">牙根</text><rect class=\"soft\" x=\"110\" y=\"270\" width=\"235\" height=\"110\"/><text x=\"236\" y=\"335\" font-size=\"13\">齒槽骨</text><rect class=\"gold\" x=\"100\" y=\"270\" width=\"10\" height=\"110\"/><path class=\"soft\" d=\"M128 40 L300 40 Q338 150 345 262 L128 262 Z\"/><text x=\"250\" y=\"240\" font-size=\"13\">牙齦瓣</text><line class=\"accent line\" x1=\"120\" y1=\"34\" x2=\"120\" y2=\"292\" stroke-width=\"5\"/><line class=\"muted line\" x1=\"262\" y1=\"60\" x2=\"144\" y2=\"80\" stroke-width=\"1.6\"/><text class=\"muted\" x=\"210\" y=\"58\" font-size=\"11\">上皮</text><line class=\"accent line\" x1=\"128\" y1=\"74\" x2=\"140\" y2=\"86\" stroke-width=\"2.2\"/><line class=\"accent line\" x1=\"140\" y1=\"74\" x2=\"128\" y2=\"86\" stroke-width=\"2.2\"/><line class=\"muted line\" x1=\"262\" y1=\"150\" x2=\"144\" y2=\"150\" stroke-width=\"1.6\"/><text class=\"muted\" x=\"160\" y=\"142\" font-size=\"11\">牙齦結締組織</text><line class=\"accent line\" x1=\"128\" y1=\"144\" x2=\"140\" y2=\"156\" stroke-width=\"2.2\"/><line class=\"accent line\" x1=\"140\" y1=\"144\" x2=\"128\" y2=\"156\" stroke-width=\"2.2\"/><line class=\"accent line\" x1=\"108\" y1=\"362\" x2=\"108\" y2=\"104\" stroke-width=\"2.4\"/><polygon class=\"accent\" points=\"101,108 115,108 108,93\"/><line class=\"muted line\" x1=\"100\" y1=\"270\" x2=\"96\" y2=\"270\" stroke-width=\"1\"/><text class=\"muted\" x=\"34\" y=\"398\" font-size=\"10.5\">骨嵴高度</text><line class=\"muted line\" x1=\"62\" y1=\"388\" x2=\"104\" y2=\"272\" stroke-width=\"0.8\" stroke-dasharray=\"3 2\"/><line class=\"accent line\" x1=\"20\" y1=\"420\" x2=\"44\" y2=\"420\" stroke-width=\"2.4\"/><text x=\"52\" y=\"424\" font-size=\"11.5\">牙周韌帶細胞沿根面往冠方移入（原文假設）</text><line class=\"accent line\" x1=\"20\" y1=\"440\" x2=\"44\" y2=\"440\" stroke-width=\"5\"/><text x=\"52\" y=\"444\" font-size=\"11.5\">屏障（Millipore 濾膜，依回顧文獻轉引）</text><line class=\"accent line\" x1=\"26\" y1=\"454\" x2=\"36\" y2=\"464\" stroke-width=\"2\"/><line class=\"accent line\" x1=\"36\" y1=\"454\" x2=\"26\" y2=\"464\" stroke-width=\"2\"/><text x=\"52\" y=\"463\" font-size=\"11.5\">上皮與牙齦結締組織被擋在根面之外</text><rect class=\"gold\" x=\"26\" y=\"474\" width=\"10\" height=\"12\"/><text x=\"52\" y=\"484\" font-size=\"11.5\">牙周韌帶（牙根與齒槽骨之間的窄帶）</text></svg>",
+      "caption": "示意，不按比例。依原論文摘要與 Ausenda 等（2019）、Kormas 等（2022）的描述繪製，不是論文原圖。紅線代表置於牙齦瓣與根面之間的屏障，讓上皮與牙齦結締組織碰不到根面；牙周韌帶細胞由殘存的韌帶沿根面往冠方移入。骨細胞也是可能的來源之一，本圖省略。",
+      "credit": "知更鳥晨間記事原創圖解"
+    },
+    {
+      "type": "h",
+      "text": "主要結果：新牙骨質延伸到骨嵴冠方 5 毫米"
+    },
+    {
+      "type": "table",
+      "title": "這顆門牙的結果（依摘要）",
+      "head": [
+        "項目",
+        "摘要記載"
+      ],
+      "rows": [
+        [
+          "牙齒",
+          "下顎門牙，長期重度牙周病"
+        ],
+        [
+          "手術前 CEJ 至齒槽骨嵴",
+          "9 mm"
+        ],
+        [
+          "癒合時間",
+          "3 個月"
+        ],
+        [
+          "取材",
+          "包含牙齒與周圍組織的整塊切片"
+        ],
+        [
+          "組織學所見",
+          "原本病變的根面上形成新牙骨質，主纖維插入其中"
+        ],
+        [
+          "新附著的範圍",
+          "往冠方延伸到齒槽骨嵴冠方 5 mm 處"
+        ],
+        [
+          "骨的變化",
+          "摘要未提及"
+        ]
+      ],
+      "caption": "本表只列摘要中的事實。原文的切片圖與測量細節未能取得。"
+    },
+    {
+      "type": "p",
+      "text": "最重要的數字是 5 毫米：新附著不只出現在骨嵴附近，而是一路長到骨嵴冠方 5 毫米處，也就是原本沒有骨支持的根面段。作者據此推論，新附著可以由牙周韌帶來源的細胞形成。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "摘要沒有說骨有沒有跟著再生，所以這篇論文能支持的是「結締組織附著可以重建」，不能延伸成「骨也長回來了」。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "如果以手術前 9 毫米的 CEJ 至骨嵴距離為分母，新附著高度約佔手術前 CEJ 至骨嵴距離的 56%（5 ÷ 9 ≈ 0.56）。這是本文自算，前提是病變根面止於骨嵴、不含骨下缺損部分，而且骨嵴位置在 3 個月內沒有改變、兩個數字用同一個參考點量得；這些摘要都沒有交代，只能當作量級的參考。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "這篇論文沒有統計方法可談，也沒有效果大小。它的證據形式是「存在性證明」：只要有一個人類病例在切片上確實長出新的結締組織附著，「受侵犯的根面不可能長出新附著」的說法就站不住。至於這件事多常發生、能長多少，一個病例無法回答。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "限制：一個病例、沒有對照、終點必須拔牙"
+    },
+    {
+      "type": "p",
+      "text": "樣本只有 1 顆牙。沒有對照牙，就無法知道同一位病人、同樣的翻瓣刮治但不放屏障，會不會也長出一些新附著。後來 Gottlow 等人 1984 年的猴子實驗正好顯示，對照根面也出現了新牙骨質與插入纖維，只是比放膜的一側少得多；可見「有沒有新附著」與「比對照多多少」是兩個問題，1982 年只回答了前者。"
+    },
+    {
+      "type": "p",
+      "text": "測量方面，5 毫米來自組織切片。單一切片或少數切片的位置，會影響量到的新附著高度；摘要沒有寫切了幾片、取哪一面、由誰判讀。3 個月的癒合時間也短，看不出新附著能否長期維持。"
+    },
+    {
+      "type": "p",
+      "text": "外推性更受限。研究終點是整塊切片，代表受試牙必須被犧牲，這種設計只能用在原本就預計拔除的牙齒上；這顆門牙的缺損形態（例如骨下缺損的骨壁數）摘要沒有描述，因此無法推到臼齒、根分岔或其他缺損類型。由此推想，摘要用「invalid」這樣強的字眼否定舊觀念，在邏輯上靠的是反例，不是對各種情況的普遍證明。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "後來的研究：從 3 隻猴子到 79 篇隨機對照試驗"
+    },
+    {
+      "type": "table",
+      "title": "從動物實驗到臨床指引（依各文摘要或全文）",
+      "head": [
+        "年份與作者",
+        "對象",
+        "做法",
+        "結果"
+      ],
+      "rows": [
+        [
+          "1980 Karring 等",
+          "3 隻米格魯犬、12 顆牙",
+          "患病牙根植入骨內",
+          "無新結締組織附著；牙根吸收、骨黏連"
+        ],
+        [
+          "1980 Nyman 等",
+          "1 隻犬、2 隻猴、28 顆牙",
+          "牙根部分接觸牙齦結締組織",
+          "未形成新纖維附著"
+        ],
+        [
+          "1982 Nyman 等（本文）",
+          "1 名病人、1 顆門牙",
+          "阻隔上皮與牙齦結締組織（屏障依回顧轉引）",
+          "新附著達骨嵴冠方 5 mm"
+        ],
+        [
+          "1984 Gottlow 等",
+          "3 隻猴，每隻 4 個試驗根",
+          "Millipore 濾膜或 Gore-tex 膜；對側為對照",
+          "試驗側新附著明顯多於對照側"
+        ],
+        [
+          "1986 Gottlow 等",
+          "10 名病人、12 顆牙",
+          "鐵氟龍（teflon）膜",
+          "5 顆做切片、7 顆臨床測量，全部有可觀新附著"
+        ],
+        [
+          "2020 Nibali 等",
+          "79 篇隨機對照試驗、3,042 人、3,612 個骨下缺損",
+          "再生手術對照單純翻瓣清創",
+          "GTR 臨床附著多增加 1.43 mm"
+        ]
+      ],
+      "caption": "前五列依 PubMed 摘要；Nibali 等的數字依其摘要，並與 EFP S3 指引全文的引述核對一致。"
+    },
+    {
+      "type": "p",
+      "text": "Gottlow、Nyman、Karring 與 Lindhe 1984 年把同一個想法做成有對照的動物實驗：3 隻猴子，每隻 4 個牙根當試驗、對側牙根當對照。先讓頰側根面暴露、累積菌斑 6 個月，再翻瓣刮治、截冠、把根面埋回瓣下；試驗側在縫合前蓋上 Millipore 濾膜或 Gore-tex 膜。3 個月後切片，兩側都有新牙骨質與插入纖維，但試驗側的新附著明顯較多。論文標題用的是「controlled tissue regeneration」。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "1986 年，Gottlow 等人回到人身上：10 名重度牙周病病人的 12 顆牙，翻瓣、刮治、去除肉芽組織後放置鐵氟龍膜，再把瓣覆蓋在膜外。其中 5 顆（摘要稱為排定拔除的牙）做了組織切片；其餘 7 顆以臨床測量評估。摘要寫所有治療的牙都形成可觀的新附著，並以「predictable」形容。到了這篇，標題已改用「guided tissue regeneration」，也就是後來通稱的 GTR。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "再過 30 多年，問題已經從「能不能」變成「比單純翻瓣多多少」。Nibali 等人 2020 年的系統性回顧納入 1990 至 2019 年的 79 篇隨機對照試驗（randomized controlled trial, RCT），共 3,042 名病人、3,612 個深度至少 3 毫米的骨下缺損，追蹤至少 12 個月。與單純翻瓣清創（open flap debridement, OFD）相比，各種再生手術平均多得 1.34 毫米臨床附著（95% 信賴區間 0.95–1.73），GTR 為 1.43 毫米（0.76–2.22），釉質基質衍生物（enamel matrix derivative, EMD）為 1.27 毫米（0.79–1.74）。作者也寫明：只有 10 篇被評為低偏差風險，異質性中到高，證據強度低到中等。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "歐洲牙周病學會（European Federation of Periodontology, EFP）2020 年的 S3 臨床指引（依德國科學醫學會聯合會 AWMF 的指引方法學與 GRADE 制定）以這篇回顧為依據，建議 3.7 寫的是：殘留深牙周袋合併深度 3 毫米以上骨下缺損的牙齒，建議以牙周再生手術治療（22 篇 RCT、1,000 名病人、1,182 顆牙；建議等級 A）。建議 3.8 則建議使用屏障膜或 EMD，可合併骨來源移植材料。指引另外引述 1996 年世界研討會的三項條件，要求臨床上選用的再生材料同時具備：可信的臨床前機轉研究、該用途的人類組織學再生證據，以及高品質隨機試驗的療效證據。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "h",
+      "text": "怎麼讀這篇：證明了「可以」，沒有證明「常常會」"
+    },
+    {
+      "type": "p",
+      "text": "這篇論文證明的事很窄：在一顆人類牙齒上，當上皮與牙齦結締組織被隔開，受牙周炎侵犯過的根面可以長出新牙骨質與插入纖維，範圍可達骨嵴冠方 5 毫米。它沒有證明這種結果可預期，沒有和不放屏障的做法比較，也沒有談到骨。可預期性是 1986 年那篇才主張的，而且仍是 12 顆牙的病例系列。"
+    },
+    {
+      "type": "p",
+      "text": "後來的共識則是從大量隨機試驗累積出來的：在適應症選對時（深的骨下缺損、殘留深牙周袋），再生手術比單純翻瓣平均多得 1 毫米多一點的臨床附著，EFP 指引也指出 GTR 與 EMD 之間的附著增加沒有統計上的顯著差異。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "本文讀法：平均 1 毫米多一點的差距，和切片上長到骨嵴冠方 5 毫米的新附著相比，平實得多。而且臨床附著增加（CAL gain）是探針量出來的數字，不等於切片上看到的新附著；長結合上皮（long junctional epithelium）癒合也可能讓探測數值變好。1982 年這篇之所以被反覆引用，正因為它用的是切片，不是探針。這也是它最大的代價：要看到答案，就得把牙拔下來。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "EFP 指引列出的三項條件中，「該用途的人類組織學再生證據」仍是選材的門檻之一。1982 年那顆下顎門牙，後來的回顧（Ausenda 等 2019；Kormas 等 2022）把它視為這一類證據的最早一例：一位病人、一塊切片、一個 5 毫米的數字。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Nyman S, Lindhe J, Karring T, Rylander H. New attachment following surgical treatment of human periodontal disease. J Clin Periodontol 1982;9(4):290–296",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1982-08",
+      "url": "https://doi.org/10.1111/j.1600-051x.1982.tb02095.x",
+      "note": "原論文；全文需訂閱未能取得，依摘要。Crossref 標刊期 1982 年 8 月，PubMed 標 1982 年 7 月"
+    },
+    {
+      "title": "PubMed 書目與摘要：New attachment following surgical treatment of human periodontal disease（PMID 6964676）",
+      "publisher": "National Library of Medicine（E-utilities efetch）",
+      "date": "1982-07",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/6964676/",
+      "note": "核對作者、卷期頁 9(4):290–296、DOI；PMID 由 Europe PMC 查得後以 efetch 回查標題一致"
+    },
+    {
+      "title": "Karring T, Nyman S, Lindhe J. Healing following implantation of periodontitis affected roots into bone tissue. J Clin Periodontol 1980;7(2):96–105",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1980-04",
+      "url": "https://doi.org/10.1111/j.1600-051x.1980.tb01952.x",
+      "note": "依 PubMed 摘要（PMID 6929795）"
+    },
+    {
+      "title": "Nyman S, Karring T, Lindhe J, Plantén S. Healing following implantation of periodontitis-affected roots into gingival connective tissue. J Clin Periodontol 1980;7(5):394–401",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1980-10",
+      "url": "https://doi.org/10.1111/j.1600-051x.1980.tb02012.x",
+      "note": "依 PubMed 摘要（PMID 6936413）"
+    },
+    {
+      "title": "Melcher AH. On the repair potential of periodontal tissues. J Periodontol 1976;47(5):256–260",
+      "publisher": "Journal of Periodontology（Wiley）",
+      "date": "1976-05",
+      "url": "https://doi.org/10.1902/jop.1976.47.5.256",
+      "note": "PubMed 無摘要（PMID 775048），原文未讀；內容依 Ausenda 等 2019 轉述"
+    },
+    {
+      "title": "Lindhe J, Socransky SS, Nyman S, Haffajee A, Westfelt E. “Critical probing depths” in periodontal therapy. J Clin Periodontol 1982;9(4):323–336",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1982-08",
+      "url": "https://doi.org/10.1111/j.1600-051x.1982.tb02099.x",
+      "note": "只用於說明與本文同期刊出（本欄 10 月 13 日已導讀）"
+    },
+    {
+      "title": "Gottlow J, Nyman S, Karring T, Lindhe J. New attachment formation as the result of controlled tissue regeneration. J Clin Periodontol 1984;11(8):494–503",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1984-09",
+      "url": "https://doi.org/10.1111/j.1600-051x.1984.tb00901.x",
+      "note": "後續文獻；依 PubMed 摘要（PMID 6384274）"
+    },
+    {
+      "title": "Gottlow J, Nyman S, Lindhe J, Karring T, Wennström J. New attachment formation in the human periodontium by guided tissue regeneration. Case reports. J Clin Periodontol 1986;13(6):604–616",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1986-07",
+      "url": "https://doi.org/10.1111/j.1600-051x.1986.tb00854.x",
+      "note": "後續文獻；依 PubMed 摘要（PMID 3462208）"
+    },
+    {
+      "title": "Nibali L, Koidou VP, Nieri M, Barbato L, Pagliaro U, Cairo F. Regenerative surgery versus access flap for the treatment of intra-bony periodontal defects: a systematic review and meta-analysis. J Clin Periodontol 2020;47(Suppl 22):320–351",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2020-07",
+      "url": "https://doi.org/10.1111/jcpe.13237",
+      "note": "後續文獻；依 PubMed 摘要（PMID 31860134），數字與 EFP S3 指引全文引述核對一致"
+    },
+    {
+      "title": "Sanz M, Herrera D, Kebschull M, Chapple I, Jepsen S, Berglundh T, Sculean A, Tonetti MS, et al. Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline. J Clin Periodontol 2020;47(Suppl 22):4–60",
+      "publisher": "Journal of Clinical Periodontology（Wiley，CC BY-NC）",
+      "date": "2020-07-27",
+      "url": "https://doi.org/10.1111/jcpe.13290",
+      "note": "讀開放全文（PMC7891343）：建議 3.7、3.8 與其證據摘要、1996 年世界研討會選材條件；PMID 32383274"
+    },
+    {
+      "title": "Ausenda F, Rasperini G, Acunzo R, Gorbunkova A, Pagni G. New perspectives in the use of biomaterials for periodontal regeneration. Materials 2019;12(13):2197",
+      "publisher": "Materials（MDPI，CC BY）",
+      "date": "2019-07-08",
+      "url": "https://doi.org/10.3390/ma12132197",
+      "note": "讀開放全文（PMC6651816）：Melcher 假說的轉述、1982 年以 Millipore 濾膜置於牙齦瓣與根面之間並稱為第一例牙周 GTR 的記載（該文稱骨亦再生，本文未採用）；PMID 31288437"
+    },
+    {
+      "title": "Kormas I, Pedercini A, Alassy H, Wolff LF. The use of biocompatible membranes in oral surgery: the past, present & future directions. A narrative review. Membranes (Basel) 2022;12(9):841",
+      "publisher": "Membranes（MDPI，CC BY）",
+      "date": "2022-08-29",
+      "url": "https://doi.org/10.3390/membranes12090841",
+      "note": "讀開放全文（PMC9503881）：「This concept of guided tissue regeneration (GTR) was first introduced by Nyman in 1982 using a millipore filter as a barrier membrane」；PMID 36135860"
+    },
+    {
+      "title": "File:Eruptingtoothwithlabels11-24-05.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2005-11-25",
+      "url": "https://commons.wikimedia.org/wiki/File:Eruptingtoothwithlabels11-24-05.jpg",
+      "note": "頭圖，CC BY-SA 3.0；2005-11-22 拍攝（依 EXIF），2005-11-25 上傳 Commons"
+    }
+  ]
+}
