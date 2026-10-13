@@ -1,0 +1,300 @@
+{
+  "column": "music",
+  "date": "2026-10-14",
+  "title": "七拍子的讚美：伯恩斯坦《奇切斯特詩篇》",
+  "dek": "一座英國主教座堂委約、全用希伯來文演唱的詩篇套曲。伯恩斯坦逝世 36 週年，本文以 1965 年首演原班人馬的錄音逐段聆聽。",
+  "topic_key": "music:bernstein-chichester-psalms",
+  "updated_at": "2026-10-14T00:52:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Leonard_Bernstein_1971.jpg/1280px-Leonard_Bernstein_1971.jpg",
+    "width": 1280,
+    "height": 1936,
+    "alt": "黑白近照。一名中年男子頭髮花白蓬亂，臉朝右前方微微低垂，嘴角帶著淺笑，額頭與眼角有明顯皺紋；他穿深色開領襯衫，裡面是淺色圓領內衣，背景是一片模糊的深灰。",
+    "caption": "伯恩斯坦在排練自己的《彌撒》（Mass），攝於 1971 年 9 月 1 日，距離《奇切斯特詩篇》首演六年。美國國會圖書館將這張照片編入《美國新聞與世界報導》（U.S. News & World Report）雜誌照片典藏，館方標示「無已知出版限制」。",
+    "credit": "Marion S. Trikosko 攝；美國國會圖書館版畫與照片部藏（LC-DIG-ppmsc-03255），經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Leonard_Bernstein_1971.jpg",
+    "made": "1971"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "曲子一開口，合唱團就齊聲喊出希伯來文「Urah」（醒來）。這句歌詞取自《詩篇》第 108 篇，和合本譯作「琴瑟啊，你們當醒起！我自己要極早醒起！」撐起這段引子的是一個小七度音程，一個聽起來張開、還沒落地的距離。引子之後，音樂換成一段快速的舞曲，每小節七拍，切成 2＋2＋3，最後那組三拍像是腳步多跨了半步。"
+    },
+    {
+      "type": "p",
+      "text": "這是伯恩斯坦（Leonard Bernstein）的《奇切斯特詩篇》（Chichester Psalms）。他在 1990 年 10 月 14 日於紐約寓所過世，到 2026 年 10 月 14 日正好 36 年。這首曲子是他寫給一座英國聖公會主教座堂的作品，卻從頭到尾用希伯來文演唱，題獻對象寫的是一位叫 Cyril Solomon 的人。"
+    },
+    {
+      "type": "music",
+      "composer": "伯恩斯坦（Leonard Bernstein）",
+      "work": "《奇切斯特詩篇》，為合唱與管弦樂團而作",
+      "work_original": "Chichester Psalms, for chorus and orchestra",
+      "composed": "1965",
+      "performers": "伯恩斯坦 指揮 紐約愛樂；Camerata Singers 合唱團（合唱指導 Abraham Kaplan）；John Bogart，男童女低音",
+      "recording": "Columbia Masterworks（單聲道 ML 6192、立體聲 MS 6792），1965 年發行；Discogs 使用者補記 1965 年 7 月 26 日錄於紐約 Manhattan Center（唱片未印出）。現收於 Sony Classical「Bernstein Century」系列 SMK 60595",
+      "duration": "約 19 分鐘（本錄音約 18 分鐘）",
+      "movements": [
+        "I. 《詩篇》第 108 篇、第 100 篇（Urah, hanevel, v'chinor! / Hari'u l'Adonai kol ha'arets）",
+        "II. 《詩篇》第 23 篇、第 2 篇（Adonai ro-i / Lamah rag'shu goyim）",
+        "III. 《詩篇》第 131 篇、第 133 篇（Adonai, Adonai / Hineh mah tov）"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Bernstein Chichester Psalms New York Philharmonic Camerata Singers John Bogart",
+        "artist_hint": "Bernstein",
+        "track_filter": [
+          "Chichester Psalms"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "本期指定的是首演原班人馬的錄音：伯恩斯坦指揮紐約愛樂、Camerata Singers 合唱團，獨唱是男童女低音 John Bogart。這組人馬在 1965 年 7 月 15 日首演這首曲子。Discogs 著錄的 Columbia 原版唱片資料註明，錄音在 1965 年 7 月 26 日於紐約 Manhattan Center 進行，不過這個日期在唱片上並未印出，屬於資料庫使用者補記；立體聲版的製作人是 John McClure，唱片內頁說明由 Jack Gottlieb 撰寫。原版 B 面是伯恩斯坦的芭蕾音樂《Facsimile》。"
+    },
+    {
+      "type": "p",
+      "text": "選這一版的理由很具體：它是作曲家本人指揮、首演原班人馬的第一份商業錄音（Discogs 使用者補記錄於 1965 年 7 月 26 日，唱片本身未印出），獨唱由男童擔任，合乎總譜要由男童或假聲男高音演唱的指定。2026 年想找它，最方便的是 Sony Classical 的「Bernstein Century」系列 CD（SMK 60595），和他的《第三號交響曲「卡迪什」》（Kaddish）排在同一張。"
+    },
+    {
+      "type": "h",
+      "text": "一位主教座堂座堂主任的委約：希望有一點《西城故事》（West Side Story）"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "委約者是奇切斯特主教座堂（Chichester Cathedral）的座堂主任胡塞（Walter Hussey）。依伯恩斯坦官方網站的作品頁，伯恩斯坦在 1963 年 12 月初收到他的信，信上說，他和座堂的管風琴師兼詩班長 John Birch 都很希望有一首曲子，讓聯合詩班在 1965 年 8 月奇切斯特舉行的音樂節上演唱。英文維基百科與座堂的資料都稱這個音樂節為南方主教座堂音樂節（Southern Cathedrals Festival）。"
+    },
+    {
+      "type": "quote",
+      "original": "Many of us would be very delighted if there was a hint of West Side Story about the music.",
+      "text": "如果音樂裡能有一點《西城故事》的味道，我們當中很多人會非常高興。",
+      "cite": "胡塞致伯恩斯坦信，1963 年 12 月；據伯恩斯坦官方網站作品頁引錄（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1965 年，伯恩斯坦從紐約愛樂音樂總監的工作休假。官方網站記載，他原本打算用這段時間把桑頓・懷爾德（Thornton Wilder）的劇本《九死一生》（The Skin of Our Teeth）改編成百老匯音樂劇，後來計畫告吹。英文維基百科指出，《奇切斯特詩篇》是他繼 1963 年《卡迪什》交響曲之後的第一部作品。胡塞在信中建議的是「比方說，《詩篇》第 2 篇，或其中一部分」（本文自譯），伯恩斯坦最後自己挑選了六篇詩篇的段落，並保留希伯來原文。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "官方網站的作品介紹指出，那部沒寫成的音樂劇並沒有完全消失：第二樂章男童獨唱《詩篇》第 23 篇的旋律，用的是《九死一生》的素材；同一樂章裡男聲唱《詩篇》第 2 篇的段落，則大量使用了從《西城故事》刪掉的音樂。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：胡塞要的「一點《西城故事》」，就這樣以一種他大概沒想到的方式出現了。"
+    },
+    {
+      "type": "h",
+      "text": "先在紐約首演，16 天後才回到奇切斯特"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "全曲首演在 1965 年 7 月 15 日，地點是紐約林肯中心的愛樂廳（Philharmonic Hall），作曲家親自指揮紐約愛樂、Camerata Singers 與男童女低音 John Bogart。按委約者原本設想的全男聲編制，要到同年 7 月 31 日才在奇切斯特主教座堂演出，由奇切斯特、索爾茲伯里（Salisbury）、溫徹斯特（Winchester）三座主教座堂的詩班聯合演唱，伯恩斯坦在場。英文維基百科記載，那場的指揮是奇切斯特的管風琴師兼詩班長 John Birch。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "奇切斯特主教座堂在 2025 年 5 月 8 日發表的 60 週年文章，訪問了當年的詩班成員。當時 12 歲的 Tim Nott 回憶，分譜很晚才到，詩班長 Birch 設法弄到這首曲子的第一張 LP（Camerata Singers 演唱、伯恩斯坦指揮紐約愛樂），幫詩班抓到曲子的感覺；演出當天，他和同伴 Howard Davies 走向伯恩斯坦，伯恩斯坦為兩人簽了節目單，還和他們談怎麼學這首曲子，特別是希伯來文的發音。另一位當年 24 歲的成員 Noel Osbourne 說，用希伯來文而不是英國聖公會的詩篇譯本，對他們是「遲來的震驚」（late shock，本文自譯）。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Chichester_Cathedral_Nave%2C_West_Sussex%2C_UK_-_Diliff.jpg/1280px-Chichester_Cathedral_Nave%2C_West_Sussex%2C_UK_-_Diliff.jpg",
+      "width": 1280,
+      "height": 1795,
+      "alt": "教堂中殿的縱深照片。兩側是淺色石材的圓拱拱廊，分成三層，柱身夾著深色細柱；頂上是交叉肋拱，一盞金色吊燈從拱頂垂下。中央走道鋪著深淺不一的石板，兩旁排滿棕色椅子，只有兩三個人坐著。走道盡頭是一道雕花石屏，屏後可以看到一片紅、橙色調的織物與彩色玻璃窗。",
+      "caption": "奇切斯特主教座堂中殿，朝東望向石屏，2014 年 8 月攝。這是今日的樣貌，不是 1965 年 7 月 31 日演出時的現場照片。",
+      "credit": "Photo by David Iliff（Diliff），Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chichester_Cathedral_Nave,_West_Sussex,_UK_-_Diliff.jpg",
+      "made": "2014"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "依官方網站，伯恩斯坦寫信告訴胡塞，這首曲子「感覺上很通俗」（popular in feeling），帶著一種「老派的甜美，也有比較激烈的時刻」（本文自譯）。1977 年的一次記者會上，他說得更直接："
+    },
+    {
+      "type": "quote",
+      "original": "The end result was the Chichester Psalms which is the most accessible, B-flat majorish tonal piece I've ever written.",
+      "text": "最後的結果是《奇切斯特詩篇》，這是我寫過最平易近人、最有降 B 大調味道的調性作品。",
+      "cite": "伯恩斯坦，1977 年記者會；據伯恩斯坦官方網站作品頁引錄（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1965 年 10 月 24 日，他在《紐約時報》刊出一首談自己創作過程的詩。官方網站 2015 年 4 月 9 日的文章引述，詩裡稱這首曲子是自己的「最小的孩子」（youngest child），是「兩個月漫長的前衛遊蕩」（two long months of avant-garde wandering）之後的結果（本文自譯）。同一篇文章說，曲子最初的名稱是《青春詩篇》（Psalms of Youth），他擔心這個名字讓人以為曲子很好唱，很早就改掉了。"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：三個樂章、六篇詩篇"
+    },
+    {
+      "type": "table",
+      "title": "《奇切斯特詩篇》的結構",
+      "head": [
+        "段落",
+        "詩篇與開頭歌詞",
+        "聽什麼"
+      ],
+      "rows": [
+        [
+          "第一樂章・引子",
+          "第 108 篇：Urah, hanevel, v'chinor!（琴瑟啊，你們當醒起）",
+          "合唱齊聲開口，材料取自小七度音程"
+        ],
+        [
+          "第一樂章・主體",
+          "第 100 篇：Hari'u l'Adonai kol ha'arets（普天下當向耶和華歡呼）",
+          "7/4 拍快速舞曲，分組 2＋2＋3"
+        ],
+        [
+          "第二樂章・前段",
+          "第 23 篇：Adonai ro-i（耶和華是我的牧者）",
+          "3/4 拍，男童獨唱配豎琴，旋律來自《九死一生》素材"
+        ],
+        [
+          "第二樂章・插入",
+          "第 2 篇：Lamah rag'shu goyim（外邦為甚麼爭鬧）",
+          "男聲急促闖入，素材來自《西城故事》刪除的音樂"
+        ],
+        [
+          "第三樂章・前奏與主體",
+          "第 131 篇：Adonai, Adonai（耶和華啊，我的心不狂傲）",
+          "弦樂前奏回到小七度動機；合唱進入 10/4 拍的搖籃曲"
+        ],
+        [
+          "第三樂章・尾聲",
+          "第 133 篇：Hineh mah tov（看哪，弟兄和睦同居是何等地善）",
+          "聖詠風格合唱，以「阿們」收束，樂團停在齊奏的 G"
+        ]
+      ],
+      "caption": "依伯恩斯坦官方網站作品介紹與英文維基百科〈Chichester Psalms〉整理；中文詩句為和合本對應經文的節錄（《詩篇》第 108 篇第 2 節、第 100 篇第 1 節、第 23 篇第 1 節、第 2 篇第 1 節、第 131 篇第 1 節、第 133 篇第 1 節），只作辨認之用。"
+    },
+    {
+      "type": "p",
+      "text": "**第一樂章。** 開頭那個「Urah」之後，先留意小七度這個音程：官方網站的介紹指出，引子的材料就是從它長出來的，英文維基百科則說這個動機由四度、七度、五度組成。引子結束，《詩篇》第 100 篇的舞曲接上，用 7/4 拍跑起來。數拍子的方法是「一二、一二、一二三」；跟著數幾小節，就能感覺到每小節最後那組三拍把重心往後拖。"
+    },
+    {
+      "type": "p",
+      "text": "**第二樂章。** 音樂忽然安靜，只剩豎琴與男童獨唱。官方網站說這段是在召喚大衛王，那位牧羊人兼詩人；後來女高音聲部加進來陪唱。接著男高音與男低音唱著《詩篇》第 2 篇闖入，問「外邦為甚麼爭鬧」，節奏變得急促尖銳，官方網站稱這是全曲最戲劇化的時刻。之後高聲部帶著第 23 篇回來，但張力並沒有完全退去。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：一段從百老匯被刪掉的音樂，在這裡被放進「外邦為甚麼爭鬧」的經文，和一首牧歌疊在一起。官方網站說，高聲部回來之後，張力一直延續到樂章結束；在 Columbia 的錄音裡，可以注意男童的聲音與男聲合唱之間的距離，聽聽這份張力是怎麼留下來的。"
+    },
+    {
+      "type": "p",
+      "text": "**第三樂章。** 全曲最長的一段，由弦樂前奏開場，官方網站形容它熾熱、帶著哀歌氣質，又把第一樂章的小七度動機帶了回來。之後樂團突然收聲，合唱用 10/4 拍、分組 2＋3＋2＋3 的搖籃曲唱《詩篇》第 131 篇。最後是第 133 篇「看哪，弟兄和睦同居是何等地善，何等地美」，寫法接近路德宗聖詠。英文維基百科記載，合唱唱「阿們」時，一支加弱音器的小號最後一次吹出開頭動機，樂團停在齊奏的 G 上，只留一點皮卡迪三度（Picardy third）的暗示。"
+    },
+    {
+      "type": "h",
+      "text": "總譜偏好男童聲，女聲「可以但不理想」"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "據英文維基百科引述出版商 Boosey & Hawkes 的說明，女高音與女低音聲部是「以男童的聲音為前提」寫的，用女聲「可以，但不理想」；男聲女低音的獨唱「不可由女性演唱」，要由男童或假聲男高音擔任（皆本文自譯）。編制是三支小號、三支長號、定音鼓、五位打擊樂手、兩架豎琴與弦樂；伯恩斯坦另做了管風琴、一架豎琴與打擊樂的縮編版本，出版商是 Boosey & Hawkes。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "由此推想，委約者原本設想的英國主教座堂詩班，本來就是男童與成年男聲的組合，總譜的要求正好與它吻合。本文推測，奇切斯特那場的全男聲演出，可能比紐約的混聲首演更接近作曲家的設想；不過官方網站把兩場並列為混聲與男聲兩種版本的首演。"
+    },
+    {
+      "type": "callout",
+      "label": "延伸聆聽",
+      "text": "伯恩斯坦在 1977 年 8 月於柏林愛樂廳為德意志留聲機（Deutsche Grammophon）重錄了這首曲子，指揮以色列愛樂，合唱為維也納青年合唱團（Wiener Jeunesse-Chor），獨唱由維也納少年合唱團團員擔任（據 Discogs 著錄）；官方網站列出的版本是 Polydor 415 965-2（錄音版權年份 1978）。想聽英國詩班的版本，英文維基百科列出劍橋國王學院合唱團（Choir of King's College, Cambridge）2018 年發行、由 Stephen Cleobury 指揮、George Hill 擔任男童獨唱的錄音。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Chichester Psalms (1965)",
+      "publisher": "Leonard Bernstein Office（leonardbernstein.com）",
+      "url": "https://leonardbernstein.com/works/view/14/chichester-psalms",
+      "note": "未標發布日期；胡塞委約信、題獻 Cyril Solomon、首演與奇切斯特演出、編制、約 19 分鐘、1965 年休假與《九死一生》計畫、各樂章描述、《九死一生》與《西城故事》素材、致胡塞信與 1977 年記者會引語、Polydor 415 965-2；2026-10-13 查閱"
+    },
+    {
+      "title": "Chichester Psalms: Leonard Bernstein's Psalms of Youth, 50 Years and Counting",
+      "publisher": "Leonard Bernstein Office（leonardbernstein.com）",
+      "date": "2015-04-09",
+      "url": "https://leonardbernstein.com/news/blog/38/chichester-psalms-leonard-bernsteins-psalms-of-youth-50-years-and-counting",
+      "note": "原名 Psalms of Youth；1965 年 10 月 24 日《紐約時報》刊出的詩"
+    },
+    {
+      "title": "Timeline",
+      "publisher": "Leonard Bernstein Office（leonardbernstein.com）",
+      "url": "https://leonardbernstein.com/about/timeline",
+      "note": "1965 年 7 月 15 日首演；1990 年 10 月 14 日於紐約寓所逝世；未標發布日期，2026-10-13 查閱"
+    },
+    {
+      "title": "Chichester Psalms",
+      "publisher": "Wikipedia",
+      "date": "2026-06-03",
+      "url": "https://en.wikipedia.org/wiki/Chichester_Psalms",
+      "note": "date 為查閱時所見最新修訂日期；《卡迪什》之後第一部作品、John Birch 指揮奇切斯特演出、總譜對人聲的要求、縮編版本、各樂章詩篇與拍子、結尾小號與皮卡迪三度、劍橋國王學院 2018 年錄音"
+    },
+    {
+      "title": "Chichester Psalms at 60: Choristers remember performing for Leonard Bernstein",
+      "publisher": "Chichester Cathedral",
+      "date": "2025-05-08",
+      "url": "https://www.chichestercathedral.org.uk/news/chichester-psalms-60-choristers-remember-performing-leonard-bernstein",
+      "note": "1965 年 7 月 31 日三座主教座堂詩班聯合演出、伯恩斯坦在場、Tim Nott 與 Noel Osbourne 的回憶"
+    },
+    {
+      "title": "和合本聖經（詩篇 2:1、23:1、100:1、108:2、131:1、133:1）",
+      "publisher": "信望愛站 FHL 聖經",
+      "url": "https://bible.fhl.net/",
+      "note": "表格與開頭引用的中文經文；未標發布日期，2026-10-13 查閱"
+    },
+    {
+      "title": "Bernstein – Chichester Psalms / Facsimile（Columbia Masterworks ML 6192）",
+      "publisher": "Discogs",
+      "url": "https://www.discogs.com/release/12600056",
+      "note": "1965 年；演出者、曲長 18:10；使用者補記錄音日期 1965 年 7 月 26 日、地點 Manhattan Center（唱片未印出）；未標發布日期，2026-10-13 查閱"
+    },
+    {
+      "title": "Bernstein – Chichester Psalms / Facsimile（Columbia Masterworks MS 6792）",
+      "publisher": "Discogs",
+      "url": "https://www.discogs.com/release/9794367",
+      "note": "1965 年立體聲版；製作人 John McClure、內頁說明 Jack Gottlieb；未標發布日期，2026-10-13 查閱"
+    },
+    {
+      "title": "Bernstein – Kaddish Symphony / Chichester Psalms（Sony Classical SMK 60595）",
+      "publisher": "Discogs",
+      "url": "https://www.discogs.com/release/656281",
+      "note": "1998 年「Bernstein Century」CD 重發；未標發布日期，2026-10-13 查閱"
+    },
+    {
+      "title": "[Leonard Bernstein in rehearsal of his \"Mass\"]（LC-DIG-ppmsc-03255）",
+      "publisher": "Library of Congress Prints and Photographs Division",
+      "url": "https://www.loc.gov/item/2004672760/",
+      "note": "頭圖：Marion S. Trikosko 攝，1971 年 9 月 1 日，U.S. News & World Report 照片典藏，無已知出版限制；未標發布日期，2026-10-13 查閱"
+    },
+    {
+      "title": "File:Chichester Cathedral Nave, West Sussex, UK - Diliff.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2014-08-15",
+      "url": "https://commons.wikimedia.org/wiki/File:Chichester_Cathedral_Nave,_West_Sussex,_UK_-_Diliff.jpg",
+      "note": "正文圖；CC BY-SA 3.0"
+    },
+    {
+      "title": "Bernstein Conducts Bernstein: Songfest / Chichester Psalms（Deutsche Grammophon 415 965-2）",
+      "publisher": "Discogs",
+      "url": "https://www.discogs.com/release/7449600",
+      "note": "《奇切斯特詩篇》1977 年 8 月錄於柏林愛樂廳；以色列愛樂、Wiener Jeunesse-Chor、維也納少年合唱團團員獨唱；未標發布日期，2026-10-14 查閱"
+    }
+  ]
+}
