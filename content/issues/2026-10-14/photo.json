@@ -1,0 +1,424 @@
+{
+  "column": "photo",
+  "date": "2026-10-14",
+  "title": "倒立的掃帚與拖把：帕克斯的《美國哥德式》",
+  "dek": "1942 年夏天，帕克斯讓清潔工艾拉・華森站在國旗前。號碼相連、看來攝於同一房間的另一格底片，可以拿來核對他多年後的回憶。",
+  "topic_key": "photo:parks-lc-usf34-013407-c",
+  "updated_at": "2026-10-14T02:53:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Gordon_Parks_-_American_Gothic_full.jpg/1280px-Gordon_Parks_-_American_Gothic_full.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Gordon_Parks_-_American_Gothic_full.jpg/3840px-Gordon_Parks_-_American_Gothic_full.jpg",
+    "width": 1280,
+    "height": 1609,
+    "alt": "直幅黑白照片，保留了黑色的底片片邊；上緣有反寫的「EASTMAN—SAFETY—KODAK」字樣，右緣有手寫的「13407-C」。一名戴圓框眼鏡、短灰髮的黑人女性站在畫面中央偏右，正面直視鏡頭，穿短泡泡袖、白色圓點的洋裝。她身後的牆上直掛著一面美國國旗，星區在左上，條紋直向往下，旗面模糊。她身前左側豎著一把掃帚，刷毛朝上；右側一支拖把也是頭朝上，靠在一張深色桌子旁。畫面左緣有一個模糊的金屬架。",
+    "caption": "戈登・帕克斯《華盛頓特區，政府清潔女工》，1942 年 8 月（圖說卡所記），後由帕克斯命名為《美國哥德式》。這是國會圖書館由原始底片掃描的版本，保留片邊與手寫底片號；本文的觀察以此為準。",
+    "credit": "Gordon Parks 攝；美國國會圖書館印刷與攝影部，FSA/OWI 攝影典藏（LC-USF34-013407-C；數位檔 LC-DIG-fsa-8b14845，由原始底片掃描）；影像取自 Wikimedia Commons",
+    "license": "Public domain（美國聯邦政府作品；國會圖書館標示 No known restrictions）",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gordon_Parks_-_American_Gothic_full.jpg",
+    "made": "底片 1942 年（圖說卡記 8 月）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "戈登・帕克斯（Gordon Parks）在 1997 年的回顧集《Half Past Autumn》裡回憶這張照片（本文據杜克大學課程網頁的轉引）：牆上有一面「從天花板垂到地板」的大國旗，他請艾拉・華森（Ella Watson）站到旗前，「把拖把放在她一隻手裡，掃帚放在另一隻手裡」。國會圖書館保存的這一系列底片裡，有兩格號碼相連：一格是這張近景，一格是看來攝於同一房間的廣角。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我拿這兩格底片和這段回憶對照，旗子和拖把的位置都和回憶不太一樣。"
+    },
+    {
+      "type": "p",
+      "text": "下面先只看國會圖書館由原始底片掃描的那一格：人在哪裡、哪裡清楚哪裡模糊、掃帚和拖把怎樣擺。再看同一房間的廣角底片，最後把帕克斯幾次不同的回憶，和館方目錄、後來放大的版本並排。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "攝影師",
+          "戈登・帕克斯（Gordon Parks，1912–2006），1942 年起在農業安全局（FSA）歷史組工作，主管為羅伊・史崔克（Roy Stryker）"
+        ],
+        [
+          "題名",
+          "Washington, D.C. Government charwoman（依圖說卡；本文譯作《華盛頓特區，政府清潔女工》）；後由帕克斯命名為 American Gothic（《美國哥德式》）"
+        ],
+        [
+          "人物",
+          "艾拉・華森（Ella Watson），目錄另題「Ella Watson」"
+        ],
+        [
+          "拍攝時間",
+          "國會圖書館目錄記「1942 Aug.」；戈登・帕克斯基金會寫 1942 年 7 月。本文兩說並存"
+        ],
+        [
+          "地點",
+          "美國華盛頓特區；基金會說華森在農業部上夜班，帕克斯回憶的是「政府最神聖的堡壘之一」，確切房間未載"
+        ],
+        [
+          "館藏號",
+          "LC-USF34-013407-C；對應印樣歸入 LOT 156"
+        ],
+        [
+          "底片",
+          "目錄記「1 negative : safety ; 4 x 5 inches or smaller」"
+        ],
+        [
+          "數位檔",
+          "fsa 8b14845（原始底片，本文頭圖）、ppmsc 00237 與 ds 11802（原始印樣）；FSA 檔案印樣 24 × 19 公分"
+        ],
+        [
+          "收藏",
+          "美國國會圖書館印刷與攝影部，FSA/OWI 攝影典藏；1944 年由戰時新聞局移交"
+        ],
+        [
+          "權利",
+          "館方標示 No known restrictions"
+        ],
+        [
+          "相機與曝光",
+          "目錄未記載，本文不推測"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "先看畫面：一張直視的臉，兩件倒過來的工具"
+    },
+    {
+      "type": "p",
+      "text": "這是一張直幅照片，四周留著黑色的底片片邊。上緣有一行反寫的字：「EASTMAN—SAFETY—KODAK」；右緣有白色手寫的「13407-C」，和館藏號對得上。片邊之內，一面直掛的美國國旗佔據畫面上方中央，左右兩側露出白牆：星區在左上，橫向 6 顆、直向 8 列，共 48 顆星；條紋直向往下，垂到大約畫面三分之二的高度。旗面整片模糊，星星的邊緣是軟的。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "華森站在畫面中央略偏右。她的頭頂大約在畫面一半的高度，正好落在星區右下角的下方。她戴圓形金屬框眼鏡，灰色短髮往後梳，嘴唇閉著，眼睛直視鏡頭。兩隻眼睛裡各有一個小亮點。光從她的右側（畫面左側）照來：額頭和右頰較亮，左頰與左耳一側較暗。畫面右側那片鏡片（她的左鏡片）上有一道深色的弧線，可能是反光，也可能是鏡片上的痕跡，照片本身無法分辨。",
+      "tag": "可見"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.41,
+        0.47,
+        0.17,
+        0.15
+      ],
+      "position": "畫面中央偏右，約在高度一半處",
+      "caption": "華森的臉是全張照片最清楚的地方：眼鏡金屬框、眼中的亮點、髮絲都銳利，背後的旗子條紋則是糊的。"
+    },
+    {
+      "type": "p",
+      "text": "她身前左側豎著一把掃帚，刷毛朝上，紮著幾道細線。刷毛下方露出用草束纏緊、釘著小釘的掃帚頸，往下伸出畫面；它左側有一道平滑的灰色形體，是手臂還是握柄，照片本身分辨不清。掃帚擋住了她的右肩到腰。她穿短泡泡袖洋裝，布面滿是白色小圓點，腰部有縮褶，縫著兩顆大圓扣；下面那顆扣子左邊有一小塊淺色的斑。",
+      "tag": "可見"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.18,
+        0.62,
+        0.28,
+        0.37
+      ],
+      "position": "畫面左下，約佔寬度三成",
+      "caption": "掃帚刷毛朝上，紮線一道道清楚可見；下方纏緊的掃帚頸伸出畫面，旁邊的灰色形體是手臂還是握柄分辨不清。"
+    },
+    {
+      "type": "p",
+      "text": "畫面右側是一支拖把，拖把頭也朝上，一束束棉線往下垂，木柄朝下，立在一張深色桌子前。華森的左臂垂在身側，從袖口直直往下，一直延伸到畫面底緣，和拖把柄之間隔著一段距離。這一格裡，看不到她的手握住拖把。桌面是深色的，邊緣有一道金屬反光，上面擱著一團形狀不清的深色物件。",
+      "tag": "可見"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.6,
+        0.63,
+        0.38,
+        0.34
+      ],
+      "position": "畫面右下，約佔寬度四成",
+      "caption": "倒立的拖把與深色桌子。華森的左臂垂在拖把左邊，手不在畫面內。"
+    },
+    {
+      "type": "p",
+      "text": "畫面最左緣，在片邊和白牆之間，有一個模糊的金屬架：一條往上彎的細桿，下端接著一個方形的夾具和小旋鈕。它離鏡頭比華森近，還是遠，從模糊的程度看不出來；它只說明這個房間裡除了國旗，還有別的器物，只是被排除在畫面主體之外。",
+      "tag": "可見"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.02,
+        0.54,
+        0.12,
+        0.2
+      ],
+      "position": "畫面左緣中段",
+      "caption": "左緣的模糊金屬架。下一節的廣角底片裡，可以找到一個形狀相近的東西。"
+    },
+    {
+      "type": "h",
+      "text": "直線、對稱與一個清楚的焦點"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是：這張照片幾乎全由直線組成。旗子的條紋是直的，掃帚和拖把的柄是直的，華森的身體也站得筆直，連垂下的左臂都和條紋平行。兩件倒立的工具一左一右，把她夾在中間，像一對框住肖像的柱子。畫面裡只有她的臉沒有被直線切過，視線因此停在那裡。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "清晰度也在分工。臉、眼鏡和掃帚的紮線都銳利，背後的旗子則糊成柔軟的色塊。旗子仍然一眼可認，但它退到後面，變成背景；站在前面、可以看清每一根髮絲的是華森本人。由此推想，如果旗子也一樣銳利，48 顆星與條紋的細節會和她的臉搶奪注意。這只是對畫面效果的描述，目錄沒有記載帕克斯用的鏡頭和光圈，本文不推測。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "題名指向的是格蘭特・伍德（Grant Wood）1930 年的油畫《美國哥德式》（American Gothic），今藏芝加哥藝術博物館，館藏號 1930.934。那幅畫裡，男人手持一把齒尖朝上的乾草叉。華森身前的掃帚和拖把同樣是工作的一端朝上、直直豎起，我的讀法是，這正是兩張圖最容易對上的地方。不過，國會圖書館的圖說卡只寫「政府清潔女工」，《美國哥德式》這個題名是帕克斯後來才給的。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "號碼相連的廣角底片：旗子沒有垂到地板"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "photo",
+      "src": "https://tile.loc.gov/storage-services/service/pnp/fsa/8b14000/8b14800/8b14846v.jpg",
+      "width": 821,
+      "height": 1024,
+      "alt": "黑白底片的完整畫面，上緣有反寫的「AGFA SAFETY FILM」。一間辦公室，牆上掛著一面直向的美國國旗，下緣大約在人的肩膀到上臂高度。華森穿同一件圓點洋裝，站在旗子下方，戴眼鏡，視線望向畫面左方；她的右手扶著一張旋轉椅的椅背，椅面上有一支短拖把，一把掃帚靠在椅邊。椅子前方立著一支長柄拖把，拖把頭著地。畫面左右兩側是辦公桌，桌上有罩著深色布套的機器，左側桌上有一個金屬架，右下有一個垃圾桶，地上鋪著地毯。",
+      "caption": "帕克斯，《華盛頓特區，政府清潔女工》，1942 年 8 月（圖說卡所記），館藏號 LC-USF34-013408-C。國會圖書館由原始底片數位化（fsa 8b14846），保留片邊；右緣手寫號碼末位筆跡較難辨認，本文依目錄著錄。",
+      "credit": "Gordon Parks 攝；美國國會圖書館印刷與攝影部，FSA/OWI 攝影典藏",
+      "license": "Public domain（美國聯邦政府作品；國會圖書館標示 No known restrictions）",
+      "license_url": "",
+      "source_url": "https://www.loc.gov/item/2017765075/",
+      "made": "1942 年（圖說卡記 8 月）"
+    },
+    {
+      "type": "p",
+      "text": "這格底片的館藏號是 LC-USF34-013408-C，緊接在頭圖的 013407-C 之後，兩者的目錄題名相同。畫面裡是一間辦公室：牆上同一面直掛的國旗，星區一樣是 6 顆一排、8 列；旗子下緣約在華森肩膀到上臂的高度，下面是一大片白牆。左右兩側是辦公桌，桌上的機器罩著深色布套；左側桌上有一個金屬架，下端有方形夾具。地上鋪著地毯，右下角有一個垃圾桶。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "華森穿著同一件圓點洋裝，戴同一副眼鏡，但沒有看鏡頭，而是轉向畫面左方。她的右手扶著一張旋轉椅的椅背，椅面上放著一支短拖把，一把掃帚斜靠在旁邊，刷毛朝上。椅子前方立著一支長柄拖把，拖把頭著地，是平常的方向。上緣的片邊字樣是「AGFA SAFETY FILM」，和頭圖的 Kodak 不同。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，頭圖左緣那個模糊的金屬架，很可能就是廣角裡左側桌上的那一個，兩者的彎桿和方形夾具形狀相近；頭圖右側的深色桌子與桌上那團東西，也可能是罩著布套的機器。若此，頭圖是在同一個房間裡走近、把桌子與椅子大多推出畫面之外拍成的。底片號相連，但目錄沒有記載兩格的先後與時刻，本文不據號碼排序。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "兩格並排，回憶裡的兩個細節就有了對照。旗子在廣角裡沒有「從天花板垂到地板」，下緣離地板還有一大段白牆；頭圖讓旗子撐滿畫面上方中央，是取景造成的。頭圖裡也看不到華森的手握著拖把。這不等於回憶錯了：照片只記下按快門的那一瞬，帕克斯擺放工具的過程不在底片上。我的讀法是，回憶寫的是他想讓人看到的畫面，底片則保留了房間原來的樣子。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "帕克斯怎麼說，史崔克怎麼說：三個版本"
+    },
+    {
+      "type": "p",
+      "text": "這張照片怎麼來的，主要靠帕克斯自己事後的講述，而他講過不只一次。戈登・帕克斯基金會引用他 1966 年自傳《A Choice of Weapons》：某天傍晚只剩他和史崔克在辦公室，史崔克起身往走廊看了看，叫他過去，那裡有一位正在拖地的清潔女工；史崔克要他下班前去和她聊聊，看看她對生活有什麼話說。基金會也寫，華森父母早逝，丈夫與兩個孩子已不在身邊，曾因膚色未獲升遷，靠一年 1,080 美元的薪水養活養女和養女的三個姪甥。",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "Well, you're catching on, but that picture could get us all fired.",
+      "text": "嗯，你開竅了，不過那張照片可能會讓我們全被開除。",
+      "cite": "帕克斯記述史崔克的反應，《Half Past Autumn》（1997），第 32 頁；轉引自杜克大學課程網頁〈Naming Moments Properly〉，本文未見原書。本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "同一段回憶說，他在兩天後把照片放上史崔克的桌子，史崔克搖了搖頭，說了上面那句話。基金會另引了帕克斯一段未註明年份的口述，史崔克的話變成「My God, this can't be published, but it's a start.」（天哪，這不能發表，不過是個開始；本文自譯），並說他讓華森的拖把垂下、國旗垂下，用的是伍德的風格。兩個版本裡，史崔克都認為照片太尖銳，措辭卻不一樣。",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "So I put her before the American flag with a broom in one hand and a mop in another. And I said, \"American Gothic\"—that's how I felt at the moment.",
+      "text": "所以我讓她站在美國國旗前，一手拿掃帚，一手拿拖把。我說，「美國哥德式」——那就是我當下的感覺。",
+      "cite": "戈登・帕克斯，1998 年；引自戈登・帕克斯基金會「American Gothic: Gordon Parks and Ella Watson」展覽頁。本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "幾種說法之間還有幾處對不上。拍攝月份，國會圖書館的圖說卡記 8 月，基金會寫 7 月。這一系列的張數，國會圖書館 LOT 156 著錄為 90 張印樣，底片號 13405 至 13513 等；基金會的紀念文寫「超過 90 張」，2024 年明尼亞波利斯美術館的展覽則選了「將近 60 張」。目錄的摘要記下華森下午 5:30 出門上班、凌晨 2:30 回家，同一系列另一張的圖說卻寫她「下午 4:30 出門」。本文不替這些說法排高下，只列出來。",
+      "tag": "史實"
+    },
+    {
+      "type": "h",
+      "text": "後來放大的版本：裁得更緊，也更暗"
+    },
+    {
+      "type": "figure",
+      "id": "f3",
+      "kind": "photo",
+      "src": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/05800/05809v.jpg",
+      "width": 734,
+      "height": 1024,
+      "alt": "同一張照片的大尺寸放大印樣，沒有底片片邊。取景比頭圖緊：左側的金屬架不見了，星區貼近畫面上緣，下緣裁在腰部兩顆大扣子附近。整體色調比頭圖暗、反差較高，華森的臉較深，牆面呈灰色。右下角有一個白色的手寫簽名。",
+      "caption": "國會圖書館數位檔 ppmsca 05809：帕克斯檔案中的一張明膠銀鹽印樣，目錄記為「1942, printed later」，紙張 71 × 51 公分。放印年份未載。",
+      "credit": "Gordon Parks 攝；美國國會圖書館印刷與攝影部，The Gordon Parks Archives",
+      "license": "Public domain（美國聯邦政府作品；國會圖書館標示 No known restrictions）",
+      "license_url": "",
+      "source_url": "https://www.loc.gov/item/2016646280/",
+      "made": "原攝 1942 年；放印年份未載"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "國會圖書館 1995 年取得帕克斯的個人收藏（Gordon Parks Archives）。這張放大印樣的目錄記它屬帕克斯檔案，入藏登記號為 DLC/PP-2001:140，號碼帶有「2001」；它是否屬於 1995 年那批收藏，目錄沒有寫明。"
+    },
+    {
+      "type": "p",
+      "text": "這張後來放大的印樣，目錄另題「American Gothic」，紙張 71 × 51 公分，遠大於 FSA 檔案裡那張 24 × 19 公分的印樣。和頭圖並排，取景明顯收緊：左緣的金屬架被裁掉，星區貼到畫面上緣，下方只到腰間的兩顆大扣子。色調也變了，牆面從近白變成灰，華森的臉更深，旗子的條紋明暗更分明。右下角多了一個白色手寫簽名，目錄沒有著錄它。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，今天多數人記得的《美國哥德式》，可能更接近這種裁緊、加深的放大版本，而不是 FSA 檔案裡的原始取景。裁掉金屬架後，畫面裡再也沒有任何提示這是一間辦公室的東西，只剩旗子、工具和人。這張印樣是何時、由誰在暗房裡放出來，目錄只寫「printed later」，本文不推測。",
+      "tag": "推論"
+    },
+    {
+      "type": "timeline",
+      "title": "一張照片的幾個日期",
+      "items": [
+        {
+          "when": "1930 年",
+          "label": "伍德《美國哥德式》",
+          "note": "油畫，今藏芝加哥藝術博物館（1930.934）"
+        },
+        {
+          "when": "1942 年",
+          "label": "帕克斯進入 FSA",
+          "note": "在史崔克主持的歷史組工作，1943 年起隨史崔克轉往戰時新聞局（國會圖書館部落格）"
+        },
+        {
+          "when": "1942.7／8",
+          "label": "拍攝華森",
+          "note": "圖說卡記 8 月，基金會寫 7 月；底片 013407-C、013408-C"
+        },
+        {
+          "when": "1944 年",
+          "label": "移交國會圖書館",
+          "note": "由戰時新聞局海外圖片處移交"
+        },
+        {
+          "when": "1966 年",
+          "label": "《A Choice of Weapons》",
+          "note": "帕克斯自傳，記史崔克要他去和清潔女工談談"
+        },
+        {
+          "when": "1995 年",
+          "label": "帕克斯檔案入藏",
+          "note": "國會圖書館取得他的個人收藏（國會圖書館部落格）"
+        },
+        {
+          "when": "1997 年",
+          "label": "《Half Past Autumn》",
+          "note": "回顧集中記述「could get us all fired」"
+        }
+      ],
+      "caption": "依國會圖書館目錄與部落格、戈登・帕克斯基金會、芝加哥藝術博物館資料整理。"
+    },
+    {
+      "type": "exercise",
+      "title": "原創假設練習：同一個人，拍一張廣角、一張近景",
+      "steps": [
+        "找一位同意入鏡的人，在一個有明確背景物（旗子、海報、書架）的室內空間。",
+        "先拍一張廣角：把整個房間、家具和背景物都放進畫面，不刻意整理。",
+        "再走近，只保留背景物的一部分、人和一兩件與他相關的物件，請他直視鏡頭，拍一張近景。",
+        "把兩張並排，列出近景裡被排除的東西，以及背景物在兩張裡看起來的大小。",
+        "過一週後，不看照片，寫下你記得的拍攝現場；再和廣角那張對照。"
+      ],
+      "criteria": [
+        "能指出近景裡至少三件被排除在畫面外的東西。",
+        "能說明背景物在近景裡為什麼看起來比實際更大或更滿。",
+        "能找出自己的回憶和廣角照片不一致的至少一處。"
+      ],
+      "note": "這是本報設計的原創練習，不是帕克斯的工作方法。拍攝他人前先取得同意。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Washington, D.C. Government charwoman（LC-USF34-013407-C）",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "date": "1942-08",
+      "url": "https://www.loc.gov/item/2017765074/",
+      "note": "館藏目錄（以 loc.gov JSON 介面讀取）：館藏號、另題 Ella Watson、數位檔與複製號、safety 底片、FSA 印樣 24 × 19 公分、1944 年移交、權利標示"
+    },
+    {
+      "title": "File:Gordon Parks - American Gothic full.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Gordon_Parks_-_American_Gothic_full.jpg",
+      "note": "頭圖檔案；Public domain，出自國會圖書館 fsa.8b14845，原尺寸 12810 × 16099"
+    },
+    {
+      "title": "Washington, D.C. Government charwoman（LC-USF34-013408-C）",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "date": "1942-08",
+      "url": "https://www.loc.gov/item/2017765075/",
+      "note": "同一房間的廣角底片；數位檔 fsa 8b14846，圖檔取自館方 tile.loc.gov 參考影像"
+    },
+    {
+      "title": "Washington, D.C. government charwoman / Gordon Parks（printed later）",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "url": "https://www.loc.gov/item/2016646280/",
+      "note": "帕克斯檔案中的放大印樣，71 × 51 公分，另題 American Gothic；數位檔 ppmsca 05809；入藏登記號 DLC/PP-2001:140"
+    },
+    {
+      "title": "Washington, D.C. August, 1942. Story of Mrs. Ella Watson...（LOT 156）",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "url": "https://www.loc.gov/item/2004667419/",
+      "note": "90 張印樣、底片號 13405-13513 等、摘要（5:30 P.M. 上班、2:30 A.M. 回家、年薪 1,080 美元）"
+    },
+    {
+      "title": "Washington, D.C. Mrs. Ella Watson, a government charwoman, leaves for work at 4:30 p.m.",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "url": "https://www.loc.gov/item/2017765104/",
+      "note": "同系列圖說，與 LOT 摘要的上班時間不同"
+    },
+    {
+      "title": "American Gothic: Gordon Parks and Ella Watson",
+      "publisher": "The Gordon Parks Foundation",
+      "url": "https://www.gordonparksfoundation.org/exhibitions/museum-exhibitions/american-gothic-gordon-parks-and-ella-watson/gordon-parks",
+      "note": "帕克斯 1998 年口述；2024 年 1 月 6 日至 6 月 23 日明尼阿波利斯美術館展覽，「將近 60 張」"
+    },
+    {
+      "title": "Tribute to Ella Watson's Family: Rosslyn Samuels, Sharon Stanley, and Audrey Johnson",
+      "publisher": "The Gordon Parks Foundation",
+      "date": "2018-05",
+      "url": "https://www.gordonparksfoundation.org/education/features/tribute-to-ella-watsons-family-rosslyn-samuels-sharon-stanley-and-audrey-johnson",
+      "note": "引《A Choice of Weapons》（1966）；華森生平、農業部夜班、1942 年 7 月、超過 90 張、帕克斯另一版本的史崔克反應；記史崔克「looked down the corridor, then called me to his side」"
+    },
+    {
+      "title": "Naming Moments Properly: Gordon Parks and America's History",
+      "publisher": "Duke University（Lee D. Baker 課程網頁）",
+      "url": "https://people.duke.edu/~ldbaker/classes/AAIH/caaih/gparks/gordon_parks2.htm",
+      "note": "轉引 Parks, Half Past Autumn（1997），第 32 頁；本文未見原書",
+      "date": "2005-03"
+    },
+    {
+      "title": "Gordon Parks Remembered",
+      "publisher": "Library of Congress, Timeless blog（Erin Allen）",
+      "date": "2012-11-30",
+      "url": "https://blogs.loc.gov/loc/2012/11/gordon-parks-remembered/",
+      "note": "帕克斯生卒年；1942–1943 年在 FSA、1943–1945 年在戰時新聞局，皆由史崔克主持；1995 年館方取得其個人收藏"
+    },
+    {
+      "title": "American Gothic（Grant Wood, 1930）",
+      "publisher": "Art Institute of Chicago",
+      "url": "https://www.artic.edu/artworks/6565/american-gothic",
+      "note": "館藏號 1930.934、油彩、78 × 65.3 公分（以館方 API 讀取）"
+    }
+  ]
+}
