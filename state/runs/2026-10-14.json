@@ -1,0 +1,16 @@
+{
+  "reserve": {
+    "finished_at": "2026-10-14T00:44:21+08:00",
+    "missing": [
+      "football",
+      "perio",
+      "music",
+      "civilization",
+      "devotion",
+      "philosophy",
+      "art",
+      "photo"
+    ],
+    "note": "各欄庫存皆達標，無需修正，未補寫"
+  }
+}
