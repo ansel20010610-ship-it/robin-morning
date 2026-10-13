@@ -1,0 +1,391 @@
+{
+  "column": "civilization",
+  "date": "2026-10-14",
+  "title": "蓋了章的口糧：波斯波利斯城防泥板怎樣記帳",
+  "dek": "公元前 509 至 493 年，大流士一世的波斯本土按固定配額發糧給工人、產婦與旅人。上萬塊泥板怎樣讓每一筆發放都能對帳？",
+  "topic_key": "civilization:persia-persepolis-fortification-rations-5c-bce",
+  "updated_at": "2026-10-14T01:59:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Persepolis_Fortification_Archive_Tablets.jpg/1280px-Persepolis_Fortification_Archive_Tablets.jpg",
+    "width": 1280,
+    "height": 960,
+    "alt": "木桌上一個打開的透明塑膠盒，左半邊放著十幾塊大小不一、灰褐色的泥板與碎片，有些表面可見楔形刻痕；右半邊鋪著泡棉，放著三塊碎片和手寫標籤，標籤上寫著 Box# 447、Uninscribeds 4 等字樣。",
+    "caption": "存放於芝加哥大學東方研究所（今 ISAC）的城防檔案泥板（伊朗所有，借予研究），2017 年攝。照片中的泥板未逐一標明內容。",
+    "credit": "Pfa16（Wikimedia Commons，自行拍攝）",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Persepolis_Fortification_Archive_Tablets.jpg",
+    "made": "照片：2017 年 2 月 22 日；泥板：約公元前 509–493 年",
+    "depicts": "公元前 6 世紀末至前 5 世紀初的行政泥板"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "大流士一世（Darius I）在位第 27 年的第 9 個月，一支 35 人的隊伍走到希達利（Hidali）。一個叫道馬（Dauma）的人在當地領了 4 BAR 6½ QA 的麵粉：23 名「男人」每人 1½ QA，12 名「男孩」每人 1 QA。泥板接著寫：他帶著阿爾塔弗涅斯（Artaphernes）的封印文書；他們從薩第斯（Sardis）出發，要去波斯波利斯（Persepolis）。這是理查・哈洛克（Richard T. Hallock）1969 年出版的編號 PF 1404 泥板，全文只有十來行。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "阿爾塔弗涅斯是駐在小亞細亞薩第斯的總督。一張他簽發的文書，可以讓 35 個人在遠離小亞細亞的埃蘭（今伊朗西南）一個驛站領到麵粉；依常態配額換算，這正好是一天份；而這筆麵粉被誰發出、記在誰的帳上，也刻在泥板上。本文要回答的是：公元前 6 世紀末到前 5 世紀初，阿契美尼德波斯怎樣用固定配額，把穀物、酒和麵粉發給工人、產婦、官員與旅人，又怎樣讓這些發放留下可以對帳的紀錄。",
+      "tag": "史料"
+    },
+    {
+      "type": "h",
+      "text": "定位：埋在城牆裡的一座行政檔案庫"
+    },
+    {
+      "type": "p",
+      "text": "波斯波利斯在今天伊朗南部的法爾斯（Fars），古代稱波西斯（Persis），是阿契美尼德王室的本土。1933 至 1934 年，芝加哥大學東方研究所（Oriental Institute，今名古代文化研究所 ISAC）由恩斯特・赫茨菲爾德（Ernst Herzfeld）率領的考古隊，在平台東北角的城防牆內發現大批泥板。依哈洛克的說明，泥板和附著的泥土先浸過石蠟才運到芝加哥，裝在 2,353 個編號的盒子裡，1937 年起可供研究。美國最高法院 2018 年的判決書也記載，伊朗在 1937 年把這批藏品借給該所做研究、翻譯與編目。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "這批泥板因此被稱為「城防檔案」（Persepolis Fortification Archive）。哈洛克的書收錄 2,087 件埃蘭文（Elamite）文書，年代在大流士第 13 到第 28 年，他換算為公元前 509 至 494 年；較新的研究多寫作前 509 至 493 年。內容幾乎全是食物類物資的調撥與發放，範圍南到尼里茲（Niriz），北到埃蘭，通常不包括蘇撒（Susa）。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "檔案的規模遠大於哈洛克發表的部分。馬修・斯托爾珀（Matthew W. Stolper）與揚・塔維尼耶（Jan Tavernier）2007 年估計，原有的埃蘭文文書約 15,000 到 18,000 件，亞蘭文（Aramaic）文書約 700 到 1,000 件，另有約 5,000 到 6,000 件只蓋印、沒有可辨文字的泥板；他們把三者視為同一套資訊系統的三股。此外還有一塊希臘文泥板（Fort. 1771，記兩 marriš 的酒）和一塊古波斯文行政泥板，都是孤例。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "這些都是機構自己的帳，偏差也從這裡來：泥板記的是官方倉庫的進出。哈洛克注意到，有泥板記錄羊、牛、駱駝的皮被送進各地的庫房，也有「在皮上書寫的巴比倫書吏」領口糧；他推斷皮是書寫材料，上面寫的應是亞蘭文。他自己的問題是：寫在易朽材料上的亞蘭文紀錄，究竟和保存下來的泥板平行到什麼程度？哈洛克認為這個問題基本上無法回答。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "map",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Persepolis_complex_map_deutsch_with_PFT-PTT_Markers.jpg/960px-Persepolis_complex_map_deutsch_with_PFT-PTT_Markers.jpg",
+      "width": 960,
+      "height": 684,
+      "alt": "波斯波利斯平台的平面圖，各建築以不同顏色標示，右側有德文圖例。平台北緣有一個黑色圈起的小建築群，旁註 PFT；東南側綠色的大型建築內另有一圈，旁註 PTT。左下角有指北針。",
+      "caption": "波斯波利斯平台平面圖，德文標示。圖上方圈出的 PFT 是城防檔案出土處，東南方綠色「寶庫」（Schatzhaus）內圈出的 PTT 是寶庫檔案出土處。寶庫泥板依哈洛克所說年代為前 492 至 458 年，記的多是以白銀代替實物口糧的支付。示意，不按比例。",
+      "credit": "Horstovich，據 Pentocelo 的法文版平面圖改繪（Wikimedia Commons）",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Persepolis_complex_map_deutsch_with_PFT-PTT_Markers.jpg",
+      "made": "2021 年",
+      "depicts": "公元前 6 世紀末至前 4 世紀的平台建築"
+    },
+    {
+      "type": "h",
+      "text": "追蹤：一份配額表，從工人到總督"
+    },
+    {
+      "type": "p",
+      "text": "先看單位。依哈洛克，乾貨的基本單位是 BAR，液體是 marriš，兩者都等於 10 QA，一個 QA 大約一夸脫（略少於 1 公升）。另有一種 irtiba，等於 3 BAR，希臘文寫作 artabe。泥板上常不寫單位，讀者要靠上下文判斷。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "配額有固定的格子。哈洛克整理出的常態是：男工每月 3 BAR（30 QA）穀物，正常上限 6 BAR（不常達到）；5 QA（½ BAR）是常見的最低月配額，其他常態配額都是它的倍數。女工最常見的是 2 BAR，但哈洛克找出 37 件女性配額特別高的工作隊穀物泥板，其中不少女性拿得比男性多；拿到 5 BAR 的女性在 PF 865–866 被稱為「主管」，他推測其餘高配額的女性是具備特殊技能的人。旅行口糧按日計：「男孩」與僕人每天 1 QA 麵粉，「紳士」（šalup）1½ QA。",
+      "tag": "史實"
+    },
+    {
+      "type": "table",
+      "title": "城防泥板裡的常見配額",
+      "head": [
+        "對象",
+        "配額",
+        "備註"
+      ],
+      "rows": [
+        [
+          "一般男工",
+          "每月 3 BAR（30 QA）穀物",
+          "正常上限 6 BAR（不常達到）"
+        ],
+        [
+          "一般女工",
+          "每月最常見 2 BAR",
+          "部分女性 3–4 BAR；「主管」5 BAR"
+        ],
+        [
+          "工作隊的酒",
+          "男性多為每月 1–2 marriš",
+          "常有一名女性領 3 marriš"
+        ],
+        [
+          "旅人（男孩、僕人）",
+          "每天 1 QA 麵粉",
+          "多數泥板只記一天份"
+        ],
+        [
+          "旅人（紳士）",
+          "每天 1½ QA 麵粉",
+          "「男人」與工人有時 1、有時 1½"
+        ],
+        [
+          "產婦（穀物）",
+          "生男 2 BAR，生女 1 BAR",
+          "一次性發放"
+        ],
+        [
+          "高官（酒或啤酒）",
+          "每天 3 到 10 marriš",
+          "戈布里亞斯（Gobryas）10、帕納卡（Parnaka）9、伊爾杜瑪提亞（Irdumartiya）5、齊沙維什（Ziššawiš）3"
+        ]
+      ],
+      "caption": "依 Hallock 1969 導論與第一章各類說明整理。1 BAR ＝ 1 marriš ＝ 10 QA，1 QA 約一夸脫。哈洛克也記下許多例外，此表只列常態。"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，一名男工每月 30 QA，平均一天約 1 QA；走在路上的成年男子一天可領 1½ QA。這是本文自己的換算，不是泥板上的話，但它顯示旅行口糧並不比定居工人吝嗇。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "表的最下一行最能說明這套帳的性質。戈布里亞斯一天領 10 marriš，也就是約 100 夸脫的酒或啤酒，沒有人喝得完。旅行泥板也有類似情形：PF 1318 記一個叫阿巴特瑪（Abbatema）的人「自己的每日口糧」是 7 BAR，夠 70 個男孩吃；哈洛克推測他身邊帶著由他、而不是由國家供養的隨從。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "帳是用實物記的，各種物資之間有固定換算。哈洛克從交換紀錄中找到：1 頭羊折 10 BAR 大麥，1 marriš 酒折 3 BAR。他指出這類比價通常不隨供需變動，在寶庫泥板涵蓋的期間，羊與酒的價值始終沒變。",
+      "tag": "史實"
+    },
+    {
+      "type": "svg",
+      "title": "一筆口糧怎樣變成一筆帳",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 600\">\n<defs><marker id=\"ah\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"ink\"/></marker></defs>\n<rect x=\"0\" y=\"0\" width=\"680\" height=\"600\" class=\"paper\"/>\n<rect x=\"190\" y=\"16\" width=\"300\" height=\"74\" rx=\"8\" class=\"soft\"/>\n<text x=\"340\" y=\"42\" text-anchor=\"middle\" font-size=\"17\" class=\"ink\">授權者</text>\n<text x=\"340\" y=\"66\" text-anchor=\"middle\" font-size=\"13\" class=\"muted\">國王、帕納卡、齊沙維什、</text>\n<text x=\"340\" y=\"82\" text-anchor=\"middle\" font-size=\"13\" class=\"muted\">遠方總督（如薩第斯的阿爾塔弗涅斯）</text>\n<line x1=\"300\" y1=\"92\" x2=\"150\" y2=\"186\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<text x=\"150\" y=\"128\" text-anchor=\"middle\" font-size=\"13\" class=\"accent\">封印文書 halmi</text>\n<text x=\"150\" y=\"146\" text-anchor=\"middle\" font-size=\"13\" class=\"accent\">由領隊隨身攜帶</text>\n<rect x=\"20\" y=\"190\" width=\"250\" height=\"84\" rx=\"8\" class=\"soft\"/>\n<text x=\"145\" y=\"218\" text-anchor=\"middle\" font-size=\"17\" class=\"ink\">領取者</text>\n<text x=\"145\" y=\"242\" text-anchor=\"middle\" font-size=\"13\" class=\"muted\">旅行隊伍、工作隊（kurtaš）、</text>\n<text x=\"145\" y=\"260\" text-anchor=\"middle\" font-size=\"13\" class=\"muted\">產婦、官員</text>\n<rect x=\"410\" y=\"190\" width=\"250\" height=\"84\" rx=\"8\" class=\"soft\"/>\n<text x=\"535\" y=\"218\" text-anchor=\"middle\" font-size=\"17\" class=\"ink\">供應者與驛站倉庫</text>\n<text x=\"535\" y=\"242\" text-anchor=\"middle\" font-size=\"13\" class=\"muted\">如希達利、庫爾杜蘇姆</text>\n<text x=\"535\" y=\"260\" text-anchor=\"middle\" font-size=\"13\" class=\"muted\">的供應官</text>\n<line x1=\"408\" y1=\"232\" x2=\"274\" y2=\"232\" class=\"gold\" stroke=\"currentColor\" stroke-width=\"3\" marker-end=\"url(#ah)\"/>\n<text x=\"340\" y=\"222\" text-anchor=\"middle\" font-size=\"13\" class=\"gold\">大麥、麵粉、</text>\n<text x=\"340\" y=\"252\" text-anchor=\"middle\" font-size=\"13\" class=\"gold\">酒、啤酒</text>\n<rect x=\"200\" y=\"320\" width=\"280\" height=\"96\" rx=\"8\" class=\"soft\"/>\n<text x=\"340\" y=\"348\" text-anchor=\"middle\" font-size=\"16\" class=\"ink\">一塊泥板（備忘錄）</text>\n<text x=\"340\" y=\"372\" text-anchor=\"middle\" font-size=\"13\" class=\"muted\">左側邊：供應者的印</text>\n<text x=\"340\" y=\"390\" text-anchor=\"middle\" font-size=\"13\" class=\"muted\">背面：經手人或領取者的印</text>\n<text x=\"340\" y=\"408\" text-anchor=\"middle\" font-size=\"13\" class=\"muted\">寫明數量、人數、授權者、月份</text>\n<line x1=\"145\" y1=\"276\" x2=\"250\" y2=\"318\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n<line x1=\"535\" y1=\"276\" x2=\"430\" y2=\"318\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n<line x1=\"340\" y1=\"418\" x2=\"340\" y2=\"462\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<text x=\"352\" y=\"446\" font-size=\"13\" class=\"muted\">送回波斯波利斯</text>\n<rect x=\"110\" y=\"466\" width=\"460\" height=\"112\" rx=\"8\" class=\"soft\"/>\n<text x=\"340\" y=\"494\" text-anchor=\"middle\" font-size=\"16\" class=\"ink\">波斯波利斯的記帳處</text>\n<text x=\"340\" y=\"518\" text-anchor=\"middle\" font-size=\"13\" class=\"muted\">日誌（V 類）彙整同一地點、同一物資的發放</text>\n<text x=\"340\" y=\"538\" text-anchor=\"middle\" font-size=\"13\" class=\"muted\">帳冊（W 類）結算：收入、存量、發出、餘額</text>\n<text x=\"340\" y=\"560\" text-anchor=\"middle\" font-size=\"13\" class=\"accent\">記入供應者帳下，扣在發出文書的官員帳下</text>\n</svg>",
+      "caption": "原創示意，依 Hallock 1969 對旅行口糧（Q 類）、日誌（V 類）與帳冊（W 類）的說明繪製；「記入、扣在」兩項是哈洛克的推論。示意，不按比例，不代表整個行政組織。"
+    },
+    {
+      "type": "h",
+      "text": "權力：誰簽發、誰分派、誰蓋印"
+    },
+    {
+      "type": "p",
+      "text": "旅行泥板通常寫明，隊伍領隊帶著國王或某位官員簽發的「封印文書」（halmi），或寫作「授權」（miyatukkaš）。除了國王，最常見的授權者是巴卡巴納（Bakabana）、帕納卡與齊沙維什。哈洛克說，泥板裡提到這類文書一再出現，但檔案中沒有一件真正的授權文書。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "蓋印是對帳的關鍵。哈洛克發現，在旅行泥板中，左側邊的印屬於供應者，背面和其他面的印屬於經手人或領取者。最常見的第 10 號印出現在 25 件旅行泥板左側邊，其中三件寫明地點是庫爾杜蘇姆（Kurdušum），一件寫明供應者是哈圖爾達達（Haturdada）。其餘 22 件連地點和供應者都沒寫；哈洛克的判斷是印本身就足以辨認是誰、在哪裡發的。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "由此，哈洛克推論這套系統隱含一套轉帳機制：泥板在供應站寫好、送到波斯波利斯，發出的物資記入供應者的帳，再扣在發給旅人文書的那位官員帳下。授權者可以遠在薩第斯，像 PF 1404 和 PF 1455 都提到阿爾塔弗涅斯。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "定居的工作隊另有一套分工。哈洛克注意到兩種說法：「某人 damana」意為由某人「分派」工作隊，「某人 šaramana」意為由某人「核定配額」；有泥板明言兩件事由不同的人負責。在 L 1 類泥板裡，能「分派」的只有卡爾基什（Karkiš）、舒達亞烏達（Šuddayauda）等四人，「核定配額」的卻有十多人。他也提醒，舒達亞烏達幾乎同時在許多地點行使職權，泥板寫了他的名字，不代表他人在現場。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "國王本人也下令。一封信裡大流士命令發 100 頭羊給他的妻子伊爾塔什杜納（Irtašduna），PF 1795 又令發 200 marriš 的酒給她；她自己也寫了五封信要求發酒。有些工作隊被記為「屬於伊爾達巴瑪（Irdabama）」，哈洛克認為她顯然是大流士的親屬，但這些工人在什麼意義上屬於她，他承認不清楚。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "領口糧的人來自各地。工人稱 kurtaš，有些帶族名，例如「圖爾米里亞人」，哈洛克認為可能就是希羅多德所說呂基亞（Lycia）的 Termilai；PF 1224 記了在波斯波利斯分娩的愛奧尼亞（Ionian）母親。有一組「波斯男孩」在抄寫文書，哈洛克說從配額看他們其實是成年人，而 PF 871 是唯一把波斯人稱為 kurtaš 的例子。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "產婦另有一次性的配額。生男孩的母親，穀物領 2 BAR，生女孩的領 1 BAR；換成酒時也是男孩一方加倍。哈洛克統計這類紀錄共記 449 名新生兒，其中 247 名是男孩，約 55%。",
+      "tag": "史實"
+    },
+    {
+      "type": "quote",
+      "original": "Obviously the payments reflect an interest of the state in the increase of the work force.",
+      "text": "這些發放顯然反映國家對增加勞動力的關心。",
+      "cite": "Richard T. Hallock，《Persepolis Fortification Tablets》（1969），頁 37；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "成本由誰承擔，泥板沒有直接回答。發出去的穀物從各地倉庫來，倉庫的穀物又從哪裡來、農民繳了多少，不在這批帳裡。我的讀法是，城防檔案讓我們看見的是「分」的那一半，而「收」的那一半大多留在泥板之外。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "限制：季節、驛站與帳面上的僵硬"
+    },
+    {
+      "type": "p",
+      "text": "路線受地理與氣候限制。旅行泥板多半只記一天份，哈洛克據此推斷主要路線上的供應站間隔不超過一天路程。往蘇撒的旅行，第 3 到第 7 月（約 6 到 10 月）只有 6 件紀錄，其他七個月有 42 件；他推想國王一行在炎熱的夏天不在蘇撒。他也發現往波斯波利斯的隊伍平均是離開隊伍的兩倍半以上，推斷多數人是去了就留下。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "紀錄的密度並不均勻。超過 72% 有日期的旅行泥板集中在大流士第 22、23 年，其他類泥板在這兩年只佔 45.6%。哈洛克說，難以估計這種起落有多少來自出土的偶然，或各年用亞蘭文在易朽材料上記帳的多寡；他在導論中則認為這反映了那幾年的行政與經濟變動。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "固定比價也有代價。十件帳冊泥板（PF 1972–1980、2078）記官員把剩餘的穀物、水果或酒提出來，想換成家畜，結果多半換不成。哈洛克的猜測是，官員對物價的觀念太僵硬或受規定約束，也可能是物資過剩時根本沒人要。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "配額也會臨時變動。大流士第 18 年第 8 月到第 19 年第 10 月之間，有幾件發酒的泥板把女性的配額砍半，男性不變；哈洛克推測她們另以別的物資補足，但原因不明。",
+      "tag": "史料"
+    },
+    {
+      "type": "h",
+      "text": "學界怎麼說：薪俸、制度經濟與 kurtaš 的身分"
+    },
+    {
+      "type": "p",
+      "text": "哈洛克在 1969 年刻意不急著下總結，說「時機未到」。他強調單一泥板意義有限，必須和上千件互相比對，才看得出模式。這也是他認為必須大量發表的理由。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "quote",
+      "original": "everyone in the state sphere of the Persian economy was on a fixed ration-scale, or rather, since some of the rations are on a scale impossible for an individual to consume, a fixed salary expressed in terms of commodities.",
+      "text": "波斯經濟中國家部門裡的每個人都按固定的配額表領取；或者更準確地說，由於有些配額的量不是一個人吃得完的，那是一份以物資計價的固定薪俸。",
+      "cite": "D. M. Lewis〈The Persepolis Fortification Texts〉，《Achaemenid History IV》（1990），轉引自 ISAC 出版頁；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "路易斯（D. M. Lewis）的讀法把「口糧」改看成「薪俸」；依這個說法，戈布里亞斯那 100 夸脫酒就說得通了。他也點出方法上的難題：除了巴比倫尼亞少數地點的短期紀錄，波斯波利斯是帝國記錄最完整的地區，但這裡的發現能推到其他行省多少，是阿契美尼德研究的主要問題之一。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "後來的研究擴大了樣本。斯托爾珀在 2017 年寫道，可用的埃蘭文樣本已是哈洛克當年的約三倍。據科羅拉多大學《文理學院雜誌》2019 年 2 月的報導，沃特・亨克爾曼（Wouter F. M. Henkelman）在當年 3 月一場演講的預告中說，演講要把王室餐桌、王室旅行授權、王室領地等數千件文書串起來，描述「波斯波利斯的制度經濟」，一種既地方、又同時屬於帝國的現象。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "爭論最多的是 kurtaš 的身分。赫爾辛基大學研究者菲利波・佩德龍（Filippo Pedron）在 2025 年 5 月該校研究群的一篇訪談中概括：有學者依聯合國糧農組織的標準計算年配額，認為他們吃不飽、可能是奴隸；也有人認為行政文書只呈現他們生活的一部分，他們可能另有家戶、田地或衣物工具等報酬。佩德龍認為兩邊都缺了什麼，許多舊結論的基礎並不穩。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，這場爭論的根源就在史料本身：一套只記「發了多少」的帳，很難回答「這些人自由不自由」。帳越完整，越容易讓人忘記它只是國家眼中的那一面。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "timeline",
+      "title": "城防檔案的年代與研究史",
+      "items": [
+        {
+          "when": "前 509 年",
+          "label": "最早的紀年泥板",
+          "note": "大流士第 13 年，依哈洛克換算"
+        },
+        {
+          "when": "前 500–498 年",
+          "label": "旅行泥板最密集",
+          "note": "大流士第 22、23 年，佔有日期旅行泥板七成以上（公元年份為本文依哈洛克的換算推得）"
+        },
+        {
+          "when": "前 494/493 年",
+          "label": "最晚的紀年泥板",
+          "note": "大流士第 28 年"
+        },
+        {
+          "when": "前 492–458 年",
+          "label": "寶庫泥板",
+          "note": "改以白銀代替實物口糧，另一批檔案"
+        },
+        {
+          "when": "1933–34 年",
+          "label": "赫茨菲爾德發掘",
+          "note": "平台東北角城防牆內出土"
+        },
+        {
+          "when": "1937 年",
+          "label": "借往芝加哥研究",
+          "note": "泥板開始可供研究"
+        },
+        {
+          "when": "1948 年",
+          "label": "150 件完整泥板歸還伊朗",
+          "note": "依哈洛克 1969 年的說明"
+        },
+        {
+          "when": "1969 年",
+          "label": "哈洛克出版 2,087 件",
+          "note": "《Persepolis Fortification Tablets》（OIP 92）"
+        },
+        {
+          "when": "2018.2.21",
+          "label": "美國最高法院判決",
+          "note": "不能單憑 §1610(g) 扣押這批藏品"
+        }
+      ],
+      "caption": "年份依 Hallock 1969 與 Rubin v. Islamic Republic of Iran 判決書整理；古代年份為大流士在位年的近似換算。"
+    },
+    {
+      "type": "p",
+      "text": "最後一行需要說明。1997 年 9 月 4 日耶路撒冷的自殺炸彈攻擊受害者及其近親，在美國法院取得對伊朗 7,150 萬美元的缺席判決，之後試圖扣押這批借給芝加哥的泥板來執行。最高法院 2018 年 2 月 21 日判決，相關條文本身不足以剝奪這批財產的豁免。兩千五百年前為了對帳而刻的泥板，差一點成為另一筆帳的抵押品。",
+      "tag": "史實"
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "你的世界裡，一張授權文書能讓多遠的人、在多少天內領到糧食？簽發者和發放者之間靠什麼對帳：印章、副本，還是人去核對？",
+        "配額表是固定的嗎？誰有權把某一群人的配額砍半，這個決定會留下什麼紀錄？",
+        "如果國家用實物記帳、比價多年不變，剩餘物資要怎麼處理？換不掉的時候，倉庫官員會怎麼做？",
+        "你的檔案只記「發出去」的那一半時，後世的學者會怎樣誤讀你筆下的勞工？"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Persepolis Fortification Tablets (Oriental Institute Publications 92)",
+      "publisher": "Richard T. Hallock／University of Chicago Press（ISAC 線上全文）",
+      "date": "1969",
+      "url": "https://isac.uchicago.edu/publications/persepolis-fortification-tablets",
+      "note": "讀導論（頁 1–12）、第一章 L 1、N、Q 類說明（頁 27–45）與〈Measures and Numbers〉（頁 72）；PF 1404、1455 譯文"
+    },
+    {
+      "title": "The Persepolis Fortification Texts（Achaemenid History IV, pp. 2–6）",
+      "publisher": "D. M. Lewis／Nederlands Instituut voor het Nabije Oosten",
+      "date": "1990",
+      "url": "https://isac.uchicago.edu/publications/persepolis-fortification-tablets",
+      "note": "轉引自 ISAC 出版頁所錄段落，未讀原書全文"
+    },
+    {
+      "title": "From the Persepolis Fortification Archive Project, 1: An Old Persian Administrative Tablet from the Persepolis Fortification",
+      "publisher": "Matthew W. Stolper & Jan Tavernier／ARTA 2007.001, Achemenet",
+      "date": "2007-06",
+      "url": "http://www.achemenet.com/document/2007.001-Stolper-Tavernier.pdf",
+      "note": "檔案規模估計與希臘文、古波斯文等孤例泥板"
+    },
+    {
+      "title": "From the Persepolis Fortification Archive Project, 6: The Dossier of Šarbaladda, Treasury Secretary at Persepolis",
+      "publisher": "Matthew W. Stolper／ARTA 2017.001, Achemenet",
+      "date": "2017-03",
+      "url": "http://www.achemenet.com/pdf/arta/ARTA_2017.001-Stolper.pdf",
+      "note": "只用開頭關於樣本擴大到約三倍的說明"
+    },
+    {
+      "title": "The Greek Tablet (Fort. 1771) of the Persepolis Fortification Archive",
+      "publisher": "Gerasimos George Aperghis & Antigoni Zournatzi／ARTA 2023.001, Achemenet",
+      "date": "2023-05",
+      "url": "http://www.achemenet.com/pdf/arta/ARTA_2023_001%20Aperghis%20Zournatzi.pdf",
+      "note": "檔案年代（前 509–493 年）與規模的較新估計"
+    },
+    {
+      "title": "Rubin v. Islamic Republic of Iran, 583 U.S. ___ (2018)",
+      "publisher": "Supreme Court of the United States（Cornell LII 全文）",
+      "date": "2018-02-21",
+      "url": "https://www.law.cornell.edu/supremecourt/text/16-534"
+    },
+    {
+      "title": "Experts discuss king and kingship in ancient Persia",
+      "publisher": "University of Colorado Boulder, Arts and Sciences Magazine",
+      "date": "2019-02-20",
+      "url": "https://www.colorado.edu/asmagazine/2019/02/20/experts-discuss-king-and-kingship-ancient-persia",
+      "note": "亨克爾曼的研究計畫說明"
+    },
+    {
+      "title": "Uncovering the Archive: Language, Labor, and Power in Persepolis",
+      "publisher": "Yasemin Murr & Filippo Pedron／University of Helsinki, Work Without End research group",
+      "date": "2025-05-13",
+      "url": "https://www.helsinki.fi/en/researchgroups/work-without-end-informal-taxation-and-forced-labor-within-persian-southern-levantine-temple-economy-and-society/news/uncovering-the-archive-language-labor-and-power-in-persepolis",
+      "note": "kurtaš 身分爭論的概述"
+    }
+  ]
+}
