@@ -4,7 +4,7 @@
   "title": "巴薩伊斯坦堡逆轉 4 比 1，開季十連勝",
   "dek": "加拉塔沙雷先進球，坎塞洛扳平後，費爾明、戈登、阿德耶米下半場連進三球；亞馬爾兩次助攻。拜仁被維京逼和，國際米蘭主場輸布魯日。",
   "topic_key": "football:2026-10-14",
-  "updated_at": "2026-10-14T05:11:00+08:00",
+  "updated_at": "2026-10-14T06:30:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -53,8 +53,18 @@
     },
     {
       "type": "p",
-      "text": "弗利克的賽後說法與最新傷情，本版完稿時（台灣時間 10 月 14 日 05:05）巴薩官網尚未刊出；ESPN 比賽紀錄中巴薩的五次換人都不是因傷。缺陣的拉菲尼亞（Raphinha）、德容（Frenkie de Jong）、克里斯滕森（Andreas Christensen）、巴德吉（Roony Bardghji）情況沒有新消息，官網賽前預告只說德容「close but not close enough to a comeback」（接近復出，但還不夠接近；本文自譯）。",
-      "tag": "官方說法"
+      "tag": "官方說法",
+      "text": "弗利克賽後記者會承認上半場一度亂了陣腳：「Creo que en la primera parte, cuando perdíamos 1-0, sí hubo algo de descontrol... Pero en la segunda parte jugamos mucho mejor」（我認為上半場 1 比 0 落後時，確實有些失控……但下半場我們踢得好多了；本文自譯）。他也說，球隊在歐冠踢得好的時候，有時在最後三分之一區沒有做出好的決定，「Eso hay que mejorarlo」（這一點要改進；本文自譯）。以上依 Infobae 轉載的 Europa Press 記者會稿。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "被問到有沒有考慮換下亞馬爾、替他省體力，弗利克答「No, no lo planteé」（沒有，我沒考慮；本文自譯），說亞馬爾體能上已經準備好，雖然沒進球，但兩個進球的最後一傳都來自他，「ha estado excelente」（表現極好；本文自譯）。中場休息對球員說了什麼，他不肯透露，只說「se queda en el vestuario」（那留在更衣室裡；本文自譯）。巴薩官網的賽後影片則以他的一句話為標題：「In the second half we were marvellous」（下半場我們踢得非常出色；本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "傷情方面，截至台灣時間 10 月 14 日 06:30，巴薩官網沒有發布這場比賽後的醫療報告；ESPN 比賽紀錄中巴薩的五次換人都不是因傷。缺陣的拉菲尼亞（Raphinha）、德容（Frenkie de Jong）、克里斯滕森（Andreas Christensen）、巴德吉（Roony Bardghji）情況沒有新消息，官網賽前預告只說德容「close but not close enough to a comeback」（接近復出，但還不夠接近；本文自譯）。"
     },
     {
       "type": "p",
@@ -134,15 +144,15 @@
       "items": [
         {
           "headline": "維京主場和拜仁 3 比 3，布魯日在梅亞查 4 比 3 贏國際米蘭",
-          "summary": "挪威的維京（Viking）上半場 2 比 0 領先，凱恩（Harry Kane）連進兩球、路易斯・迪亞斯（Luis Díaz）再進一球幫拜仁反超，奧利塞（Michael Olise）第 73 分鐘兩黃變紅後，維京的 Herman Haugen 第 90 分鐘扳平。義甲衛冕軍國際米蘭主場輸布魯日，布魯日前鋒 Nicolò Tresoldi 戴帽。",
-          "source": "ESPN 比賽紀錄、Sky Sports 賽果",
+          "summary": "挪威的維京（Viking）上半場 2 比 0 領先，凱恩（Harry Kane）連進兩球、路易斯・迪亞斯（Luis Díaz）再進一球幫拜仁反超，奧利塞（Michael Olise）第 73 分鐘兩黃變紅後，維京的 Herman Haugen 第 90 分鐘扳平。奧利塞因此停賽一場，將缺席下一輪對阿森納；凱恩賽後說他會很「gutted」（沮喪；本文自譯）。義甲衛冕軍國際米蘭主場輸布魯日，布魯日前鋒 Nicolò Tresoldi 戴帽。",
+          "source": "ESPN 比賽紀錄、Sky Sports 賽果、ESPN（AP）",
           "url": "https://www.espn.com/soccer/story/_/id/50168897/uefa-champions-league-live-updates-manchester-united-atletico-madrid-barcelona-galatasaray",
           "when": "台灣時間 10 月 14 日 03:00 開賽"
         },
         {
-          "headline": "柯克喪母缺陣，馬德里競技 2 比 0 擊敗十人曼聯",
-          "summary": "馬競隊長柯克（Koke）的母親 10 月 13 日清晨在馬德里過世，他沒有參加這場比賽，賽前全場默哀。巴里奧斯（Pablo Barrios）開賽第 1 分鐘就進球，曼聯約羅（Leny Yoro）第 74 分鐘被罰下，盧克曼（Ademola Lookman）第 79 分鐘鎖定勝局。",
-          "source": "ESPN（AP）、ESPN 比賽紀錄",
+          "headline": "柯克喪母缺陣，馬德里競技 2 比 0 擊敗十人曼聯；利桑德羅・馬丁內斯賽後砲轟高層",
+          "summary": "馬競隊長柯克（Koke）的母親 10 月 13 日清晨在馬德里過世，他沒有參加這場比賽，賽前全場默哀。巴里奧斯（Pablo Barrios）開賽第 1 分鐘就進球，曼聯約羅（Leny Yoro）第 74 分鐘被罰下，盧克曼（Ademola Lookman）第 79 分鐘鎖定勝局。賽後曼聯後衛利桑德羅・馬丁內斯（Lisandro Martínez）對 Amazon Prime 點名批評足球總監 Jason Wilcox夏窗補強不足：「I expect more from our technical director」（我對我們的技術總監有更多期待；本文自譯）。總教練卡立克（Michael Carrick）說自己還沒看到這段話，不予評論。",
+          "source": "ESPN（AP）、ESPN 比賽紀錄、ESPN（Mark Ogden）",
           "url": "https://www.espn.com/soccer/story/_/id/50174116/atletico-madrid-captain-koke-miss-champions-league-game-mothers-death",
           "when": "台灣時間 10 月 14 日 03:00 開賽"
         },
@@ -196,7 +206,7 @@
     },
     {
       "type": "p",
-      "text": "巴薩下一場是西甲第 9 輪，台灣時間 10 月 18 日（週日）00:30 作客皇家貝提斯（Real Betis），地點是塞維亞的 La Cartuja 球場。貝提斯在那之前還要踢歐冠：台灣時間 10 月 15 日（週四）03:00 主場對波圖。同一時間，巴薩下一個歐冠對手巴黎聖日耳曼作客曼城。"
+      "text": "巴薩下一場是西甲第 9 輪，台灣時間 10 月 18 日（週日）00:30 作客皇家貝提斯（Real Betis），地點是塞維亞的 La Cartuja 球場。巴薩官網指出，這場若贏，巴薩將以西甲開季 9 連勝追平皇家馬德里 1968/69 球季的紀錄。貝提斯在那之前還要踢歐冠：台灣時間 10 月 15 日（週四）03:00 主場對波圖。同一時間，巴薩下一個歐冠對手巴黎聖日耳曼作客曼城。"
     },
     {
       "type": "table",
@@ -290,6 +300,46 @@
       "date": "2026-10-13",
       "url": "https://www.espn.com/soccer/story/_/id/50171789/transfer-rumors-news-barcelona-real-madrid-scout-erling-haaland-anfield",
       "note": "德容價碼（Football Insider）、哈蘭德與阿勞霍（TEAMtalk）"
+    },
+    {
+      "title": "Flick: \"Lamine está listo para todo y es muy importante tenerlo en el campo\"",
+      "publisher": "Infobae（Europa Press）",
+      "date": "2026-10-13",
+      "url": "https://www.infobae.com/america/agencias/2026/10/13/flick-lamine-esta-listo-para-todo-y-es-muy-importante-tenerlo-en-el-campo/",
+      "note": "弗利克賽後記者會引文"
+    },
+    {
+      "title": "Hansi Flick: 'In the second half we were marvellous'（影片）",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-13",
+      "url": "https://www.fcbarcelona.com/en/barca-play/videos/4591962",
+      "note": "賽後影片標題"
+    },
+    {
+      "title": "10 out of 10",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-13",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4591897/10-out-of-10-for-fc-barcelona",
+      "note": "西甲開季 9 連勝紀錄（皇馬 1968/69）"
+    },
+    {
+      "title": "Galatasaray 1-4 Barça: Heaven in hell",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-13",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4591863/galatasaray-1-4-fc-barcelona-heaven-in-hell",
+      "note": "官網賽後報導（無傷情）"
+    },
+    {
+      "title": "Kane calls Olise red 'shame' in Bayern's shock draw with Viking",
+      "publisher": "ESPN（AP）",
+      "date": "2026-10-13",
+      "url": "https://www.espn.com/soccer/story/_/id/50177039/kane-olise-red-shame-bayern-draw-viking"
+    },
+    {
+      "title": "Lisandro Martínez slams Man United hierarchy: Squad not Champions League quality",
+      "publisher": "ESPN",
+      "date": "2026-10-13",
+      "url": "https://www.espn.com/soccer/story/_/id/50177021/lisandro-martinez-slams-man-united-hierarchys-decisions-not-champions-league-quality-squad"
     },
     {
       "title": "Arsenal vs. Lille（比賽頁）",
