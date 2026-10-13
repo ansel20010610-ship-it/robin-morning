@@ -1,0 +1,448 @@
+{
+  "column": "art",
+  "date": "2026-10-14",
+  "title": "《大碗島的星期天》：猴子、陰影與畫上去的框",
+  "dek": "秀拉最大的一幅畫，題名寫 1884，點描卻從 1885 年 10 月才開始，四周的彩點邊框更晚。從右邊那對男女看起，一路看到變暗的黃。",
+  "topic_key": "art:aic-1926.224",
+  "updated_at": "2026-10-14T02:56:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg/1280px-Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg/3840px-Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg",
+    "width": 1280,
+    "height": 852,
+    "alt": "橫幅油畫：塞納河畔的一片草地，數十個人或站或坐。右邊一對側身站立、戴黑色高帽的男女，女人腳邊牽著一隻猴子；左下陰影裡一個男人側躺抽菸斗，旁邊坐著戴高帽的男人與低頭的女人；中央一個撐紅傘的女人牽著穿白衣的小女孩；左上是點著帆船與蒸汽船的河面。整幅畫由密密的小色點構成，四周有一圈彩點畫成的窄邊。",
+    "caption": "喬治・秀拉《大碗島的星期天——1884》（A Sunday on La Grande Jatte — 1884）全圖，1884–86 年，邊框 1888–89 年加上，油彩、畫布，207.5 × 308.1 公分，芝加哥藝術博物館藏（1926.224）。後文的局部都從這張圖放大。",
+    "credit": "喬治・秀拉；芝加哥藝術博物館藏，Helen Birch Bartlett Memorial Collection；影像取自 Wikimedia Commons（Google Arts & Culture 掃描）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg",
+    "made": "1884–1886；邊框 1888–1889"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "畫題寫著「1884」，但這幅三公尺寬的畫上最出名的那些小點，並不是 1884 年畫的。依色彩科學家 Roy S. Berns 與芝加哥藝術博物館保存科學家等人 2006 年發表的論文，喬治・秀拉（Georges Seurat）要到 1885 年 10 月，才開始在這幅畫上使用分色點描的畫法。1886 年 5 月，它在巴黎第八屆、也是最後一屆印象派展覽展出；1888 至 1889 年間，秀拉又在四周補畫了一圈彩點邊框；最晚到 1892 年，已經有人注意到畫面上某些筆觸變暗了。"
+    },
+    {
+      "type": "p",
+      "text": "這篇照一條路線看畫：先看右邊那對幾乎和真人一樣大的男女，順著女人手上的繩子看到地上的猴子，再往左下角的三個人、畫面中央撐紅傘的女人與小女孩、左上的河面，最後看那圈邊框和已經變了色的黃。看得見的、館方與學者說的、本文自己的讀法，分開標示。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作者",
+          "喬治・秀拉（Georges Seurat），法國畫家，1859–1891（芝加哥藝術博物館）"
+        ],
+        [
+          "題名",
+          "A Sunday on La Grande Jatte — 1884，本文譯作《大碗島的星期天——1884》"
+        ],
+        [
+          "年代",
+          "1884–86 年；邊框 1888–89 年加上（館方）"
+        ],
+        [
+          "材料",
+          "油彩、畫布"
+        ],
+        [
+          "尺寸",
+          "207.5 × 308.1 公分（館方）"
+        ],
+        [
+          "收藏",
+          "芝加哥藝術博物館（Art Institute of Chicago），館藏號 1926.224，Helen Birch Bartlett Memorial Collection"
+        ],
+        [
+          "款識",
+          "館方著錄「右下題 Seurat」；本文在所用的影像上未能辨認出這個簽名"
+        ],
+        [
+          "歸屬",
+          "館方列為秀拉作品；流傳紀錄從 1891 年畫家過世由母親繼承起，一路記到 1926 年入館，沒有歸屬爭議的紀錄"
+        ],
+        [
+          "首展",
+          "1886 年 5 月 15 日至 6 月 15 日，巴黎拉菲特街 1 號 Maison Dorée，第八屆印象派展，目錄第 175 號"
+        ],
+        [
+          "影像",
+          "Wikimedia Commons 所收 Google Arts & Culture 掃描檔，原檔 30000 × 19970 像素，公版；館方 API 也標示為公版作品"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "第一眼：右邊那對側身站立的男女"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.72,
+        0.09,
+        0.25,
+        0.8
+      ],
+      "position": "畫面右側，從上緣附近一直到下緣前，約佔全圖寬度四分之一、高度八成",
+      "caption": "頭圖局部。女人戴黑色高帽、穿黑色短上衣與紫灰色長裙，臀後的裙撐高高隆起；她身後的男人也戴高帽，衣領上別著一朵粉紅色的花，戴手套的手伸在身前。兩人頭頂上方斜著一把深色陽傘。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "整幅畫裡最大、最暗的一塊，在右邊。一個女人側身朝左站著，戴黑色高帽，帽上有一團粉紫色的裝飾；黑色短上衣，下面是紫灰色長裙，臀後的裙撐向後隆起，輪廓像一個側放的大問號。她的手垂在身前，握著幾股淺色細繩，其中一條斜斜拉到地上的猴子背上。她身後站著一個戴高帽的男人，臉也朝左，衣領上別著一朵粉紅色的花；他戴手套的手伸到身前，握著一個深色的圓頭，像是手杖的握柄，指間還夾著一根細細的褐色短棒。兩人上方有一把深色陽傘斜斜撐開，傘柄伸向右下。兩人的臉都是側面，嘴唇閉著，看不到任何一人轉向對方。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "芝加哥藝術博物館歐洲繪畫與雕塑部主任 Gloria Groom 在館方網站的一篇文章裡，把這幅畫和同館的卡耶博特（Gustave Caillebotte）《巴黎街道；雨天》（Paris Street; Rainy Day）並排比較：兩幅畫都在中線偏右的位置，放了一對「接近真人大小、衣著時髦的男女」，整個構圖就從這裡展開。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "這對男女佔去的高度接近整個畫面，又是全畫明暗對比最強的地方，眼睛很難不先落在這裡。但兩人都朝左看，視線方向和畫中多數人物一樣，指向左邊的河。我的讀法是：這對男女的作用像一扇門框，把讀者擋在右邊，再把目光往左推出去。"
+    },
+    {
+      "type": "h",
+      "text": "繩子的另一頭：猴子與兩隻狗"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.61,
+        0.76,
+        0.24,
+        0.2
+      ],
+      "position": "畫面右下，女人裙襬左前方的草地，約佔全圖寬度四分之一、高度五分之一",
+      "caption": "頭圖局部。一隻灰褐色的猴子弓著背、長尾巴在裙邊捲成一圈，繩子連到女人手上；牠前方一隻深褐色的小狗頸上繫著白色蝴蝶結，四腳騰空向左跑。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "順著繩子往下看，繩子的另一頭繫著一隻猴子。牠弓著背、四肢著地，臉朝左，長長的尾巴往上彎起，顏色是灰褐色，幾乎融進陰影裡的草地。牠前方，一隻深褐色、尾巴捲成圈的小狗正往左跑，脖子上繫著一個白色蝴蝶結，前後腳都離地伸展。再往左，畫面下半部、中線偏左，一隻幾乎全黑的大狗低頭嗅著草地，尾巴高高翹起，是前景陰影裡輪廓最清楚的一塊。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "館方的作品說明寫道，秀拉在動筆兩年後回頭修改這幅畫，加強了部分人物的剪影，也加進了新的人物；其中有些「像是牽在繩上的猴子」，已經和構圖結合得難以想像是後加的，另一些則幾乎不會被注意到，例如最遠處一個拿著捲起報紙的男人。Groom 則寫道，最後畫面上的公園裡共有三隻狗和一隻猴子。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "三隻狗在這份影像上都找得到：除了上述兩隻，中景樹幹左邊、一個坐著的男人頭部後方，還有一隻帶深色斑點的白色小狗。拿報紙的人，在這個解析度下沒有把握認出是哪一個。比較有意思的是下面那張大都會博物館藏的習作：同一個位置已經有一隻猴子，尾巴捲成一個大圈。館方說猴子是「加進去的」，指的可能是大畫本身的修改過程，不是整個構想的先後；手邊的資料不足以判斷，只能把兩件事並列。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "artwork",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Study_for_%22A_Sunday_on_La_Grande_Jatte%22_MET_DP259921.jpg/1280px-Study_for_%22A_Sunday_on_La_Grande_Jatte%22_MET_DP259921.jpg",
+      "width": 1280,
+      "height": 870,
+      "alt": "較小的油畫，構圖和頭圖大致相同：左邊是河與帆船，右邊一個側身站立的女人，下方有一隻橘褐色、尾巴捲成圓圈的猴子，左下是幾個坐臥的人和一隻低頭的狗，四周有一圈紅藍色點的邊。筆觸是短而交錯的色塊，不是細點。",
+      "caption": "秀拉《〈大碗島的星期天〉習作》（Study for \"A Sunday on La Grande Jatte\"），1884 年，油彩、畫布，70.5 × 104.1 公分，紐約大都會博物館藏（51.112.6），Bequest of Sam A. Lewisohn, 1951。和頭圖相比：筆觸是交錯的短色塊，右側的女人位置相同，腳邊已經有一隻捲尾的猴子。",
+      "credit": "喬治・秀拉；大都會博物館藏；影像為該館開放資料，經 Wikimedia Commons",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Study_for_%22A_Sunday_on_La_Grande_Jatte%22_MET_DP259921.jpg",
+      "made": "1884"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "兩張並看，骨架幾乎一樣：左上的河、中間的樹幹、右邊直立的女人、左下坐臥的人群和那隻低頭的狗都在原位。差別在筆觸。習作上的顏色是一小塊一小塊交錯的短筆，有些方向傾斜，像編織的紋路；大畫上的筆觸細得多，多數是圓點或極短的橫點。右側的女人在習作裡只是一個側影，她身後似乎疊著另一個較模糊的人影，難以確認是否就是那位戴高帽的男人。習作四周也有一圈紅藍色點的邊。"
+    },
+    {
+      "type": "h",
+      "text": "構圖：一條斜線把畫面分成陰影與日光"
+    },
+    {
+      "type": "svg",
+      "title": "構圖骨架與本文的觀看路線",
+      "svg": "<svg viewBox=\"0 0 320 236\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"gjA\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 Z\" class=\"accent\"/></marker></defs>\n<rect x=\"2\" y=\"2\" width=\"316\" height=\"209\" class=\"paper\" stroke-width=\"1\"/>\n<rect x=\"2\" y=\"2\" width=\"316\" height=\"209\" fill=\"none\" class=\"muted\" stroke-width=\"3\" stroke-dasharray=\"2 2\"/>\n<path d=\"M6,6 L150,6 L150,40 L6,40 Z\" class=\"soft\" stroke-width=\"0\"/>\n<text x=\"12\" y=\"24\" font-size=\"8\" class=\"muted\">天空</text>\n<path d=\"M6,42 L150,42 L6,126 Z\" class=\"soft\" stroke-width=\"0.5\" opacity=\"0.9\"/>\n<text x=\"16\" y=\"62\" font-size=\"8\" class=\"muted\">塞納河</text>\n<path d=\"M6,160 L176,132 L314,128 L314,207 L6,207 Z\" class=\"muted\" stroke-width=\"0\" opacity=\"0.28\"/>\n<text x=\"110\" y=\"200\" font-size=\"8\" class=\"ink\">前景陰影帶</text>\n<path d=\"M150,42 L314,40 L314,128 L176,132 L6,160 L6,126 Z\" class=\"gold\" stroke-width=\"0\" opacity=\"0.3\"/>\n<text x=\"196\" y=\"118\" font-size=\"8\" class=\"ink\">日照草地</text>\n<rect x=\"234\" y=\"24\" width=\"68\" height=\"164\" rx=\"10\" class=\"ink\" opacity=\"0.18\" stroke-width=\"0\"/>\n<text x=\"240\" y=\"44\" font-size=\"8\" class=\"ink\">右側男女</text>\n<rect x=\"150\" y=\"43\" width=\"22\" height=\"76\" rx=\"6\" class=\"ink\" opacity=\"0.18\" stroke-width=\"0\"/>\n<rect x=\"138\" y=\"86\" width=\"12\" height=\"38\" rx=\"4\" class=\"ink\" opacity=\"0.18\" stroke-width=\"0\"/>\n<rect x=\"6\" y=\"143\" width=\"90\" height=\"48\" rx=\"10\" class=\"ink\" opacity=\"0.18\" stroke-width=\"0\"/>\n<rect x=\"48\" y=\"113\" width=\"40\" height=\"48\" rx=\"6\" class=\"ink\" opacity=\"0.14\" stroke-width=\"0\"/>\n<rect x=\"92\" y=\"98\" width=\"30\" height=\"72\" rx=\"6\" class=\"ink\" opacity=\"0.14\" stroke-width=\"0\"/>\n<rect x=\"122\" y=\"140\" width=\"44\" height=\"40\" rx=\"6\" class=\"ink\" opacity=\"0.14\" stroke-width=\"0\"/>\n<circle cx=\"268\" cy=\"70\" r=\"5\" class=\"accent\" stroke-width=\"0\"/>\n<text x=\"276\" y=\"74\" font-size=\"9\" class=\"accent\">1</text>\n<circle cx=\"236\" cy=\"176\" r=\"5\" class=\"accent\" stroke-width=\"0\"/>\n<text x=\"222\" y=\"172\" font-size=\"9\" class=\"accent\">2</text>\n<circle cx=\"56\" cy=\"168\" r=\"5\" class=\"accent\" stroke-width=\"0\"/>\n<text x=\"44\" y=\"162\" font-size=\"9\" class=\"accent\">3</text>\n<circle cx=\"160\" cy=\"76\" r=\"5\" class=\"accent\" stroke-width=\"0\"/>\n<text x=\"168\" y=\"74\" font-size=\"9\" class=\"accent\">4</text>\n<circle cx=\"66\" cy=\"70\" r=\"5\" class=\"accent\" stroke-width=\"0\"/>\n<text x=\"54\" y=\"66\" font-size=\"9\" class=\"accent\">5</text>\n<circle cx=\"14\" cy=\"12\" r=\"5\" class=\"accent\" stroke-width=\"0\"/>\n<text x=\"22\" y=\"16\" font-size=\"9\" class=\"accent\">6</text>\n<path d=\"M266,78 Q258,140 240,170\" fill=\"none\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"1.2\" marker-end=\"url(#gjA)\"/>\n<path d=\"M230,178 Q150,190 64,170\" fill=\"none\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"1.2\" marker-end=\"url(#gjA)\"/>\n<path d=\"M60,160 Q100,110 154,80\" fill=\"none\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"1.2\" marker-end=\"url(#gjA)\"/>\n<path d=\"M154,72 Q110,60 72,68\" fill=\"none\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"1.2\" marker-end=\"url(#gjA)\"/>\n<path d=\"M62,64 Q36,40 18,18\" fill=\"none\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"1.2\" marker-end=\"url(#gjA)\"/>\n<text x=\"8\" y=\"226\" font-size=\"8\" class=\"muted\">原創示意，簡化輪廓，非摹本；虛線外框代表畫上去的彩點邊框</text>\n</svg>",
+      "caption": "原創示意，簡化輪廓，不是摹本，比例依本文在 Commons 影像上目測。灰色是前景陰影帶，金色是日照草地，淺色是天空與河面；紅色編號 1→6 是本文建議的觀看順序：右側男女、猴子與狗、左下角的三人、中央撐紅傘的女人與小女孩、左上的河、四周邊框。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "畫面下方約三分之一是一條深綠色的陰影帶，它的上緣從左邊低處斜斜往右上升，在畫面中段以後大致平行。陰影帶上方是一大片黃綠色的日照草地，再往上是樹幹和深綠色的樹冠。左上角四分之一被河面與天空佔去，河岸是一條從左下往右上的斜線。人物多半朝左，或站或坐，姿態都很靜；動作最明顯的，是右側中景一個穿橘色衣服、頭髮往後飛起的小女孩，正往右跑。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Groom 寫道，秀拉在一幅現存的素描裡已經標出了光與影的區塊，這些區塊後來成為黃橙色日光中「藍紫色的陰影」；她認為秀拉用這些陰影把分散的遊客群組連起來，就像卡耶博特用重複出現的雨傘，把趕路的行人串在一起。"
+    },
+    {
+      "type": "h",
+      "text": "左下角：三個人，三種姿勢"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.0,
+        0.51,
+        0.4,
+        0.43
+      ],
+      "position": "畫面左下，從左緣到畫寬四成，高度約佔下半部的大部分",
+      "caption": "頭圖局部。前方一個戴鴨舌帽、穿無袖橘紅上衣的男人側躺，嘴裡叼著長菸斗；他身後一個戴高帽的男人坐著，手握彎柄手杖；右邊一個戴寬邊帽的女人低頭坐著，膝上有白色的東西。草地上有一把灰色摺扇。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "最靠近讀者的人，在左下角。一個男人側躺在草地上，用手肘撐著身體，戴深色鴨舌帽，穿無袖的橘紅色上衣，手臂與肩膀露在外面，嘴裡叼著一支長菸斗，眼睛望向左邊。他身後的日照草地上，坐著一個戴黑色高帽、穿深色外套的男人，手裡握著一根彎柄手杖，也望向左邊。再往右，一個戴寬邊帽、穿深色衣服的女人坐著低頭，膝上有一團白色的東西，看不出是書還是針線。三人之間沒有交談的動作。女人身旁的草地上，攤著一把灰色的摺扇和一些白色細繩般的東西。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "三個人相距不到一臂，一個躺在陰影裡，兩個坐在日光邊緣，衣著卻差很多：無袖上衣配鴨舌帽，和高帽、手杖並排坐在一起。館方的簡介說畫中有「各種年齡與社會階層」的人；這個角落是全畫最容易看到這一點的地方。至於他們是誰、彼此什麼關係，畫面沒有給答案。"
+    },
+    {
+      "type": "h",
+      "text": "畫面中央：少數正面朝向我們的人"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.42,
+        0.12,
+        0.18,
+        0.55
+      ],
+      "position": "畫面正中偏右，從上方樹冠下緣到中段草地，約佔全圖寬度不到五分之一、高度一半多",
+      "caption": "頭圖局部。一個撐紅色陽傘的女人正面站著，上身紅褐、長裙淡粉；她牽著一個穿白色連身裙、戴淺藍色寬邊帽的小女孩。右下另一個女人撐藍色陽傘坐著。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "畫面正中，一個撐著紅色陽傘的女人面向我們站著，上身是紅褐色、下身是淡粉紅長裙，裙撐的線條比右側那位女士平緩。她身邊的小女孩穿白色連身裙、戴淺藍色寬邊帽，一手牽著大人，臉朝向畫外。這是全畫少數把臉正對觀者的人物，也是中景最亮的一塊白。往右下看，另一個女人背對我們坐著，撐一把藍色陽傘；她身旁一個長髮女孩低頭，手裡拿著一小束花。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "畫中大部分人都是側面或背影，撐紅傘的女人與小女孩是例外。紅傘、白衣和正面的臉疊在同一條垂直線上，剛好落在畫面的中軸附近。我的讀法是，這條垂直線和右邊那對男女一起，把整片草地像舞台一樣分成幾個區塊；Groom 也用「舞台」和「導演」比喻秀拉安排人物的方式。"
+    },
+    {
+      "type": "h",
+      "text": "往左上：河面、號手與釣魚的女人"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "從中央往左上，是一片點著淺藍、白與橘色的河面。河上有一艘冒煙的蒸汽船、一艘白帆的帆船、一條載著一排划槳手的長艇，還有一個坐在小船上、戴黃色帽子的人。河岸邊，一個穿橘紅色長裙的女人站在水邊，雙手握著一支細長的釣竿，竿子伸向左邊的水面；她身後坐著一個戴帽子的女孩，膝前也橫著一根細竿。往右一點，一個穿橘色上衣的男人朝右吹著一把銅管樂器，他右邊並肩站著兩個戴高筒帽、穿紅褲子的士兵。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "地點是塞納河上的大碗島（La Grande Jatte）。館方的文章說，秀拉選的是島上一小段河岸，離他在克利希（Clichy）一帶的畫室步行可到；Groom 寫道，他先用康特蠟筆（conté crayon）畫場景素描，確定地點、透視與比例，再把人物一個個加進去；這類場景素描已知只有三張，其中兩張藏在芝加哥藝術博物館。"
+    },
+    {
+      "type": "h",
+      "text": "邊框：靠近天空是橘藍，靠近樹叢是紅藍"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.0,
+        0.0,
+        0.1,
+        0.12
+      ],
+      "position": "畫面左上角，約佔全圖寬度十分之一、高度八分之一",
+      "caption": "頭圖局部。畫面最外圈約一指寬的邊框，由橘色、深藍色的短點組成；框內緊鄰的是淺灰藍色的天空與一朵白雲。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "畫面四周有一圈窄窄的邊，用短促的點畫成，和畫裡的筆觸一樣密。放大看會發現它不是同一種顏色：左上角緊鄰淺藍天空的一段，是橘色與深藍的點；上緣中段緊貼深綠樹冠的一段，換成紅色與深藍；右下角靠近陰影草地的一段，也是紅與藍。邊框的顏色隨著它旁邊的畫面而變。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "館方為這幅畫換上新框之後，負責的兩位保存人員 Christopher Brooks 與 Kirk Vuillemot 在館方網站的文章裡交代了這圈邊框的來歷：秀拉畫完《模特兒》（Models / Poseuses，1888）之後，才開始回頭修改先前已完成作品的邊緣。《大碗島》被從內框上拆下，原本釘在內框側面的畫布邊被攤平，先刷一層鉛白底，再畫上彩點邊框。文章認為原來的畫框大概就是在 1889 年前後遺失，因為畫面加寬後，舊框已經裝不下。"
+    },
+    {
+      "type": "quote",
+      "original": "white placed beside a color heightens its tone; it is as if we took away from it the white light that weakened its intensity.",
+      "text": "白色放在一個顏色旁邊，會提高它的色調；就像把削弱它強度的那部分白光拿掉了一樣。",
+      "cite": "色彩理論家謝弗勒爾（Eugène Chevreul）論顏色並置；英文引自芝加哥藝術博物館〈La Grande Jatte, Frame by Frame〉，中文本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "同一篇文章說，秀拉 16 歲讀到謝弗勒爾的色彩理論，20 歲在 1879 年的印象派展覽看到白色畫框，留下「出乎意料的深刻印象」；1886 年《大碗島》首展時，同時代人提到展場用的是白框。文章說秀拉的外框通常是淺色、平面的木框，記載從白色到灰白不等；館方的新框也照這個方向，做成寬而平的白色線腳。文章還提到，這幅畫其實不是完美的矩形，而是略呈梯形，新框是照著畫面邊緣手工修出輪廓。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "文章只講到一般原則：秀拉用顏色與筆觸的方向、大小，把畫內的光色和畫框外的現實銜接起來；謝弗勒爾也建議畫框要配合最接近它的畫面區域。文章沒有逐段說明這幅畫邊框的配色，本文看到的只是現象：邊框在亮處用橘，在暗處用紅。若照謝弗勒爾「並置提高色調」的說法推想，邊框是在替畫面每一段邊緣各自安排一個對比色；這是本文的推論，館方原文並未這樣說。"
+    },
+    {
+      "type": "h",
+      "text": "材料：一部分黃已經變暗"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "Berns 等人 2006 年在《色彩研究與應用》（Color Research & Application）期刊發表的論文指出，顏料分析發現，畫中含有鋅黃（zinc yellow）的筆觸明顯變暗：原本的黃色變得像赭色，綠黃變成橄欖綠，橘色變成紅褐色。他們在畫上做了現場光譜量測，再對照未變色的顏料樣本，用數位影像模擬出這幅畫原來更明亮的樣子。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "2010 年，Francesca Casadio 等人在《分析與生物分析化學》（Analytical and Bioanalytical Chemistry）期刊說明了變色的原因。他們把鋅黃與亞麻仁油混合，做人工老化實驗，再從《大碗島》取下的一個樣本裡，在赭色的變質筆觸中測到三價鉻與重鉻酸根離子。變化只發生在顏料最上層的幾微米，因此其他分析方法一直抓不到。論文也寫道，這些筆觸變暗，最早在 1892 年就被注意到。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "因此，現在看到陽光下的草地帶點橄欖色、某些黃點偏暗，不能全算在秀拉當年的配色上。本文在影像上看到的，是已經老化的顏色；文中寫的「黃綠」「橘」，都是現在的樣子。"
+    },
+    {
+      "type": "h",
+      "text": "從克利希的畫室到芝加哥"
+    },
+    {
+      "type": "timeline",
+      "title": "《大碗島的星期天》年表",
+      "caption": "依芝加哥藝術博物館的展覽與流傳紀錄、館方文章，以及 Berns 等（2006）、Casadio 等（2010）整理。",
+      "items": [
+        {
+          "when": "1884 年",
+          "label": "畫題年份",
+          "note": "大都會博物館藏的油畫習作也標為 1884 年"
+        },
+        {
+          "when": "1885.10",
+          "label": "開始點描",
+          "note": "依 Berns 等（2006），秀拉此時起在這幅畫上使用分色點描"
+        },
+        {
+          "when": "1886.5.15",
+          "label": "首展",
+          "note": "第八屆印象派展，至 6 月 15 日；同年 8 月再展於獨立藝術家協會展"
+        },
+        {
+          "when": "1887.2",
+          "label": "布魯塞爾",
+          "note": "二十人社（Les XX）年展，目錄第 1 號"
+        },
+        {
+          "when": "1888–89",
+          "label": "加上邊框",
+          "note": "攤開畫布邊、打鉛白底後畫上彩點邊框；原框可能此時遺失"
+        },
+        {
+          "when": "1891 年",
+          "label": "秀拉過世",
+          "note": "畫作由母親繼承，母親 1899 年過世後歸弟弟 Emile"
+        },
+        {
+          "when": "1892 年",
+          "label": "變暗已被注意",
+          "note": "依 Casadio 等（2010）"
+        },
+        {
+          "when": "1900 年",
+          "label": "以 800 法郎售出",
+          "note": "買主 Casimir Brû，同年轉給女兒 Lucie（後稱 Lucie Brû Cousturier）"
+        },
+        {
+          "when": "1924 年",
+          "label": "售往芝加哥",
+          "note": "以 2 萬美元賣給 Frederic Clay 與 Helen Birch Bartlett 夫婦"
+        },
+        {
+          "when": "1926 年",
+          "label": "入藏",
+          "note": "夫婦捐給芝加哥藝術博物館"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "館方的流傳紀錄寫的是：秀拉 1891 年過世後，畫作由母親繼承，再傳給他的弟弟 Emile；1900 年以 800 法郎賣給 Casimir Brû，他同年把畫送給女兒 Lucie。1924 年，Lucie 與丈夫 Edmond Cousturier 以 2 萬美元把畫賣給芝加哥的 Bartlett 夫婦，經手人可能是 Charles Vildrac；1926 年，夫婦把畫捐給館方。館方的作品簡介則寫這幅畫「1924 年來到館裡」，和流傳紀錄的 1926 年入藏不同，館方網頁沒有說明兩者的關係。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "館方展覽紀錄裡另有一筆：1958 年館方舉辦秀拉的繪畫與素描展，展後巡迴到紐約現代藝術博物館（MoMA），這幅畫也在展品之列。紀錄列出的最後一筆，是館方 2004 年 6 月 16 日至 9 月 19 日的「Seurat and the Making of La Grande Jatte」，這幅畫在該展目錄編為第 80 號。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "A Sunday on La Grande Jatte — 1884（artwork 27992）",
+      "publisher": "Art Institute of Chicago API",
+      "date": "",
+      "url": "https://api.artic.edu/api/v1/artworks/27992",
+      "note": "館藏號、年代（含邊框年代）、材料、尺寸、款識、作品簡介、流傳紀錄、展覽紀錄、公版狀態"
+    },
+    {
+      "title": "A Sunday on La Grande Jatte — 1884",
+      "publisher": "Art Institute of Chicago",
+      "date": "",
+      "url": "https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884",
+      "note": "館方作品頁；本次查核時網站對抓取程式回 HTTP 403，內容改由上一筆館方開放 API 核對"
+    },
+    {
+      "title": "La Grande Jatte, Frame by Frame",
+      "publisher": "Art Institute of Chicago（Christopher Brooks、Kirk Vuillemot）",
+      "date": "",
+      "url": "https://www.artic.edu/articles/969/la-grande-jatte-frame-by-frame",
+      "note": "經館方 API（api.artic.edu/api/v1/articles/969）讀取全文：謝弗勒爾引文、白框、邊框的加法與原框遺失、畫面略呈梯形、新框；網頁未標發布日期"
+    },
+    {
+      "title": "Caillebotte and Seurat: Setting the Stage for Masterworks",
+      "publisher": "Art Institute of Chicago（Gloria Groom）",
+      "date": "",
+      "url": "https://api.artic.edu/api/v1/articles/826",
+      "note": "館方 API 所存全文：接近真人大小的男女、地點與克利希畫室、康特蠟筆素描、三隻狗一隻猴、藍紫色陰影"
+    },
+    {
+      "title": "Rejuvenating the color palette of Georges Seurat's A Sunday on La Grande Jatte—1884: A simulation",
+      "publisher": "Color Research & Application 31(4): 278–293（Berns, Byrns, Casadio, Fiedler, Gallagher, Imai, Newman, Taplin）",
+      "date": "2006-07-05",
+      "url": "https://doi.org/10.1002/col.20223",
+      "note": "依 Crossref 所載摘要：1885 年 10 月開始點描、鋅黃筆觸變暗的色彩變化、數位模擬方法；第一作者 Berns 屬羅徹斯特理工學院 Munsell 色彩科學實驗室"
+    },
+    {
+      "title": "Electron energy loss spectroscopy elucidates the elusive darkening of zinc potassium chromate in Georges Seurat's A Sunday on La Grande Jatte—1884",
+      "publisher": "Analytical and Bioanalytical Chemistry 399(9): 2909–2920（Casadio, Xie, Rukes, Myers, Gray, Warta, Fiedler）",
+      "date": "2010-10-16",
+      "url": "https://doi.org/10.1007/s00216-010-4264-9",
+      "note": "依 Europe PMC 所載摘要（PMID 20953774）：1892 年已注意到變暗、人工老化實驗、畫作樣本測到三價鉻與重鉻酸根；2010 年 10 月線上發表，紙本為 2011 年第 399 卷"
+    },
+    {
+      "title": "Study for \"A Sunday on La Grande Jatte\"（Object ID 437658）",
+      "publisher": "The Metropolitan Museum of Art Collection API",
+      "date": "",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437658",
+      "note": "習作的年代、材料、尺寸、館藏號、捐贈來源、公版狀態；館方作品頁本次回 HTTP 429，未能讀取"
+    },
+    {
+      "title": "File:Georges Seurat - A Sunday on La Grande Jatte -- 1884 - Google Art Project.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg",
+      "note": "頭圖與局部；原檔 30000 × 19970 像素，公版"
+    },
+    {
+      "title": "File:Study for \"A Sunday on La Grande Jatte\" MET DP259921.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Study_for_%22A_Sunday_on_La_Grande_Jatte%22_MET_DP259921.jpg",
+      "note": "習作影像，大都會博物館開放資料，CC0"
+    }
+  ]
+}
