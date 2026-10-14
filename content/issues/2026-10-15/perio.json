@@ -1,0 +1,342 @@
+{
+  "column": "perio",
+  "date": "2026-10-15",
+  "title": "375 名成人起步的 30 年：2004 年菌斑控制追蹤",
+  "dek": "Axelsson 等人讓一群成人在同一間診所維持菌斑控制 30 年，平均失牙不到 2 顆。這組數字能證明什麼、不能證明什麼？",
+  "topic_key": "perio:doi:10.1111/j.1600-051x.2004.00563.x",
+  "updated_at": "2026-10-15T00:48:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Dental_flossing_9344.JPG/1280px-Dental_flossing_9344.JPG",
+    "width": 1280,
+    "height": 960,
+    "alt": "病人張口，一位戴手套的牙科衛生師用雙手拉緊牙線，在病人下顎前牙之間清潔。",
+    "caption": "Axelsson 的預防計畫由牙科衛生師執行，內容包括鄰面清潔與專業機械性潔牙。這張照片由 Walter Siegmund 於 2006 年 1 月 18 日在美國西雅圖拍攝，檔案說明為牙科衛生師在定期潔牙時替病人使用牙線；與 Axelsson 等人的受試者無關。",
+    "credit": "Walter Siegmund 攝，Wikimedia Commons",
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dental_flossing_9344.JPG",
+    "made": "2006"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1971 到 1972 年間，瑞典的 Per Axelsson 與 Jan Lindhe 招募了 555 名成人，其中 375 人進入一套以菌斑控制為核心的預防計畫。30 年後，這群人各年齡組只掉了 0.4 到 1.8 顆牙（摘要未註明是否為平均）；因牙周炎或齲齒而失去的牙齒，全組合計 21 顆。這組數字出自 Axelsson、Nyström 與 Lindhe 2004 年發表在《Journal of Clinical Periodontology》的報告，是牙周維護治療（supportive periodontal therapy, SPT）文獻裡被大量引用的長期數據。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "它要回答的問題很樸素：如果一個成年人長期、規律地接受個人化的口腔衛生指導和專業潔牙，30 年下來牙齒、齲齒和附著喪失會是什麼樣子？研究開始時拿來對照的，是 Axelsson 與 Lindhe 1981 年 6 年報告摘要所稱的「傳統牙科照護」（traditional dental care）：每年檢查一次、有症狀才處理。同一篇摘要的結論是，這種照護無法阻止成人的齲齒與牙周炎持續進展。"
+    },
+    {
+      "type": "p",
+      "text": "本文依摘要與後續文獻整理。2004 年原論文全文需訂閱，未能取得；1978 年第一篇報告與 1981 年〈The significance of maintenance care in the treatment of periodontal disease〉在 PubMed 都沒有摘要，本文也未讀。因此，30 年時實際回來受檢的人數、各年齡組的人數、探診附著水準的逐組數值，本文都不寫。"
+    },
+    {
+      "type": "paper",
+      "citation": "Axelsson P, Nyström B, Lindhe J. The long-term effect of a plaque control program on tooth mortality, caries and periodontal disease in adults. Results after 30 years of maintenance. *J Clin Periodontol*. 2004;31(9):749–757.",
+      "doi": "10.1111/j.1600-051X.2004.00563.x",
+      "pmid": "15312097",
+      "link": "https://doi.org/10.1111/j.1600-051X.2004.00563.x",
+      "question": "成人長期維持一套細心管理的菌斑控制計畫，30 年間的失牙、齲齒與附著喪失發生率有多少？",
+      "design": "前瞻性長期追蹤（單一診所執行）：1971–72 年招募，試驗組接受反覆的個人化口腔衛生教育與專業機械性潔牙，於基線、第 3、6、15、30 年再檢查；對照組只追蹤到第 6 年",
+      "sample": "招募 555 人（試驗組 375、對照組 180）；30 年時的受檢人數摘要未載"
+    },
+    {
+      "type": "h",
+      "text": "研究設計：兩組起步，只有一組走完 30 年"
+    },
+    {
+      "type": "p",
+      "text": "依 1981 年 6 年報告的摘要，1971–72 年共有 375 人編入試驗組、180 人編入對照組，再依年齡分成三組：35 歲以下、36 至 50 歲、50 歲以上。兩組都先做基線檢查（口腔衛生、牙齦炎、牙周病、齲齒），治療所有齲齒、修整不密合的補綴物，並各接受一次詳細的病例說明與潔牙。摘要沒有說明分組方式是否隨機。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "之後兩組分道。對照組每年回公立牙科診所檢查一次，有症狀才治療，不參加其他預防計畫。試驗組在最初 6 年每 2 到 3 個月回診一次，內容是口腔衛生技巧的指導與練習，加上仔細的專業潔牙（摘要用的字是 meticulous prophylaxis）。6 年間，試驗組失訪 65 人、對照組失訪 34 人，以招募人數計分別約 17% 與 19%（本文自算）。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "2004 年的摘要對回診頻率有另一種描述：最初 2 年每 2 個月一次，第 3 到 30 年依個人需要每 3 到 12 個月一次。每次由牙科衛生師執行，內容包括自我診斷與自我照護的教育（牙刷、牙間刷、牙線帶、牙籤）、菌斑顯示，以及使用含氟牙膏的專業機械性潔牙（professional mechanical tooth cleaning, PMTC）。1991 年的 15 年報告則寫，第 6 年以後回診間隔拉長：之後 9 年約 95% 的人每年只回來 1 到 2 次；前 6 年出現新齲齒或附著喪失的約 15 人，仍維持每年 3 到 6 次。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "對照組在第 6 年後就停止追蹤。也就是說，「30 年」只屬於試驗組，沒有一個同樣走過 30 年、但沒有接受計畫的對照組可以比。2004 年報告用另一種方式找比較對象：拿 1972 年與 2002 年各自 51 到 65 歲的受試者比較口腔健康狀況。摘要沒有寫這個比較的數字。"
+    },
+    {
+      "type": "svg",
+      "title": "研究流程（原創示意圖）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 470\">\n<text class=\"ink\" x=\"180\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">1971–72 年招募 555 名成人</text>\n<rect class=\"soft\" x=\"20\" y=\"34\" width=\"320\" height=\"56\" rx=\"6\"/>\n<text class=\"ink\" x=\"180\" y=\"56\" font-size=\"12\" text-anchor=\"middle\">基線檢查：菌斑、牙齦炎、牙周狀況、齲齒</text>\n<text class=\"ink\" x=\"180\" y=\"76\" font-size=\"12\" text-anchor=\"middle\">治療齲齒、修整不良補綴、病例說明、潔牙一次</text>\n<line class=\"muted line\" x1=\"110\" y1=\"90\" x2=\"110\" y2=\"112\" stroke-width=\"1.5\"/>\n<line class=\"muted line\" x1=\"250\" y1=\"90\" x2=\"250\" y2=\"112\" stroke-width=\"1.5\"/>\n<rect class=\"paper\" x=\"20\" y=\"112\" width=\"180\" height=\"120\" rx=\"6\" stroke-width=\"1.5\"/>\n<text class=\"accent\" x=\"110\" y=\"134\" font-size=\"13\" text-anchor=\"middle\">試驗組 375 人</text>\n<text class=\"ink\" x=\"110\" y=\"156\" font-size=\"11\" text-anchor=\"middle\">每 2–3 個月回診</text>\n<text class=\"ink\" x=\"110\" y=\"174\" font-size=\"11\" text-anchor=\"middle\">口腔衛生指導與練習</text>\n<text class=\"ink\" x=\"110\" y=\"192\" font-size=\"11\" text-anchor=\"middle\">專業機械性潔牙</text>\n<text class=\"muted\" x=\"110\" y=\"218\" font-size=\"10.5\" text-anchor=\"middle\">6 年間失訪 65 人</text>\n<rect class=\"paper\" x=\"210\" y=\"112\" width=\"130\" height=\"120\" rx=\"6\" stroke-width=\"1.5\"/>\n<text class=\"ink\" x=\"275\" y=\"134\" font-size=\"13\" text-anchor=\"middle\">對照組 180 人</text>\n<text class=\"ink\" x=\"275\" y=\"156\" font-size=\"11\" text-anchor=\"middle\">每年 1 次檢查</text>\n<text class=\"ink\" x=\"275\" y=\"174\" font-size=\"11\" text-anchor=\"middle\">有症狀才治療</text>\n<text class=\"muted\" x=\"275\" y=\"218\" font-size=\"10.5\" text-anchor=\"middle\">6 年間失訪 34 人</text>\n<line class=\"muted line\" x1=\"110\" y1=\"232\" x2=\"110\" y2=\"254\" stroke-width=\"1.5\"/>\n<line class=\"muted line\" x1=\"275\" y1=\"232\" x2=\"275\" y2=\"254\" stroke-width=\"1.5\"/>\n<rect class=\"gold\" x=\"210\" y=\"254\" width=\"130\" height=\"40\" rx=\"6\"/>\n<text class=\"ink\" x=\"275\" y=\"279\" font-size=\"11.5\" text-anchor=\"middle\">第 6 年後停止追蹤</text>\n<rect class=\"soft\" x=\"20\" y=\"254\" width=\"180\" height=\"84\" rx=\"6\"/>\n<text class=\"ink\" x=\"110\" y=\"276\" font-size=\"11\" text-anchor=\"middle\">第 7–15 年：約 95% 每年 1–2 次</text>\n<text class=\"ink\" x=\"110\" y=\"294\" font-size=\"11\" text-anchor=\"middle\">約 15 人仍每年 3–6 次</text>\n<text class=\"muted\" x=\"110\" y=\"322\" font-size=\"10.5\" text-anchor=\"middle\">（1991 年報告）</text>\n<line class=\"muted line\" x1=\"110\" y1=\"338\" x2=\"110\" y2=\"360\" stroke-width=\"1.5\"/>\n<rect class=\"soft\" x=\"20\" y=\"360\" width=\"180\" height=\"64\" rx=\"6\"/>\n<text class=\"ink\" x=\"110\" y=\"382\" font-size=\"11\" text-anchor=\"middle\">第 3–30 年：依個人需要</text>\n<text class=\"ink\" x=\"110\" y=\"400\" font-size=\"11\" text-anchor=\"middle\">每 3–12 個月一次</text>\n<text class=\"muted\" x=\"110\" y=\"416\" font-size=\"10.5\" text-anchor=\"middle\">（2004 年報告）</text>\n<text class=\"ink\" x=\"20\" y=\"446\" font-size=\"11\">再檢查：第 3、6、15、30 年（2002 年）</text>\n<text class=\"muted\" x=\"20\" y=\"464\" font-size=\"10.5\">示意，不按比例。依 1981、1991、2004 年三篇摘要重繪</text>\n</svg>",
+      "caption": "示意，不按比例。依 Axelsson 與 Lindhe 1981 年 6 年報告、Axelsson 等 1991 年 15 年報告與 2004 年 30 年報告三篇摘要重繪，不是論文原圖。前 6 年的回診間隔，1981 年摘要寫每 2–3 個月，2004 年摘要寫最初 2 年每 2 個月、之後每 3–12 個月，兩者原文如此。",
+      "credit": "知更鳥晨間記事原創圖解"
+    },
+    {
+      "type": "p",
+      "text": "測量指標在 2004 年摘要裡列得很清楚：菌斑、齲齒、探測牙周袋深度、探測附著水準，以及社區牙周治療需求指數（CPITN），於基線及第 3、6、15、30 年記錄。失牙則記錄原因。"
+    },
+    {
+      "type": "h",
+      "text": "主要結果：30 年各年齡組掉不到 2 顆牙，主因是根裂"
+    },
+    {
+      "type": "table",
+      "title": "三次報告的主要數字（依各篇摘要）",
+      "head": [
+        "報告",
+        "追蹤人數",
+        "摘要寫到的結果"
+      ],
+      "rows": [
+        [
+          "1981 年（6 年）",
+          "試驗組 310、對照組 146（本文自算：招募數減失訪數）",
+          "預防計畫可使牙齦炎消退、阻止牙周病與齲齒進展；傳統照護不能"
+        ],
+        [
+          "1991 年（15 年）",
+          "317 人全程參與",
+          "齲齒發生率低，牙周支持組織幾乎沒有進一步喪失"
+        ],
+        [
+          "2004 年（30 年）",
+          "摘要未載",
+          "各年齡組失牙 0.4–1.8 顆；新齲齒平均 1.2、1.7、2.1 個，約 80% 為繼發齲；多數部位無附著喪失（頰側除外），鄰面 1972–2002 年間各年齡組都有少量附著增加"
+        ],
+        [
+          "2004 年：失牙原因",
+          "—",
+          "主要為根裂；因牙周炎進展或齲齒失去的牙共 21 顆"
+        ]
+      ],
+      "caption": "1981 年摘要沒有給出各組的數值，只有文字結論。1991 年的 317 人多於 1981 年依失訪數推算的 310 人，兩篇摘要的人數對不上，本文未能釐清原因。"
+    },
+    {
+      "type": "p",
+      "text": "2004 年摘要的核心數字有三組。失牙：30 年間各年齡組失去 0.4 到 1.8 顆牙（摘要未註明是否為平均），主因是牙根斷裂，因牙周炎進展或齲齒而失去的只有 21 顆。齲齒：三組平均新發 1.2、1.7、2.1 個病灶，其中約 80% 屬於繼發齲（recurrent caries），也就是長在既有填補物邊緣。牙周：除了頰側部位，多數部位沒有附著喪失的跡象；鄰面部位在 1972 到 2002 年之間，所有年齡組甚至有些微附著增加。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "摘要沒有交代統計方法、信賴區間或效果大小，也沒有試驗組與對照組在 30 年時的比較（對照組早已停止）。所以這些數字描述的是「這群人過得怎麼樣」，不是「計畫比沒有計畫好多少」。真正有組間比較的是前 6 年；而 6 年報告的摘要只給文字結論，沒有數值。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "摘要說多數部位沒有附著喪失，頰側部位例外；鄰面反而有增加。由此推想，這可能與長年刷牙的機械性磨耗、或頰側牙齦退縮有關，但摘要沒有提出解釋，這只是本文的推測。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "限制：一間診所、一群願意留下來的人"
+    },
+    {
+      "type": "p",
+      "text": "作者自己在摘要結論裡寫了最重要的一條限制：30 年間所有預防與治療都在同一間私人牙科診所完成，拿它和隨機抽樣的長期族群研究比較時必須謹慎。結論也形容這群受試者「who on a regular basis were encouraged, but also enjoyed and recognized the benefit of, maintaining a high standard of oral hygiene」（規律地受到鼓勵，也樂在其中、認同維持高標準口腔衛生的好處；本文自譯）。換句話說，這是一群高度投入的人。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "第一個問題是選擇與存活偏差（survivorship bias）。前 6 年試驗組就流失約 17%，30 年時還剩多少人，摘要沒有寫。留下來的人很可能本來就比較健康、比較願意配合；這些人的低失牙率，有一部分可能來自他們是誰，而不只是他們接受了什麼。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "第二是缺少長期對照。對照組只走了 6 年，之後的 24 年沒有同期比較組，只能用 1972 年與 2002 年兩批同齡者做歷史比較；而 30 年間的社會環境與一般牙科照護也可能改變，歷史比較很難把計畫的效果和時代的變化分開。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "第三是外推性。依 1991 年摘要，受試者是招募的成人志願者，基線檢查後接受過刮治、根面整平與齲齒治療；摘要沒有交代基線時有多少人罹患牙周炎、嚴重程度如何。把這組數字直接套到牙周病人的維護治療，或反過來套到不需要特別照護的低風險族群，都需要額外的證據。介入本身也是一整包：個人化衛教、自我診斷、菌斑顯示、專業潔牙、含氟牙膏，研究設計無法分辨哪一項最重要。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "後來的研究：維護有用，但對誰有用、多久一次"
+    },
+    {
+      "type": "p",
+      "text": "1991 年的 15 年報告是同一隊列的中期結果。它的看點在於回診間隔：第 6 年後約 95% 的人改成每年 1 到 2 次，前 6 年出現新齲齒或附著喪失的約 15 人維持密集回診，15 年時這 317 人的齲齒發生率仍低，牙周支持組織幾乎沒有再喪失。作者據此認為，改善後的自我口腔衛生、每天使用含氟牙膏，加上定期專業潔牙，有效防止了疾病復發。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "本文推想，這種依個人狀況拉長或維持回診頻率的做法，與後來「依風險調整回診間隔」的概念相近；1991 年摘要本身沒有這樣說。"
+    },
+    {
+      "type": "p",
+      "text": "在已接受治療的牙周炎病人身上，Lee 等人 2015 年在《Journal of Dental Research》的系統性回顧與統合分析，納入 8 篇追蹤至少 5 年、同時有規律回診組與不規律回診組的研究。規律回診者的失牙風險比較低，合併風險比（risk ratio）為 0.56（95% 信賴區間 0.38–0.82），合併風險差為 −0.05（−0.08 至 −0.01）。作者也指出，「規律回診」的定義本身會顯著影響風險比，研究間異質性可能來自未辨識的變項。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "納入的研究比較的是病人自己是否規律回診，而不是隨機分派；規律回診的人與不規律的人可能在許多方面本來就不同。"
+    },
+    {
+      "type": "p",
+      "text": "反方向的證據來自一般族群。英國的 IQuaD 試驗（Ramsay 等，2018 年《Health Technology Assessment》）在 63 間基層牙科診所招募 1,877 名規律就診、基本牙周檢查（BPE）分數 0 到 3 的成人，隨機分配到不做定期專業潔牙、每 12 個月或每 6 個月一次。3 年後，每 6 個月一次與不做相比，牙齦緣出血的差異是 0.87 個百分點（95% 信賴區間 −1.6 至 3.3，p = 0.481），沒有證據顯示有差別；個人化與例行口腔衛生指導之間也沒有證據顯示有差別。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "Lamont 等人 2018 年更新的 Cochrane 回顧納入 2 篇英國基層診所的試驗、共 1,711 人，對象是沒有重度牙周炎、規律看牙的成人。結論是：在 2 到 3 年間，例行刮治與拋光（routine scale and polish）對牙齦炎、探測深度和口腔健康相關生活品質幾乎沒有影響（高確定性證據），只減少了少量牙結石，其臨床重要性不明。兩篇試驗都沒有測量附著水準或失牙。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "歐洲牙周病學會（European Federation of Periodontology, EFP）2020 年 S3 臨床指引處理的是已完成治療的牙周炎病人。建議 4.1 寫的是：牙周支持照護的回診間隔應為 3 個月到最長 12 個月，並依病人的風險與治療後牙周狀況調整（專家共識，等級 A）；建議 4.2 則要求強力促進病人遵從回診，理由是它對長期牙周穩定至關重要。這兩條都屬於專家共識建議，不是由隨機試驗直接得出。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "table",
+      "title": "從一間診所到隨機試驗",
+      "head": [
+        "研究",
+        "對象",
+        "比較",
+        "結果（依摘要或全文）"
+      ],
+      "rows": [
+        [
+          "Axelsson 等 2004",
+          "招募 375 名成人志願者，單一診所",
+          "無長期對照（對照組止於第 6 年）",
+          "30 年失牙 0.4–1.8 顆；因牙周炎或齲齒失牙共 21 顆"
+        ],
+        [
+          "Lee 等 2015",
+          "8 篇追蹤至少 5 年的研究，牙周治療後病人",
+          "規律 vs. 不規律回診",
+          "失牙風險比 0.56（0.38–0.82）"
+        ],
+        [
+          "Ramsay 等 2018（IQuaD）",
+          "1,877 名基層診所成人，BPE 0–3",
+          "每 6 個月、每 12 個月、不做專業潔牙",
+          "3 年牙齦出血無差異"
+        ],
+        [
+          "Lamont 等 2018（Cochrane）",
+          "2 篇 RCT、1,711 名無重度牙周炎成人",
+          "例行刮治拋光 vs. 不排定",
+          "牙齦炎、探測深度幾乎無差異；牙結石少量減少"
+        ],
+        [
+          "EFP S3 指引 2020",
+          "完成積極治療的第 I–III 期牙周炎病人",
+          "專家共識",
+          "回診間隔 3–12 個月，依風險調整"
+        ]
+      ],
+      "caption": "EFP 指引的內容依其開放全文（PMC7891343）；其餘依各篇 PubMed 摘要。"
+    },
+    {
+      "type": "h",
+      "text": "今天怎麼讀：顯示了「可以做到」，沒有證明「人人需要」"
+    },
+    {
+      "type": "p",
+      "text": "這篇論文顯示的是：一群願意長期配合的成人，在同一間診所接受 30 年個人化的菌斑控制計畫，失牙、新齲齒與附著喪失都可以壓到很低，而因牙周炎或齲齒失去的牙齒在整個隊列中只有 21 顆。我的讀法是，它描述的是一個可以達到的上限，而不是一般診所、一般病人的預期值。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "後來的共識把問題拆成兩半。對已經治療過的牙周炎病人，規律的支持照護與較少失牙相關（Lee 等 2015），EFP 指引也把 3 到 12 個月、依風險調整的回診寫進建議。對沒有重度牙周炎、本來就規律看牙的一般成人，IQuaD 與 Cochrane 回顧都顯示，固定每半年或每年一次的刮治拋光，在 2 到 3 年內對牙齦炎幾乎沒有額外效果。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是：這兩類證據和 Axelsson 的隊列並不衝突。Axelsson 的計畫不只是「定期洗牙」，而是反覆的個人化衛教、自我診斷訓練與菌斑顯示，間隔還隨個人風險調整；IQuaD 測的是英國基層診所裡的例行刮治拋光與口腔衛生指導，強度與內容都不同。由此推想，30 年數字背後真正起作用的，可能是病人自己每天的菌斑控制被長期維持住了，而專業潔牙只是讓它維持下去的一種方式。這是推論，2004 年的設計無法證實。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "2004 年摘要裡還有一個容易被略過的句子：失牙的主因是牙根斷裂，因牙周炎進展或齲齒失去的只有 21 顆。如果最主要的失牙原因已經不是這兩種疾病，下一個問題就不是預防計畫有沒有用，而是在這群人身上，要預防的究竟還剩下什麼。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Axelsson P, Nyström B, Lindhe J. The long-term effect of a plaque control program on tooth mortality, caries and periodontal disease in adults. Results after 30 years of maintenance. J Clin Periodontol 2004;31(9):749–757",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2004-08-12",
+      "url": "https://doi.org/10.1111/j.1600-051X.2004.00563.x",
+      "note": "原論文；全文需訂閱未能取得，依摘要。Crossref 標線上發布 2004-08-12、刊期 2004 年 9 月"
+    },
+    {
+      "title": "PubMed 書目與摘要：The long-term effect of a plaque control program on tooth mortality, caries and periodontal disease in adults（PMID 15312097）",
+      "publisher": "National Library of Medicine（E-utilities efetch）",
+      "date": "2004-09",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15312097/",
+      "note": "核對作者、卷期頁 31(9):749–757、DOI；PMID 由 Europe PMC 以 DOI 查得後以 efetch 回查標題一致"
+    },
+    {
+      "title": "Axelsson P, Lindhe J. Effect of controlled oral hygiene procedures on caries and periodontal disease in adults. J Clin Periodontol 1978;5(2):133–151",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1978-06",
+      "url": "https://doi.org/10.1111/j.1600-051x.1978.tb01914.x",
+      "note": "同一隊列的第一篇報告；PubMed 無摘要（PMID 275282），未讀，只用於書目"
+    },
+    {
+      "title": "Axelsson P, Lindhe J. Effect of controlled oral hygiene procedures on caries and periodontal disease in adults. Results after 6 years. J Clin Periodontol 1981;8(3):239–248",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1981-06",
+      "url": "https://doi.org/10.1111/j.1600-051x.1981.tb02035.x",
+      "note": "依 PubMed 摘要（PMID 6947990）：招募人數、失訪數、年齡分組、兩組照護內容"
+    },
+    {
+      "title": "Axelsson P, Lindhe J. The significance of maintenance care in the treatment of periodontal disease. J Clin Periodontol 1981;8(4):281–294",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1981-08",
+      "url": "https://doi.org/10.1111/j.1600-051x.1981.tb02039.x",
+      "note": "PubMed 無摘要（PMID 6947992），未讀，只在正文提及篇名"
+    },
+    {
+      "title": "Axelsson P, Lindhe J, Nyström B. On the prevention of caries and periodontal disease. Results of a 15-year longitudinal study in adults. J Clin Periodontol 1991;18(3):182–189",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1991-03",
+      "url": "https://doi.org/10.1111/j.1600-051x.1991.tb01131.x",
+      "note": "後續文獻；依 PubMed 摘要（PMID 2061418）"
+    },
+    {
+      "title": "Lee CT, Huang HY, Sun TC, Karimbux N. Impact of patient compliance on tooth loss during supportive periodontal therapy: a systematic review and meta-analysis. J Dent Res 2015;94(6):777–786",
+      "publisher": "Journal of Dental Research（SAGE）",
+      "date": "2015-03-27",
+      "url": "https://doi.org/10.1177/0022034515578910",
+      "note": "後續文獻；依 PubMed 摘要（PMID 25818586）"
+    },
+    {
+      "title": "Ramsay CR, Clarkson JE, Duncan A, Lamont TJ, Heasman PA, et al. Improving the Quality of Dentistry (IQuaD): a cluster factorial randomised controlled trial. Health Technol Assess 2018;22(38):1–144",
+      "publisher": "Health Technology Assessment（NIHR Journals Library）",
+      "date": "2018-07",
+      "url": "https://doi.org/10.3310/hta22380",
+      "note": "後續文獻；依 PubMed 摘要（PMID 29984691）"
+    },
+    {
+      "title": "Lamont T, Worthington HV, Clarkson JE, Beirne PV. Routine scale and polish for periodontal health in adults. Cochrane Database Syst Rev 2018;12:CD004625",
+      "publisher": "Cochrane Library（Wiley）",
+      "date": "2018-12-27",
+      "url": "https://doi.org/10.1002/14651858.CD004625.pub5",
+      "note": "後續文獻；依 PubMed 摘要（PMID 30590875）"
+    },
+    {
+      "title": "Sanz M, Herrera D, Kebschull M, Chapple I, Jepsen S, Berglundh T, Sculean A, Tonetti MS, et al. Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline. J Clin Periodontol 2020;47(Suppl 22):4–60",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2020-07-27",
+      "url": "https://doi.org/10.1111/jcpe.13290",
+      "note": "讀開放全文（PMC7891343）第四步驟：建議 4.1、4.2；PMID 32383274"
+    },
+    {
+      "title": "File:Dental flossing 9344.JPG",
+      "publisher": "Wikimedia Commons",
+      "date": "2006-01-18",
+      "url": "https://commons.wikimedia.org/wiki/File:Dental_flossing_9344.JPG",
+      "note": "頭圖，CC BY 2.5，Walter Siegmund 攝；日期依 EXIF 拍攝日"
+    }
+  ]
+}
