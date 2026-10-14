@@ -1,0 +1,353 @@
+{
+  "column": "music",
+  "date": "2026-10-15",
+  "title": "八把弦樂器當一個樂團：孟德爾頌《弦樂八重奏》",
+  "dek": "1825 年 10 月 15 日，16 歲的孟德爾頌在手稿末尾寫下完成日期。本文以愛默森四重奏一人分飾兩角的錄音，逐樂章聽這部生日禮物。",
+  "topic_key": "music:mendelssohn-op20",
+  "updated_at": "2026-10-15T00:59:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octetp1.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octetp1.jpg",
+    "width": 978,
+    "height": 1318,
+    "alt": "一頁手寫總譜，紙色灰白。左上角以花體寫著「Ottetto」，下方一行小字速度標記；右上角有幾個手寫字母。整頁分上下兩組、每組八行五線譜，左側標著「4 Violini」「2 Viole」「2 Violoncelli」。最上一行的音符從低處一路往上排，其餘各行多是成串的短音符與長連線。頁底中央有一個圓形印章，右緣可見書頁裝訂的陰影。",
+    "caption": "《弦樂八重奏》手稿第一頁。左上是標題「Ottetto」與第一樂章的速度標記，右上角是國會圖書館說明中提到的「L. e. g. G.」。美國國會圖書館的目錄著錄，這份 77 頁的親筆總譜末尾寫著「Berlin, d. 15 Oct. 1825」。",
+    "credit": "孟德爾頌手稿；原件藏美國國會圖書館 Gertrude Clarke Whittall 基金會典藏（ML30.8j op. 20），Commons 標示影像出處為美國國會圖書館",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Octetp1.jpg",
+    "made": "1825"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "曲子一開始，其他七把弦樂器先在底下鋪開：第二小提琴用十六分音符來回顫動，兩把中提琴打著切分的八分音符，第二大提琴撐著一個低音降 E。第一小提琴在這片沸騰的底色上，從最低的 G 弦音開始，沿著降 E 大調的分解和弦往上爬，短短幾小節就爬過兩個多八度，到第四小節頂端轉成強奏。這種開場不像兩組四重奏在對話，比較像一個小型管弦樂團的第一小提琴在帶隊。"
+    },
+    {
+      "type": "p",
+      "text": "這是孟德爾頌（Felix Mendelssohn）的《降 E 大調弦樂八重奏》，作品 20。美國國會圖書館收藏的親筆總譜末尾寫著「Berlin, d. 15 Oct. 1825」，到 2026 年 10 月 15 日正好 201 年。完成時，作曲家 16 歲。"
+    },
+    {
+      "type": "music",
+      "composer": "孟德爾頌（Felix Mendelssohn）",
+      "work": "降 E 大調弦樂八重奏，作品 20",
+      "work_original": "Octet in E-flat major, Op. 20 (MWV R 20)",
+      "composed": "1825（手稿末尾日期 1825 年 10 月 15 日）；出版前修訂",
+      "performers": "愛默森弦樂四重奏（Emerson String Quartet）以多軌疊錄演奏全部八個聲部：Eugene Drucker（第一、第四小提琴）、Philip Setzer（第二、第三小提琴）、Lawrence Dutton（兩把中提琴）、David Finckel（兩把大提琴）",
+      "recording": "Deutsche Grammophon 00289 477 5370《孟德爾頌弦樂四重奏全集》附贈第四張 CD，2005 年發行；整套錄於紐約美國藝術文學院（American Academy of Arts and Letters），2003 年 10 月與 2004 年 4 月。錄音製作人兼錄音師 Da-Hong Seetoo。2012 年另以 477 9966 單張重發",
+      "duration": "約 32 分鐘（本錄音約 30 分鐘）",
+      "movements": [
+        "I. Allegro moderato ma con fuoco",
+        "II. Andante",
+        "III. Scherzo: Allegro leggierissimo",
+        "IV. Presto"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Mendelssohn Octet Op. 20 Emerson String Quartet",
+        "artist_hint": "Emerson String Quartet",
+        "track_filter": [
+          "Octet"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "本期指定的是愛默森弦樂四重奏的錄音。這個版本只有四位演奏者：Discogs 著錄的唱片內頁演出名單寫明，Eugene Drucker 拉第一與第四小提琴，Philip Setzer 拉第二與第三小提琴，Lawrence Dutton 包辦兩把中提琴，David Finckel 包辦兩把大提琴，以多軌疊錄合成八個聲部。MusicWeb International 的評論者 Tony Haywood 在 2005 年 4 月的樂評裡寫道「It's impossible to tell that this is not one group」（聽不出這不是一組人同時演奏；本文自譯），也認為這版合乎孟德爾頌要求的交響式處理。"
+    },
+    {
+      "type": "p",
+      "text": "選它的理由有兩個。第一，錄音資料完整可查：廠牌、編號、錄音地點與月份、每一位演奏者負責哪個聲部，都印在唱片上。第二，孟德爾頌要八個人像一個樂團那樣演奏，這一版把這個要求推到極端，八個聲部出自同四雙手，音色和分句習慣自然一致。代價也要說清楚：八重奏原本是八個人當場互相聆聽、互相讓步的音樂，疊錄少了這一層。聽之前先知道這點，聽的時候可以自己判斷值不值得。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "一份生日禮物：寫給小提琴老師里茲"
+    },
+    {
+      "type": "p",
+      "text": "國會圖書館關於這份手稿的介紹文章寫道，孟德爾頌在 1825 年秋天開始寫這首曲子，10 月 15 日完成，兩天後把親筆總譜送給他的小提琴老師艾德華・里茲（Eduard Rietz）當生日禮物。里茲親手抄出分譜，供首演使用。手稿第一頁右上角有孟德爾頌寫的「L. e. g. G.」，館方解作德文「Lass es gelingen, Gott」的縮寫（館方原文拼作 geling），意思是「上帝，讓它成功吧」。",
+      "tag": "史實"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.78,
+        0.02,
+        0.15,
+        0.06
+      ],
+      "position": "手稿右上角，約佔寬度七分之一",
+      "caption": "右上角的「L. e. g. G.」。國會圖書館把它解讀為「Lass es gelingen, Gott」（館方原文拼作 geling）的縮寫。"
+    },
+    {
+      "type": "p",
+      "text": "同一年，孟德爾頌的父親亞伯拉罕（Abraham Mendelssohn Bartholdy）買下柏林萊比錫街 3 號（Leipziger Straße 3）的宅邸。孟德爾頌的外甥 Sebastian Hensel 在家族史《孟德爾頌家族》（Die Familie Mendelssohn）裡說，這棟房子和花園對這一家人的影響延續了好幾代；同一章稍後談到八重奏，稱它是「為里茲準備的生日禮物」（destined as a birthday present for Rietz）。",
+      "tag": "史料"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Mendelssohn_Berlin_Leipziger_Strasse.jpg/1280px-Mendelssohn_Berlin_Leipziger_Strasse.jpg",
+      "width": 1280,
+      "height": 1001,
+      "alt": "黑白照片。一棟兩層半的長形建築沿街排開，屋頂鋪瓦、開著老虎窗，正面整齊排列著窗戶，左側入口上方有一個小陽台。街上有一輛馬車和幾名行人，左側遠處露出另一棟較高的建築。照片下方印著德文說明「Das Mendelssohn'sche Haus in der Leipziger Strasse in Berlin.」。",
+      "caption": "柏林萊比錫街上的孟德爾頌宅，刊於 Adolph Kohut《著名的猶太男女》（Berühmte israelitische Männer und Frauen）第 1 卷，1900 年萊比錫出版。攝影者與拍攝年份不詳，只知道在 1900 年以前，並非 1825 年當時所攝。",
+      "credit": "攝影者不詳；影像出自 Adolph Kohut 書中插圖，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mendelssohn_Berlin_Leipziger_Strasse.jpg",
+      "made": "1900 年以前"
+    },
+    {
+      "type": "p",
+      "text": "八把弦樂器的編制在當時並不常見。國會圖書館的文章提到，常有人認為孟德爾頌可能受到施波爾（Louis Spohr）1823 年《D 小調雙四重奏》（作品 65）的啟發，那首曲子用的是同樣的八件樂器；但施波爾讓兩組四重奏像兩個合唱團一樣輪流應答，孟德爾頌則把八件樂器當成一個整體來寫。Hyperion 唱片為這首曲子寫的解說（Peter Avis 撰）引述作曲家留在樂譜上的說明：這首八重奏要由所有樂器「以交響樂團的風格」演奏，強弱記號要比這類作品平常更明確地做出來（轉引，本文自譯）。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "今天通行的版本，並不是 1825 年手稿的樣子。Resonus 唱片的說明指出，孟德爾頌在 1832 年為出版修訂了總譜；從頭圖就看得出一處差別，手稿第一樂章的速度標記寫的是「Allegro molto e vivace」，通行版本則是「Allegro moderato ma con fuoco」。國會圖書館的文章也說，手稿裡有不少標記和音樂內容，後來在出版時被刪掉了。",
+      "tag": "史實"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.05,
+        0.03,
+        0.32,
+        0.08
+      ],
+      "position": "手稿左上角，標題與速度標記",
+      "caption": "標題「Ottetto」與底下的速度標記「Allegro molto e vivace」，和後來出版時的「Allegro moderato ma con fuoco」不同。"
+    },
+    {
+      "type": "h",
+      "text": "詼諧曲的出處：《浮士德》裡標著「極弱」的一段"
+    },
+    {
+      "type": "p",
+      "text": "Sebastian Hensel 的家族史記載，這首詼諧曲是孟德爾頌試著為歌德（Johann Wolfgang von Goethe）《浮士德》第一部〈瓦普幾斯之夜的夢〉（Walpurgisnachtstraum）裡的一段詩譜曲。查歌德原文，這四行詩在劇中由「樂團」念出，舞台指示正好是「Pianissimo」（極弱）：",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "Wolkenzug und Nebelflor / Erhellen sich von oben. / Luft im Laub und Wind im Rohr, / Und alles ist zerstoben.",
+      "text": "雲影飄移、薄霧如紗，自上方漸漸亮起。葉間有風，蘆葦裡有風，一切都已飄散。",
+      "cite": "歌德《浮士德》第一部〈瓦普幾斯之夜的夢〉；據古騰堡計畫德文本（本文自譯）"
+    },
+    {
+      "type": "p",
+      "text": "孟德爾頌的姊姊芬妮（Fanny Hensel）說，他只把自己的構想告訴了她一個人。下面這段話出自 Sebastian Hensel 家族史英譯本的轉引，原文是德文，本文依英譯本轉譯："
+    },
+    {
+      "type": "quote",
+      "original": "the whole piece is to be played staccato and pianissimo, the tremulandos coming in now and then, the trills passing away with the quickness of lightning ... At the end the first violin takes a flight with a feather-like lightness, and all has vanished.",
+      "text": "整首要以斷奏、極弱來演奏，震音不時進來，顫音像閃電一樣一閃而過……最後第一小提琴像羽毛一樣輕輕飛走，一切都消失了。",
+      "cite": "芬妮・亨澤爾語，轉引自 Sebastian Hensel《孟德爾頌家族》英譯本第 1 卷（1882），第 131 頁（本文自英譯本轉譯）"
+    },
+    {
+      "type": "p",
+      "text": "國會圖書館的文章補充，孟德爾頌很看重這個樂章，大約在 1829 年把它改編成管弦樂版；Sebastian Hensel 則把隔年（1826 年）寫成的《仲夏夜之夢》序曲，看成同一種心境更大的成果。"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：四個樂章"
+    },
+    {
+      "type": "p",
+      "text": "**第一樂章：Allegro moderato ma con fuoco。** 開頭的分解和弦是第一小提琴的戲，其他七個聲部全在當伴奏。愛默森版這裡的第一小提琴是 Drucker，底下那片顫動的第二小提琴是 Setzer，兩人在這首曲子裡各分飾兩角。整個樂章可以留意一件事：旋律從哪個聲部冒出來。這首曲子很少讓兩組四重奏各自成團，主題常常從第一小提琴交給中提琴或大提琴，再傳回來。"
+    },
+    {
+      "type": "p",
+      "text": "**第二樂章：Andante。** C 小調，6/8 拍。開頭先是兩把中提琴，第二小節兩把大提琴加入，四把小提琴到第四小節才進來。這是全曲唯一一個慢樂章，音量多半壓在弱奏，聽的重點是聲部之間的層次，而不是哪一條旋律特別突出。"
+    },
+    {
+      "type": "p",
+      "text": "**第三樂章：Scherzo，Allegro leggierissimo。** G 小調，2/4 拍。樂章以極弱、斷奏的短音起頭，正是芬妮轉述的那種寫法。結尾幾小節，其他聲部只剩同一個音反覆，第一小提琴獨自往高處跑，接著全體停在一個短促的音上。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，芬妮說的「第一小提琴像羽毛一樣輕輕飛走」，指的應該就是這幾小節；她的轉述沒有指明小節。"
+    },
+    {
+      "type": "p",
+      "text": "**第四樂章：Presto。** 一開頭是賦格式的段落：主題從最低的第二大提琴開始，依序往上傳，最後才到第一小提琴。依里茲的弟弟尤利烏斯・里茲（Julius Rietz）校訂的全集版（Mutopia 計畫據此排版的開放樂譜），八個聲部進場的位置如下表。前面每隔四小節進來一個，後面越靠越緊，最後一個只隔一小節。Hyperion 的解說也提醒，詼諧曲的主題會在終樂章裡短暫回來，和其他動機交織在一起。"
+    },
+    {
+      "type": "table",
+      "title": "終樂章開頭：八個聲部依序進場",
+      "head": [
+        "進場順序",
+        "聲部",
+        "進場小節",
+        "愛默森版的演奏者"
+      ],
+      "rows": [
+        [
+          "1",
+          "第二大提琴",
+          "第 1 小節",
+          "David Finckel"
+        ],
+        [
+          "2",
+          "第一大提琴",
+          "第 5 小節",
+          "David Finckel"
+        ],
+        [
+          "3",
+          "第二中提琴",
+          "第 9 小節",
+          "Lawrence Dutton"
+        ],
+        [
+          "4",
+          "第一中提琴",
+          "第 13 小節",
+          "Lawrence Dutton"
+        ],
+        [
+          "5",
+          "第四小提琴",
+          "第 17 小節",
+          "Eugene Drucker"
+        ],
+        [
+          "6",
+          "第三小提琴",
+          "第 19 小節",
+          "Philip Setzer"
+        ],
+        [
+          "7",
+          "第二小提琴",
+          "第 21 小節",
+          "Philip Setzer"
+        ],
+        [
+          "8",
+          "第一小提琴",
+          "第 22 小節",
+          "Eugene Drucker"
+        ]
+      ],
+      "caption": "小節數依 Mutopia 計畫的開放樂譜（底本為 Julius Rietz 校訂的全集版）逐聲部清點；演奏者分工依 Discogs 著錄的 DG 477 5370 唱片內頁名單。"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是：這張表在愛默森版裡會變得有點奇妙。進場的八個聲部，其實是同四個人兩兩重複，第一、第二大提琴都是 Finckel，兩把中提琴都是 Dutton。傳統錄音裡，這段聽到的是八個人一個接一個加入；這一版聽到的，是同一個人跟自己的另一個錄音對答。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "Sebastian Hensel 的家族史把八重奏列為一連串「和他童年作品大不相同」的作品裡的第一部（本文自譯）。國會圖書館則說，這份手稿原本由里茲持有、交給 Musikbibliothek Peters 保管，1951 年由 Gertrude Clarke Whittall 出資購入，才第一次公開供人研究。",
+      "tag": "史實"
+    },
+    {
+      "type": "callout",
+      "label": "延伸聆聽",
+      "text": "想聽手稿原貌，可找 Eroica Quartet & Friends 在 Resonus Classics 的錄音（RES10101，2011 年 3 月 28 日發行）。廠牌說明這一版依國會圖書館所藏的 1825 年手稿演奏，使用古樂器，第一樂章的標記正是手稿上的「Allegro molto e vivace」。和愛默森版對照著聽，可以聽出孟德爾頌在出版前改掉了什麼。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Felix Mendelssohn: Octet in E-flat major, op. 20, for strings (1825)",
+      "publisher": "Library of Congress",
+      "url": "https://www.loc.gov/collections/felix-mendelssohn/articles-and-essays/felix-mendelssohn-octet-in-e-flat-major/",
+      "note": "未標發布日期，2026-10-14 查閱；1825 年秋動筆、10 月 15 日完成、兩天後贈里茲、里茲抄分譜、施波爾雙四重奏比較、芬妮轉述、約 1829 年管弦樂改編、手稿與出版版本差異、1951 年 Whittall 出資購入、「L. e. g. G.」"
+    },
+    {
+      "title": "Ottetto（ML30.8j op. 20）",
+      "publisher": "Library of Congress Catalog",
+      "url": "https://www.loc.gov/item/2008561124/",
+      "note": "親筆總譜 77 頁；末尾「Berlin, d. 15 Oct. 1825」；Gertrude Clarke Whittall Foundation Collection；未標發布日期，2026-10-14 查閱"
+    },
+    {
+      "title": "The Mendelssohn Family (1729–1847) from Letters and Journals, Vol. I",
+      "publisher": "Harper & Brothers（Internet Archive 掃描本）",
+      "date": "1882",
+      "url": "https://archive.org/details/mendelssohnfamil005838mbp",
+      "note": "Sebastian Hensel 著、Carl Klingemann 等英譯；萊比錫街 3 號、八重奏與詼諧曲、芬妮轉述（第 131 頁）"
+    },
+    {
+      "title": "Faust: Der Tragödie erster Teil",
+      "publisher": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/ebooks/2229",
+      "note": "〈瓦普幾斯之夜的夢〉結尾「ORCHESTER (Pianissimo)」四行詩；2026-10-14 查閱"
+    },
+    {
+      "title": "Mendelssohn & Bargiel: Octets（CDH55043）",
+      "publisher": "Hyperion Records",
+      "date": "2000-07",
+      "url": "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDH55043",
+      "note": "Peter Avis 撰解說：施波爾雙四重奏比較、樂譜上「交響樂團風格」的作曲家說明、詼諧曲主題在終樂章再現"
+    },
+    {
+      "title": "Mendelssohn: Octet, Op. 20 (1825 version)（RES10101）",
+      "publisher": "Resonus Classics",
+      "date": "2011-03-28",
+      "url": "https://resonusclassics.com/products/mendelssohn-octet-op-20",
+      "note": "1832 年為出版修訂；1825 年版樂章標記；Eroica Quartet & Friends"
+    },
+    {
+      "title": "Mendelssohn / Emerson String Quartet – The Complete String Quartets（00289 477 5370）",
+      "publisher": "Discogs",
+      "url": "https://www.discogs.com/release/14142598-Mendelssohn-Emerson-String-Quartet-The-Complete-String-Quartets",
+      "note": "2005 年；錄音地點與月份、八重奏各聲部演奏者、製作人 Da-Hong Seetoo、八重奏 30:20；未標發布日期，2026-10-14 查閱"
+    },
+    {
+      "title": "Mendelssohn – Emerson String Quartet: Octet Op. 20 / String Quartet Op. 80（477 9966）",
+      "publisher": "Discogs",
+      "url": "https://www.discogs.com/release/9113167-Mendelssohn-Emerson-String-Quartet-Octet-Op-20-String-Quartet-Op-80",
+      "note": "2012 年重發；未標發布日期，2026-10-14 查閱"
+    },
+    {
+      "title": "Felix Mendelssohn: The Complete String Quartets（review）",
+      "publisher": "MusicWeb International",
+      "date": "2005-04",
+      "url": "https://musicweb-international.com/classrev/2005/Apr05/Mendelssohn_4775370.htm",
+      "note": "Tony Haywood 評；錄音地點與日期、疊錄"
+    },
+    {
+      "title": "MENDELSSOHN Octet / Emerson String Quartet",
+      "publisher": "Deutsche Grammophon",
+      "url": "https://www.deutschegrammophon.com/en/catalogue/products/mendelssohn-octet-emerson-string-quartet-9254",
+      "note": "2012 年單張重發，產品頁標發行日 2012 年 3 月 2 日",
+      "date": "2012-03-02"
+    },
+    {
+      "title": "String Octet, Op.20 (Mendelssohn, Felix)",
+      "publisher": "IMSLP",
+      "url": "https://imslp.org/wiki/String_Octet,_Op.20_(Mendelssohn,_Felix)",
+      "note": "樂章與調性、平均長度約 32 分鐘；未標發布日期，2026-10-14 查閱"
+    },
+    {
+      "title": "Octet（Mutopia piece 612）",
+      "publisher": "Mutopia Project",
+      "date": "2018-06-08",
+      "url": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=612",
+      "note": "底本 Julius Rietz 校訂全集版；第一樂章開頭配置、慢樂章開頭、詼諧曲結尾、終樂章賦格段進場小節依此清點"
+    },
+    {
+      "title": "File:Octetp1.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Octetp1.jpg",
+      "note": "頭圖；Public domain；影像出處標示為美國國會圖書館"
+    },
+    {
+      "title": "File:Mendelssohn Berlin Leipziger Strasse.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Mendelssohn_Berlin_Leipziger_Strasse.jpg",
+      "note": "正文圖；Public domain；出自 Adolph Kohut 1900 年著作"
+    }
+  ]
+}
