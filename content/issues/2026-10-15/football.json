@@ -4,7 +4,7 @@
   "title": "維尼修斯禁賽四場，將缺席國家德比",
   "dek": "西班牙足協 10 月 14 日開出四場禁賽，皇馬王牌缺席台灣時間 26 日的國家德比。巴薩這邊，亞馬爾談「幾乎是 rabona」的過人，佩德里說退場只是胃痛。",
   "topic_key": "football:2026-10-15",
-  "updated_at": "2026-10-15T05:21:00+08:00",
+  "updated_at": "2026-10-15T05:25:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -139,14 +139,14 @@
       "items": [
         {
           "headline": "皇馬七分鐘連進三球，4 比 3 逆轉羅馬",
-          "summary": "羅馬靠德羅恩（Marten de Roon）與馬倫（Donyell Malen）兩球，第 83 分鐘前仍 3 比 1 領先。皇馬三球都來自角球：替補的 Carlos Espí（經 VAR 確認）、恩德里克先後進球，呂迪格（Antonio Rüdiger）第 90 分鐘絕殺。姆巴佩（Kylian Mbappé）上半場一度扳平，這是他第 100 場歐冠，27 歲成為史上最年輕達到百場的球員，打破梅西 28 歲的紀錄。",
+          "summary": "羅馬靠德羅恩（Marten de Roon）一球、馬倫（Donyell Malen）兩球，第 83 分鐘前仍 3 比 1 領先。皇馬三球都來自角球：替補的 Carlos Espí（經 VAR 確認）、恩德里克先後進球，呂迪格（Antonio Rüdiger）第 90 分鐘絕殺。姆巴佩（Kylian Mbappé）上半場一度扳平，這是他第 100 場歐冠，27 歲成為史上最年輕達到百場的球員，打破梅西 28 歲的紀錄。",
           "source": "ESPN 賽後報導與比賽紀錄、Sky Sports 賽果",
           "url": "https://www.espn.com/soccer/match/_/gameId/401915414",
           "when": "台灣時間 10 月 15 日 03:00 開賽"
         },
         {
           "headline": "巴黎聖日耳曼客場 4 比 2 贏曼城，哈蘭德破梅西紀錄",
-          "summary": "巴黎上半場就由杜埃（Désiré Doué）、登貝萊（Ousmane Dembélé）、維蒂尼亞（Vitinha）進球 3 比 0 領先，下半場阿克利烏什（Maghnes Akliouche）再進一球，第 90 分鐘費蘭・托雷斯（Ferran Torres）點球被唐納魯馬（Gianluigi Donnarumma）撲出。哈蘭德（Erling Haaland）進兩球，據 ESPN，他以 26 歲 85 天成為歐冠史上最年輕進滿 60 球的球員，比梅西早一天。這是曼城被認定違反財務規則後首場主場比賽，前總教練瓜迪奧拉（Pep Guardiola）到場觀戰。巴薩 10 月 21 日就要作客巴黎。",
+          "summary": "巴黎上半場就由杜埃（Désiré Doué）、登貝萊（Ousmane Dembélé）、維蒂尼亞（Vitinha）進球 3 比 0 領先，下半場阿克利烏什（Maghnes Akliouche）再進一球，第 90 分鐘替補上場的費蘭・托雷斯（Ferran Torres）罰點球，被曼城門將唐納魯馬（Gianluigi Donnarumma）撲出。哈蘭德（Erling Haaland）進兩球，據 ESPN，他以 26 歲 85 天成為歐冠史上最年輕進滿 60 球的球員，比梅西達成時（26 歲 86 天）年輕 1 天。這是曼城被認定違反財務規則後首場主場比賽，前總教練瓜迪奧拉（Pep Guardiola）到場觀戰。巴薩 10 月 21 日就要作客巴黎。",
           "source": "ESPN 賽後報導與比賽紀錄、Sky Sports 賽果",
           "url": "https://www.espn.com/soccer/match/_/gameId/401915407",
           "when": "台灣時間 10 月 15 日 03:00 開賽"
@@ -188,7 +188,7 @@
         },
         {
           "headline": "英國首相伯恩罕：曼城老闆沒和我提過英超指控",
-          "summary": "首相伯恩罕（Andy Burnham）10 月 14 日在國會首相質詢時被保守黨議員追問，答說曼城的經營者「did not raise those issues with me」（沒有和我提過那些事；本文自譯）。大曼徹斯特聯合政府週一才公布他任市長時與曼城主席 Khaldoon Al Mubarak 的往來紀錄。曼城已被認定違反英超財務規則，處分尚未公布。",
+          "summary": "首相伯恩罕（Andy Burnham）10 月 14 日在國會首相質詢時被保守黨議員追問，答說曼城的經營者「did not raise those issues with me」（沒有和我提過那些事；本文自譯）。大曼徹斯特聯合政府週一才公布他任市長時與曼城主席 Khaldoon Al Mubarak 的往來紀錄。曼城已被獨立委員會認定違反英超財務規則並已提出上訴；處分由原委員會另行決定，截至 10 月 15 日清晨尚未公布。",
           "source": "ESPN（PA）",
           "url": "https://www.espn.com/soccer/story/_/id/50180974/andy-burnham-man-city-owners-mention-premier-league-charges-meeting",
           "when": "10 月 14 日"
@@ -336,8 +336,8 @@
       "note": "進球時間、維尼修斯第 59 分鐘被換下"
     },
     {
-      "title": "PSG outclass Man City as Doué, Dembélé lead way",
-      "publisher": "ESPN",
+      "title": "PSG hold off Man City's Haaland-inspired fightback",
+      "publisher": "ESPN（PA）",
       "date": "2026-10-14",
       "url": "https://www.espn.com/soccer/report/_/gameId/401915407",
       "note": "瓜迪奧拉到場、巴黎罰失點球"
@@ -441,6 +441,13 @@
       "date": "2026-06-13",
       "url": "https://commons.wikimedia.org/wiki/File:Vinicius_Junior_Achraf_Hakimi_Brazil_V_Morocco_13_June_2026-119.jpg",
       "note": "頭圖"
+    },
+    {
+      "title": "Pep Guardiola makes first Etihad return since Man City guilty verdict",
+      "publisher": "ESPN News Services",
+      "date": "2026-10-14",
+      "url": "https://www.espn.com/soccer/story/_/id/50165904/pep-guardiola-attends-man-city-vs-psg-guilty-verdict",
+      "note": "曼城被認定違規後首個主場、瓜迪奧拉到場；曼城已上訴"
     }
   ]
 }
