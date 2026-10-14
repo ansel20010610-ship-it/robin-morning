@@ -4,7 +4,7 @@
   "title": "維尼修斯禁賽四場，將缺席國家德比",
   "dek": "西班牙足協 10 月 14 日開出四場禁賽，皇馬王牌缺席台灣時間 26 日的國家德比。巴薩這邊，亞馬爾談「幾乎是 rabona」的過人，佩德里說退場只是胃痛。",
   "topic_key": "football:2026-10-15",
-  "updated_at": "2026-10-15T02:52:00+08:00",
+  "updated_at": "2026-10-15T05:21:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -28,7 +28,7 @@
     },
     {
       "type": "p",
-      "text": "那張紅牌出現在他剛把貝林厄姆（Jude Bellingham）的傳球送進網、皇馬看似 2 比 0 領先的時候：VAR 回看拉頭髮的動作，進球取消、他被罰下。據 ESPN，總教練穆里尼奧（José Mourinho）那場本來就沒讓他先發，他本季替皇馬只進過 1 球。歐冠不受影響，穆里尼奧把他排進台灣時間 10 月 15 日 03:00 開球、作客羅馬的歐冠先發；本版完稿（台灣時間 02:52）時尚未開賽，賽果由後續更新補上。國家德比是台灣時間 10 月 26 日（週一）04:00 在 Spotify 諾坎普開球。"
+      "text": "那張紅牌出現在他剛把貝林厄姆（Jude Bellingham）的傳球送進網、皇馬看似 2 比 0 領先的時候：VAR 回看拉頭髮的動作，進球取消、他被罰下。據 ESPN，總教練穆里尼奧（José Mourinho）那場本來就沒讓他先發，他本季替皇馬只進過 1 球。歐冠不受影響，他在台灣時間 10 月 15 日 03:00 開球、作客羅馬的歐冠先發，第 59 分鐘被恩德里克（Endrick）換下，沒有進球。皇馬一度 1 比 3 落後，最後階段靠三次角球連進三球，4 比 3 逆轉（見歐洲足壇速覽）。國家德比是台灣時間 10 月 26 日（週一）04:00 在 Spotify 諾坎普開球。"
     },
     {
       "type": "h",
@@ -46,7 +46,7 @@
     },
     {
       "type": "p",
-      "text": "佩德里（Pedri）第 73 分鐘被貝納爾（Marc Bernal）換下，一度讓人擔心受傷。據 Goal 10 月 14 日報導，他賽後對 Movistar 說：「My stomach was hurting and I was feeling a bit unwell」（我肚子痛，有點不舒服；本文自譯），所以主動要求換人，讓體力好的隊友上。Goal 寫明這不是肌肉傷。截至台灣時間 10 月 15 日 02:52，巴薩官網沒有發布這場比賽後的醫療報告，拉菲尼亞（Raphinha）、德容（Frenkie de Jong）等傷兵也沒有新消息。",
+      "text": "佩德里（Pedri）第 73 分鐘被貝納爾（Marc Bernal）換下，一度讓人擔心受傷。據 Goal 10 月 14 日報導，他賽後對 Movistar 說：「My stomach was hurting and I was feeling a bit unwell」（我肚子痛，有點不舒服；本文自譯），所以主動要求換人，讓體力好的隊友上。Goal 寫明這不是肌肉傷。本版更新（台灣時間 10 月 15 日 05:21）查閱時，巴薩官網仍沒有發布這場比賽後的醫療報告，拉菲尼亞（Raphinha）、德容（Frenkie de Jong）等傷兵也沒有新消息。",
       "tag": "報導"
     },
     {
@@ -138,6 +138,20 @@
       "title": "歐洲足壇速覽",
       "items": [
         {
+          "headline": "皇馬七分鐘連進三球，4 比 3 逆轉羅馬",
+          "summary": "羅馬靠德羅恩（Marten de Roon）與馬倫（Donyell Malen）兩球，第 83 分鐘前仍 3 比 1 領先。皇馬三球都來自角球：替補的 Carlos Espí（經 VAR 確認）、恩德里克先後進球，呂迪格（Antonio Rüdiger）第 90 分鐘絕殺。姆巴佩（Kylian Mbappé）上半場一度扳平，這是他第 100 場歐冠，27 歲成為史上最年輕達到百場的球員，打破梅西 28 歲的紀錄。",
+          "source": "ESPN 賽後報導與比賽紀錄、Sky Sports 賽果",
+          "url": "https://www.espn.com/soccer/match/_/gameId/401915414",
+          "when": "台灣時間 10 月 15 日 03:00 開賽"
+        },
+        {
+          "headline": "巴黎聖日耳曼客場 4 比 2 贏曼城，哈蘭德破梅西紀錄",
+          "summary": "巴黎上半場就由杜埃（Désiré Doué）、登貝萊（Ousmane Dembélé）、維蒂尼亞（Vitinha）進球 3 比 0 領先，下半場阿克利烏什（Maghnes Akliouche）再進一球，第 90 分鐘費蘭・托雷斯（Ferran Torres）點球被唐納魯馬（Gianluigi Donnarumma）撲出。哈蘭德（Erling Haaland）進兩球，據 ESPN，他以 26 歲 85 天成為歐冠史上最年輕進滿 60 球的球員，比梅西早一天。這是曼城被認定違反財務規則後首場主場比賽，前總教練瓜迪奧拉（Pep Guardiola）到場觀戰。巴薩 10 月 21 日就要作客巴黎。",
+          "source": "ESPN 賽後報導與比賽紀錄、Sky Sports 賽果",
+          "url": "https://www.espn.com/soccer/match/_/gameId/401915407",
+          "when": "台灣時間 10 月 15 日 03:00 開賽"
+        },
+        {
           "headline": "利物浦客場 6 比 3 大勝林茨，巴爾科拉戴帽",
           "summary": "賽前已宣布伊薩克（Alexander Isak）、加克波（Cody Gakpo）與索博斯洛伊（Dominik Szoboszlai）因傷不隨隊的利物浦，在奧地利半場就 3 比 0 領先。巴爾科拉（Bradley Barcola）第 24、37、66 分鐘進三球，弗林蓬（Jeremie Frimpong）頭球進一球、再助攻兩次；林茨下半場由 Robert Ljubicic 與 Florian Flecker（兩球）追回三球。",
           "source": "ESPN 比賽紀錄、Sky Sports 賽果",
@@ -187,7 +201,7 @@
     },
     {
       "type": "p",
-      "text": "巴薩下一場是西甲第 9 輪，台灣時間 10 月 18 日（週日）00:30 作客第三名皇家貝提斯（Real Betis），地點是塞維亞的 La Cartuja 球場；贏了就以西甲開季 9 連勝追平皇馬 1968/69 球季的紀錄。接著 10 月 21 日（週三）03:00 在巴黎踢歐冠，再回諾坎普迎戰少了維尼修斯的皇馬。貝提斯與巴黎聖日耳曼也都在台灣時間 10 月 15 日 03:00 踢歐冠：貝提斯主場對波圖，巴黎作客曼城；本版完稿（02:52）時尚未開賽。"
+      "text": "巴薩下一場是西甲第 9 輪，台灣時間 10 月 18 日（週日）00:30 作客第三名皇家貝提斯（Real Betis），地點是塞維亞的 La Cartuja 球場；贏了就以西甲開季 9 連勝追平皇馬 1968/69 球季的紀錄。接著 10 月 21 日（週三）03:00 在巴黎踢歐冠，再回諾坎普迎戰少了維尼修斯的皇馬。兩個對手 10 月 15 日凌晨都贏了歐冠：貝提斯在 La Cartuja 3 比 2 逆轉波圖，阿布德（Abde Ezzalzouli）先進球，波圖由加布里・維加（Gabri Veiga）的自由球與 Samu Aghehowa 反超，替補上場的庫喬・埃爾南德斯（Cucho Hernández）扳平，伊斯科（Isco）第 84 分鐘罰進點球；衛冕軍巴黎聖日耳曼則客場 4 比 2 贏曼城。比分依 ESPN 比賽紀錄與 Sky Sports 賽果核對一致。"
     },
     {
       "type": "table",
@@ -305,7 +319,48 @@
       "publisher": "Sky Sports",
       "date": "2026-10-14",
       "url": "https://www.skysports.com/champions-league-results",
-      "note": "週三 00:45 兩場賽果核對（查閱日期）"
+      "note": "10 月 15 日 00:45 與 03:00 各場賽果核對（查閱日期）"
+    },
+    {
+      "title": "Real Madrid's late rally stuns Roma in 7-goal thriller",
+      "publisher": "ESPN（AP）",
+      "date": "2026-10-14",
+      "url": "https://www.espn.com/soccer/report/_/gameId/401915414",
+      "note": "皇馬逆轉、三球皆來自角球、姆巴佩百場紀錄"
+    },
+    {
+      "title": "AS Roma vs. Real Madrid（比賽頁）",
+      "publisher": "ESPN",
+      "date": "2026-10-14",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915414",
+      "note": "進球時間、維尼修斯第 59 分鐘被換下"
+    },
+    {
+      "title": "PSG outclass Man City as Doué, Dembélé lead way",
+      "publisher": "ESPN",
+      "date": "2026-10-14",
+      "url": "https://www.espn.com/soccer/report/_/gameId/401915407",
+      "note": "瓜迪奧拉到場、巴黎罰失點球"
+    },
+    {
+      "title": "Manchester City vs. Paris Saint-Germain（比賽頁）",
+      "publisher": "ESPN",
+      "date": "2026-10-14",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915407"
+    },
+    {
+      "title": "Erling Haaland breaks Lionel Messi record with goal against Paris Saint-Germain",
+      "publisher": "ESPN",
+      "date": "2026-10-14",
+      "url": "https://www.espn.com/soccer/story/_/id/50184460/erling-haaland-breaks-lionel-messi-record-goal-paris-saint-germain",
+      "note": "最年輕 60 球紀錄"
+    },
+    {
+      "title": "Real Betis vs. FC Porto（比賽頁）",
+      "publisher": "ESPN",
+      "date": "2026-10-14",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915408",
+      "note": "貝提斯 3 比 2 波圖進球者"
     },
     {
       "title": "Transfer rumors, news: Real Madrid, Barcelona chase Spurs defender Porro",
