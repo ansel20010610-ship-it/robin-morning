@@ -18,5 +18,10 @@
       "literature"
     ],
     "note": "完成並推送 civilization（威尼斯蓄水池）與 city（波隆那 Strada Maggiore）；兩篇皆經審稿子代理核對後修正（年代、轉引標示、學者觀點、譯名等），validate 無 ERROR。"
+  },
+  "3": {
+    "finished_at": "2026-10-15T03:22:08+08:00",
+    "missing": [],
+    "note": "完成 fiction、literature、football 初稿，均經審稿修正後推送；football 的 03:00 歐冠三場（羅馬－皇馬、貝提斯－波圖、曼城－巴黎）完稿時未開賽，待第 4 班補賽果"
   }
 }
