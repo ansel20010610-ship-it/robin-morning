@@ -4,7 +4,7 @@
   "title": "維尼修斯禁賽四場，將缺席國家德比",
   "dek": "西班牙足協 10 月 14 日開出四場禁賽，皇馬王牌缺席台灣時間 26 日的國家德比。巴薩這邊，亞馬爾談「幾乎是 rabona」的過人，佩德里說退場只是胃痛。",
   "topic_key": "football:2026-10-15",
-  "updated_at": "2026-10-15T05:25:00+08:00",
+  "updated_at": "2026-10-15T06:28:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -166,6 +166,13 @@
           "when": "台灣時間 10 月 15 日 00:45 開賽"
         },
         {
+          "headline": "阿斯頓維拉主場 6 比 0 痛宰費內巴切",
+          "summary": "維拉上半場由曼贊比（Johan Manzambi）角球後射門、尼古拉斯・傑克森（Nicolas Jackson）兩記射門取得 3 比 0；下半場巴克利（Ross Barkley）先罰進點球、再從禁區外射門得分，替補上場的亞伯拉罕（Tammy Abraham）第 90 分鐘收尾。巴克利與維拉的姆拜耶（Ibrahim Mbaye）都帶傷退場。費內巴切的格林伍德（Mason Greenwood）回到英格蘭踢球，第 69 分鐘被換下。",
+          "source": "ESPN 比賽紀錄、Sky Sports 賽果",
+          "url": "https://www.espn.com/soccer/match/_/gameId/401915409",
+          "when": "台灣時間 10 月 15 日 03:00 開賽"
+        },
+        {
           "headline": "曼聯評估是否處分利桑德羅・馬丁內斯",
           "summary": "利桑德羅・馬丁內斯（Lisandro Martínez）輸馬競後公開批評足球總監 Jason Wilcox，據 ESPN 消息來源，曼聯高層 10 月 14 日（球員放假日）討論了他的發言，球員週四回卡靈頓訓練基地時他會知道是否被處分。ESPN 也寫道，據了解，當初主導聘用 Wilcox 的小股東拉特克利夫（Jim Ratcliffe）滿意他在曼聯高層的角色。",
           "source": "ESPN（Rob Dawson）",
@@ -320,6 +327,13 @@
       "date": "2026-10-14",
       "url": "https://www.skysports.com/champions-league-results",
       "note": "10 月 15 日 00:45 與 03:00 各場賽果核對（查閱日期）"
+    },
+    {
+      "title": "Aston Villa vs. Fenerbahce（比賽頁）",
+      "publisher": "ESPN",
+      "date": "2026-10-14",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915409",
+      "note": "比分、進球時間與換人"
     },
     {
       "title": "Real Madrid's late rally stuns Roma in 7-goal thriller",
