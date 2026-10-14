@@ -1,0 +1,549 @@
+{
+  "column": "city",
+  "date": "2026-10-15",
+  "title": "波隆那 Strada Maggiore：柱廊的斷口",
+  "dek": "從雙塔走到城門，兩側柱廊幾乎不斷。1288 年的法規要該有柱廊的房屋蓋起來、由屋主永久維修；沿路三處斷開的地方，各自說明這條規矩怎麼運作。",
+  "topic_key": "city:bologna-strada-maggiore",
+  "updated_at": "2026-10-15T02:07:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Bologna%2C_Casa_Isolani%2C_Portico.jpg/1280px-Bologna%2C_Casa_Isolani%2C_Portico.jpg",
+    "width": 1280,
+    "height": 851,
+    "alt": "從柱廊下方往上仰拍的建築。左邊一根深色、表面粗糙的方形木柱直通到屋簷下，旁邊並立一根紅磚砌的方柱。木柱頂端有粗大的斜撐，頂住一根長長的水平木樑；樑上方是一排排深色的木擱柵和木板天花。右下方是紅磚牆面，牆上有兩組以細白柱分隔的雙聯拱窗。左上角露出淺藍色的天空。",
+    "caption": "Casa Isolani 的木造柱廊，2017 年 9 月攝，從柱廊下往上看。左邊那根深色方木就是撐起上層住宅的木柱，頂端的斜撐把水平長樑頂住；旁邊的紅磚方柱是 20 世紀加上的補強。右邊磚牆上的雙聯拱窗屬於柱廊後方的住宅。2017 年的樣子，不代表現況。",
+    "credit": "Alessandro Siani／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bologna,_Casa_Isolani,_Portico.jpg",
+    "made": "2017"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "波隆那（Bologna）的 Strada Maggiore 從雙塔腳下的 Porta Ravegnana 廣場出發，往東南直走到舊城門 Porta Maggiore。依 OpenStreetMap 圖資，這段街道的中心線約 950 公尺（本報計算）。波隆那大學建築史教授 Francesco Ceccarelli 與研究者 Daniele Pascale Guidotti Magnani 2022 年出版的《The Bolognese Portico》把它稱作古代艾米利亞大道（Via Emilia）的一段；波隆那市府的柱廊世界遺產網站則說，文獻稱它為「nobile」的街，又因為是教宗出巡走的 via papalis，也叫它「trionfale」。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "這條街兩側幾乎全是柱廊：房子的一樓退在拱廊後面，行人走在上層樓板底下。2021 年 7 月 28 日，世界遺產委員會在福州舉行的第 44 屆會議把「波隆那柱廊」列入世界遺產名錄。這是一處系列遺產，由 12 組柱廊及周邊建成區組成；據波隆那官方觀光基金會 Bologna Welcome 的導覽摺頁，Strada Maggiore 是其中一組，範圍延伸出城牆，一直到城外的 Alemanni 教堂。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "這篇沿這條街由西往東走，只看一件事：柱廊在哪裡斷開。斷口有三處。一處是 1725 年拆掉的，一處是一座宮殿把原有的柱廊改成了人行道，一處是城門，柱廊在門外換了一種蓋法繼續往前。另外有一個路口，柱廊反而忽然變寬。"
+    },
+    {
+      "type": "p",
+      "text": "這條路線是觀看順序，不是導航建議。起點的 Porta Ravegnana 廣場因為 Garisenda 塔的結構監測，市府 2026 年 6 月 12 日的施工公告寫明廣場在與 Via San Vitale、Via Rizzoli 交會處封閉；之後的安排本文沒有核對，現場通行以市府公告為準。"
+    },
+    {
+      "type": "facts",
+      "title": "地點資料",
+      "items": [
+        [
+          "城市",
+          "義大利艾米利亞－羅馬涅大區波隆那，舊城東南"
+        ],
+        [
+          "地點",
+          "Strada Maggiore，西起 Piazza di Porta Ravegnana（雙塔下），東到城門 Porta Maggiore；出城後接 Via Mazzini 上的 Portico degli Alemanni"
+        ],
+        [
+          "長度",
+          "城內一段依 OpenStreetMap 中心線約 950 公尺（本報計算）；Alemanni 教堂在 Porta Maggiore 外 700 公尺（市府）"
+        ],
+        [
+          "年代",
+          "路線是古代艾米利亞大道的一段；現存最早的 Casa Isolani 木柱廊建於 13 世紀；Servi 柱廊 1392 年起建；Alemanni 柱廊 1619–1631 年；Hercolani 宮 1793 年起建（市府）"
+        ],
+        [
+          "設計者",
+          "沒有單一設計者。柱廊由各屋主、修會分段興建；可指名的有 Davia Bargellini 宮立面（Bartolomeo Provaglia）、Hercolani 宮（Angelo Venturoli）；Servi 柱廊的設計者沒有文件記載，可能出自 Antonio di Vincenzo；Alemanni 柱廊一般歸於 Floriano Ambrosini"
+        ],
+        [
+          "規範",
+          "1250 年市法典規定柱廊高 7 個波隆那呎（約 2.66 公尺）；1288 年市法典要求該有柱廊的房屋建造柱廊，並由屋主永久維護"
+        ],
+        [
+          "目前用途（截至 2026-10-15 可確認）",
+          "柱廊是私人產權、供公眾通行（Bologna Welcome 2025 年摺頁）；屬 2021 年 7 月 28 日列入世界遺產的「波隆那柱廊」12 組之一（市府）；Davia Bargellini 宮一樓自 1924 年起是市立工藝美術館，Hercolani 宮由波隆那大學數個系所使用（市府網站）；市府 2026 年 9 月 28 日公告，柱廊協調會（Cabina di Regia）9 月 22 日提出新的管理計畫"
+        ]
+      ]
+    },
+    {
+      "type": "svg",
+      "title": "從雙塔走到 Alemanni 教堂",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 240\"><path class=\"muted line\" d=\"M77.3 28.7 L66.7 28.0 L63.1 27.7 L60.1 27.8 L51.5 28.2 L48.1 28.4 L47.5 28.4 L47.3 28.4\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M111.6 33.1 L110.8 33.0\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M116.3 33.7 L113.3 33.4\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M179.1 37.0 L178.8 36.9 L178.5 36.8 L177.4 36.6 L176.6 36.5 L170.5 36.4 L168.6 36.4 L162.4 36.4 L156.4 36.4 L149.8 36.4 L143.9 36.2 L140.0 35.9 L133.0 35.3\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M133.0 35.3 L124.5 34.5 L117.1 33.9 L116.3 33.7\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M99.3 32.1 L93.3 30.9 L87.4 30.0 L80.1 29.0 L77.3 28.7\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M113.3 33.4 L112.1 33.2 L111.6 33.1\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M110.8 33.0 L101.6 32.3 L99.3 32.1\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M179.8 37.0 L179.1 37.0\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M42.3 44.3 L48.5 52.4 L49.0 53.2\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M75.1 93.6 L74.7 92.6 L74.3 91.9 L73.9 91.3 L73.3 90.5 L72.9 89.9 L72.4 89.3 L71.9 88.7 L71.7 88.2 L71.6 87.9 L71.6 87.6 L71.5 87.4 L71.3 87.1 L70.6 86.3\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M134.9 175.5 L136.1 177.4\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M136.1 177.4 L137.2 179.0 L139.5 182.1 L141.3 184.6 L142.9 186.4 L146.8 190.8 L148.7 192.7 L155.0 199.4 L156.5 200.8 L160.8 204.8 L162.8 206.7 L168.0 211.7 L168.7 212.4 L171.2 214.4 L172.6 215.5 L172.8 215.7\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M133.4 173.0 L133.2 172.8 L131.8 170.6 L130.5 168.7 L129.1 166.7 L127.5 164.4 L126.2 162.6 L122.9 158.1 L119.5 153.6 L113.5 145.6 L112.2 143.8 L107.6 137.2 L107.4 136.9 L106.3 135.4 L105.5 134.1 L104.5 132.4\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M81.6 100.9 L75.1 93.6\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M92.5 116.0 L91.8 115.1 L91.1 114.1 L88.1 110.1\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M88.1 110.1 L87.9 109.9 L87.1 108.8 L86.9 108.5 L86.8 108.3 L84.8 105.4 L81.6 100.9\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M134.9 175.5 L133.4 173.0\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M54.3 60.5 L54.6 60.9 L56.8 64.2 L57.3 64.8 L60.8 70.3 L62.5 73.1 L65.5 77.8 L67.9 81.7 L68.3 82.4\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M68.3 82.4 L68.6 82.9 L70.6 86.3\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M70.6 86.3 L69.3 87.7 L68.8 88.5 L68.7 88.7 L68.2 89.9\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M104.5 132.4 L103.6 130.9 L102.0 128.3 L99.4 124.6 L98.1 122.9 L97.3 121.8 L94.6 118.5 L94.2 118.0 L92.5 116.0\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M49.0 53.2 L51.5 56.5 L54.3 60.5\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M110.9 71.4 L110.9 71.5 L110.9 72.0 L110.9 72.7 L109.4 77.8 L107.7 83.4 L106.9 85.6 L105.1 90.9 L103.7 94.7 L102.5 97.5 L101.2 100.2 L100.2 102.4 L99.3 104.3 L97.4 108.0 L95.9 111.2 L95.6 111.8 L95.0 113.0 L94.4 114.1 L93.9 114.9 L92.5 116.0\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M113.3 33.4 L113.2 34.0 L112.4 41.0 L111.6 46.1 L110.8 51.2 L110.7 54.0 L110.8 54.6 L111.1 55.2 L111.9 56.1 L112.3 56.5\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M114.4 41.2 L114.3 41.6 L113.7 44.8 L113.3 46.6 L113.1 47.8 L112.6 52.0 L112.6 53.6 L112.5 55.0 L112.5 55.6 L112.3 56.3 L112.3 56.5\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M112.3 56.5 L112.6 57.1 L112.7 57.9 L112.6 59.0 L112.5 60.2 L112.0 63.0 L111.3 67.2 L110.8 69.6 L110.8 70.1 L110.7 70.4 L110.7 70.9 L110.8 71.4 L110.9 71.4\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M112.4 41.0 L113.4 41.1 L113.8 41.2 L114.4 41.2\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M114.4 41.2 L114.6 39.1 L114.8 37.3 L114.9 36.5 L115.3 35.5 L116.1 34.4 L116.3 33.7\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M159.1 97.8 L159.7 96.5 L164.0 86.3 L169.1 75.1 L170.6 71.7 L171.8 68.9 L174.6 61.2 L179.7 44.0 L180.1 41.1 L180.1 39.4 L180.1 39.0 L179.8 37.0\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M139.8 87.7 L139.6 88.1 L139.3 88.6 L138.3 90.3 L135.4 95.0 L133.8 97.4 L133.4 98.1 L133.0 98.7 L131.0 101.7 L122.2 114.8 L122.0 115.1 L121.7 115.5\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M164.1 116.9 L154.7 135.2 L154.6 135.4 L154.5 135.5 L154.3 136.0 L153.9 136.6 L151.6 141.3 L145.9 152.7 L139.4 164.6 L136.4 169.9\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M136.4 169.9 L135.7 171.1 L135.5 171.8 L134.7 172.8 L133.4 173.0\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M170.7 104.1 L170.1 105.2 L164.1 116.9\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M140.0 35.9 L139.8 36.9 L139.1 39.8 L138.8 41.0 L138.4 42.1 L138.1 43.0 L137.5 45.0 L137.1 46.1 L135.7 50.4 L135.3 51.3 L134.2 53.5 L133.1 55.0 L132.7 55.4 L132.1 55.4 L128.9 54.2 L128.5 54.2 L128.2 54.4\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M128.2 54.4 L126.7 56.8\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M118.5 70.3 L118.9 69.5 L121.1 65.5 L122.6 62.5 L126.7 56.8\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M62.8 205.5 L66.5 206.1 L67.1 206.2 L67.6 206.3 L69.0 206.5 L75.0 207.5 L78.1 208.1 L121.9 215.4 L139.5 218.4 L156.9 221.3\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M161.7 219.5 L155.8 218.5 L146.0 216.9 L145.1 216.7 L139.9 215.9 L134.4 215.0 L134.0 214.9 L123.1 213.1 L119.8 212.5 L105.0 210.1 L92.5 208.0 L81.1 206.0 L74.6 205.0 L69.3 204.1 L67.5 203.8 L66.2 203.6 L60.7 202.6\" stroke-width=\"1.4\" opacity=\"0.5\" stroke-linecap=\"round\"/><path class=\"muted line\" d=\"M161.5 219.6 L189.0 113.5 L203.0 58.0\" stroke-width=\"2.2\" stroke-dasharray=\"2 3\" opacity=\"0.8\"/><path class=\"accent line\" d=\"M39.1 33.2 L39.6 33.8 L40.3 34.4 L41.0 34.9 L41.3 35.0 L44.7 36.7 L44.9 36.9 L50.9 40.1 L55.3 42.4 L56.5 42.9 L59.2 44.3 L60.4 44.9 L64.7 47.3\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><path class=\"accent line\" d=\"M110.9 71.4 L112.4 72.2 L116.6 74.6 L117.7 75.3 L128.3 81.2 L139.8 87.7 L140.5 88.1 L144.1 90.0 L145.4 90.7 L146.8 91.4 L152.8 94.5 L159.1 97.8 L159.6 98.1 L170.2 103.8 L170.7 104.1 L182.0 110.1 L183.7 111.1 L184.2 111.4 L184.9 111.8\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><path class=\"accent line\" d=\"M101.7 66.8 L103.3 67.6 L106.9 69.4 L108.4 70.2 L108.8 70.4 L108.8 70.4 L109.1 70.6 L110.9 71.4\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><path class=\"accent line\" d=\"M64.7 47.3 L72.8 51.5 L78.0 54.3 L81.6 56.2 L86.2 58.6 L89.0 60.1 L92.9 62.2 L94.7 63.1 L100.5 66.2 L101.7 66.8\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><path class=\"accent line\" d=\"M184.9 111.8 L185.2 111.9\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><path class=\"gold line\" d=\"M194.1 115.8 L194.8 115.8 L195.3 115.9 L195.7 116.0 L197.4 116.8 L197.5 116.8 L198.2 117.1 L199.9 118.1 L201.7 119.2 L203.9 120.6 L208.6 123.9 L215.4 127.7 L217.1 128.4 L228.4 134.2 L230.7 135.4 L248.5 144.4 L250.9 145.7 L254.0 147.3 L256.7 148.7 L258.7 149.7 L259.4 150.0 L260.6 150.7 L262.1 151.5 L263.5 152.2 L266.5 153.9 L267.9 154.6 L271.6 156.6 L278.0 160.3 L286.3 164.9 L287.9 165.8 L297.5 170.8\" stroke-width=\"4.5\" stroke-dasharray=\"6 3\" stroke-linecap=\"round\"/><circle class=\"paper\" cx=\"51.0\" cy=\"33.0\" r=\"7\"/><circle class=\"accent line\" cx=\"51.0\" cy=\"33.0\" r=\"7\" stroke-width=\"1.6\"/><text class=\"ink\" x=\"51.0\" y=\"36.2\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"bold\">1</text><text class=\"ink\" x=\"58\" y=\"24\" font-size=\"8.5\" text-anchor=\"start\">San Bartolomeo 柱廊・雙塔</text><circle class=\"paper\" cx=\"70.9\" cy=\"54.1\" r=\"7\"/><circle class=\"accent line\" cx=\"70.9\" cy=\"54.1\" r=\"7\" stroke-width=\"1.6\"/><text class=\"ink\" x=\"70.9\" y=\"57.3\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"bold\">2</text><text class=\"ink\" x=\"80\" y=\"48\" font-size=\"8.5\" text-anchor=\"start\">Casa Isolani／對面 Sampieri 缺口</text><circle class=\"paper\" cx=\"113.8\" cy=\"74.0\" r=\"7\"/><circle class=\"accent line\" cx=\"113.8\" cy=\"74.0\" r=\"7\" stroke-width=\"1.6\"/><text class=\"ink\" x=\"113.8\" y=\"77.2\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"bold\">3</text><text class=\"ink\" x=\"123\" y=\"68\" font-size=\"8.5\" text-anchor=\"start\">Servi 柱廊／對面 Davia Bargellini</text><circle class=\"paper\" cx=\"139.4\" cy=\"91.6\" r=\"7\"/><circle class=\"accent line\" cx=\"139.4\" cy=\"91.6\" r=\"7\" stroke-width=\"1.6\"/><text class=\"ink\" x=\"139.4\" y=\"94.8\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"bold\">4</text><text class=\"ink\" x=\"149\" y=\"95\" font-size=\"8.5\" text-anchor=\"start\">Hercolani 宮</text><circle class=\"paper\" cx=\"189.0\" cy=\"113.5\" r=\"7\"/><circle class=\"accent line\" cx=\"189.0\" cy=\"113.5\" r=\"7\" stroke-width=\"1.6\"/><text class=\"ink\" x=\"189.0\" y=\"116.7\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"bold\">5</text><text class=\"ink\" x=\"196\" y=\"105\" font-size=\"8.5\" text-anchor=\"start\">Porta Maggiore 城門</text><circle class=\"paper\" cx=\"295.7\" cy=\"178.1\" r=\"7\"/><circle class=\"accent line\" cx=\"295.7\" cy=\"178.1\" r=\"7\" stroke-width=\"1.6\"/><text class=\"ink\" x=\"295.7\" y=\"181.3\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"bold\">6</text><text class=\"ink\" x=\"288\" y=\"198\" font-size=\"8.5\" text-anchor=\"middle\">Alemanni 教堂</text><text class=\"muted\" x=\"206\" y=\"52\" font-size=\"7.5\">環城大道（舊城牆線）</text><text class=\"muted\" x=\"168\" y=\"228\" font-size=\"7.5\">Viale Gozzadini</text><path class=\"accent line\" d=\"M232 16 L252 16\" stroke-width=\"4.5\"/><text class=\"ink\" x=\"256\" y=\"19\" font-size=\"8\">Strada Maggiore（城內）</text><path class=\"gold line\" d=\"M232 30 L252 30\" stroke-width=\"4.5\" stroke-dasharray=\"6 3\"/><text class=\"ink\" x=\"256\" y=\"33\" font-size=\"8\">Via Mazzini 柱廊（城外）</text><path class=\"ink line\" d=\"M320 50 L320 70 M320 50 L316 58 M320 50 L324 58\" stroke-width=\"1.4\" fill=\"none\"/><text class=\"ink\" x=\"320\" y=\"80\" font-size=\"8\" text-anchor=\"middle\">北</text><text class=\"muted\" x=\"12\" y=\"236\" font-size=\"7\">示意，不按比例</text></svg>",
+      "caption": "示意，不按比例。依 OpenStreetMap 圖資（2026 年 10 月 15 日台灣時間下載）繪製 Strada Maggiore（酒紅實線）、城門外 Via Mazzini 到 Alemanni 教堂一段（金色虛線）與周邊街道的中心線。① 到 ⑥ 依 OSM 的教堂、建物輪廓中心點標出，只表示在街的哪一側、大約哪一段；環城大道那條點線是示意，表示舊城牆所在。不作導航用途。",
+      "credit": "本報繪製；地圖資料 © OpenStreetMap 貢獻者（ODbL）"
+    },
+    {
+      "type": "h",
+      "text": "先讀法條：1250 年管高度，1288 年管有沒有"
+    },
+    {
+      "type": "p",
+      "text": "Ceccarelli 書中整理的通說是：柱廊在中世紀盛期以「非計畫、不合法」的方式出現，是私人房屋往公共街道的任意延伸。德國學者 Heinrich Sulze 1920 年代的研究認為，起點是用托架往街上懸挑的樓層，當地叫 sporti；木柱廊最初只是撐住這些危險懸挑量體的簡陋支柱。Bologna Welcome 的摺頁也是這個說法：為了避免倒塌，才從下方加柱。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "公社很早就開始管它的高度。Ceccarelli 轉引 1250 年《波隆那市法典》（Statuta Comunis Bononiae）第一卷第 26 條：城內與郊區的所有柱廊，從地面起要有 7 呎高，「ita quod quilibet possit sub eis equitare」，讓任何人都能騎馬從下面通過（本文自譯）。柱廊的主人要把它往上抬高，不准往下挖地湊高度，期限到 4 月 1 日；違者罰 3 波隆那里拉，罰款一半歸檢舉人。Ceccarelli 把 7 個波隆那呎換算為 2.66 公尺。",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "De porticibus faciendis per civitatem et burgos.",
+      "text": "論在城內與城郊建造柱廊。",
+      "cite": "1288 年《波隆那法典》條文標題，波隆那國家檔案館藏（ASBo, Statuti, vol. IX, rubr. LII, f. 107r）；Fasoli、Sella 1939 年校訂本第 2 冊第 163 頁，轉引自 Ceccarelli 2022 年書註 17，本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "條文的內容是：凡服從公社號令、在城內或城郊擁有房屋、宅地的人，若房屋沒有柱廊、而按慣例應該有柱廊（que solita sunt habere portichus），尚未建造的就必須建造完成，「quilibet pro sua testata」，各人負責自己房屋臨街的那一面；罰則由督政官（podestà）裁量。已經建好的，「manuteneantur perpetuo expensis eorum cuius sunt casamenta」，由房主出錢永久維護（本文自譯）。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "Ceccarelli 對這條法規的概括是：從 1288 年起，所有新建築都必須有柱廊。他也引用史學者 Mario Ascheri 2015 年的說法：這條 13 世紀末的法規不是針對城裡的個別地點，而是界定了整座城市的住宅建築，並規定柱廊連同地面鋪面的維護，永遠是屋主自己的義務。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，條文寫得很具體：它處理的是「該有柱廊卻沒有」的房屋，責任單位是每一戶臨街的那一段牆面。柱廊因此是一戶一段接起來的，只要有一戶不蓋或拆掉，整條有遮蔽的通道就在那裡斷開。Ceccarelli 書中轉引的 1389 年法典版本，才明文寫出「新建的房屋應在臨路一側有足夠的柱廊」。沿這條街看斷口，看的就是這種一戶一段的責任在哪裡沒有接上。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "① 雙塔下的 San Bartolomeo 柱廊：宮殿柱廊前換上了巴洛克教堂"
+    },
+    {
+      "type": "p",
+      "text": "街的西端、Asinelli 塔旁邊，Strada Maggiore 4 號是今天 San Bartolomeo 教堂前的柱廊。Ceccarelli 書中由 Pascale Guidotti Magnani 撰寫的圖錄記載，它原本是一座宮殿的柱廊：1506 年 Bentivoglio 家族失勢後，教宗儒略二世（Julius II）讓支持者、司庫兼總執事 Giovanni Gozzadini 出任 San Bartolomeo 的院長。Gozzadini 在 1512 年決定重建教堂，把它併入雙塔下一座宏大的宮殿；請求在公有地上擴大柱廊的申請，年代是 1515 年。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "圖錄說，這座柱廊的形式完全是羅馬式的：沒有波隆那常見的細柱，而是粗壯的墩柱，拱與拱之間以科林斯式壁柱框起，壁柱上刻著砂岩燭台紋；在 16 世紀波隆那宮殿的柱廊裡，它的尺度最大。Gozzadini 1517 年遇刺，宮殿沒有完成，建築師不詳。後面的巴洛克教堂要到 1653 年才依 Agostino Barelli 的設計動工。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，在這條街上，柱廊不一定是房子的附屬品：這裡的柱廊是為一座沒蓋成的宮殿立起來的，眼前的巴洛克教堂比它晚了一百多年。1515 年那份申請也說明，到了 16 世紀，把柱廊往公有街面擴大，仍然要先向城市提出。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "② Casa Isolani 與對面的空地：一座留下，一座拆掉"
+    },
+    {
+      "type": "p",
+      "text": "往東南走約 200 公尺（依 OSM 估算），南側 19 號是 Casa Isolani。市府世界遺產網站說，它的 13 世紀木造柱廊「很可能是歐洲城市中仍然存在的最古老的中世紀柱廊」。圖錄記載，Isolani 家族在這一帶的紀錄始於 1374 年，但房子本身無疑更老。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "頭圖是 2017 年在柱廊底下往上拍的。木柱一路直通到上層樓板，柱頂有斜撐頂住長長的水平樑，樑上再擱一排橫向的擱柵，構成柱廊的平頂天花。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "圖錄說，柱廊上方只有一層簡單的住宅樓層，那一層原本給僕人或房客住，屋主自己的住處反而面向柱廊底下。"
+    },
+    {
+      "type": "p",
+      "text": "這些木柱有多高，資料說法不一。Ceccarelli 的論文寫，柱子是用斧頭削方的木料，高 8.25 公尺，是現存最高、可能也最古老的柱廊，他談這類高木柱時另說，年輪分析已經排除橡木的可能，用的多是栗木與針葉木。同一本書的圖錄卻寫「三根九公尺高的橡木柱」，市府網站寫「超過 9 公尺」。Ceccarelli 另引 Sulze 1927–28 年的測量，柱廊整體高度是 10.75 公尺。本文採論文的 8.25 公尺，並把差異列出。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "柱腳值得低頭看。Ceccarelli 描述，這裡細長的木柱先立在透石膏（selenite，一種結晶石膏）做的矮基座上，基座下面又是高高的截頂角錐形底座。他指出，像 Casa Isolani 這樣把木柱立在角錐底座上的房子，底下沒有地窖；像 Via Marsala 的 Casa Grassi 那樣把柱子立在一道連續矮牆（murello）上的，底下有深地窖，他據此推測前一種較早。圖錄再往前推一步：沒有地窖，暗示柱廊這塊地原本是街道的一部分。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "今天看到的立面，是 Raffaele Faccioli 在 1877 年修復的結果。天花上卡著三支箭，常被附會成刺客失手的傳說；圖錄說它們不是中世紀打鬥留下的，而是 1877 年修復時放上去的玩笑，市府網站也寫「per scherzo」。兩根磚砌高柱是 20 世紀加上的。從原本的大門往裡走，是一串相通的中庭，通到 Piazza Santo Stefano；市府網站說，這條叫 Corte Isolani 的通道 1995 年起開放公眾使用，裡面有商店。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "轉身看對面。北側的 Casa Sampieri 立面比左右鄰居往後退，前面沒有柱廊，只有一塊行人空地。Ceccarelli 說，這塊空地正是 1725 年拆掉的中世紀木柱廊原址，也是從 Porta Ravegnana 到 Via Guerrazzi 之間，這條街唯一沒有柱廊的一段。主管市容的 Assunteria di Ornato 在 1725 年 4 月 23 日核准拆除，並准許放九根石樁（fittoni），圍出舊柱廊的位置。圖錄推測拆除的原因可能是保存狀況太差。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "拆除前有人畫下它。那張圖的題字是「Al nome di Dio anno 1725. Vero e reale prospetto dell'antichissima faciata del palazzo Sampieri」，意思是「以天主之名，1725 年。Sampieri 宮極古老立面的真實圖樣」（本文自譯），今藏波隆那 Archiginnasio 市立圖書館的 Gozzadini 收藏。Ceccarelli 從圖上的標註換算：柱廊有五根木柱，其中兩根分成上下兩段，柱徑 76 公分，柱高 11.02 公尺，柱廊全長 22.80 公尺，將近今天 Casa Isolani 的兩倍長。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "Ceccarelli 寫道，這座柱廊和 1699 年為了拓寬 Via Castiglione 而拆掉的大主教府柱廊一樣，木柱移除後沒有另立支撐，在城市連續的街景裡留下明顯的空缺。由此推想，1288 年條文要求的是「該有柱廊的房子」要蓋、要修，1725 年的許可卻讓這一段不再「該有」；九根石樁劃出的，是一段被正式解除義務的街面。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "③ 一個路口兩種答案：Servi 柱廊變寬，Davia Bargellini 宮沒有柱廊"
+    },
+    {
+      "type": "p",
+      "text": "再往東約 250 公尺（依 OSM 估算），Strada Maggiore 和南邊的 Via Guerrazzi、北邊的 Piazza Aldrovandi 交會。路口東南側是 Santa Maria dei Servi 教堂。圖錄記載，聖母忠僕會（Servi di Maria）1305 年起就在這一帶；1392 年，公社把一段公有地交給修會蓋柱廊，用紅、白兩色石材，是向城市紋章致意。市府網站說，材料是維洛納大理石與伊斯特里亞石，寬度將近 6 公尺，是波隆那最寬的柱廊。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "設計者可能是正在隔壁擴建教堂的 Antonio di Vincenzo（San Petronio 大教堂的建築師）與修會總會長 Andrea Manfredi da Faenza，但圖錄說兩人參與柱廊並沒有文件記載。為了省下運費，柱身用兩段不高的圓柱石接成，接縫處以一圈圓環線腳收邊，這個做法後來被城裡其他建築模仿。柱頭還是晚期哥德式，上面承著低矮的弧拱，所以柱廊又寬又通透。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "它不是一次蓋成的。圖錄列出：1492、1515–1521 年與 17 世紀三度延伸，都沿用晚期哥德式的樣子。路口原本有一座 San Tommaso 教堂，1849 年拆除；之後依 Giuseppe Modonesi 的設計，由 Enrico Brunetti Rodati 建成今天的四面柱廊，圖錄寫 1852 到 1855 年，市府網站寫 1852 到 1857 年。1927 年最後五個開間倒塌，又照 14 世紀的形式重建。",
+      "tag": "史實"
+    },
+    {
+      "type": "figure",
+      "id": "fservi",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Bologna%2C_Str._Maggiore%2C_portico.jpg/1280px-Bologna%2C_Str._Maggiore%2C_portico.jpg",
+      "width": 1280,
+      "height": 854,
+      "alt": "晴天的石板路口。左半邊是一座立在矮石牆上的開放拱廊，拱廊外緣是淺色石柱與磚紅色的弧拱，牆前有幾級台階，拱廊後方是綠樹和一座尖頂磚造鐘樓。畫面中間有兩根矮石樁，右邊一根粗大的紅色石柱上箍著金屬環，旁邊是一條往畫面深處延伸的長柱廊，地面淺色，天花有吊燈。",
+      "caption": "Santa Maria dei Servi 前的路口，2019 年 8 月攝；Commons 的說明是 Strada Maggiore 上的柱廊、朝西拍攝，後方是 Servi 教堂的鐘樓。左邊是立在矮牆上的四面柱廊，可以看到台階；右邊是紅色石柱撐起的柱廊，一路延伸。本文無法從照片確認拍攝點的確切位置。2019 年的樣子，不代表現況。",
+      "credit": "MenkinAlRire／Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bologna,_Str._Maggiore,_portico.jpg",
+      "made": "2019"
+    },
+    {
+      "type": "p",
+      "text": "Ceccarelli 對寬度的解釋是：和同時代的柱廊相比，它寬得異常，可能和市集日需要遮蔽攤位有關。圖錄另一段說，教堂很長，柱廊原本在這裡中斷，Servi 柱廊把 Strada Maggiore 的人行通道接了起來，所以「在都市層面上有很大的價值」。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，Servi 和 Casa Isolani 走的是相反的方向。Isolani 那一型，是私人把房子伸到街上，事後被法規追認；Servi 則是公社主動讓出一段公有地，換來一段由修會出錢興建、對公眾開放的遮蔽通道。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "路口北側、正對 Servi 柱廊的 Davia Bargellini 宮，卻是這條街上少數沒有柱廊的建築。市府網站的說明是：宮殿 1610 年起建，併入兩處既有房產；1638 年，元老院議員 Astorre 獲准依 Bartolomeo Provaglia 的設計興建立面；大門兩側是 Gabriele Brunelli 與學生 Francesco Agnesini 用砂岩雕成的兩尊男像柱。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "為什麼沒有柱廊，有兩種說法。市府網站說，不設柱廊的立面常是授予元老院議員宅邸的特權，讓立面成為主角，顯示家族的地位與身分。Ceccarelli 的說法著重在建築師：把原有柱廊改成單純的人行道，是 Provaglia（書中拼作 Provagli）自己的提議，主要出於美觀考量。兩種說法並不互斥。市府網站另說，宮殿一樓自 1924 年起是市立工藝美術館（Museo Civico d'Arte Industriale），今天的陳列是 1984 年的配置；開放時間本文沒有核對。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "figure",
+      "id": "f1910",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Portico_dei_Servi%2C_Bologna%2C_1910.png/1280px-Portico_dei_Servi%2C_Bologna%2C_1910.png",
+      "width": 1280,
+      "height": 808,
+      "alt": "泛黃的黑白明信片，上方印著「Bologna Via Mazzini」。左邊是一排細長石柱撐起的拱廊，柱下有穿長大衣、戴帽子的行人。路中央鋪著石塊，有兩條電車軌道，一個小男孩站在軌道上，幾位穿長裙的女士正在過街。右邊是一棟高大的宮殿，牆面直接臨街，大門兩側各有一尊人像柱撐著上方的陽台。遠方街道盡頭有一座細高的方塔。",
+      "caption": "Servi 柱廊（左）與 Davia Bargellini 宮（右，門邊兩尊男像柱），1910 年的明信片，鏡頭朝雙塔方向。左邊行人走在柱廊下，右邊行人走在路面上。明信片印的街名是「Via Mazzini」；這條街何時用過這個名字，本文沒有讀到可核對的原始資料，不寫。1910 年的樣子，不代表現況。",
+      "credit": "作者不詳；Fausto Malpensa 明信片收藏／Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Portico_dei_Servi,_Bologna,_1910.png",
+      "made": "1910"
+    },
+    {
+      "type": "h",
+      "text": "路口以東：八角柱與一條通行條款"
+    },
+    {
+      "type": "p",
+      "text": "Ceccarelli 寫道，從 14 世紀末到整個 15 世紀，波隆那的柱廊經歷了系統性的改造，木柱逐步換成磚造八角柱。他提到 Sighinolfi 與 Sulze 都強調一條規定：柱廊的高度和寬度不得少於 10 個波隆那呎，而且木柱要換成磚石。正文把這條規定寫在 1363 年，註腳引的卻是 1389 年的法典，本文無法判斷哪一個年代正確。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "書中說，這種八角磚柱的新做法沿著從 Porta Ravegnana 放射出去的幾條大街擴散，「尤其是 Strada Maggiore」；北側 38–40 號的 Gozzadini Reggiani Zacchia 宮與 50 號的 Guidalotti Alberani 宮，柱廊幾乎完整保存到今天。到了 17 世紀，主幹道上的柱廊又越蓋越寬、越高。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "quote",
+      "original": "ita quod per eas pedes libere transiri possit sine impedimento bancarum",
+      "text": "使行人能自由穿過柱廊，不受長凳阻擋。",
+      "cite": "1389 年《波隆那法典》論柱廊條，ASBo, Statuta Comunis Bononiae, 1389, fol. 425；轉引自 Ceccarelli 2022 年書註 47，本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "1389 年那條規定還寫了罰則：擺放固定物每件每次罰 20 索爾多，不固定物或在柱廊裡幹活的人罰 10 索爾多；新柱廊高、寬都要 10 呎，不足的舊柱廊由管街道的公證人裁量改正；任何人都可檢舉。依 Ceccarelli 的換算，7 呎約 2.66 公尺；照同樣比例，10 呎約 3.8 公尺（本報換算）。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，柱廊雖是私人產權，法律關心的始終是走的人：1250 年保障騎馬的人過得去，1389 年保障行人不被長凳擋住。屋主可以在柱廊下做生意，但不能把通道佔滿。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "④ Hercolani 宮：最後一座帶柱廊的元老宅邸"
+    },
+    {
+      "type": "p",
+      "text": "繼續往東，南側 45 號是 Hercolani 宮。市府網站說，它 1793 年起依 Angelo Venturoli 的設計興建，是最後一座帶柱廊的元老院議員宅邸，今天由波隆那大學的數個系所使用。同書由 Pascale Guidotti Magnani 撰寫的圖錄把 Venturoli 的柱廊定在 1785 年，評它是當成既有柱廊的延伸來設計的，相對於上方的立面顯得太低；Ceccarelli 則提到 1791 年另有一份方案，後來放棄，改用細長的多立克柱。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "本文推測，從 Davia Bargellini 到 Hercolani，兩座元老宅邸一座不設柱廊，一座設了卻被嫌太矮。在這條街上，柱廊設不設、怎麼設，一直在屋主的地位、建築師的眼光和城市慣例之間拉扯，不只是法條說了算。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "⑤ 到 ⑥ 出城門：Alemanni 柱廊背後沒有房子"
+    },
+    {
+      "type": "p",
+      "text": "Strada Maggiore 在 Porta Maggiore 結束。舊城牆的位置今天是環城大道。該書由市長 Lepore 等人署名的導言說，波隆那的柱廊總長 62 公里，其中 42 公里在舊城牆，也就是今天的環城大道以內。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "出了城門，街名改為 Via Mazzini，柱廊仍然往東南延伸。市府網站說，這座柱廊在 1619 到 1631 年間興建，把城門和 Porta Maggiore 外 700 公尺的 Santa Maria Lacrimosa degli Alemanni 教堂連起來；設計者的名字提到的是 Floriano Ambrosini，教堂名稱來自條頓騎士團。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "Ceccarelli 的論文說，這是第一座在城外地面上以獨立線形結構蓋起來的柱廊：一側是連續的牆，另一側向周圍的田野敞開，當作遊行用的「有頂道路」。它把教宗出巡路線 Strada Maggiore 往羅馬的方向延伸出城，讓人從市中心走到教堂都不必走到露天底下。圖錄補充，興建者是這座教堂的加爾默羅會士，理由純粹出於信仰：柱廊讓信眾即使在壞天氣也持續湧入教堂，奉獻也就有了保障。1667 年，Mendicanti 柱廊以垂直方向接上它。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "figure",
+      "id": "falem",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Portico_Alemanni.jpg/1280px-Portico_Alemanni.jpg",
+      "width": 1280,
+      "height": 1707,
+      "alt": "直式照片，一條長長的拱廊往畫面深處延伸到很遠。左邊是連續的橘紅色牆面，牆上有門和一塊白色門牌；右邊是一排淺黃色方柱，柱頂之間是交叉拱頂，拱下有一根根橫向的細鐵拉桿。陽光從右邊斜照進來，在石板地面投下柱子的長影。柱外隱約可見車輛與單車。",
+      "caption": "Via Mazzini 上的 Alemanni 柱廊，2018 年 5 月攝；Commons 的說明是連接 Porta Maggiore 與 Alemanni 教堂的柱廊。左邊牆後今天是房子（牆上有門和門牌），右邊柱外是車道，拱下橫著一根根細鐵拉桿。2018 年的樣子，不代表現況。",
+      "credit": "Francesca Monti／Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Portico_Alemanni.jpg",
+      "made": "2018"
+    },
+    {
+      "type": "p",
+      "text": "Ceccarelli 說，這條柱廊建造時一側原本就是連續的牆。他寫到 19 世紀末以後城牆外的擴張時說，多層建築逐漸聚集在 San Luca 柱廊一帶，和 Alemanni 這條「有頂道路」周邊的情形相同。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "Alemanni 柱廊興建時背後沒有房子，也就沒有「pro sua testata」、各管自己門面的屋主，1288 年的條文管不到它。從雙塔到城門，Strada Maggiore 的柱廊是一戶一段的義務接起來的；出了城門，改由一個修會一口氣蓋完。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "timeline",
+      "title": "這條街上的柱廊年表",
+      "items": [
+        {
+          "when": "13 世紀",
+          "label": "Casa Isolani 木柱廊",
+          "note": "現存可能最古老的柱廊"
+        },
+        {
+          "when": "1250 年",
+          "label": "法典規定柱廊高 7 呎",
+          "note": "讓人能騎馬通過（轉引自 Ceccarelli）"
+        },
+        {
+          "when": "1288 年",
+          "label": "法典要求該有柱廊的房屋建造並永久維護",
+          "note": "各戶負責自己臨街的一段"
+        },
+        {
+          "when": "1389 年",
+          "label": "法典規定柱廊淨空與禁擺長凳",
+          "note": "Ceccarelli 正文另寫 1363 年"
+        },
+        {
+          "when": "1392 年",
+          "label": "公社把公有地交給聖母忠僕會蓋 Servi 柱廊",
+          "note": "寬近 6 公尺"
+        },
+        {
+          "when": "1515 年",
+          "label": "Gozzadini 申請在公有地上擴大 San Bartolomeo 柱廊",
+          "note": "1517 年遇刺，宮殿未完成"
+        },
+        {
+          "when": "1619–1631",
+          "label": "Alemanni 柱廊",
+          "note": "城外第一座獨立的線形柱廊"
+        },
+        {
+          "when": "1638 年",
+          "label": "Davia Bargellini 宮獲准興建立面",
+          "note": "Bartolomeo Provaglia 設計，今天沒有柱廊"
+        },
+        {
+          "when": "1725.4.23",
+          "label": "核准拆除 Casa Sampieri 柱廊，放九根石樁",
+          "note": "Porta Ravegnana 到 Via Guerrazzi 之間唯一的斷口"
+        },
+        {
+          "when": "1793 年",
+          "label": "Hercolani 宮起建",
+          "note": "市府網站的年代"
+        },
+        {
+          "when": "1852 年起",
+          "label": "Servi 四面柱廊",
+          "note": "San Tommaso 教堂 1849 年拆除後興建"
+        },
+        {
+          "when": "1877 年",
+          "label": "Faccioli 修復 Casa Isolani",
+          "note": "三支箭在此時放上"
+        },
+        {
+          "when": "2021.7.28",
+          "label": "列入世界遺產",
+          "note": "「波隆那柱廊」12 組之一"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "從 Porta Ravegnana 到 Via Guerrazzi，這條街唯一沒有柱廊的一段，是 1725 年 4 月 23 日一紙許可留下的：五根 11 公尺高的木柱拆掉，換成九根石樁。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Bolognese Portico: Architecture, History, and the City",
+      "publisher": "Francesco Ceccarelli、Daniele Pascale Guidotti Magnani 著，Nadja Aksamija 英譯，Bologna University Press（CC BY-NC-SA 4.0，波隆那市府柱廊網站提供 PDF）",
+      "date": "2022-04",
+      "url": "https://portici.comune.bologna.it/sites/default/files/2024-04/ceccarelli-the-bolognese-portico.pdf",
+      "note": "市長 Lepore 等人署名的導言（福州會議、62／42 公里）；作者簡介與論文（2021 年第 44 屆會議、12 組）；Ceccarelli 論文：起源與 sporti、1250 與 1288 年法條、Ascheri 引文、Casa Isolani 8.25 公尺與木材、角錐底座與地窖、Sampieri 1725 年圖與石樁（註 26–27）、八角柱、1363／1389 年規定（註 47）、Servi 寬度解釋、Davia 的 Provagli、Alemanni 為獨立線形柱廊、20 世紀沿線建築；Pascale Guidotti Magnani 圖錄：Casa Isolani 與 Sampieri、Servi、San Bartolomeo、Alemanni、Hercolani 各條"
+    },
+    {
+      "title": "Strada Maggiore（La serie）",
+      "publisher": "Comune di Bologna，Portici Patrimonio Mondiale",
+      "date": "2026-10-15",
+      "url": "https://portici.comune.bologna.it/la-serie/strada-maggiore",
+      "note": "nobile／trionfale、via papalis、組成點；頁面無發布日，日期為查閱日（台灣時間）"
+    },
+    {
+      "title": "Casa Isolani",
+      "publisher": "Comune di Bologna，Portici Patrimonio Mondiale",
+      "date": "2026-10-15",
+      "url": "https://portici.comune.bologna.it/la-serie/strada-maggiore/casa-isolani",
+      "note": "13 世紀、超過 9 公尺、Faccioli 修復、三支箭、磚柱、Corte Isolani 1995 年開放；日期為查閱日"
+    },
+    {
+      "title": "Portico dei Servi",
+      "publisher": "Comune di Bologna，Portici Patrimonio Mondiale",
+      "date": "2026-10-15",
+      "url": "https://portici.comune.bologna.it/la-serie/strada-maggiore/portico-dei-servi",
+      "note": "1392 年、維洛納大理石與伊斯特里亞石、近 6 公尺、可能的設計者、四面柱廊 1852–1857；日期為查閱日"
+    },
+    {
+      "title": "Portico e Santuario degli Alemanni",
+      "publisher": "Comune di Bologna，Portici Patrimonio Mondiale",
+      "date": "2026-10-15",
+      "url": "https://portici.comune.bologna.it/la-serie/strada-maggiore/portico-e-santuario-degli-alemanni",
+      "note": "1619–1631、城門外 700 公尺、Floriano Ambrosini、條頓騎士團；日期為查閱日"
+    },
+    {
+      "title": "Palazzo Davia Bargellini – Museo",
+      "publisher": "Comune di Bologna，Portici Patrimonio Mondiale",
+      "date": "2026-10-15",
+      "url": "https://portici.comune.bologna.it/la-serie/strada-maggiore/palazzo-davia-bargellini-museo",
+      "note": "少數沒有柱廊的建築、元老宅邸特權、1610、1638、Provaglia、男像柱、1924 年起為博物館；日期為查閱日"
+    },
+    {
+      "title": "Palazzo Hercolani",
+      "publisher": "Comune di Bologna，Portici Patrimonio Mondiale",
+      "date": "2026-10-15",
+      "url": "https://portici.comune.bologna.it/la-serie/strada-maggiore/palazzo-hercolani",
+      "note": "1793 年起、Angelo Venturoli、最後一座帶柱廊的元老宅邸、波隆那大學使用；日期為查閱日"
+    },
+    {
+      "title": "UNESCO e patrimonio mondiale（首頁）",
+      "publisher": "Comune di Bologna，Portici Patrimonio Mondiale",
+      "date": "2026-10-15",
+      "url": "https://portici.comune.bologna.it/",
+      "note": "2021 年 7 月 28 日列入、12 組、62 公里；日期為查閱日"
+    },
+    {
+      "title": "Portici di Bologna UNESCO: al via il nuovo Piano di Gestione e l'ampliamento della governance",
+      "publisher": "Comune di Bologna，Portici Patrimonio Mondiale",
+      "date": "2026-09-28",
+      "url": "https://portici.comune.bologna.it/notizie/portici-di-bologna-unesco-al-il-nuovo-piano-di-gestione-e-lampliamento-della-governance",
+      "note": "Cabina di Regia 9 月 22 日會議、新管理計畫；頁面僅標最後更新日 28/09/2026"
+    },
+    {
+      "title": "Discover The Porticoes of Bologna",
+      "publisher": "Bologna Welcome（導覽摺頁 PDF）",
+      "date": "2025-01-07",
+      "url": "https://static.bolognawelcome.com/immagini/8d/de/e4/ab/20250108105836.pdf",
+      "note": "私人產權供公眾使用、1288 年法規、7 呎 2.66 公尺、Strada Maggiore 組延伸到 Alemanni；日期為 PDF 建檔日"
+    },
+    {
+      "title": "Lavori in corso in città: i principali cantieri stradali in programma da lunedì 15 giugno",
+      "publisher": "Comune di Bologna",
+      "date": "2026-06-12",
+      "url": "https://www.comune.bologna.it/novita/comunicati-stampa/lavori-corso-citta-i-principali-cantieri-stradali-programma-da-lunedi-15-giugno-0",
+      "note": "Piazza di Porta Ravegnana 因 Garisenda 塔結構監測封閉"
+    },
+    {
+      "title": "Strada Maggiore、Via Giuseppe Mazzini 與周邊街道圖資",
+      "publisher": "OpenStreetMap 貢獻者（ODbL）",
+      "date": "2026-10-15",
+      "url": "https://www.openstreetmap.org/way/260898977",
+      "note": "以 Overpass API 下載街道中心線與建物輪廓，計算街長約 950 公尺並繪製示意圖；日期為下載日（台灣時間）"
+    },
+    {
+      "title": "Statuti di Bologna dell'anno 1288, vol. 2",
+      "publisher": "Gina Fasoli、Pietro Sella 校訂，Biblioteca Apostolica Vaticana",
+      "date": "1939",
+      "url": "https://portici.comune.bologna.it/sites/default/files/2024-04/ceccarelli-the-bolognese-portico.pdf",
+      "note": "第 163 頁 1288 年柱廊條文；轉引自 Ceccarelli 2022 年書註 17，本文未讀原書"
+    },
+    {
+      "title": "Statuti di Bologna dall'anno 1245 all'anno 1267",
+      "publisher": "Luigi Frati 編，Regia Tipografia",
+      "date": "1869",
+      "url": "https://portici.comune.bologna.it/sites/default/files/2024-04/ceccarelli-the-bolognese-portico.pdf",
+      "note": "第 188 頁，1250 年法典第一卷第 26 條（柱廊高 7 呎）；轉引自 Ceccarelli 2022 年書註 39，本文未讀原書"
+    },
+    {
+      "title": "Statuta Comunis Bononiae, 1389, fol. 425",
+      "publisher": "Archivio di Stato di Bologna",
+      "date": "1389",
+      "url": "https://portici.comune.bologna.it/sites/default/files/2024-04/ceccarelli-the-bolognese-portico.pdf",
+      "note": "柱廊尺寸、淨空、長凳罰則；轉引自 Ceccarelli 2022 年書註 47，本文未讀原件"
+    },
+    {
+      "title": "Conclusioni. I portici, un problema di identità cittadina",
+      "publisher": "Mario Ascheri，收於 Bocchi、Smurra 編《I portici di Bologna nel contesto europeo》，Luca Sossella editore",
+      "date": "2015",
+      "url": "https://portici.comune.bologna.it/sites/default/files/2024-04/ceccarelli-the-bolognese-portico.pdf",
+      "note": "第 270 頁；轉引自 Ceccarelli 2022 年書註 20，本文未讀原文"
+    },
+    {
+      "title": "Gli antichi portici di Bologna",
+      "publisher": "Heinrich（Enrico）Sulze，Atti e Memorie della R. Deputazione di Storia Patria per le Province di Romagna",
+      "date": "1928",
+      "url": "https://portici.comune.bologna.it/sites/default/files/2024-04/ceccarelli-the-bolognese-portico.pdf",
+      "note": "sporti 起源說、Casa Isolani 柱廊總高 10.75 公尺（第 405 頁）；轉引自 Ceccarelli 2022 年書，本文未讀原文；期刊卷期標為 1927–1928"
+    },
+    {
+      "title": "I portici di Bologna antica",
+      "publisher": "Lino Sighinolfi，《Il Comune di Bologna》XI，pp. 699–710",
+      "date": "1925",
+      "url": "https://portici.comune.bologna.it/sites/default/files/2024-04/ceccarelli-the-bolognese-portico.pdf",
+      "note": "10 呎規定；轉引自 Ceccarelli 2022 年書註 47，本文未讀原文"
+    }
+  ]
+}
