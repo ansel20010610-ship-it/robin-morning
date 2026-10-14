@@ -1,0 +1,272 @@
+{
+  "column": "fiction",
+  "date": "2026-10-15",
+  "title": "換人說故事時，每個視角只交出自己看見的",
+  "dek": "群像小說輪流換敘述者，怎麼決定每一棒說多少、留多少？本文用原創示範比較視角走漏與守住的同一夜，再看《月光石》怎麼把規則寫進故事。",
+  "topic_key": "fiction:pov-relay-witness-limits",
+  "updated_at": "2026-10-15T02:50:00+08:00",
+  "spoiler": "本文談到柯林斯《月光石》的敘述結構與第一部結尾的情勢，不透露竊賊身分。",
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/26/The_Moonstone_1st_ed.jpg",
+    "width": 949,
+    "height": 1600,
+    "alt": "泛黃的書名頁。上方大字 THE MOONSTONE.，下方哥德字體 A Romance.，中段 BY WILKIE COLLINS，列出作者另著 The Woman in White、No Name、Armadale，再下為 IN THREE VOLUMES. VOL. I.，底部是 LONDON: TINSLEY BROTHERS, 18, CATHERINE STREET, STRAND. 1868.",
+    "caption": "《月光石》1868 年倫敦 Tinsley Brothers 三卷本第 1 卷的書名頁。這部小說的每一段都由一位當事人執筆，各人只寫自己親歷的部分；第 1 卷在作者序之後，先以一份家族文件寫成的序幕開場，再交給管家貝特瑞吉。",
+    "credit": "Wilkie Collins，The Moonstone，Tinsley Brothers，1868 年，第 1 卷書名頁；掃描出自 Internet Archive（moonstoneromance01coll），依 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Moonstone_1st_ed.jpg",
+    "made": "1868"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "群像奇幻寫到「事件之夜」，最常卡住的不是情節，而是由誰來看。閘門被打開的那一夜，學徒、閘頭、稅吏、看門人都在附近，作者手上五條線都想交代。最省事的寫法是讓鏡頭在幾個人之間來回，一章把事情講完。這一篇只處理一個問題：換視角的時候，每一位敘述者該交出多少，又該把什麼留給下一位；怎麼讓這個限制看起來像角色的處境，而不是作者藏牌。"
+    },
+    {
+      "type": "p",
+      "text": "先說本文的讀法。視角不是攝影機的位置，而是一份知識清單：這個人此刻看得到什麼、聽得到什麼、誤會了什麼。一場戲交給誰，等於決定讀者這一段拿到哪幾張牌、少了哪幾張。群像小說的好處，是缺的那幾張可以由下一個人交出來；壞處是作者一偷懶，就會讓某位敘述者說出他不可能知道的事。下面用同一夜寫三段：版本 A 的視角會漏，版本 B 守住學徒看得見的範圍，版本 C 示範下一棒怎麼接。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "示範世界：霧渠城的東閘"
+    },
+    {
+      "type": "p",
+      "text": "以下設定為本文原創。霧渠城建在河口沙洲上，下市地勢最低，靠東閘擋住秋汛。開閘要有閘令，鑰匙只有一把，平日掛在閘頭老韋的腰帶上。十七歲的學徒小蘆是老韋養大的，睡在閘房另一頭。閘台對岸是稅署，主事席夫人這個月一再上書，要求提早開閘，好讓滯留上游的鹽船過關。秋汛最高的那一夜，東閘在三更前被打開，河水灌進下市，看倉的周伯沒有出來。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "h",
+      "text": "版本 A：學徒的視角漏出別人的事"
+    },
+    {
+      "type": "p",
+      "text": "三更的鐘還沒敲，小蘆在閘房裡被鐵鏈聲吵醒。她摸黑跑上閘台，東閘已經開了一半，河水正翻過門檻往下市灌。老韋的腰帶掛在床頭，鑰匙不在上面。對岸稅署二樓亮著燈。燈是席夫人點的，她坐在燈下，把一頁通行帳撕下來，湊到火上，看著它捲起來。她不知道，兩個時辰前，老韋才為了一壺酒，把鑰匙押給了碼頭的船老大。小蘆一路跑到下市的石階，水已經淹到膝蓋。她喊倉裡的周伯，沒有人應。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "p",
+      "text": "**資訊。**這一段名義上跟著小蘆，讀者卻拿到三條線：開閘的事實、燒帳的席夫人、押鑰匙的老韋。後兩件小蘆不可能看見，「燈是席夫人點的」「她不知道」兩句，敘述已經離開了學徒。**期待。**讀者不必再問閘是誰開的，答案的兩個方向都擺在桌上，剩下的只是等角色追上。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**情緒。**小蘆的恐慌被兩句旁白截斷，最後她喊周伯那一句，讀者是帶著「我已經知道內情」的距離在聽，力道變弱。**代價。**小蘆此刻什麼都沒付出。讀者已經知道師父是醉後押了鑰匙，不是存心開閘，她對師父的懷疑沒有機會長出來。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**失敗條件。**如果全書本來就用全知敘述，而下一章緊接著審案，A 可以成立，它省下了篇幅。但在輪流換人說故事的結構裡，A 等於告訴讀者「這本書的視角會漏」。從此每一位敘述者說「我不知道」，讀者都會懷疑是作者故意不說，限制就失去信用。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "版本 B：只寫她看見的，連誤會一起交出來"
+    },
+    {
+      "type": "p",
+      "text": "三更的鐘還沒敲，我被鐵鏈聲吵醒。閘房裡黑著，我摸到師父的床，床是空的，被子還溫。腰帶掛在床頭，我摸了兩遍，鑰匙不在上面。我跑上閘台，東閘已經開了一半，河水翻過門檻往下市灌。對岸稅署二樓亮著燈，窗紙上有一個人影，站著不動，像在看這邊。那是誰，我到今天也不知道。我只記得風從那邊吹過來，帶著燒蠟的味道；稅署平常點的是油燈。我跑到下市的石階，水已經到膝蓋，我喊周伯，沒有人應。回到閘房，師父坐在門檻上，渾身是水，手裡握著鑰匙。他看了我一眼，什麼也沒說。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "p",
+      "text": "**資訊。**讀者知道的和小蘆一樣多：空床、少了的鑰匙、窗前的人影、蠟味，最後是握著鑰匙的師父。版本 A 漏出的兩件事（燒帳、押鑰匙），B 一件也沒說破，卻多了兩樣 A 沒有的東西：人影和蠟味。它們是小蘆真的感覺到、但無法解釋的細節。**期待。**最後一個畫面把線索全推向老韋，讀者會形成一個推論：師父開了閘。同時，人影和蠟味沒有落地，讀者會等下一個知道內情的人開口。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**情緒。**恐懼之外多了一層難受：她懷疑的是養大她的人，而師父沉默。「什麼也沒說」把重量交給讀者，讀者和小蘆一起不敢下結論。**代價。**如果作品設定這份陳述要交給審案的人，小蘆寫下「鑰匙不在」和「師父握著鑰匙」，就是在正式紀錄上指向自己的師父。她說了實話，失去的是她與老韋之間的信任。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**失敗條件。**一，小蘆明明該看見卻沒看見，例如她就站在稅署窗下卻沒抬頭，讀者會覺得是作者擋住了她的眼睛。二，「我到今天也不知道」這種句子一章出現三次，就成了作者在眨眼。三，讀者看不出她為什麼寫、寫給誰，限制就像任意規定。四，下一位敘述者只是把同一夜再說一遍，沒有新東西，接力就只剩重複。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "版本 C：下一棒怎麼接"
+    },
+    {
+      "type": "p",
+      "text": "閘頭學徒的陳述我讀過了。她寫的都是實話，只是她站在河的這一邊。那夜稅署二樓的燈是我點的，點的是蠟燭：油煙會燻黑帳冊，我要在天亮前把秋汛的通行帳抄完。窗前那個人影不是我。我坐在燈下，背對著窗。聽見鏈聲時我抬起頭，窗前已經沒有人，樓梯上有一串濕腳印，往下走，到大門就斷了。我主張提早開閘，這一點城裡人人知道，我不否認。我能作證的到此為止。那一夜誰進過稅署，請去問看門的人。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "p",
+      "text": "**資訊。**席夫人補上一件事（燈和蠟是她的），推翻小蘆一個沒說出口的假設（點燈的人就是窗前的人），又開了一個新缺口：濕腳印。讀者對老韋的懷疑沒有被證實，也沒有消失。**期待。**讀者轉向下一位證人：看門人。**情緒。**她的句子短、冷，和小蘆的喘息不同，聲音的差別本身就是資訊：讀者會開始衡量哪一位比較可信。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "**代價。**她主動承認自己當夜在場，又有提早開閘的動機，為了說實話，把自己也放進嫌疑名單。**失敗條件。**如果這一段只是替前一段解題，接力就變成答案卷。本文的判準是：每一棒至少交出一件新東西，並改變讀者對前一棒的一個判斷；兩件都做不到，這一棒可以刪。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "一部把規則寫進故事裡的小說：《月光石》"
+    },
+    {
+      "type": "spoiler",
+      "text": "以下談到《月光石》的敘述結構與第一部結尾的情勢，不透露竊賊身分。"
+    },
+    {
+      "type": "p",
+      "text": "威爾基・柯林斯（Wilkie Collins）的《月光石》（The Moonstone）1868 年 1 月 4 日至 8 月 8 日在狄更斯（Charles Dickens）主持的週刊 *All the Year Round* 連載，同年由 Tinsley Brothers 在倫敦出版三卷本。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "依 Project Gutenberg 本的目錄，全書由序幕、兩部正文和尾聲組成：序幕是一份寫於印度、記述 1799 年攻陷塞林伽巴丹（Seringapatam）的家族文件；第一部「鑽石失竊（1848）」由維林德夫人（Lady Verinder）的管家貝特瑞吉（Gabriel Betteredge）一人敘述；第二部「真相的發現（1848–1849）」由 8 段敘述接成，執筆者包括克拉克小姐（Miss Clack）、律師布魯夫（Mathew Bruff）、富蘭克林・布萊克（Franklin Blake，前後兩段，第二段接在詹寧斯之後）、從日記摘出的詹寧斯（Ezra Jennings）、克夫探長（Sergeant Cuff）、坎迪先生（Mr. Candy）的一封信，最後由貝特瑞吉收尾；尾聲是三份陳述。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "這套結構在小說第 1 章就交代了來歷。1850 年 5 月 21 日，布萊克找上貝特瑞吉，說他和律師布魯夫商量好一個寫法，要所有當事人輪流寫下鑽石的故事，範圍是："
+    },
+    {
+      "type": "quote",
+      "original": "as far as our own personal experience extends, and no farther.",
+      "text": "以我們各自親身經歷所及為限，不再往外一步。",
+      "cite": "《月光石》第一部第 1 章，英文依 Project Gutenberg 電子書 #155；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "到第一部最後一章（第 23 章），貝特瑞吉把規則講得更白：他被禁止寫出比自己當時所知更多的東西，別人告訴他的事，也要留給那些人親自寫。他的說法是："
+    },
+    {
+      "type": "quote",
+      "original": "In this matter of the Moonstone the plan is, not to present reports, but to produce witnesses.",
+      "text": "在月光石這件事上，辦法是不呈報告，而是請證人出場。",
+      "cite": "《月光石》第一部第 23 章，英文依 Project Gutenberg 電子書 #155；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "同一章裡，他先說自己「put things at their worst, even when they tell dead against my own view」（把情勢往最壞處擺，即使這對我自己的看法極為不利；本文自譯），接著說：讀者若依手上的證據站到探長那邊，認為唯一合理的解釋是瑞秋小姐（Miss Rachel）和放款人盧克（Mr. Luker）串通、鑽石已押在放款人家裡，他不怪讀者。然後留下一句「In the dark, I have brought you thus far. In the dark I am compelled to leave you, with my best respects.」（我在黑暗中帶你走到這裡，也不得不在黑暗中留下你，謹致敬意；本文自譯）。第一部隨後在他的說明與告別中結束。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，這條規則限制的是「當時知道什麼」，而不是「現在知道什麼」。貝特瑞吉動筆時是 1850 年，事情發生在 1848 年；他在同一章說自己坐在「superior enlightenment」（更明白的高處）裡，卻說自己奉命不能把讀者帶上去。讀者因此不會覺得被作者瞞著：瞞的是一個有名有姓、被規則約束、在第一部結尾還舉起一杯麥酒向讀者道別的管家。限制有了一個說得出口的理由，也有了一張臉。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "第二部第 1 段，柯林斯讓這條規則在書頁上被挑戰。克拉克小姐敘述的第 6 章，收入她和布萊克的七封往來短箋：她已在手稿後附上她收藏的「precious publications」（珍貴出版品）的大量摘錄，被布萊克退回；她再問能不能借用「later discoveries」（後來的發現）把自己的部分寫完整，布萊克重申，請她只寫日記裡記下的、她個人經歷過的人與事，後來的發現留給能以「actual witnesses」（實際證人；以上本文自譯）身分執筆的人。她接著要求把這些短箋也收進自己的敘述，讓信件替她說話。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，對群像作者最有用的不是規則本身，而是柯林斯讓規則有人執行、有人不服。執行的人讓限制可信，不服的人讓讀者看見限制的形狀：克拉克小姐想說而不准說的那些，正好提醒讀者，這一段的邊界在哪裡。",
+      "tag": "推論"
+    },
+    {
+      "type": "svg",
+      "title": "證人接力：每一棒交出什麼、留下什麼",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 520\" role=\"img\" aria-label=\"上半：《月光石》從序幕到尾聲的 11 段敘述順序；下半：本文原創示範霧渠城三位敘述者各自交出的線索與留下的缺口\"><text x=\"10\" y=\"20\" font-size=\"14\" font-weight=\"600\">《月光石》：證人一個接一個</text><rect class=\"soft\" x=\"10\" y=\"32\" width=\"16\" height=\"11\" rx=\"2\"/><text x=\"31\" y=\"42\" font-size=\"11\">敘述者自述</text><rect class=\"gold line\" x=\"110\" y=\"32\" width=\"16\" height=\"11\" rx=\"2\" stroke-width=\"1.6\"/><text x=\"131\" y=\"42\" font-size=\"11\">文件、日記摘錄、信</text><rect class=\"gold line\" x=\"10\" y=\"58\" width=\"84\" height=\"40\" rx=\"4\" stroke-width=\"1.6\"/><text x=\"52\" y=\"75\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">1 序幕</text><text class=\"muted\" x=\"52\" y=\"90\" font-size=\"10.5\" text-anchor=\"middle\">家族文件</text><line class=\"muted line\" x1=\"96\" y1=\"78\" x2=\"101\" y2=\"78\" stroke-width=\"1.2\"/><rect class=\"soft\" x=\"102\" y=\"58\" width=\"84\" height=\"40\" rx=\"4\"/><text x=\"144\" y=\"75\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">2 貝特瑞吉</text><text class=\"muted\" x=\"144\" y=\"90\" font-size=\"10.5\" text-anchor=\"middle\">管家・第一部</text><line class=\"muted line\" x1=\"188\" y1=\"78\" x2=\"193\" y2=\"78\" stroke-width=\"1.2\"/><rect class=\"soft\" x=\"194\" y=\"58\" width=\"84\" height=\"40\" rx=\"4\"/><text x=\"236\" y=\"75\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">3 克拉克</text><text class=\"muted\" x=\"236\" y=\"90\" font-size=\"10.5\" text-anchor=\"middle\">依日記寫</text><line class=\"muted line\" x1=\"280\" y1=\"78\" x2=\"285\" y2=\"78\" stroke-width=\"1.2\"/><rect class=\"soft\" x=\"286\" y=\"58\" width=\"84\" height=\"40\" rx=\"4\"/><text x=\"328\" y=\"75\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">4 布魯夫</text><text class=\"muted\" x=\"328\" y=\"90\" font-size=\"10.5\" text-anchor=\"middle\">律師</text><rect class=\"soft\" x=\"10\" y=\"116\" width=\"84\" height=\"40\" rx=\"4\"/><text x=\"52\" y=\"133\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">5 布萊克</text><text class=\"muted\" x=\"52\" y=\"148\" font-size=\"10.5\" text-anchor=\"middle\">主持彙編</text><line class=\"muted line\" x1=\"96\" y1=\"136\" x2=\"101\" y2=\"136\" stroke-width=\"1.2\"/><rect class=\"gold line\" x=\"102\" y=\"116\" width=\"84\" height=\"40\" rx=\"4\" stroke-width=\"1.6\"/><text x=\"144\" y=\"133\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">6 詹寧斯</text><text class=\"muted\" x=\"144\" y=\"148\" font-size=\"10.5\" text-anchor=\"middle\">日記摘錄</text><line class=\"muted line\" x1=\"188\" y1=\"136\" x2=\"193\" y2=\"136\" stroke-width=\"1.2\"/><rect class=\"soft\" x=\"194\" y=\"116\" width=\"84\" height=\"40\" rx=\"4\"/><text x=\"236\" y=\"133\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">7 布萊克</text><text class=\"muted\" x=\"236\" y=\"148\" font-size=\"10.5\" text-anchor=\"middle\">接著寫</text><line class=\"muted line\" x1=\"280\" y1=\"136\" x2=\"285\" y2=\"136\" stroke-width=\"1.2\"/><rect class=\"soft\" x=\"286\" y=\"116\" width=\"84\" height=\"40\" rx=\"4\"/><text x=\"328\" y=\"133\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">8 克夫</text><text class=\"muted\" x=\"328\" y=\"148\" font-size=\"10.5\" text-anchor=\"middle\">探長</text><rect class=\"gold line\" x=\"10\" y=\"174\" width=\"84\" height=\"40\" rx=\"4\" stroke-width=\"1.6\"/><text x=\"52\" y=\"191\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">9 坎迪</text><text class=\"muted\" x=\"52\" y=\"206\" font-size=\"10.5\" text-anchor=\"middle\">一封信</text><line class=\"muted line\" x1=\"96\" y1=\"194\" x2=\"101\" y2=\"194\" stroke-width=\"1.2\"/><rect class=\"soft\" x=\"102\" y=\"174\" width=\"84\" height=\"40\" rx=\"4\"/><text x=\"144\" y=\"191\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">10 貝特瑞吉</text><text class=\"muted\" x=\"144\" y=\"206\" font-size=\"10.5\" text-anchor=\"middle\">回來收尾</text><line class=\"muted line\" x1=\"188\" y1=\"194\" x2=\"193\" y2=\"194\" stroke-width=\"1.2\"/><rect class=\"gold line\" x=\"194\" y=\"174\" width=\"84\" height=\"40\" rx=\"4\" stroke-width=\"1.6\"/><text x=\"236\" y=\"191\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">11 尾聲</text><text class=\"muted\" x=\"236\" y=\"206\" font-size=\"10.5\" text-anchor=\"middle\">三份陳述</text><text class=\"accent\" x=\"10\" y=\"236\" font-size=\"11\">第一部＝第 2 段（1848 年鑽石失竊）；第二部＝第 3–10 段（1848–1849 年）</text><text class=\"muted\" x=\"10\" y=\"252\" font-size=\"11\">規則：只寫自己當時親歷的，其餘留給親歷者寫</text><line class=\"muted line\" x1=\"10\" y1=\"270\" x2=\"370\" y2=\"270\" stroke-width=\"0.8\"/><text x=\"10\" y=\"294\" font-size=\"14\" font-weight=\"600\">霧渠城（原創示範）：每一棒交出什麼</text><rect class=\"soft\" x=\"10\" y=\"310\" width=\"84\" height=\"44\" rx=\"4\"/><text x=\"52\" y=\"329\" font-size=\"12.5\" font-weight=\"600\" text-anchor=\"middle\">小蘆</text><text class=\"muted\" x=\"52\" y=\"345\" font-size=\"10.5\" text-anchor=\"middle\">閘頭學徒</text><text x=\"104\" y=\"328\" font-size=\"11.5\">交出：空床、鑰匙不在、人影、蠟味、師父握鑰匙</text><text class=\"accent\" x=\"104\" y=\"346\" font-size=\"11.5\">缺口：窗前的人是誰？</text><polyline class=\"accent line\" points=\"100,350 100,366 52,366 52,376\" stroke-width=\"1.4\" stroke-dasharray=\"3 3\"/><rect class=\"soft\" x=\"10\" y=\"378\" width=\"84\" height=\"44\" rx=\"4\"/><text x=\"52\" y=\"397\" font-size=\"12.5\" font-weight=\"600\" text-anchor=\"middle\">席夫人</text><text class=\"muted\" x=\"52\" y=\"413\" font-size=\"10.5\" text-anchor=\"middle\">稅署主事</text><text x=\"104\" y=\"396\" font-size=\"11.5\">交出：燈和蠟燭是她的，人影不是她</text><text class=\"accent\" x=\"104\" y=\"414\" font-size=\"11.5\">缺口：樓梯上的濕腳印是誰的？</text><polyline class=\"accent line\" points=\"100,418 100,434 52,434 52,444\" stroke-width=\"1.4\" stroke-dasharray=\"3 3\"/><rect class=\"muted line\" x=\"10\" y=\"446\" width=\"84\" height=\"44\" rx=\"4\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/><text x=\"52\" y=\"465\" font-size=\"12.5\" font-weight=\"600\" text-anchor=\"middle\">看門人</text><text class=\"muted\" x=\"52\" y=\"481\" font-size=\"10.5\" text-anchor=\"middle\">下一棒</text><text x=\"104\" y=\"464\" font-size=\"11.5\">要交出：那一夜誰進過稅署</text><text class=\"accent\" x=\"104\" y=\"482\" font-size=\"11.5\">（本文未寫）</text><text class=\"muted\" x=\"10\" y=\"514\" font-size=\"10.5\">虛線：上一棒留下的缺口，交給下一位證人</text></svg>",
+      "caption": "上：《月光石》的 11 段敘述，依 Project Gutenberg 電子書 #155 的目錄與各段標題整理；第 2 段為第一部，第 3–10 段為第二部，金框為以文件、日記摘錄或書信形式收入的部分。下：本文原創示範霧渠城的三位敘述者，每一棒交出的線索與留給下一棒的缺口；看門人一段本文未寫。",
+      "credit": "本報原創圖解"
+    },
+    {
+      "type": "table",
+      "title": "版本 A／B／C 對照（原創示範）",
+      "head": [
+        "",
+        "版本 A",
+        "版本 B",
+        "版本 C"
+      ],
+      "rows": [
+        [
+          "敘述者",
+          "名義上是小蘆，實際漏出席夫人與老韋的事",
+          "小蘆，只寫自己看見、聽見、聞到的",
+          "席夫人，讀過小蘆的陳述後接著寫"
+        ],
+        [
+          "讀者拿到",
+          "開閘、燒帳、押鑰匙三條線",
+          "空床、鑰匙不在、人影、蠟味、師父握著鑰匙",
+          "燈與蠟的來歷、濕腳印"
+        ],
+        [
+          "讀者的推論",
+          "不必推論，只等角色追上",
+          "師父開了閘",
+          "師父可能不是唯一的人選"
+        ],
+        [
+          "留下的缺口",
+          "幾乎沒有",
+          "窗前的人是誰",
+          "濕腳印是誰的"
+        ],
+        [
+          "角色付出",
+          "無",
+          "在紀錄上指向師父",
+          "把自己放進嫌疑名單"
+        ]
+      ],
+      "caption": "判斷一段視角有沒有守住，看第一列：敘述者能不能為段落裡每一句話負責。"
+    },
+    {
+      "type": "exercise",
+      "title": "把一場群戲拆成兩棒證詞",
+      "steps": [
+        "從自己的稿子挑一場有三個以上角色在場的關鍵戲，列出每個角色在這一場看得到、聽得到、誤會了什麼，各寫三到五項。",
+        "選一位知道得最少、但最在乎結果的角色當第一棒，用他的視角重寫這一場，150–300 字。他看不到的事一句都不寫，但要寫進至少一個他感覺到、卻無法解釋的細節。",
+        "替第一棒寫一句他為什麼留下這份紀錄、寫給誰；這句話不一定要出現在正文，但要能回答。",
+        "選第二棒，寫 100–200 字。規定自己：補上一件第一棒不知道的事，推翻或動搖第一棒的一個判斷，再留下一個新缺口。",
+        "把兩棒各自的「交出」與「缺口」寫成一行，像本文圖解下半那樣排出來，檢查缺口是不是真的交給了下一個人。",
+        "請一位沒讀過稿子的讀者讀完兩棒，請他寫下：他認為是誰做的、他最想聽誰開口。"
+      ],
+      "criteria": [
+        "第一棒的每一句，都能指出是他看見、聽見或推想到的；挑不出一句只有作者才知道的話。",
+        "讀者在第一棒後寫下的嫌疑人，和第二棒之後寫下的不同，或至少多了一個。",
+        "讀者最想聽開口的那個人，正是你安排的第三棒，或是你原本沒想到、但值得寫的人。",
+        "第二棒的角色為了作證付出一項可以指名的代價，例如名聲、關係或安全。"
+      ],
+      "note": "這項練習不要求整本書改用輪流敘述。單一視角的長篇也可以用同一套檢查：每一章開頭問一次，這一章的敘述者能為哪些句子負責。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wilkie Collins, The Moonstone（Project Gutenberg eBook #155）",
+      "publisher": "Project Gutenberg",
+      "date": "2006-01-12",
+      "url": "https://www.gutenberg.org/ebooks/155",
+      "note": "目錄；第一部第 1 章、第 23 章；第二部第一段（克拉克小姐）第 6 章往來短箋；各段標題。電子書最近更新於 2026-01-10"
+    },
+    {
+      "title": "The Moonstone",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Moonstone",
+      "note": "連載起訖日期（1868-01-04 至 1868-08-08）與 All the Year Round、Tinsley 出版；2026-10-14 查閱"
+    },
+    {
+      "title": "The Moonstone (I)",
+      "publisher": "Dickens Journals Online",
+      "date": "1868-01-04",
+      "url": "https://www.djo.org.uk/indexes/articles/the-moonstone-i.html",
+      "note": "All the Year Round 第 XIX 卷第 454 期，連載首期"
+    },
+    {
+      "title": "The Moonstone (XXXII)",
+      "publisher": "Dickens Journals Online",
+      "date": "1868-08-08",
+      "url": "https://www.djo.org.uk/indexes/articles/the-moonstone-xxxii.html",
+      "note": "All the Year Round 第 XX 卷第 485 期，連載末期"
+    },
+    {
+      "title": "File:The Moonstone 1st ed.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:The_Moonstone_1st_ed.jpg",
+      "note": "頭圖出處與授權；2026-10-14 查閱"
+    }
+  ]
+}
