@@ -35,17 +35,8 @@
     "note": "全刊 8 欄齊備無缺稿；巴薩晨報補上弗利克賽後說法與賽後新聞並依審稿修正，觀測站由第 4 班判定靜默；備稿補位無需動作"
   },
   "reserve": {
-    "finished_at": "2026-10-14T00:44:21+08:00",
-    "missing": [
-      "football",
-      "perio",
-      "music",
-      "civilization",
-      "devotion",
-      "philosophy",
-      "art",
-      "photo"
-    ],
-    "note": "各欄庫存皆達標，無需修正，未補寫"
+    "finished_at": "2026-10-14T14:38:16+08:00",
+    "missing": [],
+    "note": "備稿庫各欄皆已達標、無需修正，本班未新增備稿"
   }
 }
