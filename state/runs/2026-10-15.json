@@ -9,5 +9,14 @@
       "literature"
     ],
     "note": "完成 devotion（哈 3:17–19）、music（孟德爾頌八重奏 op.20）、perio（Axelsson 2004 30 年追蹤），三篇皆經獨立審稿修正後推送，validate 全數通過（僅 Wikimedia 429 限流 WARN）"
+  },
+  "2": {
+    "finished_at": "2026-10-15T02:09:29+08:00",
+    "missing": [
+      "football",
+      "fiction",
+      "literature"
+    ],
+    "note": "完成並推送 civilization（威尼斯蓄水池）與 city（波隆那 Strada Maggiore）；兩篇皆經審稿子代理核對後修正（年代、轉引標示、學者觀點、譯名等），validate 無 ERROR。"
   }
 }
