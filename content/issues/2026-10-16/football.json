@@ -4,7 +4,7 @@
   "title": "拉菲尼亞歸隊合練，巴薩週日凌晨作客貝提斯",
   "dek": "隊長拉菲尼亞 10 月 15 日首度和全隊一起練球，克里斯滕森、巴德吉仍缺陣。國家德比球衣換上 Tyler, The Creator 的 GOLF 標誌。",
   "topic_key": "football:2026-10-16",
-  "updated_at": "2026-10-16T02:54:00+08:00",
+  "updated_at": "2026-10-16T05:27:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -30,7 +30,7 @@
     {
       "type": "p",
       "tag": "報導",
-      "text": "德容（Frenkie de Jong）也在這堂課裡。Goal 10 月 15 日報導說，他在長時間的膝傷之後完成了全隊訓練，離本季首次出賽不遠；該文引《每日體育報》（Sport）說，教練組正在觀察拉菲尼亞的身體對訓練強度提高的反應。Infobae 同日刊出的歐洲新聞社（Europa Press）稿件說，訓練「con normalidad」（一切正常；本文自譯），並提到弗利克（Hansi Flick）原先已排除兩人踢對貝提斯這一場；ESPN 10 月 9 日則報導德容可能趕上貝提斯一戰，兩個說法不同。截至台灣時間 10 月 16 日 02:47，俱樂部沒有發布任何人可以上場的醫療許可，也沒有公布對貝提斯的名單。"
+      "text": "德容（Frenkie de Jong）也在這堂課裡。Goal 10 月 15 日報導說，他在長時間的膝傷之後完成了全隊訓練，離本季首次出賽不遠；該文引《每日體育報》（Sport）說，教練組正在觀察拉菲尼亞的身體對訓練強度提高的反應。Infobae 同日刊出的歐洲新聞社（Europa Press）稿件說，訓練「con normalidad」（一切正常；本文自譯），並提到弗利克（Hansi Flick）原先已排除兩人踢對貝提斯這一場；ESPN 10 月 9 日則報導德容可能趕上貝提斯一戰，兩個說法不同。截至台灣時間 10 月 16 日 05:23，俱樂部沒有發布任何人可以上場的醫療許可，也沒有公布對貝提斯的名單。"
     },
     {
       "type": "p",
@@ -135,15 +135,15 @@
           "when": "10 月 15 日"
         },
         {
-          "headline": "歐霸：米蘭 4 比 0 大勝薩爾斯堡，Cissé 戴帽",
-          "summary": "米蘭客場由 Alphadjo Cissé 在第 15、32、49 分鐘連進三球，拉莫斯（Gonçalo Ramos）第 72 分鐘再進一球；米蘭的 Filippo Terracciano 第 83 分鐘被紅牌罰下。",
-          "source": "ESPN 比賽紀錄、Sky Sports 賽果",
-          "url": "https://www.espn.com/soccer/match/_/gameId/401915568",
+          "headline": "歐霸：米蘭 4 比 0 大勝薩爾斯堡，Cissé 戴帽寫紀錄",
+          "summary": "米蘭客場由 Alphadjo Cissé 在第 15、32、49 分鐘連進三球，拉莫斯（Gonçalo Ramos）第 72 分鐘再進一球；米蘭的 Filippo Terracciano 第 83 分鐘被紅牌罰下。ESPN 指出，19 歲 358 天的 Cissé 是在歐洲主要賽事上演帽子戲法最年輕的義大利球員，打破 1959 年同樣效力米蘭的 Giancarlo Danova 的紀錄。",
+          "source": "ESPN 比賽紀錄與報導、Sky Sports 賽果",
+          "url": "https://www.espn.com/soccer/story/_/id/50191336/milan-alphadjo-cisse-hat-trick-europa-league-rb-salzburg",
           "when": "台灣時間 10 月 16 日 00:45 開賽"
         },
         {
           "headline": "歐霸：皇家社會 1 比 1 和聖吉羅斯聯合",
-          "summary": "皇家社會（Real Sociedad）下半場一開賽由 Beñat Turrientes 先進球，比利時的聖吉羅斯聯合（Union Saint-Gilloise）第 88 分鐘由 Sekou Keita 近距離扳平。",
+          "summary": "皇家社會（Real Sociedad）下半場一開賽由 Beñat Turrientes 先進球，比利時的聖吉羅斯聯合（Union Saint-Gilloise）第 88 分鐘由 Sekou Keita 近距離扳平。皇家社會領先了 42 分鐘，最後仍沒守住勝利。",
           "source": "ESPN 比賽紀錄、Sky Sports 賽果",
           "url": "https://www.espn.com/soccer/match/_/gameId/401915574",
           "when": "台灣時間 10 月 16 日 00:45 開賽"
@@ -156,11 +156,25 @@
           "when": "台灣時間 10 月 16 日 00:45 開賽"
         },
         {
-          "headline": "歐協聯：赫塔費客場 1 比 1 和克拉約瓦大學",
-          "summary": "巴薩上週的手下敗將赫塔費在羅馬尼亞先丟球，第 59 分鐘被 Assad Al Hamlawi 遠射破門，第 81 分鐘古德利（Nemanja Gudelj）禁區外射門扳平。",
-          "source": "ESPN 比賽紀錄、Sky Sports 賽果",
-          "url": "https://www.espn.com/soccer/match/_/gameId/401915854",
-          "when": "台灣時間 10 月 16 日 00:45 開賽"
+          "headline": "歐霸：尤文補時頭球逆轉塞爾塔",
+          "summary": "義甲的尤文圖斯（Juventus）作客西甲的塞爾塔（Celta Vigo），第 18 分鐘先被 Hugo Álvarez 破門。Nick Woltemade 第 58 分鐘扳平，補時第 2 分鐘科洛・穆阿尼（Randal Kolo Muani）頭球攻進，尤文 2 比 1 帶走勝利。",
+          "source": "ESPN 比賽紀錄、Sky Sports 比賽頁",
+          "url": "https://www.espn.com/soccer/match/_/gameId/401915560",
+          "when": "台灣時間 10 月 16 日 03:00 開賽"
+        },
+        {
+          "headline": "歐霸：伯恩茅斯首場歐洲主場 3 比 0，霍芬海姆、馬賽主場落敗",
+          "summary": "伯恩茅斯（Bournemouth）踢隊史第一場歐洲賽主場，Evanilson 第 43 分鐘頭球破門，Rayan 與 Álvaro Rodríguez（補時點球）再進兩球，3 比 0 贏奧地利的格拉茨風暴（Sturm Graz），歐霸兩戰全勝。德甲的霍芬海姆（Hoffenheim）主場 2 比 3 輸給貝西克塔斯（Beşiktaş），韓國前鋒吳賢揆（Oh Hyeon-gyu）第 72、79 分鐘連進兩球；法甲馬賽（Marseille）主場 0 比 1 輸奧林匹亞科斯（Olympiacos）。",
+          "source": "ESPN 比賽紀錄與報導、Sky Sports 賽後報導",
+          "url": "https://www.espn.com/soccer/report/_/gameId/401915571",
+          "when": "台灣時間 10 月 16 日 03:00 開賽"
+        },
+        {
+          "headline": "歐協聯：布萊頓 4 比 0，赫塔費客場 1 比 1",
+          "summary": "英超的布萊頓（Brighton）歐協聯首戰主場 4 比 0 贏立陶宛的考納斯薩爾基利斯（Kauno Žalgiris），魯特（Georginio Rutter）進兩球、助攻一次，Jack Hinshelwood 與 Matt O'Riley 各進一球。義甲亞特蘭大（Atalanta）3 比 1 贏塞普勒斯的帕福斯（Pafos），德甲弗萊堡（Freiburg）3 比 2 險勝捷克的亞布洛內茨（Jablonec）。巴薩上週的手下敗將赫塔費在羅馬尼亞 1 比 1 和克拉約瓦大學，第 81 分鐘靠古德利（Nemanja Gudelj）禁區外射門扳平。",
+          "source": "ESPN 比賽紀錄、Sky Sports 賽果與賽後報導",
+          "url": "https://www.skysports.com/football/brighton-and-hove-albion-vs-kauno-zalgiris/7574650310034865232",
+          "when": "台灣時間 10 月 16 日 00:45、03:00 開賽"
         }
       ]
     },
@@ -297,11 +311,11 @@
       "note": "引《每日體育報》"
     },
     {
-      "title": "Transfer rumors, news: Martínez's future at Man United in doubt after bust-up",
+      "title": "Transfer rumors, news: Liverpool's Wirtz to Bayern Munich?",
       "publisher": "ESPN",
       "date": "2026-10-15",
       "url": "https://www.espn.com/soccer/story/_/id/50187435/transfer-rumors-news-lisandro-martinez-future-man-united-doubt-bust-up",
-      "note": "Mora（TEAMtalk）、Tresoldi（Nicolo Schira）、德容（TEAMtalk）"
+      "note": "Mora（TEAMtalk）、Tresoldi（Nicolo Schira）、德容（TEAMtalk）；原標題為 Martínez 一則，ESPN 已於 10-15 20:54 UTC 更新"
     },
     {
       "title": "UCL stats: Mbappe, Haaland break Messi records; Arsenal, Barcelona extend winning streaks",
@@ -363,6 +377,80 @@
       "publisher": "ESPN",
       "date": "2026-10-15",
       "url": "https://www.espn.com/soccer/match/_/gameId/401915854"
+    },
+    {
+      "title": "Milan's Cissè becomes Italy's youngest European hat-trick scorer",
+      "publisher": "ESPN（AP、PA）",
+      "date": "2026-10-15",
+      "url": "https://www.espn.com/soccer/story/_/id/50191336/milan-alphadjo-cisse-hat-trick-europa-league-rb-salzburg"
+    },
+    {
+      "title": "Celta Vigo vs. Juventus（比賽頁）",
+      "publisher": "ESPN",
+      "date": "2026-10-15",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915560"
+    },
+    {
+      "title": "Celta Vigo vs Juventus",
+      "publisher": "Sky Sports",
+      "date": "2026-10-15",
+      "url": "https://www.skysports.com/football/celta-vigo-vs-juventus/6190043143447762232",
+      "note": "進球者核對"
+    },
+    {
+      "title": "Bournemouth beat Sturm Graz for dream European home debut",
+      "publisher": "ESPN",
+      "date": "2026-10-15",
+      "url": "https://www.espn.com/soccer/report/_/gameId/401915571"
+    },
+    {
+      "title": "Bournemouth 3-0 Sturm Graz: Cherries win first ever home European game as they make it two from two in Europa League",
+      "publisher": "Sky Sports",
+      "date": "2026-10-15",
+      "url": "https://www.skysports.com/football/bournemouth-vs-sturm-graz/7961958108534648232"
+    },
+    {
+      "title": "TSG Hoffenheim vs. Besiktas（比賽頁）",
+      "publisher": "ESPN",
+      "date": "2026-10-15",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915563"
+    },
+    {
+      "title": "TSG Hoffenheim vs Besiktas",
+      "publisher": "Sky Sports",
+      "date": "2026-10-15",
+      "url": "https://www.skysports.com/football/tsg-hoffenheim-vs-besiktas/8986295434946402232",
+      "note": "進球者核對"
+    },
+    {
+      "title": "Marseille vs. Olympiacos（比賽頁）",
+      "publisher": "ESPN",
+      "date": "2026-10-15",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915550"
+    },
+    {
+      "title": "Brighton 4-0 Kauno Zalgiris: Georginio Rutter scores twice as Seagulls thrash Lithuanian side in Conference League",
+      "publisher": "Sky Sports",
+      "date": "2026-10-15",
+      "url": "https://www.skysports.com/football/brighton-and-hove-albion-vs-kauno-zalgiris/7574650310034865232"
+    },
+    {
+      "title": "Brighton & Hove Albion vs. Kauno Zalgiris（比賽頁）",
+      "publisher": "ESPN",
+      "date": "2026-10-15",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915853"
+    },
+    {
+      "title": "Atalanta vs. Pafos（比賽頁）",
+      "publisher": "ESPN",
+      "date": "2026-10-15",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915746"
+    },
+    {
+      "title": "SC Freiburg vs. Jablonec（比賽頁）",
+      "publisher": "ESPN",
+      "date": "2026-10-15",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915848"
     },
     {
       "title": "Europa League results",
