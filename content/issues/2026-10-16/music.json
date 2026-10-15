@@ -1,0 +1,339 @@
+{
+  "column": "music",
+  "date": "2026-10-16",
+  "title": "消失的四個低音：莫札特《單簧管協奏曲》",
+  "dek": "1791 年 10 月 16 日，史塔德勒在布拉格的演出很可能就是這首協奏曲的首演。原本的樂器早已淘汰，手稿也已失傳；本文用一張巴塞特單簧管錄音，聽回原來的音域。",
+  "topic_key": "music:mozart-k622",
+  "updated_at": "2026-10-16T01:00:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/da/Mozart_sketch_book_2.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/d/da/Mozart_sketch_book_2.jpg",
+    "width": 822,
+    "height": 526,
+    "alt": "一本攤開的手寫冊子，紙色泛黃。左頁是幾段以墨水寫成的德文與義大利文條目，條目之間空行，有幾處畫了底線；右頁是五段手寫的五線譜，每段開頭標著樂器名稱，記著幾小節音符。右上角有頁碼。",
+    "caption": "莫札特自己的作品目錄《我全部作品的目錄》（Verzeichnüss aller meiner Werke）最後的跨頁。左頁寫作品名稱、日期與編制，右頁抄下每首的開頭幾小節。單簧管協奏曲是左頁倒數第二條，前面沒有寫日期；它的上方是《魔笛》相關的條目，下一條則標著 11 月 15 日。",
+    "credit": "莫札特手跡；Commons 著錄為大英圖書館 Zweig MS 63，f. 28v–29r，影像由大英圖書館提供",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mozart_sketch_book_2.jpg",
+    "made": "1791"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "協奏曲開頭的 7 小節，只有弦樂在弱奏，第一小提琴拉出一個平穩的主題，長笛、低音管與法國號都還沒出聲；第 8 小節管樂加入，整個樂團轉成強奏。獨奏單簧管要等到第 57 小節才進場，拿起的正是開頭那個主題，第一小提琴輕輕以同音齊奏相陪。這是莫札特（Wolfgang Amadeus Mozart）的《A 大調單簧管協奏曲》，K. 622。"
+    },
+    {
+      "type": "p",
+      "text": "今天大部分音樂會聽到的版本，其實不是莫札特寫下的樣子。他是為朋友史塔德勒（Anton Stadler）手上一支特製的樂器寫的，這支樂器比普通單簧管多出往下的四個半音。莫札特的親筆總譜沒有留下來，流傳下來的印刷版把這些低音改掉了。本期選的錄音，用的是復原的「巴塞特單簧管」（basset clarinet）。"
+    },
+    {
+      "type": "music",
+      "composer": "莫札特（Wolfgang Amadeus Mozart）",
+      "work": "A 大調單簧管協奏曲，K. 622",
+      "work_original": "Clarinet Concerto in A major, K. 622",
+      "composed": "1791（作品目錄條目未寫日期；10 月 7 日信中說迴旋曲已幾乎配器完成）",
+      "performers": "Thea King（巴塞特單簧管）；傑佛瑞・泰特（Jeffrey Tate）指揮 英國室內管弦樂團（English Chamber Orchestra）",
+      "recording": "Hyperion CDA66199，1985 年 3 月 25、26 日錄音於倫敦北芬奇利聖巴拿巴教堂（St Barnabas's Church, North Finchley），1986 年 12 月發行；製作人 Martin Compton，錄音師 Mike Clements。2010 年以 CDA30010 重發",
+      "duration": "約 30 分鐘",
+      "movements": [
+        "I. Allegro",
+        "II. Adagio",
+        "III. Rondo: Allegro"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Mozart Clarinet Concerto K. 622 Thea King English Chamber Orchestra Jeffrey Tate",
+        "artist_hint": "Thea King",
+        "track_filter": [
+          "Clarinet Concerto"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "Hyperion 的產品頁註明，Thea King 在這張唱片裡吹的是巴塞特單簧管，樂器由巴黎的 Selmer 製作。Discogs 著錄的唱片資料寫明協奏曲錄於 1985 年 3 月 25、26 日，同一張唱片另收她與加布里埃利四重奏（Gabrieli String Quartet）合作的《單簧管五重奏》K. 581。唱片解說由 Alec Hyatt King 執筆。Hyperion 產品頁列出多則評語，其中一則是「Winning performances. Excellent recording」（迷人的演奏，錄音優秀；本文自譯），標示出自《企鵝 CD 指南》（The Penguin Guide to Compact Discs），轉引自 Hyperion 產品頁，未註明版次與作者。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "選它的理由很直接：這首協奏曲的身世，就是一支樂器被淘汰、一段音域被改寫的故事。用普通單簧管錄的版本當然好聽，但要聽出莫札特原本怎麼運用最低的那幾個音，得找吹巴塞特單簧管的錄音。這一版的錄音日期、地點、製作人員都有唱片資料可查，同一張唱片又附上同樣為史塔德勒寫的五重奏，方便對照。要說明的是，King 吹的是 Alan Hacker 復原的版本，她又在幾處自行修改，聽到的是學者重建的樣貌。"
+    },
+    {
+      "type": "h",
+      "text": "一封信裡的黑咖啡與迴旋曲"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1791 年 10 月 7 日星期五晚上 10 點半，莫札特在維也納寫信給在巴登（Baden bei Wien）療養的妻子康斯坦采（Constanze Mozart）。他剛從《魔笛》的演出回來，接著交代自己一天的行程：打了兩局撞球、賣掉了馬，然後——"
+    },
+    {
+      "type": "quote",
+      "original": "dann liess ich mir durch Joseph den Primus rufen und schwarzen koffé hollen, wobey ich eine herrliche Pfeiffe toback schmauchte; dann Instrumentirte ich fast das ganze Rondó vom Stadtler.",
+      "text": "接著我差約瑟夫去叫 Primus 來，並取來黑咖啡，一邊抽了一斗極好的菸草；然後把史塔德勒的迴旋曲幾乎全部配器完了。",
+      "cite": "莫札特致康斯坦采，1791 年 10 月 7–8 日；據莫札特基金會（Stiftung Mozarteum）數位版書信轉寫，原文拼寫照錄（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "「史塔德勒的迴旋曲」就是這首協奏曲的終樂章。Alec Hyatt King 為 Hyperion 寫的解說指出，莫札特作品目錄裡的協奏曲條目沒有日期，但有這封 10 月 7 日的信，因此史塔德勒 10 月 16 日在布拉格的那場演出「很可能」就是首演。洛杉磯愛樂的曲目解說（Herbert Glass 撰）則直接寫明首演在 1791 年 10 月 16 日的布拉格，由史塔德勒獨奏。兩份解說的把握程度不同，本文採較保守的說法。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "史塔德勒為什麼在布拉格？同一封信裡，莫札特轉述史塔德勒從布拉格寄來的信：《狄托的仁慈》（La clemenza di Tito）的最後一場演出，和《魔笛》首演是同一個晚上，史塔德勒在劇院裡被觀眾、甚至被樂團同僚喊「bravo」。莫札特基金會的註解說明，《狄托的仁慈》1791 年 9 月 6 日在布拉格首演，史塔德勒負責劇中兩首詠嘆調的助奏獨奏；據 Alec Hyatt King 的 Hyperion 解說，其中〈Non più di fiori〉用的是巴塞特號；《魔笛》則在 9 月 30 日於維也納首演。"
+    },
+    {
+      "type": "timeline",
+      "title": "從配器到被改寫：K. 622 的時間線",
+      "items": [
+        {
+          "when": "1791.9.6",
+          "label": "《狄托的仁慈》布拉格首演",
+          "note": "史塔德勒吹奏兩首詠嘆調的助奏獨奏"
+        },
+        {
+          "when": "1791.9.30",
+          "label": "《魔笛》維也納首演",
+          "note": "同一晚，《狄托的仁慈》在布拉格最後一次演出"
+        },
+        {
+          "when": "1791.10.7",
+          "label": "莫札特寫信給妻子",
+          "note": "迴旋曲「幾乎全部」配器完成"
+        },
+        {
+          "when": "1791.10.16",
+          "label": "史塔德勒在布拉格演出",
+          "note": "很可能是本曲首演"
+        },
+        {
+          "when": "1791.12.5",
+          "label": "莫札特在維也納逝世",
+          "note": ""
+        },
+        {
+          "when": "約 1801 年",
+          "label": "三家出版社出版分譜",
+          "note": "André、Breitkopf & Härtel、Sieber；獨奏改寫給普通單簧管"
+        },
+        {
+          "when": "1802.3",
+          "label": "《大眾音樂報》匿名樂評",
+          "note": "評 Breitkopf 版時引用了原始的巴塞特單簧管寫法"
+        },
+        {
+          "when": "1967 年",
+          "label": "Ernst Hess 找到這篇樂評",
+          "note": "原始版本的第一份文獻證據"
+        }
+      ],
+      "caption": "日期依莫札特基金會書信註解、Alec Hyatt King 的 Hyperion 解說與莫札特基金會新聞稿整理；10 月 16 日的演出是否為首演，屬學者推斷。"
+    },
+    {
+      "type": "h",
+      "text": "史塔德勒的樂器：往下多四個半音"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "依 Alec Hyatt King 的解說，史塔德勒在 1780 年代後期逐步把單簧管的音域往下延伸，到 1788 年 2 月已經加了兩個音，最後到記譜的 C（實際音高 A），一共多出四個半音。John Irving 為 BIS 唱片寫的解說補充，普通 A 調單簧管最低只到實際音高的升 C，巴塞特單簧管卻能吹到低音譜表底部的 A，而 A 正是這首協奏曲的主音。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Leitner%2BKraus_bas_320_30.jpg",
+      "width": 455,
+      "height": 646,
+      "alt": "淺灰底上斜放兩支深色木管樂器，都布滿銀色按鍵，喇叭口都是直的向外張開。左邊一支較長，下管多出一截；右邊一支較短，是普通單簧管。",
+      "caption": "現代製作的巴塞特單簧管（左）與普通單簧管（右）尺寸比較。多出來的那一截下管，就是那四個低半音所在。這是今日樂器工坊的復原樂器，不是史塔德勒當年的原物。",
+      "credit": "Leitner & Kraus；拼圖 Gisbert König，經 Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Leitner%2BKraus_bas_320_30.jpg",
+      "made": "2019（拼圖上傳；原照拍攝年份不明）"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這首協奏曲也不是從零寫起。King 的解說說，莫札特在 1791 年初為史塔德勒動筆寫一首 G 大調巴塞特號（basset horn）協奏曲，寫到第 199 小節停下，後來把這些材料改寫成單簧管協奏曲的第一樂章；IMSLP 把這份殘稿列為 K. 584b/621b（Hyperion 解說作 K621a）。Irving 的 BIS 解說則把這份 199 小節的草稿定在 1789 年。殘稿的年代，兩位作者說法不一。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "樂器淘汰之後，原版也跟著消失。King 寫道，三家出版社大約在 1801 年出版分譜時，獨奏聲部裡大約 40 處落在巴塞特單簧管最低音域的段落都被改寫，好讓普通單簧管吹得出來。1940 年代後期起，學者與演奏者開始懷疑印刷版不是原貌；直到 1967 年，瑞士作曲家暨音樂學者 Ernst Hess 找到《大眾音樂報》（Allgemeine Musikalische Zeitung）1802 年 3 月一篇評 Breitkopf 版分譜的匿名樂評，樂評裡引用了原始寫法，才有了文獻證據。Irving 則轉述康斯坦采的說法：史塔德勒聲稱裝著手稿的行李被偷，她卻一直認為手稿被他拿去典當了。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.02,
+        0.63,
+        0.48,
+        0.1
+      ],
+      "position": "左頁下方，倒數第二條",
+      "caption": "協奏曲條目。BIS 唱片解說把開頭轉寫為「Ein Konzert für die Clarinette, für Hr: Stadler den Älteren」（一首單簧管協奏曲，為老史塔德勒先生而作）；第二行列出編制，可辨認出長笛、低音管、法國號各兩支。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "編制本身也有特色。洛杉磯愛樂的解說列出這首協奏曲的樂團是長笛、低音管、法國號各兩支，加上弦樂，沒有雙簧管。倫敦國王學院「莫札特與物質文化」計畫的說明指出，莫札特從 1784 年到 1791 年持續記這本作品目錄，左頁寫標題、日期與編制，右頁抄開頭幾小節，原件現藏大英圖書館。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "為什麼不用雙簧管？撰寫洛杉磯愛樂解說的 Herbert Glass 認為，莫札特顯然覺得雙簧管的聲音在這個場合太尖銳。"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：三個樂章"
+    },
+    {
+      "type": "p",
+      "text": "**第一樂章：Allegro。** A 大調，4/4 拍。前 56 小節是樂團的開場，先是 7 小節弱奏的弦樂，第 8 小節管樂加入。第 57 小節獨奏進場後，留意單簧管怎麼在整個音域裡上下跳躍。Irving 在 BIS 解說裡提醒，這個樂章很多主題線索都可以追回開頭四小節，靠的是不斷出現的下行三度；這是樂章前後連貫的一條線，可以從頭聽到尾。"
+    },
+    {
+      "type": "p",
+      "text": "**第二樂章：Adagio。** D 大調，3/4 拍。這個樂章不讓樂團先講：第 1 小節單簧管就直接唱出主題，弦樂在底下用短音型托著。唱完 8 小節，第 9 小節長笛、低音管、法國號加入轉為強奏，由長笛領著樂團把這段旋律再說一次。慢樂章整體的聲響很輕，King 的解說形容它帶著狂喜般的寧靜與純淨（本文自譯）。"
+    },
+    {
+      "type": "p",
+      "text": "**第三樂章：Rondo，Allegro。** 6/8 拍，也就是信裡那首「史塔德勒的迴旋曲」。單簧管從弱起拍直接帶出迴旋主題，前 8 小節只有小提琴和中提琴伴奏，大提琴與低音大提琴都還沒進來；接著全體樂團以漸強回應。Irving 指出，這個樂章讓單簧管在高低音域之間大幅對比，有時在低沉的「chalumeau」音區冒出分解和弦式的伴奏音型，中段還有一段升 F 小調的插段。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：用巴塞特單簧管聽這個樂章，最值得注意的是單簧管潛到低音區的那些時刻。印刷版為了遷就普通單簧管，把這些地方往上移了八度，原本的跨音域對比就被壓扁了。Thea King 這一版採用英國單簧管家 Alan Hacker 復原的巴塞特單簧管版本，並在幾處自行修改；它是現代復原，不是莫札特的原稿。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "portrait",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/24/Mozart_drawing_Doris_Stock_1789.jpg",
+      "width": 864,
+      "height": 1047,
+      "alt": "一幅單色細線素描，畫一名男子的側面胸像，面朝左。他梳著往後攏的捲髮，臉頰圓潤，穿著高領外衣，衣領處有細緻的線條。頭髮後方綁著緞帶，人物位於橢圓框內，背景布滿斜向排線。",
+      "caption": "朵拉・史托克（Dora Stock）1789 年所繪的莫札特銀筆素描。據 Commons 檔案說明，這幅畫作於莫札特 1789 年 4 月造訪德勒斯登時，Commons 著錄收藏地為薩爾斯堡莫札特基金會（Mozarteum）。這是莫札特寫這首協奏曲前兩年的樣子。",
+      "credit": "Dora Stock；Commons 著錄收藏地為薩爾斯堡莫札特基金會",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mozart_drawing_Doris_Stock_1789.jpg",
+      "made": "1789"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這首協奏曲在布拉格演出後不到兩個月，莫札特就去世了。莫札特基金會的新聞稿寫明，他在 1791 年 12 月 5 日凌晨 0 點 55 分，死於維也納 Rauhensteingasse 的寓所。史塔德勒活到 1812 年。協奏曲原本的寫法，要等到 1967 年才有了第一份文獻證據。"
+    },
+    {
+      "type": "callout",
+      "label": "延伸聆聽",
+      "text": "想比較另一種巴塞特單簧管的聲音，可找單簧管家 Martin Fröst 兼任獨奏與指揮、與德國不來梅室內愛樂（The Deutsche Kammerphilharmonie Bremen）合作的錄音（BIS-1893，解說 © 2013）。同一位朋友的另一首作品：莫札特《A 大調單簧管五重奏》，K. 581。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wolfgang Amadé Mozart an Constanze Mozart in Baden bei Wien, Wien, 7. und 8. Oktober 1791（Bauer/Deutsch Nr. 1193）",
+      "publisher": "Internationale Stiftung Mozarteum, Digitale Mozart-Edition",
+      "date": "2014",
+      "url": "https://dme.mozarteum.at/DME/objs/raradocs/transcr/pdf/BD_1193.pdf",
+      "note": "Anja Morgenstern 整理；書信原文（黑咖啡、迴旋曲配器、史塔德勒來信）與註解（《狄托的仁慈》9 月 6 日首演、《魔笛》9 月 30 日首演、史塔德勒的兩首詠嘆調獨奏）"
+    },
+    {
+      "title": "Mozart: Clarinet Concerto & Clarinet Quintet（CDA30010）",
+      "publisher": "Hyperion Records",
+      "date": "2010-10",
+      "url": "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA30010",
+      "note": "Alec Hyatt King 撰解說（© 1985）：條目無日期、10 月 7 日信、10 月 16 日布拉格演出很可能為首演、音域延伸、K621a 第 199 小節、約 40 處改寫、1967 年 Ernst Hess 與 1802 年 3 月 AMZ 樂評"
+    },
+    {
+      "title": "Mozart: Clarinet Concerto & Clarinet Quintet（CDA66199）",
+      "publisher": "Hyperion Records",
+      "date": "1986-12",
+      "url": "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA66199",
+      "note": "演出者、巴塞特單簧管由 Selmer 製作、錄音地點、製作人與錄音師、發行月份；《企鵝 CD 指南》評語轉引自此頁"
+    },
+    {
+      "title": "Clarinet Concerto in A major, K622 (Mozart) – from CDA66199",
+      "publisher": "Hyperion Records",
+      "url": "https://www.hyperion-records.co.uk/dw.asp?dc=W6348_66199",
+      "note": "Phillip Borg-Wheeler 撰曲目解說（© 2019）；錄音月份 1985 年 3 月；2026-10-15 查閱"
+    },
+    {
+      "title": "Wolfgang Amadeus Mozart – Thea King, English Chamber Orchestra, Jeffrey Tate – Clarinet Concerto K622 / Clarinet Quintet K581（CDA66199）",
+      "publisher": "Discogs",
+      "url": "https://www.discogs.com/release/2453690-Mozart-Thea-King-English-Chamber-Orchestra-Jeffrey-Tate-Gabrieli-String-Quartet-Clarinet-Concerto-K6",
+      "note": "唱片註記：協奏曲錄於 1985 年 3 月 25、26 日；加布里埃利四重奏；解說 Alec Hyatt King；未標發布日期，2026-10-15 經 Discogs API 查閱"
+    },
+    {
+      "title": "Thea King, English Chamber Orchestra, Jeffrey Tate – Clarinet Concerto（CDA30010）",
+      "publisher": "Discogs",
+      "url": "https://www.discogs.com/release/6795560-Wolfgang-Amadeus-Mozart-Thea-King-English-Chamber-Orchestra-Jeffrey-Tate-Clarinet-Concerto",
+      "note": "2010 年重發；錄音地點 St Barnabas's Church, North Finchley；未標發布日期，2026-10-15 查閱"
+    },
+    {
+      "title": "Clarinet Concerto, K. 622",
+      "publisher": "Los Angeles Philharmonic",
+      "url": "https://www.laphil.com/works/clarinet-concerto-k-622",
+      "note": "Herbert Glass 撰曲目解說：1791 年 10 月 16 日布拉格首演、史塔德勒留在布拉格、編制無雙簧管；未標發布日期，2026-10-15 查閱"
+    },
+    {
+      "title": "Mozart: Clarinet Concerto, Kegelstatt Trio（BIS-1893）booklet",
+      "publisher": "BIS Records",
+      "date": "2013",
+      "url": "https://eclassical.textalk.se/shop/17115/art35/4790235-5117ce-BIS-1893_booklet.pdf",
+      "note": "John Irving 撰解說：目錄條目轉寫「Ein Konzert für die Clarinette, für Hr: Stadler den Älteren」、A 為主音、1801 年版本、康斯坦采說手稿被典當、下行三度、升 F 小調插段、chalumeau 音區；Martin Fröst 演出資料"
+    },
+    {
+      "title": "Mozart's Thematic Catalogue",
+      "publisher": "Mozart & Material Culture（King's College London）",
+      "date": "2024",
+      "url": "https://mmc.kdl.kcl.ac.uk/entities/source/mozarts-thematic-catalogue/",
+      "note": "1784–1791 年記錄、左頁文字右頁開頭小節、原件藏大英圖書館 Zweig MS 63"
+    },
+    {
+      "title": "On the 230th anniversary of Wolfgang Amadé Mozart's death on 5 December",
+      "publisher": "Internationale Stiftung Mozarteum",
+      "url": "https://mozarteum.at/en/press_release/on-the-230th-anniversary-of-wolfgang-amade-mozarts-death-on-5-december",
+      "note": "1791 年 12 月 5 日 0 點 55 分逝於 Rauhensteingasse 寓所；頁面未標發布日期，2026-10-15 查閱"
+    },
+    {
+      "title": "Clarinet Concerto in A major, K.622 (Mozart, Wolfgang Amadeus)",
+      "publisher": "IMSLP",
+      "url": "https://imslp.org/wiki/Clarinet_Concerto_in_A_major,_K.622_(Mozart,_Wolfgang_Amadeus)",
+      "note": "樂章、編制、巴塞特號協奏曲殘稿編號 K.584b/621b；未標發布日期，2026-10-15 查閱"
+    },
+    {
+      "title": "Concerto in A, K.622 for Clarinet and Orchestra – Full Score（basset clarinet version）",
+      "publisher": "IMSLP（M. van den Berg 製譜，CC BY-SA 4.0）",
+      "date": "2020-06-08",
+      "url": "https://s9.imslp.org/files/imglnks/usimg/3/33/IMSLP630557-PMLP3144-Mozart_-_Clarinet_Concerto_-_Full_Score.pdf",
+      "note": "聆聽導引中的小節位置、拍號與配器依此總譜逐頁核對"
+    },
+    {
+      "title": "File:Mozart sketch book 2.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Mozart_sketch_book_2.jpg",
+      "note": "頭圖；Public domain；大英圖書館 Zweig MS 63, f. 28v–29r"
+    },
+    {
+      "title": "File:Leitner+Kraus bas 320 30.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Leitner%2BKraus_bas_320_30.jpg",
+      "note": "正文圖；CC BY-SA 4.0；2019-11-12"
+    },
+    {
+      "title": "File:Mozart drawing Doris Stock 1789.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Mozart_drawing_Doris_Stock_1789.jpg",
+      "note": "正文圖；Public domain；1789 年德勒斯登，收藏地著錄為 Mozarteum, Salzburg"
+    }
+  ]
+}
