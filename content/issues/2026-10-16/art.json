@@ -1,0 +1,463 @@
+{
+  "column": "art",
+  "date": "2026-10-16",
+  "title": "《聖安德烈受難》：梯子上的人與解不開的繩子",
+  "dek": "克里夫蘭美術館這幅卡拉瓦喬，畫的是行刑者想解開聖徒、手卻動不了的一刻。從梯子上的手看到老婦的脖子，再看修復洗出了什麼。",
+  "topic_key": "art:cma-1976.2",
+  "updated_at": "2026-10-16T03:02:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Caravaggio_-_The_Crucifixion_of_Saint_Andrew_-_1976.2_-_Cleveland_Museum_of_Art.tiff/lossy-page1-1280px-Caravaggio_-_The_Crucifixion_of_Saint_Andrew_-_1976.2_-_Cleveland_Museum_of_Art.tiff.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Caravaggio_-_The_Crucifixion_of_Saint_Andrew_-_1976.2_-_Cleveland_Museum_of_Art.tiff/lossy-page1-3840px-Caravaggio_-_The_Crucifixion_of_Saint_Andrew_-_1976.2_-_Cleveland_Museum_of_Art.tiff.jpg",
+    "width": 1280,
+    "height": 1698,
+    "alt": "直幅油畫，背景幾乎全黑。一個赤裸上身、白鬍子的老人雙臂張開綁在十字架橫木上，頭垂向右側，腰圍玫瑰紅布。左側一個穿白衣、圍芥末黃布的年輕人背對觀者爬在梯子上，手伸向老人手腕上的繩子。左下角一個頭包白布的老婦仰頭，手扶著梯子；右下角一個穿盔甲的士兵、一個張著嘴的男人仰頭向上看，最右邊有一個披紅斗篷的人。右側牆上有一片斜斜的灰白亮光。",
+    "caption": "卡拉瓦喬《聖安德烈受難》（The Crucifixion of Saint Andrew）全圖，1606–07 年，油彩、畫布，202.5 × 152.7 公分，克里夫蘭美術館藏（1976.2）。影像為 2014–2016 年修復後的館方開放資料檔，後文的局部都從這張圖放大。",
+    "credit": "卡拉瓦喬；克里夫蘭美術館藏，Leonard C. Hanna Jr. Fund；影像為館方開放資料，經 Wikimedia Commons 轉存",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Caravaggio_-_The_Crucifixion_of_Saint_Andrew_-_1976.2_-_Cleveland_Museum_of_Art.tiff",
+    "made": "1606–1607"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1976 年 4 月 8 日，克里夫蘭美術館（Cleveland Museum of Art）宣布買進一幅被認為已失落 300 多年的卡拉瓦喬（Caravaggio）。依館方當天的新聞稿，這幅畫 1973 年在西班牙塞維亞（Seville）的展覽上重新露面時，展出的題名是「卡拉瓦喬（?）《聖腓力殉道》（Martyrdom of Saint Philip）（?）」：作者和題材都打了問號。新聞稿把問號歸於兩件事：當時對畫中題材的混淆，以及畫中一張臉因畫布受損，被人粗糙地重畫過。現在館方把它定為卡拉瓦喬 1606–07 年在拿坡里（Naples）畫的《聖安德烈受難》，並說它是這位畫家在美國唯一的一幅祭壇畫。"
+    },
+    {
+      "type": "p",
+      "text": "這篇照一條路線看畫：綁在橫木上的老人、梯子上看不見臉的年輕人、扶著梯子的老婦、仰頭的士兵與旁觀者，再退後看光與構圖，最後看修復找到了什麼。看得見的、館方與學者說的、本文的讀法，分開標示；描述根據館方修復後拍攝的高解析度影像。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作者",
+          "卡拉瓦喬（Michelangelo Merisi da Caravaggio），義大利畫家，1571–1610（克里夫蘭美術館）"
+        ],
+        [
+          "題名",
+          "The Crucifixion of Saint Andrew，本文譯作《聖安德烈受難》"
+        ],
+        [
+          "年代",
+          "1606–07 年（館方）"
+        ],
+        [
+          "材料",
+          "油彩、畫布"
+        ],
+        [
+          "尺寸",
+          "畫布 202.5 × 152.7 公分；含框 233.5 × 184 × 12 公分（館方）"
+        ],
+        [
+          "收藏",
+          "克里夫蘭美術館，館藏號 1976.2，Leonard C. Hanna Jr. Fund；館方 API 標示展於 217 展廳"
+        ],
+        [
+          "歸屬",
+          "館方列為卡拉瓦喬親筆；1973 年重新出現後，經 Benedict Nicolson、Denis Mahon、Richard Spear 等人研究確認（館方 1976 年新聞稿）。爭議集中在另一幅版本（見文末），不在這一幅"
+        ],
+        [
+          "款識",
+          "館方資料未列款識"
+        ],
+        [
+          "影像",
+          "館方開放資料以 CC0 釋出；本文頭圖取自 Wikimedia Commons 轉存的館方原檔（11447 × 15187 像素，公版）"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "第一眼：綁在橫木上、頭垂向一邊的老人"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.52,
+        0.05,
+        0.2,
+        0.15
+      ],
+      "position": "畫面上緣中央偏右，約佔全圖寬度五分之一、高度七分之一",
+      "caption": "頭圖局部。白鬍子的老人頭垂向畫面右側，額頭的皺紋受光，眼皮半闔，眼珠往上翻，嘴微微張開；他的手臂橫在深褐色的橫木前。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "畫面裡最亮的一塊，是一個赤裸上身的老人。他雙臂張開，綁在一根深褐色的十字架橫木上，橫木上方還露出一小截直柱。他的頭向畫面右側垂下，額頭上一道道皺紋被光照亮，鬍子灰白；眼皮半闔，眼珠往上翻，只看得到灰白的一線，嘴微微張開。胸口的肋骨一根根凸起，腹部凹陷，腰間只圍著一塊玫瑰紅的布，布角從畫面右側垂到大腿。兩隻手腕都用淺色的粗繩纏了好幾圈；畫面右邊那隻手的繩子在手腕下垂成一個大圈，繩尾一路拖到肩膀以下。他的小腿也被繩子繞住，赤腳懸在半空。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "館方的作品說明交代了故事：聖安德烈（Saint Andrew）在 1 世紀到希臘傳教，遭地方當局敵視，因為拒絕承認異教神祇被判釘十字架。他在十字架上講道兩天，圍觀的人越來越同情他；行刑者順從民意，想把他解下來，雙手卻神祕地癱瘓了。安德烈殉道的心願於是實現，「在神聖的光中」死去。館方還特別註明：聖安德烈通常和 X 形十字架連在一起，這裡畫的卻是一般直立的十字架。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "所以這個老人在畫裡的狀態，正好是故事的終點：講道已經結束，人還綁在木頭上。從畫面上只能看到半闔的眼睛和張開的嘴，看不出他「感覺到什麼」。本文不替他補上心情，只記下一點：畫中看得見臉的人，目光幾乎都投向這顆頭。"
+    },
+    {
+      "type": "h",
+      "text": "梯子上的人：在解繩子，還是在綁繩子"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.0,
+        0.0,
+        0.35,
+        0.26
+      ],
+      "position": "畫面左上角，約佔全圖寬度三分之一、高度四分之一",
+      "caption": "頭圖局部。橫木左端，安德烈的手指彎曲，手腕纏著淺色粗繩；一隻手從下方抓住繩子，另一條手臂沿著畫面左緣高舉。年輕人背對觀者，後腦勺、一隻耳朵和肩背佔滿下半部。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "順著老人伸向畫面左側的那條手臂，一路看到橫木末端：他的手指彎曲，手腕纏著繩子。一個年輕男人背對我們，爬在梯子上，一條手臂沿著畫面左緣高高舉起，伸到橫木的盡頭；另一隻手從下方抓住繞在安德烈手腕上的那段繩子。他留短髮，白色上衣從肩膀滑落、在腰間打結，下身圍著芥末黃的布。他背對著我們，只露出後腦勺和一隻耳朵，看不到臉。他一隻腳踩在梯子的橫檔上。"
+    },
+    {
+      "type": "quote",
+      "text": "一個年輕人從梯子上伸手，要把已經瀕死的聖徒解下來，卻被一股超自然的癱瘓擊中，動彈不得。",
+      "original": "As a young man reaches up from a ladder to release the saint, who is now near death, the youth is stricken with a supernatural paralysis and held immobile.",
+      "cite": "克里夫蘭美術館 1976 年 4 月 8 日新聞稿，本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "館方 1976 年把他讀成要「解開」聖徒的人。只看畫面，卻分不出他正在綁還是在解：繩子還繞在手腕上，手抓著繩子，看不出往哪個方向用力。讓這一刻成為「解不開」的，是故事，不是姿勢。他又背對觀者，沒有表情可讀，只剩一副停在半空的身體。我的讀法是，這種看不出方向的動作，剛好適合一個被凍結的瞬間。"
+    },
+    {
+      "type": "h",
+      "text": "左下角：扶著梯子、仰頭的老婦"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.0,
+        0.66,
+        0.3,
+        0.34
+      ],
+      "position": "畫面左下角，約佔全圖寬度三成、高度三分之一",
+      "caption": "頭圖局部。頭包白布的老婦仰頭向上看，頸部筋腱繃起，喉嚨下方有一團隆起；她肩上斜披白布，一隻手在畫面下緣握著梯子的側柱，年輕人的腳就踩在旁邊的橫檔上。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "梯子的底部，一個頭包白布的老婦抬頭往上看。她臉上布滿皺紋，眉毛上揚，嘴唇緊閉。她的脖子特別引人注意：兩側的筋腱繃起，喉嚨下方鼓起一團不規則的隆起，在側光下一塊塊發亮。她肩上斜披一條白布，裡面是深綠色的衣服。她的手出現在畫面最下緣，握著梯子的側柱；年輕人赤裸的腳掌，就踩在她手邊的橫檔上。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "館方為這幅畫列的文獻書目裡，有一篇 J. Barry Ferriss 2008 年在《甲狀腺》（Thyroid）期刊發表的評論〈古畫中為何常見甲狀腺腫〉（The Many Reasons Why Goiter Is Seen in Old Paintings），書目註明它提到並刊出了這幅畫（第 391 頁，圖 10）。本文沒有讀到全文，無法確認它談的是不是老婦的脖子。館方 1976 年的新聞稿則只用一句話描述她：「一個老婦，神情嚴峻，沉默」（an old woman, grim-faced and silent）。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "她的手臂也動過。館方修復師 Dean Yoder 在 2014 年 5、6 月號的館刊文章中寫道，用館方新購的 Osiris 紅外線相機檢查時，找到了更多刻在底層上的細線，其中一條非常精確地沿著老婦手臂最初位置的「悔筆」（pentimento，畫家自己改掉的部分）。更早的 1976 年新聞稿也說，X 光顯示畫家把其中一個人物的手整個改了位置；新聞稿沒有說是哪一個人。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "旁觀的人裡，只有她的手碰著梯子。她扶著梯子，又仰望梯子通往的那個人。這個位置看起來像在幫忙，也像只是剛好站在那裡；畫面沒有給答案，本文也不替她決定。比較確定的是構圖上的效果：她的臉、年輕人的腳、安德烈的頭，由下而上排成一條線，把觀者的目光從畫框底部一路送回上方。"
+    },
+    {
+      "type": "h",
+      "text": "右下角：盔甲、張著嘴的人、背過身的人"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.55,
+        0.52,
+        0.45,
+        0.32
+      ],
+      "position": "畫面右下方，約佔全圖寬度近一半、高度三分之一",
+      "caption": "頭圖局部。穿盔甲的士兵仰頭望向上方，留紅褐色鬍子；他左後方一個男人張著嘴仰望；最右邊一個披紅色斗篷的人只露出耳朵與後腦。士兵頭頂上方是一團深色帶羽毛的形體。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "右下角擠著三個男人。最前面的是一個士兵，肩膀和手臂包著反光的鋼製盔甲，外面套深褐色的上衣，腰間露出綠色的衣服和皮帶。他留紅褐色鬍子，仰頭往上看，嘴唇微張；他的一隻手垂在腰間，手下方露出一截金屬握柄。他左後方一個鬍子男人張大了嘴，也仰著頭。最右邊，一個披紅色斗篷的人只露出一隻耳朵和後腦，看不到臉。士兵頭頂上方，有一團深色、帶著白色羽毛的形體，邊緣溶進背景。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "館方 1976 年的新聞稿把這一群人寫成「兩個旁觀者，一個士兵和另一個男人，驚訝地張著嘴」，沒有提到最右邊披紅斗篷的人。館方另一篇介紹 Yoder 修復研究的文章說，修復讓一個「原本被陰影籠罩的人物」重新顯現，但沒有指明是哪一個。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "artwork",
+      "src": "https://openaccess-cdn.clevelandart.org/1976.2/1976.2_alt1_web.jpg",
+      "width": 665,
+      "height": 893,
+      "alt": "同一幅畫較舊的照片：整體偏黃偏暗，表面布滿細密的裂紋，四邊被裁得較窄。右下角的士兵頭頂多了一頂深色的圓頂帽，蓋住頭頂與髮際，額頭仍露在外面；他身後張嘴的男人臉部較暗。",
+      "caption": "修復前影像。克里夫蘭美術館開放資料所附的另一張《聖安德烈受難》影像，館方 API 標示建檔日期為 2007 年 2 月 15 日，早於 2014 年開始的修復。可與頭圖比較右下角士兵的頭部。",
+      "credit": "卡拉瓦喬；克里夫蘭美術館藏（1976.2），Leonard C. Hanna Jr. Fund；館方開放資料影像",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://www.clevelandart.org/art/1976.2",
+      "made": "1606–1607"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "兩張影像並看，右下角的差別最明顯。舊影像裡，士兵頭頂多了一頂深色的圓頂帽，蓋住頭頂和髮際，額頭的皺紋和眼睛仍看得見；修復後的頭圖上沒有這頂帽子，露出短髮。他腦後那團帶白色羽毛的深色形體，兩張影像裡都有。他身後張嘴的男人，在舊影像裡較暗，但五官仍認得出來。舊影像整體偏黃，裂紋密布，四邊也比頭圖窄。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "兩張影像的差別是看得到的，原因卻要小心。館方 2016 年 5 月 9 日的新聞稿說，修復除去了變色的凡尼斯、補筆、覆蓋顏料，以及含油凡尼斯的舊殘留；1976 年的新聞稿也提過，有一張臉曾被粗糙地重畫。舊影像上那頂帽子是不是後人補上的，本文讀到的館方文字沒有明說，館方文章所說「被陰影籠罩的人物」是否就是張嘴的男人，也沒有。這裡只能存疑。"
+    },
+    {
+      "type": "h",
+      "text": "構圖：一根直柱、一條斜線，和左上方來的光"
+    },
+    {
+      "type": "svg",
+      "svg": "<svg viewBox=\"0 0 300 398\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect class=\"paper\" x=\"0\" y=\"0\" width=\"300\" height=\"398\"/>\n<rect class=\"soft\" x=\"0\" y=\"0\" width=\"300\" height=\"398\" opacity=\"0.5\"/>\n<polygon class=\"gold\" points=\"0,0 120,0 300,150 300,260\" opacity=\"0.25\"/>\n<rect class=\"muted\" x=\"128\" y=\"0\" width=\"16\" height=\"398\" opacity=\"0.55\"/>\n<rect class=\"muted\" x=\"0\" y=\"14\" width=\"292\" height=\"16\" opacity=\"0.55\"/>\n<line class=\"ink\" x1=\"150\" y1=\"40\" x2=\"150\" y2=\"300\" stroke-width=\"3\"/>\n<line class=\"ink\" x1=\"10\" y1=\"22\" x2=\"285\" y2=\"22\" stroke-width=\"2\" stroke-dasharray=\"4 3\"/>\n<line class=\"accent\" x1=\"30\" y1=\"40\" x2=\"60\" y2=\"350\" stroke-width=\"3\"/>\n<line class=\"muted\" x1=\"40\" y1=\"290\" x2=\"168\" y2=\"58\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/>\n<line class=\"muted\" x1=\"205\" y1=\"250\" x2=\"182\" y2=\"62\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/>\n<line class=\"muted\" x1=\"170\" y1=\"262\" x2=\"176\" y2=\"62\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/>\n<circle class=\"accent\" cx=\"178\" cy=\"45\" r=\"9\"/><text class=\"paper\" x=\"178\" y=\"49\" font-size=\"11\" text-anchor=\"middle\" stroke-width=\"0\">1</text>\n<circle class=\"accent\" cx=\"22\" cy=\"20\" r=\"9\"/><text class=\"paper\" x=\"22\" y=\"24\" font-size=\"11\" text-anchor=\"middle\" stroke-width=\"0\">2</text>\n<circle class=\"accent\" cx=\"40\" cy=\"290\" r=\"9\"/><text class=\"paper\" x=\"40\" y=\"294\" font-size=\"11\" text-anchor=\"middle\" stroke-width=\"0\">3</text>\n<circle class=\"accent\" cx=\"210\" cy=\"255\" r=\"9\"/><text class=\"paper\" x=\"210\" y=\"259\" font-size=\"11\" text-anchor=\"middle\" stroke-width=\"0\">4</text>\n<circle class=\"accent\" cx=\"270\" cy=\"110\" r=\"9\"/><text class=\"paper\" x=\"270\" y=\"114\" font-size=\"11\" text-anchor=\"middle\" stroke-width=\"0\">5</text>\n<text class=\"ink\" x=\"186\" y=\"78\" font-size=\"10\" stroke-width=\"0\">安德烈的頭</text>\n<text class=\"ink\" x=\"66\" y=\"200\" font-size=\"10\" stroke-width=\"0\">梯子上的人</text>\n<text class=\"ink\" x=\"58\" y=\"388\" font-size=\"10\" stroke-width=\"0\">老婦</text>\n<text class=\"ink\" x=\"222\" y=\"300\" font-size=\"10\" stroke-width=\"0\">士兵與旁觀者</text>\n<text class=\"ink\" x=\"232\" y=\"140\" font-size=\"10\" stroke-width=\"0\">牆上的光</text>\n</svg>",
+      "caption": "原創示意，簡化輪廓，不是摹本，比例依本文在館方影像上目測。灰色是十字架的直柱與橫木，紅色斜線是梯子上年輕人的身體，虛線是各人的視線方向，金色是本文判斷的受光方向。紅色編號 1→5 是本文建議的觀看順序：安德烈的頭、橫木左端的手與繩子、老婦、右下角的士兵與旁觀者、右側牆上的光。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "退後看整幅畫，背景幾乎全是深褐近黑，沒有地面、沒有天空，也看不出是室內還是戶外。十字架的直柱在中線偏左，安德烈的身體貼著它垂直下墜；梯子上的年輕人從左上角斜斜延伸到左下角，和直柱形成一個窄窄的 V 字。人物的臉、肩膀、手臂受光的一面多半朝向畫面左上方，暗面在右下；右側的牆上，則有一片灰白色、斜斜的亮光，一段繩尾垂在亮光前面。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "館方的作品說明說，卡拉瓦喬的新意在於把這場殉道畫得親密而私密，而不是一場血腥的公開示眾；強烈的明暗對比暗示著神的臨在。館方另一份新聞稿則把它稱為卡拉瓦喬在美國最大的一幅畫。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "畫面裡一共只有六個人，其中兩個看不到臉，完全不像「群眾越來越同情」的故事裡該有的人潮。我的讀法是，卡拉瓦喬把整群圍觀者縮成三四張仰起的臉，讓觀者站的位置，剛好補上那群看不見的人。顏色也很少：白、芥末黃、兩種紅、一點綠，其餘都是深褐。"
+    },
+    {
+      "type": "h",
+      "text": "畫布底下：桌布般的織紋、刻線與一圈褐色的邊"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "Yoder 在 2014 年的館刊文章中說，這幅畫在入藏前拍的第一批 X 光片，就顯示它畫在一塊織有重複菱形紋的畫布上。他寫道，用帶圖案的桌布作畫雖不尋常，在 16、17 世紀的義大利與西班牙繪畫中卻不算罕見。同一批 X 光片還顯示畫布上有相當大的裂口，以及好幾塊織法不同、用來填補破洞的補布。X 光也照出刻在底層上的細線；多數學者同意，這是卡拉瓦喬用來定位人物或模特兒的記號。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "館方另一篇介紹 Yoder 修復研究的文章說，他從 2014 年起花了將近三年研究、清洗、修復這幅畫，用了 X 光、顏料分析、紅外線、紫外線與拉曼光譜等方法。文章指出，卡拉瓦喬先用鉛白勾出構圖（abbozzo），再用刻線和其他記號代替素描；和多數同時代畫家不同，他似乎不用素描來規畫構圖。2016 年的新聞稿還提到，初步分析發現畫布上有兩層帶顏色的底層，一層用油調和、一層用水性的膠，因此這幅畫對濕度變化特別敏感。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "修復也改變了畫面的邊界。館方新聞稿說，先前的修復在四邊各蓋了約 1 英寸寬的厚褐色顏料；除掉之後，底下還留著零星的原作顏料，Yoder 據此重建了邊緣，畫面因此顯得更開闊，新框也讓更多邊緣露出來。館刊文章則解釋了舊表面的問題：1974 年那次處理留下的多層塗層中，有一層暫時性的凡尼斯，造成表面的應力裂紋與「牽引裂紋」，也就是兩種性質不相容的塗層疊在一起時產生的裂紋。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "修復後的影像上，細密的龜裂仍然看得到，在老婦的白頭巾和年輕人的白衣上最明顯。這是畫本身老化的痕跡；修復去掉的，是上面那層讓它發黃、發霧的塗層。"
+    },
+    {
+      "type": "h",
+      "text": "從拿坡里總督府到克里夫蘭"
+    },
+    {
+      "type": "timeline",
+      "title": "這幅畫的移動",
+      "items": [
+        {
+          "when": "1603 年",
+          "label": "貝納文特伯爵出任拿坡里總督",
+          "note": "任期至 1610 年（館方 1976 年新聞稿）"
+        },
+        {
+          "when": "1606–07 年",
+          "label": "卡拉瓦喬在拿坡里作畫",
+          "note": "館方年代；Mahon 認為作於 1607 年第一次停留拿坡里期間"
+        },
+        {
+          "when": "1610 年",
+          "label": "隨總督帶回西班牙",
+          "note": "館方文章：畫作 1610 年被帶往西班牙"
+        },
+        {
+          "when": "1653 年",
+          "label": "列入貝納文特家族財產清冊",
+          "note": "在清冊估價中價值最高，1,500 杜卡特"
+        },
+        {
+          "when": "1672 年",
+          "label": "貝洛里（Giovan Pietro Bellori）《現代畫家、雕塑家與建築師傳》提到這幅畫",
+          "note": "羅馬初版第 214 頁"
+        },
+        {
+          "when": "1973 年",
+          "label": "在塞維亞展出，題為「聖腓力殉道（?）」",
+          "note": "當時屬馬德里 Arnaiz 收藏"
+        },
+        {
+          "when": "1974 年",
+          "label": "入藏前的一次處理",
+          "note": "留下多層塗層，後來造成裂紋"
+        },
+        {
+          "when": "1976.2.24",
+          "label": "經倫敦 Leggatt Brothers 售予克里夫蘭美術館",
+          "note": "4 月 8 日對外公布"
+        },
+        {
+          "when": "2014.6.3",
+          "label": "在展廳公開修復",
+          "note": "至 9 月 14 日，修復師 Dean Yoder"
+        },
+        {
+          "when": "2016.5.17",
+          "label": "修復完成，重新展出",
+          "note": "217 展廳"
+        },
+        {
+          "when": "2017 年",
+          "label": "與 Back-Vega 版本並排展出",
+          "note": "館方部落格，2018 年 6 月 8 日"
+        }
+      ],
+      "caption": "依克里夫蘭美術館開放資料的流傳紀錄、1976 年與 2016 年新聞稿、館方文章及貝洛里 1672 年初版整理。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "館方的流傳紀錄從第八代貝納文特伯爵（Juan Alonso Pimentel y Herrera）開始：他在 1603 至 1610 年間任西班牙駐拿坡里總督。畫作接著傳給他的孫子、第十代伯爵，留在瓦拉多利德（Valladolid），直到約 1652–53 年；之後記錄著卡斯提亞（Castilla）一座身分不明的修道院、馬德里的 A. Tors 與 José Manuel Arnaiz，最後在 1976 年 2 月 24 日，經倫敦畫商 Leggatt Brothers 賣給克里夫蘭。1976 年的新聞稿說，研究者是憑貝納文特家族 1653 年的財產清冊認出它的：清冊把它記為卡拉瓦喬原作，估價 1,500 杜卡特，是整份清冊裡最高的。"
+    },
+    {
+      "type": "quote",
+      "text": "曾任拿坡里總督的貝納文特伯爵，也把《聖安德烈受難》帶到了西班牙。",
+      "original": "Il Conte di Benauente, che fù ViceRè di Napoli, portò ancora in Ispagna la Crocifissione di Santo Andrea",
+      "cite": "貝洛里《現代畫家、雕塑家與建築師傳》（Le vite de' pittori, scultori et architetti moderni），羅馬，1672 年，第 214 頁；依 Internet Archive 所存初版掃描，拼寫依原書，本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "倫敦的 Denis Mahon 在 1976 年到克里夫蘭研究過這幅畫，依新聞稿的轉述，他把它放在卡拉瓦喬 1607 年第一次停留拿坡里期間：晚於拿坡里慈悲山（Monte della Misericordia）教堂的《七件慈悲善行》（Sette opere di Misericordia），畫家在 1607 年 1 月 9 日收到那幅畫的酬金；早於可能在 1607 年底於拿坡里畫成、送往馬爾他的《寫作中的聖傑羅姆》（Saint Jerome Writing）。凱斯西儲大學（Case Western Reserve University）的 Erin Benay 在館方 2018 年的訪談中說，這幅畫無疑是為拿坡里總督府的祭壇所委託，總督卸任回西班牙時把它一起帶走，從此由虔誠禮拜的對象，轉為世俗推崇的對象。"
+    },
+    {
+      "type": "h",
+      "text": "歸屬：爭議不在這一幅，在它的「雙胞胎」"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "在克里夫蘭這幅重新出現之前，世人主要是透過摹本認識這個構圖。1976 年的新聞稿列出了托雷多（Toledo，西班牙）與第戎（Dijon）兩座博物館的摹本，以及瑞士的一件私人收藏。另一件知名的 17 世紀摹本，是所謂 Back-Vega 版本，館方部落格的圖說標為「佚名畫家仿卡拉瓦喬，1608–1610 年」，屬 Spier 收藏。館方部落格說，2017 年館方把它和自家的原作並排展出；2018 年 6 月號《伯靈頓雜誌》（The Burlington Magazine）以這幅畫為封面，刊出 Richard E. Spear 的文章，討論卡拉瓦喬是否畫過「親筆複本」。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "依 Benay 在同一篇訪談中的轉述，Spear 認為這次並排讓多數專家得出明確結論：Back-Vega 那幅不是卡拉瓦喬畫的，儘管 2018 年之前有人主張它是。Benay 說，兩幅畫乍看幾乎一模一樣，在沒有照相術的年代，這是摹寫者了不起的功夫；最讓她興奮的，是展場觀眾的反應："
+    },
+    {
+      "type": "quote",
+      "text": "我交談過的每一位非專業觀眾，都輕易認出了克里夫蘭這幅畫裡「真正」畫家的手筆。",
+      "original": "every single nonspecialist viewer that I spoke to easily recognized the hand of the “real” artist in the CMA’s painting by Caravaggio",
+      "cite": "Erin E. Benay，克里夫蘭美術館部落格訪談，2018 年 6 月 8 日，本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "她沒有說觀眾是憑什麼認出來的，本文也無從替他們回答。館方自己的說法倒是留下一個數字的變化：1976 年的新聞稿說，這是美國僅有的五件卡拉瓦喬作品之一；館方 2018 年的部落格文章寫的是「美國僅有的八件之一」。同一幅畫，1973 年在塞維亞還掛著兩個問號。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Crucifixion of Saint Andrew（1976.2）",
+      "publisher": "Cleveland Museum of Art Open Access API",
+      "date": "",
+      "url": "https://openaccess-api.clevelandart.org/api/artworks/1976.2",
+      "note": "年代、材料、尺寸、館藏號、作品說明、流傳紀錄、展覽紀錄、文獻書目（含 Ferriss 2008）、CC0 狀態、修復前後兩張影像"
+    },
+    {
+      "title": "The Crucifixion of Saint Andrew",
+      "publisher": "Cleveland Museum of Art",
+      "date": "",
+      "url": "https://www.clevelandart.org/art/1976.2",
+      "note": "館方作品頁：作品說明、X 形十字架的註記、開放授權"
+    },
+    {
+      "title": "Accession – The Crucifixion of Saint Andrew by Caravaggio, 1976.2（新聞稿）",
+      "publisher": "Cleveland Museum of Art（Internet Archive 所存館方檔案）",
+      "date": "1976-04-08",
+      "url": "https://archive.org/details/cmapr2350",
+      "note": "1973 年塞維亞展出時的標籤、一張臉被重畫、人物描述、1653 年清冊與 1,500 杜卡特、Mahon 的年代判斷、X 光所見的手部更動、美國五件之一"
+    },
+    {
+      "title": "Caravaggio in Focus",
+      "publisher": "Cleveland Art 館刊（Dean Yoder），克里夫蘭美術館網站轉載",
+      "date": "2014-05",
+      "url": "https://www.clevelandart.org/articles/caravaggio-focus",
+      "note": "原刊 2014 年 5/6 月號；菱形紋畫布、裂口與補布、刻線、Osiris 紅外線相機與老婦手臂的悔筆、1974 年塗層與牽引裂紋"
+    },
+    {
+      "title": "Conserving Caravaggio's Crucifixion of Saint Andrew",
+      "publisher": "Cleveland Museum of Art（Dean Yoder）",
+      "date": "",
+      "url": "https://www.clevelandart.org/articles/conserving-caravaggios-crucifixion-saint-andrew",
+      "note": "頁面標示 2014-08-08，但內容涵蓋 2016 年後才完成的研究與 app，實際發布日期不明；修復近三年、檢測方法、abbozzo、刻線代替素描、被陰影籠罩的人物"
+    },
+    {
+      "title": "Restored Caravaggio Masterpiece On View May 17",
+      "publisher": "Cleveland Museum of Art 新聞稿",
+      "date": "2016-05-09",
+      "url": "https://www.clevelandart.org/about/press/restored-caravaggio-masterpiece-view-may-17",
+      "note": "頁首標示 2016 年 5 月 11 日，電頭日期為 5 月 9 日；修復完成、除去的塗層與補筆、四邊 1 英寸褐色顏料、兩層底層、美國最大的卡拉瓦喬、5 月 17 日重新展出"
+    },
+    {
+      "title": "Conservation in Focus: Caravaggio's Crucifixion of Saint Andrew",
+      "publisher": "Cleveland Museum of Art",
+      "date": "",
+      "url": "https://www.clevelandart.org/exhibitions/conservation-focus-caravaggios-crucifixion-saint-andrew",
+      "note": "公開修復展期 2014 年 6 月 3 日至 9 月 14 日"
+    },
+    {
+      "title": "Scholarly Journal Elevates Conversation on Caravaggio's Masterwork at the CMA",
+      "publisher": "Cleveland Museum of Art（Julie A. Evans）",
+      "date": "2018-06-08",
+      "url": "https://www.clevelandart.org/articles/scholarly-journal-elevates-conversation-caravaggios-masterwork-cma",
+      "note": "《伯靈頓雜誌》2018 年 6 月號封面與 Spear 文章、Back-Vega 版本並排展出、Erin Benay 訪談（委託與流轉、觀眾反應的引文）"
+    },
+    {
+      "title": "Le vite de' pittori, scultori et architetti moderni（羅馬，1672）",
+      "publisher": "Giovan Pietro Bellori；Internet Archive 掃描",
+      "date": "1672",
+      "url": "https://archive.org/details/ghbel42612720",
+      "note": "卡拉瓦喬傳第 214 頁，貝納文特伯爵把《聖安德烈受難》帶到西班牙"
+    },
+    {
+      "title": "The Many Reasons Why Goiter Is Seen in Old Paintings",
+      "publisher": "Thyroid 18(4): 387–393（J. Barry Ferriss）",
+      "date": "2008-04",
+      "url": "https://doi.org/10.1089/thy.2007.0301",
+      "note": "依 Crossref 核對書目；未讀全文，只依克里夫蘭美術館書目所註：提到並刊出本畫（第 391 頁，圖 10）"
+    },
+    {
+      "title": "File:Caravaggio - The Crucifixion of Saint Andrew - 1976.2 - Cleveland Museum of Art.tiff",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Caravaggio_-_The_Crucifixion_of_Saint_Andrew_-_1976.2_-_Cleveland_Museum_of_Art.tiff",
+      "note": "頭圖影像，11447 × 15187 像素，公版，來源為館方開放資料"
+    }
+  ]
+}
