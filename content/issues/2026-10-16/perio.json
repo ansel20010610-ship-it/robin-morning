@@ -1,0 +1,373 @@
+{
+  "column": "perio",
+  "date": "2026-10-16",
+  "title": "120 名病人的肱動脈：2007 年牙周治療與內皮功能",
+  "dek": "Tonetti 等人隨機治療重度牙周炎，量病人上臂的血管。第一天先變差，6 個月後變好。這能說明牙周病與心血管疾病的什麼？",
+  "topic_key": "perio:doi:10.1056/nejmoa063186",
+  "updated_at": "2026-10-16T00:53:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "illustration",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Gray525.png",
+    "width": 463,
+    "height": 900,
+    "alt": "右上臂前面的解剖圖，肌肉以黑白線條畫出，標有三角肌、胸大肌、肱二頭肌、肱三頭肌；一條紅色動脈沿上臂內側往下走，旁有黃色神經與藍色靜脈，右側以英文標出神經與分支動脈名稱。",
+    "caption": "肱動脈（brachial artery）是 FMD 量測的部位：在上臂用超音波量它的直徑，看阻斷血流後再放開時擴張多少。圖為《格雷氏解剖學》（Gray's Anatomy）1918 年版第 525 圖，紅色縱走的血管即肱動脈。公版解剖插圖，與 Tonetti 等人的受試者無關。",
+    "credit": "Henry Vandyke Carter 繪，出自 Henry Gray《Anatomy of the Human Body》1918 年版，Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gray525.png",
+    "made": "1858 年以前（Commons 標示）；取自 1918 年版"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "2007 年 3 月 1 日，《新英格蘭醫學期刊》（New England Journal of Medicine, NEJM）刊出一篇牙周治療的隨機對照試驗。主角不是牙周袋，而是上臂的肱動脈：Maurizio Tonetti、Francesco D'Aiuto 與心血管學者 John Deanfield 等人在倫敦大學學院（UCL）執行這項試驗，想知道把重度牙周炎治好之後，病人的血管內皮功能會不會跟著變好。PubMed 記載第一作者 Tonetti 的單位是美國康乃狄克大學健康中心，登錄紀錄則把他列在 UCL 附設醫院與康乃狄克大學兩處。"
+    },
+    {
+      "type": "p",
+      "text": "這個問題在 2000 年代初期很急迫。流行病學研究一再看到牙周炎與動脈粥狀硬化性心血管疾病（atherosclerotic cardiovascular disease）同時出現，但兩者共享吸菸、年齡、糖尿病等危險因子，觀察性資料很難回答「是不是牙周炎本身造成的」。同一團隊先前的試驗已發現，治療重度牙周炎後血清 C 反應蛋白（C-reactive protein, CRP）會下降（依試驗登錄紀錄的背景說明）。下一步就是看功能：發炎降了，血管有沒有真的不一樣。"
+    },
+    {
+      "type": "p",
+      "text": "他們選的指標是血流介導性血管擴張（flow-mediated dilatation, FMD）：用超音波量肱動脈直徑，先用壓脈帶暫時阻斷前臂血流，放開後看動脈因血流增加而擴張了幾個百分點。擴張得少，代表內皮功能差。FMD 是心血管研究常用的替代指標（surrogate marker），不是心肌梗塞或中風本身。"
+    },
+    {
+      "type": "p",
+      "text": "本文依摘要與後續文獻整理。NEJM 全文需訂閱，未能取得；研究設計的細節取自研究者在 ClinicalTrials.gov 的登錄紀錄（NCT00327561），少數治療內容取自 2007 年 2 月 28 日的醫學新聞報導，文中會一一標明。全文裡的基線特徵表、各時間點的 FMD 絕對值、牙周指標的組間數字，本文沒有讀到，因此不寫。PubMed 另記載 NEJM 在 2018 年 6 月刊出一則針對本文的更正（Erratum），本文也未能讀到更正內容。"
+    },
+    {
+      "type": "paper",
+      "citation": "Tonetti MS, D'Aiuto F, Nibali L, Donald A, Storry C, Parkar M, Suvan J, Hingorani AD, Vallance P, Deanfield J. Treatment of periodontitis and endothelial function. *N Engl J Med*. 2007;356(9):911–920.",
+      "doi": "10.1056/NEJMoa063186",
+      "pmid": "17329698",
+      "link": "https://doi.org/10.1056/NEJMoa063186",
+      "question": "以強化方式治療重度牙周炎，相較於社區式的齦上潔牙，能否改善全身的血管內皮功能（肱動脈 FMD）？治療本身會不會先引起急性發炎？",
+      "design": "單中心、平行分組隨機對照試驗；強化牙周治療對照社區牙周照護；FMD 與血液指標在治療前及治療後第 1、7、30、60、180 天測量",
+      "sample": "重度牙周炎病人 120 人（強化治療 61、社區照護 59）"
+    },
+    {
+      "type": "h",
+      "text": "研究設計：兩種牙周處置，同一把量血管的尺"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "依登錄紀錄，試驗在倫敦 UCL Eastman 牙科醫院與 UCL 血管生物學實驗室（位於大奧蒙德街醫院）進行，2003 年 9 月開始，2005 年 3 月完成。受試者是轉介到 Eastman 牙周科、35 到 60 歲、整體健康良好的全口性中度到重度慢性牙周炎病人；登錄的收案條件要求有 40 到 100 個探測深度大於 5 且探診出血的牙周袋（登錄原文未寫單位，應指毫米）。長期服用降血壓藥或降血脂藥、2 個月內開始服用非類固醇抗發炎藥、3 個月內用過全身性抗生素、未控制的代謝或心血管疾病、6 個月內接受過牙周治療者，都排除。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "摘要寫明，120 名重度牙周炎病人被隨機分到社區牙周照護（community-based periodontal care）59 人，或強化牙周治療（intensive periodontal treatment）61 人。登錄紀錄描述兩組都是在 24 小時內分兩次就診完成：強化組接受口腔衛生指導與齦下清創（subgingival debridement）；對照組只做齦上沉積物去除。對照組在研究結束後、或牙周炎有惡化證據時，會再接受強化治療。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "醫學新聞網站 Patient Care 在 2007 年 2 月 28 日的報導，對兩組的描述多了幾項：對照組是齦上潔牙與拋光；強化組除了齦下刮治與根面整平，還拔除無法保留的牙齒，並在牙周袋內放置 minocycline 局部抗生素。同一篇報導把「重度牙周炎」寫成至少一半牙齒有大於 6 毫米的牙周袋、且邊緣骨喪失超過 30%。這些細節本文無法用原論文核對，只能當作轉述。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "主要結果指標是肱動脈 FMD；次要指標包括血清 CRP、介白素 6（interleukin-6, IL-6）、凝血與內皮活化標記，牙周指標（菌斑、探診出血、探測深度、附著水準）則作為治療是否有效的對照。依登錄紀錄的設計：隨機分配依吸菸狀態分層，由試驗登記員以不透明信封隱匿分組；檢查者看不到治療紀錄；實驗室與 FMD 判讀人員不知道分組；統計師在不知分組的情況下做意向治療分析（intention-to-treat）。"
+    },
+    {
+      "type": "svg",
+      "title": "試驗流程（原創示意圖）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 500\">\n<text class=\"ink\" x=\"180\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">2003 年 9 月起：倫敦 Eastman 牙科醫院</text>\n<rect class=\"soft\" x=\"20\" y=\"34\" width=\"320\" height=\"62\" rx=\"6\"/>\n<text class=\"ink\" x=\"180\" y=\"56\" font-size=\"12\" text-anchor=\"middle\">120 名重度牙周炎病人，基線檢查</text>\n<text class=\"ink\" x=\"180\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">FMD、CRP、IL-6、凝血與內皮活化指標、牙周指標</text>\n<text class=\"muted\" x=\"180\" y=\"90\" font-size=\"10\" text-anchor=\"middle\">隨機分配，依吸菸狀態分層（登錄紀錄）</text>\n<line class=\"muted line\" x1=\"100\" y1=\"96\" x2=\"100\" y2=\"118\" stroke-width=\"1.5\"/>\n<line class=\"muted line\" x1=\"260\" y1=\"96\" x2=\"260\" y2=\"118\" stroke-width=\"1.5\"/>\n<rect class=\"paper\" x=\"20\" y=\"118\" width=\"160\" height=\"128\" rx=\"6\" stroke-width=\"1.5\"/>\n<text class=\"accent\" x=\"100\" y=\"140\" font-size=\"13\" text-anchor=\"middle\">強化治療 61 人</text>\n<text class=\"ink\" x=\"100\" y=\"162\" font-size=\"11\" text-anchor=\"middle\">口腔衛生指導</text>\n<text class=\"ink\" x=\"100\" y=\"180\" font-size=\"11\" text-anchor=\"middle\">全口齦下清創</text>\n<text class=\"ink\" x=\"100\" y=\"198\" font-size=\"11\" text-anchor=\"middle\">24 小時內 2 次就診</text>\n<text class=\"muted\" x=\"100\" y=\"222\" font-size=\"10\" text-anchor=\"middle\">報導另提：拔除無望齒、</text>\n<text class=\"muted\" x=\"100\" y=\"236\" font-size=\"10\" text-anchor=\"middle\">袋內放置 minocycline</text>\n<rect class=\"paper\" x=\"190\" y=\"118\" width=\"150\" height=\"128\" rx=\"6\" stroke-width=\"1.5\"/>\n<text class=\"ink\" x=\"265\" y=\"140\" font-size=\"13\" text-anchor=\"middle\">社區照護 59 人</text>\n<text class=\"ink\" x=\"265\" y=\"162\" font-size=\"11\" text-anchor=\"middle\">齦上去除沉積物</text>\n<text class=\"muted\" x=\"265\" y=\"180\" font-size=\"10\" text-anchor=\"middle\">（報導另提：拋光）</text>\n<text class=\"ink\" x=\"265\" y=\"198\" font-size=\"11\" text-anchor=\"middle\">24 小時內 2 次就診</text>\n<text class=\"muted\" x=\"265\" y=\"222\" font-size=\"10\" text-anchor=\"middle\">研究結束後</text>\n<text class=\"muted\" x=\"265\" y=\"236\" font-size=\"10\" text-anchor=\"middle\">再接受強化治療</text>\n<line class=\"muted line\" x1=\"100\" y1=\"246\" x2=\"100\" y2=\"270\" stroke-width=\"1.5\"/>\n<line class=\"muted line\" x1=\"265\" y1=\"246\" x2=\"265\" y2=\"270\" stroke-width=\"1.5\"/>\n<text class=\"ink\" x=\"180\" y=\"290\" font-size=\"12\" text-anchor=\"middle\">治療後追蹤（天）</text>\n<line class=\"ink line\" x1=\"30\" y1=\"330\" x2=\"330\" y2=\"330\" stroke-width=\"1.5\"/>\n<circle class=\"gold\" cx=\"30\" cy=\"330\" r=\"6\"/>\n<circle class=\"accent\" cx=\"55\" cy=\"330\" r=\"6\"/>\n<circle class=\"soft\" cx=\"95\" cy=\"330\" r=\"6\"/>\n<circle class=\"soft\" cx=\"160\" cy=\"330\" r=\"6\"/>\n<circle class=\"accent\" cx=\"230\" cy=\"330\" r=\"6\"/>\n<circle class=\"accent\" cx=\"330\" cy=\"330\" r=\"6\"/>\n<text class=\"ink\" x=\"30\" y=\"314\" font-size=\"10.5\" text-anchor=\"middle\">基線</text>\n<text class=\"ink\" x=\"55\" y=\"354\" font-size=\"10.5\" text-anchor=\"middle\">1</text>\n<text class=\"ink\" x=\"95\" y=\"354\" font-size=\"10.5\" text-anchor=\"middle\">7</text>\n<text class=\"ink\" x=\"160\" y=\"354\" font-size=\"10.5\" text-anchor=\"middle\">30</text>\n<text class=\"ink\" x=\"230\" y=\"354\" font-size=\"10.5\" text-anchor=\"middle\">60</text>\n<text class=\"ink\" x=\"330\" y=\"354\" font-size=\"10.5\" text-anchor=\"end\">180</text>\n<rect class=\"soft\" x=\"20\" y=\"372\" width=\"320\" height=\"84\" rx=\"6\"/>\n<text class=\"accent\" x=\"34\" y=\"394\" font-size=\"11\">第 1 天：強化組 FMD 較低、發炎指標較高</text>\n<text class=\"accent\" x=\"34\" y=\"414\" font-size=\"11\">第 60 天：強化組 FMD 較高（差 0.9 百分點）</text>\n<text class=\"accent\" x=\"34\" y=\"434\" font-size=\"11\">第 180 天：強化組 FMD 較高（差 2.0 百分點）</text>\n<text class=\"muted\" x=\"34\" y=\"450\" font-size=\"10\">紅點為摘要列出組間差異數值的時間點</text>\n<text class=\"muted\" x=\"20\" y=\"480\" font-size=\"10.5\">示意，不按比例。依 NEJM 摘要與 ClinicalTrials.gov</text>\n<text class=\"muted\" x=\"20\" y=\"494\" font-size=\"10.5\">登錄紀錄（NCT00327561）重繪，非論文原圖</text>\n</svg>",
+      "caption": "示意，不按比例。依 Tonetti 等 2007 年 NEJM 摘要與 ClinicalTrials.gov 登錄紀錄 NCT00327561 重繪，不是論文原圖。登錄紀錄列的追蹤時間是第 1、7 天與第 2、6 個月，摘要另列第 30 天；強化組的拔牙與 minocycline、對照組的拋光出自新聞報導，未能以原論文核對。",
+      "credit": "知更鳥晨間記事原創圖解"
+    },
+    {
+      "type": "h",
+      "text": "主要結果：先變差，60 天後轉好"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "結果是雙相的。治療後 24 小時，強化組的 FMD 反而比對照組低，絕對差 1.4 個百分點（95% 信賴區間 0.5 到 2.3，P=0.002）；CRP、IL-6，以及內皮活化標記可溶性 E-選擇素（soluble E-selectin）與溫韋伯氏因子（von Willebrand factor）都明顯較高（各項比較 P<0.05）。換句話說，一次做完全口齦下清創，短期內像是給全身一次小規模的發炎刺激。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "到了治療後 60 天，方向反轉：強化組的 FMD 比對照組高 0.9 個百分點（95% 信賴區間 0.1 到 1.7，P=0.02），可溶性 E-選擇素較低；180 天時差距擴大到 2.0 個百分點（95% 信賴區間 1.2 到 2.8，P<0.001）。FMD 改善的幅度與牙周狀況改善的幅度相關，Spearman 等級相關係數 r=0.29（P=0.003）。兩組都沒有嚴重不良反應，也沒有發生心血管事件。"
+    },
+    {
+      "type": "table",
+      "title": "強化組減對照組的 FMD 差異（依摘要）",
+      "head": [
+        "治療後",
+        "FMD 絕對差（百分點）",
+        "95% 信賴區間",
+        "P 值",
+        "摘要寫到的其他指標"
+      ],
+      "rows": [
+        [
+          "第 1 天",
+          "−1.4（強化組較低）",
+          "−2.3 至 −0.5",
+          "0.002",
+          "CRP、IL-6、可溶性 E-選擇素、溫韋伯氏因子均較高（P<0.05）"
+        ],
+        [
+          "第 7、30 天",
+          "摘要未載",
+          "—",
+          "—",
+          "摘要未載"
+        ],
+        [
+          "第 60 天",
+          "+0.9（強化組較高）",
+          "0.1 至 1.7",
+          "0.02",
+          "可溶性 E-選擇素較低"
+        ],
+        [
+          "第 180 天",
+          "+2.0（強化組較高）",
+          "1.2 至 2.8",
+          "<0.001",
+          "可溶性 E-選擇素較低"
+        ]
+      ],
+      "caption": "摘要以「強化組比對照組低／高多少」敘述，表中正負號為本文為方便閱讀所加，信賴區間依同一方向標上正負號（摘要原文寫成「0.5 至 2.3」的正值）。FMD 的單位是肱動脈直徑變化的百分比，所以組間差以「百分點」表示。第 7 與 30 天有量測，但摘要沒有給組間數字。"
+    },
+    {
+      "type": "p",
+      "text": "摘要沒有寫各組各時間點的 FMD 絕對值，所以讀者無法從摘要知道「從幾 % 變成幾 %」，只知道組間差。這也意味著 180 天時的 2.0 個百分點，究竟是強化組進步、對照組退步，還是兩者都有，摘要無法回答。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "2.0 個百分點有多大？Inaba、Chen 與 Bergmann 2010 年彙整 14 個觀察性世代研究、5,547 名受試者的統合分析（meta-analysis）估計，肱動脈 FMD 每高 1 個百分點，校正後的心血管事件相對風險為 0.87（95% 信賴區間 0.83 到 0.91）。但同一篇摘要也提醒，研究品質異質、殘餘干擾與發表偏差，使 FMD 在傳統危險因子之外的額外預測力無法定論。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "因此，不能把 Tonetti 試驗的 2.0 個百分點直接換算成「心血管風險下降兩成多」。那是觀察性研究裡人與人之間 FMD 差異的關聯，不是介入造成 FMD 改變後的風險變化。這個試驗證明的是替代指標動了，而不是硬終點動了。"
+    },
+    {
+      "type": "h",
+      "text": "限制：替代指標、6 個月、精挑的病人"
+    },
+    {
+      "type": "p",
+      "text": "第一，終點是 FMD 與血液指標，不是心肌梗塞、中風或死亡。120 人追蹤 6 個月，本來就不可能回答心血管事件的問題；「沒有發生心血管事件」只是安全性描述，不是療效證據。摘要結論說強化治療「造成」（resulted in）短期的全身發炎與內皮功能下降，隨機設計也讓作者能對 FMD 下因果結論；但這個因果只到 FMD 這個替代指標，不延伸到心血管事件。"
+    },
+    {
+      "type": "p",
+      "text": "第二，對照組並非未治療，而是只做齦上處置。這讓試驗在倫理上可行，也更接近真實世界的比較；但組間差異同時包含清創深度、治療強度，若新聞報導無誤，還包括局部抗生素與拔牙。哪一個成分造成 FMD 的改變，這個設計拆不開。"
+    },
+    {
+      "type": "p",
+      "text": "第三，受試者經過嚴格篩選：35 到 60 歲、整體健康良好、沒有未控制的心血管或代謝疾病、未長期服用降壓或降脂藥（依登錄紀錄）、重度且全口性的牙周炎。結果能否外推到已確診或控制中的冠心病、糖尿病，或只有輕中度牙周炎的病人，試驗本身無法回答。Patient Care 的報導也轉述作者的看法：輕度牙周病是否會有類似的血管效益並不清楚。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "第四，登錄時間與利益揭露。ClinicalTrials.gov 紀錄顯示試驗在 2005 年 3 月完成，首次登錄卻是 2006 年 5 月 16 日，屬於事後登錄；讀者無法從公開紀錄確認主要指標與分析計畫是在收案前就定好的。登錄紀錄的合作者包括 Johnson & Johnson；Patient Care 的報導則轉述，Tonetti 揭露曾任 Ora-Pharma（屬 Johnson & Johnson）的顧問委員。這些不代表結果有誤，但在評估時應該放進來。"
+    },
+    {
+      "type": "p",
+      "text": "第五，第 1 天的急性發炎是在「24 小時內完成全口清創」這種治療節奏下觀察到的。若改成分區、分次治療，急性反應會不會一樣大，這篇試驗沒有比較。"
+    },
+    {
+      "type": "h",
+      "text": "後來的研究：替代指標站得住，硬終點仍空白"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "急性反應的部分，後來有直接比較。Graziani 等人 2015 年在《Journal of Clinical Periodontology》發表的隨機試驗，把 38 名牙周炎病人分到全口一次刮治（full-mouth SRP）或分區刮治（quadrant SRP）。全口組治療後 24 小時的急性期反應較大：CRP 約升高 3 倍、IL-6 約 2 倍；之後各時間點兩組沒有差異，牙周臨床改善也相當。治療時間越長，24 小時 CRP 上升越多（R=0.5，P<0.001）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "長期 FMD 的部分，Orlandi 等人 2014 年在《Atherosclerosis》的系統性回顧與統合分析，納入 35 篇研究、其中 22 篇做量化合併。牙周炎病人的頸動脈內中膜厚度平均多 0.08 毫米，FMD 平均差 5.1 個百分點；介入研究合併後，牙周治療組的 FMD 比對照組平均改善 6.64 個百分點（95% 信賴區間 2.83 到 10.44）。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "6.64 個百分點遠大於 Tonetti 試驗的 2.0，信賴區間也寬。由此推想，納入的研究在設計、族群與 FMD 量測方法上差異不小；合併後的數字適合用來判斷「方向一致」，不適合當作可預期的效果大小。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "但不是每個族群都重現了這個結果。Saffi 等人 2018 年在《Oral Diseases》發表的巴西試驗，納入 69 名穩定型冠狀動脈疾病合併重度牙周炎的病人，試驗組接受個人化口腔衛生指導與分區刮治、根面整平，對照組在研究期後才治療。3 個月時兩組牙周指標有差，FMD 卻沒有顯著改善（對照組 1.37%、試驗組 1.39%），組間也無差異；試驗組的血管發炎標記 sVCAM-1 維持不變，對照組則上升。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "心臟科這一端的判斷較保守。美國心臟協會（American Heart Association）2012 年由 Lockhart 等人執筆的科學聲明，結論是觀察性研究支持牙周病與動脈粥狀硬化性血管疾病有獨立於已知干擾因子的關聯，「They do not, however, support a causative relationship」（但不支持因果關係；本文自譯）；牙周介入在短期研究中能降低全身發炎與內皮功能異常，但沒有證據顯示能預防動脈粥狀硬化性血管疾病或改變其結局。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "歐洲牙周病學會（European Federation of Periodontology, EFP）與世界心臟聯盟（World Heart Federation）2020 年的共識報告（Sanz 等人），把證據分開評等：牙周治療降低 CRP、IL-6 與改善 FMD 屬中等證據；一級預防方面，自 2013 年共識以來沒有新的心血管事件隨機試驗，與會者並質疑在族群層級做足夠檢定力的一級預防試驗是否可行。報告也寫到，24 小時內完成的全口非手術治療會引發約一週的急性全身發炎反應與暫時性內皮功能受損，分次治療則不會。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "考科藍（Cochrane）系統性回顧 2022 年的第三次更新（Ye 等人）只納入 2 篇隨機試驗（主要結果為死亡與心血管事件，追蹤至少一年），兩篇都判為高偏差風險。一級預防那篇有 165 名合併代謝症候群的牙周炎病人，證據確定性極低，無法判斷效果，甚至不能排除刮治加 amoxicillin 與 metronidazole 會增加心血管事件（Peto 勝算比 7.77，95% 信賴區間 1.07 到 56.1）；二級預防那篇 303 人的先導試驗，只有 37 人有一年以上追蹤，資料不足以納入。作者結論是：一級預防的極低確定性證據無法下定論，二級預防則沒有可靠證據。"
+    },
+    {
+      "type": "table",
+      "title": "2007 年之後的幾個關鍵回答",
+      "head": [
+        "文獻",
+        "類型",
+        "回答了什麼"
+      ],
+      "rows": [
+        [
+          "Lockhart 等，2012",
+          "AHA 科學聲明",
+          "關聯獨立存在，但不支持因果；無證據顯示牙周治療預防心血管疾病"
+        ],
+        [
+          "Orlandi 等，2014",
+          "系統性回顧與統合分析",
+          "牙周治療後 FMD 平均改善 6.64 個百分點，研究間差異大"
+        ],
+        [
+          "Graziani 等，2015",
+          "隨機試驗，38 人",
+          "全口一次刮治的 24 小時急性期反應大於分區刮治，之後無差異"
+        ],
+        [
+          "Saffi 等，2018",
+          "隨機試驗，69 名冠心病人",
+          "3 個月時 FMD 無組間差異"
+        ],
+        [
+          "Sanz 等，2020",
+          "EFP 與世界心臟聯盟共識",
+          "FMD、CRP 改善屬中等證據；一級預防硬終點試驗缺乏"
+        ],
+        [
+          "Ye 等，2022",
+          "考科藍系統性回顧",
+          "只有 2 篇高偏差風險試驗，對心血管事件無結論"
+        ]
+      ],
+      "caption": "依各篇摘要或開放全文整理。Sanz 等 2020 年共識報告讀到開放全文，其餘依摘要。"
+    },
+    {
+      "type": "h",
+      "text": "回頭怎麼讀：證明了「可以影響血管」，沒有證明「可以預防心臟病」"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "這篇試驗證明的事情很具體：在一群整體健康良好、沒有未控制心血管或代謝疾病的重度牙周炎病人中，隨機分配的強化牙周治療在 6 個月時，讓肱動脈 FMD 比只做齦上處置的對照組高了 2.0 個百分點，而治療後第一天則短暫變差。它用隨機分配排除了「牙周炎病人本來就不一樣」的干擾，所以比當時的流行病學證據前進了一步：牙周發炎的負擔至少能影響一個血管功能指標。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "它沒有證明的事情同樣具體：牙周治療會減少心肌梗塞、中風或死亡。從 AHA 2012 年聲明到考科藍 2022 年回顧，這一點都還是空白。對牙醫師來說，向病人說明時，「牙周病和心血管疾病有關聯，治療牙周炎能改善部分血管指標」是有證據支撐的說法；「治好牙周病就能預防心臟病」則超出現有證據。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "第一天的那個負值，後來反而成了這篇論文常被引用的另一半。它是最早以隨機對照設計、同時量測內皮功能，顯示一次大範圍的齦下清創會帶來可測量的全身急性發炎與暫時性內皮功能下降的研究之一。Graziani 2015 年的試驗與 EFP 2020 年共識都延續了這條線，討論治療節奏的取捨。這些數據來自整體健康良好的受試者，對已有心血管疾病的病人意味著什麼，仍是開放的問題。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tonetti MS, D'Aiuto F, Nibali L, et al. Treatment of periodontitis and endothelial function. N Engl J Med 2007;356(9):911–920",
+      "publisher": "New England Journal of Medicine",
+      "date": "2007-03-01",
+      "url": "https://doi.org/10.1056/NEJMoa063186",
+      "note": "原論文；全文需訂閱（WebFetch 回 403）未能取得，依摘要。卷期頁經 Crossref 核對"
+    },
+    {
+      "title": "PubMed 書目與摘要：Treatment of periodontitis and endothelial function（PMID 17329698）",
+      "publisher": "National Library of Medicine（E-utilities efetch）",
+      "date": "2007-03-01",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17329698/",
+      "note": "摘要全部數字出處；作者、卷期頁、DOI；記載 2018 年 6 月 13 日更正 N Engl J Med 2018;378(25):2450（doi:10.1056/NEJMx180022），內容未讀到。PMID 由 Europe PMC 以 DOI 查得後以 efetch 回查標題一致"
+    },
+    {
+      "title": "NEJM 更正：Treatment of Periodontitis and Endothelial Function. N Engl J Med 2018;378(25):2450",
+      "publisher": "New England Journal of Medicine",
+      "date": "2018-06-13",
+      "url": "https://doi.org/10.1056/NEJMx180022",
+      "note": "僅確認存在（PubMed、Crossref），內容未能讀取"
+    },
+    {
+      "title": "Effect of Intensive Periodontal Therapy on Vascular Function（NCT00327561）",
+      "publisher": "ClinicalTrials.gov",
+      "date": "2006-05-18",
+      "url": "https://clinicaltrials.gov/study/NCT00327561",
+      "note": "以 API 讀取登錄全文：試驗地點、起訖 2003-09 至 2005-03、首次登錄 2006-05-16、收案與排除條件、兩組處置、遮盲與分層、合作單位"
+    },
+    {
+      "title": "Treating dental disease improves vascular function",
+      "publisher": "Patient Care Online",
+      "date": "2007-02-28",
+      "url": "https://www.patientcareonline.com/view/treating-dental-disease-improves-vascular-function",
+      "note": "新聞報導；兩組處置細節（拔牙、minocycline）、重度牙周炎定義、作者利益揭露與輕度牙周病的保留看法，均為轉述"
+    },
+    {
+      "title": "Inaba Y, Chen JA, Bergmann SR. Prediction of future cardiovascular outcomes by flow-mediated vasodilatation of brachial artery: a meta-analysis. Int J Cardiovasc Imaging 2010;26(6):631–640",
+      "publisher": "International Journal of Cardiovascular Imaging（Springer）",
+      "date": "2010-03-26",
+      "url": "https://doi.org/10.1007/s10554-010-9616-1",
+      "note": "依 PubMed 摘要（PMID 20339920）"
+    },
+    {
+      "title": "Graziani F, Cei S, Orlandi M, et al. Acute-phase response following full-mouth versus quadrant non-surgical periodontal treatment: a randomized clinical trial. J Clin Periodontol 2015;42(9):843–852",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2015-10-01",
+      "url": "https://doi.org/10.1111/jcpe.12451",
+      "note": "依 PubMed 摘要（PMID 26309133）"
+    },
+    {
+      "title": "Orlandi M, Suvan J, Petrie A, et al. Association between periodontal disease and its treatment, flow-mediated dilatation and carotid intima-media thickness: a systematic review and meta-analysis. Atherosclerosis 2014;236(1):39–46",
+      "publisher": "Atherosclerosis（Elsevier）",
+      "date": "2014-06-17",
+      "url": "https://doi.org/10.1016/j.atherosclerosis.2014.06.002",
+      "note": "依 PubMed／Europe PMC 摘要（PMID 25014033）"
+    },
+    {
+      "title": "Saffi MAL, Rabelo-Silva ER, Polanczyk CA, et al. Periodontal therapy and endothelial function in coronary artery disease: a randomized controlled trial. Oral Dis 2018;24(7):1349–1357",
+      "publisher": "Oral Diseases（Wiley）",
+      "date": "2018-07-10",
+      "url": "https://doi.org/10.1111/odi.12909",
+      "note": "依 PubMed 摘要（PMID 29873864）"
+    },
+    {
+      "title": "Lockhart PB, Bolger AF, Papapanou PN, et al. Periodontal disease and atherosclerotic vascular disease: does the evidence support an independent association? A scientific statement from the American Heart Association. Circulation 2012;125(20):2520–2544",
+      "publisher": "Circulation（American Heart Association）",
+      "date": "2012-04-18",
+      "url": "https://doi.org/10.1161/CIR.0b013e31825719f3",
+      "note": "依摘要（PMID 22514251）；引文出自摘要"
+    },
+    {
+      "title": "Sanz M, Marco Del Castillo A, Jepsen S, et al. Periodontitis and cardiovascular diseases: consensus report. J Clin Periodontol 2020;47(3):268–288",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2020-02-03",
+      "url": "https://doi.org/10.1111/jcpe.13189",
+      "note": "開放全文（PMC7027895）：第 4.1、4.2 節、Table 1 與全口治療急性反應段落（PMID 32011025）"
+    },
+    {
+      "title": "Ye Z, Cao Y, Miao C, et al. Periodontal therapy for primary or secondary prevention of cardiovascular disease in people with periodontitis. Cochrane Database Syst Rev 2022;10:CD009197",
+      "publisher": "Cochrane Database of Systematic Reviews（Wiley）",
+      "date": "2022-10-04",
+      "url": "https://doi.org/10.1002/14651858.CD009197.pub5",
+      "note": "依 PubMed 摘要（PMID 36194420）"
+    },
+    {
+      "title": "File:Gray525.png",
+      "publisher": "Wikimedia Commons",
+      "date": "1918",
+      "url": "https://commons.wikimedia.org/wiki/File:Gray525.png",
+      "note": "頭圖；Public domain，Gray's Anatomy 1918 年版第 525 圖"
+    }
+  ]
+}
