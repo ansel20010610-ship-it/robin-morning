@@ -9,5 +9,14 @@
       "art"
     ],
     "note": "完成 devotion（傳 11:1–6）、music（莫札特 K.622）、perio（Tonetti 2007 NEJM），三篇皆經審稿修正後推送，validate 無 ERROR"
+  },
+  "2": {
+    "finished_at": "2026-10-16T02:03:59+08:00",
+    "missing": [
+      "football",
+      "philosophy",
+      "art"
+    ],
+    "note": "完成 civilization（參勤交代費用）與 tactics（邊後衛內收三加二），皆經審稿修正後推送；validate 全數通過"
   }
 }
