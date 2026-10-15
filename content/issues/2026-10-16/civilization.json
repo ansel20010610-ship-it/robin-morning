@@ -1,0 +1,452 @@
+{
+  "column": "civilization",
+  "date": "2026-10-16",
+  "title": "參勤之年的帳本：大名的錢怎樣流向江戶",
+  "dek": "德川時代的大名每隔一年要帶上數百到數千人到江戶住一年。佐賀藩 1655 年與紀州藩 1831 年的帳，顯示這筆錢從哪裡來、花在哪裡。",
+  "topic_key": "civilization:japan-sankin-kotai-costs-17c",
+  "updated_at": "2026-10-16T02:03:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Print%2C_Nihon_Bridge%2C_Morning_View%2C_Nihonbashi%2C_in_The_Fifty-Three_Stations_of_the_Tokaido_Road_%28Tokaido_Gojusan_Tsugi-no_Uchi%29%2C_ca._1834_%28CH_18608813%29.jpg/1280px-Print%2C_Nihon_Bridge%2C_Morning_View%2C_Nihonbashi%2C_in_The_Fifty-Three_Stations_of_the_Tokaido_Road_%28Tokaido_Gojusan_Tsugi-no_Uchi%29%2C_ca._1834_%28CH_18608813%29.jpg",
+    "width": 1280,
+    "height": 841,
+    "alt": "清晨的拱橋上，一列人馬從橋頂走下來。最前面兩人扛著方形的紅色箱子，後面兩人高舉頂端綁著白色羽飾的長槍，再後面還有穿綠色衣服的隨從。橋前左側是挑著魚籃的小販，右側有兩隻狗，兩邊是敞開的木門，天空呈藍色與淡黃色。右上角寫著「東海道五拾三次之內 日本橋」。",
+    "caption": "歌川廣重《東海道五拾三次之內・日本橋・朝之景》：大名行列的前隊清晨走過日本橋。前面兩人扛的紅色箱子是挾箱，後面高舉的是長槍；瓦波里斯指出，挾箱上的家紋與長槍的槍鞘形狀都是辨認大名、標示身分的道具。木版畫，23.8 × 36.1 公分，庫珀－休伊特史密森尼設計博物館藏（1948-134-1，Mary Rutherford Jay 捐贈）。",
+    "credit": "歌川廣重；Cooper Hewitt, Smithsonian Design Museum",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Print,_Nihon_Bridge,_Morning_View,_Nihonbashi,_in_The_Fifty-Three_Stations_of_the_Tokaido_Road_(Tokaido_Gojusan_Tsugi-no_Uchi),_ca._1834_(CH_18608813).jpg",
+    "made": "約 1834 年",
+    "depicts": "19 世紀前期江戶日本橋"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "明曆元年（1655 年），九州佐賀藩鍋島家做了一份全年預算。這份帳之所以被史家反覆引用，是因為它正好編在藩主要去江戶的那一年。據佐佐木潤之介的整理，折成米計算，全年支出 78,448 石 3 斗；其中專為「參勤」花的錢約佔 20%，藩主不在也照樣要付的江戶常駐開銷約佔 28%，國元本地的開支只佔 46%。"
+    },
+    {
+      "type": "p",
+      "text": "本文要回答的問題是：江戶時代的大名每隔一年就得帶著成百上千人走到江戶、住上一年，這筆錢從哪裡來，在路上和江戶花到哪裡，誰定規矩、誰付帳，又有誰在帳本之外替大名出力？"
+    },
+    {
+      "type": "h",
+      "text": "定位：1635 年寫進法令的「每年四月參勤」"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "地域是德川幕府治下的日本，時間以 17 世紀中葉到 19 世紀前半為中心。所謂參勤交代（さんきんこうたい），是幕府要大名定期到江戶侍奉將軍（參勤），再回到自己的領地（交代）。1615 年的《武家諸法度》只規定參勤時隨從的人數；3 代將軍德川家光在 1635 年改訂法度，第 2 條明文規定大名「每年夏季四月中參勤」，原則上在江戶與領地各住一年輪替。1642 年起譜代大名也納入，關東的譜代大名改為半年一輪。例外不少：對馬宗氏三年一勤，水戶德川家與擔任幕府職務的大名則常駐江戶（定府）。大名的妻子必須住在江戶，形同人質。"
+    },
+    {
+      "type": "quote",
+      "original": "従者ノ員数近来甚ダ多シ、且ハ国郡ノ費、且ハ人民ノ労ナリ。向後ソノ相応ヲ以テコレヲ減少スベシ。",
+      "text": "隨從的人數近來太多，既耗費領國的財力，也勞累百姓。今後應依身分相稱的人數減少。",
+      "cite": "1635 年《武家諸法度》（寬永令）第 2 條後段；條文據日文維基百科的訓讀錄文，未對照原典（原典為兒玉幸多編《近世交通史料集 7 幕府法令》Doc. 169，據 Vaporis 2005 註 51），本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "我們靠三類史料知道參勤的帳。第一類是藩的預算書與勘定帳，佐賀藩和紀州藩的數字都出自這一類，但多半經由日本史學者整理後才進入通論書；本文讀到的是國立國會圖書館「參考協同資料庫」逐字轉錄的段落，沒有讀到原帳。第二類是行列與道中的記錄，例如加賀藩的官方史料《加賀藩史料》，忠田敏男 1993 年的《參勤交代道中記》就是據此寫成。第三類是外國人的見聞，他們看到行列的規模，數字卻往往失真。各類史料的立場不同：藩帳記的是藩願意歸入哪一欄，行列記錄偏重大場面，外國人則容易誇大。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "美國馬里蘭大學巴爾的摩郡分校的日本史學者康士坦丁・瓦波里斯（Constantine N. Vaporis）2005 年在《Japan Review》發表〈Lordly Pageantry〉，整理了外國人的說法：1630 年代荷蘭東印度公司的卡隆（François Caron）說有大名帶一千到六千人往返；德國的施里曼（Heinrich Schliemann）1865 年估計最大的行列有一萬五千人；西博德（Philipp Franz von Siebold）更說最低階大名也有一萬人。瓦波里斯的結論是，最大的行列其實落在兩三千人之間。"
+    },
+    {
+      "type": "h",
+      "text": "帳本一：佐賀藩的米與銀，算法不同，比例就不同"
+    },
+    {
+      "type": "table",
+      "title": "佐賀藩明曆元年（1655 年）預算的兩種讀法",
+      "head": [
+        "分類",
+        "米與銀（佐佐木潤之介）",
+        "銀支出（丸山雍成）"
+      ],
+      "rows": [
+        [
+          "參勤費用",
+          "銀 472 貫、米 1,200 石，約佔全年 20%",
+          "道中經費 517 貫，約佔銀支出 40%"
+        ],
+        [
+          "江戶常駐開銷",
+          "銀 731 貫 430 匁、米 453 石，約 28%",
+          "江戶經費 686 貫 430 目，約 53%"
+        ],
+        [
+          "大坂天滿（藏屋敷）",
+          "米 3,345 石，約 4%",
+          "—"
+        ],
+        [
+          "長崎警備",
+          "約 2%",
+          "5 貫，約 0.2%"
+        ],
+        [
+          "國元",
+          "約 46%",
+          "國元經費等 88 貫 916 目，約 6.8%"
+        ]
+      ],
+      "caption": "依國立國會圖書館參考協同資料庫 2017 年事例轉錄的佐佐木潤之介《日本の歴史 15 大名と百姓》頁 156–157 與丸山雍成《參勤交代》（2007）頁 215 整理。兩書都寫明曆元年；丸山書括號換算作 1657 年，但明曆元年應為 1655 年。兩書的分類不同，數字不能逐欄相加比對。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "佐佐木潤之介在中央公論社《日本の歴史》第 15 卷《大名と百姓》中逐項拆開了那 472 貫的參勤費：送禮的進物費加上隨從在江戶租屋的房租等合計 269 貫，隨從的路費與馱運費 94 貫，隨從的飯米錢和 35 匹馬的飼料 75 貫。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "同一份預算，換個角度看，比例就大不相同。經濟史學者長野暹在 1980 年的《幕藩制社會の財政構造》指出，銀支出總額 1,297 貫 346 匁中，參勤道中、進物、江戶詰等參勤相關費用達 1,203 貫 830 匁，約佔 93%，國元的台所料只有 14 貫；米支出則以發給家臣的切米為主，佔米支出的 62%。他看的另一份年代稍晚、推定在明曆三年（1657 年）後不久的預算，參勤相關費用也佔銀支出的 78%。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：「參勤佔藩財政幾成」這個問題沒有單一答案，取決於拿米還是拿銀當分母，也取決於江戶常駐費算不算參勤。比較穩的說法是，佐賀藩的米大多留在領內發給家臣，而藩手上的現銀幾乎全部流向江戶與通往江戶的路上。"
+    },
+    {
+      "type": "svg",
+      "title": "參勤之年的資源流向（示意）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 560\">\n<defs><marker id=\"ah\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"accent\"/></marker></defs>\n<rect x=\"0\" y=\"0\" width=\"680\" height=\"560\" class=\"paper\"/>\n<text x=\"20\" y=\"30\" class=\"ink\" font-size=\"15\" font-weight=\"bold\">參勤之年，一個大名的資源往哪裡去</text>\n<rect x=\"250\" y=\"50\" width=\"180\" height=\"56\" rx=\"6\" class=\"soft\"/>\n<text x=\"340\" y=\"74\" class=\"ink\" font-size=\"14\" text-anchor=\"middle\">領內百姓的年貢米</text>\n<text x=\"340\" y=\"94\" class=\"muted\" font-size=\"11\" text-anchor=\"middle\">藩的主要收入</text>\n<line x1=\"300\" y1=\"106\" x2=\"140\" y2=\"160\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<line x1=\"380\" y1=\"106\" x2=\"520\" y2=\"160\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<rect x=\"30\" y=\"162\" width=\"230\" height=\"74\" rx=\"6\" class=\"soft\"/>\n<text x=\"145\" y=\"186\" class=\"ink\" font-size=\"13\" text-anchor=\"middle\">留在國元，以米支付</text>\n<text x=\"145\" y=\"206\" class=\"muted\" font-size=\"11\" text-anchor=\"middle\">家臣的切米、國元台所</text>\n<text x=\"145\" y=\"224\" class=\"muted\" font-size=\"11\" text-anchor=\"middle\">佐賀 1655：切米佔米支出 62%</text>\n<rect x=\"400\" y=\"162\" width=\"250\" height=\"74\" rx=\"6\" class=\"soft\"/>\n<text x=\"525\" y=\"186\" class=\"ink\" font-size=\"13\" text-anchor=\"middle\">運到大坂藏屋敷出售</text>\n<text x=\"525\" y=\"206\" class=\"muted\" font-size=\"11\" text-anchor=\"middle\">換成銀、金（藤野保的解釋）</text>\n<text x=\"525\" y=\"224\" class=\"muted\" font-size=\"11\" text-anchor=\"middle\">佐賀 1655：天滿經費米 3,345 石</text>\n<line x1=\"525\" y1=\"236\" x2=\"525\" y2=\"276\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<rect x=\"400\" y=\"278\" width=\"250\" height=\"56\" rx=\"6\" class=\"soft\"/>\n<text x=\"525\" y=\"300\" class=\"ink\" font-size=\"13\" text-anchor=\"middle\">藩的銀支出</text>\n<text x=\"525\" y=\"320\" class=\"muted\" font-size=\"11\" text-anchor=\"middle\">佐賀 1655：共 1,297 貫餘</text>\n<line x1=\"470\" y1=\"334\" x2=\"250\" y2=\"396\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<line x1=\"580\" y1=\"334\" x2=\"560\" y2=\"396\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<rect x=\"30\" y=\"398\" width=\"300\" height=\"92\" rx=\"6\" class=\"soft\"/>\n<text x=\"180\" y=\"420\" class=\"ink\" font-size=\"13\" text-anchor=\"middle\">道中：往返的路上</text>\n<text x=\"180\" y=\"440\" class=\"muted\" font-size=\"11\" text-anchor=\"middle\">路銀、駄賃、宿泊、飯米與馬料</text>\n<text x=\"180\" y=\"458\" class=\"muted\" font-size=\"11\" text-anchor=\"middle\">付給宿驛、本陣、沿途雇工</text>\n<text x=\"180\" y=\"476\" class=\"gold\" font-size=\"11\" text-anchor=\"middle\">丸山雍成：517 貫，約 40%</text>\n<rect x=\"360\" y=\"398\" width=\"290\" height=\"92\" rx=\"6\" class=\"soft\"/>\n<text x=\"505\" y=\"420\" class=\"ink\" font-size=\"13\" text-anchor=\"middle\">江戶：住在將軍身邊</text>\n<text x=\"505\" y=\"440\" class=\"muted\" font-size=\"11\" text-anchor=\"middle\">藩主家族、藩邸、進物、供者借家</text>\n<text x=\"505\" y=\"458\" class=\"muted\" font-size=\"11\" text-anchor=\"middle\">錢流入江戶的商人與町人</text>\n<text x=\"505\" y=\"476\" class=\"gold\" font-size=\"11\" text-anchor=\"middle\">丸山雍成：686 貫餘，約 53%</text>\n<line x1=\"180\" y1=\"490\" x2=\"180\" y2=\"516\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\" marker-end=\"url(#ah)\"/>\n<text x=\"180\" y=\"540\" class=\"ink\" font-size=\"12\" text-anchor=\"middle\">人馬不足時：宿驛附近的助鄉村出人出馬</text>\n</svg>",
+      "caption": "原創示意，不按比例。數字取自本文所引長野暹、丸山雍成對佐賀藩 1655 年預算的整理；「年貢米運到大坂換成貨幣」是藤野保對一般大名的解釋，佐賀藩這份預算本身只顯示天滿經費。助鄉村的負擔不在藩帳上。"
+    },
+    {
+      "type": "h",
+      "text": "帳本二：紀州藩 1831 年，二十天的路費"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "另一筆常被引用的數字來自御三家之一的紀州（和歌山）德川家。兒玉幸多在小學館《日本の歴史 18 大名》中寫道，天保二年（1831 年）紀州藩總收入 343,120 兩，在府費 21,250 兩，江戶與和歌山之間的旅費 12,930 兩。他的評語是：參勤費用約佔歲入一成，而為期二十天左右的旅費所佔比例極大。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "依這三個數字自算：在府費約佔歲入 6.2%，旅費約 3.8%，兩者合計 34,180 兩，約 10%。旅費只花在約二十天的路上，在府費卻要支應一整年，換算下來，路上每一天的開銷是江戶每一天的十倍以上。這是本文的粗略推算，沒有考慮紀州藩那一年是否整年在府，也不知道兒玉所說的「在府費」包含哪些項目。"
+    },
+    {
+      "type": "h",
+      "text": "人數：法令說四百人，加賀藩帶了三千人"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "錢的大頭花在人身上。瓦波里斯整理的資料顯示，幕府 1721 年訂下的上限是：20 萬石以上的大名，騎馬武士 15 到 20 騎、足輕 120 到 130 人、中間與人足 250 到 300 人，合計約四百人上下。當時約 102 萬石的加賀藩前田家，實際行列約 3,000 人（1724 年），1764 年 2,184 人，1816 年 2,144 人。土佐藩依 1658 年的規定應帶約 1,800 人，1690 年卻帶了 2,775 人。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "較小的藩不能拿加賀比。瓦波里斯引丸山雍成的估計：在九州，10 萬石左右的大名約帶 280 人、7.5 萬石約 190 人；九州以外的行列多在 150 到 300 人之間。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這些人不全是武士。據瓦波里斯引忠田敏男的研究，加賀藩 1827 年的行列幾乎一半是雇來的勞工：35% 在藩內雇用，15% 在沿途宿驛雇用。加賀藩從領內帶出將近 400 匹馬，經過領內時，沿路村落還可能被要求提供多達 1,000 頭牲口。隊伍裡有木匠五六名，負責檢查、修理藩主在本陣的房間；另有外科醫、針灸師、獸醫、廚師與查閱前例的書記。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "artwork",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/%E6%9D%B1%E6%B5%B7%E9%81%93%E4%BA%94%E5%8D%81%E4%B8%89%E6%AC%A1%E4%B9%8B%E5%86%85_%E9%96%A2_%E6%9C%AC%E9%99%A3%E6%97%A9%E7%AB%8B-Station_Forty-Eight-_Seki%2C_Early_Departure_from_the_Headquarters_Inn%2C_from_the_Fifty-Three_Stations_of_the_Tokaido_MET_DP123212.jpg/1280px-thumbnail.jpg",
+      "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/%E6%9D%B1%E6%B5%B7%E9%81%93%E4%BA%94%E5%8D%81%E4%B8%89%E6%AC%A1%E4%B9%8B%E5%86%85_%E9%96%A2_%E6%9C%AC%E9%99%A3%E6%97%A9%E7%AB%8B-Station_Forty-Eight-_Seki%2C_Early_Departure_from_the_Headquarters_Inn%2C_from_the_Fifty-Three_Stations_of_the_Tokaido_MET_DP123212.jpg/3840px-thumbnail.jpg",
+      "width": 1280,
+      "height": 867,
+      "alt": "黎明前的灰暗天色下，一座宅院的門口和圍牆掛滿白底藍色大家紋的布幕，門前吊著兩盞家紋燈籠。幾名穿黑衣的隨從在門口彎腰忙碌，地上放著木桶。左側屋簷下掛著寫字的招牌，幾個戴斗笠的人坐在台階上等候，一人伸手指向門口。右邊立著一根細長的竹竿，背景是大樹。",
+      "caption": "歌川廣重《東海道五拾三次之內・關・本陣早立》。本陣是宿驛中專供大名與幕府官員住宿的旅館；畫面是天亮前大名一行準備從本陣出發，門口與圍牆掛上了投宿大名的家紋幕。多色木版畫，22.5 × 34.6 公分，大都會藝術博物館藏（JP2487）。",
+      "credit": "歌川廣重；大都會藝術博物館（The Howard Mansfield Collection, Purchase, Rogers Fund, 1936）",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%E6%9D%B1%E6%B5%B7%E9%81%93%E4%BA%94%E5%8D%81%E4%B8%89%E6%AC%A1%E4%B9%8B%E5%86%85_%E9%96%A2_%E6%9C%AC%E9%99%A3%E6%97%A9%E7%AB%8B-Station_Forty-Eight-_Seki,_Early_Departure_from_the_Headquarters_Inn,_from_the_Fifty-Three_Stations_of_the_Tokaido_MET_DP123212.jpg",
+      "made": "約 1833–34 年（保永堂版）",
+      "depicts": "19 世紀前期東海道關宿"
+    },
+    {
+      "type": "detail",
+      "of": "f1",
+      "region": [
+        0.03,
+        0.4,
+        0.33,
+        0.46
+      ],
+      "position": "畫面左下，約佔寬度三分之一",
+      "caption": "屋簷下有幾個戴斗笠的人坐著等候，身邊放著燈籠，台階上還有人席地而坐。畫中沒有標明他們的身分；行列的勞力有相當部分是臨時雇來的，但不能據此認定畫中人就是雇工。"
+    },
+    {
+      "type": "h",
+      "text": "權力：誰下令、誰執行、誰付帳"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "下令的是幕府：法度規定參勤的時期，大名歸國前也可能被當面要求減少隨從，例如土佐藩主在 1679 年就被要求下次參勤時減少人數。執行的是各藩的家老與役人：安排日程、預約本陣、雇用人足、準備進物。大名的妻子與繼承人則留在江戶。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "本文的讀法是，強制的力量來自兩處：留在江戶的妻子與繼承人，以及丸山雍成所說的主從關係——參勤被視為對將軍的奉公。違背它，等於否定自己在幕藩體制裡的位置。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "付帳的第一層是藩，藩的錢來自領內百姓繳的年貢。第二層在藩帳之外：宿驛常備的人馬不夠時，幕府指定附近村落出人出馬，稱為助鄉。幕府在 1694 年重訂助鄉制，以村高每 100 石出 2 人 2 匹為基準；據丸山雍成，到江戶後期實際負擔已是這個基準的數百倍。1764 到 1765 年，因中山道加派助鄉，武藏、上野、信濃等地爆發參加者據稱二十萬人以上的「傳馬騷動」。"
+    },
+    {
+      "type": "h",
+      "text": "限制：幕府自己也想省，卻省不下來"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "幕府從一開始就不鼓勵排場。1635 年法度已經抱怨隨從太多；1653、1701、1712 年又一再警告，1721 年訂出具體人數；雇町人來充場面的做法也被明令禁止，但效果有限。瓦波里斯指出，至少到 18 世紀初，大名普遍大幅超過上限。熊本藩細川家的行列從 1645 年的 2,720 人降到 1777 年的 546 人；仙台藩 1789 年因冷害歉收，改革時把行列減掉「三分之二」。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "瓦波里斯以土佐藩為例認為，人數下降多半是藩財政起伏的結果，而不是幕府一再要求減少隨從的命令。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "排場與面子綁在一起。瓦波里斯引會津藩的《家世實紀》：1721 年藩內決定不減行列，一位家老反問，萬一外界知道本藩減了人數，藩的名聲會怎樣？"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "幕府自己缺錢時，也拿參勤做交易。1722 年，8 代將軍德川吉宗命諸大名每 1 萬石上繳 100 石米，稱為「上米」，交換條件是在江戶的時間減半，改為在府半年、在國一年半。據大石學，這筆上米每年 18 萬 7,000 石，約當幕府收入的一成三。反對者認為這動搖了家康以來的祖法；幕府財政稍穩後，上米在 1731 年廢止（Kotobank 所收參勤交代條目中，丸山雍成、藤野保都記為 1730 年），參勤恢復舊制。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "制度最後一次大改在 1862 年（文久二年）：一橋慶喜、松平慶永主導的幕政改革，把參勤改為三年一次、在府一百日，大名妻子可以自由回國。1865 年幕府想恢復舊制，大名多不服從。"
+    },
+    {
+      "type": "h",
+      "text": "學界怎麼說：控制工具、劇場，還是市場的引擎"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "最常見的解釋是控制。丸山雍成在《世界大百科事典》寫道，參勤交代讓幕府壓制諸大名地方割據的形勢，大名則因江戶與國元的雙重生活而忙碌、窮困；藤野保在《日本大百科全書》也說，參勤費用龐大，是大名財政窮乏的主因。英語學界的經典是塚平俊夫（Toshio G. Tsukahira）1966 年的《Feudal Control in Tokugawa Japan: The Sankin Kōtai System》，書名就把它定位為封建控制。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "藤野保同時指出另一面：大名為了籌錢，必須把年貢米和特產拿到大坂出售，大坂集中的物資再運往江戶，於是形成「諸大名—大坂—江戶」的流通路，促成全國市場。丸山雍成在《世界大百科事典》中也強調，參勤帶動了三都為核心的國內市場、水陸交通與宿場町。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "瓦波里斯則把重點放在行列本身。他認為行列一半是軍事演練，一半是演給沿路百姓看的劇場，大名的排場是藩的地位標誌；超出法令的那部分花費，很大程度是大名為了面子自己加上的。他也指出，英語文獻常把人數說錯：有人說前田家常帶四千名以上武士，有人說最大行列不過一千人，兩者都偏離了藩的記錄。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "把這幾種解釋放在一起看，本文推測，「幕府刻意用參勤拖垮大名」這個說法需要打折。幕府在法度裡反覆要求減少隨從，自己也曾為了一年 18 萬石的上米縮短參勤。讓花費膨脹的，是一套以人數和器物排名次的身分秩序：幕府定下參勤的義務，加碼的往往是大名自己。"
+    },
+    {
+      "type": "timeline",
+      "title": "參勤交代的規則怎麼變",
+      "items": [
+        {
+          "when": "1615 年",
+          "label": "《武家諸法度》元和令",
+          "note": "只規定參勤時的隨從人數"
+        },
+        {
+          "when": "1635 年",
+          "label": "寬永令第 2 條",
+          "note": "每年四月參勤，同時要求減少隨從"
+        },
+        {
+          "when": "1642 年",
+          "label": "譜代大名納入",
+          "note": "關東譜代改為半年一輪"
+        },
+        {
+          "when": "1655 年",
+          "label": "佐賀藩參勤之年的預算",
+          "note": "參勤費約佔全年支出 20%"
+        },
+        {
+          "when": "1690 年",
+          "label": "土佐藩行列 2,775 人",
+          "note": "1658 年規定約 1,800 人"
+        },
+        {
+          "when": "1694 年",
+          "label": "重訂助鄉制",
+          "note": "村高 100 石出 2 人 2 匹"
+        },
+        {
+          "when": "1721 年",
+          "label": "幕府訂出行列人數上限",
+          "note": "20 萬石以上約 400 人"
+        },
+        {
+          "when": "1722 年",
+          "label": "上米之制",
+          "note": "每萬石繳 100 石，在府減為半年"
+        },
+        {
+          "when": "1731 年",
+          "label": "上米廢止，參勤恢復",
+          "note": "丸山雍成、藤野保記為 1730 年"
+        },
+        {
+          "when": "1764–65",
+          "label": "傳馬騷動",
+          "note": "反對中山道加派助鄉"
+        },
+        {
+          "when": "1831 年",
+          "label": "紀州藩參勤費約佔歲入一成",
+          "note": "旅費 12,930 兩"
+        },
+        {
+          "when": "1862 年",
+          "label": "文久改革",
+          "note": "三年一勤、在府百日，妻子可回國"
+        },
+        {
+          "when": "1865 年",
+          "label": "幕府要求恢復舊制",
+          "note": "大名多不服從"
+        }
+      ],
+      "caption": "依藤野保、丸山雍成（Kotobank 所收辭典條目）、Vaporis 2005 與國立國會圖書館參考協同資料庫整理。"
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "如果你的君主要地方領主定期到首都住上一年，這筆開銷寫在誰的帳上？領主會用什麼名目把它轉嫁給領民或沿路的村莊？",
+        "中央要求「人少一點」，地方卻為了面子帶更多人。在你的世界裡，排場由誰評分？誰在路邊看，誰會把看到的事傳回去？",
+        "領主的家人留在首都當人質，這個安排什麼時候會從保障變成負擔？當中央自己缺錢時，會不會拿這條規矩來交換稅收？",
+        "道路上的勞役由沿途村莊負擔時，這些村莊有沒有申訴的管道？負擔加到多重，他們會選擇逃避、請願，還是起事？"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lordly Pageantry: The Daimyo Procession and Political Authority",
+      "publisher": "Constantine N. Vaporis／Japan Review 17: 3–54（國際日本文化研究中心）",
+      "date": "2005",
+      "url": "https://nichibun.repo.nii.ac.jp/record/247/files/IJ1701.pdf",
+      "note": "全文；行列人數、1721 年上限、加賀藩雇工比例、熊本與仙台的減員、會津家老之語、外國人的估計、表 1–2 與註 45、51、53、63"
+    },
+    {
+      "title": "佐賀藩が参勤交代に要した費用や年間予算に占める割合について知りたい。",
+      "publisher": "國立國會圖書館 參考協同資料庫（事例 1000228341）",
+      "date": "2018-01-15",
+      "url": "https://crd.ndl.go.jp/reference/detail?page=ref_view&id=1000228341",
+      "note": "逐字轉錄佐佐木潤之介、長野暹、丸山雍成三書中的佐賀藩預算段落；本文未讀原書"
+    },
+    {
+      "title": "日本の歴史 15 大名と百姓",
+      "publisher": "佐佐木潤之介／中央公論社",
+      "date": "1966",
+      "url": "https://www.chuko.co.jp/bunko/2005/10/204604.html",
+      "note": "頁 156–158，佐賀藩明曆元年預算；頁碼依 1977 年版，轉引自國會圖書館參考協同資料庫；網址為後出的中公文庫版書目頁"
+    },
+    {
+      "title": "幕藩制社会の財政構造",
+      "publisher": "長野暹／大原新生社",
+      "date": "1980",
+      "url": "https://crd.ndl.go.jp/reference/detail?page=ref_view&id=1000228341",
+      "note": "頁 202–205；轉引自國會圖書館參考協同資料庫"
+    },
+    {
+      "title": "参勤交代（日本歴史叢書新装版）",
+      "publisher": "丸山雍成／吉川弘文館",
+      "date": "2007-07",
+      "url": "https://crd.ndl.go.jp/reference/detail?page=ref_view&id=1000228341",
+      "note": "頁 215，佐賀藩銀支出內訳；轉引自國會圖書館參考協同資料庫"
+    },
+    {
+      "title": "紀州から江戸までの参勤交代にかかった日数と、参勤交代時に通った街道が知りたい。",
+      "publisher": "國立國會圖書館 參考協同資料庫（事例 1000048197）",
+      "date": "2008-10-18",
+      "url": "https://crd.ndl.go.jp/reference/detail?page=ref_view&id=1000048197",
+      "note": "逐字轉錄兒玉幸多《日本の歴史 18 大名》（小學館）頁 178 的紀州藩 1831 年數字"
+    },
+    {
+      "title": "日本の歴史 18 大名",
+      "publisher": "兒玉幸多／小學館",
+      "date": "1977",
+      "url": "https://crd.ndl.go.jp/reference/detail?page=ref_view&id=1000048197",
+      "note": "頁 178，紀州藩 1831 年參勤費用；轉引自國會圖書館參考協同資料庫事例 1000048197，本文未讀原書"
+    },
+    {
+      "title": "参勤交代（日本大百科全書〔藤野保〕、世界大百科事典〔丸山雍成〕、ブリタニカ国際大百科事典等）",
+      "publisher": "Kotobank",
+      "date": "2026-10-16",
+      "url": "https://kotobank.jp/word/%E5%8F%82%E5%8B%A4%E4%BA%A4%E4%BB%A3-71069",
+      "note": "1615、1635、1642、1722、1862、1865 年規定與例外；藤野保與丸山雍成的解釋；頁面無發布日，日期為查閱日"
+    },
+    {
+      "title": "上米（世界大百科事典〔大野瑞男〕、日本大百科全書〔大石學〕）",
+      "publisher": "Kotobank",
+      "date": "2026-10-16",
+      "url": "https://kotobank.jp/word/%E4%B8%8A%E7%B1%B3-24895",
+      "note": "每萬石百石、年額 18 萬 7,000 石、約幕府收入一成三、1731 年廢止；頁面無發布日，日期為查閱日"
+    },
+    {
+      "title": "助郷（日本大百科全書〔丸山雍成〕、世界大百科事典〔深井甚三〕）",
+      "publisher": "Kotobank",
+      "date": "2026-10-16",
+      "url": "https://kotobank.jp/word/%E5%8A%A9%E9%83%B7-83668",
+      "note": "1694 年助鄉制、百石二人二匹、江戶後期負擔、傳馬騷動；頁面無發布日，日期為查閱日"
+    },
+    {
+      "title": "武家諸法度（寬永令條文錄文）",
+      "publisher": "Wikipedia 日文版（只作條文錄文線索）",
+      "date": "2026-10-16",
+      "url": "https://ja.wikipedia.org/wiki/%E6%AD%A6%E5%AE%B6%E8%AB%B8%E6%B3%95%E5%BA%A6",
+      "note": "寬永令第 2 條錄文；原典為兒玉幸多編《幕府法令》Doc. 169（Vaporis 2005 註 51），本文未讀原典"
+    },
+    {
+      "title": "Feudal Control in Tokugawa Japan: The Sankin Kōtai System",
+      "publisher": "Toshio G. Tsukahira／Harvard University East Asian Research Center",
+      "date": "1966",
+      "url": "https://www.jstor.org/stable/j.ctt1tg5mzk",
+      "note": "只用書名與 Vaporis 的引述，本文未讀全書"
+    },
+    {
+      "title": "参勤交代道中記：加賀藩史料を読む",
+      "publisher": "忠田敏男／平凡社",
+      "date": "1993-09",
+      "url": "https://nichibun.repo.nii.ac.jp/record/247/files/IJ1701.pdf",
+      "note": "加賀藩行列人數、雇工比例、馬匹；轉引自 Vaporis 2005，本文未讀原書"
+    },
+    {
+      "title": "東海道五拾三次之内 日本橋 朝之景",
+      "publisher": "歌川廣重／Cooper Hewitt, Smithsonian Design Museum（Wikimedia Commons）",
+      "date": "1834",
+      "url": "https://commons.wikimedia.org/wiki/File:Print,_Nihon_Bridge,_Morning_View,_Nihonbashi,_in_The_Fifty-Three_Stations_of_the_Tokaido_Road_(Tokaido_Gojusan_Tsugi-no_Uchi),_ca._1834_(CH_18608813).jpg",
+      "note": "頭圖"
+    },
+    {
+      "title": "東海道五拾三次之内 関 本陣早立",
+      "publisher": "歌川廣重／The Metropolitan Museum of Art（JP2487）",
+      "date": "1833",
+      "url": "https://www.metmuseum.org/art/collection/search/56910",
+      "note": "正文圖"
+    },
+    {
+      "title": "近世交通史料集 7 幕府法令",
+      "publisher": "兒玉幸多編／吉川弘文館",
+      "date": "1978",
+      "url": "https://nichibun.repo.nii.ac.jp/record/247/files/IJ1701.pdf",
+      "note": "寬永令減少隨從的條文（Doc. 169，頁 106）；書目據 Vaporis 2005 註 51 與參考書目，本文未讀原典"
+    }
+  ]
+}
