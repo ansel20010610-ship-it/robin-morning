@@ -1,0 +1,346 @@
+{
+  "column": "fm-watch",
+  "date": "2026-10-16",
+  "status": "update",
+  "title": "FM27 公布教練創建新選項、輪椅教練與無障礙設定",
+  "dek": "第六篇深度介紹談教練外觀、新生成球員頭像與無障礙設定；版面密度改名 Large／Medium／Small，仍限 1440p 以上。",
+  "topic_key": "fm-watch:2026-10-16-manager-creator-accessibility",
+  "updated_at": "2026-10-16T05:28:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "timeline",
+    "title": "FM27 已知時程",
+    "caption": "依 Sports Interactive 官網、Steam 公告與 SEGA 新聞稿整理，截至台灣時間 2026 年 10 月 16 日清晨。日期以英國發布日為準；10 月 15 日那篇在台灣時間當晚 7 時 10 分上線。",
+    "items": [
+      {
+        "when": "2026.8.27",
+        "label": "宣布 11 月推出",
+        "note": "預告 9 月起陸續發布功能深度介紹"
+      },
+      {
+        "when": "2026.9.22",
+        "label": "深度介紹一：介面與導覽",
+        "note": "縮放模式當時稱 Default／Detailed／Condensed"
+      },
+      {
+        "when": "2026.9.25",
+        "label": "深度介紹二：足球世界",
+        "note": "盃賽抽籤、轉會截止日回歸"
+      },
+      {
+        "when": "2026.9.30",
+        "label": "公布發售日；深度介紹三：比賽日",
+        "note": "教練模型自訂項目增加、頭髮物理"
+      },
+      {
+        "when": "2026.10.5",
+        "label": "深度介紹四：比賽引擎與戰術微調",
+        "note": "Hawk-Eye 動作資料、Tactical Tweaks"
+      },
+      {
+        "when": "2026.10.9",
+        "label": "深度介紹五：訓練與戰術效能",
+        "note": "預告下一篇談教練與新生成球員外觀"
+      },
+      {
+        "when": "2026.10.15",
+        "label": "深度介紹六：教練創建、輪椅教練、無障礙",
+        "note": "本期新增；書面介紹，無影片"
+      },
+      {
+        "when": "日期未定",
+        "label": "下一篇：2D 比賽引擎、遊戲內編輯器、便利性改進",
+        "note": "官方說近期發布"
+      },
+      {
+        "when": "發售前 1–2 週",
+        "label": "Launch Preview",
+        "note": "給在 SEGA 認可通路預購 PC／Mac 版的玩家；日期未定"
+      },
+      {
+        "when": "2026.11.10",
+        "label": "全平台數位版與實體 PC 版發售",
+        "note": "全球同一時刻上線，部分時區可能是 11 月 11 日（官方未點名台灣）"
+      },
+      {
+        "when": "2026.11.20",
+        "label": "實體 PS5 版發售",
+        "note": "官方 FAQ"
+      }
+    ]
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "台灣時間 10 月 15 日（週四）晚間 7 時 10 分，Sports Interactive（SI）在 Steam 發布《足球經理 27》（Football Manager 27，以下簡稱 FM27）第六篇功能深度介紹〈FM27: More Personal, Accessible and Yours〉，作者是 Jimmy Wong；官網有[同名專頁](https://www.footballmanager.com/fm27/features/fm27-more-personal-accessible-and-yours)。主題是三件事：建立教練角色時的新選項、可選擇坐輪椅的教練，以及無障礙設定。"
+    },
+    {
+      "type": "p",
+      "text": "10 月 9 日訓練篇預告過，下一篇是書面介紹，談教練外觀與新生成球員（newgen）外觀，這一篇兌現了。和前五篇不同，截至台灣時間 10 月 16 日清晨，FM 官方 YouTube 頻道沒有對應影片，只有官網文章與 Steam 公告裡的 FAQ。官網正文有幾項細節 FAQ 沒寫，下文會分開標明。"
+    },
+    {
+      "type": "h",
+      "text": "新增了什麼：教練創建器多了體型、族裔、帽子與調色"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "FAQ 列出的新選項有：體型（body morphs）、族裔、皮膚特徵與臉部特徵；髮型與鬍子的選項增加；服裝也更多。SI 在 FAQ 說帽子是「a long-requested addition」（玩家要求已久的項目），官網正文補充有毛線帽與棒球帽兩種。其他新衣物包括毛衣、圍巾、手套，官網正文另提到一套新的襯衫加毛衣搭配。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "配色方面，自訂調色工具回來了；官網正文的用詞是「reintroduction」，也就是重新加入。9 月 30 日比賽日篇公布的頭髮物理與角色模型改動，也套用在教練身上。官網正文還有一項 FAQ 沒提的：設定「最喜愛球隊」（Favourite Club）的功能回歸，生涯開始前最多可選四支。這項設定在遊戲裡有什麼作用，官方沒有說明。"
+    },
+    {
+      "type": "h",
+      "text": "輪椅教練：從開始畫面到舉盃過場"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "教練創建器新增輪椅使用者選項，遊戲裡的輪椅是電動輪椅。依 FAQ，選了之後，開始畫面、場邊與比賽日過場動畫都會呈現；奪冠後的舉盃過場，場上的頒獎平台會改成無障礙設計。官網正文的寫法是："
+    },
+    {
+      "type": "quote",
+      "original": "Should you go on to win football’s biggest prizes, you’ll notice that the trophy lift plinths have been reconfigured to ensure accessibility for all.",
+      "text": "如果你贏下足壇最大的獎盃，會注意到舉盃用的平台已重新設計，確保所有人都能使用。",
+      "cite": "Sports Interactive，〈FM27: More Personal, Accessible, and Yours〉，2026 年 10 月 15 日（本文自譯）"
+    },
+    {
+      "type": "h",
+      "text": "無障礙設定：新選項兩項，集中到一個設定區"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "FAQ 說，在系列既有的選項之外，FM27 新增兩項：更大的字體，以及可以關掉部分介面動畫。所有無障礙選項集中到 Preferences 選單裡的專屬區塊，其中包括色盲模式，以及讓比賽評論文字改用黑白、不用球隊顏色的選項。FAQ 的寫法沒有說色盲模式與黑白評論文字是不是 FM27 才有的。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "字體這一項，兩處原文措辭不同。FAQ 寫的是無障礙功能「now include larger font sizes」；官網正文則寫「Font sizes across the game have been increased」。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "前者讀起來像一個可選的設定，後者讀起來像全遊戲字體預設就調大。哪一種才對、還是兩者都有，要等實機確認。"
+    },
+    {
+      "type": "h",
+      "text": "版面密度：Default／Detailed／Condensed 改名為 Large／Medium／Small"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "9 月 22 日的[介面篇](https://www.footballmanager.com/fm27/features/fm27-clearer-interface-smoother-navigation)說，Preferences 裡有一個縮放模式：第一次開生涯時預設為 Default，另有 Detailed 與 Condensed 兩種，可以在畫面上多放兩種程度的資訊；Default 則留給想要較大介面元素的玩家。這一篇說，為了更清楚，這些模式改名為 Large、Medium、Small。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "「1440p 以上才有」不是這次新加的限制。介面篇的註腳已寫明，這些縮放模式只給使用 QHD 或 4K 螢幕（1440p 以上）的玩家；本篇沿用同一句註腳，FAQ 也寫 1440p（QHD）以上可用。介面篇正文寫的是「HD and 4K monitors」，和自己的註腳不一致；這次註腳與 FAQ 都寫 1440p（QHD）以上。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "官方沒有說舊名稱和新名稱怎麼對應。依介面篇「Default 給想要較大介面元素的人」的說法，本文推測 Default 大致對應 Large；Detailed 與 Condensed 各對應 Medium 還是 Small，原文沒有交代。"
+    },
+    {
+      "type": "h",
+      "text": "新生成球員：皮膚、髮型、表情與打光"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "對新生成球員，SI 說改進了皮膚、上色與頭髮的細節，臉部表情與肢體語言的差異變多，球員頭像的鏡頭位置與打光也重新調整。官網正文承認這是玩家討論與回饋很多的部分，用的詞是「another step forward」（再往前一步）。官方沒有說是否改變頭像的生成方式，也沒有給前後對照的數量。"
+    },
+    {
+      "type": "table",
+      "title": "FM27 第六篇深度介紹：新增項目與待確認處",
+      "head": [
+        "項目",
+        "官方說法（10 月 15 日）",
+        "和先前相比",
+        "待實測"
+      ],
+      "rows": [
+        [
+          "教練外觀",
+          "體型、族裔、皮膚特徵與臉部特徵、髮型與鬍子選項增加",
+          "9 月 30 日比賽日篇只概括寫身體、臉部、服裝有更多選項",
+          "選項多寡、和比賽畫面是否一致"
+        ],
+        [
+          "服裝",
+          "毛線帽與棒球帽、毛衣、圍巾、手套、新襯衫加毛衣搭配",
+          "帽子：FAQ 說是玩家要求已久的項目",
+          "是否依天氣或季節自動換裝（官方未說）"
+        ],
+        [
+          "配色",
+          "自訂調色工具",
+          "官網正文說是「重新加入」",
+          "可調哪些部位"
+        ],
+        [
+          "最喜愛球隊",
+          "生涯開始前最多選四支",
+          "官網正文說此功能「回歸」；FAQ 未提",
+          "對遊戲內容有沒有影響（官方未說）"
+        ],
+        [
+          "輪椅教練",
+          "電動輪椅；開始畫面、場邊、比賽日過場、無障礙頒獎平台",
+          "新選項",
+          "各過場是否都正確呈現"
+        ],
+        [
+          "無障礙",
+          "新增更大字體、可關閉部分介面動畫；集中在 Preferences 專屬區塊，含色盲模式、黑白評論文字",
+          "FAQ 說是在既有選項之外新增",
+          "字體是選項還是預設調大，兩處原文說法不同"
+        ],
+        [
+          "版面密度",
+          "改名 Large／Medium／Small，1440p（QHD）以上可用",
+          "9 月 22 日稱 Default／Detailed／Condensed，1440p 限制當時註腳已寫",
+          "1080p 螢幕實際看到什麼"
+        ],
+        [
+          "新生成球員",
+          "皮膚、頭髮、表情、肢體語言、頭像打光",
+          "官方說是再往前一步",
+          "長期存檔裡頭像的差異度"
+        ]
+      ],
+      "caption": "依 Sports Interactive 官網專頁與 Steam 公告 FAQ（2026 年 10 月 15 日）整理，並對照 9 月 22 日介面篇、9 月 30 日比賽日篇。官方畫面標明為開發中版本。"
+    },
+    {
+      "type": "h",
+      "text": "和先前相比：比賽日篇的概括說法有了清單"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "9 月 30 日的比賽日篇只概括說教練模型在身體、臉部與服裝上有更多自訂選項，另提到頭髮物理效果。這一篇把那些概括拆成具體清單，並加上兩件之前沒提過的事：輪椅教練與無障礙設定。新生成球員外觀則是 FM27 深度介紹第一次專門處理。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "前幾篇多談介面與玩法系統：介面、轉會與新聞、比賽引擎、訓練（比賽日篇則是視覺呈現）。這一篇大多是外觀與可及性，官方沒有提到這些改動會影響比賽計算。"
+    },
+    {
+      "type": "h",
+      "text": "對玩家可能的影響"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "由此推想，影響最直接的是需要無障礙設定的玩家。FM 的畫面以文字和數字為主，字體大小、色盲模式、評論文字不依賴球隊配色，對弱視或色覺辨識有困難的玩家可能有實際幫助；把所有選項集中到一個區塊，也比分散在各處好找。不過效果要看字體能放多大、哪些動畫可以關，官方都沒有給細節。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "版面密度的限制值得留意。這三種模式只在 1440p 以上提供，用 1080p 筆電或螢幕的玩家看到的是什麼版面、能不能自己調資訊量，官方沒有說明。本文推測，這會是 Launch Preview 期間 1080p 玩家最先要確認的事。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "輪椅教練與教練外觀屬於角色呈現，官方沒有說這些選項會影響球員、董事會或媒體的反應。新生成球員頭像的改進，影響的是長期存檔裡辨識球員的感受；實際看起來差多少，要等存檔推進幾個賽季、出現足夠多新生成球員後才能比較。"
+    },
+    {
+      "type": "h",
+      "text": "仍是官方宣稱、尚待實測的部分"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "SI 在 FAQ 註明，展示畫面來自開發中版本，發售前仍會調整，後續會繼續做畫面最佳化，並納入近期使用者測試的回饋；部分資料仍在權利人審核中。本報沒有玩過 FM27，本文內容都來自官方文字說明。字體到底是選項還是預設、1080p 螢幕的版面、輪椅在各種過場是否一致、新生成球員頭像的差異度，都要等 Launch Preview 或正式版。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "時程沒有變。11 月 10 日全平台數位版發售；Launch Preview 給在 SEGA 認可數位通路預購 PC／Mac 版的玩家，官方說在發售前 1–2 週，日期未定。台灣時間 10 月 16 日清晨查 Steam 英國區商店資料，仍標示 10 Nov, 2026 即將推出，沒有標價，也還沒開放預購。"
+    },
+    {
+      "type": "h",
+      "text": "接下來可觀察"
+    },
+    {
+      "type": "list",
+      "items": [
+        "下一篇深度介紹：FAQ 說「shortly」（近期）會再發一篇，談 2D 比賽引擎、遊戲內編輯器（In-Game Editor）與其他使用便利性改進，未給日期。",
+        "數位預購開放日、台灣區定價與預購折扣。",
+        "Launch Preview 的正式日期。",
+        "FM27 授權清單：官方仍說展示版本含權利人審核中的資料。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "FM27: More Personal, Accessible, and Yours",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-10-15",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-more-personal-accessible-and-yours",
+      "note": "官網深度介紹專頁全文與 FAQ；帽子種類、襯衫加毛衣、調色重新加入、最喜愛球隊最多四支、字體調大、縮放模式改名與 1440p 註腳"
+    },
+    {
+      "title": "FM27: More Personal, Accessible and Yours（Steam 公告）",
+      "publisher": "Sports Interactive／Steam",
+      "date": "2026-10-15",
+      "url": "https://store.steampowered.com/news/app/4530370/view/1846651706677252",
+      "note": "2026-10-15 11:10 UTC 發布，作者 Jimmy Wong；FAQ 全文，含下一篇主題"
+    },
+    {
+      "title": "FM27: Clearer Interface & Smoother Navigation",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-09-22",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-clearer-interface-smoother-navigation",
+      "note": "縮放模式 Default／Detailed／Condensed 原文與 QHD／4K（1440p 以上）註腳"
+    },
+    {
+      "title": "FM27: An Elevated Match Day Atmosphere",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-elevated-match-day-atmosphere",
+      "note": "FAQ：教練模型自訂、頭髮物理；實體版日期、Launch Preview"
+    },
+    {
+      "title": "FM27: Training and Tactical Effectiveness",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-10-09",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-training-and-tactical-effectiveness",
+      "note": "FAQ 預告下一篇為教練與新生成球員外觀"
+    },
+    {
+      "title": "FM27: Tactical Tweaks and Match Engine Upgrades（Steam 公告）",
+      "publisher": "Sports Interactive／Steam",
+      "date": "2026-10-05",
+      "url": "https://store.steampowered.com/news/app/4530370/view/1845383656394121",
+      "note": "FAQ：全球同一時刻上線、部分地區 11 月 11 日"
+    },
+    {
+      "title": "Football Manager 27 launches from 10 November",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/news/football-manager-27-launches-10-november",
+      "note": "官網新聞列表標示 29.09.26；平台、Launch Preview"
+    },
+    {
+      "title": "Football Manager 27 on Steam",
+      "publisher": "Steam",
+      "date": "2026-10-16",
+      "url": "https://store.steampowered.com/app/4530370/Football_Manager_27/",
+      "note": "台灣時間 2026-10-16 清晨查 appdetails（英國區）：10 Nov, 2026 即將推出，無標價"
+    },
+    {
+      "title": "Football Manager（YouTube 頻道上傳 RSS）",
+      "publisher": "Football Manager（YouTube）",
+      "date": "2026-10-16",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCMWpuQCtigHebT0oRtFy7Gw",
+      "note": "查核時最新上傳仍為 2026-10-09 訓練篇影片，第六篇無對應影片"
+    }
+  ]
+}
