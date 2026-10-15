@@ -1,0 +1,443 @@
+{
+  "column": "philosophy",
+  "date": "2026-10-16",
+  "title": "接上就能過最好的一生，你接不接",
+  "dek": "諾齊克的經驗機器常被當成駁倒享樂主義的證據。可是人們拒絕接上，是因為看重真實，還是只是不想離開現在的人生？",
+  "topic_key": "philosophy:nozick-experience-machine",
+  "updated_at": "2026-10-16T02:59:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/The_Libertarian_Review_December_1977_cover.jpg/1280px-The_Libertarian_Review_December_1977_cover.jpg",
+    "width": 1280,
+    "height": 1610,
+    "alt": "黑白雜誌封面。上方是刊名 Libertarian Review，左上角印著 DECEMBER 1977 與 $1.25。照片裡一位深色頭髮的男子穿著滾深色邊的白色短袖上衣，雙手交疊靠在桌上，面帶笑容看向鏡頭右側。右上方印著 AN INTERVIEW WITH ROBERT NOZICK、The Bakke Case、Bennett Cerf on Ayn Rand。",
+    "caption": "《自由意志主義評論》（Libertarian Review）1977 年 12 月號封面，主打諾齊克專訪。此時距《無政府、國家與烏托邦》出版約三年，經驗機器就寫在那本書裡。",
+    "credit": "Libertarian Review；Commons 標為美國公有領域（PD-US-defective notice，出版時未附有效著作權標示），影像轉自 Yumpu 上的該期掃描",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Libertarian_Review_December_1977_cover.jpg",
+    "made": "1977"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "週五早上 8 點，台北一家咖啡館。譯者宜蓁剛交出一份拖了三個月的書稿，朋友柏翰把手機推過來，上面是他寫的一段設定：有一台機器能給你任何想要的經驗，寫出一本好小說、交到一位知己。接上以後，你其實躺在槽裡，腦上接著電極，可是你只覺得一切都在真的發生，也不會記得自己做過接上的決定。機器不會故障，別人也可以接，不必為了照顧誰而留在外面。條件只有一個：一接就是一輩子，中途不會出來。接或不接？宜蓁先問了一句：「我在裡面寫的那本小說，算是我寫的嗎？」"
+    },
+    {
+      "type": "p",
+      "text": "這個問題問的是價值，不是技術。福祉理論裡的享樂主義（prudential hedonism）主張，只有快樂直接讓人過得好，只有痛苦直接讓人過得差。機器裡的人生感覺起來更愉快，照這個理論，接上比較好。如果宜蓁選擇不接，她似乎在說：除了感覺如何，還有別的東西決定人生好不好。本文要檢查的是，這個「不接」能不能當作證據。"
+    },
+    {
+      "type": "h",
+      "text": "出處：諾齊克 1974 年的機器與 1989 年的重寫"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這台機器出自美國哲學家諾齊克（Robert Nozick，1938–2002，長年任教於哈佛大學）1974 年的《無政府、國家與烏托邦》（*Anarchy, State, and Utopia*）。頁碼依版本而異：德布里加德（Felipe De Brigard）依 Basic Books 版標在第 44 頁，IEP〈享樂主義〉條目依 Blackwell 1991 年重印本標 42–45 頁，SEP〈享樂主義〉引 43–44 頁。原版問的就是要不要「一輩子」接上，但經驗分段預選：從商家整理好的經驗庫挑出往後兩年的經驗，兩年到了出槽十分鐘或十小時，再挑下一個兩年。在槽裡你不知道自己在槽裡。"
+    },
+    {
+      "type": "quote",
+      "original": "What else can matter to us, other than how our lives feel from the inside?",
+      "text": "除了我們的人生從內部感覺起來如何，還有什麼能對我們重要？",
+      "cite": "諾齊克，《無政府、國家與烏托邦》，1974（本文自譯；依科羅拉多大學課程節錄本，該本未附原書頁碼）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "他給了三個不接的理由。第一，我們想要真的去做某些事，不只是擁有做這些事的經驗。第二，我們想成為某種人；在槽裡漂浮久了的人是「an indeterminate blob」（本文自譯：一團無法確定的東西），問他勇不勇敢、善不善良、聰不聰明，不是難以回答，而是根本沒有答案。他接著寫「Plugging into the machine is a kind of suicide.」（本文自譯：接上機器是一種自殺。）第三，機器把我們限制在人造的實在裡，一個不會比人能建造的世界更深的世界。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "接著他把機器升級：「變形機器」能把你變成任何你想成為的人，「結果機器」能在世界上產出你本來會產出的任何結果。他說這些機器最令人不安的地方，是它們代替我們過我們自己的人生。這段推論停在一句猜測上："
+    },
+    {
+      "type": "quote",
+      "original": "Perhaps what we desire is to live (an active verb) ourselves, in contact with reality.",
+      "text": "也許我們想要的，是自己去活（這是一個主動的動詞），並且與實在接觸。",
+      "cite": "諾齊克，《無政府、國家與烏托邦》，1974（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "有一個背景常被省略：這段文字原本在談動物。諾齊克說，在弄清楚除了經驗還有什麼重要、且答案不適用於動物之前，不能主張限制我們對待動物的只有動物感受到的經驗。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，機器原本只是這個論證的一環。IEP〈經驗機器〉條目則把後來的研究分成兩段：約 2010 年以前，學界大致相信它駁倒了享樂主義；之後的專門研究開始動搖這份信心。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1989 年，諾齊克在《經過省察的人生》（*The Examined Life*）的〈幸福〉一章重寫了這台機器（德布里加德引作第 104 頁）：一次決定餘生，中途不出槽，接上後不記得自己接過；機器由來自另一個星系、友善而可信賴的存在提供。他明說這是價值問題，和「你能不能知道自己沒有接上」的知識論問題分開。他也提醒說自己會接的讀者：留意第一個衝動是不是不接，之後才想到既然只有經驗重要，機器也就沒問題。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "本文的咖啡館版本採用 1989 年的設定，宜蓁與柏翰是本文加的。拿掉每兩年出槽一次，是因為據 IEP〈經驗機器〉條目（Lorenzo Buscicchi 撰）轉述，Weijers 2014 年測試 1974 年版時，不願接上的人有 9% 的理由是每兩年出來一次會很沮喪，那不是諾齊克想測的東西。"
+    },
+    {
+      "type": "h",
+      "text": "立場一：人生好不好，要看它是否連著真實"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "諾齊克在 1989 年給了一個比機器更日常的例子：我們不會希望孩子過這樣的人生，作品得到的讚美都是假裝的，評論家和朋友在背後竊笑，看似忠實的伴侶在外面有戀情，看似孝順的孩子其實厭惡他。這個人從內部感覺很幸福，但諾齊克說他「is living in a dream world, taking pleasure in things that aren't so」（本文自譯：活在夢的世界裡，為不存在的事物感到快樂）。他要的不只是對這些事感到快樂，他要這些事是真的。"
+    },
+    {
+      "type": "quote",
+      "original": "What we want and value is an actual connection with reality.",
+      "text": "我們想要並且珍視的，是與實在真正的連結。",
+      "cite": "諾齊克，《經過省察的人生》，1989，〈幸福〉（本文自譯；依課程節錄本，頁碼未核對）"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這個立場最強的版本，不只是「人們剛好想要真實」。諾齊克特別說明，與實在的連結不論我們想不想要都重要，我們想要它正是因為它重要。SEP〈福祉〉條目（Roger Crisp 撰）也指出，經驗機器是採取欲望理論的動機之一：接在機器上，許多核心的欲望很可能都沒有實現。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "後來的支持者把問題改得更乾淨。據 IEP〈經驗機器〉條目，Crisp 2006 年比較兩種人生：A 愉快、豐富、自主選擇，B 在機器裡、經驗和 A 完全相同；照享樂主義兩者等值，但 Crisp 認為多數人的直覺是 A 比較好。Eden Lin 2016 年在 *Utilitas* 第 28 卷也主張比較這種經驗相同的兩種人生，以避開現狀偏誤。依期刊摘要，他的結論比諾齊克保守：機器不能一舉駁倒享樂主義，但給了一些拒絕它的理由。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這一型的實證資料不多。據 IEP 轉述，Rowland 2017 年請受試者比較一位陌生人經驗相同的兩種人生，超過 90% 認為她應該選連著真實的那一種；但問卷沒有提供「兩者一樣好」的選項，IEP 條目認為這個方法缺陷大到嚴重削弱了研究的意義，因為對享樂主義者來說，正確答案正是「一樣好」。"
+    },
+    {
+      "type": "h",
+      "text": "立場二：拒絕接上，未必是在看重真實"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "SEP〈福祉〉條目認為享樂主義者最強的回應，是承認這個直覺有力量，但說它來自常識，而常識本身可以用享樂主義解釋。依「享樂主義的悖論」，快樂最好間接追求；把真實、友誼當成目的本身的人，通常活得比較愉快，所以「真實很重要」可以只是一條好用的經驗法則。Crisp 據此認為，用機器一下子打發享樂主義，在方法上站不住。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "另一條路是質疑這個直覺到底在回應什麼。德布里加德 2010 年發表論文時是北卡羅來納大學教堂山分校哲學系的博士生。他轉引 Sumner 1996 年的質疑：怎麼知道技術萬無一失？停電了怎麼辦？他也報告一次課堂上的非正式調查：多數學生不接，但追問理由時，60% 的回答和偏好真實無關，例如懷疑程式猜不中自己要什麼、一個人接上會寂寞、擔心記憶與身分的延續。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "IEP〈經驗機器〉條目把這類干擾分成三組。一是享樂偏誤：看似反享樂主義的選擇，部分仍出於避免不快。二是想像失靈，包括不接受設定的想像抗拒（例如擔心機器故障），以及想像出設定沒有的東西的想像過度。據條目轉述，Weijers 2014 年的研究裡，選擇真實的受試者有 34% 出現想像抗拒；Löhr 2018 年把兩種失靈合計，選擇真實的哲學家有 46%、一般人有 39% 受影響。像是對別人有責任這類道德顧慮，條目也歸為想像抗拒。三是現狀偏誤，人傾向留在目前的狀態，這可以把機器反過來測。"
+    },
+    {
+      "type": "svg",
+      "title": "「不接」的反應能證明什麼",
+      "svg": "<svg viewBox=\"0 0 400 470\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"12\">\n<rect class=\"soft\" x=\"40\" y=\"8\" width=\"320\" height=\"54\" rx=\"4\"/>\n<text x=\"200\" y=\"30\" class=\"ink\" text-anchor=\"middle\" font-size=\"13\">觀察：多數人說「不接」</text>\n<text x=\"200\" y=\"49\" class=\"muted\" text-anchor=\"middle\" font-size=\"11\">Weijers 2014：84%；Hindriks 與 Douven 2018：71%</text>\n<line x1=\"200\" y1=\"62\" x2=\"200\" y2=\"84\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.2\"/>\n<text x=\"200\" y=\"100\" class=\"gold\" text-anchor=\"middle\" font-size=\"12\">什麼最能解釋這個反應？</text>\n<line x1=\"200\" y1=\"108\" x2=\"102\" y2=\"132\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.2\"/>\n<line x1=\"200\" y1=\"108\" x2=\"298\" y2=\"132\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.2\"/>\n<rect x=\"10\" y=\"132\" width=\"184\" height=\"96\" rx=\"4\" fill=\"none\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"20\" y=\"151\" class=\"gold\" font-size=\"11\">解釋一（諾齊克）</text>\n<text x=\"20\" y=\"170\" class=\"ink\">與實在接觸本身</text>\n<text x=\"20\" y=\"188\" class=\"ink\">讓人生更好</text>\n<text x=\"20\" y=\"208\" class=\"muted\" font-size=\"11\">做事、成為某種人、</text>\n<text x=\"20\" y=\"222\" class=\"muted\" font-size=\"11\">不活在人造的實在裡</text>\n<rect x=\"206\" y=\"132\" width=\"184\" height=\"96\" rx=\"4\" fill=\"none\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"216\" y=\"151\" class=\"gold\" font-size=\"11\">解釋二（批評者）</text>\n<text x=\"216\" y=\"170\" class=\"ink\">反應被別的因素推動</text>\n<text x=\"216\" y=\"190\" class=\"muted\" font-size=\"11\">享樂偏誤、想像失靈</text>\n<text x=\"216\" y=\"205\" class=\"muted\" font-size=\"11\">（含道德顧慮）、</text>\n<text x=\"216\" y=\"220\" class=\"muted\" font-size=\"11\">現狀偏誤</text>\n<line x1=\"102\" y1=\"228\" x2=\"102\" y2=\"252\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.2\"/>\n<line x1=\"298\" y1=\"228\" x2=\"298\" y2=\"252\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.2\"/>\n<rect class=\"soft\" x=\"10\" y=\"252\" width=\"184\" height=\"58\" rx=\"4\"/>\n<text x=\"20\" y=\"276\" class=\"accent\">享樂主義有反例</text>\n<text x=\"20\" y=\"296\" class=\"muted\" font-size=\"11\">快樂不是唯一的好</text>\n<rect class=\"soft\" x=\"206\" y=\"252\" width=\"184\" height=\"58\" rx=\"4\"/>\n<text x=\"216\" y=\"276\" class=\"accent\">直覺不足以當證據</text>\n<text x=\"216\" y=\"296\" class=\"muted\" font-size=\"11\">享樂主義暫時沒被駁倒</text>\n<line x1=\"20\" y1=\"330\" x2=\"380\" y2=\"330\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-dasharray=\"4 3\"/>\n<text x=\"200\" y=\"352\" class=\"gold\" text-anchor=\"middle\" font-size=\"11\">兩邊的測試方法：把干擾因素一個一個拿掉</text>\n<rect x=\"10\" y=\"364\" width=\"184\" height=\"94\" rx=\"4\" fill=\"none\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"20\" y=\"384\" class=\"ink\" font-size=\"13\">經驗相同的兩種人生</text>\n<text x=\"20\" y=\"401\" class=\"muted\" font-size=\"11\">Crisp 2006、Lin 2016</text>\n<text x=\"20\" y=\"420\" class=\"ink\" font-size=\"11\">不問「接不接」，只問</text>\n<text x=\"20\" y=\"438\" class=\"ink\" font-size=\"11\">哪一種對當事人比較好</text>\n<rect x=\"206\" y=\"364\" width=\"184\" height=\"94\" rx=\"4\" fill=\"none\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"216\" y=\"384\" class=\"ink\" font-size=\"13\">反轉的機器</text>\n<text x=\"216\" y=\"401\" class=\"muted\" font-size=\"11\">Kolber 1994、德布里加德 2010</text>\n<text x=\"216\" y=\"420\" class=\"ink\" font-size=\"11\">已經在機器裡，</text>\n<text x=\"216\" y=\"438\" class=\"ink\" font-size=\"11\">要不要拔掉回到現實</text>\n</svg>",
+      "caption": "論證結構示意（本文整理）。百分比依 IEP〈經驗機器〉條目轉述；Crisp 2006 依同一條目轉述，Lin 2016 依期刊摘要。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（一）：不是要不要接，而是要不要拔"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "柏翰改了設定：一位穿黑外套的陌生人走到宜蓁桌邊，說她從出生起就接在機器上，這一切都是程式，當初接錯了人。她可以留下，對方會刪掉這段對話的記憶；也可以拔掉，回到她從沒見過的真實人生。這段情境改寫自下面德布里加德 2010 年的實驗設計（黑外套的來訪者、接錯人、刪除記憶都取自他的版本），本文只把場景搬進咖啡館。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "據 IEP，這種「反轉的機器」最早由 Kolber 1994 年提出。德布里加德 2010 年在 *Philosophical Psychology* 第 23 卷第 1 期把它做成實驗：72 位沒修過哲學的北卡羅來納大學學生，隨機分成三組、每組 24 人，各讀一個版本。情境裡的 Smith 先生來按門鈴，說你被接錯進一台「superduper neurophysiologists」造的機器。中性版只問要留下還是回到現實；負面版加一句說明你現實中是西維吉尼亞州最高安全等級監獄的囚犯；正面版則說你現實中是住在摩納哥的千萬富翁藝術家。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "結果是：負面版只有 13% 選現實，87% 留下；正面版各半；中性版 54% 選現實，46% 留下。他再找 80 位學生做第二個中性版，只多一句提醒：外面的人生和你至今經歷的完全不同，結果 59% 留下、41% 拔掉，而且選擇拔掉的人裡只有約三分之一明確說理由是偏好真實，其他理由包括不滿意現在的生活或只是好奇。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "德布里加德用現狀偏誤（status quo bias）解釋。他引 Kahneman、Knetsch 與 Thaler 1991 年的說法：人們偏好目前的狀態，因為「the disadvantages of leaving it loom larger than the advantages」（本文自譯：離開它的壞處，看起來比好處大）。既然人們不願拔掉，是因為不想放棄熟悉的人生，那麼原版裡不願接上的人，也可能出於同一個偏誤。他同時指出，結果也不支持單純的享樂主義：如果人只看快樂，摩納哥那組應該壓倒性地選現實。他主張討論要走出「快樂對真實」的二分。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，這組數字要小心使用。每組 24 人，13% 大約是 3 個人；IEP 條目也批評樣本小、方法細節不足，不過 Cova 等人 2018 年的實驗哲學重複研究計畫，紀錄為成功重複了主要發現。反轉版也多改了一個條件：拔掉之後的人生是未知的，負面版甚至是監獄。宜蓁若留下，是不想離開熟悉的人生還是不想坐牢，這個設計分不開。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（二）：替一位陌生人決定"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "柏翰再改一次：要做決定的不是宜蓁，而是一位她不認識的人。這個人已經在機器裡過了半輩子，宜蓁要替她判斷：留在機器裡，或是回到現實，哪一種對她比較好。宜蓁自己的現狀不在選項裡，對家人的責任也和她無關。這個版本改寫自 Weijers 2014 年的「陌生人、無現狀」情境，咖啡館裡的兩個角色是本文加的。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "據 IEP 轉述，Weijers 用 1974 年的原版測試時，84% 的受試者選真實；換成這個陌生人版本，陌生人已在機器裡度過一半人生，人生中大部分愉快的經驗也來自機器，結果 55% 替她選了快樂。IEP 條目指出，這項研究避開了德布里加德實驗樣本小、細節不足的主要缺點。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "據 IEP 轉述，Hindriks 與 Douven 2018 年的研究，簡潔版有 71% 選真實；把機器換成一顆「經驗藥丸」，選快樂的比例從 29% 升到 53%。批評者可以說，換了包裝答案就移動，代表直覺不穩；IEP 條目則認為藥丸不改變人對世界的感知，取捨的是「感受是否合乎情境」與快樂，應視為另一個思想實驗，不能和經驗機器直接比較。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：拿掉「自己」和「現狀」之後，結果接近五五波。這對立場一不利，因為它需要一個夠穩的多數直覺當證據；對立場二也不算勝利，仍有四成多的人在沒有現狀可守時替陌生人選了真實。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（三）：大家一起接上"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "最後一個條件是諾齊克自己改的。他在 1989 年說，經驗機器令人不安的一點是你獨自活在幻覺裡，於是設想機器給每個人同一個幻覺，各自擁有其中協調的一部分。他的判斷是「may not be as objectionable, but it is objectionable nevertheless」（本文自譯：也許沒那麼令人反感，但仍然令人反感）：共享的觀點也許是真實的一個判準，卻不能保證真實，而我們兩者都要。他也補充：在機器上的人不會真的做任何選擇，更不會自由地選擇。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "共享版本拿掉了孤單與對家人的責任這些干擾。如果宜蓁在乎的所有人都在同一個機器世界裡，諾齊克說剩下的拒絕理由就是「真實」本身。SEP 的 Crisp 則提醒，即使加上真實的選擇與共享的虛擬世界，許多反享樂主義者仍不會被說服。本文推測，這是兩派分歧最乾淨的位置。"
+    },
+    {
+      "type": "table",
+      "title": "同一台機器的幾種版本",
+      "head": [
+        "版本",
+        "改了什麼",
+        "結果或判斷",
+        "依據"
+      ],
+      "rows": [
+        [
+          "諾齊克 1974",
+          "接一輩子，每兩年預選經驗並短暫出槽",
+          "諾齊克：不接；Weijers 2014 測得 84% 選真實",
+          "原典節錄；IEP 轉述"
+        ],
+        [
+          "諾齊克 1989",
+          "一次決定、中途不出槽、不記得",
+          "諾齊克：不接",
+          "原典節錄"
+        ],
+        [
+          "反轉・負面",
+          "已在機器裡，現實是監獄",
+          "13% 選現實",
+          "德布里加德 2010"
+        ],
+        [
+          "反轉・正面",
+          "已在機器裡，現實是摩納哥",
+          "50% 選現實",
+          "德布里加德 2010"
+        ],
+        [
+          "反轉・中性",
+          "已在機器裡，不說現實如何",
+          "54% 選現實；再加「外面完全不同」則 41%",
+          "德布里加德 2010"
+        ],
+        [
+          "陌生人版",
+          "替已在機器中半輩子的陌生人選",
+          "55% 選快樂",
+          "IEP 轉述 Weijers 2014"
+        ],
+        [
+          "經驗相同的兩種人生",
+          "比較陌生人經驗相同的兩種人生",
+          "超過 90% 選真實，但沒有「一樣好」選項",
+          "IEP 轉述 Rowland 2017"
+        ],
+        [
+          "藥丸版",
+          "機器換成經驗藥丸",
+          "選快樂由 29% 升到 53%；IEP 認為是另一個思想實驗",
+          "IEP 轉述 Hindriks 與 Douven 2018"
+        ],
+        [
+          "共享版",
+          "所有人共用同一個幻覺",
+          "諾齊克：沒那麼糟，仍然拒絕",
+          "原典節錄"
+        ]
+      ],
+      "caption": "各研究的受試者、措辭與選項都不同，百分比不能直接互相比較。"
+    },
+    {
+      "type": "h",
+      "text": "還沒解決的事"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "幾輪改動之後，比較穩的只有兩件事。第一，「多數人不接」這個觀察成立，但背後混著好幾種動機，只有一部分是看重真實。第二，把動機一個一個拿掉之後，結果沒有收斂：反轉版多數人留下，陌生人版接近五五波，經驗相同的兩種人生又因問卷設計難以判讀，而且問題越乾淨，離咖啡桌上那個「接不接」越遠。"
+    },
+    {
+      "type": "p",
+      "text": "宜蓁最後那個問題，正好落在兩派之間。如果小說只存在於機器裡，從內部感覺，她寫作時的掙扎、完稿時的鬆一口氣，和真的寫完一本書沒有差別；諾齊克會說她什麼也沒寫，享樂主義者會說她得到了寫作對她有好處的一切。要判斷誰對，得先知道那股抗拒是在回應真實，還是只在回應「離開這張咖啡桌」。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Experience Machine（Anarchy, State, and Utopia 1974 與 The Examined Life 1989 節錄）",
+      "publisher": "Robert Nozick／University of Colorado Boulder 課程講義 PDF",
+      "date": "",
+      "url": "https://rintintin.colorado.edu/~vancecd/phil3160/Nozick1.pdf",
+      "note": "讀全部 6 頁：1974 年版設定（一輩子接上、每兩年預選經驗並短暫出槽）、三個理由、變形機器與結果機器、動物脈絡；1989 年〈幸福〉章的一次決定餘生版、受騙的人生、共享幻覺與自由選擇。節錄本無原書頁碼"
+    },
+    {
+      "title": "Anarchy, State, and Utopia",
+      "publisher": "Robert Nozick／Basic Books",
+      "date": "1974",
+      "url": "https://openlibrary.org/search?q=Anarchy%2C+State%2C+and+Utopia+Nozick",
+      "note": "未讀原書；頁碼依版本而異：De Brigard 2010 依 Basic Books 版引設定段落於頁 44；IEP〈Hedonism〉依 Blackwell 1991 重印本標頁 42–45；SEP〈Hedonism〉依 Blackwell 版引頁 43–44"
+    },
+    {
+      "title": "The Examined Life: Philosophical Meditations",
+      "publisher": "Robert Nozick／Simon & Schuster",
+      "date": "1989",
+      "url": "https://openlibrary.org/search?q=The+Examined+Life+Nozick",
+      "note": "未讀原書；〈幸福〉章文字依上列課程節錄本；De Brigard 2010 註 4 引作頁 104"
+    },
+    {
+      "title": "The Experience Machine",
+      "publisher": "Lorenzo Buscicchi／Internet Encyclopedia of Philosophy",
+      "date": "",
+      "url": "https://iep.utm.edu/experience-machine/",
+      "note": "讀 §1、§6–§11 與結語：兩年預選與一輩子版、Weijers 2014 的 9% 沮喪理由、享樂偏誤／想像失靈／現狀偏誤三分、道德顧慮屬想像抗拒、Kolber 1994、Weijers 2014 陌生人版、Hindriks 與 Douven 2018（§10 認為藥丸是另一個思想實驗）、Rowland 2017 的缺陷、Löhr 2018、Crisp 2006、Lin 2016"
+    },
+    {
+      "title": "Hedonism",
+      "publisher": "Dan Weijers／Internet Encyclopedia of Philosophy",
+      "date": "",
+      "url": "https://iep.utm.edu/hedonism/",
+      "note": "經驗機器段落與書目（Nozick 1974 頁 42–45）"
+    },
+    {
+      "title": "Hedonism",
+      "publisher": "Andrew Moore／Stanford Encyclopedia of Philosophy",
+      "date": "2013-10-17",
+      "url": "https://plato.stanford.edu/entries/hedonism/",
+      "note": "§2.3.1；Nozick 1974 引頁 43–44"
+    },
+    {
+      "title": "Well-Being",
+      "publisher": "Roger Crisp／Stanford Encyclopedia of Philosophy",
+      "date": "2026-01-13",
+      "url": "https://plato.stanford.edu/entries/well-being/",
+      "note": "§4.1 經驗機器、外在論回應、享樂主義的悖論與方法論提醒；§4.2 欲望理論"
+    },
+    {
+      "title": "If you like it, does it matter if it's real?",
+      "publisher": "Felipe De Brigard／Philosophical Psychology 23(1): 43–57",
+      "date": "2010-02-08",
+      "url": "https://doi.org/10.1080/09515080903532290",
+      "note": "讀全文（作者網站 PDF：https://people.duke.edu/~fd13/2010/De_Brigard_2010_PhilPsych.pdf）：頁 43 作者身分（北卡羅來納大學哲學系研究生）、頁 44 引 Nozick 1974、頁 45–46 課堂調查與 Sumner 引文、頁 46–49 實驗設計與結果、頁 50–53 現狀偏誤解釋與結論、註 4 引 Nozick 1989 頁 104"
+    },
+    {
+      "title": "How to Use the Experience Machine",
+      "publisher": "Eden Lin／Utilitas 28(3): 314–332",
+      "date": "2015-09-28",
+      "url": "https://doi.org/10.1017/S0953820815000424",
+      "note": "只讀摘要（線上發表日）"
+    },
+    {
+      "title": "Nozick's experience machine is dead, long live the experience machine!",
+      "publisher": "Dan Weijers／Philosophical Psychology 27(4): 513–535",
+      "date": "2013-02-04",
+      "url": "https://doi.org/10.1080/09515089.2012.757889",
+      "note": "未讀原文；84%、55%、34%、9% 等數字依 IEP〈The Experience Machine〉轉述；日期為線上發表日，卷期為 2014 年"
+    },
+    {
+      "title": "Nozick's experience machine: An empirical study",
+      "publisher": "Frank Hindriks、Igor Douven／Philosophical Psychology 31(2): 278–298",
+      "date": "2017-12",
+      "url": "https://doi.org/10.1080/09515089.2017.1406600",
+      "note": "未讀原文；71% 與 29%→53%，以及 IEP 認為藥丸版不宜與經驗機器比較，依 IEP §10 轉述"
+    },
+    {
+      "title": "Hedonism Reconsidered",
+      "publisher": "Roger Crisp／Philosophy and Phenomenological Research 73(3): 619–645",
+      "date": "2006",
+      "url": "https://doi.org/10.1111/j.1933-1592.2006.tb00551.x",
+      "note": "未讀原文；人生 A 與人生 B 的比較依 IEP 轉述"
+    },
+    {
+      "title": "Mental Statism and the Experience Machine",
+      "publisher": "Adam J. Kolber／Bard Journal of Social Sciences 3: 10–17",
+      "date": "1994",
+      "url": "https://iep.utm.edu/experience-machine/",
+      "note": "未讀原文；反轉機器的提出依 IEP 轉述"
+    },
+    {
+      "title": "The experience machine and the expertise defense",
+      "publisher": "Guido Löhr／Philosophical Psychology 32(2): 257–273",
+      "date": "2018-11-02",
+      "url": "https://doi.org/10.1080/09515089.2018.1540775",
+      "note": "未讀原文；46% 與 39% 依 IEP 轉述；線上發表日 2018-11-02"
+    },
+    {
+      "title": "Our Intuitions about the Experience Machine",
+      "publisher": "Richard Rowland／Journal of Ethics and Social Philosophy 12(1): 110–117",
+      "date": "2017",
+      "url": "https://doi.org/10.26556/jesp.v12i1.216",
+      "note": "未讀原文；超過 90% 與「缺少一樣好選項」的方法批評依 IEP §11 轉述"
+    },
+    {
+      "title": "Welfare, Happiness, and Ethics",
+      "publisher": "L. W. Sumner／Clarendon Press（Oxford）",
+      "date": "1996",
+      "url": "https://doi.org/10.1093/acprof:oso/9780198238782.001.0001",
+      "note": "未讀原書；頁 95 引文依 De Brigard 2010 頁 45–46 轉引"
+    },
+    {
+      "title": "Anomalies: The Endowment Effect, Loss Aversion, and Status Quo Bias",
+      "publisher": "Daniel Kahneman、Jack L. Knetsch、Richard H. Thaler／Journal of Economic Perspectives 5(1): 193–206",
+      "date": "1991",
+      "url": "https://doi.org/10.1257/jep.5.1.193",
+      "note": "未讀原文；頁 197–198 引句依 De Brigard 2010 頁 50 轉引"
+    },
+    {
+      "title": "Estimating the Reproducibility of Experimental Philosophy",
+      "publisher": "Florian Cova 等／Review of Philosophy and Psychology 12: 9–44",
+      "date": "2018-06-14",
+      "url": "https://doi.org/10.1007/s13164-018-0400-9",
+      "note": "未讀原文，依 FORRT 紀錄；日期為線上發表日"
+    },
+    {
+      "title": "Estimating the Reproducibility of Experimental Philosophy",
+      "publisher": "Florian Cova 等／Review of Philosophy and Psychology 12: 9–44",
+      "date": "2018-06-14",
+      "url": "https://doi.org/10.1007/s13164-018-0400-9",
+      "note": "未讀原文，依 FORRT 紀錄；日期為線上發表日"
+    },
+    {
+      "title": "If you like it, does it matter if it's real?（重複研究紀錄）",
+      "publisher": "FORRT Replication Atlas",
+      "date": "",
+      "url": "https://forrt.org/flora-replication-atlas/doi/10.1080/09515080903532290/",
+      "note": "Cova 等 2018 年（Review of Philosophy and Psychology）重複研究，紀錄為成功重複 De Brigard 2010 的主要發現"
+    },
+    {
+      "title": "Robert Nozick",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Robert_Nozick",
+      "note": "生卒年、任教哈佛、兩書出版社"
+    },
+    {
+      "title": "File:The Libertarian Review December 1977 cover.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:The_Libertarian_Review_December_1977_cover.jpg",
+      "note": "頭圖授權與出處"
+    }
+  ]
+}
