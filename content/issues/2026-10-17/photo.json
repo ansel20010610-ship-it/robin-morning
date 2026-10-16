@@ -1,0 +1,416 @@
+{
+  "column": "photo",
+  "date": "2026-10-17",
+  "title": "被抹掉的拇指：蘭格《移民母親》與同組底片",
+  "dek": "1936 年，蘭格在尼波莫的豌豆工營地拍下佛蘿倫絲・湯普森。把館藏的底片、未修版印樣與同組底片並排，能看出這張照片怎樣被做成一個「典型」。",
+  "topic_key": "photo:lange-lc-usf34-009058-c",
+  "updated_at": "2026-10-17T02:00:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Migrant_Mother_%28LOC_fsa.8b29516%29.jpg/1280px-Migrant_Mother_%28LOC_fsa.8b29516%29.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Migrant_Mother_%28LOC_fsa.8b29516%29.jpg/3840px-Migrant_Mother_%28LOC_fsa.8b29516%29.jpg",
+    "width": 1280,
+    "height": 1643,
+    "alt": "直幅黑白照片。一名深色頭髮的女性坐在畫面中央，額頭有一道道橫紋，眉頭微皺，視線望向畫面左方，右手抬起，手指彎曲碰著嘴角。兩個孩子一左一右靠在她肩上，都把臉轉開或埋進手臂，只露出後腦和頭髮。她懷裡有一個裹著淺色布的嬰兒，臉大多被遮住。畫面右緣有一根模糊的直立木桿，背景是灰色、失焦的帆布。",
+    "caption": "多蘿西亞・蘭格《加州的赤貧豌豆採收工。七個孩子的母親，三十二歲。加州尼波莫》，後稱《移民母親》，1936 年（館方目錄記 3 月）。國會圖書館由原始硝酸片底片掃描；底片在 1930 年代修過，右下角的拇指已被抹去。",
+    "credit": "Dorothea Lange 攝；美國國會圖書館印刷與攝影部，FSA/OWI 黑白底片典藏（LC-USF34-009058-C；數位檔 fsa 8b29516）；影像取自 Wikimedia Commons",
+    "license": "Public domain（美國聯邦政府作品；國會圖書館標示 No known restrictions）",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Migrant_Mother_(LOC_fsa.8b29516).jpg",
+    "made": "1936 年（目錄記 3 月；印樣卡紙打字記 2 月）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "美國國會圖書館的目錄裡，這張照片的正式題名是一行圖說：「Destitute pea pickers in California. Mother of seven children. Age thirty-two. Nipomo, California」（加州的赤貧豌豆採收工。七個孩子的母親，三十二歲。加州尼波莫）。「Migrant mother」只列在「其他題名」一欄。同一筆目錄還有一條附註：這格底片在 1930 年代修過，為的是抹掉右下角一根「握著帳篷桿的拇指」；修版之前放印的檔案印樣仍在館裡。"
+    },
+    {
+      "type": "p",
+      "text": "下面先只看國會圖書館由原始底片掃描的那一格：人在哪裡、哪裡清楚、哪裡被遮住。再看修版前的檔案印樣，找出那根拇指。最後把館藏的同組其他底片排開，對照多蘿西亞・蘭格（Dorothea Lange）自己在 1960 年的回憶，看幾份紀錄之間有哪些地方對不上。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "攝影師",
+          "多蘿西亞・蘭格（Dorothea Lange），當時為移墾管理局（Resettlement Administration）拍攝加州流動農工"
+        ],
+        [
+          "題名",
+          "Destitute pea pickers in California. Mother of seven children. Age thirty-two. Nipomo, California（依底片圖說卡）；其他題名 Migrant mother（《移民母親》）"
+        ],
+        [
+          "人物",
+          "佛蘿倫絲・湯普森（Florence Owens Thompson）與三個孩子（館方摘要）"
+        ],
+        [
+          "拍攝時間",
+          "目錄記「1936 March」，日期依現代藝術博物館 2018 年 Sarah Hermanson Meister 的專書；檔案印樣卡紙上打字為「February, 1936」"
+        ],
+        [
+          "地點",
+          "美國加州尼波莫（Nipomo），豌豆採收工營地"
+        ],
+        [
+          "館藏號",
+          "LC-USF34-009058-C；另有複製透明片 LC-USF346-009058-C、安全片複製底片 LC-USF347-009058-C；對應印樣歸入 LOT 344"
+        ],
+        [
+          "底片",
+          "目錄記「1 negative : nitrate ; 4 x 5 in.」"
+        ],
+        [
+          "相機",
+          "國會圖書館研究指南記為 Graflex 相機、4×5 英寸底片；鏡頭、光圈與快門未見記載，本文不推測"
+        ],
+        [
+          "數位檔",
+          "fsa 8b29516（原始底片，修版後，本文頭圖）；ppmsca 12883、ppmsca 23845（修版前的檔案印樣，修復前與修復後）；cph 3b41800（未修版、可見拇指之檔案印樣的複製底片 LC-USZ62-95653 的數位檔）"
+        ],
+        [
+          "收藏",
+          "美國國會圖書館印刷與攝影部，FSA/OWI 典藏；由戰時新聞局海外圖片處移交；檔案印樣 18 × 23 公分"
+        ],
+        [
+          "權利",
+          "館方標示 No known restrictions"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "先看畫面：一張朝外看的臉，兩個轉開的孩子"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "這是一張直幅照片，畫面幾乎被人體填滿。湯普森坐在中央略偏左，臉大約在畫面上方五分之一到四成之間。她沒有看鏡頭，視線越過畫面左緣，望向照片之外。額頭上有幾道深淺不一的橫紋，眉頭往中間收，嘴唇抿著，下唇右側被手指輕輕壓住。深色頭髮往兩側梳開，塞到耳後，頭頂髮間有一個細小的淺色髮夾。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.3,
+        0.12,
+        0.4,
+        0.4
+      ],
+      "position": "畫面中上方，約佔寬度四成",
+      "caption": "全張最清楚的地方：額頭的橫紋、眼角的細紋、手指的關節都銳利。她的視線落在畫面之外。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "她的右手抬到臉旁，手背朝外，手指彎曲，指尖碰著嘴角與下巴；前臂從臉旁斜斜往下，手肘落在畫面下緣附近。開襟毛衣的袖口在手肘處磨破，留著一圈參差的毛邊。毛衣裡是一件格子襯衫，領口敞開。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "兩個孩子一左一右靠在她肩後。左邊那個把臉完全轉向畫面外，只露出後腦、一點耳朵和頸背；右邊那個頭髮較淺、亂蓬蓬的，把臉埋進自己的手臂，一隻小拳頭搭在母親肩上，袖子上有幾個破洞。兩張臉都看不到。她的懷裡、畫面右下，有一個裹在淺色布裡的嬰兒，只露出一點頭頂和臉側。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.66,
+        0.15,
+        0.32,
+        0.5
+      ],
+      "position": "畫面右上到中段",
+      "caption": "右邊的孩子把臉埋進手臂，一隻拳頭搭在母親肩上；袖子上的破洞清楚可見。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "背景是一片灰色、失焦的帆布，左上較暗，右上有一道帆布邊緣斜斜劃過。畫面右緣豎著一根木桿，比人物離鏡頭更近，糊成一條淺灰的直帶。木桿左側、嬰兒的布包下方，只看得到毯子的褶縫和木桿模糊的邊緣，看不出任何手指的形狀。整張照片沒有明顯的硬陰影，光線柔和而平均。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.7,
+        0.72,
+        0.3,
+        0.28
+      ],
+      "position": "畫面右下角",
+      "caption": "修版後的右下角：木桿與毯子之間只剩模糊的灰色。下一節的檔案印樣裡，這裡有一根拇指。"
+    },
+    {
+      "type": "h",
+      "text": "構圖：把臉框起來，把地方拿掉"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，這張照片靠「遮」來引導視線。兩個孩子都把臉轉開，畫面裡就只剩一張看得見的臉；他們的頭髮和肩膀從兩側往中間收，像一個框。母親的手臂從臉旁斜下，把視線從臉帶到懷裡的嬰兒，再被右緣的木桿擋住。臉、手肘與嬰兒連成一個三角形，眼睛在裡面繞一圈，最後總會回到那張臉。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "畫面裡也有缺席的東西。看不到營地、田地、汽車、其他人，連帳篷也只剩一片失焦的帆布。由此推想，正因為地點的線索幾乎全被排除，這張照片才容易被讀成「一位母親」而不是「尼波莫某個營地裡的某一家」。目錄把具體的圖說列為正題，「移民母親」只是其他題名；後來流傳的，卻多半是後者。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "她望向畫面外，也是這種效果的一部分。直視鏡頭的人像會讓觀者覺得被看；這裡沒有人看我們，觀者成了旁觀者。這只是對畫面效果的描述。國會圖書館的研究指南記下蘭格用的是 Graflex 相機和 4×5 英寸底片，但沒有鏡頭、光圈與快門的紀錄；前景木桿的模糊與背景帆布的失焦，本文只描述，不據此推算焦距。"
+    },
+    {
+      "type": "h",
+      "text": "修版前的印樣：拇指與卡紙上的另一個日期"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "photo",
+      "src": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/23800/23845v.jpg",
+      "width": 835,
+      "height": 1024,
+      "alt": "一張黑白印樣，貼在邊緣磨損的灰褐色卡紙上。畫面與頭圖是同一格：女性手托下巴，兩個孩子轉開臉靠在她肩上。右下角木桿旁，有一根拇指從畫面外伸進來，搭在木桿上。卡紙右側有一條直向的白色紙條，打字印著圖說、農業部農場安全局字樣與「Dorothea Lange」，另有手寫的「LC-USF34-9058-C」和紅筆寫的「Not for commercial use」。",
+      "caption": "修版前放印的檔案印樣（國會圖書館數位檔 ppmsca 23845，修復後掃描）。右下角木桿旁的拇指仍在。卡紙打字圖說末尾寫的是「February, 1936」。",
+      "credit": "Dorothea Lange 攝；美國國會圖書館印刷與攝影部，FSA/OWI 典藏",
+      "license": "Public domain（美國聯邦政府作品；國會圖書館標示 No known restrictions）",
+      "license_url": "",
+      "source_url": "https://www.loc.gov/resource/ppmsca.23845/",
+      "made": "1936 年（底片）；印樣放印於修版之前，確切年份未載"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "這張檔案印樣和頭圖是同一格底片，但右下角多了一樣東西：木桿左側、嬰兒布包下方，一根模糊的拇指從畫面外伸進來，出現在木桿左側，指尖朝畫面內。它比人物更靠近鏡頭。印樣的取景也比頭圖的掃描略緊，母親的頭頂幾乎碰到上緣。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "照片貼在一張四角磨圓的卡紙上。右側直向貼著一條白紙，打字寫著「Destitute peapickers in California; a 32 year old mother of seven children. February, 1936.」，下面一行是「US DEPT. AGRIC. FARM SECURITY ADMINI」與「RA 9058-C PHOTO BY Dorothea Lange」。紙條上另有手寫的大字「LC-USF34-9058-C」、幾個數位檔號，以及紅筆寫的「Not for commercial use」。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "國會圖書館目錄只說底片「在 1930 年代」修過，沒有寫明是誰動手、為了哪一次發表；它也沒有說那是誰的拇指。拍攝月份同樣有兩個說法：目錄依現代藝術博物館策展人 Sarah Hermanson Meister 2018 年的專書記為 1936 年 3 月，研究指南轉錄這張印樣的圖說時也寫「March 1936」，但卡紙上的打字是「February, 1936」。Wikimedia Commons 的檔案頁乾脆並寫「1936 Feb. or Mar.」。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，那根拇指本身不大，卻是全張唯一提示「這是一個人在帳篷裡、正扶著桿子」的動作。抹掉它之後，右下角只剩布和木頭，畫面更靜，也更像一幅構圖完成的肖像。修版沒有改變人物，但改變了觀者以為自己看到的是一個「瞬間」還是一個「形象」。"
+    },
+    {
+      "type": "h",
+      "text": "同組底片：營地、油燈和睡著的嬰兒"
+    },
+    {
+      "type": "figure",
+      "id": "f3",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Migrant_Mother%2C_alternative_version_%28LOC_fsa.8b29523%29.jpg/1280px-Migrant_Mother%2C_alternative_version_%28LOC_fsa.8b29523%29.jpg",
+      "width": 1280,
+      "height": 995,
+      "alt": "橫幅黑白照片。同一位女性坐在帳篷口，懷裡抱著一個閉眼熟睡的嬰兒，托著嬰兒的手指上戴著一枚戒指。一個淺色亂髮的孩子把下巴靠在她的左肩上，眼睛看向畫面右下方。畫面左下角有一盞煤油提燈和布袋，背後是有污漬的帆布帳篷，右側是一根帶節疤的去皮木桿，桿外是失焦的空地和遠處的樹。",
+      "caption": "蘭格，同組底片 LC-USF34-009093-C（數位檔 fsa 8b29523），目錄記 1936 年 3 月。取景較遠，帳篷、油燈和營地外的空地都在畫面裡。",
+      "credit": "Dorothea Lange 攝；美國國會圖書館印刷與攝影部，FSA/OWI 黑白底片典藏；影像取自 Wikimedia Commons",
+      "license": "Public domain（美國聯邦政府作品；國會圖書館標示 No known restrictions）",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Migrant_Mother,_alternative_version_(LOC_fsa.8b29523).jpg",
+      "made": "1936 年（目錄記 3 月）"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "這格是橫幅，相機離人比頭圖遠。湯普森穿著同一件袖口磨破的開襟毛衣和格子襯衫，坐在帳篷口，視線一樣望向畫面左方。懷裡的嬰兒閉著眼睛熟睡，整張臉露出來；她的一隻手托著嬰兒，手指上有一枚戒指。一個淺色亂髮的孩子把下巴擱在她肩上，眼睛睜著，看向畫面右下。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "畫面左下角有一盞煤油提燈，旁邊是布袋；背後的帆布帳篷佈滿污漬。右側那根木桿在這一格是清楚的：去了皮，留著一個個節疤。木桿外是一片明亮、失焦的空地，遠處有一排樹。頭圖裡那根糊成淺灰直帶的桿子，在這裡看來是同一根粗糙的樹枝。"
+    },
+    {
+      "type": "table",
+      "title": "國會圖書館所藏的同組底片",
+      "head": [
+        "館藏號",
+        "目錄圖說（節錄）",
+        "現況"
+      ],
+      "rows": [
+        [
+          "LC-USF34-009058-C",
+          "Destitute pea pickers in California. Mother of seven children...（本文頭圖）",
+          "原始底片，已修版；另存修版前檔案印樣"
+        ],
+        [
+          "LC-USF34-009093-C",
+          "Seven hungry children... These people had just sold their tent in order to buy food...",
+          "原始底片（本文圖三）"
+        ],
+        [
+          "LC-USF34-009095-C",
+          "Seven children without food. Mother aged thirty-two...",
+          "原始底片"
+        ],
+        [
+          "LC-USF34-009097-C",
+          "Seven hungry children. Mother aged thirty-two...",
+          "原始底片"
+        ],
+        [
+          "LC-USF34-009098",
+          "Seven hungry children. Mother aged thirty-two...",
+          "目錄記原始底片 2011 年遺失，以複製底片 LC-USZ62-58355 存檔"
+        ]
+      ],
+      "caption": "依國會圖書館目錄與研究指南整理。研究指南另說，兩張在帳篷裡、從斜側中距離拍的畫面似乎從未送到國會圖書館，可能見於奧克蘭博物館的蘭格檔案。"
+    },
+    {
+      "type": "h",
+      "text": "五張、六張還是七張：回憶與檔案"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "國會圖書館研究指南引了蘭格 1960 年 2 月發表在《Popular Photography》的〈The Assignment I'll Never Forget: Migrant Mother〉。她說自己像被磁鐵吸過去一樣走向這位母親，不記得怎樣解釋自己和相機，也沒有問她的名字和來歷；母親只告訴她自己三十二歲，一家靠附近田裡凍壞的蔬菜和孩子們打到的鳥過活，剛把車上的輪胎賣掉換食物。"
+    },
+    {
+      "type": "quote",
+      "original": "I made five exposures, working closer and closer from the same direction.",
+      "text": "我拍了五張，從同一個方向，一張比一張靠近。",
+      "cite": "蘭格，〈The Assignment I'll Never Forget: Migrant Mother〉，《Popular Photography》，1960 年 2 月；引自國會圖書館研究指南。本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "檔案的數字和這段回憶不一致。國會圖書館列出 5 個館藏號，加上指南說可能藏於奧克蘭博物館的 2 張，本文加總為 7 張；美國公共電視《Antiques Roadshow》網站 2014 年的文章則寫「six pictures」。指南也記下，那兩張未入館的畫面是「from an angle」（從斜側）拍的；這是否和「同一個方向」相衝，指南沒有說明。至於先後，指南明說：底片號是後來在移墾管理局才編上的，無法據此判斷拍攝順序，這一系列也沒有找到延伸圖說或文字紀錄。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "圖說之間也有出入。蘭格回憶說母親賣的是「車上的輪胎」，9093-C 的圖說卡卻寫這家人「剛把帳篷賣掉換食物」。同一張圖說卡寫營地有「twenty-five hundred」（2,500）人，研究指南轉錄的版本卻是「2,000」。《Antiques Roadshow》的文章另寫，湯普森一家是在從洛杉磯開往華森維爾（Watsonville）途中車子拋錨，才停在營地。本文不替這些說法排高下，只把它們並列。"
+    },
+    {
+      "type": "quote",
+      "original": "There was a sort of equality about it.",
+      "text": "這裡面有某種對等。",
+      "cite": "蘭格談母親似乎知道這些照片可能幫得上她，所以她也幫了蘭格，《Popular Photography》，1960 年 2 月；引自國會圖書館研究指南。本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "照片裡的人有名字，是很久以後的事。據《Antiques Roadshow》網站 2014 年 4 月 14 日 Ben Phelan 的文章，1978 年《摩德斯托蜂報》（Modesto Bee）一名記者在摩德斯托城外的拖車營地找到她：佛蘿倫絲・歐文斯・湯普森，1903 年生於印第安領地（今奧克拉荷馬），當時 75 歲。文章引她說過的一句話：「I can't get a penny out of it.」（我從這張照片一分錢也拿不到；本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "由此推想，「移民母親」這個形象有兩層製作。一層在現場：蘭格一張比一張靠近，畫面裡孩子的臉轉開、營地被留在框外（孩子轉臉是否出於蘭格要求，本文所見來源沒有記載）。另一層在暗房與檔案：抹掉拇指、在幾張底片中挑出這一格、讓「其他題名」取代原本的圖說。底片、印樣與同組畫面都還在國會圖書館，所以這兩層今天都能被拆開來看；說不清的是現場那一層裡，哪些是蘭格的安排，哪些只是那一刻剛好如此。"
+    },
+    {
+      "type": "exercise",
+      "title": "原創假設練習：五張，一張比一張近",
+      "steps": [
+        "找一位同意入鏡的人，在一個有明確環境線索的地方（廚房、工作檯、公車站）。",
+        "從同一個方向拍五張：第一張把整個環境放進來，之後每一張往前走幾步，最後一張只留臉和手。",
+        "把五張排成一列，在每一張旁邊寫下「這張裡還看得出在哪裡嗎」，並列出被推出畫面的東西。",
+        "挑出你覺得最有力的一張，再想像把畫面邊緣一個小細節（一隻手、一個杯子）抹掉，寫下它會改變什麼。"
+      ],
+      "criteria": [
+        "能指出從第幾張開始，看不出這個人在什麼地方。",
+        "能說出最後一張裡至少三樣被排除的環境線索。",
+        "能具體說明那個被抹掉的小細節，原本提供了什麼關於「當下」的資訊。"
+      ],
+      "note": "這是本報設計的原創練習，不是蘭格的工作方法；練習中的「抹掉」只在紙上想像，不實際修改照片。拍攝他人前先取得同意。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Destitute pea pickers in California. Mother of seven children. Age thirty-two. Nipomo, California（LC-USF34-009058-C）",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "date": "1936-03",
+      "url": "https://www.loc.gov/pictures/item/2017762891/",
+      "note": "館藏目錄（以 JSON 介面讀取）：其他題名 Migrant mother、硝酸片 4 × 5 英寸、1930 年代修版抹去拇指、日期依 Meister 2018、檔案印樣 18 × 23 公分、數位檔 fsa 8b29516、ppmsca 12883、ppmsca 23845、cph 3b41800、權利標示"
+    },
+    {
+      "title": "Dorothea Lange's \"Migrant Mother\" Photographs in the Farm Security Administration Collection: Introduction",
+      "publisher": "Library of Congress Research Guides（Hanna Soltys 編）",
+      "date": "2025-06-12",
+      "url": "https://guides.loc.gov/migrant-mother",
+      "note": "1936 年 3 月、尼波莫、移墾管理局；蘭格 1960 年《Popular Photography》回憶的引文；Graflex 相機與 4×5 底片；底片號無法判斷順序；未找到延伸圖說"
+    },
+    {
+      "title": "The Assignment I'll Never Forget",
+      "publisher": "Popular Photography（Dorothea Lange）",
+      "date": "1960-02",
+      "url": "https://guides.loc.gov/migrant-mother",
+      "note": "蘭格回憶與引文，轉引自國會圖書館研究指南；未讀原刊"
+    },
+    {
+      "title": "Migrant Mother Series of Images",
+      "publisher": "Library of Congress Research Guides",
+      "date": "2025-06-12",
+      "url": "https://guides.loc.gov/migrant-mother/images",
+      "note": "同組 5 個館藏號與圖說轉錄；兩張斜側中距離畫面藏於奧克蘭博物館；9098-C 原底片遺失"
+    },
+    {
+      "title": "Dorothea Lange: Migrant Mother（MoMA One on One 系列）",
+      "publisher": "The Museum of Modern Art（Sarah Hermanson Meister）",
+      "date": "2018",
+      "url": "https://www.loc.gov/item/2017762891/",
+      "note": "轉引自國會圖書館目錄（目錄拼作 Sara Hermanson Meister），拍攝日期依此書；未讀原書"
+    },
+    {
+      "title": "File:Migrant Mother (LOC fsa.8b29516).jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Migrant_Mother_(LOC_fsa.8b29516).jpg",
+      "note": "頭圖檔案；Public domain，出自國會圖書館 fsa.8b29516，原尺寸 6309 × 8099，日期記 1936 Feb. or Mar."
+    },
+    {
+      "title": "Digital file of print, post-conservation（ppmsca.23845）",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "url": "https://www.loc.gov/resource/ppmsca.23845/",
+      "note": "修版前檔案印樣的修復後掃描，圖檔取自館方 tile.loc.gov 參考影像；卡紙打字圖說記 February, 1936"
+    },
+    {
+      "title": "Migrant agricultural worker's family. Seven hungry children...（LC-USF34-009093-C）",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "date": "1936-03",
+      "url": "https://www.loc.gov/item/2017762903/",
+      "note": "圖說卡：sold their tent、twenty-five hundred people；數位檔 fsa 8b29523"
+    },
+    {
+      "title": "File:Migrant Mother, alternative version (LOC fsa.8b29523).jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Migrant_Mother,_alternative_version_(LOC_fsa.8b29523).jpg",
+      "note": "圖三檔案；Public domain，原尺寸 8175 × 6356"
+    },
+    {
+      "title": "Migrant agricultural worker's family. Seven children without food...（LC-USF34-009095-C）",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "date": "1936-03",
+      "url": "https://www.loc.gov/item/2017762905/"
+    },
+    {
+      "title": "Migrant agricultural worker's family. Seven hungry children...（LC-USF34-009097-C）",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "date": "1936-03",
+      "url": "https://www.loc.gov/item/2017762907/"
+    },
+    {
+      "title": "Migrant agricultural worker's family. Seven hungry children...（LC-USF34-009098）",
+      "publisher": "Library of Congress, Prints & Photographs Division",
+      "date": "1936-03",
+      "url": "https://www.loc.gov/item/2017762908/",
+      "note": "Original negative missing, 2011；複製底片 LC-USZ62-58355"
+    },
+    {
+      "title": "The Story of the \"Migrant Mother\"",
+      "publisher": "PBS, Antiques Roadshow（Ben Phelan）",
+      "date": "2014-04-14",
+      "url": "https://www.pbs.org/wgbh/roadshow/articles/the-story-of-the-migrant-mother/",
+      "note": "six pictures；1978 年《摩德斯托蜂報》記者找到湯普森、75 歲、1903 年生於印第安領地；車子拋錨的說法；I can't get a penny out of it"
+    }
+  ]
+}
