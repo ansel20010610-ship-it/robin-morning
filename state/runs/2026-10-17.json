@@ -1,0 +1,13 @@
+{
+  "1": {
+    "finished_at": "2026-10-17T01:09:35+08:00",
+    "missing": [
+      "football",
+      "civilization",
+      "photo",
+      "city",
+      "fiction"
+    ],
+    "note": "完成 devotion（腓 4:4–7）、music（德布西牧神）、perio（Badersten 1981），三篇皆經審稿修正後推送，validate 無 ERROR（僅 Wikimedia 429 限流 WARN）"
+  }
+}
