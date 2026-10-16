@@ -9,5 +9,14 @@
       "fiction"
     ],
     "note": "完成 devotion（腓 4:4–7）、music（德布西牧神）、perio（Badersten 1981），三篇皆經審稿修正後推送，validate 無 ERROR（僅 Wikimedia 429 限流 WARN）"
+  },
+  "2": {
+    "finished_at": "2026-10-17T02:11:42+08:00",
+    "missing": [
+      "football",
+      "city",
+      "fiction"
+    ],
+    "note": "完成 civilization（門多薩手抄本貢賦）與 photo（蘭格《移民母親》），兩篇皆經審稿子代理查核並修正，validate 無 ERROR"
   }
 }
