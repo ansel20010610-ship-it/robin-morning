@@ -1,0 +1,340 @@
+{
+  "column": "perio",
+  "date": "2026-10-17",
+  "title": "15 名病人的 13 個月：1981 年非手術牙周治療",
+  "dek": "Badersten 等人以半口設計比較手器械與超音波清創，追蹤 13 個月。4 到 7 毫米的牙周袋不開刀能改善多少，摘要說了什麼、沒說什麼？",
+  "topic_key": "perio:doi:10.1111/j.1600-051x.1981.tb02024.x",
+  "updated_at": "2026-10-17T00:50:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Curettes.jpg/1280px-Curettes.jpg",
+    "width": 1280,
+    "height": 646,
+    "alt": "灰色金屬檯面上，八支牙科手器械排成扇形，握柄分別是黃、深藍、淺藍、紅、綠、金屬網紋、深灰與橘色，前端都是彎曲的細長金屬工作端。",
+    "caption": "牙周刮匙（curette）。Badersten 等人 1981 年的研究以半口設計，比較手器械與超音波器械的齦下清創效果。這張照片由 Milenafoto 於 2013 年拍攝，檔案說明為「牙科衛生：刮匙」（捷克文）；與論文受試者及原研究使用的器械無關。",
+    "credit": "Milenafoto 攝，Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Curettes.jpg",
+    "made": "2013"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1981 年 2 月，《Journal of Clinical Periodontology》刊出一篇標題平實的論文：〈Effect of nonsurgical periodontal therapy. I. Moderately advanced periodontitis〉。作者 Anita Badersten、Rolf Nilvéus 與 Jan Egelberg 只治療了 15 名病人，牙位限於門牙、犬齒與小臼齒。摘要裡最具體的數字是：治療前有 106 個部位的探測牙周袋深度達 6 毫米以上，13 個月後只剩 13 個。"
+    },
+    {
+      "type": "p",
+      "text": "它要回答的問題寫在摘要第一句：牙周袋 4 到 7 毫米的病人接受非手術治療之後，組織的癒合過程是什麼樣子。這裡的非手術治療，指的是菌斑控制加上齦上與齦下清創（debridement），不翻瓣。摘要在結論裡把這種做法稱為「保守治療」（conservative treatment），並提出下一步要問的問題：更嚴重的病灶，非手術治療還能走多遠。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "摘要沒有交代當時的臨床背景。由同一時期的研究題目推想，1980 年代初的牙周學界正在比較手術與非手術治療的效果：本報 10 月 13 日導讀的 Lindhe 等人 1982 年「臨界探測深度」研究，就是在同一位病人的兩側比較刮治與根面整平（scaling and root planing）加不加改良式 Widman 翻瓣。Badersten 的系列則先不和手術比，只問非手術治療本身能做到多少。"
+    },
+    {
+      "type": "p",
+      "text": "本文依摘要與後續文獻整理。1981 年原論文全文需訂閱，未能取得；PubMed 收錄的摘要約 170 個英文字，沒有列出各指標的平均值、統計方法、手器械與超音波各自的數值，也沒有交代病人的年齡、性別或半口的分配方式。這些本文都不寫。"
+    },
+    {
+      "type": "paper",
+      "citation": "Badersten A, Nilvéus R, Egelberg J. Effect of nonsurgical periodontal therapy. I. Moderately advanced periodontitis. *J Clin Periodontol*. 1981;8(1):57–72.",
+      "doi": "10.1111/j.1600-051x.1981.tb02024.x",
+      "pmid": "6972954",
+      "link": "https://doi.org/10.1111/j.1600-051x.1981.tb02024.x",
+      "design": "半口設計（split-mouth）的前瞻性臨床研究：同一位病人的兩側分別以手器械或超音波器械清創",
+      "sample": "15 名病人，牙周袋 4–7 毫米；治療門牙、犬齒、小臼齒",
+      "question": "中度進展牙周炎經菌斑控制與齦上、齦下清創後，臨床指標如何隨時間癒合？手器械與超音波有沒有差別？"
+    },
+    {
+      "type": "h",
+      "text": "研究設計：同一張嘴，一半用手器械、一半用超音波"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "依摘要，15 名病人的牙周袋深 4 到 7 毫米，治療範圍限於門牙、犬齒與小臼齒，不含大臼齒。治療內容是菌斑控制，加上齦上與齦下清創，器械分為手器械與超音波器械兩種，以半口設計（split-mouth approach）比較：同一位病人的一部分牙齒用手器械，另一部分用超音波。摘要也比較了兩位操作者的結果。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "評估指標有四項：菌斑分數（plaque scores）、探診出血（bleeding on probing, BOP）、探測牙周袋深度（probing pocket depth, PPD）與探測附著水準（probing attachment level, PAL）。觀察期為 13 個月。摘要沒有寫明各次檢查的時間點，只說改善集中在治療開始後的頭 4 到 5 個月。"
+    },
+    {
+      "type": "svg",
+      "title": "研究流程（原創示意圖）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 520\">\n<text class=\"ink\" x=\"180\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">15 名病人，牙周袋 4–7 毫米</text>\n<rect class=\"soft\" x=\"20\" y=\"34\" width=\"320\" height=\"58\" rx=\"6\"/>\n<text class=\"ink\" x=\"180\" y=\"56\" font-size=\"12\" text-anchor=\"middle\">基線記錄：菌斑分數、探診出血</text>\n<text class=\"ink\" x=\"180\" y=\"76\" font-size=\"12\" text-anchor=\"middle\">探測牙周袋深度、探測附著水準</text>\n<line class=\"muted\" x1=\"180\" y1=\"92\" x2=\"180\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<rect class=\"soft\" x=\"20\" y=\"112\" width=\"320\" height=\"58\" rx=\"6\"/>\n<text class=\"ink\" x=\"180\" y=\"134\" font-size=\"12\" text-anchor=\"middle\">菌斑控制＋齦上與齦下清創</text>\n<text class=\"muted\" x=\"180\" y=\"154\" font-size=\"11\" text-anchor=\"middle\">只治療門牙、犬齒、小臼齒</text>\n<line class=\"muted\" x1=\"180\" y1=\"170\" x2=\"100\" y2=\"196\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<line class=\"muted\" x1=\"180\" y1=\"170\" x2=\"260\" y2=\"196\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<rect class=\"paper\" x=\"20\" y=\"196\" width=\"150\" height=\"62\" rx=\"6\" stroke=\"currentColor\"/>\n<rect class=\"accent\" x=\"20\" y=\"196\" width=\"6\" height=\"62\"/>\n<text class=\"ink\" x=\"98\" y=\"222\" font-size=\"12\" text-anchor=\"middle\">半口：手器械</text>\n<text class=\"muted\" x=\"98\" y=\"242\" font-size=\"11\" text-anchor=\"middle\">（刮治器械）</text>\n<rect class=\"paper\" x=\"190\" y=\"196\" width=\"150\" height=\"62\" rx=\"6\" stroke=\"currentColor\"/>\n<rect class=\"gold\" x=\"190\" y=\"196\" width=\"6\" height=\"62\"/>\n<text class=\"ink\" x=\"268\" y=\"222\" font-size=\"12\" text-anchor=\"middle\">另半口：超音波</text>\n<text class=\"muted\" x=\"268\" y=\"242\" font-size=\"11\" text-anchor=\"middle\">（同一位病人）</text>\n<text class=\"muted\" x=\"180\" y=\"282\" font-size=\"11\" text-anchor=\"middle\">另比較兩位操作者的結果</text>\n<line class=\"muted\" x1=\"180\" y1=\"290\" x2=\"180\" y2=\"312\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<rect class=\"soft\" x=\"20\" y=\"312\" width=\"320\" height=\"58\" rx=\"6\"/>\n<text class=\"ink\" x=\"180\" y=\"334\" font-size=\"12\" text-anchor=\"middle\">治療開始後 4–5 個月</text>\n<text class=\"ink\" x=\"180\" y=\"354\" font-size=\"12\" text-anchor=\"middle\">四項指標都改善</text>\n<line class=\"muted\" x1=\"180\" y1=\"370\" x2=\"180\" y2=\"392\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<rect class=\"soft\" x=\"20\" y=\"392\" width=\"320\" height=\"58\" rx=\"6\"/>\n<text class=\"ink\" x=\"180\" y=\"414\" font-size=\"12\" text-anchor=\"middle\">到第 13 個月</text>\n<text class=\"ink\" x=\"180\" y=\"434\" font-size=\"12\" text-anchor=\"middle\">其餘時間變化很小</text>\n<text class=\"accent\" x=\"180\" y=\"478\" font-size=\"12\" text-anchor=\"middle\">≥6 毫米的部位：106 個 → 13 個</text>\n<text class=\"muted\" x=\"180\" y=\"504\" font-size=\"10\" text-anchor=\"middle\">原創示意圖，依 PubMed 摘要繪製；分配方式等細節摘要未載</text>\n</svg>",
+      "caption": "依 Badersten 等人 1981 年 PubMed 摘要繪製的研究流程示意。摘要未說明兩側如何分配手器械與超音波、兩位操作者如何分工，以及各次檢查的確切時間，圖中不畫這些細節。",
+      "credit": "本報原創圖解，依原文摘要繪製"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "半口設計的好處是每位病人自己當對照：口腔衛生習慣、全身狀況、宿主反應在兩側相同，比較的只剩器械。代價是兩側並不完全獨立。病人的菌斑控制改善會同時作用在兩側，一側的治療也可能影響另一側；這類設計適合比較兩種器械，但不適合回答「清創和不清創差多少」。"
+    },
+    {
+      "type": "h",
+      "text": "主要結果：頭 4 到 5 個月改善，之後幾乎不動"
+    },
+    {
+      "type": "table",
+      "title": "1981 年摘要報告的結果",
+      "head": [
+        "項目",
+        "摘要的描述"
+      ],
+      "rows": [
+        [
+          "四項指標（菌斑、BOP、PPD、PAL）",
+          "治療開始後頭 4–5 個月都改善"
+        ],
+        [
+          "第 5 個月到第 13 個月",
+          "變化很小"
+        ],
+        [
+          "手器械 vs. 超音波",
+          "看不出結果有差別"
+        ],
+        [
+          "兩位操作者之間",
+          "看不出結果有差別"
+        ],
+        [
+          "PPD ≥ 6 毫米的部位數",
+          "基線 106 個，13 個月時 13 個（本文自算：約為基線的 12%）"
+        ]
+      ],
+      "caption": "依 PubMed 摘要整理。摘要未提供各指標的平均值、標準差、統計檢定或效果大小。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "摘要的核心結論可歸成三點。第一，所有記錄的指標在治療開始後頭 4 到 5 個月都有改善，13 個月觀察期的其餘時間變化很小。第二，手器械與超音波器械看不出結果的差別，兩位操作者之間也看不出差別。第三，基線時共有 106 個部位探測深度在 6 毫米以上，13 個月時只觀察到 13 個這樣的部位。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "106 與 13 這兩個數字容易被讀成「106 個深袋有 93 個好了」。摘要的寫法是「At 13 months only 13 such sites were observed」（13 個月時只觀察到 13 個這樣的部位；本文自譯），沒有說這 13 個都是原本那 106 個裡的部位。如果有原本較淺的部位在追蹤期間加深到 6 毫米，它也會算進 13 個裡。所以比較穩當的說法是：深袋的總數從 106 降到 13，約減為原本的 12%（本文自算：13 ÷ 106 ≈ 0.12）。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "摘要說「no difference of results could be observed」（看不出結果有差別；本文自譯），沒有報告信賴區間或檢定力。15 名病人、半口比較，能偵測到的差異大小有限；「沒有觀察到差別」和「證明兩者相等」不是同一件事。後來的系統性回顧（見下文）才把這個問題放到更多研究上檢驗。"
+    },
+    {
+      "type": "p",
+      "text": "作者在摘要最後寫，4 到 7 毫米牙周袋的保守治療結果「apparently successful」（看來是成功的；本文自譯），並由此提出問題：在病灶更嚴重的病人身上，非手術治療能做到什麼程度。這個問題成了同一系列第 II 篇的題目。"
+    },
+    {
+      "type": "h",
+      "text": "限制：小樣本、只含前牙與小臼齒、讀不到的細節"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "第一是樣本。15 名病人、只治療單根牙與小臼齒，結果不能直接外推到大臼齒，尤其是有根分岔病變的牙齒；根分岔的清創困難度與單根牙不同。摘要也沒有交代病人如何招募、是否吸菸、有無全身疾病，這些都會影響癒合。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "第二是對照。研究比較的是兩種器械與兩位操作者，沒有不清創或只做菌斑控制的對照組，也沒有手術組。因此它能顯示「非手術治療後，這些指標往哪裡走」，卻不能單獨回答「改善有多少是清創造成的」或「和手術相比如何」。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "第三是測量。探測深度與附著水準靠人工探針測量，發炎消退後探針較不易穿入組織，讀數本身會變淺；摘要沒有說明探測力量、檢查者是否知道各側的處理方式，也沒有報告測量的重複性。第四，本文讀不到全文，凡是平均值、各側的數值、統計方法，都無法核對。"
+    },
+    {
+      "type": "h",
+      "text": "後來的研究：更深的袋、更少的次數、更多的試驗"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "同一組作者 1984 年接連發表第 II 與第 III 篇。第 II 篇（嚴重進展牙周炎）治療 16 名病人，牙周袋深達 12 毫米，同樣是門牙、犬齒、小臼齒，同樣以半口設計比較手器械與超音波。這次先有 3 個月只做菌斑控制，摘要說牙齦狀況在這段期間變化極小；清創之後的 9 個月才逐漸明顯改善，24 個月研究期的最後 12 個月沒有再變化。基線有 305 個部位深度 7 毫米以上，24 個月時剩 43 個（本文自算：約為基線的 14%）。作者的結論是：看不出有某個初始深度，超過之後非手術治療就不再有效。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "第 III 篇比較清創的次數。13 名病人、牙周袋深達 11 毫米，一側只在開始時清創一次，另一側清創 3 次、每次相隔 3 個月，器械都用超音波。改善集中在頭 9 個月，24 個月研究期的最後 15 個月沒有再變化，兩側看不出差別。作者據此認為，前牙與小臼齒的深牙周袋可以用菌斑控制加一次清創成功處理，癒合期間細菌重新移生造成的復發，在臨床上可能不是主要問題。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "第 II 篇那 3 個月「只做菌斑控制」的階段，等於在同一批病人身上補上了第 I 篇缺的一塊：如果只靠病人自己清潔、牙齦狀況幾乎不動，之後的改善就比較能歸給齦下清創。這仍是同一批病人的前後比較，不是隨機對照。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "手器械與超音波的問題，在 2002 年《Journal of Clinical Periodontology》的一期增刊裡有了系統性回顧。Tunkel、Heinecke 與 Flemmig 從 419 篇摘要中納入 27 篇，結論是：以附著增加、探測深度減少或 BOP 減少衡量，超音波／音波與手器械清創看不出差別，但資料無法做統合分析，證據「not very strong」（不是很強；本文自譯）；超音波／音波清創所需時間少 36.6%。他們也指出，這些結論適用於單根牙，多根牙還需要研究。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "同一期的 Heitz-Mayfield 等人回顧了 6 篇至少追蹤 12 個月、比較手術與非手術治療的隨機對照試驗。12 個月時，在大於 6 毫米的深袋，手術比非手術多減少約 0.6 毫米探測深度（加權平均差 0.58 毫米，95% 信賴區間 0.38–0.79）、多增加約 0.2 毫米附著（0.19 毫米，0.04–0.35）；在 4 到 6 毫米的袋，刮治與根面整平反而多 0.4 毫米附著增加，但探測深度少減 0.4 毫米；在 1 到 3 毫米的淺袋，非手術治療的附著喪失少 0.5 毫米。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "2020 年，歐洲牙周病學會（European Federation of Periodontology, EFP）為第 I 到 III 期牙周炎制定 S3 臨床指引，背後的系統性回顧由 Suvan 等人執行。依其摘要，只有 1 篇隨機對照試驗直接比較齦下清創與只做齦上清潔，因此另外取 9 篇研究的治療前後數值估計：6 到 8 個月時加權平均探測深度減少 1.4 毫米（95% 信賴區間 1.0–1.7），牙周袋閉合比例約 74%（64–85）。6 篇隨機試驗比較手器械與音波／超音波器械，13 篇比較分象限與全口治療，都沒有觀察到顯著差異。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "指引的建議 2.1 寫：建議以齦下清創治療牙周炎，以減少探測深度、牙齦發炎與患病部位數（等級 A）。建議 2.2 寫：齦下清創可以用手器械或動力器械（音波／超音波），單用或合併皆可（等級 A），並註明各種器械都講求技術、需要專門訓練。指引正文把治療終點定義為牙周袋閉合，也就是探測深度 4 毫米以下且沒有探診出血；它在建議 2.1 的說明中寫平均減少 1.7 毫米、大於 6 毫米的部位平均減少 2.6 毫米，與 Suvan 摘要的加權值 1.4 毫米不同。指引寫明這項建議依據的是 1 篇 3 個月的隨機試驗與 11 篇追蹤 6 個月以上的前瞻性研究（258 人），Suvan 摘要寫的則是 9 篇研究的加權值；篇數與計算方式都不同，本文未讀 Suvan 全文，無法進一步判斷。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "同一份指引的建議 3.1 處理治療後仍殘留的牙周袋：第 III 期牙周炎病人完成第一、二步治療後，殘留 6 毫米以上的深袋，指引用「suggest」（建議考慮，等級 B）的措辭建議翻瓣手術；4 到 5 毫米的中等深度則建議考慮再做一次齦下清創。換句話說，非手術清創是所有牙周炎病人的第二步，手術是第 III 期病人針對殘留深袋的第三步。"
+    },
+    {
+      "type": "table",
+      "title": "從 15 名病人到指引",
+      "head": [
+        "研究",
+        "設計與對象",
+        "主要結果（依摘要或指引全文）"
+      ],
+      "rows": [
+        [
+          "Badersten 等 1981（I）",
+          "半口；15 人，4–7 mm；前牙與小臼齒",
+          "改善集中在頭 4–5 個月；≥6 mm 部位 106 → 13；手器械與超音波看不出差別"
+        ],
+        [
+          "Badersten 等 1984（II）",
+          "半口；16 人，至 12 mm；先 3 個月只做菌斑控制",
+          "清創後 9 個月逐漸改善；≥7 mm 部位 305 → 43（24 個月）"
+        ],
+        [
+          "Badersten 等 1984（III）",
+          "半口；13 人，至 11 mm；1 次 vs. 3 次清創",
+          "兩側看不出差別；改善集中在頭 9 個月"
+        ],
+        [
+          "Tunkel 等 2002",
+          "系統性回顧，27 篇",
+          "超音波／音波與手器械看不出差別；超音波省時 36.6%；限單根牙"
+        ],
+        [
+          "Heitz-Mayfield 等 2002",
+          "系統性回顧，6 篇隨機試驗",
+          ">6 mm 手術多減 0.58 mm 深度；4–6 mm 非手術多 0.37 mm 附著、少減 0.35 mm 深度"
+        ],
+        [
+          "Suvan 等 2020",
+          "系統性回顧（EFP 指引用）",
+          "6–8 個月深度減 1.4 mm、閉合約 74%；器械種類與分象限／全口無顯著差異"
+        ]
+      ],
+      "caption": "數字取自各篇 PubMed 摘要；自算比例見正文。"
+    },
+    {
+      "type": "h",
+      "text": "今天怎麼讀：證明了「可以不開刀」，沒有證明「不必開刀」"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "這篇論文本身證明的範圍很窄：在 15 名中度牙周炎病人的前牙與小臼齒，菌斑控制加上齦上、齦下清創之後，四項臨床指標在 4 到 5 個月內改善，並維持到 13 個月；手器械與超音波之間、兩位操作者之間沒有看到差別。它沒有手術對照，摘要也沒有交代兩側如何分配，不能拿來說非手術治療和手術一樣好。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "後來的共識把這件事分成幾層。非手術清創是有效的，所以 EFP 指引把它列為所有牙周炎病人的必要步驟；器械種類不是關鍵，Tunkel 等人 2002 年與 Suvan 等人 2020 年的回顧都沒有找到手器械與動力器械的差別。但在大於 6 毫米的深袋，Heitz-Mayfield 等人的統合分析顯示手術能多減少一些探測深度；EFP 建議 3.1 列出的依據則是 Sanz-Sánchez 等人 2020 年的回顧（13 篇隨機試驗、500 名病人），指引說明中寫初始 6 毫米以上的部位 1 年時翻瓣多減 0.67 毫米（4 篇研究）。兩篇回顧的方向一致。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，Badersten 系列留給今天最實用的，是那條時間曲線：改善集中在頭幾個月，之後趨於平穩。第 III 篇又顯示，在前牙與小臼齒，每 3 個月清創一次、共做 3 次，並沒有看出比只做一次更好。由此推想，清創之後需要等組織癒合再評估，而不是在癒合期內急著重做；這也是後來「第二步之後再評估、再決定第三步」的邏輯。這是推論，1981 年的摘要本身沒有談到再評估的時機。"
+    },
+    {
+      "type": "p",
+      "text": "摘要的最後一句提出的是一個問題，不是結論：非手術治療在更嚴重的病灶能做到什麼程度。3 年後，同一組作者在 12 毫米深的牙周袋上回答說，看不出有一個深度門檻；約 20 年後的統合分析則說，在最深的那些袋，手術仍多了半毫米左右。這半毫米值不值得一次手術，是 1981 年的 15 名病人沒辦法回答的。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Badersten A, Nilvéus R, Egelberg J. Effect of nonsurgical periodontal therapy. I. Moderately advanced periodontitis. J Clin Periodontol 1981;8(1):57–72",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1981-02",
+      "url": "https://doi.org/10.1111/j.1600-051x.1981.tb02024.x",
+      "note": "原論文；全文需訂閱未能取得，依摘要。卷期頁依 Crossref"
+    },
+    {
+      "title": "PubMed 書目與摘要：Effect of nonsurgical periodontal therapy. I. Moderately advanced periodontitis（PMID 6972954）",
+      "publisher": "National Library of Medicine（E-utilities efetch）",
+      "date": "1981-02",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/6972954/",
+      "note": "核對作者、卷期頁、DOI 與摘要全文；PMID 由 Europe PMC 查得後以 efetch 回查標題一致"
+    },
+    {
+      "title": "Badersten A, Nilveus R, Egelberg J. Effect of nonsurgical periodontal therapy. II. Severely advanced periodontitis. J Clin Periodontol 1984;11(1):63–76",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1984-01",
+      "url": "https://doi.org/10.1111/j.1600-051x.1984.tb01309.x",
+      "note": "依 PubMed 摘要（PMID 6363463）"
+    },
+    {
+      "title": "Badersten A, Nilveus R, Egelberg J. Effect of nonsurgical periodontal therapy. III. Single versus repeated instrumentation. J Clin Periodontol 1984;11(2):114–124",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1984-02",
+      "url": "https://doi.org/10.1111/j.1600-051x.1984.tb00839.x",
+      "note": "依 PubMed 摘要（PMID 6583210）"
+    },
+    {
+      "title": "Lindhe J, Socransky SS, Nyman S, Haffajee A, Westfelt E. \"Critical probing depths\" in periodontal therapy. J Clin Periodontol 1982;9(4):323–336",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "1982-07",
+      "url": "https://doi.org/10.1111/j.1600-051x.1982.tb02099.x",
+      "note": "依 PubMed 摘要（PMID 6764782）：半口比較刮治與根面整平加或不加改良式 Widman 翻瓣；本報 2026-10-13 已導讀"
+    },
+    {
+      "title": "Tunkel J, Heinecke A, Flemmig TF. A systematic review of efficacy of machine-driven and manual subgingival debridement in the treatment of chronic periodontitis. J Clin Periodontol 2002;29 Suppl 3:72–81",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2002-12",
+      "url": "https://doi.org/10.1034/j.1600-051x.29.s3.4.x",
+      "note": "依 PubMed 摘要（PMID 12787208）"
+    },
+    {
+      "title": "Heitz-Mayfield LJ, Trombelli L, Heitz F, Needleman I, Moles D. A systematic review of the effect of surgical debridement vs non-surgical debridement for the treatment of chronic periodontitis. J Clin Periodontol 2002;29 Suppl 3:92–102",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2002-12",
+      "url": "https://doi.org/10.1034/j.1600-051x.29.s3.5.x",
+      "note": "依 PubMed 摘要（PMID 12787211）"
+    },
+    {
+      "title": "Suvan J, Leira Y, Moreno Sancho FM, Graziani F, Derks J, Tomasi C. Subgingival instrumentation for treatment of periodontitis. A systematic review. J Clin Periodontol 2020;47 Suppl 22:155–175",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2020-07",
+      "url": "https://doi.org/10.1111/jcpe.13245",
+      "note": "依 PubMed 摘要（PMID 31889320）；EFP 指引正文引作 Suvan et al.（2019）"
+    },
+    {
+      "title": "Sanz M, Herrera D, Kebschull M, et al. Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline. J Clin Periodontol 2020;47 Suppl 22:4–60",
+      "publisher": "Journal of Clinical Periodontology（Wiley），CC BY-NC 4.0 開放取用",
+      "date": "2020-07",
+      "url": "https://doi.org/10.1111/jcpe.13290",
+      "note": "讀全文（Europe PMC，PMC7891343）：建議 2.1、2.2、3.1 的文字、等級與說明；PMID 32383274"
+    },
+    {
+      "title": "Sanz-Sánchez I, Montero E, Citterio F, et al. Efficacy of access flap procedures compared to subgingival debridement in the treatment of periodontitis. A systematic review and meta-analysis. J Clin Periodontol 2020;47 Suppl 22:282–302",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2020-07",
+      "url": "https://doi.org/10.1111/jcpe.13259",
+      "note": "PMID 31970821；文中數字（13 篇 RCT、500 人、0.67 mm）引自 EFP 指引建議 3.1 的說明"
+    },
+    {
+      "title": "File:Curettes.jpg（Dentalni hygiena - kyrety）",
+      "publisher": "Wikimedia Commons",
+      "date": "2013-03-07",
+      "url": "https://commons.wikimedia.org/wiki/File:Curettes.jpg",
+      "note": "頭圖；Milenafoto 攝，CC BY-SA 3.0"
+    }
+  ]
+}
