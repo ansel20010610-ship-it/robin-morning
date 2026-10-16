@@ -1,0 +1,346 @@
+{
+  "column": "music",
+  "date": "2026-10-17",
+  "title": "三個全音的笛聲：德布西《牧神的午後前奏曲》",
+  "dek": "一支長笛吹出一段聽不出調性的旋律，開啟德布西第一首公開演出的管弦樂作品。從手稿、馬拉美的信與一張 2018 年錄音，聽這 110 小節。",
+  "topic_key": "music:debussy-l86",
+  "updated_at": "2026-10-17T01:09:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Pr%C3%A9lude_%22%C3%A0_l%27apr%C3%A8s_midi_d%27un_Faune%22_%28manuscrit_autographe%29_-_btv1b55001035h_%2809_of_43%29.jpg/1280px-Pr%C3%A9lude_%22%C3%A0_l%27apr%C3%A8s_midi_d%27un_Faune%22_%28manuscrit_autographe%29_-_btv1b55001035h_%2809_of_43%29.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/7/78/Pr%C3%A9lude_%22%C3%A0_l%27apr%C3%A8s_midi_d%27un_Faune%22_%28manuscrit_autographe%29_-_btv1b55001035h_%2809_of_43%29.jpg",
+    "width": 1280,
+    "height": 1659,
+    "alt": "一頁泛黃的手寫總譜，以墨水書寫。左上角大字寫著「Très modéré」，下方第一個譜表標著「3 Flûtes」，只有這一行寫滿音符，其餘各行前三小節是休止。第四小節雙簧管、單簧管、法國號與豎琴一起進來，豎琴寫有「glissando」字樣與斜線。頁面下半是第二個系統，列出長笛、雙簧管、單簧管、法國號、兩部豎琴與弦樂各聲部，弦樂旁寫著「Sourdine」。頁面右下有法國國家圖書館的紅色圓章。",
+    "caption": "《牧神的午後前奏曲》親筆總譜第一頁。最上面一行是長笛獨奏，前三小節整個樂團只有它在發聲；到第四小節，其他木管、法國號與豎琴才一起進場。下半頁的弦樂聲部多標著「Sourdine」（加弱音器）。",
+    "credit": "德布西手跡；法國國家圖書館（BnF）藏，Ms. 17685，影像經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pr%C3%A9lude_%22%C3%A0_l%27apr%C3%A8s_midi_d%27un_Faune%22_(manuscrit_autographe)_-_btv1b55001035h_(09_of_43).jpg",
+    "made": "1892–1894"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "樂曲開頭沒有和弦，也沒有低音，只有一支長笛，標示是「doux et expressif」（柔和而富表情）的弱奏。它從升 C 起音，先落到 B，再以半音一級一級滑到 G，然後折回升 C。升 C 到 G 是三個全音，也就是三全音（tritone），一個聽不出調性歸屬的音程。前三小節整個樂團都在休息，只有這條旋律在空中繞。"
+    },
+    {
+      "type": "p",
+      "text": "這是德布西（Claude Debussy）的《牧神的午後前奏曲》（Prélude à l'après-midi d'un faune）。據 Henle 版拉威爾四手聯彈改編譜的編者 Denis Herlin 在序言裡的整理，它是德布西生前演出次數最多的管弦樂作品，也是他第一首公開演出、第一首出版的管弦樂曲。全曲只有 110 小節，演出長度約 10 分鐘。"
+    },
+    {
+      "type": "music",
+      "composer": "德布西（Claude Debussy）",
+      "work": "《牧神的午後前奏曲》，L. 86（新編目錄 CD 87）",
+      "work_original": "Prélude à l'après-midi d'un faune, L. 86 / CD 87",
+      "composed": "1892–1894（手稿標題頁寫「92」，結尾寫「Septembre 1894」）",
+      "performers": "帕布羅・艾拉斯-卡薩多（Pablo Heras-Casado）指揮 愛樂管弦樂團（Philharmonia Orchestra）",
+      "recording": "harmonia mundi HMM 902310，2018 年 1 月錄音於倫敦亨利・伍德廳（Henry Wood Hall）與皇家節日音樂廳（Royal Festival Hall），2018 年 6 月發行；錄音監製 Martin Sauer，錄音師 Tobias Lehmann",
+      "duration": "約 10 分鐘（本錄音 9 分 47 秒）",
+      "movements": [
+        "Très modéré（單一樂章，110 小節）"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Debussy Prélude à l'après-midi d'un faune Heras-Casado Philharmonia",
+        "artist_hint": "Heras-Casado",
+        "track_filter": [
+          "faune"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "這張唱片是 harmonia mundi 在德布西逝世一百週年（他逝於 1918 年 3 月 25 日）推出的系列之一，同碟另收《海》（La Mer）與《聖塞巴斯汀的殉難》（Le Martyre de saint Sébastien）的交響片段。唱片內頁的錄音資料寫明 2018 年 1 月在倫敦的亨利・伍德廳與皇家節日音樂廳錄製。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "選它有兩個理由。第一，唱片解說由 Denis Herlin 執筆，也就是編訂 Henle 版拉威爾四手聯彈改編譜的學者，解說裡引用了德布西 1910 年回憶馬拉美聽曲的信，資料和樂譜序言可以互相對照。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "第二，樂評網站 MusicWeb International 的 Stephen Greenbank 在列於 2018 年 8 月的評論裡寫道：「The opening flute solo is evocative and intensely beautiful」（開頭的長笛獨奏富於聯想，美得強烈；本文自譯），並說這個演出放在他長年偏愛的卡拉揚（Herbert von Karajan）1964 年與柏林愛樂、普烈文（André Previn）與倫敦交響樂團的版本旁邊也站得住。這首曲子的成敗有一大半繫在開頭那幾小節的長笛上，這是選片時最在意的一點。"
+    },
+    {
+      "type": "h",
+      "text": "一場沒有演成的朗誦會"
+    },
+    {
+      "type": "p",
+      "text": "曲子的源頭是馬拉美（Stéphane Mallarmé）的長詩〈牧神的午後〉（L'Après-midi d'un faune）。洛杉磯愛樂的曲目解說說這首詩寫於 1876 年，是一首牧神的獨白：他午睡醒來，努力回想一場夢，或一次真實的相遇，對象是兩位寧芙仙女，最後又沉沉睡去。據 Herlin 的序言，德布西很可能在 1883 年底為馬拉美的〈顯現〉（Apparition）譜歌時開始讀他的詩，很可能買了 1887 年 3 月出版的新版〈牧神的午後〉，兩個月後還送了一本給年輕的作曲家杜卡（Paul Dukas）。",
+      "tag": "史實"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Quatre_bois_sur_une_m%C3%AAme_feuille_%28NYPL_b13472278-483449%29.jpg/1280px-Quatre_bois_sur_une_m%C3%AAme_feuille_%28NYPL_b13472278-483449%29.jpg",
+      "width": 1280,
+      "height": 1568,
+      "alt": "一張米白色紙上，由上而下印著四幅小型黑白木刻：最上面是蘆葦叢裡兩名裸身女子與一個半人半獸的身影；第二幅是一串掛在枝上的葡萄；第三幅是一名牧神半躺在草地上，背後是高高的蘆葦；最下面是幾片葉子與一朵小花。紙的左側貼著一條校色用的色票與尺規，紙下緣有鉛筆手寫的法文字。",
+      "caption": "馬奈為馬拉美〈牧神的午後〉1876 年版所刻的四幅木刻插圖，印在同一張校樣上。第三幅是蘆葦間半躺的牧神。據 Herlin 的序言，馬拉美後來把一本附有馬奈插圖的初版送給德布西。",
+      "credit": "馬奈（Édouard Manet）木刻；紐約公共圖書館（NYPL）Samuel Putnam Avery 收藏，影像經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Quatre_bois_sur_une_m%C3%AAme_feuille_(NYPL_b13472278-483449).jpg",
+      "made": "1876"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "兩人很可能在 1889 年秋天，經作曲家 Louis-Ferdinand Herold 之孫 André-Ferdinand Herold 介紹相識。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1890 年 11 月，有人提議把〈牧神的午後〉搬上舞台朗誦，馬拉美希望配上一段「小小的音樂序曲」，便找了德布西。1891 年 1 月底的預告寫著：2 月 27 日在蒙帕納斯劇院（Théâtre du Montparnasse）演出，「音樂部分由 de Bussy 先生負責」。結果馬拉美在 2 月 13 日表示準備不及，演出先延到 3 月 19、20 日，最後換成他的另一首詩。朗誦會沒有辦成，德布西手上卻留下了為這首詩寫音樂的念頭。"
+    },
+    {
+      "type": "h",
+      "text": "1892 到 1894：寫在標題頁上的「92」"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Pr%C3%A9lude_%22%C3%A0_l%27apr%C3%A8s_midi_d%27un_Faune%22_%28manuscrit_autographe%29_-_btv1b55001035h_%2807_of_43%29.jpg/1280px-Pr%C3%A9lude_%22%C3%A0_l%27apr%C3%A8s_midi_d%27un_Faune%22_%28manuscrit_autographe%29_-_btv1b55001035h_%2807_of_43%29.jpg",
+      "width": 1280,
+      "height": 1670,
+      "alt": "一頁空白的五線譜紙，中央偏上以墨水手寫標題「Prélude à l'après midi d'un Faune」，後半段加了引號，最上方有一行淡綠色的字「à Raymond Bonheur」。右側中段有簽名「Claude Debussy」，下面寫著「92」。左下角另有「Ms. 17685」的編號。",
+      "caption": "親筆總譜的標題頁。右側中段的簽名底下寫著「92」，最上方是以綠色鉛筆寫的獻詞「à Raymond Bonheur」。Herlin 據此與總譜結尾的「Septembre 1894」，判斷作品實際動筆於 1892 年，1894 年 9 月完成配器。",
+      "credit": "德布西手跡；法國國家圖書館（BnF）藏，Ms. 17685，影像經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pr%C3%A9lude_%22%C3%A0_l%27apr%C3%A8s_midi_d%27un_Faune%22_(manuscrit_autographe)_-_btv1b55001035h_(07_of_43).jpg",
+      "made": "1892–1894"
+    },
+    {
+      "type": "p",
+      "text": "作曲經過大多沒有記錄。Herlin 指出，德布西的書信直到 1893 年 9 月初才第一次提到這首曲子，可靠的線索只有手稿上的兩個日期。1893 年底到 1894 年春，他又分心去寫歌劇《佩利亞與梅麗桑》（Pelléas et Mélisande）。原本已經宣布 1894 年 3 月 1 日在布魯塞爾首演，因為配器沒寫完只好取消。同年 10 月 23 日，他把手稿與版權以 200 法郎賣給 Georges Hartmann。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "第一個聽到這首曲子的人是德布西的朋友 Raymond Bonheur，也就是後來的受題獻者。馬拉美也被請到德布西家，聽他在鋼琴上彈奏。多年後，德布西在 1910 年 3 月 25 日的信裡回憶，那時他住在倫敦街（rue de Londres）一間附家具的小公寓，馬拉美披著蘇格蘭格紋毯子來訪，聽完沉默了好一陣子，才說：",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "Je ne m'attendais pas à quelque chose de pareil ! Cette Musique prolonge l'émotion de mon poème et en situe le décor plus passionnément que la couleur.",
+      "text": "我沒料到會是這樣的東西！這音樂延續了我詩中的情感，比色彩更熱烈地為它鋪設了場景。",
+      "cite": "德布西 1910 年 3 月 25 日信中轉述馬拉美的話；原文據 Denis Herlin 在 Henle 版序言與 harmonia mundi 唱片解說中的引文（出自 Debussy, Correspondance, 2005, p. 1261），法文寫法依唱片解說；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "這段話是德布西在事隔十多年後的轉述，不是馬拉美當場留下的文字。它比較能說明的，是德布西本人怎麼記得這次會面。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "首演被要求重奏，馬拉美隔天寫信"
+    },
+    {
+      "type": "p",
+      "text": "1894 年 12 月 22 日星期六，國家音樂協會（Société nationale de musique）在巴黎的哈庫爾廳（Salle d'Harcourt）首演本曲，由瑞士指揮家多雷（Gustave Doret）指揮，隔天 23 日再演一次。Henle 序言與波士頓交響樂團的曲目解說都記載，首演當晚觀眾要求重奏一遍。馬拉美聽的是 23 日星期日那一場，散場後立刻寫信給德布西：",
+      "tag": "史實"
+    },
+    {
+      "type": "quote",
+      "original": "votre illustration de l'Après-midi d'un faune, qui ne présenterait de dissonance avec mon texte, sinon qu'aller plus loin, vraiment, dans la nostalgie et dans la lumière, avec finesse, avec malaise, avec richesse.",
+      "text": "您為〈牧神的午後〉所作的這幅描繪，和我的文字毫無不協之處，只是走得更遠——確實更遠——走進鄉愁與光裡，帶著細膩、帶著不安、帶著豐盛。",
+      "cite": "馬拉美致德布西，1894 年 12 月 23 日；原文據 Henle 版序言（出自 Debussy, Correspondance, pp. 229 f.），本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "三年後，馬拉美送給德布西一本附有馬奈插圖的〈牧神的午後〉初版，在書上題了四行詩：「Sylvain d'haleine première / Si ta flûte a réussi / Ouïs toute la lumière / Qu'y soufflera Debussy」（林中的牧神，若你最初的氣息讓笛子吹成了，就聽吧，聽德布西將吹進其中的全部光芒；本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "總譜在 1895 年 10 月由 Fromont 出版，同月 13 日與 20 日柯洛納音樂會（Concerts Colonne）兩度再演。波士頓交響樂團的解說記下，1912 年舞者尼金斯基（Vaslav Nijinsky）用這首曲子編的芭蕾當年讓觀眾譁然。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Herlin 認為那支舞標誌了現代芭蕾的誕生。"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：一個主題，七種和聲"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子沒有分樂章，但不是沒有形狀。英國 Pearson 考試局為高中音樂課編的分析教材，把它分成帶尾奏的三段體："
+    },
+    {
+      "type": "table",
+      "title": "《牧神的午後前奏曲》段落",
+      "head": [
+        "小節",
+        "段落",
+        "聽什麼"
+      ],
+      "rows": [
+        [
+          "1–30",
+          "A（長笛主題）",
+          "長笛獨奏；主題在第 11、21、26 小節換上不同和聲重來"
+        ],
+        [
+          "31–36",
+          "過渡",
+          "法國號與弦樂和弦，大提琴對位；第 32 小節單簧管的全音音階"
+        ],
+        [
+          "37–54",
+          "A1（雙簧管主題）",
+          "雙簧管接手新旋律，第 48–51 小節一路上升"
+        ],
+        [
+          "55–78",
+          "B（中段）",
+          "降 D 大調，旋律以八度疊奏，弦樂切分和弦；拍子穩定在三拍"
+        ],
+        [
+          "79–93",
+          "A1 再現",
+          "比第一段短得多；法國號加弱音器"
+        ],
+        [
+          "94–110",
+          "尾奏",
+          "長笛齊奏主題，弦樂分部震音；古鈸敲出 E 與 B"
+        ]
+      ],
+      "caption": "段落劃分與小節號依 Pearson 教材 Unit 6《Debussy: Prélude à l'après-midi d'un faune》。"
+    },
+    {
+      "type": "p",
+      "text": "**開頭到第 10 小節。** 依 Pearson 教材，長笛的頭兩小節在三全音之內半音、全音交錯，第 3 小節擴成一個八度；第 4 小節，其他木管帶著一個半減七和弦進來，豎琴刷出一道滑奏，法國號應答。手稿第一頁看得到的是配器的安排：長笛獨占的三小節之後，整頁譜才一下子填滿。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.1,
+        0.08,
+        0.62,
+        0.12
+      ],
+      "position": "第一頁最上方，長笛譜表的前三小節",
+      "caption": "長笛聲部標著「1re (Solo)」，下方寫「p doux et expressif」。同一系統裡其他樂器的前三小節都只有休止。"
+    },
+    {
+      "type": "p",
+      "text": "**第 11 到 30 小節。** 主題回來了，這次底下有單簧管的長音和弦與弦樂的震音。Pearson 教材統計，開頭主題在全曲出現七次，每一次的和聲都不同：第 1 小節沒有和聲，第 11 小節伴奏只有 D 與升 F，加上長笛的升 C 成了大七和弦；到第 21 小節，升 C 終於落在一個 E 大調和弦上，耳朵第一次知道「家」在哪裡。聽的時候不妨只盯著長笛的第一個音，聽它底下每次換了什麼地面。"
+    },
+    {
+      "type": "p",
+      "text": "**第 37 到 54 小節。** 雙簧管帶來第二個旋律，比長笛主題更有方向感。第 48 到 51 小節的音樂整段往上爬，Pearson 教材認為這對應到詩中描寫形影「升起」的段落，並指出馬拉美原詩有 110 行（把不完整的詩行各算一行）、樂曲恰好 110 小節；這種逐行對應出自分析者的推想，本文沒有查到德布西本人的說法。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "**第 55 到 78 小節。** 除了結尾的 E 大調，中段是全曲另一個明確落定在某個調上的地方：低音先在屬音上停四小節，再落到降 D 大調。旋律在高音木管以八度疊奏，弦樂在底下打出切分和弦，拍子穩定下來，樂句也變得方整。"
+    },
+    {
+      "type": "p",
+      "text": "**第 79 小節到結尾。** 第一段的材料縮短後再現，法國號加上弱音器。第 94 小節，長笛齊奏主題，底下的弦樂分成多部做震音，聲音像在閃動。接近結尾時，古鈸（crotales）輕輕敲出 E 與 B 一個五度，第 105 到 106 小節的低音以屬到主的進行落在 E 大調。洛杉磯愛樂的解說形容這段收尾由法國號、小提琴與木管輪流接力，豎琴反覆短句，古鈸像小鈴，最後以「a pair of low, whispering pizzicato strokes」（兩記低沉、耳語般的撥奏；本文自譯）作結。"
+    },
+    {
+      "type": "p",
+      "text": "作曲家兼指揮布列茲（Pierre Boulez）說過：「The flute of Debussy's Faune breathed new air into the art of music.」（德布西《牧神》的長笛，為音樂藝術吹進了新的空氣；本文自譯）。這句話轉引自洛杉磯愛樂的曲目解說，本文未查到原始出處。回頭聽開頭三小節，那支沒有和聲托底的長笛，我的讀法是，這句話指的大概就是它。"
+    },
+    {
+      "type": "callout",
+      "label": "延伸聆聽",
+      "text": "同一首曲子的另一種顏色：拉威爾（Maurice Ravel）改編的鋼琴四手聯彈版（Herlin 推斷約 1909 年動筆，1910 年出版），Henle 以 HN 1259 出版（Denis Herlin 編）；德布西自己也在 1895 年出版過雙鋼琴版。本文推想，少了管弦樂的音色，三全音的線條在鋼琴上會更清楚。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Prélude à l'après-midi d'un faune, CD 87 (Debussy, Claude)",
+      "publisher": "IMSLP",
+      "url": "https://imslp.org/wiki/Pr%C3%A9lude_%C3%A0_l'apr%C3%A8s-midi_d'un_faune_(Debussy,_Claude)",
+      "note": "General Information：L. 86／CD 87、1891–94、1894 年 12 月 22 日 Salle d'Harcourt 首演（Doret 指揮）、1895 年 10 月 Fromont 初版、題獻 Raymond Bonheur、編制、110 小節；手稿 BnF MS-17685；2026-10-16 查閱"
+    },
+    {
+      "title": "Debussy / Ravel: Prélude à l'après-midi d'un faune, HN 1259（序言）",
+      "publisher": "G. Henle Verlag",
+      "date": "2016",
+      "url": "https://www.henle.de/media/82/9f/d9/1697725791/1259-1697725791-sync.pdf",
+      "note": "Denis Herlin 撰序言（Paris, autumn 2016）：生前演出最多、1887 年新版與杜卡、1889 年相識、1891 年朗誦會計畫與延期、手稿日期「92」與「Septembre 1894」、布魯塞爾首演取消、10 月 23 日以 200 法郎售予 Hartmann、12 月 22 與 23 日首演並重奏、1910 年 3 月 25 日信、1894 年 12 月 23 日馬拉美信、四行題詩、1895 年 10 月 Colonne 再演、尼金斯基、拉威爾四手聯彈版"
+    },
+    {
+      "title": "Prélude à l'après-midi d'un faune（HN 1259）",
+      "publisher": "G. Henle Verlag",
+      "url": "https://www.henle.de/en/Prelude-a-l-apres-midi-d-un-faune/HN-1259",
+      "note": "拉威爾鋼琴四手聯彈改編版，Denis Herlin 編；2026-10-16 查閱"
+    },
+    {
+      "title": "Debussy: La Mer, Le Martyre de saint Sébastien, Prélude à l'après-midi d'un faune（HMM 902310）唱片解說冊",
+      "publisher": "harmonia mundi（PDF 經 eClassical 網站提供）",
+      "date": "2018",
+      "url": "https://eclassical.textalk.se/shop/17115/art41/5023541-f512ca-3149020933978_01.pdf",
+      "note": "曲目與長度（9'47）、Denis Herlin 撰解說（1910 年信的法文引文）、錄音資料：2018 年 1 月倫敦 Henry Wood Hall 與 Royal Festival Hall，監製 Martin Sauer，錄音 Tobias Lehmann"
+    },
+    {
+      "title": "Le Martyre de saint Sébastien（HMM902310）",
+      "publisher": "harmonia mundi",
+      "date": "2018-06",
+      "url": "https://www.harmoniamundi.com/en/albums/le-martyre-de-saint-sebastien/",
+      "note": "發行月份、演出者、曲目長度；同站新聞稿 PDF 說明為德布西逝世百年（1918 年 3 月 25 日）而出"
+    },
+    {
+      "title": "Debussy: Le Martyre de saint Sébastien – press sheet（HMM902310）",
+      "publisher": "harmonia mundi",
+      "date": "2018-06",
+      "url": "https://www.harmoniamundi.com/wp-content/uploads/pdf/debussy-le-martyre-de-saint-sebastien-HMM902310-en.pdf",
+      "note": "百年紀念說明與曲目"
+    },
+    {
+      "title": "Claude Debussy: Le Martyre de saint Sébastien; La Mer; Prélude à l'après-midi d'un faune（review）",
+      "publisher": "MusicWeb International",
+      "date": "2018-08",
+      "url": "https://www.musicweb-international.com/classrev/2018/Aug/Debussy_Sebastien_HMM902310.htm",
+      "note": "Stephen Greenbank 撰；長笛獨奏評語、與卡拉揚、普烈文版本的比較；頁面未標確切日期，列於 2018 年 8 月評論索引"
+    },
+    {
+      "title": "Prelude to the Afternoon of a Faun, L. 86",
+      "publisher": "Los Angeles Philharmonic",
+      "url": "https://www.laphil.com/musicdb/pieces/577/prelude-to-the-afternoon-of-a-faun",
+      "note": "Kathy Henkel 撰曲目解說：詩作於 1876 年與內容、主題在三個全音內的半音化、結尾配器、布列茲語（轉引）、結尾的撥奏；未標發布日期，2026-10-16 查閱"
+    },
+    {
+      "title": "Prelude to the Afternoon of a Faun",
+      "publisher": "Boston Symphony Orchestra",
+      "url": "https://www.bso.org/works/prelude-to-the-afternoon-of-a-faun",
+      "note": "Marc Mandel 撰曲目解說：首演重奏、1912 年尼金斯基編舞引起譁然；未標發布日期，2026-10-16 查閱"
+    },
+    {
+      "title": "Unit 6: 5. Debussy – Prélude à l'après-midi d'un faune（Teaching and learning materials）",
+      "publisher": "Pearson Edexcel",
+      "url": "https://qualifications.pearson.com/content/dam/pdf/A%20Level/Music/2013/Teaching%20and%20learning%20materials/Unit-6-5-Debussy.pdf",
+      "note": "段落劃分、主題七次出現與和聲、第 4 小節半減七和弦、第 32 小節全音音階、第 55 小節降 D 大調、古鈸 E–B、第 105–106 小節終止、110 行與 110 小節之說；未標發布日期，2026-10-16 查閱"
+    },
+    {
+      "title": "Prélude \"à l'après midi d'un Faune\" (manuscrit autographe) – btv1b55001035h",
+      "publisher": "Bibliothèque nationale de France，經 Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Pr%C3%A9lude_%22%C3%A0_l%27apr%C3%A8s_midi_d%27un_Faune%22_(manuscrit_autographe)_-_btv1b55001035h_(09_of_43).jpg",
+      "note": "第 7、9 頁：標題頁（「92」、綠色鉛筆獻詞）與總譜第一頁；Commons 著錄「Daté à la fin : Septembre 94」"
+    },
+    {
+      "title": "Quatre bois sur une même feuille（Mallarmé, L'Après-midi d'un faune）",
+      "publisher": "New York Public Library，經 Wikimedia Commons",
+      "date": "1876",
+      "url": "https://commons.wikimedia.org/wiki/File:Quatre_bois_sur_une_m%C3%AAme_feuille_(NYPL_b13472278-483449).jpg",
+      "note": "馬奈木刻插圖校樣，Samuel Putnam Avery 收藏"
+    }
+  ]
+}
