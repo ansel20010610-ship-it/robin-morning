@@ -1,0 +1,492 @@
+{
+  "column": "city",
+  "date": "2026-10-17",
+  "title": "巴黎薇薇安拱廊：三道門與一條私人捷徑",
+  "dek": "一位公證人買下三塊地，蓋出一條穿過街廓的玻璃頂通道。沿著三個入口、一處轉角走一遍，看一棟私人建築怎麼當街用。",
+  "topic_key": "city:paris-galerie-vivienne",
+  "updated_at": "2026-10-17T03:08:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/P1040480_Paris_II_galerie_Vivienne_entr%C3%A9e_rwk.JPG/960px-P1040480_Paris_II_galerie_Vivienne_entr%C3%A9e_rwk.JPG",
+    "width": 960,
+    "height": 1371,
+    "alt": "一座米黃色石造建築的一樓開著一個高大的圓拱門洞。拱頂上方有兩尊半躺的人像浮雕，中間夾著一個盾形飾板；拱內上半部是放射狀的黑色鑄鐵花格，中間掛著綠底金字的「GALERIE VIVIENNE」招牌。門洞兩側是深綠色的鐵柵門，向內敞開。透過門洞看進去是一條長廊，地上鋪著有圖案的馬賽克，遠處有吊燈、白色陽傘和桌椅。門外兩側是餐廳的白色遮陽棚、黑板菜單與盆栽，左邊立著一塊槳形的解說牌，人行道上有兩根石樁。",
+    "caption": "小田街 4 號的入口，2011 年 8 月攝。拱頂的浮雕人像、放射狀鐵花格與兩扇綠色鐵柵門，都是這條通道「有門」的證據；門檻內的馬賽克地上鋪著「GALERIE」字樣。左邊那塊槳形牌子，依 OpenStreetMap 標註是巴黎市府的「巴黎歷史」解說牌。2011 年的樣子，不代表現況。",
+    "credit": "Mbzt／Wikimedia Commons",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:P1040480_Paris_II_galerie_Vivienne_entr%C3%A9e_rwk.JPG",
+    "made": "2011",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/1/15/P1040480_Paris_II_galerie_Vivienne_entr%C3%A9e_rwk.JPG"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "巴黎二區小田街（rue des Petits-Champs）4 號，一棟建築的一樓開著一個圓拱門洞，拱內掛著「GALERIE VIVIENNE」的招牌。走進去是一條有玻璃屋頂的長廊。法國建築業聯合會刊物《BAM》2019 年 3 月號的報導寫它長 176 公尺、寬 3 公尺；它穿過整個街廓，另外兩頭分別通到薇薇安街（rue Vivienne）6 號和銀行街（rue de la Banque）5–7 號。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "這條通道走起來像一條街，法律上卻不是。商家協會網站 2026 年 10 月 7 日的文章說得直接：入場免費、人人可進，但它是「passage privé ouvert au public」，也就是開放給公眾的私人通道（本文自譯）。這篇只看一件事：一棟私人建築怎麼當街用。路線從小田街的門進去，經過圓廳、岔路與轉角，從薇薇安街出來；沿路看三道門的長相、頭頂和腳下，最後看是誰在管這條路。"
+    },
+    {
+      "type": "p",
+      "text": "這是觀看順序，不是導航建議。商家協會網站寫的開放時間是每天 8:30 到 20:00；OpenStreetMap 上的標註則是週一到週六 8:30 到 20:30，兩者不一致。本文沒有實地核對，現場以門口公告為準。"
+    },
+    {
+      "type": "facts",
+      "title": "地點資料",
+      "items": [
+        [
+          "城市",
+          "法國巴黎第二區，皇家宮殿（Palais-Royal）北側、證券交易所廣場（Place de la Bourse）西南"
+        ],
+        [
+          "地點",
+          "薇薇安拱廊（Galerie Vivienne），舊名 Galerie Marchoux；法國文化部古蹟資料庫登記類型為「passage couvert」（有頂通道）"
+        ],
+        [
+          "入口",
+          "小田街 4 號、薇薇安街 6 號、銀行街 5–7 號（文化部資料庫）"
+        ],
+        [
+          "尺度",
+          "長 176 公尺、寬 3 公尺（《BAM》2019 年 3 月）；依 OpenStreetMap 中心線，主線約 150 公尺、往銀行街的岔路約 30 公尺（本報計算）"
+        ],
+        [
+          "年代",
+          "1823 年興建；文化部資料庫說 1825 年改名 Galerie Vivienne，巴黎市府與商家協會網站說 1826 年落成啟用；約 2014–2019 年大修（巴黎工商會稱歷時五年，2019 年 7 月完工）"
+        ],
+        [
+          "設計者",
+          "建築師 F.-J. Delannoy（文化部資料庫只寫縮寫；巴黎市府與法蘭西美術院寫 François-Jacques，商家協會網站與 Batiweb 寫 François-Jean，商家協會網站另列建築師 Jacques Deschamps）；20 世紀末工程由 Marc Saltet 主持；2019 年完工的修復由古蹟總建築師 François Jeanneau 主持"
+        ],
+        [
+          "保護",
+          "1974 年 7 月 7 日登錄為歷史古蹟（inscrit MH），2012 年 11 月 26 日修正；保護範圍是通道本身與裝飾、13 號的樓梯與鍛鐵扶手，以及三個入口所在建築的立面"
+        ],
+        [
+          "目前用途（截至 2026-10-17 可確認）",
+          "私人產權、開放公眾通行的商店街。法蘭西美術院（Académie des beaux-arts）網站說它自 1870 年起是共同所有人之一；商家協會網站列出 56 家商店與餐廳，並寫明禁止腳踏車、滑板車、直排輪與機動車輛，狗須牽繩，館內沒有公共廁所"
+        ]
+      ]
+    },
+    {
+      "type": "svg",
+      "title": "從小田街走到薇薇安街",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 331 338\"><path class=\"muted line\" d=\"M167.4 294.3 L143.4 285.8 L135.9 283.1 L123.3 278.7 L105.1 272.2 L85.8 265.7 L53.6 254.1 L46.0 251.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M99.8 408.7 L126.0 334.1 L135.3 307.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M167.4 294.3 L164.5 301.9 L163.0 306.1 L206.1 382.2 L209.5 388.4 L212.4 393.7 L234.8 434.3 L242.3 445.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M46.0 251.4 L43.3 258.7 L39.7 268.8 L34.8 282.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M131.7 17.2 L125.4 15.2 L119.3 13.2 L57.0 -7.8 L53.5 -8.9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M309.7 -93.8 L306.1 -84.5 L265.9 28.8 L259.3 47.4 L258.4 49.8 L257.2 53.0 L206.3 189.4 L196.1 216.6 L193.7 223.9 L178.3 270.0 L176.0 276.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M263.3 328.0 L248.6 322.9 L246.8 322.2 L227.1 315.3 L176.5 297.5 L167.4 294.3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M-62.8 252.8 L-59.7 250.2 L-56.4 249.1 L-32.9 257.7 L-24.5 260.7 L29.5 280.2 L34.8 282.2 L37.5 283.1 L43.8 285.4 L74.1 296.4 L96.0 304.3 L99.2 310.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M549.9 35.4 L543.4 35.9 L337.0 61.5 L327.8 63.0 L320.8 61.7 L266.7 49.3 L259.3 47.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M135.3 307.5 L141.1 292.2 L143.4 285.8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M231.1 237.3 L218.3 232.7 L200.5 226.3 L193.7 223.9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M46.0 251.4 L39.3 249.0 L-73.1 209.4 L-83.0 206.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M-9.4 -8.2 L-24.7 36.0 L-29.6 50.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M176.0 276.4 L170.6 285.9 L167.4 294.3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M131.7 17.2 L129.6 24.0 L93.5 120.7 L82.3 151.1 L48.4 244.8 L46.0 251.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M223.0 268.9 L220.6 269.4 L184.4 275.0 L176.0 276.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M47.6 -170.4 L44.3 -161.6 L38.1 -143.5 L37.1 -140.6 L36.1 -137.9 L33.2 -129.5 L30.2 -120.4 L-0.1 -32.5 L-1.8 -27.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M53.5 -8.9 L9.6 -23.7 L5.1 -25.2 L-1.8 -27.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M274.2 259.7 L302.9 256.8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M365.9 -77.0 L363.2 -66.0 L330.6 52.9 L327.8 63.0 L325.5 71.5 L282.9 227.8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M186.9 -131.1 L181.2 -118.0 L163.9 -71.4 L131.7 17.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M-1.8 -27.4 L-6.3 -15.2 L-9.4 -8.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M-29.6 50.1 L-38.8 80.9 L-47.2 104.8 L-80.1 197.3 L-83.0 206.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M282.9 227.8 L282.4 229.5 L279.3 240.4 L278.1 245.0 L274.2 259.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"muted line\" d=\"M274.2 259.7 L251.4 264.6 L223.0 268.9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.35\"/><path class=\"gold line\" d=\"M87.6 260.2 L121.9 165.2 L82.3 151.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"4 3\"/><path class=\"accent line\" d=\"M125.8 270.8 L147.6 207.0 L167.9 147.5 L99.2 124.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3.2\" stroke-linejoin=\"round\"/><path class=\"accent line\" d=\"M187.3 221.5 L147.6 207.0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3.2\"/><circle class=\"paper\" cx=\"125.8\" cy=\"270.8\" r=\"6.5\" fill=\"currentColor\"/><circle class=\"ink line\" cx=\"125.8\" cy=\"270.8\" r=\"6.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"125.8\" y=\"273.6\" font-size=\"8\" text-anchor=\"middle\">1</text><circle class=\"paper\" cx=\"147.6\" cy=\"207.0\" r=\"6.5\" fill=\"currentColor\"/><circle class=\"ink line\" cx=\"147.6\" cy=\"207.0\" r=\"6.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"147.6\" y=\"209.8\" font-size=\"8\" text-anchor=\"middle\">2</text><circle class=\"paper\" cx=\"187.3\" cy=\"221.5\" r=\"6.5\" fill=\"currentColor\"/><circle class=\"ink line\" cx=\"187.3\" cy=\"221.5\" r=\"6.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"187.3\" y=\"224.3\" font-size=\"8\" text-anchor=\"middle\">3</text><circle class=\"paper\" cx=\"167.9\" cy=\"147.5\" r=\"6.5\" fill=\"currentColor\"/><circle class=\"ink line\" cx=\"167.9\" cy=\"147.5\" r=\"6.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"167.9\" y=\"150.3\" font-size=\"8\" text-anchor=\"middle\">4</text><circle class=\"paper\" cx=\"99.2\" cy=\"124.4\" r=\"6.5\" fill=\"currentColor\"/><circle class=\"ink line\" cx=\"99.2\" cy=\"124.4\" r=\"6.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"99.2\" y=\"127.2\" font-size=\"8\" text-anchor=\"middle\">5</text><text class=\"muted\" x=\"99.9\" y=\"290.2\" font-size=\"8\" text-anchor=\"middle\" fill=\"currentColor\" transform=\"rotate(19 99.9 290.2)\">小田街 rue des Petits-Champs</text><text class=\"muted\" x=\"27.0\" y=\"182.2\" font-size=\"8\" text-anchor=\"middle\" fill=\"currentColor\" transform=\"rotate(-70 27.0 182.2)\">薇薇安街 rue Vivienne</text><text class=\"muted\" x=\"247.1\" y=\"128.2\" font-size=\"8\" text-anchor=\"middle\" fill=\"currentColor\" transform=\"rotate(-70 247.1 128.2)\">銀行街 rue de la Banque</text><text class=\"accent\" x=\"142.0\" y=\"243.0\" font-size=\"9\" text-anchor=\"start\" fill=\"currentColor\">薇薇安拱廊</text><text class=\"gold\" x=\"91.8\" y=\"212.0\" font-size=\"7\" text-anchor=\"middle\" fill=\"currentColor\" transform=\"rotate(-70 91.8 212.0)\">柯爾貝拱廊</text><text class=\"muted\" x=\"222.8\" y=\"244.4\" font-size=\"7\" text-anchor=\"start\" fill=\"currentColor\">Passage des</text><text class=\"muted\" x=\"222.8\" y=\"255.2\" font-size=\"7\" text-anchor=\"start\" fill=\"currentColor\">Petits-Pères</text><path class=\"ink\" d=\"M301.1 26.5 L297.1 40.5 L305.1 40.5 Z\" fill=\"currentColor\"/><text x=\"301.1\" y=\"50.5\" font-size=\"9\" text-anchor=\"middle\">N</text><text class=\"muted\" x=\"6\" y=\"331.5\" font-size=\"7.5\" fill=\"currentColor\">示意，不按比例｜依 OpenStreetMap 圖資繪製</text></svg>",
+      "caption": "示意，不按比例。依 OpenStreetMap 圖資（2026 年 10 月 17 日台灣時間下載）繪製周邊街道（灰）、薇薇安拱廊的通道中心線（酒紅實線）與相鄰的柯爾貝拱廊（金色虛線）。① 小田街 4 號入口；② 圓廳與岔路口，位置依 Thiollet 平面圖版畫概略標出；③ 銀行街 5–7 號側門；④ 北端轉角；⑤ 薇薇安街 6 號入口。不作導航用途。",
+      "credit": "本報繪製；地圖資料 © OpenStreetMap 貢獻者（ODbL）"
+    },
+    {
+      "type": "h",
+      "text": "先看地形：一位公證人買下三塊地"
+    },
+    {
+      "type": "p",
+      "text": "法國文化部古蹟資料庫 Mérimée 的條目（編號 PA00086024）把起源寫得很清楚。公證人 Marchoux 原本住在薇薇安街 6 號的一座宅邸；他買下這座宅邸，再買下小田街 4 號的一棟房子，以及 Passage des Petits-Pères 上的一棟房子，在這幾塊地上請建築師 Delannoy 蓋了一條以自己為名的有頂通道。法蘭西美術院網站寫他的全名是 Louis-Auguste Marchoux，曾任公證人公會會長。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "條目接著說明這條通道為什麼有人走：它很安靜，可以把總是壅塞的薇薇安街和小田街抄近路接起來，而且離皇家宮殿很近。條目也記下一個限制：基地狹窄又不規則，建築師為了省錢，必須保留大部分原有建築。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，這兩句話幾乎就是今天這條路線的說明書。三個入口對應三塊買來的地，所以門牌落在三條不同的街上；通道得在保留下來的舊房子之間找路，所以它不是一條直線，而是先往北、在北端轉向西，中途再分出一條岔路。這不是設計者自由選擇的平面，是地籍留下的形狀。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "落成年份有兩種說法。Mérimée 條目說它 1825 年改名為 Galerie Vivienne；巴黎市府網站的巴黎廊街介紹與商家協會網站都說它 1826 年落成啟用，商家協會網站還說改名發生在啟用之前。本文兩說並列，不替它們決定。"
+    },
+    {
+      "type": "h",
+      "text": "① 小田街 4 號：門洞上的雕像與鐵柵門"
+    },
+    {
+      "type": "p",
+      "text": "頭圖是 2011 年 8 月的小田街入口。圓拱上方兩尊半躺的人像夾著一面盾形飾板，拱內上半部是放射狀的鐵花格，招牌就掛在鐵花格上；門洞兩側是兩扇往內開的綠色鐵柵門。門檻內的地上用馬賽克拼出「GALERIE」字樣。",
+      "tag": "可見"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.13,
+        0.04,
+        0.74,
+        0.38
+      ],
+      "position": "畫面上半部，拱頂浮雕到招牌一帶",
+      "caption": "拱頂兩側的半躺人像、中間的盾形飾板，以及掛在放射狀鐵花格上的招牌。"
+    },
+    {
+      "type": "p",
+      "text": "巴黎市府網站介紹 Delannoy 時說，這位受帝國時期訓練的建築師把壁柱、拱與簷口，和象徵成功的月桂冠、麥束與棕櫚，象徵財富的豐饒角，象徵商業的墨丘利（Mercure）雙蛇杖組合在一起。市府沒有逐一說明每個圖案在哪個位置，本文也不替照片裡的每件浮雕對號入座。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Passages_R._D._galerie_Vivienne._Rue_Notre-Dame_des_petits-champs_4._D.8021%281177ter%29%282%29.jpg/1280px-Passages_R._D._galerie_Vivienne._Rue_Notre-Dame_des_petits-champs_4._D.8021%281177ter%29%282%29.jpg",
+      "width": 1280,
+      "height": 2252,
+      "alt": "貼在紙板上的小幅鉛筆素描。畫面是一個圓拱門洞，拱頂兩側有半躺的人像與中間的面具狀飾物，門柱右側寫著門牌「4」。拱內上半部是直條狀的格柵，下半部是關著的門扇。上方橫跨一面寫著「GUILLARD」字樣的招牌，右下角的櫥窗裡擺著幾個人偶。素描下方以墨水寫著「Rue N.e des Petits Champs. 4.」與「Galerie Vivienne.」。",
+      "caption": "同一個入口，Léon Leymonnerye 1875 年的鉛筆素描（原作高 8.5 公分、寬 5 公分）。拱頂的兩尊人像已經在那裡；拱內是直條格柵而不是今天的放射狀鐵花，門上方橫著一面「GUILLARD」的店招。下方題字縮寫作「Rue N.e des Petits Champs」，本文讀作舊街名 Rue Neuve-des-Petits-Champs（Paris Musées 題名展開為 Notre-Dame）。這是 1875 年的樣子。",
+      "credit": "Léon Leymonnerye／巴黎卡納瓦雷博物館（Musée Carnavalet）藏，Paris Musées",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Passages_R._D._galerie_Vivienne._Rue_Notre-Dame_des_petits-champs_4._D.8021(1177ter)(2).jpg",
+      "made": "1875"
+    },
+    {
+      "type": "p",
+      "text": "拿 1875 年 Léon Leymonnerye 的鉛筆素描對照，同一個門洞有些東西沒變，有些變了。拱頂的人像已經在那裡；但拱內畫的是直條格柵，不是今天的放射狀鐵花，門上方還橫著一面「GUILLARD」的店招。素描下方的題字縮寫作「Rue N.e des Petits Champs」，本文讀作這條街的舊名 Rue Neuve-des-Petits-Champs。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，這扇門的「門」是真的會關的。通道是私人建築的一部分，入口裝著可以鎖上的柵門，所以它有開放時間；一般街道沒有營業時間，這條有。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "② 到 ③ 圓廳與岔路：通往銀行街的側門"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "map",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Plan_g%C3%A9n%C3%A9ral_des_galeries_Colbert_et_du_passage_Vivienne_4e_cah._Pl_49_%C3%A0_52%2C_Paris_Mus%C3%A9es_20230620133300.jpg/1280px-Plan_g%C3%A9n%C3%A9ral_des_galeries_Colbert_et_du_passage_Vivienne_4e_cah._Pl_49_%C3%A0_52%2C_Paris_Mus%C3%A9es_20230620133300.jpg",
+      "width": 1280,
+      "height": 1301,
+      "alt": "一張泛黃的建築平面圖版畫，上面密密麻麻畫著牆體與房間。左上角以斜體字寫著「Galerie Vivienne, par Mr Delannoy, architecte」與「Galerie Colbert, par Mr Billaud, architecte」。圖的下緣標「Rue Vivienne」，右緣標「Rue Neuve des Petits Champs」。上方一條長廊由右往左延伸，中段有一個小圓廳，靠近圓廳處有一條通道往上通到標著「Passage des Petits Pères」的地方；長廊到左端轉角，沿左邊往下通到 Rue Vivienne。圖的中央是一個大圓廳，屬於另一條拱廊。",
+      "caption": "薇薇安拱廊與柯爾貝拱廊的總平面圖，Thiollet 與 Ducoudray 繪、Jean-Nicolas Adam 蝕刻，Paris Musées 未標年代（圖上已有 1826 年興建的柯爾貝拱廊）。圖的方位和地圖不同：右邊是小田街，下邊是薇薇安街，所以圖上方那條長廊在現場是由南往北走。",
+      "credit": "François Thiollet、Ducoudray 繪，Jean-Nicolas Adam 刻／卡納瓦雷博物館藏，Paris Musées",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Plan_g%C3%A9n%C3%A9ral_des_galeries_Colbert_et_du_passage_Vivienne_4e_cah._Pl_49_%C3%A0_52,_Paris_Mus%C3%A9es_20230620133300.jpg",
+      "made": "1826 年以後、約 1840 年以前（館方未標年代，本文依刻者 Adam 約 1840 年去世推估）",
+      "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Plan_g%C3%A9n%C3%A9ral_des_galeries_Colbert_et_du_passage_Vivienne_4e_cah._Pl_49_%C3%A0_52%2C_Paris_Mus%C3%A9es_20230620133300.jpg/3840px-Plan_g%C3%A9n%C3%A9ral_des_galeries_Colbert_et_du_passage_Vivienne_4e_cah._Pl_49_%C3%A0_52%2C_Paris_Mus%C3%A9es_20230620133300.jpg"
+    },
+    {
+      "type": "p",
+      "text": "Paris Musées 收藏的這張總平面圖，左上角題著「Galerie Vivienne, par Mr Delannoy, architecte」與「Galerie Colbert, par Mr Billaud, architecte」。圖的右邊是小田街、下邊是薇薇安街，所以要先把它轉個方向看：圖上方那條長廊，就是從小田街入口往北走的那一段。長廊靠近入口的一段有一個小圓廳，圓廳附近分出一條通道，向上通到圖上標著「Passage des Petits Pères」的地方。",
+      "tag": "可見"
+    },
+    {
+      "type": "detail",
+      "of": "f2",
+      "region": [
+        0.08,
+        0.35,
+        0.76,
+        0.2
+      ],
+      "position": "圖面上緣的長條區域，由右邊小田街到左上角",
+      "caption": "薇薇安拱廊的前半段：右邊從小田街進來，向左走到小圓廳；圓廳左側有通道往上接 Passage des Petits Pères，再往左是兩側排滿隔間的長廊。"
+    },
+    {
+      "type": "p",
+      "text": "依 OpenStreetMap 的中心線估算，從小田街的門走約 50 公尺就到岔路口，岔路往東約 30 公尺通到銀行街 5–7 號（本報計算）。平面圖上的 Passage des Petits-Pères，正是 Mérimée 條目說 Marchoux 買下其中一棟房子的那條路。地址也留下過一點混亂：2012 年 11 月 26 日的修正令把 1974 年登錄令裡的「4, rue de la Banque」改成「5-7, rue de la Banque」，同時把「2, rue des Petits-Champs」改成「4」號。",
+      "tag": "史實"
+    },
+    {
+      "type": "figure",
+      "id": "f3",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/P1040477_Paris_II_galerie_Vivienne_coupole_rwk.JPG/1280px-P1040477_Paris_II_galerie_Vivienne_coupole_rwk.JPG",
+      "width": 1280,
+      "height": 953,
+      "alt": "從下往上看一個圓形的玻璃穹頂，細鐵條從中心的小圓環向外放射，把玻璃分成許多格。穹頂下是一圈米黃色的圓形牆，牆上有方窗與拱窗，窗與窗之間刻著持花環或號角的人像浮雕。正下方的拱門通往另一段長廊，拱門內垂著一盞多燈的吊燈。",
+      "caption": "圓廳的玻璃穹頂，2011 年 8 月攝。穹頂下那一圈牆上，窗間的人像浮雕和圓拱交替；正下方的拱門就是往下一段長廊的開口。這張照片早於 2010 年代中期開始、2019 年完工的修復工程，2011 年的樣子，不代表現況。",
+      "credit": "Mbzt／Wikimedia Commons",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:P1040477_Paris_II_galerie_Vivienne_coupole_rwk.JPG",
+      "made": "2011"
+    },
+    {
+      "type": "p",
+      "text": "2011 年的照片裡，圓廳頂上是一個由細鐵條放射分格的玻璃穹頂，下面一圈牆上窗與人像浮雕交替。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "商家協會網站寫道，這座穹頂曾在 1961 年倒塌，當時沒有人在意；這是商家協會的說法，本文沒有找到其他來源佐證。"
+    },
+    {
+      "type": "figure",
+      "id": "f4",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/P1120261_Paris_II_rue_de_la_Banque_entr%C3%A9e_galerie_Vivienne_rwk.JPG/1280px-P1120261_Paris_II_rue_de_la_Banque_entr%C3%A9e_galerie_Vivienne_rwk.JPG",
+      "width": 1280,
+      "height": 1716,
+      "alt": "一棟淺色石造公寓的一樓，牆上嵌著一個長方形門洞，門楣刻著金色的「GALERIE VIVIENNE」，上方是回紋飾帶和一扇半圓形的大窗。門洞上半部是鐵花格，下半部是一道尖頭鐵柵門，半開著，看得到裡面的長廊和行人。左邊是一家掛紅色遮陽棚的店，牆上釘著藍底白字的路牌「RUE DE LA BANQUE」，人行道邊有一根石樁和鐵鍊。",
+      "caption": "銀行街 5 號的側門，2012 年 8 月攝。門洞是平頂的長方形，上面只有回紋飾帶和半圓窗，沒有雕像；左邊牆上的路牌寫著「Rue de la Banque」。2012 年的樣子，不代表現況。",
+      "credit": "Mbzt／Wikimedia Commons",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:P1120261_Paris_II_rue_de_la_Banque_entr%C3%A9e_galerie_Vivienne_rwk.JPG",
+      "made": "2012"
+    },
+    {
+      "type": "p",
+      "text": "銀行街那道側門和小田街的正門很不一樣。2012 年的照片裡，它是平頂的長方形門洞，門楣上刻著金字店名，上面只有回紋飾帶和一扇半圓窗，沒有雕像；左邊牆上的路牌寫著 Rue de la Banque。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "本文推測，主入口與側門的裝飾差別，對應的是三個入口在這條通道裡的分量：正門負責招人，側門只負責接通。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "頭頂：玻璃屋頂與 2016 年的爭議"
+    },
+    {
+      "type": "p",
+      "text": "從岔路口往北，是長廊的主體。整條長廊頂上都是玻璃。《BAM》2019 年 3 月號報導這條通道的修復工程：舊的玻璃已不符合現行安全規範，換成了 2,500 平方公尺的夾層安全玻璃。負責玻璃、泥作、灰泥裝飾與油漆的 Lacour 公司負責人 Stéphane Lacour 在報導中說，這是必要的，因為一片玻璃如果碎了，會從 8 公尺高處落下。",
+      "tag": "報導"
+    },
+    {
+      "type": "p",
+      "text": "同一篇報導說，工程在店家照常營業的情況下進行，牆面清出多達 23 層的油漆與粉刷層，再以分層取樣（sondages stratigraphiques）找回原始顏色；下半部牆面與拱圈重做成仿 Luget 石，店面櫥窗改漆成較淺的仿木紋。報導也提醒，新顏色不是遊客看慣的樣子，因為過去從未依原樣修復過。",
+      "tag": "報導"
+    },
+    {
+      "type": "p",
+      "text": "換玻璃的過程並不平靜。建築業媒體 Batiweb 2016 年 8 月 22 日報導，前文化部長 Jack Lang（時任阿拉伯世界研究中心主席）寫信給文化部長 Audrey Azoulay，要求叫停工程。他批評把原有的玻璃換成「un verre de serre blanc et transparent, une faute grave pour l'intégrité du lieu」，意思是：換成白色透明的溫室玻璃，是對這個地方完整性的嚴重錯誤（本文自譯）。",
+      "tag": "報導"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "巴黎工商會（CCI Paris Île-de-France）2020 年 1 月 10 日的文章則說，工程在 2019 年 7 月完工；商家協會會長 Victor Gros 在文中說，自 2014 年起，施工造成的出入困難與干擾讓來客大幅減少。"
+    },
+    {
+      "type": "h",
+      "text": "腳下：馬賽克地坪上的工匠簽名"
+    },
+    {
+      "type": "figure",
+      "id": "f5",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Paris_Galerie_Vivienne_Mosa%C3%AFque_735.jpg/1280px-Paris_Galerie_Vivienne_Mosa%C3%AFque_735.jpg",
+      "width": 1280,
+      "height": 853,
+      "alt": "斜拍的地面馬賽克。中間一條黃底黑字的長條寫著「G. FACCHINA. MOSAÏSTE」，下一行小字「2 bis RUE LEGENDRE A PARIS」。下方是黑白相間的回紋帶，上方是黃色與黑色邊框圍起的碎石拼花，周圍鋪著粉紅與白色的碎石。",
+      "caption": "地上的簽名：「G. FACCHINA. MOSAÏSTE／2 bis rue Legendre à Paris」，2017 年 7 月攝。下面那條黑白回紋帶和上面的碎石拼花，都是同一片地坪的一部分。2017 年的樣子，不代表現況。",
+      "credit": "GFreihalter／Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Paris_Galerie_Vivienne_Mosa%C3%AFque_735.jpg",
+      "made": "2017"
+    },
+    {
+      "type": "p",
+      "text": "低頭看，地坪是整片的馬賽克。2017 年的照片裡，一條黃底長條拼著「G. FACCHINA. MOSAÏSTE」與他的工作室地址「2 bis rue Legendre à Paris」；Commons 上另一張 2023 年 10 月的照片，則拍到地上拼著「ENT. MAZZIOLI」。本文查不到 Mazzioli 字樣是何時、在哪一次工程留下的。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "商家協會網站說，這片地坪從 1880 年起由 Giandomenico Facchina 製作，用的是大理石馬賽克與彩色陶磚；巴黎市府網站也把地坪歸於 Facchina。"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，Facchina 那一行字讓地板成了一張名片。鋪地的工匠把自己的名號和工作室地址直接嵌進行人每天踩過的地方；它同時是廣告，也是一份沒有被撕掉的施工署名。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "13 號的樓梯"
+    },
+    {
+      "type": "figure",
+      "id": "f6",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Atget_-_%28Escalier_au_13_de_la_Galerie_Vivienne%29_%28Mai_1906%29%2C_btv1b105163692.jpeg/960px-Atget_-_%28Escalier_au_13_de_la_Galerie_Vivienne%29_%28Mai_1906%29%2C_btv1b105163692.jpeg",
+      "width": 960,
+      "height": 1189,
+      "alt": "一張泛褐色的老照片，近拍一段石砌樓梯的鍛鐵欄杆。欄杆由一圈圈 C 形與 S 形的渦卷鐵條組成，沿著樓梯斜向上升；右邊是一根粗方柱，柱頂有圓形扶手頭。左下方露出粗糙的石牆。照片下方印著「Source gallica.bnf.fr / Bibliothèque nationale de France」。",
+      "caption": "Eugène Atget 1906 年 5 月拍的「薇薇安拱廊 13 號樓梯」。他只拍欄杆：渦卷形的鍛鐵沿著石階斜上去，右邊是方柱與扶手頭。1974 年的登錄條文特別點名保護的，就是這座樓梯和它的鍛鐵扶手。1906 年的樣子，不代表現況。",
+      "credit": "Eugène Atget／法國國家圖書館（BnF）Gallica",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atget_-_(Escalier_au_13_de_la_Galerie_Vivienne)_(Mai_1906),_btv1b105163692.jpeg",
+      "made": "1906"
+    },
+    {
+      "type": "p",
+      "text": "通道裡還有一處被點名保護的地方：13 號的樓梯。Mérimée 條目的保護範圍特別寫出「l'escalier avec sa rampe en fer forgé du n° 13」，即 13 號那座帶鍛鐵扶手的樓梯。巴黎市府網站說，偵探 Eugène-François Vidocq 1840 年曾住在 13 號，那裡有一座氣派的樓梯。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "攝影師 Eugène Atget 1906 年 5 月拍下這座樓梯，題名就是「Escalier au 13 de la Galerie Vivienne」。他沒有拍長廊，也沒有拍店面，只拍欄杆：渦卷形的鍛鐵沿著石階斜上去。由此推想，這座樓梯提醒的是通道的另一層用途：長廊兩側不只有店，至少在 1840 年，樓上還住著人，通道同時是住戶回家的路。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "④ 到 ⑤ 轉角之後：薇薇安街 6 號"
+    },
+    {
+      "type": "p",
+      "text": "長廊到北端轉向西，依 OpenStreetMap 估算再走約 54 公尺，就到薇薇安街（本報計算）。這一段的盡頭，就是 Marchoux 原本自己住的那座宅邸所在的 6 號。",
+      "tag": "史實"
+    },
+    {
+      "type": "figure",
+      "id": "f7",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/P1010886_Paris_II_Rue_Vivienne_Galerie_Vivienne_reductwk.JPG/960px-P1010886_Paris_II_Rue_Vivienne_Galerie_Vivienne_reductwk.JPG",
+      "width": 960,
+      "height": 1291,
+      "alt": "一棟淺粉紅色建築的一樓入口。圓拱門洞外框著一對方壁柱，柱頭是渦卷形；門楣上一塊黑底金字的「GALERIE VIVIENNE」招牌，中間坐著一尊小雕像。門洞兩側上方各有一個圓形浮雕，左邊刻著一架天平，右邊刻著兩隻相握的手。再往上，兩扇窗之間的牆上各有一尊白色的女性立像浮雕。門洞兩旁掛著黃色玻璃的燈籠，門前人行道上有幾根黑色短樁，門內長廊很暗。",
+      "caption": "薇薇安街 6 號的入口，2011 年 4 月攝。這一頭用的是壁柱、門楣和圓形徽章：左邊的天平、右邊的相握雙手，加上門楣中央的小坐像與上方兩尊立像。2011 年的樣子，不代表現況。",
+      "credit": "Mbzt／Wikimedia Commons",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:P1010886_Paris_II_Rue_Vivienne_Galerie_Vivienne_reductwk.JPG",
+      "made": "2011"
+    },
+    {
+      "type": "p",
+      "text": "2011 年 4 月的照片裡，薇薇安街這道門又是另一種樣子：圓拱外框著一對渦卷柱頭的壁柱，門楣是黑底金字的店名，中央坐著一尊小雕像；門洞上方兩側的圓形徽章，左邊是一架天平，右邊是兩隻相握的手，再往上還有兩尊女性立像。天平與相握的手是否就是市府說的「成功、財富、商業」系列象徵，市府沒有說明，本文不作判斷。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "出了這道門，左手邊緊鄰的是柯爾貝拱廊（Galerie Colbert）。Mérimée 條目說，投機商 Adam et Cie 看到薇薇安拱廊大受歡迎，決定在旁邊蓋柯爾貝拱廊，兩者一直被視為對手；條目認為薇薇安拱廊勝在空間多樣、店面亮麗、生意熱絡，但也記下後來的轉折：第二帝國時期，薇薇安拱廊被棄置，此後一蹶不振，好幾次面臨拆除；它在 1926 年曾被公共教育部長令從古蹟補充名錄中除名，1974 年才重新登錄。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "柯爾貝拱廊自己的 Mérimée 條目（PA00086023）寫下對手的結局：它由建築師 J. Billaud 在 1826 年興建，後來商業失敗，關閉並在 1975 年拆除，1985 年才由建築師 Adrien Blanchet 為國家圖書館依原樣重建。兩條拱廊在 1974 年 7 月 7 日同一天登錄為古蹟。",
+      "tag": "史料"
+    },
+    {
+      "type": "h",
+      "text": "這條路是誰的"
+    },
+    {
+      "type": "p",
+      "text": "產權的說法不只一種。1992 年寫成的 Mérimée 條目登記所有權人是「一家私人公司」。法蘭西美術院網站說，1870 年 Caen 伯爵夫人（Comtesse de Caen）把它遺贈給美術院，美術院從此是共同所有人之一；巴黎工商會 2020 年的文章則寫它是法蘭西學會（Institut de France，美術院所屬機構）的財產，由 Fodegi 公司管理。三種寫法不同，但沒有一個來源說它是市府的街道。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "所以它的通行規則由業主與商家來定。商家協會網站 2026 年 10 月 7 日的文章列出：狗可以進，但要牽繩；不要奔跑；館內沒有公共廁所；腳踏車、滑板車、直排輪與機動車輛一律禁止；擺姿勢、架設器材或商業用途的拍攝，要事先申請。同一個網站還寫著每年 640 萬人次來訪，但沒有說明怎麼統計，本文只當作商家的說法。"
+    },
+    {
+      "type": "p",
+      "text": "回到小田街那兩扇綠色鐵柵門。Mérimée 條目說，當年的人走這條通道，是為了避開壅塞的薇薇安街與小田街；兩百年後，這條抄近路的私人通道有營業時間、有禁止滑板車的告示，還有一張 1974 年的登錄令，把通道本身、13 號的樓梯，連同三個入口的立面一起保護下來。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Galerie Vivienne, anciennement appelée galerie Marchoux（PA00086024）",
+      "publisher": "Ministère de la Culture，POP／Mérimée（Monuments historiques）",
+      "date": "2026-03-04",
+      "url": "https://pop.culture.gouv.fr/notice/merimee/PA00086024",
+      "note": "地址、1823 年、Delannoy 與 Marc Saltet、Marchoux 購地、1825 年改名、抄近路與皇家宮殿、基地狹窄保留舊屋、Adam et Cie 與柯爾貝拱廊、第二帝國時被棄置、1974 年登錄與 2012 年修正（含地址更正）、13 號樓梯、1926 年除名、私人公司所有；日期為條目最後修改日，條目撰寫於 1992 年"
+    },
+    {
+      "title": "La galerie Vivienne retrouve son vrai lustre",
+      "publisher": "Fédération Française du Bâtiment，《BAM》第 54 期",
+      "date": "2019-03-19",
+      "url": "https://www.ffbatiment.fr/revues-guides/bam/54-mars-2019/la-galerie-vivienne-retrouve-son-vrai-lustre",
+      "note": "176 公尺、3 公尺、François Jeanneau、Stéphane Lacour 談 2,500 平方公尺夾層安全玻璃與 8 公尺、23 層油漆、仿 Luget 石與仿木紋"
+    },
+    {
+      "title": "Galerie Colbert（PA00086023）",
+      "publisher": "Ministère de la Culture，POP／Mérimée（Monuments historiques）",
+      "date": "2026-07-24",
+      "url": "https://pop.culture.gouv.fr/notice/merimee/PA00086023",
+      "note": "Adam et Cie、1826 年 J. Billaud 興建、商業失敗、1975 年拆除、1985 年 Adrien Blanchet 為國家圖書館重建；日期為條目最後修改日"
+    },
+    {
+      "title": "La rénovation de la galerie Vivienne inquiète",
+      "publisher": "Batiweb",
+      "date": "2016-08-22",
+      "url": "https://www.batiweb.com/actualites/architecture/la-renovation-de-la-galerie-vivienne-inquiete-28861",
+      "note": "Jack Lang 致 Audrey Azoulay 信與引文"
+    },
+    {
+      "title": "Galerie Vivienne : le renouveau (2e)",
+      "publisher": "CCI Paris Île-de-France",
+      "date": "2020-01-10",
+      "url": "https://www.entreprises.cci-paris-idf.fr/actualites/galerie-vivienne-le-renouveau-2e",
+      "note": "2019 年 7 月完工、Institut de France 所有、Fodegi 管理、Victor Gros 談 2014 年起來客減少"
+    },
+    {
+      "title": "Galerie Vivienne",
+      "publisher": "Académie des beaux-arts",
+      "date": "2026-10-17",
+      "url": "https://www.academiedesbeauxarts.fr/en/galerie-vivienne",
+      "note": "Louis-Auguste Marchoux、François-Jacques Delannoy、1870 年 Caen 伯爵夫人遺贈與共同所有；頁面無發布日，日期為查閱日（台灣時間）"
+    },
+    {
+      "title": "Découvrez la magie des galeries et passages couverts parisiens",
+      "publisher": "Ville de Paris（paris.fr）",
+      "date": "2023-08-09",
+      "url": "https://www.paris.fr/pages/decouvrez-la-magie-des-galeries-et-des-passages-18889",
+      "note": "Galerie Vivienne 一節：三個入口、1826 年落成、Delannoy 的裝飾象徵、Facchina、Vidocq 1840 年住 13 號；日期為頁面標示的更新日"
+    },
+    {
+      "title": "Histoire de la Galerie Vivienne",
+      "publisher": "Galerie Vivienne 商家網站",
+      "date": "2026-10-17",
+      "url": "https://www.galerie-vivienne.com/histoire-de-la-galerie-vivienne",
+      "note": "1826 年啟用前改名、1880 年起 Facchina 地坪、1961 年穹頂倒塌、2016 年市府參與修復；頁面無發布日，日期為查閱日"
+    },
+    {
+      "title": "Galerie Vivienne（首頁與「Accès」頁）",
+      "publisher": "Galerie Vivienne 商家網站",
+      "date": "2026-10-17",
+      "url": "https://www.galerie-vivienne.com/",
+      "note": "176 公尺、56 家商店、每年 640 萬人次、每日 8:30–20:00、免費入場；頁面無發布日，日期為查閱日"
+    },
+    {
+      "title": "Galerie Vivienne : chien, photo, trottinette, les règles simples à connaître avant de venir",
+      "publisher": "Galerie Vivienne 商家網站",
+      "date": "2026-10-07",
+      "url": "https://www.galerie-vivienne.com/actualites/galerie-vivienne-chien-photo-trottinette-les-regles-simples-a-connaitre-avant-de-venir",
+      "note": "passage privé ouvert au public、狗須牽繩、禁止奔跑、無公共廁所、禁止腳踏車與滑板車、拍攝須申請"
+    },
+    {
+      "title": "OpenStreetMap 圖資（Galerie Vivienne 周邊，bbox 2.3375,48.8655,2.3415,48.8685）",
+      "publisher": "OpenStreetMap 貢獻者（ODbL）",
+      "date": "2026-10-17",
+      "url": "https://www.openstreetmap.org/relation/546789",
+      "note": "通道中心線（way 220149430、220149429）、柯爾貝拱廊（way 220149427）、街道、開放時間標註與巴黎歷史解說牌位置；路線示意與距離計算依據"
+    },
+    {
+      "title": "Plan général des galeries Colbert et du passage Vivienne / 4e cah. / Pl 49 à 52",
+      "publisher": "Paris Musées，Musée Carnavalet",
+      "date": "2026-10-17",
+      "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/plan-general-des-galeries-colbert-et-du-passage-vivienne-4e-cah-pl-49-a-52",
+      "note": "繪者與刻者、蝕刻；無年代；日期為查閱日"
+    },
+    {
+      "title": "Passages R. D. : galerie Vivienne. Rue Notre-Dame des petits-champs 4.",
+      "publisher": "Paris Musées，Musée Carnavalet",
+      "date": "2026-10-17",
+      "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/passages-r-d-galerie-vivienne-rue-notre-dame-des-petits-champs-4",
+      "note": "Léon Leymonnerye，1875 年，鉛筆，8.5 × 5 公分；日期為查閱日"
+    },
+    {
+      "title": "File:Paris 2e Galerie Vivienne 508.jpg（GFreihalter 2023 年 10 月 17 日攝，地上「ENT. MAZZIOLI」字樣）",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-10-17",
+      "url": "https://commons.wikimedia.org/wiki/File:Paris_2e_Galerie_Vivienne_508.jpg",
+      "note": "只用來核對地上的 Mazzioli 字樣；日期為查閱日"
+    }
+  ]
+}
