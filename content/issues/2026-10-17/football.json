@@ -4,7 +4,7 @@
   "title": "德容本季首度入選，巴薩 23 人赴塞維亞",
   "dek": "弗利克確認德容、拉菲尼亞都能上場，拉菲尼亞會控管出賽時間。巴薩台灣時間週日 00:30 作客主場全勝的貝提斯，拚開季 9 連勝。",
   "topic_key": "football:2026-10-17",
-  "updated_at": "2026-10-17T02:57:00+08:00",
+  "updated_at": "2026-10-17T05:30:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -13,8 +13,8 @@
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Netherlands_v_Tunisia_2026_World_Cup_-_55374906960.jpg/1280px-Netherlands_v_Tunisia_2026_World_Cup_-_55374906960.jpg",
     "width": 1280,
     "height": 964,
-    "alt": "綠色草皮上，11 名穿橘色球衣、黑短褲的球員排成前後兩排合照，後排中間一人穿綠色守門員球衣；前排左二的金髮球員背號 21，手持一面三角錦旗。左側有穿白衣紅邊的對手球員走過，右上方是穿淺藍雨衣的工作人員，看台邊有 Lenovo 廣告看板。",
-    "caption": "2026 年 6 月 25 日世界盃小組賽荷蘭對突尼西亞賽前，荷蘭先發 11 人合照；前排左二、手持錦旗的 21 號是德容（Frenkie de Jong）。資料照片，非當日比賽或訓練畫面。",
+    "alt": "綠色草皮上，11 名穿橘色球衣、黑短褲的球員排成前後兩排合照，後排中間一人穿綠色守門員球衣；前排最左的球員背號 21，手持一面三角錦旗。左側有穿白衣紅邊的對手球員走過，右上方是穿淺藍雨衣的工作人員，看台邊有 Lenovo 廣告看板。",
+    "caption": "2026 年 6 月 25 日世界盃小組賽荷蘭對突尼西亞賽前，荷蘭先發 11 人合照；前排最左、手持錦旗的 21 號是德容（Frenkie de Jong）。資料照片，非當日比賽或訓練畫面。",
     "credit": "elisfkc3／Wikimedia Commons（Flickr）",
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -45,7 +45,7 @@
     {
       "type": "p",
       "tag": "報導",
-      "text": "拉菲尼亞受傷前替巴薩踢了 8 場、進 14 球（ESPN 與 Goal 的數字相同）。ESPN 稱他在國家隊傷的是腿後肌，Goal 則寫大腿問題。巴薩官網的記者會報導用的是另一個英文版本的引述（「we're taking things step by step」），意思相同。至於德容，弗利克說他訓練品質很好，「I think he's ready to play some minutes」（我認為他已經可以踢一些時間；本文自譯），也說要再看傷後的恢復狀況。"
+      "text": "ESPN 統計，拉菲尼亞受傷前替巴薩踢了 8 場、進 14 球，在國家隊傷的是腿後肌。巴薩官網的記者會報導用的是另一個英文版本的引述（「we're taking things step by step」），意思相同。至於德容，弗利克說他訓練品質很好，「I think he's ready to play some minutes」（我認為他已經可以踢一些時間；本文自譯），也說要再看傷後的恢復狀況。"
     },
     {
       "type": "p",
@@ -99,6 +99,20 @@
       "type": "news",
       "title": "歐洲足壇速覽",
       "items": [
+        {
+          "headline": "西甲第 9 輪揭幕戰：拉科魯尼亞主場 1 比 1 萊萬特",
+          "summary": "拉科魯尼亞（Deportivo de La Coruña）當地時間 10 月 16 日（週五）晚在 Riazor 球場，第 63 分鐘由 Bil Nsongo 先進球，萊萬特（Levante）的 Dani Requena 在第 82 分鐘扳平，全場沒有紅牌。據 EFE 賽前報導，兩隊賽前都已連續四輪聯賽不勝，這場和局讓雙方的不勝紀錄延長到五輪。比分經 ESPN 與 Sky Sports 核對一致。",
+          "source": "ESPN、Sky Sports、Infobae（EFE）",
+          "url": "https://www.skysports.com/football/deportivo-la-coruna-vs-levante/6423222204754390232",
+          "when": "10 月 16 日（當地時間）"
+        },
+        {
+          "headline": "週五其他聯賽：Raimondo 帽子戲法，法蘭克福 1 比 0 科隆",
+          "summary": "義甲弗洛西諾內（Frosinone）主場 4 比 2 擊敗薩索羅（Sassuolo），前鋒 Antonio Raimondo 在第 26、30、57 分鐘完成帽子戲法。德甲第 6 輪，法蘭克福（Eintracht Frankfurt）靠替補 Noël Aséko 助攻、Younes Ebnoutalib 第 77 分鐘的進球 1 比 0 贏科隆（1. FC Köln），Goal 指出這是他們本季第二勝、第一次零失球，上一場才 0 比 6 輸給萊比錫。法甲圖盧茲（Toulouse）則作客 3 比 0 勝勒芒（Le Mans）。",
+          "source": "ESPN、Sky Sports、Goal",
+          "url": "https://www.goal.com/en/news/adi-huetter-teaches-a-key-prospect-a-lesson-eintracht-frankfurt-claim-a-much-needed-win-after-debacle/blt91475aaa89320a83",
+          "when": "10 月 16 日（當地時間）"
+        },
         {
           "headline": "特巴斯拿戈培爾比喻皇馬電視台，皇馬要他立即辭職",
           "summary": "西甲主席特巴斯（Javier Tebas）10 月 16 日在社群媒體批評皇馬電視台挑選有利片段、重複指控裁判，說這讓人想起納粹宣傳部長戈培爾（Joseph Goebbels）的宣傳技巧，並補充只是比較手法、不是意識形態，也與球迷無關。皇馬隨即發聲明，稱這個比較「intolerable and extraordinarily serious」（不可容忍且極其嚴重；本文自譯），要求他立刻辭去西甲主席與西班牙足協副主席職務，聲明也再提內格雷拉案（Negreira，巴薩付款給前裁判委員會副主席的司法調查）。特巴斯回應這是「intimidación」（恐嚇；本文自譯）。",
@@ -255,7 +269,7 @@
           "主場，Spotify 諾坎普"
         ]
       ],
-      "caption": "依巴薩官網賽程（西班牙時間）換算。10 月 25 日起歐洲改回冬令時間，國家德比台灣時間比西班牙快 7 小時。"
+      "caption": "依巴薩官網賽程（西班牙時間）換算。10 月 25 日起歐洲改回冬令時間，國家德比台灣時間比西班牙快 7 小時。 貝提斯一戰依巴薩官網為西班牙時間 18:30（台灣 00:30）；ESPN 賽程列為 16:00 UTC（台灣 00:00），兩者有出入，以官網為準。"
     },
     {
       "type": "p",
@@ -296,7 +310,7 @@
       "publisher": "FC Barcelona",
       "date": "2026-10-16",
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4591742/when-and-where-to-watch-betis-v-fc-barcelona",
-      "note": "台灣時間與轉播"
+      "note": "台灣時間（00:30）與轉播；開球時間依此"
     },
     {
       "title": "Brazil winger Antony's home burgled during Real Betis Champions League match",
@@ -305,14 +319,14 @@
       "url": "https://www.espn.com/soccer/story/_/id/50194943/brazil-winger-antony-home-burgled-real-betis-champions-league-match"
     },
     {
-      "title": "United starlet Gabriel nears Barca move",
+      "title": "Manchester United wonderkid JJ Gabriel spotted training in Barcelona ahead of imminent transfer decision",
       "publisher": "Goal",
       "date": "2026-10-16",
       "url": "https://www.goal.com/en-us/lists/manchester-united-wonderkid-jj-gabriel-barcelona-transfer/blt58d892e6d259e422",
       "note": "引《每日體育報》"
     },
     {
-      "title": "'He is a Formula 1' - Agent reveals financial uncertainty blocked Williams' Barca move",
+      "title": "'He's a Formula 1' - Agent reveals financial uncertainty and registration fears blocked Nico Williams' blockbuster Barcelona move",
       "publisher": "Goal",
       "date": "2026-10-16",
       "url": "https://www.goal.com/en-us/lists/nico-williams-agent-reveals-why-winger-rejected-barcelona-transfer/blt6719fd599e76c196"
@@ -400,6 +414,13 @@
       "url": "https://www.espn.com/soccer/story/_/id/50197177/lionel-messi-inter-miami-2026-princess-asturias-award-sports"
     },
     {
+      "title": "Real Madrid's Vinícius Junior gets 4-game ban after red card; will miss Clásico",
+      "publisher": "ESPN",
+      "date": "2026-10-14",
+      "url": "https://www.espn.com/soccer/story/_/id/50182804",
+      "note": "維尼修斯禁賽從對塞維亞一戰開始"
+    },
+    {
       "title": "LaLiga standings",
       "publisher": "ESPN",
       "date": "2026-10-17",
@@ -411,7 +432,7 @@
       "publisher": "ESPN",
       "date": "2026-10-17",
       "url": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261017",
-      "note": "開球時間（查閱日期）"
+      "note": "第 9 輪賽程（查閱日期）；貝提斯對巴薩列 16:00 UTC，與官網 18:30 CEST 有出入"
     },
     {
       "title": "What's on this weekend?",
@@ -433,6 +454,55 @@
       "date": "2026-10-13",
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4591897/10-out-of-10-for-fc-barcelona",
       "note": "西甲開季 9 連勝紀錄（皇馬 1968/69）"
+    },
+    {
+      "title": "Deportivo La Coruna vs Levante",
+      "publisher": "Sky Sports",
+      "date": "2026-10-16",
+      "url": "https://www.skysports.com/football/deportivo-la-coruna-vs-levante/6423222204754390232",
+      "note": "比分與進球者"
+    },
+    {
+      "title": "Deportivo y Levante miden sus malas rachas en Riazor",
+      "publisher": "Infobae（EFE）",
+      "date": "2026-10-15",
+      "url": "https://www.infobae.com/espana/agencias/2026/10/15/deportivo-y-levante-miden-sus-malas-rachas-en-riazor/",
+      "note": "兩隊連續四輪不勝"
+    },
+    {
+      "title": "Football results",
+      "publisher": "Sky Sports",
+      "date": "2026-10-17",
+      "url": "https://www.skysports.com/football-results",
+      "note": "10 月 16 日各聯賽賽果（查閱日期）"
+    },
+    {
+      "title": "Frosinone vs Sassuolo",
+      "publisher": "Sky Sports",
+      "date": "2026-10-16",
+      "url": "https://www.skysports.com/football/frosinone-vs-sassuolo/8084735652141864232",
+      "note": "進球者"
+    },
+    {
+      "title": "Le Mans vs Toulouse",
+      "publisher": "Sky Sports",
+      "date": "2026-10-16",
+      "url": "https://www.skysports.com/football/le-mans-vs-toulouse/8533895152363977232",
+      "note": "進球者"
+    },
+    {
+      "title": "Adi Hütter teaches a key prospect a lesson: Eintracht Frankfurt claim a much-needed win after debacle",
+      "publisher": "Goal",
+      "date": "2026-10-16",
+      "url": "https://www.goal.com/en/news/adi-huetter-teaches-a-key-prospect-a-lesson-eintracht-frankfurt-claim-a-much-needed-win-after-debacle/blt91475aaa89320a83",
+      "note": "法蘭克福本季第二勝、首次零失球"
+    },
+    {
+      "title": "Soccer scoreboards（esp.1、ita.1、ger.1、fra.1，10 月 16 日）",
+      "publisher": "ESPN",
+      "date": "2026-10-17",
+      "url": "https://www.espn.com/soccer/scoreboard/_/date/20261016",
+      "note": "賽果與進球紀錄核對（查閱日期）"
     },
     {
       "title": "Netherlands v Tunisia 2026 World Cup - 55374906960",
