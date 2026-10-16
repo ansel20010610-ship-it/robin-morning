@@ -1,0 +1,372 @@
+{
+  "column": "fm-watch",
+  "date": "2026-10-17",
+  "status": "update",
+  "title": "FM27 公布 2D 引擎、編輯器與資料庫改進",
+  "dek": "第七篇深度介紹談 2D 比賽畫面、全螢幕遊戲內編輯器、腦震盪處理流程與 1,800 萬筆資料庫變動；官方另預告首次直播。",
+  "topic_key": "fm-watch:2026-10-17-2d-engine-ige-deeper-world",
+  "updated_at": "2026-10-17T05:21:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "timeline",
+    "title": "FM27 已知時程",
+    "caption": "依 Sports Interactive 官網、Steam 公告與 SEGA 新聞稿整理，截至台灣時間 2026 年 10 月 17 日清晨。日期以英國發布日為準；10 月 16 日那篇在台灣時間當晚 7 時 01 分上線。",
+    "items": [
+      {
+        "when": "2026.8.27",
+        "label": "宣布 11 月推出",
+        "note": "預告 9 月起陸續發布功能深度介紹"
+      },
+      {
+        "when": "2026.9.22",
+        "label": "深度介紹一：介面與導覽",
+        "note": "訊息依主題上色、可直接處理報價"
+      },
+      {
+        "when": "2026.9.25",
+        "label": "深度介紹二：足球世界",
+        "note": "盃賽抽籤、轉會截止日回歸"
+      },
+      {
+        "when": "2026.9.30",
+        "label": "公布發售日；深度介紹三：比賽日",
+        "note": "3D 畫面的觀眾、天氣、光影"
+      },
+      {
+        "when": "2026.10.5",
+        "label": "深度介紹四：比賽引擎與戰術微調",
+        "note": "Hawk-Eye 動作資料、Tactical Tweaks"
+      },
+      {
+        "when": "2026.10.9",
+        "label": "深度介紹五：訓練與戰術效能",
+        "note": "團隊訓練改以下一場比賽為目標"
+      },
+      {
+        "when": "2026.10.15",
+        "label": "深度介紹六：教練創建、無障礙",
+        "note": "預告下一篇談 2D 引擎與編輯器"
+      },
+      {
+        "when": "2026.10.16",
+        "label": "深度介紹七：2D 引擎、編輯器、資料庫",
+        "note": "本期新增；書面介紹，無影片"
+      },
+      {
+        "when": "日期未定",
+        "label": "首次 FM27 直播",
+        "note": "官方說在 FM 官方 YouTube 頻道舉行"
+      },
+      {
+        "when": "發售前 1–2 週",
+        "label": "Launch Preview",
+        "note": "給在 SEGA 認可通路預購 PC／Mac 版的玩家；日期未定"
+      },
+      {
+        "when": "2026.11.10",
+        "label": "全平台數位版與實體 PC 版發售",
+        "note": "全球同一時刻上線，部分時區可能是 11 月 11 日（官方未點名台灣）"
+      },
+      {
+        "when": "2026.11.20",
+        "label": "實體 PS5 版發售",
+        "note": "官方 FAQ"
+      }
+    ]
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "台灣時間 10 月 16 日（週五）晚間 7 時 01 分，Sports Interactive（SI）在 Steam 發布《足球經理 27》（Football Manager 27，以下簡稱 FM27）第七篇功能深度介紹〈FM27: 2D Match Engine, In-Game Editor and Deeper World Upgrades〉，作者 Jimmy Wong；官網有[同名專頁](https://www.footballmanager.com/fm27/features/fm27-2d-match-engine-game-editor-and-deeper-world-upgrades)。這篇是 10 月 15 日那篇預告過的主題：2D 比賽畫面、遊戲內編輯器（In-Game Editor，簡稱 IGE），以及一長串使用便利性與資料庫的改動。"
+    },
+    {
+      "type": "p",
+      "text": "和第六篇一樣，截至台灣時間 10 月 17 日清晨，FM 官方 YouTube 頻道沒有對應影片，只有官網文章與 Steam 公告裡的 FAQ。官網正文比 FAQ 詳細得多，幾項重要細節只出現在正文，下文分開標明。"
+    },
+    {
+      "type": "h",
+      "text": "2D 比賽畫面：球與球員圓點縮小，網子更透明"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "SI 在官網正文說，9 月 30 日比賽日篇談的是 3D 畫面，但仍有玩家偏好傳統的 2D 俯視視角，所以依玩家回饋做了調整：球和代表球員的圓點都縮小，球的陰影加深；球員圓點改用腳來標示，不再用箭頭（原文「use feet rather than arrows」）；球門網的透明度提高。FAQ 的說法是，縮小後球與球員在 2D 球場上的比例更接近真實，加上陰影與網子的調整，目標是讓玩家容易跟上場上動態。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "FAQ 把這組改動的目標寫成「evolve this view and reintroduce familiar elements」（演進這個視角，並重新帶回熟悉的元素）。官方沒有說是哪幾代的設計被帶回來，也沒有給改動前後的對照圖說明。"
+    },
+    {
+      "type": "h",
+      "text": "遊戲內編輯器：全螢幕介面，欄位附說明"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "IGE 是讓玩家在存檔中直接修改球員、球隊等資料的工具。官網正文說，FM27 的 IGE 換了全新介面，整個流程都是全螢幕；資訊重新分組以減少點擊次數，預設開啟的分頁會標示得更清楚，可編輯的欄位會顯示說明（FAQ 寫作 tooltip）。FAQ 另說，這次改版和 9 月 22 日介面篇的方向一致，並提升了效能與流暢度。"
+    },
+    {
+      "type": "h",
+      "text": "訊息：NXGN 50 直接列在訊息裡，球探報告可切換清單與卡片"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "9 月 22 日介面篇與 9 月 25 日足球世界篇已示範過訊息改版，這篇再補一批例子。依官網正文：每月報告會更深入呈現俱樂部財務、外租年輕球員的表現，以及董事會與球迷對你的評價；賽季結束時會有一則頒獎性質的訊息，列出聯賽與本隊表現最好的球員；每年的 NXGN 50（50 名最具潛力的年輕球員）直接列在訊息內文，不必另開文章；球探進度訊息直接列出球員與評分，可切換清單與卡片兩種檢視；體能測試訊息把所有受測球員與結果放在同一張表。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "和訓練篇相連的部分：可以直接在訊息裡為賽前每一堂訓練設定比賽準備類型，也能在訊息裡修改當週訓練表，俱樂部與國家隊教練都適用；定期的訓練檢討訊息回歸，可以快速稱讚或批評球員。官網說這些只是例子，正式版還有「dozens more」（數十項）。"
+    },
+    {
+      "type": "h",
+      "text": "腦震盪處理流程：須經神經科醫師放行"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "官網正文說，FM27 從底層重做了頭部與臉部傷勢的處理方式，並與職業球員協會（Professional Footballers’ Association，PFA）的醫療團隊討論，加入腦震盪復原流程：球員要經神經科醫師明確放行，才能回到比賽。整個過程可以在醫療中心、體能報告、回歸訓練訊息與球員狀態提示裡追蹤。FAQ 也寫了需經神經科醫師放行才可入選。"
+    },
+    {
+      "type": "h",
+      "text": "教練團建議與資料：防守角色進入球員資料庫，八項數據加小數位"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "教練團建議方面，員工會議提出的建議集中在一則訊息，可以一次全部執行，也能挑著做；轉會從球探階段起就有更多建議，談判時還有即時建議，FAQ 說足球總監會針對轉會與租借的費用與付款結構提供意見。官網正文說，無球時（Out of Possession）的球員角色已加入球員資料庫的關鍵能力值欄；FAQ 則寫成球探報告會更考量球員擔任無球角色的能力。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "資料方面，Data Hub 會在賽前推送更多重點發現的訊息。以下八項每 90 分鐘數據改用更多小數位：xA、盤帶、射正、運動戰關鍵傳球、創造機會、xG、非點球 xG、關鍵搶斷。無球防守動作（Out of Possession Defensive Actions）的計算改為把犯規也算進去；比賽中的傳球分成短、中、長三類，記錄成功次數與成功率。"
+    },
+    {
+      "type": "table",
+      "title": "FM27 第七篇深度介紹：重點項目",
+      "head": [
+        "範圍",
+        "官方說法（10 月 16 日）",
+        "和先前相比",
+        "待實測"
+      ],
+      "rows": [
+        [
+          "2D 比賽畫面",
+          "球與球員圓點縮小、球的陰影加深、圓點用腳標示、球網更透明",
+          "比賽日篇只談 3D 畫面",
+          "密集區域是否更好辨識"
+        ],
+        [
+          "遊戲內編輯器",
+          "全螢幕、資訊重新分組、欄位附說明、效能提升",
+          "官方說和介面篇方向一致",
+          "大量修改時的速度"
+        ],
+        [
+          "訊息",
+          "每月報告、NXGN 50 內文、球探清單／卡片檢視、體能測試一表、訓練表可在訊息修改",
+          "介面篇只示範部分訊息",
+          "訊息量會不會變多"
+        ],
+        [
+          "傷病",
+          "腦震盪流程，須經神經科醫師放行",
+          "官網說與 PFA 醫療團隊討論後加入",
+          "缺陣天數與 AI 球隊是否同樣適用"
+        ],
+        [
+          "數據",
+          "八項每 90 分鐘數據加小數位；防守動作計入犯規；傳球分短中長",
+          "官網正文列出項目，FAQ 只概括",
+          "數據是否跟 FM26 存檔可比"
+        ],
+        [
+          "規則與賽程",
+          "日光越位（可在開局前編輯器關閉或套用）、英格蘭工作證、FIFA 女足員工規定、賽程修正",
+          "多項是 FM26 更新未處理的問題",
+          "AI 球隊遵守規則的程度"
+        ],
+        [
+          "資料庫與授權",
+          "逾 1,800 萬筆資料庫變動、1,500 項賽事更新、兩個新授權聯賽、19 個官方品牌背景",
+          "授權清單仍未公布；品牌背景介面篇已預告，這次首度給出數量",
+          "新聯賽是哪兩個"
+        ]
+      ],
+      "caption": "依 Sports Interactive 官網專頁與 Steam 公告 FAQ（2026 年 10 月 16 日）整理，並對照 9 月 22 日介面篇、9 月 30 日比賽日篇與 10 月 9 日訓練篇。官方畫面標明為開發中版本。"
+    },
+    {
+      "type": "h",
+      "text": "規則與賽程：日光越位、英格蘭工作證、FIFA 女足員工規定"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "官網正文說，FM27 加入加拿大超級聯賽（Canadian Premier League）本賽季試行的「日光越位」（Daylight Offside）規則；開局前的編輯器（Pre-Game Editor）可以關掉它，也能套用到其他賽事。英格蘭工作證依政府與足總新指引更新：賽事分級重新評定，菁英重大貢獻（Elite Significant Contribution，ESC）工作證只限 23 歲以下球員，規則畫面會顯示當季的出生日期門檻；已持有的球員該季可保留。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "另一項規則是 FIFA 新的女足員工規定：參加 FIFA 主辦賽事的女子球隊，後勤團隊（backroom staff）至少要有兩名女性員工，其中至少一人擔任總教練或助理教練。SI 說，玩家與 AI 管理的球隊都會遵守，並盡量減少對既有存檔與員工招募流程的干擾。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "賽程方面，官網列出一批修正，並說其中包括 FM26 更新沒有處理的問題。例如：歐冠聯賽階段，同一隊對同一國家的球隊不超過兩場；亞洲與歐足聯俱樂部賽事不再連續三場主場或客場；英格蘭同城對手不在同一天、同一時段都踢主場；德甲下半季賽程與上半季相同、主客互換，並遵守各隊每季電視轉播場次上限；南美洲際俱樂部賽事不再排在週五。"
+    },
+    {
+      "type": "h",
+      "text": "資料庫與授權：兩個新授權聯賽，官方未點名"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "官網正文說，FM27 有超過 1,800 萬筆資料庫變動、1,500 項賽事更新，並新增兩個授權聯賽，但沒有說是哪兩個。具體例子有：北愛爾蘭與威爾斯的聯賽改制；智利與秘魯的新盃賽；英格蘭、法國與日本的女子聯賽盃改用瑞士制；北美與非洲的資格賽與洲際賽事調整。SI 也說與授權方合作，加入 19 個官方品牌的畫面背景，會依你所在的賽事變換。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "兩處原文寫法不完全一樣：FAQ 寫智利與秘魯是「new competitions」，並提到「additional new licenses」；官網正文寫的是智利與秘魯的「new cup competitions」，新授權則是「two new licensed leagues」。本文以官網正文為準，不把智利、秘魯的盃賽當成那兩個新授權聯賽。"
+    },
+    {
+      "type": "h",
+      "text": "其他回歸與小改動"
+    },
+    {
+      "type": "list",
+      "items": [
+        "球員狀態圖示：再次可同時顯示三個；新增四種：上語言課、上教練課程、接受領導力訓練、可下放預備隊或青年隊。",
+        "失業開局：可再次瀏覽球員資料庫並建立觀察名單。",
+        "本隊單季與歷年最佳陣容畫面回歸；行事曆重新加入連結。",
+        "隊長畫面恢復拖曳排序；可一次恭喜球員得到多個獎項；說明為何隊友不願去開導不滿的球員；AI 母隊教練召回外租球員時稍微寬鬆一些。",
+        "比賽中：球員吃牌、犯規、求情或申訴時會看向裁判，隊友會對紅牌有反應；任意球前有新的手勢；現實中有打鼓習慣的球迷會在遊戲裡打鼓；邊審旗子有新的布料物理。",
+        "重看比賽：已結束的比賽有和即時比賽分開的播放速度設定；離開比賽後可以立刻看精華，不必先推進遊戲。"
+      ]
+    },
+    {
+      "type": "h",
+      "text": "和先前相比，對玩家可能的影響"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "前六篇各有一個大主題，這一篇比較像多個領域的雜項清單，但對長期玩家的分量不小。依原文用詞，有好幾項是「回歸」或「恢復」：三個狀態圖示、失業時看資料庫、最佳陣容畫面、隊長拖曳排序、訓練檢討訊息。由此推想，SI 在恢復先前版本拿掉的功能，這和 8 月 27 日社群經理 Chris Groves 說的「找回玩家重視的點子與行為」一致。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "對 2D 玩家，圓點縮小可能讓禁區內的人堆更容易看清楚，但也可能在小螢幕上變得難認，要看實機。腦震盪流程與 FIFA 女足員工規定會直接改變陣容與人事安排：主力撞到頭，可能缺陣比過去久；經營參加 FIFA 主辦賽事的女子球隊時，招募後勤團隊多了一道硬性條件。英格蘭工作證的 ESC 限 23 歲以下，可能讓英格蘭存檔引進年紀較大外籍球員的路徑變窄，實際影響要看遊戲裡的分級與門檻。"
+    },
+    {
+      "type": "h",
+      "text": "仍是官方宣稱、尚待實測的部分"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "SI 在 FAQ 註明，展示畫面來自開發中版本，發售前仍會調整，並納入近期使用者測試的回饋；部分資料仍在權利人審核中，可能還不符合現實。本報沒有玩過 FM27，本文內容都來自官方文字說明。兩個新授權聯賽是哪兩個、19 個品牌背景屬於哪些賽事、腦震盪平均缺陣多久、日光越位在比賽引擎裡怎麼判定，官方都沒有說明。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "時程沒有變。11 月 10 日全平台數位版發售；Launch Preview 給在 SEGA 認可數位通路預購 PC／Mac 版的玩家，官方說在發售前 1–2 週，日期未定。台灣時間 10 月 17 日清晨查 Steam 英國區商店資料，仍標示 10 Nov, 2026 即將推出，沒有標價；Xbox 英國商店也還沒開放預購。"
+    },
+    {
+      "type": "h",
+      "text": "接下來可觀察"
+    },
+    {
+      "type": "list",
+      "items": [
+        "首次 FM27 直播：官網說「Coming soon」，會在 FM 官方 YouTube 頻道展示實際遊玩畫面，未給日期。",
+        "兩個新授權聯賽與完整授權清單。",
+        "數位預購開放日、台灣區定價與預購折扣。",
+        "Launch Preview 的正式日期。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "FM27: 2D Match Engine, In-Game Editor and Deeper World Upgrades",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-10-16",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-2d-match-engine-game-editor-and-deeper-world-upgrades",
+      "note": "官網深度介紹專頁全文與 FAQ；2D 畫面、IGE、訊息、腦震盪流程、數據、日光越位、工作證、FIFA 女足員工規定、賽程修正、資料庫與兩個新授權聯賽、直播預告"
+    },
+    {
+      "title": "FM27: 2D Match Engine, In-Game Editor and Deeper World Upgrades（Steam 公告）",
+      "publisher": "Sports Interactive／Steam",
+      "date": "2026-10-16",
+      "url": "https://store.steampowered.com/news/app/4530370/view/1846651706680998",
+      "note": "2026-10-16 11:01 UTC 發布，作者 Jimmy Wong；FAQ 全文"
+    },
+    {
+      "title": "FM27: More Personal, Accessible and Yours（Steam 公告）",
+      "publisher": "Sports Interactive／Steam",
+      "date": "2026-10-15",
+      "url": "https://store.steampowered.com/news/app/4530370/view/1846651706677252",
+      "note": "FAQ 預告下一篇談 2D 比賽引擎、IGE 與 QoL"
+    },
+    {
+      "title": "FM27: Clearer Interface & Smoother Navigation",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-09-22",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-clearer-interface-smoother-navigation",
+      "note": "訊息改版的先前示範"
+    },
+    {
+      "title": "FM27: An Elevated Match Day Atmosphere",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-elevated-match-day-atmosphere",
+      "note": "3D 比賽畫面改進；FAQ：實體版日期、Launch Preview"
+    },
+    {
+      "title": "FM27: Training and Tactical Effectiveness",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-10-09",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-training-and-tactical-effectiveness",
+      "note": "訓練與比賽準備的先前說明"
+    },
+    {
+      "title": "Getting ready for Football Manager 27",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-08-27",
+      "url": "https://www.footballmanager.com/news/getting-ready-football-manager-27",
+      "note": "Chris Groves 談 FM27 方向"
+    },
+    {
+      "title": "Football Manager 27 launches from 10 November",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/news/football-manager-27-launches-10-november",
+      "note": "官網新聞列表標示 29.09.26；平台、Launch Preview"
+    },
+    {
+      "title": "Football Manager 27 on Steam",
+      "publisher": "Steam",
+      "date": "2026-10-17",
+      "url": "https://store.steampowered.com/app/4530370/Football_Manager_27/",
+      "note": "台灣時間 2026-10-17 清晨查 appdetails（英國區）：10 Nov, 2026 即將推出，無標價"
+    },
+    {
+      "title": "Football Manager 27（Xbox 商店，英國）",
+      "publisher": "Microsoft Store／Xbox",
+      "date": "2026-10-17",
+      "url": "https://www.xbox.com/en-GB/games/store/football-manager-27/9n4nkmxdzcx6",
+      "note": "台灣時間 2026-10-17 清晨查：isPreorder false"
+    },
+    {
+      "title": "Football Manager（YouTube 頻道上傳 RSS）",
+      "publisher": "Football Manager（YouTube）",
+      "date": "2026-10-17",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCMWpuQCtigHebT0oRtFy7Gw",
+      "note": "查核時最新上傳仍為 2026-10-09 訓練篇影片，第七篇無對應影片"
+    }
+  ]
+}
