@@ -1,0 +1,518 @@
+{
+  "column": "civilization",
+  "date": "2026-10-17",
+  "title": "四十張美洲豹皮：《門多薩手抄本》怎樣記貢賦",
+  "dek": "1541 年前後，在新西班牙殖民政府下，原住民畫師把阿茲特克的貢賦清單畫給西班牙王室看。這份帳記了什麼、誰收、誰扛，又有哪些數字至今算不攏？",
+  "topic_key": "civilization:mexico-aztec-tribute-codex-mendoza-16c",
+  "updated_at": "2026-10-17T02:10:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Codex_Mendoza_folio_47r.jpg/1280px-Codex_Mendoza_folio_47r.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Codex_Mendoza_folio_47r.jpg",
+    "width": 1280,
+    "height": 1857,
+    "alt": "直式手抄本頁面。左側頁邊由上而下排著八個地名符號：開花的仙人掌、烏龜、郊狼、抓著動物的手與山丘、鹿頭、帶刺的枝條、蘆葦蓆、老人頭像。頁面上方畫兩串綠色珠子，下面是兩排成束的藍、紅、綠、黃色羽毛，間有藍色的整隻鳥和黃色的長柱形物品。下半頁是兩個黃色編織擔子和兩張帶斑點的美洲豹皮，豹皮上方各有一面小旗，擔子上方各有五面。再下面是兩個葫蘆形的碗和兩塊橘黃色的琥珀。物品旁都有西班牙文小字。",
+    "caption": "《門多薩手抄本》第 47r 頁，索科努斯科（Xoconochco）省的貢賦：綠石、羽毛、鳥皮、琥珀唇飾、200 擔可可、40 張美洲豹皮、800 個葫蘆碗、兩塊琥珀。左側是列在這一省之下的八個城鎮的地名符號，最上方的仙人掌是 Xoconochco（意為「在酸仙人掌果之上」）。數字以旗子（20）和羽毛（400）符號標在貨物上方。原件藏牛津博德利圖書館，館藏號 MS. Arch. Selden. A. 1。",
+    "credit": "原件：《門多薩手抄本》，牛津博德利圖書館 MS. Arch. Selden. A. 1；Commons 未註明掃描來源",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Codex_Mendoza_folio_47r.jpg",
+    "made": "約 1541 年",
+    "depicts": "1521 年以前的貢賦定額"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "《門多薩手抄本》（Codex Mendoza）第 47r 頁沒有畫一件布料。頁面頂端是兩串綠石，接著是成束的藍、紅、綠、黃色羽毛和整張的鳥皮，下半頁是兩個可可豆擔子、兩張攤開的美洲豹皮、喝可可用的葫蘆碗，最底下是兩塊「像一塊磚那麼大」的琥珀。對頁的西班牙文說明逐項列完之後寫道：「以上全部，每六個月繳一次。」這一頁記的是阿茲特克帝國最南端的納貢省分索科努斯科（Xoconochco，今稱 Soconusco），位在今天墨西哥恰帕斯州與瓜地馬拉交界的太平洋岸。"
+    },
+    {
+      "type": "p",
+      "text": "本文要回答的問題是：一份由殖民政府下令、原住民畫師作畫、西班牙人加註的 16 世紀帳本，怎樣記錄各省向特諾奇提特蘭（Tenochtitlan）繳什麼、繳多少、多久繳一次，以及誰收、誰扛、制度卡在哪裡。"
+    },
+    {
+      "type": "h",
+      "text": "定位：38 個省、371 個城邦，和一份趕船期的抄本"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "阿茲特克三角同盟由特諾奇提特蘭的墨西加人（Mexica）、特斯科科（Texcoco）與特拉科潘（Tlacopan）在 1428 年結成（伯丹與阿納沃特 1997 年作 1430 年），到 1521 年被西班牙人與其原住民盟軍擊敗為止，控制了墨西哥中部與南部的大片土地。伯丹（Frances F. Berdan）與阿納沃特（Patricia Rieff Anawalt）說，征服最重要的後果是勝利者強加的貢賦。據兩人的整理，《門多薩手抄本》第二部分共 39 頁圖畫，記下 371 個負有固定貢賦義務的城邦，分成 38 個地理上各自獨立的省。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "抄本以首任新西班牙總督安東尼奧・德・門多薩（Antonio de Mendoza，1535–1550 年在任）命名，一般認為作於 1541 年前後。年代的上下限是：第 15r 頁稱科爾特斯（Hernán Cortés）為「marques del Valle」（谷地侯爵），他 1529 年 7 月 6 日才受封，所以抄本晚於這一天，而 1553 年它已在法國人手中。抄本用的是帶有西班牙造紙商浮水印的歐洲紙，今天裝訂成西式書冊，全書分三部分：歷代君主的征服史、貢賦清單，以及從出生到老年的日常生活。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "伯丹與阿納沃特認為，全書出自同一位原住民主畫師之手，另有幾位助手調顏料、平塗上色；畫師和熟悉舊制的年長者一起解讀圖像，彼此用納瓦特爾語（Nahuatl）討論，最後由一位雙語修士譯成西班牙文，寫下每頁的說明與圖旁的小註。最後一頁的註記說明了這份工作有多倉促："
+    },
+    {
+      "type": "quote",
+      "original": "The interpreter was given this history ten days prior to the departure of the fleet, and he interpreted it carelessly because the Indians came to agreement late; and so it was done in haste...",
+      "text": "這份歷史在船隊出發前十天才交給譯者，因為印第安人很晚才達成一致，他譯得很粗率，因此做得匆忙……",
+      "cite": "《門多薩手抄本》第 71v 頁西班牙文註記，據 Berdan 與 Anawalt（1997）英譯轉譯，本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "抄本最後沒有到西班牙。據珀切斯（Samuel Purchas）1625 年的記述，船隊遭法國私掠船攔截，抄本落入法國宮廷宇宙誌學者泰韋（André Thevet）手中，他在書上簽名，兩處註明 1553 年。之後英國人哈克盧特（Richard Hakluyt）以 20 枚法國克朗買下帶回英格蘭，1616 年後轉給珀切斯，再傳到法學家塞爾登（John Selden）。塞爾登死後五年，1659 年抄本進入牛津大學博德利圖書館，館藏號 MS. Arch. Selden. A. 1，直到 1831 年金斯伯勒子爵（Viscount Kingsborough）出版後才重新受到注意。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "貢賦這一部分有一個前身：《貢賦清冊》（Matrícula de Tributos），畫在無花果樹皮紙（amatl）上，現存 16 頁。它的年代有爭議：伯丹在 1980 年主張是征服前的作品，莫哈爾（Luz María Mohar）1997 年認為是征服後 10 到 20 年，戈麥斯・特赫達（Jorge Gómez Tejada）2021 年則認為各頁年代不一，晚的到 1560 年。《門多薩手抄本》的貢賦部分很可能抄自它，但多出五個省，大概是清冊後來佚失的頁面。西班牙學者巴塔利亞（Juan José Batalla Rosado）2007 年主張清冊第 6r 到 11v 頁與《門多薩手抄本》全書出自同一位「畫師之長」；他的同事羅哈斯（José Luis de Rojas）則認為兩份文件相關，但不一定是誰抄誰。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "伯丹與阿納沃特指出，征服史與貢賦帳都像是從既有的征服前文件抄來，相當忠實地反映墨西加人自己眼中的帝國：征服史只記勝利，不記慘敗。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，這份帳有兩層立場。底層是墨西加統治者要各省繳什麼的「應繳額」，上層是西班牙王室想知道舊帝國能收多少的提問。它記的是規定，不是收據。"
+    },
+    {
+      "type": "timeline",
+      "title": "從三角同盟到牛津書架",
+      "items": [
+        {
+          "when": "1325 年",
+          "label": "特諾奇提特蘭建城",
+          "note": "墨西加人在湖中島上定居"
+        },
+        {
+          "when": "1428 年",
+          "label": "三角同盟成立",
+          "note": "伯丹與阿納沃特 1997 年寫作 1430 年"
+        },
+        {
+          "when": "約 1486 年",
+          "label": "索科努斯科被征服",
+          "note": "沃希斯推定；另說在阿維特索特爾在位末年；抄本歸給蒙特蘇馬二世"
+        },
+        {
+          "when": "1519 年",
+          "label": "科爾特斯登陸",
+          "note": ""
+        },
+        {
+          "when": "1521 年",
+          "label": "特諾奇提特蘭陷落",
+          "note": "三角同盟瓦解"
+        },
+        {
+          "when": "1535.11",
+          "label": "門多薩就任總督",
+          "note": "在任到 1550 年"
+        },
+        {
+          "when": "約 1541 年",
+          "label": "《門多薩手抄本》完成",
+          "note": "上限 1529 年，下限 1553 年"
+        },
+        {
+          "when": "1553 年",
+          "label": "泰韋在抄本上簽名",
+          "note": "船隊途中遭法國私掠船攔截"
+        },
+        {
+          "when": "1554 年",
+          "label": "《1554 年報告》寫成",
+          "note": "列出蒙特蘇馬時代的貢賦"
+        },
+        {
+          "when": "1659 年",
+          "label": "入藏博德利圖書館",
+          "note": "塞爾登死後五年"
+        },
+        {
+          "when": "1831 年",
+          "label": "金斯伯勒出版",
+          "note": "抄本重新受到研究"
+        },
+        {
+          "when": "1992 年",
+          "label": "伯丹與阿納沃特四卷本",
+          "note": "加州大學出版社"
+        }
+      ],
+      "caption": "依 Berdan 與 Anawalt（1997）、Berdan（2007）、維基百科〈Codex Mendoza〉〈Antonio de Mendoza〉整理。1428 與 1430 年兩說並存。"
+    },
+    {
+      "type": "h",
+      "text": "怎麼讀一頁帳：地名在左，數字插在貨物頭上"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "貢賦頁有固定格式：負責繳納的城鎮以地名符號排在左側頁邊，必要時延伸到頁底；其餘空間畫貨物，數量用符號插在貨物上方。一面小旗代表 20，一根羽毛代表 400，一個小袋代表 8,000。第 47r 頁每張豹皮頭上一面旗，所以是 20 張，兩張共 40；每個可可擔子上五面旗，各 100 擔，共 200 擔。旁邊的西班牙文小字寫著「veynte pieles de tigre」（二十張虎皮）與「cient cargas de cacao」（一百擔可可）；西班牙人把美洲豹叫作「tigre」。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Codex_Mendoza_folio_46r.jpg/1280px-Codex_Mendoza_folio_46r.jpg",
+      "width": 1280,
+      "height": 1822,
+      "alt": "直式手抄本頁面。左側頁邊由上而下排著十多個地名符號，頁底還有一排，例如兔子、魚、蝙蝠洞、鳥和山丘。頁面上方是一排花紋布料，中段有一件黃色連身戰袍、圓盾、黃金頭飾，再下面是好幾串綠色與黃色的珠鍊、成束的羽毛、一個陶罐和一個可可擔子。許多物品上方畫著旗子或羽毛形的數字符號，旁邊有西班牙文小字。",
+      "caption": "對照：同一部抄本第 46r 頁的 Tochtepec 省（帝國東南部、沿著通往墨西哥灣的河流分布），22 個城鎮的地名符號沿左側與頁底排列。這一頁是常見的格式：最上面是成「擔」的布料，每六個月繳；戰袍、盾牌、黃金與綠石每年繳一次；也有 200 擔可可。和第 47r 頁相比，索科努斯科一件布料、一套戰袍都不用繳。",
+      "credit": "原件：《門多薩手抄本》，牛津博德利圖書館 MS. Arch. Selden. A. 1；Commons 未註明掃描來源",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Codex_Mendoza_folio_46r.jpg",
+      "made": "約 1541 年",
+      "depicts": "1521 年以前的貢賦定額"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "西班牙文說明並不總是可靠。第 46v 頁說索科努斯科有 7 個城鎮，畫面上卻有 8 個地名；說明寫羽毛共「一千四百束」，但圖上是六束、每束 400，伯丹與阿納沃特判斷譯者原意應是「兩千四百」。鳥皮也有出入：《門多薩手抄本》每隻鳥頭上四面旗，是 80 隻，兩組共 160；《貢賦清冊》的納瓦特爾文與西班牙文旁註卻寫 100。羅哈斯與巴塔利亞向來主張（羅哈斯 1997 年已提出），讀這些帳要以圖上的符號為準，優先於拉丁字母寫成的文字。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.14,
+        0.0,
+        0.86,
+        0.13
+      ],
+      "position": "頁面最上方一條，橫跨全頁寬度約八成",
+      "caption": "頁首左右兩個符號是阿茲特克曆法的兩個 20 日「月」：左邊的掃帚是 Ochpaniztli（「掃路」），右邊的尖帽是 Tlacaxipehualiztli（「剝人皮」），旁邊各以拉丁字母寫出名稱。下方是兩串綠石（chalchihuitl）中的第一串。頁首中央還有一行西班牙文小字，伯丹與阿納沃特（1997）英譯為「In tribute」（貢賦）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這兩個月份符號讓索科努斯科的頁面在《門多薩手抄本》與《貢賦清冊》中都獨一無二。伯丹與阿納沃特說，這兩個月分別落在初秋與冬末。加斯科（Janine Gasco）與沃希斯（Barbara Voorhies）1989 年指出，這兩個繳納期大致對上當地可可的兩次收成，一次在 12 月，一次在 6 月下旬；收成到交貨之間的時間，正好用來曬乾、打包，再運到墨西哥中部。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "麻煩在於貨物在頁上大致排成左右兩組，各在一個月份符號底下。這可以讀成「整頁每年繳兩次」，年總額是畫面的兩倍；也可以讀成「一半在 Ochpaniztli 繳，一半在 Tlacaxipehualiztli 繳」，年總額就是畫面本身。西班牙文說明寫「全部每六個月繳一次」，等於採前一種讀法；伯丹與阿納沃特則說，這是個仍未解決的難題。"
+    },
+    {
+      "type": "h",
+      "text": "追蹤：南方的八個城鎮繳的是什麼"
+    },
+    {
+      "type": "table",
+      "title": "索科努斯科省的貢品（第 47r 頁）",
+      "head": [
+        "品項",
+        "畫面上的數量",
+        "從哪裡來"
+      ],
+      "rows": [
+        [
+          "綠石珠串（chalchihuitl）",
+          "2 大串",
+          "若是翡翠，產地在省界以外；當地有蛇紋石"
+        ],
+        [
+          "藍、紅、綠色羽毛",
+          "各 800 束",
+          "藍羽來自當地的傘鳥；紅羽可能是金剛鸚鵡"
+        ],
+        [
+          "黃色羽毛、綠咬鵑長羽",
+          "各 800 束",
+          "鳥種辨認仍有爭議"
+        ],
+        [
+          "整張鳥皮",
+          "160 張",
+          "藍頭紅胸的 xiuhtototl"
+        ],
+        [
+          "鑲金琥珀唇飾",
+          "2 件",
+          "琥珀與黃金都不產於本省，經貿易流入"
+        ],
+        [
+          "可可",
+          "200 擔",
+          "本省主產"
+        ],
+        [
+          "美洲豹皮",
+          "40 張",
+          "清冊中唯一繳豹皮的省"
+        ],
+        [
+          "喝可可的葫蘆碗",
+          "800 個",
+          "葫蘆藤至今仍在當地栽種"
+        ],
+        [
+          "磚塊大小的琥珀",
+          "2 塊",
+          "附近的恰帕斯高地"
+        ]
+      ],
+      "caption": "依 Berdan 與 Anawalt（1997）第 46v–47r 頁說明整理，該書多處引用 Gasco 與 Voorhies（1989）的鑑定。數量是頁上畫的額度；究竟是每半年還是每年的總額，見正文。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "伯丹與阿納沃特指出，索科努斯科和大多數省分不同，不繳布料、不繳戰士服，也不繳玉米、豆子、奇亞籽、莧籽這些主食，雖然這些東西當地都有。伯丹 2007 年在《西班牙美洲人類學期刊》（Revista Española de Antropología Americana）的論文提出一個解釋：帝國越往遠處擴張，要的就越是輕而貴的奢侈品；食物、建材這些又重又占體積的東西，多半攤派給靠近首都的省分。她也列出例外：遠在瓦哈卡的 Coyolapan 有部分貢賦是笨重的糧食，一些遠方省分也繳棉花與可可等重貨，索科努斯科的可可即是一例。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這塊地方何時被征服有兩說：伯丹與阿納沃特說是在阿維特索特爾（Ahuitzotl，1486–1502 年在位）末年，沃希斯（Barbara Voorhies）1989 年則推定在 1486 年前後，即他即位之初。各家記載彼此矛盾：薩阿貢（Bernardino de Sahagún）的商人報導人說，是被圍困四年的墨西加商人自己打下這片海岸，伯丹與阿納沃特稱其他記載「比較不自利」（less self-serving）；杜蘭（Diego Durán）記為阿維特索特爾率同盟軍出征；《門多薩手抄本》的征服史第 15v 頁卻把索科努斯科歸給下一任的蒙特蘇馬二世（Motecuhzoma Xocoyotzin）。"
+    },
+    {
+      "type": "svg",
+      "title": "貢品的流向與成本",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 700\">\n<defs><marker id=\"ah\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"accent\"/></marker></defs>\n<rect x=\"0\" y=\"0\" width=\"680\" height=\"700\" class=\"paper\"/>\n<text x=\"20\" y=\"30\" class=\"ink\" font-size=\"15\" font-weight=\"bold\">索科努斯科的貢品往哪裡去（示意）</text>\n<rect x=\"30\" y=\"52\" width=\"380\" height=\"84\" rx=\"6\" class=\"soft\"/>\n<text x=\"220\" y=\"78\" class=\"ink\" font-size=\"14\" text-anchor=\"middle\">八個城鎮的百姓與地方貴族</text>\n<text x=\"220\" y=\"100\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">在地取得：可可、羽毛、鳥皮、美洲豹皮、葫蘆碗</text>\n<text x=\"220\" y=\"120\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">如何分派到戶，史料不明</text>\n<rect x=\"440\" y=\"52\" width=\"210\" height=\"84\" rx=\"6\" class=\"soft\"/>\n<text x=\"545\" y=\"78\" class=\"ink\" font-size=\"13\" text-anchor=\"middle\">經貿易與市場流入</text>\n<text x=\"545\" y=\"100\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">琥珀、黃金</text>\n<text x=\"545\" y=\"120\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">綠石也可能來自外地</text>\n<line x1=\"440\" y1=\"120\" x2=\"390\" y2=\"168\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<line x1=\"220\" y1=\"136\" x2=\"220\" y2=\"168\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<rect x=\"30\" y=\"170\" width=\"380\" height=\"78\" rx=\"6\" class=\"soft\"/>\n<text x=\"220\" y=\"196\" class=\"ink\" font-size=\"14\" text-anchor=\"middle\">各鎮的 calpixqui（收貢官）</text>\n<text x=\"220\" y=\"218\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">西班牙文註解：由墨西加人擔任，</text>\n<text x=\"220\" y=\"236\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">負責收足貢品、防止叛變</text>\n<line x1=\"220\" y1=\"248\" x2=\"220\" y2=\"280\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<rect x=\"30\" y=\"282\" width=\"380\" height=\"78\" rx=\"6\" class=\"soft\"/>\n<text x=\"220\" y=\"308\" class=\"ink\" font-size=\"14\" text-anchor=\"middle\">省內的「總督」</text>\n<text x=\"220\" y=\"330\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">第 18r 頁：索科努斯科畫了兩名</text>\n<text x=\"220\" y=\"348\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">貢品可能先集中在這裡（Rojas 與 Batalla 推定）</text>\n<line x1=\"220\" y1=\"360\" x2=\"220\" y2=\"392\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<rect x=\"30\" y=\"394\" width=\"380\" height=\"78\" rx=\"6\" class=\"soft\"/>\n<text x=\"220\" y=\"420\" class=\"ink\" font-size=\"14\" text-anchor=\"middle\">挑夫背運到中部高原</text>\n<text x=\"220\" y=\"442\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">一擔約 23 公斤；雨季河水暴漲、步行難通</text>\n<text x=\"220\" y=\"460\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">運費與包裝由納貢者負擔（同上推定）</text>\n<line x1=\"220\" y1=\"472\" x2=\"220\" y2=\"504\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<rect x=\"30\" y=\"506\" width=\"380\" height=\"78\" rx=\"6\" class=\"soft\"/>\n<text x=\"220\" y=\"532\" class=\"ink\" font-size=\"14\" text-anchor=\"middle\">特諾奇提特蘭</text>\n<text x=\"220\" y=\"554\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">統治者與貴族使用：豹皮鋪座椅、葫蘆碗喝可可</text>\n<text x=\"220\" y=\"572\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">可可也是交易媒介</text>\n<rect x=\"440\" y=\"282\" width=\"210\" height=\"190\" rx=\"6\" class=\"soft\"/>\n<text x=\"545\" y=\"308\" class=\"ink\" font-size=\"13\" text-anchor=\"middle\">誰承擔</text>\n<text x=\"545\" y=\"334\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">生產與採集的勞力</text>\n<text x=\"545\" y=\"356\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">向外地換取的成本</text>\n<text x=\"545\" y=\"378\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">乾燥、包裝、背運</text>\n<text x=\"545\" y=\"400\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">途中的口糧與回程</text>\n<text x=\"545\" y=\"430\" class=\"accent\" font-size=\"12\" text-anchor=\"middle\">帳上只記交付的貨物，</text>\n<text x=\"545\" y=\"450\" class=\"accent\" font-size=\"12\" text-anchor=\"middle\">不記這些成本</text>\n<line x1=\"440\" y1=\"377\" x2=\"414\" y2=\"377\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/>\n<text x=\"20\" y=\"620\" class=\"muted\" font-size=\"11\">示意，不按比例。依《門多薩手抄本》第 18r、22v、46v–47r 頁註解（Berdan 與 Anawalt 1997 英譯）、</text>\n<text x=\"20\" y=\"638\" class=\"muted\" font-size=\"11\">Rojas 與 Batalla 2008、Berdan 2007 整理。各環節的分工、貢品是否全數運到首都，學界仍有爭論。</text>\n</svg>",
+      "caption": "原創示意圖，不按比例。各環節依《門多薩手抄本》註解與學者推定繪製；地方統治者如何向各戶分派，現存史料幾乎沒有記載。"
+    },
+    {
+      "type": "h",
+      "text": "權力：誰定額、誰催收、誰承擔"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "西班牙文說明幾乎每一省都重複同一個說法。第 22v 頁講 Quauhnahuac 省時寫道："
+    },
+    {
+      "type": "quote",
+      "original": "...the lords of Mexico placed in each one calpixques, Mexicans, and over the calpixque a governor who was a principal Mexican person. This was done by the said lords for the security of the land against rebellion...",
+      "text": "墨西哥的領主們在每一個城鎮都安置了 calpixque，由墨西加人擔任，又在他們之上設一位墨西加的顯要人物當總督。領主這樣做，是為了確保這片土地不會叛變……",
+      "cite": "《門多薩手抄本》第 22v 頁西班牙文說明，據 Berdan 與 Anawalt（1997）英譯轉譯，本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "calpixqui（複數 calpixque）通常譯作管家或收貢官。不過帳本的說法和地方史料未必一致：第 24r 頁說 Huaxtepec 省每個城鎮都有墨西加的收貢官和總督，當地的《地理報告》（Relación de Huaxtepec）卻只分出兩種人：本地的統治者（tlatoani）和外派的收貢官。伯丹與阿納沃特轉述薩阿貢的記載，管家與收貢官住在專屬的房舍，聚在那裡聽候統治者吩咐；帳目一有差錯就處死，遺孀與子女被逐出家門，因為「一切都屬於統治者」。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "索科努斯科因為遙遠又富裕，受到特別看管。第 17v 到 18r 頁另外畫了 11 個放大的邊遠城鎮，其中 7 個配有一到兩名「總督」，索科努斯科配了兩名：其中一位是頭銜為 Tezcacoacatl、名叫 Omequauh 的官員，另一位的頭銜是 Tlillancalqui（「黑暗之屋的看守者」），只畫了符號名字，伯丹與阿納沃特讀作可能是「浪」。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "學者巴洛（Robert Barlow）1949 年稱這些配有總督的地方為「邊境駐軍城鎮」，但駐軍有多常設仍有爭議：戴維斯（Nigel Davies）認為 16 世紀西班牙文的「駐軍」不一定指常備部隊，哈西格（Ross Hassig）則說這些駐軍要嘛只駐守短期，要嘛人數很少。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "伯丹在 2007 年的論文提醒，這種行政介入在遠方省分其實不深：那裡的原統治者通常照舊掌權，帝國派來的最常見的是收貢官，而這些人「普遍被當地居民與統治者厭惡」（本文自譯）；越靠近墨西哥盆地，介入越深。羅哈斯與巴塔利亞還有一個更根本的讀法：他們根據註解認為，頁邊列出的城鎮不是全部的納貢者，而是有帝國代表駐紮的據點，貢品先集中到總督所在地，再送往首都。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "由此推想，真正付出成本的人在帳上看不見。帳本只寫最後交到的東西，不寫誰去捕豹、誰去收羽毛、誰拿可可去換外地的琥珀與黃金。羅哈斯與巴塔利亞指出，據目前所知，運輸連同裝貨的容器都由納貢者自己負擔；他們也提醒，貢品和當地生產並不直接對應，許多東西必須到外地取得。帳上「兩塊琥珀」背後，是一條從恰帕斯高地到海岸再到中部高原的交易與運輸鏈。"
+    },
+    {
+      "type": "h",
+      "text": "限制：路程、雨季與算不攏的數字"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "索科努斯科的城鎮沿著從山區流向海岸的河流分布，乾季可以涉水往來，雨季河水暴漲，步行就過不去，只能改走天然的內陸水道。伯丹與阿納沃特也提到，距離可能是本省不繳布料與糧食這類笨重貨物的原因之一。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "羅哈斯與巴塔利亞 2008 年的〈《門多薩手抄本》與《貢賦清冊》中隱藏的數字〉，把帳上的數字換算成搬運量。他們取一擔約 23 公斤；《門多薩手抄本》裡每個大糧倉註明裝 4,000 到 5,000 法內加（fanega，每法內加約 55 公升），全書共畫了 42 個糧倉，光搬糧食就要 50 萬 4 千個挑夫工作日。布料數字更大：若照他們的假設每 80 天繳一次，又照 16 世紀多種史料說每名婦女每年要向領主繳一幅（pierna）布，帝國要的布相當於兩千多萬戶人家的產量。他們的結論是「帳算不攏」，蒙特蘇馬收到的不會是最底層納貢者繳納額的總和。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "西班牙人自己的數字也互相打架。杜蘭說每 80 天就有一百萬名印第安人帶著貢品進入特諾奇提特蘭。1554 年一份記錄蒙特蘇馬時代貢賦的西班牙文報告（Información de 1554，下稱《1554 年報告》），品項和《門多薩手抄本》相當接近，數量卻不同：索科努斯科的可可只有每年 40 擔，綠石是三串而不是兩串，鳥皮是 800 張而不是 160 張。據這份報告的數字，蒙特蘇馬一年收到的貢品約值兩百萬比索，羅哈斯與巴塔利亞取作近似值，但也說，我們不清楚當時的物價與工資，無從判斷這數字算多算少。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "繳納週期是另一個沒有定論的問題。同一部抄本裡，西班牙文說明通常寫布料每六個月一次、戰袍與糧食每年一次；《貢賦清冊》有些省的布料則標為每 80 天一次。羅哈斯與巴塔利亞採「布料每 80 天、其餘每年一次」來計算，並說若照《門多薩手抄本》讀成一年兩次，總數就減半，但無論怎麼算都非常高。"
+    },
+    {
+      "type": "h",
+      "text": "學界怎麼說：清單、稅制與帝國的形狀"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "現代研究的基礎是伯丹與阿納沃特 1992 年由加州大學出版社出版的四卷本《The Codex Mendoza》，1997 年另出精簡版《The Essential Codex Mendoza》，逐頁比對《貢賦清冊》、《1554 年報告》與各地《地理報告》。伯丹與史密斯（Michael E. Smith）等六位學者 1996 年合著《Aztec Imperial Strategies》，把帝國的省分分成兩種：按時繳交固定貢品的「納貢省」，以及與帝國互惠、替帝國守邊界和商路的「戰略省」。照這個模型，戰略省應該把納貢省和敵人隔開；伯丹 2007 年要解釋的正是例外：為什麼索科努斯科這樣的納貢省會直接暴露在邊境上？她的答案之一是，這裡本身就是征服的目標，而不是通往更遠處的跳板；她並引加斯科 2003 年的看法，認為帝國要的可能是當地的自然資源，而不只是長程貿易網。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "亞利桑那州立大學的史密斯則質疑「貢賦」這個詞本身。他 2015 年在劍橋大學出版社《前現代國家的財政體制》（Fiscal Regimes and the Political Economy of Premodern States）的章節中，依循通行定義指出：「In contrast to tributes, taxes are normally recurrent, predictable, routinized, and based on statutory obligations.」（本文自譯：和貢賦相比，稅通常是經常性的、可預期的、例行化的，並依據法定義務。）據章節摘要，他認為阿茲特克的徵收比早期美索不達米亞更規律，也包括用貨幣支付。他在 2021 年接受《Archaeology》雜誌訪問時說得更直接："
+    },
+    {
+      "type": "quote",
+      "original": "Tribute is booty. That's what a pirate takes. What the Aztecs were doing was definitely taxation.",
+      "text": "貢賦是戰利品，那是海盜拿的東西。阿茲特克人做的，確實是課稅。",
+      "cite": "史密斯，見 Eric A. Powell〈Aztec Itemized Returns〉，《Archaeology》2021 年 5／6 月號，本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，這幾派爭的其實是同一件事的不同側面。伯丹與阿納沃特把抄本當成帝國結構的地圖，羅哈斯與巴塔利亞把它當成需要驗算的帳，史密斯則問它記的是掠奪還是制度化的稅。《門多薩手抄本》能回答「規定繳什麼」，回答不了「實際收到多少」「誰在村裡分攤」與「同盟三城怎麼分」。第 47r 頁頂端那兩個月份符號，正是這類問題的縮影：符號畫得清清楚楚，帝國一年究竟要多少可可，近五百年後仍有兩種算法。"
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "你的帝國怎樣決定一個遠方省分繳什麼？依當地出產、依運送難易，還是依首都的宴會與典禮需要？當首都的口味改變時，誰去通知邊地？",
+        "如果帳本只記「應繳額」，那實際收了多少、短少了誰負責？收貢官帳目出錯就處死，這種制度會讓他們更誠實，還是更敢向下多收？",
+        "一份帳經過畫師、口述者、譯者三手才寫成，又在趕船期的十天內完成。你的世界裡，有哪些權力文件是在這樣的倉促與誤譯中定型，後人卻把它當成定本？",
+        "繳納日期如果配合收成，帝國的財政節奏就被一種作物綁住。一場病害或一次雨季延誤，會怎樣從邊地一路影響到首都？"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Essential Codex Mendoza",
+      "publisher": "Frances F. Berdan & Patricia Rieff Anawalt／University of California Press（Internet Archive 掃描本）",
+      "date": "1997",
+      "url": "https://archive.org/details/bub_gb_JQeAQZHev0IC",
+      "note": "導論（371 城邦、38 省、39 頁、製作過程與流傳）；第 17v–18r、22v、24r、45v–47r 頁說明；第 22v、46v 頁西班牙文說明與第 71v 頁註記的轉錄與英譯；Sahagún、Durán、Gasco 與 Voorhies、Barlow、Davies、Hassig、MacLeod、Voorhies、《1554 年報告》等均據此書轉引"
+    },
+    {
+      "title": "The Codex Mendoza（4 vols.）",
+      "publisher": "Frances F. Berdan & Patricia Rieff Anawalt／University of California Press",
+      "date": "1992",
+      "url": "https://en.wikipedia.org/wiki/Codex_Mendoza",
+      "note": "書目資料據維基百科參考文獻，本文未讀四卷本；網址為維基百科條目"
+    },
+    {
+      "title": "Los números ocultos del Códice Mendoza y la Matrícula de Tributos",
+      "publisher": "José Luis de Rojas & Juan José Batalla／Revista Española de Antropología Americana 38(2): 199–206",
+      "date": "2008",
+      "url": "https://revistas.ucm.es/index.php/REAA/article/view/REAA0808220199A",
+      "note": "全文：讀圖優先於文字、城鎮為帝國代表駐地、運輸由納貢者負擔、一擔約 23 公斤、糧倉容量、挑夫工作日、布料估算、約兩百萬比索、Durán 每 80 天一百萬人之說、Armillas 的懷疑、各省挑夫表"
+    },
+    {
+      "title": "En la periferia del imperio: provincias tributarias aztecas en la frontera imperial",
+      "publisher": "Frances F. Berdan／Revista Española de Antropología Americana 37(2): 119–138",
+      "date": "2007",
+      "url": "https://revistas.ucm.es/index.php/REAA/article/view/REAA0707220119A",
+      "note": "讀第 1–3.3 節：1428 年結盟、納貢省與戰略省、輕重貨物與距離（註 2）、收貢官受厭惡（註 3）、索科努斯科與 Gasco 2003 的看法"
+    },
+    {
+      "title": "Aztec Imperial Strategies",
+      "publisher": "Frances F. Berdan, Richard E. Blanton, Elizabeth H. Boone, Mary G. Hodge, Michael E. Smith, Emily Umberger／Dumbarton Oaks",
+      "date": "1996",
+      "url": "https://revistas.ucm.es/index.php/REAA/article/view/REAA0707220119A",
+      "note": "轉引自 Berdan 2007 的摘要與第 2 節，本文未讀原書；網址為 Berdan 2007"
+    },
+    {
+      "title": "The Aztec Empire（Fiscal Regimes and the Political Economy of Premodern States, pp. 71–114）",
+      "publisher": "Michael E. Smith／Cambridge University Press",
+      "date": "2015",
+      "url": "https://asu.elsevierpure.com/en/publications/the-aztec-empire",
+      "note": "只讀摘要：稅與貢賦的定義、比美索不達米亞更規律並含貨幣支付；DOI 10.1017/CBO9781316105436.003"
+    },
+    {
+      "title": "Aztec Itemized Returns",
+      "publisher": "Eric A. Powell／Archaeology（May/June 2021）",
+      "date": "2021-05",
+      "url": "https://archaeology.org/issues/may-june-2021/collection/mexico-aztec-tax-system-2/",
+      "note": "史密斯「Tribute is booty」一語"
+    },
+    {
+      "title": "Codex Mendoza",
+      "publisher": "維基百科（英文）",
+      "date": "2026-09-05",
+      "url": "https://en.wikipedia.org/wiki/Codex_Mendoza",
+      "note": "年代上下限（1529 年 7 月 6 日、1553 年）、珀切斯 1625 年的記述、《貢賦清冊》缺五省、Batalla Rosado 2007 書目；日期為查閱時的最後修訂日"
+    },
+    {
+      "title": "Matrícula de Tributos",
+      "publisher": "維基百科（英文）",
+      "date": "2025-05-26",
+      "url": "https://en.wikipedia.org/wiki/Matr%C3%ADcula_de_Tributos",
+      "note": "樹皮紙、16 頁、數字符號（20、400、8,000）、Berdan 1980、Mohar 1997、Gómez Tejada 2021 的年代說法；日期為最後修訂日"
+    },
+    {
+      "title": "Antonio de Mendoza",
+      "publisher": "維基百科（英文）",
+      "date": "2026-10-05",
+      "url": "https://en.wikipedia.org/wiki/Antonio_de_Mendoza",
+      "note": "總督任期 1535 年 11 月 14 日至 1550 年 11 月 25 日；日期為最後修訂日"
+    },
+    {
+      "title": "Bodleian Library MS. Arch. Selden. A. 1",
+      "publisher": "Bodleian Libraries, University of Oxford（Digital Bodleian）",
+      "date": "約 1541",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/",
+      "note": "館藏號與全本數位影像（博德利圖書館 Bodleian Library）"
+    },
+    {
+      "title": "File:Codex Mendoza folio 47r.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "1541",
+      "url": "https://commons.wikimedia.org/wiki/File:Codex_Mendoza_folio_47r.jpg",
+      "note": "頭圖；Commons 標為 PD-Art，未註明掃描來源"
+    },
+    {
+      "title": "File:Codex Mendoza folio 46r.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "1541",
+      "url": "https://commons.wikimedia.org/wiki/File:Codex_Mendoza_folio_46r.jpg",
+      "note": "正文圖；Commons 標為 PD-Art，未註明掃描來源"
+    },
+    {
+      "title": "The Ultimate Tribute: The Role of the Soconusco as an Aztec Tributary",
+      "publisher": "Janine Gasco & Barbara Voorhies，收於 Barbara Voorhies 編 Ancient Trade and Tribute: Economies of the Soconusco Region of Mesoamerica, pp. 48–94／University of Utah Press",
+      "date": "1989",
+      "url": "https://archive.org/details/bub_gb_JQeAQZHev0IC",
+      "note": "收成與繳納期、鳥種與琥珀產地；沃希斯 1989 年的 1486 年推定亦出自同書；均轉引自 Berdan 與 Anawalt 1997，原書未讀"
+    },
+    {
+      "title": "Historia de las Indias de Nueva España e islas de Tierra Firme",
+      "publisher": "Diego Durán（手稿，西班牙國家圖書館）",
+      "date": "1581",
+      "url": "https://revistas.ucm.es/index.php/REAA/article/view/REAA0808220199A",
+      "note": "每 80 天一百萬人一語轉引自 Rojas 與 Batalla 2008（f. 140r）；索科努斯科征服記載轉引自 Berdan 與 Anawalt 1997；原典未讀"
+    },
+    {
+      "title": "Florentine Codex（General History of the Things of New Spain）",
+      "publisher": "Bernardino de Sahagún 著，Anderson & Dibble 英譯／School of American Research & University of Utah",
+      "date": "1950–1982",
+      "url": "https://archive.org/details/bub_gb_JQeAQZHev0IC",
+      "note": "第 9 卷商人征服索科努斯科、管家與收貢官的住所與懲罰；均轉引自 Berdan 與 Anawalt 1997，原典未讀"
+    },
+    {
+      "title": "Información de 1554 sobre los tributos que los indios pagaban a Moctezuma",
+      "publisher": "José Luis de Rojas 編／CIESAS（另見 Scholes & Adams 1957 版）",
+      "date": "1997",
+      "url": "https://revistas.ucm.es/index.php/REAA/article/view/REAA0808220199A",
+      "note": "數量差異轉引自 Berdan 與 Anawalt 1997；價值估計轉引自 Rojas 與 Batalla 2008；原書未讀"
+    },
+    {
+      "title": "Aztec Warfare: Imperial Expansion and Political Control",
+      "publisher": "Ross Hassig／University of Oklahoma Press",
+      "date": "1988",
+      "url": "https://archive.org/details/bub_gb_JQeAQZHev0IC",
+      "note": "駐軍短期或人少之說，轉引自 Berdan 與 Anawalt 1997（第 17v–18r 頁說明）；同頁轉引 Barlow 1949、Davies 1978、1987；原書未讀"
+    },
+    {
+      "title": "The Scribes who Painted the Matrícula de Tributos and the Codex Mendoza／Matrícula de Tributos y Códice Mendoza: la autoría de un mismo «maestro de pintores»",
+      "publisher": "Juan José Batalla Rosado／Ancient Mesoamerica 18: 31–51；Anales del Museo de América 15: 9–20",
+      "date": "2007",
+      "url": "https://revistas.ucm.es/index.php/REAA/article/view/REAA0808220199A",
+      "note": "書目與論點轉引自 Rojas 與 Batalla 2008 的參考文獻與正文，原文未讀"
+    },
+    {
+      "title": "Gasco 2003（索科努斯科與阿茲特克帝國的關係）",
+      "publisher": "轉引自 Berdan 2007, Revista Española de Antropología Americana 37(2)",
+      "date": "2003",
+      "url": "https://revistas.ucm.es/index.php/REAA/article/view/REAA0707220119A",
+      "note": "轉引自 Berdan 2007，原典未讀"
+    }
+  ]
+}
