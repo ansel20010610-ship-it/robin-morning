@@ -1,12 +1,12 @@
 {
   "column": "literature",
-  "date": "reserve",
+  "date": "2026-10-18",
   "reserve_written": "2026-10-10",
   "title": "「村名我不想記起」：《唐吉訶德》的第一句",
   "dek": "塞萬提斯在第一句就收走了村名。這個「不想」是隨口一說還是刻意隱瞞？英譯者各有判斷，十年後的第二部結尾給了另一個說法。",
   "brief": "《唐吉訶德》第一句點名了鄉紳的長矛、老皮盾、瘦馬和獵犬，唯獨扣下村名，原文是 no quiero acordarme，「我不想記起」。Shelton 1612 年的英譯把它讀成「刻意略去」，1848 年的改訂本讀成「記不得」；到了 1615 年第二部結尾，假託的阿拉伯史家 Cide Hamete「不願寫明」村子，理由是讓拉曼查各村去爭他。後來真的有人爭：據康普頓斯大學新聞稿，團隊用 26 個村鎮、24 項距離與時間變數算出 Villanueva de los Infantes，提出這個方法的 Parra Luna 也提醒這一切不必照單全收。",
   "topic_key": "literature:cervantes-quijote-i-1",
-  "updated_at": "2026-10-11T00:30:00+08:00",
+  "updated_at": "2026-10-18T07:31:36+08:00",
   "spoiler": "本文後半談到《唐吉訶德》第二部的結局。",
   "disclaimer": null,
   "hero": {
@@ -579,5 +579,6 @@
       "url": "https://arxiv.org/abs/0807.3661",
       "note": "v1（2008-07-22）與 v2（2008-10-20）摘要，v2 摘要末句：相對誤差最小的設定解為 Villanueva de los Infantes；v2 PDF 第 1 頁：依 [5] 並經 [6] 修正，候選為 Campo de Montiel 的 24 個村鎮，距四個參照點 2–2.5 日程；參考文獻 [5]：Parra Luna, F. et al. (2005), El lugar de la Mancha es…, Editorial Complutense"
     }
-  ]
+  ],
+  "from_reserve": true
 }

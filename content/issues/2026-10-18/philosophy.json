@@ -1,12 +1,12 @@
 {
   "column": "philosophy",
-  "date": "reserve",
+  "date": "2026-10-18",
   "reserve_written": "2026-10-10",
   "title": "不記得偷過芒果，他還是那個男孩嗎",
   "dek": "80 歲的他記得 40 歲的自己，40 歲的他記得 10 歲偷芒果。從洛克、里德到動物論，追問忘記的事算不算自己做的，又該怎麼道歉。",
   "brief": "洛克說意識延伸到哪裡，人格就到哪裡；里德 1785 年用勇敢軍官反駁：軍官記得挨鞭子，將軍記得奪旗卻忘了挨鞭子，照洛克的學說，將軍既是又不是那個男孩。本報原創假設的 80 歲老人想不起 10 歲偷芒果，40 歲時卻記得；心理連續論靠記憶之鏈、里德把記憶當證據、動物論看同一有機體，都說他仍是當年的男孩。分歧在責任：帕菲特認為連結變弱，責任可能減輕；本報推想，「是不是他」和「該怎麼道歉」是兩個問題。",
   "topic_key": "philosophy:reid-brave-officer",
-  "updated_at": "2026-10-11T00:16:00+08:00",
+  "updated_at": "2026-10-18T07:31:36+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -413,5 +413,6 @@
       "url": "https://artuk.org/discover/artworks/reverend-thomas-reid-17101796-professor-of-moral-philosophy-at-the-university-of-glasgow-138862",
       "note": "Henry Raeburn，1796 年，油彩、畫布，76.2 × 63.5 公分，The Hunterian 藏（GLAHA_44012）"
     }
-  ]
+  ],
+  "from_reserve": true
 }

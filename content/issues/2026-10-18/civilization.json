@@ -1,12 +1,12 @@
 {
   "column": "civilization",
-  "date": "reserve",
+  "date": "2026-10-18",
   "reserve_written": "2026-10-10",
   "title": "繩子上的稅：印加怎麼向四千戶派工",
   "dek": "1549 年，一名安地斯人對西班牙書記讀出 26 條結繩：誰去庫斯科築牆、誰守君王遺體、誰製鹽採蜜。這是印加向四千戶收稅的帳。",
   "brief": "印加向登記為 4,000 戶的 Chupaychu 人收稅，按人數派工到各地，產物送進庫斯科與倉庫；據西耶薩記載，帳由各省結繩官記在繩結上，庫斯科另派人巡查欠繳。1549 年讀出的 26 條繩相加是 3,938 人：800 人在庫斯科築牆種田，900 人戍守出征，1,180 人生產布、鹽、古柯等物資，築牆一條還寫明「死了一個，就再補一個」。本報推想，總數貼近戶數，這可能是每戶出一名勞力的派工帳，折損由族群自己吸收，國家握的是固定名額。",
   "topic_key": "civilization:andes-inca-labor-tax-15c",
-  "updated_at": "2026-10-10T23:30:00+08:00",
+  "updated_at": "2026-10-18T07:31:35+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -528,5 +528,6 @@
       "url": "https://commons.wikimedia.org/wiki/File:Qullqa_(Inca_Warehouse)_by_Guaman_Poma.jpg",
       "note": "正文圖檔案"
     }
-  ]
+  ],
+  "from_reserve": true
 }

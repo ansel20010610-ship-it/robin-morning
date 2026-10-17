@@ -1,12 +1,12 @@
 {
   "column": "football",
-  "date": "reserve",
+  "date": "2026-10-18",
   "reserve_written": "2026-10-10",
   "title": "勒科茨球場：同一塊奠基石，用了兩次",
   "dek": "巴薩第一座大型球場怎麼在三個月內蓋好、怎麼因一陣噓聲被停權，又怎麼靠托羅哈的懸挑屋頂撐到諾坎普落成。",
   "brief": "勒科茨球場從 1922 年用到 1957 年，刻著「19-2-1922」的奠基石在 1954 年 3 月 28 日被球迷社團抬到新址，又成了諾坎普的奠基石。1925 年看台噓西班牙國歌，巴薩被停止活動六個月、甘伯被迫離開；1945 年啟用的托羅哈主看台，屋頂從後方伸出 25.30 公尺，中間沒有一根柱子。1966 年 5 月 18 日，俱樂部同意以 2.26 億比塞塔出售舊場地，勒科茨最後是用自己的地皮，替取代它的諾坎普還債。",
   "topic_key": "football:les-corts-stadium",
-  "updated_at": "2026-10-10T23:30:00+08:00",
+  "updated_at": "2026-10-18T07:31:35+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -457,5 +457,6 @@
       "url": "https://commons.wikimedia.org/wiki/File:Camp_de_les_Corts_-_Primera_pedra.JPG",
       "note": "奠基石照片（EXIF 拍攝日期 2010 年 12 月）"
     }
-  ]
+  ],
+  "from_reserve": true
 }
