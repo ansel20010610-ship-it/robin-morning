@@ -1,0 +1,285 @@
+{
+  "column": "music",
+  "date": "2026-10-18",
+  "title": "第 40 小節四十聲部齊響：塔利斯《Spem in alium》",
+  "dek": "八個合唱團、四十個獨立聲部，前 39 小節從沒同時唱過。從一條 1611 年的筆記、一份配上英文歌詞的總譜與一張 1985 年的立體聲錄音，聽這首經文歌怎麼在空間裡移動。",
+  "brief": "塔利斯約 1570 年寫的經文歌《Spem in alium》由八個五聲部合唱團演唱，四十個聲部要到第 40 小節唱到「praeter in te, Deus Israel」才第一次同時發聲。指定錄音是塔利斯學者合唱團在牛津默頓學院禮拜堂錄製、1985 年發行的版本，監製之一 Steve Smith 說他們讓第一合唱團在左、第八合唱團在右。照這個擺位推想，用耳機聽開頭一段，應該能聽出聲音從左邊一路移向右邊。",
+  "topic_key": "music:tallis-spem-in-alium",
+  "updated_at": "2026-10-18T01:10:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "illustration",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Nonsuch_Palace_by_Joris_Hoefnagel.jpg/1280px-Nonsuch_Palace_by_Joris_Hoefnagel.jpg",
+    "width": 1280,
+    "height": 927,
+    "alt": "一幅手工上色的銅版畫，分成上下兩格。上格是一座宮殿的遠景：左右各有一座多層的八角形高塔，塔頂是藍色圓頂與小尖塔，中間是長長的藍色屋頂建築，前方圍著紅磚牆。宮殿外的土路上有騎馬的人、持長矛的步行隨從、兩輛馬車與幾隻狗，左邊是一棵大樹與綠色山坡。最上方以拉丁文寫著「PALATIVM REGIVM IN ANGLIAE REGNO APPELLATVM NONCIVTZ, Hoc est nusquam simile」。兩格之間的紅色帶子上寫著「Effigiavit Georgius Hoefnaglius Anno 1582」。下格是一排穿著各色長裙、戴帽的英格蘭婦女，右側有人在木盆邊洗東西，最右邊一名男子背著一個大木桶走向水槽。",
+    "caption": "無雙宮（Nonsuch Palace）。標題的拉丁文寫它是英格蘭王國的王宮，「Hoc est nusquam simile」（意即無處可比）。1596 年的宮中藏書目錄登記了一份「songe of fortie partes, made by Mr. Tallys」；據 Hugh Keyte 的研究，1609 年宮殿歸亨利王子之後，這份總譜才在書庫裡被找出來。",
+    "credit": "布勞恩與霍根伯格（Georg Braun、Franz Hogenberg）《世界城市》（Civitates Orbis Terrarum）第 5 卷銅版畫，據霍夫納格爾（Joris Hoefnagel）1582 年素描；影像取自 Susan Doran 編《Elizabeth》展覽圖錄（2003），經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Nonsuch_Palace_by_Joris_Hoefnagel.jpg",
+    "made": "1598（銅版）",
+    "depicts": "1582"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "樂曲從一個人開始。第一合唱團的一個聲部獨自唱出「Spem in alium」（除你之外，別無所望），同團的其他聲部依序模仿進來；音樂交到下一個合唱團時，前一團的聲音就一個個停下。這股聲音就這樣繞過八個合唱團，直到第 40 小節，唱到「praeter in te, Deus Israel」（只寄望於你，以色列的神）時，四十個聲部才第一次同時發聲。"
+    },
+    {
+      "type": "p",
+      "text": "這是英國作曲家塔利斯（Thomas Tallis，約 1505–1585）的經文歌《Spem in alium》，一般認為寫於 1570 年前後。編制是八個合唱團，每團五個聲部：女高音、女低音、男高音、男中音、男低音，合起來四十個各自獨立的聲部，演出長度約 10 到 12 分鐘。歌詞取自中世紀英格蘭塞勒姆禮儀（Sarum Rite）晨禱的一段應答聖歌，內容改寫自次經《猶滴傳》。"
+    },
+    {
+      "type": "music",
+      "composer": "塔利斯（Thomas Tallis）",
+      "work": "四十聲部經文歌《Spem in alium》",
+      "work_original": "Spem in alium (motet in 40 parts)",
+      "composed": "約 1570 年",
+      "performers": "彼得・菲利普斯（Peter Phillips）指揮 塔利斯學者合唱團（The Tallis Scholars）",
+      "recording": "Gimell CDGIM006，錄於牛津默頓學院禮拜堂（Merton College Chapel），1985 年 9 月發行；監製 Steve C Smith、Peter Phillips，錄音師 Mike Clements",
+      "duration": "約 10 分鐘（本錄音 9 分 53 秒）",
+      "movements": [
+        "單一樂章，無伴奏，八個五聲部合唱團"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Tallis Spem in alium Tallis Scholars Peter Phillips",
+        "artist_hint": "The Tallis Scholars",
+        "track_filter": [
+          "Spem in alium"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "這張唱片是 Gimell 唱片公司的 CDGIM006，Hyperion 網站的資料寫明在牛津默頓學院禮拜堂錄製、1985 年 9 月發行。後來這些錄音又收進雙碟合輯《The Tallis Scholars sing Thomas Tallis》（CDGIM203）。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "選它的理由在錄音方法。2010 年，這張唱片的監製之一 Steve Smith 在 MusicWeb International 的訪談裡回憶這次錄音：「no one had really made a recording of Spem for stereo before」（在那之前，沒有人真正為立體聲錄過這首曲子；本文自譯）。禮拜堂寬度不夠，四十個人只好搭起台架排成幾列，但他們刻意讓「the first choir on the left, the eighth choir was on the right」（第一合唱團在左，第八合唱團在右；本文自譯），各團之間分出界線，而且只用一組立體聲麥克風收音。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "對聆聽者來說，這代表樂譜上的空間設計直接變成了耳機裡的左右位置。開頭那個聲部從左耳出現，聲音一路往右移動，第 40 小節之前誰在唱、誰剛停下，都可以靠方向分辨。這首曲子的趣味大半在聲音的移動，所以本文選這張錄音。"
+    },
+    {
+      "type": "h",
+      "text": "唯一的早期記載：1611 年的一條筆記"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "關於這首曲子怎麼來的，只有一條早期記載。據 Hugh Keyte 為 Thomas Tallis Society 版樂譜所撰的導論，1611 年 11 月 27 日，倫敦中殿律師學院（Middle Temple）一位名叫 Wateridge 的人在筆記本上抄下一則從朋友 Ellis Swayne 那裡聽來的故事，題為「Of Prickesong」。筆記說：伊莉莎白女王在位時，有一首「30 個聲部」的歌傳進英格蘭，義大利人因此被稱為「世界之巔」，這首歌唱起來如天籟；某位公爵問，英格蘭人裡有沒有誰寫得出一樣好的歌？塔利斯接下挑戰，寫了一首 40 個聲部的歌，在阿倫德爾府（Arundel House）的長廊演唱。結果是："
+    },
+    {
+      "type": "quote",
+      "original": "wch so farre suppassed ye other tht the Duke hearinge of ye songe tooke his chayne of gold frm of his necke & putt yt about Tallice his necke & gave yt him",
+      "text": "這首歌遠遠勝過另一首，公爵聽了，便從自己脖子上取下金鍊，掛到塔利斯的脖子上，送給了他。",
+      "cite": "Wateridge 筆記本，1611 年 11 月 27 日（劍橋大學圖書館 MS Dd.5.14）；原文據 Hugh Keyte 導論的轉錄，保留原拼寫；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "筆記最後還補了一句：這首歌後來又在「王子的加冕」上唱過一次。Keyte 指出，這段記載其實在 1878 年就有人在《音樂時報》（The Musical Times）上發表過，卻被遺忘了一百多年，直到 1981 年才重新被找出來。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Arundel_House_from_the_South_MET_DP856650.jpg/1280px-Arundel_House_from_the_South_MET_DP856650.jpg",
+      "width": 1280,
+      "height": 587,
+      "alt": "一幅黑白細線蝕刻版畫，畫的是一座宅邸的大中庭。正中是一棟兩層的半木造長屋，白牆上露出深色木框，中央有一座突出的門廊與外側樓梯；兩旁和遠處是高低不一的屋頂、煙囪與一座尖塔。前景的石板地上散著穿長披風、戴寬邊帽的男子，有人兩三成群交談，左下角有一輛馬車，右邊有人牽著馬。上方題字「Aula Domus Arrundelianae Londini, Meridiem versus」，右下角小字「Adam A. Bierling delin: W. Hollar fecit 1646」。",
+      "caption": "倫敦阿倫德爾府的中庭，面向南方。Wateridge 的筆記說塔利斯的四十聲部歌曲就在這座宅邸的長廊首唱。這張版畫刻於 1646 年，比故事發生的時間晚了七十多年，看到的是宅邸後來的樣子，畫裡也無法指認哪一處是那條長廊。",
+      "credit": "霍拉（Wenceslaus Hollar）蝕刻，據 Adam Alexius Bierling 素描；紙本 7.9 × 19 公分，大都會藝術博物館藏（59.598.1b），影像經 Wikimedia Commons",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Arundel_House_from_the_South_MET_DP856650.jpg",
+      "made": "1646"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "筆記沒寫公爵是誰。伊莉莎白一世在位期間英格蘭只剩一個公爵爵位，所以一般認為是第四代諾福克公爵湯瑪斯・霍華德（Thomas Howard）；他在 1572 年被處死，如果故事可信，作品就不會晚於這一年。至於那首「義大利的歌」，學者多半指向史特里吉奧（Alessandro Striggio）：他在 1567 年 6 月到過英格蘭，停留約兩週，寫過一首 1561 年的四十聲部經文歌（今以《Ecce beatam lucem》之名流傳），以及一部 40 聲部、最後一段〈羔羊頌〉擴充到 60 聲部的彌撒。不過 Keyte 指出，沒有證據顯示他把這首經文歌帶到了英格蘭。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "其他說法也不少。Rutter 在 1994 年的唱片解說裡說，有人提出首演可能是在 1573 年伊莉莎白的四十歲生日，並說學者 Paul Doe 把歌詞背後猶滴斬殺敵將的故事讀成政治寓言：猶滴是伊莉莎白，敵將是西班牙的腓力。Keyte 的導論轉述 Doe 的論點時，強調的卻是另一面：當時英格蘭任何以猶滴故事為題的作品，都容易被懷疑是天主教異議者在暗示弒君。Keyte 也提醒，Wateridge 的故事是輾轉聽來的，「at best unreliable」（充其量並不可靠；本文自譯）；他自己推測首演在 1571 年或 1570 年底，與當年企圖刺殺女王的里多菲陰謀（Ridolfi Plot）有關。這些都是推論，沒有一條有直接文件證明。"
+    },
+    {
+      "type": "h",
+      "text": "從無雙宮書庫到王子的宴會"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "比較確定的線索在無雙宮（Nonsuch Palace）。這座亨利八世興建的宮殿 1557 年歸阿倫德爾伯爵亨利・菲查倫（Henry FitzAlan）所有，他的女婿 Lumley 男爵在 1591 年把宮殿還給王室抵債。1596 年的宮中藏書目錄裡，登記著一份「songe of fortie partes, made by Mr. Tallys」（塔利斯先生所作的四十聲部歌曲）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Keyte 的整理是：1609 年，宮殿交給詹姆士一世的長子亨利王子，那份被認為是塔利斯親筆的總譜才被找出來；1610 年亨利受封威爾斯親王，曲子在白廳宮的受封宴上演唱。亨利 1612 年早逝，1616 年他的弟弟、後來的查理一世受封時，宴會上又唱了兩遍，其中至少一遍換上了英文新詞「Sing and glorify」。原始總譜後來失傳，現存最早的抄本是大英圖書館的 Egerton MS 3512，一份配英文歌詞的總譜。Keyte 判定它抄於 1616 年；另有說法認為現存最早的抄本是為 1610 年的受封典禮準備的。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "並不是每個人都相信這首曲子真的是寫來唱的。據 Keyte 引述，作曲家 Thomas Tudway 在 1718 年寫信給一位古樂收藏家，說這首曲子「was not, we may be sure, to be performed, but to remain a memorial of the great skill and ability of the composer」（可以肯定不是用來演出的，而是留作作曲家高超技藝的紀念；本文自譯）。不過 Keyte 也指出，Tudway 看到的是一份 18 世紀拙劣還原拉丁歌詞的抄本。"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：跟著歌詞走"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子沒有分段標記，最可靠的路標是歌詞。下表的小節號依 Keyte 版樂譜；他把四十個聲部看成四個十聲部的大合唱團，每團再分成兩個五聲部小團，所以表中的「第一大團」大致等於一般說法的第一、二合唱團，依此類推。"
+    },
+    {
+      "type": "table",
+      "title": "《Spem in alium》的路標",
+      "head": [
+        "小節",
+        "歌詞",
+        "聽什麼"
+      ],
+      "rows": [
+        [
+          "1 起",
+          "Spem in alium nunquam habui",
+          "一個聲部起頭，模仿進入的聲音一團傳過一團"
+        ],
+        [
+          "23 起",
+          "praeter in te",
+          "新的一串模仿，不照前面的規則走"
+        ],
+        [
+          "40",
+          "praeter in te, Deus Israel",
+          "四十個聲部第一次同時發聲"
+        ],
+        [
+          "44 起",
+          "qui irasceris et propitius eris",
+          "從第四大團開始，往回傳"
+        ],
+        [
+          "65 起",
+          "et omnia peccata hominum",
+          "第一大團空靈的段落，接著全體湧入"
+        ],
+        [
+          "87 起",
+          "Domine Deus, Creator caeli et terrae",
+          "各團以和弦輪流呼應"
+        ],
+        [
+          "108–109 起",
+          "respice (ad) humilitatem nostram",
+          "第一次「respice」：全體一個 A 大調和弦，接著從第三大團傳回第一大團"
+        ],
+        [
+          "到 130",
+          "respice (ad) humilitatem nostram",
+          "第二次「respice」：密集的進入一波接一波，第 130 小節是全曲最高潮的終止"
+        ]
+      ],
+      "caption": "小節號、段落與各團的走向依 Hugh Keyte 為 Thomas Tallis Society 版所寫的序言與導論。Keyte 版恢復了原詩「respice ad」裡的「ad」，其他版本多半唱「respice humilitatem nostram」。"
+    },
+    {
+      "type": "p",
+      "text": "**開頭到第 39 小節。** Keyte 指出，在「Spem in alium」這串模仿裡，規則非常嚴格：新的大團一有聲部進入，前一團就不再有新的進入，接下來的進入都落在新的一團。他認為塔利斯這樣寫，是預想各團之間隔著相當距離。在塔利斯學者合唱團的錄音裡，第一合唱團在左，這一段聽起來就是聲音從左邊出發、一路移到右邊。"
+    },
+    {
+      "type": "p",
+      "text": "**第 40 小節。** 歌詞「praeter in te, Deus Israel」，四十個聲部第一次全部到齊，聲音從單一方向一下子擴散到整個空間。Keyte 認為，這個全體段落到結尾的「respice」會以變形的樣子再出現一次。"
+    },
+    {
+      "type": "p",
+      "text": "**第 44 到 86 小節。** 「qui irasceris」（你會發怒，也會施恩）一句，模仿改從第四大團起頭，往第三、第二大團傳，也就是把開頭的方向倒過來。本文推想，照這張錄音的擺位，聽起來會是聲音從右往左走回來。第 65 小節的「et omnia peccata hominum」（人的一切罪），Keyte 形容第一大團的寫法帶著一種「ethereal」（空靈；本文自譯）的性格，緊接在後的是全體的大合唱。"
+    },
+    {
+      "type": "p",
+      "text": "**第 87 小節起，「Domine Deus」。** 菲利普斯在唱片解說裡寫道，塔利斯對「Domine Deus, creator caeli et terrae」（主神，天地的創造者）這幾個重要的字改用和弦式（主調）寫法；Rutter 的解說則說這句被各團「bounced around」（拋來拋去；本文自譯）。本文推想，在左右分團的錄音裡，這一段最容易聽出合唱團之間一來一往的呼應。"
+    },
+    {
+      "type": "p",
+      "text": "**兩次「respice」到結尾。** 「respice humilitatem nostram」（垂顧我們的卑微）唱了兩次，兩次之前各有一個全體休止。Keyte 描述，第一次以一個出人意料的全體 A 大調和弦開始，接著一串進入從第三大團傳到第一大團，幾乎只用一個低音聲部，聲音輕而透明；第二次則是一波波密集、節奏多變的進入，到第 130 小節的高潮終止，升 F 與還原 F 在不同聲部同時出現。不同版本加的升記號不一樣，這個衝突聽起來的強弱也會不同。Rutter 在唱片解說裡給的建議是：特別去聽每一次全體爆發之後「the mystically lovely polyphonic flowerings」（緊接而來、神祕而美麗的複音綻放；本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "長度也有人算過。依 Keyte 的計算，全曲共 69 個長音符（long），每個等於兩小節；照當時 24 個字母的拉丁字母表，把 TALLIS 六個字母的序數相加，正好也是 69。Keyte 認為這是塔利斯用數字在作品裡簽名；他也注意到，四十個聲部第一次同時響起正好落在第 40 小節。"
+    },
+    {
+      "type": "callout",
+      "label": "延伸聆聽",
+      "text": "同一首曲子的另一種聲音：Keyte 為 I Fagiolini 2011 年發行的史特里吉奧四十聲部彌撒唱片（2010 年錄音）修訂了他的版本，這個版本的《Spem in alium》加入古提琴、木管號（cornett）與薩克布號（sackbut）等樂器；指揮 Robert Hollingworth 說這種人聲加樂器的做法「was a revelation」（讓人眼界大開；本文自譯）。另一個比較對象是 Andrew Parrott 指揮 Taverner Choir 在 1986、1987 年間錄製的版本，他們用 40 位獨唱者，在倫敦北部一座教堂裡排成半圓。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Spem in alium – Hugh Keyte's edition: Foreword and Preface",
+      "publisher": "Thomas Tallis Society",
+      "date": "2021-03-22",
+      "url": "https://www.thomas-tallis-society.org.uk/wp-content/uploads/2021/03/Spem-Preface-22-March-for-Website-2.pdf",
+      "note": "Keyte 序言（署 11.xii.20）與 Nigel Press 前言（署 12.xii.20）：四個十聲部大團、模仿進入的規則、第 44、87、100 小節的段落、第 130 小節終止、Egerton MS 3512 為 1616 年英文歌詞總譜、1609 年於無雙宮發現、Striggio 1567 年 6 月訪英兩週、1561 年四十聲部經文歌、版本 A（Taverner Choir 1986）與 B（I Fagiolini 2011）、Parrott 與 Hollingworth 的說明；「at best unreliable」出自序言 Origin 一節；PDF 修訂版日期 2021-03-22"
+    },
+    {
+      "title": "Spem in alium: Editor's introduction",
+      "publisher": "Thomas Tallis Society（Hugh Keyte 撰）",
+      "date": "2021-01-04",
+      "url": "https://www.thomas-tallis-society.org.uk/wp-content/uploads/2021/01/SpemIntroJan2.pdf",
+      "note": "1.1、1.2、1.3、1.4、1.10、1.20、2.6 等節：Doe 指出猶滴題材易被疑為天主教異議者的弒君暗示、I Fagiolini 2010 年錄音所用修訂版、Wateridge 筆記（1611 年 11 月 27 日，Ellis Swayne，〈Of Prickesong〉）全文轉錄、1878 年與 1981 年的發現、Tudway 1718 年信、無雙宮 1557 與 1591 年的歸屬、1596 年藏書目錄、1610 與 1616 年受封宴、第 40 小節第一次全體、第 65 與 108–109 小節、兩次「respice」與 A 大調和弦、69 個長音符與 TALLIS 的數字；2026-10-18 查閱"
+    },
+    {
+      "title": "Spem in alium",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Spem_in_alium",
+      "note": "約 1570 年、八團五聲部編制、開頭一個聲部起頭、第 40 小節全體、演出長度 10–12 分鐘、塞勒姆禮儀應答聖歌與《猶滴傳》、Wateridge 筆記藏劍橋大學圖書館 MS Dd.5.14、諾福克公爵與 1572 年、Striggio 1567 年 6 月訪英、1610 年抄本之說；2026-10-18 查閱"
+    },
+    {
+      "title": "Tallis: Spem in alium（CDGIM006）",
+      "publisher": "Hyperion Records（Gimell 目錄）",
+      "date": "1985-09",
+      "url": "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDGIM006",
+      "note": "錄音地點默頓學院禮拜堂、監製與錄音師、1985 年 9 月發行、收入 CDGIM203；Peter Phillips 撰唱片解說（© 1994）：「Domine Deus, creator caeli et terrae」改用和弦式寫法"
+    },
+    {
+      "title": "Spem in alium (Tallis) – from CDGIM006",
+      "publisher": "Hyperion Records",
+      "url": "https://www.hyperion-records.co.uk/dw.asp?dc=W22125_GBADM8500001",
+      "note": "曲目長度 9 分 53 秒、編制 40vv 8x SATBarB；John Rutter 撰解說（© 1994）：Striggio 1567 年訪英、有人提出的 1573 年伊莉莎白四十歲生日說、Paul Doe 的猶滴寓言讀法、「Domine Deus」各團拋接、全體之後的複音段落；2026-10-18 查閱"
+    },
+    {
+      "title": "Thomas Tallis – Spem in alium（CDGIM006）",
+      "publisher": "Gimell",
+      "url": "https://www.gimell.com/cdgim006-tallis-spem-in-alium",
+      "note": "唱片公司目錄頁，確認為該錄音的原始發行；2026-10-18 查閱"
+    },
+    {
+      "title": "The Tallis Scholars' and Gimell Records' 30th Anniversary: Peter Phillips and Steve Smith in conversation with John Quinn, Part Two",
+      "publisher": "MusicWeb International（Seen and Heard International）",
+      "date": "2010",
+      "url": "http://www.musicweb-international.com/SandH/2010/Jan-Jun10/gimell_interview2.htm",
+      "note": "訪問者問及 1985 年在默頓學院禮拜堂的錄音（Hyperion 錄音日期標為 Unknown）；Steve Smith 談首次為立體聲錄製、搭台架分列、第一合唱團在左第八在右、單一立體聲麥克風；頁面未標確切日期，列於 2010 年 1–6 月"
+    },
+    {
+      "title": "Arundel House from the South（59.598.1b）",
+      "publisher": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/705259",
+      "note": "Wenceslaus Hollar 蝕刻，紙本 7.9 × 19 公分，The Elisha Whittelsey Collection；館方 API 資料，2026-10-18 查閱"
+    },
+    {
+      "title": "File:Nonsuch Palace by Joris Hoefnagel.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Nonsuch_Palace_by_Joris_Hoefnagel.jpg",
+      "note": "Braun 與 Hogenberg 1598 年《Civitates Orbis Terrarum》第 5 卷銅版畫，據 Hoefnagel 1582 年素描；影像出自 Susan Doran 編 2003 年展覽圖錄"
+    }
+  ]
+}
