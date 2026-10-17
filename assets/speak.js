@@ -18,7 +18,7 @@ function pickVoice() {
 
 // Which elements are read, in reading order. Figures, tables, diagrams and source lists are skipped.
 const B = ":is(.body, .body > .spoiler-body)"; // the body and a revealed spoiler section
-const READ = [".article-head h1", ".article-head .dek", `${B} > p`, `${B} > h2`, ".body blockquote .zh",
+const READ = [".article-head h1", ".article-head .takeaway p", ".article-head .dek", `${B} > p`, `${B} > h2`, ".body blockquote .zh",
   `${B} > ul > li`, `${B} > ol > li`, ".body .scripture .ref", ".body .scripture .verses", ".body .prayer p",
   ".body .news h3", ".body .news p:not(.src)", ".body .callout .lbl", ".body .callout p", ".body .callout li",
   ".body .exercise h3", ".body .exercise li", ".body .timeline li", ".body .spoiler"].join(",");
@@ -36,9 +36,9 @@ function sentences(text) {
   return out;
 }
 
-export function createReader(root, { onState } = {}) {
+export function createReader(root, { onState, selector = READ } = {}) {
   const queue = [];
-  for (const el of root.querySelectorAll(READ)) {
+  for (const el of root.querySelectorAll(selector)) {
     if (el.closest("[data-spoiler-hidden]")) continue;
     // the visible tag label (e.g. 推論) is read first, which keeps the fact / inference distinction audible
     for (const s of sentences(el.textContent || "")) queue.push({ el, text: s });

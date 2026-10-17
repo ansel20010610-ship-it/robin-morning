@@ -84,8 +84,10 @@ function kicker(c, link = false) {
   const inner = `${esc(k.name)}<span class="de">${esc(k.latin || "")}</span>`;
   return link ? `<a class="kicker" href="#/column/${esc(c)}">${inner}</a>` : `<div class="kicker">${inner}</div>`;
 }
+// The front page is the digest: each card carries the three-sentence brief (older articles fall back to the dek).
+const summary = (a) => a.brief ? `<p class="brief">${esc(a.brief)}</p>` : `<p>${esc(a.dek)}</p>`;
 function metaLine(date, a, read) {
-  const bits = [`約 ${a.minutes} 分鐘`];
+  const bits = [a.brief ? `全文約 ${a.minutes} 分鐘` : `約 ${a.minutes} 分鐘`];
   if (a.status === "undetermined") bits.unshift("查核未完成");
   if (a.from_reserve) bits.push("備稿");
   if (read.has(`${date}/${a.column}`)) bits.push('<span class="read-mark">已讀</span>');
@@ -93,7 +95,7 @@ function metaLine(date, a, read) {
 }
 function itemCard(date, a, read) {
   const th = thumb(a, "th");
-  return `<a class="item${th ? "" : " noimg"}" href="#/a/${date}/${a.column}"><div>${kicker(a.column)}<h3>${esc(a.title)}</h3><p>${esc(a.dek)}</p>${metaLine(date, a, read)}</div>${th}</a>`;
+  return `<a class="item${th ? "" : " noimg"}" href="#/a/${date}/${a.column}"><div>${kicker(a.column)}<h3>${esc(a.title)}</h3>${summary(a)}${metaLine(date, a, read)}</div>${th}</a>`;
 }
 
 const EMBLEM = `<svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
@@ -161,12 +163,14 @@ function viewFront(dateParam) {
   <div class="wrap">
     ${status ? `<div class="status">${status}</div>` : ""}
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的第 ${issue.no} 期・<a href="#/">回到最新一期</a></div>` : ""}
+    ${digestBar(arts)}
     ${mains.length ? `<div class="sec-head"><h2>正刊</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
-    ${lead ? `<a class="lead" href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column)}<h3>${esc(lead.title)}</h3><p>${esc(lead.dek)}</p>${metaLine(issue.date, lead, read)}</a>` : ""}
+    ${lead ? `<a class="lead" href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
     ${mains.slice(1).map((a) => itemCard(issue.date, a, read)).join("")}
     ${supps.length ? `<div class="sec-head"><h2>副刊</h2><span class="de">Feuilleton</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
     ${watch.length ? `<div class="sec-head"><h2>觀測站</h2><span class="de">Beobachtung</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
+    ${arts.some((a) => a.brief) ? `<div class="finish${digestDone().has(issue.date) ? " done" : ""}"><span class="tick" aria-hidden="true">✓</span><b>今天的晨報讀完了</b><span>想深入的，點任何一篇讀全文；沒空也沒關係，重點都在上面了。</span></div>` : ""}
     <footer class="colophon">
       <div class="ornament" aria-hidden="true"><i></i><i></i><i></i></div>
       <div class="latin">Gegründet im Oktober 2026</div>
@@ -174,6 +178,40 @@ function viewFront(dateParam) {
     </footer>
   </div>`;
   prefetch(issue);
+  wireDigest(issue);
+}
+
+// ——— The digest: read the briefs (or hear them), reach the end, done for the day ———
+const DIGEST_READ = ".lead h3, .lead p.brief, .item h3, .item p.brief";
+const digestDone = () => new Set(store.get("digest.done", []));
+let digestReader = null, finishSeen = null;
+function digestBar(arts) {
+  const n = arts.reduce((s, a) => s + (a.brief ? a.brief.length : 0), 0);
+  if (!n) return "";
+  const listen = canSpeak() ? `<button type="button" class="btn ghost" data-digest>${ICON.speak}<span>聽今日摘要</span></button>` : "";
+  return `<div class="digest"><div><b>今日摘要</b><span>每篇三句話，約 ${Math.max(1, Math.round(n / 330))} 分鐘讀完</span></div>${listen}</div>`;
+}
+function wireDigest(issue) {
+  digestReader?.stop(); digestReader = null; finishSeen?.disconnect(); finishSeen = null;
+  const btn = main.querySelector("[data-digest]");
+  if (btn) btn.onclick = () => {
+    digestReader ||= createReader(main, { selector: DIGEST_READ, onState: (st) => {
+      btn.innerHTML = st === "playing" ? `${ICON.pause}<span>暫停</span>` : `${ICON.speak}<span>${st === "paused" ? "繼續聽" : "聽今日摘要"}</span>`;
+      if (st === "done") markDigestDone(issue.date);
+    } });
+    if (!digestReader.length) { toast("這一期還沒有摘要"); return; }
+    digestReader.toggle();
+  };
+  const fin = main.querySelector(".finish");
+  if (fin && "IntersectionObserver" in window) {
+    finishSeen = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { markDigestDone(issue.date); fin.classList.add("done"); } }, { threshold: 0.8 });
+    finishSeen.observe(fin);
+  }
+  cleanup = () => { digestReader?.stop(); digestReader = null; finishSeen?.disconnect(); finishSeen = null; };
+}
+function markDigestDone(date) {
+  const done = store.get("digest.done", []);
+  if (!done.includes(date)) { done.push(date); store.set("digest.done", done.slice(-400)); }
 }
 
 // Load the issue's articles in the background: they open instantly and the service worker keeps them for offline reading,
@@ -219,7 +257,9 @@ async function viewArticle(date, column, my) {
       <button class="icon-btn" type="button" data-save aria-pressed="${isSaved(key)}" aria-label="收藏">${isSaved(key) ? ICON.starOn : ICON.star}</button>
     </div><div class="progress"></div></div>
     <article class="wrap"><div class="read">
-      <header class="article-head">${kicker(column, true)}<h1>${esc(a.title)}</h1><p class="dek">${esc(a.dek)}</p>
+      <header class="article-head">${kicker(column, true)}<h1>${esc(a.title)}</h1>
+        ${a.takeaway ? `<aside class="takeaway"><span class="lbl">帶得走的結論</span><p>${inline(a.takeaway)}</p></aside>` : ""}
+        <p class="dek">${esc(a.dek)}</p>
         <div class="meta">${esc(fmtDate(date))}・第 ${issue?.no ?? ""} 期${minutes ? `・閱讀約 ${minutes} 分鐘` : ""}${updatedNote(date, a)}</div>
         ${a.from_reserve && column === "football" ? `<div class="banner">今晨新聞稿未能如期完成，先刊出這篇備用專題；最新消息併入下一期。</div>` : ""}
         ${a.status === "undetermined" ? `<div class="banner">本期查核未完成，無法判定是否有新進展；這不代表沒有新消息。</div>` : ""}
@@ -389,6 +429,7 @@ function snippet(text, q) {
 
 function viewArchive() {
   const pubs = publishedIssues();
+  const done = digestDone();
   const draw = (q) => {
     const ql = q.trim().toLowerCase();
     let last = "";
@@ -398,7 +439,7 @@ function viewArchive() {
       const [y, m, d] = iss.date.split("-");
       const head = `${y}-${m}` !== last ? `<div class="month">${Number(m)} 月 ${y}</div>` : "";
       last = `${y}-${m}`;
-      return `${head}<a class="issue-row" href="#/issue/${iss.date}"><div class="d"><b>${Number(d)}</b><span>週${esc(iss.weekday)}・No.${iss.no}</span></div>
+      return `${head}<a class="issue-row" href="#/issue/${iss.date}"><div class="d"><b>${Number(d)}</b><span>週${esc(iss.weekday)}・No.${iss.no}</span>${done.has(iss.date) ? '<i class="done-mark" title="已讀完摘要" aria-label="已讀完摘要">✓</i>' : ""}</div>
         <ul>${arts.map((a) => `<li><i>${esc(col(a.column).name)}</i>${esc(a.title)}</li>`).join("")}</ul></a>`;
     }).join("");
     main.querySelector(".list").innerHTML = rows || `<p class="empty">${ql ? "沒有符合的文章。" : "還沒有往期。"}</p>`;

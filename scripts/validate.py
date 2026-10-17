@@ -17,11 +17,11 @@ import sys
 import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (iter_reserve, RESERVE, BROWSER_IMAGE_TYPES, article_path, cjk_count, figures_of, http_get, image_key,  # noqa: E402
+from common import (iter_reserve, RESERVE, BROWSER_IMAGE_TYPES, CJK, article_path, cjk_count, figures_of, http_get, image_key,  # noqa: E402
                     image_page, iter_articles, load_config, load_json, raw_image_ext)
 
 LENGTH = {  # (min, max) CJK characters in body
-    "football": (1800, 3500), "perio": (2500, 4000), "music": (1800, 3000),
+    "football": (1800, 3500), "perio": (1200, 2000), "music": (1800, 3000),
     "civilization": (3000, 4500), "devotion": (1200, 2200),
     "art": (2500, 4000), "photo": (2000, 3500), "city": (2500, 4000),
     "fiction": (2500, 4000), "literature": (2500, 4000), "tactics": (2000, 3500),
@@ -108,6 +108,32 @@ def near_duplicate(key, used):
     return None
 
 
+BRIEF_SINCE = "2026-10-18"  # issues from this date on (and every reserve) must carry a brief
+
+
+def check_brief(brief, dek, d, E, W):
+    """The three-sentence summary the front page shows instead of the article (STYLE.md section 7)."""
+    required = str(d) == "reserve" or str(d) >= BRIEF_SINCE
+    if brief is None or (isinstance(brief, str) and not brief.strip()):
+        if required:
+            E("缺少 brief：三句話摘要，80–160 字，首頁只顯示這一段（STYLE.md 第七節）")
+        return
+    if not isinstance(brief, str):
+        E("brief 需為字串（目前是%s）" % jtype(brief))
+        return
+    n = len(CJK.findall(brief))
+    if n < 50 or n > 200:
+        E("brief %d 字，要在 80–160 字左右" % n)
+    elif n < 80 or n > 160:
+        W("brief %d 字，建議 80–160 字" % n)
+    if len(re.findall(r"[。！？]", brief)) > 4:
+        W("brief 超過三句：摘要只要三句")
+    if dek and brief.strip() == dek.strip():
+        E("brief 不可與導言相同")
+    if re.match(r"^\s*(本文|這篇|此文)", brief):
+        W("brief 不要以「本文、這篇」開頭，直接講內容")
+
+
 def validate_file(cfg, d, col, path, check_urls=False, used_images=None, used_topics=None):
     """Return (errors, warnings) for one article file. Never raises on malformed content."""
     errs, warns = [], []
@@ -138,6 +164,8 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
     if art.get("column") != col:
         E("column 應為 %s" % col)
     if d == "reserve":
+        if art.get("hold"):
+            E("備稿暫停使用：%s（修好後刪掉 hold 欄位）" % art["hold"])
         if art.get("date") != "reserve":
             E("備稿的 date 必須是 \"reserve\"")
         rw = art.get("reserve_written")
@@ -173,6 +201,7 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             E("updated_at（%s）晚於現在：填實際完稿時間，用 TZ=Asia/Taipei date +%%Y-%%m-%%dT%%H:%%M:00+08:00" % ua)
     title = art.get("title") if isinstance(art.get("title"), str) else ""
     dek = art.get("dek") if isinstance(art.get("dek"), str) else ""
+    check_brief(art.get("brief"), dek, d, E, W)
     if len(title) > 32:
         W("標題偏長（%d 字）" % len(title))
     if len(dek) > 90:
@@ -406,6 +435,15 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
     if col == "perio":
         if "paper" not in types:
             E("牙周欄缺少 paper 論文卡")
+        elif str(d) == "reserve" or str(d) >= BRIEF_SINCE:
+            card = next(b for b in body if isinstance(b, dict) and b.get("type") == "paper")
+            take = art.get("takeaway") if isinstance(art.get("takeaway"), str) else ""
+            if not take.strip():
+                E("缺少 takeaway：帶得走的結論，一到兩句、40–90 字，放在標題下方（columns/perio.md）")
+            elif not 25 <= len(CJK.findall(take)) <= 110:
+                W("takeaway %d 字，建議 40–90 字" % len(CJK.findall(take)))
+            if not (isinstance(card.get("access"), str) and card["access"].strip()):
+                E("paper 論文卡缺少 access（資料範圍：依全文，或依摘要與後續文獻整理）")
         if not art.get("disclaimer"):
             E("牙周欄缺少 disclaimer")
         if tk != tk.lower():

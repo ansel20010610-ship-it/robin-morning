@@ -75,6 +75,7 @@ def main():
                 "column": col,
                 "title": art.get("title", ""),
                 "dek": art.get("dek", ""),
+                "brief": art.get("brief") or "",
                 "hero": thumb(art.get("hero")),
                 "minutes": max(1, math.ceil(n / 450)),
                 "status": art.get("status"),

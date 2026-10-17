@@ -11,6 +11,7 @@
   "date": "2026-10-11",
   "title": "標題（25 字內，具體，不用驚嘆號）",
   "dek": "導言，一到兩句，70 字內，說清楚這篇回答什麼問題",
+  "brief": "三句話摘要，80–160 字，首頁只顯示這一段；寫法見 STYLE.md 第七節",
   "topic_key": "music:brahms-op98",
   "updated_at": "2026-10-11T03:12:00+08:00",
   "spoiler": null,
@@ -24,6 +25,8 @@
 ```
 
 - `topic_key`：去重鍵，格式 `<欄位>:<穩定識別>`。牙周用 `perio:doi:<DOI 小寫>`；古典用 `music:<作曲者>-<作品編號>`；畫作用 `art:<收藏館>-<館藏號或題名>`；經文用 `devotion:<書卷>-<章>-<節>`。同一個鍵不得在不同日期重複出現（`scripts/ledger.py` 可查已用過的鍵；比對不分大小寫、不計多餘空白）。
+- `takeaway`：**牙周欄必填**，其他欄不用。帶得走的結論，一到兩句、40–90 字，App 放在標題下方的醒目框，寫法見 `columns/perio.md`。
+- `brief`：三句話摘要，**每篇必填**（含備稿與觀測站）。讀者在首頁只讀到這一段，所以它要能獨立成立；寫法見 `STYLE.md` 第七節。
 - `spoiler`：有重大劇透時填一句提醒（例如「本文談到《迷霧之子》第一部結局」），App 會在標題下顯示。
 - `disclaimer`：牙周欄固定填「醫學教學導讀，非個別診療建議。」
 - 觀測站（`fm-watch`、`cosmere-watch`）另有 `"status": "update"` 或 `"status": "undetermined"`（查核失敗時用，見各欄規格）。
@@ -49,7 +52,7 @@
 | `scripture` | `ref`、`book`、`chapter`、`version`、`verses`、`source` | 經文（只用於晨光欄）。用 `scripts/bible.py` 產生；`book` 是 FHL 簡稱（如「詩」），`verses` 為 `[{"n":1,"text":"..."}]`，跨章時個別經節加 `"c": 章`。驗證時會逐節和 FHL 和合本比對 |
 | `prayer` | `text` | 禱告全文（只用於晨光欄） |
 | `music` | 見音樂區塊 | 錄音與 Spotify |
-| `paper` | `citation`、`doi`、`pmid`、`link`，選填 `design`、`sample`、`question` | 論文卡 |
+| `paper` | `citation`、`doi`、`pmid`、`link`、`access`（資料範圍，例「依摘要與後續文獻整理」），選填 `design`、`sample`、`question` | 論文卡 |
 | `exercise` | `title`、`steps`、`criteria`，選填 `note` | 練習：步驟與「怎樣算做到」 |
 | `callout` | `label`、`text` 或 `items` | 框起來的提問或提醒，例如「給史詩創作者的制度問題」 |
 | `spoiler` | `text` | 劇透分隔線，放在劇透段落之前 |

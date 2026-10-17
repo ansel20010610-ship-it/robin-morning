@@ -23,8 +23,8 @@
 4. **查重**：`python3 scripts/ledger.py --column <欄位>`、`python3 scripts/ledger.py --images`（已含備稿用過的主題與圖片）。
 5. **研究與核對**：用 WebSearch、WebFetch 找原始來源。數字、日期、人名、引文都要能在來源找到，找不到就不寫。雲端的 WebSearch 結果常混入內容農場：搜尋時盡量用 `allowed_domains` 限定可信網域，或直接用 WebFetch 打開已知來源。注意：`allowed_domains` 裡只要有一個網站封鎖了我們的抓取程式，整次搜尋就會報錯（400 “not accessible to our user agent”）——遇到這個錯誤就把該網域拿掉重搜，不要放棄搜尋；已知不可用的網站列在 `columns/football.md`。
 6. **找圖**：`python3 scripts/commons.py --search "<關鍵字>"`、`python3 scripts/commons.py "File:<檔名>"`。依 `IMAGES.md`。
-7. **寫稿並驗證**：寫到 `content/issues/<日期>/<欄位>.json`，跑 `python3 scripts/validate.py <日期> --column <欄位> --check-urls`，修到沒有 ERROR。
-8. **審稿（必做）**：每篇另派一個**新的**子代理當審稿編輯，不可由寫稿者自己審。指示它：以懷疑的態度核對至少 8 個關鍵事實與所有直接引文（打開原始來源逐字比對）、用 `commons.py` 核對每張圖的授權與圖說、逐條檢查欄位規格與 `STYLE.md`、找出把推論寫成事實的地方；檢查「今天、昨晚、本週末」等相對時間是否從刊出日早上讀者的角度成立（稿件常在前一天寫好，見 STYLE.md）；只回報有證據的問題，不改檔案。
+7. **寫稿並驗證**：正文定稿後寫 `brief`（三句話摘要，見 `STYLE.md` 第七節）。寫到 `content/issues/<日期>/<欄位>.json`，跑 `python3 scripts/validate.py <日期> --column <欄位> --check-urls`，修到沒有 ERROR。
+8. **審稿（必做）**：每篇另派一個**新的**子代理當審稿編輯，不可由寫稿者自己審。指示它：以懷疑的態度核對至少 8 個關鍵事實與所有直接引文（打開原始來源逐字比對）、用 `commons.py` 核對每張圖的授權與圖說、逐條檢查欄位規格與 `STYLE.md`、找出把推論寫成事實的地方；檢查「今天、昨晚、本週末」等相對時間是否從刊出日早上讀者的角度成立（稿件常在前一天寫好，見 STYLE.md）；核對 `brief` 的每一個事實都在正文裡、數字一致、沒有把推論寫成事實，而且只讀這三句就知道這篇的核心；只回報有證據的問題，不改檔案。
 9. **依審稿意見修正**：每一條先自行核實證據，成立才改；修正事實時同步更新 sources。再跑一次 validate。
 10. **立刻推送**（每完成一篇就推一次）：
     ```
