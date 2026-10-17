@@ -1,0 +1,13 @@
+{
+  "1": {
+    "finished_at": "2026-10-18T01:12:08+08:00",
+    "missing": [
+      "football",
+      "civilization",
+      "literature",
+      "tactics",
+      "philosophy"
+    ],
+    "note": "第 1 班完成晨光（約 21:4–9）、古典（塔利斯 Spem in alium）、牙周（Cairo 2011 RT 分類），三篇皆經獨立審稿並修正後推送；validate 無 ERROR"
+  }
+}
