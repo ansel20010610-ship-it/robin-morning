@@ -2,10 +2,12 @@
   "column": "perio",
   "date": "reserve",
   "reserve_written": "2026-10-11",
-  "title": "茶園工人的 15 年：滿口牙菌斑，三種病程",
-  "dek": "1970 到 1985 年，Löe 團隊追蹤斯里蘭卡兩座茶園的男性工人：牙齦幾乎處處發炎，附著喪失的速度卻分成三群。",
+  "title": "滿口牙菌斑，有人 45 歲掉光牙，有人停在牙齦炎",
+  "dek": "Löe 團隊追蹤斯里蘭卡茶園工人 15 年：牙齦幾乎處處發炎，附著喪失與失牙的速度卻分成快、中、不進展三群。",
+  "takeaway": "沒有常規口腔清潔的茶園工人，牙周破壞速度也天差地遠：約 8% 快速惡化、45 歲牙齒掉光，81% 中等，11% 始終停在牙齦炎。所以別只看牙菌斑多寡判斷病程，要像 2017 年分級那樣，看破壞和年齡、牙菌斑量相不相稱。",
+  "brief": "Löe 團隊 1970 到 1985 年追蹤斯里蘭卡 480 名從未接觸牙科預防或治療的男性茶園工人，看牙周病在不受干預時怎麼走。牙菌斑普遍堆積、牙齦幾乎處處發炎，病程卻分三種：約 8% 快速進展，35 歲平均附著喪失約 9 毫米、45 歲牙齒全部失去；約 81% 中等進展，約 11% 始終停在牙齦炎。意思是牙菌斑多寡不能拿來預估一個人的病程，2017 年新分類用「分級」評估進展速度，提出時也引用了這篇。",
   "topic_key": "perio:doi:10.1111/j.1600-051x.1986.tb01487.x",
-  "updated_at": "2026-10-11T12:53:00+08:00",
+  "updated_at": "2026-10-17T19:35:00+08:00",
   "spoiler": null,
   "disclaimer": "醫學教學導讀，非個別診療建議。",
   "hero": {
@@ -15,7 +17,7 @@
     "width": 1280,
     "height": 857,
     "alt": "山坡上一行行修剪齊平的茶樹，中間一條紅土小路往下彎進樹林；遠方是層疊的藍色山脈與多雲的天空。畫面裡沒有人。",
-    "caption": "斯里蘭卡中部山區 Haputale 的 Dambatenne 茶園，2013 年攝；上傳者註明海拔約 1,800 公尺。Löe 等人追蹤的是斯里蘭卡兩座茶園的男性工人，論文摘要沒有寫是哪兩座。這張照片只呈現茶園地景，不是該研究的現場照片，無法確認是否為研究所在的茶園；畫面中也沒有人。",
+    "caption": "斯里蘭卡中部山區 Haputale 的 Dambatenne 茶園，2013 年攝。這是茶園地景，不是研究期間的照片，也無法確認是否為研究所在的茶園；畫面中沒有人，與論文受試者無關。",
     "credit": "Adbar，Wikimedia Commons",
     "license": "CC BY-SA 3.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -25,36 +27,16 @@
   "body": [
     {
       "type": "p",
-      "text": "1970 年，斯里蘭卡兩座茶園的 480 名男性工人接受第一次牙周檢查，年齡 14 到 31 歲。這群人從未接觸任何牙科預防或治療計畫，也沒有常規的口腔清潔習慣，牙面普遍堆著大量牙菌斑、牙結石與色素，牙齦幾乎處處發炎。追蹤 15 年後，Harald Löe 與 Anerud、Boysen、Morrison 在 1986 年 5 月號的《Journal of Clinical Periodontology》報告：到 35 歲，其中一群人平均附著喪失（loss of attachment）約 9 mm，多數人約 4 mm，還有一群不到 1 mm。"
+      "text": "沒有常規口腔清潔、從未接觸牙科預防或治療的人，牙面堆滿牙菌斑與牙結石，牙齦幾乎處處發炎，牙周破壞的速度卻分成三種：約 8% 快速進展，45 歲時牙齒已全部失去；約 81% 中等進展；約 11% 始終沒有超出牙齦炎。這是 Löe 團隊在斯里蘭卡兩座茶園，追蹤 480 名入組時 14 到 31 歲的男性工人 15 年（1970 到 1985 年）得到的結果。同一團隊 1978 年的期中報告還認為，牙周病在不受干預時大致以均勻的速度持續進展；這篇把它拆成了三種速度，對診間的意思是：牙菌斑多寡不能拿來預估一個人的病程，要看他自己破壞得多快。"
     },
     {
       "type": "h",
-      "text": "問題：牙齦發炎之後，會不會一路走到掉牙"
+      "text": "牙結石多的病人，不一定是走得快的那位"
     },
     {
       "type": "p",
-      "text": "Löe 在 1965 年以〈人類實驗性牙齦炎〉（Experimental gingivitis in man）研究牙齦炎怎麼開始。接下來的問題是開始之後的事：牙齦炎會不會必然進展成破壞附著組織的牙周炎，進展多快，什麼時候開始掉牙。要回答，得看疾病在沒有人干預時怎麼走。Löe 團隊在 1969 年於挪威奧斯陸、1970 年於斯里蘭卡各建立一個男性族群，長期追蹤。1971 年，三人以丹麥文在《Tandlægebladet》介紹這項計畫，PubMed 著錄的英譯標題是 The long term evolution of periodontal diseases. A research project in Ceylon（牙周病的長期演變：一項在錫蘭的研究計畫）。1986 年論文刊出時，四位作者的單位都是美國國家牙科研究所（National Institute of Dental Research, NIDR），Löe 在 1983 到 1994 年任該所所長。"
-    },
-    {
-      "type": "p",
-      "tag": "史料",
-      "text": "1978 年的設計與基線報告寫明兩組的差別。挪威組是 565 名男性學生與教師，口腔衛生良好到極佳，牙齦炎輕微；斯里蘭卡組是 480 名茶園工人，口腔衛生差、牙結石很多，牙齦普遍中度到重度發炎，沒有齲齒，也沒有任何填補或修復體。30 多歲的斯里蘭卡工人，平均附著喪失已超過 3 mm。"
-    },
-    {
-      "type": "p",
-      "tag": "史料",
-      "text": "同一年的期中報告比較兩組 40 歲前的破壞速度。斯里蘭卡工人接近 40 歲時，平均附著喪失 4.50 mm；挪威人略高於 1.5 mm。報告的結論偏向一個整齊的圖像："
-    },
-    {
-      "type": "quote",
-      "text": "在不受干預的情況下，牙周病灶以相對均勻的速度進展。",
-      "original": "without interference the periodontal lesion progresses at a relatively even pace",
-      "cite": "Löe 等，《Journal of Periodontology》1978 年 12 月號摘要；本文自譯"
-    },
-    {
-      "type": "p",
-      "tag": "學者解釋",
-      "text": "1984 年，Socransky、Haffajee、Goodson 與 Lindhe 提出另一種模型。過去認為常見的破壞性牙周病會緩慢、連續地進展，直到治療或失牙；他們指出，這個「連續疾病」（continuous disease）假說和新的縱向資料不合：破壞在個別部位以短暫的爆發發生，之後進入緩解，有些部位一生都不發病。1986 年這篇論文列了 10 篇參考文獻，其中包括 Socransky 等人的這篇；作者在正文中怎麼回應，本文未能讀到。"
+      "tag": "原創假設",
+      "text": "以下是本報設計的假設情境，不是真實個案，也不是診療建議。兩位病人同一天回診：一位 50 歲，牙結石厚、牙齦一碰就流血，全口附著喪失（clinical attachment loss）大多在 2 毫米上下；另一位 28 歲，牙菌斑不算多，下顎第一大臼齒的鄰接面（interproximal）卻已有 5 毫米的附著喪失。直覺上會先擔心牙結石厚的那位。斯里蘭卡的資料提醒，在牙菌斑和牙齦發炎幾乎無所不在的族群裡，破壞速度仍然可以差很多；誰走得快，要看破壞和年齡、牙菌斑量相不相稱。"
     },
     {
       "type": "paper",
@@ -62,319 +44,71 @@
       "doi": "10.1111/j.1600-051x.1986.tb01487.x",
       "pmid": "3487557",
       "link": "https://onlinelibrary.wiley.com/doi/10.1111/j.1600-051X.1986.tb01487.x",
+      "access": "依摘要與後續文獻整理",
       "question": "在從未接觸牙科預防與治療的族群裡，牙周病何時開始、進展多快、何時造成失牙？每個人都一樣嗎？",
       "design": "縱向觀察研究，無介入；1970 年基線，1971、1973、1977、1982、1985 年複查；同兩位檢查者記分",
       "sample": "斯里蘭卡兩座茶園的 480 名男性工人，入組時 14–31 歲；1985 年仍有 161 名自第一次檢查起參與者"
     },
     {
-      "type": "p",
-      "text": "說明：本文未能取得原論文全文，依摘要與同一研究的其他報告、後續文獻整理。摘要依期刊網站與 Crossref 所載的完整版；PubMed 收錄的摘要在 400 字處截斷，少了最後兩句。頁碼依期刊網站與 Crossref 為 431–440，PubMed 著錄為 431–45，部分後續文獻引作 431–445。"
-    },
-    {
       "type": "h",
-      "text": "研究設計：480 人、六次檢查、兩位檢查者"
+      "text": "480 名茶園工人、15 年、6 次檢查"
     },
     {
       "type": "p",
-      "text": "依摘要，1970 年第一次檢查之後，研究團隊在 1971、1973、1977、1982 與 1985 年複查。各項臨床指數從頭到尾由同兩位受過完整訓練、有經驗的檢查者記分；每位檢查者自身的再現性在基線測過，研究期間定期重測。到 1985 年最後一次檢查，從第一次就參加的人還有 161 名，是原先 480 人的 33.5%。"
-    },
-    {
-      "type": "p",
-      "text": "分組依據是鄰接面（interproximal）的附著喪失與牙齒死亡率（tooth mortality rate），也就是失牙的速度。摘要沒有寫分組的切點，也沒有寫各組人數，只給約 8%、81%、11% 三個比例；這些比例以 480 人還是 161 人為分母，摘要沒有說明。統計方法摘要也沒有交代，結果都以組平均的約數呈現。"
-    },
-    {
-      "type": "p",
-      "text": "同一研究的其他報告補上一些測量細節。據 Neely 等（2001）對這批資料的描述，附著程度量的是第三大臼齒以外各牙的近中面與近中頰面，另記牙菌斑指數（Plaque Index, PlI）、牙齦指數（Gingival Index, GI）、牙結石指數（Calculus Index, CI）與齲齒指數。1978 年的失牙報告則在每次檢查時記錄第三大臼齒以外的恆牙數，所以每人最多 28 顆。"
-    },
-    {
-      "type": "figure",
-      "id": "f1",
-      "kind": "illustration",
-      "src": "https://upload.wikimedia.org/wikipedia/commons/6/65/Periodontal_terms_diagram_gingival_recession.png",
-      "width": 363,
-      "height": 310,
-      "alt": "一顆牙與周圍牙齦的剖面線稿：上方白色牙冠，下方米黃色牙根，兩側是橘色的牙齦與支持組織。左側牙齦退縮，牙根露出，牙齦與牙根之間有一道囊袋。左邊三根標尺：1 從牙冠與牙根交界量到囊袋底，2 從同一交界量到牙齦邊緣，3 從牙齦邊緣量到囊袋底。",
-      "caption": "附著喪失的量法：1 是臨床附著喪失，從牙骨質琺瑯質交界（cemento-enamel junction, CEJ）量到囊袋底，等於 2 牙齦退縮（gingival recession）加 3 探測深度（probing depth）。1986 年的分組用的是鄰接面的附著喪失。這是一般教學示意圖，不是該研究的測量圖。",
-      "credit": "Lesion，Wikimedia Commons",
-      "license": "CC BY-SA 3.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Periodontal_terms_diagram_gingival_recession.png",
-      "made": "2014"
-    },
-    {
-      "type": "p",
-      "tag": "本文讀法",
-      "text": "年齡範圍要留意怎麼來的。每個人最多被追蹤 15 年（1970 到 1985 年），論文標題裡 14 到 46 歲這條年齡軸，是把入組年齡不同的人接起來的：14 歲入組的人，最後一次檢查時 29 歲；31 歲入組的人是 46 歲。所以 35 歲與 45 歲的數值，不完全來自同一群人。"
+      "text": "1970 年第一次檢查之後，研究團隊在 1971、1973、1977、1982 與 1985 年複查，各項臨床指數從頭到尾由同兩位受過訓練、有經驗的檢查者記錄。每人最多被追蹤 15 年，論文標題的 14 到 46 歲，是不同年齡入組的人接起來的；到 1985 年，從第一次就參加的人還有 161 名。這群工人幾乎沒有齲齒，作者因此把缺的牙基本上都歸給牙周病。分組依據是鄰接面的附著喪失與失牙速度，分成快速進展（rapid progression, RP）、中等進展（moderate progression, MP）與不進展（no progression, NP）三群。"
     },
     {
       "type": "svg",
       "title": "研究時程（依摘要繪製）",
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\"><text x=\"12\" y=\"22\" font-size=\"13\" font-weight=\"700\">每人最多追蹤 15 年，年齡軸由不同的人接成</text><text class=\"muted\" x=\"40\" y=\"44\" font-size=\"12\">入組時最年輕</text><rect class=\"soft\" x=\"40\" y=\"52\" width=\"290\" height=\"16\" rx=\"3\"/><text x=\"46\" y=\"64\" font-size=\"12\">14 歲</text><text x=\"324\" y=\"64\" font-size=\"12\" text-anchor=\"end\">29 歲</text><text class=\"muted\" x=\"40\" y=\"92\" font-size=\"12\">入組時最年長</text><rect class=\"soft\" x=\"40\" y=\"100\" width=\"290\" height=\"16\" rx=\"3\"/><text x=\"46\" y=\"112\" font-size=\"12\">31 歲</text><text x=\"324\" y=\"112\" font-size=\"12\" text-anchor=\"end\">46 歲</text><line class=\"muted line\" x1=\"40\" y1=\"150\" x2=\"330\" y2=\"150\" stroke-width=\"1.5\"/><line class=\"muted line\" x1=\"40.0\" y1=\"44\" x2=\"40.0\" y2=\"150\" stroke-width=\"0.8\" stroke-dasharray=\"2 3\"/><circle class=\"accent\" cx=\"40.0\" cy=\"150\" r=\"5\"/><text x=\"40.0\" y=\"170\" font-size=\"11\" text-anchor=\"middle\">1970</text><line class=\"muted line\" x1=\"59.3\" y1=\"44\" x2=\"59.3\" y2=\"150\" stroke-width=\"0.8\" stroke-dasharray=\"2 3\"/><circle class=\"accent\" cx=\"59.3\" cy=\"150\" r=\"5\"/><text x=\"59.3\" y=\"184\" font-size=\"11\" text-anchor=\"middle\">1971</text><line class=\"muted line\" x1=\"98.0\" y1=\"44\" x2=\"98.0\" y2=\"150\" stroke-width=\"0.8\" stroke-dasharray=\"2 3\"/><circle class=\"accent\" cx=\"98.0\" cy=\"150\" r=\"5\"/><text x=\"98.0\" y=\"170\" font-size=\"11\" text-anchor=\"middle\">1973</text><line class=\"muted line\" x1=\"175.3\" y1=\"44\" x2=\"175.3\" y2=\"150\" stroke-width=\"0.8\" stroke-dasharray=\"2 3\"/><circle class=\"accent\" cx=\"175.3\" cy=\"150\" r=\"5\"/><text x=\"175.3\" y=\"170\" font-size=\"11\" text-anchor=\"middle\">1977</text><line class=\"muted line\" x1=\"272.0\" y1=\"44\" x2=\"272.0\" y2=\"150\" stroke-width=\"0.8\" stroke-dasharray=\"2 3\"/><circle class=\"accent\" cx=\"272.0\" cy=\"150\" r=\"5\"/><text x=\"272.0\" y=\"170\" font-size=\"11\" text-anchor=\"middle\">1982</text><line class=\"muted line\" x1=\"330.0\" y1=\"44\" x2=\"330.0\" y2=\"150\" stroke-width=\"0.8\" stroke-dasharray=\"2 3\"/><circle class=\"accent\" cx=\"330.0\" cy=\"150\" r=\"5\"/><text x=\"330.0\" y=\"170\" font-size=\"11\" text-anchor=\"middle\">1985</text><text class=\"muted\" x=\"12\" y=\"154\" font-size=\"11\">檢查</text><rect class=\"soft\" x=\"12\" y=\"198\" width=\"336\" height=\"44\" rx=\"6\"/><text x=\"24\" y=\"217\" font-size=\"12\">1970 年第一次檢查：480 人</text><text class=\"accent\" x=\"24\" y=\"235\" font-size=\"12\">1985 年仍在、且從第一次就參加：161 人（33.5%）</text></svg>",
-      "caption": "橫軸依年份等比例繪製，紅點是六次檢查。兩條橫條是入組時年齡最小與最大的人在 1970 到 1985 年間的年齡；比例 33.5% 為本文計算。"
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\"><text x=\"12\" y=\"22\" font-size=\"13\" font-weight=\"700\">每人最多追蹤 15 年，年齡軸由不同的人接成</text><text class=\"muted\" x=\"40\" y=\"44\" font-size=\"12\">入組時最年輕</text><rect class=\"soft\" x=\"40\" y=\"52\" width=\"290\" height=\"16\" rx=\"3\"/><text x=\"46\" y=\"64\" font-size=\"12\">14 歲</text><text x=\"324\" y=\"64\" font-size=\"12\" text-anchor=\"end\">29 歲</text><text class=\"muted\" x=\"40\" y=\"92\" font-size=\"12\">入組時最年長</text><rect class=\"soft\" x=\"40\" y=\"100\" width=\"290\" height=\"16\" rx=\"3\"/><text x=\"46\" y=\"112\" font-size=\"12\">31 歲</text><text x=\"324\" y=\"112\" font-size=\"12\" text-anchor=\"end\">46 歲</text><line class=\"muted line\" x1=\"40\" y1=\"150\" x2=\"330\" y2=\"150\" stroke-width=\"1.5\"/><line class=\"muted line\" x1=\"40.0\" y1=\"44\" x2=\"40.0\" y2=\"150\" stroke-width=\"0.8\" stroke-dasharray=\"2 3\"/><circle class=\"accent\" cx=\"40.0\" cy=\"150\" r=\"5\"/><text x=\"40.0\" y=\"170\" font-size=\"11\" text-anchor=\"middle\">1970</text><line class=\"muted line\" x1=\"59.3\" y1=\"44\" x2=\"59.3\" y2=\"150\" stroke-width=\"0.8\" stroke-dasharray=\"2 3\"/><circle class=\"accent\" cx=\"59.3\" cy=\"150\" r=\"5\"/><text x=\"59.3\" y=\"184\" font-size=\"11\" text-anchor=\"middle\">1971</text><line class=\"muted line\" x1=\"98.0\" y1=\"44\" x2=\"98.0\" y2=\"150\" stroke-width=\"0.8\" stroke-dasharray=\"2 3\"/><circle class=\"accent\" cx=\"98.0\" cy=\"150\" r=\"5\"/><text x=\"98.0\" y=\"170\" font-size=\"11\" text-anchor=\"middle\">1973</text><line class=\"muted line\" x1=\"175.3\" y1=\"44\" x2=\"175.3\" y2=\"150\" stroke-width=\"0.8\" stroke-dasharray=\"2 3\"/><circle class=\"accent\" cx=\"175.3\" cy=\"150\" r=\"5\"/><text x=\"175.3\" y=\"170\" font-size=\"11\" text-anchor=\"middle\">1977</text><line class=\"muted line\" x1=\"272.0\" y1=\"44\" x2=\"272.0\" y2=\"150\" stroke-width=\"0.8\" stroke-dasharray=\"2 3\"/><circle class=\"accent\" cx=\"272.0\" cy=\"150\" r=\"5\"/><text x=\"272.0\" y=\"170\" font-size=\"11\" text-anchor=\"middle\">1982</text><line class=\"muted line\" x1=\"330.0\" y1=\"44\" x2=\"330.0\" y2=\"150\" stroke-width=\"0.8\" stroke-dasharray=\"2 3\"/><circle class=\"accent\" cx=\"330.0\" cy=\"150\" r=\"5\"/><text x=\"330.0\" y=\"170\" font-size=\"11\" text-anchor=\"middle\">1985</text><text class=\"muted\" x=\"12\" y=\"154\" font-size=\"11\">檢查</text><rect class=\"soft\" x=\"12\" y=\"198\" width=\"336\" height=\"44\" rx=\"6\"/><text x=\"24\" y=\"217\" font-size=\"12\">1970 年第一次檢查：480 人</text><text class=\"accent\" x=\"24\" y=\"235\" font-size=\"12\">1985 年仍在、且從第一次就參加：161 人</text></svg>",
+      "caption": "橫軸依年份等比例繪製，紅點是六次檢查；兩條橫條是入組時最年輕與最年長者在 1970 到 1985 年間的年齡。原創圖解。"
     },
     {
       "type": "h",
-      "text": "主要結果：快、中、不進展三群"
+      "text": "每 100 人：8 人快速惡化、81 人中等、11 人停在牙齦炎"
     },
     {
       "type": "p",
-      "text": "摘要把這群人分成三個次族群：約 8% 屬快速進展（rapid progression, RP），約 81% 屬中等進展（moderate progression, MP），約 11% 的人牙周病沒有超出牙齦炎（no progression, NP）。到 35 歲，三群的平均附著喪失分別約為 9 mm、4 mm 與不到 1 mm；到 45 歲，RP 組約 13 mm，MP 組約 7 mm。每年的破壞速度，RP 組在 0.1 到 1.0 mm 之間，MP 組 0.05 到 0.5 mm，NP 組 0.05 到 0.09 mm。"
-    },
-    {
-      "type": "table",
-      "title": "三個次族群（依摘要）",
-      "head": [
-        "組別",
-        "比例",
-        "35 歲附著喪失",
-        "45 歲附著喪失",
-        "每年破壞速度",
-        "失牙"
-      ],
-      "rows": [
-        [
-          "快速進展（RP）",
-          "約 8%",
-          "約 9 mm",
-          "約 13 mm",
-          "0.1–1.0 mm",
-          "20 歲開始；35 歲失去 12 顆，40 歲 20 顆，45 歲全部失去"
-        ],
-        [
-          "中等進展（MP）",
-          "約 81%",
-          "約 4 mm",
-          "約 7 mm",
-          "0.05–0.5 mm",
-          "30 歲後開始；45 歲平均失去 7 顆"
-        ],
-        [
-          "不進展（NP）",
-          "約 11%",
-          "不到 1 mm",
-          "摘要未載",
-          "0.05–0.09 mm",
-          "基本上沒有失牙"
-        ]
-      ],
-      "caption": "附著喪失為組平均。摘要沒有寫各組人數、標準差或統計檢定；RP 組的失牙數，摘要沒有註明是平均值還是其他計法。"
-    },
-    {
-      "type": "p",
-      "text": "失牙幾乎都記在牙周病的帳上。摘要給的理由是這群人幾乎沒有齲齒，所以缺的牙基本上都因牙周病失去。RP 組 20 歲就開始掉牙，之後 25 年持續增加；MP 組 30 歲以後才開始，並在接下來的 10 年增加；NP 組基本上沒有失牙。"
+      "text": "把這群工人想成 100 個人。約 8 個人快速進展：35 歲時平均附著喪失約 9 毫米，20 歲就開始掉牙，35 歲已少了 12 顆，45 歲牙齒全部失去。約 81 個人中等進展：35 歲平均約 4 毫米，30 歲以後才開始掉牙，45 歲平均少了 7 顆。剩下約 11 個人，35 歲時附著喪失不到 1 毫米，基本上沒有掉牙。作者對整個族群的描述是，牙面普遍而且相當一致地堆著大量牙菌斑、牙結石與色素。"
     },
     {
       "type": "svg",
-      "title": "35 歲與 45 歲的平均附著喪失",
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\"><rect class=\"soft\" x=\"90\" y=\"12\" width=\"12\" height=\"12\"/><text x=\"108\" y=\"23\" font-size=\"12\">35 歲</text><rect class=\"accent\" x=\"170\" y=\"12\" width=\"12\" height=\"12\"/><text x=\"188\" y=\"23\" font-size=\"12\">45 歲</text><text x=\"12\" y=\"57\" font-size=\"13\" font-weight=\"700\">快速進展</text><text class=\"muted\" x=\"12\" y=\"73\" font-size=\"11\">RP，約 8%</text><rect class=\"soft\" x=\"90\" y=\"44\" width=\"128.6\" height=\"15\"/><text x=\"223.6\" y=\"56\" font-size=\"12\">約 9 mm</text><rect class=\"accent\" x=\"90\" y=\"63\" width=\"185.7\" height=\"15\"/><text x=\"280.7\" y=\"75\" font-size=\"12\">約 13 mm</text><text x=\"12\" y=\"117\" font-size=\"13\" font-weight=\"700\">中等進展</text><text class=\"muted\" x=\"12\" y=\"133\" font-size=\"11\">MP，約 81%</text><rect class=\"soft\" x=\"90\" y=\"104\" width=\"57.1\" height=\"15\"/><text x=\"152.1\" y=\"116\" font-size=\"12\">約 4 mm</text><rect class=\"accent\" x=\"90\" y=\"123\" width=\"100.0\" height=\"15\"/><text x=\"195.0\" y=\"135\" font-size=\"12\">約 7 mm</text><text x=\"12\" y=\"177\" font-size=\"13\" font-weight=\"700\">不進展</text><text class=\"muted\" x=\"12\" y=\"193\" font-size=\"11\">NP，約 11%</text><rect class=\"muted line\" x=\"90\" y=\"164\" width=\"14.3\" height=\"15\" stroke-dasharray=\"3 2\"/><text x=\"109.3\" y=\"176\" font-size=\"12\">&lt; 1 mm</text><text class=\"muted\" x=\"94\" y=\"195\" font-size=\"12\">摘要未載</text><line class=\"muted line\" x1=\"90\" y1=\"218\" x2=\"290\" y2=\"218\" stroke-width=\"1\"/><line class=\"muted line\" x1=\"90.0\" y1=\"218\" x2=\"90.0\" y2=\"223\" stroke-width=\"1\"/><text class=\"muted\" x=\"90.0\" y=\"236\" font-size=\"11\" text-anchor=\"middle\">0</text><line class=\"muted line\" x1=\"161.4\" y1=\"218\" x2=\"161.4\" y2=\"223\" stroke-width=\"1\"/><text class=\"muted\" x=\"161.4\" y=\"236\" font-size=\"11\" text-anchor=\"middle\">5</text><line class=\"muted line\" x1=\"232.9\" y1=\"218\" x2=\"232.9\" y2=\"223\" stroke-width=\"1\"/><text class=\"muted\" x=\"232.9\" y=\"236\" font-size=\"11\" text-anchor=\"middle\">10</text><text class=\"muted\" x=\"300\" y=\"222\" font-size=\"11\">mm</text></svg>",
-      "caption": "依摘要的約數繪製，比例尺為 mm。NP 組 35 歲「不到 1 mm」畫成 1 mm 的虛線框；NP 組 45 歲的數值摘要未載。"
-    },
-    {
-      "type": "p",
-      "tag": "本文讀法",
-      "text": "摘要裡有兩處要小心讀。第一，RP 組 45 歲時平均附著喪失約 13 mm，同一段又說這組 45 歲時牙齒全部失去；沒有牙就量不到附著，兩個數字怎麼並存，可能是外推，也可能指不同的人或時點，要讀全文才知道。第二，每年破壞速度的範圍有重疊：NP 組是 0.05 到 0.09 mm，MP 組的下限也是 0.05 mm。三群不是單憑速度切開的，分組同時看附著喪失與失牙速度。"
-    },
-    {
-      "type": "table",
-      "title": "挪威與斯里蘭卡：40 歲前的平均值",
-      "head": [
-        "項目",
-        "挪威（學生與教師）",
-        "斯里蘭卡（茶園工人）"
-      ],
-      "rows": [
-        [
-          "基線口腔狀況",
-          "口腔衛生良好到極佳，牙齦炎輕微",
-          "口腔衛生差，牙結石多，牙齦中度到重度發炎"
-        ],
-        [
-          "接近 40 歲的平均附著喪失",
-          "略高於 1.5 mm",
-          "4.50 mm"
-        ],
-        [
-          "每年附著喪失：鄰接面",
-          "0.08 mm",
-          "0.30 mm"
-        ],
-        [
-          "每年附著喪失：頰面",
-          "0.1 mm",
-          "0.20 mm"
-        ],
-        [
-          "接近 40 歲的現存牙數（最多 28 顆）",
-          "27.1 顆",
-          "25.6 顆"
-        ],
-        [
-          "每年失牙",
-          "0.01 顆",
-          "0.1–0.3 顆"
-        ]
-      ],
-      "caption": "依 Löe 等 1978 年三篇報告的摘要（設計與基線、40 歲前的破壞速度、40 歲前的失牙）。這是 1986 年論文之前的期中數據，兩組不是隨機分派的比較。"
-    },
-    {
-      "type": "p",
-      "tag": "本文讀法",
-      "text": "把 1978 與 1986 年的報告並讀：NP 組每年 0.05 到 0.09 mm，和挪威組鄰接面平均每年 0.08 mm 落在同一個範圍。一邊是口腔衛生良好的學生與教師，一邊是從未接觸牙科照護、牙齦幾乎處處發炎的工人。兩組量的牙面、年齡與計算方式不完全相同，這只能當量級的對照；但 1978 年那個「相對均勻的速度」，到 1986 年至少拆成了三種速度。"
+      "title": "三種病程（依摘要）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 324\"><text x=\"180\" y=\"20\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\">每 100 名工人，牙菌斑都很多，病程分三種</text><circle class=\"accent\" cx=\"112.5\" cy=\"41.5\" r=\"5.5\"/><circle class=\"accent\" cx=\"127.5\" cy=\"41.5\" r=\"5.5\"/><circle class=\"accent\" cx=\"142.5\" cy=\"41.5\" r=\"5.5\"/><circle class=\"accent\" cx=\"157.5\" cy=\"41.5\" r=\"5.5\"/><circle class=\"accent\" cx=\"172.5\" cy=\"41.5\" r=\"5.5\"/><circle class=\"accent\" cx=\"187.5\" cy=\"41.5\" r=\"5.5\"/><circle class=\"accent\" cx=\"202.5\" cy=\"41.5\" r=\"5.5\"/><circle class=\"accent\" cx=\"217.5\" cy=\"41.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"232.5\" cy=\"41.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"247.5\" cy=\"41.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"112.5\" cy=\"56.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"127.5\" cy=\"56.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"142.5\" cy=\"56.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"157.5\" cy=\"56.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"172.5\" cy=\"56.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"187.5\" cy=\"56.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"202.5\" cy=\"56.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"217.5\" cy=\"56.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"232.5\" cy=\"56.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"247.5\" cy=\"56.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"112.5\" cy=\"71.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"127.5\" cy=\"71.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"142.5\" cy=\"71.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"157.5\" cy=\"71.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"172.5\" cy=\"71.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"187.5\" cy=\"71.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"202.5\" cy=\"71.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"217.5\" cy=\"71.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"232.5\" cy=\"71.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"247.5\" cy=\"71.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"112.5\" cy=\"86.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"127.5\" cy=\"86.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"142.5\" cy=\"86.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"157.5\" cy=\"86.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"172.5\" cy=\"86.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"187.5\" cy=\"86.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"202.5\" cy=\"86.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"217.5\" cy=\"86.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"232.5\" cy=\"86.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"247.5\" cy=\"86.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"112.5\" cy=\"101.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"127.5\" cy=\"101.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"142.5\" cy=\"101.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"157.5\" cy=\"101.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"172.5\" cy=\"101.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"187.5\" cy=\"101.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"202.5\" cy=\"101.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"217.5\" cy=\"101.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"232.5\" cy=\"101.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"247.5\" cy=\"101.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"112.5\" cy=\"116.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"127.5\" cy=\"116.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"142.5\" cy=\"116.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"157.5\" cy=\"116.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"172.5\" cy=\"116.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"187.5\" cy=\"116.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"202.5\" cy=\"116.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"217.5\" cy=\"116.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"232.5\" cy=\"116.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"247.5\" cy=\"116.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"112.5\" cy=\"131.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"127.5\" cy=\"131.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"142.5\" cy=\"131.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"157.5\" cy=\"131.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"172.5\" cy=\"131.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"187.5\" cy=\"131.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"202.5\" cy=\"131.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"217.5\" cy=\"131.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"232.5\" cy=\"131.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"247.5\" cy=\"131.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"112.5\" cy=\"146.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"127.5\" cy=\"146.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"142.5\" cy=\"146.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"157.5\" cy=\"146.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"172.5\" cy=\"146.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"187.5\" cy=\"146.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"202.5\" cy=\"146.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"217.5\" cy=\"146.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"232.5\" cy=\"146.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"247.5\" cy=\"146.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"112.5\" cy=\"161.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"127.5\" cy=\"161.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"142.5\" cy=\"161.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"157.5\" cy=\"161.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"172.5\" cy=\"161.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"187.5\" cy=\"161.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"202.5\" cy=\"161.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"217.5\" cy=\"161.5\" r=\"5.5\"/><circle class=\"soft\" cx=\"232.5\" cy=\"161.5\" r=\"5.5\"/><circle class=\"gold\" cx=\"247.5\" cy=\"161.5\" r=\"5.5\"/><circle class=\"gold\" cx=\"112.5\" cy=\"176.5\" r=\"5.5\"/><circle class=\"gold\" cx=\"127.5\" cy=\"176.5\" r=\"5.5\"/><circle class=\"gold\" cx=\"142.5\" cy=\"176.5\" r=\"5.5\"/><circle class=\"gold\" cx=\"157.5\" cy=\"176.5\" r=\"5.5\"/><circle class=\"gold\" cx=\"172.5\" cy=\"176.5\" r=\"5.5\"/><circle class=\"gold\" cx=\"187.5\" cy=\"176.5\" r=\"5.5\"/><circle class=\"gold\" cx=\"202.5\" cy=\"176.5\" r=\"5.5\"/><circle class=\"gold\" cx=\"217.5\" cy=\"176.5\" r=\"5.5\"/><circle class=\"gold\" cx=\"232.5\" cy=\"176.5\" r=\"5.5\"/><circle class=\"gold\" cx=\"247.5\" cy=\"176.5\" r=\"5.5\"/><rect class=\"accent\" x=\"40\" y=\"204\" width=\"12\" height=\"12\" rx=\"2\"/><text x=\"60\" y=\"215\" font-size=\"12\" font-weight=\"700\">快速進展（RP）約 8 人</text><text class=\"muted\" x=\"60\" y=\"231\" font-size=\"11\">35 歲附著喪失約 9 mm；45 歲牙齒全部失去</text><rect class=\"soft\" x=\"40\" y=\"244\" width=\"12\" height=\"12\" rx=\"2\"/><text x=\"60\" y=\"255\" font-size=\"12\" font-weight=\"700\">中等進展（MP）約 81 人</text><text class=\"muted\" x=\"60\" y=\"271\" font-size=\"11\">35 歲約 4 mm；45 歲平均少 7 顆牙</text><rect class=\"gold\" x=\"40\" y=\"284\" width=\"12\" height=\"12\" rx=\"2\"/><text x=\"60\" y=\"295\" font-size=\"12\" font-weight=\"700\">不進展（NP）約 11 人</text><text class=\"muted\" x=\"60\" y=\"311\" font-size=\"11\">35 歲不到 1 mm；基本上沒有掉牙</text></svg>",
+      "caption": "依摘要的約略比例畫成 100 個點；附著喪失為各組 35 歲時的平均值。原創圖解，依摘要數據繪製。"
     },
     {
       "type": "h",
-      "text": "限制：誰留下來、怎麼分組、量得多準"
+      "text": "先假定中等速度，再看破壞和年齡、牙菌斑量相不相稱"
     },
     {
       "type": "p",
-      "tag": "推論",
-      "text": "第一是流失。480 人到 1985 年只剩 161 人能從第一次檢查追到最後，摘要沒有比較留下與離開的人。離開的人病情若普遍較重或較輕，三群的比例都會跟著偏。"
+      "text": "2017 年世界研討會（World Workshop）的新分類，把過去的「慢性」與「侵襲性」牙周炎併為單一的「牙周炎」，以分期（stage）描述嚴重度與處置複雜度，以分級（grade）描述進展速度。分級優先用直接證據，看 5 年內影像上的骨流失或臨床附著喪失：沒有為 A 級（慢），少於 2 毫米為 B 級（中），2 毫米以上為 C 級（快）。"
     },
     {
       "type": "p",
-      "tag": "本文讀法",
-      "text": "第二是分組方式。三群是看完 15 年的結果才切出來的，切點摘要未載。它描述了病程可以差多遠，卻不能直接當成初診時的預測工具：一個 20 歲、附著喪失還不多的工人，當年沒有人能說他會落在哪一群。"
-    },
-    {
-      "type": "p",
-      "text": "第三是測量誤差。同一團隊的 Kingman 等（1991）評估檢查者自身的再現性：在野外條件下檢查病情較重的受試者，附著喪失的測量誤差標準差，全口平均可維持在 0.13 mm，單一部位則是 0.54 mm。"
+      "text": "沒有舊資料時改用間接證據：骨流失百分比除以年齡，低於 0.25 屬 A、高於 1.0 屬 C；或看病例表現，牙菌斑生物膜多、破壞卻少的屬 A，破壞超出牙菌斑量所能預期的屬 C。原則是先假定 B 級，再找證據往 A 或 C 調，抽菸與糖尿病是調整因子。[Tonetti 等（2018）](https://doi.org/10.1111/jcpe.12945)提出這套架構時，引用了這篇論文，說明長期暴露在牙菌斑生物膜下的族群裡，只有一小部分成人會出現嚴重的廣泛性牙周炎，多數是輕度到中度。"
     },
     {
       "type": "p",
       "tag": "本文讀法",
-      "text": "NP 組每年 0.05 到 0.09 mm 的變化，比單一部位一次測量的誤差小得多，這種數字要經過多年、多部位平均才有意義。檢查間隔是 1 到 5 年，也看不出間隔內的破壞是平均發生，還是像 Socransky 等人說的集中爆發。"
+      "text": "分級表裡 A 與 C 的病例表現，讀起來就像 1986 年的不進展組與快速進展組。回到前面的假設情境：28 歲、牙菌斑不多卻已有 5 毫米附著喪失的那位，正是分級表要我們多找證據、考慮往快的方向調的情形；50 歲、牙結石厚而破壞少的那位，提醒的是牙菌斑多不等於走得快。"
     },
     {
       "type": "p",
-      "text": "第四是外推性。受試者全是男性、同一種職業、同樣缺乏牙科照護。後續分析找到的因素也不在 1986 年的摘要裡：Anerud 等（1991）發現同時抽菸又嚼檳榔的工人，牙結石分數比只有其中一種習慣的人高；Neely 等（2005）發現嚼檳榔會放大附著喪失對失牙的影響。此外，Needleman 等（2018）的系統性回顧指出，因牙周炎掉了的牙不再被量，全口平均可能低估附著喪失的變化，不過各研究看到的影響大小不一；他們把「以全口平均比較基線與最後一次檢查」列為既有資料的主要限制，建議改以每個部位、每個時間點的變化來分析。"
+      "text": "同一批工人後來被追到 2010 年。[Ramseier 等（2017）](https://doi.org/10.1111/jcpe.12782)找回原族群的 75 人（15.6%）：40 年間因牙周炎失去的牙從 0 到 28 顆不等，平均 13.1 顆，4 人沒有因牙周炎掉牙，12 人已無牙。他們發現，30 歲時平均附著喪失低於 1.81 毫米，最能區分 60 歲時還保有至少 20 顆牙的人；摘要寫的敏感度與特異度是 0.71，白話說，保得住與保不住的人，各有約七成會被這條線分對。作者據此強調，30 歲以下就要治療早期牙周炎並配合戒菸。"
     },
     {
       "type": "h",
-      "text": "後來的研究：同一群人，與別的族群"
-    },
-    {
-      "type": "p",
-      "text": "同一年，Baelum、Fejerskov 與 Karring 發表坦尚尼亞成人的橫斷面調查：各年齡層 90% 以上的牙面有牙菌斑，附著喪失與牙周囊袋卻集中在相對少數人身上。作者建議，往後的流行病學研究要更重視找出這些特別易感的次族群。"
-    },
-    {
-      "type": "p",
-      "text": "斯里蘭卡的追蹤延續到 1990 年。Neely 等（2001）分析 1970 與 1990 年都受檢的 154 人，附著喪失隨年齡、牙齦指數、牙結石指數與追蹤時間顯著增加，牙菌斑指數、抽菸史與嚼檳榔史則沒有顯著關聯。Neely 等（2005）用 455 名受檢多次的工人分析失牙，失牙史、嚼檳榔與附著喪失增加是顯著的預測因子。"
-    },
-    {
-      "type": "p",
-      "text": "2010 年，Ramseier 等人再找回 75 人，佔原始族群的 15.6%。40 年間因牙周炎失去的牙從 0 到 28 顆不等，平均 13.1 顆；4 人沒有因牙周炎失牙，12 人已無牙。在他們的分析裡，30 歲時平均附著喪失低於 1.81 mm，是區分 60 歲時能否保有至少 20 顆牙的最佳切點，摘要寫的敏感度與特異度為 0.71。"
-    },
-    {
-      "type": "p",
-      "text": "挪威那一組也一直追到 1995 年。Schätzle 等（2003）報告，26 年間 25% 的人一路維持健康穩定，其餘 75% 出現輕度到中度的進展，每年 0.02 到 0.1 mm，接近 60 歲時平均累積 2.44 mm。"
-    },
-    {
-      "type": "p",
-      "tag": "學者解釋",
-      "text": "Needleman 等（2018）收在 2017 年世界研討會（World Workshop）論文集的系統性回顧，納入 16 項原始研究：平均每年附著喪失 0.1 mm；斯里蘭卡與中國的研究為每年 0.20 mm，北美與歐洲為 0.056 mm。作者的結論是，現有證據既不支持、也不否定依附著喪失的進展速度區分不同型態的牙周病。"
-    },
-    {
-      "type": "table",
-      "title": "這條研究線上的幾篇",
-      "head": [
-        "研究",
-        "對象",
-        "時間",
-        "主要發現"
-      ],
-      "rows": [
-        [
-          "Löe 等 1978",
-          "挪威 565 名學生與教師；斯里蘭卡 480 名茶園工人",
-          "40 歲前的期中報告",
-          "斯里蘭卡組接近 40 歲平均附著喪失 4.50 mm；結論偏向以相對均勻的速度連續進展"
-        ],
-        [
-          "Löe 等 1986（本篇）",
-          "斯里蘭卡茶園工人",
-          "1970–1985 年，6 次檢查",
-          "依附著喪失與失牙速度分出 RP 約 8%、MP 約 81%、NP 約 11%"
-        ],
-        [
-          "Baelum 等 1986",
-          "坦尚尼亞成人",
-          "橫斷面",
-          "90% 以上牙面有牙菌斑，附著喪失與囊袋集中在相對少數人"
-        ],
-        [
-          "Neely 等 2001",
-          "斯里蘭卡 154 人",
-          "1970–1990 年",
-          "附著喪失與年齡、牙齦指數、牙結石指數、時間有關；與牙菌斑指數、抽菸、嚼檳榔無顯著關聯"
-        ],
-        [
-          "Neely 等 2005",
-          "斯里蘭卡 455 人",
-          "1970–1990 年",
-          "失牙史、嚼檳榔、附著喪失增加可預測失牙"
-        ],
-        [
-          "Schätzle 等 2003",
-          "挪威，基線 565 人",
-          "1969–1995 年",
-          "25% 一直健康穩定；75% 每年進展 0.02–0.1 mm"
-        ],
-        [
-          "Ramseier 等 2017",
-          "斯里蘭卡 75 人（原族群 15.6%）",
-          "1970–2010 年",
-          "因牙周炎失牙 0–28 顆，平均 13.1 顆；12 人無牙"
-        ],
-        [
-          "Needleman 等 2018",
-          "16 項研究、逾 8,600 人",
-          "系統性回顧",
-          "平均每年 0.1 mm；證據不支持也不否定依進展速度區分疾病型態"
-        ]
-      ],
-      "caption": "依各篇摘要整理；Baelum 等 1986 依 Crossref 所載摘要。"
+      "text": "三群是事後分出來的，受試者也很特殊"
     },
     {
       "type": "list",
       "items": [
-        "Löe H, Anerud A, Boysen H, Smith M. The natural history of periodontal disease in man. Study design and baseline data. *J Periodontal Res*. 1978;13(6):550–562. [DOI 10.1111/j.1600-0765.1978.tb00209.x](https://doi.org/10.1111/j.1600-0765.1978.tb00209.x)；PMID 153395",
-        "Löe H, Anerud A, Boysen H, Smith M. The natural history of periodontal disease in man. The rate of periodontal destruction before 40 years of age. *J Periodontol*. 1978;49(12):607–620. [DOI 10.1902/jop.1978.49.12.607](https://doi.org/10.1902/jop.1978.49.12.607)；PMID 282430",
-        "Socransky SS, Haffajee AD, Goodson JM, Lindhe J. New concepts of destructive periodontal disease. *J Clin Periodontol*. 1984;11(1):21–32. [DOI 10.1111/j.1600-051x.1984.tb01305.x](https://doi.org/10.1111/j.1600-051x.1984.tb01305.x)；PMID 6582072",
-        "Baelum V, Fejerskov O, Karring T. Oral hygiene, gingivitis and periodontal breakdown in adult Tanzanians. *J Periodontal Res*. 1986;21(3):221–232. [DOI 10.1111/j.1600-0765.1986.tb01454.x](https://doi.org/10.1111/j.1600-0765.1986.tb01454.x)；PMID 2941555",
-        "Neely AL, Holford TR, Löe H, Anerud A, Boysen H. The natural history of periodontal disease in man. Risk factors for progression of attachment loss in individuals receiving no oral health care. *J Periodontol*. 2001;72(8):1006–1015. [DOI 10.1902/jop.2001.72.8.1006](https://doi.org/10.1902/jop.2001.72.8.1006)；PMID 11525431",
-        "Neely AL, Holford TR, Löe H, Anerud A, Boysen H. The natural history of periodontal disease in humans: risk factors for tooth loss in caries-free subjects receiving no oral health care. *J Clin Periodontol*. 2005;32(9):984–993. [DOI 10.1111/j.1600-051X.2005.00797.x](https://doi.org/10.1111/j.1600-051X.2005.00797.x)；PMID 16104963",
-        "Schätzle M, Löe H, Lang NP, et al. Clinical course of chronic periodontitis. III. Patterns, variations and risks of attachment loss. *J Clin Periodontol*. 2003;30(10):909–918. [DOI 10.1034/j.1600-051x.2003.00401.x](https://doi.org/10.1034/j.1600-051x.2003.00401.x)；PMID 14710771",
-        "Ramseier CA, Anerud A, Dulac M, et al. Natural history of periodontitis: disease progression and tooth loss over 40 years. *J Clin Periodontol*. 2017;44(12):1182–1191. [DOI 10.1111/jcpe.12782](https://doi.org/10.1111/jcpe.12782)；PMID 28733997",
-        "Needleman I, Garcia R, Gkranias N, et al. Mean annual attachment, bone level, and tooth loss: a systematic review. *J Clin Periodontol*. 2018;45(Suppl 20):S112–S129. [DOI 10.1111/jcpe.12943](https://doi.org/10.1111/jcpe.12943)；PMID 29926483",
-        "Tonetti MS, Greenwell H, Kornman KS. Staging and grading of periodontitis: framework and proposal of a new classification and case definition. *J Clin Periodontol*. 2018;45(Suppl 20):S149–S161. [DOI 10.1111/jcpe.12945](https://doi.org/10.1111/jcpe.12945)；PMID 29926495"
+        "三群是看完 15 年的附著喪失與失牙才分出來的，初診時看不出一位病人屬於哪一群；它們是不同的病還是同一種病的快慢差異，[Needleman 等（2018）](https://doi.org/10.1111/jcpe.12943)的系統性回顧也認為證據不足以定論。",
+        "受試者全是沒有牙科照護的斯里蘭卡男性茶園工人，480 人只有 161 人從頭追到 1985 年，這些比例不能直接套到有刷牙、有治療的門診病人。",
+        "這不代表牙菌斑無關緊要：Ramseier 等（2017）在同一批工人身上發現，牙結石、牙菌斑與牙齦炎都和附著喪失、走向重度疾病有關。"
       ]
-    },
-    {
-      "type": "h",
-      "text": "回到診間怎麼讀：它證明了什麼，沒證明什麼"
-    },
-    {
-      "type": "p",
-      "text": "這篇論文證明的是一個描述性的事實：在一群從未接觸牙科預防與治療、牙菌斑與牙齦發炎幾乎普遍存在的男性身上，附著喪失與失牙的速度相差很大。約 11% 的人在觀察期間沒有從牙齦炎往下走；快速進展的那一群，依摘要在 45 歲時牙齒已全部失去。"
-    },
-    {
-      "type": "p",
-      "tag": "本文讀法",
-      "text": "它沒有證明的是原因。牙菌斑與牙齦發炎同樣普遍，為什麼有人 10 多年不進展，有人 20 歲就開始掉牙，摘要沒有回答；「同樣」也只是族群層級的描述，Neely 等（2001）後來發現，個人的牙齦指數與牙結石指數和附著喪失的增加有關。三群是三種不同的病，還是一條連續分布被切成三段，也沒有回答。後一個問題，Needleman 等人在 32 年後的結論仍是證據不足以定論。"
-    },
-    {
-      "type": "p",
-      "tag": "官方說法",
-      "text": "2017 年世界研討會的新分類，把過去的「慢性」與「侵襲性」牙周炎併為單一的「牙周炎」，再以分期（stage）與分級（grade）描述。分級看進展速度：有 5 年內的影像或附著資料時，沒有喪失為 A 級（慢），少於 2 mm 為 B 級（中），2 mm 以上為 C 級（快）；沒有直接證據時，用骨流失百分比除以年齡，或看病例的表現型。臨床上先假定為 B 級，再找證據往 A 或 C 調；抽菸與糖尿病則作為分級的修飾因子。Tonetti 等提出這套架構時，引用了 Löe 1986 年這篇與 Baelum 1986 年那篇，說明在長期暴露於牙菌斑生物膜的族群裡，只有一小部分成人出現嚴重的廣泛性牙周炎，多數是輕度到中度。"
-    },
-    {
-      "type": "p",
-      "tag": "本文讀法",
-      "text": "分級表裡 A 級的病例表現型是「生物膜堆積多，破壞程度低」（Heavy biofilm deposits with low levels of destruction），C 級是「破壞超出生物膜堆積所能預期」（Destruction exceeds expectations given biofilm deposits），兩句皆本文自譯，讀起來就像 1986 年的 NP 組與 RP 組。差別在時間點：1986 年的三群是看完 15 年才分出來的，診間的分級卻要在第一次檢查時，用手上不完整的證據推估。"
-    },
-    {
-      "type": "p",
-      "text": "40 年後，Ramseier 等人找回的 75 人裡，4 人沒有因牙周炎失去任何一顆牙，12 人一顆牙也不剩。"
     }
   ],
   "sources": [
@@ -383,147 +117,64 @@
       "publisher": "Journal of Clinical Periodontology（Wiley）",
       "date": "1986-05",
       "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1600-051X.1986.tb01487.x",
-      "note": "原論文；未能取得全文。期刊頁面的完整摘要、作者單位（National Institute of Dental Research, NIH）、頁碼 431–440 與 10 篇參考文獻清單"
+      "note": "原論文；依期刊頁面的摘要、作者與頁碼 431–440"
     },
     {
       "title": "PubMed 書目與摘要：Natural history of periodontal disease in man（PMID 3487557）",
       "publisher": "National Library of Medicine",
       "date": "1986-05",
       "url": "https://pubmed.ncbi.nlm.nih.gov/3487557/",
-      "note": "核對作者、卷期、DOI、PMID；PubMed 摘要截斷於 400 字，頁碼著錄為 431–45"
+      "note": "核對作者、卷期、DOI、PMID 與摘要"
     },
     {
       "title": "Crossref 書目資料：10.1111/j.1600-051X.1986.tb01487.x",
       "publisher": "Crossref",
       "date": "1986-05",
       "url": "https://api.crossref.org/works/10.1111/j.1600-051X.1986.tb01487.x",
-      "note": "出版社登錄的完整摘要（含 MP 組 45 歲平均失牙 7 顆、NP 組基本上無失牙兩句）與頁碼 431–440"
-    },
-    {
-      "title": "Löe H, Anerud A, Boysen H, Smith M. The natural history of periodontal disease in man. Study design and baseline data. J Periodontal Res 1978;13(6):550–562",
-      "publisher": "Journal of Periodontal Research（Wiley）",
-      "date": "1978-11",
-      "url": "https://doi.org/10.1111/j.1600-0765.1978.tb00209.x",
-      "note": "摘要（Crossref 所載；PubMed 153395 無摘要）：兩組的建立年份、人數、基線口腔狀況"
-    },
-    {
-      "title": "Löe H, Anerud A, Boysen H, Smith M. The natural history of periodontal disease in man. Tooth mortality rates before 40 years of age. J Periodontal Res 1978;13(6):563–572",
-      "publisher": "Journal of Periodontal Research（Wiley）",
-      "date": "1978-11",
-      "url": "https://doi.org/10.1111/j.1600-0765.1978.tb00210.x",
-      "note": "摘要（Crossref 所載）：奧斯陸 1969 年建立、記錄第三大臼齒以外的恆牙數、兩組現存牙數與每年失牙"
+      "note": "出版社登錄的完整摘要（含 MP 組 45 歲平均失牙 7 顆、NP 組基本上無失牙）與頁碼 431–440"
     },
     {
       "title": "Löe H, Anerud A, Boysen H, Smith M. The natural history of periodontal disease in man. The rate of periodontal destruction before 40 years of age. J Periodontol 1978;49(12):607–620",
       "publisher": "Journal of Periodontology",
       "date": "1978-12",
       "url": "https://pubmed.ncbi.nlm.nih.gov/282430/",
-      "note": "依 PubMed 摘要：接近 40 歲的平均附著喪失與每年速度；引文出自摘要末句"
-    },
-    {
-      "title": "Boysen H, Löe H, Anerud A. [The long term evolution of periodontal diseases. A research project in Ceylon]. Tandlaegebladet 1971;75(6):491–496",
-      "publisher": "Tandlægebladet（PubMed 書目）",
-      "date": "1971-06",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/5285511/",
-      "note": "只核對書目與 PubMed 英譯標題（原文為丹麥文）"
-    },
-    {
-      "title": "Löe H, Theilade E, Jensen SB. Experimental gingivitis in man. J Periodontol 1965;36(3):177–187",
-      "publisher": "Journal of Periodontology",
-      "date": "1965",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/14296927/",
-      "note": "只引用書目與題名"
-    },
-    {
-      "title": "Harald A. Löe（NIDCR 歷史年表）",
-      "publisher": "National Institute of Dental and Craniofacial Research",
-      "date": "",
-      "url": "https://www.nidcr.nih.gov/about-us/timeline/harald-loe",
-      "note": "Löe 於 1983 到 1994 年任 NIDR 所長"
-    },
-    {
-      "title": "Socransky SS, Haffajee AD, Goodson JM, Lindhe J. New concepts of destructive periodontal disease. J Clin Periodontol 1984;11(1):21–32",
-      "publisher": "Journal of Clinical Periodontology",
-      "date": "1984-01",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/6582072/",
-      "note": "依 PubMed 摘要：連續進展假說與爆發模型"
-    },
-    {
-      "title": "Kingman A, Löe H, Anerud A, Boysen H. Errors in measuring parameters associated with periodontal health and disease. J Periodontol 1991;62(8):477–486",
-      "publisher": "Journal of Periodontology",
-      "date": "1991-08",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/1920014/",
-      "note": "依 PubMed 摘要：野外條件下附著喪失的測量誤差標準差"
-    },
-    {
-      "title": "Anerud A, Löe H, Boysen H. The natural history and clinical course of calculus formation in man. J Clin Periodontol 1991;18(3):160–170",
-      "publisher": "Journal of Clinical Periodontology",
-      "date": "1991-03",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/2061415/",
-      "note": "依 PubMed 摘要：抽菸與嚼檳榔和牙結石分數"
-    },
-    {
-      "title": "Baelum V, Fejerskov O, Karring T. Oral hygiene, gingivitis and periodontal breakdown in adult Tanzanians. J Periodontal Res 1986;21(3):221–232",
-      "publisher": "Journal of Periodontal Research",
-      "date": "1986-05",
-      "url": "https://doi.org/10.1111/j.1600-0765.1986.tb01454.x",
-      "note": "依 Crossref 所載摘要（PubMed 2941555 無摘要）"
-    },
-    {
-      "title": "Neely AL, Holford TR, Löe H, Anerud A, Boysen H. The natural history of periodontal disease in man. Risk factors for progression of attachment loss in individuals receiving no oral health care. J Periodontol 2001;72(8):1006–1015",
-      "publisher": "Journal of Periodontology",
-      "date": "2001-08",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/11525431/",
-      "note": "依 PubMed 摘要：測量部位與指數、154 人、危險因子"
-    },
-    {
-      "title": "Neely AL, Holford TR, Löe H, Anerud A, Boysen H. The natural history of periodontal disease in humans: risk factors for tooth loss in caries-free subjects receiving no oral health care. J Clin Periodontol 2005;32(9):984–993",
-      "publisher": "Journal of Clinical Periodontology",
-      "date": "2005-09",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/16104963/",
-      "note": "依 PubMed 摘要"
-    },
-    {
-      "title": "Schätzle M, Löe H, Lang NP, et al. Clinical course of chronic periodontitis. III. Patterns, variations and risks of attachment loss. J Clin Periodontol 2003;30(10):909–918",
-      "publisher": "Journal of Clinical Periodontology",
-      "date": "2003-10",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/14710771/",
-      "note": "依 PubMed 摘要：挪威組 26 年追蹤"
+      "note": "依 PubMed 摘要：結論認為不受干預時牙周病灶以相對均勻的速度連續進展"
     },
     {
       "title": "Ramseier CA, Anerud A, Dulac M, et al. Natural history of periodontitis: disease progression and tooth loss over 40 years. J Clin Periodontol 2017;44(12):1182–1191",
       "publisher": "Journal of Clinical Periodontology",
-      "date": "2017-07-22",
+      "date": "2017-09-22",
       "url": "https://pubmed.ncbi.nlm.nih.gov/28733997/",
-      "note": "依摘要；日期為期刊網站所載線上刊出日"
+      "note": "依 PubMed 摘要：2010 年再檢 75 人、40 年失牙、30 歲附著喪失切點、Markov 分析與作者結論；日期為線上刊出日（PubMed 與 Crossref）"
     },
     {
       "title": "Needleman I, Garcia R, Gkranias N, et al. Mean annual attachment, bone level, and tooth loss: a systematic review. J Clin Periodontol 2018;45(Suppl 20):S112–S129",
       "publisher": "Journal of Clinical Periodontology",
       "date": "2018-06",
       "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/jcpe.12943",
-      "note": "開放取用；摘要與討論中對既有資料限制（全口平均、失牙造成低估）的說明"
+      "note": "開放取用；依摘要：證據不支持也不否定依附著喪失進展速度區分疾病型態"
     },
     {
       "title": "Tonetti MS, Greenwell H, Kornman KS. Staging and grading of periodontitis: framework and proposal of a new classification and case definition. J Clin Periodontol 2018;45(Suppl 20):S149–S161",
       "publisher": "Journal of Clinical Periodontology",
       "date": "2018-06",
       "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/jcpe.12945",
-      "note": "開放取用；引用 Löe 1986（參考文獻 19）與 Baelum 1986（參考文獻 20）的段落"
+      "note": "開放取用；分期分級架構，參考文獻 19 為 Löe 1986（Crossref 參考文獻清單核對）"
     },
     {
       "title": "Papapanou PN, Sanz M, Buduneli N, et al. Periodontitis: Consensus report of workgroup 2 of the 2017 World Workshop. J Clin Periodontol 2018;45(Suppl 20):S162–S170",
       "publisher": "Journal of Clinical Periodontology",
       "date": "2018-06",
       "url": "https://pubmed.ncbi.nlm.nih.gov/29926490/",
-      "note": "依 PubMed 摘要：「慢性」與「侵襲性」併為「牙周炎」"
+      "note": "依 PubMed 摘要：「慢性」與「侵襲性」併為「牙周炎」，以分期、分級描述"
     },
     {
       "title": "Staging and Grading Periodontitis（2017 World Workshop 分期分級總表）",
       "publisher": "American Academy of Periodontology",
       "date": "2019-08",
       "url": "https://www.perio.org/wp-content/uploads/2019/08/Staging-and-Grading-Periodontitis.pdf",
-      "note": "分級表：直接與間接證據、病例表現型、預設 B 級；日期依檔案上傳路徑"
+      "note": "分級表：直接與間接證據、骨流失百分比除以年齡、病例表現型、預設 B 級、抽菸與糖尿病為調整因子；日期依檔案上傳路徑"
     }
-  ]
+  ],
+  "hold": "審稿意見待修正，見 state/review/doi-10-1111-j-1600-051x-1986-tb01487-x.json"
 }

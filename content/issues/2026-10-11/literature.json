@@ -3,6 +3,7 @@
   "date": "2026-10-11",
   "title": "「到底還要拖多久？」古斯特少尉一整夜都在問幾點",
   "dek": "施尼茨勒《古斯特少尉》的第一句只問時間。順著這個問句讀下去，整篇小說是一連串報時；而最關鍵的那個鐘點，主角並不在場。",
+  "brief": "施尼茨勒《古斯特少尉》用他自稱「思緒獨白」的技法寫成，沒有敘述者，連幾點、人在哪裡，都得由主角自己看錶、翻節目單查出來。第 5 頁古斯特勸自己「耐心，耐心」，第 17 頁這兩個詞在衣帽間被麵包師傅一字不差地還給他；全篇六次問「多久」，時態也從「還要多久」移到「已經多久」。本報的讀法是，開頭的不耐煩就是衝突的引信，而這個呼應沒有人點破，因為沒有敘述者可以點破。",
   "topic_key": "literature:schnitzler-lieutenant-gustl-p5",
   "updated_at": "2026-10-11T15:51:00+08:00",
   "spoiler": "本文後半談到《古斯特少尉》的結局。",
@@ -37,7 +38,12 @@
     {
       "type": "detail",
       "of": "hero",
-      "region": [0.15, 0.34, 0.71, 0.1],
+      "region": [
+        0.15,
+        0.34,
+        0.71,
+        0.1
+      ],
       "position": "書頁中段偏上，花框下方，約佔頁寬七成",
       "caption": "第 5 頁開頭三行：放大的 W 接著 ie lange wird denn das noch dauern?，問號之後緊跟 Ich muß auf die Uhr schauen。"
     },
@@ -45,14 +51,38 @@
       "type": "facts",
       "title": "作品資料",
       "items": [
-        ["作者", "亞圖爾・施尼茨勒（Arthur Schnitzler，1862–1931），維也納醫師、作家"],
-        ["作品原名", "Lieutenant Gustl（中譯通常作《古斯特少尉》）。1901 年初版與 1906 年第 11 版都拼作 Lieutenant，後來的版本多作 Leutnant Gustl"],
-        ["首次發表", "1900 年 12 月 25 日，維也納《新自由報》（Neue Freie Presse）聖誕副刊"],
-        ["首版單行本", "1901 年，柏林 S. Fischer 出版社，Moritz Coschell 插圖"],
-        ["本文依據版本", "S. Fischer 1906 年第 11 版。線上謄本：德文 Wikisource（https://de.wikisource.org/wiki/Lieutenant_Gustl）；第 5、13、17 頁另與 Wikimedia Commons 上同一版本的掃描檔對照"],
-        ["引句位置", "全篇第一句，1906 年版第 5 頁正文第 1 行。本文所有頁碼都依這個版本"],
-        ["寫作時間", "書末署「Reichenau, 13.–17. Juli 1900」；施尼茨勒日記記 1900 年 5 月 27 日草擬、7 月 19 日完成"],
-        ["譯文", "本文所有中文引文皆為本文自譯，未使用出版譯本"]
+        [
+          "作者",
+          "亞圖爾・施尼茨勒（Arthur Schnitzler，1862–1931），維也納醫師、作家"
+        ],
+        [
+          "作品原名",
+          "Lieutenant Gustl（中譯通常作《古斯特少尉》）。1901 年初版與 1906 年第 11 版都拼作 Lieutenant，後來的版本多作 Leutnant Gustl"
+        ],
+        [
+          "首次發表",
+          "1900 年 12 月 25 日，維也納《新自由報》（Neue Freie Presse）聖誕副刊"
+        ],
+        [
+          "首版單行本",
+          "1901 年，柏林 S. Fischer 出版社，Moritz Coschell 插圖"
+        ],
+        [
+          "本文依據版本",
+          "S. Fischer 1906 年第 11 版。線上謄本：德文 Wikisource（https://de.wikisource.org/wiki/Lieutenant_Gustl）；第 5、13、17 頁另與 Wikimedia Commons 上同一版本的掃描檔對照"
+        ],
+        [
+          "引句位置",
+          "全篇第一句，1906 年版第 5 頁正文第 1 行。本文所有頁碼都依這個版本"
+        ],
+        [
+          "寫作時間",
+          "書末署「Reichenau, 13.–17. Juli 1900」；施尼茨勒日記記 1900 年 5 月 27 日草擬、7 月 19 日完成"
+        ],
+        [
+          "譯文",
+          "本文所有中文引文皆為本文自譯，未使用出版譯本"
+        ]
       ]
     },
     {
@@ -134,14 +164,49 @@
     {
       "type": "table",
       "title": "Wie lang 在 1906 年版裡的六次出現",
-      "head": ["頁", "原文", "本文自譯", "時態"],
+      "head": [
+        "頁",
+        "原文",
+        "本文自譯",
+        "時態"
+      ],
       "rows": [
-        ["5", "Wie lange wird denn das noch dauern?", "這到底還要拖多久？", "未來式"],
-        ["15", "Wie lang’ wird der da noch brauchen, um sein Glas ins Futteral zu stecken?", "那位把觀劇鏡收進套子，還要弄多久？", "未來式"],
-        ["34", "Wie lang ist das jetzt her?", "那是多久以前的事了？", "現在式"],
-        ["40", "Wie lang werd’ ich denn da noch sitzen bleiben?", "我到底還要在這裡坐多久？", "未來式"],
-        ["44", "Wie lang’ hab’ ich denn geschlafen?", "我到底睡了多久？", "現在完成式"],
-        ["52", "Wie lang’ hat denn die ganze G’schicht’ gedauert?", "那整段事到底持續了多久？", "現在完成式"]
+        [
+          "5",
+          "Wie lange wird denn das noch dauern?",
+          "這到底還要拖多久？",
+          "未來式"
+        ],
+        [
+          "15",
+          "Wie lang’ wird der da noch brauchen, um sein Glas ins Futteral zu stecken?",
+          "那位把觀劇鏡收進套子，還要弄多久？",
+          "未來式"
+        ],
+        [
+          "34",
+          "Wie lang ist das jetzt her?",
+          "那是多久以前的事了？",
+          "現在式"
+        ],
+        [
+          "40",
+          "Wie lang werd’ ich denn da noch sitzen bleiben?",
+          "我到底還要在這裡坐多久？",
+          "未來式"
+        ],
+        [
+          "44",
+          "Wie lang’ hab’ ich denn geschlafen?",
+          "我到底睡了多久？",
+          "現在完成式"
+        ],
+        [
+          "52",
+          "Wie lang’ hat denn die ganze G’schicht’ gedauert?",
+          "那整段事到底持續了多久？",
+          "現在完成式"
+        ]
       ],
       "caption": "原創整理，依德文 Wikisource 謄本檢索，頁碼為 S. Fischer 1906 年第 11 版。第 34 頁問的是少年時在森林裡害怕的那一次；第 52 頁問的是他和情人 Steffi 的關係。"
     },
@@ -172,16 +237,56 @@
       "type": "timeline",
       "title": "4 月 4 日夜到 5 日清晨",
       "items": [
-        { "when": "晚上九點多", "label": "音樂廳裡第一次看錶", "note": "第 5 頁：Erst viertel auf zehn? 他覺得已經坐了三個小時。" },
-        { "when": "演出後", "label": "衣帽間", "note": "第 17–19 頁：「耐心，耐心」、刀柄、「蠢小子」。原文沒寫幾點。" },
-        { "when": "23 點", "label": "數鐘聲", "note": "第 25 頁：原文把 1 到 11 逐一印出來。" },
-        { "when": "夜裡", "label": "普拉特公園，定下七點", "note": "第 33–35 頁：他想起當天是 4 月 4 日，決定「明天早上七點」。" },
-        { "when": "午夜前後", "label": "「我還要在這裡坐多久？」", "note": "第 40–41 頁：他猜「一定過了午夜」。" },
-        { "when": "午夜 12 點", "label": "麵包師傅中風身亡", "note": "古斯特不知道；第 61–62 頁才由侍者說出。" },
-        { "when": "凌晨 3 點", "label": "醒來，劃火柴看錶", "note": "第 44 頁：Muß auf die Uhr schau’n。" },
-        { "when": "3 點半", "label": "北站的鐘", "note": "第 48 頁：照鐵路時間還是維也納時間？為什麼偏偏是七點？" },
-        { "when": "快 6 點", "label": "「六點了嗎？」", "note": "第 59 頁：「還沒：半……三刻。」" },
-        { "when": "清晨", "label": "咖啡館", "note": "第 60–64 頁：得知麵包師傅的死訊，重新排出下午四點的決鬥。" }
+        {
+          "when": "晚上九點多",
+          "label": "音樂廳裡第一次看錶",
+          "note": "第 5 頁：Erst viertel auf zehn? 他覺得已經坐了三個小時。"
+        },
+        {
+          "when": "演出後",
+          "label": "衣帽間",
+          "note": "第 17–19 頁：「耐心，耐心」、刀柄、「蠢小子」。原文沒寫幾點。"
+        },
+        {
+          "when": "23 點",
+          "label": "數鐘聲",
+          "note": "第 25 頁：原文把 1 到 11 逐一印出來。"
+        },
+        {
+          "when": "夜裡",
+          "label": "普拉特公園，定下七點",
+          "note": "第 33–35 頁：他想起當天是 4 月 4 日，決定「明天早上七點」。"
+        },
+        {
+          "when": "午夜前後",
+          "label": "「我還要在這裡坐多久？」",
+          "note": "第 40–41 頁：他猜「一定過了午夜」。"
+        },
+        {
+          "when": "午夜 12 點",
+          "label": "麵包師傅中風身亡",
+          "note": "古斯特不知道；第 61–62 頁才由侍者說出。"
+        },
+        {
+          "when": "凌晨 3 點",
+          "label": "醒來，劃火柴看錶",
+          "note": "第 44 頁：Muß auf die Uhr schau’n。"
+        },
+        {
+          "when": "3 點半",
+          "label": "北站的鐘",
+          "note": "第 48 頁：照鐵路時間還是維也納時間？為什麼偏偏是七點？"
+        },
+        {
+          "when": "快 6 點",
+          "label": "「六點了嗎？」",
+          "note": "第 59 頁：「還沒：半……三刻。」"
+        },
+        {
+          "when": "清晨",
+          "label": "咖啡館",
+          "note": "第 60–64 頁：得知麵包師傅的死訊，重新排出下午四點的決鬥。"
+        }
       ],
       "caption": "原創整理，依 S. Fischer 1906 年第 11 版（德文 Wikisource 謄本）。「午夜 12 點」一格是事後才揭曉的時刻，古斯特當下並不知道。"
     },
@@ -255,18 +360,96 @@
     }
   ],
   "sources": [
-    { "title": "Lieutenant Gustl（S. Fischer 1906 年第 11 版謄本）", "publisher": "德文 Wikisource", "date": "2024-11-24", "url": "https://de.wikisource.org/wiki/Lieutenant_Gustl", "note": "全文；本文引文與頁碼皆依此版本" },
-    { "title": "File:Schnitzler Leutnant Gustl.djvu", "publisher": "Wikimedia Commons", "date": "1906", "url": "https://commons.wikimedia.org/wiki/File:Schnitzler_Leutnant_Gustl.djvu", "note": "同一版本的掃描檔；對照第 5、13、17 頁" },
-    { "title": "File:Arthur Schnitzler Lieutenant Gustl (1901).jpg", "publisher": "Wikimedia Commons", "date": "1901", "url": "https://commons.wikimedia.org/wiki/File:Arthur_Schnitzler_Lieutenant_Gustl_(1901).jpg", "note": "1901 年首版單行本封面" },
-    { "title": "Arthur Schnitzler an Georg Brandes, 11. 6. 1901（L01127）", "publisher": "Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren（ACDH, ÖAW）", "date": "1901-06-11", "url": "https://schnitzler-briefe.acdh.oeaw.ac.at/L01127.html", "note": "Technik des Gedankenmonologs；Dujardin" },
-    { "title": "Rainer Maria Rilke an Arthur Schnitzler, 24. 6. 1901（L04399）", "publisher": "Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren（ACDH, ÖAW）", "date": "1901-06-24", "url": "https://schnitzler-briefe.acdh.oeaw.ac.at/L04399.html", "note": "innere Schaubühne" },
-    { "title": "Arthur Schnitzler: Tagebuch, 25. 12. 1900", "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）", "date": "1900-12-25", "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1900-12-25.html", "note": "《新自由報》刊出，一半份數缺最後 3 欄" },
-    { "title": "Arthur Schnitzler: Tagebuch, 21. 6. 1901", "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）", "date": "1901-06-21", "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1901-06-21.html", "note": "榮譽法庭決定" },
-    { "title": "Arthur Schnitzler: Tagebuch, 22. 6. 1901", "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）", "date": "1901-06-22", "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1901-06-22.html", "note": "各報反應" },
-    { "title": "Arthur Schnitzler: Tagebuch, 27. 5. 1900", "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）", "date": "1900-05-27", "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1900-05-27.html", "note": "Baumgartnerhaus 草擬" },
-    { "title": "Arthur Schnitzler: Tagebuch, 17. 7. 1900", "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）", "date": "1900-07-17", "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1900-07-17.html", "note": "寫作中" },
-    { "title": "Arthur Schnitzler: Tagebuch, 19. 7. 1900", "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）", "date": "1900-07-19", "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1900-07-19.html", "note": "完成" },
-    { "title": "Hatte Leutnant Gustl Hunger? Einige späte Bemerkungen zur Entstehung des inneren Monologs bei Arthur Schnitzler und Knut Hamsun", "publisher": "Jörg Pottbeckers，Studia austriaca 20, S. 85–106", "date": "2012", "url": "https://riviste.unimi.it/index.php/StudiaAustriaca/article/view/2185", "note": "只讀摘要" },
-    { "title": "Lieutenant Gustl", "publisher": "德文維基百科", "date": "2026", "url": "https://de.wikipedia.org/wiki/Lieutenant_Gustl", "note": "首版單行本出版社與插圖者、書名拼寫的後續變化" }
+    {
+      "title": "Lieutenant Gustl（S. Fischer 1906 年第 11 版謄本）",
+      "publisher": "德文 Wikisource",
+      "date": "2024-11-24",
+      "url": "https://de.wikisource.org/wiki/Lieutenant_Gustl",
+      "note": "全文；本文引文與頁碼皆依此版本"
+    },
+    {
+      "title": "File:Schnitzler Leutnant Gustl.djvu",
+      "publisher": "Wikimedia Commons",
+      "date": "1906",
+      "url": "https://commons.wikimedia.org/wiki/File:Schnitzler_Leutnant_Gustl.djvu",
+      "note": "同一版本的掃描檔；對照第 5、13、17 頁"
+    },
+    {
+      "title": "File:Arthur Schnitzler Lieutenant Gustl (1901).jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "1901",
+      "url": "https://commons.wikimedia.org/wiki/File:Arthur_Schnitzler_Lieutenant_Gustl_(1901).jpg",
+      "note": "1901 年首版單行本封面"
+    },
+    {
+      "title": "Arthur Schnitzler an Georg Brandes, 11. 6. 1901（L01127）",
+      "publisher": "Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren（ACDH, ÖAW）",
+      "date": "1901-06-11",
+      "url": "https://schnitzler-briefe.acdh.oeaw.ac.at/L01127.html",
+      "note": "Technik des Gedankenmonologs；Dujardin"
+    },
+    {
+      "title": "Rainer Maria Rilke an Arthur Schnitzler, 24. 6. 1901（L04399）",
+      "publisher": "Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren（ACDH, ÖAW）",
+      "date": "1901-06-24",
+      "url": "https://schnitzler-briefe.acdh.oeaw.ac.at/L04399.html",
+      "note": "innere Schaubühne"
+    },
+    {
+      "title": "Arthur Schnitzler: Tagebuch, 25. 12. 1900",
+      "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）",
+      "date": "1900-12-25",
+      "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1900-12-25.html",
+      "note": "《新自由報》刊出，一半份數缺最後 3 欄"
+    },
+    {
+      "title": "Arthur Schnitzler: Tagebuch, 21. 6. 1901",
+      "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）",
+      "date": "1901-06-21",
+      "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1901-06-21.html",
+      "note": "榮譽法庭決定"
+    },
+    {
+      "title": "Arthur Schnitzler: Tagebuch, 22. 6. 1901",
+      "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）",
+      "date": "1901-06-22",
+      "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1901-06-22.html",
+      "note": "各報反應"
+    },
+    {
+      "title": "Arthur Schnitzler: Tagebuch, 27. 5. 1900",
+      "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）",
+      "date": "1900-05-27",
+      "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1900-05-27.html",
+      "note": "Baumgartnerhaus 草擬"
+    },
+    {
+      "title": "Arthur Schnitzler: Tagebuch, 17. 7. 1900",
+      "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）",
+      "date": "1900-07-17",
+      "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1900-07-17.html",
+      "note": "寫作中"
+    },
+    {
+      "title": "Arthur Schnitzler: Tagebuch, 19. 7. 1900",
+      "publisher": "Arthur Schnitzler: Tagebuch 1879–1931, Digitale Ausgabe（ACDH, ÖAW）",
+      "date": "1900-07-19",
+      "url": "https://schnitzler-tagebuch.acdh.oeaw.ac.at/entry__1900-07-19.html",
+      "note": "完成"
+    },
+    {
+      "title": "Hatte Leutnant Gustl Hunger? Einige späte Bemerkungen zur Entstehung des inneren Monologs bei Arthur Schnitzler und Knut Hamsun",
+      "publisher": "Jörg Pottbeckers，Studia austriaca 20, S. 85–106",
+      "date": "2012",
+      "url": "https://riviste.unimi.it/index.php/StudiaAustriaca/article/view/2185",
+      "note": "只讀摘要"
+    },
+    {
+      "title": "Lieutenant Gustl",
+      "publisher": "德文維基百科",
+      "date": "2026",
+      "url": "https://de.wikipedia.org/wiki/Lieutenant_Gustl",
+      "note": "首版單行本出版社與插圖者、書名拼寫的後續變化"
+    }
   ]
 }

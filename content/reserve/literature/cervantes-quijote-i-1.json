@@ -4,6 +4,7 @@
   "reserve_written": "2026-10-10",
   "title": "「村名我不想記起」：《唐吉訶德》的第一句",
   "dek": "塞萬提斯在第一句就收走了村名。這個「不想」是隨口一說還是刻意隱瞞？英譯者各有判斷，十年後的第二部結尾給了另一個說法。",
+  "brief": "《唐吉訶德》第一句點名了鄉紳的長矛、老皮盾、瘦馬和獵犬，唯獨扣下村名，原文是 no quiero acordarme，「我不想記起」。Shelton 1612 年的英譯把它讀成「刻意略去」，1848 年的改訂本讀成「記不得」；到了 1615 年第二部結尾，假託的阿拉伯史家 Cide Hamete「不願寫明」村子，理由是讓拉曼查各村去爭他。後來真的有人爭：據康普頓斯大學新聞稿，團隊用 26 個村鎮、24 項距離與時間變數算出 Villanueva de los Infantes，提出這個方法的 Parra Luna 也提醒這一切不必照單全收。",
   "topic_key": "literature:cervantes-quijote-i-1",
   "updated_at": "2026-10-11T00:30:00+08:00",
   "spoiler": "本文後半談到《唐吉訶德》第二部的結局。",
@@ -38,7 +39,12 @@
     {
       "type": "detail",
       "of": "hero",
-      "region": [0.1, 0.54, 0.78, 0.145],
+      "region": [
+        0.1,
+        0.54,
+        0.78,
+        0.145
+      ],
       "position": "書頁中段偏下，花體 E 與右側六行正文",
       "caption": "第 1 葉正面正文前六行。第一行印到 de cuyo，第二行開頭就是 nombre no quiero acordarme；第六行的 go corredor 結束這一句。"
     },
@@ -46,13 +52,34 @@
       "type": "facts",
       "title": "作品與版本",
       "items": [
-        ["作者", "塞萬提斯（Miguel de Cervantes Saavedra，1547–1616）"],
-        ["作品原名", "第一部 El ingenioso hidalgo don Quixote de la Mancha；第二部 Segunda parte del ingenioso cavallero don Quixote de la Mancha。兩部都由馬德里 Juan de la Cuesta 印刷、書商 Francisco de Robles 發售"],
-        ["首次出版", "第一部書名頁署 1605 年，Francisco Rico 版的版本說明指出實際在 1604 年 12 月印完；第二部 1615 年"],
-        ["本文依據版本", "第一部第 1 章：1608 年馬德里 Juan de la Cuesta 版（Rico 版代號 C），據 1897 年巴塞隆納 Montaner y Simón 複製本的掃描（Wikimedia Commons／Internet Archive elingenioso01cerv），第 1 葉正反面。第二部第 74 章：1615 年初版，西班牙國家圖書館藏本掃描（Wikimedia Commons PDF 第 570–573 頁，即第 278 葉正面至第 279 葉反面）"],
-        ["校勘與注釋", "Francisco Rico 主持的 Instituto Cervantes 版（Crítica，1998；注釋 Joaquín Forradellas），Centro Virtual Cervantes 線上版"],
-        ["引句位置", "第一部第 1 章第 1 句；1608 年版第 1 葉正面第 1–6 行"],
-        ["譯文", "中文引文皆為本文自譯，未使用出版中譯本；英譯本依正文表格所列版本"]
+        [
+          "作者",
+          "塞萬提斯（Miguel de Cervantes Saavedra，1547–1616）"
+        ],
+        [
+          "作品原名",
+          "第一部 El ingenioso hidalgo don Quixote de la Mancha；第二部 Segunda parte del ingenioso cavallero don Quixote de la Mancha。兩部都由馬德里 Juan de la Cuesta 印刷、書商 Francisco de Robles 發售"
+        ],
+        [
+          "首次出版",
+          "第一部書名頁署 1605 年，Francisco Rico 版的版本說明指出實際在 1604 年 12 月印完；第二部 1615 年"
+        ],
+        [
+          "本文依據版本",
+          "第一部第 1 章：1608 年馬德里 Juan de la Cuesta 版（Rico 版代號 C），據 1897 年巴塞隆納 Montaner y Simón 複製本的掃描（Wikimedia Commons／Internet Archive elingenioso01cerv），第 1 葉正反面。第二部第 74 章：1615 年初版，西班牙國家圖書館藏本掃描（Wikimedia Commons PDF 第 570–573 頁，即第 278 葉正面至第 279 葉反面）"
+        ],
+        [
+          "校勘與注釋",
+          "Francisco Rico 主持的 Instituto Cervantes 版（Crítica，1998；注釋 Joaquín Forradellas），Centro Virtual Cervantes 線上版"
+        ],
+        [
+          "引句位置",
+          "第一部第 1 章第 1 句；1608 年版第 1 葉正面第 1–6 行"
+        ],
+        [
+          "譯文",
+          "中文引文皆為本文自譯，未使用出版中譯本；英譯本依正文表格所列版本"
+        ]
       ]
     },
     {
@@ -155,14 +182,42 @@
     {
       "type": "table",
       "title": "no quiero acordarme 的六種英譯",
-      "head": ["譯者與本文所據版本", "譯文", "落點"],
+      "head": [
+        "譯者與本文所據版本",
+        "譯文",
+        "落點"
+      ],
       "rows": [
-        ["Thomas Shelton，1612 年倫敦初版（引自 1900 年 Macmillan 重排本）", "the name whereof I purposely omit", "刻意略去"],
-        ["Peter Motteux 主持的「多人合譯」，1725 年倫敦版", "which I shall not name", "不說出口"],
-        ["Charles Jervas（書上印作 Jarvis），1749 年倫敦 Tonson 版", "the name of which I purposely omit", "刻意略去，與 Shelton 同詞"],
-        ["Tobias Smollett，1755 年譯本（引自 1792 年倫敦 Harrison & Co. 版；Internet Archive 著錄為 1782 年版的逐頁重印本）","the name of which I do not chuse to remember", "不選擇記起"],
-        ["1848 年倫敦 James Burns「供一般閱讀」改訂本，未署譯者", "of which I cannot remember the name", "記不得"],
-        ["John Ormsby，1885 年譯本（Project Gutenberg 第 996 號）", "the name of which I have no desire to call to mind", "不想記起"]
+        [
+          "Thomas Shelton，1612 年倫敦初版（引自 1900 年 Macmillan 重排本）",
+          "the name whereof I purposely omit",
+          "刻意略去"
+        ],
+        [
+          "Peter Motteux 主持的「多人合譯」，1725 年倫敦版",
+          "which I shall not name",
+          "不說出口"
+        ],
+        [
+          "Charles Jervas（書上印作 Jarvis），1749 年倫敦 Tonson 版",
+          "the name of which I purposely omit",
+          "刻意略去，與 Shelton 同詞"
+        ],
+        [
+          "Tobias Smollett，1755 年譯本（引自 1792 年倫敦 Harrison & Co. 版；Internet Archive 著錄為 1782 年版的逐頁重印本）",
+          "the name of which I do not chuse to remember",
+          "不選擇記起"
+        ],
+        [
+          "1848 年倫敦 James Burns「供一般閱讀」改訂本，未署譯者",
+          "of which I cannot remember the name",
+          "記不得"
+        ],
+        [
+          "John Ormsby，1885 年譯本（Project Gutenberg 第 996 號）",
+          "the name of which I have no desire to call to mind",
+          "不想記起"
+        ]
       ],
       "caption": "原創整理。1848 年改訂本在同一句還多了原文沒有的 in the kingdom of Arragon（在亞拉岡王國）；Project Gutenberg 把這個版本著錄為 Motteux 譯，書上只寫「依塞萬提斯西班牙文本，為一般閱讀修訂」。"
     },
@@ -224,7 +279,12 @@
     {
       "type": "detail",
       "of": "f1615",
-      "region": [0.13, 0.18, 0.83, 0.15],
+      "region": [
+        0.13,
+        0.18,
+        0.83,
+        0.15
+      ],
       "position": "書頁上方，正文第 5 到第 10 行",
       "caption": "從 Este fin tuuo 到 Homero；cuyo lugar no quiso poner 在第 6 行，pũtualmente 在行尾斷成兩截。"
     },
@@ -242,16 +302,56 @@
       "type": "timeline",
       "title": "村名的四百年：誰寫了，誰沒寫",
       "items": [
-        {"when": "1605 年（書名頁）", "label": "第一部出版", "note": "第 1 章：村名「我不想記起」；卷末墓誌銘署名「Argamasilla 的學士們」。Rico 版說明：實際在 1604 年 12 月印完。"},
-        {"when": "1608 年", "label": "Juan de la Cuesta 再版", "note": "第 1 章的姓印作 Quixana；初版作 Quexana。"},
-        {"when": "1612 年", "label": "Shelton 英譯出版", "note": "the name whereof I purposely omit。"},
-        {"when": "1614 年", "label": "Avellaneda 續作，塔拉戈納", "note": "假託阿拉伯史家 Alisolán，寫明主角從 Argamesilla 村出發。"},
-        {"when": "1615 年", "label": "第二部第 74 章", "note": "Cide Hamete「不願寫明」村子，讓拉曼查各地去爭。"},
-        {"when": "1617 年 1 月", "label": "《Persiles》出版", "note": "第三卷第 10 章：「它的名字我記不得了」。"},
-        {"when": "18 世紀末", "label": "Argamasilla de Alba 之說", "note": "據康普頓斯大學 2016 年新聞稿，由當地一位神父提出。"},
-        {"when": "2005 年", "label": "Parra Luna 等人出書", "note": "《El lugar de la Mancha es…》，Editorial Complutense 出版。據 arXiv 0807.3661 的參考文獻；該文說 Campo de Montiel 24 個候選村鎮的前提出自此書與後續修正。"},
-        {"when": "2008 年", "label": "Orden 與 Viaña 的兩版摘要", "note": "7 月：Puebla del Príncipe 或 Villanueva de los Infantes；10 月：Carrizosa 或 Villanueva de los Infantes，相對誤差最小的設定指向後者。"},
-        {"when": "2016 年 1 月", "label": "康普頓斯大學發表新書", "note": "新聞稿：26 個村鎮、24 項距離與時間變數，結論 Villanueva de los Infantes；新書是這項研究三部曲的最後一本。"}
+        {
+          "when": "1605 年（書名頁）",
+          "label": "第一部出版",
+          "note": "第 1 章：村名「我不想記起」；卷末墓誌銘署名「Argamasilla 的學士們」。Rico 版說明：實際在 1604 年 12 月印完。"
+        },
+        {
+          "when": "1608 年",
+          "label": "Juan de la Cuesta 再版",
+          "note": "第 1 章的姓印作 Quixana；初版作 Quexana。"
+        },
+        {
+          "when": "1612 年",
+          "label": "Shelton 英譯出版",
+          "note": "the name whereof I purposely omit。"
+        },
+        {
+          "when": "1614 年",
+          "label": "Avellaneda 續作，塔拉戈納",
+          "note": "假託阿拉伯史家 Alisolán，寫明主角從 Argamesilla 村出發。"
+        },
+        {
+          "when": "1615 年",
+          "label": "第二部第 74 章",
+          "note": "Cide Hamete「不願寫明」村子，讓拉曼查各地去爭。"
+        },
+        {
+          "when": "1617 年 1 月",
+          "label": "《Persiles》出版",
+          "note": "第三卷第 10 章：「它的名字我記不得了」。"
+        },
+        {
+          "when": "18 世紀末",
+          "label": "Argamasilla de Alba 之說",
+          "note": "據康普頓斯大學 2016 年新聞稿，由當地一位神父提出。"
+        },
+        {
+          "when": "2005 年",
+          "label": "Parra Luna 等人出書",
+          "note": "《El lugar de la Mancha es…》，Editorial Complutense 出版。據 arXiv 0807.3661 的參考文獻；該文說 Campo de Montiel 24 個候選村鎮的前提出自此書與後續修正。"
+        },
+        {
+          "when": "2008 年",
+          "label": "Orden 與 Viaña 的兩版摘要",
+          "note": "7 月：Puebla del Príncipe 或 Villanueva de los Infantes；10 月：Carrizosa 或 Villanueva de los Infantes，相對誤差最小的設定指向後者。"
+        },
+        {
+          "when": "2016 年 1 月",
+          "label": "康普頓斯大學發表新書",
+          "note": "新聞稿：26 個村鎮、24 項距離與時間變數，結論 Villanueva de los Infantes；新書是這項研究三部曲的最後一本。"
+        }
       ],
       "caption": "原創整理。依據 Rico 版注釋與版本說明、1608 年與 1615 年版掃描、Avellaneda 與《Persiles》的 Wikisource 謄本、康普頓斯大學 2016 年新聞稿、arXiv 0807.3661 的兩版摘要與參考文獻。"
     },
