@@ -1,0 +1,223 @@
+{
+  "column": "perio",
+  "date": "2026-10-18",
+  "title": "116 處牙齦退縮：2011 年 Cairo 退縮分類",
+  "dek": "鄰面有沒有附著喪失，能不能預測根面覆蓋的結果？Cairo 等人用 116 處退縮驗證分類、133 處手術回溯預後，2017 年世界研討會共識報告提議採用這套分類。",
+  "takeaway": "看牙齦退縮能蓋回多少，先量鄰面附著：鄰面沒有附著喪失的 RT1，術後 6 個月 74% 完全覆蓋根面；鄰面有喪失、但不超過頰側的 RT2 只有 24%。這是單一醫師的回溯資料，適合用來說明預期，不能用來選術式。",
+  "brief": "Cairo 等人 2011 年把牙齦退縮依鄰面附著喪失分成 RT1、RT2、RT3 三型，兩位檢查者的分型一致度 ICC 達 0.86。回溯 133 處手術過的退縮，6 個月時 RT1 有 74% 完全覆蓋根面，RT2 只有 24%；術前退縮一樣深時，RT1 平均多減少 0.57 毫米。2017 年世界研討會的共識報告提議採用這套分類，看退縮時除了頰側深度，也要量鄰面附著。",
+  "topic_key": "perio:doi:10.1111/j.1600-051x.2011.01732.x",
+  "updated_at": "2026-10-18T01:07:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/68/Gingival_tissue.png",
+    "width": 580,
+    "height": 401,
+    "alt": "撐開嘴唇、上下前牙咬合的口內正面照。圖上以黑底白字的英文標籤，分別用大括號標出上顎與下顎的角化組織與非角化組織範圍；另一個標籤「Gingival recession」的箭頭，指向畫面中央偏右一顆上顎正中門牙的牙頸部。",
+    "caption": "口內正面照，圖上標出角化組織、非角化組織與一處牙齦退縮；新分類的診斷表除了退縮深度，也要記錄角化組織寬度。DRosenbach 於 2014 年上傳至 Wikimedia Commons；與 Cairo 等人論文的受試者無關。",
+    "credit": "DRosenbach，Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gingival_tissue.png",
+    "made": "2014"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "牙齦退縮能補回多少，Cairo 等人 2011 年給了一個用探針就能量的判斷點：鄰面有沒有附著喪失。他們把頰側退縮依鄰面的臨床附著水準（clinical attachment level, CAL）分成三型（recession type, RT），兩位檢查者分出來的結果高度一致；再回頭看同一位醫師手術治療的 133 處退縮，6 個月時 RT1 有 74% 完全覆蓋根面，RT2 只有 24%。2017 年世界研討會的共識報告提議採用這套分類。"
+    },
+    {
+      "type": "p",
+      "text": "前提要先說清楚。分類研究的病人菌斑與出血分數都在 15% 以下，牙頸部沒有磨耗、也沒有跨過牙骨質琺瑯質交界（cemento-enamel junction, CEJ）的修復體；預後部分是回溯資料，術式從冠向前移瓣到游離牙齦移植都有，追蹤 6 個月。它改變的是看退縮的第一步：不只量頰側多深，也要量鄰面。"
+    },
+    {
+      "type": "h",
+      "text": "門診裡的一個場景：頰側 3 毫米，只說了一半"
+    },
+    {
+      "type": "p",
+      "text": "假設一位 35 歲、口腔衛生良好的病人，上顎犬齒頰側退縮 3 毫米，問能不能把牙齦「補回去」。如果這顆牙的近遠心都探不到 CEJ，鄰面沒有附著喪失，屬 RT1，可以談完全覆蓋的機會；如果鄰面已經探得到 CEJ，而且附著喪失比頰側還多，就屬 RT3；這篇論文沒有用根面覆蓋術式治療 RT3，作者推想要先重建鄰面組織，覆蓋才談得上可預期。這是說明分類怎麼用的假設情境，不是個案診療建議。"
+    },
+    {
+      "type": "paper",
+      "citation": "Cairo F, Nieri M, Cincinelli S, Mervelt J, Pagliaro U. The interproximal clinical attachment level to classify gingival recessions and predict root coverage outcomes: an explorative and reliability study. *J Clin Periodontol*. 2011;38(7):661–666.",
+      "doi": "10.1111/j.1600-051X.2011.01732.x",
+      "pmid": "21507033",
+      "link": "https://doi.org/10.1111/j.1600-051X.2011.01732.x",
+      "access": "依全文（HAL 開放典藏的作者接受稿 hal-00634006，非期刊排版版）",
+      "design": "兩部分：連續收案的分類可靠度研究（兩位檢查者盲性、各量兩次），加上回溯性的根面覆蓋預後分析",
+      "sample": "可靠度：25 名病人、116 處頰側退縮；預後：另 66 名病人、133 處經手術治療的退縮",
+      "question": "以鄰面臨床附著水準分類牙齦退縮，可不可靠？能不能預測手術後 6 個月的退縮減少量？"
+    },
+    {
+      "type": "h",
+      "text": "他們怎麼做：比較鄰面與頰側的附著喪失，分成三型"
+    },
+    {
+      "type": "p",
+      "text": "研究分兩部分，都在私人診所進行。第一部分，第一作者 Francesco Cairo 連續收集 25 名病人（平均 43.9 歲，16 位女性）的 116 處頰側退縮，兩位受過訓練的檢查者各自、互不知情地把每一處量兩次並分型。第二部分是回溯分析：另一批 66 名病人（平均 37.6 歲，19 位吸菸）在 2006 年 1 月到 2008 年 12 月間由 Cairo 以各種膜齦手術治療的 133 處退縮，事後依術前紀錄分型，看 6 個月時退縮減少多少。"
+    },
+    {
+      "type": "p",
+      "text": "分型只比一件事：鄰面的附著喪失和頰側相比如何。RT1 是鄰面沒有附著喪失，近遠心都臨床探不到 CEJ；RT2 是鄰面有附著喪失，但小於或等於頰側；RT3 是鄰面的附著喪失大於頰側。附著喪失都從 CEJ 量到袋底，近遠心兩側都有喪失時取較多的一側。作者在討論中的解讀是：RT1 多半只與創傷性刷牙有關，RT2 對應水平骨喪失，RT3 對應鄰面的骨下缺損。"
+    },
+    {
+      "type": "svg",
+      "title": "三型怎麼分（原創示意圖）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 320\">\n<text class=\"ink\" x=\"70\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">RT1</text>\n<text class=\"muted\" x=\"70\" y=\"40\" font-size=\"11\" text-anchor=\"middle\">鄰面無附著喪失</text>\n<text class=\"ink\" x=\"180\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">RT2</text>\n<text class=\"muted\" x=\"180\" y=\"40\" font-size=\"11\" text-anchor=\"middle\">鄰面 ≤ 頰側</text>\n<text class=\"ink\" x=\"290\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">RT3</text>\n<text class=\"muted\" x=\"290\" y=\"40\" font-size=\"11\" text-anchor=\"middle\">鄰面 ＞ 頰側</text>\n<line class=\"muted\" x1=\"20\" y1=\"60\" x2=\"345\" y2=\"60\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n<text class=\"muted\" x=\"4\" y=\"56\" font-size=\"10\">CEJ</text>\n<rect class=\"accent\" x=\"35\" y=\"60\" width=\"28\" height=\"60\"/>\n<text class=\"muted\" x=\"91\" y=\"78\" font-size=\"11\" text-anchor=\"middle\">0</text>\n<rect class=\"accent\" x=\"145\" y=\"60\" width=\"28\" height=\"80\"/>\n<rect class=\"gold\" x=\"187\" y=\"60\" width=\"28\" height=\"60\"/>\n<rect class=\"accent\" x=\"255\" y=\"60\" width=\"28\" height=\"120\"/>\n<rect class=\"gold\" x=\"297\" y=\"60\" width=\"28\" height=\"160\"/>\n<text class=\"ink\" x=\"49\" y=\"242\" font-size=\"11\" text-anchor=\"middle\">頰側</text>\n<text class=\"ink\" x=\"91\" y=\"242\" font-size=\"11\" text-anchor=\"middle\">鄰面</text>\n<text class=\"ink\" x=\"159\" y=\"242\" font-size=\"11\" text-anchor=\"middle\">頰側</text>\n<text class=\"ink\" x=\"201\" y=\"242\" font-size=\"11\" text-anchor=\"middle\">鄰面</text>\n<text class=\"ink\" x=\"269\" y=\"242\" font-size=\"11\" text-anchor=\"middle\">頰側</text>\n<text class=\"ink\" x=\"311\" y=\"242\" font-size=\"11\" text-anchor=\"middle\">鄰面</text>\n<text class=\"muted\" x=\"49\" y=\"258\" font-size=\"11\" text-anchor=\"middle\">3 mm</text>\n<text class=\"muted\" x=\"91\" y=\"258\" font-size=\"11\" text-anchor=\"middle\">探不到 CEJ</text>\n<text class=\"muted\" x=\"159\" y=\"258\" font-size=\"11\" text-anchor=\"middle\">4 mm</text>\n<text class=\"muted\" x=\"201\" y=\"258\" font-size=\"11\" text-anchor=\"middle\">3 mm</text>\n<text class=\"muted\" x=\"269\" y=\"258\" font-size=\"11\" text-anchor=\"middle\">6 mm</text>\n<text class=\"muted\" x=\"311\" y=\"258\" font-size=\"11\" text-anchor=\"middle\">8 mm</text>\n<rect class=\"accent\" x=\"40\" y=\"280\" width=\"12\" height=\"12\"/>\n<text class=\"ink\" x=\"58\" y=\"290\" font-size=\"11\">頰側附著喪失</text>\n<rect class=\"gold\" x=\"170\" y=\"280\" width=\"12\" height=\"12\"/>\n<text class=\"ink\" x=\"188\" y=\"290\" font-size=\"11\">鄰面附著喪失</text>\n<text class=\"muted\" x=\"180\" y=\"312\" font-size=\"10\" text-anchor=\"middle\">長條長度＝自 CEJ 量到齦溝或牙周袋底的毫米數</text>\n</svg>",
+      "caption": "數值取自原文圖 1 至圖 3 圖說的三個示範病例：RT1 頰側附著喪失 3 毫米、鄰面探不到 CEJ；RT2 頰側 4 毫米、鄰面 3 毫米；RT3 頰側 6 毫米、鄰面 8 毫米。依原文數據重繪，不是原論文的臨床照片。",
+      "credit": "本報原創圖解，依 Cairo 等人 2011 年原文定義與圖說數據重繪"
+    },
+    {
+      "type": "h",
+      "text": "發現了什麼：分類很穩定，RT1 每 4 處約有 3 處完全蓋住"
+    },
+    {
+      "type": "p",
+      "text": "可靠度先過關。兩位檢查者分型的組內相關係數（intra-class correlation coefficient, ICC）是 0.86（95% 信賴區間 0.80–0.90）。ICC 越接近 1，代表不同人分出來的結果越一致；依作者採用的 Landis 與 Koch 分級，0.81 以上屬「近乎完全一致」。兩位檢查者各自前後兩次的 ICC 都是 0.93。116 處退縮中，第一作者分出 RT1 32 處（28%）、RT2 50 處（43%）、RT3 34 處（29%）。"
+    },
+    {
+      "type": "p",
+      "text": "預後的差別更直接。133 處治療過的退縮裡，RT1 76 處、RT2 33 處、RT3 24 處。6 個月時 RT1 有 56 處（74%）完全覆蓋根面，RT2 有 8 處（24%），RT3 一處也沒有。RT3 這 24 處只做了增寬角化組織的游離牙齦移植，本來就不以覆蓋根面為目標，所以沒有放進統計模型。以病人為隨機效應的混合模型顯示，術前退縮深度相同時，RT1 比 RT2 平均多減少 0.57 毫米退縮（95% 信賴區間 0.31–0.84）。"
+    },
+    {
+      "type": "table",
+      "title": "133 處退縮術後 6 個月（原文表 3）",
+      "head": [
+        "",
+        "RT1（76 處）",
+        "RT2（33 處）",
+        "RT3（24 處）"
+      ],
+      "rows": [
+        [
+          "術前頰側退縮",
+          "2.8 ± 1.0 mm",
+          "3.2 ± 1.4 mm",
+          "3.5 ± 0.5 mm"
+        ],
+        [
+          "鄰面附著喪失",
+          "0",
+          "1.6 ± 0.6 mm",
+          "6.6 ± 0.8 mm"
+        ],
+        [
+          "退縮減少量",
+          "2.5 ± 0.9 mm",
+          "2.2 ± 0.8 mm",
+          "0.4 ± 0.9 mm"
+        ],
+        [
+          "6 個月時殘留退縮",
+          "0.3 ± 0.5 mm",
+          "1.1 ± 0.9 mm",
+          "3.3 ± 0.6 mm"
+        ],
+        [
+          "完全覆蓋根面",
+          "56 處（74%）",
+          "8 處（24%）",
+          "0 處"
+        ]
+      ],
+      "caption": "數值為平均 ± 標準差，依 Cairo 等人 2011 年全文表 3 整理。RT3 只做了增寬角化組織的手術，不以根面覆蓋為目標，不能和前兩欄直接比較。"
+    },
+    {
+      "type": "h",
+      "text": "今天怎麼用：2017 年分類採用 RT，再加上牙齦表型與牙面狀況"
+    },
+    {
+      "type": "p",
+      "text": "Cairo 等人在前言整理了舊分類。Miller 1985 年依退縮是否到達膜齦聯合（mucogingival junction）與鄰面骨的狀況分成四類，Cairo 等人寫道，這套分類近二十年廣為使用；Pini-Prato 2011 年則指出，第 I、II 類不易區分，第 III、IV 類的鄰面組織喪失怎麼量也不清楚。RT 分類把判斷換成一個探針就能量的數字：鄰面附著喪失。"
+    },
+    {
+      "type": "p",
+      "text": "2017 年牙周與植體周圍疾病分類世界研討會（2017 World Workshop on the Classification of Periodontal and Peri-Implant Diseases and Conditions），第 3 工作小組的共識報告（Jepsen 等，2018）提議採用以鄰面附著喪失為準的退縮分類，三型定義與 Cairo 2011 相同，並引用這篇論文。報告的表 2 把它擴成一張診斷表：牙齦這一側記錄退縮深度、牙齦厚度（gingival thickness）與角化組織寬度（keratinized tissue width），牙齒這一側記錄 CEJ 能否辨識（A／B）與牙頸部有沒有大於 0.5 毫米的階梯（+／−），後兩項出自 Pini-Prato 等人 2010 年的牙面缺損分類。報告也建議把探針放入齦溝，看得到探針透出就是 1 毫米以下的薄型牙齦。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "本報的讀法是：退縮病人的初診紀錄，除了頰側退縮深度，每顆患牙多量近遠心的附著水準，先分出 RT1、RT2、RT3，再補上牙齦厚度、角化組織寬度與 CEJ 狀態。RT1 可以和病人談完全覆蓋；RT2 要說明完全覆蓋的機會小得多；RT3 依作者的推想，要先重建鄰面的軟硬組織，根面覆蓋才談得上可預期。這是分型的預後意涵，選哪一種術式，這篇論文沒有比較。"
+    },
+    {
+      "type": "h",
+      "text": "要小心的地方"
+    },
+    {
+      "type": "list",
+      "items": [
+        "預後資料來自單一醫師、單一私人診所的回溯紀錄，術式有 8 種做法混在一起，追蹤只有 6 個月。",
+        "可靠度研究只收 CEJ 清楚、沒有磨耗的牙齒，病人口腔衛生良好（全口菌斑與出血分數低於 15%）；作者也承認 CEJ 有時無法辨識，這時需要另找測量參考點（例如切緣）。",
+        "RT3 的 24 處只做了增寬角化組織的手術，這篇論文無法告訴我們 RT3 用根面覆蓋術式能蓋回多少。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cairo F, Nieri M, Cincinelli S, Mervelt J, Pagliaro U. The interproximal clinical attachment level to classify gingival recessions and predict root coverage outcomes: an explorative and reliability study. J Clin Periodontol 2011;38(7):661–666",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2011-04-20",
+      "url": "https://doi.org/10.1111/j.1600-051X.2011.01732.x",
+      "note": "PMID 21507033；書目以 PubMed efetch 與 Crossref 核對（線上刊出 2011-04-20，刊於 2011 年 7 月號）"
+    },
+    {
+      "title": "Cairo F, et al. 同上論文之作者接受稿（PEER 計畫，HAL 典藏 hal-00634006）",
+      "publisher": "HAL 開放典藏",
+      "date": "2011-10-20",
+      "url": "https://hal.science/hal-00634006",
+      "note": "讀全文：方法、結果、表 1–4、討論與圖 1–3 圖說"
+    },
+    {
+      "title": "Miller PD Jr. A classification of marginal tissue recession. Int J Periodontics Restorative Dent 1985;5(2):8–13",
+      "publisher": "International Journal of Periodontics & Restorative Dentistry",
+      "date": "1985",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3858267/",
+      "note": "PMID 3858267；PubMed 無摘要，文中描述依 Cairo 等人 2011 年前言轉述"
+    },
+    {
+      "title": "Pini-Prato G. The Miller classification of gingival recession: limits and drawbacks. J Clin Periodontol 2011;38(3):243–245",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2010-12-15",
+      "url": "https://doi.org/10.1111/j.1600-051X.2010.01655.x",
+      "note": "PMID 21158897；文中對 Miller 分類的批評依 Cairo 等人 2011 年前言轉述"
+    },
+    {
+      "title": "Pini-Prato G, Franceschi D, Cairo F, Nieri M, Rotundo R. Classification of dental surface defects in areas of gingival recession. J Periodontol 2010;81(6):885–890",
+      "publisher": "Journal of Periodontology（Wiley／AAP）",
+      "date": "2010-06",
+      "url": "https://doi.org/10.1902/jop.2010.090631",
+      "note": "PMID 20450362；依摘要：CEJ 可辨識（A）或不可辨識（B）、有無階梯（+／−）四類"
+    },
+    {
+      "title": "Landis JR, Koch GG. The measurement of observer agreement for categorical data. Biometrics 1977;33(1):159–174",
+      "publisher": "Biometrics",
+      "date": "1977-03",
+      "url": "https://doi.org/10.2307/2529310",
+      "note": "PMID 843571；一致度分級依 Cairo 等人 2011 年統計方法一節轉述"
+    },
+    {
+      "title": "Jepsen S, Caton JG, Albandar JM, et al. Periodontal manifestations of systemic diseases and developmental and acquired conditions: Consensus report of workgroup 3 of the 2017 World Workshop on the Classification of Periodontal and Peri-Implant Diseases and Conditions. J Periodontol 2018;89 Suppl 1:S237–S248",
+      "publisher": "Journal of Periodontology（Wiley／AAP）",
+      "date": "2018-06-21",
+      "url": "https://doi.org/10.1002/JPER.17-0733",
+      "note": "PMID 29926943；讀全文（弗羅茨瓦夫醫科大學網站轉載之期刊 PDF：https://www.umw.edu.pl/sites/default/files/2022-04/Article16.pdf）：Gingival Recession 一節與表 2、牙齦厚度評估方法"
+    },
+    {
+      "title": "Jepsen S, et al. 同上共識報告，J Clin Periodontol 2018;45 Suppl 20:S219–S229（同步刊出版）",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2018-06-20",
+      "url": "https://doi.org/10.1111/jcpe.12951",
+      "note": "PMID 29926500；依摘要"
+    },
+    {
+      "title": "File:Gingival tissue.png",
+      "publisher": "Wikimedia Commons",
+      "date": "2014-12-29",
+      "url": "https://commons.wikimedia.org/wiki/File:Gingival_tissue.png",
+      "note": "頭圖；DRosenbach，CC BY-SA 4.0"
+    }
+  ]
+}
