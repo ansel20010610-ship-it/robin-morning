@@ -5,7 +5,7 @@
   "dek": "一座英國主教座堂委約、全用希伯來文演唱的詩篇套曲。伯恩斯坦逝世 36 週年，本文以 1965 年首演原班人馬的錄音逐段聆聽。",
   "brief": "伯恩斯坦《奇切斯特詩篇》的委約者胡塞希望音樂裡有一點《西城故事》的味道；據伯恩斯坦官方網站，第二樂章男聲闖入唱《詩篇》第 2 篇的段落，正大量用了從《西城故事》刪掉的音樂。指定錄音是作曲家指揮紐約愛樂、Camerata Singers 與男童獨唱 John Bogart 的 Columbia 原版，現在最方便找的是 Sony Classical 的 SMK 60595。聆聽時先跟著第一樂章的 7/4 拍數「一二、一二、一二三」，再留意小七度動機在第三樂章前奏回來，全曲最後停在齊奏的 G 上。",
   "topic_key": "music:bernstein-chichester-psalms",
-  "updated_at": "2026-10-14T00:52:00+08:00",
+  "updated_at": "2026-10-18T15:48:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -218,6 +218,11 @@
       "type": "callout",
       "label": "延伸聆聽",
       "text": "伯恩斯坦在 1977 年 8 月於柏林愛樂廳為德意志留聲機（Deutsche Grammophon）重錄了這首曲子，指揮以色列愛樂，合唱為維也納青年合唱團（Wiener Jeunesse-Chor），獨唱由維也納少年合唱團團員擔任（據 Discogs 著錄）；官方網站列出的版本是 Polydor 415 965-2（錄音版權年份 1978）。想聽英國詩班的版本，英文維基百科列出劍橋國王學院合唱團（Choir of King's College, Cambridge）2018 年發行、由 Stephen Cleobury 指揮、George Hill 擔任男童獨唱的錄音。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-10-18）",
+      "text": "「編制與錄音」一節說女高音、女低音聲部「以男童的聲音為前提」、男聲女低音獨唱「不可由女性演唱」等要求，是「英文維基百科引述出版商 Boosey & Hawkes 的說明」，有誤。這些是伯恩斯坦本人在總譜中的註記；Boosey & Hawkes 是出版商，維基百科只是以該社網站的試閱總譜作為出處。依據：英文維基百科〈Chichester Psalms〉的〈Scoring〉一節（In the score, Bernstein notes that…）。"
     }
   ],
   "sources": [
@@ -296,6 +301,13 @@
       "publisher": "Discogs",
       "url": "https://www.discogs.com/release/7449600",
       "note": "《奇切斯特詩篇》1977 年 8 月錄於柏林愛樂廳；以色列愛樂、Wiener Jeunesse-Chor、維也納少年合唱團團員獨唱；未標發布日期，2026-10-14 查閱"
+    },
+    {
+      "title": "Chichester Psalms（試閱總譜）",
+      "publisher": "Boosey & Hawkes",
+      "date": "",
+      "url": "http://www.boosey.com/cr/perusals/score?id=20820",
+      "note": "英文維基百科引述伯恩斯坦總譜註記時所附的出處"
     }
   ]
 }
