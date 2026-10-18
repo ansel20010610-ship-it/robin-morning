@@ -1,0 +1,299 @@
+{
+ "column": "music",
+ "date": "2026-10-19",
+ "title": "五小節的低音一再重來：普賽爾〈狄朵的哀歌〉",
+ "dek": "五小節的半音下行，在同一個音高上一遍遍重來。從一本沒有日期的劇本、一份晚了六十年的總譜和一套 1961 年的錄音，聽狄朵最後的詠嘆調。",
+ "brief": "普賽爾歌劇《狄朵與埃涅阿斯》最後的詠嘆調〈When I am laid in earth〉，建立在一條從 G 半音下行的五小節低音上，始終停在 G 小調；Pearson 教材所用的版本裡，它在同一音高重複 11 遍。指定錄音是珍奈・貝克 1961 年 10 月在倫敦錄製、安東尼・路易斯指揮的版本。聆聽時先跟著低音數遍數，再聽人聲怎麼和它錯開。",
+ "topic_key": "music:purcell-z626",
+ "updated_at": "2026-10-19T01:11:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "hero": {
+  "kind": "document",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Dido_and_Aeneas_%281689%29.pdf/page12-960px-Dido_and_Aeneas_%281689%29.pdf.jpg",
+  "width": 960,
+  "height": 1556,
+  "alt": "一頁泛黃的 17 世紀印刷劇本，頁首印著「(8)」與「Enter Dido, Belinda, and Train」。左欄是角色名 Dido、Bel.、Æn.、Cho.，右邊是一行行對白，背面的字隱約透過紙張。頁面下方以較小字體印著「Thy Hand Belinda, - darkness shades me」到「Remember me, but ah! forget my Fate.」幾行，右側括號裡寫「Cupids appear in the Clouds o're her Tomb」，再下面是以「With drooping Wings you Cupids come」開頭的四行合唱，最底下印著「FINIS.」。",
+  "caption": "《狄朵與埃涅阿斯》劇本的最後一頁（第 8 頁）。頁面下方是狄朵最後的宣敘調與詠嘆調歌詞：劇本裡〈When I am laid in Earth〉只印了一遍，三行就結束；現存總譜則把「am laid」「no trouble」「Remember me」一再重複。這份劇本本身沒有印日期，Internet Archive 上的館方著錄為 1689 年。",
+  "credit": "泰特（Nahum Tate）作詞、普賽爾（Henry Purcell）作曲《An Opera Perform'd at Mr. Josias Priest's Boarding-School at Chelsey》劇本；英國皇家音樂學院圖書館（Royal College of Music Library）藏本 D144，經 Internet Archive、Wikimedia Commons",
+  "license": "Public domain",
+  "license_url": "",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Dido_and_Aeneas_(1689).pdf?page=12",
+  "made": "未標日期（館方著錄為 1689 年）"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "狄朵還沒開口，低音先獨自走了一遍：從 G 出發，一個半音一個半音往下，G、升 F、F、E、降 E、D，接著是降 B、C、D，回到 G。整條線只有五小節。接下來，這五小節會在同一個音高上一遍遍重來，從頭到尾不轉調，一直停在 G 小調。重複幾遍要看版本：Pearson 為 A-level 課程編寫的教材所用的現代版本，後半段唱兩遍，低音一共 11 遍；1889 年普賽爾學會版的總譜只把後半段印一次，也沒有反覆記號，算起來是 9 遍。"
+  },
+  {
+   "type": "p",
+   "text": "這是英國作曲家普賽爾（Henry Purcell，1659–1695）的歌劇《狄朵與埃涅阿斯》（Dido and Aeneas）最後一首詠嘆調〈When I am laid in earth〉（當我被埋入地下），一般稱作〈狄朵的哀歌〉（Dido's Lament）。劇本由泰特（Nahum Tate）撰寫，故事取自羅馬詩人維吉爾（Virgil）《埃涅阿斯紀》（Aeneid）第 4 卷：迦太基女王狄朵愛上特洛伊英雄埃涅阿斯，埃涅阿斯卻被女巫設計，以為眾神命令他啟程前往義大利。這首詠嘆調是狄朵死前唱的最後一段，唱完之後，合唱〈With drooping wings〉為全劇收尾。"
+  },
+  {
+   "type": "music",
+   "composer": "普賽爾（Henry Purcell）",
+   "work": "歌劇《狄朵與埃涅阿斯》第 3 幕：宣敘調〈Thy hand, Belinda〉與詠嘆調〈When I am laid in earth〉（狄朵的哀歌）",
+   "work_original": "Dido and Aeneas, Z. 626, Act III: \"Thy hand, Belinda\" – \"When I am laid in earth\"",
+   "composed": "不晚於 1688 年夏（White 2009），確切年份仍有爭議",
+   "performers": "珍奈・貝克（Janet Baker，狄朵）；安東尼・路易斯（Anthony Lewis）指揮 英國室內管弦樂團（English Chamber Orchestra）、St. Anthony Singers；瑟斯頓・達特（Thurston Dart）大鍵琴數字低音",
+   "recording": "1961 年 10 月錄音於倫敦 Walthamstow Assembly Hall；法國國家圖書館著錄為 L'Oiseau-Lyre SOL 60047（1962 年），美國東卡羅來納大學圖書館著錄為 Decca SOL 60047、1962 年發行；2000 年收入 Decca Legends 再版（466 387-2）",
+   "duration": "依演出而異；Decca Legends 版第 16 軌從〈But Death, alas!〉唱到哀歌結束，長 6 分 27 秒（MusicBrainz 資料）",
+   "movements": [
+    "宣敘調：Thy hand, Belinda（只有數字低音伴奏）",
+    "詠嘆調：When I am laid in earth（女高音、弦樂與數字低音）"
+   ],
+   "spotify": {
+    "album": "",
+    "tracks": [],
+    "query": "Purcell Dido and Aeneas Janet Baker Anthony Lewis English Chamber Orchestra",
+    "artist_hint": "Janet Baker",
+    "track_filter": [
+     "When I am laid in earth"
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "美國東卡羅來納大學（East Carolina University）圖書館的目錄記載，這套錄音 1961 年 10 月在倫敦的 Walthamstow Assembly Hall 錄製，1962 年以 Decca SOL 60047 發行，後來收進 Decca 的「Legends」系列再版；法國國家圖書館的目錄則把 SOL 60047 著錄為 L'Oiseau-Lyre 廠牌的唱片。數字低音的大鍵琴由音樂學者達特（Thurston Dart）彈奏，CD 內頁解說也有他執筆的部分。這是一個用現代樂器演奏的版本。"
+  },
+  {
+   "type": "p",
+   "text": "選它是因為貝克的狄朵。MusicWeb International 的樂評人 Michael Greenhalgh 2008 年評論 Kirsten Flagstad 1952 年錄音的再版時，拿它和貝克的版本比較，指出貝克錄這套唱片時 28 歲，他形容她的哀歌「has both stateliness and a pure, childlike simplicity」（既莊重，又有一種純淨、孩子般的單純；本文自譯），並寫道：「If you want only one recording of Dido and Aeneas I'd recommend the Baker/Lewis」（如果只要一套《狄朵與埃涅阿斯》，我推薦貝克與路易斯這套；本文自譯）。同一網站的 Ralph Moore 在 2021 年的錄音總評裡，也把這套列為現代樂器版本中最值得推薦的幾套之一。",
+   "tag": "學者解釋"
+  },
+  {
+   "type": "h",
+   "text": "一份沒有日期的劇本，一份晚了六十年的總譜"
+  },
+  {
+   "type": "p",
+   "text": "這部歌劇的早期文件少得驚人。音樂學者 Bryan White 2009 年在《Early Music》期刊發表的論文，開頭就指出，1689 年或更早、和這部歌劇有關的文件只有兩份：劇作家 Thomas D'Urfey 為切爾西女校演出寫的收場白（1689 年底出版），以及推測為同一場演出印製、沒有日期的劇本。劇本的標題頁寫著「An Opera Perform'd at Mr. Josias Priest's Boarding-School at Chelsey. By Young Gentlewomen」：在倫敦切爾西一所由普瑞斯特（Josias Priest）經營的寄宿女校，由年輕淑女們演出。",
+   "tag": "史實"
+  },
+  {
+   "type": "p",
+   "text": "White 在同一篇論文裡說，這場女校演出發生在 1689 年底之前的某個時候；學界雖有「大約 1689 年春天」的共識，但他指出，這個推定所根據的寓意與時事解讀「hotly contested and rather shaky」（爭議激烈，而且相當不穩；本文自譯）。至於作品何時寫成，他稱之為「probably the most fiercely debated point in all Purcell scholarship」（大概是整個普賽爾研究裡爭論最激烈的問題；本文自譯）。據 Wikipedia 對 White 這篇論文的摘述，White 論文討論的一封商人 Rowland Sherman 的信，最晚在 1688 年夏天就把這部歌劇和切爾西女校連在一起；另有學者，例如 Bruce Wood 與 Andrew Pinnock 1992 年的論文，主張它原本是為宮廷而寫，Wikipedia 的摘述是可能為查理二世而作、早到 1684 年前後。",
+   "tag": "學者解釋"
+  },
+  {
+   "type": "p",
+   "text": "總譜的情況更糟。依 Wikipedia 引用 Curtis Price 1984 年的研究，普賽爾的親筆總譜沒有留下來，現存最早的總譜藏在牛津大學博德利圖書館（Bodleian Library），抄寫時間不早於 1750 年，距離作品完成已超過六十年；序幕的音樂則已失傳。Pearson 為英國 A-level 音樂課程編寫的教材也提醒，宣敘調低音下方的和聲數字不確定有多少出自普賽爾本人；不過它認為，總譜要小提琴「very soft」（非常輕；本文自譯）演奏的指示，是全劇少數可能出自最早期的力度記號之一。",
+   "tag": "學者解釋"
+  },
+  {
+   "type": "p",
+   "text": "拿劇本和現存總譜對照，可以看出音樂把歌詞拉長了多少。劇本裡的詠嘆調歌詞只有三行：「When I am laid in Earth my wrongs Create / No trouble in thy Breast, / Remember me, but ah! forget my Fate.」（當我被埋入地下，願我的過錯不在你心中引起煩憂；記得我，但啊，忘了我的命運；本文自譯）。現存總譜裡，「am laid」「no trouble」都唱了兩次，「Remember me」一輪唱三次，前半段整段唱兩遍。後半段是否也唱兩遍，各版本不同：Pearson 教材所用的版本重複後半段，1889 年普賽爾學會版只印一次。三行歌詞，就這樣拉長成前奏與尾奏之間的整段人聲。",
+   "tag": "史料"
+  },
+  {
+   "type": "figure",
+   "id": "f1",
+   "kind": "document",
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Dido_and_Aeneas%2C_Z.626_%28IA_imslp-and-aeneas-z626-purcell-henry%29.pdf/page103-960px-Dido_and_Aeneas%2C_Z.626_%28IA_imslp-and-aeneas-z626-purcell-henry%29.pdf.jpg",
+   "width": 960,
+   "height": 1359,
+   "alt": "一頁印刷樂譜，頁碼 84。上半頁標題「No. 36. RECIT.」，有 Soprano、Basso 與鋼琴縮譜三組譜表，歌詞是「Thy hand, Belinda; darkness shades me」到「Death is now a welcome guest」。下半頁標題「No. 37. SONG.」，速度標示 Larghetto，譜表依序是 Violino 1st、Violino 2nd、Viola、Soprano、Basso 與鋼琴縮譜；開頭幾小節只有 Basso 一行有音符，兩行小提琴譜表之間印著「(Violins play very soft.)」，第 6 小節起弦樂與女高音才進入，歌詞「When I am laid, am」。",
+   "caption": "1889 年普賽爾學會版總譜的第 84 頁。下半頁是哀歌的開頭：第 1 小節是弱起，低音（Basso）獨自走完第一遍下行的頑固低音；到第 6 小節的強拍、也就是第一遍低音的最後一個音上，第一、第二小提琴、中提琴和狄朵才一起進來。兩行小提琴譜表之間印著「Violins play very soft」。最下方的鋼琴縮譜是 1889 年版加上的。",
+   "credit": "普賽爾學會《The Works of Henry Purcell》第 3 卷，William H. Cummings 編，倫敦 Novello, Ewer & Co.，1889 年（版號 7590）；掃描經 IMSLP、Internet Archive、Wikimedia Commons",
+   "license": "Public domain",
+   "license_url": "",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Dido_and_Aeneas,_Z.626_(IA_imslp-and-aeneas-z626-purcell-henry).pdf?page=103",
+   "made": "1889"
+  },
+  {
+   "type": "h",
+   "text": "聆聽導引：先聽低音，再聽人聲怎麼和它錯開"
+  },
+  {
+   "type": "p",
+   "text": "**宣敘調〈Thy hand, Belinda〉。** 狄朵對侍女貝琳達（Belinda）說：黑暗籠罩著我，讓我靠在你懷裡，「Death is now a welcome guest」（死亡如今是受歡迎的客人；本文自譯）。這段只有數字低音伴奏。Pearson 的教材指出，人聲旋律從 C 一路曲折下降到低七度的 D，途中除了升 F 之外每個半音都唱到；低音則先從 C 降到 G，接著改從 G 起頭降到 D，各走一次帶半音的四度下行。換句話說，詠嘆調那條半音下行的低音，在宣敘調裡已經先出現了兩次變形。"
+  },
+  {
+   "type": "table",
+   "title": "〈When I am laid in earth〉的段落（依 Pearson 教材所用版本，低音 11 遍）",
+   "head": [
+    "低音第幾遍",
+    "誰在演奏",
+    "歌詞"
+   ],
+   "rows": [
+    [
+     "1",
+     "只有低音",
+     "（前奏）"
+    ],
+    [
+     "2–3",
+     "人聲進入，弦樂加入",
+     "When I am laid in earth… no trouble in thy breast"
+    ],
+    [
+     "4–5",
+     "同上，前半段重唱一遍",
+     "同上"
+    ],
+    [
+     "6–7",
+     "人聲、弦樂",
+     "Remember me… forget my fate"
+    ],
+    [
+     "8–9",
+     "後半段重唱一遍，開頭略有調整",
+     "同上"
+    ],
+    [
+     "10–11",
+     "人聲停止，只剩弦樂",
+     "（尾奏）"
+    ]
+   ],
+   "caption": "依 Pearson A-level 教材的結構分析整理。教材把這個結構比作二段式（A、B 各唱兩遍）加上前奏與尾奏，並指出全曲始終停在 G 小調，沒有一般二段式常見的轉調。1889 年普賽爾學會版只印一次 B 段，低音共 9 遍，尾奏是第 8、9 遍。"
+  },
+  {
+   "type": "p",
+   "text": "**第 1 遍到第 5 遍（以下遍數依 Pearson 教材所用版本）。** 第一遍只有低音。接著狄朵進來，第一、第二小提琴與中提琴也加入，加上數字低音，就是這首詠嘆調的全部編制。Pearson 的教材特別指出，狄朵是在第 1 遍低音的最後一個音上就開口，不是等第 2 遍開始；此後人聲樂句和低音的五小節週期經常錯開；教材舉出的兩者一起終止之處，是它所用版本的第 35–36 小節與第 45–46 小節。也可以注意每一遍低音的最後兩小節：三拍子的兩小節被唱奏成三組兩拍，這是巴洛克音樂接近終止時常用的「赫米奧拉」（hemiola）節奏。"
+  },
+  {
+   "type": "p",
+   "text": "**人聲進來後的第二小節。** 教材描述，這裡低音走到升 F，狄朵卻還留在降 B 上不放，同時第二小提琴的 C 與人聲該解決過去的 A 一起響起，形成「very dissonant」（非常不和諧；本文自譯）的組合；人聲先唱的降 B 和後面的還原 B 也緊緊貼在一起。這是整首曲子第一個刺耳的地方，就在「laid」這個字附近。"
+  },
+  {
+   "type": "p",
+   "text": "**第 6 遍起，「Remember me」。** 後半段一開始，人聲在 D 上反覆唱「Remember me」，旋律幾乎不動，中間用休止切開。教材把這幾個重複的 D 看作屬音持續音，它們把旋律抬到較高的音域；旋律的高潮則在它所說的「third and final」（第三次、也是最後一次；本文自譯）「Remember me」：人聲衝上高音 G，接著從 F 一步步下降到低音 G，唱完「forget my fate」。"
+  },
+  {
+   "type": "p",
+   "text": "**第 10、11 遍：弦樂的尾奏（1889 年版是第 8、9 遍）。** 狄朵唱完，低音繼續走最後兩遍。教材指出，上方弦樂這時才有了自己的旋律：中提琴先奏出一條下行的句子，第二小提琴晚一小節模仿，第一小提琴再晚兩小節進來，間隔刻意不對稱；第一小提琴最後下降整整一個八度，用到 12 個半音裡的 11 個，只缺降 A。譜上最後一個和弦只寫了根音與五度；弦樂一停，合唱就接著開始。"
+  },
+  {
+   "type": "p",
+   "text": "我的讀法是：這首曲子動人的地方，在於低音始終不肯改變。每一遍都在同一個音高，調性也不離開 G 小調，所有的變化都只能發生在上方：人聲提早或延遲、不和諧音、越唱越高的「Remember me」。聽第二次時，不妨只盯著低音，數一數它走到第幾遍。",
+   "tag": "本文讀法"
+  },
+  {
+   "type": "callout",
+   "label": "延伸聆聽",
+   "text": "同一首曲子的另一種聲音：安德魯・派洛特（Andrew Parrott）指揮 Taverner Choir 與 Taverner Players、艾瑪・柯克比（Emma Kirkby）唱狄朵的版本，Chandos 的目錄記載 1981 年 1 月 3 日至 5 日錄於倫敦 Rosslyn Hill Chapel。Wikipedia 引《Rough Guide to Opera》，把它和 Joel Cohen 1979 年指揮 Boston Camerata 的錄音並列為最早的兩套古樂器錄音。評價並不一致：Ralph Moore 在前述總評裡就很不喜歡這套錄音，認為柯克比的聲音太輕、太純淨，不像狄朵。拿它和貝克的版本對照，可以聽出同一條低音在古樂器與現代樂器上的差別。"
+  }
+ ],
+ "sources": [
+  {
+   "title": "36. Purcell: 'Thy hand, Belinda' and 'When I am laid in earth' from Dido and Aeneas (For Unit 6: Further Musical Understanding)",
+   "publisher": "Pearson Edexcel（GCE Music 教學資料）",
+   "date": "2014-06-12",
+   "url": "https://qualifications.pearson.com/content/dam/pdf/A%20Level/Music/2013/Teaching%20and%20learning%20materials/Unit%206%20-%2036.%20Purcell%20-%20%E2%80%98Thy%20hand,%20Belinda%E2%80%99%20and%20%E2%80%98When%20I%20am%20laid%20in%20earth%E2%80%99%20from%20Dido%20and%20Aeneas.pdf",
+   "note": "全文：宣敘調只有數字低音、人聲由 C 降到 D 且除升 F 外每個半音都唱到、低音兩次半音四度下行；詠嘆調 11 遍五小節低音、結構表（1 前奏、2–3 與 4–5 為 A、6–7 與 8–9 為 B、10–11 尾奏）、第二遍弦樂進入、人聲在第 1 遍最後一個音進入、第 35–36 與 45–46 小節同時終止、violins 'very soft' 的說明、數字不確定是否出自普賽爾、第 7 小節降 B 掛留、B 段重複的 D 與高潮、赫米奧拉、尾奏的模仿進入與第一小提琴 11 個半音、空五度終止、全曲 G 小調；日期為 PDF 建立日期"
+  },
+  {
+   "title": "Letter from Aleppo: dating the Chelsea School performance of Dido and Aeneas",
+   "publisher": "Early Music 37/3（Bryan White 撰，Oxford University Press）",
+   "date": "2009-08-01",
+   "url": "https://academic.oup.com/em/article/37/3/417/473343",
+   "note": "僅讀到網頁上的論文正文開頭：1689 年或更早的文件只有 D'Urfey 收場白與未標日期的劇本、1689 年底前在 Priest 女校演出、「hotly contested and rather shaky」「probably the most fiercely debated point in all Purcell scholarship」、Kew 公共檔案館「discovered recently」的一封信"
+  },
+  {
+   "title": "Dido and Aeneas",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Dido_and_Aeneas",
+   "note": "Score 一節（引 Price 1984：無親筆總譜、博德利圖書館最早總譜抄於 1750 年以後、序幕音樂失傳）；Premiere 一節（引 White 2009：Rowland Sherman 的信最晚在 1688 年夏天；Wood & Pinnock 1992、Pinnock 2015 的宮廷起源說）；Recordings 一節（引 Boyden 等《Rough Guide to Opera》：Cohen 1979 與 Parrott 1981 兩套古樂器錄音）；取材自維吉爾第 4 卷；2026-10-19 查閱"
+  },
+  {
+   "title": "Dido's Lament",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Dido%27s_Lament",
+   "note": "低音的半音四度下行、重複 11 次、3/2 拍、G 小調、宣敘調只有數字低音、歌詞；2026-10-19 查閱"
+  },
+  {
+   "title": "Henry Purcell and the London Stage",
+   "publisher": "Cambridge University Press（Curtis Price 著）",
+   "date": "1984",
+   "url": "https://books.google.com/books?id=E7E8AAAAIAAJ",
+   "note": "未讀原書；最早總譜與序幕失傳之說依 Wikipedia 引用此書第 239 頁"
+  },
+  {
+   "title": "'Unscarr'd by turning times'? The dating of Purcell's Dido and Aeneas",
+   "publisher": "Early Music 20/3（Bruce Wood、Andrew Pinnock 撰）",
+   "date": "1992-08",
+   "url": "https://doi.org/10.1093/earlyj/xx.3.373",
+   "note": "未讀全文；宮廷起源說依 Wikipedia 摘述"
+  },
+  {
+   "title": "The Rough Guide to Opera, 3rd ed.: Dido and Aeneas",
+   "publisher": "Rough Guides（Matthew Boyden 等）",
+   "date": "2002",
+   "url": "https://books.google.com/books?id=bLDaqKzJF08C&pg=PT26",
+   "note": "未讀原書；Cohen 1979 與 Parrott 1981 為兩套先驅古樂器錄音之說依 Wikipedia 引用"
+  },
+  {
+   "title": "An opera : perform'd at Mr. Josias Priest's boarding school at Chelsey（D144）",
+   "publisher": "Royal College of Music Library／Internet Archive",
+   "date": "2020-08-12",
+   "url": "https://archive.org/details/d-144-tate-dido-and-aeneas-300-dpi-images",
+   "note": "皇家音樂學院圖書館上傳的劇本掃描與著錄（date 1689、館藏 D144）；第 1 頁標題頁、第 8 頁最後一場的歌詞與舞台指示；日期為上傳日"
+  },
+  {
+   "title": "File:Dido and Aeneas (1689).pdf",
+   "publisher": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Dido_and_Aeneas_(1689).pdf",
+   "note": "頭圖（PDF 第 12 頁），Public domain；2026-10-19 查閱"
+  },
+  {
+   "title": "Dido and Aeneas, Z.626 (Purcell, Henry)",
+   "publisher": "IMSLP",
+   "url": "https://imslp.org/wiki/Dido_and_Aeneas,_Z.626_(Purcell,_Henry)",
+   "note": "William H. Cummings 編《The Works of Henry Purcell》第 3 卷（Novello, Ewer & Co.，1889，版號 7590）的出版資料；2026-10-19 查閱"
+  },
+  {
+   "title": "File:Dido and Aeneas, Z.626 (IA imslp-and-aeneas-z626-purcell-henry).pdf",
+   "publisher": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Dido_and_Aeneas,_Z.626_(IA_imslp-and-aeneas-z626-purcell-henry).pdf",
+   "note": "正文圖（PDF 第 103 頁＝樂譜第 84 頁）。據第 103–105 頁（樂譜第 84–86 頁）核對：前半段印兩遍、「am laid」「no trouble」各唱兩次、後半段「Remember me」一輪三次但整段只印一次且無反覆記號（低音共 9 遍）、尾奏中提琴、第二小提琴、第一小提琴的進入順序；Public domain；2026-10-19 查閱"
+  },
+  {
+   "title": "Dido and Aeneas / Purcell（Decca Legends 289 466 387-2）",
+   "publisher": "East Carolina University Libraries 目錄",
+   "url": "https://librarycatalog.ecu.edu/catalog/1001581",
+   "note": "Recorded Oct. 1961 at Walthamstow Assembly Hall, London；Originally released 1962 as Decca SOL 60047（ECU 著錄的廠牌是 Decca）；Thurston Dart 大鍵琴數字低音；解說由 Thurston Dart 與 Alan Blyth 撰；2026-10-19 查閱"
+  },
+  {
+   "title": "Dido and Aeneas [Enregistrement sonore]（L'Oiseau-lyre SOL60047）",
+   "publisher": "Bibliothèque nationale de France",
+   "url": "https://catalogue.bnf.fr/ark:/12148/cb37945000x",
+   "note": "Londres : Éd. de l'Oiseau lyre, [DL 1962]；演出者名單；2026-10-19 查閱"
+  },
+  {
+   "title": "Purcell Dido and Aeneas Baker/Clarke/Sinclair/Herincx",
+   "publisher": "Decca Classics",
+   "url": "https://www.deccaclassics.com/en/catalogue/products/purcell-dido-and-aeneas-bakerclarkesinclairherincx-3225",
+   "note": "Decca 再版的目錄頁（標示 2000 年 1 月 3 日、UPC 00028946638729）；2026-10-19 查閱"
+  },
+  {
+   "title": "Dido and Aeneas（Decca 466 387-2）",
+   "publisher": "MusicBrainz",
+   "url": "https://musicbrainz.org/release/2f6c7694-cf24-428d-8d70-0bc8b4160255",
+   "note": "Decca Classics 2000 年版曲目：第 16 軌〈But Death, alas! ... When I am laid in earth〉長 6:27；2026-10-19 查閱"
+  },
+  {
+   "title": "Purcell: Dido and Aeneas (EMI Great Recordings of the Century 5096902)",
+   "publisher": "MusicWeb International（Michael Greenhalgh 撰）",
+   "date": "2008-07",
+   "url": "https://www.musicweb-international.com/classrev/2008/July08/Purcell_Dido_5096902.htm",
+   "note": "評 Flagstad 版時比較 Baker/Lewis 版：1961 年貝克 28 歲、「has both stateliness and a pure, childlike simplicity」、「If you want only one recording ... I'd recommend the Baker/Lewis」；網頁只標 2008 年 7 月"
+  },
+  {
+   "title": "Purcell's Dido and Aeneas: A survey by Ralph Moore",
+   "publisher": "MusicWeb International",
+   "date": "2021-02",
+   "url": "https://www.musicweb-international.com/classrev/2021/Feb/Purcell-Dido-survey.htm",
+   "note": "Lewis 1961 列入現代樂器推薦；對 Parrott 1981 版與柯克比的負評；網頁只標 2021 年 2 月"
+  },
+  {
+   "title": "Purcell: Dido and Aeneas（CHAN 0521）",
+   "publisher": "Chandos Records",
+   "url": "https://www.chandos.net/products/catalogue/CHAN%200521",
+   "note": "Emma Kirkby、Taverner Choir、Taverner Players、Andrew Parrott；1981 年 1 月 3–5 日錄於倫敦 Rosslyn Hill Chapel；CD 1991 年 5 月發行；2026-10-19 查閱"
+  }
+ ]
+}
