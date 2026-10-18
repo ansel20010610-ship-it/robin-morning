@@ -1,0 +1,215 @@
+{
+  "column": "perio",
+  "date": "2026-10-19",
+  "title": "514 名糖尿病人的半年：2013 年 DPTT 試驗",
+  "dek": "替第 2 型糖尿病人做非手術牙周治療，血糖會跟著降嗎？美國 DPTT 試驗給了否定的答案，也因此引來一場爭論，直到 2022 年 Cochrane 回顧改變結論。",
+  "takeaway": "替糖尿病人做非手術牙周治療，首要理由是牙周本身：DPTT 治療組牙周改善，6 個月 HbA1c 卻與未治療組沒有差別。向病人說明時不要承諾降血糖，更不能取代用藥。",
+  "brief": "美國 DPTT 試驗把 514 名第 2 型糖尿病合併牙周炎的病人隨機分組，檢驗刮治與根面整平能不能降低 HbA1c。6 個月後治療組上升 0.17 個百分點、對照組上升 0.11，組間差 −0.05 不顯著。2022 年 Cochrane 回顧估計治療約可降 0.3 到 0.4 個百分點；本報的讀法是，牙周治療值得做，但不宜承諾一定降血糖。",
+  "topic_key": "perio:doi:10.1001/jama.2013.282431",
+  "updated_at": "2026-10-19T00:49:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Tooth_scaling_9301.JPG/1280px-Tooth_scaling_9301.JPG",
+    "width": 1280,
+    "height": 960,
+    "alt": "診療椅上的病人張口，一位戴口罩與手套的牙科衛生師一手持口鏡、一手持器械，正在清理病人的牙齒。",
+    "caption": "牙科衛生師為病人做定期洗牙時的刮除。DPTT 治療組接受的是局部麻醉下、至少 160 分鐘的齦下刮治與根面整平，比一般定期洗牙更深入。Walter Siegmund 2006 年 1 月攝於美國西雅圖；與 DPTT 受試者無關。",
+    "credit": "Walter Siegmund，Wikimedia Commons",
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tooth_scaling_9301.JPG",
+    "made": "2006"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "對第 2 型糖尿病合併中重度牙周炎、HbA1c 在 7% 到 9% 之間、用藥穩定的病人，DPTT 試驗發現：刮治與根面整平加上 3 個月一次的維護，6 個月內牙周指標改善，HbA1c 卻沒有比不治療的對照組低。作者的結論是，這些結果不支持「為了降低 HbA1c」而替糖尿病人做非手術牙周治療。"
+    },
+    {
+      "type": "p",
+      "text": "這篇在 2013 年 12 月刊出時，正值多篇小型試驗的統合分析認為牙周治療能讓 HbA1c 降 0.4 個百分點左右。它沒有終結這個問題，反而把爭論推到台前：二十多位牙周學者聯名撰文，認為它的治療效果太弱，不足以下結論。"
+    },
+    {
+      "type": "h",
+      "text": "門診裡的一個場景：洗完牙，藥能不能減"
+    },
+    {
+      "type": "p",
+      "text": "假設一位 58 歲、第 2 型糖尿病 10 年的病人，HbA1c 7.8%，全口多處 5 到 6 毫米牙周袋。內科醫師提過「牙周病會影響血糖」，他問：把牙周治好，是不是就能少吃一顆藥？DPTT 的病人條件和他很接近，這篇論文正好回答這個問題。這是說明用的假設情境，不是個案診療建議。"
+    },
+    {
+      "type": "paper",
+      "citation": "Engebretson SP, Hyman LG, Michalowicz BS, Schoenfeld ER, Gelato MC, Hou W, Seaquist ER, Reddy MS, Lewis CE, Oates TW, Tripathy D, Katancik JA, Orlander PR, Paquette DW, Hanson NQ, Tsai MY. The effect of nonsurgical periodontal therapy on hemoglobin A1c levels in persons with type 2 diabetes and chronic periodontitis: a randomized clinical trial. *JAMA*. 2013;310(23):2523–2532.",
+      "doi": "10.1001/jama.2013.282431",
+      "pmid": "24346989",
+      "link": "https://doi.org/10.1001/jama.2013.282431",
+      "access": "依全文（PMC 的作者稿 PMC4089989，非期刊排版版）與 PubMed 上的刊出版摘要；作者稿的牙周指標組間差與刊出版不同，本文採刊出版數字",
+      "design": "多中心、單盲（檢查者與檢驗人員不知分組）隨機對照試驗，追蹤 6 個月",
+      "sample": "514 名第 2 型糖尿病合併中重度慢性牙周炎的成人，2009 年 11 月至 2012 年 3 月收案，治療組與對照組各 257 人",
+      "question": "非手術牙周治療能不能降低第 2 型糖尿病人的 HbA1c？"
+    },
+    {
+      "type": "h",
+      "text": "他們怎麼做：一組完整清創，一組只教刷牙"
+    },
+    {
+      "type": "p",
+      "text": "收案對象是 35 歲以上、HbA1c 7% 到 9%、3 個月內沒有換藥、至少 16 顆自然牙、至少兩個象限有 5 毫米以上的探測深度與附著喪失的病人。治療組在 42 天內分兩次以上、局部麻醉下接受至少 160 分鐘的刮治與根面整平，使用手器械與超音波，之後用 0.12% 氯己定（chlorhexidine）漱口兩週；第 3、6 個月各再做約 1 小時。"
+    },
+    {
+      "type": "p",
+      "text": "對照組只在相同時間點拿到口腔衛生指導，6 個月結束後才提供治療。HbA1c 由中央實驗室統一檢驗。"
+    },
+    {
+      "type": "svg",
+      "title": "DPTT 的分組與時程（原創示意圖）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 330\">\n<rect class=\"soft\" x=\"80\" y=\"10\" width=\"200\" height=\"54\" rx=\"6\"/>\n<text class=\"ink\" x=\"180\" y=\"32\" font-size=\"13\" text-anchor=\"middle\">第 2 型糖尿病＋中重度牙周炎</text>\n<text class=\"muted\" x=\"180\" y=\"52\" font-size=\"11\" text-anchor=\"middle\">HbA1c 7%–9%，美國 5 個學術中心</text>\n<line class=\"ink\" x1=\"180\" y1=\"64\" x2=\"180\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<rect class=\"paper\" x=\"110\" y=\"88\" width=\"140\" height=\"30\" rx=\"6\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text class=\"ink\" x=\"180\" y=\"108\" font-size=\"12\" text-anchor=\"middle\">隨機分派 514 人</text>\n<line class=\"ink\" x1=\"180\" y1=\"118\" x2=\"90\" y2=\"146\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<line class=\"ink\" x1=\"180\" y1=\"118\" x2=\"270\" y2=\"146\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<rect class=\"accent\" x=\"12\" y=\"146\" width=\"160\" height=\"30\" rx=\"6\"/>\n<text class=\"paper\" x=\"92\" y=\"166\" font-size=\"12\" text-anchor=\"middle\">治療組 257 人</text>\n<rect class=\"gold\" x=\"188\" y=\"146\" width=\"160\" height=\"30\" rx=\"6\"/>\n<text class=\"paper\" x=\"268\" y=\"166\" font-size=\"12\" text-anchor=\"middle\">對照組 257 人</text>\n<text class=\"ink\" x=\"92\" y=\"198\" font-size=\"11\" text-anchor=\"middle\">第 0 個月：刮治與根面整平</text>\n<text class=\"muted\" x=\"92\" y=\"214\" font-size=\"10\" text-anchor=\"middle\">至少 160 分鐘、分 2 次以上</text>\n<text class=\"muted\" x=\"92\" y=\"229\" font-size=\"10\" text-anchor=\"middle\">加 0.12% 氯己定漱口 2 週</text>\n<text class=\"ink\" x=\"92\" y=\"252\" font-size=\"11\" text-anchor=\"middle\">第 3、6 個月：再清約 1 小時</text>\n<text class=\"ink\" x=\"268\" y=\"198\" font-size=\"11\" text-anchor=\"middle\">第 0、3、6 個月</text>\n<text class=\"muted\" x=\"268\" y=\"214\" font-size=\"10\" text-anchor=\"middle\">只給口腔衛生指導</text>\n<text class=\"muted\" x=\"268\" y=\"229\" font-size=\"10\" text-anchor=\"middle\">6 個月後才提供治療</text>\n<line class=\"muted\" x1=\"12\" y1=\"272\" x2=\"348\" y2=\"272\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n<text class=\"ink\" x=\"180\" y=\"294\" font-size=\"12\" text-anchor=\"middle\">主要結果：6 個月 HbA1c 變化的組間差</text>\n<text class=\"accent\" x=\"180\" y=\"316\" font-size=\"13\" text-anchor=\"middle\">−0.05 個百分點（P = 0.55）</text>\n</svg>",
+      "caption": "依 Engebretson 等人（2013）作者稿的方法與結果重繪；原創示意，不按比例。"
+    },
+    {
+      "type": "p",
+      "text": "原本計畫收 600 人。收到 300 人完成 6 個月時做了預先排定的期中分析，檢定統計量低於預先訂好的無效性門檻，資料與安全監測委員會因此建議停止收案、已收的人繼續追蹤。最後 514 人中有 93% 完成試驗，兩組留存率相近。"
+    },
+    {
+      "type": "h",
+      "text": "牙周變好了，HbA1c 兩組都微升 0.1 到 0.2"
+    },
+    {
+      "type": "p",
+      "text": "6 個月時，治療組的 HbA1c 平均上升 0.17 個百分點，對照組上升 0.11。校正收案中心後，組間差是 −0.05 個百分點，95% 信賴區間從 −0.23 到 0.12，P = 0.55。信賴區間在說的是：就算治療真有效果，這批病人身上大概也不會超過 0.23 個百分點，離試驗設計時想偵測的 0.6 個百分點很遠。"
+    },
+    {
+      "type": "p",
+      "text": "牙周本身確實有改善。治療組比對照組多減少 0.28 毫米探測深度、0.25 毫米附著喪失，探診出血的部位比例多降 13.1 個百分點。空腹血糖與胰島素阻抗指標（HOMA2）兩組也沒有差別。依療效好壞把治療組分成三等分，改善最多的那三分之一，HbA1c 也沒有比較低。"
+    },
+    {
+      "type": "h",
+      "text": "反方的主要論點：治療後還留著四成出血"
+    },
+    {
+      "type": "p",
+      "text": "2014 年，Borgnakke、Chapple、Genco、Tonetti 等 21 位學者在 *Journal of Evidence-Based Dental Practice*撰文，認為這項試驗有根本問題。"
+    },
+    {
+      "type": "p",
+      "text": "他們提出三點：受試者的 HbA1c 平均 7.8%，已接近控制目標，下降空間有限；牙周治療的成效遠低於文獻常見水準；治療組平均 BMI 34.7，肥胖本身帶來的慢性發炎可能蓋過牙周治療的效果。"
+    },
+    {
+      "type": "table",
+      "title": "治療組 240 人，治療前後的牙周狀況",
+      "head": [
+        "指標",
+        "基線",
+        "試驗結束"
+      ],
+      "rows": [
+        [
+          "平均探測深度",
+          "3.3 毫米",
+          "2.9 毫米"
+        ],
+        [
+          "每人 4 毫米以上的部位數",
+          "50.9",
+          "30.6"
+        ],
+        [
+          "4 毫米以上部位比例",
+          "33.7%",
+          "20.1%"
+        ],
+        [
+          "探診出血部位比例",
+          "60.6%",
+          "41.6%"
+        ],
+        [
+          "菌斑部位比例",
+          "86.7%",
+          "72.1%"
+        ]
+      ],
+      "caption": "依 Borgnakke 等人（2014）表 2、表 3 整理，原始數據出自 DPTT 線上附表 eTable 2；僅治療組、有 6 個月資料者，基線數字因此和全體 257 人略有不同。"
+    },
+    {
+      "type": "p",
+      "text": "Borgnakke 等人據此認為，不少受試者在試驗結束時的牙周狀況，仍符合當初收案的牙周炎標準；既然牙周發炎沒有被有效控制，這項試驗就回答不了「成功的牙周治療能不能降血糖」。DPTT 作者在討論中也承認，菌斑與出血的改善只算溫和，改變口腔衛生習慣仍是難題。"
+    },
+    {
+      "type": "h",
+      "text": "臨床上怎麼用：牙周為了牙周做，血糖效果別說滿"
+    },
+    {
+      "type": "p",
+      "text": "後續的證據多半指向另一邊。D'Aiuto 等人 2018 年在《刺胳針糖尿病與內分泌學》（The Lancet Diabetes & Endocrinology）發表的英國單中心試驗，264 名病人基線 HbA1c 平均 8.1%，強化牙周治療（齦下清創，口腔衛生良好者加做手術，每 3 個月維護）12 個月後，校正後 HbA1c 比只做齦上潔牙的對照組低 0.6 個百分點。"
+    },
+    {
+      "type": "p",
+      "text": "2022 年的 Cochrane 回顧納入 35 篇隨機試驗、3,249 名受試者，估計治療後 3 到 4 個月 HbA1c 平均降 0.43 個百分點、6 個月降 0.30，證據確定性為中等，作者明言這次更新改變了先前版本的結論。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "回到門診那位病人。本報的讀法是：DPTT 和後續研究並不矛盾到無法使用。牙周治療有它本身的理由，DPTT 作者也提到保留牙齒與咀嚼功能；對血糖，可以說「整體研究顯示平均可能小幅下降」，但不能保證他會是下降的那一個，更不能因此自行減藥。DPTT 留下的另一個提醒更貼近牙醫自己：治療組結束時仍有四成部位出血，清創要做到可以重新評估的終點，才談得上它對全身有沒有影響。"
+    },
+    {
+      "type": "h",
+      "text": "要小心的地方"
+    },
+    {
+      "type": "list",
+      "items": [
+        "DPTT 只收 HbA1c 7% 到 9% 的病人，作者自己也說無法排除血糖更高的人會有效果。",
+        "追蹤只有 6 個月，治療只有非手術清創，沒有用抗生素或手術，不能代表強化或長期的牙周治療。",
+        "受試者平均 BMI 34.7、多數 HbA1c 接近 8%，結果未必能外推到體重較輕或血糖控制更差的病人。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The effect of nonsurgical periodontal therapy on hemoglobin A1c levels in persons with type 2 diabetes and chronic periodontitis: a randomized clinical trial（作者稿 PMC4089989）",
+      "publisher": "JAMA；PubMed Central",
+      "date": "2013-12-18",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4089989/",
+      "note": "全文作者稿：收案條件、介入、期中分析、結果、討論、表 1、表 2"
+    },
+    {
+      "title": "PubMed 24346989：刊出版摘要",
+      "publisher": "National Library of Medicine",
+      "date": "2013-12-18",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24346989/",
+      "note": "書目資料與刊出版的牙周指標組間差"
+    },
+    {
+      "title": "The multi-center randomized controlled trial (RCT) published by the journal of the American Medical Association (JAMA) on the effect of periodontal therapy on glycated hemoglobin (HbA1c) has fundamental problems",
+      "publisher": "Journal of Evidence-Based Dental Practice 2014;14(3):127–132；PMC4502578",
+      "date": "2014-05-21",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4502578/",
+      "note": "Borgnakke 等 21 位作者；三項疑慮與表 2、表 3（依 DPTT eTable 2 整理）"
+    },
+    {
+      "title": "Systemic effects of periodontitis treatment in patients with type 2 diabetes: a 12 month, single-centre, investigator-masked, randomised trial",
+      "publisher": "The Lancet Diabetes & Endocrinology 2018;6(12):954–965",
+      "date": "2018-10-24",
+      "url": "https://doi.org/10.1016/S2213-8587(18)30038-X",
+      "note": "D'Aiuto 等；依 PubMed 摘要（PMID 30472992）"
+    },
+    {
+      "title": "Treatment of periodontitis for glycaemic control in people with diabetes mellitus",
+      "publisher": "Cochrane Database of Systematic Reviews 2022, CD004714；PMC9009294",
+      "date": "2022-04-14",
+      "url": "https://doi.org/10.1002/14651858.CD004714.pub4",
+      "note": "Simpson 等；依摘要（PMID 35420698）"
+    },
+    {
+      "title": "File:Tooth scaling 9301.JPG",
+      "publisher": "Wikimedia Commons",
+      "date": "2006-01-29",
+      "url": "https://commons.wikimedia.org/wiki/File:Tooth_scaling_9301.JPG",
+      "note": "頭圖；Walter Siegmund 攝，CC BY 2.5；日期為 Commons 上傳日"
+    }
+  ]
+}
