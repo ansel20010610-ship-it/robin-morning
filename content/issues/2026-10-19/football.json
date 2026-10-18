@@ -5,7 +5,7 @@
   "dek": "巴薩西甲開季九連勝，追平最佳開局紀錄，代價是 Eric García 傷停三到四週、孔德缺席巴黎。台灣時間週三 03:00 作客巴黎聖日耳曼。",
   "brief": "巴薩台灣時間週日凌晨作客以 5 比 2 擊敗下半場少一人的貝提斯，亞馬爾、羅德里、熱蘇斯、Eric García 與奧爾莫各進一球，西甲開季九連勝，追平最佳開局。代價是 Eric García 右大腿傷停三到四週、孔德左腳踝扭傷，確定缺席台灣時間 10 月 21 日（週三）03:00 作客巴黎聖日耳曼。10 月 26 日（週一）04:00 主場迎皇馬，贏球就獨占新紀錄。",
   "topic_key": "football:2026-10-19",
-  "updated_at": "2026-10-19T02:57:00+08:00",
+  "updated_at": "2026-10-19T05:23:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -92,7 +92,7 @@
     {
       "type": "p",
       "tag": "報導",
-      "text": "貝提斯總教練佩萊格里尼（Manuel Pellegrini）賽後對 DAZN 批評判罰「incomprehensible and inexplicable」（難以理解、無法解釋；ESPN 英譯，本文自譯），認為羅塞爾索的進球不該取消、巴薩第三球前費爾明有高腳犯規，並說 Bernal 是被亞馬爾挑釁。Bernal 本人據 Goal 引《馬卡報》（Marca）報導，在 Instagram 向隊友與球迷道歉，說自己「應該控制住」，並承擔責任。這是貝提斯本季西甲第一場主場輸球，仍以 19 分排第三。"
+      "text": "貝提斯總教練佩萊格里尼（Manuel Pellegrini）賽後對 DAZN 批評判罰「incomprehensible and inexplicable」（難以理解、無法解釋；ESPN 英譯，本文自譯），認為羅塞爾索的進球不該取消、巴薩第三球前費爾明有高腳犯規，並說 Bernal 是被亞馬爾挑釁。Bernal 本人據 Goal 引《馬卡報》（Marca）報導，在 Instagram 向隊友與球迷道歉，說自己「應該控制住」，並承擔責任。這是貝提斯本季西甲第一場主場輸球；貝提斯積 19 分，皇馬 10 月 19 日（台灣時間週一）凌晨贏球後，貝提斯退居第四。"
     },
     {
       "type": "h",
@@ -185,11 +185,11 @@
           "when": "10 月 18 日（當地時間）"
         },
         {
-          "headline": "沒有勞塔羅的國際米蘭 3 比 1 逆轉波隆那，暫居義甲榜首",
-          "summary": "隊長勞塔羅（Lautaro Martínez）傷缺，國際米蘭上週六作客先失一球，圖拉姆（Marcus Thuram）上半場結束前頭槌扳平，替補的卡洛斯・奧古斯托（Carlos Augusto）上場不到一分鐘就進球，再助攻 Ange-Yoan Bonny 鎖定勝局。國際米蘭 7 輪不敗、積 19 分。比分經 ESPN 與 Infobae（EFE）核對一致。完稿時尤文圖斯對拉齊奧（Lazio）仍在進行，拉齊奧贏球就會與國際米蘭同分。",
-          "source": "ESPN、Infobae（EFE）",
+          "headline": "國際米蘭 3 比 1 逆轉波隆那，拉齊奧 3 比 0 贏尤文後同分",
+          "summary": "隊長勞塔羅（Lautaro Martínez）傷缺，國際米蘭上週六作客先失一球，圖拉姆（Marcus Thuram）上半場結束前頭槌扳平，替補的卡洛斯・奧古斯托（Carlos Augusto）上場不到一分鐘就進球，再助攻 Ange-Yoan Bonny 鎖定勝局。國際米蘭 7 輪不敗、積 19 分。比分經 ESPN 與 Infobae（EFE）核對一致。當地時間 10 月 18 日（週日），拉齊奧（Lazio）作客 3 比 0 擊敗尤文圖斯（Juventus），Provstgaard、Isaksen、Dele-Bashiru 各進一球，同樣 7 戰 6 勝 1 和、積 19 分，國際米蘭以淨勝球多 2 球暫居榜首。",
+          "source": "ESPN、Infobae（EFE）、Sky Sports",
           "url": "https://www.infobae.com/america/agencias/2026/10/17/1-3-carlos-augusto-revoluciona-al-inter/",
-          "when": "10 月 17 日（當地時間）"
+          "when": "10 月 17、18 日（當地時間）"
         },
         {
           "headline": "馬德里競技第 89 分鐘絕殺西班牙人，與巴薩差 5 分",
@@ -252,7 +252,7 @@
     },
     {
       "type": "table",
-      "title": "西甲積分榜前段（第 9 輪，完稿時皇馬、塞維亞尚未踢本輪）",
+      "title": "西甲積分榜前段（第 9 輪，赫塔費對巴列卡諾未賽）",
       "head": [
         "名次",
         "球隊",
@@ -286,6 +286,16 @@
         ],
         [
           "3",
+          "皇家馬德里",
+          "9",
+          "7",
+          "0",
+          "2",
+          "+14",
+          "21"
+        ],
+        [
+          "4",
           "皇家貝提斯",
           "9",
           "6",
@@ -293,16 +303,6 @@
           "2",
           "+2",
           "19"
-        ],
-        [
-          "4",
-          "皇家馬德里",
-          "8",
-          "6",
-          "0",
-          "2",
-          "+11",
-          "18"
         ],
         [
           "5",
@@ -317,19 +317,19 @@
         [
           "6",
           "塞維亞",
-          "8",
+          "9",
           "4",
           "2",
-          "2",
-          "+1",
+          "3",
+          "-2",
           "14"
         ]
       ],
-      "caption": "依 ESPN 積分榜，查閱於台灣時間 10 月 19 日凌晨。第 9 輪還剩皇馬對塞維亞與赫塔費（Getafe）對巴列卡諾（Rayo Vallecano）兩場。"
+      "caption": "依 ESPN 積分榜，查閱於台灣時間 10 月 19 日 05:20 後，已含皇馬 4 比 1 塞維亞。第 9 輪只剩赫塔費（Getafe）對巴列卡諾（Rayo Vallecano）。"
     },
     {
       "type": "p",
-      "text": "國家德比的對手皇馬，本輪主場對塞維亞在台灣時間 10 月 19 日（週一）03:00 開賽，本版完稿於台灣時間 02:47，未及納入這場的結果。維尼修斯從這場開始服四場禁賽，10 月 26 日（週一）台灣時間 04:00 的國家德比也不能上場。本輪最後一場赫塔費對巴列卡諾，在台灣時間 10 月 20 日（週二）03:00 開踢。"
+      "text": "國家德比的對手皇馬，台灣時間 10 月 19 日（週一）凌晨在主場伯納烏（Santiago Bernabéu）以 4 比 1 擊敗塞維亞（Sevilla），積 21 分升到第三，落後巴薩 6 分。據 ESPN 文字直播，阿爾達・居萊爾（Arda Güler）第 30 分鐘接 Yan Diomande 的傳球左腳射進上角，姆巴佩（Kylian Mbappé）第 37 分鐘接貝林罕（Jude Bellingham）助攻再進一球、第 63 分鐘罰進 12 碼；塞維亞替補 Manu Bueno 第 80 分鐘扳回一球，Diomande 第 82 分鐘遠射鎖定比分。比分經 ESPN 與 Sky Sports 核對一致。據 Infobae 與 Goal 報導，塞維亞球員指居萊爾在進球前以手肘撞到 Peque Fernández，VAR 檢視後認為不足以判紅牌，沒有請主裁判看螢幕。維尼修斯這場開始服四場禁賽，由 Diomande 改踢左路；10 月 26 日（週一）台灣時間 04:00 的國家德比，維尼修斯也不能上場。本輪最後一場赫塔費對巴列卡諾，在台灣時間 10 月 20 日（週二）03:00 開踢。"
     },
     {
       "type": "p",
@@ -520,7 +520,7 @@
       "publisher": "Sky Sports",
       "date": "2026-10-19",
       "url": "https://www.skysports.com/football-results",
-      "note": "10 月 18 日英超、西甲賽果核對（查閱日期）"
+      "note": "10 月 18 日英超、西甲、義甲賽果核對（含皇馬 4 比 1 塞維亞、尤文 0 比 3 拉齊奧；查閱日期）"
     },
     {
       "title": "Soccer scoreboards（esp.1、eng.1、ita.1、ger.1，10 月 17–18 日）",
@@ -568,6 +568,55 @@
       "publisher": "FC Barcelona",
       "date": "2026-10-17",
       "url": "https://www.fcbarcelona.com/en/football/barca-b/news/4593590/barca-atletic-2-1-utebo-still-at-the-top"
+    },
+    {
+      "title": "Real Madrid 4-1 Sevilla (Oct 18, 2026) Commentary",
+      "publisher": "ESPN",
+      "date": "2026-10-18",
+      "url": "https://www.espn.com/soccer/commentary/_/gameId/401882839",
+      "note": "進球者、分鐘、助攻"
+    },
+    {
+      "title": "Kylian Mbappé and Arda Güler lead Real Madrid past Sevilla with absolute worldies",
+      "publisher": "Goal",
+      "date": "2026-10-18",
+      "url": "https://www.goal.com/en/news/kylian-mbappe-and-arda-gueler-fire-real-madrid-past-sevilla-with-stunning-world-class-goals/bltfd7fb194e1220cf2",
+      "note": "比分與進球者核對"
+    },
+    {
+      "title": "El Real Madrid cambia la cara, pero no evita la polémica: aplasta al Sevilla, mientras Arda Güler se libra de una posible roja",
+      "publisher": "Infobae",
+      "date": "2026-10-18",
+      "url": "https://infobae.com/espana/deportes/2026/10/18/el-real-madrid-cambia-la-cara-pero-no-evita-la-polemica-aplasta-al-sevilla-mientras-arda-guler-se-libra-de-una-posible-roja",
+      "note": "居萊爾肘擊爭議、Diomande 踢左路"
+    },
+    {
+      "title": "Juventus 0-3 Lazio (Oct 18, 2026) Commentary",
+      "publisher": "ESPN",
+      "date": "2026-10-18",
+      "url": "https://www.espn.com/soccer/commentary/_/gameId/401874765",
+      "note": "進球者"
+    },
+    {
+      "title": "Serie A standings",
+      "publisher": "ESPN",
+      "date": "2026-10-19",
+      "url": "https://www.espn.com/soccer/standings/_/league/ita.1",
+      "note": "國際米蘭、拉齊奧同積 19 分（查閱日期）"
+    },
+    {
+      "title": "0-3. El Lazio doblega al Juventus y alimenta su sueño",
+      "publisher": "Infobae（EFE）",
+      "date": "2026-10-18",
+      "url": "https://www.infobae.com/america/agencias/2026/10/18/0-3-el-lazio-doblega-al-juventus-y-alimenta-su-sueno/",
+      "note": "比分與進球者核對"
+    },
+    {
+      "title": "'A clear red card': Sevilla star attacks decision that spared Güler",
+      "publisher": "Goal",
+      "date": "2026-10-18",
+      "url": "https://www.goal.com/en-za/news/a-clear-red-card-sevilla-star-attacks-decision-that-spared-guler/blt6a90f949346cbd7f",
+      "note": "塞維亞指居萊爾肘擊、VAR 未請主裁看螢幕"
     }
   ]
 }
