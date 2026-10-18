@@ -1,0 +1,542 @@
+{
+  "column": "civilization",
+  "date": "2026-10-19",
+  "title": "一年一艘船：雅典怎樣讓富人替城邦養戰艦",
+  "dek": "國家造好船殼，再點名一位富人當一年艦長。修船、補薪、雇水手的錢從哪裡來，付不起或不想付時又怎麼辦？",
+  "brief": "雅典的戰船由國家造船殼、發薪餉，再點名一位富人當一年艦長，修船、加發獎金、雇好水手與賠償損失的開銷落在他身上。前 362 年的艦長阿波羅多洛斯說，他一年又五個月裡只領到兩個月薪餉，只好抵押田產借 30 明那發給船員，任滿後接任者遲到又拒不接船，又多撐了 5 個月 6 天。約前 358/7 年起改由 1,200 名富人分組攤付；這套制度是壓榨還是籠絡富人仍有爭論，Gabrielsen 認為幾乎每次改革都帶著對富人的讓步。",
+  "topic_key": "civilization:athens-trierarchy-5c-4c-bce",
+  "updated_at": "2026-10-19T02:17:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Parts_of_a_votive_relief_with_a_depiction_of_a_trireme_%28Lenormant%29._4th_cent._BC..jpg/1280px-Parts_of_a_votive_relief_with_a_depiction_of_a_trireme_%28Lenormant%29._4th_cent._BC..jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Parts_of_a_votive_relief_with_a_depiction_of_a_trireme_%28Lenormant%29._4th_cent._BC..jpg/3840px-Parts_of_a_votive_relief_with_a_depiction_of_a_trireme_%28Lenormant%29._4th_cent._BC..jpg",
+    "width": 1280,
+    "height": 719,
+    "alt": "淺灰色金屬展板上刻著一艘長船的細線復原圖，船身有一排排划槳的人，右上方有一個坐著的人形與動物。展板中下方嵌著一塊米黃色大理石殘塊，上面是浮雕的槳手與斜排的槳；旁邊有一小片殘塊，右上角另嵌一塊刻著人頭的殘塊。",
+    "caption": "〈勒諾爾芒浮雕〉（Lenormant Relief）：一艘三列槳座戰船的大理石還願浮雕殘塊，展出時嵌在現代的線描復原圖上。雅典衛城博物館的說明是：殘塊上可見 10 名裸身槳手在划船，槳分三層，由此可知是三列槳座戰船，甲板上有披斗篷的人或坐或臥；館方把右上方較大的青年人像認作航海發明者帕拉洛斯（Paralos），因此推定這艘船很可能是雅典的國家公務船「帕拉洛斯號」。劍橋大學古典考古博物館指出，這塊浮雕在 1980 年代學者復原三列槳座戰船時派上了大用場。",
+    "credit": "Tilemahos Efthimiadis 攝（原刊 Flickr）；原件藏雅典衛城博物館，館藏號 Ακρ. 1339，彭特利山大理石，高 0.4 公尺、長 0.54 公尺",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Parts_of_a_votive_relief_with_a_depiction_of_a_trireme_(Lenormant)._4th_cent._BC..jpg",
+    "made": "公元前 5 世紀末（雅典衛城博物館定年；Commons 檔名標 4 世紀）；線描復原為現代製作"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "公元前 362 年梅塔蓋特尼昂月（Metageitnion，約當 8 月下半到 9 月上半）第 24 天，雅典公民大會聽到：提諾斯島（Tenos）被攻佔，黑海商船被拜占庭等城扣下，比雷埃夫斯（Piraeus）港糧價上漲。大會表決，要艦長們立刻讓船下水，阿波羅多洛斯（Apollodoros）是其中之一。他後來在法庭上說，按名冊徵來的水手只到了幾個，又不中用，他全部打發回去，自己出錢另雇。"
+    },
+    {
+      "type": "quote",
+      "text": "我抵押了財產、借了錢，第一個把船配滿人手，給每個人豐厚的獎金和預支，雇來能找到的最好的水手。不只如此，我用的全是自己的船具，沒從公家倉庫拿任何東西。",
+      "original": "having mortgaged my property and borrowed money, I was the first to man my ship, hiring the best sailors possible by giving to each man large bonuses and advance payments. More than that, I furnished the ship with equipment wholly my own, taking nothing from the public stores",
+      "cite": "［Dem.］50.7〈控波利克列斯〉，據 A. T. Murray 英譯（1939），本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "本文要回答的是：古典雅典的戰船，誰出錢讓它出海？國家給什麼、富人出什麼；誰點名、誰追帳；富人不想出、出不起或拖著不接班時，制度又怎麼改。"
+    },
+    {
+      "type": "h",
+      "text": "定位：前 5 世紀末到前 4 世紀的雅典，一年一任的艦長"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "雅典海軍的主力是三列槳座戰船（trieres）。每艘出航的船配一名艦長（trierarchos），由富有公民擔任。這是雅典「公益捐輸」（leitourgia）的一種：城邦點名富人，要他自掏腰包辦一件公共的事。呂西亞斯（Lysias）筆下的一位講者，就把他當艦長的花費，和出資辦悲劇、合唱隊、火炬賽的錢列在同一張清單上。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.3,
+        0.56,
+        0.27,
+        0.3
+      ],
+      "position": "畫面中下方的大理石主殘塊，約佔寬度四分之一",
+      "caption": "主殘塊的局部：上排是槳手的上半身，下面是斜向排列、一層疊一層的槳。雅典衛城博物館說，殘塊上的槳分三層，由此可知這是三列槳座戰船；館方推算原作最上層約有 25 名槳手。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "船殼是公家的。傳為亞里斯多德學派所作的《雅典政制》說，五百人議事會負責照管已造好的戰船、船具與船棚，並從議員中選出 10 人監造；新船沒有如期完成，卸任的議員就領不到慣例的獎賞。前 4 世紀後期，將軍裡有一人專管分擔組，負責登錄艦長、辦理財產交換，並把豁免的申請送上法庭。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "我們知道這套制度，主要靠兩種材料。第一種是法庭講稿：呂西亞斯第 21 篇的講者在受審時細數自己的捐輸，請陪審員先看看「我是怎樣的人」；阿波羅多洛斯控告不肯接班的波利克列斯（Polycles），要對方賠他多撐的開銷。這些話都在爭取陪審團，花費與對手的惡行都可能被放大。阿波羅多洛斯的講稿流傳在德摩斯提尼（Demosthenes）名下，今天學界寫作［Dem.］50，一般認為不是德摩斯提尼所作。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "第二種是比雷埃夫斯船塢主管刻在石上的海軍帳目（學界稱 naval records，收在《希臘銘文集》IG II² 1604 以下）：哪艘船交給了誰、欠了哪些船具、誰該賠多少。帳目不記艦長私下付給水手的錢。另外，德摩斯提尼〈論金冠〉裡插著幾份法令與名冊。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Hansen 2016 年轉述 Canevaro 2013 年的專書：這篇講稿裡的插入文件全是後世偽作，所以本文只用德摩斯提尼自己的說法。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Gabrielsen 1994 年專書的出版社簡介這樣概括艦長的負擔：維護與修理船隻，招募船員並供應給養。但材料的缺口很大，烏特勒支大學的 Wallinga 1995 年評 Gabrielsen 的專書時說，海軍財政至今所知很不完整：富人當艦長負擔了相當可觀的一份，但沒有任何一個案例能讓人有把握地估出，這一份佔整支艦隊開銷的多少。"
+    },
+    {
+      "type": "timeline",
+      "title": "雅典艦長制度：本文用到的年份",
+      "items": [
+        {
+          "when": "前 415 年",
+          "label": "西西里遠征出發",
+          "note": "國庫給空船、水手日給 1 德拉克馬，艦長另發獎金"
+        },
+        {
+          "when": "約前 407 年",
+          "label": "共任艦長出現",
+          "note": "一艘船可由兩人合任（Gabrielsen 2026）"
+        },
+        {
+          "when": "前 405 年",
+          "label": "羊河之役",
+          "note": "艦隊覆沒，呂西亞斯第 21 篇的講者帶回兩艘船"
+        },
+        {
+          "when": "前 378/7 年",
+          "label": "海軍帳 IG II² 1604",
+          "note": "逾半數船隻找不到艦長"
+        },
+        {
+          "when": "前 362 年",
+          "label": "阿波羅多洛斯出航",
+          "note": "任滿後接任者遲到又拒不接船，他多撐了 5 個月 6 天"
+        },
+        {
+          "when": "前 358/7 年",
+          "label": "佩里安德羅斯法",
+          "note": "1,200 名富人分成 20 個分擔組（年份未完全確定）"
+        },
+        {
+          "when": "前 357/6 年",
+          "label": "追討公家船具",
+          "note": "船塢缺船具，市面也買不到"
+        },
+        {
+          "when": "前 354 年",
+          "label": "〈論分擔組〉提案",
+          "note": "德摩斯提尼提議擴為 2,000 人，未獲採納"
+        },
+        {
+          "when": "前 353/2 年",
+          "label": "帳上 349 艘",
+          "note": "海軍帳 IG II² 1613"
+        },
+        {
+          "when": "前 340 年",
+          "label": "德摩斯提尼的艦長法",
+          "note": "按財產分擔，最富的人負擔加重"
+        },
+        {
+          "when": "前 330/29 年",
+          "label": "帳上 410 艘",
+          "note": "含 18 艘四列槳座（Morrison 1987 註 19）"
+        },
+        {
+          "when": "前 325/4 年",
+          "label": "亞得里亞殖民令",
+          "note": "最先備妥的艦長得金冠，違令重罰"
+        }
+      ],
+      "caption": "依本文所列古代文本與 Gabrielsen 2026、MacDowell 1986、Morrison 1987。「前 358/7 年」指跨兩個公曆年的雅典行政年。"
+    },
+    {
+      "type": "h",
+      "text": "追蹤：國家給空船，艦長補其餘"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "修昔底德（Thucydides）描寫前 415 年西西里遠征出發時的分工：國庫提供空船，60 艘戰船、40 艘運兵船，每名水手每天給 1 德拉克馬；艦長們在國家的薪餉之外，另給最上層槳手（thranitai）與其他船員獎金，又在船首像與船具上大把花錢，比誰的船漂亮、跑得快。他說，若把城邦與個人的花費都算進去，帶出城的錢總計有許多塔蘭同，但沒有給出數目。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "到了前 4 世紀，國家那一份未必給得出來。以阿波羅多洛斯為例，他說，在一年又五個月裡，將軍除了伙食費，只發過兩個月的薪餉；其中有八個月，他一點薪餉也沒拿到。他抵押田產，向兩個人借了 30 明那，分給船員才出航。"
+    },
+    {
+      "type": "table",
+      "title": "帳上留下的艦長開銷",
+      "head": [
+        "誰",
+        "怎麼任",
+        "花了多少",
+        "出處"
+      ],
+      "rows": [
+        [
+          "呂西亞斯第 19 篇提到的一人",
+          "獨任，連續 3 年",
+          "年均 2,666 德拉克馬",
+          "Lys. 19.29、42，Gabrielsen 2026 計算"
+        ],
+        [
+          "呂西亞斯第 21 篇的講者",
+          "獨任，連續 7 年",
+          "共 6 塔蘭同，年均約 5,142 德拉克馬",
+          "Lys. 21.2"
+        ],
+        [
+          "迪奧吉頓",
+          "與人共任",
+          "實付 24 明那，卻報 48 明那，向孤兒記帳一半（＝他實付的全額）",
+          "Lys. 32.24–27"
+        ],
+        [
+          "少年德摩斯提尼",
+          "被以財產交換挑戰，和解了事",
+          "付對方 20 明那（2,000 德拉克馬），等於對方轉包出去的價錢",
+          "Dem. 21.80（原文說 20 明那即轉包價）；Gabrielsen 2026 讀作兩名共任各 2,000、合計 4,000"
+        ],
+        [
+          "梅迪亞斯",
+          "獨任，轉包",
+          "付承包人 1 塔蘭同（6,000 德拉克馬），錢向分擔者收取（德摩斯提尼的控訴）",
+          "Dem. 21.155"
+        ],
+        [
+          "賠償基準",
+          "損失船殼／整套船具",
+          "每艘 5,000／每套 2,169 德拉克馬",
+          "Gabrielsen 2026 引 Gabrielsen 1994 整理的海軍帳"
+        ],
+        [
+          "提摩太之子科農（Konon）",
+          "15 年間累積的賠償罰款",
+          "34,923 德拉克馬",
+          "Gabrielsen 2026 引 Gabrielsen 1994 整理的海軍帳"
+        ]
+      ],
+      "caption": "換算：1 塔蘭同 = 60 明那 = 6,000 德拉克馬。各例年代不同，有的含賠償、有的只是出航開銷，不宜直接相比。年均數字照 Gabrielsen 截去小數。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "這些數字能和什麼比？修昔底德記的是前 415 年的日給 1 德拉克馬；復原船「奧林匹亞斯號」用 170 支槳。若照這兩個數字粗算，170 名槳手一天要 170 德拉克馬，30 天是 5,100。呂西亞斯第 21 篇講者每年平均約 5,142 德拉克馬，大約就是一艘船上全體槳手一個月的工錢。這只是比例尺：薪餉原則上由國家出，各時期的日給也不同。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Triere_Olympias_at_Paleon_Faliron_Museum.JPG/1280px-Triere_Olympias_at_Paleon_Faliron_Museum.JPG",
+      "width": 1280,
+      "height": 960,
+      "alt": "鋼架棚下停放一艘木造長船，船首有青銅撞角，撞角上方畫著一隻眼睛；船側一長排槳從船身伸出，朝畫面右後方延伸。",
+      "caption": "現代復原船「奧林匹亞斯號」（Olympias）停放在雅典南郊舊法里龍（Palaio Faliro）的棚架下。《基督教科學箴言報》1987 年報導，這艘 170 支槳的復原船由英國的三列槳座戰船信託（Trireme Trust）與希臘海軍花了六年完成，設計出自劍橋古典學者莫里森（John Morrison）與前英國國防部首席造艦師柯茨（John Coates）。它是依浮雕、文獻與帳目推出的假設，不是出土原船。",
+      "credit": "Filos96 攝，2008 年",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Triere_Olympias_at_Paleon_Faliron_Museum.JPG",
+      "made": "復原船 1980 年代建造；照片攝於 2008 年",
+      "depicts": "公元前 5–4 世紀的三列槳座戰船（復原假設）"
+    },
+    {
+      "type": "svg",
+      "title": "一艘戰船出海：錢、人、船具怎麼流",
+      "svg": "<svg viewBox='0 0 360 540' xmlns='http://www.w3.org/2000/svg' font-size='11'>\n<defs>\n<marker id='ah' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='ink'/></marker>\n<marker id='ahg' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='gold'/></marker>\n</defs>\n<rect x='100' y='8' width='160' height='38' rx='3' class='soft'/>\n<text x='180' y='24' text-anchor='middle' font-size='12' font-weight='600'>公民大會</text>\n<text x='180' y='39' text-anchor='middle' font-size='10' class='muted'>表決出航、船數、怎麼籌錢</text>\n<line x1='150' y1='46' x2='96' y2='72' class='ink line' marker-end='url(#ah)'/>\n<line x1='210' y1='46' x2='264' y2='72' class='ink line' marker-end='url(#ah)'/>\n<rect x='8' y='74' width='160' height='40' rx='3' class='soft'/>\n<text x='18' y='91' font-size='11.5'>議事會</text>\n<text x='18' y='106' font-size='10' class='muted'>監造新船殼、船棚</text>\n<rect x='192' y='74' width='160' height='40' rx='3' class='soft'/>\n<text x='202' y='91' font-size='11.5'>將軍</text>\n<text x='202' y='106' font-size='10' class='muted'>點名艦長、受理豁免與交換</text>\n<line x1='88' y1='114' x2='88' y2='142' class='ink line' marker-end='url(#ah)'/>\n<line x1='272' y1='114' x2='272' y2='142' class='ink line' marker-end='url(#ah)'/>\n<rect x='8' y='144' width='160' height='40' rx='3' class='soft'/>\n<text x='18' y='161' font-size='11.5'>船塢主管</text>\n<text x='18' y='176' font-size='10' class='muted'>發出船殼與公家船具</text>\n<rect x='192' y='144' width='160' height='40' rx='3' class='soft'/>\n<text x='202' y='161' font-size='11.5'>被點名的富人</text>\n<text x='202' y='176' font-size='10' class='muted'>可提「財產交換」挑戰</text>\n<line x1='88' y1='184' x2='126' y2='210' class='ink line' marker-end='url(#ah)'/>\n<line x1='272' y1='184' x2='234' y2='210' class='ink line' marker-end='url(#ah)'/>\n<rect x='70' y='212' width='220' height='60' rx='3' class='paper'/>\n<rect x='70' y='212' width='4' height='60' class='accent'/>\n<text x='84' y='230' font-size='12.5' font-weight='600'>艦長（一任一年）</text>\n<text x='84' y='246' font-size='10' class='muted'>修船、獎金、預支、雇人、私人船具</text>\n<text x='84' y='261' font-size='10' class='muted'>也可轉包給承包人代為出航</text>\n<rect x='8' y='300' width='160' height='40' rx='3' class='soft'/>\n<text x='18' y='317' font-size='11.5'>國庫（經將軍發放）</text>\n<text x='18' y='332' font-size='10' class='muted'>薪餉、伙食費，常不足或拖欠</text>\n<rect x='192' y='300' width='160' height='40' rx='3' class='soft'/>\n<text x='202' y='317' font-size='11.5'>分擔組成員</text>\n<text x='202' y='332' font-size='10' class='muted'>前 358/7 年起 1,200 人分攤</text>\n<line x1='272' y1='300' x2='236' y2='274' class='gold line' stroke-width='1.6' marker-end='url(#ahg)'/>\n<line x1='88' y1='340' x2='126' y2='370' class='gold line' stroke-width='1.6' marker-end='url(#ahg)'/>\n<line x1='180' y1='272' x2='180' y2='370' class='gold line' stroke-width='1.6' marker-end='url(#ahg)'/>\n<rect x='70' y='372' width='220' height='42' rx='3' class='soft'/>\n<text x='84' y='389' font-size='11.5'>船員：槳手、水兵等</text>\n<text x='84' y='405' font-size='10' class='muted'>好槳手會被出價更高的船挖走</text>\n<line x1='180' y1='414' x2='180' y2='440' class='ink line' marker-end='url(#ah)'/>\n<rect x='8' y='442' width='344' height='42' rx='3' class='soft'/>\n<text x='18' y='459' font-size='11.5'>任滿：船與船具交給下一任艦長</text>\n<text x='18' y='475' font-size='10' class='muted'>欠還公家船具者列名刻石，交給出航的艦長追討</text>\n<line x1='14' y1='504' x2='44' y2='504' class='gold line' stroke-width='1.6' marker-end='url(#ahg)'/>\n<text x='50' y='508' font-size='10' class='muted'>錢</text>\n<line x1='84' y1='504' x2='114' y2='504' class='ink line' marker-end='url(#ah)'/>\n<text x='120' y='508' font-size='10' class='muted'>命令、人選、船與船具</text>\n<text x='14' y='530' font-size='9.5' class='muted'>示意。依［Dem.］47、50，《雅典政制》46、61，Gabrielsen 2026 整理</text>\n</svg>",
+      "caption": "示意圖，綜合不同年代的制度：分擔組在前 358/7 年後才出現，轉包在前 4 世紀中葉的講稿裡最常見。依［Dem.］47、50，《雅典政制》46、61 與 Gabrielsen 2026 對出航程序的重建整理。",
+      "credit": "本報原創圖解"
+    },
+    {
+      "type": "h",
+      "text": "權力：大會下令、將軍點名、法庭裁決"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Gabrielsen 2026 年依前 4 世紀的材料重建了出航程序。公民大會的決議寫明出航的目的、船的數量與等級、怎麼配員、錢從哪裡來；將軍指派艦長並處理豁免爭議；船塢主管把船殼與船具交給實際出航的艦長；船員靠徵召或雇用補齊；船下水後開到防波堤，經試航與檢閱才可出發。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "被點名的人可以推。Gabrielsen 這樣說明「財產交換」（antidosis）：新任的捐輸者若自認財力不足，可以點名一位他認為更有錢的公民，要對方接下這份差事，否則就和自己交換全部財產；私下談不攏，就上法庭由陪審員決定誰去。據 Wallinga 的書評，Gabrielsen 1994 年把這套程序看成城邦間接控制艦長階層的精巧機制，Wallinga 認為這個論點有說服力。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "德摩斯提尼自己就碰過。他在〈控梅迪亞斯〉裡說，少年時他控告侵吞家產的監護人，開庭前三、四天，梅迪亞斯（Meidias）和兄弟特拉西洛科斯（Thrasylochus）突然上門，以財產交換挑戰要他接下他們的艦長職，隨即破門進房，當著他未出嫁的妹妹辱罵全家，還打算以新主人的身分撤掉他對監護人的訴訟。他怕家產追不回來，付給對方 20 明那了事，正是對方轉包艦長職付出的數目。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "城邦也用賞罰催促。前 325/4 年一份在亞得里亞海建立殖民地的決議，摘要刻在海軍帳目 IG II² 1629 上。據 Gabrielsen 的整理：豁免訴訟排在穆尼基昂月（Mounichion）2 日與 5 日，艦長要在 10 日前把船開到防波堤受檢；第一個到的艦長得價值 500 德拉克馬的金冠，第二、第三名各得 300、200（200 這個數字在石上殘缺，是復原）；違令者罰 10,000 德拉克馬。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "榮譽是另一根槓桿。呂西亞斯第 21 篇的講者說，他的船裝備全軍最好，所以亞西比德（Alcibiades）上了他的船，後來的將軍也搶著搭；他重金請來「全希臘最好」的舵手法恩提亞斯（Phantias）。前 405 年羊河之役艦隊覆沒時，他帶回了自己的船，還救下另一艘。他說，若只照法律最低要求，他列舉的捐輸連四分之一都不必花。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "由此推想，城邦握的是三樣東西：點名權、船殼與船具、法庭；它沒有規定艦長該花多少錢。國家只保底，其餘交給富人之間的競爭與面子。好處是不必每年編一筆固定預算；代價是每艘船的品質，取決於那一年輪到誰。"
+    },
+    {
+      "type": "h",
+      "text": "限制：沒人接班、船具欠帳、好水手先跑"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "阿波羅多洛斯任滿時，船在赫勒斯滂（Hellespont）。接任的波利克列斯遲遲不來；來了，又反問他：為什麼只有你用私人船具、鍍金裝飾？你把水手寵壞了，害得別艘船的人也跟著要。阿波羅多洛斯回他：嫌我的水手被寵壞，你就自己去找不拿錢也肯跟你走的人，把船接過去。波利克列斯說，他的共任搭檔還沒到，他不要一個人接船。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "結果阿波羅多洛斯在任滿後又多撐了 5 個月又 6 天，這正是他要波利克列斯賠的那段開銷。他還請人作證：波利克列斯先前和另一位艦長約好各航六個月，到期也沒去接船。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "人力是第二個限制。阿波羅多洛斯說，船員拿不到錢、或船中途開回比雷埃夫斯，都會引發大批逃跑。到了赫勒斯滂，他的人有的上岸去當傭兵，有的被薩索斯（Thasos）與馬羅尼亞（Maroneia）的船隊用高薪和預支挖走。他說得很直白：他越是用心挑好槳手，逃跑的人就越多；靠名冊徵來的水手為了將來能被遣返回家，反而留在船上。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "船具是第三個限制。另一篇偽德摩斯提尼講稿（［Dem.］47）說，前 357/6 年一支艦隊要緊急出航，船塢裡卻沒有船具，因為前任艦長領了沒還；比雷埃夫斯市場上也買不到足夠的帆布、麻絮與繩索。公民大會於是下令把欠船具者的名字交給即將出航的艦長，由他們自己上門追討。講者本人一向用私人船具，這次也只好接下名單。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "找不到艦長也是常事。Gabrielsen 2026 年引用海軍帳目：前 378/7 年，因為找不到獨任或共任的艦長，超過一半的船沒能分派出去；前 373 年也有 20 艘。他指出約前 407 年出現共任制後，每艘出航的船至少要兩個人，人選更吃緊。但他也強調，前 373 年雅典仍派出 60 艘船遠征，人手短缺並沒有削弱它在海上能做的事。"
+    },
+    {
+      "type": "h",
+      "text": "改革：從兩人合任，到一千二百人分攤"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "共任把負擔切成兩半，也讓帳更容易作假。呂西亞斯第 32 篇是一宗孤兒控告祖父兼監護人迪奧吉頓（Diogeiton）的案子。迪奧吉頓說，他和亞歷克西斯（Alexis）共任艦長，出了 48 明那，於是把一半記在孫輩帳上。原告去找亞歷克西斯的兄弟查帳，帳上寫的是：迪奧吉頓實際付給亞歷克西斯的是 24 明那。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "講者據亞歷克西斯家的帳指出：迪奧吉頓實付 24 明那，報的卻是 48 明那，於是孤兒分攤的那一半，正好等於他實際付出的全額。這是原告一方的說法。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "前 358/7 年左右，一位身分不確定的佩里安德羅斯（Periandros）提出法案，把負擔交給「分擔組」（symmoria）。MacDowell 1986 年指出，這條法律在現存文獻裡只被具名提到一次，年份很可能是前 358/7 年但不確定，學者都同意是它首次用分擔組來維持戰船。Gabrielsen 寫道，此後船不再分給個人，而分給 20 個分擔組，名冊上共 1,200 人。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "德摩斯提尼在〈控梅迪亞斯〉裡說，他剛成年就當艦長，那時兩人合任，費用自己出，船員也自己找；而梅迪亞斯要到「你們把 1,200 人變成分擔者」之後才開始捐輸：這類人向分擔者收一塔蘭同，再用同樣的價錢把艦長職轉包出去，國家還提供船員與船具，有些人因此分文未出，卻算盡了義務，還免掉其他捐輸。梅迪亞斯是他的仇人，這段話是控訴，不是帳目。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "前 354 年，德摩斯提尼在〈論分擔組〉裡提議把 1,200 人的名冊補到 2,000 人，扣掉女繼承人（epikleroi）、孤兒、在外殖民者、共有財產者等不合格的人後，實際仍湊得出 1,200；分成 20 組、每組 60 人，再細分為 5 個 12 人小組，並把最窮的人配給最富的人。Gabrielsen 指出這個提案沒有被採納。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "前 340 年，他終於通過自己的艦長法。他在〈論金冠〉裡回顧：舊制下，有錢人 16 人合出一艘船，自己幾乎不花錢，卻壓垮財力有限的人；新法要每個人按財產負擔，過去 16 人分一艘的人，可能要獨自出兩艘。他說分擔組裡頭三等的人曾出大筆錢求他撤案；整場戰爭期間，沒有艦長以求援者身分坐到穆尼基亞的阿提米斯神廟，沒有船被棄在海上而損失。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Gabrielsen 2026 年同意這條法律讓負擔分配得比較公平：海軍帳目顯示，此後各艘船在獨任與共任艦長之間分級分派，較重的負擔很可能落在最富的人身上。但他依帳目指出，這條法律並沒有像常見說法那樣把負有義務的人從 1,200 人減到 300 人，而是要 1,200 人裡最富的 300 人多扛一些；反對這條法律的也正是這些人。"
+    },
+    {
+      "type": "h",
+      "text": "學界怎麼說：壓榨富人，還是籠絡富人"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "據 Wallinga 的書評，Gabrielsen 在 1994 年的《資助雅典艦隊》（Financing the Athenian Fleet）裡認為前 377 至 323/2 年的雅典並沒有重重壓榨富人，當局小心維持他們出任的意願：艦長職沒有固定的金額，以免限縮可徵的人選；藏匿財產很普遍，城邦維持一種「自願」的表面，用榮譽來平衡。他看出趨勢：從個人承擔，經過集體承擔，走向純粹的稅。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Wallinga 稱讚這本書把艦長制當成財政制度處理得很好，但批評它沒有先提出整個海軍財政的假設模型，以致有些斷言站不住。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "爭論至今未停。Gabrielsen 2026 年的文章轉述 Pritchard 新近的看法：前 340 年以前，富人為了逃避艦長職而互提財產交換、打官司，拖延艦隊出航，德摩斯提尼的改革才讓海軍恢復效率。Gabrielsen 把 Pritchard 歸為採信德摩斯提尼前 351/0 年〈第一篇反腓力辭〉的學者，那篇演說抱怨：關於戰爭與備戰，一切都「ἄτακτα, ἀδιόρθωτα, ἀόρισθ᾽ ἅπαντα」（全無秩序、無從補救、毫無定規；本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Gabrielsen 反駁說，德摩斯提尼當時正要推銷自己的海軍改革，有理由把現行制度說得一團糟；沒有證據顯示財產交換的頻率在前 340 年前後有所改變。他指出，從約前 407 年的共任制、前 358/7 年的佩里安德羅斯法到前 340 年的德摩斯提尼法，幾乎每一次改革都附帶一套對艦長階層的寬厚讓步，最明顯的是長期容忍大量逾期未還的海軍欠帳。他也認為，同時代人說捐輸會拖垮富人，可能是誇大且有黨派立場的說法。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，雅典把戰船拆成兩半：國家握有船殼、船具與命令，富人負擔讓船動起來的不確定成本：水手跑了要補、薪餉遲了要墊、船壞了要賠。表格裡的數字差距那麼大，正是因為這份成本沒有上限。從共任、分擔組到按財產分級，每次改革都在重新切這份風險，而不是消滅它；阿波羅多洛斯多撐的 5 個月 6 天，就是風險沒人接時落在誰身上的樣子。"
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "你的世界裡，戰船或軍隊的「硬體」和「讓它動起來的錢」是不是同一個人出？若分開，任期到了、硬體要交接時，舊帳由誰結？",
+        "被點名出錢的人能不能把差事推給「比我更有錢的人」？由誰判定誰比較有錢，判錯了又怎麼辦？",
+        "國家付不出薪餉時，指揮官自掏腰包墊付，換來的是榮譽、債權，還是對船員的私人忠誠？這份忠誠日後屬於誰？",
+        "好水手會被出價更高的一方挖走。你的世界裡，靠徵召來的人和花錢雇來的人，在逃跑、忠誠與戰力上有什麼不同？"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "［Demosthenes］50, Against Polycles（A. T. Murray 英譯）",
+      "publisher": "Perseus Digital Library（Tufts University）；Loeb Classical Library",
+      "date": "1939",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0078:speech=50",
+      "note": "§1–16、23、34–39、68：前 362 年的出航決議、私人船具、薪餉與借款、多服役 5 個月 6 天、與波利克列斯的爭執、逃兵"
+    },
+    {
+      "title": "［Demosthenes］47, Against Evergus and Mnesibulus（A. T. Murray 英譯）",
+      "publisher": "Perseus Digital Library（Tufts University）；Loeb Classical Library",
+      "date": "1939",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0078:speech=47",
+      "note": "§19–24：船塢缺船具、追討欠帳、佩里安德羅斯法"
+    },
+    {
+      "title": "Demosthenes 21, Against Meidias（Loeb 英譯）",
+      "publisher": "Perseus Digital Library（Tufts University）",
+      "date": "1939",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0074:speech=21",
+      "note": "§78–80：少年德摩斯提尼遭財產交換挑戰；§154–155：兩人合任、1,200 名分擔者與轉包"
+    },
+    {
+      "title": "Demosthenes 18, On the Crown（C. A. Vince、J. H. Vince 英譯）",
+      "publisher": "Perseus Digital Library（Tufts University）；Loeb Classical Library",
+      "date": "1926",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0072:speech=18",
+      "note": "§102–108：前 340 年艦長法；§105–106 的插入文件不採用"
+    },
+    {
+      "title": "Demosthenes 14, On the Symmories（Loeb 英譯）",
+      "publisher": "Perseus Digital Library（Tufts University）；Loeb Classical Library",
+      "date": "1930",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0072:speech=14",
+      "note": "§16–21：2,000 人名冊、20 組 60 人、5 個 12 人小組的提案"
+    },
+    {
+      "title": "Lysias 21, Defence against a Charge of Taking Bribes（W. R. M. Lamb 英譯）",
+      "publisher": "Perseus Digital Library（Tufts University）；Loeb Classical Library",
+      "date": "1930",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0154:speech=21",
+      "note": "§1–10：捐輸清單、7 年艦長共 6 塔蘭同、舵手法恩提亞斯、羊河之役"
+    },
+    {
+      "title": "Lysias 32, Against Diogeiton（W. R. M. Lamb 英譯）",
+      "publisher": "Perseus Digital Library（Tufts University）；Loeb Classical Library",
+      "date": "1930",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0154:speech=32",
+      "note": "§24–27：共任艦長的 48 明那與 24 明那，以及講者的結論"
+    },
+    {
+      "title": "Thucydides, The Peloponnesian War 6.31（Richard Crawley 英譯）",
+      "publisher": "Perseus Digital Library（Tufts University）；J. M. Dent",
+      "date": "1910",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0200:book=6:chapter=31",
+      "note": "前 415 年西西里遠征：國庫日給 1 德拉克馬、提供空船，艦長加發獎金"
+    },
+    {
+      "title": "［Aristotle］, Athenian Constitution 46.1、61.1（H. Rackham 英譯）",
+      "publisher": "Perseus Digital Library（Tufts University）；Loeb Classical Library",
+      "date": "1952",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0046:chapter=46",
+      "note": "議事會監造戰船；61.1 專管分擔組的將軍"
+    },
+    {
+      "title": "Vincent Gabrielsen, Fleet Dispatches in Fourth-Century BC Athens",
+      "publisher": "Classica et Mediaevalia Supplementum 4, pp. 77–96",
+      "date": "2026-08-21",
+      "url": "https://tidsskrift.dk/classicaetmediaevalia/article/view/169625",
+      "note": "出航程序重建、亞得里亞殖民令（IG II² 1629）、未分派船隻、費用案例與賠償基準、前 340 年改革、與 Pritchard 的爭論、〈第一篇反腓力辭〉引文；Lys. 19.29、42 的計算與 Dem. 4.36 的希臘文引文皆轉引自本文"
+    },
+    {
+      "title": "H. T. Wallinga, review of V. Gabrielsen, Financing the Athenian Fleet: Public Taxation and Social Relations（Johns Hopkins University Press, 1994）",
+      "publisher": "Bryn Mawr Classical Review 1995.06.09",
+      "date": "1995-06",
+      "url": "https://bmcr.brynmawr.edu/1995/1995.06.09",
+      "note": "Gabrielsen 1994 的主要論點與 Wallinga 的批評；本報未讀 Gabrielsen 1994 原書"
+    },
+    {
+      "title": "Vincent Gabrielsen, Financing the Athenian Fleet: Public Taxation and Social Relations",
+      "publisher": "Johns Hopkins University Press",
+      "date": "1994",
+      "url": "https://muse.jhu.edu/book/479",
+      "note": "出版社簡介：艦長負擔維護與修理船隻、招募船員並供應給養；本報未讀全書，其餘內容據 Wallinga 書評與 Gabrielsen 2026 的引述"
+    },
+    {
+      "title": "Douglas M. MacDowell, The Law of Periandros about Symmories",
+      "publisher": "The Classical Quarterly 36(2), pp. 438–449",
+      "date": "1986-12",
+      "url": "https://www.cambridge.org/core/journals/classical-quarterly/article/law-of-periandros-about-symmories/05D759C049C58F4CE1015DC72250B885",
+      "note": "依首頁摘錄：法律年份很可能是前 358/7 年、僅［Dem.］47 具名提及"
+    },
+    {
+      "title": "J. S. Morrison, Athenian Sea-Power in 323/2 BC: Dream and Reality",
+      "publisher": "The Journal of Hellenic Studies 107, pp. 88–97",
+      "date": "1987-11",
+      "url": "https://www.cambridge.org/core/journals/journal-of-hellenic-studies/article/athenian-seapower-in-3232-bc-dream-and-reality/69FF6598B63A8CCBF8F7E41D093D1F52",
+      "note": "註 19：前 330/29 年總數 410 艘（392 艘三列槳座、18 艘四列槳座）；註 18 把前 330/29 與 325/4 年的數字寫成 417 與 410，與註 19 不一致，本文採註 19"
+    },
+    {
+      "title": "Mogens Herman Hansen, The Authenticity of the Law about Nomothesia inserted in Demosthenes Against Timokrates 20–23",
+      "publisher": "Greek, Roman, and Byzantine Studies 56, pp. 438–474",
+      "date": "2016",
+      "url": "https://grbs.library.duke.edu/article/download/15693/6859",
+      "note": "轉述 Canevaro 2013：〈論金冠〉的插入文件全是後世偽作"
+    },
+    {
+      "title": "Mirko Canevaro, The Documents in the Attic Orators: Laws and Decrees in the Public Speeches of the Demosthenic Corpus",
+      "publisher": "Oxford University Press",
+      "date": "2013",
+      "url": "https://academic.oup.com/book/9159",
+      "note": "本報未讀原書，結論據 Hansen 2016 轉述"
+    },
+    {
+      "title": "David M. Pritchard, The Military Reforms of Fourth-Century Athens, in D. M. Pritchard & I. Worthington (eds.), Waging War in Fourth-Century Athens: New Appraisals, pp. 66–90",
+      "publisher": "Routledge",
+      "date": "2025-10-10",
+      "url": "https://doi.org/10.4324/9781003541851-6",
+      "note": "本報未讀原文，論點據 Gabrielsen 2026 轉述；Crossref 登錄發布日期 2025-10-10，書目年份 2026"
+    },
+    {
+      "title": "Relief depicting a trireme. \"The Lenormant Relief\"（Ακρ. 1339）",
+      "publisher": "Acropolis Museum",
+      "date": "未註明",
+      "url": "https://theacropolismuseum.gr/en/relief-depicting-trireme-lenormant-relief",
+      "note": "定年、材質、尺寸、出土、帕拉洛斯號的推定"
+    },
+    {
+      "title": "Lenormant Trireme Relief",
+      "publisher": "Museum of Classical Archaeology, University of Cambridge",
+      "date": "未註明",
+      "url": "https://museum.classics.cam.ac.uk/node/3744",
+      "note": "約前 410 年；1980 年代復原三列槳座戰船時的用處"
+    },
+    {
+      "title": "Paul Lipke, Classical High-Tech. Is This the Ship That Launched the Golden Age of Greece?",
+      "publisher": "The Christian Science Monitor",
+      "date": "1987-09-01",
+      "url": "https://www.csmonitor.com/1987/0901/dtri.html",
+      "note": "奧林匹亞斯號：170 支槳、三列槳座戰船信託與希臘海軍、莫里森與柯茨的設計"
+    },
+    {
+      "title": "Apollodorus of Acharnae",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Apollodorus_of_Acharnae",
+      "note": "僅作導引：［Dem.］50 等講稿一般認為非德摩斯提尼所作"
+    }
+  ]
+}
