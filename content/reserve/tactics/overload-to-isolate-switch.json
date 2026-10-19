@@ -1,0 +1,1437 @@
+{
+  "column": "tactics",
+  "date": "reserve",
+  "reserve_written": "2026-10-19",
+  "title": "右路擠滿人，為了左路那一對一",
+  "dek": "故意讓一側擠滿人、另一側只留一名邊鋒，是為了什麼？原創假設場景拆解「以多打少，為了孤立」：怎麼把對手吸過去、轉移要多快、防守方怎麼回應。",
+  "brief": "藍隊把五人堆在右路，左路只留 11 號貼邊線，紅隊整條防線跟著右移，這是原創假設場景裡的「以多打少，為了孤立」。當地時間 2023 年 11 月 28 日巴薩 2 比 1 逆轉波圖，此前三場先發都踢防線右側的坎塞洛改踢左路、一傳一射，哈維談中場休息的指示時說「空出來的人是坎塞洛」。本文的推論是轉移要一腳出球；防守方則要在邊後衛撲出時，由中衛橫移補他身後。",
+  "topic_key": "tactics:overload-to-isolate-switch",
+  "updated_at": "2026-10-19T15:00:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "pitch",
+    "title": "右邊擠五個人，左邊留一個人",
+    "view": "half",
+    "caption": "原創假設場景，方向：藍隊由下往上進攻；文中左右以藍隊進攻方向為準。只畫進攻半場，藍隊門將不在畫面內；距離為示意。",
+    "steps": [
+      {
+        "label": "1. 起始站位：右路五人，左路一人",
+        "note": "藍 8 號在右側肋部持球，2 號貼右邊線，7 號在罰球區右角外，10 號和 9 號往右靠。左路只有 11 號，貼著左邊線站在高處。紅隊 4-4-2 整條往右移，紅 2 號和 11 號之間是一大片空地。",
+        "players": [
+          {
+            "id": "b4",
+            "team": "blue",
+            "x": 40,
+            "y": 54,
+            "label": "4"
+          },
+          {
+            "id": "b5",
+            "team": "blue",
+            "x": 60,
+            "y": 54,
+            "label": "5"
+          },
+          {
+            "id": "b3",
+            "team": "blue",
+            "x": 20,
+            "y": 60,
+            "label": "3"
+          },
+          {
+            "id": "b6",
+            "team": "blue",
+            "x": 50,
+            "y": 64,
+            "label": "6"
+          },
+          {
+            "id": "b8",
+            "team": "blue",
+            "x": 72,
+            "y": 72,
+            "label": "8"
+          },
+          {
+            "id": "b2",
+            "team": "blue",
+            "x": 92,
+            "y": 76,
+            "label": "2"
+          },
+          {
+            "id": "b7",
+            "team": "blue",
+            "x": 82,
+            "y": 86,
+            "label": "7"
+          },
+          {
+            "id": "b10",
+            "team": "blue",
+            "x": 62,
+            "y": 80,
+            "label": "10"
+          },
+          {
+            "id": "b9",
+            "team": "blue",
+            "x": 54,
+            "y": 90,
+            "label": "9"
+          },
+          {
+            "id": "b11",
+            "team": "blue",
+            "x": 6,
+            "y": 86,
+            "label": "11"
+          },
+          {
+            "id": "r1",
+            "team": "red",
+            "x": 50,
+            "y": 98,
+            "label": "1"
+          },
+          {
+            "id": "r3",
+            "team": "red",
+            "x": 84,
+            "y": 88,
+            "label": "3"
+          },
+          {
+            "id": "r5",
+            "team": "red",
+            "x": 68,
+            "y": 91,
+            "label": "5"
+          },
+          {
+            "id": "r4",
+            "team": "red",
+            "x": 54,
+            "y": 91,
+            "label": "4"
+          },
+          {
+            "id": "r2",
+            "team": "red",
+            "x": 38,
+            "y": 89,
+            "label": "2"
+          },
+          {
+            "id": "r11",
+            "team": "red",
+            "x": 86,
+            "y": 78,
+            "label": "11"
+          },
+          {
+            "id": "r8",
+            "team": "red",
+            "x": 70,
+            "y": 77,
+            "label": "8"
+          },
+          {
+            "id": "r6",
+            "team": "red",
+            "x": 58,
+            "y": 79,
+            "label": "6"
+          },
+          {
+            "id": "r7",
+            "team": "red",
+            "x": 40,
+            "y": 77,
+            "label": "7"
+          },
+          {
+            "id": "r10",
+            "team": "red",
+            "x": 64,
+            "y": 64,
+            "label": "10"
+          },
+          {
+            "id": "r9",
+            "team": "red",
+            "x": 44,
+            "y": 60,
+            "label": "9"
+          }
+        ],
+        "ball": "b8",
+        "arrows": [
+          {
+            "from": "b10",
+            "to": [
+              68,
+              84
+            ],
+            "kind": "run"
+          },
+          {
+            "from": "b9",
+            "to": [
+              64,
+              90
+            ],
+            "kind": "run"
+          }
+        ]
+      },
+      {
+        "label": "2. 右路被堵住，回傳 6 號",
+        "note": "10、9 號往右靠，紅隊跟著再移一步：紅 8、10 號前後夾住 8 號，紅 3、11 號看住 2、7 號，紅 6、7 號也往右收。右路沒有空間，8 號回傳給身後的 6 號。",
+        "players": [
+          {
+            "id": "b4",
+            "team": "blue",
+            "x": 40,
+            "y": 54,
+            "label": "4"
+          },
+          {
+            "id": "b5",
+            "team": "blue",
+            "x": 60,
+            "y": 54,
+            "label": "5"
+          },
+          {
+            "id": "b3",
+            "team": "blue",
+            "x": 20,
+            "y": 60,
+            "label": "3"
+          },
+          {
+            "id": "b6",
+            "team": "blue",
+            "x": 50,
+            "y": 64,
+            "label": "6"
+          },
+          {
+            "id": "b8",
+            "team": "blue",
+            "x": 72,
+            "y": 72,
+            "label": "8"
+          },
+          {
+            "id": "b2",
+            "team": "blue",
+            "x": 93,
+            "y": 80,
+            "label": "2"
+          },
+          {
+            "id": "b7",
+            "team": "blue",
+            "x": 82,
+            "y": 86,
+            "label": "7"
+          },
+          {
+            "id": "b10",
+            "team": "blue",
+            "x": 68,
+            "y": 84,
+            "label": "10"
+          },
+          {
+            "id": "b9",
+            "team": "blue",
+            "x": 64,
+            "y": 90,
+            "label": "9"
+          },
+          {
+            "id": "b11",
+            "team": "blue",
+            "x": 6,
+            "y": 86,
+            "label": "11"
+          },
+          {
+            "id": "r1",
+            "team": "red",
+            "x": 50,
+            "y": 98,
+            "label": "1"
+          },
+          {
+            "id": "r3",
+            "team": "red",
+            "x": 86,
+            "y": 88,
+            "label": "3"
+          },
+          {
+            "id": "r5",
+            "team": "red",
+            "x": 70,
+            "y": 91,
+            "label": "5"
+          },
+          {
+            "id": "r4",
+            "team": "red",
+            "x": 56,
+            "y": 91,
+            "label": "4"
+          },
+          {
+            "id": "r2",
+            "team": "red",
+            "x": 40,
+            "y": 89,
+            "label": "2"
+          },
+          {
+            "id": "r11",
+            "team": "red",
+            "x": 88,
+            "y": 79,
+            "label": "11"
+          },
+          {
+            "id": "r8",
+            "team": "red",
+            "x": 72,
+            "y": 76,
+            "label": "8"
+          },
+          {
+            "id": "r6",
+            "team": "red",
+            "x": 62,
+            "y": 81,
+            "label": "6"
+          },
+          {
+            "id": "r7",
+            "team": "red",
+            "x": 44,
+            "y": 78,
+            "label": "7"
+          },
+          {
+            "id": "r10",
+            "team": "red",
+            "x": 66,
+            "y": 68,
+            "label": "10"
+          },
+          {
+            "id": "r9",
+            "team": "red",
+            "x": 44,
+            "y": 60,
+            "label": "9"
+          }
+        ],
+        "ball": "b8",
+        "arrows": [
+          {
+            "from": "b8",
+            "to": [
+              50,
+              64
+            ],
+            "kind": "pass"
+          },
+          {
+            "from": "r8",
+            "to": [
+              70,
+              73
+            ],
+            "kind": "press"
+          }
+        ]
+      },
+      {
+        "label": "3. 一腳轉移到左邊線",
+        "note": "紅 9 號回頭逼 6 號，但慢了一步。6 號不停球，一記長傳斜飛向左邊線的 11 號。紅 2 號開始往外移，紅 7 號從中路往回跑；3 號從後方往前插上。",
+        "players": [
+          {
+            "id": "b4",
+            "team": "blue",
+            "x": 40,
+            "y": 54,
+            "label": "4"
+          },
+          {
+            "id": "b5",
+            "team": "blue",
+            "x": 60,
+            "y": 54,
+            "label": "5"
+          },
+          {
+            "id": "b3",
+            "team": "blue",
+            "x": 20,
+            "y": 60,
+            "label": "3"
+          },
+          {
+            "id": "b6",
+            "team": "blue",
+            "x": 50,
+            "y": 64,
+            "label": "6"
+          },
+          {
+            "id": "b8",
+            "team": "blue",
+            "x": 72,
+            "y": 72,
+            "label": "8"
+          },
+          {
+            "id": "b2",
+            "team": "blue",
+            "x": 93,
+            "y": 80,
+            "label": "2"
+          },
+          {
+            "id": "b7",
+            "team": "blue",
+            "x": 82,
+            "y": 86,
+            "label": "7"
+          },
+          {
+            "id": "b10",
+            "team": "blue",
+            "x": 68,
+            "y": 84,
+            "label": "10"
+          },
+          {
+            "id": "b9",
+            "team": "blue",
+            "x": 64,
+            "y": 90,
+            "label": "9"
+          },
+          {
+            "id": "b11",
+            "team": "blue",
+            "x": 6,
+            "y": 86,
+            "label": "11"
+          },
+          {
+            "id": "r1",
+            "team": "red",
+            "x": 50,
+            "y": 98,
+            "label": "1"
+          },
+          {
+            "id": "r3",
+            "team": "red",
+            "x": 86,
+            "y": 88,
+            "label": "3"
+          },
+          {
+            "id": "r5",
+            "team": "red",
+            "x": 70,
+            "y": 91,
+            "label": "5"
+          },
+          {
+            "id": "r4",
+            "team": "red",
+            "x": 56,
+            "y": 91,
+            "label": "4"
+          },
+          {
+            "id": "r2",
+            "team": "red",
+            "x": 40,
+            "y": 89,
+            "label": "2"
+          },
+          {
+            "id": "r11",
+            "team": "red",
+            "x": 88,
+            "y": 79,
+            "label": "11"
+          },
+          {
+            "id": "r8",
+            "team": "red",
+            "x": 72,
+            "y": 76,
+            "label": "8"
+          },
+          {
+            "id": "r6",
+            "team": "red",
+            "x": 62,
+            "y": 81,
+            "label": "6"
+          },
+          {
+            "id": "r7",
+            "team": "red",
+            "x": 44,
+            "y": 78,
+            "label": "7"
+          },
+          {
+            "id": "r10",
+            "team": "red",
+            "x": 68,
+            "y": 70,
+            "label": "10"
+          },
+          {
+            "id": "r9",
+            "team": "red",
+            "x": 44,
+            "y": 60,
+            "label": "9"
+          }
+        ],
+        "ball": "b6",
+        "arrows": [
+          {
+            "from": "r9",
+            "to": [
+              47,
+              62
+            ],
+            "kind": "press"
+          },
+          {
+            "from": "b6",
+            "to": [
+              8,
+              84
+            ],
+            "kind": "pass"
+          },
+          {
+            "from": "b3",
+            "to": [
+              20,
+              74
+            ],
+            "kind": "run"
+          },
+          {
+            "from": "r2",
+            "to": [
+              16,
+              85
+            ],
+            "kind": "run"
+          },
+          {
+            "from": "r7",
+            "to": [
+              28,
+              80
+            ],
+            "kind": "run"
+          }
+        ]
+      },
+      {
+        "label": "4. 11 號面對紅 2 號一對一",
+        "note": "11 號停下球，面前只有紅 2 號。紅 7 號還在回追的路上，紅 4 號離得更遠。11 號往內帶球切向罰球區；3 號從他內側往前跑，是紅 7 號趕到時的另一個出球點；9 號往球門前跑。",
+        "players": [
+          {
+            "id": "b4",
+            "team": "blue",
+            "x": 40,
+            "y": 54,
+            "label": "4"
+          },
+          {
+            "id": "b5",
+            "team": "blue",
+            "x": 60,
+            "y": 54,
+            "label": "5"
+          },
+          {
+            "id": "b3",
+            "team": "blue",
+            "x": 20,
+            "y": 74,
+            "label": "3"
+          },
+          {
+            "id": "b6",
+            "team": "blue",
+            "x": 50,
+            "y": 64,
+            "label": "6"
+          },
+          {
+            "id": "b8",
+            "team": "blue",
+            "x": 72,
+            "y": 72,
+            "label": "8"
+          },
+          {
+            "id": "b2",
+            "team": "blue",
+            "x": 93,
+            "y": 80,
+            "label": "2"
+          },
+          {
+            "id": "b7",
+            "team": "blue",
+            "x": 76,
+            "y": 88,
+            "label": "7"
+          },
+          {
+            "id": "b10",
+            "team": "blue",
+            "x": 60,
+            "y": 86,
+            "label": "10"
+          },
+          {
+            "id": "b9",
+            "team": "blue",
+            "x": 52,
+            "y": 92,
+            "label": "9"
+          },
+          {
+            "id": "b11",
+            "team": "blue",
+            "x": 8,
+            "y": 84,
+            "label": "11"
+          },
+          {
+            "id": "r1",
+            "team": "red",
+            "x": 50,
+            "y": 98,
+            "label": "1"
+          },
+          {
+            "id": "r3",
+            "team": "red",
+            "x": 86,
+            "y": 88,
+            "label": "3"
+          },
+          {
+            "id": "r5",
+            "team": "red",
+            "x": 70,
+            "y": 91,
+            "label": "5"
+          },
+          {
+            "id": "r4",
+            "team": "red",
+            "x": 48,
+            "y": 91,
+            "label": "4"
+          },
+          {
+            "id": "r2",
+            "team": "red",
+            "x": 16,
+            "y": 85,
+            "label": "2"
+          },
+          {
+            "id": "r11",
+            "team": "red",
+            "x": 88,
+            "y": 79,
+            "label": "11"
+          },
+          {
+            "id": "r8",
+            "team": "red",
+            "x": 72,
+            "y": 76,
+            "label": "8"
+          },
+          {
+            "id": "r6",
+            "team": "red",
+            "x": 52,
+            "y": 81,
+            "label": "6"
+          },
+          {
+            "id": "r7",
+            "team": "red",
+            "x": 28,
+            "y": 80,
+            "label": "7"
+          },
+          {
+            "id": "r10",
+            "team": "red",
+            "x": 68,
+            "y": 70,
+            "label": "10"
+          },
+          {
+            "id": "r9",
+            "team": "red",
+            "x": 44,
+            "y": 60,
+            "label": "9"
+          }
+        ],
+        "ball": "b11",
+        "arrows": [
+          {
+            "from": "b11",
+            "to": [
+              20,
+              94
+            ],
+            "kind": "dribble"
+          },
+          {
+            "from": "b3",
+            "to": [
+              26,
+              86
+            ],
+            "kind": "run"
+          },
+          {
+            "from": "b9",
+            "to": [
+              42,
+              95
+            ],
+            "kind": "run"
+          }
+        ]
+      }
+    ]
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "以下為原創假設場景，球員只用號碼和位置稱呼，不對應任何真實球隊。藍隊在紅隊半場控球，右路擠了五個人，左路只有一名邊鋒貼著邊線站著，好像被隊友忘了。紅隊 4-4-2 退守，整條防線跟著球往右移。這一段要回答的問題是：藍隊為什麼故意讓一邊這麼擠、另一邊這麼空？"
+    },
+    {
+      "type": "h",
+      "text": "問題：一邊人多，是為了另一邊人少"
+    },
+    {
+      "type": "p",
+      "tag": "戰術推論",
+      "text": "防守方要守住球附近的空間，就得把人往球的那一側移。進攻方在右路放的人越多，紅隊往右移的人也越多；移到最後，紅隊離球最遠的那名邊後衛身邊，可能一個隊友都沒有。藍隊要的就是這一刻：把球轉到另一側，讓最會盤帶的邊鋒單獨面對一名後衛。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "Coaches' Voice 網站 2023 年 1 月 26 日的戰術說明，把這種做法稱為「以多打少，為了孤立」（overload to isolate）：一支球隊把額外的人投入球場一側，吸引更多防守者跟過去；另一側留一名球員，通常是邊鋒，站在寬處，準備在盡可能大的空間裡接轉移球。"
+    },
+    {
+      "type": "quote",
+      "text": "如果無法沿著人多的那一側推進，就快速轉移，讓邊鋒對一名防守者一對一。",
+      "original": "If the team cannot progress down the overloaded flank, they then switch play quickly to get their winger 1v1 against a defender.",
+      "cite": "Coaches' Voice〈Overloads: football tactics explained〉，2023 年 1 月 26 日；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "同一篇文章說，這種策略通常在球隊有一名特別會盤帶的邊鋒時使用，並以拜仁慕尼黑時期的里貝里（Franck Ribéry）和羅本（Arjen Robben）為例。"
+    },
+    {
+      "type": "h",
+      "text": "起始站位：右路五人，左路一人"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "藍隊由下往上進攻。8 號在右側肋部持球，2 號貼著右邊線，7 號在罰球區右角外，10 號和 9 號也往右靠。後面是 4、5 號兩名中衛和後腰 6 號；左後衛 3 號不壓上邊線，留在中衛左前方。左路最前面只有 11 號，腳踩著左邊線，站在和紅隊後衛線差不多高的地方。"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "紅隊兩條四人線都往右移。左後衛紅 3 號和左中場紅 11 號面對藍 2、7 號，紅 8 號貼近 8 號，紅 6、7 號往中路右側收。紅隊右後衛紅 2 號跟著兩名中衛移到罰球區左側，和 11 號之間隔著一大片空地。紅 9、10 號站在藍隊兩名中衛前方。"
+    },
+    {
+      "type": "h",
+      "text": "持球者的選項：8 號有三條路"
+    },
+    {
+      "type": "p",
+      "tag": "戰術推論",
+      "text": "8 號在右路的選項，各有條件："
+    },
+    {
+      "type": "list",
+      "items": [
+        "往前和 7、2 號短傳配合，打穿右路。條件是紅 3、11 號其中一人被拉開，或 2 號從 7 號外側套上時沒人跟。",
+        "傳給往右靠的 10 號或 9 號，在罰球區前沿找射門。條件是紅隊兩名中衛沒有跟上，中路還有縫隙。",
+        "回傳 6 號，由 6 號轉到左路。條件是回傳線沒被紅 9、10 號擋住，6 號接球時有時間抬頭。"
+      ]
+    },
+    {
+      "type": "p",
+      "tag": "戰術推論",
+      "text": "前兩條路是真的進攻，不是做樣子。右路的人若只是站著等轉移，紅隊不必派那麼多人過去，左路也就空不出來。"
+    },
+    {
+      "type": "h",
+      "text": "無球跑動：讓紅隊再往右移一步"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "頭圖第 1 步：10 號斜向右前方跑，9 號也往右側移，兩人都把紅隊的中衛和中場往右帶。11 號不動。他留在左邊線上，就是要讓紅 2 號左右為難：往外靠，中路兩名中衛之間的縫隙變大；往內收，自己身邊就空了。"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "3 號也不動。他沒有跟著壓到邊線上，是為了在轉移之後從 11 號內側往前插上，給 11 號一個傳球對象；另一方面，若右路丟球，他還在後面，可以幫兩名中衛守住紅 9、10 號。"
+    },
+    {
+      "type": "h",
+      "text": "對手的反應：右路圍住，回傳就要快"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "頭圖第 2 步：紅 8 號從前面、紅 10 號從背後夾住 8 號，紅 3、11 號看住 2、7 號，紅 6、7 號也再往右收一步。右路沒有空間了，8 號回傳給身後的 6 號。"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "第 3 步：紅 9 號回頭逼 6 號，但慢了一步。6 號不停球，一記長傳斜飛向左邊線。球在空中的這一兩秒，紅 2 號開始往外移，紅 7 號從中路往回跑，3 號從後面往前插。"
+    },
+    {
+      "type": "p",
+      "tag": "戰術推論",
+      "text": "這一步的關鍵是 6 號不停球。他每多碰一下，紅隊就多一點時間往左移，11 號身邊的空地就小一點。"
+    },
+    {
+      "type": "h",
+      "text": "下一步：一對一，內側還有人"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "第 4 步：11 號停下球，面前只有紅 2 號。紅 7 號還在回追的路上，紅 4 號離得更遠。11 號往內帶球，切向罰球區；9 號往球門前跑。紅 7 號若及時趕到、和紅 2 號包夾，從內側往前跑的 3 號就空了出來，11 號可以把球交給他。"
+    },
+    {
+      "type": "h",
+      "text": "真實案例：巴薩對波圖，空出來的是坎塞洛"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "當地時間 2023 年 11 月 28 日，巴塞隆納在歐冠小組賽主場 2 比 1 逆轉波圖。據 ESPN 比賽紀錄，波圖由邊鋒佩佩（Pepê，不是同場的中衛 Pepe）先進球，巴薩靠坎塞洛（João Cancelo）與菲利克斯（João Félix）的進球反超。據巴薩官網 11 月 29 日報導，左後衛坎塞洛一傳一射，被歐足聯選為全場最佳球員，8 次盤帶成功 6 次。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "歐足聯 11 月 29 日刊出的比賽分析指出，坎塞洛此前先發的三場小組賽都站在防線右側，這一場改踢左邊。分析舉了一個片段：中衛孔德（Jules Koundé）一記長傳轉移，找到左路的坎塞洛；分析也提到，波圖防守陣形收得很窄，巴薩靠長傳轉移繞過去。歐足聯比賽觀察員這樣描述坎塞洛接球後的習慣："
+    },
+    {
+      "type": "quote",
+      "text": "通常接到轉移球後，他會往內切，用右腳出球。",
+      "original": "Normally from a switch of play he would come in to play inside with his right foot…",
+      "cite": "歐足聯比賽觀察員，〈In the Zone: Barcelona 2-1 Porto performance analysis〉，2023 年 11 月 29 日；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "教練說法",
+      "text": "同一篇分析引述時任巴薩總教練哈維（Xavi Hernández）談中場休息時給球員的指示：對手出來逼搶時，要看逼搶的身後，不要回傳給門將伊尼亞基・佩尼亞（Iñaki Peña）。接著他說："
+    },
+    {
+      "type": "quote",
+      "text": "空出來的人是坎塞洛。我們知道必須打到對手身後，而有坎塞洛，我們在一對一上就有選擇，他踢了一場很好的比賽。",
+      "original": "The free man was Cancelo. We knew we had to get in behind and with Cancelo we had options in the one v one and he had a great game.",
+      "cite": "哈維，歐足聯〈In the Zone: Barcelona 2-1 Porto performance analysis〉引述，2023 年 11 月 29 日；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "歐足聯 12 月 1 日的第二篇分析把球場縱向分成五條通道。巴薩推進到前場的動作，有 41% 走拉菲尼亞（Raphinha）所在的最右側通道，坎塞洛所在的左路占 22%，中路通道只有 5%。文中附的影片片段裡，巴薩先試著從右路推進，再由德容（Frenkie de Jong）橫越球場傳給坎塞洛。坎塞洛的扳平球，也是先移到邊線通道接球，再往內切射門。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Estadi_Ol%C3%ADmpic_Llu%C3%ADs_Companys_-_Barcelona%2C_Spain_-_Jan_2007.jpg/1280px-Estadi_Ol%C3%ADmpic_Llu%C3%ADs_Companys_-_Barcelona%2C_Spain_-_Jan_2007.jpg",
+      "width": 1280,
+      "height": 646,
+      "alt": "從看台高處拍的空蕩體育場全景，綠色草皮被紅色田徑跑道環繞，四周是灰白色座椅，右上方是看台頂棚，天空有雲。",
+      "caption": "巴塞隆納蒙特惠奇山上的路易斯・孔帕尼斯奧林匹克體育場，2007 年 1 月拍攝，為四張照片接成的全景，不是 2023 年比賽時的現況。據 ESPN 比賽紀錄，巴薩與波圖 2023 年 11 月 28 日的歐冠小組賽在這座球場進行。",
+      "credit": "David Iliff（Diliff）／Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Estadi_Ol%C3%ADmpic_Llu%C3%ADs_Companys_-_Barcelona,_Spain_-_Jan_2007.jpg",
+      "made": "2007"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：這場比賽很接近「以多打少，為了孤立」的樣子，但歐足聯的分析沒有用這個詞，也沒有說巴薩是刻意在右路堆人來孤立坎塞洛。可以確定的是兩件事：巴薩的進攻大量走右路，而哈維在中場休息時把坎塞洛指為空出來的人。"
+    },
+    {
+      "type": "h",
+      "text": "什麼條件下有效"
+    },
+    {
+      "type": "p",
+      "tag": "戰術推論",
+      "text": "第一是孤立的那個人要贏得了一對一。11 號若過不了紅 2 號，轉移只是把球從擠的地方換到另一個地方等人。"
+    },
+    {
+      "type": "p",
+      "tag": "戰術推論",
+      "text": "第二是轉移要快。6 號一腳出球、球路平直，紅隊來不及移；6 號停一下、或傳一記高高的弧線球，紅 7 號就趕得回來。"
+    },
+    {
+      "type": "p",
+      "tag": "戰術推論",
+      "text": "第三是耐心。右路若一拿球就急著轉移，紅隊還沒移過去，左路也不會空。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "歐足聯技術觀察員 Tanya Oxtoby 分析巴黎聖日耳曼女足對 OH Leuven 的女子歐冠聯賽階段比賽（歐足聯 2025 年 12 月 12 日刊出）時，談到巴黎中場休息後的調整：更有耐心，多找機會轉移。她說："
+    },
+    {
+      "type": "quote",
+      "text": "讓翼衛或邊路球員處在一對一的局面，給了她們進攻的空間；如果機會不在，她們就把球回傳重組，把 OH Leuven 吸到一側，再快速轉移到另一側。",
+      "original": "Leaving their wing-backs or wide players in 1v1 situations gave them space to attack and if it wasn't on, they recycled to draw OH Leuven to one side before switching quickly to the opposite side.",
+      "cite": "Tanya Oxtoby，歐足聯〈Women's Champions League Performance Insights: Managing wing-back threats〉，2025 年 12 月 12 日；本文自譯"
+    },
+    {
+      "type": "h",
+      "text": "怎麼破解：撲出去，身後要有人"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "下圖回到頭圖第 3 步、6 號轉移出球的那一刻，是另一種結果，不是接在頭圖第 4 步之後。差別在紅 7 號一開始就沒有收進中路那麼深。球在空中時，紅 2 號往外衝，11 號第一腳觸球就被貼上，被逼往邊線；紅 7 號擋住 3 號往前的路，紅 4 號往左移，紅 6 號往後收補位。11 號只剩回傳，或硬往邊線帶。"
+    },
+    {
+      "type": "pitch",
+      "title": "防守方的回答：邊後衛撲出，身後有人補",
+      "view": "half",
+      "caption": "原創假設場景，和頭圖第 3 步同一刻的另一種結果，不是接在頭圖第 4 步之後發生。差別在紅 7 號一開始就沒有收進中路那麼深。方向：藍隊由下往上進攻。",
+      "steps": [
+        {
+          "label": "1. 同一記轉移，紅 7 號站得比較寬",
+          "note": "6 號的長傳飛向 11 號。這一次紅 7 號沒有收到中路，原本就站在左側肋部附近；紅 2 號趁球在空中時往外衝，3 號從後面往前插上。",
+          "players": [
+            {
+              "id": "b4",
+              "team": "blue",
+              "x": 40,
+              "y": 54,
+              "label": "4"
+            },
+            {
+              "id": "b5",
+              "team": "blue",
+              "x": 60,
+              "y": 54,
+              "label": "5"
+            },
+            {
+              "id": "b3",
+              "team": "blue",
+              "x": 20,
+              "y": 60,
+              "label": "3"
+            },
+            {
+              "id": "b6",
+              "team": "blue",
+              "x": 50,
+              "y": 64,
+              "label": "6"
+            },
+            {
+              "id": "b8",
+              "team": "blue",
+              "x": 72,
+              "y": 72,
+              "label": "8"
+            },
+            {
+              "id": "b2",
+              "team": "blue",
+              "x": 93,
+              "y": 80,
+              "label": "2"
+            },
+            {
+              "id": "b7",
+              "team": "blue",
+              "x": 82,
+              "y": 86,
+              "label": "7"
+            },
+            {
+              "id": "b10",
+              "team": "blue",
+              "x": 68,
+              "y": 84,
+              "label": "10"
+            },
+            {
+              "id": "b9",
+              "team": "blue",
+              "x": 64,
+              "y": 90,
+              "label": "9"
+            },
+            {
+              "id": "b11",
+              "team": "blue",
+              "x": 6,
+              "y": 86,
+              "label": "11"
+            },
+            {
+              "id": "r1",
+              "team": "red",
+              "x": 50,
+              "y": 98,
+              "label": "1"
+            },
+            {
+              "id": "r3",
+              "team": "red",
+              "x": 86,
+              "y": 88,
+              "label": "3"
+            },
+            {
+              "id": "r5",
+              "team": "red",
+              "x": 70,
+              "y": 91,
+              "label": "5"
+            },
+            {
+              "id": "r4",
+              "team": "red",
+              "x": 56,
+              "y": 91,
+              "label": "4"
+            },
+            {
+              "id": "r2",
+              "team": "red",
+              "x": 40,
+              "y": 89,
+              "label": "2"
+            },
+            {
+              "id": "r11",
+              "team": "red",
+              "x": 88,
+              "y": 79,
+              "label": "11"
+            },
+            {
+              "id": "r8",
+              "team": "red",
+              "x": 72,
+              "y": 76,
+              "label": "8"
+            },
+            {
+              "id": "r6",
+              "team": "red",
+              "x": 62,
+              "y": 81,
+              "label": "6"
+            },
+            {
+              "id": "r7",
+              "team": "red",
+              "x": 30,
+              "y": 78,
+              "label": "7"
+            },
+            {
+              "id": "r10",
+              "team": "red",
+              "x": 68,
+              "y": 70,
+              "label": "10"
+            },
+            {
+              "id": "r9",
+              "team": "red",
+              "x": 44,
+              "y": 60,
+              "label": "9"
+            }
+          ],
+          "ball": "b6",
+          "arrows": [
+            {
+              "from": "b6",
+              "to": [
+                8,
+                84
+              ],
+              "kind": "pass"
+            },
+            {
+              "from": "b3",
+              "to": [
+                20,
+                74
+              ],
+              "kind": "run"
+            },
+            {
+              "from": "r2",
+              "to": [
+                12,
+                86
+              ],
+              "kind": "run"
+            },
+            {
+              "from": "r7",
+              "to": [
+                20,
+                78
+              ],
+              "kind": "run"
+            }
+          ]
+        },
+        {
+          "label": "2. 第一腳觸球就貼上，往外逼",
+          "note": "11 號停球時，紅 2 號已經到了，站在內側把他往邊線逼。紅 7 號擋住 3 號往前的路線；紅 4 號往左移，紅 6 號往後收，補紅 4 號移開後的空檔。11 號只剩回傳，或硬往邊線帶。",
+          "players": [
+            {
+              "id": "b4",
+              "team": "blue",
+              "x": 40,
+              "y": 54,
+              "label": "4"
+            },
+            {
+              "id": "b5",
+              "team": "blue",
+              "x": 60,
+              "y": 54,
+              "label": "5"
+            },
+            {
+              "id": "b3",
+              "team": "blue",
+              "x": 22,
+              "y": 72,
+              "label": "3"
+            },
+            {
+              "id": "b6",
+              "team": "blue",
+              "x": 50,
+              "y": 64,
+              "label": "6"
+            },
+            {
+              "id": "b8",
+              "team": "blue",
+              "x": 72,
+              "y": 72,
+              "label": "8"
+            },
+            {
+              "id": "b2",
+              "team": "blue",
+              "x": 93,
+              "y": 80,
+              "label": "2"
+            },
+            {
+              "id": "b7",
+              "team": "blue",
+              "x": 82,
+              "y": 86,
+              "label": "7"
+            },
+            {
+              "id": "b10",
+              "team": "blue",
+              "x": 68,
+              "y": 84,
+              "label": "10"
+            },
+            {
+              "id": "b9",
+              "team": "blue",
+              "x": 64,
+              "y": 90,
+              "label": "9"
+            },
+            {
+              "id": "b11",
+              "team": "blue",
+              "x": 8,
+              "y": 84,
+              "label": "11"
+            },
+            {
+              "id": "r1",
+              "team": "red",
+              "x": 50,
+              "y": 98,
+              "label": "1"
+            },
+            {
+              "id": "r3",
+              "team": "red",
+              "x": 86,
+              "y": 88,
+              "label": "3"
+            },
+            {
+              "id": "r5",
+              "team": "red",
+              "x": 70,
+              "y": 91,
+              "label": "5"
+            },
+            {
+              "id": "r4",
+              "team": "red",
+              "x": 36,
+              "y": 90,
+              "label": "4"
+            },
+            {
+              "id": "r2",
+              "team": "red",
+              "x": 12,
+              "y": 86,
+              "label": "2"
+            },
+            {
+              "id": "r11",
+              "team": "red",
+              "x": 88,
+              "y": 79,
+              "label": "11"
+            },
+            {
+              "id": "r8",
+              "team": "red",
+              "x": 72,
+              "y": 76,
+              "label": "8"
+            },
+            {
+              "id": "r6",
+              "team": "red",
+              "x": 50,
+              "y": 86,
+              "label": "6"
+            },
+            {
+              "id": "r7",
+              "team": "red",
+              "x": 20,
+              "y": 78,
+              "label": "7"
+            },
+            {
+              "id": "r10",
+              "team": "red",
+              "x": 68,
+              "y": 70,
+              "label": "10"
+            },
+            {
+              "id": "r9",
+              "team": "red",
+              "x": 44,
+              "y": 60,
+              "label": "9"
+            }
+          ],
+          "ball": "b11",
+          "arrows": [
+            {
+              "from": "r2",
+              "to": [
+                10,
+                84
+              ],
+              "kind": "press"
+            },
+            {
+              "from": "r7",
+              "to": [
+                22,
+                75
+              ],
+              "kind": "press"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "同一篇女子歐冠分析裡，另一位技術觀察員 Lydia Bedford 說明邊後衛面對的取捨："
+    },
+    {
+      "type": "quote",
+      "text": "這些是關鍵的決策時刻，邊後衛要迅速判斷場上的局面，決定要不要撲出去，其他所有人都要準備好處理他身後留下的空間。",
+      "original": "These are the key decision-making moments, where full-backs need to quickly assess the moment in play to decide whether they commit to jump, and everyone else needs to be ready to deal with the space left behind them.",
+      "cite": "Lydia Bedford，歐足聯〈Women's Champions League Performance Insights: Managing wing-back threats〉，2025 年 12 月 12 日；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "Bedford 接著談另一種情境：對方翼衛站得很高、像邊鋒一樣時，邊後衛在位置上比較容易看住他，但這也帶來另一個危險："
+    },
+    {
+      "type": "quote",
+      "text": "對手可以在邊路利用二打一，所以中場和球側的邊路球員要做好補位。",
+      "original": "The opposition can exploit 2v1s in wide areas, so it is important to have good cover from your midfielders and ball-side wide player.",
+      "cite": "Lydia Bedford，同前；本文自譯"
+    },
+    {
+      "type": "table",
+      "title": "轉移之後，防守方三種回應",
+      "head": [
+        "防守方做法",
+        "條件",
+        "留下的空隙"
+      ],
+      "rows": [
+        [
+          "邊後衛在球飛行時撲出，第一腳觸球就貼上",
+          "同側中場站得夠寬，擋得住內側插上的人；中衛橫移補邊後衛身後",
+          "邊後衛撲空，或中衛橫移太慢，邊後衛身後全空"
+        ],
+        [
+          "邊後衛不撲，先退、等中場回來包夾",
+          "轉移傳球慢、弧線高，爭取得到時間",
+          "持球者有時間抬頭，內側插上的人跑得到位"
+        ],
+        [
+          "不讓球轉出去：擋住回傳線、把球鎖在一側",
+          "前鋒肯回頭擋住後腰，中場整體夠快",
+          "鎖不住時，整隊都在錯的那一側"
+        ]
+      ],
+      "caption": "本文依原創假設場景整理的戰術推論，不是統計。"
+    },
+    {
+      "type": "p",
+      "tag": "戰術推論",
+      "text": "第三種做法最根本：讓球轉不出去。紅 9 號若在 8 號回傳前就站到 8 號和 6 號之間，藍隊只能在擠滿人的右路硬打，或回傳給中衛，從更深的地方繞，給紅隊時間把陣形移回來。"
+    },
+    {
+      "type": "h",
+      "text": "失敗的風險：右路丟球，五個人都在錯的一邊"
+    },
+    {
+      "type": "p",
+      "tag": "戰術推論",
+      "text": "這套打法的代價寫在起始站位裡。藍隊把 2、7、8、9、10 號五人放在右路，若 8 號在右路被斷，紅隊斷球後只要一記長傳打向另一側，接球的人面前就是一大片空地。左路的 11 號離得太遠，回不來；能擋的是 4、5 號和留在後面的 3、6 號。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "Coaches' Voice 在同一篇說明裡提醒：要建立人數優勢，球隊得控球夠久，讓球員有時間跑到新的位置；任何一處以多打少，按定義就代表對手在別處有人沒人盯，一旦丟球，對手可以利用攻守轉換時留下的空間。"
+    },
+    {
+      "type": "p",
+      "tag": "戰術推論",
+      "text": "第二個風險是 11 號本身。他一整段時間沒碰到球，站在邊線上等，接到轉移球那一刻要馬上能面對防守者起速。他若停球停大了，紅 2 號就有時間貼上；紅 7 號回追趕到，藍隊花了好幾腳傳球擠出來的那一點空間，就被兩個人收回去了。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Overloads: football tactics explained",
+      "publisher": "Coaches' Voice",
+      "date": "2023-01-26",
+      "url": "https://learning.coachesvoice.com/cv/overloads-football-tactics-explained-guardiola-liverpool-messi/",
+      "note": "overload to isolate 的定義、里貝里與羅本的例子、以多打少的風險"
+    },
+    {
+      "title": "In the Zone: Barcelona 2-1 Porto performance analysis",
+      "publisher": "UEFA",
+      "date": "2023-11-29",
+      "url": "https://www.uefa.com/uefachampionsleague/news/0287-19934ed109d6-2e4d1cf453db-1000--in-the-zone-barcelona-2-1-porto-performance-analysis/",
+      "note": "孔德長傳轉移、波圖窄陣形、坎塞洛位置；比賽觀察員與哈維引述"
+    },
+    {
+      "title": "Champions League performance insights: Different approaches from Barcelona and Porto",
+      "publisher": "UEFA",
+      "date": "2023-12-01",
+      "url": "https://www.uefa.com/uefachampionsleague/news/0288-19976b07e670-0989c0adb7d5-1000--champions-league-performance-insights-different-approaches/",
+      "note": "五條通道的推進比例（41%、22%、5%）、德容轉移給坎塞洛的片段、坎塞洛扳平球"
+    },
+    {
+      "title": "Magical night for João Cancelo against Porto",
+      "publisher": "FC Barcelona 官網",
+      "date": "2023-11-29",
+      "url": "https://www.fcbarcelona.com/en/news/3800789/magical-night-for-joao-cancelo-against-porto",
+      "note": "一傳一射、全場最佳、8 次盤帶成功 6 次"
+    },
+    {
+      "title": "Barcelona 2-1 FC Porto (Nov 28, 2023) Game Analysis",
+      "publisher": "ESPN",
+      "date": "2023-11-28",
+      "url": "https://www.espn.com/soccer/report/_/gameId/687607",
+      "note": "比分、進球者、球場（比賽紀錄）"
+    },
+    {
+      "title": "Women's Champions League Performance Insights: Managing wing-back threats",
+      "publisher": "UEFA",
+      "date": "2025-12-12",
+      "url": "https://www.uefa.com/womenschampionsleague/news/02a0-1f6c81206382-0b256e5c13fc-1000--women-s-champions-league-performance-insights-managing-wi/",
+      "note": "Tanya Oxtoby 談轉移與耐心；Lydia Bedford 談邊後衛撲出與補位"
+    },
+    {
+      "title": "File:Estadi Olímpic Lluís Companys - Barcelona, Spain - Jan 2007.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2007-01-04",
+      "url": "https://commons.wikimedia.org/wiki/File:Estadi_Ol%C3%ADmpic_Llu%C3%ADs_Companys_-_Barcelona,_Spain_-_Jan_2007.jpg",
+      "note": "正文圖片"
+    }
+  ]
+}
