@@ -1,0 +1,392 @@
+{
+  "column": "philosophy",
+  "date": "reserve",
+  "reserve_written": "2026-10-19",
+  "title": "摸了十年的方糖，第一眼認得出來嗎",
+  "dek": "天生全盲的人重見光明，能不能不用手就認出方與圓？從莫利紐茲 1688 年的信到 2011 年的實驗，追問看與摸是否共用同一個「方」。",
+  "brief": "1688 年起，莫利紐茲寫信問洛克：靠觸覺分辨立方體與球的盲人，重見光明後能否不碰就認出？他和洛克答不能，萊布尼茲說只要先告知是立方體和球就能。2011 年印度五名重見光明的孩子術後 48 小時內受測，觸覺到視覺的配對接近亂猜，其中三人幾天後再測成功；本文的讀法是，等待中的新經驗與尚未成熟的視覺，讓兩種結果都難下定論。",
+  "topic_key": "philosophy:molyneux-problem",
+  "updated_at": "2026-10-19T15:06:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "portrait",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/William_Molyneux_by_Sir_Godfrey_Kneller%2C_Bt.jpg/1280px-William_Molyneux_by_Sir_Godfrey_Kneller%2C_Bt.jpg",
+    "width": 1280,
+    "height": 1581,
+    "alt": "黑白翻拍的橢圓形油畫半身肖像：一名男子身體朝向畫面右側、臉轉向觀者，戴著及肩的濃密長捲假髮，頸間繫著白色領巾，身上披著寬大的深色外衣，背景全暗。畫面左側有三行題字：「Wm. Molyneux .F.R.S」「Member For the University」「1692」。",
+    "caption": "《威廉・莫利紐茲》（William Molyneux），1696 年，油彩、畫布，75.6 × 62.5 公分，倫敦國家肖像館（National Portrait Gallery）藏（NPG 5386）；Commons 上的影像是黑白翻拍。左側題字稱他為皇家學會會士（F.R.S）、大學選區議員，1692 年正是他當選都柏林大學選區議員那年。Commons 標為內勒（Godfrey Kneller）所作，Wikidata 列為佚名畫家，作者歸屬未定。",
+    "credit": "Godfrey Kneller（依 Commons 標示，歸屬未定）；National Portrait Gallery, London",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:William_Molyneux_by_Sir_Godfrey_Kneller,_Bt.jpg",
+    "made": "1696"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "林先生天生全盲，今年 35 歲，在一家咖啡館的吧台後面做了十年糖。他做兩種：方糖，和同樣大小、同樣雪白的圓糖球。用指尖一碰，他就知道手裡是哪一種：方糖有平面、有稜角，糖球摸起來處處一樣。後來，一場本文假設的完美手術讓他的眼睛和視覺系統完全正常。拆紗布那天他回到店裡，同事在白瓷碟上並排放了一顆方糖、一顆糖球，請他只用眼睛看：哪一顆是方糖？"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "他能做的只有三種回答：指出來；老實說認不出；或請同事先給他一點時間，或先告訴他「碟上就是你摸過的那兩種」。本文假設：兩顆糖顏色、質地、大小相同，沒有顏色或氣味線索；他在手術前從沒有過視覺經驗；他對方與圓的觸覺知識完全可靠。"
+    },
+    {
+      "type": "p",
+      "text": "同事問的是一顆糖，其實問的是一個 300 多年的老問題：人用手學到的「方」，和用眼睛看到的「方」，是不是同一個觀念？如果是，他應該認得出來；如果不是，兩種感官之間的對應就得靠經驗慢慢學。"
+    },
+    {
+      "type": "h",
+      "text": "出處：一封從都柏林寄給洛克的信"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這個問題出自愛爾蘭科學家莫利紐茲（William Molyneux，1656–1698）。依史丹佛哲學百科（*Stanford Encyclopedia of Philosophy*，以下簡稱 SEP）〈莫利紐茲問題〉，他讀了洛克（John Locke）《人類理解論》（*An Essay Concerning Humane Understanding*）1688 年的法文摘要，同年 7 月 7 日從都柏林寫信給洛克，第一次提出這個問題；他的妻子在婚後第一年失明。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1688 年的版本還多問一件事：他能不能在伸手之前，光靠眼睛看出那兩個東西是在手邊，還是在 20 或 1,000 英尺外。SEP 說，洛克始終沒有回這封信，原因不明。幾年通信之後，莫利紐茲在 1693 年 3 月 2 日的信裡寄上簡化版，這次洛克很熱心，回信說這個問題值得公諸於世。1694 年，《人類理解論》第二版第二卷第九章第 8 節幾乎逐字收進了這段話："
+    },
+    {
+      "type": "quote",
+      "original": "Suppose a Man born blind, and now adult, and taught by his touch to distinguish between a Cube, and a Sphere of the same metal, and nighly of the same bigness [...] Suppose then the Cube and Sphere placed on a Table, and the Blind Man to be made to see. Quaere, Whether by his sight, before he touch'd them, he could now distinguish, and tell, which is the Globe, which the Cube.",
+      "text": "假設一個生來失明、如今已成年的人，靠觸覺學會分辨同一種金屬做成、大小相近的立方體與球體 [……] 再假設把立方體和球體放在桌上，讓這位盲人能看見。試問：在他觸摸之前，能不能光憑視覺分辨並說出哪個是球、哪個是立方體？",
+      "cite": "洛克《人類理解論》第二版，1694，第二卷第九章第 8 節，頁 67（本文自譯；長 s 改為 s）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "莫利紐茲自己的答案是「不能」。理由寫在同一頁：他已經有了球和立方體怎樣作用於觸覺的經驗，卻還沒有「觸覺上如此這般的東西，視覺上也必定如此這般」的經驗，也不知道立方體那個壓得手掌受力不均的凸角，在眼睛裡看起來會是什麼樣子。"
+    },
+    {
+      "type": "quote",
+      "original": "Not, For though he has obtain'd the experience of, how a Globe, how a Cube affects his touch; yet he has not yet attained the Experience, that what affects his touch so or so, must affect his sight so or so",
+      "text": "不能。因為他雖然已經得到球、立方體如何作用於觸覺的經驗，卻還沒有得到這樣的經驗：觸覺上如此這般的，視覺上也必定如此這般。",
+      "cite": "莫利紐茲之答，引自洛克《人類理解論》第二版，1694，頁 67（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "洛克表示同意，並加上一個限定：盲人「在第一眼」（at first sight）不能確定地說出哪個是球、哪個是立方體，雖然他用手摸就能準確叫出名字。第二版頁 67 到 68 還有一個細節：洛克稱莫利紐茲為朋友，又說自己從未有幸見過他。問題放在「感覺常被判斷改變」這一節；洛克說，他把它留給讀者，是要讀者想一想，在自以為完全不靠經驗的地方，自己欠了經驗多少。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/An_essay_concerning_humane_understanding%2C_..._1694_%28IA_bim_early-english-books-1641-1700_an-essay-concerning-huma_locke-john_1694%29.pdf/page113-960px-An_essay_concerning_humane_understanding%2C_..._1694_%28IA_bim_early-english-books-1641-1700_an-essay-concerning-huma_locke-john_1694%29.pdf.jpg",
+      "width": 960,
+      "height": 1530,
+      "alt": "黑白掃描的書頁，頁首印著「Chap. IX.」「Perception.」與頁碼「67」。整頁是以長 s 字母排印的英文正文，中段以下有一段斜體字，右側頁邊有幾行小字旁注。頁尾印著「K 2」與「call」。",
+      "caption": "洛克《人類理解論》1694 年倫敦第二版，第二卷第九章〈知覺〉，頁 67。從第 8 節中段起，斜體字就是莫利紐茲的問題與他的回答；右側旁注寫著「Ideas of Sensation often changed by the Judgment」（感覺觀念常被判斷改變）。影像為微縮膠片掃描本，出自 Internet Archive 的早期英文書籍典藏。",
+      "credit": "John Locke；Internet Archive（bim_early-english-books-1641-1700）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:An_essay_concerning_humane_understanding,_..._1694_(IA_bim_early-english-books-1641-1700_an-essay-concerning-huma_locke-john_1694).pdf",
+      "made": "1694"
+    },
+    {
+      "type": "facts",
+      "title": "本文情境與原典的差異",
+      "items": [
+        [
+          "原典",
+          "莫利紐茲 1688 年 7 月 7 日致洛克信（未獲回覆）；1693 年 3 月 2 日致洛克信，收入洛克《人類理解論》第二版（1694），第二卷第九章第 8 節"
+        ],
+        [
+          "原典情境",
+          "生來失明的成年人，靠觸覺學會分辨同一種金屬、大小相近的立方體與球體；兩者放在桌上，讓他能看見，問他觸摸前能否分辨"
+        ],
+        [
+          "原典用途",
+          "洛克用來說明成年人的感覺常被判斷悄悄改變，提醒讀者自己欠了經驗多少"
+        ],
+        [
+          "本文改了哪裡",
+          "林先生、咖啡館、方糖與糖球、「完美手術」與三種回答都是本文虛構；金屬換成同色的糖，用意同原典的「同一種金屬」：排除材質與顏色線索"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "立場一：不能，看與摸是兩套觀念"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，「不能」一方最強的理由在莫利紐茲那句話的結構：林先生學到的，是一組觸覺之間的規律，平面、稜角、手掌受力不均。眼睛給他的是另一類材料：光、顏色、明暗。兩類材料之間的對應，就像一個字的寫法和讀音，沒有人天生知道，只能靠兩者一再同時出現而學會。這正是經驗論的核心主張。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "柏克萊（George Berkeley）把這個答案推得更徹底。他在 1709 年的《視覺新論》（*An Essay Towards a New Theory of Vision*）第 132 節全文引用莫利紐茲問題，第 133 節接著推論：如果觸覺感到的正方形和視覺看到的正方形是同一類東西，盲人只要認出「正方形的面」這個不會出錯的記號，就能一眼分辨立方體。所以兩者只能選一個："
+    },
+    {
+      "type": "quote",
+      "original": "We must therefore allow either that visible extension and figures are specifically distinct from tangible extension and figures, or else that the solution of this problem given by those two thoughtful and ingenious men is wrong.",
+      "text": "因此我們必須承認：要麼看得見的廣延與形狀，和摸得到的廣延與形狀根本是不同種類；要麼那兩位深思而機敏的人給這個問題的解答是錯的。",
+      "cite": "柏克萊《視覺新論》，1709，第 133 節（Project Gutenberg 本，本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "柏克萊選前者。依 SEP 的整理，他主張視覺觀念與觸覺觀念之間毫無相似之處，比莫利紐茲與洛克走得更遠。他在第 135 節再補一層：立方體、球、桌子這些字，盲人只聽人用在摸得到的東西上，從沒用在完全摸不到的東西上，所以第一眼不會拿這些名字去叫他看見的東西。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "他也得面對一個難題：明眼人學幾何，看的是紙上的圖。柏克萊在第 149 節以下自己處理，問兩種廣延哪一種才是幾何的對象；第 151 節的結論是，看得見的廣延與形狀不是幾何的對象，第 152 節說，看得見的圖形在幾何裡的用處和文字一樣，只是代表摸得到的形狀。"
+    },
+    {
+      "type": "h",
+      "text": "立場二：能，幾何是兩種感官共用的"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "SEP 列出幾位答「能」的人：辛格（Synge，1693）、李（Lee，1702）、萊布尼茲（Gottfried Wilhelm Leibniz，1704）、哈奇森（Hutcheson，1727），他們認為視覺與觸覺之間的相似可以推理得出，或本來就天生相連。萊布尼茲的回答寫在對話體的《人類理智新論》（*Nouveaux essais sur l'entendement humain*）第二卷第九章，此書 1765 年才出版。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "依班尼特（Jonathan Bennett）的英譯本，書中代表萊布尼茲的德奧斐勒（Theophilus）先說，他想多想一陣子；被催著馬上回答時，他說：如果盲人知道眼前兩個形狀就是立方體和球，他就能不碰它們而說出哪個是哪個。後來他再強調，他的回答附了條件：盲人已被告知面前是一個立方體、一個球，只需判斷哪個是哪個。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "他的理由是幾何。球面本身處處一樣、沒有角，立方體則有 8 個與其他點不同的點；盲人摸得出這 8 個點，看見時也能憑理性原則找出來。他還舉了一個反證：要是不能這樣認形狀，盲人就不可能靠觸覺學會幾何的基本原理。他也把「當場」排除在外：他說的不是剛能看見的人那一刻實際會怎樣，那時人可能被陌生的景象弄得眼花撩亂，或還不習慣推理。SEP 的解讀是，萊布尼茲不接受洛克「第一眼」的限定，主張應該讓視力有時間完全恢復。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "放回咖啡館，兩方給同事的指示不同。莫利紐茲與洛克會說：不必提示，也不用等，他認不出來，因為那份對應他還沒學過。萊布尼茲會說：先告訴他碟上是方糖和糖球，不計他剛睜眼那一刻的慌亂，他就能從有沒有角推出答案。兩方爭的是知識裡有沒有一部分不必從經驗搬進來。"
+    },
+    {
+      "type": "table",
+      "title": "各家怎麼回答林先生的同事",
+      "head": [
+        "看法",
+        "代表",
+        "答案",
+        "最強理由",
+        "主要難題"
+      ],
+      "rows": [
+        [
+          "經驗論的「不能」",
+          "莫利紐茲、洛克（1694）",
+          "第一眼不能確定",
+          "觸覺與視覺之間的對應要靠經驗學會",
+          "依 SEP，不少學者認為洛克其他主張（形狀是多種感官共有的性質）反而較接近「能」"
+        ],
+        [
+          "徹底的「不能」",
+          "柏克萊（1709）",
+          "不能",
+          "看的形狀和摸的形狀是不同種類，連名字都對不上",
+          "必須主張幾何的對象是摸得到的廣延，紙上的圖只是記號（第 149–152 節）"
+        ],
+        [
+          "理性論的「能」",
+          "萊布尼茲（1704 年寫成）",
+          "先告知是立方體和球，就能",
+          "球面處處一樣，立方體有 8 個特殊點，可以推理認出",
+          "多了告知的條件，也不計當場的慌亂，問的已不完全是洛克的「第一眼」"
+        ],
+        [
+          "其他答「能」者",
+          "辛格、李、哈奇森",
+          "能",
+          "依 SEP：兩種感官的相似可以推理得出，或天生相連",
+          "本文未讀原著，依 SEP 轉述"
+        ],
+        [
+          "實驗的「先不能，很快能」",
+          "Held 等（2011）",
+          "剛拆紗布時接近亂猜，幾天後明顯進步",
+          "五名重見光明的孩子，觸覺到視覺的配對起初失敗",
+          "失敗可能出在視覺本身尚未成熟；之後的成功可能已摻入新經驗"
+        ]
+      ],
+      "caption": "本文整理，依洛克 1694、柏克萊 1709、萊布尼茲班尼特英譯本與 SEP〈莫利紐茲問題〉；「答案」一欄為各家對原典問題的回答，套用到咖啡館的情境是本文推論"
+    },
+    {
+      "type": "h",
+      "text": "實驗：從 1728 年的《哲學會刊》到印度的五個孩子"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "依 SEP，英國外科醫師切塞爾登（William Cheselden，1688–1752）最先發表先天失明者白內障手術後「新得視覺」的實例：1728 年他在皇家學會《哲學會刊》（*Philosophical Transactions*）報告，一位生來失明、或很早失明而不記得曾經看見的少年，在 13 到 14 歲間接受白內障「撥障術」（couching）。依 SEP 轉引，他剛能看見時完全不會判斷距離，以為一切東西都碰著他的眼睛，就像他摸到的東西碰著皮膚一樣。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "柏克萊把這份報告當成「不能」的證據。可是 SEP 也記錄，伏爾泰（Voltaire，1738）、狄德羅（Diderot，1749）、孔狄亞克（Condillac，1754）、里德（Reid，1764）等人認為結果模稜兩可：剛動完手術的人需要時間恢復，或需要觸覺經驗、幾何知識才認得出形狀。實驗沒有結束爭論。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "19 世紀也有醫師拿球與立方體測試手術後的病人，但 SEP 說，各案術前術後的條件差異太大，難以比較。如今討論最多的實驗之一在 2011 年發表。依《自然神經科學》（*Nature Neuroscience*）的論文摘要與麻省理工學院（MIT）新聞稿，霍爾德（Richard Held）、辛哈（Pawan Sinha）等人透過辛哈 2004 年在印度創辦的普拉卡什計畫（Project Prakash）找到五名 8 到 17 歲的受試者，都是生來失明，四人是先天白內障，一人是角膜混濁。都在術後 48 小時內受測。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "測驗分三種。先看一個用塑膠零件拼成的陌生物體，再從兩個物體裡認出它，正確率超過 90%；只用手摸再用手認，表現也好。最後一種是先摸、再只用眼睛認，結果和亂猜差不多。新聞稿說，其中一例一週後再測就大幅進步，兩次之間沒有任何訓練，第二次用的也是新的物體。SEP 轉述，五人中有三人在幾天的日常生活經驗後重測成功。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "論文摘要的結論是：沒有立即的轉移，但這種跨感官的對應發展得很快。SEP 說，若採用洛克「第一眼」的版本，這項實驗支持「不能」。常見的批評則是，這些受試者的視覺經驗本身是否夠穩固。哲學家施文克勒（John Schwenkler）在《心理學前沿》（*Frontiers in Psychology*）的評論中說，剛得到視覺的病人建構複雜物體立體表徵的能力有限，失敗可能只是一種純粹的視覺缺陷。"
+    },
+    {
+      "type": "svg",
+      "title": "莫利紐茲問題的分岔",
+      "svg": "<svg viewBox=\"0 0 400 520\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"12\">\n<rect class=\"soft\" x=\"40\" y=\"10\" width=\"320\" height=\"56\" rx=\"4\"/>\n<text x=\"56\" y=\"32\" class=\"gold\" font-size=\"11\">手術前，靠觸覺學會</text>\n<text x=\"56\" y=\"52\" class=\"ink\">方塊有平面與 8 個角，球面處處一樣</text>\n<line x1=\"200\" y1=\"66\" x2=\"200\" y2=\"90\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<rect class=\"soft\" x=\"40\" y=\"90\" width=\"320\" height=\"56\" rx=\"4\"/>\n<text x=\"56\" y=\"112\" class=\"gold\" font-size=\"11\">手術後，第一次只用眼睛看</text>\n<text x=\"56\" y=\"132\" class=\"ink\">碟上兩個同色、同大小的物體</text>\n<line x1=\"200\" y1=\"146\" x2=\"200\" y2=\"170\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<rect class=\"paper\" x=\"30\" y=\"170\" width=\"340\" height=\"56\" rx=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<text x=\"46\" y=\"192\" class=\"accent\">關鍵問題：看見的形狀與摸到的形狀，</text>\n<text x=\"46\" y=\"212\" class=\"accent\">是不是同一種觀念？</text>\n<line x1=\"120\" y1=\"226\" x2=\"100\" y2=\"256\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<line x1=\"280\" y1=\"226\" x2=\"300\" y2=\"256\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<rect class=\"soft\" x=\"10\" y=\"256\" width=\"182\" height=\"120\" rx=\"4\"/>\n<text x=\"22\" y=\"278\" class=\"gold\" font-size=\"11\">是（萊布尼茲）</text>\n<text x=\"22\" y=\"300\" class=\"ink\">先告訴他「一個方、</text>\n<text x=\"22\" y=\"318\" class=\"ink\">一個圓」，他可以從</text>\n<text x=\"22\" y=\"336\" class=\"ink\">有沒有角推出來</text>\n<text x=\"22\" y=\"362\" class=\"accent\">答：能</text>\n<rect class=\"soft\" x=\"208\" y=\"256\" width=\"182\" height=\"120\" rx=\"4\"/>\n<text x=\"220\" y=\"278\" class=\"gold\" font-size=\"11\">不是（莫利紐茲、洛克；</text>\n<text x=\"220\" y=\"294\" class=\"gold\" font-size=\"11\">柏克萊更徹底）</text>\n<text x=\"220\" y=\"316\" class=\"ink\">兩種觀念之間的對應</text>\n<text x=\"220\" y=\"334\" class=\"ink\">只能從經驗學來</text>\n<text x=\"220\" y=\"362\" class=\"accent\">答：不能</text>\n<line x1=\"101\" y1=\"376\" x2=\"101\" y2=\"404\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<line x1=\"299\" y1=\"376\" x2=\"299\" y2=\"404\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<rect class=\"paper\" x=\"10\" y=\"404\" width=\"380\" height=\"106\" rx=\"4\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"22\" y=\"426\" class=\"gold\" font-size=\"11\">實驗卡住的地方</text>\n<text x=\"22\" y=\"448\" class=\"ink\">剛拆紗布就測：失敗可能只是眼睛還沒學會看</text>\n<text x=\"22\" y=\"470\" class=\"ink\">等幾天再測：這幾天他又摸又看，已不算</text>\n<text x=\"22\" y=\"488\" class=\"ink\">「沒有經驗」的受試者</text>\n<text x=\"22\" y=\"504\" class=\"muted\" font-size=\"10\">本文整理，依 SEP〈莫利紐茲問題〉第 2、4 節</text>\n</svg>",
+      "caption": "原創論證圖：問題的關鍵在看與摸是否共用同一種形狀觀念；兩條路都碰上同一個實驗難題。本文整理，依 SEP〈莫利紐茲問題〉、萊布尼茲班尼特英譯本與柏克萊《視覺新論》第 133 節"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（一）：先等三天，再告訴他碟上是什麼"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "這次只改時間與提示：同事不在拆紗布當天問，而是三天後；問之前先說「碟上就是你做了十年的方糖和糖球」。這三天他照常上班，手和眼睛一起忙。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "照萊布尼茲的條件，這樣考較公平：他已被告知選項，也不在拆紗布那一刻的慌亂裡。但萊布尼茲只要求先告知、不計當場的眼花撩亂，沒說要等幾天；等三天是本文加的條件，而這三天他手眼並用，觸覺與視覺同時出現的經驗已經摻了進來。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "SEP 指出同樣的兩難：要測多久以後才算數，本身沒有定論（萊文〔J. Levin〕2008）；而正常的視覺形狀辨認，通常要靠主動的身體經驗、包括觸覺來訓練，觸覺就有機會在學習途中混進來，沒有任何對照能保證受試者在經驗與推理上仍是新手。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "所以三天後指對，可能是萊布尼茲說的推理，也可能是他這三天拿方糖時，手和眼睛早已一起學會了那份對應，正是莫利紐茲說他缺的經驗。2011 年那幾個孩子再測時明顯進步，兩種讀法都說得通：MIT 新聞稿的解讀是，大腦能很快學會；也可以說，學得再快仍是學。原典問的是「第一眼」，萊布尼茲的條件把問題換成了「定下神來的第一眼」，兩個版本的答案未必相同。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件（二）：換成在黑暗中孵出的小雞"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "這次只改受試者：不是成年的林先生，而是一隻剛孵出來、從沒見過光的小雞。牠在黑暗裡只摸過一種東西，表面光滑或表面凹凸；第一次見到光時，面前同時擺著兩種東西。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這不完全是假設。依《生物學通訊》（*Biology Letters*）2024 年刊出的論文摘要，維薩切（E. Versace）等人把小雞孵在黑暗中，讓牠們接觸光滑或凹凸的觸覺刺激 24 小時，隨即在牠們第一次見光時做視覺辨認測驗。第一眼，摸過光滑刺激的小雞走向光滑刺激的比例，顯著高於摸過凹凸刺激的一組。作者據此認為，跨感官辨認不需要事先的多感官經驗；至少在這種一出生就能行動的物種，超感官（supra-modal）腦區似乎一出生就已運作。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "SEP 把這類結果和新生嬰兒的研究並列：視覺毫無經驗、卻已準備好看見的受試者，結果和 Held 等人手術後的孩子相反，支持「行動版」的莫利紐茲問題答「能」，這個版本不需要受試者說出名字。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "這個變體改變的，是「不能」的理由。小雞的結果若站得住，林先生認不出方糖，未必是看與摸天生不相通，而可能是他的視覺系統三十多年沒用過，大腦看形狀的部分還沒長好。SEP 也提到，失明現在常被理解為視覺系統發育異常。這樣一來，人類受試者的「不能」與小雞的「能」並不矛盾：兩者回答的可能根本是不同的問題。"
+    },
+    {
+      "type": "h",
+      "text": "那顆方糖，他認不認得出來"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "三個版本放在一起，莫利紐茲的問題被拆成了好幾個問題。拆紗布當天、不給提示，現有證據傾向「不能」，但沒人確定失敗出在兩種感官之間，還是出在剛啟用的眼睛。給時間、給提示，答案可能變成「能」，卻很難證明那不是新經驗教的。換成視覺完好的小雞，答案是「能」，受試者卻已不是那個會回答「哪個是球」的盲人。"
+    },
+    {
+      "type": "p",
+      "text": "莫利紐茲說，他拿這個問題問過許多聰明人，起初幾乎沒有人給出他認為對的答案，聽了他的理由才被說服；萊布尼茲也說，莫利紐茲與洛克可能比表面上更接近他的看法。若有一天真能讓一位成年的先天盲人，以完全正常的視覺系統第一次睜眼，林先生的同事要測的，究竟是兩種感官有沒有天生相通，還是理性能不能替經驗走完最後一步？"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Molyneux's Problem",
+      "publisher": "Brian Glenney、Gabriele Ferretti、Marjolein Degenaar／Stanford Encyclopedia of Philosophy",
+      "date": "2026-01-08",
+      "url": "https://plato.stanford.edu/entries/molyneux-problem/",
+      "note": "§1 1688 年 7 月 7 日信、洛克未回覆、1693 年 3 月 2 日信、妻子婚後第一年失明；§2 答「能」與「不能」的各家、萊布尼茲反對「第一眼」、切塞爾登 1728 與其引文；§3 19 世紀的病例難以比較；§4 Held 等 2011（含三人幾天後再測成功）、萊文 2008 的時機問題、觸覺污染的兩難、失明作為發育異常、新生嬰兒與小雞。切塞爾登原文未讀，依此條目轉引"
+    },
+    {
+      "title": "An Essay Concerning Humane Understanding（第二版）",
+      "publisher": "John Locke／London: Thomas Dring、Samuel Manship（Internet Archive 早期英文書籍掃描本；Commons PDF 第 113 頁）",
+      "date": "1694",
+      "url": "https://archive.org/details/bim_early-english-books-1641-1700_an-essay-concerning-huma_locke-john_1694",
+      "note": "第二卷第九章第 8 節，頁 67–68：莫利紐茲問題、他的回答、洛克的同意與「at first sight」、「never had the happiness to see」一句；對照掃描影像逐字核對引文"
+    },
+    {
+      "title": "An Essay Towards a New Theory of Vision",
+      "publisher": "George Berkeley／Project Gutenberg #4722",
+      "date": "1709",
+      "url": "https://www.gutenberg.org/ebooks/4722",
+      "note": "第 132 節引莫利紐茲問題、第 133 節兩難、第 135 節名稱一段、第 149–152 節幾何的對象；電子本未註明底本版次"
+    },
+    {
+      "title": "New Essays on Human Understanding, Book II: Ideas",
+      "publisher": "G. W. Leibniz 著，Jonathan Bennett 譯／Early Modern Texts",
+      "date": "2008-04",
+      "url": "https://www.earlymoderntexts.com/assets/pdfs/leibniz1705book2.pdf",
+      "note": "第九章〈知覺〉：先說想多想一陣子；附條件的「能」（先告知是立方體和球，只需判斷哪個是哪個）；不計當場眼花撩亂或不習慣推理；球面無特殊點而立方體有 8 點；盲人學幾何的論點；莫利紐茲與洛克可能比表面上更接近他。班尼特版為現代英文改寫式譯本，故本文只轉述不直引"
+    },
+    {
+      "title": "The newly sighted fail to match seen with felt",
+      "publisher": "R. Held、Y. Ostrovsky、B. de Gelder、T. Gandhi、S. Ganesh、U. Mathur、P. Sinha／Nature Neuroscience 14: 551–553",
+      "date": "2011-04-10",
+      "url": "https://doi.org/10.1038/nn.2795",
+      "note": "全文付費，只讀摘要（經 Europe PMC，PMID 21478887）：沒有立即轉移，但跨感官對應發展得很快"
+    },
+    {
+      "title": "Shedding light on a longstanding puzzle",
+      "publisher": "Anne Trafton／MIT News",
+      "date": "2011-04-11",
+      "url": "https://news.mit.edu/2011/vision-problem-0411",
+      "note": "普拉卡什計畫 2004 年創辦；五名 8 到 17 歲受試者（四名先天白內障、一名角膜混濁）；術後 48 小時內測驗；塑膠零件物體、視覺配對超過 90%；觸覺到視覺接近亂猜；一例一週後重測大幅進步、無訓練、換新物體"
+    },
+    {
+      "title": "Commentary: “Multimodal Theories of Recognition and Their Relation to Molyneux's Question”",
+      "publisher": "John Schwenkler／Frontiers in Psychology 6: 1792",
+      "date": "2015-11-19",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4652578/",
+      "note": "剛得到視覺的病人建構複雜物體立體表徵的能力有限，失敗可能出自純粹的視覺缺陷"
+    },
+    {
+      "title": "First-sight recognition of touched objects shows that chicks can solve Molyneux's problem",
+      "publisher": "E. Versace、L. Freeland、M. G. Emmerson／Biology Letters 20(4): 20240025",
+      "date": "2024-04-03",
+      "url": "https://doi.org/10.1098/rsbl.2024.0025",
+      "note": "讀摘要（Europe PMC）：黑暗中孵化、觸覺刺激 24 小時、第一次見光即測、光滑組較常走向光滑刺激"
+    },
+    {
+      "title": "An account of some observations made by a young gentleman, who was born blind, or lost his sight so early, that he had no remembrance of ever having seen, and was couch'd between 13 and 14 years of age",
+      "publisher": "William Cheselden／Philosophical Transactions 35: 447–450",
+      "date": "1728",
+      "url": "https://doi.org/10.1098/rstl.1727.0038",
+      "note": "原文未讀；題名、卷頁依 Crossref，內容依 SEP 轉引"
+    },
+    {
+      "title": "William Molyneux（NPG 5386）",
+      "publisher": "Wikidata",
+      "date": "",
+      "url": "https://www.wikidata.org/wiki/Q28044825",
+      "note": "頭圖資料：1696 年、油彩畫布、75.6 × 62.5 公分、國家肖像館藏號 NPG 5386、作者列為佚名"
+    },
+    {
+      "title": "Molyneux (Molyneaux), William",
+      "publisher": "Dictionary of Irish Biography（Royal Irish Academy）",
+      "date": "2009-10",
+      "url": "https://www.dib.ie/biography/molyneux-molyneaux-william-a5878",
+      "note": "1692 年當選都柏林大學選區第二名議員（頭圖題字的年份）；2021 年 3 月最後修訂"
+    }
+  ]
+}
