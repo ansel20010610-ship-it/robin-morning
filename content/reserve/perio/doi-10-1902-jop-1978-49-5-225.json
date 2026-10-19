@@ -2,12 +2,12 @@
   "column": "perio",
   "date": "reserve",
   "reserve_written": "2026-10-10",
-  "title": "可疑牙 22 年多半保住，失牙集中在少數人",
+  "title": "可疑牙 22 年多半保住，掉的集中在少數人",
   "dek": "牙周治療前判為「可疑」的牙，長期維護下會掉多少、掉在誰身上？1978 年一份 600 名病人、平均 22 年的失牙清點給了答案。",
-  "takeaway": "治療後長期維護的牙周病人，平均 22 年間一半沒有因牙周病掉牙；判為「可疑」的牙大約每 3 顆只掉 1 顆，失牙集中在少數一路惡化的病人。可疑不等於該拔，去留要連病人的病程一起看。",
-  "brief": "Hirschfeld 與 Wasserman 1978 年清點一家私人牙周診所的 600 名病人，看積極治療後平均 22 年間因牙周病失去了哪些牙。300 人沒有因牙周病掉過一顆牙；治療前判為「可疑」的 2,139 顆牙失去 666 顆，其中 394 顆出自惡化最多的六分之一病人。作者認為牙的去留和病例類型的關係比和手術更密切，可疑不等於保不住，看預後也要看這個人的病程。",
+  "takeaway": "治療前判為「可疑」（根分岔、囊袋無法消除、骨流失大或明顯動搖）的牙，長期維護平均 22 年約每 3 顆只掉 1 顆，掉的可疑牙多半（666 顆中的 394 顆）出自約六分之一的病人；一半病人沒因牙周病掉牙。",
+  "brief": "Hirschfeld 與 Wasserman 1978 年清點一家私人牙周診所的 600 名病人，看治療前判為「可疑」的牙在長期維護平均 22 年後的去留。可疑牙約每 3 顆只掉 1 顆，一半病人沒有因牙周病掉牙，掉的可疑牙多半出自約六分之一的病人。作者認為牙的去留似乎和病例類型的關係比和有沒有開刀更密切；本報的讀法是，「可疑」兩字本身不是拔牙的理由。",
   "topic_key": "perio:doi:10.1902/jop.1978.49.5.225",
-  "updated_at": "2026-10-17T19:41:00+08:00",
+  "updated_at": "2026-10-19T14:49:00+08:00",
   "spoiler": null,
   "disclaimer": "醫學教學導讀，非個別診療建議。",
   "hero": {
@@ -17,7 +17,7 @@
     "width": 871,
     "height": 325,
     "alt": "環口 X 光片的局部，橫向排著一排下顎牙齒的牙根與齒槽骨。一條黃線沿牙頸部橫過，一條紅線在更低處沿骨頂起伏；左側一個橘色橢圓圈住門牙區，中間一個藍色箭頭指向一顆牙根中央有高亮度白線的牙，右側一個粉紅色箭頭指向一顆大臼齒的牙根分叉處。",
-    "caption": "下顎左側環口 X 光片局部，上傳者標註為廣泛性嚴重骨流失（30% 到 80%）：紅線是現有骨高度，黃線是發病前牙齦大約的位置；粉紅箭頭指根分岔病變，藍箭頭那顆牙骨流失達 80%、臨床上明顯動搖，都屬後續文獻轉述的 1978 年「可疑」條件。影像與該研究的受試者無關。",
+    "caption": "下顎左側環口 X 光片局部，上傳者標註為廣泛性嚴重骨流失（30% 到 80%）：紅線是現有骨高度，黃線是發病前牙齦大約的位置；粉紅箭頭指根分岔病變，藍箭頭那顆牙骨流失達 80%、臨床上明顯動搖。根分岔、骨流失大、明顯動搖都是後續文獻轉述的 1978 年預後判斷因子，這顆牙在原分類屬哪一級無從判定。影像與該研究的受試者無關。",
     "credit": "DRosenbach（英文維基百科使用者）上傳並標註，Wikimedia Commons",
     "license": "Public domain",
     "license_url": "",
@@ -27,15 +27,15 @@
   "body": [
     {
       "type": "p",
-      "text": "牙周治療前被判為「可疑」的牙，在長期回診維護下多半保得住；掉很多牙的，集中在少數病情一路惡化的病人。Leonard Hirschfeld 與 Bernard Wasserman 1978 年清點一家私人牙周診所的 600 名病人，在積極治療後平均 22 年重新檢查：一半的人沒有因牙周病失去任何一顆牙，可疑牙大約每 3 顆只掉 1 顆。作者認為，牙齒保不保得住，和病例類型的關係比和做了哪種手術更密切；換句話說，判斷去留時，除了看這顆牙，也要看這個病人屬於哪一種病程。"
+      "text": "Leonard Hirschfeld 與 Bernard Wasserman 1978 年回頭清點一家私人牙周診所的 600 名病人：據 Bentour 等人（2025）轉述，其中 76.5% 治療前屬重度牙周炎；他們完成積極治療後在同一家診所長期維護，平均 22 年後重新檢查。後續文獻把這份清點列為最早的牙周預後分類之一；本報的看法是，它讓「先治療、長期維護，再決定可疑牙的去留」有了二十多年的失牙數據可依。"
     },
     {
       "type": "h",
-      "text": "假設的門診情境：根分岔的臼齒，要拔還是留"
+      "text": "假設的門診情境：初診時根分岔的臼齒，要拔還是留"
     },
     {
       "type": "p",
-      "text": "以下是一個假設情境。一位 55 歲的病人，牙周炎治療後已在診所維護多年，下顎第一大臼齒有根分岔病變（furcation involvement），頰側還有一個 6 毫米的囊袋，病歷上一直寫著「預後可疑」。他問：「這顆遲早要拔，是不是乾脆現在拔掉做植體？」醫師要權衡的，是這顆牙的條件，以及這個人這些年的病程。Hirschfeld 與 Wasserman 的數字，回答的正是這類可疑牙二十多年後的結局。"
+      "text": "以下是一個假設情境。一位 55 歲的病人初診，牙周炎還沒治療，下顎第一大臼齒有根分岔病變（furcation involvement），頰側一個 6 毫米的牙周囊袋，X 光片上骨流失明顯，醫師在治療計畫裡把它的預後判為「可疑」。病人問：「這顆遲早要拔，是不是乾脆現在拔掉做植體？」醫師要權衡的，除了這顆牙的條件，還有這個人治療後的反應與回診的意願。Hirschfeld 與 Wasserman 的數字，回答的正是這類治療前就判為可疑的牙，在治療與長期維護後二十多年的結局。"
     },
     {
       "type": "paper",
@@ -45,7 +45,7 @@
       "link": "https://doi.org/10.1902/jop.1978.49.5.225",
       "access": "依摘要與後續文獻整理",
       "question": "牙周病人完成積極治療、長期維護後，二十多年間會因牙周病失去多少牙？失牙集中在哪些病人、哪些牙？",
-      "design": "回溯性病例系列：單一私人牙周診所，積極治療後平均 22 年重新檢查並查閱病歷；無對照組",
+      "design": "回溯性病例系列：單一私人牙周診所，積極治療後平均 22 年重新檢查；無對照組",
       "sample": "600 名完成積極牙周治療的病人"
     },
     {
@@ -54,13 +54,17 @@
     },
     {
       "type": "p",
-      "text": "這是一份回溯性的病例清點，沒有對照組。治療前，每顆牙都有一個預後判斷；據 Yanni 等人（2022）的轉述，有根分岔病變、無法消除的囊袋、大量齒槽骨流失或明顯動搖的牙，歸為「可疑」（questionable）。病人完成積極治療後在同一家診所長期維護，平均 22 年後重新檢查並查閱病歷，記下這段期間因牙周病失去的牙。作者依每個人掉的牙數，把病人分成「維持良好」（well-maintained）、「走下坡」（downhill）、「急遽惡化」（extreme downhill）三型，也比較了做過與沒做過牙周手術的牙。"
+      "text": "這是一份回溯性的病例清點，沒有對照組。治療前，每顆牙都有一個預後判斷；據 Yanni 等人（2022）的轉述，有根分岔病變、無法消除的囊袋、大量齒槽骨流失或明顯動搖的牙，歸為「可疑」（questionable）。病人完成積極治療後在同一家診所長期維護，平均 22 年後重新檢查，記下這段期間因牙周病失去的牙。"
+    },
+    {
+      "type": "p",
+      "text": "作者依每個人掉的牙數，把病人分成「維持良好」（well-maintained）、「走下坡」（downhill）、「急遽惡化」（extreme downhill）三型。據 Bentour 等人轉述，維持良好型有 499 人，恰好是摘要裡掉 0 顆與 1 到 3 顆的 300＋199 人；本報據此對照，其餘掉 4 顆以上的 101 人應屬後兩型。作者也比較了做過與沒做過牙周手術的牙。"
     },
     {
       "type": "svg",
       "title": "研究流程（依摘要重繪）",
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 470\"><rect class=\"soft\" x=\"12\" y=\"10\" width=\"336\" height=\"92\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"36\" font-size=\"18\" font-weight=\"700\">1</text><text class=\"ink\" x=\"50\" y=\"36\" font-size=\"15\" font-weight=\"700\">治療前：逐顆判定預後</text><text class=\"muted\" x=\"50\" y=\"60\" font-size=\"13\">「可疑」：根分岔、囊袋無法消除、</text><text class=\"muted\" x=\"50\" y=\"78\" font-size=\"13\">骨流失大或明顯動搖（後續文獻轉述）</text><text class=\"accent\" x=\"50\" y=\"96\" font-size=\"13\">可疑 2,139 顆；根分岔病變 1,464 顆</text><line class=\"muted line\" x1=\"180\" y1=\"104\" x2=\"180\" y2=\"117\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,116 186,116 180,124\"/><rect class=\"soft\" x=\"12\" y=\"126\" width=\"336\" height=\"60\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"152\" font-size=\"18\" font-weight=\"700\">2</text><text class=\"ink\" x=\"50\" y=\"152\" font-size=\"15\" font-weight=\"700\">積極治療，之後長期維護</text><text class=\"muted\" x=\"50\" y=\"174\" font-size=\"13\">同一家私人牙周診所</text><line class=\"muted line\" x1=\"180\" y1=\"188\" x2=\"180\" y2=\"201\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,200 186,200 180,208\"/><rect class=\"soft\" x=\"12\" y=\"210\" width=\"336\" height=\"60\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"236\" font-size=\"18\" font-weight=\"700\">3</text><text class=\"ink\" x=\"50\" y=\"236\" font-size=\"15\" font-weight=\"700\">平均 22 年後重新檢查 600 人</text><text class=\"muted\" x=\"50\" y=\"258\" font-size=\"13\">記下期間因牙周病失去的牙</text><line class=\"muted line\" x1=\"180\" y1=\"272\" x2=\"180\" y2=\"285\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,284 186,284 180,292\"/><rect class=\"soft\" x=\"12\" y=\"294\" width=\"336\" height=\"166\" rx=\"6\"/><rect class=\"accent\" x=\"12\" y=\"300\" width=\"4\" height=\"154\"/><text class=\"accent\" x=\"28\" y=\"320\" font-size=\"18\" font-weight=\"700\">4</text><text class=\"ink\" x=\"50\" y=\"320\" font-size=\"15\" font-weight=\"700\">依每人失去的牙數分組</text><text class=\"muted\" x=\"50\" y=\"350\" font-size=\"13\">失去 0 顆</text><text class=\"ink\" x=\"170\" y=\"350\" font-size=\"13\" font-weight=\"700\">300 人</text><text class=\"muted\" x=\"50\" y=\"374\" font-size=\"13\">失去 1–3 顆</text><text class=\"ink\" x=\"170\" y=\"374\" font-size=\"13\">199 人</text><text class=\"muted\" x=\"50\" y=\"398\" font-size=\"13\">失去 4–9 顆</text><text class=\"ink\" x=\"170\" y=\"398\" font-size=\"13\">76 人</text><text class=\"muted\" x=\"50\" y=\"422\" font-size=\"13\">失去 10–23 顆</text><text class=\"accent\" x=\"170\" y=\"422\" font-size=\"13\" font-weight=\"700\">25 人</text><text class=\"muted\" x=\"50\" y=\"448\" font-size=\"13\">另比較做過與沒做過手術的牙</text></svg>",
-      "caption": "Hirschfeld 與 Wasserman（1978）的研究流程示意，依 PubMed 摘要重繪；「可疑」的條件依 Yanni 等（2022）轉述。可疑牙與根分岔牙兩類有重疊，不能相加。"
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 470\"><rect class=\"soft\" x=\"12\" y=\"10\" width=\"336\" height=\"92\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"36\" font-size=\"18\" font-weight=\"700\">1</text><text class=\"ink\" x=\"50\" y=\"36\" font-size=\"15\" font-weight=\"700\">治療前：逐顆判定預後</text><text class=\"muted\" x=\"50\" y=\"60\" font-size=\"13\">「可疑」：根分岔、囊袋無法消除、</text><text class=\"muted\" x=\"50\" y=\"78\" font-size=\"13\">骨流失大或明顯動搖（後續文獻轉述）</text><text class=\"accent\" x=\"50\" y=\"96\" font-size=\"13\">判為可疑的牙共 2,139 顆</text><line class=\"muted line\" x1=\"180\" y1=\"104\" x2=\"180\" y2=\"117\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,116 186,116 180,124\"/><rect class=\"soft\" x=\"12\" y=\"126\" width=\"336\" height=\"60\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"152\" font-size=\"18\" font-weight=\"700\">2</text><text class=\"ink\" x=\"50\" y=\"152\" font-size=\"15\" font-weight=\"700\">積極治療，之後長期維護</text><text class=\"muted\" x=\"50\" y=\"174\" font-size=\"13\">同一家私人牙周診所</text><line class=\"muted line\" x1=\"180\" y1=\"188\" x2=\"180\" y2=\"201\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,200 186,200 180,208\"/><rect class=\"soft\" x=\"12\" y=\"210\" width=\"336\" height=\"60\" rx=\"6\"/><text class=\"accent\" x=\"28\" y=\"236\" font-size=\"18\" font-weight=\"700\">3</text><text class=\"ink\" x=\"50\" y=\"236\" font-size=\"15\" font-weight=\"700\">平均 22 年後重新檢查 600 人</text><text class=\"muted\" x=\"50\" y=\"258\" font-size=\"13\">記下期間因牙周病失去的牙</text><line class=\"muted line\" x1=\"180\" y1=\"272\" x2=\"180\" y2=\"285\" stroke-width=\"1.5\"/><polygon class=\"muted\" points=\"174,284 186,284 180,292\"/><rect class=\"soft\" x=\"12\" y=\"294\" width=\"336\" height=\"166\" rx=\"6\"/><rect class=\"accent\" x=\"12\" y=\"300\" width=\"4\" height=\"154\"/><text class=\"accent\" x=\"28\" y=\"320\" font-size=\"18\" font-weight=\"700\">4</text><text class=\"ink\" x=\"50\" y=\"320\" font-size=\"15\" font-weight=\"700\">依每人失去的牙數分組</text><text class=\"muted\" x=\"50\" y=\"350\" font-size=\"13\">失去 0 顆</text><text class=\"ink\" x=\"150\" y=\"350\" font-size=\"13\" font-weight=\"700\">300 人</text><text class=\"muted\" x=\"50\" y=\"372\" font-size=\"13\">失去 1–3 顆</text><text class=\"ink\" x=\"150\" y=\"372\" font-size=\"13\">199 人</text><line class=\"muted line\" x1=\"210\" y1=\"338\" x2=\"210\" y2=\"378\" stroke-width=\"1.5\"/><text class=\"ink\" x=\"218\" y=\"360\" font-size=\"13\">維持良好型</text><text class=\"muted\" x=\"218\" y=\"376\" font-size=\"12\">499 人</text><text class=\"muted\" x=\"50\" y=\"400\" font-size=\"13\">失去 4–9 顆</text><text class=\"ink\" x=\"150\" y=\"400\" font-size=\"13\">76 人</text><text class=\"muted\" x=\"50\" y=\"422\" font-size=\"13\">失去 10–23 顆</text><text class=\"accent\" x=\"150\" y=\"422\" font-size=\"13\" font-weight=\"700\">25 人</text><line class=\"accent line\" x1=\"210\" y1=\"388\" x2=\"210\" y2=\"428\" stroke-width=\"1.5\"/><text class=\"accent\" x=\"218\" y=\"404\" font-size=\"13\">走下坡＋急遽惡化</text><text class=\"accent\" x=\"218\" y=\"420\" font-size=\"12\">101 人（本報對照）</text><text class=\"muted\" x=\"50\" y=\"448\" font-size=\"13\">另比較做過與沒做過手術的牙</text></svg>",
+      "caption": "Hirschfeld 與 Wasserman（1978）的研究流程示意，依 PubMed 摘要重繪；「可疑」的條件依 Yanni 等（2022）轉述。維持良好型 499 人依 Bentour 等（2025）轉述；它與掉 0 顆、1 到 3 顆兩組的對應，以及其餘 101 人屬後兩型，是本報依摘要人數所做的對照。"
     },
     {
       "type": "h",
@@ -68,38 +72,38 @@
     },
     {
       "type": "p",
-      "text": "600 人中，300 人在平均 22 年間沒有因牙周病失去任何一顆牙，199 人失去 1 到 3 顆，76 人失去 4 到 9 顆，25 人失去 10 到 23 顆。也就是說，每兩位病人就有一位二十多年沒有因牙周病掉牙，但也有少數人一掉就是十幾二十顆。"
+      "text": "600 人中，300 人在平均 22 年間沒有因牙周病失去任何一顆牙，也就是每兩位病人就有一位。治療前判為可疑的 2,139 顆牙，期間失去 666 顆，大約每 3 顆掉 1 顆，另外 2 顆二十多年後還在。"
     },
     {
       "type": "p",
-      "text": "治療前判為可疑的 2,139 顆牙，期間失去 666 顆；Bentour 等人（2025）整理為 31.1%，大約每 3 顆掉 1 顆，另外 2 顆二十多年後還在。這 666 顆裡，394 顆是惡化最多的六分之一病人掉的，其餘六分之五的病人加起來只掉 272 顆。根分岔病變的牙也一樣：Bentour 等人換算，22 年後的存活率是 68.6%，大約每 10 顆有 7 顆還在，失去的也有一半以上出自惡化最多的六分之一病人。"
+      "text": "掉的牙並不平均。這 666 顆可疑牙裡，394 顆是約六分之一的病人掉的，其餘六分之五的病人加起來只掉 272 顆。對照前面的分型，本報的讀法是：這六分之一，大致就是走下坡與急遽惡化兩型合計的 101 人。"
     },
     {
       "type": "svg",
       "title": "六分之一的病人，掉了多數的可疑牙",
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 262\"><rect class=\"accent\" x=\"30\" y=\"12\" width=\"12\" height=\"12\"/><text class=\"ink\" x=\"48\" y=\"23\" font-size=\"12\">惡化最多的 1/6 病人</text><rect class=\"soft\" x=\"196\" y=\"12\" width=\"12\" height=\"12\"/><text class=\"ink\" x=\"214\" y=\"23\" font-size=\"12\">其餘 5/6 病人</text><text class=\"ink\" x=\"30\" y=\"56\" font-size=\"13\" font-weight=\"700\">病人（600 人）</text><rect class=\"accent\" x=\"30\" y=\"64\" width=\"50.0\" height=\"22\"/><rect class=\"soft\" x=\"80.0\" y=\"64\" width=\"250.0\" height=\"22\"/><text class=\"accent\" x=\"30\" y=\"102\" font-size=\"12\">1/6</text><text class=\"muted\" x=\"330\" y=\"102\" font-size=\"12\" text-anchor=\"end\">5/6</text><text class=\"ink\" x=\"30\" y=\"132\" font-size=\"13\" font-weight=\"700\">期間失去的可疑牙（666 顆）</text><rect class=\"accent\" x=\"30\" y=\"140\" width=\"177.5\" height=\"22\"/><rect class=\"soft\" x=\"207.5\" y=\"140\" width=\"122.5\" height=\"22\"/><text class=\"accent\" x=\"30\" y=\"178\" font-size=\"12\">394 顆</text><text class=\"muted\" x=\"330\" y=\"178\" font-size=\"12\" text-anchor=\"end\">272 顆</text><text class=\"ink\" x=\"30\" y=\"208\" font-size=\"13\" font-weight=\"700\">期間失去的根分岔牙（460 顆）</text><rect class=\"accent\" x=\"30\" y=\"216\" width=\"156.5\" height=\"22\"/><rect class=\"soft\" x=\"186.5\" y=\"216\" width=\"143.5\" height=\"22\"/><text class=\"accent\" x=\"30\" y=\"254\" font-size=\"12\">240 顆</text><text class=\"muted\" x=\"330\" y=\"254\" font-size=\"12\" text-anchor=\"end\">其餘</text></svg>",
-      "caption": "依 Hirschfeld 與 Wasserman（1978）摘要的數字重繪：期間失去的 666 顆可疑牙中，394 顆出自惡化最多的六分之一病人、272 顆出自其餘六分之五；失去的 460 顆根分岔牙中，240 顆出自同一群病人。"
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 190\"><rect class=\"accent\" x=\"30\" y=\"12\" width=\"12\" height=\"12\"/><text class=\"ink\" x=\"48\" y=\"23\" font-size=\"12\">約 1/6 的病人</text><rect class=\"soft\" x=\"196\" y=\"12\" width=\"12\" height=\"12\"/><text class=\"ink\" x=\"214\" y=\"23\" font-size=\"12\">其餘 5/6 病人</text><text class=\"ink\" x=\"30\" y=\"56\" font-size=\"13\" font-weight=\"700\">病人（600 人）</text><rect class=\"accent\" x=\"30\" y=\"64\" width=\"50.0\" height=\"22\"/><rect class=\"soft\" x=\"80.0\" y=\"64\" width=\"250.0\" height=\"22\"/><text class=\"accent\" x=\"30\" y=\"102\" font-size=\"12\">1/6</text><text class=\"muted\" x=\"330\" y=\"102\" font-size=\"12\" text-anchor=\"end\">5/6</text><text class=\"ink\" x=\"30\" y=\"132\" font-size=\"13\" font-weight=\"700\">期間失去的可疑牙（666 顆）</text><rect class=\"accent\" x=\"30\" y=\"140\" width=\"177.5\" height=\"22\"/><rect class=\"soft\" x=\"207.5\" y=\"140\" width=\"122.5\" height=\"22\"/><text class=\"accent\" x=\"30\" y=\"178\" font-size=\"12\">394 顆</text><text class=\"muted\" x=\"330\" y=\"178\" font-size=\"12\" text-anchor=\"end\">272 顆</text></svg>",
+      "caption": "依 Hirschfeld 與 Wasserman（1978）摘要的數字重繪：期間失去的 666 顆可疑牙中，394 顆出自約六分之一的病人、272 顆出自其餘六分之五。"
     },
     {
       "type": "p",
-      "text": "作者也比較了做過與沒做過牙周手術的牙，結論是：牙齒保不保得住，似乎（seemed）和病例類型的關係，比和所做的手術更密切。這句話用的是描述的語氣，沒有寫成因果。"
+      "text": "作者也比較了做過與沒做過牙周手術的牙，結論是：牙齒保不保得住，似乎（seemed）和病例類型的關係，比和有沒有做手術更密切。這句話用的是描述的語氣，沒有寫成因果。"
     },
     {
       "type": "h",
-      "text": "可疑不等於該拔：先看病人，再處理殘留的深囊袋"
+      "text": "後續研究：預後較差的牙確實掉得多，殘留 6 毫米以上的囊袋要再處理"
     },
     {
       "type": "p",
-      "text": "後來的研究把預後該看什麼說得更具體。McGuire 與 Nunn 分析 100 名維護期病人的 2,509 顆牙（[*J Periodontol* 1996;67:666–674](https://doi.org/10.1902/jop.1996.67.7.666)），發現初始探測深度、根分岔病變、動搖度、骨流失百分比，有磨牙等異常功能習慣卻不戴咬合板，以及吸菸，都和失牙風險上升有關；但傳統的預後類別沒有充分反映這些因素，初始預後也不能準確預測牙齒存活。2017 年世界研討會（World Workshop）的牙周炎分期，則把病人因牙周炎失去的牙算進期別：沒有失牙列在第 I、II 期，失去 4 顆以下列在第 III 期，5 顆以上列在第 IV 期。"
+      "text": "後來的研究把預後該看什麼說得更具體。McGuire 與 Nunn 分析 100 名維護期病人的 2,509 顆牙（[*J Periodontol* 1996;67:666–674](https://doi.org/10.1902/jop.1996.67.7.666)），預後較差的牙存活率確實較低，但傳統的預後類別只部分反映初始探測深度、根分岔、動搖度與骨流失等臨床因子，用來預測單顆牙的存活並不準。吸菸也和失牙風險上升有關。"
     },
     {
       "type": "p",
-      "text": "殘留的深囊袋則是量得到的警訊。Matuliene 等人追蹤 172 名病人平均 11.3 年（[*J Clin Periodontol* 2008;35:685–695](https://doi.org/10.1111/j.1600-051X.2008.01245.x)），以牙齒為單位，殘留 6 毫米囊袋的牙相對於 3 毫米以下，失牙的勝算比是 11.0，7 毫米以上是 64.2。勝算比在失牙不常見時，可以粗略讀成「掉牙的機會高出幾倍」；作者的結論是，殘留 6 毫米以上的囊袋代表治療還沒完成，需要再處理。歐洲牙周病學會（EFP）2020 年的指引（[Sanz 等，*J Clin Periodontol* 2020;47 Suppl 22:4–60](https://doi.org/10.1111/jcpe.13290)）建議，維護回診間隔 3 個月到最長 12 個月，依病人的風險與治療後的牙周狀況調整，並要強力促進病人持續回診。"
+      "text": "Matuliene 等人追蹤 172 名病人平均 11.3 年（[*J Clin Periodontol* 2008;35:685–695](https://doi.org/10.1111/j.1600-051X.2008.01245.x)），治療後殘留 6 毫米囊袋的牙，相對於 3 毫米以下，失牙的勝算比是 11.0；勝算比在失牙不常見時，可粗略讀成「掉牙的機會高出幾倍」。作者據此認為，殘留 6 毫米以上的囊袋代表治療還沒完成，需要再處理。"
     },
     {
       "type": "p",
       "tag": "本文讀法",
-      "text": "回到前面的假設情境，本報的讀法是：「可疑」本身不是拔牙的理由，1978 年那群病人的可疑牙，多數二十多年後還在。先看人：這些年掉了幾顆牙、有沒有吸菸、能不能照建議回診；再看牙：6 毫米的殘留囊袋，照 Matuliene 等人的結論還需要再處理。病人若屬於少數一路惡化的那一型，拔或留的考量就不一樣。"
+      "text": "回到前面的假設情境，本報的讀法是：「可疑」本身不是拔牙的理由，1978 年那群病人治療前判為可疑的牙，多數二十多年後還在。先治療，再看人：治療後的反應、有沒有吸菸、能不能規律回診；再看牙：治療後若仍殘留 6 毫米以上的囊袋，照 Matuliene 等人的結論還要再處理。病人若一路惡化、屬於少數掉牙多的那群，拔或留的考量就不一樣；但這要經過治療與維護才看得出來，論文並沒有檢驗初診時能否預先分辨。"
     },
     {
       "type": "h",
@@ -108,9 +112,9 @@
     {
       "type": "list",
       "items": [
-        "600 人都是治療後平均 22 年仍回到同一家私人診所的病人，中途離開的不在分母裡；挪威一家專科診所的 30 年追蹤，386 名病人中有 283 人中途流失（Fardal 等，[*J Clin Periodontol* 2025;52:102–112](https://doi.org/10.1111/jcpe.13877)）。",
-        "沒有同期不維護的病人可比，不能說低失牙率是維護「造成」的；三型是依結果事後切分，也不能直接拿來在初診時替病人分類。",
-        "「失牙」其實是拔牙決定，受當年的臨床判斷、病人意願與補綴計畫影響，四十多年前的拔牙門檻和現在未必相同。"
+        "600 人都是平均 22 年後仍回診的病人，中途離開的不算在內，數字可能偏樂觀。",
+        "沒有不維護的對照組，不能說低失牙率是維護造成的。",
+        "「失牙」其實是拔牙決定，受當年的臨床判斷、病人意願與補綴計畫影響，1978 年以前的拔牙門檻和現在的未必相同。"
       ]
     }
   ],
@@ -127,28 +131,28 @@
       "publisher": "National Library of Medicine",
       "date": "1978-05",
       "url": "https://pubmed.ncbi.nlm.nih.gov/277674/",
-      "note": "核對作者、卷期頁、DOI；摘要的六點結果（分組人數、可疑牙與根分岔牙的失去數、手術比較）"
+      "note": "核對作者、卷期頁、DOI；摘要的六點結果（分組人數、可疑牙失去數與集中於六分之一病人、手術比較）"
     },
     {
       "title": "Yanni P, Curtis DA, Kao RT, Lin GH. The pattern of tooth loss for periodontally favorable teeth: a retrospective study. Biology (Basel) 2022;11(11):1664",
       "publisher": "Biology（MDPI）",
       "date": "2022-11-15",
       "url": "https://doi.org/10.3390/biology11111664",
-      "note": "開放取用；引言對 1978 年研究的轉述：三型病人的名稱、「可疑」的條件，稱它是最早的牙周預後分類之一"
+      "note": "開放取用（PMC9687859）；引言對 1978 年研究的轉述：三型病人的名稱、「可疑」的條件，稱它是最早的牙周預後分類之一"
     },
     {
       "title": "Bentour E, Papamanoli E, Karoussis IK. The decision between tooth retention or replacement with implants: a continuing dilemma. Dent J (Basel) 2025;13(3):99",
       "publisher": "Dentistry Journal（MDPI）",
       "date": "2025-02-26",
       "url": "https://doi.org/10.3390/dj13030099",
-      "note": "開放取用；轉述可疑牙失去 31.1%、根分岔牙 22 年存活率 68.6%"
+      "note": "開放取用（PMC11941452）；轉述 76.5% 病人治療前屬重度牙周炎、維持良好型為 499 人"
     },
     {
       "title": "McGuire MK, Nunn ME. Prognosis versus actual outcome. III. The effectiveness of clinical parameters in accurately predicting tooth survival. J Periodontol 1996;67(7):666–674",
       "publisher": "Journal of Periodontology",
       "date": "1996-07",
       "url": "https://doi.org/10.1902/jop.1996.67.7.666",
-      "note": "依摘要（PMID 8832477）"
+      "note": "依摘要（PMID 8832477）：預後較差的牙存活率較低，但傳統預後類別只部分反映臨床因子"
     },
     {
       "title": "Matuliene G, Pjetursson BE, Salvi GE, et al. Influence of residual pockets on progression of periodontitis and tooth loss: results after 11 years of maintenance. J Clin Periodontol 2008;35(8):685–695",
@@ -156,28 +160,6 @@
       "date": "2008-08",
       "url": "https://doi.org/10.1111/j.1600-051X.2008.01245.x",
       "note": "依摘要（PMID 18549447）：牙齒層級勝算比 11.0（6 mm）與 64.2（7 mm 以上）"
-    },
-    {
-      "title": "Staging and Grading Periodontitis（2017 World Workshop 分期分級總表）",
-      "publisher": "American Academy of Periodontology",
-      "date": "2019-08",
-      "url": "https://www.perio.org/wp-content/uploads/2019/08/Staging-and-Grading-Periodontitis.pdf",
-      "note": "分期表「Tooth loss」一列；日期依檔案上傳路徑"
-    },
-    {
-      "title": "Sanz M, Herrera D, Kebschull M, et al. Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline. J Clin Periodontol 2020;47(Suppl 22):4–60",
-      "publisher": "Journal of Clinical Periodontology（European Federation of Periodontology）",
-      "date": "2020-07",
-      "url": "https://doi.org/10.1111/jcpe.13290",
-      "note": "開放取用；建議 4.1（回診間隔）、4.2（遵從）"
-    },
-    {
-      "title": "Fardal Ø, Skau I, Grytten J. A 30-year retrospective cohort outcome study of periodontal treatment of stages III and IV patients in a private practice. J Clin Periodontol 2025;52(1):102–112",
-      "publisher": "Journal of Clinical Periodontology",
-      "date": "2023-09-19",
-      "url": "https://doi.org/10.1111/jcpe.13877",
-      "note": "開放取用（2023 年線上刊出，2025 年 1 月期）；依摘要：386 人中 283 人中途流失"
     }
-  ],
-  "hold": "審稿意見待修正，見 state/review/doi-10-1902-jop-1978-49-5-225.json"
+  ]
 }
