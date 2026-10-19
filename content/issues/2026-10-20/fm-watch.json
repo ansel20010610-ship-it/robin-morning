@@ -1,0 +1,247 @@
+{
+  "column": "fm-watch",
+  "date": "2026-10-20",
+  "status": "update",
+  "title": "FM27 首度點名新授權：法國女子頂級聯賽",
+  "dek": "SI 宣布與法國足協合作，Arkema Première Ligue 在 FM27 取得完整授權；官方同時發布一支以 10 月初開發版本錄製的遊戲預覽影片。",
+  "brief": "Sports Interactive 10 月 19 日（英國日期）宣布，法國女子頂級聯賽 Arkema Première Ligue 將在《足球經理 27》取得完整授權，有官方隊徽、球衣與球員照片。FM26 的授權清單裡，法國只有男子的 Ligue 1 與 Ligue 2，這是 FM27 第一次點名一項新授權聯賽；台灣時間 10 月 20 日凌晨官方另發布一支遊戲預覽影片，素材取自 10 月初的開發版本。它是否算在 10 月 16 日提到的「兩個新授權聯賽」裡、那兩個聯賽是誰，官方都還沒說；遊戲仍訂 11 月 10 日發售。",
+  "topic_key": "fm-watch:2026-10-20-arkema-premiere-ligue-gameplay-preview",
+  "updated_at": "2026-10-20T05:27:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "timeline",
+    "title": "FM27 已知時程",
+    "caption": "依 Sports Interactive 官網、Steam 公告、FM 官方 YouTube 頻道與 SEGA 新聞稿整理，截至台灣時間 2026 年 10 月 20 日清晨。日期以英國發布日為準。",
+    "items": [
+      {
+        "when": "2026.8.27",
+        "label": "宣布 11 月推出",
+        "note": "預告 9 月起陸續發布功能深度介紹"
+      },
+      {
+        "when": "2026.9.22–10.16",
+        "label": "七篇功能深度介紹",
+        "note": "介面、足球世界、比賽日、比賽引擎、訓練、教練創建、2D 引擎與資料庫"
+      },
+      {
+        "when": "2026.9.30",
+        "label": "公布發售日",
+        "note": "SEGA 英國新聞稿列售價 £49.99"
+      },
+      {
+        "when": "2026.10.16",
+        "label": "預告兩個新授權聯賽與首次直播",
+        "note": "都未點名、未給日期"
+      },
+      {
+        "when": "2026.10.19",
+        "label": "Arkema Première Ligue 授權；遊戲預覽影片",
+        "note": "本期新增；影片在台灣時間 10 月 20 日凌晨上線，官方未說明和預告直播的關係"
+      },
+      {
+        "when": "未說明",
+        "label": "首次 FM27 直播",
+        "note": "10 月 16 日預告在 FM 官方 YouTube 頻道舉行；10 月 19 日影片發布後，官方未說明是否仍另行直播"
+      },
+      {
+        "when": "發售前 1–2 週",
+        "label": "Launch Preview",
+        "note": "給在 SEGA 認可通路預購 PC／Mac 版的玩家；預購尚未開放"
+      },
+      {
+        "when": "2026.11.10",
+        "label": "全平台數位版與實體 PC 版發售",
+        "note": "部分時區可能是 11 月 11 日（官方未點名台灣）"
+      },
+      {
+        "when": "2026.11.20",
+        "label": "實體 PS5 版發售",
+        "note": "官方 FAQ"
+      }
+    ]
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "Sports Interactive（SI）在官網新聞頁發布〈Arkema Première Ligue fully licensed in Football Manager 27〉，頁面標示 2026 年 10 月 19 日（週一，英國日期），沒有標示發布時刻。文章說，SI 與法國足球協會（French Football Federation）建立新的合作，法國女子頂級聯賽 Arkema Première Ligue 將在《足球經理 27》（Football Manager 27，以下簡稱 FM27）取得授權，聯賽會以官方隊徽、球衣與球員照片呈現。這則消息沒有同步發在 Steam 公告。這是 FM27 官方第一次點名一項新授權聯賽。"
+    },
+    {
+      "type": "quote",
+      "text": "為了加深對女子足球的投入，我們很高興確認與法國足球協會的新合作，Arkema Première Ligue 將在 FM27 取得授權。",
+      "original": "Deepening our commitment to women’s football, we’re pleased to confirm a new partnership with French Football Federation that will see the Arkema Première Ligue licensed in FM27.",
+      "cite": "footballmanager.com，2026 年 10 月 19 日；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "官方對這個聯賽的介紹是：1975 年成立、2024 年起全職業化，是法國女子足球的最高層級；聯賽裡有 8 度奪得歐洲女子冠軍聯賽的 OL Lyonnes（里昂女足），也有來自法國、荷蘭、西班牙、奈及利亞、加拿大、挪威、美國等地的國腳。文章最後重申 FM27 從 11 月 10 日起在各平台推出。"
+    },
+    {
+      "type": "h",
+      "text": "和 FM26 相比：法國女子聯賽從「可玩」變成「授權」"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "FM26 首度加入女子足球。官方當時的女子足球介紹頁列出開賣時有授權的女子賽事，包括英格蘭 Barclays WSL 與 WSL2、美國 NWSL、德國 Google Pixel Frauen-Bundesliga、日本 WE League 等；法國女子頂級聯賽不在這份授權名單裡，原文只說法國頂級聯賽與西班牙前兩級聯賽「will also be playable in FM26」（同樣可以玩）。2025 年 10 月 22 日的 FM26 授權清單也一致：法國項下只有 LFP 的 Ligue 1 與 Ligue 2。"
+    },
+    {
+      "type": "table",
+      "title": "法國賽事授權：FM26 與 FM27 官方資料對照",
+      "head": [
+        "項目",
+        "FM26",
+        "FM27（截至 10 月 20 日）"
+      ],
+      "rows": [
+        [
+          "Ligue 1、Ligue 2（LFP）",
+          "授權",
+          "官方尚未公布 FM27 授權清單"
+        ],
+        [
+          "法國女子頂級聯賽",
+          "可玩，未列入授權名單",
+          "完整授權：官方隊徽、球衣、球員照片"
+        ],
+        [
+          "合作對象",
+          "—",
+          "法國足球協會（新合作）"
+        ],
+        [
+          "其他女子聯賽授權",
+          "WSL、WSL2、NWSL、Frauen-Bundesliga、WE League 等",
+          "官方尚未公布是否延續"
+        ]
+      ],
+      "caption": "依 footballmanager.com〈Football Manager 26 Licences〉（2025-10-22）、FM26 女子足球介紹頁與 2026-10-19 的 Arkema Première Ligue 授權新聞整理。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "10 月 16 日的第七篇深度介紹寫道：「there’s more choice than ever of where you manage with the introduction of two new licensed leagues」（隨著兩個新授權聯賽的加入，可以選擇執教的地方比以往更多；本文自譯），但沒有點名。原文的意思是「加入」兩個新聯賽、擴大可執教的範圍；法國女子頂級聯賽在 FM26 就已經可以玩，FM27 改變的是授權，和這句描述不完全相符。它是否算在這兩個聯賽之內，官方沒有說明，本文無法判斷；那兩個新授權聯賽是哪兩個也還不知道。"
+    },
+    {
+      "type": "h",
+      "text": "對玩家的影響：畫面上的差別，不是玩法上的差別"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "官方列出的授權內容是隊徽、球衣與球員照片，都屬於呈現層面。由此推想，在 FM26 帶法國女子球隊的玩家，最直接的差別是不必再靠玩家社群製作的圖包補上隊徽與照片；比賽規則、球員資料與賽制，官方這次沒有提到會因授權而改變。"
+    },
+    {
+      "type": "p",
+      "text": "這也是 FM27 官方頁面第一次正面談女子聯賽的授權。先前的深度介紹主要在規則與資料庫部分提到女子足球：FIFA 女足員工規定、英、法、日女子聯賽盃改用瑞士制，以及賽程修正清單裡的「Asian Women’s National Team Coefficient system fully implemented」（亞洲女子國家隊係數制度完整實作）。FM26 那幾項女子聯賽授權在 FM27 是否全數延續，官方還沒有公布。"
+    },
+    {
+      "type": "h",
+      "text": "同日另一則：以 10 月初開發版本錄製的遊戲預覽影片"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "台灣時間 10 月 20 日凌晨 0 時 58 分，FM 官方 YouTube 頻道上傳〈Gameplay Preview: New Features & Upgrades in Action | FM27〉，約 7 分鐘後同一支影片以社群經理 Chris Groves 的帳號發在 Steam 公告。官方文字說，影片使用「a development build of FM27 from early October」（10 月初的 FM27 開發版本），要讓玩家看到各項功能如何組合在一起，點名的內容是介面、導覽與資訊呈現的改變、依自己的需要設定存檔、調整看到哪些內容與導覽去處、Tactical Effectiveness（戰術效能）與 Tactical Tweaks（戰術微調）。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "這支影片的文字說明沒有提出新功能，點名的都是前七篇介紹過的內容；官方只說明它是用 10 月初開發版本製作的影片。10 月 16 日那篇預告「Coming soon, we’ll show you FM27 in action with a livestream」（近期會以直播展示 FM27 實際運作；本文自譯），這支影片標題的「in Action」用語相近，但官方沒有說明這支預錄影片和 10 月 16 日預告的直播是什麼關係；是否另行直播，官方未更新。本報沒有逐段檢視影片畫面，也沒有玩過遊戲，所以不轉述影片裡的操作細節；畫面來自開發版本，正式版仍可能不同。"
+    },
+    {
+      "type": "h",
+      "text": "還沒確定的事"
+    },
+    {
+      "type": "list",
+      "items": [
+        "「兩個新授權聯賽」是哪兩個；完整的 FM27 授權清單（含 FM26 的女子聯賽授權是否延續）。",
+        "數位預購與 Launch Preview 的日期：台灣時間 10 月 20 日清晨查 Steam（英國區）仍顯示 10 Nov, 2026、無標價，Xbox 商店（英國）仍未開放預購。",
+        "這支預錄影片和 10 月 16 日預告的首次 FM27 直播是什麼關係；是否另行直播、在哪一天。",
+        "全球同步上線的確切時刻，以及台灣是否落在 11 月 11 日。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Arkema Première Ligue fully licensed in Football Manager 27",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-10-19",
+      "url": "https://www.footballmanager.com/news/arkema-premiere-ligue-fully-licensed-football-manager-27",
+      "note": "全文；與法國足協合作、授權內容、聯賽介紹"
+    },
+    {
+      "title": "Football Manager 26 Licences",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2025-10-22",
+      "url": "https://www.footballmanager.com/news/football-manager-26-licences",
+      "note": "FM26 授權清單：法國項下只有 LFP（Ligue 1、Ligue 2）"
+    },
+    {
+      "title": "Introducing Women’s Football（FM26 功能介紹）",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2025-09-18",
+      "url": "https://www.footballmanager.com/fm26/features/introducing-womens-football",
+      "note": "官網頁未標日期，依同文 Steam 公告（2025-09-18 13:28 UTC，Kyle Brown）；FM26 授權女子賽事名單與「法國頂級聯賽可玩」一句"
+    },
+    {
+      "title": "Introducing Women’s Football（Steam 公告）",
+      "publisher": "Sports Interactive／Steam",
+      "date": "2025-09-18",
+      "url": "https://store.steampowered.com/news/app/3551340/view/1811138915392764",
+      "note": "2025-09-18 13:28 UTC 發布，作者 Kyle Brown；用以確認官網同文的發布日期"
+    },
+    {
+      "title": "FM27: 2D Match Engine, In-Game Editor and Deeper World Upgrades",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-10-16",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-2d-match-engine-game-editor-and-deeper-world-upgrades",
+      "note": "「two new licensed leagues」原句、女子聯賽盃瑞士制、FIFA 女足員工規定、亞洲女子國家隊係數、直播預告原句"
+    },
+    {
+      "title": "Gameplay Preview: New Features & Upgrades in Action | FM27",
+      "publisher": "Football Manager（YouTube）",
+      "date": "2026-10-19",
+      "url": "https://www.youtube.com/watch?v=BFx05-AMBcU",
+      "note": "2026-10-19 16:58:57 UTC 上傳；依影片說明文字，未逐段檢視畫面"
+    },
+    {
+      "title": "FM27 Gameplay Preview: New Features & Upgrades in Action（Steam 公告）",
+      "publisher": "Sports Interactive／Steam",
+      "date": "2026-10-19",
+      "url": "https://store.steampowered.com/news/app/4530370/view/1846651706691568",
+      "note": "2026-10-19 17:06 UTC 發布，作者 chris.groves"
+    },
+    {
+      "title": "Football Manager 27 launches from 10 November",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/news/football-manager-27-launches-10-november",
+      "note": "發售日、Launch Preview、平台"
+    },
+    {
+      "title": "Football Manager 27 launches across platforms from 10 November",
+      "publisher": "SEGA（sega.prezly.com）",
+      "date": "2026-09-30",
+      "url": "https://sega.prezly.com/football-manager-27-launches-across-platforms-from-10-november",
+      "note": "英國售價 £49.99"
+    },
+    {
+      "title": "Football Manager 27 on Steam",
+      "publisher": "Steam",
+      "date": "2026-10-20",
+      "url": "https://store.steampowered.com/app/4530370/Football_Manager_27/",
+      "note": "台灣時間 2026-10-20 清晨查 appdetails（英國區）：10 Nov, 2026、即將推出、無標價"
+    },
+    {
+      "title": "Football Manager 27（Xbox 商店，英國）",
+      "publisher": "Microsoft Store／Xbox",
+      "date": "2026-10-20",
+      "url": "https://www.xbox.com/en-GB/games/store/football-manager-27/9n4nkmxdzcx6",
+      "note": "台灣時間 2026-10-20 清晨查：isPreorder false"
+    }
+  ]
+}
