@@ -1,0 +1,496 @@
+{
+  "column": "civilization",
+  "date": "2026-10-20",
+  "title": "把山海收進國庫：漢代鹽鐵官營怎樣運作",
+  "dek": "漢武帝把煮鹽與冶鐵收歸官營，私煮私鑄者左腳戴鐵鉗。鹽和鐵器誰來做、賣給誰，錢流向哪裡，農民又付出什麼？",
+  "brief": "漢武帝把煮鹽與冶鐵收歸官營，私煮私鑄者左腳戴鐵鉗，收入由大農撥補邊防與用兵。前 81 年的辯論中，賢良指控官鐵器「多為大器，務應員程，不給民用」，窮人甚至「木耕手耨」，但事後只罷了酒專賣與關中鐵官。Wagner 認為專賣既為籌錢，也把擁眾上千的冶鐵豪強收進官僚體系；本文的讀法是，代價多落在買農具的農民身上。",
+  "topic_key": "civilization:han-china-salt-iron-monopoly-2c-bce-1c",
+  "updated_at": "2026-10-20T02:06:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/0025-0220_Brick_Relief_with_Salt-mining_Scene_Eastern_Han_Dynasty_National_Museum_of_China_anagoria.jpg/1280px-0025-0220_Brick_Relief_with_Salt-mining_Scene_Eastern_Han_Dynasty_National_Museum_of_China_anagoria.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/0025-0220_Brick_Relief_with_Salt-mining_Scene_Eastern_Han_Dynasty_National_Museum_of_China_anagoria.jpg/3840px-0025-0220_Brick_Relief_with_Salt-mining_Scene_Eastern_Han_Dynasty_National_Museum_of_China_anagoria.jpg",
+    "width": 1280,
+    "height": 960,
+    "alt": "一塊灰褐色的長方形陶磚，表面有淺浮雕。上半部是層層起伏的山巒，山間有鹿、鳥與奔跑的動物，有人在山中行走。左下角有一座有頂的高架結構，架內與架下各有幾個人形。右下角有一列並排的圓形物，旁邊有人蹲坐。",
+    "caption": "東漢鹽場畫像磚（Commons 檔名作 Brick Relief with Salt-mining Scene），標示為中國國家博物館展品。四川博物院藏有一塊同主題、民國時期在成都邛崍出土的東漢畫像磚，據中國日報網介紹，畫面描繪鑿井、汲取與運送鹵水、煮鹽和背柴的過程。本文未查到國家博物館這一件的出土資料。",
+    "credit": "Anagoria 攝，2019 年；中國國家博物館展品",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:0025-0220_Brick_Relief_with_Salt-mining_Scene_Eastern_Han_Dynasty_National_Museum_of_China_anagoria.jpg",
+    "made": "東漢（25–220）；照片攝於 2019 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "《史記・平準書》記下一份由大農轉呈的奏議，出自兩位管鹽鐵事務的官員孔僅與東郭咸陽：「山海，天地之藏也，皆宜屬少府，陛下不私，以屬大農佐賦。」山和海裡的出產理應歸皇帝的私庫少府；如今皇帝不自己留著，交給掌管國家財政的大農，用來補貼賦稅。奏議接著寫罰則：「敢私鑄鐵器煮鹽者，釱左趾，沒入其器物。」《史記集解》引三國吳人韋昭的注：釱是用鐵做的，戴在左腳上，用來代替砍腳的刑罰。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "本文要回答的是：漢武帝把煮鹽與冶鐵收歸官營以後，鹽和鐵器由誰生產、賣給誰，錢流向哪裡，誰執行、誰挨罰；這套制度在哪裡不靈，又為什麼撤了又恢復。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.16,
+        0.56,
+        0.22,
+        0.4
+      ],
+      "position": "畫面左下角，約佔寬度五分之一",
+      "caption": "左下角的高架結構：有頂的木架裡外有數個人形。依中國日報網對四川博物院同主題畫像磚的介紹，這類畫面表現的是鑿井與汲取鹵水；本報未能查核國家博物館這一件的館方說明，細部用途不作推斷。"
+    },
+    {
+      "type": "h",
+      "text": "定位：西漢武帝到東漢和帝，鹽官與鐵官"
+    },
+    {
+      "type": "p",
+      "text": "《史記》把這份奏議記在一段財政困窘的敘述之後：大將軍衛青、驃騎將軍霍去病大舉出擊匈奴，斬獲八九萬人，賞賜五十萬金，「漢軍馬死者十餘萬匹」，運輸費用還不算在內；「是時財匱，戰士頗不得祿矣」。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "《史記》沒有寫明奏議的年份。研究漢代鐵業的 華道安（Donald B. Wagner） 把武帝批准鹽鐵專賣的年份定在公元前 117 年，本文從此說。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "主事的人本身就是鹽鐵商。《史記》說東郭咸陽是「齊之大煮鹽」，孔僅是「南陽大冶」，兩人都積累了上千金的家產，由鄭當時推薦；同時受重用的桑弘羊是「雒陽賈人子」，靠心算出名，13 歲就在宮中當侍中。《史記》說，這三人談起求利，連秋天獸毛的尖端都分析得清清楚楚（「析秋豪」）。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "我們靠三類材料知道這套制度。第一類是正史：司馬遷的《史記・平準書》是同時代人的記錄，班固《漢書・食貨志》大段沿用並續寫到西漢末年，范曄《後漢書》則保存了東漢廢止專賣的詔書。司馬遷也寫下自己的評價，他在奏議之後補了一句：「吏道益雜，不選，而多賈人矣」，意思是官員的來路越來越雜，不經挑選，多是商人。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "第二類是《鹽鐵論》。公元前 81 年（昭帝始元六年），朝廷召各郡國推舉的「賢良」「文學」到京城，問民間疾苦，他們要求廢除鹽鐵專賣，和御史大夫桑弘羊當廷辯論。據《漢書》卷六十六的贊語，宣帝時的廬江太守丞桓寬把這場辯論「推衍」「增廣條目，極其論難」，寫成數萬字的書。全書最後一篇〈雜論〉是桓寬自己的評語，他稱讚賢良文學，說桑弘羊「處非其位，行非其道，果隕其性，以及厥宗」。所以書中雙方的話，都經過一位有立場的編者整理。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "第三類是考古。Wagner 2001 年指出，當時漢代鐵官經營的冶鐵作坊已有約 30 處經過發掘，產品上的銘文提供了額外的資訊。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/IOC.UTokyo-005306_%E9%B9%BD%E9%90%B5%E8%AB%96%E5%8D%81%E4%BA%8C%E5%8D%B7%E5%98%89%E9%9D%96%E4%B8%89%E5%8D%81%E4%B8%89%E5%B9%B4%E9%9B%B2%E9%96%92%E5%BC%B5%E6%B0%8F%E7%8C%97%E8%98%AD%E5%A0%82%E5%88%8A%E6%9C%AC_%E5%8D%B7%E4%B8%80.pdf/page2-1280px-IOC.UTokyo-005306_%E9%B9%BD%E9%90%B5%E8%AB%96%E5%8D%81%E4%BA%8C%E5%8D%B7%E5%98%89%E9%9D%96%E4%B8%89%E5%8D%81%E4%B8%89%E5%B9%B4%E9%9B%B2%E9%96%92%E5%BC%B5%E6%B0%8F%E7%8C%97%E8%98%AD%E5%A0%82%E5%88%8A%E6%9C%AC_%E5%8D%B7%E4%B8%80.pdf.jpg",
+      "width": 1280,
+      "height": 1081,
+      "alt": "一張攤開的線裝古書對頁，黑白印刷。右頁是目錄的末尾，列著「詔聖五十八」「大論五十九」「雜論六十」。左頁大字寫「鹽鐵論卷之一」，下署「漢 汝南 桓寬 撰」「明 雲間 張之象 註」，再下是「本議第一」，正文以「惟始元六年有詔書使丞相御史與所舉賢良文學語問民間所疾苦」開頭，夾著小字註解；中間蓋有一方藏書印。",
+      "caption": "明嘉靖三十三年（1554 年）雲間張氏猗蘭堂刊本《鹽鐵論》卷一，張之象注。左頁是全書第一篇〈本議〉的開頭：「惟始元六年，有詔書使丞相、御史與所舉賢良、文學語，問民間所疾苦。」辯論發生在前 81 年，這一版是一千六百多年後的刻本。",
+      "credit": "桓寬撰、張之象注；東京大學東洋文化研究所藏（編號 C4445200），Wikimedia Commons 第 2 頁",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:IOC.UTokyo-005306_%E9%B9%BD%E9%90%B5%E8%AB%96%E5%8D%81%E4%BA%8C%E5%8D%B7%E5%98%89%E9%9D%96%E4%B8%89%E5%8D%81%E4%B8%89%E5%B9%B4%E9%9B%B2%E9%96%92%E5%BC%B5%E6%B0%8F%E7%8C%97%E8%98%AD%E5%A0%82%E5%88%8A%E6%9C%AC_%E5%8D%B7%E4%B8%80.pdf",
+      "made": "1554（明嘉靖三十三年刊）",
+      "depicts": "公元前 81 年的鹽鐵會議；桓寬成書於前 1 世紀"
+    },
+    {
+      "type": "h",
+      "text": "追蹤：鹽、鐵器和錢各走哪條路"
+    },
+    {
+      "type": "p",
+      "text": "鹽的辦法寫在同一份奏議裡：「願募民自給費，因官器作煮鹽，官與牢盆。」招募百姓自己負擔費用，用官家的器具煮鹽，官府提供「牢盆」。「牢盆」怎麼解，古人就有爭議。《史記集解》引如淳說，牢是廩食（官給的口糧），盆是煮鹽的盆；《史記索隱》引蘇林說牢是「價直」，即工價，晉灼贊成蘇林；樂產又說牢是盆的名字。不論哪一說，煮鹽的盆都由官府提供。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "鐵則由官府直接經營。奏議說：「郡不出鐵者，置小鐵官，便屬在所縣。」不產鐵礦的郡也設小鐵官，歸所在的縣管。《史記集解》引鄧展的注，小鐵官的工作是「鑄故鐵」，也就是把舊鐵回爐重鑄。孔僅、東郭咸陽隨即坐驛車巡行各地，設立官署，「除故鹽鐵家富者為吏」，把原本經營鹽鐵致富的人任命為官吏。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "Wagner 依《漢書》與考古材料整理：到公元 2 年，全國有 48 處鐵官，每處至少管一座冶鐵作坊，常常不只一座。鐵官用高爐從礦石煉出生鐵，出售鑄鐵農具與鐵料；幾乎所有的鐵製和鋼製兵器，則由其他與專賣體系無直接關係的官方作坊，用鐵官出的鐵料另行打造。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "小鐵官的「鑄故鐵」，在考古上可以找到類似的做法。林永昌（Wengcheong Lam）等人 2018 年在《考古科學期刊》（Journal of Archaeological Science）分析陝西渭河谷地的邰城（Taicheng）遺址：這座小作坊遠離鐵礦，以回收的廢鐵和外地運來的半成品為原料，出土的陶範主要是鋤頭類農具與犁鏵兩類；附近墓葬裡的多數鐵器，作者認為未必完全是這座作坊做的，而是透過交換取得。作者也說明，這座作坊的主要使用期早於專賣。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，鄧展說的「鑄故鐵」並非憑空設計：不產礦的地方本來就有回收舊鐵的小作坊，小鐵官很可能是把這類作業納入官營。但邰城的年代早於專賣，它能說明技術上做得到，不能證明小鐵官就是這樣運作。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "錢的去向，正史寫得很直接。武帝在南方新設 17 個「初郡」，照當地舊俗治理、不收賦稅，這些郡時常小規模反叛、殺害官吏，朝廷派南方官兵前去鎮壓，「閒歲萬餘人，費皆仰給大農」；「大農以均輸調鹽鐵助賦，故能贍之」。前 110 年（元封元年），桑弘羊以治粟都尉兼領大農，「盡代僅筦天下鹽鐵」，取代孔僅掌管全國鹽鐵，並推行均輸與平準。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "在《鹽鐵論》第一篇〈本議〉裡，替官方說話的「大夫」把專賣的理由說得更明白：匈奴屢次犯邊，「邊用度不足，故興鹽、鐵，設酒榷，置均輸，蕃貨長財，以佐助邊費」。廢了它，就是「內空府庫之藏，外乏執備之用」。",
+      "tag": "史料"
+    },
+    {
+      "type": "svg",
+      "title": "官營之後：鹽、鐵器與錢的流向",
+      "svg": "<svg viewBox='0 0 360 600' xmlns='http://www.w3.org/2000/svg' font-size='11'>\n<defs>\n<marker id='ah' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='ink'/></marker>\n<marker id='ahg' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='gold'/></marker>\n<marker id='aha' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='accent'/></marker>\n</defs>\n<rect x='60' y='8' width='240' height='40' rx='3' class='soft'/>\n<text x='180' y='25' text-anchor='middle' class='ink' font-size='12.5' font-weight='600'>山海之藏</text>\n<text x='180' y='40' text-anchor='middle' class='muted' font-size='10'>鹽井、海鹽、鐵礦、木炭</text>\n<line x1='120' y1='48' x2='92' y2='76' class='ink' stroke='currentColor' marker-end='url(#ah)'/>\n<line x1='240' y1='48' x2='268' y2='76' class='ink' stroke='currentColor' marker-end='url(#ah)'/>\n<rect x='8' y='78' width='164' height='58' rx='3' class='soft'/>\n<text x='18' y='95' class='ink' font-size='11.5' font-weight='600'>鹽：募民煮鹽</text>\n<text x='18' y='110' class='muted' font-size='10'>鹽戶自出費用</text>\n<text x='18' y='124' class='muted' font-size='10'>用官器，官給「牢盆」</text>\n<rect x='188' y='78' width='164' height='58' rx='3' class='soft'/>\n<text x='198' y='95' class='ink' font-size='11.5' font-weight='600'>鐵：鐵官冶鑄</text>\n<text x='198' y='110' class='muted' font-size='10'>卒徒、工匠、踐更卒</text>\n<text x='198' y='124' class='muted' font-size='10'>公元 2 年有 48 處（Wagner）</text>\n<rect x='188' y='146' width='164' height='40' rx='3' class='paper' stroke='currentColor' stroke-dasharray='3 2' fill-opacity='0'/>\n<text x='198' y='162' class='ink' font-size='11'>小鐵官（不產鐵之郡）</text>\n<text x='198' y='177' class='muted' font-size='10'>屬所在縣；舊注「鑄故鐵」</text>\n<line x1='90' y1='136' x2='90' y2='214' class='ink' stroke='currentColor' marker-end='url(#ah)'/>\n<line x1='270' y1='186' x2='270' y2='214' class='ink' stroke='currentColor' marker-end='url(#ah)'/>\n<rect x='8' y='216' width='344' height='50' rx='3' class='paper'/>\n<rect x='8' y='216' width='4' height='50' class='accent'/>\n<text x='22' y='234' class='ink' font-size='12' font-weight='600'>鹽官、鐵官出售鹽與鐵器</text>\n<text x='22' y='250' class='muted' font-size='10'>官定價；批評者說價高、器劣，賣不出就攤派給民</text>\n<line x1='90' y1='266' x2='90' y2='300' class='ink' stroke='currentColor' marker-end='url(#ah)'/>\n<line x1='270' y1='266' x2='270' y2='300' class='gold' stroke='currentColor' stroke-width='1.6' marker-end='url(#ahg)'/>\n<rect x='8' y='302' width='164' height='58' rx='3' class='soft'/>\n<text x='18' y='319' class='ink' font-size='11.5' font-weight='600'>農民與一般家戶</text>\n<text x='18' y='334' class='muted' font-size='10'>買鹽、買農具</text>\n<text x='18' y='348' class='muted' font-size='10'>沿路「良家」被派去運鹽鐵</text>\n<rect x='188' y='302' width='164' height='58' rx='3' class='soft'/>\n<text x='198' y='319' class='ink' font-size='11.5' font-weight='600'>大農（後稱大司農）</text>\n<text x='198' y='334' class='muted' font-size='10'>收入歸國家財政</text>\n<text x='198' y='348' class='muted' font-size='10'>「以均輸調鹽鐵助賦」</text>\n<line x1='270' y1='360' x2='270' y2='396' class='gold' stroke='currentColor' stroke-width='1.6' marker-end='url(#ahg)'/>\n<rect x='188' y='398' width='164' height='44' rx='3' class='soft'/>\n<text x='198' y='415' class='ink' font-size='11.5' font-weight='600'>邊費與用兵</text>\n<text x='198' y='431' class='muted' font-size='10'>屯戍、征伐、新設初郡</text>\n<rect x='8' y='398' width='164' height='44' rx='3' class='paper' stroke='currentColor' fill-opacity='0'/>\n<text x='18' y='415' class='accent' font-size='11.5' font-weight='600'>私煮鹽、私鑄鐵器</text>\n<text x='18' y='431' class='muted' font-size='10'>左腳戴鐵鉗，沒收器物</text>\n<line x1='90' y1='398' x2='90' y2='366' class='accent' stroke='currentColor' stroke-dasharray='4 3' marker-end='url(#aha)'/>\n<text x='8' y='470' class='ink' font-size='10.5'>黑箭頭：鹽與鐵器　金箭頭：錢　紅虛線：禁令</text>\n<text x='8' y='488' class='muted' font-size='9.5'>示意，不按比例，不表示實際數量。</text>\n<text x='8' y='503' class='muted' font-size='9.5'>依《史記・平準書》《鹽鐵論》〈禁耕〉〈水旱〉</text>\n<text x='8' y='518' class='muted' font-size='9.5'>與 Wagner（2001）整理。</text>\n</svg>",
+      "caption": "示意，不按比例。依《史記・平準書》、《鹽鐵論》〈禁耕〉〈水旱〉與 Wagner 的整理繪製；「賣不出就攤派」「沿路良家運鹽鐵」是批評者的說法，不是官方規定。"
+    },
+    {
+      "type": "h",
+      "text": "權力：誰下令、誰執行、誰被罰"
+    },
+    {
+      "type": "p",
+      "text": "專賣之前，鹽鐵是造就巨富的行業。《史記・貨殖列傳》記載，蜀地卓氏的祖先是趙國人，靠冶鐵致富，秦滅趙後被遷到臨邛，「即鐵山鼓鑄」，富到擁有「僮千人」；南陽孔氏的祖先是魏國人，也被秦遷去，「大鼓鑄，規陂池」，家產達數千金。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "官方在《鹽鐵論・復古》裡描述這些豪強：「一家聚眾，或至千餘人，大抵盡收放流人民也。」這些人離鄉背井、拋下祖墳，依附大家族，聚在「深山窮澤之中」。〈禁耕〉篇裡，大夫又舉漢初的吳王為例，說他獨佔山澤之利，薄收賦稅、救濟窮人，「以成私威」；私威累積，叛逆之心隨之而生。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "Wagner 認為，專賣的首要理由之一是財政收入：對匈奴等游牧勢力的積極政策需要新財源，而工業致富的人是明顯的目標。他也指出，當時的國家對農業以外的收稅經驗很少，大小業者都容易少報產量；國家的解法是把生產者收進政府。另一個理由，是控制這些擁有大批工人的豪強。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "Wagner 還注意到收編的另一面：許多（也許大部分）原來的冶鐵業者被任命為新作坊的管理者，技術工人如燒炭工、礦工、爐匠也被留用；粗活則交給刑徒，或許還有服徭役的農民。考古所見的官營冶鐵作坊多半設在城市附近，常常就在城牆外幾百公尺。對燒木炭的高爐來說，這是很不利的位置：燃料要和城裡居民搶，礦石大概也要遠道運來。他認為這是為了方便管理，也可能是為了看管大批刑徒。他也說，表面看來，這筆交易在許多方面對業者同樣划算。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "勞力從哪裡來，《鹽鐵論》兩邊說法不同。官方引前扇水都尉彭祖的話：「卒徒衣食縣官，作鑄鐵器，給用甚眾，無妨於民。」批評者在〈禁耕〉篇裡則列出另一本帳：鹽場和冶鐵場多在山川之間、靠近鐵礦和木炭的地方，路遠活重；輪到服役的人多半吃不消，只好出錢雇人代替；有的縣按戶口攤派鐵；沿途的「良家」被輪派去運鹽運鐵，「煩費，百姓病苦之」。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，專賣的成本不只算在鹽鐵的售價上。若照 Wagner 的推測，刑徒和役夫的勞動在帳上記為零成本，運輸又攤在沿路的家戶身上，帳面上的利潤，有一部分是把這些成本移到帳外換來的。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "限制：農具不合用、賣不出、價錢高"
+    },
+    {
+      "type": "p",
+      "text": "問題很早就浮現。武帝任用的卜式當上御史大夫後，發現各郡國多半不喜歡官府經營鹽鐵，說官鐵器「苦惡，賈貴」，品質差、價錢高，有時還強迫百姓買賣。他又就船隻課稅使商人減少、物價上漲一事進言（原文「乃因孔僅言船算事」），《史記》說「上由是不悅卜式」。元封元年（前 110 年），卜式被貶為太子太傅。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "前 81 年的辯論把這些抱怨講得更具體。〈水旱〉篇裡，賢良先說：「鐵器，民之大用也。器用便利，則用力少而得作多。」接著指控官營的產品：",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "text": "縣官鼓鑄鐵器，大抵多為大器，務應員程，不給民用。民用鈍弊，割草不痛，是以農夫作劇，得獲者少，百姓苦之矣。",
+      "cite": "《鹽鐵論・水旱》，賢良語"
+    },
+    {
+      "type": "p",
+      "text": "「務應員程」，是說作坊只求達到規定的數額。賢良又說，官器「多堅，善惡無所擇」，管事的吏常不在，器具難買；家戶又不能多存；農忙時要放下農事遠赴市集買農具，就誤了農時。結果是「鹽、鐵賈貴，百姓不便。貧民或木耕手耨，土耰淡食」，有人改用木頭耕田、用手除草，吃沒有鹽味的飯。「鐵官賣器不售或頗賦與民」：賣不掉的器具，就攤派給百姓；「卒徒作不中呈，時命助之」，大意是刑徒做不足定額時，還要徵派百姓幫忙。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "〈禁耕〉篇的批評則是地方差異：「秦、楚、燕、齊，士力不同，剛柔異勢，巨小之用，居局之宜，黨殊俗易，各有所便。縣官籠而一之，則鐵器失其宜，而農民失其便。」各地的土壤與用法不同，官府統一規格，農具就不合用。同一篇裡，文學說：「鐵器者，農夫之死生也。」",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "官方的回答是私人作坊才做不好。大夫說，家戶合夥做鐵器，時間緊、人力累，「鐵力不銷煉，堅柔不和」；官營則是卒徒工匠天天為公家工作，「財用饒，器用備」，只要吏好好教、工匠盡力，就能「剛柔和，器用便」。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "Wagner 坦白說，大夫這段話的技術用語，如今已無法確切理解。Wagner 對價格另有一個推測：刑徒和服役者的勞動在帳上大概記為零成本，所以專賣品的定價幾乎是任意的。如果早年官鐵賣得比私鐵便宜，禁令就更容易執行。他也提到，依他寫作時的考古材料，適合小規模生產的塊煉鐵法在漢初的中國似乎完全消失；若是如此，比較可能是禁令造成的，而不只是競爭不過高爐。他也說未來的發現可能推翻此說。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "批評者口中的過去也要打折扣。賢良說，從前百姓可以自報產量納稅、自己鑄鐵煮鹽時，「鹽與五穀同賈，器和利而中用」，父子合力，做不好的器具賣不出去。「同賈」字面上是同價，Wagner 的英譯則理解為鹽和穀物一起販售。不論哪一種讀法，這都是要求廢除專賣的一方對舊日的描述，我的讀法是，它更像辯論用的對照組，不宜當成市場紀錄。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "figure",
+      "id": "f3",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Han_Iron_Plowshare.jpg/1280px-Han_Iron_Plowshare.jpg",
+      "width": 1280,
+      "height": 853,
+      "alt": "淺灰色布面上平放一件深褐色的鐵器，形狀像一個尖頭朝上的盾牌，中央有一道隆起的脊，表面粗糙，布滿鏽斑。",
+      "caption": "河南三門峽市博物館秦漢展廳的漢代鐵犁鏵。賢良說官營鐵器「多為大器」、不合各地農民使用，大夫則說官營作坊「剛柔和，器用便」；兩方爭的，就是這類套在犁頭上翻土的鑄鐵農具。照片未記錄這件犁鏵的出土地點與確切年代。",
+      "credit": "Gary Todd 攝，2015 年；三門峽市博物館展品",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Han_Iron_Plowshare.jpg",
+      "made": "漢代（未見更細的定年）；照片攝於 2015 年"
+    },
+    {
+      "type": "h",
+      "text": "結果：辯論之後，撤了又設，設了又撤"
+    },
+    {
+      "type": "p",
+      "text": "辯論的結局寫在《鹽鐵論・取下》的最後。公卿神色不安，「寂若無人」，於是停止辯論，上奏說：「賢良、文學不明縣官事，猥以鹽、鐵為不便。請且罷郡國榷沽、關內鐵官。」皇帝批准。《漢書・昭帝紀》也記載，始元六年二月下詔問賢良文學民間疾苦，「議罷鹽鐵榷酤」；同年七月「罷榷酤官」。被廢掉的是郡國的酒類專賣和關中（京城周邊）的鐵官，全國的鹽鐵專賣照舊。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "主張保留專賣的桑弘羊，隔年就死了。據《漢書・昭帝紀》，元鳳元年（前 80 年）九月，他與上官桀等人以謀反罪名被誅；《漢書・食貨志》說他自恃為國家興利有功，想替子弟求官，怨恨大將軍霍光，因而與上官桀等謀反。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "第二次撤廢在元帝時。《漢書・食貨志》說，元帝即位後關東大水，齊地饑荒，「在位諸儒多言鹽鐵官及北假田官、常平倉可罷，毋與民爭利」，元帝照辦；「其後用度不足，獨復鹽鐵官」，另一處說「三年而復之」。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "Wagner 把這次撤廢定在前 44 年，三年後恢復。Wagner 認為，這次撤廢多半出於意識形態，恢復則是現實所迫：一個大產業不可能一下子私有化而不牽動整個經濟，問題大概很快就浮現。他也概述東漢的情形：公元 25 年漢朝復興後，鐵官似乎繼續生產，同時也允許私人生產；他註明 Bielenstein 對這段有不同的解釋。公元 85 年專賣短暫恢復，88 年再度廢止。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "88 年那道廢止詔書保存在《後漢書・和帝紀》。章和二年二月，10 歲的和帝即位，由皇太后臨朝；四月戊寅下詔，先回顧：「昔孝武皇帝致誅胡、越，故權收鹽鐵之利，以奉師旅之費。」又說先帝為防備邊境再收鹽鐵，「而吏多不良，動失其便，以違上意」，所以留下遺命，「罷鹽鐵之禁，縱民煑鑄，入稅縣官如故事」：讓百姓自由煮鹽鑄鐵，照舊向官府納稅。",
+      "tag": "史料"
+    },
+    {
+      "type": "timeline",
+      "title": "漢代鹽鐵官營：本文用到的年份",
+      "items": [
+        {
+          "when": "前 117 年",
+          "label": "鹽鐵收歸官營",
+          "note": "孔僅、東郭咸陽奏請；年份依 Wagner"
+        },
+        {
+          "when": "前 110 年",
+          "label": "桑弘羊領大農",
+          "note": "元封元年，「盡代僅筦天下鹽鐵」，行均輸、平準"
+        },
+        {
+          "when": "前 81 年",
+          "label": "鹽鐵會議",
+          "note": "始元六年二月詔問賢良文學；七月罷榷酤官；〈取下〉另記罷關內鐵官"
+        },
+        {
+          "when": "前 80 年",
+          "label": "桑弘羊被誅",
+          "note": "元鳳元年九月，以謀反罪"
+        },
+        {
+          "when": "前 74–49 年",
+          "label": "桓寬編《鹽鐵論》",
+          "note": "宣帝時；起訖年依 Wagner"
+        },
+        {
+          "when": "前 44 年",
+          "label": "元帝罷鹽鐵官",
+          "note": "三年後因用度不足恢復"
+        },
+        {
+          "when": "公元 2 年",
+          "label": "全國 48 處鐵官",
+          "note": "依 Wagner 整理"
+        },
+        {
+          "when": "85 年",
+          "label": "章帝復收鹽鐵",
+          "note": "短暫恢復"
+        },
+        {
+          "when": "88.4",
+          "label": "和帝詔罷鹽鐵之禁",
+          "note": "「縱民煑鑄，入稅縣官如故事」"
+        }
+      ],
+      "caption": "依《史記》《漢書》《後漢書》《鹽鐵論》與 Wagner 的整理。前 117 年是 Wagner 採用的年份，《史記》本身沒有寫明奏議的年份。"
+    },
+    {
+      "type": "h",
+      "text": "學界怎麼說：財政、控制，還是一場被改寫的辯論"
+    },
+    {
+      "type": "p",
+      "text": "第一個爭點是辯論到底改變了什麼。法蘭克福大學經濟學者 Schefold 2017 年的會議論文，引用魯惟一（Michael Loewe）1974 年《漢代中國的危機與衝突》（Crisis and Conflict in Han China）對〈取下〉那份奏議的英譯，認為這個妥協其實證明了政府一方站得住：鹽的專賣保留下來作為財源，鐵的生產也大致留在國家控制之下。Wagner 的說法相近：這次質詢對政策幾乎沒有影響，批評則持續不斷。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "第二個爭點是誰在反對。Wagner 覺得奇怪的是，大部分批評似乎來自各地的農業利益，而不是被收編的冶鐵業者。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，這和他對收編的分析可以對上：業者換到官位與穩定的地位，沒有理由反對；吃虧的是買不到合用農具的農民，替他們說話的則是各郡推舉來的賢良文學。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "第三個爭點是文本本身。Schefold 坦言，我們不知道桓寬對真實辯論的記錄有多準確，只能說讀來有真實感。他也轉述 Vogel 2002 年的整理：文化大革命時期，論者把書中的法家官員視為進步力量、把儒生看成反動派，改革開放後的看法才較有層次。據 Schefold 轉述，Vogel 也指出當時冶鐵勞力的來源並不一致，有自由雇工、有依附關係的人，也有國家徵調的勞力和軍隊生產。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "Wagner 還指出辯論裡缺了什麼：大型官營冶鐵場設在人口集中的城市附近，必然造成污染，也加速森林砍伐，但《鹽鐵論》裡完全沒有提到。要不是當時沒人提出，就是桓寬沒有選錄；他認為兩者都說不太通。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，漢代鹽鐵官營要同時解決三件事：替邊防找錢、把擁眾上千的豪強收進官僚體系、讓大規模生產維持下去。前兩件做到了，代價落在第三件的末端：農具的規格、價格和取得的方便，由只對定額負責的作坊決定。兩次撤廢都沒撐過「用度不足」，最後在東漢放開民間煮鑄、向業者收稅，鐵官則繼續生產。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "你的世界裡，最賺錢的資源（鹽、鐵、香料、魔法礦石）是由國家自己經營、包給商人，還是只收稅？選擇背後，是缺錢、怕豪強，還是兩者都有？",
+        "國家收編了原本的業主，讓他們當官管理同一門生意。這些人效忠的是朝廷，還是自己的老行當？他們和出身學問的官員怎樣相處？",
+        "官營作坊只對「定額」負責時，誰來發現產品不合用？抱怨要經過幾層才會傳到決策者耳中，傳上去的人會不會像卜式那樣失寵？",
+        "一套制度被撤掉後又因「用度不足」恢復，誰最清楚這件事？撤與復之間的三年，市場、工匠與地方官各發生了什麼？"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "史記・卷三十・平準書",
+      "publisher": "司馬遷撰；維基文庫",
+      "date": "前 1 世紀初",
+      "url": "https://zh.wikisource.org/wiki/%E5%8F%B2%E8%A8%98/%E5%8D%B7030",
+      "note": "孔僅、東郭咸陽奏議與罰則；三人出身；對匈奴用兵的開支；卜式的批評；初郡與「大農以均輸調鹽鐵助賦」；元封元年桑弘羊領大農"
+    },
+    {
+      "title": "史記三家註・卷三十・平準書（集解、索隱）",
+      "publisher": "裴駰、司馬貞等注；維基文庫",
+      "date": "5–8 世紀",
+      "url": "https://zh.wikisource.org/wiki/%E5%8F%B2%E8%A8%98%E4%B8%89%E5%AE%B6%E8%A8%BB/%E5%8D%B7030",
+      "note": "如淳、蘇林、晉灼、樂產論「牢盆」；韋昭注「釱」；鄧展注小鐵官「鑄故鐵」"
+    },
+    {
+      "title": "史記・卷一百二十九・貨殖列傳",
+      "publisher": "司馬遷撰；維基文庫",
+      "date": "前 1 世紀初",
+      "url": "https://zh.wikisource.org/wiki/%E5%8F%B2%E8%A8%98/%E5%8D%B7129",
+      "note": "蜀卓氏、宛孔氏的冶鐵致富"
+    },
+    {
+      "title": "漢書・卷二十四・食貨志",
+      "publisher": "班固撰；維基文庫",
+      "date": "1 世紀",
+      "url": "https://zh.wikisource.org/wiki/%E6%BC%A2%E6%9B%B8/%E5%8D%B7024",
+      "note": "與《史記》對讀奏議；昭帝時賢良文學之議與桑弘羊之死；元帝罷鹽鐵官與「三年而復之」"
+    },
+    {
+      "title": "漢書・卷七・昭帝紀",
+      "publisher": "班固撰；維基文庫",
+      "date": "1 世紀",
+      "url": "https://zh.wikisource.org/wiki/%E6%BC%A2%E6%9B%B8/%E5%8D%B7007",
+      "note": "始元六年二月詔問、七月罷榷酤官；元鳳元年九月桑弘羊伏誅"
+    },
+    {
+      "title": "漢書・卷六十六・公孫劉田王楊蔡陳鄭傳（贊）",
+      "publisher": "班固撰；維基文庫",
+      "date": "1 世紀",
+      "url": "https://zh.wikisource.org/wiki/%E6%BC%A2%E6%9B%B8/%E5%8D%B7066",
+      "note": "鹽鐵之議的緣起與桓寬「推衍鹽鐵之議」"
+    },
+    {
+      "title": "後漢書・卷四・孝和孝殤帝紀",
+      "publisher": "范曄撰，李賢注；維基文庫",
+      "date": "5 世紀",
+      "url": "https://zh.wikisource.org/wiki/%E5%BE%8C%E6%BC%A2%E6%9B%B8/%E5%8D%B74",
+      "note": "章和二年二月和帝即位、四月戊寅罷鹽鐵之禁詔"
+    },
+    {
+      "title": "鹽鐵論・卷一（本議、禁耕、復古）",
+      "publisher": "桓寬撰；維基文庫",
+      "date": "前 1 世紀（宣帝時）",
+      "url": "https://zh.wikisource.org/wiki/%E9%B9%BD%E9%90%B5%E8%AB%96/%E5%8D%B701",
+      "note": "始元六年詔書；大夫論邊費；吳王與豪強；文學論地方差異、勞役與運輸；扇水都尉彭祖之言"
+    },
+    {
+      "title": "鹽鐵論・卷六（水旱）",
+      "publisher": "桓寬撰；維基文庫",
+      "date": "前 1 世紀（宣帝時）",
+      "url": "https://zh.wikisource.org/wiki/%E9%B9%BD%E9%90%B5%E8%AB%96/%E5%8D%B706",
+      "note": "賢良論官鐵器「務應員程」、木耕手耨、攤派；大夫論私鑄「鐵力不銷煉」"
+    },
+    {
+      "title": "鹽鐵論・卷七（取下）",
+      "publisher": "桓寬撰；維基文庫",
+      "date": "前 1 世紀（宣帝時）",
+      "url": "https://zh.wikisource.org/wiki/%E9%B9%BD%E9%90%B5%E8%AB%96/%E5%8D%B707",
+      "note": "辯論結束與「請且罷郡國榷沽、關內鐵官」的奏議"
+    },
+    {
+      "title": "鹽鐵論・卷十（雜論）",
+      "publisher": "桓寬撰；維基文庫",
+      "date": "前 1 世紀（宣帝時）",
+      "url": "https://zh.wikisource.org/wiki/%E9%B9%BD%E9%90%B5%E8%AB%96/%E5%8D%B710",
+      "note": "桓寬對賢良文學與桑弘羊的評語"
+    },
+    {
+      "title": "Technology as seen through the case of ferrous metallurgy in Han China（Donald B. Wagner）",
+      "publisher": "作者網站英文稿；義大利文版刊於 Enciclopedia Italiana《Storia della scienza》第 2 卷",
+      "date": "2001",
+      "url": "https://donwagner.dk/EncIt/EncIt.html",
+      "note": "全文：前 117 年專賣、公元 2 年 48 處鐵官、約 30 處遺址、勞力、作坊位置、定價、塊煉鐵消失、撤廢與恢復、85 年與 88 年；英文網頁未標日期，年份依義大利文版"
+    },
+    {
+      "title": "The Restoration of the Han Dynasty, Vol. IV: The Government（Hans Bielenstein，BMFEA 51，1979；轉引自 Wagner 書目）",
+      "publisher": "轉引自 Wagner 上文 Box 1",
+      "date": "1979",
+      "url": "https://donwagner.dk/EncIt/EncIt.html",
+      "note": "未讀原書"
+    },
+    {
+      "title": "An iron production and exchange system at the center of the Western Han Empire: Scientific study of iron products and manufacturing remains from the Taicheng site complex（Lam, Chen, Chong, Lei, Tam）",
+      "publisher": "Journal of Archaeological Science 100: 88–101；北京大學考古文博學院網站 PDF",
+      "date": "2018",
+      "url": "https://archaeology.pku.edu.cn/2018An-iron-production-and-exchange-system-at-the-center-of-the-Western-Han-Empire.pdf",
+      "note": "摘要、引言與結論：邰城小作坊以廢鐵與外來半成品鑄農具，主要使用期早於專賣"
+    },
+    {
+      "title": "A Western Perspective on the Yantie lun（Bertram Schefold，second draft）",
+      "publisher": "21st Annual ESHET Conference, University of Antwerp",
+      "date": "2017-05",
+      "url": "https://medialibrary.uantwerpen.be/oldcontent/container42730/files/Schefold-366992.pdf",
+      "note": "第 1–2 節：桓寬記錄的可靠性、Loewe 對〈取下〉奏議的英譯與妥協、Vogel 的整理"
+    },
+    {
+      "title": "Crisis and Conflict in Han China, 104 BC to AD 9（Michael Loewe）",
+      "publisher": "Allen & Unwin；轉引自 Schefold 2017",
+      "date": "1974",
+      "url": "https://medialibrary.uantwerpen.be/oldcontent/container42730/files/Schefold-366992.pdf",
+      "note": "未讀原書，據 Schefold 轉引頁 92 的譯文"
+    },
+    {
+      "title": "「Das Yantie lun」: Ereignisse und Rezeption（Hans Ulrich Vogel）",
+      "publisher": "收於 Schefold 編（2002）；轉引自 Schefold 2017",
+      "date": "2002",
+      "url": "https://medialibrary.uantwerpen.be/oldcontent/container42730/files/Schefold-366992.pdf",
+      "note": "未讀原文，據 Schefold 轉述"
+    },
+    {
+      "title": "Han Dynasty brick relief illustrates salt-mining scene",
+      "publisher": "China Daily（chinaservicesinfo.com）；圖片來源四川博物院",
+      "date": "2025-01-24",
+      "url": "https://www.chinaservicesinfo.com/s/202501/24/WS679372f6498eec7e1f72e2f0/han-dynasty-brick-relief-illustrates-salt-mining-scene.html",
+      "note": "四川博物院藏邛崍出土鹽場畫像磚的內容說明"
+    },
+    {
+      "title": "File:IOC.UTokyo-005306 鹽鐵論十二卷嘉靖三十三年雲閒張氏猗蘭堂刊本 卷一.pdf",
+      "publisher": "東京大學東洋文化研究所；Wikimedia Commons",
+      "date": "1554",
+      "url": "https://commons.wikimedia.org/wiki/File:IOC.UTokyo-005306_%E9%B9%BD%E9%90%B5%E8%AB%96%E5%8D%81%E4%BA%8C%E5%8D%B7%E5%98%89%E9%9D%96%E4%B8%89%E5%8D%81%E4%B8%89%E5%B9%B4%E9%9B%B2%E9%96%92%E5%BC%B5%E6%B0%8F%E7%8C%97%E8%98%AD%E5%A0%82%E5%88%8A%E6%9C%AC_%E5%8D%B7%E4%B8%80.pdf",
+      "note": "第 2 頁"
+    }
+  ]
+}
