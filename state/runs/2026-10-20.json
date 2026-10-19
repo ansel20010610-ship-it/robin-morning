@@ -9,5 +9,14 @@
       "tactics"
     ],
     "note": "完成並推送晨光（創 28:12–17）、古典（德弗札克第九）、牙周（Papapanou 2018 分期分級）三篇，皆經審稿修正，validate 無 ERROR"
+  },
+  "2": {
+    "finished_at": "2026-10-20T02:07:14+08:00",
+    "missing": [
+      "football",
+      "literature",
+      "tactics"
+    ],
+    "note": "完成 civilization（漢代鹽鐵官營）與 fiction（場景結尾的鉤子），各經審稿子代理核對後修正並推送；validate 無 ERROR。"
   }
 }
