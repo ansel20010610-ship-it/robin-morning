@@ -5,7 +5,7 @@
   "dek": "Eric García、孔德、克里斯滕森缺陣，弗利克考慮讓德容或羅德里補中衛。台灣時間週三 03:00 作客巴黎，法國示威不影響比賽。",
   "brief": "巴薩台灣時間 10 月 21 日（週三）03:00 作客巴黎聖日耳曼，兩隊都是歐冠兩戰全勝，贏球將是弗利克執教巴薩第 100 勝。Eric García、孔德與克里斯滕森缺陣，ESPN 指庫巴西是唯一確定可上的中衛，弗利克點名德容、羅德里與 Àlex Campos。恩里克說防亞馬爾的辦法是不讓巴薩拿球。",
   "topic_key": "football:2026-10-20",
-  "updated_at": "2026-10-20T02:59:00+08:00",
+  "updated_at": "2026-10-20T05:21:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -38,7 +38,7 @@
     {
       "type": "p",
       "tag": "報導",
-      "text": "Gerard Martín 的狀況各家說法不一。ESPN 記者 Sam Marsden 寫他在對貝提斯時受了碰撞、出賽仍有小疑問，因此庫巴西是唯一確定能上場的中衛；Infobae 刊出的 Europa Press 稿說，弗利克在記者會上明確表示拉菲尼亞與 Gerard Martín 都能在週二先發；同樣刊在 Infobae 的 EFE 稿卻寫「Flick no dio indicaciones sobre Martí」（弗利克沒有說明 Gerard Martín 的情況；本文自譯）。拉菲尼亞方面，ESPN 記錄弗利克說他「can start」（可以先發），Goal 則引述他 10 月 19 日說的「He will be in the starting line-up tomorrow」（他明天會先發，指巴黎時間 10 月 20 日晚的比賽；本文自譯）。孔德的復出時間，EFE 寫弗利克有信心他能趕上週末對皇馬的國家德比；Europa Press 記錄的說法較保守，弗利克說希望孔德早日回來，「或許」也能成為週末的選項。"
+      "text": "Gerard Martín 的狀況各家說法不一。ESPN 記者 Sam Marsden 寫他在對貝提斯時受了碰撞、出賽仍有小疑問，因此庫巴西是唯一確定能上場的中衛；Infobae 刊出的 Europa Press 稿說，弗利克在記者會上明確表示拉菲尼亞與 Gerard Martín 都能在週二先發；同樣刊在 Infobae 的 EFE 稿卻寫「Flick no dio indicaciones sobre Martí」（弗利克沒有說明 Gerard Martín 的情況；本文自譯）。拉菲尼亞方面，ESPN 記錄弗利克說他「can start」（可以先發），Goal 則引述他 10 月 19 日說的「He will be in the starting line-up tomorrow」（他明天會先發，指巴黎時間 10 月 20 日晚的比賽；本文自譯）。巴薩官網的訓練紀錄則寫，記者會結束後，弗利克帶著全部 23 名隨隊球員在王子公園球場進行適應場地的訓練（巴黎時間週一 18:30 開始）；官網沒有個別提到 Gerard Martín 的狀況。孔德的復出時間，EFE 寫弗利克有信心他能趕上週末對皇馬的國家德比；Europa Press 記錄的說法較保守，弗利克說希望孔德早日回來，「或許」也能成為週末的選項。"
     },
     {
       "type": "quote",
@@ -190,6 +190,13 @@
       "type": "news",
       "title": "歐洲足壇速覽",
       "items": [
+        {
+          "headline": "當地週一晚間賽果（台灣時間今晨）：熱刺 3 比 1 勝考文垂拿下本季聯賽首勝，赫塔菲 10 人逼和巴列卡諾",
+          "summary": "英超方面，熱刺在第 7 輪才拿到本季第一場聯賽勝利：麥迪遜（James Maddison）第 14 分鐘遠射破門，考文垂的 Rudoni 下半場扳平後，Marmoush 攻進加盟熱刺後的第一球，Ben Davies 補時再進一球；因膝傷缺陣 526 天的庫盧塞夫斯基（Dejan Kulusevski）第 86 分鐘（ESPN 比賽紀錄記為 87 分）替補復出。熱刺以 6 分升到第 16，憑淨勝球排在考文垂之前。西甲第 9 輪，赫塔菲（Getafe）在主場 1 比 1 和巴列卡諾（Rayo Vallecano）：巴列卡諾的 Álvaro García 第 11 分鐘先進球，赫塔菲的 Djené 第 28 分鐘被紅牌罰下，Satriano 下半場扳平。",
+          "source": "ESPN、英超官網、西甲官網、Infobae（EFE）",
+          "url": "https://www.espn.com/soccer/report/_/gameId/401879257",
+          "when": "10 月 19 日（當地時間）晚間"
+        },
         {
           "headline": "C 羅遭葡萄牙足協禁賽 30 天、罰款 255 歐元",
           "summary": "葡萄牙足協紀律委員會 10 月 19 日公布，認定 C 羅（Cristiano Ronaldo）違反紀律規章第 160 條第 1 項，原因是他在國家隊集訓期間與國家隊總教練若熱・熱蘇斯（Jorge Jesus，與巴薩前鋒熱蘇斯並非同一人）爭執後，離開哥本哈根的營地。Al Jazeera 指出，聲明沒有說明禁賽涵蓋哪些比賽，也沒說先前的臨時停權是否折抵；C 羅曾道歉，表示服完處分後仍願意入選。",
@@ -489,6 +496,55 @@
       "publisher": "ESPN",
       "date": "2026-10-19",
       "url": "https://www.espn.com/soccer/story/_/id/50217107/sarina-wiegman-contract-extension-england-women-lionesses"
+    },
+    {
+      "title": "First contact with Parc des Princes",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-19",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4594810/first-contact-with-parc-des-princes",
+      "note": "23 人在王子公園球場訓練、開始時間"
+    },
+    {
+      "title": "Kulusevski returns as Spurs get first Premier League win of season",
+      "publisher": "ESPN",
+      "date": "2026-10-19",
+      "url": "https://www.espn.com/soccer/report/_/gameId/401879257",
+      "note": "熱刺對考文垂賽後報導"
+    },
+    {
+      "title": "Dejan Kulusevski makes Tottenham return 526 days after suffering knee injury",
+      "publisher": "ESPN",
+      "date": "2026-10-19",
+      "url": "https://www.espn.com/soccer/story/_/id/50217765/dejan-kulusevski-makes-tottenham-return-526-days-suffering-knee-injury",
+      "note": "第 86 分鐘替補、526 天"
+    },
+    {
+      "title": "Spurs beat Coventry for first league victory of the season",
+      "publisher": "Premier League",
+      "date": "2026-10-19",
+      "url": "https://www.premierleague.com/en/news/4735661/totcov-app",
+      "note": "比分與進球者核對"
+    },
+    {
+      "title": "Premier League standings",
+      "publisher": "ESPN",
+      "date": "2026-10-20",
+      "url": "https://www.espn.com/soccer/standings/_/league/eng.1",
+      "note": "熱刺第 16、考文垂第 17（查閱日期）"
+    },
+    {
+      "title": "Getafe CF vs Rayo Vallecano",
+      "publisher": "LALIGA",
+      "date": "2026-10-19",
+      "url": "https://www.laliga.com/en-GB/match/temporada-2026-2027-laliga-ea-sports-getafe-cf-rayo-vallecano-9",
+      "note": "比分、進球、紅牌"
+    },
+    {
+      "title": "1-1. Satriano premia la resistencia del Getafe",
+      "publisher": "Infobae（EFE）",
+      "date": "2026-10-19",
+      "url": "https://www.infobae.com/espana/agencias/2026/10/19/1-1-satriano-premia-la-resistencia-del-getafe/",
+      "note": "比分與紅牌核對"
     },
     {
       "title": "Parc des princes - Ligue 1",
