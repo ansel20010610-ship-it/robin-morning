@@ -1,0 +1,251 @@
+{
+  "column": "music",
+  "date": "2026-10-20",
+  "title": "七個和弦走到降 D：德弗札克《新世界交響曲》",
+  "dek": "第二樂章從 E 大調和弦出發，七個和弦就走到遙遠的降 D 大調，英國管才開始唱。",
+  "brief": "德弗札克 1893 年在紐約寫成的《新世界交響曲》，第二樂章開頭由管樂的七個和弦從 E 大調走到降 D 大調，接著英國管在加了弱音器的弦樂上奏出主題。指定錄音是庫貝利克 1972 年指揮柏林愛樂、Deutsche Grammophon 發行的版本。聆聽時注意這組和弦在樂章結尾再現，也在終樂章尾聲以強大的聲勢回來。",
+  "topic_key": "music:dvorak-op95",
+  "updated_at": "2026-10-20T00:59:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/The_title_page_of_the_autograph_score_of_Dvo%C5%99%C3%A1k%27s_ninth_symphony.jpg/1280px-The_title_page_of_the_autograph_score_of_Dvo%C5%99%C3%A1k%27s_ninth_symphony.jpg",
+    "width": 1280,
+    "height": 836,
+    "alt": "一張泛黃的橫式五線譜紙，上面用墨水手寫。中央上方大字寫著「Z nového světa」，下面括號裡是較小的「From the new world」，再下面是「Sinfonie (E moll)」「opus 95」與「Antonín Dvořák」的簽名，右側寫著「Číslo 8」。左側是一欄編號 1 到 8 的清單，每行有調性與年份，最後一行是「8. E moll 1893」。右下角另有一行手寫字，結尾是「1893」。",
+    "caption": "德弗札克《E 小調交響曲》親筆總譜的標題頁。上方寫著「Z nového světa」（捷克文「來自新世界」）和英文「From the new world」；據他的助手科瓦日克回憶，捷克文標題「來自新世界」是在把總譜交給指揮賽德爾的那天晚上才加上的；左邊是一份列到「8. E moll 1893」的交響曲清單。Commons 上的影像出自這份總譜的摹本（facsimile），未註明原件收藏地。",
+    "credit": "德弗札克（Antonín Dvořák）親筆；影像出自《Symphony No. 9, Op. 95 \"From the New World\"》摹本，經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_title_page_of_the_autograph_score_of_Dvo%C5%99%C3%A1k%27s_ninth_symphony.jpg",
+    "made": "1893"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "第二樂章的第一個聲音是管樂吹出的 E 大調和弦。第一樂章剛剛停在 E 小調，所以這個和弦聽起來像是接著前面說下去。接下來的路線卻很遠：據德弗札克資料網站 antonin-dvorak.cz 的作品解說，這組和弦依序是 E 大調、降 B 大調（第一轉位）、E 大調、降 D 大調、重降 B 大調、降 G 小調，最後落在降 D 大調。七個和弦之後，英國管（cor anglais）在加了弱音器的弦樂上，奏出這個樂章最有名的主題。"
+    },
+    {
+      "type": "p",
+      "text": "這是捷克作曲家德弗札克（Antonín Dvořák，1841–1904）的《E 小調第九號交響曲「新世界」》（Symphony No. 9 in E minor, \"From the New World\"），作品 95。他在 1892 年到 1895 年間擔任紐約美國國家音樂院（National Conservatory of Music of America）院長，這首交響曲是他到美國第一年寫成的；該網站記載的寫作時間是 1893 年 1 月 10 日到 5 月 24 日，地點紐約。"
+    },
+    {
+      "type": "music",
+      "composer": "德弗札克（Antonín Dvořák）",
+      "work": "E 小調第九號交響曲「新世界」，作品 95（B. 178）",
+      "work_original": "Symphony No. 9 in E minor, Op. 95, B. 178 \"From the New World\"",
+      "composed": "1893 年 1 月 10 日至 5 月 24 日，紐約",
+      "performers": "拉斐爾・庫貝利克 指揮 柏林愛樂",
+      "recording": "Deutsche Grammophon，1972 年錄音；1973 年收入德弗札克交響曲全集套裝首度發行",
+      "duration": "約 41 分鐘（antonin-dvorak.cz 作品資料）",
+      "movements": [
+        "I. Adagio – Allegro molto",
+        "II. Largo",
+        "III. Scherzo: Molto vivace",
+        "IV. Allegro con fuoco"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Dvořák Symphony No. 9 From the New World Kubelík Berliner Philharmoniker",
+        "artist_hint": "Kubelík",
+        "track_filter": [
+          "Symphony No. 9",
+          "From the New World"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "指揮庫貝利克（Rafael Kubelík）是捷克人。英國音響雜誌《hi-fi+》的 Jimmy Hughes 2025 年 9 月 30 日的評論寫道，庫貝利克一生留下不少於五個《新世界》錄音，前後橫跨 40 年，和柏林愛樂為 Deutsche Grammophon 錄的第三個版本大概最有名；它 1973 年先收在九首交響曲的全集套裝裡發行，單張唱片約一年後才推出。Deutsche Grammophon 官網則寫明這是 1972 年的錄音。"
+    },
+    {
+      "type": "p",
+      "text": "選它，是因為它在速度與張力之間的平衡。Hughes 形容這個演出「There’s pace and drama without things sounding hard-pressed or aggressive」（有速度、有戲劇性，卻不顯得急躁或咄咄逼人；本文自譯）。Deutsche Grammophon 官網轉引《Gramophone》的評語，說庫貝利克「captured the enthusiasm of his players, creating feelings of both tension and poetry」（抓住了團員的熱情，同時帶出緊張與詩意；本文自譯），官網未註明刊期與作者。也要先知道一個取捨：Hughes 指出，庫貝利克的每一個《新世界》錄音都沒有反覆第一樂章的呈示部。"
+    },
+    {
+      "type": "h",
+      "text": "到紐約第一年寫成，標題最後才加上"
+    },
+    {
+      "type": "p",
+      "text": "antonin-dvorak.cz 網站整理，第二樂章的開頭和弦在草稿本裡留有一整串不同版本，其中一個從 C 大調出發、又回到 C 大調；定稿改從 E 大調開始，和第一樂章的結尾接上。這個樂章的草稿上有捷克文註記「Legenda」（傳說）與「Začátek Legendy」（傳說的開始）。據該網站轉述，音樂學者 Michael Beckerman 把這組和弦讀成音樂版的「從前從前……」，並把這個樂章連到美國詩人朗費羅（Henry Wadsworth Longfellow）的長詩《海華沙之歌》（The Song of Hiawatha）。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "英國管的主題原本寫給單簧管。antonin-dvorak.cz 與 Wikipedia 都只說「據說」：他後來改用英國管，是因為這個音色讓他想起非裔美國歌手伯利（Harry T. Burleigh）的嗓音。伯利是國家音樂院的學生，常唱黑人靈歌給德弗札克聽；Wikipedia 引 Jean E. Snyder 1993 年的研究說，伯利日後表示，德弗札克是先吸收了這些歌曲的「spirit」（精神），才寫出自己的旋律。"
+    },
+    {
+      "type": "p",
+      "text": "德弗札克自己也否認直接借用現成曲調。據 antonin-dvorak.cz，他在 1893 年 12 月 15 日《紐約先驅報》（New York Herald）的訪問裡說，他仔細研究過朋友給他的一些印第安旋律，「imbued with their spirit」（浸潤在它們的精神裡；本文自譯）。他也在《紐約先驅報》上說，第三樂章詼諧曲的靈感來自《海華沙之歌》裡「the feast where the Indians dance」（印第安人跳舞的宴會；本文自譯）那一段。"
+    },
+    {
+      "type": "p",
+      "text": "標題是最後才加的。antonin-dvorak.cz 摘錄他的助手科瓦日克（Josef Kovařík）的回憶：1893 年 11 月中，紐約愛樂的指揮賽德爾（Anton Seidl）在咖啡館問起這首新交響曲，德弗札克答應交給他首演；就在科瓦日克要把總譜送出去的那個晚上，「the Maestro added to the title page the words ‘From the New World’! Previously he had only written ‘Symphony in E minor’.」（大師在標題頁加上了「來自新世界」幾個字！之前他只寫了「E 小調交響曲」；依網站英譯，本文自譯）。1894 年 6 月 12 日，德弗札克寫信給友人 Francesco Berger，解釋了這個名字：「I called this symphony ‘From the New World’ because it was the very first work I wrote in America.」（我把這首交響曲叫作「來自新世界」，因為它是我在美國寫的第一部作品；本文自譯）。"
+    },
+    {
+      "type": "p",
+      "text": "頭圖這一頁上，「Z nového světa」與英文「From the new world」寫在最上方，左邊用一個大括號括在一起，下面才是「Sinfonie (E moll)」與「opus 95」。左邊那份清單從「Číslo 1」列到「8. E moll 1893」，標題右側也寫著「Číslo 8」。",
+      "tag": "可見"
+    },
+    {
+      "type": "p",
+      "text": "Wikipedia 指出，這首交響曲在較早的文獻與唱片上常被稱作第五號；今天通行的第九號是後來的編號。"
+    },
+    {
+      "type": "h",
+      "text": "1893 年 12 月的兩場：公開排練與首演"
+    },
+    {
+      "type": "p",
+      "text": "依當地慣例，首演前一天、1893 年 12 月 15 日下午先有一場公開的總排練，票全部賣完；antonin-dvorak.cz 記載，那天下著大雨，從中午起買票的隊伍就沿著卡內基音樂廳排開。首演在 12 月 16 日，由賽德爾指揮紐約愛樂；紐約愛樂官網記載，賽德爾 1891 年接任音樂總監，任職到 1898 年去世。德弗札克寫信給出版商席姆洛克（Fritz Simrock）說，觀眾鼓掌鼓了很久，他只好「like a king」（像國王一樣；依網站英譯，本文自譯）在包廂裡向大家致意。他的兒子 Otakar 在回憶錄裡寫道，第二樂章 Largo 結束後，觀眾不肯讓音樂會繼續，直到德弗札克在曲子中途上台接受喝采。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Carnegie_Hall_exterior%2C_1899.jpg/1280px-Carnegie_Hall_exterior%2C_1899.jpg",
+      "width": 1280,
+      "height": 1056,
+      "alt": "黑白老照片：街角一棟多層的磚造建築，立面有成排的圓拱窗，左後方有一座更高的塔樓。一樓入口前有雨棚，街邊停著幾輛馬車，路面空曠。左側前景是一家藥房的店面，招牌寫著 APOTHECARY。",
+      "caption": "卡內基音樂廳，從第七大道與 57 街口向南望，1899 年攝。《新世界交響曲》1893 年 12 月 15 日的公開排練與 16 日的首演都在這裡。照片收於卡內基音樂廳檔案館的建築典藏（ID CH1329203），館方說明合理相信它不受著作權限制，但無法做出最終判定。",
+      "credit": "攝影者不詳；Carnegie Hall Archives，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Carnegie_Hall_exterior,_1899.jpg",
+      "made": "1899"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：先聽 Largo 的和弦，再找它們回來的地方"
+    },
+    {
+      "type": "p",
+      "text": "**第一樂章（Adagio – Allegro molto）。** 慢板導奏之後進入快板。這個樂章要記住的是它的主題：antonin-dvorak.cz 指出，這首交響曲的特色是在每個樂章的關鍵處回想前面樂章的主題，第一樂章的主要主題與結尾主題之後會一再出現。庫貝利克的錄音沒有反覆呈示部，所以快板會比有反覆的版本更早進入發展部。"
+    },
+    {
+      "type": "p",
+      "text": "**第二樂章（Largo）開頭。** 先聽那七個管樂和弦，從 E 大調一路轉到降 D 大調。Wikipedia 的編制表註明，低音號（tuba）只用在這個樂章。接著是英國管的主題，弦樂加上弱音器，音色比平常暗一層。"
+    },
+    {
+      "type": "table",
+      "title": "第二樂章 Largo 的段落（依 antonin-dvorak.cz 與 Wikipedia 的描述）",
+      "head": [
+        "段落",
+        "聽什麼",
+        "調性"
+      ],
+      "rows": [
+        [
+          "導奏",
+          "管樂七個和弦",
+          "E 大調 → 降 D 大調"
+        ],
+        [
+          "A",
+          "英國管主題，弦樂加弱音器",
+          "降 D 大調"
+        ],
+        [
+          "B（中段）",
+          "懷舊、荒涼的段落，轉入低音提琴撥奏上的送葬進行曲",
+          "升 C 小調"
+        ],
+        [
+          "類詼諧曲段",
+          "本樂章主題與第一樂章的主要主題、結尾主題在高潮處都出現了",
+          "升 C 大調"
+        ],
+        [
+          "A 再現與尾聲",
+          "主題輕聲回來，最後是開頭的和弦",
+          "降 D 大調"
+        ]
+      ],
+      "caption": "Wikipedia 記載本樂章共 127 小節，採三段體（A–B–A）。"
+    },
+    {
+      "type": "p",
+      "text": "**第二樂章中段。** 音樂轉到升 C 小調。antonin-dvorak.cz 的解說形容這一段帶著懷舊、荒涼的氣氛，接著變成一段送葬進行曲，下方是低音提琴規律的撥奏。之後音樂突然轉亮，進入升 C 大調的類詼諧曲段落，在力度最高處，這個樂章的主題和第一樂章的兩個主題在高潮處都出現了。高潮退去後，英國管的主題輕聲回來，最後由開頭那組和弦收尾。"
+    },
+    {
+      "type": "p",
+      "text": "**第三樂章（Scherzo: Molto vivace）。** 這是德弗札克在《紐約先驅報》訪問裡連到《海華沙之歌》宴會舞蹈的樂章。antonin-dvorak.cz 指出，它是 A–B–A 的形式，中間的三重奏段落「美國味」一下子淡了；尾聲在力度最高處，第一樂章的結尾主題又冒出來。"
+    },
+    {
+      "type": "p",
+      "text": "**第四樂章（Allegro con fuoco）。** 主要主題一開始就由銅管奏出。antonin-dvorak.cz 指出，發展部裡有一處把第二、第三、第四樂章的主要主題交織在一起；尾聲收進全曲的主要素材，其中也包括 Largo 開頭的那組和弦，這次是以宏大的聲勢出現。"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是：這首交響曲最好認的路標，就是那組 Largo 和弦。它在第二樂章開頭輕輕出現，在同一樂章結尾回來，又在終樂章尾聲以完全不同的力度再現。第一次聽時記住它從 E 大調滑到降 D 大調的那種轉向，到了終樂章，就能在一片銅管聲裡把它認出來。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "callout",
+      "label": "延伸聆聽",
+      "text": "同一首曲子的另一個錄音：克爾特斯（István Kertész）1966 年指揮倫敦交響樂團的版本，Wikipedia 著錄的原版唱片編號是 Decca SXL 6291。前面提到的 Hughes 評論指出，克爾特斯和另一位指揮 Witold Rowicki 與倫敦交響樂團的錄音都有反覆第一樂章的呈示部，正好和庫貝利克的版本對照。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Symphony No. 9 in E minor, Op. 95, B178 \"From the New World\"",
+      "publisher": "Antonín Dvořák（antonin-dvorak.cz，Akademie klasické hudby）",
+      "url": "https://www.antonin-dvorak.cz/en/work/symphony-no-9/",
+      "note": "作品資料（寫作 1893.1.10–5.24、首演 1893.12.16 紐約愛樂與賽德爾、Simrock 1894 初版、約 41 分鐘、編制）；第二樂章和弦序列、草稿中的 C 大調版本、草稿註記「Legenda」「Začátek Legendy」（捷克文版）、Beckerman「Once upon a time」與《海華沙之歌》解讀、英國管原為單簧管與伯利之說、中段升 C 小調與送葬進行曲、類詼諧曲段、和弦在結尾再現；第三、四樂章解說；《紐約先驅報》1893.12.15 訪問、公開排練、致 Simrock 信、Otakar 回憶、致 Berger 信（1894.6.12）、科瓦日克回憶；2026-10-19 查閱；Beckerman 解讀依此頁轉述，未讀原著"
+    },
+    {
+      "title": "Symphony No. 9 (Dvořák)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Symphony_No._9_(Dvo%C5%99%C3%A1k)",
+      "note": "國家音樂院院長任期 1892–1895、舊稱第五號、低音號只用於第二樂章（編制表）、第二樂章 127 小節與三段體、英國管與弱音器、伯利唱靈歌（引 Snyder 1993）、Fisher 1922〈Goin’ Home〉；2026-10-19 查閱"
+    },
+    {
+      "title": "A great and noble school of music: Dvořák, Harry T. Burleigh, and the African American Spiritual",
+      "publisher": "收於 John C. Tibbetts 編《Dvořák in America: 1892–1895》（Amadeus Press，Jean E. Snyder 撰）",
+      "date": "1993",
+      "url": "https://en.wikipedia.org/wiki/Symphony_No._9_(Dvo%C5%99%C3%A1k)#Influences",
+      "note": "未讀原書；伯利說德弗札克吸收其「spirit」一事依 Wikipedia 引用此文第 131 頁"
+    },
+    {
+      "title": "Dvořák: Symphony No 9 ‘From the New World’, Berlin Philharmonic Orchestra, Rafael Kubelik (conductor)",
+      "publisher": "hi-fi+（Jimmy Hughes 撰）",
+      "date": "2025-09-30",
+      "url": "https://hifiplus.com/articles/dvorak-symphony-no-9-from-the-new-world/",
+      "note": "庫貝利克五個錄音、柏林愛樂版為第三個且最有名、1973 年全集套裝發行與單張約一年後推出、未反覆第一樂章呈示部、「There’s pace and drama…」、克爾特斯與 Rowicki 的倫敦交響樂團錄音有反覆"
+    },
+    {
+      "title": "DVOŘÁK Symphony No. 9 \"From the New World\" / Kubelík",
+      "publisher": "Deutsche Grammophon",
+      "date": "2024-10-04",
+      "url": "https://www.deutschegrammophon.com/en/catalogue/products/dvoak-symphony-no-9-from-the-new-world-kubelk-13523",
+      "note": "Original Source 系列產品頁：1972 年與柏林愛樂錄音；轉引《Gramophone》評語（未註明刊期與作者）；日期為該版發行日"
+    },
+    {
+      "title": "Anton Seidl",
+      "publisher": "New York Philharmonic",
+      "url": "https://www.nyphil.org/about-us/artists/anton-seidl/",
+      "note": "音樂總監 1891–98、1891 年接替 Theodore Thomas、1893 年在卡內基音樂廳指揮《新世界》世界首演；2026-10-19 查閱"
+    },
+    {
+      "title": "István Kertész (conductor)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Istv%C3%A1n_Kert%C3%A9sz_(conductor)",
+      "note": "唱片目錄：Symphony No. 9 London Symphony Orchestra (1966), DECCA SXL 6291；2026-10-19 查閱"
+    },
+    {
+      "title": "File:The title page of the autograph score of Dvořák's ninth symphony.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:The_title_page_of_the_autograph_score_of_Dvo%C5%99%C3%A1k%27s_ninth_symphony.jpg",
+      "note": "頭圖；作者 Antonín Dvořák、1893、公版，出處為該作品摹本"
+    },
+    {
+      "title": "File:Carnegie Hall exterior, 1899.jpg",
+      "publisher": "Wikimedia Commons（Carnegie Hall Digital Collections）",
+      "url": "https://commons.wikimedia.org/wiki/File:Carnegie_Hall_exterior,_1899.jpg",
+      "note": "正文圖；1899 年、卡內基音樂廳檔案館建築典藏 ID CH1329203、公版"
+    }
+  ]
+}
