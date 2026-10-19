@@ -1,0 +1,416 @@
+{
+  "column": "literature",
+  "date": "reserve",
+  "reserve_written": "2026-10-19",
+  "title": "「我們正在自習室」：《包法利夫人》最後才加的開頭",
+  "dek": "福樓拜的定稿手稿從鐘聲寫起：一點半，校長走進自習室。印成書時，第一個字換成了「我們」。這群「我們」是誰，又在第 1 章的哪裡退場？",
+  "brief": "《包法利夫人》1857 年單行本初版的第一句是「我們正在自習室」；福樓拜的定稿手稿原本從「學校的鐘剛敲過一點半」寫起。學者 Frølich 指出，開頭的「Nous étions à l’Étude」是他最後校讀抄本時才寫進頁邊的。第 1 章裡，這群同學最後一次自稱「我們」，說的是如今誰也想不起夏爾的任何事；Frølich 認為，正是這個「我們」把新生送進了集體的遺忘。",
+  "topic_key": "literature:flaubert-bovary-i-1",
+  "updated_at": "2026-10-19T15:06:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Manuscript_de_Madame_Bovary_def_part1.djvu/page1-960px-Manuscript_de_Madame_Bovary_def_part1.djvu.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Manuscript_de_Madame_Bovary_def_part1.djvu/page1-960px-Manuscript_de_Madame_Bovary_def_part1.djvu.jpg",
+    "width": 960,
+    "height": 1463,
+    "alt": "一張泛黃的手稿紙，右上角寫著數字 1。上方是手寫的「Madame Bovary」，下面一行「Louis Bouilhet」，上方加了一個小字「à」，再下是「Première partie」。左上方蓋著一枚長方形收藏章。正文是傾斜的墨水草書，第一句的三行多沒有刪改；從第二句起有幾行被粗黑的墨線整行劃掉，頁面下半也有多處劃掉，頁邊與行間另有補寫。",
+    "caption": "福樓拜《包法利夫人》定稿手稿第 1 頁（folio 1）。第一行從「Une heure et demie venaient de sonner」（一點半剛敲過）寫起，整頁沒有「我們正在自習室」這句話（「我們」要到第二段校長示意學生坐下時才出現）；第二行末的「nouveau」（新生）底下畫了線。題名下的「à Louis Bouilhet」（致路易・布耶）是獻詞，Conard 版的手稿說明推測是全書完成時才加上的。",
+    "credit": "居斯塔夫・福樓拜手稿；影像出自魯昂大學福樓拜中心的 Madame Bovary 手稿網站（bovary.univ-rouen.fr），經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Manuscript_de_Madame_Bovary_def_part1.djvu",
+    "made": "1851–1856"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "1857 年 4 月，巴黎的 Michel Lévy frères 出版福樓拜（Gustave Flaubert）第一部出版的長篇小說《包法利夫人》（Madame Bovary），分上下兩冊。第 1 冊第 5 頁印著「第一部」和羅馬數字「I」，正文的第一句是："
+    },
+    {
+      "type": "quote",
+      "original": "Nous étions à l’Étude, quand le proviseur entra, suivi d’un nouveau habillé en bourgeois et d’un garçon de classe qui portait un grand pupitre.",
+      "text": "我們正在自習室，校長進來了，後面跟著一個穿便服的新生，還有一個扛著大課桌的校工。",
+      "cite": "本文自譯。原文依 1857 年 Michel Lévy frères 版第 1 冊第 5 頁；原書「nouveau」一字為斜體。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "這本小說叫《包法利夫人》，第一個字卻是「我們」。這群「我們」是一間教室裡的學生：校長示意「我們」坐下，新生比「我們」所有人都高，兩點鐘響時，學監得提醒他跟「我們」一起排隊。被帶進教室的新生，名叫夏爾・包法利（Charles Bovary），後來成了書名裡那位夫人的丈夫。愛瑪（Emma）要到第 2 章才出場。"
+    },
+    {
+      "type": "facts",
+      "title": "作品與版本",
+      "items": [
+        [
+          "作者",
+          "居斯塔夫・福樓拜（Gustave Flaubert，1821–1880）"
+        ],
+        [
+          "作品",
+          "《包法利夫人：外省風俗》（Madame Bovary. Mœurs de province），長篇小說"
+        ],
+        [
+          "初刊",
+          "1856 年 10 月 1 日至 12 月 15 日在《巴黎評論》（Revue de Paris）分期連載；1857 年 2 月 7 日福樓拜在「有傷公共道德與宗教道德及善良風俗」的官司中獲判無罪，同年 4 月由 Michel Lévy frères 出版兩冊單行本"
+        ],
+        [
+          "本文依據版本",
+          "1857 年巴黎 Michel Lévy frères 版第 1 冊，杜克大學圖書館藏本（索書號 Riess F587M），Internet Archive 掃描、Wikimedia Commons 收錄（madamebovarymurs11flau）；引文見第 5、6、7、8、9、13–14 頁"
+        ],
+        [
+          "手稿",
+          "定稿手稿第 1 頁（folio 1），Wikimedia Commons「Manuscript de Madame Bovary def part1.djvu」第 1 頁；Juliette Frølich 引用時的編號為 g 221"
+        ],
+        [
+          "對照本",
+          "1910 年巴黎 Louis Conard 版《福樓拜全集》本（法文維基文庫校對本）"
+        ],
+        [
+          "章節",
+          "第一部第 1 章"
+        ],
+        [
+          "譯文",
+          "全篇中文皆本文自譯"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "定稿手稿：開頭沒有「我們」"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1910 年 Louis Conard 版書末附有一篇手稿說明：這部手稿是編號 1 至 487 的大開本稿紙，只寫正面；封面上有福樓拜親筆寫的「Septembre 1851. — Avril 1856.」（1851 年 9 月至 1856 年 4 月）。手稿第 1 頁印在本篇頂端。它的第一句寫的是時間，不是人："
+    },
+    {
+      "type": "quote",
+      "original": "Une heure et demie venaient de sonner à l’horloge du collège quand le Proviseur entra dans l’étude, suivi d’un nouveau habillé en bourgeois et d’un garçon de classe qui portait un grand pupitre.",
+      "text": "學校的鐘剛敲過一點半，校長走進自習室，後面跟著一個穿便服的新生，還有一個扛著大課桌的校工。",
+      "cite": "本文自譯。原文依定稿手稿第 1 頁影像辨讀；Frølich 書中的轉錄把動詞印作「entre」，本文從影像讀作「entra」。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "開頭幾行裡，刪改最集中在第二句。「Ceux qui dormaient se réveillèrent」（打瞌睡的人醒了）之後，有兩三行被粗墨線整行塗黑，最後只留下「et chacun se leva comme surpris dans son travail」（每個人都站起來，像是正在用功時被撞見）。1857 年版第 5 頁的第二句，就是這兩截接起來。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "同一頁下半，寫新生「站在角落、門後」的那一段，也有好幾行整行劃掉。同一份檔案的第 2 頁，寫「我們」進教室甩帽子的那一段，還有一大塊被打上叉的方框。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：第一句四周的句子改得很重，第一句本身卻沒有改動的痕跡。這句話在親筆稿上看起來已經定了，後來才被換掉，所以這次改動格外顯眼。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.3,
+        0.2,
+        0.69,
+        0.13
+      ],
+      "position": "手稿正文最上方四行，約佔頁面寬度七成",
+      "caption": "第一句佔了三行多：從「Une heure et demie」寫到「grand pupitre」，中間沒有刪改。第二行末的「nouveau」底下畫了線；第三、四行末的「se réveillèrent」後面，第二句開始出現劃掉的字與整行的塗黑。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Juliette Frølich 在 2005 年由巴黎第八大學出版社（Presses universitaires de Vincennes）出版的《Flaubert. Voix de masque》第三章，追查了這句話的來歷。她說，在開頭成形的整個過程裡，甚至到了這份親筆定稿上，「我們」都不在："
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "要說清楚的是，手稿不是整頁都沒有「我們」。同一頁第二段就寫「le Proviseur nous fit signe de nous rasseoir」（校長示意我們坐下），第 2 頁的頁邊也補了「avec nous」（跟我們一起）。手稿缺的，是句首那個「我們」：故事不是由「我們」開口講起的。"
+    },
+    {
+      "type": "quote",
+      "original": "« Nous » est d’autant plus étonnant que, tout au long de la mise en place de l’incipit et même encore sur la copie autographe, il s’avère être souverainement absent.",
+      "text": "這個「我們」更令人驚訝，因為在開頭成形的整個過程中，甚至直到親筆謄清稿上，它都完全不在場。",
+      "cite": "Juliette Frølich，《Flaubert. Voix de masque》第三章〈Persona : masque de personne〉，2005；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Frølich 在同一段說，這句話讀者都熟得能背，開頭那個「我們」卻讓「一代又一代的讀者」困惑（a confondu toute une lignée de lecteurs，本文自譯）。她也指出，這個「我們」裡其實包含了一個完全在場的「我」。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：困惑的來源不難理解。在第 1 章裡，說「我們」的人沒有名字、沒有年紀，讀者只知道他們（或者其中某一個人）當年和夏爾同在一間教室。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "依 Frølich 的說法，福樓拜是在最後一次校讀抄寫員的抄本時，才用一道筆畫劃掉原來的開頭，在頁邊補上「Nous étions à l’Étude」。她注明出處是抄本 g 222 第 2 張。本文沒有看到這份抄本的影像，下表第二列只能依她的描述。"
+    },
+    {
+      "type": "table",
+      "title": "第一句的三個階段",
+      "head": [
+        "文本",
+        "第一句的開頭",
+        "依據"
+      ],
+      "rows": [
+        [
+          "定稿手稿 folio 1",
+          "Une heure et demie venaient de sonner à l’horloge du collège quand le Proviseur entra dans l’étude…（學校的鐘剛敲過一點半，校長走進自習室……）",
+          "Commons 手稿影像；Frølich 轉錄"
+        ],
+        [
+          "抄寫員抄本 g 222 第 2 張",
+          "福樓拜劃掉原句，在頁邊寫上「Nous étions à l’Étude」",
+          "Frølich 的描述，本文未見影像"
+        ],
+        [
+          "1857 年 Lévy 版第 5 頁",
+          "Nous étions à l’Étude, quand le proviseur entra…（我們正在自習室，校長進來了……）",
+          "Internet Archive 掃描"
+        ]
+      ],
+      "caption": "改動集中在句首：原來的鐘聲與「走進自習室」不見了，「自習室」移到「我們」後面；新生、便服、校工、大課桌，手稿與 1857 年版一字未動。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "細節上還有兩處不同。手稿裡的「Proviseur」（校長）大寫，1857 年版第 5 頁印成小寫的「proviseur」，1910 年 Conard 本又是大寫。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "「自習室」則是手稿與 Conard 本都作小寫的「l’étude」，只有 1857 年版印成大寫的「l’Étude」。本文沒有查到這些大小寫是誰、在哪一個階段改的，只記錄三個本子的差別。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Madame_Bovary_-_m%C5%93urs_de_province_%28IA_madamebovarymurs11flau%29.pdf/page21-500px-Madame_Bovary_-_m%C5%93urs_de_province_%28IA_madamebovarymurs11flau%29.pdf.jpg",
+      "width": 500,
+      "height": 889,
+      "alt": "一頁印刷書頁。上方是大寫書名「MADAME BOVARY」與一條橫線，下面是「PREMIÈRE PARTIE」與羅馬數字「I」，接著是三段正文，第一段以「Nous étions à l’Étude」開頭。頁面下方印著一個小小的「1」。",
+      "caption": "1857 年 Michel Lévy frères 版《包法利夫人》第 1 冊第 5 頁，正文的第一頁。第一句以「Nous」開頭；「nouveau」與第三段的「dans les grands」（升到高年級）都印成斜體。頁底的「1」不是頁碼，下一頁印的頁碼是 6。",
+      "credit": "居斯塔夫・福樓拜著；Michel Lévy frères（巴黎，1857）。杜克大學圖書館藏本，Internet Archive 掃描，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Madame_Bovary_-_m%C5%93urs_de_province_(IA_madamebovarymurs11flau).pdf?page=21",
+      "made": "1857"
+    },
+    {
+      "type": "h",
+      "text": "草稿裡的「我們」話更多"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Frølich 也引了開頭這一場的草稿，她標為 folio 21。草稿裡的「我們」說得比定本多，而且一再拿自己和新生比。她引的一段，寫同學們回到學校後，談家裡聽來的消息、看過的戲、小舞會，接著說："
+    },
+    {
+      "type": "quote",
+      "original": "Mais lui, il n’était pas de notre monde",
+      "text": "可是他啊，他不是我們那個世界的人",
+      "cite": "福樓拜草稿 folio 21，轉引自 Frølich，《Flaubert. Voix de masque》第三章；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Frølich 的看法是，這個「我們」在構思中一度在敘事裡佔得太重，福樓拜於是在草稿上一路刪減，連抄寫員的抄本上都還在刪「我們」留下的最後痕跡。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：這裡有兩個方向相反的動作。後文的「我們」一路被刪減，句首的「我們」卻是最後才加上去的。福樓拜一面削弱這群同學的聲音，一面讓他們搶先開口；定本第 1 章裡的「我們」，話不多，卻站在全書的第一個位置。"
+    },
+    {
+      "type": "h",
+      "text": "第 1 章裡，「我們」出場的幾個地方"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "1857 年版第 5 到 9 頁，「我們」出現在幾個地方：校長「示意我們坐下」；新生「比我們所有人都高」；學監提醒他「跟我們一起排隊」；「我們」習慣進教室時把帽子甩到長凳底下，「這才算有派頭」（c’était là le *genre*，原書斜體）；晚上的自習時間，「我們看見他用功」，每個字都去查字典。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "但在全班嘲笑新生的那一段，句子的主詞換了。新生站起來，帽子掉了，「全班都笑了」（Toute la classe se mit à rire）；老師挖苦他的帽子，又是「學生們一陣爆笑」。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "他喊出自己的名字「Charbovari」，接著是一陣喧鬧：「有人吼叫，有人狗吠，有人跺腳，有人跟著喊：Charbovari！Charbovari！」這幾句的主詞是「全班」「學生們」和泛指的「on」（有人），沒有一句是「nous」。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "名字也是一樣。新生第一次開口，只發出「一個聽不清的名字」；老師要他再說一遍，聲音又被全班的噓聲蓋住；第三次他扯開嗓子喊，全班聽到的是一個黏在一起的字：「Charbovari」。最後是老師「叫他口述、拼寫、再唸一遍」，才「抓到」夏爾・包法利這個名字（1857 年版第 7–8 頁）。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：「我們」守秩序、看熱鬧、懂教室裡的規矩；真正動手起鬨的時候，敘事者改說「全班」「有人」。笑聲有了，笑的人卻沒有落在「我們」頭上。同學們聽到的，始終是那個走了樣的「Charbovari」；把他的名字聽清、拼對的，是講台上的老師。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "當天晚上，「我們」又看了他一次。1857 年版第 9 頁：他從課桌裡拿出袖套，把小東西收拾整齊，仔細地在紙上畫好格線。「我們看見他認真用功，每個字都查字典，費了很大的力氣。」敘事者接著推測，多虧這份用心，他才沒被降到低一級的班上，「因為他的文法規則還算熟，句子卻談不上優雅」。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：這一幕，「我們」看的是他用功，不是他出醜。看的人仍舊隔著幾張課桌，評語也帶著一點優越感，但這一幕沒有笑聲。"
+    },
+    {
+      "type": "h",
+      "text": "最後一次：「我們」想不起他"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "接下來四頁多，敘事轉去交代夏爾的父母、他在鄉下的童年、跟著神父學拉丁文的經過，寫到他被送進魯昂（Rouen）的中學。然後「我們」又回來了，就在第 13 頁的最後一行："
+    },
+    {
+      "type": "quote",
+      "original": "Il serait maintenant impossible à aucun de nous, de se rien rappeler de lui.",
+      "text": "如今，我們之中誰也不可能想起他的任何事了。",
+      "cite": "本文自譯。原文依 1857 年 Michel Lévy frères 版第 1 冊第 13–14 頁。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "下一句寫他是個「性情溫和」的學生，下課就玩，自習就讀，上課聽講，在宿舍睡得好，在食堂吃得好。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Frølich 說，這一句讀起來像一份學籍檔案，「也許是校長的？」（On dirait un fichier (de proviseur ?)，本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "之後，第 1 章一路寫到他學醫、開業、娶第一任妻子，「我們」再也沒有出現；本文核對 Conard 本這一章的全文，這是第一人稱複數最後一次出現。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：這一句出現的位置很有意思。前面四頁講的是夏爾父親當年的軍醫生涯、母親的失望、鄉下神父怎麼在聖器室裡趕著上課，這些都不是一個同班同學看得到的事。「我們」在這些段落裡完全沉默，等故事回到學校，才出來說一句「想不起來」。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Frølich 稱這一句是關鍵的段落：福樓拜在這裡把夏爾推進「對他個人性的否定」（la négation de son individualité），同時也努力把這個「已經太投入」的中學「我們」去個人化，直到成為「一般的匿名」（引號內皆本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Frølich 在章首拿那頂帽子做例子。「我們」形容它是「一種混雜式樣的帽子」，集合了毛皮高帽、波蘭槍騎兵帽、圓帽、水獺皮便帽和棉布睡帽的成分，是「那種可憐的東西，醜得一言不發，卻有深刻的表情，像一個傻子的臉」（1857 年版第 6–7 頁，本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "她說，把帽子比作傻子的臉，等於暗示帽子的主人也是傻子；可是這個比喻的語氣曖昧，聽起來帶著一點對這頂被殘酷展示的帽子的同情。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Frølich 在章首就說明她的論點：這個「我們」不只是在旁觀，它在小說裡說得很重，最後是「我們」的聲音，把新生送進「名副其實集體的遺忘」（un oubli de mémoire littéralement collectif，本文自譯）。她也認為，這句「想不起他」之後那份平淡的評語，正是把他從「我們」的記憶裡抹去的手段。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我同意這個讀法，並補一個細節：「maintenant」（如今）這個詞，把說話的時間放到多年以後。「我們」開場時記得很細：帽子有三道圓箍、紅色飾帶、天鵝絨和兔毛交錯的菱形，頂上的硬紙多邊形垂下一根太細的長繩，末端是金線編的小十字。到了退場，說的卻是想不起他的任何事。"
+    },
+    {
+      "type": "h",
+      "text": "手稿裡本來就有兩次報時，定本只留下兩點的鐘"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "手稿第一句寫的是「l’horloge du collège」（學校的時鐘）敲過一點半。同一份手稿第 2 頁，新生專心聽背書那一段，本來就還有一次報時：「à deux heures quand la cloche sonna」（到了兩點，鐘響了）。1857 年版第 6 頁保留了第二次，學監得在這時提醒他跟「我們」一起排隊；第一次報時，隨著舊的第一句一起刪掉了。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：手稿把時間放在句首，先有鐘，再有人；定本讓「我們」先開口，時間只剩後面那一次兩點的鐘聲。手稿的寫法像一份紀錄，誰看見都一樣；定本則先交代是誰在看。地點也跟著換了位置：手稿裡，自習室是校長「走進」的地方；定本裡，自習室是「我們」所在的地方，新生是從外面被帶進來的。"
+    },
+    {
+      "type": "h",
+      "text": "斜體的「nouveau」"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "手稿第一頁第二行末的「nouveau」底下畫了線。1857 年版從第 5 頁到第 9 頁，「nouveau」只要指這個新生，幾乎都印成斜體，例如「le *nouveau* articula」（新生結結巴巴地說）、「Ma cas…, fit timidement le *nouveau*」（「我的帽……」，新生怯生生地說）。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "章內的斜體不只這一種。第 6 頁「這才算有派頭」的「*genre*」；第 5 頁校長對學監說的「dans les *grands*」（升到高年級）；第 8 頁的「*Charbovari*」「*crescendo*」「*quos ego*」，第 9 頁的「*ridiculus sum*」，也都是斜體。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：這些斜體裡，有拉丁文、音樂術語，也有校長的用語，並不都是學生的話。但「nouveau」「genre」這兩個，確實是學校裡的叫法，而且「genre」明說是「我們」的規矩。「我們」後來退場了，第 9 頁上那兩個斜體的「*nouveau*」，仍是學校當年叫他的方式。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "File:Madame Bovary - mœurs de province (IA madamebovarymurs11flau).pdf（福樓拜《包法利夫人》第 1 冊，Michel Lévy frères，1857）",
+      "publisher": "Wikimedia Commons（Internet Archive 掃描，杜克大學圖書館藏本）",
+      "date": "1857",
+      "url": "https://commons.wikimedia.org/wiki/File:Madame_Bovary_-_m%C5%93urs_de_province_(IA_madamebovarymurs11flau).pdf",
+      "note": "掃描第 11 頁（書名頁，1857）、第 17 頁（致 Senard 獻詞，原書印作 SENART，署 1857 年 4 月 12 日）、第 21–25 頁（第 5–9 頁）、第 29–30 頁（第 13–14 頁）"
+    },
+    {
+      "title": "Madame Bovary : mœurs de province, v.1",
+      "publisher": "Internet Archive（Duke University Libraries）",
+      "date": "1857",
+      "url": "https://archive.org/details/madamebovarymurs11flau",
+      "note": "書目：Paris : Michel Lévy frères, 1857；First edition in book form；索書號 Riess F587M"
+    },
+    {
+      "title": "File:Manuscript de Madame Bovary def part1.djvu",
+      "publisher": "Wikimedia Commons（影像出自 bovary.univ-rouen.fr）",
+      "date": "1851–1856",
+      "url": "https://commons.wikimedia.org/wiki/File:Manuscript_de_Madame_Bovary_def_part1.djvu",
+      "note": "第 1 頁（folio 1）：第一句、獻詞、收藏章；第 2 頁：「avec nous」「à deux heures quand la cloche sonna」"
+    },
+    {
+      "title": "Juliette Frølich, Flaubert. Voix de masque, chap. III « Persona : masque de personne »",
+      "publisher": "Presses universitaires de Vincennes（OpenEdition Books）",
+      "date": "2005",
+      "url": "https://books.openedition.org/puv/6051",
+      "note": "第 10 段（集體遺忘的論點）、第 7–9 段（帽子的比喻）、第 14–18 段（手稿第一句的轉錄、抄本 g 222 f°2 頁邊加上的「Nous étions à l’Étude」）、第 20 段（草稿 folio 21 引文）、第 33–38 段（刪除「我們」、「Il serait maintenant impossible」一句與「fichier」的說法）；線上版 2020 年 6 月 16 日"
+    },
+    {
+      "title": "Madame Bovary/Première partie/1（Louis Conard, 1910）",
+      "publisher": "法文維基文庫（Wikisource）",
+      "date": "1910",
+      "url": "https://fr.wikisource.org/wiki/Madame_Bovary/Premi%C3%A8re_partie/1",
+      "note": "第一部第 1 章全文，用來對照 1857 年版並清點第一人稱複數"
+    },
+    {
+      "title": "Madame Bovary/Notes/Le manuscrit de Madame Bovary（Louis Conard, 1910，頁 504–505）",
+      "publisher": "法文維基文庫（Wikisource）",
+      "date": "1910",
+      "url": "https://fr.wikisource.org/wiki/Madame_Bovary/Notes/Le_manuscrit_de_Madame_Bovary",
+      "note": "手稿 487 張、封面「Septembre 1851. — Avril 1856.」、獻詞推測為完成時所加"
+    },
+    {
+      "title": "Madame Bovary",
+      "publisher": "法文維基百科",
+      "date": "",
+      "url": "https://fr.wikipedia.org/wiki/Madame_Bovary",
+      "note": "《巴黎評論》連載起訖（1856 年 10 月 1 日至 12 月 15 日）、1857 年 2 月 7 日判決無罪、4 月由 Michel Lévy 出版兩冊"
+    }
+  ]
+}
