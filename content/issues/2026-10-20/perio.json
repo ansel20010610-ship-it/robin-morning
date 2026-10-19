@@ -1,0 +1,276 @@
+{
+  "column": "perio",
+  "date": "2026-10-20",
+  "title": "慢性與侵襲型合併：2018 年牙周炎分期分級",
+  "dek": "2017 年世界研討會為什麼取消「侵襲型牙周炎」？分期與分級各在看什麼，門診怎麼寫出一個完整的診斷？",
+  "takeaway": "牙周炎不再分慢性與侵襲型，只有一個病名，再用分期（多嚴重、多難治）與分級（進展多快）描述。分期看最嚴重處的鄰面附著喪失與複雜因素，分級先預設 B 級；最嚴重那顆牙的骨喪失百分比除以年齡大於 1.0，就改判 C 級。",
+  "brief": "2017 年世界研討會牙周炎工作小組認為，現有證據不支持把慢性與侵襲型當成兩種病，改用分期與分級描述同一個「牙周炎」。分期看最嚴重處的鄰面附著喪失與複雜因素；分級預設 B 級，骨喪失百分比除以年齡大於 1.0 就屬 C 級，每天抽 10 支以上則是可把分級上修到 C 級的修正因子。後續回溯研究發現第 IV 期與 C 級病人因牙周病掉牙的風險較高。",
+  "topic_key": "perio:doi:10.1111/jcpe.12946",
+  "updated_at": "2026-10-20T00:51:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Zahnwanderung_wegen_Periodontitis_OK_01.JPG/1280px-Zahnwanderung_wegen_Periodontitis_OK_01.JPG",
+    "width": 1280,
+    "height": 853,
+    "alt": "一位男性微微張口的近照，上顎兩顆正中門牙之間有明顯縫隙，門牙向外散開，旁邊的牙齒排列不整齊。",
+    "caption": "牙周炎造成的上顎牙齒移位，兩顆正中門牙之間出現縫隙。新分類把「牙齒漂移、外翻」列為第 IV 期的複雜因素之一。照片由 Commons 使用者 Bin im Garten 於 2017 年 11 月拍攝；與共識報告無關。",
+    "credit": "Bin im Garten，Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Zahnwanderung_wegen_Periodontitis_OK_01.JPG",
+    "made": "2017"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "2017 年牙周與植體周圍疾病分類世界研討會的牙周炎工作小組認為，現有證據不支持把「慢性」與「侵襲型」牙周炎當成兩種不同的病。除了壞死性牙周炎與作為全身疾病直接表現的牙周炎（多為罕見的免疫異常），其餘一律診斷為「牙周炎」，再用兩個維度描述：分期（stage）看現在多嚴重、治療多複雜，分級（grade）看進展多快、風險多高。這份共識報告在 2018 年 6 月同時刊於《臨床牙周病學雜誌》（Journal of Clinical Periodontology）與《牙周病學雜誌》（Journal of Periodontology），取代了 1999 年以來通行的分類（Armitage 1999）。"
+    },
+    {
+      "type": "p",
+      "text": "改變最大的是診斷的寫法：病歷上不再是「慢性牙周炎，中度」，而是「牙周炎，第 III 期，C 級，局限型」。前半句說病人今天的牙周有多少支持組織已經失去、治療會牽涉多少複雜因素，後半句提醒這個人過去破壞得多快、往後要多小心。"
+    },
+    {
+      "type": "h",
+      "text": "門診裡的一個場景：38 歲、一處 7 毫米袋，算慢性還是侵襲型"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "假設一位 38 歲男性，每天抽 15 支菸。下顎左側第一大臼齒近心鄰面臨床附著喪失（clinical attachment loss, CAL）6 毫米、探測深度（probing depth）7 毫米、根分岔（furcation involvement）二度，X 光片上這顆牙的骨喪失約到牙根長度的 45%；沒有因牙周病掉過牙，受影響的牙不到全口三成；牙齒不動搖、咬合穩定，剩 28 顆牙。按 1999 年分類，年輕、破壞重，常讓人在「慢性」與「侵襲型」之間猶豫。新分類下這個問題消失了，取而代之的是兩個可以照表核對的問題：他屬於第幾期、第幾級。這是說明用的假設情境，不是個案診療建議。"
+    },
+    {
+      "type": "paper",
+      "citation": "Papapanou PN, Sanz M, Buduneli N, Dietrich T, Feres M, Fine DH, Flemmig TF, Garcia R, Giannobile WV, Graziani F, Greenwell H, Herrera D, Kao RT, Kebschull M, Kinane DF, Kirkwood KL, Kocher T, Kornman KS, Kumar PS, Loos BG, Machtei E, Meng H, Mombelli A, Needleman I, Offenbacher S, Seymour GJ, Teles R, Tonetti MS. Periodontitis: Consensus report of workgroup 2 of the 2017 World Workshop on the Classification of Periodontal and Peri-Implant Diseases and Conditions. *J Clin Periodontol*. 2018;45(Suppl 20):S162–S170.（同文刊於 *J Periodontol*. 2018;89(Suppl 1):S173–S182，DOI 10.1002/JPER.17-0721，PMID 29926951）",
+      "doi": "10.1111/jcpe.12946",
+      "pmid": "29926490",
+      "link": "https://doi.org/10.1111/jcpe.12946",
+      "access": "依全文（歐洲牙周病學會網站提供的 J Clin Periodontol 版 PDF，含表 1A、1B）；分期分級的完整理由見 Tonetti 等（2018），該篇本報未讀到全文，只核對書目",
+      "design": "國際共識報告：工作小組審閱 5 篇委託撰寫、經同儕審查的立場論文後，以共識通過結論與病例定義",
+      "sample": "工作小組 28 位作者；研討會由美國牙周病學會（AAP）與歐洲牙周病學會（EFP）合辦",
+      "question": "慢性與侵襲型牙周炎是不是兩種病？牙周炎病例要怎麼定義、怎麼描述？"
+    },
+    {
+      "type": "h",
+      "text": "他們怎麼做：先委託五篇回顧，再討論出共識"
+    },
+    {
+      "type": "p",
+      "text": "這不是一項臨床試驗。工作小組先委託五篇立場論文：一篇重新檢討侵襲型牙周炎的分類與診斷，一篇比較美國 NHANES 2009–2014 與德國 SHIP-Trend 2008–2012 兩個具人口代表性的調查裡，附著喪失如何隨年齡分布，一篇系統回顧縱貫研究裡每年的附著喪失，一篇整理牙周膿瘍、壞死性牙周病與牙髓牙周病灶這些急性病變，最後一篇由 Tonetti、Greenwell 與 Kornman 提出分期分級的病例定義框架。小組討論這五篇的結論，以一連串問答的形式寫成共識。"
+    },
+    {
+      "type": "svg",
+      "title": "共識報告的診斷順序（原創示意圖）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 400\">\n<rect class=\"soft\" x=\"20\" y=\"10\" width=\"320\" height=\"58\" rx=\"6\"/>\n<text class=\"ink\" x=\"180\" y=\"32\" font-size=\"13\" text-anchor=\"middle\">1. 是不是牙周炎病例</text>\n<text class=\"muted\" x=\"180\" y=\"50\" font-size=\"10.5\" text-anchor=\"middle\">鄰面附著喪失出現在 2 顆以上不相鄰的牙，或</text>\n<text class=\"muted\" x=\"180\" y=\"63\" font-size=\"10.5\" text-anchor=\"middle\">頰舌側 CAL ≥3 毫米且袋深 ≥3 毫米達 2 顆牙以上</text>\n<line class=\"ink\" x1=\"180\" y1=\"68\" x2=\"180\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<rect class=\"soft\" x=\"20\" y=\"88\" width=\"320\" height=\"58\" rx=\"6\"/>\n<text class=\"ink\" x=\"180\" y=\"110\" font-size=\"13\" text-anchor=\"middle\">2. 是哪一種牙周炎</text>\n<text class=\"muted\" x=\"180\" y=\"128\" font-size=\"10.5\" text-anchor=\"middle\">壞死性牙周炎／全身疾病的直接表現</text>\n<text class=\"accent\" x=\"180\" y=\"141\" font-size=\"11\" text-anchor=\"middle\">其餘一律診斷為「牙周炎」</text>\n<line class=\"ink\" x1=\"180\" y1=\"146\" x2=\"95\" y2=\"172\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<line class=\"ink\" x1=\"180\" y1=\"146\" x2=\"265\" y2=\"172\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<rect class=\"accent\" x=\"20\" y=\"172\" width=\"150\" height=\"30\" rx=\"6\"/>\n<text class=\"paper\" x=\"95\" y=\"192\" font-size=\"12.5\" text-anchor=\"middle\">3a. 分期 I–IV</text>\n<rect class=\"gold\" x=\"190\" y=\"172\" width=\"150\" height=\"30\" rx=\"6\"/>\n<text class=\"paper\" x=\"265\" y=\"192\" font-size=\"12.5\" text-anchor=\"middle\">3b. 分級 A–C</text>\n<text class=\"ink\" x=\"95\" y=\"224\" font-size=\"11\" text-anchor=\"middle\">多嚴重：最嚴重處</text>\n<text class=\"ink\" x=\"95\" y=\"240\" font-size=\"11\" text-anchor=\"middle\">鄰面 CAL、骨喪失、掉牙</text>\n<text class=\"ink\" x=\"95\" y=\"262\" font-size=\"11\" text-anchor=\"middle\">多難治：袋深、垂直骨缺損、</text>\n<text class=\"ink\" x=\"95\" y=\"278\" font-size=\"11\" text-anchor=\"middle\">根分岔、咬合崩塌</text>\n<text class=\"muted\" x=\"95\" y=\"300\" font-size=\"10.5\" text-anchor=\"middle\">再加範圍：局限型（&lt;30% 牙）</text>\n<text class=\"muted\" x=\"95\" y=\"315\" font-size=\"10.5\" text-anchor=\"middle\">／廣泛型／臼齒門牙型</text>\n<text class=\"ink\" x=\"265\" y=\"224\" font-size=\"11\" text-anchor=\"middle\">進展多快：先假設 B</text>\n<text class=\"ink\" x=\"265\" y=\"240\" font-size=\"11\" text-anchor=\"middle\">有證據才改 A 或 C</text>\n<text class=\"ink\" x=\"265\" y=\"262\" font-size=\"11\" text-anchor=\"middle\">直接證據：5 年追蹤</text>\n<text class=\"ink\" x=\"265\" y=\"278\" font-size=\"11\" text-anchor=\"middle\">間接證據：骨喪失%÷年齡</text>\n<text class=\"muted\" x=\"265\" y=\"300\" font-size=\"10.5\" text-anchor=\"middle\">修正因子：吸菸、</text>\n<text class=\"muted\" x=\"265\" y=\"315\" font-size=\"10.5\" text-anchor=\"middle\">糖尿病血糖控制</text>\n<line class=\"muted\" x1=\"20\" y1=\"335\" x2=\"340\" y2=\"335\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n<text class=\"ink\" x=\"180\" y=\"358\" font-size=\"12\" text-anchor=\"middle\">寫成一個診斷，例如</text>\n<text class=\"accent\" x=\"180\" y=\"382\" font-size=\"13.5\" text-anchor=\"middle\">牙周炎・第 III 期・C 級・局限型</text>\n</svg>",
+      "caption": "依 Papapanou 等（2018）共識報告的病例定義與表 1A、1B 繪製；病例定義另需排除非牙周炎原因（外傷性退縮、頸部齲齒、第三大臼齒相關、牙髓病灶、垂直根裂）。原創示意，數值門檻請以下方兩張表為準。"
+    },
+    {
+      "type": "h",
+      "text": "沒有證據把它們分成兩種病，只是同一種病的嚴重度與速度不同"
+    },
+    {
+      "type": "p",
+      "text": "共識的核心判斷有三點。第一，1999 年定義下的慢性與侵襲型，找不到足以區分為兩種病的病因或病理差異；不同年齡層的嚴重度與範圍確實差很多，小組的解讀是某些族群因暴露或易感性不同，走在不同的疾病軌跡上，而不是得了另一種病。第二，美德兩國的資料雖然整體嚴重度不同，各年齡層的附著喪失型態卻相似，因此可以用數據訂出「以這個年紀來說破壞太多」的門檻。第三，縱貫研究的統合分析發現，每年附著喪失的差異和地理區域有關，與年齡、性別看不出關係。"
+    },
+    {
+      "type": "p",
+      "text": "報告也承認，早發、局限在臼齒與門牙的那一型臨床樣貌很清楚，只是造成它的病因與病理機轉還沒有被定義清楚。在新表裡，它出現在兩個地方：分期時的範圍描述「臼齒／門牙型」，以及分級表裡 C 級的病例表現（早發、臼齒／門牙型）。"
+    },
+    {
+      "type": "table",
+      "title": "分期：看最嚴重的地方，再看治療有多複雜",
+      "head": [
+        "",
+        "第 I 期",
+        "第 II 期",
+        "第 III 期",
+        "第 IV 期"
+      ],
+      "rows": [
+        [
+          "最嚴重處鄰面 CAL",
+          "1–2 毫米",
+          "3–4 毫米",
+          "≥5 毫米",
+          "≥5 毫米"
+        ],
+        [
+          "X 光骨喪失",
+          "牙根冠側 1/3（<15%）",
+          "冠側 1/3（15%–33%）",
+          "到牙根中段或根尖 1/3",
+          "到牙根中段或根尖 1/3"
+        ],
+        [
+          "因牙周病掉牙",
+          "無",
+          "無",
+          "≤4 顆",
+          "≥5 顆"
+        ],
+        [
+          "複雜度",
+          "最深袋 ≤4 毫米，多為水平骨喪失",
+          "最深袋 ≤5 毫米，多為水平骨喪失",
+          "另有袋深 ≥6 毫米、垂直骨缺損 ≥3 毫米、根分岔二或三度、中度齒槽脊缺損",
+          "另需複雜重建：咀嚼功能障礙、二度以上動搖、咬合崩塌、牙齒漂移外翻、剩不到 20 顆牙（10 對咬合）等"
+        ]
+      ],
+      "caption": "依 Papapanou 等（2018）表 1A 整理、簡化並翻譯；本報依原文數據重繪。範圍另記：局限型（受影響的牙 <30%）、廣泛型或臼齒／門牙型。"
+    },
+    {
+      "type": "p",
+      "text": "表 1A 的附註寫了幾條規則。分期先看臨床附著喪失（CAL），沒有 CAL 資料才用 X 光骨喪失；因牙周病掉的牙可以把分期往上調。複雜因素通常「只要一項」就把分期往上推，例如根分岔二、三度，不論 CAL 多少，至少是第 III 期；第 III、IV 期的分界主要靠複雜因素。治療後分期不往回降，因為原本的複雜因素在維護期仍要考慮。"
+    },
+    {
+      "type": "table",
+      "title": "分級：預設 B 級，有證據才改",
+      "head": [
+        "",
+        "A 級（慢）",
+        "B 級（中）",
+        "C 級（快）"
+      ],
+      "rows": [
+        [
+          "5 年內骨或附著喪失",
+          "沒有增加",
+          "<2 毫米",
+          "≥2 毫米"
+        ],
+        [
+          "骨喪失百分比÷年齡",
+          "<0.25",
+          "0.25–1.0",
+          ">1.0"
+        ],
+        [
+          "病例表現",
+          "菌斑多、破壞少",
+          "破壞與菌斑量相當",
+          "破壞超出菌斑量所能解釋；早發、臼齒／門牙型，或標準治療反應不如預期"
+        ],
+        [
+          "吸菸",
+          "不吸菸",
+          "每天 <10 支",
+          "每天 ≥10 支"
+        ],
+        [
+          "糖尿病",
+          "血糖正常或未診斷",
+          "HbA1c <7.0%",
+          "HbA1c ≥7.0%"
+        ]
+      ],
+      "caption": "依 Papapanou 等（2018）表 1B 整理並翻譯；本報依原文數據重繪。前三列是判斷進展速度的主要條件，吸菸與糖尿病是修正因子。"
+    },
+    {
+      "type": "p",
+      "text": "回到門診那位假設的病人。CAL 6 毫米、袋深 7 毫米、根分岔二度，符合第 III 期；沒有掉牙，也沒有動搖、咬合崩塌、漂移等第 IV 期的複雜因素，所以是第 III 期。分級沒有 5 年前的 X 光片可比，就用間接證據：45% 除以 38 歲約 1.18，大於 1.0，屬 C 級；每天 15 支菸也符合 C 級的修正因子。受影響的牙不到三成，是局限型。這段推算是本報依表 1A、1B 做的示範。"
+    },
+    {
+      "type": "h",
+      "text": "今天怎麼用：先判斷是不是牙周炎，再依分期決定治療走多遠"
+    },
+    {
+      "type": "p",
+      "text": "要把它搬進門診，Tonetti 與 Sanz 在 2019 年提出一套決策流程：先用敏感的篩檢分出健康、牙齦炎與疑似牙周炎，再排除其他造成附著喪失的原因，接著分期，最後分級。歐洲牙周病學會 2020 年的第 I–III 期牙周炎 S3 臨床指引（Sanz 等），根據 15 篇專門委託的系統回顧，訂出依分期逐步加碼的治療順序：先控制菌斑與危險因子，再做齦上與齦下清創，必要時手術，最後是長期的支持性牙周治療；第 IV 期另有 2022 年的指引（Herrera 等）。"
+    },
+    {
+      "type": "p",
+      "text": "分期分級是否真的能預測預後，是在分類發表之後才開始驗證。Ravidà 等人在 2020 年回溯密西根大學 292 名每年至少回診維護一次的病人，平均追蹤 289.7 個月（約 24 年），把他們回頭套上新分類：第 IV 期病人因牙周病掉牙的風險比是第 I 期的 3.73 倍，C 級是 A 級的 4.83 倍，局限或廣泛則看不出差別。風險比可以理解成同一段時間裡掉牙的相對速度。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "本報的讀法是，分級最實用的地方不是那個字母，而是它逼牙醫在初診就問兩件事：這個人幾歲、最嚴重的那顆牙骨頭掉了多少；他抽菸嗎、糖尿病控制得如何。C 級的病人，衛教、戒菸轉介與回診間隔都該比照高風險安排。"
+    },
+    {
+      "type": "h",
+      "text": "要小心的地方"
+    },
+    {
+      "type": "list",
+      "items": [
+        "「證據不支持區分」不等於「證明是同一種病」；共識報告自己承認，臼齒／門牙型的病因與機轉仍不清楚。",
+        "表裡的門檻（例如骨喪失÷年齡 1.0、每天 10 支菸、HbA1c 7.0%）是專家共識，報告強調要配合臨床判斷，不是機械套用的公式。",
+        "本文引用的預後驗證是單一中心的回溯研究（Ravidà 等，292 名維護病人，第 IV 期只有 30 人），未必能外推到沒有規律回診的一般病人。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Periodontitis: Consensus report of workgroup 2 of the 2017 World Workshop on the Classification of Periodontal and Peri-Implant Diseases and Conditions（J Clin Periodontol 版全文 PDF）",
+      "publisher": "Journal of Clinical Periodontology 2018;45(Suppl 20):S162–S170；歐洲牙周病學會（EFP）網站",
+      "date": "2018-06-20",
+      "url": "https://www.efp.org/fileadmin/uploads/efp/Documents/Campaigns/New_Classification/Reports/Consensus_report__Workgroup_2__Papapanou_et_al-2018-Journal_of_Clinical_Periodontology.pdf",
+      "note": "全文：摘要、五篇立場論文的結論、病例定義、表 1A、表 1B、未來研究方向"
+    },
+    {
+      "title": "PubMed 29926490：Periodontitis: Consensus report of workgroup 2（J Clin Periodontol）",
+      "publisher": "National Library of Medicine",
+      "date": "2018-06-20",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29926490/",
+      "note": "書目資料；DOI 10.1111/jcpe.12946"
+    },
+    {
+      "title": "Periodontitis: Consensus report of workgroup 2（J Periodontol 同步刊出版，PMID 29926951）",
+      "publisher": "Journal of Periodontology 2018;89(Suppl 1):S173–S182",
+      "date": "2018-06-21",
+      "url": "https://doi.org/10.1002/JPER.17-0721",
+      "note": "同步刊出版本的書目"
+    },
+    {
+      "title": "Staging and grading of periodontitis: Framework and proposal of a new classification and case definition",
+      "publisher": "Journal of Clinical Periodontology 2018;45(Suppl 20):S149–S161（PMID 29926495）",
+      "date": "2018-06-20",
+      "url": "https://doi.org/10.1111/jcpe.12945",
+      "note": "Tonetti、Greenwell、Kornman；只核對書目，未讀全文"
+    },
+    {
+      "title": "Development of a classification system for periodontal diseases and conditions",
+      "publisher": "Annals of Periodontology 1999;4(1):1–6",
+      "date": "1999-12",
+      "url": "https://doi.org/10.1902/annals.1999.4.1.1",
+      "note": "Armitage；1999 年分類，只核對書目"
+    },
+    {
+      "title": "Implementation of the new classification of periodontal diseases: Decision-making algorithms for clinical practice and education",
+      "publisher": "Journal of Clinical Periodontology 2019;46(4):398–405（PMID 30883878）",
+      "date": "2019-04-23",
+      "url": "https://doi.org/10.1111/jcpe.13104",
+      "note": "Tonetti、Sanz；依摘要"
+    },
+    {
+      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology 2020;47(Suppl 22):4–60（PMID 32383274；PMC7891343）",
+      "date": "2020-07-27",
+      "url": "https://doi.org/10.1111/jcpe.13290",
+      "note": "Sanz 等；依摘要"
+    },
+    {
+      "title": "Treatment of stage IV periodontitis: The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology 2022;49(Suppl 24):4–71（PMID 35688447）",
+      "date": "2022-06-10",
+      "url": "https://doi.org/10.1111/jcpe.13639",
+      "note": "Herrera 等；只核對書目"
+    },
+    {
+      "title": "Using periodontal staging and grading system as a prognostic factor for future tooth loss: A long-term retrospective study",
+      "publisher": "Journal of Periodontology 2020;91(4):454–461（PMID 31502244）",
+      "date": "2019-09-25",
+      "url": "https://doi.org/10.1002/JPER.19-0390",
+      "note": "Ravidà 等；依摘要"
+    },
+    {
+      "title": "File:Zahnwanderung wegen Periodontitis OK 01.JPG",
+      "publisher": "Wikimedia Commons",
+      "date": "2017-11-10",
+      "url": "https://commons.wikimedia.org/wiki/File:Zahnwanderung_wegen_Periodontitis_OK_01.JPG",
+      "note": "頭圖；Bin im Garten 攝，CC BY-SA 4.0"
+    }
+  ]
+}
