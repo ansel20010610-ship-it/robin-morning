@@ -1,0 +1,13 @@
+{
+  "1": {
+    "finished_at": "2026-10-20T00:59:32+08:00",
+    "missing": [
+      "football",
+      "civilization",
+      "fiction",
+      "literature",
+      "tactics"
+    ],
+    "note": "完成並推送晨光（創 28:12–17）、古典（德弗札克第九）、牙周（Papapanou 2018 分期分級）三篇，皆經審稿修正，validate 無 ERROR"
+  }
+}
