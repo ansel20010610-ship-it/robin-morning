@@ -1,0 +1,276 @@
+{
+  "column": "music",
+  "date": "2026-10-21",
+  "title": "從低音 G 開始，停在低音 B：李斯特《B 小調奏鳴曲》",
+  "dek": "一首沒有分樂章的奏鳴曲，怎麼用第一頁的三個念頭撐起 30 分鐘？從開頭的休止與 G 聽到最後那個低音 B。",
+  "brief": "李斯特 1853 年完成的《B 小調鋼琴奏鳴曲》只有一個樂章，開頭是隔著休止的低音 G 和兩條下行音階。指定錄音是賀夫 1999 年為 Hyperion 錄製的版本。聆聽時留意那兩條音階在 Grandioso 與賦格段之前回來；親筆稿上劃掉過一段響亮結尾，安靜的尾聲是否原本就在計畫中，解說者看法不一。",
+  "topic_key": "music:liszt-s178",
+  "updated_at": "2026-10-21T01:02:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "portrait",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Franz_Liszt_1858.jpg",
+    "width": 739,
+    "height": 962,
+    "alt": "棕褐色的老照片。一名長髮及肩的男子側身坐在扶手椅上，臉轉向畫面右方，穿深色外套、白襯衫，打著黑色大領結，背心是格紋。他右手搭在膝上拿著一張摺起的紙，左手扶著椅子扶手。左側垂著有花紋的布幔，右側桌上鋪著花布，放著一本書。",
+    "caption": "李斯特，1858 年，漢夫斯坦格（Franz Hanfstaengl）攝。這是他完成《B 小調奏鳴曲》五年後的樣子。Commons 標示影像為上傳者自行掃描，未註明原件收藏地。",
+    "credit": "Franz Hanfstaengl 攝；Wikimedia Commons（上傳者自行掃描）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Franz_Liszt_1858.jpg",
+    "made": "1858"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "樂曲的第一個聲音是休止。鋼琴家等過一拍，兩手才在低音區同時彈出相隔八度的 G，帶重音記號、輕聲，譜上寫著 Lento assai（非常緩慢）和 *p sotto voce*（弱，壓低聲音）；再空一拍，又是一個 G。接著兩手以八度重疊，往下走出一條音階，然後 G 回來，再走一條音階，再回到 G。直到第 8 小節換成 Allegro energico（有活力的快板），B 小調才真正出現。"
+    },
+    {
+      "type": "p",
+      "text": "這是匈牙利作曲家李斯特（Franz Liszt，1811–1886）的《B 小調鋼琴奏鳴曲》（Piano Sonata in B minor），編號 S. 178。明天（10 月 22 日）是他的生日。全曲只有一個樂章，演奏約 30 分鐘，中間不停；Parry 等解說者認為，李斯特把一首奏鳴曲需要的快板、慢板、詼諧曲與終曲，都塞進這一口氣裡。"
+    },
+    {
+      "type": "music",
+      "composer": "李斯特（Franz Liszt）",
+      "work": "B 小調鋼琴奏鳴曲，S. 178",
+      "work_original": "Piano Sonata in B minor, S. 178",
+      "composed": "1852 年底至 1853 年 2 月 2 日完成（1851 年已有草稿），威瑪；1854 年由 Breitkopf & Härtel 出版",
+      "performers": "史蒂芬・賀夫（Stephen Hough），鋼琴",
+      "recording": "Hyperion（CDA67085《Liszt: Sonata, Ballades & Polonaises》），1999 年 11 月錄音於英國 St George's, Brandon Hill；製作 Andrew Keener，錄音工程 Tony Faulkner；2000 年 11 月發行",
+      "duration": "31 分 15 秒（本錄音）",
+      "movements": [
+        "單一樂章，段落依序：Lento assai – Allegro energico – Grandioso（D 大調）– Andante sostenuto（升 F 大調）– 賦格段（降 B 小調）– 再現部 – Presto、Prestissimo – 輕聲尾聲"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Liszt Piano Sonata in B minor Stephen Hough Hyperion",
+        "artist_hint": "Stephen Hough",
+        "track_filter": [
+          "Sonata in B minor",
+          "Piano Sonata"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "指定錄音是英國鋼琴家賀夫（Stephen Hough）1999 年 11 月為 Hyperion 錄的版本，同碟收有李斯特的兩首敘事曲、兩首波蘭舞曲與〈搖籃曲〉。選它有兩個理由。第一，廠牌網頁把錄音時間、地點、製作人與錄音師都列得清楚，唱片附的解說（Tim Parry 撰）還按音軌標出慢板、賦格段、再現部和尾聲的位置，讀者可以照著聽。"
+    },
+    {
+      "type": "p",
+      "text": "第二，Hyperion 網頁轉引《Gramophone》的評語：「At last, Hough tackles Liszt's Sonata on record and the result is as musicianly as this fine pianist's admirers might expect」（賀夫終於錄了李斯特的奏鳴曲，結果正如欣賞這位優秀鋼琴家的人所期待的那樣有音樂性；本文自譯）。這段評語網頁未註明刊期與作者。"
+    },
+    {
+      "type": "h",
+      "text": "1853 年在威瑪完成，題獻給舒曼"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "鋼琴家休伊特（Angela Hewitt）為她 2015 年發行的 Hyperion 錄音所寫的解說指出，李斯特 1842 年受聘為威瑪的特別宮廷樂長，後來定居當地，和卡洛琳公主（Princess Carolyne zu Sayn-Wittgenstein）同住；這首奏鳴曲大概是 1852 年底動筆，1853 年 2 月 2 日完成。Hyperion 作品頁的資料欄則記載 1851 年已有草稿，1854 年出版。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "作品題獻給舒曼（Robert Schumann），這是回禮：舒曼在 1839 年把《C 大調幻想曲》（Fantasie in C，作品 17）題獻給李斯特。據德國 Henle 出版社編輯 Norbert Müllemann 2015 年的文章，克拉拉・舒曼（Clara Schumann）1854 年 5 月 25 日在日記裡記下收到樂譜的事，那時彈給她聽的是布拉姆斯（Johannes Brahms）。她的評語轉引如下："
+    },
+    {
+      "type": "quote",
+      "text": "這完全是噪音——沒有一個健康的樂思，一切都混亂，再也聽不出清楚的和聲進行。",
+      "original": "This is nothing but sheer racket – not a single healthy idea, everything confused, no longer a clear harmonic sequence to be detected there!",
+      "cite": "克拉拉・舒曼 1854 年 5 月 25 日日記，轉引自 Henle 部落格（Norbert Müllemann，2015）英譯；中文為本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "公開首演在完成近四年後。休伊特的解說和 Hyperion 作品頁都寫，首演是 1857 年 1 月 27 日，由畢羅（Hans von Bülow）在柏林演出；樂譜資料庫 IMSLP 的作品頁則記為 1 月 22 日，兩種記載並存。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "李斯特沒有給這首奏鳴曲任何標題或文字說明。Parry 在賀夫唱片的解說中寫道，最流行的說法是把它讀成歌德《浮士德》（Faust）的寫照，三個主題分別代表浮士德、葛麗卿與梅菲斯特；他轉述李斯特的再傳弟子阿勞（Claudio Arrau）的說法，李斯特的學生們把這個讀法當成理所當然。霍華德也提到布倫德爾（Alfred Brendel）等人主張可以從《浮士德》理解這首曲子的結構與內容。這些都是後人的解讀，不是作曲家的說明。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/00/Liszt_Sonate_openingsbars.jpg",
+      "width": 900,
+      "height": 463,
+      "alt": "印刷樂譜的開頭兩行，鋼琴大譜表，調號兩個升記號。第一行左上方印著「Lento assai.」，下方是「p sotto voce」。每小節先是休止，再出現帶重音記號的低音 G；第二、三小節兩手各有一條往下走的音階，第五、六小節又有一條。第二行最後換成「Allegro energico.」，右手跳到高音區。",
+      "caption": "奏鳴曲第 1–9 小節。第 1、4、7 小節是隔著休止的低音 G；第 2–3 小節的下行音階是 G、F、降 E、D、C、降 B、降 A，第 5–6 小節改成 G、升 F、降 E、D、升 C、降 B、A。第 8 小節換成 Allegro energico。Commons 未註明這份樂譜出自哪一個版本。",
+      "credit": "李斯特作曲；Wikimedia Commons（未註明版本）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Liszt_Sonate_openingsbars.jpg",
+      "made": "樂曲 1853；樂譜版本未註明"
+    },
+    {
+      "type": "h",
+      "text": "第一頁的三個念頭"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "回到開頭。第 2–3 小節的音階從 G 往下走：G、F、降 E、D、C、降 B、降 A。第 5–6 小節換了幾個音：G、升 F、降 E、D、升 C、降 B、A。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "休伊特把前者稱為弗里幾亞調式（Phrygian），後者稱為典型的吉普賽音階。兩條音階都從 G 出發，聽起來卻不在任何穩定的調上；霍華德形容這是「某種 G 小調」，要到第 8 小節的 Allegro energico 才確立 B 小調。"
+    },
+    {
+      "type": "p",
+      "text": "Allegro energico 之後，第二個念頭立刻出場：一串在八度間大幅跳動的強音，霍華德指出它的特徵是向下的減七度音程。緊接著，第三個念頭落在低音區：同一個音一再敲擊，Parry 稱它為「梅菲斯特式」的姿態。霍華德把全曲的材料歸納成五個主題：被休止隔開的八度接一條下行音階、跳躍的八度、連擊的低音這前三個都在開頭幾頁出場，第四個是後面的 Grandioso，第五個要到中段慢板才出現。後面的段落，多半是把這些主題改換速度、節奏與性格重新端出來。"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：一個樂章裡的四個樂章"
+    },
+    {
+      "type": "p",
+      "text": "**Grandioso 到 D 大調。** 經過一段很長的過渡，開頭的下行音階先回來報信，音樂才走到 D 大調，標著 Grandioso（壯麗地），這是第二主題。霍華德指出，這段材料用到所謂的「十字架動機」：三個音，先上行一個全音、再上行一個小三度；Parry 指出它和葛利果聖歌〈王的旗幟前進〉（Vexilla Regis prodeunt）開頭三個音相同。霍華德另外提醒，布倫德爾不接受由此延伸出的宗教解讀。不久之後，那個連擊的低音被改寫成一段輕柔的旋律，霍華德的說法是，它的重複音「不再帶威脅」。"
+    },
+    {
+      "type": "p",
+      "text": "**中段的慢板。** 音樂慢下來，轉到升 F 大調的 Andante sostenuto（行板，持續地）。霍華德指出這裡出現一個新的主題，和 Grandioso 主題輪流出現；Parry 則把 Andante sostenuto 與其後的 Quasi Adagio（近似慢板）合起來看，認為它同時是慢樂章，也是發展部。"
+    },
+    {
+      "type": "p",
+      "text": "**賦格段。** 慢板過後，霍華德指出開頭的主題又出現一次；休伊特寫道，開頭的下行音階此時標著 ppp、帶著疲憊感回來，把音樂帶進下一個「樂章」。接著快板速度回來，但不是直接再現，而是一段三聲部的賦格段，休伊特指出它在降 B 小調。Parry 和霍華德都把它看成類似詼諧曲的段落，同時延續發展部的工作。Parry 標出的再現部，從回到 B 小調的地方開始。"
+    },
+    {
+      "type": "p",
+      "text": "**再現部與尾聲。** 再現部把前面的主題重新走一遍，第二主題這次改在 B 大調。霍華德形容尾聲的 Presto 與 Prestissimo 由「險峻的八度」組成；聽到這裡，很容易以為曲子會在最強音結束。但它沒有。Parry 寫到，Prestissimo 的高潮之後是一個停頓，接著是安靜的尾聲；霍華德形容這是把所有材料，包括慢板的主題，都帶到靜止，最後從 F 大調三和弦接到輕輕反覆的 B 大調和弦——他稱之為「最迂迴的終止」。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Liszt_-_manuscript_of_Sonata_in_B_minor%2C_p._11.jpg/1280px-Liszt_-_manuscript_of_Sonata_in_B_minor%2C_p._11.jpg",
+      "width": 1280,
+      "height": 1637,
+      "alt": "一頁手寫鋼琴譜，右上角寫著頁碼 9。音符用褐色墨水寫成，很密；另有大量紅色墨水的連線、重音記號、漸強漸弱記號與文字，中間一行左側用紅字寫著「Stringendo」，下方另有「non legato」與指法數字。",
+      "caption": "李斯特親筆稿的一頁（Commons 標為第 11 頁，紙上頁碼寫 9）。褐色墨水是音符，紅色墨水寫著表情記號、指法與 Stringendo（漸快）等字樣；休伊特形容這份親筆稿是相當凌亂的工作稿。Commons 標示影像出自 IMSLP；據 Henle 出版社，這份親筆稿藏於紐約摩根圖書館。",
+      "credit": "李斯特親筆；影像出自 IMSLP，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Liszt_-_manuscript_of_Sonata_in_B_minor,_p._11.jpg",
+      "made": "1853"
+    },
+    {
+      "type": "h",
+      "text": "親筆稿上劃掉的響亮結尾"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這個輕聲的結尾怎麼來的，說法不一。Parry 在解說中寫道，李斯特原本為奏鳴曲寫了一個響亮的結尾，安靜的尾聲是後來「靈感來時的補筆」（an inspired afterthought）。休伊特指出，親筆稿上確實有這樣一段用紅墨水劃掉的段落，但她也轉述，霍華德主張那段從來不會是全曲的結尾，安靜的尾聲一直在計畫之中；霍華德自己的解說則說，親筆稿顯示李斯特曾短暫考慮過響亮的結尾。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "另一件與結尾無直接關係的事：Müllemann 提到，李斯特在親筆稿上不只刪改，還把整段作廢，改寫在剪下的譜紙上、貼住原來的段落；這些貼紙後來被揭開，Henle 2015 年的新摹本第一次把底下的內容拍了出來。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "最後一個聲音也有爭議。Müllemann 指出，親筆稿和初版的最後一小節都只在低音區寫了一個 B，旁邊標著「8」：這是要彈低八度的單音，還是要加上低八度、彈成八度？李斯特的學生紹爾（Emil von Sauer）編的 Peters 版在註記裡傾向八度，也指回了開頭；但 Müllemann 認為，紹爾仍把這份不確定留給了演奏者。"
+    },
+    {
+      "type": "quote",
+      "text": "我們相信李斯特想的是八度，參見第 1 小節：這首奏鳴曲絕不是只用單音開頭的。",
+      "original": "We believe that Liszt had an octave in mind, see also m. 1: The sonata most certainly does not start with merely single notes.",
+      "cite": "紹爾（Emil von Sauer）於 Peters 版註記，轉引自 Henle 部落格（Norbert Müllemann，2015）英譯；中文為本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：紹爾把結尾和開頭連在一起，正好說出這首曲子的形狀。它從隔著休止的低音 G 出發，繞了約 30 分鐘，停在同樣落在低音區的一個 B 上。休伊特寫道，李斯特希望開頭那些 G 聽起來像「被蒙住的定音鼓」；最後的低音 B，是這組定音鼓的收尾。聽賀夫的錄音時，不妨在最後一個和弦之後多等幾秒，聽那個 B 是怎麼落下的。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這首曲子後來的地位，和克拉拉當年的反應差得很遠。Parry 引述李斯特學者沃克（Alan Walker）的話：就算李斯特沒寫過別的作品，單憑這首作品，他也必須被列為大師。Müllemann 則說，它如今已是鋼琴文獻的頂峰之一。"
+    },
+    {
+      "type": "h",
+      "text": "延伸聆聽"
+    },
+    {
+      "type": "list",
+      "items": [
+        "另一個錄音：齊瑪曼（Krystian Zimerman）的 Deutsche Grammophon 錄音，1991 年 8 月 1 日發行，同碟收有李斯特晚年的〈灰色的雲〉（Nuages gris）、〈悲傷的貢多拉〉第二首（La lugubre gondola II）等曲。",
+        "相關作品：舒曼《C 大調幻想曲》，作品 17——李斯特這首奏鳴曲回禮的對象。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Liszt: Sonata, Ballades & Polonaises（CDA67085）",
+      "publisher": "Hyperion Records（Stephen Hough；Tim Parry 撰唱片解說，© 2000）",
+      "date": "2000-11",
+      "url": "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67085",
+      "note": "錄音 1999 年 11 月、St George's, Brandon Hill、製作 Andrew Keener、工程 Tony Faulkner、2000 年 11 月發行；轉引《Gramophone》評語（未註明刊期與作者）；Parry 解說：三個念頭、梅菲斯特式重複音、十字架動機與〈Vexilla Regis prodeunt〉、慢板兼發展部、賦格段、原本的響亮結尾、浮士德解讀與阿勞的轉述、沃克評語、1839 年舒曼題獻"
+    },
+    {
+      "title": "Piano Sonata in B minor, S178（CDA67085 曲目頁）",
+      "publisher": "Hyperion Records（Leslie Howard 撰解說，© 1991）",
+      "date": "2000-11",
+      "url": "https://www.hyperion-records.co.uk/dw.asp?dc=W771_67085",
+      "note": "本曲錄音長度 31 分 15 秒；霍華德解說：開頭主題在 Grandioso 前與賦格段前回來、曾短暫考慮響亮結尾、第 8 小節 Allegro energico 確立 B 小調、「某種 G 小調」、向下減七度、低音重複音、Grandioso D 大調、十字架動機音程、布倫德爾與浮士德、升 F 大調 Andante sostenuto 的新主題、第二主題再現於 B 大調、Presto 與 Prestissimo、F 大調三和弦到 B 大調和弦的終止；霍華德解說 © 1991；頁首作品資料欄：1851 年草稿、1854 年出版、1857 年 1 月 27 日畢羅柏林首演"
+    },
+    {
+      "title": "Liszt: Piano Sonata & other works（CDA68067）",
+      "publisher": "Hyperion Records（Angela Hewitt 撰解說，© 2015）",
+      "date": "2015-02",
+      "url": "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA68067",
+      "note": "1842 年威瑪特別宮廷樂長、卡洛琳公主；1852 年底動筆、1853 年 2 月 2 日完成；1857 年 1 月 27 日首演；開頭 sotto voce 的 G 與弗里幾亞、吉普賽兩條音階；Grandioso D 大調；升 F 大調 Andante sostenuto；降 B 小調三聲部賦格段；開頭的 G 應像「muffled timpani」、最後的低音 B 收尾；紅墨水劃掉的響亮結尾與霍華德的看法；ppp 的下行音階引入賦格段"
+    },
+    {
+      "title": "What's new with Liszt's b-minor sonata",
+      "publisher": "Henle Blog（Norbert Müllemann）",
+      "date": "2015-11-23",
+      "url": "https://www.henle.de/blog/en/2015/11/23/what%E2%80%99s-new-with-liszt%E2%80%99s-b-minor-sonata/",
+      "note": "克拉拉・舒曼 1854 年 5 月 25 日日記英譯（布拉姆斯為她彈奏）；親筆稿藏紐約摩根圖書館；李斯特以貼紙覆蓋作廢段落、2015 年新摹本；最後一小節低音 B 與「8」的問題、紹爾 Peters 版註記；「鋼琴文獻的頂峰之一」；紹爾 sits on the fence"
+    },
+    {
+      "title": "Piano Sonata in B minor, S.178 (Liszt, Franz)",
+      "publisher": "IMSLP",
+      "url": "https://imslp.org/wiki/Piano_Sonata_in_B_minor,_S.178_(Liszt,_Franz)",
+      "note": "初版 Breitkopf & Härtel，萊比錫，1854；首演記為 1857 年 1 月 22 日，與 Hyperion 解說不同；2026-10-20 查閱"
+    },
+    {
+      "title": "Liszt, Franz (1811-1886) - Composer",
+      "publisher": "Hyperion Records",
+      "url": "https://www.hyperion-records.co.uk/c.asp?c=C365",
+      "note": "生於 1811 年 10 月 22 日、卒於 1886 年 7 月 31 日；2026-10-20 查閱"
+    },
+    {
+      "title": "LISZT Klaviersonate h-moll Zimerman",
+      "publisher": "Deutsche Grammophon",
+      "date": "1991-08-01",
+      "url": "https://www.deutschegrammophon.com/en/catalogue/products/liszt-klaviersonate-h-moll-zimerman-5225",
+      "note": "延伸錄音；發行日與同碟曲目"
+    },
+    {
+      "title": "File:Franz Liszt 1858.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Franz_Liszt_1858.jpg",
+      "note": "頭圖；Franz Hanfstaengl 攝、1858、公版、上傳者自行掃描"
+    },
+    {
+      "title": "File:Liszt Sonate openingsbars.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Liszt_Sonate_openingsbars.jpg",
+      "note": "正文圖 f1；奏鳴曲開頭樂譜、公版，未註明版本"
+    },
+    {
+      "title": "File:Liszt - manuscript of Sonata in B minor, p. 11.jpg",
+      "publisher": "Wikimedia Commons（出處 IMSLP）",
+      "url": "https://commons.wikimedia.org/wiki/File:Liszt_-_manuscript_of_Sonata_in_B_minor,_p._11.jpg",
+      "note": "正文圖 f2；親筆稿第 11 頁、1853、公版"
+    }
+  ]
+}
