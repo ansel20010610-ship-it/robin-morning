@@ -1,0 +1,238 @@
+{
+  "column": "perio",
+  "date": "2026-10-21",
+  "title": "6 與 3 毫米：2018 年植體周圍炎的病例定義",
+  "dek": "植體周圍黏膜炎與植體周圍炎怎麼分？沒有舊 X 光片時，2017 年世界研討會給了什麼替代標準？",
+  "takeaway": "植體骨喪失要和基線比，假牙完成就拍 X 光、量探測深度。沒有舊資料時，探診出血或溢膿、探測深度 ≥6 毫米、骨高度在植體骨內段最冠側處下方 ≥3 毫米，三者兼具即可診斷植體周圍炎。",
+  "brief": "2017 年世界研討會第 4 工作小組把植體周圍分成健康、黏膜炎與周圍炎：輕探出血代表發炎，再加上探測深度變深與超過初期骨改建的骨喪失，就是植體周圍炎。沒有舊資料時，出血或溢膿、探測深度 6 毫米以上、骨高度在植體骨內段最冠側處下方 3 毫米以上，三者兼具即可診斷。報告建議修復一完成就拍 X 光、量探測深度，留作基線。",
+  "topic_key": "perio:doi:10.1111/jcpe.12957",
+  "updated_at": "2026-10-21T00:50:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6f/X_ray_of_teeth_with_dental_implant_screws_2.jpg",
+    "width": 640,
+    "height": 900,
+    "alt": "黑白根尖 X 光片，三支螺紋狀植體由上方骨頭向下伸出，植體冠側周圍的骨頭顏色變暗、高度下降，黃色箭頭指向植體旁骨頭流失的位置。",
+    "caption": "Commons 上傳者 Partynia 標為植體周圍炎的根尖 X 光片，黃色箭頭為原圖既有標示，應是指出植體旁的骨喪失。依共識報告，判斷骨喪失要和基線片比，或在沒有舊片時看骨高度是否在植體骨內段最冠側處下方 3 毫米以上。Commons 標示日期 2013 年 10 月；與共識報告無關。",
+    "credit": "Partynia，Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:X_ray_of_teeth_with_dental_implant_screws_2.jpg",
+    "made": "2013"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "植體周圍炎（peri-implantitis）的定義，核心是一個比較：骨頭有沒有比「當初」少。2017 年牙周與植體周圍疾病分類世界研討會第 4 工作小組在 2018 年 6 月發表的共識報告，把植體周圍分成健康、植體周圍黏膜炎（peri-implant mucositis）與植體周圍炎三種狀態：輕探出血或溢膿是發炎的訊號，若同時探測深度比先前檢查深，且骨喪失超過初期骨改建（remodeling），就是植體周圍炎。報告建議，植體上的假牙一完成就拍 X 光、量探測深度，負重一段時間後再拍一張，作為骨改建後的骨高度基準。"
+    },
+    {
+      "type": "p",
+      "text": "這份報告替一個常見的難題留了一條路：病人第一次來，手上沒有任何舊片。這時只要探診出血或溢膿、探測深度達 6 毫米以上、骨高度在植體骨內段最冠側處下方 3 毫米以上，三者兼具，就可以診斷植體周圍炎。它也明說，植體周圍沒有一個可以代表「健康」的袋深數字，要看的是發炎徵象。"
+    },
+    {
+      "type": "h",
+      "text": "門診裡的一個場景：8 年前在別處種的植體，今天探到 6 毫米"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "假設一位 62 歲的新病人，下顎左側第一大臼齒的植體 8 年前在他院完成，沒有帶任何 X 光片或病歷。今天輕探遠心側出血、探測深度 6 毫米，根尖片上骨高度約在植體骨內段最冠側處下方 4 毫米。牙醫要判斷：這符合植體周圍炎的定義，還是植體剛裝上時本來就會有的骨改建？這是說明用的假設情境，不是個案診療建議。"
+    },
+    {
+      "type": "paper",
+      "citation": "Berglundh T, Armitage G, Araujo MG, Avila-Ortiz G, Blanco J, Camargo PM, Chen S, Cochran D, Derks J, Figuero E, Hämmerle CHF, Heitz-Mayfield LJA, Huynh-Ba G, Iacono V, Koo KT, Lambert F, McCauley L, Quirynen M, Renvert S, Salvi GE, Schwarz F, Tarnow D, Tomasi C, Wang HL, Zitzmann N. Peri-implant diseases and conditions: Consensus report of workgroup 4 of the 2017 World Workshop on the Classification of Periodontal and Peri-Implant Diseases and Conditions. *J Clin Periodontol*. 2018;45(Suppl 20):S286–S291.（同文刊於 *J Periodontol*. 2018;89(Suppl 1):S313–S318，DOI 10.1002/jper.17-0739，PMID 29926955）",
+      "doi": "10.1111/jcpe.12957",
+      "pmid": "29926491",
+      "link": "https://doi.org/10.1111/jcpe.12957",
+      "access": "依全文（歐洲牙周病學會網站提供的 J Clin Periodontol 版 PDF）；後續文獻依摘要",
+      "design": "國際共識報告：工作小組依 5 篇事前撰寫的立場論文，以一問一答寫成共識與病例定義",
+      "sample": "工作小組 25 位作者；研討會由美國牙周病學會（AAP）與歐洲牙周病學會（EFP）合辦",
+      "question": "健康、黏膜炎與植體周圍炎各有什麼特徵？門診與流行病學研究要怎麼定義病例？"
+    },
+    {
+      "type": "h",
+      "text": "他們怎麼做：五篇立場論文，一連串問答"
+    },
+    {
+      "type": "p",
+      "text": "研討會前，小組先準備了五篇立場論文。共識報告把結論寫成一問一答，最後分別為日常門診與流行病學研究訂出病例定義。報告先設定兩個前提：病史與植體修復紀錄完整、已做過鑑別診斷，並假設植體位置正確、已與軟硬組織整合。"
+    },
+    {
+      "type": "svg",
+      "title": "植體周圍三種狀態怎麼分（原創示意圖）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 430\">\n<rect class=\"soft\" x=\"20\" y=\"10\" width=\"320\" height=\"46\" rx=\"6\"/>\n<text class=\"ink\" x=\"180\" y=\"30\" font-size=\"13\" text-anchor=\"middle\">輕探植體周圍：有沒有出血或溢膿</text>\n<text class=\"muted\" x=\"180\" y=\"47\" font-size=\"10.5\" text-anchor=\"middle\">同時看紅腫、量探測深度、看 X 光骨高度</text>\n<line x1=\"180\" y1=\"56\" x2=\"70\" y2=\"84\" stroke=\"currentColor\" class=\"ink\" stroke-width=\"1.5\"/>\n<line x1=\"180\" y1=\"56\" x2=\"250\" y2=\"84\" stroke=\"currentColor\" class=\"ink\" stroke-width=\"1.5\"/>\n<text class=\"muted\" x=\"108\" y=\"76\" font-size=\"10.5\" text-anchor=\"middle\">沒有</text>\n<text class=\"muted\" x=\"232\" y=\"76\" font-size=\"10.5\" text-anchor=\"middle\">有</text>\n<rect class=\"gold\" x=\"10\" y=\"84\" width=\"120\" height=\"58\" rx=\"6\"/>\n<text class=\"paper\" x=\"70\" y=\"106\" font-size=\"12.5\" text-anchor=\"middle\">植體周圍健康</text>\n<text class=\"paper\" x=\"70\" y=\"123\" font-size=\"10\" text-anchor=\"middle\">袋深沒有比上次深</text>\n<text class=\"paper\" x=\"70\" y=\"136\" font-size=\"10\" text-anchor=\"middle\">骨沒有超過初期改建</text>\n<rect class=\"soft\" x=\"150\" y=\"84\" width=\"200\" height=\"46\" rx=\"6\"/>\n<text class=\"ink\" x=\"250\" y=\"103\" font-size=\"12\" text-anchor=\"middle\">骨喪失有沒有超過</text>\n<text class=\"ink\" x=\"250\" y=\"120\" font-size=\"12\" text-anchor=\"middle\">初期骨改建的範圍</text>\n<line x1=\"250\" y1=\"130\" x2=\"200\" y2=\"160\" stroke=\"currentColor\" class=\"ink\" stroke-width=\"1.5\"/>\n<line x1=\"250\" y1=\"130\" x2=\"300\" y2=\"160\" stroke=\"currentColor\" class=\"ink\" stroke-width=\"1.5\"/>\n<text class=\"muted\" x=\"212\" y=\"150\" font-size=\"10.5\" text-anchor=\"middle\">沒有</text>\n<text class=\"muted\" x=\"290\" y=\"150\" font-size=\"10.5\" text-anchor=\"middle\">有</text>\n<rect class=\"soft\" x=\"150\" y=\"160\" width=\"95\" height=\"58\" rx=\"6\"/>\n<text class=\"ink\" x=\"197\" y=\"182\" font-size=\"12\" text-anchor=\"middle\">植體周圍</text>\n<text class=\"ink\" x=\"197\" y=\"199\" font-size=\"12\" text-anchor=\"middle\">黏膜炎</text>\n<text class=\"muted\" x=\"197\" y=\"213\" font-size=\"9.5\" text-anchor=\"middle\">可逆</text>\n<rect class=\"accent\" x=\"255\" y=\"160\" width=\"95\" height=\"58\" rx=\"6\"/>\n<text class=\"paper\" x=\"302\" y=\"182\" font-size=\"12\" text-anchor=\"middle\">植體周圍炎</text>\n<text class=\"paper\" x=\"302\" y=\"199\" font-size=\"10\" text-anchor=\"middle\">且袋深</text>\n<text class=\"paper\" x=\"302\" y=\"212\" font-size=\"10\" text-anchor=\"middle\">比上次深</text>\n<line x1=\"20\" y1=\"240\" x2=\"340\" y2=\"240\" stroke=\"currentColor\" class=\"muted\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n<text class=\"ink\" x=\"180\" y=\"264\" font-size=\"12.5\" text-anchor=\"middle\">沒有基線 X 光與探測紀錄時，三者兼具</text>\n<rect class=\"soft\" x=\"20\" y=\"278\" width=\"100\" height=\"62\" rx=\"6\"/>\n<text class=\"ink\" x=\"70\" y=\"304\" font-size=\"11.5\" text-anchor=\"middle\">輕探出血</text>\n<text class=\"ink\" x=\"70\" y=\"322\" font-size=\"11.5\" text-anchor=\"middle\">或溢膿</text>\n<rect class=\"soft\" x=\"130\" y=\"278\" width=\"100\" height=\"62\" rx=\"6\"/>\n<text class=\"accent\" x=\"180\" y=\"306\" font-size=\"15\" text-anchor=\"middle\">≥6 毫米</text>\n<text class=\"ink\" x=\"180\" y=\"324\" font-size=\"10.5\" text-anchor=\"middle\">探測深度</text>\n<rect class=\"soft\" x=\"240\" y=\"278\" width=\"100\" height=\"62\" rx=\"6\"/>\n<text class=\"accent\" x=\"290\" y=\"306\" font-size=\"15\" text-anchor=\"middle\">≥3 毫米</text>\n<text class=\"ink\" x=\"290\" y=\"324\" font-size=\"10\" text-anchor=\"middle\">骨高度在骨內段</text>\n<text class=\"ink\" x=\"290\" y=\"336\" font-size=\"10\" text-anchor=\"middle\">最冠側處下方</text>\n<line x1=\"180\" y1=\"340\" x2=\"180\" y2=\"362\" stroke=\"currentColor\" class=\"ink\" stroke-width=\"1.5\"/>\n<rect class=\"accent\" x=\"90\" y=\"362\" width=\"180\" height=\"32\" rx=\"6\"/>\n<text class=\"paper\" x=\"180\" y=\"383\" font-size=\"12.5\" text-anchor=\"middle\">可診斷為植體周圍炎</text>\n<text class=\"muted\" x=\"180\" y=\"416\" font-size=\"10\" text-anchor=\"middle\">評估探測深度時要把黏膜退縮一併考慮</text>\n</svg>",
+      "caption": "依 Berglundh 等（2018）共識報告的門診病例定義繪製，本報依原文重繪。上半部適用於有基線紀錄時；下半部是沒有舊資料時的替代標準。原創示意，用詞以正文與原文為準。"
+    },
+    {
+      "type": "h",
+      "text": "健康沒有標準袋深，黏膜炎看出血，周圍炎看骨頭"
+    },
+    {
+      "type": "p",
+      "text": "報告描述的植體周圍健康是：沒有紅、沒有探診出血、沒有腫、沒有溢膿。它說無法訂出一個與健康相容的探測深度範圍，發炎徵象比數字更重要；報告也指出，植體的探測深度通常比天然牙深，而且取決於植體所在位置的軟組織高度。骨支持較少的植體也可以是健康的。"
+    },
+    {
+      "type": "p",
+      "text": "植體周圍黏膜炎的主要臨床特徵是輕探出血，也可能有紅腫或溢膿；因為組織腫脹、探測阻力下降，探測深度常會變深。報告認為有強力證據顯示牙菌斑是病因，黏膜炎可以消退，只是重新開始清潔後，發炎徵象可能要超過 3 週才會消失。"
+    },
+    {
+      "type": "p",
+      "text": "植體周圍炎則是與牙菌斑相關、發生在植體周圍組織的病理狀態：黏膜發炎，接著支持骨進行性流失。臨床上有出血或溢膿、探測深度增加或黏膜退縮，以及比先前檢查多的 X 光骨喪失。報告指出，在植體周圍炎的位點，探測深度與骨喪失相關，所以可以當作嚴重度的指標；未治療時，病程似乎呈非線性、加速的進展，資料提示它的進展似乎比牙周炎快。"
+    },
+    {
+      "type": "table",
+      "title": "門診病例定義：有基線與沒有基線",
+      "head": [
+        "",
+        "植體周圍健康",
+        "植體周圍黏膜炎",
+        "植體周圍炎"
+      ],
+      "rows": [
+        [
+          "輕探出血或溢膿",
+          "沒有",
+          "有",
+          "有"
+        ],
+        [
+          "探測深度",
+          "沒有比上次深",
+          "可能變深，也可能沒有",
+          "比上次深"
+        ],
+        [
+          "骨喪失",
+          "沒有超過初期骨改建",
+          "沒有超過初期骨改建",
+          "超過初期骨改建"
+        ],
+        [
+          "沒有舊資料時",
+          "—",
+          "—",
+          "出血或溢膿＋探測深度 ≥6 毫米＋骨高度在植體骨內段最冠側處下方 ≥3 毫米"
+        ]
+      ],
+      "caption": "依 Berglundh 等（2018）「病例定義與診斷考量」一節整理並翻譯，本報依原文重繪。健康另需沒有臨床發炎徵象；評估植體周圍炎的探測深度時要考慮黏膜退縮。"
+    },
+    {
+      "type": "h",
+      "text": "沒有舊片時：6 毫米與 3 毫米一起看"
+    },
+    {
+      "type": "p",
+      "text": "回到那位假設的病人：輕探出血、探測深度 6 毫米、骨高度在骨內段最冠側處下方約 4 毫米，三項都達到沒有舊資料時的門檻；在已做過鑑別診斷、排除植體位置不良或手術創傷的前提下，符合這套定義的植體周圍炎。這段套用是本報依共識報告做的示範，定義只回答分類，不決定這顆植體怎麼治療。報告同時提醒，植體設計、表面處理、手術與負重方式各不相同，生理性骨改建的程度會因此不同；它也提醒，骨改建期間若出現大量骨喪失，也可能是植體周圍炎已經開始。報告也建議，病人初次就診時，牙醫盡量取得舊病歷與舊片，用來評估骨高度的變化。"
+    },
+    {
+      "type": "h",
+      "text": "研究用定義與風險指標"
+    },
+    {
+      "type": "p",
+      "text": "流行病學研究沿用同樣三項，另要求骨喪失的門檻高於量測誤差（平均 0.5 毫米），理想上要有負重滿一年後的檢查作比較。沒有舊片時，只要骨高度在植體骨內段最冠側處下方 3 毫米以上、加上探診出血，就符合診斷，不需看 6 毫米的探測深度。"
+    },
+    {
+      "type": "p",
+      "text": "誰比較容易得？報告說有強力證據的風險指標有三個：重度牙周炎病史、菌斑控制差、植體治療後沒有規律維護。吸菸與糖尿病尚無定論。黏膜下殘留黏著劑、植體位置不利於清潔，只有有限證據。角化黏膜的影響，證據正反都有。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Gingival_recession_on_an_implant.jpg/1280px-Gingival_recession_on_an_implant.jpg",
+      "width": 1280,
+      "height": 853,
+      "alt": "口內近照，下排中間一顆植體支持的牙冠，牙冠下緣的牙齦退縮，露出部分金屬支台；兩側是天然牙，牙齦呈粉紅色。",
+      "caption": "植體周圍黏膜退縮、露出金屬支台的臨床照片。上傳者說明此處缺少角化牙齦，導致退縮；共識報告則認為角化黏膜對長期健康的影響證據正反都有。由 Coronation Dental Specialty Group 拍攝並上傳（Commons 標示日期 2008 年 12 月）；與共識報告無關。",
+      "credit": "Coronation Dental Specialty Group，Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gingival_recession_on_an_implant.jpg",
+      "made": "2008"
+    },
+    {
+      "type": "h",
+      "text": "今天怎麼用：完成修復時就留基線，之後定期檢查"
+    },
+    {
+      "type": "p",
+      "text": "這個問題有多常見？Derks 等人在 2016 年隨機抽樣瑞典 588 名 9 年前接受植體治療的病人做臨床與 X 光檢查：以探診出血或溢膿加骨喪失超過 0.5 毫米定義，45% 的病人有植體周圍炎；以骨喪失超過 2 毫米定義的中度到重度植體周圍炎，占 14.5%。患有牙周炎、4 支以上植體、修復由一般牙醫完成等，都與較高的中重度植體周圍炎風險有關。"
+    },
+    {
+      "type": "p",
+      "text": "歐洲牙周病學會 2023 年發表的植體周圍疾病預防與治療 S3 臨床指引（Herrera 等），根據 13 篇專門委託的系統回顧，依 2018 年的定義訂出建議：預防要從規劃植體、手術與負重時就開始；植體負重後要有結構化的支持性植體周圍照護，定期評估植體周圍組織；一旦發現黏膜炎或周圍炎，就要給予適當治療。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "本報的讀法是，這份報告最能立刻改變門診的，是那一句「完成修復後就拍基線 X 光、量探測深度」。沒有基線，日後只能用 6 毫米與 3 毫米這組較高的替代門檻，比較輕微的骨喪失可能因此被漏掉；有了基線，每次回診的出血與袋深變化才有東西可比。"
+    },
+    {
+      "type": "h",
+      "text": "要小心的地方"
+    },
+    {
+      "type": "list",
+      "items": [
+        "這些門檻是專家共識的病例定義，不是從單一試驗驗證出的診斷切點；報告也強調沒有「通用的植體」，不同設計的生理性骨改建程度不同。",
+        "沒有舊資料時的 6 毫米與 3 毫米是替代標準，本報推想，骨喪失較輕微的早期植體周圍炎可能達不到這組門檻；植體位置不良或手術創傷造成的骨喪失，也要先做鑑別。",
+        "本文引用的盛行率（45%、14.5%）來自瑞典一項 2016 年研究，用的是它自己的骨喪失門檻，不能直接套到其他族群或其他定義。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Peri-implant diseases and conditions: Consensus report of workgroup 4 of the 2017 World Workshop on the Classification of Periodontal and Peri-Implant Diseases and Conditions（J Clin Periodontol 版全文 PDF）",
+      "publisher": "Journal of Clinical Periodontology 2018;45(Suppl 20):S286–S291；歐洲牙周病學會（EFP）網站",
+      "date": "2018-06-20",
+      "url": "https://www.efp.org/fileadmin/uploads/efp/Documents/Campaigns/New_Classification/Reports/Consensus_report__Workgroup_4__Berglundh_et_al-2018-Journal_of_Clinical_Periodontology.pdf",
+      "note": "全文：摘要、健康／黏膜炎／周圍炎／軟硬組織缺損的問答、病例定義與診斷考量"
+    },
+    {
+      "title": "PubMed 29926491：Peri-implant diseases and conditions: Consensus report of workgroup 4（J Clin Periodontol）",
+      "publisher": "National Library of Medicine",
+      "date": "2018-06-20",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29926491/",
+      "note": "書目資料；DOI 10.1111/jcpe.12957"
+    },
+    {
+      "title": "Peri-implant diseases and conditions: Consensus report of workgroup 4（J Periodontol 同步刊出版，PMID 29926955）",
+      "publisher": "Journal of Periodontology 2018;89(Suppl 1):S313–S318",
+      "date": "2018-06-21",
+      "url": "https://doi.org/10.1002/jper.17-0739",
+      "note": "同步刊出版本，只核對書目"
+    },
+    {
+      "title": "Effectiveness of Implant Therapy Analyzed in a Swedish Population: Prevalence of Peri-implantitis",
+      "publisher": "Journal of Dental Research 2016;95(1):43–49（PMID 26701919）",
+      "date": "2015-12-23",
+      "url": "https://doi.org/10.1177/0022034515608832",
+      "note": "Derks、Schaller、Håkansson、Wennström、Tomasi、Berglundh；依摘要"
+    },
+    {
+      "title": "Prevention and treatment of peri-implant diseases—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology 2023;50(Suppl 26):4–76（PMID 37271498）",
+      "date": "2023-06-04",
+      "url": "https://doi.org/10.1111/jcpe.13823",
+      "note": "Herrera 等；依摘要"
+    },
+    {
+      "title": "File:X ray of teeth with dental implant screws 2.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2013-10-01",
+      "url": "https://commons.wikimedia.org/wiki/File:X_ray_of_teeth_with_dental_implant_screws_2.jpg",
+      "note": "頭圖；Partynia 上傳，CC BY-SA 3.0"
+    },
+    {
+      "title": "File:Gingival recession on an implant.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2008-12-23",
+      "url": "https://commons.wikimedia.org/wiki/File:Gingival_recession_on_an_implant.jpg",
+      "note": "正文圖；Coronation Dental Specialty Group，CC BY-SA 3.0"
+    }
+  ]
+}
