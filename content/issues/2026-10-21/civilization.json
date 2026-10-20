@@ -1,0 +1,527 @@
+{
+  "column": "civilization",
+  "date": "2026-10-21",
+  "title": "十四盎司的一磅：英國海軍補給局怎樣餵飽艦隊",
+  "dek": "1793 到 1815 年，英國海軍要餵飽十幾萬人。糧食從哪裡來、誰握著秤、損耗算在誰頭上？",
+  "brief": "對法戰爭期間，英國海軍補給局要餵飽超過 147,000 人、800 多艘船：部分鹽醃肉、餅乾和啤酒自己生產，其餘多向承包商密封招標，再由每艘船的事務長按名冊發放。1731 年條例規定每人每天 1 磅餅乾、1 加侖啤酒，但據 McBride 等的研究，事務長照慣例只發八分之七，1797 年斯皮特黑德兵變的請願就要求一磅要有 16 盎司。本文的讀法是，這套制度一層層把損耗風險往下推，最後落在水兵身上。",
+  "topic_key": "civilization:britain-royal-navy-victualling-board-1793-1815",
+  "updated_at": "2026-10-21T02:11:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "illustration",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Purser_RMG_PW4971.tiff/lossy-page1-1280px-Purser_RMG_PW4971.tiff.jpg",
+    "width": 1280,
+    "height": 1610,
+    "alt": "手工上色的版畫。一名穿藍色外套、米黃色背心與馬褲、戴黑色雙角帽的胖男子站在船甲板上，低頭讀一張寫滿字的紙。他腳邊左側有兩只玻璃瓶，其中一只寫著「CONIAC」，還有一個布袋；右側有一個寫著「GROG」的綠色木桶和一只陶杯，背後掛著幾件白衣，左邊有一道梯子。畫框下方寫「No. 6 PURSER」。",
+    "caption": "〈事務長〉（Purser），系列第 6 號。羅蘭森（Thomas Rowlandson）把事務長畫得面色紅潤、身材圓胖，腳邊是烈酒瓶和寫著「GROG」（摻水烈酒）的桶。這是諷刺畫；本文的讀法是，它畫出了當時的刻板印象：管糧的人自己吃得最好。",
+    "credit": "Thomas Rowlandson 繪，Henri Merke 刻版，Rudolph Ackermann 1799 年 2 月 15 日於倫敦出版，手工上色；影像出自英國國家海事博物館（Royal Museums Greenwich），編號 PW4971",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Purser_RMG_PW4971.tiff",
+    "made": "1799 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1810 年 11 月 8 日，懷特島（Isle of Wight）紐波特（Newport）的麵包師 Thomas Hearn 寫信給英國海軍補給局（Victualling Board），請它替他交到樸茨茅斯（Portsmouth）補給站的餅乾開立驗收證明。兩天後補給局宣讀他的信，指示駐地補給代理人：證明照開，但最後 190 袋的價錢要壓到和後來簽約的承包商一樣；9 月交的 100 袋經檢查又舊又臭、生了蛆，要代理人向他追問原因，否則他會被當成「a person wholly unfit to hold any further Contract with this department」（完全不適合再與本局訂約的人，本文自譯）。Knight 與 Wilcox 在 2010 年的書裡說，Hearn 此後再也沒拿到合約，從紀錄裡消失。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "本文要回答：1793 到 1815 年對法戰爭期間，英國皇家海軍十幾萬人的伙食從哪裡來、經過誰的手、按什麼規矩分到每個水兵碗裡；誰決定、誰執行、誰承擔損耗；這套制度在哪裡卡住。"
+    },
+    {
+      "type": "h",
+      "text": "定位：1683 年成立的補給局，與它最大的一場考驗"
+    },
+    {
+      "type": "p",
+      "text": "補給局是海軍部（Admiralty）之下的附屬機構，1683 年開始運作，除了一次短暫中斷，一直到 1832 年才和其他附屬機構一起被裁撤，職能併入海軍部新設的補給司。它的總部在倫敦薩默塞特宮（Somerset House）。據 Janet Macdonald 2010 年的專書，1793 到 1815 年的對法戰爭期間，它要餵飽超過 147,000 人、800 多艘船，散在世界各地的站點；它還要供應海外駐軍、運兵船、海外殖民地與送往新南威爾斯的囚犯。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "Macdonald 估計，1810 到 1815 年的高峰期，補給局供養的人遠超過 25 萬，但她說沒有精確數字。人數漲得很快：Knight 與 Wilcox 指出，1792 年底法國宣戰前夕，海軍在餉的只有 17,000 人；到 1801 年《亞眠和約》前不久，國會核定的員額已是 14 萬，約為開戰時的 8 倍。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "我們靠三類材料知道這套制度。第一類是規章：1731 年經國王會同樞密院核准的《海上勤務條例與指令》（Regulations and Instructions relating to His Majesty's Service at Sea），寫的是「應該」怎麼做。第二類是行政檔案：補給局的會議紀錄與往來信件，絕大部分在英國國家檔案館（Kew）的海軍部檔案裡，還有一部分在國家海事博物館的 Caird 圖書館。第三類是批評者的聲音：兵變請願、政論史書與諷刺畫。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "這三類材料各有偏差。規章不等於實況；官方檔案是補給局自己的視角，承包商的信件與帳冊則很少留下。至於 1842 年 W. J. Neale 寫的兵變史，作者把書題獻給國會議員 Francis Burdett，書中痛罵政府與事務長，立場鮮明地站在水兵一邊。",
+      "tag": "史料"
+    },
+    {
+      "type": "timeline",
+      "title": "海軍補給局：本文用到的年份",
+      "items": [
+        {
+          "when": "1683 年",
+          "label": "補給局開始運作",
+          "note": "海軍部之下的附屬機構。"
+        },
+        {
+          "when": "1731 年",
+          "label": "《海上勤務條例與指令》",
+          "note": "列出每人每日口糧與減量配給規則。"
+        },
+        {
+          "when": "1756–1763",
+          "label": "七年戰爭",
+          "note": "報廢的糧食不到 1%。"
+        },
+        {
+          "when": "1792 年底",
+          "label": "在餉人數 17,000",
+          "note": "法國宣戰前夕。"
+        },
+        {
+          "when": "1794 年",
+          "label": "派駐地補給代理人到安地卡",
+          "note": "George Desborough 赴背風群島。"
+        },
+        {
+          "when": "1797.4.18",
+          "label": "斯皮特黑德請願",
+          "note": "要求一磅要有 16 盎司。"
+        },
+        {
+          "when": "1797.5–6",
+          "label": "諾爾兵變",
+          "note": "6 月 9 日出版諷刺畫〈代表開會〉。"
+        },
+        {
+          "when": "1801 年",
+          "label": "國會核定 14 萬人",
+          "note": "約為開戰時的 8 倍。"
+        },
+        {
+          "when": "1804 年",
+          "label": "站點承包商供貨 £548,071",
+          "note": "約佔糧食開支 18%。"
+        },
+        {
+          "when": "1808.6",
+          "label": "波羅的海艦隊補給清單",
+          "note": "616,000 磅麵包、176,000 磅牛肉。"
+        },
+        {
+          "when": "1809 年",
+          "label": "補給局改組",
+          "note": "更願意罰款、列黑名單。"
+        },
+        {
+          "when": "1810.11",
+          "label": "麵包師 Thomas Hearn 被警告",
+          "note": "此後再無合約。"
+        },
+        {
+          "when": "1832 年",
+          "label": "補給局廢止",
+          "note": "職能併入海軍部。"
+        }
+      ],
+      "caption": "依 Macdonald 2010、Knight 與 Wilcox 2010、RMG 專案說明、McBride 等 2016、Neale 1842 整理。"
+    },
+    {
+      "type": "h",
+      "text": "每人每天一磅餅乾、一加侖啤酒"
+    },
+    {
+      "type": "p",
+      "text": "1731 年條例第 60 頁的口糧表，規定「每個在國王陛下船上服役的人」每日應得的份量。每天固定 1 磅餅乾、1 加侖啤酒；肉分兩種，週二、週六各 2 磅鹽醃牛肉，週日、週四各 1 磅鹽醃豬肉，配半品脫豌豆；週一、週三、週五是不吃肉的日子，改發燕麥、奶油與乳酪。國家海事博物館與 Greenwich 大學合作的研究專案列出的 1793–1815 年官定週量，和這張表完全相同：到了這場戰爭，帳面上的伙食仍是 1731 年的那一套。",
+      "tag": "史料"
+    },
+    {
+      "type": "table",
+      "title": "官定口糧：每人每週",
+      "head": [
+        "日",
+        "餅乾（磅）",
+        "啤酒（加侖）",
+        "牛肉（磅）",
+        "豬肉（磅）",
+        "豌豆（品脫）",
+        "燕麥（品脫）",
+        "奶油（盎司）",
+        "乳酪（盎司）"
+      ],
+      "rows": [
+        [
+          "週日",
+          "1",
+          "1",
+          "",
+          "1",
+          "½",
+          "",
+          "",
+          ""
+        ],
+        [
+          "週一",
+          "1",
+          "1",
+          "",
+          "",
+          "",
+          "1",
+          "2",
+          "4"
+        ],
+        [
+          "週二",
+          "1",
+          "1",
+          "2",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "週三",
+          "1",
+          "1",
+          "",
+          "",
+          "½",
+          "1",
+          "2",
+          "4"
+        ],
+        [
+          "週四",
+          "1",
+          "1",
+          "",
+          "1",
+          "½",
+          "",
+          "",
+          ""
+        ],
+        [
+          "週五",
+          "1",
+          "1",
+          "",
+          "",
+          "½",
+          "1",
+          "2",
+          "4"
+        ],
+        [
+          "週六",
+          "1",
+          "1",
+          "2",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "合計",
+          "7",
+          "7",
+          "4",
+          "2",
+          "2",
+          "3",
+          "6",
+          "12"
+        ]
+      ],
+      "caption": "依 1731 年條例第 60 頁口糧表，與「Sustaining the Empire」專案說明所列官定週量相同。重量為常衡磅，啤酒以酒類量制、豌豆與燕麥以溫徹斯特量制計。"
+    },
+    {
+      "type": "p",
+      "text": "條例也替缺貨預留換算。出海遠航時，1 品脫葡萄酒，或半品脫白蘭地、蘭姆酒、亞力酒（arrack），抵 1 加侖啤酒；研究專案指出，正因為西印度群島以蘭姆酒代替啤酒，後人才誤以為英國水兵只喝蘭姆酒。條例另有一句話，限制軍官的特權：艦長在必要時可以縮減口糧，但事務長不得在全船減量時讓任何軍官領足額，「all are to be equal in Point of Victualling」（在伙食上人人平等，本文自譯）。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "規章對肉的計量很細。牛肉要切成 4 磅一塊，豬肉 2 磅一塊，桶頭要標明內容；不准放牛腿骨、牛小腿、牛頰、牛心之類的「不尋常部位」。驗重的辦法是：從桶裡依序取出 28 塊牛肉、抖掉鹽，合重應有 100 磅常衡；56 塊豬肉應有 104 磅。秤重時要有兩名以上准尉在場；不足時，艦長可以命令事務長多發幾塊補足，事務長憑其中一名准尉的宣誓與艦長證明在帳上報銷。每週還有一天以麵粉和板油代替牛肉。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "由此推算，28 塊「4 磅肉」名義上是 112 磅，條例只要求 100 磅，等於承認每塊肉在鹽醃與運送後可以只有約 3.6 磅。帳上的「4 磅」是約定的單位，不是秤上的重量。這是本文依條例數字的推算，條例本身沒有這樣說明。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "追蹤：從市場、承包商與自營工場，到每艘船"
+    },
+    {
+      "type": "p",
+      "text": "補給局在德特福德（Deptford）、樸茨茅斯、普利茅斯（Plymouth）設有大型補給站，查塔姆（Chatham）與多佛（Dover）有較小的站，都配有烘焙坊與釀酒廠；德特福德另有屠宰場，樸茨茅斯有一座小的。Macdonald 指出，補給局自己生產的主要是三樣：鹽醃肉、餅乾和啤酒。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "其餘的貨，一部分由佣金代理人在公開市場代購，大部分向製造商訂約。合約以密封投標決定，通常由最低價者得標。補給局有時同時和幾家簽約、各供一部分，避免壟斷，也讓他們互相壓價。合約有兩種層級：中央簽的合約送貨到德特福德，再沿泰晤士河運往國內外各站；另一些則是為某個基地單獨簽的。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "離補給站太遠的地方，就交給「全套海上糧食」的站點承包商。Knight 與 Wilcox 統計，1804 年這類承包商直接供給船隻的糧食共值 £548,071，約佔當年糧食總開支的 18%。研究專案舉的例子是 Thomas Pinkerton：他握有赫爾（Hull）、利斯（Leith）、法爾茅斯（Falmouth）與幾個加勒比海島嶼的合約，後來擴張過度而破產。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "海外的重心正好相反。Macdonald 說，對法戰爭開始時，直布羅陀是補給局唯一常設的海外補給站；之後才依戰事需要在安地卡（Antigua）、里斯本、梅諾卡島的馬翁港（Port Mahon）、好望角、馬爾他與里約熱內盧開站。海外主要靠承包商倉庫與事務長就地採購，另有隨艦隊移動的補給代理人，或由資深事務長替整個分艦隊採購。1794 年，補給局任命 George Desborough 為背風群島的駐地補給代理人，命他搭補給船前往安地卡。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "最後一道保險在船上。研究專案指出，每艘船都帶一筆「必要金」（necessary money），讓艦長就地買糧；這在 18 世紀前期很常見，到法國大革命戰爭時期只是最後手段。",
+      "tag": "史實"
+    },
+    {
+      "type": "svg",
+      "title": "一艘船的伙食從哪裡來",
+      "svg": "<svg viewBox='0 0 360 600' xmlns='http://www.w3.org/2000/svg' font-size='11'>\n<defs>\n<marker id='ah' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='ink'/></marker>\n<marker id='ahr' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='accent'/></marker>\n</defs>\n<text x='180' y='16' text-anchor='middle' font-size='12' font-weight='600' class='ink'>貨從哪裡來</text>\n<rect x='6' y='26' width='110' height='56' rx='3' class='soft'/>\n<text x='61' y='43' text-anchor='middle' font-size='11' class='ink'>公開市場</text>\n<text x='61' y='58' text-anchor='middle' font-size='9.5' class='muted'>佣金代理人</text>\n<text x='61' y='71' text-anchor='middle' font-size='9.5' class='muted'>代為收購</text>\n<rect x='125' y='26' width='110' height='56' rx='3' class='soft'/>\n<text x='180' y='43' text-anchor='middle' font-size='11' class='ink'>承包商</text>\n<text x='180' y='58' text-anchor='middle' font-size='9.5' class='muted'>密封投標</text>\n<text x='180' y='71' text-anchor='middle' font-size='9.5' class='muted'>通常最低價得標</text>\n<rect x='244' y='26' width='110' height='56' rx='3' class='soft'/>\n<text x='299' y='43' text-anchor='middle' font-size='11' class='ink'>補給局自營</text>\n<text x='299' y='58' text-anchor='middle' font-size='9.5' class='muted'>烘焙坊、釀酒廠</text>\n<text x='299' y='71' text-anchor='middle' font-size='9.5' class='muted'>屠宰場（鹽醃肉）</text>\n<line x1='61' y1='82' x2='150' y2='118' class='ink' stroke='currentColor' marker-end='url(#ah)'/>\n<line x1='180' y1='82' x2='180' y2='116' class='ink' stroke='currentColor' marker-end='url(#ah)'/>\n<line x1='299' y1='82' x2='210' y2='118' class='ink' stroke='currentColor' marker-end='url(#ah)'/>\n<rect x='70' y='120' width='220' height='50' rx='3' class='paper' stroke='currentColor'/>\n<text x='180' y='139' text-anchor='middle' font-size='11.5' font-weight='600' class='ink'>本土補給站</text>\n<text x='180' y='156' text-anchor='middle' font-size='9.5' class='muted'>德特福德、樸茨茅斯、普利茅斯；查塔姆、多佛</text>\n<line x1='120' y1='170' x2='70' y2='206' class='ink' stroke='currentColor' marker-end='url(#ah)'/>\n<line x1='240' y1='170' x2='290' y2='206' class='ink' stroke='currentColor' marker-end='url(#ah)'/>\n<text x='180' y='196' text-anchor='middle' font-size='9.5' class='muted'>沿泰晤士河運出</text>\n<rect x='6' y='208' width='160' height='58' rx='3' class='soft'/>\n<text x='86' y='226' text-anchor='middle' font-size='11' class='ink'>本土水域的艦隊</text>\n<text x='86' y='242' text-anchor='middle' font-size='9.5' class='muted'>多數直接從補給站</text>\n<text x='86' y='256' text-anchor='middle' font-size='9.5' class='muted'>或承包商倉庫領貨</text>\n<rect x='194' y='208' width='160' height='58' rx='3' class='soft'/>\n<text x='274' y='226' text-anchor='middle' font-size='11' class='ink'>海外據點</text>\n<text x='274' y='242' text-anchor='middle' font-size='9.5' class='muted'>駐地補給代理人、</text>\n<text x='274' y='256' text-anchor='middle' font-size='9.5' class='muted'>站點承包商、當地採購</text>\n<line x1='86' y1='266' x2='160' y2='304' class='ink' stroke='currentColor' marker-end='url(#ah)'/>\n<line x1='274' y1='266' x2='200' y2='304' class='ink' stroke='currentColor' marker-end='url(#ah)'/>\n<rect x='70' y='306' width='220' height='62' rx='3' class='paper' stroke='currentColor'/>\n<text x='180' y='325' text-anchor='middle' font-size='11.5' font-weight='600' class='ink'>每艘船的事務長（purser）</text>\n<text x='180' y='342' text-anchor='middle' font-size='9.5' class='muted'>收貨、保管、按名冊發放、記帳</text>\n<text x='180' y='357' text-anchor='middle' font-size='9.5' class='muted'>艦長可動用「必要金」就地買糧</text>\n<line x1='180' y1='368' x2='180' y2='404' class='accent' stroke='currentColor' stroke-width='1.6' marker-end='url(#ahr)'/>\n<text x='190' y='391' font-size='9.5' class='accent'>1797 年前：照慣例只發 7/8</text>\n<rect x='70' y='406' width='220' height='44' rx='3' class='soft'/>\n<text x='180' y='424' text-anchor='middle' font-size='11.5' class='ink'>水兵</text>\n<text x='180' y='440' text-anchor='middle' font-size='9.5' class='muted'>每人每天 1 磅餅乾、1 加侖啤酒……</text>\n<line x1='20' y1='337' x2='20' y2='500' class='muted' stroke='currentColor' stroke-dasharray='3 3'/>\n<line x1='70' y1='337' x2='20' y2='337' class='muted' stroke='currentColor' stroke-dasharray='3 3'/>\n<line x1='20' y1='500' x2='68' y2='500' class='muted' stroke='currentColor' stroke-dasharray='3 3' marker-end='url(#ah)'/>\n<rect x='70' y='478' width='220' height='46' rx='3' class='paper' stroke='currentColor'/>\n<text x='180' y='497' text-anchor='middle' font-size='11.5' font-weight='600' class='ink'>補給局（倫敦薩默塞特宮）</text>\n<text x='180' y='513' text-anchor='middle' font-size='9.5' class='muted'>逐筆核帳；海外價格要附證據</text>\n<text x='28' y='420' font-size='9' class='muted' transform='rotate(-90 28 420)'>帳冊回送</text>\n<text x='180' y='552' text-anchor='middle' font-size='9.5' class='muted'>示意圖，不按比例；只畫主要路徑。</text>\n<text x='180' y='567' text-anchor='middle' font-size='9.5' class='muted'>依據：RMG／Greenwich「Sustaining the Empire」專案說明；</text>\n<text x='180' y='582' text-anchor='middle' font-size='9.5' class='muted'>Macdonald 2010 第 2–4 章；McBride 等 2016</text>\n</svg>",
+      "caption": "示意，不按比例。三個來源經補給站或海外據點匯到事務長手上，再分給水兵；帳冊沿虛線回倫敦核對。依據見圖下方。"
+    },
+    {
+      "type": "p",
+      "text": "規模可以從一張清單看出。研究專案引用 1808 年 6 月準備送往波羅的海艦隊的貨單：麵包 5,500 袋（616,000 磅）、牛肉 22,000 塊（每塊 8 磅，共 176,000 磅）、烈酒 38,500 加侖、麵粉 132,000 磅、乳酪 66,000 磅、檸檬汁 38,500 磅。當時波羅的海沿岸幾乎都已倒向拿破崙，這些貨全得橫渡北海送去。",
+      "tag": "史料"
+    },
+    {
+      "type": "h",
+      "text": "權力：事務長握秤，水兵吃損耗"
+    },
+    {
+      "type": "p",
+      "text": "貨上了船，就歸事務長（purser）管。McBride、Hines 與 Craig 2016 年在《商業史》（Business History）期刊上說明：事務長依船上的名冊（muster book）發糧，名冊記著每個人何時何地上船、是被強徵還是自願、何時死亡或離船；名冊每兩個月要由事務長、艦長、航海長與水手長共同簽名。船在港內時，另有港口的「核對官」（Clerk of the Cheque）點名，防止虛報人頭。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "損耗由誰承擔？答案是一個慣例：事務長收貨按足量，發給水兵只發八分之七，剩下的八分之一用來抵鹽醃縮水、蒸發、腐壞；年度盤點時若還有剩，政府按固定價格向他買回。McBride 等引用 1761 年 Mountaine 的《海員手冊》（The Seaman's Vade Mecum）給事務長的建議：「you receive 16 ounces and issue 14 ounces of butter and cheese」（你收 16 盎司，發 14 盎司的奶油和乳酪，本文自譯），以 7 品脫當 1 加侖啤酒。乾貨用 14 盎司的「事務長磅」，液體用 35 液量盎司的「事務長夸脫」，短少 12.5%，幾乎正好等於官方容許的 12% 損耗。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "McBride 等以「代理理論」解讀這套安排：補給局把損耗風險和剩餘權利一起包給事務長，他保管得越好，賺得越多。他們也提醒，「扣下的口糧能變現」這個說法值得懷疑，因為存放過的糧食品質通常很差，很難想像有人要買。到了 18 世紀末，事務長已改由海軍委員會支薪，待遇和水手長、砲手、木匠相當。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "批評者看到的是另一面。Neale 1842 年的兵變史說，事務長除了從水兵口糧中「saving, or to speak more correctly, pilfering」（節省，或者說得更準確，偷取，本文自譯）所得之外，沒有別的薪水；註腳說戰列艦的事務長職位據說一年值 1,000 英鎊。他沒交代這個數字的出處。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "縮減口糧另有補償。1731 年條例規定，艦長下令減量配給時，每人少領的部分要折成「減量補償金」（Short Allowance Money）發給本人；條例明文禁止任何人收購水兵的補償金，發錢的人必須親手交給本人，不得理會任何借據。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "把這幾條規則放在一起看，成本落在誰身上就很清楚：國家按足量付錢給供應商，事務長按足量收貨，而那兩盎司的差額，是由水兵吃下去的。補給局把監督成本轉成事務長的利潤動機，再把損耗轉成水兵的少吃一口。這是本文的讀法；McBride 等的重點在會計控制，並沒有這樣下結論。",
+      "tag": "推論"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/The_delegates_in_council_or_beggars_on_horse-back._%28BM_1865%2C1111.2007%29.jpg/1280px-The_delegates_in_council_or_beggars_on_horse-back._%28BM_1865%2C1111.2007%29.jpg",
+      "width": 1280,
+      "height": 937,
+      "alt": "黑白蝕刻版畫。一群水手圍坐在長桌旁，怒目瞪著左邊一位手拿帽子、側身站立的軍官；桌上放著刀劍和手槍，一張紙寫著「Resolutions」。右邊一人從寫著「GROG」的壺裡倒酒，對白框寫著「Tell him we intend to be Masters」。桌布底下躲著幾個穿紳士服裝的人，旁邊的對白寫著「Aye, Aye, we are at the bottom of it」。畫面下方題字「The DELEGATES in COUNCIL or BEGGARS on HORSEBACK」。",
+      "caption": "〈代表開會，或騎馬的乞丐〉（The Delegates in Council or Beggars on Horseback）。據英國國家海事博物館的說明，畫的是 1797 年諾爾（Nore）兵變的水兵代表在艙房裡開會；大英博物館的館藏說明認為，左側手拿帽子的是海軍將領 Buckner，坐在主位、手持大口徑短槍的應是兵變領袖 Richard Parker；桌下最顯眼的福克斯（Charles James Fox）說「對，對，是我們在底下撐腰」。這幅畫站在政府一方，把水兵的要求畫成受人煽動，和請願書的口氣完全不同。",
+      "credit": "Isaac Cruikshank 作，S. W. Fores 出版，蝕刻；影像出自大英博物館，編號 1865,1111.2007（館藏說明見同版另一印本 1868,0808.6641）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_delegates_in_council_or_beggars_on_horse-back._(BM_1865,1111.2007).jpg",
+      "made": "1797 年 6 月 9 日出版"
+    },
+    {
+      "type": "p",
+      "text": "1797 年 4 月，停泊在樸茨茅斯外海斯皮特黑德（Spithead）的艦隊發生兵變；4 月 19 日的代表聲明說，冤情未獲處理、赦免法案未通過之前，他們不會起錨。據 Neale 書中收錄的文本，4 月 18 日「艦隊代表」在旗艦「夏洛特王后號」（Queen Charlotte）上寫給海軍部諸位大臣的請願書，第一項是工資太低，接著列出的第一條具體要求就是糧食：",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "First, That our provisions be raised to the weight of sixteen ounces to the pound, and of a better quality; and that our measures may be the same as those used in the commercial trade of this country.",
+      "text": "第一，我們的糧食要提高到一磅 16 盎司的重量，品質要更好；我們的量器要和這個國家商業買賣用的一樣。",
+      "cite": "斯皮特黑德艦隊代表致海軍部請願書，1797 年 4 月 18 日，收於 W. J. Neale《斯皮特黑德與諾爾兵變史》（1842），第 28 頁；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "請願書的第二條要求港內不發麵粉、多給蔬菜，第三條要求善待病號、病號用品「不得被侵吞」。據 McBride 等的整理，這次兵變的結果之一是廢除事務長磅：水兵的工資提高，事務長的待遇也提高；之後發放減量補償金必須有艦長與航海長在場，由領款人和一名准尉簽名，事務長要繳交艦長簽署的季報。他們在註腳中引 Macdonald 的書說，為了補償損耗，事務長的帳在結算時按發放總量加計九分之一的額度。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "h",
+      "text": "限制：距離、市場、管理"
+    },
+    {
+      "type": "p",
+      "text": "第一個限制是距離。研究專案指出，當時船到地中海要六週，到印度要長達六個月，運輸船得由軍艦護航。Macdonald 說，海外一來一回的信件常要好幾個月；駐地人員還要面對硬幣短缺、流行病、風暴，以及北非統治者的固執。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "第二個限制是水與市場。Knight 與 Wilcox 指出，一艘船剛服役時，水桶的載重噸數比其他所有糧食加起來還重，煮鹽醃肉、泡肉又都要用水。補給局是市場上最大的買家之一，信用也好，但它承擔不起延遲：它不能為了等價格下跌而延後採購，小麥、牛肉、豬肉更是一點風險都不能冒。他們認為，這使補給局的任務在各政府部門中政治上最敏感，因為它必須進場大量收購糧食，又不能出政治亂子。同一時期英國（含愛爾蘭）人口從 1791 年的 1,450 萬增加到 1811 年的 1,810 萬；1803 到 1815 年還有 122,440 名法國、丹麥與美國戰俘被送到英國，由運輸局（Transport Board）負責供養，也是同一時期要餵的人口。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "第三個限制在管理。Macdonald 整理了 1788 到 1807 年間四次國會調查：費用委員會（Fees Commission）、財政特別委員會、海軍調查委員會與修訂委員會（Board of Revision）。費用委員會沒挑出會計制度的大毛病，卻批評補給局的委員對德特福德補給站的控制「rather nominal than real」（名義多於實際）；它廢除規費的建議到 1799、1800 年才被採納，其他關於總部與本土補給站的建議似乎被擱置。修訂委員會的第 11 號報告更說，這些補給站的行政積弊已深，隨後才有程序、管理與人事的大整頓。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "小偷小摸也防不勝防。Macdonald 認為，補給站的情況大概和造船廠相去不遠：工人的妻子提籃送飯進廠，籃子也能把東西帶出去；下工時人潮一擁而出，搜身來不及。一把穀子或麵粉、一塊肉、兩片餅乾，用手帕一包就能帶走。船上的事務長舞弊也會受重罰：McBride 等轉引《泰晤士報》1802 年 6 月 29 日的報導，事務長 Cocks 前一天在海軍部對面戴枷示眾，罪名是侵吞海軍物資。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "開頭的 Hearn 案就出在這種背景下。他是固定替樸茨茅斯補給站供貨的約二十位當地麵包師之一，從 1793 年開戰起每年最多拿到五份合約；1809 年，他承包的 300 英擔（hundredweight）中有 140 英擔被退貨，被扣了 £14。Knight 與 Wilcox 指出，1809 年改組後的補給局變得更強勢，更不願收劣質貨，也更願意威脅、罰款、把供應商列入黑名單。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "h",
+      "text": "學界怎麼說：腐敗的舊衙門，還是「承包商國家」"
+    },
+    {
+      "type": "p",
+      "text": "流行的印象是：鹽醃肉硬得可以雕刻，餅乾裡全是象鼻蟲，壞血病橫行，行政腐敗。Greenwich 大學與國家海事博物館的研究專案（2006–2009 年，Leverhulme 信託資助，Roger Knight 主持）反駁這個印象：七年戰爭期間，被判定不能吃而報廢的糧食不到 1%，而負責報廢的海軍軍官並沒有隱瞞缺失的動機。專案也提醒，每天有熱食、每週吃四次肉的水兵，吃得比當時許多陸上的人好；一些最可怕的伙食故事，可能其實出自商船。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "Knight 與 Wilcox 的《維持艦隊》（Sustaining the Fleet, 1793–1815）提出「承包商國家」（Contractor State）的概念：18 世紀英國國家的邊界畫得很窄，大量依賴私人承包商，關鍵在國家能否用更正式、透明的程序挑選、管理並付款給他們；他們說，合約管理一旦失靈，腐敗、劣質貨與效率低落就必然隨之而來。他們也指出公私界線本來就模糊：東印度的承包商 Basil Cochrane 同時是駐地補給代理人。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "Macdonald 的專書副題是「管理的稱職與不稱職」（Management Competence and Incompetence）。依各章摘要，她的判斷分成兩半：把糧食送到軍艦、運兵船與海外駐軍手上，補給局做得很好；總部與補給站的內部管理卻屢遭國會調查批評。她也認為，當時對承包商詐欺的擔憂被誇大了，主要後果是倫敦的帳拖延，並沒有擋住糧食送上軍艦。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "McBride 等則從會計史切入：事務長磅是工業革命之前就已出現的標準成本與損耗控制做法。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "三種說法並不互斥：Knight 與 Wilcox 看國家怎樣和市場打交道，Macdonald 看機構本身，McBride 等看船上的那本帳。我的讀法是，這套制度最省錢的地方在於把每一層的風險往下推：補給局把價格風險推給投標的承包商，把損耗風險推給事務長，事務長再用短秤推給水兵。它能撐過 23 年戰爭，靠的是每一層都有人簽名、有帳可查，而不是每一層都誠實。McBride 等轉引斯皮特黑德水兵的抱怨：口糧按事務長磅，而不是按「誠實的一磅」（honest pound）發放。這句話打中的正是這條鏈的最底端。",
+      "tag": "推論"
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "你的世界裡，軍糧是國家自己做、外包給商人，還是由部隊的管帳人自行籌措？各自把風險留給誰？",
+        "誰握著秤？如果管糧的人可以合法扣下一部分當損耗，士兵會怎樣看他，他又有什麼理由把糧食保管好？",
+        "官定口糧寫在紙上，實際送到手上的是多少？兩者的差額由誰吸收，什麼事件會讓這個差額變成兵變的第一條要求？",
+        "前線離首都要走幾個月時，帳由誰核、錢由誰墊？"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Regulations and Instructions relating to His Majesty's Service at Sea",
+      "publisher": "Privy Council（London）；Naval Marine Archive 掃描本",
+      "date": "1731",
+      "url": "https://navalmarinearchive.com/pdf/reg_instructions_service_sea_1731.pdf",
+      "note": "〈Of Provisions〉第 60–63 頁：口糧表、減量配給、替代品換算、牛豬肉驗重、麵粉板油與布丁袋；〈Of the Payment of Short Allowance Money〉第 68–70 頁"
+    },
+    {
+      "title": "Sustaining the Empire: War, the Navy and the Contractor State, 1793–1815（專案說明）",
+      "publisher": "Royal Museums Greenwich／Greenwich Maritime Institute, University of Greenwich",
+      "date": "2016-12-01",
+      "url": "https://www.rmg.co.uk/sites/default/files/Sustaining_the_Empire_project.pdf",
+      "note": "日期為 PDF 建檔日期。官定週量表與替代品、1808 年 6 月波羅的海貨單、補給站、投標制度、Pinkerton、必要金、七年戰爭報廢率、人數與航程、檔案所在、研究團隊與成果"
+    },
+    {
+      "title": "The British Navy's Victualling Board, 1793–1815: Management Competence and Incompetence（Janet Macdonald）",
+      "publisher": "Boydell & Brewer；Cambridge Core 2023 年 3 月 11 日上線",
+      "date": "2010",
+      "url": "https://www.cambridge.org/core/books/british-navys-victualling-board-17931815/07E2136E7447437DB66097BD9A886904",
+      "note": "只讀到各章摘要與目錄：第 1 章（1683–1832、147,000 人、800 艘船、25 萬人估計）、第 2 章（三種供應方式、自產鹽醃肉餅乾啤酒）、第 3 章（修訂委員會第 11 號報告）、第 4 章（海外補給站與困難）、第 8 章（竊盜）、第 9 章（1788–1807 年四次國會調查、費用委員會報告、1800 年 1 月 29 日樞密院令）"
+    },
+    {
+      "title": "Sustaining the Fleet, 1793–1815: War, the British Navy and the Contractor State（Roger Knight、Martin Wilcox）",
+      "publisher": "Boydell & Brewer；Cambridge Core 2023 年 3 月 1 日上線",
+      "date": "2010",
+      "url": "https://www.cambridge.org/core/books/abs/sustaining-the-fleet-17931815/sea-provisions-contracts-extending-the-imperial-reach/85A67D2556E5AF9054EC298EDACEE3D6",
+      "note": "只讀到各章摘要：第 2 章（公私界線、Basil Cochrane）、第 3 章（17,000 人到 14 萬人、水桶重量）、第 4 章（市場風險、人口、戰俘）、第 5 章（Thomas Hearn 案）、第 7 章（1804 年 £548,071、Desborough）、結論（承包商國家）"
+    },
+    {
+      "title": "Supply Contracts: 'Men of Confined Property' and the 'Flower of the City'（Sustaining the Fleet 第 5 章）",
+      "publisher": "Boydell & Brewer／Cambridge Core",
+      "date": "2010",
+      "url": "https://www.cambridge.org/core/books/sustaining-the-fleet-17931815/supply-contracts-men-of-confined-property-and-the-flower-of-the-city/2E234B5E0BB1A1F31D62864B4A279631",
+      "note": "章節摘要：1810 年 11 月 8 日與 10 日的 Hearn 往來信件、1809 年扣款"
+    },
+    {
+      "title": "A rum deal: The purser's measure and accounting control of materials in the Royal Navy, 1665–1832（Karen McBride、Tony Hines、Russell Craig）",
+      "publisher": "Business History 58(6): 925–946",
+      "date": "2016-03-02",
+      "url": "https://doi.org/10.1080/00076791.2016.1153068",
+      "note": "全文讀自作者博士論文收錄的版本：事務長磅與 7/8、1761 年海員手冊（轉引）、名冊簽名、核對官、代理理論、斯皮特黑德兵變後的改革、《泰晤士報》1802 年 6 月 29 日 Cocks 示眾報導（轉引）、引 Macdonald 九分之一的損耗額度"
+    },
+    {
+      "title": "'Nipcheese' the Beancounter: Purser accounting and accounting change in the Royal Navy 1665–1832（Karen Mary McBride 博士論文）",
+      "publisher": "University of Portsmouth",
+      "date": "2020-03",
+      "url": "https://pure.port.ac.uk/ws/portalfiles/portal/21124613/Thesis_McBride.pdf",
+      "note": "第 2 章即上列《商業史》論文"
+    },
+    {
+      "title": "History of the Mutiny at Spithead and the Nore（W. J. Neale）",
+      "publisher": "Thomas Tegg（London）；Internet Archive 掃描本",
+      "date": "1842",
+      "url": "https://archive.org/details/historyofmutinya00neal",
+      "note": "第 7–8 頁對事務長的批評與 1,000 英鎊的註腳；第 26–29 頁 1797 年 4 月 18 日致海軍部請願書全文"
+    },
+    {
+      "title": "The delegates in council or beggars on horseback（大英博物館館藏說明）",
+      "publisher": "Wikimedia Commons，轉錄大英博物館 1868,0808.6641 印本說明",
+      "date": "1797-06-09",
+      "url": "https://commons.wikimedia.org/wiki/File:The_delegates_in_council_or_beggars_on_horseback._(BM_1868,0808.6641).jpg",
+      "note": "圖說中 Buckner、Parker、Fox 的辨識；日期為版畫出版日"
+    },
+    {
+      "title": "The Delegates in Council or Beggars on Horseback（RMG A7458）",
+      "publisher": "Royal Museums Greenwich／Wikimedia Commons",
+      "date": "1797-06-09",
+      "url": "https://commons.wikimedia.org/wiki/File:The_Delegates_in_Council_or_Beggars_on_Horseback_(caricature)_RMG_A7458.tiff",
+      "note": "館方說明此畫描繪諾爾兵變的代表會議"
+    },
+    {
+      "title": "Purser（Rowlandson，No. 6）",
+      "publisher": "Royal Museums Greenwich／Wikimedia Commons",
+      "date": "1799-02-15",
+      "url": "https://commons.wikimedia.org/wiki/File:Purser_RMG_PW4971.tiff",
+      "note": "頭圖；日期為版畫出版日"
+    },
+    {
+      "title": "The Seaman's Vade Mecum",
+      "publisher": "William Mountaine／London: Mount and Page",
+      "date": "1761",
+      "url": "https://doi.org/10.1080/00076791.2016.1153068",
+      "note": "轉引自 McBride 等 2016，未見原件"
+    },
+    {
+      "title": "The Times 關於事務長 Cocks 戴枷示眾的報導",
+      "publisher": "The Times",
+      "date": "1802-06-29",
+      "url": "https://doi.org/10.1080/00076791.2016.1153068",
+      "note": "轉引自 McBride 等 2016 註 106，未見原件"
+    }
+  ]
+}
