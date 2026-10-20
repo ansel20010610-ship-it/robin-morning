@@ -1,0 +1,422 @@
+{
+  "column": "philosophy",
+  "date": "2026-10-21",
+  "title": "同樣沒檢查煞車，撞到孩子的那個比較壞嗎",
+  "dek": "兩位外送員犯了同一個小疏忽，只有一個遇上衝出來的孩子。從康德、威廉斯到內格爾，追問運氣能不能改變一個人該受的責備。",
+  "brief": "內格爾在〈道德運氣〉裡舉卡車司機為例：同樣沒檢查煞車，有沒有孩子衝到車前，司機無從控制，他該怎麼責怪自己卻大不相同。本報原創假設兩位外送員疏忽相同，只有阿凱撞傷 7 歲女孩；Richards、Zimmerman 認為結果只改變我們知道多少與責任範圍，Moore、Hartman 則認為結果會改變該受的責備。內格爾認為這個問題在某種意義上沒有解；本文的讀法是，即使拿掉疏忽、責備歸零，威廉斯說的「行為者的遺憾」仍歸不了零。",
+  "topic_key": "philosophy:moral-luck-nagel-williams",
+  "updated_at": "2026-10-21T01:54:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Paul_Gauguin_-_D%27ou_venons-nous.jpg/1280px-Paul_Gauguin_-_D%27ou_venons-nous.jpg",
+    "width": 1280,
+    "height": 487,
+    "alt": "橫幅極寬的油畫，深藍綠的林地背景前，十多位大溪地人或坐或站，畫面中央一人舉手摘取果實；右下角躺著一個嬰兒，左側有一位蜷坐抱頭的老婦與一尊藍色神像，左上角與右上角各有一塊黃色區塊，寫著法文標題與署名。",
+    "caption": "高更（Paul Gauguin），〈我們從何處來？我們是誰？我們往何處去？〉（D'où venons-nous ? Que sommes-nous ? Où allons-nous ?），1897–1898 年，油彩、畫布，139.1 × 374.6 公分，波士頓美術館（Museum of Fine Arts, Boston）藏，館藏號 36.270。內格爾在〈道德運氣〉的注釋中說，威廉斯那位拋家追求繪畫的藝術家以高更的生平為藍本；本文借這幅畫代表那類「成敗事前無法預知」的決定，畫作本身與這場哲學討論無關。",
+    "credit": "Paul Gauguin；Museum of Fine Arts, Boston（Tompkins Collection—Arthur Gordon Tompkins Fund）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_-_D%27ou_venons-nous.jpg",
+    "made": "1897–1898"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "台中一家自家烘焙咖啡館，老闆沈明惠請了兩位外送員：阿凱與志豪。店裡規定機車每月保養一次煞車，這個月兩人都因為訂單多，把保養往後延了一週。某個週三上午 10 點，兩人各騎一輛同款機車，以時速約 30 公里穿過兩條不同的學區巷子。阿凱前方，一個 7 歲女孩從兩輛停著的車之間衝出來；他立刻煞車，車子卻比平常多滑了一段，女孩小腿骨折，住院兩週。志豪那條巷子什麼事也沒發生，他準時送達，下午才去換了煞車皮。",
+      "tag": "原創假設"
+    },
+    {
+      "type": "p",
+      "text": "沈明惠要在週五前寫好兩張處分單。她有三個選項：兩人同罰，因為疏忽一樣；阿凱重罰、志豪口頭提醒，因為結果不同；或者兩人同罰，另外請阿凱去醫院探視、分擔部分賠償。本文假設：兩人延後保養的理由與天數相同；女孩衝出來無法預見；若煞車正常，阿凱能在撞上前停住；除了那個孩子，兩條巷子沒有其他差別。",
+      "tag": "原創假設"
+    },
+    {
+      "type": "p",
+      "text": "把條件攤開：在兩人控制得了的部分，他們完全一樣，同樣的拖延、車速與反應。不一樣的只有孩子出現在誰的車前，而這件事兩人都控制不了。要問的是，在「責備」上，這個差別算不算數。哲學上，這叫「道德運氣」（moral luck）的問題。"
+    },
+    {
+      "type": "h",
+      "text": "出處：1976 年的同題論文，內格爾的卡車司機"
+    },
+    {
+      "type": "p",
+      "text": "「道德運氣」一詞出自英國哲學家威廉斯（Bernard Williams）。1976 年《亞里斯多德學會論文集》增刊第 50 卷，刊出他與美國哲學家內格爾（Thomas Nagel）同題的兩篇〈道德運氣〉，威廉斯的論文在前（頁 115–135），內格爾的是回應。內格爾改寫後，收入 1979 年的文集《Mortal Questions》，頁 24–38。據史丹佛哲學百科（SEP）〈道德運氣〉條，威廉斯後來回顧，他最初提出這個說法時，預期它聽起來像一個自相矛盾的詞。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "內格爾的定義是：一個人所做的事，若有重要的一面取決於他控制不了的因素，我們卻仍在這一面把他當作道德評判的對象，這就可以叫作道德運氣。談到「結果運氣」時，他頭一個舉的是卡車司機：完全沒有過失卻撞到孩子，司機會難過，但不必自責；若他犯了小疏忽，例如最近沒檢查煞車，而這疏忽促成孩子的死，他會為那條命責怪自己；若沒遇上必須猛踩煞車的情況，他只需為疏忽本身稍稍自責。內格爾接著寫：",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "Yet the negligence is the same in both cases, and the driver has no control over whether a child will run into his path.",
+      "text": "然而兩種情況裡的疏忽是一樣的，而會不會有孩子跑到車前，司機無從控制。",
+      "cite": "內格爾，〈道德運氣〉，《Mortal Questions》（1979）（本文自譯）"
+    },
+    {
+      "type": "p",
+      "text": "他把同樣的結構推到更重的疏忽：酒後開車偏上人行道的人，若路上剛好沒有行人，可以說自己在道德上走運；若有，他要為死者負責，多半還會被以過失殺人起訴。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "本文的情境改寫自這個卡車司機：把一位司機的兩種可能，拆成兩個疏忽相同、同時存在的人，讓兩種結果並排；死亡改成骨折；下判斷的人從司機本人換成要寫處分單的老闆。"
+    },
+    {
+      "type": "h",
+      "text": "康德的寶石：控制原則從哪裡來"
+    },
+    {
+      "type": "p",
+      "text": "內格爾的論文從康德（Immanuel Kant）開頭。康德在 1785 年的《道德形上學基礎》（Grundlegung zur Metaphysik der Sitten）第一章說，善的意志之所以善，不在於它成就了什麼，而在於意欲本身；就算因為命運特別不濟，它竭盡一切手段仍一事無成：",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "so würde er wie ein Juwel doch für sich selbst glänzen, als etwas, das seinen vollen Werth in sich selbst hat.",
+      "text": "它仍會像一顆寶石那樣，獨自發光，作為本身就具有全部價值的東西。",
+      "cite": "康德，《道德形上學基礎》第一章，科學院版第 4 卷頁 394（本文自譯）"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Grundlegung_zur_metaphysik_der_sitten.djvu/page21-1280px-Grundlegung_zur_metaphysik_der_sitten.djvu.jpg",
+      "width": 1280,
+      "height": 2311,
+      "alt": "泛黃的德文書頁，以羅馬體印刷，頁首印著頁碼 11。上半頁有幾行鉛筆底線；中段起一段從「Der gute Wille ist nicht durch das」開始，其中幾行也畫了底線；頁面底部空白處有幾行淡淡的英文鉛筆手寫筆記。",
+      "caption": "康德《道德形上學基礎》由 J. H. von Kirchmann 編注的 1870 年柏林版（L. Heimann 出版）第 11 頁。中段起是「善的意志」那一段，下半頁就是寶石的比喻：「so würde er wie ein Juwel doch für sich selbst glänzen」。頁上的鉛筆底線與英文筆記出自某位不知名的舊讀者。掃描本出自美國康乃狄克大學圖書館、經 Internet Archive 上傳。",
+      "credit": "Immanuel Kant 著，J. H. von Kirchmann 編注；University of Connecticut Libraries／Internet Archive 掃描",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Grundlegung_zur_metaphysik_der_sitten.djvu?page=21",
+      "made": "1870（原著 1785）"
+    },
+    {
+      "type": "p",
+      "text": "SEP〈道德運氣〉條（Dana K. Nelkin 撰）把這個直覺寫成「控制原則」：我們只在所受評價的事取決於自己控制得了的因素時，才能受道德評價。它還有一個推論：兩個人若唯一的差別來自他們控制不了的因素，就不應受到不同的道德評價。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "內格爾的麻煩是，控制原則在反省之前顯得理所當然，一旦貫徹到底，卻會吃掉我們幾乎所有的道德判斷。他寫道，到最後，一個人所做的事裡，沒有什麼、或幾乎沒有什麼，看起來在他的控制之下。他把運氣分成四種。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "h",
+      "text": "四種運氣：從結果一路退到意志本身"
+    },
+    {
+      "type": "table",
+      "title": "內格爾的四種道德運氣",
+      "head": [
+        "種類",
+        "內格爾的例子",
+        "放進咖啡館"
+      ],
+      "rows": [
+        [
+          "結果運氣：事情怎麼收場",
+          "卡車司機；酒駕偏上人行道；子彈被飛過的鳥擋下，殺人未遂",
+          "女孩衝到阿凱車前，不在志豪車前"
+        ],
+        [
+          "處境運氣：遇上什麼考驗",
+          "若納粹沒掌權，集中營軍官也許一生平靜；因生意離開德國去阿根廷的人，也許躲過了成為軍官",
+          "若那天早上兩人對調路線，撞上女孩的就是志豪"
+        ],
+        [
+          "構成運氣：天生是什麼樣的人",
+          "嫉妒的人即使從不搞破壞，仍被譴責為嫉妒",
+          "生性焦慮、從不拖延保養的店員，算不算更值得稱讚"
+        ],
+        [
+          "因果運氣：意志由先前情況決定",
+          "連「純粹的意志行為」也是意志控制不了的先前情況的產物",
+          "阿凱那週會拖延，本身也有他控制不了的成因"
+        ]
+      ],
+      "caption": "依內格爾〈道德運氣〉（1979）與 SEP〈道德運氣〉條第 1 節整理；右欄是本文的原創對應。"
+    },
+    {
+      "type": "p",
+      "text": "前兩種在行為之外，後兩種往裡退到性格與意志的成因。內格爾的論證是：如果控制不了的結果讓責備失去根據，處境、性格與成因也同樣控制不了，同樣的理由會一路推下去，最後剩不下可責備的人。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "h",
+      "text": "立場一：結果只改變我們知道多少，不改變該受的責備"
+    },
+    {
+      "type": "p",
+      "text": "否認道德運氣的一方保住控制原則，修正日常判斷。最有力的論證之一，SEP 沿用 Latus 的命名稱作「知識論論證」，代表是 Richards 1986 年在《心靈》（Mind）發表的〈運氣與應得〉（Luck and Desert）。我們很少確知一個人的意圖有多堅定；結果是一個會出錯的證據：成功了，表示他大概認真執行了計畫，沒成功，就少了這份證據。差別待遇反映的是我們的知識處境，不是應得的差別；若確知兩人的意圖完全相同，我們就不再想差別對待。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "咖啡館的情境正好把這個論證推到極限：本文假設沈明惠確知兩人延後的天數與理由相同。照這一派的看法，她手上已經沒有「阿凱可能更粗心」的理由，兩張處分單應該寫得一樣。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "Zimmerman 2002 年的〈認真看待運氣〉（Taking Luck Seriously）再補一刀：要分開責任的「範圍」與「程度」。成功的一方要負責的事比較多，但兩人該受責備的程度相同。他把這個想法推到處境運氣：從沒遇上考驗的人，若在那種處境下會自由地做出同樣的錯事，在程度上就與做了的人一樣該受責備。SEP 也記下反駁：許多這類反事實條件句可能根本沒有真假可言。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "這一派並不要阿凱若無其事。據 SEP 的整理，Wolf 2001 年的〈道德運氣的寓意〉（The Moral of Moral Luck）主張有一種「沒有名字的美德」：為自己行為的後果承擔起責任，即使嚴格說來那不全是你的責任；它像慷慨，願意給出比正義要求更多的東西。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "照這個思路推想，第三個選項最合這一派：兩人同罰，阿凱另外去醫院、分擔賠償，但那是美德的要求，不是因為他更該受責備。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "實驗哲學也給了這一派一些支持。SEP 介紹 Kneer 與 Machery 2019 年（刊於《認知》〔Cognition〕）與 2023 年的研究：受試者並排看到只差結果的兩個情境時，多半判斷兩人一樣該受責備；只看其中一個時，結果較嚴重者被判得較重，但差別幾乎全由「認為他比較疏忽」中介。SEP 的讀法是，人們可能從結果倒推心態。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "h",
+      "text": "立場二：結果是「你做了什麼」的一部分"
+    },
+    {
+      "type": "p",
+      "text": "另一方接受道德運氣，放棄或限縮控制原則。內格爾先替這一邊說了一句重話：這些是真正的道德判斷，不是一時的情緒，因為我們事先就說得出判斷會怎樣隨結果改變。他的例子是：疏忽地讓浴缸放著水、嬰兒還在裡面，衝上樓梯時你就明白，如果嬰兒溺死了，你做了一件可怕的事；如果沒有，你只是粗心。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "據 SEP 整理，法哲學家 Moore（1997 年《Placing Blame》、2009 年《Causation and Responsibility》）指出，我們對造成傷害的人怨恨更深，自己造成傷害時愧疚更重；對這些反應最好的解釋，是它們的對象真的更該受責備。Hartman 在 2017 年的《In Defense of Moral Luck》把內格爾的論證倒過來用：三個人都計畫開槍殺人，一個打了噴嚏沒扣扳機，一個開了槍卻被飛鳥擋下，一個命中。若承認處境運氣讓打噴嚏的人責備較輕，未命中與命中之間的類比幾乎一樣，結果運氣就很難單獨排除。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "Walker 1991 年的〈道德運氣與不純粹行為者的美德〉（Moral Luck and the Virtues of Impure Agency）據 SEP 轉述，認為道德運氣只對理想化的「純粹」行為者是問題；真實的人，責任本來就超出控制，可靠、願意分擔善後這些美德正由此而來。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "威廉斯原本的例子是一位藝術家。內格爾在注釋中說，那是以高更（Paul Gauguin）的生平為藍本：一位畫家拋下家庭去追求繪畫。據內格爾轉述，威廉斯指出成敗事前無法預測，畫家日後回頭看這個決定時最根本的感受，卻取決於他的才華有沒有發展出來；內格爾回應，這只說明那些感受不必是道德的。據 SEP，威廉斯 1993 年的〈後記〉轉而區分「道德」與更寬的「倫理」：狹義的道德用意是提供一處免於運氣的庇護，代價是失去至高的地位。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "h",
+      "text": "內格爾自己：問題在某種意義上沒有解"
+    },
+    {
+      "type": "p",
+      "text": "內格爾沒有選邊。他在文末承認，自己既說不清「行為者」的概念，也無法判斷衝突是否只是表面。他的診斷是：從內部看，我們無法把自己的行為與性格只當成走運或不走運的片段；從外部看，人和人做的一切都屬於一個我們沒有創造的世界。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "quote",
+      "original": "I believe that in a sense the problem has no solution, because something in the idea of agency is incompatible with actions being events, or people being things.",
+      "text": "我相信，在某種意義上這個問題沒有解，因為行為者這個觀念裡有某種東西，和「行為是事件、人是物」無法相容。",
+      "cite": "內格爾，〈道德運氣〉，《Mortal Questions》（1979）（本文自譯）"
+    },
+    {
+      "type": "p",
+      "text": "隨著外在因素一層層被揭露，他寫道，最後沒有什麼能歸給那個負責任的自我，只剩下更大事件序列中的一段，可以惋惜或慶幸，卻不能責備或稱讚。下圖整理這個兩難，以及三條出路。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "svg",
+      "title": "道德運氣的兩難與三條出路",
+      "svg": "<svg viewBox=\"0 0 640 470\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"ah\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"ink\"/></marker></defs>\n<rect x=\"20\" y=\"16\" width=\"285\" height=\"78\" rx=\"8\" class=\"soft\"/>\n<text x=\"162\" y=\"42\" text-anchor=\"middle\" font-size=\"15\" class=\"ink\" font-weight=\"bold\">前提一：控制原則</text>\n<text x=\"162\" y=\"64\" text-anchor=\"middle\" font-size=\"13\" class=\"ink\">只能為自己控制得了的部分</text>\n<text x=\"162\" y=\"82\" text-anchor=\"middle\" font-size=\"13\" class=\"ink\">受道德評價（康德的寶石）</text>\n<rect x=\"335\" y=\"16\" width=\"285\" height=\"78\" rx=\"8\" class=\"soft\"/>\n<text x=\"477\" y=\"42\" text-anchor=\"middle\" font-size=\"15\" class=\"ink\" font-weight=\"bold\">前提二：日常判斷</text>\n<text x=\"477\" y=\"64\" text-anchor=\"middle\" font-size=\"13\" class=\"ink\">撞傷女孩的阿凱，比疏忽相同</text>\n<text x=\"477\" y=\"82\" text-anchor=\"middle\" font-size=\"13\" class=\"ink\">卻沒事的志豪更該被責備</text>\n<line x1=\"162\" y1=\"94\" x2=\"290\" y2=\"140\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n<line x1=\"477\" y1=\"94\" x2=\"350\" y2=\"140\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n<rect x=\"200\" y=\"142\" width=\"240\" height=\"56\" rx=\"8\" class=\"paper\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<text x=\"320\" y=\"166\" text-anchor=\"middle\" font-size=\"15\" class=\"accent\" font-weight=\"bold\">兩者衝突</text>\n<text x=\"320\" y=\"186\" text-anchor=\"middle\" font-size=\"12\" class=\"muted\">差別只在孩子出現在誰的車前</text>\n<line x1=\"440\" y1=\"170\" x2=\"520\" y2=\"170\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\" marker-end=\"url(#ah)\"/>\n<text x=\"528\" y=\"150\" font-size=\"12\" class=\"muted\">一貫套用控制原則，</text>\n<text x=\"528\" y=\"168\" font-size=\"12\" class=\"muted\">處境、性格、成因</text>\n<text x=\"528\" y=\"186\" font-size=\"12\" class=\"muted\">也都控制不了，</text>\n<text x=\"528\" y=\"204\" font-size=\"12\" class=\"muted\">可責備的所剩無幾</text>\n<line x1=\"270\" y1=\"198\" x2=\"115\" y2=\"262\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n<line x1=\"320\" y1=\"198\" x2=\"320\" y2=\"262\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n<line x1=\"370\" y1=\"198\" x2=\"525\" y2=\"262\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n<rect x=\"14\" y=\"264\" width=\"196\" height=\"190\" rx=\"8\" class=\"soft\"/>\n<text x=\"112\" y=\"290\" text-anchor=\"middle\" font-size=\"14\" class=\"ink\" font-weight=\"bold\">出路一：否認道德運氣</text>\n<text x=\"112\" y=\"314\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">保留前提一，修正前提二</text>\n<text x=\"112\" y=\"338\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">結果只改變我們知道多少</text>\n<text x=\"112\" y=\"358\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">與責任的範圍，不改變程度</text>\n<text x=\"112\" y=\"382\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">兩人同罰；阿凱多擔的</text>\n<text x=\"112\" y=\"402\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">是賠償與心意，不是責備</text>\n<text x=\"112\" y=\"436\" text-anchor=\"middle\" font-size=\"12\" class=\"gold\">Richards、Zimmerman、Wolf</text>\n<rect x=\"222\" y=\"264\" width=\"196\" height=\"190\" rx=\"8\" class=\"soft\"/>\n<text x=\"320\" y=\"290\" text-anchor=\"middle\" font-size=\"14\" class=\"ink\" font-weight=\"bold\">出路二：接受道德運氣</text>\n<text x=\"320\" y=\"314\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">保留前提二，放棄前提一</text>\n<text x=\"320\" y=\"338\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">結果是「做了什麼」的一部分</text>\n<text x=\"320\" y=\"358\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">處境運氣既已接受，</text>\n<text x=\"320\" y=\"378\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">結果運氣難以單獨排除</text>\n<text x=\"320\" y=\"402\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">阿凱可以更該被責備</text>\n<text x=\"320\" y=\"436\" text-anchor=\"middle\" font-size=\"12\" class=\"gold\">Moore、Hartman、Walker</text>\n<rect x=\"430\" y=\"264\" width=\"196\" height=\"190\" rx=\"8\" class=\"soft\"/>\n<text x=\"528\" y=\"290\" text-anchor=\"middle\" font-size=\"14\" class=\"ink\" font-weight=\"bold\">出路三：承認無解</text>\n<text x=\"528\" y=\"314\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">兩個前提都放不下</text>\n<text x=\"528\" y=\"338\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">從內部看，行為是我做的；</text>\n<text x=\"528\" y=\"358\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">從外部看，行為只是事件</text>\n<text x=\"528\" y=\"382\" text-anchor=\"middle\" font-size=\"12\" class=\"ink\">兩種觀點同時壓過來</text>\n<text x=\"528\" y=\"436\" text-anchor=\"middle\" font-size=\"12\" class=\"gold\">Nagel（威廉斯另見正文）</text>\n</svg>",
+      "caption": "原創論證圖，依內格爾〈道德運氣〉（1979）與 SEP〈道德運氣〉條第 3、4 節整理。各派學者只就本文提到的論證歸類，不代表他們在每一種運氣上的全部立場；威廉斯的立場見正文。"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件：煞車前一天剛換過"
+    },
+    {
+      "type": "p",
+      "text": "把疏忽拿掉：阿凱前一天就做了保養，煞車正常，女孩衝出來的距離卻近到任何人都停不住，她仍然骨折。志豪那邊照舊沒事。",
+      "tag": "原創假設"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，這時兩派大概都會同意沈明惠沒有理由處分任何人：這正是內格爾說的「完全沒有過失」的司機，會難過，但不必自責。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "威廉斯指出，這份難過和旁觀者的難過不一樣。他稱之為「行為者的遺憾」（agent-regret）：第一人稱地想著「要是我當時不這樣做就好了」，表現上可能包括願意補償受害者。他寫卡車司機：",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "quote",
+      "original": "there is something special about his relation to this happening, something which cannot merely be eliminated by the consideration that it was not his fault",
+      "text": "他和這件事之間有某種特殊的關係，這種關係不會只因為想到「這不是他的錯」就被消除。",
+      "cite": "威廉斯，〈道德運氣〉（1976），轉引自 SEP〈道德運氣〉條（本文自譯）"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是，這個改動把兩件常被綁在一起的事拆開了：責備可以歸零，阿凱與那場事故的關係卻歸不了零。否認道德運氣的一方會說，原本的情境不過是「這份遺憾」加上「兩人相同的疏忽」，所以責備仍應相同；接受的一方會說，爭點正是那份歸不了零的關係，在有疏忽時會不會轉成更多的責備。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "改一個條件：志豪那邊也衝出一個孩子，只是有人拉住了他"
+    },
+    {
+      "type": "p",
+      "text": "回到兩人都延後保養的版本，只改志豪那條巷子：一個男孩也從車縫衝出來，志豪的煞車同樣慢了半拍，眼看要撞上，路邊一位阿嬤伸手把男孩拉回半步。男孩毫髮無傷，阿嬤看見了全程。",
+      "tag": "原創假設"
+    },
+    {
+      "type": "p",
+      "text": "這個版本像內格爾說的子彈被鳥擋下，也像 Hartman 的「未命中」。兩人遇上同一種考驗，在控制得了的部分失敗得一樣，差別只剩那位阿嬤。這個版本拿掉的是處境的差別：兩人都遇上了考驗，沈明惠也知道志豪差一點就撞上了。由此推想，如果讀者仍覺得阿凱更該被責備，這個直覺就不是靠知識落差撐起來的；如果這時覺得兩人該同罰，原版裡的差別感，也許和 Kneer 與 Machery 的發現一致，部分來自從結果倒推疏忽。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "法律已經選了一邊，道德不一定"
+    },
+    {
+      "type": "p",
+      "text": "中華民國刑法第 12 條規定：「過失行為之處罰，以有特別規定者，為限。」第 284 條處罰的是「因過失傷害人者」，致重傷者刑度較高。第 25 條規定，未遂犯之處罰以有特別規定者為限，「並得按既遂犯之刑減輕之」。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "由此推想，套進咖啡館：阿凱可能涉及第 284 條的過失傷害；同樣延後保養、卻沒傷到人的志豪，不會構成這一條。刑法在結果運氣上，已經站在差別對待的一邊。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "內格爾也舉過法律的例子：殺人未遂的刑罰輕於既遂，即使意圖與動機再相似。SEP 記下否認道德運氣者的回應：法律可以有嚇阻、隱私權衡等自己的理由差別對待，我們卻從法律誤推到道德。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，處分單比刑法更接近純粹的道德判斷：本文假設沈明惠確知兩人做了什麼，難題推不給舉證或嚇阻。"
+    },
+    {
+      "type": "h",
+      "text": "週五的兩張處分單"
+    },
+    {
+      "type": "p",
+      "text": "沈明惠可以寫兩張一樣的處分單，再私下請阿凱去醫院；那麼她得向女孩的父母說明，撞傷他們女兒的人，和什麼都沒撞到的同事，受到同樣的責備。她也可以寫兩張不一樣的；那麼她得寫明，多出來的那一份，是為了一個兩人都控制不了的孩子。前一種讓阿凱多出來的愧疚只算美德或情緒；後一種承認，一個人該受多少責備，有一部分是在巷子裡決定的。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "內格爾說他沒有答案，SEP 的總結也說多數學者落在兩端之間，只在某幾種運氣上表態。仍然沒有定論的是：阿凱那份歸不了零的關係，到底是道德判斷的一部分，還是道德判斷之外、同樣真實的另一種東西。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Moral Luck",
+      "publisher": "Dana K. Nelkin／Stanford Encyclopedia of Philosophy",
+      "date": "2025-01-20",
+      "url": "https://plato.stanford.edu/entries/moral-luck/",
+      "note": "主要二手來源：控制原則與推論、內格爾定義（Nagel 1979, 59）、知識論論證（Latus 命名；Richards 1986）、Wolf 的「無名美德」、Kneer 與 Machery 實驗、Zimmerman 範圍與程度、威廉斯行為者遺憾引文（1976 [Statman 1993b, 43]）與 1993〈後記〉、Moore、Walker、Hartman 類比論證、法律運氣的誤推；2025 年 1 月 20 日實質修訂版；「知識論論證」之名出自 Latus 2000〈Moral and Epistemic Luck〉（未讀原文，依 SEP 書目）"
+    },
+    {
+      "title": "Moral Luck（收入 Mortal Questions 第 3 章）",
+      "publisher": "Thomas Nagel／Cambridge University Press",
+      "date": "1979",
+      "url": "https://archive.org/details/mortalquestions00nage",
+      "note": "全文頁 24–38。卡車司機、酒駕、未遂、浴缸與嬰兒、四種運氣、文末「沒有解」與注 3（高更、威廉斯）各段，以一部選集的重印本（標明出自 Mortal Questions, 1979）逐字核對；原書頁碼未逐頁核對"
+    },
+    {
+      "title": "Moral Luck（Williams 與 Nagel 同題論文）",
+      "publisher": "Bernard Williams、Thomas Nagel／Aristotelian Society Supplementary Volume 50",
+      "date": "1976-07-11",
+      "url": "https://doi.org/10.1093/aristoteliansupp/50.1.115",
+      "note": "威廉斯頁 115–135，內格爾回應在後；本文未讀原文，威廉斯的卡車司機引文與行為者遺憾依 SEP 轉引"
+    },
+    {
+      "title": "Postscript（收入 D. Statman 編 Moral Luck）",
+      "publisher": "Bernard Williams／Albany: State University of New York Press，頁 251–258",
+      "date": "1993",
+      "url": "https://plato.stanford.edu/entries/moral-luck/#Bib",
+      "note": "未讀原文；「矛盾語」的回顧與「免於運氣的庇護」依 SEP 導言與第 3.4 節轉述"
+    },
+    {
+      "title": "Grundlegung zur Metaphysik der Sitten（科學院版第 4 卷頁 394）",
+      "publisher": "Immanuel Kant／Korpora.org 科學院版電子本",
+      "date": "1785",
+      "url": "https://korpora.org/Kant/aa04/394.html",
+      "note": "寶石比喻德文原文，第 24–26 行"
+    },
+    {
+      "title": "Grundlegung zur Metaphysik der Sitten（J. H. von Kirchmann 編注）",
+      "publisher": "Berlin: L. Heimann／Wikimedia Commons（University of Connecticut Libraries 掃描）",
+      "date": "1870",
+      "url": "https://commons.wikimedia.org/wiki/File:Grundlegung_zur_metaphysik_der_sitten.djvu?page=21",
+      "note": "正文圖：掃描檔第 21 頁（書頁 11），書名頁見掃描檔第 5 頁"
+    },
+    {
+      "title": "Luck and Desert",
+      "publisher": "Norvin Richards／Mind 95(378): 198–209",
+      "date": "1986-04",
+      "url": "https://doi.org/10.1093/mind/XCV.378.198",
+      "note": "未讀全文；知識論論證依 SEP 轉述"
+    },
+    {
+      "title": "Taking Luck Seriously",
+      "publisher": "Michael J. Zimmerman／The Journal of Philosophy 99(11): 553–576",
+      "date": "2002-11",
+      "url": "https://doi.org/10.2307/3655750",
+      "note": "未讀全文；範圍與程度之分、反事實條件句的反駁依 SEP 轉述"
+    },
+    {
+      "title": "The Moral of Moral Luck",
+      "publisher": "Susan Wolf／Philosophic Exchange 31: 4–19",
+      "date": "2001",
+      "url": "https://plato.stanford.edu/entries/moral-luck/#Bib",
+      "note": "未讀原文；「無名美德」依 SEP 轉述"
+    },
+    {
+      "title": "No Luck for Moral Luck",
+      "publisher": "Markus Kneer、Edouard Machery／Cognition 182: 331–348",
+      "date": "2019-01",
+      "url": "https://doi.org/10.1016/j.cognition.2018.09.003",
+      "note": "未讀全文；研究結果依 SEP 第 3.1 節轉述；SEP 將 2019 年與 2023 年兩項研究合併介紹"
+    },
+    {
+      "title": "Placing Blame: A Theory of the Criminal Law（第 5 章）；Causation and Responsibility",
+      "publisher": "Michael S. Moore／Oxford: Clarendon Press；Oxford University Press",
+      "date": "1997",
+      "url": "https://plato.stanford.edu/entries/moral-luck/#Bib",
+      "note": "未讀原書（後者 2009 年出版）；論點依 SEP 第 4.2.1 節轉述"
+    },
+    {
+      "title": "In Defense of Moral Luck: Why Luck Often Affects Praiseworthiness and Blameworthiness",
+      "publisher": "Robert J. Hartman／Abingdon: Routledge",
+      "date": "2017",
+      "url": "https://plato.stanford.edu/entries/moral-luck/#Bib",
+      "note": "未讀原書；三位槍手的類比論證（頁 105–107）依 SEP 第 4.2.5 節轉述"
+    },
+    {
+      "title": "Moral Luck and the Virtues of Impure Agency",
+      "publisher": "Margaret Urban Walker／Metaphilosophy 22: 14–27",
+      "date": "1991",
+      "url": "https://plato.stanford.edu/entries/moral-luck/#Bib",
+      "note": "未讀原文；論點依 SEP 第 4.2.2 節轉述"
+    },
+    {
+      "title": "中華民國刑法（第 12、25、284 條）",
+      "publisher": "全國法規資料庫／法務部",
+      "date": "",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=284",
+      "note": "第 12 條 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=12 ；第 25 條 https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=25 ；查閱現行條文；2026 年 10 月 21 日查閱"
+    },
+    {
+      "title": "Where Do We Come From? What Are We? Where Are We Going?",
+      "publisher": "Museum of Fine Arts, Boston",
+      "date": "",
+      "url": "https://collections.mfa.org/objects/32558",
+      "note": "頭圖作品資料：1897–98 年，油彩畫布，139.1 × 374.6 公分，館藏號 36.270；影像取自 Wikimedia Commons"
+    }
+  ]
+}
