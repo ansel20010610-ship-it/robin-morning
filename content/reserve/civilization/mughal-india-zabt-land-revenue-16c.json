@@ -1,0 +1,475 @@
+{
+  "column": "civilization",
+  "date": "reserve",
+  "reserve_written": "2026-10-20",
+  "title": "竹竿與銅錢：阿克巴怎樣替每塊地定稅",
+  "dek": "蒙兀兒帝國怎樣把北印度的田量過、分等，再把平均收成的三分之一折成每畢迦幾枚銅幣？誰定稅率、誰去收，又在哪裡走樣。",
+  "brief": "阿克巴的「扎卜特」先量地，再把好、中、差三等田的平均收成取三分之一作稅，最後依稅率表折成每畢迦幾達姆銅幣。以小麥為例，《阿克巴則例》算出每畢迦應繳 4 莫恩德 12¾ 色爾，而阿格拉省的小麥稅率在 19 年間從 90 達姆變成 52 至 116 達姆。第 24 年改用十年資料定出固定稅率；Habib 認為這讓稅額與當年收成脫鉤，在收成不穩的地方，風險幾乎全落在農民身上。",
+  "topic_key": "civilization:mughal-india-zabt-land-revenue-16c",
+  "updated_at": "2026-10-20T14:51:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/AbulFazlPresentingAkbarnama.jpg/1280px-AbulFazlPresentingAkbarnama.jpg",
+    "width": 1280,
+    "height": 2197,
+    "alt": "直幅細密畫。上半部是一座粉紅色石造亭閣，戴頭巾、留鬍鬚的君主盤腿坐在金色寶座上，面前跪坐一名包白頭巾、穿淺色長袍的人，身前放著一本書。亭閣兩側和下方站滿佩帶腰帶與武器的朝臣，其中一人手持紅色書本；畫面中央是一片空地，一名白衣人伸手示意；最下方有侍從牽著一匹白馬。",
+    "caption": "〈阿布法茲勒向阿克巴呈上《阿克巴之書》〉。《阿克巴則例》就是這部史書的一部分；畫中跪坐捧書的人即阿布法茲勒，寶座上是阿克巴。紙本，以顏料與金描繪，高 431 公釐、寬 261 公釐（依 Wikidata）。這幅出自為宮廷繪製的《阿克巴之書》抄本，屬於宮廷自我呈現的一部分，和書中的稅收記載一樣出自朝廷的立場。",
+    "credit": "Govardhan（Commons 著錄）；都柏林切斯特・比替圖書館（Chester Beatty Library）藏，館號 In 03.176（依 Wikidata）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:AbulFazlPresentingAkbarnama.jpg",
+    "made": "約 1603–1605 年（Commons 著錄）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "《阿克巴則例》（Ain-i Akbari）裡有一張表，第一行是小麥。一畢迦（bigha）上等地收 18 莫恩德（man），中等地收 12 莫恩德，下等地收 8 莫恩德 35 色爾（ser）。三者相加是 38 莫恩德 35 色爾，取其三分之一當作「中等收成」，得 12 莫恩德 38¼ 色爾；再取這個數的三分之一，4 莫恩德 12¾ 色爾，就是國家要的那一份。按當時的度量，40 色爾合 1 莫恩德。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "國家要的卻不是麥子。同一段文字接著說，這份應繳額折成現錢收取。另一張表列出阿格拉省（Agra）歷年的小麥稅率：阿克巴（Akbar）在位第 6、7 年每畢迦 90 達姆（dam，銅幣），第 15 年 38 至 48 達姆，第 24 年 52 至 116 達姆。同樣一畢迦麥田，前後相差可以超過一倍。"
+    },
+    {
+      "type": "quote",
+      "text": "為了耕作者與軍人的方便，價值以現錢收取。",
+      "original": "for the convenience of the cultivators and the soldiery, the value was taken in ready money.",
+      "cite": "《阿克巴則例》第 3 卷第 11 則，H. S. Jarrett 1891 年英譯，第 63 頁；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "本文要回答的是：16 世紀後期的蒙兀兒帝國，怎樣把北印度田地的收成，變成一張事先算好的銅錢帳？誰去量地、誰定價格、誰收錢，錢最後到誰手上，這套辦法又在哪裡走樣。"
+    },
+    {
+      "type": "h",
+      "text": "定位：北印度的「扎卜特」，與一部宮廷則例"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這裡談的是蒙兀兒帝國的北印度核心。阿克巴在位於 1556 至 1605 年。歷史學者 Irfan Habib 指出，「扎卜特」（zabt）在印度的稅收文獻裡有專門意思：指丈量，以及依丈量結果課稅。《阿克巴則例》逐年列出稅率的省分，是阿格拉、阿拉哈巴德（Allahabad）、奧德（Awadh）、德里、拉合爾、木爾坦與馬爾瓦；阿傑梅爾（Ajmer）的表格空白，比哈爾（Bihar）則沒有提到稅率。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "《則例》記，阿克巴在位第 40 年（譯者 Jarrett 註明為 1594 至 1595 年），全國分為 105 個州（sarkar）、2,737 個縣（pargana）。同一段也記下十年定額訂立時的年估田賦總額：3,629,755,246 達姆，外加 120 萬片檳榔葉；Jarrett 換算約為 90,743,881 盧比。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Habib 提醒，這個總額是十年定額（1580 年確立）的數字，不是《則例》完成時的帝國估額；州縣數字與田賦總額因此不是同一年的情況。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "我們主要靠阿布法茲勒（Abu'l Fazl）的《阿克巴則例》知道這些事。這部書是他替阿克巴所寫史書《阿克巴之書》（Akbarnama）的一部分，收錄收稅官守則、度量衡、土地分類，以及一頁接一頁的稅率表。本文讀的是 Jarrett 1891 年在加爾各答出版的英譯本第二冊，表格數字逐一對照了掃描頁。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，這是一部替宮廷說話的文獻。多項改革被寫成出自阿克巴的英明（Jarrett 譯文常見「His Majesty in his wisdom」一類說法），舊制的毛病則多半歸咎於前任官員；第 15 則雖然把重估稅額記在穆札法爾汗與托達爾・馬爾名下，整體語氣仍是頌揚。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Habib 1963 年的研究把《則例》和 17 世紀的稅務手冊、史家巴達烏尼（Badauni）等人的記述對照，並指出有些段落文字不穩，各抄本讀法不同；對其中一段，他說 Jarrett 的譯文「無論如何必須完全取代」（which in any case must be entirely superseded，本文自譯）。所以下文凡涉及這幾段，都同時寫出學者的不同讀法。"
+    },
+    {
+      "type": "h",
+      "text": "追蹤：一塊田怎樣變成一筆銅錢"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "第一步是量。《則例》規定，一畢迦是 60 加茲（gaz）見方，合 3,600 平方加茲；一畢迦分 20 比斯瓦（biswa），一比斯瓦再分 20 份。量地原本用麻繩做的「坦納卜」（tanab），繩子遇濕縮短、乾了變長。書裡說，有人把繩子放在露水裡打濕；清早用濕而縮短的繩子量，傍晚繩子乾了又變長。前一種情形農民吃虧，後一種國庫少收。"
+    },
+    {
+      "type": "quote",
+      "text": "繩子會被放在露水裡，就這樣被蓄意弄濕。",
+      "original": "It would be left in the dew and thus fraudfully moistened.",
+      "cite": "《阿克巴則例》第 3 卷第 9 則，Jarrett 英譯第 62 頁；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "阿克巴在位第 19 年，量具改成用鐵環連接的竹竿。據 Jarrett 譯本，60 加茲的麻繩一經絞擰就縮成 56 加茲；用麻繩量出的一畢迦比用竹竿量的小 2 比斯瓦 12 比斯萬薩（約 13%），但同一句又說每百畢迦差 10 畢迦，兩個數字並不一致。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Habib 也說明，麻繩濕了會縮、乾了會伸，官員便找各種藉口讓繩子保持潮濕。他轉引巴達烏尼引用的一句詩：在受騙者眼中，雙頭蛇都比量地的繩子好。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "第二步是分等。土地分四類：年年連作、從不休耕的「波拉吉」（polaj）；暫時休耕以恢復地力的「帕勞提」（parauti）；休耕三、四年的「查查爾」（chachar）；荒廢五年以上的「班賈爾」（banjar）。前兩類各分好、中、差三等，帕勞提一旦耕種，就和波拉吉繳一樣的稅。荒地則逐年加稅：班賈爾第一年每畢迦只收 1、2 色爾，第二年 5 色爾，第三年收成的六分之一，第四年四分之一另加 1 達姆，之後收三分之一。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "第三步是定作物稅率，也就是開頭那張小麥表的算法。《則例》說，這套稅額出自舍爾沙（Sher Khan，即 Sher Shah），在各省都被當作最低的課稅標準。Habib 認為，阿克巴在位初期接受了舍爾沙的這套作物稅率，而且看來是全帝國通用。"
+    },
+    {
+      "type": "table",
+      "title": "一畢迦小麥田的稅怎麼算（春收，波拉吉地）",
+      "head": [
+        "步驟",
+        "數量",
+        "說明"
+      ],
+      "rows": [
+        [
+          "上等地收成",
+          "18 莫恩德",
+          "每畢迦"
+        ],
+        [
+          "中等地收成",
+          "12 莫恩德",
+          "每畢迦"
+        ],
+        [
+          "下等地收成",
+          "8 莫恩德 35 色爾",
+          "每畢迦"
+        ],
+        [
+          "三者合計",
+          "38 莫恩德 35 色爾",
+          ""
+        ],
+        [
+          "取三分之一：「中等收成」",
+          "12 莫恩德 38¼ 色爾",
+          "表上的說法是「一畢迦波拉吉的中等收成」"
+        ],
+        [
+          "再取三分之一：國家應得",
+          "4 莫恩德 12¾ 色爾",
+          "表上稱為「定為稅收的部分」"
+        ]
+      ],
+      "caption": "依《阿克巴則例》第 3 卷第 11 則，Jarrett 英譯第 63 頁表格。40 色爾合 1 莫恩德（Habib 附錄 B）。譯者註明，計算時捨去不足四分之一色爾的零數。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "第四步是折價。Habib 解釋，阿克巴在位初年起，各地每年把糧價報到朝廷，審核後把穀物稅率換算成現金稅率，稱為「達斯圖爾」（dastur），單位是每畢迦幾達姆。《則例》保存了第 6 到第 24 年、共 19 年的逐年稅率。靛青、罌粟、薑黃、檳榔葉等作物沒有穀物稅率，直接訂現金稅額。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "第五步是相乘：淨面積乘上每畢迦的現金稅率。具體表格要看較晚的證據。Habib 根據 17 世紀後期的稅務手冊（其中一本寫於 1679 年）所附的範本指出，丈量紀錄（khasra）有六欄：耕作者姓名與作物、田的寬、長、面積、受災面積（nabud），以及扣除受災後的面積；淨面積按作物分別乘上現金稅率，就是應繳總額（jama）。這是後來的格式，阿克巴時代的紀錄是否完全相同，無法確定。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "然後是收。《則例》給收稅官（amalguzar）的守則要他逐一對待每個農民，各自開出應繳額、各自收取，不可把估產交給村長辦理；可以收現錢，也可以收實物，包括估產（kankut）與分成（batai）等方式。春收在太陽將由寶瓶宮進入雙魚宮的時節開徵。帕特瓦里（patwari）要把收到的金額記在交給農民的單據上；收稅官每月取得書記的收支帳上呈，收滿 20 萬達姆，就交可靠的人解送。"
+    },
+    {
+      "type": "svg",
+      "title": "從量地到國庫：扎卜特的五個步驟與收稅",
+      "svg": "<svg viewBox='0 0 360 560' xmlns='http://www.w3.org/2000/svg' font-size='11'>\n<defs>\n<marker id='ma' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='ink'/></marker>\n<marker id='mg' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='gold'/></marker>\n</defs>\n<text x='12' y='14' font-size='10.5' class='muted'>依《阿克巴則例》與 Habib（1963）整理；示意</text>\n<rect x='12' y='24' width='336' height='54' rx='3' class='soft'/>\n<text x='22' y='42' font-size='12' font-weight='600' class='ink'>1 量地</text>\n<text x='22' y='58' font-size='10' class='muted'>丈量隊用竹竿（第 19 年起）量出每塊田的畢迦數</text>\n<text x='22' y='72' font-size='10' class='accent'>受災面積記為「納布德」，從面積扣除</text>\n<line x1='180' y1='78' x2='180' y2='96' class='ink line' marker-end='url(#ma)'/>\n<rect x='12' y='98' width='336' height='54' rx='3' class='soft'/>\n<text x='22' y='116' font-size='12' font-weight='600' class='ink'>2–3 分等、定作物稅率</text>\n<text x='22' y='132' font-size='10' class='muted'>四類土地；好、中、差三等收成平均後取三分之一</text>\n<text x='22' y='146' font-size='10' class='muted'>得出每畢迦應繳多少穀物（rai'）</text>\n<line x1='180' y1='152' x2='180' y2='170' class='ink line' marker-end='url(#ma)'/>\n<rect x='12' y='172' width='336' height='68' rx='3' class='soft'/>\n<text x='22' y='190' font-size='12' font-weight='600' class='ink'>4 折成銅錢：達斯圖爾</text>\n<text x='22' y='206' font-size='10' class='muted'>每種作物、每個稅區一個「每畢迦幾達姆」</text>\n<text x='22' y='220' font-size='10' class='muted'>第 24 年前逐年按糧價核定；之後用十年資料定為固定值</text>\n<text x='22' y='234' font-size='10' class='accent'>朝廷核准；卡農戈提供各地面積與稅收紀錄</text>\n<line x1='180' y1='240' x2='180' y2='258' class='ink line' marker-end='url(#ma)'/>\n<rect x='12' y='260' width='336' height='54' rx='3' class='paper'/>\n<text x='22' y='278' font-size='12' font-weight='600' class='ink'>5 每戶應繳＝淨面積 × 稅率</text>\n<text x='22' y='294' font-size='10' class='muted'>另加每畢迦 1 達姆，支付丈量人員</text>\n<text x='22' y='308' font-size='10' class='muted'>可繳現錢，也可依規定繳實物</text>\n<line x1='180' y1='314' x2='180' y2='332' class='ink line' marker-end='url(#ma)'/>\n<rect x='12' y='334' width='336' height='68' rx='3' class='paper'/>\n<text x='22' y='352' font-size='12' font-weight='600' class='ink'>收：收稅官逐戶收取</text>\n<text x='22' y='368' font-size='10' class='muted'>帕特瓦里在給農民的單據上記下所收金額</text>\n<text x='22' y='382' font-size='10' class='muted'>書記記日帳；金庫加封、多道鎖</text>\n<text x='22' y='396' font-size='10' class='muted'>收滿 20 萬達姆，交可靠的人解送</text>\n<line x1='100' y1='402' x2='100' y2='440' class='gold line' marker-end='url(#mg)'/>\n<line x1='260' y1='402' x2='260' y2='440' class='gold line' marker-end='url(#mg)'/>\n<rect x='12' y='442' width='166' height='76' rx='3' class='soft'/>\n<text x='22' y='460' font-size='11.5' font-weight='600' class='ink'>哈利薩（直轄地）</text>\n<text x='22' y='476' font-size='10' class='muted'>稅收直接進皇室國庫</text>\n<text x='22' y='490' font-size='10' class='muted'>第 19 年起一度擴及</text>\n<text x='22' y='504' font-size='10' class='muted'>北印度大部分省分</text>\n<rect x='182' y='442' width='166' height='76' rx='3' class='soft'/>\n<text x='192' y='460' font-size='11.5' font-weight='600' class='ink'>賈吉爾（封授地）</text>\n<text x='192' y='476' font-size='10' class='muted'>按帳面估額（jama）</text>\n<text x='192' y='490' font-size='10' class='muted'>授給官員抵薪俸</text>\n<text x='192' y='504' font-size='10' class='accent'>收不足時受封者抱怨欠款</text>\n<text x='12' y='540' font-size='10' class='muted'>金色箭頭：錢的去向。本文依史料歸納的流程，</text>\n<text x='12' y='554' font-size='10' class='muted'>實際各地做法不一，不是每塊地都經過丈量。</text>\n</svg>",
+      "caption": "示意，不按比例。編號對應正文的第一到第五步（第二步分等、第三步定作物稅率合為一框）。依《阿克巴則例》第 3 卷第 5、9–15 則（Jarrett 英譯）與 Habib（1963）第 6、7 章整理。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "錢最後有兩個去處。Habib 說明，皇室直轄地（khalisa）的稅收直接進入皇室國庫；其餘土地以帳面估額授給官員作為薪俸，稱為賈吉爾（jagir）。所以這筆帳不只關係農民繳多少，也決定一位官員的封地值多少錢。《則例》說，糧價核定一再延誤時，農民抱怨多收，受封者則抱怨欠收的稅額收不回來。"
+    },
+    {
+      "type": "h",
+      "text": "權力：誰定稅率、誰去量、誰付代價"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "稅率由朝廷核定。《則例》第 15 則記，穆札法爾汗（Muzaffar Khan）與拉者托達爾・馬爾（Todar Mal）主持財政時，透過卡農戈（qanungo）重新分配全國的估定稅額，並估算各地產量；朝廷設了 10 名卡農戈，向各省的卡農戈收取帳目，交入國庫。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "村一級靠的是兩種書記。《則例》寫道，帕特瓦里是替耕作者記帳的人，記錄收支，「沒有一個村子沒有」（no village is without one）；卡農戈是「農民的庇護者」（the refuge of the husbandman），每縣一名（引語皆本文自譯）。卡農戈原本抽 1% 的份子，後來免除，改由國家按三個等級發薪，薪俸分別是 50、30、20 盧比，另有等值的養贍地。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "portrait",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Raja_Todar_Mall%2C_Finance_Minister_of_Akbar.jpg",
+      "width": 396,
+      "height": 630,
+      "alt": "一幅小型水粉肖像，裝裱在藍綠色的紙框內。一名包白色頭巾、穿淺色花紋長袍的男子側身坐在露台的地毯與靠墊上，頭後有金色光環，一手舉在胸前。他身後是白色欄杆，再後面是一片水面，對岸是長滿樹木的岩丘與幾座建築。",
+      "caption": "題為〈阿克巴的財政大臣拉者托達爾・馬爾〉的肖像，依 Commons 轉錄的館方資料為 17 世紀蒙兀兒繪畫、紙本水粉。托達爾・馬爾是 16 世紀的人物，這是後人所畫，面貌未必寫實。",
+      "credit": "佚名蒙兀兒畫家；依 Commons 轉錄之五校博物館資料，館號 AC 1967.34（Alban G. Widgery 捐贈）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Raja_Todar_Mall,_Finance_Minister_of_Akbar.jpg",
+      "made": "17 世紀（依 Commons 轉錄之館方資料）",
+      "depicts": "16 世紀後期"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "執行的人在第 19 年換了一批。Habib 說，那一年除三個省外，帝國土地都收歸直轄，分成預期各收 1 千萬坦卡（karor of tankas）的區，每區派一名收稅官，人稱「卡羅里」（karori）；這次「卡羅里實驗」的一大重點，就是把北印度各省都納入丈量。巴達烏尼記載農民受卡羅里嚴重壓迫，Habib 推想這和突然在廣大地區強制丈量有關。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "丈量本身要錢。《則例》說，過去收稅與丈量的官員每天可拿 58 達姆，條件是春季每天至少量 200 畢迦、秋季 250 畢迦；阿克巴廢除這項慣例，改為每畢迦只收 1 達姆。Habib 指出這筆「丈量費」（zabitana）是攤在土地上的附加稅，用來支付丈量隊的開銷。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "本文推想，成本大致這樣分攤：農民繳帳面上三分之一的應繳額，再加每畢迦 1 達姆的丈量費，還要承擔被量錯、被估錯的風險；受封官員承擔帳面估額與實收之間的落差；朝廷則負擔一整套書記與卡農戈的薪俸，以及每年核定糧價的延誤。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "制度也連著宮廷政治。Habib 寫道，1580 至 1581 年阿克巴腹背受敵，東部各省叛亂，米爾札・哈基姆（Mirza Hakim）又從西北入侵。高層貴族趁機對付財政大臣（diwan）沙・曼蘇爾（Shah Mansur），他是卡羅里實驗的設計者之一，在阿克巴出征途中以羅織的罪名被處死。巴達烏尼記載，留守阿格拉的沙赫巴茲汗（Shahbaz Khan）自作主張，把直到旁遮普的土地分封出去，理由是不安撫軍官，他們就會造反。Habib 認為賈吉爾的恢復可能因此加快。"
+    },
+    {
+      "type": "h",
+      "text": "限制：糧價、繩子與一紙稅率"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "《則例》第 15 則自己列出了舊制的問題。阿薩夫汗（Khwajah Abdul Majid Asaf Khan）任首相時，稅額只是估計，封地的估額隨一時興起增加，差異取決於「貪腐與私利的程度」（the extent of corruption and self-interest）。穆札法爾汗與托達爾・馬爾的新估額比前一次低；Jarrett 的譯文說，先前的估額與實收差距很大，Habib 則讀作新估額仍和實收「相去甚遠」（far away；引語皆本文自譯）。帝國擴大後，每年查明各地糧價變得困難，延誤造成許多不便。"
+    },
+    {
+      "type": "table",
+      "title": "阿格拉省春收小麥稅率，19 年間（每畢迦，達姆）",
+      "head": [
+        "在位年",
+        "稅率",
+        "在位年",
+        "稅率"
+      ],
+      "rows": [
+        [
+          "第 6、7 年",
+          "90",
+          "第 16 年",
+          "36–52"
+        ],
+        [
+          "第 8 年",
+          "80–90",
+          "第 17 年",
+          "36–74"
+        ],
+        [
+          "第 9 年",
+          "90",
+          "第 18 年",
+          "43–54"
+        ],
+        [
+          "第 10 年",
+          "50–60",
+          "第 19 年",
+          "32–50"
+        ],
+        [
+          "第 11 年",
+          "56–60",
+          "第 20 年",
+          "40–58"
+        ],
+        [
+          "第 12 年",
+          "56–60",
+          "第 21 年",
+          "42½–80"
+        ],
+        [
+          "第 13 年",
+          "56–60",
+          "第 22 年",
+          "64–94"
+        ],
+        [
+          "第 14 年",
+          "52–60",
+          "第 23 年",
+          "40–58"
+        ],
+        [
+          "第 15 年",
+          "38–48",
+          "第 24 年",
+          "52–116"
+        ]
+      ],
+      "caption": "依《阿克巴則例》第 3 卷第 14 則〈十九年稅率〉，Jarrett 英譯第 70 頁表格（依掃描頁逐格核對）。兩個數字表示省內不同地方的最低與最高稅率。第 6 年即伊斯蘭曆 968 年（1560–61 年）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Habib 讀這張表，看到兩個階段。第 6 到第 9 年，除摩臘婆（Malwa）外，各省同一作物的稅率幾乎相同，年年也少有變動；他認為這只能是「紙上稅率」（paper rates，本文自譯），不可能真的在從拉合爾到阿拉哈巴德的廣大地區照收。大約從第 10 年起，省與省、年與年的差別變得明顯，而且常寫成一個最低值與一個最高值，表示省內不同地方已有各自的稅率。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "第 24 年的辦法是不再逐年核定。依 Jarrett 譯文，朝廷把第 15 年到第 24 年的稅率加總，取十分之一作為每年的定額；其中第 20 到 24 年的數字經過確實查核，前五年則採信「正直之人」（persons of probity，本文自譯）的說法。定下的稅率按稅區排列：例如阿拉哈巴德州郊區三縣的春收小麥，是每畢迦 60 達姆 9 吉塔爾（jital，1 達姆的 25 分之一），巴多伊（Bhadoi）一帶是 64 達姆 21 吉塔爾。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "固定稅率解決了延誤，卻也把稅額和當年收成分開。Habib 指出，作物歉收時不降稅率，而是從丈量面積中扣除受災部分；托達爾・馬爾在第 27 年的建議裡，把雨水充足年分肥沃地區的扣除上限定為每畢迦 2½ 比斯瓦，即 12½%，叢林與沙漠地為 3 比斯瓦、15%。糧價下跌則沒有對應的機制，朝廷只能在第 30、31、33、35 年對阿拉哈巴德、奧德、阿格拉、德里等省特別減免。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Habib 也列出這套制度的長處與破綻。丈量可以重新查核，固定稅率減少了地方官員可以上下其手的空間；但它不容易用在土質不均的地方，而在收成很不穩定的地方，風險幾乎全落在農民身上。丈量紀錄也容易作假，丈量本身也不便宜。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "另一條證詞來自孟加拉。Habib 轉引孟加拉詩人穆昆達拉姆（Mukundarama）描寫一位受封者手下收稅官的作為：量田時斜著量長度，一畢迦只算 15 卡塔（katha）而不是 20，人們抗議也沒人理會。Habib 還認為，扎卜特不太可能涵蓋任何一個省的全部土地。"
+    },
+    {
+      "type": "h",
+      "text": "學界怎麼說：十年定額到底是什麼的平均"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "英國學者 W. H. Moreland 在 1929 年的《穆斯林印度的農業制度》（The Agrarian System of Moslem India）中認為，十年定額的特點是所有作物的稅率都以現金訂定，不必再每季換算；在他的讀法裡，新稅率就是前十年已頒行稅率的平均。他承認這無法用算術核對，只能憑檢視指出十年稅率大致比之前高一到兩成，並認為這和第 31 年改用新畢迦、面積放大約兩成的幅度相合；但他自己也說，這個論點不宜看得太重（Too much weight must not be attached to this argument）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Habib 不同意。他引用《阿克巴之書》的說法：查明每一縣十年來「耕作的類別與價格的高低」（the categories of cultivation and the levels of prices，Habib 英譯，本文自譯），取其十分之一作為每年的稅收。他認為若只是平均過去十年實收的稅，根本不必蒐集產量與價格。他的重建是：先為每個地方算出前十年平均的作物稅率，再配合已知的糧價，求出前十年各年的現金稅率並取平均，得到固定的達斯圖爾；再乘上平均面積，就是十年定額的總估額。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "連年代都有爭議。《則例》說穆札法爾汗與托達爾・馬爾的重新估定在第 15 年，Habib 指出波斯文的「十五」與「十一」容易抄混，而依年代排序的《阿克巴之書》把這件事記在第 11 年，他認為後者應為定論；據 Habib 轉述，Moreland 試圖調和，說工作始於第 11 年、完成於第 15 年。第 15 則最後一句也各有讀法：Jarrett 譯成各年取最好的作物、採用收成最豐的一年；Habib 譯為對高價作物另行處理，取稅額較高的年分。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "三分之一這個比例本身也受質疑。Habib 寫道，Moreland 假定阿克巴時代扎卜特的稅額不超過實際產量的三分之一，他的理由在糧價：用來把應繳額折成現金的價格，等同農民在收成時、市場上糧食過剩時賣出作物的價格。他寫道，若是如此，即使平均而言，實際負擔也必定大大超過產量的三分之一。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，扎卜特最大的變化，是把「今年收多少、糧價多少」這兩個問題從收稅的那一刻移走。量地之後，稅額已經寫在表上；地方官少了臨場估價的空間，朝廷也不必再等各地的糧價報告。代價是，一場旱災或一次糧價下跌，要靠扣除面積或朝廷特別減免來補救，而這兩件事都掌握在官員手裡。"
+    },
+    {
+      "type": "timeline",
+      "title": "扎卜特在阿克巴朝的演變",
+      "caption": "在位年依《阿克巴則例》與 Habib（1963）；西元年只寫史料或譯者註明者，第 24 年的西元年依 Moreland（1929）。",
+      "items": [
+        {
+          "when": "1556 年",
+          "label": "阿克巴即位",
+          "note": "初期沿用舍爾沙的作物稅率，每年折算成現金。"
+        },
+        {
+          "when": "第 6 年",
+          "label": "《則例》逐年稅率表起點",
+          "note": "伊斯蘭曆 968 年（1560–61 年）；第 6 到 9 年各省稅率幾乎相同。"
+        },
+        {
+          "when": "第 11 或 15 年",
+          "label": "穆札法爾汗與托達爾・馬爾重估稅額",
+          "note": "透過卡農戈取得各地資料；年代有爭議。"
+        },
+        {
+          "when": "第 19 年",
+          "label": "竹竿取代麻繩；卡羅里實驗",
+          "note": "北印度大部分土地收歸直轄，並進行大規模丈量。"
+        },
+        {
+          "when": "第 24 年",
+          "label": "十年定額",
+          "note": "以第 15–24 年資料定出固定的現金稅率；Moreland 註為 1579–80 年。"
+        },
+        {
+          "when": "第 27 年",
+          "label": "托達爾・馬爾訂歉收扣除上限",
+          "note": "肥沃地每畢迦最多扣 2½ 比斯瓦。"
+        },
+        {
+          "when": "第 30–35 年",
+          "label": "四省特別減免",
+          "note": "糧價下跌時由朝廷另行下令。"
+        },
+        {
+          "when": "第 31 年",
+          "label": "改用新的加茲與畢迦",
+          "note": "Moreland 估計新畢迦約大兩成。"
+        },
+        {
+          "when": "第 40 年",
+          "label": "《則例》的帝國統計",
+          "note": "1594–95 年；全國 105 州、2,737 縣。書中另記十年定額的年估總額約 36.3 億達姆，那是 1580 年確立時的數字。"
+        },
+        {
+          "when": "1605 年",
+          "label": "阿克巴去世",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "你的世界用什麼量土地？量具由誰保管、誰校正？如果量具會隨天氣變化，誰最先發現、誰從中得利？",
+        "稅率要多久調整一次？逐年按市價重算，延誤由誰承擔；固定十年不變，荒年與豐年的差額又由誰吸收？",
+        "替農民記帳的村中書記，薪水由誰付？他效忠的是村子、地方官，還是遠在京城的帳房？",
+        "官員的封地按帳面估額授予時，帳面與實收的落差會變成誰的壓力？他會把壓力轉給誰？"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Ain-i-Akbari, by Abul Fazl-i-Allami, Vol. II, translated by H. S. Jarrett",
+      "publisher": "Asiatic Society of Bengal（Bibliotheca Indica），Calcutta；Internet Archive 掃描本",
+      "date": "1891",
+      "url": "https://archive.org/details/in.ernet.dli.2015.32527",
+      "note": "第 3 卷第 5 則收稅官守則（pp. 43–46）、第 8–15 則度量與土地分類（pp. 58–69）、小麥收成與稅額表（p. 63）、卡農戈與帕特瓦里、58 達姆與每畢迦 1 達姆（p. 66）、查查爾與班賈爾（pp. 67–69）、十九年稅率與阿格拉小麥（pp. 69–70；第 70 頁表註：達姆為盧比的 40 分之一，吉塔爾為達姆的 25 分之一）、十年定額（p. 88）、阿拉哈巴德春收十年稅率（p. 91）、十二省總數與 Jarrett 換算（p. 115 及註）"
+    },
+    {
+      "title": "Irfan Habib, The Agrarian System of Mughal India, 1556–1707",
+      "publisher": "Internet Archive 掃描本（初版，作者序寫於 1962 年 8 月，Aligarh）",
+      "date": "1963",
+      "url": "https://archive.org/details/the-agrarian-system-of-mughal-india-1556-to-1707",
+      "note": "第 6 章〈The Land Revenue〉pp. 192、196、200–215、221–222：糧價等同收成時的低價、實際負擔超過三分之一；zabt 的定義、舍爾沙作物稅率、紙上稅率、第 11 或 15 年之爭、十年定額的重建、Jarrett 譯文與第 15 則末句、納布德扣除上限、特別減免、丈量費、巴達烏尼與穆昆達拉姆的轉引；第 7 章 pp. 271–272、275：卡羅里實驗、沙・曼蘇爾之死、哈利薩；附錄 B：40 色爾合 1 莫恩德；附錄 D p. 399 注 15：《則例》總額為十年定額（1580 年確立）的數字"
+    },
+    {
+      "title": "W. H. Moreland, The Agrarian System of Moslem India: A Historical Essay with Appendices",
+      "publisher": "Central Book Depot, Allahabad；Internet Archive 掃描本",
+      "date": "1929",
+      "url": "https://archive.org/details/in.ernet.dli.2015.21937",
+      "note": "〈The Reign of Akbar (1556–1605)〉一章 p. 80（第 24 年為 1579–80 年）、pp. 88–89：十年稅率為前十年稅率平均的讀法、稅區、比十九年稅率高一到兩成、第 31 年新畢迦約大兩成，以及作者對此論點的保留"
+    },
+    {
+      "title": "File:AbulFazlPresentingAkbarnama.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:AbulFazlPresentingAkbarnama.jpg",
+      "note": "頭圖；作者 Govardhan、年代 1603–1605、公版標示"
+    },
+    {
+      "title": "Abu'l-Fazl presents Akbarnama to Akbar (CBL In 03.176)",
+      "publisher": "Wikidata Q108381278",
+      "date": "",
+      "url": "https://www.wikidata.org/wiki/Q108381278",
+      "note": "收藏地切斯特・比替圖書館、館號、材質（紙、顏料、金）與尺寸 431 × 261 mm"
+    },
+    {
+      "title": "File:Raja Todar Mall, Finance Minister of Akbar.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Raja_Todar_Mall,_Finance_Minister_of_Akbar.jpg",
+      "note": "正文肖像；17 世紀、館號 AC 1967.34、Alban G. Widgery 捐贈、公版標示"
+    }
+  ]
+}
