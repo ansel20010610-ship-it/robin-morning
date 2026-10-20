@@ -5,7 +5,7 @@
   "dek": "Xavi Espart 與亞馬爾兩度扳平，巴黎在最後 9 分鐘靠維蒂尼亞與法比安・魯伊斯連進兩球；奧爾莫上半場傷退。",
   "brief": "巴薩台灣時間今天（10 月 21 日）凌晨在王子公園球場以 2 比 4 輸給巴黎聖日耳曼，本季各項賽事前 11 戰全勝的紀錄到此為止。Xavi Espart 與亞馬爾先後把比分扳成 1 比 1、2 比 2，但維蒂尼亞第 81 分鐘、法比安・魯伊斯第 86 分鐘連進兩球，奧爾莫則在第 27 分鐘傷退。巴薩以 6 分暫列歐冠聯賽階段第 5，下一場是台灣時間 10 月 26 日（週一）04:00 主場迎戰皇馬的國家德比。",
   "topic_key": "football:2026-10-21",
-  "updated_at": "2026-10-21T05:31:00+08:00",
+  "updated_at": "2026-10-21T06:30:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -94,7 +94,7 @@
     },
     {
       "type": "p",
-      "text": "傷情是另一個壞消息。奧爾莫（Dani Olmo）上半場與維蒂尼亞拼搶後受傷，第 27 分鐘由費爾明換下；巴薩官網只寫他被迫傷退（「forced off injured」），這一場是他代表巴薩出賽第 100 場；本版截稿前俱樂部還沒發布醫療報告，傷勢與能否踢國家德比都還不知道。巴黎同樣傷兵累累：金球獎得主登貝萊（Ousmane Dembélé）第 20 分鐘傷退，由 Ferran Torres 替補，Goal 描述他衝刺時突然停下、按住左大腿；馬基尼奧斯（Marquinhos）與克瓦拉茨赫利亞第 59 分鐘也都因傷被換下。",
+      "text": "傷情是另一個壞消息。奧爾莫（Dani Olmo）上半場與維蒂尼亞拼搶後受傷，第 27 分鐘由費爾明換下；巴薩官網只寫他被迫傷退（「forced off injured」），這一場是他代表巴薩出賽第 100 場；截至本版更新（台灣時間 06:30），俱樂部還沒發布醫療報告，傷勢與能否踢國家德比都還不知道。巴黎同樣傷兵累累：金球獎得主登貝萊（Ousmane Dembélé）第 20 分鐘傷退，由 Ferran Torres 替補，Goal 描述他衝刺時突然停下、按住左大腿；馬基尼奧斯（Marquinhos）與克瓦拉茨赫利亞第 59 分鐘也都因傷被換下。巴黎主帥恩里克（Luis Enrique）賽後說「We will have to wait for the tests tomorrow」（要等隔天的檢查，也就是巴黎時間 10 月 21 日；ESPN 引述，本文自譯）。巴黎在巴黎時間週日（台灣時間 10 月 26 日週一 03:45）還要在法甲主場迎戰里昂（Lyon），ESPN 稱之為榜首之戰。",
       "tag": "報導"
     },
     {
@@ -104,7 +104,12 @@
     },
     {
       "type": "p",
-      "text": "本版截稿時（台灣時間 10 月 21 日 05:31），還讀不到弗利克的賽後說法，巴薩官網的賽後報導也沒有引述他。官網認為這個比分「harsh on a Barça side」（對巴薩不公平；本文自譯），並寫道：「The unbeaten record may be gone, but the season is still young」（不敗紀錄或許沒了，但賽季還早；本文自譯）。",
+      "tag": "報導",
+      "text": "ESPN 記者 Mark Ogden 的賽後報導說，弗利克表示奧爾莫對傷退非常失望，並引述他說「We don't yet how big the injury is, we have to wait and see」（我們還不知道傷勢有多嚴重，只能等等看；原文如此，本文自譯）。據 Goal 英文版轉述《阿斯報》（AS），弗利克說「Paris Saint-Germain proved they are better than us」（巴黎證明了他們比我們強；引文為 Goal 英文版所刊，本文自譯）。Goal 英文版的同一篇報導還引述他承認最後 10 分鐘球隊體能不在最佳狀態，並說「This is not an excuse, but we did not have the best preparation for this match」（這不是藉口，但我們這場的準備並不理想；本文自譯）；他也稱讚 Xavi Espart「what he produces every time he plays is astonishing」（他每次上場的表現都令人驚訝；本文自譯）。"
+    },
+    {
+      "type": "p",
+      "text": "巴薩官網的賽後報導認為這個比分「harsh on a Barça side」（對巴薩不公平；本文自譯），並寫道：「The unbeaten record may be gone, but the season is still young」（不敗紀錄或許沒了，但賽季還早；本文自譯）。",
       "tag": "官方說法"
     },
     {
@@ -456,6 +461,20 @@
       "date": "2026-10-20",
       "url": "https://www.uefa.com/uefachampionsleague/match/2049593--porto-vs-psv/",
       "note": "比分核對"
+    },
+    {
+      "title": "PSG injuries can't overshadow signature UCL win over Barcelona",
+      "publisher": "ESPN（Mark Ogden）",
+      "date": "2026-10-20",
+      "url": "https://www.espn.com/soccer/story/_/id/50230659/dembele-olmo-subbed-early-psg-barcelona",
+      "note": "弗利克、恩里克賽後說法與傷情"
+    },
+    {
+      "title": "The first defeat: Flick reveals a striking admission after Saint-Germain's four-goal haul",
+      "publisher": "Goal（Loai Mohamed；部分引文轉述 AS）",
+      "date": "2026-10-20",
+      "url": "https://www.goal.com/en/news/the-first-defeat-flick-reveals-a-striking-admission-after-saint-germain-s-four-goal-haul/bltebb58139e5f9abbe",
+      "note": "弗利克賽後說法"
     },
     {
       "title": "Lamine Yamal France v Spain 7.24.26-057",
