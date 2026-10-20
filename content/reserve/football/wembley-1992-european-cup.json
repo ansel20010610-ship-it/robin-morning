@@ -1,0 +1,430 @@
+{
+  "column": "football",
+  "date": "reserve",
+  "reserve_written": "2026-10-20",
+  "title": "溫布利 1992：巴薩第一座歐洲冠軍盃",
+  "dek": "1961 年在伯恩、1986 年在塞維亞，巴薩兩度輸掉歐洲冠軍盃決賽。1992 年在溫布利，第三次決賽靠延長賽一腳自由球拿下。",
+  "brief": "1992 年 5 月 20 日，巴薩在倫敦溫布利球場以 1 比 0 擊敗桑普多利亞，拿下隊史第一座歐洲冠軍盃；90 分鐘互無進球，延長賽第 111 分鐘（歐洲足總的賽事紀錄與俱樂部部分文章作第 112 分鐘），科曼的自由球打破僵局。在此之前，巴薩 1961 年在伯恩以 2 比 3 負於本菲卡，1986 年在塞維亞的 PK 大戰四罰全失；1991–92 球季若不是巴克羅在凱澤斯勞滕最後一分鐘頭球破門，連小組賽都進不去。助理教練雷克薩奇回想奪冠時的感受，用的詞是「解放」。",
+  "topic_key": "football:wembley-1992-european-cup",
+  "updated_at": "2026-10-20T14:44:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Twin_Towers_of_Wembley_Stadium%2C_2002.jpg/1280px-Twin_Towers_of_Wembley_Stadium%2C_2002.jpg",
+    "width": 1280,
+    "height": 938,
+    "alt": "陰天下的一座淺色長形建築，正面兩端各有一座頂著圓頂與尖桿的白色塔樓，屋頂後方立著幾座照明燈架。前景是停滿汽車的停車場、路燈與一根高大的燈桿，中景有紅瓦屋頂的矮房和黃綠色的樹。照片色調偏暗，是沖印照片的掃描。",
+    "caption": "舊溫布利球場正面的雙塔。1992 年的歐洲冠軍盃決賽就在這座球場踢，歐洲足總的回顧稱巴薩球員是在雙塔下出場。照片是決賽之後約十年拍的資料照片，不是決賽當日畫面；Commons 檔案標示的拍攝時間是 2002 年 1 月 14 日。",
+    "credit": "David Howard／Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Twin_Towers_of_Wembley_Stadium,_2002.jpg",
+    "made": "2002"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1992 年 5 月 20 日，倫敦溫布利球場（Wembley Stadium），歐洲冠軍盃決賽踢完 90 分鐘仍是 0 比 0。延長賽下半場，離 PK 大戰不到 9 分鐘，巴薩在距球門 25 公尺處得到一個自由球。荷蘭後衛科曼（Ronald Koeman）一腳重炮穿過人牆，球從門柱內側鑽進網窩。巴薩以 1 比 0 擊敗義大利的桑普多利亞（Sampdoria），拿下隊史第一座歐洲冠軍盃。"
+    },
+    {
+      "type": "p",
+      "text": "在那之前，巴薩兩度踢進決賽，兩度空手而回。這一季的晉級之路也差點在 16 強就斷掉。以下依巴薩官網的歷史文章、歐洲足總（UEFA）官網的回顧與 ESPN 的報導整理；各家說法不一致的地方，照原樣並列。"
+    },
+    {
+      "type": "timeline",
+      "title": "從伯恩到溫布利",
+      "items": [
+        {
+          "when": "1961.5.31",
+          "label": "伯恩決賽，2–3 負本菲卡",
+          "note": "巴薩第一次踢歐洲冠軍盃決賽"
+        },
+        {
+          "when": "1986.5.7",
+          "label": "塞維亞決賽，PK 負布加勒斯特星隊",
+          "note": "120 分鐘 0–0，PK 大戰巴薩四罰全失"
+        },
+        {
+          "when": "1989.5.10",
+          "label": "歐洲盃賽冠軍盃決賽，2–0 勝桑普多利亞",
+          "note": "克魯伊夫執教巴薩後的第一座歐洲獎盃"
+        },
+        {
+          "when": "1991.11.6",
+          "label": "凱澤斯勞滕，巴克羅最後一分鐘頭球",
+          "note": "兩回合 3–3，以客場進球晉級小組賽"
+        },
+        {
+          "when": "1992.4.15",
+          "label": "2–1 勝本菲卡",
+          "note": "小組最後一戰，確定晉級決賽"
+        },
+        {
+          "when": "1992.5.20",
+          "label": "溫布利決賽，1–0 勝桑普多利亞",
+          "note": "延長賽科曼自由球，巴薩首奪歐洲冠軍盃"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "伯恩的方門柱與塞維亞的四記 PK"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "第一次是 1961 年 5 月 31 日，瑞士伯恩的 Wankdorf 球場，對手是本菲卡（Benfica）。巴薩在第一輪淘汰了皇家馬德里（Real Madrid），據歐洲足總的回顧，這是皇馬第一次在歐洲冠軍盃被淘汰。決賽第 20 分鐘，匈牙利前鋒柯奇士（Sándor Kocsis）先進一球；半小時過後巴薩接連失兩球，其中一球是門將拉馬列茨（Antoni Ramallets）的烏龍球，第 55 分鐘已是 1 比 3。另一名匈牙利球員齊博爾（Zoltán Czibor）追回一球，比分停在 2 比 3。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "巴薩官網 2025 年的一篇文章說，那場球巴薩打中門框四次，而當時的門柱是方的；文章接著設想，門柱若是圓的，結局或許不同。這是俱樂部自己的假設，不是可以驗證的事。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "第二次是 1986 年 5 月 7 日，塞維亞的 Ramón Sánchez-Pizjuán 球場。英格蘭教練維納布斯（Terry Venables）帶的巴薩，在 8 強淘汰尤文圖斯（Juventus），4 強首回合 0 比 3 輸給瑞典的哥德堡（IFK Göteborg），次回合靠 Pichi Alonso 的帽子戲法追平，PK 大戰晉級。決賽對手是羅馬尼亞的布加勒斯特星隊（Steaua București），各方都看好巴薩。結果 120 分鐘 0 比 0，PK 大戰星隊門將杜卡達姆（Helmut Duckadam）擋下巴薩全部四記點球，星隊 2 比 0 勝出。歐洲足總稱這是賽事史上最大的冷門之一。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "當時的歐洲冠軍盃只收各國聯賽冠軍。巴薩官網 2017 年的回顧指出，在西班牙拿聯賽冠軍的幾乎總是皇馬，1991–92 球季只是巴薩第五次參加這項賽事；而皇馬已經拿過六次冠軍。"
+    },
+    {
+      "type": "h",
+      "text": "凱澤斯勞滕的最後一分鐘"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1988 年起執教巴薩的克魯伊夫（Johan Cruyff），1989 年 5 月 10 日已經在瑞士以 2 比 0 擊敗桑普多利亞，拿下歐洲盃賽冠軍盃（Cup Winners' Cup）；1991 年又拿下西甲冠軍，取得下一季歐洲冠軍盃的參賽資格。1991–92 球季的第一輪，巴薩兩回合 3 比 1 淘汰東德最後一屆冠軍漢莎羅斯托克（Hansa Rostock）。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "第二輪對德國的凱澤斯勞滕（Kaiserslautern）。1991 年 10 月 23 日首回合在諾坎普，貝吉里斯坦（Txiki Begiristain）梅開二度，巴薩 2 比 0 勝。11 月 6 日次回合在 Fritz Walter 球場，Hotic 上半場結束前進一球，下半場開賽 3 分鐘再進一球扳平總比分；第 76 分鐘 Goldbaek 再下一城，凱澤斯勞滕總比分 3 比 2 領先。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "比賽剩下一分鐘，巴薩在對方半場得到自由球。科曼把球吊進禁區，場上最矮小的球員之一巴克羅（José Mari Bakero）擠進兩名德國中後衛 Kranz 與 Scherr 之間，頭球破門。總比分 3 比 3，巴薩以客場進球晉級。賽後兩人的說法，據巴薩官網的英文記述："
+    },
+    {
+      "type": "quote",
+      "original": "There is no such thing as a miracle, we simply fought right to the end.",
+      "text": "沒有什麼奇蹟，我們只是拚到了最後。",
+      "cite": "巴克羅賽後談話，據巴薩官網 2016 年 11 月 6 日文章的英文版（本文自譯）"
+    },
+    {
+      "type": "quote",
+      "original": "We played our worst game of the season but the luck was with us at the decisive point.",
+      "text": "我們踢了本季最差的一場，但在關鍵時刻運氣站在我們這邊。",
+      "cite": "克魯伊夫賽後談話，同上（本文自譯）"
+    },
+    {
+      "type": "h",
+      "text": "第一次有小組賽的歐洲冠軍盃"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "1991–92 球季，歐洲足總第一次在這項賽事裡設小組賽：兩輪淘汰賽之後，8 支球隊分成兩組，取代原本的 8 強與 4 強，各組第一直接進決賽。巴薩官網指出，這套賽制下一季就改名為歐洲冠軍聯賽（Champions League）。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "巴薩這一組有布拉格斯巴達（Sparta Praha）、本菲卡與基輔迪納摩（Dynamo Kyiv），唯一一場敗仗是在布拉格 0 比 1。1992 年 4 月 15 日小組最後一戰，巴薩 2 比 1 擊敗本菲卡，史托伊奇科夫（Hristo Stoichkov）與巴克羅各進一球，確定拿到決賽門票。另一組由博斯科夫（Vujadin Boškov）執教的桑普多利亞居首，同組有衛冕的貝爾格勒紅星（Crvena Zvezda）、安德萊赫特（Anderlecht）與帕納辛奈克斯（Panathinaikos）；紅星因巴爾幹內戰無法在貝爾格勒踢主場，在索菲亞以 1 比 3 輸給桑普多利亞。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "兩隊都是前一季的國內聯賽冠軍。桑普多利亞的主力是前鋒維亞利（Gianluca Vialli）與曼奇尼（Roberto Mancini），兩人的進球讓球隊在 1991 年拿下隊史唯一一座義甲冠軍；到了 1992 年 5 月，據 ESPN，他們在義甲已經沒有爭冠的機會，最後排第六。巴薩則還在和皇馬爭奪聯賽冠軍。"
+    },
+    {
+      "type": "facts",
+      "title": "1992 年歐洲冠軍盃決賽",
+      "items": [
+        [
+          "時間",
+          "1992 年 5 月 20 日"
+        ],
+        [
+          "地點",
+          "英格蘭倫敦，溫布利球場"
+        ],
+        [
+          "比分",
+          "巴薩 1–0 桑普多利亞（延長賽）"
+        ],
+        [
+          "進球",
+          "科曼，自由球；巴薩官網的歷史頁與 2017 年的重寫報導作第 111 分鐘；歐洲足總的賽事紀錄、巴薩官網 2017 年的 25 週年回顧與 2020、2021 年的週年文章作第 112 分鐘"
+        ],
+        [
+          "巴薩先發",
+          "祖比薩雷塔（Andoni Zubizarreta）；費雷爾（Albert Ferrer）、科曼、南多（Nando）；尤塞比奧、瓜迪奧拉（Pep Guardiola）、胡安・卡洛斯（Juan Carlos Rodríguez）；巴克羅、勞德魯普（Michael Laudrup）；薩利納斯（Julio Salinas）、史托伊奇科夫"
+        ],
+        [
+          "巴薩換人",
+          "下半場戈伊科切亞（Goikoetxea）上場，延長賽隊長阿萊克桑科（Alexanko）上場"
+        ],
+        [
+          "桑普多利亞先發",
+          "帕柳卡（Gianluca Pagliuca）；Mannini、Vierchowod、Lanna、Katanec；隆巴多（Attilio Lombardo）、Pari、Cerezo、Bonetti；維亞利、曼奇尼"
+        ],
+        [
+          "教練",
+          "克魯伊夫（巴薩）、博斯科夫（桑普多利亞）"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "決賽：120 分鐘裡的機會"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "先發名單裡唯一的意外是前鋒薩利納斯（Julio Salinas），克魯伊夫用了三名攻擊手。薩利納斯後來告訴 ESPN，克魯伊夫在決賽前幾天就告訴他要先發："
+    },
+    {
+      "type": "quote",
+      "original": "I thought it was a joke at first, but [Cruyff] said he was telling me so I didn't go out the night before.",
+      "text": "我一開始以為是開玩笑，但他說，先告訴我，是為了讓我前一晚不要出去玩。",
+      "cite": "薩利納斯，ESPN 2017 年 5 月 19 日報導（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "90 分鐘裡，兩邊的門將都撐住了。據巴薩官網 2017 年以「假如 1992 年就有官網」為前提重寫的賽事報導，第 22 分鐘祖比薩雷塔（Andoni Zubizarreta）近距離擋下隆巴多（Attilio Lombardo）的射門，一分鐘後史托伊奇科夫的頭球被帕柳卡（Gianluca Pagliuca）撲出；第 59 分鐘維亞利接隆巴多的傳球，面對門將一腳射高；第 62 分鐘史托伊奇科夫接勞德魯普（Michael Laudrup）的直塞低射，球打在門柱上彈出。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "維亞利 2011 年對歐洲足總回憶，他有三次好機會，一次被祖比薩雷塔擋下，自己應該把握得更好；比賽中他開始抽筋，終場前幾分鐘被換下。那是他代表桑普多利亞的最後一場比賽，他說當時已經有他要轉投尤文圖斯的傳言，讓他分心。"
+    },
+    {
+      "type": "h",
+      "text": "那一腳自由球"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "犯規發生在距球門 25 公尺處：桑普多利亞中場因維尼齊（Giovanni Invernizzi）和巴薩邊後衛尤塞比奧（Eusebio Sacristán）爭搶一顆無主球，裁判判因維尼齊犯規。據巴薩官網的重寫報導，桑普多利亞排了六人人牆，科曼站在球後，史托伊奇科夫在他右邊，巴克羅在左邊。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "接下來那兩下輕觸，記述不同。巴薩官網寫的是史托伊奇科夫把球撥出、巴克羅用腳踩停，科曼起腳；ESPN 西班牙語版巴塞隆納特派記者 Jordi Blanco 寫的是巴克羅輕碰、史托伊奇科夫踩住，而且事先沒有演練過。兩邊都同意的是結果：科曼一腳直線重炮，貼著帕柳卡守的那一側門柱入網。據 Jordi Blanco 的描述，帕柳卡預判會是一記弧線球，先往旁邊移了一步，來不及回身。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Ronald_Koeman_-_Botas_de_Wembley.jpg/1280px-Ronald_Koeman_-_Botas_de_Wembley.jpg",
+      "width": 1280,
+      "height": 1233,
+      "alt": "展示台上的一雙黑色皮革足球鞋：一隻正面朝前，鞋舌翻折下來，上面印著 adidas 字樣與圓形標誌，鞋面兩側有磨舊的條紋；另一隻側放，露出紅黑相間、裝有金屬鞋釘的鞋底。背景是一張裱框的泛黃團體合照。",
+      "caption": "Commons 檔案說明，這是科曼在溫布利決賽踢進致勝球時穿的球鞋。上傳者 2007 年上傳，沒有註明拍攝地點；Commons 上另一張同樣標為科曼溫布利球鞋的照片，註明展示於巴薩博物館。",
+      "credit": "Mutari／Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ronald_Koeman_-_Botas_de_Wembley.jpg",
+      "made": "2007"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "進球時間也有兩種寫法。巴薩官網的 1988–1996 年歷史頁、2017 年的重寫報導，以及 ESPN 西班牙語版都作第 111 分鐘；歐洲足總的賽事紀錄，以及巴薩官網 2017 年的 25 週年回顧（寫「離 PK 大戰只剩 8 分鐘」）、2020 與 2021 年的週年文章和 2022 年的專題頁，都作第 112 分鐘。科曼當年 29 歲。巴薩官網的重寫報導寫道，球進之後，球員和教練團在場邊跳成一團，克魯伊夫則從板凳上站起來，跨過欄杆走進球場。"
+    },
+    {
+      "type": "h",
+      "text": "「出去享受比賽」：一句流傳的話"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這場決賽最常被引用的一句話，不是在球場上說的。巴薩官網的俱樂部史寫道，克魯伊夫在球員出場前最後的指示是「Go out and enjoy it」（出去享受吧）；歐洲足總 2011 年的回顧也說，這是他對穿著橘色球衣的球員最後的話。西班牙語流傳的版本是「Salid y disfrutad」。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "但這句話有沒有在那天的更衣室裡說出口，並非沒有爭議。Jordi Blanco 在 ESPN 西班牙語版的兩篇週年文章都寫道，「Salid y disfrutad」作為克魯伊夫開賽前的話成了傳奇，但許多當事人否認他說過。本報查到的官方記述與這項質疑並存，無法判定哪一邊對。"
+    },
+    {
+      "type": "h",
+      "text": "只穿了三場的橘色球衣"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "巴薩那晚穿的是橘色球衣。據巴薩官網，橘色球衣第一次出現就是在 1991–92 球季，只穿過三場：1991 年 10 月 2 日客場對漢莎羅斯托克、11 月 6 日巴克羅頭球那一場、以及溫布利決賽。後來巴薩多次推出橘色系的第二或第三球衣，2014–15 球季那件全橘色的，官網明言是向 1992 年的歐洲冠軍盃致敬。"
+    },
+    {
+      "type": "h",
+      "text": "決賽之後"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "據巴薩官網的俱樂部史，約有 25,000 名巴薩球迷跟到溫布利，球隊回到巴塞隆納時，上街迎接的有 100 萬人。據 ESPN 西班牙語版，18 天後巴薩在聯賽最後一輪擊敗畢爾包競技（Athletic Club），原本只要自己贏球就能封王的皇馬，在特內里費（Tenerife）先以 2 比 0 領先、最後 2 比 3 落敗，巴薩衛冕西甲。據巴薩官網，同一年夏天，巴塞隆納舉辦奧運。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "回到比賽前的心情。《每日體育報》（Sport）記者 Juan Manuel Díaz 跑過這場決賽，他對 ESPN 說，雖然巴薩 1989 年已經贏過桑普多利亞，大家還是「非常害怕輸球」，要明白為什麼，看看 1961 與 1986 年那兩場決賽就知道了。當時的助理教練雷克薩奇（Carles Rexach）用一個詞形容奪冠的感受："
+    },
+    {
+      "type": "quote",
+      "original": "Liberation. There were a lot of people waiting for us to screw it up again. And the feeling [after the win] was that another life starts. We were released.",
+      "text": "解放。很多人等著看我們再搞砸一次。贏了之後的感覺是，另一段人生開始了。我們被放出來了。",
+      "cite": "雷克薩奇，ESPN 2017 年 5 月 19 日報導（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，溫布利的意義要放在伯恩與塞維亞旁邊看。到 2015 年為止，巴薩又在 2006、2009、2011、2015 年四度奪得這項賽事的冠軍，其中 2011 年同樣在溫布利；但第一座獎盃之所以被記得這麼清楚，是因為它結束的是兩次決賽失利、以及一支歐洲大俱樂部始終拿不到歐洲冠軍的那段歷史。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "1988-1996. The era of the 'Dream Team'",
+      "publisher": "FC Barcelona",
+      "date": "2018-03-13",
+      "url": "https://www.fcbarcelona.com/en/news/643913/1988-1996-the-era-of-the-dream-team",
+      "note": "克魯伊夫最後指示「Go out and enjoy it」、第 111 分鐘、25,000 名球迷、100 萬人上街；1989 年盃賽冠軍盃決賽"
+    },
+    {
+      "title": "25 years since FC Barcelona won its first European Cup at Wembley",
+      "publisher": "FC Barcelona",
+      "date": "2017-05-19",
+      "url": "https://www.fcbarcelona.com/en/news/763742/25-years-since-fc-barcelona-won-its-first-european-cup-at-wembley",
+      "note": "只收各國冠軍、第五次參賽、皇馬六冠、第一次設小組賽、漢莎羅斯托克 3–1、離 PK 大戰 8 分鐘"
+    },
+    {
+      "title": "Match Report: FC Barcelona are European Champions at Long Last!",
+      "publisher": "FC Barcelona",
+      "date": "2017-05-20",
+      "url": "https://www.fcbarcelona.com/en/news/763947/match-report-fc-barcelona-are-european-champions-at-long-last",
+      "note": "以「假如 1992 年就有官網」為前提重寫的賽事報導：各分鐘的機會、犯規經過、六人人牆、自由球站位、第 111 分鐘、科曼 29 歲、克魯伊夫跨過欄杆"
+    },
+    {
+      "title": "28 years since the first European Cup",
+      "publisher": "FC Barcelona",
+      "date": "2020-05-20",
+      "url": "https://www.fcbarcelona.com/en/news/1670167/28-years-since-the-first-european-cup",
+      "note": "先發名單、換人、第 112 分鐘"
+    },
+    {
+      "title": "29 years since Wembley win",
+      "publisher": "FC Barcelona",
+      "date": "2021-05-20",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/2149821/29-years-since-wembley-win",
+      "note": "先發名單、第 112 分鐘、此後四度奪冠的年份"
+    },
+    {
+      "title": "FC Barcelona's first European Cup success: Wembley 1992",
+      "publisher": "FC Barcelona",
+      "date": "2022-12-13",
+      "url": "https://www.fcbarcelona.com/en/card/2982808/fc-barcelonas-first-european-cup-success-wembley-1992",
+      "note": "晉級之路、先發與換人、第 112 分鐘、1961 與 1986 年決賽對手"
+    },
+    {
+      "title": "25 years since Bakero's legendary goal against Kaiserslautern",
+      "publisher": "FC Barcelona",
+      "date": "2016-11-06",
+      "url": "https://www.fcbarcelona.com/en/news/814322/25-years-since-bakeros-legendary-goal-against-kaiserslautern",
+      "note": "兩回合比分與進球者、巴克羅頭球經過、巴克羅與克魯伊夫賽後談話（文中次回合日期誤植為 2016 年，本文依 1991 年）"
+    },
+    {
+      "title": "Three games against Benfica that could have changed blaugrana history",
+      "publisher": "FC Barcelona",
+      "date": "2025-01-20",
+      "url": "https://www.fcbarcelona.com/en/news/4198094/three-games-against-benfica-that-could-have-changed-blaugrana-history",
+      "note": "1961 年伯恩決賽、方門柱與四次中框；1992 年 4 月 15 日 2–1 勝本菲卡"
+    },
+    {
+      "title": "Orange is back, a very special colour for FC Barcelona",
+      "publisher": "FC Barcelona",
+      "date": "2025-08-19",
+      "url": "https://www.fcbarcelona.com/en/club/news/4343542/orange-is-back-a-very-special-colour-for-fc-barcelona",
+      "note": "橘色球衣只穿三場的日期、2014–15 球季的致敬球衣"
+    },
+    {
+      "title": "1991/92: Koeman ends Barcelona's wait",
+      "publisher": "UEFA",
+      "date": "2017-05-10",
+      "url": "https://www.uefa.com/uefachampionsleague/news/010d-0e6a0d8638ca-890c5087dc01-1000--1991-92-koeman-ends-barcelona-s-wait/",
+      "note": "小組賽取代 8 強與 4 強、兩組成員、紅星在索菲亞 1–3、巴薩唯一敗仗在布拉格（頁面標示最後更新日期）"
+    },
+    {
+      "title": "Wembley, home away from home",
+      "publisher": "FC Barcelona",
+      "date": "2018-10-03",
+      "url": "https://www.fcbarcelona.com/en/news/876328/wembley-home-away-from-home",
+      "note": "2011 年在溫布利以 3–1 勝曼聯奪冠"
+    },
+    {
+      "title": "Barcelona's nights to remember ... and forget",
+      "publisher": "UEFA",
+      "date": "2011-05-26",
+      "url": "https://www.uefa.com/uefachampionsleague/news/0250-0c50f58e890b-c2372140505c-1000--barcelona-s-nights-to-remember-and-forget/",
+      "note": "1961 年決賽經過、巴薩是首支淘汰皇馬的球隊；1986 年四罰全失；1992 年橘色球衣、雙塔、「Go out and enjoy yourselves」"
+    },
+    {
+      "title": "1985/86: Steaua stun Barcelona",
+      "publisher": "UEFA",
+      "date": "2014-09-27",
+      "url": "https://www.uefa.com/uefachampionsleague/news/newsid=387985.html",
+      "note": "塞維亞決賽、晉級過程、杜卡達姆擋下四記點球、最大冷門之一（頁面標示最後更新日期；比賽日期依頁面時間戳 1986 年 5 月 7 日）"
+    },
+    {
+      "title": "Star names recall Barcelona's first Wembley win",
+      "publisher": "UEFA",
+      "date": "2011-05-27",
+      "url": "https://www.uefa.com/uefachampionsleague/news/01f1-0e789ba7c79e-4777c134044a-1000--star-names-recall-barcelona-s-first-wembley-win/",
+      "note": "維亞利的回憶：三次機會、抽筋被換下、在桑普多利亞的最後一場、轉會傳言"
+    },
+    {
+      "title": "Barcelona's historic 1992 European Cup opened door for dominant era",
+      "publisher": "ESPN（Sam Marsden）",
+      "date": "2017-05-19",
+      "url": "https://www.espn.com/soccer/story/_/id/37474665/barcelonas-historic-1992-european-cup-opened-door-dominant-era",
+      "note": "兩隊陣容、桑普多利亞義甲第六、薩利納斯、Juan Manuel Díaz 與雷克薩奇的話"
+    },
+    {
+      "title": "Barcelona, a 33 años de Wembley y su primera Copa de Europa",
+      "publisher": "ESPN Deportes（Jordi Blanco）",
+      "date": "2025-05-20",
+      "url": "https://espndeportes.espn.com/futbol/champions-league/nota/_/id/15207251/barcelona-campeon-copa-europa-wembley-1992-koeman",
+      "note": "第 111 分鐘、「Salid y disfrutad」的爭議、自由球未經演練與觸球順序、帕柳卡的站位、18 天後的聯賽最後一輪"
+    },
+    {
+      "title": "Wembley, 1992: Se cumplen 30 años del primer título europeo del Barcelona, el éxtasis del Dream Team",
+      "publisher": "ESPN Deportes（Jordi Blanco）",
+      "date": "2022-05-20",
+      "url": "https://espndeportes.espn.com/futbol/champions-league/nota/_/id/10399111/wembley-1992-30-anos-primer-titulo-europeo-barcelona-extasis-dream-team",
+      "note": "與 2025 年文章相同的「許多當事人否認」說法"
+    },
+    {
+      "title": "File:Twin Towers of Wembley Stadium, 2002.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Twin_Towers_of_Wembley_Stadium,_2002.jpg",
+      "note": "頭圖；原載 Flickr，標示拍攝時間 2002 年 1 月 14 日"
+    },
+    {
+      "title": "File:Ronald Koeman - Botas de Wembley.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Ronald_Koeman_-_Botas_de_Wembley.jpg",
+      "note": "科曼球鞋照片，2007 年上傳，PD-self"
+    },
+    {
+      "title": "File:Koeman FC Barcelona Botes.JPG",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Koeman_FC_Barcelona_Botes.JPG",
+      "note": "另一張標為科曼溫布利球鞋的照片，說明註明展示於巴薩博物館（本文未刊用此圖）"
+    }
+  ]
+}
