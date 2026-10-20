@@ -1,0 +1,270 @@
+{
+  "column": "fm-watch",
+  "date": "2026-10-21",
+  "status": "update",
+  "title": "FM27 Touch 確定登上 Apple Arcade",
+  "dek": "SI 宣布 FM27 Touch 11 月 10 日起登上 Apple Arcade，可接續舊存檔；這是 9 月公布平台後第一個新確認的版本。",
+  "brief": "Sports Interactive 10 月 20 日（英國日期）宣布，《足球經理 27》的 Touch 版 11 月 10 日起在 Apple Arcade 推出，可在 iPhone、iPad、Mac 與 Apple TV 上玩。官方說可以接續前作存檔、透過雲端跨裝置延續生涯，App Store 上現有的 FM26 Touch 頁面當天會自動更新成 FM27 Touch。這補上了 9 月時「其他平台之後確認」的空白；新內容只點名 iPhone 介面、招募與賽前準備三項，細節要等發售前的深度介紹，中文介面與確切上線時刻都還沒有說明。",
+  "topic_key": "fm-watch:2026-10-21-fm27-touch-apple-arcade",
+  "updated_at": "2026-10-21T05:25:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "timeline",
+    "title": "FM27 各平台已知時程",
+    "caption": "依 Sports Interactive 官網新聞與 FM27 深度介紹常見問答整理，截至台灣時間 2026 年 10 月 21 日清晨。日期以英國發布日為準。",
+    "items": [
+      {
+        "when": "2026.8.27",
+        "label": "宣布 11 月推出",
+        "note": "確切日期與平台當時未公布"
+      },
+      {
+        "when": "2026.9.22",
+        "label": "公布平台",
+        "note": "PC／Mac、Xbox Series、PS5；FM27 Mobile 只透過 Netflix；不出 Switch 與 Xbox One；其他平台「之後確認」"
+      },
+      {
+        "when": "2026.9.30",
+        "label": "公布發售日",
+        "note": "全平台數位版 11 月 10 日"
+      },
+      {
+        "when": "2026.10.19",
+        "label": "Arkema Première Ligue 授權",
+        "note": "FM27 第一個點名的新授權聯賽"
+      },
+      {
+        "when": "2026.10.20",
+        "label": "FM27 Touch 上 Apple Arcade",
+        "note": "本期新增；iPhone、iPad、Mac、Apple TV"
+      },
+      {
+        "when": "發售前 1–2 週",
+        "label": "Launch Preview",
+        "note": "限 PC／Mac 預購玩家；預購尚未開放"
+      },
+      {
+        "when": "2026.11.10",
+        "label": "全平台數位版發售；FM27 Touch 推出",
+        "note": "FM26 Touch 的 App Store 頁面當天自動更新"
+      },
+      {
+        "when": "2026.11.20",
+        "label": "實體 PS5 版發售",
+        "note": "官方 FAQ"
+      }
+    ]
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "Sports Interactive（SI）在《足球經理》（Football Manager）官網新聞頁發布〈FM27 Touch launches on Apple Arcade from November 10〉，頁面標示 2026 年 10 月 20 日（英國日期），沒有標示發布時刻；換算台灣時間，最早是 10 月 20 日 07:00 之後。文章只有四段：《足球經理 27》（以下簡稱 FM27）的 Touch 版 11 月 10 日起在 Apple 的遊戲訂閱服務 Apple Arcade 推出，可在 iPhone、iPad、Mac 與 Apple TV 上玩。這則消息沒有同步發在 Steam 公告，FM 官方 YouTube 頻道與 SEGA 新聞稿網站截至查核時也沒有相關內容。"
+    },
+    {
+      "type": "quote",
+      "text": "FM27 Touch 可在 iPhone、iPad、Mac 與 Apple TV* 上遊玩，能夠接續過去作品的存檔，並透過雲端在不同裝置之間延續你的生涯。",
+      "original": "Playable on iPhone, iPad, Mac and Apple TV*, FM27 Touch carries the ability to continue saves from past titles and progress your journey across devices using the cloud.",
+      "cite": "Sports Interactive，2026 年 10 月 20 日；本文自譯。星號註腳原文為「Visuals may vary depending on user hardware.」（畫面會因使用者硬體而不同）"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "關於新內容，官方只點名三項：iPhone 版面（iPhone Skin）、招募（Recruitment）與賽前準備（Match Preparation）的改動，並說發售前會再發深度介紹。另一句對既有玩家最實際：「From November 10, the existing FM26 Touch game page on the App Store will automatically update to FM27 Touch.」（11 月 10 日起，App Store 上現有的 FM26 Touch 遊戲頁面會自動更新為 FM27 Touch；本文自譯）。"
+    },
+    {
+      "type": "h",
+      "text": "和先前相比：補上「其他平台之後確認」的空白"
+    },
+    {
+      "type": "p",
+      "text": "9 月 22 日介面篇的常見問答列出 FM27 的平台：PC／Mac 版在 Steam、Epic Games Store 與 Xbox PC app；Console 版在 Xbox Series X／S、Xbox 掌機與 PlayStation 5；FM27 Mobile 只透過 Netflix 在 iOS 與 Android 推出；不出 Nintendo Switch 與 Xbox One 系列；「Details on further platforms will be confirmed at a later date」（其他平台細節之後確認）。FM27 Touch 是這段之後第一個新確認的平台。它和 FM27 Mobile 是兩個不同的產品：Mobile 走 Netflix，Touch 走 Apple Arcade。"
+    },
+    {
+      "type": "table",
+      "title": "FM27 各版本與平台（官方資料）",
+      "head": [
+        "版本",
+        "平台",
+        "通路",
+        "公布"
+      ],
+      "rows": [
+        [
+          "FM27（PC／Mac）",
+          "Windows、Mac、Xbox 掌機",
+          "Steam、Epic、Xbox PC app",
+          "9 月 22 日"
+        ],
+        [
+          "FM27 Console",
+          "Xbox Series X／S、Xbox 掌機、PS5",
+          "各主機商店；PS5 另有實體版（11 月 20 日）",
+          "9 月 22 日、9 月 30 日"
+        ],
+        [
+          "FM27 Mobile",
+          "iOS、Android",
+          "只透過 Netflix",
+          "9 月 22 日"
+        ],
+        [
+          "FM27 Touch",
+          "iPhone、iPad、Mac、Apple TV",
+          "Apple Arcade（沿用 FM26 Touch 的 App Store 頁面）",
+          "10 月 20 日（本期新增）"
+        ],
+        [
+          "不推出",
+          "Nintendo Switch、Xbox One／One X／One S",
+          "—",
+          "9 月 22 日"
+        ]
+      ],
+      "caption": "依 footballmanager.com 介面篇常見問答（9 月 22 日）、發售日新聞（9 月 30 日）與 FM27 Touch 新聞（10 月 20 日）整理。"
+    },
+    {
+      "type": "p",
+      "text": "和去年比，節奏相近。SEGA 在 2025 年 10 月 7 日發布〈Football Manager 26 Touch launches on Apple Arcade from 4 November〉，FM26 Touch 在 11 月 4 日、也就是 FM26 發售當天上架；新聞稿說 FM24 Touch 玩家只要更新遊戲，就能把既有生涯帶進 FM26 Touch。今年的宣布比發售早三週，同樣是發售當天上架、同樣以更新既有 App 的方式換代。不同的是，FM26 Touch 在 2025 年 12 月 4 日另有 Switch 版，而 FM27 已確認不出 Nintendo Switch；目前官方只公布 Apple Arcade 一個通路，Switch 2 等其他平台官方沒有提。"
+    },
+    {
+      "type": "h",
+      "text": "對玩家的影響：Apple 裝置多一條路，Mac 玩家有兩個版本可選"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "由此推想，影響最大的是 Apple Arcade 訂閱者與手上有 FM26 Touch 存檔的人：不必另外購買，11 月 10 日 App 更新後就能接續。Mac 玩家則會同時有兩個選擇：在 Steam 等通路買完整的 FM27（PC／Mac），或用 Apple Arcade 玩 Touch 版。兩者內容深度有什麼差別，這次官方沒有比較，本文不推測。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "對台灣讀者，查核時可見的事實有兩項。一是 Apple 台灣官網標示 Apple Arcade 每月 NT$220，或年費 NT$1,690，可與最多五位家人共享。二是 FM26 Touch 目前在台灣 App Store 上架（應用程式編號 1626267810），App Store 資料列出的 16 種介面語言不含中文。FM27 Touch 會支援哪些語言，官方沒有說。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "「頁面自動更新」也有一個沒有回答的問題：更新後還能不能繼續玩 FM26 Touch。官方只說存檔能接續，沒有說舊版是否保留；想維持 FM26 Touch 存檔原樣的玩家，11 月 10 日前可留意後續說明。"
+    },
+    {
+      "type": "h",
+      "text": "還沒確定的事"
+    },
+    {
+      "type": "list",
+      "items": [
+        "iPhone 版面、招募、賽前準備三項改動的具體內容（官方說發售前會有深度介紹）。",
+        "FM27 Touch 的介面語言是否包含中文；在台灣上架的確切時刻（FM27 主程式官方說全球同一時刻上線，部分時區可能是 11 月 11 日，Touch 版未另行說明）。",
+        "FM27 Touch 包含哪些授權與女子足球內容，是否與 FM27 主程式一致。",
+        "從 FM26 Touch 帶入存檔的條件，以及更新後是否保留 FM26 Touch。",
+        "SEGA 與 Apple 是否另發新聞稿；截至查核時兩者都還沒有相關發布。",
+        "PC／Mac 版預購、Launch Preview 日期與首次直播日期仍未公布；官方未宣布延期或取消。"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "以上都是官方宣稱，本報沒有玩過 FM27 Touch，也沒有看到這一代的實機畫面；Apple TV 等裝置上的實際表現，要等 11 月 10 日上架後才能核對。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "FM27 Touch launches on Apple Arcade from November 10",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-10-20",
+      "url": "https://www.footballmanager.com/news/fm27-touch-launches-apple-arcade-november-10",
+      "note": "全文；平台、存檔與雲端、三項改動、App Store 頁面自動更新、硬體註腳"
+    },
+    {
+      "title": "FM27: Clearer Interface, Smoother Navigation",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-09-22",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-clearer-interface-smoother-navigation",
+      "note": "常見問答「Which platforms will FM27 be available on?」"
+    },
+    {
+      "title": "Football Manager 27 launches from 10 November",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/news/football-manager-27-launches-10-november",
+      "note": "發售日、Launch Preview"
+    },
+    {
+      "title": "Arkema Première Ligue fully licensed in Football Manager 27",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-10-19",
+      "url": "https://www.footballmanager.com/news/arkema-premiere-ligue-fully-licensed-football-manager-27",
+      "note": "時間線用"
+    },
+    {
+      "title": "Football Manager 26 Touch launches on Apple Arcade from 4 November",
+      "publisher": "SEGA（sega.prezly.com）",
+      "date": "2025-10-07",
+      "url": "https://sega.prezly.com/football-manager-26-touch-launches-on-apple-arcade-from-4-november",
+      "note": "去年 FM26 Touch 上架日期、FM24 Touch 存檔延續說明"
+    },
+    {
+      "title": "Build dynasties in Football Manager 26 Touch on Apple Arcade",
+      "publisher": "Apple Newsroom",
+      "date": "2025-10-07",
+      "url": "https://www.apple.com/newsroom/2025/10/build-dynasties-in-football-manager-26-touch-on-apple-arcade/",
+      "note": "FM26 Touch 11 月 4 日回到 Apple Arcade，支援裝置"
+    },
+    {
+      "title": "Football Manager 26 Touch（App Store 台灣）",
+      "publisher": "Apple App Store",
+      "date": "2026-10-21",
+      "url": "https://apps.apple.com/tw/app/football-manager-26-touch/id1626267810",
+      "note": "台灣時間 2026-10-21 清晨查；App Store 查詢資料列 16 種語言，不含中文"
+    },
+    {
+      "title": "Apple Arcade（台灣）",
+      "publisher": "Apple",
+      "date": "2026-10-21",
+      "url": "https://www.apple.com/tw/apple-arcade/",
+      "note": "每月 NT$220、年費 NT$1,690、家人共享"
+    },
+    {
+      "title": "Football Manager 27 on Steam",
+      "publisher": "Steam",
+      "date": "2026-10-21",
+      "url": "https://store.steampowered.com/app/4530370/Football_Manager_27/",
+      "note": "台灣時間 2026-10-21 清晨查 appdetails（英國區、台灣區）：10 Nov, 2026、即將推出、無標價"
+    },
+    {
+      "title": "Football Manager 27（Xbox 商店，英國）",
+      "publisher": "Microsoft Store／Xbox",
+      "date": "2026-10-21",
+      "url": "https://www.xbox.com/en-GB/games/store/football-manager-27/9n4nkmxdzcx6",
+      "note": "台灣時間 2026-10-21 清晨查：isPreorder false"
+    },
+    {
+      "title": "Getting ready for Football Manager 27",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-08-27",
+      "url": "https://www.footballmanager.com/news/getting-ready-football-manager-27",
+      "note": "宣布 11 月推出（時間線）"
+    },
+    {
+      "title": "FM27: Elevated Match Day Atmosphere",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-elevated-match-day-atmosphere",
+      "note": "常見問答：實體 PS5 版 11 月 20 日、Launch Preview 限 PC／Mac 預購"
+    },
+    {
+      "title": "FM27: Tactical Tweaks and Match Engine Upgrades",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-10-05",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-tactical-tweaks-and-match-engine-upgrades",
+      "note": "常見問答：全球同步上線、部分時區為 11 月 11 日"
+    },
+    {
+      "title": "Football Manager 26 Touch Nintendo Switch release",
+      "publisher": "SEGA",
+      "date": "2025-09-11",
+      "url": "https://sega.co.jp/en/release/250911_2.html",
+      "note": "FM26 Touch Switch 版 2025 年 12 月 4 日"
+    }
+  ]
+}
