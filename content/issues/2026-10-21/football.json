@@ -1,120 +1,121 @@
 {
   "column": "football",
   "date": "2026-10-21",
-  "title": "巴薩戰巴黎先發出爐，羅德里坐板凳",
-  "dek": "巴薩今天凌晨 03:00 作客巴黎，弗利克讓貝納爾頂替羅德里，二隊的 Xavi Espart 進後衛線。本稿寫於開賽前，結果待更新。",
-  "brief": "巴薩台灣時間今天（10 月 21 日）凌晨 03:00 在巴黎踢歐冠，本稿寫成時比賽尚未開始，結果待後續版本更新。弗利克把羅德里放在板凳，由貝納爾先發，後衛線由右至左是二隊的 Xavi Espart、庫巴西、Gerard Martín 與坎塞洛；巴黎缺努諾・門德斯，由盧卡斯・埃爾南德斯踢左後衛。同一晚較早開踢的兩場，多特蒙德靠吉拉西兩球 2 比 1 贏 Sabah，費內巴切被斯拉維亞在第 90 分鐘扳成 2 比 2。",
+  "title": "巴薩兩度扳平仍 2 比 4 負巴黎，本季首敗",
+  "dek": "Xavi Espart 與亞馬爾兩度扳平，巴黎在最後 9 分鐘靠維蒂尼亞與法比安・魯伊斯連進兩球；奧爾莫上半場傷退。",
+  "brief": "巴薩台灣時間今天（10 月 21 日）凌晨在王子公園球場以 2 比 4 輸給巴黎聖日耳曼，本季各項賽事前 11 戰全勝的紀錄到此為止。Xavi Espart 與亞馬爾先後把比分扳成 1 比 1、2 比 2，但維蒂尼亞第 81 分鐘、法比安・魯伊斯第 86 分鐘連進兩球，奧爾莫則在第 27 分鐘傷退。巴薩以 6 分暫列歐冠聯賽階段第 5，下一場是台灣時間 10 月 26 日（週一）04:00 主場迎戰皇馬的國家德比。",
   "topic_key": "football:2026-10-21",
-  "updated_at": "2026-10-21T02:52:00+08:00",
+  "updated_at": "2026-10-21T05:31:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
     "kind": "photo",
-    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Pau_Cubarsi_France_v_Spain_7.24.26-042.jpg/1280px-Pau_Cubarsi_France_v_Spain_7.24.26-042.jpg",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Lamine_Yamal_France_v_Spain_7.24.26-057.jpg/1280px-Lamine_Yamal_France_v_Spain_7.24.26-057.jpg",
     "width": 1280,
     "height": 853,
-    "alt": "西班牙中衛庫巴西在 2026 年世界盃法國對西班牙的比賽中，於球場上的身影。",
-    "caption": "庫巴西（Pau Cubarsí）在 2026 年世界盃法國對西班牙一役，攝於 2026 年 7 月 14 日。資料照片，非當日比賽畫面；Eric García、孔德與克里斯滕森都缺陣，ESPN 賽前指他是唯一確定可上場的中衛。",
-    "credit": "Bryan Berlin／WikiPortraits／Wikimedia Commons",
+    "alt": "西班牙邊鋒亞馬爾在 2026 年世界盃法國對西班牙的比賽中，於球場上的身影。",
+    "caption": "亞馬爾（Lamine Yamal）在 2026 年世界盃法國對西班牙一役，攝於 2026 年 7 月 14 日，美國阿靈頓 AT&T 球場。資料照片，非當日比賽畫面；他在巴黎一戰第 79 分鐘把比分扳成 2 比 2。",
+    "credit": "Bryan Berlin／Wikimedia Commons",
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Pau_Cubarsi_France_v_Spain_7.24.26-042.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lamine_Yamal_France_v_Spain_7.24.26-057.jpg",
     "made": "2026"
   },
   "body": [
     {
       "type": "p",
-      "text": "巴薩與巴黎聖日耳曼（Paris Saint-Germain）的歐冠聯賽階段第 3 輪，在台灣時間今天（10 月 21 日，週三）凌晨 03:00 於王子公園球場（Parc des Princes）開球。**本稿寫於台灣時間 10 月 21 日 02:45，比賽尚未開始，比分與賽後說法將在後續版本更新；若你讀到的仍是這一版，代表結果還沒補進來。**"
-    },
-    {
-      "type": "p",
-      "tag": "官方說法",
-      "text": "賽前公布的先發名單裡，總教練弗利克（Hansi Flick）把羅德里（Rodri）留在板凳，由貝納爾（Marc Bernal）先發；缺了三名中衛的後防，由右至左是二隊的 Xavi Espart、庫巴西（Pau Cubarsí）、Gerard Martín 與坎塞洛（João Cancelo）。"
+      "text": "巴薩本季各項賽事 11 連勝到此為止。台灣時間今天（10 月 21 日，週三）凌晨 03:00 開踢的歐冠聯賽階段第 3 輪，巴薩作客王子公園球場（Parc des Princes），以 2 比 4 輸給衛冕冠軍巴黎聖日耳曼（Paris Saint-Germain）。巴薩兩度落後、兩度扳平，比分在第 79 分鐘還是 2 比 2，最後 9 分鐘卻連丟兩球。比分經 UEFA 比賽資料與 ESPN 比賽紀錄核對一致，巴薩官網賽後報導也是 4 比 2。"
     },
     {
       "type": "h",
-      "text": "巴薩：貝納爾頂替羅德里，Gerard Martín 列先發"
+      "text": "巴薩：兩度追平，最後 9 分鐘失守"
     },
     {
       "type": "p",
-      "tag": "官方說法",
-      "text": "歐洲足總（UEFA）比賽資料與 ESPN 比賽頁列出的巴薩先發完全一致：Joan García；Xavi Espart、庫巴西、Gerard Martín、坎塞洛；貝納爾、佩德里（Pedri）、奧爾莫（Dani Olmo）；亞馬爾（Lamine Yamal）、拉菲尼亞（Raphinha）、戈登（Anthony Gordon）。"
+      "text": "巴黎先開紀錄。第 38 分鐘，杜埃（Désiré Doué）在禁區外右腳低射左下角，ESPN 記錄是若昂・內維斯（João Neves）頭球做球；巴薩官網說，這球起因是巴薩一次傳球失誤讓巴黎搶回球權。下半場第 55 分鐘，二隊上來的右後衛 Xavi Espart 插上，接替補上場的費爾明（Fermín López）直塞，在禁區中路右腳射進右下角，1 比 1。",
+      "tag": "報導"
     },
     {
       "type": "p",
-      "tag": "官方說法",
-      "text": "板凳上有羅德里、德容（Frenkie de Jong）、加維（Gavi）、費爾明（Fermín López）、熱蘇斯（Gabriel Jesus）、巴爾德（Alejandro Balde）與首度入選一線隊的 Àlex Campos。UEFA 資料顯示主裁判是英格蘭的奧利佛（Michael Oliver），巴薩官網比賽頁也列同一人。"
+      "text": "第 72 分鐘，盧卡斯・埃爾南德斯（Lucas Hernández）在角球後接杜埃傳中頭球破門，巴黎再度領先。7 分鐘後，亞馬爾（Lamine Yamal）從右側小角度左腳射進右上角，2 比 2；巴薩官網形容這球是趁巴黎防守失誤衝進禁區。追平只維持了兩分鐘：維蒂尼亞（Vitinha）第 81 分鐘在禁區外右腳低射右下角，法比安・魯伊斯（Fabián Ruiz）第 86 分鐘接阿什拉夫（Achraf Hakimi）傳球近距離左腳射進。UEFA 與 ESPN 都記魯伊斯的進球在第 86 分鐘，巴薩官網寫第 87 分鐘。",
+      "tag": "報導"
     },
     {
       "type": "p",
-      "tag": "報導",
-      "text": "UEFA 賽前公布的戰術站位，把 Xavi Espart 排在右後衛、坎塞洛排在左後衛，庫巴西與 Gerard Martín 搭檔中衛；ESPN 標的陣型是 4-2-3-1。可以確定的是，上一期提到 ESPN 認為出賽仍有小疑問的 Gerard Martín 在先發名單上；Europa Press 10 月 19 日曾記錄弗利克說他能先發。Xavi Espart 與 Àlex Campos 一樣在 10 月 19 日的 23 人名單中。"
-    },
-    {
-      "type": "p",
-      "tag": "報導",
-      "text": "羅德里為什麼沒先發，俱樂部沒有說明。Goal 西班牙文版 10 月 20 日引述《每日體育報》（Sport）說，羅德里坐板凳不是因為重傷，而是弗利克想讓他為週日的國家德比做準備；此前也有報導說他身體疲勞。這是媒體轉述，不是官方說法。"
+      "text": "ESPN 的比賽數據顯示，巴薩控球 52.8%、射門 18 次，射正只有 5 次；巴黎射門 22 次，射正 15 次。巴薩門將 Joan García 有 10 次撲救，巴黎的 Safonov 有 3 次。全場唯一的黃牌是坎塞洛（João Cancelo）第 17 分鐘犯規所得，沒有紅牌。巴黎的克瓦拉茨赫利亞（Khvicha Kvaratskhelia）開賽兩分鐘就擊中門柱，今夏轉投巴黎的前巴薩前鋒 Ferran Torres 下半場也打中過門柱。",
+      "tag": "報導"
     },
     {
       "type": "table",
-      "title": "巴黎聖日耳曼對巴薩先發名單",
+      "title": "巴黎聖日耳曼 4 比 2 巴薩：進球與數據",
       "head": [
-        "位置",
+        "項目",
         "巴黎聖日耳曼",
         "巴薩"
       ],
       "rows": [
         [
-          "門將",
-          "Safonov",
-          "Joan García"
+          "進球",
+          "杜埃 38'、盧卡斯・埃爾南德斯 72'、維蒂尼亞 81'、法比安・魯伊斯 86'",
+          "Xavi Espart 55'、亞馬爾 79'"
         ],
         [
-          "後衛",
-          "阿什拉夫（Achraf Hakimi）、馬基尼奧斯（Marquinhos）、帕喬（Willian Pacho）、盧卡斯・埃爾南德斯（Lucas Hernández）",
-          "Xavi Espart、庫巴西、Gerard Martín、坎塞洛"
+          "助攻",
+          "若昂・內維斯、杜埃、阿什拉夫",
+          "費爾明"
         ],
         [
-          "中場",
-          "維蒂尼亞（Vitinha）、法比安・魯伊斯（Fabián Ruiz）、若昂・內維斯（João Neves）",
-          "貝納爾、佩德里、奧爾莫"
+          "射門（射正）",
+          "22（15）",
+          "18（5）"
         ],
         [
-          "前場",
-          "登貝萊（Ousmane Dembélé）、杜埃（Désiré Doué）、克瓦拉茨赫利亞（Khvicha Kvaratskhelia）",
-          "亞馬爾、拉菲尼亞、戈登"
+          "控球率",
+          "47.2%",
+          "52.8%"
         ],
         [
-          "總教練",
-          "恩里克（Luis Enrique）",
-          "弗利克"
+          "撲救",
+          "3",
+          "10"
+        ],
+        [
+          "黃牌",
+          "0",
+          "1（坎塞洛 17'）"
+        ],
+        [
+          "傷退換人",
+          "登貝萊 20'、馬基尼奧斯 59'、克瓦拉茨赫利亞 59'",
+          "奧爾莫 27'"
         ]
       ],
-      "caption": "依 UEFA 比賽資料與 ESPN 比賽頁，兩者一致；台灣時間 10 月 21 日 02:40 查閱。後衛依 UEFA 賽前戰術站位由右至左排列。ESPN 標示巴黎 4-3-3、巴薩 4-2-3-1。"
+      "caption": "進球者與時間依 UEFA 比賽資料與 ESPN 比賽紀錄，兩者一致（魯伊斯一球巴薩官網記為第 87 分鐘）；助攻、射門、控球、撲救、黃牌與換人原因依 ESPN 比賽紀錄。"
     },
     {
-      "type": "h",
-      "text": "巴黎：盧卡斯・埃爾南德斯踢左後衛，前巴薩前鋒 Ferran Torres 坐板凳"
+      "type": "p",
+      "text": "傷情是另一個壞消息。奧爾莫（Dani Olmo）上半場與維蒂尼亞拼搶後受傷，第 27 分鐘由費爾明換下；巴薩官網只寫他被迫傷退（「forced off injured」），這一場是他代表巴薩出賽第 100 場；本版截稿前俱樂部還沒發布醫療報告，傷勢與能否踢國家德比都還不知道。巴黎同樣傷兵累累：金球獎得主登貝萊（Ousmane Dembélé）第 20 分鐘傷退，由 Ferran Torres 替補，Goal 描述他衝刺時突然停下、按住左大腿；馬基尼奧斯（Marquinhos）與克瓦拉茨赫利亞第 59 分鐘也都因傷被換下。",
+      "tag": "報導"
+    },
+    {
+      "type": "p",
+      "text": "弗利克（Hansi Flick）這場把羅德里（Rodri）放在板凳，由貝納爾（Marc Bernal）先發；第 60 分鐘一口氣換上羅德里、加維（Gavi）與阿德耶米（Karim Adeyemi），換下貝納爾、佩德里（Pedri）與拉菲尼亞（Raphinha）。弗利克開賽前接受西班牙電視台 Movistar 訪問時解釋了這個決定。據 Goal 英文版轉述《世界體育報》（Mundo Deportivo）的報導，他說「Rodri played the last three matches in full, and that is why we decided to give him a rest」（羅德里前三場都踢滿全場，所以我們決定讓他休息；英譯為 Goal 所作，本文自譯），並說原因不是身體有問題。Goal 西班牙文版另引《每日體育報》（Sport）說，這也是為西班牙時間週日的國家德比做準備。後衛線缺了 Eric García、孔德（Jules Koundé）與克里斯滕森（Andreas Christensen），由右至左是 Xavi Espart、庫巴西（Pau Cubarsí）、Gerard Martín 與坎塞洛，Espart 第 74 分鐘由巴爾德（Alejandro Balde）換下。",
+      "tag": "報導"
+    },
+    {
+      "type": "p",
+      "text": "本版截稿時（台灣時間 10 月 21 日 05:31），還讀不到弗利克的賽後說法，巴薩官網的賽後報導也沒有引述他。官網認為這個比分「harsh on a Barça side」（對巴薩不公平；本文自譯），並寫道：「The unbeaten record may be gone, but the season is still young」（不敗紀錄或許沒了，但賽季還早；本文自譯）。",
+      "tag": "官方說法"
     },
     {
       "type": "p",
       "tag": "報導",
-      "text": "左後衛努諾・門德斯（Nuno Mendes）因大腿傷缺陣，恩里克選了盧卡斯・埃爾南德斯。Goal 西班牙文版寫，恩里克出乎外界預測，捨貝拉爾多（Lucas Beraldo）與札伊爾－艾默里（Warren Zaïre-Emery），改用盧卡斯・埃爾南德斯，由他負責擋住亞馬爾。"
+      "text": "巴黎中場維蒂尼亞 10 月 19 日（巴黎時間）受訪時說過「No tengo miedo a Yamal」（我不怕亞馬爾；Infobae 文字直播記錄，本文自譯），這一晚他攻進了決定比賽的第三球。"
     },
     {
       "type": "p",
-      "tag": "報導",
-      "text": "札伊爾－艾默里、貝拉爾多、迪涅（Lucas Digne）、上一期列為存疑的 Mayulu，以及今夏離開巴薩的 Ferran Torres 都在板凳上。巴黎中場維蒂尼亞 10 月 19 日（巴黎時間）受訪時說：「No tengo miedo a Yamal」（我不怕亞馬爾；Infobae 文字直播記錄，本文自譯），又說亞馬爾是世界上最好的球員之一。"
-    },
-    {
-      "type": "p",
-      "tag": "官方說法",
-      "text": "巴薩官網的賽前分析指出，2017 年之後兩隊三度在歐冠交鋒，都是巴黎勝出：2021 年十六強與 2024 年八強都是巴黎晉級，巴薩兩次都在主場 1 比 4 落敗；最近一次是上季聯賽階段，那一場 Ferran Torres 當時還穿巴薩球衣，早早先進球，Mayulu 與貢薩洛・拉莫斯（Gonçalo Ramos）再進球逆轉，巴黎連續第三次在巴塞隆納贏球。"
-    },
-    {
-      "type": "p",
-      "tag": "官方說法",
-      "text": "巴黎法甲開季兩和一負，之後全勝，本季十場只有一場零失球；巴薩則是本季各項賽事 11 戰全勝。官網把這場稱為「本季到目前為止最大的考驗」（本文自譯）。"
+      "text": "依 ESPN 的歐冠積分榜，巴黎三戰全勝、9 分居首，利物浦同樣 9 分排第二；巴薩 6 分暫列第 5，其餘球隊要到台灣時間 10 月 22 日（週四）凌晨才踢第 3 輪。巴薩官網提到，自 2017 年巴薩在主場 6 比 1 逆轉巴黎之後，巴黎在這組對戰裡又多添一勝。",
+      "tag": "報導"
     },
     {
       "type": "h",
@@ -122,58 +123,72 @@
     },
     {
       "type": "p",
-      "tag": "官方說法",
-      "text": "一線隊開賽前，巴薩 U19 在歐洲青年聯賽作客巴黎 1 比 1 打平。官網記錄，上半場 0 比 0，巴黎的 Niakate 在第 61 分鐘趁巴薩後場出球失誤破門；替補上場的 Nuhu Fofana 第 73 分鐘在禁區被 Mfutila 絆倒，Pedro Rodríguez 第 74 分鐘罰進 12 碼球。Adri Guerrero 第 89 分鐘差一點攻進致勝球。"
+      "text": "一線隊開賽前，巴薩 U19 在歐洲青年聯賽作客巴黎 1 比 1 打平。官網記錄，巴黎的 Niakate 第 61 分鐘趁巴薩後場出球失誤破門，Pedro Rodríguez 第 74 分鐘罰進 12 碼球扳平。",
+      "tag": "官方說法"
     },
     {
       "type": "p",
-      "tag": "傳聞",
-      "text": "ESPN 10 月 20 日的轉會快訊整理了兩則與巴薩有關的消息：英國網站 TEAMtalk 說巴薩與拜仁正在考察阿斯頓維拉 21 歲的攻擊中場 Manzambi，他今夏以約 6,000 萬英鎊從弗萊堡（SC Freiburg）加盟，英超四場兩球兩助攻；土耳其記者 Ekrem Konur 則說利物浦與拜仁對 Gerard Martín 有興趣。兩則都沒有俱樂部證實。"
+      "text": "ESPN 10 月 20 日的轉會快訊整理了兩則與巴薩有關的消息：英國網站 TEAMtalk 說巴薩與拜仁正在考察阿斯頓維拉 21 歲的攻擊中場 Manzambi；記者 Ekrem Konur 則說利物浦與拜仁對 Gerard Martín 有興趣。兩則都沒有俱樂部證實。",
+      "tag": "傳聞"
     },
     {
       "type": "news",
       "title": "歐洲足壇速覽",
       "items": [
         {
-          "headline": "多特蒙德 2 比 1 勝 Sabah，吉拉西梅開二度",
-          "summary": "歐冠第 3 輪較早開踢的一場（台灣時間今天凌晨 00:45 開球），多特蒙德（Borussia Dortmund）在巴庫作客亞塞拜然的 Sabah。吉拉西（Serhou Guirassy）第 10 分鐘先進球，Sabah 的 Aden McCarthy 第 39 分鐘頭球扳平，吉拉西第 53 分鐘接 Veerman 傳中再進。比分經 UEFA 與 ESPN 核對一致。",
-          "source": "UEFA、ESPN",
+          "headline": "利物浦落後兩球逆轉比利亞雷亞爾 4 比 3，租借自巴薩的阿勞霍頭球扳平",
+          "summary": "同樣在台灣時間今天凌晨，利物浦（Liverpool）開賽 29 分鐘就被比利亞雷亞爾（Villarreal）的 Mikautadze 與 Sergi Cardona 攻進兩球。麥卡利斯特（Alexis Mac Allister）頭球追回一球，ESPN 刊出的 PA 賽報稱為「the on-loan Barcelona defender」（租借中的巴薩後衛；本文自譯）的阿勞霍（Ronald Araújo）在上半場補時頭球扳平；麥卡利斯特與維爾茨（Florian Wirtz）下半場再進，Oluwaseyi 第 87 分鐘為比利亞雷亞爾追回一球。18 歲的 Ngumoha 助攻兩球，利物浦三戰全勝。比分經 UEFA 與 ESPN 核對一致。",
+          "source": "ESPN（PA）、UEFA",
+          "url": "https://www.espn.com/soccer/report/_/gameId/401915397",
+          "when": "10 月 20 日（當地時間）"
+        },
+        {
+          "headline": "福登帽子戲法，曼城 5 比 1 勝 AEK",
+          "summary": "據 ESPN 刊出的 PA 賽報，曼城（Manchester City）讓傷情虛驚後的哈蘭德（Erling Haaland）全場留在板凳，主場 5 比 1 大勝雅典 AEK（AEK Athens）。福登（Phil Foden）第 34、65、76 分鐘獨進三球，Elliot Anderson 與謝奇（Rayan Cherki）各進一球，AEK 的進球來自 Pilios。比分經 UEFA 與 ESPN 核對一致。",
+          "source": "ESPN（PA）、UEFA",
+          "url": "https://www.espn.com/soccer/report/_/gameId/401915401",
+          "when": "10 月 20 日（當地時間）"
+        },
+        {
+          "headline": "馬競少一人，在斯圖加特 1 比 1 逼和",
+          "summary": "斯圖加特（VfB Stuttgart）的 Leweling 第 36 分鐘先進球，阿爾瓦雷斯（Julián Álvarez）下半場開賽兩分鐘就扳平。馬德里競技（Atlético Madrid）中場 Hjulmand 第 64 分鐘被紅牌罰下，馬競少一人守住 1 分。比分經 UEFA 與 ESPN 核對一致。",
+          "source": "ESPN、UEFA",
+          "url": "https://www.espn.com/soccer/match/_/gameId/401915392",
+          "when": "10 月 20 日（當地時間）"
+        },
+        {
+          "headline": "拿坡里 4 比 3 險勝博德閃耀，羅馬、PSV 也贏球",
+          "summary": "拿坡里（Napoli）主場對博德閃耀（Bodø/Glimt）兩度被扳平，麥托米奈（Scott McTominay）梅開二度，第 88 分鐘還有一記對方烏龍球，最後 4 比 3 收下。同一時段，羅馬（AS Roma）4 比 0 勝布拉提斯拉瓦斯洛萬（Slovan Bratislava），PSV 靠 Guus Til 第 57 分鐘的進球 1 比 0 客勝波圖（FC Porto）。比分經 UEFA 與 ESPN 核對一致。",
+          "source": "ESPN、UEFA",
+          "url": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261020",
+          "when": "10 月 20 日（當地時間）"
+        },
+        {
+          "headline": "較早兩場：多特蒙德 2 比 1 勝 Sabah，費內巴切 2 比 2 斯拉維亞",
+          "summary": "台灣時間今天凌晨 00:45 開踢的兩場，多特蒙德（Borussia Dortmund）在巴庫靠吉拉西（Serhou Guirassy）兩球 2 比 1 贏亞塞拜然的 Sabah；費內巴切（Fenerbahçe）開賽 11 分鐘就領先兩球，被斯拉維亞布拉格（Slavia Praha）在第 90 分鐘追成 2 比 2。比分經 UEFA 與 ESPN 核對一致。",
+          "source": "ESPN、UEFA",
           "url": "https://www.espn.com/soccer/match/_/gameId/401915404",
           "when": "10 月 20 日（當地時間）"
         },
         {
-          "headline": "費內巴切兩球領先，被斯拉維亞布拉格追成 2 比 2",
-          "summary": "同時段在伊斯坦堡，費內巴切（Fenerbahçe）開賽 11 分鐘就靠 Oğuz Aydın 與格林伍德（Mason Greenwood）領先兩球；斯拉維亞布拉格（Slavia Praha）的 Provod 第 15 分鐘追回一球，Kačor 第 90 分鐘扳平。費內巴切上一輪才在客場 0 比 6 輸給阿斯頓維拉。比分經 UEFA 與 ESPN 核對一致。",
-          "source": "UEFA、ESPN",
-          "url": "https://www.espn.com/soccer/match/_/gameId/401915403",
-          "when": "10 月 20 日（當地時間）"
-        },
-        {
           "headline": "拜仁總教練孔帕尼感染病毒，對兵工廠可能缺席",
-          "summary": "據 ESPN 刊出的美聯社稿，助理教練 Aaron Danks 10 月 20 日代為出席賽前記者會，說孔帕尼（Vincent Kompany）的病毒感染影響到雙腿，可能還要兩三天才能恢復，Danks 說他也不確定。拜仁台灣時間 10 月 22 日（週四）03:00 在主場迎戰兵工廠；諾伊爾（Manuel Neuer）已恢復訓練但仍存疑，基米希（Joshua Kimmich）因私人原因缺席當天活動。",
+          "summary": "據 ESPN 刊出的美聯社稿，助理教練 Aaron Danks 10 月 20 日代為出席賽前記者會，說孔帕尼（Vincent Kompany）的病毒感染影響到雙腿，可能還要兩三天才能恢復。拜仁台灣時間 10 月 22 日（週四）03:00 主場迎戰兵工廠。",
           "source": "ESPN（美聯社）",
           "url": "https://www.espn.com/soccer/story/_/id/50229492/bayern-munich-vincent-kompany-arsenal-champions-league",
           "when": "10 月 20 日"
         },
         {
           "headline": "穆里尼奧：皇馬沒有「不可動搖」的球員",
-          "summary": "西甲禁賽四場的維尼修斯（Vinícius Júnior）只能踢歐戰，預計台灣時間 10 月 22 日（週四）03:00 對萊比錫回到先發。穆里尼奧（José Mourinho）10 月 20 日說「Only the badge is untouchable」（只有隊徽不可動搖；ESPN 記錄，本文自譯），又說皇馬本季歐冠的目標是先晉級淘汰賽，不是奪冠。",
+          "summary": "西甲禁賽四場的維尼修斯（Vinícius Júnior）只能踢歐戰，預計台灣時間 10 月 22 日（週四）03:00 對萊比錫回到先發。穆里尼奧（José Mourinho）10 月 20 日說「Only the badge is untouchable」（只有隊徽不可動搖；ESPN 記錄，本文自譯）。",
           "source": "ESPN",
           "url": "https://www.espn.com/soccer/story/_/id/50227042/mourinho-vinicius-no-player-untouchable-real-madrid",
           "when": "10 月 20 日"
         },
         {
-          "headline": "法布雷加斯拒答是否接掌曼聯，曼聯八人缺席訓練",
-          "summary": "科莫（Como）總教練、前巴薩中場法布雷加斯（Cesc Fàbregas）10 月 20 日被問到會不會接替連續六場不勝的卡里克（Michael Carrick），回答這個問題「不太禮貌」，拒絕作答。曼聯同日有利桑德羅・馬丁內斯（Lisandro Martínez）、拉什福德（Marcus Rashford）等八人缺席訓練，Yoro 停賽。兩隊台灣時間 10 月 22 日（週四）00:45 交手。",
+          "headline": "法布雷加斯拒答是否接掌曼聯",
+          "summary": "科莫（Como）總教練、前巴薩中場法布雷加斯（Cesc Fàbregas）10 月 20 日被問到會不會接替連續六場不勝的卡里克（Michael Carrick），他說這種說法對卡里克「doesn't show enough respect」（不夠尊重；ESPN 記錄，本文自譯）。曼聯同日有利桑德羅・馬丁內斯（Lisandro Martínez）、拉什福德（Marcus Rashford）等八人缺席訓練。兩隊台灣時間 10 月 22 日（週四）00:45 交手。",
           "source": "ESPN、ESPN（PA）",
           "url": "https://www.espn.com/soccer/story/_/id/50228936/cesc-fabregas-calls-suggestions-replace-michael-carrick-man-united-disrespectful",
-          "when": "10 月 20 日"
-        },
-        {
-          "headline": "英超裁判主管韋伯：VAR 不介入博特曼鏟球是對的",
-          "summary": "據 ESPN 刊出的 PA 稿，英超裁判機構主管韋伯（Howard Webb）在 Sky Sports 的《Match Officials Mic'd Up》節目上說，紐卡索的博特曼（Sven Botman）週末鏟倒阿斯頓維拉的傑克森（Nicolas Jackson）只吃黃牌，主裁判判黃或判紅，VAR 都會維持原判，因為沒有明顯的鞋釘接觸。傑克森賽後說那一腳「差點踢斷我的腿」。",
-          "source": "ESPN（PA）",
-          "url": "https://www.espn.com/soccer/story/_/id/50230051/newcastle-aston-villa-botman-jackson-tackle-var-webb",
           "when": "10 月 20 日"
         }
       ]
@@ -184,30 +199,23 @@
     },
     {
       "type": "p",
-      "text": "巴黎這一戰的比分、進球與弗利克賽後說法，會在本稿後續版本補上。巴薩下一場是西甲國家德比，台灣時間 10 月 26 日（週一）04:00 在 Spotify 諾坎普迎戰皇馬，賽前巴薩領先皇馬 6 分；皇馬在那之前先於 10 月 22 日（週四）03:00 在歐冠主場對萊比錫。國家德比之後，巴薩 11 月 1 日（週日）04:00 主場對阿拉維斯（Alavés），11 月 4 日（週三）04:00 歐冠主場迎戰阿斯頓維拉（Aston Villa）。歐洲 10 月 25 日凌晨改回冬令時間，之後台灣比西班牙快 7 小時。"
+      "text": "巴薩下一場是西甲國家德比，台灣時間 10 月 26 日（週一）04:00 在 Spotify 諾坎普迎戰皇馬，目前巴薩在西甲領先皇馬 6 分。皇馬在那之前先踢歐冠：台灣時間明天（10 月 22 日，週四）03:00 主場對萊比錫，維尼修斯預計回到先發。奧爾莫的傷勢報告、弗利克會不會讓羅德里回到先發，是這幾天要看的事。國家德比之後，巴薩 11 月 1 日（週日）04:00 主場對阿拉維斯（Alavés），11 月 4 日（週三）04:00 歐冠主場迎戰阿斯頓維拉（Aston Villa）。歐洲 10 月 25 日凌晨改回冬令時間，之後台灣比西班牙快 7 小時。"
     }
   ],
   "sources": [
     {
-      "title": "Paris vs Barcelona（比賽資料：先發、主裁判）",
+      "title": "Paris vs Barcelona（比賽資料：比分、進球者）",
       "publisher": "UEFA",
       "date": "2026-10-20",
       "url": "https://www.uefa.com/uefachampionsleague/match/2049589--paris-vs-barcelona/",
-      "note": "先發名單與主裁判，台灣時間 10 月 21 日 02:40 查閱"
-    },
-    {
-      "title": "Paris vs Barcelona lineups（UEFA 比賽資料介面）",
-      "publisher": "UEFA",
-      "date": "2026-10-20",
-      "url": "https://match.uefa.com/v5/matches/2049589/lineups",
-      "note": "賽前戰術站位：Espart 右後衛、坎塞洛左後衛"
+      "note": "終場比分 4 比 2 與進球者、時間，台灣時間 10 月 21 日 05:31 查閱"
     },
     {
       "title": "Paris Saint-Germain vs. Barcelona",
       "publisher": "ESPN",
       "date": "2026-10-20",
       "url": "https://www.espn.com/soccer/match/_/gameId/401915399",
-      "note": "先發、板凳、陣型、開賽狀態"
+      "note": "先發、換人、比分"
     },
     {
       "title": "PSG v FC Barcelona（Match Centre）",
@@ -238,25 +246,11 @@
       "note": "先發名單、維蒂尼亞談話"
     },
     {
-      "title": "Hansi Flick: \"El PSG es una buena prueba para ver dónde estamos\"",
-      "publisher": "Infobae（Europa Press）",
-      "date": "2026-10-19",
-      "url": "https://www.infobae.com/america/agencias/2026/10/19/hansi-flick-el-psg-es-una-buena-prueba-para-ver-donde-estamos/",
-      "note": "弗利克說 Gerard Martín 能先發"
-    },
-    {
-      "title": "PSG match a test to show what Barcelona can do - Hansi Flick",
-      "publisher": "ESPN",
-      "date": "2026-10-19",
-      "url": "https://www.espn.com/soccer/story/_/id/50219369/psg-match-test-barcelona-streak-hansi-flick",
-      "note": "Gerard Martín 出賽存疑"
-    },
-    {
-      "title": "FC Barcelona squad for the trip to PSG",
-      "publisher": "FC Barcelona",
-      "date": "2026-10-19",
-      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4594106/fc-barcelona-squad-for-the-trip-to-psg",
-      "note": "23 人名單（Xavi Espart、Àlex Campos）"
+      "title": "Real Madrid behind the decision: Flick reveals the secret of leaving out Rodri against Saint-Germain",
+      "publisher": "Goal",
+      "date": "2026-10-20",
+      "url": "https://www.goal.com/en/news/real-madrid-behind-the-decision-flick-reveals-the-secret-of-leaving-out-rodri-against-saint-germain/blt1edb5d3e94463270",
+      "note": "弗利克賽前對 Movistar 談羅德里輪休（轉述《世界體育報》）"
     },
     {
       "title": "PSG 1-1 FC Barcelona U19: Hard fought point",
@@ -300,13 +294,6 @@
       "note": "比分核對"
     },
     {
-      "title": "Aston Villa run riot with 6-0 thrashing of Fenerbahce",
-      "publisher": "ESPN",
-      "date": "2026-10-14",
-      "url": "https://www.espn.com/soccer/report/_/gameId/401915409",
-      "note": "費內巴切上一輪賽果"
-    },
-    {
       "title": "Bayern Munich coach Vincent Kompany doubtful for Arsenal game due to virus",
       "publisher": "ESPN（AP）",
       "date": "2026-10-20",
@@ -331,17 +318,11 @@
       "url": "https://www.espn.com/soccer/story/_/id/50227260/lisandro-martinez-marcus-rashford-training-man-united-como-champions-league"
     },
     {
-      "title": "Referees' boss Webb backs VAR over Newcastle's Botman challenge on Villa's Jackson",
-      "publisher": "ESPN（PA）",
-      "date": "2026-10-20",
-      "url": "https://www.espn.com/soccer/story/_/id/50230051/newcastle-aston-villa-botman-jackson-tackle-var-webb"
-    },
-    {
       "title": "UEFA Champions League scoreboard（10 月 20 日）",
       "publisher": "ESPN",
       "date": "2026-10-21",
       "url": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261020",
-      "note": "開球時間與賽況（查閱日期）"
+      "note": "10 月 20 日九場賽果（查閱日期）"
     },
     {
       "title": "UEFA Champions League scoreboard（10 月 21 日）",
@@ -358,10 +339,129 @@
       "note": "接下來的賽程（查閱日期）"
     },
     {
-      "title": "Pau Cubarsi France v Spain 7.24.26-042",
+      "title": "París Saint-Germain 4-2 FC Barcelona: First defeat",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-20",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4596285/paris-saint-germain-4-2-fc-barcelona-first-defeat",
+      "note": "賽後報導：奧爾莫傷退、門柱、魯伊斯第 87 分鐘、官網結論"
+    },
+    {
+      "title": "Paris Saint-Germain vs. Barcelona（比賽紀錄 API）",
+      "publisher": "ESPN",
+      "date": "2026-10-20",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary?event=401915399",
+      "note": "進球、助攻、黃牌、傷退換人、射門、控球、撲救"
+    },
+    {
+      "title": "Paris vs Barcelona（UEFA 比賽資料介面）",
+      "publisher": "UEFA",
+      "date": "2026-10-20",
+      "url": "https://match.uefa.com/v5/matches/2049589",
+      "note": "終場比分與進球時間核對"
+    },
+    {
+      "title": "Triple injury shock in Champions League blockbuster: two PSG forwards and Dani Olmo forced off",
+      "publisher": "Goal",
+      "date": "2026-10-20",
+      "url": "https://www.goal.com/en/news/triple-injury-shock-in-champions-league-blockbuster-two-psg-forwards-and-dani-olmo-forced-off/bltac58c71791792bfe",
+      "note": "登貝萊、克瓦拉茨赫利亞、奧爾莫傷退經過"
+    },
+    {
+      "title": "La supremacía europea sigue siendo del PSG: los parisinos apagan a un titánico FC Barcelona que rozó los puntos en el Parque de los Príncipes",
+      "publisher": "Infobae",
+      "date": "2026-10-20",
+      "url": "https://www.infobae.com/espana/deportes/2026/10/20/la-supremacia-europea-sigue-siendo-del-psg-los-parisinos-apagan-a-un-titanico-fc-barcelona-que-rozo-los-puntos-en-el-parque-de-los-principes/",
+      "note": "賽後報導，比分與進球者第三來源"
+    },
+    {
+      "title": "UEFA Champions League standings",
+      "publisher": "ESPN",
+      "date": "2026-10-21",
+      "url": "https://www.espn.com/soccer/standings/_/league/uefa.champions",
+      "note": "第 3 輪部分賽後積分（查閱日期）"
+    },
+    {
+      "title": "Champions League recap: PSG defeat Barça in classic, 40 goals across nine matches",
+      "publisher": "ESPN",
+      "date": "2026-10-20",
+      "url": "https://www.espn.com/soccer/story/_/id/50191262/champions-league-live-updates-liverpool-manchester-city-paris-saint-germain-barcelona",
+      "note": "九場賽果總覽"
+    },
+    {
+      "title": "Mac Allister, Ngumoha lead Liverpool rally to stay perfect in UCL",
+      "publisher": "ESPN",
+      "date": "2026-10-20",
+      "url": "https://www.espn.com/soccer/report/_/gameId/401915397",
+      "note": "阿勞霍為租借自巴薩的後衛"
+    },
+    {
+      "title": "Liverpool vs Villarreal（比賽資料）",
+      "publisher": "UEFA",
+      "date": "2026-10-20",
+      "url": "https://www.uefa.com/uefachampionsleague/match/2049590--liverpool-vs-villarreal/",
+      "note": "比分核對"
+    },
+    {
+      "title": "Foden hat trick fuels emphatic Man City win as Haaland rested",
+      "publisher": "ESPN（PA）",
+      "date": "2026-10-20",
+      "url": "https://www.espn.com/soccer/report/_/gameId/401915401",
+      "note": "比分、進球、哈蘭德傷情虛驚後留在板凳"
+    },
+    {
+      "title": "Man City vs AEK Athens（比賽資料）",
+      "publisher": "UEFA",
+      "date": "2026-10-20",
+      "url": "https://www.uefa.com/uefachampionsleague/match/2049591--man-city-vs-aek-athens/",
+      "note": "比分核對"
+    },
+    {
+      "title": "VfB Stuttgart vs. Atlético Madrid",
+      "publisher": "ESPN",
+      "date": "2026-10-20",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915392",
+      "note": "比分、進球、紅牌"
+    },
+    {
+      "title": "Stuttgart vs Atleti（比賽資料）",
+      "publisher": "UEFA",
+      "date": "2026-10-20",
+      "url": "https://www.uefa.com/uefachampionsleague/match/2049596--stuttgart-vs-atleti/",
+      "note": "比分與紅牌核對"
+    },
+    {
+      "title": "Napoli vs. Bodo/Glimt",
+      "publisher": "ESPN",
+      "date": "2026-10-20",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915400",
+      "note": "比分與進球"
+    },
+    {
+      "title": "Napoli vs Bodø/Glimt（比賽資料）",
+      "publisher": "UEFA",
+      "date": "2026-10-20",
+      "url": "https://www.uefa.com/uefachampionsleague/match/2049594--napoli-vs-bodo-glimt/",
+      "note": "比分核對"
+    },
+    {
+      "title": "Roma vs S. Bratislava（比賽資料）",
+      "publisher": "UEFA",
+      "date": "2026-10-20",
+      "url": "https://www.uefa.com/uefachampionsleague/match/2049592--roma-vs-s-bratislava/",
+      "note": "比分核對"
+    },
+    {
+      "title": "Porto vs PSV（比賽資料）",
+      "publisher": "UEFA",
+      "date": "2026-10-20",
+      "url": "https://www.uefa.com/uefachampionsleague/match/2049593--porto-vs-psv/",
+      "note": "比分核對"
+    },
+    {
+      "title": "Lamine Yamal France v Spain 7.24.26-057",
       "publisher": "Wikimedia Commons",
       "date": "2026-07-14",
-      "url": "https://commons.wikimedia.org/wiki/File:Pau_Cubarsi_France_v_Spain_7.24.26-042.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Lamine_Yamal_France_v_Spain_7.24.26-057.jpg",
       "note": "頭圖"
     }
   ]
