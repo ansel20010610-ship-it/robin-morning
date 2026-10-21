@@ -1,0 +1,412 @@
+{
+  "column": "city",
+  "date": "2026-10-22",
+  "title": "里斯本聖胡斯塔升降機：街尾的塔與空中的橋",
+  "dek": "下城一條直街走到底，撞上卡爾莫山。1902 年啟用的鐵塔和塔頂的橋，把格子街道接上山頂廣場；它自 2025 年 9 月停駛，截至 10 月 21 日仍未復駛。",
+  "brief": "里斯本下城的 Rua de Santa Justa 往西走到底撞上卡爾莫山，1902 年啟用的聖胡斯塔升降機就立在街尾：兩座並排的方塔各容一部車廂，塔頂一座橋接上卡爾莫廣場。1901 年的雜誌記載，這座橋起初是直立的，吊裝時橋轉成水平、支柱同時扶正；本文依其數字推算，從塔底到橋面約爬升 32 公尺，與交通主管機關公告的高差一致。2025 年 9 月 Glória 纜車出事後它停駛，截至 10 月 21 日 Carris 仍未公布復駛日期。",
+  "topic_key": "city:lisbon-elevador-de-santa-justa",
+  "updated_at": "2026-10-22T02:05:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Lisbon_%28Lisboa%29_historic_elevator_Santa_Justa_Luca_Galuzzi_2006.jpg/1280px-Lisbon_%28Lisboa%29_historic_elevator_Santa_Justa_Luca_Galuzzi_2006.jpg",
+    "width": 1280,
+    "height": 1920,
+    "alt": "夜間從街面往上仰拍一座細高的鐵塔，塔身被燈光打亮。塔夾在左右兩排石造樓房之間，每一層的立柱上排滿鉚釘，柱間是尖拱與圓形花窗形狀的鏤空鐵件，透出內部暖黃色的燈光。塔頂是一個比塔身更寬、向外挑出的白色平台。右側牆上有一盞街燈。",
+    "caption": "聖胡斯塔升降機的塔身，2006 年 3 月夜間從塔下仰拍。塔幾乎貼著兩側樓房的牆面，立柱上滿是鉚釘，柱間填著尖拱與花窗形的鏤空鐵件，最上方是向外挑出的頂層。2006 年的樣子，不代表現況。",
+    "credit": "Luca Galuzzi／Wikimedia Commons",
+    "license": "CC BY-SA 2.5",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lisbon_(Lisboa)_historic_elevator_Santa_Justa_Luca_Galuzzi_2006.jpg",
+    "made": "2006"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "里斯本（Lisboa）下城的 Rua de Santa Justa 走到西端，路面被一座鐵塔堵住，塔頂伸出一座橋，搭到上方的卡爾莫廣場（Largo do Carmo）。這是聖胡斯塔升降機（Elevador de Santa Justa），也叫卡爾莫升降機（Elevador do Carmo）。營運者里斯本公車公司 Carris 的網站寫，它在 1902 年 7 月 10 日啟用，設計者是工程師梅尼耶・杜蓬薩爾（Raoul Mesnier du Ponsard）；本報 2026 年 10 月 21 日查閱時，同一頁在名稱後面標著「暫時關閉」（Encerrado temporariamente）。"
+    },
+    {
+      "type": "p",
+      "text": "這篇只看這一處設施：一座塔加一座橋，怎樣把下城的格子街道和山上的廣場接起來。觀看順序由東往西：從 Rua do Ouro 轉進 Rua de Santa Justa，走到街尾的塔下，看塔身，再看塔頂那座橋怎麼裝上去，最後到橋的另一端。這是依資料排出的觀看順序，不是導航建議；本報沒有到現場，截至 2026 年 10 月 21 日可確認，升降機仍未恢復營運。"
+    },
+    {
+      "type": "facts",
+      "title": "地點資料",
+      "items": [
+        [
+          "城市",
+          "葡萄牙里斯本（Lisboa），下城（Baixa）西緣與卡爾莫山之間"
+        ],
+        [
+          "地點",
+          "聖胡斯塔升降機（Elevador de Santa Justa），又名卡爾莫升降機（Elevador do Carmo）；里斯本觀光局說最初叫 Ascensor Ouro-Carmo。地址 Rua de Santa Justa"
+        ],
+        [
+          "年代",
+          "1901 年 9 月 16 日以前已吊裝塔頂的橋（Commons 記吊裝照片攝於 8 月 31 日）；1902 年 7 月 10 日啟用；Carris 說 1907 年 11 月由蒸汽改為電動（市立檔案館與 IMT 也作 1907 年；市府 2009 年報告則說只有頭兩年用蒸汽）；2002 年 2 月 19 日與 Lavra、Glória、Bica 三條纜索鐵道同列國家紀念物"
+        ],
+        [
+          "設計者",
+          "工程師梅尼耶・杜蓬薩爾（Raoul Mesnier du Ponsard；葡文資料亦寫作 Raul Mesnier）"
+        ],
+        [
+          "結構",
+          "兩座方形鐵塔並排，各容一部車廂；塔頂以一座橋接卡爾莫廣場。1901 年的記載：塔身九層、41.04 公尺，橋長 13.0＋12.187 公尺、寬 3.13 公尺"
+        ],
+        [
+          "目前用途",
+          "Carris 營運的垂直升降機，連接 Rua do Ouro 一帶與卡爾莫廣場。截至 2026 年 10 月 21 日可確認：Carris 網站標示「暫時關閉」；自 2025 年 9 月 Glória 纜車出事後停駛，尚無復駛日期（Carris 網站；RTP 2026 年 9 月 1 日、RFM 9 月 2 日引 RTP 報導）"
+        ]
+      ]
+    },
+    {
+      "type": "svg",
+      "title": "從 Rua do Ouro 到卡爾莫廣場的剖面示意",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 330\">\n<rect class=\"paper\" x=\"0\" y=\"0\" width=\"360\" height=\"330\" fill=\"currentColor\"/>\n<path class=\"soft\" fill=\"currentColor\" d=\"M0 110 L70 110 L70 120 L104 120 L104 236 L150 236 L150 250 L185 260 L360 266 L360 330 L0 330 Z\"/>\n<path class=\"muted\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" d=\"M0 110 L70 110 L70 120 L104 120 L104 236 L150 236 L150 250 L185 260 L360 266\"/>\n<rect class=\"ink\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" x=\"185\" y=\"56\" width=\"34\" height=\"204\"/>\n<line class=\"muted\" stroke=\"currentColor\" stroke-width=\"0.8\" x1=\"202\" y1=\"56\" x2=\"202\" y2=\"260\"/>\n<g class=\"muted\" stroke=\"currentColor\" stroke-width=\"0.5\">\n<line x1=\"185\" y1=\"78\" x2=\"219\" y2=\"78\"/><line x1=\"185\" y1=\"101\" x2=\"219\" y2=\"101\"/><line x1=\"185\" y1=\"124\" x2=\"219\" y2=\"124\"/><line x1=\"185\" y1=\"146\" x2=\"219\" y2=\"146\"/><line x1=\"185\" y1=\"169\" x2=\"219\" y2=\"169\"/><line x1=\"185\" y1=\"192\" x2=\"219\" y2=\"192\"/><line x1=\"185\" y1=\"214\" x2=\"219\" y2=\"214\"/><line x1=\"185\" y1=\"237\" x2=\"219\" y2=\"237\"/>\n</g>\n<rect class=\"accent\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" x=\"66\" y=\"96\" width=\"119\" height=\"8\"/>\n<line class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\" x1=\"128\" y1=\"104\" x2=\"128\" y2=\"236\"/>\n<line class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\" x1=\"122\" y1=\"236\" x2=\"134\" y2=\"236\"/>\n<path class=\"gold\" fill=\"currentColor\" d=\"M20 96 L20 70 L30 62 L30 96 Z M36 96 L36 66 L46 58 L46 96 Z\"/>\n<text class=\"ink\" fill=\"currentColor\" font-size=\"10\" x=\"4\" y=\"50\">卡爾莫廣場</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"8\" x=\"4\" y=\"61\">Largo do Carmo</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"8\" x=\"4\" y=\"128\">修道院廢墟在</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"8\" x=\"4\" y=\"138\">廣場一側</text>\n<text class=\"accent\" fill=\"currentColor\" font-size=\"9\" x=\"72\" y=\"90\">橋 13.0＋12.187 公尺</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"8\" x=\"134\" y=\"150\">中間支柱</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"8\" x=\"134\" y=\"160\">（位置示意）</text>\n<text class=\"ink\" fill=\"currentColor\" font-size=\"9\" x=\"106\" y=\"250\">Rua do Carmo</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"8\" x=\"106\" y=\"226\">1901 年：橋面高出</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"8\" x=\"106\" y=\"216\">此街 24.89 公尺</text>\n<text class=\"ink\" fill=\"currentColor\" font-size=\"9\" x=\"224\" y=\"70\">塔：兩座方塔並排</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"8\" x=\"224\" y=\"82\">九層，1901 年記載</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"8\" x=\"224\" y=\"93\">高 41.04 公尺</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"8\" x=\"224\" y=\"140\">各容一部車廂</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"8\" x=\"224\" y=\"236\">塔底比 Rua do Carmo</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"8\" x=\"224\" y=\"247\">低 7.03 公尺</text>\n<text class=\"ink\" fill=\"currentColor\" font-size=\"9\" x=\"240\" y=\"285\">Rua de Santa Justa →</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"8\" x=\"240\" y=\"296\">往東接 Rua do Ouro</text>\n<g class=\"accent\" fill=\"currentColor\">\n<circle cx=\"300\" cy=\"258\" r=\"7\"/><circle cx=\"196\" cy=\"274\" r=\"7\"/><circle cx=\"174\" cy=\"170\" r=\"7\"/><circle cx=\"150\" cy=\"114\" r=\"7\"/><circle cx=\"58\" cy=\"80\" r=\"7\"/>\n</g>\n<g class=\"paper\" fill=\"currentColor\" font-size=\"9\" text-anchor=\"middle\">\n<text x=\"300\" y=\"261\">1</text><text x=\"196\" y=\"277\">2</text><text x=\"174\" y=\"173\">3</text><text x=\"150\" y=\"117\">4</text><text x=\"58\" y=\"83\">5</text>\n</g>\n<text class=\"ink\" fill=\"currentColor\" font-size=\"8\" x=\"4\" y=\"314\">西（卡爾莫山）</text>\n<text class=\"ink\" fill=\"currentColor\" font-size=\"8\" x=\"300\" y=\"314\">東（下城）</text>\n<text class=\"muted\" fill=\"currentColor\" font-size=\"7.5\" x=\"4\" y=\"326\">剖面示意，不按比例；數字依 1901 年《Brasil-Portugal》第 64 期</text>\n</svg>",
+      "caption": "示意，不按比例，依 1901 年《Brasil-Portugal》第 64 期 Marrecas Ferreira 的記述、里斯本市府 2009 年〈下城公共空間現況〉報告與里斯本建築三年展 Open House 的介紹繪製。1 Rua de Santa Justa 往東接 Rua do Ouro；2 街尾塔底；3 車廂在塔內上下；4 塔頂的橋；5 卡爾莫廣場。1901 年記載的高度基準是 Rua Nova do Carmo，圖上標作今 Rua do Carmo，是本文的推定。中間支柱實際落在哪裡，本報沒有找到可據以標示的資料，只示意它在塔與廣場之間。"
+    },
+    {
+      "type": "h",
+      "text": "起點：一條以行業命名的直街，和一條以聖人命名的橫街"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "下城今天的格子，來自 1755 年 11 月 1 日大地震之後的重建。里斯本市立檔案館（Arquivo Municipal de Lisboa）的導覽教材寫，龐巴爾侯爵（Marquês de Pombal）在王國總工程師馬亞（Manuel da Maia）呈上的幾個方案中，選了尤金尼奧・多斯桑托斯（Eugénio dos Santos）與馬德爾（Carlos Mardel）的設計：Rua Augusta 是主軸，其他街道依寬度與建築的簡樸程度分等級。南北向的街沿用中世紀以來的習慣，以聚集的行業命名，例如 Rua do Ouro（字面是「黃金街」）；東西向的街則取本地宗教傳統的名字，Santa Justa 是其中之一。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "里斯本市府 2009 年為下城細部計畫整理的〈下城公共空間現況〉報告（Caracterização do Espaço Público da Baixa Pombalina）記下了這兩條街的尺寸。Rua do Ouro 全寬 13.0 公尺，兩條車道由北往南行駛，西側人行道 2.0 公尺、東側 3.0 公尺，行人靠紅綠燈管制的斑馬線過街；這條路的一段在 15 世紀已經存在，當時叫 Rua dos Ourives do Ouro（金匠街）。Rua de Santa Justa 寬 8.5 公尺，鋪白色石灰岩小方石（calçada de vidraço branco），東接 Rua dos Fanqueiros，西接 Rua do Carmo。這些都是 2009 年的紀錄，交通方式此後可能已改。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "同一份報告說，Rua de Santa Justa 這個名字是市議會 1892 年 11 月 5 日決議給的，之前叫 Travessa de Santa Justa（聖胡斯塔巷）；這條街保留給在 Rua Augusta 擠不下的羊毛與絲綢商人。報告寫成時，街心擺著露天座位，沿街有書報亭、電話亭、垃圾桶和消防栓，整條街卻沒有一張可以坐下來的長椅。這同樣是 2009 年的紀錄，不代表現況。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Rua_Da_Santa_Justa%2C_Baixa%2C_Lisbon.JPG/1280px-Rua_Da_Santa_Justa%2C_Baixa%2C_Lisbon.JPG",
+      "width": 1280,
+      "height": 1560,
+      "alt": "從高處往下俯瞰一條筆直的窄街，兩側是四、五層的淺色樓房，屋頂鋪紅瓦。街面鋪淺色小石塊，中間有深色石塊拼成的帶狀圖案和幾處露天座位、遮陽傘與小亭子，零星有行人。街道一路向畫面上方延伸，在遠處被橫向的樓房擋住，街上可以看到幾個與它交叉的路口。",
+      "caption": "從高處沿街道軸線俯瞰 Rua de Santa Justa，2007 年 7 月攝。Commons 沒有註明拍攝位置；本文依視角推想是在升降機上層往東拍。街面是淺色小方石，夾著深色石塊的圖案，兩側樓房的高度大致整齊。2007 年的樣子，不代表現況。",
+      "credit": "Szilas／Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rua_Da_Santa_Justa,_Baixa,_Lisbon.JPG",
+      "made": "2007"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "市府報告接著寫：這條街靠 Rua do Carmo 的盡頭，要靠一段小階梯（escadinhas）才上得去，升降機就裝在這段階梯的中央。報告也說，下城與卡爾莫山之間的步行連結，靠的就是這座升降機這種機械設施。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "本文的讀法是，升降機的位置由格子決定：Rua de Santa Justa 是一條東西向的直街，往西走到底就撞上山坡，只剩一段階梯。塔放在階梯中央、正對街的軸線，從 Rua do Ouro 轉進來的人，一路往西看到的就是它。這是從平面與報告的描述推想出來的，本報沒有找到設計者自己說明選址理由的文字。"
+    },
+    {
+      "type": "h",
+      "text": "塔：兩座方塔並排，一塔一部車廂"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "最詳細的結構描述，來自升降機啟用前一年的一篇雜誌報導。里斯本畫報《Brasil-Portugal》1901 年 9 月 16 日第 64 期刊出〈梅尼耶和他的聖胡斯塔升降機〉（Raul Mesnier e o seu elevador de Santa Justa），署名 L. F. Marrecas Ferreira，原刊由里斯本市立期刊館（Hemeroteca Municipal de Lisboa）數位化。文中說，塔基所在的地面比 Rua Nova do Carmo 低 7.03 公尺；塔由兩部分組成，以六根粗壯的弦桿撐起，在平面上落在一個長方形的四角與兩條對邊的中點。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "同一篇接著寫：九道 0.85 公尺高的橫梁把弦桿連起來，分出九層、每層 4.56 公尺，合計 41.04 公尺，最上一層裝機械；塔頂另有收頭，頂部空間預定開一間咖啡館。兩部分各自是邊長 3.86 公尺的方形斷面，各供一部升降機使用；兩部分共用中間的弦桿，兩部分之間相隔 0.64 公尺。每層四面的長方格裡，填的是鏤空、有裝飾的金屬板。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "依這些數字推算，塔身的寬約為 3.86 × 2 ＋ 0.64 ＝ 8.36 公尺，深約 3.86 公尺。這是本文從 1901 年的設計數字算出的約數，不是現場量測，也不知道日後是否改動過。"
+    },
+    {
+      "type": "p",
+      "tag": "官方說法",
+      "text": "這個「一塔兩井」的結構，到今天仍寫在官方資料裡。葡萄牙交通主管機關 IMT 2025 年 3 月 10 日的公告說，它是一座垂直的鋼造塔，有兩部各自獨立的車廂，「載客至多 20 人」（transportam até 20 passageiros，本文自譯），沒有說明是每部還是合計；里斯本市立檔案館的教材則寫，兩部車廂各能載大約 24 人。兩份資料的說法對不上，本報無法判定現行的核定載客量。里斯本觀光局（Turismo de Lisboa）形容塔是新哥德式，車廂是木造、以黃銅裝飾。"
+    },
+    {
+      "type": "p",
+      "tag": "可見",
+      "text": "頭圖是 2006 年 3 月的夜景，從塔腳下往上拍。塔夾在兩排樓房之間，幾乎貼著兩側的牆面；每一層的立柱上排滿鉚釘，柱間是尖拱、圓形花窗一類的鏤空鐵件，也就是 1901 年那篇報導所說「填在長方格裡」的金屬板。最上方是一個比塔身寬、向外挑出的頂層。"
+    },
+    {
+      "type": "h",
+      "text": "高度：30、32、45 公尺，各量的是什麼"
+    },
+    {
+      "type": "table",
+      "title": "不同資料裡的高度數字",
+      "head": [
+        "資料",
+        "數字",
+        "原文說的是什麼"
+      ],
+      "rows": [
+        [
+          "《Brasil-Portugal》1901 年 9 月 16 日",
+          "41.04 公尺",
+          "塔身九層的高度（施工中，文中說塔預定總高 60 公尺）"
+        ],
+        [
+          "同上",
+          "24.89 公尺",
+          "橋面高出 Rua Nova do Carmo 的高度"
+        ],
+        [
+          "同上",
+          "7.03 公尺",
+          "塔基地面比 Rua Nova do Carmo 低的高度"
+        ],
+        [
+          "里斯本市府〈下城公共空間現況〉2009 年",
+          "30 公尺",
+          "從 Rua do Ouro 到 Rua do Carmo 之間克服的高差"
+        ],
+        [
+          "IMT 公告 2025 年 3 月 10 日",
+          "32 公尺",
+          "連接 Rua do Ouro 與卡爾莫廣場所克服的高差"
+        ],
+        [
+          "里斯本市立檔案館教材（2025 年版 PDF）",
+          "45 公尺",
+          "「上升 45 公尺（相當於 7 層樓）」"
+        ]
+      ],
+      "caption": "數字照各來源原文抄錄；1901 年的數字是施工期間的設計記載。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "把 1901 年的兩個數字相加，24.89 ＋ 7.03 ＝ 31.92 公尺，正好和 IMT 公告的 32 公尺高差一致：也就是說，從塔底上到橋面，大約爬升 32 公尺。檔案館教材的 45 公尺比這個數字高出許多，本文推測它量的是整座塔、包括橋面以上的頂層，而不是車廂實際上升的高差；教材沒有說明量法，這只是推測。"
+    },
+    {
+      "type": "h",
+      "text": "橋：1901 年夏天，一座直立的橋轉成水平"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "塔頂那座橋不是一節一節往外推出去的。Marrecas Ferreira 寫道，一般的做法是在橋的一端把梁組好，架在滾輪上，用槓桿以人力推到另一端，里斯本聖方濟各升降機（elevador de S. Francisco）的橋就是這樣架的；聖胡斯塔這次不同。橋重 23,392 公斤，鉸接在支柱頂端；支柱重 23,246 公斤，鉸接在柱腳；合計 46,638 公斤，同時做兩種轉動。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "photo",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Montagem_do_viaduto_do_Elevador_de_Santa_Justa_III_-_Brasil-Portugal_%2816Set1901%29.png",
+      "width": 404,
+      "height": 297,
+      "alt": "黑白的舊雜誌照片，畫質粗糙。前景是兩組高大的鐵構架，其中一組明顯傾斜，幾條纜索斜拉過畫面；構架上方站著幾名工人。背景是密集的屋頂和遠處山坡上成排的樓房，左側往下可以看到一條街道。",
+      "caption": "吊裝塔頂之橋的過程，José Pires Marinho 攝，刊於《Brasil-Portugal》1901 年 9 月 16 日第 64 期，原刊由里斯本市立期刊館數位化。依 Commons 的說明，這一張拍的是橋從直立轉向水平、支柱從斜向轉為直立的中途；Commons 記拍攝日期為 1901 年 8 月 31 日。1901 年的樣子，不代表現況。",
+      "credit": "José Pires Marinho（1857–1929）／《Brasil-Portugal》第 64 期／Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Montagem_do_viaduto_do_Elevador_de_Santa_Justa_III_-_Brasil-Portugal_(16Set1901).png",
+      "made": "1901"
+    },
+    {
+      "type": "quote",
+      "original": "o gigante metalico a mover-se, mudando a cada passo a posição relativa das duas partes, até que, aprumado o pilar, o taboleiro assentou nos encontros",
+      "text": "這個金屬巨物移動著，每一步都改變兩部分的相對位置，直到支柱扶正，橋面落到兩端的橋座上。",
+      "cite": "L. F. Marrecas Ferreira，《Brasil-Portugal》1901 年 9 月 16 日第 64 期；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "依同一篇報導，起吊前橋是直立的；隨著哨聲響起、纜索拉緊，滑車組從塔上和對面的建築兩頭施力，橋的上端慢慢畫出一道弧線落下，支柱同時由斜轉直，最後橋面停在高出 Rua Nova do Carmo 24.89 公尺的位置。作者認為，塔已經蓋得很高、而橋只有一根活動支柱，是採用這種吊裝法的理由。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "報導也記下橋的尺寸：12 道橫梁、3 道縱梁，以聖安德烈十字（X 形）斜撐；從卡爾莫這一端的橋座到支柱 13.0 公尺，支柱到塔 12.187 公尺；寬 3.13 公尺，欄杆由立柱、扶手和花飾鐵板組成。支柱兩端鉸接點之間長 24.649 公尺，立在鑄鐵底座上。全部工程預計用掉 300 噸鐵。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "兩段相加，橋長約 25.19 公尺。本文的讀法是，這座橋讓升降機不只是「上樓」：車廂垂直爬升約 32 公尺之後，乘客還要往西水平走 25 公尺，才踏上山上的地面。塔的位置貼著下城，橋負責跨過塔與山坡之間的那段距離。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "同樣的「塔加橋」做法，在里斯本不只這一座。市府 2009 年的報告提到，20 世紀初還有一座「市政廳－圖書館升降機」（elevador Município-Biblioteca），裝在 Rua de S. Julião 一棟建築的天井裡，克服約 29 公尺的高差，頂端接一座橋通往圖書館廣場（Largo da Biblioteca），1897 到 1915 年間運轉，讓人不必爬聖方濟各坡道（calçada de S. Francisco）。那一座早已不在。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "1901 年報導裡以推送法架橋的聖方濟各升降機，本文推測可能就是這一座，但兩份資料用的名稱不同，無法確認。"
+    },
+    {
+      "type": "h",
+      "text": "橋的另一端：卡爾莫修道院廢墟與 2015 年的新路"
+    },
+    {
+      "type": "figure",
+      "id": "f3",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/The_top_of_Lisbon_Santa_Justa_Lift_%2826463851550%29.jpg/1280px-The_top_of_Lisbon_Santa_Justa_Lift_%2826463851550%29.jpg",
+      "width": 1280,
+      "height": 915,
+      "alt": "晴天藍天下，從斜下方仰拍一座灰色的鋼鐵構造。左側是塔的上部，有兩層向外挑出的陽台，外圍是鏤空花紋的鐵欄杆，最頂層站著幾個人。右側一條有頂蓋的橋從塔身向右延伸，橋的側面是格子狀與花紋鐵板，橋下有一根方形的柱子撐著。",
+      "caption": "塔頂與橋，2016 年 4 月攝。左邊是塔頂向外挑出的平台，最上層站著遊客；右邊是接往卡爾莫廣場、有頂蓋的橋，側面是格子與花飾鐵板；畫面右下露出一根支撐。2016 年的樣子，不代表現況。",
+      "credit": "Pedro Ribeiro Simões／Wikimedia Commons",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_top_of_Lisbon_Santa_Justa_Lift_(26463851550).jpg",
+      "made": "2016"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "市府 2009 年的報告寫，塔頂要再爬一段窄的螺旋梯才上得去，那裡當時是一間咖啡館，可以看到羅西歐廣場（Rossio）、下城、對面山上的聖若熱城堡（Castelo de São Jorge）、特茹河（Tejo），以及卡爾莫修道院教堂的廢墟。1901 年的報導說頂上「將開一間咖啡館」，一百多年後的報告記下的仍是咖啡館。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "橋落地的卡爾莫廣場，一側就是那座廢墟。設在廢墟裡的卡爾莫考古博物館（Museu Arqueológico do Carmo）介紹：教堂 1389 年由統帥努諾・阿爾瓦雷斯・佩雷拉（Nuno Álvares Pereira）興建；1755 年地震重創建築，隨後的大火幾乎燒光內部陳設；1756 年起以新哥德式重建，1834 年因廢除修會而永久中止；19 世紀中葉，在偏愛廢墟的浪漫主義品味下，決定不再完成，讓教堂中殿保持露天，成為 1755 年地震的紀念。博物館本身 1864 年成立。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "這一端的地面在 2015 年又多了一條路。市府報告記載，1988 年 8 月的大火燒毀了希亞多（Chiado）的 Chiado 與 Grandella 兩家百貨；里斯本建築三年展（Trienal de Arquitectura de Lisboa）的 Open House 介紹說，建築師希扎（Álvaro Siza）的希亞多災區重建計畫，最後一項工程在卡爾莫修道院周圍原本被各種建物佔據的後院裡開出步道，終點是卡爾莫露台（Terraços do Carmo）觀景點，獲 2015 年度瓦爾莫建築獎（Prémio Valmor）。據 Time Out Lisboa 2017 年 12 月 18 日報導，這個獎項當天才一併公布 2013 到 2016 年度的得主，2015 年度得獎的露台工程由希扎與 Carlos Castanheira 共同設計。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "同一段介紹寫，這條路以坡道、樓梯和一部公共電梯克服地形高差，讓人從卡爾莫廣場下到 Rua do Carmo 或 Rua Garrett；那部電梯設在重新整修的 Leonel 大樓裡，而這棟樓「部分支撐」了通往聖胡斯塔升降機的橋。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "本文的讀法是，2015 年以後，卡爾莫山這一側有了第二條上下的路：聖胡斯塔是從下城東側直上，希扎的路線則從山腳的 Rua do Carmo、Rua Garrett 沿著修道院後院上來，兩者在橋頭附近交會。新路目前的開放時間與狀態，本報沒有查到可靠的最新資料。"
+    },
+    {
+      "type": "h",
+      "text": "2025 年 9 月以後：塔還在，車廂停了"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "IMT 在 2025 年 3 月 10 日公告，所屬的鐵道安全單位剛為這座升降機做完三年一次的檢查，以更新營運許可。半年後，2025 年 9 月 3 日，同屬 Carris 的 Glória 纜索鐵道出軌，據 RTP 報導造成 16 人死亡、24 人受傷。RTP 說，里斯本市府隨即「立刻」（de imediato）暫停 Carris 幾項歷史設施的運轉以便檢查，其中包括聖胡斯塔升降機。《觀察家報》（Observador）2025 年 9 月 17 日報導，為 Glória 成立的任務小組也將為聖胡斯塔、Bica、Lavra 與 Graça 四項設施做認證。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "一年後仍未復駛。RTP 2026 年 9 月 1 日引述 Lusa 通訊社報導，Carris 總裁 Rui Lopo 說，聖胡斯塔的評估「比 Lavra 進展得多，但還需要時間」（está mais avançada do que no Lavra, mas ainda vai demorar）；同一篇報導說，Graça 纜車已在 4 月 30 日恢復運轉。RFM 電台 9 月 2 日引 RTP 報導，聖胡斯塔自 2025 年 9 月關閉至今，Carris 尚未確認重新開放的日期。本報 2026 年 10 月 21 日查閱 Carris 與里斯本觀光局網站，兩者都仍標示暫時關閉。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "所以此刻這條路線只走得完一半：Rua de Santa Justa 還在，街尾的階梯和塔也在，但從塔底到橋面這 32 公尺，暫時沒有車廂可搭。本文推想，下城與卡爾莫山之間少了這條機械直通路線；希扎路線上的公共電梯目前是否運轉，本報沒有查到，也沒有查到關閉期間行人動線的統計。"
+    },
+    {
+      "type": "p",
+      "tag": "報導",
+      "text": "Rui Lopo 在同一場合說，這些歷史設施都是國家文化資產，技術評估最後要判斷的，是它們能照現狀運轉、需要修改，還是得要「一個全新的解決方案」（uma solução completamente nova）。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Elevador（聖胡斯塔升降機頁）",
+      "publisher": "Carris",
+      "date": "",
+      "url": "https://www.carris.pt/descubra/frota/elevador/",
+      "note": "2026-10-21 查閱；1902 年 7 月 10 日啟用、1907 年 11 月改電動、設計者 Raoul Mesnier du Ponsard；頁面標示 Encerrado temporariamente"
+    },
+    {
+      "title": "História",
+      "publisher": "Carris",
+      "date": "",
+      "url": "https://www.carris.pt/a-carris/historia/",
+      "note": "2026-10-21 查閱；2002 年 2 月 19 日四項設施列為國家紀念物"
+    },
+    {
+      "title": "Raul Mesnier e o seu elevador de Santa Justa（L. F. Marrecas Ferreira）",
+      "publisher": "Brasil-Portugal 第 64 期，Hemeroteca Municipal de Lisboa 數位化",
+      "date": "1901-09-16",
+      "url": "https://hemerotecadigital.cm-lisboa.pt/OBRAS/BrasilPortugal/1901_1902/N64/N64_master/N64.pdf",
+      "note": "PDF 第 6–7 頁：橋與支柱重量、兩種轉動、24.89 公尺、塔基低 7.03 公尺、六弦桿、九層 41.04 公尺、3.86 與 0.64 公尺、咖啡館、橋 13.0／12.187／3.13 公尺、支柱 24.649 公尺、60 公尺、300 噸、聖方濟各升降機的推送法"
+    },
+    {
+      "title": "Caracterização do Espaço Público da Baixa Pombalina — Relatório Sectorial",
+      "publisher": "Câmara Municipal de Lisboa（里斯本市府）",
+      "date": "2009-06-15",
+      "url": "https://www.lisboa.pt/fileadmin/portal/temas/urbanismo/planos_pormenor/baixa_pombalina/pecas_escritas/relatorio_anexos/pp_baixa_pombalina_relatorio_05_relatorio_setorial_carac_espaco_publico.pdf",
+      "note": "第 6–7 頁（1988 年火災、步行連結、Município-Biblioteca 升降機）、第 44–45 頁（Rua de Santa Justa）、第 50–51 頁（Rua do Ouro）"
+    },
+    {
+      "title": "Explorar a Cidade — Baixa",
+      "publisher": "Arquivo Municipal de Lisboa（里斯本市立檔案館）",
+      "date": "2025-07-23",
+      "url": "https://arquivomunicipal.lisboa.pt/fileadmin/arquivo_municipal/servicos/servico_educativo/explorar_a_cidade/baixa_pombalina_impressao_01.pdf",
+      "note": "重建方案、街名規則、升降機 45 公尺與每車廂約 24 人；日期為 PDF 建檔日"
+    },
+    {
+      "title": "Inspeção do Elevador de Santa Justa",
+      "publisher": "IMT – Instituto da Mobilidade e dos Transportes",
+      "date": "2025-03-10",
+      "url": "https://www.imt-ip.pt/noticias/inspecao-do-elevador-de-santa-justa/",
+      "note": "三年一次檢查、鋼造塔、兩部獨立車廂、載客至多 20 人（未說明每部或合計）、高差 32 公尺"
+    },
+    {
+      "title": "Elevador de Santa Justa (Fechado temporariamente)",
+      "publisher": "Turismo de Lisboa（里斯本觀光局）",
+      "date": "",
+      "url": "https://www.visitlisboa.com/pt-pt/locais/elevador-de-santa-justa",
+      "note": "2026-10-21 查閱；Ascensor Ouro-Carmo、新哥德式、木造黃銅車廂、地址、暫時關閉"
+    },
+    {
+      "title": "Terraços do Carmo",
+      "publisher": "Trienal de Arquitectura de Lisboa／Open House Lisboa",
+      "date": "",
+      "url": "https://www.trienaldelisboa.com/ohl/espaco/terracos-do-carmo/",
+      "note": "2026-10-21 查閱；希扎、希亞多災區重建計畫、坡道樓梯與公共電梯、Leonel 大樓部分支撐通往升降機的橋、瓦爾莫獎 2015"
+    },
+    {
+      "title": "Ruínas e Museu Arqueológico do Carmo",
+      "publisher": "Associação dos Arqueólogos Portugueses／Museu Arqueológico do Carmo",
+      "date": "",
+      "url": "https://www.museuarqueologicodocarmo.pt/mac.html",
+      "note": "2026-10-21 查閱；1389 年、1755 年、1756–1834 年重建、19 世紀中葉決定保留露天、1864 年建館"
+    },
+    {
+      "title": "Inspeção aos ascensores da Bica e do Lavra e ao elevador de Santa Justa ainda decorre",
+      "publisher": "RTP（Lusa）",
+      "date": "2026-09-01",
+      "url": "https://www.rtp.pt/noticias/pais/inspecao-aos-ascensores-da-bica-e-do-lavra-e-ao-elevador-de-santa-justa-ainda-decorre_n1762644",
+      "note": "Glória 事故 16 死 24 傷、市府立即暫停、Rui Lopo 談評估進度與三種結論、Graça 4 月 30 日復駛"
+    },
+    {
+      "title": "Glória, Bica, Lavra e Santa Justa: um ano depois do acidente, o que aconteceu aos elevadores históricos de Lisboa?",
+      "publisher": "RFM",
+      "date": "2026-09-02",
+      "url": "https://rfm.pt/atualidade/23708/gloria-bica-lavra-e-santa-justa-um-ano-depois-do-acidente-o-que-aconteceu-aos-elevadores-historicos-de-lisboa",
+      "note": "自 2025 年 9 月關閉、未確認復駛日期；聖胡斯塔現況一句註明引自 RTP"
+    },
+    {
+      "title": "Equipa de missão para novo elevador da Glória vai certificar outros quatro equipamentos de Lisboa",
+      "publisher": "Observador",
+      "date": "2025-09-17",
+      "url": "https://observador.pt/2025/09/17/equipa-de-missao-para-novo-elevador-da-gloria-vai-certificar-outros-quatro-equipamentos-de-lisboa-moedas-presidiu-a-reuniao-inicial/",
+      "note": "任務小組將認證聖胡斯塔、Bica、Lavra、Graça"
+    },
+    {
+      "title": "E os Prémios Valmor vão para…",
+      "publisher": "Time Out Lisboa",
+      "date": "2017-12-18",
+      "url": "https://www.timeout.pt/lisboa/pt/noticias/e-os-premios-valmor-vao-para-121817",
+      "note": "2013–2016 年度瓦爾莫獎同日公布；2015 年度：卡爾莫修道院露台改造，Álvaro Siza Vieira 與 Carlos Castanheira"
+    }
+  ]
+}
