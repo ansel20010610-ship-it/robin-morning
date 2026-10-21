@@ -1,0 +1,193 @@
+{
+  "column": "perio",
+  "date": "2026-10-22",
+  "title": "接觸點到骨嵴 5 毫米：1992 年牙間乳頭研究",
+  "dek": "牙縫會被牙肉填滿，還是留下黑三角？Tarnow 等人看了 288 個部位，答案和接觸點到骨嵴有幾毫米密切相關。",
+  "takeaway": "接觸點到牙槽骨嵴 5 毫米以內，牙間乳頭幾乎都在；6 毫米時 56%，7 毫米以上至多 27%。前牙修復或單顆植體前可先估這段距離，預告黑三角的機會；兩支植體相鄰時不適用。",
+  "brief": "Tarnow 等人 1992 年檢查 30 名病人的 288 個牙間部位，看接觸點到牙槽骨嵴的距離和牙間乳頭在不在的關係。距離 5 毫米以內時乳頭幾乎都在，6 毫米時 56% 有乳頭，7 毫米以上只剩 27% 以下。本報的讀法是，前牙修復與植體規劃時可以先估這段距離，用來預告黑三角的機會。",
+  "topic_key": "perio:doi:10.1902/jop.1992.63.12.995",
+  "updated_at": "2026-10-22T00:48:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Black_triangles_large.jpg/1280px-Black_triangles_large.jpg",
+    "width": 1280,
+    "height": 774,
+    "alt": "口內正面近照，上下排前牙咬合。上顎正中門牙位置有一顆顏色較灰白的牙冠，兩側牙縫靠牙齦處各有一個深色的小三角形空隙，兩支紅色箭頭分別指向這兩個空隙。",
+    "caption": "上顎正中門牙位置的植體支持牙冠，兩側牙縫留下「黑三角」；紅色箭頭為原圖既有標示。上傳者說明空隙來自植體與鄰牙之間的骨頭流失。Coronation Dental Specialty Group 拍攝上傳（Commons 標示日期 2013 年 11 月）；與 Tarnow 等人的研究受試者無關。",
+    "credit": "Coronation Dental Specialty Group，Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Black_triangles_large.jpg",
+    "made": "2013"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "牙間乳頭（interdental papilla）能不能把兩顆牙之間的空間填滿，和接觸點到牙槽骨嵴（crest of bone）的垂直距離密切相關。Tarnow、Magner 與 Fletcher 在 1992 年檢查 30 名病人的 288 個牙間部位：距離 5 毫米以內，乳頭幾乎全都在；6 毫米時剩 56%；7 毫米以上只剩 27% 以下。這是一次性的橫斷面觀察，不是治療試驗。本報的讀法是，它讓「牙縫會不會留空隙」變成可以先量、先估的問題；後來的研究也把同一把尺用到植體旁的乳頭。"
+    },
+    {
+      "type": "h",
+      "text": "門診裡的一個場景：牙周治療後，門牙之間出現小黑洞"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "假設一位 50 歲的病人，牙周治療後牙齦消腫，上顎兩顆正中門牙之間露出一個小三角形空隙。他問：「這個牙縫補得起來嗎？」另一位病人準備把上顎門牙做成全瓷冠，希望牙縫不要留下黑洞。兩個問題其實是同一件事：這個位置的軟組織，撐不撐得到接觸點那麼高？這是說明用的假設情境，不是個案診療建議。"
+    },
+    {
+      "type": "paper",
+      "citation": "Tarnow DP, Magner AW, Fletcher P. The effect of the distance from the contact point to the crest of bone on the presence or absence of the interproximal dental papilla. *J Periodontol*. 1992;63(12):995–996.",
+      "doi": "10.1902/jop.1992.63.12.995",
+      "pmid": "1474471",
+      "link": "https://doi.org/10.1902/jop.1992.63.12.995",
+      "access": "依摘要與後續文獻整理",
+      "design": "橫斷面觀察（依摘要描述判斷）",
+      "sample": "30 名病人、288 個牙間部位",
+      "question": "接觸區底部到骨嵴的距離，和牙間乳頭在不在有沒有關係？"
+    },
+    {
+      "type": "h",
+      "text": "他們怎麼做：量一段距離，看牙縫有沒有空隙"
+    },
+    {
+      "type": "p",
+      "text": "研究量的是接觸區底部（base of the contact area）到牙槽骨嵴的距離，再看同一部位的乳頭在不在。判定方式很直白：接觸點下方看得到空隙，就算乳頭缺損；軟組織把牙間的三角形空間填滿，就算乳頭存在。乳頭只分「有」與「沒有」兩類，研究者再把各距離的部位分組，算出有乳頭的比例。"
+    },
+    {
+      "type": "svg",
+      "title": "接觸點到骨嵴的距離與牙間乳頭（原創示意圖）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 310\"><rect class=\"gold\" opacity=\"0.45\" stroke-width=\"0\" x=\"4\" y=\"130\" width=\"112\" height=\"110\"/><path class=\"muted\" opacity=\"0.8\" stroke-width=\"0\" d=\"M60,70 Q56,95 48,115 V130 H72 V115 Q64,95 60,70 Z\"/><path class=\"accent\" opacity=\"0.6\" stroke-width=\"0\" d=\"M38,130 L38,100 Q51,70 60,70 Q69,70 82,100 L82,130 Z\"/><path class=\"paper\" stroke-width=\"0\" d=\"M4,30 H52 Q60,40 60,70 Q56,95 48,115 V240 H4 Z\"/><path class=\"ink line\" stroke-width=\"1.2\" d=\"M4,30 H52 Q60,40 60,70 Q56,95 48,115 V240 H4 Z\"/><path class=\"paper\" stroke-width=\"0\" d=\"M116,30 H68 Q60,40 60,70 Q64,95 72,115 V240 H116 Z\"/><path class=\"ink line\" stroke-width=\"1.2\" d=\"M116,30 H68 Q60,40 60,70 Q64,95 72,115 V240 H116 Z\"/><line class=\"muted line\" stroke-width=\"1\" stroke-dasharray=\"3 2\" x1=\"60\" y1=\"70\" x2=\"100\" y2=\"70\"/><line class=\"muted line\" stroke-width=\"1\" stroke-dasharray=\"3 2\" x1=\"72\" y1=\"130\" x2=\"100\" y2=\"130\"/><line class=\"accent line\" stroke-width=\"1.6\" x1=\"96\" y1=\"70\" x2=\"96\" y2=\"130\"/><circle class=\"accent\" stroke-width=\"0\" cx=\"60\" cy=\"70\" r=\"2.5\"/><text class=\"accent\" x=\"60\" y=\"20\" font-size=\"13\" text-anchor=\"middle\">≤5 毫米</text><text class=\"ink\" x=\"60\" y=\"262\" font-size=\"11.5\" text-anchor=\"middle\">乳頭幾乎都在</text><text class=\"muted\" x=\"60\" y=\"279\" font-size=\"10.5\" text-anchor=\"middle\">空隙很少見</text><rect class=\"gold\" opacity=\"0.45\" stroke-width=\"0\" x=\"124\" y=\"142\" width=\"112\" height=\"98\"/><path class=\"muted\" opacity=\"0.8\" stroke-width=\"0\" d=\"M180,70 Q176,95 168,115 V142 H192 V115 Q184,95 180,70 Z\"/><path class=\"accent\" opacity=\"0.6\" stroke-width=\"0\" d=\"M158,142 L158,112 Q171,82 180,82 Q189,82 202,112 L202,142 Z\"/><path class=\"paper\" stroke-width=\"0\" d=\"M124,30 H172 Q180,40 180,70 Q176,95 168,115 V240 H124 Z\"/><path class=\"ink line\" stroke-width=\"1.2\" d=\"M124,30 H172 Q180,40 180,70 Q176,95 168,115 V240 H124 Z\"/><path class=\"paper\" stroke-width=\"0\" d=\"M236,30 H188 Q180,40 180,70 Q184,95 192,115 V240 H236 Z\"/><path class=\"ink line\" stroke-width=\"1.2\" d=\"M236,30 H188 Q180,40 180,70 Q184,95 192,115 V240 H236 Z\"/><line class=\"muted line\" stroke-width=\"1\" stroke-dasharray=\"3 2\" x1=\"180\" y1=\"70\" x2=\"220\" y2=\"70\"/><line class=\"muted line\" stroke-width=\"1\" stroke-dasharray=\"3 2\" x1=\"192\" y1=\"142\" x2=\"220\" y2=\"142\"/><line class=\"accent line\" stroke-width=\"1.6\" x1=\"216\" y1=\"70\" x2=\"216\" y2=\"142\"/><circle class=\"accent\" stroke-width=\"0\" cx=\"180\" cy=\"70\" r=\"2.5\"/><text class=\"accent\" x=\"180\" y=\"20\" font-size=\"13\" text-anchor=\"middle\">6 毫米</text><text class=\"ink\" x=\"180\" y=\"262\" font-size=\"11.5\" text-anchor=\"middle\">56% 有乳頭</text><text class=\"muted\" x=\"180\" y=\"279\" font-size=\"10.5\" text-anchor=\"middle\">44% 見空隙</text><rect class=\"gold\" opacity=\"0.45\" stroke-width=\"0\" x=\"244\" y=\"154\" width=\"112\" height=\"86\"/><path class=\"muted\" opacity=\"0.8\" stroke-width=\"0\" d=\"M300,70 Q296,95 288,115 V154 H312 V115 Q304,95 300,70 Z\"/><path class=\"accent\" opacity=\"0.6\" stroke-width=\"0\" d=\"M278,154 L278,124 Q291,94 300,94 Q309,94 322,124 L322,154 Z\"/><path class=\"paper\" stroke-width=\"0\" d=\"M244,30 H292 Q300,40 300,70 Q296,95 288,115 V240 H244 Z\"/><path class=\"ink line\" stroke-width=\"1.2\" d=\"M244,30 H292 Q300,40 300,70 Q296,95 288,115 V240 H244 Z\"/><path class=\"paper\" stroke-width=\"0\" d=\"M356,30 H308 Q300,40 300,70 Q304,95 312,115 V240 H356 Z\"/><path class=\"ink line\" stroke-width=\"1.2\" d=\"M356,30 H308 Q300,40 300,70 Q304,95 312,115 V240 H356 Z\"/><line class=\"muted line\" stroke-width=\"1\" stroke-dasharray=\"3 2\" x1=\"300\" y1=\"70\" x2=\"340\" y2=\"70\"/><line class=\"muted line\" stroke-width=\"1\" stroke-dasharray=\"3 2\" x1=\"312\" y1=\"154\" x2=\"340\" y2=\"154\"/><line class=\"accent line\" stroke-width=\"1.6\" x1=\"336\" y1=\"70\" x2=\"336\" y2=\"154\"/><circle class=\"accent\" stroke-width=\"0\" cx=\"300\" cy=\"70\" r=\"2.5\"/><text class=\"accent\" x=\"300\" y=\"20\" font-size=\"13\" text-anchor=\"middle\">≥7 毫米</text><text class=\"ink\" x=\"300\" y=\"262\" font-size=\"11.5\" text-anchor=\"middle\">≤27% 有乳頭</text><text class=\"muted\" x=\"300\" y=\"279\" font-size=\"10.5\" text-anchor=\"middle\">≥73% 見空隙</text><text class=\"muted\" x=\"180\" y=\"302\" font-size=\"10\" text-anchor=\"middle\">紅點：接觸點　紅線：接觸點到骨嵴　紅色：乳頭　灰色：空隙　金色：骨</text></svg>",
+      "caption": "原創示意圖，依 Tarnow 等（1992）摘要報告的比例繪製。三格只示意「骨嵴越低、接觸點下方越容易露出空隙」；乳頭形狀與高度是示意，不按比例，也不代表論文的量測方法。"
+    },
+    {
+      "type": "h",
+      "text": "5 毫米以內幾乎都長滿，多 1 毫米就只剩一半"
+    },
+    {
+      "type": "p",
+      "text": "換成直覺的說法：距離 5 毫米以內，乳頭幾乎每一處都在。到 6 毫米，每 100 個部位大約只有 56 個有乳頭，44 個看得到空隙。到 7 毫米以上，每 100 個部位最多 27 個有乳頭，也就是至少 73 個留下黑三角（black triangle）。關鍵在 5 與 6 毫米之間：距離只差 1 毫米，乳頭存在的比例就從接近全部掉到大約一半。"
+    },
+    {
+      "type": "table",
+      "title": "距離與乳頭存在比例",
+      "head": [
+        "接觸點到骨嵴",
+        "有乳頭",
+        "看得到空隙"
+      ],
+      "rows": [
+        [
+          "5 毫米以內",
+          "幾乎 100%",
+          "極少"
+        ],
+        [
+          "6 毫米",
+          "56%",
+          "44%"
+        ],
+        [
+          "7 毫米以上",
+          "27% 以下",
+          "73% 以上"
+        ]
+      ],
+      "caption": "依 Tarnow 等（1992）摘要數據整理；「看得到空隙」一欄是本報用 100% 減去有乳頭比例算出。摘要只給比例，沒有各組部位數。"
+    },
+    {
+      "type": "h",
+      "text": "植體旁一樣看 5 毫米，兩支植體之間乳頭平均只高 3.4 毫米"
+    },
+    {
+      "type": "p",
+      "text": "Choquet 等人在 2001 年（Tarnow 是共同作者）把同樣的問題用在上顎前牙區的單顆植體：26 名病人、27 支植體、52 個乳頭。接觸點到骨嵴 5 毫米以內時，植體與鄰牙之間的乳頭幾乎都在；6 毫米以上，存在的比例降到 50% 以下。骨嵴到乳頭頂端的軟組織高度平均 3.85 毫米。"
+    },
+    {
+      "type": "p",
+      "text": "兩支植體相鄰時更難。Tarnow 等人 2003 年由 8 位檢查者在 5 家私人診所檢查 33 名病人、136 個植體間乳頭，局部麻醉後用標準探針從乳頭頂端垂直探到骨嵴：平均只有 3.4 毫米，範圍 1 到 7 毫米。作者的結論是，在美學區讓兩支植體相鄰要非常謹慎，多數情況只能期待骨嵴上方長出 2、3 或 4 毫米的軟組織，美觀要求高時可能得修改治療計畫。"
+    },
+    {
+      "type": "p",
+      "text": "骨嵴本身也會因植體位置而降低。Tarnow、Cho 與 Wallace 在 2000 年量了 36 名病人相鄰兩支植體的 X 光片：植體肩部相距超過 3 毫米時，依摘要，兩者之間的骨嵴降低 0.45 毫米；相距 3 毫米以下時是 1.04 毫米。作者指出，骨嵴降得越多，接觸點到骨嵴的距離就越長，乳頭在不在可能因此改變。"
+    },
+    {
+      "type": "h",
+      "text": "今天怎麼用：先估距離，再談牙縫"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "本報的讀法是，這篇最實用的地方，在於讓醫病雙方在動手前就有共同的參考。修復或植體前若估出接觸點到骨嵴在 5 毫米以內，乳頭多半能填滿；6 毫米以上，就要先告訴病人可能留下空隙。由此推想，修復時把接觸區往牙齦方向延長、讓接觸點下移，可以縮短這段距離；但這是從距離與乳頭的關聯推出來的做法，不是這篇論文檢驗過的介入。"
+    },
+    {
+      "type": "p",
+      "text": "距離也不是唯一的因素。Cho 等人在 2006 年檢查 80 名病人的 206 個乳頭，先用非手術牙周治療把發炎降到最低，再於翻全厚瓣時量測：接觸點到骨嵴越遠、牙根之間的距離越寬，乳頭填滿的比例都越低。作者認為兩者各自有影響，也會互相疊加；在 4、5、6 毫米這幾個距離，牙根間距的影響特別明顯。"
+    },
+    {
+      "type": "h",
+      "text": "要小心的地方"
+    },
+    {
+      "type": "list",
+      "items": [
+        "原始研究只有 30 名病人、288 個部位，同一張嘴裡的多個部位並不獨立，摘要報告的「幾乎 100%」「27% 以下」是粗略比例而非精確預測值。",
+        "乳頭只分有、無兩類，看不出部分填滿的程度，而牙根間距等其他條件也會影響結果（Cho 等，2006）。",
+        "這是一次性的橫斷面觀察，顯示的是關聯，不能證明把距離縮短後乳頭一定會長回來。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The effect of the distance from the contact point to the crest of bone on the presence or absence of the interproximal dental papilla（PubMed 1474471）",
+      "publisher": "Journal of Periodontology 1992;63(12):995–996；National Library of Medicine",
+      "date": "1992-12-01",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1474471/",
+      "note": "Tarnow、Magner、Fletcher；依摘要（E-utilities efetch 核對書目與標題）"
+    },
+    {
+      "title": "The Effect of the Distance From the Contact Point to the Crest of Bone on the Presence or Absence of the Interproximal Dental Papilla（期刊 DOI 頁）",
+      "publisher": "Journal of Periodontology（Wiley／美國牙周病學會）",
+      "date": "1992-12-01",
+      "url": "https://doi.org/10.1902/jop.1992.63.12.995",
+      "note": "Crossref 核對卷期頁"
+    },
+    {
+      "title": "Clinical and radiographic evaluation of the papilla level adjacent to single-tooth dental implants. A retrospective study in the maxillary anterior region",
+      "publisher": "Journal of Periodontology 2001;72(10):1364–1371（PMID 11699478）",
+      "date": "2001-10-01",
+      "url": "https://doi.org/10.1902/jop.2001.72.10.1364",
+      "note": "Choquet、Hermans、Adriaenssens、Daelemans、Tarnow、Malevez；依摘要"
+    },
+    {
+      "title": "Vertical distance from the crest of bone to the height of the interproximal papilla between adjacent implants",
+      "publisher": "Journal of Periodontology 2003;74(12):1785–1788（PMID 14974820）",
+      "date": "2003-12-01",
+      "url": "https://doi.org/10.1902/jop.2003.74.12.1785",
+      "note": "Tarnow、Elian、Fletcher 等；依摘要"
+    },
+    {
+      "title": "The effect of inter-implant distance on the height of inter-implant bone crest",
+      "publisher": "Journal of Periodontology 2000;71(4):546–549（PMID 10807116）",
+      "date": "2000-04-01",
+      "url": "https://doi.org/10.1902/jop.2000.71.4.546",
+      "note": "Tarnow、Cho、Wallace；依摘要"
+    },
+    {
+      "title": "The effects of interproximal distance between roots on the existence of interdental papillae according to the distance from the contact point to the alveolar crest",
+      "publisher": "Journal of Periodontology 2006;77(10):1651–1657（PMID 17032106）",
+      "date": "2006-10-01",
+      "url": "https://doi.org/10.1902/jop.2006.060023",
+      "note": "Cho、Jang、Kim 等；依摘要"
+    },
+    {
+      "title": "File:Black triangles large.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2013-11-12",
+      "url": "https://commons.wikimedia.org/wiki/File:Black_triangles_large.jpg",
+      "note": "頭圖；Coronation Dental Specialty Group，CC BY-SA 3.0"
+    }
+  ]
+}
