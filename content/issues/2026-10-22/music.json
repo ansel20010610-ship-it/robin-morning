@@ -1,0 +1,295 @@
+{
+  "column": "music",
+  "date": "2026-10-22",
+  "title": "開頭的和弦，在終曲回來：艾爾加《大提琴協奏曲》",
+  "dek": "艾爾加 1919 年的大提琴協奏曲讓獨奏者先開口，最後又讓那段開場回來。本文用巴畢羅里指揮的 1965 年錄音，聽這個首尾呼應。",
+  "brief": "艾爾加 1919 年完成的《E 小調大提琴協奏曲》由大提琴獨自奏出的和弦開場，首演當天的排練時間被同場指揮 Albert Coates 拖延佔用。指定錄音是杜普蕾與巴畢羅里 1965 年 8 月 19 日在倫敦金斯威廳錄製的版本；巴畢羅里 19 歲時就坐在首演樂團的大提琴聲部裡。聆聽時留意開頭那段宣敘調，它在終樂章慢樂章主題重現之後還會再回來一次。",
+  "topic_key": "music:elgar-op85",
+  "updated_at": "2026-10-22T00:57:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Elgar-Beatrice-Harrison-HMV-November1920.jpg",
+    "width": 661,
+    "height": 491,
+    "alt": "黑白照片，木板牆的錄音室裡，一名捲髮女子坐著拉大提琴，身後站著一位留白色八字鬍、拿著指揮棒的年長男子。畫面左側有一個很大的喇叭形收音筒，從牆邊伸向演奏者；前景是幾位背對鏡頭、坐著看譜的樂手。",
+    "caption": "大提琴家碧翠絲・哈里森（Beatrice Harrison）與站在她身後的艾爾加，在 HMV 錄音室以聲學方式錄這首協奏曲。左邊的大喇叭就是當時的收音設備。Commons 把照片日期著錄為 1920 年 11 月；據 Tully Potter 的考證，哈里森 1919 年 12 月 22 日先錄好三個樂章，慢樂章的重錄拖到 1920 年 11 月 16 日才完成。",
+    "credit": "HMV 宣傳照，攝影者不詳；Commons 影像掃描自《Early Music》第 12 卷第 4 期（1984 年 11 月）第 481 頁的翻印",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Elgar-Beatrice-Harrison-HMV-November1920.jpg",
+    "made": "1920 年 11 月"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "樂團還沒出聲，大提琴就先開口：幾個厚實的和弦，標著 *Adagio*，譜上寫 *nobilmente*（高貴地）。樂團短短應答一句，大提琴接著拉出一段自由拍子的上行音階，像是要說什麼又收了回去。然後中提琴聲部單獨進來，奏出一條 9/8 拍的旋律。這是艾爾加（Edward Elgar）的《E 小調大提琴協奏曲》，作品 85，1919 年完成。"
+    },
+    {
+      "type": "p",
+      "text": "這段開場不會只出現一次。它在第二樂章開頭以撥奏的形式短暫閃過，到全曲最後幾分鐘，又完整地回來。本期選的錄音，指揮是當年首演時坐在樂團裡的一位大提琴手。"
+    },
+    {
+      "type": "music",
+      "composer": "艾爾加（Edward Elgar）",
+      "work": "E 小調大提琴協奏曲，作品 85",
+      "work_original": "Cello Concerto in E minor, Op. 85",
+      "composed": "1918–1919（主旋律記於 1918 年 3 月；總譜 1919 年 8 月 8 日寄出），題獻給 Sidney 與 Frances Colvin 夫婦",
+      "performers": "賈桂琳・杜普蕾（Jacqueline du Pré），大提琴；約翰・巴畢羅里（Sir John Barbirolli）指揮 倫敦交響樂團（London Symphony Orchestra）",
+      "recording": "His Master's Voice／EMI（ASD 655，與艾爾加《海景》同片），1965 年 8 月 19 日錄音於倫敦金斯威廳（Kingsway Hall）；1965 年 12 月發行",
+      "duration": "約 30 分鐘",
+      "movements": [
+        "I. Adagio – Moderato",
+        "II. Lento – Allegro molto",
+        "III. Adagio",
+        "IV. Allegro – Moderato – Allegro, ma non troppo – Poco più lento – Adagio"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Elgar Cello Concerto du Pré Barbirolli London Symphony Orchestra",
+        "artist_hint": "Jacqueline du Pré",
+        "track_filter": [
+          "Cello Concerto",
+          "Op. 85"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "Discogs 著錄的英國首版唱片資料寫明，這首協奏曲在 1965 年 8 月 19 日於倫敦金斯威廳錄音，同一張唱片的另一面是珍妮特・貝克（Janet Baker，Discogs 標為女低音）唱的艾爾加連篇歌曲《海景》（Sea Pictures），8 月 30 日在艾比路錄音室錄製；唱片編號 ASD 655，1965 年 12 月發行。elgar.org 的杜普蕾專頁說，這是她第一次和管弦樂團一起進錄音室，並稱這張唱片是 EMI 有史以來最暢銷的唱片之一（轉引自該頁，未列出銷售數字）。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "選它，是因為指揮和這首曲子的關係。Tully Potter 在《艾爾加學會期刊》2016 年 12 月號的文章寫到，1919 年首演那晚，當時 19 歲的巴畢羅里（年齡依 elgar.org）就在倫敦交響樂團的大提琴聲部；1921 年 1 月 27 日，他還在伯恩茅斯以獨奏者身分拉過這首協奏曲。46 年後，他站上指揮台替杜普蕾伴奏。另一個巧合是錄音地點：艾爾加本人 1928 年指揮的完整錄音，也是在金斯威廳錄的。"
+    },
+    {
+      "type": "h",
+      "text": "扁桃腺手術後寫下的 9/8 拍旋律"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1918 年 3 月，60 歲的艾爾加住進倫敦一家療養院割扁桃腺。據 elgar.org 的專文〈Creating a Classic〉，他的女兒 Carice 後來回憶，父親痛了好幾天，某天早上醒來卻要了紙筆，寫下這首協奏曲的開頭主題。專文說的就是那條 9/8 拍的旋律，也就是開頭由中提琴奏出的那一段。"
+    },
+    {
+      "type": "quote",
+      "original": "he woke up one morning and asked for pencil and paper and wrote down the opening theme of the Cello Concerto.",
+      "text": "他某天早上醒來，要了鉛筆和紙，寫下了大提琴協奏曲的開頭主題。",
+      "cite": "Carice Elgar 的回憶，轉引自 elgar.org〈Creating a Classic〉，未註明原始出處（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "波士頓交響樂團網站上署名 Hugh Macdonald 的曲目解說，把寫下這條旋律的日子定在 1918 年 3 月 23 日，並說那是他割完扁桃腺、出院回家之後；英文維基百科也寫是回到倫敦家中的那一晚，和 Carice 的回憶在地點上不盡相同。elgar.org 的專文則說，旋律寫好後好幾週，艾爾加都沒有拿它來用；戰爭期間他幾乎停筆，曾寫信給好友、藝術史家 Sidney Colvin，說戰爭的陰影籠罩之下，他做不了任何真正的工作。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "同年 5 月，艾爾加一家搬到薩塞克斯（Sussex）鄉間 Fittleworth 附近的茅草屋 Brinkwells，前一年夏天他們已經在那裡住過。據 elgar.org，艾爾加在那裡試著為 9/8 拍的旋律配器，仍不知道要拿它做什麼。8 月，他讓人把一架舊的史坦威直立鋼琴運進小屋，隔天就開始寫小提琴奏鳴曲；接下來五個月，又寫了鋼琴五重奏和弦樂四重奏。到 1919 年 5 月三首室內樂都已公開演出時，他已經想好要把那條旋律寫成一首大提琴協奏曲。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Brinkwells_Cottage%2C_near_Bedham_-_geograph.org.uk_-_1532705.jpg",
+      "width": 640,
+      "height": 480,
+      "alt": "一棟兩層小屋的轉角，右半是石砌牆面、厚厚的茅草屋頂，左半是黑色木板外牆、白框窗。屋前有碎石小徑和灌木，左邊長著一叢高大的芒草狀植物，天空多雲。",
+      "caption": "Brinkwells 小屋，2009 年 5 月 3 日拍攝的現況，不是艾爾加住在那裡時的樣子。小屋在西薩塞克斯郡 Fittleworth 北邊；1918 年的三首室內樂在這裡寫成；協奏曲則在這裡與倫敦的 Severn House 兩地寫作。",
+      "credit": "Peter Whitcomb，經 geograph.org.uk 與 Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Brinkwells_Cottage,_near_Bedham_-_geograph.org.uk_-_1532705.jpg",
+      "made": "2009"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "協奏曲的草稿沒有留下來，進度只能靠書信與日記拼湊。依 elgar.org 與 Potter 的整理：1919 年 6 月 2 日，艾爾加 62 歲生日，指揮家 Landon Ronald 來訪，聽他在鋼琴上彈了一大段；6 月 5 日，大提琴家 Felix Salmond 到倫敦的 Severn House 試奏。7 月底，艾爾加寫信告訴 Colvin，他「幾乎完成了一首大提琴協奏曲」，打算題獻給 Colvin 夫婦。7 月 31 日 Salmond 到 Brinkwells 住了三天，兩人反覆排練，艾爾加隨後請他擔任首演獨奏。8 月 8 日，艾爾加夫人愛麗絲（Alice Elgar）親自把總譜拿到 Fittleworth 郵局，寄給出版商 Novello。"
+    },
+    {
+      "type": "h",
+      "text": "首演：排練時間被另一位指揮佔走"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "首演在 1919 年 10 月 27 日（週一），倫敦女王廳（Queen's Hall），是倫敦交響樂團新樂季的開幕音樂會。Potter 列出當晚的曲目：鮑羅定《第二號交響曲》、華格納〈森林的呢喃〉、史克里亞賓《狂喜之詩》，由樂團新任指揮 Albert Coates 指揮；排在鮑羅定之後的大提琴協奏曲，則由艾爾加自己指揮。問題出在排練。艾爾加夫人在日記裡這樣記下首演當天："
+    },
+    {
+      "type": "quote",
+      "original": "That brute, Coates went on rehearsing 'Waldweben'. … A. wanted E. to withdraw, but he did not for Felix S.'s sake – Indifferent performance of course in consequence. E. had a tremendous reception & ovation.",
+      "text": "那個粗人 Coates 一直在排〈森林的呢喃〉……我（A.）要 E. 撤下這首曲子，但他為了 Felix S. 沒有這麼做——結果演出當然平平。E. 得到熱烈的掌聲與歡呼。",
+      "cite": "艾爾加夫人日記，1919 年 10 月 27 日；轉引自 Tully Potter，《艾爾加學會期刊》2016 年 12 月號（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "據 Potter 轉引，樂評家 Ernest Newman 在 11 月 2 日的《觀察家報》（The Observer）上說，他聽說這週排練不足，又寫道「never, in all probability, has so great an orchestra made so lamentable a public exhibition of itself」（這麼偉大的樂團，大概從來沒有在公開場合這麼可悲地出醜過；本文自譯）。對作品本身，他的評價截然不同：「The work itself is lovely stuff, very simple」（作品本身很美，非常簡單；本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Potter 認為這場首演的「災難」被後人放大了。他指出，唱衰演出的人——艾爾加夫婦、Salmond、巴畢羅里——都事先知道排練不夠，Newman 也先聽到了排練不足的傳聞；其他報紙的樂評，例如《約克郡郵報》，則稱讚 Salmond 拉得很好、觀眾反應熱烈。他也反駁「Salmond 從此不在英國拉這首曲子」的說法：1920 年 3 月 20 日，Salmond 在曼徹斯特拉了第二次演出，指揮正是 Albert Coates。"
+    },
+    {
+      "type": "timeline",
+      "title": "一首協奏曲和它的錄音",
+      "items": [
+        {
+          "when": "1918.3",
+          "label": "扁桃腺手術後寫下 9/8 拍旋律",
+          "note": "Macdonald 定在 3 月 23 日"
+        },
+        {
+          "when": "1918.5",
+          "label": "艾爾加一家移居 Brinkwells",
+          "note": "8 月起寫三首室內樂"
+        },
+        {
+          "when": "1919.8.8",
+          "label": "總譜從 Fittleworth 寄出",
+          "note": "寄給出版商 Novello"
+        },
+        {
+          "when": "1919.10.27",
+          "label": "倫敦女王廳首演",
+          "note": "Salmond 獨奏，艾爾加指揮倫敦交響樂團"
+        },
+        {
+          "when": "1919.12.22",
+          "label": "哈里森錄下三個樂章",
+          "note": "HMV，Hayes，聲學錄音"
+        },
+        {
+          "when": "1920.3.20",
+          "label": "Salmond 在曼徹斯特拉第二次演出",
+          "note": "指揮是 Coates"
+        },
+        {
+          "when": "1920.4.7",
+          "label": "艾爾加夫人過世",
+          "note": ""
+        },
+        {
+          "when": "1920.11.16",
+          "label": "哈里森重錄慢樂章",
+          "note": "聲學錄音版完成"
+        },
+        {
+          "when": "1921.1.27",
+          "label": "巴畢羅里在伯恩茅斯獨奏",
+          "note": "Dan Godfrey 指揮"
+        },
+        {
+          "when": "1928.3、6",
+          "label": "哈里森與艾爾加錄完整版",
+          "note": "金斯威廳，新交響樂團"
+        },
+        {
+          "when": "1965.8.19",
+          "label": "杜普蕾、巴畢羅里錄音",
+          "note": "金斯威廳，倫敦交響樂團"
+        }
+      ],
+      "caption": "依 Tully Potter（《艾爾加學會期刊》2016 年 12 月號）、elgar.org、波士頓交響樂團曲目解說與 Discogs 唱片資料整理。"
+    },
+    {
+      "type": "h",
+      "text": "聆聽導引：四個樂章，兩兩相連"
+    },
+    {
+      "type": "p",
+      "text": "**第一樂章：Adagio – Moderato。** 開頭的大提琴宣敘調之後，留意中提琴聲部單獨奏出的 9/8 拍主題，接著由大提琴接手。elgar.org 的導聆（Frank Beck 統籌）說這個樂章是簡單的三段式：主題來回幾次、越來越激動，中段是 12/8 拍、較活潑的第二主題（英文維基百科標為 E 大調），再回到主題，最後大提琴以撥奏收尾。這個樂章不停下來，直接接入第二樂章。"
+    },
+    {
+      "type": "p",
+      "text": "**第二樂章：Lento – Allegro molto。** 洛杉磯愛樂的曲目解說指出，連接段由大提琴以撥奏影射開頭的和弦，然後才進入一段音符不斷奔跑的詼諧曲。波士頓交響樂團的解說說這段是 4/4 拍、一路十六分音符。Potter 提到，這裡要用彈跳的「saltato」運弓，難倒過不少名家；聽這一段，重點是大提琴怎麼在快速音群裡始終保持輕巧。"
+    },
+    {
+      "type": "p",
+      "text": "**第三樂章：Adagio。** 篇幅很短，據 Beck 的導聆是降 B 大調；英文維基百科說整個樂章只有一個主題。波士頓交響樂團的解說說它不停頓地直接接入終樂章，所以第三、四樂章和第一、二樂章一樣，是連在一起的一對。"
+    },
+    {
+      "type": "p",
+      "text": "**第四樂章：Allegro – Moderato – Allegro, ma non troppo – Poco più lento – Adagio。** 樂團先做一次快速的漸強，大提琴再來一段宣敘調與裝飾奏，然後進入步伐穩健的主題。全曲最重要的地方在最後：速度放慢到 Poco più lento，再慢到第三樂章的速度，慢樂章的主題重新出現；接著，第一樂章開頭那段宣敘調回來了。最後終樂章主題短暫重現，樂團用幾個和弦結束全曲。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：這首協奏曲把最重的分量放在結尾前的那幾分鐘，而不是最後的和弦。開頭那段 *nobilmente* 的宣敘調，在全曲第一次出現時像是一個開場白；隔了將近半小時再聽到，同樣的音型聽起來是在回頭看。聽杜普蕾這一版，可以特別比較這兩次出現時她的速度與音量有什麼不同。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "洛杉磯愛樂的解說指出，這是艾爾加最後一部完成的大型管弦樂作品。首演後不到半年，1920 年 4 月 7 日，艾爾加夫人因癌症過世。elgar.org 的專文記下，艾爾加 1933 年病重時曾對朋友哼起第一樂章的主題，說如果他死後有人在馬爾文丘陵（Malvern Hills）上吹口哨吹這個旋律，「不用害怕，那只是我」（本文自譯；這句話流傳的字句版本不一）。"
+    },
+    {
+      "type": "callout",
+      "label": "延伸聆聽",
+      "text": "比較錄音：碧翠絲・哈里森獨奏、艾爾加指揮新交響樂團（New Symphony Orchestra），1928 年 3 月與 6 月在金斯威廳為 HMV 錄製的完整版本，可以聽到作曲者本人的速度。相關作品：同一時期寫成的艾爾加《A 小調鋼琴五重奏》，作品 84。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "A Much Maligned Cellist: The true story of Felix Salmond and the Elgar Cello Concerto",
+      "publisher": "The Elgar Society Journal, Vol. 19 No. 6（Tully Potter 撰）",
+      "date": "2016-12",
+      "url": "https://www.elgarsociety.org/wp-content/uploads/2015/07/ESJ-Dec-2016-final.pdf",
+      "note": "Salmond 試奏與 Brinkwells 之行、8 月 8 日寄出總譜、首演曲目與艾爾加夫人日記、Newman 與《約克郡郵報》樂評、巴畢羅里在首演樂團、哈里森 1919–1920 聲學錄音與 1928 年金斯威廳錄音、曼徹斯特第二次演出、艾爾加夫人過世、巴畢羅里 1921 年伯恩茅斯演出"
+    },
+    {
+      "title": "Elgar - His Music: Cello Concerto - Introduction",
+      "publisher": "elgar.org",
+      "url": "https://www.elgar.org/3cellcon.htm",
+      "note": "樂章、長度、首演、題獻；2026-10-21 查閱"
+    },
+    {
+      "title": "Creating a Classic: How Elgar came to Write the Concerto",
+      "publisher": "elgar.org",
+      "url": "https://www.elgar.org/3cello-c.htm",
+      "note": "1918 年 3 月扁桃腺手術與 Carice 的回憶、Brinkwells、三首室內樂、致 Colvin 信、馬爾文丘陵的話；2026-10-21 查閱"
+    },
+    {
+      "title": "A Musical Tour of the Concerto",
+      "publisher": "elgar.org（Frank Beck）",
+      "url": "https://www.elgar.org/3cello-a.htm",
+      "note": "各樂章導聆、第三樂章調性；2026-10-21 查閱"
+    },
+    {
+      "title": "Jacqueline du Pré: The concerto's consummate interpreter?",
+      "publisher": "elgar.org",
+      "url": "https://www.elgar.org/3cello-b.htm",
+      "note": "1965 年 8 月與倫敦交響樂團錄音、她第一次與樂團進錄音室、暢銷評語；2026-10-21 查閱"
+    },
+    {
+      "title": "Elgar – Jacqueline Du Pré, Sir John Barbirolli, London Symphony Orchestra, Janet Baker – Cello Concerto / Sea Pictures（ASD 655，英國首版）",
+      "publisher": "Discogs",
+      "url": "https://www.discogs.com/release/4867334",
+      "note": "協奏曲 1965 年 8 月 19 日錄於金斯威廳、《海景》8 月 30 日錄於艾比路第一錄音室、1965 年 12 月發行；2026-10-21 查閱"
+    },
+    {
+      "title": "Elgar: Cello Concerto（program note）",
+      "publisher": "Boston Symphony Orchestra（Hugh Macdonald 撰）",
+      "url": "https://www.bso.org/works/elgar-cello-concerto",
+      "note": "主旋律日期 1918 年 3 月 23 日、詼諧曲 4/4 拍十六分音符、第三樂章直接接入終樂章；2026-10-21 查閱"
+    },
+    {
+      "title": "Cello Concerto, Edward Elgar",
+      "publisher": "Los Angeles Philharmonic（Orrin Howard 撰）",
+      "url": "https://www.laphil.com/musicdb/pieces/1197/cello-concerto",
+      "note": "開頭標 Nobilmente、中提琴單獨奏主題、撥奏連接段、終樂章回顧；2026-10-21 查閱"
+    },
+    {
+      "title": "Cello Concerto (Elgar)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cello_Concerto_(Elgar)",
+      "note": "樂章標示、首演為倫敦交響樂團樂季開幕音樂會、各樂章段落順序；2026-10-21 查閱"
+    }
+  ]
+}
