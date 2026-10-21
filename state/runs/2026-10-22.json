@@ -18,5 +18,10 @@
       "literature"
     ],
     "note": "完成 civilization（古迦納商隊稅則）與 city（里斯本聖胡斯塔升降機），兩篇皆經審稿修正後推送；validate 無 ERROR，city 僅 1 個 Commons 限流 WARN"
+  },
+  "3": {
+    "finished_at": "2026-10-22T03:07:02+08:00",
+    "missing": [],
+    "note": "完成 fiction、literature、巴薩晨報初稿，三篇皆經審稿修正後推送；初稿截稿時 03:00 開賽的七場歐冠（含皇馬對萊比錫、拜仁對兵工廠）尚未開賽，需第 4 班補比分"
   }
 }
