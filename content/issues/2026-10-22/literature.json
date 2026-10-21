@@ -1,0 +1,412 @@
+{
+  "column": "literature",
+  "date": "2026-10-22",
+  "title": "「人生旅程的中途」：1472 年《神曲》兩種第一頁",
+  "dek": "《神曲》第二行的動詞 ritrovai 比 trovai 多一個 ri。1472 年福利尼奧版的兩份存本，第一頁一份有這個 ri，一份沒有。",
+  "brief": "《神曲》開頭說，在人生旅程的中途，「我發覺自己」置身幽暗的森林，動詞是 mi ritrovai。帕尼齊 1858 年指出，兩份 1472 年福利尼奧版的第一頁分兩次排版；從他附的摹本看，喬治三世本印 mi ritrouai，格倫維爾本印 mi trouai。本文照一般讀法來數，少了 ri 的那一行只有 10 個音節。",
+  "topic_key": "literature:alighieri-inferno-i-1",
+  "updated_at": "2026-10-22T03:06:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Alighieri_-_Comed%C3%ACa%2C_Foligno%2C_1472.djvu/page6-960px-Alighieri_-_Comed%C3%ACa%2C_Foligno%2C_1472.djvu.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Alighieri_-_Comed%C3%ACa%2C_Foligno%2C_1472.djvu/page6-1280px-Alighieri_-_Comed%C3%ACa%2C_Foligno%2C_1472.djvu.jpg",
+    "width": 960,
+    "height": 1425,
+    "alt": "一頁 15 世紀印本，米黃色紙，羅馬體字。上方七行散文標題，從大寫的 COMINCIA LA COMEDIA DI 開始。下面是詩句，左邊一個手繪的大寫首字母 N，藍色字身、紅色花紋底；首字母右邊是開頭六行，再往下 15 行左右對齊。頁面下方有一個橢圓形黑色印章，字樣 BIBLIOTH. CORSINIA VETUS，左邊一個紅色圓形小印。",
+    "caption": "1472 年福利尼奧版《神曲》第一頁（BEIC 數位圖書館掃描本）。手繪的 N 補上了印刷時留白的首字母，NEL mezo delcamin 由此開始；第二行印的是 mi trouai puna selua oscura，印本沒有 ri。頁上 tr 上方有一處淡褐色記號，從掃描無法判定是否手寫補字。",
+    "credit": "但丁，《神曲》，福利尼奧，1472 年，Commons 著錄印刷者為 Johann Neumeister；BEIC 數位圖書館掃描，與 BEIC 基金會合作上傳 Wikimedia Commons（DjVu 檔第 6 頁）。頁面上可見 BIBLIOTH. CORSINIA VETUS 印章",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Alighieri_-_Comed%C3%ACa,_Foligno,_1472.djvu?page=6",
+    "made": "1472"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "但丁（Dante Alighieri）的《神曲》（Commedia）從一個三行的詩節開始。第一行說的是「我們的」人生，第二行換成「我」，第三行連人稱都沒有，只說路已經迷失了。這三行在現代校勘本裡是這樣："
+    },
+    {
+      "type": "quote",
+      "original": "Nel mezzo del cammin di nostra vita\nmi ritrovai per una selva oscura,\nché la diritta via era smarrita.",
+      "text": "在我們人生旅程的中途，\n我發覺自己置身一座幽暗的森林，\n因為筆直的路已經迷失。",
+      "cite": "本文自譯。原文依義大利文維基文庫〈地獄篇〉第 1 歌第 1–3 行，該頁編者在討論頁說明採用 Petrocchi 校勘本"
+    },
+    {
+      "type": "facts",
+      "title": "作品與版本",
+      "items": [
+        [
+          "作者",
+          "但丁（Dante Alighieri，約 1265–1321）"
+        ],
+        [
+          "作品",
+          "Commedia（後世通稱 Divina Commedia）第一部〈地獄篇〉（Inferno）"
+        ],
+        [
+          "寫作與出版",
+          "Treccani 線上百科說，學者認為《神曲》寫於但丁流亡期間（或始於 1304 年或 1307 年），前兩部可能在他生前流傳，〈天堂篇〉在身後發表；最早的印本出於 1472 年"
+        ],
+        [
+          "引句位置",
+          "〈地獄篇〉第 1 歌第 1–3 行"
+        ],
+        [
+          "現代文本",
+          "Petrocchi 校勘本，經義大利文維基文庫線上版核對"
+        ],
+        [
+          "《饗宴》引文",
+          "Convivio 第四卷第 23 章第 9–11 節，依義大利文維基文庫"
+        ],
+        [
+          "1472 年版",
+          "福利尼奧（Foligno）印本，Commons 著錄印刷者為 Johann Neumeister；BEIC 數位圖書館掃描本第 6 頁（Commons DjVu 檔第 6 頁）"
+        ],
+        [
+          "對照版本",
+          "Lord Vernon 主持、帕尼齊（Antonio Panizzi）撰序的《神曲最早四版逐字重印》（Le prime quattro edizioni della Divina Commedia letteralmente ristampate），倫敦 Boone，1858 年；序言第 vi–ix 頁、摹本 N° I 與 N° II、正文第 1 頁"
+        ],
+        [
+          "譯文",
+          "中文引文皆為本文自譯，未使用出版中譯本"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "「我們的」人生，「我」的森林"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "第一行的所有格是 nostra，「我們的」。第二行的 mi 是第一人稱單數的反身代詞，動詞 ritrovai 是「我」的過去式。第三行的主詞是路：la diritta via era smarrita，「筆直的路已經迷失」。句子沒有說是誰把路弄丟的。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，三行裡的人稱一路收窄又放開。人生這條路屬於所有人，掉進森林的是一個人，而失路這件事寫成了路自己的狀態，好像說話的人到了這一刻才發覺，卻說不出是哪一步走錯。第 10 至 12 行接著說：«Io non so ben ridir com’i’ v’intrai, / tant’era pien di sonno a quel punto / che la verace via abbandonai»，「我說不清自己是怎麼走進去的，那時我是那樣充滿睡意，以致離開了真實的路」（本文自譯），和這個讀法一致。"
+    },
+    {
+      "type": "h",
+      "text": "中途是幾歲：《饗宴》裡的弧線"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "散文論著《饗宴》（Convivio）第四卷第 23 章說，人的一生像一道弧，先上升後下降；第 9 節談弧頂在哪裡："
+    },
+    {
+      "type": "quote",
+      "original": "Là dove sia lo punto sommo di questo arco, per quella disaguaglianza che detta è di sopra, è forte da sapere; ma ne li più io credo tra il trentesimo e quarantesimo anno, e io credo che ne li perfettamente naturati esso ne sia nel trentacinquesimo anno.",
+      "text": "這道弧的最高點在哪裡，由於前面說過的那種不均等，很難知道；但我相信，在多數人身上是在第 30 年到第 40 年之間，而我相信，在天生完美的人身上，是在第 35 年。",
+      "cite": "本文自譯。原文依義大利文維基文庫《饗宴》第四卷第 23 章第 9 節"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "第 10 節給的理由是基督：天生最完美的救主「願在自己第 34 年死去」（volle morire nel trentaquattresimo anno de la sua etade，本文自譯），因為神性不宜停留在衰退之中。第 11 節再用路加福音說基督死在「約略第六時」，也就是一天的正中，推出基督第 35 年是他一生的頂點。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "把〈地獄篇〉的「中途」和《饗宴》這道弧連起來讀的，是《但丁百科全書》（Enciclopedia Dantesca，1970 年）的條目作者。Francesco Del Punta 執筆的「mezzo」條說，〈地獄篇〉第 1 行可以歸入「弧的頂點」這個詞義，並請讀者參看《饗宴》第四卷第 23 章第 9 節；Andrea Mariani 執筆的「cammino」條說，這裡的 cammino 是「人生的行程」（corso della vita），在 35 歲前後到達一半。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "照這個讀法，「中途」不只是「人生走到一半」的泛稱，而是弧線最高的那一點。在但丁自己的算法裡，人走到最高處的時候，正好是發覺自己迷路的時候。"
+    },
+    {
+      "type": "h",
+      "text": "ritrovai 的 ri，不是「再一次」"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "第二行的動詞不是 trovai（我找到、我發現），而是加了字首 ri- 的 ritrovai。mi ritrovai 是反身用法，字面是「我把自己（再）找到」。中文譯成「發覺自己置身」，ri 的那一層就沒有了。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "《但丁百科全書》由 Alessandro Niccoli 執筆的「ritrovare」條說，這個動詞相對於簡單的 trovare，除了反覆之外還有加強的意思，所以常帶著「找了之後才找到」的意味。但他接著指出，〈地獄篇〉第 1 歌第 2 行這一處是例外："
+    },
+    {
+      "type": "quote",
+      "original": "Non ha alcun valore iterativo quando, usato come intransitivo pronominale, esprime la sorpresa e lo smarrimento di chi si accorge di esser capitato in un posto senza volerlo e senza aver consapevolezza del come vi è giunto: If I 2 mi ritrovai per una selva oscura.",
+      "text": "當它作為代詞式不及物動詞使用時，沒有任何反覆的意思；它表達的是一個人發覺自己並非有意、也不知道怎麼就到了某個地方時的驚訝與迷亂，例如〈地獄篇〉第 1 歌第 2 行「我發覺自己置身一座幽暗的森林」。",
+      "cite": "本文自譯。Alessandro Niccoli，《但丁百科全書》「ritrovare」條，1970 年"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Niccoli 接著說，這個動詞裡仍然帶著但丁的「回來」（ritorno）。這一層意思他轉引自詩人帕斯科利（Giovanni Pascoli）的《但丁論集》（Scritti danteschi，米蘭，1952 年，第 252 頁）；在 Niccoli 的條目裡，帕斯科利的引號從「回到認知」（a conoscenza）這幾個字就開始了。Niccoli 引帕斯科利的話：«a conoscenza. A trentacinque anni si ritrovò. Ciò pare detto in tono di vergogna, di confessione amara, come se noi dovessimo aggiungere un finalmente! che esso tace»，「回到認知。他在 35 歲時找回了自己。這話聽起來帶著羞愧，像苦澀的告白，彷彿我們得替它補上一句它沒說出口的『終於！』」（本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "兩種解釋並不衝突。照 Niccoli 的百科條目，ri 在這裡不表示「第二次」；語氣上，它保留了一點「醒過來」的意思：人不是走進森林那一刻才在那裡，而是到了某一刻，才發覺自己早就在那裡。帕斯科利聽到的「終於」，就落在這個發覺上。"
+    },
+    {
+      "type": "h",
+      "text": "1472 年的福利尼奧版：同一頁排了兩次"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "1858 年，倫敦出版了一部《神曲最早四版逐字重印》，把福利尼奧、耶西（Jesi）、曼托瓦（Mantova）三個 1472 年版和未標年份的拿坡里（Napoli）版並排重印。序言〈致讀者〉署名帕尼齊，寫於大英博物館，日期 1858 年 7 月 31 日。他手上有兩份大英博物館藏的福利尼奧版：一份屬於英王喬治三世的藏書，後由喬治四世贈給博物館；另一份是格倫維爾（Thomas Grenville）的遺贈。"
+    },
+    {
+      "type": "quote",
+      "original": "anche dove corrispondono lettere e parole, gl' intervalli e la giacitura delle lettere mostrano apertamente che quella faccia, e lo stesso dicasi di parecchie altre, è stata composta a due diverse riprese nelle due copie.",
+      "text": "就算字母和詞語對得上，字距和字母的排列也明白顯示，那一面（其他好幾面也一樣）在這兩份書裡是分兩次排版的。",
+      "cite": "本文自譯。帕尼齊，〈致讀者〉，1858 年重印本序言第 viii 頁；原書以長 s 排印，此處改作一般 s"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "帕尼齊說，兩份書的差異不必翻過第一面就能找到好幾處，所以他把兩份書的第一頁各做了一張摹本，編為 N° I（格倫維爾本）與 N° II（喬治三世本）。他也說明，這部重印本「一般而言，並非總是」（Generalmente, non sempre，序言第 ix 頁）依格倫維爾本排印。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "福利尼奧版在詩前印了一段散文標題，以下依格倫維爾本與 BEIC 掃描本抄錄（喬治三世本有幾處拼法不同，見下文）：COMINCIA LA COMEDIA DI dante alleghieri di fiorenze nella quale tracta delle pene et punitioni de uitii et demeriti et premii delle uirtu: Capitolo primo della prima parte de questo libro loquale se chiama inferno: nel quale lautore fa prohemio ad tucto el tractato del libro，「佛羅倫斯人但丁・阿利吉耶里的《喜劇》由此開始，書中講述罪惡與過失的懲罰、美德的獎賞。本書第一部、名為地獄者之第一章：作者在此為全書作序」（本文自譯；原文縮寫已展開、連寫的詞已分開）。照這段標題，第一歌是整部書的序，開頭這三行也就是全書的頭三行。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.04,
+        0.295,
+        0.62,
+        0.08
+      ],
+      "position": "頁面上方三分之一處，手繪首字母 N 與右邊的開頭三行",
+      "caption": "頭圖這份書的開頭三行。第二行是 mi trouai puna selua oscura：trouai 前面沒有 ri，「per una」縮寫成帶橫線的 p 再接 una，連成一個字。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "帕尼齊並不認定福利尼奧版一定最早。他描述曼托瓦版時說，它和福利尼奧、耶西兩版「同時」，而且「也許、也許是頭一個」（e forse forse primogenita，本文自譯）。他也查過別的存本：書目學家 Dibdin 曾記載斯賓塞伯爵（Earl Spencer）那一份第 9 行讀作 altre cose，帕尼齊後來親自看到那一份，發現它和其他幾份一樣印作錯誤的 atre，是 Dibdin 記錯了。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Le_Prime_Quattro_Edizioni_Della_Divina_Commedia_Letteralmente_Ristampate_%28IA_leprimequattroed00dant%29.pdf/page27-960px-Le_Prime_Quattro_Edizioni_Della_Divina_Commedia_Letteralmente_Ristampate_%28IA_leprimequattroed00dant%29.pdf.jpg",
+      "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Le_Prime_Quattro_Edizioni_Della_Divina_Commedia_Letteralmente_Ristampate_%28IA_leprimequattroed00dant%29.pdf/page27-1280px-Le_Prime_Quattro_Edizioni_Della_Divina_Commedia_Letteralmente_Ristampate_%28IA_leprimequattroed00dant%29.pdf.jpg",
+      "width": 960,
+      "height": 1494,
+      "alt": "一頁 19 世紀印刷的摹本，米黃色紙。頁頂小字斜體寫 Foligno 與 Esemplare di Giorgio III。下面是七行散文標題，第一行全大寫 COMINCIA LA COMEDIA DI；再下面是 21 行詩句，開頭三行從 EL mezo delcamin 起，左邊空著一塊放首字母的位置，左緣有一個很小的 n。頁腳有一段斜體小字註。",
+      "caption": "帕尼齊重印本的摹本 N° II：大英博物館藏福利尼奧版喬治三世本的第一頁。第二行讀作 mi ritrouai p una selua oscura，p 下加一橫是 per 的縮寫。和頭圖比對，同一行少了 ri 的那份書，「per una」縮成 puna 連寫。",
+      "credit": "《神曲最早四版逐字重印》（Le prime quattro edizioni della Divina Commedia letteralmente ristampate），Lord Vernon 主持，倫敦 Boone，1858 年；Internet Archive 掃描（Duke University Libraries），Wikimedia Commons PDF 第 27 頁",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Le_Prime_Quattro_Edizioni_Della_Divina_Commedia_Letteralmente_Ristampate_(IA_leprimequattroed00dant).pdf?page=27",
+      "made": "1858",
+      "depicts": "1472 年印本的第一頁"
+    },
+    {
+      "type": "detail",
+      "of": "f2",
+      "region": [
+        0.4,
+        0.39,
+        0.42,
+        0.075
+      ],
+      "position": "頁面中段偏右，詩的開頭三行",
+      "caption": "喬治三世本的開頭三行。第二行 mi ritrouai 和後面的 p 之間空了一格；頭圖那份書在同一位置是 mi trouai puna。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "把兩張第一頁逐行比對，ri 不是唯一的差別。標題裡，格倫維爾本寫 fiorenze、punitioni de uitii、pma（prima 的縮寫）、loquale，喬治三世本寫 firenze、punicioni de uicii、prima、loq̃le；第 5 行的「蠻荒的」，格倫維爾本是 seluagia，喬治三世本是 seluaggia；第 13 行開頭，格倫維爾本是 Ma poi che fui，喬治三世本是 Ma poi chi fui。BEIC 掃描本在這幾處都和格倫維爾本相同。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "這些差別多半只是拼法，換成哪一種都不影響音節。第二行的情形不同：p una 與 puna 只是縮寫連不連寫，ri 的有無卻改變了詩行的長度。由此推想，重排這一面的人若是照著已印好的一頁排字，最容易漏掉或補上的，正是這種夾在詞中間、看起來可有可無的兩個字母。這是推想，帕尼齊沒有這樣說。"
+    },
+    {
+      "type": "table",
+      "title": "第一詩節在早期印本裡的樣子",
+      "head": [
+        "版本",
+        "第 1 行",
+        "第 2 行",
+        "第 3 行"
+      ],
+      "rows": [
+        [
+          "福利尼奧 1472，格倫維爾本（BEIC 掃描本同）",
+          "EL mezo delcamin dinrã uita",
+          "mi trouai puna selua oscura",
+          "che la diricta uia era smarrita"
+        ],
+        [
+          "福利尼奧 1472，喬治三世本",
+          "EL mezo delcamin dinrã uita",
+          "mi ritrouai p una selua oscura",
+          "che la diricta uia era smarrita"
+        ],
+        [
+          "耶西 1472",
+          "NEl mezo del camin di nostra uita",
+          "mi ritrouai p una selua obscura",
+          "che di la dritta uia era smarrita"
+        ],
+        [
+          "曼托瓦 1472",
+          "NEl mezo del chamin di nostra uita",
+          "miritrouai per una selua schura",
+          "chella diritta uia era smarita"
+        ],
+        [
+          "拿坡里（未標年份）",
+          "NEl meczo delcamin di nostra uita",
+          "mi ritrouai p una selua oscura",
+          "che la diricta uia era smarrita"
+        ],
+        [
+          "Petrocchi 校勘本",
+          "Nel mezzo del cammin di nostra vita",
+          "mi ritrovai per una selva oscura,",
+          "ché la diritta via era smarrita."
+        ]
+      ],
+      "caption": "早期印本依帕尼齊重印本第 1 頁與摹本 N° I、N° II 抄錄，保留原拼法；u 與 v 在這些印本裡不分，「p」代表帶橫線的 per 縮寫，dinrã 是 di nostra 的縮寫。依帕尼齊序言，福利尼奧版的詩文沒有任何正字符號。BEIC 掃描本只比對了標題、前三行與第 5、13 行。"
+    },
+    {
+      "type": "h",
+      "text": "少掉的那一個音節"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "《神曲》用的是十一音節詩（endecasillabo）。《Treccani 百科全書》線上版「endecasillabo」條說，這種詩行由 11 個音節構成，重音可以有多種排法，「唯一不變的是第 10 音節上的固定重音」（l’unica costante è l’accento fisso sulla 10ª sillaba，本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "本文依這條規則數第二行。義大利詩律把詞尾母音和下一個詞的開頭母音併成一個音節，selva oscura 的 va 與 o 算一拍。現代文本 mi-ri-tro-vai-per-u-na-sel-va o-scu-ra 是 11 個音節，scu 落在第 10 拍；格倫維爾本 mi trouai p(er)una 少了 ri，照一般讀法把 trovai 算兩個音節，只剩 10 個音節，scu 退到第 9 拍，這一行就不合十一音節詩的規則。這個算法有兩個前提：va 與 o 合併、trovai 算兩拍。若在 selva 與 oscura 之間讀出母音分讀（dialefe），或把 trovai 拆成 tro-va-i 三拍，都能湊回 11 個音節，scu 也回到第 10 拍。曼托瓦版寫 schura，少了開頭的 o，不必和 selva 合併，配上 miritrouai，仍是 11 個音節。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "所以 ri 不只關乎語氣上的「回過神」：照一般讀法（有母音合併、trovai 算兩拍），少了它就少一拍。本文推想，少了 ri 的那一版，最可能是排字工人的疏漏；但帕尼齊只說這一面排了兩次，沒有說哪一次在先，本文也沒有查到這個讀法是否見於抄本。能確定的只有：帕尼齊所說「是、或看起來是同一版」（che sono, o sembrano, di una stessa edizione，序言第 vii 頁，本文自譯）的書，有的讀者讀到 mi trovai，有的讀到 mi ritrovai。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "同一張表也看得出另一處分歧，只是要往下讀到第 11 行。Petrocchi 校勘本作 tant'era pien di sonno a quel punto，「在那一刻我是那樣充滿睡意」；帕尼齊重印本第 1 頁上，福利尼奧版作 insuquil punto，曼托瓦版與拿坡里版作 in suquel punto，耶西版作 in quel punto。四個早期印本沒有一個印成 a quel punto。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "義大利文維基文庫〈地獄篇〉第 1 歌的討論頁上，有讀者問這一行是否「明顯不合格律」，說自己一向讀到的是 in su quel punto。2010 年 5 月 14 日的回覆說，該站文本採的是較難的讀法（lectio difficilior），要在 sonno 與 a 之間讀出母音分讀（dialefe），這一行才合格律。同一頁另一則 2010 年 7 月 21 日的回覆，才說明該站選用的是 Petrocchi 校勘本。這些是維基文庫編者的說明，不是 Petrocchi 本人的話。"
+    },
+    {
+      "type": "h",
+      "text": "印本不等於但丁的原文"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "帕尼齊在序言前面先說了重印這四個版本的用意：«I quattro testi ora riprodotti non offrono nè alcuno da se, nè tutti insieme pur anco, un testo autentico della Divina Commedia; sono documenti sui quali fondar si può, in parte, un giudizio»，「現在重印的四個文本，無論單獨看還是合起來看，都不能提供《神曲》的真本；它們是可以據以作出部分判斷的文件」（本文自譯，序言第 vi 頁）。他還說，連抄寫者與排字工的錯誤也能幫上這種判斷。"
+    },
+    {
+      "type": "p",
+      "tag": "文本",
+      "text": "對照表格最後一行，現代讀者讀到的逗號、句號，第三行開頭的重音 ché，都是後來的編者加的。帕尼齊在序言裡說，福利尼奧版「整部詩裡從來見不到一個正字符號」（In tutto il poema non vedesi mai un solo segno ortografico，本文自譯），也就是沒有標點，也沒有重音符號。福利尼奧版的讀者拿到的第三行是 che la diricta uia era smarrita，這個 che 要讀成「因為」還是別的意思，得自己決定。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "回到第二行。帕斯科利在 ritrovai 裡聽到一個沒說出口的「終於」；Niccoli 的百科條目說這個 ri 不表示「再一次」；數音節的結果是，照一般讀法（有母音合併、trovai 算兩拍），少了它就少一拍。在格倫維爾本與 BEIC 掃描本的第一頁上，印本都沒有這兩個字母，讀者看到的是 mi trouai。BEIC 掃描本 tr 上方有一處淡褐色記號，從掃描無法判定是不是有人手寫補上的字。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Divina Commedia/Inferno/Canto I",
+      "publisher": "Wikisource（義大利文）",
+      "date": "",
+      "url": "https://it.wikisource.org/wiki/Divina_Commedia/Inferno/Canto_I",
+      "note": "第 1–12 行全文"
+    },
+    {
+      "title": "Discussione:Divina Commedia/Inferno/Canto I",
+      "publisher": "Wikisource（義大利文）",
+      "date": "2010-07-21",
+      "url": "https://it.wikisource.org/wiki/Discussione:Divina_Commedia/Inferno/Canto_I",
+      "note": "第 11 行格律的問答（2010 年 5 月 14 日回覆）；編者說明本站採用 Petrocchi 校勘本（「verso 32」一節，2010 年 7 月 21 日）"
+    },
+    {
+      "title": "Convivio/Trattato quarto",
+      "publisher": "Wikisource（義大利文）",
+      "date": "",
+      "url": "https://it.wikisource.org/wiki/Convivio/Trattato_quarto",
+      "note": "第 23 章第 6–11 節"
+    },
+    {
+      "title": "ritrovare（Alessandro Niccoli）",
+      "publisher": "Enciclopedia Dantesca（Treccani）",
+      "date": "1970",
+      "url": "https://www.treccani.it/enciclopedia/ritrovare_(Enciclopedia-Dantesca)/",
+      "note": "If I 2 的用法；轉引 Pascoli, Scritti danteschi, Milano 1952, p. 252"
+    },
+    {
+      "title": "mezzo（Francesco Del Punta）",
+      "publisher": "Enciclopedia Dantesca（Treccani）",
+      "date": "1970",
+      "url": "https://www.treccani.it/enciclopedia/mezzo_(Enciclopedia-Dantesca)/",
+      "note": "第 3 義「弧的頂點」，If I 1 與 Cv IV XXIII 9"
+    },
+    {
+      "title": "cammino（Andrea Mariani）",
+      "publisher": "Enciclopedia Dantesca（Treccani）",
+      "date": "1970",
+      "url": "https://www.treccani.it/enciclopedia/cammino_(Enciclopedia-Dantesca)/",
+      "note": "「人生的行程」，If I 1"
+    },
+    {
+      "title": "Endecasillabo",
+      "publisher": "Enciclopedia on line（Treccani）",
+      "date": "",
+      "url": "https://www.treccani.it/enciclopedia/endecasillabo/",
+      "note": "11 音節、第 10 音節固定重音"
+    },
+    {
+      "title": "File:Alighieri - Comedìa, Foligno, 1472.djvu",
+      "publisher": "Wikimedia Commons（BEIC）",
+      "date": "1472",
+      "url": "https://commons.wikimedia.org/wiki/File:Alighieri_-_Comed%C3%ACa,_Foligno,_1472.djvu",
+      "note": "第 6 頁，〈地獄篇〉第 1 歌開頭"
+    },
+    {
+      "title": "Le prime quattro edizioni della Divina Commedia letteralmente ristampate（per cura di G. G. Warren Lord Vernon; A. Panizzi, Al lettore）",
+      "publisher": "Londra: Tommaso e Guglielmo Boone",
+      "date": "1858",
+      "url": "https://archive.org/details/leprimequattroed00dant",
+      "note": "序言第 vi–ix 頁；摹本 N° I、N° II；正文第 1 頁四版並排"
+    },
+    {
+      "title": "File:Le Prime Quattro Edizioni Della Divina Commedia Letteralmente Ristampate (IA leprimequattroed00dant).pdf",
+      "publisher": "Wikimedia Commons",
+      "date": "1858",
+      "url": "https://commons.wikimedia.org/wiki/File:Le_Prime_Quattro_Edizioni_Della_Divina_Commedia_Letteralmente_Ristampate_(IA_leprimequattroed00dant).pdf",
+      "note": "PDF 第 10–13 頁（序言）、第 25 頁（N° I）、第 27 頁（N° II）、第 43 頁（正文第 1 頁）"
+    },
+    {
+      "title": "Divina Commedia",
+      "publisher": "Enciclopedia on line（Treccani）",
+      "date": "",
+      "url": "https://www.treccani.it/enciclopedia/divina-commedia/",
+      "note": "Composizione e titolo del poema 一節"
+    }
+  ]
+}
