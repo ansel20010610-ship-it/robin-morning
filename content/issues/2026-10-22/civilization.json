@@ -1,0 +1,456 @@
+{
+  "column": "civilization",
+  "date": "2026-10-22",
+  "title": "一驢鹽一枚金幣：古迦納國王怎樣向商隊抽稅",
+  "dek": "迦納不產鹽，國王卻被 10 世紀的阿拉伯作者稱為世上最富的王。鹽南下、金北上，國王在哪一段伸手收錢？",
+  "brief": "據 11 世紀的巴克里記載，西非古迦納國王對每一驢馱的鹽入境抽一枚金第納爾、出境抽兩枚，一馱銅 5 米斯卡勒，其他貨物 10 米斯卡勒。他也記下，境內金塊一律歸國王，百姓只能留金砂；替國王掌管國庫的官員、通譯和多數大臣都是穆斯林。Phillipson 認為，迦納以黃金聞名，靠的是把更南方的黃金向北轉運，而不是因為它是主要產地。",
+  "topic_key": "civilization:west-africa-ghana-salt-gold-tolls-11c",
+  "updated_at": "2026-10-22T02:02:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Mopti_sel.jpg",
+    "width": 1280,
+    "height": 960,
+    "alt": "河港岸邊的泥地上，一排排灰白色的長方形鹽板直立或平放堆在一起，有些用細繩捆著；旁邊有黑色塑膠布和裝滿東西的白色袋子。幾個人站在鹽板之間，其中一人包著藍色頭巾。後方水邊停著許多有拱形篷頂的木船，遠處是平坦的對岸。",
+    "caption": "2005 年，從撒哈拉的陶代尼（Taoudenni）運來的鹽板，剛在馬利莫普提（Mopti）的河港卸下。這是現代的景象，不是 11 世紀；但巴克里描述的鹽礦，鹽也是「像切石頭一樣」切成塊，再由牲口馱著南下。",
+    "credit": "Taguelmoust 攝，原上傳於法文維基百科",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mopti_sel.jpg",
+    "made": "2005 年"
+  },
+  "body": [
+    {
+      "type": "h",
+      "text": "一份 1068 年前後的稅則"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "11 世紀的安達魯斯學者巴克里（Abū ʿUbayd al-Bakrī）在《道里與諸國志》（Kitāb al-masālik wa-l-mamālik）裡，記下了一個西非國家的關稅。Hopkins 的英譯是這樣寫的："
+    },
+    {
+      "type": "quote",
+      "text": "每一驢馱的鹽運進國境時，國王抽一枚金第納爾；運出時抽兩枚。一馱銅，國王應得 5 米斯卡勒；一馱其他貨物，10 米斯卡勒。",
+      "original": "On every donkey-load of salt when it is brought into the country their king levies one gold dinar, and two dinars when it is sent out. From a load of copper the king's due is five mithqals, and from a load of other goods ten mithqals.",
+      "cite": "巴克里，J. F. P. Hopkins 英譯，收於 Levtzion 與 Hopkins 編《西非史早期阿拉伯史料彙編》（1981）；中文本文自譯；英譯中的編者括號註解略去"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這位國王統治的地方，阿拉伯作者稱為「迦納」（Ghana）。巴克里特別說明，迦納其實是國王的稱號，那片地區叫 Awkār；他寫作時在位的國王名叫 Tunkāmanīn，1063 年即位。這個古迦納和今天的迦納共和國不是同一個地方，Phillipson 把它定位在今天馬利與茅利塔尼亞一帶。"
+    },
+    {
+      "type": "p",
+      "text": "迦納境內不產鹽，巴克里說國王境內最好的金子，產在離王城 18 天路程的 Ghiyārū。本文要回答的問題是：一個站在鹽與黃金之間的國家，國王從哪裡伸手收錢？誰訂規矩、誰替他管帳、誰付這筆錢，這套辦法又在哪裡失靈？"
+    },
+    {
+      "type": "h",
+      "text": "我們靠什麼知道：一位沒到過西非的作者"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "巴克里大半生住在哥多華（Córdoba）與阿爾梅里亞（Almería），波士頓大學非洲研究中心的教材說明他從沒離開伊斯蘭統治下的西班牙，撒哈拉的資料是向商人和到過當地的人打聽來的。書裡說 Tunkāmanīn 是「今天」的國王，英譯者把那一年換算為 1067–68 年，所以成書大約在這時。Phillipson 2017 年指出，這部彙編也收進了更早的材料，而這類阿拉伯地理著作「很少根據第一手觀察」（Relatively few…based on first-hand observation，本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "巴克里是穆斯林學者，寫給穆斯林讀者。他把迦納穆斯林城鎮寫得很細：12 座清真寺，有領薪水的伊瑪目和宣禮員，也有法學家和學者。對國王的宗教，他稱為偶像崇拜；國王城周圍的聖林有人看守，「沒有人能進去知道裡面有什麼」（本文自譯），國王的監獄也在林中。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "本文的推論是，他的消息來源進得了市場與清真寺，進不了王的聖林。稅則正是商人最關心、也最容易打聽到的資訊，所以這一段比宮廷宗教的描述可信；但它是轉述，我們不知道這套稅率實行了多久、是否全境一律。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "比巴克里早一個多世紀的伊本・豪蓋勒（Ibn Ḥawqal）自述 951–952 年到過西吉爾馬薩（Sijilmāsa，今摩洛哥東南），又說在奧達戈斯特（Awdaghust）見過一張 42,000 第納爾的票據，回到伊拉克和呼羅珊講起時，聽的人都當成寓言。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Nehemia Levtzion 1968 年分析這張票據，認為那是一位住在奧達戈斯特的西吉爾馬薩商人，欠另一位西吉爾馬薩商人的債據；伊本・豪蓋勒更可能是在撒哈拉以北見到持票的債主，資料也是在北方蒐集的，不是自己越過了沙漠。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "第三種證據是考古。1914 年，軍人出身的法國探險者 Bonnel de Mézières 在今茅利塔尼亞南部、Néma 南南西約 120 公里處發掘昆比薩利赫（Koumbi Saleh）。1949 到 1952 年，Thomassey 與 Mauny 為法國黑非洲研究所（Institut Français d’Afrique Noire，IFAN）做了四季發掘；1972 到 1981 年 Devisse 與 Robert 的團隊又做了五季。最後一次實地測量在 2007 年 1 月，計畫在 2008 年 1 月因當地盜匪猖獗而中斷。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "昆比薩利赫今天「一般被認定」（commonly identified，本文自譯）為迦納的都城（Capel 等 2015）。但 Capel 2021 年也寫明，這個認定從 1920 年代起就有爭論，至今沒有決定性的論據；1970 年代以後，發掘的重點已經轉向不依賴文獻、直接記錄這座撒哈拉南緣的城市。"
+    },
+    {
+      "type": "h",
+      "text": "鹽往南，金往北：貨物怎麼走"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "巴克里記了一座叫 Tātantāl 的鹽礦，離西吉爾馬薩 20 天路程。鹽埋在地下不到兩尋深，挖開覆土後「像切石頭一樣」（本文自譯）切出來；礦上的堡壘、房屋、塔樓都用鹽塊砌成。這裡的鹽供應西吉爾馬薩、迦納和其他黑人地區（Sūdān）。海岸邊的 Awlīl 也產鹽，商隊同樣運往鄰近各地。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "從西吉爾馬薩到迦納，要在沙漠裡走兩個月。奧達戈斯特在這條路的南段、撒哈拉南緣，離西吉爾馬薩兩個月路程，離迦納城 15 天。巴克里說那裡的市場人聲嘈雜，坐在旁邊的人說話都聽不見；買賣「用金子付，沒有銀子」（本文自譯）。銅器、染成紅色或藍色的長袍從北方運進來，龍涎香和捻成線的純金從這裡運出去；小麥、椰棗和葡萄乾也遠從伊斯蘭地區運到。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "金子從更南邊來。除了 Ghiyārū，巴克里說離迦納 15 站的 Kūgha 附近有許多金礦，是黑人地區裡最富金的一帶；那裡進口的主要是鹽、貝殼、銅和大戟（euphorbium）。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "伊本・豪蓋勒稱迦納國王是「世上最富有的國王」，因為他和歷代先王積存了大量金塊。他也寫到鹽的依賴：迦納國王和 Kūgha 的統治者「都仰賴奧達戈斯特的國王供應鹽」，一馱鹽在黑人地區可以賣到 200 到 300 第納爾。他又說，住在西吉爾馬薩與奧達戈斯特之間的柏柏人，向帶貨南下、帶金北返的商人收過路費，靠這筆錢過活。"
+    },
+    {
+      "type": "svg",
+      "title": "一驢鹽從北到南，經過幾道手",
+      "svg": "<svg viewBox='0 0 360 600' xmlns='http://www.w3.org/2000/svg' font-size='11'>\n<defs>\n<marker id='ah' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='ink'/></marker>\n<marker id='ag' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='gold'/></marker>\n</defs>\n<text x='12' y='18' font-size='10' class='muted'>北</text>\n<rect x='12' y='26' width='130' height='58' rx='3' class='soft'/>\n<text x='77' y='44' text-anchor='middle' class='ink'>Tātantāl 鹽礦</text>\n<text x='77' y='60' text-anchor='middle' font-size='9.5' class='muted'>鹽塊切成石板</text>\n<text x='77' y='74' text-anchor='middle' font-size='9.5' class='muted'>離西吉爾馬薩 20 天</text>\n<rect x='158' y='26' width='150' height='58' rx='3' class='soft'/>\n<text x='233' y='44' text-anchor='middle' class='ink'>西吉爾馬薩</text>\n<text x='233' y='60' text-anchor='middle' font-size='9.5' class='muted'>銅器、染色長袍</text>\n<text x='233' y='74' text-anchor='middle' font-size='9.5' class='muted'>小麥、椰棗、葡萄乾</text>\n<line x1='77' y1='84' x2='130' y2='132' class='ink' stroke='currentColor' stroke-width='1.4' marker-end='url(#ah)'/>\n<line x1='233' y1='84' x2='180' y2='132' class='ink' stroke='currentColor' stroke-width='1.4' marker-end='url(#ah)'/>\n<rect x='60' y='134' width='190' height='40' rx='3' class='paper' stroke='currentColor'/>\n<text x='155' y='151' text-anchor='middle' class='ink'>撒哈拉：約兩個月，只能冬天走</text>\n<text x='155' y='166' text-anchor='middle' font-size='9.5' class='accent'>沿途柏柏人收過路費</text>\n<line x1='155' y1='174' x2='155' y2='204' class='ink' stroke='currentColor' stroke-width='1.4' marker-end='url(#ah)'/>\n<rect x='60' y='206' width='190' height='44' rx='3' class='soft'/>\n<text x='155' y='224' text-anchor='middle' class='ink'>奧達戈斯特</text>\n<text x='155' y='240' text-anchor='middle' font-size='9.5' class='muted'>市場付金子，沒有銀子</text>\n<line x1='155' y1='250' x2='155' y2='282' class='ink' stroke='currentColor' stroke-width='1.4' marker-end='url(#ah)'/>\n<text x='162' y='270' font-size='9.5' class='muted'>約 15 天</text>\n<rect x='30' y='284' width='250' height='112' rx='4' class='paper' stroke='currentColor' stroke-width='1.6'/>\n<text x='155' y='303' text-anchor='middle' font-size='12' font-weight='600' class='accent'>迦納國王的關口</text>\n<text x='44' y='324' font-size='10' class='ink'>鹽一驢馱：入境 1 第納爾</text>\n<text x='44' y='340' font-size='10' class='ink'>鹽一驢馱：出境 2 第納爾</text>\n<text x='44' y='356' font-size='10' class='ink'>銅一馱：5 米斯卡勒</text>\n<text x='44' y='372' font-size='10' class='ink'>其他貨一馱：10 米斯卡勒</text>\n<text x='44' y='388' font-size='9' class='muted'>（銅與其他貨的進出方向原文未說）</text>\n<line x1='155' y1='396' x2='155' y2='444' class='ink' stroke='currentColor' stroke-width='1.4' marker-end='url(#ah)'/>\n<text x='96' y='424' font-size='9.5' class='muted'>鹽、銅、貝殼</text>\n<rect x='30' y='446' width='250' height='58' rx='3' class='soft'/>\n<text x='155' y='466' text-anchor='middle' class='ink'>南方金產地</text>\n<text x='155' y='482' text-anchor='middle' font-size='9.5' class='muted'>Ghiyārū（離王城 18 天）</text>\n<text x='155' y='496' text-anchor='middle' font-size='9.5' class='muted'>Kūgha 一帶金礦</text>\n<path d='M290,470 C330,440 330,330 290,320' fill='none' class='gold' stroke='currentColor' stroke-width='2' marker-end='url(#ag)'/>\n<text x='300' y='402' font-size='10' class='gold'>金塊</text>\n<text x='300' y='416' font-size='10' class='gold'>歸王</text>\n<path d='M300,300 C345,250 345,110 312,72' fill='none' class='gold' stroke='currentColor' stroke-width='2' stroke-dasharray='5 3' marker-end='url(#ag)'/>\n<text x='318' y='200' font-size='10' class='gold'>金砂</text>\n<text x='318' y='214' font-size='10' class='gold'>北運</text>\n<text x='12' y='536' font-size='10' class='muted'>南</text>\n<text x='12' y='560' font-size='9' class='muted'>實線：貨物南下；金色：黃金北上</text>\n<text x='12' y='576' font-size='9' class='muted'>示意，不按比例；地名位置不代表實際方位</text>\n</svg>",
+      "caption": "示意，不按比例。依巴克里（Kenny、Hopkins 英譯）與伊本・豪蓋勒（Kenny 英譯）的記載整理；稅額只見於巴克里，其他各段的費用多少，史料沒有記載。"
+    },
+    {
+      "type": "h",
+      "text": "進一出二：國王從哪裡收"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "把稅則逐項看。鹽進出都要繳，出境是入境的兩倍。銅和「其他貨物」以米斯卡勒（mithqāl）計，這是秤金子的重量單位；波士頓大學的教材把「5 米斯卡勒」註為 5 枚第納爾的重量。原文沒說銅與其他貨物是進境還是出境的稅，也沒說在哪裡收、由誰收。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "本文的讀法是，出境稅加倍，表示迦納不只是鹽的終點，也是往更南方轉運的中繼站；國王對留在境內吃掉的鹽收得輕，對轉手賣到南方、利潤更高的那一部分收得重。巴克里沒有解釋稅率為什麼這樣訂，這只是從數字推出的一種可能。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "伊本・豪蓋勒說的 200 到 300 第納爾，和巴克里的一枚第納爾放在一起，很容易算出一個「稅率」。本文不這樣算：兩人寫作相隔一個多世紀，伊本・豪蓋勒說的是「黑人地區」的售價，也沒說一馱是驢還是駱駝。可以確定的只有一點：在兩位作者筆下，鹽到了南方都是昂貴的貨。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "黃金的規矩不同，國王不抽成，而是直接收走一部分。巴克里寫道："
+    },
+    {
+      "type": "quote",
+      "text": "國內所有礦場找到的金塊都歸國王，只把金砂留給百姓。要不是這樣，人們會累積金子，直到金子失去價值。",
+      "original": "The nuggets found in all the mines of his country are reserved for the king, only the gold dust being left for the people. But for this the people would accumulate gold until it lost its value.",
+      "cite": "巴克里，Hopkins 英譯；中文本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "他接著說，金塊從 1 盎司（ūqiyya）到 1 磅（raṭl）不等，又聽說國王有一塊大如巨石的金塊。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "「免得金子貶值」是巴克里或他的消息來源給的理由，不一定是國王自己的想法。本文的讀法是，這條規則同時做了兩件事：國王壟斷了最好認、最難藏的那一種黃金；市面上流通的只剩要秤重的金砂，交易就離不開秤，也離不開懂秤的人。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "金砂怎樣變成可以帶過沙漠的錢，考古給了線索。巴克里說塔德梅卡（Tādmakka，今馬利東北）的第納爾叫「禿的」，因為是純金、不打印記。Nixon、Rehren 與 Guerra 2011 年發表塔德梅卡出土的陶模，認為當地在 9 到 10 世紀把金砂或金塊熔進陶模，做成不打印記的金幣供商隊使用，運到地中海岸再熔掉或改鑄成有銘文的錢。Phillipson 2017 年進一步提出，這類標準重量的金坯可能早在 6 世紀末到 7 世紀、伊斯蘭統治之前就已出現，供應拜占庭治下迦太基的鑄幣廠；他說明這是仍待驗證的假說。"
+    },
+    {
+      "type": "h",
+      "text": "誰決定、誰管帳、誰付錢"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "巴克里說迦納城由兩座城鎮組成。國王住的那一座叫 al-Ghāba（意為「樹林」），和穆斯林城相距 6 哩，中間住家相連。國王在一座圓頂建築裡接見臣民、審理對官員的申訴；王城裡有一座清真寺，就在國王的法庭附近，供來朝見的穆斯林禮拜。他還寫道，國王的「通譯、掌管國庫的官員和大多數大臣都是穆斯林」。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Mauro Nobili 2020 年（2021 年線上刊出）引 Ware 的看法提醒，巴克里書中沒有一處說迦納的穆斯林是外國人；書裡對照的是穆斯林與信奉國王宗教的人，而不是外來者與本地人。依這個讀法，替國王管國庫的人，可能就是迦納本地的穆斯林。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "本文的推論是，國王把帳交給懂阿拉伯文書與伊斯蘭商業習慣的人，北方來的商人就能和收稅的人用同一種語言、同一套帳目打交道，比較願意相信稅是照規矩收的。巴克里沒有寫收稅的現場，這只是從官員的組成推想。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "強制力的部分，巴克里留下的是數字和規矩。國王出兵能召集 20 萬人，其中弓箭手超過 4 萬；被關進聖林監獄的人，「再也沒有消息」。有人被控涉及錢財、血案或其他事，主事者把水淋過一片苦木，讓被告喝下，吐出來就算無罪。20 萬這個數字是轉述，沒有辦法核對。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "成本由誰承擔？直接付錢的是牽驢進出的商人，他們會把稅算進價錢，南方買鹽的人和北方收金的人都分攤了一部分。礦場裡挖到金塊的人，則是把最值錢的那一份直接交給國王。本文推論，這套辦法讓國王不必自己組商隊、也不必派人進南方的礦場，只要守住商隊必經的地方。"
+    },
+    {
+      "type": "h",
+      "text": "限制與失靈：沙漠、劫掠與穆拉比特"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "地理先畫了界線。伊本・豪蓋勒說，馬格里布和黑人地區之間的沙漠缺水、不能放牧，只能在冬天穿越，而且要一路不停。巴克里記下的路線上，Wānzamīn 是所有通往黑人地區的路交會的水源，也是 Lama 與 Jazūla 兩族埋伏劫商隊的地方；他也提到，更南的 Azjūnān 丘陵一帶有黑人截劫商隊。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "本文的讀法是，迦納的稅要等商隊平安抵達才收得到，路上的風險都落在國王管不到的地方。他能控制的是終點，不是路。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "其次是政治。巴克里記載，1054–55 年，穆拉比特運動（al-Murābiṭūn）的領袖伊本・亞辛（ʿAbdallāh ibn Yāsīn）攻掠奧達戈斯特，搶走所得的一切，並殺了一位以虔誠聞名的凱魯萬人。巴克里寫道，穆拉比特人向奧達戈斯特報復，「只因為他們服從迦納國王、受他管轄」（本文自譯）。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "這句話說明了兩件事：迦納的權力伸到了迦納以北、撒哈拉南緣的大城，而這個中繼站也因此成了別人的目標。本文推論，商路中段一旦換了主人，迦納能收到多少稅，就要看別人是否讓商隊照常南下。"
+    },
+    {
+      "type": "h",
+      "text": "學界怎麼說：征服、中間人與史料的厚薄"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "過去的通說認為，1076 年穆拉比特人征服了迦納。Masonen 與 Fisher 1996 年形容這件事被當成西非史的轉捩點，「就像哈斯丁之役之於英格蘭」（as the battle of Hastings was for England，本文自譯），卻認為它是仍盤據非洲史學的神話之一。Conrad 與 Fisher 1982、1983 年分兩部分檢查外部的阿拉伯文史料與本地口傳，都找不到明確證據顯示這場征服發生過；第二部分整理的口傳反而強調，乾旱與本地稱為「瓦加杜」（Wagadu）的索寧克國家後來的瓦解很有關係；兩位作者也提醒，口傳中的瓦加杜與文字史料中的迦納是否同一，從未確立。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "Sheryl Burkhalter 1992 年回應說，撒哈拉以南的文字史料極少，一句話怎麼讀，就能改寫幾十年的歷史。考古也還沒有給出定論：Capel 等 2015 年以放射性碳測定昆比薩利赫「柱墓」主墓室的三具遺骸，死亡時間落在 11 世紀末到 12 世紀，正是穆拉比特運動向撒哈拉以南擴張的時期。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "關於迦納的財富，Phillipson 認為，它以黃金之地聞名，不是因為它是主要產地，而是因為它是把南方黃金向北轉運的「高效率中間人」（highly effective intermediary，本文自譯）。Levtzion 對伊本・豪蓋勒的分析則提醒，許多關於撒哈拉南緣的記載是在北方從商人口中聽來的，他認為伊本・豪蓋勒對撒哈拉的描述「流於刻板」（stereotypic，本文自譯），沒有比前人多說什麼。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "本文的讀法是，Phillipson 的「中間人」說和巴克里的稅則可以互相印證：稅則寫得最細的是過境的鹽與貨，而不是礦場的產量。國王靠三條規則把位置變成收入：按驢馱收過路稅，金塊歸王，金砂流通。這需要能數驢、能秤金的官員，也需要讓商人相信規矩會被執行的武力；當迦納北邊的中繼站被攻掠，這三條規則就少了施力的地方。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "map",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Catalan_Atlas_BNF%2C_sheet_6.jpg/1280px-Catalan_Atlas_BNF%2C_sheet_6.jpg",
+      "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Catalan_Atlas_BNF%2C_sheet_6.jpg/3840px-Catalan_Atlas_BNF%2C_sheet_6.jpg",
+      "width": 1280,
+      "height": 3129,
+      "alt": "直長的羊皮紙地圖，上半部是西歐、地中海與北非海岸，布滿放射狀的羅盤方位線與城市小圖示。下方有一道褐色的山脈橫過畫面。最下方右側，一位戴金冠、手持權杖的黑人君主坐在王座上，舉起一枚金色圓塊；左下角一個戴頭巾、蒙著臉的人騎著駱駝走向他。圖上有紅、黑兩色的手寫地名與說明文字。",
+      "caption": "《加泰隆尼亞地圖集》第 6 頁，比巴克里晚約 300 年。君主旁的加泰隆尼亞文說明寫他叫「Musse Melly」，是「這一帶最富有、最高貴的君主」，因為「他的土地上收集到大量黃金」。圖上寫的是 Melly（馬利），已不是迦納；這張圖讓人看到，地中海世界對西非的想像仍集中在黃金與駱駝商隊上。",
+      "credit": "傳為 Abraham Cresques 繪，羊皮紙彩繪，64.5 × 25.0 公分；法國國家圖書館藏（Espagnol 30），影像出自 Gallica",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Catalan_Atlas_BNF,_sheet_6.jpg",
+      "made": "1375 年",
+      "depicts": "14 世紀的西歐、地中海西部、北非、撒哈拉與馬利"
+    },
+    {
+      "type": "detail",
+      "of": "f2",
+      "region": [
+        0.04,
+        0.82,
+        0.92,
+        0.15
+      ],
+      "position": "畫面最下方，約佔高度六分之一",
+      "caption": "局部：左邊蒙面的騎駝人走向舉著金塊的君主。君主右上方的說明文字寫著「aquest senyor negre es appellat Musse Melly」（這位黑人君主名叫 Musse Melly，本文自譯）。"
+    },
+    {
+      "type": "timeline",
+      "title": "古迦納與鹽金之路：本文用到的年份",
+      "items": [
+        {
+          "when": "951–952",
+          "label": "伊本・豪蓋勒在西吉爾馬薩",
+          "note": "自述見過 4.2 萬第納爾票據。"
+        },
+        {
+          "when": "1054–55",
+          "label": "伊本・亞辛攻掠奧達戈斯特",
+          "note": "巴克里：因其服從迦納國王。"
+        },
+        {
+          "when": "1063 年",
+          "label": "Tunkāmanīn 即位",
+          "note": "前任 Basī 是他的舅舅。"
+        },
+        {
+          "when": "1067–68",
+          "label": "巴克里寫下迦納稅則",
+          "note": "書中稱此時為「今天」。"
+        },
+        {
+          "when": "1076 年",
+          "label": "通說的「穆拉比特征服迦納」",
+          "note": "Conrad 與 Fisher 認為缺乏證據。"
+        },
+        {
+          "when": "1375 年",
+          "label": "《加泰隆尼亞地圖集》",
+          "note": "畫出手持金塊的馬利君主。"
+        },
+        {
+          "when": "1857 年",
+          "label": "巴克里地理書刊印並譯出",
+          "note": "學者據此在馬利與茅利塔尼亞之間找迦納。"
+        },
+        {
+          "when": "1914 年",
+          "label": "Bonnel de Mézières 發掘昆比薩利赫",
+          "note": "清出後來稱為「柱墓」的大墓。"
+        },
+        {
+          "when": "1949–52",
+          "label": "Thomassey 與 Mauny 四季發掘",
+          "note": "為 IFAN 進行。"
+        },
+        {
+          "when": "2011 年",
+          "label": "塔德梅卡陶模發表",
+          "note": "Nixon 等定在 9 到 10 世紀。"
+        },
+        {
+          "when": "2015 年",
+          "label": "柱墓遺骸定年",
+          "note": "11 世紀末到 12 世紀。"
+        }
+      ],
+      "caption": "依巴克里與伊本・豪蓋勒（Kenny 英譯）、Capel 2021、Capel 等 2015、Conrad 與 Fisher 1982、Nixon 等 2011 整理。"
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "你的世界裡，有沒有一種貨物是某地非買不可、自己又不產的？誰站在它必經的路上，憑什麼讓商人停下來繳錢？",
+        "進口和出口收不同的稅，是想把貨留下，還是想從轉手裡多分一份？收稅的人怎麼分辨一馱貨是要留下還是要轉賣？",
+        "統治者壟斷最好認的那一種財富（金塊、寶石、名馬）之後，百姓手上剩下什麼？秤與懂秤的人會不會因此變成權力的一部分？",
+        "替君主管帳的人若和君主信不同的神、讀不同的文字，他們效忠誰？遠來的商人又比較信任誰？"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Spread of Islam..., Chapter 7: West African Kingdoms, 8th to 10th Century（巴克里、伊本・豪蓋勒等阿拉伯史料英譯選段）",
+      "publisher": "Joseph Kenny OP；Dominican House of Studies 網站（dhspriory.org）",
+      "date": "未註明",
+      "url": "https://dhspriory.org/kenny/NWAfr/a07.htm",
+      "note": "巴克里 §1396、§1417–1419、§1447、§1455–1468、§1472（迦納稅則、金塊、兩城、官員、軍隊、神判、Kūgha、塔德梅卡、Tātantāl 鹽礦）；伊本・豪蓋勒 Sūrat al-arḍ 第 93、99–103 頁（票據、鹽價、柏柏人過路費、冬季穿越）；§1415 Wānzamīn 與劫掠；§1416 Azjūnān 一帶截劫商隊"
+    },
+    {
+      "title": "The Spread of Islam..., Chapter 8: The Murābiṭ Movement",
+      "publisher": "Joseph Kenny OP；Dominican House of Studies 網站（dhspriory.org）",
+      "date": "未註明",
+      "url": "https://dhspriory.org/kenny/NWAfr/a08.htm",
+      "note": "巴克里 §1439：1054–55 年伊本・亞辛攻掠奧達戈斯特；奧達戈斯特離西吉爾馬薩兩個月、離迦納 15 天"
+    },
+    {
+      "title": "Abd al-'aziz al-Bakri on West Africa（Hopkins 英譯節錄）",
+      "publisher": "John Jay College of Criminal Justice, CUNY（課程網頁）",
+      "date": "未註明（課程網址標示 2009 年春季）",
+      "url": "https://jjcweb.jjay.cuny.edu/history/worldspring09/paperdemo/albakri.html",
+      "note": "節錄自 J. F. P. Hopkins 譯、N. Levtzion 與 Hopkins 編 Corpus of Early Arabic Sources for West African History（Cambridge UP, 1981）第 78–87 頁；本文兩段引文依此"
+    },
+    {
+      "title": "Kingdom of Ghana: Primary Source Documents",
+      "publisher": "Boston University African Studies Center",
+      "date": "未註明",
+      "url": "https://www.bu.edu/africa/outreach/resources/k_o_ghana",
+      "note": "巴克里生平說明（住哥多華與阿爾梅里亞、未離開伊斯蘭西班牙、資料來自商人）；稅則譯文中「5 米斯卡勒＝5 枚第納爾重量」的編者註"
+    },
+    {
+      "title": "Trans-Saharan Gold Trade and Byzantine Coinage",
+      "publisher": "David W. Phillipson, The Antiquaries Journal 97: 145–169",
+      "date": "2017",
+      "url": "https://doi.org/10.1017/S0003581517000336",
+      "note": "第 148–149 頁及註 17、19：阿拉伯地理著作少有第一手觀察、巴克里彙編收入早期材料、迦納為黃金中間人；摘要：塔德梅卡金坯與迦太基鑄幣廠的假說"
+    },
+    {
+      "title": "New light on the early Islamic West African gold trade: coin moulds from Tadmekka, Mali",
+      "publisher": "Sam Nixon, Thilo Rehren, Maria Filomena Guerra, Antiquity 85(330): 1353–1368",
+      "date": "2011-11-21",
+      "url": "https://doi.org/10.1017/S0003598X00062104",
+      "note": "依摘要"
+    },
+    {
+      "title": "Ibn-Ḥawqal, the Cheque, and Awdaghost",
+      "publisher": "Nehemia Levtzion, The Journal of African History 9(2): 223–233",
+      "date": "1968",
+      "url": "https://doi.org/10.1017/S0021853700008847",
+      "note": "依摘要"
+    },
+    {
+      "title": "The Conquest that Never Was: Ghana and the Almoravids, 1076. I. The External Arabic Sources",
+      "publisher": "David Conrad, Humphrey Fisher, History in Africa 9: 21–59",
+      "date": "1982",
+      "url": "https://doi.org/10.2307/3171598",
+      "note": "依開頭兩段"
+    },
+    {
+      "title": "The Conquest That Never Was: Ghana and the Almoravids, 1076. II. The Local Oral Sources",
+      "publisher": "David C. Conrad, Humphrey J. Fisher, History in Africa 10: 53–78",
+      "date": "1983",
+      "url": "https://doi.org/10.2307/3171690",
+      "note": "依開頭摘錄：第一部分結論、口傳強調乾旱"
+    },
+    {
+      "title": "Listening for Silences in Almoravid History: Another Reading of “The Conquest That Never Was”",
+      "publisher": "Sheryl L. Burkhalter, History in Africa 19: 103–131",
+      "date": "1992",
+      "url": "https://doi.org/10.2307/3171996",
+      "note": "依開頭摘錄"
+    },
+    {
+      "title": "Not Quite Venus from the Waves: The Almoravid Conquest of Ghana in the Modern Historiography of Western Africa",
+      "publisher": "Pekka Masonen, Humphrey J. Fisher, History in Africa 23: 197–232",
+      "date": "1996",
+      "url": "https://doi.org/10.2307/3171941",
+      "note": "依開頭摘錄"
+    },
+    {
+      "title": "The End of a Hundred-Year-Old Archaeological Riddle: First Dating of the Columns Tomb of Kumbi Saleh (Mauritania)",
+      "publisher": "Chloé Capel, Antoine Zazzo, Jean-François Saliège, Jean Polet, Radiocarbon 57(1): 65–75",
+      "date": "2015",
+      "url": "https://doi.org/10.2458/azu_rc.57.18112",
+      "note": "依摘要"
+    },
+    {
+      "title": "Le Tombeau à Colonnes de Koumbi Saleh (Mauritanie – XIe-XIIe siècle)",
+      "publisher": "Chloé Capel, Revue des mondes musulmans et de la Méditerranée 149: 237–262",
+      "date": "2021",
+      "url": "https://journals.openedition.org/remmm/16109",
+      "note": "第 1–6 段：1857 年巴克里刊本、1914 年發掘、認定爭議、歷次發掘與 2008 年中斷"
+    },
+    {
+      "title": "Reinterpreting the Role of Muslims in the West African Middle Ages",
+      "publisher": "Mauro Nobili, The Journal of African History 61(3): 327–340",
+      "date": "2021-01-13",
+      "url": "https://doi.org/10.1017/S0021853720000584",
+      "note": "討論巴克里書中的穆斯林是否為外來者"
+    },
+    {
+      "title": "File:Catalan Atlas BNF, sheet 6.jpg",
+      "publisher": "Wikimedia Commons（影像出自 Gallica btv1b55002481n）",
+      "date": "1375",
+      "url": "https://commons.wikimedia.org/wiki/File:Catalan_Atlas_BNF,_sheet_6.jpg",
+      "note": "地圖集資料：作者、尺寸、館藏號"
+    },
+    {
+      "title": "Catalan Atlas Legends, Panel III",
+      "publisher": "The Cresques Project（依 Buchon & Tastu 1843 等轉寫與英譯）",
+      "date": "未註明",
+      "url": "https://www.cresquesproject.net/catalan-atlas-legends/panel-iii",
+      "note": "III.10 Musse Melly 說明文字的轉寫：aquest senyor negre és appellat Musse Melly……lo pus rich e·l pus noble senyor de tota esta partida"
+    }
+  ]
+}
