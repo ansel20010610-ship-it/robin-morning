@@ -1,12 +1,12 @@
 {
   "column": "civilization",
-  "date": "reserve",
+  "date": "2026-10-23",
   "reserve_written": "2026-10-11",
   "title": "七頭黑驢的帳：亞述城到卡內什的錫路",
   "dek": "公元前 19 世紀，亞述城的代理人替遠在安納托利亞的商人買錫、買布、買七頭黑驢，也繳了出口稅。從這封帳信看錫路誰出錢、誰抽稅、誰裁決。",
   "brief": "公元前 19 世紀的亞述商人靠家族與合夥資本買進錫和布，和沿途統治者以誓約換取保護，糾紛則交給卡內什的商人聚落裁決。Imdī-ilum 的帳信裡，第一批錫、布與 7 頭驢約值 47 彌那銀，出口稅只有 25 舍客勒，本報自算不到 1%；另一份帳顯示，52 件布到了卡內什，扣掉進口稅、優先購買、遺失與聚落辦事處取走的，只放行 40 件。本報推想，這門生意的前提是每一道抽成都可預期，最難保護的則是商號主人自己的壽命。",
   "topic_key": "civilization:assur-kanesh-tin-caravans-19c-bce",
-  "updated_at": "2026-10-11T13:21:00+08:00",
+  "updated_at": "2026-10-23T07:38:36+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -471,5 +471,6 @@
       "url": "https://isaw.nyu.edu/events/archive/2016/anatolia-before-assyrians",
       "note": "土丘高 21 公尺，多為宮殿、神廟；下城稱卡內什的卡魯姆"
     }
-  ]
+  ],
+  "from_reserve": true
 }

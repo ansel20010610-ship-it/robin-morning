@@ -1,12 +1,12 @@
 {
   "column": "football",
-  "date": "reserve",
+  "date": "2026-10-23",
   "reserve_written": "2026-10-11",
   "title": "拉瑪西亞：一棟 1702 年的農舍怎麼變成青訓代名詞",
   "dek": "諾坎普旁的石造農舍當過工地辦公室、俱樂部總部，1979 年才住進第一批少年球員。這個名字後來比建築本身走得更遠。",
   "brief": "拉瑪西亞原名 Can Planes，是一棟 1702 年的石造農舍，真正當少年宿舍的時間只有 1979 到 2011 年這 32 年。1980 到 1999 年統籌青訓的 Oriol Tort 說「我們不辦測試」，到孩子自己的環境裡看球，經他發掘的包括瓜迪奧拉、哈維與普約爾；2012 年 11 月 25 日客場 4–0 勝萊萬特，巴薩一度場上 11 人全是拉瑪西亞出身。本報的讀法是，這個名字早已指向一套培養方式；舊農舍則依 2024 年公布的計畫，要恢復原貌、改作會員總部。",
   "topic_key": "football:la-masia-can-planes",
-  "updated_at": "2026-10-11T15:30:00+08:00",
+  "updated_at": "2026-10-23T07:38:36+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -398,5 +398,6 @@
       "url": "https://www.skysports.com/football/levante-vs-barcelona/teams/268315",
       "note": "換人時間：14' Alves→Montoya、75' Alba→Adriano"
     }
-  ]
+  ],
+  "from_reserve": true
 }

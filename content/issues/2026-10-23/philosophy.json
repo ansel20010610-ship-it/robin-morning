@@ -1,12 +1,12 @@
 {
   "column": "philosophy",
-  "date": "reserve",
+  "date": "2026-10-23",
   "reserve_written": "2026-10-11",
   "title": "看過紅色之後，色覺全書要不要多寫一章",
   "dek": "讀遍色覺物理學的瑪莉第一次看見紅色。從傑克森的黑白房間到物理主義的回應，追問她多了什麼、那能不能寫進書裡。",
   "brief": "傑克森 1982 年設想瑪莉在黑白房間學盡色覺的物理知識：她第一次看見紅色若學到新事實，物理主義就漏了東西。依 2022 年一項調查摘要，82.1% 的美國受訪者認為她先前不知道看見紅色是什麼感覺，傑克森本人後來卻改變想法；多數物理主義者說，她多的是新的現象概念，指向的仍是書裡那批事實。本報推想，除了丹尼特一派，各方都同意黑白文字教不會紅色的樣子，爭的是缺了事實、本事，還是新概念。",
   "topic_key": "philosophy:jackson-mary-room",
-  "updated_at": "2026-10-11T13:16:00+08:00",
+  "updated_at": "2026-10-23T07:38:36+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -378,5 +378,6 @@
       "url": "https://artgallery.yale.edu/collections/objects/12507",
       "note": "館藏資料：1888 年，油彩、畫布，72.4 × 92.1 公分，1961.18.34，Stephen Carlton Clark 遺贈；畫亞爾拉馬丁廣場通宵營業的 Café de la Gare；影像標示 CC0"
     }
-  ]
+  ],
+  "from_reserve": true
 }

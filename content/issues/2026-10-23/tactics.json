@@ -1,12 +1,12 @@
 {
   "column": "tactics",
-  "date": "reserve",
+  "date": "2026-10-23",
   "reserve_written": "2026-10-11",
   "title": "五個人壓上，五個人留下：丟球後的反搶",
   "dek": "進攻時把誰留在球後，決定丟球那一刻是馬上搶回來，還是被反擊。原創假設場景拆解 3＋2 站位、兩秒內開始的包夾，與包夾落空後怎麼拖住。",
   "brief": "藍隊五人壓上，後面留三名後衛、前方再站 6、10 號，即原創假設場景的 3＋2：三名後衛對紅隊留在前面的兩名前鋒多一人。據 Opta Analyst 2025 年 3 月統計，2024/25 英超快速反擊射門平均 xG 0.17，一般運動戰 0.12；場景裡斷球後兩秒內只派兩人撲球、兩人封傳球線，球傳向紅 9 號時，4 號敢貼上去不讓他轉身，因為身後還有 3 號。對手多留一人在前面，藍隊為保住後面多一人，壓上的就少一個；包夾落空時，後衛先別出腳，把持球者逼向邊線、等隊友回追。",
   "topic_key": "tactics:rest-defence-counter-press",
-  "updated_at": "2026-10-11T13:40:00+08:00",
+  "updated_at": "2026-10-23T07:38:36+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -1648,5 +1648,6 @@
       "url": "https://www.theifab.com/laws/latest/fouls-and-misconduct/",
       "note": "官網 2026/27 年版；12.4 Disciplinary action：干擾或阻止有希望的進攻（警告）、剝奪明顯進球機會（罰出場）"
     }
-  ]
+  ],
+  "from_reserve": true
 }
