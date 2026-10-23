@@ -1,12 +1,12 @@
 {
   "column": "devotion",
-  "date": "reserve",
+  "date": "2026-10-24",
   "reserve_written": "2026-10-11",
   "title": "羅騰樹下的餅和水：讀列王紀上 19:3–8",
   "dek": "以利亞在迦密山得勝後逃進曠野，坐在羅騰樹下求死。神的使者沒有先責備他，而是兩次叫他起來吃。這段經文怎樣看待人的力竭？",
   "brief": "列王紀上 19:3–8，以利亞在羅騰樹下說「罷了」，使者第二次拍他時說「你當走的路甚遠」，兩處的希伯來文是同一個字，有「夠了、太多」的意思。使者沒有說路不遠，只是再叫他起來吃一次，他仗著這飲食走了四十晝夜，到了何烈山。經文的次序是先睡、先吃，再對話；全力衝刺後累垮時，先照顧身體不算失敗，若「活著沒意思」的念頭反覆出現，請找醫師或信任的人談。",
   "topic_key": "devotion:1ki-19-3",
-  "updated_at": "2026-10-11T15:07:00+08:00",
+  "updated_at": "2026-10-24T07:37:46+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -306,5 +306,6 @@
       "url": "https://commons.wikimedia.org/wiki/File:Retama_raetam_kz01.jpg",
       "note": "攝於以色列阿拉德附近的 Wadi Kidod；CC BY-SA 4.0"
     }
-  ]
+  ],
+  "from_reserve": true
 }
