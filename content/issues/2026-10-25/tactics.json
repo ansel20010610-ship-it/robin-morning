@@ -1,12 +1,12 @@
 {
   "column": "tactics",
-  "date": "reserve",
+  "date": "2026-10-25",
   "reserve_written": "2026-10-19",
   "title": "右路擠滿人，為了左路那一對一",
   "dek": "故意讓一側擠滿人、另一側只留一名邊鋒，是為了什麼？原創假設場景拆解「以多打少，為了孤立」：怎麼把對手吸過去、轉移要多快、防守方怎麼回應。",
   "brief": "藍隊把五人堆在右路，左路只留 11 號貼邊線，紅隊整條防線跟著右移，這是原創假設場景裡的「以多打少，為了孤立」。當地時間 2023 年 11 月 28 日巴薩 2 比 1 逆轉波圖，此前三場先發都踢防線右側的坎塞洛改踢左路、一傳一射，哈維談中場休息的指示時說「空出來的人是坎塞洛」。本文的推論是轉移要一腳出球；防守方則要在邊後衛撲出時，由中衛橫移補他身後。",
   "topic_key": "tactics:overload-to-isolate-switch",
-  "updated_at": "2026-10-19T15:00:00+08:00",
+  "updated_at": "2026-10-25T07:34:25+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -1433,5 +1433,6 @@
       "url": "https://commons.wikimedia.org/wiki/File:Estadi_Ol%C3%ADmpic_Llu%C3%ADs_Companys_-_Barcelona,_Spain_-_Jan_2007.jpg",
       "note": "正文圖片"
     }
-  ]
+  ],
+  "from_reserve": true
 }

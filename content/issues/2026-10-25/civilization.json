@@ -1,12 +1,12 @@
 {
   "column": "civilization",
-  "date": "reserve",
+  "date": "2026-10-25",
   "reserve_written": "2026-10-20",
   "title": "竹竿與銅錢：阿克巴怎樣替每塊地定稅",
   "dek": "蒙兀兒帝國怎樣把北印度的田量過、分等，再把平均收成的三分之一折成每畢迦幾枚銅幣？誰定稅率、誰去收，又在哪裡走樣。",
   "brief": "阿克巴的「扎卜特」先量地，再把好、中、差三等田的平均收成取三分之一作稅，最後依稅率表折成每畢迦幾達姆銅幣。以小麥為例，《阿克巴則例》算出每畢迦應繳 4 莫恩德 12¾ 色爾，而阿格拉省的小麥稅率在 19 年間從 90 達姆變成 52 至 116 達姆。第 24 年改用十年資料定出固定稅率；Habib 認為這讓稅額與當年收成脫鉤，在收成不穩的地方，風險幾乎全落在農民身上。",
   "topic_key": "civilization:mughal-india-zabt-land-revenue-16c",
-  "updated_at": "2026-10-20T14:51:00+08:00",
+  "updated_at": "2026-10-25T07:34:25+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -471,5 +471,6 @@
       "url": "https://commons.wikimedia.org/wiki/File:Raja_Todar_Mall,_Finance_Minister_of_Akbar.jpg",
       "note": "正文肖像；17 世紀、館號 AC 1967.34、Alban G. Widgery 捐贈、公版標示"
     }
-  ]
+  ],
+  "from_reserve": true
 }
