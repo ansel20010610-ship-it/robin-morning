@@ -5,7 +5,7 @@
   "dek": "1785 年，剛進皇家學院兩年的拉比耶－吉雅爾，把自己、兩名女學生和一張背對觀者的畫布畫成真人大小。從帽上的羽毛看到畫架上的簽名。",
   "brief": "拉比耶－吉雅爾 1785 年的《與兩位學生的自畫像》高 210.8 公分：她坐在畫架前，身後兩名女學生一個看向觀者、一個看著畫布，而那張畫布只露出背面。兩年前她和維傑－勒布倫同一天進入皇家繪畫雕塑學院，學院的女性院士從此滿了四名的上限。學者 Auricchio 認為，那張看不到的畫讓每個站到畫前的人都坐上了模特兒的位置，也就是成了她潛在的顧客。",
   "topic_key": "art:met-53.225.5",
-  "updated_at": "2026-10-19T02:08:00+08:00",
+  "updated_at": "2026-10-25T15:59:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -390,6 +390,11 @@
       "type": "p",
       "tag": "史實",
       "text": "1953 年，Julia A. Berwind 把它捐給大都會博物館。Auricchio 2007 年寫道，在她寫作時，這幅畫常被印上書封，也是藝術史教科書的標準圖版；她在註腳舉的書封例子，是 Aileen Ribeiro 的*The Art of Dress*與 Marilyn Stokstad 的*Art History*。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-10-25）",
+      "text": "倒數幾段寫 Jeffares「把它寫成『傳說』」，轉述有誤。Jeffares 直接寫明這間店最出名的是一名後來成為杜巴利夫人的店員（best known for one of its assistants, who would later be Mme du Barry）；他稱為「傳說」（Legend has it）的是另一件事：畫家替店員上素描課，杜巴利因此學會畫畫。他記載父親 1761 年已賣掉店，這一點與 Auricchio「1760 年代初」的說法確有出入。"
     }
   ],
   "sources": [

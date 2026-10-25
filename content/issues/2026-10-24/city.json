@@ -6,7 +6,7 @@
   "dek": "阿姆斯特丹市中心有座比街面低近一公尺的院子，房子面朝內，三面背靠舊水道。從 1574 年的舊門到南側門樓，看這道邊界怎麼造、又怎麼打開。",
   "brief": "阿姆斯特丹貝居安會院沒有另砌圍牆，一圈住宅的後牆接起來，三面隔水、北面貼著修道院，原本只靠一扇門和一座橋進出。1578 年新教掌權，北邊的修道院被沒收，會院則因房子是會中女性的私產而保留下來；1671 年起建的隱藏教堂，就和 1607 年交給英語會眾的舊教堂隔著院內小路門對門。本報推想，院內 17、18 世紀的天主教圖像集中在朝內的立面，院外看不到，這圈後牆擋住了路，也擋住了視線。",
   "topic_key": "city:amsterdam-begijnhof",
-  "updated_at": "2026-10-24T07:37:46+08:00",
+  "updated_at": "2026-10-25T15:59:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -363,6 +363,11 @@
       "type": "p",
       "text": "截至 2026 年 10 月 11 日，小堂網站列出的遊客入口地址是 Gedempte Begijnensloot：1574 年那道舊門所在、曾經架橋跨過貝居安溝的那條街。",
       "tag": "官方說法"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-10-25）",
+      "text": "本文引用的小堂網站 begijnhofkapelamsterdam.nl，在 2026 年 10 月 25 日稽核時已變成與貝居安會院無關的印尼賭博網站，本報無法再回原站核對沿革與開放時間。文末兩筆來源已改連網際網路檔案館的存檔，請勿直接開啟原網域。文中「全年 09:30–18:00」的開放時間其他網站有不同寫法（例如 9–17 時），出發前請以現場公告為準。"
     }
   ],
   "sources": [
@@ -447,15 +452,15 @@
       "title": "Geschiedenis",
       "publisher": "Begijnhofkapel Amsterdam",
       "date": "2026-10-10",
-      "url": "https://begijnhofkapelamsterdam.nl/begijnhofkapel/geschiedenis/",
-      "note": "1665 年規劃新堂、外觀不得像教堂、設計者 Philips Vingboons；日期為查閱日"
+      "url": "https://web.archive.org/web/2026/https://begijnhofkapelamsterdam.nl/begijnhofkapel/geschiedenis/",
+      "note": "1665 年規劃新堂、外觀不得像教堂、設計者 Philips Vingboons；日期為查閱日；2026-10-25 稽核時原網域已改為無關的賭博網站，網址改指向網際網路檔案館存檔"
     },
     {
       "title": "Toegang en openingstijden Begijnhof en Begijnhofkapel",
       "publisher": "Begijnhofkapel Amsterdam",
       "date": "2026-10-11",
-      "url": "https://begijnhofkapelamsterdam.nl/begijnhofkapel/toegang-entrance-begijnhof-en-begijnhofkapel/",
-      "note": "遊客入口地址（Gedempte Begijnensloot）與開放時間；日期為最近一次查閱日"
+      "url": "https://web.archive.org/web/2026/https://begijnhofkapelamsterdam.nl/begijnhofkapel/toegang-entrance-begijnhof-en-begijnhofkapel/",
+      "note": "遊客入口地址（Gedempte Begijnensloot）與開放時間；日期為最近一次查閱日；2026-10-25 稽核時原網域已改為無關的賭博網站，網址改指向網際網路檔案館存檔"
     },
     {
       "title": "Het nieuwe Amsterdam Museum",
