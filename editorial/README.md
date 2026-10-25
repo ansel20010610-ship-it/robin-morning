@@ -18,8 +18,19 @@
 ## 每班流程
 
 1. **確認任務**：`python3 scripts/plan_day.py --group <班號>`。會印出刊期日期、期數、本班欄位、全刊狀態。已存在且驗證通過的稿件**不要重寫**（巴薩晨報的更新除外，見下）。
+   **沒事就結束**：本班欄位都已存在且驗證通過，而且沒有其他任務（第 4 班的觀測站與巴薩更新、第 5 班的補位與巴薩更新、備稿班的庫存另計），就直接做第 11 步班次回報後結束，不必再讀規則檔——每次讀完整份手冊都很耗額度。
 2. **讀規則**（每次都讀，不憑記憶）：`editorial/STYLE.md`、`editorial/SCHEMA.md`、`editorial/IMAGES.md`、`editorial/LESSONS.md`（編輯部教訓，過去反覆出現的錯）、`editorial/columns/<欄位>.md`。
 3. **分工**：本班有兩篇以上時，用 Agent 工具為每一欄各派一個子代理**同時**撰寫。給子代理的指示要包含：專案路徑、日期、欄位、要先讀的規則檔、第 4–7 步、只寫自己那一個檔、不要 git commit。你負責第 8–10 步。第 5 班一律平行。
+   **模型分工（額度有限，照表指定，不要全部用最強的模型）**：用 Agent 工具派子代理時，一律帶 `model` 與 `effort` 參數：
+
+   | 工作 | model | effort |
+   |---|---|---|
+   | 寫稿：牙周（perio）、文明（civilization）、哲學（philosophy）、文學（literature） | `opus` | `high` |
+   | 寫稿：巴薩晨報、古典、晨光、藝術、攝影、城市、小說、戰術、兩個觀測站（含同欄備稿） | `sonnet` | `high` |
+   | 審稿（第 8 步，所有欄位） | `sonnet` | `high` |
+   | 依審稿意見修正、查單一資料、其他雜務 | `sonnet` | `medium` |
+
+   班次本身（協調、跑程式、推送、回報）由排程設定的模型執行，不另派子代理去做。
 4. **查重**：`python3 scripts/ledger.py --column <欄位>`、`python3 scripts/ledger.py --images`（已含備稿用過的主題與圖片）。
 5. **研究與核對**：用 WebSearch、WebFetch 找原始來源。數字、日期、人名、引文都要能在來源找到，找不到就不寫。雲端的 WebSearch 結果常混入內容農場：搜尋時盡量用 `allowed_domains` 限定可信網域，或直接用 WebFetch 打開已知來源。注意：`allowed_domains` 裡只要有一個網站封鎖了我們的抓取程式，整次搜尋就會報錯（400 “not accessible to our user agent”）——遇到這個錯誤就把該網域拿掉重搜，不要放棄搜尋；已知不可用的網站列在 `columns/football.md`。
 6. **找圖**：`python3 scripts/commons.py --search "<關鍵字>"`、`python3 scripts/commons.py "File:<檔名>"`。依 `IMAGES.md`。
@@ -72,7 +83,7 @@
 
 ## 每週品質稽核（週日 15:37）
 
-1. 讀過去 7 期（`content/issues/` 最近 7 個日期）的全部稿件；每篇派一個審稿子代理（可平行），以懷疑的態度抽查關鍵事實、引文、圖片授權與規格。
+1. 讀過去 7 期（`content/issues/` 最近 7 個日期）的全部稿件；每篇派一個審稿子代理（可平行，`model: sonnet`、`effort: high`），以懷疑的態度抽查關鍵事實、引文、圖片授權與規格。
 2. **事實錯誤**：還沒刊出的稿件（刊期在明天以後，或今天 07:30 以前）直接改正正文、補上來源，不加更正框——讀者第一次讀到就該是對的。已刊出的稿件不改寫原文，在該篇 `body` 末尾加一個 `callout` 區塊，`label` 為「更正（<稽核日期>）」，寫明哪裡錯、正確內容與來源，並在 `sources` 補上來源、把 `updated_at` 改成稽核時間。跑 `python3 scripts/validate.py <該日期> --column <欄位>` 確認沒有 ERROR。
 3. **反覆出現的問題**（兩篇以上、或同一欄連續出現）：寫進 `editorial/LESSONS.md`，一條一個問題，附出現位置與正確做法。
 4. 推送，訊息用「品質稽核 <日期>：更正 N 篇、新增教訓 M 條」，最後做班次回報（`--group audit`）。
