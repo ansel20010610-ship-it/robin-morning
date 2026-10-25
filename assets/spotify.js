@@ -163,18 +163,35 @@ export async function defaultPlaylist() {
   if (known?.url) return known;
   if (!isLoggedIn()) return null;
   try {
-    const me = await api("/me");
-    const isDef = (p) => p && (p.owner?.id === me.id || p.collaborative) && p.name === cfg.playlist_name;
-    let page = await api("/me/playlists?limit=50");
-    let pls = page.items || [];
-    while (page.next && !pls.some(isDef) && pls.length < 500) {
-      page = await api(page.next.replace(API, ""));
-      pls = pls.concat(page.items || []);
-    }
-    const def = pls.find(isDef);
+    const { def } = await myPlaylists();
     return def ? rememberPlaylist(def) : null;
   } catch { return null; }
 }
+// The reader's own (and collaborative) playlists, the default one first. Pages on (up to 500) until the default turns
+// up, so it never gets created twice.
+async function myPlaylists() {
+  const me = await api("/me");
+  const mine = (p) => p && (p.owner?.id === me.id || p.collaborative);
+  const isDef = (p) => mine(p) && p.name === cfg.playlist_name;
+  let page = await api("/me/playlists?limit=50");
+  let pls = page.items || [];
+  while (page.next && !pls.some(isDef) && pls.length < 500) {
+    page = await api(page.next.replace(API, ""));
+    pls = pls.concat(page.items || []);
+  }
+  const own = pls.filter(mine);
+  const def = own.find(isDef);
+  return { def, own: def ? [def, ...own.filter((x) => x !== def)] : own };
+}
+async function createDefault() {
+  const p = await api("/me/playlists", { method: "POST", body: JSON.stringify({ name: cfg.playlist_name, public: false, description: "知更鳥晨間記事每日古典導聆的錄音" }) });
+  rememberPlaylist(p);
+  return p;
+}
+const playlistRows = (def, own) => [
+  def ? "" : `<button class="opt" data-new>${ICON.plus.replace("<svg", '<svg width="18" height="18"')}建立「${esc(cfg.playlist_name)}」</button>`,
+  ...own.map((p) => { const n = p.items?.total ?? p.tracks?.total ?? ""; return `<button class="opt" data-id="${esc(p.id)}" data-name="${esc(p.name)}">${esc(p.name)}<small>${n !== "" ? n + " 首" : ""}</small></button>`; }),
+].join("");
 function rememberPlaylist(p) {
   const v = { id: p.id, name: p.name, url: p.external_urls?.spotify || `https://open.spotify.com/playlist/${p.id}` };
   store.set("sp.playlist", v);
@@ -340,25 +357,8 @@ async function addToPlaylist(uris, label) {
     err.hidden = false;
   };
   try {
-    const me = await api("/me");
-    const mine = (p) => p && (p.owner?.id === me.id || p.collaborative);
-    const isDef = (p) => mine(p) && p.name === cfg.playlist_name;
-    let page = await api("/me/playlists?limit=50");
-    let pls = page.items || [];
-    // Page on (up to 500) until the default playlist turns up, so it never gets created twice.
-    while (page.next && !pls.some(isDef) && pls.length < 500) {
-      page = await api(page.next.replace(API, ""));
-      pls = pls.concat(page.items || []);
-    }
-    const own = pls.filter(mine);
-    const def = own.find(isDef);
-    const rows = [];
-    if (!def) rows.push(`<button class="opt" data-new>${ICON.plus.replace("<svg", '<svg width="18" height="18"')}建立「${esc(cfg.playlist_name)}」</button>`);
-    for (const p of def ? [def, ...own.filter((x) => x !== def)] : own) {
-      const n = p.items?.total ?? p.tracks?.total ?? "";
-      rows.push(`<button class="opt" data-id="${esc(p.id)}">${esc(p.name)}<small>${n !== "" ? n + " 首" : ""}</small></button>`);
-    }
-    list.innerHTML = rows.join("") || `<p class="sub">沒有可加入的歌單。</p>`;
+    const { def, own } = await myPlaylists();
+    list.innerHTML = playlistRows(def, own) || `<p class="sub">沒有可加入的歌單。</p>`;
     const sent = {}; // tracks already added per playlist, so a retry after a partial failure picks up where it stopped
     const add = async (id, name) => {
       lock(true);
@@ -372,15 +372,14 @@ async function addToPlaylist(uris, label) {
       if (shown()) sheet.close();
       toast(`已加入「${name}」`);
     };
-    list.querySelectorAll("[data-id]").forEach((b) => (b.onclick = () => add(b.dataset.id, b.textContent.replace(/\d+ 首$/, "").trim()).catch(fail)));
+    list.querySelectorAll("[data-id]").forEach((b) => (b.onclick = () => add(b.dataset.id, b.dataset.name).catch(fail)));
     const nb = list.querySelector("[data-new]");
     if (nb) nb.onclick = async () => {
       lock(true);
       err.hidden = true;
       let p;
-      try { p = await api("/me/playlists", { method: "POST", body: JSON.stringify({ name: cfg.playlist_name, public: false, description: "知更鳥晨間記事每日古典導聆的錄音" }) }); }
+      try { p = await createDefault(); }
       catch (e) { fail(e); return; }
-      rememberPlaylist(p);
       // The button now stands for the new playlist, so a retry adds to it instead of creating another.
       nb.removeAttribute("data-new");
       nb.dataset.id = p.id;
@@ -391,6 +390,104 @@ async function addToPlaylist(uris, label) {
   } catch (e) {
     if (e.code === "auth") fail(e); else list.innerHTML = `<p class="sub">${esc(e.message)}</p>`;
   }
+}
+
+// ——— Daily auto-add: every issue's recording goes into the playlist the reader chose ———
+// No server holds the Spotify login, so this runs in the app each time it opens; the days it stayed closed are caught up.
+// sp.auto = { id, name, since: first issue date to add, done: [dates], miss: { date: work }, tried: { date: day }, error }
+export const autoPlaylist = () => store.get("sp.auto");
+export function setAutoPlaylist(p, since) {
+  if (!p) { store.del("sp.auto"); return; }
+  const old = autoPlaylist();
+  // the same playlist keeps its record; another one starts over (what is already in it is never added twice)
+  store.set("sp.auto", old?.id === p.id ? { ...old, since, error: "" } : { id: p.id, name: p.name, since, done: [], miss: {}, tried: {} });
+}
+const updateAuto = (f) => { const a = autoPlaylist(); if (a) store.set("sp.auto", f(a)); };
+
+// Choose the auto-add playlist: resolves to { id, name }, or null when the sheet is closed.
+export function choosePlaylist() {
+  return new Promise((done) => {
+    const sheet = $("#sheet");
+    sheet.innerHTML = `<div class="sheet"><h2>每日自動加入的歌單</h2><p class="sub">之後每天的古典錄音都會加進你選的歌單。</p><p class="sub" data-err hidden style="color:var(--red)"></p><div class="list"><p class="sub">讀取你的歌單……</p></div>
+      <div class="btns" style="margin-top:14px"><button class="btn ghost" data-close>取消</button></div></div>`;
+    let settled = false;
+    const finish = (v) => { if (!settled) { settled = true; done(v); } };
+    sheet.addEventListener("close", () => finish(null), { once: true }); // closed with Esc
+    sheet.querySelector("[data-close]").onclick = () => { finish(null); sheet.close(); };
+    sheet.showModal();
+    const list = sheet.querySelector(".list"), err = sheet.querySelector("[data-err]");
+    const take = (p) => { finish({ id: p.id, name: p.name }); sheet.close(); };
+    const fail = (e) => {
+      if (e.code === "auth") { sheet.close(); report(e); return; }
+      list.querySelectorAll("button").forEach((b) => (b.disabled = false));
+      err.textContent = e.message;
+      err.hidden = false;
+    };
+    myPlaylists().then(({ def, own }) => {
+      list.innerHTML = playlistRows(def, own);
+      list.querySelectorAll("[data-id]").forEach((b) => (b.onclick = () => take({ id: b.dataset.id, name: b.dataset.name })));
+      const nb = list.querySelector("[data-new]");
+      if (nb) nb.onclick = () => { list.querySelectorAll("button").forEach((b) => (b.disabled = true)); createDefault().then(take, fail); };
+    }, (e) => { if (e.code === "auth") fail(e); else list.innerHTML = `<p class="sub">${esc(e.message)}</p>`; });
+  });
+}
+
+// Everything already in the playlist, read once per run, so a piece added by the button or on another device
+// never goes in twice.
+async function playlistUris(id) {
+  const out = new Set();
+  let path = `/playlists/${id}/items?limit=50`;
+  while (path && out.size < 3000) {
+    const page = await api(path);
+    for (const x of page.items || []) { const u = x?.item?.uri || x?.track?.uri; if (u) out.add(u); }
+    path = page.next ? page.next.replace(API, "") : null;
+  }
+  return out;
+}
+
+let autoRun = null;
+// `dates`: published issues that have a music article. `musicOf(date)`: that day's music block (null if none).
+export function autoAdd(dates, musicOf) {
+  return autoRun || (autoRun = runAuto(dates, musicOf).catch(() => {}).finally(() => { autoRun = null; }));
+}
+async function runAuto(dates, musicOf) {
+  const a = autoPlaylist();
+  if (!a || !isLoggedIn() || !navigator.onLine) return;
+  const today = new Date().toDateString();
+  const todo = dates.filter((d) => d >= a.since && !a.done.includes(d)).sort();
+  let have = null;
+  const added = [];
+  for (const d of todo) {
+    if (autoPlaylist()?.id !== a.id) return; // turned off or changed meanwhile
+    let b;
+    try { b = await musicOf(d); } catch { continue; } // offline: next time
+    if (!b?.spotify) { updateAuto((x) => ({ ...x, done: [...x.done, d] })); continue; }
+    const sp = b.spotify;
+    // A piece that found no match is looked up again once a day, or at once after the reader picked a version.
+    if (a.tried?.[d] === today && !store.get(cacheKey(sp))) continue;
+    const n = (b.movements || []).length || 1;
+    try {
+      const r = await resolve(sp, { count: n });
+      // Only the editor's tracks or a clean match go in unattended; more tracks than movements means the search was unsure.
+      if (!r?.tracks?.length || (r.source !== "editor" && r.tracks.length > n)) {
+        updateAuto((x) => ({ ...x, miss: { ...x.miss, [d]: b.work }, tried: { ...x.tried, [d]: today } }));
+        continue;
+      }
+      const uris = r.tracks.map((id) => `spotify:track:${id}`);
+      have ||= await playlistUris(a.id).catch((e) => { if (e.code === "auth" || /404/.test(e.message)) throw e; return new Set(); });
+      const fresh = uris.filter((u) => !have.has(u));
+      if (fresh.length) await api(`/playlists/${a.id}/items`, { method: "POST", body: JSON.stringify({ uris: fresh }) });
+      fresh.forEach((u) => have.add(u));
+      updateAuto((x) => { const miss = { ...x.miss }; delete miss[d]; return { ...x, done: [...x.done, d].slice(-400), miss, error: "" }; });
+      if (fresh.length) added.push(b.work);
+    } catch (e) {
+      const msg = e.code === "auth" ? "Spotify 登入已過期，重新連結後會自動補上。"
+        : /404/.test(e.message) ? `找不到歌單「${a.name}」，請重新選擇。` : `自動加入暫停：${e.message}`;
+      updateAuto((x) => ({ ...x, error: msg }));
+      return; // try again next time the app opens
+    }
+  }
+  if (added.length) toast(added.length === 1 ? `今日古典已加入「${a.name}」` : `已把 ${added.length} 期古典加入「${a.name}」`);
 }
 
 function versionSheet(sp, current, onPick) {

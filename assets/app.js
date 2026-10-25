@@ -1,7 +1,8 @@
 // 知更鳥晨間記事 — app shell, routing and views.
 import { $, esc, inline, store, toast, twNow, fmtDate, getJSON, ICON } from "./util.js";
 import { renderBody, renderHero } from "./blocks.js";
-import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient, isWebKitITP, isStandaloneIOS, exportLinkCode, importLinkCode, defaultPlaylist } from "./spotify.js";
+import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient, isWebKitITP, isStandaloneIOS, exportLinkCode, importLinkCode, defaultPlaylist,
+  autoPlaylist, setAutoPlaylist, choosePlaylist, autoAdd } from "./spotify.js";
 import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 import { renderPush, clearNotices } from "./notify.js";
@@ -495,6 +496,27 @@ function viewSaved() {
 
 function viewMusic() { viewColumn("music"); }
 
+// ——— Spotify: each day's recording added to the reader's chosen playlist (spotify.js autoAdd) ———
+// Real publication only (`?preview` must not add tomorrow's piece early); newest first.
+const musicDates = () => {
+  const n = twNow();
+  return (S.index.issues || []).filter((i) => (i.date < n.date || (i.date === n.date && n.minutes >= publishMin())) && i.articles.some((a) => a.column === "music")).map((i) => i.date);
+};
+const musicOf = async (date) => (await article(date, "music")).body?.find((b) => b?.type === "music") || null;
+const runAutoAdd = () => (autoPlaylist() ? autoAdd(musicDates(), musicOf) : Promise.resolve());
+
+function autoBlock() {
+  const a = autoPlaylist();
+  if (!a) return `<p><b>每日自動加入</b>：選一個歌單，之後每天的古典錄音會在你打開晨報時自動加進去，不必再按「加入 Spotify 歌單」。</p>
+    <div class="btns"><button class="btn" data-auto-pick>${ICON.plus}選擇歌單</button></div>`;
+  const miss = Object.entries(a.miss || {}).sort();
+  const earlier = musicDates().some((d) => d < a.since);
+  return `<p><b>每日自動加入「${esc(a.name)}」</b>：每天的古典錄音會在你打開晨報時自動加入；沒打開的日子，下次打開會補上。</p>
+    ${a.error ? `<p class="small" style="color:var(--red)">${esc(a.error)}</p>` : ""}
+    ${miss.length ? `<p class="small">這幾期沒找到確定相符的錄音：${miss.map(([d, w]) => `<a href="#/a/${d}/music">${esc(fmtDate(d, "short"))}〈${esc(w)}〉</a>`).join("、")}。打開那一篇按「換一個版本」挑一次，之後會自動補進歌單。</p>` : ""}
+    <div class="btns"><button class="btn ghost" data-auto-pick>換一個歌單</button>${earlier ? `<button class="btn ghost" data-auto-all>補上之前各期</button>` : ""}<button class="btn ghost" data-auto-off>停止自動加入</button></div>`;
+}
+
 const FS = ["16.5px", "18.5px", "20.5px", "23px"];
 function cycleFont() {
   const cur = getComputedStyle(document.documentElement).getPropertyValue("--fs").trim();
@@ -518,6 +540,7 @@ function viewSettings() {
     <section class="set"><h2>Spotify</h2>
       ${!hasClient() ? `<p>尚未設定 Spotify Client ID。設定後即可在 App 內收聽並一鍵加入歌單。</p>`
         : isLoggedIn() ? `<p>已連結。古典欄的「加入 Spotify 歌單」會加到你的歌單「${esc(S.cfg.spotify.playlist_name)}」或你選的歌單。</p>
+          ${autoBlock()}
           <div class="btns"><button class="btn ghost" data-sp-out>中斷連結</button>${isStandaloneIOS() ? "" : `<button class="btn ghost" data-sp-code>移交給 iPhone 主畫面 App</button>`}</div>
           ${isStandaloneIOS() ? "" : `<p class="small">按「移交」會複製一組連結碼，到 iPhone 主畫面 App 的設定頁貼上即可；移交後這個瀏覽器會中斷連結。連結碼等同你的 Spotify 授權，不要傳給別人。</p>`}`
         : isStandaloneIOS() ? `<p>在主畫面 App 裡，Spotify 的登入頁常會出現「Something went wrong」。請改用連結碼：</p>
@@ -552,6 +575,23 @@ function viewSettings() {
     redraw("theme", v);
   }));
   main.querySelectorAll('[data-g="rate"] button').forEach((b) => (b.onclick = () => { setRate(Number(b.dataset.v)); redraw("rate", b.dataset.v); }));
+  // Redraw only while the settings page is still the one showing.
+  const auto = (p) => p.then(() => { if ((location.hash || "").startsWith("#/settings")) viewSettings(); });
+  main.querySelector("[data-auto-pick]")?.addEventListener("click", async () => {
+    const p = await choosePlaylist();
+    if (!p) return;
+    // from today's piece on; 「補上之前各期」 reaches back further
+    setAutoPlaylist(p, autoPlaylist()?.since || musicDates()[0] || twNow().date);
+    viewSettings();
+    auto(runAutoAdd());
+  });
+  main.querySelector("[data-auto-all]")?.addEventListener("click", () => {
+    const d = musicDates();
+    setAutoPlaylist(autoPlaylist(), d[d.length - 1]);
+    toast("正在補上之前各期……");
+    auto(runAutoAdd());
+  });
+  main.querySelector("[data-auto-off]")?.addEventListener("click", () => { setAutoPlaylist(null); toast("已停止自動加入"); viewSettings(); });
   main.querySelector("[data-sp-in]")?.addEventListener("click", () => login("#/settings"));
   main.querySelector("[data-sp-out]")?.addEventListener("click", () => { logout(); viewSettings(); });
   main.querySelector("[data-sp-code]")?.addEventListener("click", async () => {
@@ -621,6 +661,7 @@ async function boot() {
   if (back) location.hash = back;
   window.addEventListener("hashchange", route);
   try { await route(); } catch (e) { console.warn("route failed", e); }
+  runAutoAdd();
   // While the front page stays open: keep the countdown and the day change current, flip to the new issue at 07:30,
   // and pick up late articles. Nothing changed: leave the page alone. Only the countdown moved: rewrite that line
   // in place, so focus and the reader's position survive the minute-by-minute tick. Anything else redraws.
@@ -636,6 +677,7 @@ async function boot() {
   const refetch = async () => {
     try { S.index = await getJSON("content/index.json", { fresh: true }); fetchedAt = Date.now(); } catch { /* offline: still redraw the clock */ }
     refreshFront();
+    runAutoAdd();
   };
   setInterval(refreshFront, 60 * 1000);
   setInterval(refetch, 5 * 60 * 1000);
