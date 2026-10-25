@@ -1,0 +1,278 @@
+{
+  "column": "music",
+  "date": "2026-10-26",
+  "title": "裹著毛皮聽四小時：《命運》首演被嫌太長",
+  "dek": "1808 年 12 月 22 日，貝多芬自辦的音樂會從晚上 6 點半開到 10 點半。台下一位作曲家寫信說，這首太長。",
+  "brief": "1808 年 12 月 22 日，貝多芬在維也納自辦音樂會，從晚上 6 點半撐到 10 點半，《第五號交響曲》在下半場開場首演，廣告上還印成「第 6 號」。台下的賴夏特裹著毛皮聽完，三天後寫信說這首太長，一年半後霍夫曼讀了總譜，認為它是大師最重要的作品之一。聽克萊伯 1974 年的錄音，留意開頭的長音，與第三樂章通往終曲的定音鼓。",
+  "topic_key": "music:beethoven-op67",
+  "updated_at": "2026-10-26T01:10:34+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "portrait",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Beethoven.jpg",
+    "width": 1200,
+    "height": 1443,
+    "alt": "油畫肖像：一位灰髮蓬亂的男子，眉頭緊皺、神情嚴肅，白領上繫著紅色圍巾，穿深色外套，一手握鉛筆、一手按著攤開的樂譜，背景是深綠色的樹叢。",
+    "caption": "施蒂勒（Joseph Karl Stieler）1820 年所繪的貝多芬肖像，比首演晚了約 12 年，畫的是 50 歲上下的他，不是 1808 年的樣子；手中的樂譜是《莊嚴彌撒》。Commons 檔案頁標明作者、年份與公版授權，沒有列現藏處，本報不寫。",
+    "credit": "Joseph Karl Stieler，1820；經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Beethoven.jpg",
+    "made": "1820"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "咚咚咚——咚。三個短音，加一個被拉得很長、長到你忍不住想等下一句的長音。就算你沒上過任何一堂音樂課，大概也在哪裡聽過這四個音；連 NASA 的航行者金唱片（Golden Record）曲目表都收了它：第一樂章，克倫培勒（Otto Klemperer）指揮愛樂管弦樂團（Philharmonia Orchestra），長 7 分 20 秒，隨探測器送上太空。NASA 頁面列出的 27 首曲子裡，它排第 18 首。"
+    },
+    {
+      "type": "p",
+      "text": "這是貝多芬（Ludwig van Beethoven）的《第五號交響曲》，綽號《命運》。這麼穩的一首曲子，1808 年第一次登場時的處境卻很慘：冷到要裹毛皮的劇場、四個小時的馬拉松節目單，還有一位台下的作曲家一邊發抖，一邊嫌它太長。"
+    },
+    {
+      "type": "music",
+      "composer": "貝多芬（Ludwig van Beethoven）",
+      "work": "C 小調第五號交響曲，作品 67",
+      "work_original": "Symphony No. 5 in C minor, Op. 67",
+      "composed": "1803 年秋有初步構想，主體寫於 1807 年春至 1808 年初，1808 年 3 月完成總譜（Beethoven-Haus 作品頁；該頁標題寫「1804 年初至 1808 年 3 月」，與內文不一致）",
+      "performers": "卡洛斯・克萊伯（Carlos Kleiber）指揮 維也納愛樂（Wiener Philharmoniker）",
+      "recording": "Deutsche Grammophon，1974 年 3–4 月錄於維也納音樂協會大廳（Musikvereinssaal）；與第七號合輯，DG 447 400-2（Originals CD）；下文引的樂評評的是同錄音的 DG 479 1106 Blu-ray Audio 版",
+      "duration": "約 33 分半（MusicWeb 所列這版為 33:30）",
+      "movements": [
+        "I. Allegro con brio",
+        "II. Andante con moto",
+        "III. Allegro",
+        "IV. Allegro"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Beethoven Symphony No. 5 Carlos Kleiber Wiener Philharmoniker",
+        "artist_hint": "Kleiber",
+        "track_filter": [
+          "Symphony No. 5"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "指定克萊伯與維也納愛樂 1974 年的版本：主流、好找，樂評還特別點名下面要聽的那一段。John Quinn 2014 年 1 月在 MusicWeb International 評這個錄音的 Blu-ray Audio 版，說它有最好的現場才有的電光與急迫；談到終曲前的過渡，他這樣寫："
+    },
+    {
+      "type": "quote",
+      "original": "The transition to the finale is expertly managed, the tension palpable, and once the movement itself is launched the reading is superb, the pacing steady and the mood confident and jubilant.",
+      "text": "通往終曲的過渡處理得極好，張力幾乎摸得到；而一旦終曲展開，演繹出色，速度穩，情緒自信而歡騰。",
+      "cite": "John Quinn，MusicWeb International，2014 年 1 月（本文自譯）"
+    },
+    {
+      "type": "h",
+      "text": "1808 年 12 月 22 日：一晚塞滿貝多芬"
+    },
+    {
+      "type": "p",
+      "text": "據 Thayer 的貝多芬傳（Krehbiel 編訂的 1921 年英譯本）轉錄，12 月 17 日的《維也納報》（Wiener Zeitung）刊出廣告：週四 12 月 22 日，貝多芬在 Theater an der Wien 舉辦音樂會，廣告說曲目全是他的作品、全新、從未公開演出（本文據英譯轉述），6 點半開始。劇院經理哈特爾（Joseph Hartl）讓他免費借用劇院，回報他在 4 月 17 日與 11 月 15 日兩場慈善音樂會的出力。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "廣告上的編號和今天對調：上半場開場的《田園》被標成「第 5 號」，下半場開場的 C 小調交響曲被標成「第 6 號」。這首今天穿 5 號球衣，首演那晚球衣上印的是 6。",
+      "tag": "史實"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/The_life_of_Ludwig_van_Beethoven_%28IA_lifeofludwigvanb02thay%29.pdf/page139-500px-The_life_of_Ludwig_van_Beethoven_%28IA_lifeofludwigvanb02thay%29.pdf.jpg",
+      "width": 500,
+      "height": 762,
+      "alt": "一頁英文書頁，書眉是「The Court Theatres Change Managers」，頁碼 127。上半頁是正文段落；下半頁縮排，小標題「Musical Academy」下印著廣告全文，分「First Part」「Second Part」兩段列出節目，最後一行寫售票地點與開始時間。",
+      "caption": "Thayer《The Life of Ludwig van Beethoven》第 2 冊（Krehbiel 編訂英譯本，1921）第 127 頁，轉錄 1808 年 12 月 17 日《維也納報》的音樂會廣告。下半場第 1 項寫「Grand Symphony in C minor (No. 6)」，上半場開場的《田園》則是「No. 5」。",
+      "credit": "Alexander Wheelock Thayer；Henry Edward Krehbiel 編訂；The Beethoven Association（New York），1921；Internet Archive 掃描，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_life_of_Ludwig_van_Beethoven_(IA_lifeofludwigvanb02thay).pdf?page=139",
+      "made": "1921",
+      "depicts": "1808 年 12 月 17 日的廣告"
+    },
+    {
+      "type": "p",
+      "text": "來訪維也納的德國作曲家賴夏特（Johann Friedrich Reichardt）接受洛布科維茨親王（Franz Joseph Maximilian Lobkowitz）的好意，坐進他的包廂，裹著毛皮和大衣還是抖個不停。三天後的 12 月 25 日，他寫信回家，信收進 1810 年出版的《Vertraute Briefe》：",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "Da haben wir denn auch in der bittersten Kälte von halb sieben bis halb elf ausgehalten, und die Erfahrung bewährt gefunden, daß man auch des Guten — und mehr noch, des Starken — leicht zu viel haben kann.",
+      "text": "我們就在最刺骨的寒冷裡，從六點半撐到十點半，也驗證了一件事：好東西，尤其是強烈的東西，很容易嫌多。",
+      "cite": "賴夏特，《Vertraute Briefe》第 1 冊，1810，1808 年 12 月 25 日信，頁 254–255（本文自譯；原文的 ſ 與上標 e 已改為現代寫法）"
+    },
+    {
+      "type": "p",
+      "text": "輪到這首交響曲時，他的紀錄只有一行：",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "original": "Eine große sehr ausgeführte, zu lange Symphonie.",
+      "text": "一首大型的、鋪陳得很足的、太長的交響曲。",
+      "cite": "賴夏特，《Vertraute Briefe》第 1 冊，1810，頁 257（本文自譯；原文的 ſ 與上標 e 已改為現代寫法）"
+    },
+    {
+      "type": "p",
+      "text": "他沒寫曲名，只數編號：《田園》五個樂章各算一號，所以他的第九號，對上廣告順序，就是這首 C 小調交響曲。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "table",
+      "title": "那一晚的節目單，和賴夏特的批註",
+      "head": [
+        "順序",
+        "曲目",
+        "賴夏特的記錄"
+      ],
+      "rows": [
+        [
+          "上半場",
+          "《田園交響曲》（廣告稱第 5 號）",
+          "光這首就比他那邊一場宮廷音樂會還長"
+        ],
+        [
+          "",
+          "拉丁文〈Gloria〉",
+          "演出完全失敗"
+        ],
+        [
+          "下半場",
+          "C 小調交響曲（廣告稱第 6 號，即今天的第五號）",
+          "大型、鋪陳得很足、太長"
+        ],
+        [
+          "",
+          "拉丁文〈Sanctus〉",
+          "和〈Gloria〉一樣，演出完全失敗"
+        ],
+        [
+          "",
+          "合唱幻想曲（壓軸）",
+          "樂團大亂，貝多芬喊停重來；賴夏特真希望早點離場"
+        ]
+      ],
+      "caption": "依 Thayer 轉錄的廣告與賴夏特 12 月 25 日的信整理，只列部分曲目；賴夏特數的是「第 N 號」，這裡合併《田園》的五個號碼。"
+    },
+    {
+      "type": "p",
+      "text": "信裡寫明演出完全失敗的是〈Gloria〉與〈Sanctus〉，樂團大亂的是壓軸的合唱幻想曲；對這首交響曲，他只寫了「太長」。我的讀法是：他嫌的是長，不是演砸。不過他在同一封信裡也說過不少演出失敗，只是沒指名，所以這只是推論。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "一年半後的 1810 年，E. T. A. 霍夫曼（E. T. A. Hoffmann）評這首的總譜，說這是大師最重要的作品之一。據 Peter Laki 的 NSO 曲目解說，他沒聽過首演。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "一個在冷颼颼的包廂裡親耳聽完的人說太長，一個沒到場、只讀總譜的人說是代表作。這首後來的下場，你已經知道了。"
+    },
+    {
+      "type": "h",
+      "text": "《命運》這個綽號，別太當真"
+    },
+    {
+      "type": "p",
+      "text": "綽號來自貝多芬的傳記作者辛德勒（Anton Schindler）轉述的一句話：「Thus fate knocks at the door」，意思是命運就這樣敲門。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "Beethoven-Haus（波昂貝多芬故居）的作品頁懷疑貝多芬是否真說過這句，理由是它出自辛德勒那些繪聲繪影的記述，而辛德勒的可信度有疑問。NSO 的曲目解說也只寫成貝多芬據說這樣說過。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "我的讀法是：綽號可以叫，但別把它當成作曲家的親口註解。下面三件事不靠綽號，直接用耳朵聽就有。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "聽的時候注意三件事"
+    },
+    {
+      "type": "p",
+      "text": "**開頭：四個音之後的那個長音。** 弦樂與豎笛齊奏那四個音，然後停在長音上。霍夫曼說，第一樂章最核心的點子簡單到只有兩小節，而且一開始是齊奏；那個長音讓人預感到「未知的奧祕」（NSO 曲目解說引述，本文自譯）。聽下去你會發現，第一樂章幾乎都是這個節奏變出來的，一下在低音，一下跑到高音。"
+    },
+    {
+      "type": "p",
+      "text": "**中段：第三樂章的寒意，和通往終曲的那條走廊。** 大提琴與低音提琴低聲開場，像有一陣冷風；之後弦樂改成撥弦，旋律碎成一點一點。接著定音鼓輕輕敲著，底下是長長的弦樂長音，小提琴的旋律一寸一寸往上爬、音量一路加大，最後整個樂團炸進明亮的終曲。NSO 的解說稱這是管弦樂作品裡最奇妙的「由暗到明」轉換之一。"
+    },
+    {
+      "type": "p",
+      "text": "**最後：終曲突然多出來的三種聲音。** 小巧尖亮的短笛（piccolo）、低沉的倍低音管（contrabassoon，低音管的大一號版）和三支長號（trombone）在終曲加入；NSO 的解說指出，貝多芬前四首交響曲都沒用過這幾樣。像三個替補同時上場。終曲中途還有個回馬槍：第三樂章的音樂回來一次，再走一遍由暗到明，這次沒有那陣冷風，很快就抵達。"
+    },
+    {
+      "type": "h",
+      "text": "喜歡的話，接著聽"
+    },
+    {
+      "type": "list",
+      "items": [
+        "貝多芬《第七號交響曲》：就在克萊伯這張專輯的另一半；Quinn 形容它的終曲白熱，把你一路往前沖。",
+        "貝多芬《田園交響曲》：同一晚排在最前面，賴夏特說光這一首就比他們宮廷音樂會整場還長（本報 10 月 11 日介紹過）。"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "今天帶走這個就夠了：首演那晚的人嫌它太長，現在你整首聽完，只要半小時多一點。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Vertraute Briefe, geschrieben auf einer Reise nach Wien und den österreichischen Staaten zu Ende des Jahres 1808 und zu Anfang 1809，第 1 冊，1808 年 12 月 25 日的信",
+      "publisher": "Johann Friedrich Reichardt；Amsterdam: Kunst- und Industrie-Comptoir（Bayerische Staatsbibliothek 掃描，Internet Archive）",
+      "date": "1810",
+      "url": "https://archive.org/details/10600502bsb",
+      "note": "頁 254–258：包廂、毛皮與大衣、發抖、寒冷、從六點半到十點半、節目逐項批註、「zu lange Symphonie」、合唱幻想曲的中斷；2026-10-26 查閱掃描的 OCR 全文"
+    },
+    {
+      "title": "The Life of Ludwig van Beethoven，第 2 冊（Krehbiel 編訂英譯本）",
+      "publisher": "Alexander Wheelock Thayer；The Beethoven Association（New York）",
+      "date": "1921",
+      "url": "https://archive.org/details/lifeofludwigvanb02thay",
+      "note": "頁 127–131：12 月 17 日《維也納報》廣告（週四、6 點半、第 5 號與第 6 號的標法）、哈特爾借用劇院、Reichardt 信件的英譯、合唱幻想曲的中斷；2026-10-26 查閱"
+    },
+    {
+      "title": "Symphony no. 5 (C minor) op. 67",
+      "publisher": "Beethoven-Haus Bonn",
+      "date": "未註明",
+      "url": "https://www.beethoven.de/en/work/view/6260401733894144/symphony+no.+5+&",
+      "note": "作品完成時間（標題「Early 1804 to March 1808」，內文則稱 1803 年秋有初步構想、主體 1807 春至 1808 初、1808 年 3 月完成總譜，兩者不一致）、「Thus fate knocks at the door」出自辛德勒（該頁稱他是 first important biographer）及該頁對其可信度的懷疑；2026-10-26 查閱"
+    },
+    {
+      "title": "Beethoven: Symphonies 4 & 5（數位曲目冊，Symphony No. 5 曲目解說）",
+      "publisher": "National Symphony Orchestra（Kennedy Center）",
+      "date": "2022",
+      "url": "https://www.kennedy-center.org/globalassets/nso/nso-media-projects/beethoven/symphonies-4--5/nso0009-d_digital_booklet_28x21cm_2022_beethoven_4_and_5-rev-2.pdf",
+      "note": "霍夫曼 1810 年樂評（未聽過首演）、開頭動機與延長音、第三樂章到終曲的過渡、終曲新增的短笛、倍低音管與三支長號；曲目解說為 Peter Laki 所寫（第 5、7 頁署名 Notes by Peter Laki）；開頭動機「of only two bars and initially in unison」；2026-10-26 查閱"
+    },
+    {
+      "title": "Golden Record Sounds and Music",
+      "publisher": "NASA Science",
+      "date": "2024-04-12",
+      "url": "https://science.nasa.gov/mission/voyager/golden-record-contents/sounds/",
+      "note": "金唱片曲目：共 27 首音樂，貝多芬第五號交響曲第一樂章列為第 18 首，愛樂管弦樂團、克倫培勒，7:20；頁面日期 2024-04-12 為頁面最後更新日；2026-10-26 查閱"
+    },
+    {
+      "title": "BEETHOVEN Symphonies Nos. 5 & 7 – DG 479 1106（樂評，John Quinn）",
+      "publisher": "MusicWeb International",
+      "date": "2014-01",
+      "url": "http://www.musicweb-international.com/classrev/2014/Jan14/Beethoven_Kleiber_4791106.htm",
+      "note": "錄音時間與地點（第五號 1974 年 3–4 月，維也納音樂協會大廳）、全曲 33:30、對過渡與終曲的評語；2026-10-26 查閱；評的是 DG 479 1106（Blu-ray Audio 版）"
+    },
+    {
+      "title": "Johann Friedrich Reichardt",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Johann_Friedrich_Reichardt",
+      "note": "僅用於賴夏特的身分（德國作曲家、作家與樂評人，1752–1814）；2026-10-26 查閱"
+    }
+  ]
+}
