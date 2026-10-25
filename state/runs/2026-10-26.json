@@ -1,4 +1,14 @@
 {
+  "1": {
+    "finished_at": "2026-10-26T01:10:59+08:00",
+    "missing": [
+      "football",
+      "civilization",
+      "tactics",
+      "art"
+    ],
+    "note": "第1班：devotion、music、perio 三篇皆經審稿修正並刊出，validate 無 ERROR"
+  },
   "audit": {
     "finished_at": "2026-10-25T16:02:17+08:00",
     "missing": [
