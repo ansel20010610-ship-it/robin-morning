@@ -9,6 +9,14 @@
     ],
     "note": "第1班：devotion、music、perio 三篇皆經審稿修正並刊出，validate 無 ERROR"
   },
+  "2": {
+    "finished_at": "2026-10-26T02:03:43+08:00",
+    "missing": [
+      "football",
+      "art"
+    ],
+    "note": "文明（羅馬禁衛軍拍賣皇位）與戰術（假九號）完成，審稿各修 9–10 條，validate 通過"
+  },
   "audit": {
     "finished_at": "2026-10-25T16:02:17+08:00",
     "missing": [
