@@ -1,0 +1,421 @@
+{
+ "column": "civilization",
+ "date": "2026-10-26",
+ "title": "出價最高者得：羅馬禁衛軍怎樣把皇位拍賣掉",
+ "dek": "公元 193 年，剛殺了皇帝的禁衛軍在營內和營門外替皇位開標。這支衛隊怎麼拿到賣家的位置？得標的人又為什麼只撐了 66 天？",
+ "brief": "公元 193 年，禁衛軍殺了皇帝佩蒂納克斯，再讓兩位元老一個在營內、一個在營門外競標皇位：雙方喊到每名士兵 2 萬塞斯特斯，尤利安努斯一口氣加 5,000 得標。他只撐了 66 天，上潘諾尼亞總督塞維魯帶兵直撲義大利，隨後把整支禁衛軍繳械解散。史家坎貝爾認為那個價碼其實不算大，真正的壞先例是用這種方式公開收買士兵。",
+ "topic_key": "civilization:rome-praetorian-guard-auction-193",
+ "updated_at": "2026-10-26T02:02:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "hero": {
+  "kind": "artwork",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Relief_of_Soldiers_of_the_Praetorian_Guard_04_%2851220287572%29.jpg/1280px-Relief_of_Soldiers_of_the_Praetorian_Guard_04_%2851220287572%29.jpg",
+  "width": 1280,
+  "height": 960,
+  "alt": "大理石浮雕的局部特寫。五名頭戴羽飾頭盔的士兵擠在一起，中左一人留八字鬍和短鬚、眼睛望向右方；中右一人披斗篷、側身面向他；前方可見大型盾牌的邊緣，刻有花朵紋飾；背景有一根柱子和一支長矛的矛尖。",
+  "caption": "羅浮宮藏〈禁衛軍士兵〉浮雕的局部。大理石，高 163 公分、寬 134 公分，出土於羅馬弗拉米尼亞大道（Via Flaminia）上的克勞狄凱旋門，館方定年約公元 51–52 年；缺損處已用大理石補刻，2006 年修復（依羅浮宮館藏資料）；照片攝於 2021 年。據蘇埃托尼烏斯，克勞狄是第一個用錢買士兵效忠的凱撒（《克勞狄傳》第 10 節）。",
+  "credit": "Jamie Heath 攝；原件藏巴黎羅浮宮，館號 Ma 1079",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Relief_of_Soldiers_of_the_Praetorian_Guard_04_(51220287572).jpg",
+  "made": "約公元 51–52 年（浮雕，依羅浮宮著錄）"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "公元 193 年 3 月 28 日，羅馬皇帝佩蒂納克斯（Pertinax）被自己的禁衛軍殺死，頭被割下來插在矛上。接下來更扯：殺皇帝的那批人守著軍營，讓兩位元老競標皇位，一個在營裡、一個在營門外，價碼喊到每名士兵 2 萬塞斯特斯（sesterces）。營門外那位一口氣加 5,000，得標。"
+  },
+  {
+   "type": "p",
+   "text": "這不是後人編的段子，三部古代史書都記了，只是細節對不上。一支保護皇帝的部隊，怎麼成了有資格「賣」皇位的一方？買到的人，又買到了什麼？"
+  },
+  {
+   "type": "h",
+   "text": "先講清楚：我們靠誰的嘴知道"
+  },
+  {
+   "type": "p",
+   "tag": "史料",
+   "text": "要聽這個故事，先認三個說書人。第一位是卡西烏斯・狄奧（Cassius Dio），希臘文《羅馬史》的作者，這幾卷只剩後世節本。他當時是元老、人在羅馬，佩蒂納克斯給過他法務官（praetor）的職位，他自己承認以前多次在法庭上證明尤利安努斯有罪。目擊者兼冤家，先記著。"
+  },
+  {
+   "type": "p",
+   "text": "第二位是希羅狄安（Herodian），大約生於 170 年代、240 年後成書，身分比元老低，很會說故事。"
+  },
+  {
+   "type": "p",
+   "text": "第三位是拉丁文的《羅馬帝王紀》（Historia Augusta），可靠度最差：Livius.org 的導讀說它至遲在 425 年前成書，很可能一人假託六位作者，像古代的「偽紀錄片」。讀到它獨家的細節，手別抓太緊。"
+  },
+  {
+   "type": "h",
+   "text": "賣家的底牌：一座營，一個紅包"
+  },
+  {
+   "type": "p",
+   "tag": "史實",
+   "text": "禁衛軍是駐在首都、保護皇帝的部隊。塔西佗（Tacitus）在《編年史》第 4 卷回頭交代：禁衛軍長官塞揚努斯（Sejanus）把原本分散的各大隊集中到一座營區，名義是好管理、遇事能一次集結。塔西佗看得更白：士兵看得到彼此有多少人、多強，自己壯膽，也讓別人害怕。當時首都有 9 個大隊（cohort）。"
+  },
+  {
+   "type": "p",
+   "tag": "史實",
+   "text": "第一次有人在這座營裡「領到」皇位，是公元 41 年。卡利古拉被刺後，據蘇埃托尼烏斯（Suetonius），他的叔叔克勞狄（Claudius）躲在門簾後面，被一個士兵看見腳、拖出來擁立，抬進軍營。隔天元老院還在吵，克勞狄讓士兵宣誓效忠，答應每人 15,000 塞斯特斯。蘇埃托尼烏斯的評語很直接：他是第一個用賄賂換取部隊忠誠的凱撒。"
+  },
+  {
+   "type": "p",
+   "text": "這筆錢是新皇帝上任先發給士兵的紅包。紅包本身不稀奇，193 年稀奇的是，連「誰來當皇帝」都跟著紅包一起開價。"
+  },
+  {
+   "type": "h",
+   "text": "87 天：發得比期待少的皇帝"
+  },
+  {
+   "type": "p",
+   "tag": "史實",
+   "text": "192 年 12 月 31 日晚上，皇帝康茂德（Commodus）被勒死，主謀之一是禁衛軍長官萊圖斯（Aemilius Laetus）。他們找上 66 歲的老將佩蒂納克斯，他當晚就進軍營，答應每名士兵 12,000 塞斯特斯。問題是，狄奧說國庫只找得到 100 萬。他只好從康茂德的雕像、武器、馬匹、家具和寵臣身上籌錢，東西送進拍賣場（先拍的是遺物，皇位還沒輪到）。"
+  },
+  {
+   "type": "p",
+   "tag": "史實",
+   "text": "接著他說錯了話。狄奧說，他承諾的錢全發了，可是在元老院自誇，發給士兵的跟馬可・奧理略（Marcus Aurelius）與路奇烏斯・維魯斯（Lucius Verus）共治時一樣多。狄奧拆穿：那兩位發了每人約 2 萬，他只發了約 12,000。"
+  },
+  {
+   "type": "p",
+   "text": "士兵怕康茂德給的特權被收回，先密謀擁立執政官法爾科（Falco），沒成；萊圖斯又假借皇帝名義處死一批士兵。3 月 28 日，200 名士兵拔劍闖進皇宮。"
+  },
+  {
+   "type": "p",
+   "text": "佩蒂納克斯沒關門也沒逃，出來想講道理，其中一人喊了句「士兵們送你這把劍」，動手了。他在位 87 天。"
+  },
+  {
+   "type": "p",
+   "tag": "學者解釋",
+   "text": "史家布萊恩・坎貝爾（Brian Campbell）在《劍橋古代史》第 12 卷的判斷是：佩蒂納克斯是第一個純粹因為軍中不滿、滿足不了部隊期待而被推翻的皇帝。好，重點來了：價碼已經攤在檯面上。"
+  },
+  {
+   "type": "h",
+   "text": "開標：營裡一個，營門外一個"
+  },
+  {
+   "type": "p",
+   "tag": "史料",
+   "text": "狄奧的版本是這樣。佩蒂納克斯的岳父、羅馬城長官蘇爾皮基亞努斯（Flavius Sulpicianus）原本就被派在營裡平息騷動，這時在營裡運作自己上位；元老狄迪烏斯・尤利安努斯（Didius Julianus）則趕到營門外出價。狄奧說，整座城和整個帝國「就像在市場或拍賣場裡一樣」被拍賣，賣家正是剛殺了皇帝的人。士兵來回傳話："
+  },
+  {
+   "type": "quote",
+   "text": "「蘇爾皮基亞努斯出這個數，你要加多少？」",
+   "original": "Sulpicianus offers so much; how much more do you make it?",
+   "cite": "狄奧《羅馬史》第 74 卷第 11 節，Loeb 古典叢書 1927 年英譯；本文自譯"
+  },
+  {
+   "type": "p",
+   "tag": "史料",
+   "text": "兩邊一路加到每名士兵 2 萬塞斯特斯。狄奧說，蘇爾皮基亞努斯人在營裡、官位高、又先喊到 2 萬，本來會贏；尤利安努斯卻不再小加，一次加 5,000，邊大聲喊邊用手指比出數字，還提醒士兵：對方可能替女婿報仇。士兵於是開門迎他進去，宣布他為皇帝；護送他進城時，還一路叫他「康茂德」。"
+  },
+  {
+   "type": "svg",
+   "title": "營內與營門外的競標",
+   "svg": "<svg viewBox='0 0 360 470' xmlns='http://www.w3.org/2000/svg' font-size='11'>\n<defs>\n<marker id='ar' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='ink'/></marker>\n<marker id='aw' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L8,4 L0,8 z' class='accent'/></marker>\n</defs>\n<text x='10' y='14' font-size='10' class='muted'>依狄奧《羅馬史》74.11–12 整理；示意，不按比例</text>\n<rect x='10' y='26' width='166' height='250' rx='4' class='soft'/>\n<text x='20' y='44' font-weight='600'>禁衛軍營・營內</text>\n<text x='186' y='44' font-weight='600'>營門外</text>\n<line x1='178' y1='26' x2='178' y2='276' class='accent line' stroke-width='4' stroke-dasharray='14 6'/>\n<text x='184' y='270' font-size='10' class='accent'>營門</text>\n<rect x='20' y='54' width='146' height='58' rx='3' class='paper'/>\n<text x='28' y='72' font-weight='600'>蘇爾皮基亞努斯</text>\n<text x='28' y='88' font-size='10' class='muted'>羅馬城長官</text>\n<text x='28' y='102' font-size='10' class='muted'>佩蒂納克斯的岳父</text>\n<rect x='190' y='54' width='160' height='58' rx='3' class='paper'/>\n<text x='198' y='72' font-weight='600'>狄迪烏斯・尤利安努斯</text>\n<text x='198' y='88' font-size='10' class='muted'>元老，當過執政官</text>\n<text x='198' y='102' font-size='10' class='muted'>聽到消息趕到營門</text>\n<line x1='60' y1='126' x2='300' y2='126' class='ink line' stroke-width='1.2' marker-end='url(#ar)'/>\n<line x1='300' y1='146' x2='60' y2='146' class='ink line' stroke-width='1.2' marker-end='url(#ar)'/>\n<text x='184' y='140' font-size='10' text-anchor='middle'>士兵來回傳話：「他出這個數，你加多少？」</text>\n<text x='20' y='176' font-size='10.5'>雙方逐步加價</text>\n<text x='20' y='192' font-size='10.5'>先喊到每人 20,000</text>\n<text x='20' y='208' font-size='10' class='muted'>塞斯特斯（sesterces）</text>\n<text x='190' y='176' font-size='10.5'>一次加 5,000</text>\n<text x='190' y='192' font-size='10.5' class='accent'>每人 25,000</text>\n<text x='190' y='208' font-size='10' class='muted'>邊吼邊用手指比數字</text>\n<text x='190' y='228' font-size='10' class='muted'>另提醒士兵：對方可能</text>\n<text x='190' y='242' font-size='10' class='muted'>替佩蒂納克斯報仇</text>\n<line x1='270' y1='282' x2='270' y2='306' class='ink line' stroke-width='1.2' marker-end='url(#ar)'/>\n<rect x='60' y='310' width='290' height='44' rx='3' class='soft'/>\n<text x='70' y='328' font-weight='600'>開門迎入，宣布尤利安努斯為皇帝</text>\n<text x='70' y='344' font-size='10' class='muted'>護送進城時，士兵叫他「康茂德」</text>\n<line x1='205' y1='354' x2='205' y2='376' class='ink line' stroke-width='1.2' marker-end='url(#ar)'/>\n<rect x='60' y='380' width='290' height='44' rx='3' class='soft'/>\n<text x='70' y='398' font-weight='600'>據狄奧：當天傍晚元老院追認</text>\n<text x='70' y='414' font-size='10' class='muted'>議場外圍滿重裝士兵，議場內也有兵</text>\n<text x='10' y='448' font-size='10' class='muted'>希羅狄安的版本：士兵在營牆邊宣布帝國出售，</text>\n<text x='10' y='462' font-size='10' class='muted'>放梯子把尤利安努斯拉上牆頭談價。</text>\n</svg>",
+   "caption": "原創示意。依狄奧《羅馬史》第 74 卷第 11–12 節（Loeb 1927 年英譯）；營牆、梯子是希羅狄安的版本，見圖底，出自《羅馬史》第 2 卷第 6 章（Echols 1961 年英譯）。"
+  },
+  {
+   "type": "p",
+   "tag": "史料",
+   "text": "另外兩家的細節不一樣。希羅狄安說，是禁衛軍找了嗓門最大的人站到牆邊，宣布帝國出售、價高者得，再放下梯子把尤利安努斯拉上牆頭談價；他答應恢復康茂德的名譽和禁衛軍的舊權力，給的錢比他們要的還多。《羅馬帝王紀》沒寫來回加價，只說他在牆外大筆承諾、寫告示牌保證恢復康茂德的名譽，才被放進去。至於錢，《羅馬帝王紀》說他答應 25,000、實付 3 萬；希羅狄安卻說他根本拿不出來。"
+  },
+  {
+   "type": "table",
+   "title": "禁衛軍的紅包行情（每名士兵，塞斯特斯）",
+   "head": [
+    "時間",
+    "誰",
+    "金額",
+    "依據"
+   ],
+   "rows": [
+    [
+     "41 年",
+     "克勞狄",
+     "15,000（承諾）",
+     "蘇埃托尼烏斯"
+    ],
+    [
+     "2 世紀",
+     "馬可與路奇烏斯共治",
+     "約 20,000",
+     "狄奧"
+    ],
+    [
+     "193 年初",
+     "佩蒂納克斯",
+     "12,000（承諾並發放）",
+     "狄奧"
+    ],
+    [
+     "193 年 3 月",
+     "蘇爾皮基亞努斯",
+     "出價到 20,000",
+     "狄奧"
+    ],
+    [
+     "193 年 3 月",
+     "尤利安努斯",
+     "25,000 得標；實付 3 萬或沒付出來",
+     "狄奧；《羅馬帝王紀》；希羅狄安"
+    ],
+    [
+     "193 年",
+     "塞維魯的軍團士兵",
+     "要求 10,000，只拿到 1,000",
+     "坎貝爾（2005）"
+    ]
+   ],
+   "caption": "最後一列是塞維魯麾下的軍團士兵，不是禁衛軍，放在這裡當行情對照。坎貝爾認為那 1,000 大概只是頭期款。"
+  },
+  {
+   "type": "h",
+   "text": "買到什麼：66 天"
+  },
+  {
+   "type": "p",
+   "tag": "史料",
+   "text": "據狄奧，當天傍晚，尤利安努斯帶著大批禁衛軍到元老院。狄奧就坐在議場裡，記下新皇帝說自己「一個人來」，請元老追認士兵給他的東西；其實議場外圍滿重裝士兵，裡面也站了很多兵。元老院照樣通過。"
+  },
+  {
+   "type": "p",
+   "tag": "史料",
+   "text": "群眾沒這麼好打發。據狄奧，尤利安努斯到元老院前獻祭時，人群罵他是帝國的竊賊；他說要發錢，眾人齊聲回「我們不要！我們不拿！」他下令殺掉最近的人，群眾反而衝進競技場，一夜加一天不吃不喝，高喊要敘利亞總督尼格爾（Pescennius Niger）來救。"
+  },
+  {
+   "type": "p",
+   "tag": "史料",
+   "text": "結果同時冒出三個對手，真正殺進義大利的只有塞維魯。狄奧說，不列顛的阿爾比努斯（Clodius Albinus）、潘諾尼亞的塞提米烏斯・塞維魯（Septimius Severus）、敘利亞的尼格爾，各握三個軍團。據坎貝爾，塞維魯 4 月 9 日就被部下擁立，直撲義大利。"
+  },
+  {
+   "type": "p",
+   "text": "首都備戰的場面，狄奧說元老們有時忍不住笑出來：從米塞努姆（Misenum）艦隊調來的水兵連操練都不會，大象嫌背上的塔太重，乾脆把騎象人甩下來。《羅馬帝王紀》再補一刀：禁衛軍連勤務都花錢雇人代做。"
+  },
+  {
+   "type": "figure",
+   "id": "f2",
+   "kind": "artwork",
+   "src": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Aureus_Didius_Iulianus.jpg",
+   "width": 729,
+   "height": 354,
+   "alt": "一枚金幣的正反兩面並排。左邊是戴月桂冠、留鬍鬚的男子右側頭像，周圍一圈拉丁字母；右邊是一個穿長袍的人站著，一手托著圓球，周圍也刻著字母。",
+   "caption": "尤利安努斯在位時於羅馬鑄造的金幣（aureus），重 7.25 公克。正面銘文 IMP CAES M DID IVLIAN AVG，頭戴月桂冠；背面是他本人站立，手持地球與卷軸，銘文 RECTOR ORBIS，意思是「世界的統治者」（依 Commons 上的拍賣圖錄著錄）。買來的皇位，幣上照樣要這樣寫。",
+   "credit": "Numismatica Ars Classica NAC AG 拍賣圖錄影像，經 Wikimedia Commons",
+   "license": "CC BY-SA 3.0 de",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Aureus_Didius_Iulianus.jpg",
+   "made": "193 年"
+  },
+  {
+   "type": "p",
+   "tag": "史實",
+   "text": "結局來得很快。塞維魯寫信給禁衛軍：交出殺佩蒂納克斯的人，其餘不追究。禁衛軍照做。元老院判尤利安努斯死刑、宣布塞維魯為皇帝，坎貝爾推定約在 6 月 1 日。尤利安努斯在宮裡被殺，據狄奧，他最後一句話是：「我做了什麼壞事？我殺了誰？」在位 66 天（《羅馬帝王紀》說 2 個月又 5 天）。"
+  },
+  {
+   "type": "h",
+   "text": "賣家的下場"
+  },
+  {
+   "type": "p",
+   "tag": "史料",
+   "text": "希羅狄安的版本最有畫面，想像一下：塞維魯發公開信，要禁衛軍不帶武器、穿節慶服裝出營宣誓。他們拿著月桂枝來，一到集合場就被圍住，剝掉腰帶、軍服和鑲金銀的佩劍，限令離羅馬 100 羅馬里以外，違者斬首。狄奧與坎貝爾的整理一致：塞維魯入城前處決兇手，解散整支衛隊，換上自己軍團的士兵。"
+  },
+  {
+   "type": "p",
+   "tag": "史實",
+   "text": "他還改了招募：禁衛軍原本只從義大利、西班牙、馬其頓和諾里庫姆（Noricum）招人，塞維魯改從各軍團挑。狄奧為此抱怨，城裡塞滿長相兇、講話粗的兵。換你是元老，也會皺眉。"
+  },
+  {
+   "type": "p",
+   "tag": "史實",
+   "text": "別以為換掉這批人就沒事，賣家的位置還在。Loeb 版塔西佗的編者註整理：禁衛軍擁立、廢黜皇帝，從 41 年的克勞狄一路到 306 年擁戴馬克森提烏斯（Maxentius）；六年後在米爾維安橋（Milvian Bridge）幾乎被君士坦丁殲滅，才被解散、營區拆毀。"
+  },
+  {
+   "type": "timeline",
+   "title": "從集中營區到解散",
+   "caption": "依塔西佗、蘇埃托尼烏斯、狄奧、希羅狄安與坎貝爾（2005）；312 年依 Loeb 版塔西佗編者註。",
+   "items": [
+    {
+     "when": "提比略朝",
+     "label": "塞揚努斯集中禁衛軍",
+     "note": "各大隊合併到一座營區。"
+    },
+    {
+     "when": "41 年",
+     "label": "克勞狄被抬進軍營",
+     "note": "每人 15,000。"
+    },
+    {
+     "when": "192.12.31",
+     "label": "康茂德被勒死",
+     "note": "佩蒂納克斯繼位。"
+    },
+    {
+     "when": "193.3.28",
+     "label": "佩蒂納克斯遇害",
+     "note": "狄奧寫競標緊接著發生；希羅狄安說隔了一兩天。"
+    },
+    {
+     "when": "193.4.9",
+     "label": "塞維魯被部下擁立",
+     "note": "時任上潘諾尼亞總督。"
+    },
+    {
+     "when": "約 193.6.1",
+     "label": "元老院判尤利安努斯死刑",
+     "note": "日期依坎貝爾推定。"
+    },
+    {
+     "when": "193.6",
+     "label": "塞維魯解散禁衛軍",
+     "note": "兇手處死，其餘繳械逐出。"
+    },
+    {
+     "when": "312 年",
+     "label": "禁衛軍解散",
+     "note": "米爾維安橋一役之後。"
+    }
+   ]
+  },
+  {
+   "type": "h",
+   "text": "學界怎麼說"
+  },
+  {
+   "type": "p",
+   "tag": "學者解釋",
+   "text": "那吉朋怎麼寫？他的《羅馬帝國衰亡史》第一卷，依 Gutenberg 上米爾曼（Milman）註釋版（1845），第 5 章標題是「把帝國賣給狄迪烏斯・尤利安努斯」。文中說禁衛軍在城牆上宣布，羅馬世界將公開拍賣給出價最高者，稱之為軍人放肆的極致。但他在註腳裡很老實：三位史家都同意實際上就是拍賣，只有希羅狄安說士兵公開喊出要拍賣。"
+  },
+  {
+   "type": "p",
+   "tag": "學者解釋",
+   "text": "讀狄奧時，你得記得他的立場。1921 年 Loeb 版《羅馬帝王紀》的編者提醒，狄奧對尤利安努斯有明顯敵意，要小心使用。例如狄奧說尤利安努斯登基當晚，屍體還在宮裡他就大吃大喝、擲骰子；《羅馬帝王紀》卻說這故事「普遍認為是假的」。你信哪邊？"
+  },
+  {
+   "type": "p",
+   "tag": "學者解釋",
+   "text": "坎貝爾的看法最值得帶走：這場「拍賣」要怪士兵，也要怪兩個趁權力真空出價的元老；尤利安努斯的價碼其實不算誇張："
+  },
+  {
+   "type": "quote",
+   "text": "這筆錢不算特別大，但它被勒索出來的方式，替公開收買士兵又開了一個壞先例。",
+   "original": "The sum was not excessively large, but the manner in which it was extorted set a further bad precedent for open bribery of the soldiers.",
+   "cite": "Brian Campbell，〈The Severan Dynasty〉，《劍橋古代史》第 12 卷第 2 版（2005），第 2 頁；本文自譯"
+  },
+  {
+   "type": "p",
+   "tag": "本文讀法",
+   "text": "我的讀法是：193 年真正被標售的，是「誰說了算」的答案。那天的順序是軍營先決定、元老院在士兵包圍下追認、群眾喊破喉嚨也沒用。決定權落在離皇宮最近、手上有劍的人身上，所以發得比士兵期待少、還謊稱和馬可・奧理略一樣多的佩蒂納克斯死了；可是尤利安努斯付了也守不住，因為真正能打仗的軍團在邊疆，而邊疆的將軍不必出價，帶兵來就好。"
+  },
+  {
+   "type": "p",
+   "tag": "本文讀法",
+   "text": "尤利安努斯開出每人 25,000 塞斯特斯，換來 66 天；塞維魯用一封信、一圈刀，就把整批賣家解散了。帶走這句就夠了：在羅馬，皇位的定價權從來不在出價的人手上。"
+  },
+  {
+   "type": "callout",
+   "label": "給史詩創作者的制度問題",
+   "items": [
+    "離統治者最近的武裝力量駐在哪裡？誰發他們薪水、誰任命他們的長官？",
+    "新統治者上任要先向誰「付帳」？這筆錢是慣例、契約，還是勒索？付不出來時，誰最先翻臉？",
+    "正當性的儀式（議會追認、加冕、群眾歡呼）和手上的武力衝突時，哪一邊說了算？",
+    "部隊背叛之後，新統治者會處罰、解散，還是收編？換掉一批人，換得掉那個位置嗎？"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "title": "Cassius Dio, Roman History, Epitome of Book 74 (Loeb Classical Library, Vol. IX)",
+   "publisher": "LacusCurtius（Bill Thayer），University of Chicago",
+   "date": "1927",
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/74*.html",
+   "note": "第 1 節（萊圖斯、承諾 12,000）、第 5 節（國庫 100 萬、佩蒂納克斯照發所承諾的、拍賣康茂德遺物）、第 8 節（2 萬對 12,000、法爾科）、第 9–10 節（200 名士兵、「送你這把劍」、在位 87 天）、第 11 節（營門外競標、2 萬、加 5,000、手指）、第 12 節（「一個人來」、狄奧的法務官職與訴訟）、第 13 節（宴飲、群眾拒收錢、競技場）、第 14 節（三位將軍各三軍團）、第 16 節（備戰、水兵、大象）、第 17 節（交出兇手、判死、最後一句、66 天）。卷號：Loeb 版標為第 74 卷，Loeb 註腳與舊式引文常寫作 lxxiii（同一卷）；牆（Herodian 2.6、《羅馬帝王紀》）與營門（狄奧）的說法不同"
+  },
+  {
+   "title": "Cassius Dio, Roman History, Epitome of Book 75 (Loeb Classical Library, Vol. IX)",
+   "publisher": "LacusCurtius（Bill Thayer），University of Chicago",
+   "date": "1927",
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/75*.html",
+   "note": "第 1 節（處死兇手、其餘繳械逐出）、第 2 節（禁衛軍改從各軍團招募與狄奧的抱怨）"
+  },
+  {
+   "title": "Herodian, History of the Roman Empire 2.6 (tr. Edward C. Echols)",
+   "publisher": "Livius.org",
+   "date": "2020-07-29",
+   "url": "https://www.livius.org/sources/content/herodian-s-roman-history/herodian-2.6/",
+   "note": "2.6.3–2.6.13：過了一兩天、牆邊宣布出售（Herodian 寫牆，狄奧寫營門）、梯子、恢復康茂德名譽與禁衛軍權力。Echols 英譯 1961 年出版"
+  },
+  {
+   "title": "Herodian, History of the Roman Empire 2.7 (tr. Edward C. Echols)",
+   "publisher": "Livius.org",
+   "date": "2020-07-10",
+   "url": "https://www.livius.org/sources/content/herodian-s-roman-history/herodian-2.7/",
+   "note": "2.7.1–2：尤利安努斯付不出承諾的錢"
+  },
+  {
+   "title": "Herodian, History of the Roman Empire 2.13 (tr. Edward C. Echols)",
+   "publisher": "Livius.org",
+   "date": "2020-07-14",
+   "url": "https://www.livius.org/sources/content/herodian-s-roman-history/herodian-2.13/",
+   "note": "2.13.1–11：塞維魯誘禁衛軍徒手出營、包圍、剝除裝備、限離羅馬 100 羅馬里（Echols 英譯作 100 miles）"
+  },
+  {
+   "title": "Historia Augusta, The Life of Didius Julianus (Loeb Classical Library)",
+   "publisher": "LacusCurtius（Bill Thayer），University of Chicago",
+   "date": "1921",
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Historia_Augusta/Didius_Julianus*.html",
+   "note": "2.4–7（牆外承諾、告示牌）、3.2（答應 25,000、給了 3 萬）、3.8（宴飲故事「普遍認為是假的」）、5.9（雇人代勤）、9.3（在位 2 個月又 5 天）；編者註 13（狄奧對尤利安努斯有敵意）、15、21"
+  },
+  {
+   "title": "Suetonius, The Life of Claudius (Loeb Classical Library)",
+   "publisher": "LacusCurtius（Bill Thayer），University of Chicago",
+   "date": "1914",
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Claudius*.html",
+   "note": "第 10 節：躲在門簾後、被抬進軍營、每人 15,000 塞斯特斯、第一個用賄賂換取部隊忠誠的凱撒"
+  },
+  {
+   "title": "Tacitus, Annals, Book IV (Loeb Classical Library)",
+   "publisher": "LacusCurtius（Bill Thayer），University of Chicago",
+   "date": "1937",
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Tacitus/Annals/4A*.html",
+   "note": "4.1–2（提比略在位第九年回顧，塞揚努斯集中各營）、4.5 及 Loeb 編者註（當時 9 個大隊 cohortes，各約 1000 人）；編者註 6（41 年至 306 年、米爾維安橋後解散並拆營）"
+  },
+  {
+   "title": "Brian Campbell, \"The Severan Dynasty\", The Cambridge Ancient History, 2nd ed., Vol. XII (excerpt)",
+   "publisher": "Cambridge University Press",
+   "date": "2005",
+   "url": "https://assets.cambridge.org/97805213/01992/excerpt/9780521301992_excerpt.pdf",
+   "note": "pp. 1–4（192 年 12 月 31 日、193 年 3 月 28 日、第一個因軍中不滿被推翻的皇帝、拍賣與 25,000、4 月 9 日、約 6 月 1 日、解散整支衛隊）、p. 9（軍團士兵要求 10,000 只拿到 1,000，大概是頭期款）"
+  },
+  {
+   "title": "Edward Gibbon, The History of the Decline and Fall of the Roman Empire, Vol. 1, Chapter V（H. H. Milman 註釋版，Gutenberg #731）",
+   "publisher": "Project Gutenberg",
+   "date": "1845",
+   "url": "https://www.gutenberg.org/cache/epub/731/pg731.txt",
+   "note": "依 Gutenberg #731 的米爾曼註釋版（1845 年修訂）：第 5 章標題 Sale of the Empire to Didius Julianus、「disposed of to the best bidder by public auction」、「the most insolent excess of military license」及註 10；章名與註腳不保證等同 1776 年原版"
+  },
+  {
+   "title": "Historia Augusta",
+   "publisher": "Livius.org（Jona Lendering）",
+   "url": "https://www.livius.org/sources/content/historia-augusta/",
+   "note": "成書年代（至遲 425 年前）、單一作者假託六人、「ancient mockumentary」"
+  },
+  {
+   "title": "Herodian",
+   "publisher": "Livius.org（Jona Lendering）",
+   "date": "2020-04-14",
+   "url": "https://www.livius.org/articles/person/herodian/",
+   "note": "約生於 170 年代、240 年後成書、身分低於元老"
+  },
+  {
+   "title": "Les soldats prétoriens（LL 398 ; Ma 1079）",
+   "publisher": "Musée du Louvre, collections",
+   "url": "https://collections.louvre.fr/en/ark:/53355/cl010302825",
+   "note": "頭圖浮雕的尺寸、材質、定年、出土地與修復紀錄"
+  }
+ ]
+}
