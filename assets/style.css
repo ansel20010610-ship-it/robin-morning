@@ -644,10 +644,12 @@ img.img-off { visibility: hidden; }
   .rv.in { opacity: 1; transform: none; transition: opacity .6s var(--d, 0ms) ease, transform .75s var(--d, 0ms) cubic-bezier(.2,.75,.2,1); }
   .digest.rv { transform: none; }
 
-  /* The first look at a new issue: gold foil runs across the title, the emblem draws its frame, the checker bands slide in. */
-  .masthead.intro h1 { background: linear-gradient(105deg, var(--ink) 0 40%, var(--gold) 46%, #FFF3CF 50%, var(--gold) 54%, var(--ink) 60% 100%) 100% 0 / 280% 100%;
-    -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil 1.9s .45s cubic-bezier(.35,.1,.25,1) both; }
+  /* Gold foil runs slowly across the title every time the masthead is on screen, then rests and comes round again. */
+  .masthead h1 { background: linear-gradient(105deg, var(--ink) 0 40%, var(--gold) 46%, #FFF3CF 50%, var(--gold) 54%, var(--ink) 60% 100%) 100% 0 / 280% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil-round 9s .5s cubic-bezier(.45,.05,.35,1) infinite both; }
+  @keyframes foil-round { 0% { background-position: 100% 0; } 45%, 100% { background-position: 0 0; } }
   @keyframes foil { from { background-position: 100% 0; } to { background-position: 0 0; } }
+  /* The first look at a new issue also draws the emblem's frame and slides the checker bands in. */
   .masthead.intro .emblem { animation: emblem-in 1s .05s cubic-bezier(.2,1.3,.4,1) both; }
   .masthead.intro .emblem .e-frame { stroke-dasharray: 1; animation: draw 1.2s .2s ease-out both; }
   @keyframes emblem-in { from { opacity: 0; transform: scale(.6) rotate(-10deg); } to { opacity: 1; transform: none; } }
