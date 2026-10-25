@@ -1,0 +1,371 @@
+{
+  "column": "fm-watch",
+  "date": "2026-10-26",
+  "status": "update",
+  "title": "FM27 先讓你免費玩五天，再問你買不買",
+  "dek": "FM27 的 Launch Preview 將於台灣時間 10 月 30 日（週五）02:00 起免費開放，預購同時開跑、九折；發售前試玩的日期與價格終於有了。",
+  "brief": "Football Manager 27（FM27）的 Launch Preview 是發售前的試玩版，Sports Interactive 與 SEGA 10 月 21 日宣布，PC／Mac 版從台灣時間 10 月 30 日（週五）02:00 起免費開放五天，所有模式可玩，存檔能接到正式版。預購同時開跑、九折，原價 £49.99／€59.99／$59.99；11 月 4 日起，預購玩家續玩付費版 Launch Preview，直到 11 月 10 日發售。台灣售價還沒公布、主機版不開放預購，官方說的「接近最終版」要等 10 月 30 日才有人能實測。",
+  "topic_key": "fm-watch:2026-10-26-free-launch-preview-prepurchase",
+  "updated_at": "2026-10-26T05:31:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "timeline",
+    "title": "FM27 已知時程（Launch Preview 開跑前）",
+    "caption": "依 SI 官網、Steam 公告與 SEGA 新聞稿整理，截至台灣時間 2026 年 10 月 26 日清晨。10 月 29 日起的時刻為官方 GMT 換算成台灣時間。",
+    "items": [
+      {
+        "when": "2026.8.27",
+        "label": "宣布 11 月推出",
+        "note": "確切日期與平台當時未公布"
+      },
+      {
+        "when": "2026.9.22",
+        "label": "公布平台",
+        "note": "PC／Mac、Xbox Series、PS5；Mobile 走 Netflix"
+      },
+      {
+        "when": "2026.9.30",
+        "label": "公布發售日 11 月 10 日",
+        "note": "比賽日深度介紹 FAQ：Launch Preview 取代 Beta，最終日期未訂；新聞頁：預購「之後公布」"
+      },
+      {
+        "when": "2026.10.20",
+        "label": "FM27 Touch 登上 Apple Arcade",
+        "note": "11 月 10 日起"
+      },
+      {
+        "when": "2026.10.21",
+        "label": "宣布免費 Launch Preview 與預購時程",
+        "note": "官網、Steam、SEGA 同日發布"
+      },
+      {
+        "when": "2026.10.22",
+        "label": "首次直播",
+        "note": "FM 官方 YouTube 頻道；開播不晚於 UTC 16:56（台灣 10-23 00:56）；媒體稱結尾公布 Shuffle Draft 模式"
+      },
+      {
+        "when": "2026.10.30",
+        "label": "免費 Launch Preview 開跑，預購開放",
+        "note": "台灣時間 02:00；10% 折扣"
+      },
+      {
+        "when": "2026.11.4",
+        "label": "免費期結束，付費 Launch Preview 開始",
+        "note": "台灣時間 02:00；預購玩家續玩"
+      },
+      {
+        "when": "2026.11.10",
+        "label": "全平台數位版發售",
+        "note": "確切時刻未公布"
+      },
+      {
+        "when": "2026.11.20",
+        "label": "實體 PS5 版發售",
+        "note": "官方 FAQ"
+      }
+    ]
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "Sports Interactive（SI）要讓你免費玩五天，才問你買不買。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "9 月公布的規則是想提早玩《足球經理 27》（Football Manager 27，以下簡稱 FM27）得先預購，10 月 21 日（週三）SI 把順序倒過來。Launch Preview（發售前試玩版）從英國時間 10 月 29 日 18:00 GMT（GMT 即 UTC）開放，換成台灣時間是 **10 月 30 日（週五）02:00**，到 11 月 4 日（週三）02:00 結束；兩個階段的時刻見下方表格。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "官網新聞頁標 2026 年 10 月 21 日、沒有標時刻；Steam 公告發在 UTC 11:02（台灣 19:02），SEGA 新聞稿發在 UTC 11:00（英國夏令時間 12:00、台灣 19:00）。這三則都在本報 10 月 21 日刊期截稿之後才出現，10 月 22 至 25 日的四期又沒有觀測站查核，所以拖到今天一併補報。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "免費期涵蓋 Steam、Epic Games Store、Microsoft Store，以及 Xbox Game Pass Ultimate 與 PC Game Pass（官方註腳說 Game Pass 只開放這兩種訂閱）。不用另外註冊，從各商店頁下載就能進，所有模式都開放。SEGA 新聞稿另寫：讓年度作品免費、開放所有模式（making an annual title free to play with all game modes available），「believed to be an industry first」（相信是業界首例；本文自譯）。這是 SEGA 自己的說法，本報沒有查證。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "quote",
+      "text": "在這個週期稍早，我們說過想在開放預購、請玩家下決定之前，先多展示一些遊戲內容。有了免費試玩期，我們又往前推了一步，讓玩家在掏錢之前親自體驗今年的遊戲。",
+      "original": "Earlier in the cycle, we said we wanted to show more of the game before opening pre-orders and asking players to commit. With the free play period, we’ve taken that one step further, giving fans the opportunity to experience this year’s game for themselves before making a purchase.",
+      "cite": "Sports Interactive，Steam 公告常見問答「為什麼 FM27 限時免費」，2026 年 10 月 21 日；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "同一題的答案後半段，SI 另說自己承諾要重建玩家對工作室的信任與信心（rebuilding player trust and confidence in the Studio），免費期就是這個承諾的具體例子。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "先試吃、再決定要不要點整桌，這招在早餐店行得通；在經理遊戲裡行不行，看的是試玩的成色。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "h",
+      "text": "預購只在試玩開跑時才開，九折"
+    },
+    {
+      "type": "p",
+      "text": "以前的問法是「你要不要先買？」，現在改成「先玩，滿意再買」。SEGA 新聞稿寫明，預購窗口「只」會跟免費期同時開啟：也就是台灣時間 10 月 30 日 02:00 之前都還不能預購。本報 10 月 26 日清晨查核時，Steam 頁只有願望清單、Xbox 商店頁還沒開放預購，兩邊都沒標價。預購享 10% 折扣，限在 SEGA 認可的數位通路購買。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "價格這次補得比較全。Steam 公告的常見問答寫「the game’s price of £49.99/€59.99/$59.99」，也就是英鎊、歐元、美元三種標價；9 月 30 日的 SEGA 英國新聞稿只有 £49.99。主機版 FM27 Console 不開放預購，只能從 10 月 29 日起加願望清單（官方只寫日期，未標時刻）。官方沒有給出台灣或其他地區的標價。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "九折之後是多少？我的粗算是約 £45、€54、$54（49.99×0.9≈44.99；59.99×0.9≈53.99），官方沒有給折後數字，實際金額以商店標價為準。",
+      "tag": "推論"
+    },
+    {
+      "type": "table",
+      "title": "Launch Preview 的兩個階段",
+      "head": [
+        "階段",
+        "英國時間（GMT）",
+        "台灣時間",
+        "誰能玩"
+      ],
+      "rows": [
+        [
+          "免費試玩",
+          "10 月 29 日 18:00 至 11 月 3 日 18:00",
+          "10 月 30 日（五）02:00 至 11 月 4 日（三）02:00",
+          "PC／Mac 玩家；Steam、Epic、Microsoft Store，或 Game Pass Ultimate／PC Game Pass 訂閱者"
+        ],
+        [
+          "付費 Launch Preview",
+          "11 月 3 日 18:00 起，到 11 月 10 日發售",
+          "11 月 4 日（三）02:00 起",
+          "在 SEGA 認可數位通路預購 PC／Mac 版的玩家；Game Pass 訂閱者以訂閱續玩"
+        ],
+        [
+          "正式發售",
+          "11 月 10 日",
+          "確切時刻官方尚未公布",
+          "全平台數位版"
+        ]
+      ],
+      "caption": "依 SI 官網新聞、Steam 公告與 SEGA 新聞稿（2026 年 10 月 21 日）整理；台灣時間為本文換算。"
+    },
+    {
+      "type": "h",
+      "text": "和先前相比：日期和價格都有了"
+    },
+    {
+      "type": "p",
+      "text": "9 月 30 日，SI 官網新聞頁寫 Launch Preview 會在發售前 1–2 週開放；同日比賽日深度介紹的 FAQ 說，它取代過去的 Beta／Advanced Access，預購 PC／Mac 版的玩家可以提早玩，最終日期沒訂。SEGA 亞洲的 FM 官網（英文版）則寫「發售前一週」。這次的新聞稿把日期定了：付費階段從 11 月 3 日 18:00 GMT 接到 11 月 10 日發售。"
+    },
+    {
+      "type": "p",
+      "text": "日曆上，11 月 3 日到 10 日剛好七天，和 SEGA 亞洲頁的「一週」對得上；若把免費期算進去，從 10 月 29 日到發售日是 12 個日曆天，落在「1–2 週」的上緣。這個對照是本文的讀法，官方沒有把兩種說法並排解釋。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "9 月以來一直懸著的三件事，這次一次補齊：預購何時開、折扣多少、Launch Preview 的日期。10 月 16 日官方預告的首次 FM27 直播也已經播過（見下節）。"
+    },
+    {
+      "type": "h",
+      "text": "對玩家的影響：存檔能帶著走，資料不是最終版"
+    },
+    {
+      "type": "p",
+      "text": "存檔方面，官方新聞與 Steam 公告都說：免費期開的存檔，可以接到付費 Launch Preview，也可以接到正式版，不必重開。Steam 常見問答另說，「all modes, features and areas of FM27 are available in the Free Play period and there is no limit to the time or progress you can log」（免費期所有模式、功能與區域都開放，時間與進度都不設上限；本文自譯）。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "對還在猶豫的人，這大概是最實際的好處：玩得很深，滿意就預購，進度照留。免費期沒有時間與進度上限，五天內能打完幾個賽季，卡你的是睡眠，不是 SI。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "Steam 公告同一份問答還說，FM24 與 FM26 的存檔可以在 FM27 開始畫面匯入，前提是存檔資料還在原本的電腦，或在平台帳號的雲端存檔裡。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "免費期版本是否一開始就能匯入，官方沒有單獨點名。由「所有功能都開放」那句推想應該包含，但這是推論，要等 10 月 30 日實際點開才知道。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "要有心理準備的是資料。官網、Steam 與 SEGA 三份文件的註腳都寫：這個版本含有「仍在權利人審核中」的資訊，可能與現實資料不符，部分球隊與球員素材可能缺席。Steam 公告另說，免費期用的版本是「near-final」（接近最終版），發售前若有更新會在官方頻道說明。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "FM27 的授權清單到現在還沒公布（本報查到目前只點名過法國女子頂級聯賽 Arkema Première Ligue）。把兩件事連起來看，試玩期的隊徽、球衣和球員臉可能不齊；這是本報的推論，官方只說部分素材可能缺席。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "對台灣玩家，目前能核對的有兩件：一是 Steam 台灣區與英國區的商店資料都還沒有標價；二是 Steam 商店頁列出 20 種語言，包含簡體中文，沒有列繁體中文（10 月 26 日清晨查閱）。試玩版的語言選項是否一樣，官方沒有說。",
+      "tag": "可見"
+    },
+    {
+      "type": "h",
+      "text": "另一件事：首次直播播過了，Shuffle Draft 現身"
+    },
+    {
+      "type": "p",
+      "text": "FM 官方 YouTube 頻道上傳了〈FM27 | First Look Livestream〉，RSS 標示發布時間為 UTC 2026 年 10 月 22 日 20:25（台灣時間 10 月 23 日 04:25）。這個時間應是影片上架時間，不是開播時間：Last Word on Football 的觀後文 datePublished 是 UTC 16:56（台灣時間 10 月 23 日 00:56），更早，所以開播不晚於這個時刻。影片說明寫：",
+      "tag": "官方說法"
+    },
+    {
+      "type": "quote",
+      "text": "跟著 Sports Interactive 團隊第一次實況看 FM27，時間早於 10 月 29 日開始的免費 Launch Preview，之後是 11 月 10 日起的正式發售。",
+      "original": "Join the Sports Interactive team for the first live look at FM27, ahead of the Free Play Launch Preview beginning on 29 October, followed by the full launch from 10 November.",
+      "cite": "Football Manager 官方 YouTube 頻道影片說明（RSS 讀取），2026 年 10 月 22 日；說明所寫的 10 月 29 日為英國日期（台灣時間 10 月 30 日 02:00）；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "標題與說明都是「第一次實況」，看來就是 10 月 16 日深度介紹預告的那場直播；它和 10 月 19 日預錄的〈Gameplay Preview〉是兩支不同的影片。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "本報打不開 YouTube 影片頁（影片頁拒絕連線），只讀到標題、說明與時間，沒有看過直播內容，也無法確認實際開播時刻。下面是媒體的整理，一律當作線索。"
+    },
+    {
+      "type": "p",
+      "text": "FM Scout 在 10 月 23 日的報導寫，直播由兩位 SI 員工用布萊頓（Brighton）打了三場比賽，約兩小時；結尾 SI 首度公開新模式 Shuffle Draft：從每回合更換的球員組合中選人，組自己的夢幻球隊，可單人、與朋友或和全世界玩，線上線下都行，還能建立聯賽、淘汰賽或兩者混合的錦標賽。",
+      "tag": "報導"
+    },
+    {
+      "type": "p",
+      "text": "FM Scout 寫，SI 稱它是過去 FM 線上選秀模式的新版本，另有一個「變化」，但變化是什麼還沒講；SI 還說發售前有「a couple more things to show off」（還有幾樣東西要秀）。同一篇另寫，縮放模式發售時需要 1440p 以上螢幕，SI 正在研究發售後補上 1080p，但沒有確認。以上都是轉述，官方說法請以影片為準。",
+      "tag": "報導"
+    },
+    {
+      "type": "p",
+      "text": "Last Word on Football 的編輯 Alex Richards 10 月 22 日寫了他看直播的觀感：首場比賽布萊頓 3 比 4 輸給阿斯頓維拉，對手 5 次射正進 4 球，他認為防守與守門的平衡仍有問題。這是單一媒體看一場直播比賽的印象，樣本只有一場，不能當結論；免費期開放後，就會有更多人的樣本可以對照。",
+      "tag": "報導"
+    },
+    {
+      "type": "h",
+      "text": "還沒確定的事"
+    },
+    {
+      "type": "list",
+      "items": [
+        "台灣與其他地區的標價，以及九折後的實際金額；Steam、Epic 預購頁上線後才看得到。",
+        "FM27 Console 的價格（官方：主機版不開放預購，只有願望清單），以及主機版有沒有試玩。",
+        "發售的確切時刻，與免費期在各商店具體怎麼領取。",
+        "試玩版缺少哪些球隊與球員素材、授權清單何時公布。",
+        "Shuffle Draft 的細節，以及它在不在免費試玩版裡（官方只說「所有模式開放」）。",
+        "繁體中文介面與 1080p 縮放。"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "以上都是官方宣稱與媒體轉述。本報沒有玩過 FM27，也沒有看過直播內容。五天不限時間與進度，上班族大概能把每晚都賠進去；「接近最終版」到底多接近，10 月 30 日凌晨 02:00 之後就有人能實測，到時候再回頭對答案。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Play Football Manager 27 Launch Preview for Free",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-10-21",
+      "url": "https://www.footballmanager.com/news/play-football-manager-27-launch-preview-free",
+      "note": "全文；免費期時間與平台、預購 10% 折扣、存檔續玩、權利人審核註腳"
+    },
+    {
+      "title": "Football Manager 27 | Launch Preview Free Weekend",
+      "publisher": "Football Manager 官方 YouTube 頻道（Shorts，UTC 11:01:34 上傳）",
+      "date": "2026-10-21",
+      "url": "https://www.youtube.com/shorts/oJrkA9KcMUw",
+      "note": "官方宣傳短片；只讀到上傳 RSS 的標題與時間，未逐段檢視"
+    },
+    {
+      "title": "Play Free: Football Manager 27 Launch Preview",
+      "publisher": "Steam 公告（作者 Jimmy Wong，UTC 11:02）",
+      "date": "2026-10-21",
+      "url": "https://store.steampowered.com/news/app/4530370/view/1847286114028442",
+      "note": "全文含常見問答；三種幣別標價、預購平台、主機版不開放預購、FM24／FM26 存檔匯入、near-final、免費期不限時間與進度"
+    },
+    {
+      "title": "PLAY FOOTBALL MANAGER 27 FOR FREE",
+      "publisher": "SEGA（sega.prezly.com，UTC 11:00）",
+      "date": "2026-10-21",
+      "url": "https://sega.prezly.com/play-football-manager-27-for-free",
+      "note": "全文；「industry first」說法（指讓年度作品免費、開放所有模式）、預購窗口只在免費期同時開啟、零售價 £49.99"
+    },
+    {
+      "title": "FM27 | First Look Livestream",
+      "publisher": "Football Manager 官方 YouTube 頻道",
+      "date": "2026-10-22",
+      "url": "https://www.youtube.com/watch?v=9u1ja_bIk8o",
+      "note": "只讀到上傳 RSS 的標題、說明與時間（RSS 時間為上架時間，非開播）；影片頁打不開，未看內容"
+    },
+    {
+      "title": "Football Manager 27 launches across platforms from 10 November",
+      "publisher": "SEGA（sega.prezly.com）",
+      "date": "2026-09-30",
+      "url": "https://sega.prezly.com/football-manager-27-launches-across-platforms-from-10-november",
+      "note": "先前口徑：£49.99、預購「之後公布」"
+    },
+    {
+      "title": "Football Manager 27 launches from 10 November",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/news/football-manager-27-launches-10-november",
+      "note": "發售前 1–2 週的 Launch Preview；預購與折扣「之後公布」"
+    },
+    {
+      "title": "FM27: Elevated Match Day Atmosphere",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-elevated-match-day-atmosphere",
+      "note": "FAQ：Launch Preview 取代 Beta／Advanced Access、預購 PC／Mac 玩家可提早玩、最終日期尚未訂；實體 PS5 版 11 月 20 日"
+    },
+    {
+      "title": "Football Manager 27 Asia 新聞頁（英文版）",
+      "publisher": "SEGA 亞洲 FM 官網",
+      "date": "2026-09-30",
+      "url": "https://footballmanager.sega.com/asia-en/info/details/000187.html",
+      "note": "Launch Preview「發售前一週」"
+    },
+    {
+      "title": "FM27: 2D Match Engine, In-Game Editor and Deeper World Upgrades",
+      "publisher": "Sports Interactive（footballmanager.com）",
+      "date": "2026-10-16",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-2d-match-engine-game-editor-and-deeper-world-upgrades",
+      "note": "首次 FM27 直播預告"
+    },
+    {
+      "title": "Football Manager 27（Steam 商店頁）",
+      "publisher": "Steam",
+      "date": "2026-10-26",
+      "url": "https://store.steampowered.com/app/4530370/Football_Manager_27/",
+      "note": "本報 10 月 26 日清晨查閱：無預購與標價、列 20 種語言含簡體中文"
+    },
+    {
+      "title": "Football Manager 27（Xbox 商店頁，en-GB）",
+      "publisher": "Xbox",
+      "date": "2026-10-26",
+      "url": "https://www.xbox.com/en-GB/games/store/football-manager-27/9n4nkmxdzcx6",
+      "note": "本報 10 月 26 日清晨查閱：尚未開放預購、無標價"
+    },
+    {
+      "title": "FM27 Shuffle Draft: New Game Mode Revealed",
+      "publisher": "FM Scout",
+      "date": "2026-10-23",
+      "url": "https://www.fmscout.com/a-fm27-shuffle-draft.html",
+      "note": "媒體整理直播內容（Shuffle Draft、1080p 縮放）；只作線索"
+    },
+    {
+      "title": "FM27 First Look Livestream Thoughts & Gameplay Breakdown",
+      "publisher": "Last Word on Football",
+      "date": "2026-10-22",
+      "url": "https://lastwordonsports.com/football/2026/10/22/fm27-first-look-stream/",
+      "note": "單一媒體對首場直播比賽的觀感；只作線索"
+    }
+  ]
+}
