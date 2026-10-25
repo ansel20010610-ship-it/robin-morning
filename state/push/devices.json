@@ -1,0 +1,15 @@
+{
+  "devices": [
+    {
+      "name": "iPhone",
+      "added": "2026-10-25",
+      "subscription": {
+        "endpoint": "https://web.push.apple.com/QLesjGLRhb9efiSqMmF9gO65o0mnxU8nvc33a8K2vNAInqUhau2jedVOMgdeyJfoU0oQ2tIEdfhLyGYJuhS1e6HXEamWOcTDjibddS2cTzRdXbCX9nHgbkiRa6Jnau8MUF_TGjvW_Dg75TF0DLmyRpjNxOIun2bhYa-jJNpx53Y",
+        "keys": {
+          "p256dh": "BHo5I-G6iQXbgTCnMJM-MeaNPiU8BzmWfQTNyQ4OH5z-sVuX-bYp63V16dOvgDlbLO4OTZBq0Lvq_zmCUhwnOd4",
+          "auth": "n09IRl9jD0kEPPn-puwx_g"
+        }
+      }
+    }
+  ]
+}
