@@ -1,0 +1,521 @@
+{
+ "column": "art",
+ "date": "2026-10-26",
+ "title": "《華盛頓橫渡德拉瓦河》：美國名場面，德國製造",
+ "dek": "一幅在德國畫成的美國名場面：走一遍畫面的斜線、模特兒和對不上史實的細節，再看它為什麼有兩個版本。",
+ "brief": "美國名場面，德國製造：Leutze 1851 年在德國杜塞道夫畫成這幅寬 647.7 公分的《華盛頓橫渡德拉瓦河》，大都會這件是 1850 年畫室失火後重畫的第二版。依美國畫家 Whittredge 的回憶，開畫那一輪他穿著軍服站了兩小時當華盛頓，頭則照法國雕刻家 Houdon 的胸像（他沒說用在哪一版）。批評者指出旗幟要到 1777 年 6 月 14 日才有決議，比渡河晚了約五個半月；你看到的是替身，但替身比本尊紅。",
+ "topic_key": "art:met-97.34",
+ "updated_at": "2026-10-26T03:06:21+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "hero": {
+  "type": "figure",
+  "id": "hero",
+  "kind": "artwork",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Washington_Crossing_the_Delaware_MET_DP245003.jpg/1280px-Washington_Crossing_the_Delaware_MET_DP245003.jpg",
+  "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Washington_Crossing_the_Delaware_MET_DP245003.jpg/3840px-Washington_Crossing_the_Delaware_MET_DP245003.jpg",
+  "width": 1280,
+  "height": 746,
+  "alt": "橫幅油畫：一艘窄長木船載著十多人，在佈滿浮冰的灰綠色河面上前進。船中央偏左，一名戴黑色三角帽、披灰色紅裡披風的男子側臉朝左，挺直站立；他身後一名軍官扶著一面被風吹得鼓起的旗，藍底白星、其餘為條紋；船上其他人撐篙、划槳、縮著肩。畫面右後方有更多載人、載馬的船；天空佔去上方將近一半，左側天色淡黃，右側壓著深灰雲。",
+  "caption": "Emanuel Leutze《華盛頓橫渡德拉瓦河》（Washington Crossing the Delaware）全幅，1851 年，油彩、畫布，378.5 × 647.7 公分，紐約大都會藝術博物館，97.34。影像只有畫布，沒有畫框；後文的局部都從這張圖放大。",
+  "credit": "Emanuel Leutze；大都會藝術博物館（The Metropolitan Museum of Art），Gift of John Stewart Kennedy, 1897；館方開放資料影像，經 Wikimedia Commons",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Washington_Crossing_the_Delaware_MET_DP245003.jpg",
+  "made": "1851",
+  "depicts": "1776 年 12 月 25 日夜的渡河"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "後來成為小說家的亨利・詹姆斯（Henry James）小時候，有天晚飯後被爸媽塞進十四街的公共馬車，去看一幅畫，陣仗像要去劇場。他在 1913 年的回憶錄《A Small Boy and Others》裡說，全家看得「張大了嘴」：冰塊多銳利、靴上的釘子、繩子的每一股，樣樣東西都鉚足了勁要往外凸。但他最忘不了的，是畫裡那位英雄的站姿。",
+   "tag": "史料"
+  },
+  {
+   "type": "quote",
+   "text": "那位以側面入畫的國家英雄的用意，可以說是要盡可能地站起來，甚至差不多單腳站著，處在這麼多困難之中，還成功地保持平衡。",
+   "original": "the profiled national hero's purpose, as might be said, of standing up, as much as possible, even indeed of doing it almost on one leg, in such difficulties, and successfully balancing.",
+   "cite": "亨利・詹姆斯，《A Small Boy and Others》（1913）；本文自譯"
+  },
+  {
+   "type": "p",
+   "text": "一個小孩看完這幅畫，記住的不是那場勝仗，而是華盛頓的平衡感。這幅畫 1851 年 10 月 29 日在紐約的 Stuyvesant Institute 開始收門票展出，到隔年 2 月 28 日閉幕，付費入場的超過五萬人；2 月 23 日傳出它以 1 萬美元賣出（Spassky 認為詹姆斯看的是這次展出，或 1853 年的另一次）。畫家 Emanuel Leutze（1816–1868）生在德國符騰堡的 Schwäbisch Gmünd，早年在費城長大，這幅畫卻是在德國杜塞道夫（Düsseldorf）畫的，右下角還簽著「E. Leutze / Düsseldorf 1851」。美國最有名的歷史場景之一，德國製造。",
+   "tag": "史料"
+  },
+  {
+   "type": "p",
+   "text": "今天的路線：先看站著的人和天上一個小亮點，再看構圖的斜線，接著看船上的人與遠處的船隊，最後算帳：旗子、船、天色有哪些對不上史實，以及你在大都會看到的這幅，其實是第二版。"
+  },
+  {
+   "type": "facts",
+   "title": "作品資料",
+   "items": [
+    [
+     "作者",
+     "Emanuel Leutze（1816 年生於符騰堡 Schwäbisch Gmünd，1868 年卒於華盛頓特區），大都會標為德裔美國藝術家"
+    ],
+    [
+     "題名",
+     "Washington Crossing the Delaware（華盛頓橫渡德拉瓦河）"
+    ],
+    [
+     "年代",
+     "1851；右下角簽名「E. Leutze / Düsseldorf 1851」"
+    ],
+    [
+     "材料",
+     "油彩、畫布"
+    ],
+    [
+     "尺寸",
+     "149 × 255 英寸（378.5 × 647.7 公分），大都會館方資料與 Spassky 目錄一致"
+    ],
+    [
+     "收藏",
+     "大都會藝術博物館（紐約）美國館，館藏號 97.34，John Stewart Kennedy 1897 年捐贈"
+    ],
+    [
+     "歸屬",
+     "Leutze 作，畫上有簽名與年款。同畫室的 Eastman Johnson 另畫了供版畫師使用的縮小副本，那是另一件作品"
+    ],
+    [
+     "版本",
+     "本幅是第二版；第一版（1849–1850）原藏不來梅藝術館，1942 年毀於空襲"
+    ],
+    [
+     "影像",
+     "頭圖為大都會開放資料（CC0），經 Wikimedia Commons 取得；作品本身在公有領域"
+    ]
+   ]
+  },
+  {
+   "type": "h",
+   "text": "第一眼：一個站著的人，和天上一個小亮點"
+  },
+  {
+   "type": "p",
+   "text": "打開全圖，眼睛會先停在中間偏左那個人身上。他側臉朝左，戴黑色三角帽，灰色披風的襯裡是紅的，穿淡黃色馬褲、黑色長靴，一隻腳踩在船內的木板上，手裡握著一支黃銅色的望遠鏡，腰間垂著一把軍刀。他身後是整幅畫最亮的一塊天空，所以這個人是一道深色輪廓，直接貼在奶油色的光上。船上多數人在撐篙、划槳、縮著肩，站得最直的就是他。",
+   "tag": "可見"
+  },
+  {
+   "type": "p",
+   "text": "天空佔去畫面上方將近一半。依 Whittredge（1849 年到杜塞道夫、常在 Leutze 畫室出入的美國畫家）晚年的回憶，Leutze 前一晚把天空的顏料調好，隔天找他和 Andreas Achenbach 來幫忙，一天內把整塊天空鋪完，因為顏色得趁濕混得自然。接著有這句：「Achenbach thought of the star, and painted it, one lone, almost invisible star, the last to fade in the morning light.」（本文自譯：Achenbach 想到了那顆星，把它畫了上去，一顆孤零零、幾乎看不見的星，是晨光裡最後消失的一顆。）",
+   "tag": "史料"
+  },
+  {
+   "type": "p",
+   "text": "這段回憶講的是 1849 年他剛到杜塞道夫、Leutze 開始畫這幅畫的那一輪，也就是第一版的開工階段；他沒說這些做法用在哪一版，而大都會現存的是第二版。我讀的是 American Heritage 1964 年刊出的版本（據稱出自 Archives of American Art 提供的手稿），Spassky 目錄引的是另一個編訂本，字句略有出入。它是事隔數十年的追述，沒有第二個來源能對。",
+   "tag": "史料"
+  },
+  {
+   "type": "p",
+   "text": "我的讀法是：放大大都會這幅左上方的天空，找得到一個帶放射光芒的小亮點，而且很淡，符合「幾乎看不見」的描述。它可能和 Whittredge 說的那顆星有關，但他沒說星畫在哪一版、哪個位置，本報查閱的資料也沒有標出，所以只能算推測。",
+   "tag": "本文讀法"
+  },
+  {
+   "type": "detail",
+   "of": "hero",
+   "region": [
+    0.21,
+    0.08,
+    0.12,
+    0.12
+   ],
+   "position": "原圖左上方的天空，亮點約在寬度 27%、高度 14% 處；這個局部約為原圖寬、高各 12%",
+   "caption": "局部：淡褐色天空裡一個帶放射光芒的小亮點，放大後仍然很淡。本文推測它可能就是 Whittredge 說的那顆星（他沒說是哪一版）；本報查閱的資料沒有另外標出它的位置。"
+  },
+  {
+   "type": "h",
+   "text": "構圖骨架：一座低矮的金字塔，和一把倒向同一邊的斜線"
+  },
+  {
+   "type": "p",
+   "text": "Spassky 在大都會的美國繪畫目錄裡，把這幅畫的構圖歸進古典的「橫飾帶」排法：人物沿著畫面橫向排開，動作擠在前景一條船裡，堆成一個金字塔，旗桿在華盛頓上方當塔尖；撐篙、船槳、旗桿、人體與冰塊形成的斜線，給畫面一股繃緊的張力。遠處的船隊則被霧罩住，和前景銳利的輪廓形成對比。",
+   "tag": "學者解釋"
+  },
+  {
+   "type": "svg",
+   "title": "斜線示意",
+   "svg": "<svg viewBox=\"0 0 1000 583\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs>\n<marker id=\"aA\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 Z\" class=\"accent\"/></marker>\n</defs>\n<rect x=\"5\" y=\"5\" width=\"990\" height=\"573\" class=\"paper\" stroke-width=\"1\"/>\n<rect x=\"5\" y=\"5\" width=\"990\" height=\"264\" class=\"soft\" stroke-width=\"0\"/>\n<line x1=\"5\" y1=\"269\" x2=\"995\" y2=\"269\" class=\"muted\" stroke-width=\"1.5\" stroke-dasharray=\"8 6\"/>\n<text x=\"18\" y=\"298\" font-size=\"26\" class=\"muted\">地平線</text>\n<polygon points=\"206,397 219,441 375,478 688,481 919,463 938,425 906,416\" class=\"muted line\" stroke-width=\"3\"/>\n<text x=\"560\" y=\"520\" font-size=\"26\" class=\"muted\">船身</text>\n<circle cx=\"416\" cy=\"190\" r=\"24\" class=\"ink\" fill-opacity=\"0.3\" stroke-width=\"1.5\"/>\n<polygon points=\"375,300 384,219 438,213 481,281 494,400 375,406\" class=\"ink\" fill-opacity=\"0.25\" stroke-width=\"1.5\"/>\n<circle cx=\"506\" cy=\"234\" r=\"18\" class=\"ink\" fill-opacity=\"0.3\" stroke-width=\"1.5\"/>\n<polygon points=\"500,269 566,178 631,103 644,106 638,163 661,236 600,247 531,256\" class=\"gold\" fill-opacity=\"0.3\" stroke-width=\"2\"/>\n<line x1=\"668\" y1=\"76\" x2=\"525\" y2=\"262\" class=\"gold line\" stroke-width=\"4\" stroke-dasharray=\"10 7\"/>\n<line x1=\"141\" y1=\"394\" x2=\"306\" y2=\"216\" class=\"gold line\" stroke-width=\"6\" stroke-linecap=\"round\"/>\n<line x1=\"219\" y1=\"556\" x2=\"312\" y2=\"353\" class=\"gold line\" stroke-width=\"6\" stroke-linecap=\"round\"/>\n<line x1=\"675\" y1=\"538\" x2=\"725\" y2=\"369\" class=\"gold line\" stroke-width=\"6\" stroke-linecap=\"round\"/>\n<line x1=\"416\" y1=\"178\" x2=\"362\" y2=\"406\" class=\"ink line\" stroke-width=\"6\" stroke-linecap=\"round\"/>\n<path d=\"M672,240 L800,250\" class=\"accent line\" stroke-width=\"5\" marker-end=\"url(#aA)\"/>\n<circle cx=\"272\" cy=\"80\" r=\"9\" class=\"gold\" stroke-width=\"1\"/>\n<g font-size=\"26\" text-anchor=\"middle\">\n<circle cx=\"322\" cy=\"300\" r=\"20\" class=\"paper\" stroke-width=\"2\"/><text x=\"322\" y=\"309\">1</text>\n<circle cx=\"190\" cy=\"318\" r=\"20\" class=\"paper\" stroke-width=\"2\"/><text x=\"190\" y=\"327\">2</text>\n<circle cx=\"330\" cy=\"520\" r=\"20\" class=\"paper\" stroke-width=\"2\"/><text x=\"330\" y=\"529\">3</text>\n<circle cx=\"760\" cy=\"520\" r=\"20\" class=\"paper\" stroke-width=\"2\"/><text x=\"760\" y=\"529\">4</text>\n<circle cx=\"590\" cy=\"60\" r=\"20\" class=\"paper\" stroke-width=\"2\"/><text x=\"590\" y=\"69\">5</text>\n<circle cx=\"840\" cy=\"252\" r=\"20\" class=\"paper\" stroke-width=\"2\"/><text x=\"840\" y=\"261\">6</text>\n<circle cx=\"312\" cy=\"52\" r=\"20\" class=\"paper\" stroke-width=\"2\"/><text x=\"312\" y=\"61\">7</text>\n</g>\n</svg>",
+   "caption": "原創示意：依頭圖影像目測描線，位置為概略，不按精確比例。1 華盛頓的站姿，近乎垂直；2 左端撐篙；3 前排船槳；4 右側船槳；5 旗桿（被旗面遮住，依旗尖與持旗者的位置推定，故畫成虛線）；6 旗面飄向的方向；7 左上的小亮點。"
+  },
+  {
+   "type": "p",
+   "text": "我的讀法是：把這些斜線實際描一遍，會發現它們幾乎都往同一邊倒，撐篙、前排船槳、右側船槳的下端都在左下，被旗面蓋住的旗桿，依旗尖與持旗者的位置推定也是這個方向；只有旗面往右邊甩。整艘船像在頂著風往左前進，而站著不動的華盛頓，是這堆斜線裡最接近垂直的一條。眼睛被亂線拉來拉去，最後總是被這條直線按住。",
+   "tag": "本文讀法"
+  },
+  {
+   "type": "h",
+   "text": "畫這幅畫時：Whittredge 的身體，Houdon 的頭"
+  },
+  {
+   "type": "p",
+   "text": "好，重點來了：華盛頓的身體，是一位來杜塞道夫學畫的美國學生。依 Whittredge 回憶，Leutze 開始畫這幅畫時（他說的是 1849 年他到杜塞道夫起的那一輪，沒說哪一版），找模特兒遇到麻煩：杜塞道夫的模特兒不是個頭太小，就是身形太緊實，Leutze 只好見到路過的美國人就抓來用。",
+   "tag": "史料"
+  },
+  {
+   "type": "p",
+   "text": "辛辛那提來的 John Groesbeck 高過六英尺，到畫室拜訪，話都沒說完就被拉去當了人物；Whittredge 和他的朋友剛到，對 Leutze 是天降救星。那位「一輩子半個病人」的朋友被纏上頭部繃帶，扮成傷兵塞進船裡；Whittredge 自己被抓去演兩次，一次是握著槳的舵手，一次是華盛頓本人。",
+   "tag": "史料"
+  },
+  {
+   "type": "p",
+   "text": "華盛頓的行頭有兩種說法。Whittredge 說，Leutze 靠一位 Mr. Steward 的關係，從華盛頓特區的專利局弄到一套完整的華盛頓軍服複製品，因為杜塞道夫找不到哪個德國模特兒穿得進去。Spassky 書目轉述的 William Walton（1906）與 Baur（1940）則說，是 Eastman Johnson 向在華盛頓的父親要來一套給 Leutze。兩說並陳，本報查閱的資料沒有裁定。頭的部分，Whittredge 說是照法國雕刻家 Houdon 的胸像畫成側面（Spassky 在引文裡補註：那其實是從維吉尼亞州議會大廈全身像的臉翻出的模）。他還說，全船只有一個人物不是照美國人畫的，是一位高個子的挪威人，因為他熟悉冰和船。這些都是他對自己參與的那一輪的追述，至於他自己的那一場，他同樣沒說是哪一版：",
+   "tag": "史料"
+  },
+  {
+   "type": "quote",
+   "text": "我一動也不動地站了兩小時，好讓華盛頓的披風能一次畫完，披風的褶子才會停在最初排好的樣子……他們把香檳灌進我喉嚨，我才活了下來。",
+   "original": "I stood two hours without moving for the cloak of the Washington to be painted at a single sitting, so that the folds might be caught as they were first arranged. … They poured champagne down my throat and I lived through it.",
+   "cite": "Worthington Whittredge 的回憶，George F. Scheer，American Heritage 1964 年 12 月刊出；本文自譯"
+  },
+  {
+   "type": "p",
+   "text": "船上約有十多人。左端一個戴毛皮帽、穿橄欖綠外套、圍紅圍巾的人，雙手架著長篙，一隻腳蹬在冰塊上，把船往外推；他身後有個戴寬邊帽、膚色較深的人握著槳；最前排一個戴紅羽飾小帽的年輕人，身體前傾，兩手抓著長槳。華盛頓腳邊縮著一個戴金屬頭盔的人。",
+   "tag": "可見"
+  },
+  {
+   "type": "p",
+   "text": "華盛頓右後方，一位穿深色外套、紅領紅袖口的年輕軍官伸手扶著旗；再往右，穿紅外套的捲髮青年低頭拉槳，有人用手壓著被風吹的帽子，有人扛著長槍，還有一位戴羽毛三角帽的人，頭上纏著一圈白布。船尾右端的人穿綠外套、戴毛皮帽，圍巾裹住下半張臉，腰側掛著一個有紅白條紋與流蘇的包，手邊立著一支長槳。",
+   "tag": "可見"
+  },
+  {
+   "type": "detail",
+   "of": "hero",
+   "region": [
+    0.35,
+    0.27,
+    0.27,
+    0.45
+   ],
+   "position": "原圖中央偏左，約佔寬度 27%、高度 45%",
+   "caption": "局部：華盛頓與身後扶旗的軍官。披風外層灰、內裡紅；手裡的望遠鏡、腰間軍刀、踩在木板上的靴子都在這個範圍內。他身後的毛皮帽男子和腳邊的頭盔人物，也只露出一部分。"
+  },
+  {
+   "type": "p",
+   "text": "Whittredge 提到的那位頭纏繃帶的朋友，和畫面右側頭纏白布的人，是不是同一個人？他沒交代，也沒說其他模特兒各對應哪個人物，本文不對號入座。"
+  },
+  {
+   "type": "p",
+   "text": "至於畫中人物是誰，Spassky 寫得很直接：沒有一份對照表，而且大概從來沒有過。各種指認從 1851 年展出起就陸續冒出來。1853 年的展覽目錄說，扶旗的年輕軍官是詹姆斯・門羅（James Monroe），俯身在船邊的是納撒內爾・格林（Nathanael Greene）將軍。",
+   "tag": "學者解釋"
+  },
+  {
+   "type": "p",
+   "text": "那位膚色較深的人物，Spassky 的書目記 Sidney Kaplan 1973 年的著作談到 Prince Whipple，並註明那是 1851 年 William C. Nell 最早印出的傳統；Smithsonian 雜誌 2022 年的報導則說，一般認為不是 William Lee 就是 Prince Whipple。這些都是後人的指認，畫面本身沒有標示。",
+   "tag": "報導"
+  },
+  {
+   "type": "h",
+   "text": "遠景與水面：河到底有多寬"
+  },
+  {
+   "type": "p",
+   "text": "船的後面，成片碎冰一路鋪到低矮、覆著雪的小丘；地平線落在接近畫面一半高的地方。右後方還有一整排船：一匹白馬揚起前蹄，旁邊另一匹也在掙扎，幾個人用長篙撐船；左中段較遠的一條船上，有一輛輪輻清楚的砲車。前景是半透明、邊緣泛白的冰塊，浸在橄欖綠的水裡，左邊一塊大冰旁濺著水花。",
+   "tag": "可見"
+  },
+  {
+   "type": "detail",
+   "of": "hero",
+   "region": [
+    0.625,
+    0.355,
+    0.34,
+    0.31
+   ],
+   "position": "原圖右側中段，約佔寬度 34%、高度 31%",
+   "caption": "局部：右後方的船隊。白馬揚蹄、人用長篙撐船；船上的人與馬都蒙在一層霧裡，輪廓比前景軟。"
+  },
+  {
+   "type": "p",
+   "text": "這些船、馬、砲擠進同一個畫面，史實上不是這樣。據 American Battlefield Trust 的整理，華盛頓的主力約 2,400 人，在 1776 年 12 月 25 日夜裡頂著夾著冰雨的東北風暴渡河，比預定晚了約三小時；多數人搭的是 40 到 60 英尺（約 12 至 18 公尺）長、船舷高、吃水淺的 Durham 貨船，這種船平常拿來運鐵礦；重砲與馬匹走另外的平底渡船，整批行動帶了 18 門砲；操船的是 John Glover 上校麾下 Marblehead 團的水手；部隊約在天亮前後才到達特倫頓（Trenton）外圍。渡河處的河面只有約 300 碼（約 274 公尺）寬，ABT 還特別點名，這和 Leutze 那幅最有名的畫給人的印象不同。",
+   "tag": "史實"
+  },
+  {
+   "type": "p",
+   "text": "河還有一段插曲。Scheer 1964 年寫到，一次大戰接近尾聲時，有報紙指 Leutze 不懂美國歷史，用自己的德國同胞當模特兒，畫的其實是德國兵偽裝成美國人，渡的不是德拉瓦河而是萊茵河；Scheer 稱這是「misguided attacks」（找錯對象的攻擊），並指出 Leutze 9 歲就到了美國、在費城長大，Whittredge 的回憶也剛好相反：德國模特兒不合用，才去抓美國人。另一方面，Spassky 的參考書目引 Patricia Hills（1977）說，B. J. Cigrand 1918 年在《華盛頓郵報》的文章提到，Leutze 為這幅畫研究過萊茵河上的冰（Spassky 引 Hills 再轉引，我沒能核對原文）。",
+   "tag": "報導"
+  },
+  {
+   "type": "h",
+   "text": "旗、船、天色：逐項對帳"
+  },
+  {
+   "type": "detail",
+   "of": "hero",
+   "region": [
+    0.495,
+    0.11,
+    0.235,
+    0.4
+   ],
+   "position": "原圖中央偏右上，約佔寬度 24%、高度 40%",
+   "caption": "局部：被風吹得鼓成一團的旗。藍色角區露出四顆白星，旗尖是帶流蘇的矛形金飾；這個範圍的下緣是扶旗軍官的肩與手。"
+  },
+  {
+   "type": "p",
+   "text": "旗面被風吹得鼓成一團，露出的藍色部分有四顆白星，其餘是褪成褐色與米色的條紋；旗尖是一支帶流蘇的矛形金色飾頭，旗舉在華盛頓身後，是畫面裡最高的人造物。",
+   "tag": "可見"
+  },
+  {
+   "type": "table",
+   "title": "畫裡與史料：五處對帳",
+   "head": [
+    "畫面",
+    "對照",
+    "出處"
+   ],
+   "rows": [
+    [
+     "旗：藍底白星加條紋",
+     "大陸會議 1777 年 6 月 14 日才通過決議：旗為 13 道紅白相間的條紋，藍底上 13 顆白星，「代表一個新的星座」。渡河是 1776 年 12 月 25 日夜，早了約五個半月",
+     "美國國會圖書館引錄《大陸會議日誌》第 8 卷頁 464；Spassky"
+    ],
+    [
+     "船：窄身木船，擠著十多人",
+     "實際主要用 40–60 英尺的 Durham 貨船；Spassky 說 Leutze 畫的船「對載重來說太輕」",
+     "ABT；Spassky"
+    ],
+    [
+     "馬與砲：和人擠在同一個船隊",
+     "馬與重砲另用平底渡船；Spassky 說馬和砲是在人之後才過河",
+     "ABT；Spassky"
+    ],
+    [
+     "天色：晨光從地平線透出來",
+     "渡河在夜裡進行；Scheer 記錄的批評是，Leutze 把夜裡的事畫成白天，還清掉了雪、放大了冰",
+     "ABT；Scheer 1964"
+    ],
+    [
+     "站姿：全船只有他挺直站著",
+     "Scheer 記錄的批評：華盛頓「no fool about boats」（對船不是外行），不會這樣站",
+     "Scheer 1964"
+    ]
+   ],
+   "caption": "左欄是頭圖看得到的內容；中欄是來源的說法，不是本報的判斷。"
+  },
+  {
+   "type": "p",
+   "text": "這張帳單要小心收。Spassky 把這幅畫放進「英雄歷史畫」的傳統，前面有 Thomas Sully 1819 年的《The Passage of the Delaware》，說它滿足了公眾對愛國畫面的需求。另一條線在德國：1848 年革命剛過，革命題材在當地有現實的份量。Barbara Groseclose 1975 年推測，Leutze 最初的靈感可能來自 Ferdinand Freiligrath 1846 年的詩〈Vor der Fahrt〉，那是一首用「革命號」船隻駛向美洲、尋找自由來比喻的詩，提到了華盛頓等領袖。Spassky 的判斷是，這層政治暗示在德國的 Leutze 圈子裡看得出來，到了美國被蓋過去，畫被當成國家大事的紀念碑。",
+   "tag": "學者解釋"
+  },
+  {
+   "type": "h",
+   "text": "第一版和第二版：重畫版比原作有名"
+  },
+  {
+   "type": "figure",
+   "id": "f1",
+   "kind": "artwork",
+   "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/%C3%9Cbergang_Washingtons_%C3%BCber_den_Delaware.jpg",
+   "width": 968,
+   "height": 541,
+   "alt": "黑白照片：構圖和彩色版相近。窄長木船載著十多人穿過浮冰，一名戴三角帽的男子側臉站在船中央偏左，後方軍官扶著被風吹開的旗；天空是濃重的深色雲層，右後方有載著馬的船隊，前景的冰塊多是低矮的白色大片。",
+   "caption": "第一版（1849–1850）的黑白翻拍。原作曾藏於不來梅藝術館（Kunsthalle Bremen），1942 年毀於空襲後的大火；尺寸各處記載不一，都比大都會這幅略小。影像出自 Bildindex，翻拍年份不詳。",
+   "credit": "Emanuel Leutze；黑白翻拍影像取自 Bildindex der Kunst und Architektur（物件 20221206），經 Wikimedia Commons",
+   "license": "Public domain",
+   "license_url": "",
+   "source_url": "https://commons.wikimedia.org/wiki/File:%C3%9Cbergang_Washingtons_%C3%BCber_den_Delaware.jpg",
+   "made": "約 1849–1850（Commons 標示；Spassky 記 1850）",
+   "depicts": "1776 年 12 月 25 日夜"
+  },
+  {
+   "type": "p",
+   "text": "你在紐約看到的是第二版。第一版畫在杜塞道夫，1849 年 10 月的《American Art-Union 公報》報導 Leutze「即將動筆」。1850 年 11 月 5 日畫室失火，畫布被人緊急從框上割下來捲起，仍撕裂好幾處；11 月 10 日 Leutze 寫信給 American Art-Union，說畫傷得太重，要完成只能「commencing it entirely anew」（從頭再畫）。受損的畫布成了保險公司的財產，修補後 12 月 22 日就在科隆展出；1863 年前進了不來梅藝術館，1942 年 9 月 5 日在盟軍空襲的大火中毀掉。",
+   "tag": "史料"
+  },
+  {
+   "type": "p",
+   "text": "第二版很快就有了買主。1851 年 1 月，Eastman Johnson（當時和 Leutze 共用畫室）寫信說，巴黎畫商 Goupil 已經買下這幅還沒動筆的新畫；它是失火後從頭重畫的，比第一版略大，人物位置、服裝、武器與冰塊的配置都有改動。",
+   "tag": "史料"
+  },
+  {
+   "type": "p",
+   "text": "3 月，Johnson 在另一封信裡描述那間畫室：六個人在同一個大廳作畫，三個人畫大畫，大畫布後面永遠擺著一桶最好的啤酒；還有人搬來三門砲，築成一座砲台，一邊插星條旗，一邊插普魯士的黑白旗，進門的人要先挨三響禮砲，後來連子彈也真的打，牆面被打得「fearfully scarred」（慘不忍睹）。同一封信說，大畫已完成約三分之二，Leutze 在這三個月裡畫完了主體。畫華盛頓渡河的畫室，自己先打了一場仗。",
+   "tag": "史料"
+  },
+  {
+   "type": "p",
+   "text": "把兩版並排看，黑白翻拍不適合比色，我只比形狀：第一版的冰比較扁、成片，第二版則是一塊塊堆起來、帶稜角的冰塊。這只是目測，Spassky 只概括地說冰塊配置有改。",
+   "tag": "本文讀法"
+  },
+  {
+   "type": "h",
+   "text": "紅了以後：五萬張門票和一件國會麻煩事"
+  },
+  {
+   "type": "timeline",
+   "title": "一幅畫的行程表",
+   "items": [
+    {
+     "when": "1849.10",
+     "label": "第一版開工",
+     "note": "《American Art-Union 公報》報導 Leutze 即將動筆，人物將是真人大小"
+    },
+    {
+     "when": "1850.11.5",
+     "label": "畫室失火",
+     "note": "第一版撕裂數處，11 月 10 日 Leutze 寫信說只能從頭再畫"
+    },
+    {
+     "when": "1850.12.22",
+     "label": "修補後在科隆展出",
+     "note": "畫布此時屬於保險公司"
+    },
+    {
+     "when": "1851.1",
+     "label": "第二版預售",
+     "note": "Johnson 信：Goupil 買下尚未動筆的新畫"
+    },
+    {
+     "when": "1851.5.11",
+     "label": "普魯士親王夫婦到畫室",
+     "note": "據 Johnson 信，為慶祝畫成而來（William Walton 1906 轉錄）"
+    },
+    {
+     "when": "1851.7.15",
+     "label": "報載完成",
+     "note": "《Düsseldorfer Journal und Kreisblatt》7 月 16 日報導畫已在前一天完成"
+    },
+    {
+     "when": "1851.10.29",
+     "label": "紐約開展",
+     "note": "Stuyvesant Institute，收門票"
+    },
+    {
+     "when": "1852.2.23",
+     "label": "傳出以 1 萬美元售出",
+     "note": "展覽 2 月 28 日閉幕，付費入場逾 5 萬人"
+    },
+    {
+     "when": "1852.3.15",
+     "label": "國會大廈圓形大廳展出",
+     "note": "至 4 月 4 日"
+    },
+    {
+     "when": "1853",
+     "label": "版畫發行",
+     "note": "Paul Girardet 雕版，版權 9 月 24 日登記給 M. Knoedler"
+    },
+    {
+     "when": "1897",
+     "label": "進入大都會",
+     "note": "John Stewart Kennedy 捐贈"
+    },
+    {
+     "when": "1942.9.5",
+     "label": "第一版毀",
+     "note": "不來梅，空襲後的大火"
+    }
+   ],
+   "caption": "資料依 Spassky 1985 與大都會館方資料整理；完工日的說法不一，上表並列 Johnson 信與報紙兩種記載。"
+  },
+  {
+   "type": "p",
+   "text": "Spassky 的整理很有畫面。這幅畫 1852 年 3 月 15 日到 4 月 4 日掛進華盛頓特區的國會大廈圓形大廳，擋住了畫家 John Vanderlyn 的《尼加拉瀑布》，Vanderlyn 3 月 26 日寫信抱怨它擋了自己的大畫；幾位議員因此提議買下來掛進總統府。Leutze 4 月 5 日向國會請願時說，畫已被私人買走，但他願意重畫一幅（並依之後的經驗修改）賣給政府，還想配一幅《蒙茅斯之役》當成對畫。這事沒成，不過他後來接到委託，在 1854 年畫了《蒙茅斯》。1853 年的版畫讓畫傳得更遠；Spassky 引馬克・吐溫《Life on the Mississippi》（1883）說，從紐奧良郊外到聖路易邊上，「首要市民的住宅」裡都掛著這張版畫。",
+   "tag": "史料"
+  },
+  {
+   "type": "p",
+   "text": "這幅畫的名氣也不是一路向上。Scheer 寫到，1931 年華盛頓誕辰兩百週年將近，大眾才發現它被捲起來收在大都會的地下室，當時的館方不怎麼把它當藝術看；民間抗議之後，1932 年 2 月 22 日它重新掛了出來。",
+   "tag": "史料"
+  },
+  {
+   "type": "detail",
+   "of": "hero",
+   "region": [
+    0.85,
+    0.87,
+    0.12,
+    0.09
+   ],
+   "position": "原圖右下角，約佔寬度 12%、高度 9%",
+   "caption": "局部：右下角一塊冰上的簽名，紅褐色的「E. Leutze」，下一行是「Düsseldorf 1851」。這個局部約 460 × 200 像素，字跡偏小，年款以目錄記載為準。"
+  },
+  {
+   "type": "p",
+   "text": "美國最有名的歷史畫之一，把產地簽在冰上。"
+  },
+  {
+   "type": "p",
+   "text": "Spassky 另記，畫面左下標有日期「16.4.51」；他引 Hills（1977）說，這個日期被畫進前景的冰塊之間，意思是畫家到 4 月 16 日已把畫畫到可以落款。我在這張影像裡看不清楚這行字，這裡只轉述目錄。",
+   "tag": "史料"
+  },
+  {
+   "type": "p",
+   "text": "好，帳算完了。依 Whittredge 的回憶，Leutze 開始畫這幅畫時，華盛頓的身體是個站了兩小時、換到一口香檳的美國畫家，頭照 Houdon，軍服靠關係從華盛頓弄來（誰牽的線，有兩種說法）；但他沒說這些用在哪一版，所以別把它當成大都會這件的配方。旗子早了約五個半月，船比實際的輕，天色是畫家的。這一切出自一位德國出身的美國畫家之手，第二版是在一間擺過三門砲的畫室裡畫完的；第一版先燒、後炸，我們今天最熟悉的是失火後重畫的這一版，一個比本尊還紅的替身。今天帶走這個就夠了。"
+  }
+ ],
+ "sources": [
+  {
+   "title": "American Paintings in The Metropolitan Museum of Art, Vol. 2: A Catalogue of Works by Artists Born between 1816 and 1845（Emanuel Leutze 條目，Washington Crossing the Delaware）",
+   "publisher": "Natalie Spassky 等，The Metropolitan Museum of Art",
+   "date": "1985",
+   "url": "https://archive.org/details/AmericanPaintingsinTheMetropolitanMuseumofArtVol2ACatalogueofWorksbyArtistsBornbe",
+   "note": "讀 Leutze 條目全文（約頁 15–22）：兩版經過、Whittredge 與 Eastman Johnson 的轉錄、1853 年目錄與人物指認、展出與售價、尺寸與簽款；全篇引文與日期以這份目錄為準；Walton 1906、Baur 1940、Hills 1977（含 Cigrand 1918《華盛頓郵報》）與 Kaplan 1973 的內容皆經此目錄的書目轉述，非本報直接核對"
+  },
+  {
+   "title": "Washington Crossing the Delaware（館藏紀錄 97.34）",
+   "publisher": "The Metropolitan Museum of Art 開放資料 API",
+   "date": "2025-10-03",
+   "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/11417",
+   "note": "作者生卒、尺寸、材料、捐贈資料與 CC0 影像授權"
+  },
+  {
+   "title": "Washington Crossing the Delaware by Emanuel Leutze（About the Artwork）",
+   "publisher": "The Metropolitan Museum of Art",
+   "date": "2026-10-26",
+   "url": "https://customprints.metmuseum.org/detail/488803/leutze-washington-crossing-the-delaware",
+   "note": "館方對兩個版本、1942 年毀損與 1851 年售價的說明；館網其他頁面當日無法開啟；發布日期未標，日期為查閱日"
+  },
+  {
+   "title": "Trenton Battle Facts and Summary",
+   "publisher": "American Battlefield Trust",
+   "date": "2026-10-26",
+   "url": "https://www.battlefields.org/learn/revolutionary-war/battles/trenton",
+   "note": "渡河人數、風暴、Durham 貨船尺寸、砲與馬的運送、河寬約 300 碼；發布日期未標，日期為查閱日"
+  },
+  {
+   "title": "Today in History – June 14（國旗決議）",
+   "publisher": "Library of Congress",
+   "date": "2026-10-26",
+   "url": "https://www.loc.gov/item/today-in-history/june-14/",
+   "note": "1777 年 6 月 14 日決議原文與出處：Journals of the Continental Congress, v. 8, p. 464；發布日期未標，日期為查閱日"
+  },
+  {
+   "title": "Why Washington Stood Up in the Boat",
+   "publisher": "George F. Scheer，American Heritage 16 卷 1 期",
+   "date": "1964-12",
+   "url": "https://www.americanheritage.com/why-washington-stood-boat",
+   "note": "Whittredge 回憶的轉錄（引文以此版為準）、批評者對白天、旗、冰與站姿的意見、一次大戰時的萊茵河指控、1931–1932 年的地下室插曲"
+  },
+  {
+   "title": "A Small Boy and Others",
+   "publisher": "Henry James，Charles Scribner's Sons",
+   "date": "1913",
+   "url": "https://archive.org/details/asmallboyandothe26115gut",
+   "note": "Project Gutenberg 全文，查對談 Leutze 畫作的段落"
+  },
+  {
+   "title": "'Washington Crossing the Delaware' Sails Toward the Auction Block",
+   "publisher": "Smithsonian Magazine，Jane Recker",
+   "date": "2022-04-28",
+   "url": "https://www.smithsonianmag.com/smart-news/washington-crossing-the-delaware-is-expected-to-sell-for-15-million-at-auction-180979985/",
+   "note": "只用於畫中黑人人物的兩種指認"
+  },
+  {
+   "title": "File:Washington Crossing the Delaware MET DP245003.jpg",
+   "publisher": "Wikimedia Commons（大都會開放資料）",
+   "date": "2026-10-26",
+   "url": "https://commons.wikimedia.org/wiki/File:Washington_Crossing_the_Delaware_MET_DP245003.jpg",
+   "note": "頭圖，CC0；本文所有「局部」都從這張圖放大逐區查看；發布日期未標，日期為查閱日"
+  },
+  {
+   "title": "File:Übergang Washingtons über den Delaware.jpg",
+   "publisher": "Wikimedia Commons（Bildindex der Kunst und Architektur，物件 20221206）",
+   "date": "2026-10-26",
+   "url": "https://commons.wikimedia.org/wiki/File:%C3%9Cbergang_Washingtons_%C3%BCber_den_Delaware.jpg",
+   "note": "第一版黑白翻拍；發布日期未標，日期為查閱日"
+  }
+ ]
+}
