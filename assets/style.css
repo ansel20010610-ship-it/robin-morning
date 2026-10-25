@@ -11,6 +11,7 @@
   --gold: #A5843F;
   --gold-ink: #7C642F; /* gold for small text: 4.5:1 on paper and paper-2 (WCAG AA); --gold stays for rules and ornaments */
   --gold-soft: #D9C595;
+  --foil: #D29F2E; --foil-hi: #F6D06A; /* the masthead's gold sweep */
   --wine: #6E2536;
   --robin: #B65A2E;
   --blue: #23395B;
@@ -31,7 +32,7 @@
   :root:not([data-theme="light"]) {
     --paper: #15120E; --paper-2: #1E1A14; --paper-3: #2A241B;
     --ink: #EDE4D3; --ink-2: #CDC2AF; --muted: #998F7E;
-    --rule: #4D4230; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36;
+    --rule: #4D4230; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36; --foil: #E3B957; --foil-hi: #FFF0BF;
     --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82;
     --shadow: 0 1px 0 rgba(0,0,0,.4), 0 10px 28px -18px rgba(0,0,0,.9);
     color-scheme: dark;
@@ -40,7 +41,7 @@
 :root[data-theme="dark"] {
   --paper: #15120E; --paper-2: #1E1A14; --paper-3: #2A241B;
   --ink: #EDE4D3; --ink-2: #CDC2AF; --muted: #998F7E;
-  --rule: #4D4230; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36;
+  --rule: #4D4230; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36; --foil: #E3B957; --foil-hi: #FFF0BF;
   --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82;
   --shadow: 0 1px 0 rgba(0,0,0,.4), 0 10px 28px -18px rgba(0,0,0,.9);
   color-scheme: dark;
@@ -644,24 +645,28 @@ img.img-off { visibility: hidden; }
   .rv.in { opacity: 1; transform: none; transition: opacity .6s var(--d, 0ms) ease, transform .75s var(--d, 0ms) cubic-bezier(.2,.75,.2,1); }
   .digest.rv { transform: none; }
 
-  /* Gold foil runs slowly across the title every time the masthead is on screen, then rests and comes round again. */
-  .masthead h1 { background: linear-gradient(105deg, var(--ink) 0 40%, var(--gold) 46%, #FFF3CF 50%, var(--gold) 54%, var(--ink) 60% 100%) 100% 0 / 280% 100%;
-    -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil-round 9s .5s cubic-bezier(.45,.05,.35,1) infinite both; }
-  @keyframes foil-round { 0% { background-position: 100% 0; } 45%, 100% { background-position: 0 0; } }
+  /* Each time the masthead is drawn, a bright band of gold runs slowly across the title once, with a glow as it passes. */
+  .masthead h1 { background: linear-gradient(105deg, var(--ink) 0 35%, var(--foil) 42%, var(--foil-hi) 50%, var(--foil) 58%, var(--ink) 65% 100%) 100% 0 / 280% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil-once 4.2s .5s cubic-bezier(.45,.05,.35,1) both; }
+  @keyframes foil-once {
+    0% { background-position: 100% 0; filter: none; }
+    50% { filter: drop-shadow(0 0 9px color-mix(in srgb, var(--foil-hi) 75%, transparent)); }
+    100% { background-position: 0 0; filter: none; }
+  }
   @keyframes foil { from { background-position: 100% 0; } to { background-position: 0 0; } }
-  /* The first look at a new issue also draws the emblem's frame and slides the checker bands in. */
-  .masthead.intro .emblem { animation: emblem-in 1s .05s cubic-bezier(.2,1.3,.4,1) both; }
-  .masthead.intro .emblem .e-frame { stroke-dasharray: 1; animation: draw 1.2s .2s ease-out both; }
+  /* Each time, too: the emblem draws its gold frame, the checker bands slide in from either side, the lines below follow. */
+  .masthead .emblem { animation: emblem-in 1s .05s cubic-bezier(.2,1.3,.4,1) both; }
+  .masthead .emblem .e-frame { stroke-dasharray: 1; animation: draw 1.2s .2s ease-out both; }
   @keyframes emblem-in { from { opacity: 0; transform: scale(.6) rotate(-10deg); } to { opacity: 1; transform: none; } }
   @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
-  .masthead.intro .checker { animation: band .9s .15s cubic-bezier(.2,.7,.2,1) both; }
-  .masthead.intro .checker ~ .checker { animation-name: band-r; }
+  .masthead .checker { animation: band .9s .15s cubic-bezier(.2,.7,.2,1) both; }
+  .masthead .checker ~ .checker { animation-name: band-r; }
   @keyframes band { from { transform: translateX(-40%); opacity: 0; } to { transform: none; opacity: .9; } }
   @keyframes band-r { from { transform: translateX(40%); opacity: 0; } to { transform: none; opacity: .9; } }
-  .masthead.intro :is(.topline, .latin, .dateline, .epigraph) { animation: page-in .8s both; }
-  .masthead.intro .latin { animation-delay: .9s; }
-  .masthead.intro .dateline { animation-delay: 1.05s; }
-  .masthead.intro .epigraph { animation-delay: 1.2s; }
+  .masthead :is(.topline, .latin, .dateline, .epigraph) { animation: page-in .8s both; }
+  .masthead .latin { animation-delay: .9s; }
+  .masthead .dateline { animation-delay: 1.05s; }
+  .masthead .epigraph { animation-delay: 1.2s; }
 
   /* The seal is stamped in when you reach the end. */
   .finish.stamp :is(.tick, .laurel) { animation: stamp .6s cubic-bezier(.2,1.5,.4,1) both; }

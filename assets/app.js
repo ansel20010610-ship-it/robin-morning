@@ -115,9 +115,9 @@ const EMBLEM = `<svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
   <path class="e-wing" d="M31 33 C36 31 42 32.5 45 36.5" stroke-width="1" stroke-linecap="round"/>
   <path class="e-legs" d="M30.5 47 L29.5 52.5 M36 46 L36 52.5 M15 53 L50 53" stroke-width="1.3" stroke-linecap="round"/></svg>`;
 
-function masthead(issue, intro = false) {
+function masthead(issue) {
   const date = issue?.date || twNow().date;
-  return `<header class="masthead${intro ? " intro" : ""}"><div class="wrap">
+  return `<header class="masthead"><div class="wrap">
     <hr class="rule-double">
     <div class="topline"><span>Wien · Taipei</span><span>${issue ? `No. ${issue.no}` : ""}</span><span>${esc(fmtDate(date, "de").split(",")[0])}</span></div>
     <div class="checker" aria-hidden="true"></div>
@@ -167,10 +167,7 @@ function viewFront(dateParam) {
   const supps = arts.filter((a) => col(a.column).group === "supplement");
   const watch = arts.filter((a) => col(a.column).group === "watch");
   const lead = mains[0];
-  // The first look at a new issue gets the gold-foil masthead; later visits the plain one.
-  const intro = !dateParam && store.get("intro") !== issue.date;
-  if (intro) store.set("intro", issue.date);
-  main.innerHTML = `${masthead(issue, intro)}
+  main.innerHTML = `${masthead(issue)}
   <div class="wrap">
     ${status ? `<div class="status">${status}</div>` : ""}
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的第 ${issue.no} 期・<a href="#/">回到最新一期</a></div>` : ""}
