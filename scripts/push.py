@@ -132,8 +132,8 @@ def issue_payload(cfg, issue):
         rest += ("，" if rest else "") + "副刊 %d 篇" % n_supp
     chars = sum(len(a.get("brief") or "") for a in issue["articles"])
     lines = [lead["title"], ("還有" + rest) if rest else ""]
-    lines.append("每篇三句話，約 %d 分鐘讀完" % max(1, int(chars / 330 + 0.5)) if chars else "今天共 %d 篇" % len(issue["articles"]))
-    return {"title": "今天的晨報到了・第 %d 期" % issue["no"], "body": "\n".join(x for x in lines if x),
+    lines.append("一篇三句話，%d 分鐘就能交差" % max(1, int(chars / 330 + 0.5)) if chars else "今天共 %d 篇" % len(issue["articles"]))
+    return {"title": "早安兄弟，第 %d 期出爐了" % issue["no"], "body": "\n".join(x for x in lines if x),
             "url": "./#/", "tag": "issue-" + issue["date"], "badge": 1}
 
 
@@ -186,7 +186,7 @@ def cmd_test(a):
     if not devs:
         print("沒有新加入的裝置。")
         return 0
-    return send(devs, {"title": "出刊通知已開啟", "body": "之後每天台灣時間 07:30，新的一期一到就會通知你。", "url": "./#/", "tag": "test"})
+    return send(devs, {"title": "通知開好了，兄弟", "body": "之後每天 07:30 新的一期一出爐，我就叫你。", "url": "./#/", "tag": "test"})
 
 
 def cmd_add(a):

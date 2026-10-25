@@ -134,11 +134,11 @@ function frontStatus() {
   if (isPreview()) return "預覽模式：顯示尚未在 07:30 出刊的稿件。";
   const now = twNow();
   const todays = issueBy(now.date);
-  if (now.minutes < publishMin()) return `今日刊期將於台灣時間 <b>${esc(S.cfg.publish_time)}</b> 出刊（還有 ${untilText(publishMin() - now.minutes)}）。先讀上一期。`;
-  if (!todays) return "今日刊期還在排版，稿件到齊後會自動出現。先讀上一期。";
+  if (now.minutes < publishMin()) return `今天這期 <b>${esc(S.cfg.publish_time)}</b> 才出爐（還有 ${untilText(publishMin() - now.minutes)}），先翻上一期墊墊胃。`;
+  if (!todays) return "今天這期還在印，好了會自己跳出來。先翻上一期撐一下。";
   const expected = Object.values(S.cfg.columns).filter((c) => c.group === "main").length + 3;
   const got = todays.articles.filter((a) => col(a.column).group !== "watch").length;
-  return got < expected ? `今日已刊出 ${got} 篇，其餘稿件陸續送達。` : "";
+  return got < expected ? `已經到了 ${got} 篇，剩下的在路上，別走開。` : "";
 }
 // Everything the latest-issue front page shows that can change while it stays open: [issue, status line].
 const frontState = () => [JSON.stringify(publishedIssues()[0] || null), frontStatus()];
@@ -148,7 +148,7 @@ let shownFront = [];
 function viewFront(dateParam) {
   const pubs = publishedIssues();
   const issue = dateParam ? issueBy(dateParam) : pubs[0];
-  if (dateParam && (!issue || !isPublished(issue.date))) { main.innerHTML = `${masthead(null)}<div class="wrap"><p class="empty">這一期尚未出刊。</p></div>`; return; }
+  if (dateParam && (!issue || !isPublished(issue.date))) { main.innerHTML = `${masthead(null)}<div class="wrap"><p class="empty">這期還沒出爐，別急。</p></div>`; return; }
   const status = dateParam ? "" : frontStatus();
   if (!dateParam) shownFront = [JSON.stringify(issue || null), status];
   if (!issue) {
@@ -172,7 +172,7 @@ function viewFront(dateParam) {
     ${supps.length ? `<div class="sec-head"><h2>副刊</h2><span class="de">Feuilleton</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
     ${watch.length ? `<div class="sec-head"><h2>觀測站</h2><span class="de">Beobachtung</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
-    ${arts.some((a) => a.brief) ? `<div class="finish${digestDone().has(issue.date) ? " done" : ""}"><span class="tick" aria-hidden="true">✓</span><b>今天的晨報讀完了</b><span>想深入的，點任何一篇讀全文；沒空也沒關係，重點都在上面了。</span></div>` : ""}
+    ${arts.some((a) => a.brief) ? `<div class="finish${digestDone().has(issue.date) ? " done" : ""}"><span class="tick" aria-hidden="true">✓</span><b>讀完了，今天你贏了</b><span>想深挖就點進任何一篇；沒空也沒差，重點你都拿到了。</span></div>` : ""}
     <footer class="colophon">
       <div class="ornament" aria-hidden="true"><i></i><i></i><i></i></div>
       <div class="latin">Gegründet im Oktober 2026</div>
@@ -191,7 +191,7 @@ function digestBar(arts) {
   const n = arts.reduce((s, a) => s + (a.brief ? a.brief.length : 0), 0);
   if (!n) return "";
   const listen = canSpeak() ? `<button type="button" class="btn ghost" data-digest>${ICON.speak}<span>聽今日摘要</span></button>` : "";
-  return `<div class="digest"><div><b>今日摘要</b><span>每篇三句話，約 ${Math.max(1, Math.round(n / 330))} 分鐘讀完</span></div>${listen}</div>`;
+  return `<div class="digest"><div><b>今日摘要</b><span>一篇三句話，${Math.max(1, Math.round(n / 330))} 分鐘就能交差</span></div>${listen}</div>`;
 }
 function wireDigest(issue) {
   digestReader?.stop(); digestReader = null; finishSeen?.disconnect(); finishSeen = null;
@@ -201,7 +201,7 @@ function wireDigest(issue) {
       btn.innerHTML = st === "playing" ? `${ICON.pause}<span>暫停</span>` : `${ICON.speak}<span>${st === "paused" ? "繼續聽" : "聽今日摘要"}</span>`;
       if (st === "done") markDigestDone(issue.date);
     } });
-    if (!digestReader.length) { toast("這一期還沒有摘要"); return; }
+    if (!digestReader.length) { toast("這期還沒有摘要，等等再來"); return; }
     digestReader.toggle();
   };
   const fin = main.querySelector(".finish");
@@ -241,10 +241,10 @@ function updatedNote(date, a) {
 
 // `my` is this route's number: if the reader has moved on while the article loads, draw nothing.
 async function viewArticle(date, column, my) {
-  if (!isPublished(date)) { main.innerHTML = `<div class="wrap"><p class="empty">這篇文章尚未出刊。</p></div>`; return; }
+  if (!isPublished(date)) { main.innerHTML = `<div class="wrap"><p class="empty">這篇還沒出爐，別偷看。</p></div>`; return; }
   main.innerHTML = `<div class="wrap"><p class="loading">翻到這一頁……</p></div>`;
   let a;
-  try { a = await article(date, column); } catch { if (my === routeSeq) main.innerHTML = `<div class="wrap"><p class="empty">找不到這篇文章。<a href="#/">回到今日</a></p></div>`; return; }
+  try { a = await article(date, column); } catch { if (my === routeSeq) main.innerHTML = `<div class="wrap"><p class="empty">這篇找不到，可能被風吹走了。<a href="#/">回到今日</a></p></div>`; return; }
   if (my !== routeSeq) return;
   const key = `${date}/${column}`;
   const k = col(column);
@@ -491,7 +491,7 @@ function viewSaved() {
     return a && isPublished(date) ? itemCard(date, a, readSet()).replace('<div class="meta-s">', `<div class="meta-s">${esc(fmtDate(date, "short"))}・`) : "";
   }).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
-    ${items || `<p class="empty">讀到喜歡的文章，按右上角的星號收進這裡。</p>`}</div>`;
+    ${items || `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。</p>`}</div>`;
 }
 
 function viewMusic() { viewColumn("music"); }
