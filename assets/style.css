@@ -395,7 +395,12 @@ tr:first-child td { border-top: 0; }
   backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px);
   border-top: 1px solid var(--ink); padding-bottom: env(safe-area-inset-bottom);
 }
-.nav .in { display: grid; grid-template-columns: repeat(5, 1fr); max-width: 46rem; margin: 0 auto; height: var(--nav-h); }
+.nav .in { position: relative; max-width: 46rem; margin: 0 auto; height: var(--nav-h); }
+.nav .tabs { display: grid; grid-template-columns: repeat(5, 1fr); height: 100%; }
+/* The gold marker over the current tab slides from tab to tab. */
+.nav-ind { position: absolute; top: -1px; left: 0; width: 20%; height: 2px; transform: translateX(calc(var(--i, 0) * 100%)); transition: transform .45s cubic-bezier(.2,.8,.2,1); pointer-events: none; }
+.nav-ind::before { content: ""; position: absolute; left: 30%; right: 30%; top: 0; height: 2px; background: var(--gold); }
+.nav-ind::after { content: ""; position: absolute; left: 50%; top: -3px; width: 6px; height: 6px; background: var(--gold); transform: translateX(-50%) rotate(45deg); }
 .nav a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; font-family: var(--sans); font-size: 11px; letter-spacing: .1em; color: var(--muted); }
 .nav a svg { width: 21px; height: 21px; }
 .nav a[aria-current="page"] { color: var(--ink); }
@@ -544,7 +549,7 @@ img.img-off { visibility: hidden; }
 .finish .tick { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--gold); color: var(--gold-ink); font-family: var(--sans); font-size: 15px; margin-bottom: 8px; transition: background .4s, color .4s; }
 .finish.done .tick { background: var(--gold); color: var(--paper); }
 .finish b { display: block; font-size: 17px; letter-spacing: .08em; margin-bottom: 4px; }
-.finish span:last-child { display: block; font-family: var(--sans); font-size: 12.5px; color: var(--muted); line-height: 1.7; }
+.finish .note { display: block; font-family: var(--sans); font-size: 12.5px; color: var(--muted); line-height: 1.7; }
 .issue-row .d .done-mark { display: block; font-style: normal; font-family: var(--sans); font-size: 12px; color: var(--gold-ink); margin-top: 3px; }
 
 
@@ -560,10 +565,128 @@ img.img-off { visibility: hidden; }
 .cards-cta span { font-family: var(--sans); font-size: 13px; color: var(--muted); }
 .cards-cta i { margin-left: auto; font-style: normal; color: var(--gold-ink); }
 .cards-pos { font-family: var(--sans); font-size: 12.5px; color: var(--muted); margin: 6px 0 10px; }
-.card { padding: 22px 18px; border: 1px solid var(--rule); background: var(--paper-2); }
-.card .q { font-size: 1.12em; line-height: 1.75; font-weight: 600; margin: 0 0 18px; }
-.card .a { border-top: 1px solid var(--rule); padding-top: 14px; }
-.card .a p { margin: 0 0 10px; line-height: 1.8; }
-.card .a > a { font-family: var(--sans); font-size: 13px; }
-.card .btns, .cards-end { margin-top: 16px; }
+.cards-end, .grade { margin-top: 16px; }
 .chips.review { margin: 0 0 12px; }
+
+/* ——— Gold leaf: motion and finishes (assets/motion.js) ——— */
+[hidden] { display: none !important; }
+
+/* The digest stays at the top while you read the briefs; its ring fills brief by brief. */
+.digest { position: sticky; top: 0; z-index: 6; padding: 8px 0; padding-top: calc(8px + env(safe-area-inset-top)); margin-top: 12px;
+  background: color-mix(in srgb, var(--paper) 96%, transparent); backdrop-filter: saturate(1.3) blur(10px); -webkit-backdrop-filter: saturate(1.3) blur(10px); }
+.digest > div { flex: 1; min-width: 0; }
+.digest .streak { font-style: normal; font-family: var(--sans); font-size: 11.5px; font-weight: 500; color: var(--gold-ink); letter-spacing: .04em; margin-left: 8px; }
+.digest > div > span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.digest b { font-size: 16px; }
+.masthead .dateline { text-wrap: balance; }
+.ring-wrap { position: relative; flex: 0 0 auto; width: 40px; height: 40px; display: grid; place-items: center; }
+.ring { position: absolute; inset: 0; width: 40px; height: 40px; transform: rotate(-90deg); }
+.ring circle { fill: none; stroke-width: 2.4; }
+.ring .track { stroke: var(--rule); }
+.ring .bar { stroke: var(--gold); stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; transition: stroke-dashoffset .6s cubic-bezier(.2,.7,.2,1); }
+.ring-wrap .cnt { font-family: var(--latin); font-weight: 600; font-size: 13px; color: var(--gold-ink); letter-spacing: 0; }
+.digest.full .ring-wrap { background: radial-gradient(circle, color-mix(in srgb, var(--gold) 22%, transparent) 0 60%, transparent 62%); border-radius: 50%; }
+
+/* The finish line: a double Secession frame once you are through, a seal stamped in, gold leaf thrown up. */
+.finish { position: relative; overflow: visible; transition: border-color .5s, box-shadow .5s; }
+.finish.done { border-color: var(--gold); box-shadow: inset 0 0 0 3px var(--paper-2), inset 0 0 0 4px var(--gold-soft); }
+.laurel { position: relative; display: block; width: 64px; height: 64px; margin: -6px auto 4px; }
+.laurel svg { position: absolute; inset: 0; fill: var(--gold); }
+.laurel b { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--latin); font-size: 25px; font-weight: 600; color: var(--gold-ink); margin: 0; letter-spacing: 0; }
+.flakes { position: absolute; left: 50%; top: 30px; width: 0; height: 0; pointer-events: none; z-index: 2; }
+.flakes i { position: absolute; left: -4px; top: -4px; width: 8px; height: 8px; background: linear-gradient(135deg, #F6E3A1, var(--gold) 55%, #7C5E22);
+  animation: flake 1.5s var(--d, 0ms) cubic-bezier(.12,.7,.3,1) both; }
+.flakes i:nth-child(3n) { width: 5px; height: 5px; border-radius: 50%; }
+.flakes i:nth-child(4n) { width: 10px; height: 4px; }
+@keyframes flake {
+  0% { transform: translate(0, 0) rotate(0) scale(var(--s)); opacity: 0; }
+  8% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: translate(var(--x), calc(var(--y) + 70px)) rotate(var(--r)) scale(var(--s)); opacity: 0; }
+}
+
+/* The perio cards: a card that turns over, and can be thrown right (remembered) or left (forgotten). */
+.dots { display: flex; gap: 8px; justify-content: center; margin: 4px 0 8px; }
+.dots i { width: 7px; height: 7px; border: 1px solid var(--gold); transform: rotate(45deg); transition: background .3s; }
+.dots i.done { background: var(--gold); }
+.dots i.now { background: var(--gold-soft); }
+.card3d { position: relative; perspective: 1400px; touch-action: pan-y; cursor: pointer; user-select: none; -webkit-user-select: none; }
+.flip { display: grid; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.2,.75,.15,1); }
+.flip.on { transform: rotateY(180deg); }
+.face { grid-area: 1 / 1; min-height: 240px; padding: 26px 22px 22px; display: flex; flex-direction: column; justify-content: center; gap: 12px;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden; border: 1px solid var(--gold); background: var(--paper-2); box-shadow: var(--shadow); position: relative; }
+.face::before { content: ""; position: absolute; inset: 5px; border: 1px solid var(--gold-soft); pointer-events: none; }
+.face::after { content: ""; position: absolute; left: 50%; top: -5px; width: 9px; height: 9px; background: var(--gold); transform: translateX(-50%) rotate(45deg); }
+.face.back { transform: rotateY(180deg); background: linear-gradient(160deg, var(--paper-2), color-mix(in srgb, var(--gold) 12%, var(--paper-2))); }
+.face .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .2em; color: var(--gold-ink); font-weight: 600; }
+.face .q { font-size: 1.14em; line-height: 1.75; font-weight: 700; margin: 0; }
+.face.back p { margin: 0; line-height: 1.85; }
+.face .flip-btn { align-self: flex-start; background: none; border: 0; border-bottom: 1px solid var(--gold-soft); padding: 2px 0; font-family: var(--sans); font-size: 13px; color: var(--muted); cursor: pointer; }
+.face.back a { font-family: var(--sans); font-size: 13px; align-self: flex-start; }
+.stampmark { position: absolute; top: 18px; z-index: 3; font-family: var(--sans); font-weight: 700; font-size: 15px; letter-spacing: .3em; padding: 5px 8px 5px 12px; border: 2px solid; pointer-events: none; }
+.stampmark.ok { left: 18px; color: var(--gold-ink); transform: rotate(-12deg); opacity: var(--ok, 0); }
+.stampmark.no { right: 18px; color: var(--wine); transform: rotate(12deg); opacity: var(--no, 0); }
+.swipe-hint { font-family: var(--sans); font-size: 12px; color: var(--muted); text-align: center; margin: 10px 0 0; }
+
+/* Small things that answer a tap. */
+.btn { transition: transform .12s, background .2s, color .2s; }
+.btn:active { transform: scale(.97); }
+.lead, .item { transition: background .25s; }
+.lead:active, .item:active { background: color-mix(in srgb, var(--gold) 7%, transparent); }
+.cards-cta { transition: transform .2s, box-shadow .3s; }
+.cards-cta:active { transform: scale(.99); }
+.nav a svg { transition: transform .3s cubic-bezier(.2,.8,.2,1), color .3s; }
+.nav a[aria-current="page"] svg { transform: translateY(-1px) scale(1.06); }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Cards rise into place as they come into view. */
+  .rv { opacity: 0; transform: translateY(16px); }
+  .rv.in { opacity: 1; transform: none; transition: opacity .6s var(--d, 0ms) ease, transform .75s var(--d, 0ms) cubic-bezier(.2,.75,.2,1); }
+  .digest.rv { transform: none; }
+
+  /* The first look at a new issue: gold foil runs across the title, the emblem draws its frame, the checker bands slide in. */
+  .masthead.intro h1 { background: linear-gradient(105deg, var(--ink) 0 40%, var(--gold) 46%, #FFF3CF 50%, var(--gold) 54%, var(--ink) 60% 100%) 100% 0 / 280% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil 1.9s .45s cubic-bezier(.35,.1,.25,1) both; }
+  @keyframes foil { from { background-position: 100% 0; } to { background-position: 0 0; } }
+  .masthead.intro .emblem { animation: emblem-in 1s .05s cubic-bezier(.2,1.3,.4,1) both; }
+  .masthead.intro .emblem .e-frame { stroke-dasharray: 1; animation: draw 1.2s .2s ease-out both; }
+  @keyframes emblem-in { from { opacity: 0; transform: scale(.6) rotate(-10deg); } to { opacity: 1; transform: none; } }
+  @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+  .masthead.intro .checker { animation: band .9s .15s cubic-bezier(.2,.7,.2,1) both; }
+  .masthead.intro .checker ~ .checker { animation-name: band-r; }
+  @keyframes band { from { transform: translateX(-40%); opacity: 0; } to { transform: none; opacity: .9; } }
+  @keyframes band-r { from { transform: translateX(40%); opacity: 0; } to { transform: none; opacity: .9; } }
+  .masthead.intro :is(.topline, .latin, .dateline, .epigraph) { animation: page-in .8s both; }
+  .masthead.intro .latin { animation-delay: .9s; }
+  .masthead.intro .dateline { animation-delay: 1.05s; }
+  .masthead.intro .epigraph { animation-delay: 1.2s; }
+
+  /* The seal is stamped in when you reach the end. */
+  .finish.stamp :is(.tick, .laurel) { animation: stamp .6s cubic-bezier(.2,1.5,.4,1) both; }
+  @keyframes stamp { from { transform: scale(2.4) rotate(-24deg); opacity: 0; } to { transform: none; opacity: 1; } }
+
+  .icon-btn.pop svg { animation: pop .45s cubic-bezier(.2,1.6,.4,1); }
+  @keyframes pop { 40% { transform: scale(1.35); } }
+  .loading { background: linear-gradient(100deg, var(--muted) 40%, var(--gold) 50%, var(--muted) 60%) 100% 0 / 300% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil 1.6s linear infinite; }
+
+  /* Page changes: a short cross-fade; a card's picture grows into the article's opening picture. */
+  ::view-transition-old(root) { animation: vt-out .2s ease both; }
+  ::view-transition-new(root) { animation: vt-in .32s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes vt-out { to { opacity: 0; } }
+  @keyframes vt-in { from { opacity: 0; transform: translateY(10px); } }
+  ::view-transition-group(hero) { animation-duration: .5s; animation-timing-function: cubic-bezier(.2,.75,.2,1); }
+  ::view-transition-old(hero), ::view-transition-new(hero) { height: 100%; object-fit: cover; overflow: clip; }
+  .nav { view-transition-name: nav; }
+  .dock:not([hidden]) { view-transition-name: dock; }
+  .toast { view-transition-name: toast; }
+  ::view-transition-group(dock), ::view-transition-group(toast) { animation: none; }
+  /* Switching day and night: the new look spreads out in a circle from the button. */
+  html.theme-vt :is(.nav, .dock, .toast) { view-transition-name: none; }
+  html.theme-vt #main > * { animation: none; }
+  html.theme-vt::view-transition-old(root), html.theme-vt::view-transition-new(root) { mix-blend-mode: normal; }
+  html.theme-vt::view-transition-old(root) { animation: none; z-index: 0; }
+  html.theme-vt::view-transition-new(root) { animation: theme-in .65s cubic-bezier(.4,0,.2,1) both; z-index: 1; }
+  @keyframes theme-in { from { clip-path: circle(0 at var(--vx, 50%) var(--vy, 50%)); } to { clip-path: circle(150vmax at var(--vx, 50%) var(--vy, 50%)); } }
+}
+@media print { .rv { opacity: 1 !important; transform: none !important; } .digest { position: static; } }

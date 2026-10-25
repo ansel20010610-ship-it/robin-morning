@@ -6,6 +6,7 @@ import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasCl
 import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 import { renderPush, clearNotices } from "./notify.js";
+import { calm, reveal, transition, celebrate, laurel, digestRing, swipeCard } from "./motion.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -30,11 +31,16 @@ const publishedIssues = () => (S.index.issues || []).filter((i) => isPublished(i
 const issueBy = (date) => (S.index.issues || []).find((i) => i.date === date);
 const col = (c) => S.cfg.columns[c] || { name: c, group: "supplement" };
 
+// The copy in memory is the current one (opening it needs no network).
+function isFresh(date, column) {
+  const have = S.articles.get(`${date}/${column}`);
+  const want = issueBy(date)?.articles.find((x) => x.column === column)?.updated_at;
+  return Boolean(have && (!want || have.updated_at === want));
+}
 async function article(date, column) {
   const k = `${date}/${column}`;
   const have = S.articles.get(k);
-  const want = issueBy(date)?.articles.find((x) => x.column === column)?.updated_at;
-  if (have && (!want || have.updated_at === want)) return have;
+  if (isFresh(date, column)) return have;
   try {
     const a = await getJSON(`content/issues/${date}/${column}.json`, { fresh: Boolean(have) });
     S.articles.set(k, a);
@@ -101,7 +107,7 @@ function itemCard(date, a, read) {
 }
 
 const EMBLEM = `<svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
-  <rect x="3" y="3" width="58" height="58" class="e-frame" stroke-width="1.4"/><rect x="6" y="6" width="52" height="52" class="e-frame" stroke-width=".6"/>
+  <rect x="3" y="3" width="58" height="58" class="e-frame" stroke-width="1.4" pathLength="1"/><rect x="6" y="6" width="52" height="52" class="e-frame" stroke-width=".6" pathLength="1"/>
   <g class="e-gold"><rect x="1" y="1" width="4" height="4"/><rect x="59" y="1" width="4" height="4"/><rect x="1" y="59" width="4" height="4"/><rect x="59" y="59" width="4" height="4"/></g>
   <path class="e-ink" d="M44.5 37.5 L55 30.5 L56.5 34 L46.5 41.5 Z"/><ellipse class="e-ink" cx="33" cy="37" rx="15" ry="11.5" transform="rotate(-18 33 37)"/><circle class="e-ink" cx="23" cy="25.5" r="8"/>
   <path class="e-robin" d="M17.2 19.6 C14.2 24.5 15.5 37 29.5 45.6 C25.2 40.5 24.2 34.5 26.6 29.2 C25.4 24.6 22.4 20.6 17.2 19.6 Z"/>
@@ -109,9 +115,9 @@ const EMBLEM = `<svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
   <path class="e-wing" d="M31 33 C36 31 42 32.5 45 36.5" stroke-width="1" stroke-linecap="round"/>
   <path class="e-legs" d="M30.5 47 L29.5 52.5 M36 46 L36 52.5 M15 53 L50 53" stroke-width="1.3" stroke-linecap="round"/></svg>`;
 
-function masthead(issue) {
+function masthead(issue, intro = false) {
   const date = issue?.date || twNow().date;
-  return `<header class="masthead"><div class="wrap">
+  return `<header class="masthead${intro ? " intro" : ""}"><div class="wrap">
     <hr class="rule-double">
     <div class="topline"><span>Wien · Taipei</span><span>${issue ? `No. ${issue.no}` : ""}</span><span>${esc(fmtDate(date, "de").split(",")[0])}</span></div>
     <div class="checker" aria-hidden="true"></div>
@@ -161,18 +167,21 @@ function viewFront(dateParam) {
   const supps = arts.filter((a) => col(a.column).group === "supplement");
   const watch = arts.filter((a) => col(a.column).group === "watch");
   const lead = mains[0];
-  main.innerHTML = `${masthead(issue)}
+  // The first look at a new issue gets the gold-foil masthead; later visits the plain one.
+  const intro = !dateParam && store.get("intro") !== issue.date;
+  if (intro) store.set("intro", issue.date);
+  main.innerHTML = `${masthead(issue, intro)}
   <div class="wrap">
     ${status ? `<div class="status">${status}</div>` : ""}
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的第 ${issue.no} 期・<a href="#/">回到最新一期</a></div>` : ""}
-    ${digestBar(arts, !dateParam)}
+    ${digestBar(arts, !dateParam, digestDone().has(issue.date))}
     ${mains.length ? `<div class="sec-head"><h2>正刊</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
     ${lead ? `<a class="lead" href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
     ${mains.slice(1).map((a) => itemCard(issue.date, a, read)).join("")}
     ${supps.length ? `<div class="sec-head"><h2>副刊</h2><span class="de">Feuilleton</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
     ${watch.length ? `<div class="sec-head"><h2>觀測站</h2><span class="de">Beobachtung</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
-    ${arts.some((a) => a.brief) ? `<div class="finish${digestDone().has(issue.date) ? " done" : ""}"><span class="tick" aria-hidden="true">✓</span><b>讀完了，今天你贏了</b><span>${esc(finishNote(issue.date))}</span></div>` : ""}
+    ${arts.some((a) => a.brief) ? `<div class="finish${digestDone().has(issue.date) ? " done" : ""}">${finishInner(issue.date)}</div>` : ""}
     ${dateParam ? "" : cardsPrompt()}
     ${!dateParam && issue.weekday === "日" ? weekHtml() : ""}
     <footer class="colophon">
@@ -189,37 +198,62 @@ function viewFront(dateParam) {
 const DIGEST_READ = ".lead h3, .lead p.brief, .item h3, .item p.brief";
 const digestDone = () => new Set(store.get("digest.done", []));
 let digestReader = null, finishSeen = null;
-function digestBar(arts, latest) {
+function digestBar(arts, latest, done) {
   const n = arts.reduce((s, a) => s + (a.brief ? a.brief.length : 0), 0);
   if (!n) return "";
-  const listen = canSpeak() ? `<button type="button" class="btn ghost" data-digest>${ICON.speak}<span>聽今日摘要</span></button>` : "";
+  const k = arts.filter((a) => a.brief).length;
+  const listen = canSpeak() ? `<button type="button" class="btn ghost" data-digest aria-label="聽今日摘要">${ICON.speak}<span>聽摘要</span></button>` : "";
   const run = latest ? streak() : null;
-  const more = run && !run.today && run.n >= 2 ? `・讀完就連續 ${run.n + 1} 天` : "";
-  return `<div class="digest"><div><b>今日摘要</b><span>一篇三句話，${Math.max(1, Math.round(n / 330))} 分鐘就能交差${more}</span></div>${listen}</div>`;
+  const more = run && !run.today && run.n >= 2 ? `<em class="streak">讀完就連續 ${run.n + 1} 天</em>` : "";
+  const ring = `<span class="ring-wrap"><svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="track" cx="18" cy="18" r="15.5"/><circle class="bar" cx="18" cy="18" r="15.5" pathLength="100"/></svg><span class="cnt">${done ? k : 0}/${k}</span></span>`;
+  return `<div class="digest${done ? " done full" : ""}">${ring}<div><b>今日摘要${more}</b><span>一篇三句話，${Math.max(1, Math.round(n / 330))} 分鐘交差</span></div>${listen}</div>`;
 }
 function wireDigest(issue) {
   digestReader?.stop(); digestReader = null; finishSeen?.disconnect(); finishSeen = null;
   const btn = main.querySelector("[data-digest]");
   if (btn) btn.onclick = () => {
     digestReader ||= createReader(main, { selector: DIGEST_READ, onState: (st) => {
-      btn.innerHTML = st === "playing" ? `${ICON.pause}<span>暫停</span>` : `${ICON.speak}<span>${st === "paused" ? "繼續聽" : "聽今日摘要"}</span>`;
-      if (st === "done") markDigestDone(issue.date);
+      btn.innerHTML = st === "playing" ? `${ICON.pause}<span>暫停</span>` : `${ICON.speak}<span>${st === "paused" ? "繼續聽" : "聽摘要"}</span>`;
+      if (st === "done") finish();
     } });
     if (!digestReader.length) { toast("這期還沒有摘要，等等再來"); return; }
     digestReader.toggle();
   };
   const fin = main.querySelector(".finish");
+  // Reaching the end the first time today stamps the seal; coming back to a finished issue just shows it.
+  const was = digestDone().has(issue.date);
+  const ring = digestRing(main);
+  let finished = false;
+  function finish() {
+    if (finished) return;
+    finished = true;
+    finishSeen?.disconnect();
+    markDigestDone(issue.date);
+    ring.complete();
+    main.querySelector(".digest")?.classList.add("done", "full");
+    main.querySelector(".digest .streak")?.remove();
+    if (!fin || fin.classList.contains("done")) return;
+    fin.classList.add("done");
+    if (!was) celebrate(fin);
+  }
   if (fin && "IntersectionObserver" in window) {
-    finishSeen = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { markDigestDone(issue.date); fin.classList.add("done"); } }, { threshold: 0.8 });
+    finishSeen = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) finish(); }, { threshold: 0.8 });
     finishSeen.observe(fin);
   }
-  cleanup = () => { digestReader?.stop(); digestReader = null; finishSeen?.disconnect(); finishSeen = null; };
+  cleanup = () => { digestReader?.stop(); digestReader = null; finishSeen?.disconnect(); finishSeen = null; ring.stop(); };
 }
 function markDigestDone(date) {
   const done = store.get("digest.done", []);
-  if (!done.includes(date)) { done.push(date); store.set("digest.done", done.slice(-400)); }
-  const note = main.querySelector(".finish span:last-child");
-  if (note) note.textContent = finishNote(date);
+  if (done.includes(date)) return;
+  done.push(date);
+  store.set("digest.done", done.slice(-400));
+  const fin = main.querySelector(".finish");
+  if (fin) fin.innerHTML = finishInner(date);
+}
+function finishInner(date) {
+  const run = date === publishedIssues()[0]?.date ? streak() : null;
+  const seal = run?.today && run.n >= 2 ? laurel(run.n) : `<span class="tick" aria-hidden="true">✓</span>`;
+  return `${seal}<b>讀完了，今天你贏了</b><span class="note">${esc(finishNote(date))}</span>`;
 }
 
 // ——— Keeping what you read: the streak, the week's seven, the perio cards ———
@@ -286,21 +320,38 @@ function viewCards() {
   const page = (inner) => { main.innerHTML = `<div class="wrap"><header class="page-title"><h1>牙周小卡</h1><span class="de">Karteikarten</span></header>${inner}</div>`; };
   const end = () => {
     const more = dueCards().length;
-    page(`<div class="finish done"><span class="tick" aria-hidden="true">✓</span><b>${total ? "刷完了" : "今天的卡刷完了"}</b><span>${total ? `記得 ${ok} 張、忘了 ${total - ok} 張。忘了的明天再考你。` : "明天再來，忘掉之前會再考你。"}</span></div>
+    page(`<div class="finish done"><span class="tick" aria-hidden="true">✓</span><b>${total ? "刷完了" : "今天的卡刷完了"}</b><span class="note">${total ? `記得 ${ok} 張、忘了 ${total - ok} 張。忘了的明天再考你。` : "明天再來，忘掉之前會再考你。"}</span></div>
       <div class="btns cards-end">${more ? `<button class="btn ghost" data-more>再來 ${Math.min(more, PER_DAY)} 張</button>` : ""}<a class="btn" href="#/">回到今日</a></div>`);
     main.querySelector("[data-more]")?.addEventListener("click", () => { queue = dueCards().slice(0, PER_DAY); i = 0; ok = 0; total = queue.length; show(); });
+    if (total) celebrate(main.querySelector(".finish"));
   };
   const show = () => {
     if (i >= queue.length) return end();
     const { date, a } = queue[i];
-    page(`<p class="cards-pos">第 ${i + 1}／${queue.length} 張・${esc(fmtDate(date, "short"))}那篇</p>
-      <div class="card"><p class="q">${esc(a.quiz || `「${a.title}」帶走的結論是什麼？`)}</p>
-        <button class="btn" type="button" data-flip>想好了，翻面</button>
-        <div class="a" hidden><p>${esc(a.takeaway)}</p><a href="#/a/${date}/perio">回去看那篇</a>
-          <div class="btns"><button class="btn" type="button" data-ok>記得</button><button class="btn ghost" type="button" data-no>忘了</button></div></div></div>`);
-    main.querySelector("[data-flip]").onclick = (e) => { e.currentTarget.remove(); const back = main.querySelector(".card .a"); back.hidden = false; back.querySelector("[data-ok]").focus(); };
-    main.querySelector("[data-ok]").onclick = () => { grade(date, true); ok++; i++; show(); };
-    main.querySelector("[data-no]").onclick = () => { grade(date, false); i++; show(); };
+    page(`<div class="dots" aria-hidden="true">${queue.map((_, k) => `<i class="${k < i ? "done" : k === i ? "now" : ""}"></i>`).join("")}</div>
+      <p class="cards-pos">第 ${i + 1}／${queue.length} 張・${esc(fmtDate(date, "short"))}那篇</p>
+      <div class="card3d" role="group" aria-label="第 ${i + 1}／${queue.length} 張小卡">
+        <div class="flip">
+          <div class="face front"><span class="lbl">學長考你</span><p class="q">${esc(a.quiz || `「${a.title}」帶走的結論是什麼？`)}</p><button type="button" class="flip-btn">想好了，翻面看答案</button></div>
+          <div class="face back"><span class="lbl">帶得走的結論</span><p>${esc(a.takeaway)}</p><a href="#/a/${date}/perio">回去看那篇</a></div>
+        </div>
+        <span class="stampmark ok" aria-hidden="true">記得</span><span class="stampmark no" aria-hidden="true">忘了</span>
+      </div>
+      <div class="btns grade" hidden><button class="btn" type="button" data-ok>記得</button><button class="btn ghost" type="button" data-no>忘了</button></div>
+      <p class="swipe-hint" hidden>也可以直接滑：往右是記得，往左是忘了</p>`);
+    const card = main.querySelector(".card3d");
+    let flipped = false;
+    const next = (remembered) => { grade(date, remembered); if (remembered) ok++; i++; show(); };
+    card.addEventListener("flipped", (e) => {
+      flipped = e.detail;
+      main.querySelector(".grade").hidden = !flipped;
+      main.querySelector(".swipe-hint").hidden = !flipped;
+      if (flipped) main.querySelector("[data-ok]").focus({ preventScroll: true });
+    });
+    swipeCard(card, { canSwipe: () => flipped, onGrade: next });
+    main.querySelector("[data-ok]").onclick = () => next(true);
+    main.querySelector("[data-no]").onclick = () => next(false);
+    card.querySelector(".flip-btn").focus({ preventScroll: true });
   };
   show();
 }
@@ -387,6 +438,9 @@ async function viewArticle(date, column, my) {
     const on = toggleSaved(key);
     e.currentTarget.setAttribute("aria-pressed", on);
     e.currentTarget.innerHTML = on ? ICON.starOn : ICON.star;
+    e.currentTarget.classList.remove("pop");
+    void e.currentTarget.offsetWidth;
+    e.currentTarget.classList.toggle("pop", on);
     toast(on ? "已收藏" : "已取消收藏");
   };
   main.querySelector("[data-fs]").onclick = cycleFont;
@@ -665,9 +719,17 @@ function viewSettings() {
   }));
   main.querySelectorAll('[data-g="theme"] button').forEach((b) => (b.onclick = () => {
     const v = b.dataset.v;
-    try { v === "auto" ? localStorage.removeItem("rm.theme") : localStorage.setItem("rm.theme", v); } catch { /* ignore */ }
-    if (v === "auto") delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = v;
-    redraw("theme", v);
+    const swap = () => {
+      try { v === "auto" ? localStorage.removeItem("rm.theme") : localStorage.setItem("rm.theme", v); } catch { /* ignore */ }
+      if (v === "auto") delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = v;
+      redraw("theme", v);
+    };
+    if (calm() || !document.startViewTransition) { swap(); return; }
+    const r = b.getBoundingClientRect(), root = document.documentElement;
+    root.style.setProperty("--vx", `${r.left + r.width / 2}px`);
+    root.style.setProperty("--vy", `${r.top + r.height / 2}px`);
+    root.classList.add("theme-vt");
+    document.startViewTransition(swap).finished.catch(() => {}).finally(() => root.classList.remove("theme-vt"));
   }));
   main.querySelectorAll('[data-g="rate"] button').forEach((b) => (b.onclick = () => { setRate(Number(b.dataset.v)); redraw("rate", b.dataset.v); }));
   // Redraw only while the settings page is still the one showing.
@@ -704,6 +766,8 @@ function viewSettings() {
 // ——— Router ———
 const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/saved", "收藏", "saved"], ["#/music", "音樂", "music"], ["#/settings", "設定", "settings"]];
 let cleanup = () => {};
+let stopReveal = () => {};
+let lastTapped = null, shownArticle = null; // the card picture just tapped, and the article on screen (for the picture morph)
 let routeSeq = 0; // bumped on every route; an older route still loading must not draw over a newer one
 
 async function route(ev) {
@@ -711,10 +775,36 @@ async function route(ev) {
   cleanup(); cleanup = () => {};
   document.title = S.cfg.title;
   const h = location.hash || "#/";
-  let m;
   const active = h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/week") || h.startsWith("#/cards") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
   $("#nav").innerHTML = NAV.map(([href, label, icon]) => `<a href="${href}" ${href === active ? 'aria-current="page"' : ""}>${ICON[icon]}<span>${label}</span></a>`).join("");
-  if ((m = h.match(/^#\/a\/(\d{4}-\d{2}-\d{2})\/([\w-]+)/))) await viewArticle(m[1], m[2], my);
+  $(".nav .in")?.style.setProperty("--i", NAV.findIndex(([href]) => href === active));
+  stopReveal();
+  const art = h.match(/^#\/a\/(\d{4}-\d{2}-\d{2})\/([\w-]+)/);
+  const prev = shownArticle;
+  shownArticle = art ? `${art[1]}/${art[2]}` : null;
+  // Into an article already loaded: the tapped card's picture grows into its opening picture. Back out: the reverse.
+  // An article still to be fetched opens without a transition (the page would freeze while it loads).
+  const hero = () => main.querySelector("figure.hero img");
+  let morph = null;
+  if (ev && art && isFresh(art[1], art[2])) morph = { from: lastTapped, to: hero };
+  else if (ev && !art && prev) morph = { from: hero(), to: () => main.querySelector(`a[href="#/a/${prev}"] img`) };
+  else if (ev && !art) morph = {};
+  lastTapped = null;
+  const draw = async () => {
+    await drawRoute(h, art, my);
+    if (my === routeSeq) window.scrollTo(0, 0);
+  };
+  if (morph) await transition(draw, morph); else await draw();
+  if (my !== routeSeq) return;
+  stopReveal = reveal(main);
+  // After a navigation (not on first load) start keyboard and screen-reader users at the new view.
+  if (ev) main.focus({ preventScroll: true });
+}
+
+// The view for the address: an article (`art`), or one of the pages.
+async function drawRoute(h, art, my) {
+  let m;
+  if (art) await viewArticle(art[1], art[2], my);
   else if ((m = h.match(/^#\/issue\/(\d{4}-\d{2}-\d{2})/))) viewFront(m[1]);
   else if ((m = h.match(/^#\/column\/([\w-]+)/))) viewColumn(m[1]);
   else if (h.startsWith("#/archive")) viewArchive();
@@ -724,10 +814,6 @@ async function route(ev) {
   else if (h.startsWith("#/music")) viewMusic();
   else if (h.startsWith("#/settings")) viewSettings();
   else viewFront();
-  if (my !== routeSeq) return;
-  window.scrollTo(0, 0);
-  // After a navigation (not on first load) start keyboard and screen-reader users at the new view.
-  if (ev) main.focus({ preventScroll: true });
 }
 
 // ——— Updates ———
@@ -757,6 +843,7 @@ async function boot() {
   const back = await handleCallback();
   if (back) location.hash = back;
   window.addEventListener("hashchange", route);
+  main.addEventListener("click", (e) => { lastTapped = e.target.closest("a.lead, a.item")?.querySelector("img") || null; }, true);
   try { await route(); } catch (e) { console.warn("route failed", e); }
   runAutoAdd();
   // While the front page stays open: keep the countdown and the day change current, flip to the new issue at 07:30,
