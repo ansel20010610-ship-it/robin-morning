@@ -6,7 +6,7 @@ import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasCl
 import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 import { renderPush, clearNotices } from "./notify.js";
-import { calm, reveal, transition, celebrate, laurel, digestRing, swipeCard } from "./motion.js";
+import { calm, reveal, transition, celebrate, laurel, digestRing, swipeCard, mastheadShow, ripples } from "./motion.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -121,7 +121,7 @@ function masthead(issue) {
     <hr class="rule-double">
     <div class="topline"><span>Wien · Taipei</span><span>${issue ? `No. ${issue.no}` : ""}</span><span>${esc(fmtDate(date, "de").split(",")[0])}</span></div>
     <div class="checker" aria-hidden="true"></div>
-    ${EMBLEM}
+    <div class="crest">${EMBLEM}<i class="burst" aria-hidden="true"></i><i class="wave" aria-hidden="true"></i><i class="wave w2" aria-hidden="true"></i></div>
     <h1>${esc(S.cfg.title)}</h1>
     <div class="latin">${esc(S.cfg.subtitle)}</div>
     <div class="dateline">${esc(fmtDate(date))}${issue ? `・第 ${issue.no} 期` : ""}・${esc(S.cfg.publish_time)} 出刊</div>
@@ -189,6 +189,7 @@ function viewFront(dateParam) {
   </div>`;
   prefetch(issue);
   wireDigest(issue);
+  mastheadShow(main.querySelector(".masthead"));
 }
 
 // ——— The digest: read the briefs (or hear them), reach the end, done for the day ———
@@ -841,6 +842,7 @@ async function boot() {
   if (back) location.hash = back;
   window.addEventListener("hashchange", route);
   main.addEventListener("click", (e) => { lastTapped = e.target.closest("a.lead, a.item")?.querySelector("img") || null; }, true);
+  ripples();
   try { await route(); } catch (e) { console.warn("route failed", e); }
   runAutoAdd();
   // While the front page stays open: keep the countdown and the day change current, flip to the new issue at 07:30,
