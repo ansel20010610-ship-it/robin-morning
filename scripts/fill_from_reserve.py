@@ -50,7 +50,7 @@ def candidates(col):
             art = load_json(p)
         except Exception:  # noqa: BLE001
             continue
-        if not isinstance(art, dict):
+        if not isinstance(art, dict) or art.get("hold"):  # a reserve on hold (review notes not yet applied) never runs
             continue
         w = art.get("reserve_written")
         out.append((w if isinstance(w, str) and w else "9999", os.path.basename(p), p))
