@@ -2,7 +2,7 @@
   "article": "content/reserve/perio/doi-10-1902-jop-1978-49-5-225.json",
   "reviewed": "2026-10-17",
   "why_on_hold": "依新版牙周規格改寫後，審稿提出的意見尚未修正（修正時碰到每週額度上限）。",
-  "how_to_release": "逐條核實下列意見（必要時用 columns/perio.md 的公開 API），成立就改；改完刪掉文章的 hold 欄位，跑 validate.py --reserve --column perio --check-urls。",
+  "how_to_release": "逐條核實下列意見（必要時用 columns/perio.md 的公開 API），成立就改；改完刪掉文章的 hold 欄位，跑 validate.py --reserve --column perio --check-urls。 另外，牙周欄規格已於 2026-10-25 再改版：依新版 columns/perio.md 改寫成 600–1,000 字，加上「今天的基本觀念」段、論文卡移到最後。",
   "problems": [
     {
       "issue": "(1)(4)(7) takeaway 與 brief 把「去留要看病人的病程」寫成這篇論文的結論，brief 還把它放在「作者認為」底下。論文的三型病人是在 22 年後依實際掉了幾顆牙事後切分的，論文沒有檢驗「看過去的病程」能不能預測某顆牙之後會不會掉。正文自己在限制裡也寫了「三型是依結果事後切分，也不能直接拿來在初診時替病人分類」，同一個建議在正文中是放在標了「本文讀法」的段落。",

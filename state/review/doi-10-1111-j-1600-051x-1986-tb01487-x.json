@@ -2,7 +2,7 @@
   "article": "content/reserve/perio/doi-10-1111-j-1600-051x-1986-tb01487-x.json",
   "reviewed": "2026-10-17",
   "why_on_hold": "依新版牙周規格改寫後，審稿提出的意見尚未修正（修正時碰到每週額度上限）。",
-  "how_to_release": "逐條核實下列意見（必要時用 columns/perio.md 的公開 API），成立就改；改完刪掉文章的 hold 欄位，跑 validate.py --reserve --column perio --check-urls。",
+  "how_to_release": "逐條核實下列意見（必要時用 columns/perio.md 的公開 API），成立就改；改完刪掉文章的 hold 欄位，跑 validate.py --reserve --column perio --check-urls。 另外，牙周欄規格已於 2026-10-25 再改版：依新版 columns/perio.md 改寫成 600–1,000 字，加上「今天的基本觀念」段、論文卡移到最後。",
   "problems": [
     {
       "issue": "第一段與 brief 把「牙菌斑多寡不能拿來預估一個人的病程」寫成這篇論文的意義。這超出論文能證明的範圍，也和本稿自己的限制第 3 點、同一族群的後續研究矛盾。",
