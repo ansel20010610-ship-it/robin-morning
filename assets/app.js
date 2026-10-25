@@ -854,19 +854,28 @@ async function boot() {
     if (issue === shownFront[0] && status && shownFront[1] && line) { line.innerHTML = status; shownFront[1] = status; }
     else viewFront();
   };
-  let fetchedAt = Date.now();
-  const refetch = async () => {
+  let fetchedAt = Date.now(), hiddenAt = 0;
+  const loadIndex = async () => {
     try { S.index = await getJSON("content/index.json", { fresh: true }); fetchedAt = Date.now(); } catch { /* offline: still redraw the clock */ }
+  };
+  const refetch = async () => {
+    await loadIndex();
     refreshFront();
     runAutoAdd();
   };
   setInterval(refreshFront, 60 * 1000);
   setInterval(refetch, 5 * 60 * 1000);
   // Back in front (often from the 07:30 notice): articles a reserve fill added just before 07:30 are in a newer index.
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) return;
+  // iOS keeps a home-screen app's page alive in the background, so opening it again shows the page as it was left;
+  // back on the front page after a while, still near the top, it is drawn afresh so the masthead and the cards play again.
+  document.addEventListener("visibilitychange", async () => {
+    if (document.hidden) { hiddenAt = Date.now(); return; }
     clearNotices();
-    if (Date.now() - fetchedAt > 60 * 1000) refetch(); else refreshFront();
+    const replay = hiddenAt && Date.now() - hiddenAt > 30 * 1000 && (location.hash || "#/") === "#/" && scrollY < 400;
+    const stale = Date.now() - fetchedAt > 60 * 1000;
+    if (stale) await loadIndex();
+    if (replay) route(); else refreshFront();
+    if (stale) runAutoAdd();
   });
   clearNotices();
   // A tapped notice while the app is open (sw.js notificationclick): go where it points.
