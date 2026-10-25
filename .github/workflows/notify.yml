@@ -1,0 +1,90 @@
+name: Issue notification
+
+# 07:30 Taiwan time: tell the reader's phone that today's issue is out (Web Push through the phone's own push
+# service; no AI, no paid service). See scripts/push.py. GitHub may start a scheduled run late or drop it, hence two
+# schedules: each waits for 07:30 and for the live site, and the later one stops if the earlier one already sent.
+# Adding a device to state/push/devices.json sends that device a test notification.
+on:
+  schedule:
+    - cron: "50 22 * * *"   # 06:50 Taiwan
+    - cron: "12 23 * * *"   # 07:12 Taiwan
+  push:
+    branches: [main]
+    paths: ["state/push/devices.json"]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "test = 測試通知；issue = 立刻發今天的出刊通知"
+        type: choice
+        options: [test, issue]
+        default: test
+
+permissions:
+  contents: write
+  actions: write
+
+# GitHub keeps one pending run per group and cancels an older pending one: only the two schedules share a group,
+# so a test run can never cancel the backup schedule (or the other way round).
+concurrency:
+  group: notify-${{ github.event_name == 'schedule' && 'issue' || 'adhoc' }}
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    steps:
+      - uses: actions/checkout@v7
+      - name: Already sent today?
+        id: dedup
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          SINCE=$(date -u -d "$(TZ=Asia/Taipei date +%F) 00:00 +0800" +%FT%TZ)
+          # if the query itself fails, send anyway: a rare duplicate (same tag, so it replaces the first) beats silence
+          N=$(gh run list --workflow notify.yml --event schedule --status success --created ">=$SINCE" \
+                --json databaseId --jq '[.[] | select(.databaseId != ${{ github.run_id }})] | length') || N=0
+          case "$N" in ''|*[!0-9]*) N=0 ;; esac
+          echo "earlier successful runs today: $N"
+          if [ "$N" -gt 0 ]; then echo "sent=yes" >> "$GITHUB_OUTPUT"; fi
+      - name: Install pywebpush
+        if: steps.dedup.outputs.sent != 'yes'
+        run: python3 -m venv /tmp/push && /tmp/push/bin/pip install -q pywebpush==2.1.2
+      - name: Send
+        if: steps.dedup.outputs.sent != 'yes'
+        env:
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+        run: |
+          case "${{ github.event_name }}" in
+            schedule) /tmp/push/bin/python scripts/push.py issue ;;
+            push)
+              BEFORE="${{ github.event.before }}"
+              git fetch -q --depth=1 origin "$BEFORE" || true
+              /tmp/push/bin/python scripts/push.py test --new-since "$BEFORE" ;;
+            *)
+              if [ "${{ inputs.mode }}" = issue ]; then /tmp/push/bin/python scripts/push.py issue --now
+              else /tmp/push/bin/python scripts/push.py test; fi ;;
+          esac
+      - name: Drop devices that no longer take notifications
+        if: always() && steps.dedup.outputs.sent != 'yes'
+        # the run's success must mean "sent" (the next schedule's dedup counts on it), so a failed cleanup only warns
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -z "$(git status --porcelain state/push)" ] && exit 0
+          git config user.name "robin-morning-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/push
+          git commit -m "出刊通知：移除已失效的裝置"
+          for i in 1 2 3; do
+            if git pull -q --rebase origin main && git push origin HEAD:main; then
+              # pushes made with GITHUB_TOKEN do not trigger other workflows; redeploy so the settings page shows the change
+              gh workflow run publish.yml --ref main
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::移除失效裝置的推送三次都失敗"
+          exit 1

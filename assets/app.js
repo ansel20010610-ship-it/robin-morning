@@ -4,6 +4,7 @@ import { renderBody, renderHero } from "./blocks.js";
 import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient, isWebKitITP, isStandaloneIOS, exportLinkCode, importLinkCode, defaultPlaylist } from "./spotify.js";
 import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
+import { renderPush, clearNotices } from "./notify.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -509,6 +510,7 @@ function viewSettings() {
   const rot = S.cfg.rotation_by_weekday;
   const wd = [["mon", "一"], ["tue", "二"], ["wed", "三"], ["thu", "四"], ["fri", "五"], ["sat", "六"], ["sun", "日"]];
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>設定</h1><span class="de">Einstellungen</span></header>
+    <section class="set" id="push-set"><h2>出刊通知</h2><p class="small">讀取中……</p></section>
     <section class="set"><h2>字級</h2><div class="seg" data-g="fs">${FS.map((v, i) => `<button type="button" data-v="${v}" aria-pressed="${v === fs}">${["小", "標準", "大", "特大"][i]}</button>`).join("")}</div></section>
     <section class="set"><h2>外觀</h2><div class="seg" data-g="theme">${[["auto", "跟隨系統"], ["light", "日間"], ["dark", "夜間"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${v === theme}">${l}</button>`).join("")}</div></section>
     ${canSpeak() ? `<section class="set"><h2>朗讀速度</h2><div class="seg" data-g="rate">${RATES.map((r) => `<button type="button" data-v="${r}" aria-pressed="${r === getRate()}">${r === 1 ? "標準" : `${r}×`}</button>`).join("")}</div>
@@ -535,6 +537,7 @@ function viewSettings() {
     </section>
     ${isWebKitITP() && !isStandaloneIOS() ? `<section class="set"><h2>放到主畫面</h2><p>在 Safari 按下方的「分享」按鈕，選「加入主畫面」，知更鳥晨間記事就會像 App 一樣全螢幕開啟，也能離線讀已下載的文章。</p></section>` : ""}
     <footer class="colophon"><div class="latin">${esc(S.cfg.subtitle)}</div>資料更新：${esc((S.index.generated_at || "").replace("T", " ").slice(0, 16))} UTC</footer></div>`;
+  renderPush($("#push-set"), S.cfg, S.index.push).catch(() => {});
   // Redrawing replaces the buttons; put focus back on the one just pressed.
   const redraw = (g, v) => { viewSettings(); main.querySelector(`[data-g="${g}"] [data-v="${v}"]`)?.focus(); };
   main.querySelectorAll('[data-g="fs"] button').forEach((b) => (b.onclick = () => {
@@ -629,12 +632,26 @@ async function boot() {
     if (issue === shownFront[0] && status && shownFront[1] && line) { line.innerHTML = status; shownFront[1] = status; }
     else viewFront();
   };
-  setInterval(refreshFront, 60 * 1000);
-  setInterval(async () => {
-    try { S.index = await getJSON("content/index.json", { fresh: true }); } catch { /* offline: still redraw the clock */ }
+  let fetchedAt = Date.now();
+  const refetch = async () => {
+    try { S.index = await getJSON("content/index.json", { fresh: true }); fetchedAt = Date.now(); } catch { /* offline: still redraw the clock */ }
     refreshFront();
-  }, 5 * 60 * 1000);
-  document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshFront(); });
+  };
+  setInterval(refreshFront, 60 * 1000);
+  setInterval(refetch, 5 * 60 * 1000);
+  // Back in front (often from the 07:30 notice): articles a reserve fill added just before 07:30 are in a newer index.
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) return;
+    clearNotices();
+    if (Date.now() - fetchedAt > 60 * 1000) refetch(); else refreshFront();
+  });
+  clearNotices();
+  // A tapped notice while the app is open (sw.js notificationclick): go where it points.
+  navigator.serviceWorker?.addEventListener("message", (e) => {
+    if (e.data?.type !== "open") return;
+    const h = new URL(e.data.url).hash || "#/";
+    if ((location.hash || "#/") !== h) location.hash = h; else refetch();
+  });
   if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
 }
 

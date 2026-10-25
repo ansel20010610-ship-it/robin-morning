@@ -10,7 +10,7 @@ const KEEP = [CACHE, CONTENT, IMAGES, FONTS];
 const LIMIT = { [IMAGES]: 400, [FONTS]: 400 }; // entries; the oldest go first
 const IMAGE_HOSTS = new Set(["upload.wikimedia.org", "thumb.wikimedia.org", "tile.loc.gov"]);
 const SHELL = ["index.html", "assets/style.css", "assets/app.js", "assets/util.js", "assets/blocks.js",
-  "assets/pitch.js", "assets/spotify.js", "assets/speak.js", "assets/robin.svg", "manifest.webmanifest"];
+  "assets/pitch.js", "assets/spotify.js", "assets/speak.js", "assets/notify.js", "assets/robin.svg", "manifest.webmanifest"];
 const DATA = ["content/config.json", "content/index.json"];
 const TIMEOUT = 4000; // ms to wait for the network before answering content from the cache
 const ROOT = new URL(self.registration.scope).pathname;
@@ -86,4 +86,29 @@ self.addEventListener("fetch", (e) => {
   if (e.request.mode === "navigate") { if (p === "" || p === "index.html") e.respondWith(appPage(e.request)); }
   else if (p.startsWith("content/")) e.respondWith(networkFirst(e));
   else e.respondWith(cacheFirst(e.request));
+});
+
+// 出刊通知 (scripts/push.py, sent by notify.yml at 07:30): show it and put a badge on the home-screen icon.
+// iOS stops delivering to a web app that receives a push without showing a notification, so one is always shown.
+const inScope = (p) => new URL(p || "./", self.registration.scope).href;
+self.addEventListener("push", (e) => {
+  let d = {};
+  try { d = e.data?.json() || {}; } catch { d = { body: e.data?.text() || "" }; }
+  e.waitUntil(Promise.all([
+    self.registration.showNotification(d.title || "知更鳥晨間記事", {
+      body: d.body || "", tag: d.tag || "issue", lang: "zh-Hant-TW", icon: inScope("assets/icon-192.png"), data: { url: inScope(d.url) },
+    }),
+    d.badge && navigator.setAppBadge ? navigator.setAppBadge(d.badge).catch(() => {}) : null,
+  ]));
+});
+// A tap opens the paper where the notice points: in the window already open if there is one (app.js listens), else a new one.
+self.addEventListener("notificationclick", (e) => {
+  e.notification.close();
+  const url = e.notification.data?.url || self.registration.scope;
+  e.waitUntil((async () => {
+    for (const w of await self.clients.matchAll({ type: "window", includeUncontrolled: true })) {
+      try { await w.focus(); w.postMessage({ type: "open", url }); return; } catch { /* not allowed to focus: open one instead */ }
+    }
+    await self.clients.openWindow(url);
+  })());
 });

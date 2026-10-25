@@ -6,6 +6,7 @@ A malformed article is skipped with a ::warning:: annotation; it must never fail
 later issue would stay offline until someone fixes the file by hand.
 """
 import datetime as dt
+import hashlib
 import json
 import math
 import re
@@ -52,6 +53,19 @@ def plain_text(art):
             except Exception:  # noqa: BLE001
                 pass
     return re.sub(r"\s+", " ", " ".join(p for p in parts if isinstance(p, str)))
+
+
+def push_devices():
+    """Short hashes of the devices that get the 07:30 notice (scripts/push.py), so the app's settings page can tell
+    whether this phone is on the list. The subscriptions themselves stay in state/, which is not published."""
+    path = os.path.join(ROOT, "state", "push", "devices.json")
+    if not os.path.exists(path):
+        return []
+    try:
+        return [hashlib.sha256(d["subscription"]["endpoint"].encode()).hexdigest()[:16] for d in load_json(path)["devices"]]
+    except Exception as e:  # noqa: BLE001
+        skip(path, "%s: %s" % (type(e).__name__, e))
+        return []
 
 
 def skip(path, why):
@@ -106,7 +120,8 @@ def main():
         if day in epigraphs:
             issue["epigraph"] = epigraphs[day]
         issues.append(issue)
-    out = {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "issues": issues}
+    out = {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "issues": issues,
+           "push": push_devices()}
     with open(os.path.join(CONTENT, "index.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
     sdir = os.path.join(CONTENT, "search")

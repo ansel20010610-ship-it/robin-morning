@@ -8,6 +8,9 @@
     "client_id": "49fc22da801d4d38b148adac25acec1b",
     "playlist_name": "知更鳥晨間記事・古典"
   },
+  "push": {
+    "key": "BERoBPv5tZs22xrCwg3-ebqjmpZVNjzAHyFyDh9-7KPzQ8zsdFwDARkCiw2wU5R1qKfO6kjXH3z8pUB9bciPECI"
+  },
   "columns": {
     "football":     { "group": "main", "order": 1, "name": "巴薩晨報", "full": "巴薩與歐洲足壇", "latin": "Fußball" },
     "perio":        { "group": "main", "order": 2, "name": "牙周經典導讀", "full": "每日一篇經典牙周論文", "latin": "Parodontologie" },

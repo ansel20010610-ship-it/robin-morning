@@ -90,7 +90,7 @@
 
 ## 不可以做的事
 
-- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`（每週品質稽核可以寫 `editorial/LESSONS.md`）、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/`、`content/rejected/`（只有備稿補位會寫）與 `state/`。
+- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`（每週品質稽核可以寫 `editorial/LESSONS.md`）、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/`、`content/rejected/`（只有備稿補位會寫）與 `state/`（但 `state/push/` 是出刊通知的裝置名單，不要動）。
 - 不刪除或改寫過去日期的稿件。若發現過去稿件有事實錯誤，在該篇文末加「更正」區塊（見「每週品質稽核」第 2 步），並在回報中提出。
 - 不讀取、不推測讀者的私人生活；不使用讀者自己的小說設定。
 - 不使用 AI 生成圖片。不呼叫任何需要付費的 API。
