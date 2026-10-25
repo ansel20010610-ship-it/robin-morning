@@ -700,7 +700,14 @@ img.img-off { visibility: hidden; }
   .crest .wave { position: absolute; inset: 0; z-index: 1; border: 2px solid var(--foil); pointer-events: none; animation: wave 1.5s .55s cubic-bezier(.15,.7,.3,1) both; }
   .crest .wave.w2 { border-width: 1px; animation-delay: .8s; }
   @keyframes wave { 0% { opacity: 0; transform: scale(1) rotate(0); } 12% { opacity: .95; } 100% { opacity: 0; transform: scale(3.6) rotate(45deg); } }
-  .masthead h1 { animation: title-in 1.3s .25s cubic-bezier(.2,.75,.2,1) both, foil-once 4.2s 1.35s cubic-bezier(.45,.05,.35,1) forwards; }
+  .masthead h1 { animation: title-in 1.3s .25s cubic-bezier(.2,.75,.2,1) both, foil-loop 9s 1.35s cubic-bezier(.45,.05,.35,1) infinite; }
+  /* The gold runs across in about 4 seconds, rests about 5, and comes round again for as long as the masthead is shown. */
+  @keyframes foil-loop {
+    0% { background-position: 100% 0; }
+    23% { filter: drop-shadow(0 0 9px color-mix(in srgb, var(--foil-hi) 75%, transparent)); }
+    46% { background-position: 0 0; filter: none; }
+    100% { background-position: 0 0; filter: none; }
+  }
   @keyframes title-in { from { opacity: 0; letter-spacing: .75em; filter: blur(14px); transform: scale(1.18); } to { opacity: 1; letter-spacing: .16em; filter: blur(0); transform: none; } }
   .masthead .checker { animation: band 1s .15s cubic-bezier(.2,.7,.2,1) both; }
   .masthead .checker ~ .checker { animation-name: band-r; }
