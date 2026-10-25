@@ -98,6 +98,9 @@ def main():
             }
             if art.get("from_reserve"):
                 entry["from_reserve"] = True
+            for k in ("takeaway", "quiz"):  # perio: the app's review cards (front: quiz, back: takeaway)
+                if isinstance(art.get(k), str) and art[k].strip():
+                    entry[k] = art[k].strip()
             if col == "devotion":
                 epi = epigraph(art)
             else:

@@ -10,8 +10,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content")
 ISSUES = os.path.join(CONTENT, "issues")
 RESERVE = os.path.join(CONTENT, "reserve")
-# Reserve articles kept per column (editorial/RESERVE.md): a main column runs every day, a supplement two or three
-# days a week, so the main columns keep one more.
+# Reserve articles kept per column (editorial/RESERVE.md): a main column runs every day, a supplement twice a week,
+# so the main columns keep one more.
 RESERVE_TARGET = {"main": 3, "supplement": 2}
 TARGET_NOTE = "正刊每欄 3 篇、副刊每欄 2 篇"
 
@@ -27,7 +27,7 @@ WEEKDAY_ZH = ["一", "二", "三", "四", "五", "六", "日"]
 GROUPS = {
     1: ["devotion", "music", "perio"],
     2: ["civilization", "@supp0"],
-    3: ["@supp1", "@supp2", "football"],
+    3: ["@supp1", "football"],
     4: ["football", "fm-watch", "cosmere-watch"],
     5: ["@all"],
 }

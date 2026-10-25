@@ -547,3 +547,23 @@ img.img-off { visibility: hidden; }
 .finish span:last-child { display: block; font-family: var(--sans); font-size: 12.5px; color: var(--muted); line-height: 1.7; }
 .issue-row .d .done-mark { display: block; font-style: normal; font-family: var(--sans); font-size: 12px; color: var(--gold-ink); margin-top: 3px; }
 
+
+/* Keeping what you read: the Sunday recap, the perio review cards. */
+.week ol { list-style: none; margin: 0; padding: 0; counter-reset: wk; }
+.week li { counter-increment: wk; border-bottom: 1px solid var(--rule); }
+.week li a { display: block; padding: 14px 0 14px 34px; position: relative; text-decoration: none; color: inherit; }
+.week li a::before { content: counter(wk); position: absolute; left: 0; top: 14px; width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--gold); color: var(--gold-ink); font-family: var(--sans); font-size: 12.5px; display: grid; place-items: center; }
+.week li b { display: block; font-size: 17px; line-height: 1.5; margin: 2px 0 4px; }
+.week li p { margin: 0; color: var(--ink); font-size: 15px; line-height: 1.8; }
+.cards-cta { display: flex; align-items: center; gap: 10px; margin: 14px 0 0; padding: 14px 16px; border: 1px solid var(--rule); border-left: 3px solid var(--gold); background: var(--paper-2); text-decoration: none; color: var(--ink); }
+.cards-cta b { font-size: 16px; letter-spacing: .06em; }
+.cards-cta span { font-family: var(--sans); font-size: 13px; color: var(--muted); }
+.cards-cta i { margin-left: auto; font-style: normal; color: var(--gold-ink); }
+.cards-pos { font-family: var(--sans); font-size: 12.5px; color: var(--muted); margin: 6px 0 10px; }
+.card { padding: 22px 18px; border: 1px solid var(--rule); background: var(--paper-2); }
+.card .q { font-size: 1.12em; line-height: 1.75; font-weight: 600; margin: 0 0 18px; }
+.card .a { border-top: 1px solid var(--rule); padding-top: 14px; }
+.card .a p { margin: 0 0 10px; line-height: 1.8; }
+.card .a > a { font-family: var(--sans); font-size: 13px; }
+.card .btns, .cards-end { margin-top: 16px; }
+.chips.review { margin: 0 0 12px; }
