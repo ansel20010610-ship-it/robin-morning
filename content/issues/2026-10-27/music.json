@@ -1,0 +1,220 @@
+{
+  "column": "music",
+  "date": "2026-10-27",
+  "title": "樂譜上寫著「狗在叫」：韋瓦第《四季》",
+  "dek": "1725 年的樂譜連狗叫都標好了。這套曲子兩百多年後，怎麼會被一場凌晨四點收工的錄音推上大眾舞台？",
+  "brief": "1725 年的《四季》樂譜裡，中提琴分譜直接寫著「狗在叫」，還規定要一路拉得很大聲、很粗糙。兩百多年後，小提琴家考夫曼趕在樂手工會的錄音禁令生效前，在年底的幾個午夜於卡內基音樂廳錄下全套。聽的時候找春天慢樂章的狗叫、秋天醉漢睡著，還有冬天滑倒的冰面。",
+  "topic_key": "music:vivaldi-four-seasons",
+  "updated_at": "2026-10-27T01:00:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Il_cimento_dell%27armonia_e_dell%27inventione_-_concerti_a_4_e_5_consacrati_-_opera_ottava_-_libro_primo_-_da_D._Antonio_Vivaldi_-_btv1b52500229z_%2814_of_42%29.jpg/1280px-Il_cimento_dell%27armonia_e_dell%27inventione_-_concerti_a_4_e_5_consacrati_-_opera_ottava_-_libro_primo_-_da_D._Antonio_Vivaldi_-_btv1b52500229z_%2814_of_42%29.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/1/19/Il_cimento_dell%27armonia_e_dell%27inventione_-_concerti_a_4_e_5_consacrati_-_opera_ottava_-_libro_primo_-_da_D._Antonio_Vivaldi_-_btv1b52500229z_%2814_of_42%29.jpg",
+    "width": 1280,
+    "height": 1731,
+    "alt": "一頁泛黃的 18 世紀印刷分譜，頁首印著 Alto Viola，上方有一行花體手寫風格的義大利文，下方是密密的五線譜。",
+    "caption": "1725 年阿姆斯特丹印行的 Op. 8（《四季》是其中前四首）中提琴分譜第 2 頁，法國國家圖書館藏本的數位掃描。〈春〉第二樂章的頁首，就是那行 Il Cane che grida（狗在叫）。",
+    "credit": "Antonio Vivaldi，約 1725 年；Bibliothèque nationale de France（Gallica）；經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Il_cimento_dell%27armonia_e_dell%27inventione_-_concerti_a_4_e_5_consacrati_-_opera_ottava_-_libro_primo_-_da_D._Antonio_Vivaldi_-_btv1b52500229z_(14_of_42).jpg",
+    "made": "約 1725"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "一群小提琴蹦蹦跳跳地奏出明亮的主題，像有人一把拉開窗簾；接著高音的小提琴顫動起來，詩裡寫的是鳥兒開口唱歌，迎接春天。你一定在哪裡聽過這一段，它是韋瓦第（Antonio Vivaldi）《四季》的開頭。"
+    },
+    {
+      "type": "p",
+      "text": "好聽歸好聽，這套曲子真正離譜的地方，藏在 1725 年的印刷樂譜裡。〈春〉第二樂章的中提琴分譜上，印著一行義大利文：*Il Cane che grida*，「狗在叫」；底下是一道指令：*Largo, Sì deve Suonare, Sempre molto forte, e Strappato*，Largo 是「很慢」，其餘大意是「要一路拉得很大聲，而且粗糙、帶著扯勁」（本文自譯）。",
+      "tag": "史料"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.19,
+        0.11,
+        0.75,
+        0.11
+      ],
+      "position": "頁面上方，約佔整頁寬度的四分之三",
+      "caption": "放大看：第二行花體字是 Il Cane che grida，下一行是 Largo 加上要一直很大聲、很粗的指令；最上面一行小字是配合這一段音樂的詩句。"
+    },
+    {
+      "type": "p",
+      "text": "也就是說，有位作曲家直接在分譜上交代中提琴手：這一段你當狗，從頭到尾都要大聲。更扯的在後面：兩百多年後，錄這套曲子的一場錄音，是在年底的午夜錄到凌晨四點的。"
+    },
+    {
+      "type": "music",
+      "composer": "韋瓦第（Antonio Vivaldi）",
+      "work": "《四季》：小提琴協奏曲〈春〉〈夏〉〈秋〉〈冬〉，作品 8 第 1–4 號",
+      "work_original": "Le quattro stagioni (The Four Seasons), Op. 8 Nos. 1–4",
+      "composed": "約 1718–1720 年間（說法不一），1725 年在阿姆斯特丹出版",
+      "performers": "路易斯・考夫曼（Louis Kaufman）小提琴、Henry Swoboda 指揮 Concert Hall String Orchestra",
+      "recording": "Concert Hall Records，1947 年 12 月底錄於紐約卡內基音樂廳（Carnegie Hall）；1950 年在美國以 LP 發行（CHS-1001）",
+      "movements": [
+        "〈春〉Allegro／Largo／Allegro",
+        "〈夏〉Allegro non molto／Adagio／Presto",
+        "〈秋〉Allegro／Adagio molto／Allegro",
+        "〈冬〉Allegro non molto／Largo／Allegro"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Vivaldi Four Seasons Louis Kaufman Henry Swoboda Concert Hall",
+        "artist_hint": "Kaufman",
+        "track_filter": [
+          "Spring",
+          "Summer",
+          "Autumn",
+          "Winter"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "指定的錄音，就是那場午夜錄音：考夫曼（Louis Kaufman）與 Concert Hall 弦樂團 1947 年的版本。它不是最早的《四季》錄音，1942 年 Molinari 已經錄過；選它，是因為這篇的故事從它開始。它是近八十年前的錄音，想聽新一點的音質，文末有推薦。"
+    },
+    {
+      "type": "h",
+      "text": "好萊塢小提琴手，上了火車才拿到譜"
+    },
+    {
+      "type": "p",
+      "text": "1947 年秋天，美國小提琴家考夫曼被 CBS 的音樂主持人要求，學《四季》準備隔年春天廣播。他當時的本行是好萊塢：《亂世佳人》《北非諜影》裡的小提琴獨奏，都出自他手。他連樂譜都沒看過，就點頭答應。兩天後，Concert Hall 唱片公司的老闆問他有沒有協奏曲可以錄，他又說：就錄《四季》。"
+    },
+    {
+      "type": "p",
+      "text": "樂譜在他上火車去紐約的前一天寄到，曲子是在火車上學的。他後來寫到，自己整個掉進了韋瓦第的音樂裡。"
+    },
+    {
+      "type": "h",
+      "text": "年底的午夜場，趕在禁令前"
+    },
+    {
+      "type": "p",
+      "text": "時間卡得很死。美國樂手工會的會長宣布，12 月 31 日之後禁止樂手錄音，除非唱片公司接受他開的版稅條件。各家都在搶年底的錄音檔期，卡內基音樂廳排得滿滿的。Concert Hall 租到的是年底的午夜場，每場從午夜錄到凌晨四點。不同來源的說法略有不同：Furuya 與 WPR 寫最後四晚，卡內基音樂廳的資料庫列的是 12 月 25、30、31 日三場。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "天氣也不幫忙。大鍵琴手得把她珍貴的大鍵琴裹上絲巾和羊毛毯，運過下雪的紐約車流；管風琴手則擔心突然變冷，會讓琴走音。12 月 31 日凌晨四點，全套錄完。考夫曼早上六點才回到旅館，累癱了："
+    },
+    {
+      "type": "quote",
+      "original": "with the melodies and captivating rhythms of Vivaldi dancing through our minds",
+      "text": "韋瓦第的旋律和迷人的節奏，還在我們腦子裡跳舞",
+      "cite": "考夫曼（Louis Kaufman）自傳 A Fiddler's Tale，經 Furuya 轉引（本文自譯）"
+    },
+    {
+      "type": "p",
+      "text": "這張趕工唱片 1950 年在美國發行，拿下法國唱片大獎（Grand Prix du Disque），2003 年又被美國國會圖書館選進國家錄音登錄。考夫曼後來還跑遍歐洲，在布魯塞爾皇家音樂學院圖書館找到了 1725 年的原版。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "導讀作者 Furuya 認為，這張 1947 年錄音標誌著韋瓦第現代名聲的開端；她也稱它是《四季》第一套完整錄音，但 1942 年 Molinari 已有錄音，所以這個說法本文不採。換句話說，把這套曲子推到大眾面前的功勞算在誰身上，是她的看法，不是公認的定論。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "h",
+      "text": "聽的時候，對著詩找三個畫面"
+    },
+    {
+      "type": "p",
+      "text": "《四季》其實是 1725 年在阿姆斯特丹出版的十二首協奏曲（作品 8）裡的前四首。每首都附一首十四行詩，整首印在獨奏小提琴分譜的開頭；詩句又被拆開，寫在每個分譜的五線譜之間，旁邊標上 A、B、C 的字母，告訴樂手「這句詩對應這一段」。你拿到的不只是譜，還有劇本。",
+      "tag": "史實"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Il_cimento_dell%27armonia_e_dell%27inventione_-_concerti_a_4_e_5_consacrati_-_opera_ottava_-_libro_primo_-_da_D._Antonio_Vivaldi_-_btv1b52500229z_%2811_of_42%29.jpg/1280px-Il_cimento_dell%27armonia_e_dell%27inventione_-_concerti_a_4_e_5_consacrati_-_opera_ottava_-_libro_primo_-_da_D._Antonio_Vivaldi_-_btv1b52500229z_%2811_of_42%29.jpg",
+      "width": 1280,
+      "height": 1731,
+      "alt": "一頁泛黃的書名頁，上半是大字的義大利文書名，中間是獻給一位伯爵的獻詞，下方印著阿姆斯特丹與出版商的名字。",
+      "caption": "同一冊藏本的書名頁：大字印著 Il Cimento dell'Armonia e dell'Inventione，獻給一位伯爵，最下方印著 A Amsterdam 與出版商的名字。",
+      "credit": "Antonio Vivaldi，約 1725 年；Bibliothèque nationale de France（Gallica）；經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Il_cimento_dell%27armonia_e_dell%27inventione_-_concerti_a_4_e_5_consacrati_-_opera_ottava_-_libro_primo_-_da_D._Antonio_Vivaldi_-_btv1b52500229z_(11_of_42).jpg",
+      "made": "約 1725"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "〈春〉第二樂章：小提琴群輕輕搖，是花草繁盛的草地；中提琴突然一聲聲又粗又響地插進來，那就是樂譜上的狗。詩裡寫的則是牧羊人睡在沙沙的樹葉聲旁，忠實的狗躺在身邊。",
+        "〈秋〉：第一樂章村民跳舞唱歌，喝到酒神的杯子見底；第二樂章慢下來，醉漢睡著；最後一個樂章天一亮，獵人帶著號角和槍出門，野獸被追到力竭倒下。",
+        "〈冬〉：第一樂章，詩裡寫冷得牙齒打顫、不停跺腳跑；第三樂章，有人在冰上小心翼翼地走，然後滑倒、爬起來、冰面裂開。"
+      ]
+    },
+    {
+      "type": "h",
+      "text": "喜歡的話，接著聽"
+    },
+    {
+      "type": "p",
+      "text": "想要新一點的音質，聽奈傑・甘迺迪（Nigel Kennedy）1989 年的版本。BBC Music Magazine 的專文說它據報賣了 300 萬張，被宣稱是史上最暢銷的古典錄音。同一套 Op. 8 的第五、第十首《海上風暴》與《狩獵》也有標題，只是沒附詩。想看約八十年後貝多芬怎麼用交響曲畫田園，聽本刊 10 月 11 日介紹的《田園》。"
+    },
+    {
+      "type": "p",
+      "text": "所以下次聽到有人把那隻狗拉得又響又粗，別皺眉。1725 年的樂譜，就是這麼交代的。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "“The Four Seasons”--Louis Kaufman and the Concert Hall String Orchestra (1947)",
+      "publisher": "Library of Congress（Harumi Furuya 客座文章；文末註明觀點不代表國會圖書館）",
+      "date": "未註明",
+      "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/The-Four-Seasons_Furuya.pdf",
+      "note": "讀了全文與註腳：1947 年錄音過程（午夜至四點、大鍵琴與管風琴、凌晨四點完成、早上六點回旅館）、考夫曼受託與上火車學譜、詩的編排（整首印在獨奏小提琴分譜開頭、也寫在每個分譜五線譜之間）、1950 年大獎與 2003 年國家錄音登錄、布魯塞爾找到原版、考夫曼參演的電影。「韋瓦第現代名聲的開端」與「第一套完整錄音」是 Furuya 的看法；維基百科說 1942 年已有 Molinari 的錄音，故本文不採「第一」，也把「現代名聲的開端」標為她的看法。錄音日期：Furuya 與 WPR 寫最後四晚（Furuya：每場午夜至凌晨四點，12 月 31 日凌晨四點收工）；卡內基音樂廳資料庫列為 12 月 25、30、31 日三場，且註明也可能是 12/26、12/31、1/1。正文並陳兩種說法。"
+    },
+    {
+      "title": "Vivaldi's Four Seasons（Nicholas Kenyon）",
+      "publisher": "BBC Music Magazine（classical-music.com）",
+      "date": "2025-02-28",
+      "url": "https://www.classical-music.com/features/works/vivaldis-four-seasons",
+      "note": "〈春〉慢樂章：小提琴搖晃的音型代表「令人愉快、花草盛開的草地」，牧羊人的忠犬吠叫（中提琴）是詩的內容、樂譜上標出；〈秋〉中段的醉酒睡眠；Kennedy 1989 年版本的銷量與宣稱。"
+    },
+    {
+      "title": "Il cimento dell'armonia e dell'inventione（中提琴分譜，Gallica 數位掃描第 14 頁：Il Cane che grida；第 11 頁：書名頁）",
+      "publisher": "Bibliothèque nationale de France；經 Wikimedia Commons",
+      "date": "約 1725",
+      "url": "https://commons.wikimedia.org/wiki/File:Il_cimento_dell%27armonia_e_dell%27inventione_-_concerti_a_4_e_5_consacrati_-_opera_ottava_-_libro_primo_-_da_D._Antonio_Vivaldi_-_btv1b52500229z_(14_of_42).jpg",
+      "note": "親自核對掃描：中提琴分譜第 2 頁頁首印有「Il Cane che grida」與「Largo, Sì deve Suonare, Sempre molto forte, e Strappato」；詩句旁的 A、B、F、G 等字母；〈秋〉第一樂章分譜上有「Ubriachi」。書名頁印有「Il Signor Venceslao Conte di Marzin」與「A Amsterdam / Spesa di Michele Carlo le Cene / Libraro」（頁面拼法為 Marzin，與 IMSLP 的 Morzin 不同）。"
+    },
+    {
+      "title": "Il cimento dell'armonia e dell'inventione, Op.8",
+      "publisher": "IMSLP",
+      "date": "未註明",
+      "url": "https://imslp.org/wiki/Il_cimento_dell%27armonia_e_dell%27inventione,_Op.8_(Vivaldi,_Antonio)",
+      "note": "首版資料：1725 年阿姆斯特丹 Le Cène，版號 520–521，作品 8 為十二首協奏曲，前四首即《四季》。"
+    },
+    {
+      "title": "Recording Session: Louis Kaufman, Violin, with Chamber Orchestra",
+      "publisher": "Carnegie Hall Digital Collections",
+      "date": "未註明",
+      "url": "https://data.carnegiehall.org/events/62612/nt",
+      "note": "館方紀錄：私人錄音場次，列為 1947 年 12 月 25、30、31 日午夜，因樂手工會禁錄令 1948 年 1 月 1 日生效。"
+    },
+    {
+      "title": "Right season",
+      "publisher": "Wisconsin Public Radio（Norman Gilliland）",
+      "date": "2014-12-30",
+      "url": "https://www.wpr.org/history/right-season",
+      "note": "旁證：工會禁令內容、Henry Swoboda 與紐約愛樂弦樂手、午夜至凌晨四點。此文說受託學譜的對象是指揮 Antonini，Furuya 說是 CBS 的 Fassett；正文採 Furuya 的「CBS 的音樂主持人」。"
+    },
+    {
+      "title": "The Four Seasons (Vivaldi)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/The_Four_Seasons_(Vivaldi)",
+      "note": "輔助：〈秋〉第二樂章的指示（醉漢睡著）、四首詩的義大利原文、1942 年 Molinari 錄音（維基百科稱 first proper electrical recording）的說明。"
+    }
+  ]
+}
