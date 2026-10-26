@@ -3,9 +3,9 @@
   "date": "2026-10-27",
   "title": "巴薩可用後衛剩四人，Espart 缺七週",
   "dek": "八天要踢三場，可用的一線後衛卻只剩四人；剛倒下的那位，還是中場出身。",
-  "brief": "巴薩可用的一線後衛只剩四人，剛傷退的 19 歲 Espart 還是中場改行的，要缺陣約七週。巴薩在國家德比輸給皇馬，台灣時間 11 月 1 日接著踢阿拉維斯，八天內還有歐冠和馬競；弗利克賽後說，球隊少了體力。",
+  "brief": "巴薩可用的一線後衛只剩四人，19 歲的 Espart 傷退，要缺陣約七週；輸給皇馬後，台灣時間 11 月 1 日 04:00 接著踢阿拉維斯。金球獎典禮還在進行，亞馬爾已拿下年度最佳年輕球員，金球得主尚未揭曉。",
   "topic_key": "football:2026-10-27",
-  "updated_at": "2026-10-27T02:44:00+08:00",
+  "updated_at": "2026-10-27T05:54:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -186,11 +186,21 @@
     },
     {
       "type": "h",
-      "text": "金球獎落幕之夜，與四個後衛的八天"
+      "text": "金球獎之夜，與四個後衛的八天"
     },
     {
       "type": "p",
-      "text": "第 70 屆金球獎在倫敦帕拉狄恩劇院（London Palladium）舉行，台灣時間 10 月 27 日（週二）04:00 開典禮，你讀到時多半已經頒完，得獎名單請看官方公布。ESPN 開賽前點名的男子組主要競爭者是凱恩（Harry Kane）、巴薩的亞馬爾（Lamine Yamal）與姆巴佩，衛冕者是登貝萊（Ousmane Dembélé）；女子組有普特亞斯（Alexia Putellas）、巴薩的 Ewa Pajor 等人。",
+      "text": "第 70 屆金球獎在倫敦帕拉狄恩劇院（London Palladium）舉行，台灣時間 10 月 27 日（週二）04:00 開典禮，你讀到時獎還在頒或剛頒完。巴薩這邊已經先收了一串：男子 Kopa 年度最佳年輕球員是亞馬爾（Lamine Yamal），女子年輕球員是 Vicky López，女子教練是 Pere Romeu，女子門將是 Cata Coll，女子年度球隊也是巴薩。",
+      "tag": "報導"
+    },
+    {
+      "type": "p",
+      "text": "其他已揭曉的獎：男子教練是西班牙的 Luis de la Fuente，男子門將是 Unai Simón，Sócrates 獎給了薩卡（Bukayo Saka）。排名目前只公布到前十名之外：男子第 11 名是貝林厄姆（Jude Bellingham），第 12 名是巴薩的 Cubarsí；女子第 15 名是 Cata Coll。",
+      "tag": "報導"
+    },
+    {
+      "type": "p",
+      "text": "重頭戲還沒揭曉。男子與女子的前十名，以及兩座金球，截稿時都尚未公布，下一期補報。ESPN 賽前點名的男子組熱門是凱恩（Harry Kane）、亞馬爾與姆巴佩，衛冕者是登貝萊（Ousmane Dembélé）；女子組有普特亞斯（Alexia Putellas）、巴薩的 Ewa Pajor。這幾位都不在已公布的名單裡。",
       "tag": "報導"
     },
     {
@@ -352,11 +362,18 @@
       "note": "Rodri 轉隊巴薩"
     },
     {
+      "title": "Ballon d'Or 2026 results: Full rankings, all award winners",
+      "publisher": "ESPN",
+      "date": "2026-10-26",
+      "url": "https://www.espn.com/soccer/story/_/id/50289067/ballon-dor-2026-results-full-rankings-all-award-winners",
+      "note": "台灣時間 10 月 27 日 05:51 發布、05:53 前後讀取（API 原文 https://now.core.api.espn.com/v1/sports/news/50289067）；已公布年輕球員、教練、門將、Sócrates 獎、女子年度球隊與男女排名 11 名以後；男女前十名與金球尚未公布"
+    },
+    {
       "title": "2026 Ballon d'Or live updates: Winners, results, reaction",
       "publisher": "ESPN",
       "date": "2026-10-26",
       "url": "https://www.espn.com/soccer/story/_/id/50259091/2026-ballon-dor-live-updates-winners-results-reaction",
-      "note": "第 70 屆、主要競爭者名單（直播頁開場介紹）；賽前頁面，無得獎結果"
+      "note": "第 70 屆、主要競爭者名單（直播頁開場介紹）；台灣時間 10 月 27 日 05:53 前後再讀，頁面仍只有開場介紹，沒有得獎結果，得獎資料見上一筆"
     },
     {
       "title": "Ballon d'Or 2026: Date, time, voting, odds, favourites, all-time winners, BOAT explained - everything you need to know",
