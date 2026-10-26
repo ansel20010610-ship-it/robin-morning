@@ -1,0 +1,135 @@
+{
+  "column": "perio",
+  "date": "2026-10-27",
+  "title": "牙齦炎能穩住幾十年：1976 年的四期病灶",
+  "dek": "牙齦炎能停在原地幾十年，什麼讓它翻臉？",
+  "takeaway": "Page 與 Schroeder 的分期：前三期是牙齦炎，以漿細胞為主的既成病灶可穩定好幾年到幾十年，也可能轉成破壞。臨床上，牙齦炎要治療並回診追蹤，持續發炎的部位多盯。",
+  "quiz": "牙齦炎的既成病灶，之後會怎麼發展？",
+  "brief": "寫出牙周病分期的兩位作者，自己承認不知道牙齦炎什麼時候會翻臉。1976 年 Page 與 Schroeder 整理出四期病灶，菌斑堆積 2 到 4 天組織就開始發炎，第三期的既成病灶可以穩定好幾年甚至幾十年。臨床上，持續發炎的部位風險較高（2017 年共識），回診時多盯這些地方。",
+  "topic_key": "perio:pmid:765622",
+  "updated_at": "2026-10-27T00:53:10+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Gingivitis-before-and-after-3.jpg/1280px-Gingivitis-before-and-after-3.jpg",
+    "width": 1280,
+    "height": 1116,
+    "alt": "上下兩張正面口內照。上圖牙齦紅腫發亮，下顎前牙的牙頸部積著一圈黃色沉積物；下圖同一口牙，牙頸部乾淨，牙齦顏色變淡、腫脹消退。",
+    "caption": "牙齦炎洗牙前（上）與洗牙後（下），依上傳者說明兩張相隔九天。2017 年世界研討會共識報告（2018 年出版）指出，牙齦炎經治療可以回到臨床健康。一般臨床照片，與 Page 與 Schroeder 的論文無關。",
+    "credit": "Onetimeuseaccount，Wikimedia Commons",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gingivitis-before-and-after-3.jpg",
+    "made": "2013"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "病人問：「醫生，我牙齦炎好幾年了，是不是遲早變牙周病？」1976 年 Page 與 Schroeder 的整理給了一個不太乾脆的答案：牙齦炎可以好幾年甚至幾十年停在原地，也可能轉成破壞。"
+    },
+    {
+      "type": "h",
+      "text": "牙齦炎不是小號牙周炎，是能待很久的中繼站"
+    },
+    {
+      "type": "p",
+      "text": "Page 與 Schroeder 把發炎性牙周病拆成四種組織病灶。菌斑堆積 2 到 4 天是初期病灶（initial lesion），4 到 10 天是早期病灶（early lesion），2 到 3 週是以漿細胞為主、沒有明顯骨流失的既成病灶（established lesion）。這三期都是牙齦炎。"
+    },
+    {
+      "type": "p",
+      "text": "第四期進展病灶（advanced lesion）才有齒槽骨與牙周韌帶流失，臨床上就是牙周炎。重點在第三期：作者寫明，既成病灶在人和動物身上極為普遍，可以穩定好幾年甚至幾十年，也可能轉成進行性的破壞。"
+    },
+    {
+      "type": "svg",
+      "title": "四期病灶：前三期是牙齦炎",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 330\"><text class=\"ink\" x=\"12\" y=\"20\" font-size=\"13\" font-weight=\"700\">菌斑堆積之後，牙齦裡的四種病灶</text><text class=\"muted\" x=\"12\" y=\"58\" font-size=\"12\">2–4 天</text><rect class=\"soft\" x=\"62\" y=\"38\" width=\"236\" height=\"36\" rx=\"6\"/><text class=\"ink\" x=\"72\" y=\"54\" font-size=\"12\" font-weight=\"700\">初期病灶 initial</text><text class=\"muted\" x=\"72\" y=\"68\" font-size=\"12\">急性滲出性血管炎</text><text class=\"muted\" x=\"12\" y=\"108\" font-size=\"12\">4–10 天</text><rect class=\"soft\" x=\"62\" y=\"88\" width=\"236\" height=\"36\" rx=\"6\"/><text class=\"ink\" x=\"72\" y=\"104\" font-size=\"12\" font-weight=\"700\">早期病灶 early</text><text class=\"muted\" x=\"72\" y=\"118\" font-size=\"12\">淋巴球等單核細胞浸潤</text><text class=\"muted\" x=\"12\" y=\"158\" font-size=\"12\">2–3 週</text><rect class=\"soft\" x=\"62\" y=\"138\" width=\"236\" height=\"36\" rx=\"6\"/><text class=\"ink\" x=\"72\" y=\"154\" font-size=\"12\" font-weight=\"700\">既成病灶 established</text><text class=\"muted\" x=\"72\" y=\"168\" font-size=\"12\">漿細胞為主，無明顯骨流失</text><line class=\"muted\" x1=\"180\" y1=\"74\" x2=\"180\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line class=\"muted\" x1=\"180\" y1=\"124\" x2=\"180\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path class=\"gold\" d=\"M306 40 H314 V172 H306\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text class=\"gold\" x=\"320\" y=\"104\" font-size=\"12\" font-weight=\"700\">牙齦</text><text class=\"gold\" x=\"320\" y=\"119\" font-size=\"12\" font-weight=\"700\">炎</text><text class=\"accent\" x=\"190\" y=\"196\" font-size=\"12\" font-weight=\"700\">可以穩定好幾年到幾十年……</text><line class=\"accent\" x1=\"180\" y1=\"174\" x2=\"180\" y2=\"240\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\"/><path class=\"accent\" d=\"M174 232 L180 242 L186 232\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><text class=\"accent\" x=\"190\" y=\"222\" font-size=\"12\" font-weight=\"700\">……或轉變：原因還不清楚</text><rect class=\"soft\" x=\"62\" y=\"244\" width=\"236\" height=\"36\" rx=\"6\"/><text class=\"ink\" x=\"72\" y=\"260\" font-size=\"12\" font-weight=\"700\">進展病灶 advanced</text><text class=\"muted\" x=\"72\" y=\"274\" font-size=\"12\">骨與牙周韌帶流失</text><path class=\"accent\" d=\"M306 246 H314 V278 H306\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text class=\"accent\" x=\"320\" y=\"258\" font-size=\"12\" font-weight=\"700\">牙周</text><text class=\"accent\" x=\"320\" y=\"273\" font-size=\"12\" font-weight=\"700\">炎</text><text class=\"muted\" x=\"180\" y=\"312\" font-size=\"12\" text-anchor=\"middle\">時程是組織學概念，非個別病人時刻表</text></svg>",
+      "caption": "原創圖解，依 Page 與 Schroeder（1976）的摘要重繪：前三期屬牙齦炎，進展病灶才有骨與牙周韌帶流失。既成病灶可長期穩定，也可能轉成進展病灶，轉變因素原文寫明還不清楚。示意，不按比例。"
+    },
+    {
+      "type": "h",
+      "text": "牙齦炎什麼時候翻臉？作者自己說還不清楚"
+    },
+    {
+      "type": "quote",
+      "text": "造成這種轉變的因素，還不清楚。",
+      "original": "Factors causing this conversion are not understood.",
+      "cite": "Page 與 Schroeder（1976）摘要，本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "這就是 1976 年的答案：不一定，開關在哪也說不準。四十年後的 2017 年世界研討會共識報告（2018 年出版）整理縱向資料：沒有進展到附著喪失的部位，發炎隨時間較少；會進展的部位，發炎持續較重。共識也把牙齦炎列為牙周炎的主要風險因子與必要前提。"
+    },
+    {
+      "type": "p",
+      "text": "順帶一提，1969 年那頓午餐談成的是另一個研究計畫（青少年牙齦切片的細胞與膠原分析）；這篇綜論是 1974 年秋天才決定寫的。"
+    },
+    {
+      "type": "h",
+      "text": "明天看診怎麼用"
+    },
+    {
+      "type": "list",
+      "items": [
+        "跟病人講實話：牙齦炎處理好可以回到臨床健康，處理牙齦炎就是在預防牙周炎。",
+        "每次回診記下哪些部位出血；反覆、持續發炎的部位，比偶爾出血一次的更該盯。"
+      ]
+    },
+    {
+      "type": "h",
+      "text": "要小心的地方"
+    },
+    {
+      "type": "list",
+      "items": [
+        "本報補充：分期的天數不是每個病人的時刻表，臨床外觀也看不出病灶走到第幾期。",
+        "吸菸會遮住探診出血，組織卻仍有發炎（2017 年世界研討會共識報告），不出血不等於沒事。"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "下次病人再問「牙齦炎會不會變牙周病」，可以照 1976 年的版本回答：不一定，可能停在原地好幾年甚至幾十年，也可能轉成破壞；至於什麼時候翻臉，當年寫分期的人也只能說還不清楚。"
+    },
+    {
+      "type": "paper",
+      "citation": "Page RC, Schroeder HE. Pathogenesis of inflammatory periodontal disease. A summary of current work. *Lab Invest*. 1976;34(3):235–249.",
+      "pmid": "765622",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/765622/",
+      "access": "依摘要、作者 1993 年的評註與後續文獻整理（本文無 DOI）",
+      "question": "菌斑引起的牙齦與牙周發炎，在組織裡依什麼順序發展？",
+      "design": "綜論：整合當時可得資料，提出四期病灶的發病概念",
+      "sample": "不適用（綜論）"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Page RC, Schroeder HE. Pathogenesis of inflammatory periodontal disease. A summary of current work. Lab Invest 1976;34(3):235–49（PMID 765622）",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "1976-03",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/765622/",
+      "note": "依 PubMed 摘要：四期病灶與 2–4 天、4–10 天、2–3 週的時程，既成病灶可穩定數年至數十年，轉變因素不明。Crossref 與 Europe PMC 皆查無 DOI；未取得全文"
+    },
+    {
+      "title": "Page RC. Pathogenesis of periodontal disease（This Week's Citation Classic 評註）",
+      "publisher": "Current Contents No. 28（ISI），University of Pennsylvania Garfield 典藏",
+      "date": "1993-07-12",
+      "url": "https://garfield.library.upenn.edu/classics1993/cc28jul121993.pdf",
+      "note": "1969 年午餐談成的是另一個研究計畫（青少年人類牙齦切片的細胞與膠原分析）、1974 年秋天決定寫這篇綜論"
+    },
+    {
+      "title": "Chapple ILC, Mealey BL, Van Dyke TE, et al. Periodontal health and gingival diseases and conditions on an intact and a reduced periodontium: Consensus report of workgroup 1 of the 2017 World Workshop. J Clin Periodontol 2018;45(Suppl 20):S68–S77",
+      "publisher": "European Federation of Periodontology（期刊 PDF）",
+      "date": "2018-06",
+      "url": "https://www.efp.org/fileadmin/uploads/efp/Documents/Campaigns/New_Classification/Reports/Consensus_report__Workgroup_1__Chapple_et_al-2018-Journal_of_Clinical_Periodontology.pdf",
+      "note": "牙齦炎治療後可回到臨床健康；縱向研究中會進展的部位發炎持續較重；牙齦炎是牙周炎的主要風險因子與必要前提；吸菸可遮蔽探診出血而組織仍有發炎。2017 年世界研討會共識報告，2018 年出版"
+    },
+    {
+      "title": "Wikimedia Commons：File:Gingivitis-before-and-after-3.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2013-08-17",
+      "url": "https://commons.wikimedia.org/wiki/File:Gingivitis-before-and-after-3.jpg",
+      "note": "頭圖；CC0；上傳者說明洗牙前後、相隔九天"
+    }
+  ]
+}
