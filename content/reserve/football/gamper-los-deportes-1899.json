@@ -1,0 +1,370 @@
+{
+  "column": "football",
+  "date": "reserve",
+  "reserve_written": "2026-10-26",
+  "title": "巴薩的出生證明，是一則把名字印錯的小廣告",
+  "dek": "一則 1899 年的雜誌短訊、12 個人和一場輸掉的首戰，就是巴薩的起點，細節比你想的亂得多。",
+  "brief": "巴薩的起點是 1899 年 10 月 22 日《Los Deportes》雜誌上一則短訊，創辦人 Gamper 的名字被印成「Kans Kamper」。11 月 29 日 12 個人成立俱樂部，會長是 Wild 不是 Gamper；12 月 8 日首戰 0 比 1 輸給英國僑民隊，創辦人 Parsons 兄弟還站在對面。連首戰人數都對不上：Gamper 自己寫 9 人，俱樂部說雙方各 10 人。",
+  "topic_key": "football:gamper-los-deportes-1899",
+  "updated_at": "2026-10-26T14:50:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/25/Futbol_club_barcelona_-_notas_de_sport.jpg",
+    "width": 544,
+    "height": 296,
+    "alt": "一小塊報紙剪影：粗黑體標題「NOTAS DE SPORT」，下面是一段西班牙文的啟事，提到 Mr. Kans Kamper、Foot-Vall 與每週兩晚 9 點到 11 點到報社聯絡。",
+    "caption": "1899 年 10 月 22 日《Los Deportes》的〈Notas de sport〉：Gamper 的徵人啟事，名字被印成「Kans Kamper」。",
+    "credit": "《Los Deportes》（1899 年 10 月 22 日）／Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Futbol_club_barcelona_-_notas_de_sport.jpg",
+    "made": "1899-10-22"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "巴薩有出生證明，只是長得很不像：雜誌後面的一小塊短訊，而且報社把主角的名字印錯了。1899 年 10 月 22 日，巴塞隆納的運動週刊《Los Deportes》第 34 期登出一則啟事，主角叫「Mr. Kans Kamper」。這位先生，就是後來的 Hans Gamper，加泰隆尼亞人叫他 Joan Gamper。",
+      "tag": "史實"
+    },
+    {
+      "type": "p",
+      "text": "俱樂部官網在 2024 年 10 月 22 日的回顧文章是這樣交代的：Gamper 是瑞士人，1898 年到巴塞隆納，發現這座城市沒什麼像樣的球場，也沒有組織起來的足球。他先去找 Tolosa 體育館的 Jaume Vila，提議組一支正式球隊，被拒絕；文章寫的是 Vila 他們似乎不太想和外國人合作。他轉去找 Ramblas 大道附近 Solé 體育館的老闆 Francesc Solé。那裡同時是加泰隆尼亞體操聯合會的總部，也出版這份運動週刊，於是同意刊登他的啟事。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "Gamper 1877 年生於瑞士溫特圖爾（Winterthur）。俱樂部 2018 年 11 月 29 日的文章說，他幫忙創辦過 FC Zurich，在里昂打過橄欖球（俱樂部 2012 年 11 月 28 日的文章則寫他也效力過 France's FC Lyon），1898 年來巴塞隆納替 Sarrià 電車公司工作。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "本文讀法：所以他不是剛下船、想找人踢球的路人，而是已經辦過一次球隊的人。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "一則短訊，印錯兩個字"
+    },
+    {
+      "type": "quote",
+      "text": "我們的朋友與夥伴 Kans Kamper 先生，「Los Deportes 社」足球部成員、前瑞士冠軍，希望能在巴塞隆納辦幾場比賽，請所有喜愛這項運動的人與他聯絡，並於每週二、五晚間 9 點到 11 點到本社來。",
+      "original": "Nuestro amigo y compañero Mr. Kans Kamper, de la Sección de Foot-Vall de la «Sociedad Los Deportes» y antiguo campeón suizo, deseoso de poder organizar algunos partidos en Barcelona, ruega a cuantos sientan aficiones por el referido deporte se sirvan ponerse en relación con él, dignándose al efecto pasar por esta redacción los martes y viernes por la noche de 9 á 11.",
+      "cite": "《Los Deportes》，1899 年 10 月 22 日，〈Notas de sport〉欄；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "版面標題是〈Notas de sport〉（運動短訊）。Wikimedia Commons 上這張圖檔只有這一段，裡面唯一的人名是「Mr. Kans Kamper」，沒有 Wild。足球寫成「Foot-Vall」，Gamper 寫成「Kans Kamper」。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "俱樂部的說法是，這則啟事由 Gamper 與同鄉 Walter Wild 刊登，並評論文中的拼寫錯誤顯示排版的人「didn't have too much of an idea of what football entailed」（不太清楚足球是什麼；本文自譯）。啟事裡的「前瑞士冠軍」是哪個項目的冠軍，啟事沒寫，我讀到的俱樂部文章也沒說。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "這則短訊的要求其實很低：想踢球的人，每週二、五晚上 9 點到 11 點來報社找他。啟事只列了聯絡的時間與地點，沒有提場地或其他條件。俱樂部說，一個月後《Los Deportes》報導 Wild 與 Gamper 組織足球會有不錯的進展，還打算在 Hippodrome 辦一場比賽。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "h",
+      "text": "12 個人，一半是外國人"
+    },
+    {
+      "type": "p",
+      "text": "1899 年 11 月 29 日，Gamper 和另外 11 個人在 Solé 體育館聚會，成立後來的巴塞隆納足球會。俱樂部 2012 年 11 月 28 日的文章說，第一個會址是一個房間，裡面有「a table, four chairs and two notebooks」，也就是一張桌子、四把椅子、兩本筆記本（本文自譯）。12 個人配 4 把椅子，算一下就知道有人得站著，不過這是本文的算術，來源沒說當晚誰坐誰站。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "table",
+      "title": "12 位創辦人與首戰名單",
+      "head": [
+        "創辦人",
+        "來歷",
+        "12 月 8 日首戰"
+      ],
+      "rows": [
+        [
+          "Hans（Joan）Gamper",
+          "瑞士",
+          "巴薩名單"
+        ],
+        [
+          "Walter Wild",
+          "瑞士",
+          "巴薩名單"
+        ],
+        [
+          "Otto Kunzle",
+          "瑞士",
+          "巴薩名單"
+        ],
+        [
+          "John Parsons",
+          "英國",
+          "英國僑民隊"
+        ],
+        [
+          "William Parsons",
+          "英國",
+          "英國僑民隊"
+        ],
+        [
+          "Otto Maier",
+          "德國",
+          "巴薩名單未見"
+        ],
+        [
+          "Enric Ducay",
+          "亞拉岡",
+          "巴薩名單未見"
+        ],
+        [
+          "Lluís d'Ossó",
+          "加泰隆尼亞",
+          "巴薩名單"
+        ],
+        [
+          "Bartomeu Terrades",
+          "加泰隆尼亞",
+          "巴薩名單"
+        ],
+        [
+          "Pere Cabot",
+          "加泰隆尼亞",
+          "巴薩名單未見"
+        ],
+        [
+          "Carles Pujol",
+          "加泰隆尼亞",
+          "巴薩名單未見"
+        ],
+        [
+          "Josep Llobet",
+          "加泰隆尼亞",
+          "巴薩名單"
+        ]
+      ],
+      "caption": "來歷依俱樂部 2024 年 10 月 22 日的創辦人名單，Gamper 的出身地依 2018 年的文章；「首戰」欄依俱樂部 2024 年 12 月 8 日列出的巴薩 10 人名單，及該文所說英國隊含 Parsons 兄弟。「未見」只表示那份名單裡沒有這個名字。"
+    },
+    {
+      "type": "p",
+      "text": "第一屆幹部由 Walter Wild 當會長，Lluís d'Ossó 當祕書，Bartomeu Terrades 管財務，Gamper 當球隊隊長（俱樂部 2012 年文章）。一個月前登廣告把大家叫來的人，不是會長。俱樂部的人物頁說，Gamper 在 1908 年才第一次出任會長，一共五度擔任會長，到 1925 年為止，而且是為了不讓俱樂部消失才接下來的。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "12 人的出身，俱樂部 2012 年的文章說是「六位加泰隆尼亞人、六位外國人」，2024 年的名單則把 Enric Ducay 標為亞拉岡人。我的讀法是兩篇說的是同一批人，差別只在亞拉岡這一位怎麼歸類：照 2024 年名單算，加泰隆尼亞人 5 位、亞拉岡人 1 位、外國人 6 位（瑞士 3、英國 2、德國 1）。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "首戰：輸 1 比 0，而且兩位創辦人在對面"
+    },
+    {
+      "type": "facts",
+      "title": "第一場比賽",
+      "items": [
+        [
+          "日期",
+          "1899 年 12 月 8 日，下午 3 點（當地時間）"
+        ],
+        [
+          "地點",
+          "Velòdrom de la Bonanova（Bonanova 舊自行車場），靠近現今的 Turó Parc"
+        ],
+        [
+          "對手",
+          "巴塞隆納的英國僑民隊（English Colony）"
+        ],
+        [
+          "結果",
+          "巴薩 0 比 1 落敗；進球者的名字沒有留下"
+        ],
+        [
+          "人數",
+          "俱樂部說雙方各 10 人，因為找不到更多人；Gamper 自己寫巴薩只有 9 人"
+        ],
+        [
+          "裁判",
+          "Mr. Leack"
+        ],
+        [
+          "巴薩名單",
+          "Juan de Urruela、Walter Wild、José Lomba、Lluís d'Ossó、José Llobet、Adolfo López、Juan Gamper、Bartomeu Terrades、Otto Kunzle、Eduardo Schilling"
+        ]
+      ]
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Vel%C3%B2drom_de_la_Bonanova.png/1280px-Vel%C3%B2drom_de_la_Bonanova.png",
+      "width": 1280,
+      "height": 727,
+      "alt": "褐色老照片：一大片沒有草皮的泥土空地，前景有幾個穿白襯衫、深色長褲的男人分散站著，右側邊緣有一根立柱；空地後方隔著一道有欄杆的堤岸，是一座長長的木造頂棚看台，背景是低矮的山丘。",
+      "caption": "Bonanova 自行車場，1899 年《Los Deportes》刊載的圖像。Commons 標示它位於 Via Augusta、Modolell、Valero、J.S. Bach 與 Calvet 之間。來源沒有說這張圖是不是 12 月 8 日那場比賽的場地狀態。",
+      "credit": "《Los Deportes》（1899）／Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vel%C3%B2drom_de_la_Bonanova.png",
+      "made": "1899"
+    },
+    {
+      "type": "p",
+      "text": "俱樂部 2024 年 12 月 8 日的文章說，巴薩上半場兩度打中門框，但沒進；球衣也還不是後來的藍紅色，文章說「可能」穿白色，沒有照片或文字紀錄能確認。英國隊名單裡剛好有 John 與 William Parsons，就是 11 月 29 日名列創辦人的那兩位，文章用的字是 coincidentally（巧合）。對面還有 Ernest 與 Arthur Witty 兄弟，文章說他們「about to join」巴薩。Arthur Witty 的球員頁則說，他在俱樂部的第二場比賽上場，也就是 12 月 24 日那場。8 日到 24 日，16 天，他就從對手變成隊友。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "好，現在要講 Gamper 自己寫的賽後報導。俱樂部說，它刊在瑞士的《Schweizer Sportblatt》，日期是 1899 年 12 月 13 日；FC Zurich 博物館館長 Saro Pepe 在一部 Gamper 紀錄片裡提到這篇，之後數位副本與翻譯才交給俱樂部的文獻研究中心。「recently」是俱樂部文章的字眼，沒有給確切日期，所以我只能說這份材料是 2018 年 11 月 29 日那篇文章發布前才進到俱樂部手上的。",
+      "tag": "史料"
+    },
+    {
+      "type": "quote",
+      "text": "阿爾比恩之子（指英國人）很快就開始往前場猛壓。",
+      "original": "the sons of Albion soon started pressing strongly up the field",
+      "cite": "Gamper，《Schweizer Sportblatt》，1899 年 12 月 13 日，依俱樂部公布的英文譯文；括號為本文補充，中文為本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "譯文裡有幾句值得記下。Gamper 寫「We should note that FC Barcelona only had nine men, in other words, three forwards instead of five.」（得說明，巴薩只有 9 個人，也就是前鋒只有 3 個而不是 5 個；本文自譯）。他也寫英國隊遲遲才進球，那唯一一球發生在手球之後；譯文沒說是誰手球。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "譯文裡他還特別誇了 Urruela：「Especially good was Urruela, a Spaniard who played in England for three years and defended the goal brilliantly.」（特別好的是 Urruela，一位在英國踢過三年球的西班牙人，把球門守得很漂亮；本文自譯）。譯文沒明說他守哪一邊的門；俱樂部的巴薩名單把他排在第一位。 國籍有兩種說法：Gamper 的譯文寫 a Spaniard（西班牙人）；俱樂部 2024 年 12 月 8 日的首戰文章在列出球隊成員來歷時，把 Urruela 算作來自瓜地馬拉。兩者並列，來源之間沒有互相說明。至於賽後，譯文裡 Gamper 這樣寫：「After the game, all of the Englishmen joined the team」（賽後，所有英國人都加入了球隊；本文自譯）。",
+      "tag": "史料"
+    },
+    {
+      "type": "p",
+      "text": "人數對不起來。俱樂部 2018 年的文章說，加泰隆尼亞的報紙點出巴薩有 10 人，Gamper 自己寫 9 人；它也把當天的陣型概括為不尋常的 2-3-3。我只讀到譯文提到「前鋒 3 個而不是 5 個」，沒讀到陣型的名字。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "本文的算術是：當時常見的 2-3-5 站位有 2 名後衛、3 名中衛、5 名前鋒，前鋒少 2 個、加一名守門員，就是 1+2+3+3＝9 人，和 Gamper 的數字吻合。這是我的推算，不是來源說的。",
+      "tag": "推論"
+    },
+    {
+      "type": "timeline",
+      "title": "起點：從短訊到第二場比賽",
+      "items": [
+        {
+          "when": "1899.10.22",
+          "label": "《Los Deportes》刊出短訊",
+          "note": "Gamper 徵求想踢球的人"
+        },
+        {
+          "when": "1899.11.29",
+          "label": "12 人在 Solé 體育館聚會",
+          "note": "成立巴塞隆納足球會"
+        },
+        {
+          "when": "1899.12.8",
+          "label": "首戰 0 比 1 輸給英國僑民隊",
+          "note": "Bonanova 自行車場"
+        },
+        {
+          "when": "1899.12.13",
+          "label": "Gamper 的賽後報導刊於瑞士《Schweizer Sportblatt》",
+          "note": "2018 年前不久才交給俱樂部"
+        },
+        {
+          "when": "1899.12.24",
+          "label": "第二場比賽，3 比 1 勝",
+          "note": "同一座自行車場；對手在我讀到的頁面沒寫"
+        }
+      ],
+      "caption": "日期與比分依俱樂部官網各頁；對手欄只寫來源有寫的部分。"
+    },
+    {
+      "type": "p",
+      "text": "第二場比賽在 1899 年 12 月 24 日，同一座自行車場，3 比 1 贏球（俱樂部 Arthur Witty 的球員頁）。不過這座自行車場沒待多久：俱樂部的專題頁列出，最初十年球場換了四處，1899 至 1900 年在 Bonanova 的舊自行車場，1900 至 1901 年在 Hotel Casanovas 的場地（俱樂部說就是現在 Hospital de Sant Pau 的位置），1901 至 1905 年在 Carretera d'Horta，1905 至 1909 年在 Muntaner 街。理由是經濟不穩，加上城市擴張，找不到大片空地。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "球網也是後來才有的。俱樂部 2012 年的文章說，1901 年 12 月 8 日，也就是首戰同一天的兩年後，巴薩在 Carretera d'Horta 以 4 比 1 贏了 Català，這是巴薩第一次在掛了網的球門前比賽；文章的說法是，從此球有沒有過線不再有爭議。",
+      "tag": "官方說法"
+    },
+    {
+      "type": "p",
+      "text": "所以巴薩的起點是這樣：廣告把名字印錯，辦公室只有 4 把椅子，首戰雙方都湊不滿 11 個人，而且輸了。",
+      "tag": "官方說法"
+    }
+  ],
+  "sources": [
+    {
+      "title": "125 years since the ad in Los Deportes",
+      "publisher": "FC Barcelona（fcbarcelona.com）",
+      "date": "2024-10-22",
+      "url": "https://www.fcbarcelona.com/en/club/news/4153324/125-years-since-the-ad-in-los-deportes",
+      "note": "啟事的背景、Tolosa 與 Solé 體育館、創辦人名單與出身"
+    },
+    {
+      "title": "Happy Birthday! FC Barcelona turns 113 years old",
+      "publisher": "FC Barcelona（fcbarcelona.com）",
+      "date": "2012-11-28",
+      "url": "https://www.fcbarcelona.com/en/news/1147290/happy-birthday-fc-barcelona-turns-113-years-old",
+      "note": "第一個會址、第一屆幹部、六位加泰隆尼亞人與六位外國人；France's FC Lyon"
+    },
+    {
+      "title": "Joan Gamper, FC Barcelona founder and first reporter",
+      "publisher": "FC Barcelona（fcbarcelona.com）",
+      "date": "2018-11-29",
+      "url": "https://www.fcbarcelona.com/en/club/news/924172/joan-gamper-fc-barcelona-founder-and-first-reporter",
+      "note": "Gamper 的經歷、Schweizer Sportblatt 賽後報導與英文譯文、9 人與 10 人的差異；Gamper 在里昂打橄欖球"
+    },
+    {
+      "title": "125 years since Barça's first game",
+      "publisher": "FC Barcelona（fcbarcelona.com）",
+      "date": "2024-12-08",
+      "url": "https://www.fcbarcelona.com/en/news/4180699/125-years-since-barcas-first-game",
+      "note": "首戰的時間、地點、人數、名單、裁判、球衣與 Parsons、Witty 兄弟；Urruela 列為來自瓜地馬拉"
+    },
+    {
+      "title": "Arthur Witty",
+      "publisher": "FC Barcelona（fcbarcelona.com）",
+      "date": "2018-03-20",
+      "url": "https://www.fcbarcelona.com/en/card/2709983/arthur-witty",
+      "note": "第二場比賽 1899 年 12 月 24 日 3 比 1"
+    },
+    {
+      "title": "Joan Gamper",
+      "publisher": "FC Barcelona（fcbarcelona.com）",
+      "date": "2018-03-20",
+      "url": "https://www.fcbarcelona.com/en/card/648427/joan-gamper",
+      "note": "出生地、1898 年抵達、1908 至 1925 年五度擔任會長"
+    },
+    {
+      "title": "1899 -1909. Foundation and survival",
+      "publisher": "FC Barcelona（fcbarcelona.com）",
+      "url": "https://www.fcbarcelona.com/en/card/643865/1899-1909-foundation-and-survival",
+      "note": "最初十年的四處球場（頁面僅標「11 Mar 06」，發布日期不詳）"
+    },
+    {
+      "title": "On December 8th 1899, Barça played their first ever game",
+      "publisher": "FC Barcelona（fcbarcelona.com）",
+      "date": "2012-12-07",
+      "url": "https://www.fcbarcelona.com/en/news/1147134/on-december-8th-1899-barca-played-their-first-ever-game",
+      "note": "1901 年第一次有球網的比賽，4 比 1 勝 Català"
+    },
+    {
+      "title": "File:Futbol club barcelona - notas de sport.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "1899-10-22",
+      "url": "https://commons.wikimedia.org/wiki/File:Futbol_club_barcelona_-_notas_de_sport.jpg",
+      "note": "啟事原件圖像與 Commons 的英文轉述"
+    },
+    {
+      "title": "File:Velòdrom de la Bonanova.png",
+      "publisher": "Wikimedia Commons",
+      "date": "1899",
+      "url": "https://commons.wikimedia.org/wiki/File:Vel%C3%B2drom_de_la_Bonanova.png",
+      "note": "自行車場圖像與位置說明"
+    }
+  ]
+}
