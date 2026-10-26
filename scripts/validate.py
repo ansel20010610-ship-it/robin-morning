@@ -38,6 +38,8 @@ AI_PHRASES = ["值得一提的是", "不可否認", "毋庸置疑", "總而言�
               "神秘面紗", "一場旅程", "的旅程", "交織出", "譜寫", "完美詮釋", "長河中", "時光荏苒",
               "歷久彌新", "嘆為觀止", "史詩級", "讓我們一起", "在這個資訊爆炸", "不禁讓人"]
 STALE_WORDS = ["今天", "今日", "今晨", "今早", "昨天", "昨晚", "昨日", "明天", "本週", "這週", "上週", "本月", "創刊"]
+# The newsroom's own bookkeeping, which belongs in sources[].note, not in front of the reader (STYLE.md 0-2, rule 7).
+BACKSTAGE = ["本報沒有查證", "本報未查證", "本報無法查證", "本報無法核實", "截稿", "一併補報", "與內文不一致"]
 DEVOTION_HEADS = ["今日經文", "經文釋義", "與我的生活連結", "今日禱告"]
 LINK_START = re.compile(r"\[[^\]]+\]\(")
 # Same pattern as inline() in assets/util.js: an http(s) URL without spaces, holding at most one level of
@@ -112,25 +114,28 @@ BRIEF_SINCE = "2026-10-18"  # issues from this date on (and every reserve) must 
 QUIZ_SINCE = "2026-10-26"  # perio articles from here on carry `quiz`, the front of the review card
 
 
-def check_brief(brief, dek, d, E, W):
+def check_brief(brief, dek, d, E, W, col=None):
     """The three-sentence summary the front page shows instead of the article (STYLE.md section 7)."""
     required = str(d) == "reserve" or str(d) >= BRIEF_SINCE
     if brief is None or (isinstance(brief, str) and not brief.strip()):
         if required:
-            E("缺少 brief：三句話摘要，80–160 字，首頁只顯示這一段（STYLE.md 第七節）")
+            E("缺少 brief：三句話摘要，60–140 字，首頁只顯示這一段（STYLE.md 第七節）")
         return
     if not isinstance(brief, str):
         E("brief 需為字串（目前是%s）" % jtype(brief))
         return
     n = len(CJK.findall(brief))
     if n < 50 or n > 200:
-        E("brief %d 字，要在 80–160 字左右" % n)
-    elif n < 80 or n > 160:
-        W("brief %d 字，建議 80–160 字" % n)
+        E("brief %d 字，要在 60–140 字左右" % n)
+    elif n < 60 or n > 140:
+        W("brief %d 字，建議 60–140 字，短比長好" % n)
     if len(re.findall(r"[。！？]", brief)) > 4:
         W("brief 超過三句：摘要只要三句")
     if dek and brief.strip() == dek.strip():
         E("brief 不可與導言相同")
+    nums = re.findall(r"\d+(?:[.,:]\d+)*", brief)
+    if len(nums) > 5 and col != "football":
+        W("brief 有 %d 個數字：挑最能說服人的三個就好，其他留在正文（STYLE.md 第七節）" % len(nums))
     if re.match(r"^\s*(本文|這篇|此文)", brief):
         W("brief 不要以「本文、這篇」開頭，直接講內容")
 
@@ -202,7 +207,7 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             E("updated_at（%s）晚於現在：填實際完稿時間，用 TZ=Asia/Taipei date +%%Y-%%m-%%dT%%H:%%M:00+08:00" % ua)
     title = art.get("title") if isinstance(art.get("title"), str) else ""
     dek = art.get("dek") if isinstance(art.get("dek"), str) else ""
-    check_brief(art.get("brief"), dek, d, E, W)
+    check_brief(art.get("brief"), dek, d, E, W, col)
     if len(title) > 32:
         W("標題偏長（%d 字）" % len(title))
     if len(dek) > 90:
@@ -476,6 +481,9 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
     for ph in AI_PHRASES:
         if ph in full:
             W("避免用語：「%s」" % ph)
+    for ph in BACKSTAGE:
+        if ph in full:
+            W("正文出現查證流水帳「%s」：出處一句帶過，版本差異與查證過程寫進 sources 的 note（STYLE.md 第〇之二節第 7 條）" % ph)
     if "！！" in full or "!!" in full:
         W("避免連續驚嘆號")
 
