@@ -1,0 +1,343 @@
+{
+  "column": "philosophy",
+  "date": "2026-10-27",
+  "title": "一盒還是兩盒：聰明人為什麼拿不到一百萬",
+  "dek": "錢早就封好了，多拿一罐千元只賺不賠；可是只拿紙盒的人，全都帶走了 100 萬。到底誰才是傻子？",
+  "brief": "一道只有兩個選項的題，讓哲學家吵了半世紀還是幾乎對半分：錢早就封好，多拿一罐千元怎麼看都不虧，可是在故事裡只拿紙盒的人全帶走百萬。2020 年的調查裡，專攻決策理論的哲學家比其他哲學家更傾向兩個都拿；兩盒派的回答是，這場遊戲本來就在獎勵不理性。本文的讀法是，真正的分歧只有一句：你的選擇是證據，還是原因。",
+  "topic_key": "philosophy:newcomb-problem",
+  "updated_at": "2026-10-27T02:01:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "svg",
+    "title": "咖啡館版紐康問題",
+    "svg": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\">\n<text x=\"200\" y=\"26\" text-anchor=\"middle\" class=\"accent\" font-size=\"15\">只拿紙盒，還是兩個都拿？</text>\n<rect class=\"soft\" x=\"62\" y=\"70\" width=\"110\" height=\"120\" rx=\"14\"/>\n<rect class=\"paper\" x=\"78\" y=\"112\" width=\"78\" height=\"40\" rx=\"3\"/>\n<text x=\"117\" y=\"137\" text-anchor=\"middle\" class=\"ink\">1,000 元</text>\n<rect class=\"soft\" x=\"78\" y=\"60\" width=\"78\" height=\"14\" rx=\"3\"/>\n<rect class=\"gold\" x=\"228\" y=\"78\" width=\"120\" height=\"112\" rx=\"4\"/>\n<rect class=\"paper\" x=\"246\" y=\"112\" width=\"84\" height=\"44\" rx=\"3\"/>\n<text x=\"288\" y=\"132\" text-anchor=\"middle\" class=\"ink\">100 萬</text>\n<text x=\"288\" y=\"150\" text-anchor=\"middle\" class=\"ink\">或 0</text>\n<line class=\"ink line\" x1=\"30\" y1=\"190\" x2=\"370\" y2=\"190\" stroke-width=\"2\"/>\n<text x=\"117\" y=\"214\" text-anchor=\"middle\" class=\"ink\">玻璃罐：看得見</text>\n<text x=\"288\" y=\"214\" text-anchor=\"middle\" class=\"ink\">紙盒：上週已封好</text>\n<text x=\"200\" y=\"240\" text-anchor=\"middle\" class=\"muted\" font-size=\"11\">猜你只拿紙盒就放 100 萬；猜你兩個都拿（或丟銅板）就空著</text>\n</svg>",
+    "caption": "原創示意圖：本文開頭的咖啡館情境，改寫自諾齊克 1969 年的紐康問題（原典金額為 1,000 美元與 100 萬美元）。"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "週二早上，你走進巷口那家咖啡館。老闆沒問你喝什麼，直接推來兩樣東西：一個玻璃罐，裡面躺著一張看得清清楚楚的千元鈔；一個封死的牛皮紙外帶盒，裡面是 100 萬元，或者什麼都沒有。規則只有一條：你可以兩個都拿走，也可以只拿紙盒。紙盒裡放了什麼，上週就決定了。店裡有位「預測者」觀察熟客好幾年，猜誰會做什麼從沒失手過：他猜你只拿紙盒，就放 100 萬；猜你兩個都拿，紙盒就空著。現在錢已經封好，誰也動不了。你拿哪個？"
+    },
+    {
+      "type": "p",
+      "text": "先別急著答。你心裡八成已經有答案，而且覺得選另一邊的人腦袋有洞。恭喜，你剛加入一場吵了半世紀還沒吵完的架。這題叫「紐康問題」（Newcomb's problem），1969 年由美國哲學家諾齊克（Robert Nozick）寫成論文公開。他當年就寫過一模一樣的現象："
+    },
+    {
+      "type": "quote",
+      "original": "To almost everyone it is perfectly clear and obvious what should be done. The difficulty is that these people seem to divide almost evenly on the problem, with large numbers thinking that the opposing half is just being silly.",
+      "text": "幾乎每個人都覺得該怎麼做再清楚、再明顯不過。麻煩的是，這些人在這題上似乎幾乎對半分，還有一大票人認為另一半根本是在犯傻。",
+      "cite": "諾齊克，1969（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "半世紀後，局面沒什麼變。2020 年一份大型的哲學家調查也問了這題：31% 選一盒，39% 兩個都拿，其餘選了「其他」。更扯的是專攻決策理論的哲學家：在他們之中表了態的人裡，選一盒的只有兩成多，比其他領域的同行低了一大截。"
+    },
+    {
+      "type": "p",
+      "text": "也就是說，專門研究「怎麼做決定」的那群人，比其他哲學家更傾向選那個在故事裡通常只拿到一千元的答案。錢早就封好了，多拿一罐看起來只賺不賠，這沒問題；問題是：如果兩個都拿才算聰明，為什麼聰明人在這個故事裡都沒變有錢？"
+    },
+    {
+      "type": "h",
+      "text": "選一盒派：看看前面那些人怎麼了"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "諾齊克替兩邊都寫了最強版本。選一盒這派的理由是：預測者幾乎不會錯。你知道在你之前，很多跟你差不多的人玩過這一局。只拿紙盒的，全都帶走 100 萬；那些自作聰明、兩個都拿的，諾齊克叫他們 shrewdies（聰明鬼），全都只拿到一千。你沒有理由認為，在「好不好預測」這件事上，你跟他們有什麼不同。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "他還加碼一招。假設你已經不能反悔地拿了兩個，結果要過幾天才公布，這段時間你可以找個第三者下注。理性的你會怎麼押？會用很高的賠率押「我只拿到一千」。諾齊克的問法很毒：你真的要做一個連自己都會押它輸的選擇嗎？"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這派背後有一套決策理論撐著。依另一位哲學家路易斯（David Lewis）的描述，選一盒的人被直述的條件句說服：「如果我拿一盒，我會是百萬富翁；如果拿兩個，就不會。」他們算的是一種完全不涉及因果的期望值。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是，這派最強的一點可以濃縮成一句：你的選擇本身就是消息。不是說你的手能隔空把錢變進盒子，而是你是哪種人，早就寫在你會怎麼選裡面，預測者上週讀的就是這個。"
+    },
+    {
+      "type": "h",
+      "text": "拿兩盒派：錢又不會自己長腳"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "另一派的理由更直白：預測者上週就放好了，錢要嘛已經在紙盒裡，要嘛沒有，這件事已經定案。如果有，你兩個都拿得到 100 萬加一千，只拿紙盒得到 100 萬；如果沒有，兩個都拿得到一千，只拿紙盒什麼都沒有。不管哪一種，兩個都拿都多一千。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "諾齊克替這派畫了一個很有畫面的版本。假設紙盒背面是透明的，有個真心為你好的朋友坐在另一邊，盯著盒子裡面看了一個星期。錢在，就不會因為你拿兩個而消失；不在，也不會因為你只拿紙盒就突然冒出來。不管他看到的是什麼，他心裡都在求你：兩個都拿。而你也知道他在求什麼。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "決策理論管這叫「優勢原則」：不管世界是哪一種狀態，某個選項都比較好，就選它。這派後來發展成「因果決策理論」，路易斯就是代表人物之一。他們只問一件事：我的選擇能「造成」什麼？路易斯說，他們被反事實條件句說服："
+    },
+    {
+      "type": "quote",
+      "original": "If I took only one box, I would be poorer by a thousand than I will be after taking both.",
+      "text": "要是我只拿一盒，我會比拿了兩盒之後的我少一千。",
+      "cite": "路易斯，1981（本文自譯）"
+    },
+    {
+      "type": "table",
+      "title": "兩派各自最強的理由",
+      "head": [
+        "",
+        "選一盒派",
+        "拿兩盒派"
+      ],
+      "rows": [
+        [
+          "核心直覺",
+          "只拿紙盒的人，全都帶走 100 萬",
+          "錢已經封好，多拿一罐只賺不賠"
+        ],
+        [
+          "真正在問",
+          "我的選擇是不是好消息的證據？",
+          "我的選擇能不能造成什麼？"
+        ],
+        [
+          "依據",
+          "不涉因果的期望值",
+          "優勢原則；因果決策理論"
+        ],
+        [
+          "主張者舉例",
+          "霍根（Terry Horgan）、霍爾維奇（Paul Horwich）、黑爾與赫登（Caspar Hare、Brian Hedden）等（依 SEP）",
+          "諾齊克、路易斯，以及多數因果決策理論者"
+        ],
+        [
+          "最難回答的一句",
+          "錢都封好了，你的手到底改變了什麼？",
+          "你這麼聰明，怎麼沒變有錢？"
+        ]
+      ],
+      "caption": "本文整理，依諾齊克 1969、路易斯 1981 與 SEP〈因果決策理論〉"
+    },
+    {
+      "type": "h",
+      "text": "諾齊克選了兩個，卻承認說服不了對面"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這題其實不是諾齊克想出來的。他在論文的題注裡先自首：出題的是加州的物理學家紐康（William Newcomb），諾齊克是 1963 年從紐康的一位普林斯頓朋友那裡聽來的。題注最後兩句，大概是最酸也最大方的致敬："
+    },
+    {
+      "type": "quote",
+      "original": "It is a beautiful problem. I wish it were mine.",
+      "text": "這是個美麗的問題。真希望它是我的。",
+      "cite": "諾齊克，1969，題注（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "那他自己選哪個？寫到論文後段，他攤牌了："
+    },
+    {
+      "type": "quote",
+      "original": "I believe that one should take what is in both boxes. I fear that the considerations I have adduced thus far will not convince those proponents of taking only what is in the second box.",
+      "text": "我認為應該兩個盒子都拿。我擔心，我到目前為止提出的理由，說服不了主張只拿第二個盒子的人。",
+      "cite": "諾齊克，1969（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "他的診斷是：想選一盒的衝動，來自一種「影響力的錯覺」。紙盒裡有沒有錢，原因是預測者「相信」你會怎麼選，不是你真的怎麼選；可是題目又規定預測者幾乎從不出錯，我們就很容易把他的相信和你的行動當成同一件事，好像你的手能伸回上週。他說，任務是把這個錯覺的來源解釋得夠有力，讓我們就算還感覺得到它，也不會被它騙。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "他把論文開頭的題詞選在康德（Immanuel Kant）《純粹理性批判》的一段：有一種幻象是自然而無法避免的，可以被弄得無害，卻永遠無法根除。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Kant_Critik_der_reinen_Vernunft_422.png/1280px-Kant_Critik_der_reinen_Vernunft_422.png",
+      "width": 1280,
+      "height": 2240,
+      "alt": "黑白掃描的德文書頁，以尖角體排印。頁首印著頁碼 422 與「Elementarl. II. Th. II. Abth. II. Buch. II. Hauptst.」，正文分成三段，頁尾右下角是接到下一頁的字尾「ieni-」。",
+      "caption": "康德《純粹理性批判》1781 年初版第 422 頁。第一段後半從「sondern einen natürlichen und unvermeidlichen Schein」（而是一種自然而無法避免的幻象）起，就是諾齊克放在論文開頭的題詞（他用的是英譯）。",
+      "credit": "Immanuel Kant；Posner Memorial Collection 數位典藏，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kant_Critik_der_reinen_Vernunft_422.png",
+      "made": "1781"
+    },
+    {
+      "type": "h",
+      "text": "你這麼聰明，怎麼沒變有錢？"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "選一盒派手上有一句最毒的嘲諷，路易斯乾脆拿來當論文標題：「Why ain'cha rich?」（你這麼聰明，怎麼沒變有錢？）他承認，對方帶著百萬回家，我們只有一千，他們覺得這就證明我們錯了。他的回答是："
+    },
+    {
+      "type": "quote",
+      "original": "We reply that we never were given any choice about whether to have a million. When we made our choices, there were no millions to be had. The reason why we are not rich is that the riches were reserved for the irrational.",
+      "text": "我們的回答是：我們從來沒有機會選要不要那一百萬。我們做選擇的時候，根本沒有百萬可拿。我們沒變有錢，是因為財富早就保留給不理性的人了。",
+      "cite": "路易斯，1981（本文自譯）"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "他接著引兩位同派哲學家的話：如果有人很會預測行為，又重重獎勵被預測到的不理性，那麼不理性就會得到重賞。SEP 整理因果決策理論者的回應也是這樣：紐康問題是一個獎勵不理性的特殊案例。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "可是在這篇只有四頁的論文前半，路易斯就很誠實。他問：「不理性會被預先重賞」這句話，是（1）兩盒派的自家教條，選一盒的人可以前後一致地否認；還是（2）大家都該接受的共識？他的答案是："
+    },
+    {
+      "type": "quote",
+      "original": "I regret to say that alternative (1) appears to be correct. At any rate, the obvious way to argue for alternative (2) is a failure. So it's a standoff.",
+      "text": "我很遺憾地說，第（1）種〔也就是兩盒派的自家教條〕看來才是對的。至少，替第（2）種辯護最明顯的那條路走不通。所以，這是僵局。",
+      "cite": "路易斯，1981（本文自譯；〔〕內為本文補充）"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "開頭那個問題，答案就在這裡，而且有兩個。兩盒派說：聰明人沒變有錢，是因為這場遊戲獎勵的是「你是哪種人」，不是你當下選得聰不聰明，就像一場面試只看出身、不看作答。一盒派反問：一套明知規則、還穩定讓人變窮的「理性」，憑什麼叫理性？路易斯自己承認，光靠「你怎麼沒變有錢」這一句，誰也逼不了誰認輸。"
+    },
+    {
+      "type": "svg",
+      "title": "同一張表，兩種看法",
+      "svg": "<svg viewBox=\"0 0 400 330\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"12\">\n<text x=\"250\" y=\"20\" text-anchor=\"middle\" class=\"gold\" font-size=\"11\">上週，預測者猜你會……</text>\n<rect class=\"soft\" x=\"110\" y=\"30\" width=\"135\" height=\"44\" rx=\"3\"/>\n<text x=\"177\" y=\"50\" text-anchor=\"middle\" class=\"ink\">只拿紙盒</text>\n<text x=\"177\" y=\"66\" text-anchor=\"middle\" class=\"muted\" font-size=\"10\">紙盒放了 100 萬</text>\n<rect class=\"soft\" x=\"255\" y=\"30\" width=\"135\" height=\"44\" rx=\"3\"/>\n<text x=\"322\" y=\"50\" text-anchor=\"middle\" class=\"ink\">兩個都拿</text>\n<text x=\"322\" y=\"66\" text-anchor=\"middle\" class=\"muted\" font-size=\"10\">紙盒是空的</text>\n<rect class=\"soft\" x=\"10\" y=\"84\" width=\"90\" height=\"70\" rx=\"3\"/>\n<text x=\"55\" y=\"114\" text-anchor=\"middle\" class=\"ink\">你只拿</text>\n<text x=\"55\" y=\"132\" text-anchor=\"middle\" class=\"ink\">紙盒</text>\n<rect class=\"soft\" x=\"10\" y=\"164\" width=\"90\" height=\"70\" rx=\"3\"/>\n<text x=\"55\" y=\"194\" text-anchor=\"middle\" class=\"ink\">你兩個</text>\n<text x=\"55\" y=\"212\" text-anchor=\"middle\" class=\"ink\">都拿</text>\n<rect class=\"paper\" x=\"110\" y=\"84\" width=\"135\" height=\"70\" rx=\"3\" stroke-width=\"2.5\"/>\n<rect class=\"accent line\" x=\"110\" y=\"84\" width=\"135\" height=\"70\" rx=\"3\" stroke-width=\"2.5\"/>\n<text x=\"177\" y=\"124\" text-anchor=\"middle\" class=\"accent\" font-size=\"15\">100 萬</text>\n<rect class=\"paper\" x=\"255\" y=\"84\" width=\"135\" height=\"70\" rx=\"3\"/>\n<text x=\"322\" y=\"124\" text-anchor=\"middle\" class=\"ink\" font-size=\"15\">0</text>\n<rect class=\"paper\" x=\"110\" y=\"164\" width=\"135\" height=\"70\" rx=\"3\"/>\n<text x=\"177\" y=\"204\" text-anchor=\"middle\" class=\"ink\" font-size=\"15\">100 萬 + 1,000</text>\n<rect class=\"paper\" x=\"255\" y=\"164\" width=\"135\" height=\"70\" rx=\"3\"/>\n<rect class=\"accent line\" x=\"255\" y=\"164\" width=\"135\" height=\"70\" rx=\"3\" stroke-width=\"2.5\"/>\n<text x=\"322\" y=\"204\" text-anchor=\"middle\" class=\"accent\" font-size=\"15\">1,000</text>\n<text x=\"10\" y=\"262\" class=\"accent\" font-size=\"11\">紅框：預測者猜對時真正會發生的兩格。選一盒派看這條斜線：</text>\n<text x=\"10\" y=\"278\" class=\"accent\" font-size=\"11\">只拿紙盒落在 100 萬，兩個都拿落在 1,000。</text>\n<text x=\"10\" y=\"302\" class=\"ink\" font-size=\"11\">拿兩盒派一欄一欄看：不管紙盒裡有沒有錢（欄已經定了），</text>\n<text x=\"10\" y=\"318\" class=\"ink\" font-size=\"11\">下面那格都比上面多 1,000。</text>\n</svg>",
+      "caption": "原創示意圖，用本文咖啡館的金額。拿兩盒派一欄一欄比（優勢原則）；選一盒派只看預測者猜對時的兩格（期望值）。依諾齊克 1969 的設定"
+    },
+    {
+      "type": "h",
+      "text": "老闆招了：預測者只有六成準"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "其他都不變，只是老闆老實招了：預測者沒那麼神，十次大概猜中六次。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "這個變體諾齊克自己就試過。他指出，準度六成時，照期望值公式，只拿紙盒還是比較划算；可是他推想，真的只有六成，我們每個人都會兩個都拿。所以讓人想選一盒的，不只是那條公式，關鍵是預測者「幾乎一定」猜對。他也刻意不追問選一盒派「那要幾成才夠」，因為他對這種畫線論證沒把握，而且兩盒派一樣有畫線的麻煩。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "本文用咖啡館的金額算一次。準度六成時，只拿紙盒的期望值是 60 萬；兩個都拿，是六成機率拿一千、四成機率拿 100 萬加一千，合計約 40 萬。再往下壓，兩邊打平的點落在 50.05%。照這條公式，預測者只要比丟銅板準一點點，你就該只拿紙盒；可是照諾齊克的推想，六成的時候大家早就伸手拿兩個了。公式和直覺，在這裡明顯分了家。"
+    },
+    {
+      "type": "h",
+      "text": "如果預測者真的看得見未來"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "這次只改預測者的方法：他不是觀察你的習慣，而是真的看得見那個週二早上的監視器畫面，像站在旁邊看你伸手一樣。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "諾齊克說，這樣就沒有難題了。如果你相信有逆向因果，你的選擇會造成他上週的預測，或者預測者是直接看見未來，那就只拿紙盒，沒什麼好吵。他要的難題版本，是先把這些都排除：預測者在你做決定之前用複雜的儀器檢查你，再用他的理論推算你之後會怎麼選。你的決定不是他預測的原因，你更早的狀態才是。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "這一改，整場架就縮成一個問題：你現在的選擇和上週那個預測，到底是什麼關係？如果是因果，大家都拿一盒；如果毫無關聯，預測者等於亂猜，大家都拿兩個。紐康問題卡在正中間：沒有因果，卻有幾乎完美的相關。兩盒派說，只有原因算數；一盒派說，幾乎完美的證據，就夠我押上去了。"
+    },
+    {
+      "type": "h",
+      "text": "玻璃罐還在桌上"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "回到咖啡館。你盯著那張千元鈔，這題比看起來更難受的地方在於：預測者猜得那麼準，你此刻的猶豫、讀完這篇之後的決定，很可能也早就被算進去了。諾齊克在論文裡點過這一層：紐康問題要成為選擇者的難題，前提是怎麼做「由你決定」；而一旦接受這一點，就很難甩掉「預測者做了什麼也由你決定」的感覺。"
+    },
+    {
+      "type": "p",
+      "text": "所以真正吊在半空中的是這一句：你伸手只拿紙盒，這個動作是「盒裡有錢」的證據，還是能讓錢出現的原因？兩派對這句話的回答，決定了他們的手伸向哪裡。半世紀了，沒有人逼得對方認輸，玻璃罐也還在桌上。"
+    },
+    {
+      "type": "facts",
+      "title": "原典與本文情境的差異",
+      "items": [
+        [
+          "原典",
+          "諾齊克〈Newcomb's Problem and Two Principles of Choice〉，1969 年，收入哲學家亨佩爾（Carl G. Hempel）的祝壽論文集"
+        ],
+        [
+          "出題者",
+          "物理學家 William Newcomb；諾齊克 1963 年聽說，1969 年發表"
+        ],
+        [
+          "原典情境",
+          "一個你非常信任其預測能力的存在（諾齊克說可以想成友善的外星人）；盒一裝 1,000 美元，盒二裝 100 萬美元或空著；猜你拿兩盒就不放，猜你只拿盒二就放"
+        ],
+        [
+          "丟銅板也沒用",
+          "原典註明：預測者若猜你會刻意隨機選擇（例如丟銅板），也不放錢"
+        ],
+        [
+          "本文改了哪裡",
+          "咖啡館、老闆、觀察熟客的預測者、玻璃罐與紙盒、改成新台幣 1,000 元與 100 萬元（比例不變），都是本文虛構"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Newcomb's Problem and Two Principles of Choice",
+      "publisher": "Robert Nozick；收入 Nicholas Rescher 編 Essays in Honor of Carl G. Hempel（Dordrecht: D. Reidel）",
+      "date": "1969",
+      "url": "https://pdf.stafforini.com/nozick-1969-newcomb-problem-two.pdf",
+      "note": "全文掃描本，頁 114–146（DOI 10.1007/978-94-017-1466-2_7）。情境與兩派論證頁 114–117（「shrewdies」、第三者下注、背面透明的盒子）；「divide almost evenly」頁 117；本人立場（頁 135）與「影響力的錯覺」頁 134–137；選擇「由你決定」的直覺頁 138；六成準度頁 140；題注（出題者為 Livermore Radiation Laboratories 的物理學家 William Newcomb、1963 年從其友人、普林斯頓的 Martin David Kruskal 聽說、「I wish it were mine」）與註 1（刻意隨機選擇者不放錢）頁 143。康德題詞（A422, B450）在頁 114。"
+    },
+    {
+      "title": "'Why Ain'cha Rich?'",
+      "publisher": "David Lewis，Noûs 15(3): 377–380",
+      "date": "1981-09",
+      "url": "https://andrewmbailey.com/dkl/Why_Aincha_Rich.pdf",
+      "note": "JSTOR 掃描本（DOI 10.2307/2215439）。頁 377：一盒派被直述條件句說服、其決策理論為 Jeffrey（The Logic of Decision, 1965）的 V 理性；兩盒派的反事實條件句與因果決策理論（Gibbard & Harper 1978）；嘲諷與回答；Gibbard 與 Harper 引文（頁 377–378）。頁 378：選項（1）（2）與「it's a standoff」。"
+    },
+    {
+      "title": "Counterfactuals and Two Kinds of Expected Utility",
+      "publisher": "Allan Gibbard、William Harper；收入 Hooker 等編 Foundations and Applications of Decision Theory（D. Reidel）",
+      "date": "1978",
+      "url": "https://doi.org/10.1007/978-94-009-9117-0_8",
+      "note": "正文「兩位同派哲學家」即此二人。未讀原文；引句轉引自 Lewis 1981，頁 377–378。"
+    },
+    {
+      "title": "Causal Decision Theory",
+      "publisher": "Paul Weirich，Stanford Encyclopedia of Philosophy",
+      "date": "2024-10-24",
+      "url": "https://plato.stanford.edu/entries/decision-causal/",
+      "note": "第 2.1 節：紐康問題的設定、諾齊克以 William Newcomb 命名、優勢原則與期望效用最大化的分歧。第 2.5 節：主張選一盒者舉 Terry Horgan（1981）、Paul Horwich（1987）、Caspar Hare 與 Brian Hedden（2016）；因果決策理論者回應「an unusual case that rewards irrationality」。同節另提 Ahmed（2014a）擁護證據決策理論，本文未列入表格。"
+    },
+    {
+      "title": "Philosophers on Philosophy: The 2020 PhilPapers Survey",
+      "publisher": "David Bourget、David Chalmers，Philosophers' Imprint 23(11)",
+      "date": "2023",
+      "url": "https://doi.org/10.3998/phimp.2109",
+      "note": "主要目標群體結果表：Newcomb's problem 選一盒 334 人（31.2%）、兩盒 418 人（39.0%）、其他 323 人（30.2%）。附錄 C 表 26：決策理論專家在非「其他」答案中選一盒 22.7%，非專家 46.1%。2020 年調查允許同時勾選多個答案。"
+    },
+    {
+      "title": "Critik der reinen Vernunft（1781 年初版）第 422 頁",
+      "publisher": "Wikimedia Commons（Posner Memorial Collection）",
+      "date": "1781",
+      "url": "https://commons.wikimedia.org/wiki/File:Kant_Critik_der_reinen_Vernunft_422.png",
+      "note": "內頁圖；Commons 著錄為初版，Riga：Johann Friedrich Hartknoch 出版。與諾齊克題詞（A422）比對原文。"
+    }
+  ]
+}
