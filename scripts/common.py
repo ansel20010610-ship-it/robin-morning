@@ -26,7 +26,7 @@ WEEKDAY_ZH = ["一", "二", "三", "四", "五", "六", "日"]
 # Shifts (Taiwan time) — editorial/README.md. Shift 5 is the safety net: every column of the day.
 GROUPS = {
     1: ["devotion", "music", "perio"],
-    2: ["civilization", "@supp0"],
+    2: ["@supp0", "@supp2"],  # @supp2 exists only on days with a third supplement (civilization, Wed/Sat)
     3: ["@supp1", "football"],
     4: ["football", "fm-watch", "cosmere-watch"],
     5: ["@all"],
@@ -71,7 +71,11 @@ def columns_for_group(cfg, d, group):
         if c == "@all":
             out += expected_columns(cfg, d)
         else:
-            out.append(supp[int(c[-1])] if c.startswith("@supp") else c)
+            if c.startswith("@supp"):
+                if int(c[-1]) < len(supp):
+                    out.append(supp[int(c[-1])])
+            else:
+                out.append(c)
     return out
 
 

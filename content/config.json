@@ -15,8 +15,8 @@
     "football":     { "group": "main", "order": 1, "name": "巴薩晨報", "full": "巴薩與歐洲足壇", "latin": "Fußball" },
     "perio":        { "group": "main", "order": 2, "name": "牙周經典導讀", "full": "每日一篇經典牙周論文", "latin": "Parodontologie" },
     "music":        { "group": "main", "order": 3, "name": "今日古典", "full": "古典樂導聆", "latin": "Musik" },
-    "civilization": { "group": "main", "order": 4, "name": "文明如何運作", "full": "從具體歷史問題看制度", "latin": "Zivilisation" },
-    "devotion":     { "group": "main", "order": 5, "name": "晨光裡的一句話", "full": "基督信仰默想", "latin": "Andacht" },
+    "civilization": { "group": "supplement", "name": "文明如何運作", "full": "從具體歷史問題看制度", "latin": "Zivilisation" },
+    "devotion":     { "group": "main", "order": 4, "name": "晨光裡的一句話", "full": "基督信仰默想", "latin": "Andacht" },
 
     "art":          { "group": "supplement", "name": "走進一幅畫", "latin": "Kunst" },
     "photo":        { "group": "supplement", "name": "一格電影，一張照片", "latin": "Bild" },
@@ -32,10 +32,10 @@
   "rotation_by_weekday": {
     "mon": ["tactics", "art"],
     "tue": ["philosophy", "city"],
-    "wed": ["literature", "photo"],
+    "wed": ["civilization", "literature", "photo"],
     "thu": ["fiction", "art"],
     "fri": ["tactics", "city"],
-    "sat": ["philosophy", "photo"],
+    "sat": ["civilization", "philosophy", "photo"],
     "sun": ["literature", "fiction"]
   }
 }
