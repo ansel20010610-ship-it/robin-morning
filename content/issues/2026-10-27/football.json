@@ -2,8 +2,8 @@
   "column": "football",
   "date": "2026-10-27",
   "title": "巴薩可用後衛剩四人，Espart 缺七週",
-  "dek": "八天要踢三場，後防名單卻一隻手就數得完，而且剛倒下的那個，本來還是中場。",
-  "brief": "巴薩後防又倒一個：19 歲的 Xavi Espart 腳踝傷缺約七週，ESPN 數出可用的一線後衛只剩四人。他本來是中場，被弗利克改造成邊後衛，連這個替身都沒了。11 月 1 日（週日）04:00 先踢阿拉維斯，八天內還有歐冠和馬競。",
+  "dek": "八天要踢三場，可用的一線後衛卻只剩四人；剛倒下的那位，還是中場出身。",
+  "brief": "巴薩可用的一線後衛只剩四人，剛傷退的 19 歲 Espart 還是中場改行的，要缺陣約七週。巴薩在國家德比輸給皇馬，台灣時間 11 月 1 日接著踢阿拉維斯，八天內還有歐冠和馬競；弗利克賽後說，球隊少了體力。",
   "topic_key": "football:2026-10-27",
   "updated_at": "2026-10-27T02:44:00+08:00",
   "spoiler": null,
@@ -24,12 +24,12 @@
   "body": [
     {
       "type": "p",
-      "text": "巴薩後防的人手，現在一隻手就數得完。台灣時間 10 月 26 日（週一），球團確認 19 歲的 Xavi Espart 右腳踝的下脛腓聯合（syndesmosis）受傷，要缺陣約七週；他是週日國家德比上半場被換下場的，原因是跟對手的一次碰撞。ESPN 把目前還排得進名單的一線後衛點了一遍：巴爾德（Alejandro Balde）、Pau Cubarsí、傑拉德・馬丁（Gerard Martín）、João Cancelo，一共四個。",
+      "text": "台灣時間 10 月 26 日（週一）凌晨的國家德比，上半場被換下的 19 歲 Xavi Espart，經球團確認右腳踝下脛腓聯合（syndesmosis）受傷，要缺陣約七週，原因是跟對手的一次碰撞。ESPN 把目前排得進名單的一線後衛點了一遍：巴爾德（Alejandro Balde）、Pau Cubarsí、傑拉德・馬丁（Gerard Martín）、João Cancelo，一共四個。",
       "tag": "報導"
     },
     {
       "type": "p",
-      "text": "更扯的是，這個倒下的少年本來根本不是後衛。ESPN 說，Espart 是中場出身，被弗利克改造成邊後衛後打出突破賽季；開季他踢左後衛，這一週因為孔德（Jules Koundé）和 Eric García 都受傷，被推去踢右後衛，連續面對巴黎聖日耳曼和皇馬。也就是說，巴薩已經在用「改行的中場」補後衛的洞，現在連這塊補丁也破了。"
+      "text": "更扯的是，倒下的這位是中場出身。ESPN 說，Espart 被弗利克改造成邊後衛後打出突破賽季；他開季踢左後衛，上週連續面對巴黎聖日耳曼和皇馬時，因孔德（Jules Koundé）和 Eric García 受傷，改踢右後衛。現在連他也缺陣。"
     },
     {
       "type": "p",
@@ -37,68 +37,59 @@
     },
     {
       "type": "h",
-      "text": "四個能用，還有三個在養傷"
+      "text": "四人可用，四人傷停"
     },
     {
       "type": "table",
       "title": "巴薩後衛現況（10 月 26 日）",
       "head": [
         "球員",
-        "狀態",
-        "出處"
+        "狀態"
       ],
       "rows": [
         [
           "Alejandro Balde",
-          "可用；Espart 傷退後上場",
-          "ESPN"
+          "可用；Espart 傷退後上場"
         ],
         [
           "Pau Cubarsí",
-          "可用",
-          "ESPN"
+          "可用"
         ],
         [
           "Gerard Martín",
-          "可用",
-          "ESPN"
+          "可用"
         ],
         [
           "João Cancelo",
-          "可用",
-          "ESPN"
+          "可用"
         ],
         [
           "Xavi Espart",
-          "右腳踝下脛腓聯合傷，約七週",
-          "巴薩官網、ESPN"
+          "右腳踝下脛腓聯合傷，約七週"
         ],
         [
           "Andreas Christensen",
-          "缺席國家德比；與孔德最接近復出",
-          "ESPN"
+          "缺席國家德比；與孔德最接近復出"
         ],
         [
           "Jules Koundé",
-          "缺席國家德比；能否趕上週日未定",
-          "ESPN"
+          "缺席國家德比；能否趕上週日未定"
         ],
         [
           "Eric García",
-          "缺席國家德比；ESPN 未提復出時間",
-          "ESPN"
+          "缺席國家德比；ESPN 未提復出時間"
         ]
       ],
-      "caption": "依巴薩官網與 ESPN 10 月 26 日報導整理；Christensen、Koundé、Eric García 的確切復出日期，兩處都沒有公布。"
+      "caption": "依巴薩官網與 ESPN 10 月 26 日報導整理。"
     },
     {
       "type": "p",
-      "text": "Christensen 和孔德離復出最近，但 ESPN 說，他們趕不趕得上週日對阿拉維斯，還不知道。中場也在漏水：ESPN 10 月 21 日報導，奧爾莫（Dani Olmo）的內收肌傷要休約一個月，阿拉維斯、阿斯頓維拉、馬競三場都會缺陣，最快要等 11 月的國際賽事週過後。",
+      "text": "Christensen 和孔德離復出最近，但 ESPN 說，他們趕不趕得上週日對阿拉維斯，還不知道。中場也在漏水：ESPN 10 月 21 日報導，奧爾莫（Dani Olmo）的內收肌傷要休約一個月，阿拉維斯、阿斯頓維拉、馬競三場都會缺陣，要等 11 月國際賽事週之後才可能復出。",
       "tag": "報導"
     },
     {
       "type": "p",
-      "text": "好消息也有兩件。德容（Frenkie de Jong）在國家德比下半場上場，是他五個月來第一次出賽，弗利克說他訓練得很好、會對球隊有用；拉菲尼亞（Raphinha）扳平的那球，是他本季第 15 球，也是對皇馬的第 8 球（巴薩官網、ESPN）。",
+      "text": "好消息也有：德容（Frenkie de Jong）在國家德比下半場上場，是他五個月來第一次出賽；拉菲尼亞（Raphinha）扳平那球，是他本季各項賽事第 15 球。",
       "tag": "報導"
     },
     {
@@ -124,7 +115,7 @@
     },
     {
       "type": "p",
-      "text": "佩德里（Pedri）對 DAZN 說得更直接：上半場他們慢，而且傳球亂丟。",
+      "text": "佩德里（Pedri）對 DAZN 說得更直接：上半場他們慢，而且丟球太蠢。",
       "tag": "報導"
     },
     {
@@ -135,18 +126,12 @@
     },
     {
       "type": "p",
-      "text": "贏球的穆里尼奧（José Mourinho）已經把視線放遠。他說，皇馬現在連勝，但他不會讓任何人頭在雲端，還舉例：如果今天贏了、下週在桑坦德輸球，這場勝利就不值錢。他也證實，隊長瓦爾韋德（Federico Valverde）比賽早段就受傷，卻硬撐了 40 多分鐘。",
+      "text": "贏球的穆里尼奧（José Mourinho）說，皇馬是來贏聯賽的，不是來贏諾坎普；下一戰是台灣時間週日（11 月 1 日）23:15，客場去桑坦德。",
       "tag": "報導"
     },
     {
-      "type": "quote",
-      "text": "皇馬不是來贏諾坎普的，是來贏聯賽的。",
-      "original": "Real Madrid don't play to win at Camp Nou, but rather to win the league.",
-      "cite": "穆里尼奧，10 月 25 日賽後記者會（ESPN）；本文自譯"
-    },
-    {
       "type": "p",
-      "text": "ESPN 專欄作家 Gabriele Marcotti 週一寫道，穆里尼奧在巴薩主場靠踢球贏了巴薩，當天在教練席上也壓過弗利克。這是他的評論，不是賽後定論。目前巴薩 27 分，馬競 25 分，皇馬 24 分（ESPN 積分榜）。",
+      "text": "ESPN 專欄作家 Gabriele Marcotti 評論穆里尼奧在教練席上壓過弗利克，這是評論，不是定論。積分榜上巴薩 27 分、馬競 25 分、皇馬 24 分（ESPN）。",
       "tag": "報導"
     },
     {
@@ -156,14 +141,14 @@
     },
     {
       "type": "h",
-      "text": "歐洲足壇速覽"
+      "text": "曼聯換帥傳聞升溫，拿坡里教頭被禁賽"
     },
     {
       "type": "news",
       "title": "歐洲足壇速覽",
       "items": [
         {
-          "headline": "曼聯球季最差開局，卡里克的位置岌岌可危",
+          "headline": "曼聯自 1986 年以來最差開局，卡里克的位置岌岌可危",
           "summary": "ESPN 引述英國報業協會（PA）報導，曼聯行政總裁 Omar Berrada 與足球總監 Jason Wilcox 週一在訓練基地就教練去留談話，教練卡里克（Michael Carrick）下午抵達、傍晚離開。ESPN 另引消息來源說，曼聯在評估接班人選，前紐卡索教頭 Eddie Howe 與前德國隊教頭 Julian Nagelsmann 都在名單上。曼聯各項賽事八場沒贏，英超排第 16、只比降級區多 1 分，週六要客場去切爾西。",
           "source": "ESPN",
           "url": "https://www.espn.com/soccer/story/_/id/50287797/man-united-michael-carrick-pressure-carrington-omar-berrada-jason-wilcox",
@@ -177,22 +162,22 @@
           "when": "10 月 26 日（週一）"
         },
         {
-          "headline": "皇馬結束兩年金球獎抵制，由姆巴佩領軍飛倫敦",
-          "summary": "ESPN 引述消息來源說，皇馬會由姆巴佩帶隊出席金球獎。皇馬抵制過前兩屆，起因是 2024 年男子組獎項給了當時的曼城中場 Rodri，而不是維尼修斯；Rodri 如今已經穿上巴薩球衣。庫庫雷利亞、Yan Diomande 與女子組的 Felicia Schröder 也會到場。",
+          "headline": "皇馬結束兩年金球獎抵制，姆巴佩列席倫敦典禮",
+          "summary": "ESPN 引述消息來源說，皇馬由姆巴佩帶隊出席金球獎，結束對前兩屆的抵制。抵制的起因是 2024 年男子組獎項給了當時的曼城中場 Rodri，而不是維尼修斯；Rodri 如今已經穿上巴薩球衣。庫庫雷利亞、Yan Diomande 與女子組的 Felicia Schröder 也出席。",
           "source": "ESPN、Sky Sports",
           "url": "https://www.espn.com/soccer/story/_/id/50286844/real-madrid-end-ballon-dor-boycott-kylian-mbappe-nominated",
           "when": "10 月 26 日（週一）"
         },
         {
           "headline": "內馬爾在巴西甲級吃紅牌，巴伊亞發聲明譴責",
-          "summary": "桑托斯 1 比 0 贏巴伊亞（Bahia）的比賽中，34 歲的內馬爾（Neymar）因為跟對手 Nestor 爭吵時用手遮嘴，依「維尼修斯規則」被紅牌罰下。內馬爾承認遮嘴不對，但否認對 Nestor 說過任何話；巴伊亞週一發聲明，譴責球員遭到「言語辱罵」。",
+          "summary": "桑托斯 1 比 0 贏巴伊亞（Bahia）的比賽中，34 歲的內馬爾（Neymar）因為跟對手 Nestor 爭吵時用手遮嘴，依「維尼修斯規則」被紅牌罰下。內馬爾承認遮嘴不對，但否認對 Nestor 說過任何話；巴伊亞發聲明，譴責球員遭到「言語辱罵」。",
           "source": "ESPN",
           "url": "https://www.espn.com/soccer/story/_/id/50286009/bahia-condemn-neymar-verbal-abuse-red-card",
-          "when": "10 月 24 日（賽事）；10 月 26 日（聲明）"
+          "when": "10 月 24 日（賽事）；10 月 26 日（報導）"
         },
         {
           "headline": "U15 世界盃：英格蘭球員因指控種族歧視退場，比賽中止",
-          "summary": "FIFA 首屆 U15 世界盃在亞塞拜然舉行，英格蘭對愛爾蘭共和國比賽進行到愛爾蘭 4 比 1 領先時，英格蘭球員在一名球員與對手發生衝突、並出現種族歧視指控後退場，裁判中止比賽。FIFA 說正在蒐集官方報告，將交給獨立紀律委員會處理。",
+          "summary": "FIFA U15 世界盃在亞塞拜然舉行，英格蘭對愛爾蘭共和國比賽進行到愛爾蘭 4 比 1 領先時，英格蘭球員在一名球員與對手發生衝突、並出現種族歧視指控後退場，裁判中止比賽。FIFA 說正在蒐集官方報告，將交給獨立紀律委員會處理。",
           "source": "ESPN",
           "url": "https://www.espn.com/soccer/story/_/id/50288676/england-u15-abandon-match-world-cup-alleged-racism",
           "when": "10 月 26 日（週一）"
@@ -201,11 +186,11 @@
     },
     {
       "type": "h",
-      "text": "接下來：金球獎之夜，然後是四個後衛的八天"
+      "text": "金球獎落幕之夜，與四個後衛的八天"
     },
     {
       "type": "p",
-      "text": "金球獎頒獎典禮是第 70 屆，在倫敦帕拉狄恩劇院（London Palladium）舉行，台灣時間 10 月 27 日（週二）04:00 開始。ESPN 把男子組的主要競爭者列為凱恩（Harry Kane）、巴薩的亞馬爾（Lamine Yamal）與姆巴佩，衛冕者是登貝萊（Ousmane Dembélé），梅西（Lionel Messi）也在名單內；女子組有巴薩的普特亞斯（Alexia Putellas）、Ewa Pajor、Melchie Dumornay 等人，要接手邦馬蒂（Aitana Bonmatí）連拿三年的獎項。",
+      "text": "第 70 屆金球獎在倫敦帕拉狄恩劇院（London Palladium）舉行，台灣時間 10 月 27 日（週二）04:00 開典禮，你讀到時多半已經頒完，得獎名單請看官方公布。ESPN 開賽前點名的男子組主要競爭者是凱恩（Harry Kane）、巴薩的亞馬爾（Lamine Yamal）與姆巴佩，衛冕者是登貝萊（Ousmane Dembélé）；女子組有普特亞斯（Alexia Putellas）、巴薩的 Ewa Pajor 等人。",
       "tag": "報導"
     },
     {
@@ -243,15 +228,15 @@
           "主場"
         ]
       ],
-      "caption": "依 ESPN 賽程（UTC）換算台灣時間，10 月 27 日 02:40 前後查閱。"
+      "caption": "依 ESPN 賽程換算台灣時間。"
     },
     {
       "type": "p",
-      "text": "賽程表上，11 月 9 日去馬競那場最燙：兩隊現在只差 2 分。再往後是國際賽事週，Olmo 那時才有機會回來。"
+      "text": "賽程表上，11 月 9 日去馬競那場最燙：兩隊現在只差 2 分。Olmo 要等 11 月國際賽事週之後才可能復出。"
     },
     {
       "type": "p",
-      "text": "四個後衛、八天、三場比賽。弗利克說球隊缺的是新鮮感，他的後防現在缺的，先是人。"
+      "text": "四個後衛、八天、三場比賽。弗利克說球隊缺的是體力，他的後防現在缺的，先是人。"
     }
   ],
   "sources": [
@@ -260,14 +245,14 @@
       "publisher": "FC Barcelona",
       "date": "2026-10-26",
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4599042/xavi-espart-injury-news",
-      "note": "診斷為右腳踝 syndesmosis 傷、約缺陣七週；頁面只顯示相對發布時間（約 5 小時前），10 月 27 日 02:40 前後查閱"
+      "note": "診斷為右腳踝 syndesmosis 傷、約缺陣七週；頁面只顯示相對發布時間（約 5 小時前），10 月 27 日 02:40 前後查閱；Christensen、Koundé、García 的確切復出日期，巴薩官網與 ESPN 兩處都沒有公布"
     },
     {
       "title": "Barcelona's Xavi Espart to set to be out for seven weeks with ankle injury",
       "publisher": "ESPN",
       "date": "2026-10-26",
       "url": "https://www.espn.com/soccer/story/_/id/50287697/xavi-espart-barcelona-ankle-injury-spanish-la-liga-champions-league",
-      "note": "可用後衛僅四人、Espart 由中場改後衛、Christensen 與孔德最接近復出"
+      "note": "可用後衛僅四人、Espart 開季踢左後衛、上週因孔德與 García 受傷改踢右後衛、Christensen 與孔德最接近復出"
     },
     {
       "title": "Pedri says Barcelona paid for stupid mistakes in loss to Real Madrid",
@@ -281,7 +266,7 @@
       "publisher": "ESPN",
       "date": "2026-10-25",
       "url": "https://www.espn.com/soccer/story/_/id/50282227/jose-mourinho-barcelona-real-madrid-play-win-league",
-      "note": "穆里尼奧賽後記者會引文"
+      "note": "穆里尼奧賽後記者會引文；原文為「next weekend」客場 Racing Santander；11 月 1 日（週日）23:15 台灣時間開球由審稿編輯提供，未另行核對"
     },
     {
       "title": "Real Madrid best Barça in brilliant Clásico; Man United mess deepens; Spurs win again",
@@ -316,7 +301,7 @@
       "publisher": "FC Barcelona",
       "date": "2026-10-26",
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4598953/raphinha-scores-again",
-      "note": "對皇馬第 8 球；本季第 15 球見 ESPN 佩德里報導"
+      "note": "對皇馬第 8 球；本季各項賽事第 15 球見 ESPN 佩德里報導（原文「of the campaign」）"
     },
     {
       "title": "Spanish LALIGA standings",
@@ -330,13 +315,14 @@
       "publisher": "ESPN",
       "date": "2026-10-26",
       "url": "https://www.espn.com/soccer/team/fixtures/_/id/83/barcelona",
-      "note": "賽程（UTC 換算台灣時間）"
+      "note": "賽程（UTC 換算台灣時間），10 月 27 日 02:40 前後查閱"
     },
     {
       "title": "Man United head coach Michael Carrick leaves Carrington amid doubts over his future",
       "publisher": "ESPN（PA）",
       "date": "2026-10-26",
-      "url": "https://www.espn.com/soccer/story/_/id/50287797/man-united-michael-carrick-pressure-carrington-omar-berrada-jason-wilcox"
+      "url": "https://www.espn.com/soccer/story/_/id/50287797/man-united-michael-carrick-pressure-carrington-omar-berrada-jason-wilcox",
+      "note": "曼聯八場英超僅 7 分，為 1986 年以來最差開局"
     },
     {
       "title": "Sources: United consider Howe, Nagelsmann to replace under-fire Carrick",
@@ -355,7 +341,8 @@
       "title": "Real Madrid to end Ballon d'Or boycott with Kylian Mbappé nominated - sources",
       "publisher": "ESPN",
       "date": "2026-10-26",
-      "url": "https://www.espn.com/soccer/story/_/id/50286844/real-madrid-end-ballon-dor-boycott-kylian-mbappe-nominated"
+      "url": "https://www.espn.com/soccer/story/_/id/50286844/real-madrid-end-ballon-dor-boycott-kylian-mbappe-nominated",
+      "note": "皇馬出席典禮的消息（原文為賽前報導）"
     },
     {
       "title": "Rodri transfer news: Barcelona complete £65.4m signing of Spain midfielder from Man City",
@@ -369,19 +356,42 @@
       "publisher": "ESPN",
       "date": "2026-10-26",
       "url": "https://www.espn.com/soccer/story/_/id/50259091/2026-ballon-dor-live-updates-winners-results-reaction",
-      "note": "第 70 屆、主要競爭者名單（直播頁開場介紹）"
+      "note": "第 70 屆、主要競爭者名單（直播頁開場介紹）；賽前頁面，無得獎結果"
+    },
+    {
+      "title": "Ballon d'Or 2026: Date, time, voting, odds, favourites, all-time winners, BOAT explained - everything you need to know",
+      "publisher": "Sky Sports",
+      "date": "2026-10-26",
+      "url": "https://www.skysports.com/football/news/13601899/ballon-dor-2026-date-time-voting-odds-favourites-all-time-winners-boat-explained-everything-you-need-to-know",
+      "note": "典禮在帕拉狄恩劇院，當地 10 月 26 日 20:00 開始（= 台灣時間 10 月 27 日 04:00）"
+    },
+    {
+      "title": "Ballon d'Or 2026: How to watch and live stream for FREE: Online streams, TV channels, date, start time",
+      "publisher": "Goal",
+      "date": "2026-10-26",
+      "url": "https://www.goal.com/en-gb/news/watch-live-stream-ballon-d-or-2026-free/blt3d7b2d6ac2eb8781",
+      "note": "開始時間 20:00 GMT；搜尋摘要另有一處時區說法不一致，以 Sky 與 Goal 主文為準"
+    },
+    {
+      "title": "Alexia Putellas news: Barcelona and Spain midfielder joins London City Lionesses on a free transfer",
+      "publisher": "Sky Sports",
+      "date": "2026-07-08",
+      "url": "https://www.skysports.com/football/news/13548205/alexia-putellas-news-barcelona-and-spain-midfielder-joins-london-city-lionesses-on-a-free-transfer",
+      "note": "普特亞斯今夏已轉去 London City Lionesses"
     },
     {
       "title": "Bahia condemn Neymar for 'verbal abuse' after red card",
       "publisher": "ESPN",
       "date": "2026-10-26",
-      "url": "https://www.espn.com/soccer/story/_/id/50286009/bahia-condemn-neymar-verbal-abuse-red-card"
+      "url": "https://www.espn.com/soccer/story/_/id/50286009/bahia-condemn-neymar-verbal-abuse-red-card",
+      "note": "聲明日期原文未載，僅知比賽為 10 月 24 日（週六）"
     },
     {
       "title": "England U15s walk off after alleged racism in World Cup game vs. Republic of Ireland",
       "publisher": "ESPN",
       "date": "2026-10-26",
-      "url": "https://www.espn.com/soccer/story/_/id/50288676/england-u15-abandon-match-world-cup-alleged-racism"
+      "url": "https://www.espn.com/soccer/story/_/id/50288676/england-u15-abandon-match-world-cup-alleged-racism",
+      "note": "「首屆」原文未載，本文不寫"
     },
     {
       "title": "Pau Cubarsi France v Spain 7.24.26-042",
