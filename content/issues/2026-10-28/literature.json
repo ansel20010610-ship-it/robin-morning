@@ -1,0 +1,320 @@
+{
+  "column": "literature",
+  "date": "2026-10-28",
+  "title": "一行流淚的詩，下一句是「別怕」",
+  "dek": "落難的埃涅阿斯在迦太基神廟牆上看見自己的戰爭，哭著說了一行詩。後人把它印上王室悼念版畫、寫進教宗通諭，他接著說的「放下恐懼」沒有跟著走。",
+  "brief": "1794 年倫敦一張悼念路易十六一家的版畫，印著一行拉丁文：維吉爾《埃涅阿斯紀》的 sunt lacrimae rerum。在詩裡，這是剛遇海難的埃涅阿斯在迦太基神廟看見特洛伊戰爭壁畫時說的，下一句是「放下恐懼，這名聲會給你帶來幾分平安」。德萊頓的英譯沒有譯出這一句。",
+  "topic_key": "literature:vergilius-aeneis-1-462",
+  "updated_at": "2026-10-28T02:54:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "illustration",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Helas_voy%C3%A9s_-_sunt_lacrimae_rerum_et_mentem_mortalia_langunt..._-_estampe_-_De_Rigny_inven.t_%3B_Bartolozzi..._direx.t_-_btv1b84123371.jpg/1280px-Helas_voy%C3%A9s_-_sunt_lacrimae_rerum_et_mentem_mortalia_langunt..._-_estampe_-_De_Rigny_inven.t_%3B_Bartolozzi..._direx.t_-_btv1b84123371.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Helas_voy%C3%A9s_-_sunt_lacrimae_rerum_et_mentem_mortalia_langunt..._-_estampe_-_De_Rigny_inven.t_%3B_Bartolozzi..._direx.t_-_btv1b84123371.jpg/3840px-Helas_voy%C3%A9s_-_sunt_lacrimae_rerum_et_mentem_mortalia_langunt..._-_estampe_-_De_Rigny_inven.t_%3B_Bartolozzi..._direx.t_-_btv1b84123371.jpg",
+    "width": 1280,
+    "height": 1903,
+    "alt": "一張直式的單色版畫。一位穿長裙、披著薄紗的年輕女子斜坐在一面大圓盾上，仰頭望向上方，右手掀開一大片垂下的布幔；布幔後方的台座上立著三只甕，其中一只頂著王冠，甕座上刻有日期。女子腳邊臥著一隻羔羊，右下角有一株百合，周圍纏著幾條蛇。畫面下方是大寫標題 HELAS VOYES、一行草體拉丁文，以及左右兩欄西班牙文與英文說明，中間是一枚紋章。",
+    "caption": "1794 年 10 月 25 日在倫敦出版的悼念版畫，標題是法文「Helas voyes」（唉，請看）。標題下那行拉丁文，就是《埃涅阿斯紀》第 1 卷第 462 行。依畫下的英文說明，掀開布幔的是扮成「天真」的皇家公主，墓裡是路易十六、瑪麗・安東妮與伊莉莎白夫人的遺骸。",
+    "credit": "德里尼（De Rigny）構圖，巴爾托洛齊（Francesco Bartolozzi）監製；法國國家圖書館藏（Hennin 11977），經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Helas_voy%C3%A9s_-_sunt_lacrimae_rerum_et_mentem_mortalia_langunt..._-_estampe_-_De_Rigny_inven.t_;_Bartolozzi..._direx.t_-_btv1b84123371.jpg",
+    "made": "1794"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1794 年 10 月 25 日，倫敦聖詹姆士街一家版畫店出了一張悼念版畫。一個年輕女子斜坐在盾牌上，伸手掀開一大片布幔，布幔後面立著三只甕，甕座上刻著三個日期：1793 年 1 月 21 日、1793 年 10 月 16 日、1794 年 5 月 10 日。畫下的英文說明寫得清楚：她是扮成「天真」的皇家公主，墓裡是路易十六、瑪麗・安東妮和伊莉莎白夫人。三個日期，就是這三個人上斷頭台的日子。"
+    },
+    {
+      "type": "p",
+      "text": "落款是「兩位流亡的法國紳士」，題獻給西班牙國王卡洛斯四世。大標題是法文，「唉，請看」。標題下面只有一行拉丁文，注明出自維吉爾的《埃涅阿斯紀》，是第 1 卷第 462 行，開頭三個字是 sunt lacrimae rerum，大意是「有為世事而流的淚」。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.69, 0.36, 0.28, 0.24],
+      "position": "畫面右側中段，布幔下方的台座",
+      "caption": "三只甕座上的日期，由左至右刻著「16 8bre 1793」「10 May 1794」「21 janvier 1793」。"
+    },
+    {
+      "type": "p",
+      "text": "這行詩後來還有別的去處。李斯特的鋼琴曲集《巡禮之年》第三年，第 5 首就拿它當標題，加註「匈牙利風格」，題獻給指揮家畢羅（Hans von Bülow）。2020 年 10 月，教宗方濟各在通諭《眾位弟兄》（Fratelli tutti）談疫情的那一節也引了它。他先說自己不想談神的懲罰，接著說這個世界本身在吶喊反抗，讓人想起維吉爾那句「事物的眼淚」，也就是人生與歷史的種種不幸。"
+    },
+    {
+      "type": "p",
+      "text": "版畫和通諭都只取了這一行。在詩裡，埃涅阿斯說完並沒有停，下一句是「放下恐懼吧」。說這兩句話的人，當時剛從海難爬上岸，在一座陌生的城裡，誰也看不見他。"
+    },
+    {
+      "type": "h",
+      "text": "裹在霧裡的難民"
+    },
+    {
+      "type": "p",
+      "text": "《埃涅阿斯紀》第一行就交代主角是被命運趕出特洛伊、一路流亡到義大利的人，第四行再交代他為什麼吃這麼多苦：殘酷的朱諾記著仇。第 1 卷裡，朱諾找上風神，要他把力量打進風裡、把船淹掉。埃涅阿斯一行人撐過風暴，筋疲力盡地轉向最近的岸，那是利比亞。維吉爾在開頭還特別提過，朱諾愛迦太基勝過世上任何一塊土地。"
+    },
+    {
+      "type": "p",
+      "text": "上岸那一段，維吉爾說這群人 fessi rerum。19 世紀牛津的拉丁文教授康寧頓（John Conington）注這兩個字，說是「跟命運搏鬥搏到累垮了」，還特別要讀者拿它去對照第 462 行的 lacrimae rerum。同一個 rerum，在這一卷先出現的時候，是特洛伊人自己扛著的那些事。"
+    },
+    {
+      "type": "p",
+      "text": "接著，他的母親維納斯扮成斯巴達少女獵人來到他面前。他報上名號：「我是虔敬的埃涅阿斯，名聲傳到天上。」沒過幾行，又說：「我在尋找義大利，我的祖國。」再過幾行：「我自己無人認識，一無所有，在利比亞的荒地上流浪。」名聲傳到天上和無人認識，是同一個人在同一段話裡說的。維納斯後來用一團濃霧把他和同伴阿卡特斯裹起來。他走進正在興建的迦太基城，混在人群裡，沒有一個人看得見他。"
+    },
+    {
+      "type": "p",
+      "text": "城中央有一片聖林，女王狄朵正在那裡為朱諾蓋一座大神廟。維吉爾說，埃涅阿斯在這片林子裡第一次敢期望得救。他在廟裡等女王，一樣一樣看過去，牆上依序畫著特洛伊戰爭：阿特柔斯家的兩兄弟、特洛伊老王普里阿摩斯，還有對兩邊都一樣殘忍的阿基里斯。他停下腳步，流著淚對阿卡特斯說：現在還有哪個地方，世上還有哪一塊土地，不是滿滿我們的苦難？然後是這三行："
+    },
+    {
+      "type": "quote",
+      "original": "En Priamus! Sunt hic etiam sua praemia laudi;\nsunt lacrimae rerum et mentem mortalia tangunt.\nSolve metus; feret haec aliquam tibi fama salutem.",
+      "text": "你看，普里阿摩斯！在這裡，功勳也有它的報償；這裡有為世事而流的淚，凡人的遭遇也打動人心。放下恐懼吧；這份名聲會給你帶來幾分平安。",
+      "cite": "維吉爾《埃涅阿斯紀》第 1 卷第 461–463 行"
+    },
+    {
+      "type": "p",
+      "text": "「平安」原文是 salutem，就是前面「第一次敢期望得救」的那個「得救」。同一個字，在二十行裡用了兩次。"
+    },
+    {
+      "type": "p",
+      "text": "「名聲」也一樣。他對維納斯說自己名聲傳到天上的時候，人還在荒地上流浪。走進神廟，維吉爾說牆上那些戰爭的名聲早已傳遍全世界。到了第 463 行，他告訴阿卡特斯，會救他們的就是「這份名聲」，康寧頓把這裡的 fama 注成「人們知道我們的光榮」。不久前還說自己無人認識的人，在一面牆上發現全世界都知道他的戰爭。"
+    },
+    {
+      "type": "h",
+      "text": "眼淚是誰的"
+    },
+    {
+      "type": "p",
+      "text": "lacrimae 是眼淚，複數；rerum 是 res 的複數屬格，res 可以是事、物、處境、遭遇。拉丁文的屬格可以朝兩個方向讀：為事物流的淚，或者事物自己流的淚。原文不必選，翻成英文或中文就非選不可。上面那句「為世事而流的淚」是我選的，下面是另外幾次選擇。"
+    },
+    {
+      "type": "table",
+      "title": "同一行，五種落法",
+      "head": ["誰、哪一年", "譯文或用法", "淚落在哪裡"],
+      "rows": [
+        ["德萊頓英譯，1697", "Ev'n the mute walls relate the warrior's fame, / And Trojan griefs the Tyrians' pity claim.", "迦太基的泰爾人憐憫特洛伊的悲痛；下一句「放下恐懼」沒有譯"],
+        ["康寧頓注本，1876", "here too there are tears for human fortune, and hearts which are touched by mortality.", "為人的命運而流的淚"],
+        ["麥凱爾散文譯本，1885", "here mortal estate touches the soul to tears.", "眼淚和觸動併成一件事，凡人的處境讓人落淚"],
+        ["威廉斯譯本，1910", "Here also there be tears for what men bear, and mortal creatures feel each other's sorrow. Therefore, have no fear!", "為人所承受的事而流；下一句前面加了「所以」"],
+        ["教宗方濟各《眾位弟兄》第 34 節，2020", "The world is itself crying out in rebellion. We are reminded of the well-known verse of the poet Virgil that evokes the \"tears of things\"", "世界自己在吶喊，接著引「事物的眼淚」"]
+      ],
+      "caption": "英文依各版原文照錄。德萊頓與麥凱爾依 Project Gutenberg，康寧頓與威廉斯依 Perseus 數位圖書館，通諭依梵蒂岡網站英文版。"
+    },
+    {
+      "type": "p",
+      "text": "德萊頓把流淚的人直接寫出來：迦太基城裡的泰爾移民，在為特洛伊人難過。這樣譯很清楚，代價是他跳過了「放下恐懼」，譯文接下去就是「他說完，眼淚找到了現成的出路」。威廉斯反過來，在「別怕」前面多放了一個「所以」，原文其實沒有這個字。我覺得他加得對。"
+    },
+    {
+      "type": "h",
+      "text": "塞爾維烏斯說這是結論"
+    },
+    {
+      "type": "p",
+      "text": "4 世紀末到 5 世紀初，羅馬文法學家塞爾維烏斯（Servius）替維吉爾逐行作注。他對第 463 行只寫了一句判斷："
+    },
+    {
+      "type": "quote",
+      "original": "collectio est. nam ubi virtus praemia, adversa miserationem merentur, rite formido deponitur.",
+      "text": "這是結論。既然美德得到報償，不幸贏得憐憫，放下恐懼就合乎道理。",
+      "cite": "塞爾維烏斯注《埃涅阿斯紀》第 1 卷第 463 行（Thilo 校訂本，1881）"
+    },
+    {
+      "type": "p",
+      "text": "前一行的注把前提也補齊了。「你看，普里阿摩斯」是在讚美這幅畫：畫出來的不像影像，幾乎就是普里阿摩斯本人。把戰爭畫出來的人，既愛勇德，也會被憐憫觸動；埃涅阿斯原本一直擔心非洲人的性情，看了畫就放下了。至於 mortalia，他解成「凡人注定要承受的不幸」，也記下別人的解法：凡人的遭遇，或者乾脆就是希臘文裡說的「人間事」。照這樣讀，第 462 行是一個前提：這裡的人會為別人的苦難掉眼淚，所以我們在這裡是安全的。"
+    },
+    {
+      "type": "p",
+      "text": "我站塞爾維烏斯這邊。這番話是說給一個跟他一起流落異鄉的同伴聽的，要讓對方放心，眼淚就得是迦太基人的眼淚。讓萬物替人類哭，句子很美，用在版畫和通諭上也很合適，但放回原處，「放下恐懼」就接不上了。"
+    },
+    {
+      "type": "p",
+      "text": "倒是 1794 年那張版畫，依我看離埃涅阿斯的處境比通諭近得多。說明文字講，公主靠著的盾牌上是反法同盟各國的紋章，是「她一切希望的來源」；腳邊一株幼小的百合，從蛇群裡抬起頭來。兩個流亡的人在倫敦印一張畫，獻給西班牙國王，指望的正是異國的眼淚和庇護。他們只印了第 462 行。"
+    },
+    {
+      "type": "h",
+      "text": "維吉爾說那是一幅空的畫"
+    },
+    {
+      "type": "p",
+      "text": "埃涅阿斯說完，緊接著的一行是：他這樣說著，用一幅空的畫餵養自己的心，一再嘆息，淚水像大河一樣沾濕了臉。德萊頓照譯了「空的畫」，麥凱爾改成「畫出來的景象」，那個「空」不見了。塞爾維烏斯對這個字給了兩種解釋："
+    },
+    {
+      "type": "quote",
+      "original": "inani epitheton est picturae, aut quia caret corporum quae imitatur plenitudine, aut quia nullius est utilitatis, sed tantum delectat",
+      "text": "「空」是形容畫的：或者因為它缺少所模仿的那些身體的實體，或者因為它毫無用處，只供人賞玩。",
+      "cite": "塞爾維烏斯注《埃涅阿斯紀》第 1 卷第 464 行"
+    },
+    {
+      "type": "p",
+      "text": "他還記下第三種說法：有人認為「空」指的是那顆發愣的心，連空的東西都能讓它動容。不管取哪一種，這個「空」都是維吉爾以敘事者的身分加上去的，就貼在那段樂觀的推論後面。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "我會再多看兩眼這面牆是誰的。廟是為朱諾蓋的，第 1 卷開頭就說她記仇，也說她最愛迦太基。牆上有一幅，特洛伊婦女披著頭髮、捧著袍子去求那位對她們不公的帕拉斯，女神把臉轉開，眼睛盯著地面。在敵人的神廟裡，把一面畫著女神拒絕特洛伊人的牆讀成同情，我猜維吉爾是故意讓讀者比埃涅阿斯多擔一分心。塞爾維烏斯說這兩行是結論，我同意；結論站不站得住，是另一回事。"
+    },
+    {
+      "type": "h",
+      "text": "他在牆上認出自己"
+    },
+    {
+      "type": "p",
+      "text": "他繼續往下看，邊看邊哭。色雷斯王瑞索斯雪白的帳篷，在第一場睡夢裡被出賣，狄俄墨得斯血洗營地，把戰馬趕走。少年特洛伊羅斯丟了武器，被馬拖著跑，仰面掛在一輛空了的戰車上，手裡還抓著韁繩，脖子和頭髮拖過地面，倒轉的長矛在塵土上劃出痕跡。那個「空」，和十二行前「空的畫」是同一個字。"
+    },
+    {
+      "type": "p",
+      "text": "畫到阿基里斯已經拖著赫克托耳繞特洛伊城三圈，正拿屍體換黃金，旁邊是普里阿摩斯伸出沒有武器的雙手，他才從胸口深處發出一聲很大的哀號。再往下，他認出了自己，混在希臘將領之間廝殺。"
+    },
+    {
+      "type": "p",
+      "text": "一個裹在霧裡、沒有人看得見的人，在別人的牆上找到了自己。他還站在那裡發愣，目光釘在一處移不開，女王狄朵就在一大群年輕人簇擁下，走進了神廟。"
+    },
+    {
+      "type": "facts",
+      "title": "作品與版本",
+      "items": [
+        ["作者", "維吉爾（Publius Vergilius Maro，公元前 70–前 19）"],
+        ["作品", "《埃涅阿斯紀》（Aeneis），拉丁文史詩，12 卷；約寫於公元前 29–前 19 年。維吉爾死時未完成，奧古斯都命遺稿執行人瓦里烏斯與圖卡出版"],
+        ["本文所談", "第 1 卷第 459–465 行（埃涅阿斯在朱諾神廟看見特洛伊戰爭壁畫），第 462 行為 sunt lacrimae rerum et mentem mortalia tangunt"],
+        ["本文依據版本", "J. B. Greenough 校訂本（Boston: Ginn & Co.，1900），Perseus 數位圖書館；以拉丁文維基文庫 Aeneis/Liber I 對照"],
+        ["古代與近代注釋", "塞爾維烏斯注，Georg Thilo 校訂（Leipzig: Teubner，1881）；John Conington 注本（London: Whittaker，1876）。皆據 Perseus"],
+        ["英譯", "John Dryden（1697），Project Gutenberg #228；J. W. Mackail（London: Macmillan，1885），Project Gutenberg #22456；Theodore C. Williams（Boston: Houghton Mifflin，1910），Perseus"],
+        ["中文引文", "拉丁文與英文的中文皆本報翻譯"]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Vergil, Aeneid, Book 1（J. B. Greenough 校訂，1900）",
+      "publisher": "Perseus Digital Library, Tufts University",
+      "date": "1900",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0055%3Abook%3D1%3Acard%3D441",
+      "note": "card 441（行 441–463）、card 464（行 464–493）；另讀 card 1（行 1–11）、card 12（行 12–33）、card 157（行 157–179）、card 372（行 372–386）。原句在第 462 行"
+    },
+    {
+      "title": "Aeneis/Liber I",
+      "publisher": "拉丁文維基文庫（Vicifons）",
+      "date": "",
+      "url": "https://la.wikisource.org/wiki/Aeneis/Liber_I",
+      "note": "附長音符號的對照本；第 65–69 行朱諾與風神、第 314–316 行維納斯的裝扮、第 439–440 行裹霧入城據此核對"
+    },
+    {
+      "title": "Servius, Commentary on the Aeneid of Vergil, Book 1（Georg Thilo 校訂，1881）",
+      "publisher": "Perseus Digital Library, Tufts University",
+      "date": "1881",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0053%3Abook%3D1%3Acard%3D441",
+      "note": "card 441：第 461、462、463 行注；card 464：第 464 行 inani 注"
+    },
+    {
+      "title": "Servius, Commentary on the Aeneid of Vergil, Book 1, lines 464–493",
+      "publisher": "Perseus Digital Library, Tufts University",
+      "date": "1881",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0053%3Abook%3D1%3Acard%3D464"
+    },
+    {
+      "title": "John Conington, Commentary on Vergil's Aeneid, Volume 1（1876）",
+      "publisher": "Perseus Digital Library, Tufts University",
+      "date": "1876",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0050%3Abook%3D1%3Acard%3D441",
+      "note": "card 441：第 459–463 行注，第 461 行注含 462 行譯解；card 157：第 178 行 fessi rerum 注，並註「Comp. also v. 462」"
+    },
+    {
+      "title": "John Conington, Commentary on Vergil's Aeneid, Volume 1, lines 157–179",
+      "publisher": "Perseus Digital Library, Tufts University",
+      "date": "1876",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0050%3Abook%3D1%3Acard%3D157"
+    },
+    {
+      "title": "The Aeneid, translated by John Dryden",
+      "publisher": "Project Gutenberg（eBook #228）",
+      "date": "1995-03-01",
+      "url": "https://www.gutenberg.org/ebooks/228",
+      "note": "第 1 卷 \"He stopp'd, and weeping said\" 至 \"And with an empty picture fed his mind\"；Perseus 將此段對應 1.441–463，其中無第 463 行的對應句"
+    },
+    {
+      "title": "John Dryden",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/John_Dryden",
+      "note": "The Works of Virgil（1697）"
+    },
+    {
+      "title": "The Aeneid of Virgil, translated by J. W. Mackail（London: Macmillan, 1885）",
+      "publisher": "Project Gutenberg（eBook #22456）",
+      "date": "1885",
+      "url": "https://www.gutenberg.org/ebooks/22456",
+      "note": "第 1 卷 [457–491] 段"
+    },
+    {
+      "title": "Vergil, Aeneid, translated by Theodore C. Williams（1910）",
+      "publisher": "Perseus Digital Library, Tufts University",
+      "date": "1910",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0054%3Abook%3D1%3Acard%3D441"
+    },
+    {
+      "title": "Fratelli tutti, Encyclical Letter of the Holy Father Francis on Fraternity and Social Friendship",
+      "publisher": "The Holy See（vatican.va）",
+      "date": "2020-10-03",
+      "url": "https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20201003_enciclica-fratelli-tutti.html",
+      "note": "第 34 節與註 33（Cf. Aeneid 1, 462）"
+    },
+    {
+      "title": "Années de pèlerinage III, S.163 (Liszt, Franz)",
+      "publisher": "IMSLP",
+      "date": "",
+      "url": "https://imslp.org/wiki/Ann%C3%A9es_de_p%C3%A8lerinage_III,_S.163_(Liszt,_Franz)",
+      "note": "第 5 首 Sunt lacrimae rerum, en mode hongrois；第 5 首題獻 Hans von Bülow；曲集 1883 年首次出版"
+    },
+    {
+      "title": "Lacrimae rerum",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Lacrimae_rerum",
+      "note": "rerum 的屬格可作受詞屬格或主詞屬格兩讀；維吉爾生卒年與作品寫作年代"
+    },
+    {
+      "title": "Aeneid",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Aeneid",
+      "note": "寫於公元前 29–前 19 年；維吉爾死時未完成，奧古斯都命 Varius 與 Tucca 出版"
+    },
+    {
+      "title": "Servius the Grammarian",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Servius_the_Grammarian",
+      "note": "4 世紀末、5 世紀初的羅馬文法學家"
+    },
+    {
+      "title": "File:Helas voyés - sunt lacrimae rerum et mentem mortalia langunt... - estampe - De Rigny inven.t ; Bartolozzi... direx.t - btv1b84123371.jpg",
+      "publisher": "Wikimedia Commons（法國國家圖書館藏本）",
+      "date": "1794-10-25",
+      "url": "https://commons.wikimedia.org/wiki/File:Helas_voy%C3%A9s_-_sunt_lacrimae_rerum_et_mentem_mortalia_langunt..._-_estampe_-_De_Rigny_inven.t_;_Bartolozzi..._direx.t_-_btv1b84123371.jpg",
+      "note": "出版日期、店址、題獻、英文說明與甕座日期均依影像逐字讀出：London Pub. as the Act directs Oct. 25th 1794, by Anthony Molteno Printseller No 76 St James's Street；BnF 著錄標題作 langunt，影像上的字較像 tangunt，正文不引此字"
+    },
+    {
+      "title": "Louis XVI",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Louis_XVI",
+      "note": "1793 年 1 月 21 日上斷頭台"
+    },
+    {
+      "title": "Marie Antoinette",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Marie_Antoinette",
+      "note": "1793 年 10 月 16 日上斷頭台；女兒瑪麗－泰瑞莎稱 Madame Royale"
+    },
+    {
+      "title": "Élisabeth of France",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/%C3%89lisabeth_of_France",
+      "note": "1764 年 5 月 3 日至 1794 年 5 月 10 日，上斷頭台"
+    }
+  ]
+}
