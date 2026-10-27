@@ -140,14 +140,20 @@ function scriptureEl(b) {
     <div class="src">譯本：${esc(b.version)}<br>${esc(b.source || "")}</div></section>`).firstElementChild;
 }
 
+// Only the labels a reader needs (a guess, a reading, a made-up scene, a rumour) are shown. Where a fact comes from is
+// told in the sentence and the sources (STYLE.md section 3), so the older provenance labels (史料, 報導...) stay hidden.
+const SHOWN_TAGS = new Set(["推論", "詮釋", "本文讀法", "原創假設", "原創示範", "傳聞", "戰術推論"]);
+// The paper's own translations are noted once under the sources, not after every quote.
+const plainCite = (c) => c.replace(/本文自譯[；;，,]?\s*/g, "").replace(/[（(]\s*[）)]/g, "").replace(/[；;，,]\s*([）)])/g, "$1").replace(/[；;，,]\s*$/, "").trim();
+
 function block(b, figs) {
   switch (b.type) {
     case "p":
-      return html(`<p>${b.tag ? `<span class="tag" data-t="${esc(b.tag)}">${esc(b.tag)}</span>` : ""}${inline(b.text)}</p>`);
+      return html(`<p>${SHOWN_TAGS.has(b.tag) ? `<span class="tag" data-t="${esc(b.tag)}">${esc(b.tag)}</span>` : ""}${inline(b.text)}</p>`);
     case "h":
       return html(`<h2>${inline(b.text)}</h2>`);
     case "quote":
-      return html(`<blockquote>${b.original ? `<p class="orig">${esc(b.original)}</p>` : ""}<p class="zh">${inline(b.text || "")}</p>${b.cite ? `<cite>${inline(b.cite)}</cite>` : ""}</blockquote>`);
+      return html(`<blockquote>${b.original ? `<p class="orig">${esc(b.original)}</p>` : ""}<p class="zh">${inline(b.text || "")}</p>${b.cite && plainCite(b.cite) ? `<cite>${inline(plainCite(b.cite))}</cite>` : ""}</blockquote>`);
     case "list": {
       const tag = b.ordered ? "ol" : "ul";
       return html(`<${tag}>${(b.items || []).map((x) => `<li>${inline(x)}</li>`).join("")}</${tag}>`);

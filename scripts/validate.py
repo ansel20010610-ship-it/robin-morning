@@ -17,7 +17,7 @@ import sys
 import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (iter_reserve, RESERVE, BROWSER_IMAGE_TYPES, CJK, article_path, cjk_count, figures_of, http_get, image_key,  # noqa: E402
+from common import (ISSUES, ROOT, iter_reserve, RESERVE, BROWSER_IMAGE_TYPES, CJK, article_path, cjk_count, figures_of, http_get, image_key,  # noqa: E402
                     image_page, iter_articles, load_config, load_json, raw_image_ext)
 
 LENGTH = {  # (min, max) CJK characters in body
@@ -38,8 +38,23 @@ AI_PHRASES = ["值得一提的是", "不可否認", "毋庸置疑", "總而言�
               "神秘面紗", "一場旅程", "的旅程", "交織出", "譜寫", "完美詮釋", "長河中", "時光荏苒",
               "歷久彌新", "嘆為觀止", "史詩級", "讓我們一起", "在這個資訊爆炸", "不禁讓人"]
 STALE_WORDS = ["今天", "今日", "今晨", "今早", "昨天", "昨晚", "昨日", "明天", "本週", "這週", "上週", "本月", "創刊"]
-# The newsroom's own bookkeeping, which belongs in sources[].note, not in front of the reader (STYLE.md 0-2, rule 7).
+# The newsroom's own bookkeeping, which belongs in sources[].note, not in front of the reader (STYLE.md section 3).
 BACKSTAGE = ["本報沒有查證", "本報未查證", "本報無法查證", "本報無法核實", "截稿", "一併補報", "與內文不一致"]
+# The voice rules (STYLE.md sections 0-4) apply to issues from this date on and to every reserve.
+VOICE_SINCE = "2026-10-28"
+# Phrases this paper has worn out: one model writes every column, so each becomes everyone's tic (STYLE.md section 1).
+MACHINE = ["我的讀法", "本文的讀法", "本報的讀法", "本文推測", "本文推想", "本報推想", "由此推想", "這是本文的推論",
+           "本報補充", "本文不採", "不是定論", "我查不到", "沒查到", "本文自譯", "更扯的", "重點來了", "重點在",
+           "但事情還沒完", "好消息也有", "順帶一提", "也就是說", "換句話說", "白話說", "說到底", "好，回到", "回到正題",
+           "先別急著", "後面會", "下面會", "文末有", "今天帶走", "帶走這個", "帶走這句", "讀完你會帶走", "說得很直接",
+           "寫得很直接", "講得最白", "說得更白", "說得很白", "最毒", "很毒", "最酸", "很有畫面", "最有畫面", "最燙",
+           "最有看頭", "扯吧", "笑死", "這波", "超狠", "說真的", "恭喜，你", "換你是", "你一定在哪裡聽過", "你一定聽過",
+           "病人問：", "病人回診："]
+VOICE_TAGS = {"推論", "詮釋", "原創假設", "原創示範", "傳聞", "戰術推論"}
+SPEC_HEADS = ["問題：", "起始站位", "持球者的選項", "無球跑動", "對手的反應", "什麼條件下有效", "什麼情況下有效",
+              "怎麼破解", "失敗的風險", "第一眼", "構圖骨架", "明天看診怎麼用", "今天看診怎麼用", "要小心的地方",
+              "聽的時候注意", "喜歡的話，接著聽", "學界怎麼說", "先講清楚"]
+EXAMPLES = os.path.join(ROOT, "editorial", "examples")
 DEVOTION_HEADS = ["今日經文", "經文釋義", "與我的生活連結", "今日禱告"]
 LINK_START = re.compile(r"\[[^\]]+\]\(")
 # Same pattern as inline() in assets/util.js: an http(s) URL without spaces, holding at most one level of
@@ -138,6 +153,132 @@ def check_brief(brief, dek, d, E, W, col=None):
         W("brief 有 %d 個數字：挑最能說服人的三個就好，其他留在正文（STYLE.md 第七節）" % len(nums))
     if re.match(r"^\s*(本文|這篇|此文)", brief):
         W("brief 不要以「本文、這篇」開頭，直接講內容")
+
+
+CJK_RUN = re.compile(r"[\u4e00-\u9fff]+")
+
+
+def prose_of(art):
+    """The writer's own words: title, dek, brief and the body's paragraphs, headings and lists (no quotes, scripture, prayer)."""
+    out = [art.get(k) for k in ("title", "dek", "brief")]
+    for b in art.get("body") or []:
+        if not isinstance(b, dict):
+            continue
+        if b.get("type") in ("p", "h"):
+            out.append(b.get("text"))
+        elif b.get("type") in ("list", "callout"):
+            out += b.get("items") if isinstance(b.get("items"), list) else []
+            out.append(b.get("text"))
+    return "\n".join(x for x in out if isinstance(x, str))
+
+
+def grams(text, n):
+    return {run[i:i + n] for run in CJK_RUN.findall(text) for i in range(len(run) - n + 1)}
+
+
+def spans(text, flagged, n):
+    """The stretches of text covered by flagged n-grams, merged, longest first."""
+    out = set()
+    for run in CJK_RUN.findall(text):
+        hit = [False] * len(run)
+        for i in range(len(run) - n + 1):
+            if run[i:i + n] in flagged:
+                hit[i:i + n] = [True] * n
+        i = 0
+        while i < len(run):
+            if hit[i]:
+                j = i
+                while j < len(run) and hit[j]:
+                    j += 1
+                out.add(run[i:j])
+                i = j
+            else:
+                i += 1
+    return sorted(out, key=len, reverse=True)
+
+
+@functools.lru_cache(maxsize=None)
+def recent_grams(d, n=5):
+    """{n-gram: columns using it} over issue d and the 7 issues before it (the latest 7 for a reserve)."""
+    days = sorted(x for x in (os.listdir(ISSUES) if os.path.isdir(ISSUES) else []) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", x))
+    days = days[-7:] if d == "reserve" else [x for x in days if x <= d][-8:]
+    idx = {}
+    for day in days:
+        ddir = os.path.join(ISSUES, day)
+        for f in os.listdir(ddir):
+            if not f.endswith(".json"):
+                continue
+            try:
+                art = load_json(os.path.join(ddir, f))
+            except Exception:
+                continue
+            if isinstance(art, dict):
+                for g in grams(prose_of(art), n):
+                    idx.setdefault(g, set()).add(f[:-5])
+    return idx
+
+
+@functools.lru_cache(maxsize=None)
+def example_grams(n=7):
+    """n-grams of the model articles in editorial/examples (their body only, not the quotes or the notes on why)."""
+    out = set()
+    if not os.path.isdir(EXAMPLES):
+        return frozenset()
+    for f in os.listdir(EXAMPLES):
+        if f.endswith(".md"):
+            with open(os.path.join(EXAMPLES, f), encoding="utf-8") as fh:
+                text = fh.read()
+            text = text.split("## 為什麼它贏")[0]
+            out |= grams("\n".join(l for l in text.splitlines() if not l.startswith(">")), n)
+    return frozenset(out)
+
+
+def check_voice(art, d, col, W):
+    """STYLE.md sections 0-4: the tics, labels and scaffolding that make the paper read machine-made."""
+    text = prose_of(art)
+    body = [b for b in art.get("body") or [] if isinstance(b, dict)]
+    hits = [ph for ph in MACHINE if ph in text]
+    if hits:
+        W("機器腔（STYLE.md 第一節，一律改掉）：%s" % "、".join("「%s」" % h for h in hits))
+    src = json.dumps(art.get("sources") or [], ensure_ascii=False)
+    idx = recent_grams(str(d))
+    shared = {g for g in grams(text, 5) if len(idx.get(g, set()) - {col}) >= 2 and g not in src}
+    rep = spans(text, shared, 5)
+    if rep:
+        W("和最近 7 天其他欄位重複的詞組，換個說法（STYLE.md 第一節）：%s" % "、".join("「%s」" % x for x in rep[:10]))
+    copied = spans(text, grams(text, 7) & example_grams(), 7)
+    if copied:
+        W("和範文一樣的句子（術語與專名除外都要改寫，範文不是句型庫，STYLE.md 第一節）：%s" % "、".join("「%s」" % x for x in copied[:6]))
+    tags = [b.get("tag") for b in body if b.get("type") == "p" and isinstance(b.get("tag"), str) and b.get("tag")]
+    old = sorted({t for t in tags if t not in VOICE_TAGS})
+    if old:
+        W("出處類標籤不再使用，出處寫進句子與 sources（STYLE.md 第三節）：%s" % "、".join(old))
+    n = len([t for t in tags if t in VOICE_TAGS and not (col == "devotion" and t in ("詮釋", "推論"))])
+    if n > 3:
+        W("段落 tag %d 個：只標讀者真的會誤會的段落，最多 3 個（STYLE.md 第三節）" % n)
+    q = sum(1 for b in body if b.get("type") == "quote")
+    if q > 3:
+        W("quote 區塊 %d 個：最多 3 個，其餘改成轉述（STYLE.md 第四節）" % q)
+    for b in body:
+        h = b.get("text") if b.get("type") == "h" and isinstance(b.get("text"), str) else ""
+        if not h or (col == "devotion" and h in DEVOTION_HEADS):
+            continue
+        if any(x in h for x in SPEC_HEADS):
+            W("小標「%s」用了規格裡的分類詞，改寫成這一節的內容（STYLE.md 第〇節）" % h)
+        elif re.search(r"不是.+[，,、]\s*(而)?是", h) or h.rstrip().endswith(("？", "?")):
+            W("小標「%s」是「不是 X，是 Y」或問句的套路，直接寫內容（STYLE.md 第〇節）" % h)
+    ps = [b.get("text") for b in body if b.get("type") == "p" and isinstance(b.get("text"), str)]
+    if ps:
+        last = ps[-1]
+        if last.lstrip().startswith("下次"):
+            W("結尾段以「下次……」開頭：停在一個具體的東西上，不教讀者下次怎麼做（STYLE.md 第〇節）")
+        opening = "\n".join([ps[0] if len(ps) > 1 else "", art.get("dek") or "", art.get("brief") or ""])
+        again = spans(last, grams(last, 10) & grams(opening, 10), 10)
+        if again:
+            W("結尾重述了開頭或摘要：「%s」（STYLE.md 第〇節）" % again[0])
+    me = len(re.findall(r"我覺得|依我看|我猜|我最喜歡|我不太買單|我比較|我很欣賞", text))
+    if me > 5:
+        W("「我覺得／依我看」這類表態出現 %d 次，像定時插入：留兩三次真的有話要說的（STYLE.md 第〇節）" % me)
 
 
 def validate_file(cfg, d, col, path, check_urls=False, used_images=None, used_topics=None):
@@ -486,6 +627,8 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             W("正文出現查證流水帳「%s」：出處一句帶過，版本差異與查證過程寫進 sources 的 note（STYLE.md 第〇之二節第 7 條）" % ph)
     if "！！" in full or "!!" in full:
         W("避免連續驚嘆號")
+    if str(d) == "reserve" or str(d) >= VOICE_SINCE:
+        check_voice(art, d, col, W)
 
 
 def inline_texts(b):
