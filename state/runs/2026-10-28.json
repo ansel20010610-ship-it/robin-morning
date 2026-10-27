@@ -8,5 +8,13 @@
       "photo"
     ],
     "note": "devotion、music、perio 三篇完成審稿、總編重寫與忠實度核對並推送；validate 無 ERROR/WARN"
+  },
+  "2": {
+    "finished_at": "2026-10-28T02:20:07+08:00",
+    "missing": [
+      "football",
+      "literature"
+    ],
+    "note": "文明（馬穆魯克）與攝影（里斯 Bandits' Roost）各完成審稿、總編重寫、忠實度核對並推送；photo 字數 WARN 低於下限"
   }
 }
