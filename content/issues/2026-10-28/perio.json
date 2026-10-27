@@ -1,0 +1,163 @@
+{
+  "column": "perio",
+  "date": "2026-10-28",
+  "title": "生物寬度 2.04 毫米，是兩個平均數相加",
+  "dek": "後人以兩段相加稱 2.04 毫米；統合分析的平均在 2.15 到 2.30 毫米之間，受試樣本範圍卻從 0.2 到 6.73 毫米。",
+  "takeaway": "Gargiulo 等人量了 287 顆解剖標本的牙，上皮附著平均 0.97 毫米、結締組織附著 1.07 毫米，相加就是常說的 2.04；三段組織都有變異，結締組織附著的平均最穩定。Schmidt 等人的結論是，似乎不存在通用的生物寬度尺寸。",
+  "quiz": "生物寬度的 2.04 毫米，是哪兩個數字加起來的？",
+  "brief": "一篇系統性回顧中，生物寬度的受試樣本範圍從 0.2 到 6.73 毫米，結論是似乎不存在通用的尺寸。另一項兩年的追蹤裡，冠邊緣依離骨嵴遠近分三組，牙齦乳頭出血指數三組都上升，1 毫米以內那組升最多。",
+  "topic_key": "perio:doi:10.1902/jop.1961.32.3.261",
+  "updated_at": "2026-10-28T01:12:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Crownlen.jpg",
+    "width": 1007,
+    "height": 1007,
+    "alt": "牙冠增長術（crown lengthening）的照片：牙齦翻開，露出骨面與一截短小的牙，周圍滲血，右下有縫線。",
+    "caption": "Commons 上的說明是牙冠增長術（crown lengthening dental procedure）。把骨頭從修復邊緣旁移開，是修正生物寬度被侵犯的方法之一。一般臨床照片，與 Gargiulo 等人的論文無關。",
+    "credit": "DRosenbach，Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Crownlen.jpg",
+    "made": "2008"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "生物寬度（biologic width）出自 1961 年 Gargiulo 等人的解剖標本。他們把牙齦與牙齒交界（dentogingival junction）分成三段來量，齦溝平均 0.69 毫米，另外兩段是上皮附著（epithelial attachment）和結締組織附著（connective tissue attachment）。Ercoli 與 Caton 在文中提到，這批標本的三段都量到變異。"
+    },
+    {
+      "type": "p",
+      "text": "1994 年 Vacek 等人用 10 副成人屍體顎骨、171 個牙面也量了一次，平均與標準差是齦溝 1.34 ± 0.84、上皮附著 1.14 ± 0.49、結締組織附著 0.77 ± 0.32 毫米。上皮加結締組織是 1.91 毫米，這是我自己加的，和 2.04 差得不多。Vacek 的結論是結締組織附著也會變，只是分布和範圍比另外幾段窄。"
+    },
+    {
+      "type": "svg",
+      "title": "兩批標本的三段平均",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 330\"><text class=\"ink\" x=\"12\" y=\"20\" font-size=\"13\" font-weight=\"700\">牙齦與牙齒交界的三段，兩批標本的平均（毫米）</text><text class=\"ink\" x=\"123\" y=\"52\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">Gargiulo 1961</text><text class=\"ink\" x=\"259\" y=\"52\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">Vacek 1994</text><rect class=\"gold\" x=\"96\" y=\"195.8\" width=\"54\" height=\"64.2\"/><rect class=\"paper\" x=\"105\" y=\"221\" width=\"36\" height=\"15\" rx=\"2\"/><text class=\"ink\" x=\"123\" y=\"232.4\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">1.07</text><rect class=\"soft\" x=\"96\" y=\"137.6\" width=\"54\" height=\"58.2\"/><text class=\"ink\" x=\"123\" y=\"170.7\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">0.97</text><rect class=\"paper\" x=\"96\" y=\"96.2\" width=\"54\" height=\"41.4\"/><text class=\"ink\" x=\"123\" y=\"120.9\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">0.69</text><rect class=\"gold\" x=\"232\" y=\"213.8\" width=\"54\" height=\"46.2\"/><rect class=\"paper\" x=\"241\" y=\"229.6\" width=\"36\" height=\"15\" rx=\"2\"/><text class=\"ink\" x=\"259\" y=\"241\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">0.77</text><rect class=\"soft\" x=\"232\" y=\"145.4\" width=\"54\" height=\"68.4\"/><text class=\"ink\" x=\"259\" y=\"183.6\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">1.14</text><rect class=\"paper\" x=\"232\" y=\"65.0\" width=\"54\" height=\"80.4\"/><text class=\"ink\" x=\"259\" y=\"109.2\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">1.34</text><text class=\"muted\" x=\"88\" y=\"231.9\" font-size=\"12\" text-anchor=\"end\">結締組織附著</text><text class=\"muted\" x=\"88\" y=\"170.7\" font-size=\"12\" text-anchor=\"end\">上皮附著</text><text class=\"muted\" x=\"88\" y=\"120.9\" font-size=\"12\" text-anchor=\"end\">齦溝</text><text class=\"muted\" x=\"292\" y=\"240.9\" font-size=\"11\">結締組織附著</text><text class=\"muted\" x=\"292\" y=\"183.6\" font-size=\"11\">上皮附著</text><text class=\"muted\" x=\"292\" y=\"109.2\" font-size=\"11\">齦溝</text><line class=\"accent\" x1=\"156\" y1=\"137.6\" x2=\"162\" y2=\"137.6\" stroke-width=\"2\"/><line class=\"accent\" x1=\"162\" y1=\"137.6\" x2=\"162\" y2=\"260.0\" stroke-width=\"2\"/><line class=\"accent\" x1=\"156\" y1=\"259.0\" x2=\"162\" y2=\"259.0\" stroke-width=\"2\"/><text class=\"accent\" x=\"167\" y=\"194.8\" font-size=\"12\" font-weight=\"700\">合計 2.04</text><text class=\"accent\" x=\"167\" y=\"209.8\" font-size=\"11\">生物寬度</text><line class=\"ink\" x1=\"16\" y1=\"260\" x2=\"364\" y2=\"260\" stroke-width=\"2\"/><text class=\"muted\" x=\"16\" y=\"278\" font-size=\"12\">齒槽骨嵴</text><text class=\"muted\" x=\"190\" y=\"306\" font-size=\"11\" text-anchor=\"middle\">按比例畫的平均值，兩篇量的不是同一批牙</text><text class=\"muted\" x=\"190\" y=\"322\" font-size=\"11\" text-anchor=\"middle\">Vacek 上皮附著加結締組織附著為 1.91（自算）</text></svg>",
+      "caption": "原創圖解，依 Nugala 等（2012）轉述的 Gargiulo 等（1961）平均值與 Vacek 等（1994）摘要重繪；Vacek 兩段相加的 1.91 毫米是本報自算。兩篇各自的平均值，不是同一批牙。示意，按平均值比例，不代表個別牙齒。三段的堆疊順序僅為示意。"
+    },
+    {
+      "type": "p",
+      "text": "兩篇的標本並不相同。Vacek 那批顎骨的平均附著喪失是 2.92 ± 1.69 毫米；作者也發現，附著喪失多少，預測不了結締組織附著有多長。"
+    },
+    {
+      "type": "h",
+      "text": "14 篇研究，一句結論"
+    },
+    {
+      "type": "p",
+      "text": "Schmidt 等人 2013 年的系統性回顧收了 14 篇研究，兩組統合分析的平均在 2.15 到 2.30 毫米之間，個體內、個體間的差異卻都很大，受試樣本範圍從 0.2 到 6.73 毫米。牙齒種類與位置、有沒有修復物、牙周病或牙周手術，都會影響它；各研究的測法和結果指標也很不一致。"
+    },
+    {
+      "type": "quote",
+      "text": "似乎不存在通用的生物寬度尺寸。",
+      "original": "No universal dimension of the biologic width appears to exist.",
+      "cite": "Schmidt 等（2013）摘要"
+    },
+    {
+      "type": "p",
+      "text": "2017 年世界研討會把這個名詞改成齒槽嵴上組織附著（supracrestal tissue attachment），共識寫明它的冠根向尺寸是可變的。"
+    },
+    {
+      "type": "h",
+      "text": "邊緣離骨嵴 1 毫米以內"
+    },
+    {
+      "type": "p",
+      "text": "冠的鄰面邊緣放進生物寬度的範圍，牙周會不會變，Günay 等人追了兩年：41 名病人、116 顆備過的牙，冠邊緣到骨嵴的距離在兩個鄰面用改良探針量，分成 1 毫米以內、1 到 2 毫米、超過 2 毫米三組。兩年間口腔衛生指數沒有顯著變化，牙齦乳頭出血指數（PBI）三組都上升，1 毫米以內那組升最多，這組最顯著的上升落在備牙後第 3 到第 6 個月。"
+    },
+    {
+      "type": "p",
+      "text": "平均探測深度只有這一組在頭 3 個月的近心面增加；這組的遠心面和另外兩組各面，只有輕微變化。X 光片在黏著後、第 12 和第 24 個月各拍一次，都沒有診斷出骨高度改變。作者的結論是，邊緣放在生物寬度範圍內，可能損害修復牙的牙周健康。"
+    },
+    {
+      "type": "p",
+      "text": "2017 年的共識也認為，修復物邊緣侵入齒槽嵴上結締組織，和發炎、支持組織流失有關；是菌斑、創傷、牙材毒性，還是幾樣合在一起造成，共識說無法確定。邊緣放在接合上皮裡會怎樣，還需要更多研究。"
+    },
+    {
+      "type": "h",
+      "text": "備牙前後"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Schmidt 等人建議在評估生物寬度之前，先建立牙周健康。",
+        "穿齦探測（transgingival probing）和平行輪廓攝影（parallel profile radiography）量到的，是牙齦與牙齒交界單位（dentogingival unit）的尺寸；真正的生物寬度只能靠組織學評估。",
+        "牙齒種類與位置、有沒有修復物、牙周病或牙周手術，都會影響這段組織的尺寸。",
+        "邊緣已經吃進這段組織，Nugala 等人提到兩種修正方法：手術把骨頭從邊緣旁移開，或用矯正把牙拉出來，讓邊緣離開骨頭。",
+        "這條是我的建議：深邊緣的冠，回診除了看 X 光，也記下乳頭出血和近心面探測深度。Günay 那組的 PBI 三組都升，近心面探測深度只有第 I 組增加。"
+      ]
+    },
+    {
+      "type": "paper",
+      "citation": "Gargiulo AW, Wentz FM, Orban B. Dimensions and relations of the dentogingival junction in humans. *J Periodontol*. 1961;32(3):261–267.",
+      "doi": "10.1902/jop.1961.32.3.261",
+      "link": "https://doi.org/10.1902/jop.1961.32.3.261",
+      "access": "依後續文獻整理（未讀到原文）",
+      "question": "人類牙齦與牙齒交界處，齦溝、上皮附著與結締組織附著各有多長？",
+      "design": "屍體研究",
+      "sample": "30 份解剖標本、287 顆牙（依 Nugala 等 2012 年的轉述）"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Gargiulo AW, Wentz FM, Orban B. Dimensions and Relations of the Dentogingival Junction in Humans. J Periodontol 1961;32(3):261–267",
+      "publisher": "Journal of Periodontology（Crossref 書目）",
+      "date": "1961-07",
+      "url": "https://doi.org/10.1902/jop.1961.32.3.261",
+      "note": "PubMed 查無此篇"
+    },
+    {
+      "title": "Nugala B, Kumar BBS, Sahitya S, Krishna PM. Biologic width and its importance in periodontal and restorative dentistry. J Conserv Dent 2012;15(1):12–17",
+      "publisher": "Journal of Conservative Dentistry（PubMed Central，PMC3284004）",
+      "date": "2012",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3284004/",
+      "note": "Gargiulo 等的樣本（30 份解剖標本、287 顆牙）、三個平均值 0.69／0.97／1.07 毫米、後人以兩段相加稱 2.04 毫米；侵犯可用手術移骨或矯正拉出修正（either…or）"
+    },
+    {
+      "title": "Vacek JS, Gher ME, Assad DA, Richardson AC, Giambarresi LI. The dimensions of the human dentogingival junction. Int J Periodontics Restorative Dent 1994;14(2):154–165（PMID 7928131）",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "1994-04",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7928131/",
+      "note": "依摘要：10 副成人屍體顎骨、171 個牙面，組織形態計量；齦溝 1.34 ± 0.84、上皮附著 1.14 ± 0.49、結締組織附著 0.77 ± 0.32、附著喪失 2.92 ± 1.69 毫米；結締組織附著分布與範圍較窄；附著喪失無法預測結締組織附著長度。上皮加結締組織 1.91 毫米為本報自算"
+    },
+    {
+      "title": "Schmidt JC, Sahrmann P, Weiger R, Schmidlin PR, Walter C. Biologic width dimensions—a systematic review. J Clin Periodontol 2013;40(5):493–504（PMID 23461747）",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "2013-03-05",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23461747/",
+      "note": "依摘要：615 筆標題納入 14 篇，6 篇可統合；兩組統合平均 2.15–2.30 毫米；個體內與個體間差異大（subject sample range 0.2–6.73 毫米）；牙種與位置、修復物、牙周病／手術會影響；方法與結果指標異質性明顯；結論與先建立牙周健康的建議。日期為線上發表日"
+    },
+    {
+      "title": "Ercoli C, Caton JG. Dental prostheses and tooth-related factors. J Periodontol 2018;89(Suppl 1):S223–S236",
+      "publisher": "Journal of Periodontology（全文 PDF，umw.edu.pl 存放本）",
+      "date": "2018-06",
+      "url": "https://www.umw.edu.pl/sites/default/files/2022-04/Article14.pdf",
+      "note": "讀全文 Biologic width 一節：Gargiulo 為屍體研究（文中參考文獻 3），三段尺寸有變異、結締組織附著平均值最穩定；無法定義固定的生物寬度；只能以組織學評估，穿齦探測與 parallel profile radiography 量的是 dentogingival unit 的尺寸。DOI 10.1002/JPER.16-0569"
+    },
+    {
+      "title": "Jepsen S, Caton JG, Albandar JM, et al. Consensus report of workgroup 3 of the 2017 World Workshop. J Clin Periodontol 2018;45(Suppl 20):S219–S229",
+      "publisher": "Journal of Clinical Periodontology（EFP 網站 PDF）",
+      "date": "2018-06",
+      "url": "https://www.efp.org/fileadmin/uploads/efp/Documents/Campaigns/New_Classification/Reports/Consensus_report__Workgroup_3__Jepsen_et_al-2018-Journal_of_Clinical_Periodontology.pdf",
+      "note": "生物寬度改稱齒槽嵴上組織附著；冠根向尺寸可變；邊緣侵入齒槽嵴上結締組織與發炎、支持組織流失有關，原因（菌斑、創傷、牙材毒性）無法確定。2017 年世界研討會，2018 年出版"
+    },
+    {
+      "title": "Günay H, Seeger A, Tschernitschek H, Geurtsen W. Placement of the preparation line and periodontal health—a prospective 2-year clinical study. Int J Periodontics Restorative Dent 2000;20(2):171–181（PMID 11203559）",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "2000-04",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11203559/",
+      "note": "依摘要：41 名病人、116 顆備牙與 82 顆未修復對側牙；鄰面邊緣到骨嵴距離分三組；指數於備牙前與 3、6、12、24 個月記錄，X 光於黏著後與 12、24 個月拍攝；口腔衛生指數無顯著變化，PBI 三組皆升、第 I 組最多且最顯著上升在 3–6 個月；平均探測深度只在第 I 組頭 3 個月近心面增加；X 光未診斷出骨高度改變；結論為邊緣位於生物寬度內可能損害牙周健康"
+    },
+    {
+      "title": "Wikimedia Commons：File:Crownlen.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2008",
+      "url": "https://commons.wikimedia.org/wiki/File:Crownlen.jpg",
+      "note": "頭圖；CC BY-SA 3.0（亦可選 GFDL）；作者 DRosenbach，own work；描述 Crown lengthening dental procedure"
+    }
+  ]
+}
