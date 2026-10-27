@@ -1,0 +1,270 @@
+{
+  "column": "fm-watch",
+  "date": "2026-10-28",
+  "status": "update",
+  "title": "沙烏地聯賽拿到授權，Shuffle Draft 規則公布",
+  "dek": "沙烏地聯賽 18 隊拿到 FM27 授權；10 月 27 日，新多人模式 Shuffle Draft 也公布了規則：所有人同時挑，挑完整組往下傳。",
+  "brief": "沙烏地聯賽 Roshn Saudi League 成為《足球經理 27》的授權聯賽，18 支球隊有官方隊徽、球衣和球員照片。新多人模式 Shuffle Draft 同時公布規則，每人從一組球員裡挑一個，所有人同時挑，挑完整組傳給下家。試玩 10 月 30 日 02:00（台灣）開放。",
+  "topic_key": "fm-watch:2026-10-28-shuffle-draft-roshn-saudi-league",
+  "updated_at": "2026-10-28T05:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "timeline",
+    "title": "FM27 時程：10 月 19 日到 11 月 20 日",
+    "caption": "依 SI 官網、Steam 公告、SEGA 新聞稿與 FM 官方 YouTube 頻道整理，截至台灣時間 2026 年 10 月 28 日清晨。10 月 22 日為 UTC 日期；10 月 30 日與 11 月 4 日的時刻由官方 GMT 換算成台灣時間。",
+    "items": [
+      {
+        "when": "2026.10.19",
+        "label": "法國女子頂級聯賽授權",
+        "note": "Arkema Première Ligue，10 月 27 日之前 FM27 唯一點名的聯賽授權"
+      },
+      {
+        "when": "2026.10.20",
+        "label": "宣布 FM27 Touch 將登上 Apple Arcade",
+        "note": "11 月 10 日上架"
+      },
+      {
+        "when": "2026.10.21",
+        "label": "宣布免費 Launch Preview 與預購",
+        "note": "官網、Steam、SEGA 同日發布"
+      },
+      {
+        "when": "2026.10.22",
+        "label": "首次 FM27 直播",
+        "note": "UTC 日期；FM 官方 YouTube 頻道"
+      },
+      {
+        "when": "2026.10.27",
+        "label": "沙烏地聯賽授權、Shuffle Draft 規則公布",
+        "note": "官網新聞與專頁；Steam 公告台灣時間 20:04"
+      },
+      {
+        "when": "2026.10.30",
+        "label": "免費 Launch Preview 開跑，預購開放",
+        "note": "台灣時間 02:00（週五），PC／Mac"
+      },
+      {
+        "when": "2026.11.4",
+        "label": "免費期結束，付費 Launch Preview 開始",
+        "note": "台灣時間 02:00（週三）"
+      },
+      {
+        "when": "2026.11.10",
+        "label": "全平台數位版發售",
+        "note": "確切時刻未公布"
+      },
+      {
+        "when": "2026.11.20",
+        "label": "實體 PS5 版發售",
+        "note": "官方 FAQ"
+      }
+    ]
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "C 羅踢球的那個聯賽，拿到《足球經理 27》（Football Manager 27，以下稱 FM27）的授權了。Sports Interactive（SI）10 月 27 日（週二）在官網宣布，Roshn Saudi League（RSL）成為 FM27 的新授權聯賽，18 支球隊都有官方隊徽、球衣和球員照片，遊戲裡可玩的國家也增加到 59 個。"
+    },
+    {
+      "type": "p",
+      "text": "官網新聞點名了不少球員與教練。除了 C 羅，沃特金斯（Ollie Watkins）和馬丁內利（Gabriel Martinelli）也被點名；教練有因扎吉（Simone Inzaghi）、羅傑斯（Brendan Rodgers）和波斯特科格魯（Ange Postecoglou）。SI 還提到亞洲足協的排名，說 RSL 已有一段時間是亞洲排名第一的國內聯賽，俱樂部拿過近七屆亞冠裡的四屆。"
+    },
+    {
+      "type": "quote",
+      "text": "我們期待看到球迷在遊戲裡更認識這個聯賽和它的俱樂部，也期待在持續擴大 FM 在中東觸及的同時，探索在遊戲之外還能做到什麼。",
+      "original": "We look forward to seeing fans learn more about the league and its clubs in the game, and to exploring what we can achieve beyond it as we continue to grow FM's reach in the Middle East.",
+      "cite": "Richard Trafford，SI 業務發展總監，官網新聞，2026 年 10 月 27 日"
+    },
+    {
+      "type": "p",
+      "text": "「遊戲之外」指的是什麼，SI 沒有往下講。"
+    },
+    {
+      "type": "h",
+      "text": "授權名單上的第二個名字"
+    },
+    {
+      "type": "p",
+      "text": "10 月 27 日之前，FM27 點名的聯賽授權只有一個：10 月 19 日宣布的法國女子頂級聯賽 Arkema Première Ligue。SI 沒說這是不是 10 月 16 日預告的兩個新聯賽之一。FM26 的授權清單裡找不到沙烏地聯賽，FM27 的完整清單還沒公布。"
+    },
+    {
+      "type": "p",
+      "text": "試玩版裡看不看得到這 18 個隊徽。SI 在 10 月 21 日註明，Launch Preview 含有仍在權利人審核中的資料，部分球隊和球員素材可能缺席。"
+    },
+    {
+      "type": "h",
+      "text": "挑一個，整組往下傳"
+    },
+    {
+      "type": "p",
+      "text": "Shuffle Draft 在首次 FM27 直播的結尾露過臉。FM Scout 當時轉述，SI 只說這是線上選秀的新版本，另有一個「twist」，沒講是什麼。10 月 27 日的官網專頁和 Steam 公告（台灣時間 20:04）把規則攤開了。"
+    },
+    {
+      "type": "p",
+      "text": "這個模式和 FIFAe 合作開發，FIFAe 是 FIFA 官方的數位賽事巡迴；官方說它重新想像了前幾代的 Fantasy Draft。球員池會切成一組一組，每組 20 人，有幾位經理就有幾組，照官方的算法，10 個人玩就有 10 組。每一輪，每位經理從手上那組挑一個人，所有隊都挑完，整組傳給下一位，大家換到一組新的。"
+    },
+    {
+      "type": "p",
+      "text": "所有人同時挑，每輪的時限由主辦者定。SI 的說法是，不用再乾等輪到自己。整套規則裡，我最看好的就是這一條。"
+    },
+    {
+      "type": "table",
+      "title": "Shuffle Draft 的人數與選項",
+      "head": [
+        "項目",
+        "官方規格"
+      ],
+      "rows": [
+        [
+          "賽制與人數",
+          "盃賽（Knockout Cup）2–32 人；小組賽加淘汰賽 8、16 或 32 人；聯賽 2–20 人"
+        ],
+        [
+          "空缺補位",
+          "可離線開局，由 AI 補滿；線上也能用 AI 經理補位；有私人與公開大廳"
+        ],
+        [
+          "球員池",
+          "男足或女足擇一（同一場賽事不混）；預設池有 World's Best、Wonderkids、Veterans、Lower League Legends 等；也可依特質（如 Leadership、Physical）或自訂篩選（國籍、聲望、俱樂部級別）；品質分 Mixed、Higher、Highest"
+        ],
+        [
+          "陣容人數",
+          "14、16、18 或 20 人"
+        ],
+        [
+          "Re-Draft",
+          "最多 5 次，每次合計最多 20 個退回或移除；由主辦者在開局時設定，也可整個關掉"
+        ],
+        [
+          "比賽",
+          "選人、戰術設定與比賽引擎和單人生涯相同；比賽可同時進行；每場前傷病與疲勞清零"
+        ]
+      ],
+      "caption": "依 SI 官網 Shuffle Draft 專頁與 Steam 公告 FAQ（2026 年 10 月 27 日）整理。"
+    },
+    {
+      "type": "p",
+      "text": "陣容有 14、16、18、20 人四種。官方的說法是，陣容小，挑人時就得先想好陣型；陣容大比較有彈性，可以不管位置，直接挑板上最好的那個。每輪結束後，各隊挑了誰、陣容長什麼樣子都看得到，看上的球員可以先加書籤，留到之後幾輪再說，前提是沒被別人先挑走。"
+    },
+    {
+      "type": "h",
+      "text": "傷病在開賽前歸零"
+    },
+    {
+      "type": "p",
+      "text": "選人、戰術和比賽引擎都和單人生涯一樣。官方說，每場比賽之前，球員的傷病和疲勞都會清零。"
+    },
+    {
+      "type": "p",
+      "text": "官方還替這個模式找了另一個用途：生涯存檔裡正在考慮簽下的球員，可以先在 Shuffle Draft 裡預覽，看他放進某個陣型合不合用，再決定要不要花轉會預算。"
+    },
+    {
+      "type": "p",
+      "text": "Re-Draft 是官方說的「真正的風險」。比賽日過後，可以把球員退回選秀池，或乾脆從賽事中移除，換一個新的。最多 5 次，每次合計最多 20 個退回或移除，由主辦者在開局時設定；主辦者也可以整個關掉，從頭到尾只靠開局那次選秀。換我當主辦，五次全開，選錯人總得有地方反悔。"
+    },
+    {
+      "type": "p",
+      "text": "專頁最後預告，接下來要介紹 FM27 Console、FM27 Touch 和 FM27 Mobile 的新增與升級，只寫了 coming soon，沒有日期。PC 和 Mac 的免費試玩，台灣時間 10 月 30 日週五凌晨兩點開始。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Roshn Saudi League makes debut in FM27",
+      "publisher": "Football Manager 官網",
+      "date": "2026-10-27",
+      "url": "https://www.footballmanager.com/news/roshn-saudi-league-makes-debut-fm27",
+      "note": "新聞頁標 27.10.26，未標時刻；未見 Steam 公告或 SEGA 新聞稿。球員名單原文把 Watkins、Martinelli、Summerville、Reijnders 列為「high-profile recent arrivals」；Trafford 引文原文用 fans。本報 10 月 28 日清晨查閱"
+    },
+    {
+      "title": "FM27: Introducing Shuffle Draft",
+      "publisher": "Football Manager 官網",
+      "date": "2026-10-27",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-introducing-shuffle-draft",
+      "note": "專頁正文與 FAQ；陣容大小與陣型、預覽考慮簽下的球員（preview players you may have been considering as a signing）、Re-Draft 可整個關掉（turn the option off completely）皆為正文原句；正文最後一段預告 Console、Touch、Mobile 介紹「Coming soon」，以「Stay tuned.」作結"
+    },
+    {
+      "title": "FM27: Introducing Shuffle Draft",
+      "publisher": "Steam 公告（Sports Interactive）",
+      "date": "2026-10-27",
+      "url": "https://store.steampowered.com/news/app/4530370/view/1847286114048664",
+      "note": "發布時間 2026-10-27 12:04 UTC；FAQ 全文，含「next focus will be on non-PC titles」"
+    },
+    {
+      "title": "Football Manager 26 Licences",
+      "publisher": "Football Manager 官網",
+      "date": "2025-10-22",
+      "url": "https://www.footballmanager.com/news/football-manager-26-licences",
+      "note": "本報 10 月 28 日查閱，清單內無沙烏地聯賽條目"
+    },
+    {
+      "title": "Arkema Première Ligue fully licensed in Football Manager 27",
+      "publisher": "Football Manager 官網",
+      "date": "2026-10-19",
+      "url": "https://www.footballmanager.com/news/arkema-premiere-ligue-fully-licensed-football-manager-27"
+    },
+    {
+      "title": "FM27: 2D Match Engine, In-Game Editor and Deeper World Upgrades",
+      "publisher": "Football Manager 官網",
+      "date": "2026-10-16",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-2d-match-engine-game-editor-and-deeper-world-upgrades",
+      "note": "「two new licensed leagues」一句，未點名"
+    },
+    {
+      "title": "Play Free: Football Manager 27 Launch Preview",
+      "publisher": "Steam 公告（Sports Interactive）",
+      "date": "2026-10-21",
+      "url": "https://store.steampowered.com/news/app/4530370/view/1847286114028442",
+      "note": "免費期時間（10-29 18:00 GMT 至 11-03 18:00 GMT）與資料審核註腳"
+    },
+    {
+      "title": "Play Football Manager 27 Launch Preview for Free",
+      "publisher": "Football Manager 官網",
+      "date": "2026-10-21",
+      "url": "https://www.footballmanager.com/news/play-football-manager-27-launch-preview-free",
+      "note": "時程圖 10 月 21 日、10 月 30 日、11 月 4 日三項"
+    },
+    {
+      "title": "PLAY FOOTBALL MANAGER 27 FOR FREE",
+      "publisher": "SEGA（sega.prezly.com）",
+      "date": "2026-10-21",
+      "url": "https://sega.prezly.com/play-football-manager-27-for-free",
+      "note": "發布時間 2026-10-21 11:00 UTC；預購窗口與免費期同時開啟"
+    },
+    {
+      "title": "FM27 Touch launches on Apple Arcade from November 10",
+      "publisher": "Football Manager 官網",
+      "date": "2026-10-20",
+      "url": "https://www.footballmanager.com/news/fm27-touch-launches-apple-arcade-november-10",
+      "note": "新聞頁標 20.10.26，未標時刻；宣布 11 月 10 日起上架 Apple Arcade（時程圖 10 月 20 日一項）"
+    },
+    {
+      "title": "FM27 | First Look Livestream",
+      "publisher": "Football Manager 官方 YouTube 頻道",
+      "date": "2026-10-22",
+      "url": "https://www.youtube.com/watch?v=9u1ja_bIk8o",
+      "note": "上傳 RSS 標示 2026-10-22 20:25:34 UTC，為上架時間，非開播時刻；本報只讀到 RSS 標題與說明"
+    },
+    {
+      "title": "FM27: Elevated Match Day Atmosphere",
+      "publisher": "Football Manager 官網",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-elevated-match-day-atmosphere",
+      "note": "FAQ：實體 PC 版 11 月 10 日、實體 PS5 版 11 月 20 日（時程圖最後一項）"
+    },
+    {
+      "title": "Football Manager 27 launches from 10 November",
+      "publisher": "Football Manager 官網",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/news/football-manager-27-launches-10-november",
+      "note": "全平台數位版 11 月 10 日；確切時刻發售前另行公布"
+    },
+    {
+      "title": "FM27 Shuffle Draft Explained: New Multiplayer Mode",
+      "publisher": "FM Scout（媒體線索，只作對照）",
+      "date": "2026-10-23",
+      "url": "https://www.fmscout.com/a-fm27-shuffle-draft.html",
+      "note": "首次直播的觀後整理：結尾公開 Shuffle Draft，SI 稱有「twist」"
+    }
+  ]
+}
