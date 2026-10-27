@@ -1,11 +1,11 @@
 {
  "column": "football",
  "date": "2026-10-28",
- "title": "亞馬爾上臺領獎，說這個獎該給 Cubarsí",
- "dek": "金球獎給了凱恩，亞馬爾排第三。他領的是年輕球員獎，致詞裡卻替隊友說了話。",
- "brief": "凱恩拿下金球獎，是 25 年來第一位英格蘭得主，巴薩的亞馬爾排第三。亞馬爾領年輕球員獎時說，這個獎應該給隊友 Cubarsí。巴薩下一場是台灣時間 11 月 1 日（週日）04:00，主場對阿拉維斯。",
+ "title": "金球給了凱恩，亞馬爾第三",
+ "dek": "亞馬爾去年第二、今年第三，第一名換成了 33 歲的凱恩。女子金球給了剛離開巴薩的普特亞斯。",
+ "brief": "凱恩拿下金球獎，是 2001 年歐文之後第一位英格蘭得主；亞馬爾第三，領年輕球員獎時說這座本來該是 Cubarsí 的。巴薩下一場是西甲第 11 輪，台灣時間 11 月 1 日（週日）04:00 主場對阿拉維斯。",
  "topic_key": "football:2026-10-28",
- "updated_at": "2026-10-28T02:49:00+08:00",
+ "updated_at": "2026-10-28T03:02:00+08:00",
  "spoiler": null,
  "disclaimer": null,
  "hero": {
@@ -24,25 +24,21 @@
  "body": [
   {
    "type": "p",
-   "text": "亞馬爾（Lamine Yamal）台灣時間週二清晨在倫敦領了男子年輕球員獎，連續第三年。致詞裡有一句不是講自己的。"
+   "text": "亞馬爾（Lamine Yamal）在倫敦拿到金球獎的年輕球員獎，連續第三年。致詞很短，他說本來希望得獎的是隊友 Pau Cubarsí。"
   },
   {
    "type": "quote",
-   "text": "這個獎應該是他的。他當得起。",
+   "text": "本來該是他的。他當得起。",
    "original": "This prize should have been for him. He deserves it.",
    "cite": "亞馬爾談到隊友 Pau Cubarsí（ESPN）"
   },
   {
    "type": "p",
-   "text": "他說，他本來希望得獎的是 Cubarsí。這個獎的票選 Cubarsí 排第二；金球獎總排名，貝林厄姆（Jude Bellingham）第 11，Cubarsí 第 12。"
+   "text": "Cubarsí 在這個獎的票選排第二，金球總排名第 12。19 歲，拿了獎先替隊友說話，金球獎這一晚我最喜歡的就是這一句。"
   },
   {
    "type": "p",
-   "text": "主獎是凱恩（Harry Kane）的。33 歲、拜仁慕尼黑的前鋒，25 年來第一位拿到金球獎的英格蘭人，上一位是 2001 年的歐文（Michael Owen）。ESPN 算他這一年為球隊與國家隊進了 73 球，還帶英格蘭打進世界盃四強；UEFA 補了兩筆：他連續第三季拿德甲得分王，拜仁拿下德甲冠軍。投票的是 100 位各國記者，每人從 30 人名單裡依序選 10 人。"
-  },
-  {
-   "type": "p",
-   "text": "凱恩上臺致詞，感謝英格蘭、拜仁和老東家熱刺，也說自己的路不是一路直升，經歷過很多次外租。"
+   "text": "金球本身給了 33 歲的凱恩（Harry Kane）。這位拜仁慕尼黑的前鋒，是 2001 年歐文（Michael Owen）之後第一個拿到的英格蘭人；這一年他替拜仁和英格蘭一共進了 73 球。致詞時他謝了英格蘭、拜仁和老東家熱刺，說自己不是一路直升上來的，外租過很多次，才拚到今天。"
   },
   {
    "type": "figure",
@@ -51,7 +47,7 @@
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Harry_Kane_England_v_Ghana_23_June_2026-130.jpg/1280px-Harry_Kane_England_v_Ghana_23_June_2026-130.jpg",
    "width": 1280,
    "height": 853,
-   "alt": "身穿白色上衣、深藍短褲的凱恩在草地上向前帶球，球在他左前方的地上，邊線外有攝影記者與一位拿著旗子的邊審。",
+   "alt": "身穿白色上衣、深藍短褲的凱恩在草地上向前跑動，球在他左前方的地上，邊線外有攝影記者與一位拿著旗子的邊審。",
    "caption": "凱恩在 2026 年世界盃小組賽英格蘭對迦納，攝於 2026 年 6 月 23 日。資料照片，非典禮畫面。",
    "credit": "Bryan Berlin／Wikimedia Commons",
    "license": "CC BY-SA 4.0",
@@ -128,106 +124,103 @@
   },
   {
    "type": "h",
-   "text": "亞馬爾少的那個瞬間"
+   "text": "決賽那球不是他進的"
   },
   {
    "type": "p",
-   "text": "亞馬爾去年排第二，輸給登貝萊（Ousmane Dembélé），今年第三。ESPN 的巴薩特派 Sam Marsden 這樣解釋亞馬爾為什麼沒拿到：西甲二連霸、西甲最佳球員（排在姆巴佩前面）、跟西班牙拿世界盃，都有了，缺的是世界盃上一個定格的瞬間。第二場對沙烏地阿拉伯進球之後，他沒再進球或助攻；四強賽對法國，西班牙的第一個球是他贏來的點球。決賽的制勝球是 Ferran Torres 進的，Marsden 假設，如果是亞馬爾進的，他可能排在凱恩和姆巴佩前面。"
+   "text": "亞馬爾去年第二，輸給登貝萊；今年第三。上季他幫巴薩拿下西甲二連霸，當選西甲最佳球員，排在姆巴佩前面，後來又跟西班牙拿了世界盃。ESPN 跑巴薩的 Sam Marsden 認為，最後拖累他的，是世界盃上少了一個定格的瞬間。"
   },
   {
    "type": "p",
-   "text": "明年夏天沒有大型國際賽，Marsden 說亞馬爾的機會可能要看巴薩在歐冠走多遠。依我看，要補那個瞬間只能在歐冠找，而巴薩 10 月 20 日才在巴黎的歐冠賽 2 比 4 輸了。亞馬爾本季 13 場已經 10 球 10 助攻，Marsden 說這些數字足以讓他明年再進入討論。"
+   "text": "他傷癒歸隊，第二場對沙烏地阿拉伯進了球，之後整屆沒再進球或助攻；四強對法國，西班牙的第一球是他贏來的點球。決賽對阿根廷的制勝球是別人進的。Marsden 假設，那球要是亞馬爾進的，他也許就排在凱恩和姆巴佩前面。"
   },
   {
    "type": "p",
-   "text": "姆巴佩這次排第二，是他第三次進前四：2018 年第 4、2023 年第 3。ESPN 的皇馬特派 Alex Kirkland 認為，皇馬上季什麼冠軍都沒拿，西甲排在巴薩後面，姆巴佩的條件不夠硬，而且他公開說過自己覺得有機會。"
+   "text": "他明年 20 歲，本季 13 場已經 10 球 10 助攻。明年夏天沒有大型國際賽，照這位記者的看法，他的機會可能就取決於巴薩在歐冠的成績，和他在大場合的表現。"
   },
   {
    "type": "p",
-   "text": "拉波爾塔（Joan Laporta）離開倫敦時說，他確信亞馬爾會拿金球獎，只是不知道哪一年；他認為亞馬爾夠格，但票是這樣投出來的，要以運動精神接受。西班牙國家隊教練德拉富恩特（Luis de la Fuente）說，亞馬爾會拿很多座個人獎，會拿更多團體冠軍，他知道亞馬爾更看重這個。"
+   "text": "姆巴佩第二，這是他第三次進前四。ESPN 跑皇馬的記者認為他的理由不夠硬：皇馬上季一座冠軍都沒拿，西甲還排在巴薩後面。這點我同意，兩手空空的賽季能排第二，已經不算虧待他。"
+  },
+  {
+   "type": "p",
+   "text": "西班牙國家隊教練德拉富恩特（Luis de la Fuente）倒是篤定，他說亞馬爾會拿很多座金球獎，但更重要的是會拿很多團體冠軍，他知道亞馬爾更看重後面那個。"
   },
   {
    "type": "h",
-   "text": "女子組：贏的人已經不在巴薩"
+   "text": "金球給了剛離隊的人"
   },
   {
    "type": "p",
-   "text": "女子金球獎，普特亞斯（Alexia Putellas）繼 2021、2022 年後第三度拿下，是繼邦馬蒂（Aitana Bonmatí）之後第二位三度得主。她去年夏天離開效力 14 年的巴薩，轉去 London City Lionesses，是第一位以英格蘭女超現役球員身分拿到的人。"
+   "text": "女子金球獎是普特亞斯（Alexia Putellas）的第三座，前兩座在 2021、2022 年。在她之前，三度得主只有邦馬蒂（Aitana Bonmatí）一個。"
   },
   {
    "type": "p",
-   "text": "第二名是巴薩的 Ewa Pajor，她是上季歐冠的得分王，進了 11 球。Patri Guijarro 第 5、Caroline Graham Hansen 第 6、Clàudia Pina 第 8。去年的得主邦馬蒂腿骨折，錯過大半個賽季，這次連提名都沒有。巴薩女足上季拿下歐冠、Liga F、女足國王盃和西班牙超級盃，是隊史第二次四冠王。"
+   "text": "她在巴薩待了 14 年，今年夏天才轉去 London City Lionesses，成了第一個以英格蘭女超現役球員身分拿金球的人。第二名是巴薩的 Ewa Pajor，上季歐冠得分王，11 球；前十名裡另外還有三個巴薩球員。去年的得主邦馬蒂腿骨折，錯過大半季，這次連提名都沒有。"
   },
   {
    "type": "h",
-   "text": "姆巴佩道歉，卡里克暫時留任"
+   "text": "巴薩之外"
   },
   {
    "type": "news",
    "title": "歐洲足壇速覽",
    "items": [
     {
-     "headline": "姆巴佩為「中國獨裁者」說法道歉，三家中國品牌終止合作",
-     "summary": "飲料廠 Dongpeng、乳品公司蒙牛（Mengniu）和起司廠 Milkground 週二發聲明，終止與姆巴佩的合作，都說反對「傷害民族情感」的言行。起因是流傳的一段法國節目《The Bridge》訪談前影片：他被問最喜歡的自己的迷因，回答是某人做的影片，「我想他是個中國獨裁者」，影片接著秀出把他的臉換到毛澤東身上的修圖。姆巴佩週二在社群道歉，說那句話考慮欠周；西甲聯盟也發聲明，說那是他個人的言論，不代表西甲。",
+     "headline": "至少三家中國品牌和姆巴佩解約，他為一段受訪影片道歉",
+     "summary": "飲料廠 Dongpeng、乳品公司蒙牛（Mengniu）、起司廠 Milkground 等至少三家中國公司，10 月 27 日發出措辭相近的聲明，終止與姆巴佩的合作，說反對「傷害民族情感」的言行，但沒說是什麼事促成的。聲明是在 X 上一段影片流傳之後發出的：影片看似是他上法國網路節目《The Bridge》之前受訪，被問最喜歡哪個關於自己的迷因，他說是某人做的一支影片，「我想他是個中國獨裁者」，畫面接著出現一張把他的臉修到毛澤東身上的圖。ESPN 說，這句話據稱指的是毛澤東。姆巴佩同一天在社群道歉，說他是在回應一張自己的圖像，那句評論考慮欠周。西甲聯盟也發聲明，說那是個人言論，不代表西甲，並為此道歉。",
      "source": "ESPN",
      "url": "https://www.espn.com/soccer/story/_/id/50295111/real-madrid-kylian-mbappe-chinese-brands-dictator-comment",
      "when": "10 月 27 日（週二）"
     },
     {
-     "headline": "克瓦拉茨赫利亞膝傷手術完成，傷在對巴薩那一場",
-     "summary": "PSG 週二宣布，克瓦拉茨赫利亞右膝前十字韌帶撕裂的手術已在多哈完成，開始復健。他是 10 月 20 日歐冠 PSG 4 比 2 贏巴薩時，下半場初段與 Espart 一次爭搶後被扶下場，金球獎排第 6。登貝萊與 Marquinhos 也因大腿傷缺陣；PSG 週一晚 2 比 0 贏里昂，目前法甲第一。",
+     "headline": "克瓦拉茨赫利亞開完刀，膝傷就是對巴薩那場受的",
+     "summary": "PSG 10 月 27 日宣布，克瓦拉茨赫利亞右膝前十字韌帶撕裂的手術已在多哈完成，開始復健。他是在台灣時間 10 月 21 日（週三）03:00 開球、PSG 4 比 2 贏巴薩的那場歐冠受傷，下半場初段和 Espart 爭搶之後被扶下場。登貝萊和隊長 Marquinhos 也因大腿傷缺陣，PSG 教練暗示不會為此進轉會市場。PSG 巴黎時間 10 月 26 日晚 2 比 0 贏里昂，目前法甲第一。",
      "source": "ESPN（PA）",
      "url": "https://www.espn.com/soccer/story/_/id/50297566/psg-khvicha-kvaratskhelia-successful-knee-surgery",
      "when": "10 月 27 日（週二）"
     },
     {
-     "headline": "卡里克預期週六仍在切爾西教練席，曼聯 12 場只贏 2 場",
-     "summary": "ESPN 引消息來源說，卡里克（Michael Carrick）週二照常帶隊訓練，預期週六客場對切爾西仍是主帥。曼聯各項賽事 12 場只贏 2 場，英超第 16、只比降級區多 1 分，週日在老特拉福德 0 比 3 輸給伯恩茅斯。ESPN 的消息來源說，球團探索過的接班人選包括 Eddie Howe、Julian Nagelsmann 和 Antonio Conte。內維爾（Gary Neville）在 Sky Sports 說，他原本確定週日就是卡里克的終點，所以很意外。",
+     "headline": "消息來源說，卡里克預期 10 月 31 日仍帶曼聯踢切爾西",
+     "summary": "卡里克（Michael Carrick）10 月 27 日照常帶訓練，ESPN 的消息來源說，他預期 10 月 31 日（週六）客場對切爾西時還是主帥。曼聯各項賽事 12 場只贏 2 場，英超第 16，只比降級區多 1 分，10 月 25 日在老特拉福德 0 比 3 輸給伯恩茅斯。同一批消息來源說，球團評估過的接班人選有 Eddie Howe、Julian Nagelsmann 和 Antonio Conte。內維爾（Gary Neville）在 Sky Sports 說，他本來確定 10 月 25 日那場就是卡里克的最後一場，「我很意外，但我很高興」。",
      "source": "ESPN",
      "url": "https://www.espn.com/soccer/story/_/id/50296572/carrick-lead-man-united-chelsea-uncertain-future-sources",
      "when": "10 月 27 日（週二）"
     },
     {
-     "headline": "阿萊格里決定不上訴，拿坡里落後國米 11 分",
-     "summary": "拿坡里先前說要上訴，阿萊格里（Massimiliano Allegri）改了主意：兩場禁賽照吃，缺席週三對蒙薩、週日對尤文圖斯的比賽。拿坡里義甲前八輪只贏三場，落後榜首國際米蘭 11 分。他在記者會上說，最讓他失望的不是禁賽，是踢得不錯卻沒贏。",
-     "source": "ESPN（PA）",
-     "url": "https://www.espn.com/soccer/story/_/id/50299199/napoli-coach-massimiliano-allegri-not-appeal-touchline-ban",
-     "when": "10 月 27 日（週二）"
-    },
-    {
-     "headline": "內馬爾被送上巴西體育法庭，最多可能停賽六場",
-     "summary": "10 月 24 日桑托斯 1 比 0 贏巴伊亞，內馬爾與對手 Rodrigo Nestor 爭吵時用手遮嘴被紅牌，依「維尼修斯規則」被報到巴西體育法庭，聽證排在 10 月 28 日（週三）。他承認遮嘴不對，但否認對 Nestor 說過話；Nestor 則說那些話非常無禮。判最重的話，他會缺席聯賽的最後一段。",
+     "headline": "內馬爾遮嘴吵架吃紅牌，最多可能停賽六場",
+     "summary": "10 月 24 日桑托斯對巴伊亞，內馬爾和對手爭吵時用手遮嘴，被紅牌罰下，接著依「維尼修斯規則」被報到巴西體育法庭，聽證就排在 10 月 28 日（週三）。他承認遮嘴不對，但否認對那名對手說過話；對方則說他講的話非常無禮。桑托斯聯賽第 8，領先降級區 12 分，還剩 6 場。",
      "source": "ESPN",
      "url": "https://www.espn.com/soccer/story/_/id/50295719/neymar-faces-six-match-ban-alleged-vinicius-junior-rule-breach",
      "when": "10 月 27 日（週二）"
     },
     {
-     "headline": "法甲因全國遊行調整週六賽程",
-     "summary": "法甲聯盟（LFP）週二宣布，應公共當局要求，里昂主場對昂熱從週六當地 20:45 改到週日下午；尼斯與洛里昂在週六的主場比賽，分別改到週五晚上與週一晚上。上週六有數十萬人在法國各地遊行，抗議生活成本上漲與學校條件不佳。",
-     "source": "ESPN（美聯社）",
-     "url": "https://www.espn.com/soccer/story/_/id/50297412/ligue-1-reschedules-matches-public-protests-france",
+     "headline": "阿萊格里不上訴了，禁賽兩場照吃",
+     "summary": "拿坡里先前說要上訴，現在阿萊格里（Massimiliano Allegri）決定接受禁賽，10 月 28 日對蒙薩、11 月 1 日對尤文圖斯都不能坐教練席。拿坡里義甲前八輪只贏三場，落後榜首國際米蘭 11 分。",
+     "source": "ESPN（PA）",
+     "url": "https://www.espn.com/soccer/story/_/id/50299199/napoli-coach-massimiliano-allegri-not-appeal-touchline-ban",
      "when": "10 月 27 日（週二）"
     },
     {
-     "headline": "哈卡恢復瑞士隊長職務，恩博洛也能入選",
-     "summary": "瑞士足協週二宣布，哈卡（Granit Xhaka）在因承認使用假疫苗證明缺席四場之後，恢復隊長身分；8 月加入亞特蘭大聯的恩博洛（Breel Embolo）也能入選 11 月兩場國家聯賽。瑞士 11 月 13 日客場對斯洛維尼亞，三天後主場對蘇格蘭。",
+     "headline": "法國街頭遊行，法甲把 10 月 31 日的三場挪走",
+     "summary": "法甲聯盟（LFP）10 月 27 日宣布，應公共當局要求，里昂主場對昂熱從 10 月 31 日（週六）當地 20:45 改到 11 月 1 日下午；尼斯和洛里昂原訂同一天的主場賽，分別改到 10 月 30 日晚上和 11 月 2 日晚上。10 月 24 日有數十萬人在法國各地遊行，抗議生活成本上漲和學校條件不佳。",
      "source": "ESPN（美聯社）",
-     "url": "https://www.espn.com/soccer/story/_/id/50298641/switzerland-granit-xhaka-breel-embolo-covid-19-documents",
+     "url": "https://www.espn.com/soccer/story/_/id/50297412/ligue-1-reschedules-matches-public-protests-france",
      "when": "10 月 27 日（週二）"
     }
    ]
   },
   {
    "type": "h",
-   "text": "下一站：阿拉維斯"
+   "text": "接下來"
   },
   {
    "type": "p",
-   "text": "西甲積分榜上巴薩 27 分，馬競 25 分，皇馬 24 分（ESPN，10 月 28 日凌晨查閱）。"
+   "text": "巴薩這季歐冠先 5 比 1 贏費耶諾德、4 比 1 贏加拉塔薩雷，第三場就是克瓦拉茨赫利亞受傷那晚，在巴黎 2 比 4 輸球。"
   },
   {
    "type": "p",
-   "text": "阿拉維斯、阿斯頓維拉、馬競，三場都在台灣時間凌晨 04:00：11 月 1 日（週日）主場，11 月 4 日（週三）主場，11 月 9 日（週一）客場。"
+   "text": "以下三場都是台灣時間。11 月 1 日（週日）04:00，西甲第 11 輪主場對阿拉維斯（Alavés）。11 月 4 日（週三）04:00，歐冠聯賽階段第 4 輪，主場迎戰阿斯頓維拉（Aston Villa）。11 月 9 日（週一）04:00，西甲第 12 輪，作客馬競。"
   }
  ],
  "sources": [
@@ -264,7 +257,7 @@
    "publisher": "ESPN（Sam Marsden）",
    "date": "2026-10-26",
    "url": "https://www.espn.com/soccer/story/_/id/50290619/putellas-ballon-dor-barcelona-dominate-awards",
-   "note": "女子組"
+   "note": "女子組；普特亞斯 2026 年夏天（原文 \"last summer\"）離開巴薩"
   },
   {
    "title": "Spain coach: Lamine Yamal will win many Ballon d'Or awards in his career",
@@ -272,13 +265,6 @@
    "date": "2026-10-27",
    "url": "https://www.espn.com/soccer/story/_/id/50296058/spain-coach-lamine-yamal-win-many-ballon-dor-awards",
    "note": "德拉富恩特對 Cadena Cope 的說法；亞馬爾連續第三年拿年輕球員獎"
-  },
-  {
-   "title": "Laporta: Yamal will win the Ballon d'Or, and I accept Kane's crowning in a sporting spirit",
-   "publisher": "Goal",
-   "date": "2026-10-27",
-   "url": "https://www.goal.com/en-za/news/laporta-yamal-will-win-the-ballon-d-or-and-i-accept-kane-s-crowning-in-a-sporting-spirit/blt48ad0fa6166657fd",
-   "note": "Goal 譯自《世界體育報》報導的英文版，正文只轉述不引句"
   },
   {
    "title": "Lamine Yamal, Young Talent of the Year and third in Ballon d'Or rankings",
@@ -291,7 +277,8 @@
    "title": "Kylian Mbappé dropped by Chinese brands after alleged dictator comment",
    "publisher": "ESPN",
    "date": "2026-10-27",
-   "url": "https://www.espn.com/soccer/story/_/id/50295111/real-madrid-kylian-mbappe-chinese-brands-dictator-comment"
+   "url": "https://www.espn.com/soccer/story/_/id/50295111/real-madrid-kylian-mbappe-chinese-brands-dictator-comment",
+   "note": "原文寫「至少三家」公司；影片「appeared to show」、言論「apparently referring to Mao Zedong」；道歉原話為回應一張自己的圖像、評論 ill-judged"
   },
   {
    "title": "PSG's Khvicha Kvaratskhelia undergoes successful knee surgery",
@@ -333,24 +320,18 @@
    "url": "https://www.espn.com/soccer/story/_/id/50297412/ligue-1-reschedules-matches-public-protests-france"
   },
   {
-   "title": "Xhaka, Embolo to return for Switzerland after fake COVID-19 documents case",
-   "publisher": "ESPN（美聯社）",
-   "date": "2026-10-27",
-   "url": "https://www.espn.com/soccer/story/_/id/50298641/switzerland-granit-xhaka-breel-embolo-covid-19-documents"
-  },
-  {
-   "title": "Spanish LALIGA standings",
-   "publisher": "ESPN",
-   "date": "2026-10-28",
-   "url": "https://www.espn.com/soccer/standings/_/league/esp.1",
-   "note": "巴薩 27 分、馬競 25 分、皇馬 24 分（API，10 月 28 日 02:40 前後查閱）"
-  },
-  {
    "title": "Barcelona schedule",
    "publisher": "ESPN",
    "date": "2026-10-28",
    "url": "https://www.espn.com/soccer/team/fixtures/_/id/83/barcelona",
-   "note": "賽程（UTC 換算台灣時間），10 月 28 日 02:40 前後查閱"
+   "note": "賽程（UTC 換算台灣時間），10 月 28 日 02:40 前後查閱；歐冠前三輪賽果與 PSG 戰開球 19:00Z 依 ESPN 歐冠賽程 API https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/teams/83/schedule"
+  },
+  {
+   "title": "First team schedule",
+   "publisher": "FC Barcelona",
+   "date": "2026-10-28",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/schedule",
+   "note": "阿拉維斯（西甲第 11 輪）、阿斯頓維拉（歐冠第 4 輪）、馬競（西甲第 12 輪），頁面為西班牙本土時間，10 月 28 日查閱"
   },
   {
    "title": "Harry Kane England v Ghana 23 June 2026-130",
