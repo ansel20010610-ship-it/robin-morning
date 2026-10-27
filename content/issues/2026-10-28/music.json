@@ -1,0 +1,223 @@
+{
+  "column": "music",
+  "date": "2026-10-28",
+  "title": "〈給愛麗絲〉當年是附贈品",
+  "dek": "1867 年它第一次印出來，編者說不算重要，也說不是寫給特蕾莎的。手稿後來失蹤，題字裡的愛麗絲至今沒人說得準。",
+  "brief": "1867 年〈給愛麗絲〉第一次印出來，編者在頁底說它不算重要但相當雅致，也註明它不是寫給特蕾莎的，還是把它收進書裡，當作貝多芬與特蕾莎那段交往的附贈。諾爾所報題字的 4 月 27 日，正好是特蕾莎 1851 年的忌日。",
+  "topic_key": "music:beethoven-woo59",
+  "updated_at": "2026-10-28T01:12:31+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/27/Beethoven_WoO_59_Erstausgabe.png",
+    "width": 572,
+    "height": 658,
+    "alt": "一頁鉛印的書頁：印有鋼琴譜，只到曲子開頭，標著 poco moto 和 pp，另有一段德文註文。",
+    "caption": "諾爾編《Neue Briefe Beethovens》（斯圖加特，1867）第 28 頁。〈給愛麗絲〉在書中佔第 28 到 33 頁，這是第一頁，譜只印到曲子開頭。頁首的「33.」是它在書中的編號，星號連到頁底那段註，本文開頭和引文都出自那裡。",
+    "credit": "Ludwig van Beethoven／Ludwig Nohl（編），Neue Briefe Beethovens，Stuttgart 1867，S. 28；經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Beethoven_WoO_59_Erstausgabe.png",
+    "made": "1867"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "「這首至今無人知曉、算不上重要，卻相當雅致的鋼琴小曲……」1867 年〈給愛麗絲〉第一次印出來，編者諾爾（Ludwig Nohl）在頁底這樣介紹它。曲子收在他編的《貝多芬新書信集》（Neue Briefe Beethovens）裡，貝多芬生前從沒出版過它。"
+    },
+    {
+      "type": "p",
+      "text": "註接著交代，曲子出自特蕾莎・馬爾法蒂（Therese Malfatti）的遺物，是她送給慕尼黑一位 Bredl 小姐的。照諾爾的說法，手稿上有貝多芬親筆的題字：給愛麗絲，4 月 27 日，紀念，L. v. Bthvn。沒有年份。諾爾也寫明，這首不是寫給特蕾莎的，並說 Gleichenstein 男爵夫人想不起有哪一位愛麗絲。依 Henle 目錄，這位男爵夫人就是特蕾莎的妹妹，序言稱她年邁。對象不明、又不是寫給特蕾莎的曲子，諾爾還是收進了書裡，註的最後一句是他的理由："
+    },
+    {
+      "type": "quote",
+      "text": "不過，就讓它也在這裡找到一席之地吧，權當是大師與那位褐色鬈髮的美麗特蕾莎之間那段雅致交往的附贈。",
+      "original": "Es möge aber hier gleichsam als Zugabe zu dem anmuthigen Verhältniß des Meisters zu der schönen braunlockigen Therese auch eine Stelle finden.",
+      "cite": "諾爾，《Neue Briefe Beethovens》第 28 頁頁底註，1867"
+    },
+    {
+      "type": "p",
+      "text": "特蕾莎是貝多芬 1810 年追求過的女子。"
+    },
+    {
+      "type": "p",
+      "text": "如今在台北，這首「算不上重要」的小曲是垃圾車的兩首固定曲子之一，另一首是〈少女的祈禱〉。"
+    },
+    {
+      "type": "music",
+      "composer": "貝多芬（Ludwig van Beethoven）",
+      "work": "A 小調鋼琴小品〈給愛麗絲〉，WoO 59",
+      "work_original": "Bagatelle in A minor, WoO 59 (Für Elise)",
+      "composed": "草稿 1808 年；另一份草稿推定為 1810 年春（有爭議）",
+      "performers": "威廉・肯普夫（Wilhelm Kempff）鋼琴",
+      "recording": "Deutsche Grammophon，專輯《Bagatelles》（SLPM 138 934），〈給愛麗絲〉在第 9 軌；MusicBrainz 記為 1965 年 5 月發行",
+      "duration": "約 3 分鐘",
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Beethoven Für Elise Kempff Bagatelles Deutsche Grammophon",
+        "artist_hint": "Kempff",
+        "track_filter": [
+          "Für Elise"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "肯普夫這張全是貝多芬的鋼琴曲。"
+    },
+    {
+      "type": "h",
+      "text": "完整的那份，19 世紀末就不見了"
+    },
+    {
+      "type": "p",
+      "text": "諾爾是 1865 年在慕尼黑的 Bredl 家看到那份完整的親筆手稿，她准他抄寫、出版。這份手稿 19 世紀末之後就下落不明，諾爾的抄本也沒留下來，Henle 出版社的原典版樂譜，主要來源是諾爾 1867 年那一版。"
+    },
+    {
+      "type": "p",
+      "text": "貝多芬自己的筆跡，只剩兩份草稿。一份是 1808 年寫在《田園》交響曲草稿本裡的 16 小節旋律；另一份寫得相當完整，Brandenburg 推定為 1810 年春天（Cooper 持不同看法），現在收在波昂的貝多芬故居。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/F%C3%BCr_Elise_-_Beethoven-Haus_Bonn_Draft_%28BH_116%2C_1810%29_-_page_4.png/1280px-F%C3%BCr_Elise_-_Beethoven-Haus_Bonn_Draft_%28BH_116%2C_1810%29_-_page_4.png",
+      "width": 1280,
+      "height": 947,
+      "alt": "一頁對折紙，譜表上有墨水寫的音符，也有鉛筆字。",
+      "caption": "波昂貝多芬故居藏 BH 116 第 4 頁。這張對折紙外側的第 1、4 頁是〈給愛麗絲〉的草稿，用墨水寫；紙上的鉛筆字屬於《艾格蒙》與一首軍隊進行曲，這兩部作品的草稿也寫在內側兩頁。1810 年春是 Brandenburg 依紙張與同紙草稿推定的年代，另有學者持不同看法。",
+      "credit": "Ludwig van Beethoven；Beethoven-Haus Bonn，BH 116（永久連結：https://www.beethoven.de/en/media/view/5010945952710656）；經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:F%C3%BCr_Elise_-_Beethoven-Haus_Bonn_Draft_(BH_116,_1810)_-_page_4.png",
+      "made": "1810 年春（Brandenburg 定年）"
+    },
+    {
+      "type": "p",
+      "text": "1822 年，貝多芬把手上約十三、四首還沒出版的鋼琴小品整理一遍，一首首編號。這份草稿也在裡面，他修改過，在第 1 頁左上角寫了「No 12」。完整的那份手稿，那時已經不在他手上。最後選出來的 Op. 119 沒有收它，他生前，這首曲子始終沒有印出來。"
+    },
+    {
+      "type": "h",
+      "text": "題字可能不是他寫的"
+    },
+    {
+      "type": "p",
+      "text": "愛麗絲是誰，有幾種說法。一說根本沒有愛麗絲：1920 年代初有人提出，是諾爾把「Therese」看成了「Elise」。Henle 版序言比對貝多芬筆跡裡的 Th 與 El（筆跡樣本見梅〔Jürgen May〕的文章），認為這個說法站不住。"
+    },
+    {
+      "type": "p",
+      "text": "另一說是 Barry Cooper 的看法：愛麗絲可能仍是特蕾莎，因為德文詩裡常用 Elise 指「愛人」。又一說真有其人，候選人有兩位：Klaus Martin Kopitz 指的 Elisabeth Röckel（後來嫁給胡麥爾，這個說法被 Michael Lorenz 等人質疑），以及 Rita Steblin 提出的 Lisette Barensfeld，她 1810 年可能是特蕾莎的鋼琴學生，小名也叫 Elise。"
+    },
+    {
+      "type": "p",
+      "text": "再一說是梅自己的推測：題字和日期可能都不是貝多芬寫的。手稿後來傳到 Bredl 的私生子手上，梅推測是他在 1851、52 年前後補上這兩樣，把曲子送給未來的妻子，她叫 Elisabeth，小名就是 Elise，用意是紀念剛過世的特蕾莎。特蕾莎死於 1851 年 4 月 27 日。照這個說法，貝多芬根本沒替這首曲子寫過獻詞。"
+    },
+    {
+      "type": "p",
+      "text": "這幾種說法裡，我比較信梅的。男爵夫人想不起愛麗絲，換成 Röckel 或 Barensfeld 也說得通；可是諾爾所報的 4 月 27 日剛好是特蕾莎的忌日，這一點他的說法最能解釋。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "認那兩個搖晃的音"
+    },
+    {
+      "type": "p",
+      "text": "曲子一開頭，是兩個只差半音的音來回搖晃，在鋼琴上是緊鄰的兩個鍵（E 與 D♯）；接著旋律流動起來，伴奏把和弦拆開一個個彈。把那兩個音當路標：它一出現，開頭那段就回來了。"
+    },
+    {
+      "type": "p",
+      "text": "全曲可以聽成五段：開頭那段、一段新的、開頭那段、又一段新的、開頭那段。開頭那段一共出現三次，中間回來兩次。肯普夫彈起來三分鐘左右。"
+    },
+    {
+      "type": "p",
+      "text": "第一次離開，音樂轉亮。第二次離開，低音一直重複同一個音，聽起來不安穩。接著一串音先往上爬，再以半音一路滑下兩個八度，像即興的裝飾，那兩個音隨即第三次出現；開頭那段走完，曲子就停了，沒有尾聲。"
+    },
+    {
+      "type": "h",
+      "text": "沒選上它的那一套"
+    },
+    {
+      "type": "p",
+      "text": "Op. 119 的十一首是拼起來的：後五首早在 1821 年 6 月就印出來了，1822 年翻舊草稿整理、再新寫第 6 首的，是前六首。"
+    },
+    {
+      "type": "p",
+      "text": "Op. 126 的六首，肯普夫那張唱片的第 1 到 6 軌就是。貝多芬在它的手稿頁邊寫了一句旁註：「小東西的套曲」。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ludwig van Beethoven. Thematisch-bibliographisches Werkverzeichnis, Band 2：WoO 59 Bagatelle（a-moll）",
+      "publisher": "G. Henle Verlag（Kinsky/Halm 新版）",
+      "date": "2014",
+      "url": "https://www.henle.de/download/KB_ausfuehrlich/2207_2_153-155.pdf",
+      "note": "讀了全文：1808、1810 草稿（1810 年春為 Brandenburg 定年，目錄註明 Cooper 另有看法）；1822 年整理約 13 或 14 首未出版小品並編號，〈給愛麗絲〉草稿編為 No 12，最後選出的 Op. 119 未收；Therese Malfatti 為貝多芬 1810 年所追求（umwarb）；首版為 Nohl/NeueBriefe S. 28–33 Nr. 33；Nohl 註全文（含 Gleichenstein 男爵夫人想不起 Elise）；Bredl 1865 年 7 月 14 日的字據；Unger／Cooper／Kopitz／Lorenz／Steblin 的各說。"
+    },
+    {
+      "title": "Beethoven: Klavierstück a-Moll WoO 59 „Für Elise“（Urtext 版序言）",
+      "publisher": "G. Henle Verlag（Joanna Cobb Biermann 撰，2016 年春）",
+      "date": "2016",
+      "url": "https://www.henle.de/media/53/13/68/1697725822/1347-1697725821-sync.pdf",
+      "note": "讀了德文與英文序言：貝多芬愛上特蕾莎（verliebt）；手稿 1865 年於慕尼黑 Bredl 家被 Nohl 見到、自 19 世紀末失蹤；Henle 版以 Nohl 1867 年的版本（整本 Neue Briefe 中的刊印）為主要來源；Th 與 El 的筆跡比對（樣本見 Jürgen May 文章）；May 對題字與日期的推測；4 月 27 日與 Therese 1851 年忌日相合。"
+    },
+    {
+      "title": "Neue Briefe Beethovens 第 28 頁（〈給愛麗絲〉首次印行第 28–33 頁的第一頁；Commons 影像）",
+      "publisher": "Ludwig Nohl 編，Stuttgart；經 Wikimedia Commons",
+      "date": "1867",
+      "url": "https://commons.wikimedia.org/wiki/File:Beethoven_WoO_59_Erstausgabe.png",
+      "note": "親自對照影像逐字讀出頁底註文（含 zwar nicht eben bedeutende aber recht anmuthige、Es ist zwar nicht für Therese geschrieben、gleichsam als Zugabe、Freifrau von Gleichenstein nicht erinnert）；頁首「33.*」為書中第 33 號，譜只到曲子開頭，樂譜上標 poco moto。全曲在書中第 28–33 頁（見 Henle 目錄）。"
+    },
+    {
+      "title": "Ludwig van Beethoven, Skizzenblätter zum Klavierstück „Für Elise“ WoO 59, zum Marsch WoO 19 und zu Egmont op. 84, Autograph（BH 116）",
+      "publisher": "Beethoven-Haus Bonn",
+      "date": "未註明",
+      "url": "https://www.beethoven.de/en/media/view/5010945952710656",
+      "note": "內文圖的原件頁面（永久連結；第 4 頁為 ?page=3）。外側第 1、4 頁為〈給愛麗絲〉草稿，墨水書寫；鉛筆字屬《艾格蒙》與軍隊進行曲；第 1 頁有「No 12」編號。依該館數位典藏使用條款第 2 條（https://www.beethoven.de/en/s/archiv-order），圖說標示 Beethoven-Haus Bonn 並附永久連結。"
+    },
+    {
+      "title": "From Musical Garbage Trucks to Garbage Consciousness in Taiwan（Nancy Guy）",
+      "publisher": "Taiwan Insight",
+      "date": "2025-12-05",
+      "url": "https://taiwaninsight.org/2025/12/05/from-musical-garbage-trucks-to-garbage-consciousness-in-taiwan/",
+      "note": "台北的垃圾車播兩首固定曲子：〈少女的祈禱〉與〈給愛麗絲〉。"
+    },
+    {
+      "title": "Für Elise",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/F%C3%BCr_Elise",
+      "note": "3/8 拍、A 小調、五段輪旋曲 A–B–A–C–A 的聽法、開頭 E 與 D♯ 的搖晃、C 段的持續低音、結尾的上行與兩個八度下行。B 段調性與 enc.piano.or.jp 的說法不同，正文只寫「明亮」。"
+    },
+    {
+      "title": "Beethoven, Ludwig van: Bagatelle “Für Elise” a-moll WoO 59",
+      "publisher": "Piano Encyclopedia（enc.piano.or.jp）",
+      "date": "未註明",
+      "url": "https://enc.piano.or.jp/en/musics/446",
+      "note": "約 3 分 30 秒、104 小節、開頭小二度、低音重複同一個音而不穩定、結尾前的即興般的裝飾音型（mm.78–82）。"
+    },
+    {
+      "title": "Bagatelles（Kempff 專輯，SLPM 138 934）",
+      "publisher": "MusicBrainz",
+      "date": "1965-05",
+      "url": "https://musicbrainz.org/release/90e6eaa7-1f86-466c-ab06-2423cba3caf8",
+      "note": "Deutsche Grammophon 編號、曲目順序（第 1–6 軌 Op. 126，第 9 軌〈給愛麗絲〉，長度約 3 分 03 秒）；發行月份 1965-05 只見於 MusicBrainz，資料卡標明出處。錄音日期沒有核到可靠原始來源，不寫。"
+    },
+    {
+      "title": "Eleven New Bagatelles, Op. 119",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Eleven_New_Bagatelles,_Op._119",
+      "note": "共十一首；第 7–11 首 1821 年 6 月已先出版（Starke 的 Wiener Pianoforte-Schule）；1822 年貝多芬整理舊草稿、新寫第 6 首的是前六首。"
+    },
+    {
+      "title": "Bagatelles, Op. 126 (Beethoven)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Bagatelles,_Op._126_(Beethoven)",
+      "note": "六首；手稿頁邊旁註 Ciclus von Kleinigkeiten（小東西的套曲）。"
+    }
+  ]
+}
