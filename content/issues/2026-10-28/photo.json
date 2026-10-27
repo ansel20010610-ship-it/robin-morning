@@ -1,0 +1,274 @@
+{
+  "column": "photo",
+  "date": "2026-10-28",
+  "title": "強盜窩最亮的地方沒有人",
+  "dek": "右下角的男人扶著一根看不出是什麼的長桿，台階、欄杆邊和窗口的人幾乎都朝著鏡頭。這條紐約窄巷叫強盜窩。",
+  "brief": "紐約 Mulberry Bend 的窄巷 Bandits' Roost，晾衣繩底下站著、坐著、探出窗口的人幾乎都朝著鏡頭，最亮的頭頂那條縫沒有人。里斯 1890 年的書收了這條巷子的插圖，同一章記下隔壁公寓 1888 年辦了 5 場嬰兒喪禮。",
+  "topic_key": "photo:riis-bandits-roost",
+  "updated_at": "2026-10-28T02:02:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Bandits_Roost%2C_59_and_a_half_Mulberry_Street_-_Original.jpg/1280px-Bandits_Roost%2C_59_and_a_half_Mulberry_Street_-_Original.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Bandits_Roost%2C_59_and_a_half_Mulberry_Street_-_Original.jpg/3840px-Bandits_Roost%2C_59_and_a_half_Mulberry_Street_-_Original.jpg",
+    "width": 1280,
+    "height": 1589,
+    "alt": "直式黑白照片。一條窄巷從近處往深處縮小，左邊是橫向壁板的木牆，右邊是磚牆；頭頂只剩一條亮縫，多道晾衣繩橫過，衣物與布垂在半空。右前景站著兩名男子，一人戴軟帽、手扶一根斜立的細長桿子，一人戴圓頂禮帽、一手插在口袋、臉轉向畫面左邊。左側台階上站著兩人；中段右邊的木平台欄杆旁，一名男子坐著、一名女子靠著；右牆窗口探出三個人；巷子中央遠處站著一個身形較小的人。幾乎所有人都朝鏡頭看。左下角有兩個裝著菜葉狀東西的木桶，地面是潮濕的石板。",
+    "caption": "Bandits' Roost（59½ Mulberry Street，Mulberry Bend），館藏記為里斯攝，1888 年。這是 Commons 上的 MoMA 影像，明膠銀鹽放大，檔案說明記 1958 年印製。",
+    "credit": "Jacob Riis 攝；影像來源 Museum of Modern Art，經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bandits_Roost,_59_and_a_half_Mulberry_Street_-_Original.jpg",
+    "made": "1888（放大於 1958）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "右下角那個男人戴軟帽、留鬍子，穿一件厚針織開襟外套，手扶著一根細長的桿子，下端抵在石板上。桿子是什麼，照片裡看不出來。他旁邊站著一個戴圓頂禮帽的年輕人，一隻手插在口袋裡，另一隻手垂在身側，臉轉向畫面左邊，眼睛藏在帽沿的陰影裡。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.62,
+        0.57,
+        0.36,
+        0.41
+      ],
+      "position": "畫面右下角，約佔寬度三分之一",
+      "caption": "右前景兩人。戴軟帽的男子扶著一根下端抵地的長桿；戴圓頂禮帽的年輕人一手插在口袋、一手垂著，臉轉向畫面左邊，眼睛在帽沿的陰影裡。"
+    },
+    {
+      "type": "p",
+      "text": "這條巷子叫 Bandits' Roost，強盜窩，在紐約下東城（Lower East Side）的 Mulberry Street 上，那一帶叫 Mulberry Bend。巷裡住的是義大利移民，住在舊房子後面加蓋的簡陋後棟。館藏把這張照片記在里斯（Jacob Riis）名下，年代 1888。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "攝影者",
+          "Jacob Riis，依 ICP 與 Commons 上的 MoMA 影像著錄；1890 年書名頁說書中插圖 chiefly（主要）取自作者拍的照片"
+        ],
+        [
+          "題名",
+          "Bandits' Roost（Commons 的 MoMA 影像標題為 Bandits' Roost, 59 1/2 Mulberry Street）"
+        ],
+        [
+          "年代",
+          "1888（ICP、MoMA 影像）"
+        ],
+        [
+          "地點",
+          "紐約下東城（Lower East Side），Mulberry Street 上的巷子，Mulberry Bend；ICP 記為 59 1/2 Mulberry Street"
+        ],
+        [
+          "版本",
+          "① 頭圖：MoMA 影像，明膠銀鹽放大，1958 年印製，Commons 4500×5587 像素。② 書頁版：Commons 說明只寫 Bandits' Roost, page 63，日期 before 1890；頁碼與 1890 年《How the Other Half Lives》插圖目錄相符。2536×2035 像素，上傳者增加了對比、除去斑點與刮痕"
+        ],
+        [
+          "館藏",
+          "ICP 235.1982（Alexander Alland Sr. 捐贈，1982）"
+        ],
+        [
+          "權利",
+          "Public domain（Commons 標示）"
+        ],
+        [
+          "來源",
+          "ICP 館藏頁；Wikimedia Commons 兩個檔案頁（MoMA 影像、書頁版）；《How the Other Half Lives》Project Gutenberg 版"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "台階上兩個，欄杆邊兩個，窗口三個"
+    },
+    {
+      "type": "p",
+      "text": "左邊台階上也站著兩個人。一個留小鬍子，穿深色西裝外套；另一個戴圓頂禮帽，穿淺色夾克，腳上一雙及小腿的靴子。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.08,
+        0.39,
+        0.27,
+        0.28
+      ],
+      "position": "畫面左側中段，約佔寬度四分之一",
+      "caption": "左側台階上的兩個人。"
+    },
+    {
+      "type": "p",
+      "text": "巷子中段右側有一座架高的木平台，圍著欄杆。一個男人側坐在欄杆上，嘴邊叼著東西；旁邊的女人雙臂交疊，靠著欄杆。兩人都面向鏡頭。平台底下是一個黑洞洞的開口，欄杆後面還半藏著一個戴帽子的人。再往右是磚牆上的窗口：兩個人從同一扇窗探出來，其中一個手裡像是拿著東西；更上面的窗台，一個年紀較大的男人用手臂撐著探出身子。三個人都朝著鏡頭。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.46,
+        0.36,
+        0.52,
+        0.28
+      ],
+      "position": "畫面右側中段，約佔寬度一半",
+      "caption": "木平台上的一男一女，與右牆窗口的三個人。"
+    },
+    {
+      "type": "p",
+      "text": "巷子深處正中央，站著一個身形比其他人小得多的人，戴帽子，穿深色衣服，也面向鏡頭。他後面是木板圍牆，牆前有一輛兩輪手推車。地上是濕的石板，積著水窪，中間一堆看起來像土的東西，旁邊一只桶；左下角兩個木桶，裝著看起來像菜葉的東西。"
+    },
+    {
+      "type": "p",
+      "text": "這麼多人，幾乎都朝著鏡頭。右前景那個年輕人的臉轉向畫面左邊。"
+    },
+    {
+      "type": "h",
+      "text": "最亮的地方沒有人"
+    },
+    {
+      "type": "p",
+      "text": "整張照片最亮的是頭頂那條縫。左邊是橫向壁板的木牆，右邊是掛著排水管的磚牆，中間夾出窄窄一道天，晾衣繩一道一道橫過，衣物和布垂在半空。右上角有一道弧形的暗邊。近處的人偏暗。"
+    },
+    {
+      "type": "h",
+      "text": "書頁上的橫版"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Jacob_Riis_-_Bandits%27_Roost.jpg/1280px-Jacob_Riis_-_Bandits%27_Roost.jpg",
+      "width": 1280,
+      "height": 1027,
+      "alt": "橫式黑白圖，與頭圖是同一條巷子，取景不同：上緣只見晾著的衣物，頭圖上方那一長段亮縫大半不在畫面內。兩側的牆、左側台階和上面的兩人、中段木平台上的一男一女、右牆窗口三個人、遠處的手推車與木板牆，以及右前景戴軟帽扶長桿的男子與戴圓頂禮帽的年輕人，都在畫面內。",
+      "caption": "書頁版。Commons 檔案說明只寫「Bandits' Roost, page 63」，日期記 1890 年以前，頁碼與 1890 年版《How the Other Half Lives》的插圖目錄相符；圖檔取自 zeno.org。Commons 上傳者在 2010 年增加了對比，並除去斑點與刮痕。",
+      "credit": "Jacob Riis；圖檔取自 zeno.org，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jacob_Riis_-_Bandits%27_Roost.jpg",
+      "made": "1890 年以前（Commons 著錄）"
+    },
+    {
+      "type": "p",
+      "text": "Commons 上還有一個橫式的版本，檔案說明只寫「Bandits' Roost, page 63」，日期記 1890 年以前。里斯 1890 年出版的《How the Other Half Lives》，插圖目錄裡 Bandits' Roost 就在第 63 頁。那本書的書名頁說，書裡的插圖「主要」取自作者自己拍的照片。"
+    },
+    {
+      "type": "p",
+      "text": "兩張的取景不一樣。橫版的上緣只看得到一些晾著的衣物，頭圖上方那一長段亮縫大半不在；牆、台階、平台、手推車、盡頭的木板牆都還在。頭圖則是 1958 年印製的放大。"
+    },
+    {
+      "type": "h",
+      "text": "嬰兒棺和稅冊"
+    },
+    {
+      "type": "p",
+      "text": "里斯在那本書的同一章寫過巷口。巷口兩側的走廊被改成小店，三英尺寬、四英尺深，店主站在裡面，貨擺在門口掛著的一塊板子上；店的後牆打了個洞，從走廊通進巷子，住戶就從那裡進出。"
+    },
+    {
+      "type": "p",
+      "text": "他也寫 Bend 的街上走過一列女人，頭頂大捆柴火，圍裙兜著從市場貨車上來的爛菜，胸前用一條吊帶托著嬰兒。看得到的活全是女人在做；男人或坐或站，在街上、在貨車上、在酒館門口，抽黑陶菸斗，講話比手畫腳，好像隨時要打起來。"
+    },
+    {
+      "type": "p",
+      "text": "緊鄰巷子的 59½ 號公寓，生命統計局的紀錄裡 1888 年只住了 39 個人，9 個是小孩，那一年這棟樓辦了 5 場嬰兒的喪禮。巷子本身是 59 號，同一年抬出去 9 個死者，5 個裝在嬰兒棺裡。"
+    },
+    {
+      "type": "p",
+      "text": "在 Gutenberg 的排印本裡，這張圖排在這些數字和一段談巷子業主的文字後面：業主會反對每一道要他修房子的命令。圖後的下一段，里斯問讀者：要是我說，這條巷子和 Bend 裡另外一些房產，多年來出了名最惡劣，稅冊上卻掛著一個「最老、最好」的家族的名字，有錢，有影響力，在市府裡坐得很高，會怎樣？他接著寫：「這不過是實話」。"
+    },
+    {
+      "type": "p",
+      "text": "強盜窩這個名字，里斯自己倒是照用。1902 年他寫："
+    },
+    {
+      "type": "quote",
+      "text": "Bandits' Roost、Bottle Alley，這幾個名字就等於搶劫和當場行凶的暴行。",
+      "original": "Bandits' Roost, Bottle Alley, were names synonymous with robbery and red-handed outrage.",
+      "cite": "里斯，《The Battle with the Slum》，1902"
+    },
+    {
+      "type": "p",
+      "text": "他說在它們最糟的那些年，他夜裡跟著巡邏的警察，到這幾處地方轉過。"
+    },
+    {
+      "type": "h",
+      "text": "四年估價，一年收租"
+    },
+    {
+      "type": "p",
+      "text": "拆掉 Bend 的計畫在 1888 年送了件，等一份拆除要花多少錢的報告，等了四年。1894 年市府接手，當起這批舊房子的房東，整整一年照收房租，什麼也沒做。房子終於拆了，空地又照拆房工人留下的樣子擱了一年。"
+    },
+    {
+      "type": "p",
+      "text": "1897 年，那裡成了 Mulberry Bend Park，由 Calvert Vaux 設計。1902 年里斯寫：「Bottle Alley 沒了，Bandits' Roost 也沒了。」1911 年，公園改名 Columbus Park。"
+    },
+    {
+      "type": "exercise",
+      "title": "原創假設練習：誰在看你",
+      "steps": [
+        "找一個窄長的空間，例如巷子、騎樓或走廊，裡面有兩三個人分別站在不同的距離，而且你能徵得他們同意入鏡。",
+        "站在入口，先不拍。把空間分成近、中、遠三層，寫下每一層有幾個人、他們朝哪裡看。",
+        "拍一張，讓三層都在畫面裡，三層的人都看得清楚。",
+        "換個位置再拍一張，取景比第一張少一截，例如把上方切掉。",
+        "把兩張並排，比較少了那一截之後，視線先停在哪裡，畫面比較像一個空間，還是比較像人物照。"
+      ],
+      "criteria": [
+        "能說出每一層的人朝哪裡看。",
+        "兩張照片的取景只差一件事：切掉的那一截。",
+        "能用一句話說出少了那一截之後，畫面變了什麼。"
+      ],
+      "note": "這是本報設計的原創練習，不是里斯的工作方法。拍人要先徵得同意，不拍沒同意的陌生人，也不拍孩子的臉。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "How the Other Half Lives: Studies Among the Tenements of New York",
+      "publisher": "Charles Scribner's Sons（Project Gutenberg #45502，依 Internet Archive 掃描整理）",
+      "date": "1890",
+      "url": "https://www.gutenberg.org/ebooks/45502",
+      "note": "書名頁（illustrations chiefly from photographs taken by the author）、插圖目錄（Bandits' Roost 第 63 頁）、第六章巷口小店與 Bend 街上女人與男人的段落、59½ 號與 59 號 1888 年的死亡紀錄、圖前後談巷子業主與稅冊的兩段；Gutenberg 版無頁碼，圖的位置依 Gutenberg 排印"
+    },
+    {
+      "title": "The Battle with the Slum",
+      "publisher": "Project Gutenberg #28228",
+      "date": "1902",
+      "url": "https://www.gutenberg.org/ebooks/28228",
+      "note": "Bandits' Roost 名字的說法、夜裡隨巡邏警察前往、1888 年拆除計畫送件與四年後才有估價報告、1894 年市府接手、Bottle Alley 與 Bandits' Roost 已不在"
+    },
+    {
+      "title": "File:Bandits Roost, 59 and a half Mulberry Street - Original.jpg",
+      "publisher": "Wikimedia Commons（影像來源 Museum of Modern Art）",
+      "url": "https://commons.wikimedia.org/wiki/File:Bandits_Roost,_59_and_a_half_Mulberry_Street_-_Original.jpg",
+      "note": "頭圖；攝影者、1888、明膠銀鹽放大 printed 1958、授權標示"
+    },
+    {
+      "title": "File:Jacob Riis - Bandits' Roost.jpg",
+      "publisher": "Wikimedia Commons（圖檔取自 zeno.org）",
+      "url": "https://commons.wikimedia.org/wiki/File:Jacob_Riis_-_Bandits%27_Roost.jpg",
+      "note": "書頁版；英文說明只寫 Bandits'_Roost,_page_63，日期 before 1890，未寫書名；書名與 1890 年由頁碼對上 Gutenberg 版插圖目錄得出。上傳者 2010 年增加對比、除去斑點與刮痕"
+    },
+    {
+      "title": "bandits roost",
+      "publisher": "International Center of Photography",
+      "url": "https://www.icp.org/browse/archive/objects/bandits-roost",
+      "note": "館藏著錄：Jacob Riis、1888、59 1/2 Mulberry Street, Mulberry Bend、235.1982"
+    },
+    {
+      "title": "Riis and Reform — Jacob Riis: Revealing \"How the Other Half Lives\"",
+      "publisher": "Library of Congress",
+      "url": "https://www.loc.gov/exhibits/jacob-riis/riis-and-reform.html",
+      "note": "背景：Bandits' Roost 是 New York's Lower East Side、Mulberry Street 上的巷子，義大利移民住在 rear tenements，一帶稱 Mulberry Bend。展覽頁另展出一件署名 Riis、Lawrence、Piffard 的 Bandits' Roost 立體對（MCNY 90.13.4.104 & .105，左一名女子與兩個小孩），內容與本篇頭圖不同，其署名、館藏號與立體相機不作為本圖資料"
+    },
+    {
+      "title": "Mulberry Bend",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mulberry_Bend",
+      "note": "Mulberry Bend Park 由 Calvert Vaux 設計、1897 年、1911 年改名 Columbus Park（與里斯 1902 年「接手後隔春開園」的說法不同，正文不寫季節）"
+    }
+  ]
+}
