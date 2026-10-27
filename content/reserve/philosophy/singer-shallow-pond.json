@@ -1,0 +1,370 @@
+{
+  "column": "philosophy",
+  "date": "reserve",
+  "reserve_written": "2026-10-27",
+  "title": "肯為落水小孩毀掉新鞋，為什麼不捐錢",
+  "dek": "池塘邊那一跳，人人都說該跳。辛格說，你其實已經同意了一件大得多的事。池塘和遠方的孩子，到底差在哪？",
+  "brief": "為了救落水小孩弄髒新鞋，沒人會猶豫；辛格說，那你不捐錢、拿去買不需要的新衣，就不只是不慷慨，而是錯。他從這個人人點頭的池塘一路推，最強的版本要你捐到接近難民的處境。反方最站得住的一個差別是：救援和捐款可能是兩種義務。這只解釋了你為什麼非跳不可，沒說明那則通知為什麼可以滑掉。",
+  "topic_key": "philosophy:singer-shallow-pond",
+  "updated_at": "2026-10-27T14:45:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "svg",
+    "title": "淺池塘論證圖",
+    "svg": "<svg viewBox=\"0 0 460 336\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\">\n<text x=\"230\" y=\"22\" text-anchor=\"middle\" class=\"accent\" font-size=\"15\">辛格的推論，和反方卡住的地方</text>\n<rect class=\"soft\" x=\"12\" y=\"36\" width=\"256\" height=\"32\" rx=\"6\"/>\n<text x=\"140\" y=\"57\" text-anchor=\"middle\" font-size=\"13\">前提：缺糧、缺醫而死，是壞事</text>\n<line class=\"ink line\" x1=\"140\" y1=\"68\" x2=\"140\" y2=\"84\" stroke-width=\"1.5\"/>\n<rect class=\"soft\" x=\"12\" y=\"84\" width=\"256\" height=\"46\" rx=\"6\"/>\n<text x=\"140\" y=\"103\" text-anchor=\"middle\" font-size=\"13\">原則：能防止壞事，又不必犧牲</text>\n<text x=\"140\" y=\"121\" text-anchor=\"middle\" font-size=\"13\">同等重要的東西，就應該去做</text>\n<line class=\"ink line\" x1=\"140\" y1=\"130\" x2=\"140\" y2=\"146\" stroke-width=\"1.5\"/>\n<rect class=\"soft\" x=\"12\" y=\"146\" width=\"256\" height=\"32\" rx=\"6\"/>\n<text x=\"140\" y=\"167\" text-anchor=\"middle\" font-size=\"13\">試金石：池塘邊，弄髒衣服換一條命</text>\n<line class=\"ink line\" x1=\"140\" y1=\"178\" x2=\"140\" y2=\"194\" stroke-width=\"1.5\"/>\n<rect class=\"soft\" x=\"12\" y=\"194\" width=\"256\" height=\"46\" rx=\"6\"/>\n<text x=\"140\" y=\"213\" text-anchor=\"middle\" font-size=\"13\">延伸：遠方、旁觀者成千上萬，</text>\n<text x=\"140\" y=\"231\" text-anchor=\"middle\" font-size=\"13\">義務都不打折</text>\n<line class=\"ink line\" x1=\"140\" y1=\"240\" x2=\"140\" y2=\"256\" stroke-width=\"1.5\"/>\n<rect class=\"paper\" x=\"12\" y=\"256\" width=\"256\" height=\"46\" rx=\"6\" stroke-width=\"2\"/>\n<text x=\"140\" y=\"275\" text-anchor=\"middle\" class=\"accent\" font-size=\"13\">結論：不捐錢、去買不需要的新衣，</text>\n<text x=\"140\" y=\"293\" text-anchor=\"middle\" class=\"accent\" font-size=\"13\">是錯，不只是不夠慷慨</text>\n<line class=\"accent line\" x1=\"268\" y1=\"217\" x2=\"282\" y2=\"217\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n<line class=\"accent line\" x1=\"282\" y1=\"52\" x2=\"282\" y2=\"290\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n<text x=\"294\" y=\"50\" text-anchor=\"start\" class=\"accent\" font-size=\"13\">反方在這一步卡關</text>\n<text x=\"294\" y=\"80\" text-anchor=\"start\" class=\"accent\" font-size=\"13\">① 距離</text>\n<text x=\"294\" y=\"97\" text-anchor=\"start\" font-size=\"13\">遠方算一樣嗎？</text>\n<text x=\"294\" y=\"124\" text-anchor=\"start\" class=\"accent\" font-size=\"13\">② 看得見是誰</text>\n<text x=\"294\" y=\"141\" text-anchor=\"start\" font-size=\"13\">只知道「某人」呢？</text>\n<text x=\"294\" y=\"168\" text-anchor=\"start\" class=\"accent\" font-size=\"13\">③ 只有你能救</text>\n<text x=\"294\" y=\"185\" text-anchor=\"start\" font-size=\"13\">很多人可出呢？</text>\n<text x=\"294\" y=\"212\" text-anchor=\"start\" class=\"accent\" font-size=\"13\">④ 池塘只有一次</text>\n<text x=\"294\" y=\"229\" text-anchor=\"start\" font-size=\"13\">捐款救不完呢？</text>\n<text x=\"294\" y=\"256\" text-anchor=\"start\" class=\"accent\" font-size=\"13\">⑤ 進一步論證</text>\n<text x=\"294\" y=\"273\" text-anchor=\"start\" font-size=\"13\">救援不等於捐款？</text>\n<text x=\"230\" y=\"326\" text-anchor=\"middle\" class=\"muted\" font-size=\"11\">左：辛格 1972 年論證骨架（本文整理）；右：SEP 的四個差別與一個進一步論證</text>\n</svg>",
+    "caption": "原創論證圖：依辛格 1972 年〈饑荒、富裕與道德〉頁 229–235、241 整理；右側①–④依 SEP〈Moral Demands and Permissions/Prerogatives〉的四個差別，⑤是 SEP「更具體地說」的進一步論證（救援與捐款是兩種義務）。"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "你坐在巷口咖啡館的露天座，腳上是剛拆盒的白色球鞋，三千塊，第一次穿。馬路對面的社區公園有個淺淺的生態池，水大概只到大人膝蓋。一個四、五歲的小孩追球滑了下去，臉朝下在水裡亂撲，附近沒有別人，他家大人不知道跑哪去了。你只要跨過矮欄、踩進泥水把他撈起來，前後不用一分鐘，代價是那雙鞋和半條褲子。選項只有兩個：衝下去，或者保住鞋子、繼續喝你的拿鐵。再加兩個假設：你下水不會有任何危險，而且你確定撈起來他就沒事。"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "你當然衝。這題根本不用想，對吧？好，換個場景：某天晚上，手機跳出一則募款通知，假設捐三千塊就能確定讓遠方一個孩子活下來（這是本文的假設，不是任何機構的報價）。你把通知滑掉，然後去買了第二雙鞋。這兩件事，到底哪裡不一樣？"
+    },
+    {
+      "type": "p",
+      "text": "澳洲哲學家彼得・辛格（Peter Singer）的答案是：沒有一個差別，夠格讓你心安。這個場景常被叫作「淺池塘」，出自他 1972 年的論文〈饑荒、富裕與道德〉（Famine, Affluence, and Morality）。《史丹佛哲學百科》（SEP）談到「用具體案例推出強烈助人義務」這一路論證時，說最有名的例子就是它。它狠的地方不在落水的小孩，而在你剛剛那句毫不猶豫的「當然衝」。辛格要拿這句話，換走你半個購物車。"
+    },
+    {
+      "type": "p",
+      "text": "所以問題來了：池塘邊的小孩和遠方的孩子，到底差在哪？找得到一個站得住的差別，你可以安心滑掉通知；找不到，你剛剛那一跳，等於簽了一張金額很大的支票。"
+    },
+    {
+      "type": "h",
+      "text": "一句沒人反對的話，怎麼變成一張支票"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "論文開頭寫於 1971 年 11 月，那時東孟加拉有人正因為缺糧、缺住處、缺醫療而死，至少九百萬人淪為赤貧的難民。辛格先算了一筆讓人火大的帳：他拿英國政府給的援助，去比英國在英法協和號超音速客機上分攤、收不回來的開發費，得出一句很難聽的結論：英國政府看重一架超音速客機，是看重九百萬難民性命的「三十倍以上」。這是他自己寫的倍數；照他給的數字重算，英國援助 1,475 萬英鎊，協和號分攤開發費目前逾 2.75 億、預估 4.4 億，相除約 18.6 倍與 29.8 倍，其實還略低於三十。"
+    },
+    {
+      "type": "p",
+      "text": "接著他只放兩塊磚。第一塊：因為缺糧、缺住處、缺醫療而受苦和死去，是壞事。他不打算為這點辯護，只丟下一句：不同意的人，可以不用讀下去了。第二塊才是整篇的引擎："
+    },
+    {
+      "type": "quote",
+      "text": "如果我們有能力防止某件壞事發生，而且不必因此犧牲任何道德上同等重要的東西，那麼在道德上，我們就應該去做。",
+      "original": "if it is in our power to prevent something bad from happening, without thereby sacrificing anything of comparable moral importance, we ought, morally, to do it.",
+      "cite": "辛格，〈饑荒、富裕與道德〉，1972，頁 231；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "他說這條原則「幾乎和上一條一樣沒有爭議」，還大方讓步：就算改成更溫和的版本，只要求防止「非常」壞的事、只要不必犧牲任何道德上「重要」的東西，論證照樣成立。然後，池塘出場："
+    },
+    {
+      "type": "quote",
+      "text": "如果我走過一個淺池塘，看見有個小孩在裡面快淹死了，我應該涉水進去把他拉出來。這會弄髒我的衣服，但那無關緊要；而小孩死去，想必是非常壞的事。",
+      "original": "if I am walking past a shallow pond and see a child drowning in it, I ought to wade in and pull the child out. This will mean getting my clothes muddy, but this is insignificant, while the death of the child would presumably be a very bad thing.",
+      "cite": "辛格，1972，頁 231；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "到這裡你都會點頭。陷阱在下一段。辛格指出，這條原則完全不管距離：要救的是十碼外鄰居家的小孩，還是一萬英里外、你永遠不會知道名字的孟加拉人，沒有差別。它也不管人數：你是唯一能出手的人，還是幾百萬個處境相同的人之一，同樣沒有差別。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "推到底，傳統上「義務」和「慈善」的那條線畫錯了位置。辛格舉的例子正好是衣服：買新衣不是為了保暖，只是為了看起來體面，就不算滿足什麼重要需求；把錢捐去賑災，你沒有犧牲任何重要的東西，卻能讓另一個人不餓死。所以他說，這不是慷慨，也不是那種「做了很好、不做也沒錯」的善行："
+    },
+    {
+      "type": "quote",
+      "text": "我們應該把錢捐出去，不這麼做就是錯的。",
+      "original": "we ought to give the money away, and it is wrong not to do so.",
+      "cite": "辛格，1972，頁 235；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "而且這還是溫和版。辛格自己寫明，強版本要人一路捐到「邊際效用」那一點：再多捐一塊，自己和家人承受的痛苦就和能減輕的一樣多。他寫道，這意味著把自己降到非常接近孟加拉難民的物質處境，又補了一句：在我看來，強版本才是對的。一雙鞋開場，論證一路滾到要你重排整個生活，這個雪球的坡度，連辛格自己都沒打算放緩。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Peter_Singer_02.jpg/1280px-Peter_Singer_02.jpg",
+      "width": 1280,
+      "height": 1075,
+      "alt": "一位戴金屬框眼鏡、頭髮稀疏灰白的男士，穿淺色襯衫站在木製講台後，台上有兩支細長的麥克風，背景是暗紅色的布幕。他的視線望向畫面左側。",
+      "caption": "辛格在美國聖路易華盛頓大學演講，2008 年攝，拍攝時距論文發表 36 年。",
+      "credit": "TimVickers 攝，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Peter_Singer_02.jpg",
+      "made": "2008"
+    },
+    {
+      "type": "h",
+      "text": "池塘和募款通知，反方抓到四個差別"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "反方不是不在乎遠方的孩子，只是不肯讓一個池塘扛下整套結論。SEP 這個條目的作者胡卡（Thomas Hurka）列出池塘和捐款之間的四個差別，內容見下表。主張強烈助人義務的一方，如辛格和昂格（Peter Unger），認為這些差別單看或合起來都沒有道德分量；另一方認為至少有一個會削弱義務。條目接著「更具體地說」，補上一個進一步的論證：救援和捐款可能是兩種不同的義務。表裡把它列為第五列。"
+    },
+    {
+      "type": "table",
+      "title": "池塘 vs. 募款：四個差別，加一個進一步論證",
+      "head": [
+        "差別",
+        "辛格這一方",
+        "反方",
+        "代表人物"
+      ],
+      "rows": [
+        [
+          "① 距離",
+          "近在眼前只讓我們比較願意幫，不代表比較該幫；通訊和救援組織讓遠方援助幾乎和隔壁一樣有效",
+          "距離本身可能就改變義務的強弱",
+          "辛格、昂格／卡姆（轉引）"
+        ],
+        [
+          "② 看得見自己救的是誰",
+          "SEP 的概括是：強義務一方認為這類差別單獨或合起來都沒有道德分量；辛格原文直接談的是接觸與距離",
+          "知道誰會得救，對比只知道「某個人」會得救，可能讓義務更強（SEP 未逐項指名誰）",
+          "辛格、昂格／SEP 未逐項指名"
+        ],
+        [
+          "③ 只有你能救，還是很多人可出",
+          "別人都不做，只會讓你比較不愧疚，不會減輕你的義務",
+          "你只需做「如果大家都盡本分」時分到的那一份",
+          "辛格／墨菲（依 SEP）"
+        ],
+        [
+          "④ 池塘通常只出現一次",
+          "結論讓人不舒服，該檢討的是我們的日常標準",
+          "一連串小犧牲加起來太重，總要有個上限",
+          "辛格／SEP 整理的多位學者"
+        ],
+        [
+          "⑤ 進一步論證：救援還是捐款",
+          "本文補充：SEP 說池塘撐不起最大化義務，但仍撐得起比日常道德更強的捐款義務",
+          "緊急救援是另一種、更強的義務，不能不打折地搬到捐款上",
+          "辛格（本文補充）／伍拉德、伊格內斯基"
+        ]
+      ],
+      "caption": "依辛格 1972 年原文與 SEP〈Moral Demands and Permissions/Prerogatives〉（胡卡，2024）整理；①–④是 SEP 列的四個差別，⑤是 SEP「更具體地說」的進一步論證。只列各方最強的理由，不代表雙方已有定論。卡姆的立場轉引自 Nagel 與 Waldmann（2010）。"
+    },
+    {
+      "type": "p",
+      "text": "好，重點來了。光看表格，兩邊都很有道理。所以接下來不辯論，直接動手：回到咖啡館，一次調整一個條件，看你的「當然衝」會不會鬆動。"
+    },
+    {
+      "type": "h",
+      "text": "改第一個條件：池塘搬到另一個城市"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "哲學家卡姆（F. M. Kamm）設計過一組對照，專門把距離單獨拎出來。以下案例細節依 Nagel 與 Waldmann（2010）轉引，我沒讀到卡姆原書。你在國外旅行，路過一個池塘，只有你「看見」很多孩子在溺水，也只有你能救其中一個：把口袋裡的 500 美元投進一台機器，機器會啟動救援裝置，保證把他撈上來。對照版幾乎只改距離：池塘在那個國家很遠的另一頭，你是唯一「知道」這件事的人，救法一模一樣。卡姆的直覺是，近的那一版，你的義務比較強。她認為人數、代價、成功率都一樣，剩下的差別就是距離本身。請先記住：近版是看見，遠版是知道，這個小縫隙，實驗三會回來收帳。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "辛格不必等卡姆出題，1972 年的論文（頁 232）早就回應了：人在近處，確實讓我們比較可能出手，但這不表示我們比較應該幫他；只要接受任何一種公正、平等或可普遍化的原則，就不能只因為對方離得遠而差別對待。"
+    },
+    {
+      "type": "p",
+      "tag": "史實",
+      "text": "誰的直覺比較準？德國哥廷根大學的兩位心理學家，在 2010 年發表的研究裡真的拿卡姆的題目去問學生。實驗一有 62 位哥廷根大學學生，分兩組各讀一個版本，用 1 到 6 分評「你覺得自己有多大義務投錢」：近的那組高於遠的那組，一般人的直覺跟卡姆同一邊（兩組平均分數見文末來源註記）。可是實驗三把「親眼看見」和「透過手機影片得知」拆開來測，並把「遠」改成約 5 公里（這樣用望遠鏡也看得到），240 位學生分成八組之後，距離的效果就消失了。還留著效果的，是有沒有親眼看見，以及要付的代價高低。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "這個實驗量的是直覺，不是道德答案，作者自己也說不處理「距離應不應該有分量」。樣本是德國大學生，實驗三的「遠」也只有約 5 公里，離辛格說的一萬英里差得很遠，所以頂多是暗示。我的讀法是，它讓「距離」這張牌可能比看起來薄：如果我們心裡那條線，其實畫在「有沒有親眼看到」，那就得再問一次，這算不算理由？你閉上眼睛，池塘裡的小孩並不會比較不需要你。當然，卡姆那邊仍可以說，直覺量不準，不代表那個差別不存在。"
+    },
+    {
+      "type": "h",
+      "text": "改第二個條件：露台上坐滿了人"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "同一個池塘，只是露台上還坐著十個客人，每個人都看見了，沒有人動。你的義務有變成十分之一嗎？"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "辛格直接拿池塘回答：如果我環顧四周，看到其他人離池塘跟我一樣近，也都注意到了卻什麼都沒做，我救那個孩子的義務會比較小嗎？他說："
+    },
+    {
+      "type": "quote",
+      "text": "只要問出這個問題，就看得出「人多會減輕義務」這種看法有多荒謬。",
+      "original": "One has only to ask this question to see the absurdity of the view that numbers lessen obligation.",
+      "cite": "辛格，1972，頁 233；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "他接著把這種想法稱為「什麼都不做的理想藉口」，還拆了一個最直白的算法：人人出 5 英鎊就夠賑災，所以我只欠 5 英鎊。他的回應是，這個結論只在「大家都出」時才成立，實際上不是人人都出，我多出的那份仍能多救人（頁 233）。反方最強的版本也不是「人多我就可以不做」，而是公平。哲學家墨菲（Liam Murphy）1993 年提出「合作式」的助人原則：你只需要做到「如果大家都盡了本分」時你分到的那一份。依 SEP 的整理，他在意的不是太累，而是一個義務不該因為別人不盡責，就變得對你更沉重。這很像辦公室分工：同事擺爛，憑什麼整份報告落在你頭上？"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "問題在池塘上看得最清楚。合作式原則在「很多人可以一起出力」的情況下寬鬆得多，在只有你能救的時候就沒有減輕；它在另一個方向又可能太寬：你和另一個人合計花 20 美元就能救一條命，對方拒絕出他那 10 美元，照這個原則，你沒有義務一個人付 20 美元。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "我的讀法是：被同事坑的那股火是真的，可是在池塘邊，為了不當冤大頭而看著一條命沒了，公平就從理由變成了藉口。"
+    },
+    {
+      "type": "h",
+      "text": "改第三個條件：池塘每天早上都有一個"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "現在池塘不只出現一次。你每天早上經過，裡面都有一個新的孩子。每救一次，就是一雙鞋、一條褲子、上班遲到一小時；救到第一百天，老闆找你談話，你的存款也只夠買拖鞋了。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這正是捐款和池塘最不像的地方。原版池塘通常被想像成一次性的（SEP 的觀察）；捐款救了一個人，還有下一個、再下一個。好幾位學者把它畫成「一長排池塘」，每一個都要你放下手上的事去救，最後完全沒有自己的時間。很多人會說：你不可能被要求把整排池塘全救完。"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "辛格自己早就承認，照他的論證，在當時的世界，我們應該全職投入減輕大規模的苦難。他的態度很硬：這個結論讓人不想面對，但他看不出它為什麼是在批評他的立場，而不是在批評我們平常的行為標準。大多數人多少都自私，很少人會做到所有該做的事，可是——"
+    },
+    {
+      "type": "quote",
+      "text": "把這當成「其實我們並不應該這麼做」的證據，很難說是誠實的。",
+      "original": "It would, however, hardly be honest to take this as evidence that it is not the case that we ought to do it.",
+      "cite": "辛格，1972，頁 238；本文自譯"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "反方要畫上限，也得付代價。有一種修法：一輩子的犧牲設一個總額，捐夠了就可以停。麻煩是，照這個說法，捐夠的人路過池塘，連花 1 美元救落水小孩都沒有義務了。另一種修法比較細：你過去犧牲得越多，下一次要求你出手的門檻就越高。這樣救到第幾百個池塘，你終於可以去上班；但門檻要怎麼升、升多快，又是另一場架。"
+    },
+    {
+      "type": "h",
+      "text": "最後一個條件：你正趕著去救兩個人"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "這一題最兇。SEP 舉了一個例子：假設你正趕去完成一筆捐款，這筆錢能救兩條命，而且必須立刻送出；半路上，你看見池塘裡有個小孩在溺水。如果救池塘的小孩只是一般助人義務的一個例子，答案很清楚：繼續走，兩條命大於一條命。可是很多人覺得，走過去才是錯的，你該停下來救眼前這個。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "如果你也這樣覺得，哲學家伍拉德（Fiona Woollard）、伊格內斯基（Violetta Igneski）等人會說：那就代表緊急救援是另一種、比一般助人更強的義務。這樣一來，池塘裡的判斷就不能原封不動搬到捐款上，至少搬過去時會打個折。另外，連辛格都承認，光靠池塘撐不起他心目中那種最嚴格的義務；但只要論證成功，它撐得起的仍是一個比日常道德更強的捐款義務，讓大筆捐款不再只是慷慨，而是本分。"
+    },
+    {
+      "type": "p",
+      "tag": "本文讀法",
+      "text": "開頭那個問題，答案大概落在這裡。四個差別裡，距離和「看得見自己救的是誰」其實纏在一起，實驗暗示我們在意的可能是親眼看見，不是公里數；人數那張牌，會撞上 20 美元的難題；次數是真的，但它只限制你總共要給多少，沒回答「要不要給」。最站得住的是進一步的那個論證：救援和捐款也許真是兩種義務。只是這張牌的方向很怪，它解釋了為什麼你覺得非跳不可，卻沒有說明，為什麼那則通知可以安心滑掉。"
+    },
+    {
+      "type": "h",
+      "text": "鞋子還在滴水"
+    },
+    {
+      "type": "p",
+      "text": "回到咖啡館。你全身泥水坐回露天座，小孩被趕來的家人抱走，你的新鞋正在滴水。這時手機亮了，又是一則募款通知。辛格會這樣回（本文擬答）：大家實際上怎麼判斷，跟他的結論對不對無關，要推翻就得推翻論證：如果十碼和一萬英里沒有差別，你的手指就跟剛剛跨過矮欄的腿一樣，有義務動一下。反方則會提醒你，池塘之所以讓人非跳不可，可能正是因為它不是募款通知。",
+      "tag": "本文讀法"
+    },
+    {
+      "type": "p",
+      "text": "兩次你都沒有猶豫：跳下去的時候沒有，滑掉通知的時候也沒有。這兩個「不用想」，至少有一個想錯了；還是說，它們本來就是兩道不同的題？"
+    },
+    {
+      "type": "facts",
+      "title": "原典與本文情境的差異",
+      "items": [
+        [
+          "原始思想實驗",
+          "辛格〈饑荒、富裕與道德〉（Famine, Affluence, and Morality），Philosophy & Public Affairs 1(3)，1972，頁 229–243；池塘例在頁 231"
+        ],
+        [
+          "原典的代價",
+          "弄髒衣服（getting my clothes muddy）"
+        ],
+        [
+          "原典的對照",
+          "1971 年東孟加拉難民與「孟加拉賑災基金」；以買不需要的新衣代表可以省下的花費（頁 235）"
+        ],
+        [
+          "本文改了哪裡",
+          "改成咖啡館、三千元的新球鞋與手機募款通知；「捐三千元確定救活一人」是本文假設，不是任何機構的數字"
+        ],
+        [
+          "本文引用的變體",
+          "卡姆的近／遠對照（轉引自 Nagel 與 Waldmann 2010）；一長排池塘與「趕去捐款途中遇到落水小孩」依 SEP 的整理與舉例；露台客人、每天一個池塘是本文自創情境"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Famine, Affluence, and Morality",
+      "publisher": "Peter Singer，Philosophy & Public Affairs 1(3): 229–243",
+      "date": "1972",
+      "url": "https://pdf.stafforini.com/singer-1972-famine-affluence-morality.pdf",
+      "note": "JSTOR 掃描全文。1971 年 11 月寫作、東孟加拉至少九百萬難民、協和號比較頁 229–230（辛格原文寫「三十倍以上」；英國援助 £14,750,000、協和號開發費分攤逾 £275,000,000、預估 £440,000,000，相除約 18.6 與 29.8 倍，略低於他寫的倍數）；第一個假設與「Those who disagree need read no further」、原則、溫和版、池塘例頁 231；十碼與一萬英里頁 231–232；距離論證頁 232、人數與「每人出 5 英鎊」論證頁 232–233；新衣與「it is wrong not to do so」頁 235；「人們實際上怎麼判斷與結論是否成立無關」頁 236；全職投入與「hardly honest」頁 238；邊際效用、接近孟加拉難民處境、強版本才是對的頁 241。"
+    },
+    {
+      "title": "Moral Demands and Permissions/Prerogatives",
+      "publisher": "Thomas Hurka，Stanford Encyclopedia of Philosophy",
+      "date": "2024-06-27",
+      "url": "https://plato.stanford.edu/entries/moral-demands-permissions/",
+      "note": "以具體案例論證的一節：池塘例、四個差別（距離、看得見是誰、只有你能救／很多人可出、一次性）與「更具體地說」的救援義務論證、Singer 1972 與 Unger 1996 否認差別有道德分量、對照 Kamm 2000；Woollard 2015（頁 132、142）趕去捐款途中遇到落水小孩、Igneski 2006 救援為另一種義務；辛格承認池塘撐不起最大化義務。Murphy 1993、2000 的合作式原則及 20 美元反例（引 Tadros 2016 等）。第 6 節「一長排池塘」（引 Kuper 2002、Timmerman 2015、Woollard 2015、J. A. Thomson 2022）、一生總額上限的代價（連 1 美元也不必花）、隨累積犧牲提高門檻的修法（Pummer 2023）。"
+    },
+    {
+      "title": "Deconfounding Distance Effects in Moral Reasoning",
+      "publisher": "Jonas Nagel、Michael R. Waldmann，Proceedings of the 32nd Annual Conference of the Cognitive Science Society（Ohlsson、Catrambone 編）",
+      "date": "2010",
+      "url": "https://www.psych.uni-goettingen.de/de/cognition/publikationen-dateien-waldmann/2010_distance-effects.pdf/@@download/file/2010_distance%20effects.pdf",
+      "note": "哥廷根大學網站上的論文 PDF。卡姆 Near/Far Alone 原文轉引（Kamm 2007 頁 348）、Unger 1996 的 Vintage Sedan 與 Envelope 摘述。實驗一：62 名哥廷根大學學生（德國樣本）、6 點量表，近平均 5.61、遠平均 4.97。實驗三：240 名同校學生、2×2×2 設計，遠條件約 5 公里，控制資訊直接性後距離主效果不顯著，親眼目睹與代價有主效果。作者說明不處理距離在規範上應否有分量。"
+    },
+    {
+      "title": "Intricate Ethics: Rights, Responsibilities, and Permissible Harm",
+      "publisher": "F. M. Kamm，Oxford University Press",
+      "date": "2007",
+      "url": "https://academic.oup.com/book/26256",
+      "note": "未讀原書；Near Alone／Far Alone 案例與卡姆的直覺轉引自 Nagel 與 Waldmann（2010），他們標示出處為本書頁 348。原始論文為 Kamm 2000，〈Does Distance Matter Morally to the Duty to Rescue?〉，Law and Philosophy 19(6): 655–681。"
+    },
+    {
+      "title": "The Demands of Beneficence",
+      "publisher": "Liam B. Murphy，Philosophy & Public Affairs 22(4): 267–292",
+      "date": "1993",
+      "url": "https://stafforini.com/works/murphy-1993-demands-beneficence/",
+      "note": "書目紀錄頁。未讀原文；合作式原則與其理由依 SEP〈Moral Demands and Permissions/Prerogatives〉第 4 節的整理。"
+    },
+    {
+      "title": "Living High and Letting Die: Our Illusion of Innocence",
+      "publisher": "Peter Unger，Oxford University Press",
+      "date": "1996",
+      "url": "https://doi.org/10.1093/0195108590.001.0001",
+      "note": "未讀全書；依出版社摘要（我們對個案的直覺常與基本道德價值衝突）及 SEP、Nagel 與 Waldmann 的引述，列為否認距離有道德分量的一方。"
+    },
+    {
+      "title": "Doing and Allowing Harm",
+      "publisher": "Fiona Woollard，Oxford University Press",
+      "date": "2015",
+      "url": "https://doi.org/10.1093/acprof:oso/9780199683642.001.0001",
+      "note": "未讀原書；「趕去捐款途中遇到落水小孩」是 SEP 舉的例子，SEP 以 Woollard 2015（頁 132、142）為「許多人認為該停下救人，故救援是另一種義務」的代表。"
+    },
+    {
+      "title": "Perfect and Imperfect Duties to Aid",
+      "publisher": "Violetta Igneski，Social Theory and Practice 32(3): 439–466",
+      "date": "2006",
+      "url": "https://doi.org/10.5840/soctheorpract200632321",
+      "note": "未讀原文；「緊急救援是另一種義務」一說依 SEP 的引述。"
+    },
+    {
+      "title": "File:Peter Singer 02.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2008-04-30",
+      "url": "https://commons.wikimedia.org/wiki/File:Peter_Singer_02.jpg",
+      "note": "TimVickers 拍攝並釋出為公有領域；說明為辛格在聖路易華盛頓大學演講。"
+    }
+  ]
+}
