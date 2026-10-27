@@ -1,0 +1,222 @@
+{
+  "column": "music",
+  "date": "reserve",
+  "reserve_written": "2026-10-27",
+  "title": "莫札特自己記了五個樂章，我們只聽得到四個",
+  "dek": "《弦樂小夜曲》大概是他最受歡迎的器樂曲，可是他親筆登記的是五個樂章。那首失蹤的小步舞曲寫在一張紙頁上，兩百多年沒人找到。",
+  "brief": "莫札特 1787 年親筆登記《弦樂小夜曲》時寫的是五個樂章，現在聽到的只有四個。缺的小步舞曲寫在一張紙頁上，很早就不見了，連這首曲子是為誰、為什麼場合而寫，查得到的資料裡也沒有。聽的時候，留意第一樂章結束、直接接上浪漫曲的地方（本文讀法：原本該有一首小步舞曲的位置）。",
+  "topic_key": "music:mozart-k525",
+  "updated_at": "2026-10-27T14:47:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/de/Mozart_-_Eine_kleine_Nachtmusik_K.525_autograph.png",
+    "width": 1045,
+    "height": 800,
+    "alt": "橫放的手寫總譜頁，淺灰色紙，右緣略有破損。紙面分成上、中、下三組，每組四行譜線，滿是墨筆寫的音符與升降記號；右上角有幾行手寫的文字與數字。",
+    "caption": "《弦樂小夜曲》KV 525 的親筆總譜首頁。Commons 檔案頁標明作者莫札特與 1787 年 8 月 10 日。筆跡清楚漂亮，幾乎沒有修改；2000 年的前言說手稿藏於瑞士私人手中。",
+    "credit": "莫札特，1787；掃描檔經 Wikimedia Commons，檔案頁標示來源為 IMSLP",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mozart_-_Eine_kleine_Nachtmusik_K.525_autograph.png",
+    "made": "1787"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "全體弦樂同時拉出同一條旋律，一蹦一蹦往上爬，接著輕輕落下來。你大概不用知道曲名就能哼出來：這是莫札特的《弦樂小夜曲》（Eine kleine Nachtmusik），德文直譯是「一首小小的夜間音樂」。新莫札特全集的編輯在 2000 年寫的樂譜前言裡，說它大概是莫札特最受歡迎的器樂曲。"
+    },
+    {
+      "type": "p",
+      "text": "不過你這輩子聽到的，一直是缺了一塊的版本。莫札特自己登記這首曲子的時候，寫的是五個樂章。少掉的那一個，到底去了哪裡？"
+    },
+    {
+      "type": "music",
+      "composer": "莫札特（Wolfgang Amadeus Mozart）",
+      "work": "G 大調弦樂小夜曲「一首小小的夜間音樂」，KV 525",
+      "work_original": "Eine kleine Nachtmusik, Serenade in G major, K. 525",
+      "composed": "1787 年 8 月 10 日記入莫札特親筆作品目錄（維也納）",
+      "performers": "內維爾・馬里納（Neville Marriner）指揮 聖馬丁學院管弦樂團（Academy of St Martin in the Fields）",
+      "recording": "Philips Classics，專輯 1987 年 6 月 15 日發行（與〈Adagio 與賦格〉KV 546 等同輯）",
+      "duration": "約 17 分鐘（這版四個樂章合計 16 分 51 秒）",
+      "movements": [
+        "I. Allegro",
+        "II. Romance (Andante)",
+        "III. Menuetto (Allegretto)",
+        "IV. Rondo (Allegro)"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Mozart Eine kleine Nachtmusik Marriner Academy of St Martin in the Fields",
+        "artist_hint": "Marriner",
+        "track_filter": [
+          "Eine kleine Nachtmusik",
+          "K. 525"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "指定馬里納與聖馬丁學院樂團的 Philips 版：主流、好找，而且曲目表上就是四個樂章原樣排好，沒有硬塞一個替身進去。"
+    },
+    {
+      "type": "h",
+      "text": "一行字，數得出五個樂章"
+    },
+    {
+      "type": "p",
+      "tag": "史料",
+      "text": "1787 年 8 月 10 日，維也納。莫札特打開他從 1784 年起親筆記錄作品的目錄，寫下這一筆："
+    },
+    {
+      "type": "quote",
+      "original": "Eine kleine NachtMusick, bestehend in einem Allegro, Menuett und Trio. – Romance. Menuett und Trio, und finale – 2 Violini, Viola e Baßi",
+      "text": "一首小小的夜間音樂，由一個快板、小步舞曲與中段、浪漫曲、小步舞曲與中段，以及終曲組成——2 把小提琴、中提琴與低音。",
+      "cite": "莫札特親筆作品目錄，1787 年 8 月 10 日條；據 Bärenreiter 新莫札特全集版前言（Wolfgang Rehm，2000）轉錄，本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "數一數：快板、小步舞曲、浪漫曲、小步舞曲、終曲，五個。你手邊的錄音只有四個。按這行字，第一首小步舞曲本來卡在第一樂章和浪漫曲之間。他照目錄的慣例，還在對頁用鋼琴譜記了快板的開頭幾個音。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Verzeichn%C3%BCss_aller_meiner_Werke.jpg",
+      "width": 562,
+      "height": 720,
+      "alt": "一本舊目錄冊的封面：米黃偏褐的舊紙，左邊貼著深褐色書脊；上半部有幾行手寫字，下半部印著深色小花的圖案。",
+      "caption": "莫札特親筆作品目錄的封面，題為「Verzeichnüss aller meiner Werke」（我所有作品的目錄）。他從 1784 年 2 月記到 1791 年底去世前不久；上面那行小夜曲的五個樂章，就登記在這本冊子裡。",
+      "credit": "莫札特，1784 年起；影像經 Wikimedia Commons，來源標示為 Mozarteum 的數位莫札特版（dme.mozarteum.at）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Verzeichn%C3%BCss_aller_meiner_Werke.jpg",
+      "made": "1784"
+    },
+    {
+      "type": "h",
+      "text": "失蹤的那一頁，去了哪裡"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "莫札特紀念館（Mozarteum）的 Köchel 目錄線上版給了一個很具體的說法：莫札特原本為慢樂章寫了一首 C 大調的〈Larghetto〉（KV 525a），後來不要了，直接把那一頁從總譜裡撕出來。麻煩是這張紙是對摺的雙頁，另一半寫著第一首小步舞曲（所以失蹤的小步舞曲是這張對摺雙頁的一半），它跟著鬆脫，後來就不見了，可能早在莫札特生前。"
+    },
+    {
+      "type": "p",
+      "tag": "學者解釋",
+      "text": "新全集的編輯雷姆（Wolfgang Rehm）說得保守些：歷來有人提議拿別首小步舞曲來頂替，他認為這些提議都被證明是錯的，或不能接受。在那一頁重新出現以前，照傳統的四個樂章演奏就好；替莫札特補寫，幾乎從來沒成功過。至於那一頁是早早遺失，還是被某個人從手稿裡拿走，誰也說不準。"
+    },
+    {
+      "type": "h",
+      "text": "誰訂的？沒人記得"
+    },
+    {
+      "type": "p",
+      "text": "更怪的是，這首曲子連為誰寫都不知道。夜間音樂通常是為朋友的命名日或受委託而寫，這一首的實際情況，目前查不到。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "p",
+      "text": "寫它的那幾個月，莫札特的桌上同時攤著歌劇《唐喬望尼》（Don Giovanni）的第二幕。"
+    },
+    {
+      "type": "timeline",
+      "title": "1787 年的夏天到秋天",
+      "items": [
+        { "when": "1787.6.14", "label": "登記《音樂玩笑》KV 522", "note": "只用六位獨奏者演奏" },
+        { "when": "1787.8.10", "label": "登記《弦樂小夜曲》KV 525", "note": "目錄寫了五個樂章" },
+        { "when": "1787.10.28", "label": "登記歌劇《唐喬望尼》", "note": "小夜曲寫成時，第二幕還在進行" },
+        { "when": "1787.10.29", "label": "《唐喬望尼》在布拉格首演", "note": "地點是 Ständetheater" }
+      ],
+      "caption": "日期依 Bärenreiter 新莫札特全集版《弦樂小夜曲》前言（Wolfgang Rehm，2000）。"
+    },
+    {
+      "type": "p",
+      "text": "前言引了傳記作家希爾德斯海默（Wolfgang Hildesheimer）的評語："
+    },
+    {
+      "type": "quote",
+      "original": "Daß es die Spatzen von den Dächern pfeifen, ändert nichts an der hohen Qualität dieses Gelegenheitsstückes aus einer leichten, aber glücklichen Hand",
+      "text": "連麻雀都在屋頂上吹這首曲子（意思是人人皆知），也不減損這首應景之作的高品質：它出自一隻輕盈卻幸運的手。",
+      "cite": "Wolfgang Hildesheimer，轉引自 Bärenreiter 前言；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "麻雀會吹，是很後來的事。它比同年的《音樂玩笑》更少人知道，要到 20 世紀靠廣播與唱片才真正紅起來。",
+      "tag": "學者解釋"
+    },
+    {
+      "type": "h",
+      "text": "聽的時候注意三件事"
+    },
+    {
+      "type": "p",
+      "text": "**開頭：** 全體弦樂齊奏同一條旋律，先往上蹦，再輕輕落下。它是整首最有名的部分，也是莫札特依慣例在目錄對頁記下的那幾個音。"
+    },
+    {
+      "type": "p",
+      "text": "**中段：** 第一樂章一結束，你原本該等到的是那首小步舞曲，現在卻直接進了浪漫曲（Romance，像歌唱的慢樂章）。本文讀法：缺口就在這裡。浪漫曲本身很溫柔，正中央會轉進小調，暗一下，再回到最初的歌唱。"
+    },
+    {
+      "type": "p",
+      "text": "**最後：** 終曲是輪旋曲（rondo，主旋律跑出去、又回來，再跑出去、再回來）。這版只要三分鐘上下，主旋律回來的次數多到你會開始等它。"
+    },
+    {
+      "type": "h",
+      "text": "喜歡的話，接著聽"
+    },
+    {
+      "type": "list",
+      "items": [
+        "莫札特《音樂玩笑》KV 522：同一個夏天登記的姊妹作，編制是六位獨奏者，外號鄉村樂手六重奏。",
+        "莫札特《夜間小夜曲》（Serenata notturna）KV 239：名字就是「夜間的小夜曲」，想多聽幾首莫札特的夜間音樂，可以從這首找起。"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "帶走這個就夠了：你最熟的那個開頭，是一份缺頁作品的第一頁。那張寫著小步舞曲的單頁，哪一天重新出現以前，照四個樂章演奏就好。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Eine kleine Nachtmusik für Streicher KV 525（Urtext der Neuen Mozart-Ausgabe，Vorwort / Preface）",
+      "publisher": "Bärenreiter（Wolfgang Rehm 撰於 2000 年 10 月）",
+      "date": "2000-10",
+      "url": "https://www.barenreiter.co.uk/prefaces/9790006200177_Innenansicht.pdf",
+      "note": "莫札特 1787 年 8 月 10 日目錄條文（含「2 Violini, Viola e Baßi」）與對頁以鋼琴譜記下開頭；《音樂玩笑》6 月 14 日、《唐喬望尼》10 月 28 日登記、10 月 29 日布拉格首演；創作緣由原文為「bis heute unbekannt」，本報寫「目前查不到」；第一首小步舞曲寫在「單頁」（Einzelblatt）上，早已遺失或被人取走、別首曲子的頂替提議不成立、照四個樂章演奏；手稿 2000 年時在瑞士私人手中；希爾德斯海默的評語；2026-10-27 查閱 PDF 全文"
+    },
+    {
+      "title": "Eine kleine Nachtmusik (A little night music), KV 525",
+      "publisher": "Köchel-Verzeichnis online，Internationale Stiftung Mozarteum",
+      "date": "未註明",
+      "url": "https://kv.mozarteum.at/en/work/eine-kleine-nachtmusik-a-little-night-music-6049",
+      "note": "完成日 1787 年 8 月 10 日、第一首小步舞曲的失蹤與 Larghetto（KV 525a）撕頁的說法、夜間音樂的一般用途與本曲確切緣由不明（本報寫「目前查不到」）、20 世紀才因廣播與唱片大紅；該頁並說「Serenade」一詞非莫札特所用、只見於第一版（出版商為奧芬巴哈的安德烈 J. André），本文不採用此點；紀念館稱小步舞曲在「對摺雙頁的一半」上，與前言所稱「單頁」不衝突，本文以紀念館說法為準；頁面對第一版年代有兩種寫法（1825–1827 與約 1837），本報文中不寫年份；2026-10-27 查閱"
+    },
+    {
+      "title": "Mozart: Eine kleine Nachtmusik.（Academy of St Martin in the Fields, Neville Marriner）",
+      "publisher": "Universal Music Italia",
+      "date": "1987-06-15",
+      "url": "https://www.universalmusic.it/musica-classica/album/mozart-eine-kleine-nachtmusik-_20012207831/",
+      "note": "Philips Classics、發行日 1987 年 6 月 15 日、四個樂章各自的長度（5:45、6:04、2:02、3:00）；頁面未列錄音日期，故本報不寫錄音年份；2026-10-27 查閱"
+    },
+    {
+      "title": "File:Mozart - Eine kleine Nachtmusik K.525 autograph.png",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Mozart_-_Eine_kleine_Nachtmusik_K.525_autograph.png",
+      "note": "頭圖的作者、日期與公版標示；2026-10-27 查閱"
+    },
+    {
+      "title": "File:Verzeichnüss aller meiner Werke.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Verzeichn%C3%BCss_aller_meiner_Werke.jpg",
+      "note": "目錄封面的說明（1784 年 2 月起記到 1791 年底去世前不久）與公版標示；2026-10-27 查閱"
+    }
+  ]
+}
