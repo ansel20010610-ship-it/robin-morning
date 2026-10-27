@@ -33,6 +33,7 @@ export async function transition(update, { from = null, to = null } = {}) {
     const img = to?.();
     if (img) img.style.viewTransitionName = "hero";
   });
+  vt.ready.catch(() => {}); // a transition cut short by the next tap is skipped; that is fine
   vt.finished.catch(() => {}).finally(() => { const img = to?.(); if (img) img.style.viewTransitionName = ""; });
   return vt.updateCallbackDone.catch(() => {});
 }

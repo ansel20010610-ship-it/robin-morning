@@ -395,7 +395,7 @@ async function viewArticle(date, column, my) {
   const minutes = issue?.articles.find((x) => x.column === column)?.minutes;
   main.innerHTML = `
     <div class="topbar"><div class="in">
-      <a class="icon-btn" href="${issue && date !== publishedIssues()[0]?.date ? `#/issue/${date}` : "#/"}" aria-label="回到本期">${ICON.back}</a>
+      <a class="icon-btn" data-back href="${fromList || (issue && date !== publishedIssues()[0]?.date ? `#/issue/${date}` : "#/")}" aria-label="${fromList ? "返回" : "回到本期"}">${ICON.back}</a>
       <div class="title">${esc(k.name)}</div>
       ${canSpeak() ? `<button class="icon-btn" type="button" data-speak aria-pressed="false" aria-label="朗讀本文">${ICON.speak}</button>` : ""}
       <button class="icon-btn" type="button" data-fs aria-label="調整字級">${ICON.text}</button>
@@ -448,6 +448,7 @@ async function viewArticle(date, column, my) {
 
   // Read aloud: the top-bar button starts and pauses; it stops when the reader leaves the article.
   let reader = null;
+  main.querySelector("[data-back]")?.addEventListener("click", (e) => { if (fromList) { e.preventDefault(); history.back(); } });
   const speakBtn = main.querySelector("[data-speak]");
   const setSpeak = (on) => {
     if (!speakBtn) return;
@@ -767,17 +768,35 @@ let cleanup = () => {};
 let stopReveal = () => {};
 let lastTapped = null, shownArticle = null; // the card picture just tapped, and the article on screen (for the picture morph)
 let routeSeq = 0; // bumped on every route; an older route still loading must not draw over a newer one
+// Coming back out of an article lands where the reader was on the page they tapped it from; a tap on the bottom bar
+// starts that page from the top. `places` holds the scroll position of each list page last left.
+const places = new Map();
+let shownHash = null, navTap = false, fromList = null;
+// The bottom-bar tab a page belongs to.
+const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/week") || h.startsWith("#/cards") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
 
 async function route(ev) {
   const my = ++routeSeq;
   cleanup(); cleanup = () => {};
   document.title = S.cfg.title;
   const h = location.hash || "#/";
-  const active = h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/week") || h.startsWith("#/cards") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
+  const leaving = Boolean(shownHash?.startsWith("#/a/")); // coming out of an article
+  if (shownHash && !leaving && shownHash !== h) places.set(shownHash, scrollY);
+  const tapped = navTap;
+  navTap = false;
+  const backTo = leaving ? fromList : null; // the page the article on screen was opened from
+  const art = h.match(/^#\/a\/(\d{4}-\d{2}-\d{2})\/([\w-]+)/);
+  // The page an article was opened from; its back button returns there (history.back) instead of to the issue.
+  // (From one article on to another it keeps pointing the same way: back then steps through them like a browser.)
+  if (!art || !ev || tapped) fromList = null;
+  else if (!leaving) fromList = shownHash;
+  shownHash = h;
+  if (tapped) places.delete(h);
+  const place = !art && !tapped && backTo === h ? places.get(h) : undefined;
+  const active = tabOf(art && fromList ? fromList : h);
   $("#nav").innerHTML = NAV.map(([href, label, icon]) => `<a href="${href}" ${href === active ? 'aria-current="page"' : ""}>${ICON[icon]}<span>${label}</span></a>`).join("");
   $(".nav .in")?.style.setProperty("--i", NAV.findIndex(([href]) => href === active));
   stopReveal();
-  const art = h.match(/^#\/a\/(\d{4}-\d{2}-\d{2})\/([\w-]+)/);
   const prev = shownArticle;
   shownArticle = art ? `${art[1]}/${art[2]}` : null;
   // Into an article already loaded: the tapped card's picture grows into its opening picture. Back out: the reverse.
@@ -790,7 +809,7 @@ async function route(ev) {
   lastTapped = null;
   const draw = async () => {
     await drawRoute(h, art, my);
-    if (my === routeSeq) window.scrollTo(0, 0);
+    if (my === routeSeq) window.scrollTo(0, place ?? 0);
   };
   if (morph) await transition(draw, morph); else await draw();
   if (my !== routeSeq) return;
@@ -840,7 +859,23 @@ async function boot() {
   initDock();
   const back = await handleCallback();
   if (back) location.hash = back;
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual"; // the router places the page itself
   window.addEventListener("hashchange", route);
+  // The bottom bar, as in an iPhone app: a tap on the page already open scrolls it back to the top; in an article,
+  // a tap on its own tab goes back to the page it was opened from, where the reader left it; any other tap opens that
+  // page at the top.
+  $("#nav").addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if (!a) return;
+    const href = a.getAttribute("href"), here = location.hash || "#/";
+    if (here === href) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: calm() ? "auto" : "smooth" });
+    } else if (here.startsWith("#/a/") && fromList && tabOf(fromList) === href) {
+      e.preventDefault();
+      history.back();
+    } else navTap = true;
+  });
   main.addEventListener("click", (e) => { lastTapped = e.target.closest("a.lead, a.item")?.querySelector("img") || null; }, true);
   ripples();
   try { await route(); } catch (e) { console.warn("route failed", e); }
