@@ -1,0 +1,146 @@
+{
+  "column": "perio",
+  "date": "reserve",
+  "reserve_written": "2026-10-28",
+  "title": "戒菸 11 年以上，勝算比 1.15（對照從未吸菸者）",
+  "dek": "2000 年這份美國全國調查，把已戒菸的人按戒了幾年分組，再跟從未吸菸者比牙周炎勝算；比的是戒菸年數不同的人，不是同一批人戒菸後的變化。",
+  "brief": "美國一份全國調查的成人裡，已戒菸者的牙周炎勝算隨戒菸年數下降；戒菸 11 年以上那組，校正後的勝算比是 1.15（相對從未吸菸者，95% 信賴區間 0.83–1.60）。這是橫斷面資料，比的是戒菸年數不同的人，不是同一批人戒菸後的變化。",
+  "takeaway": "現在吸菸者的牙周炎盛行勝算約為從未吸菸者 4 倍，抽越多越高；戒菸 11 年以上那組校正後是 1.15（相對從未吸菸者，區間 0.83–1.60）。區間跨過 1，白話是這份資料並未顯示這組和從未吸菸者有差，這是本報自己的讀法，論文沒另作檢定；且是不同人之間的橫斷面比較。2017 分級以每天 10 支分 B、C 級。",
+  "quiz": "現在抽菸與戒菸 11 年以上的人，牙周炎勝算各是從未吸菸者幾倍？兩組是不同的人。",
+  "topic_key": "perio:doi:10.1902/jop.2000.71.5.743",
+  "updated_at": "2026-10-28T14:57:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Smoker_milanosis.jpg/960px-Smoker_milanosis.jpg",
+    "width": 960,
+    "height": 541,
+    "alt": "口內照。牙齦有褐黑色色素沉著；牙面有褐色染色與沉積物，上排齒列不整、牙齦退縮。",
+    "caption": "上傳者稱這是每天抽兩包菸的病人的吸菸者黑色素沉著（smoker's melanosis）。畫面可見牙齦褐黑色色素沉著，牙面褐色染色與沉積物。照片與論文受試者無關。",
+    "credit": "Shaimaa Abdellatif／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Smoker_milanosis.jpg",
+    "made": "2017 年上傳（拍攝日不詳）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "在 Tomar 與 Asma 這份 2000 年的分析裡，一輩子至少抽過 100 支紙菸、受訪時已經不抽，就算已戒菸。這群人整體的牙周炎盛行勝算比，校正後是 1.68（相對從未吸菸者）。按戒了幾年拆開，勝算隨戒菸年數下降：戒菸 0 到 2 年那組校正後是 3.22，11 年以上那組是 1.15，95% 信賴區間 0.83 到 1.60。"
+    },
+    {
+      "type": "p",
+      "text": "區間跨過 1，白話是這份資料並未顯示 11 年以上那組和從未吸菸者有差；這是本報自己對區間的讀法，論文沒另作檢定。這也是橫斷面資料，各組是不同的人，不是同一批人戒菸後的變化。"
+    },
+    {
+      "type": "h",
+      "text": "資料與吸菸量的勝算比"
+    },
+    {
+      "type": "p",
+      "text": "資料是美國第三次全國健康與營養調查（NHANES III），1988 到 1994 年的全國代表性抽樣。受訪者接受菸草使用的訪談，也由受過標準化判準訓練的牙醫檢查；分析納入 12,329 名 18 歲以上、有牙齒、資料齊全的成人，再加權推估全美。牙周炎定義為至少一個部位臨床附著水準 4 mm 以上、探測深度也達 4 mm。"
+    },
+    {
+      "type": "p",
+      "text": "這份分析的吸菸只算紙菸，看的是一輩子抽過幾支、受訪時還抽不抽；從未吸菸者是一生抽不滿 100 支。校正年齡、性別、種族／族裔、教育與收入貧窮比後，現在吸菸者的盛行勝算比 3.97，約是從未吸菸者的 4 倍。每天支數越多越高，一天 9 支以下是 2.79，31 支以上到 5.88。"
+    },
+    {
+      "type": "svg",
+      "title": "吸菸量與戒菸年數分組的勝算比",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 6 360 276\"><line class=\"muted line\" x1=\"163.1\" y1=\"12\" x2=\"163.1\" y2=\"242\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><text x=\"8\" y=\"30\" font-size=\"12.5\" font-weight=\"700\">從未吸菸</text><text x=\"134\" y=\"30\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"end\">1（參考）</text><rect class=\"muted\" x=\"159.1\" y=\"22\" width=\"8\" height=\"8\" transform=\"rotate(45 163.1 26)\"/><text x=\"8\" y=\"62\" font-size=\"12.5\" font-weight=\"700\">現在吸菸</text><text class=\"accent\" x=\"134\" y=\"62\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"end\">3.97</text><line class=\"accent line\" x1=\"214.0\" y1=\"58\" x2=\"253.9\" y2=\"58\" stroke-width=\"2\"/><line class=\"accent line\" x1=\"214.0\" y1=\"53\" x2=\"214.0\" y2=\"63\" stroke-width=\"2\"/><line class=\"accent line\" x1=\"253.9\" y1=\"53\" x2=\"253.9\" y2=\"63\" stroke-width=\"2\"/><circle class=\"accent\" cx=\"231.8\" cy=\"58\" r=\"5\"/><text x=\"22\" y=\"94\" font-size=\"12.5\" font-weight=\"400\">每天 &#8804;9 支</text><text class=\"accent\" x=\"134\" y=\"94\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"end\">2.79</text><line class=\"accent line\" x1=\"183.9\" y1=\"90\" x2=\"234.8\" y2=\"90\" stroke-width=\"2\"/><line class=\"accent line\" x1=\"183.9\" y1=\"85\" x2=\"183.9\" y2=\"95\" stroke-width=\"2\"/><line class=\"accent line\" x1=\"234.8\" y1=\"85\" x2=\"234.8\" y2=\"95\" stroke-width=\"2\"/><circle class=\"accent\" cx=\"204.5\" cy=\"90\" r=\"5\"/><text x=\"22\" y=\"126\" font-size=\"12.5\" font-weight=\"400\">每天 &#8805;31 支</text><text class=\"accent\" x=\"134\" y=\"126\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"end\">5.88</text><line class=\"accent line\" x1=\"233.1\" y1=\"122\" x2=\"338.3\" y2=\"122\" stroke-width=\"2\"/><line class=\"accent line\" x1=\"233.1\" y1=\"117\" x2=\"233.1\" y2=\"127\" stroke-width=\"2\"/><line class=\"accent line\" x1=\"338.3\" y1=\"117\" x2=\"338.3\" y2=\"127\" stroke-width=\"2\"/><circle class=\"accent\" cx=\"275.9\" cy=\"122\" r=\"5\"/><text x=\"8\" y=\"158\" font-size=\"12.5\" font-weight=\"700\">已戒菸</text><text x=\"134\" y=\"158\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"end\">1.68</text><line class=\"ink line\" x1=\"170.3\" y1=\"154\" x2=\"190.2\" y2=\"154\" stroke-width=\"2\"/><line class=\"ink line\" x1=\"170.3\" y1=\"149\" x2=\"170.3\" y2=\"159\" stroke-width=\"2\"/><line class=\"ink line\" x1=\"190.2\" y1=\"149\" x2=\"190.2\" y2=\"159\" stroke-width=\"2\"/><circle class=\"ink\" cx=\"178.8\" cy=\"154\" r=\"5\"/><text x=\"22\" y=\"190\" font-size=\"12.5\" font-weight=\"400\">戒菸 0–2 年</text><text x=\"134\" y=\"190\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"end\">3.22</text><line class=\"ink line\" x1=\"190.4\" y1=\"186\" x2=\"250.0\" y2=\"186\" stroke-width=\"2\"/><line class=\"ink line\" x1=\"190.4\" y1=\"181\" x2=\"190.4\" y2=\"191\" stroke-width=\"2\"/><line class=\"ink line\" x1=\"250.0\" y1=\"181\" x2=\"250.0\" y2=\"191\" stroke-width=\"2\"/><circle class=\"ink\" cx=\"214.4\" cy=\"186\" r=\"5\"/><text x=\"22\" y=\"222\" font-size=\"12.5\" font-weight=\"400\">戒菸 &#8805;11 年</text><text class=\"gold\" x=\"134\" y=\"222\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"end\">1.15</text><line class=\"gold line\" x1=\"159.2\" y1=\"218\" x2=\"177.0\" y2=\"218\" stroke-width=\"2\"/><line class=\"gold line\" x1=\"159.2\" y1=\"213\" x2=\"159.2\" y2=\"223\" stroke-width=\"2\"/><line class=\"gold line\" x1=\"177.0\" y1=\"213\" x2=\"177.0\" y2=\"223\" stroke-width=\"2\"/><circle class=\"gold\" cx=\"166.6\" cy=\"218\" r=\"5\"/><line class=\"ink line\" x1=\"140\" y1=\"242\" x2=\"348\" y2=\"242\" stroke-width=\"1\"/><line class=\"ink line\" x1=\"140.0\" y1=\"242\" x2=\"140.0\" y2=\"246\" stroke-width=\"1\"/><text class=\"muted\" x=\"140.0\" y=\"258\" font-size=\"11\" text-anchor=\"middle\">0</text><line class=\"ink line\" x1=\"163.1\" y1=\"242\" x2=\"163.1\" y2=\"246\" stroke-width=\"1\"/><text class=\"muted\" x=\"163.1\" y=\"258\" font-size=\"11\" text-anchor=\"middle\">1</text><line class=\"ink line\" x1=\"186.2\" y1=\"242\" x2=\"186.2\" y2=\"246\" stroke-width=\"1\"/><text class=\"muted\" x=\"186.2\" y=\"258\" font-size=\"11\" text-anchor=\"middle\">2</text><line class=\"ink line\" x1=\"232.4\" y1=\"242\" x2=\"232.4\" y2=\"246\" stroke-width=\"1\"/><text class=\"muted\" x=\"232.4\" y=\"258\" font-size=\"11\" text-anchor=\"middle\">4</text><line class=\"ink line\" x1=\"278.7\" y1=\"242\" x2=\"278.7\" y2=\"246\" stroke-width=\"1\"/><text class=\"muted\" x=\"278.7\" y=\"258\" font-size=\"11\" text-anchor=\"middle\">6</text><line class=\"ink line\" x1=\"324.9\" y1=\"242\" x2=\"324.9\" y2=\"246\" stroke-width=\"1\"/><text class=\"muted\" x=\"324.9\" y=\"258\" font-size=\"11\" text-anchor=\"middle\">8</text><text class=\"muted\" x=\"244\" y=\"274\" font-size=\"11\" text-anchor=\"middle\">牙周炎的盛行勝算比（橫線為 95% 信賴區間）</text></svg>",
+      "caption": "原創圖解，依 Tomar 與 Asma（2000）摘要的盛行勝算比與 95% 信賴區間重繪；以從未吸菸者為 1，虛線右邊代表勝算較高。支數與戒菸年數只畫摘要給出的最低與最高分組。",
+      "credit": "知更鳥晨間記事原創圖解"
+    },
+    {
+      "type": "h",
+      "text": "吸菸者的探診出血較少"
+    },
+    {
+      "type": "p",
+      "text": "Dietrich 等人 2004 年以 NHANES III 的資料看探診出血（bleeding on probing, BOP）。沒有牙結石、探測深度 3 mm 以內的部位，重度吸菸者相對從未吸菸者的出血 OR 是 0.56（95% CI 0.45–0.70）。摘要寫，從未吸菸者中，有牙結石及／或探測深度 4 mm 以上的部位較容易出血（OR 5.7，95% CI 4.3–7.6），摘要沒有寫明比較對象；重度吸菸者中這個關係較不明顯（OR 1.3，95% CI 0.8–1.9）。作者的結論是，吸菸對探診出血有強烈、慢性、隨劑量增加的壓抑作用（suppressive effect）。"
+    },
+    {
+      "type": "h",
+      "text": "分級表上的 10 支"
+    },
+    {
+      "type": "p",
+      "text": "2017 年世界研討會的分期分級，把危險因子列為分級的修飾因子。AAP 整理的表格裡，不吸菸放在 A 級欄，每天不到 10 支在 B 級，10 支以上在 C 級；表格也提醒先假設 B 級，再找證據往 A 或 C 調。"
+    },
+    {
+      "type": "h",
+      "text": "可歸因於吸菸的比例"
+    },
+    {
+      "type": "p",
+      "text": "作者的結論是，根據本研究與許多其他報告，吸菸可能造成美國成人一半以上的牙周炎；這個「一半以上」不是本研究單一算式。本研究自己用族群可歸因分率的公式、先假定吸菸是病因，算出美國成人牙周炎有 41.9% 可歸因於現在吸菸，10.9% 可歸因於過去吸菸。"
+    },
+    {
+      "type": "p",
+      "text": "在吸菸是病因的假定下估算，現在吸菸者自身的牙周炎有 74.8% 可歸因於吸菸。"
+    },
+    {
+      "type": "quote",
+      "text": "成人牙周炎有很大一部分，或許可以靠不開始抽菸和戒菸來預防。",
+      "original": "A large proportion of adult periodontitis may be preventable through prevention and cessation of cigarette smoking.",
+      "cite": "Tomar 與 Asma（2000）摘要結論"
+    },
+    {
+      "type": "paper",
+      "citation": "Tomar SL, Asma S. Smoking-attributable periodontitis in the United States: findings from NHANES III. *J Periodontol*. 2000;71(5):743–751.",
+      "doi": "10.1902/jop.2000.71.5.743",
+      "pmid": "10872955",
+      "link": "https://doi.org/10.1902/jop.2000.71.5.743",
+      "access": "依摘要與後續文獻整理",
+      "question": "抽菸和牙周炎有多大關係？美國成人的牙周炎有多少比例可歸因於抽菸？",
+      "design": "橫斷面調查：第三次全國健康與營養調查（NHANES III，1988–1994），訪談菸草使用加牙醫檢查；加權推估全國數字，校正年齡、性別、種族／族裔、教育、收入貧窮比",
+      "sample": "12,329 名 18 歲以上、有牙齒、牙周與抽菸資料完整的美國成人"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tomar SL, Asma S. Smoking-attributable periodontitis in the United States: findings from NHANES III. J Periodontol 2000;71(5):743–751",
+      "publisher": "Wiley",
+      "date": "2000-05",
+      "url": "https://doi.org/10.1902/jop.2000.71.5.743",
+      "note": "原論文；全文需訂閱，未取得，依摘要"
+    },
+    {
+      "title": "PubMed 書目與摘要：Smoking-attributable periodontitis in the United States（PMID 10872955）",
+      "publisher": "National Library of Medicine",
+      "date": "2000-05",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10872955/",
+      "note": "摘要全文：NHANES III 1988–1994、n = 12,329、牙周炎與吸菸定義、ORp 3.97／1.68／2.79／5.88／3.22／1.15 與信賴區間、可歸因分率 41.9%、10.9%、74.8%、結論句；作者單位 CDC 口腔衛生部門（Tomar）。PubMed 另有同一 DOI 的重複紀錄 PMID 29537517"
+    },
+    {
+      "title": "Crossref 書目資料：10.1902/jop.2000.71.5.743",
+      "publisher": "Crossref",
+      "date": "2000-05",
+      "url": "https://api.crossref.org/works/10.1902/jop.2000.71.5.743",
+      "note": "作者全名 Scott L. Tomar、Samira Asma；卷期頁 71(5):743–751"
+    },
+    {
+      "title": "Dietrich T, Bernimoulin JP, Glynn RJ. The effect of cigarette smoking on gingival bleeding. J Periodontol 2004;75(1):16–22",
+      "publisher": "Journal of Periodontology",
+      "date": "2004",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15025212/",
+      "note": "依摘要：NHANES III 12,385 人、141,967 個近中頰側部位；重度吸菸（每天 >10 支）健康部位出血 OR 0.56；有牙結石及／或 PD ≥4 mm 部位出血 OR 從未吸菸者 5.7（95% CI 4.3–7.6）、重度吸菸者 1.3（95% CI 0.8–1.9）；結論 strong, chronic, and dose-dependent suppressive effect"
+    },
+    {
+      "title": "Staging and Grading Periodontitis（表格）",
+      "publisher": "American Academy of Periodontology",
+      "date": "2019-08",
+      "url": "https://www.perio.org/wp-content/uploads/2019/08/Staging-and-Grading-Periodontitis.pdf",
+      "note": "表格出自 Tonetti, Greenwell, Kornman. J Periodontol 2018;89 Suppl 1:S159–S172；分級修飾因子吸菸：Non-smoker／<10 cigarettes/day／≥10 cigarettes/day 分列 A、B、C 欄；「Clinicians should initially assume grade B disease and seek specific evidence to shift to grade A or C.」日期依檔案網址路徑"
+    },
+    {
+      "title": "Tonetti MS, Greenwell H, Kornman KS. Staging and grading of periodontitis: Framework and proposal of a new classification and case definition. J Clin Periodontol 2018;45 Suppl 20:S149–S161",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "2018",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29926495/",
+      "note": "依摘要：分級依進展速度的直接或間接證據分 A–C，危險因子分析作為分級修飾因子"
+    }
+  ]
+}
