@@ -1,0 +1,215 @@
+{
+  "column": "fiction",
+  "date": "2026-10-29",
+  "title": "敘事者沒說謊，只是少寫了十分鐘",
+  "dek": "敘事者要瞞讀者，可以寫一句假話，也可以什麼都不寫。1926 年的一本偵探小說，把答案放在兩個時間點之間。",
+  "brief": "《羅傑·艾克洛命案》的敘事者寫下：信 8 點 40 分送到，8 點 50 分他離開，信還沒讀。兩句都是真的，中間十分鐘他做了什麼，書上沒寫。同一個原創場景分別寫成假話和空白兩版，看重讀時各留下什麼。",
+  "topic_key": "fiction:narrator-omission-not-lying",
+  "updated_at": "2026-10-29T01:51:00+08:00",
+  "spoiler": "本文後半談到《羅傑·艾克洛命案》的結局，包括兇手是誰。",
+  "disclaimer": null,
+  "hero": {
+    "type": "svg",
+    "title": "同一個場景，兩種瞞法",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 300\" role=\"img\" aria-label=\"同一個場景的三排方塊：實際發生的事、寫了假話的版本、留了空白的版本\"><text class=\"muted\" x=\"10\" y=\"20\" font-size=\"12\">實際發生的事</text><rect class=\"soft\" x=\"10\" y=\"30\" width=\"100\" height=\"44\" rx=\"4\"/><text x=\"60\" y=\"57\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">進偏廳</text><rect class=\"soft\" x=\"130\" y=\"30\" width=\"100\" height=\"44\" rx=\"4\"/><rect class=\"accent line\" x=\"130\" y=\"30\" width=\"100\" height=\"44\" rx=\"4\" stroke-width=\"2\"/><text class=\"accent\" x=\"180\" y=\"57\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">燒掉詔書</text><rect class=\"soft\" x=\"250\" y=\"30\" width=\"100\" height=\"44\" rx=\"4\"/><text x=\"300\" y=\"57\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">走出來</text><text class=\"muted\" x=\"10\" y=\"110\" font-size=\"12\">版本 A　寫了一句假話</text><rect class=\"soft\" x=\"10\" y=\"120\" width=\"100\" height=\"44\" rx=\"4\"/><text x=\"60\" y=\"147\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">進偏廳</text><rect class=\"soft\" x=\"130\" y=\"120\" width=\"100\" height=\"44\" rx=\"4\"/><rect class=\"accent line\" x=\"130\" y=\"120\" width=\"100\" height=\"44\" rx=\"4\" stroke-width=\"2\"/><text class=\"accent\" x=\"180\" y=\"147\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"600\">「匣子沒開」</text><rect class=\"soft\" x=\"250\" y=\"120\" width=\"100\" height=\"44\" rx=\"4\"/><text x=\"300\" y=\"147\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">走出來</text><text class=\"accent\" x=\"180\" y=\"184\" font-size=\"12\" text-anchor=\"middle\">和實際發生的事對不上</text><text class=\"muted\" x=\"10\" y=\"210\" font-size=\"12\">版本 B　留了一段空白</text><rect class=\"soft\" x=\"10\" y=\"220\" width=\"100\" height=\"44\" rx=\"4\"/><text x=\"60\" y=\"247\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">進偏廳</text><rect class=\"muted line\" x=\"130\" y=\"220\" width=\"100\" height=\"44\" rx=\"4\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><text class=\"muted\" x=\"180\" y=\"247\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">（沒寫）</text><rect class=\"soft\" x=\"250\" y=\"220\" width=\"100\" height=\"44\" rx=\"4\"/><text x=\"300\" y=\"247\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">走出來</text><text class=\"muted\" x=\"180\" y=\"284\" font-size=\"12\" text-anchor=\"middle\">寫出來的每一句都是真的</text></svg>",
+    "caption": "原創示意。上排是史官宋遲那一夜實際做的三件事；下兩排是同一個場景的兩種寫法，版本 A 把第二件事換成一句假話，版本 B 把它整段拿掉。"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "史詩裡常有一個知道得比他說的多的人：宮廷史官、活下來的親兵、替老國王寫回憶的書記。作者讓這種人當敘事者，遲早得決定他怎麼瞞讀者。手上的工具只有兩樣：寫一句假話，或者什麼都不寫。第一次讀的時候，讀者翻頁的速度一樣快。差別出在讀者翻回前面幾章，想弄清楚自己到底被騙了什麼的時候。"
+    },
+    {
+      "type": "h",
+      "text": "鹽津國的詔書匣"
+    },
+    {
+      "type": "p",
+      "text": "鹽津國的老國王病重，想在死前廢掉太子，改立幼子。詔書已經寫好，裝在一只匣子裡，說好天亮前用印。經手的是史官宋遲，他替王記了三十一年的起居注，也是太子的老師。那一夜他把匣子捧進偏廳，在炭盆裡把詔書燒了。這份記錄由宋遲自己用第一人稱寫成，到第二十章，讀者才會知道偏廳裡發生了什麼。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "h",
+      "text": "版本 A 讓史官說一句假話"
+    },
+    {
+      "type": "p",
+      "text": "王把詔書匣交到我手上，說天亮前要用印，印完封進太廟。我在宮裡記了三十一年的起居注，王交給我的東西，從來沒有人問過裡頭是什麼。三更鼓響過，我捧著匣子走進偏廳，把門帶上。我在裡頭坐了一會兒，匣子始終沒有打開。偏廳的炭盆是我進去以前就點著的。等我再推門出來，廊下的侍衛長剛好換班，問我王睡了沒有。我說王的燈還亮著。他點點頭，把長矛換到另一隻手。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "p",
+      "text": "第一次讀，讀者拿到的資訊很乾淨：匣子沒開，史官在裡頭坐了一會兒。那句假話的工作是消除疑問，讀者因此放下匣子，把注意力放回侍衛長和王的燈。情緒是平的，宋遲在這一段裡什麼代價也沒付。"
+    },
+    {
+      "type": "p",
+      "text": "帳在第二十章結算。讀者回頭翻到「匣子始終沒有打開」，看見的是白紙黑字的謊。這個謊出在敘述裡，不是任何人的對話，所以被騙的感覺是衝著作者來的；從這句起，連「王的燈還亮著」也得打折。這個寫法只有一種情況站得住：整份記錄本來就是供詞，宋遲在審問他的人面前替自己辯護，讀者打開第一頁就知道他有說謊的理由。除此之外，假話用一次，敘事者的可信度就花光了。"
+    },
+    {
+      "type": "h",
+      "text": "版本 B 讓史官什麼都不說"
+    },
+    {
+      "type": "p",
+      "text": "王把詔書匣交到我手上，說天亮前要用印，印完封進太廟。我在宮裡記了三十一年的起居注，王交給我的東西，從來沒有人問過裡頭是什麼。三更鼓響過，我捧著匣子走進偏廳，把門帶上。偏廳的炭盆是我進去以前就點著的。等我再推門出來，廊下的侍衛長剛好換班，問我王睡了沒有。我說王的燈還亮著。他點點頭，把長矛換到另一隻手。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "p",
+      "text": "讀者拿到的事實一句也不假：他進去，關門，炭盆本來就燒著，他出來，侍衛長換班。第一次讀，注意力會落在交班那段日常上，沒有人去算他在偏廳待了多久。縫其實有三道：匣子裡是什麼，他在裡頭做什麼，為什麼特地交代炭盆不是他點的。每一道都可以被讀成閒筆。"
+    },
+    {
+      "type": "p",
+      "text": "版本 B 的帳是延後付的，而且由作者付。第二十章揭曉後，讀者回頭翻，每一句都對得上，被騙的感覺會轉成「這些我都看過」。風險也在這裡：空白前後如果沒有東西可以對，重讀只會讓人覺得作者在省略，那就談不上公平。空白若大到整頁看不見史官，讀者第一次就會察覺，然後不再讀故事，改盯著敘事者看。"
+    },
+    {
+      "type": "spoiler",
+      "text": "以下談到《羅傑·艾克洛命案》的結局，包括兇手是誰。"
+    },
+    {
+      "type": "h",
+      "text": "夏波醫生的十分鐘"
+    },
+    {
+      "type": "p",
+      "text": "阿嘉莎·克莉絲蒂（Agatha Christie）1926 年出版的《羅傑·艾克洛命案》（The Murder of Roger Ackroyd），敘事者是村裡的醫生夏波（James Sheppard）。整本書是他的第一人稱記錄，他原本打算有一天拿去出版，當作偵探白羅（Hercule Poirot）的一次失敗。最後兩章揭曉，兇手就是他。第 4 章，他離開艾克洛的書房時，是這樣寫的："
+    },
+    {
+      "type": "quote",
+      "original": "The letter had been brought in at twenty minutes to nine. It was just on ten minutes to nine when I left him, the letter still unread. I hesitated with my hand on the door handle, looking back and wondering if there was anything I had left undone.",
+      "text": "信是八點四十分送進來的。我離開他的時候是八點五十分，信還沒讀。我的手搭在門把上，回頭看，想著有沒有什麼事還沒做。",
+      "cite": "《羅傑·艾克洛命案》第 4 章，依 Project Gutenberg 全文"
+    },
+    {
+      "type": "p",
+      "text": "兩個時間點相隔十分鐘。克莉絲蒂官方網站 2019 年的文章指出，整個謎底就在這十分鐘裡，命案就是這時發生的。夏波自己在最後一章也回頭指出來："
+    },
+    {
+      "type": "quote",
+      "original": "All true, you see. But suppose I had put a row of stars after the first sentence! Would somebody then have wondered what exactly happened in that blank ten minutes?",
+      "text": "句句是真的，你看。可是假如我在第一句後面放了一排星號呢？會不會有人好奇，那空白的十分鐘裡到底發生了什麼事？",
+      "cite": "《羅傑·艾克洛命案》第 27 章"
+    },
+    {
+      "type": "p",
+      "text": "一排星號是小說裡標示「這裡跳過了」的記號。他沒有放。到了第 5 章，他和管家破門看見屍體，寫下的是這一句："
+    },
+    {
+      "type": "quote",
+      "original": "I did what little had to be done.",
+      "text": "我做了該做的那一點點事。",
+      "cite": "《羅傑·艾克洛命案》第 5 章"
+    },
+    {
+      "type": "p",
+      "text": "夏波事後自誇這句話用字審慎。他說的一點點事，是把口述錄音機塞進自己的包包，再把椅子推回牆邊。"
+    },
+    {
+      "type": "table",
+      "title": "書上怎麼寫，事後怎麼揭曉",
+      "head": [
+        "書上怎麼寫",
+        "後來才知道",
+        "我歸納的做法"
+      ],
+      "rows": [
+        [
+          "信 8 點 40 分送到，8 點 50 分我離開，信還沒讀（第 4 章）",
+          "命案發生在這十分鐘裡",
+          "兩個時間都寫出來，只是中間不放星號"
+        ],
+        [
+          "破門之後，我做了該做的一點點事（第 5 章）",
+          "他把口述錄音機收進包包，把椅子推回牆邊（第 27 章）",
+          "句子是真的，「一點點」「該做」由他自己定義"
+        ],
+        [
+          "離開書房，我被門外的帕克嚇了一跳（第 4 章）",
+          "夏波說這件事他也如實記下了（第 27 章）",
+          "別人看得見的事照寫，留白的只有他一個人知道的"
+        ],
+        [
+          "教堂鐘敲九點時，我走過門房（第 4 章）",
+          "白羅最先起疑的就是時間：8 點 50 分離開，9 點才過門房，五分鐘的路走了十分鐘（第 26 章）",
+          "時間也照實寫，證據就擺在書裡"
+        ]
+      ],
+      "caption": "前兩欄出自原書，第 1 列的第二欄出自克莉絲蒂官方網站 2019 年的文章；第三欄是我的歸納。"
+    },
+    {
+      "type": "p",
+      "text": "所以夏波既沒有說謊，也沒有把證據收起來：兩個時間、帕克、鐘聲，全在他自己的稿子裡，白羅起疑的線索就在這些時間裡。出版時有評論說克莉絲蒂不公平，同行出面替她辯護（官網 2026 年的專頁）；官網 2019 年的文章則說，讀者覺得被騙是個流傳很久的迷思。"
+    },
+    {
+      "type": "h",
+      "text": "換我寫史詩，會選空白"
+    },
+    {
+      "type": "p",
+      "text": "原因很現實：假話只能用一次。第二十章揭曉以後，宋遲的每一句話都得重新估價，整份記錄跟著不可靠；空白只花掉一個段落，其餘部分還是可靠的，讀者翻回去找到的，是自己沒看見的東西，不是作者寫下的謊。"
+    },
+    {
+      "type": "p",
+      "text": "從夏波身上我拿得走三件事。一是每一句寫出來的話都要經得起重讀，連「一點點事」這種由敘事者自己下定義的句子也一樣。二是別人看得見、查得到的事照寫，管家、鐘聲、時間都寫了，留白的只有他一個人知道的那十分鐘。三是先交代這份稿子為什麼存在：夏波是為了替白羅記案子才動筆，一個醫生把當晚寫得這麼細，有個現成的理由；宋遲是史官，記錄是他的本職，空白也就有地方藏。"
+    },
+    {
+      "type": "p",
+      "text": "A 和 B 的空白都落在同一種地方，進門和出門之間。讀者讀到「走進」和「走出」，腦子裡補上的是一趟普通的往返，不會停下來算時間；夏波那十分鐘夾在「信還沒讀」和「手搭在門把上」之間，也是一個人離開房間的當口。我想空白放在這種地方最安全，放在一場談話的正中間，讀者會立刻覺得少了什麼。"
+    },
+    {
+      "type": "p",
+      "text": "角色嘴裡的假話另當別論。夏波回到家，向姊姊交代這一晚，書裡明寫那是一套「稍微虛構」的說法。"
+    },
+    {
+      "type": "exercise",
+      "title": "把一個隱瞞改寫成空白",
+      "steps": [
+        "挑一個有人隱瞞了什麼的第一人稱場景（可以用上面宋遲的場景），先在紙上把實際發生的事一件一件列出來，每件一行，標上時間。",
+        "選定一件要瞞的事，把那一行以外的事件全部照實寫成句子。寫完逐句標「真」；標不出「真」的句子，改寫或刪掉。",
+        "在被瞞的事前後，各放一個可以對上的東西：一個時間、一件物品，或一個別人也看見的人。",
+        "隔一天，把成稿交給一位沒看過事件列表的讀者。先只問他讀完覺得發生了什麼；再告訴他「敘事者隱瞞了一件事」，請他圈出他認為被跳過的地方。最後把事件列表給他，請他指出前文有哪些句子其實早就露出線索。"
+      ],
+      "criteria": [
+        "逐句標記裡沒有「假」。只要有一句假話，這項練習就沒做到。",
+        "第一次讀完，讀者說不出被瞞的是什麼；被告知有隱瞞之後，他圈出的位置落在你預留空白的前後三句之內。",
+        "看過事件列表後，讀者能在前文指出至少兩處線索。指不出，代表空白前後沒有東西可以對；指出五處以上，代表線索太多，第一次讀就會被看穿。"
+      ],
+      "note": "改寫後的場景可以比原來短。這項練習比的是重讀時對不對得上，不是句子漂不漂亮。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Murder of Roger Ackroyd（全文）",
+      "publisher": "Project Gutenberg",
+      "date": "1926",
+      "url": "https://www.gutenberg.org/files/69087/69087-h/69087-h.htm",
+      "note": "第 4 章（8 點 40 分、8 點 50 分、帕克、鐘敲九點、對姊姊的說詞）；第 5 章（I did what little had to be done）；第 26 章（白羅談時間差）；第 27 章（夏波自述）"
+    },
+    {
+      "title": "Playing by the Rules: Christie's Unconventional Crimes",
+      "publisher": "Agatha Christie Ltd.（agathachristie.com）",
+      "date": "2019-04-12",
+      "url": "https://www.agathachristie.com/en/news/2019/playing-by-the-rules-christies-unconventional-crimes",
+      "note": "Sheppard doesn't actually lie to the reader, he just leaves gaps；整個謎底在十分鐘的空白裡；讀者被騙的說法是 persistent myth"
+    },
+    {
+      "title": "Read Christie 2026",
+      "publisher": "Agatha Christie Ltd.（agathachristie.com）",
+      "date": "2026-08-03",
+      "url": "https://www.agathachristie.com/news/2026/read-christie-2026",
+      "note": "Did you know? 一節：出版時有評論者指她不公平，同行出面辯護"
+    },
+    {
+      "title": "The Murder of Roger Ackroyd",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Murder_of_Roger_Ackroyd",
+      "note": "出版年份、敘事者身分"
+    },
+    {
+      "title": "羅傑·艾克洛命案",
+      "publisher": "中文維基百科",
+      "url": "https://zh.wikipedia.org/wiki/%E7%BE%85%E5%82%91%C2%B7%E8%89%BE%E5%85%8B%E6%B4%9B%E5%91%BD%E6%A1%88",
+      "note": "繁體中文書名與人名譯法"
+    }
+  ]
+}
