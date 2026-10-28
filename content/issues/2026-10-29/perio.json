@@ -1,0 +1,145 @@
+{
+  "column": "perio",
+  "date": "2026-10-29",
+  "title": "窄牙齦沒有比較快發炎",
+  "dek": "角化牙齦只有 1 毫米以下，是不是比較容易發炎？Miyasato 等人 1977 年先看了 16 個人，其中 6 人被指示停止清潔。",
+  "takeaway": "6 人停止清潔 25 天，角化牙齦窄的一側和寬的一側一起發炎，看不出差別。樣本小、時間短；回顧文獻（Cortellini 與 Bissada）認為沒有病變時監測特定部位似乎適當。",
+  "quiz": "角化牙齦只有 1 毫米以下的部位，菌斑堆起來會比寬的部位更快發炎嗎？",
+  "brief": "牙面沒有菌斑時，角化牙齦窄的、寬的大致都沒有發炎，跟常聽到的「至少 2 毫米」說法有出入，不過那是無菌斑、短期的條件。左右一窄一寬的 6 個人被指示停止清潔 25 天，兩側一起發炎，看不出差別；只有 6 人、25 天。",
+  "topic_key": "perio:doi:10.1111/j.1600-051x.1977.tb02273.x",
+  "updated_at": "2026-10-29T01:06:03+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/95/Gum_graft_fig_1.png",
+    "width": 746,
+    "height": 719,
+    "alt": "牙根外露的口內臨床照片",
+    "caption": "牙根外露的臨床照片，Commons 描述「Gum graft」（牙齦移植）。與 Miyasato 等人的受試者無關。",
+    "credit": "Funkynatsuki，Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gum_graft_fig_1.png"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "16 個人的下顎小臼齒頰側，牙面上沒有菌斑，角化牙齦（keratinized gingiva）有的只有 1 毫米以下，有的在 2 毫米以上。Miyasato 等人 1977 年看這些部位，窄的、寬的都只有極少量齦溝液（gingival exudate），大致也看不出臨床發炎。"
+    },
+    {
+      "type": "p",
+      "text": "照常聽到的那條線，窄的那邊應該要紅。本報沒有讀到 Lang 與 Löe 1972 年的原文，以下是轉述。Baghele 等人轉述：沒有菌斑、角化牙齦卻不到 2 毫米的部位有發炎（依牙齦指數和齦溝液量），結論是 2 毫米以上角化牙齦、相當於 1 毫米以上附著牙齦，是維持牙齦健康所必需。Carnio 等人轉述：2 毫米以上的部位八成維持臨床健康，並說這項建議特別針對菌斑控制欠佳的病人。"
+    },
+    {
+      "type": "p",
+      "text": "我猜 Miyasato 他們想對照的就是這條線。他們從 16 人裡挑出 6 位，左右兩側剛好一窄一寬，這 6 人被指示在下顎小臼齒那一區停止清潔 25 天。"
+    },
+    {
+      "type": "svg",
+      "title": "停刷實驗的設計",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 225\"><text class=\"ink\" x=\"12\" y=\"22\" font-size=\"13\" font-weight=\"700\">6 人，左右成對，下顎小臼齒區停止清潔 25 天</text><text class=\"muted\" x=\"12\" y=\"40\" font-size=\"11\">同一個人的兩側：一側角化牙齦窄，另一側寬</text><rect class=\"soft\" x=\"120.0\" y=\"71\" width=\"220.0\" height=\"18\" rx=\"9\"/><text class=\"ink\" x=\"12\" y=\"78\" font-size=\"12\" font-weight=\"700\">窄側</text><text class=\"muted\" x=\"12\" y=\"92\" font-size=\"11\">≤1.0 毫米</text><circle class=\"accent\" cx=\"120.0\" cy=\"80\" r=\"4\"/><circle class=\"accent\" cx=\"155.2\" cy=\"80\" r=\"4\"/><circle class=\"accent\" cx=\"181.6\" cy=\"80\" r=\"4\"/><circle class=\"accent\" cx=\"216.8\" cy=\"80\" r=\"4\"/><circle class=\"accent\" cx=\"243.2\" cy=\"80\" r=\"4\"/><circle class=\"accent\" cx=\"278.4\" cy=\"80\" r=\"4\"/><circle class=\"accent\" cx=\"304.8\" cy=\"80\" r=\"4\"/><circle class=\"accent\" cx=\"340.0\" cy=\"80\" r=\"4\"/><rect class=\"soft\" x=\"120.0\" y=\"121\" width=\"220.0\" height=\"18\" rx=\"9\"/><text class=\"ink\" x=\"12\" y=\"128\" font-size=\"12\" font-weight=\"700\">寬側</text><text class=\"muted\" x=\"12\" y=\"142\" font-size=\"11\">≥2.0 毫米</text><circle class=\"accent\" cx=\"120.0\" cy=\"130\" r=\"4\"/><circle class=\"accent\" cx=\"155.2\" cy=\"130\" r=\"4\"/><circle class=\"accent\" cx=\"181.6\" cy=\"130\" r=\"4\"/><circle class=\"accent\" cx=\"216.8\" cy=\"130\" r=\"4\"/><circle class=\"accent\" cx=\"243.2\" cy=\"130\" r=\"4\"/><circle class=\"accent\" cx=\"278.4\" cy=\"130\" r=\"4\"/><circle class=\"accent\" cx=\"304.8\" cy=\"130\" r=\"4\"/><circle class=\"accent\" cx=\"340.0\" cy=\"130\" r=\"4\"/><line class=\"ink\" x1=\"120.0\" y1=\"168\" x2=\"340.0\" y2=\"168\" stroke-width=\"1.5\"/><line class=\"ink\" x1=\"120.0\" y1=\"164\" x2=\"120.0\" y2=\"172\" stroke-width=\"1.5\"/><text class=\"muted\" x=\"120.0\" y=\"186\" font-size=\"11\" text-anchor=\"middle\">0</text><line class=\"ink\" x1=\"155.2\" y1=\"164\" x2=\"155.2\" y2=\"172\" stroke-width=\"1.5\"/><text class=\"muted\" x=\"155.2\" y=\"186\" font-size=\"11\" text-anchor=\"middle\">4</text><line class=\"ink\" x1=\"181.6\" y1=\"164\" x2=\"181.6\" y2=\"172\" stroke-width=\"1.5\"/><text class=\"muted\" x=\"181.6\" y=\"186\" font-size=\"11\" text-anchor=\"middle\">7</text><line class=\"ink\" x1=\"216.8\" y1=\"164\" x2=\"216.8\" y2=\"172\" stroke-width=\"1.5\"/><text class=\"muted\" x=\"216.8\" y=\"186\" font-size=\"11\" text-anchor=\"middle\">11</text><line class=\"ink\" x1=\"243.2\" y1=\"164\" x2=\"243.2\" y2=\"172\" stroke-width=\"1.5\"/><text class=\"muted\" x=\"243.2\" y=\"186\" font-size=\"11\" text-anchor=\"middle\">14</text><line class=\"ink\" x1=\"278.4\" y1=\"164\" x2=\"278.4\" y2=\"172\" stroke-width=\"1.5\"/><text class=\"muted\" x=\"278.4\" y=\"186\" font-size=\"11\" text-anchor=\"middle\">18</text><line class=\"ink\" x1=\"304.8\" y1=\"164\" x2=\"304.8\" y2=\"172\" stroke-width=\"1.5\"/><text class=\"muted\" x=\"304.8\" y=\"186\" font-size=\"11\" text-anchor=\"middle\">21</text><line class=\"ink\" x1=\"340.0\" y1=\"164\" x2=\"340.0\" y2=\"172\" stroke-width=\"1.5\"/><text class=\"muted\" x=\"340.0\" y=\"186\" font-size=\"11\" text-anchor=\"middle\">25</text><text class=\"muted\" x=\"12\" y=\"186\" font-size=\"11\">第幾天</text><circle class=\"accent\" cx=\"18\" cy=\"210\" r=\"4\"/><text class=\"ink\" x=\"28\" y=\"214\" font-size=\"11\">每個點記錄菌斑、齦溝液、臨床發炎</text></svg>",
+      "caption": "原創圖解，依 Miyasato 等（1977）摘要所述的設計繪製：6 名受試者左右成對的下顎小臼齒，在第 0、4、7、11、14、18、21、25 天評估。圖中只畫設計與評估時間點，不呈現數據。"
+    },
+    {
+      "type": "quote",
+      "text": "在 25 天期間，菌斑、齦溝液分數與臨床牙齦發炎都上升，角化牙齦寬度極少與足夠的部位之間，看不出差別。",
+      "original": "Results revealed increases in plaque, gingival exudate scores and clinical gingival inflammation over the 25-day period with no apparent difference between the areas with minimal and appreciable width of keratinized gingiva.",
+      "cite": "Miyasato、Crigger 與 Egelberg（1977）摘要"
+    },
+    {
+      "type": "p",
+      "text": "樣本只有 6 個人，停的也只有 25 天；量的是菌斑、齦溝液和發炎，不是退縮，也不是附著喪失。"
+    },
+    {
+      "type": "h",
+      "text": "附著牙齦＝角化牙齦寬度減去齦溝深度"
+    },
+    {
+      "type": "p",
+      "text": "附著牙齦（attached gingiva）是牙齦裡結實、緊貼骨膜、牙齒和齒槽骨的那一段，由角化上皮與緻密結締組織構成。再往根尖走，過了膜齦交界（mucogingival junction），就是非角化、會動的齒槽黏膜。探針從齦緣量到膜齦交界，是角化牙齦的寬度；扣掉齦溝或囊袋深度，剩下的才是附著牙齦。恆牙的附著牙齦寬度差很多，大約 1 到 9 毫米。"
+    },
+    {
+      "type": "h",
+      "text": "窄牙齦先量，再看這個人刷得怎樣"
+    },
+    {
+      "type": "list",
+      "items": [
+        "沒有發炎、沒有退縮的窄牙齦，Cortellini 與 Bissada 在 2018 年出版的世界研討會回顧認為，沒有病變時，監測特定部位似乎是適當的做法；要量角化組織量時，記錄膜齦交界到齦緣的距離，並隨時間監測；菌斑控制良好時，不需要最低量的角化組織來預防附著喪失。",
+        "薄的牙周表型、口腔衛生欠佳，或需要矯正、修復的病例，要另外小心。同一篇回顧提到，這些病例牙齦退縮發生或惡化的風險增加；矯正移動牙齒時，牙齦不到 2 毫米的區域退縮機率較高，矯正前可考慮增寬，但這主要基於歷史臨床觀察，證據等級不高。",
+        "菌斑控制差的病人另當別論。同一篇回顧認為，這種病人要維持牙齦健康，附著牙齦很重要。依我看這和 Miyasato 不衝突：那 6 個人只停了 25 天，Kennedy 等人看的是 6 年，而且他們的對象是附著牙齦不足，與 Miyasato 比的角化牙齦寬度不完全是同一件事。他們追蹤 32 位兩側附著牙齦都不足的病人，一側做游離牙齦移植，另一側不手術當對照，整組都在每 3 到 6 個月的維護下；不手術的對照側沒有額外退縮或附著喪失。中斷參與 5 年的病人，對照側又發炎並伴隨額外退縮，移植側沒有。"
+      ]
+    },
+    {
+      "type": "paper",
+      "citation": "Miyasato M, Crigger M, Egelberg J. Gingival condition in areas of minimal and appreciable width of keratinized gingiva. *J Clin Periodontol*. 1977;4(3):200–209.",
+      "doi": "10.1111/j.1600-051x.1977.tb02273.x",
+      "pmid": "330574",
+      "link": "https://doi.org/10.1111/j.1600-051x.1977.tb02273.x",
+      "access": "依摘要與相關文獻整理",
+      "question": "角化牙齦寬度極少（≤1.0 毫米）與足夠（≥2.0 毫米）的部位，牙齦狀況與對菌斑的反應有沒有差別？",
+      "design": "先檢查 16 人的兩種寬度部位，再讓 6 人左右成對停止清潔 25 天",
+      "sample": "16 名牙科學生與教職員；其中 6 人停止清潔 25 天"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Miyasato M, Crigger M, Egelberg J. Gingival condition in areas of minimal and appreciable width of keratinized gingiva. J Clin Periodontol 1977;4(3):200–209（PMID 330574）",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "1977-08",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/330574/",
+      "note": "依摘要（E-utilities 讀取）：16 名 dental, dental hygiene, and dental assisting students and dental faculty members；下顎小臼齒頰側中央無菌斑面，minimal ≤1.0 mm、appreciable ≥2.0 mm；評估齦溝液量與依顏色、腫脹、探診出血判斷的臨床發炎；兩者都只有 minute amounts 齦溝液、大致無發炎；6 名左右成對者下顎小臼齒區停止口腔清潔 25 天，第 0、4、7、11、14、18、21、25 天評估；no apparent difference。摘要未報告統計檢定（no apparent difference，未附 p 值）"
+    },
+    {
+      "title": "Crossref 書目資料：10.1111/j.1600-051x.1977.tb02273.x",
+      "publisher": "Crossref",
+      "date": "1977-09",
+      "url": "https://api.crossref.org/works/10.1111/j.1600-051x.1977.tb02273.x",
+      "note": "作者全名 Myles Miyasato、Max Crigger、Jan Egelberg；卷 4 期 3 頁 200–209；Crossref 紙本日期 1977 年 9 月，PubMed 標 1977 年 8 月"
+    },
+    {
+      "title": "Lang NP, Löe H. The relationship between the width of keratinized gingiva and gingival health. J Periodontol 1972;43(10):623–627（PMID 4507712）",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "1972-10",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/4507712/",
+      "note": "PubMed 無摘要，未讀到原文；研究內容與結論依 Baghele 2022、Carnio 2026 轉述，兩者都把 2 mm 角化／1 mm 附著的結論歸給 Lang 與 Löe 本人"
+    },
+    {
+      "title": "Baghele ON, Bezalwar KV. A study to evaluate the prevalence of teeth without clinically detectable mucogingival junction. J Indian Soc Periodontol 2022;26(2):162（PMC8936019）",
+      "publisher": "Journal of Indian Society of Periodontology（PubMed Central）",
+      "date": "2022-03",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8936019/",
+      "note": "轉述 Lang 與 Löe：plaque-free areas with <2.0 mm of keratinized gingiva were inflamed as evaluated with gingival index and gingival exudate measurements；they concluded that 2.0 mm or more of keratinized gingiva (which corresponded to 1.0 mm or more of attached gingiva) is necessary to maintain gingival health"
+    },
+    {
+      "title": "Carnio J, Carnio JK, Camargo PM. The Clinical Significance of Attached Gingiva in the Natural Dentition. Dent J (Basel) 2026（PMC13025601）",
+      "publisher": "Dentistry Journal（MDPI，PubMed Central，CC BY）",
+      "date": "2026-03-09",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13025601/",
+      "note": "轉述 Lang 與 Löe：80% of sites with ≥2 mm of KT remained clinically healthy, whereas sites with <2 mm exhibited signs of inflammation；Lang and Löe (1972) ... recommended a minimum of 2 mm of keratinized tissue, including at least 1 mm of attached gingiva, particularly in patients with suboptimal plaque control。基本觀念：附著牙齦定義、齒槽黏膜與膜齦交界、臨床附著牙齦寬度＝齦緣到膜齦交界距離減齦溝／囊袋深度、恆牙列約 1–9 mm（Introduction）"
+    },
+    {
+      "title": "Kennedy JE, Bird WC, Palcanis KG, Dorfman HS. A longitudinal evaluation of varying widths of attached gingiva. J Clin Periodontol 1985;12(8):667–675（PMID 3902907）",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "1985",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3902907/",
+      "note": "依摘要：32 名兩側附著牙齦不足的病人追蹤 6 年，一側游離牙齦移植、一側不手術；維護 3–6 個月一次；對照側無額外退縮或附著喪失；中斷參與 5 年者對照側再發炎並伴隨額外退縮，移植側無"
+    },
+    {
+      "title": "Cortellini P, Bissada NF. Mucogingival conditions in the natural dentition: Narrative review, case definitions, and diagnostic considerations. J Clin Periodontol 2018;45(Suppl 20):S190–S198",
+      "publisher": "Journal of Clinical Periodontology（全文 PDF，umw.edu.pl 存放本）",
+      "date": "2018-06",
+      "url": "https://doi.org/10.1111/jcpe.12948",
+      "note": "讀全文（umw.edu.pl 存放 PDF：https://www.umw.edu.pl/sites/default/files/2022-04/Article9.pdf）；DOI 經 Crossref 核對（卷 45，2018 年 6 月）。摘要結果：in the absence of pathosis, monitoring specific sites seems to be the proper approach；Periodontal biotype and attached gingiva 一節：optimal plaque control 時不需最低量角化組織預防附著喪失；菌斑控制欠佳者附著牙齦重要；矯正時 <2 mm 區退縮機率較高、可考慮增寬；Case c：記錄 MGJ 到 FGM 距離以確定角化組織量並隨時間監測；結論：薄表型、口衛欠佳、需修復／矯正者退縮風險增加；Keratinized tissue width is easily measured with a periodontal probe positioned between the gingival margin and the mucogingival junction。2017 年世界研討會，2018 年出版"
+    },
+    {
+      "title": "Wikimedia Commons：File:Gum graft fig 1.png",
+      "publisher": "Wikimedia Commons",
+      "date": "2015-11-06",
+      "url": "https://commons.wikimedia.org/wiki/File:Gum_graft_fig_1.png",
+      "note": "頭圖；CC BY-SA 4.0；作者 Funkynatsuki，Own work；描述僅「Gum graft」，分類 Gingival recession、Dental abrasion；日期欄 2015-11-06 與上傳時間戳 2015-11-06T23:50:31Z 同日，視為上傳日，故不填拍攝年（made）"
+    }
+  ]
+}
