@@ -1,0 +1,199 @@
+{
+  "column": "music",
+  "date": "reserve",
+  "reserve_written": "2026-10-28",
+  "title": "牢房的擴音器，又放了一次卡農",
+  "dek": "一條八個音的低音，從頭到尾共 28 遍。1981 年，《紐約客》把它畫進了牢房。",
+  "brief": "1981 年的《紐約客》漫畫裡，牢房的擴音器宣布：「為了您的聆聽享受，我們再次播放帕海貝爾的卡農。」這首曲子的低音只有八個音，從頭到尾共 28 遍。1968 年 6 月，法國指揮家 Paillard 的錄音由 Erato 在法國發行，速度很慢，還加進他自己寫的幾條聲部。",
+  "topic_key": "music:pachelbel-canon",
+  "updated_at": "2026-10-28T15:01:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Pachelbel%27s_Canon_-_Mus.MS_16481-8_Page_1.jpg/1280px-Pachelbel%27s_Canon_-_Mus.MS_16481-8_Page_1.jpg",
+    "width": 1280,
+    "height": 1061,
+    "alt": "橫向手抄樂譜的首頁，頂端有手寫標題。譜面由上而下標著 Violino 1、Violino 2、Violino 3 和 Cembalo，第一小提琴的譜行先空著，低音先起頭。",
+    "caption": "柏林國家圖書館藏的《卡農》抄本首頁（Mus.MS 16481/8）。《紐約時報》說，一般認為現存最早的手稿是一份在德國的 19 世紀抄本。頂端的手寫標題寫明是給三把小提琴與低音的卡農，作者帕海貝爾；譜面由上而下是三把小提琴和大鍵琴（Cembalo），第一把小提琴的譜行先空著，由低音起頭。",
+    "credit": "帕海貝爾（作曲）；佚名抄寫；柏林國家圖書館藏；數位檔經 Wikimedia Commons，來源標示為 IMSLP",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pachelbel%27s_Canon_-_Mus.MS_16481-8_Page_1.jpg",
+    "made": "19 世紀（抄本）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1981 年 8 月 17 日的《紐約客》（The New Yorker）刊出 Mick Stevens 的漫畫：牢房裡一個面容憔悴的囚犯，擴音器宣布：「為了您的聆聽享受，我們再次播放帕海貝爾的卡農。」"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子最底下是一條只有八個音的低音，從頭到尾反覆，共 28 遍。"
+    },
+    {
+      "type": "p",
+      "text": "上面是三聲部的卡農：三個聲部相隔兩小節進場，下面托著那條反覆的低音。變奏的節奏從四分音符、八分音符一路加到十六分音符，後面再加跳躍、附點、切分。"
+    },
+    {
+      "type": "p",
+      "text": "同樣蓋在一條一再重來的低音上的，還有普賽爾的〈狄朵的哀歌〉，本欄寫過。"
+    },
+    {
+      "type": "music",
+      "composer": "帕海貝爾（Johann Pachelbel）",
+      "work": "D 大調卡農與吉格舞曲（為三把小提琴與通奏低音而作）",
+      "work_original": "Canon and Gigue in D major for 3 violins and basso continuo",
+      "composed": "年份不詳，各家主張從 1680 年到 1706 年都有",
+      "performers": "Jean-François Paillard 指揮",
+      "recording": "Erato，1968 年 6 月在法國發行（同一張 LP 另有 Fasch 的小號協奏曲）",
+      "movements": [
+        "Canon（卡農）",
+        "Gigue（吉格舞曲）"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Pachelbel Canon Paillard Erato 1968",
+        "artist_hint": "Paillard",
+        "track_filter": [
+          "Canon"
+        ]
+      }
+    },
+    {
+      "type": "h",
+      "text": "巴哈大哥的老師"
+    },
+    {
+      "type": "p",
+      "text": "帕海貝爾 1653 年生在紐倫堡，生前出名的是管風琴，管風琴作品寫了兩百多首。1678 到 1690 年他在埃爾福特（Erfurt）當管風琴師，和巴哈（J. S. Bach）的父親是好朋友，當過巴哈家一個女兒的教父，又收了巴哈的大哥 Johann Christoph 當學生，教了三年管風琴。後來替弟弟巴哈打好鍵盤底子的，就是這位大哥。1695 年起，帕海貝爾回紐倫堡當聖塞巴德（St. Sebald）教堂的管風琴師，一直做到 1706 年去世；1699 年出版的鍵盤變奏曲集，書名頁上掛的就是這個頭銜。",
+      "alt": "帕海貝爾《Hexachordum Apollinis》書名頁的黑白銅版雕刻複製圖。",
+      "caption": "帕海貝爾的鍵盤變奏曲集《Hexachordum Apollinis》書名頁，1699 年出版。署名稱他為紐倫堡聖塞巴德教堂的管風琴師。",
+      "credit": "雕版：Cornelius Nicolaus Schurz，紐倫堡（依 Commons）；帕海貝爾，1699；數位檔經 Wikimedia Commons，來源標示為 IMSLP／慕尼黑數位化中心"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Pachelbel-hexachordum-cover.jpg/1280px-Pachelbel-hexachordum-cover.jpg",
+      "width": 1280,
+      "height": 1070,
+      "alt": "黑白銅版畫的書名頁：中央是一塊寫滿拉丁文的空白區，四周繞著繁複的葉飾；上方兩個小天使托著豎琴，左下方的小天使坐在管風琴前彈奏，右下方的小天使俯身在大鍵琴上。",
+      "caption": "帕海貝爾的鍵盤變奏曲集《Hexachordum Apollinis》書名頁，1699 年在紐倫堡出版。署名稱他為紐倫堡聖塞巴德教堂的管風琴師。",
+      "credit": "雕版：Cornelius Nicolaus Schurz（依 Commons）；帕海貝爾，1699；數位檔經 Wikimedia Commons，來源標示為 IMSLP／慕尼黑數位化中心",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pachelbel-hexachordum-cover.jpg",
+      "made": "1699",
+      "text": "1694 年 10 月 23 日是巴哈大哥 Johann Christoph 的婚禮，帕海貝爾到場，和巴哈的父親等親友一起替婚禮奏樂。1985 年有學者提出，卡農可能就是為這場婚禮寫的，理由是帕海貝爾出席了婚禮，不是因為他教過這位大哥。一位研究帕海貝爾的學者說這純屬猜測，Classic FM 也認為不太可能。"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子哪一年寫、在什麼場合寫，都不清楚。一般認為現存最早的手稿，是一份在德國的 19 世紀抄本，收在柏林國家圖書館，頭圖就是它的第一頁。哥倫比亞大學的音樂教授 Elaine Sisman 說，在 20 世紀有現代版樂譜以前，帕海貝爾在演出上差不多沒人理。1919 年，卡農第一次印成樂譜，吉格舞曲（gigue）沒有收進去。"
+    },
+    {
+      "type": "p",
+      "text": "Paillard 的錄音"
+    },
+    {
+      "type": "h",
+      "text": "《紐約時報》說，帶動這首曲子一路竄紅的，是法國指揮家 Jean-François Paillard 在 1960 年代的一張錄音，1968 年 6 月由 Erato 在法國發行。Paillard 走較浪漫的風格，速度放得很慢，又加進自己寫的聲部，這幾條後來就跟這首曲子綁在一起了；譜上原本只有三把小提琴和一條低音。Sisman 說那張錄音出名，是因為它夢幻，比其他錄音都慢一倍。"
+    },
+    {
+      "type": "p",
+      "text": "《紐約時報》說，帶動這首曲子一路竄紅的，是法國指揮家 Jean-François Paillard 在 1960 年代的一張錄音。他的室內樂團 1968 年錄下它，6 月由 Erato 在法國發行。Paillard 把速度放得很慢，拉得偏浪漫，又自己寫了幾條聲部疊上去，這幾條後來就跟這首曲子綁在一起了；譜上原本只有三把小提琴和一條低音。Sisman 說，那張唱片夢幻，比其他錄音都慢一倍。"
+    },
+    {
+      "type": "p",
+      "text": "1974 年，London 唱片知道這首曲子受歡迎，把斯圖加特室內樂團一張科雷利《聖誕協奏曲》的舊專輯重新發行，裡面剛好收了卡農，改名為《Pachelbel Kanon: the Record That Made it Famous and other Baroque Favorites》。這張改了名的舊唱片是 1976 年最暢銷的古典專輯，別家唱片公司也跟著出了自己的版本。"
+    },
+    {
+      "type": "p",
+      "text": "1980 年，電影《凡夫俗子》（Ordinary People）以它為主題曲兼開場曲，這部片拿下包括最佳影片在內的幾座奧斯卡。"
+    },
+    {
+      "type": "p",
+      "text": "1980 年，電影《凡夫俗子》（Ordinary People）拿 Paillard 的錄音當主題曲和開場曲，這部片拿下包括最佳影片在內的幾座奧斯卡。"
+    },
+    {
+      "type": "h",
+      "text": "1981 年查爾斯和黛安娜結婚，《紐約時報》說這對新人沒有用卡農，用的是一首巴洛克進行曲（baroque processional）。那場婚禮帶動的是其他巴洛克曲子。一位在紐約拉了多年婚禮的小提琴手說，碰上這種王室大婚，節目單上有的曲子都會直接衝到最前面。"
+    },
+    {
+      "type": "p",
+      "text": "1981 年查爾斯王子和黛安娜結婚，進場用的是克拉克（Jeremiah Clarke）的《丹麥王子進行曲》，卡農沒有用上。那場婚禮帶動的是其他巴洛克曲子。一位在紐約拉了多年婚禮的小提琴手說，碰上這種王室大婚，節目單上有的曲子都會直接衝到最前面。"
+    },
+    {
+      "type": "p",
+      "text": "紐約聖約翰大教堂的管風琴師講的是紅毯：有的長，有的短。卡農一直在繞圈，司琴可以在任何一圈收手，也可以讓它再繞一圈。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Why Canon in D became wedding song（Alexandra S. Levine 的《紐約時報》報導，Northwest Arkansas Democrat-Gazette 轉載）",
+      "publisher": "Northwest Arkansas Democrat-Gazette／The New York Times",
+      "date": "2019-06-16",
+      "url": "https://www.nwaonline.com/news/2019/jun/16/why-canon-in-d-became-wedding-song-2019/",
+      "note": "Sisman 的說法、Paillard 錄音帶動竄紅、《凡夫俗子》以它為主題曲兼開場曲、查爾斯與黛安娜的婚禮用了 baroque processional 而非卡農（該曲名稱本報未能在轉載頁確認，不寫）、紐約婚禮小提琴手與聖約翰大教堂管風琴師的說法、最早抄本為在德國的 19 世紀抄本，都出自這篇；本報讀的是轉載版，頁面僅開放前幾段，其餘依備稿事實清單"
+    },
+    {
+      "title": "Pachelbel's Canon",
+      "publisher": "Wikipedia",
+      "date": "2026-10-15",
+      "url": "https://en.wikipedia.org/wiki/Pachelbel%27s_Canon",
+      "note": "日期為所讀版本的最後修訂日（2026-10-28 查閱）。曲子結構（八個音、28 次、三聲部相隔兩小節、節奏愈來愈密）、作曲年代與場合不明、1985 年婚禮說與「pure speculation」、1919 年首刊、Paillard 錄音、1970 年舊金山電台、1974 年斯圖加特舊專輯重發與 1976 年銷售"
+    },
+    {
+      "title": "Jean-François Paillard",
+      "publisher": "Wikipedia",
+      "date": "2023-09-16",
+      "url": "https://en.wikipedia.org/wiki/Jean-Fran%C3%A7ois_Paillard",
+      "note": "日期為所讀版本的最後修訂日（2026-10-28 查閱）。1968 年 Erato 錄音、風格較浪漫、速度較慢、自寫的聲部如今與這首曲子密不可分"
+    },
+    {
+      "title": "Johann Pachelbel",
+      "publisher": "Wikipedia",
+      "date": "2026-09-16",
+      "url": "https://en.wikipedia.org/wiki/Johann_Pachelbel",
+      "note": "日期為所讀版本的最後修訂日（2026-10-28 查閱）。生卒、管風琴作品、埃爾福特時期與巴哈家的關係、聖塞巴德教堂任職年份"
+    },
+    {
+      "title": "Ohrdruf Bach family",
+      "publisher": "Bach in Thüringen",
+      "date": "未註明",
+      "url": "https://www.bach-thueringen.de/en/w/ohrdruf-bach-family",
+      "note": "頁面未標日期，2026-10-28 查閱。Johann Christoph Bach 跟帕海貝爾學三年管風琴，後來教弟弟 J. S. 巴哈鍵盤"
+    },
+    {
+      "title": "How did Pachelbel's Canon in D become the most popular wedding song?",
+      "publisher": "Classic FM",
+      "date": "2019-05-24",
+      "url": "https://www.classicfm.com/composers/pachelbel/music/pachelbels-canon-d-facts/",
+      "note": "婚禮說「pretty unlikely」；低音型 28 次"
+    },
+    {
+      "title": "Prisoner of Pachelbel（Mick Stevens 為《紐約客》1981 年 8 月 17 日所畫漫畫的館藏紀錄）",
+      "publisher": "The Morgan Library & Museum",
+      "date": "未註明",
+      "url": "https://www.themorgan.org/literary-historical/266773",
+      "note": "漫畫刊於《紐約客》1981 年 8 月 17 日；館藏頁未標發布日期，且對本報的抓取程式回 403，圖說與刊登日期取自搜尋結果摘要，並與 Wikipedia 的說法一致"
+    },
+    {
+      "title": "File:Pachelbel's Canon - Mus.MS 16481-8 Page 1.jpg",
+      "publisher": "Wikimedia Commons（來源 IMSLP）",
+      "date": "2015-09-27",
+      "url": "https://commons.wikimedia.org/wiki/File:Pachelbel%27s_Canon_-_Mus.MS_16481-8_Page_1.jpg",
+      "note": "頭圖；日期為檔案上傳日。檔案頁的日期欄寫 1680-01-01，與《紐約時報》說的 19 世紀抄本不合，本報採後者"
+    },
+    {
+      "title": "File:Pachelbel-hexachordum-cover.jpg",
+      "publisher": "Wikimedia Commons（來源 IMSLP）",
+      "date": "2015-09-19",
+      "url": "https://commons.wikimedia.org/wiki/File:Pachelbel-hexachordum-cover.jpg",
+      "note": "第二張圖；日期為檔案上傳日。雕版者依 Commons 記為 Cornelius Nicolaus Schurz"
+    }
+  ]
+}
