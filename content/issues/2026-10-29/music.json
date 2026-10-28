@@ -1,0 +1,248 @@
+{
+  "column": "music",
+  "date": "2026-10-29",
+  "title": "唱片的另一面是巴哈",
+  "dek": "據廣告人 Everett 的記述，一間印度小屋，唱機之外只有一張唱片，一面德布西，另一面巴哈。〈G 弦上的詠嘆調〉這個名字來自 1871 年 Wilhelmj 的改編。",
+  "brief": "據廣告人 Everett 的記述，二戰結束後不久，Colin Millward 在印度一間小屋住了六個月，前一位住戶留下一台唱機，唱機之外只有一張唱片，一面是德布西，另一面是巴哈第三號管弦樂組曲的〈Air〉樂章。他後來當上廣告公司的創意總監，提議拿這段音樂配 Hamlet 雪茄的電視廣告。Everett 還寫到，為了請 Jacques Loussier 的三重奏錄一段 30 秒的版本，客戶主管在巴黎守了三天。",
+  "topic_key": "music:bach-bwv1068",
+  "updated_at": "2026-10-29T01:17:46+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "portrait",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/August_Wilhelmj%2C_photo_by_Sarony%2C_1879_%28Newberry_Library%2C_Westervelt_Coll%29.jpg/1280px-August_Wilhelmj%2C_photo_by_Sarony%2C_1879_%28Newberry_Library%2C_Westervelt_Coll%29.jpg",
+    "width": 1280,
+    "height": 1853,
+    "alt": "棕色調的老照片：一位沒有鬍鬚的男子穿深色燕尾服，一手把小提琴舉在肩上，另一手垂著握住琴弓；卡片底部印著「WILHELMJ」。",
+    "caption": "小提琴家 August Wilhelmj（1845–1908），Napoleon Sarony 拍攝，照片背面有鉛筆註記 1879 年。1871 年那份編曲出自他手；這張照片比編曲晚了約八年。",
+    "credit": "Napoleon Sarony；Newberry Library, Digital Collections（NL110RJJ）；經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:August_Wilhelmj,_photo_by_Sarony,_1879_(Newberry_Library,_Westervelt_Coll).jpg",
+    "made": "約 1879"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "照廣告人 Mike Everett 的記述，二戰結束後不久，Colin Millward 被派到印度，在一間小屋住了六個月。前一位住戶留給他一台唱機，唱機之外只有一張唱片：一面是德布西的〈月光〉，另一面是巴哈的〈Air〉。"
+    },
+    {
+      "type": "p",
+      "text": "Everett 說，Millward 後來成了廣告公司 Collett, Dickenson and Pearce 的第一任創意總監。他記得巴哈那一面，向兩位負責 Hamlet 雪茄廣告的創作人提議，配樂就用它。"
+    },
+    {
+      "type": "p",
+      "text": "廣告用的是法國爵士樂手 Jacques Loussier 三重奏的版本，這個三重奏的團名叫 Play Bach Trio。這系列廣告 1966 年上了英國電視，一直播到 1991 年英國禁止電視菸品廣告為止。"
+    },
+    {
+      "type": "h",
+      "text": "名字來自一份改編"
+    },
+    {
+      "type": "p",
+      "text": "那張唱片上的巴哈，指的大概就是他第三號管弦樂組曲的第二樂章〈Air〉。〈G 弦上的詠嘆調〉這個名字來自 1871 年小提琴家 August Wilhelmj 的改編，後來成了各種改編的通稱，不管有沒有用到 G 弦。"
+    },
+    {
+      "type": "p",
+      "text": "Wilhelmj 先把這個樂章從 D 大調降到 C 大調，再把第一小提琴（兩個小提琴聲部中的第一個）那條旋律往下搬一個八度（同一個曲調，整個低一層），交給一把小提琴獨奏。壓到這麼低，整條旋律只用小提琴最低的那條 G 弦就拉得完。"
+    },
+    {
+      "type": "p",
+      "text": "流傳一種說法，說巴哈本來就要這段旋律只在 G 弦上拉。順序剛好反了：巴哈寫的是給整組第一小提琴的旋律，能整條在 G 弦上拉完，是 Wilhelmj 把它搬下來之後的事。"
+    },
+    {
+      "type": "p",
+      "text": "下面的表格有兩個詞先說明：通奏低音是大提琴和大鍵琴一起負責的低音聲部；分譜是各樂器各一份的演奏用譜。"
+    },
+    {
+      "type": "table",
+      "title": "同一個樂章，兩份譜",
+      "head": [
+        "",
+        "巴哈的〈Air〉",
+        "Wilhelmj 的改編"
+      ],
+      "rows": [
+        [
+          "調",
+          "D 大調",
+          "C 大調，旋律另外再低一個八度"
+        ],
+        [
+          "伴奏",
+          "弦樂與通奏低音",
+          "弦樂團，或改用鋼琴、管風琴"
+        ],
+        [
+          "譜的年代",
+          "現存最早的分譜，約 1730 年，部分是巴哈親筆",
+          "1871 年出版"
+        ]
+      ],
+      "caption": "原創對照表，依 IMSLP、Interlude 與 Wikipedia 整理。"
+    },
+    {
+      "type": "h",
+      "text": "兩個小提琴聲部纏在一起"
+    },
+    {
+      "type": "p",
+      "text": "巴哈替這首組曲編了三支小號、定音鼓和兩支雙簧管，到了〈Air〉全部停下來，只剩弦樂和通奏低音（大提琴和大鍵琴一起負責的低音聲部）。"
+    },
+    {
+      "type": "p",
+      "text": "這個樂章可以分層聽。最上面是第一小提琴，一條拉得很長、一直延續下去的旋律；第二小提琴跟它纏來纏去，中提琴待在兩個小提琴聲部下面。最底下的低音穩穩往前推，整首靠它撐著。"
+    },
+    {
+      "type": "music",
+      "composer": "巴哈（Johann Sebastian Bach）",
+      "work": "D 大調第三號管弦樂組曲（序曲），BWV 1068：第二樂章〈Air〉",
+      "work_original": "Orchestral Suite (Ouverture) No. 3 in D major, BWV 1068 — II. Air",
+      "composed": "約 1730 年",
+      "performers": "特雷弗・平諾克（Trevor Pinnock）指揮兼大鍵琴，英國協奏團（The English Concert）",
+      "recording": "Archiv Produktion 439 780-2（約 1995 年發行），1993 年 7 月與 1994 年 11 月錄於倫敦 Henry Wood Hall",
+      "duration": "〈Air〉約 5 分鐘；整首組曲約 23 分鐘",
+      "movements": [
+        "I. Ouverture",
+        "II. Air",
+        "III. Gavotte I–II",
+        "IV. Bourrée",
+        "V. Gigue"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Bach Orchestral Suite No. 3 BWV 1068 Air Pinnock English Concert Archiv",
+        "artist_hint": "Pinnock",
+        "track_filter": [
+          "Air"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "錄音我選平諾克（Trevor Pinnock）和英國協奏團。四首組曲整套都在，平諾克自己指揮兼彈大鍵琴；這個版本的序曲有小號與定音鼓，可以和〈Air〉對照聽。同一套裡第二號組曲的最後一個樂章〈Badinerie〉，是長笛手拿來炫技的曲子，想換個口味可以聽它。"
+    },
+    {
+      "type": "h",
+      "text": "伴奏全壓到最輕"
+    },
+    {
+      "type": "p",
+      "text": "換成 Wilhelmj 的版本，小提琴在最低的音域拉不出多大的音量，其他聲部只好全部壓到最輕。這樣一來，上面兩個小提琴聲部的纏繞、底下低音往前推的勁，都聽不太出來了。"
+    },
+    {
+      "type": "p",
+      "text": "批評他的人說他糟蹋了巴哈，把幾條旋律同時進行的寫法抹平了。"
+    },
+    {
+      "type": "p",
+      "text": "這個版本 1905 年在倫敦的逍遙音樂會（Proms）排了五次，節目單上印著「應要求」；之後到 1921 年，每年都排。"
+    },
+    {
+      "type": "p",
+      "text": "Wilhelmj 的版本今天已經很少有人演。想聽它原來的樣子，找曲目標明 arr. Wilhelmj（arr. 即改編者）的小提琴錄音；據 Wikipedia 引用的 CHARM 資料，克萊斯勒（Fritz Kreisler）1904 年 2 月為 Gramophone 錄過 Wilhelmj 版。"
+    },
+    {
+      "type": "h",
+      "text": "去巴黎找 Loussier"
+    },
+    {
+      "type": "p",
+      "text": "Everett 還寫到，負責 Hamlet 這個客戶的主管被派去巴黎，要說服 Loussier 的三重奏替廣告錄一段 30 秒的版本。Loussier 不在家，他在門外守了三天，才等到人回來。最後談定的酬勞是 1,000 英鎊。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "List of works by August Wilhelmj",
+      "publisher": "IMSLP",
+      "date": "未註明",
+      "url": "https://imslp.org/wiki/List_of_works_by_August_Wilhelmj",
+      "note": "Air for Violin and String Orchestra or Piano or Organ，1871，Lewy, Wien。正文不點名出版者，表格只寫「1871 年出版」。"
+    },
+    {
+      "title": "The Role of Sir Henry J. Wood in the English Bach Awakening: Orchestral Bach at the Proms 1895–1944（博士論文）",
+      "publisher": "Hannah Chloe French，University of Leeds",
+      "date": "2014",
+      "url": "https://etheses.whiterose.ac.uk/id/eprint/7515/",
+      "note": "讀了第二章與附錄。1905 年 Proms 排了五次 Air on a G String (arr. Wilhelmj)，原句為 doubtless due to the instant appeal of the work (again noted ‘by request’ in the paper programmes)：「應要求」是節目單字樣，聽眾反應屬作者推斷，正文只寫次數與字樣；附錄年份表 1905 至 1921 年每年皆演出。排節目的是亨利・伍德（Henry J. Wood），正文不點名。附錄記 1871 年編曲為 violin with string orchestra and 2 clarinets or piano or organ，單簧管與 IMSLP、Wikipedia 的編制寫法不一致，正文與表格不寫。附錄 4.2 另列 Esser 1854、1855，Bachrich 1870 年代，Raff 1873 的巴哈管弦樂編曲，正文未用。論文全文查無『auf der G-Saite』。"
+    },
+    {
+      "title": "Air(s) on the G String",
+      "publisher": "Interlude（Maureen Buja）",
+      "date": "2025-03-24",
+      "url": "https://interlude.hk/airs-on-the-g-string/",
+      "note": "D 大調降一級到 C 大調、第一小提琴改為獨奏並移低八度，降調之後整條旋律才能在 G 弦上拉完；小提琴在最低音域音量小，其他聲部必須壓得很輕，巴哈交織的線條因此聽不出來；伴奏小提琴、中提琴裝弱音器。本文說大提琴、低音提琴與鍵盤皆 staccato、pianissimo，與 Wikipedia（大提琴、低音提琴 pizzicato）不一致，正文只寫伴奏壓到最輕。原曲兩條小提琴線在中提琴之上纏繞，通奏低音以 driving and constant 的分解和弦撐住全曲。批評者說它糟蹋原作、抹掉複音，未點名、未註年代。"
+    },
+    {
+      "title": "Air on the G String",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Air_on_the_G_String",
+      "note": "名稱來自 Wilhelmj 編曲；降到 C 大調、第一小提琴聲部再移低八度，才能整條在最低的 G 弦上拉；巴哈本意就在 G 弦上拉是 spurious story（注腳為《格羅夫音樂辭典》1954 年第 5 版第 9 冊 298 頁 Wilhelmj 條目，未見原書）；小提琴低音域音量小，其他聲部全面減弱，交織與低音推進感因此消失；伴奏小提琴、中提琴 con sordino，鍵盤 staccato、pianissimo，大提琴、低音提琴 pizzicato、sempre pianissimo（與 Interlude 不一致）；Wilhelmj 版今已少演，名稱沿用為各種改編的通稱；早期錄音表（引 CHARM）列 Fritz Kreisler 1904-02-01 Gramophone 2087x。Joachim、Tovey 的引文只見於此頁二手轉述，未核到原文，正文不用。"
+    },
+    {
+      "title": "Orchestral Suite No.3 in D major, BWV 1068",
+      "publisher": "IMSLP",
+      "date": "未註明",
+      "url": "https://imslp.org/wiki/Orchestral_Suite_No.3_in_D_major,_BWV_1068_(Bach,_Johann_Sebastian)",
+      "note": "作曲年份記 1730 ca.（music 區塊 composed 依此）；Mus. ms. Bach St 153 分譜：Krebs 與 C. P. E. Bach 抄寫，Holograph manuscript ca.1730（partial）。此頁另有 Wilhelmj 編曲總譜掃描（Raabe & Plothow 版 #67269、Lewy 版 #682146），下載須按網站免責同意，未取得，低音聲部寫法無法以原譜判定。"
+    },
+    {
+      "title": "Orchestral Suite No. 3 (Bach)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Orchestral_Suite_No._3_(Bach)",
+      "note": "編制（三支小號、定音鼓、兩支雙簧管、弦樂、通奏低音）、五個樂章、第二樂章只用弦樂與通奏低音；最早來源為約 1730 年部分親筆分譜；第二號組曲 Badinerie 成為長笛手的炫技曲。另記 Rifkin 主張最初版本只有弦樂與通奏低音，未讀原文，不寫。"
+    },
+    {
+      "title": "Air on the G String from Orchestral Suite No. 3 in D major, BWV 1068（節目解說，Jane Vial Jaffe）",
+      "publisher": "Parlance Chamber Concerts",
+      "date": "未註明",
+      "url": "https://www.parlancechamberconcerts.org/individual-program-notes/johann-sebastian-bach-(1685-1750)/air-on-the-g-string-from-orchestral-suite-no.-3-in-d-major%2C-bwv-1068",
+      "note": "巴哈稱這類作品為 ouvertures；〈Air〉二部曲式、兩半各自反覆；上面一條 long, sustained 的旋律。本文稱低音為 stepping bass，與 Interlude 的 broken arpeggios 不一致，正文不寫低音怎麼走。Jaffe 推測組曲約 1731 年在萊比錫完成，與分譜約 1730 年的記載差一年，正文不寫年代。"
+    },
+    {
+      "title": "A happy choice of music（Mike Everett）",
+      "publisher": "Anatomised",
+      "date": "2017-01-30",
+      "url": "https://anatomised.com/hamlet-air-on-a-g-string/",
+      "note": "作者為廣告人（正文寫明「廣告人 Mike Everett 的記述」），此段細節只有這一個來源。Colin Millward 為 Collett, Dickenson and Pearce（CDP）首任創意總監，戰後在印度小屋住六個月，唱機與唯一一張唱片；向 Hamlet 廣告的創作者 Tim Warriner 與 Roy Carruthers 提議（正文寫「兩位創作人」）；Hamlet 的 account handler John Ritchie（正文寫「負責這個客戶的主管」）去巴黎、在門外守了三天、30 秒版本、酬勞 1,000 英鎊；Play Bach Trio 1959 年成立。"
+    },
+    {
+      "title": "Happiness is a cigar called Hamlet",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Happiness_is_a_cigar_called_Hamlet",
+      "note": "電視廣告 1966 至 1991 年（英國電視禁菸品廣告為止）；用 Jacques Loussier 三重奏的爵士版〈Air〉。"
+    },
+    {
+      "title": "Orchestral Suites / Ouvertüren BWV 1066-1069（Pinnock, The English Concert）",
+      "publisher": "MusicBrainz",
+      "date": "1995",
+      "url": "https://musicbrainz.org/release/b55330fc-1a37-4963-93c4-e88a422f6ef0",
+      "note": "Archiv Produktion 439 780-2，發行年記 1995（bach-cantatas 記 1996，故寫「約 1995 年」）；第二張第 1 軌為第 3 號組曲序曲、第 2 軌 Air 304 秒（5:04），第 3 號組曲五個樂章合計 23:03；第二張第 12 軌 Badinerie。"
+    },
+    {
+      "title": "Trevor Pinnock & The English Concert：J.S. Bach Orchestral Suites（C-1）",
+      "publisher": "Bach Cantatas Website",
+      "date": "未註明",
+      "url": "https://www.bach-cantatas.com/Performers/Pinnock.htm",
+      "note": "錄音時間 1993 年 7 月與 1994 年 11 月、Henry Wood Hall, London；Pinnock 指揮兼大鍵琴；發行年記 1996，與 MusicBrainz 差一年（2026-10-29 重讀時此頁對本報的請求回 406，未能再核）。"
+    },
+    {
+      "title": "August Wilhelmj, photo by Sarony, 1879 (Newberry Library, Westervelt Coll)",
+      "publisher": "Wikimedia Commons／Newberry Library",
+      "date": "約 1879",
+      "url": "https://commons.wikimedia.org/wiki/File:August_Wilhelmj,_photo_by_Sarony,_1879_(Newberry_Library,_Westervelt_Coll).jpg",
+      "note": "Public domain；背面鉛筆註記 1879。"
+    },
+    {
+      "title": "August Wilhelmj",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/August_Wilhelmj",
+      "note": "生卒年 1845–1908（頭圖圖說用）；華格納友人、1876 年拜魯特《指環》首演帶領小提琴組，正文不寫。"
+    }
+  ]
+}
