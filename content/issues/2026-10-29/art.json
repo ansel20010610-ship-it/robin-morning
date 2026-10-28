@@ -1,0 +1,263 @@
+{
+  "column": "art",
+  "date": "2026-10-29",
+  "title": "有人在蛋上寫了 HOLLAND",
+  "dek": "一隻天鵝張開雙翼趕狗。約一百年後，有人在牠腳下寫了「大議長」，在窩裡的蛋上寫了 HOLLAND，這幅畫後來被讀成政治寓意。",
+  "brief": "阿姆斯特丹國家博物館的前身 1800 年買進的第一件收購，是一隻護窩的天鵝，腳下寫著「大議長」，狗的上方寫著「國家的敵人」。這些字是畫成約一百年後才有人加上去的，天鵝被讀成遇害的政治家德維特。",
+  "topic_key": "art:rijksmuseum-sk-a-4",
+  "updated_at": "2026-10-29T03:07:49+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/De_bedreigde_zwaan_Rijksmuseum_SK-A-4.jpeg/1280px-De_bedreigde_zwaan_Rijksmuseum_SK-A-4.jpeg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/De_bedreigde_zwaan_Rijksmuseum_SK-A-4.jpeg/3840px-De_bedreigde_zwaan_Rijksmuseum_SK-A-4.jpeg",
+    "width": 1280,
+    "height": 1079,
+    "alt": "橫幅油畫：一隻白天鵝佔去畫面大半，雙翼張開，左翼往左下，右翼往右上，翼尖碰到畫布右緣；嘴張開，頭朝左。左邊是藍綠色的天空，右邊是橙褐色的雲與細長的蘆葦。天鵝兩腳踩在水邊泥岸上；左下角水裡露出一隻深色捲毛、張著嘴的狗，只看得到頭與一隻前掌；右邊是乾草堆成的窩，裡面有蛋。泥岸、狗上方的遠岸與一顆蛋上各有黑色大寫題字，右下角有一個細小的簽名。",
+    "caption": "揚・阿瑟林，《受威脅的天鵝》，約 1650，油彩、畫布，144 × 171 公分，阿姆斯特丹國家博物館（SK-A-4）。畫面上的三處荷蘭文題字，館方登記為同一則題字，並說是創作約一百年後加上的。",
+    "credit": "Jan Asselijn／Rijksmuseum, Amsterdam",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De_bedreigde_zwaan_Rijksmuseum_SK-A-4.jpeg",
+    "made": "約 1650"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "天鵝腳下的岸上，有一行黑色大寫字母：DE RAAD-PENSIONARIS，大議長。左下角水裡有一隻狗，只露出頭與一隻前掌，牠上方遠岸的綠丘前寫著 DE VIAND VAN DE STAAT，國家的敵人。右邊的窩裡有蛋，其中一顆淺灰綠，字母順著蛋殼的弧度彎過去：HOLLAND，荷蘭。"
+    },
+    {
+      "type": "quote",
+      "text": "天鵝猛烈地飛起來，要趕走一隻朝她游來的狗。畫成大約一百年後，有人在畫上加了一段題字，這麼一來，畫就成了一份政治表態。",
+      "original": "The swan furiously flies up to chase away a dog swimming towards her. About a hundred years after its creation, someone added an inscription to the painting and, in so doing, turned it into a political statement.",
+      "cite": "阿姆斯特丹國家博物館，〈Political Swan〉"
+    },
+    {
+      "type": "p",
+      "text": "阿姆斯特丹國家博物館（Rijksmuseum）把這三處字登記成同一則題字。畫本身是揚・阿瑟林（Jan Asselijn）約 1650 年的作品。畫面最亮的是白色的翼與身體，狗、窩與下半部都落在暗處。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作者",
+          "揚・阿瑟林（Jan Asselijn，1610–1652）"
+        ],
+        [
+          "題名",
+          "《受威脅的天鵝》（De bedreigde zwaan／The Threatened Swan）；館方全題另註「後來被讀成德維特的寓意畫」"
+        ],
+        [
+          "年代",
+          "約 1650"
+        ],
+        [
+          "材料",
+          "油彩、畫布"
+        ],
+        [
+          "尺寸",
+          "高 144 × 寬 171 公分"
+        ],
+        [
+          "收藏",
+          "阿姆斯特丹國家博物館（Rijksmuseum），館藏號 SK-A-4，展於榮譽廳"
+        ],
+        [
+          "簽名與字",
+          "右下角簽名「JA」；題字一則，分寫在天鵝下方、蛋上、狗的上方"
+        ],
+        [
+          "取得",
+          "1800 年 6 月 11 日購入；公版"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "兩隻翼，一張嘴"
+    },
+    {
+      "type": "p",
+      "text": "整幅畫最亮的是天鵝白色的翼和身體，狗、窩和畫面下半部都落在暗處。牠站在水邊的泥岸上，左翼往左下伸，翼尖約在畫面左緣內側；右翼往右上斜，翼尖頂到畫布右緣。白色的尾羽在兩腳左側往左下垂，身體重心偏向左腳，頭朝左。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.44,
+        0.24,
+        0.18,
+        0.2
+      ],
+      "position": "畫面中央偏上，約佔寬度 18%、高度 20%",
+      "caption": "局部：天鵝的頭。黑色的嘴基與眼周，橘紅色的嘴張開，舌頭看得見；眼睛小而黑。"
+    },
+    {
+      "type": "p",
+      "text": "左翼的羽毛一層層排開，亮部是暖黃，陰影是灰藍。翼下露出一塊藍天，有一根小羽毛飄在裡面；左上方的天空還有幾根，水面、泥岸和窩邊也散著一些。左邊的天空是藍綠色，顏料薄的地方看得出畫布的布紋。右邊換成大片橙褐色的雲，雲前立著幾叢細長的蘆葦。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.04,
+        0.26,
+        0.38,
+        0.28
+      ],
+      "position": "畫面左側中段，約佔寬度 38%、高度 28%；框住左翼從翼尖到中段的部分，翼根與下緣的羽毛在框外",
+      "caption": "局部：左翼。羽毛一層層疊開；翼下的藍天裡飄著一根小羽毛。"
+    },
+    {
+      "type": "h",
+      "text": "題字說狗是國家的敵人"
+    },
+    {
+      "type": "p",
+      "text": "狗大半沉在暗處。看得到的是深色捲毛的頭、張開的嘴，嘴裡有牙和紅舌頭，水裡還有一隻帶爪的前掌，四周的水面漂著羽毛。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.0,
+        0.72,
+        0.26,
+        0.24
+      ],
+      "position": "畫面左下角，約佔寬度 26%、高度 24%",
+      "caption": "局部：水裡的狗，與牠上方遠岸綠丘前那行「國家的敵人」。"
+    },
+    {
+      "type": "p",
+      "text": "依我看，沒有那三行字，畫面的重點仍在天鵝：羽毛、張開的嘴和那對翼，狗幾乎沒畫。"
+    },
+    {
+      "type": "h",
+      "text": "從左排到右"
+    },
+    {
+      "type": "p",
+      "text": "狗在左下，天鵝在中間，窩在右邊。大議長那行寫在天鵝腳下的岸上，兩個詞中間是一道像等號的短橫；那隻腳是黑色的蹼，張開踩在泥岸上。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.26,
+        0.74,
+        0.38,
+        0.2
+      ],
+      "position": "畫面下緣中段偏左，約佔寬度 38%、高度 20%；整行「大議長」都在框內",
+      "caption": "局部：天鵝張開的左腳蹼，與腳下岸上那行「大議長」。"
+    },
+    {
+      "type": "p",
+      "text": "窩是乾草和細枝堆成的，HOLLAND 寫在裡頭其中一顆蛋上。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.78,
+        0.56,
+        0.2,
+        0.2
+      ],
+      "position": "畫面右側偏下，約佔寬度 20%、高度 20%",
+      "caption": "局部：窩裡的蛋，HOLLAND 順著蛋殼的弧度寫。"
+    },
+    {
+      "type": "svg",
+      "title": "三處題字與簽名",
+      "svg": "<svg viewBox=\"0 0 1000 843\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect x=\"4\" y=\"4\" width=\"992\" height=\"835\" class=\"paper\" stroke-width=\"2\"/>\n<polygon points=\"53,405 188,237 375,240 475,266 563,355 437,443 312,456 69,437\" class=\"soft\" stroke-width=\"2\"/>\n<polygon points=\"475,266 531,222 700,190 800,110 988,57 994,165 906,234 812,266 769,380 762,481 688,570 625,639 437,633 325,557 437,443 563,355\" class=\"soft\" stroke-width=\"2\"/>\n<ellipse cx=\"905\" cy=\"556\" rx=\"34\" ry=\"28\" class=\"muted\" fill-opacity=\"0.35\" stroke-width=\"2\"/>\n<path d=\"M30,690 L52,660 L130,655 L168,700 L150,770 L60,790 Z\" class=\"ink\" fill-opacity=\"0.45\" stroke-width=\"2\"/>\n<text x=\"26\" y=\"52\" font-size=\"27\" class=\"ink\">1　DE VIAND VAN DE STAAT：國家的敵人</text>\n<text x=\"26\" y=\"92\" font-size=\"27\" class=\"ink\">2　DE RAAD-PENSIONARIS：大議長</text>\n<text x=\"26\" y=\"132\" font-size=\"27\" class=\"ink\">3　HOLLAND：荷蘭</text>\n<text x=\"26\" y=\"172\" font-size=\"27\" class=\"muted\">4　簽名</text>\n<line x1=\"120\" y1=\"640\" x2=\"120\" y2=\"653\" class=\"accent\" stroke-width=\"3\"/>\n<line x1=\"515\" y1=\"690\" x2=\"515\" y2=\"711\" class=\"accent\" stroke-width=\"3\"/>\n<line x1=\"905\" y1=\"524\" x2=\"905\" y2=\"526\" class=\"accent\" stroke-width=\"3\"/>\n<line x1=\"866\" y1=\"780\" x2=\"939\" y2=\"740\" class=\"accent\" stroke-width=\"3\"/>\n<circle cx=\"945\" cy=\"736\" r=\"6\" class=\"accent\" stroke-width=\"2\"/>\n<g font-size=\"26\" text-anchor=\"middle\">\n<circle cx=\"120\" cy=\"615\" r=\"22\" class=\"paper\" stroke-width=\"3\"/><text x=\"120\" y=\"624\">1</text>\n<circle cx=\"515\" cy=\"665\" r=\"22\" class=\"paper\" stroke-width=\"3\"/><text x=\"515\" y=\"674\">2</text>\n<circle cx=\"905\" cy=\"500\" r=\"22\" class=\"paper\" stroke-width=\"3\"/><text x=\"905\" y=\"509\">3</text>\n<circle cx=\"846\" cy=\"791\" r=\"22\" class=\"paper\" stroke-width=\"3\"/><text x=\"846\" y=\"800\">4</text>\n</g>\n<g font-size=\"24\" class=\"muted\">\n<text x=\"64\" y=\"830\" class=\"muted\">狗</text>\n<text x=\"500\" y=\"440\" class=\"muted\" text-anchor=\"middle\">天鵝</text>\n<text x=\"905\" y=\"612\" class=\"muted\" text-anchor=\"middle\">蛋</text>\n</g>\n</svg>",
+      "caption": "原創示意：依館方影像目測標位置，輪廓為概略描線，不按精確比例。編號 1–3 為後來加上的題字，4 為簽名。"
+    },
+    {
+      "type": "h",
+      "text": "題字裡沒有人名"
+    },
+    {
+      "type": "p",
+      "text": "三處字裡有職稱、有地名，就是沒有人名。館藏資料登記這幅畫畫了什麼，寫的也只是天鵝、狗和有蛋的窩。同一份紀錄說，這幅畫會有政治寓意的讀法，是因為天鵝被標成了大議長約翰・德維特（Johan de Witt），守著荷蘭不受敵人侵犯。博物館替這幅畫登記的全題，後半句是「後來被讀成德維特的寓意畫」。"
+    },
+    {
+      "type": "p",
+      "text": "德維特（1625–1672）是荷蘭省的大議長，那是該省最高的官員，也是共和國最有權勢的政治人物。館方另說，1650 到 1672 年間荷蘭沒有全國性的領導人（執政，stadtholder）。他讓最大的兩個敵人英格蘭和法國互相牽制；1672 年，這兩國還是和兩個主教領地一起打了過來。他去監獄探望因涉嫌陰謀反對奧蘭治親王而被捕的弟弟，兄弟倆被一群受煽動的群眾拖到外面殺死。"
+    },
+    {
+      "type": "timeline",
+      "title": "一幅畫與一個人的時間表",
+      "items": [
+        {
+          "when": "約 1650 年",
+          "label": "阿瑟林畫成《受威脅的天鵝》",
+          "note": "館方標示的年代"
+        },
+        {
+          "when": "1672.8.20",
+          "label": "約翰・德維特（Johan）死於海牙",
+          "note": "維基百科；其弟 Cornelis 同遭殺害，但日期與地點只有 Johan 有來源"
+        },
+        {
+          "when": "約 1750 年（編輯推算）",
+          "label": "有人在畫上加了題字",
+          "note": "館方只說創作約一百年後；1750 為編輯由約 1650 年推算"
+        },
+        {
+          "when": "1800.6.11",
+          "label": "國家美術館購入",
+          "note": "阿姆斯特丹國家博物館的前身"
+        }
+      ],
+      "caption": "約 1650 與 1800.6.11 依阿姆斯特丹國家博物館；「約一百年後」為館方說法，約 1750 是編輯推算；德維特（Johan）的死亡日期與地點依維基百科〈Johan de Witt〉。"
+    },
+    {
+      "type": "p",
+      "text": "1800 年，國家美術館（Nationale Kunstgalerij）買下這幅畫，作為館裡的第一件收購，這座美術館後來成了今天的國家博物館。照博物館的說明，畫進館的時候，那隻天鵝已經被當成守護國家的德維特。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Threatened Swan（SK-A-4）",
+      "publisher": "Rijksmuseum",
+      "url": "https://www.rijksmuseum.nl/en/collection/object/The-Threatened-Swan--22040f90565e730131983a44a85b989f",
+      "note": "作品頁：作者、年代、材料、尺寸、館藏號、展出位置、1800 年購入日期、公版；館方說明（寓意讀法與 1800 年第一件收購）。頁面未標發布日期，2026-10-28 查閱。「大議長」「約翰・德維特」「國家的敵人」等中譯為編輯自譯"
+    },
+    {
+      "title": "De bedreigde zwaan／The Threatened Swan（SK-A-4 館藏資料）",
+      "publisher": "Rijksmuseum",
+      "url": "https://id.rijksmuseum.nl/200108146",
+      "note": "題名全稱、題字原文（三處位置）、簽名「JA」位置、荷文說明、IIIF 影像（5892×4903，公版標示）。紀錄未標發布日期，2026-10-28 查閱"
+    },
+    {
+      "title": "Political Swan",
+      "publisher": "Rijksmuseum（In detail 圖文故事）",
+      "url": "https://www.rijksmuseum.nl/en/stories/in-detail/story/political-swan",
+      "note": "天鵝趕狗；創作約一百年後有人加了題字，使畫成為政治表態。頁面未標發布日期，2026-10-28 查閱"
+    },
+    {
+      "title": "Johan and Cornelis de Witt",
+      "publisher": "Rijksmuseum",
+      "url": "https://www.rijksmuseum.nl/en/collection/node/Johan-and-Cornelis-de-Witt--3926694554d44722a1d8f20cf7ca59e2",
+      "note": "無執政時期 1650–1672、德維特的職位、1672 年的戰爭、兄弟被殺。頁面未標發布日期，2026-10-28 查閱"
+    },
+    {
+      "title": "Johan de Witt",
+      "publisher": "維基百科",
+      "url": "https://en.wikipedia.org/wiki/Johan_de_Witt",
+      "note": "只取 1672 年 8 月 20 日死於海牙；二手來源"
+    },
+    {
+      "title": "File:De bedreigde zwaan Rijksmuseum SK-A-4.jpeg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:De_bedreigde_zwaan_Rijksmuseum_SK-A-4.jpeg",
+      "note": "CC0，原檔 5728×4830，影像來源為 Rijksmuseum。逐區觀看另用館方 IIIF 影像（iiif.micr.io/hZepb）"
+    }
+  ]
+}
