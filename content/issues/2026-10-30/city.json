@@ -1,11 +1,11 @@
 {
  "column": "city",
  "date": "2026-10-30",
- "title": "維也納 Karl-Marx-Hof：牆長一公里，地只蓋 18%",
- "dek": "牆長過一公里，基地卻只有 18% 蓋了房子。前庭換過三個名字，洗衣間每戶每月只排得到半天。",
- "brief": "Karl-Marx-Hof 的牆長過一公里，基地卻只有 18% 蓋了房子，其餘是綠地、遊戲場和交通用地。正中央的前庭往後退，後牆有六座塔樓，圓拱通道從牆身穿過。大院今天還是市營住宅，洗衣間每戶每月排半天。",
+ "title": "維也納 Karl-Marx-Hof：一公里長牆往後退的地方",
+ "dek": "一公里多長的市營住宅，只在正中央往後退出一座前庭。塔樓、人像、銅像都擠在這裡，廣場的名字前後用過三個。",
+ "brief": "1930 年開幕時，維也納市長說等我們不在了，這些石頭會替我們說話；1934 年，軍隊的砲就轟進了這座市營住宅，事後它還一度改用攻打它的指揮官命名。Karl-Marx-Hof 的基地只有 18% 蓋了房子，其餘是綠地、遊戲場和道路。",
  "topic_key": "city:vienna-karl-marx-hof",
- "updated_at": "2026-10-30T03:04:00+08:00",
+ "updated_at": "2026-10-30T03:24:00+08:00",
  "spoiler": null,
  "disclaimer": null,
  "hero": {
@@ -25,17 +25,17 @@
  "body": [
   {
    "type": "p",
-   "text": "1930 年 10 月 12 日，維也納市長塞茲（Karl Seitz）替一棟剛蓋好的市營住宅開幕。他在致詞裡留下一句名言："
+   "text": "1930 年 10 月 12 日，維也納市長塞茲（Karl Seitz）替一座市營住宅主持開幕，留下一句後來常被引用的話。"
   },
   {
    "type": "quote",
-   "text": "只要我們有一天不在了，這些石頭會替我們說話。",
+   "text": "等我們不在了，這些石頭會替我們說話。",
    "original": "Wenn wir einst nicht mehr sind, werden diese Steine für uns sprechen",
    "cite": "Karl Seitz，1930 年 10 月 12 日開幕時"
   },
   {
    "type": "p",
-   "text": "同一天的小報《Das Kleine Blatt》寫得口語得多："
+   "text": "同一天，社會民主黨自己的日報《Das Kleine Blatt》喊得比市長大聲。"
   },
   {
    "type": "quote",
@@ -45,7 +45,7 @@
   },
   {
    "type": "p",
-   "text": "這棟樓在維也納第 19 區的 Heiligenstadt，名字取自卡爾・馬克思，到今天仍是市營住宅。建築師 Karl Ehn 1904 到 1907 年在美術學院跟 Otto Wagner 讀書，1908 年進了市建築局。一次大戰前他蓋的多半是實用建築，像市府的倉庫；1920 與 30 年代他設計了許多住宅區，這一座最有名。"
+   "text": "兩句裡我信市長那句。這座大院和它的前庭，名字後來都被換過；石頭怎麼排，到今天還看得出來。它在維也納第 19 區的 Heiligenstadt，設計者是市建築局的 Karl Ehn，Otto Wagner 的學生。"
   },
   {
    "type": "facts",
@@ -61,7 +61,7 @@
     ],
     [
      "建造年代",
-     "1927–1930 年，1930 年 10 月 12 日開幕；最後一期 1933 年夏天完成；1989–1992 年整修"
+     "分三期興建，1930 年 10 月 12 日開幕；大整修 1992 年完成"
     ],
     [
      "設計者",
@@ -69,45 +69,41 @@
     ],
     [
      "基地",
-     "舊稱 Hagenwiese 的地段，面積 156,027 平方公尺，其中 28,751 平方公尺蓋了房子"
+     "舊稱 Hagenwiese 的地段，156,027 平方公尺，其中 28,751 平方公尺蓋了房子"
     ],
     [
      "目前用途",
-     "市營住宅（Gemeindebau）；Wiener Wohnen 的統計為 1,274 戶、101 座樓梯、2 間洗衣間（截至 2026 年 10 月 30 日可確認，來源：Wiener Wohnen）"
+     "市營住宅（Gemeindebau），Wiener Wohnen 登記 1,274 戶、101 座樓梯（截至 2026 年 10 月 30 日可確認，來源：Wiener Wohnen）"
     ]
    ]
   },
   {
    "type": "h",
-   "text": "園丁搬走花了十八個月"
+   "text": "先搬走園丁"
   },
   {
    "type": "p",
-   "text": "這塊地叫 Hagenwiese，是一條窄而長、超過一公里的地段，市政府自 1877 年起就握有。早先有多瑙河的支流經過，後來是一片小型的菜園聚落（Wiener Wohnen）。1899 年的老照片拍的是 Heiligenstadt 車站，前景是菜園，近三十年後的大院就蓋在那一帶。"
+   "text": "這塊地叫 Hagenwiese，窄，卻有一公里多長，市政府從 1877 年起就握有它。早先有多瑙河的支流流過，後來成了一片小菜園。頭圖是 1899 年的樣子：遠處是 Heiligenstadt 車站，前景一格一格都是菜圃。"
   },
   {
    "type": "p",
-   "text": "1927 年 6 月 10 日，市議會通過在這裡蓋一座「Superblock」，整片一次蓋下去。租地的園丁得搬走，跟反對黨吵了一場，前後花了 18 個月。工程分三期，最後一期 1933 年夏天才完工。"
+   "text": "1927 年 6 月 10 日，市議會決定在這裡整片蓋一座 Superblock。租地的園丁得搬走，反對黨為此和市府起了衝突，光是搬遷就拖了 18 個月。"
   },
   {
    "type": "p",
-   "text": "舊河道填平的地不好蓋，樁子只能打成「懸浮樁」，不落在硬土上。後來一個側翼稍微下沉，反對黨在《Reichspost》上拿這件事打了一場新聞戰，說這些市營住宅蓋得差、有倒塌的危險。這份報紙早在 1927 年 10 月 21 日就出過一份號外，警告 Heiligenstädter Straße 上的這棟巨屋會塌（Das Rote Wien）。Wien Geschichte Wiki 說，這種設計在當時被看成革命性的。最後的造價是 2,860 萬先令，比預算的 3,250 萬低。"
+   "text": "地底下是填平的舊河道，樓只能蓋在懸浮樁上。後來一個側翼稍微下沉，反對黨就在《Reichspost》上打起新聞戰，說這些市營住宅蓋得差、有倒塌的危險。工程分三期，造價 2,860 萬先令，比預算的 3,250 萬低。整座大院的構想，在興建當時被看成是革命性的。"
   },
   {
    "type": "h",
-   "text": "車站對面的牆"
+   "text": "車站對面那塊牌子"
   },
   {
    "type": "p",
-   "text": "每個週日 13:00，大院的公開導覽在 Heiligenstadt 車站前集合；車站是地鐵 U4 的終點（Waschsalon 官網，2026 年 10 月 30 日可見）。二戰時這座車站是戰略目標，大院離它近，落下了許多炸彈（Wiener Wohnen）。"
+   "text": "今天的公開導覽，每個週日 13:00 在 Heiligenstadt 車站前集合，車站是地鐵 U4 的終點（Waschsalon 官網，2026 年 10 月 30 日可見）。二戰時，大院因為離這個戰略目標近，挨了許多炸彈。"
   },
   {
    "type": "p",
-   "text": "車站正對面，就是大院沿 Boschstraße 的外牆。Wiener Wohnen 說，這座大院對維也納社會民主黨有象徵的意義，要把工人階級的新自我形象擺給人看；立面是厚牆、巨大的拱形通道、大門和旗桿，窗子小，唯一的裝飾是連續的陽台。它看起來像宮殿，像堡壘，政治上的對手因此當它是挑釁，猜裡面藏著武器庫。"
-  },
-  {
-   "type": "p",
-   "text": "Boschstraße 9 的外牆上有一塊黑色石牌，2003 年 11 月 27 日揭幕，由維也納市與奧地利羅姆人文化協會（Kulturverein österreichischer Roma）出資。牌子旁邊貼著一張小得多的告示：雪天和結冰的時候走這條路，風險自負。牌面是這樣寫的："
+   "text": "大院面對車站的外牆是 Boschstraße 9，牆上釘著一塊黑色石牌，2003 年 11 月 27 日揭幕，由維也納市和奧地利羅姆人文化協會出資。1938 到 1939 年，納粹以宗教或種族為由，把 66 戶人家趕出大院，牌子記的就是這件事。"
   },
   {
    "type": "quote",
@@ -122,8 +118,8 @@
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/D%C3%B6bling_%28Wien%29_-_Karl-Marx-Hof%2C_Gedenktafel_f%C3%BCr_NS-Opfer.JPG/1280px-D%C3%B6bling_%28Wien%29_-_Karl-Marx-Hof%2C_Gedenktafel_f%C3%BCr_NS-Opfer.JPG",
    "width": 1280,
    "height": 1920,
-   "alt": "一面紅褐色粉刷牆，上方釘著一塊方形黑色石牌，刻有數行白色大寫德文和一份姓名名單；牆下半部是灰色粗面基座，左側貼著一張小小的警告牌。",
-   "caption": "2018 年 6 月 9 日，C.Stadler/Bwag 拍攝的 Boschstraße 9 外牆紀念牌（牌上字樣見上方引文）。",
+   "alt": "一面紅褐色粉刷牆，上方釘著一塊方形黑色石牌，刻有數行白色大寫德文和一份姓名名單；牆下半部是灰色粗面基座。",
+   "caption": "2018 年 6 月 9 日，C.Stadler/Bwag 拍攝的 Boschstraße 9 外牆紀念牌。",
    "credit": "C.Stadler/Bwag／Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -131,22 +127,26 @@
    "made": "2018"
   },
   {
-   "type": "p",
-   "text": "Boschstraße 的 32 號樓梯旁還有一塊，紀念奧地利工人 1934 年 2 月的抵抗（Das Rote Wien）。"
-  },
-  {
    "type": "h",
-   "text": "正中央往後退"
+   "text": "牆往後退的地方"
   },
   {
    "type": "p",
-   "text": "同一棟樓有四個地址：Heiligenstädter Straße 82–92、Boschstraße 1–19、Geistingergasse 1、Grinzinger Straße 110，樓梯有 101 座。在一公里多長的牆正中央，樓往後退，朝 Heiligenstädter Straße 敞開一座前庭，Wiener Wohnen 管它叫 Ehrenhof，榮譽庭院。前庭的後牆是整棟最高的一段：五層，六座塔樓，圓拱通道從這段牆穿過去。從這裡往兩邊走，高度一路降下來，先是四層，再是三層。"
+   "text": "一公里多長的正面走到正中央，牆往後退，朝 Heiligenstädter Straße 讓出一座前庭，叫 Ehrenhof，榮譽庭院。前庭的後牆是全院最高的一段：五層，頂上六座塔，巨大的圓拱通道從這段牆身穿過。往兩側走，樓一路降成四層，再降成三層。"
   },
   {
    "type": "svg",
    "title": "前庭與兩翼",
-   "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 340\"><text class=\"ink\" x=\"200\" y=\"18\" font-size=\"12\" text-anchor=\"middle\">正面各段的樓層數</text><rect class=\"soft\" x=\"20\" y=\"98\" width=\"60\" height=\"42\" stroke-width=\"1\"/><text class=\"muted\" x=\"50.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">3 層</text><rect class=\"soft\" x=\"80\" y=\"84\" width=\"60\" height=\"56\" stroke-width=\"1\"/><text class=\"muted\" x=\"110.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">4 層</text><rect class=\"soft\" x=\"140\" y=\"70\" width=\"120\" height=\"70\" stroke-width=\"1.6\"/><rect class=\"accent\" x=\"140\" y=\"70\" width=\"120\" height=\"70\" fill=\"none\" stroke-width=\"1.6\"/><text class=\"muted\" x=\"200.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">5 層</text><rect class=\"soft\" x=\"260\" y=\"84\" width=\"60\" height=\"56\" stroke-width=\"1\"/><text class=\"muted\" x=\"290.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">4 層</text><rect class=\"soft\" x=\"320\" y=\"98\" width=\"60\" height=\"42\" stroke-width=\"1\"/><text class=\"muted\" x=\"350.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">3 層</text><rect class=\"soft\" x=\"146\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"166\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"186\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"206\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"226\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"246\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><text class=\"ink\" x=\"200\" y=\"50\" font-size=\"10\" text-anchor=\"middle\">六座塔樓</text><path class=\"paper\" d=\"M146 140 L146 132 A9 9 0 0 1 164 132 L164 140 Z\" stroke-width=\"1\"/><path class=\"paper\" d=\"M176 140 L176 132 A9 9 0 0 1 194 132 L194 140 Z\" stroke-width=\"1\"/><path class=\"paper\" d=\"M206 140 L206 132 A9 9 0 0 1 224 132 L224 140 Z\" stroke-width=\"1\"/><path class=\"paper\" d=\"M236 140 L236 132 A9 9 0 0 1 254 132 L254 140 Z\" stroke-width=\"1\"/><text class=\"muted\" x=\"200\" y=\"172\" font-size=\"10\" text-anchor=\"middle\">中段的圓拱通道（拱數為示意）</text><text class=\"ink\" x=\"200\" y=\"196\" font-size=\"12\" text-anchor=\"middle\">前庭平面（正中央往後退）</text><rect class=\"soft\" x=\"20\" y=\"262\" width=\"125\" height=\"36\" stroke-width=\"1\"/><rect class=\"soft\" x=\"255\" y=\"262\" width=\"125\" height=\"36\" stroke-width=\"1\"/><rect class=\"soft\" x=\"100\" y=\"208\" width=\"200\" height=\"30\" stroke-width=\"1.6\"/><rect class=\"accent\" x=\"100\" y=\"208\" width=\"200\" height=\"30\" fill=\"none\" stroke-width=\"1.6\"/><text class=\"ink\" x=\"200\" y=\"227\" font-size=\"10\" text-anchor=\"middle\">後牆：5 層、6 座塔、拱形通道</text><text class=\"muted\" x=\"82\" y=\"284\" font-size=\"10\" text-anchor=\"middle\">兩翼</text><text class=\"muted\" x=\"318\" y=\"284\" font-size=\"10\" text-anchor=\"middle\">兩翼</text><circle class=\"gold\" cx=\"200\" cy=\"262\" r=\"5\" stroke-width=\"1\"/><text class=\"ink\" x=\"200\" y=\"282\" font-size=\"10\" text-anchor=\"middle\">Sämann</text><text class=\"ink\" x=\"200\" y=\"252\" font-size=\"10\" text-anchor=\"middle\">Ehrenhof／12.-Februar-Platz</text><path class=\"muted\" d=\"M10 308 L390 308\" stroke-width=\"3\" opacity=\"0.5\"/><text class=\"muted\" x=\"200\" y=\"326\" font-size=\"11\" text-anchor=\"middle\">Heiligenstädter Straße</text></svg>",
-   "caption": "示意，不按比例，依 Wiener Wohnen〈Karl-Marx-Hof〉與 Wien Geschichte Wiki〈Karl-Marx-Hof〉的文字描述繪製。上圖的拱門數目、兩翼長度只是示意；後方庭院的位置來源沒有標明，圖中從略。"
+   "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 390\"><text class=\"ink\" x=\"200\" y=\"22\" font-size=\"16\" text-anchor=\"middle\">正面：中段最高，往兩側降</text><rect class=\"soft\" x=\"20\" y=\"105\" width=\"60\" height=\"45\" stroke-width=\"1\"/><text class=\"muted\" x=\"50.0\" y=\"172\" font-size=\"14\" text-anchor=\"middle\">3 層</text><rect class=\"soft\" x=\"80\" y=\"90\" width=\"60\" height=\"60\" stroke-width=\"1\"/><text class=\"muted\" x=\"110.0\" y=\"172\" font-size=\"14\" text-anchor=\"middle\">4 層</text><rect class=\"soft\" x=\"140\" y=\"75\" width=\"120\" height=\"75\" stroke-width=\"1\"/><text class=\"muted\" x=\"200.0\" y=\"172\" font-size=\"14\" text-anchor=\"middle\">5 層</text><rect class=\"soft\" x=\"260\" y=\"90\" width=\"60\" height=\"60\" stroke-width=\"1\"/><text class=\"muted\" x=\"290.0\" y=\"172\" font-size=\"14\" text-anchor=\"middle\">4 層</text><rect class=\"soft\" x=\"320\" y=\"105\" width=\"60\" height=\"45\" stroke-width=\"1\"/><text class=\"muted\" x=\"350.0\" y=\"172\" font-size=\"14\" text-anchor=\"middle\">3 層</text><rect class=\"accent\" x=\"140\" y=\"75\" width=\"120\" height=\"75\" fill=\"none\" stroke-width=\"2\"/><rect class=\"soft\" x=\"146\" y=\"59\" width=\"10\" height=\"16\" stroke-width=\"1\"/><path class=\"muted\" d=\"M151 59 L151 44\" stroke-width=\"1.5\"/><rect class=\"soft\" x=\"166\" y=\"59\" width=\"10\" height=\"16\" stroke-width=\"1\"/><path class=\"muted\" d=\"M171 59 L171 44\" stroke-width=\"1.5\"/><rect class=\"soft\" x=\"186\" y=\"59\" width=\"10\" height=\"16\" stroke-width=\"1\"/><path class=\"muted\" d=\"M191 59 L191 44\" stroke-width=\"1.5\"/><rect class=\"soft\" x=\"206\" y=\"59\" width=\"10\" height=\"16\" stroke-width=\"1\"/><path class=\"muted\" d=\"M211 59 L211 44\" stroke-width=\"1.5\"/><rect class=\"soft\" x=\"226\" y=\"59\" width=\"10\" height=\"16\" stroke-width=\"1\"/><path class=\"muted\" d=\"M231 59 L231 44\" stroke-width=\"1.5\"/><rect class=\"soft\" x=\"246\" y=\"59\" width=\"10\" height=\"16\" stroke-width=\"1\"/><path class=\"muted\" d=\"M251 59 L251 44\" stroke-width=\"1.5\"/><text class=\"ink\" x=\"200\" y=\"38\" font-size=\"14\" text-anchor=\"middle\">六座塔，塔頂立旗桿</text><path class=\"paper\" d=\"M147 150 L147 142 A9 9 0 0 1 165 142 L165 150 Z\" stroke-width=\"1\"/><path class=\"paper\" d=\"M175 150 L175 142 A9 9 0 0 1 193 142 L193 150 Z\" stroke-width=\"1\"/><path class=\"paper\" d=\"M203 150 L203 142 A9 9 0 0 1 221 142 L221 150 Z\" stroke-width=\"1\"/><path class=\"paper\" d=\"M231 150 L231 142 A9 9 0 0 1 249 142 L249 150 Z\" stroke-width=\"1\"/><text class=\"muted\" x=\"200\" y=\"196\" font-size=\"14\" text-anchor=\"middle\">拱形通道穿過中段</text><path class=\"muted\" d=\"M10 210 L390 210\" stroke-width=\"1\" stroke-dasharray=\"4 4\" opacity=\"0.6\"/><text class=\"ink\" x=\"200\" y=\"236\" font-size=\"16\" text-anchor=\"middle\">平面：正中央往後退出前庭</text><rect class=\"soft\" x=\"100\" y=\"248\" width=\"200\" height=\"40\" stroke-width=\"1.5\"/><rect class=\"accent\" x=\"100\" y=\"248\" width=\"200\" height=\"40\" fill=\"none\" stroke-width=\"2\"/><text class=\"ink\" x=\"200\" y=\"266\" font-size=\"14\" text-anchor=\"middle\">後牆：5 層、6 座塔</text><text class=\"muted\" x=\"200\" y=\"283\" font-size=\"13\" text-anchor=\"middle\">拱形通道穿過</text><rect class=\"soft\" x=\"20\" y=\"310\" width=\"125\" height=\"34\" stroke-width=\"1\"/><rect class=\"soft\" x=\"255\" y=\"310\" width=\"125\" height=\"34\" stroke-width=\"1\"/><text class=\"muted\" x=\"82\" y=\"332\" font-size=\"13\" text-anchor=\"middle\">翼樓降到 4、3 層</text><text class=\"muted\" x=\"318\" y=\"332\" font-size=\"13\" text-anchor=\"middle\">翼樓降到 4、3 層</text><text class=\"ink\" x=\"200\" y=\"305\" font-size=\"13\" text-anchor=\"middle\">Ehrenhof（12.-Februar-Platz）</text><circle class=\"gold\" cx=\"200\" cy=\"318\" r=\"5\" stroke-width=\"1\"/><text class=\"ink\" x=\"200\" y=\"338\" font-size=\"13\" text-anchor=\"middle\">播種者銅像</text><path class=\"muted\" d=\"M10 354 L390 354\" stroke-width=\"3\" opacity=\"0.5\"/><text class=\"muted\" x=\"200\" y=\"376\" font-size=\"14\" text-anchor=\"middle\">Heiligenstädter Straße</text></svg>",
+   "caption": "示意，不按比例，依 Wiener Wohnen〈Karl-Marx-Hof〉與 Wien Geschichte Wiki〈Karl-Marx-Hof〉的文字描述繪製。"
+  },
+  {
+   "type": "p",
+   "text": "六座塔是刻意立起來的紅色維也納英雄記號；圓拱也不是隨便開的，對準的是 Heiligenstadt 車站和 Hohe Warte 球場之間的軸線（Wien Geschichte Wiki）。那座球場 1921 年開幕，奧地利國家隊 1920、30 年代在那裡踢過很多場。"
+  },
+  {
+   "type": "p",
+   "text": "圓拱之間立著四尊細長的人像，代表啟蒙、解放、兒童照護和身體文化；前庭的花園裡，是一尊比真人還大的青銅播種者。整修時，聯邦文物局（Bundesdenkmalamt）用科學方法查了原本的配色，發現大院有一整套用顏色指路的系統：重要的資訊牌和指示牌都是 RAL 3000 的深火紅，隔開各個院子的柵欄是飽和的深藍，前庭的大旗桿則是淺得多的 smalteblau。2018 年的照片裡，塔頂那幾根旗桿是淡藍色的。"
   },
   {
    "type": "figure",
@@ -155,8 +155,8 @@
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/D%C3%B6bling_%28Wien%29_-_Karl-Marx-Hof_%282%29.JPG/1280px-D%C3%B6bling_%28Wien%29_-_Karl-Marx-Hof_%282%29.JPG",
    "width": 1280,
    "height": 768,
-   "alt": "一排橘粉與米黃色的多層住宅樓，中段有高起的方形塔樓，塔頂旁立著細長的旗桿；底層排著幾道大圓拱，拱柱上方各立一尊小雕像；前景是草地和一條彎曲的步道。",
-   "caption": "2018 年 6 月 3 日，C.Stadler/Bwag 拍攝的中段：塔樓、旗桿與底層的圓拱；中段的牆上可以讀到 KARL MARX-HOF 的字樣。",
+   "alt": "一排橘粉與米黃色的多層住宅樓，中段有高起的方形塔樓，塔頂立著細長的淡藍色旗桿；底層排著幾道大圓拱，圓拱之間的柱上各立一尊灰白的細長人像；前景是草地和一條彎曲的步道。",
+   "caption": "2018 年 6 月 3 日，C.Stadler/Bwag 拍攝的中段：塔頂的淡藍旗桿，圓拱之間的四尊人像，牆上有 KARL MARX-HOF 字樣。",
    "credit": "C.Stadler/Bwag／Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -164,84 +164,52 @@
    "made": "2018"
   },
   {
-   "type": "p",
-   "text": "Wien Geschichte Wiki 說，中央這一棟的六座塔，是刻意設成紅色維也納的英雄象徵。拱門排的方向也有依據：同一頁寫到，它們對齊 Bahnhof Heiligenstadt 到 Stadion Hohe Warte 之間的軸線。軸線的一頭是車站，另一頭是 Hohe Warte 球場，1921 年開幕，奧地利國家隊在 1920 與 30 年代在那裡踢過許多場比賽，入場人數的紀錄是 1923 年對義大利的 85,000 人（Wikipedia 英文版）。"
+   "type": "h",
+   "text": "八成多的地沒蓋房子"
   },
   {
    "type": "p",
-   "text": "Das Rote Wien 描述這棟樓的外觀：入口厚重，帶點古老的味道；陽台、涼廊和凸窗另漆了不同的顏色，看起來像是貼上去的。圓拱上方站著 Josef Franz Riedl 的四件彩色陶塑：啟蒙、解放、兒童照護、身體文化。前庭中央是 Otto Hofner 的青銅像《Sämann》，播種的人。Bundesdenkmalamt 整修時科學檢驗過大院原本的顏色，發現這裡本來有一套顏色導引系統。依我看，一公里長的牆上，塔、旗桿、陶塑、銅像全擠在這個缺口周圍，這裡是整棟樓最集中擺明了要給人看的地方。"
+   "text": "基地 156,027 平方公尺，蓋了房子的只有 28,751 平方公尺，約 18%，其餘是綠地、遊戲場和道路。長牆圍住的是一個個封閉的院落，裡面是大片的花園院子。"
+  },
+  {
+   "type": "p",
+   "text": "Wiener Wohnen 說它看起來像宮殿、像堡壘，政治對手當它是挑釁，還猜裡面藏著軍火庫；同一份介紹又說，院子是讓住戶碰面的地方，要給人歸屬和安全感。像宮殿，我同意；像堡壘，我不同意。Felix-Braun-Gasse 這條街，就從大院的一道通道底下穿過去。堡壘不會把一條街放進牆身裡。"
+  },
+  {
+   "type": "p",
+   "text": "開幕起，牆裡就有兩間中央洗衣房（62 個洗槽）、兩處浴室、兩所幼兒園、一間牙科診所、孕產婦諮詢站、圖書館、青少年之家、郵局、藥房，還有 25 家商店。紅色維也納要給市民的，是明亮、乾燥、有自來水和廁所的家，對照的是出租大樓裡共用水龍頭（Bassena）的住法。這裡原本有一千三百多戶，後來有些戶合併，現在是一千二百多戶。"
   },
   {
    "type": "h",
-   "text": "住戶裡有一位足球人"
+   "text": "那座有洞的獎盃"
   },
   {
    "type": "p",
-   "text": "大院的住戶裡有 Hugo Meisl（1881–1937），1910 年起擔任奧地利足協的代表隊負責人（Verbandskapitän），也是 1930 年代初那支 Wunderteam 的創造者。他同情社會民主黨，搬進了大院的一戶。1918 年 12 月他寫過一句信條：社會民主主義的國際、資本的國際、科學的國際之外，還該有一個運動的國際。"
+   "text": "1934 年 2 月 12 日下午，大院響起第一批槍聲。共和保衛同盟（Republikanischer Schutzbund）的成員和工人守在裡面，警察、Heimwehr 和軍隊用砲轟它。幾名工人死在戰鬥裡，有人被俘、遭到刑求，當地的領頭人被處決。有一塊牌子記著 2 月 15 日，大院在這一天失守。我說它不像堡壘，可是那個 2 月，它確實被人當成堡壘守過。"
   },
   {
    "type": "p",
-   "text": "同樣從 1929 年起住在這裡的，還有社會學者 Paul Felix Lazarsfeld 與 Marie Jahoda 夫婦，他們是 Marienthal 失業者研究的發起人與作者。"
+   "text": "住戶裡有一位足球人：Hugo Meisl，奧地利足協的國家隊領隊（Verbandskapitän），1930 年代初那支「奇蹟之隊」（Wunderteam）的締造者。他在大院有一戶，同情社會民主黨。軍隊砲擊時，他的住處直接被波及；一座紀念瑞士對奧地利國際賽的獎盃上面留著洞，到今天還提醒人那段日子。"
   },
   {
    "type": "p",
-   "text": "1934 年 2 月 12 日下午，大院響起第一批槍聲。Wiener Wohnen 說，共和保衛同盟（Republikanischer Schutzbund）的成員與工人據守在裡面，警察、Heimwehr 與軍隊對大院開砲，戰鬥中有數名工人死亡，有些人被俘，遭到折磨，當地的領導者被處決；有一塊牌子記著 2 月 15 日，這天大院失守。Waschsalon 說，大院在這個月成了反抗奧地利法西斯的中心之一。Meisl 的住處直接受到砲擊波及；當年為紀念瑞士對奧地利的國際賽而頒贈的獎盃，如今有洞，Wien Geschichte Wiki 說它到今天仍在提醒人那段日子。"
+   "text": "社會民主黨被打垮之後，大院先改叫 Biedermannhof。Karl Biedermann 是 1934 年 2 月攻打大院那一方的指揮官，一座住宅就這樣掛上了打它的人的名字。1935 年再改成 Heiligenstädter Hof，二戰之後才叫回 Karl-Marx-Hof。前庭前後用過三個名字：1930 年叫 Karl-Marx-Platz，1935 到 1985 年叫 Heiligenstädter Platz，1985 年 1 月起叫 12.-Februar-Platz，紀念的就是那場戰鬥。"
   },
   {
    "type": "p",
-   "text": "社會民主黨被取締之後，大院的名字換了又換。先叫 Biedermannhof，用的是指揮官 Karl Biedermann 的名字；1935 年 7 月 25 日改成 Heiligenstädter Hof，二戰之後才改回 Karl-Marx-Hof。Biedermann 本人後來在抵抗納粹的行動裡，準備把維也納不經戰鬥交給紅軍，1945 年 4 月被納粹公開吊死。前庭也換了三次名字：1930 年叫 Karl-Marx-Platz，1935 到 1985 年叫 Heiligenstädter Platz，1985 年 1 月起叫 12.-Februar-Platz，紀念的就是 1934 年 2 月 12 日。"
-  },
-  {
-   "type": "p",
-   "text": "房間跟著換用途。Stiege 3 的咖啡館，在 Ständestaat 時期被改成羅馬天主教的禮拜處，後來納粹把它變成黨的集會室（Das Rote Wien）。"
+   "text": "Biedermann 後來投身反納粹的抵抗運動，準備把維也納不經一戰交給紅軍，1945 年 4 月被納粹公開吊死。"
   },
   {
    "type": "h",
-   "text": "牆圍著的那八成"
+   "text": "樓上看展，樓下洗衣"
   },
   {
    "type": "p",
-   "text": "基地 156,027 平方公尺，蓋了房子的有 28,751 平方公尺，約 18%。Waschsalon 的說法是，其餘是綠地、遊戲場和交通用地。Das Rote Wien 說，紅色維也納的住宅區，內院面積原先規定占基地 20%，實際提高到至少 50%，有的到 80%。"
+   "text": "週日的導覽從前庭出發，最後走進二號洗衣房 Waschsalon Nr. 2。"
   },
   {
    "type": "p",
-   "text": "Wiener Wohnen 說大院「像堡壘」，依我看只描述了牆。Das Rote Wien 的描述是封閉式的住宅院落，帶著大而宜人的花園內院；Wiener Wohnen 也說，這些院子是讓住戶相遇的地方，要給人歸屬與安全的感覺。Wien Geschichte Wiki 有張照片的說明寫著，Felix-Braun-Gasse 穿過大院的一道通道，通道左邊是 Beethoven-Apotheke，門牌 Heiligenstädter Straße 82。堡壘不會把一條街放進牆身裡。"
-  },
-  {
-   "type": "p",
-   "text": "牆裡面裝的東西，要另外算。大院開幕時住的是 1,382 戶，約 5,000 人；後來有些戶合併，現在是一千兩百多戶。當時就有兩間中央洗衣房（62 個洗槽）、兩處浴室（20 個浴缸、30 個淋浴）、兩所幼兒園、牙科診所、孕產婦諮詢站、圖書館、青少年之家、郵局、藥房、健保所的門診，還有 25 家商店。1,382 戶共用 62 個洗槽，平均二十二戶分一個，這是我自己除出來的。1929 年成立、由建築師 Ernst Lichtblau 主持的室內裝潢與住宅衛生諮詢站，也設在這裡。Wiener Wohnen 現在的統計列了 45 個 Lokale（商用空間，沒有細分用途）；院內沒有停車位，沒有腳踏車箱，有放助行器的箱子。"
-  },
-  {
-   "type": "p",
-   "text": "紅色維也納要給住戶的是「明亮、乾燥、有自來水和廁所」的家，對照的是出租公寓裡共用水龍頭（Bassena）的住法（Wiener Wohnen）。一次大戰後，社會民主黨在維也納市政廳說了算，1922 年維也納成為獨立的邦；1923 年 1 月 20 日，市議會通過一項專款專用的住宅稅（Das Rote Wien）。Wiener Wohnen 的資料說，市政府在兩次大戰之間蓋了 63,000 戶。Das Rote Wien 對市營住宅的一般描述是：多數住戶的家很小，40 到 50 平方公尺；1926 年一戶平均的租金，只占工人工資的 5% 到 10%。"
-  },
-  {
-   "type": "p",
-   "text": "1992 年完成的那輪整修，加裝了 50 部電梯（Das Rote Wien）。維也納市 1990 年的新聞稿稱它是第一共和時期全世界最重要的市營住宅區，並說這輪整修要花 4 億多先令，租金靠高額公共補助，對住戶仍然負擔得起。Wien Geschichte Wiki 記載，這次整修有住戶密切參與。"
-  },
-  {
-   "type": "h",
-   "text": "每戶每月半天"
-  },
-  {
-   "type": "p",
-   "text": "Wiener Wohnen 現在的說明是這樣：大院有兩間洗衣間，設在不同的樓梯；每位住戶每個月可用半天，7 小時；開放時間週一到週六 06:00–20:00，週日與假日休息。要加時段，到入口網站預約。"
-  },
-  {
-   "type": "p",
-   "text": "紅色維也納的規劃者當年對中央洗衣房的設想，是一個家庭一個月只要一個洗衣日，就能把全部衣物洗、烘乾、燙好。這類共用洗衣房設備不差，由專職的機械員操作（Das Rote Wien）。"
-  },
-  {
-   "type": "p",
-   "text": "週日的導覽從前庭走起，在 Waschsalon Nr. 2 結束。1990 年 10 月，維也納市的新聞稿預告大院 60 週年的紀念會，地點寫的是 Halteraugasse 的 Mieterbüro，住戶辦公室，前 Waschsalon。"
-  },
-  {
-   "type": "p",
-   "text": "Halteraugasse 的名字，Wien Geschichte Wiki 認為多半來自一座多瑙河的小島，牧人曾把牛趕到那裡吃草。7 號是 Waschsalon Nr. 2，二樓原本是浴缸和淋浴的浴室，2010 年 5 月 1 日起是紅色維也納的常設展，分紅色維也納時期（1919–1934）、市營住宅與配套設施、教育與文化工作、工人運動的節慶文化四個主題（Das Rote Wien）。開放時間是週四 13:00 到 18:00、週日 12:00 到 16:00，成人票 7 歐元，週日 13:00 的導覽連入場 12 歐元，只收現金（官網 2026 年 10 月 30 日可見）。展覽有第二個入口的坡道，二樓有樓梯升降椅，頂樓的節慶文化展區沒有無障礙通道（Waschsalon 官網）。"
-  },
-  {
-   "type": "p",
-   "text": "Waschsalon 的一樓到今天仍在洗衣服，用的是現代機器，只有住戶能進。"
+   "text": "這棟洗衣房的二樓原本是浴缸和淋浴間，2010 年 5 月 1 日起改成紅色維也納的常設展。一樓照舊在洗衣服，換上了現代的機器，只有住戶進得去（Waschsalon 官網，2026 年 10 月 30 日可見）。"
   }
  ],
  "sources": [
@@ -250,77 +218,77 @@
    "publisher": "Wien Geschichte Wiki（Stadt Wien）",
    "date": "2026-09-17",
    "url": "https://www.geschichtewiki.wien.gv.at/Karl-Marx-Hof",
-   "note": "頁面最後編輯日。讀了「Lage und Namen」「Baugeschichte」「Kunst」「Februarkämpfe 1934」。基地面積、施工、造價、拱門軸線、更名皆出自此頁；戶數與長度各來源不一，正文只寫「一千兩百多戶」「一公里多」。"
+   "note": "頁面最後編輯日。基地面積、懸浮樁與側翼下沉後《Reichspost》的新聞戰、「in seiner Konzeption als revolutionär angesehen」（主詞是整座大院的構想）、造價、拱門軸線、六座塔、1934 年 2 月 12 日下午的槍聲與砲兵、Biedermannhof 之名（「nach dem Befehlshaber Karl Biedermann derselben」，指砲兵指揮官）、Felix-Braun-Gasse 的通道（照片說明）、整修有住戶密切參與，皆出自此頁。戶數：此頁一處寫 1,272 戶（原本 1,382），另一處寫 1933 年住滿時 1,325 戶，正文只寫「原本一千三百多戶、現在一千二百多戶」。改名 Heiligenstädter Hof 此頁作 1935 年 7 月 25 日，Das Rote Wien 作 1935 年 8 月，正文只寫 1935 年。整修此頁作 1989–1992 年，Das Rote Wien 作 1986–1992 年，1990 年新聞稿說 1988 年起，各來源同意 1992 年完成。"
   },
   {
    "title": "Karl-Marx-Hof（Hof-Informationen）",
    "publisher": "Wiener Wohnen",
    "date": "2026-10-30",
    "url": "https://www.wienerwohnen.at/info/hof-informationen/220/Karl-Marx-Hof.html",
-   "note": "無發布日期，日期填查閱日。立面、前庭高度與塔樓、洗衣間規則、101 座樓梯、1938/39 年 66 戶、Biedermann 的後來，皆出自此頁。Biedermann 在 1934 年的職務此頁與 Wien Geschichte Wiki 說法不同，正文只寫「指揮官」。"
+   "note": "無發布日期，日期填查閱日。Hagenwiese 的舊河道與菜園、懸浮樁、立面與 Ehrenhof、樓層高度、四尊「feingliedrig und schmal」的人像、比真人大的 Sämann 銅像、像宮殿像堡壘、院子是相遇之處、1923 年的建屋計畫與 Bassena、1934 年的戰鬥與 2 月 15 日的牌子、1938/39 年 66 戶、二戰炸彈、Biedermann 的後來，皆出自此頁。資料卡的 1,274 戶、101 座樓梯為 2026 年 10 月 30 日查閱時的統計。Biedermann 在 1934 年的職銜此頁寫 Heimwehr 指揮官，與 Wien Geschichte Wiki（砲兵指揮官）、Das Rote Wien（率聯邦軍與 Schutzkorps）不同，三者都把他放在攻打大院的一方，正文只寫「攻打大院那一方的指揮官」。洗衣間每月半天的說明是 Wiener Wohnen 各 Hof 頁面的共用文字，正文不用。"
   },
   {
    "title": "Karl-Marx-Hof",
    "publisher": "Das Rote Wien im Waschsalon（Verein Sammlung Rotes Wien）",
    "date": "2026-10-30",
    "url": "https://dasrotewien-waschsalon.at/karl-marx-hof",
-   "note": "無發布日期，日期填查閱日。Seitz 與《Das Kleine Blatt》引句、開幕時的設施清單、18% 與其餘用途、Waschsalon Nr. 2 與常設展，皆出自此頁。"
+   "note": "無發布日期，日期填查閱日。Seitz 與《Das Kleine Blatt》引句、18% 與其餘用途、開幕起的設施清單（S6 同）、原本 1,382 戶與因合併成 1,272 戶、Waschsalon Nr. 2 一樓仍洗衣且只有住戶能進、二樓原為浴室、2010 年 5 月 1 日開常設展，皆出自此頁（現況句為 2026 年 10 月 30 日可見）。"
   },
   {
    "title": "Besucherinfo",
    "publisher": "Das Rote Wien im Waschsalon",
    "date": "2026-10-30",
    "url": "https://dasrotewien-waschsalon.at/besucherinfo",
-   "note": "無發布日期，日期填查閱日。週日 13:00 公開導覽的集合點與路線。"
+   "note": "無發布日期，日期填查閱日。週日 13:00 公開導覽在 Bahnhof Heiligenstadt（U4 終點）前集合，從 Ehrenhof 出發、在 Waschsalon Nr. 2 結束（2026 年 10 月 30 日可見）。"
   },
   {
    "title": "12.-Februar-Platz",
    "publisher": "Wien Geschichte Wiki（Stadt Wien）",
    "date": "2026-10-30",
    "url": "https://www.geschichtewiki.wien.gv.at/12.-Februar-Platz",
-   "note": "無發布日期，日期填查閱日。前庭的三個名稱與 1985 年 1 月 10 日的命名。"
+   "note": "無發布日期，日期填查閱日。前庭前後用過的三個名稱，與 1985 年 1 月 10 日的命名。"
   },
   {
    "title": "Karl-Marx-Hof",
    "publisher": "Das Rote Wien（Weblexikon der Wiener Sozialdemokratie）",
    "date": "2026-10-30",
    "url": "https://www.dasrotewien.at/seite/karl-marx-hof",
-   "note": "無發布日期，日期填查閱日。Hagenwiese 是窄長地段、Boschstraße 32 號樓梯旁的紀念牌。為政黨關係機構所編的網站，只取可與前列來源交叉的細節。"
+   "note": "無發布日期，日期填查閱日。Hagenwiese 窄而超過一公里長、封閉院落與大花園院子、中段後退與六座塔、拱門軸線、Biedermann 在 1934 年率部攻打與 1945 年遇害、聯邦文物局查出的顏色導引系統（RAL 3000 紅色資訊牌、深藍柵欄、smalteblau 旗桿），皆出自此頁。此頁另說《Reichspost》1927 年 10 月 21 日的號外引發倒塌謠言，與 Wien Geschichte Wiki 的因果（側翼下沉後的新聞戰）不同，正文只採後者。為社會民主黨相關機構所編。"
   },
   {
-   "title": "Kommunaler Wohnbau",
-   "publisher": "Das Rote Wien（Weblexikon der Wiener Sozialdemokratie）",
-   "date": "2026-10-30",
-   "url": "https://www.dasrotewien.at/seite/kommunaler-wohnbau",
-   "note": "無發布日期，日期填查閱日。中央洗衣房「一個月一個洗衣日」的設想，是紅色維也納市營住宅的一般說法，不專指本棟。"
-  },
-  {
-   "title": "Halteraugasse",
+   "title": "Das kleine Blatt",
    "publisher": "Wien Geschichte Wiki（Stadt Wien）",
-   "date": "2026-10-30",
-   "url": "https://www.geschichtewiki.wien.gv.at/Halteraugasse",
-   "note": "無發布日期，日期填查閱日。街名由來，原文用「wohl」，是推測。"
+   "date": "2025-05-03",
+   "url": "https://www.geschichtewiki.wien.gv.at/Das_kleine_Blatt",
+   "note": "頁面最後編輯日。1927 年 3 月 1 日創刊，每週出刊七次，由社會民主黨的 Vorwärts 出版社發行；正文據此稱它為社會民主黨的日報。"
   },
   {
-   "title": "Der Karl-Marx-Hof ist 60",
-   "publisher": "Rathauskorrespondenz（Stadt Wien）",
-   "date": "1990-10-11",
-   "url": "https://presse.wien.gv.at/1990/10/11/der-karl-marx-hof-ist-60",
-   "note": "1990 年的新聞稿。60 週年紀念會在 Mieterbüro（Halteraugasse，前 Waschsalon）舉行的預告。"
+   "title": "Das Kleine Blatt",
+   "publisher": "Wikipedia（德文）",
+   "date": "2026-10-30",
+   "url": "https://de.wikipedia.org/wiki/Das_Kleine_Blatt",
+   "note": "無發布日期，日期填查閱日。佐證：屬於 SDAP 的 Vorwärts 出版社發行的通俗小開本日報。"
   },
   {
    "title": "Hugo Meisl",
    "publisher": "Wien Geschichte Wiki（Stadt Wien）",
    "date": "2026-10-30",
    "url": "https://www.geschichtewiki.wien.gv.at/Hugo_Meisl",
-   "note": "無發布日期，日期填查閱日。Meisl 的生卒、1910 年起任 Verbandskapitän、Wunderteam、住在大院、1934 年住處受砲擊波及與有洞的獎盃，出自「Fußball」與「Person」兩節。"
+   "note": "無發布日期，日期填查閱日。Meisl 任 Verbandskapitän、Wunderteam 的締造者、在大院有一戶並同情社民黨、1934 年住處遭聯邦軍砲擊波及與有洞的獎盃，出自「Fußball」與「Person」兩節。Verbandskapitän 的起始年此頁一處寫 1910、一處寫 1912，入住年份此頁未寫，正文都不寫年份。"
   },
   {
    "title": "Hohe Warte Stadium",
    "publisher": "Wikipedia（英文）",
    "date": "2026-10-30",
    "url": "https://en.wikipedia.org/wiki/Hohe_Warte_Stadium",
-   "note": "無發布日期，日期填查閱日。球場 1921 年開幕，奧地利國家隊在 1920 與 30 年代於此比賽，入場人數紀錄 85,000 人（1923 年對義大利）。"
+   "note": "無發布日期，日期填查閱日。球場 1921 年開幕，奧地利國家隊在 1920 與 30 年代於此比賽。"
+  },
+  {
+   "title": "Der Karl-Marx-Hof ist 60",
+   "publisher": "Rathauskorrespondenz（Stadt Wien）",
+   "date": "1990-10-11",
+   "url": "https://presse.wien.gv.at/1990/10/11/der-karl-marx-hof-ist-60",
+   "note": "1990 年的新聞稿。寫完工時 1,325 戶、整修 1988 年起、預定 1992 年完成；用於核對戶數與整修年份。"
   },
   {
    "title": "File:Gelände Karl-Marx-Hof 1899.jpg",
@@ -334,14 +302,14 @@
    "publisher": "Wikimedia Commons",
    "date": "2018-06-09",
    "url": "https://commons.wikimedia.org/wiki/File:D%C3%B6bling_(Wien)_-_Karl-Marx-Hof,_Gedenktafel_f%C3%BCr_NS-Opfer.JPG",
-   "note": "CC BY-SA 4.0，C.Stadler/Bwag。紀念牌位置、揭幕日期與出資者出自檔案說明；牌面文字依照片閱讀。"
+   "note": "CC BY-SA 4.0，C.Stadler/Bwag。紀念牌在大院外牆、正對 Bahnhof Heiligenstadt，揭幕日期與出資者出自檔案說明；牌面文字依照片閱讀。"
   },
   {
    "title": "File:Döbling (Wien) - Karl-Marx-Hof (2).JPG",
    "publisher": "Wikimedia Commons",
    "date": "2018-06-03",
    "url": "https://commons.wikimedia.org/wiki/File:D%C3%B6bling_(Wien)_-_Karl-Marx-Hof_(2).JPG",
-   "note": "CC BY-SA 4.0，C.Stadler/Bwag。"
+   "note": "CC BY-SA 4.0，C.Stadler/Bwag。照片可見塔頂淡藍旗桿與圓拱之間四尊灰白人像。"
   }
  ]
 }
