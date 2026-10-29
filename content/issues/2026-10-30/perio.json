@@ -1,0 +1,184 @@
+{
+  "column": "perio",
+  "date": "2026-10-30",
+  "title": "回顧表格裡的 87 顆零失敗",
+  "dek": "Hamp、Nyman 與 Lindhe 1975 年的摘要寫的是 100 名病人、追蹤 5 年；87 顆截根牙 5 年沒有失敗，是後來的回顧表格記下的。",
+  "takeaway": "Hamp 等人 100 名病人追蹤 5 年，摘要稱根分岔區的破壞停得住，作者認為可能歸功於幾乎全部清掉菌斑滯留處與病人仔細清潔。二、三度且有殘存囊袋的臼齒，照 EFP 建議做牙周治療，不因根分岔就拔。",
+  "quiz": "臼齒有二度根分岔、還留著殘存囊袋，該直接拔掉嗎？",
+  "brief": "Hamp、Nyman 與 Lindhe 追蹤 100 名根分岔區有牙周破壞的病人 5 年，摘要的結論是破壞停得住。後來的回顧表格另記了 87 顆截根牙零失敗，這組數字摘要裡沒有。歐洲牙周病學會建議，二、三度且有殘存囊袋的臼齒接受牙周治療，根分岔本身不是拔牙的理由。",
+  "topic_key": "perio:doi:10.1111/j.1600-051x.1975.tb01734.x",
+  "updated_at": "2026-10-30T01:10:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/28/-18_furcation.jpg",
+    "width": 948,
+    "height": 684,
+    "alt": "牙科 X 光片，下顎左側第二大臼齒的根分岔區有骨流失（上傳者標註）",
+    "caption": "下顎左側第二大臼齒（#18）的 X 光片，上傳者標註為根分岔區骨流失。影像與 Hamp 等人的研究受試者無關。",
+    "credit": "DRosenbach，Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:-18_furcation.jpg"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "87 顆截根（root amputation）的牙，追蹤 5 年，沒有一顆失敗。這組數字出現在後來整理截根研究的回顧表格裡，掛在 Hamp、Nyman 與 Lindhe 1975 年那篇論文名下。那篇論文的摘要裡沒有 87，也沒提截根。"
+    },
+    {
+      "type": "p",
+      "text": "摘要寫的是 100 名病人：雙根、三根分岔區有牙周破壞，治療後追蹤 5 年。結論是根分岔區的破壞可以停下來。87 顆和這 100 名病人是什麼關係，表格沒交代，摘要沒說，我不知道。"
+    },
+    {
+      "type": "p",
+      "text": "為什麼破壞停得住，作者給了兩個理由，前面加了「可能」（probably）：根分岔區的菌斑滯留處幾乎全部清掉，還有病人一絲不苟的口腔衛生。這是對整批多根牙的解釋，不是專講那 87 顆。"
+    },
+    {
+      "type": "h",
+      "text": "三度怎麼分"
+    },
+    {
+      "type": "p",
+      "text": "同一篇論文提出的分度，看水平附著喪失（horizontal attachment loss）：不到 3 毫米是一度；超過 3 毫米、但還沒涵蓋根分岔區全寬是二度；根分岔區的牙周組織穿通（through-and-through）破壞，是三度。更早的分類只描述範圍與特徵，沒有數字；Ramfjord 與 Ash 用同一套想法，門檻是 2 毫米。"
+    },
+    {
+      "type": "svg",
+      "title": "Hamp 三度",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 266\"><text class=\"ink\" x=\"12\" y=\"22\" font-size=\"13\" font-weight=\"700\">Hamp 分度：看水平附著喪失</text><text class=\"muted\" x=\"120\" y=\"44\" font-size=\"10.5\">根分岔區</text><text class=\"ink\" x=\"12\" y=\"74\" font-size=\"13\" font-weight=\"700\">一度</text><text class=\"muted\" x=\"12\" y=\"90\" font-size=\"10.5\">水平附著喪失不到 3 毫米</text><rect class=\"soft\" x=\"120\" y=\"62\" width=\"220\" height=\"18\" rx=\"3\"/><rect class=\"accent\" x=\"120\" y=\"62\" width=\"58\" height=\"18\" rx=\"3\"/><line class=\"ink\" x1=\"106\" y1=\"71\" x2=\"174\" y2=\"71\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon class=\"ink\" points=\"174,66 182,71 174,76\"/><text class=\"ink\" x=\"12\" y=\"132\" font-size=\"13\" font-weight=\"700\">二度</text><text class=\"muted\" x=\"12\" y=\"148\" font-size=\"10.5\">超過 3 毫米，未達全寬</text><rect class=\"soft\" x=\"120\" y=\"120\" width=\"220\" height=\"18\" rx=\"3\"/><rect class=\"accent\" x=\"120\" y=\"120\" width=\"150\" height=\"18\" rx=\"3\"/><line class=\"ink\" x1=\"106\" y1=\"129\" x2=\"266\" y2=\"129\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon class=\"ink\" points=\"266,124 274,129 266,134\"/><text class=\"ink\" x=\"12\" y=\"190\" font-size=\"13\" font-weight=\"700\">三度</text><text class=\"muted\" x=\"12\" y=\"206\" font-size=\"10.5\">穿通</text><text class=\"muted\" x=\"12\" y=\"219\" font-size=\"10.5\">through-and-through</text><rect class=\"soft\" x=\"120\" y=\"178\" width=\"220\" height=\"18\" rx=\"3\"/><rect class=\"accent\" x=\"120\" y=\"178\" width=\"220\" height=\"18\" rx=\"3\"/><line class=\"ink\" x1=\"106\" y1=\"187\" x2=\"336\" y2=\"187\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon class=\"ink\" points=\"336,182 344,187 336,192\"/><line class=\"gold\" x1=\"190\" y1=\"56\" x2=\"190\" y2=\"220\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text class=\"gold\" x=\"190\" y=\"234\" font-size=\"10.5\" text-anchor=\"middle\">3 毫米</text><rect class=\"soft\" x=\"12\" y=\"246\" width=\"14\" height=\"10\"/><text class=\"ink\" x=\"32\" y=\"255\" font-size=\"10.5\">根分岔區全寬</text><rect class=\"accent\" x=\"150\" y=\"246\" width=\"14\" height=\"10\"/><text class=\"ink\" x=\"170\" y=\"255\" font-size=\"10.5\">水平附著喪失</text></svg>",
+      "caption": "原創圖解，依 Hamp 等（1975）的分度定義繪製（定義據 Pilloni 與 Rojas 2018 的整理）。淺色帶代表根分岔區全寬，深色段是水平附著喪失。示意，不按比例。"
+    },
+    {
+      "type": "p",
+      "text": "一篇 2026 年的回顧指出：Hamp 的分法較精確，但水平喪失剛好 3 毫米，這套分法很難歸類。"
+    },
+    {
+      "type": "h",
+      "text": "有些三度，臨床評估漏掉了"
+    },
+    {
+      "type": "p",
+      "text": "1993 年一項研究找了 12 名中度到重度牙周炎病人，請 6 位牙醫在臨床評估根分岔：前 6 名病人用 Ramfjord 的 2 毫米門檻，後 6 名用 Hamp 的 3 毫米。全口刮治根整、再評估之後翻瓣，用水平探測和印模量骨缺損，再和臨床評估比較。"
+    },
+    {
+      "type": "p",
+      "text": "手術下確定是三度的，用 Hamp 分度那組，臨床有 27% 沒認出來；用 Ramfjord 那組是 43%。這些三度在臨床被記成二度、一度，甚至零度。兩種分法用在不同的病人身上，摘要也沒給三度一共有幾個，我不會拿 27 和 43 去比哪套準。作者的結論是，根分岔診斷的效度有限。"
+    },
+    {
+      "type": "h",
+      "text": "到了三度，多數仍對治療有反應"
+    },
+    {
+      "type": "p",
+      "text": "2016 年一份統合分析納入 21 篇至少追蹤 3 年的縱向研究。和沒有根分岔的臼齒比，維護治療期間追蹤 10 到 15 年的研究，掉牙相對風險是 2.21；追蹤 10 年以內的那組是 1.46，沒有達到統計顯著。二度、三度，風險逐步升高。"
+    },
+    {
+      "type": "p",
+      "text": "同一份摘要也寫，大多數臼齒即使到三度，對牙周治療的反應仍然良好，作者主張能保留時盡力保留。"
+    },
+    {
+      "type": "quote",
+      "text": "我們建議，有二度、三度根分岔且有殘存囊袋的臼齒接受牙周治療。根分岔不是拔牙的理由。",
+      "original": "We recommend that molars with Class II and III furcation involvement and residual pockets receive periodontal therapy. Furcation involvement is no reason for extraction.",
+      "cite": "歐洲牙周病學會 S3 臨床指引（Sanz 等，2020）3.10：前句為建議，後句為聲明"
+    },
+    {
+      "type": "h",
+      "text": "病歷上那一格"
+    },
+    {
+      "type": "list",
+      "items": [
+        "每顆臼齒都記下根分岔度數。歐洲牙周病學會（EFP）指引的分期表寫道，複雜度因子可能把分期上調，例如二度或三度根分岔，不論臨床附著喪失多少，會移到第 III 或第 IV 期。",
+        "臨床記下的度數，我會當成還沒定案。1993 年那項研究裡，用 Hamp 分度記到二度的有 24% 是高估，記到三度的高估是 0%。",
+        "下顎二度、仍有殘存囊袋：指引建議做牙周再生手術。指引也說，牙周手術有效但常常複雜，建議由受過額外訓練的牙醫或轉診中心的專科醫師處理。",
+        "要不要截根、分根或做隧道：2020 年一篇系統性回顧收了 7 篇研究，結論是二度、三度根分岔用刮治根整或翻瓣清創，在資料的限制內，牙齒存活率可能和截根、分根、隧道相近。"
+      ]
+    },
+    {
+      "type": "paper",
+      "citation": "Hamp SE, Nyman S, Lindhe J. Periodontal treatment of multirooted teeth. Results after 5 years. *J Clin Periodontol*. 1975;2(3):126–135.",
+      "doi": "10.1111/j.1600-051x.1975.tb01734.x",
+      "pmid": "1058213",
+      "link": "https://doi.org/10.1111/j.1600-051x.1975.tb01734.x",
+      "access": "依摘要與後續文獻整理",
+      "question": "根分岔病變怎麼分類、怎麼治療？治療後 5 年，根分岔區的破壞停得住嗎？",
+      "design": "提出根分岔分類與治療系統，並做術後 5 年追蹤評估",
+      "sample": "100 名在雙根、三根分岔區有牙周破壞並接受治療的病人"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Hamp SE, Nyman S, Lindhe J. Periodontal treatment of multirooted teeth. Results after 5 years. J Clin Periodontol 1975;2(3):126–135（PMID 1058213）",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "1975-08",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1058213/",
+      "note": "依摘要（E-utilities 讀取）：a system for classification and treatment of furcation involvements；5-year post-operative evaluation of 100 patients；possible to arrest further destruction within the root furcation area；成功「probably」因 quasi total elimination of plaque retention areas 與 meticulous oral hygiene by the patients。摘要沒有 87 顆、截根與失敗數；未讀到全文"
+    },
+    {
+      "title": "Crossref 書目資料：10.1111/j.1600-051x.1975.tb01734.x",
+      "publisher": "Crossref",
+      "date": "1975-09",
+      "url": "https://api.crossref.org/works/10.1111/j.1600-051x.1975.tb01734.x",
+      "note": "作者全名 Sven-Erik Hamp、Sture Nyman、Jan Lindhe；卷 2 期 3 頁 126–135；Crossref 紙本日期 1975 年 9 月，PubMed 標 1975 年 8 月"
+    },
+    {
+      "title": "Pilloni A, Rojas MA. Furcation Involvement Classification: A Comprehensive Review and a New System Proposal. Dent J (Basel) 2018;6(3):34（PMC6162379）",
+      "publisher": "Dentistry Journal（MDPI，PubMed Central，CC BY）",
+      "date": "2018-07-23",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6162379/",
+      "note": "讀全文：Hamp 分度三級定義（Degree I horizontal attachment loss <3 mm of the total width of the furcation area、II >3 mm 未涵蓋全寬、III through and through）；Glickman 分類 Grade I–IV 描述 extension and main characteristics（本文寫 Glickman 1953，但引用的是其教科書 1972 年第 4 版，年份只出自二手，正文不寫年份與人名）；Ramfjord 與 Ash 同系統但用 2 mm；轉述 Zappa 等 27%／43%，以及手術下三度的病灶臨床被診斷為 degrees 2, 1, and 0"
+    },
+    {
+      "title": "Sit JV, Khan MI, El-Awour H. Root Resection: Key Updates and a Review of the Literature. Cureus 2026;18(7):e113050（PMC13387035）",
+      "publisher": "Cureus（PubMed Central，CC BY）",
+      "date": "2026-07-20",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13387035/",
+      "note": "Table 2：Hamp et al. 1975，病人數欄為「-」，87 顆，存活率 100%，追蹤 5 年，total failures 0；同列牙位明細相加為 88 顆（表格本身的出入）。正文：Glickman 分類 lacks numerical values；Hamp 系統有數值，但難以處理水平喪失剛好 3 mm 的情況。此表與 Ajlan 表是否各自取材不明，正文不當作互證"
+    },
+    {
+      "title": "Ajlan SA. Maxillary root amputation: Case report with a 14-year-follow-up and updated mini review. Clin Case Rep 2024;12(3):e8553（PMC10905676）",
+      "publisher": "Clinical Case Reports（PubMed Central）",
+      "date": "2024-03-01",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10905676/",
+      "note": "Table 1 Studies evaluating long-term failure rates of root amputation：作者欄寫「Hamp and Nyman」（未列年份），5 年，87 顆，lost/failed 0%；該列引用文獻 14 為 Hamp、Nyman、Lindhe 1975。日期：PubMed ArticleDate、Crossref published-online 與 PMC epub 均為 2024-03-01（accepted 2024-01-21）。另一篇 2026 年病例報告（PMC13386106）的表 1 註明改編自本表，作者欄寫成「Hamp and Nyman, 1974」，不是獨立來源"
+    },
+    {
+      "title": "Zappa U, Grosso L, Simona C, Graf H, Case D. Clinical furcation diagnoses and interradicular bone defects. J Periodontol 1993;64(3):219–227（PMID 8463945）",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "1993-03",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8463945/",
+      "note": "依摘要：12 名中度至重度牙周炎病人、6 位牙醫；病人 1–6 用 Ramfjord 指數（2 mm）、病人 7–12 用 Hamp 指數（3 mm），兩種指數用在不同病人；全口刮治根整、再評估後翻瓣，以水平探測與印模量骨缺損；surgical degree 3 未被認出：Ramfjord 43%、Hamp 27%（摘要未給手術下三度的個數）；Hamp 指數臨床二度讀數 24%、三度 0% 為高估；furcation diagnosis is of limited validity"
+    },
+    {
+      "title": "Nibali L, Zavattini A, Nagata K, Di Iorio A, Lin GH, Needleman I, Donos N. Tooth loss in molars with and without furcation involvement – a systematic review and meta-analysis. J Clin Periodontol 2016;43(2):156–166（PMID 26932323）",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "2016-02-12",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26932323/",
+      "note": "依摘要：21 篇至少追蹤 3 年的縱向研究；相對風險（有 vs 無根分岔的臼齒）追蹤至 10 年 1.46（95% CI 0.99–2.15，p = 0.06，未達顯著），10–15 年 2.21（95% CI 1.79–2.74）；degree II、III 風險逐步增加；most molars, even with grade III FI respond well to periodontal therapy, suggesting that every effort should be made to maintain these teeth when possible"
+    },
+    {
+      "title": "Sanz M, Herrera D, Kebschull M, et al. Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline. J Clin Periodontol 2020;47(Suppl 22):4–60（PMC7891343）",
+      "publisher": "Journal of Clinical Periodontology（PubMed Central）",
+      "date": "2020-07-27",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/",
+      "note": "讀全文；線上發布 2020-07-27（Crossref、PMC）。3.10：前句「We recommend that molars with Class II and III furcation involvement and residual pockets receive periodontal therapy.」為建議（Grade A），後句「Furcation involvement is no reason for extraction.」為聲明（statement）；R3.11 下顎 Class II 伴殘存囊袋建議再生手術；R3.4 殘存深囊袋的手術治療有效但常複雜，建議由受過額外訓練的牙醫或轉診中心專科處理；Table 7（Periodontitis stage. Adapted from Tonetti et al. 2018）：furcation II or III would shift to either Stage III or IV irrespective of the CAL"
+    },
+    {
+      "title": "Dommisch H, Walter C, Dannewitz B, Eickholz P. Resective surgery for the treatment of furcation involvement: A systematic review. J Clin Periodontol 2020;47(Suppl 22):375–391（PMID 31912534）",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "2020-07-27",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31912534/",
+      "note": "依摘要：7 篇研究、667 名病人、2,021 顆 class II／III 根分岔牙；存活率截根／分根 38%–94.4%、隧道 62%–67%、翻瓣清創 63%–85%、刮治根整 68%–80%；Within their limits, SRP and OFD may result in similar survival rates as root amputation/resection, root separation or tunnelling。Crossref 記 Published 2020-07-27（PubMed 2020-01-09 建檔）"
+    },
+    {
+      "title": "Wikimedia Commons：File:-18 furcation.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2009-09-25",
+      "url": "https://commons.wikimedia.org/wiki/File:-18_furcation.jpg",
+      "note": "頭圖；CC BY-SA 3.0（另有 GFDL）；作者 DRosenbach 自製；描述「Evidence of furcal bone loss on #18 (lower left permanent second molar)」，分類 Dental X-rays on film；日期欄與原始上傳紀錄同為 2009-09-25 20:12，視為上傳時間，不填拍攝年"
+    }
+  ]
+}
