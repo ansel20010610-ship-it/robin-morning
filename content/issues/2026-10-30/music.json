@@ -1,0 +1,245 @@
+{
+  "column": "music",
+  "date": "2026-10-30",
+  "title": "封面上沒有月亮",
+  "dek": "1802 年的封面寫著「近似幻想曲」。月光是誰先說的，貝多芬故居自己的兩份資料就講得不一樣。",
+  "brief": "1802 年出版時，這首奏鳴曲的封面寫的是「近似幻想曲的奏鳴曲」，沒有月亮。月光下琉森湖上的小船，現存文字最早見於 1852 年 Lenz，被安在詩人 Rellstab 名下；貝多芬故居的特展導覽說 Rellstab 筆下找不到這段話，同一機構的網站卻說名字就是他取的。",
+  "topic_key": "music:beethoven-op27-2",
+  "updated_at": "2026-10-30T01:15:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Beethoven_Piano_Sonata_14_-_title_page_1802.jpg/1280px-Beethoven_Piano_Sonata_14_-_title_page_1802.jpg",
+    "width": 1280,
+    "height": 897,
+    "alt": "泛黃的老紙上，一個橢圓形花邊框裡印著斜體花字：第一行是 Sonata quasi una Fantasia，下面依序是獻給 Giulietta Guicciardi 伯爵小姐、Luigi van Beethoven、Opera 27 No. 2，最底下是 In Vienna presso Cappi e Comp.。",
+    "caption": "1802 年維也納 Cappi 版的封面。第一行是「Sonata quasi una Fantasia」，往下是題獻對象 Giulietta Guicciardi、作曲者署名 Luigi van Beethoven，以及 Opera 27 No. 2。",
+    "credit": "Beethoven-Haus Bonn（經 IMSLP）；經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Beethoven_Piano_Sonata_14_-_title_page_1802.jpg",
+    "made": "1802"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1802 年這首曲子在維也納出版，封面上印的是「近似幻想曲的奏鳴曲」（Sonata quasi una Fantasia），題獻給伯爵小姐 Giulietta Guicciardi。"
+    },
+    {
+      "type": "p",
+      "text": "1827 年貝多芬的遺物拍賣，他的親筆手稿在拍賣記錄上登記為「Fantasie Sonate」，被維也納一位出版商買走。到了 1830 年代末，德文和英文的出版品已經叫它「月光奏鳴曲」。"
+    },
+    {
+      "type": "h",
+      "text": "琉森湖上的小船"
+    },
+    {
+      "type": "p",
+      "text": "很多資料說，這個名字來自詩人兼音樂作家 Ludwig Rellstab 的一個比喻，出處是 1852 年 Wilhelm von Lenz 的一段話。Lenz 寫道，Rellstab 在 1832 年，就把這個慢板比成一艘小船，在月光下造訪瑞士琉森湖的荒野風景。現存文字裡，最早見到小船和琉森湖的是 Lenz 這一筆。"
+    },
+    {
+      "type": "p",
+      "text": "Rellstab 確實在 1820 年代的小說《Theodor》裡用月光寫過這個慢板，導覽手冊稱那是最早的圖像描述：「朦朧月光裡的湖」。那時貝多芬還在世。Wikipedia 說小說裡沒有琉森湖，琉森湖是 Lenz 加的。"
+    },
+    {
+      "type": "p",
+      "text": "至於 1832 年那段話，波昂的貝多芬故居（Beethoven-Haus）2003 年辦特展，導覽手冊說在 Rellstab 筆下找不到，推斷是 Lenz 把自己的詮釋和讀過的 Rellstab 混在了一起。同一家故居的網站上，介紹手稿的那一頁寫的是：「月光奏鳴曲」是 Rellstab 取的，他心裡的畫面就是月光下穿過琉森湖荒野的一艘小船。"
+    },
+    {
+      "type": "p",
+      "text": "這個名字不是貝多芬取的，各家說法一致。"
+    },
+    {
+      "type": "h",
+      "text": "鬼魂、禱告和彌撒"
+    },
+    {
+      "type": "p",
+      "text": "1842 年，貝多芬的學生車爾尼（Carl Czerny）在他的鋼琴教本裡寫到這個慢板。"
+    },
+    {
+      "type": "quote",
+      "text": "極富詩意，又人人都聽得懂。這是一幕夜景，遠處傳來一個哀怨的鬼魂的聲音。",
+      "original": "höchst poetisch und dabei für jeden leicht fasslich. Es ist eine Nachtscene, wo aus weiter Ferne eine klagende Geisterstimme ertönt",
+      "cite": "Czerny，鋼琴教本，1842"
+    },
+    {
+      "type": "p",
+      "text": "貝多芬還在世時，卡賽爾的一位作曲家把它聽成祈求恩典，請貝多芬替這個樂章配上一首叫〈祈禱的女子〉的詩，改成歌曲，沒有成功。1831 年又有人把它改成彌撒裡的〈求主垂憐〉：鋼琴部分原樣搬過去，配成管弦樂，上面再疊一段簡單的合唱。"
+    },
+    {
+      "type": "p",
+      "text": "這個樂章受歡迎到讓貝多芬本人不耐煩。據車爾尼轉述，他說過自己寫過更好的東西。"
+    },
+    {
+      "type": "h",
+      "text": "盲女孩"
+    },
+    {
+      "type": "p",
+      "text": "19 世紀中葉，有人替這首曲子編了一段來歷。貝多芬遇見一位盲女孩在彈琴，被她的遭遇打動，自己坐到琴前去彈，忽然覺得從窗口照進來的月光和琴聲交織在一起，趕回家把〈月光奏鳴曲〉寫了下來。另一個版本裡，他替盲女孩和她哥哥彈琴，看見月光映在女孩臉上。"
+    },
+    {
+      "type": "p",
+      "text": "一位法國音樂作家的小說，則把貝多芬對 Guicciardi 的感情寫了進去：主角描述心上人彈這首曲子，身上照著一道月光。"
+    },
+    {
+      "type": "h",
+      "text": "手稿缺了頭尾"
+    },
+    {
+      "type": "p",
+      "text": "貝多芬的親筆手稿從 1898 年起收在故居。至少從 1830 年起，它的第一張和最後一張就不見了，標題、第一樂章最前面 13 小節和終曲最後 3 小節，都在那兩張上。第一樂章的開頭，在他的手稿裡已經看不到。什麼時候、為什麼被拿走，已經無法確定。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Manuscript_of_the_Piano_Sonata_No._14_in_C-sharp_minor_Op.27-2_by_Beethoven.pdf/page1-1280px-Manuscript_of_the_Piano_Sonata_No._14_in_C-sharp_minor_Op.27-2_by_Beethoven.pdf.jpg",
+      "width": 1280,
+      "height": 944,
+      "alt": "米黃色紙上的手寫樂譜，四行雙譜表，墨跡濃淡不一，左上角寫著 BH 60，左下角蓋著一枚紫色圓章。",
+      "caption": "貝多芬親筆手稿的一頁影像，現藏 Beethoven-Haus Bonn，館藏編號 BH 60。",
+      "credit": "Ludwig van Beethoven；Beethoven-Haus Bonn（經 IMSLP）；經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Manuscript_of_the_Piano_Sonata_No._14_in_C-sharp_minor_Op.27-2_by_Beethoven.pdf",
+      "made": "1801"
+    },
+    {
+      "type": "h",
+      "text": "抓住命運的喉嚨"
+    },
+    {
+      "type": "p",
+      "text": "寫這首曲子的 1801 年，貝多芬給老朋友 Wegeler 寫了兩封信，都談到自己愈來愈重的聽力問題。"
+    },
+    {
+      "type": "quote",
+      "text": "我要抓住命運的喉嚨，它絕對不可能把我完全壓垮。",
+      "original": "ich will dem schicksaal in den rachen greifen, ganz niederbeugen soll es mich gewiß nicht",
+      "cite": "貝多芬致 Wegeler，1801 年 11 月 16 日"
+    },
+    {
+      "type": "p",
+      "text": "這句出自 11 月 16 日那一封。同一封信還寫到一個「愛我、我也愛」的女孩，多半就是他的學生、封面上的那位 Guicciardi；信裡沒有提到這首奏鳴曲。"
+    },
+    {
+      "type": "h",
+      "text": "慢的放最前面"
+    },
+    {
+      "type": "p",
+      "text": "三個樂章，慢的放在最前面，快的留到最後。"
+    },
+    {
+      "type": "p",
+      "text": "一開頭就是大家最熟的那段，很慢，也很輕。左手是一個八度，右手把和弦拆成三個音一組，彈下去。譜上標的是極弱；貝多芬還在第一樂章開頭用義大利文寫明，整個樂章都要極其輕柔地彈，不用止音器。在現代鋼琴上，有的做法是把延音踏板一路踩著，也有跟著和聲換踩的。"
+    },
+    {
+      "type": "p",
+      "text": "中間是一首三拍子的小步舞曲，相當守規矩，也是三個樂章裡最短的。據說李斯特把它比成「夾在兩道深淵之間的一朵花」。"
+    },
+    {
+      "type": "p",
+      "text": "最後的急板分量最重，也最難彈。全曲大多標著弱，這一章裡貝多芬用上突然加重的音（sforzando）和極強（fortissimo），跟那些弱音形成對比。現存的五張草稿，全是為這一章寫的。"
+    },
+    {
+      "type": "music",
+      "composer": "貝多芬（Ludwig van Beethoven）",
+      "work": "升 C 小調第十四號鋼琴奏鳴曲「近似幻想曲的奏鳴曲」，作品 27 之 2（《月光》）",
+      "work_original": "Piano Sonata No. 14 in C-sharp minor, Op. 27 No. 2, \"Sonata quasi una fantasia\"",
+      "composed": "1801",
+      "performers": "威廉・肯普夫（Wilhelm Kempff）鋼琴",
+      "recording": "Deutsche Grammophon，1964–65 年錄於漢諾威貝多芬廳（Beethovensaal）",
+      "movements": [
+        "I. Adagio sostenuto",
+        "II. Allegretto",
+        "III. Presto agitato"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Beethoven Piano Sonata No. 14 Moonlight Op. 27 No. 2 Wilhelm Kempff Deutsche Grammophon",
+        "artist_hint": "Kempff",
+        "track_filter": [
+          "No. 14"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "肯普夫一共三次帶著這套奏鳴曲進錄音室：1940–43 年錄了 32 首裡的 16 首，1951–56 年第一次錄完整套，這個錄音出自 1964–65 年在漢諾威錄的那一套。"
+    },
+    {
+      "type": "p",
+      "text": "接著可以聽同一個作品號的第 1 號，降 E 大調，副題同樣是「近似幻想曲的奏鳴曲」，和這首同時出版。兩首題獻給不同的人，得另刻一張封面；後來不少再版，把第 1 號的封面錯用在這首上。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Beethovens „Mondschein-Sonate“: Original und romantische Verklärung（特展導覽）",
+      "publisher": "Beethoven-Haus Bonn",
+      "date": "2003",
+      "url": "https://internet.beethoven.de/pdf-sonderausstellung/Beethovens-Mondschein-Sonate-Kurzfuehrer.pdf",
+      "note": "2003 年 6 月 28 日至 11 月 16 日特展的德文導覽。Lenz 1852 年把月光小船與琉森湖安在 Rellstab 名下、導覽在 Rellstab 著作裡找不到這段話、Rellstab 小說《Theodor》是對慢板最早的圖像描述（「See in dämmerndem Mondenschimmer」，正文譯「朦朧月光裡的湖」）；盲女孩故事（導覽稱 plakative Fabel，只指這一組）、法國作家 Paul Scudo 的小說；Czerny 1842 引文；卡賽爾作曲家 Georg Christoph Grosheim 與〈Die Beterin〉、1831 年 Gottlob Benedikt Bierey 的 Kyrie 改編；手稿缺頁、1827 年 11 月 5 日遺物拍賣記錄第 85 號（Fantasie Sonate，買主為出版商 Tobias Haslinger）；五張草稿頁都屬第三樂章；Cappi 首版、Op. 27 之 1 封面誤印。來源之間的矛盾：導覽說綽號的最早記載是 Lenz 1852，且在 Rellstab 筆下找不到小船那段話；同一機構的手稿頁面（BH 60）卻說標題是 Rellstab 取的，Wikipedia 與 Hogstad 也說 Rellstab 1820 年代的小說已有月光比喻、琉森湖是 Lenz 加的，Wikipedia 並記載 1830 年代末已有出版品使用此名。正文如實寫成說法不一，不以導覽為定論。導覽寫小說為 1823 年、Wikipedia 寫 1824 年，正文只寫「1820 年代」。導覽寫首版 1802 年 3 月出版，Wikipedia 寫首版封面日期為 1802 年 8 月 2 日，正文只寫 1802 年。導覽說 1801 年致 Wegeler 的信是「首次提到」重聽，Beethoven-Haus 信件頁指出他更早就向 Wegeler 提過，正文不寫「第一次」。"
+    },
+    {
+      "title": "Piano Sonata No. 14 (Beethoven)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Piano_Sonata_No._14_(Beethoven)",
+      "note": "1801 年完成、題獻給學生 Guicciardi；名字不是貝多芬取的；Lenz 1852 年那段話；Rellstab 1824 年小說《Theodor》、未提琉森湖（看來是 Lenz 所加）、Rellstab 1825 年見過貝多芬；1830 年代末德英文出版品已用此名；Czerny 的描述與貝多芬對這個樂章受歡迎的不耐煩；「senza sordino」指示與踏板做法；三個樂章的標示與性格；李斯特的比喻（原文作 is said to have described）。另有「題獻原本屬意 Op. 51 No. 2」之說（註腳轉述 Thayer），未寫進正文。「第一樂章最響只到 piano」一句無法另行核對，未採用。"
+    },
+    {
+      "title": "Ludwig van Beethoven, Brief an Franz Gerhard Wegeler in Bonn, Wien, 16. November 1801, Autograph",
+      "publisher": "Beethoven-Haus Bonn",
+      "date": "未註明",
+      "url": "https://www.beethoven.de/de/media/view/4862695861911552/Ludwig+van+Beethoven,+Brief+an+Franz+Gerhard+Wegeler+in+Bonn,+Wien,+16.+November+1801,+Autograph",
+      "note": "館藏 W 18。信中的「lieben zauberischen」女孩，館方寫「vermutlich」是 Julie Guicciardi；信裡沒有提這首奏鳴曲。"
+    },
+    {
+      "title": "Schicksal（詞條）",
+      "publisher": "Beethoven-Haus Bonn",
+      "date": "未註明",
+      "url": "https://www.beethoven.de/en/g/Schicksal",
+      "note": "「ich will dem schicksaal in den rachen greifen……」的拼寫與信件日期（BGA 70）。"
+    },
+    {
+      "title": "Ludwig van Beethoven, Sonate für Klavier „Sonata quasi una Fantasia“ (cis-Moll) op. 27,2, Autograph",
+      "publisher": "Beethoven-Haus Bonn",
+      "date": "未註明",
+      "url": "https://www.beethoven.de/en/media/view/6442239777570816/Ludwig%20van%20Beethoven,%20Sonate%20f%C3%BCr%20Klavier%20%22Sonata%20quasi%20una%20Fantasia%22%20&%23040",
+      "note": "手稿館藏編號 BH 60，首尾兩頁佚失；貝多芬沒有把它叫作「Moonlight Sonata」；頁面說這個標題是 Rellstab 取的，畫面是月光下穿過琉森湖荒野的小船。這與同機構 2003 年特展導覽「在 Rellstab 筆下找不到」的說法矛盾，正文兩說並陳。"
+    },
+    {
+      "title": "Beethoven's Moonlight Sonata: The True Story Behind Its Many Myths",
+      "publisher": "Interlude（Emily E. Hogstad）",
+      "date": "2026-07-25",
+      "url": "https://interlude.hk/?p=149300",
+      "note": "Rellstab 1832 年把第一樂章比成琉森湖上的月光，後來被連到他 1824 年的小說；貝多芬向 Czerny 抱怨這個樂章太受歡迎。文中稱 Op. 51 No. 2 的題獻故事為 legend，正文不採。"
+    },
+    {
+      "title": "Wilhelm Kempff und die Klaviersonaten Ludwig van Beethovens",
+      "publisher": "Deutsche Grammophon",
+      "date": "未註明",
+      "url": "https://www.deutschegrammophon.com/de/komponisten/ludwig-van-beethoven/pressestimmen/wilhelm-kempff-und-die-klaviersonaten-ludwig-van-beethovens-255753",
+      "note": "Kempff 三次錄製奏鳴曲：1940–43 年只錄了 32 首中的 16 首（78 轉）；1951–56 年第一次錄完全集；1964–65 年在漢諾威貝多芬廳再錄一套。錄音月份只見於零售商頁面，未採用。"
+    },
+    {
+      "title": "File:Beethoven Piano Sonata 14 - title page 1802.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2012-01-14",
+      "url": "https://commons.wikimedia.org/wiki/File:Beethoven_Piano_Sonata_14_-_title_page_1802.jpg",
+      "note": "頭圖；Public domain。封面文字由圖上讀出。"
+    },
+    {
+      "title": "File:Manuscript of the Piano Sonata No. 14 in C-sharp minor Op.27-2 by Beethoven.pdf",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Manuscript_of_the_Piano_Sonata_No._14_in_C-sharp_minor_Op.27-2_by_Beethoven.pdf",
+      "note": "正文圖（PDF 第 1 頁）；Public domain。"
+    }
+  ]
+}
