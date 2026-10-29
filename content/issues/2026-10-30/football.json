@@ -5,7 +5,7 @@
   "dek": "據報導，拉波爾塔個人最想要熱刺右後衛波羅；另有報導說，弗利克要高層去追斯圖加特中衛 Jeltsch。",
   "brief": "孔德 10 月 29 日又缺席訓練，據《世界體育報》，他趕不上對阿拉維斯。另據 3cat 報導，拉波爾塔個人最想要熱刺右後衛波羅，但巴薩還沒正式報價。對阿拉維斯在台灣時間 11 月 1 日週日 04:00 開球。",
   "topic_key": "football:2026-10-30",
-  "updated_at": "2026-10-30T03:06:00+08:00",
+  "updated_at": "2026-10-30T06:00:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -149,7 +149,7 @@
     },
     {
       "type": "p",
-      "text": "巴薩女足是女歐冠前兩輪唯一拿滿 6 分的球隊，進了 11 球。第 3 輪今天凌晨 04:00 在客場踢 HB Køge，比分下一期再報。"
+      "text": "巴薩女足是女歐冠前兩輪唯一拿滿 6 分的球隊，進了 11 球。第 3 輪今天凌晨 04:00 作客 HB Køge，8 比 0 贏球，ESPN 的比賽紀錄：Caroline Graham Hansen 12 分鐘十二碼先開紀錄，Ewa Pajor 33 分鐘、Esmee Brugts 54 分鐘、Patri Guijarro 59 分鐘、Clara Serrajordi 62 分鐘、Kika Nazareth 67 分鐘進球，Clàudia Pina 70 與 85 分鐘梅開二度。三輪下來，巴薩女足進了 19 球。"
     },
     {
       "type": "p",
@@ -478,6 +478,13 @@
       "date": "2026-07-14",
       "url": "https://commons.wikimedia.org/wiki/File:Pedro_Porro_France_v_Spain_7.24.26-073.jpg",
       "note": "頭圖；作者 Bryan Berlin，CC BY-SA 4.0"
+    },
+    {
+      "title": "ESPN：HB Køge vs. Barcelona（女歐冠第 3 輪）比賽紀錄",
+      "publisher": "ESPN",
+      "date": "2026-10-30",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401916993/barcelona-hb-k%C3%B8ge",
+      "note": "終場比分與進球者、分鐘取自 ESPN 比賽資料；未找到第二個可讀來源。"
     }
   ]
 }
