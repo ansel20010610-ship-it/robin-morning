@@ -2,10 +2,10 @@
  "column": "city",
  "date": "2026-10-30",
  "title": "維也納 Karl-Marx-Hof：一公里長牆往後退的地方",
- "dek": "一公里多長的市營住宅，只在正中央往後退出一座前庭。塔樓、人像、銅像都擠在這裡，廣場的名字前後用過三個。",
- "brief": "1930 年開幕時，維也納市長說等我們不在了，這些石頭會替我們說話；1934 年，軍隊的砲就轟進了這座市營住宅，事後它還一度改用攻打它的指揮官命名。Karl-Marx-Hof 的基地只有 18% 蓋了房子，其餘是綠地、遊戲場和道路。",
+ "dek": "一公里多長的市營住宅，只在正中央往後退出一座前庭。塔樓、人像、銅像都在這裡，廣場的名字前後用過三個。",
+ "brief": "1930 年開幕時，維也納市長說等我們不在了，這些石頭會替我們說話；1934 年，軍隊砲擊了這座市營住宅，事後它還暫時改用攻打大院那一方的指揮官的名字。Karl-Marx-Hof 的基地只有 18% 蓋了房子，其餘是綠地、遊戲場和道路。",
  "topic_key": "city:vienna-karl-marx-hof",
- "updated_at": "2026-10-30T03:24:00+08:00",
+ "updated_at": "2026-10-30T03:28:21+08:00",
  "spoiler": null,
  "disclaimer": null,
  "hero": {
@@ -14,8 +14,8 @@
   "src": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Gel%C3%A4nde_Karl-Marx-Hof_1899.jpg",
   "width": 1114,
   "height": 652,
-  "alt": "黑白老照片：遠處是一棟白色的大型車站建築，前景是整齊分塊的菜圃，左右兩側有玻璃溫床的框架，沒有任何高樓。",
-  "caption": "1899 年，Max Mayer Sperling 拍攝的 Heiligenstadt 車站，前景是一塊塊菜圃，後來 1927–1930 年 Karl-Marx-Hof 就蓋在這一帶（Commons 說明）。圖取自 Seemann、Lunzer 編《Döbling 1860–1930. Album》（Wien 1998）。",
+  "alt": "黑白老照片：遠處是一棟白色的大型車站建築，前景是整齊分塊的菜圃，左右兩側有玻璃溫床的框架。",
+  "caption": "1899 年，Max Mayer Sperling 拍攝的 Heiligenstadt 車站，前景是一塊塊菜圃，也就是 Karl-Marx-Hof 後來蓋起來的那一帶（Commons 說明）。圖取自 Seemann、Lunzer 編《Döbling 1860–1930. Album》（Wien 1998）。",
   "credit": "Max Mayer Sperling（† 1925）／Wikimedia Commons",
   "license": "Public domain",
   "license_url": "",
@@ -25,7 +25,7 @@
  "body": [
   {
    "type": "p",
-   "text": "1930 年 10 月 12 日，維也納市長塞茲（Karl Seitz）替一座市營住宅主持開幕，留下一句後來常被引用的話。"
+   "text": "1930 年 10 月 12 日，維也納市長塞茲（Karl Seitz）替一座市營住宅主持開幕，留下一句名句。"
   },
   {
    "type": "quote",
@@ -35,7 +35,7 @@
   },
   {
    "type": "p",
-   "text": "同一天，社會民主黨自己的日報《Das Kleine Blatt》喊得比市長大聲。"
+   "text": "同一天，社會民主黨的日報《Das Kleine Blatt》登了這一句。"
   },
   {
    "type": "quote",
@@ -45,7 +45,7 @@
   },
   {
    "type": "p",
-   "text": "兩句裡我信市長那句。這座大院和它的前庭，名字後來都被換過；石頭怎麼排，到今天還看得出來。它在維也納第 19 區的 Heiligenstadt，設計者是市建築局的 Karl Ehn，Otto Wagner 的學生。"
+   "text": "這座市營住宅在維也納第 19 區的 Heiligenstadt，設計者是市建築局的 Karl Ehn，Otto Wagner 的學生。"
   },
   {
    "type": "facts",
@@ -53,11 +53,11 @@
    "items": [
     [
      "城市",
-     "奧地利維也納，第 19 區 Döbling 的 Heiligenstadt"
+     "奧地利維也納，第 19 區的 Heiligenstadt"
     ],
     [
      "地點",
-     "Karl-Marx-Hof（Heiligenstädter Straße 82–92；另有 Boschstraße 1–19、Geistingergasse 1、Grinzinger Straße 110）"
+     "Karl-Marx-Hof（Heiligenstädter Straße 82–92）"
     ],
     [
      "建造年代",
@@ -83,15 +83,15 @@
   },
   {
    "type": "p",
-   "text": "這塊地叫 Hagenwiese，窄，卻有一公里多長，市政府從 1877 年起就握有它。早先有多瑙河的支流流過，後來成了一片小菜園。頭圖是 1899 年的樣子：遠處是 Heiligenstadt 車站，前景一格一格都是菜圃。"
+   "text": "這塊地叫 Hagenwiese，相對窄，卻有一公里多長，市政府從 1877 年起就握有它。早先有多瑙河的支流流過，後來成了一片小菜園。頭圖是 1899 年的樣子：遠處是 Heiligenstadt 車站，前景一格一格都是菜圃。"
   },
   {
    "type": "p",
-   "text": "1927 年 6 月 10 日，市議會決定在這裡整片蓋一座 Superblock。租地的園丁得搬走，反對黨為此和市府起了衝突，光是搬遷就拖了 18 個月。"
+   "text": "1927 年 6 月 10 日，市議會決定在這裡整片蓋一座 Superblock。租地的園丁要遷走，與反對黨起衝突，耗時 18 個月。"
   },
   {
    "type": "p",
-   "text": "地底下是填平的舊河道，樓只能蓋在懸浮樁上。後來一個側翼稍微下沉，反對黨就在《Reichspost》上打起新聞戰，說這些市營住宅蓋得差、有倒塌的危險。工程分三期，造價 2,860 萬先令，比預算的 3,250 萬低。整座大院的構想，在興建當時被看成是革命性的。"
+   "text": "地底下是填平的舊河道，樓蓋在懸浮樁上。後來一個側翼稍微下沉，反對黨就在《Reichspost》上打起新聞戰，說這些市營住宅蓋得差、有倒塌的危險。工程分三期，造價 2,860 萬先令，比預算的 3,250 萬低。整座大院的構想，在興建當時被看成是革命性的。"
   },
   {
    "type": "h",
@@ -103,7 +103,7 @@
   },
   {
    "type": "p",
-   "text": "大院面對車站的外牆是 Boschstraße 9，牆上釘著一塊黑色石牌，2003 年 11 月 27 日揭幕，由維也納市和奧地利羅姆人文化協會出資。1938 到 1939 年，納粹以宗教或種族為由，把 66 戶人家趕出大院，牌子記的就是這件事。"
+   "text": "大院面對車站的外牆是 Boschstraße 9，2018 年的照片裡牆上釘著一塊牌子，2003 年 11 月 27 日揭幕，由維也納市和奧地利羅姆人文化協會出資。1938 到 1939 年，納粹以宗教或種族為由，把 66 戶人家趕出大院，牌子記的就是這件事。"
   },
   {
    "type": "quote",
@@ -118,7 +118,7 @@
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/D%C3%B6bling_%28Wien%29_-_Karl-Marx-Hof%2C_Gedenktafel_f%C3%BCr_NS-Opfer.JPG/1280px-D%C3%B6bling_%28Wien%29_-_Karl-Marx-Hof%2C_Gedenktafel_f%C3%BCr_NS-Opfer.JPG",
    "width": 1280,
    "height": 1920,
-   "alt": "一面紅褐色粉刷牆，上方釘著一塊方形黑色石牌，刻有數行白色大寫德文和一份姓名名單；牆下半部是灰色粗面基座。",
+   "alt": "一面牆，上方釘著一塊牌子，刻有數行全大寫的德文和一份姓名名單。",
    "caption": "2018 年 6 月 9 日，C.Stadler/Bwag 拍攝的 Boschstraße 9 外牆紀念牌。",
    "credit": "C.Stadler/Bwag／Wikimedia Commons",
    "license": "CC BY-SA 4.0",
@@ -142,11 +142,11 @@
   },
   {
    "type": "p",
-   "text": "六座塔是刻意立起來的紅色維也納英雄記號；圓拱也不是隨便開的，對準的是 Heiligenstadt 車站和 Hohe Warte 球場之間的軸線（Wien Geschichte Wiki）。那座球場 1921 年開幕，奧地利國家隊 1920、30 年代在那裡踢過很多場。"
+   "text": "六座塔是刻意立起來的紅色維也納英雄記號；圓拱依 Heiligenstadt 車站和 Hohe Warte 球場之間的軸線排列（Wien Geschichte Wiki）。那座球場 1921 年開幕，奧地利國家隊 1920、30 年代在那裡踢過多場。"
   },
   {
    "type": "p",
-   "text": "圓拱之間立著四尊細長的人像，代表啟蒙、解放、兒童照護和身體文化；前庭的花園裡，是一尊比真人還大的青銅播種者。整修時，聯邦文物局（Bundesdenkmalamt）用科學方法查了原本的配色，發現大院有一整套用顏色指路的系統：重要的資訊牌和指示牌都是 RAL 3000 的深火紅，隔開各個院子的柵欄是飽和的深藍，前庭的大旗桿則是淺得多的 smalteblau。2018 年的照片裡，塔頂那幾根旗桿是淡藍色的。"
+   "text": "圓拱上方立著四尊細長的人像，代表啟蒙、解放、兒童照護和身體文化；前庭有一尊比真人大的青銅播種者（Wiener Wohnen，2026 年 10 月 30 日可見）。聯邦文物局（Bundesdenkmalamt）用科學方法查了原本的配色，發現大院有一整套用顏色指路的系統：重要的資訊牌和指示牌都是 RAL 3000 的深火紅，隔開各個院子的柵欄是飽和的深藍，前庭的大旗桿則是淺得多的 smalteblau。"
   },
   {
    "type": "figure",
@@ -155,8 +155,8 @@
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/D%C3%B6bling_%28Wien%29_-_Karl-Marx-Hof_%282%29.JPG/1280px-D%C3%B6bling_%28Wien%29_-_Karl-Marx-Hof_%282%29.JPG",
    "width": 1280,
    "height": 768,
-   "alt": "一排橘粉與米黃色的多層住宅樓，中段有高起的方形塔樓，塔頂立著細長的淡藍色旗桿；底層排著幾道大圓拱，圓拱之間的柱上各立一尊灰白的細長人像；前景是草地和一條彎曲的步道。",
-   "caption": "2018 年 6 月 3 日，C.Stadler/Bwag 拍攝的中段：塔頂的淡藍旗桿，圓拱之間的四尊人像，牆上有 KARL MARX-HOF 字樣。",
+   "alt": "中段後退，有六座塔，塔頂立著細長的淡藍旗桿；有數道圓拱，圓拱之間柱上立著四尊灰白人像；牆上有 KARL MARX-HOF 字樣，前景是草地與步道。",
+   "caption": "2018 年 6 月 3 日，C.Stadler/Bwag 拍攝的中段：塔頂的淡藍旗桿，四尊人像，牆上有 KARL MARX-HOF 字樣。",
    "credit": "C.Stadler/Bwag／Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -177,7 +177,7 @@
   },
   {
    "type": "p",
-   "text": "開幕起，牆裡就有兩間中央洗衣房（62 個洗槽）、兩處浴室、兩所幼兒園、一間牙科診所、孕產婦諮詢站、圖書館、青少年之家、郵局、藥房，還有 25 家商店。紅色維也納要給市民的，是明亮、乾燥、有自來水和廁所的家，對照的是出租大樓裡共用水龍頭（Bassena）的住法。這裡原本有一千三百多戶，後來有些戶合併，現在是一千二百多戶。"
+   "text": "開幕起，牆裡就有兩間中央洗衣房（62 個洗槽）、兩處浴室、兩所幼兒園、一間牙科診所、孕產婦諮詢站、圖書館、青少年之家、郵局、藥房，還有 25 家商店。紅色維也納要給市民的，是明亮、乾燥、有自來水和廁所的家，對照的是出租大樓裡共用水龍頭（Bassena）的住法。戶數方面，原本有一千三百多戶，後來有些戶合併，現在一千二百多戶（Waschsalon 官網，2026 年 10 月 30 日可見）。"
   },
   {
    "type": "h",
@@ -185,15 +185,15 @@
   },
   {
    "type": "p",
-   "text": "1934 年 2 月 12 日下午，大院響起第一批槍聲。共和保衛同盟（Republikanischer Schutzbund）的成員和工人守在裡面，警察、Heimwehr 和軍隊用砲轟它。幾名工人死在戰鬥裡，有人被俘、遭到刑求，當地的領頭人被處決。有一塊牌子記著 2 月 15 日，大院在這一天失守。我說它不像堡壘，可是那個 2 月，它確實被人當成堡壘守過。"
+   "text": "1934 年 2 月 12 日下午，大院響起第一批槍聲。共和保衛同盟（Republikanischer Schutzbund）的成員和工人據守大院，警察、Heimwehr 和軍隊用砲轟它。幾名工人死在戰鬥裡，有人被俘、遭到刑求，當地的領頭人被處決。有一塊牌子記著 2 月 15 日，大院在這一天失守。"
   },
   {
    "type": "p",
-   "text": "住戶裡有一位足球人：Hugo Meisl，奧地利足協的國家隊領隊（Verbandskapitän），1930 年代初那支「奇蹟之隊」（Wunderteam）的締造者。他在大院有一戶，同情社會民主黨。軍隊砲擊時，他的住處直接被波及；一座紀念瑞士對奧地利國際賽的獎盃上面留著洞，到今天還提醒人那段日子。"
+   "text": "住戶裡有一位足球人：Hugo Meisl，奧地利足協的 Verbandskapitän，1930 年代初那支「奇蹟之隊」（Wunderteam）的締造者。他在大院有一戶，同情社會民主黨。軍隊砲擊時，他的住處直接被波及；一座紀念瑞士對奧地利國際賽的獎盃上面留著洞，Wien Geschichte Wiki 說它到今天還提醒人那段日子（2026 年 10 月 30 日可見）。"
   },
   {
    "type": "p",
-   "text": "社會民主黨被打垮之後，大院先改叫 Biedermannhof。Karl Biedermann 是 1934 年 2 月攻打大院那一方的指揮官，一座住宅就這樣掛上了打它的人的名字。1935 年再改成 Heiligenstädter Hof，二戰之後才叫回 Karl-Marx-Hof。前庭前後用過三個名字：1930 年叫 Karl-Marx-Platz，1935 到 1985 年叫 Heiligenstädter Platz，1985 年 1 月起叫 12.-Februar-Platz，紀念的就是那場戰鬥。"
+   "text": "社會民主黨被打垮之後，大院先暫名 Biedermannhof。Karl Biedermann 是 1934 年 2 月攻打大院那一方的指揮官。1935 年再改成 Heiligenstädter Hof，二戰之後才叫回 Karl-Marx-Hof。前庭前後用過三個名字：1930 年叫 Karl-Marx-Platz，1935 到 1985 年叫 Heiligenstädter Platz，1985 年 1 月起叫 12.-Februar-Platz，紀念的就是那場戰鬥。"
   },
   {
    "type": "p",
@@ -205,11 +205,11 @@
   },
   {
    "type": "p",
-   "text": "週日的導覽從前庭出發，最後走進二號洗衣房 Waschsalon Nr. 2。"
+   "text": "週日的導覽從前庭出發，在 Waschsalon Nr. 2 結束（Waschsalon 官網，2026 年 10 月 30 日可見）。"
   },
   {
    "type": "p",
-   "text": "這棟洗衣房的二樓原本是浴缸和淋浴間，2010 年 5 月 1 日起改成紅色維也納的常設展。一樓照舊在洗衣服，換上了現代的機器，只有住戶進得去（Waschsalon 官網，2026 年 10 月 30 日可見）。"
+   "text": "這棟洗衣房的二樓原本是浴缸和淋浴間，2010 年 5 月 1 日起改成紅色維也納的常設展。一樓照舊在洗衣服，配有現代的機器，只有住戶進得去（Waschsalon 官網，2026 年 10 月 30 日可見）。"
   }
  ],
  "sources": [
