@@ -1,0 +1,257 @@
+{
+  "column": "fm-watch",
+  "date": "2026-10-30",
+  "status": "update",
+  "title": "FM27 免費開玩，台灣預購價 NT$1,611",
+  "dek": "免費版開到 11 月 4 日（週三）凌晨兩點，之後要接著玩得先預購。授權名單比 FM26 少了兩支義大利球隊和直布羅陀。",
+  "brief": "FM27 免費版今天凌晨兩點就開了，Steam 台灣區預購價 NT$1,611，比 FM26 現在的售價還低 NT$179。開跑前官網先貼出授權名單，恩波利、比薩和直布羅陀都不在上面。介面仍然沒有繁體中文。",
+  "topic_key": "fm-watch:2026-10-30-launch-preview-live-licences",
+  "updated_at": "2026-10-30T05:35:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "timeline",
+    "title": "FM27 時程：10 月 19 日到 11 月 20 日",
+    "caption": "依 SI 官網、Steam 商店頁與公告、SEGA 新聞稿整理，截至台灣時間 2026 年 10 月 30 日清晨。官方時刻原為 UTC／GMT，已換算成台灣時間。",
+    "items": [
+      {
+        "when": "2026.10.19",
+        "label": "法國女子頂級聯賽取得授權",
+        "note": "Arkema Première Ligue"
+      },
+      {
+        "when": "2026.10.21",
+        "label": "宣布免費 Launch Preview 與預購",
+        "note": "官網、Steam、SEGA 同日發布"
+      },
+      {
+        "when": "2026.10.27",
+        "label": "沙烏地聯賽授權、Shuffle Draft 規則",
+        "note": "官網新聞與專頁；Shuffle Draft 另有 Steam 公告（台灣時間 20:04）"
+      },
+      {
+        "when": "2026.10.28",
+        "label": "官網公布 FM27 授權名單",
+        "note": "頁面只標日期，沒有時刻"
+      },
+      {
+        "when": "2026.10.30",
+        "label": "免費 Launch Preview 開跑，預購開放",
+        "note": "台灣時間 02:00（週五）；SEGA 新聞稿 02:01，Steam 公告 02:28"
+      },
+      {
+        "when": "2026.11.4",
+        "label": "免費期結束，付費 Launch Preview 開始",
+        "note": "台灣時間 02:00（週三）"
+      },
+      {
+        "when": "2026.11.10",
+        "label": "全平台數位版發售",
+        "note": "確切時刻未公布"
+      },
+      {
+        "when": "2026.11.20",
+        "label": "實體 PS5 版發售",
+        "note": "官方 FAQ"
+      }
+    ]
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "《足球經理 27》（Football Manager 27，以下稱 FM27）從今天（10 月 30 日，週五）台灣時間凌晨兩點起免費開放，Steam 台灣區也終於標了價：原價 NT$1,790，預購九折後 NT$1,611。"
+    },
+    {
+      "type": "p",
+      "text": "這個原價和 FM26 現在在 Steam 台灣區的售價一樣，都是 NT$1,790，FM26 目前也沒打折。所以現在預購 FM27，比照原價買上一代還少付 NT$179。新作沒漲價，我覺得這是今天最實在的消息。英國區折後 £44.99，美國區 $53.99。"
+    },
+    {
+      "type": "p",
+      "text": "免費期涵蓋 Steam、Epic、Microsoft Store，以及 Xbox Game Pass Ultimate 和 PC Game Pass 的訂閱者，不必另外註冊。Microsoft Store 把它做成一個零元的附加內容，領了之後回主遊戲頁安裝。新的多人模式 Shuffle Draft 也在裡面。"
+    },
+    {
+      "type": "h",
+      "text": "免費玩到週三凌晨兩點"
+    },
+    {
+      "type": "p",
+      "text": "免費期到 11 月 3 日 18:00 GMT，換成台灣時間是 11 月 4 日（週三）凌晨兩點。過了這個時間，想一路玩到 11 月 10 日發售，就得先預購，而且只能在 SEGA 認可的數位通路買；Game Pass 訂閱者則靠訂閱接著玩。Steam 頁面寫九折優惠到 11 月 10 日。"
+    },
+    {
+      "type": "p",
+      "text": "繁體中文還是沒有。Steam 列了 20 種語言，中文只有簡體；Xbox 商店的資料也是簡體中文有介面、繁體中文沒有，官網的語言選單同樣只有簡體。"
+    },
+    {
+      "type": "h",
+      "text": "恩波利、比薩和直布羅陀不在名單上"
+    },
+    {
+      "type": "p",
+      "text": "10 月 28 日，官網貼出〈Football Manager 27 Licences〉。開頭第一句就是兩個新名字：法國女子頂級聯賽 Arkema Première Ligue 和沙烏地聯賽 ROSHN Saudi League，以完整授權聯賽的身分加入。名單上標「FM27 新授權」的也只有這兩個。前者在 FM26 只能玩、沒有授權，後者在 FM26 的名單上根本沒有。"
+    },
+    {
+      "type": "p",
+      "text": "拿它和 FM26 發售時那份名單（2025 年 10 月 22 日）逐項對，有幾個名字不見了。直布羅陀的聯賽和國家隊整個沒列；義大利俱樂部從 15 隊變成 13 隊，少的是恩波利（Empoli）和比薩（Pisa）。這是名單對名單的比較，授權名單上沒列，不等於遊戲裡就沒有它們。"
+    },
+    {
+      "type": "table",
+      "title": "兩份授權名單的差別",
+      "head": [
+        "項目",
+        "FM26 名單（2025 年 10 月 22 日，發售時版本）",
+        "FM27 名單（2026 年 10 月 28 日）"
+      ],
+      "rows": [
+        [
+          "新授權聯賽",
+          "沒有這兩個",
+          "Arkema Première Ligue、ROSHN Saudi League"
+        ],
+        [
+          "直布羅陀",
+          "聯賽與國家隊",
+          "名單上沒有"
+        ],
+        [
+          "義大利俱樂部",
+          "15 隊，含 Empoli、Pisa",
+          "13 隊，沒有 Empoli、Pisa"
+        ],
+        [
+          "北愛爾蘭（官方 10 月 16 日提過聯賽改制）",
+          "Premiership、Championship、Intermediate League",
+          "Premiership、Championship、NCL Premier、BetMcLean Cup"
+        ],
+        [
+          "威爾斯盃賽（官方 10 月 16 日提過聯賽改制）",
+          "JD FAW Welsh Cup、Nathaniel MG Cup",
+          "只列 JD Welsh Cup"
+        ],
+        [
+          "名單新列",
+          "沒有",
+          "German National Team（德國足協項下）、Croky Cup（比利時）、CampoBet 3. Division 與 KvindePokalen（丹麥）、National League Cup（英格蘭）、Trophée des Champions（法國）"
+        ]
+      ],
+      "caption": "依官網兩份授權名單逐項比對；FM26 名單是發售當時的版本。只換了贊助商或賽事名稱的項目不列；「名單新列」的項目，頁面沒有標為新授權。"
+    },
+    {
+      "type": "p",
+      "text": "多出來的名字也不少，最顯眼的是德國足協項下新列了德國國家隊，FM26 那份沒有。北愛和威爾斯的變動看起來最多，其實官方 10 月 16 日就說過，兩地的聯賽改制會放進 FM27。北愛名單裡的 NCL Premier 和 BetMcLean Cup 是新列的名字，不是丟了授權；威爾斯盃賽只列 JD Welsh Cup，FM26 名單上的 Nathaniel MG Cup 不在了。"
+    },
+    {
+      "type": "p",
+      "text": "名單的星號註腳多了一句 FM26 沒有的話：遊戲內的授權內容，依 FM27 的平台與版本而不同。底下另一行是老話，資料仍在權利人審核中，部分球隊與球員素材可能缺席。剛拿到授權的沙烏地 18 隊，免費版裡的素材齊不齊，現在還說不準。"
+    },
+    {
+      "type": "p",
+      "text": "亞洲那一欄，有日本 J1 到 J3 和女子 WE League、南韓 K 聯賽兩級、澳洲男女職業聯賽、阿聯，再加上新來的沙烏地。兩份名單都沒有台灣。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Football Manager 27 is free to play until 3 November",
+      "publisher": "Steam 公告（Sports Interactive）",
+      "date": "2026-10-29",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302235961",
+      "note": "發布時間 2026-10-29 18:28 UTC（Steam News API），作者 zachary.whyte；免費期、平台、預購九折與 SEGA 認可通路、Shuffle Draft 點名、「Different platforms may go live at different times」註腳、SI 論壇 bug 專區與資料審核註腳皆出自此篇。Epic 與 Game Pass 實際上線時刻未能核對；公告未說免費版玩家能否與預購玩家同場玩 Shuffle Draft。本報 10 月 30 日清晨查閱"
+    },
+    {
+      "title": "Football Manager 27 is free to play until 3 November",
+      "publisher": "Football Manager 官網",
+      "date": "2026-10-29",
+      "url": "https://www.footballmanager.com/news/football-manager-27-free-play-until-3-november",
+      "note": "新聞頁標 29.10.26，未標時刻，內文與 Steam 公告相同；10 月 30 日清晨為新聞列表最新一則"
+    },
+    {
+      "title": "Football Manager 27 Now Free to Play",
+      "publisher": "SEGA（sega.prezly.com）",
+      "date": "2026-10-29",
+      "url": "https://sega.prezly.com/football-manager-27-now-free-to-play",
+      "note": "頁面 published_time 2026-10-29 18:01 UTC；「officially underway」「Starting now」皆出自此篇"
+    },
+    {
+      "title": "Football Manager 27 商店頁",
+      "publisher": "Steam",
+      "date": "2026-10-30",
+      "url": "https://store.steampowered.com/app/4530370/Football_Manager_27/",
+      "note": "本報 10 月 30 日清晨查閱：頁面資料的免費時段 start 1793296800（2026-10-29 18:00 UTC）、end 1793728800（2026-11-03 18:00 UTC）；台灣區 NT$1,790 折後 NT$1,611，「Offer ends 10 November」；語言表 20 種含簡體中文、無繁體中文（l=tchinese 版本亦同）；appdetails（cc=tw、gb、us）折後價 NT$1,611、£44.99、$53.99，仍為 coming_soon、發售日 10 Nov 2026；10 月 26 日清晨三區皆無標價。FM26 Steam 台灣區 appdetails（10 月 30 日查）現價 NT$1,790、無折扣，只引現價。官網語言選單亦無繁體中文"
+    },
+    {
+      "title": "Football Manager 27（含 Launch Preview 附加內容）",
+      "publisher": "Xbox／Microsoft Store（en-GB）",
+      "date": "2026-10-30",
+      "url": "https://www.xbox.com/en-GB/games/store/football-manager-27/9n4nkmxdzcx6",
+      "note": "本報 10 月 30 日清晨查閱：附加內容 Football Manager 27 Launch Preview（9NCHS8Z80MMX）價格 0、releaseDate 2026-10-29 18:00 UTC、期限 11/03/2026 17:59:59；說明「go to the full game page to install」；主遊戲預購 £49.99、折後 £44.99；語言資料 zh-CN 有介面、zh-TW 無。Epic 商店頁回 403，未能核對"
+    },
+    {
+      "title": "Football Manager 27 Licences",
+      "publisher": "Football Manager 官網",
+      "date": "2026-10-28",
+      "url": "https://www.footballmanager.com/news/football-manager-27-licences",
+      "note": "頁面標 28.10.26，未標時刻；HTTP last-modified（10-29 19:26 GMT）為快取重建時間，不代表發布時間。Steam News 最近五則（10-19 Gameplay Preview、10-21 Play Free、10-21 15:47 UTC PlayGround.ru 轉載、10-27 Shuffle Draft、10-29 免費開放）與 SEGA 新聞稿列表皆無授權名單公告。名單中 Croky Cup、KvindePokalen 後有「***」，頁面沒有對應註腳。頁面未說明直布羅陀等缺項是未續約或只是未列。本報 10 月 30 日清晨查閱"
+    },
+    {
+      "title": "Football Manager 26 Licences",
+      "publisher": "Football Manager 官網",
+      "date": "2025-10-22",
+      "url": "https://www.footballmanager.com/news/football-manager-26-licences",
+      "note": "頁面標 22.10.25，為 FM26 發售當時的名單；本報 10 月 30 日清晨重讀，與 FM27 名單逐項比對（名單對名單，不代表遊戲內實際內容）"
+    },
+    {
+      "title": "Introducing Women's Football in FM26",
+      "publisher": "Football Manager 官網",
+      "date": "2025-09-18",
+      "url": "https://www.footballmanager.com/fm26/features/introducing-womens-football",
+      "note": "官網頁未標日期，日期取同文 Steam 公告（2025-09-18）；「The top division in France and top two divisions in Spain will also be playable in FM26」，頁面沒有點名 Arkema Première Ligue"
+    },
+    {
+      "title": "Roshn Saudi League makes debut in FM27",
+      "publisher": "Football Manager 官網",
+      "date": "2026-10-27",
+      "url": "https://www.footballmanager.com/news/roshn-saudi-league-makes-debut-fm27",
+      "note": "頁面標 27.10.26；18 支球隊與 59 個可玩國家"
+    },
+    {
+      "title": "Arkema Première Ligue fully licensed in Football Manager 27",
+      "publisher": "Football Manager 官網",
+      "date": "2026-10-19",
+      "url": "https://www.footballmanager.com/news/arkema-premiere-ligue-fully-licensed-football-manager-27"
+    },
+    {
+      "title": "FM27: 2D Match Engine, In-Game Editor and Deeper World Upgrades",
+      "publisher": "Football Manager 官網",
+      "date": "2026-10-16",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-2d-match-engine-game-editor-and-deeper-world-upgrades",
+      "note": "「two new licensed leagues」一句，未點名；北愛與威爾斯聯賽改制：「the implementation of the league restructures introduced in Northern Ireland and Wales」"
+    },
+    {
+      "title": "FM27: Introducing Shuffle Draft",
+      "publisher": "Football Manager 官網",
+      "date": "2026-10-27",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-introducing-shuffle-draft",
+      "note": "專頁未說 Shuffle Draft 是否在免費 Launch Preview 內"
+    },
+    {
+      "title": "Play Free: Football Manager 27 Launch Preview",
+      "publisher": "Steam 公告（Sports Interactive）",
+      "date": "2026-10-21",
+      "url": "https://store.steampowered.com/news/app/4530370/view/1847286114028442",
+      "note": "免費期日期、預購九折與資料審核註腳首次公布；10 月 26 日清晨 Steam 三區無標價為本報當時查閱"
+    },
+    {
+      "title": "Football Manager 27 launches from 10 November",
+      "publisher": "Football Manager 官網",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/news/football-manager-27-launches-10-november",
+      "note": "全平台數位版 11 月 10 日"
+    },
+    {
+      "title": "FM27: Elevated Match Day Atmosphere",
+      "publisher": "Football Manager 官網",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-elevated-match-day-atmosphere",
+      "note": "FAQ：實體 PS5 版 11 月 20 日（時程圖最後一項）"
+    }
+  ]
+}
