@@ -5,7 +5,7 @@
  "dek": "牆長過一公里，基地卻只有 18% 蓋了房子。前庭換過三個名字，洗衣間每戶每月只排得到半天。",
  "brief": "Karl-Marx-Hof 的牆長過一公里，基地卻只有 18% 蓋了房子，其餘是綠地、遊戲場和交通用地。正中央的前庭往後退，後牆有六座塔樓，圓拱通道從牆身穿過。大院今天還是市營住宅，洗衣間每戶每月排半天。",
  "topic_key": "city:vienna-karl-marx-hof",
- "updated_at": "2026-10-30T02:57:00+08:00",
+ "updated_at": "2026-10-30T03:04:00+08:00",
  "spoiler": null,
  "disclaimer": null,
  "hero": {
@@ -14,8 +14,8 @@
   "src": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Gel%C3%A4nde_Karl-Marx-Hof_1899.jpg",
   "width": 1114,
   "height": 652,
-  "alt": "黑白老照片：遠處是 Heiligenstadt 車站的建築，前景是一片菜園地。",
-  "caption": "1899 年，Max Mayer Sperling 拍攝的 Heiligenstadt 車站，前景是菜園，後來 1927–1930 年 Karl-Marx-Hof 就蓋在這一帶（Commons 說明）。圖取自 Seemann、Lunzer 編《Döbling 1860–1930. Album》（Wien 1998）。",
+  "alt": "黑白老照片：遠處是一棟白色的大型車站建築，前景是整齊分塊的菜圃，左右兩側有玻璃溫床的框架，沒有任何高樓。",
+  "caption": "1899 年，Max Mayer Sperling 拍攝的 Heiligenstadt 車站，前景是一塊塊菜圃，後來 1927–1930 年 Karl-Marx-Hof 就蓋在這一帶（Commons 說明）。圖取自 Seemann、Lunzer 編《Döbling 1860–1930. Album》（Wien 1998）。",
   "credit": "Max Mayer Sperling（† 1925）／Wikimedia Commons",
   "license": "Public domain",
   "license_url": "",
@@ -83,7 +83,7 @@
   },
   {
    "type": "p",
-   "text": "這塊地叫 Hagenwiese，是一條窄而長、超過一公里的地段，市政府自 1877 年起就握有。Wiener Wohnen 的介紹說，這裡早先有多瑙河的支流經過，後來是一片小型的菜園聚落，地質不好蓋。1899 年的老照片拍的是 Heiligenstadt 車站，前景是菜園，近三十年後的大院就蓋在那一帶。"
+   "text": "這塊地叫 Hagenwiese，是一條窄而長、超過一公里的地段，市政府自 1877 年起就握有。早先有多瑙河的支流經過，後來是一片小型的菜園聚落（Wiener Wohnen）。1899 年的老照片拍的是 Heiligenstadt 車站，前景是菜園，近三十年後的大院就蓋在那一帶。"
   },
   {
    "type": "p",
@@ -91,7 +91,7 @@
   },
   {
    "type": "p",
-   "text": "地底下是填平的舊多瑙河支流，樁子只能打成「懸浮樁」，不落在硬土上。後來一個側翼稍微下沉，反對黨在《Reichspost》上拿這件事打了一場新聞戰，說這些市營住宅蓋得差、有倒塌的危險。這份報紙早在 1927 年 10 月 21 日就出過一份號外，警告 Heiligenstädter Straße 上的這棟巨屋會塌（Das Rote Wien）。當時的人把這種設計看成革命性的，反對的人因此罵得兇。最後的造價是 2,860 萬先令，比預算的 3,250 萬低。"
+   "text": "舊河道填平的地不好蓋，樁子只能打成「懸浮樁」，不落在硬土上。後來一個側翼稍微下沉，反對黨在《Reichspost》上拿這件事打了一場新聞戰，說這些市營住宅蓋得差、有倒塌的危險。這份報紙早在 1927 年 10 月 21 日就出過一份號外，警告 Heiligenstädter Straße 上的這棟巨屋會塌（Das Rote Wien）。Wien Geschichte Wiki 說，這種設計在當時被看成革命性的。最後的造價是 2,860 萬先令，比預算的 3,250 萬低。"
   },
   {
    "type": "h",
@@ -99,11 +99,11 @@
   },
   {
    "type": "p",
-   "text": "每個週日 13:00，大院的公開導覽在 Heiligenstadt 車站前集合；車站是地鐵 U4 的終點（Waschsalon 官網，2026 年 10 月 30 日可見）。二戰的時候，這座車站是戰略目標，大院因為離它近，落下了許多炸彈（Wiener Wohnen）。"
+   "text": "每個週日 13:00，大院的公開導覽在 Heiligenstadt 車站前集合；車站是地鐵 U4 的終點（Waschsalon 官網，2026 年 10 月 30 日可見）。二戰時這座車站是戰略目標，大院離它近，落下了許多炸彈（Wiener Wohnen）。"
   },
   {
    "type": "p",
-   "text": "車站正對面，就是大院沿 Boschstraße 的外牆。Wiener Wohnen 寫道，這座大院對維也納社會民主黨有象徵的意義，要把工人階級的新自我形象擺給人看。Wiener Wohnen 這樣形容整棟樓：厚牆、巨大的拱形通道、大門和旗桿，立面的窗子小，唯一的裝飾是連續的陽台。同一份介紹還說，它看起來像宮殿，像堡壘，政治上的對手因此當它是挑釁，猜裡面藏著武器庫。"
+   "text": "車站正對面，就是大院沿 Boschstraße 的外牆。Wiener Wohnen 說，這座大院對維也納社會民主黨有象徵的意義，要把工人階級的新自我形象擺給人看；立面是厚牆、巨大的拱形通道、大門和旗桿，窗子小，唯一的裝飾是連續的陽台。它看起來像宮殿，像堡壘，政治上的對手因此當它是挑釁，猜裡面藏著武器庫。"
   },
   {
    "type": "p",
@@ -132,7 +132,7 @@
   },
   {
    "type": "p",
-   "text": "Boschstraße 的 32 號樓梯旁還有一塊，紀念奧地利工人 1934 年 2 月的抵抗。這面外牆上現在有兩個年份。"
+   "text": "Boschstraße 的 32 號樓梯旁還有一塊，紀念奧地利工人 1934 年 2 月的抵抗（Das Rote Wien）。"
   },
   {
    "type": "h",
@@ -140,12 +140,12 @@
   },
   {
    "type": "p",
-   "text": "同一棟樓有四個地址：Heiligenstädter Straße 82–92、Boschstraße 1–19、Geistingergasse 1、Grinzinger Straße 110，樓梯有 101 座。轉到正面。在一公里多長的牆正中央，樓往後退，向 Heiligenstädter Straße 敞開一座前庭，Wiener Wohnen 管它叫 Ehrenhof，榮譽庭院。前庭的後牆是整棟最高的一段：五層，六座塔樓，圓拱通道從這段牆穿過去。從這裡往兩邊走，高度一路降下來，先是四層，再是三層。"
+   "text": "同一棟樓有四個地址：Heiligenstädter Straße 82–92、Boschstraße 1–19、Geistingergasse 1、Grinzinger Straße 110，樓梯有 101 座。在一公里多長的牆正中央，樓往後退，朝 Heiligenstädter Straße 敞開一座前庭，Wiener Wohnen 管它叫 Ehrenhof，榮譽庭院。前庭的後牆是整棟最高的一段：五層，六座塔樓，圓拱通道從這段牆穿過去。從這裡往兩邊走，高度一路降下來，先是四層，再是三層。"
   },
   {
    "type": "svg",
    "title": "前庭與兩翼",
-   "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 340\"><text class=\"ink\" x=\"200\" y=\"18\" font-size=\"12\" text-anchor=\"middle\">正面各段的樓層數</text><rect class=\"soft\" x=\"20\" y=\"98\" width=\"60\" height=\"42\" stroke-width=\"1\"/><text class=\"muted\" x=\"50.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">3 層</text><rect class=\"soft\" x=\"80\" y=\"84\" width=\"60\" height=\"56\" stroke-width=\"1\"/><text class=\"muted\" x=\"110.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">4 層</text><rect class=\"soft\" x=\"140\" y=\"70\" width=\"120\" height=\"70\" stroke-width=\"1.6\"/><rect class=\"accent\" x=\"140\" y=\"70\" width=\"120\" height=\"70\" fill=\"none\" stroke-width=\"1.6\"/><text class=\"muted\" x=\"200.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">5 層</text><rect class=\"soft\" x=\"260\" y=\"84\" width=\"60\" height=\"56\" stroke-width=\"1\"/><text class=\"muted\" x=\"290.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">4 層</text><rect class=\"soft\" x=\"320\" y=\"98\" width=\"60\" height=\"42\" stroke-width=\"1\"/><text class=\"muted\" x=\"350.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">3 層</text><rect class=\"soft\" x=\"146\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"166\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"186\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"206\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"226\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"246\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><text class=\"ink\" x=\"200\" y=\"50\" font-size=\"10\" text-anchor=\"middle\">六座塔樓</text><path class=\"paper\" d=\"M146 140 L146 132 A9 9 0 0 1 164 132 L164 140 Z\" stroke-width=\"1\"/><path class=\"paper\" d=\"M176 140 L176 132 A9 9 0 0 1 194 132 L194 140 Z\" stroke-width=\"1\"/><path class=\"paper\" d=\"M206 140 L206 132 A9 9 0 0 1 224 132 L224 140 Z\" stroke-width=\"1\"/><path class=\"paper\" d=\"M236 140 L236 132 A9 9 0 0 1 254 132 L254 140 Z\" stroke-width=\"1\"/><text class=\"muted\" x=\"200\" y=\"172\" font-size=\"10\" text-anchor=\"middle\">中段的圓拱通道（拱數為示意）</text><text class=\"ink\" x=\"200\" y=\"196\" font-size=\"12\" text-anchor=\"middle\">前庭平面（正中央往後退）</text><rect class=\"soft\" x=\"20\" y=\"262\" width=\"125\" height=\"36\" stroke-width=\"1\"/><rect class=\"soft\" x=\"255\" y=\"262\" width=\"125\" height=\"36\" stroke-width=\"1\"/><rect class=\"soft\" x=\"145\" y=\"212\" width=\"110\" height=\"26\" stroke-width=\"1.6\"/><rect class=\"accent\" x=\"145\" y=\"212\" width=\"110\" height=\"26\" fill=\"none\" stroke-width=\"1.6\"/><text class=\"ink\" x=\"200\" y=\"229\" font-size=\"10\" text-anchor=\"middle\">後牆：5 層、6 座塔、拱形通道</text><text class=\"muted\" x=\"82\" y=\"284\" font-size=\"10\" text-anchor=\"middle\">兩翼</text><text class=\"muted\" x=\"318\" y=\"284\" font-size=\"10\" text-anchor=\"middle\">兩翼</text><circle class=\"gold\" cx=\"200\" cy=\"262\" r=\"5\" stroke-width=\"1\"/><text class=\"ink\" x=\"200\" y=\"282\" font-size=\"10\" text-anchor=\"middle\">Sämann</text><text class=\"ink\" x=\"200\" y=\"252\" font-size=\"10\" text-anchor=\"middle\">Ehrenhof／12.-Februar-Platz</text><path class=\"muted\" d=\"M10 308 L390 308\" stroke-width=\"3\" opacity=\"0.5\"/><text class=\"muted\" x=\"200\" y=\"326\" font-size=\"11\" text-anchor=\"middle\">Heiligenstädter Straße</text></svg>",
+   "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 340\"><text class=\"ink\" x=\"200\" y=\"18\" font-size=\"12\" text-anchor=\"middle\">正面各段的樓層數</text><rect class=\"soft\" x=\"20\" y=\"98\" width=\"60\" height=\"42\" stroke-width=\"1\"/><text class=\"muted\" x=\"50.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">3 層</text><rect class=\"soft\" x=\"80\" y=\"84\" width=\"60\" height=\"56\" stroke-width=\"1\"/><text class=\"muted\" x=\"110.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">4 層</text><rect class=\"soft\" x=\"140\" y=\"70\" width=\"120\" height=\"70\" stroke-width=\"1.6\"/><rect class=\"accent\" x=\"140\" y=\"70\" width=\"120\" height=\"70\" fill=\"none\" stroke-width=\"1.6\"/><text class=\"muted\" x=\"200.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">5 層</text><rect class=\"soft\" x=\"260\" y=\"84\" width=\"60\" height=\"56\" stroke-width=\"1\"/><text class=\"muted\" x=\"290.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">4 層</text><rect class=\"soft\" x=\"320\" y=\"98\" width=\"60\" height=\"42\" stroke-width=\"1\"/><text class=\"muted\" x=\"350.0\" y=\"156\" font-size=\"10\" text-anchor=\"middle\">3 層</text><rect class=\"soft\" x=\"146\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"166\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"186\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"206\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"226\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><rect class=\"soft\" x=\"246\" y=\"56\" width=\"10\" height=\"14\" stroke-width=\"1\"/><text class=\"ink\" x=\"200\" y=\"50\" font-size=\"10\" text-anchor=\"middle\">六座塔樓</text><path class=\"paper\" d=\"M146 140 L146 132 A9 9 0 0 1 164 132 L164 140 Z\" stroke-width=\"1\"/><path class=\"paper\" d=\"M176 140 L176 132 A9 9 0 0 1 194 132 L194 140 Z\" stroke-width=\"1\"/><path class=\"paper\" d=\"M206 140 L206 132 A9 9 0 0 1 224 132 L224 140 Z\" stroke-width=\"1\"/><path class=\"paper\" d=\"M236 140 L236 132 A9 9 0 0 1 254 132 L254 140 Z\" stroke-width=\"1\"/><text class=\"muted\" x=\"200\" y=\"172\" font-size=\"10\" text-anchor=\"middle\">中段的圓拱通道（拱數為示意）</text><text class=\"ink\" x=\"200\" y=\"196\" font-size=\"12\" text-anchor=\"middle\">前庭平面（正中央往後退）</text><rect class=\"soft\" x=\"20\" y=\"262\" width=\"125\" height=\"36\" stroke-width=\"1\"/><rect class=\"soft\" x=\"255\" y=\"262\" width=\"125\" height=\"36\" stroke-width=\"1\"/><rect class=\"soft\" x=\"100\" y=\"208\" width=\"200\" height=\"30\" stroke-width=\"1.6\"/><rect class=\"accent\" x=\"100\" y=\"208\" width=\"200\" height=\"30\" fill=\"none\" stroke-width=\"1.6\"/><text class=\"ink\" x=\"200\" y=\"227\" font-size=\"10\" text-anchor=\"middle\">後牆：5 層、6 座塔、拱形通道</text><text class=\"muted\" x=\"82\" y=\"284\" font-size=\"10\" text-anchor=\"middle\">兩翼</text><text class=\"muted\" x=\"318\" y=\"284\" font-size=\"10\" text-anchor=\"middle\">兩翼</text><circle class=\"gold\" cx=\"200\" cy=\"262\" r=\"5\" stroke-width=\"1\"/><text class=\"ink\" x=\"200\" y=\"282\" font-size=\"10\" text-anchor=\"middle\">Sämann</text><text class=\"ink\" x=\"200\" y=\"252\" font-size=\"10\" text-anchor=\"middle\">Ehrenhof／12.-Februar-Platz</text><path class=\"muted\" d=\"M10 308 L390 308\" stroke-width=\"3\" opacity=\"0.5\"/><text class=\"muted\" x=\"200\" y=\"326\" font-size=\"11\" text-anchor=\"middle\">Heiligenstädter Straße</text></svg>",
    "caption": "示意，不按比例，依 Wiener Wohnen〈Karl-Marx-Hof〉與 Wien Geschichte Wiki〈Karl-Marx-Hof〉的文字描述繪製。上圖的拱門數目、兩翼長度只是示意；後方庭院的位置來源沒有標明，圖中從略。"
   },
   {
@@ -169,7 +169,7 @@
   },
   {
    "type": "p",
-   "text": "Das Rote Wien 描述這棟樓的外觀：入口厚重，帶點古老的味道；陽台、涼廊和凸窗另漆了不同的顏色，看起來像是貼上去的。圓拱上方站著 Josef Franz Riedl 的四件彩色陶塑：啟蒙、解放、兒童照護、身體文化。前庭中央是 Otto Hofner 的青銅像《Sämann》，播種的人。Bundesdenkmalamt 整修時科學檢驗過大院原本的顏色，發現這裡本來有一套顏色導引系統。"
+   "text": "Das Rote Wien 描述這棟樓的外觀：入口厚重，帶點古老的味道；陽台、涼廊和凸窗另漆了不同的顏色，看起來像是貼上去的。圓拱上方站著 Josef Franz Riedl 的四件彩色陶塑：啟蒙、解放、兒童照護、身體文化。前庭中央是 Otto Hofner 的青銅像《Sämann》，播種的人。Bundesdenkmalamt 整修時科學檢驗過大院原本的顏色，發現這裡本來有一套顏色導引系統。依我看，一公里長的牆上，塔、旗桿、陶塑、銅像全擠在這個缺口周圍，這裡是整棟樓最集中擺明了要給人看的地方。"
   },
   {
    "type": "h",
@@ -177,19 +177,23 @@
   },
   {
    "type": "p",
-   "text": "大院的住戶裡有 Hugo Meisl（1881–1937），1910 年起擔任奧地利足協的 Verbandskapitän，也是 1930 年代初那支 Wunderteam 的創造者。他同情社會民主黨，在大院裡租了一戶。1918 年 12 月他寫過一句信條：社會民主主義的國際、資本的國際、科學的國際之外，還該有一個運動的國際。同樣從 1929 年起住在這裡的，還有社會學者 Paul Felix Lazarsfeld 與 Marie Jahoda 夫婦，他們是 Marienthal 失業者研究的發起人與作者。"
+   "text": "大院的住戶裡有 Hugo Meisl（1881–1937），1910 年起擔任奧地利足協的代表隊負責人（Verbandskapitän），也是 1930 年代初那支 Wunderteam 的創造者。他同情社會民主黨，搬進了大院的一戶。1918 年 12 月他寫過一句信條：社會民主主義的國際、資本的國際、科學的國際之外，還該有一個運動的國際。"
   },
   {
    "type": "p",
-   "text": "1934 年 2 月 12 日下午，大院響起第一批槍聲。Wiener Wohnen 說，共和保衛同盟（Republikanischer Schutzbund）的成員與工人據守在裡面，警察、Heimwehr 與軍隊對大院開砲，戰鬥中有數名工人死亡，有些人被俘，遭到折磨，當地的領導者被處決；有一塊牌子記著 2 月 15 日，這天大院失守。Meisl 的住處直接受到砲擊波及；當年為紀念瑞士對奧地利的國際賽而頒贈的獎盃，如今有洞，Wien Geschichte Wiki 說它到今天仍在提醒人那段日子。"
+   "text": "同樣從 1929 年起住在這裡的，還有社會學者 Paul Felix Lazarsfeld 與 Marie Jahoda 夫婦，他們是 Marienthal 失業者研究的發起人與作者。"
   },
   {
    "type": "p",
-   "text": "Stiege 3 的咖啡館，在 Ständestaat 時期被改成羅馬天主教的禮拜處，後來納粹把它變成黨的集會室（Das Rote Wien）。戰後的名字也跟著換。大院先被叫成 Biedermannhof，用的是指揮官 Karl Biedermann 的名字；1935 年 7 月 25 日改成 Heiligenstädter Hof，二戰之後才改回 Karl-Marx-Hof。Biedermann 本人後來在抵抗納粹的行動裡，準備把維也納不經戰鬥交給紅軍，1945 年 4 月被納粹公開吊死。"
+   "text": "1934 年 2 月 12 日下午，大院響起第一批槍聲。Wiener Wohnen 說，共和保衛同盟（Republikanischer Schutzbund）的成員與工人據守在裡面，警察、Heimwehr 與軍隊對大院開砲，戰鬥中有數名工人死亡，有些人被俘，遭到折磨，當地的領導者被處決；有一塊牌子記著 2 月 15 日，這天大院失守。Waschsalon 說，大院在這個月成了反抗奧地利法西斯的中心之一。Meisl 的住處直接受到砲擊波及；當年為紀念瑞士對奧地利的國際賽而頒贈的獎盃，如今有洞，Wien Geschichte Wiki 說它到今天仍在提醒人那段日子。"
   },
   {
    "type": "p",
-   "text": "前庭的名字也換了三次。1930 年叫 Karl-Marx-Platz，1935 到 1985 年叫 Heiligenstädter Platz，1985 年 1 月起叫 12.-Februar-Platz，紀念的就是 1934 年 2 月 12 日。"
+   "text": "社會民主黨被取締之後，大院的名字換了又換。先叫 Biedermannhof，用的是指揮官 Karl Biedermann 的名字；1935 年 7 月 25 日改成 Heiligenstädter Hof，二戰之後才改回 Karl-Marx-Hof。Biedermann 本人後來在抵抗納粹的行動裡，準備把維也納不經戰鬥交給紅軍，1945 年 4 月被納粹公開吊死。前庭也換了三次名字：1930 年叫 Karl-Marx-Platz，1935 到 1985 年叫 Heiligenstädter Platz，1985 年 1 月起叫 12.-Februar-Platz，紀念的就是 1934 年 2 月 12 日。"
+  },
+  {
+   "type": "p",
+   "text": "房間跟著換用途。Stiege 3 的咖啡館，在 Ständestaat 時期被改成羅馬天主教的禮拜處，後來納粹把它變成黨的集會室（Das Rote Wien）。"
   },
   {
    "type": "h",
@@ -197,23 +201,23 @@
   },
   {
    "type": "p",
-   "text": "基地 156,027 平方公尺，蓋了房子的有 28,751 平方公尺，約 18%。Wien Geschichte Wiki 收了一張 1956 年 5 月的空照圖，視線朝南，越過大院的兩座內院和今天的 12.-Februar-Platz。Waschsalon 的說法是，其餘是綠地、遊戲場和交通用地。紅色維也納的住宅區，內院面積原先規定占基地 20%，實際提高到至少 50%，有的到 80%（Das Rote Wien）。"
+   "text": "基地 156,027 平方公尺，蓋了房子的有 28,751 平方公尺，約 18%。Waschsalon 的說法是，其餘是綠地、遊戲場和交通用地。Das Rote Wien 說，紅色維也納的住宅區，內院面積原先規定占基地 20%，實際提高到至少 50%，有的到 80%。"
   },
   {
    "type": "p",
-   "text": "Wiener Wohnen 說大院「像堡壘」，依我看只描述了牆；牆圍起來的是一大片院子、廣場和小徑。Das Rote Wien 的描述是封閉式的住宅院落，帶著大而宜人的花園內院。同一份介紹也說，這些院子是讓住戶相遇的地方，要給人歸屬與安全的感覺。Wien Geschichte Wiki 有張照片的說明寫著，Felix-Braun-Gasse 穿過大院的一道通道，通道左邊是 Beethoven-Apotheke，門牌 Heiligenstädter Straße 82。堡壘不會把一條街放進牆身裡。"
+   "text": "Wiener Wohnen 說大院「像堡壘」，依我看只描述了牆。Das Rote Wien 的描述是封閉式的住宅院落，帶著大而宜人的花園內院；Wiener Wohnen 也說，這些院子是讓住戶相遇的地方，要給人歸屬與安全的感覺。Wien Geschichte Wiki 有張照片的說明寫著，Felix-Braun-Gasse 穿過大院的一道通道，通道左邊是 Beethoven-Apotheke，門牌 Heiligenstädter Straße 82。堡壘不會把一條街放進牆身裡。"
   },
   {
    "type": "p",
-   "text": "牆裡面原本裝的東西，是另一半答案。開幕時就有兩間中央洗衣房（62 個洗槽）、兩處浴室（20 個浴缸、30 個淋浴）、兩所幼兒園、牙科診所、孕產婦諮詢站、圖書館、青少年之家、郵局、藥房、健保所的門診，還有 25 家商店。1929 年成立、由建築師 Ernst Lichtblau 主持的室內裝潢與住宅衛生諮詢站，也設在這裡；Wien Geschichte Wiki 有一張 1930 年的照片，拍的是 Heiligenstädter Straße 與 Geistingergasse 轉角的臨街店面，裡面是奧地利住宅改革協會的室內裝潢諮詢站。住的是 1,382 戶，約 5,000 人；後來有些戶合併，現在是一千兩百多戶。Wiener Wohnen 現在的統計列了 45 個 Lokale（商用空間，沒有細分用途）；院內沒有停車位，沒有腳踏車箱，有放助行器的箱子。"
+   "text": "牆裡面裝的東西，要另外算。大院開幕時住的是 1,382 戶，約 5,000 人；後來有些戶合併，現在是一千兩百多戶。當時就有兩間中央洗衣房（62 個洗槽）、兩處浴室（20 個浴缸、30 個淋浴）、兩所幼兒園、牙科診所、孕產婦諮詢站、圖書館、青少年之家、郵局、藥房、健保所的門診，還有 25 家商店。1,382 戶共用 62 個洗槽，平均二十二戶分一個，這是我自己除出來的。1929 年成立、由建築師 Ernst Lichtblau 主持的室內裝潢與住宅衛生諮詢站，也設在這裡。Wiener Wohnen 現在的統計列了 45 個 Lokale（商用空間，沒有細分用途）；院內沒有停車位，沒有腳踏車箱，有放助行器的箱子。"
   },
   {
    "type": "p",
-   "text": "紅色維也納要給住戶的是「明亮、乾燥、有自來水和廁所」的家，對照的是出租公寓裡共用水龍頭（Bassena）的住法（Wiener Wohnen）。一次大戰後，社會民主黨在維也納市政廳說了算，1922 年維也納成為獨立的邦；1923 年 1 月 20 日，市議會通過一項專款專用的住宅稅（Das Rote Wien）。同一份 Wiener Wohnen 的資料說，市政府在兩次大戰之間蓋了 63,000 戶。以紅色維也納市營住宅的一般情形來說，多數住戶的家很小，40 到 50 平方公尺，1926 年一戶平均的租金只占工人工資的 5% 到 10%。"
+   "text": "紅色維也納要給住戶的是「明亮、乾燥、有自來水和廁所」的家，對照的是出租公寓裡共用水龍頭（Bassena）的住法（Wiener Wohnen）。一次大戰後，社會民主黨在維也納市政廳說了算，1922 年維也納成為獨立的邦；1923 年 1 月 20 日，市議會通過一項專款專用的住宅稅（Das Rote Wien）。Wiener Wohnen 的資料說，市政府在兩次大戰之間蓋了 63,000 戶。Das Rote Wien 對市營住宅的一般描述是：多數住戶的家很小，40 到 50 平方公尺；1926 年一戶平均的租金，只占工人工資的 5% 到 10%。"
   },
   {
    "type": "p",
-   "text": "Wien Geschichte Wiki 還提到，到今天仍有講究建築的旅人從世界各地來看它，它也上過奧地利郵政「建築系列」的郵票。1992 年完成的那輪整修，加裝了 50 部電梯（Das Rote Wien）；Wien Geschichte Wiki 記載，這次整修有住戶密切參與。"
+   "text": "1992 年完成的那輪整修，加裝了 50 部電梯（Das Rote Wien）。維也納市 1990 年的新聞稿稱它是第一共和時期全世界最重要的市營住宅區，並說這輪整修要花 4 億多先令，租金靠高額公共補助，對住戶仍然負擔得起。Wien Geschichte Wiki 記載，這次整修有住戶密切參與。"
   },
   {
    "type": "h",
@@ -229,7 +233,15 @@
   },
   {
    "type": "p",
-   "text": "現在的展覽有第二個入口的坡道，二樓有樓梯升降椅，頂樓的節慶文化展區沒有無障礙通道（Waschsalon 官網）。Halteraugasse 的名字，Wien Geschichte Wiki 認為多半來自一座多瑙河的小島，牧人曾把牛趕到那裡吃草。7 號是 Waschsalon Nr. 2。一樓到今天仍在洗衣服，用的是現代機器，只有住戶能進；二樓原本是浴缸和淋浴的浴室，2010 年 5 月 1 日起是紅色維也納的常設展，開放時間是週四 13:00 到 18:00、週日 12:00 到 16:00（官網 2026 年 10 月 30 日可見）。1990 年 10 月，維也納市的新聞稿預告大院 60 週年的紀念會，地點寫的是 Halteraugasse 的 Mieterbüro，住戶辦公室，前 Waschsalon。週日導覽從前庭走起，在 Waschsalon Nr. 2 結束。"
+   "text": "週日的導覽從前庭走起，在 Waschsalon Nr. 2 結束。1990 年 10 月，維也納市的新聞稿預告大院 60 週年的紀念會，地點寫的是 Halteraugasse 的 Mieterbüro，住戶辦公室，前 Waschsalon。"
+  },
+  {
+   "type": "p",
+   "text": "Halteraugasse 的名字，Wien Geschichte Wiki 認為多半來自一座多瑙河的小島，牧人曾把牛趕到那裡吃草。7 號是 Waschsalon Nr. 2，二樓原本是浴缸和淋浴的浴室，2010 年 5 月 1 日起是紅色維也納的常設展，分紅色維也納時期（1919–1934）、市營住宅與配套設施、教育與文化工作、工人運動的節慶文化四個主題（Das Rote Wien）。開放時間是週四 13:00 到 18:00、週日 12:00 到 16:00，成人票 7 歐元，週日 13:00 的導覽連入場 12 歐元，只收現金（官網 2026 年 10 月 30 日可見）。展覽有第二個入口的坡道，二樓有樓梯升降椅，頂樓的節慶文化展區沒有無障礙通道（Waschsalon 官網）。"
+  },
+  {
+   "type": "p",
+   "text": "Waschsalon 的一樓到今天仍在洗衣服，用的是現代機器，只有住戶能進。"
   }
  ],
  "sources": [
