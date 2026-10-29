@@ -15,5 +15,10 @@
       "city"
     ],
     "note": "tactics 已寫、審稿、總編重寫、忠實度核對並推送；validate 僅字數 WARN"
+  },
+  "3": {
+    "finished_at": "2026-10-30T03:29:02+08:00",
+    "missing": [],
+    "note": "football 初稿與 city（Karl-Marx-Hof）完成，皆經審稿、總編重寫、忠實度核對；football 女足 HB Køge 賽果待第 4 班補報"
   }
 }
