@@ -16,5 +16,10 @@
       "philosophy"
     ],
     "note": "文明（沃辛漢的啤酒桶郵局）與攝影（一面櫥窗，兩個地名）完成審稿、總編重寫、忠實度核對並推送"
+  },
+  "3": {
+    "finished_at": "2026-10-31T03:22:33+08:00",
+    "missing": [],
+    "note": "football 初稿與 philosophy（忒修斯之船）完成：審稿、總編重寫、忠實度核對皆做，validate 無 ERROR；football 僅字數 WARN"
   }
 }
