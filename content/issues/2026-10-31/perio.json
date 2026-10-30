@@ -1,0 +1,157 @@
+{
+  "column": "perio",
+  "date": "2026-10-31",
+  "title": "戒菸組只有 10 人，治療沒被拖累",
+  "dek": "74 名牙周炎病人照初診那天的菸量分四組，追蹤最長 7 年。一天抽不到 20 支的輕度組，治療反應也落在後面。",
+  "brief": "初診前已經戒菸的 10 名牙周炎病人，治療反應沒被過去的菸史拖累；還在抽的，不論一天幾支，探測深度減少與附著獲得都比較少。只是這組人數少，摘要也沒說他們戒了多久。",
+  "takeaway": "Kaldahl 等追蹤 74 名病人最長 7 年，還在抽的不論一天幾支，治療後探測深度減少與附著獲得都較少；已戒菸者沒被拖累，但只有 10 人、戒多久不明。病歷要記到一天幾支。",
+  "quiz": "病人以前抽菸、現在戒了，牙周治療的效果會比較差嗎？",
+  "topic_key": "perio:doi:10.1902/jop.1996.67.7.675",
+  "updated_at": "2026-10-31T01:10:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Bone_loss_in_periapical_xray.jpg",
+    "width": 668,
+    "height": 1000,
+    "alt": "牙科根尖 X 光片，三顆牙並排，牙根周圍的齒槽骨大量流失",
+    "caption": "上傳者說明這是一位吸菸病人的根尖片，可見骨流失。影像與 Kaldahl 等人的研究受試者無關。",
+    "credit": "Shaimaa Abdellatif，Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bone_loss_in_periapical_xray.jpg"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "內布拉斯加大學的 Kaldahl 團隊收了 74 名中度到重度牙周炎病人，照初診那天的菸量分組，治療後追蹤最長 7 年。1996 年刊在《牙周病學期刊》（*J Periodontol*）的摘要，最後一句寫的是其中 10 個人，初診前已經戒菸的那一組："
+    },
+    {
+      "type": "quote",
+      "text": "過去的吸菸史，對治療反應沒有不利影響。",
+      "original": "A past history of smoking was not deleterious to the response to therapy.",
+      "cite": "Kaldahl 等（1996）摘要"
+    },
+    {
+      "type": "p",
+      "text": "這組只有 10 個人，摘要也沒交代他們戒了多久。要問戒多久才夠，這篇答不上來。"
+    },
+    {
+      "type": "p",
+      "text": "還在抽的，抽多抽少都落在後面。一天 20 支以上算重度，19 支以下算輕度，兩組從積極治療剛結束，一路到整段支持性牙周治療（supportive periodontal treatment, SPT），探測深度（probing depth, PD）減少得都比已戒菸和從未吸菸的兩組少，臨床附著水準（clinical attachment level, CAL）的獲得也比較少。"
+    },
+    {
+      "type": "p",
+      "text": "臼齒根分岔的差距到維護期才出現。治療剛結束時，四組的水平探測附著水準（horizontal probing attachment level, HAL）變化差不多；進了 SPT，兩個吸菸組流失得比較多。"
+    },
+    {
+      "type": "p",
+      "text": "摘要只講誰多誰少，沒給各組的平均數。差了幾毫米，光憑摘要說不出來。"
+    },
+    {
+      "type": "svg",
+      "title": "四組與時程",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 292\"><text class=\"ink\" x=\"12\" y=\"22\" font-size=\"13\" font-weight=\"700\">74 人，依初診那天的菸量分四組</text><text class=\"ink\" x=\"12\" y=\"54\" font-size=\"11\">重度：每天 20 支以上</text><rect class=\"accent\" x=\"150\" y=\"41\" width=\"155\" height=\"18\" rx=\"3\"/><text class=\"ink\" x=\"311\" y=\"54\" font-size=\"11\">31 人</text><text class=\"ink\" x=\"12\" y=\"82\" font-size=\"11\">輕度：每天 19 支以下</text><rect class=\"accent\" x=\"150\" y=\"69\" width=\"75\" height=\"18\" rx=\"3\"/><text class=\"ink\" x=\"231\" y=\"82\" font-size=\"11\">15 人</text><text class=\"ink\" x=\"12\" y=\"110\" font-size=\"11\">已戒菸</text><rect class=\"gold\" x=\"150\" y=\"97\" width=\"50\" height=\"18\" rx=\"3\"/><text class=\"ink\" x=\"206\" y=\"110\" font-size=\"11\">10 人</text><text class=\"ink\" x=\"12\" y=\"138\" font-size=\"11\">從未吸菸</text><rect class=\"gold\" x=\"150\" y=\"125\" width=\"90\" height=\"18\" rx=\"3\"/><text class=\"ink\" x=\"246\" y=\"138\" font-size=\"11\">18 人</text><rect class=\"soft\" x=\"12\" y=\"164\" width=\"100\" height=\"58\" rx=\"4\"/><text class=\"ink\" x=\"62\" y=\"185\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"700\">四種治療</text><text class=\"muted\" x=\"62\" y=\"202\" font-size=\"10\" text-anchor=\"middle\">同團隊論文：隨機分象限</text><rect class=\"soft\" x=\"130\" y=\"164\" width=\"100\" height=\"58\" rx=\"4\"/><text class=\"ink\" x=\"180\" y=\"185\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"700\">積極治療</text><text class=\"muted\" x=\"180\" y=\"200\" font-size=\"10\" text-anchor=\"middle\">非手術後 4 週、</text><text class=\"muted\" x=\"180\" y=\"213\" font-size=\"10\" text-anchor=\"middle\">手術後 10 週量</text><rect class=\"soft\" x=\"248\" y=\"164\" width=\"100\" height=\"58\" rx=\"4\"/><text class=\"ink\" x=\"298\" y=\"185\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"700\">維護治療</text><text class=\"muted\" x=\"298\" y=\"202\" font-size=\"10\" text-anchor=\"middle\">每 3 個月，最長 7 年</text><line class=\"ink\" x1=\"113\" y1=\"189\" x2=\"124\" y2=\"189\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon class=\"ink\" points=\"124,185 130,189 124,193\"/><line class=\"ink\" x1=\"231\" y1=\"189\" x2=\"242\" y2=\"189\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon class=\"ink\" points=\"242,185 248,189 242,193\"/><rect class=\"accent\" x=\"12\" y=\"236\" width=\"14\" height=\"10\"/><text class=\"ink\" x=\"32\" y=\"245\" font-size=\"10.5\">還在抽：探測深度減少、附著獲得都較少</text><rect class=\"gold\" x=\"12\" y=\"258\" width=\"14\" height=\"10\"/><text class=\"ink\" x=\"32\" y=\"267\" font-size=\"10.5\">已戒菸、從未吸菸：反應較好</text><text class=\"muted\" x=\"12\" y=\"286\" font-size=\"10\">四組的探診出血沒有差別</text></svg>",
+      "caption": "原創圖解，依 Kaldahl 等（1996）摘要的分組、人數與測量時點繪製；治療的象限分配與回診間隔依同團隊 1994、1996 年論文。長條長度依人數。"
+    },
+    {
+      "type": "h",
+      "text": "菌斑偏高的，摘要只點名重度組"
+    },
+    {
+      "type": "p",
+      "text": "齦上菌斑（supragingival plaque）陽性部位比例偏高的，摘要只點名重度組。輕度組的菌斑它沒另外講，我猜跟已戒菸、從未吸菸的兩組差不多；果真如此，輕度組治療反應落後，就不能全推給刷不乾淨。"
+    },
+    {
+      "type": "p",
+      "text": "這個猜測站不太穩。輕度組只有 15 人，而同團隊 1994 年的另一篇，同樣是 74 名病人、只分抽與不抽，統計上看到吸菸者的齦上菌斑和探診出血有略多的傾向。"
+    },
+    {
+      "type": "h",
+      "text": "吸菸欄要寫到支數"
+    },
+    {
+      "type": "list",
+      "items": [
+        "初診問菸，問到一天幾支、現在還抽不抽，不要只勾有或無。",
+        "吸菸病人再評估，我不會拿出血多寡判斷治療有沒有效。這篇四組的探診出血（bleeding on probing, BOP）沒有差別，探測深度與附著卻分成兩邊。",
+        "吸菸者的臼齒根分岔，在維護期流失得比較多，回診時水平探測照量。"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "2017 年世界研討會的分期分級，把吸菸列為分級的修飾因子：不吸菸放 A 級欄，一天不到 10 支放 B 級欄，10 支以上放 C 級欄。"
+    },
+    {
+      "type": "paper",
+      "citation": "Kaldahl WB, Johnson GK, Patil KD, Kalkwarf KL. Levels of cigarette consumption and response to periodontal therapy. *J Periodontol*. 1996;67(7):675–681.",
+      "doi": "10.1902/jop.1996.67.7.675",
+      "pmid": "8832478",
+      "link": "https://doi.org/10.1902/jop.1996.67.7.675",
+      "access": "依摘要與同團隊論文摘要整理",
+      "question": "一天抽多少、戒了沒有，會不會改變牙周治療的效果？",
+      "design": "依初診時吸菸量分四組；每人四種治療（同團隊論文：同口對照、隨機分配象限），之後支持性牙周治療最長 7 年",
+      "sample": "74 名中度到重度牙周炎病人：重度吸菸 31、輕度吸菸 15、已戒菸 10、從未吸菸 18"
+    }
+  ],
+  "sources": [
+    {
+      "title": "PubMed 書目與摘要：Levels of cigarette consumption and response to periodontal therapy（PMID 8832478）",
+      "publisher": "National Library of Medicine",
+      "date": "1996-07",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8832478/",
+      "note": "以 E-utilities efetch 讀取摘要：74 人、四組定義與人數、四種療法、SPT 最長 7 年、6 點測量、測量時點、PD／CAL／HAL／BOP／PL 結果與結論句。全文需訂閱，未取得；Europe PMC 記為非開放取用"
+    },
+    {
+      "title": "Kaldahl WB, Johnson GK, Patil KD, Kalkwarf KL. Levels of Cigarette Consumption and Response to Periodontal Therapy. J Periodontol 1996;67(7):675–681",
+      "publisher": "Crossref",
+      "date": "1996-07",
+      "url": "https://api.crossref.org/works/10.1902/jop.1996.67.7.675",
+      "note": "卷期頁與作者全名"
+    },
+    {
+      "title": "Kaldahl WB, Kalkwarf KL, Patil KD, Molvar MP, Dyer JK. Long-term evaluation of periodontal therapy: I. Response to 4 therapeutic modalities. J Periodontol 1996;67(2):93–102",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "1996-02",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8667142/",
+      "note": "依摘要：82 名病人，同口對照，CS、RP、MW、FO 隨機分到象限；三階段治療，SPT 最長 7 年"
+    },
+    {
+      "title": "Kaldahl WB, Kalkwarf KL, Patil KD, Molvar MP, Dyer JK. Long-term evaluation of periodontal therapy: II. Incidence of sites breaking down. J Periodontol 1996;67(2):103–108",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "1996-02",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8667129/",
+      "note": "依摘要：SPT 每 3 個月；CAL 比基準流失 ≥3 mm 為 breakdown site；Patients with higher breakdown incidences tended to be smokers at the initial exam"
+    },
+    {
+      "title": "Ah MK, Johnson GK, Kaldahl WB, Patil KD, Kalkwarf KL. The effect of smoking on the response to periodontal therapy. J Clin Periodontol 1994;21(2):91–97",
+      "publisher": "Europe PMC",
+      "date": "1994-02",
+      "url": "https://europepmc.org/article/MED/8144739",
+      "note": "依摘要：74 名成人，同口對照、同樣四種療法；積極治療後與 6 年維護期每年，吸菸者 PD 減少與附著獲得較少（p<0.05），≥7 mm 最明顯；3 個月維護"
+    },
+    {
+      "title": "Staging and Grading Periodontitis（表格）",
+      "publisher": "American Academy of Periodontology",
+      "date": "2019-08",
+      "url": "https://www.perio.org/wp-content/uploads/2019/08/Staging-and-Grading-Periodontitis.pdf",
+      "note": "分級修飾因子：Smoking — Non-smoker／<10 cigarettes/day／≥10 cigarettes/day 分列 A、B、C 欄。日期依檔案網址路徑"
+    },
+    {
+      "title": "Tonetti MS, Greenwell H, Kornman KS. Staging and grading of periodontitis: Framework and proposal of a new classification and case definition. J Clin Periodontol 2018;45 Suppl 20:S149–S161",
+      "publisher": "National Library of Medicine（PubMed）",
+      "date": "2018-06",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29926495/",
+      "note": "AAP 表格所依據的原始提案"
+    },
+    {
+      "title": "File:Bone loss in periapical xray.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2018-05-02",
+      "url": "https://commons.wikimedia.org/wiki/File:Bone_loss_in_periapical_xray.jpg",
+      "note": "Shaimaa Abdellatif 上傳，CC BY-SA 4.0；說明：Dental radiograph showing bone loss in a patient who consumes 2 packs of cigarettes"
+    }
+  ]
+}
