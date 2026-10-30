@@ -1,0 +1,375 @@
+{
+  "column": "philosophy",
+  "date": "2026-10-31",
+  "title": "蘇格拉底等的那艘船，還是忒修斯那艘嗎",
+  "dek": "雅典人把忒修斯的船一修再修，哲學家吵它還算不算原船。霍布斯又多加一個人：把拆下的舊木板全收起來，照原樣拼回去。",
+  "brief": "西元前 399 年，蘇格拉底被判死刑後又活了 30 天，因為雅典送去提洛島的聖船還沒回港，雅典人說那就是忒修斯當年的船。這艘船的朽木一塊塊換新，成了哲學家爭論還算不算原船的例子。霍布斯再加一個人，把舊木板收起來照原樣拼回，於是有了兩艘。",
+  "topic_key": "philosophy:ship-of-theseus-hobbes",
+  "updated_at": "2026-10-31T02:56:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/The_Death_of_Socrates_MET_DT40.jpg/1280px-The_Death_of_Socrates_MET_DT40.jpg",
+    "width": 1280,
+    "height": 849,
+    "alt": "石砌牢房裡，赤裸上身的白髮老人坐在床沿，一手指向上方，一手伸向旁人遞來的杯子；周圍的人掩面、垂頭或伸手，床邊地上有解開的鐵鍊，左後方拱門外有人走上階梯。",
+    "caption": "大衛《蘇格拉底之死》，1787 年。聖船從提洛島回來的隔天，蘇格拉底被卸下鐐銬，當天赴死；畫家把解開的鐵鍊畫在床邊地上。",
+    "credit": "Jacques Louis David，油彩畫布，129.5 × 196.2 公分；紐約大都會藝術博物館（31.45）",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Death_of_Socrates_MET_DT40.jpg",
+    "made": "1787",
+    "depicts": "西元前 399 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "西元前 399 年，蘇格拉底被判了死刑，卻沒有馬上死。審判前一天，阿波羅的祭司剛替一艘船的船尾戴上花冠，送它出海去提洛島（Delos）。照雅典的規矩，這艘船從出發到回港都算聖期，城裡不准公開處決任何人；路上碰到逆風，一來一回就拖得很久。色諾芬記下，判決之後，蘇格拉底又活了 30 天。"
+    },
+    {
+      "type": "p",
+      "text": "那艘船的來歷，柏拉圖在《斐多篇》裡交代過。照雅典人的說法，它就是當年忒修斯（Theseus）帶著十四個年輕人去克里特、救了他們也救了自己的那艘。據說他們當時向阿波羅許願，若能平安回來，每年都派使團去提洛島，這個習俗一直沒斷。"
+    },
+    {
+      "type": "p",
+      "text": "蒲魯塔克（Plutarch）在《忒修斯傳》裡記下這艘三十槳船的下落：雅典人一直把它留到西元前 4 世紀末一位總督的任內，那時蘇格拉底已經死了八十多年。木料朽了就拆掉，換上結實的新木頭，一次換一點。換到後來，這艘船成了哲學家討論「東西一直在長、在變」的現成例子，有人說它還是原來那艘，有人說早就不是了。"
+    },
+    {
+      "type": "p",
+      "text": "我猜蘇格拉底在牢裡等的那艘船，身上已經沒剩多少忒修斯那時候的木頭。可是照雅典的法律，它一天沒回港，蘇格拉底就一天不能死。"
+    },
+    {
+      "type": "h",
+      "text": "霍布斯多加了一個倉庫"
+    },
+    {
+      "type": "p",
+      "text": "兩千多年後，英國哲學家霍布斯（Thomas Hobbes）在 1655 年出版的《論物體》（De Corpore）裡把這艘船拖了回來，還多加一個角色。他說雅典的詭辯家老愛吵這艘船：假設木板全部換過以後，它仍是當初那艘。再假設有人把拆下來的舊木板一塊塊收好，後來照原來的順序拼起來，又造出一艘船："
+    },
+    {
+      "type": "quote",
+      "text": "這一艘，無疑也和當初那艘是同一艘船；於是就會有兩艘在數目上同一的船，這是荒謬的。",
+      "original": "this, without doubt, had also been the same numerical ship with that which was at the beginning; and so there would have been two ships numerically the same, which is absurd.",
+      "cite": "霍布斯，《論物體》第 2 部第 11 章第 7 節"
+    },
+    {
+      "type": "p",
+      "text": "蒲魯塔克的版本只有一艘船，大家吵它還算不算原船。霍布斯的版本有兩艘，各有一套說得通的理由，兩套理由單看都站得住，擺在一起，原船就活了兩次。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Elements_of_philosophy%2C_the_first_section%2C_concerning_body_%28IA_b30335838%29.pdf/page124-1280px-Elements_of_philosophy%2C_the_first_section%2C_concerning_body_%28IA_b30335838%29.pdf.jpg",
+      "width": 1280,
+      "height": 1674,
+      "alt": "17 世紀英文印刷書的一頁，頁首印著「100 THE FIRST GROUNDS Part 2」，全頁是密排的英文段落，夾著幾個斜體字。",
+      "caption": "霍布斯《論物體》1656 年倫敦英譯本第 100 頁。中段就是忒修斯之船：舊木板照原順序拼回，於是有兩艘「數目上同一」的船；同一頁下半，他接著提出要先問「我們用什麼名字稱呼它」。",
+      "credit": "Thomas Hobbes，《Elements of Philosophy, the First Section, Concerning Body》，London: R. & W. Leybourn for Andrew Crocke；Wellcome Library 藏本，Internet Archive 數位化",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Elements_of_philosophy,_the_first_section,_concerning_body_(IA_b30335838).pdf?page=124",
+      "made": "1656"
+    },
+    {
+      "type": "h",
+      "text": "兩家都叫渡船"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "換到一家咖啡館。它叫「渡船」，在一條老巷子裡開了二十多年。三年前換了老闆，新老闆不打算關店重裝，一次只換一樣：先換杯盤，再換椅子、吧台、磨豆機，最後連門口那塊木招牌也重做，熟客每天照常進門點單。拆下來的每一件，都被老店長阿成搬回自家倉庫。今年春天，他在兩條街外租了店面，把舊吧台、舊椅子、舊招牌照原來的位置擺好，開門營業。兩家都說自己才是「渡船」。你皮夾裡有一張渡船的集點卡，已經蓋了九格，第十格換一杯免費的。卡只有一張，只能挑一家兌換。"
+    },
+    {
+      "type": "h",
+      "text": "留在原地的那一家"
+    },
+    {
+      "type": "p",
+      "text": "先替原址講話。史丹佛大學的線上哲學百科（SEP）把這一派的理由濃縮成一句：船撐得過零件一塊一塊地換。日常生活其實全照這套在走。巴特勒主教（Joseph Butler）1736 年舉過一個例子：有人發誓說一棵樹 50 年來都站在同一個地方，是同一棵樹，他的意思是在財產和日常用途上算同一棵；至於現在這棵樹有沒有任何一顆粒子跟 50 年前的一樣，他根本不知道。"
+    },
+    {
+      "type": "p",
+      "text": "診間裡也是這樣算的。一顆 36 補過、做過根管、再套上牙冠，病歷上它還是 36，沒有人替它另開一個號碼。"
+    },
+    {
+      "type": "p",
+      "text": "霍布斯在自己的結論裡也替這派留了位置。他說，一條河只要從同一個源頭流出來，流的是不是同一批水都無所謂；一座城，只要它的作為一直出自同一套建制，城裡的人換沒換，都還是那座城。現代的構成論者（constitution view）對那艘船的判法更乾脆：換光木板的那艘就是原船，只是已經不由原來那批木板構成；用原木板重組的那艘，只是剛好由同一批木板構成，不是原船。換成咖啡館，渡船就在原址。"
+    },
+    {
+      "type": "h",
+      "text": "倉庫裡的舊吧台"
+    },
+    {
+      "type": "p",
+      "text": "另一邊的理由一樣硬。SEP 替這一派說的是：組裝出來的東西，撐得過拆開再拼回去。一座老掛鐘拆下來送修，零件洗乾淨照原樣裝回，沒有人會說牆上掛的是一座新鐘。阿成做的事，只是把拆和裝之間拉長成三年，地點挪了兩條街。"
+    },
+    {
+      "type": "p",
+      "text": "巴特勒那棵樹也有下半句。寬鬆、通俗地講，他承認樹可以算同一棵；換成嚴格的哲學語言，他的判決是：一個東西若和另一個東西其實沒有任何相同之處，就不能和它是同一個。二十世紀的齊碩姆（Roderick Chisholm）接下這條區分：嚴格說來，兩個東西要所有部分都相同才算同一個；我們說原址那家還是原店，用的是寬鬆通俗的那種「同一」。"
+    },
+    {
+      "type": "p",
+      "text": "最讓我意外的是霍布斯本人。兩艘船的難題是他擺出來的，判決也是他下的。他說要先問我們用什麼名字稱呼這個東西，而「船」這個字，指的是有某種形狀的物質："
+    },
+    {
+      "type": "quote",
+      "text": "只要物質不變，它就是同一艘；如果物質沒有任何一部分相同，它在數目上就是另一艘船；如果部分物質留著、部分換掉，這艘船就部分相同、部分不同。",
+      "original": "will be the same as long as the matter remains the same; but if no part of the matter be the same, then it is numerically another ship; and if part of the matter remain and part be changed, then the ship will be partly the same, and partly not the same.",
+      "cite": "霍布斯，《論物體》第 2 部第 11 章第 7 節"
+    },
+    {
+      "type": "p",
+      "text": "照這條規則，港口裡那艘換光木板的船，已經是另一艘；倉庫那堆舊木板一旦照原樣拼回，物質和形狀都對得上。霍布斯沒有把這一步寫出來，可是他的規則站在阿成那邊。"
+    },
+    {
+      "type": "table",
+      "title": "渡船在哪一家",
+      "head": [
+        "立場",
+        "渡船在哪",
+        "最強的理由",
+        "得付的代價"
+      ],
+      "rows": [
+        [
+          "原址派：構成論者；巴特勒的寬鬆通俗意義",
+          "原址",
+          "東西撐得過零件一件件更換，財產和日常生活都這樣算",
+          "用原來那批家具照原樣拼回的那家，只能算仿品"
+        ],
+        [
+          "倉庫派：霍布斯對「船」的判法；齊碩姆的嚴格意義",
+          "兩條街外",
+          "拆開再組回的東西仍是原物，物質全對得上",
+          "天天有人用、有人修的店，換一張椅子就不再嚴格是原店"
+        ],
+        [
+          "先問名字：霍布斯",
+          "問「那堆家具」，在兩條街外；問「那家店」，在原址",
+          "同一個人和同一個物體，本來就是兩個問題",
+          "「哪一家才是渡船」沒有單一答案"
+        ],
+        [
+          "四維論：路易斯等",
+          "兩家共用開張到三年前那一段",
+          "東西在時間上也有部分，Y 字的兩支各是一家",
+          "那段日子裡，原址同時有兩家渡船疊在一起"
+        ]
+      ],
+      "caption": "各派對霍布斯兩艘船的判法，套到本文的咖啡館情境；判法依 SEP〈Material Constitution〉〈Identity Over Time〉與霍布斯原文整理。"
+    },
+    {
+      "type": "h",
+      "text": "沒有倉庫的時候"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "把阿成拿掉。拆下來的舊椅子、舊吧台全進了回收場，兩條街外什麼也沒開。"
+    },
+    {
+      "type": "p",
+      "text": "這就回到蒲魯塔克的雅典：只有一艘船，木頭一直換。少了對手，原址那家算不算渡船，我想多數人連猶豫都不會。可是照霍布斯的規則，它一路都是「部分相同、部分不同」，換到最後一件就成了另一家；照齊碩姆的嚴格意義，第一張椅子換掉那天，原來那家就已經不在了。依我看，這是倉庫派最貴的代價：一個每天開門、每天有人點拿鐵的地方，只因為換了一張椅子，就得承認它嚴格說來不是昨天那一家。"
+    },
+    {
+      "type": "p",
+      "text": "反過來也試一次。新老闆不慢慢換，挑一個週一店休，一個晚上把杯盤、椅子、吧台、招牌全換新，週二照常開門。慢慢換和一夜換完，最後留下的東西一模一樣，我的直覺卻在一夜換完的版本開始鬆動。原址派真正靠的，大概是「一直有人在這裡開店」那條線，木頭倒在其次。"
+    },
+    {
+      "type": "h",
+      "text": "欠帳的人換了身體"
+    },
+    {
+      "type": "p",
+      "text": "集點卡其實是一筆帳：渡船欠你一杯咖啡。這樣一看，題目就從木頭變成了責任。最早拿這套推理開玩笑的，剛好也是一筆帳。"
+    },
+    {
+      "type": "p",
+      "text": "西元前 5 世紀的喜劇詩人埃庇卡摩斯（Epicharmus）寫過一段對白，後來被第歐根尼・拉爾修抄進《名哲言行錄》：一堆石子加一顆、拿走一顆，數目就變了；一肘長的量尺再接一截，原來的長度就不在了；人也一直在長、在縮。"
+    },
+    {
+      "type": "quote",
+      "text": "所以你跟我，昨天是一對人，今天是另一對，明天又是另一對；照這個道理，我們永遠不會還是我們自己。",
+      "original": "And even so you and I were one pair of men yesterday, are another to-day, and again will be another to-morrow, and will never remain ourselves, by this same argument.",
+      "cite": "埃庇卡摩斯，見第歐根尼・拉爾修《名哲言行錄》3.11（R. D. Hicks 英譯）"
+    },
+    {
+      "type": "p",
+      "text": "SEP 轉述了那齣戲：欠錢的人被追討時，就拿這套石子論證回答，說自己已經不是借錢的那個人，不必還。債主打了他一下，他喊冤，債主表示同情，只是提醒他：動手的那個人，現在也不是我了。後來學園派的哲學家把這套「增長論證」拿去正經使用，懷疑生物究竟能不能撐過時間；蒲魯塔克說哲學家拿忒修斯的船來討論的，也是東西會長、會變的老問題。"
+    },
+    {
+      "type": "p",
+      "text": "霍布斯看出這招的後果。他寫道，照「只看物質」的意見，犯罪的人和受罰的人不會是同一個人，因為身體一直在流變；一座城某個時代立的法，到另一個時代廢掉，立法和廢法的也不是同一座城；這樣下去，所有民事權利都要亂掉。他替城留下的是建制那條線：同一座城，看的是它的作為是不是一直出自同一套建制。"
+    },
+    {
+      "type": "p",
+      "text": "照這條線，集點卡該拿回原址。三年來收你錢、替你蓋章的，是原址那個櫃台，一天都沒斷過；阿成倉庫裡的吧台，這三年沒煮過一杯咖啡。"
+    },
+    {
+      "type": "h",
+      "text": "一個 Y 字"
+    },
+    {
+      "type": "p",
+      "text": "霍布斯真正的出路是先問名字。問蘇格拉底是不是同一個人，跟問他是不是同一個物體，是兩個問題：老年蘇格拉底的身體，大小就和嬰兒時不同，不可能是同一個物體，他卻可以是同一個人。拿到咖啡館，問哪家擺著「那批家具」，答案在兩條街外；問哪家是「那家店」，答案在原址。兩個答案可以同時成立，因為問的本來就不是同一件事。"
+    },
+    {
+      "type": "p",
+      "text": "四維論者走得更遠。在他們看來，東西不只在空間裡有部分，在時間裡也有部分。SEP 介紹這一派對忒修斯之船的看法時，把它說成一個 Y 形分岔的物體，可以切出許多艘船，例如主幹加上換新的那一支就是一艘；照同樣的道理，主幹加上舊木板那一支也是一艘。共用主幹在他們眼裡不算怪事，SEP 拿紐約兩條共用一段路面的公路來比。"
+    },
+    {
+      "type": "svg",
+      "title": "兩家渡船共用一段過去",
+      "svg": "<svg viewBox=\"0 0 400 290\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"12\">\n<text x=\"200\" y=\"22\" text-anchor=\"middle\" class=\"accent\" font-size=\"14\">四維論眼中的「渡船」</text>\n<line class=\"muted line\" x1=\"28\" y1=\"262\" x2=\"28\" y2=\"52\" stroke-width=\"1.2\"/>\n<polygon class=\"muted\" points=\"23,58 28,46 33,58\"/>\n<text x=\"38\" y=\"58\" class=\"muted\" font-size=\"11\">時間</text>\n<line class=\"ink line\" x1=\"200\" y1=\"262\" x2=\"200\" y2=\"168\" stroke-width=\"10\"/>\n<line class=\"accent line\" x1=\"200\" y1=\"172\" x2=\"112\" y2=\"70\" stroke-width=\"10\"/>\n<line class=\"gold line\" x1=\"200\" y1=\"172\" x2=\"288\" y2=\"70\" stroke-width=\"10\"/>\n<rect class=\"paper\" x=\"214\" y=\"200\" width=\"168\" height=\"42\" rx=\"4\"/>\n<text x=\"222\" y=\"218\" class=\"ink\">開張到三年前</text>\n<text x=\"222\" y=\"235\" class=\"muted\" font-size=\"11\">舊吧台、舊椅子、舊招牌</text>\n<rect class=\"paper\" x=\"40\" y=\"74\" width=\"132\" height=\"42\" rx=\"4\"/>\n<text x=\"48\" y=\"92\" class=\"accent\">原址</text>\n<text x=\"48\" y=\"109\" class=\"muted\" font-size=\"11\">一件件換新，天天營業</text>\n<rect class=\"paper\" x=\"232\" y=\"74\" width=\"150\" height=\"42\" rx=\"4\"/>\n<text x=\"240\" y=\"92\" class=\"gold\">兩條街外</text>\n<text x=\"240\" y=\"109\" class=\"muted\" font-size=\"11\">舊家具照原位置擺回</text>\n<text x=\"200\" y=\"282\" text-anchor=\"middle\" class=\"muted\" font-size=\"11\">主幹加左支是一家，主幹加右支是另一家，兩家共用同一段過去</text>\n</svg>",
+      "caption": "原創示意圖：依 SEP〈Identity Over Time〉介紹的四維論說法（Y 形分岔物體），套用到本文的咖啡館情境。不按比例。"
+    },
+    {
+      "type": "p",
+      "text": "這套說法讓兩家都不必說謊。代價是從開張那天起，原址就一直有兩家渡船疊在一起，分岔以前誰也分不出來。"
+    },
+    {
+      "type": "h",
+      "text": "我會去原址蓋第十格"
+    },
+    {
+      "type": "p",
+      "text": "我站原址。木頭會爛，蒲魯塔克那艘船本來就是靠一直換木頭，才在蘇格拉底死後又留了八十多年。一條規則若把天天有人在修、在用的船判成贗品，把在倉庫躺了三年的木板判成正主，我不肯照著它過日子。"
+    },
+    {
+      "type": "p",
+      "text": "可是我也得認一筆帳。如果有人要把忒修斯那艘船賣給博物館，我要的是用舊木板拼回來的那一艘。博物館買的是木頭本身，這時候該問的名字是「那堆物質」，霍布斯是對的。"
+    },
+    {
+      "type": "p",
+      "text": "西元前 399 年那個傍晚，蘇格拉底的朋友們離開監獄時，聽說聖船已經從提洛島回來了。隔天他們比平常更早到，獄卒卻沒讓他們進門，要他們先等著：「十一人」正在裡面替蘇格拉底卸下鐐銬，吩咐他當天就要死。"
+    },
+    {
+      "type": "facts",
+      "title": "原典與本文的改動",
+      "items": [
+        [
+          "原始版本",
+          "蒲魯塔克《忒修斯傳》第 23 章：一艘船，朽木逐步換新，哲學家爭論是否仍是同一艘"
+        ],
+        [
+          "兩艘船的版本",
+          "霍布斯《論物體》第 2 部第 11 章第 7 節；1655 年拉丁文出版，1656 年倫敦英譯本頁 99–101"
+        ],
+        [
+          "相關古代材料",
+          "埃庇卡摩斯的增長論證，見第歐根尼・拉爾修《名哲言行錄》3.11；賴帳者一幕依 SEP 轉述"
+        ],
+        [
+          "本文改了哪裡",
+          "船換成咖啡館「渡船」，收舊木板的人換成老店長阿成，爭議落在一張集點卡上"
+        ],
+        [
+          "本文自設的變體",
+          "沒有倉庫、一夜換完、把集點卡當成一筆帳"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Phaedo（Benjamin Jowett 英譯）",
+      "publisher": "Plato；Project Gutenberg #1658",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/1658",
+      "note": "58a–c：船尾戴花冠、忒修斯與十四名少年少女、每年派使團、聖期不得處決、逆風耽擱；59d–e：前一晚聽說聖船回來、隔天獄卒說十一人正在卸鐐銬。"
+    },
+    {
+      "title": "Memorabilia（H. G. Dakyns 英譯）",
+      "publisher": "Xenophon；Project Gutenberg #1177",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/1177",
+      "note": "4.8.2：判決後須再活 30 天，因為是提洛節的月份，聖使團從提洛島回來前法律不准處決。"
+    },
+    {
+      "title": "Socrates",
+      "publisher": "Debra Nails，Stanford Encyclopedia of Philosophy",
+      "date": "2022-05-26",
+      "url": "https://plato.stanford.edu/entries/socrates/",
+      "note": "日期為 substantive revision。審判在西元前 399 年 Thargelion 月；色諾芬說那年航程 31 天，若是如此，蘇格拉底在審判後又活了 30 天；十一人是抽籤選出的監獄官員。"
+    },
+    {
+      "title": "Plutarch's Lives, Volume 1：Theseus（George Long 英譯）",
+      "publisher": "Plutarch；Project Gutenberg #14033",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/14033",
+      "note": "第 23 章：三十槳船保存到 Demetrius Phalereus 的時代，朽木逐步換新，成了哲學家討論「增長與變化」的例子。"
+    },
+    {
+      "title": "Theophrastus",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "date": "2020-09-24",
+      "url": "https://plato.stanford.edu/entries/theophrastus/",
+      "note": "Demetrius of Phalerum 西元前 317 年任雅典總督，307 年被逐；「蘇格拉底死後八十多年」為本報以 399 − 317 自算。"
+    },
+    {
+      "title": "Elements of Philosophy, the First Section, Concerning Body",
+      "publisher": "Thomas Hobbes；London: R. & W. Leybourn for Andrew Crocke；Internet Archive（Wellcome Library）",
+      "date": "1656",
+      "url": "https://archive.org/details/b30335838",
+      "note": "1656 年英譯本，Part 2, ch. 11, §7，頁 99–101；譯者序說付印前請霍布斯本人校閱。忒修斯之船在頁 100。"
+    },
+    {
+      "title": "The Metaphysical System of Hobbes",
+      "publisher": "Mary Whiton Calkins 編；Open Court（Internet Archive）",
+      "date": "1905",
+      "url": "https://archive.org/details/metaphysicalsyst00hobbuoft",
+      "note": "頁 84–86 收《論物體》第 11 章第 7 節，採 Molesworth 版文字；兩段引文依此版。"
+    },
+    {
+      "title": "Thomas Hobbes",
+      "publisher": "Stewart Duncan，Stanford Encyclopedia of Philosophy",
+      "date": "2025-03-01",
+      "url": "https://plato.stanford.edu/entries/hobbes/",
+      "note": "日期為 substantive revision。De Corpore 1655 年出版。"
+    },
+    {
+      "title": "Material Constitution",
+      "publisher": "Ryan Wasserman，Stanford Encyclopedia of Philosophy",
+      "date": "2026-01-14",
+      "url": "https://plato.stanford.edu/entries/material-constitution/",
+      "note": "日期為 substantive revision。§1：賴帳者悖論、忒修斯之船（船撐得過逐步換零件／組裝物撐得過拆開再拼回、原船活兩次）；§3：時間部分論與兩條公路共用路段的比喻；§4：部分本質論（Chisholm 1973）。"
+    },
+    {
+      "title": "Identity Over Time",
+      "publisher": "Andre Gallois、Irem Kurtsal，Stanford Encyclopedia of Philosophy",
+      "date": "2026-01-12",
+      "url": "https://plato.stanford.edu/entries/identity-time/",
+      "note": "日期為 substantive revision。§4.1 構成論（Baker 2002）對忒修斯之船的判法；§4.3 齊碩姆依巴特勒區分嚴格與寬鬆通俗的同一；§4.5 四維論的 Y 形分岔物體（Heller 1984、1990、2000；Lewis 1986）。"
+    },
+    {
+      "title": "Lives of the Eminent Philosophers, Book III（R. D. Hicks 英譯）",
+      "publisher": "Diogenes Laërtius；Wikisource",
+      "date": "1925",
+      "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_III",
+      "note": "3.10–11：轉引的埃庇卡摩斯對白（石子、肘長、人一直在長）。"
+    },
+    {
+      "title": "Chrysippus",
+      "publisher": "Jeremy Kirby，Internet Encyclopedia of Philosophy",
+      "date": "",
+      "url": "https://iep.utm.edu/chrysipp/",
+      "note": "§3c：增長論證可追溯到西元前 5 世紀喜劇詩人埃庇卡摩斯，學園派用它懷疑生物能否跨時間存續。"
+    },
+    {
+      "title": "The Analogy of Religion（附 Dissertation I: Of Personal Identity）",
+      "publisher": "Joseph Butler；Project Gutenberg #53346",
+      "date": "1736",
+      "url": "https://www.gutenberg.org/ebooks/53346",
+      "note": "1736 年出版。〈論人格同一〉：發誓同一棵樹 50 年，指的只是財產與日常用途上的同一；寬鬆通俗與嚴格哲學意義之分。"
+    },
+    {
+      "title": "The Death of Socrates",
+      "publisher": "The Metropolitan Museum of Art",
+      "date": "",
+      "url": "https://www.metmuseum.org/art/collection/search/436105",
+      "note": "Jacques Louis David，1787，油彩畫布，129.5 × 196.2 cm，館藏號 31.45。"
+    }
+  ]
+}
