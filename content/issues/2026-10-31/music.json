@@ -1,0 +1,198 @@
+{
+  "column": "music",
+  "date": "2026-10-31",
+  "title": "首演被罵，莫斯科演了 41 場",
+  "dek": "1991 年政變那天，蘇聯電視台一遍遍放《天鵝湖》。它 1877 年首演時被罵，後來在莫斯科演了 41 場。",
+  "brief": "1877 年《天鵝湖》在莫斯科首演，Wikipedia 說反應不佳，柴可夫斯基的弟弟莫傑斯特直接稱它失敗；這個製作在莫斯科共演了 41 場。1991 年坦克開進莫斯科那天，蘇聯國家電視台一遍又一遍放的就是它。",
+  "topic_key": "music:tchaikovsky-op20",
+  "updated_at": "2026-10-31T01:22:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "portrait",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Tchaikovsky_by_Reutlinger_%28cropped%29.jpg/1280px-Tchaikovsky_by_Reutlinger_%28cropped%29.jpg",
+    "width": 1280,
+    "height": 1786,
+    "alt": "黑白棚拍半身像：頭髮與鬍鬚花白的男子，穿深色外套、白領，口袋露出一角白色手帕，目光微微偏向畫面一側，四周是漸暗的暈邊。",
+    "caption": "柴可夫斯基，1888 年由 Émile Reutlinger 拍攝的肖像，1904 年出版。",
+    "credit": "Émile Reutlinger；NYPL Digital Gallery；經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tchaikovsky_by_Reutlinger_(cropped).jpg",
+    "made": "1888"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1991 年 8 月 19 日，坦克和軍隊開進莫斯科，蘇聯國家電視台播的是柴可夫斯基的《天鵝湖》，放完一遍又從頭放。布里茲涅夫過世的時候，電視台放過它；他兩位接班人過世，也放過。"
+    },
+    {
+      "type": "p",
+      "text": "那年 Andrey Milov 在莫斯科念大學。他記得當時心想，一定是有人死了。"
+    },
+    {
+      "type": "quote",
+      "text": "大概過了十五或二十分鐘，他們開始解釋發生了什麼事。他們說他們掌了權。而且他們沒有一個是選出來的。",
+      "original": "In about 15 or 20 minutes or so, they started to explain what was going on. They said they took the power. And none of them was elected.",
+      "cite": "Andrey Milov，NPR，2021"
+    },
+    {
+      "type": "p",
+      "text": "這場政變是共產黨強硬派對戈巴契夫發動的。8 月 21 日，政變的人退讓，戈巴契夫獲釋。"
+    },
+    {
+      "type": "music",
+      "composer": "柴可夫斯基（Pyotr Ilyich Tchaikovsky）",
+      "work": "芭蕾舞劇《天鵝湖》，作品 20",
+      "work_original": "Swan Lake, Op. 20",
+      "composed": "1875–1876",
+      "performers": "安德烈・普列文（André Previn）指揮 倫敦交響樂團",
+      "recording": "1976 年錄音；Warner Classics 於 2017 年發行",
+      "duration": "全劇約 140 分鐘",
+      "movements": [
+        "第一幕",
+        "第二幕",
+        "第三幕",
+        "第四幕"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Tchaikovsky Swan Lake Op. 20 Previn London Symphony Orchestra",
+        "artist_hint": "Previn",
+        "track_filter": [
+          "Swan Lake"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "錄音選普列文和倫敦交響樂團 1976 年那一套。錄的時候，普列文當這個樂團的首席指揮已經快十年。"
+    },
+    {
+      "type": "h",
+      "text": "尚欠的 400 盧布，從前四場收入裡付"
+    },
+    {
+      "type": "p",
+      "text": "這部芭蕾是莫斯科大劇院在 1875 年春天委託的。那年 9 月，柴可夫斯基寫信給林姆斯基－高沙可夫，說接這份工作，一半是為了錢，他需要錢；一半是因為他早就想試試寫這類音樂。"
+    },
+    {
+      "type": "p",
+      "text": "他在 1876 年 4 月寫完總譜。劇院留下的一份批示寫著：還欠他的 400 盧布可以付，但照原先的決定，要從這部芭蕾前四場演出的收入裡撥，一晚 100 盧布。"
+    },
+    {
+      "type": "h",
+      "text": "誰說它失敗"
+    },
+    {
+      "type": "p",
+      "text": "1877 年 3 月 4 日，《天鵝湖》在莫斯科大劇院首演。Wikipedia 說首演反應不佳：少數樂評看出樂譜的優點，多數認為這音樂對芭蕾來說太複雜；樂評也說編舞「毫無想像力，完全讓人記不住」。Wikipedia 轉引 1998 年節目冊文章，說這音樂被批評「太吵、太華格納、太交響」。"
+    },
+    {
+      "type": "p",
+      "text": "柴可夫斯基的弟弟莫傑斯特直接稱它失敗。他列了一串：布景和服裝寒酸，沒有出色的表演者，編舞家想像力薄弱，最後還有樂團。他說這些加在一起，讓哥哥有充分的理由把失敗算到別人頭上。"
+    },
+    {
+      "type": "p",
+      "text": "另一邊是演出場次。從首演到 1883 年 1 月的最後一場，這個製作在莫斯科演了六年、共 41 場；Wikipedia 轉引 Wiley 的書，說比劇院劇目裡其他幾部芭蕾多得多。Tchaikovsky Research 則說，首演的製作演得順利，一直留在劇目上，到 1882／83 年那一季。"
+    },
+    {
+      "type": "p",
+      "text": "最後一場在 1883 年 1 月。之後直到柴可夫斯基 1893 年過世，這部戲沒有再在俄國演出。"
+    },
+    {
+      "type": "p",
+      "text": "今天最常聽到的版本，是他過世後重新編過、比原作短不少的那一套；照他的總譜原樣完整演一遍，第一次是 1955 至 56 年那一季，在薩拉托夫的歌劇芭蕾劇院。"
+    },
+    {
+      "type": "p",
+      "text": "柴可夫斯基過世後的 1895 年 1 月，聖彼得堡的馬林斯基劇院有一個新製作，編舞是佩蒂帕與伊凡諾夫，那場是萊尼亞妮的受益演出。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Swanlakelegnani.jpg/500px-Swanlakelegnani.jpg",
+      "width": 500,
+      "height": 1090,
+      "alt": "顆粒粗的黑白老照片：女舞者穿白色蓬裙，頭髮盤起，身體微側，一手舉在胸前，腳尖點地，背景是斑駁的佈景。",
+      "caption": "萊尼亞妮在 1895 年佩蒂帕與伊凡諾夫版中飾演奧黛特（Odette）。",
+      "credit": "攝影者不詳；Mrlopes2681 掃描自個人收藏，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Swanlakelegnani.jpg",
+      "made": "1895"
+    },
+    {
+      "type": "h",
+      "text": "先找那支雙簧管"
+    },
+    {
+      "type": "p",
+      "text": "先找主旋律。小提琴的顫音和豎琴同時起頭，接著獨奏雙簧管拿到旋律，慢慢往上爬，然後整個樂團把同一條旋律接過去。"
+    },
+    {
+      "type": "p",
+      "text": "第一幕有一首華爾滋，走的是優雅的路子；小天鵝之舞則是俏皮的。"
+    },
+    {
+      "type": "p",
+      "text": "劇院要在部分露天的場地演一幕，柴可夫斯基挑的是第二幕。1886 年，出版商轉來消息，問他哪一幕最好，出版商自己提的是第四幕。"
+    },
+    {
+      "type": "quote",
+      "text": "四幕裡我得選第二幕，不是你提的第四幕。所以別忘了：第二幕。",
+      "original": "Out of the four acts I must choose the second, and not the fourth as you suggested. So don't forget: the second.",
+      "cite": "柴可夫斯基致出版商尤爾根森，1886 年 4 月 16 日（依英譯本轉譯）"
+    },
+    {
+      "type": "p",
+      "text": "接著聽德利布（Delibes）的芭蕾《西爾維亞》。1877 年柴可夫斯基在維也納看了這部戲，寫信給梅克夫人，說自己的《天鵝湖》比它差得多。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Swan Lake",
+      "publisher": "Tchaikovsky Research",
+      "date": "2024-03-29",
+      "url": "https://en.tchaikovsky-research.net/pages/Swan_Lake",
+      "note": "日期為頁面最後修改日；2026-10-30 查閱。1875 年春委託、1875 年 9 月致林姆斯基－高沙可夫的信、劇院批示的尚欠 400 盧布（註 15）、1876 年 4 月完成總譜、1877 年 3 月 4 日首演、首演製作『went well』並留在劇目到 1882/83 年季、之後柴可夫斯基生前不再於俄國演出、1877 年致梅克夫人信（維也納看《西爾維亞》）、1886 年 4 月 16 日致尤爾根森的信（引文英譯，信 2927）、1955/56 年季薩拉托夫首次完整演出、柴可夫斯基 1893 年過世、全劇約 140 分鐘。條目日期舊曆、新曆並列，正文一律用新曆。"
+    },
+    {
+      "title": "Swan Lake",
+      "publisher": "Wikipedia",
+      "date": "2026-10-07",
+      "url": "https://en.wikipedia.org/wiki/Swan_Lake",
+      "note": "日期為條目最後修訂日；2026-10-30 查閱。首演『not well received』與樂評『too noisy, too Wagnerian and too symphonic』（條目引 Gary Rosen 1998）、編舞『unimaginative and altogether unmemorable』、莫傑斯特的說法、六年、共 41 場且多於劇院其他幾部芭蕾（條目引 Wiley 1991, p. 61）、1883 年 1 月 2 日最後一場。本報未直接讀 Wiley 專書。"
+    },
+    {
+      "title": "In 1991, Soviet Citizens Saw Swans On The TV... And Knew It Meant Turmoil",
+      "publisher": "NPR（Charles Maynes）",
+      "date": "2021-08-19",
+      "url": "https://www.npr.org/2021/08/19/1029437787/in-1991-soviet-citizens-saw-swans-on-the-tv-and-knew-it-meant-turmoil",
+      "note": "1991 年 8 月 19 日國家電視台循環播放；布里茲涅夫及兩位接班人過世時也放過；Andrey Milov 的回憶與引文（是他受訪的話，不是電視台公告）；8 月 21 日政變結束。NPR 逐字稿把兩位接班人的順序說成契爾年科在前，與史實（安德羅波夫在前）不合，正文不寫先後。"
+    },
+    {
+      "title": "15 timeless pieces to begin your journey into classical music",
+      "publisher": "Classic FM",
+      "date": "2024-01-12",
+      "url": "https://www.classicfm.com/discover-music/best-classical-music-beginners/",
+      "note": "主旋律由小提琴顫音與豎琴開頭，獨奏雙簧管接主旋律，再由全樂團接手。頁面沒寫這段在哪一幕。"
+    },
+    {
+      "title": "Tchaikovsky's Swan Lake: the story and music of the Russian composer's ballet",
+      "publisher": "Classic FM",
+      "date": "2020-11-03",
+      "url": "https://www.classicfm.com/composers/tchaikovsky/music/swan-lake/",
+      "note": "『the graceful Waltz in Act I』與『the playful Dance of the Cygnets』；今天最常聽到的是作曲家死後編成、比原作短不少的版本。"
+    },
+    {
+      "title": "Tchaikovsky: Swan Lake",
+      "publisher": "Warner Classics",
+      "date": "2017-03-10",
+      "url": "https://www.warnerclassics.com/release/previn-swan-lake",
+      "note": "普列文指揮倫敦交響樂團，1976 年錄音；頁面發行日 2017 年 3 月 10 日，格式列為黑膠（Vinyl）。頁面寫 1976 年錄音時普列文已任該團首席指揮近十年。"
+    }
+  ]
+}
