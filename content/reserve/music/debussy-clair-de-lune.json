@@ -1,0 +1,274 @@
+{
+  "column": "music",
+  "date": "reserve",
+  "reserve_written": "2026-10-30",
+  "title": "〈月光〉原名〈感傷的散步〉",
+  "dek": "1891 年，德布西用 200 法郎賣掉這套組曲的出版權，之後一直沒印。等到 1905 年付印，他在校樣第一頁親手寫上 1890。",
+  "brief": "德布西在 1905 年的信裡說，這套組曲照現在的樣子交出去既愚蠢又沒用；稿子交了，他還在校樣上整小節整小節地刪。其中的〈月光〉一路消逝到結束，最後是一個和弦，後面只剩休止。",
+  "topic_key": "music:debussy-clair-de-lune",
+  "updated_at": "2026-10-30T15:15:23+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Suite_bergamasque_%28pour_piano_par_Claude_Debussy%29_-_btv1b100769278_%2810_of_19%29.jpg/1280px-Suite_bergamasque_%28pour_piano_par_Claude_Debussy%29_-_btv1b100769278_%2810_of_19%29.jpg",
+    "width": 1280,
+    "height": 880,
+    "alt": "攤開的黑白樂譜，左右兩頁各有幾行鋼琴譜表。左頁（第 14 頁）上方印著標題 CLAIR DE LUNE，標題下第一行譜上有 Andante très expressif、pp、con sordina 等小字；右頁（第 15 頁）頂端寫 Tempo rubato，頁面下半部的譜表上寫著 un poco mosso。",
+    "caption": "1905 年巴黎 E. Fromont 初版《貝加馬斯克組曲》的第 14、15 頁：左頁是〈月光〉的開頭，右頁頂端寫 Tempo rubato。法國國家圖書館藏本的掃描。",
+    "credit": "德布西，1905，E. Fromont（巴黎）出版；Bibliothèque nationale de France；數位檔經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Suite_bergamasque_(pour_piano_par_Claude_Debussy)_-_btv1b100769278_(10_of_19).jpg",
+    "made": "1905"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1891 年 2 月，德布西用 200 法郎，把一套鋼琴組曲的出版權讓給一家出版商。《貝加馬斯克組曲》（Suite bergamasque）這個名字，第一次見於記載就是這次。這套曲子並沒有因此印出來。"
+    },
+    {
+      "type": "p",
+      "text": "版權後來轉到另一位出版商手上。1902 年 7 月，那位出版商的繼承人又把它賣給巴黎的 Fromont。德布西很不情願，也只能接受。1905 年，另一家出版社想要德布西作品的獨家版權，最後談出來的折衷是：對方拿走歌劇《佩利亞與梅莉桑》，這套組曲留在 Fromont。"
+    },
+    {
+      "type": "p",
+      "text": "那年 4 月 21 日，德布西寫信給 Fromont 夫人，說下週二把組曲給她，又說照現在的樣子交出去，既愚蠢又沒用。稿子交了，他還在校樣上改，整小節整小節地刪，添了新的聲部。第一頁上，他親手寫了「(1890)」，把它標成年輕時的作品。1905 年 6 月，這套組曲印出來了，第三首叫〈月光〉（Clair de lune）。"
+    },
+    {
+      "type": "music",
+      "composer": "德布西（Claude Debussy）",
+      "work": "《貝加馬斯克組曲》第三樂章〈月光〉",
+      "work_original": "Clair de lune, from Suite bergamasque, L. 75",
+      "composed": "約 1890 年起，1905 年出版前大幅修改",
+      "performers": "休伊特（Angela Hewitt）鋼琴",
+      "recording": "Hyperion，專輯編號 CDA67898，2011 年 12 月錄於柏林 Jesus-Christus-Kirche，2012 年 10 月發行",
+      "duration": "整套組曲 18 分 27 秒",
+      "movements": [
+        "I. Prélude（Moderato, tempo rubato）",
+        "II. Menuet（Andante）",
+        "III. Clair de lune（Andante très expressif）",
+        "IV. Passepied（Allegretto ma non troppo）"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Debussy Suite bergamasque Angela Hewitt",
+        "artist_hint": "Hewitt",
+        "track_filter": [
+          "Clair de lune",
+          "Suite bergamasque"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "休伊特（Angela Hewitt）這張錄的是整套組曲，我建議從第一首連著聽下去：四個標題裡，前奏曲、小步舞曲和巴斯比舞曲（Passepied）都借自法國巴洛克組曲，只有〈月光〉不是。"
+    },
+    {
+      "type": "h",
+      "text": "懸著，再落下來"
+    },
+    {
+      "type": "p",
+      "text": "〈月光〉一開頭是鋼琴，彈得非常輕，速度是很有表情的行板。替音樂會寫曲目解說的賈菲（Jane Vial Jaffe）說，旋律就那樣懸在那裡，然後像月亮的銀光一樣輕輕落下；節奏很自由，聽起來像在漂。"
+    },
+    {
+      "type": "h",
+      "text": "迪士尼做了動畫，又剪掉"
+    },
+    {
+      "type": "p",
+      "text": "迪士尼 1940 年的《幻想曲》（Fantasia）原本也排了這首，做了一段月夜裡鳥群飛過佛羅里達沼澤的動畫，最後因為片長被剪掉。那些鳥後來出現在 1946 年的《Make Mine Music》，配樂卻換成一首新歌〈Blue Bayou〉。"
+    },
+    {
+      "type": "h",
+      "text": "同名的詩寫一個人走到天黑"
+    },
+    {
+      "type": "p",
+      "text": "1900 到 1901 年間，Fromont 在德布西《夜曲》的廣告頁上預告這套組曲，第三首寫的還是〈感傷的散步〉（Promenade sentimentale）。到了 1905 年的第一份校樣，它已經叫〈月光〉。兩個名字都是魏爾倫（Paul Verlaine）的詩題。"
+    },
+    {
+      "type": "p",
+      "text": "〈感傷的散步〉寫的是黃昏。夕陽射出最後的光，風搖著蒼白的睡蓮，詩裡的人獨自沿著池塘、在柳林間走，帶著自己的傷；霧像一個乳白色的幽靈，用小水鴨的叫聲哭。最後黑暗把夕陽剩下的光淹掉。"
+    },
+    {
+      "type": "p",
+      "text": "魏爾倫的〈月光〉寫於 1869 年，收在詩集《Fêtes galantes》。這本詩集的靈感來自華托（Jean-Antoine Watteau）和他的追隨者：暮色的公園裡，穿著義大利即興喜劇戲服的人在遊樂。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "artwork",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Jean-Antoine_Watteau_-_F%C3%AAtes_Venitiennes_-_Google_Art_Project.jpg/1280px-Jean-Antoine_Watteau_-_F%C3%AAtes_Venitiennes_-_Google_Art_Project.jpg",
+      "width": 1280,
+      "height": 1582,
+      "alt": "直幅油畫。暗綠的樹林裡，中央一名穿白色緞面長裙、披藍色披肩的女子提著裙襬站著；左側一名戴黑帽、穿紅褐色長衣的男子側身站立，旁邊一名灰衣男子彎身向兩位坐著的女子；右側一名男子抱著一件樂器；右上角是噴泉，上方有一尊臥姿的石像。",
+      "caption": "華托（Jean-Antoine Watteau）《Fêtes vénitiennes》，1718/9 年，油彩畫布，55.9 × 45.7 公分，蘇格蘭國家美術館藏。魏爾倫那本詩集取材的，就是這一類貴族遊園畫（fête galante）。右上角有一座噴泉，上方躺著一尊石像，對得上詩第三段的噴泉（jets d’eau）和大理石（marbres）。這是本報的對照，不是說華托畫的是這首詩。",
+      "credit": "Jean-Antoine Watteau；Scottish National Gallery（NG 439）；數位檔經 Wikimedia Commons（Google Art Project）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jean-Antoine_Watteau_-_F%C3%AAtes_Venitiennes_-_Google_Art_Project.jpg",
+      "made": "1718/9"
+    },
+    {
+      "type": "p",
+      "text": "組曲名字裡的 bergamasque，一般認為（如賈菲）出自這首詩，這個字就在詩的第一段。它原本指一種來自義大利北部貝加莫（Bergamo）的舞，德布西的音樂跟那種舞沒有關係。"
+    },
+    {
+      "type": "p",
+      "text": "前兩段說，你的靈魂是一片精選的風景。戴面具的人和 bergamasques 從裡面走過，彈魯特琴、跳舞，躲在奇異的偽裝底下，幾乎有點悲傷。他們用小調唱愛情與人生，卻不像相信自己的幸福，歌聲混進了月光裡。"
+    },
+    {
+      "type": "quote",
+      "original": "Au calme clair de lune triste et beau, / Qui fait rêver les oiseaux dans les arbres / Et sangloter d’extase les jets d’eau, / Les grands jets d’eau sveltes parmi les marbres.",
+      "text": "在這寧靜、哀傷又美麗的月光裡，／鳥兒在樹上做夢，／噴泉因為狂喜而啜泣，／那些又高又細的水柱，立在大理石之間。",
+      "cite": "魏爾倫，〈Clair de lune〉第三段，《Fêtes galantes》1891 年版"
+    },
+    {
+      "type": "p",
+      "text": "依我看，這個名字改對了。原名那首詩，是一個人帶著傷在池塘邊走到天黑；第三段裡沒有人在走，月光讓鳥在樹上做夢，讓噴泉啜泣。替休伊特這張唱片寫解說的 Roger Nichols，在解說裡也提到這次換名：靜止的〈月光〉，取代了在動的〈感傷的散步〉。"
+    },
+    {
+      "type": "h",
+      "text": "中段動起來，最後散掉"
+    },
+    {
+      "type": "p",
+      "text": "中段稍微加快，換成一串串很快的音，一路變強，再退下來。賈菲把這一段連到詩裡月光攪動噴泉的那個畫面。"
+    },
+    {
+      "type": "p",
+      "text": "接著它平靜下來，回到開頭的速度，而且比開頭還輕。到了結尾，德布西寫的是 pp morendo：非常輕，一路消逝到結束。賈菲說，他在這裡把主題拆散，像影子把月光切碎。最後是一個和弦，後面只剩休止。"
+    },
+    {
+      "type": "h",
+      "text": "同一首詩，唱出來"
+    },
+    {
+      "type": "p",
+      "text": "想聽詩本身被唱出來，先找德布西自己的歌版〈月光〉。他 1891 年完成的這一版幾乎整個重寫過，收進歌曲集《Fêtes galantes》第一集，排第三首。它和鋼琴的〈月光〉在音樂上不相干，只是用了同一首詩。"
+    },
+    {
+      "type": "p",
+      "text": "佛瑞（Gabriel Fauré）也寫過，作品 46 之 2，寫於 1887 年，比德布西重寫的那一版早四年。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Suite bergamasque, L82 (Debussy) - from CDA67898（Angela Hewitt；Roger Nichols 解說）",
+      "publisher": "Hyperion Records",
+      "date": "2012-10",
+      "url": "https://www.hyperion-records.co.uk/dw.asp?dc=W10186_67898",
+      "note": "日期為頁面所示發行月份。Nichols 以〈Clair de lune〉（靜止）取代〈Promenade sentimentale〉（在動）的說法、錄音資料（2011 年 12 月、柏林 Jesus-Christus-Kirche、18 分 27 秒）取自這頁，經 WebFetch 逐字核對。頁面標題的 L82 是 Lesure 目錄修訂版編號（法文 Wikipedia 作 FL 82），資料卡用舊版 L. 75，指的是同一部作品。Nichols 另說這套組曲「already at proof stage in 1890」，而 Bärenreiter、Henle 兩份版本前言（1891 年才讓出版權、上面的 1890 是德布西自己寫的年份）的敘述未提 1890 年的校樣（現存校樣為 1905 年，依校樣板號與前言敘述推得），又找不到第二來源，本報不用"
+    },
+    {
+      "title": "Suite bergamasque（Bärenreiter Urtext BA 8769）前言 Introduction",
+      "publisher": "Bärenreiter（Regina Back 編）",
+      "date": "2007",
+      "url": "https://www.barenreiter.co.uk/prefaces/9790006532810_Innenansicht.pdf",
+      "note": "英文 Introduction 第 XI–XIII 頁。1891 年 2 月 21 日以 200 法郎讓出版權（200 法郎只見於這份前言）、未印出；1902 年 7 月 5 日 Hartmann 的繼承人把版權賣給 Fromont；1905 年與 Durand 的折衷（Durand 拿《Pelléas et Mélisande》、Fromont 保留組曲）；1905 年 4 月 21 日致 Fromont 夫人信（foolish and useless，引 Lesure、Herlin 編《Correspondance》第 904 頁）；校樣上刪去整小節、加聲部；第一頁寫「(1890)」；1905 年 6 月出版；1900–01 年《Nocturnes》廣告頁上的四個樂章名；第一份校樣已作 Clair de lune；Prélude、Menuet、Passepied 借自法國巴洛克組曲而 Clair de lune 不是；歌版與鋼琴版音樂上無關"
+    },
+    {
+      "title": "Suite bergamasque（HN 391）前言",
+      "publisher": "G. Henle Verlag（François Lesure 撰）",
+      "date": "1983",
+      "url": "https://www.henle.de/media/89/c7/c1/1690886061/0391-1690886061-sync.pdf",
+      "note": "日期為前言所署 1983 年秋。德布西在校樣上自己加了 1890 這個年份、表明是少作；1891 年 2 月 21 日交給 Choudens；1902 年 7 月 5 日賣給 Fromont；1905 年 4 月交出定稿、6 月出版；Pavane 到校樣上才改成 Passepied"
+    },
+    {
+      "title": "Poèmes saturniens/Promenade sentimentale",
+      "publisher": "French Wikisource（Verlaine，Vanier《Œuvres complètes》I）",
+      "date": "1902",
+      "url": "https://fr.wikisource.org/wiki/Po%C3%A8mes_saturniens_(1902)/Promenade_sentimentale",
+      "note": "日期為此版本年份。詩的內容（夕陽、睡蓮、獨自沿池塘帶著傷遊蕩、霧與水鴨、黑暗淹沒餘光）取自 Page:Verlaine - Œuvres complètes, Vanier, I.djvu/39"
+    },
+    {
+      "title": "Suite bergamasque（德布西，E. Fromont 1905 初版，BnF 藏本，第 10 張掃描：第 14–15 頁）",
+      "publisher": "Wikimedia Commons（來源 Bibliothèque nationale de France）",
+      "date": "1905",
+      "url": "https://commons.wikimedia.org/wiki/File:Suite_bergamasque_(pour_piano_par_Claude_Debussy)_-_btv1b100769278_(10_of_19).jpg",
+      "note": "頭圖；第 14–19 頁的標題與演奏記號（Andante très expressif、pp、con sordina、un poco mosso、Calmato、a Tempo 1°、ppp、pp morendo jusqu’à la fin）都是本報對照第 10、11、12 張掃描逐頁讀出；出版者 E. Fromont（巴黎）見 Commons 著錄與封面"
+    },
+    {
+      "title": "Clair de Lune（Jane Vial Jaffe 為 2023 年 11 月 12 日音樂會寫的曲目解說）",
+      "publisher": "Parlance Chamber Concerts",
+      "date": "未註明",
+      "url": "https://parlancechamberconcerts.org/individual-program-notes/claude-debussy-(1862-1918)/clair-de-lune",
+      "note": "頁面未標發布日期。開頭、中段、結尾的聽感描述與《Fêtes galantes》的靈感來源取自這份解說。此頁說 1905 年準備出版時才改名；Bärenreiter 前言只能確定 1900–01 年廣告上還叫 Promenade sentimentale、1905 年第一份校樣已是 Clair de lune，正文依後者"
+    },
+    {
+      "title": "Suite bergamasque",
+      "publisher": "Wikipedia",
+      "date": "2026-10-30",
+      "url": "https://en.wikipedia.org/wiki/Suite_bergamasque",
+      "note": "日期為查閱日。作品號 L. 75、約 1890 年開始寫、1905 年出版前大幅修改、樂章速度標示、《幻想曲》動畫因片長被剪、footage 改用於〈Blue Bayou〉。〈Clair de lune (Debussy)〉條目只是轉址到此頁。此頁轉引 Roberts 說德布西起初不願出版、1905 年接受一位出版商的邀約，與 Bärenreiter 前言的版權經過講法不同，本報不用"
+    },
+    {
+      "title": "Make Mine Music",
+      "publisher": "Wikipedia",
+      "date": "2026-10-30",
+      "url": "https://en.wikipedia.org/wiki/Make_Mine_Music",
+      "note": "日期為查閱日。〈Blue Bayou〉原為《幻想曲》的〈Clair de lune〉動畫、月夜飛過 Everglades 的鳥（此頁寫 egrets，Suite bergamasque 條目寫 herons，正文只寫「鳥」）、1946 年"
+    },
+    {
+      "title": "Clair de Lune, A Deleted Section From the 1940 Disney Film Fantasia",
+      "publisher": "Laughing Squid",
+      "date": "2011-04-14",
+      "url": "https://laughingsquid.com/clair-de-lune-a-deleted-section-of-the-1940-disney-film-fantasia/",
+      "note": "因片長被剪（ultimately cut it for time）。此頁另給的片長數字與 Wikipedia 不一致，本報不寫片長"
+    },
+    {
+      "title": "Debussy’s ‘Clair De Lune’: The Story Behind The Masterpiece",
+      "publisher": "uDiscover Music",
+      "date": "未註明",
+      "url": "https://www.udiscovermusic.com/classical-features/debussy-clair-de-lune-masterpiece-guide/",
+      "note": "頁面未標發布日期。〈Promenade sentimentale〉出自魏爾倫《Poèmes saturniens》、〈Clair de lune〉詩的日期 1869 年"
+    },
+    {
+      "title": "Fêtes galantes (1891)/Clair de lune（頁 13、14）",
+      "publisher": "French Wikisource（Verlaine，Léon Vanier 1891 年版）",
+      "date": "1891",
+      "url": "https://fr.wikisource.org/wiki/F%C3%AAtes_galantes_(1891)/Clair_de_lune",
+      "note": "詩的法文原文取自這個版本的頁面 Page:Verlaine - Fêtes galantes, 1891.djvu/13、/14；詩的日期 1869 年見 Wikisource〈Clair de lune (Verlaine)〉頁"
+    },
+    {
+      "title": "Suite bergamasque",
+      "publisher": "Bru Zane Mediabase",
+      "date": "未註明",
+      "url": "https://www.bruzanemediabase.com/en/exploration/works/suite-bergamasque-claude-debussy",
+      "note": "頁面未標日期。德布西 1882 年與 1891 年兩次為這首詩譜曲；bergamasque 指詩而非貝加莫城"
+    },
+    {
+      "title": "Bergamask",
+      "publisher": "Wikipedia",
+      "date": "2026-10-30",
+      "url": "https://en.wikipedia.org/wiki/Bergamask",
+      "note": "日期為查閱日。bergamask 是源自義大利北部貝加莫的舞與旋律；德布西的組曲只與之有詩的指涉，音樂上無關"
+    },
+    {
+      "title": "Fêtes galantes (Debussy)",
+      "publisher": "Wikipedia",
+      "date": "2026-10-30",
+      "url": "https://en.wikipedia.org/wiki/F%C3%AAtes_galantes_(Debussy)",
+      "note": "日期為查閱日。歌版〈Clair de lune〉是第一集第三首、1882 年版與 1891 年版幾乎整個重寫"
+    },
+    {
+      "title": "Clair de lune (Fauré)",
+      "publisher": "Wikipedia",
+      "date": "2026-10-30",
+      "url": "https://en.wikipedia.org/wiki/Clair_de_lune_(Faur%C3%A9)",
+      "note": "日期為查閱日。作品 46 之 2、1887 年寫成（1888 年由巴黎 Hamelle 出版）；此頁關於德布西作曲年份的敘述與其他來源不一致，本報不用"
+    },
+    {
+      "title": "File:Jean-Antoine Watteau - Fêtes Venitiennes - Google Art Project.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-10-30",
+      "url": "https://commons.wikimedia.org/wiki/File:Jean-Antoine_Watteau_-_F%C3%AAtes_Venitiennes_-_Google_Art_Project.jpg",
+      "note": "日期為查閱日。年代 1718/9、油彩畫布、559 × 457 mm、蘇格蘭國家美術館 NG 439、fête galante、Public domain"
+    }
+  ]
+}
