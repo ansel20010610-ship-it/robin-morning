@@ -1,0 +1,380 @@
+{
+  "column": "civilization",
+  "date": "2026-10-31",
+  "title": "沃辛漢的啤酒桶郵局",
+  "dek": "1586 年，被囚的蘇格蘭女王瑪麗靠伯頓酒商的啤酒桶通信。信一出莊園，先送到沃辛漢手上拆封、解碼，再封好送走。",
+  "brief": "沃辛漢的解碼員菲利普斯解開蘇格蘭女王瑪麗寫給巴賓頓的密信，在封面畫了一個絞架：據審判時念的抄本，信中寫著，瑪麗同意讓六位紳士刺殺伊莉莎白一世。那幾個月，瑪麗的信靠伯頓酒商的啤酒桶進出，先在沃辛漢手上拆封、解碼才送走。這封信送出前，他還讓人加了一段附筆，要對方報上六人的名字；信的原件審判時沒有出示。",
+  "topic_key": "civilization:england-walsingham-babington-plot-1586",
+  "updated_at": "2026-10-31T02:30:29+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Babington_postscript.jpg",
+    "width": 575,
+    "height": 740,
+    "alt": "兩張舊紙拼在一起。上面一張寫滿一整段奇怪的符號，有劃掉的行；下面一張是手寫的字母對照表，每個字母下面配一個符號，底下有一個簽名和幾行手寫英文。",
+    "caption": "英國國家檔案館藏，上下兩件拼成。上半是菲利普斯留下的附筆草稿，用瑪麗與巴賓頓之間的密碼寫成，要巴賓頓報上六位紳士的名字；圖上有劃掉的行。下半是那套密碼表：字母各有代號，另有一排「空碼」（Nulles）和一些常用字的符號；底下是巴賓頓 1586 年 9 月 1 日簽的名，承認這是他和蘇格蘭女王通信唯一用過的字母表。",
+    "credit": "湯瑪斯・菲利普斯、安東尼・巴賓頓；英國國家檔案館藏",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Babington_postscript.jpg",
+    "made": "1586 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1586 年 7 月，沃辛漢的解碼員菲利普斯解完一封密信，在信的封面上畫了一個絞架。"
+    },
+    {
+      "type": "p",
+      "text": "信是蘇格蘭女王瑪麗寫的，她被囚禁在斯塔福郡的查特利莊園；收信人是英格蘭天主教紳士安東尼・巴賓頓（Anthony Babington）。巴賓頓先前寫信給她，提議由六位貴族紳士去「解決」那個篡位者，也就是伊莉莎白一世。審判時念的回信抄本寫著，等國內外的準備都完成，「讓那六位紳士動手。」抄本裡她也寫到失敗的下場：伊莉莎白會再把她抓回去，「永遠關進一個洞裡」，再也出不來。"
+    },
+    {
+      "type": "p",
+      "text": "巴賓頓讀完把信燒了（信裡要他這麼做）。審判時念的是抄本。"
+    },
+    {
+      "type": "p",
+      "text": "湯瑪斯・菲利普斯（Thomas Phelippes）是 7 月 18 日晚上從一個酒商手上拿到這封信的。隔天他寫信給伊莉莎白的首席秘書沃辛漢（Sir Francis Walsingham），說手上的東西辦巴賓頓應該夠了，說得不對請大人指正。他猜巴賓頓不見得會照吩咐立刻毀信，希望原件能留下來當證據，前提是上帝讓女王生出那份英雄般的膽識。他還希望女王吊死瑪麗的兩位秘書諾（Nau）和柯爾（Curle）。"
+    },
+    {
+      "type": "h",
+      "text": "洗衣婦和車夫"
+    },
+    {
+      "type": "p",
+      "text": "1585 年春，看管瑪麗的人換成阿米亞斯・波列（Sir Amias Paulet）。他是嚴格的清教徒，沃辛漢的密友，看得比前任緊，通信限制得更嚴。他寫信給沃辛漢說，萬一有人動武，不論在莊園裡還是外頭，「她會死在我前面」。"
+    },
+    {
+      "type": "p",
+      "text": "看守的規矩是沃辛漢親手擬的：兩邊的僕人不准私下交談，瑪麗的僕人出門要有人跟著，陌生人一律不准進來；洗衣婦、車夫這類人要特別盯，過去夾帶信件靠的就是他們。她出去透氣，不准經過城鎮。"
+    },
+    {
+      "type": "p",
+      "text": "同年 9 月，她經法國大使寄信這條最後的合法管道也關上了，寄往法國的信一律交給沃辛漢。12 月 24 日，她照自己的要求搬到查特利。"
+    },
+    {
+      "type": "h",
+      "text": "酒商每週來一次"
+    },
+    {
+      "type": "p",
+      "text": "同一個月，吉爾伯特・吉福德（Gilbert Gifford）從巴黎回英格蘭，身上帶著瑪麗在巴黎的代理人寫給她的推薦信，在萊伊港被港口檢查員攔下，直接送到沃辛漢面前。替沃辛漢立傳的史家 Conyers Read 認為，吉福德最晚從這時起就替沃辛漢當間諜。"
+    },
+    {
+      "type": "p",
+      "text": "查特利沒有自己的釀酒房，瑪麗一家的啤酒向附近伯頓的一個酒商買，每週用小木桶送一次。做一個防水的小盒，小到塞得進桶塞孔，信裝在滿桶裡送進去，回信夾在空桶裡運出來。主意是沃辛漢、吉福德還是菲利普斯出的，分不出來。"
+    },
+    {
+      "type": "p",
+      "text": "耶誕節前後，菲利普斯到查特利，在波列協助下和酒商談妥，1 月 10 日離開。1586 年 1 月 16 日，第一批推薦信由酒商送到瑪麗手上。"
+    },
+    {
+      "type": "p",
+      "text": "2 月 19 日，吉福德把瑪麗的信交給法國大使。大使照她的指示，把兩年來積在使館的信全交給吉福德，吉福德直接拿去給菲利普斯。沃辛漢因此握有斯羅克莫頓陰謀被破以來，朋友寫給瑪麗的幾乎每一封信。"
+    },
+    {
+      "type": "p",
+      "text": "這批信太大，塞不進桶塞孔，只好拆開分批送，拆封也就有了藉口。"
+    },
+    {
+      "type": "h",
+      "text": "兩條線互相不知道"
+    },
+    {
+      "type": "p",
+      "text": "瑪麗寄出的信要繞一大圈：酒商從她那裡收到信，交給波列；波列送去給沃辛漢，拆封、解碼後退回波列；波列交還酒商，酒商交給一個「替手」，替手又交回波列，最後才轉往收信人。"
+    },
+    {
+      "type": "svg",
+      "svg": "<svg viewBox=\"0 0 360 452\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"muted\"/></marker></defs><rect x=\"30\" y=\"8\" width=\"300\" height=\"38\" rx=\"6\" class=\"soft\"/><circle cx=\"52\" cy=\"27\" r=\"11\" class=\"paper\"/><text x=\"52\" y=\"31\" text-anchor=\"middle\" font-size=\"12\">1</text><text x=\"72\" y=\"32\" font-size=\"14\" font-weight=\"bold\" class=\"ink\">瑪麗</text><text x=\"320\" y=\"32\" text-anchor=\"end\" font-size=\"12\" class=\"muted\">寫信</text><line x1=\"180\" y1=\"47\" x2=\"180\" y2=\"60\" class=\"muted\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><rect x=\"30\" y=\"62\" width=\"300\" height=\"38\" rx=\"6\" class=\"soft\"/><circle cx=\"52\" cy=\"81\" r=\"11\" class=\"paper\"/><text x=\"52\" y=\"85\" text-anchor=\"middle\" font-size=\"12\">2</text><text x=\"72\" y=\"86\" font-size=\"14\" font-weight=\"bold\" class=\"ink\">酒商</text><text x=\"320\" y=\"86\" text-anchor=\"end\" font-size=\"12\" class=\"muted\">空桶夾帶出莊園</text><line x1=\"180\" y1=\"101\" x2=\"180\" y2=\"114\" class=\"muted\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><rect x=\"30\" y=\"116\" width=\"300\" height=\"38\" rx=\"6\" class=\"soft\"/><circle cx=\"52\" cy=\"135\" r=\"11\" class=\"paper\"/><text x=\"52\" y=\"139\" text-anchor=\"middle\" font-size=\"12\">3</text><text x=\"72\" y=\"140\" font-size=\"14\" font-weight=\"bold\" class=\"ink\">波列</text><text x=\"320\" y=\"140\" text-anchor=\"end\" font-size=\"12\" class=\"muted\">收下，送交沃辛漢</text><line x1=\"180\" y1=\"155\" x2=\"180\" y2=\"168\" class=\"muted\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><rect x=\"30\" y=\"170\" width=\"300\" height=\"38\" rx=\"6\" class=\"soft\"/><rect x=\"30\" y=\"170\" width=\"300\" height=\"38\" rx=\"6\" stroke-width=\"2\" class=\"line accent\"/><circle cx=\"52\" cy=\"189\" r=\"11\" class=\"accent\"/><text x=\"52\" y=\"193\" text-anchor=\"middle\" font-size=\"12\" class=\"paper\">4</text><text x=\"72\" y=\"194\" font-size=\"14\" font-weight=\"bold\" class=\"accent\">沃辛漢、菲利普斯</text><text x=\"320\" y=\"194\" text-anchor=\"end\" font-size=\"12\" class=\"muted\">拆封、解碼、封回</text><line x1=\"180\" y1=\"209\" x2=\"180\" y2=\"222\" class=\"muted\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><rect x=\"30\" y=\"224\" width=\"300\" height=\"38\" rx=\"6\" class=\"soft\"/><circle cx=\"52\" cy=\"243\" r=\"11\" class=\"paper\"/><text x=\"52\" y=\"247\" text-anchor=\"middle\" font-size=\"12\">5</text><text x=\"72\" y=\"248\" font-size=\"14\" font-weight=\"bold\" class=\"ink\">波列</text><text x=\"320\" y=\"248\" text-anchor=\"end\" font-size=\"12\" class=\"muted\">退回酒商</text><line x1=\"180\" y1=\"263\" x2=\"180\" y2=\"276\" class=\"muted\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><rect x=\"30\" y=\"278\" width=\"300\" height=\"38\" rx=\"6\" class=\"soft\"/><circle cx=\"52\" cy=\"297\" r=\"11\" class=\"paper\"/><text x=\"52\" y=\"301\" text-anchor=\"middle\" font-size=\"12\">6</text><text x=\"72\" y=\"302\" font-size=\"14\" font-weight=\"bold\" class=\"ink\">酒商</text><text x=\"320\" y=\"302\" text-anchor=\"end\" font-size=\"12\" class=\"muted\">交給「替手」</text><line x1=\"180\" y1=\"317\" x2=\"180\" y2=\"330\" class=\"muted\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><rect x=\"30\" y=\"332\" width=\"300\" height=\"38\" rx=\"6\" class=\"soft\"/><circle cx=\"52\" cy=\"351\" r=\"11\" class=\"paper\"/><text x=\"52\" y=\"355\" text-anchor=\"middle\" font-size=\"12\">7</text><text x=\"72\" y=\"356\" font-size=\"14\" font-weight=\"bold\" class=\"ink\">替手</text><text x=\"320\" y=\"356\" text-anchor=\"end\" font-size=\"12\" class=\"muted\">又交回波列</text><line x1=\"180\" y1=\"371\" x2=\"180\" y2=\"384\" class=\"muted\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><rect x=\"30\" y=\"386\" width=\"300\" height=\"38\" rx=\"6\" class=\"soft\"/><circle cx=\"52\" cy=\"405\" r=\"11\" class=\"paper\"/><text x=\"52\" y=\"409\" text-anchor=\"middle\" font-size=\"12\">8</text><text x=\"72\" y=\"410\" font-size=\"14\" font-weight=\"bold\" class=\"ink\">波列</text><text x=\"320\" y=\"410\" text-anchor=\"end\" font-size=\"12\" class=\"muted\">轉往收信人</text><text x=\"180\" y=\"448\" text-anchor=\"middle\" font-size=\"11\" class=\"muted\">示意，依 Read（1925）整理</text></svg>",
+      "title": "一封信怎樣走出查特利",
+      "caption": "瑪麗寄出的信件路線，依 Read（1925）整理。",
+      "credit": "本報繪製"
+    },
+    {
+      "type": "p",
+      "text": "Read 的解釋是，沃辛漢讓酒商以為只有自己被收買；替手大概也以為只有自己被收買，還當酒商是瑪麗的真心人。兩人沒辦法串通，沃辛漢也能拿兩份來比對。波列打算給替手 5 英鎊酬勞。至於酒商，波列平常叫他「老實人」。"
+    },
+    {
+      "type": "h",
+      "text": "五月的兩封信"
+    },
+    {
+      "type": "p",
+      "text": "1586 年 5 月 20 日，瑪麗寫了兩封信，一封給她在巴黎的支持者，一封給西班牙駐巴黎大使，都強烈贊成西班牙入侵英格蘭。兩封都落到沃辛漢手上。"
+    },
+    {
+      "type": "p",
+      "text": "Read 認為，沃辛漢很清楚，光憑瑪麗被抓到圖謀不利於國家，伊莉莎白絕不會對她下重手。再等一等，他可以多摸清西班牙國王的入侵打算，也可能抓到對瑪麗更不利的東西；他希望她寫下會讓她吃上極刑的話。沃辛漢從一開始就把她看作「懷中的蛇」。"
+    },
+    {
+      "type": "p",
+      "text": "1585 年，國會通過一條保護女王人身安全的法令：若有人圖謀傷害女王本人，而這件事出自、或經過任何可能主張王位的人知情同意，女王可以召集至少 24 名樞密院大臣和貴族，加上法官，審判此人；判決公布之後，此人永遠失去王位主張權，臣民可以「用一切武力與手段追殺至死」。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "依我看，入侵和叛亂那一款，要等公開的入侵或叛亂真的發生才算；5 月那兩封信講的入侵，還只是計畫。對女王本人下手的那一款，有人圖謀、加上她知情同意就成立。若信為真，7 月那封信寫的是後者。"
+    },
+    {
+      "type": "h",
+      "text": "信尾多了一段"
+    },
+    {
+      "type": "p",
+      "text": "6 月，沃辛漢從手下的間諜那裡聽說，巴賓頓在跟人討論殺女王合不合法。瑪麗在巴黎的代理人早先寫過信向她推薦巴賓頓，那些信一直壓在沃辛漢手上沒送，這時他轉了過去。瑪麗 6 月 25 日寫信給巴賓頓。"
+    },
+    {
+      "type": "p",
+      "text": "巴賓頓的回信，就是提議六人行刺的那一封。菲利普斯親自帶著它，7 月 7 日晚上離開倫敦，9 日週六抵達查特利，週六通常是酒商送酒的日子。瑪麗大約等了九天才回信。"
+    },
+    {
+      "type": "p",
+      "text": "回信到了菲利普斯手上，沃辛漢讓他在信上加一段附筆，用的是瑪麗和巴賓頓之間的同一套密碼。現存一張密文紙，Read 稱它是菲利普斯的附筆草稿，背面有他親手寫的「蘇格蘭女王致巴賓頓信的附筆」："
+    },
+    {
+      "type": "quote",
+      "text": "我很想知道那六位要完成此事的紳士的名字與身分，因為知道是誰之後，我或許能就此給你一些必要的進一步建議；也請你隨時詳細告訴我進行得如何；並且盡快，為了同樣的目的，告訴我誰已經準備好，以及每個人對此知道多少。",
+      "original": "I would be glad to know the names and qualities of the six gentlemen which are to accomplish the designment, for that it may be I shall be able, upon knowledge of the parties, to give you some further advice necessary to be followed therein; as also, from time to time particularly how you proceed; and as soon as you may, for the same purpose, who be ready, and how far every one privy hereunto.",
+      "cite": "加在瑪麗致巴賓頓信尾的附筆，1586 年（Read 引 Bardon Papers）"
+    },
+    {
+      "type": "p",
+      "text": "7 月 29 日，「一個穿藍外套的樸素僕人」把信送到巴賓頓手上。巴賓頓後來在供詞裡說，女王在信末要他報上六位紳士的名字，好給他建議。"
+    },
+    {
+      "type": "p",
+      "text": "巴賓頓的回信一直沒來。8 月 2 日，菲利普斯寫信說「我們全被耍了」，以為巴賓頓前一晚已經騎馬出城，後來才發現沒有。8 月 3 日，沃辛漢在給菲利普斯的信裡寫：「寧可少一封回信，也不能少了這個人。」大英圖書館說，他當天下令逮捕巴賓頓。同一天他還寫了另一封給菲利普斯：「你不會相信這件事的結果讓我多難過。我擔心，加上去的附筆引起了疑心。」"
+    },
+    {
+      "type": "p",
+      "text": "巴賓頓逃出倫敦，在聖約翰伍德躲了幾天，餓得到哈羅一位朋友家找東西吃，在那裡被抓，押進倫敦塔。陰謀者被押過倫敦街頭時，倫敦人敲鐘、燒篝火。9 月 20 日，巴賓頓被處以絞刑、剖腹、分屍。"
+    },
+    {
+      "type": "h",
+      "text": "請女王去打獵"
+    },
+    {
+      "type": "p",
+      "text": "抓瑪麗的秘書，用的是波列出的主意：請她出去打獵，趁她不在搜房、抓人、收文件。伊莉莎白和沃辛漢同意，8 月 9 日下令照辦。瑪麗應邀到鄰近一位爵士的領地獵鹿，騎到蒂克索爾要回去時被波列扣下，在那裡關了大約兩週。"
+    },
+    {
+      "type": "p",
+      "text": "同一時間，樞密院的一位書記帶著三位鄰近仕紳進了她在查特利的房間，帶走秘書，收走文件。英國國家檔案館說，搜出來的東西裡有 100 多份她通信用的密碼表。"
+    },
+    {
+      "type": "h",
+      "text": "沃辛漢站起來"
+    },
+    {
+      "type": "p",
+      "text": "10 月 14、15 日，瑪麗在佛斯林蓋堡（Fotheringay）受審，審她的委員會就是照 1585 年那條法令組成的。庭上念了她給巴賓頓的信，她說這是偽造的，別人的密碼和筆跡很容易仿；她擔心這是沃辛漢的手筆，想藉此置她於死地。沃辛漢站起來回答："
+    },
+    {
+      "type": "quote",
+      "text": "我請上帝作證：身為私人，我沒做過任何有失正派人身分的事；身居公職，我也沒做過任何有辱職位的事。我承認，我非常在意女王與王國的安全，所以費盡心思查出一切危害它們的圖謀。",
+      "original": "I call God to witness that as a private person I have done nothing unbeseeming an honest man, nor, as I bear the place of a public man, have I done anything unworthy of my place. I confess that being very careful for the safety of the Queen and the realm, I have curiously searched out all the practices against the same.",
+      "cite": "沃辛漢在佛斯林蓋堡庭上，1586 年 10 月（Read 據 State Trials 所收、譯自 Camden 的記載）"
+    },
+    {
+      "type": "p",
+      "text": "瑪麗說，她滿意這番表白，說自己只是轉述聽來的話。"
+    },
+    {
+      "type": "p",
+      "text": "檢方拿出來的是抄本，原件從頭到尾沒有出示。瑪麗回信的草稿也找不到。9 月 3 日沃辛漢寫給菲利普斯：「但願上帝讓那些草稿被找到。」隔天又寫，既然她回信的草稿不在了，他給了柯爾從寬的希望。"
+    },
+    {
+      "type": "p",
+      "text": "抄本準確與否，主要看瑪麗兩位秘書的宣誓證詞，兩人說抄本寫的，實質上就是女主人的信。Read 說，兩人作證時自己的命也懸著，怕受罰，有人許他們好處，又對女主人忠心，說法反反覆覆，從他們的證詞得不出可靠的結論。諾在背書抄本四天之後，就私下寫信給伊莉莎白，說他的女主人從沒以任何方式想要、策劃、提議或著手謀害女王。"
+    },
+    {
+      "type": "p",
+      "text": "10 月 25 日，委員們在西敏的星室法庭復會，兩位秘書當庭重申證詞，委員一個接一個判她有罪。國會兩院聯名請願要求處決，伊莉莎白的答覆，收尾是「一個沒有答案的答案」。"
+    },
+    {
+      "type": "timeline",
+      "title": "從酒桶到死刑令",
+      "caption": "依 Read（1925）、大英圖書館與英國國家檔案館整理；日期為當時英格蘭使用的舊曆。",
+      "items": [
+        {
+          "when": "1585.4",
+          "label": "波列接手看管瑪麗",
+          "note": "看守收緊，9 月斷了她經法國大使寄信的管道。"
+        },
+        {
+          "when": "1585.12.24",
+          "label": "瑪麗遷往查特利",
+          "note": "同月，吉福德在萊伊港被攔下。"
+        },
+        {
+          "when": "1586.1.16",
+          "label": "第一批信經酒桶送到",
+          "note": ""
+        },
+        {
+          "when": "1586.5.20",
+          "label": "瑪麗寫信贊成西班牙入侵",
+          "note": "信到了沃辛漢手上。"
+        },
+        {
+          "when": "1586.7.17",
+          "label": "瑪麗回信給巴賓頓",
+          "note": "據抄本：「讓那六位紳士動手。」"
+        },
+        {
+          "when": "1586.7.29",
+          "label": "加了附筆的信送到巴賓頓手上",
+          "note": "附筆要他報上六人的名字。"
+        },
+        {
+          "when": "1586.8.4",
+          "label": "巴拉德被捕",
+          "note": "巴賓頓逃走，幾天後被抓。"
+        },
+        {
+          "when": "1586.9.20",
+          "label": "巴賓頓被處死",
+          "note": ""
+        },
+        {
+          "when": "1586.10.14",
+          "label": "佛斯林蓋堡開審",
+          "note": "10 月 25 日在星室法庭宣判有罪。"
+        },
+        {
+          "when": "1587.2.1",
+          "label": "伊莉莎白簽死刑令",
+          "note": "同時要人寫信請波列私下了結。"
+        },
+        {
+          "when": "1587.2.8",
+          "label": "瑪麗在佛斯林蓋堡被處決",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "辯護者說，信被動過"
+    },
+    {
+      "type": "p",
+      "text": "替瑪麗辯護的人主張，殺女王那一段，是信在菲利普斯手上那十一天裡插進去的。Read 不同意。他認為附筆確實是沃辛漢的辦公室加的，推測是為了讓巴賓頓供出同夥，跟瑪麗的罪無關，所以審判用的抄本裡沒有它；抄本本身「在所有要點上」都正確。他承認菲利普斯夠聰明，也夠不擇手段，竄改得了，只是有能力不等於做了。他也寫到，菲利普斯後來證明是偽造的好手（Read 沒說是哪一次）。"
+    },
+    {
+      "type": "p",
+      "text": "大英圖書館 2022 年的文章寫法不同：信送出前，沃辛漢讓人改了好幾段，再加上附筆。改的是哪幾段、根據什麼，文章沒說。"
+    },
+    {
+      "type": "p",
+      "text": "依我看，附筆這件事，Read 的說法講得通：巴賓頓的供詞記得信末要名字，沃辛漢 8 月 3 日也怕附筆引起疑心，兩頭對得上。信的本文，我傾向相信是瑪麗的。讓我不安的是這套制度：收信、拆信、解碼、抄信、決定原件送不送，全在沃辛漢的辦公室；做抄本的菲利普斯沒被傳上庭，兩位秘書的證詞反反覆覆。那句「讓那六位紳士動手」是不是瑪麗寫的，在這套系統裡，外人沒辦法驗證。"
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "如果你的世界把「知情同意」本身定成死罪，誰最有動機替對手製造「知情」的機會？誰有權決定哪一份抄本算數？",
+        "一條祕密管道同時被敵我兩邊信任時，主事者用什麼辦法防止自己的線人串通，或背著他另開一條路？"
+      ]
+    },
+    {
+      "type": "h",
+      "text": "沒有法律、沒有授權"
+    },
+    {
+      "type": "p",
+      "text": "照秘書戴維森（William Davison）自己的記述，1587 年 2 月 1 日，伊莉莎白簽了死刑令，交給他送去蓋國璽，要他順路去告訴臥病在倫敦家中的沃辛漢，還打趣說：「這件傷心事，怕是會直接要了他的命。」"
+    },
+    {
+      "type": "p",
+      "text": "同一時間，她要戴維森和沃辛漢寫信給波列，請他找個辦法「縮短那位女王的性命」。"
+    },
+    {
+      "type": "p",
+      "text": "死刑令蓋了國璽，樞密院決定自行立刻執行。2 月 8 日，瑪麗在佛斯林蓋堡被處決。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/ExecutionOf_MaryQueenOfScots_DrawingBy_RobertBeale_1587.png/960px-ExecutionOf_MaryQueenOfScots_DrawingBy_RobertBeale_1587.png",
+      "width": 960,
+      "height": 1161,
+      "alt": "從高處俯看的一座大廳。中央是圍著欄杆的台子，台上有幾個人和一張矮凳；台子四周站滿披斗篷的男人，右邊牆上有壁爐，畫上標著 1 到 7 的編號。",
+      "caption": "瑪麗在佛斯林蓋堡受刑的情景，樞密院書記羅伯特・畢爾（Robert Beale）所繪，1587 年 2 月 8 日或稍後。原件藏大英圖書館。",
+      "credit": "Robert Beale；大英圖書館",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:ExecutionOf_MaryQueenOfScots_DrawingBy_RobertBeale_1587.png",
+      "made": "1587 年 2 月 8 日或稍後"
+    },
+    {
+      "type": "p",
+      "text": "那封要波列私下動手的信，是沃辛漢照辦寫的，他自己沒有附議。波列的回信是："
+    },
+    {
+      "type": "quote",
+      "text": "上帝不容我讓良心如此觸礁沉沒，也不容我在可憐的子孫身上留下這樣的污點：在沒有法律、沒有授權的情況下流人的血。",
+      "original": "God forbid that I should make so foul a shipwreck of my conscience, or leave so great a blot to my poor posterity to shed blood without law or warrant.",
+      "cite": "波列的回信，1587 年（Read 引 Morris 所編波列書信集）"
+    },
+    {
+      "type": "p",
+      "text": "伊莉莎白很不高興，說他是個「一板一眼、挑三揀四的傢伙」。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Mr Secretary Walsingham and the Policy of Queen Elizabeth, vol. III, ch. XII \"The Babington Plot\"",
+      "publisher": "Conyers Read, Oxford: Clarendon Press / Cambridge, Mass.: Harvard University Press（Internet Archive 掃描本）",
+      "date": "1925",
+      "url": "https://archive.org/details/mrsecretarywalsi0000cony",
+      "note": "第 1–70 頁：波列接手與看守指示、9 月斷法國大使管道、遷往查特利；吉福德在萊伊被攔；伯頓酒商與桶塞孔的防水盒、菲利普斯赴查特利、1 月 16 日第一批信、21 包舊信；信件路線與酒商、替手互不知情的解釋、5 英鎊；5 月 20 日致帕吉特與門多薩；附筆全文（引 Bardon Papers p.131）與菲利普斯背註；7 月 7–9 日、18 日、19 日菲利普斯的信、29 日藍外套僕人；8 月 2、3 日的信；巴拉德被捕、巴賓頓逃亡與被捕、倫敦敲鐘；蒂克索爾打獵；審判、沃辛漢答辯（State Trials 譯 Camden）、草稿下落、諾的私信；星室法庭、國會請願、answer answerless；Lingard 等人的竄改說與 Read 的結論；2 月 1 日死刑令、給波列的信與回信、precise and dainty fellow、戴維森。日期為英格蘭舊曆。OCR 把附筆首字 I 掃成 E。"
+    },
+    {
+      "title": "The Gallows Letter",
+      "publisher": "Alan Bryson, British Library, Medieval manuscripts blog",
+      "date": "2022-02-05",
+      "url": "https://www.bl.uk/stories/blogs/posts/the-gallows-letter",
+      "note": "7 月 17 日的信、菲利普斯在封面畫絞架、sett the six gentlemen to woork、enclose mee for ever in some hole、巴賓頓讀後燒信、六位紳士的提議（SP 53/19/12）、沃辛漢讓人改了幾段並加附筆、8 月 3 日給菲利普斯的信、巴賓頓 9 月 20 日處死、密碼表上巴賓頓的簽名承認。"
+    },
+    {
+      "title": "An Act for Provision to be made for the Surety of the Queen's Majesty's most Royal Person（27 Eliz. c. 1, 1585）",
+      "publisher": "J. R. Tanner, Tudor Constitutional Documents A.D. 1485–1603, Cambridge University Press（Internet Archive 掃描本）",
+      "date": "1922",
+      "url": "https://archive.org/details/cu31924030504322",
+      "note": "第 417–421 頁：法令條文（24 人委員會、privity、pursue to death、open invasion or rebellion）、第四節的 Bond and Association，以及 Tanner 關於 1584 年 7 月 10 日沉默者威廉遇刺後結盟的注。"
+    },
+    {
+      "title": "Elizabeth I's monarchy, part two — Source 6: Ciphers used by Mary Queen of Scots, 1586（SP 53/22 f.1）",
+      "publisher": "The National Archives (UK), Education",
+      "date": "",
+      "url": "https://www.nationalarchives.gov.uk/education/teaching-resources/elizabeth-i-monarchy-part-two/",
+      "note": "巴賓頓陰謀破獲後搜出瑪麗 100 多份密碼表。"
+    },
+    {
+      "title": "Manuscript copy of Robert Wynkfeilde's account of the execution of Mary Queen of Scots on 8 Feb 1587",
+      "publisher": "The National Archives (UK), Discovery catalogue",
+      "date": "",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/e450b3b0-8998-42d5-a2eb-037068b950ea",
+      "note": "行刑日期。"
+    },
+    {
+      "title": "File:Babington postscript.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Babington_postscript.jpg",
+      "note": "頭圖；Commons 著錄為 TNA SP 12/193/54 的附筆與 SP 53/18/55 的密碼表合成。"
+    },
+    {
+      "title": "File:ExecutionOf MaryQueenOfScots DrawingBy RobertBeale 1587.png",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:ExecutionOf_MaryQueenOfScots_DrawingBy_RobertBeale_1587.png",
+      "note": "行刑圖；Commons 著錄原件為大英圖書館 Add MS 48027, f. 650。"
+    }
+  ]
+}
