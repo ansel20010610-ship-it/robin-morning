@@ -1,0 +1,329 @@
+{
+ "column": "photo",
+ "date": "2026-10-31",
+ "title": "一面櫥窗，兩個地名",
+ "dek": "埃文斯 1936 年拍的相館櫥窗，Met 和他 1938 年的攝影集都寫薩凡納；國會圖書館的底片紀錄寫伯明罕，而且寫了依據。",
+ "brief": "沃克・埃文斯拍的這面相館櫥窗，Met 和 1938 年的攝影集都標薩凡納，國會圖書館的底片紀錄卻寫伯明罕，附註說館內所有文件都指向那裡。畫面上，STUDIO 六個大字母壓在十五張貼滿小像的相紙上，O 的洞裡露出一個小孩。",
+ "topic_key": "photo:evans-lc-usf342-008097-a",
+ "updated_at": "2026-10-31T02:14:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "hero": {
+  "id": "hero",
+  "kind": "photo",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Penny_Picture_Display%2C_Savannah_MET_DP204586.jpg/1280px-Penny_Picture_Display%2C_Savannah_MET_DP204586.jpg",
+  "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Penny_Picture_Display%2C_Savannah_MET_DP204586.jpg/1920px-Penny_Picture_Display%2C_Savannah_MET_DP204586.jpg",
+  "width": 1280,
+  "height": 1611,
+  "alt": "直式黑白照片。灰色底板上貼著十五張相紙，排成五列、每列三張；每張相紙上是三排小小的人像，多是頭肩像，背後是暗色的雲天。畫面中段橫過 S、T、U、D、I、O 六個灰色字母，黑色粗框，壓住第二、第三列相紙的一部分。底板右下角翹起，下面一條深色的邊；底緣有倒著印的英文字和片孔缺口。",
+  "caption": "Met 藏的一張銀鹽相紙，館藏標題 Penny Picture Display, Savannah，記為 1936 年。底緣可見倒著印的 AGFA SAFETY FILM。",
+  "credit": "Walker Evans 攝；影像來自 Metropolitan Museum of Art 開放資料（CC0），經 Wikimedia Commons",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Penny_Picture_Display,_Savannah_MET_DP204586.jpg",
+  "made": "1936"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "O 字中間開著一道長條形的洞，洞裡是兩格小像。下面那格是個淺色頭髮的小孩，看著鏡頭；上面那格只露出嘴唇、下巴和淺色的襯衫領口。"
+  },
+  {
+   "type": "detail",
+   "of": "hero",
+   "region": [
+    0.76,
+    0.31,
+    0.18,
+    0.15
+   ],
+   "position": "畫面右側偏中，約佔寬度五分之一",
+   "caption": "O 字的空洞：上面露出嘴唇、下巴與襯衫領口，下面是淺色頭髮的小孩。"
+  },
+  {
+   "type": "p",
+   "text": "這是沃克・埃文斯（Walker Evans，1903–1975）1936 年拍的一面相館櫥窗。灰色底板上貼著十五張相紙，排成五列，一列三張；每張相紙上是三排小像，一排五格左右。S、T、U、D、I、O 六個大字母橫在第二、第三列的相紙上，灰色的字面帶著一條條橫向細紋，外圍一圈粗黑框，把後面的小像擋掉一部分。"
+  },
+  {
+   "type": "p",
+   "text": "字母上有洞的不只 O。S 有兩個小孔，上孔只露出一小塊淺色衣服，下孔是一個人的眼睛和鼻子。D 的洞也分上下兩格：上格是淺色衣服的肩膀，下格是一張臉的邊緣。從字母的洞裡看得到的小像，O、S、D 各兩格，一共六格。"
+  },
+  {
+   "type": "detail",
+   "of": "hero",
+   "region": [
+    0.09,
+    0.31,
+    0.17,
+    0.16
+   ],
+   "position": "畫面左側偏中，約佔寬度六分之一",
+   "caption": "S 的兩個小孔。"
+  },
+  {
+   "type": "facts",
+   "title": "作品資料",
+   "items": [
+    [
+     "攝影者",
+     "Walker Evans（沃克・埃文斯）"
+    ],
+    [
+     "題名",
+     "Penny Picture Display, Savannah（Met、MoMA 與 1938 年《American Photographs》的標題）；Photographer's window of penny portraits. Birmingham, Alabama（LOC FSA/OWI 底片紀錄的標題）"
+    ],
+    [
+     "年代",
+     "1936；LOC 底片紀錄記 1936 年 3 月"
+    ],
+    [
+     "地點",
+     "薩凡納（喬治亞州）或伯明罕（阿拉巴馬州），見正文"
+    ],
+    [
+     "底片",
+     "LC-USF342-008097-A，LOC 數位檔 LC-DIG-fsa-8c52402（取自複製底片）"
+    ],
+    [
+     "頭圖",
+     "Met 藏明膠銀鹽相紙，24.7 x 19.3 公分，館藏號 1987.1100.482"
+    ],
+    [
+     "權利",
+     "Met 影像 CC0；LOC FSA/OWI 黑白底片屬公版"
+    ]
+   ]
+  },
+  {
+   "type": "h",
+   "text": "左上角眼熟的臉"
+  },
+  {
+   "type": "p",
+   "text": "左上角那張相紙裡，有兩個孩子看起來各出現了兩次。穿條紋衣服、戴淺色帽子的小女孩，在第一排第三格，也在第二排第二格。抱著一顆大球的小女孩，在第二排第一格，又在第三排第五格。"
+  },
+  {
+   "type": "detail",
+   "of": "hero",
+   "region": [
+    0.07,
+    0.06,
+    0.28,
+    0.16
+   ],
+   "position": "畫面左上角，約佔寬度四分之一強",
+   "caption": "左上角那張相紙。第一排第三格和第二排第二格的小女孩，第二排第一格和第三排第五格抱球的小女孩。"
+  },
+  {
+   "type": "p",
+   "text": "多數小像背後是暗色的雲天，像畫出來的布景。有幾張貼歪了，邊緣翹起；底板的右下角也翹著，下面是一條深色的邊。"
+  },
+  {
+   "type": "p",
+   "text": "第四列右邊那張相紙的左下角，有戴制服帽、帽上有徽章的人。第四列中間和右邊那兩張，各有一對男女臉貼著臉，同在中間一排的第三格。"
+  },
+  {
+   "type": "detail",
+   "of": "hero",
+   "region": [
+    0.64,
+    0.57,
+    0.3,
+    0.17
+   ],
+   "position": "畫面右側，第四列右邊那張相紙，約佔寬度三成",
+   "caption": "第四列右邊那張相紙：第一排有位戴眼鏡的女性，第二排中間是臉貼著臉的一對男女，左下角有戴制服帽、帽上有徽章的人。"
+  },
+  {
+   "type": "p",
+   "text": "畫面分三層：字母在前，相紙居中，底板在後。字把人擋掉了，又在洞裡留下六格。"
+  },
+  {
+   "type": "h",
+   "text": "底片邊上的號碼"
+  },
+  {
+   "type": "figure",
+   "id": "f2",
+   "kind": "photo",
+   "src": "https://tile.loc.gov/storage-services/service/pnp/fsa/8c52000/8c52400/8c52402v.jpg",
+   "width": 823,
+   "height": 1024,
+   "alt": "直式黑白影像，與頭圖是同一個畫面：十五張貼滿小人像的相紙排成五列三行，中間橫著 STUDIO 六個粗框字母。不同的是四周露出底片邊，頂緣有一串倒著寫的編號，底緣有倒著印的小字。",
+   "caption": "國會圖書館的數位檔，來自一張複製底片，館藏標題 Photographer's window of penny portraits. Birmingham, Alabama，日期記 1936 年 3 月。",
+   "credit": "Walker Evans 攝；Library of Congress, Prints & Photographs Division, FSA/OWI Black-and-White Negatives",
+   "license": "Public domain",
+   "license_url": "",
+   "source_url": "https://www.loc.gov/item/2017762271/",
+   "made": "1936 年 3 月（LOC 著錄）"
+  },
+  {
+   "type": "detail",
+   "of": "f2",
+   "region": [
+    0.62,
+    0.0,
+    0.3,
+    0.07
+   ],
+   "position": "畫面頂緣右側，約佔寬度三成",
+   "caption": "頂緣倒著寫的編號，和 LOC 呼叫號 008097-A 對得上。"
+  },
+  {
+   "type": "p",
+   "text": "國會圖書館這一張的頂緣倒寫著 RA-8097-A，底緣倒印著 AGFA SAFETY FILM。頭圖那張大都會藝術博物館（Met）的相紙，底緣也有倒著的 AGFA SAFETY FILM 和片孔缺口，頂緣看不到那串編號。兩張擺在一起，十五張相紙、六個字母的位置都一樣，是同一個畫面。"
+  },
+  {
+   "type": "table",
+   "title": "同題名的幾個版本",
+   "head": [
+    "版本",
+    "時間",
+    "紀錄裡的規格",
+    "畫面上看得到"
+   ],
+   "rows": [
+    [
+     "LOC 數位檔（FSA/OWI 典藏）",
+     "1936 年 3 月（LOC 記）",
+     "取自複製底片",
+     "頂緣倒著寫著編號，底緣有倒著印的小字"
+    ],
+    [
+     "Met 銀鹽相紙",
+     "1936（Met 記）",
+     "24.7 x 19.3 公分",
+     "底緣倒著印 AGFA SAFETY FILM 與片孔缺口，頂緣看不到那串編號"
+    ],
+    [
+     "MoMA 藏相紙（館藏號 1458.68）",
+     "1936（MoMA 記）",
+     "21.9 x 17.6 公分",
+     "展覽清單只列規格"
+    ],
+    [
+     "1974 年印的版本（SAAM 藏一張）",
+     "1936 年拍，1974 年印",
+     "32.8 x 26.2 公分",
+     "SAAM 記印製者 Richard Benson、John Deeks，發行 Double Elephant Press"
+    ]
+   ],
+   "caption": "LOC 的 Walker Evans Portfolio 紀錄標 Copyright 1974 by Walker Evans，並註明出版可能受限。SAAM 另記有一張 1974 年印本。"
+  },
+  {
+   "type": "p",
+   "text": "Met 另外藏著一張 8.7 x 13.7 公分的小相紙，標題是〔Detail of “Penny Picture Display, Savannah”〕，標題標明是局部。那一張的影像沒有開放。"
+  },
+  {
+   "type": "h",
+   "text": "伯明罕寫了依據"
+  },
+  {
+   "type": "p",
+   "text": "Met 給這張相紙的標題是《Penny Picture Display, Savannah》，薩凡納，喬治亞州。1938 年紐約現代藝術博物館（MoMA）出版埃文斯的攝影集《American Photographs》，這張排在第一部的第二張，用的也是薩凡納；排在它前面的，是 1934 年紐約的《License Photo Studio》。"
+  },
+  {
+   "type": "p",
+   "text": "國會圖書館收這張底片的那一筆，寫的是另一座城市：《Photographer's window of penny portraits. Birmingham, Alabama》，伯明罕，阿拉巴馬州，日期記 1936 年 3 月。標題直接叫它「攝影師的櫥窗」，照這麼讀，小像出自那位攝影師。這一筆的附註裡有一段："
+  },
+  {
+   "type": "quote",
+   "text": "有些出版品說這張照片拍於喬治亞州的薩凡納。美國國會圖書館版畫與照片部手上所有的文件，都指向地點是阿拉巴馬州的伯明罕。",
+   "original": "Some publications state that this image was photographed in Savannah, Georgia. All available documentation in the Prints and Photographs Division indicates that the location is Birmingham, Alabama.",
+   "cite": "國會圖書館，FSA/OWI 黑白底片紀錄附註"
+  },
+  {
+   "type": "p",
+   "text": "國會圖書館自己也有一筆寫薩凡納。那一筆登錄的是一套 1974 年版權的作品集（Walker Evans Portfolio），標題《Penny picture displays, Savannah》，地點標籤也是薩凡納。史密森尼美國藝術博物館藏的那張 1974 年印本，同樣叫薩凡納。"
+  },
+  {
+   "type": "p",
+   "text": "拿底片號碼去推，推不出地點。008097 前後幾號都記 1936 年 3 月：008096 是密西西比的肉鋪招牌，008098 是南卡羅來納州波福（Beaufort）的水果招牌，008100 是亞特蘭大一家黑人理髮店。相鄰號碼散在好幾個州。"
+  },
+  {
+   "type": "p",
+   "text": "薩凡納的名字寫在書上、Met、史密森尼和那套作品集裡；LOC 這一筆寫伯明罕。這一筆附註說標題與其他資訊取自圖說卡，並說館內文件都指向伯明罕；文件是哪些，沒寫。換我替這張照片寫圖說，地點寫伯明罕，括號裡註明 Met、MoMA、SAAM 都作薩凡納。"
+  },
+  {
+   "type": "exercise",
+   "title": "原創假設練習：牆上少掉的人",
+   "steps": [
+    "找一面貼滿照片的牆或櫥窗，例如照相館、學校的成果牆、家裡的相框牆。站遠一點拍一張全景，再走近拍其中一塊。",
+    "在全景上找出被擋住的格子，被字、海報、反光或別張照片壓住都算，寫下被擋住的是哪幾格、擋住它的是什麼。",
+    "在近拍的那一塊裡，找一個出現不只一次的人或東西，寫下它在第幾排第幾格。",
+    "把兩張並排，各寫一句話：只看全景，寫下你讀到的內容；近拍之後，寫下哪裡要改。",
+    "在全景上，寫下視線最先停在哪個東西上、為什麼；再找出第二個。"
+   ],
+   "criteria": [
+    "全景上至少標出一處被擋住的位置，並說得出擋住它的是什麼。",
+    "近拍的那一塊裡，能指出同一個人或同一件東西出現在哪兩格。",
+    "兩句話一前一後，有實際改動的地方。",
+    "能說出視線停下來的前兩個東西，和各自的理由。"
+   ],
+   "note": "只拍牆上的照片，不拍真人的臉；要拍人先徵得同意，也不要把別人的相片公開上傳。"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Photographer's window of penny portraits. Birmingham, Alabama",
+   "publisher": "Library of Congress, Prints & Photographs Division（FSA/OWI 黑白底片）",
+   "date": "1936",
+   "url": "https://www.loc.gov/item/2017762271/",
+   "note": "標題、日期 1936 Mar.、LC-USF342-008097-A、LC-DIG-fsa-8c52402（複製底片）、地點附註（Savannah 與 Birmingham）、caption card、權利欄；經 loc.gov JSON 讀取"
+  },
+  {
+   "title": "Penny picture displays, Savannah / Walker Evans",
+   "publisher": "Library of Congress, Prints & Photographs Division（Walker Evans Portfolio）",
+   "date": "1936",
+   "url": "https://www.loc.gov/item/91725715/",
+   "note": "標題、[printed 1974?]、Copyright 1974 by Walker Evans、Publication may be restricted、地點標籤 savannah；本文不使用這個版本的圖"
+  },
+  {
+   "title": "Penny Picture Display, Savannah（1987.1100.482）",
+   "publisher": "The Metropolitan Museum of Art",
+   "date": "1936",
+   "url": "https://www.metmuseum.org/art/collection/search/265556",
+   "note": "標題、年代、銀鹽相紙、24.7 x 19.3 公分、館藏號；經 Met Open Access API 讀取"
+  },
+  {
+   "title": "[Detail of “Penny Picture Display, Savannah”]（1996.165.1）",
+   "publisher": "The Metropolitan Museum of Art",
+   "date": "1936",
+   "url": "https://www.metmuseum.org/art/collection/search/271970",
+   "note": "只讀館藏資料（標題、明膠銀鹽、8.7 x 13.7 公分），影像未開放；經 Met Open Access API 讀取"
+  },
+  {
+   "title": "File:Penny Picture Display, Savannah MET DP204586.jpg",
+   "publisher": "Wikimedia Commons（影像來源 Metropolitan Museum of Art）",
+   "url": "https://commons.wikimedia.org/wiki/File:Penny_Picture_Display,_Savannah_MET_DP204586.jpg",
+   "note": "頭圖；授權 CC0"
+  },
+  {
+   "title": "Walker Evans: American Photographs 展覽清單（1989）",
+   "publisher": "The Museum of Modern Art",
+   "date": "1989",
+   "url": "https://www.moma.org/documents/moma_master-checklist_350830.pdf",
+   "note": "清單依 1938 與 1988 年版圖版順序；第 1 號 License Photo Studio, New York. 1934，第 2 號 Penny Picture Display, Savannah. 1936（1458.68）"
+  },
+  {
+   "title": "American photographs",
+   "publisher": "The Museum of Modern Art, 1938（Internet Archive 書目紀錄）",
+   "date": "1938",
+   "url": "https://archive.org/details/americanphotogra0000evan",
+   "note": "Part 1 圖版清單的前兩張：License photo studio, New York, 1934；Penny picture display, Savannah, 1936"
+  },
+  {
+   "title": "Penny Picture Display, Savannah（2006.13.1.7）",
+   "publisher": "Smithsonian American Art Museum",
+   "url": "https://americanart.si.edu/artwork/penny-picture-display-savannah-76146",
+   "note": "1936, printed 1974；印製 Richard Benson、John Deeks；發行 Double Elephant Press；32.8 x 26.2 公分"
+  },
+  {
+   "title": "同批相鄰底片 008094–008102（例：Mississippi butcher sign、Fruit sign. Beaufort, South Carolina、Negro barber shop. Atlanta, Georgia）",
+   "publisher": "Library of Congress, Prints & Photographs Division（FSA/OWI 黑白底片）",
+   "date": "1936",
+   "url": "https://www.loc.gov/collections/fsa-owi-black-and-white-negatives/",
+   "note": "LOC FSA/OWI 黑白底片集上層頁面；所列 008096、008098、008100 與相鄰各號皆記 1936 Mar."
+  }
+ ]
+}
