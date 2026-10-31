@@ -1,27 +1,176 @@
 {
   "column": "football",
   "date": "2026-11-01",
-  "title": "西蒙尼第 344 勝，追平阿拉貢內斯",
-  "dek": "565 場對 757 場，西蒙尼用少得多的場次追平西甲教練勝場紀錄。巴薩週日 04:00 對阿拉維斯，賽果見後續更新。",
-  "brief": "西蒙尼週六帶馬競 2 比 0 贏萊萬特，拿到西甲第 344 勝，追平阿拉貢內斯；阿拉貢內斯花了 757 場，他只用 565 場。巴薩台灣時間週日 04:00 主場對阿拉維斯，本稿寫成時尚未開賽，賽果見後續更新；下一場是 11 月 4 日（週三）04:00 歐冠迎戰阿斯頓維拉。",
+  "title": "巴薩 6 比 1 阿拉維斯，半場就 4 比 0",
+  "dek": "拉菲尼亞、亞馬爾各進兩球，費爾明前三球都有份。巴薩 30 分重回榜首，領先馬競 2 分。",
+  "brief": "巴薩台灣時間週日在自家 6 比 1 贏阿拉維斯，半場就 4 比 0；拉菲尼亞與亞馬爾各進兩球，費爾明一球兩助攻。Gerard Martín 在 90 分鐘因傷讓比賽暫停，官方傷情還沒公布。巴薩重回榜首，下一場是 11 月 4 日（週三）04:00，歐冠在主場迎戰阿斯頓維拉。",
   "topic_key": "football:2026-11-01",
-  "updated_at": "2026-11-01T03:35:00+08:00",
+  "updated_at": "2026-11-01T06:06:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
+    "id": "hero",
     "kind": "photo",
-    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Madrid_-_Estadio_Wanda_Metropolitano_27.jpg/1280px-Madrid_-_Estadio_Wanda_Metropolitano_27.jpg",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Lamine_Yamal_France_v_Spain_7.24.26-059.jpg/1280px-Lamine_Yamal_France_v_Spain_7.24.26-059.jpg",
     "width": 1280,
-    "height": 833,
-    "alt": "馬競主場大都會球場的外觀，弧形屋頂在藍天下；前方立著白底紅邊的西班牙文大字「CORAJE Y CORAZÓN」，幾個人站在字母旁。",
-    "caption": "馬競主場大都會球場（Metropolitano），前方是西班牙文立體字「Coraje y Corazón」，Zarateman 攝於 2018 年 11 月 11 日。巴薩 11 月 9 日要去這裡。資料照片，非當日比賽畫面。",
-    "credit": "Zarateman／Wikimedia Commons",
-    "license": "CC0",
-    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Madrid_-_Estadio_Wanda_Metropolitano_27.jpg",
-    "made": "2018"
+    "height": 853,
+    "alt": "亞馬爾戴白色髮帶、一頭捲髮，穿西班牙國家隊白色 19 號球衣與酒紅短褲，面向左側站著，神情專注；背景是模糊的觀眾席與另一名同隊球員。",
+    "caption": "亞馬爾（Lamine Yamal）2026 年 7 月 14 日在世界盃替西班牙出戰法國。資料照片，非當日比賽畫面；他這場在 Camp Nou 進兩球、助攻一次。",
+    "credit": "Bryan Berlin／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lamine_Yamal_France_v_Spain_7.24.26-059.jpg",
+    "made": "2026"
   },
   "body": [
+    {
+      "type": "p",
+      "text": "費爾明（Fermín López）在巴薩前三個進球裡都留了名字：第 8 分鐘助攻拉菲尼亞（Raphinha）先開紀錄，第 23 分鐘自己從右邊的小角度射進左上角，第 41 分鐘一記直傳，讓拉菲尼亞再進一球。"
+    },
+    {
+      "type": "p",
+      "text": "巴薩台灣時間週日 04:00 在 Spotify Camp Nou 對阿拉維斯（Alavés），上半場結束已經 4 比 0，終場 6 比 1。5 月阿拉維斯在自己球場 1 比 0 贏過巴薩，進球的是 Ibrahim Diabaté；官網賽前預告說，阿拉維斯上一次在巴薩主場贏球是十年前，這次也沒有改變。"
+    },
+    {
+      "type": "table",
+      "title": "巴薩 6 比 1 阿拉維斯：進球順序",
+      "head": [
+        "分鐘",
+        "進球",
+        "助攻",
+        "比分"
+      ],
+      "rows": [
+        [
+          "8'",
+          "拉菲尼亞",
+          "費爾明",
+          "1 比 0"
+        ],
+        [
+          "23'",
+          "費爾明",
+          "亞馬爾",
+          "2 比 0"
+        ],
+        [
+          "41'",
+          "拉菲尼亞",
+          "費爾明",
+          "3 比 0"
+        ],
+        [
+          "45+1'",
+          "亞馬爾",
+          "坎塞洛（João Cancelo）",
+          "4 比 0"
+        ],
+        [
+          "64'",
+          "亞馬爾",
+          "Gabriel Jesus",
+          "5 比 0"
+        ],
+        [
+          "81'",
+          "戈登（Anthony Gordon）",
+          "羅德里（Rodri）",
+          "6 比 0"
+        ],
+        [
+          "84'",
+          "Mariano Díaz（阿拉維斯）",
+          "—",
+          "6 比 1"
+        ]
+      ],
+      "caption": "ESPN 資料介面比賽紀錄；巴薩官網比賽頁的進球者與分鐘一致。"
+    },
+    {
+      "type": "p",
+      "text": "亞馬爾（Lamine Yamal）兩球一助攻。上半場補時第一分鐘，他在禁區外左腳射進右下角，是半場第四球；第 64 分鐘的第二球是 Gabriel Jesus 的直傳，Jesus 兩分鐘前才替拉菲尼亞上場。這球經過 VAR 檢視才確認有效，比賽停了兩分鐘。"
+    },
+    {
+      "type": "p",
+      "text": "戈登第 74 分鐘替亞馬爾上場，七分鐘後接羅德里的直傳，在禁區中路把球送進球門正中。阿拉維斯在第 84 分鐘靠第 74 分鐘上場的 Mariano Díaz 扳回一球，右腳射進左下角。"
+    },
+    {
+      "type": "p",
+      "text": "佩德里（Pedri）第 40 分鐘吃了黃牌，中場休息時由 Marc Bernal 換下。ESPN 的數據裡，巴薩控球 77%，射門 13 次對 7 次，射正 7 次對 3 次。全場沒有紅牌，阿拉維斯吃了三張黃牌，巴薩兩張。"
+    },
+    {
+      "type": "h",
+      "text": "Fariñas 先發右後衛，Gerard Martín 最後時刻出狀況"
+    },
+    {
+      "type": "p",
+      "text": "賽前官網的預告引了弗利克談 Brian Fariñas 的一句話，這場他先發。奧爾莫（Dani Olmo）、孔德（Jules Koundé）等六人仍然缺陣。"
+    },
+    {
+      "type": "quote",
+      "text": "他該上場了，他應得的。",
+      "original": "The time has come for him to play. He deserves it.",
+      "cite": "弗利克賽前對媒體，巴薩官網賽前預告"
+    },
+    {
+      "type": "p",
+      "text": "Gerard Martín 第 82 分鐘替德容（Frenkie de Jong）上場，到第 90 分鐘，他因傷讓比賽暫停；補時第一分鐘比賽恢復。傷勢怎麼樣，要等球隊的醫療公告。"
+    },
+    {
+      "type": "h",
+      "text": "巴薩重回榜首"
+    },
+    {
+      "type": "p",
+      "text": "巴薩 11 場 10 勝，唯一的敗仗是上週末的國家德比輸給皇馬。30 分的巴薩領先馬競 2 分；皇馬 24 分，但少踢一場，週日台灣時間 23:15 客場對桑坦德競技。阿拉維斯 11 場 12 分，從第 7 名掉到第 10 名。"
+    },
+    {
+      "type": "table",
+      "title": "西甲積分榜前段（巴薩對阿拉維斯終場後）",
+      "head": [
+        "球隊",
+        "場次",
+        "積分",
+        "淨勝球"
+      ],
+      "rows": [
+        [
+          "巴塞隆納",
+          "11",
+          "30",
+          "+34"
+        ],
+        [
+          "馬德里競技",
+          "11",
+          "28",
+          "+14"
+        ],
+        [
+          "皇家馬德里",
+          "10",
+          "24",
+          "+15"
+        ],
+        [
+          "皇家貝蒂斯",
+          "11",
+          "23",
+          "+3"
+        ],
+        [
+          "阿拉維斯",
+          "11",
+          "12",
+          "-2"
+        ]
+      ],
+      "caption": "ESPN 資料介面，台灣時間 11 月 1 日 06:00 左右讀取，巴薩對阿拉維斯終場後；阿拉維斯排第 10，第 5 至 9 名省略。"
+    },
+    {
+      "type": "h",
+      "text": "西蒙尼的第 344 勝"
+    },
     {
       "type": "p",
       "text": "西蒙尼（Diego Simeone）在西甲贏了 344 場，和阿拉貢內斯（Luis Aragonés）一樣多。阿拉貢內斯花了 757 場、帶過八支球隊；西蒙尼用了 565 場，全在馬競。EFE 的標題寫成「歷史上贏最多場的教練」。"
@@ -36,70 +185,7 @@
     },
     {
       "type": "p",
-      "text": "Goal 說，這是馬競西甲連續第七場勝利。截至週六夜間，馬競 11 場 28 分，暫列第一。"
-    },
-    {
-      "type": "table",
-      "title": "西甲積分榜前段（巴薩對阿拉維斯開賽前）",
-      "head": [
-        "球隊",
-        "場次",
-        "積分",
-        "淨勝球"
-      ],
-      "rows": [
-        [
-          "馬德里競技",
-          "11",
-          "28",
-          "+14"
-        ],
-        [
-          "巴塞隆納",
-          "10",
-          "27",
-          "+29"
-        ],
-        [
-          "皇家馬德里",
-          "10",
-          "24",
-          "+15"
-        ],
-        [
-          "阿拉維斯",
-          "10",
-          "12",
-          "+3"
-        ]
-      ],
-      "caption": "ESPN 資料介面，台灣時間 11 月 1 日 02:40 讀取的快照，巴薩對阿拉維斯開賽前；阿拉維斯排第 7，第 4 至 6 名省略。"
-    },
-    {
-      "type": "h",
-      "text": "弗利克談 Fariñas：「該上場了」"
-    },
-    {
-      "type": "p",
-      "text": "巴薩台灣時間週日 04:00 在 Spotify Camp Nou 主場對阿拉維斯（Alavés），本稿寫成時尚未開賽，賽果見後續更新。"
-    },
-    {
-      "type": "p",
-      "text": "巴薩官網的賽前預告說，阿拉維斯上一次在巴薩主場贏球是十年前，教練是佩萊格里諾（Mauricio Pellegrino）；教練 Quique Sánchez Flores 帶隊來巴塞隆納七次，一場沒贏，最近四趟一球未進。"
-    },
-    {
-      "type": "p",
-      "text": "今年 5 月，阿拉維斯在自己的 Mendizorrotza 球場 1 比 0 贏過巴薩，進球的是 Ibrahim Diabaté。那時巴薩已經拿下冠軍；在那之前，巴薩對阿拉維斯 16 場沒輸。"
-    },
-    {
-      "type": "p",
-      "text": "弗利克點了 23 人，奧爾莫（Dani Olmo）、孔德（Jules Koundé）等六人仍不能用，名單裡有 Brian Fariñas。"
-    },
-    {
-      "type": "quote",
-      "text": "他該上場了，他應得的。",
-      "original": "The time has come for him to play. He deserves it.",
-      "cite": "弗利克賽前對媒體，巴薩官網賽前預告"
+      "text": "Goal 說，這是馬競西甲連續第七場勝利，賽前馬競以 28 分暫列第一。幾個鐘頭後巴薩贏了 6 球，馬競退到第二。"
     },
     {
       "type": "h",
@@ -200,7 +286,7 @@
     },
     {
       "type": "p",
-      "text": "對阿拉維斯之後，巴薩 11 月 4 日（週三）04:00 歐冠主場迎戰阿斯頓維拉（Aston Villa）。"
+      "text": "巴薩 11 月 4 日（週三）04:00 在歐冠主場迎戰阿斯頓維拉（Aston Villa）。"
     },
     {
       "type": "table",
@@ -237,7 +323,7 @@
           "馬德里競技 對 巴塞隆納"
         ]
       ],
-      "caption": "依 ESPN 賽程資料（UTC）換算，前為主隊。巴薩對阿拉維斯（11 月 1 日 04:00 開踢）的賽果見後續更新。"
+      "caption": "依 ESPN 賽程資料（UTC）換算，前為主隊。"
     },
     {
       "type": "p",
@@ -245,6 +331,27 @@
     }
   ],
   "sources": [
+    {
+      "title": "Alavés at Barcelona（比賽紀錄，event 401882822）",
+      "publisher": "ESPN 資料介面",
+      "date": "2026-11-01",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882822",
+      "note": "Full Time，6 比 1、半場 4 比 0；進球者、助攻、分鐘、換人、牌、VAR 檢視（64'）、Gerard Martín 傷停（90'）、先發名單與數據；台灣時間 11 月 1 日約 06:00 讀取"
+    },
+    {
+      "title": "FC Barcelona v Alavés（比賽頁，LaLiga Matchday 11）",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-01",
+      "url": "https://www.fcbarcelona.com/en/matches/138382/fc-barcelona-alaves-la-liga-2026-2027",
+      "note": "終場 6 比 1、半場 4 比 0、進球者與分鐘，與 ESPN 核對（比分第二來源）；官網新聞列表在 11 月 1 日約 06:00 還沒有賽後報導、弗利克賽後談話與 Gerard Martín 傷情報告，故正文不寫賽後說法"
+    },
+    {
+      "title": "Video: a stunning brace from Raphinha as Barcelona strike hard at the Camp Nou",
+      "publisher": "Goal",
+      "date": "2026-10-31",
+      "url": "https://www.goal.com/en/news/video-a-stunning-brace-from-raphinha-as-barcelona-strike-hard-at-the-camp-nou/blt810de815df4860ca",
+      "note": "拉菲尼亞兩球，第 8 分鐘與上半場結束前約五分鐘；頁面沒有最終比分，只作拉菲尼亞進球的旁證"
+    },
     {
       "title": "Levante 0-2 Atlético Madrid（比賽紀錄，event 401882820）",
       "publisher": "ESPN 資料介面",
@@ -278,14 +385,14 @@
       "publisher": "ESPN 資料介面",
       "date": "2026-11-01",
       "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
-      "note": "積分榜；台灣時間 11 月 1 日 02:40 讀取，與 Goal 的 28／27／24 分互相核對"
+      "note": "積分榜；巴薩對阿拉維斯終場後（台灣時間 11 月 1 日約 06:00）讀取：巴薩 11 場 30 分 +34、馬競 28 分、皇馬 10 場 24 分、貝蒂斯 23 分、阿拉維斯第 10 名 12 分 -2；開賽前（02:40）的快照為巴薩 10 場 27 分、阿拉維斯第 7"
     },
     {
       "title": "Soccer scoreboard（西甲、歐冠）",
       "publisher": "ESPN 資料介面",
       "date": "2026-11-01",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard",
-      "note": "賽程開球時間（UTC，換算為台灣時間）：巴薩對阿拉維斯 11 月 1 日 04:00、馬競對巴薩 11 月 9 日 04:00、桑坦德競技對皇馬；比利亞雷亞爾 0-1 西班牙人賽果核對；11 月 1 日凌晨讀取"
+      "note": "西甲當日賽果核對：巴薩 6-1 阿拉維斯（Full Time）、馬競 2-0 萊萬特；賽程開球時間（UTC，換算為台灣時間）：馬競對巴薩 11 月 9 日 04:00、桑坦德競技對皇馬；比利亞雷亞爾 0-1 西班牙人賽果核對"
     },
     {
       "title": "Atlético Madrid schedule",
@@ -306,7 +413,7 @@
       "publisher": "FC Barcelona",
       "date": "2026-10-31",
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4601684/preview-fc-barcelona-v-alaves",
-      "note": "弗利克談 Fariñas、阿拉維斯十年未在巴薩主場贏球、Quique Sánchez Flores 紀錄、「last May」在 Mendizorrotza 1 比 0（即 2026 年 5 月，與 ESPN 資料介面 event 748498 核對）；頁面只顯示相對時間，日期依俱樂部新聞列表；西班牙時間 21:00 開球"
+      "note": "賽前預告：弗利克談 Fariñas（賽前說法）、阿拉維斯 5 月在 Mendizorrotza 1 比 0（即 2026 年 5 月，與 ESPN 資料介面 event 748498 核對）；頁面只顯示相對時間，日期依俱樂部新聞列表；西班牙時間 21:00 開球"
     },
     {
       "title": "Barcelona at Alavés（比賽紀錄，event 748498）",
@@ -320,7 +427,7 @@
       "publisher": "FC Barcelona",
       "date": "2026-10-31",
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4601620/the-squad-for-barca-v-alaves",
-      "note": "23 人名單與不能用的六人；頁面只顯示相對時間，日期依俱樂部新聞列表"
+      "note": "23 人名單與不能用的六人（賽前）；頁面只顯示相對時間，日期依俱樂部新聞列表"
     },
     {
       "title": "Five absentees: Hamza Abdelkarim adorns Barcelona's squad against Alaves",
@@ -435,11 +542,18 @@
       "note": "比分、Cabrera 進球、教練更替；頁面署名 Newsroom Infobae，未標通訊社；比分與 ESPN 資料介面（Villarreal 0-1 Espanyol）核對"
     },
     {
-      "title": "File:Madrid - Estadio Wanda Metropolitano 27.jpg",
+      "title": "Real Madrid best Barça in brilliant Clásico; Man United mess deepens; Spurs win again",
+      "publisher": "ESPN",
+      "date": "2026-10-26",
+      "url": "https://www.espn.com/soccer/story/_/id/50284670/marcotti-musings-analysis-clasico-real-madrid-barcelona-man-united-carrick-tottenham-chelsea",
+      "note": "國家德比皇馬勝巴薩（標題）；巴薩本季聯賽唯一敗仗，與 ESPN 積分榜 10 勝 0 平 1 敗相符"
+    },
+    {
+      "title": "File:Lamine Yamal France v Spain 7.24.26-059.jpg",
       "publisher": "Wikimedia Commons",
-      "date": "2018-11-11",
-      "url": "https://commons.wikimedia.org/wiki/File:Madrid_-_Estadio_Wanda_Metropolitano_27.jpg",
-      "note": "頭圖；作者 Zarateman，CC0"
+      "date": "2026-07-14",
+      "url": "https://commons.wikimedia.org/wiki/File:Lamine_Yamal_France_v_Spain_7.24.26-059.jpg",
+      "note": "頭圖；作者 Bryan Berlin，CC BY-SA 4.0"
     }
   ]
 }
