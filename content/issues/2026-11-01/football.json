@@ -5,7 +5,7 @@
   "dek": "565 場對 757 場，西蒙尼用少得多的場次追平西甲教練勝場紀錄。巴薩週日 04:00 對阿拉維斯，賽果見後續更新。",
   "brief": "西蒙尼週六帶馬競 2 比 0 贏萊萬特，拿到西甲第 344 勝，追平阿拉貢內斯；阿拉貢內斯花了 757 場，他只用 565 場。巴薩台灣時間週日 04:00 主場對阿拉維斯，本稿寫成時尚未開賽，賽果見後續更新；下一場是 11 月 4 日（週三）04:00 歐冠迎戰阿斯頓維拉。",
   "topic_key": "football:2026-11-01",
-  "updated_at": "2026-11-01T03:31:00+08:00",
+  "updated_at": "2026-11-01T03:35:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -13,7 +13,7 @@
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Madrid_-_Estadio_Wanda_Metropolitano_27.jpg/1280px-Madrid_-_Estadio_Wanda_Metropolitano_27.jpg",
     "width": 1280,
     "height": 833,
-    "alt": "馬競主場大都會球場的外觀，弧形屋頂在藍天下；前方立著白底紅邊的西班牙文大字「CORAJE Y CORAZÓN」，幾個人站在字母旁拍照。",
+    "alt": "馬競主場大都會球場的外觀，弧形屋頂在藍天下；前方立著白底紅邊的西班牙文大字「CORAJE Y CORAZÓN」，幾個人站在字母旁。",
     "caption": "馬競主場大都會球場（Metropolitano），前方是西班牙文立體字「Coraje y Corazón」，Zarateman 攝於 2018 年 11 月 11 日。巴薩 11 月 9 日要去這裡。資料照片，非當日比賽畫面。",
     "credit": "Zarateman／Wikimedia Commons",
     "license": "CC0",
@@ -24,7 +24,7 @@
   "body": [
     {
       "type": "p",
-      "text": "西蒙尼（Diego Simeone）在西甲贏了 344 場，和阿拉貢內斯（Luis Aragonés）一樣多。阿拉貢內斯花了 757 場、帶過八支球隊；西蒙尼用了 565 場，全在馬競。EFE 的標題乾脆把兩人並列為西甲史上贏最多場的教練。"
+      "text": "西蒙尼（Diego Simeone）在西甲贏了 344 場，和阿拉貢內斯（Luis Aragonés）一樣多。阿拉貢內斯花了 757 場、帶過八支球隊；西蒙尼用了 565 場，全在馬競。EFE 的標題寫成「歷史上贏最多場的教練」。"
     },
     {
       "type": "p",
@@ -36,13 +36,12 @@
     },
     {
       "type": "p",
-      "text": "Goal 說，這是馬競在西甲連續第七場贏球。週六夜間，他們以 11 場 28 分升上榜首。"
+      "text": "Goal 說，這是馬競西甲連續第七場勝利。截至週六夜間，馬競 11 場 28 分，暫列第一。"
     },
     {
       "type": "table",
       "title": "西甲積分榜前段（巴薩對阿拉維斯開賽前）",
       "head": [
-        "名次",
         "球隊",
         "場次",
         "積分",
@@ -50,39 +49,35 @@
       ],
       "rows": [
         [
-          "1",
           "馬德里競技",
           "11",
           "28",
           "+14"
         ],
         [
-          "2",
           "巴塞隆納",
           "10",
           "27",
           "+29"
         ],
         [
-          "3",
           "皇家馬德里",
           "10",
           "24",
           "+15"
         ],
         [
-          "7",
           "阿拉維斯",
           "10",
           "12",
           "+3"
         ]
       ],
-      "caption": "ESPN 資料介面，台灣時間 11 月 1 日 02:40 讀取的快照，巴薩對阿拉維斯開賽前；第 4 至 6 名省略。"
+      "caption": "ESPN 資料介面，台灣時間 11 月 1 日 02:40 讀取的快照，巴薩對阿拉維斯開賽前；阿拉維斯排第 7，第 4 至 6 名省略。"
     },
     {
       "type": "h",
-      "text": "Fariñas 該上場了"
+      "text": "弗利克談 Fariñas：「該上場了」"
     },
     {
       "type": "p",
@@ -90,11 +85,11 @@
     },
     {
       "type": "p",
-      "text": "巴薩官網的賽前預告說，阿拉維斯上一次在巴薩主場贏球是十年前，教練是佩萊格里諾（Mauricio Pellegrino）；現任教練 Quique Sánchez Flores 帶隊來巴塞隆納七次，一場沒贏，最近四趟一球未進。"
+      "text": "巴薩官網的賽前預告說，阿拉維斯上一次在巴薩主場贏球是十年前，教練是佩萊格里諾（Mauricio Pellegrino）；教練 Quique Sánchez Flores 帶隊來巴塞隆納七次，一場沒贏，最近四趟一球未進。"
     },
     {
       "type": "p",
-      "text": "不過今年 5 月，阿拉維斯在自己的 Mendizorrotza 球場 1 比 0 贏過巴薩，進球的是 Ibrahim Diabaté。那時巴薩已經拿下聯賽冠軍；在那之前，巴薩對阿拉維斯 16 場沒輸。"
+      "text": "今年 5 月，阿拉維斯在自己的 Mendizorrotza 球場 1 比 0 贏過巴薩，進球的是 Ibrahim Diabaté。那時巴薩已經拿下冠軍；在那之前，巴薩對阿拉維斯 16 場沒輸。"
     },
     {
       "type": "p",
@@ -116,22 +111,22 @@
     },
     {
       "type": "p",
-      "text": "《每日郵報》說，曼聯在找新的 10 號。隊長布魯諾・費南德斯（Bruno Fernandes）32 歲，和教練卡里克（Michael Carrick）公開鬧翻後去留未定；人選之一是 23 歲的費爾明（Fermín López），這季 5 球 4 助攻。報導說巴薩要價約 8,000 萬歐元，PSG 和切爾西也有興趣。",
+      "text": "《每日郵報》說，曼聯在找新的 10 號。隊長布魯諾・費南德斯（Bruno Fernandes）32 歲，和卡里克（Michael Carrick）公開鬧翻後去留未定；人選之一是 23 歲的費爾明（Fermín López），這季 5 球 4 助攻。報導說巴薩要價約 8,000 萬歐元，PSG 和切爾西也有興趣。",
       "tag": "傳聞"
     },
     {
       "type": "p",
-      "text": "《世界體育報》說，巴薩一月會再去追國際米蘭的後衛巴斯托尼（Alessandro Bastoni）。他 27 歲，去年夏天巴薩的球探就盯過他，球隊準備出價 7,000 萬歐元，條件沒談攏。",
+      "text": "《世界體育報》說，巴薩一月會重新追國際米蘭的後衛巴斯托尼（Alessandro Bastoni）。他 27 歲，去年夏天巴薩的球探盯過他，球隊準備出價 7,000 萬歐元，條件談不攏，他留在國際米蘭。",
       "tag": "傳聞"
     },
     {
       "type": "p",
-      "text": "《阿斯報》說，曼聯後衛利桑德羅・馬丁內斯（Lisandro Martínez）預計季末以自由身離隊，巴薩和馬競都想要他。他 28 歲，最近批評過曼聯高層的補強規劃；報導認為他在曼聯沒有未來，一月若有球隊肯付一筆小額轉會費，也可能提前走。",
+      "text": "《阿斯報》說，曼聯後衛利桑德羅・馬丁內斯（Lisandro Martínez）預計季末以自由身離隊，巴薩和馬競都想要他。他 28 歲；AS 稱他最近批評過曼聯高層的補強規劃，在曼聯沒有未來，一月若有球隊願付小額轉會費，也可能離開。",
       "tag": "傳聞"
     },
     {
       "type": "p",
-      "text": "這則報導掛上網幾個小時後，馬丁內斯在對切爾西的比賽裡，於禁區內犯規送出點球，吃下第二張黃牌被罰下，曼聯少一個人踢了最後 28 分鐘。"
+      "text": "馬丁內斯 10 月 31 日對切爾西，因為在禁區對 Fofana 犯規送出點球，拿到第二張黃牌被罰下，曼聯少一人踢最後 28 分鐘。"
     },
     {
       "type": "h",
@@ -143,21 +138,21 @@
       "items": [
         {
           "headline": "哈基米生涯第一次帽子戲法",
-          "summary": "PSG 客場 5 比 1 贏利哈佛（Le Havre），哈基米（Achraf Hakimi）進三球、助攻兩次，五個球都有他的份。他這季賽前一球未進，生涯第 486 場才等到第一次帽子戲法。恩里克（Luis Enrique）拿到 PSG 隊史第 127 勝，超過布蘭克（Laurent Blanc）。",
+          "summary": "PSG 在利哈佛（Le Havre）5 比 1 贏，哈基米（Achraf Hakimi）進三球、助攻兩次，五個球都有他參與。賽前他這季還沒進球，這是他生涯第一次帽子戲法，第 486 場。恩里克（Luis Enrique）拿到 PSG 隊史第 127 勝，超過布蘭克（Laurent Blanc）。",
           "source": "ESPN（PA）",
           "url": "https://www.espn.com/soccer/story/_/id/50330654",
           "when": "10 月 30 日（週五）"
         },
         {
           "headline": "曼聯各項賽事九場不勝",
-          "summary": "切爾西 2 比 0 贏曼聯，羅傑斯（Morgan Rogers）下半場開始四分鐘後先進球，帕爾默（Cole Palmer）再罰進點球。曼聯英超九場只拿 7 分，下一場是台灣時間 11 月 4 日（週三）04:00 歐冠主場對羅馬，和巴薩對阿斯頓維拉同一個鐘點。",
+          "summary": "切爾西 2 比 0 贏曼聯，羅傑斯（Morgan Rogers）下半場開始四分鐘後先進球，帕爾默（Cole Palmer）再罰進點球。曼聯本季英超九場 7 分，下一場是台灣時間 11 月 4 日（週三）04:00 歐冠主場對羅馬，和巴薩對阿斯頓維拉同一個鐘點。",
           "source": "ESPN",
           "url": "https://www.espn.com/soccer/story/_/id/50335264",
           "when": "10 月 31 日（週六）"
         },
         {
           "headline": "布萊頓 1 比 0 贏曼城",
-          "summary": "Yasin Ayari 第 11 分鐘進球。曼城開季七連勝之後，英超連輸兩場；布萊頓追到離榜首兩分。四天前的聯賽盃，布萊頓才在 PK 大戰被曼城淘汰。",
+          "summary": "Yasin Ayari 第 11 分鐘進球。曼城連兩場英超敗，之前開季七連勝；布萊頓離榜首兩分。四天前布萊頓在聯賽盃被曼城 PK 淘汰。",
           "source": "ESPN（PA）",
           "url": "https://www.espn.com/soccer/story/_/id/50322452",
           "when": "10 月 31 日（週六）"
@@ -170,15 +165,15 @@
           "when": "10 月 31 日（週六）"
         },
         {
-          "headline": "西班牙人換帥之後先贏一場",
-          "summary": "西班牙人客場 1 比 0 贏比利亞雷亞爾，Leandro Cabrera 在第 60 分鐘左右接傳中進球。球隊先前六場不勝，國王盃輸給 Sestao 後解僱了 Manolo González；這場由 Sergio García 臨時帶隊，新教練 Eder Sarabia 坐在看台上。",
+          "headline": "西班牙人 1 比 0 贏比利亞雷亞爾",
+          "summary": "西班牙人在比利亞雷亞爾 1 比 0 贏，Leandro Cabrera 在第 60 分鐘左右接傳中進球。球隊先前六場不勝，國王盃輸給 Sestao 後解僱了 Manolo González；這場由 Sergio García 臨時帶隊，新教練 Eder Sarabia 坐在看台上。",
           "source": "Infobae",
           "url": "https://www.infobae.com/america/agencias/2026/10/30/cronica-el-espanyol-frena-su-crisis-con-una-solida-victoria-0-1-ante-un-flojo-villarreal/",
           "when": "10 月 30 日（週五）"
         },
         {
-          "headline": "維拉要告卡拉格，卡拉格道歉",
-          "summary": "卡拉格（Jamie Carragher）在 podcast 上談艾梅里（Unai Emery）可能接曼聯，說阿斯頓維拉「永遠不會是曼聯」，還叫維拉球迷閉嘴。維拉週五晚上在 X 發出主席 Nassef Sawiris 署名的聲明，說要對他採取法律行動；卡拉格週六在 X 道歉，承認自己這週的用語笨拙、不對。維拉就是巴薩 11 月 4 日 04:00 歐冠的對手。",
+          "headline": "維拉將對卡拉格採取法律行動，卡拉格道歉",
+          "summary": "卡拉格（Jamie Carragher）在 podcast 上談艾梅里（Unai Emery）可能接曼聯，說阿斯頓維拉永遠不會是曼聯，還叫維拉球迷閉嘴。維拉週五晚上在 X 發出主席 Nassef Sawiris 署名的聲明，說要對他採取法律行動；卡拉格週六在 X 道歉，承認自己這週的用語笨拙、不對。維拉就是巴薩 11 月 4 日 04:00 歐冠的對手。",
           "source": "ESPN（PA）",
           "url": "https://www.espn.com/soccer/story/_/id/50335489",
           "when": "10 月 30–31 日"
@@ -246,7 +241,7 @@
     },
     {
       "type": "p",
-      "text": "西蒙尼要單獨拿下第 345 勝，下一場西甲就是 11 月 9 日（週一）04:00，在大都會球場對巴薩。"
+      "text": "馬競的下一場西甲是 11 月 9 日（週一）04:00 主場對巴薩，西蒙尼的西甲第 345 勝最早出現在那場。"
     }
   ],
   "sources": [
