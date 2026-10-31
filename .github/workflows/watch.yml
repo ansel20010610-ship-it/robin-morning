@@ -28,10 +28,17 @@ jobs:
           HEAD=$(git rev-parse HEAD)
           MISSING=$(grep '^缺稿：' plan.txt | sed 's/^缺稿：//' || true)
           # every shift leaves a record in state/runs/<date>.json; a shift that ran but could not push leaves none
+          # a Sunday whose AI quota ran out is written again after 15:00 (scripts/late.py): expected, not an alarm
+          LATE=$(python3 -c "import json,os; print((json.load(open('content/late.json')) if os.path.exists('content/late.json') else {}).get('$D', {}).get('state', ''))" 2>/dev/null || true)
           NOREPORT=$(python3 -c "import json,sys; d=json.load(open('state/runs/$D.json')) if __import__('os').path.exists('state/runs/$D.json') else {}; print('、'.join('第 %s 班' % g for g in '12345' if g not in d))")
           {
             echo "台灣時間 07:45 檢查 $D 的刊期。"
             echo
+            if [ "$LATE" = waiting ] || [ "$LATE" = regenerating ]; then
+              echo "### 週日補刊"
+              echo "凌晨 AI 額度用完，依規則不用備稿；15:00 額度重置後由週日補刊重新製作今天這期（目前狀態：$LATE）。"
+              echo
+            fi
             echo '### 出刊狀態'
             echo '```'
             cat plan.txt
@@ -52,7 +59,9 @@ jobs:
             echo
             echo "排程執行紀錄：https://claude.ai/code/routines"
           } > report.md
-          if [ -n "$MISSING" ] || [ "$V" -ne 0 ] || [ "$LIVE" != "$HEAD" ] || [ -n "$NOREPORT" ]; then echo "problem=yes" >> "$GITHUB_OUTPUT"; fi
+          if [ "$LATE" = waiting ] || [ "$LATE" = regenerating ]; then
+            if [ "$LIVE" != "$HEAD" ]; then echo "problem=yes" >> "$GITHUB_OUTPUT"; fi
+          elif [ -n "$MISSING" ] || [ "$V" -ne 0 ] || [ "$LIVE" != "$HEAD" ] || [ -n "$NOREPORT" ]; then echo "problem=yes" >> "$GITHUB_OUTPUT"; fi
           cat report.md
       - name: Open or update an issue
         if: always() && steps.check.outputs.problem == 'yes'

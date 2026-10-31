@@ -35,7 +35,13 @@ jobs:
           [ -z "$D" ] && D=$(TZ=Asia/Taipei date +%F)
           echo "date=$D" >> "$GITHUB_OUTPUT"
           # exit code 2 = some column still has no usable reserve; commit what was filled anyway
-          python3 scripts/fill_from_reserve.py "$D" || echo "::warning::$D 仍有欄位缺稿（備稿不足），07:45 監看會開 issue"
+          # exit code 3 = Sunday whose AI quota ran out: nothing filled, content/late.json marks it for 週日補刊 at 15:00
+          R=0; python3 scripts/fill_from_reserve.py "$D" || R=$?
+          if [ "$R" = 3 ]; then echo "msg=$D：週日額度不足，不用備稿，15:00 後週日補刊" >> "$GITHUB_OUTPUT"
+          else
+            echo "msg=$D：以備稿補上缺稿" >> "$GITHUB_OUTPUT"
+            [ "$R" = 0 ] || echo "::warning::$D 仍有欄位缺稿（備稿不足），07:45 監看會開 issue"
+          fi
           if [ -n "$(git status --porcelain content)" ]; then echo "changed=yes" >> "$GITHUB_OUTPUT"; fi
       - name: Commit and push
         id: push
@@ -45,7 +51,7 @@ jobs:
           git config user.name "robin-morning-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A content
-          git commit -m "$D：以備稿補上缺稿"
+          git commit -m "${{ steps.fill.outputs.msg }}"
           for i in 1 2 3; do
             if git push origin HEAD:main; then echo "pushed=yes" >> "$GITHUB_OUTPUT"; exit 0; fi
             sleep 5
@@ -54,7 +60,7 @@ jobs:
             python3 scripts/fill_from_reserve.py "$D" || true
             if [ -z "$(git status --porcelain content)" ]; then echo "main 已齊備"; exit 0; fi
             git add -A content
-            git commit -m "$D：以備稿補上缺稿"
+            git commit -m "${{ steps.fill.outputs.msg }}"
           done
           echo "::error::$D 備稿補位推送三次都失敗"
           exit 1

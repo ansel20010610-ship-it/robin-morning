@@ -6,8 +6,11 @@ of that column, re-date it, and publish it. A failing article is replaced only w
 validation is ready; with no usable reserve it stays where it is (a flawed article beats an empty column),
 unless it cannot be shown at all (unparseable JSON, not an object, empty body).
 
+On a Sunday whose AI quota ran out overnight, nothing is filled: the day is marked for 週日補刊 and written again
+after the 15:00 quota reset (scripts/late.py). That is exit code 3.
+
 Usage: python3 scripts/fill_from_reserve.py 2026-10-12 [--dry-run]
-Exit code 2 when some column is still missing, or still failing, afterwards.
+Exit code 2 when some column is still missing, or still failing, afterwards; 3 when held for 週日補刊.
 """
 import argparse
 import datetime as dt
@@ -18,6 +21,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import CONTENT, article_path, expected_columns, iter_reserve, load_config, load_json, tw_now  # noqa: E402
+import late  # noqa: E402
 import validate  # noqa: E402
 
 
@@ -125,6 +129,10 @@ def main():
     a = ap.parse_args()
     cfg = load_config()
     d = dt.date.fromisoformat(a.date)
+    held = None if a.dry_run else late.hold(cfg, d)
+    if held:
+        print(held)
+        return 3
     day_dir = os.path.dirname(article_path(d, "x"))
     made_dir = not os.path.isdir(day_dir)
     problems = []

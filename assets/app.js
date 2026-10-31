@@ -16,11 +16,33 @@ async function loadData() {
   const [cfg, index] = await Promise.all([
     getJSON("content/config.json", { fresh: true }),
     getJSON("content/index.json", { fresh: true }).catch(() => ({ issues: [] })),
+    loadLate(),
   ]);
   S.cfg = cfg;
   S.index = index;
   initSpotify(cfg.spotify);
   loadGigs().then(fillGigs); // not waited for: the front page draws without it
+}
+
+// 週日補刊 (content/late.json, scripts/late.py): the weekly AI quota resets on Sunday at 15:00. A Sunday whose quota
+// ran out overnight is not patched with reserves; the whole issue is written again after 15:00, and the app says so.
+const loadLate = () => getJSON("content/late.json", { fresh: true }).then((l) => { S.late = l && typeof l === "object" ? l : {}; }).catch(() => {});
+const lateOf = (date) => S.late?.[date] || null;
+function lateText(late, got) {
+  const now = twNow();
+  if (late.state === "waiting" && now.minutes < 15 * 60)
+    return `本週的 AI 額度在凌晨用完，今天這期沒能在 ${esc(S.cfg.publish_time)} 出齊。週日不拿備稿充數：額度<b>下午 3 點</b>重置後，整期重新寫過，大約傍晚出齊，好了會通知你。${got ? `已經寫好的 ${got} 篇先放上來。` : "先翻上一期。"}`;
+  if (now.minutes >= 21 * 60)
+    return `今天的補刊沒能全部完成${got ? `（到了 ${got} 篇）` : ""}，抱歉。明天 ${esc(S.cfg.publish_time)} 照常出刊。`;
+  return `額度在下午 3 點重置了，今天這期正在重新寫，寫好一篇就上一篇，出齊會通知你。${got ? `目前到了 ${got} 篇。` : ""}`;
+}
+// Under a late issue's front page, for good: why this issue came out in the afternoon.
+function lateNote(date) {
+  const late = lateOf(date);
+  if (!late || (date === twNow().date && late.state !== "done")) return ""; // today's unfinished one is in the status line
+  return `<div class="status late-note">${late.state === "done"
+    ? `本期是週日補刊：凌晨 AI 額度用完，沒有拿備稿充數，等下午 3 點額度重置後整期重寫${late.done_at ? `，${esc(late.done_at)} 出齊` : ""}。`
+    : "本期是週日補刊：凌晨 AI 額度用完，下午重寫時沒能全部完成，缺的欄位就空著。"}</div>`;
 }
 
 // `?preview` shows issues before their 07:30 release (for checking a new issue).
@@ -141,6 +163,8 @@ function frontStatus() {
   if (isPreview()) return "預覽模式：顯示尚未在 07:30 出刊的稿件。";
   const now = twNow();
   const todays = issueBy(now.date);
+  const late = lateOf(now.date);
+  if (late && late.state !== "done") return lateText(late, todays ? todays.articles.filter((a) => col(a.column).group !== "watch").length : 0);
   if (now.minutes < publishMin()) return `今天這期 <b>${esc(S.cfg.publish_time)}</b> 才出爐（還有 ${untilText(publishMin() - now.minutes)}），先翻上一期墊墊胃。`;
   if (!todays) return "今天這期還在印，好了會自己跳出來。先翻上一期撐一下。";
   const expected = Object.values(S.cfg.columns).filter((c) => c.group === "main").length + (S.cfg.rotation_by_weekday?.[weekdayKey(now.date)]?.length ?? 2);
@@ -172,6 +196,7 @@ function viewFront(dateParam) {
   <div class="wrap">
     ${status ? `<div class="status">${status}</div>` : ""}
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的第 ${issue.no} 期・<a href="#/">回到最新一期</a></div>` : ""}
+    ${lateNote(issue.date)}
     ${digestBar(arts, !dateParam, digestDone().has(issue.date))}
     ${mains.length ? `<div class="sec-head"><h2>正刊</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
     ${lead ? `<a class="lead" href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
@@ -815,6 +840,7 @@ function viewSettings() {
     </section>
     <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。正刊四欄每日刊出；副刊依星期輪值，平日兩篇、週三與週六三篇；觀測站只在有重要新進展時刊出。</p>
       <p>稿件由雲端排程編輯在凌晨分班撰寫，每篇再由另一位編輯獨立查核事實、引文與圖片授權。若某一欄到 07:05 仍未完成，會自動換上預先寫好、查核過的備稿，本報不開天窗。</p>
+      <p>唯一的例外是週日：每週的 AI 額度在週日下午 3 點重置。若週日凌晨額度已經用完、當天沒能出齊，就不拿備稿充數，而是等 3 點額度重置後把整期重新寫過，大約傍晚出齊，出齊時會另外通知。首頁會說明當下進度。</p>
       <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>副刊</th></tr></thead><tbody>
       ${wd.map(([k, l]) => `<tr><td>${l}</td><td>${rot[k].map((c) => esc(col(c).name)).join("、")}</td></tr>`).join("")}</tbody></table></div></div>
     </section>
@@ -1007,6 +1033,7 @@ async function boot() {
   let fetchedAt = Date.now(), hiddenAt = 0;
   const loadIndex = async () => {
     loadGigs();
+    await loadLate();
     try { S.index = await getJSON("content/index.json", { fresh: true }); fetchedAt = Date.now(); } catch { /* offline: still redraw the clock */ }
   };
   const refetch = async () => {

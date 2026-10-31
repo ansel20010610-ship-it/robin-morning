@@ -12,6 +12,7 @@
 | 4 | 05:17 | FM 觀測站、迷霧之子與颶光影視化、巴薩晨報**更新**（前一晚比賽仍在進行就最後做）；全刊驗收，補寫缺稿 |
 | 5 | 06:27 | 安全網：補寫一切缺稿（平行子代理）、巴薩晨報最後更新；**07:05 停手推送，接著執行備稿補位** |
 | 備 | 14:37 | 備稿班：把備稿庫補到正刊每欄 3 篇、副刊每欄 2 篇（見 `RESERVE.md`） |
+| 補 | 週日 15:07、17:07 | 週日補刊：只在週日凌晨額度用完、刊期沒出齊時動工（見下方「週日補刊」） |
 | 演 | 16:17 | 近期演出：更新首頁最下面的常設演出清單 `content/concerts.json`（見 `columns/concerts.md`；不屬於刊期，不進驗收） |
 
 07:05 第 5 班自己執行備稿補位；07:12、07:15、07:18、07:22 再由 GitHub Actions 補位（不經 AI，作為後備）；07:45 再檢查一次，仍有問題就開 GitHub issue 通知社長。副刊依星期輪替（`content/config.json` 的 `rotation_by_weekday`）：平日兩篇，週三、週六三篇（文明如何運作 2026-10-27 起改為副刊，每週這兩天刊出）。
@@ -77,11 +78,20 @@
   ```
   git pull --rebase origin main
   python3 scripts/fill_from_reserve.py <日期> || true
-  git add -A content/issues/<日期> content/reserve content/rejected
+  git add -A content/issues/<日期> content/reserve content/rejected content/late.json
   git commit -m "<日期>：以備稿補上缺稿"      # 沒有變更就略過
   git pull --rebase origin main && git push origin HEAD:main
   ```
   補位會從備稿庫刪除用掉的備稿，並把驗證失敗、已被替換的稿件移到 `content/rejected/`，所以這一步要 `git add -A` 這三個資料夾。
+  **週日例外**：週日若有前面的班次沒有回報（額度用完的跡象）而刊期沒出齊，補位會印出「週日額度不足……」並什麼都不補，只在 `content/late.json` 標記待補刊，照樣 commit 推送。這是社長的規定，不要改用別的方式補備稿。
+
+## 週日補刊
+
+每週的 AI 額度在週日台灣時間 15:00 重置。社長的規定（2026-10-31）：週日若因額度不足沒能出刊，**不用備稿**，等 15:00 額度重置後重新製作當天的報紙，App 裡要說清楚。
+
+- 早上：`fill_from_reserve.py`（第 5 班 07:05、`fill.yml` 07:12 起）在週日遇到「刊期沒出齊、而且有班次沒回報」時不補位，改在 `content/late.json` 記下 `waiting`。App 首頁說明延到下午；07:30 的通知改成「今天這期延到下午」；07:45 監看不開異常 issue。
+- 下午：週日補刊 routine 在 15:07 執行（17:07 再跑一次，接續沒完成的）。流程同第 5 班（安全網），但日期一律用 `--date <當天>`（下午的預設日期是明天），不跑 `fill_from_reserve.py`、不動備稿；第 9 步（總編重寫、忠實度核對）照做，時間足夠。開工先 `python3 scripts/late.py start`，出齊後 `python3 scripts/late.py done`，各自 commit `content/late.json` 推送：App 會顯示「補刊中」，完成時 `notify.yml` 自動發出「補刊出爐了」通知。
+- 不是週日，或每一班都有回報（缺稿是一般失敗，不是額度），照平常用備稿補位。
 - 最後跑 `python3 scripts/validate.py <日期>`，在回報中列出：已刊出、補了哪些、觀測站結果（刊出／靜默／無法判定）、仍缺哪些與原因。
 
 ## 備稿班

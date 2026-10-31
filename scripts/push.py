@@ -9,12 +9,14 @@ content/config.json → push.key. The devices are listed in state/push/devices.j
   python3 scripts/push.py add <裝置代碼> [--name iPhone]
   python3 scripts/push.py issue [--date YYYY-MM-DD] [--now]   waits for 07:30 and for the live site, unless --now
   python3 scripts/push.py test [--new-since <git rev>]          only devices added since that commit
+  python3 scripts/push.py late --before <git rev>               a 週日補刊 that this push finished: its issue is out
   python3 scripts/push.py keys <private-key.pem>                a new key pair: every device must subscribe again
 
 `add` needs only the standard library; the others need pywebpush (notify.yml installs it).
 """
 import argparse
 import base64
+import datetime as dt
 import hashlib
 import json
 import os
@@ -24,7 +26,7 @@ import time
 import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import ROOT, UA, load_config, tw_now  # noqa: E402
+from common import ROOT, UA, expected_columns, load_config, tw_now  # noqa: E402
 
 DEVICES = os.path.join(ROOT, "state", "push", "devices.json")
 SITE = "https://wiener-morgen-private.duckdns.org/"
@@ -137,6 +139,26 @@ def issue_payload(cfg, issue):
             "url": "./#/", "tag": "issue-" + issue["date"], "badge": 1}
 
 
+def live_late():
+    """content/late.json on the live site (scripts/late.py): {} when there is none."""
+    try:
+        data = json.loads(fetch("content/late.json"))
+        return data if isinstance(data, dict) else {}
+    except Exception:  # noqa: BLE001 — no file yet, or the site briefly unreachable
+        return {}
+
+
+def late_notice(date):
+    """07:30 on a Sunday held for 週日補刊: say why the issue is not there, instead of announcing it."""
+    return {"title": "早安兄弟，今天這期延到下午", "body": "本週的 AI 額度凌晨用完了。週日不拿備稿充數：下午 3 點額度重置後整期重寫，出齊再叫你。",
+            "url": "./#/", "tag": "issue-" + date}
+
+
+def complete(cfg, issue):
+    want = len(expected_columns(cfg, dt.date.fromisoformat(issue["date"])))
+    return sum(1 for a in issue["articles"] if cfg["columns"].get(a["column"], {}).get("group") != "watch") >= want
+
+
 def cmd_issue(a):
     devs = load_devices()
     if not devs:
@@ -154,22 +176,64 @@ def cmd_issue(a):
             print("等到 %s 再發……" % at.strftime("%H:%M:%S"), flush=True)
             time.sleep((at - now).total_seconds())
     # Send what the reader will see: today's issue on the live site, after the newest deploy if one is still running.
+    # On a Sunday an incomplete issue may be about to be held for 週日補刊 (fill.yml can start late): give the
+    # reserve fill its WAIT_DEPLOY before announcing a partial issue.
+    sunday = dt.date.fromisoformat(date).weekday() == 6
     start, payload = time.time(), None
     while True:
+        waited = time.time() - start
+        if live_late().get(date, {}).get("state") in ("waiting", "regenerating"):
+            payload = late_notice(date)
+            break
         try:
             issue = next((i for i in json.loads(fetch("content/index.json")).get("issues", []) if i.get("date") == date), None)
             payload = issue and issue_payload(cfg, issue)
             current = payload and fetch("content/version.txt").strip() == main_head()
+            if current and sunday and not complete(cfg, issue) and waited < WAIT_DEPLOY and not a.now:
+                current = False
         except Exception as e:  # noqa: BLE001
             print("讀不到網站：%s" % e, flush=True)
             current = False
-        waited = time.time() - start
         if current or (payload and waited >= WAIT_DEPLOY) or a.now and payload:
             break
         if waited >= WAIT_SITE or a.now:
             print("::error::網站上還沒有 %s 的刊期，沒有發通知" % date)
             return 1
         time.sleep(30)
+    print(json.dumps(payload, ensure_ascii=False, indent=1))
+    return send(devs, payload)
+
+
+def cmd_late(a):
+    """notify.yml on a push that changed content/late.json: if it finished a 週日補刊, announce that issue."""
+    now = json.load(open(os.path.join(ROOT, "content", "late.json"), encoding="utf-8"))
+    old = subprocess.run(["git", "show", "%s:content/late.json" % a.before], cwd=ROOT, capture_output=True, text=True)
+    try:
+        before = json.loads(old.stdout) if old.returncode == 0 else {}
+    except ValueError:
+        before = {}
+    dates = [d for d, v in now.items() if v.get("state") == "done" and (before.get(d) or {}).get("state") != "done"]
+    if not dates:
+        print("這次推送沒有完成週日補刊，不發通知。")
+        return 0
+    date, devs, cfg = max(dates), load_devices(), load_config()
+    if not devs:
+        print("沒有登記的裝置，不發通知。")
+        return 0
+    start = time.time()
+    while True:  # wait for the deploy that carries the finished issue
+        try:
+            issue = next((i for i in json.loads(fetch("content/index.json")).get("issues", []) if i.get("date") == date), None)
+            if issue and fetch("content/version.txt").strip() == main_head():
+                break
+        except Exception as e:  # noqa: BLE001
+            print("讀不到網站：%s" % e, flush=True)
+        if time.time() - start >= WAIT_SITE:
+            print("::error::網站上還沒有 %s 的補刊，沒有發通知" % date)
+            return 1
+        time.sleep(30)
+    payload = issue_payload(cfg, issue)
+    payload["title"] = "補刊出爐了，第 %d 期" % issue["no"]
     print(json.dumps(payload, ensure_ascii=False, indent=1))
     return send(devs, payload)
 
@@ -226,10 +290,12 @@ def main():
     s.add_argument("--now", action="store_true", help="send at once (manual run)")
     s = sub.add_parser("test")
     s.add_argument("--new-since")
+    s = sub.add_parser("late")
+    s.add_argument("--before", required=True)
     s = sub.add_parser("keys")
     s.add_argument("out")
     a = p.parse_args()
-    return {"add": cmd_add, "issue": cmd_issue, "test": cmd_test, "keys": cmd_keys}[a.cmd](a)
+    return {"add": cmd_add, "issue": cmd_issue, "test": cmd_test, "late": cmd_late, "keys": cmd_keys}[a.cmd](a)
 
 
 if __name__ == "__main__":
