@@ -53,7 +53,7 @@
 | `scripture` | `ref`、`book`、`chapter`、`version`、`verses`、`source` | 經文（只用於晨光欄）。用 `scripts/bible.py` 產生；`book` 是 FHL 簡稱（如「詩」），`verses` 為 `[{"n":1,"text":"..."}]`，跨章時個別經節加 `"c": 章`。驗證時會逐節和 FHL 和合本比對 |
 | `prayer` | `text` | 禱告全文（只用於晨光欄） |
 | `music` | 見音樂區塊 | 錄音與 Spotify |
-| `paper` | `citation`、`doi`、`pmid`、`link`、`access`（資料範圍，例「依摘要與後續文獻整理」），選填 `design`、`sample`、`question` | 論文卡 |
+| `paper` | `citation`（期刊縮寫用 `*...*`）、`doi`、`pmid`、`link`、`access`（資料範圍，例「依摘要與後續文獻整理」）、`evidence`（證據力：設計、規模、確定性；牙周欄 2026-11-01 起必填），選填 `design`、`sample`、`question` | 論文卡 |
 | `exercise` | `title`、`steps`、`criteria`，選填 `note` | 練習：步驟與「怎樣算做到」 |
 | `callout` | `label`、`text` 或 `items` | 框起來的提問或提醒，例如「給史詩創作者的制度問題」 |
 | `spoiler` | `text` | 劇透分隔線，放在劇透段落之前 |

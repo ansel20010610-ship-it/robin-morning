@@ -410,6 +410,9 @@ function updatedNote(date, a) {
 }
 
 // `my` is this route's number: if the reader has moved on while the article loads, draw nothing.
+// 牙周欄的證據力 (paper.evidence): shown under the takeaway, so the reader sees how solid the conclusion is.
+const evidenceOf = (a) => { const p = (a.body || []).find((b) => b?.type === "paper"); return typeof p?.evidence === "string" ? p.evidence : ""; };
+
 async function viewArticle(date, column, my) {
   if (!isPublished(date)) { main.innerHTML = `<div class="wrap"><p class="empty">這篇還沒出爐，別偷看。</p></div>`; return; }
   main.innerHTML = `<div class="wrap"><p class="loading">翻到這一頁……</p></div>`;
@@ -430,7 +433,7 @@ async function viewArticle(date, column, my) {
     </div><div class="progress"></div></div>
     <article class="wrap"><div class="read">
       <header class="article-head">${kicker(column, true)}<h1>${esc(a.title)}</h1>
-        ${a.takeaway ? `<aside class="takeaway"><span class="lbl">帶得走的結論</span><p>${inline(a.takeaway)}</p></aside>` : ""}
+        ${a.takeaway ? `<aside class="takeaway"><span class="lbl">帶得走的結論</span><p>${inline(a.takeaway)}</p>${evidenceOf(a) ? `<p class="ev"><b>證據力</b>${inline(evidenceOf(a))}</p>` : ""}</aside>` : ""}
         <p class="dek">${esc(a.dek)}</p>
         <div class="meta">${esc(fmtDate(date))}・第 ${issue?.no ?? ""} 期${minutes ? `・閱讀約 ${minutes} 分鐘` : ""}${updatedNote(date, a)}</div>
         ${a.from_reserve && column === "football" ? `<div class="banner">今晨新聞稿未能如期完成，先刊出這篇備用專題；最新消息併入下一期。</div>` : ""}

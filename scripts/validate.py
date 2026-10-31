@@ -127,6 +127,16 @@ def near_duplicate(key, used):
 
 
 BRIEF_SINCE = "2026-10-18"  # issues from this date on (and every reserve) must carry a brief
+EVIDENCE_SINCE = "2026-11-01"  # perio from here on: strong evidence only (columns/perio.md 選文), stated in paper.evidence
+PERIO_JOURNALS = {
+    "J Clin Periodontol", "J Periodontol", "Periodontol 2000", "J Periodontal Res", "J Dent Res", "Clin Oral Implants Res",
+    "Clin Implant Dent Relat Res", "Int J Oral Maxillofac Implants", "Int J Periodontics Restorative Dent", "J Dent",
+    "J Am Dent Assoc", "Clin Oral Investig", "Acta Odontol Scand", "Scand J Dent Res", "Cochrane Database Syst Rev",
+    "N Engl J Med", "Lancet", "JAMA", "BMJ", "Ann Intern Med", "Diabetes Care", "Diabetologia", "Circulation",
+    "Eur Heart J", "J Am Coll Cardiol", "Am J Prev Med",
+}
+STRONG_DESIGN = ("指引", "共識", "系統性回顧", "統合分析", "隨機", "世代", "追蹤")
+WEAK_DESIGN = ("動物", "體外", "屍體", "病例報告", "病例系列", "橫斷", "敘述性回顧")
 QUIZ_SINCE = "2026-10-26"  # perio articles from here on carry `quiz`, the front of the review card
 
 
@@ -598,6 +608,25 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
                     W("quiz %d 字，建議 15–40 字" % len(CJK.findall(quiz)))
             if not (isinstance(card.get("access"), str) and card["access"].strip()):
                 E("paper 論文卡缺少 access（資料範圍：依全文，或依摘要與後續文獻整理）")
+            if str(d) == "reserve" or str(d) >= EVIDENCE_SINCE:
+                cit = card.get("citation") if isinstance(card.get("citation"), str) else ""
+                jm = re.search(r"\*([^*]+)\*", cit)
+                journal = jm.group(1).strip().rstrip(".") if jm else ""
+                if not journal:
+                    E("paper.citation 要用 *期刊縮寫* 標出期刊（columns/perio.md）")
+                elif journal not in PERIO_JOURNALS:
+                    E("期刊「%s」不在牙周欄白名單（columns/perio.md 選文）：換一篇白名單期刊的論文" % journal)
+                ev = card.get("evidence") if isinstance(card.get("evidence"), str) else ""
+                if not ev.strip():
+                    E("paper 論文卡缺少 evidence：研究設計、規模與證據確定性，一行 60 字內（columns/perio.md）")
+                else:
+                    weak = [w for w in WEAK_DESIGN if w in ev]
+                    if weak:
+                        E("evidence 顯示是%s：證據等級不夠，不當主角論文（columns/perio.md 選文）" % "、".join(weak))
+                    elif not any(k in ev for k in STRONG_DESIGN):
+                        W("evidence 沒寫出研究設計（指引、共識、系統性回顧、統合分析、隨機試驗、世代研究）")
+                    if len(ev) > 70:
+                        W("evidence %d 字，60 字內" % len(ev))
         if not art.get("disclaimer"):
             E("牙周欄缺少 disclaimer")
         if tk != tk.lower():

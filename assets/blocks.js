@@ -185,7 +185,7 @@ function block(b, figs) {
     case "paper":
       return html(`<section class="paper-card"><div class="cit">${inline(b.citation)}</div>
         <div class="ids">${b.doi ? `<a href="https://doi.org/${esc(b.doi)}" target="_blank" rel="noopener">DOI ${esc(b.doi)}</a>` : ""}${b.pmid ? `<a href="https://pubmed.ncbi.nlm.nih.gov/${esc(b.pmid)}/" target="_blank" rel="noopener">PMID ${esc(b.pmid)}</a>` : ""}${b.link ? `<a href="${esc(b.link)}" target="_blank" rel="noopener">期刊頁面</a>` : ""}</div>
-        ${b.question || b.design || b.sample ? `<dl>${b.question ? `<dt>研究問題</dt><dd>${inline(b.question)}</dd>` : ""}${b.design ? `<dt>設計</dt><dd>${inline(b.design)}</dd>` : ""}${b.sample ? `<dt>樣本</dt><dd>${inline(b.sample)}</dd>` : ""}</dl>` : ""}${b.access ? `<p class="access">資料範圍：${inline(b.access)}</p>` : ""}</section>`);
+        ${b.evidence || b.question || b.design || b.sample ? `<dl>${b.evidence ? `<dt>證據力</dt><dd>${inline(b.evidence)}</dd>` : ""}${b.question ? `<dt>研究問題</dt><dd>${inline(b.question)}</dd>` : ""}${b.design ? `<dt>設計</dt><dd>${inline(b.design)}</dd>` : ""}${b.sample ? `<dt>樣本</dt><dd>${inline(b.sample)}</dd>` : ""}</dl>` : ""}${b.access ? `<p class="access">資料範圍：${inline(b.access)}</p>` : ""}</section>`);
     case "exercise":
       return html(`<section class="exercise"><div class="lbl">練習</div><h3>${inline(b.title || "")}</h3>${b.note ? `<p class="nt">${inline(b.note)}</p>` : ""}
         <h4>怎麼做</h4><ol>${(b.steps || []).map((s) => `<li>${inline(s)}</li>`).join("")}</ol>

@@ -539,6 +539,8 @@ img.img-off { visibility: hidden; }
 .article-head .takeaway { margin: 4px 0 16px; padding: 14px 16px 15px; background: var(--paper-2); border-left: 3px solid var(--gold); }
 .article-head .takeaway .lbl { display: block; font-family: var(--sans); font-size: 12px; letter-spacing: .16em; font-weight: 600; color: var(--gold-ink); margin-bottom: 6px; }
 .article-head .takeaway p { margin: 0; font-size: 1.06em; line-height: 1.75; font-weight: 600; color: var(--ink); }
+.article-head .takeaway p.ev { margin-top: 10px; padding-top: 9px; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 13px; line-height: 1.6; font-weight: 400; color: var(--ink-2); }
+.article-head .takeaway p.ev b { margin-right: 8px; font-size: 12px; letter-spacing: .12em; color: var(--gold-ink); }
 
 /* The digest: the front page reads as three sentences per article, with a finish line. */
 .digest { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 18px 0 4px; padding: 12px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
