@@ -17,7 +17,7 @@ export function reveal(root) {
       io.unobserve(e.target);
     }
   }, { rootMargin: "0px 0px -6% 0px" });
-  root.querySelectorAll(".lead, .item, .sec-head, .digest, .finish, .cards-cta, .week li, .issue-row, .colophon, .set, .card3d")
+  root.querySelectorAll(".lead, .item, .sec-head, .digest, .finish, .cards-cta, .week li, .issue-row, .colophon, .set, .card3d, .gig")
     .forEach((el) => { el.classList.add("rv"); io.observe(el); });
   return () => io.disconnect();
 }

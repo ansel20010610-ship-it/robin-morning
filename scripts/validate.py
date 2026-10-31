@@ -4,6 +4,7 @@
 Usage:
   python3 scripts/validate.py 2026-10-11
   python3 scripts/validate.py 2026-10-11 --column music --check-urls
+  python3 scripts/validate.py --concerts      (近期演出 content/concerts.json; same as scripts/concerts.py check)
 
 Exit code 1 when any ERROR is found. A malformed article is reported as ERROR, never as a traceback.
 """
@@ -910,12 +911,16 @@ def main():
     ap.add_argument("--column")
     ap.add_argument("--check-urls", action="store_true")
     ap.add_argument("--reserve", action="store_true", help="驗證備稿庫 content/reserve/")
+    ap.add_argument("--concerts", action="store_true", help="驗證近期演出 content/concerts.json")
     a = ap.parse_args()
+    if a.concerts:
+        import concerts
+        return concerts.check(a)
     cfg = load_config()
     if a.reserve:
         return 1 if validate_reserve(cfg, a.column, a.check_urls) else 0
     if not a.date:
-        ap.error("需要刊期日期，或加 --reserve")
+        ap.error("需要刊期日期，或加 --reserve／--concerts")
     d = dt.date.fromisoformat(a.date)
     ddir = os.path.dirname(article_path(d, "x"))
     if a.column:

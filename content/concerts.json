@@ -1,0 +1,92 @@
+{
+  "checked": null,
+  "events": [
+    {
+      "id": "cosi-ntt-2026",
+      "title": "莫札特歌劇《女人皆如此》",
+      "kind": "歌劇",
+      "rating": 4,
+      "why": "羅杭．佩利導演的版本，2022 年在巴黎香榭麗舍劇院首演，這次整套搬進台中，國臺交在樂池。台中難得有完整製作的莫札特，11 月 1 日下午是最後一場。",
+      "who": "林勤超（指揮）、國立臺灣交響樂團、NTT×勇源歌劇合唱團；路奇歐．蓋洛（阿方索）等",
+      "program": "莫札特《女人皆如此》",
+      "shows": [
+        {
+          "date": "2026-11-01",
+          "time": "14:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院大劇院",
+          "tickets": "https://www.opentix.life/program/2068984452018319361"
+        }
+      ],
+      "added": "2026-10-31",
+      "uids": [
+        "6a68e15526b32427d06042ce"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2068984452018319361"
+        },
+        {
+          "title": "文化部藝文活動開放資料",
+          "url": "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=1"
+        }
+      ]
+    },
+    {
+      "id": "rattle-brso-2026",
+      "title": "拉圖與巴伐利亞廣播交響樂團",
+      "kind": "交響樂",
+      "rating": 5,
+      "why": "拉圖帶他現在的樂團來，台中場排的是拉赫曼尼諾夫第三號和舒伯特〈偉大〉。世界前段班的樂團開進台中歌劇院，一年未必有一次。",
+      "who": "賽門．拉圖（指揮）、巴伐利亞廣播交響樂團",
+      "program": "台中場：拉赫曼尼諾夫《第三號交響曲》、舒伯特《第九號交響曲「偉大」》",
+      "shows": [
+        {
+          "date": "2026-11-15",
+          "time": "19:00",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳",
+          "tickets": "https://www.opentix.life/program/2047561986406621185"
+        },
+        {
+          "date": "2026-11-16",
+          "time": "19:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院大劇院",
+          "tickets": "https://www.opentix.life/program/2075147936841920513"
+        },
+        {
+          "date": "2026-11-18",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2058868047100907520"
+        },
+        {
+          "date": "2026-11-19",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2058868047100907520"
+        }
+      ],
+      "added": "2026-10-31",
+      "uids": [
+        "6a68e15526b32427d06042d2",
+        "6a04aef826b3243414ccc7fe",
+        "6a435f1026b32427d0603f58"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 台中場節目頁",
+          "url": "https://www.opentix.life/program/2075147936841920513"
+        },
+        {
+          "title": "文化部藝文活動開放資料",
+          "url": "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=1"
+        }
+      ]
+    }
+  ]
+}

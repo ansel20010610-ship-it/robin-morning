@@ -12,6 +12,7 @@
 | 4 | 05:17 | FM 觀測站、迷霧之子與颶光影視化、巴薩晨報**更新**（前一晚比賽仍在進行就最後做）；全刊驗收，補寫缺稿 |
 | 5 | 06:27 | 安全網：補寫一切缺稿（平行子代理）、巴薩晨報最後更新；**07:05 停手推送，接著執行備稿補位** |
 | 備 | 14:37 | 備稿班：把備稿庫補到正刊每欄 3 篇、副刊每欄 2 篇（見 `RESERVE.md`） |
+| 演 | 16:17 | 近期演出：更新首頁最下面的常設演出清單 `content/concerts.json`（見 `columns/concerts.md`；不屬於刊期，不進驗收） |
 
 07:05 第 5 班自己執行備稿補位；07:12、07:15、07:18、07:22 再由 GitHub Actions 補位（不經 AI，作為後備）；07:45 再檢查一次，仍有問題就開 GitHub issue 通知社長。副刊依星期輪替（`content/config.json` 的 `rotation_by_weekday`）：平日兩篇，週三、週六三篇（文明如何運作 2026-10-27 起改為副刊，每週這兩天刊出）。
 
@@ -96,7 +97,7 @@
 
 ## 不可以做的事
 
-- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`（每週品質稽核可以寫 `editorial/LESSONS.md`）、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/`、`content/rejected/`（只有備稿補位會寫）與 `state/`（但 `state/push/` 是出刊通知的裝置名單，不要動）。
+- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`（每週品質稽核可以寫 `editorial/LESSONS.md`）、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/`、`content/rejected/`（只有備稿補位會寫）與 `state/`（但 `state/push/` 是出刊通知的裝置名單，不要動）。近期演出班只寫 `content/concerts.json` 與 `state/concerts/`，製刊各班不碰這兩處。
 - 不刪除或改寫過去日期的稿件。若發現過去稿件有事實錯誤，在該篇文末加「更正」區塊（見「每週品質稽核」第 2 步），並在回報中提出。
 - 不讀取、不推測讀者的私人生活；不使用讀者自己的小說設定。
 - 不使用 AI 生成圖片。不呼叫任何需要付費的 API。

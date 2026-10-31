@@ -20,6 +20,7 @@ async function loadData() {
   S.cfg = cfg;
   S.index = index;
   initSpotify(cfg.spotify);
+  loadGigs().then(fillGigs); // not waited for: the front page draws without it
 }
 
 // `?preview` shows issues before their 07:30 release (for checking a new issue).
@@ -181,6 +182,7 @@ function viewFront(dateParam) {
     ${arts.some((a) => a.brief) ? `<div class="finish${digestDone().has(issue.date) ? " done" : ""}">${finishInner(issue.date)}</div>` : ""}
     ${dateParam ? "" : cardsPrompt()}
     ${!dateParam && issue.weekday === "日" ? weekHtml() : ""}
+    ${dateParam ? "" : `<section class="gigs" id="gigs" aria-label="近期演出">${gigsSection()}</section>`}
     <footer class="colophon">
       <div class="ornament" aria-hidden="true"><i></i><i></i><i></i></div>
       <div class="latin">Gegründet im Oktober 2026</div>
@@ -576,6 +578,116 @@ function snippet(text, q) {
   return `${a > 0 ? "……" : ""}${esc(text.slice(a, i))}<mark>${esc(text.slice(i, i + q.length))}</mark>${esc(text.slice(i + q.length, b))}${b < text.length ? "……" : ""}`;
 }
 
+// ——— 近期演出: a standing list at the foot of the front page (content/concerts.json, kept daily by the 演出資訊 routine;
+// editorial/columns/concerts.md). It belongs to no issue: a show drops out here once its day is over.
+const GIG_NEAR = 45; // days ahead the front page looks; anything added in the last 3 days shows however far off
+const GIG_CITIES = [["all", "全部"], ["台中", "台中"], ["north", "台北・新北"], ["高雄", "高雄"]];
+const loadGigs = () => getJSON("content/concerts.json", { fresh: true }).then((g) => { S.gigs = g; }).catch(() => {});
+const gigDay = (iso) => { const [, m, d] = iso.split("-").map(Number); return `${m}/${d}`; };
+const gigWd = (iso) => "日一二三四五六"[new Date(`${iso}T00:00:00Z`).getUTCDay()];
+const gigShow = (s) => `${gigDay(s.date)}（${gigWd(s.date)}）${s.time ? ` ${esc(s.time)}` : ""}`;
+const webUrl = (u) => (/^https?:\/\//.test(u || "") ? u : "");
+const inCity = (s, c) => c === "north" ? s.city === "台北" || s.city === "新北" : s.city === c;
+// Events with shows still to come, soonest first. `here` is where an event is listed: its shows in city `c`, or
+// (for "all") its Taichung shows if it has any, else those in the city of its next show.
+function upcomingGigs(c = "all") {
+  const today = twNow().date, fresh = addDays(today, -2);
+  const at = (s) => `${s.date} ${s.time || ""}`;
+  return (Array.isArray(S.gigs?.events) ? S.gigs.events : []).flatMap((e) => {
+    const shows = (Array.isArray(e?.shows) ? e.shows : []).filter((s) => typeof s?.date === "string" && s.date >= today)
+      .sort((a, b) => at(a).localeCompare(at(b)));
+    if (!shows.length || !e.title) return [];
+    const tc = shows.filter((s) => s.city === "台中");
+    const here = c !== "all" ? shows.filter((s) => inCity(s, c)) : tc.length ? tc : shows.filter((s) => s.city === shows[0].city);
+    if (!here.length) return [];
+    const rating = Math.max(0, Math.min(5, Math.round(Number(e.rating) || 0)));
+    return [{ ...e, shows, here, rating, isNew: typeof e.added === "string" && e.added >= fresh }];
+  }).sort((a, b) => at(a.here[0]).localeCompare(at(b.here[0])));
+}
+const stars = (n) => `<span class="stars" role="img" aria-label="值得聽 ${n} 分，滿分 5 分">${"★".repeat(n)}<i>${"★".repeat(5 - n)}</i></span>`;
+function gigRow(e, full = false) {
+  const s = e.here[0], rest = e.shows.filter((x) => !e.here.includes(x));
+  const tix = webUrl(s.tickets) || webUrl(e.here.find((x) => x.tickets)?.tickets) || webUrl(e.sources?.[0]?.url);
+  const cities = [...new Set(rest.map((x) => x.city))];
+  const also = cities.map((c) => `${c} ${rest.filter((x) => x.city === c).map((x) => gigDay(x.date)).join("、")}`).join("；");
+  return `<li class="gig">
+    <div class="when"><b>${gigDay(s.date)}</b><span>週${gigWd(s.date)}${s.time ? ` ${esc(s.time)}` : ""}</span>${e.here.length > 1 ? `<span>共 ${e.here.length} 場</span>` : ""}</div>
+    <div class="what">
+      <h3>${esc(e.title)}${e.isNew ? '<span class="new">新</span>' : ""}</h3>
+      <p class="where">${esc(s.city)}・${esc(s.venue)}${e.kind ? `<span class="kind">${esc(e.kind)}</span>` : ""}</p>
+      ${e.why ? `<p class="why">${esc(e.why)}</p>` : ""}
+      ${full ? gigDetails(e, rest) : also ? `<p class="also">另有：${esc(also)}</p>` : ""}
+      <p class="score">${stars(e.rating)}<span>值得聽 ${e.rating}</span>${e.note ? `<span class="tag">${esc(e.note)}</span>` : ""}${tix ? `<a class="tix" href="${esc(tix)}" target="_blank" rel="noopener">售票頁</a>` : ""}</p>
+    </div>
+  </li>`;
+}
+function gigDetails(e, rest) {
+  const link = (u, t) => (webUrl(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>` : esc(t));
+  const rows = [
+    e.here.length > 1 && ["場次", e.here.map(gigShow).join("、")],
+    e.who && ["演出", esc(e.who)],
+    e.program && ["曲目", esc(e.program)],
+    e.price && ["票價", esc(e.price)],
+    rest.length && ["其他城市", rest.map((x) => `${esc(x.city)}・${esc(x.venue)} ${gigShow(x)}${x.tickets ? ` ${link(x.tickets, "售票")}` : ""}`).join("<br>")],
+    Array.isArray(e.sources) && e.sources.length && ["資料", e.sources.map((x) => link(x?.url, x?.title || "來源")).join("、")],
+  ].filter(Boolean);
+  return rows.length ? `<dl class="gig-dl">${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>` : "";
+}
+// The front page's share: Taichung within GIG_NEAR days (at most 6), and up to 3 elsewhere; newly added ones come too.
+function gigsSection() {
+  const all = upcomingGigs();
+  if (!all.length) return "";
+  const until = addDays(twNow().date, GIG_NEAR);
+  const pick = (list, n) => [...list.filter((e) => e.here[0].date <= until).slice(0, n), ...list.filter((e) => e.here[0].date > until && e.isNew).slice(0, 3)];
+  const tc = pick(all.filter((e) => e.here[0].city === "台中"), 6);
+  const away = pick(all.filter((e) => e.here[0].city !== "台中"), 3);
+  return `<div class="sec-head"><h2>近期演出</h2><span class="de">Spielplan</span><span class="note">常設・台中優先</span></div>
+    ${tc.length ? `<ul class="gig-list">${tc.map((e) => gigRow(e)).join("")}</ul>` : `<p class="gig-none">接下來 ${GIG_NEAR} 天，台中沒有收錄的演出。</p>`}
+    ${away.length ? `<div class="gig-city">台北・高雄<span>值得專程跑一趟的</span></div><ul class="gig-list">${away.map((e) => gigRow(e)).join("")}</ul>` : ""}
+    <a class="gig-more" href="#/concerts">全部 ${all.length} 檔演出・評分怎麼給</a>`;
+}
+// The file arrives after the front page is drawn on a first visit: fill its slot then.
+const fillGigs = () => { const box = main.querySelector("#gigs"); if (box) box.innerHTML = gigsSection(); };
+
+async function viewConcerts(my) {
+  if (!S.gigs) {
+    main.innerHTML = `<div class="wrap"><p class="empty">讀取演出資訊中……</p></div>`;
+    await loadGigs();
+    if (my !== undefined && my !== routeSeq) return;
+  }
+  const checked = typeof S.gigs?.checked === "string" ? fmtDate(S.gigs.checked, "short") : "";
+  const pressed = (c) => GIG_CITIES.map(([k, label]) => `<button type="button" class="chip" data-c="${k}" aria-pressed="${k === c}">${label}</button>`).join("");
+  main.innerHTML = `<div class="wrap"><header class="page-title"><h1>近期演出</h1><span class="de">Spielplan</span></header>
+    <p class="gig-intro">交響樂、歌劇、音樂劇與室內樂。台中優先；台北、新北、高雄只收值得專程跑一趟的。每天下午更新，演出過了就下架。</p>
+    <nav class="chips" aria-label="城市"></nav><ul class="gig-list full"></ul>
+    <section class="gig-key"><h2>值得聽怎麼評</h2>
+      <p>${stars(5)} 5：年度級。難得來台的頂尖樂團、指揮、獨奏家，或國際級的製作。</p>
+      <p>${stars(4)} 4：值得專程跑一趟。</p>
+      <p>${stars(3)} 3：人在台中，值得去。</p>
+      <p>看的是演出者、曲目和製作本身，不看宣傳詞；2 分以下不收。場次、票價與票況以售票頁為準。</p>
+      <p class="small">資料：文化部藝文活動開放資料、各場館與售票網站${checked ? `。最後查核：${esc(checked)}` : ""}。</p></section></div>`;
+  const draw = (c) => {
+    let last = "";
+    const rows = upcomingGigs(c).map((e) => {
+      const m = e.here[0].date.slice(0, 7);
+      const head = m !== last ? `<li class="gig-month">${Number(m.slice(5))} 月</li>` : "";
+      last = m;
+      return head + gigRow(e, true);
+    }).join("");
+    main.querySelector(".chips").innerHTML = pressed(c);
+    main.querySelector(".gig-list").innerHTML = rows || `<li class="gig-none">${S.gigs ? "這個城市目前沒有收錄的演出。" : "目前讀不到演出資訊（可能是離線），請稍後再試。"}</li>`;
+  };
+  const saved = GIG_CITIES.some(([k]) => k === store.get("gigs.city")) ? store.get("gigs.city") : "all";
+  draw(saved);
+  main.querySelector(".chips").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-c]");
+    if (!b) return;
+    store.set("gigs.city", b.dataset.c);
+    draw(b.dataset.c);
+    main.querySelector(`.chips [data-c="${b.dataset.c}"]`)?.focus();
+  });
+}
+
 function viewArchive() {
   const pubs = publishedIssues();
   const done = digestDone();
@@ -595,7 +707,7 @@ function viewArchive() {
   };
   const chips = Object.entries(S.cfg.columns).map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span></header>
-    <nav class="chips review" aria-label="複習"><a class="chip" href="#/week">本週回顧</a><a class="chip" href="#/cards">牙周小卡</a></nav>
+    <nav class="chips review" aria-label="複習"><a class="chip" href="#/week">本週回顧</a><a class="chip" href="#/cards">牙周小卡</a><a class="chip" href="#/concerts">近期演出</a></nav>
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
     <div class="hits" aria-live="polite"></div>
     <nav class="chips" aria-label="專欄">${chips}</nav><div class="list"></div></div>`;
@@ -830,6 +942,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/music")) viewMusic();
   else if (h.startsWith("#/settings")) viewSettings();
+  else if (h.startsWith("#/concerts")) await viewConcerts(my);
   else viewFront();
 }
 
@@ -893,6 +1006,7 @@ async function boot() {
   };
   let fetchedAt = Date.now(), hiddenAt = 0;
   const loadIndex = async () => {
+    loadGigs();
     try { S.index = await getJSON("content/index.json", { fresh: true }); fetchedAt = Date.now(); } catch { /* offline: still redraw the clock */ }
   };
   const refetch = async () => {
