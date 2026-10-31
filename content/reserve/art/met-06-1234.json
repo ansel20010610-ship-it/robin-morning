@@ -1,0 +1,321 @@
+{
+  "column": "art",
+  "date": "reserve",
+  "reserve_written": "2026-10-31",
+  "title": "《灣流》裡的人會獲救，荷馬說的",
+  "dek": "1885 年，荷馬畫過一艘斷桅、進水、沒有人的木船，鯊魚繞著它。到了《灣流》，甲板上躺了一個人。",
+  "brief": "1902 年，荷馬回信給紐約畫商，說《灣流》裡漂流的人會獲救、回到朋友和家裡、從此過得幸福，還說船和鯊魚是不太要緊的外圍小事。畫上，鯊魚繞著他的船，右上角是水龍捲，左上角地平線上有一艘遠到幾乎融進天色的三桅帆船。",
+  "topic_key": "art:met-06.1234",
+  "updated_at": "2026-10-31T17:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/The_Gulf_Stream_MET_DP140858.jpg/1280px-The_Gulf_Stream_MET_DP140858.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/The_Gulf_Stream_MET_DP140858.jpg/3840px-The_Gulf_Stream_MET_DP140858.jpg",
+    "width": 1280,
+    "height": 782,
+    "alt": "一艘傾斜的小船在浪上，船上有一名赤裸上身的男子半躺在甲板，頭轉向右；船邊水裡有幾條鯊魚，畫面右上角是水龍捲，左上角地平線上有一艘遠方的帆船。",
+    "caption": "荷馬，《The Gulf Stream》，1899 年作，1906 年前再修改，油彩畫布，71.4 × 124.8 公分，紐約大都會藝術博物館（06.1234）。",
+    "credit": "Winslow Homer／The Metropolitan Museum of Art（Catharine Lorillard Wolfe Collection, Wolfe Fund, 1906）",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Gulf_Stream_MET_DP140858.jpg",
+    "made": "1899 年，1906 年前再修改"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1902 年 2 月 19 日，溫斯洛・荷馬（Winslow Homer）從緬因州寫信給紐約的畫商公司 M. Knoedler & Co.。畫商想知道，《灣流》畫的是什麼。"
+    },
+    {
+      "type": "quote",
+      "text": "我很遺憾，自己畫了一幅需要任何說明的畫。",
+      "original": "I regret very much that I have painted a picture that requires any description.",
+      "cite": "荷馬致 M. Knoedler & Co.，1902 年 2 月 19 日"
+    },
+    {
+      "type": "p",
+      "text": "庫珀休伊特設計博物館（Cooper Hewitt）說，荷馬被要求解釋時顯然很不高興。他在信裡說，主題包含在標題裡；墨西哥灣流他橫渡過十次，總該懂一點。據庫珀休伊特的轉述，信中也提到颶風把畫中人吹到海上。信裡寫他的結局是："
+    },
+    {
+      "type": "quote",
+      "text": "他會獲救，回到朋友和家裡，從此過得幸福。",
+      "original": "will be rescued & returned to his friends and home & ever after live happily.",
+      "cite": "同一封信"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作者",
+          "溫斯洛・荷馬（Winslow Homer，1836–1910），美國"
+        ],
+        [
+          "題名",
+          "The Gulf Stream（《灣流》）"
+        ],
+        [
+          "年代",
+          "1899 年作，1906 年前又修改過（館方寫 1899; reworked by 1906）"
+        ],
+        [
+          "材料",
+          "油彩、畫布"
+        ],
+        [
+          "尺寸",
+          "71.4 × 124.8 公分（未含框）"
+        ],
+        [
+          "收藏",
+          "紐約大都會藝術博物館，館藏號 06.1234，1906 年入藏（Catharine Lorillard Wolfe Collection, Wolfe Fund, 1906）"
+        ],
+        [
+          "影像",
+          "Wikimedia Commons 上大都會博物館提供的 CC0 影像；館方標示此作為公有領域"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "甲板上的人"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.52,
+        0.375,
+        0.29,
+        0.34
+      ],
+      "position": "畫面中央偏右，從男人的頭到船身右端，約佔全圖寬度近三成、高度三分之一",
+      "caption": "頭圖局部。男人的頭轉向右邊；船身右端的側面有大寫字母，讀得出 ANNA 與 KEY-WEST。"
+    },
+    {
+      "type": "p",
+      "text": "一艘船身傾斜的小船在浪上。一個赤裸上身的男人半躺在甲板，右臂橫過胸前，頭轉向右邊。船身右端側面有 ANNA 和 KEY-WEST。倫敦國家美術館的形容是：一個人獨自在失控的船上，頂著起伏的浪撐住身子；船的起伏動勢，很像荷馬早年的《Breezing Up (A Fair Wind)》和《The Fog Warning》。"
+    },
+    {
+      "type": "p",
+      "text": "他的臉怎麼讀，館方沒有替讀者選。芝加哥藝術博物館把兩種讀法並排寫：表情是漠然，或者是發愣；姿態出奇地放鬆，或者是認命。倫敦國家美術館則說，看畫的人常從裡面讀出自然的力量，也讀出美國內戰之後黑人的處境。"
+    },
+    {
+      "type": "h",
+      "text": "斷桅和甘蔗"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.26,
+        0.362,
+        0.26,
+        0.34
+      ],
+      "position": "畫面中央偏左，船身左半段，約佔全圖寬度四分之一、高度三分之一",
+      "caption": "頭圖局部。桅杆折成兩截，一塊白色帆布堆在船的左端，艙口敞開，黑洞洞的；甲板上橫著幾根有節的綠黃色長莖，纜繩垂進水裡。"
+    },
+    {
+      "type": "p",
+      "text": "船的左半是壞掉的部分。桅杆斷成兩截，白色帆布堆在左端，艙口開著，裡面黑洞洞的。甲板上那幾根有節的綠黃色長莖，在庫珀休伊特收藏的一張荷馬習作裡也有，該館稱習作裡的那些是甘蔗，並稱這條船是一艘殘破的漁船。"
+    },
+    {
+      "type": "h",
+      "text": "船邊的鯊魚"
+    },
+    {
+      "type": "p",
+      "text": "同一封信裡，荷馬說船和鯊魚是不太要緊的外圍小事。畫上的鯊魚有：貼著船腹一條灰白的，畫面中央下方一條張著嘴，右下一條尾巴翹起，左下還有幾片露出水面的背鰭。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.39,
+        0.64,
+        0.34,
+        0.34
+      ],
+      "position": "畫面中央偏下，船腹及其下方，約佔全圖寬度三分之一、高度三分之一",
+      "caption": "頭圖局部。灰色的鯊魚張著嘴，露出牙；鰓後有三道紅色短痕；水線處有一塊紅白亮斑。"
+    },
+    {
+      "type": "p",
+      "text": "倫敦國家美術館說，灣流是沿美國東岸北上的暖流，南段有鮪魚和飛魚。畫裡右側水面，有一群飛魚貼著水面掠過，還有一些橘紅色碎片。"
+    },
+    {
+      "type": "p",
+      "text": "天空的顏料上得很薄，浪花堆得很厚，深水處有一層細細的裂紋。"
+    },
+    {
+      "type": "h",
+      "text": "1885 年的空船"
+    },
+    {
+      "type": "p",
+      "text": "1885 年，荷馬第一次去巴哈馬，畫了《Sharks (The Derelict)》：一艘木船，斷了桅，進水，至少三條鯊魚繞著它。船上沒有人。芝加哥藝術博物館說，船是空的，看畫的人只能去猜最壞的事是不是已經發生了。"
+    },
+    {
+      "type": "p",
+      "text": "1898 年他再去巴哈馬，芝加哥藝術博物館認為這趟旅行讓他想起了那些舊作。回到緬因州 Prout's Neck 後，他畫了這幅油畫；館方說，有四幅水彩記錄了這個構圖的演變。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "artwork",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Winslow_Homer_-_The_Gulf_Stream_%28watercolour%29.jpg/1280px-Winslow_Homer_-_The_Gulf_Stream_%28watercolour%29.jpg",
+      "width": 1280,
+      "height": 718,
+      "alt": "一幅水彩：一艘傾斜的小船在浪上，一名戴草帽、穿白襯衫的男子靠在船上，背景是厚重的暗雲，左下有一條鯊魚。",
+      "caption": "荷馬，《The Gulf Stream》水彩習作，約 1899 年，透明水彩加不透明水彩，紙，28.8 × 50.9 公分，芝加哥藝術博物館（1933.1241）。畫家自己簽的年份寫成「1889」，館方標的年代約 1899。紙下緣被裁過，鯊魚因此貼近畫面。",
+      "credit": "Winslow Homer／芝加哥藝術博物館（Mr. and Mrs. Martin A. Ryerson Collection）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_The_Gulf_Stream_(watercolour).jpg",
+      "made": "約 1899 年"
+    },
+    {
+      "type": "p",
+      "text": "水彩裡的人戴著草帽，穿白襯衫和淺色長褲，倚著傾斜的船，鯊魚在左下，背景是厚重的暗雲，看不到遠船，也看不到水龍捲。油畫裡的他沒有帽子，也沒穿上衣。"
+    },
+    {
+      "type": "h",
+      "text": "地平線的兩頭"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.19,
+        0.17,
+        0.11,
+        0.09
+      ],
+      "position": "畫面左上，地平線上方，約佔全圖寬度一成、高度不到一成",
+      "caption": "頭圖局部。天色裡有一艘三桅帆船，船身和風帆都淡得幾乎融進天色。"
+    },
+    {
+      "type": "p",
+      "text": "左上角的地平線上有一艘三桅帆船，淡得快要融進天色。大都會博物館說，這艘船是希望的訊號，代表能從海上的險境獲救。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.66,
+        0.0,
+        0.34,
+        0.34
+      ],
+      "position": "畫面右上角，約佔全圖寬度三分之一、高度三分之一；水龍捲的柱子本身只約全圖寬度一成",
+      "caption": "頭圖局部。兩團泛白的厚重水汽之間，一道灰色的柱子垂進浪裡。"
+    },
+    {
+      "type": "p",
+      "text": "右上角，兩團泛白的厚重水汽之間，一道灰色的柱子垂進浪裡，是水龍捲。倫敦國家美術館寫的是：水龍捲在地平線上，可能的援手遠在天邊。"
+    },
+    {
+      "type": "p",
+      "text": "大都會的說明說這艘船是希望的訊號；倫敦國家美術館說援手遠在天邊。我站倫敦那邊。荷馬在信裡把結局說得很滿：獲救、回家、從此幸福；畫上能接住這句話的，是一艘淡得快要融進天色的船，而船上的人頭轉向右。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "六年沒賣出，一群藝術家請願"
+    },
+    {
+      "type": "p",
+      "text": "1900 年，這幅畫在費城的賓州美術學院首展。荷馬後來在信裡寫，畫從費城回來後他又畫過，改進了很多，深海的水比先前多。大都會博物館說，拿早期照片對照，看得出他改了海面和船身，讓畫面更戲劇化。"
+    },
+    {
+      "type": "p",
+      "text": "接著它去了匹茲堡的卡內基學院，再到紐約的 M. Knoedler & Co.，要價創紀錄的 4,000 美元。這幅畫難賣；大都會博物館猜，也許是價錢，也許是題材讓人不舒服。另據馬克・辛普森（Marc Simpson）的研究，費城首展後的六年間，畫送到匹茲堡、威尼斯、芝加哥、得梅因，都沒賣出。"
+    },
+    {
+      "type": "p",
+      "text": "1906 年 10 月，大都會博物館的董事會決定不買。12 月中，一群藝術家遞了請願，董事會改變主意，用沃爾夫基金（Wolfe Fund）買下。這是大都會收進的第一件荷馬畫作，還上了新聞。"
+    },
+    {
+      "type": "h",
+      "text": "左下角的小字"
+    },
+    {
+      "type": "p",
+      "text": "簽名和年份底下，還有淡色的小字，一部分被顏料蓋住，放大影像只認得出零星幾個字母。大意是：離這幅畫十二英尺，就看得見它。"
+    },
+    {
+      "type": "p",
+      "text": "十二英尺約 3.7 公尺；畫寬 124.8 公分（未含框），我算約 2.9 個畫寬。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Gulf Stream, Winslow Homer, 06.1234（Met Open Access API，物件 11122）",
+      "publisher": "The Metropolitan Museum of Art",
+      "date": "2026-02-05",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/11122",
+      "note": "館方資料：題名、年代 1899; reworked by 1906、材料、尺寸、館藏號、入藏、公有領域標示。日期為 API 的 metadataDate（資料更新日）。Met 網頁對程式請求回 429，故以官方 API 為準"
+    },
+    {
+      "title": "The Gulf Stream（水彩，1933.1241），AIC API",
+      "publisher": "Art Institute of Chicago",
+      "date": "",
+      "url": "https://api.artic.edu/api/v1/artworks/16794",
+      "note": "館方資料庫條目，無發布日；查閱時紀錄更新於 2026-10-22。用到：水彩資料與尺寸、紙下緣被裁、1885《Sharks (The Derelict)》、1898 年航行、「四幅水彩記錄了構圖演變」、表情與姿態的兩種讀法"
+    },
+    {
+      "title": "Winslow Homer / The Gulf Stream / 1899（AMICO 轉載 Met 作品說明）",
+      "publisher": "David Rumsey Map Collection／AMICO",
+      "date": "2000",
+      "url": "https://amica.davidrumsey.com/amico556292-103982.html",
+      "note": "AMICA Library Year 2000，無確切發布日。用到：兩趟巴哈馬旅行、1900 年費城首展、早期照片顯示海面與船身（原文 the back of the ship）的修改、卡內基與諾德勒、4,000 美元、難賣的兩種可能、地平線上的船是希望與獲救的訊號。Met 推測這艘船可能是賣不掉後才加上，與 Wikipedia 轉引 Spassky 的「費城展後」不一致，正文不寫加船的時點"
+    },
+    {
+      "title": "Blood in the water",
+      "publisher": "Cooper Hewitt, Smithsonian Design Museum（Laura Fravel）",
+      "date": "2020-02-24",
+      "url": "https://www.cooperhewitt.org/2020/02/24/blood-in-the-water/",
+      "note": "1902 年 2 月 19 日致諾德勒的信（引文、颶風、獲救）、battered fishing boat、素描研究裡的甘蔗與斷桅、1906 年成為大都會第一件荷馬畫作並上新聞"
+    },
+    {
+      "title": "A closer look at three paintings by Homer（Winslow Homer: Force of Nature）",
+      "publisher": "The National Gallery, London",
+      "date": "",
+      "url": "https://www.nationalgallery.org.uk/exhibitions/past/winslow-homer-force-of-nature/a-closer-look-at-three-paintings-by-homer",
+      "note": "展覽頁無發布日；展期 2022-09-10 至 2023-01-08。用到：畫商詢問與回信、braces himself against choppy waters、waterspout on the horizon、potential help is way off in the distance、飛魚群、與 Breezing Up / The Fog Warning 動勢相近、觀者的兩種讀法、左下角小字（本頁作 At 12 feet from the picture you can see it.）"
+    },
+    {
+      "title": "“If You Can Read This . . .”: Winslow Homer’s The Gulf Stream and the Viewing of His Pictures",
+      "publisher": "Panorama: Journal of the Association of Historians of American Art（Marc Simpson）",
+      "date": "2018（Spring, vol. 4, no. 1）",
+      "url": "https://journalpanorama.org/?p=4932",
+      "note": "左下角小字的另一種讀法（At 12 feet from this picture / you can see it.），並引 Met 線上紀錄作 At 12 feet you can see it、部分被顏料蓋住；題寫時間只知在最後一次修改之前，正文因此只轉述大意、不寫年代。另用到：六年間在匹茲堡、威尼斯、芝加哥、得梅因都沒賣出；1906 年 10 月 Met 董事會決定不買，12 月中接到藝術家請願後改用 Wolfe Fund 買下"
+    },
+    {
+      "title": "The Unseen Depths of Winslow Homer’s “The Gulf Stream”",
+      "publisher": "Hyperallergic（Mark Dery）",
+      "date": "2022-05-30",
+      "url": "https://hyperallergic.com/736678/unseen-depths-winslow-homer-the-gulf-stream/",
+      "note": "引 Met 展覽圖錄中 1900 年荷馬的信：improved it very much—(more of the Deep Sea water than before)"
+    },
+    {
+      "title": "File:The Gulf Stream MET DP140858.jpg",
+      "publisher": "Wikimedia Commons（大都會博物館捐贈）",
+      "date": "2017-03-24",
+      "url": "https://commons.wikimedia.org/wiki/File:The_Gulf_Stream_MET_DP140858.jpg",
+      "note": "頭圖，CC0，原檔 3881×2372；日期為上傳日。畫面描述據此影像逐區查看"
+    },
+    {
+      "title": "File:Winslow Homer - The Gulf Stream (watercolour).jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_The_Gulf_Stream_(watercolour).jpg",
+      "note": "水彩影像，公有領域，資料來自 AIC 資料庫條目 16794；Commons 檔案頁無發布日"
+    }
+  ]
+}
