@@ -23,7 +23,8 @@ from common import (ISSUES, ROOT, iter_reserve, RESERVE, BROWSER_IMAGE_TYPES, CJ
 
 LENGTH = {  # (min, max) CJK characters in body
     "football": (1800, 3500), "perio": (600, 1000), "music": (1000, 1600),
-    "civilization": (2000, 3000), "devotion": (1200, 2200),
+    "civilization": (1200, 1800), "devotion": (1200, 2200), "architecture": (1200, 1800),
+    "clinic": (800, 1200), "science": (800, 1200),
     "art": (2500, 4000), "photo": (2000, 3500), "city": (2500, 4000),
     "fiction": (2500, 4000), "literature": (2500, 4000), "tactics": (2000, 3500),
     "philosophy": (2500, 4000), "fm-watch": (0, 5000), "cosmere-watch": (0, 5000),

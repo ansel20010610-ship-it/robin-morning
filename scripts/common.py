@@ -25,7 +25,7 @@ WEEKDAY_ZH = ["一", "二", "三", "四", "五", "六", "日"]
 
 # Shifts (Taiwan time) — editorial/README.md. Shift 5 is the safety net: every column of the day.
 GROUPS = {
-    1: ["devotion", "music", "perio"],
+    1: ["devotion", "music", "perio", "architecture"],
     2: ["@supp0", "@supp2"],  # @supp2 exists only on days with a third supplement (civilization, Wed/Sat)
     3: ["@supp1", "football"],
     4: ["football", "fm-watch", "cosmere-watch"],
@@ -60,8 +60,13 @@ def issue_number(cfg, d):
     return (d - launch).days + 1
 
 
+def started(cfg, col, d):
+    """A column with `since` in config.json runs from that date on (a new column does not count as missing before)."""
+    return str(d) >= cfg["columns"].get(col, {}).get("since", "")
+
+
 def supplements_for(cfg, d):
-    return list(cfg["rotation_by_weekday"][WEEKDAY_KEYS[d.weekday()]])
+    return [c for c in cfg["rotation_by_weekday"][WEEKDAY_KEYS[d.weekday()]] if started(cfg, c, d)]
 
 
 def columns_for_group(cfg, d, group):
@@ -74,7 +79,7 @@ def columns_for_group(cfg, d, group):
             if c.startswith("@supp"):
                 if int(c[-1]) < len(supp):
                     out.append(supp[int(c[-1])])
-            else:
+            elif started(cfg, c, d):
                 out.append(c)
     return out
 
@@ -87,7 +92,7 @@ def reserve_columns(cfg):
 def expected_columns(cfg, d):
     """Everything the day's issue needs: the main columns, the daily verse and prayer (group "verse": devotion, which
     is not an article; the app shows its verse at the top and its prayer on the front page), and the supplements."""
-    mains = sorted([k for k, v in cfg["columns"].items() if v["group"] == "main"],
+    mains = sorted([k for k, v in cfg["columns"].items() if v["group"] == "main" and started(cfg, k, d)],
                    key=lambda k: cfg["columns"][k]["order"])
     verse = [k for k, v in cfg["columns"].items() if v["group"] == "verse"]
     return mains + verse + supplements_for(cfg, d)
