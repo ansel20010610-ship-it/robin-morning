@@ -1,0 +1,326 @@
+{
+  "column": "civilization",
+  "date": "reserve",
+  "reserve_written": "2026-10-31",
+  "title": "三隻手上的假封印",
+  "dek": "13 世紀匈牙利的瓦拉德，被告拿燒過的鐵，手封起來，過幾天拆開看。大教堂的登記簿記下結果：拿了鐵的人多半過關。",
+  "brief": "1221 年，匈牙利瓦拉德的教士團要拆開被控偷竊者手上的封條，其中幾隻手上的教士團封印已被弄破、換成假印，這幾人都被當成有罪。這座大教堂的熱鐵審登記簿裡，真正拿了鐵的人六成多過關。1215 年教會禁止神職人員為神判祝福，沒有神父，丹麥 1216 年、英格蘭 1219 年就不再用。",
+  "topic_key": "civilization:hungary-varad-ordeal-register-13c",
+  "updated_at": "2026-10-31T14:47:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Dieric_Bouts_-_The_Ordeal_by_Fire.jpg/1280px-Dieric_Bouts_-_The_Ordeal_by_Fire.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Dieric_Bouts_-_The_Ordeal_by_Fire.jpg/3840px-Dieric_Bouts_-_The_Ordeal_by_Fire.jpg",
+    "width": 1280,
+    "height": 2153,
+    "alt": "高窄的木板油畫。宮殿大廳裡，一名穿紅袍的女子跪在戴王冠、坐在寶座上的男人面前，一手抱著一顆男人的頭，另一手舉著一根燒紅的長條金屬。四周站著幾名穿 15 世紀服裝的男人。地上有一個裝著紅炭的小火盆。左上方的窗外遠處是一座城市和山丘，山丘上有人被綁在柴堆上焚燒。",
+    "caption": "鮑茨（Dieric Bouts）〈奧托三世的正義：火的考驗〉。1468 年魯汶市政廳委託他為參事廳裝飾，神學家 Jan van Haeght 選了奧托三世的傳說：伯爵遭皇后誣告、被皇帝處死，遺孀捧著丈夫的頭、手握燒熱的鐵而毫髮無傷，證明他無辜；奧托三世隨即判自己的妻子火刑。館方說，這個傳說例子是要提醒魯汶當局依就任誓詞公正判案、不看身分。油彩、橡木板，與同組的〈處決無辜伯爵〉兩聯各約高 324、寬 182 公分；館方資料列為比利時皇家美術館藏品（館藏號 1447–1448），1861 年購入。",
+    "credit": "Dieric Bouts；比利時皇家美術館，經 Google Arts & Culture 與 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dieric_Bouts_-_The_Ordeal_by_Fire.jpg",
+    "made": "約 1473–1475",
+    "depicts": "傳說中的奧托三世時代"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1221 年，匈牙利的瓦拉德（Várad，今羅馬尼亞奧拉迪亞），大教堂的教士團要替四個被控偷竊的人拆開手上的封條。四人都拿過燒熱的鐵，手封上教士團的印，等到星期日拆開來看。拆開以後，其中一人的手燙傷了。另外三人手上，教士團的封印被弄破，換成了一枚假印。"
+    },
+    {
+      "type": "p",
+      "text": "這三人被當成有罪。誰弄破了封印、誰封上的假印、為了什麼，條目一個字也沒寫。同案還有一個人，病得連鐵都舉不起來。"
+    },
+    {
+      "type": "p",
+      "text": "這筆紀錄出自瓦拉德大教堂的一本登記簿。1208 到 1235 年，正是安德烈二世（Andrew II）在位的那些年，教士團把大教堂裡的熱鐵審一案一案記下來：誰告誰，告什麼，法官是誰（多半是某位伯爵），哪個執達員把人送來，最後燙傷了還是過關了。"
+    },
+    {
+      "type": "p",
+      "text": "在這本簿子裡，真正拿了鐵的人，多半過關了。"
+    },
+    {
+      "type": "h",
+      "text": "誓言不算數的人"
+    },
+    {
+      "type": "p",
+      "text": "神判是證據用完了才輪到的辦法。Peter Leeson 研究這套制度時整理過：被告認罪，或有可靠的證人，法院直接定罪；證據不夠，常准被告自己發誓，或帶著指定人數的宣誓助人一起發誓。可是不自由人、外地人、作過偽證的、名聲壞掉的，誓言都不算數，找不齊宣誓助人也一樣；而不自由人占了中世紀人口的一大塊。一份加洛林王朝的法令寫道：法官可以判他們清楚知道的，他們無法知道的，留給神的審判。"
+    },
+    {
+      "type": "p",
+      "text": "登記簿的案件有固定格式：控告者、被告、案由、法官（多為伯爵）、執達員。法官派一名執達員，把人送到瓦拉德受審。1550 年的初版，末尾還附了一段主教祝福新鐵的禱詞，接著是祝福火的禱詞。"
+    },
+    {
+      "type": "p",
+      "text": "下面這段不是瓦拉德的紀錄，是早期日耳曼法神判基督教化後的典型禮儀格式，可以看儀式一般的樣子。控告提出後，被告禁食禱告三天；神父穿上祭衣，用鉗子把鐵放進火裡，灑聖水，鐵在火裡加熱的時候舉行彌撒，被告領聖餐。"
+    },
+    {
+      "type": "quote",
+      "text": "被告隨即拿著鐵走九呎遠。然後把他的手封起來，封三天；若在鐵燙過的地方發現化膿的血，判他有罪。若他毫髮無傷地出來，就向上帝獻上讚美。",
+      "original": "And straightway the accused shall carry the iron to a distance of nine feet. Finally his hand shall be covered under seal for three days, and if festering blood be found in the track of the iron, he shall be judged guilty. But if, however, he shall go forth uninjured, praise shall be rendered to God.",
+      "cite": "〈熱鐵審判〉禮儀格式，Henderson《中世紀歷史文獻選》1910 年英譯，Fordham 中世紀史料庫"
+    },
+    {
+      "type": "p",
+      "text": "Leeson 也說，熱鐵審有時分輕重，看罪名多重、被告名聲壞到什麼程度，拿 1 磅或 3 磅的鐵。這是他對一般做法的描述，不是瓦拉德的紀錄。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Probe_des_gl%C3%BChenden_Eisens.jpg/960px-Probe_des_gl%C3%BChenden_Eisens.jpg",
+      "width": 960,
+      "height": 1134,
+      "alt": "羊皮紙手抄本的一角，用黑線和紅線畫成。左邊一名長袍男子舉著一本攤開的書，伸手作祝福狀；中間一人用長鉗從一座塔形的爐子裡夾出一根條狀物，爐底畫著紅色火焰；右邊一人伸出手去接，身後另一人扶著他。上方紅字寫著 Benedictio ferri igne，下方是大寫紅色 B 開頭的拉丁文禱詞。",
+      "caption": "蘭巴赫修道院的一部《儀典書》，12 世紀末抄成，這一頁是熱鐵的祝福禮。上方紅字是標題「火中之鐵的祝福」，下方禱詞開頭懇求上帝以大能祝福「這種金屬」。圖的局部，掃描自 Dinzelbacher《陌生的中世紀》（2006）的圖版；手抄本藏蘭巴赫修道院圖書館，Cml LXXIII。",
+      "credit": "佚名抄寫者；蘭巴赫修道院圖書館，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Probe_des_gl%C3%BChenden_Eisens.jpg",
+      "made": "12 世紀末"
+    },
+    {
+      "type": "p",
+      "text": "本篇頭圖是鮑茨為魯汶市政廳參事廳畫的。1468 年市政廳委託他裝飾參事廳，神學家 Jan van Haeght 負責選題，選了皇帝奧托三世的傳說：一位伯爵被皇后誣告、遭到處死，遺孀握著燒熱的金屬毫髮無傷，證明丈夫無辜，奧托隨即判自己的妻子火刑。館方文字說，這個傳說例子是要提醒魯汶當局依就任誓詞（oath of office，官員就職時發的誓）公正判案，不看身分。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.07,
+        0.44,
+        0.45,
+        0.22
+      ],
+      "position": "畫面左側中段，約占寬度一半",
+      "caption": "伯爵的遺孀跪著，一手抱著丈夫的頭，一手舉著那根燒紅的鐵。"
+    },
+    {
+      "type": "h",
+      "text": "送到瓦拉德，在那裡談妥"
+    },
+    {
+      "type": "p",
+      "text": "登記簿裡第一件送來熱鐵審的案子在 1208 年。一個人控告三名男子搶走他兩名女僕、八頭耕牛、三十隻羊和一匹馬。法官估價十馬克，派執達員把三人送去瓦拉德受熱鐵審。條目沒寫有沒有拿鐵，只寫雙方在那裡談妥：三人賠給控告者一馬克又四分之一，再讓法官滿意；執達員那一份，由控告者付。"
+    },
+    {
+      "type": "p",
+      "text": "Leeson 依前人的整理，說登記簿有 308 件神判案留下結果，其中 100 件在出結果前中止，通常是因為雙方和解：75 件和解，25 件是控告者撤告。和解發生在哪個階段，他沒說；撤告有些發生在被告已經拿過鐵、手還沒拆開的時候。1214 年有兩個控告者到了瓦拉德，躲掉熱鐵審，承認自己是誣告五人搶劫。同一年，一樁巫術指控也在瓦拉德撤了，控告者答應賠法官，被告付執達員和教士團。"
+    },
+    {
+      "type": "p",
+      "text": "照 Leeson 的理論，這些沒走完的案子，被告應該是有罪的；他自己也寫明，當然沒辦法知道是不是這樣。我比較在意紀錄裡的錢：第一件案子，三人除了賠控告者，還要讓法官滿意，執達員那份由控告者付；明寫賠給法官的，只有 1214 年那件巫術案。"
+    },
+    {
+      "type": "h",
+      "text": "逃進教堂"
+    },
+    {
+      "type": "p",
+      "text": "1214 年，一個被控偷竊的人拿過鐵，到了該拆開的時候，逃進教堂，說自己燙傷了。同一年另一案，六名被告拿鐵過關；一起被告的另一人「覺得自己燙傷了」，也逃進教堂；還有一人被燙傷。"
+    },
+    {
+      "type": "p",
+      "text": "也有人替妹妹拿鐵。1217 年，一個男人來到瓦拉德，要用熱鐵證明妹妹不是娼妓。手封好以後，他一直等到星期五，等他的對手：搶走妹妹的人、伴郎，還有新郎的一群同伴。他們沒有來。"
+    },
+    {
+      "type": "p",
+      "text": "1219 年，一案有六人被控偷竊，四個是奴僕，兩個是釋奴。其中四人拿了鐵，條目對他們只寫：燙傷了，吊死了。另一人來了，虛弱得拿不起鐵；還有一人那個星期沒有到。"
+    },
+    {
+      "type": "h",
+      "text": "六成多過關"
+    },
+    {
+      "type": "p",
+      "text": "Leeson 算的是真正拿了鐵的 208 件：78 件沒過，130 件過關，過關的占 62.5%。他說這還是保守的估計，因為拿過鐵才撤告的案子沒算進來，那些人很可能也沒燙傷。Leeson 引波洛克與梅特蘭的話：證據似乎顯示，熱鐵審被安排成給被告相當大的逃脫機會。"
+    },
+    {
+      "type": "h",
+      "text": "Leeson 說神父動了手腳"
+    },
+    {
+      "type": "p",
+      "text": "Leeson 在 2012 年的論文〈神判〉裡解釋這個過關率。如果被告真心相信上帝會在火裡顯出真相，有罪的人會想辦法避開，認罪也好，和解也好；肯拿鐵的，自認清白。Leeson 認為，神父看見誰肯上場，就推知他無辜，再動手腳讓他通過。"
+    },
+    {
+      "type": "p",
+      "text": "他指出，10 世紀英格蘭的一份法令（Howland 1901 所收）留了操作空間。法令規定火帶進教堂以後，除了神父和受審的人誰都不准進去；Leeson 認為，這讓神父可以先在火和鐵上動手腳，甚至給來驗鐵的人看另一塊鐵。兩邊的人進來後沿著教堂兩側站，Leeson 認為這讓他們離得遠，不容易看清。祝聖一開始就不准再添火，鐵留在漸熄的炭上等最後一段禱詞，Leeson 認為神父可以把禱詞拖長，讓鐵變涼。拿鐵前，被告要喝聖水，拿鐵的手也要灑上聖水；Leeson 說，灑可能變成澆。另外，英格蘭這類格式要神父第三天檢查手在包布裡是「乾淨」還是「污穢」，卻沒說怎麼算，Leeson 說判定大半靠神父。這些都是英格蘭的格式，不是瓦拉德的。"
+    },
+    {
+      "type": "p",
+      "text": "為了讓半信半疑的人也不敢冒險，神父還得讓一部分人沒過。Leeson 在論文摘要裡說，神判的結果都是奇蹟，不過是機制設計出來的奇蹟。"
+    },
+    {
+      "type": "p",
+      "text": "他也承認，這些數字證明不了過關的人真的無辜；神父自己信不信神判是上帝的審判，證據也不清楚。有人說神父乾脆在賣判決，Leeson 不同意：真要是那樣，多數被告會直接跟控告者和解，可是資料裡多數人上場受審、過了關，和解的是少數。"
+    },
+    {
+      "type": "h",
+      "text": "教會先撤手"
+    },
+    {
+      "type": "p",
+      "text": "12 世紀起，教會高層開始有人追問神判的根據：聖經裡找不到這種審判，而且它違反了「不可試探主你的神」（申命記 6:16）。教宗英諾森三世抱怨過，教會法不承認熱鐵、冷水這類審判，可憐的神父卻被逼著去祝福，不肯的還被世俗官員罰錢。"
+    },
+    {
+      "type": "p",
+      "text": "1215 年，第四次拉特朗大公會議第 18 條規定神職人員不得宣判或執行死刑，不得做燒灼、切割的外科手術，同一條也管到了神判。"
+    },
+    {
+      "type": "quote",
+      "text": "任何人都不得在熱水、冷水或熱鐵的審判中施予任何祝福。",
+      "original": "Neither shall anyone in judicial tests or ordeals by hot or cold water or hot iron bestow any blessing",
+      "cite": "第四次拉特朗大公會議第 18 條，Schroeder 1937 年英譯，Fordham 中世紀史料庫"
+    },
+    {
+      "type": "p",
+      "text": "神父一抽手，各地陸續停用：丹麥 1216 年禁止，英格蘭 1219 年停止，蘇格蘭 1230 年，義大利 1231 年；法國從沒正式廢除，史家目前找得到的最後一筆紀錄在 1218 年。Leeson 引巴特利特（Bartlett）的話：除了零星例外，沒有神父，神判就辦不下去。"
+    },
+    {
+      "type": "p",
+      "text": "同一條也重申了先前對司法決鬥的禁令，決鬥卻又撐了幾百年，英格蘭最後一次在 1456 年（依 Leeson）。Leeson 引前人的說法：決鬥沒有神父也打得成，神判的效力卻全靠宗教儀式。"
+    },
+    {
+      "type": "p",
+      "text": "Leeson 說匈牙利是神父不理禁令的地方之一。開頭那四個人在瓦拉德拆封，是 1221 年，禁令已經頒布六年；這本登記簿一直記到 1235 年。"
+    },
+    {
+      "type": "timeline",
+      "title": "火與水的審判，從興起到退場",
+      "caption": "年份依 Leeson〈神判〉（2012）、第四次拉特朗大公會議第 18 條、1903 年版《瓦拉德登記簿》。",
+      "items": [
+        {
+          "when": "約 507–511 年",
+          "label": "熱水審首見於《薩利克法典》",
+          "note": "冷水審是 9 世紀才出現。"
+        },
+        {
+          "when": "1208 年",
+          "label": "瓦拉德登記簿的第一批紀錄",
+          "note": "第一件送來熱鐵審的案子，在瓦拉德談妥賠償。"
+        },
+        {
+          "when": "1215 年",
+          "label": "第四次拉特朗大公會議第 18 條",
+          "note": "神職人員不得為神判祝福。"
+        },
+        {
+          "when": "1216 年",
+          "label": "丹麥禁止神判",
+          "note": ""
+        },
+        {
+          "when": "1219 年",
+          "label": "英格蘭停止神判",
+          "note": ""
+        },
+        {
+          "when": "1221 年",
+          "label": "三隻手被換上假封印",
+          "note": "瓦拉德的登記簿仍在記。"
+        },
+        {
+          "when": "1235 年",
+          "label": "登記簿的最後一年",
+          "note": ""
+        },
+        {
+          "when": "1456 年",
+          "label": "英格蘭最後一場司法決鬥（依 Leeson）",
+          "note": "決鬥不需要神父，撐得比神判久。"
+        },
+        {
+          "when": "1550 年",
+          "label": "登記簿在 Kolozsvár 付印",
+          "note": "紀錄據稱出自瓦拉德大教堂的聖器室。"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "label": "給史詩創作者的制度問題",
+      "items": [
+        "在你的世界裡，誰有資格替神作證？這個人哪天不肯了，審判還剩下什麼可以運作？",
+        "如果判決要等三天才揭曉，這三天裡誰保管證據，誰有機會碰它？"
+      ]
+    },
+    {
+      "type": "h",
+      "text": "封印"
+    },
+    {
+      "type": "p",
+      "text": "Leeson 的論證靠英格蘭的儀式規定和瓦拉德的過關率。瓦拉德這本簿子自己留下的線索，落在拆封那一刻。"
+    },
+    {
+      "type": "p",
+      "text": "1213 年，教士們發現一名被告手上的封印不完好，因為這樣，沒有檢查他的手。1221 年，封印被換成假的那三個人，被當成有罪。我猜在瓦拉德，手封起來到拆開的那幾天，封印本身就算證據：印不對，手上有沒有傷就不是唯一要看的了。這只是我的猜測，Leeson 沒這樣說：他講的是神父操縱鐵、火、水和最後的判讀，沒講到手被人動過。如果封印真有這個作用，那幾天裡誰碰得到那隻手，就跟火燒得多旺一樣要緊。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "1214 年還有一案。一個被同村人控告偷竊的人拿了鐵，條目只記了手沒燙傷、封印破了，到此為止。"
+    },
+    {
+      "type": "quote",
+      "text": "約翰拿了鐵，手沒有燙傷，但封印破了。",
+      "original": "Joannes, portato ferro, incombustam habuit manum, sed sigillum fractum.",
+      "cite": "《瓦拉德登記簿》第 85 號（1214 年），1903 年校訂本"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Regestrum Varadinense examinum ferri candentis ordine chronologico digestum, descripta effigie editionis a. 1550 illustratum（Karácsonyi János、Borovszky Samu 編）",
+      "publisher": "Nagyvárad 教士團出資，Budapest；Magyar Elektronikus Könyvtár（MEK）數位檔，原掃描出自 Internet Archive",
+      "date": "1903",
+      "url": "https://www.mek.oszk.hu/23500/23533/23533.pdf",
+      "note": "1550 年 Kolozsvár 初版書名頁影本（Ritus explorandae veritatis… in Sacrario summi templi Varadien. reperta）；初版末尾附 Benedictio Episcopalis super Iudicium nouum ferrum praeparatum 與 Benedictio Ignis（1903 年版索引：Benedictio episcopalis super ferrum in fine Regestri）。1903 年版新編號共 389 號，並非全是神判案（Nr. 1 為土地權利見證）。引用條目：Nr. 2（1208，登記簿第一件神判案；Simon 控 Medeus 等三人奪走女僕兩名、耕牛八頭、羊三十、馬一匹，宮廷伯 Tumpa 估價十馬克，misit illos 送瓦拉德熱鐵審，taliter convenerunt：三人付一馬克又一費爾頓〔ferto，四分之一馬克〕並讓法官滿意，執達員份由 Simon 付）、Nr. 50（1213，sigillum non sanum，教士未檢查手）、Nr. 85（1214，約翰，比哈爾宮廷伯 Paulus 審）、Nr. 92（1214，控告者躲掉熱鐵審，自承誣告搶劫）、Nr. 93（1214，Janus cum solvi deberet 逃進教堂自稱燙傷）、Nr. 94（1214，巫術指控撤告；控告者賠法官，被告付執達員與教士團）、Nr. 95（1214，六人過關，Albeus sentiens se esse combustum 逃進教堂，Sceuezeu combustus est）、Nr. 169（1217，iobagio 替妹妹拿鐵，等到星期五對方未到）、Nr. 182（1219，被控六人：Ugud、Obud、Sceca、Scemhegi 為 servi，Dudor／Dodor 與 Bencius 為 libertini；Ugud、Buncii、Obud、Sceca combusti sunt et suspensi；Dodor 太虛弱拿不起鐵；Scemhegi 同週未到）、Nr. 280（1221，宮廷伯尼古拉審，星期日拆封，Georgius 燙傷，三人 fracto sigillo Capituli, falso sigillo fuerant sigillatae〔被動句，未說何人所為〕，pro iniustis habiti sunt；Petrus 因病舉不起鐵）。拉丁文依 PDF 的 OCR 文字核對，版面錯行處依語意重組。登記簿明寫付費給法官、執達員者，本文只用到 Nr. 2、Nr. 94 兩條。"
+    },
+    {
+      "title": "Ordeals",
+      "publisher": "Peter T. Leeson, Journal of Law and Economics 55(3): 691–714（作者網站全文 PDF）",
+      "date": "2012-08",
+      "url": "https://www.peterleeson.com/Ordeals.pdf",
+      "note": "摘要（miracles of mechanism design）；註 7（強度依罪名輕重或被告名聲受損程度而定，有時；單倍 1 磅、三倍 3 磅，為一般做法，非瓦拉德紀錄）、註 8（《薩利克法典》約 507–511、冷水審 9 世紀）；p. 695（認罪與證人、誓言不被接受者、不自由人占人口很大部分、加洛林法令）；pp. 696–699（分離均衡與神父操縱）；pp. 697–698（10 世紀英格蘭法令，轉引 Howland 1901；火、沿牆站、禱詞拖延、灑聖水、乾淨或污穢未定義）；p. 706 與註 32、33（瓦拉德 308 件、100 件中止〔75 和解、25 撤告，部分撤告在被告拿鐵後、拆封前；和解時點未說〕；作者說這些被告依其理論有罪，但 there is no way to know；208 件中 78 敗 130 過；62.5% 為保守估計；依 Zajtay 1954、van Caenegem 1991；作者提醒須謹慎解讀）；p. 707（波洛克與梅特蘭語）；註 23（神父的信仰證據不清）；註 36（反駁神父賣判決之說：多數被告受審並過關，只有少數和解）；p. 709 與註 44（聖經根據、申命記 6:16、英諾森三世的抱怨轉引 Bartlett 1986 p. 98）；p. 710（各地停止年份、匈牙利等地神父不理禁令、Bartlett 1986 p. 101）；pp. 710–711（司法決鬥，引 Lea；英格蘭最後一次 1456 年）。"
+    },
+    {
+      "title": "Medieval Sourcebook: Ordeal Formulas",
+      "publisher": "Internet History Sourcebooks Project, Fordham University（譯文出自 Ernest F. Henderson, Select Historical Documents of the Middle Ages, 1910, pp. 314–317）",
+      "date": "1996-02",
+      "url": "https://sourcebooks.fordham.edu/source/ordeals1.asp",
+      "note": "The Judgment of the Glowing Iron：三天禁食禱告、祭衣、鉗子、灑聖水、彌撒與聖餐、走九呎、封手三天、化膿之血判有罪。頁面說明這是早期日耳曼法神判的基督教化典型禮儀格式，非 13 世紀匈牙利或瓦拉德的文件。"
+    },
+    {
+      "title": "Medieval Sourcebook: Twelfth Ecumenical Council: Lateran IV 1215",
+      "publisher": "Internet History Sourcebooks Project, Fordham University（譯文出自 H. J. Schroeder, Disciplinary Decrees of the General Councils, 1937）",
+      "date": "1996",
+      "url": "https://sourcebooks.fordham.edu/source/lat4-select.asp",
+      "note": "第 18 條全文：不得宣判、執行或在場死刑；不得做燒灼切割的外科；不得為沸水、冷水、熱鐵審祝福；先前關於決鬥的禁令繼續有效。"
+    },
+    {
+      "title": "Justice of Emperor Otto III: Beheading of the Innocent Count and Ordeal by Fire",
+      "publisher": "Google Arts & Culture／Royal Museums of Fine Arts of Belgium",
+      "date": "",
+      "url": "https://artsandculture.google.com/asset/justice-of-emperor-otto-iii-beheading-of-the-innocent-count-and-ordeal-by-fire/5AGtQbEd3j5HnA",
+      "note": "約 1473–1475；油彩、橡木板；181.5 × 323.5 與 182 × 324.5 公分；館藏號 1447–1448；1861 年購入；1468 年魯汶市政廳參事廳委託、Jan van Haeght 選題、伯爵遭皇后誣告、四聯未完成、提醒魯汶當局依誓詞公正判案、不看身分（館方文字，Cyriel Stroo 2001）。"
+    },
+    {
+      "title": "File:Dieric Bouts - The Ordeal by Fire.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Dieric_Bouts_-_The_Ordeal_by_Fire.jpg",
+      "note": "頭圖；公有領域，影像來源 Google Arts & Culture。Commons 檔案頁定年標 circa 1460，與館方（Google Arts & Culture）的約 1473–1475 不同；本文 made 採館方定年。"
+    },
+    {
+      "title": "File:Probe des glühenden Eisens.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Probe_des_gl%C3%BChenden_Eisens.jpg",
+      "note": "蘭巴赫修道院《儀典書》，12 世紀末，Cml LXXIII, f. 64v／72r 局部；掃描自 Peter Dinzelbacher, Das fremde Mittelalter（2006）圖版。"
+    }
+  ]
+}
