@@ -3,9 +3,9 @@
   "date": "2026-11-01",
   "title": "草稿上，維克多管它叫「我的人」",
   "dek": "《科學怪人》造物睜眼那一段，牛津的草稿上寫著「我看著我的人完成了」。1818 年印出來，句子裡沒有那個人了。",
-  "brief": "《科學怪人》造物睜眼那一段，瑪麗・雪萊的草稿上寫著「我看著我的人完成了」，1818 年印本成了「我看見了自己辛勞的成果」。同一份草稿裡，那個造物站在床邊「喃喃說了幾個字」；「字」被劃掉，珀西・雪萊在頁邊改成「含糊不清的聲音」。",
+  "brief": "《科學怪人》造物睜眼那一段，瑪麗・雪萊的草稿上寫著「我看著我的人完成了」，1818 年印本成了「我看見了自己辛勞的成果」。同一份草稿裡，造物「喃喃說了幾個字」（he muttered some words）；「字」被劃掉，珀西・雪萊在頁邊改成「含糊不清的聲音」。",
   "topic_key": "literature:shelley-frankenstein-1818-i-4",
-  "updated_at": "2026-11-01T02:10:00+08:00",
+  "updated_at": "2026-11-01T02:14:05+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -14,13 +14,13 @@
     "src": "https://upload.wikimedia.org/wikipedia/commons/a/a5/FrankensteinDraft.jpg",
     "width": 500,
     "height": 753,
-    "alt": "一頁墨水手寫稿。頁首寫著 Chapter 7th，正文三十行左右，行間有幾處劃線刪去的字和補寫的字，左頁邊另有三處補字。",
-    "caption": "瑪麗・雪萊《科學怪人》草稿，第 7 章第一頁（MS. Abinger c. 56, fol. 21r，草稿頁碼 75）。第二行 my man completed 上方，是珀西・雪萊寫了又劃掉的 the frame on whic；下半頁劃掉的 handsome 與 Handsome 上方改成 beautiful、Beautiful，左頁邊補了 yellow 與 of a lustrous black &。",
+    "alt": "一頁手寫稿。頁首寫著 Chapter 7th，行間有劃掉和補寫的字，左頁邊也有補寫的字。",
+    "caption": "瑪麗・雪萊《科學怪人》草稿，第 7 章第一頁（MS. Abinger c. 56, fol. 21r，草稿頁碼 75）。第二行 my man completed 上方，是珀西・雪萊寫了又劃掉的 the frame on whic；另有劃掉的 handsome 與 Handsome，上方改成 beautiful、Beautiful，左頁邊補了 yellow 與 of a lustrous black &。",
     "credit": "瑪麗・雪萊手稿；牛津大學博德利圖書館藏，影像經 Wikimedia Commons",
     "license": "Public domain",
     "license_url": "",
     "source_url": "https://commons.wikimedia.org/wiki/File:FrankensteinDraft.jpg",
-    "made": "1816–1817"
+    "made": "1816"
   },
   "body": [
     {
@@ -29,7 +29,7 @@
     },
     {
       "type": "p",
-      "text": "「我的人」上方的行間，珀西・雪萊（Percy Bysshe Shelley）寫了 the frame on whic，最後一個字沒寫完，整段又劃掉了。瑪麗那一行沒有動。"
+      "text": "「我的人」上方的行間，珀西・雪萊寫了 the frame on whic，之後整段劃掉。my man completed 沒有被刪。"
     },
     {
       "type": "p",
@@ -48,7 +48,7 @@
       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Frankenstein%2C_or_the_Modern_Prometheus_%28First_Edition%2C_1818%29_Vol_1.djvu/page113-1280px-Frankenstein%2C_or_the_Modern_Prometheus_%28First_Edition%2C_1818%29_Vol_1.djvu.jpg",
       "width": 1280,
       "height": 2312,
-      "alt": "一頁印刷書頁。頁眉右上印 THE MODERN PROMETHEUS 與頁碼 97，中間是 CHAPTER IV，下面是十來行英文正文，第一個字 It 的 I 是放大的首字。",
+      "alt": "1818 年初版第一卷第 97 頁的書頁掃描，第 4 章（CHAPTER IV）開頭。",
       "caption": "1818 年初版第一卷第 97 頁，第 4 章開頭。",
       "credit": "Lackington, Hughes, Harding, Mavor, & Jones 出版；紐約公共圖書館藏本掃描，經 Wikimedia Commons",
       "license": "Public domain",
@@ -58,15 +58,11 @@
     },
     {
       "type": "p",
-      "text": "印本裡，「我的人」不見了，換成「我辛勞的成果」。草稿之後，這一段的謄清稿和校樣都沒有留下來，是誰、在哪一步改的，沒有人知道。"
+      "text": "印本裡，「我的人」不見了，換成「我辛勞的成果」。草稿和印本之間的謄清稿（這一段不存）與校樣都沒有留下來，印本是誰、在哪一步改的，不知道。"
     },
     {
       "type": "p",
-      "text": "印本的第一句裡沒有那個造物，只有「我」和我的辛勞。它到第二句才出場，是「躺在我腳邊那個沒有生命的東西」；第三句成了「那個造物」，眼睛睜開，喘著氣，代名詞用的是「它」（it）。到了下一段，維克多講起它的四肢、講他替它挑過的五官，代名詞才換成「他」（his）。"
-    },
-    {
-      "type": "p",
-      "text": "這一處我站印本。「我的人」叫得太早，維克多一開口就這樣叫，等於先認了它是個人。印本讓它先當一件成果；再下一段，同一件事就成了「災難」（catastrophe）。"
+      "text": "本報的觀察：印本的第一句裡沒有那個造物，只有「我」和我的辛勞。它到第二句才出場，是「躺在我腳邊那個沒有生命的東西」；第三句成了「那個造物」，眼睛睜開，喘著氣，代名詞用的是「它」（it）。到了下一段，維克多講起它的四肢、講他替它挑過的五官，代名詞才換成「他」（his）。照本報讀下來，稱呼是 thing、creature、it、his 這樣一路換過來的。"
     },
     {
       "type": "h",
@@ -74,7 +70,7 @@
     },
     {
       "type": "p",
-      "text": "1818 年第一卷的書名頁沒有作者名字，題詞是彌爾頓《失樂園》的三行，出自亞當吃了禁果之後的獨白。"
+      "text": "1818 年第一卷的書名頁沒有作者名字，題詞是彌爾頓《失樂園》的三行，出自亞當墮落後的獨白。"
     },
     {
       "type": "quote",
@@ -85,7 +81,7 @@
     {
       "type": "p",
       "tag": "推論",
-      "text": "草稿裡，維克多管它叫「我的人」（my man），印出來的那一句沒有這個字。書名頁上，問誰要把他從泥土裡塑成人（To mould me man）的，是被造的那一方。"
+      "text": "本報把兩處放在一起看：草稿裡，維克多管它叫「我的人」（my man），印出來的那一句沒有這個字；書名頁題詞則是一串反問：Did I request thee, Maker, from my clay / To mould me man?（是我求你從泥土裡把我塑成人的嗎？）"
     },
     {
       "type": "h",
@@ -93,11 +89,11 @@
     },
     {
       "type": "p",
-      "text": "這幾個字從哪裡來，瑪麗自己講過。1831 年《科學怪人》出了一卷本的修訂版，她新寫了一篇序，回頭講 1816 年的夏天。他們在瑞士，和拜倫做鄰居；那年夏天濕答答的，很不討喜，常常一連幾天下雨，困在屋裡。手邊有幾本從德文譯成法文的鬼故事，拜倫提議每人各寫一個鬼故事，當時一共四個人。"
+      "text": "草稿第一行那句 It was on a dreary night of November，瑪麗在 1831 年的序裡提到過。1831 年《科學怪人》出了一卷本的修訂版，她新寫了一篇序，回頭講 1816 年的夏天。他們在瑞士，和拜倫做鄰居；那年夏天濕答答的，很不討喜，常常一連幾天下雨，困在屋裡。他們讀到從德文譯成法文的鬼故事集，拜倫提議每人各寫一個鬼故事，當時一共四個人。"
     },
     {
       "type": "p",
-      "text": "她一連好幾天想不出來，每天早上都有人問她想到故事了沒。有一夜，拜倫和珀西長談生命的本質，談到伽伐尼電流，談到屍體也許能復活。那天夜裡她閉著眼睛，「看見」一個臉色蒼白的學生跪在他拼起來的東西旁邊，那東西在一部強大機器的運轉下，顯出了生命的跡象。"
+      "text": "她一連好幾天想不出來，每天早上都被問想到故事了沒。拜倫與珀西長談生命的本質，談到伽伐尼電流，也許屍體可以復活。那夜她閉著眼睛，「看見」一個臉色蒼白的學生跪在他拼起來的東西旁邊，它在某種強大機器的運轉下，顯出了生命的跡象。"
     },
     {
       "type": "quote",
@@ -116,7 +112,7 @@
       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Frankenstein%2C_or_the_Modern_Prometheus_%28Revised_Edition%2C_1831%29.djvu/page6-1280px-Frankenstein%2C_or_the_Modern_Prometheus_%28Revised_Edition%2C_1831%29.djvu.jpg",
       "width": 1280,
       "height": 2088,
-      "alt": "書頁上的黑白版畫。一個長髮、肌肉分明的男子幾乎赤裸，半躺在地上，身邊有骷髏和一本攤開的書；右後方一個披斗篷的年輕人扶著門，回頭瞪著他；背景是一扇哥德式花窗。版畫下方印著 FRANKENSTEIN、五行斜體引文和 Page 43。",
+      "alt": "1831 年修訂版卷首版畫的書頁掃描。版畫下方印著 FRANKENSTEIN、五行斜體引文和 Page 43。",
       "caption": "1831 年修訂版的卷首版畫。圖下引的正是造人那一段：「藉著將熄的微光，我看見那個造物暗黃色的眼睛睜開了；它喘著粗氣，一陣痙攣牽動了它的四肢……我衝出了房間。」",
       "credit": "霍爾斯特（Theodor von Holst）繪，謝瓦利耶（W. Chevalier）刻；H. Colburn and R. Bentley 出版；Internet Archive 掃描，經 Wikimedia Commons",
       "license": "Public domain",
@@ -138,7 +134,7 @@
     },
     {
       "type": "p",
-      "text": "印本那聲「美！──老天！」（Beautiful!—Great God!）把同一個字喊了兩次；草稿上瑪麗就是這樣寫的，只是當時喊的是 Handsome。幾頁之後，維克多承認，它還沒完成時他就盯著看過，那時就已經醜了。"
+      "text": "草稿寫的是「I had selected his features as handsome. Handsome; Great God!」，兩個 handsome 都被劃掉，珀西在上方改成 beautiful、Beautiful；1818 年印本是「Beautiful!—Great God!」，Great God 前面的標點也不是分號了。幾頁之後，維克多承認，它還沒完成時他就盯著看過，那時就已經醜了。"
     },
     {
       "type": "table",
@@ -152,7 +148,7 @@
         [
           "I beheld my man completed",
           "I beheld the accomplishment of my toils",
-          "珀西在行間試寫 the frame on whic，又劃掉；印本的說法在草稿之後才出現"
+          "草稿上 my man completed 沒有被刪，行間有珀西寫了又劃掉的 the frame on whic；印本是 the accomplishment of my toils；誰改、哪一步，不知道"
         ],
         [
           "his features as handsome. Handsome; Great God!",
@@ -172,7 +168,7 @@
         [
           "these dreams vanished",
           "the beauty of the dream vanished",
-          "草稿之後才改"
+          "現存草稿上是 succeeded、these dreams，印本是 finished、the beauty of the dream；誰改、哪一步，不知道"
         ],
         [
           "the aspect of the creature I had created",
@@ -187,10 +183,10 @@
         [
           "one hand was stretched out to detain me",
           "one hand was stretched out, seemingly to detain me",
-          "草稿之後才加 seemingly"
+          "現存草稿上沒有 seemingly，印本有；誰改、哪一步，不知道"
         ]
       ],
-      "caption": "草稿依 Shelley-Godwin Archive 對 MS. Abinger c. 56, fol. 21r–22r 的轉寫；寫「珀西」的，是該轉寫標為珀西筆跡的改動，同頁也有瑪麗自己的行間修改。印本依 1818 年初版第一卷第 97–101 頁。草稿之後的謄清稿這一段沒有留下，校樣也全部不存，標「草稿之後」的幾處，說不出是誰改的。"
+      "caption": "草稿依 Shelley-Godwin Archive 對 MS. Abinger c. 56, fol. 21r–22r 的轉寫；寫「珀西」的，是該轉寫標為珀西筆跡的改動，同頁也有瑪麗自己的行間修改。印本依 1818 年初版第一卷第 97–101 頁。草稿與印本之間的謄清稿這一段沒有留下，校樣也全部不存，標「不知道」的幾處，說不出是誰改的。"
     },
     {
       "type": "h",
@@ -198,16 +194,16 @@
     },
     {
       "type": "p",
-      "text": "維克多受不了眼前那個東西，衝出房間。那一夜他夢見伊莉莎白。他吻她，她的嘴唇變成死人的顏色，懷裡抱著的成了他死去母親的屍體，裹屍布裡有墓蟲。醒來時，昏黃的月光從百葉窗擠進來，他看見（beheld，和第一句同一個動詞）「那個可憐的怪物」（the miserable monster）。它掀起床幔，眼睛盯著他。"
+      "text": "維克多受不了自己造出來的那個存在（the being）的模樣，衝出房間。他夢見伊莉莎白。他吻她，她的嘴唇變成死人的顏色，懷裡抱著的成了他死去母親的屍體，裹屍布裡有墓蟲。醒來時，昏黃的月光從百葉窗擠進來，他看見「那個可憐的怪物」（the miserable monster）；本報注意到，這裡的動詞 beheld，和第一句是同一個。怪物掀起床幔，眼睛盯著他，原文用的代名詞是 He。"
     },
     {
       "type": "p",
-      "text": "序裡那場夢，結尾也停在床邊。學生嚇得逃開，回去睡覺；一睜眼，那東西站在床邊，拉開床幔，用一雙「黃色、水汪汪、若有所思的眼睛」（yellow, watery, but speculative eyes）看著他。瑪麗寫這一幕，用的也是 behold。"
+      "text": "序裡那場夢也有床邊。學生嚇得逃開、睡下；醒來時，那東西站在床邊，拉開床幔，用一雙「yellow, watery, but speculative eyes」（黃色、水汪汪，卻有思索的眼睛）看著他。本報注意到，序裡寫這一幕，用的也是 behold。"
     },
     {
       "type": "p",
       "tag": "推論",
-      "text": "那年夏天讀的鬼故事裡，有兩個畫面跟維克多這一夜很像。一個負心的情人以為抱住了新娘，懷裡卻是被他拋棄的女子蒼白的鬼魂；一個家族祖先的鬼魂夜裡走到熟睡的少年床前，吻他們的額頭，少年從此凋零。抱住愛人卻抱住死人，醒來床前站著一個東西，維克多一夜之間兩樣都碰上了。"
+      "text": "那年夏天讀的鬼故事裡，有兩個畫面跟維克多這一夜很像。一個負心的情人以為抱住了新娘，懷裡卻是被他拋棄的女子蒼白的鬼魂；一個祖先的鬼魂夜裡走到熟睡的少年床前，吻他們的額頭，少年從此凋零。抱住愛人卻抱住死人，醒來床前站著一個東西，維克多一夜之間兩樣都碰上了。"
     },
     {
       "type": "p",
@@ -215,11 +211,7 @@
     },
     {
       "type": "p",
-      "text": "依我看，珀西這裡改得對。先聽見了幾個字，又說它也許說了話、自己沒聽見，兩句擺在一起說不通；換成聲音，下一句才站得住。"
-    },
-    {
-      "type": "p",
-      "text": "印本在這一段的末尾也多了一個字。草稿寫它伸出一隻手，要留住我（to detain me）；1818 年印出來，它伸出一隻手，似乎是要留住我（seemingly to detain me），但我逃開了，衝下樓梯。"
+      "text": "草稿寫它伸出一隻手，要留住我（to detain me）；1818 年印本多了 seemingly，成了「似乎是要留住我」（seemingly to detain me），但我逃開了，衝下樓梯。"
     },
     {
       "type": "facts",
@@ -227,7 +219,7 @@
       "items": [
         [
           "作者",
-          "瑪麗・雪萊（Mary Wollstonecraft Shelley，1797–1851）"
+          "瑪麗・雪萊（Mary Shelley）"
         ],
         [
           "作品",
