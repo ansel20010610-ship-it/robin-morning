@@ -339,6 +339,9 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             W("備稿要在任何一天都成立，避免會過期的字眼：%s" % "、".join(stale))
     elif art.get("date") != str(d):
         E("date 應為 %s" % d)
+    if cfg["columns"].get(col, {}).get("group") == "verse":
+        check_verse(art, E, W, check_urls, used_topics, clash)
+        return
     for k in ("title", "dek", "topic_key", "updated_at"):
         v = art.get(k)
         if v is not None and not isinstance(v, str):
@@ -774,6 +777,39 @@ def check_pitch(b, where, E):
         if outside:
             E("%s pitch 第 %d 步有座標在半場圖外（view: half 只顯示 y 50–100，y 需 ≥ 50）：%s"
               % (where, si + 1, "、".join(dict.fromkeys(outside))))
+
+
+def check_verse(art, E, W, check_urls, used_topics, clash):
+    """今日經文與禱告 (devotion, group "verse", columns/devotion.md): not an article, just the passage and the prayer.
+    Older devotion articles, with their four sections, still pass: they carry both."""
+    body = art.get("body") if isinstance(art.get("body"), list) else []
+    if not body:
+        E("body 需要 scripture 與 prayer 兩個區塊")
+    scrip = [b for b in body if isinstance(b, dict) and b.get("type") == "scripture"]
+    prayer = [b for b in body if isinstance(b, dict) and b.get("type") == "prayer"]
+    if not scrip:
+        E("缺少 scripture 經文區塊")
+    for i, b in enumerate(scrip):
+        check_scripture(b, "scripture[%d]" % i, E, W, check_urls)
+    if not prayer:
+        E("缺少 prayer 今日禱告")
+    else:
+        text = prayer[0].get("text") if isinstance(prayer[0].get("text"), str) else ""
+        n = len(CJK.findall(text))
+        if not text.strip():
+            E("prayer 沒有內容")
+        elif not 120 <= n <= 360:
+            W("禱告 %d 字，建議 150–300 字" % n)
+        if text.strip() and not text.rstrip().endswith("阿們。"):
+            W("禱告結尾用「奉耶穌的名禱告，阿們。」")
+    tk = art.get("topic_key")
+    if not (isinstance(tk, str) and tk.startswith("devotion:")):
+        E("topic_key 需為 devotion:<書卷英文縮寫>-<章>-<起節>")
+    elif used_topics is not None and topic_norm(tk) in used_topics:
+        clash(used_topics[topic_norm(tk)], "這段經文已在 %s 用過：%s" % (used_topics[topic_norm(tk)], tk))
+    ua = art.get("updated_at")
+    if ua is not None and not (isinstance(ua, str) and re.match(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}", ua)):
+        E("updated_at 需為含時區的時間字串")
 
 
 def check_scripture(b, where, E, W, check_urls):

@@ -12,7 +12,7 @@ ISSUES = os.path.join(CONTENT, "issues")
 RESERVE = os.path.join(CONTENT, "reserve")
 # Reserve articles kept per column (editorial/RESERVE.md): a main column runs every day, a supplement twice a week,
 # so the main columns keep one more.
-RESERVE_TARGET = {"main": 3, "supplement": 2}
+RESERVE_TARGET = {"main": 3, "verse": 3, "supplement": 2}
 TARGET_NOTE = "正刊每欄 3 篇、副刊每欄 2 篇"
 
 
@@ -85,9 +85,12 @@ def reserve_columns(cfg):
 
 
 def expected_columns(cfg, d):
+    """Everything the day's issue needs: the main columns, the daily verse and prayer (group "verse": devotion, which
+    is not an article; the app shows its verse at the top and its prayer on the front page), and the supplements."""
     mains = sorted([k for k, v in cfg["columns"].items() if v["group"] == "main"],
                    key=lambda k: cfg["columns"][k]["order"])
-    return mains + supplements_for(cfg, d)
+    verse = [k for k, v in cfg["columns"].items() if v["group"] == "verse"]
+    return mains + verse + supplements_for(cfg, d)
 
 
 def article_path(d, column):

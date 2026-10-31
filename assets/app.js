@@ -1,5 +1,5 @@
 // 知更鳥晨間記事 — app shell, routing and views.
-import { $, esc, inline, store, toast, twNow, fmtDate, getJSON, ICON } from "./util.js";
+import { $, esc, inline, paragraphs, store, toast, twNow, fmtDate, getJSON, ICON } from "./util.js";
 import { renderBody, renderHero } from "./blocks.js";
 import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient, isWebKitITP, isStandaloneIOS, exportLinkCode, importLinkCode, defaultPlaylist,
   autoPlaylist, setAutoPlaylist, choosePlaylist, autoAdd } from "./spotify.js";
@@ -197,6 +197,7 @@ function viewFront(dateParam) {
     ${status ? `<div class="status">${status}</div>` : ""}
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的第 ${issue.no} 期・<a href="#/">回到最新一期</a></div>` : ""}
     ${lateNote(issue.date)}
+    ${prayerBox(issue)}
     ${digestBar(arts, !dateParam, digestDone().has(issue.date))}
     ${mains.length ? `<div class="sec-head"><h2>正刊</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
     ${lead ? `<a class="lead" href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
@@ -217,6 +218,17 @@ function viewFront(dateParam) {
   prefetch(issue);
   wireDigest(issue);
   mastheadShow(main.querySelector(".masthead"));
+}
+
+// 今日禱告: the day's passage (its first verse is the masthead's epigraph) and prayer, folded under the masthead.
+// They come from the devotion file (columns/devotion.md), which since 2026-10-31 is no longer an article.
+function prayerBox(issue) {
+  const v = issue?.verse;
+  if (!v?.prayer) return "";
+  const verses = Array.isArray(v.verses) ? v.verses : [];
+  return `<details class="prayer-box"><summary><span class="lbl">今日禱告</span>${v.ref ? `<span class="ref">${esc(v.ref)}</span>` : ""}</summary>
+    ${verses.length ? `<blockquote class="verses">${verses.map((x) => `<sup>${esc(String(x.n ?? ""))}</sup>${esc(x.text)}`).join("")}<cite>${esc(v.ref || "")}（和合本）</cite></blockquote>` : ""}
+    <div class="prayer">${paragraphs(v.prayer)}</div></details>`;
 }
 
 // ——— The digest: read the briefs (or hear them), reach the end, done for the day ———
@@ -733,7 +745,7 @@ function viewArchive() {
     }).join("");
     main.querySelector(".list").innerHTML = rows || `<p class="empty">${ql ? "沒有符合的文章。" : "還沒有往期。"}</p>`;
   };
-  const chips = Object.entries(S.cfg.columns).map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
+  const chips = Object.entries(S.cfg.columns).filter(([, k]) => k.group !== "verse").map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span></header>
     <nav class="chips review" aria-label="複習"><a class="chip" href="#/week">本週回顧</a><a class="chip" href="#/cards">牙周小卡</a><a class="chip" href="#/concerts">近期演出</a></nav>
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
@@ -841,7 +853,7 @@ function viewSettings() {
       <p class="small">${isWebKitITP() ? "iPhone／Safari 上內嵌播放器可能只能試聽 30 秒；完整收聽請按『在 Spotify 開啟』，加入歌單不受影響。"
         : "若播放器只播 30 秒試聽，請在同一個瀏覽器登入 open.spotify.com。"}</p>
     </section>
-    <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。正刊四欄每日刊出；副刊依星期輪值，平日兩篇、週三與週六三篇；觀測站只在有重要新進展時刊出。</p>
+    <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。首頁最上方每天一段和合本經文，下方「今日禱告」展開可讀整段經文與禱告。正刊三欄每日刊出；副刊依星期輪值，平日兩篇、週三與週六三篇；觀測站只在有重要新進展時刊出。</p>
       <p>稿件由雲端排程編輯在凌晨分班撰寫，每篇再由另一位編輯獨立查核事實、引文與圖片授權。若某一欄到 07:05 仍未完成，會自動換上預先寫好、查核過的備稿，本報不開天窗。</p>
       <p>唯一的例外是週日：每週的 AI 額度在週日下午 3 點重置。若週日凌晨額度已經用完、當天沒能出齊，就不拿備稿充數，而是等 3 點額度重置後把整期重新寫過，大約傍晚出齊，出齊時會另外通知。首頁會說明當下進度。</p>
       <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>副刊</th></tr></thead><tbody>

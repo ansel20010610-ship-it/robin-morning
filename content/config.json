@@ -16,7 +16,7 @@
     "perio":        { "group": "main", "order": 2, "name": "牙周經典導讀", "full": "每日一篇經典牙周論文", "latin": "Parodontologie" },
     "music":        { "group": "main", "order": 3, "name": "今日古典", "full": "古典樂導聆", "latin": "Musik" },
     "civilization": { "group": "supplement", "name": "文明如何運作", "full": "從具體歷史問題看制度", "latin": "Zivilisation" },
-    "devotion":     { "group": "main", "order": 4, "name": "晨光裡的一句話", "full": "基督信仰默想", "latin": "Andacht" },
+    "devotion":     { "group": "verse", "name": "今日經文與禱告", "full": "首頁最上方的經文與今日禱告（2026-10-31 起不再是文章）", "latin": "Gebet" },
 
     "art":          { "group": "supplement", "name": "走進一幅畫", "latin": "Kunst" },
     "photo":        { "group": "supplement", "name": "一格電影，一張照片", "latin": "Bild" },

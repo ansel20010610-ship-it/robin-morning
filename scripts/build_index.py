@@ -44,6 +44,20 @@ def epigraph(art):
     return None
 
 
+def verse(art):
+    """The day's passage and prayer (今日經文與禱告, group "verse"): the app shows them in the front page's 今日禱告."""
+    body = [b for b in art.get("body") or [] if isinstance(b, dict)]
+    scrip = next((b for b in body if b.get("type") == "scripture" and b.get("verses")), None)
+    prayer = next((b for b in body if b.get("type") == "prayer" and isinstance(b.get("text"), str)), None)
+    if not prayer:
+        return None
+    out = {"prayer": prayer["text"].strip()}
+    if scrip:
+        out["ref"] = str(scrip.get("ref", ""))
+        out["verses"] = [{"n": v.get("n"), "text": str(v.get("text", ""))} for v in scrip["verses"] if isinstance(v, dict)]
+    return out
+
+
 def plain_text(art):
     parts = [art.get("title", ""), art.get("dek", "")]
     for b in art.get("body") or []:
@@ -76,7 +90,7 @@ def skip(path, why):
 
 def main():
     cfg = load_config()
-    days, epigraphs, search = {}, {}, {}
+    days, epigraphs, verses, search = {}, {}, {}, {}
     for day, col, path in iter_articles():
         if col not in cfg["columns"]:
             continue
@@ -84,6 +98,13 @@ def main():
             art = load_json(path)
             if not isinstance(art, dict):
                 raise ValueError("頂層不是 JSON 物件")
+            if cfg["columns"][col]["group"] == "verse":  # not an article: the masthead verse and the front page's prayer
+                epi, v = epigraph(art), verse(art)
+                if epi:
+                    epigraphs[day] = epi
+                if v:
+                    verses[day] = v
+                continue
             n = cjk_count(art)
             entry = {
                 "column": col,
@@ -101,17 +122,11 @@ def main():
             for k in ("takeaway", "quiz"):  # perio: the app's review cards (front: quiz, back: takeaway)
                 if isinstance(art.get(k), str) and art[k].strip():
                     entry[k] = art[k].strip()
-            if col == "devotion":
-                epi = epigraph(art)
-            else:
-                epi = None
             search.setdefault(day[:7], []).append({"d": day, "c": col, "t": art.get("title", ""), "x": plain_text(art)})
         except Exception as e:  # noqa: BLE001
             skip(path, "%s: %s" % (type(e).__name__, e))
             continue
         days.setdefault(day, []).append(entry)
-        if epi:
-            epigraphs[day] = epi
     issues = []
     for day in sorted(days, reverse=True):
         try:
@@ -122,6 +137,8 @@ def main():
         issue = {"date": day, "no": issue_number(cfg, d), "weekday": WEEKDAY_ZH[d.weekday()], "articles": days[day]}
         if day in epigraphs:
             issue["epigraph"] = epigraphs[day]
+        if day in verses:
+            issue["verse"] = verses[day]
         issues.append(issue)
     out = {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "issues": issues,
            "push": push_devices()}

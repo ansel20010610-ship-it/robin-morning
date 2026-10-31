@@ -155,7 +155,7 @@ def late_notice(date):
 
 
 def complete(cfg, issue):
-    want = len(expected_columns(cfg, dt.date.fromisoformat(issue["date"])))
+    want = len([c for c in expected_columns(cfg, dt.date.fromisoformat(issue["date"])) if cfg["columns"][c]["group"] != "verse"])
     return sum(1 for a in issue["articles"] if cfg["columns"].get(a["column"], {}).get("group") != "watch") >= want
 
 
