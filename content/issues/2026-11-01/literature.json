@@ -1,11 +1,11 @@
 {
   "column": "literature",
   "date": "2026-11-01",
-  "title": "那一夜，她先寫的是「我的人完成了」",
-  "dek": "《科學怪人》造人的那一夜只寫了一段。牛津的草稿上，瑪麗・雪萊原本寫「我看著我的人完成了」；印出來時，那個人從句子裡不見了。",
-  "brief": "《科學怪人》造人那一夜的第一句，瑪麗・雪萊在草稿上寫的是「我看著我的人完成了」，1818 年印出來變成「我看見了自己辛勞的成果」。同一份草稿裡，那個造物站在床邊，原本「喃喃說了幾個字」；「字」被劃掉，珀西・雪萊在頁邊改成「含糊不清的聲音」。",
+  "title": "草稿上，維克多管它叫「我的人」",
+  "dek": "《科學怪人》造物睜眼那一段，牛津的草稿上寫著「我看著我的人完成了」。1818 年印出來，句子裡沒有那個人了。",
+  "brief": "《科學怪人》造物睜眼那一段，瑪麗・雪萊的草稿上寫著「我看著我的人完成了」，1818 年印本成了「我看見了自己辛勞的成果」。同一份草稿裡，那個造物站在床邊「喃喃說了幾個字」；「字」被劃掉，珀西・雪萊在頁邊改成「含糊不清的聲音」。",
   "topic_key": "literature:shelley-frankenstein-1818-i-4",
-  "updated_at": "2026-11-01T01:57:00+08:00",
+  "updated_at": "2026-11-01T02:10:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -14,7 +14,7 @@
     "src": "https://upload.wikimedia.org/wikipedia/commons/a/a5/FrankensteinDraft.jpg",
     "width": 500,
     "height": 753,
-    "alt": "一頁墨水手寫稿。頁首寫著 Chapter 7th，正文二十多行，行間有幾處劃線刪去的字和補寫的字，左頁邊另有三處補字。",
+    "alt": "一頁墨水手寫稿。頁首寫著 Chapter 7th，正文三十行左右，行間有幾處劃線刪去的字和補寫的字，左頁邊另有三處補字。",
     "caption": "瑪麗・雪萊《科學怪人》草稿，第 7 章第一頁（MS. Abinger c. 56, fol. 21r，草稿頁碼 75）。第二行 my man completed 上方，是珀西・雪萊寫了又劃掉的 the frame on whic；下半頁劃掉的 handsome 與 Handsome 上方改成 beautiful、Beautiful，左頁邊補了 yellow 與 of a lustrous black &。",
     "credit": "瑪麗・雪萊手稿；牛津大學博德利圖書館藏，影像經 Wikimedia Commons",
     "license": "Public domain",
@@ -23,71 +23,337 @@
     "made": "1816–1817"
   },
   "body": [
-    { "type": "p", "text": "牛津大學博德利圖書館有一頁草稿，頁首是瑪麗・雪萊（Mary Shelley）的字：Chapter 7th。底下第一行寫著 It was on a dreary night of November，「那是十一月一個陰沉的夜晚」。第二行接著寫：that I beheld my man completed，我看著我的人完成了。" },
-    { "type": "p", "text": "「我的人」上方的行間，珀西・雪萊（Percy Bysshe Shelley）插進幾個字：the frame on whic。最後那個 which 少了 h，沒寫完，整段就被劃掉了。瑪麗那一行原樣留著。" },
-    { "type": "p", "text": "1818 年 1 月 1 日，這本小說在倫敦出版，三卷，匿名，印了 500 部。翻到第一卷第 97 頁，第 4 章開頭那一段是這樣的：" },
-    { "type": "quote", "original": "It was on a dreary night of November, that I beheld the accomplishment of my toils. With an anxiety that almost amounted to agony, I collected the instruments of life around me, that I might infuse a spark of being into the lifeless thing that lay at my feet. It was already one in the morning; the rain pattered dismally against the panes, and my candle was nearly burnt out, when, by the glimmer of the half-extinguished light, I saw the dull yellow eye of the creature open; it breathed hard, and a convulsive motion agitated its limbs.", "text": "那是十一月一個陰沉的夜晚，我看見了自己辛勞的成果。我焦慮得近乎痛苦，把生命的器具收攏到身邊，好把一點存在的火花注入躺在我腳邊那個沒有生命的東西。已經凌晨一點了；雨陰鬱地打在窗玻璃上，我的蠟燭快燒完了，就在這時，藉著將熄的微光，我看見那個造物暗黃色的眼睛睜開了；它喘著粗氣，一陣痙攣牽動了它的四肢。", "cite": "瑪麗・雪萊《科學怪人》，1818 年初版第一卷第 4 章，第 97–98 頁" },
-    { "type": "p", "text": "「我的人」沒有了，換上來的是「我辛勞的成果」。誰改的、在哪一步改的，已經說不準。草稿之後，瑪麗還抄過一份謄清稿交去排印，再經過校樣和再校樣。整理這批筆記本的學者羅賓森（Charles E. Robinson）說，謄清稿只剩兩本，約占 1818 年全書文字的 12%，都屬於第三卷；校樣一張也沒留下。" },
-    { "type": "figure", "id": "f1", "kind": "document", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Frankenstein%2C_or_the_Modern_Prometheus_%28First_Edition%2C_1818%29_Vol_1.djvu/page113-1280px-Frankenstein%2C_or_the_Modern_Prometheus_%28First_Edition%2C_1818%29_Vol_1.djvu.jpg", "width": 1280, "height": 2312, "alt": "一頁印刷書頁。頁眉右上印 THE MODERN PROMETHEUS 與頁碼 97，中間是 CHAPTER IV，下面是十來行英文正文，第一個字 It 的 I 是放大的首字。", "caption": "1818 年初版第一卷第 97 頁，第 4 章開頭。", "credit": "Lackington, Hughes, Harding, Mavor, & Jones 出版；紐約公共圖書館藏本掃描，經 Wikimedia Commons", "license": "Public domain", "license_url": "", "source_url": "https://commons.wikimedia.org/wiki/File:Frankenstein,_or_the_Modern_Prometheus_(First_Edition,_1818)_Vol_1.djvu?page=113", "made": "1818" },
-    { "type": "h", "text": "她說故事從這一句開始" },
-    { "type": "p", "text": "這句話出名，是因為瑪麗自己替它作了證。1831 年 10 月 31 日，《科學怪人》出了一卷本的修訂版，附一篇她新寫的序，署的日期是同年 10 月 15 日。序裡回到 1816 年夏天：他們在瑞士，跟拜倫做鄰居，那年夏天又濕又冷，常常一連幾天下雨出不了門。手邊有幾本從德文譯成法文的鬼故事，拜倫提議：「我們每個人各寫一個鬼故事。」那時他們一共四個人。" },
-    { "type": "p", "text": "她想了好幾天，什麼也沒想出來，每天早上都有人問她：想到故事了沒？某一夜，拜倫和珀西長談，從生命的本質談到伽伐尼電流，談到屍體也許可以復活。她躺下以後睡不著，閉著眼睛「看見」一個臉色蒼白的學生，跪在他拼起來的東西旁邊，那東西在一部強大機器的運轉下，有了半死不活的動靜。她寫道，人想去模仿「世界造物主」那驚人的機制，效果必定可怕到極點。夢裡的學生嚇得逃開，回去睡覺；一睜眼，那東西站在床邊，拉開床幔，用一雙黃色、水汪汪、若有所思的眼睛看著他。" },
-    { "type": "quote", "original": "On the morrow I announced that I had thought of a story. I began that day with the words, It was on a dreary night of November, making only a transcript of the grim terrors of my waking dream.", "text": "第二天，我宣布我想到一個故事了。我當天就從這幾個字寫起：「那是十一月一個陰沉的夜晚」，只是把那場醒著做的夢裡的恐怖照抄下來。", "cite": "瑪麗・雪萊，1831 年修訂版〈序〉" },
-    { "type": "p", "text": "她說，起初只想寫幾頁的短篇，是珀西催她寫長。夢做在 6 月，她給故事挑的，卻是 11 月的夜晚。" },
-    { "type": "p", "text": "可是在草稿上，這句話排在第 7 章，前面已經寫了維克多在日內瓦的少年時代、到因戈爾施塔特上大學；同一段到了 1818 年的印本是第 4 章，1831 年的修訂版又成了第 5 章。羅賓森認為，這正好說明在這兩本筆記本之前，還有過一份較短、已經失傳的「故事」：那句話也許就是它的第一句，也許那個夏天前面又陸續補了幾章。他還注意到，草稿裡造人這一章特別乾淨，瑪麗起草時幾乎沒有刪改，頁面上那些行間和頁邊的修改，是珀西後來才動的手。" },
-    { "type": "p", "text": "羅賓森另外對過瑪麗在巴斯的日記：1816 年 11 月 2 日到 20 日，她一再記下「寫」。他判斷這段時間，她很可能正在筆記本裡寫第一卷第 4、5 章到第 12 章。第 7 章落在這個範圍裡；如果他算得對，「十一月一個陰沉的夜晚」這幾個字，是在 1816 年 11 月抄進筆記本的。" },
-    { "type": "h", "text": "第一句裡沒有他" },
-    { "type": "p", "text": "回到印本那一段。第一句裡，根本沒有那個造物，只有「我」，和「我」辛勞換來的「成果」。它到第二句才出場，身分是「躺在我腳邊那個沒有生命的東西」；第三句叫它「那個造物」，眼睛睜開、開始喘氣，維克多用的代名詞是「它」。要到下一段，他描述起自己挑選過的四肢和五官，才改口說「他」。" },
-    { "type": "p", "text": "這一點上，我站印本這一邊。草稿的「我的人」親切，也洩了底：一個人肯說「我的人」，就是已經認了它是個人。印出來的句子，只看得見維克多將近兩年的辛苦，這正是他那一夜眼裡唯一的東西。緊接著他說自己焦慮得近乎痛苦；再下一段，同一件事就從「成果」變成了「災難」（catastrophe）。" },
-    { "type": "p", "text": "動詞 beheld 也值得停一下。這是比 saw 更莊重、帶點古意的「看見」，這一章裡維克多用了兩次：一次看見自己辛勞的成果，一次是半夜從噩夢驚醒，在黃色的月光下，看見「那個可憐的怪物」站在床前。序裡那場夢的最後一幕，瑪麗用的也是這個字：behold，那可怕的東西站在床邊。" },
-    { "type": "table", "title": "草稿與 1818 年印本，造人那幾頁", "head": ["草稿", "1818 年印本", "怎麼改的"], "rows": [
-      ["I beheld my man completed", "I beheld the accomplishment of my toils", "珀西在行間試寫 the frame on whic，又劃掉；印本的說法是後來才出現的"],
-      ["his features as handsome. Handsome; Great God!", "his features as beautiful. Beautiful!—Great God!", "兩個 handsome 都由珀西改成 beautiful"],
-      ["His dun skin", "His yellow skin", "dun 劃掉，頁邊補 yellow"],
-      ["his hair was flowing", "his hair was of a lustrous black, and flowing", "珀西在頁邊補上 of a lustrous black"],
-      ["these dreams vanished", "the beauty of the dream vanished", "草稿之後才改"],
-      ["the aspect of the creature I had created", "the aspect of the being I had created", "珀西把 creature 改成 being"],
-      ["he muttered some words", "he muttered some inarticulate sounds", "words 劃掉，珀西在頁邊寫 inarticulate sounds"],
-      ["one hand was stretched out to detain me", "one hand was stretched out, seemingly to detain me", "草稿之後才加 seemingly"]
-    ], "caption": "草稿依 Shelley-Godwin Archive 對 MS. Abinger c. 56, fol. 21r–22r 的轉寫，誰的筆跡也依該轉寫的標記；印本依 1818 年初版第一卷第 97–101 頁。草稿之後的謄清稿這一段沒有留下，校樣也全部不存，標「草稿之後」的幾處，說不出是誰改的。" },
-    { "type": "h", "text": "珀西改的是字" },
-    { "type": "p", "text": "1831 年那篇序裡，瑪麗特地交代了丈夫的分量：沒有他的鼓勵，這本書不會是後來的樣子；可是她說，自己「確實沒有從他那裡得到任何一個情節的提議，連一種情感的脈絡也幾乎沒有」。1818 年初版那篇序，她說就記憶所及，完全是珀西寫的。" },
-    { "type": "p", "text": "依我看，草稿證明她說的是實話，只是她講的是情節，不是字。羅賓森估計，珀西在這本小說裡寫下或負責的字超過 4000 個，也承認要算出準確數字是不可能的。造人這兩頁上，他把瑪麗寫了兩次的 handsome 改成 beautiful，替頭髮補上「光亮的黑色」，把「我造出來的那個造物」改成「我造出來的那個存在」。羅賓森也提到，珀西後來替這本小說寫書評，大多稱它為 Being，刻意不叫它 monster。" },
-    { "type": "p", "text": "handsome 是誇一個男人長得好看；beautiful 大一號，一幅畫、一片風景、一件作品都用得上。換了這個字，「我挑了他的五官，要他好看」就成了「我挑了他的五官，要他美」，維克多從挑長相的人變成了挑作品的人。隔了幾頁，他自己承認：它還沒完成時他就盯著看過，那時已經醜了。後面那聲「美！──老天！」重複同一個字，是瑪麗原本就這樣寫的。下一段，印本又多了「夢的美」消失了；草稿那裡只寫「這些夢消失了」。" },
-    { "type": "p", "text": "改得最重的一處，在維克多睡下以後。他逃回臥室，和衣倒在床上，夢見伊莉莎白；他吻下去，她的嘴唇泛出死人的顏色，懷裡抱著的成了他死去的母親，裹屍布的皺褶裡爬著墓蟲。他驚醒，在黃色的月光裡，看見那個東西掀起床幔，兩眼盯著他。瑪麗的草稿寫：「他張開嘴，喃喃說了幾個字。」" },
-    { "type": "p", "text": "「字」（words）被劃掉了。左邊頁邊是珀西的筆跡：inarticulate sounds，含糊不清的聲音。這一句後面，瑪麗原本就接著寫：「他也許說了話，但我沒聽見。」" },
-    { "type": "p", "text": "這一處，我認為珀西改得對。草稿裡它已經說了「幾個字」，維克多下一句卻說「他也許說了話」，前後打架；改成「聲音」，維克多才真的分不清那是不是話。代價是，這一章寫到它發出的第一個聲音，從此不算語言。" },
-    { "type": "figure", "id": "f2", "kind": "illustration", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Frankenstein%2C_or_the_Modern_Prometheus_%28Revised_Edition%2C_1831%29.djvu/page6-1280px-Frankenstein%2C_or_the_Modern_Prometheus_%28Revised_Edition%2C_1831%29.djvu.jpg", "width": 1280, "height": 2088, "alt": "書頁上的黑白版畫。一個長髮、肌肉分明的男子幾乎赤裸，半躺在地上，身邊有骷髏和一本攤開的書；右後方一個披斗篷的年輕人拉開門要逃，回頭瞪著他；背景是一扇哥德式花窗。版畫下方印著 FRANKENSTEIN 和兩行斜體引文。", "caption": "1831 年修訂版的卷首版畫。圖下引的正是造人那一段：「藉著將熄的微光，我看見那個造物暗黃色的眼睛睜開了；它喘著粗氣，一陣痙攣牽動了它的四肢……我衝出了房間。」", "credit": "霍爾斯特（Theodor von Holst）繪，謝瓦利耶（W. Chevalier）刻；H. Colburn and R. Bentley 出版；Internet Archive 掃描，經 Wikimedia Commons", "license": "Public domain", "license_url": "", "source_url": "https://commons.wikimedia.org/wiki/File:Frankenstein,_or_the_Modern_Prometheus_(Revised_Edition,_1831).djvu?page=6", "made": "1831" },
-    { "type": "h", "text": "夢、鬼故事和床幔" },
-    { "type": "p", "text": "床前這一幕，跟序裡那場夢的最後一幕幾乎一模一樣：有人睡下，醒來，那東西站在床邊拉開床幔，一雙黃眼睛看著他。" },
-    { "type": "p", "tag": "推論", "text": "不過序是在小說出版 13 年後寫的。兩個場景對得這麼準，她的記憶有沒有被自己的小說修過，誰也查不了。我還注意到，她說那年夏天讀的鬼故事裡，有兩個畫面跟這一夜很像：一個負心的情人以為抱住了新娘，懷裡卻是被他拋棄的女子蒼白的鬼魂；一個家族祖先的鬼魂半夜走到熟睡少年的床前，彎身吻他們的額頭，少年從此像折斷的花一樣枯萎。抱住愛人卻抱住死人、有東西站在床前，維克多一夜之間兩樣都遇上了。" },
-    { "type": "p", "text": "1818 年第一卷的書名頁沒有作者名字，只印了三行彌爾頓《失樂園》，是亞當吃了禁果之後的獨白：" },
-    { "type": "quote", "original": "Did I request thee, Maker, from my clay\nTo mould me man? Did I solicit thee\nFrom darkness to promote me?——", "text": "造我的主啊，是我求你從泥土裡把我塑成人的嗎？是我懇求你把我從黑暗中提拔出來的嗎？", "cite": "彌爾頓《失樂園》第 10 卷第 743–745 行，1818 年初版書名頁題詞" },
-    { "type": "p", "tag": "推論", "text": "草稿裡，維克多管它叫「我的人」；書名頁上，被造的那一方問的，正是誰要把他塑成人。印本把維克多嘴裡那個 man 拿掉了，它算不算人，就交給書名頁上的亞當去問。" },
-    { "type": "p", "text": "印本另外多出一個字，在床前那一句的結尾。草稿寫：它伸出一隻手，要留住我。1818 年印出來是：它伸出一隻手，似乎是要留住我。維克多從那隻手底下逃開，衝下樓梯，在院子裡來回走了一整夜。" },
-    { "type": "facts", "title": "作品與版本", "items": [
-      ["作者", "瑪麗・雪萊（Mary Wollstonecraft Shelley，1797–1851）"],
-      ["作品", "《科學怪人》（Frankenstein; or, The Modern Prometheus）"],
-      ["首次出版", "1818 年 1 月 1 日，倫敦 Lackington, Hughes, Harding, Mavor, & Jones，三卷，匿名，印 500 部"],
-      ["本文依據的印本", "1818 年初版第一卷第 4 章，第 97–101 頁；書名頁題詞（紐約公共圖書館藏本掃描，Wikimedia Commons）"],
-      ["修訂版", "1831 年 10 月 31 日，H. Colburn and R. Bentley，一卷本；同一段在第 5 章，卷首版畫引文標第 43 頁；〈序〉依 Project Gutenberg #42324（據 1831 年版影印本轉錄）"],
-      ["手稿", "牛津大學博德利圖書館 MS. Abinger c. 56, fol. 21r–22r（草稿第 7 章，草稿頁碼 75–77），依 Shelley-Godwin Archive 轉寫"],
-      ["中譯", "引文皆為本報所譯"]
-    ] }
+    {
+      "type": "p",
+      "text": "牛津大學博德利圖書館收著一頁草稿，頁首是瑪麗・雪萊（Mary Shelley）寫的 Chapter 7th。第一行是「那是十一月一個陰沉的夜晚」（It was on a dreary night of November），第二行接著是「我看著我的人完成了」（that I beheld my man completed）。"
+    },
+    {
+      "type": "p",
+      "text": "「我的人」上方的行間，珀西・雪萊（Percy Bysshe Shelley）寫了 the frame on whic，最後一個字沒寫完，整段又劃掉了。瑪麗那一行沒有動。"
+    },
+    {
+      "type": "p",
+      "text": "1818 年 1 月 1 日，這本小說在倫敦匿名出版，三卷，印了 500 部。草稿上那一段，印在第一卷第 4 章開頭，第 97 頁。"
+    },
+    {
+      "type": "quote",
+      "original": "It was on a dreary night of November, that I beheld the accomplishment of my toils. With an anxiety that almost amounted to agony, I collected the instruments of life around me, that I might infuse a spark of being into the lifeless thing that lay at my feet. It was already one in the morning; the rain pattered dismally against the panes, and my candle was nearly burnt out, when, by the glimmer of the half-extinguished light, I saw the dull yellow eye of the creature open; it breathed hard, and a convulsive motion agitated its limbs.",
+      "text": "那是十一月一個陰沉的夜晚，我看見了自己辛勞的成果。我焦慮得近乎痛苦，把生命的器具收攏到身邊，好把一點存在的火花注入躺在我腳邊那個沒有生命的東西。已經凌晨一點了；雨陰鬱地打在窗玻璃上，我的蠟燭快燒完了，就在這時，藉著將熄的微光，我看見那個造物暗黃色的眼睛睜開了；它喘著粗氣，一陣痙攣牽動了它的四肢。",
+      "cite": "瑪麗・雪萊《科學怪人》，1818 年初版第一卷第 4 章，第 97–98 頁"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Frankenstein%2C_or_the_Modern_Prometheus_%28First_Edition%2C_1818%29_Vol_1.djvu/page113-1280px-Frankenstein%2C_or_the_Modern_Prometheus_%28First_Edition%2C_1818%29_Vol_1.djvu.jpg",
+      "width": 1280,
+      "height": 2312,
+      "alt": "一頁印刷書頁。頁眉右上印 THE MODERN PROMETHEUS 與頁碼 97，中間是 CHAPTER IV，下面是十來行英文正文，第一個字 It 的 I 是放大的首字。",
+      "caption": "1818 年初版第一卷第 97 頁，第 4 章開頭。",
+      "credit": "Lackington, Hughes, Harding, Mavor, & Jones 出版；紐約公共圖書館藏本掃描，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Frankenstein,_or_the_Modern_Prometheus_(First_Edition,_1818)_Vol_1.djvu?page=113",
+      "made": "1818"
+    },
+    {
+      "type": "p",
+      "text": "印本裡，「我的人」不見了，換成「我辛勞的成果」。草稿之後，這一段的謄清稿和校樣都沒有留下來，是誰、在哪一步改的，沒有人知道。"
+    },
+    {
+      "type": "p",
+      "text": "印本的第一句裡沒有那個造物，只有「我」和我的辛勞。它到第二句才出場，是「躺在我腳邊那個沒有生命的東西」；第三句成了「那個造物」，眼睛睜開，喘著氣，代名詞用的是「它」（it）。到了下一段，維克多講起它的四肢、講他替它挑過的五官，代名詞才換成「他」（his）。"
+    },
+    {
+      "type": "p",
+      "text": "這一處我站印本。「我的人」叫得太早，維克多一開口就這樣叫，等於先認了它是個人。印本讓它先當一件成果；再下一段，同一件事就成了「災難」（catastrophe）。"
+    },
+    {
+      "type": "h",
+      "text": "書名頁上的亞當"
+    },
+    {
+      "type": "p",
+      "text": "1818 年第一卷的書名頁沒有作者名字，題詞是彌爾頓《失樂園》的三行，出自亞當吃了禁果之後的獨白。"
+    },
+    {
+      "type": "quote",
+      "original": "Did I request thee, Maker, from my clay\nTo mould me man? Did I solicit thee\nFrom darkness to promote me?——",
+      "text": "造我的主啊，是我求你從泥土裡把我塑成人的嗎？是我懇求你把我從黑暗中提拔出來的嗎？",
+      "cite": "彌爾頓《失樂園》第 10 卷第 743–745 行，1818 年初版書名頁題詞"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "草稿裡，維克多管它叫「我的人」（my man），印出來的那一句沒有這個字。書名頁上，問誰要把他從泥土裡塑成人（To mould me man）的，是被造的那一方。"
+    },
+    {
+      "type": "h",
+      "text": "1816 年那個濕夏天"
+    },
+    {
+      "type": "p",
+      "text": "這幾個字從哪裡來，瑪麗自己講過。1831 年《科學怪人》出了一卷本的修訂版，她新寫了一篇序，回頭講 1816 年的夏天。他們在瑞士，和拜倫做鄰居；那年夏天濕答答的，很不討喜，常常一連幾天下雨，困在屋裡。手邊有幾本從德文譯成法文的鬼故事，拜倫提議每人各寫一個鬼故事，當時一共四個人。"
+    },
+    {
+      "type": "p",
+      "text": "她一連好幾天想不出來，每天早上都有人問她想到故事了沒。有一夜，拜倫和珀西長談生命的本質，談到伽伐尼電流，談到屍體也許能復活。那天夜裡她閉著眼睛，「看見」一個臉色蒼白的學生跪在他拼起來的東西旁邊，那東西在一部強大機器的運轉下，顯出了生命的跡象。"
+    },
+    {
+      "type": "quote",
+      "original": "On the morrow I announced that I had thought of a story. I began that day with the words, It was on a dreary night of November, making only a transcript of the grim terrors of my waking dream.",
+      "text": "第二天，我宣布我想到一個故事了。我當天就從這幾個字寫起：「那是十一月一個陰沉的夜晚」，只是把那場醒著做的夢裡的恐怖照抄下來。",
+      "cite": "瑪麗・雪萊，1831 年修訂版〈序〉"
+    },
+    {
+      "type": "p",
+      "text": "她說起初只打算寫幾頁的短篇，是珀西催她寫長的。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Frankenstein%2C_or_the_Modern_Prometheus_%28Revised_Edition%2C_1831%29.djvu/page6-1280px-Frankenstein%2C_or_the_Modern_Prometheus_%28Revised_Edition%2C_1831%29.djvu.jpg",
+      "width": 1280,
+      "height": 2088,
+      "alt": "書頁上的黑白版畫。一個長髮、肌肉分明的男子幾乎赤裸，半躺在地上，身邊有骷髏和一本攤開的書；右後方一個披斗篷的年輕人扶著門，回頭瞪著他；背景是一扇哥德式花窗。版畫下方印著 FRANKENSTEIN、五行斜體引文和 Page 43。",
+      "caption": "1831 年修訂版的卷首版畫。圖下引的正是造人那一段：「藉著將熄的微光，我看見那個造物暗黃色的眼睛睜開了；它喘著粗氣，一陣痙攣牽動了它的四肢……我衝出了房間。」",
+      "credit": "霍爾斯特（Theodor von Holst）繪，謝瓦利耶（W. Chevalier）刻；H. Colburn and R. Bentley 出版；Internet Archive 掃描，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Frankenstein,_or_the_Modern_Prometheus_(Revised_Edition,_1831).djvu?page=6",
+      "made": "1831"
+    },
+    {
+      "type": "h",
+      "text": "handsome 改成 beautiful"
+    },
+    {
+      "type": "p",
+      "text": "同一篇序裡，瑪麗說她沒有從丈夫那裡得到過任何一個情節的提議，連一條情感的脈絡也幾乎沒有。至於 1818 年初版那篇序，她說就她記得，完全是珀西寫的。"
+    },
+    {
+      "type": "p",
+      "text": "整理這批筆記本的學者羅賓森（Charles E. Robinson）估計，珀西在這本小說裡寫下或負責的字超過 4000 個。造人這幾頁上，維克多說他替它挑的五官是好看的，瑪麗寫的是 handsome，前後兩次，都被珀西改成 beautiful；頭髮那裡，他在頁邊補上「光亮的黑色」（of a lustrous black）；「我造出來的那個造物」（creature），被他改成「我造出來的那個存在」（being）。羅賓森也提到，珀西後來替這本小說寫書評，多半稱它 Being，刻意避開 monster。"
+    },
+    {
+      "type": "p",
+      "text": "印本那聲「美！──老天！」（Beautiful!—Great God!）把同一個字喊了兩次；草稿上瑪麗就是這樣寫的，只是當時喊的是 Handsome。幾頁之後，維克多承認，它還沒完成時他就盯著看過，那時就已經醜了。"
+    },
+    {
+      "type": "table",
+      "title": "草稿與 1818 年印本，造人那幾頁",
+      "head": [
+        "草稿",
+        "1818 年印本",
+        "怎麼改的"
+      ],
+      "rows": [
+        [
+          "I beheld my man completed",
+          "I beheld the accomplishment of my toils",
+          "珀西在行間試寫 the frame on whic，又劃掉；印本的說法在草稿之後才出現"
+        ],
+        [
+          "his features as handsome. Handsome; Great God!",
+          "his features as beautiful. Beautiful!—Great God!",
+          "兩個 handsome 都由珀西改成 beautiful"
+        ],
+        [
+          "His dun skin",
+          "His yellow skin",
+          "dun 劃掉，頁邊補 yellow（轉寫未標筆跡）"
+        ],
+        [
+          "his hair was flowing",
+          "his hair was of a lustrous black, and flowing",
+          "珀西在頁邊補上 of a lustrous black"
+        ],
+        [
+          "these dreams vanished",
+          "the beauty of the dream vanished",
+          "草稿之後才改"
+        ],
+        [
+          "the aspect of the creature I had created",
+          "the aspect of the being I had created",
+          "珀西把 creature 改成 being"
+        ],
+        [
+          "he muttered some words",
+          "he muttered some inarticulate sounds",
+          "words 劃掉，珀西在頁邊寫 inarticulate sounds"
+        ],
+        [
+          "one hand was stretched out to detain me",
+          "one hand was stretched out, seemingly to detain me",
+          "草稿之後才加 seemingly"
+        ]
+      ],
+      "caption": "草稿依 Shelley-Godwin Archive 對 MS. Abinger c. 56, fol. 21r–22r 的轉寫；寫「珀西」的，是該轉寫標為珀西筆跡的改動，同頁也有瑪麗自己的行間修改。印本依 1818 年初版第一卷第 97–101 頁。草稿之後的謄清稿這一段沒有留下，校樣也全部不存，標「草稿之後」的幾處，說不出是誰改的。"
+    },
+    {
+      "type": "h",
+      "text": "黃色的月光"
+    },
+    {
+      "type": "p",
+      "text": "維克多受不了眼前那個東西，衝出房間。那一夜他夢見伊莉莎白。他吻她，她的嘴唇變成死人的顏色，懷裡抱著的成了他死去母親的屍體，裹屍布裡有墓蟲。醒來時，昏黃的月光從百葉窗擠進來，他看見（beheld，和第一句同一個動詞）「那個可憐的怪物」（the miserable monster）。它掀起床幔，眼睛盯著他。"
+    },
+    {
+      "type": "p",
+      "text": "序裡那場夢，結尾也停在床邊。學生嚇得逃開，回去睡覺；一睜眼，那東西站在床邊，拉開床幔，用一雙「黃色、水汪汪、若有所思的眼睛」（yellow, watery, but speculative eyes）看著他。瑪麗寫這一幕，用的也是 behold。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "那年夏天讀的鬼故事裡，有兩個畫面跟維克多這一夜很像。一個負心的情人以為抱住了新娘，懷裡卻是被他拋棄的女子蒼白的鬼魂；一個家族祖先的鬼魂夜裡走到熟睡的少年床前，吻他們的額頭，少年從此凋零。抱住愛人卻抱住死人，醒來床前站著一個東西，維克多一夜之間兩樣都碰上了。"
+    },
+    {
+      "type": "p",
+      "text": "草稿接下去寫，「他喃喃說了幾個字」（he muttered some words）。「字」被劃掉了，左邊頁邊是珀西的筆跡：inarticulate sounds，含糊不清的聲音。草稿的下一句是「他也許說了話，但我沒聽見」（He might have spoken but I did not hear）。"
+    },
+    {
+      "type": "p",
+      "text": "依我看，珀西這裡改得對。先聽見了幾個字，又說它也許說了話、自己沒聽見，兩句擺在一起說不通；換成聲音，下一句才站得住。"
+    },
+    {
+      "type": "p",
+      "text": "印本在這一段的末尾也多了一個字。草稿寫它伸出一隻手，要留住我（to detain me）；1818 年印出來，它伸出一隻手，似乎是要留住我（seemingly to detain me），但我逃開了，衝下樓梯。"
+    },
+    {
+      "type": "facts",
+      "title": "作品與版本",
+      "items": [
+        [
+          "作者",
+          "瑪麗・雪萊（Mary Wollstonecraft Shelley，1797–1851）"
+        ],
+        [
+          "作品",
+          "《科學怪人》（Frankenstein; or, The Modern Prometheus）"
+        ],
+        [
+          "首次出版",
+          "1818 年 1 月 1 日，倫敦 Lackington, Hughes, Harding, Mavor, & Jones，三卷，匿名，印 500 部"
+        ],
+        [
+          "本文依據的印本",
+          "1818 年初版第一卷第 4 章，第 97–101 頁；書名頁題詞（紐約公共圖書館藏本掃描，Wikimedia Commons）"
+        ],
+        [
+          "修訂版",
+          "1831 年 10 月 31 日，H. Colburn and R. Bentley，一卷本；同一段在第 5 章，卷首版畫引文標第 43 頁；〈序〉依 Project Gutenberg #42324（據 1831 年版影印本轉錄）"
+        ],
+        [
+          "手稿",
+          "牛津大學博德利圖書館 MS. Abinger c. 56, fol. 21r–22r（草稿第 7 章，草稿頁碼 75–77），依 Shelley-Godwin Archive 轉寫"
+        ],
+        [
+          "中譯",
+          "引文皆為本報所譯"
+        ]
+      ]
+    }
   ],
   "sources": [
-    { "title": "MS. Abinger c. 56, fol. 21r（Frankenstein draft, Chapter 7th）TEI 轉寫", "publisher": "Shelley-Godwin Archive（MITH, University of Maryland／Bodleian Libraries）", "date": "", "url": "https://shelleygodwinarchive.org/tei/ox/ox-ms_abinger_c56/ox-ms_abinger_c56-0045.xml", "note": "草稿頁碼 75、圖書館葉碼 21；my man completed 未刪；珀西（hand=#pbs）行間加 the frame on whic 後劃掉；emotion（單數）；handsome／Handsome 劃掉，珀西改 beautiful／Beautiful，左頁邊另有 handsome→beautiful.；dun 劃掉、左頁邊 yellow（未標珀西）；珀西左頁邊補 of a lustrous black &；同頁仍有 the dun white sockets" },
-    { "title": "MS. Abinger c. 56, fol. 21v TEI 轉寫", "publisher": "Shelley-Godwin Archive", "date": "", "url": "https://shelleygodwinarchive.org/tei/ox/ox-ms_abinger_c56/ox-ms_abinger_c56-0046.xml", "note": "but now that I had succeeded these dreams vanished；the aspect of the creature I had created，creature 劃掉，珀西改 being；Elizabeth 之夢" },
-    { "title": "MS. Abinger c. 56, fol. 22r TEI 轉寫", "publisher": "Shelley-Godwin Archive", "date": "", "url": "https://shelleygodwinarchive.org/tei/ox/ox-ms_abinger_c56/ox-ms_abinger_c56-0047.xml", "note": "he muttered some words，words 劃掉，珀西左頁邊 inarticulate sounds（另在行間加 in 又劃掉）；He might have spoken but I did not hear；one hand was stretched out to detain me；I beheld the wretch" },
-    { "title": "Bodleian MS. Abinger c.56", "publisher": "Shelley-Godwin Archive", "date": "", "url": "https://shelleygodwinarchive.org/contents/ms_abinger_c56/", "note": "原屬筆記本 A，62 葉，草稿第一卷" },
-    { "title": "Frankenstein, or the Modern Prometheus（章節與筆記本對照）", "publisher": "Shelley-Godwin Archive", "date": "", "url": "https://shelleygodwinarchive.org/contents/frankenstein_chapters/", "note": "謄清稿筆記本 C1、C2 列在第三卷之下" },
-    { "title": "Introduction to The Frankenstein Notebooks", "publisher": "Charles E. Robinson（Garland, 1996）；Shelley-Godwin Archive 網頁版", "date": "1996", "url": "https://shelleygodwinarchive.org/contents/frankenstein/the-frankenstein-notebooks-introduction/", "note": "草稿約 1816 年 8 月前後至 1817 年 4 月 17 日；謄清稿 1817 年 4 月 18 日至 5 月 13 日，僅存 C1、C2，約占 1818 年文字 12%；校樣、再校樣不存；Ch. 7a 最可能已在 ur-text、相對乾淨，行間頁邊改動為珀西後來所為；珀西負責的字超過 4000 個；命名一節" },
-    { "title": "Frankenstein Chronology", "publisher": "Charles E. Robinson；Shelley-Godwin Archive 網頁版", "date": "1996", "url": "https://shelleygodwinarchive.org/contents/frankenstein/frankenstein-chronology/", "note": "16 June 1816 條括注（這幾個字出現在 Draft Vol. I Ch. 7a，支持 ur-text）；2–20 November 1816 條（巴斯日記的 write）；1 January 1818 條（匿名、三卷、500 部）；[?February 1818] 條（珀西書評稱 Being）；15 October、31 October 1831 條" },
-    { "title": "Frankenstein, or the Modern Prometheus (First Edition, 1818) Vol 1", "publisher": "Wikimedia Commons（紐約公共圖書館藏本掃描）", "date": "1818", "url": "https://commons.wikimedia.org/wiki/File:Frankenstein,_or_the_Modern_Prometheus_(First_Edition,_1818)_Vol_1.djvu", "note": "掃描第 7 頁＝書名頁與《失樂園》題詞；第 113–117 頁＝書頁 97–101，本文所引 1818 年文字皆逐字對過掃描" },
-    { "title": "Frankenstein, or the Modern Prometheus (Revised Edition, 1831)", "publisher": "Wikimedia Commons（Internet Archive and HathiTrust）", "date": "1831", "url": "https://commons.wikimedia.org/wiki/File:Frankenstein,_or_the_Modern_Prometheus_(Revised_Edition,_1831).djvu", "note": "掃描第 6 頁卷首版畫，署 T. Holst, del.、W. Chevalier, sculp.，引文標 Page 43" },
-    { "title": "Frankenstein; or, The Modern Prometheus（1831 年版）", "publisher": "Project Gutenberg #42324", "date": "2013-03-13", "url": "https://www.gutenberg.org/ebooks/42324", "note": "據 1831 年版影印本轉錄；〈序〉（署 London, October 15, 1831）與第 5 章" },
-    { "title": "Frankenstein, by Mary Shelley：Epigraph", "publisher": "Standard Ebooks", "date": "", "url": "https://standardebooks.org/ebooks/mary-shelley/frankenstein/text/epigraph", "note": "題詞出處標 Paradise Lost, X, 743–45" },
-    { "title": "Paradise Lost", "publisher": "Project Gutenberg #26", "date": "", "url": "https://www.gutenberg.org/ebooks/26", "note": "第 10 卷：題詞三行在亞當的獨白中（前文 Adam saw ... Thus to disburden sought with sad complaint）" },
-    { "title": "File:FrankensteinDraft.jpg", "publisher": "Wikimedia Commons", "date": "", "url": "https://commons.wikimedia.org/wiki/File:FrankensteinDraft.jpg", "note": "頭圖；Public domain；來源標博德利圖書館網頁；頁面內容與 fol. 21r 轉寫逐行相符" }
+    {
+      "title": "MS. Abinger c. 56, fol. 21r（Frankenstein draft, Chapter 7th）TEI 轉寫",
+      "publisher": "Shelley-Godwin Archive（MITH, University of Maryland／Bodleian Libraries）",
+      "date": "",
+      "url": "https://shelleygodwinarchive.org/tei/ox/ox-ms_abinger_c56/ox-ms_abinger_c56-0045.xml",
+      "note": "草稿頁碼 75、圖書館葉碼 21；my man completed 未刪；珀西（hand=#pbs）行間加 the frame on whic 後劃掉；emotion（單數）；handsome／Handsome 劃掉，珀西改 beautiful／Beautiful，左頁邊另有 handsome→beautiful.；dun 劃掉、左頁邊 yellow（未標珀西）；珀西左頁邊補 of a lustrous black &；同頁仍有 the dun white sockets"
+    },
+    {
+      "title": "MS. Abinger c. 56, fol. 21v TEI 轉寫",
+      "publisher": "Shelley-Godwin Archive",
+      "date": "",
+      "url": "https://shelleygodwinarchive.org/tei/ox/ox-ms_abinger_c56/ox-ms_abinger_c56-0046.xml",
+      "note": "but now that I had succeeded these dreams vanished；the aspect of the creature I had created，creature 劃掉，珀西改 being；Elizabeth 之夢"
+    },
+    {
+      "title": "MS. Abinger c. 56, fol. 22r TEI 轉寫",
+      "publisher": "Shelley-Godwin Archive",
+      "date": "",
+      "url": "https://shelleygodwinarchive.org/tei/ox/ox-ms_abinger_c56/ox-ms_abinger_c56-0047.xml",
+      "note": "he muttered some words，words 劃掉，珀西左頁邊 inarticulate sounds（另在行間加 in 又劃掉）；He might have spoken but I did not hear；one hand was stretched out to detain me；I beheld the wretch"
+    },
+    {
+      "title": "Bodleian MS. Abinger c.56",
+      "publisher": "Shelley-Godwin Archive",
+      "date": "",
+      "url": "https://shelleygodwinarchive.org/contents/ms_abinger_c56/",
+      "note": "原屬筆記本 A，62 葉，草稿第一卷"
+    },
+    {
+      "title": "Frankenstein, or the Modern Prometheus（章節與筆記本對照）",
+      "publisher": "Shelley-Godwin Archive",
+      "date": "",
+      "url": "https://shelleygodwinarchive.org/contents/frankenstein_chapters/",
+      "note": "謄清稿筆記本 C1、C2 列在第三卷之下"
+    },
+    {
+      "title": "Introduction to The Frankenstein Notebooks",
+      "publisher": "Charles E. Robinson（Garland, 1996）；Shelley-Godwin Archive 網頁版",
+      "date": "1996",
+      "url": "https://shelleygodwinarchive.org/contents/frankenstein/the-frankenstein-notebooks-introduction/",
+      "note": "草稿約 1816 年 8 月前後至 1817 年 4 月 17 日；謄清稿 1817 年 4 月 18 日至 5 月 13 日，僅存 C1、C2；校樣、再校樣不存；1816 年夏天的 ur-text 已失傳；Ch. 7a 最可能已在 ur-text，草稿相對乾淨，瑪麗起草時的行間修改與刪除很少，「the additional interlinear and marginal alterations」為珀西後來經手（同頁仍有瑪麗的行間修改）；他也提醒部分證據可能只代表中間另有粗稿（intervening rough drafts）；「[?17] June」為其推算；珀西負責的字超過 4000 個；命名一節"
+    },
+    {
+      "title": "Frankenstein Chronology",
+      "publisher": "Charles E. Robinson；Shelley-Godwin Archive 網頁版",
+      "date": "1996",
+      "url": "https://shelleygodwinarchive.org/contents/frankenstein/frankenstein-chronology/",
+      "note": "16 June 1816 條（「On the morrow [?17 June]」為 Robinson 推算，1831 年序本身沒有月份；括注：這幾個字出現在 Draft Vol. I Ch. 7a 而非開頭，argues for ur-text）；2–20 November 1816 條（巴斯日記的 write）；1 January 1818 條（匿名、三卷、500 部）；[?February 1818] 條（珀西書評稱 Being）；15 October、31 October 1831 條"
+    },
+    {
+      "title": "Frankenstein, or the Modern Prometheus (First Edition, 1818) Vol 1",
+      "publisher": "Wikimedia Commons（紐約公共圖書館藏本掃描）",
+      "date": "1818",
+      "url": "https://commons.wikimedia.org/wiki/File:Frankenstein,_or_the_Modern_Prometheus_(First_Edition,_1818)_Vol_1.djvu",
+      "note": "掃描第 7 頁＝書名頁與《失樂園》題詞；第 113–117 頁＝書頁 97–101，本文所引 1818 年文字皆逐字對過掃描"
+    },
+    {
+      "title": "Frankenstein, or the Modern Prometheus (Revised Edition, 1831)",
+      "publisher": "Wikimedia Commons（Internet Archive and HathiTrust）",
+      "date": "1831",
+      "url": "https://commons.wikimedia.org/wiki/File:Frankenstein,_or_the_Modern_Prometheus_(Revised_Edition,_1831).djvu",
+      "note": "掃描第 6 頁卷首版畫，署 T. Holst, del.、W. Chevalier, sculp.，引文標 Page 43"
+    },
+    {
+      "title": "Frankenstein; or, The Modern Prometheus（1831 年版）",
+      "publisher": "Project Gutenberg #42324",
+      "date": "2013-03-13",
+      "url": "https://www.gutenberg.org/ebooks/42324",
+      "note": "據 1831 年版影印本轉錄；〈序〉（署 London, October 15, 1831）與第 5 章"
+    },
+    {
+      "title": "Frankenstein, by Mary Shelley：Epigraph",
+      "publisher": "Standard Ebooks",
+      "date": "",
+      "url": "https://standardebooks.org/ebooks/mary-shelley/frankenstein/text/epigraph",
+      "note": "題詞出處標 Paradise Lost, X, 743–45"
+    },
+    {
+      "title": "Paradise Lost",
+      "publisher": "Project Gutenberg #26",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/26",
+      "note": "第 10 卷：題詞三行在亞當的獨白中（前文 Adam saw ... Thus to disburden sought with sad complaint）"
+    },
+    {
+      "title": "File:Frontispiece to Frankenstein 1831.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "1831",
+      "url": "https://commons.wikimedia.org/wiki/File:Frontispiece_to_Frankenstein_1831.jpg",
+      "note": "f2 署名依此頁：Author 欄 Theodor von Holst；1831 年 Colburn and Bentley 修訂版卷首鋼版畫；Public domain。f2 影像本身取自 1831 年版掃描第 6 頁（署 T. Holst, del.、W. Chevalier, sculp.）"
+    },
+    {
+      "title": "File:FrankensteinDraft.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:FrankensteinDraft.jpg",
+      "note": "頭圖；Public domain；來源標博德利圖書館網頁；頁面內容與 fol. 21r 轉寫逐行相符"
+    }
   ]
 }
