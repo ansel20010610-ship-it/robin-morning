@@ -1,0 +1,365 @@
+{
+  "column": "football",
+  "date": "2026-11-01",
+  "title": "馬競連七勝搶下榜首，巴薩少賽一場",
+  "dek": "榜首差一分，巴薩手上多一場。對手阿拉維斯上次在巴薩的場子贏球，是十年前的事。",
+  "brief": "馬競週六 2 比 0 贏 Levante，西甲連七勝，28 分升到第一，巴薩 27 分、少賽一場。巴薩台灣時間 11 月 1 日（週日）04:00 在主場踢阿拉維斯，弗利克說 Brian Fariñas「該上場了」。11 月 9 日（週一）04:00 巴薩去馬競主場。",
+  "topic_key": "football:2026-11-01",
+  "updated_at": "2026-11-01T02:49:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Madrid_-_Estadio_Wanda_Metropolitano_27.jpg/1280px-Madrid_-_Estadio_Wanda_Metropolitano_27.jpg",
+    "width": 1280,
+    "height": 833,
+    "alt": "馬競主場大都會球場的外觀，弧形屋頂在藍天下；前方立著白底紅邊的西班牙文大字「CORAJE Y CORAZÓN」，幾個人站在字母旁拍照。",
+    "caption": "馬競主場大都會球場（Metropolitano），前方是西班牙文立體字「Coraje y Corazón」，Zarateman 攝於 2018 年 11 月 11 日。巴薩 11 月 9 日要去這裡。資料照片，非當日比賽畫面。",
+    "credit": "Zarateman／Wikimedia Commons",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Madrid_-_Estadio_Wanda_Metropolitano_27.jpg",
+    "made": "2018"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "馬競週六晚間（台灣時間 21:00 開踢）在 Levante 的球場 2 比 0 贏球。格里馬爾多（Alejandro Grimaldo）第 36 分鐘左腳射進左上角，下半場 Giuliano Simeone 補上第二球。Goal 說，這是馬競西甲連續第七場贏球。"
+    },
+    {
+      "type": "p",
+      "text": "積分榜跟著換了位置：馬競 11 場 28 分升到第一，巴薩 27 分，皇馬 24 分，這兩隊都還少踢一場。巴薩賽前領先馬競兩分，現在落後一分，手上多一場比賽。"
+    },
+    {
+      "type": "p",
+      "text": "這場也是西蒙尼（Diego Simeone）的西甲第 344 勝，追平阿拉貢內斯（Luis Aragonés）。EFE 算了一下，西蒙尼用了 565 場，全在馬競；阿拉貢內斯用了 757 場，帶過八支球隊。"
+    },
+    {
+      "type": "table",
+      "title": "西甲積分榜前段",
+      "head": [
+        "名次",
+        "球隊",
+        "場次",
+        "積分",
+        "淨勝球"
+      ],
+      "rows": [
+        [
+          "1",
+          "馬德里競技",
+          "11",
+          "28",
+          "+14"
+        ],
+        [
+          "2",
+          "巴塞隆納",
+          "10",
+          "27",
+          "+29"
+        ],
+        [
+          "3",
+          "皇家馬德里",
+          "10",
+          "24",
+          "+15"
+        ],
+        [
+          "7",
+          "阿拉維斯",
+          "10",
+          "12",
+          "+3"
+        ]
+      ],
+      "caption": "ESPN 資料介面，台灣時間 11 月 1 日 02:40 讀取，巴薩對阿拉維斯開賽前。"
+    },
+    {
+      "type": "h",
+      "text": "阿拉維斯十年沒在這裡贏過"
+    },
+    {
+      "type": "p",
+      "text": "巴薩 11 月 1 日（週日）04:00 在 Spotify Camp Nou 對阿拉維斯（Alavés）。阿拉維斯排第 7，12 分，教練 Quique Sánchez Flores 帶隊去過巴塞隆納七次，一場沒贏，最近四次連球都沒進。巴薩官網的賽前預告還翻出一個數字：阿拉維斯上次在巴薩的場子贏球，是十年前佩萊格里諾（Mauricio Pellegrino）當教練的時候。"
+    },
+    {
+      "type": "p",
+      "text": "不過去年 5 月，阿拉維斯在自己的 Mendizorrotza 1 比 0 贏了巴薩，Ibrahim Diabaté 進的球。那場巴薩已經拿到冠軍，在那之前對阿拉維斯 16 場沒輸過。我不把它當預兆，冠軍到手之後的比賽，輸贏的分量不一樣。"
+    },
+    {
+      "type": "p",
+      "text": "弗利克點了 23 個人，奧爾莫（Dani Olmo）、孔德（Jules Koundé）、Eric García、克里斯滕森（Andreas Christensen）、Espart 和 Roony Bardghji 不在名單裡。Brian Fariñas 和二隊的 Ebrima Tunkara 都在。賽前弗利克說 Fariñas 可以是邊後衛的選項，然後講了這句："
+    },
+    {
+      "type": "quote",
+      "text": "他該上場了，他應得的。",
+      "original": "The time has come for him to play. He deserves it.",
+      "cite": "弗利克賽前對媒體，巴薩官網賽前預告"
+    },
+    {
+      "type": "p",
+      "text": "巴薩贏了就是 30 分，領先馬競兩分。"
+    },
+    {
+      "type": "h",
+      "text": "曼聯想要 Fermín，巴薩看上曼聯的中衛"
+    },
+    {
+      "type": "p",
+      "text": "ESPN 轉會欄 10 月 31 日把各家媒體的說法排在一起。《每日郵報》說，曼聯想找新的 10 號，Fermín López（23 歲，本季 5 球 4 助攻）是人選之一，巴薩要價約 8,000 萬歐元，PSG 和切爾西也有興趣。《阿斯報》說，曼聯的 Lisandro Martínez（28 歲）合約季末到期，會免費離開，巴薩和馬競都想要他。《世界體育報》說，巴薩一月會重新追國際米蘭的 Alessandro Bastoni，去年夏天球探盯過他，準備出價 7,000 萬歐元，條件談不攏。",
+      "tag": "傳聞"
+    },
+    {
+      "type": "p",
+      "text": "那篇出版幾小時後，Martínez 在對切爾西那場，因為在禁區犯規送出點球，拿到第二張黃牌被罰下，曼聯少一人踢最後 28 分鐘。巴薩能用的中衛只有兩個，一月要補人，我會先補這個位置。我不拿一場紅牌替 Martínez 定價，但他的合約季末到期，這條線值得追。"
+    },
+    {
+      "type": "h",
+      "text": "歐洲其他地方"
+    },
+    {
+      "type": "news",
+      "title": "歐洲足壇速覽",
+      "items": [
+        {
+          "headline": "Hakimi 第一次帽子戲法，五個球都有他",
+          "summary": "10 月 30 日，PSG 在 Le Havre 5 比 1 贏球，Hakimi 進三球、助攻兩次。賽前他這季一球未進，帽子戲法是他生涯第一次，第 486 場才等到。PSG 教練 Luis Enrique 拿到隊史第 127 勝，超過 Laurent Blanc。",
+          "source": "ESPN（PA）",
+          "url": "https://www.espn.com/soccer/story/_/id/50330654",
+          "when": "10 月 30 日（週五）"
+        },
+        {
+          "headline": "曼聯九場不勝，Martínez 被罰下",
+          "summary": "切爾西 10 月 31 日 2 比 0 贏曼聯。Morgan Rogers 下半場開始四分鐘後先進球，Cole Palmer 罰進點球。曼聯各項賽事九場不勝，週二（台灣時間 11 月 4 日 04:00）歐冠對羅馬，和巴薩對阿斯頓維拉同一個鐘點。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50335264",
+          "when": "10 月 31 日（週六）"
+        },
+        {
+          "headline": "布萊頓贏曼城，曼城英超連兩敗",
+          "summary": "Yasin Ayari 第 11 分鐘進球，布萊頓 1 比 0 贏曼城。曼城開季七連勝，現在連輸兩場，布萊頓離榜首兩分。四天前聯賽盃，布萊頓才在 PK 大戰輸給曼城。",
+          "source": "ESPN（PA）",
+          "url": "https://www.espn.com/soccer/story/_/id/50322452",
+          "when": "10 月 31 日（週六）"
+        },
+        {
+          "headline": "維拉要告 Carragher，Carragher 道歉",
+          "summary": "Carragher 在 podcast 說阿斯頓維拉「永遠不會是曼聯」，還叫維拉球迷閉嘴。維拉主席 Nassef Sawiris 週五晚上發聲明，說球會將對他提告；Carragher 週六在 X 道歉，說用語「clumsy & wrong」。維拉就是巴薩 11 月 4 日 04:00 歐冠的對手。",
+          "source": "ESPN（PA）",
+          "url": "https://www.espn.com/soccer/story/_/id/50335489",
+          "when": "10 月 31 日（週六）"
+        },
+        {
+          "headline": "金球獎只差 28 分，亞馬爾第三",
+          "summary": "法國《隊報》（L'Equipe）公布完整票數：凱恩 1,055 分，姆巴佩 1,027 分，是 70 年來第四小的差距。亞馬爾 881 分第三，庫巴西 101 分第 12。凱恩週六在安聯球場對多特蒙德開球前，帶著金球獎繞場。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50330001",
+          "when": "10 月 30 日（週五）"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "接下來"
+    },
+    {
+      "type": "table",
+      "title": "接下來幾場（台灣時間）",
+      "head": [
+        "時間",
+        "賽事",
+        "對戰"
+      ],
+      "rows": [
+        [
+          "11 月 1 日（週日）04:00",
+          "西甲",
+          "巴塞隆納 對 阿拉維斯"
+        ],
+        [
+          "11 月 1 日（週日）23:15",
+          "西甲",
+          "Racing Santander 對 皇家馬德里"
+        ],
+        [
+          "11 月 2 日（週一）00:30",
+          "英超",
+          "利物浦 對 阿森納"
+        ],
+        [
+          "11 月 4 日（週三）04:00",
+          "歐冠",
+          "巴塞隆納 對 阿斯頓維拉"
+        ],
+        [
+          "11 月 9 日（週一）04:00",
+          "西甲",
+          "馬德里競技 對 巴塞隆納"
+        ]
+      ],
+      "caption": "依 ESPN 賽程資料（UTC）換算。"
+    },
+    {
+      "type": "p",
+      "text": "巴薩 11 月 9 日（週一）04:00 去馬競的主場。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Levante 0-2 Atlético Madrid（比賽紀錄，event 401882820）",
+      "publisher": "ESPN 資料介面",
+      "date": "2026-10-31",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882820",
+      "note": "格里馬爾多第 36 分鐘、Giuliano Simeone 下半場進球；ESPN 紀錄第二球為第 62 分鐘（EFE 寫 61 分鐘，正文不寫分鐘）"
+    },
+    {
+      "title": "0-2. Un efectivo Atlético de Madrid supera al Levante y asalta el liderato de LaLiga",
+      "publisher": "EFE／Infobae",
+      "date": "2026-10-31",
+      "url": "https://www.infobae.com/america/agencias/2026/10/31/0-2-un-efectivo-atletico-de-madrid-supera-al-levante-y-asalta-el-liderato-de-laliga/",
+      "note": "比分、進球者、Etta Eyong 的機會；與 ESPN 紀錄互相核對"
+    },
+    {
+      "title": "El Atlético no da respiro al FC Barcelona ni al Real Madrid con su séptima victoria consecutiva",
+      "publisher": "Goal",
+      "date": "2026-10-31",
+      "url": "https://www.goal.com/es/noticias/el-atletico-no-da-respiro-al-fc-barcelona-ni-al-real-madrid-con-su-septima-victoria-consecutiva/blt60c6601b407b1012",
+      "note": "連七勝、馬競 28 分 11 場、巴薩 27 分、皇馬 24 分、兩隊少賽一場"
+    },
+    {
+      "title": "Más historia de Simeone: iguala a Luis como el entrenador con más victorias en LaLiga",
+      "publisher": "EFE／Infobae",
+      "date": "2026-10-31",
+      "url": "https://www.infobae.com/espana/agencias/2026/10/31/mas-historia-de-simeone-iguala-a-luis-como-el-entrenador-con-mas-victorias-en-laliga/",
+      "note": "344 勝、565 場對 757 場、阿拉貢內斯帶過八支球隊"
+    },
+    {
+      "title": "LaLiga standings",
+      "publisher": "ESPN 資料介面",
+      "date": "2026-11-01",
+      "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+      "note": "積分榜；台灣時間 11 月 1 日 02:40 讀取，與 Goal 的 28／27／24 分互相核對"
+    },
+    {
+      "title": "Soccer scoreboard（西甲、歐冠）",
+      "publisher": "ESPN 資料介面",
+      "date": "2026-11-01",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard",
+      "note": "賽程開球時間（UTC，換算為台灣時間）：巴薩對阿拉維斯 11 月 1 日 04:00、對阿斯頓維拉 11 月 4 日 04:00、馬競對巴薩 11 月 9 日 04:00、Racing 對皇馬、利物浦對阿森納；11 月 1 日凌晨讀取"
+    },
+    {
+      "title": "PREVIEW | Barça v Alavés",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-31",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4601684/preview-fc-barcelona-v-alaves",
+      "note": "弗利克談 Fariñas、阿拉維斯戰績與十年未勝、Quique Sánchez Flores 紀錄、去年 5 月 1 比 0；頁面只顯示相對時間，日期依俱樂部新聞列表；西班牙時間 21:00 開球"
+    },
+    {
+      "title": "The squad for Barça v Alavés",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-31",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4601620/the-squad-for-barca-v-alaves",
+      "note": "23 人名單與不能用的六人；頁面只顯示相對時間，日期依俱樂部新聞列表"
+    },
+    {
+      "title": "Five absentees: Hamza Abdelkarim adorns Barcelona's squad against Alaves",
+      "publisher": "Goal",
+      "date": "2026-10-31",
+      "url": "https://www.goal.com/en/news/5-absences-hamza-abdelkarim-adorns-barcelona-s-squad-against-alaves/blt4e829cef48b66856",
+      "note": "缺陣名單互相核對"
+    },
+    {
+      "title": "Last session before Alavés",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-30",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4601420/last-session-before-alaves",
+      "note": "Tunkara 隨隊練習；頁面只顯示相對時間，日期依俱樂部新聞列表"
+    },
+    {
+      "title": "Transfer rumors, news: Man United to replace Fernandes with Fermin?",
+      "publisher": "ESPN",
+      "date": "2026-10-31",
+      "url": "https://www.espn.com/soccer/story/_/id/50334181",
+      "note": "Daily Mail（Fermín）、Mundo Deportivo（Bastoni）、AS（Lisandro Martínez）的說法；傳聞；10 月 31 日 10:40Z 版本"
+    },
+    {
+      "title": "Man United implode at Chelsea; they are now in Premier League relegation battle",
+      "publisher": "ESPN",
+      "date": "2026-10-31",
+      "url": "https://www.espn.com/soccer/story/_/id/50335264",
+      "note": "切爾西 2 比 0、Martínez 的點球與第二黃、九場不勝、對羅馬"
+    },
+    {
+      "title": "Chelsea 2-0 Man Utd: Lisandro Martinez sees red as Morgan Rogers and Cole Palmer pile pressure on Michael Carrick",
+      "publisher": "Sky Sports",
+      "date": "2026-10-31",
+      "url": "https://www.skysports.com/football/chelsea-vs-manchester-united/report/559527",
+      "note": "與 ESPN 核對比分與紅牌；Rogers 進球分鐘兩家說法不同，正文只寫「下半場開始四分鐘後」依 ESPN"
+    },
+    {
+      "title": "Achraf Hakimi scores 1st career hat trick as Luis Enrique makes PSG history",
+      "publisher": "ESPN（PA）",
+      "date": "2026-10-30",
+      "url": "https://www.espn.com/soccer/story/_/id/50330654",
+      "note": "PSG 5 比 1、Hakimi 三球兩助攻、Luis Enrique 第 127 勝"
+    },
+    {
+      "title": "Luis Enrique hails 'incredible' PSG squad as Achraf Hakimi scores hat-trick and assists twice in 5-1 Le Havre rout",
+      "publisher": "Goal",
+      "date": "2026-10-30",
+      "url": "https://www.goal.com/en-au/news/luis-enrique-hails-psg-squad-achraf-hakimi-scores-hat-trick-le-havre-rout/blt8f5c40c086a57d9d",
+      "note": "與 ESPN 核對比分與帽子戲法"
+    },
+    {
+      "title": "In-form Brighton inflict back-to-back defeats on Man City",
+      "publisher": "ESPN（PA）",
+      "date": "2026-10-31",
+      "url": "https://www.espn.com/soccer/story/_/id/50322452",
+      "note": "Ayari 第 11 分鐘、曼城連兩敗、離榜首兩分、聯賽盃 PK"
+    },
+    {
+      "title": "Man City 0-1 Brighton: Yasin Ayari and Bart Verbruggen the heroes in historic win for Seagulls at Etihad",
+      "publisher": "Sky Sports",
+      "date": "2026-10-31",
+      "url": "https://skysports.com/football/manchester-city-vs-brighton-and-hove-albion/6434047315977789232",
+      "note": "與 ESPN 核對比分與進球時間"
+    },
+    {
+      "title": "Aston Villa to take legal action against Jamie Carragher over podcast comments",
+      "publisher": "ESPN（PA）",
+      "date": "2026-10-31",
+      "url": "https://www.espn.com/soccer/story/_/id/50334364",
+      "note": "維拉主席 Sawiris 的聲明"
+    },
+    {
+      "title": "Jamie Carragher apologises for 'clumsy' Aston Villa comments after club threaten legal action",
+      "publisher": "ESPN（PA）",
+      "date": "2026-10-31",
+      "url": "https://www.espn.com/soccer/story/_/id/50335489",
+      "note": "Carragher 在 X 道歉"
+    },
+    {
+      "title": "2026 Ballon d'Or results: Kane beat Mbappé by one of smallest margins in history",
+      "publisher": "ESPN（AP）",
+      "date": "2026-10-30",
+      "url": "https://www.espn.com/soccer/story/_/id/50330001",
+      "note": "《隊報》完整票數"
+    },
+    {
+      "title": "Harry Kane parades Ballon d'Or in front of Bayern Munich fans before Borussia Dortmund clash",
+      "publisher": "ESPN",
+      "date": "2026-10-31",
+      "url": "https://www.espn.com/soccer/story/_/id/50337824",
+      "note": "凱恩賽前繞場"
+    },
+    {
+      "title": "File:Madrid - Estadio Wanda Metropolitano 27.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2018-11-11",
+      "url": "https://commons.wikimedia.org/wiki/File:Madrid_-_Estadio_Wanda_Metropolitano_27.jpg",
+      "note": "頭圖；作者 Zarateman，CC0"
+    }
+  ]
+}
