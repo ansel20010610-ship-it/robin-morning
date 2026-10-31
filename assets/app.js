@@ -124,7 +124,31 @@ function metaLine(date, a, read) {
   if (read.has(`${date}/${a.column}`)) bits.push('<span class="read-mark">已讀</span>');
   return `<div class="meta-s">${bits.join("・")}</div>`;
 }
+// ——— 循序閱讀 (設定 → 閱讀方式): each issue opens one article at a time, in the front page's order. An article counts
+// as read when its end is on screen and the reader has spent at least half its estimated reading time on it, so a
+// quick fling to the bottom does not unlock the next. Articles read before the mode was turned on count as read.
+const lockMode = () => store.get("lock.mode", false) === true;
+const lockNeed = (minutes) => Math.min(240, Math.max(30, Math.round((minutes || 2) * 30))); // seconds
+const lockClock = (s) => (s >= 60 ? `${Math.floor(s / 60)} 分${s % 60 ? ` ${s % 60} 秒` : ""}` : `${s} 秒`);
+// The first unread article before `column` in its issue, or null when `column` is open to read.
+function lockedBy(date, column) {
+  if (!lockMode()) return null;
+  const issue = issueBy(date);
+  if (!issue) return null;
+  const read = readSet();
+  for (const a of sortArticles(issue.articles, date)) {
+    if (a.column === column) return null;
+    if (!read.has(`${date}/${a.column}`)) return a;
+  }
+  return null;
+}
+function lockedCard(a, by) {
+  return `<div class="item noimg locked" aria-disabled="true"><div>${kicker(a.column)}<h3>${esc(a.title)}</h3><p class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></p></div></div>`;
+}
+
 function itemCard(date, a, read) {
+  const by = lockedBy(date, a.column);
+  if (by) return lockedCard(a, by);
   const th = thumb(a, "th");
   return `<a class="item${th ? "" : " noimg"}" href="#/a/${date}/${a.column}"><div>${kicker(a.column)}<h3>${esc(a.title)}</h3>${summary(a)}${metaLine(date, a, read)}</div>${th}</a>`;
 }
@@ -198,14 +222,15 @@ function viewFront(dateParam) {
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的第 ${issue.no} 期・<a href="#/">回到最新一期</a></div>` : ""}
     ${lateNote(issue.date)}
     ${prayerBox(issue)}
-    ${digestBar(arts, !dateParam, digestDone().has(issue.date))}
+    ${lockMode() ? lockBar(arts, issue.date) : digestBar(arts, !dateParam, digestDone().has(issue.date))}
     ${mains.length ? `<div class="sec-head"><h2>正刊</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
     ${lead ? `<a class="lead" href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
     ${mains.slice(1).map((a) => itemCard(issue.date, a, read)).join("")}
     ${supps.length ? `<div class="sec-head"><h2>副刊</h2><span class="de">Feuilleton</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
     ${watch.length ? `<div class="sec-head"><h2>觀測站</h2><span class="de">Beobachtung</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
-    ${arts.some((a) => a.brief) ? `<div class="finish${digestDone().has(issue.date) ? " done" : ""}">${finishInner(issue.date)}</div>` : ""}
+    ${!arts.some((a) => a.brief) ? "" : lockMode() && unreadIn(issue.date, arts) ? `<div class="finish lockfin">${ICON.lock}<b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">循序閱讀：一篇一篇讀完，今天才算數。</span></div>`
+      : `<div class="finish${digestDone().has(issue.date) ? " done" : ""}">${finishInner(issue.date)}</div>`}
     ${dateParam ? "" : cardsPrompt()}
     ${!dateParam && issue.weekday === "日" ? weekHtml() : ""}
     ${dateParam ? "" : `<section class="gigs" id="gigs" aria-label="近期演出">${gigsSection()}</section>`}
@@ -235,6 +260,14 @@ function prayerBox(issue) {
 const DIGEST_READ = ".lead h3, .lead p.brief, .item h3, .item p.brief";
 const digestDone = () => new Set(store.get("digest.done", []));
 let digestReader = null, finishSeen = null;
+const unreadIn = (date, arts) => { const read = readSet(); return arts.filter((a) => !read.has(`${date}/${a.column}`)).length; };
+// 循序閱讀's version of the digest bar: how many of the issue's articles have been read, not how many briefs seen.
+function lockBar(arts, date) {
+  if (!arts.length) return "";
+  const n = arts.length, got = n - unreadIn(date, arts);
+  const ring = `<span class="ring-wrap"><svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="track" cx="18" cy="18" r="15.5"/><circle class="bar" cx="18" cy="18" r="15.5" pathLength="100" style="stroke-dashoffset:${100 - Math.round((got / n) * 100)}"/></svg><span class="cnt">${got}/${n}</span></span>`;
+  return `<div class="digest lockbar${got === n ? " full" : ""}">${ring}<div><b>循序閱讀</b><span>${got === n ? "全部讀完了" : "讀完一篇，下一篇才解鎖"}</span></div></div>`;
+}
 function digestBar(arts, latest, done) {
   const n = arts.reduce((s, a) => s + (a.brief ? a.brief.length : 0), 0);
   if (!n) return "";
@@ -256,10 +289,10 @@ function wireDigest(issue) {
     if (!digestReader.length) { toast("這期還沒有摘要，等等再來"); return; }
     digestReader.toggle();
   };
-  const fin = main.querySelector(".finish");
+  const fin = main.querySelector(".finish:not(.lockfin)");
   // Reaching the end the first time today stamps the seal; coming back to a finished issue just shows it.
   const was = digestDone().has(issue.date);
-  const ring = digestRing(main);
+  const ring = lockMode() ? { stop() {}, complete() {} } : digestRing(main);
   let finished = false;
   function finish() {
     if (finished) return;
@@ -427,6 +460,13 @@ const evidenceOf = (a) => { const p = (a.body || []).find((b) => b?.type === "pa
 
 async function viewArticle(date, column, my) {
   if (!isPublished(date)) { main.innerHTML = `<div class="wrap"><p class="empty">這篇還沒出爐，別偷看。</p></div>`; return; }
+  const by = lockedBy(date, column);
+  if (by) {
+    main.innerHTML = `<div class="wrap"><div class="locked-page">${ICON.lock}<h1>這篇還鎖著</h1>
+      <p>循序閱讀：先讀完〈${esc(by.title)}〉，這篇才會解鎖。</p><a class="btn" href="#/a/${date}/${esc(by.column)}">去讀〈${esc(by.title)}〉</a>
+      <p class="small">想自由跳著讀，可以到<a href="#/settings">設定 → 閱讀方式</a>改回來。</p></div></div>`;
+    return;
+  }
   main.innerHTML = `<div class="wrap"><p class="loading">翻到這一頁……</p></div>`;
   let a;
   try { a = await article(date, column); } catch { if (my === routeSeq) main.innerHTML = `<div class="wrap"><p class="empty">這篇找不到，可能被風吹走了。<a href="#/">回到今日</a></p></div>`; return; }
@@ -457,6 +497,7 @@ async function viewArticle(date, column, my) {
       <div class="toc-slot"></div>
       <div class="body"></div>
       ${a.sources?.length ? `<section class="sources"><h2>來源與閱讀範圍</h2><ol>${a.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}${s.publisher ? `，${esc(s.publisher)}` : ""}${s.date ? `，${esc(s.date)}` : ""}${s.note ? ` <span>— ${inline(s.note)}</span>` : ""}</li>`).join("")}</ol>${(a.body || []).some((b) => b.type === "quote" && b.original) ? `<p class="small">外文引文未註明譯者的，都是本報自譯。</p>` : ""}</section>` : ""}
+      <div class="unlock" hidden></div>
       ${"share" in navigator ? `<div class="share"><button class="btn ghost" type="button" data-share>${ICON.share}分享這篇</button></div>` : ""}
       <div class="next"></div>
     </div></article>
@@ -468,12 +509,14 @@ async function viewArticle(date, column, my) {
   const firstP = body.firstElementChild;
   if (firstP && firstP.tagName === "P" && !firstP.querySelector(".tag")) firstP.classList.add("lead-p");
   buildToc(body, main.querySelector(".toc-slot"));
-  if (issue) {
+  const drawNext = () => {
+    if (!issue) return;
     const arts = sortArticles(issue.articles, date);
     const i = arts.findIndex((x) => x.column === column);
     const nxt = arts[i + 1] || arts.find((x) => x.column !== column);
     if (nxt) main.querySelector(".next").innerHTML = `<div class="lbl">接著讀</div>${itemCard(date, nxt, readSet())}`;
-  }
+  };
+  drawNext();
   main.querySelector("[data-save]").onclick = (e) => {
     const on = toggleSaved(key);
     e.currentTarget.setAttribute("aria-pressed", on);
@@ -523,9 +566,51 @@ async function viewArticle(date, column, my) {
     const covered = (document.querySelector(".nav")?.offsetHeight || 0) + (document.querySelector(".dock:not([hidden])")?.offsetHeight || 0);
     return body.getBoundingClientRect().bottom <= window.innerHeight - covered;
   };
+  // 循序閱讀: time spent on this article (page visible), kept across visits; the end counts once it is enough.
+  const lock = lockMode() && !readSet().has(key);
+  const need = lockNeed(minutes);
+  let dwell = Number(store.get("lock.t", {})[key]) || 0, tick = 0;
+  const saveDwell = () => {
+    if (!lock) return;
+    const m = store.get("lock.t", {});
+    m[key] = dwell;
+    const ks = Object.keys(m);
+    if (ks.length > 300) delete m[ks[0]];
+    store.set("lock.t", m);
+  };
+  const unlockBox = main.querySelector(".unlock");
+  const drawUnlock = () => {
+    if (!lock) return;
+    unlockBox.hidden = false;
+    unlockBox.innerHTML = readSet().has(key) ? `<b>✓ 讀完了</b>下一篇解鎖了。`
+      : dwell < need ? `${ICON.lock}<span>讀到文末、而且至少讀 ${lockClock(need)}，才會解鎖下一篇（還差 ${lockClock(need - dwell)}）。</span>`
+      : `${ICON.lock}<span>時間夠了，讀到文末就解鎖下一篇。</span>`;
+    unlockBox.classList.toggle("ok", readSet().has(key));
+  };
+  const finishRead = () => {
+    if (readSet().has(key)) return;
+    if (lock && dwell < need) return;
+    markRead(key);
+    if (!lock) return;
+    clearInterval(tick);
+    saveDwell();
+    drawUnlock();
+    drawNext();
+    toast("下一篇解鎖了");
+  };
+  if (lock) {
+    drawUnlock();
+    tick = setInterval(() => {
+      if (document.visibilityState !== "visible" || !body.isConnected) return;
+      dwell++;
+      if (dwell % 5 === 0) saveDwell();
+      drawUnlock();
+      if (reachedEnd()) finishRead();
+    }, 1000);
+  }
   const savePos = () => {
     if (!body.isConnected) return;
-    if (reachedEnd()) { markRead(key); store.del(posKey); return; }
+    if (reachedEnd()) { finishRead(); store.del(posKey); return; }
     const p = ratio();
     if (p > 0.05) { saveT = Date.now(); store.set(posKey, Math.round(p * 1000) / 1000); }
   };
@@ -553,6 +638,8 @@ async function viewArticle(date, column, my) {
   }
   cleanup = () => {
     clearTimeout(trail);
+    clearInterval(tick);
+    saveDwell();
     savePos(); // route() runs this before drawing the next view, so the article is still on the page
     window.removeEventListener("scroll", onScroll);
     document.removeEventListener("visibilitychange", onHide);
@@ -834,6 +921,8 @@ function viewSettings() {
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>設定</h1><span class="de">Einstellungen</span></header>
     <section class="set" id="push-set"><h2>出刊通知</h2><p class="small">讀取中……</p></section>
     <section class="set"><h2>字級</h2><div class="seg" data-g="fs">${FS.map((v, i) => `<button type="button" data-v="${v}" aria-pressed="${v === fs}">${["小", "標準", "大", "特大"][i]}</button>`).join("")}</div></section>
+    <section class="set"><h2>閱讀方式</h2><div class="seg" data-g="lock">${[["free", "自由閱讀"], ["seq", "循序閱讀"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${(v === "seq") === lockMode()}">${l}</button>`).join("")}</div>
+      <p class="small">循序閱讀：每一期照首頁的順序，一次只開一篇；讀到文末、而且讀夠這篇預估時間的一半，下一篇才解鎖。還沒解鎖的只顯示標題，摘要先藏起來，全部讀完才算讀完今天。之前讀過的照樣算數。</p></section>
     <section class="set"><h2>外觀</h2><div class="seg" data-g="theme">${[["auto", "跟隨系統"], ["light", "日間"], ["dark", "夜間"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${v === theme}">${l}</button>`).join("")}</div></section>
     ${canSpeak() ? `<section class="set"><h2>朗讀速度</h2><div class="seg" data-g="rate">${RATES.map((r) => `<button type="button" data-v="${r}" aria-pressed="${r === getRate()}">${r === 1 ? "標準" : `${r}×`}</button>`).join("")}</div>
       <p>文章右上角的喇叭按鈕會用裝置內建的中文語音朗讀全文，不需網路服務。</p></section>` : ""}
@@ -882,6 +971,11 @@ function viewSettings() {
     root.style.setProperty("--vy", `${r.top + r.height / 2}px`);
     root.classList.add("theme-vt");
     document.startViewTransition(swap).finished.catch(() => {}).finally(() => root.classList.remove("theme-vt"));
+  }));
+  main.querySelectorAll('[data-g="lock"] button').forEach((b) => (b.onclick = () => {
+    store.set("lock.mode", b.dataset.v === "seq");
+    toast(b.dataset.v === "seq" ? "循序閱讀：讀完一篇才解鎖下一篇" : "自由閱讀：想讀哪篇就讀哪篇");
+    redraw("lock", b.dataset.v);
   }));
   main.querySelectorAll('[data-g="rate"] button').forEach((b) => (b.onclick = () => { setRate(Number(b.dataset.v)); redraw("rate", b.dataset.v); }));
   // Redraw only while the settings page is still the one showing.
