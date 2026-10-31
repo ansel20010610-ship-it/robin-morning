@@ -1,0 +1,305 @@
+{
+  "column": "city",
+  "date": "reserve",
+  "reserve_written": "2026-10-31",
+  "title": "柏林 Hackesche Höfe：第一院只做文化用途",
+  "dek": "1906 年開張的 Hackesche Höfe，據 berlin.de 的介紹，第一院只做文化用途，接下來的院子做工商，住宅放在其餘的院子。",
+  "brief": "1906 年開張的柏林 Hackesche Höfe，據 berlin.de，第一院只做文化用途，接下來的院子做工商，其餘的院子只放出租住宅。德文維基說，建商 Berndt 先前的類似案子還是傳統排法：臨街租屋、住宅院、純工廠院。院子的規定另說：1853 年的條例對院子要求很低，房客協會的雜誌說，5.34 公尺見方就夠一輛消防泵車掉頭；1887 年的新條例才把下限提到 60 平方公尺。",
+  "topic_key": "city:berlin-hackesche-hoefe",
+  "updated_at": "2026-10-31T15:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Berlin%2C_Hackesche_H%C3%B6fe%2C_1._Hof%2C_Osten_2014-07.jpg/1280px-Berlin%2C_Hackesche_H%C3%B6fe%2C_1._Hof%2C_Osten_2014-07.jpg",
+    "width": 1280,
+    "height": 960,
+    "alt": "一面高聳的院子立面：米色磚牆上垂直排著藍色細線，窗與窗之間嵌著藍白相間的方框與菱形磚片，窗框是深綠色的磚，屋頂邊緣是一道帶小方格的飾帶。底層是紅磚，上面壓著一道綠色的鱗狀瓦帶；Chamäleon 的白色字母貼在這道瓦帶上方的窗上，更高的窗上有電影院的小招牌。",
+    "caption": "第一院的立面，2014 年 7 月攝。窗間嵌著藍白的磚，綠色瓦帶上方的窗貼著 Chamäleon（綜藝劇場）的字母。",
+    "credit": "HerrAdams／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Berlin,_Hackesche_H%C3%B6fe,_1._Hof,_Osten_2014-07.jpg",
+    "made": "2014"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1906 年 9 月 23 日，Hackescher Markt 對面的 Hackesche Höfe 開張。建商兼建築師 Kurt Berndt 在一塊約 9,200 平方公尺、兩條街都進得去的地上蓋了八個院子：約 16,000 平方公尺給商用，約 8,000 平方公尺給 80 戶兩到五房的住宅。"
+    },
+    {
+      "type": "p",
+      "text": "院子的用途有先後。berlin.de 的介紹說，第一院只做文化用途，接下來的院子做工商，其餘的院子只放出租住宅。德文維基說，Berndt 先前的一個類似案子還是傳統排法：臨街一棟租屋，接著住宅院，最後才是純粹的工廠院。德文維基也說，第一院做文化用途，在當時不尋常又新鮮，看得出 1900 年前後流行的生活改革運動（Lebensreform）的影響。"
+    },
+    {
+      "type": "p",
+      "text": "官網另外談到商用和住宅並排的動機：分散租金風險，租客有住戶、輕工業也有零售，收入不押在同一邊。官網也寫到，院子要跟柏林其他商用院子競爭租客，賣點除了位置，還有中央暖氣和自己發電。至於次序，來源沒有交代理由；我猜，住宅排到工商後面，是想讓要睡覺的人離宴會廳遠一點。"
+    },
+    {
+      "type": "p",
+      "text": "我覺得 Hackesche Höfe 最值得看的是這個次序，Endell 的立面還在其次。"
+    },
+    {
+      "type": "h",
+      "text": "一個接一個的後院"
+    },
+    {
+      "type": "p",
+      "text": "柏林有一種出租樓，臨街一棟，後面是一個接一個前後相連的窄後院，德文叫 Mietskaserne，字面意思是「出租兵營」。"
+    },
+    {
+      "type": "p",
+      "text": "工程師霍布雷希特（James Hobrecht）1862 年畫的擴建計畫，路網很稀疏，街廓相應很大，一塊建地往街廓裡面拉得很深。出了名的例子是 Wedding 區 Ackerstraße 的 Meyer’s Hof：1874 年蓋好，六個院子前後相接，最多時住過 2,100 人。"
+    },
+    {
+      "type": "p",
+      "text": "1853 年的建築警察條例幾乎只管防火，房客協會的雜誌寫，院子只要 5.34 公尺見方就合格，那是一輛消防泵車掉頭要用的面積。1868 年，霍布雷希特寫道："
+    },
+    {
+      "type": "quote",
+      "text": "院子要更多空間！柏林建築警察條例所要求尺寸的四倍，不算多，幾乎還不夠，如果我們希望後面的房間仍有足夠品質的陽光、光線和空氣。",
+      "original": "Mehr Raum für die Höfe! Das Vierfache der Dimensionen, welche die Berliner Baupolizeiordnung verlangt, ist nicht zu viel, ist kaum genug, wenn wir für unsere Hinterzimmer noch Sonne, Licht und Luft in genügender Qualität und Güte behalten wollen.",
+      "cite": "霍布雷希特，1868 年，轉引自柏林房客協會《MieterMagazin》2012 年 9 月號"
+    },
+    {
+      "type": "p",
+      "text": "市議會裡有影響力的房東把修訂拖到 1887 年。1887 年的新條例把院子下限提到 60 平方公尺、一邊至少 6 公尺。我算了一下，5.34 公尺見方只有 28.5 平方公尺左右，新標準大約是它的兩倍。"
+    },
+    {
+      "type": "p",
+      "text": "畫柏林後院小人物的 Heinrich Zille，因為一句常被引用的話，成了批評出租兵營的頭號證人。"
+    },
+    {
+      "type": "quote",
+      "text": "用一間住宅殺死一個人，和用斧頭殺人沒有兩樣。",
+      "original": "Man kann mit einer Wohnung einen Menschen genauso töten wie mit einer Axt.",
+      "cite": "Heinrich Zille，轉引自柏林房客協會《MieterMagazin》2012 年 9 月號"
+    },
+    {
+      "type": "table",
+      "title": "柏林對院子的規定",
+      "head": [
+        "年份",
+        "規定"
+      ],
+      "rows": [
+        [
+          "1853",
+          "條例幾乎只管防火；院子只要 5.34 × 5.34 公尺，是消防泵車掉頭的面積"
+        ],
+        [
+          "1887",
+          "院子至少 60 平方公尺、一邊至少 6 公尺；簷高上限 22 公尺；地仍可蓋滿三分之二"
+        ],
+        [
+          "1925",
+          "柏林新建築法規承襲 1919 年普魯士統一建築法：不再蓋後棟，地下室與頂樓不准當住宅"
+        ]
+      ],
+      "caption": "依柏林房客協會《MieterMagazin》2011 年 12 月號與 2012 年 9 月號整理。"
+    },
+    {
+      "type": "h",
+      "text": "Hackescher Markt 一側的街面"
+    },
+    {
+      "type": "p",
+      "text": "Hackesche Höfe 的地址是 Rosenthaler Straße 40–41，街面朝向 Hackescher Markt。古蹟資料庫說，這道折角的街面決定了廣場的形狀與空間。"
+    },
+    {
+      "type": "p",
+      "text": "1908 年的明信片上，這一面是另一副樣子。官網說那是當時流行的繁複灰泥裝飾；德文維基寫得更具體：新巴洛克的屋頂、埃及式的方尖碑、仿古的雕像。1961 年灰泥和山牆被拆掉，1994 到 1996 年這一面重新設計，納入了留下來的原件。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Mitte_Hackesche_H%C3%B6fe_1908.jpg/1280px-Mitte_Hackesche_H%C3%B6fe_1908.jpg",
+      "width": 1280,
+      "height": 769,
+      "alt": "彩色明信片：一棟灰白色的大樓佔住左半邊，立面布滿細部裝飾，頂上是綠色的高屋頂，屋脊與山牆旁豎著細長的尖塔；街面一樓是店舖。廣場上有電車、馬車和行人，右側是一棟黃褐色的樓房，樓下掛著店招。",
+      "caption": "1908 年寄出的明信片：Hackescher Markt 一側的臨街立面（Rosenthaler Straße 40–41），1961 年拆掉灰泥與山牆之前的樣子。明信片作者不詳，Commons 依 pd-old 標為公有領域。",
+      "credit": "作者不詳（明信片）／Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mitte_Hackesche_H%C3%B6fe_1908.jpg",
+      "made": "1908"
+    },
+    {
+      "type": "facts",
+      "title": "地點資料",
+      "items": [
+        [
+          "城市",
+          "柏林（Berlin），Mitte 區的 Spandauer Vorstadt"
+        ],
+        [
+          "地點",
+          "Hackesche Höfe（Hackeschen Höfe），Rosenthaler Straße 40–41／Sophienstraße 6"
+        ],
+        [
+          "年代",
+          "1906–1907 年建造，1906 年 9 月 23 日開張"
+        ],
+        [
+          "設計者",
+          "Kurt Berndt（設計與施工）；August Endell（第一院立面與宴會廳）"
+        ],
+        [
+          "改造",
+          "1951 年收歸國有；1977 年列為古蹟；1994–1996 年臨街立面重新設計；整體改建 1997 年結束（德文維基）"
+        ],
+        [
+          "來源所述用途",
+          "官網（2026 年 10 月 31 日查閱）列八個院子約 27,000 平方公尺、近五十家公司；berlin.de（2024 年 11 月更新）列有辦公、小店、餐飲、電影院與一座綜藝劇場，並寫住人的院子每晚關閉"
+        ]
+      ]
+    },
+    {
+      "type": "svg",
+      "title": "院子用途的先後",
+      "svg": "<svg viewBox=\"0 0 360 400\" xmlns=\"http://www.w3.org/2000/svg\">\n<text class=\"muted\" x=\"180\" y=\"20\" font-size=\"12\" text-anchor=\"middle\">Rosenthaler Straße 40–41 的街面（朝 Hackescher Markt）</text>\n<path class=\"muted\" d=\"M180 28 L180 44\" stroke-width=\"1.5\" fill=\"none\"/><polygon class=\"muted\" points=\"175,42 185,42 180,50\"/>\n<rect class=\"soft\" x=\"40\" y=\"52\" width=\"280\" height=\"58\" rx=\"4\" stroke-width=\"1\"/>\n<rect class=\"accent\" x=\"40\" y=\"52\" width=\"280\" height=\"58\" rx=\"4\" fill=\"none\" stroke-width=\"2\"/>\n<text class=\"ink\" x=\"180\" y=\"75\" font-size=\"14\" text-anchor=\"middle\">第一院：文化</text>\n<text class=\"muted\" x=\"180\" y=\"95\" font-size=\"11\" text-anchor=\"middle\">Endell 的立面、宴會廳與樓梯</text>\n<path class=\"muted\" d=\"M180 110 L180 126\" stroke-width=\"1.5\" fill=\"none\"/><polygon class=\"muted\" points=\"175,124 185,124 180,132\"/>\n<rect class=\"soft\" x=\"40\" y=\"134\" width=\"280\" height=\"58\" rx=\"4\" stroke-width=\"1\"/>\n<text class=\"ink\" x=\"180\" y=\"157\" font-size=\"14\" text-anchor=\"middle\">接下來的院子：工商</text>\n<text class=\"muted\" x=\"180\" y=\"177\" font-size=\"11\" text-anchor=\"middle\">第二、三院是工廠樓層；第二院白磚加灰泥</text>\n<path class=\"muted\" d=\"M180 192 L180 208\" stroke-width=\"1.5\" fill=\"none\"/><polygon class=\"muted\" points=\"175,206 185,206 180,214\"/>\n<rect class=\"soft\" x=\"40\" y=\"216\" width=\"280\" height=\"76\" rx=\"4\" stroke-width=\"1\"/>\n<text class=\"ink\" x=\"180\" y=\"239\" font-size=\"14\" text-anchor=\"middle\">其餘的院子：只有出租住宅</text>\n<text class=\"muted\" x=\"180\" y=\"259\" font-size=\"11\" text-anchor=\"middle\">約 80 戶；古蹟資料庫提到兩個相連的住宅院朝 Sophien 教區墓園</text>\n<text class=\"muted\" x=\"180\" y=\"277\" font-size=\"11\" text-anchor=\"middle\">與一所猶太中學的校園敞開</text>\n<line class=\"muted\" x1=\"40\" y1=\"318\" x2=\"320\" y2=\"318\" stroke-width=\"1\" stroke-dasharray=\"4 4\"/>\n<text class=\"muted\" x=\"180\" y=\"344\" font-size=\"12\" text-anchor=\"middle\">Sophienstraße 6：通道的其中一個出口</text>\n<text class=\"muted\" x=\"180\" y=\"364\" font-size=\"11\" text-anchor=\"middle\">前棟配合窄街小尺度的房子；與上方各院的相對位置未標</text>\n<text class=\"gold\" x=\"180\" y=\"390\" font-size=\"11\" text-anchor=\"middle\">箭頭表示用途先後，不是路徑</text>\n</svg>",
+      "caption": "示意，不按比例，不是平面圖。依 berlin.de（2024 年）、德文維基百科與 Berlin 邦古蹟局古蹟資料庫（Obj.-Dok.-Nr. 09080215）的文字描述繪製，只畫來源寫明的用途先後，不表示八個院子排成一直線。",
+      "credit": "本報繪製"
+    },
+    {
+      "type": "p",
+      "text": "第一院的立面是 August Endell 做的。他讀過哲學和心理學，關心人怎麼感知東西。古蹟資料庫說，他用彩色鑲嵌的飾面磚（Farbig inkrustierte Verblendsteine）和形狀各不相同的窗，把當年柏林常見的工商院子改出一個有想像力的版本，合乎他追求的 Genusskultur。"
+    },
+    {
+      "type": "p",
+      "text": "德文維基把兩面牆分開講，說 Endell 靠窗的形式、大小、排列和彩色的 Glasursteine（釉磚）做出兩種不同的立面。東側是藍與白，形狀指向摩爾式建築；西側以棕色為主，讓人想起當年極新潮的 Wertheim 百貨大樓。兩面不一樣的立面，讓院子像一座由幾棟不同房子圍起來的小廣場。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Berlin%2C_Hackesche_H%C3%B6fe%2C_1._Hof%2C_Nordwesten_2014-07.jpg/1280px-Berlin%2C_Hackesche_H%C3%B6fe%2C_1._Hof%2C_Nordwesten_2014-07.jpg",
+      "width": 1280,
+      "height": 960,
+      "alt": "往上仰拍的院子一角，天空湛藍。左邊是米色磚牆，夾著藍色細線，窗間嵌著藍白相間的方塊與菱形磚片，屋頂邊緣像波浪一樣起伏；右邊轉角是棕紅色的磚牆，間有淺色小點，轉角貼著一道藍色磚的垂直帶。",
+      "caption": "第一院的一個轉角，2014 年 7 月攝。左邊是米色磚嵌藍白磚，屋簷線起伏成波浪；右邊是棕紅色的磚牆，轉角貼著一道藍色的磚。",
+      "credit": "HerrAdams／Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Berlin,_Hackesche_H%C3%B6fe,_1._Hof,_Nordwesten_2014-07.jpg",
+      "made": "2014"
+    },
+    {
+      "type": "p",
+      "text": "第一院後方那棟橫向的樓裡有兩個宴會廳，Endell 連樓梯一起設計。宴會廳由一位酒商兼餐館老闆經營，從一開始就有人在這裡辦家庭和社團的慶祝、公司的週年；表現主義詩人的團體「新俱樂部」（Der Neue Club）的成立，德文維基也列為一件特別的事。另外，古蹟資料庫談 Endell 的室內時記，一樓餐廳那些可以往下收起的窗重新啟用。"
+    },
+    {
+      "type": "p",
+      "text": "德文維基說，Endell 想把「動」做進建築和裝飾，表現得最清楚的是那間兩層樓高的大宴會廳：帶線腳的柱子往外鼓，天花的簷口收成波浪。德文維基有一句說這間大廳約 1930 年已經毀了；另一句卻說，到二戰結束前，百貨集團 DeFaKa 使用建築群的大部分，前棟當總部，被橫向隔成上下兩半的大宴會廳當員工餐廳。兩句說法不一，我手上的資料對不起來。"
+    },
+    {
+      "type": "h",
+      "text": "朝墓園敞開的住宅院"
+    },
+    {
+      "type": "p",
+      "text": "第二院樸素得多，古蹟資料庫說它的立面刻意務實，白色飾面磚加灰泥面。德文維基記，第二、三院是有工廠樓層的樓。"
+    },
+    {
+      "type": "p",
+      "text": "古蹟資料庫說，兩個相連的住宅院朝 Sophien 教區的墓園和一所猶太中學的校園敞開。德文維基說，整組院子在規劃時就盡量讓它們能從鄰地的綠地得到陽光和氧氣，那些綠地是 1672 年的老猶太墓園和 Sophien 教區的墓園。"
+    },
+    {
+      "type": "p",
+      "text": "住宅約 80 戶，不少有陽台，每一戶都有浴室、室內廁所和中央暖氣。院子裡原本配了植栽、一個大沙坑和幾座噴泉；古蹟資料庫（2026 年 10 月 31 日查閱）記，第四院有一座種了植物的中島和圓形的人造石噴泉，第七院有一塊歷史花圃，照改過的樣式重新種過。"
+    },
+    {
+      "type": "p",
+      "text": "Sophienstraße 6 的前棟，古蹟資料庫說是配合那條窄街上小尺度的房子蓋的，裡面有通往 Sophienstraße 的通道的一個出口。"
+    },
+    {
+      "type": "h",
+      "text": "房客擋下來的立面"
+    },
+    {
+      "type": "p",
+      "text": "早年這裡也是 Spandauer Vorstadt 猶太生活的據點之一，猶太婦女聯盟的女孩之家和猶太學生食堂都曾是租戶。一次大戰後的動盪裡，許多公司離開，德文維基說文化與公共活動不久就完全減少。官網記，納粹強制拍賣了這片院子，前院在二戰最後幾天的空襲中嚴重受損。"
+    },
+    {
+      "type": "p",
+      "text": "1950 年，房客擋住了第一院的 Jugendstil 立面被拆。隔年院子收歸國有，成了東德的「人民財產」；1977 年整組列為古蹟。1993 年院子歸還給原主的繼承人，1994 年賣給新業主，接著大修。官網記，前院的磚面修復、部分重建。德文維基記，整個改建在 1997 年結束。"
+    },
+    {
+      "type": "p",
+      "text": "官網記，改建完工時有 5 萬人到院子參加慶典。官網同一段寫，來客很多，住宅院夜裡因此關閉。berlin.de 2024 年 11 月更新的介紹也寫，住人的院子每晚關閉，前面的院子開放。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Hackescher Hof mit Brunnen- und Gartenhof（Obj.-Dok.-Nr. 09080215）",
+      "publisher": "Landesdenkmalamt Berlin，Denkmaldatenbank",
+      "date": "2026-10-31",
+      "url": "https://denkmaldatenbank.berlin.de/daobj.php?obj_dok_nr=09080215",
+      "note": "整頁：地址、年代、設計者、第一院與第二院立面、兩個住宅院、Sophienstraße 6 前棟與通道出口、臨街立面 1994–1996 年重新設計；頁面未標發布日，日期為查閱日"
+    },
+    {
+      "title": "History（Die Hackeschen Höfe）",
+      "publisher": "hackesche-hoefe.de",
+      "date": "2026-10-31",
+      "url": "https://hackesche-hoefe.de/en/history",
+      "note": "整頁年表：1858 與 1905 年的購地、1950 年房客阻止拆除第一院立面、1951 年收歸國有、1961 年拆灰泥與山牆、1977 年列古蹟、1993 年歸還、1994 年出售；「1995」標題下記改建完工時 5 萬人慶典、前院磚面修復與部分重建、住宅院夜間關閉，未給各事年份；現況 27,000 平方公尺、almost four dozen companies（近五十家，德文維基記 40 家）；頁面未標發布日，日期為查閱日"
+    },
+    {
+      "title": "Architecture（Die Hackeschen Höfe）",
+      "publisher": "hackesche-hoefe.de",
+      "date": "2026-10-31",
+      "url": "https://www.hackesche-hoefe.de/en/architecture",
+      "note": "整頁：9,200 平方公尺、八個院子、商用與住宅面積、分散租金風險的動機、與其他商用院子競爭的賣點（位置、中央暖氣、自備發電）、Endell 負責第一院立面、後翼兩個宴會廳與樓梯；官網稱 Endell 為 self-made architect，與德文維基「讀過哲學與心理學」的說法不同，正文採後者；頁面未標發布日，日期為查閱日"
+    },
+    {
+      "title": "Hackesche Höfe",
+      "publisher": "de.wikipedia.org",
+      "date": "2026-10-31",
+      "url": "https://de.wikipedia.org/wiki/Hackesche_Höfe",
+      "note": "開張日期、Berndt 先前案子的傳統排列、第一院文化用途與生活改革運動、第二三院工廠樓層、院子靠近鄰地墓園、住宅設備（vielfach Balkone）、第一院東西兩側色調、Endell 的「動」與約 1930 年被毀的大宴會廳、二戰前 DeFaKa 使用情形、整體改建 1997 年結束；條目引 Tagesspiegel 2006-09-23、taz、Berliner Zeitung 2006-06-22；日期為查閱日"
+    },
+    {
+      "title": "Hackesche Höfe und Hackescher Markt",
+      "publisher": "berlin.de",
+      "date": "2024-11-07",
+      "url": "https://www.berlin.de/sehenswuerdigkeiten/3560128-3558930-hackesche-hoefe.html",
+      "note": "德文頁（頁面標「Aktualisierung: 7. November 2024」）：第一院只做文化、接下來的院子工商、其餘只放出租住宅；住人的院子每晚關閉、前面的院子開放；辦公、小店、餐飲、電影院與綜藝劇場。原列的 /fr/monuments/ 網址連不上，改列此頁"
+    },
+    {
+      "title": "Architektur aus dem Rechtsbuch",
+      "publisher": "Jens Sethmann，MieterMagazin 12/2011，Berliner Mieterverein",
+      "date": "2011-12-28",
+      "url": "https://www.berliner-mieterverein.de/magazin/online/mm1211/121114.htm",
+      "note": "Mietskaserne 與前後相接的窄後院、1853 年條例以防火為主、院子 5.34 公尺見方對應消防泵車迴轉、1887 年 60 平方公尺與簷高 22 公尺、1925 年法規；頁面標「Stand: 28.12.2011」；28.5 平方公尺與「約兩倍」為本報自算"
+    },
+    {
+      "title": "Blüte, Niedergang und Wiederauferstehung des Berliner Hinterhofs – Zille lässt grüßen",
+      "publisher": "Jens Sethmann，MieterMagazin 9/2012，Berliner Mieterverein",
+      "date": "2012-09-28",
+      "url": "https://www.berliner-mieterverein.de/magazin/online/mm0912/091212.htm",
+      "note": "Hobrecht 1868 年的原話、1862 年計畫與大街廓、Meyer’s Hof（1874 年、六個院子、最多 2,100 人）、房東拖延修訂到 1887 年、60 平方公尺沒有認真限制建商；頁面標「Stand: 28.09.2012」"
+    },
+    {
+      "title": "File:Berlin, Hackesche Höfe, 1. Hof, Osten 2014-07.jpg",
+      "publisher": "Wikimedia Commons（HerrAdams，CC BY-SA 4.0）",
+      "date": "2014-07-04",
+      "url": "https://commons.wikimedia.org/wiki/File:Berlin,_Hackesche_H%C3%B6fe,_1._Hof,_Osten_2014-07.jpg",
+      "note": "頭圖"
+    },
+    {
+      "title": "File:Berlin, Hackesche Höfe, 1. Hof, Nordwesten 2014-07.jpg",
+      "publisher": "Wikimedia Commons（HerrAdams，CC BY-SA 4.0）",
+      "date": "2014-07-04",
+      "url": "https://commons.wikimedia.org/wiki/File:Berlin,_Hackesche_H%C3%B6fe,_1._Hof,_Nordwesten_2014-07.jpg",
+      "note": "第一院轉角照片"
+    },
+    {
+      "title": "File:Mitte Hackesche Höfe 1908.jpg",
+      "publisher": "Wikimedia Commons（公有領域，明信片 1908 年寄出）",
+      "date": "1908",
+      "url": "https://commons.wikimedia.org/wiki/File:Mitte_Hackesche_H%C3%B6fe_1908.jpg",
+      "note": "臨街立面明信片（1908 年寄出）；作者不詳，Commons 以 {{pd-old}} 標為公有領域，來源 filmtheater.square7.ch"
+    }
+  ]
+}
