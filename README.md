@@ -1,6 +1,4 @@
-# 知更鳥初鳴 · Rotkehlchens erstes Lied
-
-（2026-11-01 前的刊名：知更鳥晨間記事 · Rotkehlchens Morgenblatt）
+# 知更鳥晨間記事 · Rotkehlchens Morgenblatt
 
 每日台灣時間 07:30 出刊的私人晨報。
 

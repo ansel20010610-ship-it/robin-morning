@@ -1,6 +1,6 @@
 {
-  "name": "知更鳥初鳴",
-  "short_name": "知更鳥初鳴",
+  "name": "知更鳥晨間記事",
+  "short_name": "知更鳥晨間記事",
   "description": "每日台灣時間 07:30 出刊的私人晨報",
   "start_url": "./",
   "scope": "./",
