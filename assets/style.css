@@ -181,18 +181,34 @@ button { font: inherit; color: inherit; }
   border-bottom: 1px solid var(--rule); padding-top: env(safe-area-inset-top);
 }
 .topbar .in { display: flex; align-items: center; gap: 6px; height: 48px; max-width: 46rem; margin: 0 auto; padding: 0 10px; }
-.topbar .title { flex: 1; text-align: center; font-family: var(--sans); font-size: 13px; letter-spacing: .14em; color: var(--ink-2);
+.topbar .title { flex: 1; min-width: 0; display: grid; text-align: center; font-family: var(--sans); font-size: 13px; letter-spacing: .14em; color: var(--ink-2);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* An article's bar names the column; once the title has scrolled under it (app.js adds .past), the two cross-fade and
+   the bar carries the title. Both sit in the same cell, so nothing moves around them. */
+.topbar .title > span { grid-area: 1 / 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; transition: opacity .35s ease, translate .35s cubic-bezier(.2,.8,.2,1); }
+.topbar .title .art { opacity: 0; translate: 0 7px; font-family: var(--serif); font-size: 14.5px; font-weight: 600; letter-spacing: .02em; color: var(--ink); }
+.topbar.past .title .col { opacity: 0; translate: 0 -7px; }
+.topbar.past .title .art { opacity: 1; translate: 0 0; }
 .icon-btn { background: none; border: 0; width: 40px; height: 40px; display: grid; place-items: center; cursor: pointer; border-radius: 2px; color: var(--ink); }
 .icon-btn svg { width: 22px; height: 22px; }
 .icon-btn[aria-pressed="true"] { color: var(--gold); }
 .progress { position: absolute; left: 0; bottom: -1px; height: 2px; background: var(--gold); width: 0; transition: width .1s linear; }
+/* Where the browser can, the reading line is driven by the scroll itself and app.js leaves its width alone. */
+@supports (animation-timeline: scroll()) {
+  .progress { width: 100%; transform: scaleX(0); transform-origin: 0 50%; transition: none; animation: read-line linear both; animation-timeline: scroll(root); }
+  @keyframes read-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+}
 
 /* ——— Article ——— */
 .article-head { padding: 26px 0 6px; }
 .article-head h1 { font-size: clamp(26px, 7vw, 36px); line-height: 1.38; margin: 10px 0 12px; font-weight: 700; letter-spacing: .01em; }
 .article-head .dek { font-size: 1.04em; color: var(--ink-2); line-height: 1.8; margin: 0 0 14px; }
-.article-head .meta { font-family: var(--sans); font-size: 12.5px; color: var(--muted); letter-spacing: .04em; padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
+/* The meta line: date, issue, reading time, update — each item kept whole, parted by a hairline of gold. Every item
+   carries its own hairline on the left; the row is pulled left by the same amount and clipped, so the first item of
+   every line loses its hairline. (No more line breaks between 「第 22」 and 「期」.) */
+.article-head .meta { font-family: var(--sans); font-size: 12.5px; color: var(--muted); letter-spacing: .04em; padding-bottom: 12px; border-bottom: 1px solid var(--rule); overflow: hidden; font-variant-numeric: tabular-nums; }
+.article-head .meta .row { display: flex; flex-wrap: wrap; row-gap: 3px; margin-left: -11px; }
+.article-head .meta .row > span { white-space: nowrap; padding: 0 10px; border-left: 1px solid var(--gold-soft); line-height: 1.5; }
 .banner { font-family: var(--sans); font-size: 13.5px; line-height: 1.6; padding: 10px 12px; margin: 14px 0 0; border-left: 3px solid var(--wine); background: var(--paper-2); color: var(--ink-2); }
 .banner.gold { border-left-color: var(--gold); }
 
@@ -347,7 +363,15 @@ tr:first-child td { border-top: 0; }
 .sources li span { color: var(--muted); }
 
 .next { margin: 30px 0 10px; border-top: 1px solid var(--rule); }
-.next .lbl { margin: 14px 0 0; }
+.next .lbl { margin: 14px 0 0; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.next .lbl > span { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.next .lbl .prev { flex: 0 0 auto; font-weight: 500; letter-spacing: .06em; color: var(--muted); text-decoration: none; }
+/* The whole issue read: a small finish line in place of the next card (app.js issueFinish). */
+.finish.small { margin: 14px 0 8px; padding: 16px 14px 14px; }
+.finish.small .tick { width: 26px; height: 26px; font-size: 13px; margin-bottom: 6px; }
+.finish.small b { font-size: 16px; }
+.finish.small .btns { justify-content: center; margin-top: 12px; }
+.finish.small .btn { font-size: 13px; padding: 8px 12px; }
 
 /* ——— Pitch ——— */
 .pitch { margin: 1.8em 0; }
@@ -495,9 +519,25 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
   position: fixed; left: 50%; translate: -50% 0; z-index: 25;
   bottom: calc(var(--nav-h) + var(--dock-h) + 14px + env(safe-area-inset-bottom));
   background: var(--ink); color: var(--paper); border: 0; font-family: var(--sans); font-size: 14px; letter-spacing: .04em;
-  padding: 10px 16px; cursor: pointer; box-shadow: var(--shadow);
+  padding: 10px 16px; cursor: pointer; box-shadow: var(--shadow); white-space: nowrap;
 }
 .resume[hidden] { display: none; }
+/* It fades out once the reader has scrolled on by themselves (app.js hideResume), not on a timer. */
+.resume { transition: opacity .35s ease, translate .35s ease; }
+.resume.off { opacity: 0; translate: -50% 8px; pointer-events: none; }
+
+/* ——— 上次讀到 ——— */
+/* A pencil mark along a card's foot, as far as the reader got (--p, 0–1). ::before — the reveal's gold run owns ::after. */
+:is(.lead, .item).has-p::before, .cont::before { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: calc(var(--p, 0) * 100%); background: var(--gold); pointer-events: none; z-index: 1; }
+.meta-s .pos-mark { color: var(--gold-ink); }
+/* 接著上次: the articles left half-read, on the front page above 正刊; a tap lands where the reader stopped. */
+.continue { margin: 28px 0 -8px; }
+.continue .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; padding-bottom: 5px; border-bottom: 1px solid var(--ink); }
+.continue .lbl .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 14px; margin-left: 8px; color: var(--gold); }
+.cont { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 14px; align-items: center; padding: 10px 0 11px; border-bottom: 1px solid var(--rule); text-decoration: none; overflow: hidden; isolation: isolate; }
+.cont .k { grid-column: 1; font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--gold-ink); }
+.cont b { grid-column: 1; font-size: 16px; line-height: 1.5; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cont .p { grid-column: 2; grid-row: 1 / 3; font-family: var(--latin); font-size: 21px; font-weight: 600; color: var(--gold-ink); font-variant-numeric: tabular-nums lining-nums; }
 
 /* ——— Archive, columns, search ——— */
 .col-note { font-family: var(--sans); font-size: 14px; color: var(--ink-2); line-height: 1.7; margin: 8px 0 4px; }
@@ -512,7 +552,7 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
 
 /* ——— Motion and images ——— */
 @media (prefers-reduced-motion: no-preference) {
-  #main > * { animation: page-in .28s ease both; }
+  #main > :not(.topbar) { animation: page-in .28s ease both; } /* not the bar: it would hop 4px as the page opens */
   @keyframes page-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) img { filter: brightness(.93) contrast(1.02); } }
@@ -624,10 +664,10 @@ img.img-off { visibility: hidden; }
    and nav-pop animation are left alone. */
 @media (hover: none) and (prefers-reduced-motion: no-preference) {
   body { touch-action: manipulation; }
-  :is(.lead, .item:not(.locked), .issue-row, a.gig, .hit, .sheet .opt) {
+  :is(.lead, .item:not(.locked), .issue-row, a.gig, .hit, .sheet .opt, .cont) {
     transition: translate .26s cubic-bezier(.2,1.4,.4,1), border-color .26s ease, background .25s;
   }
-  :is(.lead, .item:not(.locked), .issue-row, a.gig, .hit, .sheet .opt):active {
+  :is(.lead, .item:not(.locked), .issue-row, a.gig, .hit, .sheet .opt, .cont):active {
     translate: 0 1px; border-bottom-color: var(--ink); transition-duration: .07s, .07s, .25s; transition-timing-function: ease-out;
   }
   :is(.chip, .seg button, .pitch .steps button) { transition: box-shadow .26s cubic-bezier(.2,1.4,.4,1), background .2s, color .2s; }

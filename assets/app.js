@@ -122,10 +122,24 @@ function kicker(c, link = false, date = null) {
 }
 // The front page is the digest: each card carries the three-sentence brief (older articles fall back to the dek).
 const summary = (a) => a.brief ? `<p class="brief">${esc(a.brief)}</p>` : `<p>${esc(a.dek)}</p>`;
+// 上次讀到: where the reader left an article (pos.<key>, a 0–1 scroll ratio; dropped once it is read to the end).
+// Under 8% is not worth coming back to.
+const posOf = (key) => { const p = Number(store.get(`pos.${key}`, 0)); return p > 0.08 && p < 1 ? p : 0; };
+const pct = (p) => Math.round(p * 100);
+const posKeys = () => { const ks = []; try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k?.startsWith("rm.pos.")) ks.push(k.slice(7)); } } catch { /* ignore */ } return ks; };
+// Keep at most `max` remembered positions; the oldest issues' go first.
+function prunePos(max = 80) {
+  const ks = posKeys().sort();
+  for (const k of ks.slice(0, Math.max(0, ks.length - max))) store.del(`pos.${k}`);
+}
+// The card's class and style for a part-read article: a pencil mark along its foot (.has-p::before, --p).
+const posMark = (date, a, read) => { const p = read.has(`${date}/${a.column}`) ? 0 : posOf(`${date}/${a.column}`); return p ? { cls: " has-p", st: ` style="--p:${p}"` } : { cls: "", st: "" }; };
 function metaLine(date, a, read) {
   const bits = [a.brief ? `全文約 ${a.minutes} 分鐘` : `約 ${a.minutes} 分鐘`];
   if (a.status === "undetermined") bits.unshift("查核未完成");
   if (a.from_reserve) bits.push("備稿");
+  const p = read.has(`${date}/${a.column}`) ? 0 : posOf(`${date}/${a.column}`);
+  if (p) bits.push(`<span class="pos-mark">讀到 ${pct(p)}%</span>`);
   if (read.has(`${date}/${a.column}`)) bits.push('<span class="read-mark">已讀</span>');
   else if (lockMode()) {
     const spent = lockSpent(`${date}/${a.column}`), left = lockNeed(a.minutes) - spent;
@@ -161,8 +175,8 @@ function lockedCard(date, a, by) {
 function itemCard(date, a, read) {
   const by = lockedBy(date, a.column);
   if (by) return lockedCard(date, a, by);
-  const th = thumb(a, "th");
-  return `<a class="item${th ? "" : " noimg"}" href="#/a/${date}/${a.column}"><div>${kicker(a.column, false, date)}<h3>${esc(a.title)}</h3>${summary(a)}${metaLine(date, a, read)}</div>${th}</a>`;
+  const th = thumb(a, "th"), pm = posMark(date, a, read);
+  return `<a class="item${th ? "" : " noimg"}${pm.cls}"${pm.st} href="#/a/${date}/${a.column}"><div>${kicker(a.column, false, date)}<h3>${esc(a.title)}</h3>${summary(a)}${metaLine(date, a, read)}</div>${th}</a>`;
 }
 
 const EMBLEM = `<svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
@@ -236,8 +250,9 @@ function viewFront(dateParam) {
     ${lateNote(issue.date)}
     ${prayerBox(issue)}
     ${lockMode() ? lockBar(arts, issue.date) : ""}
+    ${continueRow(issue.date, read)}
     ${mains.length ? `<div class="sec-head"><h2>正刊</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
-    ${lead ? `<a class="lead" href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column, false, issue.date)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
+    ${lead ? `<a class="lead${posMark(issue.date, lead, read).cls}"${posMark(issue.date, lead, read).st} href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column, false, issue.date)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
     ${mains.slice(1).map((a) => itemCard(issue.date, a, read)).join("")}
     ${supps.length ? `<div class="sec-head"><h2>副刊</h2><span class="de">Feuilleton</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
@@ -253,7 +268,28 @@ function viewFront(dateParam) {
   </div>`;
   prefetch(issue);
   wireDigest(issue);
+  // A tap on 接著上次 lands in the article where the reader stopped (viewArticle reads landKey).
+  main.querySelectorAll(".cont[data-jump]").forEach((el) => el.addEventListener("click", () => { landKey = el.dataset.jump; }));
   mastheadShow(main.querySelector(".masthead"));
+}
+
+// 接著上次: the articles left part-read, newest issue first, at most two — on the front page above 正刊. Read ones and
+// (in 循序閱讀) locked ones are not offered; the day of any that is not from this issue is named.
+function inProgress(read, n = 2) {
+  const out = [];
+  for (const k of posKeys()) {
+    const [date, c] = k.split("/");
+    const a = issueBy(date)?.articles.find((x) => x.column === c), p = posOf(k);
+    if (!a || !p || read.has(k) || !isPublished(date) || lockedBy(date, c)) continue;
+    out.push({ date, a, p });
+  }
+  return out.sort((x, y) => y.date.localeCompare(x.date)).slice(0, n);
+}
+function continueRow(issueDate, read) {
+  const rows = inProgress(read);
+  if (!rows.length) return "";
+  return `<nav class="continue" aria-label="接著上次"><div class="lbl">接著上次<span class="de">Fortsetzung</span></div>
+    ${rows.map(({ date, a, p }) => `<a class="cont" href="#/a/${date}/${a.column}" data-jump="${date}/${a.column}" style="--p:${p}"><span class="k">${esc(col(a.column, date).name)}${date !== issueDate ? `・${esc(fmtDate(date, "short"))}` : ""}</span><b>${esc(a.title)}</b><span class="p">${pct(p)}%</span></a>`).join("")}</nav>`;
 }
 
 // 今日禱告: the day's passage (its first verse is the masthead's epigraph) and prayer, folded under the masthead.
@@ -351,8 +387,8 @@ function updatedNote(date, a) {
   const pub = new Date(`${date}T${S.cfg.publish_time || "07:30"}:00+08:00`);
   const tw = new Date(t.getTime() + 8 * 3600 * 1000);
   const hm = `${String(tw.getUTCHours()).padStart(2, "0")}:${String(tw.getUTCMinutes()).padStart(2, "0")}`;
-  if (t > pub) return `・更新於 ${tw.getUTCMonth() + 1}/${tw.getUTCDate()} ${hm}`;
-  return a.column === "football" ? `・截稿 ${hm}` : "";
+  if (t > pub) return `<span>更新於 ${tw.getUTCMonth() + 1}/${tw.getUTCDate()} ${hm}</span>`;
+  return a.column === "football" ? `<span>截稿 ${hm}</span>` : "";
 }
 
 // `my` is this route's number: if the reader has moved on while the article loads, draw nothing.
@@ -379,7 +415,7 @@ async function viewArticle(date, column, my) {
   main.innerHTML = `
     <div class="topbar"><div class="in">
       <a class="icon-btn" data-back href="${fromList || (issue && date !== publishedIssues()[0]?.date ? `#/issue/${date}` : "#/")}" aria-label="${fromList ? "返回" : "回到本期"}">${ICON.back}</a>
-      <div class="title">${esc(k.name)}</div>
+      <div class="title"><span class="col">${esc(k.name)}</span><span class="art">${esc(a.title)}</span></div>
       ${canSpeak() ? `<button class="icon-btn" type="button" data-speak aria-pressed="false" aria-label="朗讀本文">${ICON.speak}</button>` : ""}
       <button class="icon-btn" type="button" data-fs aria-label="調整字級">${ICON.text}</button>
       <button class="icon-btn" type="button" data-save aria-pressed="${isSaved(key)}" aria-label="收藏">${isSaved(key) ? ICON.starOn : ICON.star}</button>
@@ -388,7 +424,7 @@ async function viewArticle(date, column, my) {
       <header class="article-head">${kicker(column, true, date)}<h1>${esc(a.title)}</h1>
         ${a.takeaway ? `<aside class="takeaway"><span class="lbl">帶得走的結論</span><p>${inline(a.takeaway)}</p>${evidenceOf(a) ? `<p class="ev"><b>證據力</b>${inline(evidenceOf(a))}</p>` : ""}</aside>` : ""}
         <p class="dek">${esc(a.dek)}</p>
-        <div class="meta">${esc(fmtDate(date))}・第 ${issue?.no ?? ""} 期${minutes ? `・閱讀約 ${minutes} 分鐘` : ""}${updatedNote(date, a)}</div>
+        <div class="meta"><div class="row"><span>${esc(fmtDate(date))}</span>${issue ? `<span>第 ${issue.no} 期</span>` : ""}${minutes ? `<span>閱讀約 ${minutes} 分鐘</span>` : ""}${updatedNote(date, a)}</div></div>
         ${a.from_reserve && column === "football" ? `<div class="banner">今晨新聞稿未能如期完成，先刊出這篇備用專題；最新消息併入下一期。</div>` : ""}
         ${a.status === "undetermined" ? `<div class="banner">本期查核未完成，無法判定是否有新進展；這不代表沒有新消息。</div>` : ""}
         ${a.spoiler ? `<div class="banner">劇透提醒：${esc(a.spoiler)}</div>` : ""}
@@ -410,12 +446,53 @@ async function viewArticle(date, column, my) {
   const firstP = body.firstElementChild;
   if (firstP && firstP.tagName === "P" && !firstP.querySelector(".tag")) firstP.classList.add("lead-p");
   buildToc(body, main.querySelector(".toc-slot"));
+  // The top bar names the column; once the title has scrolled under it, it carries the title instead (.past).
+  const topbar = main.querySelector(".topbar");
+  let titleSeen = null;
+  if ("IntersectionObserver" in window) {
+    titleSeen = new IntersectionObserver(([e]) => topbar.classList.toggle("past", !e.isIntersecting), { rootMargin: `-${topbar.offsetHeight || 48}px 0px 0px 0px` });
+    titleSeen.observe(main.querySelector(".article-head h1"));
+  }
+  // 接著讀: what to read next depends on where the reader came from. Out of 收藏 or a column's list, the next item down
+  // that list (and the one before it as 上一篇); the list is searched for this article by key, never by a remembered
+  // index. Otherwise the issue's first unread article — in 循序閱讀 that is the one this article unlocks, drawn locked
+  // until it is finished — and, with the whole issue read, a small finish line instead of going round again.
+  const artOf = (k) => { if (!k) return null; const [d, c] = k.split("/"); const x = issueBy(d)?.articles.find((y) => y.column === c); return x ? { date: d, a: x } : null; };
+  const listOf = () => {
+    if (fromList === "#/saved") return { name: "收藏", keys: saved().filter((k) => artOf(k) && isPublished(k.slice(0, 10))) };
+    const m = fromList?.match(/^#\/column\/([\w-]+)/);
+    if (m && S.cfg.columns[m[1]]) return { name: col(m[1], date).name, keys: publishedIssues().filter((i) => i.articles.some((x) => x.column === m[1])).map((i) => `${i.date}/${m[1]}`) };
+    return null;
+  };
+  const card = (n, read) => { const c = itemCard(n.date, n.a, read); return n.date === date ? c : c.replace('<div class="meta-s">', `<div class="meta-s">${esc(fmtDate(n.date, "short"))}・`); };
+  const issueFinish = (arts, read) => {
+    const mins = arts.reduce((s, x) => s + (Number(x.minutes) || 0), 0), latest = date === publishedIssues()[0]?.date;
+    return `<div class="finish done small"><span class="tick" aria-hidden="true">✓</span><b>${read.has(key) ? "本期讀完了" : "這是本期最後一篇"}</b><span class="note">${arts.length} 篇・約 ${mins} 分鐘</span>
+      <div class="btns"><a class="btn ghost" href="${latest ? "#/" : `#/issue/${date}`}">${latest ? "回到今日" : "回到本期"}</a><button class="btn ghost" type="button" data-random>隨手翻一篇</button></div></div>`;
+  };
+  // Any other published article, unread ones first; the lock page takes care of itself in 循序閱讀.
+  const randomArticle = () => {
+    const read = readSet(), all = publishedIssues().flatMap((i) => i.articles.filter((x) => !(i.date === date && x.column === column)).map((x) => `${i.date}/${x.column}`));
+    const pool = all.filter((k) => !read.has(k) && !lockedBy(...k.split("/")));
+    const pick = (pool.length ? pool : all)[Math.floor(Math.random() * (pool.length ? pool : all).length)];
+    if (pick) location.hash = `#/a/${pick}`;
+  };
   const drawNext = () => {
-    if (!issue) return;
-    const arts = sortArticles(issue.articles, date);
-    const i = arts.findIndex((x) => x.column === column);
-    const nxt = arts[i + 1] || arts.find((x) => x.column !== column);
-    if (nxt) main.querySelector(".next").innerHTML = `<div class="lbl">接著讀</div>${itemCard(date, nxt, readSet())}`;
+    const box = main.querySelector(".next");
+    if (!box) return;
+    const read = readSet(), list = listOf();
+    let label = "接著讀", nxt = null, prv = null;
+    if (list) {
+      const i = list.keys.indexOf(key);
+      if (i >= 0) { nxt = artOf(list.keys[i + 1]); prv = artOf(list.keys[i - 1]); label = `接著讀・${list.name}`; }
+    }
+    if (!nxt && issue) {
+      const arts = sortArticles(issue.articles, date), i = arts.findIndex((x) => x.column === column);
+      const u = arts.find((x) => x.column !== column && !read.has(`${date}/${x.column}`));
+      if (!u) { box.innerHTML = issueFinish(arts, read); box.querySelector("[data-random]").onclick = randomArticle; return; }
+      nxt = { date, a: u }; prv ||= i > 0 ? { date, a: arts[i - 1] } : null; label = "接著讀";
+    }
+    box.innerHTML = nxt ? `<div class="lbl"><span>${label}</span>${prv ? `<a class="prev" href="#/a/${prv.date}/${prv.a.column}">‹ 上一篇</a>` : ""}</div>${card(nxt, read)}` : "";
   };
   drawNext();
   main.querySelector("[data-save]").onclick = (e) => {
@@ -492,11 +569,11 @@ async function viewArticle(date, column, my) {
     if (readSet().has(key)) return;
     if (lock && dwell < need) return;
     markRead(key);
+    drawNext(); // the finish line's wording, or the unlocked next card
     if (!lock) return;
     clearInterval(tick);
     saveDwell();
     drawUnlock();
-    drawNext();
     toast("下一篇解鎖了");
   };
   if (lock) {
@@ -509,14 +586,18 @@ async function viewArticle(date, column, my) {
       if (reachedEnd()) finishRead();
     }, 1000);
   }
+  let pruned = false;
   const savePos = () => {
     if (!body.isConnected) return;
     if (reachedEnd()) { finishRead(); if (readSet().has(key)) { store.del(posKey); return; } }
     const p = ratio();
-    if (p > 0.05) { saveT = Date.now(); store.set(posKey, Math.round(p * 1000) / 1000); }
+    if (p > 0.05) { saveT = Date.now(); store.set(posKey, Math.round(p * 1000) / 1000); if (!pruned) { pruned = true; prunePos(80); } }
   };
+  // The reading line: drawn by the scroll itself where CSS can (style.css, animation-timeline); written here otherwise.
+  const cssLine = typeof CSS !== "undefined" && CSS.supports?.("animation-timeline: scroll()");
   const onScroll = () => {
-    bar.style.width = `${Math.min(100, ratio() * 100)}%`;
+    if (!cssLine) bar.style.width = `${Math.min(100, ratio() * 100)}%`;
+    if (!resume.hidden && ratio() > 0.05) hideResume(); // the reader has moved on by themselves
     if (Date.now() - saveT > 800) savePos();
     clearTimeout(trail);
     trail = setTimeout(savePos, 250); // also keep where the gesture ended
@@ -526,17 +607,18 @@ async function viewArticle(date, column, my) {
   document.addEventListener("visibilitychange", onHide);
   const onLeave = () => { saveDwell(); savePos(); };
   window.addEventListener("pagehide", onLeave);
+  // 從上次讀到的地方繼續: offered until the reader either takes it or scrolls on past 5% by themselves — no timer.
+  // Opened from the front page's 接著上次, the page lands there at once (route() scrolls to landTop) and asks nothing.
   const back = store.get(posKey, 0);
   const resume = main.querySelector(".resume");
+  const topOf = (p) => { const h = document.documentElement; return p * (h.scrollHeight - h.clientHeight); };
   let resumeT = 0;
-  if (back > 0.08) {
+  const hideResume = () => { resume.classList.add("off"); clearTimeout(resumeT); resumeT = setTimeout(() => { resume.hidden = true; }, 400); };
+  if (landKey === key) { landKey = null; if (back > 0.08) landTop = topOf(back); }
+  else if (back > 0.08) {
     resume.hidden = false;
-    resume.onclick = () => {
-      const h = document.documentElement;
-      window.scrollTo({ top: back * (h.scrollHeight - h.clientHeight), behavior: "smooth" });
-      resume.hidden = true;
-    };
-    resumeT = setTimeout(() => { resume.hidden = true; }, 7000);
+    resume.textContent = `從上次讀到的地方繼續・${pct(back)}%`;
+    resume.onclick = () => { window.scrollTo({ top: topOf(back), behavior: calm() ? "auto" : "smooth" }); hideResume(); };
   }
   cleanup = () => {
     clearTimeout(trail);
@@ -547,6 +629,7 @@ async function viewArticle(date, column, my) {
     document.removeEventListener("visibilitychange", onHide);
     window.removeEventListener("pagehide", onLeave);
     clearTimeout(resumeT);
+    titleSeen?.disconnect();
     reader?.stop();
   };
   document.title = `${a.title}｜${S.cfg.title}`;
@@ -940,6 +1023,7 @@ let routeSeq = 0; // bumped on every route; an older route still loading must no
 // starts that page from the top. `places` holds the scroll position of each list page last left.
 const places = new Map();
 let shownHash = null, navTap = false, fromList = null;
+let landKey = null, landTop = null; // 接著上次: the article tapped on the front page, and where in it to land
 // The bottom-bar tab a page belongs to.
 const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
 
@@ -989,7 +1073,8 @@ async function route(ev) {
   lastTapped = null;
   const draw = async () => {
     await drawRoute(h, art, my);
-    if (my === routeSeq) window.scrollTo(0, place ?? 0);
+    if (my === routeSeq) window.scrollTo(0, place ?? landTop ?? 0);
+    landTop = null;
   };
   if (morph) await transition(draw, morph); else await draw();
   if (my !== routeSeq) return;
