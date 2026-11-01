@@ -155,7 +155,9 @@ function block(b, figs) {
     case "quote":
       // A quote in another language is set the Viennese way (.orig-q: hairlines, a hanging „, the original centred);
       // a Chinese-only quote keeps the gold rule on its left.
-      return html(`<blockquote${b.original ? ' class="orig-q"' : ""}>${b.original ? `<p class="orig">${esc(b.original)}</p>` : ""}<p class="zh">${inline(b.text || "")}</p>${b.cite && plainCite(b.cite) ? `<cite>${inline(plainCite(b.cite))}</cite>` : ""}</blockquote>`);
+      // Line breaks are kept (a poem's lines and stanzas: columns/poem.md), so the text may carry "\n".
+      const lines = (h) => h.replace(/\n{2,}/g, "<br><br>").replace(/\n/g, "<br>");
+      return html(`<blockquote${b.original ? ' class="orig-q"' : ""}>${b.original ? `<p class="orig">${lines(esc(b.original))}</p>` : ""}<p class="zh">${lines(inline(b.text || ""))}</p>${b.cite && plainCite(b.cite) ? `<cite>${inline(plainCite(b.cite))}</cite>` : ""}</blockquote>`);
     case "list": {
       const tag = b.ordered ? "ol" : "ul";
       return html(`<${tag}>${(b.items || []).map((x) => `<li>${inline(x)}</li>`).join("")}</${tag}>`);
