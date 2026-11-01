@@ -337,7 +337,7 @@ function viewFront(dateParam) {
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
 }
 
-// 接著上次: the articles left part-read, newest issue first, at most two — on 往期, between the standing row and the
+// 接著上次: the articles left part-read, newest issue first, at most two — on 往期, under the title and above the
 // search (moved off the front page on 2026-11-02, where 今日氣象 took its row). Read ones and (in 循序閱讀) locked ones
 // are not offered; the day of any that is not from `issueDate` is named — every one's, when no issue is given.
 function inProgress(read, n = 2) {
@@ -1030,7 +1030,6 @@ function viewArchive() {
   const chips = Object.entries(S.cfg.columns).filter(([, k]) => k.group !== "verse").map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span>
       <a class="stamp-btn" href="#/random" aria-label="隨手翻一篇：從往期裡抽一篇沒讀過的"><b>隨手翻</b><i>Zufall</i></a></header>
-    <nav class="chips review" aria-label="常設"><a class="chip" href="#/gallery">畫廊</a><a class="chip" href="#/marks">劃線本</a><a class="chip" href="#/press">印務室</a></nav>
     ${continueRow(null, readSet(), " in-archive")}
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
     <div class="hits" aria-live="polite"></div>
@@ -1077,9 +1076,11 @@ function viewSaved() {
     const a = issueBy(date)?.articles.find((x) => x.column === c);
     return a && isPublished(date) ? itemCard(date, a, readSet()).replace('<div class="meta-s">', `<div class="meta-s">${esc(fmtDate(date, "short"))}・`) : "";
   }).join("");
-  const n = allMarks().length;
+  const n = allMarks().length, g = galleryItems().length;
+  // 劃線本 and 畫廊 are entered from here (the owner's choice, 2026-11-02: 往期 keeps no standing row).
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
     <a class="sec-head link" href="#/marks" aria-label="劃線本：${n} 處劃線"><h2>劃線本</h2><span class="de">Anstreichungen</span><span class="note">${n ? `${n} 處` : "還沒有劃線"} ›</span></a>
+    <a class="sec-head link" href="#/gallery" aria-label="畫廊：${g} 幅"><h2>畫廊</h2><span class="de">Galerie</span><span class="note">${g ? `${g} 幅` : "牆上還沒有畫"} ›</span></a>
     ${items || `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。<br><a href="#/random">或者先隨手翻一篇 →</a></p>`}</div>`;
 }
 
@@ -1199,8 +1200,10 @@ function viewPress() {
 const GALLERY_COLS = new Set(["artwork", "architecture", "art", "photo"]);
 const GALLERY_F = [["all", "全部"], ["work", "作品"], ["site", "古蹟"], ["other", "其他"]];
 const galleryKind = (c) => (c === "artwork" || c === "art" ? "work" : c === "architecture" ? "site" : "other");
+// Every published article with a picture for the wall; viewSaved counts them for its entrance.
+const galleryItems = () => publishedIssues().flatMap((i) => i.articles.filter((a) => a.hero?.src && (GALLERY_COLS.has(a.column) || a.hero.kind === "artwork")).map((a) => ({ date: i.date, a })));
 function viewGallery() {
-  const all = publishedIssues().flatMap((i) => i.articles.filter((a) => a.hero?.src && (GALLERY_COLS.has(a.column) || a.hero.kind === "artwork")).map((a) => ({ date: i.date, a })));
+  const all = galleryItems();
   // The thumb when there is one, as the cards; width and height so the wall keeps its shape while the pictures arrive.
   const tile = ({ date, a }) => {
     const h = a.hero, size = h.width > 0 && h.height > 0 ? ` width="${Number(h.width)}" height="${Number(h.height)}"` : "";
@@ -1427,7 +1430,7 @@ let landKey = null, landTop = null; // 接著上次: the article tapped on the f
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") || h.startsWith("#/gallery") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
 let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising number, so a step back is recognisable

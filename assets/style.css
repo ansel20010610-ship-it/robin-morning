@@ -618,7 +618,7 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
 .meta-s .pos-mark { color: var(--gold-ink); }
 /* 接著上次: the articles left half-read, on the front page above 正刊; a tap lands where the reader stopped. */
 .continue { margin: 28px 0 -8px; }
-.continue.in-archive { margin: 22px 0 10px; } /* on 往期, between the standing row and the search */
+.continue.in-archive { margin: 6px 0 10px; } /* on 往期, under the title, above the search */
 .continue .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; padding-bottom: 5px; border-bottom: 1px solid var(--ink); }
 .continue .lbl .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 14px; margin-left: 8px; color: var(--gold); }
 .cont { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 14px; align-items: center; padding: 10px 0 11px; border-bottom: 1px solid var(--rule); text-decoration: none; overflow: hidden; isolation: isolate; }
@@ -721,7 +721,6 @@ img.img-off { visibility: hidden; }
 :root[data-theme="dark"] .seal { mix-blend-mode: screen; }
 
 
-.chips.review { margin: 0 0 12px; }
 
 /* ——— Gold leaf: motion and finishes (assets/motion.js) ——— */
 [hidden] { display: none !important; }
