@@ -520,6 +520,10 @@ dialog.bottom { margin: auto auto 0; }
 .sheet.contents .opt.locked { color: var(--muted); cursor: default; }
 .sheet.contents .opt.locked b { font-weight: 500; }
 .sheet.contents .opt .lock-note { margin-top: 3px !important; }
+/* 剪報 (app.js openClip): the card drawn by clip.js, shown whole above its buttons; the sheet keeps to the screen. */
+.sheet.clip .clip-pre { margin: 4px 0 16px; display: grid; place-items: center; min-height: 120px; }
+.sheet.clip .clip-pre .loading { padding: 40px 0; }
+.sheet.clip img { display: block; width: auto; max-width: 100%; height: auto; max-height: 52vh; border: 1px solid var(--rule); box-shadow: var(--shadow); }
 .viewer { width: 100vw; height: 100vh; background: rgba(12, 10, 7, .96); color: #eee; display: flex; flex-direction: column; }
 .viewer .vi { flex: 1; overflow: auto; display: flex; align-items: center; justify-content: center; touch-action: pinch-zoom pan-x pan-y; }
 .viewer img { max-width: 100%; max-height: 100%; object-fit: contain; }
