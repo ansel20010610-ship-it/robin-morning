@@ -273,7 +273,7 @@ blockquote.orig-q cite::before { content: "— "; color: var(--gold-ink); }
 
 /* The small gold label over a block (fact box, timeline, table, figure, news, exercise, sources, next, take-away, pitch):
    one face everywhere; each block below keeps only its own spacing. */
-:is(.facts .ft, .timeline .tt, .table .tt, .svgfig .tt, .news .tt, .exercise .lbl, .callout .lbl, .sources h2, .next .lbl, .takeaway .lbl, .pitch .tt) {
+:is(.facts .ft, .timeline .tt, .table .tt, .svgfig .tt, .news .tt, .exercise .lbl, .callout .lbl, .sources h2, .next .lbl, .takeaway .lbl, .fixture .lbl, .pitch .tt) {
   font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600;
 }
 .facts { margin: 1.6em 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); padding: 4px 0; }
@@ -1263,3 +1263,19 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .tile:active .mat { border-color: var(--gold); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tile .mat { background: var(--paper-2); } }
 :root[data-theme="dark"] .tile .mat { background: var(--paper-2); }
+
+/* 加入行事曆 (app.js calBtn, assets/ics.js): the small ghost button at the end of a show's row and on the next-fixture card,
+   in the gold of the ticket link beside it. */
+.btn.cal { padding: 5px 10px; font-size: 12.5px; letter-spacing: .04em; gap: 6px; border-color: var(--gold-soft); color: var(--gold-ink); }
+.btn.cal svg { width: 14px; height: 14px; }
+.gig-shows .acts { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+/* 下一場 (app.js fixtureHtml): Barça's next fixture under the article's meta row — the day and the competition, the tie,
+   then the ground and the button on one foot line (the button alone at the right when no ground is named). */
+.article-head .fixture { margin: 14px 0 0; padding: 11px 14px 12px; border: 1px solid var(--rule); background: var(--paper-2); }
+.fixture .lbl { display: block; margin-bottom: 3px; }
+.fixture .when { font-family: var(--sans); font-size: 13px; color: var(--ink-2); letter-spacing: .03em; font-variant-numeric: tabular-nums; }
+.fixture .vs { font-size: 17.5px; font-weight: 600; line-height: 1.5; margin: 2px 0 0; }
+.fixture .foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; margin-top: 7px; }
+.fixture .small { font-family: var(--sans); font-size: 12.5px; color: var(--muted); }
+.fixture .foot .btn { margin-left: auto; }
+@media print { .btn.cal { display: none; } }

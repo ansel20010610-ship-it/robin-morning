@@ -9,6 +9,7 @@ import { renderPush, clearNotices } from "./notify.js";
 import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pressRun, ripples, flip } from "./motion.js";
 import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
 import { pressHtml } from "./press.js";
+import { icsFor, saveIcs } from "./ics.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -441,6 +442,30 @@ function updatedNote(date, a) {
 // 牙周欄的證據力 (paper.evidence): shown under the takeaway, so the reader sees how solid the conclusion is.
 const evidenceOf = (a) => { const p = (a.body || []).find((b) => b?.type === "paper"); return typeof p?.evidence === "string" ? p.evidence : ""; };
 
+// 加入行事曆 (assets/ics.js): the small ghost button under a concert's show (viewConcert) or Barça's next fixture, and
+// what a tap does — the .ics goes to the share sheet or the downloads, and the toast says so. A cancel, or nothing to
+// hand over, says nothing: the reader can see nothing happened.
+const ICON_CAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="5" width="16" height="15"/><path d="M4 10h16M8 3v4M16 3v4M12 13v4M10 15h4"/></svg>';
+const calBtn = (ref) => `<button class="btn ghost cal" type="button" data-ics="${esc(ref)}">${ICON_CAL}加入行事曆</button>`;
+const icsName = (t) => `${String(t).replace(/[\\/:*?"<>|]+|\s+/g, " ").trim().slice(0, 60) || "event"}.ics`;
+async function handIcs(btn, ev) {
+  btn.disabled = true;
+  try { if (await saveIcs(icsName(ev.title), icsFor(ev))) toast("已交給行事曆"); }
+  finally { btn.disabled = false; }
+}
+// 下一場 (football's top-level "next", SCHEMA.md; build_index.py copies it into the index entry): the fixture as the card
+// shows it, or null when the field is missing or malformed, or the kickoff has passed. The kickoff is Taiwan time with
+// its +08:00, so its date and clock are read straight off the string.
+function fixtureOf(n) {
+  const m = /^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})(?::\d{2})?\+08:00$/.exec(typeof n?.kickoff === "string" ? n.kickoff.trim() : "");
+  if (!m || !n.opponent || !n.competition || Date.parse(`${m[1]}T${m[2]}:00+08:00`) <= Date.now()) return null;
+  return { opponent: String(n.opponent), competition: String(n.competition), date: m[1], hm: m[2], venue: typeof n.venue === "string" ? n.venue : "", home: typeof n.home === "boolean" ? n.home : null };
+}
+const fixtureHtml = (f) => !f ? "" : `<aside class="fixture"><span class="lbl">下一場</span>
+    <div class="when">週${gigWd(f.date)} ${gigDay(f.date)} ${esc(f.hm)}・${esc(f.competition)}</div>
+    <div class="vs">巴薩 對 ${esc(f.opponent)}${f.home === null ? "" : f.home ? "（主場）" : "（客場）"}</div>
+    <div class="foot">${f.venue ? `<span class="small">${esc(f.venue)}</span>` : ""}${calBtn("fixture")}</div></aside>`;
+
 async function viewArticle(date, column, my) {
   const wantMark = landMark; // 劃線本: the mark to land on, taken whatever this page turns out to be
   landMark = null;
@@ -479,6 +504,7 @@ async function viewArticle(date, column, my) {
   [order[idx - 1], order[idx + 1]].forEach((n) => { if (n) article(date, n.column).catch(() => {}); });
   // The name is boxed on its own (.nm) so it is what gets the ellipsis on a narrow bar; the numeral always stays whole.
   const titleIn = `<span class="col"><span class="nm">${esc(k.name)}</span>${idx >= 0 ? `<i class="pg">・${roman(idx + 1)}／${roman(order.length)}</i>` : ""}</span><span class="art">${esc(a.title)}</span>`;
+  const fix = column === "football" ? fixtureOf(me?.next ?? a.next) : null;
   main.innerHTML = `
     <div class="topbar"><div class="in">
       <a class="icon-btn" data-back href="${fromList || (issue && date !== publishedIssues()[0]?.date ? `#/issue/${date}` : "#/")}" aria-label="${fromList ? "返回" : "回到本期"}">${ICON.back}</a>
@@ -492,6 +518,7 @@ async function viewArticle(date, column, my) {
         ${a.takeaway ? `<aside class="takeaway"><span class="lbl">帶得走的結論</span><p>${inline(a.takeaway)}</p>${evidenceOf(a) ? `<p class="ev"><b>證據力</b>${inline(evidenceOf(a))}</p>` : ""}</aside>` : ""}
         <p class="dek">${esc(a.dek)}</p>
         <div class="meta"><div class="row"><span>${esc(fmtDate(date))}</span>${issue ? `<span>第 ${issue.no} 期</span>` : ""}${minutes ? `<span>閱讀約 ${minutes} 分鐘</span>` : ""}${updatedNote(date, a)}</div></div>
+        ${fixtureHtml(fix)}
         ${a.from_reserve && column === "football" ? `<div class="banner">今晨新聞稿未能如期完成，先刊出這篇備用專題；最新消息併入下一期。</div>` : ""}
         ${a.status === "undetermined" ? `<div class="banner">本期查核未完成，無法判定是否有新進展；這不代表沒有新消息。</div>` : ""}
         ${a.spoiler ? `<div class="banner">劇透提醒：${esc(a.spoiler)}</div>` : ""}
@@ -584,6 +611,11 @@ async function viewArticle(date, column, my) {
   // (The sideways swipe that turned pages here was taken out on 2026-11-01 at the owner's request.)
   const turns = new AbortController(), { signal } = turns;
   main.querySelector("[data-contents]")?.addEventListener("click", () => openContents(date, order, idx), { signal });
+  // 下一場 → 行事曆: the tie as the title, 115 minutes from kickoff, the ground, this article as the link.
+  main.querySelector(".fixture [data-ics]")?.addEventListener("click", (ev) => handIcs(ev.currentTarget, {
+    title: `巴薩 對 ${fix.opponent}（${fix.competition}）`, start: `${fix.date}T${fix.hm}`, minutes: 115, location: fix.venue,
+    description: [`${fix.competition}${fix.home === null ? "" : fix.home ? "・主場" : "・客場"}`, a.title].join("\n"),
+    url: location.href.replace(/\?[^#]*/, ""), uid: `football-${fix.date}` }), { signal });
 
   // Read aloud: the top-bar button starts and pauses; it stops when the reader leaves the article.
   let reader = null;
@@ -872,7 +904,10 @@ async function viewConcert(id, my) {
   if (!e) { main.innerHTML = `${top}<div class="wrap"><p class="empty">這檔演出已經下架，或找不到。<a href="#/concerts">看全部演出</a></p></div>`; wireBack(); return; }
   const link = (u, t) => (webUrl(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>` : esc(t));
   const cities = [...new Set(e.shows.map((x) => x.city))];
-  const shows = cities.map((c) => `<li><b>${esc(c)}</b><ul>${e.shows.filter((x) => x.city === c).map((x) => `<li><span class="d">${gigShow(x)}</span><span class="v">${esc(x.venue)}</span>${webUrl(x.tickets) ? `<a class="tix" href="${esc(x.tickets)}" target="_blank" rel="noopener">售票頁</a>` : ""}</li>`).join("")}</ul></li>`).join("");
+  // Each show's ticket link and 加入行事曆 sit together at the row's end (.acts), dropping to a line of their own under
+  // the venue when the row is full; the button's data-ics is the show's index in e.shows.
+  const row = (x, i) => `<li><span class="d">${gigShow(x)}</span><span class="v">${esc(x.venue)}</span><span class="acts">${webUrl(x.tickets) ? `<a class="tix" href="${esc(x.tickets)}" target="_blank" rel="noopener">售票頁</a>` : ""}${calBtn(i)}</span></li>`;
+  const shows = cities.map((c) => `<li><b>${esc(c)}</b><ul>${e.shows.flatMap((x, i) => (x.city === c ? row(x, i) : [])).join("")}</ul></li>`).join("");
   const rows = [
     e.who && ["演出", esc(e.who)],
     e.program && ["曲目", esc(e.program)],
@@ -889,6 +924,16 @@ async function viewConcert(id, my) {
     <details class="gig-key"><summary>值得聽怎麼評</summary>${RUBRIC}</details>
   </article>`;
   wireBack();
+  // 加入行事曆: the show as a two-hour entry (19:30 when the hour is not known), the venue and city as the place, the
+  // cast, programme and ticket note with the ticket link in the body; one uid per show, so a second tap updates it.
+  main.querySelector(".gig-shows").addEventListener("click", (ev) => {
+    const b = ev.target.closest("button[data-ics]"), s = e.shows[Number(b?.dataset.ics)];
+    if (!s) return;
+    const time = /^\d{2}:\d{2}$/.test(s.time || "") ? s.time : "19:30";
+    const lines = [e.who && `演出：${e.who}`, e.program && `曲目：${e.program}`, e.note && `票況：${e.note}`, webUrl(s.tickets)].filter(Boolean);
+    handIcs(b, { title: e.title, start: `${s.date}T${time}`, location: [s.venue, s.city].filter(Boolean).join("，"), description: lines.join("\n"),
+      url: webUrl(s.tickets), uid: `${id}-${s.date}-${time.replace(":", "")}` });
+  });
   document.title = `${e.title}｜${S.cfg.title}`;
 }
 // The page's back arrow: a step back in history when there is one inside the app, else the link's own target.
