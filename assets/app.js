@@ -10,6 +10,7 @@ import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pr
 import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
 import { pressHtml } from "./press.js";
 import { icsFor, saveIcs } from "./ics.js";
+import { fetchWeather, weatherHtml } from "./wetter.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -193,9 +194,12 @@ const EMBLEM = `<svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
 // `fresh` (viewFront, Druckfrisch): the issue is opened for the first time on this device — the masthead carries the
 // press roller's ink line and the wine date stamp, and holds its own entrance (.fresh, style.css) until motion.js
 // pressRun lets it go. The stamp is decoration: the topline already says the number and the day.
+// 今日氣象 (assets/wetter.js): today's paper — the latest issue, dated today — gets an empty .wetter under the dateline,
+// which fillWeather fills once the forecast is in; an archive issue, or yesterday's paper before 07:30, gets none.
 function masthead(issue, fresh = false) {
   const date = issue?.date || twNow().date;
   const [y, m, d] = date.split("-").map(Number);
+  const today = Boolean(issue) && date === twNow().date && date === publishedIssues()[0]?.date;
   return `<header class="masthead${fresh ? " fresh" : ""}"><div class="wrap">
     ${fresh ? `<i class="roller" aria-hidden="true"></i>` : ""}
     <hr class="rule-double">
@@ -206,9 +210,17 @@ function masthead(issue, fresh = false) {
     <h1>${esc(S.cfg.title)}</h1>
     <div class="latin">${esc(S.cfg.subtitle)}</div>
     <div class="dateline">${esc(fmtDate(date))}${issue ? `・第 ${issue.no} 期` : ""}・${esc(S.cfg.publish_time)} 出刊</div>
+    ${today ? `<div class="wetter"></div>` : ""}
     <div class="checker" aria-hidden="true"></div>
     ${issue?.epigraph ? `<p class="epigraph"${verseVars(issue.epigraph.text)}>${verseHtml(issue.epigraph.text)}<span>${esc(issue.epigraph.ref)}（和合本）</span></p>` : ""}
   </div></header>`;
+}
+// The forecast arrives after the masthead is drawn: write it into the placeholder if that masthead is still on the
+// page (fetchWeather answers from its cache at once on every redraw after the first, and never rejects).
+function fillWeather() {
+  const box = main.querySelector(".masthead .wetter");
+  if (!box) return;
+  fetchWeather().then((d) => { if (d && box.isConnected) box.innerHTML = weatherHtml(d); });
 }
 // 排字: the verse is set a glyph at a time (style.css typeset), each code point in its own <i> numbered for its delay.
 // The glyphs stay inline — not inline-block — so line breaking, hanging punctuation and text-spacing-trim are those of
@@ -315,6 +327,7 @@ function viewFront(dateParam) {
   </div>`;
   prefetch(issue);
   wireDigest(issue);
+  fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which rebuilds the masthead
   // A tap on 接著上次 lands in the article where the reader stopped (viewArticle reads landKey).
   main.querySelectorAll(".cont[data-jump]").forEach((el) => el.addEventListener("click", () => { landKey = el.dataset.jump; }));
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
