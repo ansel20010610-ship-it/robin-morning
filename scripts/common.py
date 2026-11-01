@@ -26,9 +26,9 @@ WEEKDAY_ZH = ["一", "二", "三", "四", "五", "六", "日"]
 # Shifts (Taiwan time) — editorial/README.md. Shift 5 is the safety net: every column of the day.
 GROUPS = {
     1: ["devotion", "music", "perio", "architecture"],
-    2: ["@supp0", "@supp2"],  # @supp2 exists only on days with a third supplement (Mon/Tue/Thu/Fri from 2026-11-02)
+    2: ["artwork", "@supp0", "@supp2"],  # @supp2 exists only on days with a third supplement (Mon/Wed from 2026-11-02)
     3: ["@supp1", "football"],
-    4: ["football", "fm-watch", "cosmere-watch"],
+    4: ["news", "football", "fm-watch", "cosmere-watch"],  # news last thing at 05:17: the freshest it can be
     5: ["@all"],
 }
 
@@ -98,8 +98,9 @@ def columns_for_group(cfg, d, group):
 
 
 def reserve_columns(cfg):
-    """Every column that must appear daily (all but the conditional watches and retired columns) keeps a reserve."""
-    return [k for k, v in cfg["columns"].items() if v["group"] != "watch" and "until" not in v]
+    """Every column that must appear daily keeps a reserve: not the conditional watches, not retired columns, and not a
+    column marked "reserve": false (news: a reserve would be stale by the time it ran)."""
+    return [k for k, v in cfg["columns"].items() if v["group"] != "watch" and "until" not in v and v.get("reserve", True)]
 
 
 def expected_columns(cfg, d):

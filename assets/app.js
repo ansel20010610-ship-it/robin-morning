@@ -269,10 +269,9 @@ function prayerBox(issue) {
     <div class="prayer">${paragraphs(v.prayer)}</div></details>`;
 }
 
-// ——— The digest: read the briefs (or hear them), reach the end, done for the day ———
-const DIGEST_READ = ".lead h3, .lead p.brief, .item h3, .item p.brief";
+// ——— The digest: read the briefs, reach the end, done for the day ———
 const digestDone = () => new Set(store.get("digest.done", []));
-let digestReader = null, finishSeen = null;
+let finishSeen = null;
 const unreadIn = (date, arts) => { const read = readSet(); return arts.filter((a) => !read.has(`${date}/${a.column}`)).length; };
 // 循序閱讀's version of the digest bar: how many of the issue's articles have been read, not how many briefs seen.
 function lockBar(arts, date) {
@@ -285,23 +284,13 @@ function digestBar(arts, latest, done) {
   const n = arts.reduce((s, a) => s + (a.brief ? a.brief.length : 0), 0);
   if (!n) return "";
   const k = arts.filter((a) => a.brief).length;
-  const listen = canSpeak() ? `<button type="button" class="btn ghost" data-digest aria-label="聽今日摘要">${ICON.speak}<span>聽摘要</span></button>` : "";
   const run = latest ? streak() : null;
   const more = run && !run.today && run.n >= 2 ? `<em class="streak">讀完就連續 ${run.n + 1} 天</em>` : "";
   const ring = `<span class="ring-wrap"><svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="track" cx="18" cy="18" r="15.5"/><circle class="bar" cx="18" cy="18" r="15.5" pathLength="100"/></svg><span class="cnt">${done ? k : 0}/${k}</span></span>`;
-  return `<div class="digest${done ? " done full" : ""}">${ring}<div><b>今日摘要${more}</b><span>一篇三句話，${Math.max(1, Math.round(n / 330))} 分鐘交差</span></div>${listen}</div>`;
+  return `<div class="digest${done ? " done full" : ""}">${ring}<div><b>今日摘要${more}</b><span>一篇三句話，${Math.max(1, Math.round(n / 330))} 分鐘交差</span></div></div>`;
 }
 function wireDigest(issue) {
-  digestReader?.stop(); digestReader = null; finishSeen?.disconnect(); finishSeen = null;
-  const btn = main.querySelector("[data-digest]");
-  if (btn) btn.onclick = () => {
-    digestReader ||= createReader(main, { selector: DIGEST_READ, onState: (st) => {
-      btn.innerHTML = st === "playing" ? `${ICON.pause}<span>暫停</span>` : `${ICON.speak}<span>${st === "paused" ? "繼續聽" : "聽摘要"}</span>`;
-      if (st === "done") finish();
-    } });
-    if (!digestReader.length) { toast("這期還沒有摘要，等等再來"); return; }
-    digestReader.toggle();
-  };
+  finishSeen?.disconnect(); finishSeen = null;
   const fin = main.querySelector(".finish:not(.lockfin)");
   // Reaching the end the first time today stamps the seal; coming back to a finished issue just shows it.
   const was = digestDone().has(issue.date);
@@ -323,7 +312,7 @@ function wireDigest(issue) {
     finishSeen = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) finish(); }, { threshold: 0.8 });
     finishSeen.observe(fin);
   }
-  cleanup = () => { digestReader?.stop(); digestReader = null; finishSeen?.disconnect(); finishSeen = null; ring.stop(); };
+  cleanup = () => { finishSeen?.disconnect(); finishSeen = null; ring.stop(); };
 }
 function markDigestDone(date) {
   const done = store.get("digest.done", []);
@@ -359,7 +348,7 @@ function finishNote(date) {
 function weekSeven() {
   const read = readSet(), used = new Map();
   return publishedIssues().slice(0, 7).map((iss) => {
-    const cands = iss.articles.filter((a) => a.column !== "football" && col(a.column, iss.date).group !== "watch" && (a.takeaway || a.brief));
+    const cands = iss.articles.filter((a) => !["football", "news"].includes(a.column) && col(a.column, iss.date).group !== "watch" && (a.takeaway || a.brief));
     if (!cands.length) return null;
     const score = (a) => (read.has(`${iss.date}/${a.column}`) ? -10 : 0) + (used.get(a.column) || 0) * 3 + (col(a.column, iss.date).group === "main" ? 0 : 1);
     const pick = cands.reduce((b, a) => (score(a) < score(b) ? a : b));
@@ -956,7 +945,7 @@ function viewSettings() {
       <p class="small">${isWebKitITP() ? "iPhone／Safari 上內嵌播放器可能只能試聽 30 秒；完整收聽請按『在 Spotify 開啟』，加入歌單不受影響。"
         : "若播放器只播 30 秒試聽，請在同一個瀏覽器登入 open.spotify.com。"}</p>
     </section>
-    <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。首頁最上方每天一段和合本經文，下方「今日禱告」展開可讀整段經文與禱告。正刊四欄每日刊出（巴薩晨報、牙周、古典、古蹟）；副刊依星期輪值，每天兩到三篇；觀測站只在有重要新進展時刊出。</p>
+    <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。首頁最上方每天一段和合本經文，下方「今日禱告」展開可讀整段經文與禱告。正刊六欄每日刊出（巴薩晨報、世界與台灣快訊、牙周、古典、走進一件作品、走進一座古蹟）；副刊依星期輪值，每天兩到三篇；觀測站只在有重要新進展時刊出。</p>
       <p>稿件由雲端排程編輯在凌晨分班撰寫，每篇再由另一位編輯獨立查核事實、引文與圖片授權。若某一欄到 07:05 仍未完成，會自動換上預先寫好、查核過的備稿，本報不開天窗。</p>
       <p>唯一的例外是週日：每週的 AI 額度在週日下午 3 點重置。若週日凌晨額度已經用完、當天沒能出齊，就不拿備稿充數，而是等 3 點額度重置後把整期重新寫過，大約傍晚出齊，出齊時會另外通知。首頁會說明當下進度。</p>
       <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>副刊</th></tr></thead><tbody>
