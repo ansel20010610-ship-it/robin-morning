@@ -199,9 +199,15 @@ function masthead(issue) {
     <div class="latin">${esc(S.cfg.subtitle)}</div>
     <div class="dateline">${esc(fmtDate(date))}${issue ? `・第 ${issue.no} 期` : ""}・${esc(S.cfg.publish_time)} 出刊</div>
     <div class="checker" aria-hidden="true"></div>
-    ${issue?.epigraph ? `<p class="epigraph">${esc(issue.epigraph.text)}<span>${esc(issue.epigraph.ref)}（和合本）</span></p>` : ""}
+    ${issue?.epigraph ? `<p class="epigraph"${verseVars(issue.epigraph.text)}>${verseHtml(issue.epigraph.text)}<span>${esc(issue.epigraph.ref)}（和合本）</span></p>` : ""}
   </div></header>`;
 }
+// 排字: the verse is set a glyph at a time (style.css typeset), each code point in its own <i> numbered for its delay.
+// The glyphs stay inline — not inline-block — so line breaking, hanging punctuation and text-spacing-trim are those of
+// plain text and the paragraph takes exactly the same lines. --step shrinks for a long verse so the whole run lands
+// within .7s whatever the length; --n lets the stylesheet time the reference and its hairline after the last glyph.
+const verseHtml = (text) => Array.from(text).map((c, i) => `<i class="ch" style="--i:${i}">${esc(c)}</i>`).join("");
+const verseVars = (text) => { const n = Array.from(text).length; return ` style="--n:${n};--step:${Math.min(45, Math.round(700 / Math.max(1, n - 1)))}ms"`; };
 
 function untilText(mins) {
   const h = Math.floor(mins / 60), m = mins % 60;

@@ -506,7 +506,9 @@ h1, h2, h3, .lead h3, .item h3 { text-wrap: balance; }
 
 /* ——— Masthead epigraph (the day's verse) ——— */
 .epigraph { margin: 14px auto 2px; max-width: 26em; font-size: 15px; line-height: 1.8; color: var(--ink-2); }
-.epigraph span { display: block; font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--gold-ink); margin-top: 2px; }
+.epigraph span { display: block; position: relative; font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--gold-ink); margin-top: 2px; }
+/* One glyph of the verse (app.js verseHtml): plain inline text until the typeset animation below takes it. */
+.epigraph .ch { font-style: normal; position: relative; }
 
 /* ——— Article extras ——— */
 a.kicker { text-decoration: none; }
@@ -761,12 +763,27 @@ img.img-off { visibility: hidden; }
   .masthead .checker ~ .checker { animation-name: band-r; }
   @keyframes band { from { transform: translateX(-60%) scaleY(0); opacity: 0; } 60% { transform: translateX(4%) scaleY(1.6); opacity: 1; } to { transform: none; opacity: .9; } }
   @keyframes band-r { from { transform: translateX(60%) scaleY(0); opacity: 0; } 60% { transform: translateX(-4%) scaleY(1.6); opacity: 1; } to { transform: none; opacity: .9; } }
-  .masthead :is(.topline, .dateline, .epigraph) { animation: page-in .8s both; }
+  .masthead :is(.topline, .dateline) { animation: page-in .8s both; }
   .masthead .topline { animation-delay: .2s; }
   .masthead .latin { animation: tracking-in 1.1s .95s cubic-bezier(.2,.75,.2,1) both; }
   @keyframes tracking-in { from { opacity: 0; letter-spacing: .6em; filter: blur(6px); } to { opacity: 1; letter-spacing: .04em; filter: none; } }
   .masthead .dateline { animation-delay: 1.15s; }
-  .masthead .epigraph { animation-delay: 1.35s; }
+  /* 排字 — the verse is set the way a compositor fills a line: once the dateline is in (1.3s), each glyph drops into
+     place from a little above, gold and glowing first, and cools to ink as it lands; the next follows --step later
+     (app.js: 45ms, shorter for a long verse, so the whole line is set within .7s). When the last has landed (--end)
+     the reference fades in and a gold hairline draws open beneath it from the centre; all told under 1.5s. The glyphs
+     are relatively positioned inline text, so nothing around them moves. Under reduced motion the block is simply there. */
+  .masthead .epigraph { --t0: 1.3s; --end: calc(var(--t0) + (var(--n, 1) - 1) * var(--step, 45ms) + .2s); }
+  .masthead .epigraph .ch { animation: typeset .5s calc(var(--t0) + var(--i, 0) * var(--step, 45ms)) cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes typeset {
+    0% { opacity: 0; top: -5px; color: var(--foil); text-shadow: 0 0 8px color-mix(in srgb, var(--foil-hi) 90%, transparent); }
+    45% { opacity: 1; top: 0; color: var(--foil); text-shadow: 0 0 6px color-mix(in srgb, var(--foil-hi) 70%, transparent); }
+    100% { opacity: 1; top: 0; color: var(--ink-2); text-shadow: 0 0 0 transparent; }
+  }
+  .masthead .epigraph span { animation: page-in .5s var(--end) both; }
+  .masthead .epigraph span::after { content: ""; position: absolute; left: 20%; right: 20%; bottom: -2px; height: 1px; background: var(--gold); transform: scaleX(0);
+    animation: hair .45s calc(var(--end) + .1s) cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes hair { to { transform: scaleX(1); } }
   .mosaic { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
   .mosaic i { position: absolute; width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px; background: linear-gradient(135deg, var(--foil-hi), var(--foil) 55%, #8A6420);
     animation: tessera 1.6s var(--d, 0ms) cubic-bezier(.12,.75,.25,1) both; }
