@@ -1030,7 +1030,7 @@ function viewArchive() {
   const chips = Object.entries(S.cfg.columns).filter(([, k]) => k.group !== "verse").map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span>
       <a class="stamp-btn" href="#/random" aria-label="隨手翻一篇：從往期裡抽一篇沒讀過的"><b>隨手翻</b><i>Zufall</i></a></header>
-    <nav class="chips review" aria-label="常設"><a class="chip" href="#/concerts">近期演出</a><a class="chip" href="#/stats">閱讀年鑑</a><a class="chip" href="#/gallery">畫廊</a><a class="chip" href="#/marks">劃線本</a><a class="chip" href="#/press">印務室</a></nav>
+    <nav class="chips review" aria-label="常設"><a class="chip" href="#/gallery">畫廊</a><a class="chip" href="#/marks">劃線本</a><a class="chip" href="#/press">印務室</a></nav>
     ${continueRow(null, readSet(), " in-archive")}
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
     <div class="hits" aria-live="polite"></div>
