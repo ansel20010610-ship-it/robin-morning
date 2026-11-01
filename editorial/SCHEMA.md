@@ -29,6 +29,7 @@
 - `brief`：三句話摘要，**每篇必填**（含備稿與觀測站）。讀者在首頁只讀到這一段，所以它要能獨立成立；寫法見 `STYLE.md` 第七節。
 - `spoiler`：有重大劇透時填一句提醒（例如「本文談到《迷霧之子》第一部結局」），App 會在標題下顯示。
 - `disclaimer`：牙周欄固定填「醫學教學導讀，非個別診療建議。」
+- `next`：**只有巴薩晨報（football）可填**，選填。下一場。App 顯示在文章開頭並可加入行事曆。物件只能有這些鍵：`opponent`（對手，本報慣用的中文隊名，40 字內）、`competition`（賽事，40 字內）、`kickoff`（開球時間，ISO 8601，**台灣時間且必須帶 `+08:00`**，不接受 `Z` 或其他時區）、選填 `venue`（球場，字串）、`home`（主場 `true`／客場 `false`）。例：`"next": {"opponent": "阿斯頓維拉", "competition": "歐冠", "kickoff": "2026-11-04T04:00+08:00", "venue": "諾坎普", "home": true}`。開球時間早於本期出刊、或在刊期十天以後，驗證時會警告；備稿不填；不確定就整個省略。何時可填見 `columns/football.md`。
 - 觀測站（`fm-watch`、`cosmere-watch`）另有 `"status": "update"` 或 `"status": "undetermined"`（查核失敗時用，見各欄規格）。
 
 ## 正文區塊（`body` 陣列）
