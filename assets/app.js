@@ -469,9 +469,8 @@ async function viewArticle(date, column, my) {
   const k = col(column, date);
   const issue = issueBy(date);
   const minutes = issue?.articles.find((x) => x.column === column)?.minutes;
-  // 本期翻閱: this article's place in its issue (the front page's order) — for the top bar's numeral, the swipe to the
-  // next or previous page (turnTo) and the contents sheet (openContents). Its neighbours are fetched now, so a turn
-  // of the page lands on an article already in memory and gets its slide.
+  // 本期翻閱: this article's place in its issue (the front page's order) — for the top bar's numeral and the contents
+  // sheet (openContents). Its neighbours are fetched now, so a page chosen there is already in memory and gets its slide.
   const order = issue ? sortArticles(issue.articles, date) : [], idx = order.findIndex((x) => x.column === column);
   [order[idx - 1], order[idx + 1]].forEach((n) => { if (n) article(date, n.column).catch(() => {}); });
   // The name is boxed on its own (.nm) so it is what gets the ellipsis on a narrow bar; the numeral always stays whole.
@@ -571,45 +570,9 @@ async function viewArticle(date, column, my) {
     navigator.share({ title: a.title, text: a.dek, url: location.href.replace(/\?[^#]*/, "") }).catch(() => {});
   });
 
-  // 翻頁: a sideways swipe on the page turns to the issue's next or previous article (turnTo). The page follows the
-  // finger a little and lifts off the paper (.lifting, style.css); let go past 70px and it turns, short of that it
-  // settles back. Not taken over: a start within 28px of either edge (Safari's own back and forward), anything that
-  // moves sideways by itself (a table's .scroll, the pitch, a picture's frame, the music card, a form field), the
-  // mouse (which selects text), or a movement more down than across — article { touch-action: pan-y } leaves the
-  // scroll to the browser, which then cancels the pointer. Once the page is held, the swipe is not a tap: the click
-  // it would end in is swallowed. With reduced motion the swipe still turns the page; it just does not follow.
-  const page = main.querySelector("article");
+  // 本期目錄: the top bar's numeral opens the issue's contents sheet (openContents). The sideways swipe that turned
+  // pages here was taken out on 2026-11-01 (the owner did not like the feel); a page still slides when chosen from the sheet.
   const turns = new AbortController(), { signal } = turns;
-  let sw = null, swiped = 0; // the swipe under way (start point, whether the page is held), and when the last one ended
-  const settle = () => { page.classList.remove("lifting", "to-l", "to-r"); page.style.translate = ""; sw = null; };
-  page.addEventListener("pointerdown", (e) => {
-    if (sw || !e.isPrimary || e.pointerType === "mouse" || idx < 0) return;
-    if (e.clientX < 28 || e.clientX > innerWidth - 28) return;
-    if (e.target.closest(".scroll, .pitch, .frame, table, .music, .card3d, iframe, input, textarea, select, [contenteditable]")) return;
-    sw = { id: e.pointerId, x: e.clientX, y: e.clientY, held: false };
-  }, { signal, passive: true });
-  page.addEventListener("pointermove", (e) => {
-    if (!sw || e.pointerId !== sw.id) return;
-    const dx = e.clientX - sw.x, dy = e.clientY - sw.y;
-    if (!sw.held) {
-      if (Math.abs(dx) < 12 || Math.abs(dx) < 1.6 * Math.abs(dy)) { if (Math.abs(dy) > 12) sw = null; return; } // a scroll, not a turn
-      sw.held = true;
-      try { page.setPointerCapture(e.pointerId); } catch { /* the pointer is already gone */ }
-      page.classList.add("lifting");
-    }
-    page.classList.toggle("to-l", dx < 0);
-    page.classList.toggle("to-r", dx > 0);
-    if (!calm()) page.style.translate = `${(dx * 0.35).toFixed(1)}px 0`;
-  }, { signal, passive: true });
-  page.addEventListener("pointerup", (e) => {
-    if (!sw || e.pointerId !== sw.id) return;
-    const dx = sw.held ? e.clientX - sw.x : 0;
-    if (sw.held) swiped = Date.now();
-    if (Math.abs(dx) < 70 || !turnTo(date, order, idx, dx < 0 ? 1 : -1)) settle();
-    else sw = null; // the page keeps its lean: the turn carries on from there (transition dir)
-  }, { signal });
-  page.addEventListener("pointercancel", settle, { signal });
-  page.addEventListener("click", (e) => { if (Date.now() - swiped < 400) { e.preventDefault(); e.stopPropagation(); } }, { capture: true, signal });
   main.querySelector("[data-contents]")?.addEventListener("click", () => openContents(date, order, idx), { signal });
 
   // Read aloud: the top-bar button starts and pauses; it stops when the reader leaves the article.
@@ -739,17 +702,6 @@ async function viewArticle(date, column, my) {
   document.title = `${a.title}｜${S.cfg.title}`;
 }
 
-// A page turned within the issue: `step` +1 is the article after this one (the page slides off to the left), -1 the one
-// before. Refused — with a word why — at either end of the issue and, in 循序閱讀, at an article still locked. Says whether it went.
-function turnTo(date, order, idx, step) {
-  const n = order[idx + step];
-  if (!n) { toast(step > 0 ? "這是本期最後一篇" : "這是本期第一篇"); return false; }
-  const by = lockedBy(date, n.column);
-  if (by) { toast(`〈${n.title}〉還鎖著，先讀完這篇再翻`); return false; }
-  turnDir = step > 0 ? "left" : "right";
-  location.hash = `#/a/${date}/${n.column}`;
-  return true;
-}
 // 本期目錄 (Inhalt): the issue's articles in the front page's order, raised as a sheet from the top bar's title. Each row
 // carries its numeral, column and title, and its minutes — or a gold tick once read; the one open has a gold bar down
 // its left. A tap turns to that article, the page sliding the way its place in the order lies. In 循序閱讀 a locked
@@ -1307,7 +1259,7 @@ let routeSeq = 0; // bumped on every route; an older route still loading must no
 const places = new Map();
 let shownHash = null, navTap = false, fromList = null;
 let landKey = null, landTop = null; // 接著上次: the article tapped on the front page, and where in it to land
-let turnDir = null; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), "left" | "right" | null
+let turnDir = null; // 翻頁: the way the page turns on the route about to fire (openContents), "left" | "right" | null
 // The bottom-bar tab a page belongs to.
 const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
 
@@ -1356,7 +1308,7 @@ async function route(ev) {
   if (ev && art && isFresh(art[1], art[2])) morph = { from: lastTapped, to: hero };
   else if (ev && !art && prev) morph = { from: hero(), to: () => main.querySelector(`a[href="#/a/${prev}"] img`) };
   else if (ev && !art) morph = {};
-  // A page turned within the issue (turnTo, openContents): the slide in its direction instead of the cross-fade and
+  // A page turned within the issue (openContents): the slide in its direction instead of the cross-fade and
   // the picture morph — again only for an article already in memory.
   if (turnDir && ev && art && isFresh(art[1], art[2])) morph = { dir: turnDir };
   turnDir = null;

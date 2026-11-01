@@ -214,10 +214,6 @@ button { font: inherit; color: inherit; }
 /* 翻頁 (app.js viewArticle): the page follows a sideways swipe a little and lifts off the paper beneath — a hairline and
    a soft shadow along its trailing edge — then turns (motion.js transition dir) or settles back. pan-y leaves the
    scroll to the browser and hands sideways movement to the page; a table's own .scroll still scrolls on its own. */
-article.wrap { touch-action: pan-y pinch-zoom; transition: translate .3s cubic-bezier(.2,.7,.2,1); }
-article.wrap.lifting { transition: none; }
-article.wrap.lifting.to-l { box-shadow: 1px 0 0 var(--rule), 14px 0 24px -14px rgba(0, 0, 0, .35); }
-article.wrap.lifting.to-r { box-shadow: -1px 0 0 var(--rule), -14px 0 24px -14px rgba(0, 0, 0, .35); }
 .icon-btn { background: none; border: 0; width: 40px; height: 40px; display: grid; place-items: center; cursor: pointer; border-radius: 2px; color: var(--ink); }
 .icon-btn svg { width: 22px; height: 22px; }
 .icon-btn[aria-pressed="true"] { color: var(--gold); }
