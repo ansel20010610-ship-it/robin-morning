@@ -1,0 +1,179 @@
+{
+  "column": "perio",
+  "date": "2026-11-02",
+  "title": "證據評為高的抗生素組合，指引只留一條縫",
+  "dek": "甲硝唑加阿莫西林的證據品質評為高。EFP 指引以這篇回顧為支持文獻，權衡副作用與抗藥性之後，仍不建議常規使用。",
+  "brief": "28 個雙盲試驗合起來，齦下清創時加吃全身抗菌藥，6 個月全口探診深度比安慰劑多降 0.45 毫米，甲硝唑加阿莫西林的好處主要在深口袋。效果最明顯的甲硝唑加阿莫西林，副作用也最多。EFP 指引以這篇為依據，仍不建議常規使用，只留給特定病人考慮。",
+  "takeaway": "清創加甲硝唑與阿莫西林，12 個月全口探診深度比安慰劑多降 0.54 毫米、深口袋多降 1.19 毫米；EFP 指引不建議常規使用，只在特定病人（如年輕成人的廣泛型第 III 期）考慮。",
+  "topic_key": "perio:doi:10.1111/jcpe.13264",
+  "updated_at": "2026-11-02T00:57:32+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Antibiotic_pills.jpg/1280px-Antibiotic_pills.jpg",
+    "width": 1280,
+    "height": 789,
+    "alt": "一板膠囊，十二格裡有兩格已經空了。",
+    "caption": "一板 500 毫克阿莫西林膠囊，Maksym Kozlenko 2015 年拍攝。照片與文中的試驗無關。",
+    "credit": "Maksym Kozlenko，Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Antibiotic_pills.jpg",
+    "made": "2015"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "Teughels 等人 2020 年為第 16 屆歐洲牙周研討會做了一篇統合分析，只收雙盲、安慰劑對照、追蹤至少 6 個月的隨機試驗，共 28 個，要回答的就一件事：齦下清創之外再吃全身抗菌藥，探診深度（PPD）能比吃安慰劑多降多少。"
+    },
+    {
+      "type": "p",
+      "text": "所有藥物合起來，6 個月時全口 PPD 多降 0.45 毫米，作者換算，等於比安慰劑組的全口平均降幅再多 46%。預測區間從 −0.10 到 0.99 毫米，跨過了 0。作者在討論裡自己寫，這些有統計意義的差值在臨床上算不算數，還有得爭論。"
+    },
+    {
+      "type": "h",
+      "text": "甲硝唑加阿莫西林：深口袋最明顯"
+    },
+    {
+      "type": "p",
+      "text": "各種藥分開算，效果最明顯的是甲硝唑（metronidazole）加阿莫西林（amoxicillin）。12 個月時，它讓全口 PPD 比安慰劑多降 0.54 毫米，中等深度的口袋多降 0.59 毫米，初始深口袋多降 1.19 毫米。"
+    },
+    {
+      "type": "p",
+      "text": "殘餘口袋也是它。4、5、6、7 毫米以上的殘餘口袋，只有這個組合每一級都顯著減少。作者把差值換算成跟安慰劑組比的相對降幅，12 個月時 5 毫米以上的殘餘部位多減少約六成。這個組合的證據品質評為高。"
+    },
+    {
+      "type": "table",
+      "title": "各種抗菌藥，證據走到哪裡",
+      "head": [
+        "藥物",
+        "評定證據的試驗數",
+        "證據品質",
+        "作者怎麼看"
+      ],
+      "rows": [
+        [
+          "甲硝唑＋阿莫西林",
+          "11",
+          "高",
+          "4、5、6、7 毫米以上的殘餘口袋頻率都顯著減少（唯一）"
+        ],
+        [
+          "甲硝唑單用",
+          "2",
+          "中",
+          "試驗少，但結果一致"
+        ],
+        [
+          "阿奇黴素",
+          "7",
+          "中",
+          "各試驗結果互相矛盾"
+        ],
+        [
+          "克拉黴素、米諾環素、莫西沙星",
+          "1–2",
+          "低",
+          "克拉黴素、米諾環素 6 個月看不出額外好處；莫西沙星全口 PPD 與 CAL 結果較好，但只有一個試驗"
+        ]
+      ],
+      "caption": "依 Teughels 等（2020）討論一節「證據等級」整理。甲硝唑＋阿莫西林的 11 個試驗裡，10 個偏差風險低、7 個有 1 年資料；整篇回顧用這個組合的試驗共 17 個。"
+    },
+    {
+      "type": "h",
+      "text": "指引的支持文獻就是這一篇"
+    },
+    {
+      "type": "p",
+      "text": "同一場研討會產出的 EFP S3 臨床指引，建議 2.16 的支持文獻就是 Teughels 2020。指引也寫明這批證據偏差風險低、異質性低、結果一致，效果量比單做清創多約 40% 到 50%。結論是兩句話。"
+    },
+    {
+      "type": "quote",
+      "text": "出於對病人健康、以及全身性抗生素使用對公共衛生影響的顧慮，不建議在牙周炎病人的齦下清創中常規輔助使用。特定的全身性抗生素，可考慮用於特定病人類別（例如年輕成人的廣泛型第 III 期牙周炎）。",
+      "original": "Due to concerns about patient's health and the impact of systemic antibiotic use to public health, its routine use as adjunct to subgingival debridement in patients with periodontitis is not recommended. The adjunctive use of specific systemic antibiotics may be considered for specific patient categories (e.g. generalized periodontitis Stage III in young adults).",
+      "cite": "EFP S3 臨床指引（Sanz 等，2020）建議 2.16"
+    },
+    {
+      "type": "p",
+      "text": "前一句是 A 級（↓↓），分級表裡的強建議，寫法是「我們建議不要」；後一句是 0 級（↔），可以考慮。權衡那一段，指引寫的是甲硝唑加阿莫西林效果最明顯、副作用頻率也最高，還得顧到全球抗生素用過頭和抗藥性。"
+    },
+    {
+      "type": "h",
+      "text": "侵襲型沒有比較吃香"
+    },
+    {
+      "type": "p",
+      "text": "一般的看法是全身抗菌藥對侵襲型牙周炎比較有用，這篇沒有證實。慢性和侵襲型之間的差別，看起來沒有統計意義，臨床上也不重要。作者看來，收進來的病人大多是第 III、IV 期、B 或 C 級。"
+    },
+    {
+      "type": "p",
+      "text": "指引舉的例子是年輕成人的廣泛型第 III 期。這篇的資料裡，慢性與侵襲型之間看不出差別，「侵襲型」這個舊診斷不加分。"
+    },
+    {
+      "type": "h",
+      "text": "劑量、時機、長期，還沒有一致的證據"
+    },
+    {
+      "type": "list",
+      "items": [
+        "回顧引用第 6 屆歐洲研討會的共識：全身抗菌藥應該限用於特定病人與特定牙周狀況，例如重度、進展中的牙周炎。",
+        "劑量與天數沒有一致的證據。試驗裡的甲硝唑 200–500 毫克、阿莫西林 250–500 毫克，都是一天三次，吃 3 到 14 天。",
+        "該在治療初期吃，還是等癒合期過後（例如清創後 3 個月）再吃，還沒有定論。",
+        "統合分析只算到 12 個月。追到 2 年的研究只有兩個，其中用甲硝唑加阿莫西林的那個，2 年時和安慰劑仍有顯著差別；超過 2 年，沒有結論性的證據。"
+      ]
+    },
+    {
+      "type": "h",
+      "text": "副作用也是它最多"
+    },
+    {
+      "type": "p",
+      "text": "病人回報的不良反應，抗菌藥組在各試驗從 0% 到 36%，安慰劑組 0% 到 20%。副作用頻率最高的，每次都落在甲硝唑加阿莫西林，只是不是每個試驗都有人出狀況，這部分也沒能做統合分析。發燒和牙周膿瘍，反而是安慰劑組比較常見。"
+    },
+    {
+      "type": "p",
+      "text": "至少一個研究看到，一次全身療程就對糞便微生物群留下長期影響，抗藥性相關基因也變多。"
+    },
+    {
+      "type": "p",
+      "text": "安慰劑組沒有任何過敏反應的報告。吃甲硝唑加阿莫西林的 800 多名病人裡，有一位過敏性休克。"
+    },
+    {
+      "type": "paper",
+      "citation": "Teughels W, Feres M, Oud V, Martín C, Matesanz P, Herrera D. Adjunctive effect of systemic antimicrobials in periodontitis therapy: A systematic review and meta-analysis. *J Clin Periodontol*. 2020;47 Suppl 22:257-281.",
+      "doi": "10.1111/jcpe.13264",
+      "pmid": "31994207",
+      "link": "https://doi.org/10.1111/jcpe.13264",
+      "evidence": "系統性回顧與統合分析：28 個雙盲安慰劑對照隨機試驗；甲硝唑加阿莫西林證據品質高",
+      "design": "系統性回顧與統合分析；只收安慰劑對照、平行、雙盲、追蹤至少 6 個月的隨機試驗，各抗菌藥分開分析",
+      "sample": "28 個試驗（34 篇文章）；全口 PPD 6 個月的合併分析為 19 個試驗、1,316 人",
+      "question": "齦下清創之外加全身抗菌藥，探診深度會比清創加安慰劑多降多少？",
+      "access": "依全文整理；指引建議依 EFP S3 臨床指引全文"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Adjunctive effect of systemic antimicrobials in periodontitis therapy: A systematic review and meta-analysis",
+      "publisher": "Journal of Clinical Periodontology（Teughels W 等）",
+      "date": "2020",
+      "url": "https://doi.org/10.1111/jcpe.13264",
+      "note": "主角論文。讀全文（KU Leuven Lirias 典藏的出版版 PDF）。PMID 31994207。28 個試驗、偏差風險（3.4）、甲硝唑＋阿莫西林 17 個試驗與劑量（3.3）、全口 PPD WMD 0.448 與預測區間 −0.10 到 0.99（摘要、表 3）、45.93% 換算（4.4，分母為安慰劑組全口平均降幅）、MET+AMOX 12 個月全口 0.536、中等深度 0.594、深口袋 1.191 mm（3.5.2–3.5.3、4.4）、殘餘口袋 ≥5 mm 12 個月 WMD 9.913，作者換算相對安慰劑多減 60.56%（3.5.5、4.4）、證據等級（4.2，MET+AMOX 依 11 個試驗評定）、侵襲型與慢性比較、第 6 屆歐洲研討會共識引述（4.3）、不良反應範圍、安慰劑組無過敏反應、過敏性休克 1 例、副作用最高頻率 always…although not always present（3.5.9、4.3、結論）、臨床意義有爭議、2 年研究兩個（Harks 2015 MET+AMOX 2 年仍顯著）、5 年研究資料不足、超過 2 年無結論性證據、劑量與給藥時機、糞便微生物群（4.4）。"
+    },
+    {
+      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Sanz M 等）",
+      "date": "2020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/",
+      "note": "讀全文。DOI 10.1111/jcpe.13290；PMID 32383274。建議 2.16 原文、等級 A（↓↓）與 0（↔）、表 4 分級說明。"
+    },
+    {
+      "title": "File:Antibiotic pills.jpg",
+      "publisher": "Wikimedia Commons（Maksym Kozlenko）",
+      "date": "2015-09-11",
+      "url": "https://commons.wikimedia.org/wiki/File:Antibiotic_pills.jpg",
+      "note": "頭圖。檔案描述：Antibiotic pills (amoxicillin 500 mg)。CC BY-SA 4.0。"
+    }
+  ]
+}
