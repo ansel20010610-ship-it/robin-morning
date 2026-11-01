@@ -1,4 +1,4 @@
-// 今日氣象 (Wetter): Taichung's day under the masthead's dateline (app.js masthead, fillWeather), out of Open-Meteo —
+// 今日氣象 (Wetter): Taichung's day on the front page, in the row 接著上次 once held (app.js weatherBox, fillWeather), out of Open-Meteo —
 // free, no key, and nothing of the reader's goes out but the city's coordinates. One answer serves the morning: it is
 // kept in localStorage (rm.wx) and reused while it is today's and under three hours old; when the network fails, today's
 // kept copy still serves, and with none the masthead simply has no line.

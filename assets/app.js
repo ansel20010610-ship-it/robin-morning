@@ -194,12 +194,9 @@ const EMBLEM = `<svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
 // `fresh` (viewFront, Druckfrisch): the issue is opened for the first time on this device — the masthead carries the
 // press roller's ink line and the wine date stamp, and holds its own entrance (.fresh, style.css) until motion.js
 // pressRun lets it go. The stamp is decoration: the topline already says the number and the day.
-// 今日氣象 (assets/wetter.js): today's paper — the latest issue, dated today — gets an empty .wetter under the dateline,
-// which fillWeather fills once the forecast is in; an archive issue, or yesterday's paper before 07:30, gets none.
 function masthead(issue, fresh = false) {
   const date = issue?.date || twNow().date;
   const [y, m, d] = date.split("-").map(Number);
-  const today = Boolean(issue) && date === twNow().date && date === publishedIssues()[0]?.date;
   return `<header class="masthead${fresh ? " fresh" : ""}"><div class="wrap">
     ${fresh ? `<i class="roller" aria-hidden="true"></i>` : ""}
     <hr class="rule-double">
@@ -210,17 +207,26 @@ function masthead(issue, fresh = false) {
     <h1>${esc(S.cfg.title)}</h1>
     <div class="latin">${esc(S.cfg.subtitle)}</div>
     <div class="dateline">${esc(fmtDate(date))}${issue ? `・第 ${issue.no} 期` : ""}・${esc(S.cfg.publish_time)} 出刊</div>
-    ${today ? `<div class="wetter"></div>` : ""}
     <div class="checker" aria-hidden="true"></div>
     ${issue?.epigraph ? `<p class="epigraph"${verseVars(issue.epigraph.text)}>${verseHtml(issue.epigraph.text)}<span>${esc(issue.epigraph.ref)}（和合本）</span></p>` : ""}
   </div></header>`;
 }
-// The forecast arrives after the masthead is drawn: write it into the placeholder if that masthead is still on the
-// page (fetchWeather answers from its cache at once on every redraw after the first, and never rejects).
+// 今日氣象 (assets/wetter.js): today's paper — the latest issue, dated today — carries a weather box on the front page
+// where 接著上次 used to stand (that row moved to 往期 on 2026-11-02, so the verse keeps its place at the head of the
+// paper); an archive issue, or yesterday's paper before 07:30, has none. The box is drawn hidden with its label and
+// filled once the forecast is in, if it is still on the page (fetchWeather answers from its cache at once on every
+// redraw after the first, and never rejects); with no forecast it stays hidden rather than showing a bare label.
+function weatherBox(issue) {
+  const today = Boolean(issue) && issue.date === twNow().date && issue.date === publishedIssues()[0]?.date;
+  return today ? `<section class="wetter" hidden aria-label="今日氣象"><div class="lbl">今日氣象<span class="de">Wetter</span></div><div class="fc"></div></section>` : "";
+}
 function fillWeather() {
-  const box = main.querySelector(".masthead .wetter");
+  const box = main.querySelector(".wrap > .wetter");
   if (!box) return;
-  fetchWeather().then((d) => { if (d && box.isConnected) box.innerHTML = weatherHtml(d); });
+  fetchWeather().then((d) => {
+    const html = d ? weatherHtml(d) : "";
+    if (html && box.isConnected) { box.querySelector(".fc").innerHTML = html; box.hidden = false; }
+  });
 }
 // 排字: the verse is set a glyph at a time (style.css typeset), each code point in its own <i> numbered for its delay.
 // The glyphs stay inline — not inline-block — so line breaking, hanging punctuation and text-spacing-trim are those of
@@ -309,7 +315,7 @@ function viewFront(dateParam) {
     ${lateNote(issue.date)}
     ${prayerBox(issue)}
     ${lockMode() ? lockBar(arts, issue.date) : ""}
-    ${continueRow(issue.date, read)}
+    ${weatherBox(issue)}
     ${mains.length ? `<div class="sec-head"><h2>正刊</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
     ${lead ? `<a class="lead${posMark(issue.date, lead, read).cls}"${posMark(issue.date, lead, read).st} href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column, false, issue.date)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
     ${mains.slice(1).map((a) => itemCard(issue.date, a, read)).join("")}
@@ -327,14 +333,13 @@ function viewFront(dateParam) {
   </div>`;
   prefetch(issue);
   wireDigest(issue);
-  fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which rebuilds the masthead
-  // A tap on 接著上次 lands in the article where the reader stopped (viewArticle reads landKey).
-  main.querySelectorAll(".cont[data-jump]").forEach((el) => el.addEventListener("click", () => { landKey = el.dataset.jump; }));
+  fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
 }
 
-// 接著上次: the articles left part-read, newest issue first, at most two — on the front page above 正刊. Read ones and
-// (in 循序閱讀) locked ones are not offered; the day of any that is not from this issue is named.
+// 接著上次: the articles left part-read, newest issue first, at most two — on 往期, between the standing row and the
+// search (moved off the front page on 2026-11-02, where 今日氣象 took its row). Read ones and (in 循序閱讀) locked ones
+// are not offered; the day of any that is not from `issueDate` is named — every one's, when no issue is given.
 function inProgress(read, n = 2) {
   const out = [];
   for (const k of posKeys()) {
@@ -345,10 +350,10 @@ function inProgress(read, n = 2) {
   }
   return out.sort((x, y) => y.date.localeCompare(x.date)).slice(0, n);
 }
-function continueRow(issueDate, read) {
+function continueRow(issueDate, read, cls = "") {
   const rows = inProgress(read);
   if (!rows.length) return "";
-  return `<nav class="continue" aria-label="接著上次"><div class="lbl">接著上次<span class="de">Fortsetzung</span></div>
+  return `<nav class="continue${cls}" aria-label="接著上次"><div class="lbl">接著上次<span class="de">Fortsetzung</span></div>
     ${rows.map(({ date, a, p }) => `<a class="cont" href="#/a/${date}/${a.column}" data-jump="${date}/${a.column}" style="--p:${p}"><span class="k">${esc(col(a.column, date).name)}${date !== issueDate ? `・${esc(fmtDate(date, "short"))}` : ""}</span><b>${esc(a.title)}</b><span class="p">${pct(p)}%</span></a>`).join("")}</nav>`;
 }
 
@@ -1026,10 +1031,13 @@ function viewArchive() {
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span>
       <a class="stamp-btn" href="#/random" aria-label="隨手翻一篇：從往期裡抽一篇沒讀過的"><b>隨手翻</b><i>Zufall</i></a></header>
     <nav class="chips review" aria-label="常設"><a class="chip" href="#/concerts">近期演出</a><a class="chip" href="#/stats">閱讀年鑑</a><a class="chip" href="#/gallery">畫廊</a><a class="chip" href="#/marks">劃線本</a><a class="chip" href="#/press">印務室</a></nav>
+    ${continueRow(null, readSet(), " in-archive")}
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
     <div class="hits" aria-live="polite"></div>
     ${calendarHtml(twNow().date.slice(0, 7), pubs, done)}
     <nav class="chips" aria-label="專欄">${chips}</nav><div class="list"></div></div>`;
+  // A tap on 接著上次 lands in the article where the reader stopped (viewArticle reads landKey).
+  main.querySelectorAll(".cont[data-jump]").forEach((el) => el.addEventListener("click", () => { landKey = el.dataset.jump; }));
   const input = main.querySelector(".search"), hits = main.querySelector(".hits");
   let seq = 0, timer = 0;
   const fullText = async (q) => {
