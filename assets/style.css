@@ -845,6 +845,7 @@ button.chip { cursor: pointer; font-family: var(--sans); }
 .item.locked { cursor: default; opacity: .62; }
 .item.locked h3 { color: var(--ink-2); }
 .lock-note { display: flex; align-items: center; gap: 6px; margin-top: 6px !important; font-family: var(--sans); font-size: 12.5px !important; color: var(--muted) !important; -webkit-line-clamp: unset !important; }
+.meta-s .lock-t { color: var(--gold-ink); }
 .lock-note svg, .unlock svg, .lockfin svg { flex: 0 0 auto; width: 15px; height: 15px; }
 .locked-page { padding: 64px 4px 24px; text-align: center; }
 .locked-page > svg { width: 40px; height: 40px; color: var(--gold); }

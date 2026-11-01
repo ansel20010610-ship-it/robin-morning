@@ -122,6 +122,10 @@ function metaLine(date, a, read) {
   if (a.status === "undetermined") bits.unshift("查核未完成");
   if (a.from_reserve) bits.push("備稿");
   if (read.has(`${date}/${a.column}`)) bits.push('<span class="read-mark">已讀</span>');
+  else if (lockMode()) {
+    const spent = lockSpent(`${date}/${a.column}`), left = lockNeed(a.minutes) - spent;
+    if (spent) bits.push(`<span class="lock-t">已讀 ${lockClock(spent)}，${left > 0 ? `還差 ${lockClock(left)}` : "讀到文末就解鎖"}</span>`);
+  }
   return `<div class="meta-s">${bits.join("・")}</div>`;
 }
 // ——— 循序閱讀 (設定 → 閱讀方式): each issue opens one article at a time, in the front page's order. An article counts
@@ -130,6 +134,8 @@ function metaLine(date, a, read) {
 const lockMode = () => store.get("lock.mode", false) === true;
 const lockNeed = (minutes) => Math.min(240, Math.max(30, Math.round((minutes || 2) * 30))); // seconds
 const lockClock = (s) => (s >= 60 ? `${Math.floor(s / 60)} 分${s % 60 ? ` ${s % 60} 秒` : ""}` : `${s} 秒`);
+// Seconds already spent on an article; kept when the reader leaves it (or the app) and comes back.
+const lockSpent = (key) => Number(store.get("lock.t", {})[key]) || 0;
 // The first unread article before `column` in its issue, or null when `column` is open to read.
 function lockedBy(date, column) {
   if (!lockMode()) return null;
@@ -570,7 +576,7 @@ async function viewArticle(date, column, my) {
   // 循序閱讀: time spent on this article (page visible), kept across visits; the end counts once it is enough.
   const lock = lockMode() && !readSet().has(key);
   const need = lockNeed(minutes);
-  let dwell = Number(store.get("lock.t", {})[key]) || 0, tick = 0;
+  let dwell = lockSpent(key), tick = 0;
   const saveDwell = () => {
     if (!lock) return;
     const m = store.get("lock.t", {});
@@ -584,7 +590,7 @@ async function viewArticle(date, column, my) {
     if (!lock) return;
     unlockBox.hidden = false;
     unlockBox.innerHTML = readSet().has(key) ? `<b>✓ 讀完了</b>下一篇解鎖了。`
-      : dwell < need ? `${ICON.lock}<span>讀到文末、而且至少讀 ${lockClock(need)}，才會解鎖下一篇（還差 ${lockClock(need - dwell)}）。</span>`
+      : dwell < need ? `${ICON.lock}<span>讀到文末、而且至少讀 ${lockClock(need)}，才會解鎖下一篇（已讀 ${lockClock(dwell)}，還差 ${lockClock(need - dwell)}；中途離開，時間會留著）。</span>`
       : `${ICON.lock}<span>時間夠了，讀到文末就解鎖下一篇。</span>`;
     unlockBox.classList.toggle("ok", readSet().has(key));
   };
@@ -604,14 +610,14 @@ async function viewArticle(date, column, my) {
     tick = setInterval(() => {
       if (document.visibilityState !== "visible" || !body.isConnected) return;
       dwell++;
-      if (dwell % 5 === 0) saveDwell();
+      saveDwell(); // every second: leaving the app (iOS may close it in the background) loses nothing
       drawUnlock();
       if (reachedEnd()) finishRead();
     }, 1000);
   }
   const savePos = () => {
     if (!body.isConnected) return;
-    if (reachedEnd()) { finishRead(); store.del(posKey); return; }
+    if (reachedEnd()) { finishRead(); if (readSet().has(key)) { store.del(posKey); return; } }
     const p = ratio();
     if (p > 0.05) { saveT = Date.now(); store.set(posKey, Math.round(p * 1000) / 1000); }
   };
@@ -621,10 +627,11 @@ async function viewArticle(date, column, my) {
     clearTimeout(trail);
     trail = setTimeout(savePos, 250); // also keep where the gesture ended
   };
-  const onHide = () => { if (document.visibilityState === "hidden") savePos(); };
+  const onHide = () => { if (document.visibilityState === "hidden") { saveDwell(); savePos(); } };
   window.addEventListener("scroll", onScroll, { passive: true });
   document.addEventListener("visibilitychange", onHide);
-  window.addEventListener("pagehide", savePos);
+  const onLeave = () => { saveDwell(); savePos(); };
+  window.addEventListener("pagehide", onLeave);
   const back = store.get(posKey, 0);
   const resume = main.querySelector(".resume");
   let resumeT = 0;
@@ -644,7 +651,7 @@ async function viewArticle(date, column, my) {
     savePos(); // route() runs this before drawing the next view, so the article is still on the page
     window.removeEventListener("scroll", onScroll);
     document.removeEventListener("visibilitychange", onHide);
-    window.removeEventListener("pagehide", savePos);
+    window.removeEventListener("pagehide", onLeave);
     clearTimeout(resumeT);
     reader?.stop();
   };
@@ -923,7 +930,7 @@ function viewSettings() {
     <section class="set" id="push-set"><h2>出刊通知</h2><p class="small">讀取中……</p></section>
     <section class="set"><h2>字級</h2><div class="seg" data-g="fs">${FS.map((v, i) => `<button type="button" data-v="${v}" aria-pressed="${v === fs}">${["小", "標準", "大", "特大"][i]}</button>`).join("")}</div></section>
     <section class="set"><h2>閱讀方式</h2><div class="seg" data-g="lock">${[["free", "自由閱讀"], ["seq", "循序閱讀"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${(v === "seq") === lockMode()}">${l}</button>`).join("")}</div>
-      <p class="small">循序閱讀：每一期照首頁的順序，一次只開一篇；讀到文末、而且讀夠這篇預估時間的一半，下一篇才解鎖。還沒解鎖的只顯示標題，摘要先藏起來，全部讀完才算讀完今天。之前讀過的照樣算數。</p></section>
+      <p class="small">循序閱讀：每一期照首頁的順序，一次只開一篇；讀到文末、而且讀夠這篇預估時間的一半，下一篇才解鎖；中途離開，讀過的時間會留著，回來接著算。還沒解鎖的只顯示標題，摘要先藏起來，全部讀完才算讀完今天。之前讀過的照樣算數。</p></section>
     <section class="set"><h2>外觀</h2><div class="seg" data-g="theme">${[["auto", "跟隨系統"], ["light", "日間"], ["dark", "夜間"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${v === theme}">${l}</button>`).join("")}</div></section>
     ${canSpeak() ? `<section class="set"><h2>朗讀速度</h2><div class="seg" data-g="rate">${RATES.map((r) => `<button type="button" data-v="${r}" aria-pressed="${r === getRate()}">${r === 1 ? "標準" : `${r}×`}</button>`).join("")}</div>
       <p>文章右上角的喇叭按鈕會用裝置內建的中文語音朗讀全文，不需網路服務。</p></section>` : ""}
