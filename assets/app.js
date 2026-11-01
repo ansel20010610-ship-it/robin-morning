@@ -472,7 +472,7 @@ async function viewArticle(date, column, my) {
   const key = `${date}/${column}`;
   const k = col(column, date);
   const issue = issueBy(date);
-  const minutes = issue?.articles.find((x) => x.column === column)?.minutes;
+  const me = issue?.articles.find((x) => x.column === column), minutes = me?.minutes;
   // 本期翻閱: this article's place in its issue (the front page's order) — for the top bar's numeral and the contents
   // sheet (openContents). Its neighbours are fetched now, so a page chosen there is already in memory and gets its slide.
   const order = issue ? sortArticles(issue.articles, date) : [], idx = order.findIndex((x) => x.column === column);
@@ -501,6 +501,7 @@ async function viewArticle(date, column, my) {
       <div class="toc-slot"></div>
       <div class="body"></div>
       ${a.sources?.length ? `<section class="sources"><h2>來源與閱讀範圍</h2><ol>${a.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}${s.publisher ? `，${esc(s.publisher)}` : ""}${s.date ? `，${esc(s.date)}` : ""}${s.note ? ` <span>— ${inline(s.note)}</span>` : ""}</li>`).join("")}</ol>${(a.body || []).some((b) => b.type === "quote" && b.original) ? `<p class="small">外文引文未註明譯者的，都是本報自譯。</p>` : ""}</section>` : ""}
+      ${relatedHtml(me)}
       <div class="unlock" hidden></div>
       ${"share" in navigator ? `<div class="share"><button class="btn ghost" type="button" data-share>${ICON.share}分享這篇</button></div>` : ""}
       <div class="next"></div>
@@ -743,6 +744,20 @@ function openContents(date, order, idx) {
   sheet.showModal();
   const box = sheet.firstElementChild, now = box.querySelector(".opt.now");
   if (now) box.scrollTop = Math.max(0, now.getBoundingClientRect().top - box.getBoundingClientRect().top - (box.clientHeight - now.offsetHeight) / 2);
+}
+
+// 延伸閱讀 (Weiterlesen): up to three kin articles after an article's sources, out of the index's "related" (build_index.py,
+// by similarity). Rows like the contents sheet's — column, title, the day, a gold tick once read — for articles still in
+// the index and published; in 循序閱讀 a locked one is listed but is no link, with the note on what unlocks it.
+function relatedHtml(entry) {
+  const read = readSet();
+  const rows = (Array.isArray(entry?.related) ? entry.related : []).map(({ d, c }) => ({ d, c, a: issueBy(d)?.articles.find((x) => x.column === c) }))
+    .filter((x) => x.a && isPublished(x.d)).slice(0, 3).map(({ d, c, a }) => {
+      const by = lockedBy(d, c), done = read.has(`${d}/${c}`);
+      const inner = `<span class="t"><span class="k">${esc(col(c, d).name)}</span><b>${esc(a.title)}</b>${by ? `<span class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></span>` : ""}</span><span class="sum">${done ? `<i class="tick" role="img" aria-label="已讀">✓</i>` : ""}${esc(fmtDate(d, "short"))}</span>`;
+      return by ? `<div class="rel locked" aria-disabled="true">${inner}</div>` : `<a class="rel" href="#/a/${esc(d)}/${esc(c)}">${inner}</a>`;
+    });
+  return rows.length ? `<section class="related"><div class="sec-head"><h2>延伸閱讀</h2><span class="note">Weiterlesen</span></div>${rows.join("")}</section>` : "";
 }
 
 // A short contents list for long articles (four or more section headings).

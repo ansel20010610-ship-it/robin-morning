@@ -400,6 +400,19 @@ tr:first-child td { border-top: 0; }
 .sources ol { padding-left: 1.4em; margin: 0; }
 .sources li { margin: 0 0 7px; overflow-wrap: anywhere; }
 .sources li span { color: var(--muted); }
+/* 延伸閱讀 (app.js relatedHtml): quiet rows under the sources, after the contents sheet's — column over title, the day on
+   the right and a gold tick once read; a locked one (循序閱讀) greys out like .sheet.contents .opt.locked. */
+.related .sec-head { margin: 34px 0 0; }
+.rel { display: flex; align-items: flex-start; gap: 12px; padding: 11px 2px 12px; border-bottom: 1px solid var(--rule); color: inherit; text-decoration: none; }
+.rel .t { flex: 1; min-width: 0; display: grid; gap: 1px; }
+.rel .k { font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--gold-ink); font-weight: 600; }
+.rel b { font-weight: 600; font-size: 15.5px; line-height: 1.5; }
+.rel .sum { flex: 0 0 auto; display: flex; align-items: baseline; gap: 6px; padding-top: 15px; font-family: var(--sans); font-size: 12.5px; color: var(--muted); letter-spacing: .03em; }
+.rel .tick { font-style: normal; font-size: 15px; font-weight: 600; color: var(--gold-ink); }
+.rel.locked { color: var(--muted); cursor: default; }
+.rel.locked b { font-weight: 500; }
+.rel.locked .k { color: inherit; }
+.rel .lock-note { margin-top: 3px !important; }
 
 .next { margin: 30px 0 10px; border-top: 1px solid var(--rule); }
 .next .lbl { margin: 14px 0 0; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
@@ -623,7 +636,7 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
 }
 :where(:root[data-theme="dark"]) :is(.status, .prayer-box, .finish, .music, .scripture, .paper-card, .gig-key, .takeaway, .random .card) { box-shadow: inset 0 1px 0 color-mix(in srgb, var(--gold) 35%, transparent); }
 @media print {
-  .nav, .dock, .topbar, .resume, .share, .next, .toc { display: none !important; }
+  .nav, .dock, .topbar, .resume, .share, .next, .related, .toc { display: none !important; }
   body { padding: 0; background: #fff; color: #000; }
 }
 
@@ -748,10 +761,10 @@ img.img-off { visibility: hidden; }
    and nav-pop animation are left alone. */
 @media (hover: none) and (prefers-reduced-motion: no-preference) {
   body { touch-action: manipulation; }
-  :is(.lead, .item:not(.locked), .issue-row, a.gig, .hit, .sheet .opt, .cont) {
+  :is(.lead, .item:not(.locked), .issue-row, a.gig, .hit, .sheet .opt, .cont, a.rel) {
     transition: translate .26s cubic-bezier(.2,1.4,.4,1), border-color .26s ease, background .25s;
   }
-  :is(.lead, .item:not(.locked), .issue-row, a.gig, .hit, .sheet .opt, .cont):active {
+  :is(.lead, .item:not(.locked), .issue-row, a.gig, .hit, .sheet .opt, .cont, a.rel):active {
     translate: 0 1px; border-bottom-color: var(--ink); transition-duration: .07s, .07s, .25s; transition-timing-function: ease-out;
   }
   :is(.chip, .seg button, .pitch .steps button) { transition: box-shadow .26s cubic-bezier(.2,1.4,.4,1), background .2s, color .2s; }
