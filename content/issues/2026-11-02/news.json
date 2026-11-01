@@ -1,0 +1,205 @@
+{
+  "column": "news",
+  "date": "2026-11-02",
+  "title": "赫爾松停火週日到期，聯合國駐西撒哈拉任務已結束",
+  "dek": "赫爾松六天停火週日夜到期，烏方說俄方不願延長；西撒哈拉的聯合國任務在安理會表決失敗後失效。台灣：宜蘭外海地震，油價續凍。",
+  "brief": "赫爾松州六天的局部停火 11 月 1 日晚間到期，烏克蘭官員說俄方不願延長。聯合國駐西撒哈拉的任務因安理會兩份草案都沒通過，10 月 31 日午夜結束。台灣方面，海巡署回應中國海警稱在東部海域巡查，宜蘭外海規模 5.6 地震沒有災情。",
+  "topic_key": "news:2026-11-02",
+  "updated_at": "2026-11-02T05:23:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "body": [
+    {
+      "type": "p",
+      "text": "赫爾松州的六天局部停火週日夜裡到期，聯合國在西撒哈拉的 35 年任務則在 10 月 31 日午夜失效。"
+    },
+    {
+      "type": "news",
+      "title": "世界",
+      "items": [
+        {
+          "headline": "赫爾松停火週日夜到期",
+          "summary": "赫爾松州 10 月 27 日起的局部停火，11 月 1 日晚間到期，是 2022 年以來最長的一次。停火讓人道任務進入俄占的奧列什基，居民 10 月 31 日抵達烏克蘭境內。烏克蘭官員對法新社說，基輔提出延長，「俄方不要」；俄方未公開表態。",
+          "source": "法新社經法國24、半島電視台",
+          "url": "https://www.france24.com/en/live-news/20261101-longest-truce-of-ukraine-war-in-kherson-region-set-to-end",
+          "when": "11 月 1 日，烏克蘭當地時間"
+        },
+        {
+          "headline": "聯合國西撒哈拉任務結束",
+          "summary": "安理會 10 月 30 日表決，美國草案 11 票贊成，被俄羅斯否決；俄方延長一年的草案也未通過，聯合國駐西撒哈拉任務 10 月 31 日午夜失效。美國草案要刪去名稱裡的「公投」，以摩洛哥自治方案為談判基礎；摩洛哥歡迎結果，波利薩里奧陣線與阿爾及利亞反對美方版本。",
+          "source": "聯合國新聞、半島電視台",
+          "url": "https://news.un.org/en/story/2026/11/1168717",
+          "when": "11 月 1 日，紐約時間"
+        },
+        {
+          "headline": "剛果伊波拉死亡逾 5,000",
+          "summary": "剛果民主共和國政府數據顯示，這波伊波拉疫情死亡人數 10 月 30 日超過 5,000，確診逾 1 萬例，擴及 26 省中的 8 省，是史上第二大疫情。病毒為本迪布焦型，沒有核准的藥物或疫苗。奈及利亞成為第四個通報病例的非洲國家。",
+          "source": "半島電視台、路透社",
+          "url": "https://www.aljazeera.com/news/2026/10/31/ebola-death-toll-in-dr-congo-passes-5000",
+          "when": "10 月 31 日，台灣時間"
+        },
+        {
+          "headline": "生物多樣性大會訂四年路線",
+          "summary": "聯合國生物多樣性大會（COP17）10 月 31 日在亞美尼亞閉幕，通過「葉里溫路徑」，為 2030 年目標剩下的四年排路線，要求減少有害自然的補貼，並宣布約 20 億美元新資金。公約執行秘書說，真正的考驗是各國政府回去之後改變什麼。",
+          "source": "聯合國新聞",
+          "url": "https://news.un.org/en/story/2026/11/1168718",
+          "when": "10 月 31 日，葉里溫當地時間"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "title": "台灣",
+      "items": [
+        {
+          "headline": "海巡署：中國海警無管轄權",
+          "summary": "中國海警局說「虎獅艦」編隊在台灣以東海域依法執法巡查。海巡署 10 月 31 日深夜發布新聞稿，稱這是「假執法、真騷擾」的認知作戰，台灣對東部專屬經濟海域有管轄權，中國沒有，並派「吉安艦」等艦艇全程監控兩艘中國海警船。",
+          "source": "中央社",
+          "url": "https://www.cna.com.tw/news/asoc/202611010015.aspx",
+          "when": "11 月 1 日，台灣時間"
+        },
+        {
+          "headline": "宜蘭外海規模 5.6 地震",
+          "summary": "11 月 1 日 16:20，台灣東部海域發生規模 5.6 地震，震央在宜蘭縣政府東北東方 39.4 公里，深度 119.5 公里，宜蘭與花蓮最大震度 3 級，沒有災情或傷亡通報。氣象署提醒，一週內要留意規模 4.5 至 5 的餘震。",
+          "source": "中央社、中央氣象署",
+          "url": "https://www.cna.com.tw/news/ahel/202611010125.aspx",
+          "when": "11 月 1 日，台灣時間"
+        },
+        {
+          "headline": "中油下週汽柴油不調價",
+          "summary": "中油宣布 11 月 2 日至 8 日汽柴油價格不調整。中油說，中東衝突推高國際油價，凍漲是為穩定民生；2 月 28 日至 11 月 1 日累計吸收約 318.6 億元。",
+          "source": "中央社",
+          "url": "https://www.cna.com.tw/news/ahel/202610310152.aspx",
+          "when": "10 月 31 日，台灣時間"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "11 月 2 日至 8 日中油牌價（元／公升）",
+      "head": [
+        "油品",
+        "價格"
+      ],
+      "rows": [
+        [
+          "92 無鉛汽油",
+          "31.2"
+        ],
+        [
+          "95 無鉛汽油",
+          "32.7"
+        ],
+        [
+          "98 無鉛汽油",
+          "34.7"
+        ],
+        [
+          "超級柴油",
+          "29.9"
+        ]
+      ],
+      "caption": "中油 10 月 31 日公告，與前一週相同。資料來源：中央社。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Longest truce of Ukraine war, in Kherson region, set to end",
+      "publisher": "France 24（法新社）",
+      "date": "2026-11-01",
+      "url": "https://www.france24.com/en/live-news/20261101-longest-truce-of-ukraine-war-in-kherson-region-set-to-end",
+      "note": "停火到期時間、烏克蘭官員對法新社的說法；內文沒有俄方公開表態。法新社另一則稱雙方都未宣布延長，正文只寫烏方官員說法"
+    },
+    {
+      "title": "Ukrainian evacuees from Russian-occupied Oleshky reunite with family",
+      "publisher": "Al Jazeera",
+      "date": "2026-11-01",
+      "url": "https://www.aljazeera.com/news/2026/11/1/ukrainian-evacuees-from-russian-occupied-oleshky-reunite-with-family",
+      "note": "六天停火、最長的局部停火；俄羅斯人權專員 Lantratova 說雙方同意定期人道任務；撤離人數官方未公布"
+    },
+    {
+      "title": "Ukraine: Oleshky ceasefire offers 'hope' for civilians as attacks on aid vehicles continue",
+      "publisher": "UN News",
+      "date": "2026-10-30",
+      "url": "https://news.un.org/en/story/2026/10/1168712",
+      "note": "白宮 10 月 23 日宣布、停火 11 月 1 日晚間到期"
+    },
+    {
+      "title": "Following Contentious Debate, Security Council Fails to Adopt Resolution to Extend UN Mission for Referendum in Western Sahara",
+      "publisher": "UN Press（SC/16498）",
+      "date": "2026-10-30",
+      "url": "https://press.un.org/en/2026/sc16498",
+      "note": "第 10126 次會議；美國草案 11 贊成、俄羅斯否決；俄方草案延長至 2027-10-31 未通過。俄方草案票數 UN 寫 3 贊成，Al Jazeera 寫 2 贊成，正文不寫票數"
+    },
+    {
+      "title": "Western Sahara: UN 'stands ready' to keep supporting peace efforts as MINURSO mission ends",
+      "publisher": "UN News",
+      "date": "2026-11-01",
+      "url": "https://news.un.org/en/story/2026/11/1168717",
+      "note": "授權 10 月 31 日午夜到期、11 月 1 日起清算、秘書長談話與特使"
+    },
+    {
+      "title": "Why is Morocco celebrating the defeat of a UN resolution on Western Sahara?",
+      "publisher": "Al Jazeera",
+      "date": "2026-11-01",
+      "url": "https://www.aljazeera.com/news/2026/11/1/why-is-morocco-celebrating-the-defeat-of-a-un-resolution-on-western-sahara",
+      "note": "美國草案內容（刪去「公投」、自治方案）；摩洛哥、波利薩里奧陣線、阿爾及利亞立場"
+    },
+    {
+      "title": "Ebola death toll in DR Congo passes 5,000",
+      "publisher": "Al Jazeera（Reuters）",
+      "date": "2026-10-31",
+      "url": "https://www.aljazeera.com/news/2026/10/31/ebola-death-toll-in-dr-congo-passes-5000",
+      "note": "死亡逾 5,000、8 省、第二大疫情、本迪布焦型、奈及利亞、沙烏地阿拉伯。公視 11 月 1 日稿的 10,414 例／5,372 死來源未標明，未採用"
+    },
+    {
+      "title": "COP17: Nations chart 'Yerevan Pathway' to speed up action for nature",
+      "publisher": "UN News",
+      "date": "2026-11-01",
+      "url": "https://news.un.org/en/story/2026/11/1168718",
+      "note": "10 月 31 日閉幕、葉里溫路徑、約 20 億美元新資金、COP18 在厄瓜多"
+    },
+    {
+      "title": "中國海警稱東部海域常態執法巡查 海巡署：認知作戰",
+      "publisher": "中央社",
+      "date": "2026-11-01",
+      "url": "https://www.cna.com.tw/news/asoc/202611010015.aspx",
+      "note": "海巡署新聞稿 10 月 31 日深夜發布；虎獅艦（1308）、梅山艦（2303）、吉安艦"
+    },
+    {
+      "title": "Taiwan says China has 'no jurisdiction' after coast guard patrol claims",
+      "publisher": "Focus Taiwan",
+      "date": "2026-11-01",
+      "url": "https://focustaiwan.tw/politics/202611010009",
+      "note": "與中央社報導互相核對；海巡署主張內容一致"
+    },
+    {
+      "title": "東部海域5.6地震 氣象署：一週內防規模4.5至5餘震",
+      "publisher": "中央社",
+      "date": "2026-11-01",
+      "url": "https://www.cna.com.tw/news/ahel/202611010125.aspx",
+      "note": "吳健富談話、餘震提醒、無災情"
+    },
+    {
+      "title": "地震報告（115075 號）",
+      "publisher": "中央氣象署",
+      "date": "2026-11-01",
+      "url": "https://www.cwa.gov.tw/V8/C/E/EQ/EQ115075-1101-162007.html",
+      "note": "16:20、規模 5.6、深度 119.5 公里、最大震度 3 級"
+    },
+    {
+      "title": "中油：下週汽柴油價格不調整 累計吸收約318.6億元",
+      "publisher": "中央社",
+      "date": "2026-10-31",
+      "url": "https://www.cna.com.tw/news/ahel/202610310152.aspx",
+      "note": "11 月 2 日 00:00 至 8 日 24:00；各油品價格；累計吸收。Focus Taiwan 寫 11 月 1 日起算，採中央社"
+    },
+    {
+      "title": "CPC to leave domestic gasoline, diesel prices unchanged next week",
+      "publisher": "Focus Taiwan",
+      "date": "2026-10-31",
+      "url": "https://focustaiwan.tw/business/202610310012",
+      "note": "價格與累計吸收金額互相核對"
+    }
+  ]
+}
