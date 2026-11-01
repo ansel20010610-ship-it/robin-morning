@@ -1,0 +1,267 @@
+{
+  "column": "music",
+  "date": "2026-11-02",
+  "title": "借錢的那個夏天",
+  "dek": "1788 年夏天，莫札特一封接一封寫信向朋友借錢。最後三首交響曲在這幾週先後記進他的作品目錄，第 40 號是中間那首。",
+  "brief": "莫札特寫信向朋友借錢，說搬進新家以後工作做得比以前多，要不是常掉進黑色的念頭，進度還會更好。那是 1788 年夏天，最後三首交響曲正一首接一首記進他的作品目錄，G 小調第 40 號是中間那首。",
+  "topic_key": "music:mozart-k550",
+  "updated_at": "2026-11-02T01:01:48+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "portrait",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Mozart_%28unfinished%29_by_Lange_1782.jpg/1280px-Mozart_%28unfinished%29_by_Lange_1782.jpg",
+    "width": 1280,
+    "height": 1769,
+    "alt": "油畫，年輕男子的肖像，背景深黑。",
+    "caption": "Joseph Lange 畫的莫札特，未完成，約 1782 至 1783 年，比第 40 號早了五、六年。Commons 的說明稱歷史學者視為現存最準確的莫札特肖像，原畫在薩爾茲堡莫札特博物館展出。",
+    "credit": "Joseph Lange；影像經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mozart_(unfinished)_by_Lange_1782.jpg",
+    "made": "1782–1783"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1788 年 6 月 27 日，莫札特寫信給 Puchberg，先認了一件事：上次借的錢，他沒辦法這麼快還，請對方耐心等。Puchberg 做綢緞布料批發，和莫札特同是共濟會的弟兄。信快寫完時，莫札特說起剛搬進去的新住處。"
+    },
+    {
+      "type": "quote",
+      "text": "我搬來這裡的 10 天，工作做得比在另一處住所的 2 個月還多；要是我不是那麼常掉進黑色的念頭（我得硬把它們擋開），進度還能更好，因為我住得愉快、舒適，而且便宜！",
+      "original": "in the 10 days that I have been living here I have worked more than in 2 months in the other lodgings, and if I did not lapse so often into black thoughts (which I must fend off with force), I would make even better progress, for I live pleasantly, – comfortably – and – cheaply!",
+      "cite": "莫札特致 Puchberg，1788 年 6 月 27 日；據 Mozarteum 的英譯轉譯"
+    },
+    {
+      "type": "p",
+      "text": "前一天，第 39 號交響曲剛記進他的作品目錄。第 40 號在 7 月 25 日，第 41 號在 8 月 10 日。"
+    },
+    {
+      "type": "h",
+      "text": "先借一百，再開口一兩千"
+    },
+    {
+      "type": "p",
+      "text": "這一串求借的信，現存最早的一封寫在 6 月。他還欠著一筆舊帳，又開口借 100 弗羅林，說等他在 Casino 的音樂會開始、訂票錢進來，就連同舊帳一起還，借期到下週，隨信附上兩張票請對方收下。Puchberg 在信上記了一筆：100 弗羅林，已寄出。"
+    },
+    {
+      "type": "p",
+      "text": "接下來那封，數目拉到 1 千或 2 千弗羅林，借 1 到 2 年，照付利息。他給的理由是"
+    },
+    {
+      "type": "quote",
+      "text": "我就能帶著比較不憂心的腦袋、比較自由的心工作，也就賺得更多。",
+      "original": "I can work with a less care-laden mind and a freer heart, can consequently earn more.",
+      "cite": "莫札特致 Puchberg，1788 年 6 月 17 日前；據 Mozarteum 的英譯轉譯"
+    },
+    {
+      "type": "p",
+      "text": "同一封信裡，房東逼他當場把錢付清，他們當天頭一晚睡在新家；他請 Puchberg 至少明天借他幾百。6 月 17 日，Puchberg 寄了 200 弗羅林；一兩年的大筆借款，他沒有答應。"
+    },
+    {
+      "type": "p",
+      "text": "6 月 27 日那封，就是開頭那封，除了請他寬限，還說 Puchberg 要是不幫，他會失去名譽與聲望。7 月初又一封：他手上有兩張當票，請 Puchberg 憑票借錢，要馬上辦。"
+    },
+    {
+      "type": "timeline",
+      "title": "1788 年夏天",
+      "items": [
+        {
+          "when": "1788.6",
+          "label": "兩封求借的信",
+          "note": "一封請借 100 弗羅林，附 2 張音樂會的票；一封請借 1 千或 2 千弗羅林、為期 1 到 2 年。"
+        },
+        {
+          "when": "1788.6.26",
+          "label": "第 39 號",
+          "note": "記入作品目錄。"
+        },
+        {
+          "when": "1788.6.27",
+          "label": "「黑色的念頭」",
+          "note": "信裡說搬來 10 天，工作做得比先前 2 個月還多。"
+        },
+        {
+          "when": "1788.7 初",
+          "label": "2 張當票",
+          "note": "請 Puchberg 憑票借錢，要求立刻辦。"
+        },
+        {
+          "when": "1788.7.25",
+          "label": "第 40 號",
+          "note": "記入作品目錄。"
+        },
+        {
+          "when": "1788.8.10",
+          "label": "第 41 號",
+          "note": "記入作品目錄。"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "伴奏先到，主題後來"
+    },
+    {
+      "type": "p",
+      "text": "第 40 號是 G 小調。現存的莫札特交響曲只有兩首是小調，另一首是他 17 歲寫的第 25 號，也是 G 小調，人稱「小 G 小調」；這首則是「大 G 小調」。"
+    },
+    {
+      "type": "p",
+      "text": "第一樂章很快，一開始先出聲的是伴奏：中提琴分成兩部，和低音弦樂一起低聲咕噥，陰沉，近乎不祥。那個有名的主題接著才進來，只交給弦樂；等它重來一次，木管才加進來，拉著長音。"
+    },
+    {
+      "type": "p",
+      "text": "讓伴奏先開口、主題晚一步，莫札特自己後來在最後一首鋼琴協奏曲又用了一次，孟德爾頌的小提琴協奏曲、拉赫曼尼諾夫的第三號鋼琴協奏曲也都這樣開頭。"
+    },
+    {
+      "type": "p",
+      "text": "第三樂章掛著小步舞曲的名字。小步舞曲本來是跳舞用的，這一首一開口卻是凶的，重音落在錯開的拍子上。一位寫樂曲解說的作者說，他想像不出有人能跟著它跳。中段轉柔，弦樂和管樂輪流出聲。"
+    },
+    {
+      "type": "p",
+      "text": "終樂章一開頭是一串往上衝的快音，通稱「曼海姆火箭」。有學者指出，莫札特其他 G 小調作品的最後一個樂章大多較輕，這首從頭緊到尾，直到最後一個和弦都還在小調裡。"
+    },
+    {
+      "type": "p",
+      "text": "據 Nottebohm 1887 年的說法，貝多芬在筆記本裡抄過這首交響曲的 29 小節，抄下的地方夾在他《第五號交響曲》的草稿中間；《第五號》第三樂章開頭那串音，和莫札特這個終樂章很像。"
+    },
+    {
+      "type": "p",
+      "text": "舒曼說這首有希臘式的輕盈與優雅。羅森（Charles Rosen）在《古典風格》裡則說是激情、暴力、哀傷。舒曼那句，我怎麼也套不到那個凶巴巴的小步舞曲上。"
+    },
+    {
+      "type": "music",
+      "composer": "莫札特（Wolfgang Amadeus Mozart）",
+      "work": "G 小調第 40 號交響曲，K. 550",
+      "work_original": "Symphony No. 40 in G minor, K. 550",
+      "composed": "1788 年 7 月 25 日記入作品目錄",
+      "performers": "卡爾・貝姆（Karl Böhm）指揮 柏林愛樂（Berliner Philharmoniker）",
+      "recording": "Deutsche Grammophon，1962 年版權標示",
+      "duration": "約 26 分鐘",
+      "movements": [
+        "I. Molto allegro",
+        "II. Andante",
+        "III. Menuetto. Allegretto – Trio",
+        "IV. Finale. Allegro assai"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Mozart Symphony No. 40 G minor K. 550 Karl Böhm Berliner Philharmoniker",
+        "artist_hint": "Böhm",
+        "track_filter": [
+          "No. 40",
+          "K. 550"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "錄音挑卡爾・貝姆指揮柏林愛樂。貝姆最出名的就是莫札特，1960 年代他受託和柏林愛樂錄完全部莫札特交響曲。同一張專輯也收了第 39 號和第 41 號。哈農庫特（Nikolaus Harnoncourt）推想這三首是一部作品。第 40 號居中，沒有第 39 號那樣的引子，終樂章也不像第 41 號那麼大。"
+    },
+    {
+      "type": "h",
+      "text": "單簧管透露的線索"
+    },
+    {
+      "type": "p",
+      "text": "常有人寫，莫札特生前沒聽過這首交響曲。也有人主張，最後三首是為後世而寫，不是為了演出。學者 Zaslaw 指出，「沒聽過」這件事常被當成事實寫，現代的研究並不支持。"
+    },
+    {
+      "type": "p",
+      "text": "Zaslaw 從樂譜找到線索。第 40 號有兩個版本，一版多了一對單簧管，其他管樂跟著調整，單簧管很可能是後來改版時加的。Zaslaw 的看法是，莫札特眼前要是沒有一場特定的演出，不會費這個工夫加上單簧管，還把長笛和雙簧管重寫一遍。"
+    },
+    {
+      "type": "p",
+      "text": "1791 年 4 月 17 日，維也納城堡劇院一場音樂家協會的音樂會由薩列里指揮，海報上寫著「莫札特先生作的一首大交響曲」，沒說哪一首。樂團裡有一對吹單簧管的兄弟，Zaslaw 指出，這只能把範圍縮到第 39 號或第 40 號。"
+    },
+    {
+      "type": "p",
+      "text": "還有一封 1802 年的信。2011 年一位學者據它寫了論文，題名大意是〈K. 550 G 小調交響曲在 van Swieten 男爵家的一次演出，莫札特在場〉（題名為本報自譯，信的內容未能核對）。"
+    },
+    {
+      "type": "p",
+      "text": "沒有單簧管的那一版，Zaslaw 認為也一定演過。慢板樂章有兩處重新配器，是莫札特的手跡；照他的推論，那是莫札特聽過以後，才發現要改的地方。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Mozart to Michael Puchberg, [June 1788], No. 1076",
+      "publisher": "Digital Mozart Edition（Mozarteum）",
+      "date": "未註明",
+      "url": "https://dme.mozarteum.at/DME/objs/raradocs/transcr/pdf_eng/1076_WAM_Puchberg_1788.pdf",
+      "note": "現存系列求借信的第一封（編註），在 1077 之前；借 100 弗羅林到下週、欠 8 杜卡特、附 2 張票；Puchberg 手註「100 florins sent」。編註：Puchberg 沒答應 1 或 2 千的長期借款；Puchberg 的生平。"
+    },
+    {
+      "title": "Mozart to Michael Puchberg, [before 17th June, 1788], No. 1077",
+      "publisher": "Digital Mozart Edition（Mozarteum）",
+      "date": "未註明",
+      "url": "https://dme.mozarteum.at/DME/objs/raradocs/transcr/pdf_eng/1077_WAM_Puchberg_1788.pdf",
+      "note": "請借 1 或 2 千弗羅林 1 到 2 年；「less care-laden mind and a freer heart」一句；房東逼他當場付清、至少明天借幾百；搬進 Waringergasse 新家；Puchberg 手註「the 17th June 788 f 200 sent.」（6 月 17 日寄出 200 弗羅林）。"
+    },
+    {
+      "title": "Mozart to Michael Puchberg, 27th June, 1788, No. 1079",
+      "publisher": "Digital Mozart Edition（Mozarteum）",
+      "date": "1788-06-27",
+      "url": "https://dme.mozarteum.at/DME/objs/raradocs/transcr/pdf_eng/1079_WAM_Puchberg_1788.pdf",
+      "note": "還不出錢、失去名譽、搬來 10 天、黑色念頭的段落；引文轉譯自此英譯（德文原件未取得）。"
+    },
+    {
+      "title": "Mozart to Michael Puchberg, [beginning of July, 1788], No. 1080",
+      "publisher": "Digital Mozart Edition（Mozarteum）",
+      "date": "未註明",
+      "url": "https://dme.mozarteum.at/DME/objs/raradocs/transcr/pdf_eng/1080_WAM_Puchberg_1788.pdf",
+      "note": "2 張當票、「must be done at once」；編註：莫札特已把值錢的東西送進當鋪。"
+    },
+    {
+      "title": "Symphony No. 40 (Mozart)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Symphony_No._40_(Mozart)",
+      "note": "作品目錄日期、兩個版本、Einstein「appeal to eternity」（轉引自 Zaslaw 1994，原書未讀）、Zaslaw 對「莫札特沒聽過」的反駁、1791 年節目單與 Stadler 兄弟（Zaslaw：只能限定在第 39 或第 40 號）、單簧管與慢板重新配器的推論、Jonášová 論文德文版書目（Mozart Studien 20，Tutzing 2011，253–268）、各樂章描述（引 Keefe）、舒曼與 Rosen 的評語（轉引，正文轉述不加引號）、貝多芬抄譜（引 Nottebohm 1887）、Harnoncourt 的看法、第 25 號。Wenzel 信件的細節只見於此頁，正文不採用。"
+    },
+    {
+      "title": "Symphony No. 40 in G minor, K. 550（樂曲解說）",
+      "publisher": "Runyan Program Notes（Wm. E. Runyan）",
+      "date": "",
+      "url": "https://www.runyanprogramnotes.com/program_note/symphony-no-40-g-minor-k-550/",
+      "note": "開頭的低聲伴奏（a bit of a murmur）、「the famous main theme」只用弦樂、木管在主題重來時進入、兩個版本、小步舞曲（作者自述想像不出有人跟著它跳舞）、曼海姆火箭。"
+    },
+    {
+      "title": "The Life of Mozart, Vol. III（Otto Jahn）",
+      "publisher": "Project Gutenberg",
+      "date": "未註明",
+      "url": "https://www.gutenberg.org/files/43413/43413-h/43413-h.htm",
+      "note": "三首交響曲日期：降 E 大調 6 月 26 日、G 小調 7 月 25 日、C 大調 8 月 10 日。"
+    },
+    {
+      "title": "Karl Böhm",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Karl_B%C3%B6hm",
+      "note": "主要以莫札特錄音聞名；1960 年代受託與柏林愛樂錄完全部莫札特交響曲（頁面未給年份與廠牌）。"
+    },
+    {
+      "title": "Mozart: Symphonies Nos. 35, 36, 38, 39, 40, 41 — Berliner Philharmoniker, Karl Böhm",
+      "publisher": "Qobuz",
+      "date": "",
+      "url": "https://www.qobuz.com/gb-en/album/mozart-symphonies-nos-35-36-38-39-40-41-berliner-philharmoniker-karl-bohm/0002894474162",
+      "note": "Deutsche Grammophon；第 40 號四個樂章的長度（8:26、8:05、4:45、5:03）與 ℗ 1962；資料卡 recording 欄的 1962 是這個 ℗ 版權標示，不是錄音年；頁面未載錄音日期與地點，專輯說明稱 Böhm 的莫札特交響曲為 DG 於 1959–1966 年錄製。"
+    },
+    {
+      "title": "A Performance of the G Minor Symphony K. 550 at Baron van Swieten's Rooms in Mozart's Presence",
+      "publisher": "Newsletter of the Mozart Society of America 16/1（Milada Jonášová）；捷克科學院書目紀錄",
+      "date": "",
+      "url": "https://asep.lib.cas.cz/arl-cav/en/detail-cav_un_epca-0385724-A-Performance-of-the-G-Minor-Symphony-K-550-at-Baron-van-Swietens-Rooms-in-Mozarts-Presence",
+      "note": "論文英文節譯的書目紀錄（題名：在 van Swieten 男爵家、莫札特在場的一次 K. 550 演出，談 Wenzel 1802 年的信）；德文原版刊於 Mozart Studien 20（Tutzing 2011）。只讀到書目，信的內容細節未核，正文只用題名。"
+    },
+    {
+      "title": "File:Mozart (unfinished) by Lange 1782.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Mozart_(unfinished)_by_Lange_1782.jpg",
+      "note": "頭圖；Public domain；Joseph Lange，1782–1783。"
+    }
+  ]
+}
