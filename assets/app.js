@@ -944,26 +944,36 @@ let shownHash = null, navTap = false, fromList = null;
 const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
 
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
+let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising number, so a step back is recognisable
+// Pages with a back arrow: an article, an event. Any other page keeps its scroll position for when the reader steps
+// back to it (the browser's back, the back arrow, a swipe), whatever they went to in between; a tap on the bottom
+// bar starts the page from the top.
+const isDetail = (x) => /^#\/(a|concert)\//.test(x || "");
 async function route(ev) {
   const my = ++routeSeq;
   if (ev) routed++;
   cleanup(); cleanup = () => {};
   document.title = S.cfg.title;
   const h = location.hash || "#/";
-  const leaving = Boolean(shownHash?.startsWith("#/a/")); // coming out of an article
-  if (shownHash && !leaving && shownHash !== h) places.set(shownHash, scrollY);
+  const leaving = isDetail(shownHash); // coming out of an article or an event
+  if (shownHash && !isDetail(shownHash) && shownHash !== h) places.set(shownHash, scrollY);
   const tapped = navTap;
   navTap = false;
   const backTo = leaving ? fromList : null; // the page the article on screen was opened from
+  const stamped = history.state?.i;
+  const back = Boolean(ev) && Number.isInteger(stamped) && stamped < lastIdx; // landed on an entry stamped earlier
+  if (!Number.isInteger(stamped)) { try { history.replaceState({ ...(history.state || {}), i: ++navIdx }, ""); } catch { /* ignore */ } }
+  lastIdx = Number.isInteger(history.state?.i) ? history.state.i : lastIdx;
   const art = h.match(/^#\/a\/(\d{4}-\d{2}-\d{2})\/([\w-]+)/);
-  // The page an article was opened from; its back button returns there (history.back) instead of to the issue.
-  // (From one article on to another it keeps pointing the same way: back then steps through them like a browser.)
-  if (!art || !ev || tapped) fromList = null;
+  const detail = isDetail(h);
+  // The page an article (or event) was opened from; its back button returns there (history.back) instead of to the
+  // issue. (From one article on to another it keeps pointing the same way: back then steps through them like a browser.)
+  if (!detail || !ev || tapped) fromList = null;
   else if (!leaving) fromList = shownHash;
   shownHash = h;
   if (tapped) places.delete(h);
-  const place = !art && !tapped && backTo === h ? places.get(h) : undefined;
-  const active = tabOf(art && fromList ? fromList : h);
+  const place = !detail && !tapped && (back || backTo === h) ? places.get(h) : undefined;
+  const active = tabOf(detail && fromList ? fromList : h);
   $("#nav").innerHTML = NAV.map(([href, label, icon]) => `<a href="${href}" ${href === active ? 'aria-current="page"' : ""}>${ICON[icon]}<span>${label}</span></a>`).join("");
   $(".nav .in")?.style.setProperty("--i", NAV.findIndex(([href]) => href === active));
   stopReveal();
