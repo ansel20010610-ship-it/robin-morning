@@ -11,6 +11,7 @@
   --gold: #A5843F;
   --gold-ink: #7C642F; /* gold for small text: 4.5:1 on paper and paper-2 (WCAG AA); --gold stays for rules and ornaments */
   --gold-soft: #D9C595;
+  --ink-on-gold: #1a150d; /* text set on a solid gold ground (.btn.gold); gold is light in both themes, so one value */
   --foil: #D29F2E; --foil-hi: #F6D06A; /* the masthead's gold sweep */
   --wine: #6E2536;
   --robin: #B65A2E;
@@ -30,18 +31,19 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #15120E; --paper-2: #1E1A14; --paper-3: #2A241B;
+    /* paper-2/3 one step up from the page, so a card reads as a card at night; the rule a shade warmer to match */
+    --paper: #15120E; --paper-2: #201B14; --paper-3: #2C261C;
     --ink: #EDE4D3; --ink-2: #CDC2AF; --muted: #998F7E;
-    --rule: #4D4230; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36; --foil: #E3B957; --foil-hi: #FFF0BF;
+    --rule: #564A33; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36; --foil: #E3B957; --foil-hi: #FFF0BF;
     --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82;
     --shadow: 0 1px 0 rgba(0,0,0,.4), 0 10px 28px -18px rgba(0,0,0,.9);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #15120E; --paper-2: #1E1A14; --paper-3: #2A241B;
+  --paper: #15120E; --paper-2: #201B14; --paper-3: #2C261C;
   --ink: #EDE4D3; --ink-2: #CDC2AF; --muted: #998F7E;
-  --rule: #4D4230; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36; --foil: #E3B957; --foil-hi: #FFF0BF;
+  --rule: #564A33; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36; --foil: #E3B957; --foil-hi: #FFF0BF;
   --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82;
   --shadow: 0 1px 0 rgba(0,0,0,.4), 0 10px 28px -18px rgba(0,0,0,.9);
   color-scheme: dark;
@@ -219,8 +221,13 @@ blockquote cite { display: block; font-style: normal; font-family: var(--sans); 
 .body li { margin: .25em 0; }
 .body li::marker { color: var(--gold); }
 
+/* The small gold label over a block (fact box, timeline, table, figure, news, exercise, sources, next, take-away, pitch):
+   one face everywhere; each block below keeps only its own spacing. */
+:is(.facts .ft, .timeline .tt, .table .tt, .svgfig .tt, .news .tt, .exercise .lbl, .callout .lbl, .sources h2, .next .lbl, .takeaway .lbl, .pitch .tt) {
+  font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600;
+}
 .facts { margin: 1.6em 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); padding: 4px 0; }
-.facts .ft { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; padding: 8px 0 2px; }
+.facts .ft { padding: 8px 0 2px; }
 .facts dl { margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 16px; }
 .facts dt { font-family: var(--sans); font-size: 13px; color: var(--muted); padding: 7px 0; border-top: 1px solid var(--rule); }
 .facts dd { margin: 0; font-size: .92em; line-height: 1.65; padding: 7px 0; border-top: 1px solid var(--rule); overflow-wrap: anywhere; }
@@ -246,7 +253,7 @@ figcaption .when { color: var(--gold-ink); }
 .detail .pos { font-family: var(--sans); font-size: 11.5px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
 
 .timeline { margin: 1.8em 0; padding: 14px 0 6px; border-top: 2px solid var(--ink); }
-.timeline .tt { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; margin-bottom: 8px; }
+.timeline .tt { margin-bottom: 8px; }
 .timeline ol { list-style: none; margin: 0; padding: 0 0 0 22px; position: relative; }
 .timeline ol::before { content: ""; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 1px; background: var(--rule); }
 .timeline li { position: relative; padding: 4px 0 12px; }
@@ -256,7 +263,7 @@ figcaption .when { color: var(--gold-ink); }
 .timeline .nt { display: block; font-size: .88em; color: var(--ink-2); line-height: 1.7; }
 
 .table { margin: 1.8em 0; }
-.table .tt { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; margin-bottom: 6px; }
+.table .tt { margin-bottom: 6px; }
 .table .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); }
 table { border-collapse: collapse; width: 100%; font-size: .84em; line-height: 1.6; }
 th { text-align: left; font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .06em; color: var(--ink-2); padding: 9px 10px 7px; border-bottom: 1px solid var(--gold); white-space: nowrap; }
@@ -264,7 +271,7 @@ td { padding: 9px 10px; border-top: 1px solid var(--rule); vertical-align: top; 
 tr:first-child td { border-top: 0; }
 
 .svgfig { margin: 1.8em 0; }
-.svgfig .tt { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; margin-bottom: 6px; }
+.svgfig .tt { margin-bottom: 6px; }
 .svgfig .canvas { background: var(--paper-2); border: 1px solid var(--rule); padding: 10px; }
 .svgfig svg { width: 100%; height: auto; display: block; font-family: var(--sans); }
 .svgfig svg .ink, .pitch svg .ink { fill: var(--ink); stroke: var(--ink); }
@@ -278,7 +285,7 @@ tr:first-child td { border-top: 0; }
 .svgfig svg text.muted, .svgfig svg text.accent, .svgfig svg text.gold { stroke: none; }
 
 .news { margin: 1.2em 0 1.8em; border-top: 2px solid var(--ink); }
-.news .tt { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; padding: 10px 0 2px; }
+.news .tt { padding: 10px 0 2px; }
 .news article { padding: 12px 0 13px; border-bottom: 1px solid var(--rule); }
 .news h3 { font-size: 1em; line-height: 1.55; margin: 0 0 4px; font-weight: 700; }
 .news p { margin: 0; font-size: .92em; line-height: 1.78; color: var(--ink-2); }
@@ -311,7 +318,7 @@ tr:first-child td { border-top: 0; }
   display: inline-flex; align-items: center; gap: 8px; text-decoration: none; line-height: 1.2;
 }
 .btn.ghost { background: transparent; color: var(--ink); }
-.btn.gold { background: var(--gold); border-color: var(--gold); color: #1a150d; }
+.btn.gold { background: var(--gold); border-color: var(--gold); color: var(--ink-on-gold); }
 .btn svg { width: 16px; height: 16px; }
 .btn:disabled { opacity: .5; cursor: default; }
 
@@ -324,7 +331,6 @@ tr:first-child td { border-top: 0; }
 
 .exercise, .callout { margin: 1.8em 0; padding: 16px 16px 6px; border: 1px solid var(--ink); position: relative; }
 .exercise::before, .callout::before { content: ""; position: absolute; inset: 3px; border: 1px solid var(--rule); pointer-events: none; }
-.exercise .lbl, .callout .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; }
 .exercise h3 { font-size: 1.05em; margin: 4px 0 8px; }
 .exercise h4 { font-family: var(--sans); font-size: 13px; color: var(--ink-2); margin: 12px 0 2px; font-weight: 600; letter-spacing: .06em; }
 .exercise ol, .exercise ul, .callout ul { padding-left: 1.3em; margin: 4px 0 12px; font-size: .95em; }
@@ -335,24 +341,24 @@ tr:first-child td { border-top: 0; }
 .spoiler::before, .spoiler::after { content: ""; flex: 1; border-top: 1px dashed var(--wine); }
 
 .sources { margin: 36px 0 0; padding-top: 14px; border-top: 2px solid var(--ink); font-family: var(--sans); font-size: 13px; line-height: 1.7; color: var(--ink-2); }
-.sources h2 { font-family: var(--sans); font-size: 12px; letter-spacing: .18em; color: var(--gold-ink); margin: 0 0 8px; }
+.sources h2 { margin: 0 0 8px; }
 .sources ol { padding-left: 1.4em; margin: 0; }
 .sources li { margin: 0 0 7px; overflow-wrap: anywhere; }
 .sources li span { color: var(--muted); }
 
 .next { margin: 30px 0 10px; border-top: 1px solid var(--rule); }
-.next .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); margin: 14px 0 0; font-weight: 600; }
+.next .lbl { margin: 14px 0 0; }
 
 /* ——— Pitch ——— */
 .pitch { margin: 1.8em 0; }
-.pitch .tt { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; margin-bottom: 6px; }
+.pitch .tt { margin-bottom: 6px; }
 .pitch .board { background: color-mix(in srgb, var(--paper-2) 70%, #6f8f5f 12%); border: 1px solid var(--rule); }
 .pitch svg { width: 100%; height: auto; display: block; }
 .pitch .lines { fill: none; stroke: color-mix(in srgb, var(--ink) 35%, transparent); stroke-width: .35; }
 .pitch .p-blue circle { fill: var(--blue); }
 .pitch .p-red circle { fill: var(--red); }
 .pitch .p-blue text, .pitch .p-red text { fill: var(--paper); font: 600 2.6px var(--sans); text-anchor: middle; dominant-baseline: central; }
-.pitch .ball { fill: #fff; stroke: #111; stroke-width: .35; }
+.pitch .ball { fill: var(--paper); stroke: var(--ink); stroke-width: .35; }
 .pitch .ar { fill: none; stroke-width: .55; stroke-linecap: round; }
 .pitch .ar.pass { stroke: var(--ink); }
 .pitch .ar.run { stroke: var(--blue); stroke-dasharray: 1.4 1.1; }
@@ -377,12 +383,12 @@ tr:first-child td { border-top: 0; }
 .issue-row .d span { font-family: var(--sans); font-size: 11.5px; color: var(--muted); }
 .issue-row ul { list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 1.65; }
 .issue-row li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.issue-row li i { font-style: normal; font-family: var(--sans); font-size: 11.5px; color: var(--gold); margin-right: 6px; }
+.issue-row li i { font-style: normal; font-family: var(--sans); font-size: 11.5px; color: var(--gold-ink); margin-right: 6px; }
 .empty { padding: 40px 0; text-align: center; color: var(--muted); font-size: 15px; }
 
 /* ——— Settings ——— */
 .set { margin: 24px 0; }
-.set h2 { font-family: var(--sans); font-size: 12px; letter-spacing: .18em; color: var(--gold); margin: 0 0 8px; }
+.set h2 { font-family: var(--sans); font-size: 12px; letter-spacing: .18em; color: var(--gold-ink); margin: 0 0 8px; }
 .seg { display: inline-flex; border: 1px solid var(--ink); }
 .seg button { border: 0; background: none; padding: 8px 14px; font-family: var(--sans); font-size: 14px; cursor: pointer; }
 .seg button + button { border-left: 1px solid var(--ink); }
@@ -467,13 +473,13 @@ h1, h2, h3, .lead h3, .item h3 { text-wrap: balance; }
 
 /* ——— Masthead epigraph (the day's verse) ——— */
 .epigraph { margin: 14px auto 2px; max-width: 26em; font-size: 15px; line-height: 1.8; color: var(--ink-2); }
-.epigraph span { display: block; font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--gold); margin-top: 2px; }
+.epigraph span { display: block; font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--gold-ink); margin-top: 2px; }
 
 /* ——— Article extras ——— */
 a.kicker { text-decoration: none; }
 a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-soft); }
 .toc { margin: 4px 0 18px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); font-family: var(--sans); }
-.toc summary { cursor: pointer; padding: 10px 2px; font-size: 13px; letter-spacing: .12em; color: var(--gold); font-weight: 600; list-style: none; }
+.toc summary { cursor: pointer; padding: 10px 2px; font-size: 13px; letter-spacing: .12em; color: var(--gold-ink); font-weight: 600; list-style: none; }
 .toc summary::-webkit-details-marker { display: none; }
 .toc summary::after { content: "＋"; float: right; color: var(--muted); }
 .toc[open] summary::after { content: "－"; }
@@ -511,6 +517,12 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) img { filter: brightness(.93) contrast(1.02); } }
 :root[data-theme="dark"] img { filter: brightness(.93) contrast(1.02); }
+/* At night a paper-2 block gets a dark-gold hairline along its top edge, the way a card catches the lamp. :where() keeps
+   the ancestor out of the specificity, so .finish.done's own frame still wins. */
+@media (prefers-color-scheme: dark) {
+  :where(:root:not([data-theme="light"])) :is(.status, .prayer-box, .finish, .music, .scripture, .paper-card, .gig-key, .takeaway) { box-shadow: inset 0 1px 0 color-mix(in srgb, var(--gold) 35%, transparent); }
+}
+:where(:root[data-theme="dark"]) :is(.status, .prayer-box, .finish, .music, .scripture, .paper-card, .gig-key, .takeaway) { box-shadow: inset 0 1px 0 color-mix(in srgb, var(--gold) 35%, transparent); }
 @media print {
   .nav, .dock, .topbar, .resume, .share, .next, .toc { display: none !important; }
   body { padding: 0; background: #fff; color: #000; }
@@ -521,7 +533,7 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
 .set .steps { font-family: var(--sans); font-size: 14px; line-height: 1.7; color: var(--ink-2); padding-left: 1.4em; margin: 6px 0 10px; }
 .code-in { display: flex; gap: 8px; margin: 8px 0; }
 .code-in input { flex: 1; min-width: 0; font: 15px var(--sans); padding: 9px 10px; border: 1px solid var(--rule); background: var(--paper-2); color: var(--ink); border-radius: 0; }
-.set details.more summary { cursor: pointer; font-family: var(--sans); font-size: 13px; color: var(--gold); margin-top: 10px; }
+.set details.more summary { cursor: pointer; font-family: var(--sans); font-size: 13px; color: var(--gold-ink); margin-top: 10px; }
 
 .body h2 { scroll-margin-top: calc(60px + env(safe-area-inset-top)); }
 
@@ -537,7 +549,7 @@ img.img-off { visibility: hidden; }
 
 /* The perio column's take-away conclusion: the first thing under the title. */
 .article-head .takeaway { margin: 4px 0 16px; padding: 14px 16px 15px; background: var(--paper-2); border-left: 3px solid var(--gold); }
-.article-head .takeaway .lbl { display: block; font-family: var(--sans); font-size: 12px; letter-spacing: .16em; font-weight: 600; color: var(--gold-ink); margin-bottom: 6px; }
+.article-head .takeaway .lbl { display: block; margin-bottom: 6px; }
 .article-head .takeaway p { margin: 0; font-size: 1.06em; line-height: 1.75; font-weight: 600; color: var(--ink); }
 .article-head .takeaway p.ev { margin-top: 10px; padding-top: 9px; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 13px; line-height: 1.6; font-weight: 400; color: var(--ink-2); }
 .article-head .takeaway p.ev b { margin-right: 8px; font-size: 12px; letter-spacing: .12em; color: var(--gold-ink); }
@@ -605,6 +617,27 @@ img.img-off { visibility: hidden; }
 .nav a svg { transition: transform .3s cubic-bezier(.2,.8,.2,1), color .3s; }
 .nav a[aria-current="page"] svg { transform: translateY(-1px) scale(1.06); }
 
+/* 墨壓 — the press of type into paper. There is no vibration on an iPhone web app, so the finger gets its answer from the
+   page: a card or row sinks a pixel and its rule darkens to ink, a chip or segment takes a shallow inset, an icon
+   shrinks, a tab's glyph dips. Pressed in 70ms, released over 260ms with a little overshoot. Touch screens only, and
+   not under reduced motion. `translate` is used rather than `transform` so the reveal (.rv) and the tab's own transform
+   and nav-pop animation are left alone. */
+@media (hover: none) and (prefers-reduced-motion: no-preference) {
+  body { touch-action: manipulation; }
+  :is(.lead, .item:not(.locked), .issue-row, a.gig, .hit, .sheet .opt) {
+    transition: translate .26s cubic-bezier(.2,1.4,.4,1), border-color .26s ease, background .25s;
+  }
+  :is(.lead, .item:not(.locked), .issue-row, a.gig, .hit, .sheet .opt):active {
+    translate: 0 1px; border-bottom-color: var(--ink); transition-duration: .07s, .07s, .25s; transition-timing-function: ease-out;
+  }
+  :is(.chip, .seg button, .pitch .steps button) { transition: box-shadow .26s cubic-bezier(.2,1.4,.4,1), background .2s, color .2s; }
+  :is(.chip, .seg button, .pitch .steps button):active { box-shadow: inset 0 1px 2px color-mix(in srgb, var(--ink) 25%, transparent); transition-duration: .07s; }
+  .icon-btn svg { transition: transform .26s cubic-bezier(.2,1.4,.4,1); }
+  .icon-btn:active svg { transform: scale(.88); transition-duration: .07s; }
+  .nav a svg { transition: transform .3s cubic-bezier(.2,.8,.2,1), color .3s, translate .26s cubic-bezier(.2,1.4,.4,1); }
+  .nav a:active svg { translate: 0 1px; transition-duration: .3s, .3s, .07s; }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   /* Cards rise into place as they come into view. */
   .rv { opacity: 0; transform: perspective(900px) translateY(42px) rotateX(-26deg) scale(.94); transform-origin: 50% 0; }
@@ -633,14 +666,12 @@ img.img-off { visibility: hidden; }
   .nav a[aria-current="page"] svg { animation: nav-pop .55s cubic-bezier(.2,1.7,.4,1); filter: drop-shadow(0 0 5px color-mix(in srgb, var(--foil-hi) 70%, transparent)); }
   @keyframes nav-pop { 0% { transform: scale(.7); } 50% { transform: translateY(-4px) scale(1.25); } 100% { transform: translateY(-1px) scale(1.06); } }
 
-  /* Each time the masthead is drawn, a bright band of gold runs slowly across the title once, with a glow as it passes. */
-  .masthead h1 { background: linear-gradient(105deg, var(--ink) 0 35%, var(--foil) 42%, var(--foil-hi) 50%, var(--foil) 58%, var(--ink) 65% 100%) 100% 0 / 280% 100%;
-    -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil-once 4.2s .5s cubic-bezier(.45,.05,.35,1) both; }
-  @keyframes foil-once {
-    0% { background-position: 100% 0; filter: none; }
-    50% { filter: drop-shadow(0 0 9px color-mix(in srgb, var(--foil-hi) 75%, transparent)); }
-    100% { background-position: 0 0; filter: none; }
-  }
+  /* The title is set in ink with a band of gold held off to one side; the animation further down (foil-loop) runs the band
+     across. The glow that travels with it is a separate layer (h1::after), so the text layer itself is never filtered. */
+  .masthead h1 { position: relative; background: linear-gradient(105deg, var(--ink) 0 35%, var(--foil) 42%, var(--foil-hi) 50%, var(--foil) 58%, var(--ink) 65% 100%) 100% 0 / 280% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .masthead h1::after { content: ""; position: absolute; inset: -30% -8%; z-index: -1; pointer-events: none; opacity: 0;
+    background: radial-gradient(ellipse at 50% 55%, color-mix(in srgb, var(--foil-hi) 32%, transparent), transparent 62%); }
   @keyframes foil { from { background-position: 100% 0; } to { background-position: 0 0; } }
   /* Each time, too — the full entrance: the crest drops in and bounces, a Secession sunburst flares behind it, square
      shockwaves ripple out, the robin flaps its wing; the title's letters converge out of a blur before the gold runs across;
@@ -664,15 +695,19 @@ img.img-off { visibility: hidden; }
   .crest .wave { position: absolute; inset: 0; z-index: 1; border: 2px solid var(--foil); pointer-events: none; animation: wave 1.5s .55s cubic-bezier(.15,.7,.3,1) both; }
   .crest .wave.w2 { border-width: 1px; animation-delay: .8s; }
   @keyframes wave { 0% { opacity: 0; transform: scale(1) rotate(0); } 12% { opacity: .95; } 100% { opacity: 0; transform: scale(3.6) rotate(45deg); } }
-  .masthead h1 { animation: title-in 1.3s .25s cubic-bezier(.2,.75,.2,1) both, foil-loop 9s 1.35s cubic-bezier(.45,.05,.35,1) infinite; }
-  /* The gold runs across in about 4 seconds, rests about 5, and comes round again for as long as the masthead is shown. */
+  .masthead h1 { animation: title-in 1.3s .25s cubic-bezier(.2,.75,.2,1) both, foil-loop 9s 1.35s cubic-bezier(.45,.05,.35,1) 3 both; }
+  .masthead h1::after { animation: foil-glow 9s 1.35s cubic-bezier(.45,.05,.35,1) 3 both; }
+  /* The gold runs across in about 4 seconds, rests about 5, and comes round three times; then the title stays in ink.
+     Both ends of the gradient are solid ink, so the resting state is the same whichever way it stopped. While the
+     masthead is scrolled out of view (motion.js adds .away) the sweep and its glow are paused, not drawn for nobody. */
   @keyframes foil-loop {
     0% { background-position: 100% 0; }
-    23% { filter: drop-shadow(0 0 9px color-mix(in srgb, var(--foil-hi) 75%, transparent)); }
-    46% { background-position: 0 0; filter: none; }
-    100% { background-position: 0 0; filter: none; }
+    46%, 100% { background-position: 0 0; }
   }
-  @keyframes title-in { from { opacity: 0; letter-spacing: .75em; filter: blur(14px); transform: scale(1.18); } to { opacity: 1; letter-spacing: .16em; filter: blur(0); transform: none; } }
+  @keyframes foil-glow { 0%, 46%, 100% { opacity: 0; } 23% { opacity: 1; } }
+  .masthead.away h1 { animation-play-state: running, paused; } /* title-in keeps going; only the sweep waits */
+  .masthead.away h1::after { animation-play-state: paused; }
+  @keyframes title-in { from { opacity: 0; letter-spacing: .75em; filter: blur(14px); transform: scale(1.18); } to { opacity: 1; letter-spacing: .16em; filter: none; transform: none; } }
   .masthead .checker { animation: band 1s .15s cubic-bezier(.2,.7,.2,1) both; }
   .masthead .checker ~ .checker { animation-name: band-r; }
   @keyframes band { from { transform: translateX(-60%) scaleY(0); opacity: 0; } 60% { transform: translateX(4%) scaleY(1.6); opacity: 1; } to { transform: none; opacity: .9; } }

@@ -76,9 +76,23 @@ export function rain(count = 72) {
 }
 
 // The masthead's entrance, on top of its CSS: a spray of Klimt-style gold tesserae flies out of the crest and settles
-// as a faint mosaic behind the title.
+// as a faint mosaic behind the title. It also watches the masthead: scrolled out of view, the title's gold sweep is
+// paused (.away, style.css) instead of being drawn for nobody. There is only ever one masthead, so one watcher — the
+// previous one is let go each time the front page is drawn again.
+let headWatch = null;
 export function mastheadShow(head) {
   if (calm() || !head) return;
+  headWatch?.disconnect();
+  headWatch = null;
+  if ("IntersectionObserver" in window) {
+    headWatch = new IntersectionObserver((es) => {
+      for (const e of es) {
+        if (!e.target.isConnected) { headWatch?.disconnect(); headWatch = null; return; }
+        e.target.classList.toggle("away", !e.isIntersecting);
+      }
+    });
+    headWatch.observe(head);
+  }
   const crest = head.querySelector(".crest");
   if (!crest) return;
   head.querySelector(".mosaic")?.remove();
