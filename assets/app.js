@@ -211,6 +211,8 @@ function untilText(mins) {
 // The front page's status line: countdown before 07:30, then what has arrived today.
 function frontStatus() {
   if (isPreview()) return "預覽模式：顯示尚未在 07:30 出刊的稿件。";
+  // Offline (「可能」: iOS's navigator.onLine is sometimes wrong), the front page is the issue the service worker kept.
+  if (!navigator.onLine) { const d = publishedIssues()[0]?.date; return `可能離線・顯示存下的${d ? ` ${esc(fmtDate(d, "short"))}` : ""}版本，連上網路會自己更新。`; }
   const now = twNow();
   const todays = issueBy(now.date);
   const late = lateOf(now.date);
@@ -225,6 +227,31 @@ function frontStatus() {
 // Everything the latest-issue front page shows that can change while it stays open: [issue, status line].
 const frontState = () => [JSON.stringify(publishedIssues()[0] || null), frontStatus()];
 let shownFront = [];
+
+// 印刷故障: the one card for anything that fails to load — the paper's data at boot, an article that is not there or not
+// reachable. A German kicker (Druckfehler; Offline when the connection is the likely reason), one sentence on what
+// happened, and always a way on: 再試一次 (the caller wires [data-retry]) and 回到今日. 「可能」 leaves room for iOS's
+// navigator.onLine, which sometimes lies.
+function errorCard({ text, offline = !navigator.onLine, retry = true, home = true } = {}) {
+  return `<div class="err" role="alert"><div class="in"><span class="de">${offline ? "Offline" : "Druckfehler"}</span><h2>${offline ? "可能離線了" : "印刷故障"}</h2>
+    <p>${text}</p><div class="btns">${retry ? `<button class="btn" type="button" data-retry>再試一次</button>` : ""}${home ? `<a class="btn ghost" href="#/">回到今日</a>` : ""}</div></div></div>`;
+}
+// Under an article that cannot be reached: the other articles of its issue the service worker has kept (sw.js CONTENT
+// cache), so the reader has something to open while offline.
+async function keptCards(date, column) {
+  const issue = issueBy(date);
+  if (!issue || !("caches" in window)) return "";
+  const kept = [];
+  for (const a of sortArticles(issue.articles, date)) {
+    if (a.column === column) continue;
+    let hit = S.articles.has(`${date}/${a.column}`);
+    if (!hit) { try { hit = Boolean(await caches.match(`content/issues/${date}/${a.column}.json`)); } catch { /* no cache: nothing kept */ } }
+    if (hit) kept.push(a);
+  }
+  if (!kept.length) return "";
+  const read = readSet();
+  return `<div class="sec-head"><h2>已存下的</h2><span class="de">Aufbewahrt</span><span class="note">同一期，離線可讀</span></div>${kept.map((a) => itemCard(date, a, read)).join("")}`;
+}
 
 // ——— Views ———
 function viewFront(dateParam) {
@@ -406,7 +433,18 @@ async function viewArticle(date, column, my) {
   }
   main.innerHTML = `<div class="wrap"><p class="loading">翻到這一頁……</p></div>`;
   let a;
-  try { a = await article(date, column); } catch { if (my === routeSeq) main.innerHTML = `<div class="wrap"><p class="empty">這篇找不到，可能被風吹走了。<a href="#/">回到今日</a></p></div>`; return; }
+  try { a = await article(date, column); } catch (e) {
+    // An HTTP status (util.js getJSON) means the server answered and the article is not there; anything else is the
+    // connection. Offline, the issue's kept articles follow the card; 再試一次 draws this page again.
+    const http = /^\d{3} /.test(e?.message || "");
+    const offline = !navigator.onLine || !http;
+    const name = col(column, date).name;
+    const cards = offline ? await keptCards(date, column) : "";
+    if (my !== routeSeq) return;
+    main.innerHTML = `<div class="wrap">${errorCard({ offline, text: offline ? `目前可能離線，〈${esc(name)}〉這篇還沒存下來；連上網路後再試一次。` : `〈${esc(name)}〉這篇找不到，可能被風吹走了。` })}${cards}</div>`;
+    main.querySelector("[data-retry]").onclick = (ev) => { ev.currentTarget.disabled = true; viewArticle(date, column, my); };
+    return;
+  }
   if (my !== routeSeq) return;
   const key = `${date}/${column}`;
   const k = col(column, date);
@@ -1122,11 +1160,17 @@ function themeBar(v) {
 async function boot() {
   watchUpdates();
   themeBar(document.documentElement.dataset.theme || "auto");
-  try {
-    await loadData();
-  } catch (e) {
-    main.innerHTML = `<div class="wrap"><p class="empty">讀不到報紙資料，請確認網路後重新整理。</p></div>`;
-    return;
+  // No paper at all (config.json unreachable and not kept yet): the 印刷故障 card, and another try on the button or as
+  // soon as the connection is back. There is no page to go back to yet, so no 回到今日.
+  for (;;) {
+    try { await loadData(); break; } catch (e) {
+      console.warn("boot failed", e);
+      main.innerHTML = `<div class="wrap">${errorCard({ text: "讀不到報紙資料，可能是網路的問題。", home: false })}</div>`;
+      await new Promise((res) => {
+        main.querySelector("[data-retry]").onclick = (ev) => { ev.currentTarget.disabled = true; res(); };
+        window.addEventListener("online", res, { once: true });
+      });
+    }
   }
   initDock();
   const back = await handleCallback();
@@ -1176,6 +1220,9 @@ async function boot() {
   };
   setInterval(refreshFront, 60 * 1000);
   setInterval(refetch, 5 * 60 * 1000);
+  // The status line says when the paper is the kept copy (frontStatus); back online, the index is fetched again.
+  window.addEventListener("offline", refreshFront);
+  window.addEventListener("online", refetch);
   // Back in front (often from the 07:30 notice): articles a reserve fill added just before 07:30 are in a newer index.
   // iOS keeps a home-screen app's page alive in the background, so opening it again shows the page as it was left;
   // back on the front page after a while, still near the top, it is drawn afresh so the masthead and the cards play again.

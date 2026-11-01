@@ -144,7 +144,7 @@ function scriptureEl(b) {
 // told in the sentence and the sources (STYLE.md section 3), so the older provenance labels (史料, 報導...) stay hidden.
 const SHOWN_TAGS = new Set(["推論", "詮釋", "本文讀法", "原創假設", "原創示範", "傳聞", "戰術推論"]);
 // The paper's own translations are noted once under the sources, not after every quote.
-const plainCite = (c) => c.replace(/本文自譯[；;，,]?\s*/g, "").replace(/[（(]\s*[）)]/g, "").replace(/[；;，,]\s*([）)])/g, "$1").replace(/[；;，,]\s*$/, "").trim();
+const plainCite = (c) => c.replace(/本文自譯[；;，,。]?\s*/g, "").replace(/[（(]\s*[）)]/g, "").replace(/[；;，,]\s*([）)])/g, "$1").replace(/[；;，,]\s*$/, "").trim();
 
 function block(b, figs) {
   switch (b.type) {
@@ -153,7 +153,9 @@ function block(b, figs) {
     case "h":
       return html(`<h2>${inline(b.text)}</h2>`);
     case "quote":
-      return html(`<blockquote>${b.original ? `<p class="orig">${esc(b.original)}</p>` : ""}<p class="zh">${inline(b.text || "")}</p>${b.cite && plainCite(b.cite) ? `<cite>${inline(plainCite(b.cite))}</cite>` : ""}</blockquote>`);
+      // A quote in another language is set the Viennese way (.orig-q: hairlines, a hanging „, the original centred);
+      // a Chinese-only quote keeps the gold rule on its left.
+      return html(`<blockquote${b.original ? ' class="orig-q"' : ""}>${b.original ? `<p class="orig">${esc(b.original)}</p>` : ""}<p class="zh">${inline(b.text || "")}</p>${b.cite && plainCite(b.cite) ? `<cite>${inline(plainCite(b.cite))}</cite>` : ""}</blockquote>`);
     case "list": {
       const tag = b.ordered ? "ol" : "ul";
       return html(`<${tag}>${(b.items || []).map((x) => `<li>${inline(x)}</li>`).join("")}</${tag}>`);
