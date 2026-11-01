@@ -5,7 +5,7 @@
   "dek": "進了兩球，換下來就容易多了，弗利克說。後防缺四個人，什麼時候回來，他也還不知道。",
   "brief": "弗利克說，亞馬爾進了兩球，換下來就容易多了；亞馬爾本季替巴薩與西班牙踢的 18 場全部先發，6 比 1 贏阿拉維斯這場踢到第 74 分鐘。後防有四人缺陣，Goal 說克里斯滕森幾乎不可能趕上週三 04:00 主場歐冠對阿斯頓維拉。",
   "topic_key": "football:2026-11-02",
-  "updated_at": "2026-11-02T03:05:00+08:00",
+  "updated_at": "2026-11-02T05:40:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "next": {
@@ -165,6 +165,13 @@
           "source": "EFE／Infobae、ESPN",
           "url": "https://www.infobae.com/america/agencias/2026/11/01/2-1-el-lazio-lider-en-solitario/",
           "when": "11 月 1 日（週日）22:00"
+        },
+        {
+          "headline": "尤文圖斯 2 比 0 勝拿坡里，對手 75 分鐘被罰下一人",
+          "summary": "Alajbegovic 第 70 分鐘在禁區外左腳破門，拿坡里的 Marianucci 第 75 分鐘吃第二張黃牌退場，Boga 第 87 分鐘再進一球。賽前兩隊都是 14 分。",
+          "source": "ESPN、Goal",
+          "url": "https://www.goal.com/en/lists/juventus-napoli-2-0-live-another-stunning-goal-this-time-from-boga/blt28bb1d3400499c4a",
+          "when": "11 月 2 日（週一）03:45"
         },
         {
           "headline": "赫塔菲 3 比 1 逆轉塞維亞",
@@ -379,6 +386,20 @@
       "date": "2026-11-01",
       "url": "https://www.infobae.com/america/agencias/2026/11/01/2-1-el-lazio-lider-en-solitario/",
       "note": "Nzola 20'、Pinamonti 83'、拉齊歐 9 勝 1 和獨居榜首；文中沒有紅牌細節"
+    },
+    {
+      "title": "Napoli at Juventus（比賽紀錄，event 401874949）",
+      "publisher": "ESPN",
+      "date": "2026-11-01",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874949",
+      "note": "台灣 11 月 2 日 05:39 前後終場 2 比 0；Alajbegovic 70'、Marianucci 75' 第二黃牌、Boga 87'。開賽 2026-11-01T19:45Z（台灣 03:45）；賽前雙方 14 分取自 Goal，正文未寫賽後積分（積分榜尚未更新）"
+    },
+    {
+      "title": "Juventus-Napoli 2-0 LIVE: another stunning goal, this time from Boga",
+      "publisher": "Goal",
+      "date": "2026-11-01",
+      "url": "https://www.goal.com/en/lists/juventus-napoli-2-0-live-another-stunning-goal-this-time-from-boga/blt28bb1d3400499c4a",
+      "note": "第二個來源核對比分 2 比 0、進球者與分鐘、Marianucci 紅牌；賽前兩隊同為 14 分。Goal 與 ESPN 對 Alajbegovic 進球是否擦柱描述不同，正文不寫"
     },
     {
       "title": "Getafe 3-1 Sevilla（比賽紀錄，event 401882821）",
