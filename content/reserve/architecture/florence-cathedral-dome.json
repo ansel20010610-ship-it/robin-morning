@@ -1,0 +1,238 @@
+{
+  "column": "architecture",
+  "date": "reserve",
+  "reserve_written": "2026-11-01",
+  "title": "布魯內雷斯基的絞痛",
+  "dek": "比歷來任何穹頂都高、都寬，外面沒有扶壁，托斯卡尼的木頭也不夠搭架子。布魯內雷斯基用兩層磚殼把它蓋了起來。",
+  "brief": "瓦薩里說，佛羅倫斯主教座堂的穹頂才砌到 12 braccia，布魯內雷斯基就躺上床裝絞痛，想把同領一份薪水的吉貝爾蒂擠出工地。病拖過兩天，委員們最後把整座建築終身交給他。他用兩層磚殼、像鐵軌的砂岩鏈和人字形砌磚，把這座禁用飛扶壁的八角形穹頂蓋了起來。",
+  "topic_key": "architecture:florence-cathedral-dome",
+  "updated_at": "2026-11-01T15:00:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Florence_Duomo_from_Michelangelo_hill.jpg/1280px-Florence_Duomo_from_Michelangelo_hill.jpg",
+    "width": 1280,
+    "height": 928,
+    "alt": "黃昏的佛羅倫斯市區遠景：右側是紅褐色的八角形大穹頂，頂上立著白色頂塔與金色小球，穹頂下方是白綠相間大理石牆面的教堂本體；左側是方形的鐘樓，更左邊有一座尖頂塔，背後是暗藍色的山丘。",
+    "caption": "佛羅倫斯主教座堂，2014 年 10 月 25 日傍晚自佛羅倫斯的米開朗基羅山丘方向攝。白色的頂塔在穹頂最上面。",
+    "credit": "Petar Milošević／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Florence_Duomo_from_Michelangelo_hill.jpg",
+    "made": "2014"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "瓦薩里（Giorgio Vasari）說，有一天早上，布魯內雷斯基（Filippo Brunelleschi）沒有來工地。他把頭包起來上床躺著，叫人把盤子和布巾烤熱，一直呻吟，裝成絞痛的樣子。"
+    },
+    {
+      "type": "p",
+      "text": "那是佛羅倫斯主教座堂的穹頂工地。內外兩層殼已經砌了一整圈，高 12 braccia（當時的長度單位）；營造委員（Wardens of Works）當初跟他簽的合約，也只簽到這個高度。接下來要放石與木的鏈，還要搭鷹架。工地上主事的有兩個人，另一位是吉貝爾蒂（Lorenzo Ghiberti），兩人領一樣的薪水。瓦薩里說，布魯內雷斯基打定主意，要讓吉貝爾蒂在這件工程裡待不久。"
+    },
+    {
+      "type": "p",
+      "text": "鏈怎麼放、鷹架怎麼搭，兩個主事的都沒有下令，泥水匠和師傅們只好站著等。有人去問吉貝爾蒂，他說得由布魯內雷斯基下令，大家等他。病拖過了兩天，管木料與大理石帳目的 provveditore 帶著許多師傅去看他，他只回了一句。"
+    },
+    {
+      "type": "quote",
+      "text": "你們不是有 Lorenzo 嗎，讓他做點什麼。",
+      "original": "You have Lorenzo, let him do something.",
+      "cite": "瓦薩里《藝術家列傳》〈布魯內雷斯基〉，de Vere 英譯"
+    },
+    {
+      "type": "p",
+      "text": "營造委員親自去探病，也派他的朋友把他從床上叫起來。委員們說，吉貝爾蒂沒有他什麼也不做；他答：「可是我沒有他也做得好。」"
+    },
+    {
+      "type": "p",
+      "text": "回到工地，他當著委員的面提議分工：眼下最難的是鷹架和鏈，讓吉貝爾蒂挑一件。吉貝爾蒂挑了他覺得比較容易的鏈。布魯內雷斯基的鷹架做得極巧，瓦薩里說，工人站在上面吊重物，穩得像踩在地面上。吉貝爾蒂的鏈做出來，布魯內雷斯基私下跟朋友說不夠牢；有人要他拿出更好的辦法，他立刻拿出了圖和模型。1423 年，委員們承認當初選錯，任命他當整座建築的終身總監。吉貝爾蒂有朋友護著，薪水照領。"
+    },
+    {
+      "type": "h",
+      "text": "側廊裡的磚造模型"
+    },
+    {
+      "type": "p",
+      "text": "主教座堂蓋了一百年，到 15 世紀初還缺一座穹頂。它的樣子早就定了：阿諾爾福（Arnolfo di Cambio）留下一座 4.6 公尺高的磚造模型，擺在還沒蓋完的側廊裡，長久以來被視為神聖不可更動（sacrosanct）。模型要的是一座八角形穹頂，比歷來蓋過的任何穹頂都高、都寬，外面也沒有扶壁抵著，防它往外撐開、塌下來。"
+    },
+    {
+      "type": "p",
+      "text": "不用飛扶壁，是 1367 年選中 Neri di Fioravanti 的模型時就定下的。據 King 轉述，佛羅倫斯當時禁用扶壁，因為這種樣式是義大利中部北邊的傳統敵人所偏愛的。"
+    },
+    {
+      "type": "p",
+      "text": "羊毛公會（Arte della Lana）為穹頂辦競圖，布魯內雷斯基勝過吉貝爾蒂。他要執行的是半世紀前定下的樣子；可是這麼大的穹頂要怎麼蓋才不會被自己的重量壓垮，當時並不明朗。"
+    },
+    {
+      "type": "p",
+      "text": "麻煩出在架子。穹頂從離地 52 公尺的地方起砌，托斯卡尼的木頭不夠搭那麼大的鷹架和模架。萬神殿當年用拱架撐住還在澆灌的混凝土穹頂，這個辦法放到佛羅倫斯不適用，而且會讓教堂沒辦法使用。"
+    },
+    {
+      "type": "h",
+      "text": "像鐵軌的石鏈"
+    },
+    {
+      "type": "p",
+      "text": "布魯內雷斯基蓋了兩層磚殼。磚比石頭輕，也方便在原地砌成形；施工時，兩層殼底下沒有任何東西托著。八個角上各有一道垂直的肋，肋上開槽插梁，梁上架平台，工程就這樣一層層往上。砂岩和大理石留給鏈、肋和頂塔。"
+    },
+    {
+      "type": "p",
+      "text": "內殼裡埋了四道石與鐵的鏈，在頂、底和中間兩處；第一、二道之間還有一道木鏈。每道石鏈都像一段八角形的鐵軌，平行的軌和橫木全是砂岩梁，梁與梁首尾用上了鉛釉的鐵件接起來，縱橫交接處開槽咬合，外面再讓磚和灰漿蓋住。最底下那一道的橫木，在鼓座底部看得到露出頭來。"
+    },
+    {
+      "type": "p",
+      "text": "外殼薄，底部 60 公分，頂部 30 公分，裝不下水平的環。他在九個高度把外殼轉角的內側加厚，砌成九道石環；外殼本身沒有鏈，靠和內殼連在一起站住。"
+    },
+    {
+      "type": "svg",
+      "title": "兩層殼與石鏈",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 400\">\n<rect class=\"soft\" x=\"110\" y=\"300\" width=\"320\" height=\"42\" stroke-width=\"1\"/>\n<text class=\"ink\" x=\"270\" y=\"326\" font-size=\"13\" text-anchor=\"middle\">鼓座</text>\n<path class=\"ink line\" d=\"M140 300 Q150 160 270 100\" fill=\"none\" stroke-width=\"6\"/>\n<path class=\"ink line\" d=\"M400 300 Q390 160 270 100\" fill=\"none\" stroke-width=\"6\"/>\n<path class=\"muted line\" d=\"M120 300 Q125 140 270 90\" fill=\"none\" stroke-width=\"3\"/>\n<path class=\"muted line\" d=\"M420 300 Q415 140 270 90\" fill=\"none\" stroke-width=\"3\"/>\n<rect class=\"soft\" x=\"258\" y=\"42\" width=\"24\" height=\"48\" stroke-width=\"1\"/>\n<path class=\"ink line\" d=\"M270 20 L262 42 L278 42 Z\" fill=\"none\" stroke-width=\"1.5\"/>\n<rect class=\"accent\" x=\"141\" y=\"256\" width=\"9\" height=\"7\"/>\n<rect class=\"accent\" x=\"161\" y=\"197\" width=\"9\" height=\"7\"/>\n<rect class=\"accent\" x=\"203\" y=\"140\" width=\"9\" height=\"7\"/>\n<rect class=\"accent\" x=\"390\" y=\"256\" width=\"9\" height=\"7\"/>\n<rect class=\"accent\" x=\"370\" y=\"197\" width=\"9\" height=\"7\"/>\n<rect class=\"accent\" x=\"328\" y=\"140\" width=\"9\" height=\"7\"/>\n<path class=\"muted line\" d=\"M282 64 L450 48\" fill=\"none\" stroke-width=\"1\"/>\n<text class=\"ink\" x=\"456\" y=\"52\" font-size=\"13\">頂塔</text>\n<path class=\"muted line\" d=\"M344 130 L450 104\" fill=\"none\" stroke-width=\"1\"/>\n<text class=\"ink\" x=\"456\" y=\"108\" font-size=\"13\">外殼：較薄的磚殼</text>\n<path class=\"muted line\" d=\"M332 144 L450 152\" fill=\"none\" stroke-width=\"1\"/>\n<text class=\"ink\" x=\"456\" y=\"156\" font-size=\"13\">內殼：較厚的磚殼</text>\n<path class=\"muted line\" d=\"M384 196 L450 204\" fill=\"none\" stroke-width=\"1\"/>\n<text class=\"ink\" x=\"456\" y=\"208\" font-size=\"13\">兩殼之間</text>\n<path class=\"accent line\" d=\"M399 259 L450 256\" fill=\"none\" stroke-width=\"1\"/>\n<text class=\"accent\" x=\"456\" y=\"260\" font-size=\"13\">石鏈（紅點），埋在內殼裡</text>\n<text class=\"muted\" x=\"456\" y=\"278\" font-size=\"11\">共數道，圖上只畫三個位置</text>\n<text class=\"muted\" x=\"270\" y=\"372\" font-size=\"12\" text-anchor=\"middle\">八角形穹頂的剖面，外牆沒有飛扶壁</text>\n</svg>",
+      "caption": "示意，不按比例。依 Wikipedia〈Florence Cathedral〉條目的結構描述繪製；石鏈的位置與數量、殼的厚薄只表示大意。",
+      "credit": "本報繪製"
+    },
+    {
+      "type": "p",
+      "text": "圓形的磚穹頂可以不用拱架，因為每一圈磚就是一道水平的拱，能抵住壓力。佛羅倫斯的內殼是八角形，厚到每一層都嵌得進一個假想的圓，完工以後這個圓撐得住穹頂；可是灰漿還濕的時候，它留不住剛砌上的磚。布魯內雷斯基把磚砌成人字形（herringbone），讓新砌的磚把重量傳到最近的垂直肋上。"
+    },
+    {
+      "type": "p",
+      "text": "瓦薩里把他交給營造委員的書面說明收進了書裡，說明是這樣結束的。"
+    },
+    {
+      "type": "quote",
+      "text": "兩層殼照上面說的方式蓋，不用拱架（framework），蓋到 30 braccia 高；從那裡往上，照承造的師傅建議的方式蓋，因為實作會教我們該走哪條路。",
+      "original": "The two vaults of the cupola must be built in the manner described above, without framework, up to the height of thirty braccia, and from that point upwards in the manner recommended by those masters who will have the building of them, since practice teaches us what course to pursue.",
+      "cite": "瓦薩里《藝術家列傳》〈布魯內雷斯基〉，de Vere 英譯"
+    },
+    {
+      "type": "h",
+      "text": "穹頂上有廚房，也賣酒"
+    },
+    {
+      "type": "p",
+      "text": "瓦薩里說，他會親自跑窯場看磚土，燒好的磚也親手挑。吊重物，他用配重和輪子，一頭牛就拉得起從前六對牛都很難拉動的東西。整座穹頂吊上去的材料有 3 萬 7 千噸，其中磚超過 400 萬塊，起重的機械是他發明的。"
+    },
+    {
+      "type": "p",
+      "text": "他還在穹頂上安排了附廚房的飯館，在上面賣酒，工人不必離開工作，一直做到傍晚。"
+    },
+    {
+      "type": "p",
+      "text": "頂塔另外辦了一次競圖，他又勝過吉貝爾蒂和另一位對手。頂塔在他去世前幾個月動工，最後由他的朋友米凱洛佐（Michelozzo）蓋完。韋羅基奧（Verrocchio）在頂上的圓錐屋頂放了鍍金銅球和十字架，裡面裝著聖髑。瓦薩里說，天好像嫉妒這座建築，閃電天天來打。後來銅球被雷擊落，兩年後換上一顆更大的。"
+    },
+    {
+      "type": "h",
+      "text": "裂縫跟著季節開合"
+    },
+    {
+      "type": "p",
+      "text": "穹頂還沒完工就出現裂縫。最早的書面紀錄是 1639 年的一份報告，說那些縫像毛髮。1934 年，奈爾維（Pier Luigi Nervi）主持的委員會發現，裂縫會隨季節開合：冬天磚石收縮，縫變寬；夏天膨脹，縫又合起來。1984 年的調查，一共數出 493 條大小裂縫。"
+    },
+    {
+      "type": "p",
+      "text": "1987 年，穹頂裝上一套自動監測系統，166 個儀器定時記錄。照記下的資料推算，主要的裂縫每個世紀寬幾公釐。"
+    },
+    {
+      "type": "timeline",
+      "title": "從畫圖到封頂",
+      "caption": "年代依 Wikipedia〈Florence Cathedral〉與〈Filippo Brunelleschi〉條目整理。",
+      "items": [
+        {
+          "when": "1296 年",
+          "label": "阿諾爾福設計穹頂的基本樣貌",
+          "note": ""
+        },
+        {
+          "when": "1380 年",
+          "label": "中殿完成，只剩穹頂",
+          "note": ""
+        },
+        {
+          "when": "1418 年",
+          "label": "羊毛公會 8 月 19 日公告穹頂設計競圖；布魯內雷斯基勝過吉貝爾蒂",
+          "note": ""
+        },
+        {
+          "when": "1420 年",
+          "label": "穹頂動工",
+          "note": ""
+        },
+        {
+          "when": "1436 年",
+          "label": "穹頂建成；3 月 25 日教宗尤金四世為教堂祝聖",
+          "note": ""
+        },
+        {
+          "when": "1446 年",
+          "label": "布魯內雷斯基 4 月 15 日去世；頂塔在他去世前幾個月動工",
+          "note": ""
+        },
+        {
+          "when": "1469 年",
+          "label": "鍍金銅球與十字架放上塔頂",
+          "note": ""
+        },
+        {
+          "when": "1600 年",
+          "label": "銅球被雷打落，兩年後換新",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "type": "facts",
+      "title": "資料卡",
+      "items": [
+        [
+          "所在",
+          "義大利佛羅倫斯"
+        ],
+        [
+          "動工與完成",
+          "穹頂 1420–1436 年建造"
+        ],
+        [
+          "設計",
+          "穹頂基本樣貌：阿諾爾福（1296 年）、Neri di Fioravanti（1367 年選定模型）；穹頂施工：布魯內雷斯基"
+        ],
+        [
+          "高度",
+          "穹頂連頂塔約 114.5 公尺"
+        ],
+        [
+          "世界遺產",
+          "1982 年列入，屬佛羅倫斯歷史中心的一部分"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "布魯內雷斯基葬在這座教堂的地下室。主教座堂廣場上有一座他的雕像，坐著，抬頭望向這座穹頂。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lives of the Most Eminent Painters, Sculptors & Architects, vol. 2：Filippo Brunelleschi（Gaston du C. de Vere 英譯）",
+      "publisher": "Project Gutenberg（原書 Giorgio Vasari，1550 初版、1568 增訂）",
+      "date": "1568",
+      "url": "https://www.gutenberg.org/files/25759/25759-h/25759-h.htm",
+      "note": "讀全文第 2 冊〈Filippo Brunelleschi〉：裝病（\"pretending to be suffering from colic\"）、12 braccia 高、分工、設計說明、牛與滑輪、穹頂上的飯館、閃電。瓦薩里成書距事件逾一個世紀，且偏袒布魯內雷斯基。"
+    },
+    {
+      "title": "Florence Cathedral",
+      "publisher": "Wikipedia",
+      "date": "2026-11-01",
+      "url": "https://en.wikipedia.org/wiki/Florence_Cathedral",
+      "note": "讀 wikitext。穹頂結構（鏈、肋、人字形砌磚）、年代、材料、頂塔競圖（Antonio Ciaccheri、Michelozzo）、世界遺產 1982、裂縫與監測段落；該條目引 King《Brunelleschi's Dome》、Ottoni 等 2010 年論文、NYT 1987-07-28 等。各來源對穹頂跨度的說法不一（43–45 公尺），裂縫速率另有 5.5 公釐之說，正文只寫「幾公釐」。1987 年監測系統為過去式描述，是否仍運作未查證。"
+    },
+    {
+      "title": "Filippo Brunelleschi",
+      "publisher": "Wikipedia",
+      "date": "2026-11-01",
+      "url": "https://en.wikipedia.org/wiki/Filippo_Brunelleschi",
+      "note": "讀 wikitext。去世日期（1377 – 15 April 1446）、安葬地、頂塔 1446–c.1461；「怎麼蓋並不明朗」（unclear）一句出自此條。"
+    }
+  ]
+}
