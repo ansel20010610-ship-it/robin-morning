@@ -25,8 +25,8 @@ WEEKDAY_ZH = ["一", "二", "三", "四", "五", "六", "日"]
 
 # Shifts (Taiwan time) — editorial/README.md. Shift 5 is the safety net: every column of the day.
 GROUPS = {
-    1: ["devotion", "music", "perio", "architecture"],
-    2: ["artwork", "@supp0", "@supp2"],  # @supp2 exists only on days with a third supplement (Mon/Wed from 2026-11-02)
+    1: ["devotion", "music", "perio"],
+    2: ["@supp0", "@supp2"],  # @supp2 exists only on days with a third supplement (Mon/Wed from 2026-11-02)
     3: ["@supp1", "football"],
     4: ["news", "football", "fm-watch", "cosmere-watch"],  # news last thing at 05:17: the freshest it can be
     5: ["@all"],

@@ -35,8 +35,7 @@ TOO_LATE = (11, 0)     # a run GitHub starts this late sends nothing: the mornin
 WAIT_SITE = 45 * 60    # seconds to wait for the live site to carry today's issue
 WAIT_DEPLOY = 10 * 60  # seconds to wait for a deploy still running at 07:30 (e.g. a late reserve fill)
 TTL = 4 * 3600         # a phone that is switched off still gets the notice within this time
-SHORT = {"football": "巴薩", "news": "快訊", "perio": "牙周", "music": "古典", "artwork": "作品", "architecture": "古蹟",
-         "civilization": "文明", "devotion": "晨光"}
+SHORT = {"football": "巴薩", "news": "快訊", "perio": "牙周", "music": "古典", "civilization": "文明", "devotion": "晨光"}
 
 
 def endpoint_hash(endpoint):
