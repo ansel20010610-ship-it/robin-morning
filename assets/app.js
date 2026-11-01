@@ -7,6 +7,7 @@ import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 import { renderPush, clearNotices } from "./notify.js";
 import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pressRun, ripples, flip } from "./motion.js";
+import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -440,6 +441,8 @@ function updatedNote(date, a) {
 const evidenceOf = (a) => { const p = (a.body || []).find((b) => b?.type === "paper"); return typeof p?.evidence === "string" ? p.evidence : ""; };
 
 async function viewArticle(date, column, my) {
+  const wantMark = landMark; // 劃線本: the mark to land on, taken whatever this page turns out to be
+  landMark = null;
   if (!isPublished(date)) { main.innerHTML = `<div class="wrap"><p class="empty">這篇還沒出爐，別偷看。</p></div>`; return; }
   const by = lockedBy(date, column);
   if (by) {
@@ -514,6 +517,11 @@ async function viewArticle(date, column, my) {
   const firstP = body.firstElementChild;
   if (firstP && firstP.tagName === "P" && !firstP.querySelector(".tag")) firstP.classList.add("lead-p");
   buildToc(body, main.querySelector(".toc-slot"));
+  // 劃線本: this article's pencil lines find their place again; one opened from the notebook is landed on (route()
+  // scrolls to landTop) and glows once. Then the pill that offers 劃線 on a selection, taken down in cleanup.
+  const marked = applyMarks(body, key);
+  if (wantMark && marked.has(wantMark)) landTop = land(marked.get(wantMark));
+  const pencilStop = pencil(body, key);
   // The top bar names the column; once the title has scrolled under it, it carries the title instead (.past).
   const topbar = main.querySelector(".topbar");
   let titleSeen = null;
@@ -698,6 +706,7 @@ async function viewArticle(date, column, my) {
     titleSeen?.disconnect();
     reader?.stop();
     turns.abort();
+    pencilStop();
   };
   document.title = `${a.title}｜${S.cfg.title}`;
 }
@@ -939,7 +948,7 @@ function viewArchive() {
   const chips = Object.entries(S.cfg.columns).filter(([, k]) => k.group !== "verse").map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span>
       <a class="stamp-btn" href="#/random" aria-label="隨手翻一篇：從往期裡抽一篇沒讀過的"><b>隨手翻</b><i>Zufall</i></a></header>
-    <nav class="chips review" aria-label="常設"><a class="chip" href="#/concerts">近期演出</a><a class="chip" href="#/stats">閱讀年鑑</a></nav>
+    <nav class="chips review" aria-label="常設"><a class="chip" href="#/concerts">近期演出</a><a class="chip" href="#/stats">閱讀年鑑</a><a class="chip" href="#/marks">劃線本</a></nav>
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
     <div class="hits" aria-live="polite"></div>
     ${calendarHtml(twNow().date.slice(0, 7), pubs, done)}
@@ -983,8 +992,34 @@ function viewSaved() {
     const a = issueBy(date)?.articles.find((x) => x.column === c);
     return a && isPublished(date) ? itemCard(date, a, readSet()).replace('<div class="meta-s">', `<div class="meta-s">${esc(fmtDate(date, "short"))}・`) : "";
   }).join("");
+  const n = allMarks().length;
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
+    <a class="sec-head link" href="#/marks" aria-label="劃線本：${n} 處劃線"><h2>劃線本</h2><span class="de">Anstreichungen</span><span class="note">${n ? `${n} 處` : "還沒有劃線"} ›</span></a>
     ${items || `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。<br><a href="#/random">或者先隨手翻一篇 →</a></p>`}</div>`;
+}
+
+// ——— 劃線本 (Anstreichungen): every pencil line this phone holds, by article, the one marked most recently first ———
+// Each line is a link into its article, landing on that mark (landMark); ✕ takes a line away and redraws.
+function viewMarks() {
+  const all = allMarks(), groups = new Map();
+  for (const m of all) groups.set(m.key, [...(groups.get(m.key) || []), m]);
+  const last = (ms) => ms[ms.length - 1].at || "";
+  const rows = [...groups].sort(([, a], [, b]) => last(b).localeCompare(last(a))).map(([key, ms]) => {
+    const [date, c] = key.split("/");
+    const a = issueBy(date)?.articles.find((x) => x.column === c);
+    return `<a class="mk-head" href="#/a/${esc(key)}"><span class="k">${esc(col(c, date).name)}</span><b>${esc(a?.title || key)}</b>${/^\d{4}-\d{2}-\d{2}$/.test(date) ? `<span class="d">${esc(fmtDate(date, "short"))}</span>` : ""}</a>
+      ${ms.map((m) => `<div class="mk"><a class="q" href="#/a/${esc(key)}" data-mark="${esc(m.id)}"><mark class="pencil">${esc(m.text)}</mark></a><button class="icon-btn x" type="button" data-del="${esc(m.id)}" aria-label="移除劃線">✕</button></div>`).join("")}`;
+  }).join("");
+  main.innerHTML = `<div class="wrap marks"><header class="page-title"><h1>劃線本</h1><span class="de">Anstreichungen</span></header>
+    ${rows ? `<p class="col-note">讀文章時劃下的句子，${all.length} 處。只存在這支手機；點一句就回到它在文章裡的位置。</p>${rows}`
+      : `<p class="empty">還沒有劃線。讀文章時選一段字，按「劃線」，就會收在這裡。</p>`}</div>`;
+  main.querySelector(".marks").addEventListener("click", (e) => {
+    const del = e.target.closest("[data-del]");
+    if (del) { removeMark(del.dataset.del); viewMarks(); return; }
+    const q = e.target.closest("[data-mark]");
+    if (q) landMark = q.dataset.mark;
+  });
+  document.title = `劃線本｜${S.cfg.title}`;
 }
 
 // ——— 閱讀年鑑 (Lesekalender): the reading record this phone holds, drawn as a calendar ———
@@ -1160,6 +1195,8 @@ function viewSettings() {
       <p class="small">循序閱讀：每一期照首頁的順序，一次只開一篇；讀到文末、而且讀夠這篇預估時間的一半，下一篇才解鎖；中途離開，讀過的時間會留著，回來接著算。還沒解鎖的只顯示標題，摘要先藏起來，全部讀完才算讀完今天。之前讀過的照樣算數。</p></section>
     <section class="set"><h2>閱讀年鑑</h2><p>這支手機上的閱讀紀錄：讀完幾篇、連著幾天、哪一欄讀得最勤，畫成一頁日曆。紀錄只存在這支手機，離線也能看。</p>
       <div class="btns"><a class="btn ghost" href="#/stats">打開閱讀年鑑</a></div></section>
+    <section class="set"><h2>劃線本</h2><p>讀文章時選一段字，按「劃線」，字下就留一道鉛筆線；劃過的句子都收在劃線本，點一句就回到文章裡那個位置。劃線只存在這支手機，離線也能看。</p>
+      <div class="btns"><a class="btn ghost" href="#/marks">打開劃線本</a></div></section>
     <section class="set"><h2>外觀</h2><div class="seg" data-g="theme">${[["auto", "跟隨系統"], ["light", "日間"], ["dark", "夜間"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${v === theme}">${l}</button>`).join("")}</div></section>
     ${canSpeak() ? `<section class="set"><h2>朗讀速度</h2><div class="seg" data-g="rate">${RATES.map((r) => `<button type="button" data-v="${r}" aria-pressed="${r === getRate()}">${r === 1 ? "標準" : `${r}×`}</button>`).join("")}</div>
       <p>文章右上角的喇叭按鈕會用裝置內建的中文語音朗讀全文，不需網路服務。</p></section>` : ""}
@@ -1259,9 +1296,10 @@ let routeSeq = 0; // bumped on every route; an older route still loading must no
 const places = new Map();
 let shownHash = null, navTap = false, fromList = null;
 let landKey = null, landTop = null; // 接著上次: the article tapped on the front page, and where in it to land
+let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
 
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
 let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising number, so a step back is recognisable
@@ -1336,6 +1374,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/stats")) viewStats();
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
+  else if (h.startsWith("#/marks")) viewMarks();
   else if (h.startsWith("#/music")) viewMusic();
   else if (h.startsWith("#/settings")) viewSettings();
   else if ((m = h.match(/^#\/concert\/([\w-]+)/))) await viewConcert(m[1], my);

@@ -1145,3 +1145,39 @@ button.chip { cursor: pointer; font-family: var(--sans); }
 .unlock.ok b { margin-right: 6px; color: var(--gold-ink); }
 .finish.lockfin { display: flex; flex-direction: column; align-items: center; gap: 4px; }
 .finish.lockfin svg { width: 22px; height: 22px; color: var(--gold-ink); }
+
+/* ——— 劃線本 (Anstreichungen, assets/marks.js) ——— */
+/* A graphite line under the words, no ground and no box: a thin, slightly uneven stroke repeated along the foot of the
+   inline box, which lies below the ideographs' bottoms, so the text stays legible. The colour is inside the data URI, so
+   the dark theme states its own. */
+mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='4' viewBox='0 0 40 4'><path d='M0 2.3C4 1.6 7 2.9 11 2.2S17 1.4 21 2.5 28 2.9 32 1.9 37 2 40 2.4' fill='none' stroke='%235a554c' stroke-width='1.1' stroke-linecap='round'/><path d='M0 2.9C5 2.3 9 3.3 14 2.7S22 2.1 27 3 35 3.2 40 2.6' fill='none' stroke='%235a554c' stroke-width='.5' opacity='.55'/></svg>") 0 100% / 40px 4px repeat-x; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) mark.pencil { background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='4' viewBox='0 0 40 4'><path d='M0 2.3C4 1.6 7 2.9 11 2.2S17 1.4 21 2.5 28 2.9 32 1.9 37 2 40 2.4' fill='none' stroke='%23b8ae9c' stroke-width='1.1' stroke-linecap='round'/><path d='M0 2.9C5 2.3 9 3.3 14 2.7S22 2.1 27 3 35 3.2 40 2.6' fill='none' stroke='%23b8ae9c' stroke-width='.5' opacity='.55'/></svg>"); }
+}
+:root[data-theme="dark"] mark.pencil { background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='4' viewBox='0 0 40 4'><path d='M0 2.3C4 1.6 7 2.9 11 2.2S17 1.4 21 2.5 28 2.9 32 1.9 37 2 40 2.4' fill='none' stroke='%23b8ae9c' stroke-width='1.1' stroke-linecap='round'/><path d='M0 2.9C5 2.3 9 3.3 14 2.7S22 2.1 27 3 35 3.2 40 2.6' fill='none' stroke='%23b8ae9c' stroke-width='.5' opacity='.55'/></svg>"); }
+/* Opened from the notebook (app.js landMark), the mark glows once in gold. */
+@media (prefers-reduced-motion: no-preference) {
+  mark.pencil.glow { animation: pencil-glow 1.5s ease-out .15s 1 both; }
+  @keyframes pencil-glow {
+    0%, 100% { background-color: transparent; box-shadow: none; }
+    30% { background-color: color-mix(in srgb, var(--gold) 36%, transparent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 36%, transparent); }
+  }
+}
+/* The pill over a selection: 劃線, or 移除劃線 over a mark that was tapped. It fades in; the global reduced-motion rule
+   above turns the fade off. marks.js places it and takes it down. */
+.mark-pill {
+  position: fixed; z-index: 35; height: 36px; padding: 0 14px 0 11px; display: flex; align-items: center; gap: 6px;
+  appearance: none; border: 1px solid var(--rule); border-radius: 18px; background: var(--paper-2); color: var(--ink); box-shadow: var(--shadow);
+  font-family: var(--sans); font-size: 14px; letter-spacing: .03em; line-height: 1; white-space: nowrap; cursor: pointer;
+  opacity: 0; transition: opacity .12s ease;
+}
+.mark-pill.on { opacity: 1; }
+.mark-pill svg { width: 16px; height: 16px; color: var(--gold-ink); }
+/* #/marks: a head per article (kicker, title, day) and under it each line as a quotation, the pencil under it still. */
+.marks .mk-head { display: flex; align-items: baseline; gap: 10px; margin: 26px 0 2px; padding-bottom: 6px; border-bottom: 1px solid var(--ink); text-decoration: none; }
+.marks .mk-head .k { flex: 0 0 auto; font-family: var(--sans); font-size: 12px; letter-spacing: .14em; color: var(--gold-ink); font-weight: 600; }
+.marks .mk-head b { min-width: 0; font-size: 16px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.marks .mk-head .d { flex: 0 0 auto; margin-left: auto; font-family: var(--sans); font-size: 12px; color: var(--muted); letter-spacing: .03em; }
+.marks .mk { display: flex; align-items: flex-start; gap: 4px; padding: 9px 0; border-bottom: 1px solid var(--rule); }
+.marks .mk .q { flex: 1; min-width: 0; text-decoration: none; font-size: 16px; line-height: 1.9; color: var(--ink-2); padding-left: .9em; border-left: 2px solid var(--rule); }
+.marks .mk .x { flex: 0 0 auto; width: 32px; height: 32px; margin: -2px -8px 0 0; color: var(--muted); font-size: 14px; }
