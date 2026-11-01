@@ -235,7 +235,7 @@ function viewFront(dateParam) {
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的第 ${issue.no} 期・<a href="#/">回到最新一期</a></div>` : ""}
     ${lateNote(issue.date)}
     ${prayerBox(issue)}
-    ${lockMode() ? lockBar(arts, issue.date) : digestBar(arts, !dateParam, digestDone().has(issue.date))}
+    ${lockMode() ? lockBar(arts, issue.date) : ""}
     ${mains.length ? `<div class="sec-head"><h2>正刊</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
     ${lead ? `<a class="lead" href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column, false, issue.date)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
     ${mains.slice(1).map((a) => itemCard(issue.date, a, read)).join("")}
@@ -267,7 +267,7 @@ function prayerBox(issue) {
     <div class="prayer">${paragraphs(v.prayer)}</div></details>`;
 }
 
-// ——— The digest: read the briefs, reach the end, done for the day ———
+// ——— Reaching the end of the front page counts the day as read (the finish line, the streak) ———
 const digestDone = () => new Set(store.get("digest.done", []));
 let finishSeen = null;
 const unreadIn = (date, arts) => { const read = readSet(); return arts.filter((a) => !read.has(`${date}/${a.column}`)).length; };
@@ -277,15 +277,6 @@ function lockBar(arts, date) {
   const n = arts.length, got = n - unreadIn(date, arts);
   const ring = `<span class="ring-wrap"><svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="track" cx="18" cy="18" r="15.5"/><circle class="bar" cx="18" cy="18" r="15.5" pathLength="100" style="stroke-dashoffset:${100 - Math.round((got / n) * 100)}"/></svg><span class="cnt">${got}/${n}</span></span>`;
   return `<div class="digest lockbar${got === n ? " full" : ""}">${ring}<div><b>循序閱讀</b><span>${got === n ? "全部讀完了" : "讀完一篇，下一篇才解鎖"}</span></div></div>`;
-}
-function digestBar(arts, latest, done) {
-  const n = arts.reduce((s, a) => s + (a.brief ? a.brief.length : 0), 0);
-  if (!n) return "";
-  const k = arts.filter((a) => a.brief).length;
-  const run = latest ? streak() : null;
-  const more = run && !run.today && run.n >= 2 ? `<em class="streak">讀完就連續 ${run.n + 1} 天</em>` : "";
-  const ring = `<span class="ring-wrap"><svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="track" cx="18" cy="18" r="15.5"/><circle class="bar" cx="18" cy="18" r="15.5" pathLength="100"/></svg><span class="cnt">${done ? k : 0}/${k}</span></span>`;
-  return `<div class="digest${done ? " done full" : ""}">${ring}<div><b>今日摘要${more}</b><span>一篇三句話，${Math.max(1, Math.round(n / 330))} 分鐘交差</span></div></div>`;
 }
 function wireDigest(issue) {
   finishSeen?.disconnect(); finishSeen = null;
