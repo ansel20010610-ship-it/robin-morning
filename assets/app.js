@@ -6,7 +6,7 @@ import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasCl
 import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 import { renderPush, clearNotices } from "./notify.js";
-import { calm, reveal, transition, celebrate, laurel, digestRing, mastheadShow, ripples } from "./motion.js";
+import { calm, reveal, transition, celebrate, laurel, digestRing, mastheadShow, ripples, flip } from "./motion.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -522,14 +522,7 @@ async function viewArticle(date, column, my) {
   const issueFinish = (arts, read) => {
     const mins = arts.reduce((s, x) => s + (Number(x.minutes) || 0), 0), latest = date === publishedIssues()[0]?.date;
     return `<div class="finish done small"><span class="tick" aria-hidden="true">✓</span><b>${read.has(key) ? "本期讀完了" : "這是本期最後一篇"}</b><span class="note">${arts.length} 篇・約 ${mins} 分鐘</span>
-      <div class="btns"><a class="btn ghost" href="${latest ? "#/" : `#/issue/${date}`}">${latest ? "回到今日" : "回到本期"}</a><button class="btn ghost" type="button" data-random>隨手翻一篇</button></div></div>`;
-  };
-  // Any other published article, unread ones first; the lock page takes care of itself in 循序閱讀.
-  const randomArticle = () => {
-    const read = readSet(), all = publishedIssues().flatMap((i) => i.articles.filter((x) => !(i.date === date && x.column === column)).map((x) => `${i.date}/${x.column}`));
-    const pool = all.filter((k) => !read.has(k) && !lockedBy(...k.split("/")));
-    const pick = (pool.length ? pool : all)[Math.floor(Math.random() * (pool.length ? pool : all).length)];
-    if (pick) location.hash = `#/a/${pick}`;
+      <div class="btns"><a class="btn ghost" href="${latest ? "#/" : `#/issue/${date}`}">${latest ? "回到今日" : "回到本期"}</a><a class="btn ghost" href="#/random">隨手翻一篇</a></div></div>`;
   };
   const drawNext = () => {
     const box = main.querySelector(".next");
@@ -543,7 +536,7 @@ async function viewArticle(date, column, my) {
     if (!nxt && issue) {
       const arts = sortArticles(issue.articles, date), i = arts.findIndex((x) => x.column === column);
       const u = arts.find((x) => x.column !== column && !read.has(`${date}/${x.column}`));
-      if (!u) { box.innerHTML = issueFinish(arts, read); box.querySelector("[data-random]").onclick = randomArticle; return; }
+      if (!u) { box.innerHTML = issueFinish(arts, read); return; }
       nxt = { date, a: u }; prv ||= i > 0 ? { date, a: arts[i - 1] } : null; label = "接著讀";
     }
     box.innerHTML = nxt ? `<div class="lbl"><span>${label}</span>${prv ? `<a class="prev" href="#/a/${prv.date}/${prv.a.column}">‹ 上一篇</a>` : ""}</div>${card(nxt, read)}` : "";
@@ -890,7 +883,8 @@ function viewArchive() {
     main.querySelector(".list").innerHTML = rows || `<p class="empty">${ql ? "沒有符合的文章。" : "還沒有往期。"}</p>`;
   };
   const chips = Object.entries(S.cfg.columns).filter(([, k]) => k.group !== "verse").map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
-  main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span></header>
+  main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span>
+      <a class="stamp-btn" href="#/random" aria-label="隨手翻一篇：從往期裡抽一篇沒讀過的"><b>隨手翻</b><i>Zufall</i></a></header>
     <nav class="chips review" aria-label="常設"><a class="chip" href="#/concerts">近期演出</a></nav>
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
     <div class="hits" aria-live="polite"></div>
@@ -935,7 +929,57 @@ function viewSaved() {
     return a && isPublished(date) ? itemCard(date, a, readSet()).replace('<div class="meta-s">', `<div class="meta-s">${esc(fmtDate(date, "short"))}・`) : "";
   }).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
-    ${items || `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。</p>`}</div>`;
+    ${items || `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。<br><a href="#/random">或者先隨手翻一篇 →</a></p>`}</div>`;
+}
+
+// ——— 隨手翻 (Zufallsfund): one article out of the back issues, drawn like a card ———
+// The pool is every published article but the day's perishables (football, news) and the 觀測站; in 循序閱讀 a locked one
+// is not offered. An unread article weighs 4, a read one 1, and either is divided by 1 + how often its column came up
+// in the last five draws (random.recent), so five philosophy pieces in a row do not happen. `exclude` is the card on
+// the table when 再翻一張 is pressed.
+const RANDOM_SKIP = new Set(["football", "news"]);
+function randomPool() {
+  return publishedIssues().flatMap((i) => i.articles.filter((a) => !RANDOM_SKIP.has(a.column) && col(a.column, i.date).group !== "watch" && !lockedBy(i.date, a.column))
+    .map((a) => ({ date: i.date, a, key: `${i.date}/${a.column}` })));
+}
+function randomPick(exclude = null) {
+  const pool = randomPool().filter((x) => x.key !== exclude);
+  if (!pool.length) return null;
+  const read = readSet(), recent = store.get("random.recent", []);
+  const w = pool.map((x) => (read.has(x.key) ? 1 : 4) / (1 + recent.filter((c) => c === x.a.column).length));
+  let r = Math.random() * w.reduce((s, v) => s + v, 0), pick = pool[pool.length - 1];
+  for (let i = 0; i < pool.length; i++) { r -= w[i]; if (r < 0) { pick = pool[i]; break; } }
+  store.set("random.recent", [...recent, pick.a.column].slice(-5));
+  return pick;
+}
+// The address carries the card (#/random/<date>/<column>, written with replaceState so no route fires): back out of
+// the article it opened, the reader finds the same card, now marked read, not a fresh draw.
+function viewRandom(date, column) {
+  const have = date && column && issueBy(date)?.articles.find((x) => x.column === column);
+  let cur = have && isPublished(date) && !lockedBy(date, column) ? { date, a: have, key: `${date}/${column}` } : randomPick();
+  const keep = () => { try { history.replaceState(history.state, "", `#/random/${cur.key}`); } catch { /* ignore */ } shownHash = location.hash; };
+  const card = (x) => {
+    const read = readSet(), issue = issueBy(x.date), k = col(x.a.column, x.date);
+    return `${thumb(x.a, "ph")}<div class="kicker">${esc(k.name)}<span class="de">${esc(k.latin || "")}</span></div><h3>${esc(x.a.title)}</h3>${summary(x.a)}
+      <div class="meta"><div class="row"><span>${esc(fmtDate(x.date))}</span>${issue ? `<span>第 ${issue.no} 期</span>` : ""}${x.a.minutes ? `<span>約 ${x.a.minutes} 分鐘</span>` : ""}${read.has(x.key) ? `<span class="read-mark">已讀</span>` : ""}</div></div>
+      <div class="btns"><a class="btn" href="#/a/${x.key}">就讀這篇</a><button class="btn ghost" type="button" data-again>再翻一張</button></div>`;
+  };
+  const note = () => { const pool = randomPool(), read = readSet(), n = pool.filter((x) => !read.has(x.key)).length; return `往期可翻 ${pool.length} 篇，${n ? `${n} 篇還沒讀過，先抽它們` : "每一篇都讀過了，就隨意翻"}。`; };
+  main.innerHTML = `<div class="wrap random"><header class="page-title"><h1>隨手翻</h1><span class="de">Zufallsfund</span>
+      <p class="col-note">從往期裡抽一篇：沒讀過的優先，當天的球評與快訊不抽。</p></header>
+    ${cur ? `<article class="card" aria-live="polite">${card(cur)}</article><p class="meta-s rnd-note">${note()}</p>` : `<p class="empty">往期還沒有可以翻的文章。</p>`}</div>`;
+  if (!cur) return;
+  keep();
+  const el = main.querySelector(".card");
+  flip(el);
+  el.addEventListener("click", (e) => {
+    if (!e.target.closest("[data-again]")) return;
+    const next = randomPick(cur.key);
+    if (!next) return;
+    cur = next;
+    flip(el, () => { el.innerHTML = card(cur); main.querySelector(".rnd-note").textContent = note(); keep(); });
+  });
+  document.title = `隨手翻｜${S.cfg.title}`;
 }
 
 function viewMusic() { viewColumn("music"); }
@@ -1080,7 +1124,7 @@ const places = new Map();
 let shownHash = null, navTap = false, fromList = null;
 let landKey = null, landTop = null; // 接著上次: the article tapped on the front page, and where in it to land
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
 
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
 let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising number, so a step back is recognisable
@@ -1147,6 +1191,7 @@ async function drawRoute(h, art, my) {
   else if ((m = h.match(/^#\/issue\/(\d{4}-\d{2}-\d{2})/))) viewFront(m[1]);
   else if ((m = h.match(/^#\/column\/([\w-]+)/))) viewColumn(m[1]);
   else if (h.startsWith("#/archive")) viewArchive();
+  else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/music")) viewMusic();
   else if (h.startsWith("#/settings")) viewSettings();

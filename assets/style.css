@@ -207,8 +207,8 @@ button { font: inherit; color: inherit; }
    carries its own hairline on the left; the row is pulled left by the same amount and clipped, so the first item of
    every line loses its hairline. (No more line breaks between 「第 22」 and 「期」.) */
 .article-head .meta { font-family: var(--sans); font-size: 12.5px; color: var(--muted); letter-spacing: .04em; padding-bottom: 12px; border-bottom: 1px solid var(--rule); overflow: hidden; font-variant-numeric: tabular-nums; }
-.article-head .meta .row { display: flex; flex-wrap: wrap; row-gap: 3px; margin-left: -11px; }
-.article-head .meta .row > span { white-space: nowrap; padding: 0 10px; border-left: 1px solid var(--gold-soft); line-height: 1.5; }
+:is(.article-head, .random .card) .meta .row { display: flex; flex-wrap: wrap; row-gap: 3px; margin-left: -11px; }
+:is(.article-head, .random .card) .meta .row > span { white-space: nowrap; padding: 0 10px; border-left: 1px solid var(--gold-soft); line-height: 1.5; }
 .banner { font-family: var(--sans); font-size: 13.5px; line-height: 1.6; padding: 10px 12px; margin: 14px 0 0; border-left: 3px solid var(--wine); background: var(--paper-2); color: var(--ink-2); }
 .banner.gold { border-left-color: var(--gold); }
 
@@ -576,9 +576,9 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
 /* At night a paper-2 block gets a dark-gold hairline along its top edge, the way a card catches the lamp. :where() keeps
    the ancestor out of the specificity, so .finish.done's own frame still wins. */
 @media (prefers-color-scheme: dark) {
-  :where(:root:not([data-theme="light"])) :is(.status, .prayer-box, .finish, .music, .scripture, .paper-card, .gig-key, .takeaway) { box-shadow: inset 0 1px 0 color-mix(in srgb, var(--gold) 35%, transparent); }
+  :where(:root:not([data-theme="light"])) :is(.status, .prayer-box, .finish, .music, .scripture, .paper-card, .gig-key, .takeaway, .random .card) { box-shadow: inset 0 1px 0 color-mix(in srgb, var(--gold) 35%, transparent); }
 }
-:where(:root[data-theme="dark"]) :is(.status, .prayer-box, .finish, .music, .scripture, .paper-card, .gig-key, .takeaway) { box-shadow: inset 0 1px 0 color-mix(in srgb, var(--gold) 35%, transparent); }
+:where(:root[data-theme="dark"]) :is(.status, .prayer-box, .finish, .music, .scripture, .paper-card, .gig-key, .takeaway, .random .card) { box-shadow: inset 0 1px 0 color-mix(in srgb, var(--gold) 35%, transparent); }
 @media print {
   .nav, .dock, .topbar, .resume, .share, .next, .toc { display: none !important; }
   body { padding: 0; background: #fff; color: #000; }
@@ -943,6 +943,32 @@ button.chip { cursor: pointer; font-family: var(--sans); }
 .prayer-box .verses sup:first-child { margin-left: 0; }
 .prayer-box .verses cite { display: block; margin-top: 4px; font-family: var(--sans); font-style: normal; font-size: 11.5px; letter-spacing: .1em; color: var(--gold-ink); }
 .prayer-box .prayer { margin: 4px 14px 14px; font-size: 16px; }
+
+/* ——— 隨手翻 (Zufallsfund, app.js viewRandom): a round stamp on the archive's title row, and the card it turns up ——— */
+.page-title { position: relative; }
+/* A rubber stamp, set a little askew: a gold ring with a second hairline inside, two words across the middle. */
+.stamp-btn { position: absolute; right: 0; top: 33px; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--gold); color: var(--gold-ink);
+  box-shadow: inset 0 0 0 2px var(--paper), inset 0 0 0 3px var(--gold-soft); display: grid; place-content: center; text-align: center; text-decoration: none; rotate: -8deg; line-height: 1; }
+.stamp-btn b { display: block; font-family: var(--sans); font-size: 9px; font-weight: 600; letter-spacing: .14em; padding-left: .14em; margin-bottom: 2px; }
+.stamp-btn i { display: block; font-family: var(--latin); font-style: italic; font-size: 12px; font-weight: 600; letter-spacing: .02em; }
+.random .col-note { margin-top: 2px; }
+/* The card: the lead's face in a Secession frame (an ink line, a hairline inside) so it reads as one card drawn from the
+   pile; it is the thing motion.js flip turns over, so it owns its transform and sits on a stage with depth. */
+.random .card { position: relative; margin: 20px 0 0; padding: 3px; border: 1px solid var(--ink); background: var(--paper-2); transform-origin: 50% 50%; backface-visibility: hidden; }
+.random .card::before { content: ""; position: absolute; inset: 3px; border: 1px solid var(--rule); pointer-events: none; }
+.random .card > * { position: relative; margin-left: 16px; margin-right: 16px; }
+.random .card .ph { margin: 0 0 14px; background: var(--paper-3); overflow: hidden; aspect-ratio: 3 / 2; }
+.random .card .ph img { width: 100%; height: 100%; object-fit: cover; }
+.random .card .ph.contain img { object-fit: contain; }
+.random .card .kicker { margin-top: 18px; }
+.random .card .ph + .kicker { margin-top: 0; }
+.random .card h3 { font-size: clamp(22px, 5.8vw, 28px); line-height: 1.4; margin: 6px 16px 8px; font-weight: 700; letter-spacing: .01em; }
+.random .card p { margin: 0 16px; color: var(--ink-2); font-size: .95em; line-height: 1.8; }
+.random .card p.brief { color: var(--ink); font-size: 1em; }
+.random .card .meta { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 12.5px; color: var(--muted); letter-spacing: .04em; overflow: hidden; font-variant-numeric: tabular-nums; }
+.random .card .meta .read-mark { color: var(--gold-ink); }
+.random .card .btns { margin: 16px 16px 18px; }
+.random .rnd-note { margin: 12px 2px 0; text-align: center; }
 
 /* ——— 循序閱讀: locked cards, the lock page, the unlock note at an article's end ——— */
 .item.locked { cursor: default; opacity: .62; }

@@ -45,6 +45,21 @@ export async function transition(update, { from = null, to = null } = {}) {
   return vt.updateCallbackDone.catch(() => {});
 }
 
+// 隨手翻: the card turns over like a playing card. With `update`, the face on the table turns away to its edge first, the
+// content is swapped behind it, and the new face turns in; without, a fresh card simply turns in. The turn-out is
+// cancelled once the turn-in starts, or its forwards fill would snap back after. calm(): the content is just swapped.
+export async function flip(el, update) {
+  if (calm() || !el?.animate) { update?.(); return; }
+  const p = "perspective(900px)";
+  if (update) {
+    const out = el.animate([{ transform: `${p} rotateY(0)` }, { transform: `${p} rotateY(90deg)`, opacity: .7 }], { duration: 170, easing: "ease-in", fill: "forwards" });
+    await out.finished.catch(() => {});
+    update();
+    out.cancel();
+  }
+  el.animate([{ transform: `${p} rotateY(-90deg)`, opacity: .5 }, { transform: `${p} rotateY(0)`, opacity: 1 }], { duration: 380, easing: "cubic-bezier(.2,.8,.2,1)" });
+}
+
 // The finish line: a seal stamped in gold, a handful of gold leaf thrown up around it, and gold leaf raining down the page.
 export function celebrate(el) {
   el.classList.add("stamp");
