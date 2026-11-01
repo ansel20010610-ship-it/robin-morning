@@ -2,9 +2,14 @@
 """Build content/index.json (issue list for the app) and content/search/<YYYY-MM>.json (full text for search).
 Runs in GitHub Actions on every push.
 
+Besides the article cards, index.json carries what the app cannot work out on its own: each article's "related"
+(up to three articles that read on from it), football's "next" fixture, each issue's "press" record (the shift
+reports in state/runs/, for the owner's 印務室 page) and "late" note, and the top-level "stock" of reserve articles.
+
 A malformed article is skipped with a ::warning:: annotation; it must never fail the deploy, or every
-later issue would stay offline until someone fixes the file by hand.
+later issue would stay offline until someone fixes the file by hand. The same goes for a malformed runs file.
 """
+import collections
 import datetime as dt
 import hashlib
 import json
@@ -14,8 +19,21 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (CONTENT, ROOT, WEEKDAY_ZH, cjk_count, column_meta, issue_number, iter_articles,  # noqa: E402
-                    load_config, load_json, text_of_block, wm_thumb)
+from common import (CJK, CONTENT, ROOT, TW, WEEKDAY_ZH, article_path, cjk_count, column_meta,  # noqa: E402
+                    expected_columns, issue_number, iter_articles, iter_reserve, load_config, load_json,
+                    reserve_columns, reserve_target, text_of_block, wm_thumb)
+
+RUNS = os.path.join(ROOT, "state", "runs")
+SHIFTS = ("1", "2", "3", "4", "5")
+CJK_RUN = re.compile(CJK.pattern + "+")
+LATIN_WORD = re.compile(r"[a-z][a-z0-9]{2,}")
+# Calibrated 2026-11-01 on 172 articles (see related_links): genuine pairs score ≥0.18 — Beethoven 9 → 5 and 6, the
+# 2018 staging paper → the Cairo and peri-implantitis classifications, the Istanbul match → its preview and the pieces
+# that mention it, FM27 → FM27 — while the best spurious pairs (Hine's spinner → Hokusai's wave, through 博物館 and
+# 芝加哥) stop at 0.165.
+RELATED_MIN = 0.175
+RELATED_MAX_DF = 0.10  # a token in more than a tenth of all articles is column boilerplate (巴薩, 錄音, 牙齦)
+SAME_COLUMN = 0.85
 
 
 def thumb(hero):
@@ -26,8 +44,83 @@ def thumb(hero):
         small = wm_thumb(hero["src"], 500, hero.get("width") if isinstance(hero.get("width"), int) else None)
         if small:
             out["thumb"] = small  # front-page cards load a 500px image instead of the 1280px one
+        for k in ("made", "credit"):  # the gallery's labels
+            if isinstance(hero.get(k), str) and hero[k].strip():
+                out[k] = hero[k].strip()
         return out
     return {"diagram": hero.get("type")}
+
+
+def next_match(nxt):
+    """Football's next fixture {opponent, competition, kickoff (ISO 8601, +08:00), venue?, home?} when it is well
+    formed; None otherwise, so the app shows nothing rather than a broken line."""
+    if not isinstance(nxt, dict):
+        return None
+    try:
+        kick = dt.datetime.fromisoformat(nxt["kickoff"].strip())
+    except (KeyError, AttributeError, ValueError):
+        return None
+    if kick.utcoffset() != dt.timedelta(hours=8):
+        return None
+    out = {k: nxt[k].strip() for k in ("opponent", "competition") if isinstance(nxt.get(k), str) and nxt[k].strip()}
+    if len(out) < 2:
+        return None
+    out["kickoff"] = nxt["kickoff"].strip()
+    if isinstance(nxt.get("venue"), str) and nxt["venue"].strip():
+        out["venue"] = nxt["venue"].strip()
+    if isinstance(nxt.get("home"), bool):
+        out["home"] = nxt["home"]
+    return out
+
+
+def related_tokens(art):
+    """What an article is about, for related_links(): CJK bigrams of its title, dek, brief and takeaway, Latin words of
+    three or more characters, and the segments of its topic_key (music:brahms-op98 → music, brahms, op98; a bare
+    number says nothing)."""
+    text = " ".join(str(art.get(k) or "") for k in ("title", "dek", "brief", "takeaway"))
+    toks = [run[i:i + 2] for run in CJK_RUN.findall(text) for i in range(len(run) - 1)]
+    toks += LATIN_WORD.findall(" ".join(str(art.get(k) or "") for k in ("title", "dek", "brief", "topic_key")).lower())
+    toks += [s for s in re.split(r"[:_-]", str(art.get("topic_key") or "").lower()) if s and not s.isdigit()]
+    return toks
+
+
+def related_links(docs):
+    """docs: [(day, column, tokens)] → {i: [{"d", "c"}, …]}, the up to three articles that read on from each one.
+    TF-IDF cosine with sublinear tf; a token in a single article or in more than RELATED_MAX_DF of them carries nothing.
+    Same-column pairs are scaled by SAME_COLUMN so a real cross-column link can surface, one article per other day,
+    and only above RELATED_MIN. Deterministic: ties go to the earlier article."""
+    n = len(docs)
+    df = collections.Counter(t for _, _, toks in docs for t in set(toks))
+    max_df = max(2, RELATED_MAX_DF * n)  # the floor keeps a first fortnight's corpus from scoring nothing at all
+    posts = collections.defaultdict(list)  # token → [(doc, weight)]: only articles sharing a token can score
+    vecs = []
+    for i, (_, _, toks) in enumerate(docs):
+        tf = collections.Counter(toks)
+        v = {t: (1 + math.log(c)) * math.log(n / df[t]) for t, c in tf.items() if 2 <= df[t] <= max_df}
+        norm = math.sqrt(sum(w * w for w in v.values())) or 1.0
+        v = {t: w / norm for t, w in v.items()}
+        for t, w in v.items():
+            posts[t].append((i, w))
+        vecs.append(v)
+    out = {}
+    for i, (day, col, _) in enumerate(docs):
+        dots = collections.defaultdict(float)
+        for t, w in vecs[i].items():
+            for j, wj in posts[t]:
+                dots[j] += w * wj
+        best = {}  # day → (score, j)
+        for j, s in dots.items():
+            if j == i:
+                continue
+            if docs[j][1] == col:
+                s *= SAME_COLUMN
+            d = docs[j][0]
+            if s >= RELATED_MIN and (d not in best or s > best[d][0]):
+                best[d] = (s, j)
+        top = sorted(best.values(), key=lambda x: (-x[0], x[1]))[:3]
+        if top:
+            out[i] = [{"d": docs[j][0], "c": docs[j][1]} for _, j in top]
+    return out
 
 
 def epigraph(art):
@@ -89,9 +182,71 @@ def skip(path, why):
     print("::warning file=%s::build_index 跳過 %s：%s" % (rel, rel, str(why).replace("\n", " ")))
 
 
+def report(r):
+    """One shift's report {finished_at, missing, note} (scripts/report_run.py) → {at: HH:MM Taiwan time, missing, note}."""
+    at = dt.datetime.fromisoformat(r["finished_at"])
+    if at.tzinfo is None:
+        at = at.replace(tzinfo=TW)
+    return {"at": at.astimezone(TW).strftime("%H:%M"),
+            "missing": [c for c in r.get("missing") or [] if isinstance(c, str)],
+            "note": r["note"] if isinstance(r.get("note"), str) else ""}
+
+
+def press(cfg, d):
+    """The day's production record for the owner's 印務室 page: the shift reports in state/runs/<date>.json
+    (editorial/README.md), what the issue needs and which of that is still not on disk."""
+    expected = expected_columns(cfg, d)
+    out = {"shifts": {}, "expected": expected,
+           "missing": [c for c in expected if not os.path.exists(article_path(d, c))]}
+    path = os.path.join(RUNS, "%s.json" % d)
+    if not os.path.exists(path):
+        return out
+    try:
+        runs = load_json(path)
+        if not isinstance(runs, dict):
+            raise ValueError("頂層不是 JSON 物件")
+        shifts = {k: report(runs[k]) for k in SHIFTS if k in runs}
+        extra = {k: report(runs[k]) for k in ("reserve", "audit") if k in runs}
+    except Exception as e:  # noqa: BLE001
+        skip(path, "%s: %s" % (type(e).__name__, e))
+        return out
+    out["shifts"] = shifts
+    out.update(extra)
+    return out
+
+
+def late_entries():
+    """content/late.json (scripts/late.py): the Sunday issues held for the afternoon, by date."""
+    path = os.path.join(CONTENT, "late.json")
+    if not os.path.exists(path):
+        return {}
+    try:
+        data = load_json(path)
+        if not isinstance(data, dict):
+            raise ValueError("頂層不是 JSON 物件")
+        return {k: v for k, v in data.items() if isinstance(v, dict)}
+    except Exception as e:  # noqa: BLE001
+        skip(path, "%s: %s" % (type(e).__name__, e))
+        return {}
+
+
+def stock(cfg):
+    """Reserve articles on hand per column (editorial/RESERVE.md) against the target, for the 印務室 page."""
+    out = {}
+    for col in reserve_columns(cfg):
+        n = 0
+        for _, path in iter_reserve(col):
+            try:
+                n += 1 if isinstance(load_json(path), dict) else 0
+            except Exception as e:  # noqa: BLE001
+                skip(path, "%s: %s" % (type(e).__name__, e))
+        out[col] = {"n": n, "target": reserve_target(cfg, col)}
+    return out
+
+
 def main():
     cfg = load_config()
-    days, epigraphs, verses, search = {}, {}, {}, {}
+    days, epigraphs, verses, search, docs, flat = {}, {}, {}, {}, [], []
     for day, col, path in iter_articles():
         meta = column_meta(cfg, col, day)  # a retired column stays in config.json with "until", so its issues stay listed
         if meta is None:
@@ -125,11 +280,20 @@ def main():
                 entry["from_reserve"] = True
             if isinstance(art.get("takeaway"), str) and art["takeaway"].strip():  # perio: shown on the saved and column lists
                 entry["takeaway"] = art["takeaway"].strip()
+            nxt = next_match(art.get("next"))
+            if nxt:
+                entry["next"] = nxt
+            toks = related_tokens(art)
             search.setdefault(day[:7], []).append({"d": day, "c": col, "t": art.get("title", ""), "x": plain_text(art)})
         except Exception as e:  # noqa: BLE001
             skip(path, "%s: %s" % (type(e).__name__, e))
             continue
         days.setdefault(day, []).append(entry)
+        docs.append((day, col, toks))
+        flat.append(entry)
+    for i, links in related_links(docs).items():
+        flat[i]["related"] = links
+    late = late_entries()
     issues = []
     for day in sorted(days, reverse=True):
         try:
@@ -137,14 +301,17 @@ def main():
         except ValueError as e:  # e.g. a folder named 2026-02-30
             skip(os.path.join(CONTENT, "issues", day), e)
             continue
-        issue = {"date": day, "no": issue_number(cfg, d), "weekday": WEEKDAY_ZH[d.weekday()], "articles": days[day]}
+        issue = {"date": day, "no": issue_number(cfg, d), "weekday": WEEKDAY_ZH[d.weekday()], "articles": days[day],
+                 "press": press(cfg, d)}
         if day in epigraphs:
             issue["epigraph"] = epigraphs[day]
         if day in verses:
             issue["verse"] = verses[day]
+        if day in late:
+            issue["late"] = late[day]
         issues.append(issue)
     out = {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "issues": issues,
-           "push": push_devices()}
+           "push": push_devices(), "stock": stock(cfg)}
     with open(os.path.join(CONTENT, "index.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
     sdir = os.path.join(CONTENT, "search")
@@ -154,7 +321,9 @@ def main():
             json.dump(sorted(rows, key=lambda r: r["d"], reverse=True), f, ensure_ascii=False, separators=(",", ":"))
     with open(os.path.join(sdir, "months.json"), "w", encoding="utf-8") as f:
         json.dump(sorted(search, reverse=True), f)
-    print("index.json：%d 期，%d 篇；搜尋資料 %d 個月" % (len(issues), sum(len(i["articles"]) for i in issues), len(search)))
+    arts = [a for i in issues for a in i["articles"]]
+    print("index.json：%d 期，%d 篇（%d 篇有延伸閱讀）；搜尋資料 %d 個月" % (
+        len(issues), len(arts), sum(1 for a in arts if "related" in a), len(search)))
 
 
 if __name__ == "__main__":
