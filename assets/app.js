@@ -469,8 +469,9 @@ async function viewArticle(date, column, my) {
   const k = col(column, date);
   const issue = issueBy(date);
   const minutes = issue?.articles.find((x) => x.column === column)?.minutes;
-  // 本期翻閱: this article's place in its issue (the front page's order) — for the top bar's numeral and the contents
-  // sheet (openContents). Its neighbours are fetched now, so a page chosen there is already in memory and gets its slide.
+  // 本期翻閱: this article's place in its issue (the front page's order) — for the top bar's numeral, the swipe to the
+  // next or previous page (turnTo) and the contents sheet (openContents). Its neighbours are fetched now, so a turn
+  // of the page lands on an article already in memory and gets its slide.
   const order = issue ? sortArticles(issue.articles, date) : [], idx = order.findIndex((x) => x.column === column);
   [order[idx - 1], order[idx + 1]].forEach((n) => { if (n) article(date, n.column).catch(() => {}); });
   // The name is boxed on its own (.nm) so it is what gets the ellipsis on a narrow bar; the numeral always stays whole.
@@ -570,9 +571,57 @@ async function viewArticle(date, column, my) {
     navigator.share({ title: a.title, text: a.dek, url: location.href.replace(/\?[^#]*/, "") }).catch(() => {});
   });
 
-  // 本期目錄: the top bar's numeral opens the issue's contents sheet (openContents). The sideways swipe that turned
-  // pages here was taken out on 2026-11-01 (the owner did not like the feel); a page still slides when chosen from the sheet.
+  // 翻頁: a sideways swipe turns to the issue's next or previous article (turnTo). The page follows the finger one to
+  // one — a quarter of the way where there is no page to turn to (either end of the issue, a locked article), and it
+  // springs back — and a release past a third of the screen, or a quick flick, carries it off: the turn starts from
+  // where the finger left the page, at the speed it was going (transition dir/lean/ms), so nothing jumps. Not taken
+  // over: a start within 28px of either edge (Safari's own back and forward), anything that moves sideways by itself
+  // (a table's .scroll, the pitch, a picture's frame, the music card, a form field), the mouse (which selects text), or a
+  // movement more down than across — article { touch-action: pan-y } leaves the scroll to the browser, which then
+  // cancels the pointer. Once the page is held, the swipe is not a tap: the click it would end in is swallowed. With
+  // reduced motion the page does not follow; the release still turns.
+  const page = main.querySelector("article");
   const turns = new AbortController(), { signal } = turns;
+  let sw = null, swiped = 0; // the swipe under way, and when the last one ended
+  const canTurn = (step) => { const n = order[idx + step]; return Boolean(n) && !lockedBy(date, n.column); };
+  const settle = () => {
+    page.classList.add("settling"); page.classList.remove("lifting", "to-l", "to-r"); page.style.translate = ""; sw = null;
+    setTimeout(() => page.classList.remove("settling"), 320);
+  };
+  page.addEventListener("pointerdown", (e) => {
+    if (sw || !e.isPrimary || e.pointerType === "mouse" || idx < 0) return;
+    if (e.clientX < 28 || e.clientX > innerWidth - 28) return;
+    if (e.target.closest(".scroll, .pitch, .frame, table, .music, .card3d, iframe, input, textarea, select, [contenteditable]")) return;
+    sw = { id: e.pointerId, x: e.clientX, y: e.clientY, held: false, lean: 0, trail: [[performance.now(), e.clientX]] };
+  }, { signal, passive: true });
+  page.addEventListener("pointermove", (e) => {
+    if (!sw || e.pointerId !== sw.id) return;
+    const dx = e.clientX - sw.x, dy = e.clientY - sw.y;
+    if (!sw.held) {
+      if (Math.abs(dx) < 8 || Math.abs(dx) < 1.4 * Math.abs(dy)) { if (Math.abs(dy) > 10) sw = null; return; } // a scroll, not a turn
+      sw.held = true;
+      try { page.setPointerCapture(e.pointerId); } catch { /* the pointer is already gone */ }
+      page.classList.add("lifting");
+    }
+    sw.trail.push([performance.now(), e.clientX]);
+    if (sw.trail.length > 6) sw.trail.shift();
+    sw.lean = canTurn(dx < 0 ? 1 : -1) ? dx : dx * 0.25;
+    page.classList.toggle("to-l", dx < 0);
+    page.classList.toggle("to-r", dx > 0);
+    if (!calm()) page.style.translate = `${sw.lean.toFixed(1)}px 0`;
+  }, { signal, passive: true });
+  page.addEventListener("pointerup", (e) => {
+    if (!sw || e.pointerId !== sw.id) return;
+    if (!sw.held) { sw = null; return; }
+    swiped = Date.now();
+    const dx = e.clientX - sw.x, [t0, x0] = sw.trail[0];
+    const v = (e.clientX - x0) / Math.max(1, performance.now() - t0); // px per ms over the last few moves
+    const go = Math.abs(dx) > innerWidth * 0.3 || (Math.abs(v) > 0.5 && Math.abs(dx) > 24 && Math.sign(v) === Math.sign(dx));
+    if (!go || !turnTo(date, order, idx, dx < 0 ? 1 : -1, calm() ? 0 : sw.lean, Math.abs(v))) settle();
+    else sw = null; // the page keeps its lean: the turn carries on from there
+  }, { signal });
+  page.addEventListener("pointercancel", settle, { signal });
+  page.addEventListener("click", (e) => { if (Date.now() - swiped < 400) { e.preventDefault(); e.stopPropagation(); } }, { capture: true, signal });
   main.querySelector("[data-contents]")?.addEventListener("click", () => openContents(date, order, idx), { signal });
 
   // Read aloud: the top-bar button starts and pauses; it stops when the reader leaves the article.
@@ -700,6 +749,29 @@ async function viewArticle(date, column, my) {
     turns.abort();
   };
   document.title = `${a.title}｜${S.cfg.title}`;
+}
+
+// A page turned within the issue: `step` +1 is the article after this one (the page slides off to the left), -1 the one
+// before. Refused — with a word why — at either end of the issue and, in 循序閱讀, at an article still locked. `lean` is
+// how far the finger already carried the page (px, signed) and `speed` how fast it was going (px/ms): the slide takes
+// over from there, at a pace between 160 and 420 ms. Says whether it went.
+function turnTo(date, order, idx, step, lean = 0, speed = 0) {
+  const n = order[idx + step];
+  if (!n) { toast(step > 0 ? "這是本期最後一篇" : "這是本期第一篇"); return false; }
+  const by = lockedBy(date, n.column);
+  if (by) { toast(`〈${n.title}〉還鎖著，先讀完這篇再翻`); return false; }
+  const left = innerWidth - Math.abs(lean);
+  turnDir = step > 0 ? "left" : "right";
+  turnLean = lean;
+  turnMs = Math.round(Math.min(420, Math.max(160, speed > 0.2 ? left / speed : 320)));
+  const go = () => { location.hash = `#/a/${date}/${n.column}`; };
+  if (lean && !document.startViewTransition) { // no View Transitions: carry the page off by hand, then change pages
+    const page = main.querySelector("article");
+    const anim = page?.animate([{ translate: `${lean}px 0` }, { translate: `${step > 0 ? -innerWidth : innerWidth}px 0` }], { duration: turnMs, easing: "cubic-bezier(.2,.7,.2,1)", fill: "forwards" });
+    if (anim) { anim.finished.catch(() => {}).finally(go); return true; }
+  }
+  go();
+  return true;
 }
 
 // 本期目錄 (Inhalt): the issue's articles in the front page's order, raised as a sheet from the top bar's title. Each row
@@ -1259,7 +1331,7 @@ let routeSeq = 0; // bumped on every route; an older route still loading must no
 const places = new Map();
 let shownHash = null, navTap = false, fromList = null;
 let landKey = null, landTop = null; // 接著上次: the article tapped on the front page, and where in it to land
-let turnDir = null; // 翻頁: the way the page turns on the route about to fire (openContents), "left" | "right" | null
+let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
 const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
 
@@ -1310,8 +1382,8 @@ async function route(ev) {
   else if (ev && !art) morph = {};
   // A page turned within the issue (openContents): the slide in its direction instead of the cross-fade and
   // the picture morph — again only for an article already in memory.
-  if (turnDir && ev && art && isFresh(art[1], art[2])) morph = { dir: turnDir };
-  turnDir = null;
+  if (turnDir && ev && art && isFresh(art[1], art[2])) morph = { dir: turnDir, lean: turnLean, ms: turnMs };
+  turnDir = null; turnLean = 0; turnMs = 0;
   lastTapped = null;
   plateLater = Boolean(art && morph?.to);
   const draw = async () => {

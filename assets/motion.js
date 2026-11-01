@@ -35,11 +35,15 @@ export const plate = (el) => el?.closest("figure.hero")?.classList.add("plate");
 // frame); `update` draws the new page. `dir` ("left" | "right") is a page turned within the issue (app.js swipe, the
 // contents sheet): the old page slides off that way and the new one slides in behind it (style.css html.turn-*)
 // instead of the cross-fade; the class is on <html> only for the length of the transition.
-export async function transition(update, { from = null, to = null, dir = null } = {}) {
+export async function transition(update, { from = null, to = null, dir = null, lean = 0, ms = 0 } = {}) {
   if (calm() || !document.startViewTransition) { await update(); plate(to?.()); return; }
   const root = document.documentElement;
   if (from) from.style.viewTransitionName = "hero";
-  if (dir) root.classList.add(`turn-${dir}`);
+  if (dir) { // `lean`: the old page is captured where the finger left it, so the slide starts from there; `ms`: its pace
+    root.classList.add(`turn-${dir}`);
+    root.style.setProperty("--lean", `${lean || 0}px`);
+    if (ms) root.style.setProperty("--turn-ms", `${ms}ms`);
+  }
   const vt = document.startViewTransition(async () => {
     if (from) from.style.viewTransitionName = "";
     await update();
@@ -48,7 +52,7 @@ export async function transition(update, { from = null, to = null, dir = null } 
   });
   vt.ready.catch(() => {}); // a transition cut short by the next tap is skipped; that is fine
   vt.finished.catch(() => {}).finally(() => {
-    if (dir) root.classList.remove("turn-left", "turn-right");
+    if (dir) { root.classList.remove("turn-left", "turn-right"); root.style.removeProperty("--lean"); root.style.removeProperty("--turn-ms"); }
     const el = to?.();
     if (el) { el.style.viewTransitionName = ""; plate(el); }
   });

@@ -231,6 +231,12 @@ button { font: inherit; color: inherit; }
 /* The meta line: date, issue, reading time, update — each item kept whole, parted by a hairline of gold. Every item
    carries its own hairline on the left; the row is pulled left by the same amount and clipped, so the first item of
    every line loses its hairline. (No more line breaks between 「第 22」 and 「期」.) */
+/* 翻頁: the page under a finger (app.js swipe) moves one to one with it, lifting off the paper; let go short of a turn it
+   springs back (.settling). article { touch-action: pan-y } keeps the vertical scroll with the browser. */
+article.wrap { touch-action: pan-y pinch-zoom; }
+article.wrap.settling { transition: translate .3s cubic-bezier(.2,.7,.2,1); }
+article.wrap.lifting.to-l { box-shadow: 1px 0 0 var(--rule), 14px 0 24px -14px rgba(0, 0, 0, .35); }
+article.wrap.lifting.to-r { box-shadow: -1px 0 0 var(--rule), -14px 0 24px -14px rgba(0, 0, 0, .35); }
 .article-head .meta { font-family: var(--sans); font-size: 12.5px; color: var(--muted); letter-spacing: .04em; padding-bottom: 12px; border-bottom: 1px solid var(--rule); overflow: hidden; font-variant-numeric: tabular-nums; }
 :is(.article-head, .random .card) .meta .row { display: flex; flex-wrap: wrap; row-gap: 3px; margin-left: -11px; }
 :is(.article-head, .random .card) .meta .row > span { white-space: nowrap; padding: 0 10px; border-left: 1px solid var(--gold-soft); line-height: 1.5; }
@@ -935,17 +941,20 @@ img.img-off { visibility: hidden; }
   @keyframes theme-in { from { clip-path: circle(0 at var(--vx, 50%) var(--vy, 50%)); } to { clip-path: circle(150vmax at var(--vx, 50%) var(--vy, 50%)); } }
   /* 翻頁: a page turned within the issue (motion.js transition dir) slides off to one side as the next comes in from the
      other, the new page over the old and no blend between them; the bottom bar has its own name and stays put. */
-  html.turn-left::view-transition-old(root), html.turn-right::view-transition-old(root) { mix-blend-mode: normal; z-index: 0; animation: .34s cubic-bezier(.2,.7,.2,1) both; }
-  html.turn-left::view-transition-new(root), html.turn-right::view-transition-new(root) { mix-blend-mode: normal; z-index: 1; animation: .34s cubic-bezier(.2,.7,.2,1) both; box-shadow: -1px 0 0 var(--rule), -14px 0 28px -14px rgba(0, 0, 0, .4); }
+  html.turn-left::view-transition-old(root), html.turn-right::view-transition-old(root) { mix-blend-mode: normal; z-index: 0; animation: var(--turn-ms, .34s) cubic-bezier(.22,.7,.25,1) both; }
+  html.turn-left::view-transition-new(root), html.turn-right::view-transition-new(root) { mix-blend-mode: normal; z-index: 1; animation: var(--turn-ms, .34s) cubic-bezier(.22,.7,.25,1) both; box-shadow: -1px 0 0 var(--rule), -14px 0 28px -14px rgba(0, 0, 0, .4); }
   html.turn-right::view-transition-new(root) { box-shadow: 1px 0 0 var(--rule), 14px 0 28px -14px rgba(0, 0, 0, .4); }
   html.turn-left::view-transition-old(root) { animation-name: turn-out-l; }
   html.turn-left::view-transition-new(root) { animation-name: turn-in-r; }
   html.turn-right::view-transition-old(root) { animation-name: turn-out-r; }
   html.turn-right::view-transition-new(root) { animation-name: turn-in-l; }
-  @keyframes turn-out-l { to { transform: translateX(-28%); opacity: 0; } }
-  @keyframes turn-out-r { to { transform: translateX(28%); opacity: 0; } }
-  @keyframes turn-in-r { from { transform: translateX(100%); } }
-  @keyframes turn-in-l { from { transform: translateX(-100%); } }
+  /* The old page was captured already carried --lean px by the finger: it goes the rest of the way off, fully, with no
+     fade; the new page starts right against its edge. */
+  @keyframes turn-out-l { to { transform: translateX(calc(-100% - var(--lean, 0px))); } }
+  @keyframes turn-out-r { to { transform: translateX(calc(100% - var(--lean, 0px))); } }
+  @keyframes turn-in-r { from { transform: translateX(calc(100% + var(--lean, 0px))); } }
+  @keyframes turn-in-l { from { transform: translateX(calc(-100% + var(--lean, 0px))); } }
+  html.turn-left #main > :not(.topbar), html.turn-right #main > :not(.topbar) { animation: none; } /* the slide is the entrance */
   /* A sheet (本期目錄, the Spotify lists) rises a little as it opens. */
   dialog.bottom[open] > .sheet { animation: sheet-up .3s cubic-bezier(.2,.7,.2,1) both; }
   @keyframes sheet-up { from { translate: 0 18px; opacity: 0; } }
