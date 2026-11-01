@@ -1,4 +1,4 @@
-# FM 觀測站（fm-watch）｜條件式，只有新進展才刊出
+# 足球經理的風吹草動（fm-watch，編輯部簡稱「FM 觀測站」）｜條件式，只有新進展才刊出
 
 ## 使用者規格
 追蹤 Football Manager 27 發售、平台、Match Engine、戰術、訓練、介面、授權、Launch Preview／搶先體驗、重要修正、延期或取消。

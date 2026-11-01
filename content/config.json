@@ -12,21 +12,21 @@
     "key": "BERoBPv5tZs22xrCwg3-ebqjmpZVNjzAHyFyDh9-7KPzQ8zsdFwDARkCiw2wU5R1qKfO6kjXH3z8pUB9bciPECI"
   },
   "columns": {
-    "football":     { "group": "main", "order": 1, "name": "巴薩晨報", "full": "巴薩與歐洲足壇", "latin": "Fußball" },
-    "news":         { "group": "main", "order": 2, "since": "2026-11-02", "reserve": false, "name": "世界與台灣快訊", "full": "今天該知道的幾件事，短短說", "latin": "Nachrichten" },
-    "perio":        { "group": "main", "order": 3, "name": "牙周經典導讀", "full": "每日一篇經典牙周論文", "latin": "Parodontologie" },
-    "music":        { "group": "main", "order": 4, "name": "今日古典", "full": "古典樂導聆", "latin": "Musik" },
-    "civilization": { "group": "supplement", "name": "文明如何運作", "full": "從具體歷史問題看制度", "latin": "Zivilisation" },
-    "devotion":     { "group": "verse", "name": "今日經文與禱告", "full": "首頁最上方的經文與今日禱告（2026-11-01 起不再是文章）", "latin": "Gebet",
+    "football":     { "group": "main", "order": 1, "name": "諾坎普散場之後", "full": "巴薩與歐洲足壇", "latin": "Sportchronik" },
+    "news":         { "group": "main", "order": 2, "since": "2026-11-02", "reserve": false, "name": "天亮以前，世界與台灣", "full": "今天該知道的幾件事，短短說", "latin": "Kleine Chronik" },
+    "perio":        { "group": "main", "order": 3, "name": "診間裡站得住的證據", "full": "每日一篇經典牙周論文", "latin": "Klinische Evidenz" },
+    "music":        { "group": "main", "order": 4, "name": "燈暗下來，聽一首名曲", "full": "古典樂導聆", "latin": "Konzertführer" },
+    "civilization": { "group": "supplement", "name": "歷史課本沒寫的那一半", "full": "從具體歷史問題看制度", "latin": "Zeitläufte" },
+    "devotion":     { "group": "verse", "name": "一段經文，一篇禱告", "full": "首頁最上方的經文與今日禱告（2026-11-01 起不再是文章）", "latin": "Tageslosung",
                       "was": { "until": "2026-10-31", "group": "main", "order": 4, "name": "晨光裡的一句話", "full": "基督信仰默想", "latin": "Andacht" } },
 
-    "literature":   { "group": "supplement", "name": "一句話，讀進一本書", "latin": "Literatur" },
-    "philosophy":   { "group": "supplement", "name": "咖啡館裡的思想實驗", "latin": "Philosophie" },
-    "artwork":      { "group": "supplement", "since": "2026-11-02", "name": "走進一件作品", "full": "深入一件世界藝術作品：繪畫、雕塑、建築、攝影", "latin": "Kunstwerk" },
-    "architecture": { "group": "supplement", "since": "2026-11-02", "name": "走進一座古蹟", "full": "一座古蹟建築", "latin": "Denkmal" },
-    "canon":        { "group": "supplement", "since": "2026-11-02", "name": "經典何以不朽", "full": "有歷史地位的作品為什麼超越時代：歌劇、交響曲、電影、文學、戲劇、遊戲", "latin": "Kanon" },
-    "wildcard":     { "group": "supplement", "since": "2026-11-02", "name": "不在計畫裡的知識", "full": "一個完全意料之外的題目，用來打破同溫層：神學、物理、語言學都行", "latin": "Zufall" },
-    "concept":      { "group": "supplement", "since": "2026-11-02", "name": "從零理解一個概念", "full": "把一個重要概念真正講懂：熵、博弈論、相對論、供需曲線、存在主義", "latin": "Begriff" },
+    "literature":   { "group": "supplement", "name": "書頁上劃線的那一句", "latin": "Lesefrüchte" },
+    "philosophy":   { "group": "supplement", "name": "咖啡館裡的思想實驗", "latin": "Kaffeehausgespräch" },
+    "artwork":      { "group": "supplement", "since": "2026-11-02", "name": "走進一件作品", "full": "深入一件世界藝術作品：繪畫、雕塑、建築、攝影", "latin": "Bildbetrachtung" },
+    "architecture": { "group": "supplement", "since": "2026-11-02", "name": "推開一座古蹟的門", "full": "一座古蹟建築", "latin": "Baukunst" },
+    "canon":        { "group": "supplement", "since": "2026-11-02", "name": "經典何以不朽", "full": "有歷史地位的作品為什麼超越時代：歌劇、交響曲、電影、文學、戲劇、遊戲", "latin": "Nachruhm" },
+    "wildcard":     { "group": "supplement", "since": "2026-11-02", "name": "不在計畫裡的知識", "full": "一個完全意料之外的題目，用來打破同溫層：神學、物理、語言學都行", "latin": "Vermischtes" },
+    "concept":      { "group": "supplement", "since": "2026-11-02", "name": "從零理解一個概念", "full": "把一個重要概念真正講懂：熵、博弈論、相對論、供需曲線、存在主義", "latin": "Grundbegriffe" },
 
     "art":          { "group": "supplement", "name": "走進一幅畫", "latin": "Kunst", "until": "2026-11-01" },
     "photo":        { "group": "supplement", "name": "一格電影，一張照片", "latin": "Bild", "until": "2026-11-01" },
@@ -34,8 +34,8 @@
     "fiction":      { "group": "supplement", "name": "小說的骨架", "latin": "Erzählung", "until": "2026-11-01" },
     "tactics":      { "group": "supplement", "name": "看懂一段比賽", "latin": "Taktik", "until": "2026-10-31" },
 
-    "fm-watch":      { "group": "watch", "name": "FM 觀測站", "latin": "Beobachtung" },
-    "cosmere-watch": { "group": "watch", "name": "迷霧之子與颶光影視化", "latin": "Beobachtung" }
+    "fm-watch":      { "group": "watch", "name": "足球經理的風吹草動", "latin": "Ausguck" },
+    "cosmere-watch": { "group": "watch", "name": "寰宇片場的燈亮了", "latin": "Ausguck" }
   },
   "rotation_by_weekday": {
     "mon": ["artwork", "concept", "canon"],
