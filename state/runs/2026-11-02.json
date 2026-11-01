@@ -25,5 +25,10 @@
       "news"
     ],
     "note": "canon《大國民》與 football 初稿皆完成審稿、總編重寫、忠實度核對並推送；football 字數低於下限（新聞少）"
+  },
+  "4": {
+    "finished_at": "2026-11-02T05:40:01+08:00",
+    "missing": [],
+    "note": "FM與寰宇觀測站靜默；巴薩晨報加尤文對拿坡里一則；快訊已刊（7則，經審稿修正）。網域實測可用：aljazeera、france24、un.org、cna.com.tw、focustaiwan.tw、news.pts.org.tw、cwa.gov.tw、cdc.gov.tw(僅WebFetch)；rti僅搜尋可用；dw.com、nhk.or.jp封鎖；focustaiwan/cna RSS 404。"
   }
 }
