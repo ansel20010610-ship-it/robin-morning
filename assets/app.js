@@ -964,7 +964,7 @@ function viewArchive() {
   const chips = Object.entries(S.cfg.columns).filter(([, k]) => k.group !== "verse").map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span>
       <a class="stamp-btn" href="#/random" aria-label="隨手翻一篇：從往期裡抽一篇沒讀過的"><b>隨手翻</b><i>Zufall</i></a></header>
-    <nav class="chips review" aria-label="常設"><a class="chip" href="#/concerts">近期演出</a><a class="chip" href="#/stats">閱讀年鑑</a><a class="chip" href="#/marks">劃線本</a><a class="chip" href="#/press">印務室</a></nav>
+    <nav class="chips review" aria-label="常設"><a class="chip" href="#/concerts">近期演出</a><a class="chip" href="#/stats">閱讀年鑑</a><a class="chip" href="#/gallery">畫廊</a><a class="chip" href="#/marks">劃線本</a><a class="chip" href="#/press">印務室</a></nav>
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
     <div class="hits" aria-live="polite"></div>
     ${calendarHtml(twNow().date.slice(0, 7), pubs, done)}
@@ -1122,6 +1122,40 @@ function viewStats() {
 function viewPress() {
   main.innerHTML = `<div class="wrap press">${pressHtml(S.cfg, S.index, col)}</div>`;
   document.title = `印務室｜${S.cfg.title}`;
+}
+
+// ——— 畫廊 (Galerie): the opening pictures of the art, architecture and photo columns — and any other hero that is a
+// work of art — hung newest first as a wall of framed plates (style.css .wall). A tile is a card: its picture morphs into
+// the article's opening picture (boot's click listener takes it for lastTapped), and the way back morphs it home.
+const GALLERY_COLS = new Set(["artwork", "architecture", "art", "photo"]);
+const GALLERY_F = [["all", "全部"], ["work", "作品"], ["site", "古蹟"], ["other", "其他"]];
+const galleryKind = (c) => (c === "artwork" || c === "art" ? "work" : c === "architecture" ? "site" : "other");
+function viewGallery() {
+  const all = publishedIssues().flatMap((i) => i.articles.filter((a) => a.hero?.src && (GALLERY_COLS.has(a.column) || a.hero.kind === "artwork")).map((a) => ({ date: i.date, a })));
+  // The thumb when there is one, as the cards; width and height so the wall keeps its shape while the pictures arrive.
+  const tile = ({ date, a }) => {
+    const h = a.hero, size = h.width > 0 && h.height > 0 ? ` width="${Number(h.width)}" height="${Number(h.height)}"` : "";
+    return `<a class="tile" href="#/a/${date}/${a.column}"><span class="mat"><img src="${esc(h.thumb || h.src)}" alt="${esc(h.alt || "")}"${size} loading="lazy" decoding="async" referrerpolicy="no-referrer"></span>
+      <span class="lbl"><b>${esc(a.title)}</b><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">・${esc(fmtDate(date, "short"))}</span></span>${h.made ? `<i>${esc(String(h.made))}</i>` : ""}</span></a>`;
+  };
+  main.innerHTML = `<div class="wrap gallery"><header class="page-title"><h1>畫廊</h1><span class="de">Galerie</span></header>
+    <p class="col-note">走進一件作品、推開一座古蹟的門，和往期畫作的頭圖，掛成一面牆。點一張，回到那篇文章。</p>
+    <nav class="chips" aria-label="分類"></nav><div class="wall"></div></div>`;
+  const draw = (f) => {
+    const rows = f === "all" ? all : all.filter((x) => galleryKind(x.a.column) === f);
+    main.querySelector(".chips").innerHTML = GALLERY_F.map(([k, label]) => `<button type="button" class="chip" data-f="${k}" aria-pressed="${k === f}">${label}</button>`).join("");
+    main.querySelector(".wall").innerHTML = rows.map(tile).join("") || `<p class="empty">牆上還沒有畫。</p>`;
+  };
+  const kept = GALLERY_F.some(([k]) => k === store.get("gallery.f")) ? store.get("gallery.f") : "all";
+  draw(kept);
+  main.querySelector(".chips").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-f]");
+    if (!b) return;
+    store.set("gallery.f", b.dataset.f);
+    draw(b.dataset.f);
+    main.querySelector(`.chips [data-f="${b.dataset.f}"]`)?.focus();
+  });
+  document.title = `畫廊｜${S.cfg.title}`;
 }
 
 // ——— 隨手翻 (Zufallsfund): one article out of the back issues, drawn like a card ———
@@ -1324,7 +1358,7 @@ let landKey = null, landTop = null; // 接著上次: the article tapped on the f
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") || h.startsWith("#/gallery") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
 let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising number, so a step back is recognisable
@@ -1397,6 +1431,7 @@ async function drawRoute(h, art, my) {
   else if ((m = h.match(/^#\/column\/([\w-]+)/))) viewColumn(m[1]);
   else if (h.startsWith("#/archive")) viewArchive();
   else if (h.startsWith("#/stats")) viewStats();
+  else if (h.startsWith("#/gallery")) viewGallery();
   else if (h.startsWith("#/press")) viewPress();
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
@@ -1464,7 +1499,7 @@ async function boot() {
       history.back();
     } else navTap = true;
   });
-  main.addEventListener("click", (e) => { lastTapped = e.target.closest("a.lead, a.item")?.querySelector("img") || null; }, true);
+  main.addEventListener("click", (e) => { lastTapped = e.target.closest("a.lead, a.item, a.tile")?.querySelector("img") || null; }, true);
   ripples();
   try { await route(); } catch (e) { console.warn("route failed", e); }
   runAutoAdd();

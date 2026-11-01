@@ -1241,3 +1241,25 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .pr .c2 { font-family: var(--latin); font-size: 17px; font-weight: 600; color: var(--red); }
 .press .legend { font-family: var(--sans); font-size: 11.5px; letter-spacing: .03em; color: var(--muted); margin: 8px 0 0; }
 .press .audit { font-family: var(--sans); font-size: 13.5px; line-height: 1.7; color: var(--ink-2); margin: 8px 0 24px; }
+
+/* ——— 畫廊 (Galerie; app.js viewGallery): the opening pictures of the art, architecture and photo columns, hung as a wall ——— */
+/* Two columns of plates on a phone, three from 700px; a tile never breaks across them. Each picture sits whole in a thin
+   gilt frame round a 6px mat — the copperplate's frame (figure.hero.plate) at rest, nothing of it moving — with its
+   label in small type under it: the title on at most two lines, the column and the day, and the year the work was made
+   in Cormorant. At night the mat is a shade lighter than the page, so the frame reads as a frame. */
+.gallery .col-note { margin-top: 4px; }
+.wall { columns: 2; column-gap: 14px; margin: 14px 0 10px; }
+@media (min-width: 700px) { .wall { columns: 3; column-gap: 18px; } }
+.wall > .empty { column-span: all; }
+.tile { display: block; break-inside: avoid; margin: 0 0 18px; color: inherit; text-decoration: none; }
+.tile .mat { display: block; padding: 6px; border: 1px solid var(--gold-soft); background: var(--paper); }
+.tile img { display: block; width: 100%; height: auto; background: var(--paper-3); }
+.tile .lbl { display: grid; gap: 2px; padding: 7px 2px 0; }
+.tile b { font-size: 13.5px; line-height: 1.5; font-weight: 600; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+.tile .m { display: flex; font-family: var(--sans); font-size: 11px; letter-spacing: .03em; line-height: 1.5; color: var(--muted); white-space: nowrap; }
+.tile .k { min-width: 0; overflow: hidden; text-overflow: ellipsis; } /* a long column name gives way; the day stays whole */
+.tile .d { flex: 0 0 auto; }
+.tile .lbl i { font-family: var(--latin); font-style: italic; font-size: 13.5px; line-height: 1.3; color: var(--gold-ink); }
+.tile:active .mat { border-color: var(--gold); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tile .mat { background: var(--paper-2); } }
+:root[data-theme="dark"] .tile .mat { background: var(--paper-2); }
