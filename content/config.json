@@ -27,6 +27,8 @@
     "canon":        { "group": "supplement", "since": "2026-11-02", "name": "經典何以不朽", "full": "有歷史地位的作品為什麼超越時代：歌劇、交響曲、電影、文學、戲劇、遊戲", "latin": "Nachruhm" },
     "wildcard":     { "group": "supplement", "since": "2026-11-02", "name": "不在計畫裡的知識", "full": "一個完全意料之外的題目，用來打破同溫層：神學、物理、語言學都行", "latin": "Vermischtes" },
     "concept":      { "group": "supplement", "since": "2026-11-02", "name": "從零理解一個概念", "full": "把一個重要概念真正講懂：熵、博弈論、相對論、供需曲線、存在主義", "latin": "Grundbegriffe" },
+    "poem":         { "group": "supplement", "since": "2026-11-03", "name": "一首詩，讀到最後一行", "full": "一次一首詩，中外輪流，逐段讀給你看哪裡在動", "latin": "Lyrik" },
+    "mystery":      { "group": "supplement", "since": "2026-11-04", "name": "至今沒有人知道答案", "full": "科學、歷史、考古、宇宙裡還沒有答案的問題，以及為什麼還沒有", "latin": "Ungelöstes" },
 
     "art":          { "group": "supplement", "name": "走進一幅畫", "latin": "Kunst", "until": "2026-11-01" },
     "photo":        { "group": "supplement", "name": "一格電影，一張照片", "latin": "Bild", "until": "2026-11-01" },
@@ -38,12 +40,12 @@
     "cosmere-watch": { "group": "watch", "name": "寰宇片場的燈亮了", "latin": "Ausguck" }
   },
   "rotation_by_weekday": {
-    "mon": ["artwork", "concept", "canon"],
-    "tue": ["architecture", "philosophy"],
-    "wed": ["civilization", "literature", "wildcard"],
-    "thu": ["artwork", "concept"],
-    "fri": ["architecture", "canon"],
-    "sat": ["civilization", "philosophy"],
-    "sun": ["literature", "wildcard"]
+    "mon": ["artwork", "canon", "concept"],
+    "tue": ["architecture", "philosophy", "poem"],
+    "wed": ["civilization", "literature", "mystery"],
+    "thu": ["artwork", "canon", "wildcard"],
+    "fri": ["architecture", "concept", "poem"],
+    "sat": ["civilization", "philosophy", "canon"],
+    "sun": ["literature", "wildcard", "mystery"]
   }
 }
