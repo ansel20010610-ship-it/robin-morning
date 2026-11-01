@@ -1,5 +1,7 @@
 // Motion: the gold-leaf moments. All of it is decoration — with reduced motion, or where a browser lacks an API, every
 // page works the same without it.
+import { ROBIN_PATHS, roman } from "./util.js";
+
 export const calm = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // Cards rise into place as they scroll into view; the ones arriving together come one after another.
@@ -68,7 +70,8 @@ export async function flip(el, update) {
   el.animate([{ transform: `${p} rotateY(-90deg)`, opacity: .5 }, { transform: `${p} rotateY(0)`, opacity: 1 }], { duration: 380, easing: "cubic-bezier(.2,.8,.2,1)" });
 }
 
-// The finish line: a seal stamped in gold, a handful of gold leaf thrown up around it, and gold leaf raining down the page.
+// The finish line: the seal comes down (style.css .finish.stamp — the card dips once under it), a handful of gold leaf is
+// thrown up around it, and gold leaf rains down the page.
 export function celebrate(el) {
   el.classList.add("stamp");
   navigator.vibrate?.([14, 60, 22]);
@@ -177,16 +180,41 @@ export function ripples() {
   }, { passive: true });
 }
 
-// A gold laurel round a number (the reading streak).
-// Two branches climb from the bottom up either side; each leaf lies along the circle, tipped a little outward.
+// A gold laurel round a number (the reading streak), or round the seal below.
+// Two branches climb from the bottom up either side; each leaf lies along the circle (radius `r` in the 64 box), tipped
+// a little outward.
 const leaf = (x, y, rot, i) => `<g transform="rotate(${rot.toFixed(0)} ${x.toFixed(1)} ${y.toFixed(1)})"><ellipse style="--i:${i}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="5.2" ry="2.1"/></g>`;
-const branch = (mirror) => Array.from({ length: 7 }, (_, i) => {
+const branch = (mirror, r) => Array.from({ length: 7 }, (_, i) => {
   const deg = 252 - i * 22, t = deg * Math.PI / 180;
-  const x = 32 + Math.cos(t) * 23, y = 32 - Math.sin(t) * 23;
+  const x = 32 + Math.cos(t) * r, y = 32 - Math.sin(t) * r;
   const along = Math.atan2(-Math.cos(t), -Math.sin(t)) * 180 / Math.PI + 28;
   return mirror ? leaf(64 - x, y, 180 - along, i) : leaf(x, y, along, i);
 }).join("");
-export const laurel = (n) => `<span class="laurel" aria-hidden="true"><svg viewBox="0 0 64 64"><g>${branch(false)}${branch(true)}</g></svg><b>${n}</b></span>`;
+const wreath = (r = 23) => `<svg viewBox="0 0 64 64"><g>${branch(false, r)}${branch(true, r)}</g></svg>`;
+export const laurel = (n) => `<span class="laurel" aria-hidden="true">${wreath()}<b>${n}</b></span>`;
+
+// 社印 — the paper's seal, stamped on the finish line when the day's digest is read (app.js finishInner) and left in
+// small on the archive's finished issues. A 64-unit round stamp in wine ink: the paper's name along the top of the
+// ring, GELESEN along the bottom (hung from a larger circle so it reads upright), two Secession squares between them,
+// the crest's robin in one colour in the middle, and the day under it in the Viennese manner (1. XI. 2026) as on the
+// Druckfrisch stamp. It is set a touch askew (--tilt, ±2°, drawn fresh each time) and style.css multiplies it into the
+// paper and thins its ink unevenly towards the edge. From a streak of two the laurel wraps round it instead of
+// standing in for it (.wreathed). `mini` is the archive's 18px version: rings and bird only, with a label of its own
+// since no text stands beside it. The arc paths carry their own ids: several seals share a page.
+let sealN = 0;
+export function seal(date, n = 0, mini = false) {
+  const [y, m, d] = String(date).split("-").map(Number);
+  const id = `sl${++sealN}`, tilt = (Math.random() * 4 - 2).toFixed(1);
+  const sq = (x, y) => `<rect class="sq" x="-1.2" y="-1.2" width="2.4" height="2.4" transform="translate(${x} ${y}) rotate(45)"/>`;
+  // The name runs 220° over the top (from 8 o'clock round to 4), GELESEN 90° under the bottom; the squares sit between.
+  const text = mini ? "" : `<defs><path id="${id}a" d="M8.9 40.4 A24.6 24.6 0 1 1 55.1 40.4"/><path id="${id}b" d="M12.6 51.4 A27.5 27.5 0 0 0 51.4 51.4"/></defs>
+    <text class="arc-t"><textPath href="#${id}a" startOffset="50%">ROTKEHLCHENS MORGENBLATT</textPath></text>
+    <text class="arc-t"><textPath href="#${id}b" startOffset="50%">GELESEN</textPath></text>${sq(9.95, 45.8)}${sq(54.05, 45.8)}
+    <text class="date" x="32" y="47">${d}. ${roman(m)}. ${y}</text>`;
+  return `<span class="seal${mini ? " mini" : ""}${n >= 2 ? " wreathed" : ""}" style="--tilt:${tilt}deg"${mini ? ' role="img" aria-label="已讀完摘要"' : ' aria-hidden="true"'}>
+    <svg viewBox="0 0 64 64"><circle class="rim" cx="32" cy="32" r="29.5"/><circle class="rim thin" cx="32" cy="32" r="23"/>${text}
+    <g class="bird" transform="translate(14.2 10.5) scale(.54)">${ROBIN_PATHS}</g></svg>${n >= 2 ? `<span class="laurel" aria-hidden="true">${wreath(26.3)}</span>` : ""}</span>`;
+}
 
 // Reading the digest: the ring fills as each brief passes through the middle of the screen. Returns { stop, complete }:
 // complete() fills it at once (the end was reached, or the digest was heard to the end).

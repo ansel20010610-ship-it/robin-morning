@@ -64,6 +64,17 @@ export function fmtDate(iso, style = "zh") {
   return `${y} 年 ${m} 月 ${d} 日 星期${WD[wd]}`;
 }
 
+// Roman numerals for a page's place in the issue, or a month on a stamp (nothing here gets near forty).
+export const roman = (n) => [[10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]].reduce(([s, r], [v, l]) => { while (r >= v) { s += l; r -= v; } return [s, r]; }, ["", Math.max(0, Math.round(n))])[0];
+
+// The robin of the masthead's crest, in a 64-unit box: tail, body, head, breast, beak, eye, wing, legs and perch. app.js
+// EMBLEM sets it in its Secession frame, in colour; motion.js seal() stamps it in one ink. The classes are the emblem's.
+export const ROBIN_PATHS = `<path class="e-ink" d="M44.5 37.5 L55 30.5 L56.5 34 L46.5 41.5 Z"/><ellipse class="e-ink" cx="33" cy="37" rx="15" ry="11.5" transform="rotate(-18 33 37)"/><circle class="e-ink" cx="23" cy="25.5" r="8"/>
+  <path class="e-robin" d="M17.2 19.6 C14.2 24.5 15.5 37 29.5 45.6 C25.2 40.5 24.2 34.5 26.6 29.2 C25.4 24.6 22.4 20.6 17.2 19.6 Z"/>
+  <path class="e-gold" d="M15.4 24.2 L9.5 25.8 L15.6 27.4 Z"/><circle class="e-ink" cx="20.6" cy="23.4" r="1.6"/><circle class="e-paper" cx="21.1" cy="22.9" r=".55"/>
+  <path class="e-wing" d="M31 33 C36 31 42 32.5 45 36.5" stroke-width="1" stroke-linecap="round"/>
+  <path class="e-legs" d="M30.5 47 L29.5 52.5 M36 46 L36 52.5 M15 53 L50 53" stroke-width="1.3" stroke-linecap="round"/>`;
+
 export async function getJSON(url, { fresh = false } = {}) {
   const r = await fetch(url, { cache: fresh ? "no-cache" : "default" });
   if (!r.ok) throw new Error(`${r.status} ${url}`);

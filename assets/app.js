@@ -1,12 +1,12 @@
 // 知更鳥晨間記事 — app shell, routing and views.
-import { $, esc, inline, paragraphs, store, toast, twNow, fmtDate, getJSON, ICON } from "./util.js";
+import { $, esc, inline, paragraphs, store, toast, twNow, fmtDate, getJSON, ICON, ROBIN_PATHS, roman } from "./util.js";
 import { renderBody, renderHero } from "./blocks.js";
 import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient, isWebKitITP, isStandaloneIOS, exportLinkCode, importLinkCode, defaultPlaylist,
   autoPlaylist, setAutoPlaylist, choosePlaylist, autoAdd } from "./spotify.js";
 import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 import { renderPush, clearNotices } from "./notify.js";
-import { calm, reveal, transition, celebrate, laurel, digestRing, mastheadShow, pressRun, ripples, flip } from "./motion.js";
+import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pressRun, ripples, flip } from "./motion.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -185,11 +185,7 @@ function itemCard(date, a, read) {
 const EMBLEM = `<svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
   <rect x="3" y="3" width="58" height="58" class="e-frame" stroke-width="1.4" pathLength="1"/><rect x="6" y="6" width="52" height="52" class="e-frame" stroke-width=".6" pathLength="1"/>
   <g class="e-gold"><rect x="1" y="1" width="4" height="4"/><rect x="59" y="1" width="4" height="4"/><rect x="1" y="59" width="4" height="4"/><rect x="59" y="59" width="4" height="4"/></g>
-  <path class="e-ink" d="M44.5 37.5 L55 30.5 L56.5 34 L46.5 41.5 Z"/><ellipse class="e-ink" cx="33" cy="37" rx="15" ry="11.5" transform="rotate(-18 33 37)"/><circle class="e-ink" cx="23" cy="25.5" r="8"/>
-  <path class="e-robin" d="M17.2 19.6 C14.2 24.5 15.5 37 29.5 45.6 C25.2 40.5 24.2 34.5 26.6 29.2 C25.4 24.6 22.4 20.6 17.2 19.6 Z"/>
-  <path class="e-gold" d="M15.4 24.2 L9.5 25.8 L15.6 27.4 Z"/><circle class="e-ink" cx="20.6" cy="23.4" r="1.6"/><circle class="e-paper" cx="21.1" cy="22.9" r=".55"/>
-  <path class="e-wing" d="M31 33 C36 31 42 32.5 45 36.5" stroke-width="1" stroke-linecap="round"/>
-  <path class="e-legs" d="M30.5 47 L29.5 52.5 M36 46 L36 52.5 M15 53 L50 53" stroke-width="1.3" stroke-linecap="round"/></svg>`;
+  ${ROBIN_PATHS}</svg>`; // the robin itself is util.js ROBIN_PATHS, shared with the seal (motion.js)
 
 // `fresh` (viewFront, Druckfrisch): the issue is opened for the first time on this device — the masthead carries the
 // press roller's ink line and the wine date stamp, and holds its own entrance (.fresh, style.css) until motion.js
@@ -395,10 +391,10 @@ function markDigestDone(date) {
   const fin = main.querySelector(".finish");
   if (fin) fin.innerHTML = finishInner(date);
 }
+// The seal (motion.js seal) with the day on it; from a streak of two the laurel wraps round it.
 function finishInner(date) {
   const run = date === publishedIssues()[0]?.date ? streak() : null;
-  const seal = run?.today && run.n >= 2 ? laurel(run.n) : `<span class="tick" aria-hidden="true">✓</span>`;
-  return `${seal}<b>讀完了，今天你贏了</b><span class="note">${esc(finishNote(date))}</span>`;
+  return `${seal(date, run?.today ? run.n : 0)}<b>讀完了，今天你贏了</b><span class="note">${esc(finishNote(date))}</span>`;
 }
 
 // ——— Keeping what you read: the streak ———
@@ -539,7 +535,7 @@ async function viewArticle(date, column, my) {
   const card = (n, read) => { const c = itemCard(n.date, n.a, read); return n.date === date ? c : c.replace('<div class="meta-s">', `<div class="meta-s">${esc(fmtDate(n.date, "short"))}・`); };
   const issueFinish = (arts, read) => {
     const mins = arts.reduce((s, x) => s + (Number(x.minutes) || 0), 0), latest = date === publishedIssues()[0]?.date;
-    return `<div class="finish done small"><span class="tick" aria-hidden="true">✓</span><b>${read.has(key) ? "本期讀完了" : "這是本期最後一篇"}</b><span class="note">${arts.length} 篇・約 ${mins} 分鐘</span>
+    return `<div class="finish done small">${seal(date, 0, true)}<b>${read.has(key) ? "本期讀完了" : "這是本期最後一篇"}</b><span class="note">${arts.length} 篇・約 ${mins} 分鐘</span>
       <div class="btns"><a class="btn ghost" href="${latest ? "#/" : `#/issue/${date}`}">${latest ? "回到今日" : "回到本期"}</a><a class="btn ghost" href="#/random">隨手翻一篇</a></div></div>`;
   };
   const drawNext = () => {
@@ -742,8 +738,6 @@ async function viewArticle(date, column, my) {
   document.title = `${a.title}｜${S.cfg.title}`;
 }
 
-// Roman numerals for the page's place in the issue (an issue has well under forty articles).
-const roman = (n) => [[10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]].reduce(([s, r], [v, l]) => { while (r >= v) { s += l; r -= v; } return [s, r]; }, ["", Math.max(0, Math.round(n))])[0];
 // A page turned within the issue: `step` +1 is the article after this one (the page slides off to the left), -1 the one
 // before. Refused — with a word why — at either end of the issue and, in 循序閱讀, at an article still locked. Says whether it went.
 function turnTo(date, order, idx, step) {
@@ -983,7 +977,7 @@ function viewArchive() {
       const [y, m, d] = iss.date.split("-");
       const head = `${y}-${m}` !== last ? `<div class="month">${Number(m)} 月 ${y}</div>` : "";
       last = `${y}-${m}`;
-      return `${head}<a class="issue-row" href="#/issue/${iss.date}"><div class="d"><b>${Number(d)}</b><span>週${esc(iss.weekday)}・No.${iss.no}</span>${done.has(iss.date) ? '<i class="done-mark" title="已讀完摘要" aria-label="已讀完摘要">✓</i>' : ""}</div>
+      return `${head}<a class="issue-row" href="#/issue/${iss.date}"><div class="d"><b>${Number(d)}</b><span>週${esc(iss.weekday)}・No.${iss.no}</span>${done.has(iss.date) ? seal(iss.date, 0, true) : ""}</div>
         <ul>${arts.map((a) => `<li><i>${esc(col(a.column, iss.date).name)}</i>${esc(a.title)}</li>`).join("")}</ul></a>`;
     }).join("");
     main.querySelector(".list").innerHTML = rows || `<p class="empty">${ql ? "沒有符合的文章。" : "還沒有往期。"}</p>`;
