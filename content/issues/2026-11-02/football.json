@@ -2,10 +2,10 @@
   "column": "football",
   "date": "2026-11-02",
   "title": "亞馬爾連 18 場先發，這場 74 分鐘就收工",
-  "dek": "弗利克說，進了兩球比較好換。週三清晨 04:00 對維拉，後防還缺四個人。",
-  "brief": "弗利克在對阿拉維斯的下半場換下亞馬爾，說進了兩球比較好換；他本季替巴薩與西班牙的 18 場全部先發。克里斯滕森回到部分團練，Goal 說他仍趕不上週三 04:00 主場歐冠對阿斯頓維拉。皇馬 3 比 0 贏球，離榜首巴薩 3 分。",
+  "dek": "進了兩球，換下來就容易多了，弗利克說。後防缺四個人，什麼時候回來，他也還不知道。",
+  "brief": "弗利克說，亞馬爾進了兩球，換下來就容易多了；亞馬爾本季替巴薩與西班牙踢的 18 場全部先發，6 比 1 贏阿拉維斯這場踢到第 74 分鐘。後防有四人缺陣，Goal 說克里斯滕森幾乎不可能趕上週三 04:00 主場歐冠對阿斯頓維拉。",
   "topic_key": "football:2026-11-02",
-  "updated_at": "2026-11-02T02:53:00+08:00",
+  "updated_at": "2026-11-02T03:05:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "next": {
@@ -32,11 +32,7 @@
   "body": [
     {
       "type": "p",
-      "text": "Pedri 第 40 分鐘吃了黃牌，中場休息就被換下，Marc Bernal 上來接他。到了第 74 分鐘輪到亞馬爾（Lamine Yamal）：戈登（Anthony Gordon）上場，七分鐘後進了巴薩的第 6 球。"
-    },
-    {
-      "type": "p",
-      "text": "換 Pedri 的理由，Goal 轉述弗利克（Hansi Flick）的說法是他已經背了黃牌，不必冒險。亞馬爾本季替巴薩和西班牙踢的 18 場全部先發，被換下場，這是第四次。"
+      "text": "週日清晨巴薩 6 比 1 贏阿拉維斯，亞馬爾（Lamine Yamal）進了兩球，第 74 分鐘就被弗利克（Hansi Flick）換下。"
     },
     {
       "type": "quote",
@@ -46,45 +42,51 @@
     },
     {
       "type": "p",
-      "text": "弗利克說，中場休息時他跟亞馬爾談過分鐘數：樂見他找回一對一的信心，也希望他整體少踢一些。換人要先進兩球，這我能懂。週三清晨對阿斯頓維拉是歐冠，維拉三戰全勝；要是比分僵著，我猜亞馬爾就下不來了。"
+      "text": "亞馬爾第二球先被判越位，VAR 看過才算數。他本季替巴薩和西班牙踢了 18 場，場場先發，這是第四次被換下。弗利克說，中場休息時就跟他談過：亞馬爾找回一對一的信心是好事，但整體的分鐘數也要少一點。換我也會趁 6 比 1 讓他早點下來，18 場連續先發，總得找一場喘口氣。"
+    },
+    {
+      "type": "p",
+      "text": "佩德里（Pedri）下來得更早。他第 40 分鐘吃了黃牌，中場休息就換成貝納爾（Marc Bernal），弗利克說，背著黃牌沒必要冒險。"
     },
     {
       "type": "h",
-      "text": "後防名單沒有變"
+      "text": "弗利克點了四個名字"
     },
     {
       "type": "p",
-      "text": "賽後弗利克把缺陣的後衛點了一遍：Espart、克里斯滕森（Andreas Christensen）、孔德（Jules Koundé）、Eric García，四個人，什麼時候回來他說還不知道。他問過德容（Frenkie de Jong）能不能去踢中衛，德容答應了，說只要幫得上球隊他就做。"
+      "text": "缺陣的後衛，弗利克賽後一個一個點：Espart、克里斯滕森（Andreas Christensen）、孔德（Jules Koundé）、埃里克・加西亞（Eric García），什麼時候回來，他說還不知道。中場的德容（Frenkie de Jong）這場踢中衛；他先問過德容行不行，德容回答，只要幫得上球隊他就做。"
     },
     {
       "type": "p",
-      "text": "Brian Fariñas 20 歲，本來是中場，對阿拉維斯踢完整首秀，位置是右後衛。弗利克說他不確定 Fariñas 以前踢過這個位置沒有，也許在拉瑪西亞踢過；又說他訓練時專注、專業，和亞馬爾在同一側接得上。Fariñas 對官網說，這是每個男孩都夢想的事，他一開始緊張，後來自在了。"
+      "text": "右後衛站的是 20 歲的 Brian Fariñas，也是中場出身，這場是他在一線隊的完整首秀。弗利克說不確定他以前踢過這個位置沒有，也許在拉瑪西亞踢過；又說看得出他跟亞馬爾接得上，兩人青訓時就一起踢過，這場在同一邊。Fariñas 對官網說，這是每個男孩都夢想的事，開頭緊張，後來就自在了。"
     },
     {
       "type": "p",
-      "text": "克里斯滕森是 9 月 19 日對塞維亞受的傷。官網說，週日上午的恢復訓練，先發球員在健身房，他跟著大隊做了一部分訓練。Goal 轉引 Sport，說是左大腿股直肌的傷，幾乎不可能趕上維拉，11 月 8 日去馬競才有機會。趕不上維拉我覺得無妨：榜首這一戰在 11 月 9 日凌晨，他要是那天能上，比這個週三值錢。"
+      "text": "Gerard Martín 第 82 分鐘替下德容，第 90 分鐘比賽因為他受傷停了一下。他不在弗利克點的四個人裡，傷得怎樣，球隊還沒說。"
     },
     {
       "type": "h",
-      "text": "皇馬追到三分之內"
+      "text": "弗利克不冒這個險"
     },
     {
       "type": "p",
-      "text": "皇馬台灣週日 23:15 去桑坦德競技，上半場就 3 比 0。姆巴佩（Kylian Mbappé）第 11 分鐘罰球，貝林厄姆（Jude Bellingham）第 21 分鐘接 Arda Güler 的直傳，Yan Diomande 第 36 分鐘從禁區外一腳打進。貝林厄姆這球是他替皇馬的第 50 球，第一個破 50 的英格蘭人，之前七場沒進球。"
+      "text": "週日的恢復訓練，克里斯滕森參加了一部分。弗利克 10 月 31 日賽後說，他快回團練了，但接下來是國際賽事週，不會冒險用他，球季剩下的時間還需要他。Goal 隔天轉引《每日體育報》（Sport），說他傷在左大腿股直肌，週三對維拉幾乎不可能趕上，恢復順利的話，11 月 9 日去馬競有望同行。"
     },
     {
       "type": "p",
-      "text": "下半場桑坦德以為自己有點球，Tchouaméni 手球，裁判原本指了點，VAR 看過後撤銷。穆里尼奧（José Mourinho）賽後談這件事："
+      "text": "兩種說法擺在一起，我信教練：馬競那場別把他算進去。"
     },
     {
-      "type": "quote",
-      "text": "有很多人不懂規則。",
-      "original": "Hay mucha gente que no sabe las reglas",
-      "cite": "穆里尼奧談 Tchouaméni 的手球，Infobae 11 月 1 日"
+      "type": "h",
+      "text": "皇馬追到三分"
     },
     {
       "type": "p",
-      "text": "皇馬射門 22 次，射正 7 次；桑坦德 10 次，射正只有 1 次。穆里尼奧說，照場上的機會，贏 4 比 0 或 5 比 0 都有可能。皇馬西甲四連勝，27 分，離榜首巴薩 3 分，馬競 28 分夾在中間。"
+      "text": "皇馬週日深夜在桑坦德 3 比 0，進球全在上半場：姆巴佩（Kylian Mbappé）罰球、貝林厄姆（Jude Bellingham）接 Arda Güler 的直傳、Yan Diomande 禁區外一腳。貝林厄姆這球是他替皇馬的第 50 球，英格蘭人裡他是第一個，之前他七場沒進球。"
+    },
+    {
+      "type": "p",
+      "text": "下半場裁判本來判 Tchouaméni 手球、給桑坦德點球，VAR 看過後撤銷。穆里尼奧（José Mourinho）賽後說，裁判判點球時他很平靜，在螢幕上看過之後，他的判斷是：只要 VAR 沒睡著，這就不是點球。"
     },
     {
       "type": "table",
@@ -125,19 +127,15 @@
     },
     {
       "type": "p",
-      "text": "國際賽事週前的最後一場，是 11 月 9 日（週一）04:00 客場馬競。兩隊都已踢滿 11 場，巴薩要是輸，榜首就換成 31 分的馬競，巴薩 30 分。"
+      "text": "國際賽事週前的最後一場，是 11 月 9 日（週一）04:00 客場馬競。巴薩輸了就交出榜首：馬競 31 分，巴薩 30 分，皇馬那一輪就算贏，也只追到 30。"
     },
     {
       "type": "h",
-      "text": "女足在帕拉莫斯進了四球"
+      "text": "Kerolin 進了兩個"
     },
     {
       "type": "p",
-      "text": "巴薩女足台灣週日 19:30 作客 Badalona，在帕拉莫斯（Palamós）4 比 0 贏球。Kerolin 第 5 分鐘接 Aitana 一腳直接傳球先進，Caroline Graham Hansen 第 61 分鐘罰進，經過檢視；Kerolin 第 65 分鐘撿到彈出來的球再進一個，替補上場的 Clàudia Pina 第 75 分鐘在禁區外弧線球收尾。Badalona 的 Lucía Martínez 第 59 分鐘吃了紅牌。"
-    },
-    {
-      "type": "p",
-      "text": "巴薩女足 9 場 24 分，淨勝球 +32，排西女甲（Liga F）第一。下一場 11 月 8 日（週日）主場對 Madrid CFF。"
+      "text": "巴薩女足週日晚上作客 Badalona，4 比 0。Kerolin 進兩球，Caroline Graham Hansen 罰進一球，替補上場的 Clàudia Pina 在禁區外用弧線球收尾。9 場 24 分、淨勝球 +32，西女甲（Liga F）第一，下一場 11 月 8 日（週日）主場對 Madrid CFF。"
     },
     {
       "type": "h",
@@ -148,32 +146,32 @@
       "title": "歐洲足壇速覽",
       "items": [
         {
-          "headline": "阿森納 1 比 0 利物浦，升上英超榜首",
-          "summary": "Havertz 第 16 分鐘接 Declan Rice 的傳中進球，ESPN 說這球是利物浦門將 Alisson 上半場的失誤送的。利物浦射門 17 次，一次射正都沒有。阿森納 2012 年以來第一次在 Anfield 贏球，24 分，曼城 21 分。",
+          "headline": "阿森納在 Anfield 1 比 0，升上英超榜首",
+          "summary": "Havertz 第 16 分鐘接 Declan Rice 的傳中進球，ESPN 說是利物浦門將 Alisson 上半場的失誤送的。利物浦射門 17 次，沒有一次射正。阿森納 2012 年以來第一次在 Anfield 贏球，24 分，領先曼城 3 分。",
           "source": "ESPN、Sky Sports",
           "url": "https://www.skysports.com/football/liverpool-vs-arsenal/8206828602449165232",
-          "when": "11 月 1 日（週日）"
+          "when": "11 月 2 日（週一）00:30"
         },
         {
           "headline": "滕哈格：曼聯降級，絕對有可能",
-          "summary": "滕哈格 2022 年 4 月到 2024 年 11 月帶曼聯，現在是荷蘭 FC Twente 的技術總監。他對 ESPN 荷蘭的節目說，在英超降級絕對有可能，每支球隊都很強，一旦掉進惡性循環就很難。曼聯週六 0 比 2 輸切爾西，排第 17，只靠淨勝球留在降級區外；下兩場英超是阿斯頓維拉和利物浦。",
+          "summary": "前曼聯教練滕哈格現在是荷蘭 FC Twente 的技術總監，他對 ESPN 荷蘭的節目說，在英超，降級絕對有可能。曼聯 0 比 2 輸給切爾西之後排第 17，只靠淨勝球留在降級區外，接下來兩場英超是阿斯頓維拉和利物浦。",
           "source": "ESPN",
           "url": "https://www.espn.com/soccer/story/_/id/50348377/erik-ten-hag-prospect-man-united-premier-league-relegation-certainly-possible",
-          "when": "11 月 1 日（週日）"
+          "when": "11 月 2 日（週一）"
         },
         {
           "headline": "拉齊歐 10 場 9 勝，獨居義甲榜首",
-          "summary": "卡利亞里（Cagliari）的 Nzola 第 20 分鐘先進球，Isaksen 在上半場扳平，Pinamonti 第 83 分鐘用頭球決勝。卡利亞里的 Obert 補時吃第二張黃牌被罰下。拉齊歐 28 分，國際米蘭 25 分。",
+          "summary": "拉齊歐作客卡利亞里，先被 Nzola 進了一球，Isaksen 上半場扳平，Pinamonti 第 83 分鐘頭球決勝。10 場 9 勝 1 和，28 分，國際米蘭 25 分在後面。",
           "source": "EFE／Infobae、ESPN",
           "url": "https://www.infobae.com/america/agencias/2026/11/01/2-1-el-lazio-lider-en-solitario/",
-          "when": "11 月 1 日（週日）"
+          "when": "11 月 1 日（週日）22:00"
         },
         {
-          "headline": "赫塔菲逆轉塞維亞，2 比 1 那球有爭議",
-          "summary": "Kike Salas 第 19 分鐘頭球讓塞維亞先進球，Enes Ünal 第 68 分鐘扳平。Martín Satriano 的 2 比 1 引來爭議，Satriano 賽後說，是塞維亞的 Manu Bueno 自己倒下，比賽繼續，進球事後檢視，算數。Manu Bueno 之後因犯規吃紅牌，補時 Orel Mangala 再進一球。EFE 說，赫塔菲離開了降級區。",
-          "source": "EFE／Infobae、ESPN",
-          "url": "https://www.infobae.com/espana/agencias/2026/11/01/satriano-el-jugador-del-sevilla-se-tiro-siguio-la-jugada-y-fue-gol/",
-          "when": "11 月 1 日（週日）"
+          "headline": "赫塔菲 3 比 1 逆轉塞維亞",
+          "summary": "Kike Salas 第 19 分鐘替塞維亞先進球，Enes Ünal 第 68 分鐘扳平，Martín Satriano 第 73 分鐘的進球經 VAR 回看判定算數，補時 Orel Mangala 再進一球。赫塔菲爬出降級區，塞維亞最近五場西甲只贏一場。",
+          "source": "ESPN、EFE／Infobae",
+          "url": "https://www.infobae.com/espana/agencias/2026/11/01/3-1-satriano-lidera-la-remontada-del-getafe-ante-el-sevilla/",
+          "when": "11 月 1 日（週日）21:00"
         }
       ]
     },
@@ -183,7 +181,7 @@
     },
     {
       "type": "p",
-      "text": "弗利克週一晚上 20:00（台灣時間）有賽前記者會，會有一位球員陪他出席；訓練前 15 分鐘從 18:00 起在官方 YouTube 直播。以下是官網公布的 11 月賽程。"
+      "text": "週三 04:00，阿斯頓維拉來諾坎普。艾梅里（Unai Emery）的維拉歐冠三戰全勝，進 12 球、失 3 球，排第 2；巴薩 6 分排第 8，上一場歐冠輸給巴黎聖日耳曼。"
     },
     {
       "type": "table",
@@ -224,7 +222,7 @@
     },
     {
       "type": "p",
-      "text": "歐冠積分榜上，維拉三戰全勝，進 12 球、失 3 球，排第 2；巴薩 2 勝 1 敗，進 11 球、失 6 球，排第 8。11 月最後一場去拉科魯尼亞的里亞索，巴薩上次去是 2018 年 4 月 19 日。"
+      "text": "今天 18:00（台灣時間）起，官方 YouTube 和 Barça Play 直播訓練前 15 分鐘；20:00 弗利克開賽前記者會，會帶一位球員出席。"
     }
   ],
   "sources": [
@@ -233,14 +231,14 @@
       "publisher": "ESPN",
       "date": "2026-11-01",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882822",
-      "note": "亞馬爾 74' 被戈登換下、Pedri 40' 黃牌與 45' 被 Bernal 換下、戈登進球、亞馬爾進球時間"
+      "note": "亞馬爾 64' 進球經 VAR 判進、74' 被戈登換下；Pedri 40' 黃牌與 45' 被 Bernal 換下；Gerard Martín 82' 替下德容、90' 比賽因他受傷暫停（Delay in match because of an injury）"
     },
     {
       "title": "Barcelona boss Hansi Flick on Lamine Yamal: 'Easier' to substitute when he scores",
       "publisher": "ESPN",
       "date": "2026-10-31",
       "url": "https://www.espn.com/soccer/story/_/id/50341573/barcelona-alaves-hansi-flick-lamine-yamal-easier-substitute-scores",
-      "note": "弗利克賽後談話、18 場全部先發、第四次被換下、四個後衛缺陣、德容與 Fariñas。引文與正文對照 now.core 介面全文"
+      "note": "弗利克賽後談話、18 場全部先發、第四次被換下、四個後衛缺陣、德容與 Fariñas。引文與正文對照 now.core 介面全文；德容踢中衛（midfielder Frenkie de Jong featuring at centre-back）"
     },
     {
       "title": "Brian Fariñas: 'Every boy dreams of this'",
@@ -261,7 +259,7 @@
       "publisher": "FC Barcelona",
       "date": "2026-11-01",
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4602385/challenging-november-ahead",
-      "note": "11 月賽程與時間（官網以西班牙本土時間列示）、維拉歐冠三戰全勝、去里亞索是 2018 年 4 月 19 日以來第一次"
+      "note": "11 月賽程與時間（官網以西班牙本土時間列示，正文換成台灣時間）、維拉歐冠三戰全勝。官網稿寫巴薩上次去里亞索是「19 April」2018 年，實為 2018 年 4 月 29 日（迪波 2 比 4 巴薩），正文不用"
     },
     {
       "title": "FC Barcelona v Aston Villa（比賽頁，Champions League Matchday 4）",
@@ -282,14 +280,14 @@
       "publisher": "Goal",
       "date": "2026-11-01",
       "url": "https://www.goal.com/en-in/news/will-it-solve-the-crisis-a-major-boost-for-flick-before-the-atletico-madrid-clash/blt60ea33181ffffe49",
-      "note": "轉引 Sport：克里斯滕森左大腿股直肌傷、幾乎不可能趕上維拉、11 月 8 日馬競有望；為 Goal 的判斷，非俱樂部公告"
+      "note": "轉引 Sport：克里斯滕森左大腿股直肌傷；對維拉 \"highly unlikely ... barring a major surprise\"；恢復順利則客場馬競（台灣 11 月 9 日）有望同行。為 Goal 的判斷，非俱樂部公告"
     },
     {
       "title": "Flick after reaching a century（弗利克賽後談話）",
       "publisher": "Goal",
       "date": "2026-10-31",
       "url": "https://goal.com/en-za/news/flick-after-the-century-the-sextuple-appeals-to-me-and-the-first-clasico-is-my-best-win/blt262a62648aef5b85",
-      "note": "只用來轉述換下 Pedri 的理由（已有黃牌）；該稿為翻譯稿，不用其引號內容"
+      "note": "換下 Pedri 的理由（已有黃牌）；弗利克談克里斯滕森：\"close to returning to group training, but after that there will be an international break, and we will not risk involving him\"。該稿為翻譯稿，正文只轉述"
     },
     {
       "title": "Racing Santander at Real Madrid（比賽紀錄，event 401882819）",
@@ -310,7 +308,7 @@
       "publisher": "Infobae",
       "date": "2026-11-01",
       "url": "https://www.infobae.com/espana/deportes/2026/11/01/jose-mourinho-sobre-la-mano-de-tchouameni-en-el-partido-entre-el-racing-de-santander-y-el-real-madrid-hay-mucha-gente-que-no-sabe-las-reglas/",
-      "note": "引文取自標題原句；文中引語分段，無逐字連貫稿"
+      "note": "「Hay mucha gente que no sabe las reglas」是談桑坦德主場球迷，不是談手球，正文不用；正文只轉述他談手球的「si el VAR no se duerme no es penalti」"
     },
     {
       "title": "LaLiga standings",
@@ -331,7 +329,7 @@
       "publisher": "ESPN",
       "date": "2026-11-01",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.w.1/summary?event=401882471",
-      "note": "Badalona 0 比 4 巴薩；進球者與分鐘；Lucía Martínez 59' 紅牌；場地 Nou Municipal de Palamós"
+      "note": "Badalona 0 比 4 巴薩；進球者；紅牌與點球的分鐘順序與官網賽報不一致（ESPN 紅牌 59'、點球 61'），正文不寫分鐘；場地 Nou Municipal de Palamós"
     },
     {
       "title": "Badalona Women 0-4 Barça: Resounding away victory",
@@ -352,7 +350,7 @@
       "publisher": "ESPN",
       "date": "2026-11-01",
       "url": "https://www.espn.com/soccer/report/_/gameId/401879246",
-      "note": "Alisson 失誤造成進球；射門 17 次、射正 0（比賽紀錄 event 401879246）；英超積分榜：阿森納 24、曼城 21、利物浦 15。報導內文寫「16 年」與 2012 年不符，正文採 2012 年"
+      "note": "台灣 11 月 2 日（週一）00:30 開賽。Alisson 失誤造成進球；射門 17 次、射正 0（比賽紀錄 event 401879246）；英超積分榜：阿森納 24、曼城 21、利物浦 15。報導內文寫「16 年」與 2012 年不符，正文採 2012 年"
     },
     {
       "title": "Liverpool 0-1 Arsenal: Kai Havertz seals Gunners' first victory at Anfield for 14 years",
@@ -364,9 +362,9 @@
     {
       "title": "Erik ten Hag: Man United being relegated is 'certainly possible'",
       "publisher": "ESPN",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "url": "https://www.espn.com/soccer/story/_/id/50348377/erik-ten-hag-prospect-man-united-premier-league-relegation-certainly-possible",
-      "note": "滕哈格談降級、曼聯第 17、下兩場英超"
+      "note": "台灣時間 11 月 2 日 02:07 發布；滕哈格談降級、曼聯第 17、下兩場英超。滕哈格 2024 年 10 月 28 日被曼聯解僱，正文只寫「前曼聯教練」"
     },
     {
       "title": "Lazio at Cagliari 2-1（比賽紀錄，event 401874983）",
@@ -387,21 +385,21 @@
       "publisher": "ESPN",
       "date": "2026-11-01",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882821",
-      "note": "Kike Salas 19'、Ünal 68'、Mangala 90+4'、Manu Bueno 紅牌；2 比 1 的分鐘各來源不一，正文不寫"
+      "note": "Kike Salas 19'、Ünal 68'、Satriano 73' 進球經 VAR 回看判定算數（Goal awarded following VAR Review）、Manu Bueno 90+1' 紅牌、Mangala 90+4'"
     },
     {
       "title": "3-1. Satriano lidera la remontada del Getafe ante el Sevilla",
       "publisher": "EFE／Infobae",
       "date": "2026-11-01",
       "url": "https://www.infobae.com/espana/agencias/2026/11/01/3-1-satriano-lidera-la-remontada-del-getafe-ante-el-sevilla/",
-      "note": "EFE：赫塔菲離開降級區；Manu Bueno 91' 紅牌"
+      "note": "EFE：赫塔菲離開降級區；塞維亞最近五場西甲只贏一場"
     },
     {
-      "title": "Satriano: “El jugador del Sevilla se tiró, siguió la jugada y fue gol”",
-      "publisher": "EFE／Infobae",
-      "date": "2026-11-01",
-      "url": "https://www.infobae.com/espana/agencias/2026/11/01/satriano-el-jugador-del-sevilla-se-tiro-siguio-la-jugada-y-fue-gol/",
-      "note": "2 比 1 的爭議：Manu Bueno 倒地、比賽繼續、事後檢視、進球有效"
+      "title": "Barcelona at Sabah FK（歐冠賽程，event 401915378）",
+      "publisher": "ESPN",
+      "date": "2026-11-02",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261125",
+      "note": "開球 2026-11-25T17:45Z（台灣 11 月 26 日 01:45），Baku Olympic Stadium"
     }
   ]
 }
