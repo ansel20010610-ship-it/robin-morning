@@ -120,9 +120,10 @@ button { font: inherit; color: inherit; }
    figures in Cormorant. Empty (an archive issue, offline with nothing kept) it takes no room. */
 .masthead .wetter { font-family: var(--sans); font-size: 13.5px; line-height: 1.6; color: var(--muted); letter-spacing: .04em; margin-top: -5px; padding-bottom: 11px; }
 .masthead .wetter:empty { display: none; }
-.masthead .wetter .row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2px 6px; }
+.masthead .wetter .row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0; }
+.masthead .wetter .w { white-space: nowrap; }
 .masthead .wetter .two { font-size: 13px; }
-.masthead .wetter .wx { width: 16px; height: 16px; flex: none; }
+.masthead .wetter .wx { width: 16px; height: 16px; flex: none; vertical-align: -3px; margin-right: 5px; }
 .masthead .wetter b { font-family: var(--latin); font-weight: 600; font-size: 15px; line-height: 1; letter-spacing: 0; font-variant-numeric: lining-nums tabular-nums; }
 /* Druckfrisch (app.js masthead, motion.js pressRun): on the first opening of an issue, a wine rubber stamp at the top
    right beside the crest — the word, the number, the day in the Viennese manner (1. XI. 2026) — set a little askew, inked

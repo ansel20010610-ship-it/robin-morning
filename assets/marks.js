@@ -104,9 +104,17 @@ export function pencil(body, key) {
     const w = pill.offsetWidth, h = pill.offsetHeight || 36;
     const bar = document.querySelector(".nav")?.offsetHeight || 58;
     const below = r.bottom + 10;
-    const top = below + h <= innerHeight - bar - 8 ? below : Math.max(56, r.top - h - 8);
-    pill.style.top = `${Math.round(top)}px`;
-    pill.style.left = `${Math.round(Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width / 2 - w / 2)))}px`;
+    const top = Math.round(below + h <= innerHeight - bar - 8 ? below : Math.max(56, r.top - h - 8));
+    const left = Math.round(Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width / 2 - w / 2)));
+    pill.style.top = `${top}px`;
+    pill.style.left = `${left}px`;
+    // The pill sits inside the article, whose page-in animation leaves a transform on it: that makes the article the
+    // containing block of a fixed element, so viewport coordinates land elsewhere. Measure, and move by the difference.
+    const b = pill.getBoundingClientRect();
+    if (Math.abs(b.top - top) > 0.5 || Math.abs(b.left - left) > 0.5) {
+      pill.style.top = `${Math.round(top + (top - b.top))}px`;
+      pill.style.left = `${Math.round(left + (left - b.left))}px`;
+    }
   };
   // `near` is the selected block (or its list): the pill moves next to it in the DOM — fixed, so the page is unmoved —
   // and a selection made with the keyboard reaches it on the next Tab, not after every link and tab before it.

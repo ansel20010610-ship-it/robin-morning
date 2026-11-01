@@ -60,7 +60,13 @@ export function weatherHtml(d) {
     const rise = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(day.sunrise?.[0] || "") ? day.sunrise[0].slice(11, 16) : "";
     const n = (x) => `<b>${esc(x)}</b>`, deg = (t) => `${Math.round(t)}°`;
     const temps = Array.isArray(h.temperature_2m) ? [am, pm, eve].map((i) => num(h.temperature_2m[i])) : [];
-    const row2 = temps.length === 3 && !temps.some(Number.isNaN) ? `<div class="row two">早 ${n(deg(temps[0]))}・午 ${n(deg(temps[1]))}・晚 ${n(deg(temps[2]))}</div>` : "";
-    return `<div class="row">${GLYPH[GLYPH_OF[word]] || GLYPH.cloud}<span>台中 ${n(`${Math.round(lo)}–${Math.round(hi)}°`)}・${esc(cond)}${Number.isNaN(rain) ? "" : `・降雨 ${n(`${Math.round(rain)}%`)}`}${rise ? `・日出 ${n(rise)}` : ""}</span></div>${row2}`;
+    // Each reading is one unbreakable segment ending in its separator, so a narrow screen wraps the line between
+    // readings — never inside one, and never with the glyph alone on a line (U+30FB may not start a line anyway).
+    const segs = [`台中 ${n(`${Math.round(lo)}–${Math.round(hi)}°`)}`, esc(cond)];
+    if (!Number.isNaN(rain)) segs.push(`降雨 ${n(`${Math.round(rain)}%`)}`);
+    if (rise) segs.push(`日出 ${n(rise)}`);
+    const seg = (s, i, arr) => `<span class="w">${s}${i < arr.length - 1 ? "・" : ""}</span>`;
+    const row2 = temps.length === 3 && !temps.some(Number.isNaN) ? `<div class="row two"><span class="w">早 ${n(deg(temps[0]))}・午 ${n(deg(temps[1]))}・晚 ${n(deg(temps[2]))}</span></div>` : "";
+    return `<div class="row"><span class="w">${GLYPH[GLYPH_OF[word]] || GLYPH.cloud}</span>${segs.map(seg).join("")}</div>${row2}`;
   } catch { return ""; }
 }
