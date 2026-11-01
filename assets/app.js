@@ -8,6 +8,7 @@ import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 import { renderPush, clearNotices } from "./notify.js";
 import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pressRun, ripples, flip } from "./motion.js";
 import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
+import { pressHtml } from "./press.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -948,7 +949,7 @@ function viewArchive() {
   const chips = Object.entries(S.cfg.columns).filter(([, k]) => k.group !== "verse").map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span>
       <a class="stamp-btn" href="#/random" aria-label="隨手翻一篇：從往期裡抽一篇沒讀過的"><b>隨手翻</b><i>Zufall</i></a></header>
-    <nav class="chips review" aria-label="常設"><a class="chip" href="#/concerts">近期演出</a><a class="chip" href="#/stats">閱讀年鑑</a><a class="chip" href="#/marks">劃線本</a></nav>
+    <nav class="chips review" aria-label="常設"><a class="chip" href="#/concerts">近期演出</a><a class="chip" href="#/stats">閱讀年鑑</a><a class="chip" href="#/marks">劃線本</a><a class="chip" href="#/press">印務室</a></nav>
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
     <div class="hits" aria-live="polite"></div>
     ${calendarHtml(twNow().date.slice(0, 7), pubs, done)}
@@ -1101,6 +1102,13 @@ function viewStats() {
   document.title = `閱讀年鑑｜${S.cfg.title}`;
 }
 
+// ——— 印務室 (Druckerei, assets/press.js): the owner's press room — this morning's five shifts, the reserve stock and a
+// fortnight's roster, all out of the index the app holds (its press, late and stock), so it reads the same offline.
+function viewPress() {
+  main.innerHTML = `<div class="wrap press">${pressHtml(S.cfg, S.index, col)}</div>`;
+  document.title = `印務室｜${S.cfg.title}`;
+}
+
 // ——— 隨手翻 (Zufallsfund): one article out of the back issues, drawn like a card ———
 // The pool is every published article but the day's perishables (football, news) and the 觀測站; in 循序閱讀 a locked one
 // is not offered. An unread article weighs 4, a read one 1, and either is divided by 1 + how often its column came up
@@ -1197,6 +1205,8 @@ function viewSettings() {
       <div class="btns"><a class="btn ghost" href="#/stats">打開閱讀年鑑</a></div></section>
     <section class="set"><h2>劃線本</h2><p>讀文章時選一段字，按「劃線」，字下就留一道鉛筆線；劃過的句子都收在劃線本，點一句就回到文章裡那個位置。劃線只存在這支手機，離線也能看。</p>
       <div class="btns"><a class="btn ghost" href="#/marks">打開劃線本</a></div></section>
+    <section class="set"><h2>印務室</h2><p>給社長看的：今晨五班的報到、補位與缺稿、備稿庫存、最近兩週的出勤。</p>
+      <div class="btns"><a class="btn ghost" href="#/press">打開印務室</a></div></section>
     <section class="set"><h2>外觀</h2><div class="seg" data-g="theme">${[["auto", "跟隨系統"], ["light", "日間"], ["dark", "夜間"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${v === theme}">${l}</button>`).join("")}</div></section>
     ${canSpeak() ? `<section class="set"><h2>朗讀速度</h2><div class="seg" data-g="rate">${RATES.map((r) => `<button type="button" data-v="${r}" aria-pressed="${r === getRate()}">${r === 1 ? "標準" : `${r}×`}</button>`).join("")}</div>
       <p>文章右上角的喇叭按鈕會用裝置內建的中文語音朗讀全文，不需網路服務。</p></section>` : ""}
@@ -1299,7 +1309,7 @@ let landKey = null, landTop = null; // 接著上次: the article tapped on the f
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
 let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising number, so a step back is recognisable
@@ -1372,6 +1382,7 @@ async function drawRoute(h, art, my) {
   else if ((m = h.match(/^#\/column\/([\w-]+)/))) viewColumn(m[1]);
   else if (h.startsWith("#/archive")) viewArchive();
   else if (h.startsWith("#/stats")) viewStats();
+  else if (h.startsWith("#/press")) viewPress();
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/marks")) viewMarks();
