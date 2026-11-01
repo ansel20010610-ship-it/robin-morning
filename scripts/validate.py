@@ -19,7 +19,7 @@ import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import (ISSUES, ROOT, iter_reserve, RESERVE, BROWSER_IMAGE_TYPES, CJK, article_path, cjk_count, column_meta, figures_of, http_get, image_key,  # noqa: E402
-                    image_page, iter_articles, load_config, load_json, raw_image_ext)
+                    image_page, iter_articles, load_config, load_json, raw_image_ext, TW)
 
 LENGTH = {  # (min, max) CJK characters in body
     "football": (1800, 3500), "perio": (600, 1000), "music": (1000, 1600),
@@ -344,6 +344,8 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             W("備稿要在任何一天都成立，避免會過期的字眼：%s" % "、".join(stale))
     elif art.get("date") != str(d):
         E("date 應為 %s" % d)
+    if art.get("next") is not None:
+        check_next(art["next"], cfg, d, col, E, W)
     if (meta or {}).get("group") == "verse":
         check_verse(art, E, W, check_urls, used_topics, clash)
         return
@@ -777,6 +779,56 @@ def check_pitch(b, where, E):
         if outside:
             E("%s pitch 第 %d 步有座標在半場圖外（view: half 只顯示 y 50–100，y 需 ≥ 50）：%s"
               % (where, si + 1, "、".join(dict.fromkeys(outside))))
+
+
+# The Barça column's optional next fixture (SCHEMA.md "next"): the App shows it above the article as a 下一場 card
+# with 加入行事曆, so the kickoff must be an instant a calendar can take, written in Taiwan time with its offset.
+NEXT_KEYS = {"opponent": str, "competition": str, "kickoff": str, "venue": str, "home": bool}
+NEXT_REQUIRED = ("opponent", "competition", "kickoff")
+KICKOFF = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?\+08:00$")
+
+
+def check_next(nxt, cfg, d, col, E, W):
+    if col != "football":
+        E("next（下一場）只有巴薩晨報（football）可填")
+        return
+    if str(d) == "reserve":  # a reserve runs days later, unread by anyone: its fixture would be stale or already played
+        E("備稿不填 next：下一場只在刊出當天確認（columns/football.md）")
+        return
+    if not isinstance(nxt, dict):
+        E("next 需為物件 {opponent, competition, kickoff, venue, home}（目前是%s）" % jtype(nxt))
+        return
+    unknown = sorted(set(nxt) - set(NEXT_KEYS))
+    if unknown:
+        E("next 有未知欄位：%s（只能有 %s）" % ("、".join(unknown), "、".join(NEXT_KEYS)))
+    for k, typ in NEXT_KEYS.items():
+        v = nxt.get(k)
+        if v is None:
+            if k in NEXT_REQUIRED:
+                E("next 缺少 %s" % k)
+        elif not isinstance(v, typ):
+            E("next.%s 需為%s（目前是%s）" % (k, "布林值" if typ is bool else "字串", jtype(v)))
+        elif typ is str and not v.strip():
+            E("next.%s 是空的" % k)
+        elif k in ("opponent", "competition") and len(v) > 40:
+            E("next.%s %d 字，上限 40 字" % (k, len(v)))
+    kick = nxt.get("kickoff")
+    if not isinstance(kick, str) or not kick.strip():
+        return
+    if not KICKOFF.match(kick):
+        E("next.kickoff 要寫台灣時間並帶 +08:00，例如 2026-11-04T04:00+08:00（目前：%s）" % kick)
+        return
+    try:
+        when = dt.datetime.fromisoformat(kick)
+    except ValueError:
+        E("next.kickoff 不是有效的時間：%s" % kick)
+        return
+    day = dt.date.fromisoformat(str(d))
+    out = dt.datetime.combine(day, dt.time.fromisoformat(cfg.get("publish_time", "07:30")), TW)
+    if when < out:
+        W("next.kickoff（%s）早於本期出刊：這場是本期要報的比賽，下一場另填；延期的比賽直接拿掉 next" % kick)
+    elif when.date() - day > dt.timedelta(days=10):
+        W("next.kickoff（%s）離刊期超過 10 天：核對官方賽程有沒有更近的一場" % kick)
 
 
 def check_verse(art, E, W, check_urls, used_topics, clash):

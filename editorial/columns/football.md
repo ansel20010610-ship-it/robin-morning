@@ -13,12 +13,15 @@
   1. 開頭一段「今晨最重要的一件事」（巴薩優先；若巴薩無大事，可用歐洲足壇頭條）。
   2. `h` 巴薩：2–5 則。比賽（比分、進球者、關鍵事件、教練賽後說法）、傷停（官方醫療報告為準）、轉會與合約（區分官方公告／可信記者／傳聞）、財務與俱樂部治理（拉利加薪資帽、主場工程等）、女足與青訓的重大消息。
   3. `news` 歐洲足壇速覽：4–8 則，五大聯賽、歐冠／歐霸／歐協聯、國家隊比賽期間的重要國際賽、重大人事與紀律處分。每則 2–3 句，有來源與日期。
-  4. `h` 接下來：巴薩下一場比賽（對手、賽事、台灣時間），未來幾天值得留意的事。
+  4. `h` 接下來：巴薩下一場比賽（對手、賽事、台灣時間），未來幾天值得留意的事。同一場也填進頂層 `next`（見下）。
 - **來源分級**：俱樂部官網與聯賽官網＞《世界體育報》（Mundo Deportivo）、《每日體育報》（Sport）、《阿斯報》（AS）、《馬卡報》（Marca）、The Athletic、BBC Sport、ESPN＞其他。轉會消息標明是誰報的；Fabrizio Romano 等記者的說法寫成「報導」，不寫成定案。傳聞段落加 `tag`「傳聞」；官方公告與報導用句子交代是誰說的，同一段同一個來源只交代一次，不要每段都是「ESPN 說」。
 - **找新聞的方法**：先用 WebFetch 直接讀 fcbarcelona.com 新聞頁、espn.com、uefa.com、laliga.com 的最新列表；WebSearch 一律加 `allowed_domains`，只用實測可用的網域：fcbarcelona.com、espn.com、uefa.com、laliga.com、premierleague.com、goal.com、skysports.com、aljazeera.com、infobae.com。**清單裡只要有一個網域被封鎖，整次搜尋就報錯（400）**；以下網站搜尋與 WebFetch 都讀不到，不要用、也不要放進 allowed_domains：mundodeportivo.com、sport.es、as.com、marca.com、bbc.com、theguardian.com、theathletic.com、reuters.com、apnews.com、elpais.com、lavanguardia.com、rtve.es（2026-10-11 實測）。西班牙媒體的報導，改從 ESPN、Goal 或巴薩官網的轉述取得，並註明原始媒體。不要採用內容農場或搬運站。ESPN 網頁抓不到時，可用 `https://now.core.api.espn.com/v1/sports/news/<文章 id>` 讀原文、`https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=<id>` 讀比賽紀錄、`.../apis/v2/sports/soccer/<聯賽>/standings` 讀積分榜、`https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard` 讀當輪賽果。
 - **比分與數據**：至少兩個來源互相核對；有出入時寫明。
 - **國家隊比賽週**：巴薩新聞可能少，就寫巴薩球員在國家隊的出賽與傷情，並多給歐洲足壇的分量。不湊字。
 - **不重複**：不要和「看懂一段比賽」重複寫戰術拆解；這欄是新聞。
+
+## 下一場（頂層 `next`）
+文章頂層可選填 `next`，App 顯示在文章開頭成一張「下一場」卡，讀者可一鍵加入行事曆，所以只在官方來源（fcbarcelona.com、laliga.com、uefa.com、rfef.es）已確認開球時間時才填；官網還沒公布、或日期與時間有任何不確定，就整個省略，不猜。欄位：`opponent` 用本報慣用的中文隊名（皇家馬德里、阿斯頓維拉；沒有通行中譯的用原文）、`competition` 賽事（西甲、歐冠、國王盃、西班牙超級盃）、`kickoff` 台灣時間並帶 `+08:00`（例 `2026-11-04T04:00+08:00`；歐洲冬令時間 21:00 開球是台灣翌日 04:00，夏令時間是 03:00）、`venue` 球場、`home` 主場 `true`／客場 `false`。第 3 班在初稿填好；第 4 班更新時校正：時間改了就改，延期或取消就把 `next` 整個拿掉，不留舊的。備稿不填。驗證器會擋掉不帶 `+08:00` 的時間，開球時間早於出刊或在十天以後會警告。
 
 ## 字數
 1,800–3,500 字。新聞少的日子可以短。
