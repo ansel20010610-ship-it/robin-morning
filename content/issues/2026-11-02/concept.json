@@ -1,0 +1,333 @@
+{
+  "column": "concept",
+  "date": "2026-11-02",
+  "title": "波茲曼墓碑上那條公式，他自己沒寫過",
+  "dek": "維也納一塊墓碑上刻著 S = k log W。這條式子在數什麼，可以從一杯放涼的咖啡數起。",
+  "brief": "波茲曼墓碑上刻著 S = k log W，這條式子他生前沒寫下過，普朗克還說 k 也不是他引進的。熵數的是一個看得見的狀態背後有幾種看不見的排法。波茲曼自己說，第二定律只是機率的定理。",
+  "topic_key": "concept:entropy",
+  "updated_at": "2026-11-02T02:12:01+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Zentralfriedhof_Vienna_Ludwig_Boltzmann_2018-03-05.jpg/1280px-Zentralfriedhof_Vienna_Ludwig_Boltzmann_2018-03-05.jpg",
+    "width": 1280,
+    "height": 1741,
+    "alt": "兩排修剪整齊的樹籬之間立著一塊白色石碑，最上方刻著 S = k log W，下面是一尊留鬍子的男子胸像，胸像圍著一條紅白條紋圍巾，圍巾上的標籤寫著 Cornell，胸像肩上積著薄雪；胸像下方刻著 LVDWIG BOLTZMANN 1844–1906，兩側刻著其他家人的名字，碑前有枯萎的花，遠處露出一座綠色圓頂。",
+    "caption": "波茲曼在維也納中央公墓的墓，胸像上方就是那條公式。圍巾是後來有人掛上的，標籤寫 Cornell。2018 年 3 月拍攝。",
+    "credit": "Feldkurat Katz 攝／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Zentralfriedhof_Vienna_Ludwig_Boltzmann_2018-03-05.jpg",
+    "made": "2018"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "維也納中央公墓，波茲曼（Ludwig Boltzmann）的墓碑上，胸像上方的石面刻著一行字：S = k log W。底下是他的名字和生卒年，1844–1906。"
+    },
+    {
+      "type": "p",
+      "text": "照史丹佛大學線上哲學百科的說法，這條式子他生前從沒寫下過。式子裡的 k，普朗克 1920 年在諾貝爾獎演講裡提過："
+    },
+    {
+      "type": "quote",
+      "text": "這個常數常被叫做波茲曼常數，雖然就我所知，波茲曼本人從沒引進過它。",
+      "original": "This constant is often referred to as Boltzmann's constant, although, to my knowledge, Boltzmann himself never introduced it…",
+      "cite": "普朗克，諾貝爾獎演講，1920 年 6 月 2 日"
+    },
+    {
+      "type": "p",
+      "text": "普朗克接著解釋，波茲曼從沒想過要把它精確量出來。"
+    },
+    {
+      "type": "h",
+      "text": "能量守恆不管方向"
+    },
+    {
+      "type": "p",
+      "text": "一杯 80°C 的咖啡擺在 25°C 的房間，過一陣子就涼了。熱從杯子散進空氣，咖啡不會自己再燙起來。"
+    },
+    {
+      "type": "p",
+      "text": "19 世紀中葉建立的熱力學，第一定律管的是能量守恆。克勞修斯（Rudolf Clausius）的版本是：沒有任何過程，唯一的效果是把熱從冷的東西送到熱的東西。"
+    },
+    {
+      "type": "h",
+      "text": "每一份熱，除以溫度"
+    },
+    {
+      "type": "p",
+      "text": "克勞修斯量的東西是這樣：沿一條可逆的過程，物體吸進的熱 dQ 除以溫度 T，一路加起來。他 1865 年把它寫成 ∫dQ/T = S − S₀。"
+    },
+    {
+      "type": "p",
+      "tag": "原創示範",
+      "text": "拿那杯咖啡算一次。80°C 約 353 K，25°C 約 298 K。讓 100 焦耳從咖啡流進空氣，這段期間兩邊的溫度都近似當成不變：咖啡的熵少了 100 ÷ 353，約 0.283 J/K；空氣多了 100 ÷ 298，約 0.335 J/K。合起來淨增 0.052 J/K。"
+    },
+    {
+      "type": "p",
+      "text": "同樣 100 焦耳，進到冷的那一邊，除的數比較小，得到的值就比較大。熱從熱往冷走，總和往上；倒過來走，總和往下。"
+    },
+    {
+      "type": "p",
+      "text": "這個量的前身，他 1854 年就提出過，叫轉換的「等價值」。1865 年 4 月 24 日在蘇黎世宣讀的論文裡，他才替它取名。他先說，照 U 被叫做物體「熱與功的含量」的例子，S 可以叫物體的「轉換含量」；接著寫："
+    },
+    {
+      "type": "quote",
+      "text": "我認為這類對科學重要的量，名字最好取自古代語言，好讓它原封不動地用在所有現代語言裡；所以我提議，依希臘文表示「轉換」的那個字，把 S 這個量稱為物體的熵。",
+      "original": "Da ich es aber für besser halte, die Namen derartiger für die Wissenschaft wichtiger Gröſsen aus den alten Sprachen zu entnehmen, damit sie unverändert in allen neuen Sprachen angewandt werden können, so schlage ich vor, die Gröſse S nach dem griechischen Worte ἡ τροπή, die Verwandlung, die Entropie des Körpers zu nennen.",
+      "cite": "克勞修斯，1865，刊於《物理與化學年鑑》第 125 卷，第 390 頁"
+    },
+    {
+      "type": "p",
+      "text": "他接著說，Entropie 是故意照著 Energie 造的，兩個量在物理意義上太親近，名字像一點比較合適。"
+    },
+    {
+      "type": "h",
+      "text": "三個振子，十種排法"
+    },
+    {
+      "type": "p",
+      "text": "波茲曼的辦法是數。他把粒子的狀態分成一格一格，數同一個從外面看起來一樣的狀態，裡面有幾種排列。統計力學教科書裡有個玩具可以照著數，叫愛因斯坦固體，是後來的模型，不是波茲曼當年用的那一套：一堆振子，能量一份一份地存，每份一樣大，一個振子要存幾份都可以。"
+    },
+    {
+      "type": "p",
+      "text": "三個振子分三份能量，排法有十種：300、030、003、210、120、201、102、021、012、111。每一種排法叫一個微觀狀態，十就是微觀狀態數，下面記作 W。"
+    },
+    {
+      "type": "p",
+      "text": "把兩塊這樣的小固體靠在一起，各三個振子，共六份能量，能量可以在兩塊之間來回。A 拿幾份，B 就拿剩下的；每一種分法的總排法，是兩邊的排法相乘。"
+    },
+    {
+      "type": "p",
+      "tag": "原創示範",
+      "text": "把 A 當成咖啡，B 當成房間的空氣。"
+    },
+    {
+      "type": "table",
+      "title": "六份能量，兩塊小固體怎麼分",
+      "head": [
+        "A 拿幾份",
+        "A 的排法",
+        "B 的排法",
+        "合計排法",
+        "機率"
+      ],
+      "rows": [
+        [
+          "0",
+          "1",
+          "28",
+          "28",
+          "6.1%"
+        ],
+        [
+          "1",
+          "3",
+          "21",
+          "63",
+          "13.6%"
+        ],
+        [
+          "2",
+          "6",
+          "15",
+          "90",
+          "19.5%"
+        ],
+        [
+          "3",
+          "10",
+          "10",
+          "100",
+          "21.6%"
+        ],
+        [
+          "4",
+          "15",
+          "6",
+          "90",
+          "19.5%"
+        ],
+        [
+          "5",
+          "21",
+          "3",
+          "63",
+          "13.6%"
+        ],
+        [
+          "6",
+          "28",
+          "1",
+          "28",
+          "6.1%"
+        ]
+      ],
+      "caption": "兩塊各 3 個振子的愛因斯坦固體，共 6 份能量，總共 462 種微觀狀態；「合計排法」就是文中的 W。各欄依 (q + N − 1)! ÷ [q! (N − 1)!] 計算（q 份能量分給 N 個振子），與 Moore 和 Schroeder 的教學論文一致；機率假設 462 種微觀狀態機會均等。"
+    },
+    {
+      "type": "p",
+      "text": "統計力學的基本假設是：時間夠長，462 種微觀狀態每一種都到得了，機會一樣。所以平分的情況最常見，約兩成二；六份全擠在 A 的情況是 28 ÷ 462，約 6%，大約每看 16 次就有一次。"
+    },
+    {
+      "type": "p",
+      "text": "一篇教學論文算過 300 個振子對 200 個、共 100 份能量：A 拿 60 份的排法，比 A 一份都沒拿多出 10 的 33 次方倍以上。系統從不太可能的狀態出發，幾乎一定會在 A 拿 60 份附近被找到，作者說這個結論就是第二定律。到了巨觀的系統，偏離最可能狀態的漲落只有大約千億分之一。"
+    },
+    {
+      "type": "p",
+      "text": "波茲曼 1877 年對第二定律的讀法是：它說的不過是一個複合系統整體狀態的機率總在增加。1894 年起，《自然》期刊上有一輪討論圍繞著他的 H 定理，他稱之為 minimum theorem。1895 年他親自加入討論："
+    },
+    {
+      "type": "quote",
+      "text": "我的極小定理，和所謂的熱力學第二定律，都只是機率的定理。",
+      "original": "My minimum theorem as well as the so-called Second Law of Thermodynamics are only theorems of probability.",
+      "cite": "波茲曼，1895，轉引自史丹佛哲學百科"
+    },
+    {
+      "type": "p",
+      "text": "下一句是：單靠運動方程，永遠證明不了 H 一定會減少。"
+    },
+    {
+      "type": "h",
+      "text": "斜率陡的那邊比較冷"
+    },
+    {
+      "type": "p",
+      "text": "兩塊東西的排法相乘，取自然對數後變成相加。"
+    },
+    {
+      "type": "p",
+      "text": "把每一塊的 ln W 對能量畫成曲線，各有一條斜率。斜率陡的那塊，多拿一份能量就多出很多排法；斜率平的那塊，少一份也損失不多。所以能量傾向從平的那邊流到陡的那邊，兩條斜率一樣時就是平衡。"
+    },
+    {
+      "type": "p",
+      "text": "溫度和這條斜率成反比：斜率陡，就是冷。"
+    },
+    {
+      "type": "h",
+      "text": "墓碑上那一行"
+    },
+    {
+      "type": "p",
+      "text": "一個系統的熵，是 k 乘上與它的巨觀狀態相容的微觀狀態數的自然對數：S = k ln W。對到前面的表，巨觀狀態是「A 拿幾份」，W 是「合計排法」那一欄。k 是 1.380649 × 10^-23 J/K，CODATA 列為精確值。"
+    },
+    {
+      "type": "p",
+      "text": "教科書從這裡推下去：溫度寫成 1/T = dS/dU，就得到克勞修斯量熵的辦法。歷史上克勞修斯的式子在前，波茲曼的數法在後。"
+    },
+    {
+      "type": "p",
+      "text": "咖啡那 0.052 J/K 也能換回排法：除以 k 約得 3.8 × 10^21，排法變成原來的 e 的 3.8 × 10^21 次方倍。這個倍數用十進位寫出來，位數就有 1.6 × 10^21 位。"
+    },
+    {
+      "type": "h",
+      "text": "一副牌洗不出熱"
+    },
+    {
+      "type": "p",
+      "text": "熵常被教成「亂度」。《化學教育期刊》有一篇專文反駁：石頭、衣服、書、撲克牌從人眼中的整齊變成凌亂，熱力學熵的變化是零，這些東西只是換了位置。"
+    },
+    {
+      "type": "p",
+      "text": "就算硬把 52 張牌的每一種順序都當成微觀狀態，k ln(52!) 也只有約 2.2 × 10^-21 J/K；咖啡流掉 100 焦耳的那一下，是它的 2.4 × 10^19 倍。"
+    },
+    {
+      "type": "p",
+      "text": "咖啡冷掉時，自己的熵少了 0.283 J/K，空氣那邊多出來的比這多。冰箱把熱從冷的裡面送到外面，也不違反克勞修斯：他禁止的是這件事成為唯一的效果，冰箱得另外付出。"
+    },
+    {
+      "type": "p",
+      "text": "熵增加也不代表能量少了。咖啡冷掉，那 100 焦耳還在房間裡。克勞修斯 1865 年那篇論文的最後兩行，兩件事並排寫著：世界的能量是常數；世界的熵趨向極大。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Die_Energie_der_Welt_ist_constant._Die_Entropie_der_Welt_strebt_einem_Maximum_%281865%29.png/1280px-Die_Energie_der_Welt_ist_constant._Die_Entropie_der_Welt_strebt_einem_Maximum_%281865%29.png",
+      "width": 1280,
+      "height": 1040,
+      "alt": "兩頁德文印刷的期刊書頁並排。左頁頁首是 1865、ANNALEN DER PHYSIK UND CHEMIE、BAND CXXV、No. 7，下面是斜體的論文標題與作者 R. Clausius；右頁頁碼 400，最後兩行以斜體印著編號 1) 和 2) 的兩句話。",
+      "caption": "克勞修斯 1865 年論文的第一頁與最後一頁（第 400 頁），最後兩行在右頁底部。",
+      "credit": "Rudolf Clausius，〈Ueber verschiedene für die Anwendung bequeme Formen der Hauptgleichungen der mechanischen Wärmetheorie〉，《Annalen der Physik und Chemie》第 125 卷第 7 期",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Die_Energie_der_Welt_ist_constant._Die_Entropie_der_Welt_strebt_einem_Maximum_(1865).png",
+      "made": "1865"
+    },
+    {
+      "type": "callout",
+      "label": "如果你真的懂了，應該答得出來",
+      "items": [
+        "把 100 焦耳從 25°C 的空氣送回 80°C 的咖啡，總熵變多少？照克勞修斯的說法，冰箱這樣做為什麼不算違規？",
+        "表裡六份能量全在 A 的機率約 6%。那為什麼真的咖啡從來不會自己變燙？",
+        "兩杯水溫度一樣時，為什麼不再有淨熱流？請用「熵對能量的斜率」講。"
+      ]
+    },
+    {
+      "type": "spoiler",
+      "text": "以下是答案"
+    },
+    {
+      "type": "callout",
+      "label": "答案",
+      "items": [
+        "空氣少了約 0.335 J/K，咖啡多了約 0.283 J/K，合計約 −0.052 J/K。克勞修斯禁止的是熱從冷送到熱成為「唯一效果」；冰箱得另外付出，所以熱倒送就不是唯一發生的事。",
+        "6% 是 6 個振子的玩具。振子一多，數字就不一樣了：300 對 200 個振子時已多出 10 的 33 次方倍以上，巨觀系統的漲落只剩大約千億分之一。",
+        "溫度相同，就是兩邊的 dS/dU 一樣陡，能量也就沒有偏好的方向。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ueber verschiedene für die Anwendung bequeme Formen der Hauptgleichungen der mechanischen Wärmetheorie",
+      "publisher": "Rudolf Clausius，Annalen der Physik und Chemie 125(7): 353–400；Wikimedia Commons 掃描",
+      "date": "1865",
+      "url": "https://commons.wikimedia.org/wiki/File:Clausius_R._Ueber_verschiedene_f%C3%BCr_die_Anwendung_bequeme_Formen_der_Hauptgleichungen_der_mechanischen_W%C3%A4rmetheorie_1865.pdf",
+      "note": "第 353 頁：1865 年 4 月 24 日於蘇黎世自然科學學會宣讀；第 389–390 頁：式 (64) ∫dQ/T = S − S₀、「Verwandlungsinhalt」、以希臘字 τροπή 命名 Entropie 並刻意仿 Energie；第 400 頁：論文最後兩句。引文依掃描逐字抄錄。"
+    },
+    {
+      "title": "Boltzmann's Work in Statistical Physics",
+      "publisher": "Jos Uffink，Stanford Encyclopedia of Philosophy",
+      "date": "2024-10-10",
+      "url": "https://plato.stanford.edu/entries/statphys-Boltzmann/",
+      "note": "日期為 substantive revision。開頭：S = k log W 刻在墓碑上，但他從未寫下這條公式；第 4 節：1877 年組合論證、Komplexion、「states nothing else but that the probability of the total state of a composite system always increases」；1895 年在《自然》期刊論戰中的「only theorems of probability」。"
+    },
+    {
+      "title": "Thermodynamic Asymmetry in Time",
+      "publisher": "Craig Callender，Stanford Encyclopedia of Philosophy",
+      "date": "2026-06-12",
+      "url": "https://plato.stanford.edu/entries/time-thermo/",
+      "note": "日期為 substantive revision。克勞修斯與湯姆森在 19 世紀中葉建立熱力學；第一定律為能量守恆；克勞修斯版第二定律（唯一效果）；1854 年等價值、1865 年命名熵；S = ∫dQ/T。"
+    },
+    {
+      "title": "The Genesis and Present State of Development of the Quantum Theory（Nobel Lecture）",
+      "publisher": "Max Planck，NobelPrize.org",
+      "date": "1920-06-02",
+      "url": "https://www.nobelprize.org/prizes/physics/1918/planck/lecture/",
+      "note": "1918 年物理獎得主，演講於 1920 年 6 月 2 日。處理機率考量需要兩個普適常數；「This constant is often referred to as Boltzmann's constant…」與波茲曼從未想過精確測量它的解釋。"
+    },
+    {
+      "title": "A different approach to introducing statistical mechanics",
+      "publisher": "Thomas A. Moore、Daniel V. Schroeder，American Journal of Physics 65(1): 26–36；arXiv:1502.07051",
+      "date": "1997",
+      "url": "https://arxiv.org/abs/1502.07051",
+      "note": "愛因斯坦固體；N = q = 3 的十種排法；多重度公式；兩塊各 3 振子共 6 單位：平分 100、總數 462；300 對 200 振子共 100 單位：q_A = 60 比 q_A = 0 多 10^33 倍以上；巨觀漲落約 10^11 分之一；S = k ln Ω；1/T = dS/dU；dS = Q/T。表中各列乘積與機率為本報依公式自算。"
+    },
+    {
+      "title": "Shuffled Cards, Messy Desks, and Disorderly Dorm Rooms — Examples of Entropy Increase? Nonsense!",
+      "publisher": "Frank L. Lambert，Journal of Chemical Education 76: 1385（作者網站轉載）",
+      "date": "1999",
+      "url": "https://franklambert.net/entropysite.com/shuffled_cards.html",
+      "note": "巨觀物件（石頭、衣服、書、紙、撲克牌）從整齊到凌亂，熱力學熵變化為零。k ln(52!) 與倍數為本報自算。"
+    },
+    {
+      "title": "Boltzmann constant",
+      "publisher": "NIST，CODATA 2022 recommended values",
+      "date": "",
+      "url": "https://physics.nist.gov/cgi-bin/cuu/Value?k",
+      "note": "1.380 649 × 10^-23 J/K，不確定度 exact。"
+    }
+  ]
+}
