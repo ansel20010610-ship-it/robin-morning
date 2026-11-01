@@ -558,11 +558,14 @@ async function viewArticle(date, column, my) {
   body.append(renderBody(a));
   const firstP = body.firstElementChild;
   if (firstP && firstP.tagName === "P" && !firstP.querySelector(".tag")) firstP.classList.add("lead-p");
-  buildToc(body, main.querySelector(".toc-slot"));
   // 劃線本: this article's pencil lines find their place again; one opened from the notebook is landed on (route()
-  // scrolls to landTop) and glows once. Then the pill that offers 劃線 on a selection, taken down in cleanup.
-  const marked = applyMarks(body, key);
-  if (wantMark && marked.has(wantMark)) landTop = land(marked.get(wantMark));
+  // scrolls to landTop) and glows once. A mark inside a spoiler still folded has no box to measure, so its gate(s) are
+  // opened first (blocks.js) — before the contents list, which lists the opened section's headings. Then the pill that
+  // offers 劃線 on a selection, taken down in cleanup.
+  const marked = applyMarks(body, key), target = wantMark ? marked.get(wantMark) : null;
+  for (let sp; target && (sp = target.closest(".spoiler-body[hidden]"));) { const b = sp.previousElementSibling?.querySelector("button"); if (!b) break; b.click(); }
+  if (target) landTop = land(target);
+  buildToc(body, main.querySelector(".toc-slot"));
   const pencilStop = pencil(body, key);
   // The top bar names the column; once the title has scrolled under it, it carries the title instead (.past).
   const topbar = main.querySelector(".topbar");
@@ -802,7 +805,7 @@ function relatedHtml(entry) {
       const inner = `<span class="t"><span class="k">${esc(col(c, d).name)}</span><b>${esc(a.title)}</b>${by ? `<span class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></span>` : ""}</span><span class="sum">${done ? `<i class="tick" role="img" aria-label="已讀">✓</i>` : ""}${esc(fmtDate(d, "short"))}</span>`;
       return by ? `<div class="rel locked" aria-disabled="true">${inner}</div>` : `<a class="rel" href="#/a/${esc(d)}/${esc(c)}">${inner}</a>`;
     });
-  return rows.length ? `<section class="related"><div class="sec-head"><h2>延伸閱讀</h2><span class="note">Weiterlesen</span></div>${rows.join("")}</section>` : "";
+  return rows.length ? `<section class="related"><div class="sec-head"><h2>延伸閱讀</h2><span class="de">Weiterlesen</span></div>${rows.join("")}</section>` : "";
 }
 
 // A short contents list for long articles (four or more section headings).

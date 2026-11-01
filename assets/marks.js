@@ -97,17 +97,22 @@ export function pencil(body, key) {
   document.body.append(pill);
   let pending = null, t = 0, acted = 0;
   const hide = () => { pending = null; pill.hidden = true; pill.classList.remove("on"); };
-  // Just above the selection (36px pill, 8px gap), or under it when the top bar is in the way; never off the sides or
-  // under the bottom bar.
+  // Under the selection (36px pill, 10px gap, clear of the end handle): iOS floats its own copy menu over the space
+  // above, where it would cover the pill. Above it only when the bottom bar is in the way; never off the sides or under
+  // the top bar.
   const place = (r) => {
     const w = pill.offsetWidth, h = pill.offsetHeight || 36;
     const bar = document.querySelector(".nav")?.offsetHeight || 58;
-    const top = r.top - 44 >= 56 ? r.top - 44 : Math.min(r.bottom + 8, innerHeight - bar - h - 8);
+    const below = r.bottom + 10;
+    const top = below + h <= innerHeight - bar - 8 ? below : Math.max(56, r.top - h - 8);
     pill.style.top = `${Math.round(top)}px`;
     pill.style.left = `${Math.round(Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width / 2 - w / 2)))}px`;
   };
-  const show = (label, r, act) => {
+  // `near` is the selected block (or its list): the pill moves next to it in the DOM — fixed, so the page is unmoved —
+  // and a selection made with the keyboard reaches it on the next Tab, not after every link and tab before it.
+  const show = (label, r, act, near) => {
     pending = act;
+    if (near && pill.previousElementSibling !== near) near.after(pill);
     pill.innerHTML = `${PENCIL}${label}`;
     pill.hidden = false;
     place(r);
@@ -135,7 +140,7 @@ export function pencil(body, key) {
     const text = r.toString();
     if (text.trim().length < MIN || text.length > LIMIT || [...block.querySelectorAll("mark.pencil")].some((m) => r.intersectsNode(m))) { hide(); return; }
     const kept = r.cloneRange();
-    show("劃線", r.getBoundingClientRect(), () => save(block, kept, text));
+    show("劃線", r.getBoundingClientRect(), () => save(block, kept, text), block.closest("ul, ol") || block);
   };
   const onSel = () => { clearTimeout(t); t = setTimeout(check, 120); };
   // A tap on a mark (not a selection being made over it) offers to take it away.
@@ -151,17 +156,18 @@ export function pencil(body, key) {
   // pointerup as well as click: with text selected, iOS may spend the tap on dismissing the selection. `pending` is
   // taken once, so the pair never acts twice; `acted` keeps the click that follows from reading as a tap on the new mark.
   const act = () => { const p = pending; hide(); if (!p) return; acted = Date.now(); try { p(); } catch (e) { console.warn("mark failed", e); } };
+  const onScroll = () => { if (document.activeElement !== pill) hide(); }; // not from under the keyboard's focus
   pill.addEventListener("pointerup", act);
   pill.addEventListener("click", act);
   document.addEventListener("selectionchange", onSel);
   document.addEventListener("click", onDoc);
-  window.addEventListener("scroll", hide, { passive: true });
+  window.addEventListener("scroll", onScroll, { passive: true });
   body.addEventListener("click", onTap);
   return () => {
     clearTimeout(t);
     document.removeEventListener("selectionchange", onSel);
     document.removeEventListener("click", onDoc);
-    window.removeEventListener("scroll", hide);
+    window.removeEventListener("scroll", onScroll);
     body.removeEventListener("click", onTap);
     pill.remove();
   };

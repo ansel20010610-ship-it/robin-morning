@@ -67,14 +67,15 @@ function stockHtml(cfg, stock, col) {
 }
 
 // 最近十四天: a row per issue, newest first, a mark per shift and one for the reserve shift — a gold tick for a report
-// with nothing missing, the count in red for one with columns still missing, a dot for no report.
+// with nothing missing, the count in red for one with columns still missing, a dot for no report. Each mark names its
+// state for a screen reader (role="img", as relatedHtml's tick), so a row reads as the day and six states.
 function fortnight(issues) {
   const rows = issues.slice(0, 14);
   if (!rows.length) return "";
-  const cell = (r) => (!r ? `<span class="c0">·</span>` : r.missing?.length ? `<span class="c2">${r.missing.length}</span>` : `<span class="c1">✓</span>`);
+  const cell = (r) => (!r ? `<span class="c0" role="img" aria-label="未回報">·</span>` : r.missing?.length ? `<span class="c2" role="img" aria-label="缺 ${r.missing.length} 欄">${r.missing.length}</span>` : `<span class="c1" role="img" aria-label="無缺稿">✓</span>`);
   const body = rows.map((i) => {
     const s = i.press?.shifts || {}, [, m, d] = i.date.split("-").map(Number);
-    return `<a class="pr" href="#/issue/${esc(i.date)}" aria-label="${esc(fmtDate(i.date, "short"))}・第 ${esc(i.no)} 期"><span class="d"><b>${m}/${d}</b><i>${esc(i.weekday || "")}</i></span>${SHIFTS.map(([k]) => cell(s[k])).join("")}${cell(i.press?.reserve)}</a>`;
+    return `<a class="pr" href="#/issue/${esc(i.date)}"><span class="d"><b>${m}/${d}</b><i>${esc(i.weekday || "")}</i></span>${SHIFTS.map(([k]) => cell(s[k])).join("")}${cell(i.press?.reserve)}</a>`;
   });
   return `<div class="sec-head"><h2>最近十四天</h2><span class="de">Vierzehn Tage</span><span class="note">各班出勤</span></div>
     <div class="roster"><div class="pr head"><span></span>${["一", "二", "三", "四", "五", "備"].map((w) => `<span>${w}</span>`).join("")}</div>${body.join("")}</div>

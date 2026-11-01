@@ -184,11 +184,14 @@ def skip(path, why):
 
 def report(r):
     """One shift's report {finished_at, missing, note} (scripts/report_run.py) → {at: HH:MM Taiwan time, missing, note}."""
+    if not isinstance(r, dict) or not isinstance(r.get("finished_at"), str):
+        raise ValueError("班次條目格式不對")
     at = dt.datetime.fromisoformat(r["finished_at"])
     if at.tzinfo is None:
         at = at.replace(tzinfo=TW)
+    missing = r.get("missing")
     return {"at": at.astimezone(TW).strftime("%H:%M"),
-            "missing": [c for c in r.get("missing") or [] if isinstance(c, str)],
+            "missing": [c for c in missing if isinstance(c, str)] if isinstance(missing, list) else [],
             "note": r["note"] if isinstance(r.get("note"), str) else ""}
 
 
@@ -205,13 +208,22 @@ def press(cfg, d):
         runs = load_json(path)
         if not isinstance(runs, dict):
             raise ValueError("頂層不是 JSON 物件")
-        shifts = {k: report(runs[k]) for k in SHIFTS if k in runs}
-        extra = {k: report(runs[k]) for k in ("reserve", "audit") if k in runs}
     except Exception as e:  # noqa: BLE001
         skip(path, "%s: %s" % (type(e).__name__, e))
         return out
-    out["shifts"] = shifts
-    out.update(extra)
+    # One broken entry loses that shift alone, not the day's whole record.
+    for k in SHIFTS + ("reserve", "audit"):
+        if k not in runs:
+            continue
+        try:
+            rep = report(runs[k])
+        except Exception as e:  # noqa: BLE001
+            skip(path, "%s：%s: %s" % (k, type(e).__name__, e))
+            continue
+        if k in SHIFTS:
+            out["shifts"][k] = rep
+        else:
+            out[k] = rep
     return out
 
 
