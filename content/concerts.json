@@ -1,5 +1,5 @@
 {
-  "checked": null,
+  "checked": "2026-11-01",
   "events": [
     {
       "id": "cosi-ntt-2026",
@@ -30,6 +30,158 @@
         {
           "title": "文化部藝文活動開放資料",
           "url": "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=1"
+        }
+      ]
+    },
+    {
+      "id": "olafsson-recital-2026",
+      "title": "歐拉夫森鋼琴獨奏會",
+      "kind": "獨奏",
+      "rating": 4,
+      "why": "歐拉夫森整場只排E小調與E大調的作品，巴哈、貝多芬、舒伯特交錯，一氣呵成不設中場。這種排法本身就是一個主張。",
+      "who": "維京格．歐拉夫森（鋼琴）",
+      "program": "巴哈《E大調前奏曲》、貝多芬第27號與第30號鋼琴奏鳴曲、巴哈《第六號鍵盤組曲》、舒伯特《E小調鋼琴奏鳴曲》D 566",
+      "note": "演前 40 分鐘開放入場，有導聆",
+      "shows": [
+        {
+          "date": "2026-11-03",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2064685082194972673"
+        }
+      ],
+      "added": "2026-11-01",
+      "uids": [
+        "6a3181c626b3243414ccd359"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2064685082194972673"
+        }
+      ]
+    },
+    {
+      "id": "nso-markl-jackiw-2026",
+      "title": "馬寇爾、賈基夫與NSO",
+      "kind": "協奏曲",
+      "rating": 4,
+      "why": "柴科夫斯基小提琴協奏曲配巴爾托克《管絃樂協奏曲》，都是樂團和獨奏家拿得出手的主流名作。馬寇爾帶國家交響樂團，賈基夫拉琴。",
+      "who": "準．馬寇爾（指揮）、斯蒂凡．賈基夫（小提琴）、國家交響樂團",
+      "program": "郭恩甫《恰如交響》（世界首演）、柴科夫斯基《小提琴協奏曲》、巴爾托克《管絃樂協奏曲》",
+      "shows": [
+        {
+          "date": "2026-11-05",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2072943938696704001"
+        }
+      ],
+      "added": "2026-11-01",
+      "uids": [
+        "6a5125ec26b32427d0604188"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2072943938696704001"
+        }
+      ]
+    },
+    {
+      "id": "inbal-mahler9-tso-2026",
+      "title": "殷巴爾與TSO之馬勒第九號",
+      "kind": "交響樂",
+      "rating": 4,
+      "why": "殷巴爾八十分鐘不中斷，只排馬勒第九號交響曲，由他帶北市交。",
+      "who": "伊利亞胡．殷巴爾（指揮）、臺北市立交響樂團",
+      "program": "馬勒《第九號交響曲》",
+      "note": "演前導聆 18:50 起；全長約 80 分鐘無中場",
+      "shows": [
+        {
+          "date": "2026-11-06",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/1993268392975925249"
+        }
+      ],
+      "added": "2026-11-01",
+      "uids": [
+        "6929d60b26b32445dce6f3f9"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/1993268392975925249"
+        }
+      ]
+    },
+    {
+      "id": "argerich-festival-2026",
+      "title": "阿格麗希音樂節在台灣",
+      "kind": "協奏曲",
+      "rating": 5,
+      "why": "阿格麗希親自彈拉威爾G大調鋼琴協奏曲，傳奇鋼琴家本人坐在琴前。同台還有長榮交響樂團與年輕獨奏家。",
+      "who": "瑪塔．阿格麗希、伊索夫．伊凡諾夫、戴奧朵西雅．恩托庫、大衛．陳．斯維爾多夫（獨奏）；羅競邦、陳麗達．阿格麗希（指揮）、長榮交響樂團",
+      "program": "台北場：孟德爾頌《小提琴、鋼琴與弦樂協奏曲》、莫札特《第12號鋼琴協奏曲》、拉威爾《G大調鋼琴協奏曲》",
+      "note": "高雄場曲目未查到，以台北場為準",
+      "shows": [
+        {
+          "date": "2026-11-10",
+          "time": "19:30",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳",
+          "tickets": "https://www.opentix.life/program/2079132570898259969"
+        },
+        {
+          "date": "2026-11-12",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2076925048527581185"
+        }
+      ],
+      "added": "2026-11-01",
+      "uids": [
+        "6a639b4726b32427d0604253",
+        "6a639b4726b32427d0604252"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2076925048527581185"
+        }
+      ]
+    },
+    {
+      "id": "inbal-kholodenko-tso-2026",
+      "title": "殷巴爾、霍洛登科與TSO",
+      "kind": "交響樂",
+      "rating": 4,
+      "why": "殷巴爾指揮《春之祭》，前面是李斯特《死之舞》和巴爾托克《神奇的官大人》，節目排得很緊，全場都是節奏與色彩。",
+      "who": "伊利亞胡．殷巴爾（指揮）、瓦迪姆．霍洛登科（鋼琴）、臺北市立交響樂團",
+      "program": "李斯特《死之舞》、巴爾托克《神奇的官大人》組曲、斯特拉溫斯基《春之祭》",
+      "note": "演前導聆 18:50 起",
+      "shows": [
+        {
+          "date": "2026-11-13",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/1993269592550359041"
+        }
+      ],
+      "added": "2026-11-01",
+      "uids": [
+        "6929d60b26b32445dce6f3fa"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/1993269592550359041"
         }
       ]
     },
@@ -85,6 +237,70 @@
         {
           "title": "文化部藝文活動開放資料",
           "url": "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=1"
+        }
+      ]
+    },
+    {
+      "id": "ntso-vanoosten-liu-2026",
+      "title": "范努斯敦、劉孟捷與國臺交",
+      "kind": "協奏曲",
+      "rating": 4,
+      "why": "劉孟捷彈布拉姆斯第一號鋼琴協奏曲，下半場是德弗札克第八號交響曲，兩首都是主流必聽。台中本地的國臺交，下午場，大劇院。",
+      "who": "范努斯敦（指揮）、劉孟捷（鋼琴）、國立臺灣交響樂團",
+      "program": "布拉姆斯《第一號鋼琴協奏曲》、德弗札克《第八號交響曲》",
+      "shows": [
+        {
+          "date": "2026-11-15",
+          "time": "14:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院大劇院",
+          "tickets": "https://www.opentix.life/program/2078431536318390273"
+        }
+      ],
+      "added": "2026-11-01",
+      "uids": [
+        "6a6a32d326b32427d06042e4"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2078431536318390273"
+        }
+      ]
+    },
+    {
+      "id": "mahler8-nso-2026",
+      "title": "馬勒第八，千人",
+      "kind": "交響樂",
+      "rating": 4,
+      "why": "馬勒第八號交響曲動用國家交響樂團、國臺交、高市交與十四個合唱團，八位獨唱，編制是全台灣能湊出的最大陣仗。",
+      "who": "準．馬寇爾（指揮）、國家交響樂團、國立臺灣交響樂團、高雄市立交響樂團、NSO 聯合合唱團；獨唱八位",
+      "program": "馬勒《第八號交響曲》",
+      "note": "無中場；國家交響樂團 40 週年系列",
+      "shows": [
+        {
+          "date": "2026-11-27",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2071531444179013633"
+        },
+        {
+          "date": "2026-11-28",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2071531444179013633"
+        }
+      ],
+      "added": "2026-11-01",
+      "uids": [
+        "6a5125ec26b32427d0604182"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2071531444179013633"
         }
       ]
     }
