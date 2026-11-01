@@ -30,6 +30,8 @@ const loadLate = () => getJSON("content/late.json", { fresh: true }).then((l) =>
 const lateOf = (date) => S.late?.[date] || null;
 function lateText(late, got) {
   const now = twNow();
+  if (late.state === "waiting" && now.minutes < publishMin())
+    return `本週的 AI 額度在凌晨用完，今天這期 ${esc(S.cfg.publish_time)} 不會出齊。週日不拿備稿充數：額度<b>下午 3 點</b>重置後，整期重新寫過，大約傍晚出齊，好了會通知你。先翻上一期。`;
   if (late.state === "waiting" && now.minutes < 15 * 60)
     return `本週的 AI 額度在凌晨用完，今天這期沒能在 ${esc(S.cfg.publish_time)} 出齊。週日不拿備稿充數：額度<b>下午 3 點</b>重置後，整期重新寫過，大約傍晚出齊，好了會通知你。${got ? `已經寫好的 ${got} 篇先放上來。` : "先翻上一期。"}`;
   if (now.minutes >= 21 * 60)
@@ -52,7 +54,10 @@ const publishMin = () => { const [h, m] = (S.cfg.publish_time || "07:30").split(
 const isPublished = (date) => { if (isPreview()) return true; const n = twNow(); return date < n.date || (date === n.date && n.minutes >= publishMin()); };
 const publishedIssues = () => (S.index.issues || []).filter((i) => isPublished(i.date));
 const issueBy = (date) => (S.index.issues || []).find((i) => i.date === date);
-const col = (c) => S.cfg.columns[c] || { name: c, group: "supplement" };
+// config.json's entry for a column as it stood on `date`: a column that changed meaning keeps the old entry under "was"
+// up to its "until" (devotion: an essay until 2026-10-31, the verse and prayer since). A retired column stays in config
+// with "until", so its past issues keep their name and place.
+const col = (c, date) => { const k = S.cfg.columns[c] || { name: c, group: "supplement" }; return k.was && date && date <= k.was.until ? k.was : k; };
 
 // The copy in memory is the current one (opening it needs no network).
 function isFresh(date, column) {
@@ -81,7 +86,7 @@ function sortArticles(arts, date) {
   const rot = S.cfg.rotation_by_weekday?.[weekdayKey(date)] || [];
   const pos = (c) => { const i = rot.indexOf(c); return i < 0 ? Infinity : i; };
   return [...arts].sort((a, b) => {
-    const ca = col(a.column), cb = col(b.column);
+    const ca = col(a.column, date), cb = col(b.column, date);
     if (g[ca.group] !== g[cb.group]) return g[ca.group] - g[cb.group];
     if (ca.group === "supplement" && pos(a.column) !== pos(b.column)) return pos(a.column) - pos(b.column);
     return (ca.order ?? 9) - (cb.order ?? 9) || a.column.localeCompare(b.column);
@@ -110,8 +115,8 @@ function thumb(a, cls) {
   if (h?.diagram) return `<div class="${cls}"><div class="diagram-th">${ICON.diagram}</div></div>`;
   return "";
 }
-function kicker(c, link = false) {
-  const k = col(c);
+function kicker(c, link = false, date = null) {
+  const k = col(c, date);
   const inner = `${esc(k.name)}<span class="de">${esc(k.latin || "")}</span>`;
   return link ? `<a class="kicker" href="#/column/${esc(c)}">${inner}</a>` : `<div class="kicker">${inner}</div>`;
 }
@@ -142,21 +147,22 @@ function lockedBy(date, column) {
   const issue = issueBy(date);
   if (!issue) return null;
   const read = readSet();
+  if (read.has(`${date}/${column}`)) return null; // read already (before the mode, or earlier today): always open
   for (const a of sortArticles(issue.articles, date)) {
     if (a.column === column) return null;
     if (!read.has(`${date}/${a.column}`)) return a;
   }
   return null;
 }
-function lockedCard(a, by) {
-  return `<div class="item noimg locked" aria-disabled="true"><div>${kicker(a.column)}<h3>${esc(a.title)}</h3><p class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></p></div></div>`;
+function lockedCard(date, a, by) {
+  return `<div class="item noimg locked" aria-disabled="true"><div>${kicker(a.column, false, date)}<h3>${esc(a.title)}</h3><p class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></p></div></div>`;
 }
 
 function itemCard(date, a, read) {
   const by = lockedBy(date, a.column);
-  if (by) return lockedCard(a, by);
+  if (by) return lockedCard(date, a, by);
   const th = thumb(a, "th");
-  return `<a class="item${th ? "" : " noimg"}" href="#/a/${date}/${a.column}"><div>${kicker(a.column)}<h3>${esc(a.title)}</h3>${summary(a)}${metaLine(date, a, read)}</div>${th}</a>`;
+  return `<a class="item${th ? "" : " noimg"}" href="#/a/${date}/${a.column}"><div>${kicker(a.column, false, date)}<h3>${esc(a.title)}</h3>${summary(a)}${metaLine(date, a, read)}</div>${th}</a>`;
 }
 
 const EMBLEM = `<svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
@@ -194,12 +200,12 @@ function frontStatus() {
   const now = twNow();
   const todays = issueBy(now.date);
   const late = lateOf(now.date);
-  if (late && late.state !== "done") return lateText(late, todays ? todays.articles.filter((a) => col(a.column).group !== "watch").length : 0);
+  if (late && late.state !== "done") return lateText(late, todays ? todays.articles.filter((a) => col(a.column, now.date).group !== "watch").length : 0);
   if (now.minutes < publishMin()) return `今天這期 <b>${esc(S.cfg.publish_time)}</b> 才出爐（還有 ${untilText(publishMin() - now.minutes)}），先翻上一期墊墊胃。`;
   if (!todays) return "今天這期還在印，好了會自己跳出來。先翻上一期撐一下。";
-  const on = (c) => now.date >= (S.cfg.columns[c]?.since || ""); // a new column counts from its start date
+  const on = (c) => { const k = S.cfg.columns[c] || {}; return now.date >= (k.since || "") && now.date <= (k.until || "9999"); }; // between a column's start and its last day
   const expected = Object.keys(S.cfg.columns).filter((c) => S.cfg.columns[c].group === "main" && on(c)).length + (S.cfg.rotation_by_weekday?.[weekdayKey(now.date)]?.filter(on).length ?? 2);
-  const got = todays.articles.filter((a) => col(a.column).group !== "watch").length;
+  const got = todays.articles.filter((a) => col(a.column, now.date).group !== "watch").length;
   return got < expected ? `已經到了 ${got} 篇，剩下的在路上，別走開。` : "";
 }
 // Everything the latest-issue front page shows that can change while it stays open: [issue, status line].
@@ -219,9 +225,9 @@ function viewFront(dateParam) {
   }
   const read = readSet();
   const arts = sortArticles(issue.articles, issue.date);
-  const mains = arts.filter((a) => col(a.column).group === "main");
-  const supps = arts.filter((a) => col(a.column).group === "supplement");
-  const watch = arts.filter((a) => col(a.column).group === "watch");
+  const mains = arts.filter((a) => col(a.column, issue.date).group === "main");
+  const supps = arts.filter((a) => col(a.column, issue.date).group === "supplement");
+  const watch = arts.filter((a) => col(a.column, issue.date).group === "watch");
   const lead = mains[0];
   main.innerHTML = `${masthead(issue)}
   <div class="wrap">
@@ -231,7 +237,7 @@ function viewFront(dateParam) {
     ${prayerBox(issue)}
     ${lockMode() ? lockBar(arts, issue.date) : digestBar(arts, !dateParam, digestDone().has(issue.date))}
     ${mains.length ? `<div class="sec-head"><h2>正刊</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
-    ${lead ? `<a class="lead" href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
+    ${lead ? `<a class="lead" href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column, false, issue.date)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
     ${mains.slice(1).map((a) => itemCard(issue.date, a, read)).join("")}
     ${supps.length ? `<div class="sec-head"><h2>副刊</h2><span class="de">Feuilleton</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
@@ -259,7 +265,7 @@ function prayerBox(issue) {
   if (!v?.prayer) return "";
   const verses = Array.isArray(v.verses) ? v.verses : [];
   return `<details class="prayer-box"><summary><span class="lbl">今日禱告</span>${v.ref ? `<span class="ref">${esc(v.ref)}</span>` : ""}</summary>
-    ${verses.length ? `<blockquote class="verses">${verses.map((x) => `<sup>${esc(String(x.n ?? ""))}</sup>${esc(x.text)}`).join("")}<cite>${esc(v.ref || "")}（和合本）</cite></blockquote>` : ""}
+    ${verses.length ? `<blockquote class="verses">${verses.map((x) => `<sup>${esc(x.c ? `${x.c}:${x.n}` : String(x.n ?? ""))}</sup>${esc(x.text)}`).join("")}<cite>${esc(v.ref || "")}（和合本）</cite></blockquote>` : ""}
     <div class="prayer">${paragraphs(v.prayer)}</div></details>`;
 }
 
@@ -353,9 +359,9 @@ function finishNote(date) {
 function weekSeven() {
   const read = readSet(), used = new Map();
   return publishedIssues().slice(0, 7).map((iss) => {
-    const cands = iss.articles.filter((a) => a.column !== "football" && col(a.column).group !== "watch" && (a.takeaway || a.brief));
+    const cands = iss.articles.filter((a) => a.column !== "football" && col(a.column, iss.date).group !== "watch" && (a.takeaway || a.brief));
     if (!cands.length) return null;
-    const score = (a) => (read.has(`${iss.date}/${a.column}`) ? -10 : 0) + (used.get(a.column) || 0) * 3 + (col(a.column).group === "main" ? 0 : 1);
+    const score = (a) => (read.has(`${iss.date}/${a.column}`) ? -10 : 0) + (used.get(a.column) || 0) * 3 + (col(a.column, iss.date).group === "main" ? 0 : 1);
     const pick = cands.reduce((b, a) => (score(a) < score(b) ? a : b));
     used.set(pick.column, (used.get(pick.column) || 0) + 1);
     return { date: iss.date, a: pick };
@@ -365,7 +371,7 @@ function weekHtml() {
   const items = weekSeven();
   if (items.length < 3) return "";
   return `<section class="week"><div class="sec-head"><h2>這週你帶走的 ${items.length} 件事</h2><span class="de">Wochenschau</span></div>
-    <ol>${items.map(({ date, a }) => `<li><a href="#/a/${date}/${a.column}"><span class="meta-s">${esc(fmtDate(date, "short"))}・${esc(col(a.column).name)}</span><b>${esc(a.title)}</b><p>${esc(a.takeaway || a.brief)}</p></a></li>`).join("")}</ol></section>`;
+    <ol>${items.map(({ date, a }) => `<li><a href="#/a/${date}/${a.column}"><span class="meta-s">${esc(fmtDate(date, "short"))}・${esc(col(a.column, date).name)}</span><b>${esc(a.title)}</b><p>${esc(a.takeaway || a.brief)}</p></a></li>`).join("")}</ol></section>`;
 }
 
 // Perio review cards: the take-aways of earlier perio articles, three a day. A card you remembered comes back later and
@@ -479,7 +485,7 @@ async function viewArticle(date, column, my) {
   try { a = await article(date, column); } catch { if (my === routeSeq) main.innerHTML = `<div class="wrap"><p class="empty">這篇找不到，可能被風吹走了。<a href="#/">回到今日</a></p></div>`; return; }
   if (my !== routeSeq) return;
   const key = `${date}/${column}`;
-  const k = col(column);
+  const k = col(column, date);
   const issue = issueBy(date);
   const minutes = issue?.articles.find((x) => x.column === column)?.minutes;
   main.innerHTML = `
@@ -491,7 +497,7 @@ async function viewArticle(date, column, my) {
       <button class="icon-btn" type="button" data-save aria-pressed="${isSaved(key)}" aria-label="收藏">${isSaved(key) ? ICON.starOn : ICON.star}</button>
     </div><div class="progress"></div></div>
     <article class="wrap"><div class="read">
-      <header class="article-head">${kicker(column, true)}<h1>${esc(a.title)}</h1>
+      <header class="article-head">${kicker(column, true, date)}<h1>${esc(a.title)}</h1>
         ${a.takeaway ? `<aside class="takeaway"><span class="lbl">帶得走的結論</span><p>${inline(a.takeaway)}</p>${evidenceOf(a) ? `<p class="ev"><b>證據力</b>${inline(evidenceOf(a))}</p>` : ""}</aside>` : ""}
         <p class="dek">${esc(a.dek)}</p>
         <div class="meta">${esc(fmtDate(date))}・第 ${issue?.no ?? ""} 期${minutes ? `・閱讀約 ${minutes} 分鐘` : ""}${updatedNote(date, a)}</div>
@@ -830,13 +836,13 @@ function viewArchive() {
     const ql = q.trim().toLowerCase();
     let last = "";
     const rows = pubs.map((iss) => {
-      const arts = sortArticles(iss.articles, iss.date).filter((a) => !ql || `${a.title} ${a.dek} ${col(a.column).name}`.toLowerCase().includes(ql));
+      const arts = sortArticles(iss.articles, iss.date).filter((a) => !ql || `${a.title} ${a.dek} ${col(a.column, iss.date).name}`.toLowerCase().includes(ql));
       if (!arts.length) return "";
       const [y, m, d] = iss.date.split("-");
       const head = `${y}-${m}` !== last ? `<div class="month">${Number(m)} 月 ${y}</div>` : "";
       last = `${y}-${m}`;
       return `${head}<a class="issue-row" href="#/issue/${iss.date}"><div class="d"><b>${Number(d)}</b><span>週${esc(iss.weekday)}・No.${iss.no}</span>${done.has(iss.date) ? '<i class="done-mark" title="已讀完摘要" aria-label="已讀完摘要">✓</i>' : ""}</div>
-        <ul>${arts.map((a) => `<li><i>${esc(col(a.column).name)}</i>${esc(a.title)}</li>`).join("")}</ul></a>`;
+        <ul>${arts.map((a) => `<li><i>${esc(col(a.column, iss.date).name)}</i>${esc(a.title)}</li>`).join("")}</ul></a>`;
     }).join("");
     main.querySelector(".list").innerHTML = rows || `<p class="empty">${ql ? "沒有符合的文章。" : "還沒有往期。"}</p>`;
   };
@@ -867,7 +873,7 @@ function viewArchive() {
     }
     if (my !== seq) return;
     hits.innerHTML = found.length
-      ? `<div class="sec-head"><h2>全文</h2><span class="note">${found.length} 篇</span></div>${found.map((r) => `<a class="hit" href="#/a/${r.d}/${r.c}"><span class="meta-s">${esc(fmtDate(r.d, "short"))}・${esc(col(r.c).name)}</span><b>${esc(r.t)}</b><span class="snip">${snippet(r.x, q)}</span></a>`).join("")}`
+      ? `<div class="sec-head"><h2>全文</h2><span class="note">${found.length} 篇</span></div>${found.map((r) => `<a class="hit" href="#/a/${r.d}/${r.c}"><span class="meta-s">${esc(fmtDate(r.d, "short"))}・${esc(col(r.c, r.d).name)}</span><b>${esc(r.t)}</b><span class="snip">${snippet(r.x, q)}</span></a>`).join("")}`
       : `<p class="hint">全文沒有找到「${esc(q)}」。</p>`;
   };
   input.addEventListener("input", () => {
@@ -971,6 +977,7 @@ function viewSettings() {
     const swap = () => {
       try { v === "auto" ? localStorage.removeItem("rm.theme") : localStorage.setItem("rm.theme", v); } catch { /* ignore */ }
       if (v === "auto") delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = v;
+      themeBar(v);
       redraw("theme", v);
     };
     if (calm() || !document.startViewTransition) { swap(); return; }
@@ -1104,8 +1111,15 @@ function watchUpdates() {
   });
 }
 
+// The browser's toolbar colour (index.html's theme-color metas) follows the system scheme; a theme forced in 設定 paints it too.
+const BAR = { light: "#F5F0E6", dark: "#15120E" };
+function themeBar(v) {
+  document.querySelectorAll('meta[name="theme-color"]').forEach((m) => { m.content = BAR[v] || BAR[/dark/.test(m.media) ? "dark" : "light"]; });
+}
+
 async function boot() {
   watchUpdates();
+  themeBar(document.documentElement.dataset.theme || "auto");
   try {
     await loadData();
   } catch (e) {

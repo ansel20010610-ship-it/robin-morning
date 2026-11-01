@@ -14,7 +14,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (CONTENT, ROOT, WEEKDAY_ZH, cjk_count, issue_number, iter_articles,  # noqa: E402
+from common import (CONTENT, ROOT, WEEKDAY_ZH, cjk_count, column_meta, issue_number, iter_articles,  # noqa: E402
                     load_config, load_json, text_of_block, wm_thumb)
 
 
@@ -54,7 +54,8 @@ def verse(art):
     out = {"prayer": prayer["text"].strip()}
     if scrip:
         out["ref"] = str(scrip.get("ref", ""))
-        out["verses"] = [{"n": v.get("n"), "text": str(v.get("text", ""))} for v in scrip["verses"] if isinstance(v, dict)]
+        out["verses"] = [{"n": v.get("n"), "text": str(v.get("text", "")), **({"c": v["c"]} if v.get("c") else {})}
+                         for v in scrip["verses"] if isinstance(v, dict)]  # c: a passage that crosses into the next chapter
     return out
 
 
@@ -92,19 +93,22 @@ def main():
     cfg = load_config()
     days, epigraphs, verses, search = {}, {}, {}, {}
     for day, col, path in iter_articles():
-        if col not in cfg["columns"]:
+        meta = column_meta(cfg, col, day)  # a retired column stays in config.json with "until", so its issues stay listed
+        if meta is None:
+            skip(path, "欄位代號 %s 不在 config.json（停刊的欄位要留在 config.json 並加 until，往期才看得到）" % col)
             continue
         try:
             art = load_json(path)
             if not isinstance(art, dict):
                 raise ValueError("頂層不是 JSON 物件")
-            if cfg["columns"][col]["group"] == "verse":  # not an article: the masthead verse and the front page's prayer
+            if cfg["columns"][col]["group"] == "verse":  # the masthead verse and the front page's prayer come from this file
                 epi, v = epigraph(art), verse(art)
                 if epi:
                     epigraphs[day] = epi
                 if v:
                     verses[day] = v
-                continue
+                if meta["group"] == "verse":  # and since 2026-11-01 it is nothing else: not an article
+                    continue
             n = cjk_count(art)
             entry = {
                 "column": col,

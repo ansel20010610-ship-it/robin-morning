@@ -26,7 +26,7 @@ import time
 import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import ROOT, UA, expected_columns, load_config, tw_now  # noqa: E402
+from common import ROOT, UA, column_meta, expected_columns, load_config, tw_now  # noqa: E402
 
 DEVICES = os.path.join(ROOT, "state", "push", "devices.json")
 SITE = "https://wiener-morgen-private.duckdns.org/"
@@ -155,8 +155,9 @@ def late_notice(date):
 
 
 def complete(cfg, issue):
-    want = len([c for c in expected_columns(cfg, dt.date.fromisoformat(issue["date"])) if cfg["columns"][c]["group"] != "verse"])
-    return sum(1 for a in issue["articles"] if cfg["columns"].get(a["column"], {}).get("group") != "watch") >= want
+    d = dt.date.fromisoformat(issue["date"])
+    want = len([c for c in expected_columns(cfg, d) if column_meta(cfg, c, d)["group"] != "verse"])
+    return sum(1 for a in issue["articles"] if (column_meta(cfg, a["column"], d) or {}).get("group") != "watch") >= want
 
 
 def cmd_issue(a):
@@ -176,10 +177,11 @@ def cmd_issue(a):
             print("等到 %s 再發……" % at.strftime("%H:%M:%S"), flush=True)
             time.sleep((at - now).total_seconds())
     # Send what the reader will see: today's issue on the live site, after the newest deploy if one is still running.
-    # On a Sunday an incomplete issue may be about to be held for 週日補刊 (fill.yml can start late): give the
-    # reserve fill its WAIT_DEPLOY before announcing a partial issue.
+    # A Sunday issue still short of columns is either about to be held for 週日補刊 or filled from the reserves, both by
+    # fill.yml (07:12–07:22, and GitHub often starts it late): wait for that to reach the site, up to WAIT_SITE, before
+    # announcing a partial issue. On other days a partial issue is announced after WAIT_DEPLOY.
     sunday = dt.date.fromisoformat(date).weekday() == 6
-    start, payload = time.time(), None
+    start, payload, held = time.time(), None, False
     while True:
         waited = time.time() - start
         if live_late().get(date, {}).get("state") in ("waiting", "regenerating"):
@@ -189,12 +191,13 @@ def cmd_issue(a):
             issue = next((i for i in json.loads(fetch("content/index.json")).get("issues", []) if i.get("date") == date), None)
             payload = issue and issue_payload(cfg, issue)
             current = payload and fetch("content/version.txt").strip() == main_head()
-            if current and sunday and not complete(cfg, issue) and waited < WAIT_DEPLOY and not a.now:
+            held = bool(sunday and issue and not complete(cfg, issue) and not a.now)
+            if current and held:
                 current = False
         except Exception as e:  # noqa: BLE001
             print("讀不到網站：%s" % e, flush=True)
             current = False
-        if current or (payload and waited >= WAIT_DEPLOY) or a.now and payload:
+        if current or (payload and waited >= (WAIT_SITE if held else WAIT_DEPLOY)) or a.now and payload:
             break
         if waited >= WAIT_SITE or a.now:
             print("::error::網站上還沒有 %s 的刊期，沒有發通知" % date)

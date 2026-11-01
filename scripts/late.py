@@ -87,6 +87,8 @@ def hold(cfg, d, now=None):
     silent = silent_shifts(d)
     if not missing or not silent:
         return None
+    if silent == ["5"] and (now.hour, now.minute) < (7, 20):  # shift 5 stops at 07:05 and may still be pushing or reporting
+        return "第 5 班還沒回報，可能還在收尾：07:20 前不判斷額度，這次不補位"
     data[str(d)] = {"state": "waiting", "held_at": now.strftime("%H:%M"), "missing": missing}
     save(data)
     return "週日額度不足（第 %s 班沒有回報），缺 %s：不用備稿，%d:00 額度重置後由週日補刊重新製作" % (

@@ -18,7 +18,7 @@ import sys
 import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (ISSUES, ROOT, iter_reserve, RESERVE, BROWSER_IMAGE_TYPES, CJK, article_path, cjk_count, figures_of, http_get, image_key,  # noqa: E402
+from common import (ISSUES, ROOT, iter_reserve, RESERVE, BROWSER_IMAGE_TYPES, CJK, article_path, cjk_count, column_meta, figures_of, http_get, image_key,  # noqa: E402
                     image_page, iter_articles, load_config, load_json, raw_image_ext)
 
 LENGTH = {  # (min, max) CJK characters in body
@@ -318,8 +318,11 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
         else:
             E(msg)
 
-    if col not in cfg["columns"]:
+    meta = column_meta(cfg, col, d)
+    if meta is None:
         E("欄位代號 %s 不在 config.json" % col)
+    elif str(d) != "reserve" and str(d) > cfg["columns"][col].get("until", "9999-12-31"):
+        E("欄位 %s 已於 %s 停刊，不再有新稿" % (col, cfg["columns"][col]["until"]))
     if art.get("column") != col:
         E("column 應為 %s" % col)
     if d == "reserve":
@@ -340,7 +343,7 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             W("備稿要在任何一天都成立，避免會過期的字眼：%s" % "、".join(stale))
     elif art.get("date") != str(d):
         E("date 應為 %s" % d)
-    if cfg["columns"].get(col, {}).get("group") == "verse":
+    if (meta or {}).get("group") == "verse":
         check_verse(art, E, W, check_urls, used_topics, clash)
         return
     for k in ("title", "dek", "topic_key", "updated_at"):
@@ -614,12 +617,13 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
                 E("paper 論文卡缺少 access（資料範圍：依全文，或依摘要與後續文獻整理）")
             if str(d) == "reserve" or str(d) >= EVIDENCE_SINCE:
                 cit = card.get("citation") if isinstance(card.get("citation"), str) else ""
-                jm = re.search(r"\*([^*]+)\*", cit)
-                journal = jm.group(1).strip().rstrip(".") if jm else ""
-                if not journal:
+                # the journal is whichever italic matches the whitelist: a title's italic species name (*P. gingivalis*) is not it
+                italics = [m.strip().rstrip(".") for m in re.findall(r"\*([^*]+)\*", cit)]
+                journal = next((j for j in italics if j in PERIO_JOURNALS), "")
+                if not italics:
                     E("paper.citation 要用 *期刊縮寫* 標出期刊（columns/perio.md）")
-                elif journal not in PERIO_JOURNALS:
-                    E("期刊「%s」不在牙周欄白名單（columns/perio.md 選文）：換一篇白名單期刊的論文" % journal)
+                elif not journal:
+                    E("citation 斜體標出的「%s」都不在牙周欄期刊白名單（columns/perio.md 選文）：換一篇白名單期刊的論文" % "、".join(italics))
                 ev = card.get("evidence") if isinstance(card.get("evidence"), str) else ""
                 if not ev.strip():
                     E("paper 論文卡缺少 evidence：研究設計、規模與證據確定性，一行 60 字內（columns/perio.md）")

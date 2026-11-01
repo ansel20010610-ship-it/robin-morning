@@ -13,7 +13,7 @@ import sys
 import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import http_get  # noqa: E402
+from common import http_get, tw_now  # noqa: E402
 
 API = "https://bible.fhl.net/json/qb.php"
 
@@ -43,7 +43,7 @@ def main():
         "chapter": chap,
         "version": "和合本",
         "verses": [{"n": v["n"], "text": v["text"]} for v in verses],
-        "source": "信望愛聖經工具 FHL 和合本（bible.fhl.net），%s 核對" % dt.date.today().isoformat(),
+        "source": "信望愛聖經工具 FHL 和合本（bible.fhl.net），%s 核對" % tw_now().date().isoformat(),
     }
     print(json.dumps(block, ensure_ascii=False, indent=2))
     return 0

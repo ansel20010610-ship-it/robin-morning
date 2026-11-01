@@ -37,14 +37,16 @@ async function cacheFirst(req) {
   return (await c.match(req, { ignoreSearch: true })) || fetch(req).then((r) => { if (r.ok) c.put(req, r.clone()); return r; });
 }
 // On a stalled connection, answer from the cache after TIMEOUT; a late network copy is still stored.
-// With nothing cached, wait for the network; JSON never falls back to index.html.
+// With nothing cached, wait for the network; JSON never falls back to index.html. Only a good answer is stored or
+// preferred over the cached copy: a captive portal (hotel Wi-Fi) answers every URL with 200 text/html.
+const good = (req, r) => r.ok && (!/\.json(\?|$)/.test(req.url) || /json/.test(r.headers.get("content-type") || ""));
 async function networkFirst(e) {
   const req = e.request, c = await caches.open(CONTENT);
-  const net = fetch(req, { cache: "no-cache" }).then(async (r) => { if (r.ok) await c.put(req, r.clone()).catch(() => {}); return r; });
+  const net = fetch(req, { cache: "no-cache" }).then(async (r) => { if (good(req, r)) await c.put(req, r.clone()).catch(() => {}); return r; });
   e.waitUntil(net.catch(() => {}));
   const hit = await c.match(req);
   if (!hit) return net.catch(() => Response.error());
-  return Promise.race([net.catch(() => hit), new Promise((res) => setTimeout(() => res(hit), TIMEOUT))]);
+  return Promise.race([net.then((r) => (good(req, r) ? r : hit)).catch(() => hit), new Promise((res) => setTimeout(() => res(hit), TIMEOUT))]);
 }
 
 // A picture or font file never changes at its URL: answer from the cache, else fetch it with CORS (these hosts allow it)

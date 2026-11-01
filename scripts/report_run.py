@@ -23,8 +23,9 @@ def main():
     ap.add_argument("--date")
     a = ap.parse_args()
     cfg = load_config()
-    # the reserve shift runs in the afternoon: file it under the calendar day it ran
-    d = tw_now().date() if a.group == "reserve" and not a.date else parse_date(a.date)
+    # the night shifts report for the coming issue; anything else (reserve, audit, 週日補刊) runs in the afternoon and is
+    # filed under the calendar day it ran
+    d = tw_now().date() if a.group not in ("1", "2", "3", "4", "5") and not a.date else parse_date(a.date)
     missing = []
     for col in expected_columns(cfg, d):
         p = article_path(d, col)
