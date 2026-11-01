@@ -475,7 +475,8 @@ async function viewArticle(date, column, my) {
   // of the page lands on an article already in memory and gets its slide.
   const order = issue ? sortArticles(issue.articles, date) : [], idx = order.findIndex((x) => x.column === column);
   [order[idx - 1], order[idx + 1]].forEach((n) => { if (n) article(date, n.column).catch(() => {}); });
-  const titleIn = `<span class="col">${esc(k.name)}${idx >= 0 ? `<i class="pg">・${roman(idx + 1)}／${roman(order.length)}</i>` : ""}</span><span class="art">${esc(a.title)}</span>`;
+  // The name is boxed on its own (.nm) so it is what gets the ellipsis on a narrow bar; the numeral always stays whole.
+  const titleIn = `<span class="col"><span class="nm">${esc(k.name)}</span>${idx >= 0 ? `<i class="pg">・${roman(idx + 1)}／${roman(order.length)}</i>` : ""}</span><span class="art">${esc(a.title)}</span>`;
   main.innerHTML = `
     <div class="topbar"><div class="in">
       <a class="icon-btn" data-back href="${fromList || (issue && date !== publishedIssues()[0]?.date ? `#/issue/${date}` : "#/")}" aria-label="${fromList ? "返回" : "回到本期"}">${ICON.back}</a>

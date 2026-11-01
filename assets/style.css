@@ -206,7 +206,11 @@ button { font: inherit; color: inherit; }
 /* In an article the title is a button that raises the contents sheet (app.js openContents); after the column's name
    comes the page's place in the issue in Roman numerals, set like the paper's German — Cormorant italic, gold. */
 .topbar button.title { -webkit-appearance: none; appearance: none; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; align-self: stretch; align-content: center; }
-.topbar .title .pg { font-family: var(--latin); font-style: italic; font-size: 15px; letter-spacing: .04em; color: var(--gold-ink); margin-left: 1px; }
+.topbar .title .pg { font-family: var(--latin); font-style: italic; font-size: 15px; letter-spacing: .04em; color: var(--gold-ink); margin-left: 1px; flex: 0 0 auto; }
+/* On a 375px bar the five buttons leave the title about 125px; the column's name (the long new ones run to nine
+   characters) is what gets the ellipsis, so the numeral — the way into the contents sheet — is always whole. */
+.topbar .title .col { display: flex; justify-content: center; align-items: baseline; }
+.topbar .title .col .nm { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 /* 翻頁 (app.js viewArticle): the page follows a sideways swipe a little and lifts off the paper beneath — a hairline and
    a soft shadow along its trailing edge — then turns (motion.js transition dir) or settles back. pan-y leaves the
    scroll to the browser and hands sideways movement to the page; a table's own .scroll still scrolls on its own. */
