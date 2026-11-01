@@ -108,6 +108,9 @@ function markRead(k) { const r = store.get("read", []); if (!r.includes(k)) { r.
 
 // ——— Shared pieces ———
 const CONTAIN = new Set(["artwork", "document", "portrait", "illustration"]);
+// Opening pictures shown whole and plain (style.css figure.hero.flat): a painting has a frame of its own, a document is
+// a sheet, a portrait a face — none is cut larger, drifted or gilt-framed. An engraving or a photograph is.
+const FLAT = new Set(["artwork", "document", "portrait"]);
 function thumb(a, cls) {
   const h = a.hero;
   if (h?.src) return `<div class="${cls}${CONTAIN.has(h.kind) ? " contain" : ""}"><img src="${esc(cls === "ph" ? h.src : h.thumb || h.src)}" alt="${esc(h.alt || "")}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>`;
@@ -437,6 +440,8 @@ async function viewArticle(date, column, my) {
       <p class="small">想自由跳著讀，可以到<a href="#/settings">設定 → 閱讀方式</a>改回來。</p></div></div>`;
     return;
   }
+  const plateNow = !plateLater; // taken once: a retry after an error plates the picture itself
+  plateLater = false;
   main.innerHTML = `<div class="wrap"><p class="loading">翻到這一頁……</p></div>`;
   let a;
   try { a = await article(date, column); } catch (e) {
@@ -484,7 +489,12 @@ async function viewArticle(date, column, my) {
     </div></article>
     <button class="resume" type="button" hidden>從上次讀到的地方繼續</button>`;
   const hero = renderHero(a.hero);
-  if (hero) main.querySelector(".hero-slot").append(hero);
+  if (hero) {
+    // 銅版畫 (style.css .plate, motion.js plate): the picture settles, is gilt-framed and drifts with the scroll — unless it
+    // is a flat work, or it is still morphing in from its card, in which case transition() plates it once that has landed.
+    if (hero.matches("figure.hero")) { if (FLAT.has(a.hero?.kind)) hero.classList.add("flat"); if (plateNow) hero.classList.add("plate"); }
+    main.querySelector(".hero-slot").append(hero);
+  }
   const body = main.querySelector(".body");
   body.append(renderBody(a));
   const firstP = body.firstElementChild;
@@ -1062,6 +1072,7 @@ const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/
 let cleanup = () => {};
 let stopReveal = () => {};
 let lastTapped = null, shownArticle = null; // the card picture just tapped, and the article on screen (for the picture morph)
+let plateLater = false; // the opening picture is morphing in from its card: transition() plates it, not viewArticle
 let routeSeq = 0; // bumped on every route; an older route still loading must not draw over a newer one
 // Coming back out of an article lands where the reader was on the page they tapped it from; a tap on the bottom bar
 // starts that page from the top. `places` holds the scroll position of each list page last left.
@@ -1108,13 +1119,15 @@ async function route(ev) {
   const prev = shownArticle;
   shownArticle = art ? `${art[1]}/${art[2]}` : null;
   // Into an article already loaded: the tapped card's picture grows into its opening picture. Back out: the reverse.
-  // An article still to be fetched opens without a transition (the page would freeze while it loads).
-  const hero = () => main.querySelector("figure.hero img");
+  // An article still to be fetched opens without a transition (the page would freeze while it loads). The article's
+  // side of the morph is the picture's frame, which clips the plated picture (motion.js transition).
+  const hero = () => main.querySelector("figure.hero .frame");
   let morph = null;
   if (ev && art && isFresh(art[1], art[2])) morph = { from: lastTapped, to: hero };
   else if (ev && !art && prev) morph = { from: hero(), to: () => main.querySelector(`a[href="#/a/${prev}"] img`) };
   else if (ev && !art) morph = {};
   lastTapped = null;
+  plateLater = Boolean(art && morph);
   const draw = async () => {
     await drawRoute(h, art, my);
     if (my === routeSeq) window.scrollTo(0, place ?? landTop ?? 0);

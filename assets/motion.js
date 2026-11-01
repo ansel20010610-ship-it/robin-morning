@@ -22,19 +22,26 @@ export function reveal(root) {
   return () => io.disconnect();
 }
 
+// 銅版畫: the article's opening picture is plated (style.css figure.hero.plate) once it is in place — it settles, a gilt
+// line draws round it, and it drifts with the scroll. A picture that morphs in from its card is plated when the morph
+// has landed, so the settle does not fight the morph; `el` is the picture's frame or anything inside the figure.
+export const plate = (el) => el?.closest("figure.hero")?.classList.add("plate");
+
 // Page changes cross-fade, and a card's picture grows into the article's opening picture (View Transitions; iOS 18+).
-// `from`/`to` name the two pictures that are one and the same; `update` draws the new page.
+// `from`/`to` name the two boxes that are one and the same (a card's image, the article picture's frame — the frame,
+// not the image, because a capture is never clipped by its ancestors and the plated image is cut larger than its
+// frame); `update` draws the new page.
 export async function transition(update, { from = null, to = null } = {}) {
-  if (calm() || !document.startViewTransition) return update();
+  if (calm() || !document.startViewTransition) { await update(); plate(to?.()); return; }
   if (from) from.style.viewTransitionName = "hero";
   const vt = document.startViewTransition(async () => {
     if (from) from.style.viewTransitionName = "";
     await update();
-    const img = to?.();
-    if (img) img.style.viewTransitionName = "hero";
+    const el = to?.();
+    if (el) el.style.viewTransitionName = "hero";
   });
   vt.ready.catch(() => {}); // a transition cut short by the next tap is skipped; that is fine
-  vt.finished.catch(() => {}).finally(() => { const img = to?.(); if (img) img.style.viewTransitionName = ""; });
+  vt.finished.catch(() => {}).finally(() => { const el = to?.(); if (el) { el.style.viewTransitionName = ""; plate(el); } });
   return vt.updateCallbackDone.catch(() => {});
 }
 
