@@ -1070,18 +1070,27 @@ function viewArchive() {
 }
 
 function viewSaved() {
-  const keys = saved();
-  const items = keys.map((k) => {
+  // Set like the gallery (a lookbook): two shelves up top for 劃線本 and 畫廊 — the places entered from here, the owner's
+  // choice of 2026-11-02 — each with its count large in Cormorant; under them the saved articles as numbered rows, the
+  // column and the day in spaced small type above the title, the dek under it, the picture a square at the right.
+  const read = readSet();
+  const rows = saved().map((k) => {
     const [date, c] = k.split("/");
     const a = issueBy(date)?.articles.find((x) => x.column === c);
-    return a && isPublished(date) ? itemCard(date, a, readSet()).replace('<div class="meta-s">', `<div class="meta-s">${esc(fmtDate(date, "short"))}・`) : "";
-  }).join("");
+    return a && isPublished(date) ? { date, a, k } : null;
+  }).filter(Boolean);
+  const row = ({ date, a, k }, i) => {
+    const h = a.hero, th = h?.src ? `<span class="th"><img src="${esc(h.thumb || h.src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span>` : "";
+    return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
+      <span class="t"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title)}</b>${a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}</span>${th}</a></li>`;
+  };
   const n = allMarks().length, g = galleryItems().length;
-  // 劃線本 and 畫廊 are entered from here (the owner's choice, 2026-11-02: 往期 keeps no standing row).
-  main.innerHTML = `<div class="wrap"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
-    <a class="sec-head link" href="#/marks" aria-label="劃線本：${n} 處劃線"><h2>劃線本</h2><span class="de">Anstreichungen</span><span class="note">${n ? `${n} 處` : "還沒有劃線"} ›</span></a>
-    <a class="sec-head link" href="#/gallery" aria-label="畫廊：${g} 幅"><h2>畫廊</h2><span class="de">Galerie</span><span class="note">${g ? `${g} 幅` : "牆上還沒有畫"} ›</span></a>
-    ${items || `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。<br><a href="#/random">或者先隨手翻一篇 →</a></p>`}</div>`;
+  main.innerHTML = `<div class="wrap sammlung"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
+    <nav class="shelf" aria-label="收藏的角落">
+      <a class="sh" href="#/marks" style="--i:0" aria-label="劃線本：${n} 處劃線"><span class="k">劃線本<i>Anstreichungen</i></span><b>${n}</b><span class="u">${n ? "處劃線" : "還沒有劃線"}</span></a>
+      <a class="sh" href="#/gallery" style="--i:1" aria-label="畫廊：${g} 幅"><span class="k">畫廊<i>Galerie</i></span><b>${g}</b><span class="u">${g ? "幅" : "牆上還沒有畫"}</span></a></nav>
+    ${rows.length ? `<div class="sec-head"><h2>收進來的</h2><span class="de">Gesammelt</span><span class="note">${rows.length} 篇</span></div><ol class="svl">${rows.map(row).join("")}</ol>`
+      : `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。<br><a href="#/random">或者先隨手翻一篇 →</a></p>`}</div>`;
 }
 
 // ——— 劃線本 (Anstreichungen): every pencil line this phone holds, by article, the one marked most recently first ———
@@ -1090,10 +1099,10 @@ function viewMarks() {
   const all = allMarks(), groups = new Map();
   for (const m of all) groups.set(m.key, [...(groups.get(m.key) || []), m]);
   const last = (ms) => ms[ms.length - 1].at || "";
-  const rows = [...groups].sort(([, a], [, b]) => last(b).localeCompare(last(a))).map(([key, ms]) => {
+  const rows = [...groups].sort(([, a], [, b]) => last(b).localeCompare(last(a))).map(([key, ms], i) => {
     const [date, c] = key.split("/");
     const a = issueBy(date)?.articles.find((x) => x.column === c);
-    return `<a class="mk-head" href="#/a/${esc(key)}"><span class="k">${esc(col(c, date).name)}</span><b>${esc(a?.title || key)}</b>${/^\d{4}-\d{2}-\d{2}$/.test(date) ? `<span class="d">${esc(fmtDate(date, "short"))}</span>` : ""}</a>
+    return `<a class="mk-head" href="#/a/${esc(key)}" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span><span class="t"><span class="m"><span class="k">${esc(col(c, date).name)}</span>${/^\d{4}-\d{2}-\d{2}$/.test(date) ? `<span class="d">${esc(fmtDate(date, "short"))}</span>` : ""}</span><b>${esc(a?.title || key)}</b></span></a>
       ${ms.map((m) => `<div class="mk"><a class="q" href="#/a/${esc(key)}" data-mark="${esc(m.id)}"><mark class="pencil">${esc(m.text)}</mark></a><button class="icon-btn x" type="button" data-del="${esc(m.id)}" aria-label="移除劃線">✕</button></div>`).join("")}`;
   }).join("");
   main.innerHTML = `<div class="wrap marks"><header class="page-title"><h1>劃線本</h1><span class="de">Anstreichungen</span></header>
@@ -1198,34 +1207,44 @@ function viewPress() {
 // work of art — hung newest first as a wall of framed plates (style.css .wall). A tile is a card: its picture morphs into
 // the article's opening picture (boot's click listener takes it for lastTapped), and the way back morphs it home.
 const GALLERY_COLS = new Set(["artwork", "architecture", "art", "photo"]);
-const GALLERY_F = [["all", "全部"], ["work", "作品"], ["site", "古蹟"], ["other", "其他"]];
+const GALLERY_F = [["all", "全部", "Alle"], ["work", "作品", "Werke"], ["site", "古蹟", "Bauten"], ["other", "其他", "Übriges"]];
 const galleryKind = (c) => (c === "artwork" || c === "art" ? "work" : c === "architecture" ? "site" : "other");
 // Every published article with a picture for the wall; viewSaved counts them for its entrance.
 const galleryItems = () => publishedIssues().flatMap((i) => i.articles.filter((a) => a.hero?.src && (GALLERY_COLS.has(a.column) || a.hero.kind === "artwork")).map((a) => ({ date: i.date, a })));
 function viewGallery() {
   const all = galleryItems();
-  // The thumb when there is one, as the cards; width and height so the wall keeps its shape while the pictures arrive.
-  const tile = ({ date, a }) => {
+  // Set like a lookbook: every plate numbered, the column and day in spaced small type above the title, the year in
+  // italic; the newest hangs alone across the page as the lead, with its dek. The thumb when there is one, as the cards;
+  // width and height so the wall keeps its shape while the pictures arrive. --i staggers the entrance (style.css).
+  const tile = ({ date, a }, i, lead = false) => {
     const h = a.hero, size = h.width > 0 && h.height > 0 ? ` width="${Number(h.width)}" height="${Number(h.height)}"` : "";
-    return `<a class="tile" href="#/a/${date}/${a.column}"><span class="mat"><img src="${esc(h.thumb || h.src)}" alt="${esc(h.alt || "")}"${size} loading="lazy" decoding="async" referrerpolicy="no-referrer"></span>
-      <span class="lbl"><b>${esc(a.title)}</b><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">・${esc(fmtDate(date, "short"))}</span></span>${h.made ? `<i>${esc(String(h.made))}</i>` : ""}</span></a>`;
+    return `<a class="tile${lead ? " lead" : ""}" href="#/a/${date}/${a.column}" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
+      <span class="mat"><img src="${esc(h.thumb || h.src)}" alt="${esc(h.alt || "")}"${size} loading="${lead ? "eager" : "lazy"}" decoding="async" referrerpolicy="no-referrer"></span>
+      <span class="lbl"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span></span><b>${esc(a.title)}</b>${lead && a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}${h.made ? `<i>${esc(String(h.made))}</i>` : ""}</span></a>`;
   };
   main.innerHTML = `<div class="wrap gallery"><header class="page-title"><h1>畫廊</h1><span class="de">Galerie</span></header>
     <p class="col-note">走進一件作品、推開一座古蹟的門，和往期畫作的頭圖，掛成一面牆。點一張，回到那篇文章。</p>
-    <nav class="chips" aria-label="分類"></nav><div class="wall"></div></div>`;
+    <nav class="gtabs" aria-label="分類"></nav><div class="wall"></div></div>`;
   const draw = (f) => {
     const rows = f === "all" ? all : all.filter((x) => galleryKind(x.a.column) === f);
-    main.querySelector(".chips").innerHTML = GALLERY_F.map(([k, label]) => `<button type="button" class="chip" data-f="${k}" aria-pressed="${k === f}">${label}</button>`).join("");
-    main.querySelector(".wall").innerHTML = rows.map(tile).join("") || `<p class="empty">牆上還沒有畫。</p>`;
+    main.querySelector(".gtabs").innerHTML = GALLERY_F.map(([k, label, de]) => `<button type="button" class="gt" data-f="${k}" aria-pressed="${k === f}">${label}<i>${de}</i></button>`).join("");
+    // The plates are dealt into the columns in turn (not flowed down one column, then the next), so the numbers read
+    // across the wall like a catalogue; two columns, three from 700px.
+    const [first, ...rest] = rows, n = wide.matches ? 3 : 2, cols = Array.from({ length: n }, () => []);
+    rest.forEach((x, i) => cols[i % n].push(tile(x, i + 1)));
+    main.querySelector(".wall").innerHTML = first ? `${tile(first, 0, true)}<div class="cols">${cols.map((c) => `<div class="col">${c.join("")}</div>`).join("")}</div>` : `<p class="empty">牆上還沒有畫。</p>`;
   };
+  const wide = matchMedia("(min-width: 700px)");
   const kept = GALLERY_F.some(([k]) => k === store.get("gallery.f")) ? store.get("gallery.f") : "all";
   draw(kept);
-  main.querySelector(".chips").addEventListener("click", (e) => {
+  const onWide = () => { if (main.querySelector(".gallery")) draw(store.get("gallery.f") || "all"); else wide.removeEventListener("change", onWide); };
+  wide.addEventListener("change", onWide);
+  main.querySelector(".gtabs").addEventListener("click", (e) => {
     const b = e.target.closest("button[data-f]");
     if (!b) return;
     store.set("gallery.f", b.dataset.f);
     draw(b.dataset.f);
-    main.querySelector(`.chips [data-f="${b.dataset.f}"]`)?.focus();
+    main.querySelector(`.gtabs [data-f="${b.dataset.f}"]`)?.focus();
   });
   document.title = `畫廊｜${S.cfg.title}`;
 }
@@ -1322,10 +1341,6 @@ function viewSettings() {
     <section class="set"><h2>字級</h2><div class="seg" data-g="fs">${FS.map((v, i) => `<button type="button" data-v="${v}" aria-pressed="${v === fs}">${["小", "標準", "大", "特大"][i]}</button>`).join("")}</div></section>
     <section class="set"><h2>閱讀方式</h2><div class="seg" data-g="lock">${[["free", "自由閱讀"], ["seq", "循序閱讀"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${(v === "seq") === lockMode()}">${l}</button>`).join("")}</div>
       <p class="small">循序閱讀：每一期照首頁的順序，一次只開一篇；讀到文末、而且讀夠這篇預估時間的一半，下一篇才解鎖；中途離開，讀過的時間會留著，回來接著算。還沒解鎖的只顯示標題，摘要先藏起來，全部讀完才算讀完今天。之前讀過的照樣算數。</p></section>
-    <section class="set"><h2>閱讀年鑑</h2><p>這支手機上的閱讀紀錄：讀完幾篇、連著幾天、哪一欄讀得最勤，畫成一頁日曆。紀錄只存在這支手機，離線也能看。</p>
-      <div class="btns"><a class="btn ghost" href="#/stats">打開閱讀年鑑</a></div></section>
-    <section class="set"><h2>劃線本</h2><p>讀文章時選一段字，按「劃線」，字下就留一道鉛筆線；劃過的句子都收在劃線本，點一句就回到文章裡那個位置。劃線只存在這支手機，離線也能看。</p>
-      <div class="btns"><a class="btn ghost" href="#/marks">打開劃線本</a></div></section>
     <section class="set"><h2>印務室</h2><p>給社長看的：今晨五班的報到、補位與缺稿、備稿庫存、最近兩週的出勤。</p>
       <div class="btns"><a class="btn ghost" href="#/press">打開印務室</a></div></section>
     <section class="set"><h2>外觀</h2><div class="seg" data-g="theme">${[["auto", "跟隨系統"], ["light", "日間"], ["dark", "夜間"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${v === theme}">${l}</button>`).join("")}</div></section>

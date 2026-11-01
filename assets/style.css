@@ -1203,13 +1203,49 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .mark-pill.on { opacity: 1; }
 .mark-pill svg { width: 16px; height: 16px; color: var(--gold-ink); }
 /* #/marks: a head per article (kicker, title, day) and under it each line as a quotation, the pencil under it still. */
-.marks .mk-head { display: flex; align-items: baseline; gap: 10px; margin: 26px 0 2px; padding-bottom: 6px; border-bottom: 1px solid var(--ink); text-decoration: none; }
-.marks .mk-head .k { flex: 0 0 auto; font-family: var(--sans); font-size: 12px; letter-spacing: .14em; color: var(--gold-ink); font-weight: 600; }
-.marks .mk-head b { min-width: 0; font-size: 16px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.marks .mk-head .d { flex: 0 0 auto; margin-left: auto; font-family: var(--sans); font-size: 12px; color: var(--muted); letter-spacing: .03em; }
-.marks .mk { display: flex; align-items: flex-start; gap: 4px; padding: 9px 0; border-bottom: 1px solid var(--rule); }
-.marks .mk .q { flex: 1; min-width: 0; text-decoration: none; font-size: 16px; line-height: 1.9; color: var(--ink-2); padding-left: .9em; border-left: 2px solid var(--rule); }
+/* Set like the gallery (a lookbook): each article a numbered plate — the number in Cormorant, the column and the day in
+   spaced small type above the title — and under it the sentences, each on its own line with its pencil mark, a gold
+   dash leading in. */
+.marks .mk-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0 12px; align-items: start; margin: 28px 0 2px; padding-bottom: 8px; border-bottom: 1px solid var(--ink); text-decoration: none; color: inherit; }
+.marks .mk-head .no { font-family: var(--latin); font-size: 17px; font-weight: 600; letter-spacing: .06em; color: var(--gold-ink); padding-top: 2px; font-variant-numeric: lining-nums tabular-nums; }
+.marks .mk-head .m { display: flex; gap: 8px; font-family: var(--sans); font-size: 10.5px; letter-spacing: .14em; line-height: 1.5; color: var(--gold-ink); white-space: nowrap; }
+.marks .mk-head .k { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.marks .mk-head .d { flex: 0 0 auto; color: var(--muted); }
+.marks .mk-head b { display: block; margin-top: 3px; font-size: 16.5px; line-height: 1.45; font-weight: 600; }
+.marks .mk { display: flex; align-items: flex-start; gap: 4px; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.marks .mk .q { flex: 1; min-width: 0; text-decoration: none; font-size: 16px; line-height: 1.9; color: var(--ink-2); padding-left: 1.3em; text-indent: -1.3em; }
+.marks .mk .q::before { content: "— "; font-family: var(--latin); color: var(--gold); }
 .marks .mk .x { flex: 0 0 auto; width: 32px; height: 32px; margin: -2px -8px 0 0; color: var(--muted); font-size: 14px; }
+
+/* ——— 收藏 (Sammlung; app.js viewSaved): two shelves up top — 劃線本 and 畫廊, the places entered from here, each with its
+   count large in Cormorant and a gold rule along the top — then the saved articles as numbered rows in the lookbook's
+   manner: the column and the day in spaced small type, the title, the dek, the picture a square at the right. ——— */
+.shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 18px 0 8px; }
+.sh { position: relative; display: grid; gap: 2px; padding: 13px 14px 12px; border: 1px solid var(--rule); border-top: 1px solid var(--gold); text-decoration: none; color: inherit; }
+.sh .k { display: grid; font-family: var(--sans); font-size: 12px; letter-spacing: .14em; color: var(--gold-ink); font-weight: 600; }
+.sh .k i { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 13px; color: var(--gold); }
+.sh b { margin-top: 12px; font-family: var(--latin); font-size: 38px; line-height: 1; font-weight: 600; font-variant-numeric: lining-nums tabular-nums; }
+.sh .u { font-family: var(--sans); font-size: 11.5px; letter-spacing: .06em; color: var(--muted); }
+.sh::after { content: "›"; position: absolute; right: 13px; bottom: 9px; font-family: var(--latin); font-size: 22px; line-height: 1; color: var(--gold); }
+.sh:active { border-color: var(--gold); }
+.sammlung .sec-head { margin-top: 26px; }
+.svl { list-style: none; margin: 4px 0 0; padding: 0; }
+.sv { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 0 12px; align-items: start; padding: 14px 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; }
+.sv .no { font-family: var(--latin); font-size: 15px; font-weight: 600; letter-spacing: .06em; color: var(--gold-ink); padding-top: 3px; font-variant-numeric: lining-nums tabular-nums; }
+.sv .t { min-width: 0; }
+.sv .m { display: flex; gap: 8px; font-family: var(--sans); font-size: 10.5px; letter-spacing: .14em; line-height: 1.5; color: var(--gold-ink); white-space: nowrap; }
+.sv .m .k { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.sv .m .d { flex: 0 0 auto; color: var(--muted); }
+.sv .m .tick { flex: 0 0 auto; color: var(--gold); letter-spacing: 0; }
+.sv b { display: block; margin-top: 3px; font-size: 16.5px; line-height: 1.45; font-weight: 600; }
+.sv .dek { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; margin-top: 4px; font-size: 13.5px; line-height: 1.65; color: var(--muted); }
+.sv .th { display: block; width: 72px; height: 72px; overflow: hidden; border-bottom: 1px solid var(--gold-soft); background: var(--paper-3); }
+.sv .th img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.sv.read b { color: var(--ink-2); font-weight: 500; }
+.sv:active .th { border-bottom-color: var(--gold); }
+@media (prefers-reduced-motion: no-preference) {
+  :is(.sh, .sv, .marks .mk-head) { animation: page-in .6s both; animation-delay: calc(min(var(--i, 0), 8) * 45ms); }
+}
 
 /* ——— 印務室 (Druckerei; assets/press.js, app.js viewPress): the owner's press room ——— */
 .press .col-note { margin-top: 4px; }
@@ -1259,26 +1295,47 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .press .audit { font-family: var(--sans); font-size: 13.5px; line-height: 1.7; color: var(--ink-2); margin: 8px 0 24px; }
 
 /* ——— 畫廊 (Galerie; app.js viewGallery): the opening pictures of the art, architecture and photo columns, hung as a wall ——— */
-/* Two columns of plates on a phone, three from 700px; a tile never breaks across them. Each picture sits whole in a thin
-   gilt frame round a 6px mat — the copperplate's frame (figure.hero.plate) at rest, nothing of it moving — with its
-   label in small type under it: the title on at most two lines, the column and the day, and the year the work was made
-   in Cormorant. At night the mat is a shade lighter than the page, so the frame reads as a frame. */
+/* Set like a lookbook. A row of tabs with a gold underline under the one chosen and its German in italic; the newest
+   picture alone across the page as the lead — numbered, titled large, its dek under it, a hairline closing the plate;
+   the rest in two columns (three from 700px), each plate numbered in Cormorant at its corner, the column and the day
+   in spaced small sans above the title, the year the work was made in italic. No frames: a hairline under each picture
+   and the paper itself do the hanging. A tap turns the hairline gold and the picture leans in a touch; the plates enter
+   one after another — neither under reduced motion. */
 .gallery .col-note { margin-top: 4px; }
-.wall { columns: 2; column-gap: 14px; margin: 14px 0 10px; }
-@media (min-width: 700px) { .wall { columns: 3; column-gap: 18px; } }
-.wall > .empty { column-span: all; }
-.tile { display: block; break-inside: avoid; margin: 0 0 18px; color: inherit; text-decoration: none; }
-.tile .mat { display: block; padding: 6px; border: 1px solid var(--gold-soft); background: var(--paper); }
-.tile img { display: block; width: 100%; height: auto; background: var(--paper-3); }
-.tile .lbl { display: grid; gap: 2px; padding: 7px 2px 0; }
-.tile b { font-size: 13.5px; line-height: 1.5; font-weight: 600; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
-.tile .m { display: flex; font-family: var(--sans); font-size: 11px; letter-spacing: .03em; line-height: 1.5; color: var(--muted); white-space: nowrap; }
+.gtabs { display: flex; gap: 22px; margin: 18px 0 0; border-bottom: 1px solid var(--rule); overflow-x: auto; scrollbar-width: none; }
+.gtabs::-webkit-scrollbar { display: none; }
+.gt { flex: none; display: grid; justify-items: start; gap: 1px; padding: 6px 0 9px; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; background: none; color: var(--muted); font-family: var(--sans); font-size: 13px; letter-spacing: .14em; cursor: pointer; }
+.gt i { font-family: var(--latin); font-style: italic; font-size: 12.5px; letter-spacing: .02em; color: var(--gold); opacity: .7; }
+.gt[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--gold); }
+.gt[aria-pressed="true"] i { opacity: 1; }
+.wall { margin: 22px 0 10px; }
+.wall > .empty { margin-top: 18px; }
+.tile { position: relative; display: block; color: inherit; text-decoration: none; break-inside: avoid; margin: 0 0 26px; }
+.tile .no { position: absolute; top: 7px; left: 9px; z-index: 1; font-family: var(--latin); font-size: 13px; font-weight: 600; letter-spacing: .06em; color: #fff; text-shadow: 0 0 8px rgba(0,0,0,.55), 0 1px 2px rgba(0,0,0,.4); font-variant-numeric: lining-nums tabular-nums; }
+.tile .mat { display: block; overflow: hidden; border-bottom: 1px solid var(--gold-soft); background: var(--paper-3); }
+.tile img { display: block; width: 100%; height: auto; }
+.tile .lbl { display: grid; gap: 3px; padding: 9px 0 0; }
+.tile .m { display: flex; gap: 8px; font-family: var(--sans); font-size: 10.5px; letter-spacing: .14em; line-height: 1.5; color: var(--gold-ink); white-space: nowrap; }
 .tile .k { min-width: 0; overflow: hidden; text-overflow: ellipsis; } /* a long column name gives way; the day stays whole */
-.tile .d { flex: 0 0 auto; }
-.tile .lbl i { font-family: var(--latin); font-style: italic; font-size: 13.5px; line-height: 1.3; color: var(--gold-ink); }
-.tile:active .mat { border-color: var(--gold); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tile .mat { background: var(--paper-2); } }
-:root[data-theme="dark"] .tile .mat { background: var(--paper-2); }
+.tile .d { flex: 0 0 auto; color: var(--muted); }
+.tile b { font-size: 14px; line-height: 1.5; font-weight: 600; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+.tile .lbl i { font-family: var(--latin); font-style: italic; font-size: 13.5px; line-height: 1.3; color: var(--muted); }
+.tile:active .mat { border-bottom-color: var(--gold); }
+.tile.lead { margin: 0 0 30px; padding-bottom: 22px; border-bottom: 1px solid var(--rule); }
+.tile.lead .no { top: 11px; left: 13px; font-size: 15px; }
+.tile.lead .lbl { padding-top: 14px; gap: 6px; }
+.tile.lead .m { font-size: 11.5px; }
+.tile.lead b { font-size: 22px; line-height: 1.35; font-weight: 700; letter-spacing: .01em; -webkit-line-clamp: 3; line-clamp: 3; }
+.tile.lead .dek { font-size: 14.5px; line-height: 1.7; color: var(--muted); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+.tile.lead .lbl i { font-size: 15px; }
+.cols { display: flex; gap: 16px; align-items: flex-start; }
+.cols .col { flex: 1 1 0; min-width: 0; }
+@media (min-width: 700px) { .cols { gap: 22px; } }
+@media (prefers-reduced-motion: no-preference) {
+  .tile img { transition: transform .5s cubic-bezier(.2,.7,.2,1); transform-origin: 50% 60%; }
+  .tile:active img { transform: scale(1.025); }
+  .tile { animation: page-in .6s both; animation-delay: calc(min(var(--i, 0), 8) * 45ms); }
+}
 
 /* 加入行事曆 (app.js calBtn, assets/ics.js): the small ghost button at the end of a show's row and on the next-fixture card,
    in the gold of the ticket link beside it. */
