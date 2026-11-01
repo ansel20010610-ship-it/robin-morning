@@ -7,7 +7,6 @@ import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 import { renderPush, clearNotices } from "./notify.js";
 import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pressRun, ripples, flip } from "./motion.js";
-import { clipCard } from "./clip.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -484,7 +483,6 @@ async function viewArticle(date, column, my) {
       ${canSpeak() ? `<button class="icon-btn" type="button" data-speak aria-pressed="false" aria-label="朗讀本文">${ICON.speak}</button>` : ""}
       <button class="icon-btn" type="button" data-fs aria-label="調整字級">${ICON.text}</button>
       <button class="icon-btn" type="button" data-save aria-pressed="${isSaved(key)}" aria-label="收藏">${isSaved(key) ? ICON.starOn : ICON.star}</button>
-      <button class="icon-btn" type="button" data-clip aria-label="分享剪報">${ICON.share}</button>
     </div><div class="progress"></div></div>
     <article class="wrap"><div class="read">
       <header class="article-head">${kicker(column, true, date)}<h1>${esc(a.title)}</h1>
@@ -501,7 +499,7 @@ async function viewArticle(date, column, my) {
       <div class="body"></div>
       ${a.sources?.length ? `<section class="sources"><h2>來源與閱讀範圍</h2><ol>${a.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}${s.publisher ? `，${esc(s.publisher)}` : ""}${s.date ? `，${esc(s.date)}` : ""}${s.note ? ` <span>— ${inline(s.note)}</span>` : ""}</li>`).join("")}</ol>${(a.body || []).some((b) => b.type === "quote" && b.original) ? `<p class="small">外文引文未註明譯者的，都是本報自譯。</p>` : ""}</section>` : ""}
       <div class="unlock" hidden></div>
-      <div class="share"><button class="btn ghost" type="button" data-clip>${ICON.share}分享這篇</button></div>
+      ${"share" in navigator ? `<div class="share"><button class="btn ghost" type="button" data-share>${ICON.share}分享這篇</button></div>` : ""}
       <div class="next"></div>
     </div></article>
     <button class="resume" type="button" hidden>從上次讀到的地方繼續</button>`;
@@ -569,7 +567,9 @@ async function viewArticle(date, column, my) {
     toast(on ? "已收藏" : "已取消收藏");
   };
   main.querySelector("[data-fs]").onclick = cycleFont;
-  main.querySelectorAll("[data-clip]").forEach((b) => b.addEventListener("click", () => openClip(a, date, column, issue)));
+  main.querySelector("[data-share]")?.addEventListener("click", () => {
+    navigator.share({ title: a.title, text: a.dek, url: location.href.replace(/\?[^#]*/, "") }).catch(() => {});
+  });
 
   // 翻頁: a sideways swipe on the page turns to the issue's next or previous article (turnTo). The page follows the
   // finger a little and lifts off the paper (.lifting, style.css); let go past 70px and it turns, short of that it
@@ -781,42 +781,6 @@ function openContents(date, order, idx) {
   sheet.showModal();
   const box = sheet.firstElementChild, now = box.querySelector(".opt.now");
   if (now) box.scrollTop = Math.max(0, now.getBoundingClientRect().top - box.getBoundingClientRect().top - (box.clientHeight - now.offsetHeight) / 2);
-}
-
-// 剪報 (Ausschnitt, clip.js clipCard): the article as a picture, shown in a sheet before it goes anywhere. 分享圖片 hands
-// the PNG to the system share sheet (Photos, LINE) where files can be shared, else saves it; 只分享連結 is the plain
-// share of the address, for a phone of one's own. The card is drawn once per opening and let go with the sheet.
-async function openClip(a, date, column, issue) {
-  const sheet = $("#sheet");
-  if (!sheet) return;
-  const k = col(column, date), name = `robin-${date}-${column}.png`;
-  sheet.innerHTML = `<div class="sheet clip"><h2>剪報<span class="de">Ausschnitt</span></h2><p class="sub">一張可以存進照片、傳給朋友的圖：標題與帶得走的重點，不帶連結（這份報紙只有你打得開）。</p>
-    <figure class="clip-pre"><p class="loading">正在排版剪報……</p></figure>
-    <div class="btns"><button class="btn" type="button" data-clip-share disabled>${ICON.share}分享圖片</button>${"share" in navigator ? `<button class="btn ghost" type="button" data-clip-link>只分享連結</button>` : ""}<button class="btn ghost" type="button" data-close>關閉</button></div></div>`;
-  sheet.querySelector("[data-close]").onclick = () => sheet.close();
-  sheet.querySelector("[data-clip-link]")?.addEventListener("click", () => {
-    navigator.share({ title: a.title, text: a.dek, url: location.href.replace(/\?[^#]*/, "") }).catch(() => {});
-  });
-  sheet.onclick = (e) => { if (e.target === sheet) sheet.close(); };
-  let url = null;
-  sheet.addEventListener("close", () => { sheet.onclick = null; if (url) URL.revokeObjectURL(url); }, { once: true }); // the other sheets share the dialog
-  sheet.showModal();
-  let blob;
-  try { blob = await clipCard(a, { date, no: issue?.no, column: { name: k.name, latin: k.latin || "" } }); }
-  catch (e) { console.warn("clip failed", e); if (sheet.open) sheet.querySelector(".clip-pre").innerHTML = `<p class="loading">剪報沒排好，再試一次。</p>`; return; }
-  if (!sheet.open || !sheet.querySelector(".clip")) return; // closed, or another sheet took the dialog meanwhile
-  url = URL.createObjectURL(blob);
-  sheet.querySelector(".clip-pre").innerHTML = `<img src="${url}" alt="剪報：${esc(a.title)}" width="1080" height="1350">`;
-  const share = sheet.querySelector("[data-clip-share]");
-  share.disabled = false;
-  share.onclick = async () => {
-    const file = new File([blob], name, { type: "image/png" });
-    if (navigator.canShare?.({ files: [file] })) { await navigator.share({ files: [file], title: a.title }).catch(() => {}); return; }
-    const dl = document.createElement("a"); // no file sharing here (a desktop browser): the PNG is saved instead
-    dl.href = url; dl.download = name; dl.rel = "noopener";
-    document.body.append(dl); dl.click(); dl.remove();
-    setTimeout(() => { sheet.close(); toast("剪報已存下"); }, 400); // the sheet (and its blob URL) go once the save has started
-  };
 }
 
 // A short contents list for long articles (four or more section headings).
