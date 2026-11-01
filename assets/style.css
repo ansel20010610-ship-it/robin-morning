@@ -189,6 +189,17 @@ button { font: inherit; color: inherit; }
 .topbar .title .art { opacity: 0; translate: 0 7px; font-family: var(--serif); font-size: 14.5px; font-weight: 600; letter-spacing: .02em; color: var(--ink); }
 .topbar.past .title .col { opacity: 0; translate: 0 -7px; }
 .topbar.past .title .art { opacity: 1; translate: 0 0; }
+/* In an article the title is a button that raises the contents sheet (app.js openContents); after the column's name
+   comes the page's place in the issue in Roman numerals, set like the paper's German — Cormorant italic, gold. */
+.topbar button.title { -webkit-appearance: none; appearance: none; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; align-self: stretch; align-content: center; }
+.topbar .title .pg { font-family: var(--latin); font-style: italic; font-size: 15px; letter-spacing: .04em; color: var(--gold-ink); margin-left: 1px; }
+/* 翻頁 (app.js viewArticle): the page follows a sideways swipe a little and lifts off the paper beneath — a hairline and
+   a soft shadow along its trailing edge — then turns (motion.js transition dir) or settles back. pan-y leaves the
+   scroll to the browser and hands sideways movement to the page; a table's own .scroll still scrolls on its own. */
+article.wrap { touch-action: pan-y pinch-zoom; transition: translate .3s cubic-bezier(.2,.7,.2,1); }
+article.wrap.lifting { transition: none; }
+article.wrap.lifting.to-l { box-shadow: 1px 0 0 var(--rule), 14px 0 24px -14px rgba(0, 0, 0, .35); }
+article.wrap.lifting.to-r { box-shadow: -1px 0 0 var(--rule), -14px 0 24px -14px rgba(0, 0, 0, .35); }
 .icon-btn { background: none; border: 0; width: 40px; height: 40px; display: grid; place-items: center; cursor: pointer; border-radius: 2px; color: var(--ink); }
 .icon-btn svg { width: 22px; height: 22px; }
 .icon-btn[aria-pressed="true"] { color: var(--gold); }
@@ -477,6 +488,22 @@ dialog.bottom { margin: auto auto 0; }
 .sheet .sub { font-family: var(--sans); font-size: 13px; color: var(--muted); margin: 0 0 12px; line-height: 1.6; }
 .sheet .opt { display: flex; width: 100%; text-align: left; gap: 10px; align-items: center; padding: 12px 4px; border: 0; border-bottom: 1px solid var(--rule); background: none; cursor: pointer; font-size: 16px; }
 .sheet .opt small { font-family: var(--sans); color: var(--muted); font-size: 12px; margin-left: auto; }
+/* 本期目錄 (app.js openContents): numeral, column and title, minutes or a gold tick; the article open has a gold bar. */
+.sheet h2 .de { font-family: var(--latin); font-style: italic; font-weight: 500; font-size: 17px; letter-spacing: .02em; color: var(--gold); margin-left: 8px; }
+.sheet .list { list-style: none; margin: 0; padding: 0; }
+.sheet a.opt { text-decoration: none; }
+.sheet.contents .opt { align-items: flex-start; padding: 11px 6px 12px; }
+.sheet.contents .opt .n { flex: 0 0 2.1em; font-family: var(--latin); font-style: italic; font-size: 17px; line-height: 1.45; color: var(--gold-ink); }
+.sheet.contents .opt .t { flex: 1; min-width: 0; display: grid; gap: 1px; }
+.sheet.contents .opt .k { font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--muted); }
+.sheet.contents .opt b { font-weight: 600; font-size: 15.5px; line-height: 1.5; }
+.sheet.contents .opt .sum { flex: 0 0 auto; font-family: var(--sans); font-size: 12.5px; color: var(--muted); padding-top: 15px; }
+.sheet.contents .opt .tick { font-size: 16px; font-weight: 600; color: var(--gold-ink); padding-top: 13px; }
+.sheet.contents .opt.now { box-shadow: inset 3px 0 0 var(--gold); padding-left: 14px; }
+.sheet.contents .opt.now .k { color: var(--gold-ink); }
+.sheet.contents .opt.locked { color: var(--muted); cursor: default; }
+.sheet.contents .opt.locked b { font-weight: 500; }
+.sheet.contents .opt .lock-note { margin-top: 3px !important; }
 .viewer { width: 100vw; height: 100vh; background: rgba(12, 10, 7, .96); color: #eee; display: flex; flex-direction: column; }
 .viewer .vi { flex: 1; overflow: auto; display: flex; align-items: center; justify-content: center; touch-action: pinch-zoom pan-x pan-y; }
 .viewer img { max-width: 100%; max-height: 100%; object-fit: contain; }
@@ -850,6 +877,22 @@ img.img-off { visibility: hidden; }
   html.theme-vt::view-transition-old(root) { animation: none; z-index: 0; }
   html.theme-vt::view-transition-new(root) { animation: theme-in .65s cubic-bezier(.4,0,.2,1) both; z-index: 1; }
   @keyframes theme-in { from { clip-path: circle(0 at var(--vx, 50%) var(--vy, 50%)); } to { clip-path: circle(150vmax at var(--vx, 50%) var(--vy, 50%)); } }
+  /* 翻頁: a page turned within the issue (motion.js transition dir) slides off to one side as the next comes in from the
+     other, the new page over the old and no blend between them; the bottom bar has its own name and stays put. */
+  html.turn-left::view-transition-old(root), html.turn-right::view-transition-old(root) { mix-blend-mode: normal; z-index: 0; animation: .34s cubic-bezier(.2,.7,.2,1) both; }
+  html.turn-left::view-transition-new(root), html.turn-right::view-transition-new(root) { mix-blend-mode: normal; z-index: 1; animation: .34s cubic-bezier(.2,.7,.2,1) both; box-shadow: -1px 0 0 var(--rule), -14px 0 28px -14px rgba(0, 0, 0, .4); }
+  html.turn-right::view-transition-new(root) { box-shadow: 1px 0 0 var(--rule), 14px 0 28px -14px rgba(0, 0, 0, .4); }
+  html.turn-left::view-transition-old(root) { animation-name: turn-out-l; }
+  html.turn-left::view-transition-new(root) { animation-name: turn-in-r; }
+  html.turn-right::view-transition-old(root) { animation-name: turn-out-r; }
+  html.turn-right::view-transition-new(root) { animation-name: turn-in-l; }
+  @keyframes turn-out-l { to { transform: translateX(-28%); opacity: 0; } }
+  @keyframes turn-out-r { to { transform: translateX(28%); opacity: 0; } }
+  @keyframes turn-in-r { from { transform: translateX(100%); } }
+  @keyframes turn-in-l { from { transform: translateX(-100%); } }
+  /* A sheet (本期目錄, the Spotify lists) rises a little as it opens. */
+  dialog.bottom[open] > .sheet { animation: sheet-up .3s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes sheet-up { from { translate: 0 18px; opacity: 0; } }
 }
 @media print { .rv { opacity: 1 !important; transform: none !important; } .digest { position: static; } }
 

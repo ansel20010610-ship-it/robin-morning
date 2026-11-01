@@ -30,10 +30,14 @@ export const plate = (el) => el?.closest("figure.hero")?.classList.add("plate");
 // Page changes cross-fade, and a card's picture grows into the article's opening picture (View Transitions; iOS 18+).
 // `from`/`to` name the two boxes that are one and the same (a card's image, the article picture's frame — the frame,
 // not the image, because a capture is never clipped by its ancestors and the plated image is cut larger than its
-// frame); `update` draws the new page.
-export async function transition(update, { from = null, to = null } = {}) {
+// frame); `update` draws the new page. `dir` ("left" | "right") is a page turned within the issue (app.js swipe, the
+// contents sheet): the old page slides off that way and the new one slides in behind it (style.css html.turn-*)
+// instead of the cross-fade; the class is on <html> only for the length of the transition.
+export async function transition(update, { from = null, to = null, dir = null } = {}) {
   if (calm() || !document.startViewTransition) { await update(); plate(to?.()); return; }
+  const root = document.documentElement;
   if (from) from.style.viewTransitionName = "hero";
+  if (dir) root.classList.add(`turn-${dir}`);
   const vt = document.startViewTransition(async () => {
     if (from) from.style.viewTransitionName = "";
     await update();
@@ -41,7 +45,11 @@ export async function transition(update, { from = null, to = null } = {}) {
     if (el) el.style.viewTransitionName = "hero";
   });
   vt.ready.catch(() => {}); // a transition cut short by the next tap is skipped; that is fine
-  vt.finished.catch(() => {}).finally(() => { const el = to?.(); if (el) { el.style.viewTransitionName = ""; plate(el); } });
+  vt.finished.catch(() => {}).finally(() => {
+    if (dir) root.classList.remove("turn-left", "turn-right");
+    const el = to?.();
+    if (el) { el.style.viewTransitionName = ""; plate(el); }
+  });
   return vt.updateCallbackDone.catch(() => {});
 }
 

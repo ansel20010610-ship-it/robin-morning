@@ -461,10 +461,16 @@ async function viewArticle(date, column, my) {
   const k = col(column, date);
   const issue = issueBy(date);
   const minutes = issue?.articles.find((x) => x.column === column)?.minutes;
+  // 本期翻閱: this article's place in its issue (the front page's order) — for the top bar's numeral, the swipe to the
+  // next or previous page (turnTo) and the contents sheet (openContents). Its neighbours are fetched now, so a turn
+  // of the page lands on an article already in memory and gets its slide.
+  const order = issue ? sortArticles(issue.articles, date) : [], idx = order.findIndex((x) => x.column === column);
+  [order[idx - 1], order[idx + 1]].forEach((n) => { if (n) article(date, n.column).catch(() => {}); });
+  const titleIn = `<span class="col">${esc(k.name)}${idx >= 0 ? `<i class="pg">・${roman(idx + 1)}／${roman(order.length)}</i>` : ""}</span><span class="art">${esc(a.title)}</span>`;
   main.innerHTML = `
     <div class="topbar"><div class="in">
       <a class="icon-btn" data-back href="${fromList || (issue && date !== publishedIssues()[0]?.date ? `#/issue/${date}` : "#/")}" aria-label="${fromList ? "返回" : "回到本期"}">${ICON.back}</a>
-      <div class="title"><span class="col">${esc(k.name)}</span><span class="art">${esc(a.title)}</span></div>
+      ${idx >= 0 ? `<button class="title" type="button" data-contents aria-label="本期目錄：${esc(k.name)}，第 ${idx + 1} 篇，共 ${order.length} 篇">${titleIn}</button>` : `<div class="title">${titleIn}</div>`}
       ${canSpeak() ? `<button class="icon-btn" type="button" data-speak aria-pressed="false" aria-label="朗讀本文">${ICON.speak}</button>` : ""}
       <button class="icon-btn" type="button" data-fs aria-label="調整字級">${ICON.text}</button>
       <button class="icon-btn" type="button" data-save aria-pressed="${isSaved(key)}" aria-label="收藏">${isSaved(key) ? ICON.starOn : ICON.star}</button>
@@ -555,6 +561,47 @@ async function viewArticle(date, column, my) {
   main.querySelector("[data-share]")?.addEventListener("click", () => {
     navigator.share({ title: a.title, text: a.dek, url: location.href.replace(/\?[^#]*/, "") }).catch(() => {});
   });
+
+  // 翻頁: a sideways swipe on the page turns to the issue's next or previous article (turnTo). The page follows the
+  // finger a little and lifts off the paper (.lifting, style.css); let go past 70px and it turns, short of that it
+  // settles back. Not taken over: a start within 28px of either edge (Safari's own back and forward), anything that
+  // moves sideways by itself (a table's .scroll, the pitch, a picture's frame, the music card, a form field), the
+  // mouse (which selects text), or a movement more down than across — article { touch-action: pan-y } leaves the
+  // scroll to the browser, which then cancels the pointer. Once the page is held, the swipe is not a tap: the click
+  // it would end in is swallowed. With reduced motion the swipe still turns the page; it just does not follow.
+  const page = main.querySelector("article");
+  const turns = new AbortController(), { signal } = turns;
+  let sw = null, swiped = 0; // the swipe under way (start point, whether the page is held), and when the last one ended
+  const settle = () => { page.classList.remove("lifting", "to-l", "to-r"); page.style.translate = ""; sw = null; };
+  page.addEventListener("pointerdown", (e) => {
+    if (sw || !e.isPrimary || e.pointerType === "mouse" || idx < 0) return;
+    if (e.clientX < 28 || e.clientX > innerWidth - 28) return;
+    if (e.target.closest(".scroll, .pitch, .frame, table, .music, .card3d, iframe, input, textarea, select, [contenteditable]")) return;
+    sw = { id: e.pointerId, x: e.clientX, y: e.clientY, held: false };
+  }, { signal, passive: true });
+  page.addEventListener("pointermove", (e) => {
+    if (!sw || e.pointerId !== sw.id) return;
+    const dx = e.clientX - sw.x, dy = e.clientY - sw.y;
+    if (!sw.held) {
+      if (Math.abs(dx) < 12 || Math.abs(dx) < 1.6 * Math.abs(dy)) { if (Math.abs(dy) > 12) sw = null; return; } // a scroll, not a turn
+      sw.held = true;
+      try { page.setPointerCapture(e.pointerId); } catch { /* the pointer is already gone */ }
+      page.classList.add("lifting");
+    }
+    page.classList.toggle("to-l", dx < 0);
+    page.classList.toggle("to-r", dx > 0);
+    if (!calm()) page.style.translate = `${(dx * 0.35).toFixed(1)}px 0`;
+  }, { signal, passive: true });
+  page.addEventListener("pointerup", (e) => {
+    if (!sw || e.pointerId !== sw.id) return;
+    const dx = sw.held ? e.clientX - sw.x : 0;
+    if (sw.held) swiped = Date.now();
+    if (Math.abs(dx) < 70 || !turnTo(date, order, idx, dx < 0 ? 1 : -1)) settle();
+    else sw = null; // the page keeps its lean: the turn carries on from there (transition dir)
+  }, { signal });
+  page.addEventListener("pointercancel", settle, { signal });
+  page.addEventListener("click", (e) => { if (Date.now() - swiped < 400) { e.preventDefault(); e.stopPropagation(); } }, { capture: true, signal });
+  main.querySelector("[data-contents]")?.addEventListener("click", () => openContents(date, order, idx), { signal });
 
   // Read aloud: the top-bar button starts and pauses; it stops when the reader leaves the article.
   let reader = null;
@@ -678,8 +725,55 @@ async function viewArticle(date, column, my) {
     clearTimeout(resumeT);
     titleSeen?.disconnect();
     reader?.stop();
+    turns.abort();
   };
   document.title = `${a.title}｜${S.cfg.title}`;
+}
+
+// Roman numerals for the page's place in the issue (an issue has well under forty articles).
+const roman = (n) => [[10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]].reduce(([s, r], [v, l]) => { while (r >= v) { s += l; r -= v; } return [s, r]; }, ["", Math.max(0, Math.round(n))])[0];
+// A page turned within the issue: `step` +1 is the article after this one (the page slides off to the left), -1 the one
+// before. Refused — with a word why — at either end of the issue and, in 循序閱讀, at an article still locked. Says whether it went.
+function turnTo(date, order, idx, step) {
+  const n = order[idx + step];
+  if (!n) { toast(step > 0 ? "這是本期最後一篇" : "這是本期第一篇"); return false; }
+  const by = lockedBy(date, n.column);
+  if (by) { toast(`〈${n.title}〉還鎖著，先讀完這篇再翻`); return false; }
+  turnDir = step > 0 ? "left" : "right";
+  location.hash = `#/a/${date}/${n.column}`;
+  return true;
+}
+// 本期目錄 (Inhalt): the issue's articles in the front page's order, raised as a sheet from the top bar's title. Each row
+// carries its numeral, column and title, and its minutes — or a gold tick once read; the one open has a gold bar down
+// its left. A tap turns to that article, the page sliding the way its place in the order lies. In 循序閱讀 a locked
+// article is listed but is no link, with the note on what unlocks it. The dark backdrop, Escape or 關上 close it;
+// route() closes it as the new page draws.
+function openContents(date, order, idx) {
+  const issue = issueBy(date), sheet = $("#sheet");
+  if (!issue || !sheet) return;
+  const read = readSet();
+  const rows = order.map((a, i) => {
+    const by = lockedBy(date, a.column), now = i === idx, done = read.has(`${date}/${a.column}`);
+    const inner = `<span class="n">${roman(i + 1)}</span><span class="t"><span class="k">${esc(col(a.column, date).name)}</span><b>${esc(a.title)}</b>${by ? `<span class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></span>` : ""}</span>${done ? `<span class="sum tick" role="img" aria-label="已讀">✓</span>` : `<span class="sum">${a.minutes ? `${a.minutes} 分` : ""}</span>`}`;
+    return by ? `<li><div class="opt locked" aria-disabled="true">${inner}</div></li>`
+      : `<li><a class="opt${now ? " now" : ""}" href="#/a/${date}/${esc(a.column)}" data-i="${i}"${now ? ' aria-current="page"' : ""}>${inner}</a></li>`;
+  });
+  sheet.innerHTML = `<div class="sheet contents"><h2>本期目錄<span class="de">Inhalt</span></h2><p class="sub">${esc(fmtDate(date))}・第 ${issue.no} 期・${order.length} 篇${lockMode() ? "・循序閱讀" : ""}</p>
+    <ol class="list">${rows.join("")}</ol><div class="btns"><button class="btn ghost" type="button" data-close>關上</button></div></div>`;
+  sheet.querySelector("[data-close]").onclick = () => sheet.close();
+  // The backdrop is the dialog itself; a row sets the turn's direction and lets its link go on to the router.
+  sheet.onclick = (e) => {
+    if (e.target === sheet) { sheet.close(); return; }
+    const row = e.target.closest("a.opt");
+    if (!row) return;
+    const i = Number(row.dataset.i);
+    if (i === idx) { e.preventDefault(); sheet.close(); return; }
+    turnDir = i > idx ? "left" : "right";
+  };
+  sheet.addEventListener("close", () => { sheet.onclick = null; }, { once: true }); // the Spotify sheets share the dialog
+  sheet.showModal();
+  const box = sheet.firstElementChild, now = box.querySelector(".opt.now");
+  if (now) box.scrollTop = Math.max(0, now.getBoundingClientRect().top - box.getBoundingClientRect().top - (box.clientHeight - now.offsetHeight) / 2);
 }
 
 // A short contents list for long articles (four or more section headings).
@@ -1206,6 +1300,7 @@ let routeSeq = 0; // bumped on every route; an older route still loading must no
 const places = new Map();
 let shownHash = null, navTap = false, fromList = null;
 let landKey = null, landTop = null; // 接著上次: the article tapped on the front page, and where in it to land
+let turnDir = null; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), "left" | "right" | null
 // The bottom-bar tab a page belongs to.
 const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
 
@@ -1219,6 +1314,7 @@ async function route(ev) {
   const my = ++routeSeq;
   if (ev) routed++;
   cleanup(); cleanup = () => {};
+  if ($("#sheet")?.open) $("#sheet").close(); // the contents sheet (or any other) does not outlive the page it was raised from
   document.title = S.cfg.title;
   const h = location.hash || "#/";
   const leaving = isDetail(shownHash); // coming out of an article or an event
@@ -1253,8 +1349,12 @@ async function route(ev) {
   if (ev && art && isFresh(art[1], art[2])) morph = { from: lastTapped, to: hero };
   else if (ev && !art && prev) morph = { from: hero(), to: () => main.querySelector(`a[href="#/a/${prev}"] img`) };
   else if (ev && !art) morph = {};
+  // A page turned within the issue (turnTo, openContents): the slide in its direction instead of the cross-fade and
+  // the picture morph — again only for an article already in memory.
+  if (turnDir && ev && art && isFresh(art[1], art[2])) morph = { dir: turnDir };
+  turnDir = null;
   lastTapped = null;
-  plateLater = Boolean(art && morph);
+  plateLater = Boolean(art && morph?.to);
   const draw = async () => {
     await drawRoute(h, art, my);
     if (my === routeSeq) window.scrollTo(0, place ?? landTop ?? 0);
