@@ -881,13 +881,15 @@ function viewArchive() {
         <ul>${arts.map((a) => `<li><i>${esc(col(a.column, iss.date).name)}</i>${esc(a.title)}</li>`).join("")}</ul></a>`;
     }).join("");
     main.querySelector(".list").innerHTML = rows || `<p class="empty">${ql ? "沒有符合的文章。" : "還沒有往期。"}</p>`;
+    main.querySelector(".jahr")?.toggleAttribute("hidden", Boolean(ql)); // the month makes way for the search
   };
   const chips = Object.entries(S.cfg.columns).filter(([, k]) => k.group !== "verse").map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span>
       <a class="stamp-btn" href="#/random" aria-label="隨手翻一篇：從往期裡抽一篇沒讀過的"><b>隨手翻</b><i>Zufall</i></a></header>
-    <nav class="chips review" aria-label="常設"><a class="chip" href="#/concerts">近期演出</a></nav>
+    <nav class="chips review" aria-label="常設"><a class="chip" href="#/concerts">近期演出</a><a class="chip" href="#/stats">閱讀年鑑</a></nav>
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
     <div class="hits" aria-live="polite"></div>
+    ${calendarHtml(twNow().date.slice(0, 7), pubs, done)}
     <nav class="chips" aria-label="專欄">${chips}</nav><div class="list"></div></div>`;
   const input = main.querySelector(".search"), hits = main.querySelector(".hits");
   let seq = 0, timer = 0;
@@ -930,6 +932,85 @@ function viewSaved() {
   }).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
     ${items || `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。<br><a href="#/random">或者先隨手翻一篇 →</a></p>`}</div>`;
+}
+
+// ——— 閱讀年鑑 (Lesekalender): the reading record this phone holds, drawn as a calendar ———
+// Everything here is read out of localStorage (read, digest.done, saved) and the issue index, so it works offline and
+// says nothing about any other device.
+const dayOf = (iso) => (new Date(`${iso}T00:00:00Z`).getUTCDay() + 6) % 7; // column, Monday first
+const daysIn = (ym) => { const [y, m] = ym.split("-").map(Number); return new Date(Date.UTC(y, m, 0)).getUTCDate(); };
+const nextYm = (ym) => { const [y, m] = ym.split("-").map(Number); return m === 12 ? `${y + 1}-01` : `${y}-${String(m + 1).padStart(2, "0")}`; };
+const monDe = (ym) => fmtDate(`${ym}-01`, "de").split(" ")[2]; // "Sonntag, 1. November 2026" → November
+// One month as seven columns. A published day is a paper tile that opens its issue; a day whose finish line was reached
+// carries a gold diamond and, when the day before was finished too, a gold link across to it; today is ringed in gold.
+// On the archive page, under the search box (hidden while a search is on); its caption leads to the yearbook.
+function calendarHtml(ym, pubs, done) {
+  const today = twNow().date, byDate = new Map(pubs.map((i) => [i.date, i]));
+  const first = dayOf(`${ym}-01`), cells = Array.from({ length: first }, () => "<i></i>");
+  for (let d = 1; d <= daysIn(ym); d++) {
+    const iso = `${ym}-${String(d).padStart(2, "0")}`, iss = byDate.get(iso), fin = done.has(iso);
+    const cls = ["day", iss && "pub", fin && "done", fin && (first + d - 1) % 7 && done.has(addDays(iso, -1)) && "chain", iso === today && "today"].filter(Boolean).join(" ");
+    cells.push(iss ? `<a class="${cls}" href="#/issue/${iso}" aria-label="${esc(fmtDate(iso, "short"))}・第 ${iss.no} 期${fin ? "・讀完" : ""}">${d}</a>` : `<span class="${cls}">${d}</span>`);
+  }
+  const got = pubs.filter((i) => i.date.startsWith(ym)), fin = got.filter((i) => done.has(i.date)).length;
+  return `<section class="jahr" aria-label="本月閱讀月曆"><div class="mon"><span>${Number(ym.slice(5))} 月</span><span class="de">${esc(monDe(ym))}</span></div>
+    <div class="wd" aria-hidden="true">${["一", "二", "三", "四", "五", "六", "日"].map((w) => `<span>${w}</span>`).join("")}</div>
+    <div class="grid">${cells.join("")}</div>
+    <div class="cap"><span>${got.length ? `本月 ${got.length} 期，讀完 ${fin} 期` : "本月還沒出刊"}</span><a href="#/stats">閱讀年鑑<i>Lesekalender</i>→</a></div></section>`;
+}
+// Every day since the first issue, as one drawing: a month per block, a square per day — paper for an issue, gold for a
+// finished one, a faint square for a day without a paper; today outlined in ink. A square with an issue opens it.
+function yearCal(launch, pubs, done) {
+  const today = twNow().date, byDate = new Map(pubs.map((i) => [i.date, i]));
+  const C = 12, G = 2, L = 30, W = L + 7 * (C + G) - G;
+  const parts = [];
+  let y = 0;
+  for (let ym = launch.slice(0, 7); ym <= today.slice(0, 7); ym = nextYm(ym)) {
+    const first = dayOf(`${ym}-01`), days = daysIn(ym), m = Number(ym.slice(5));
+    parts.push(`<text class="m" x="0" y="${y + C - 2}">${esc(monDe(ym).slice(0, 3))}</text>`);
+    if (ym === launch.slice(0, 7) || m === 1) parts.push(`<text class="yr" x="0" y="${y + 2 * C + 1}">${ym.slice(0, 4)}</text>`);
+    for (let d = 1; d <= days; d++) {
+      const iso = `${ym}-${String(d).padStart(2, "0")}`;
+      if (iso < launch || iso > today) continue;
+      const i = first + d - 1, x = L + (i % 7) * (C + G), cy = y + Math.floor(i / 7) * (C + G), iss = byDate.get(iso);
+      const r = `<rect class="${done.has(iso) ? "d2" : iss ? "d1" : "d0"}${iso === today ? " now" : ""}" x="${x}" y="${cy}" width="${C}" height="${C}"/>`;
+      parts.push(iss ? `<a href="#/issue/${iso}" aria-label="${esc(fmtDate(iso, "short"))}・第 ${iss.no} 期${done.has(iso) ? "・讀完" : ""}">${r}</a>` : r);
+    }
+    y += Math.ceil((first + days) / 7) * (C + G) + 6;
+  }
+  return `<svg class="cal" viewBox="0 0 ${W} ${y - 6}" role="img" aria-label="自創刊以來每一天的閱讀紀錄">${parts.join("")}</svg>`;
+}
+// #/stats: four numbers in Cormorant (articles read, their reading time, the longest run of finished issues, what is
+// kept in 收藏), the whole calendar, and how far through each column the reader is.
+function viewStats() {
+  const pubs = publishedIssues(), done = digestDone(), read = readSet();
+  const launch = S.cfg.launch_date || pubs[pubs.length - 1]?.date || twNow().date;
+  const head = `<header class="page-title"><h1>閱讀年鑑</h1><span class="de">Lesekalender</span></header>
+    <p class="col-note">這支手機上的閱讀紀錄：讀完幾篇、連著幾天、哪一欄讀得最勤。只反映這支手機；離線也能看。</p>`;
+  if (pubs.length < 7) { main.innerHTML = `<div class="wrap yearbook">${head}<p class="empty">創刊才 ${pubs.length} 期，年鑑從第七期起編。</p></div>`; document.title = `閱讀年鑑｜${S.cfg.title}`; return; }
+  // Only articles still in the index count, so a key left over from a reissue does not.
+  let n = 0, mins = 0;
+  const perCol = new Map(); // column → [read, published, newest date]
+  for (const i of pubs) for (const a of i.articles) {
+    const c = perCol.get(a.column) || [0, 0, i.date];
+    c[1]++;
+    if (read.has(`${i.date}/${a.column}`)) { n++; mins += Number(a.minutes) || 0; c[0]++; }
+    perCol.set(a.column, c);
+  }
+  let best = 0, run = 0;
+  for (let i = pubs.length - 1; i >= 0; i--) { run = done.has(pubs[i].date) ? run + 1 : 0; best = Math.max(best, run); }
+  const fav = saved().filter((k) => { const [d, c] = k.split("/"); return isPublished(d) && issueBy(d)?.articles.some((a) => a.column === c); }).length;
+  const h = mins / 60, time = mins < 60 ? [String(mins), "分鐘"] : [h < 10 ? h.toFixed(1).replace(/\.0$/, "") : String(Math.round(h)), "小時"];
+  const stat = (k, v, u) => `<div class="stat"><span class="k">${k}</span><b>${v}</b><span class="u">${u}</span></div>`;
+  const cols = [...perCol].map(([c, [r, t, d]]) => ({ c, r, t, name: col(c, d).name })).sort((a, b) => b.r - a.r || b.t - a.t);
+  main.innerHTML = `<div class="wrap yearbook">${head}
+    <div class="stats">${stat("讀完", n, "篇")}${stat("約", time[0], time[1])}${stat("最長連續", best, "天")}${stat("收藏", fav, "篇")}</div>
+    <div class="sec-head"><h2>日曆</h2><span class="de">Kalender</span><span class="note">${esc(fmtDate(launch, "short"))}創刊・金色是讀完的日子</span></div>
+    ${yearCal(launch, pubs, done)}
+    <div class="sec-head"><h2>各欄</h2><span class="de">Rubriken</span><span class="note">讀過 / 刊出</span></div>
+    <div class="colbars">${cols.map((x) => `<a class="cb" href="#/column/${esc(x.c)}" style="--p:${x.t ? (x.r / x.t).toFixed(3) : 0}"><span class="n">${esc(x.name)}</span><span class="c">${x.r} / ${x.t}</span><i class="bar"><b></b></i></a>`).join("")}</div>
+  </div>`;
+  document.title = `閱讀年鑑｜${S.cfg.title}`;
 }
 
 // ——— 隨手翻 (Zufallsfund): one article out of the back issues, drawn like a card ———
@@ -1024,6 +1105,8 @@ function viewSettings() {
     <section class="set"><h2>字級</h2><div class="seg" data-g="fs">${FS.map((v, i) => `<button type="button" data-v="${v}" aria-pressed="${v === fs}">${["小", "標準", "大", "特大"][i]}</button>`).join("")}</div></section>
     <section class="set"><h2>閱讀方式</h2><div class="seg" data-g="lock">${[["free", "自由閱讀"], ["seq", "循序閱讀"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${(v === "seq") === lockMode()}">${l}</button>`).join("")}</div>
       <p class="small">循序閱讀：每一期照首頁的順序，一次只開一篇；讀到文末、而且讀夠這篇預估時間的一半，下一篇才解鎖；中途離開，讀過的時間會留著，回來接著算。還沒解鎖的只顯示標題，摘要先藏起來，全部讀完才算讀完今天。之前讀過的照樣算數。</p></section>
+    <section class="set"><h2>閱讀年鑑</h2><p>這支手機上的閱讀紀錄：讀完幾篇、連著幾天、哪一欄讀得最勤，畫成一頁日曆。紀錄只存在這支手機，離線也能看。</p>
+      <div class="btns"><a class="btn ghost" href="#/stats">打開閱讀年鑑</a></div></section>
     <section class="set"><h2>外觀</h2><div class="seg" data-g="theme">${[["auto", "跟隨系統"], ["light", "日間"], ["dark", "夜間"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${v === theme}">${l}</button>`).join("")}</div></section>
     ${canSpeak() ? `<section class="set"><h2>朗讀速度</h2><div class="seg" data-g="rate">${RATES.map((r) => `<button type="button" data-v="${r}" aria-pressed="${r === getRate()}">${r === 1 ? "標準" : `${r}×`}</button>`).join("")}</div>
       <p>文章右上角的喇叭按鈕會用裝置內建的中文語音朗讀全文，不需網路服務。</p></section>` : ""}
@@ -1124,7 +1207,7 @@ const places = new Map();
 let shownHash = null, navTap = false, fromList = null;
 let landKey = null, landTop = null; // 接著上次: the article tapped on the front page, and where in it to land
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
 
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
 let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising number, so a step back is recognisable
@@ -1191,6 +1274,7 @@ async function drawRoute(h, art, my) {
   else if ((m = h.match(/^#\/issue\/(\d{4}-\d{2}-\d{2})/))) viewFront(m[1]);
   else if ((m = h.match(/^#\/column\/([\w-]+)/))) viewColumn(m[1]);
   else if (h.startsWith("#/archive")) viewArchive();
+  else if (h.startsWith("#/stats")) viewStats();
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/music")) viewMusic();
