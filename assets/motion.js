@@ -17,7 +17,7 @@ export function reveal(root) {
       io.unobserve(e.target);
     }
   }, { rootMargin: "0px 0px -6% 0px" });
-  root.querySelectorAll(".lead, .item, .sec-head, .digest, .finish, .cards-cta, .week li, .issue-row, .colophon, .set, .card3d, .gig")
+  root.querySelectorAll(".lead, .item, .sec-head, .digest, .finish, .issue-row, .colophon, .set, .gig")
     .forEach((el) => { el.classList.add("rv"); io.observe(el); });
   return () => io.disconnect();
 }
@@ -102,7 +102,7 @@ export function mastheadShow(head) {
 export function ripples() {
   document.addEventListener("pointerdown", (e) => {
     if (calm()) return;
-    const el = e.target.closest(".lead, .item, .btn, .cards-cta, .issue-row, .chip, .opt, .nav a");
+    const el = e.target.closest(".lead, .item, .btn, .issue-row, .chip, .opt, .nav a");
     if (!el) return;
     const r = el.getBoundingClientRect(), size = Math.max(r.width, r.height) * 2.2;
     const w = document.createElement("span");
@@ -151,51 +151,4 @@ export function digestRing(root) {
   cards.forEach((c) => io.observe(c));
   draw();
   return { stop: () => io.disconnect(), complete };
-}
-
-// A flash card you can flip with a tap (or its flip button) and, once flipped, throw right (remembered) or left (forgotten).
-export function swipeCard(card, { canSwipe, onGrade }) {
-  let x0 = null, dx = 0, id = null;
-  const flip = card.querySelector(".flip"), front = flip.querySelector(".front"), back = flip.querySelector(".back");
-  const toggle = () => {
-    const on = flip.classList.toggle("on");
-    front.inert = on;
-    back.inert = !on;
-    card.dispatchEvent(new CustomEvent("flipped", { detail: on }));
-  };
-  back.inert = true;
-  card.querySelector(".flip-btn")?.addEventListener("click", toggle);
-  const set = (v, anim) => {
-    card.style.transition = anim ? "transform .35s cubic-bezier(.2,.7,.2,1)" : "none";
-    card.style.transform = v ? `translateX(${v}px) rotate(${v / 18}deg)` : "";
-    card.style.setProperty("--ok", String(Math.max(0, Math.min(1, v / 110))));
-    card.style.setProperty("--no", String(Math.max(0, Math.min(1, -v / 110))));
-  };
-  card.addEventListener("pointerdown", (e) => {
-    dx = 0;
-    if (!canSwipe() || e.target.closest("a, button")) return;
-    x0 = e.clientX; dx = 0; id = e.pointerId;
-  });
-  card.addEventListener("pointermove", (e) => {
-    if (x0 === null || e.pointerId !== id) return;
-    dx = e.clientX - x0;
-    if (Math.abs(dx) > 6 && !card.hasPointerCapture(id)) card.setPointerCapture(id);
-    if (card.hasPointerCapture(id)) set(dx, false);
-  });
-  const end = () => {
-    if (x0 === null) return;
-    x0 = null;
-    if (Math.abs(dx) < 90) { set(0, true); return; }
-    const ok = dx > 0;
-    if (calm()) { onGrade(ok); return; }
-    set((ok ? 1 : -1) * (innerWidth + 200), true);
-    setTimeout(() => onGrade(ok), 260);
-  };
-  card.addEventListener("pointerup", end);
-  card.addEventListener("pointercancel", () => { x0 = null; set(0, true); });
-  // A tap anywhere on the card (not a drag, not on a link or button) flips it too.
-  card.addEventListener("click", (e) => {
-    if (Math.abs(dx) > 6 || e.target.closest("a, button")) return;
-    toggle();
-  });
 }

@@ -140,7 +140,6 @@ PERIO_JOURNALS = {
 }
 STRONG_DESIGN = ("指引", "共識", "系統性回顧", "統合分析", "隨機", "世代", "追蹤")
 WEAK_DESIGN = ("動物", "體外", "屍體", "病例報告", "病例系列", "橫斷", "敘述性回顧")
-QUIZ_SINCE = "2026-10-26"  # perio articles from here on carry `quiz`, the front of the review card
 
 
 def check_brief(brief, dek, d, E, W, col=None):
@@ -609,12 +608,6 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
                 E("缺少 takeaway：帶得走的結論，一到兩句、40–90 字，放在標題下方（columns/perio.md）")
             elif not 25 <= len(CJK.findall(take)) <= 110:
                 W("takeaway %d 字，建議 40–90 字" % len(CJK.findall(take)))
-            quiz = art.get("quiz") if isinstance(art.get("quiz"), str) else ""
-            if str(d) == "reserve" or str(d) >= QUIZ_SINCE:
-                if not quiz.strip():
-                    W("缺少 quiz：複習小卡正面的問題，答案就是 takeaway（columns/perio.md）")
-                elif not 8 <= len(CJK.findall(quiz)) <= 45:
-                    W("quiz %d 字，建議 15–40 字" % len(CJK.findall(quiz)))
             if not (isinstance(card.get("access"), str) and card["access"].strip()):
                 E("paper 論文卡缺少 access（資料範圍：依全文，或依摘要與後續文獻整理）")
             if str(d) == "reserve" or str(d) >= EVIDENCE_SINCE:

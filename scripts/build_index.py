@@ -123,9 +123,8 @@ def main():
             }
             if art.get("from_reserve"):
                 entry["from_reserve"] = True
-            for k in ("takeaway", "quiz"):  # perio: the app's review cards (front: quiz, back: takeaway)
-                if isinstance(art.get(k), str) and art[k].strip():
-                    entry[k] = art[k].strip()
+            if isinstance(art.get("takeaway"), str) and art["takeaway"].strip():  # perio: shown on the saved and column lists
+                entry["takeaway"] = art["takeaway"].strip()
             search.setdefault(day[:7], []).append({"d": day, "c": col, "t": art.get("title", ""), "x": plain_text(art)})
         except Exception as e:  # noqa: BLE001
             skip(path, "%s: %s" % (type(e).__name__, e))

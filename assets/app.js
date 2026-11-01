@@ -6,7 +6,7 @@ import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasCl
 import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 import { renderPush, clearNotices } from "./notify.js";
-import { calm, reveal, transition, celebrate, laurel, digestRing, swipeCard, mastheadShow, ripples } from "./motion.js";
+import { calm, reveal, transition, celebrate, laurel, digestRing, mastheadShow, ripples } from "./motion.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -244,8 +244,6 @@ function viewFront(dateParam) {
     ${watch.length ? `<div class="sec-head"><h2>觀測站</h2><span class="de">Beobachtung</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
     ${!arts.some((a) => a.brief) ? "" : lockMode() && unreadIn(issue.date, arts) ? `<div class="finish lockfin">${ICON.lock}<b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">循序閱讀：一篇一篇讀完，今天才算數。</span></div>`
       : `<div class="finish${digestDone().has(issue.date) ? " done" : ""}">${finishInner(issue.date)}</div>`}
-    ${dateParam ? "" : cardsPrompt()}
-    ${!dateParam && issue.weekday === "日" ? weekHtml() : ""}
     ${dateParam ? "" : `<section class="gigs" id="gigs" aria-label="近期演出">${gigsSection()}</section>`}
     <footer class="colophon">
       <div class="ornament" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -328,7 +326,7 @@ function finishInner(date) {
   return `${seal}<b>讀完了，今天你贏了</b><span class="note">${esc(finishNote(date))}</span>`;
 }
 
-// ——— Keeping what you read: the streak, the week's seven, the perio cards ———
+// ——— Keeping what you read: the streak ———
 // Issues in a row whose digest was finished, counting back from the newest; today's not done yet keeps yesterday's run.
 function streak() {
   const done = digestDone(), pubs = publishedIssues();
@@ -341,96 +339,6 @@ function finishNote(date) {
   const run = date === publishedIssues()[0]?.date ? streak() : null;
   if (!run?.today || run.n < 2) return "想深挖就點進任何一篇；沒空也沒差，重點你都拿到了。";
   return run.n >= 7 ? `連續 ${run.n} 天讀完，這已經是習慣了兄弟。` : run.n >= 3 ? `連續 ${run.n} 天讀完，穩。` : "連續 2 天讀完，開始有手感了。";
-}
-
-// One article from each of the last seven issues: the ones you opened first, the columns spread out, no football news
-// (stale by Sunday) and no watch columns. Oldest first.
-function weekSeven() {
-  const read = readSet(), used = new Map();
-  return publishedIssues().slice(0, 7).map((iss) => {
-    const cands = iss.articles.filter((a) => !["football", "news"].includes(a.column) && col(a.column, iss.date).group !== "watch" && (a.takeaway || a.brief));
-    if (!cands.length) return null;
-    const score = (a) => (read.has(`${iss.date}/${a.column}`) ? -10 : 0) + (used.get(a.column) || 0) * 3 + (col(a.column, iss.date).group === "main" ? 0 : 1);
-    const pick = cands.reduce((b, a) => (score(a) < score(b) ? a : b));
-    used.set(pick.column, (used.get(pick.column) || 0) + 1);
-    return { date: iss.date, a: pick };
-  }).filter(Boolean).reverse();
-}
-function weekHtml() {
-  const items = weekSeven();
-  if (items.length < 3) return "";
-  return `<section class="week"><div class="sec-head"><h2>這週你帶走的 ${items.length} 件事</h2><span class="de">Wochenschau</span></div>
-    <ol>${items.map(({ date, a }) => `<li><a href="#/a/${date}/${a.column}"><span class="meta-s">${esc(fmtDate(date, "short"))}・${esc(col(a.column, date).name)}</span><b>${esc(a.title)}</b><p>${esc(a.takeaway || a.brief)}</p></a></li>`).join("")}</ol></section>`;
-}
-
-// Perio review cards: the take-aways of earlier perio articles, three a day. A card you remembered comes back later and
-// later (Leitner boxes); one you forgot comes back tomorrow. The question is the article's `quiz`, else its title.
-const GAPS = [1, 3, 7, 14, 30, 60]; // days until the next showing, by box
-const PER_DAY = 3;
-const addDays = (iso, n) => new Date(Date.parse(`${iso}T00:00:00Z`) + n * 864e5).toISOString().slice(0, 10);
-function dueCards() {
-  const today = twNow().date, st = store.get("cards", {});
-  const all = publishedIssues().flatMap((iss) => iss.date < today ? iss.articles.filter((a) => a.column === "perio" && a.takeaway).map((a) => ({ date: iss.date, a, s: st[iss.date] })) : []);
-  const due = all.filter((c) => c.s && c.s.due <= today).sort((x, y) => x.s.due.localeCompare(y.s.due) || x.date.localeCompare(y.date));
-  return [...due, ...all.filter((c) => !c.s).sort((x, y) => x.date.localeCompare(y.date))];
-}
-const cardsToday = () => { const t = store.get("cards.today", {}); return t.date === twNow().date ? t.n : 0; };
-function grade(date, ok) {
-  const st = store.get("cards", {});
-  const box = ok ? Math.min((st[date]?.box ?? 0) + 1, GAPS.length - 1) : 0;
-  st[date] = { box, due: addDays(twNow().date, ok ? GAPS[box] : 1) };
-  store.set("cards", st);
-  store.set("cards.today", { date: twNow().date, n: cardsToday() + 1 });
-}
-function cardsPrompt() {
-  const k = Math.min(dueCards().length, PER_DAY - cardsToday());
-  return k > 0 ? `<a class="cards-cta" href="#/cards"><b>牙周小卡</b><span>今天 ${k} 張，30 秒考你一下</span><i aria-hidden="true">→</i></a>` : "";
-}
-function viewCards() {
-  let queue = dueCards().slice(0, Math.max(0, PER_DAY - cardsToday()));
-  let i = 0, ok = 0, total = queue.length;
-  const page = (inner) => { main.innerHTML = `<div class="wrap"><header class="page-title"><h1>牙周小卡</h1><span class="de">Karteikarten</span></header>${inner}</div>`; };
-  const end = () => {
-    const more = dueCards().length;
-    page(`<div class="finish done"><span class="tick" aria-hidden="true">✓</span><b>${total ? "刷完了" : "今天的卡刷完了"}</b><span class="note">${total ? `記得 ${ok} 張、忘了 ${total - ok} 張。忘了的明天再考你。` : "明天再來，忘掉之前會再考你。"}</span></div>
-      <div class="btns cards-end">${more ? `<button class="btn ghost" data-more>再來 ${Math.min(more, PER_DAY)} 張</button>` : ""}<a class="btn" href="#/">回到今日</a></div>`);
-    main.querySelector("[data-more]")?.addEventListener("click", () => { queue = dueCards().slice(0, PER_DAY); i = 0; ok = 0; total = queue.length; show(); });
-    if (total) celebrate(main.querySelector(".finish"));
-  };
-  const show = () => {
-    if (i >= queue.length) return end();
-    const { date, a } = queue[i];
-    page(`<div class="dots" aria-hidden="true">${queue.map((_, k) => `<i class="${k < i ? "done" : k === i ? "now" : ""}"></i>`).join("")}</div>
-      <p class="cards-pos">第 ${i + 1}／${queue.length} 張・${esc(fmtDate(date, "short"))}那篇</p>
-      <div class="card3d" role="group" aria-label="第 ${i + 1}／${queue.length} 張小卡">
-        <div class="flip">
-          <div class="face front"><span class="lbl">學長考你</span><p class="q">${esc(a.quiz || `「${a.title}」帶走的結論是什麼？`)}</p><button type="button" class="flip-btn">想好了，翻面看答案</button></div>
-          <div class="face back"><span class="lbl">帶得走的結論</span><p>${esc(a.takeaway)}</p><a href="#/a/${date}/perio">回去看那篇</a></div>
-        </div>
-        <span class="stampmark ok" aria-hidden="true">記得</span><span class="stampmark no" aria-hidden="true">忘了</span>
-      </div>
-      <div class="btns grade" hidden><button class="btn" type="button" data-ok>記得</button><button class="btn ghost" type="button" data-no>忘了</button></div>
-      <p class="swipe-hint" hidden>也可以直接滑：往右是記得，往左是忘了</p>`);
-    const card = main.querySelector(".card3d");
-    let flipped = false;
-    const next = (remembered) => { grade(date, remembered); if (remembered) ok++; i++; show(); };
-    card.addEventListener("flipped", (e) => {
-      flipped = e.detail;
-      main.querySelector(".grade").hidden = !flipped;
-      main.querySelector(".swipe-hint").hidden = !flipped;
-      if (flipped) main.querySelector("[data-ok]").focus({ preventScroll: true });
-    });
-    swipeCard(card, { canSwipe: () => flipped, onGrade: next });
-    main.querySelector("[data-ok]").onclick = () => next(true);
-    main.querySelector("[data-no]").onclick = () => next(false);
-    card.querySelector(".flip-btn").focus({ preventScroll: true });
-  };
-  show();
-}
-function viewWeek() {
-  const html = weekHtml();
-  main.innerHTML = `<div class="wrap"><header class="page-title"><h1>本週回顧</h1><span class="de">Wochenschau</span></header>
-    ${html || `<p class="empty">再讀幾期，這裡就會有你這週帶走的東西。</p>`}</div>`;
 }
 
 // Load the issue's articles in the background: they open instantly and the service worker keeps them for offline reading,
@@ -710,6 +618,7 @@ function snippet(text, q) {
 
 // ——— 近期演出: a standing list at the foot of the front page (content/concerts.json, kept daily by the 演出資訊 routine;
 // editorial/columns/concerts.md). It belongs to no issue: a show drops out here once its day is over.
+const addDays = (iso, n) => new Date(Date.parse(`${iso}T00:00:00Z`) + n * 864e5).toISOString().slice(0, 10);
 const GIG_NEAR = 45; // days ahead the front page looks; anything added in the last 3 days shows however far off
 const GIG_CITIES = [["all", "全部"], ["台中", "台中"], ["north", "台北・新北"], ["高雄", "高雄"]];
 const loadGigs = () => getJSON("content/concerts.json", { fresh: true }).then((g) => { S.gigs = g; }).catch(() => {});
@@ -837,7 +746,7 @@ function viewArchive() {
   };
   const chips = Object.entries(S.cfg.columns).filter(([, k]) => k.group !== "verse").map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span></header>
-    <nav class="chips review" aria-label="複習"><a class="chip" href="#/week">本週回顧</a><a class="chip" href="#/cards">牙周小卡</a><a class="chip" href="#/concerts">近期演出</a></nav>
+    <nav class="chips review" aria-label="常設"><a class="chip" href="#/concerts">近期演出</a></nav>
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
     <div class="hits" aria-live="polite"></div>
     <nav class="chips" aria-label="專欄">${chips}</nav><div class="list"></div></div>`;
@@ -1024,7 +933,7 @@ let routeSeq = 0; // bumped on every route; an older route still loading must no
 const places = new Map();
 let shownHash = null, navTap = false, fromList = null;
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/week") || h.startsWith("#/cards") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") ? "#/archive" : h.startsWith("#/saved") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") ? "#/settings" : "#/";
 
 async function route(ev) {
   const my = ++routeSeq;
@@ -1076,8 +985,6 @@ async function drawRoute(h, art, my) {
   else if ((m = h.match(/^#\/issue\/(\d{4}-\d{2}-\d{2})/))) viewFront(m[1]);
   else if ((m = h.match(/^#\/column\/([\w-]+)/))) viewColumn(m[1]);
   else if (h.startsWith("#/archive")) viewArchive();
-  else if (h.startsWith("#/week")) viewWeek();
-  else if (h.startsWith("#/cards")) viewCards();
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/music")) viewMusic();
   else if (h.startsWith("#/settings")) viewSettings();
