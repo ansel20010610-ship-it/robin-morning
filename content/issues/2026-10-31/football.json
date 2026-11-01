@@ -5,7 +5,7 @@
   "dek": "球門後那片助威看台，台灣時間週日對阿拉維斯暫停運作。場上的麻煩也不小，弗利克能用的中衛只剩兩個。",
   "brief": "上週國家德比用旗子打到卡馬文加的巴薩球迷，已被當地警方認出；巴薩也宣布，對阿拉維斯暫停 Gol 1957 助威看台的運作。弗利克說現在只剩庫巴西和傑拉德・馬丁兩個中衛，德容可能往後補。巴薩 11 月 1 日（週日）04:00 在 Spotify Camp Nou 迎戰阿拉維斯。",
   "topic_key": "football:2026-10-31",
-  "updated_at": "2026-10-31T03:03:00+08:00",
+  "updated_at": "2026-11-01T15:56:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -192,6 +192,11 @@
     {
       "type": "p",
       "text": "馬競週六 21:00 先踢，客場對 Levante。他們 25 分，巴薩 27 分；馬競要是贏了，巴薩週日清晨四點開踢時，會以 28 分超過巴薩，巴薩開踢時就不再是榜首。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-01）",
+      "text": "弗利克引文的原文把兩句不相鄰的話接在一起，漏了中間一句。ESPN 記下的原話是「We have more weeks until January. We discuss a lot every day. If we can do something, maybe we will do it.」（離一月還有好幾週。我們每天都討論很多。能做的話，也許就會做。）依據：ESPN 10 月 30 日報導。"
     }
   ],
   "sources": [

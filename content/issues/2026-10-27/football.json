@@ -5,7 +5,7 @@
   "dek": "八天要踢三場，可用的一線後衛卻只剩四人；剛倒下的那位，還是中場出身。",
   "brief": "巴薩可用的一線後衛只剩四人，19 歲的 Espart 傷退，要缺陣約七週；輸給皇馬後，台灣時間 11 月 1 日 04:00 接著踢阿拉維斯。亞馬爾已在金球獎典禮拿下年度最佳年輕球員。",
   "topic_key": "football:2026-10-27",
-  "updated_at": "2026-10-27T05:57:00+08:00",
+  "updated_at": "2026-11-01T15:56:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -247,6 +247,11 @@
     {
       "type": "p",
       "text": "四個後衛、八天、三場比賽。弗利克說球隊缺的是體力，他的後防現在缺的，先是人。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-01）",
+      "text": "說皇馬「下一戰是下個週末，客場去桑坦德」，從 10 月 27 日（週二）讀者的角度不成立。穆里尼奧 10 月 25 日說的 next weekend，就是 11 月 1 日這個週末：皇馬客場對桑坦德競技開球時間為 11 月 1 日 15:15（UTC），即台灣時間 11 月 1 日（週日）23:15。依據：ESPN 西甲賽程。"
     }
   ],
   "sources": [
@@ -416,6 +421,13 @@
       "date": "2026-07-14",
       "url": "https://commons.wikimedia.org/wiki/File:Pau_Cubarsi_France_v_Spain_7.24.26-042.jpg",
       "note": "頭圖"
+    },
+    {
+      "title": "LaLiga scoreboard, 2026-11-01",
+      "publisher": "ESPN",
+      "date": "2026-11-01",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261101",
+      "note": "Real Madrid at Racing Santander，2026-11-01T15:15Z"
     }
   ]
 }

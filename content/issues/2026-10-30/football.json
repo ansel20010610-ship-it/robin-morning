@@ -5,7 +5,7 @@
   "dek": "據報導，拉波爾塔個人最想要熱刺右後衛波羅；另有報導說，弗利克要高層去追斯圖加特中衛 Jeltsch。",
   "brief": "孔德 10 月 29 日又缺席訓練，據《世界體育報》，他趕不上對阿拉維斯。另據 3cat 報導，拉波爾塔個人最想要熱刺右後衛波羅，但巴薩還沒正式報價。對阿拉維斯在台灣時間 11 月 1 日週日 04:00 開球。",
   "topic_key": "football:2026-10-30",
-  "updated_at": "2026-10-30T06:00:00+08:00",
+  "updated_at": "2026-11-01T15:56:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -287,6 +287,11 @@
     {
       "type": "p",
       "text": "阿斯頓維拉 10 月 28 日（週三）聯賽盃作客伯恩茅斯，第 7 分鐘就丟球，最後 0 比 3。他們 11 月 4 日（週三）04:00 到 Spotify Camp Nou。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-01）",
+      "text": "說波羅「26 歲」，有誤，應為 27 歲（1999 年 9 月 13 日生）。依據：ESPN 10 月 30 日報導「Porro, 27」。"
     }
   ],
   "sources": [
@@ -485,6 +490,13 @@
       "date": "2026-10-30",
       "url": "https://www.espn.com/soccer/match/_/gameId/401916993/barcelona-hb-k%C3%B8ge",
       "note": "終場比分與進球者、分鐘取自 ESPN 比賽資料；未找到第二個可讀來源。"
+    },
+    {
+      "title": "Pedro Porro on Barcelona, Real Madrid interest",
+      "publisher": "ESPN",
+      "date": "2026-10-30",
+      "url": "https://www.espn.com/soccer/story/_/id/50327134",
+      "note": "「Porro, 27」"
     }
   ]
 }

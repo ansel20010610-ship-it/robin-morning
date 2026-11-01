@@ -5,7 +5,7 @@
   "dek": "落難的埃涅阿斯在迦太基看著特洛伊戰爭的畫，哭著說了一行詩。後人把它印上版畫、寫進教宗通諭，他接著說的「放下恐懼」沒有跟著走。",
   "brief": "1794 年倫敦一張版畫，畫著三只甕，甕座刻著路易十六、瑪麗・安東妮、伊莉莎白夫人上斷頭台的日期，標題下只印一行拉丁文：維吉爾《埃涅阿斯紀》的 sunt lacrimae rerum。在詩裡，這是落難的埃涅阿斯看著特洛伊戰爭的畫時說的，下一句是「放下恐懼」。德萊頓的英譯沒有對應這一句。",
   "topic_key": "literature:vergilius-aeneis-1-462",
-  "updated_at": "2026-10-28T03:21:50+08:00",
+  "updated_at": "2026-11-01T15:56:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -233,6 +233,11 @@
           "拉丁文與英文的中文皆本報翻譯"
         ]
       ]
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-01）",
+      "text": "說康寧頓是「1876 年出版注本」的牛津拉丁文教授，年份會讓人誤會。康寧頓在 1869 年 10 月已經過世；1876 年是本報引用的注本版本（倫敦 Whittaker 出版、Perseus 收錄）出版的年份，是他身後的版本。引用的注文不變。依據：Perseus 書目頁「London. Whittaker and Co. 1876」；Wikipedia〈John Conington〉。"
     }
   ],
   "sources": [
@@ -366,6 +371,13 @@
       "date": "",
       "url": "https://en.wikipedia.org/wiki/%C3%89lisabeth_of_France",
       "note": "1764 年 5 月 3 日至 1794 年 5 月 10 日，上斷頭台"
+    },
+    {
+      "title": "John Conington",
+      "publisher": "Wikipedia",
+      "date": "2026-11-01",
+      "url": "https://en.wikipedia.org/wiki/John_Conington",
+      "note": "卒於 1869 年 10 月 23 日；2026-11-01 查閱"
     }
   ]
 }

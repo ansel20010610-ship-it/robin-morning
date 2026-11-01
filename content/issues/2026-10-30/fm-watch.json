@@ -6,7 +6,7 @@
   "dek": "免費版開到 11 月 4 日（週三）凌晨兩點，之後要接著玩得先預購。授權名單新增兩個聯賽，也少了幾個名字。",
   "brief": "FM27 免費版今天凌晨兩點起在 Steam 開放，Steam 台灣區預購價 NT$1,611，比 FM26 現在的售價低 NT$179。前一天官網貼出的授權名單上，恩波利、比薩和直布羅陀不在。介面仍然沒有繁體中文。",
   "topic_key": "fm-watch:2026-10-30-launch-preview-live-licences",
-  "updated_at": "2026-10-30T05:35:00+08:00",
+  "updated_at": "2026-11-01T15:56:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -146,6 +146,11 @@
     {
       "type": "p",
       "text": "亞洲相關的項目有日本 J1 到 J3 和女子 WE League、南韓 K 聯賽兩級、澳洲男女職業聯賽、阿聯，再加上新來的沙烏地。兩份名單都沒有台灣。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-01）",
+      "text": "摘要說授權名單是「前一天」貼出，有誤。官網〈Football Manager 27 Licences〉是 10 月 28 日貼出，對 10 月 30 日早上的讀者是兩天前。依據：footballmanager.com 該頁標示 28.10.26。"
     }
   ],
   "sources": [

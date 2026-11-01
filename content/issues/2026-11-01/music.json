@@ -5,7 +5,7 @@
   "dek": "皇室包廂空著，站在樂手中間的作曲家聽不見喝采，詩的作者席勒在 1800 年的信裡說那是一首壞詩。",
   "brief": "第九號交響曲 1824 年在維也納首演，聽眾喝采到第五次，警察局長喊了「安靜」。貝多芬已經全聾，據記載，獨唱的女低音 Unger 拉了他的袖子，他才轉身鞠躬。詩的作者席勒，1800 年在信裡說這是一首壞詩。",
   "topic_key": "music:beethoven-op125",
-  "updated_at": "2026-11-01T01:20:00+08:00",
+  "updated_at": "2026-11-01T15:56:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -169,6 +169,11 @@
     {
       "type": "p",
       "text": "我選伯恩斯坦（Leonard Bernstein）1989 年在柏林的現場錄音，因為終樂章的歌詞換了一個字。那年聖誕節，他在柏林音樂廳指揮這首曲子，電視轉播，廣場上有好幾千人。樂團是巴伐利亞廣播交響樂團，另加上德勒斯登、列寧格勒、倫敦、紐約和巴黎的樂手；三個合唱團裡有前東柏林廣播合唱團的成員，也有德勒斯登愛樂的兒童合唱團。合唱和獨唱把「Freude」唱成了「Freiheit」（自由）。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-01）",
+      "text": "說「獨唱是在貝多芬住處由他親自帶的」，說得太滿。Thayer 的原文是獨唱歌手在貝多芬督導下練唱，「有時」在他的住處，而且有烏姆勞夫（Michael Umlauf）協助（the solo singers were studying under the supervision of Beethoven, sometimes in his lodgings, Umlauf assisting）。依據：Thayer《貝多芬傳》英文版第 3 卷（Project Gutenberg）。"
     }
   ],
   "sources": [

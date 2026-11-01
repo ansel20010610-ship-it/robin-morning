@@ -5,7 +5,7 @@
   "dek": "亞馬爾去年第二、今年第三，第一名換成了 33 歲的凱恩。女子金球給了剛離開巴薩的普特亞斯。",
   "brief": "凱恩拿下金球獎，是 2001 年歐文之後第一位英格蘭得主；亞馬爾第三，領年輕球員獎時說這座本來該是 Cubarsí 的。巴薩下一場是西甲第 11 輪，台灣時間 11 月 1 日（週日）04:00 主場對阿拉維斯。",
   "topic_key": "football:2026-10-28",
-  "updated_at": "2026-10-28T05:21:00+08:00",
+  "updated_at": "2026-11-01T15:56:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -235,6 +235,11 @@
     {
       "type": "p",
       "text": "以下三場都是台灣時間。11 月 1 日（週日）04:00，西甲第 11 輪主場對阿拉維斯（Alavés）。11 月 4 日（週三）04:00，歐冠聯賽階段第 4 輪，主場迎戰阿斯頓維拉（Aston Villa）。11 月 9 日（週一）04:00，西甲第 12 輪，作客馬競。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-01）",
+      "text": "速覽國王盃一則說 Sestao 是「西丙」球隊，有誤。Sestao River 踢的是 Segunda RFEF，屬西班牙第四級聯賽；西班牙人（Espanyol）是西甲球隊。依據：Infobae（EFE）10 月 27 日報導「El Sestao River, de Segunda RFEF」。"
     }
   ],
   "sources": [
@@ -360,6 +365,13 @@
       "date": "2026-07-19",
       "url": "https://commons.wikimedia.org/wiki/File:Lamine_Yamal_Argentina_v_Spain_19_July_2026-133.jpg",
       "note": "頭圖"
+    },
+    {
+      "title": "4-3. El Sestao apuntilla al Espanyol, y quizás a Manolo González, en el 121",
+      "publisher": "Infobae（EFE）",
+      "date": "2026-10-27",
+      "url": "https://www.infobae.com/espana/agencias/2026/10/27/4-3-el-sestao-apuntilla-al-espanyol-y-quizas-a-manolo-gonzalez-en-el-121/",
+      "note": "「El Sestao River, de Segunda RFEF」"
     }
   ]
 }

@@ -5,7 +5,7 @@
   "dek": "皇馬在諾坎普 2 比 1 贏下國家德比，巴薩本季聯賽首敗，榜首只領先馬競 2 分、皇馬 3 分。",
   "brief": "皇馬 2 比 1 贏巴薩，姆巴佩 41、87 分鐘梅開二度，拉菲尼亞 61 分鐘扳平。巴薩西甲 9 連勝止步、本季聯賽首敗，27 分仍居榜首，只領先馬競 2 分。下一場 11 月 1 日（週日）04:00 主場對阿拉維斯。",
   "topic_key": "football:2026-10-26",
-  "updated_at": "2026-10-26T06:14:00+08:00",
+  "updated_at": "2026-11-01T15:56:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -263,6 +263,11 @@
       "type": "p",
       "text": "女子組方面，Sky 10 月 23 日說阿麗西亞・普特亞斯（Alexia Putellas）領跑；Goal 10 月 20 日引用預測市場 Polymarket，給她 94% 的得獎機率。巴薩與皇馬的這場德比是 10 月 26 日 04:00 開踢，金球獎頒獎是 10 月 27 日 04:00，兩者剛好差 24 小時。",
       "tag": "報導"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-01）",
+      "text": "「換人與牌」一段說皇馬 90+2 分鐘的黃牌是庫庫雷利亞，有誤，應為胡森（Dean Huijsen）；庫庫雷利亞這場沒有吃牌。依據：ESPN 比賽紀錄（event 401882832）「90'+2' Dean Huijsen (Real Madrid) is shown the yellow card.」"
     }
   ],
   "sources": [
@@ -499,6 +504,13 @@
       "date": "2026-10-21",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261021",
       "note": "皇馬 4 比 1 萊比錫、拜仁 2 比 2 兵工廠、科莫 4 比 1 曼聯（主場在前）"
+    },
+    {
+      "title": "Barcelona vs Real Madrid – Match summary (event 401882832)",
+      "publisher": "ESPN",
+      "date": "2026-10-26",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401882832",
+      "note": "keyEvents：90'+2' Dean Huijsen 黃牌"
     }
   ]
 }
