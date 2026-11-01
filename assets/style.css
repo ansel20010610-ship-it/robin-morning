@@ -231,12 +231,6 @@ button { font: inherit; color: inherit; }
 /* The meta line: date, issue, reading time, update — each item kept whole, parted by a hairline of gold. Every item
    carries its own hairline on the left; the row is pulled left by the same amount and clipped, so the first item of
    every line loses its hairline. (No more line breaks between 「第 22」 and 「期」.) */
-/* 翻頁: the page under a finger (app.js swipe) moves one to one with it, lifting off the paper; let go short of a turn it
-   springs back (.settling). article { touch-action: pan-y } keeps the vertical scroll with the browser. */
-article.wrap { touch-action: pan-y pinch-zoom; }
-article.wrap.settling { transition: translate .3s cubic-bezier(.2,.7,.2,1); }
-article.wrap.lifting.to-l { box-shadow: 1px 0 0 var(--rule), 14px 0 24px -14px rgba(0, 0, 0, .35); }
-article.wrap.lifting.to-r { box-shadow: -1px 0 0 var(--rule), -14px 0 24px -14px rgba(0, 0, 0, .35); }
 .article-head .meta { font-family: var(--sans); font-size: 12.5px; color: var(--muted); letter-spacing: .04em; padding-bottom: 12px; border-bottom: 1px solid var(--rule); overflow: hidden; font-variant-numeric: tabular-nums; }
 :is(.article-head, .random .card) .meta .row { display: flex; flex-wrap: wrap; row-gap: 3px; margin-left: -11px; }
 :is(.article-head, .random .card) .meta .row > span { white-space: nowrap; padding: 0 10px; border-left: 1px solid var(--gold-soft); line-height: 1.5; }
