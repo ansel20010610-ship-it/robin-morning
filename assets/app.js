@@ -6,7 +6,7 @@ import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasCl
 import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 import { renderPush, clearNotices } from "./notify.js";
-import { calm, reveal, transition, celebrate, laurel, digestRing, mastheadShow, ripples, flip } from "./motion.js";
+import { calm, reveal, transition, celebrate, laurel, digestRing, mastheadShow, pressRun, ripples, flip } from "./motion.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -191,11 +191,17 @@ const EMBLEM = `<svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
   <path class="e-wing" d="M31 33 C36 31 42 32.5 45 36.5" stroke-width="1" stroke-linecap="round"/>
   <path class="e-legs" d="M30.5 47 L29.5 52.5 M36 46 L36 52.5 M15 53 L50 53" stroke-width="1.3" stroke-linecap="round"/></svg>`;
 
-function masthead(issue) {
+// `fresh` (viewFront, Druckfrisch): the issue is opened for the first time on this device — the masthead carries the
+// press roller's ink line and the wine date stamp, and holds its own entrance (.fresh, style.css) until motion.js
+// pressRun lets it go. The stamp is decoration: the topline already says the number and the day.
+function masthead(issue, fresh = false) {
   const date = issue?.date || twNow().date;
-  return `<header class="masthead"><div class="wrap">
+  const [y, m, d] = date.split("-").map(Number);
+  return `<header class="masthead${fresh ? " fresh" : ""}"><div class="wrap">
+    ${fresh ? `<i class="roller" aria-hidden="true"></i>` : ""}
     <hr class="rule-double">
     <div class="topline"><span>Wien · Taipei</span><span>${issue ? `No. ${issue.no}` : ""}</span><span>${esc(fmtDate(date, "de").split(",")[0])}</span></div>
+    ${fresh ? `<i class="stamp-date" aria-hidden="true"><b>Druckfrisch</b><span>No. ${esc(issue.no)}</span><span>${d}. ${roman(m)}. ${y}</span><i class="echo"></i></i>` : ""}
     <div class="checker" aria-hidden="true"></div>
     <div class="crest">${EMBLEM}<i class="burst" aria-hidden="true"></i><i class="wave" aria-hidden="true"></i><i class="wave w2" aria-hidden="true"></i></div>
     <h1>${esc(S.cfg.title)}</h1>
@@ -279,7 +285,13 @@ function viewFront(dateParam) {
   const supps = arts.filter((a) => col(a.column, issue.date).group === "supplement");
   const watch = arts.filter((a) => col(a.column, issue.date).group === "watch");
   const lead = mains[0];
-  main.innerHTML = `${masthead(issue)}
+  // Druckfrisch: the latest issue, opened for the first time on this device (rm.opened, the last 60 dates), comes off
+  // the press (motion.js pressRun). Every later visit — a redraw at 07:30, iOS waking the app, a step back from an
+  // article — plays only the masthead's own entrance. Not under ?preview: looking at tomorrow's issue early must not
+  // spend its morning.
+  const fresh = !dateParam && !isPreview() && !store.get("opened", []).includes(issue.date);
+  if (fresh) store.set("opened", [...store.get("opened", []), issue.date].slice(-60));
+  main.innerHTML = `${masthead(issue, fresh)}
   <div class="wrap">
     ${status ? `<div class="status">${status}</div>` : ""}
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的第 ${issue.no} 期・<a href="#/">回到最新一期</a></div>` : ""}
@@ -306,7 +318,7 @@ function viewFront(dateParam) {
   wireDigest(issue);
   // A tap on 接著上次 lands in the article where the reader stopped (viewArticle reads landKey).
   main.querySelectorAll(".cont[data-jump]").forEach((el) => el.addEventListener("click", () => { landKey = el.dataset.jump; }));
-  mastheadShow(main.querySelector(".masthead"));
+  if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
 }
 
 // 接著上次: the articles left part-read, newest issue first, at most two — on the front page above 正刊. Read ones and

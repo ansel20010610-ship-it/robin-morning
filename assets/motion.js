@@ -142,6 +142,26 @@ export function mastheadShow(head) {
   head.prepend(field);
 }
 
+// Druckfrisch — an issue opened for the first time on this device (app.js viewFront) comes off the press before the
+// masthead's entrance: the whole page rises from the bottom as a sheet leaving the rollers (#main.press, style.css
+// paper-up), an ink line rolls across its head (.roller), and a wine rubber stamp with the number and the day lands at
+// the top right, its square echo spreading from under it (.stamp-date). The masthead's own animations are held by
+// .fresh until the stamp has landed (1.5s); then they play as on any other morning, mosaic included (mastheadShow).
+// calm(): nothing moves and nothing is held — the stamp is simply there, the entrance is not played anyway.
+export function pressRun(head) {
+  if (!head) return;
+  if (calm()) { head.classList.remove("fresh"); return; }
+  const page = head.closest("#main") || head.parentElement;
+  page?.classList.add("press");
+  setTimeout(() => {
+    page?.classList.remove("press"); // the sheet is flat again: sticky bars work as before
+    head.querySelector(".roller")?.remove();
+    if (!head.isConnected) return; // the reader has already gone elsewhere
+    head.classList.remove("fresh");
+    mastheadShow(head);
+  }, 1500);
+}
+
 // A gold ripple from the point a card or button is pressed.
 export function ripples() {
   document.addEventListener("pointerdown", (e) => {

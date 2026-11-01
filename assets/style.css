@@ -115,6 +115,20 @@ button { font: inherit; color: inherit; }
   padding: 8px 0 10px;
 }
 .masthead .checker { margin-top: 0; }
+/* Druckfrisch (app.js masthead, motion.js pressRun): on the first opening of an issue, a wine rubber stamp at the top
+   right beside the crest — the word, the number, the day in the Viennese manner (1. XI. 2026) — set a little askew, inked
+   twice round like the 隨手翻 stamp. Multiplied into the paper by day; at night the pink ink simply lies on it. The press
+   roller's line is kept folded (scaleX 0) until the motion below runs it; with reduced motion it never shows. */
+.masthead .stamp-date { position: absolute; right: var(--gutter); top: 56px; z-index: 3; padding: 5px 8px 6px; border: 1.5px solid currentColor; color: var(--wine);
+  box-shadow: inset 0 0 0 2px var(--paper), inset 0 0 0 3px currentColor; rotate: -8deg; mix-blend-mode: multiply; opacity: .92;
+  font-family: var(--latin); font-style: normal; font-size: 11px; font-weight: 600; letter-spacing: .12em; line-height: 1.3; text-transform: uppercase; text-align: center; }
+.masthead .stamp-date b, .masthead .stamp-date span { display: block; }
+.masthead .stamp-date b { font-size: 12px; font-weight: 700; letter-spacing: .16em; padding-left: .16em; margin-bottom: 1px; }
+.masthead .stamp-date span { padding-left: .12em; }
+.masthead .stamp-date .echo { position: absolute; inset: -3px; border: 1.5px solid currentColor; opacity: 0; pointer-events: none; }
+.masthead .roller { position: absolute; left: 0; right: 0; top: -1px; height: 3px; background: var(--ink); transform-origin: 0 50%; transform: scaleX(0); z-index: 3; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .masthead .stamp-date { mix-blend-mode: normal; } }
+:root[data-theme="dark"] .masthead .stamp-date { mix-blend-mode: normal; }
 
 .status {
   margin: 18px 0 0; padding: 12px 14px; border: 1px solid var(--rule); background: var(--paper-2);
@@ -843,6 +857,18 @@ img.img-off { visibility: hidden; }
     75% { opacity: .95; }
     100% { opacity: .2; transform: translate(var(--x), var(--y)) rotate(var(--r)) scale(var(--s)); }
   }
+  /* Druckfrisch (motion.js pressRun): the first opening of an issue. The page comes up from the bottom like a sheet
+     leaving the rollers (.9s); an ink line rolls across the head of the paper and fades (line-run, as under the cards);
+     at 1s the stamp comes down — the finish line's stamp keyframes, from large and turned to flat — and its square echo
+     spreads out from under it (the crest's wave). Until pressRun lifts .fresh at 1.5s, everything of the masthead's
+     own entrance is held at its first frame — crest, title, subtitle, dateline, bands, verse — so it plays after the
+     stamp, not under it; the topline and the rules are there from the start, like the sheet's own printed furniture. */
+  #main.press { animation: paper-up .9s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes paper-up { from { transform: translateY(14%); opacity: .6; } to { transform: none; opacity: 1; } }
+  .masthead.fresh .roller { animation: line-run 1.1s .1s cubic-bezier(.3,.7,.2,1) both; }
+  .masthead .stamp-date { animation: stamp .55s 1s cubic-bezier(.2,1.5,.4,1) both; }
+  .masthead .stamp-date .echo { animation: wave 1.2s 1.3s cubic-bezier(.15,.7,.3,1) both; }
+  .masthead.fresh :is(.crest, h1, .latin, .dateline, .checker, .epigraph), .masthead.fresh :is(.crest, h1, .epigraph) *, .masthead.fresh h1::after, .masthead.fresh .epigraph span::after { animation-play-state: paused; }
 
   /* The seal is stamped in when you reach the end. */
   .finish.stamp :is(.tick, .laurel) { animation: stamp .7s cubic-bezier(.2,1.5,.4,1) both; }
