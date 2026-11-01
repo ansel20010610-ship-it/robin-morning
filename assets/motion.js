@@ -102,7 +102,7 @@ export function mastheadShow(head) {
 export function ripples() {
   document.addEventListener("pointerdown", (e) => {
     if (calm()) return;
-    const el = e.target.closest(".lead, .item, .btn, .issue-row, .chip, .opt, .nav a");
+    const el = e.target.closest(".lead, .item, .btn, .issue-row, .chip, .opt, .nav a, a.gig");
     if (!el) return;
     const r = el.getBoundingClientRect(), size = Math.max(r.width, r.height) * 2.2;
     const w = document.createElement("span");
