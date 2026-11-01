@@ -1,0 +1,193 @@
+{
+  "column": "perio",
+  "date": "reserve",
+  "reserve_written": "2026-11-01",
+  "title": "孕期治牙周，牙周指標改善，早產沒有顯著減少",
+  "dek": "2006 年《新英格蘭醫學期刊》的 OPT 試驗，收了 823 名有牙周炎的孕婦，檢驗孕期治療牙周能不能降低早產。",
+  "brief": "有牙周炎的孕婦在 21 週前做齦下清創，牙周指標改善了，早產率和產後才治療的一組沒有顯著差異：12.0% 對 12.8%。流產與死產兩組也沒有顯著差異。2013 年 EFP 與 AAP 的共識也說，牙周治療對孕婦安全、能改善牙周狀況，但依病情進行的牙周治療不會降低早產與低出生體重的整體發生率。",
+  "takeaway": "孕期 21 週前做完齦下清創，牙周指標改善，早產率 12.0% 對 12.8%，沒有顯著差異（風險比 0.93，95% 信賴區間 0.63–1.37）。這項試驗沒有看到治療能降低早產。",
+  "quiz": "孕婦有牙周炎，在懷孕 21 週前做齦下清創，OPT 試驗看到早產率降低了嗎？",
+  "topic_key": "perio:doi:10.1056/nejmoa062249",
+  "updated_at": "2026-11-01T14:46:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "type": "svg",
+    "title": "OPT 試驗的孕期時間表",
+    "svg": "<svg viewBox=\"0 0 640 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect class=\"paper\" x=\"0\" y=\"0\" width=\"640\" height=\"300\"/><text class=\"ink\" x=\"20\" y=\"28\" font-size=\"16\">OPT 試驗：兩組在孕期各做了什麼</text><rect class=\"soft\" x=\"216\" y=\"60\" width=\"48\" height=\"190\"/><text class=\"muted\" x=\"240\" y=\"54\" font-size=\"12\" text-anchor=\"middle\">13–17 週隨機分組</text><line class=\"accent\" x1=\"504\" y1=\"60\" x2=\"504\" y2=\"250\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><text class=\"accent\" x=\"500\" y=\"74\" font-size=\"12\" text-anchor=\"end\">37 週前生產算早產</text><line class=\"muted\" x1=\"540\" y1=\"60\" x2=\"540\" y2=\"250\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text class=\"muted\" x=\"544\" y=\"54\" font-size=\"12\">分娩</text><text class=\"ink\" x=\"10\" y=\"108\" font-size=\"13\">治療組</text><text class=\"muted\" x=\"10\" y=\"124\" font-size=\"11\">隨機 413 人</text><text class=\"accent\" x=\"218\" y=\"96\" font-size=\"12\">齦下清創，21 週前做完</text><rect class=\"accent\" x=\"216\" y=\"102\" width=\"96\" height=\"14\" fill=\"currentColor\"/><text class=\"muted\" x=\"320\" y=\"134\" font-size=\"12\">另有每月拋光、口腔衛生指導</text><text class=\"ink\" x=\"10\" y=\"192\" font-size=\"13\">對照組</text><text class=\"muted\" x=\"10\" y=\"208\" font-size=\"11\">隨機 410 人</text><line class=\"muted\" x1=\"216\" y1=\"190\" x2=\"444\" y2=\"190\" stroke=\"currentColor\" stroke-width=\"2\"/><text class=\"muted\" x=\"270\" y=\"212\" font-size=\"12\">追蹤到 29–32 週</text><rect class=\"gold\" x=\"548\" y=\"183\" width=\"72\" height=\"14\" fill=\"currentColor\"/><text class=\"ink\" x=\"548\" y=\"218\" font-size=\"12\">產後才治療</text><line class=\"ink\" x1=\"60\" y1=\"250\" x2=\"540\" y2=\"250\" stroke=\"currentColor\" stroke-width=\"1\"/><line class=\"ink\" x1=\"60\" y1=\"250\" x2=\"60\" y2=\"256\" stroke=\"currentColor\"/><line class=\"ink\" x1=\"180\" y1=\"250\" x2=\"180\" y2=\"256\" stroke=\"currentColor\"/><line class=\"ink\" x1=\"300\" y1=\"250\" x2=\"300\" y2=\"256\" stroke=\"currentColor\"/><line class=\"ink\" x1=\"420\" y1=\"250\" x2=\"420\" y2=\"256\" stroke=\"currentColor\"/><text class=\"muted\" x=\"60\" y=\"272\" font-size=\"12\" text-anchor=\"middle\">0</text><text class=\"muted\" x=\"180\" y=\"272\" font-size=\"12\" text-anchor=\"middle\">10</text><text class=\"muted\" x=\"300\" y=\"272\" font-size=\"12\" text-anchor=\"middle\">20</text><text class=\"muted\" x=\"420\" y=\"272\" font-size=\"12\" text-anchor=\"middle\">30</text><text class=\"muted\" x=\"540\" y=\"272\" font-size=\"12\" text-anchor=\"middle\">40 週</text></svg>",
+    "caption": "橫軸是孕週。兩組都在懷孕 13 到 17 週入組；治療組 21 週前做完齦下清創，另有每月拋光與衛教（時程摘要未載，圖中不畫）。對照組從入組追蹤到 29–32 週，產後才做齦下清創（JADA 分析寫產後三個月內）；登記頁另寫，追蹤中牙周炎惡化者不論組別立即治療。示意。人數為隨機分組人數。",
+    "credit": "本報繪製，依 Michalowicz 等（2006）摘要、ClinicalTrials.gov NCT00066131 與 Michalowicz 等（2008）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "2002 年智利聖地牙哥有一篇試驗，收了 400 名有牙周病的孕婦，一半在懷孕 28 週前治療牙周，一半在產後治療；37 週前生產或嬰兒體重低於 2,500 g 的比例，治療組 1.84%（3／163），對照組 10.11%（19／188）。作者的結論是，牙周治療顯著降低了這個比例。"
+    },
+    {
+      "type": "p",
+      "text": "分母不是 200 對 200。400 人裡有 49 人因各種原因沒進分析。"
+    },
+    {
+      "type": "p",
+      "text": "四年後，Michalowicz 等人的 OPT 試驗（Obstetrics and Periodontal Therapy）收了 823 名懷孕 13 到 17 週、有牙周炎的婦女。治療組 21 週前做完齦下刮除與根面整平（scaling and root planing），另有每月拋光和口腔衛生指導；對照組產後才做。"
+    },
+    {
+      "type": "p",
+      "text": "收案條件：4 顆以上的牙有 4 mm 以上囊袋、附著喪失 2 mm 以上，全口至少 35% 的部位探診出血。"
+    },
+    {
+      "type": "p",
+      "text": "牙周指標改善了（P<0.001）。早產沒有顯著差異：治療組 12.0%，對照組 12.8%，風險比（hazard ratio）0.93，95% 信賴區間從 0.63 跨到 1.37，P=0.70。出生體重、小於妊娠年齡兒的比例，兩組也沒有顯著差異。"
+    },
+    {
+      "type": "table",
+      "title": "兩組的生產結果",
+      "head": [
+        "",
+        "21 週前治療",
+        "產後治療"
+      ],
+      "rows": [
+        [
+          "早產（37 週前）",
+          "49／407 人（12.0%），其中活產 44",
+          "52／405 人（12.8%），其中活產 38"
+        ],
+        [
+          "出生體重",
+          "3,239 g",
+          "3,258 g"
+        ],
+        [
+          "小於妊娠年齡兒",
+          "12.7%",
+          "12.3%"
+        ],
+        [
+          "自然流產或死產",
+          "5 例",
+          "14 例"
+        ]
+      ],
+      "caption": "依 Michalowicz 等（2006）摘要整理。人數為早產分析人數（407／405），隨機分組人數是 413／410。早產風險比（hazard ratio）0.93（95% CI 0.63–1.37，P=0.70）；出生體重 P=0.64；小於妊娠年齡兒勝算比 1.04（95% CI 0.68–1.58）；流產或死產 P=0.08。早產與活產的差額（49−44＝5、52−38＝14）正好等於流產或死產例數，推算這些已算在早產之內，摘要沒有明說。"
+    },
+    {
+      "type": "h",
+      "text": "打了麻藥，也補了牙"
+    },
+    {
+      "type": "p",
+      "text": "自然流產或死產，治療組 5 例，對照組 14 例（P=0.08），差距沒有達到顯著。"
+    },
+    {
+      "type": "p",
+      "text": "兩年後，同一團隊在《美國牙醫學會期刊》回頭看這 823 人。其中 351 位在懷孕 13 到 21 週補了中重度蛀牙，或處理了斷牙、膿腫。她們和不需要這些處置的人比，嚴重不良事件、流產死產、先天異常、早產都沒有顯著差異。"
+    },
+    {
+      "type": "p",
+      "text": "根面整平時用的表面或局部麻醉，也沒有看到和不良結果風險增加有關。這些比較的是有無接受處置，不是治療組對對照組；範圍僅 13 到 21 週；無顯著差異不等於證明沒有增加。"
+    },
+    {
+      "type": "h",
+      "text": "關聯在，只是不強"
+    },
+    {
+      "type": "p",
+      "text": "2013 年 EFP 與 AAP 聯合研討會的共識，整理了母親牙周炎與不良妊娠結果的關聯，說強度屬中等偏弱（modest），還會隨族群、牙周評估方法與分類標準而變。"
+    },
+    {
+      "type": "quote",
+      "text": "牙周治療已證實對孕婦安全，也能改善她們的牙周狀況；但依病情進行的牙周治療，不論是否併用全身性抗生素，都不會降低早產與低出生體重的整體發生率。",
+      "original": "Although periodontal therapy has been shown to be safe and leads to improved periodontal conditions in pregnant women, case-related periodontal therapy, with or without systemic antibiotics does not reduce overall rates of pre-term birth and low birthweight.",
+      "cite": "EFP/AAP 聯合研討會共識報告（Sanz 與 Kornman，2013）"
+    },
+    {
+      "type": "p",
+      "text": "2009 年的 MOTOR 試驗比 OPT 大，隨機分組 1,806 人，早產率治療組 13.1%、對照組 11.5%（P=0.316），結論同樣是沒有降低。"
+    },
+    {
+      "type": "p",
+      "text": "2017 年的 Cochrane 回顧收了 15 篇隨機試驗、7,161 人，每一篇的偏差風險都高。早產看不出明確差異；低出生體重可能少一些，9.70% 對 12.60%，證據品質低。"
+    },
+    {
+      "type": "h",
+      "text": "照治，別拿早產當理由"
+    },
+    {
+      "type": "list",
+      "items": [
+        "OPT 的齦下清創分 1 到 4 次、每次 90 分鐘，21 週前做完，視需要用表面或注射局部麻醉。",
+        "OPT 的治療改善了牙周炎指標。早產，OPT 與 MOTOR 都沒有看到顯著差異，OPT 的出生體重也沒有；Cochrane 對早產的判斷是影響不明確。",
+        "安全性的資料只涵蓋 13 到 21 週，作者也說還要更大的研究確認。",
+        "OPT 排除多胞胎，也排除牙周處置需要抗生素預防的孕婦；這批資料沒有涵蓋這兩類人。"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "2013 年那份共識報告的工作小組成員包括 Michalowicz，也就是 OPT 的第一作者。"
+    },
+    {
+      "type": "paper",
+      "citation": "Michalowicz BS, Hodges JS, DiAngelis AJ, Lupo VR, Novak MJ, Ferguson JE, Buchanan W, Bofill J, Papapanou PN, Mitchell DA, Matseoane S, Tschida PA; OPT Study. Treatment of periodontal disease and the risk of preterm birth. *N Engl J Med*. 2006;355(18):1885-1894.",
+      "doi": "10.1056/NEJMoa062249",
+      "pmid": "17079762",
+      "link": "https://doi.org/10.1056/NEJMoa062249",
+      "evidence": "隨機對照試驗：823 名孕婦；主要結果為生產孕週",
+      "design": "隨機對照試驗；治療組 21 週前齦下清創，加每月拋光與衛教，對照組產後治療",
+      "sample": "823 名懷孕 13–17 週、有牙周炎的婦女（隨機：治療組 413 人、對照組 410 人；早產分析：407 人與 405 人）",
+      "question": "孕期治療牙周炎，能不能降低早產？",
+      "access": "依 PubMed 摘要、ClinicalTrials.gov 登記資料與後續文獻整理"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Treatment of periodontal disease and the risk of preterm birth",
+      "publisher": "New England Journal of Medicine（Michalowicz BS 等，OPT Study）",
+      "date": "2006-11-02",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17079762/",
+      "note": "主角論文。讀 PubMed 摘要；卷期頁 355(18):1885-1894 經 Crossref 核對。NEJM 全文頁無法開啟。摘要寫 13–17 週入組，登記頁寫 13–16 週，正文採摘要。摘要寫 scaling and root planing 於 21 週前，登記頁描述寫 prior to 20 weeks、arm 寫 21 週，正文採摘要與 arm 的 21 週。摘要寫 hazard ratio（風險比），非 risk ratio。隨機 413／410 人，早產分析 407／405 人（49 例早產含活產 44，52 例含活產 38）。"
+    },
+    {
+      "title": "Obstetrics and Periodontal Therapy (OPT) Study (NCT00066131)",
+      "publisher": "ClinicalTrials.gov",
+      "date": "2003-08-05",
+      "url": "https://clinicaltrials.gov/study/NCT00066131",
+      "note": "讀登記資料：納入與排除條件、齦下清創分 1–4 次每次 90 分鐘、對照組追蹤至 29–32 週；描述寫牙周炎惡化者不論組別立即治療。描述寫治療在 20 週前（prior to 20 weeks），arm 寫 21 週。日期為首次公開日，最後更新 2015-07-27。"
+    },
+    {
+      "title": "Examining the safety of dental treatment in pregnant women",
+      "publisher": "Journal of the American Dental Association（Michalowicz BS 等）",
+      "date": "2008-06",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18519992/",
+      "note": "讀摘要。OPT 同一批 823 人的安全性分析；351 人於 13–21 週完成必要牙科處置；對照組於產後三個月內接受齦下清創。作者也寫需要更大的研究確認。"
+    },
+    {
+      "title": "Periodontal therapy may reduce the risk of preterm low birth weight in women with periodontal disease: a randomized controlled trial",
+      "publisher": "Journal of Periodontology（López NJ 等）",
+      "date": "2002-08",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12211502/",
+      "note": "讀摘要。主要結果為 37 週前生產或出生體重低於 2,500 g；400 人中 49 人未進分析；1.84%（3/163）對 10.11%（19/188）。"
+    },
+    {
+      "title": "Effects of periodontal therapy on rate of preterm delivery: a randomized controlled trial",
+      "publisher": "Obstetrics & Gynecology（Offenbacher S 等，MOTOR）",
+      "date": "2009-09",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19701034/",
+      "note": "讀摘要。隨機 1,806 人，1,760 人可評估；早產 13.1% 對 11.5%（P=.316）；結論為牙周治療未降低早產發生率。"
+    },
+    {
+      "title": "Periodontitis and adverse pregnancy outcomes: consensus report of the Joint EFP/AAP Workshop on Periodontitis and Systemic Diseases",
+      "publisher": "Journal of Clinical Periodontology（Sanz M、Kornman K 等）",
+      "date": "2013-04",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23627326/",
+      "note": "讀摘要。J Clin Periodontol 2013;40 Suppl 14:S164-9。Michalowicz 為工作小組成員。"
+    },
+    {
+      "title": "Treating periodontal disease for preventing adverse birth outcomes in pregnant women",
+      "publisher": "Cochrane Database of Systematic Reviews（Iheozor-Ejiofor Z 等）",
+      "date": "2017-06-12",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28605006/",
+      "note": "讀摘要。CD005297.pub3。治療對不治療：早產 RR 0.87（95% CI 0.70–1.10；11 篇、5,671 人；低品質）；低出生體重 RR 0.67（95% CI 0.48–0.95；7 篇、3,470 人；低品質）；納入研究偏差風險皆高。"
+    }
+  ]
+}
