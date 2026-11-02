@@ -1,0 +1,213 @@
+{
+  "column": "architecture",
+  "date": "2026-11-03",
+  "title": "砲擊沙特爾主教座堂的命令撤回了",
+  "dek": "一位美軍上校帶一名士兵搜過教堂，同一天在城北陣亡。這座教堂在 1194 年遇上大火，火後留下最大的一塊是西立面。",
+  "brief": "美軍上校格里菲斯 1944 年 8 月 16 日帶一名士兵搜過沙特爾主教座堂，沒有找到敵軍，砲擊教堂的命令撤回了；同一天稍晚，他在城北的勒韋陣亡。這座教堂 1194 年遇上大火，重建時留下燒剩的西立面，當成新教堂的起點。",
+  "topic_key": "architecture:chartres-cathedral",
+  "updated_at": "2026-11-03T02:07:35+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Chartres_cathedral_%28West_fa%C3%A7ade%29.jpg/1280px-Chartres_cathedral_%28West_fa%C3%A7ade%29.jpg",
+    "width": 1280,
+    "height": 1494,
+    "alt": "沙特爾主教座堂的西立面：中央是圓形玫瑰窗，下方三道門，兩側各一座塔，左邊的塔尖頂繁複，右邊的塔尖頂光滑簡單。",
+    "caption": "西立面。右邊（南塔）約 1170 年完工，左邊（北塔）的鐘樓是 16 世紀以火焰式風格補上的。攝影：Dcconsta，2013 年 8 月。",
+    "credit": "Dcconsta / Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chartres_cathedral_(West_fa%C3%A7ade).jpg"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1944 年 8 月 16 日，一個美軍裝甲師占領了沙特爾（Chartres）。第 20 軍的作戰參謀格里菲斯（Welborn Griffith）上校進城，是為了核對這個師各部隊的實際位置。"
+    },
+    {
+      "type": "quote",
+      "text": "看到火力朝市中心的大教堂打過去，格里菲斯上校不顧自身安危，帶著一名士兵搜了教堂，確認裡面沒有敵軍，便發出停止射擊的信號。",
+      "original": "Upon observing fire being directed at the cathedral in the center of the city, with utter disregard for his own safety, Colonel Griffith, accompanied by an enlisted man, searched the cathedral and finding that there were no enemy troops within, signaled for cessation of fire.",
+      "cite": "Distinguished Service Cross 嘉獎令，載於 Legion of Valor 網站"
+    },
+    {
+      "type": "p",
+      "text": "美軍當時相信，教堂的尖塔和塔樓被德軍拿來當砲兵觀測哨，砲擊教堂的當時有一道砲擊教堂的命令。格里菲斯也爬上鐘塔看過，沒有德軍。那道命令撤回了。"
+    },
+    {
+      "type": "h",
+      "text": "燒剩最多的是立面"
+    },
+    {
+      "type": "p",
+      "text": "他搜的這座教堂，1194 年 6 月 10 日夜裡遭大火。火後留下來的，主要是地下室和西立面的一部分，立面是保存下來最大的一塊。教堂那件傳為聖母面紗的聖物，一度被當成遺失，後來才找到，其實神職人員在大火中把它藏進了地下室。"
+    },
+    {
+      "type": "p",
+      "text": "主教雷諾・德・穆頌（Renaud de Mousson）決定用當時的新技術重建。錢來自歐洲各地的王室與貴族，也有平民的小額捐款；動手蓋的人，名字至今不明。1194 年起重建，約 1221 年結構完工，1260 年 10 月在國王路易九世面前祝聖。"
+    },
+    {
+      "type": "p",
+      "text": "比起蓋得多快，我更在意的是他們留下了燒剩的西立面，把它當成新教堂的起點。王者之門（Royal Portal）的三道門是 12 世紀中葉的東西，後面接上的中殿與歌壇，第一次做出了一套後來在 13 世紀廣為採用的格式。立面在火後加高，上方添了一扇大玫瑰窗。"
+    },
+    {
+      "type": "h",
+      "text": "牆外那一排拱臂"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Chartres_-_cath%C3%A9drale_-_arcs-boutants_de_la_nef.JPG/1280px-Chartres_-_cath%C3%A9drale_-_arcs-boutants_de_la_nef.JPG",
+      "width": 1280,
+      "height": 853,
+      "alt": "仰拍沙特爾主教座堂中殿一側：一排石造飛扶壁從外牆向上伸出拱臂，頂端接著屋頂。",
+      "caption": "中殿一側的飛扶壁（arc-boutant）：拱臂從牆外頂住上層的牆。攝影：Florestan，2009 年 2 月。",
+      "credit": "Florestan / Wikimedia Commons",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chartres_-_cath%C3%A9drale_-_arcs-boutants_de_la_nef.JPG"
+    },
+    {
+      "type": "p",
+      "text": "石造的肋拱頂會把牆往外推。更早的哥德式教堂要站得穩，牆面多半分成四層：底下一排粗柱子撐起的拱廊，上面一層寬的樓廊（tribune），再上去一層窄拱廊（triforium），最頂上才輪到開窗的高牆。"
+    },
+    {
+      "type": "p",
+      "text": "沙特爾在牆外加了飛扶壁（arc-boutant），抵掉拱頂往外推的力。牆從外面撐住了，樓廊整層拿掉，窄拱廊做得很窄，上面就空出很多地方開窗：每一個開間兩扇尖拱窗加一扇玫瑰窗，占滿兩根柱子之間的牆面。沙特爾不是第一座這樣蓋的教堂，但它用得更一貫、更徹底。"
+    },
+    {
+      "type": "h",
+      "text": "一扇窗，一棟大宅"
+    },
+    {
+      "type": "p",
+      "text": "教堂幾乎完整留住了約 1210 到 1250 年間做的整套彩窗。有幾扇窗上畫著各行各業的工人，舊說法是行會捐的窗；現在多半不這麼看，一扇窗的造價最多可以抵一棟大宅，這些行會當時也還沒成立。二戰期間，大部分彩色玻璃拆下來存到周邊鄉間，戰後裝回。"
+    },
+    {
+      "type": "p",
+      "text": "1836 年 6 月，工人疏忽起了火，木造屋架和鉛皮屋頂燒掉了，結構和彩窗沒有受損；屋頂後來改成鐵架覆銅。照 UNESCO 的說法，除了這場火和拆掉的祭壇隔屏（jubé），這座建築沒有經歷過其他重大改變。"
+    },
+    {
+      "type": "h",
+      "text": "牆是赭色，柱子是白的"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Cleaned_and_restored_Nave_Chartres_Cathedral.jpg/1280px-Cleaned_and_restored_Nave_Chartres_Cathedral.jpg",
+      "width": 1280,
+      "height": 960,
+      "alt": "沙特爾主教座堂內部：畫面左邊的牆與拱柱是亮白色，右邊的柱子與拱頂暗黑，右上角露出一角藍色彩窗，中殿地面排著草編椅。",
+      "caption": "清洗並重新粉刷過的部分（左）與因年代和煤煙發黑的部分（右）。攝影：Stephen Taber，2019 年 5 月 27 日。",
+      "credit": "Stephen Taber / Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cleaned_and_restored_Nave_Chartres_Cathedral.jpg"
+    },
+    {
+      "type": "p",
+      "text": "1994 年起，教堂動手整修室內，要找回 13 世紀設計時的裝飾。牆上露出來的 13 世紀彩繪，是一套幾乎完整保存的假石縫。大教堂官網說，牆面是赭色塗層，畫成一塊塊方石砌起來的樣子；柱子和拱這些承重的構件是白色，官網說這讓建築師安排的力看得見。"
+    },
+    {
+      "type": "h",
+      "text": "城北的戰車"
+    },
+    {
+      "type": "p",
+      "text": "同一天稍晚，格里菲斯繼續巡視城北的外圍陣地，撞上約 15 名敵軍，朝他們開了幾槍，再走到最近的己方哨所，那裡有一輛戰車。他拿起 M-1 步槍爬上戰車，指引它朝剛才發現的敵軍前進，在機槍、步槍和火箭筒的火力下陣亡。地點在沙特爾以北約 3.5 公里的勒韋（Lèves）。"
+    },
+    {
+      "type": "p",
+      "text": "勒韋的居民看見他倒下，幾個小時內就用毯子、花束和一面美國國旗蓋住他，等美軍的殯葬班來。"
+    },
+    {
+      "type": "p",
+      "text": "那年 10 月 21 日，他死後獲頒卓越服務十字勳章（Distinguished Service Cross）。勒韋的居民為他立了一塊紀念牌；每年 8 月 16 日，有人在他陣亡的地方放花。"
+    },
+    {
+      "type": "facts",
+      "title": "沙特爾主教座堂（Cathédrale Notre-Dame de Chartres）",
+      "items": [
+        [
+          "所在",
+          "法國，沙特爾"
+        ],
+        [
+          "現存主體",
+          "1194 年大火後重建，約 1221 年結構完工，1260 年祝聖"
+        ],
+        [
+          "西立面",
+          "12 世紀中葉建成；1194 年大火後加高，加上玫瑰窗"
+        ],
+        [
+          "設計者",
+          "不詳"
+        ],
+        [
+          "尺寸",
+          "拱頂最高處 37 公尺；中殿寬 16.4 公尺"
+        ],
+        [
+          "世界遺產",
+          "1979 年登錄"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Chartres Cathedral（世界遺產名錄 81）",
+      "publisher": "UNESCO World Heritage Centre",
+      "date": "",
+      "url": "https://whc.unesco.org/en/list/81/",
+      "note": "2026-11-03 重讀，頁面無日期。用到：Brief synthesis（西立面約 12 世紀中葉、1194 年起重建的中殿與歌壇首創的格式、約 1210–1250 彩窗）、三個 Criterion（i）（ii）（iv）、Integrity（室內整修找回 13 世紀假石縫彩繪）、Authenticity（唯一重大改變是拆隔屏與 1836 年屋頂大火、1837 年金屬屋架；此處寫拆隔屏在 17 世紀，與旅遊局的 18 世紀、Wikipedia 的 1753 年不一致，正文不寫年代）、1979 年登錄。"
+    },
+    {
+      "title": "History of Chartres cathedral",
+      "publisher": "沙特爾旅遊局",
+      "date": "2017-09-27",
+      "url": "https://www.chartres-tourisme.com/en/do-not-miss/the-chartres-cathedral/history-of-chartres-cathedral",
+      "note": "頁面 published 2017-09-27、modified 2019-09-09。1194 年大火只留下地下室與部分西立面、聖物一度以為遺失（holy relic）後在地下室找回、穆頌主教以新技術重建、1221 年結構完工、1260 年祝聖、約 1150 立面完成與約 1170 南塔、16 世紀北鐘樓、隔屏拆於 18 世紀、1836 年屋架大火、1994 年起整修。"
+    },
+    {
+      "title": "The cathedral's builders: the trades",
+      "publisher": "沙特爾旅遊局",
+      "date": "2017-09-27",
+      "url": "https://www.chartres-tourisme.com/en/the-cathedral/history-of-chartres-cathedral/the-cathedral-s-builders-the-trades",
+      "note": "建造者姓名不明。頁面另寫「據說」不到 26 年；各來源年數不一（25 年、約 30 年），正文不寫年數。"
+    },
+    {
+      "title": "The 13th century Cathedral",
+      "publisher": "Cathédrale de Chartres（大教堂官網）",
+      "date": "2020-11-11",
+      "url": "https://www.cathedrale-chartres.org/en/cathedrale/monument/architecture/the-13th-century-cathedral/",
+      "note": "頁面 2020-11-11 發布、2022-07-18 修改。立面是 1194 年火前保存最多的部分、新建築的起點，火後加高並加大玫瑰窗；地下室躲過火；建築師姓名不明；拱頂 37 公尺、中殿 16.4 公尺；飛扶壁讓樓廊消失；每開間兩扇尖拱窗一扇玫瑰窗占滿兩柱之間；牆面赭色塗層與假石縫、柱與拱為白色。"
+    },
+    {
+      "title": "Chartres Cathedral",
+      "publisher": "Wikipedia",
+      "date": "2026-10-20",
+      "url": "https://en.wikipedia.org/wiki/Chartres_Cathedral",
+      "note": "date 為最後修訂日。1194 年 6 月 10 日夜、經費來源、行會捐窗說被推翻、飛扶壁抵銷拱頂外推並讓樓廊取消（同條目一處說 first known use，另一處說 not the first，正文不寫「第一座」）、1221 年年表、1260 年 10 月祝聖、1836 年起火原因、二戰彩窗存放與戰後裝回、1944 年美軍相信塔上有觀測哨（此條目另說他讓鐘響起）。"
+    },
+    {
+      "title": "COLONEL Welborn B Griffith",
+      "publisher": "Legion of Valor",
+      "date": "",
+      "url": "https://legionofvalor.org/?p=6841",
+      "note": "頁面無日期。DSC 嘉獎令全文（城名遮掉，頁面說明遮掉的是 Chartres 與 Leves；開火句為被動語態，未寫開火者）、居民覆蓋遺體、每年 8 月 16 日放花、紀念牌（此頁說在他陣亡的那棟建築上，Wikipedia 說在旁邊的建築，正文不寫位置）。編者說明另寫他敲了教堂的鐘；嘉獎令只寫「signaled」，正文照嘉獎令。"
+    },
+    {
+      "title": "Welborn Griffith",
+      "publisher": "Wikipedia",
+      "date": "2026-10-14",
+      "url": "https://en.wikipedia.org/wiki/Welborn_Griffith",
+      "note": "date 為最後修訂日。第 20 軍作戰參謀（G-3）、爬上鐘塔沒有找到德軍、砲擊命令撤回（Schulz 回憶）、同一天稍晚在勒韋陣亡、勒韋位於沙特爾以北約 3.5 公里、居民立紀念牌。"
+    }
+  ]
+}
