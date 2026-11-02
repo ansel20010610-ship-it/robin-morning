@@ -135,9 +135,13 @@ MOODS = {
                    "別存起來晚點看，晚點你不會看。", "先讀短的也行，反正不會考。", "把這期讀完，郵票才蓋得出來。"],
     },
 }
-REMIND = {
+REMIND = {  # 21:00
     "文藝": [("今天的報紙還攤在桌上", "晚上了，剩下的幾篇還亮著燈。"), ("有幾頁還沒翻", "睡前讀完，今天才算收好。"), ("知更鳥還沒回巢", "你的那一期還差一點。")],
     "俏皮": [("兄弟，報紙還沒讀完", "郵票還沒蓋，今天不算數。"), ("還差幾篇，別裝沒看到", "讀完再睡，很快。"), ("今天的報紙在等你", "它不會自己讀完。")],
+}
+REMIND_NOON = {  # 12:30
+    "文藝": [("午安。早上的報紙還沒看完", "吃飯的時候，正好讀一篇。"), ("半天過去了，字還在原處", "午休比想像中長，夠讀兩篇。"), ("報紙在桌角等中午", "先吃飯，再讀一段。")],
+    "俏皮": [("兄弟，午休先別滑別的", "早上那期還沒讀完，便當配一篇。"), ("中午了，報紙還熱著嗎", "再不讀，晚上會被提醒第二次。"), ("半天了，還差幾篇", "吃飯配報紙，古典的吃法。")],
 }
 
 
@@ -155,10 +159,10 @@ def issue_payload(cfg, issue):
             "body": mood["bodies"][(d // 3) % len(mood["bodies"])], "url": "./#/", "tag": "issue-" + issue["date"], "badge": 1}
 
 
-def remind_payload(date):
-    """The evening nudge; the mood is the other one from the morning's, so the day gets both voices."""
+def remind_payload(date, noon=False):
+    """The noon or evening nudge; the mood is the other one from the morning's, so the day gets both voices."""
     d = _day(date)
-    pool = REMIND["俏皮" if d % 2 else "文藝"]
+    pool = (REMIND_NOON if noon else REMIND)["俏皮" if d % 2 else "文藝"]
     title, body = pool[(d // 2) % len(pool)]
     return {"kind": "remind", "date": date, "title": title, "body": body, "url": "./#/", "tag": "remind-" + date}
 
@@ -238,7 +242,8 @@ def cmd_remind(a):
     if not devs:
         print("沒有登記的裝置，不發通知。")
         return 0
-    date = a.date or tw_now().date().isoformat()
+    now = tw_now()
+    date = a.date or now.date().isoformat()
     try:
         issue = next((i for i in json.loads(fetch("content/index.json")).get("issues", []) if i.get("date") == date), None)
     except Exception as e:  # noqa: BLE001
@@ -247,7 +252,7 @@ def cmd_remind(a):
     if not issue or not any(x.get("title") for x in issue.get("articles", [])):
         print("網站上沒有 %s 的刊期，不提醒。" % date)
         return 0
-    payload = remind_payload(date)
+    payload = remind_payload(date, noon=now.hour < 17)
     print(json.dumps(payload, ensure_ascii=False, indent=1))
     return send(devs, payload)
 

@@ -10,6 +10,7 @@ on:
   schedule:
     - cron: "50 22 * * *"   # 06:50 Taiwan
     - cron: "12 23 * * *"   # 07:12 Taiwan
+    - cron: "30 4 * * *"    # 12:30 Taiwan: the noon reminder (push.py remind; the phone drops it when the issue is read)
     - cron: "0 13 * * *"    # 21:00 Taiwan: the evening reminder (push.py remind; the phone drops it when the issue is read)
   push:
     branches: [main]
@@ -40,7 +41,7 @@ jobs:
       - uses: actions/checkout@v7
       - name: Which notice?
         id: kind
-        # a schedule run after noon Taiwan is the evening reminder; the morning ones announce the issue
+        # a schedule run from noon Taiwan on is a reminder (12:30, 21:00); the morning ones announce the issue
         run: |
           if [ "${{ github.event_name }}" = schedule ]; then
             if [ "$(TZ=Asia/Taipei date +%H)" -ge 12 ]; then echo "kind=remind" >> "$GITHUB_OUTPUT"; else echo "kind=issue" >> "$GITHUB_OUTPUT"; fi
