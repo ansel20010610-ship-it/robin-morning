@@ -117,42 +117,42 @@ def main_head():
     return out.stdout.split()[0] if out.returncode == 0 and out.stdout else None
 
 
-# The last line of the morning notice, one per day in turn (the owner, 2026-11-02: no counts of 幾篇, wit and substance
-# instead). The headlines carry the substance — the writers already make them hooks — so these only add the wink.
+# The morning notice, one title and one line per day in turn (the owner, 2026-11-02: short, a wink, nothing about the
+# day's articles — not what is in, not how many, not how long). Two pools stepped by different strides so the pairs
+# do not repeat for weeks.
+TITLES = [
+    "早安兄弟，報紙到了",
+    "印刷機剛停，你的那份在這",
+    "知更鳥比鬧鐘準時",
+    "今天的報紙，油墨還沒乾",
+    "早安，先別滑別的",
+    "出爐了，趁熱",
+    "報童在門口，開門",
+]
 QUIPS = [
-    "咖啡先放著，這幾個你會想先知道。",
-    "三句話一篇，病人進來前讀得完。",
-    "先看標題，哪個最想吐槽就從哪篇開始。",
-    "今天的梗都在這裡，別在診間現編。",
-    "讀完再滑別的，知更鳥比演算法早起。",
-    "巴薩那篇可以先跳過結果，從頭讀才有戲。",
-    "這幾件事等你讀完，中午就有話題可講。",
-    "別被標題騙了，裡面比標題還怪。",
-    "牙周那篇有證據，其他幾篇有故事。",
-    "今天不用買報紙，報紙自己來了。",
-    "把這一期讀完，郵票才蓋得出來。",
-    "先讀短的也行，反正每篇都讀得完。",
-    "早上先花五分鐘，晚上才有東西可想。",
-    "這幾個問題，今天有人替你查好了。",
+    "咖啡先放著，先翻這個。",
+    "病人進來前讀得完，別裝忙。",
+    "讀完再去救牙齒。",
+    "三分鐘的事，拖到中午就變成一天的事。",
+    "今天也沒有廣告，只有正事和閒事。",
+    "先讀短的也行，反正不會考。",
+    "把這期讀完，郵票才蓋得出來。",
+    "演算法還在睡，知更鳥已經叫了。",
+    "這份報紙只有一個讀者，就是你。",
+    "別存起來晚點看，晚點你不會看。",
+    "早上花的五分鐘，晚上會變成話題。",
+    "今天也請假裝自己有空。",
+    "翻開吧，昨天的你已經讀完昨天的了。",
 ]
 
 
 def issue_payload(cfg, issue):
-    """Title: the day's lead headline (football when it has one — the writers write headlines as hooks, so the hook is
-    the news). Body: three more headlines, supplements first because they are the odd ones, then one wink from QUIPS
-    chosen by the date. No counts, no reading-time arithmetic."""
-    cols = cfg["columns"]
-    group = lambda a: cols.get(a["column"], {}).get("group", "supplement")  # noqa: E731
-    arts = [a for a in issue["articles"] if a.get("title")]
-    mains = sorted((a for a in arts if group(a) == "main"), key=lambda a: cols[a["column"]].get("order", 9))
-    supps = [a for a in arts if group(a) == "supplement"]
-    if not mains and not supps:
+    """A short wink: a title and one line, both from the pools above by date, nothing about the issue's contents."""
+    if not any(a.get("title") for a in issue["articles"]):
         return None
-    lead = next((a for a in mains if a["column"] == "football"), (mains or supps)[0])
-    others = [a for a in supps + mains if a is not lead][:3]
     day = sum(int(x) for x in issue["date"].split("-"))
-    lines = [a["title"] for a in others] + [QUIPS[day % len(QUIPS)]]
-    return {"title": lead["title"], "body": "\n".join(lines), "url": "./#/", "tag": "issue-" + issue["date"], "badge": 1}
+    return {"title": TITLES[day % len(TITLES)], "body": QUIPS[(day * 5) % len(QUIPS)], "url": "./#/",
+            "tag": "issue-" + issue["date"], "badge": 1}
 
 
 def live_late():
