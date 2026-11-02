@@ -71,4 +71,53 @@
 | 59 | 佛瑞《安魂曲》 | music:faure-op48 |
 | 60 | 普羅高菲夫《彼得與狼》 | music:prokofiev-op67 |
 
-清單寫完後，由每週稽核在這份檔案補上第三輪（同樣由主流到進階），並在回報中告知社長。
+## 第三輪：音樂廳的常客（2026-11-02 社長定調）
+前兩輪寫完後接著往下。社長的話：「主流名作講完可以慢慢拓寬，像馬勒《復活》之類的，但不要太冷門。」這一輪的標準是**常去音樂廳的人都認得、唱片行一定有好幾個版本、每年都有大樂團排進節目**的作品；不是每個人都哼得出旋律，但一聽就知道為什麼它是經典。馬勒《復活》正是這一輪的樣板。
+
+| # | 作品 | topic_key |
+|---|---|---|
+| 61 | 馬勒《第二號交響曲》（復活） | music:mahler-2 |
+| 62 | 布拉姆斯《德意志安魂曲》 | music:brahms-op45 |
+| 63 | 貝多芬《第七號交響曲》 | music:beethoven-op92 |
+| 64 | 蕭士塔高維契《第五號交響曲》 | music:shostakovich-op47 |
+| 65 | 巴哈《郭德堡變奏曲》 | music:bach-bwv988 |
+| 66 | 拉赫曼尼諾夫《帕格尼尼主題狂想曲》 | music:rachmaninoff-op43 |
+| 67 | 西貝流士《小提琴協奏曲》 | music:sibelius-op47 |
+| 68 | 德布西《海》 | music:debussy-la-mer |
+| 69 | 柴可夫斯基《小提琴協奏曲》 | music:tchaikovsky-op35 |
+| 70 | 布魯克納《第七號交響曲》 | music:bruckner-7 |
+| 71 | 莫札特《費加洛婚禮》序曲與〈你們可知道〉 | music:mozart-k492 |
+| 72 | 舒伯特《冬之旅》〈菩提樹〉 | music:schubert-d911 |
+| 73 | 史特拉汶斯基《春之祭》 | music:stravinsky-rite-of-spring |
+| 74 | 布拉姆斯《小提琴協奏曲》 | music:brahms-op77 |
+| 75 | 馬勒《第一號交響曲》（巨人） | music:mahler-1 |
+| 76 | 理查・史特勞斯《最後四首歌》 | music:strauss-vier-letzte-lieder |
+| 77 | 威爾第《安魂曲》〈震怒之日〉 | music:verdi-requiem |
+| 78 | 巴哈《馬太受難曲》〈憐憫我吧，我的神〉 | music:bach-bwv244 |
+| 79 | 貝多芬《第三號交響曲》（英雄） | music:beethoven-op55 |
+| 80 | 拉威爾《G 大調鋼琴協奏曲》 | music:ravel-piano-concerto-g |
+| 81 | 德弗札克《第八號交響曲》 | music:dvorak-op88 |
+| 82 | 蕭邦《第二號鋼琴協奏曲》 | music:chopin-op21 |
+| 83 | 巴爾托克《管弦樂協奏曲》 | music:bartok-sz116 |
+| 84 | 貝多芬《第三號鋼琴協奏曲》 | music:beethoven-op37 |
+| 85 | 舒曼《鋼琴協奏曲》 | music:schumann-op54 |
+| 86 | 普契尼《波希米亞人》〈你那好冷的小手〉 | music:puccini-la-boheme |
+| 87 | 海頓《創世紀》〈諸天述說〉 | music:haydn-creation |
+| 88 | 布拉姆斯《第四號交響曲》 | music:brahms-op98 |
+| 89 | 孟德爾頌《義大利交響曲》 | music:mendelssohn-op90 |
+| 90 | 莫札特《第 41 號交響曲》（朱彼特） | music:mozart-k551 |
+| 91 | 柴可夫斯基《第五號交響曲》 | music:tchaikovsky-op64 |
+| 92 | 普羅高菲夫《羅密歐與茱麗葉》〈騎士之舞〉 | music:prokofiev-op64 |
+| 93 | 理查・史特勞斯《唐璜》 | music:strauss-op20 |
+| 94 | 貝多芬《第 14 號弦樂四重奏》Op. 131 | music:beethoven-op131 |
+| 95 | 馬勒《大地之歌》〈告別〉 | music:mahler-das-lied |
+| 96 | 蕭士塔高維契《第八號弦樂四重奏》 | music:shostakovich-op110 |
+| 97 | 舒伯特《第九號交響曲》（偉大） | music:schubert-d944 |
+| 98 | 艾爾加《謎語變奏曲》〈寧祿〉 | music:elgar-op36 |
+| 99 | 華格納《崔斯坦與伊索德》前奏曲與〈愛之死〉 | music:wagner-tristan |
+| 100 | 拉赫曼尼諾夫《第二號交響曲》 | music:rachmaninoff-op27 |
+
+### 什麼叫太冷門（不收）
+作品要同時過三關才能排進第三輪或之後：(1) 近五年台灣的 NSO、NTSO、北市交或來台的國際樂團演出過；(2) DG、Decca、EMI／Warner、Sony 這幾家至少有三個不同演出者的錄音；(3) 有一段「一聽就認得」或「一聽就懂它厲害在哪」的地方可以帶讀者聽。像哈維格・布萊恩、佩特森、冷門巴洛克作曲家的整場清唱劇，就算樂迷圈推崇也不收。
+
+第三輪寫完後，由每週稽核照上面三關在這份檔案補上第四輪，並在回報中告知社長。
