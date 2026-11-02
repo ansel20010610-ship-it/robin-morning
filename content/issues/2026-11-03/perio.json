@@ -1,0 +1,126 @@
+{
+  "column": "perio",
+  "date": "2026-11-03",
+  "title": "開刀之前，先看病人自己的菌斑控制",
+  "dek": "EFP 指引把牙周炎治療排成四步。清創的數字多來自挑過的族群，是 efficacy 而非 effectiveness；在那裡平均 74% 的口袋閉合。",
+  "brief": "病人自己的口腔衛生沒做到、也沒維持住，EFP 的牙周炎指引用最強的一級建議說：不做牙周手術，植體手術也一樣。這條是專家共識，背景提到 1970 年代的研究。至於清創，多數研究在挑過、沒有全身疾病的族群做，呈現的是 efficacy 而非 effectiveness，推到一般診所不清楚；在那樣的研究裡，清創後平均 74% 的口袋閉合。",
+  "takeaway": "清創的數字多出自挑過病人的研究（efficacy，非 effectiveness），其中 6 到 8 個月平均 74% 口袋閉合（≤4 毫米且不出血）。第 III 期殘留 4–5 毫米再清創、≥6 毫米建議翻瓣；口腔衛生沒做到的病人不開刀（這條是專家共識）。",
+  "topic_key": "perio:doi:10.1111/jcpe.13290",
+  "updated_at": "2026-11-03T01:10:47+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Sonde_12709.jpg/1280px-Sonde_12709.jpg",
+    "width": 1280,
+    "height": 617,
+    "alt": "Aesculap 牙周探針。",
+    "caption": "一支 Aesculap 的牙周探針，Linnenband 2021 年 4 月拍攝。",
+    "credit": "Linnenband，Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sonde_12709.jpg",
+    "made": "2021"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "74% 這個數字，要連出身一起記。歐洲牙周病學會（EFP）2020 年第 I 到 III 期牙周炎的 S3 臨床指引寫明，多數研究在控制良好的研究環境裡做，病人挑過、沒有全身疾病，呈現的是效力（efficacy），不是日常診療的成效（effectiveness），放到一般牙科診所會是多少，不清楚；其中 11 個前瞻研究之間的異質性也高。數字是：齦下器械治療（subgingival instrumentation）後 6 到 8 個月，口袋閉合的平均比例 74%。"
+    },
+    {
+      "type": "p",
+      "text": "口袋閉合，指引在建議 2.1 定義為探診深度 4 毫米以內、而且探診不出血。4.3 節排四個步驟時，治療終點寫成另一個樣子：沒有超過 4 毫米且探診出血的口袋，或沒有 6 毫米以上的深口袋。兩處略有出入；第 7.1 節則和 2.1 一樣寫成探診深度 4 毫米以內、不出血。本文取 2.1 與 7.1 的寫法，這是作者的選擇。"
+    },
+    {
+      "type": "svg",
+      "title": "四步怎麼走",
+      "svg": "<svg viewBox=\"0 0 340 486\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"ah\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"ink\"/></marker></defs>\n<rect x=\"10\" y=\"8\" width=\"320\" height=\"44\" rx=\"6\" class=\"soft\"/>\n<text x=\"170\" y=\"26\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"ink\">第一步</text>\n<text x=\"170\" y=\"43\" text-anchor=\"middle\" font-size=\"11\" class=\"muted\">病人自己的菌斑控制、戒菸、糖尿病代謝控制</text>\n<line x1=\"170\" y1=\"52\" x2=\"170\" y2=\"68\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n<rect x=\"10\" y=\"70\" width=\"320\" height=\"44\" rx=\"6\" class=\"soft\"/>\n<text x=\"170\" y=\"88\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"ink\">第二步</text>\n<text x=\"170\" y=\"105\" text-anchor=\"middle\" font-size=\"11\" class=\"muted\">齦下器械治療（手動、超音波都可以）</text>\n<line x1=\"170\" y1=\"114\" x2=\"170\" y2=\"130\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n<rect x=\"10\" y=\"132\" width=\"320\" height=\"48\" rx=\"6\" class=\"accent line\" stroke-width=\"2\"/>\n<text x=\"170\" y=\"151\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"accent\">組織癒合後，重新評估</text>\n<text x=\"170\" y=\"169\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">有沒有達到治療終點</text>\n<line x1=\"85\" y1=\"180\" x2=\"85\" y2=\"208\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n<text x=\"93\" y=\"198\" font-size=\"11\" class=\"muted\">達到</text>\n<line x1=\"250\" y1=\"180\" x2=\"250\" y2=\"208\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n<text x=\"258\" y=\"198\" font-size=\"11\" class=\"muted\">沒達到</text>\n<rect x=\"10\" y=\"210\" width=\"150\" height=\"130\" rx=\"6\" class=\"soft\"/>\n<text x=\"85\" y=\"232\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"ink\">達到終點</text>\n<text x=\"85\" y=\"256\" text-anchor=\"middle\" font-size=\"11\" class=\"muted\">4.3 節的寫法：</text>\n<text x=\"85\" y=\"275\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">沒有 &gt;4 mm 且出血</text>\n<text x=\"85\" y=\"292\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">的口袋，或沒有</text>\n<text x=\"85\" y=\"309\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">≥6 mm 的深口袋</text>\n<rect x=\"170\" y=\"210\" width=\"160\" height=\"130\" rx=\"6\" class=\"soft\"/>\n<text x=\"250\" y=\"232\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"ink\">第三步（第 III 期）</text>\n<text x=\"180\" y=\"256\" font-size=\"11\" class=\"ink\">4–5 mm：再清創（B）</text>\n<text x=\"180\" y=\"276\" font-size=\"11\" class=\"ink\">≥6 mm：翻瓣清創（B）</text>\n<text x=\"180\" y=\"296\" font-size=\"11\" class=\"ink\">深口袋合併 ≥3 mm</text>\n<text x=\"180\" y=\"312\" font-size=\"11\" class=\"ink\">骨內缺損：再生手術</text>\n<text x=\"250\" y=\"358\" text-anchor=\"middle\" font-size=\"11\" class=\"accent\">不限期別的開刀前提：</text>\n<text x=\"250\" y=\"374\" text-anchor=\"middle\" font-size=\"11\" class=\"accent\">病人自己的口腔衛生</text>\n<text x=\"250\" y=\"390\" text-anchor=\"middle\" font-size=\"11\" class=\"accent\">做到並維持（A）</text>\n<line x1=\"85\" y1=\"340\" x2=\"85\" y2=\"422\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n<line x1=\"250\" y1=\"396\" x2=\"250\" y2=\"422\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n<rect x=\"10\" y=\"424\" width=\"320\" height=\"52\" rx=\"6\" class=\"gold line\" stroke-width=\"2\"/>\n<text x=\"170\" y=\"444\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"ink\">第四步：支持性牙周照護</text>\n<text x=\"170\" y=\"463\" text-anchor=\"middle\" font-size=\"11\" class=\"muted\">每 3 到 12 個月回診，依風險調整</text>\n</svg>",
+      "caption": "原創示意，依 EFP S3 臨床指引（Sanz 等，2020）第 4.3 節、第 7 節與建議 2.2、3.1、3.6、3.7、4.1 整理。終點照 4.3 節的寫法；建議 2.1 把口袋閉合定義為 ≤4 mm 且不出血，兩處略有出入。B 為建議等級，A 為最強的一級建議；3.6（開刀前提，不限第 III 期）與 4.1（第四步回診間隔）都屬專家共識。"
+    },
+    {
+      "type": "h",
+      "text": "清創的證據"
+    },
+    {
+      "type": "p",
+      "text": "清創本身拿到最強的一級建議，全體一致通過。指引把 11 個研究評為結果一致的強證據，除一篇外偏差風險低；組成是 1 個追蹤 3 個月的隨機試驗（169 人），加 11 個追蹤 6 個月以上的前瞻研究（258 人）。拿完全不清創的病人當對照組有倫理問題，所以指引把前瞻研究納進來。探診深度平均少 1.7 毫米，超過 6 毫米的部位少 2.6 毫米，探診出血少 63%。"
+    },
+    {
+      "type": "p",
+      "text": "手動器械或動力（音波、超音波）器械都可以，單用或合用皆可；分象限做或 24 小時內全口做完，指引也都說可以。全口一次做完有引發急性全身發炎反應的證據，要考慮病人的全身狀況。雷射當輔助，指引建議不要用，但這條是 5 個試驗、147 人，都只照一次，表決時也只拿到簡單多數。"
+    },
+    {
+      "type": "h",
+      "text": "第 III 期的殘留口袋"
+    },
+    {
+      "type": "quote",
+      "text": "第一、二步治療後，第 III 期牙周炎病人若有深的殘留口袋（PPD ≥ 6 mm），我們建議做翻瓣清創手術。若殘留口袋中等深度（4–5 mm），我們建議再做一次齦下器械治療。",
+      "original": "In the presence of deep residual pockets (PPD ≥ 6 mm) in patients with Stage III periodontitis after the first and second steps of periodontal therapy, we suggest performing access flap surgery. In the presence of moderately deep residual pockets (4–5 mm), we suggest repeating subgingival instrumentation.",
+      "cite": "EFP S3 臨床指引（Sanz 等，2020）建議 3.1"
+    },
+    {
+      "type": "p",
+      "text": "這條是 B 級，限定第 III 期，依據是 13 個隨機試驗、500 名病人，偏差風險中到高。起始 6 毫米以上的部位，翻瓣 1 年時探診深度比再清創多減 0.67 毫米；需要再治療的比例，清創組 8% 到 29%，翻瓣組 0% 到 14%。"
+    },
+    {
+      "type": "p",
+      "text": "看附著增加，深口袋兩組沒有顯著差別；起始中等深度的口袋，再清創組增加得比較多。起始 4 毫米以內的部位，翻瓣造成的附著喪失顯著較多。"
+    },
+    {
+      "type": "h",
+      "text": "切除、再生、轉診"
+    },
+    {
+      "type": "p",
+      "text": "6 毫米以上的殘留口袋，指引也建議可以做切除性手術，一樣限定第 III 期，但要算進牙齦退縮可能變多；探診深度的差距追到 3 年、5 年就消失了，這條表決時同樣只拿到簡單多數。殘留深口袋合併 3 毫米以上的骨內缺損，建議做再生手術，背後有 22 個隨機試驗、1,000 名病人。重度第 III 期的病人，終點不一定每顆牙都達得到；預後無望的牙，任何一步都可以考慮拔。"
+    },
+    {
+      "type": "p",
+      "text": "手術常常複雜，指引建議交給受過額外專門訓練的牙醫，或轉診中心的專科醫師；轉不出去時，最低要求是第一、二步做到高品質之後，再刮一次、必要時翻瓣，接著排進頻繁的支持性牙周照護（SPC）。SPC 的間隔定在 3 個月到最多 12 個月，依風險調整。這三條在指引裡都歸為專家共識的建議。"
+    },
+    {
+      "type": "h",
+      "text": "菌斑沒顧好，就不開刀"
+    },
+    {
+      "type": "p",
+      "text": "自己的口腔衛生做不到、也維持不住的病人，指引用最強的一級（A 級）建議說不做牙周手術，植體手術也一樣。這條是專家共識，贊成的超過 95%。背景提到 1970 年代的研究指出：菌斑控制不好時開刀，會造成附著喪失。菌斑分數低於 20% 到 25%，一再和比較好的手術結果連在一起。"
+    },
+    {
+      "type": "paper",
+      "citation": "Sanz M, Herrera D, Kebschull M, Chapple I, Jepsen S, Berglundh T, Sculean A, Tonetti MS; EFP Workshop Participants and Methodological Consultants. Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline. *J Clin Periodontol*. 2020;47 Suppl 22:4–60.",
+      "doi": "10.1111/jcpe.13290",
+      "pmid": "32383274",
+      "link": "https://doi.org/10.1111/jcpe.13290",
+      "evidence": "EFP S3 臨床指引：依 15 篇委託系統性回顧、GRADE 評定；清創為最強的一級建議",
+      "design": "S3 臨床實務指引：15 篇委託系統性回顧，加上第 16 屆歐洲牙周研討會（2019 年 11 月）的共識會議",
+      "sample": "第 I–III 期牙周炎。各建議證據量不同：清創 1 個隨機試驗（169 人）加 11 個前瞻研究（258 人）；殘留口袋翻瓣與再清創比較 13 個隨機試驗（500 人）",
+      "question": "第 I 到 III 期牙周炎，每一步該做什麼、證據有多硬？",
+      "access": "依全文整理（Europe PMC 開放全文）；第六作者姓名依 2021 年勘誤"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Sanz M 等）",
+      "date": "2020-07-27",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/",
+      "note": "主角文獻。讀全文（Europe PMC fullTextXML，CC BY-NC 4.0）。DOI 10.1111/jcpe.13290；PMID 32383274；卷期頁依 Crossref。用到：15 篇系統性回顧、AWMF 與 GRADE 方法、36 國學會、2019 年 11 月 10–13 日塞哥維亞共識會議（第 3 節）；表 4 建議等級；4.3 節四步驟與治療終點；R2.1（口袋閉合定義、1.7 mm、74%、63%、>6 mm 2.6 mm、1 個 RCT 169 人＋11 個前瞻研究 258 人、倫理與適用性）；R2.2、R2.3（全身發炎反應）；R2.4 雷射（5 個 RCT 147 人、偏差風險不明、費用）；R3.1 原文與 0.67 mm、再治療 8–29% 對 0–14%、中等深度與 ≤4 mm 的 CAL 結果；R3.3 切除性手術；R3.4、R3.5；R3.6 原文與 1970 年代研究、菌斑分數 20–25%；R3.7（22 個 RCT、1,000 人、1,182 顆牙）；R4.1 與第 8 節 45–60 分鐘。"
+    },
+    {
+      "title": "Corrigendum（Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline）",
+      "publisher": "Journal of Clinical Periodontology",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8094210/",
+      "note": "勘誤：第六作者 Beglundh 應為 Berglundh；表 7 與表 8（分期、分級表）格式內容；5.3 節小標 R1.3 改 R1.4。DOI 10.1111/jcpe.13403。不影響本文用到的建議與數字。"
+    },
+    {
+      "title": "File:Sonde 12709.jpg",
+      "publisher": "Wikimedia Commons（Linnenband）",
+      "date": "2021-04-17",
+      "url": "https://commons.wikimedia.org/wiki/File:Sonde_12709.jpg",
+      "note": "頭圖。檔案描述：Parodontalsonde von Aesculap。CC BY-SA 4.0。"
+    }
+  ]
+}
