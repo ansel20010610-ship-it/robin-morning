@@ -35,7 +35,6 @@ TOO_LATE = (11, 0)     # a run GitHub starts this late sends nothing: the mornin
 WAIT_SITE = 45 * 60    # seconds to wait for the live site to carry today's issue
 WAIT_DEPLOY = 10 * 60  # seconds to wait for a deploy still running at 07:30 (e.g. a late reserve fill)
 TTL = 4 * 3600         # a phone that is switched off still gets the notice within this time
-SHORT = {"football": "巴薩", "news": "快訊", "perio": "牙周", "music": "古典", "civilization": "文明", "devotion": "晨光"}
 
 
 def endpoint_hash(endpoint):
@@ -118,25 +117,42 @@ def main_head():
     return out.stdout.split()[0] if out.returncode == 0 and out.stdout else None
 
 
+# The last line of the morning notice, one per day in turn (the owner, 2026-11-02: no counts of 幾篇, wit and substance
+# instead). The headlines carry the substance — the writers already make them hooks — so these only add the wink.
+QUIPS = [
+    "咖啡先放著，這幾個你會想先知道。",
+    "三句話一篇，病人進來前讀得完。",
+    "先看標題，哪個最想吐槽就從哪篇開始。",
+    "今天的梗都在這裡，別在診間現編。",
+    "讀完再滑別的，知更鳥比演算法早起。",
+    "巴薩那篇可以先跳過結果，從頭讀才有戲。",
+    "這幾件事等你讀完，中午就有話題可講。",
+    "別被標題騙了，裡面比標題還怪。",
+    "牙周那篇有證據，其他幾篇有故事。",
+    "今天不用買報紙，報紙自己來了。",
+    "把這一期讀完，郵票才蓋得出來。",
+    "先讀短的也行，反正每篇都讀得完。",
+    "早上先花五分鐘，晚上才有東西可想。",
+    "這幾個問題，今天有人替你查好了。",
+]
+
+
 def issue_payload(cfg, issue):
-    """Title: the issue number. Body: the lead headline, what else is in, and how long the three-sentence briefs take
-    (the same estimate as the front page's 今日摘要)."""
+    """Title: the day's lead headline (football when it has one — the writers write headlines as hooks, so the hook is
+    the news). Body: three more headlines, supplements first because they are the odd ones, then one wink from QUIPS
+    chosen by the date. No counts, no reading-time arithmetic."""
     cols = cfg["columns"]
     group = lambda a: cols.get(a["column"], {}).get("group", "supplement")  # noqa: E731
-    mains = sorted((a for a in issue["articles"] if group(a) == "main"), key=lambda a: cols[a["column"]].get("order", 9))
-    supps = [a for a in issue["articles"] if group(a) == "supplement"]
+    arts = [a for a in issue["articles"] if a.get("title")]
+    mains = sorted((a for a in arts if group(a) == "main"), key=lambda a: cols[a["column"]].get("order", 9))
+    supps = [a for a in arts if group(a) == "supplement"]
     if not mains and not supps:
         return None
-    lead = (mains or supps)[0]
-    rest = "、".join(SHORT.get(a["column"], cols[a["column"]]["name"]) for a in mains[1:])
-    n_supp = len(supps) - (0 if mains else 1)
-    if n_supp:
-        rest += ("，" if rest else "") + "副刊 %d 篇" % n_supp
-    chars = sum(len(a.get("brief") or "") for a in issue["articles"])
-    lines = [lead["title"], ("還有" + rest) if rest else ""]
-    lines.append("一篇三句話，%d 分鐘就能交差" % max(1, int(chars / 330 + 0.5)) if chars else "今天共 %d 篇" % len(issue["articles"]))
-    return {"title": "早安兄弟，第 %d 期出爐了" % issue["no"], "body": "\n".join(x for x in lines if x),
-            "url": "./#/", "tag": "issue-" + issue["date"], "badge": 1}
+    lead = next((a for a in mains if a["column"] == "football"), (mains or supps)[0])
+    others = [a for a in supps + mains if a is not lead][:3]
+    day = sum(int(x) for x in issue["date"].split("-"))
+    lines = [a["title"] for a in others] + [QUIPS[day % len(QUIPS)]]
+    return {"title": lead["title"], "body": "\n".join(lines), "url": "./#/", "tag": "issue-" + issue["date"], "badge": 1}
 
 
 def live_late():
