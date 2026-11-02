@@ -1,38 +1,6 @@
 {
-  "checked": "2026-11-01",
+  "checked": "2026-11-02",
   "events": [
-    {
-      "id": "cosi-ntt-2026",
-      "title": "莫札特歌劇《女人皆如此》",
-      "kind": "歌劇",
-      "rating": 4,
-      "why": "羅杭．佩利導演的版本，2022 年在巴黎香榭麗舍劇院首演，這次整套搬進台中，國臺交在樂池。台中難得有完整製作的莫札特，11 月 1 日下午是最後一場。",
-      "who": "林勤超（指揮）、國立臺灣交響樂團、NTT×勇源歌劇合唱團；路奇歐．蓋洛（阿方索）等",
-      "program": "莫札特《女人皆如此》",
-      "shows": [
-        {
-          "date": "2026-11-01",
-          "time": "14:30",
-          "city": "台中",
-          "venue": "臺中國家歌劇院大劇院",
-          "tickets": "https://www.opentix.life/program/2068984452018319361"
-        }
-      ],
-      "added": "2026-10-31",
-      "uids": [
-        "6a68e15526b32427d06042ce"
-      ],
-      "sources": [
-        {
-          "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/program/2068984452018319361"
-        },
-        {
-          "title": "文化部藝文活動開放資料",
-          "url": "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=1"
-        }
-      ]
-    },
     {
       "id": "olafsson-recital-2026",
       "title": "歐拉夫森鋼琴獨奏會",
@@ -303,6 +271,187 @@
           "url": "https://www.opentix.life/program/2071531444179013633"
         }
       ]
+    },
+    {
+      "id": "wispelwey-bach-suites-2026",
+      "title": "威斯培衛：巴赫無伴奏大提琴組曲全本",
+      "kind": "獨奏",
+      "rating": 4,
+      "why": "荷蘭大提琴家威斯培衛一個晚上拉完巴赫六首無伴奏組曲，台中、高雄都是這個全本。台北場換成布瑞頓。",
+      "who": "皮耶特．威斯培衛（大提琴）",
+      "program": "台中、高雄場：巴赫《無伴奏大提琴組曲》全本；台北場：布瑞頓《無伴奏大提琴組曲》全本",
+      "shows": [
+        {
+          "date": "2026-11-28",
+          "time": "19:00",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳",
+          "tickets": "https://www.opentix.life/program/2089194355117297665"
+        },
+        {
+          "date": "2026-12-02",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2089194355117297665"
+        },
+        {
+          "date": "2026-12-04",
+          "time": "19:00",
+          "city": "台中",
+          "venue": "臺中國家歌劇院中劇院",
+          "tickets": "https://www.opentix.life/program/2089596437878657025"
+        }
+      ],
+      "uids": [
+        "6a8c790426b32434f435803b",
+        "6a8c790426b32434f4358039"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 台中場節目頁",
+          "url": "https://www.opentix.life/program/2089596437878657025"
+        },
+        {
+          "title": "OPENTIX 高雄、台北場節目頁",
+          "url": "https://www.opentix.life/program/2089194355117297665"
+        }
+      ],
+      "added": "2026-11-02"
+    },
+    {
+      "id": "chen-pi-hsien-recital-2026",
+      "title": "陳必先鋼琴獨奏會",
+      "kind": "獨奏",
+      "rating": 4,
+      "why": "下半場是舒伯特最後一首降 B 大調奏鳴曲 D.960，節目頁說這是陳必先第一次公開演出它。上半場配舒伯特 D.575 與巴爾托克。",
+      "who": "陳必先（鋼琴）",
+      "program": "舒伯特《B 大調鋼琴奏鳴曲 D.575》、巴爾托克《14 首小曲》Op.6、舒伯特《降 B 大調鋼琴奏鳴曲 D.960》",
+      "shows": [
+        {
+          "date": "2026-12-17",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2084162408299769857"
+        },
+        {
+          "date": "2026-12-19",
+          "time": "19:30",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳",
+          "tickets": "https://www.opentix.life/program/2084162408299769857"
+        },
+        {
+          "date": "2026-12-20",
+          "time": "14:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院",
+          "tickets": "https://www.opentix.life/program/2084162408299769857"
+        }
+      ],
+      "note": "節目頁與開放資料對不上台中場的廳別",
+      "uids": [
+        "6a833f7626b32427d06043e7"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2084162408299769857"
+        }
+      ],
+      "added": "2026-11-02"
+    },
+    {
+      "id": "van-zweden-goerne-eso-2026",
+      "title": "梵志登與葛納、長榮交響樂團",
+      "kind": "交響樂",
+      "rating": 4,
+      "why": "梵志登帶長榮交響樂團，baritone 葛納唱舒伯特與理查．史特勞斯的藝術歌曲，壓軸蕭士塔高維契第九號。",
+      "who": "梵志登（指揮）、馬提亞斯．葛納（男中音）、長榮交響樂團",
+      "program": "貝多芬《科利奧蘭序曲》、舒伯特與理查．史特勞斯藝術歌曲（含〈暮色中〉）、蕭士塔高維契《第九號交響曲》",
+      "shows": [
+        {
+          "date": "2026-12-11",
+          "time": "19:30",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳",
+          "tickets": "https://www.opentix.life/program/2102976712891215872"
+        },
+        {
+          "date": "2026-12-13",
+          "time": "14:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2102976712891215872"
+        }
+      ],
+      "uids": [
+        "6abe953a26b324165c32e56f"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2102976712891215872"
+        }
+      ],
+      "added": "2026-11-02"
+    },
+    {
+      "id": "didonato-recital-2026",
+      "title": "狄杜娜朵冬日音樂會",
+      "kind": "聲樂",
+      "rating": 5,
+      "why": "次女高音狄杜娜朵來台灣開獨奏會，鋼琴是泰瑞，曲目是比才、羅西尼、聖桑的歌劇選段，加上爵士風格的義大利古歌曲。",
+      "who": "喬伊斯．狄杜娜朵（次女高音）、克雷格．泰瑞（鋼琴）",
+      "program": "比才、海頓清唱劇《納克索斯島的阿莉安娜》、羅西尼、聖桑的歌劇選段，及義大利古歌曲",
+      "shows": [
+        {
+          "date": "2026-12-05",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2082425418452361217"
+        }
+      ],
+      "uids": [
+        "6a91c05c26b32434f4358075"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2082425418452361217"
+        }
+      ],
+      "added": "2026-11-02"
+    },
+    {
+      "id": "garcia-garcia-ksso-2026",
+      "title": "賈西亞與高市交：李斯特與蕭士塔高維契",
+      "kind": "協奏曲",
+      "rating": 4,
+      "why": "馬丁．賈西亞．賈西亞彈李斯特第一號鋼琴協奏曲，後半場是蕭士塔高維契第十號交響曲，楊智欽指揮高市交。",
+      "who": "馬丁．賈西亞．賈西亞（鋼琴）、楊智欽（指揮）、高雄市交響樂團",
+      "program": "李斯特《死之舞》、《第一號鋼琴協奏曲》；蕭士塔高維契《第十號交響曲》",
+      "shows": [
+        {
+          "date": "2026-11-22",
+          "time": "14:30",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳",
+          "tickets": "https://www.opentix.life/program/2086778741904691201"
+        }
+      ],
+      "uids": [
+        "6a8490f526b32427d0604417"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2086778741904691201"
+        }
+      ],
+      "added": "2026-11-02"
     }
   ]
 }
