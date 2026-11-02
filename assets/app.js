@@ -1212,7 +1212,7 @@ function viewStamps() {
   let n = 0;
   const page = ([ym, list]) => `<div class="sec-head"><h2>${Number(ym.slice(5))} 月</h2><span class="de">${esc(monDe(ym))}</span><span class="note">${list.filter((i) => done.has(i.date)).length}／${list.length}</span></div>
     <div class="page">${list.slice().reverse().map((i) => stampHtml({ ...i, articles: sortArticles(i.articles || [], i.date) },
-      { earned: done.has(i.date), open: i.date === today, href: done.has(i.date) || i.date === today ? `#/issue/${i.date}` : null, i: n++ })).join("")}</div>`;
+      { earned: done.has(i.date), open: i.date === today, href: done.has(i.date) ? `#/stamp/${i.date}` : i.date === today ? `#/issue/${i.date}` : null, i: n++ })).join("")}</div>`;
   main.innerHTML = `<div class="wrap album"><header class="page-title"><h1>郵票冊</h1><span class="de">Briefmarken</span></header>
     <p class="col-note">每天把整份報紙讀完，就蓋出那天的郵票；錯過的日子就留一格空白。</p>
     ${yb.stats}
@@ -1220,6 +1220,19 @@ function viewStamps() {
     ${[...months].map(page).join("")}
     ${yb.bars}</div>`;
   document.title = `郵票冊｜${S.cfg.title}`;
+}
+
+// One stamp, large (#/stamp/<date>; the owner, 2026-11-02: a stamp tapped must open the stamp, not the issue): the day's
+// stamp across the page with its issue line under it and one quiet way into the issue itself. A detail page (back arrow).
+function viewStamp(date) {
+  const issue = issueBy(date), done = digestDone().has(date);
+  const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/stamps" aria-label="返回">${ICON.back}</a><div class="title">郵票冊</div></div></div>`;
+  if (!issue || !isPublished(date) || !done) { main.innerHTML = `${top}<div class="wrap"><p class="empty">這一格還沒有郵票。<a href="#/stamps">回郵票冊</a></p></div>`; wireBack(); return; }
+  main.innerHTML = `${top}<div class="wrap stamp-page"><div class="big">${stampHtml({ ...issue, articles: sortArticles(issue.articles || [], date) }, { earned: true })}</div>
+    <p class="line"><b>No. ${esc(issue.no)}</b><span>${esc(fmtDate(date))}・週${esc(issue.weekday || "")}</span><i>${esc(fmtDate(date, "de"))}</i></p>
+    <p class="btns"><a class="btn ghost" href="#/issue/${esc(date)}">看這一期</a></p></div>`;
+  wireBack();
+  document.title = `郵票 No. ${issue.no}｜${S.cfg.title}`;
 }
 
 // ——— 你讀過的世界 (Gelesene Welt; assets/world.js): the countries the news column has taken the reader to ———
@@ -1519,14 +1532,14 @@ let landKey = null, landTop = null; // 接著上次: the article tapped on the f
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamps") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
 let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising number, so a step back is recognisable
 // Pages with a back arrow: an article, an event. Any other page keeps its scroll position for when the reader steps
 // back to it (the browser's back, the back arrow, a swipe), whatever they went to in between; a tap on the bottom
 // bar starts the page from the top.
-const isDetail = (x) => /^#\/(a|concert)\//.test(x || "");
+const isDetail = (x) => /^#\/(a|concert|stamp)\//.test(x || "");
 async function route(ev) {
   const my = ++routeSeq;
   if (ev) routed++;
@@ -1594,6 +1607,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/stats")) viewStamps(); // the yearbook now lives in the album
   else if (h.startsWith("#/gallery")) viewGallery();
   else if (h.startsWith("#/stamps")) viewStamps();
+  else if (h.startsWith("#/stamp/")) viewStamp(h.slice(8).split("?")[0]);
   else if (h.startsWith("#/world")) viewWorld();
   else if (h.startsWith("#/press")) viewPress();
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);

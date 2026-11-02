@@ -1374,6 +1374,15 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .album .tally { margin: 14px 0 0; font-family: var(--sans); font-size: 13px; letter-spacing: .04em; color: var(--ink-2); }
 .album .tally b { font-family: var(--latin); font-size: 24px; font-weight: 600; line-height: 1; color: var(--gold-ink); font-variant-numeric: lining-nums tabular-nums; margin: 0 1px; }
 .album .empty { padding: 22px 0 6px; }
+/* One stamp large (app.js viewStamp): the sheet alone on the page, then the issue line in Cormorant and a way in. */
+.stamp-page { padding-top: 18px; }
+.stamp-page .big { width: min(78vw, 360px); margin: 0 auto; }
+.stamp-page .big .stamp { rotate: 0deg; }
+.stamp-page .line { display: grid; justify-items: center; gap: 2px; margin: 26px 0 0; font-family: var(--sans); font-size: 13px; letter-spacing: .06em; color: var(--muted); }
+.stamp-page .line b { font-family: var(--latin); font-size: 26px; font-weight: 600; letter-spacing: .04em; color: var(--ink); }
+.stamp-page .line i { font-family: var(--latin); font-style: italic; font-size: 15px; letter-spacing: .02em; color: var(--gold); }
+.stamp-page .btns { display: flex; justify-content: center; margin: 22px 0 0; }
+@media (prefers-reduced-motion: no-preference) { .stamp-page .big .stamp { animation: stamp-in .7s cubic-bezier(.2, 1.2, .3, 1) both; } @keyframes stamp-in { from { opacity: 0; transform: scale(.86); } } }
 .album .page { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 14px; margin: 18px 0 8px; }
 @media (min-width: 480px) { .album .page { grid-template-columns: repeat(4, 1fr); } }
 @media (min-width: 700px) { .album .page { grid-template-columns: repeat(5, 1fr); gap: 24px 18px; } }
