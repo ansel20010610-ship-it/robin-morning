@@ -117,9 +117,8 @@ def main_head():
     return out.stdout.split()[0] if out.returncode == 0 and out.stdout else None
 
 
-# The morning notice, one title and one line per day in turn (the owner, 2026-11-02: short, a wink, nothing about the
-# day's articles — not what is in, not how many, not how long). Two pools stepped by different strides so the pairs
-# do not repeat for weeks.
+# The morning notice is one line, no body (the owner, 2026-11-02: short, a wink, nothing about the day's articles —
+# not what is in, not how many, not how long), stepped through by date.
 TITLES = [
     "早安兄弟，報紙到了",
     "印刷機剛停，你的那份在這",
@@ -128,31 +127,22 @@ TITLES = [
     "早安，先別滑別的",
     "出爐了，趁熱",
     "報童在門口，開門",
-]
-QUIPS = [
-    "咖啡先放著，先翻這個。",
-    "病人進來前讀得完，別裝忙。",
-    "讀完再去救牙齒。",
-    "三分鐘的事，拖到中午就變成一天的事。",
-    "今天也沒有廣告，只有正事和閒事。",
-    "先讀短的也行，反正不會考。",
-    "把這期讀完，郵票才蓋得出來。",
-    "演算法還在睡，知更鳥已經叫了。",
-    "這份報紙只有一個讀者，就是你。",
-    "別存起來晚點看，晚點你不會看。",
-    "早上花的五分鐘，晚上會變成話題。",
-    "今天也請假裝自己有空。",
-    "翻開吧，昨天的你已經讀完昨天的了。",
+    "咖啡先放著，先翻這個",
+    "演算法還在睡，知更鳥叫了",
+    "這份報紙只有一個讀者",
+    "別存起來晚點看，晚點你不會看",
+    "翻開吧，昨天的已經讀完了",
+    "三分鐘的事，別拖成一天的事",
+    "今天也沒有廣告，只有正事和閒事",
 ]
 
 
 def issue_payload(cfg, issue):
-    """A short wink: a title and one line, both from the pools above by date, nothing about the issue's contents."""
+    """One line, from TITLES by date; nothing about the issue's contents."""
     if not any(a.get("title") for a in issue["articles"]):
         return None
     day = sum(int(x) for x in issue["date"].split("-"))
-    return {"title": TITLES[day % len(TITLES)], "body": QUIPS[(day * 5) % len(QUIPS)], "url": "./#/",
-            "tag": "issue-" + issue["date"], "badge": 1}
+    return {"title": TITLES[day % len(TITLES)], "body": "", "url": "./#/", "tag": "issue-" + issue["date"], "badge": 1}
 
 
 def live_late():
