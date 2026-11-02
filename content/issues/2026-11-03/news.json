@@ -1,0 +1,204 @@
+{
+  "column": "news",
+  "date": "2026-11-03",
+  "title": "赫爾松停火剛結束，札波羅熱援助站遭轟炸至少 24 死",
+  "dek": "札波羅熱一所發放援助的學校遭轟炸，美國期中選舉週二投票，伊朗說停火方案兩天就能執行。",
+  "brief": "赫爾松停火結束數小時後，札波羅熱州一所發放援助的學校遭俄軍轟炸，烏克蘭說至少 24 人死亡。美國期中選舉 11 月 3 日投票，民主黨要在眾議院淨增 3 席、參議院淨增 4 席才能兩院過半。伊朗說它的停火方案可在兩天內實施，川普說戰爭很快就會結束。",
+  "topic_key": "news:2026-11-03",
+  "updated_at": "2026-11-03T05:26:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "body": [
+    {
+      "type": "p",
+      "text": "停火結束一天，烏克蘭又有一處援助站被炸。美國今天投票，伊朗想把談判方案縮短到兩天。"
+    },
+    {
+      "type": "news",
+      "title": "世界",
+      "items": [
+        {
+          "headline": "札波羅熱援助站遭轟炸",
+          "place": "UA",
+          "summary": "札波羅熱州一個村子裡，發放援助的學校 11 月 2 日（週一）遭俄軍轟炸，烏克蘭緊急服務說至少 24 人死亡；法新社晚間稿引代理州長的說法，已升到至少 26 人。澤倫斯基說，第二次空襲在人們聚集的避難處投下 9 枚炸彈，那裡每週一都發放援助。美國主導的俄烏會談預計本月在阿布達比恢復。",
+          "source": "半島電視台、法新社經法國24",
+          "url": "https://www.aljazeera.com/news/2026/11/2/russian-bombing-of-ukrainian-aid-centre-kills-24-people-zelenskyy",
+          "when": "11 月 2 日，烏克蘭當地時間"
+        },
+        {
+          "headline": "美國期中選舉週二投票",
+          "place": "US",
+          "summary": "美國期中選舉 11 月 3 日（週二）投票。參議院現為共和黨 53 席對 47 席，民主黨要兩院都過半，得在眾議院淨增 3 席、參議院淨增 4 席。民調平均民主黨 51.5%、共和黨 43.1%，分析者提醒民調可能低估共和黨。已有逾 5,100 萬人提前投票。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/1/us-midterms-2-days-to-go-what-polls-say-as-trump-el-sayed-hit-the-trail",
+          "when": "11 月 1 日，美國當地時間"
+        },
+        {
+          "headline": "伊朗：停火方案兩天可行",
+          "place": [
+            "IR",
+            "US"
+          ],
+          "summary": "伊朗外交部發言人 11 月 2 日說，上月提出的七步停火方案已「濃縮」，兩天內即可實施，包括重開荷莫茲海峽。德黑蘭的條件沒變：解除對伊朗港口的海上封鎖、取消制裁、保證停止攻擊。川普說談判進行得不錯，並再度暗示期中選舉後可能打擊伊朗；報導沒有看到美方接受方案的跡象。",
+          "source": "半島電視台、美聯社",
+          "url": "https://www.aljazeera.com/news/2026/11/2/iran-pushing-accelerated-plan-for-ceasefire-talks-with-us",
+          "when": "11 月 2 日，台灣時間"
+        },
+        {
+          "headline": "Binance 遭駭 63 億美元",
+          "place": "KP",
+          "summary": "FBI 10 月 31 日（週六）指出，Binance 被盜走的逾 63 億美元是北韓駭客組織 TraderTraitor 所為，是單筆加密貨幣竊案的紀錄。Binance 說已用公司資金與保護基金補回約 95%，11 月 1 日起分階段恢復提領。川普被問到時說還不確定，調查中。",
+          "source": "半島電視台、公視",
+          "url": "https://www.aljazeera.com/news/2026/11/1/fbi-blames-north-korea-for-record-6-3bn-crypto-heist",
+          "when": "11 月 1 日，台灣時間"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "title": "台灣",
+      "items": [
+        {
+          "headline": "碳費審議未達共識",
+          "place": "TW",
+          "summary": "環境部碳費費率審議委員會 11 月 2 日開會，討論暫不調整、只調一般費率、兩種費率都調三個方案，沒有結論，要環境部補齊資料後再議。部長彭啓明說，前 20 大排放戶占排碳量約 80%、多為科技業，齊頭式調高會讓科技與傳產承受的壓力很不均衡；環保團體認為費率太低。",
+          "source": "中央社、公視",
+          "url": "https://www.cna.com.tw/news/ahel/202611020269.aspx",
+          "when": "11 月 2 日，台灣時間"
+        },
+        {
+          "headline": "公費疫苗擴大到 50–64 歲",
+          "place": "TW",
+          "summary": "公費流感與新冠疫苗第二階段 11 月 2 日開打，健康的 50 至 64 歲成人也能接種。疾管署說 10 月已接種 585 萬劑，流感疫情預期本週降到 11% 的流行門檻以下，要連續兩週才宣告結束。疾管署長羅一鈞說，新版新冠疫苗劑量是過去的五分之一、副作用較少。",
+          "source": "中央社（Focus Taiwan）、疾管署",
+          "url": "https://focustaiwan.tw/society/202611020017",
+          "when": "11 月 2 日，台灣時間"
+        },
+        {
+          "headline": "東北季風，東半部防大雨",
+          "place": "TW",
+          "summary": "首波東北季風 11 月 2 日晚間起影響到 3 日，北部與宜蘭白天高溫約 24 至 26 度；東半部與恆春半島雨勢明顯，東半部要防局部較大雨勢。5 日晚間第二波增強，氣象署說可能至少影響到 9 日。",
+          "source": "中央社、公視",
+          "url": "https://www.cna.com.tw/news/ahel/202611020184.aspx",
+          "when": "11 月 2 日，台灣時間"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "碳費費率（元／噸）",
+      "head": [
+        "項目",
+        "費率"
+      ],
+      "rows": [
+        [
+          "一般費率（現行）",
+          "300"
+        ],
+        [
+          "優惠費率（現行）",
+          "50 或 100"
+        ],
+        [
+          "2030 年一般費率（原長期規畫）",
+          "1,200–1,800"
+        ]
+      ],
+      "caption": "資料來源：中央社。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Russian bombing of Ukrainian aid centre kills 24 people",
+      "publisher": "Al Jazeera",
+      "date": "2026-11-02",
+      "url": "https://www.aljazeera.com/news/2026/11/2/russian-bombing-of-ukrainian-aid-centre-kills-24-people-zelenskyy",
+      "note": "24 死（烏克蘭緊急服務）、第二次空襲 9 枚炸彈、每週援助；AJ 另載 27 人失蹤，未採用"
+    },
+    {
+      "title": "Ukraine says Russian strikes dash peace progress hopes after 24 killed",
+      "publisher": "France 24（法新社）",
+      "date": "2026-11-02",
+      "url": "https://www.france24.com/en/live-news/20261102-ukraine-says-russian-strikes-dash-peace-progress-hopes-after-18-killed",
+      "note": "網址與標題停在較早版本（18、24 死）；內文 19:53 發、21:49 更新，代理州長稱至少 26 死；佩斯科夫談停火「完全正常的做法」；阿布達比會談"
+    },
+    {
+      "title": "US midterms: 2 days to go – what polls say as Trump, El-Sayed hit the trail",
+      "publisher": "Al Jazeera",
+      "date": "2026-11-01",
+      "url": "https://www.aljazeera.com/news/2026/11/1/us-midterms-2-days-to-go-what-polls-say-as-trump-el-sayed-hit-the-trail",
+      "note": "435／35 席、民主黨需淨增 3／4 席、逾 5,100 萬提前投票、RealClearPolling 51.5%／43.1%、印第安納與肯塔基最先收票"
+    },
+    {
+      "title": "Can Democrats win the US Senate? 10 key midterm races to watch",
+      "publisher": "Al Jazeera",
+      "date": "2026-10-31",
+      "url": "https://www.aljazeera.com/news/2026/10/31/can-democrats-win-the-us-senate-10-key-midterm-races-to-watch",
+      "note": "參議院現為共和黨 53 比 47"
+    },
+    {
+      "title": "Iran pushing accelerated plan for ceasefire talks with US",
+      "publisher": "Al Jazeera（AP）",
+      "date": "2026-11-02",
+      "url": "https://www.aljazeera.com/news/2026/11/2/iran-pushing-accelerated-plan-for-ceasefire-talks-with-us",
+      "note": "七步方案濃縮為兩天、四項條件、卡達與巴基斯坦居中、川普談話"
+    },
+    {
+      "title": "FBI blames North Korea for record $6.3bn crypto heist",
+      "publisher": "Al Jazeera",
+      "date": "2026-11-01",
+      "url": "https://www.aljazeera.com/news/2026/11/1/fbi-blames-north-korea-for-record-6-3bn-crypto-heist",
+      "note": "紀錄、TraderTraitor、Bybit 約 15 億美元；FBI 聲明在週六"
+    },
+    {
+      "title": "幣安交易所遭駭竊63億美元 FBI指北韓駭客組織涉案",
+      "publisher": "公視新聞",
+      "date": "2026-11-02",
+      "url": "https://news.pts.org.tw/article/833948",
+      "note": "FBI 10 月 31 日聲明、補回約 95%、11 月 1 日分階段復領、川普「還不知道，正在調查」。遭駭日期各報略有出入，正文不寫"
+    },
+    {
+      "title": "AI淨零／環境部提碳費調整3方案 審議委員會未獲共識",
+      "publisher": "中央社",
+      "date": "2026-11-02",
+      "url": "https://www.cna.com.tw/news/ahel/202611020269.aspx",
+      "note": "三方案、費率、彭啓明談話、前 20 大占 80%"
+    },
+    {
+      "title": "環境部開碳費費率審議會 環團促提高優惠費率門檻",
+      "publisher": "公視新聞",
+      "date": "2026-11-02",
+      "url": "https://news.pts.org.tw/article/833849",
+      "note": "環保團體認為費率太低"
+    },
+    {
+      "title": "Taiwan expands flu, COVID-19 shots to adults aged 50-64",
+      "publisher": "Focus Taiwan（中央社）",
+      "date": "2026-11-02",
+      "url": "https://focustaiwan.tw/society/202611020017",
+      "note": "第二階段對象、585 萬劑、11% 門檻、羅一鈞談話"
+    },
+    {
+      "title": "2026年度公費流感及新冠疫苗第二階段開跑",
+      "publisher": "衛生福利部疾病管制署",
+      "date": "2026-11-02",
+      "url": "https://www.cdc.gov.tw/Bulletin/Detail/HGWcz7qahX4V2DxoqL-vXA?typeid=9",
+      "note": "第二階段 11 月 2 日起、擴大至 50 至 64 歲無高風險慢性病成人"
+    },
+    {
+      "title": "未來一週2波東北季風接力 北部低溫探21度",
+      "publisher": "中央社",
+      "date": "2026-11-02",
+      "url": "https://www.cna.com.tw/news/ahel/202611020184.aspx",
+      "note": "各地氣溫與降雨、第二波 5 日晚間起可能至少影響到 9 日"
+    },
+    {
+      "title": "東北季風增強 今明北台灣高溫降至24℃",
+      "publisher": "公視新聞",
+      "date": "2026-11-02",
+      "url": "https://news.pts.org.tw/article/833860",
+      "note": "週三起東北季風減弱"
+    }
+  ]
+}
