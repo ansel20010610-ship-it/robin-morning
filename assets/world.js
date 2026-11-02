@@ -66,9 +66,11 @@ export async function drawMap(box, { read = [], today = [] } = {}) {
   const g = document.createElementNS(NS, "g");
   g.setAttribute("class", "home");
   g.setAttribute("aria-label", "台灣，家");
+  // Radii in CSS pixels, not viewBox units: on a phone the 990-unit map is drawn a third its size.
+  const k = (svg.viewBox?.baseVal?.width || 990) / Math.max(1, svg.getBoundingClientRect().width);
   for (const [r, cls] of [[9, "ring"], [2.2, "dot"]]) {
     const o = document.createElementNS(NS, "circle");
-    o.setAttribute("cx", cx.toFixed(1)); o.setAttribute("cy", cy.toFixed(1)); o.setAttribute("r", r); o.setAttribute("class", cls);
+    o.setAttribute("cx", cx.toFixed(1)); o.setAttribute("cy", cy.toFixed(1)); o.setAttribute("r", (r * k).toFixed(1)); o.setAttribute("class", cls);
     g.append(o);
   }
   svg.append(g);

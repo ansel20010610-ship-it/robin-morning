@@ -265,7 +265,7 @@ function revealBox(issue, arts, read) {
     : `還有 ${unread} 篇沒讀，讀完就全揭開`;
   const ar = h.width > 0 && h.height > 0 ? ` style="--ar:${Number(h.width)}/${Number(h.height)}"` : "";
   return `<section class="reveal${done ? " done" : ""}${just ? " just" : ""}" aria-label="刮開今天這幅"><div class="lbl">刮開今天這幅<span class="de">Aufgedeckt</span></div>
-    <div class="plate${CONTAIN.has(h.kind) ? " contain" : ""}"${ar}><img src="${esc(h.src)}" alt="${esc(h.alt || "")}" loading="eager" decoding="async" referrerpolicy="no-referrer"><div class="tiles" aria-hidden="true">${tiles}</div></div>
+    <div class="plate${CONTAIN.has(h.kind) ? " contain" : ""}"${ar}><img src="${esc(h.src)}" alt="${esc(h.alt || "")}" loading="eager" decoding="async" referrerpolicy="no-referrer"><div class="tiles" aria-hidden="true" style="--rows:${rows}">${tiles}</div></div>
     <p class="cap">${cap}</p></section>`;
 }
 // A peeled tile leaves the page once its animation has run (the timer is for a browser that never ran it).

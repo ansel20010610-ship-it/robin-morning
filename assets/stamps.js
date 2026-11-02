@@ -57,7 +57,7 @@ export function stampHtml(issue, { earned = false, open = false, href = null, i 
   const day = Number.isFinite(d) ? `${d}. ${roman(m)}.` : "", wd = date ? fmtDate(date, "de").split(",")[0] : "";
   const label = [date && fmtDate(date, "short"), issue?.no && `第 ${issue.no} 期`, earned ? "已蓋郵票" : open ? "今天還沒讀完" : "錯過，留白"].filter(Boolean).join("・");
   const style = `--i:${i}${earned ? `;--tilt:${tilt}deg` : ""}${size > 0 ? `;width:${size}px` : ""}`;
-  const tag = href ? `a href="${esc(href)}"` : "span";
+  const tag = href ? `a href="${esc(href)}"` : `span role="img"`; // a role, or the span's aria-label is not read out
   let inner;
   if (earned) {
     const pic = stampPicture(issue), hero = pic?.hero;

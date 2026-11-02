@@ -4,9 +4,10 @@
 COUNTRIES gives every country its ISO 3166-1 alpha-2 code, its display name and the other ways Taiwan's wire copy writes
 it; CITIES adds the capitals, big cities and metonyms (白宮, 克里姆林宮, 唐寧街) that stand in for a country. A name that
 would misfire is left out on purpose: single characters (美, 英, 中 sit inside other words), 查德 (調查德國), 海地 (沿海地區),
-東加 (中東加沙), 獅子山 (the Hong Kong hill), 中油 (其中油價), and regions, seas and organisations that belong to no one
-country (中東, 南海, 歐盟, 聯合國, 北約). The writer sets "place" on the item when the automatic match would miss
-(editorial/columns/news.md).
+東加 (中東加沙), 獅子山 (the Hong Kong hill), 中油 (其中油價), 龍山 (龍山寺), 伯斯 (賈伯斯), 馬賽 (馬賽克), 里約 (公里約,
+里約熱內盧 stays), and regions, seas and organisations that belong to no one country (中東, 南海, 歐盟, 聯合國, 北約). STOP
+swallows the frames a name sits in without meaning the country (其中國際, 歐美國家, 今日本土, 抵達卡達). The writer sets
+"place" on the item when the automatic match would miss (editorial/columns/news.md).
 
   places_of("赫爾松停火原訂週日到期 … 俄方不要")  →  ["RU", "UA"]
   python3 scripts/places.py                       runs the self-test
@@ -33,7 +34,7 @@ COUNTRIES = {
     "MM": ("緬甸",),
     "KH": ("柬埔寨",),
     "LA": ("寮國",),
-    "BN": ("汶萊",),
+    "BN": ("汶萊", "汶萊蘇丹"),  # the longer name keeps 蘇丹 from lighting up Sudan
     "TL": ("東帝汶",),
     # South and Central Asia
     "IN": ("印度",),
@@ -231,7 +232,7 @@ CITIES = {
            "休士頓", "邁阿密", "西雅圖", "波士頓", "底特律", "拉斯維加斯", "加州", "德州", "佛州", "喬治亞州", "夏威夷",
            "阿拉斯加", "波多黎各", "美軍"),
     "GB": ("倫敦", "唐寧街", "西敏", "白金漢宮", "曼徹斯特", "利物浦", "伯明罕", "愛丁堡", "貝爾法斯特"),
-    "FR": ("巴黎", "愛麗榭宮", "馬賽", "里昂", "史特拉斯堡"),
+    "FR": ("巴黎", "愛麗榭宮", "里昂", "史特拉斯堡"),
     "DE": ("柏林", "慕尼黑", "法蘭克福", "科隆", "德勒斯登"),
     "IT": ("羅馬", "米蘭", "威尼斯", "拿坡里", "杜林", "佛羅倫斯"),
     "ES": ("馬德里", "巴塞隆納", "塞維亞", "瓦倫西亞"),
@@ -293,7 +294,7 @@ CITIES = {
            "內蒙古", "福建", "廈門", "浙江", "廣東", "海南", "青島", "大連", "國台辦", "解放軍", "新華社", "人民大會堂"),
     "HK": ("港府", "中聯辦"),
     "JP": ("東京", "永田町", "大阪", "京都", "名古屋", "福岡", "札幌", "沖繩", "廣島", "長崎", "橫濱", "神戶", "北海道"),
-    "KR": ("首爾", "青瓦台", "釜山", "仁川", "龍山"),
+    "KR": ("首爾", "青瓦台", "釜山", "仁川"),
     "KP": ("平壤",),
     "VN": ("河內", "胡志明市"),
     "TH": ("曼谷", "清邁", "普吉"),
@@ -303,12 +304,12 @@ CITIES = {
     "MM": ("仰光", "奈比多"),
     "KH": ("金邊",),
     "LA": ("永珍",),
-    "AU": ("坎培拉", "雪梨", "墨爾本", "布里斯本", "伯斯", "阿得雷德"),
+    "AU": ("坎培拉", "雪梨", "墨爾本", "布里斯本", "阿得雷德"),
     "NZ": ("威靈頓",),
     "TO": ("努瓜婁發",),
     "CA": ("渥太華", "多倫多", "溫哥華", "蒙特婁", "魁北克"),
     "MX": ("墨西哥城",),
-    "BR": ("巴西利亞", "聖保羅", "里約", "里約熱內盧"),
+    "BR": ("巴西利亞", "聖保羅", "里約熱內盧"),
     "AR": ("布宜諾斯艾利斯",),
     "CO": ("波哥大",),
     "VE": ("卡拉卡斯",),
@@ -343,8 +344,11 @@ CITIES = {
 }
 
 # Words that contain a country's name but are not about it: consumed with no code, so 印度洋 does not light up India.
+# The frame words (其中國際, 歐美國家, 今日本土) and the arrival verbs (抵達卡達 would otherwise read 達卡) are the same
+# device: an equal-length name starting earlier takes the characters first.
 STOP = ("印度洋", "日本海", "墨西哥灣", "日本腦炎", "德國麻疹", "西班牙流感", "法國號", "法國麵包", "中國時報", "中國城",
-        "俄羅斯輪盤", "馬利亞", "拉法葉", "美屬薩摩亞", "巴西利亞大學")
+        "俄羅斯輪盤", "馬利亞", "拉法葉", "美屬薩摩亞", "巴西利亞大學", "蘇丹紅", "金門大橋", "沿海南", "平台中", "舞台中",
+        "其中國", "會中國", "歐美國", "今日本", "昨日本", "抵達", "到達", "送達")
 
 NAMES = {code: names[0] for code, names in COUNTRIES.items()}
 
@@ -407,6 +411,9 @@ if __name__ == "__main__":
         ("聖母馬利亞像在羅馬展出；歐盟與北約在布魯塞爾開會。", ["BE", "IT"]),
         ("內蒙古沙塵南下，蒙古首都烏蘭巴托同日降雪；喬治亞州選舉與喬治亞的親歐示威無關。", ["CN", "GE", "MN", "US"]),
         ("南韓總統在青瓦台會見日本首相；北韓自平壤發射飛彈，落入日本海。", ["JP", "KP", "KR"]),
+        ("美國特使抵達卡達，與哈瑪斯談判；孟加拉代表到達杜哈。", ["BD", "PS", "QA", "US"]),
+        ("其中國際油價走高，歐美國家同聲譴責；今日本土新增病例，會中國防部長表示無關。", []),
+        ("龍山寺前的馬賽克拼貼，公里約三小時；沿海南部豪雨，舊金山金門大橋封閉，汶萊蘇丹到訪，蘇丹紅下架。", ["BN", "US"]),
         ("", []),
         (None, []),
     ]
