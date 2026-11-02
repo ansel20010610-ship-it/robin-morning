@@ -55,7 +55,9 @@ def stamp(t):
 
 
 def ics(title, start, minutes, location, description, url, uid, now):
-    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//知更鳥晨間記事//ZH", "METHOD:PUBLISH", "BEGIN:VEVENT",
+    # X-WR-CALNAME names the calendar the phone subscribes to through the app's webcal:// link (one event each).
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//知更鳥晨間記事//ZH", "METHOD:PUBLISH", "X-WR-CALNAME:%s" % text(title),
+             "X-WR-TIMEZONE:Asia/Taipei", "BEGIN:VEVENT",
              "UID:%s@robin-morning" % uid, "DTSTAMP:%s" % stamp(now), "DTSTART:%s" % stamp(start),
              "DTEND:%s" % stamp(start + dt.timedelta(minutes=minutes)), "SUMMARY:%s" % text(title)]
     if location:

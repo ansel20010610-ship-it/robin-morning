@@ -459,12 +459,13 @@ function updatedNote(date, a) {
 // 牙周欄的證據力 (paper.evidence): shown under the takeaway, so the reader sees how solid the conclusion is.
 const evidenceOf = (a) => { const p = (a.body || []).find((b) => b?.type === "paper"); return typeof p?.evidence === "string" ? p.evidence : ""; };
 
-// 加入行事曆: a plain link to the show's or the fixture's .ics file, written at deploy by scripts/build_ics.py (the file
-// names are its contract) and served by the site as text/calendar. Opened in Safari (a new tab, so the home-screen app
-// stays where it is) the phone shows the event with 加入 — the share-sheet and download routes a home-screen app does
-// not have. Offline, or before the next deploy has written a new show's file, the link simply fails to open.
+// 加入行事曆: a webcal:// link to the show's or the fixture's .ics file, written at deploy by scripts/build_ics.py (the
+// file names are its contract) and served by the site. webcal is the one route a home-screen app on the iPhone has
+// into 行事曆: the scheme hands the address straight to the Calendar app, which asks to subscribe to that one-event
+// calendar (named after the event, X-WR-CALNAME) and shows it at once. An https link opens inside the app's own web
+// view, which cannot add a calendar file, and the share sheet offers no 行事曆 — both tried on 2026-11-02 and failed.
 const ICON_CAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="5" width="16" height="15"/><path d="M4 10h16M8 3v4M16 3v4M12 13v4M10 15h4"/></svg>';
-const calBtn = (file) => `<a class="btn ghost cal" href="ics/${esc(file)}.ics" target="_blank" rel="noopener">${ICON_CAL}加入行事曆</a>`;
+const calBtn = (file) => `<a class="btn ghost cal" href="webcal://${esc(location.host)}${esc(location.pathname.replace(/[^/]*$/, ""))}ics/${esc(file)}.ics">${ICON_CAL}加入行事曆</a>`;
 // 下一場 (football's top-level "next", SCHEMA.md; build_index.py copies it into the index entry): the fixture as the card
 // shows it, or null when the field is missing or malformed, or the kickoff has passed. The kickoff is Taiwan time with
 // its +08:00, so its date and clock are read straight off the string.
