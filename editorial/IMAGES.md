@@ -50,3 +50,7 @@
 ## 核對
 
 寫完跑 `python3 scripts/validate.py <日期> --check-urls`，確認每張圖網址可開啟、是圖片。打不開的圖就換。
+
+## 地圖底圖
+
+`assets/world.svg`（讀過的世界）改自 Wikimedia Commons 的 [BlankMap-World.svg](https://commons.wikimedia.org/wiki/File:BlankMap-World.svg)（Canuckguy 等人，作者聲明釋出為公版 Public domain，2026-11-02 取得）：只留各國輪廓，每國一個 `<path>`，id 為小寫 ISO 3166-1 alpha-2 代碼，台灣是獨立的 `tw`，克里米亞畫在 `ua`。
