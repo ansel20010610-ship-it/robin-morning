@@ -1,0 +1,281 @@
+{
+  "column": "concept",
+  "date": "reserve",
+  "reserve_written": "2026-11-02",
+  "title": "教官說：稱讚過的學員，下一趟就飛差",
+  "dek": "最資深的其中一位飛行教官舉手反駁康納曼。他說，稱讚完就飛差，吼過反而飛好。高爾頓在 205 對父母的身高裡，早就看過同一件事。",
+  "brief": "最資深的其中一位飛行教官舉手反駁康納曼：他說稱讚完學員，下一趟就飛差；吼過的，下一趟反而飛好。康納曼立刻讓大家背對目標丟兩枚硬幣，第一次丟得最好的人，第二次大多變差。1886 年，高爾頓在 205 對父母的身高裡看過同一件事：孩子偏離平庸水準的幅度，平均只有中親的三分之二。",
+  "topic_key": "concept:regression-to-the-mean",
+  "updated_at": "2026-11-02T14:55:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "portrait",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/PSM_V29_D010_Francis_Galton.jpg/1280px-PSM_V29_D010_Francis_Galton.jpg",
+    "width": 1280,
+    "height": 1665,
+    "alt": "黑白版畫肖像，一位年長男子朝左的側臉，前額光禿，兩側與腦後有濃密捲髮，鬢角一路連到下顎，穿深色外套、白色高領，打著黑色蝴蝶領結；背景是細密的斜向刻線。",
+    "caption": "高爾頓，刊在 1886 年《大眾科學月刊》（Popular Science Monthly）第 29 卷的版畫肖像。同一年，他發表了身高迴歸的論文。",
+    "credit": "《Popular Science Monthly》第 29 卷，作者不詳／Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:PSM_V29_D010_Francis_Galton.jpg",
+    "made": "1886"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "康納曼（Daniel Kahneman）要教一群空軍飛行學校的教官：學技術，稱讚比懲罰有效。台下最資深的其中一位教官舉手，先讓一步，承認正增強對鳥也許有用，接著否認它對飛行學員是最好的辦法："
+    },
+    {
+      "type": "quote",
+      "text": "很多次，我稱讚學員一套特技動作飛得乾淨，一般來說，他再飛一次就變差。反過來，我常對飛得爛的學員吼，一般來說，他下一次就變好。所以請別跟我們說獎勵有效、懲罰沒用，事實正好相反。",
+      "original": "On many occasions I have praised flight cadets for clean execution of some aerobatic maneuver, and in general when they try it again, they do worse. On the other hand, I have often screamed at cadets for bad execution, and in general they do better the next time. So please don't tell us that reinforcement works and punishment does not, because the opposite is the case.",
+      "cite": "一位空軍飛行學校教官，康納曼在諾貝爾獎自傳中記下"
+    },
+    {
+      "type": "p",
+      "text": "康納曼在希伯來大學教一年級統計，也和同事替空軍飛行學校設計教官的訓練課程。他說，在試著教飛行教官「稱讚比懲罰更能促進技能學習」時，他有了生涯中最令人滿足的一次頓悟。"
+    },
+    {
+      "type": "h",
+      "text": "高爾頓與種子"
+    },
+    {
+      "type": "p",
+      "text": "高爾頓（Francis Galton）在種子上碰過同一件事。1877 年 2 月，他在皇家研究院報告一批實驗：同一品種、大小不同的種子，後代總是比親代更「平庸」，親代大，後代小一些；親代很小，後代反而大一點。他的結論是，後代平均往中間迴歸（regression）的幅度，和親代偏離中間的程度成正比。"
+    },
+    {
+      "type": "p",
+      "text": "他後來說，當時自己看不見那個簡單的解釋。他想要人的資料，求不到，就懸賞徵求家庭紀錄，徵集說明裡刻意不提這項研究，免得回報有偏差。"
+    },
+    {
+      "type": "h",
+      "text": "205 對父母的身高"
+    },
+    {
+      "type": "p",
+      "text": "1886 年，他發表了這批資料：205 對父母和他們成年子女的身高。女性一律乘 1.08，換成男性的尺度；父母兩人再取平均，他叫「中親」（mid-parent）。平庸水準（level of mediocrity）是 68¼ 吋，約 173 公分。"
+    },
+    {
+      "type": "table",
+      "title": "中親多高，孩子多高",
+      "head": [
+        "中親（吋）",
+        "子女人數",
+        "子女中位數（吋）",
+        "離 68¼ 吋：中親 → 子女"
+      ],
+      "rows": [
+        [
+          "72.5",
+          "19",
+          "72.2",
+          "+4.25 → +3.95"
+        ],
+        [
+          "71.5",
+          "43",
+          "69.9",
+          "+3.25 → +1.65"
+        ],
+        [
+          "70.5",
+          "68",
+          "69.5",
+          "+2.25 → +1.25"
+        ],
+        [
+          "69.5",
+          "183",
+          "68.9",
+          "+1.25 → +0.65"
+        ],
+        [
+          "68.5",
+          "219",
+          "68.2",
+          "+0.25 → −0.05"
+        ],
+        [
+          "67.5",
+          "211",
+          "67.6",
+          "−0.75 → −0.65"
+        ],
+        [
+          "66.5",
+          "78",
+          "67.2",
+          "−1.75 → −1.05"
+        ],
+        [
+          "65.5",
+          "66",
+          "66.7",
+          "−2.75 → −1.55"
+        ],
+        [
+          "64.5",
+          "23",
+          "65.8",
+          "−3.75 → −2.45"
+        ]
+      ],
+      "caption": "節錄自高爾頓 1886 年論文表 I。女性身高已乘 1.08。最右欄是與 68¼ 吋的差，本報計算。"
+    },
+    {
+      "type": "p",
+      "text": "看最右一欄。中親高出 3¼ 吋的那組，孩子只高 1.65 吋；中親矮 2¾ 吋的那組，孩子只矮 1.55 吋。高的往下收，矮的往上收。高爾頓從整張表得出一個比例："
+    },
+    {
+      "type": "quote",
+      "text": "子代的身高偏差，平均而言是其中親身高偏差的三分之二。",
+      "original": "the height-deviate of the offspring is, on the average, two-thirds of the height-deviate of its mid-parentage.",
+      "cite": "高爾頓，1886"
+    },
+    {
+      "type": "h",
+      "text": "只有實力會留到下一次"
+    },
+    {
+      "type": "p",
+      "text": "一本統計教科書拿考試來講：分數一部分是實力，一部分是運氣。只挑考最高的那群人，平均來說，他們的實力高於平均，運氣也高於平均；到了重考，對成績有用的只剩實力那一份。運氣占得越重，退得越多；全靠運氣的事，第一次考得再高，第二次最好的猜測都是平均。"
+    },
+    {
+      "type": "p",
+      "text": "飛特技也一樣，一趟裡有實力，也有運氣。教官稱讚的，是剛飛出一趟好成績的人；吼的，是剛飛砸的人。他等於拿上一趟的成績在挑人，下一趟本來就會往中間回。康納曼的結論是：",
+      "tag": "原創示範"
+    },
+    {
+      "type": "quote",
+      "text": "我們總在別人做得好時獎勵、做得差時懲罰，又因為有迴歸平均，這是人類處境的一部分：在統計上，獎勵別人會被罰，懲罰別人反倒得到回報。",
+      "original": "because we tend to reward others when they do well and punish them when they do badly, and because there is regression to the mean, it is part of the human condition that we are statistically punished for rewarding others and rewarded for punishing them.",
+      "cite": "康納曼，諾貝爾獎自傳"
+    },
+    {
+      "type": "h",
+      "text": "從孩子回頭看父母"
+    },
+    {
+      "type": "p",
+      "text": "高爾頓自己的解釋是血統：孩子一部分繼承父母，一部分繼承更早的祖先；祖先越往上越多越雜，平均起來就是整個族群的平均，像往酒裡兌一定比例的清水。"
+    },
+    {
+      "type": "p",
+      "text": "他也把同一張表倒過來讀，先看孩子，再找他們的父母。72.2 吋的那群子女，中親的中位數是 70.0 吋；63.2 吋的那群，中親是 66.3 吋。他算出，一個人最可能的中親，偏離只有他本人的三分之一；這兩組不剛好是三分之一，高爾頓自己說這些數字只是「堪用的近似」。出眾的人，比較常是普通父母生的、有點出眾的兒子，比較少是非常出眾的父母生的普通兒子。他還特別提醒：子女的偏離是中親的 2/3，反過來並不是 3/2。"
+    },
+    {
+      "type": "svg",
+      "svg": "<svg viewBox=\"0 0 360 430\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"高爾頓身高資料的示意散布橢圓與兩條迴歸線\"><ellipse cx=\"180\" cy=\"170\" rx=\"99.0\" ry=\"52.9\" transform=\"rotate(-63.43 180 170)\" class=\"soft\"/><line x1=\"21\" y1=\"170\" x2=\"338\" y2=\"170\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"180\" y1=\"328\" x2=\"180\" y2=\"11\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"36\" y1=\"167\" x2=\"36\" y2=\"173\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"36\" y=\"184\" class=\"muted\" font-size=\"10\" text-anchor=\"middle\">-4</text><line x1=\"177\" y1=\"314\" x2=\"183\" y2=\"314\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"175\" y=\"318\" class=\"muted\" font-size=\"10\" text-anchor=\"end\">-4</text><line x1=\"108\" y1=\"167\" x2=\"108\" y2=\"173\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"108\" y=\"184\" class=\"muted\" font-size=\"10\" text-anchor=\"middle\">-2</text><line x1=\"177\" y1=\"242\" x2=\"183\" y2=\"242\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"175\" y=\"246\" class=\"muted\" font-size=\"10\" text-anchor=\"end\">-2</text><line x1=\"252\" y1=\"167\" x2=\"252\" y2=\"173\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"252\" y=\"184\" class=\"muted\" font-size=\"10\" text-anchor=\"middle\">+2</text><line x1=\"177\" y1=\"98\" x2=\"183\" y2=\"98\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"175\" y=\"102\" class=\"muted\" font-size=\"10\" text-anchor=\"end\">+2</text><line x1=\"324\" y1=\"167\" x2=\"324\" y2=\"173\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"324\" y=\"184\" class=\"muted\" font-size=\"10\" text-anchor=\"middle\">+4</text><line x1=\"177\" y1=\"26\" x2=\"183\" y2=\"26\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"175\" y=\"30\" class=\"muted\" font-size=\"10\" text-anchor=\"end\">+4</text><text x=\"338\" y=\"200\" class=\"ink\" font-size=\"11\" text-anchor=\"end\">中親比 68¼ 吋高幾吋 →</text><text x=\"172\" y=\"19\" class=\"ink\" font-size=\"11\" text-anchor=\"end\">↑ 子女比 68¼ 吋高幾吋</text><line x1=\"36\" y1=\"314\" x2=\"324\" y2=\"26\" class=\"muted\" stroke-width=\"1.2\" stroke=\"currentColor\" stroke-dasharray=\"5 4\"/><line x1=\"21.6\" y1=\"275.6\" x2=\"338.4\" y2=\"64.4\" class=\"accent\" stroke-width=\"2.5\" stroke=\"currentColor\"/><line x1=\"127.2\" y1=\"328.4\" x2=\"232.8\" y2=\"11.6\" class=\"gold\" stroke-width=\"2.5\" stroke=\"currentColor\"/><circle cx=\"288\" cy=\"98\" r=\"5\" class=\"accent\" fill=\"currentColor\"/><line x1=\"288\" y1=\"170\" x2=\"288\" y2=\"98\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"2 3\"/><text x=\"296\" y=\"112\" class=\"accent\" fill=\"currentColor\" font-size=\"10\">父母 +3</text><text x=\"296\" y=\"124\" class=\"accent\" fill=\"currentColor\" font-size=\"10\">子女 +2</text><circle cx=\"216\" cy=\"62\" r=\"5\" class=\"gold\" fill=\"currentColor\"/><line x1=\"180\" y1=\"62\" x2=\"216\" y2=\"62\" class=\"gold\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"2 3\"/><text x=\"232\" y=\"36\" class=\"gold\" fill=\"currentColor\" font-size=\"10\">子女 +3</text><text x=\"232\" y=\"48\" class=\"gold\" fill=\"currentColor\" font-size=\"10\">父母 +1</text><line x1=\"20\" y1=\"352\" x2=\"50\" y2=\"352\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-dasharray=\"5 4\"/><text x=\"58\" y=\"356\" class=\"ink\" font-size=\"11\">孩子和父母一樣高（沒有迴歸）</text><line x1=\"20\" y1=\"374\" x2=\"50\" y2=\"374\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2.5\"/><text x=\"58\" y=\"378\" class=\"ink\" font-size=\"11\">已知父母，猜孩子：橫著讀，2/3</text><line x1=\"20\" y1=\"396\" x2=\"50\" y2=\"396\" class=\"gold\" stroke=\"currentColor\" stroke-width=\"2.5\"/><text x=\"58\" y=\"400\" class=\"ink\" font-size=\"11\">已知孩子，猜父母：直著讀，1/3</text><text x=\"20\" y=\"422\" class=\"muted\" font-size=\"10\">淺色橢圓：資料點最密的範圍（示意）</text></svg>",
+      "title": "同一團資料，兩條線",
+      "caption": "依高爾頓 1886 年的兩個比例畫的示意圖，不是逐點描他的資料。紅線橫著讀：已知中親，往上找子女，每多 1 吋只多 2/3 吋。金線直著讀：已知子女，往左右找中親，每多 1 吋只多 1/3 吋。金線畫出來比虛線陡，是因為讀的方向不同。",
+      "credit": "本報原創圖解，依 Galton (1886) 表 I、Plate IX、X，以及 p.255 的橢圓比例（長短軸 √7:√2）"
+    },
+    {
+      "type": "h",
+      "text": "兩個斜率乘起來"
+    },
+    {
+      "type": "p",
+      "text": "教科書把這件事寫成一行。兩個量都換成標準分數，也就是比平均高幾個標準差，從 X 猜 Y 最好的直線是 Z_Y = r × Z_X，r 是相關係數。只要 r 小於 1，猜出來的值就比 Z_X 更靠近 0；r 等於 0，X 再極端，也只能猜平均。"
+    },
+    {
+      "type": "p",
+      "text": "換回吋來算。從中親猜子女，斜率是 r 乘上子女與中親的標準差之比；從子女猜中親，斜率是 r 乘上倒過來的那個比。兩個斜率相乘，標準差消掉，剩下 r²：2/3 × 1/3 = 2/9，r 大約 0.47。兩個斜率相除，剩下標準差之比的平方，等於 2：子女的分散大約是中親的 √2 倍。這和兩人平均會讓分散變小一致。高爾頓當時還沒有相關係數，2/3 與 1/3 也是他自稱的「堪用近似」（p.258），這個 r 是我拿這兩個數字推的。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "挑最糟的病人來複查"
+    },
+    {
+      "type": "p",
+      "text": "一家診所只挑初診時量測最差的一群病人回診複查，什麼處理都不做，平均也會變好。他們被挑中，部分正因為那一次量得特別差；量測越不穩，好轉得越多。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "p",
+      "text": "一篇討論迴歸平均的流行病學論文也這樣說：迴歸平均會讓重複量測裡的自然變異看起來像真的改變，量測誤差越大、追蹤的又只是依基線值挑出的那群人，效應越明顯。它在重複資料裡無所不在，任何觀察到的變化都該把它列進可能的原因，更好的研究設計和合適的統計方法可以減輕它。"
+    },
+    {
+      "type": "h",
+      "text": "人沒有越生越平庸"
+    },
+    {
+      "type": "p",
+      "text": "迴歸不會讓人一代比一代平庸：高爾頓自己指出，高個子很少出自同樣高的父母，每一代落在任何一段身高的人，每千人卻都一樣多。它也不只往下一代走，從孩子回頭看父母，一樣往中間收。考高分的人也不是個個運氣都好，運氣高於平均的是這群人的平均值。"
+    },
+    {
+      "type": "h",
+      "text": "背對目標丟兩枚硬幣"
+    },
+    {
+      "type": "p",
+      "text": "康納曼立刻安排了一個示範。每個人背對目標丟兩枚硬幣，沒有任何回饋，再量離目標多遠：第一次丟得最好的人，第二次大多變差；最差的人，大多變好。他也知道，一場示範抵不過一輩子活在這種反常關聯裡。"
+    },
+    {
+      "type": "p",
+      "text": "上一趟特技、第一枚硬幣、中親的身高，是拿來挑人的那一次量測；下一趟、第二枚硬幣、孩子的身高，是接著看的那一個。依一次摻了機運的量測挑出異常高或異常低的人，再看下一次、或另一個和它相關不完美的量，這群人的平均會更靠近全體平均，這個傾向就叫迴歸平均（regression to the mean）。"
+    },
+    {
+      "type": "callout",
+      "label": "如果你真的懂了，應該答得出來",
+      "items": [
+        "一份測驗一半靠實力、一半靠運氣，兩者變異一樣大且互不相關。第一次高於平均 2 個標準差的那群人，重考預期落在哪？",
+        "一群人因為某次測量特別高而被挑出，之後受了某種處理，下一次測量卻下滑。怎麼比較，才分得出是迴歸平均，還是處理真有影響？",
+        "如果迴歸是遺傳把孩子往平均拉的力，只往下一代作用，從孩子回頭看父母，會看到什麼？"
+      ]
+    },
+    {
+      "type": "spoiler",
+      "text": "以下是答案"
+    },
+    {
+      "type": "callout",
+      "label": "答案",
+      "items": [
+        "兩次測驗共用實力那一半，運氣各抽各的，r 是 0.5。照 Z_Y = r × Z_X，預期高於平均 1 個標準差：退回一半，仍在平均之上。",
+        "不能只看被處理的那群，要找一群同樣依那次測量挑出、但沒受處理的對照，一起比。迴歸平均讓兩群都可能往中間靠，兩群之間的差，才可能是別的原因。",
+        "那就不會往中間收，高爾頓的表卻反向讀也往中間收：最可能的中親，偏離只有本人的三分之一。教科書的說法是，只要兩次量測的相關不是完美的 r = 1，就會有迴歸平均。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Daniel Kahneman – Biographical",
+      "publisher": "NobelPrize.org（Les Prix Nobel 2002）",
+      "date": "2002",
+      "url": "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/biographical/",
+      "note": "1961 年夏後回耶路撒冷、在希伯來大學教一年級統計；與 Ozer Schild 為空軍飛行學校設計教官訓練課程；「the most satisfying Eureka experience of my career」、教官原話、「statistically punished for rewarding others」一句、背對目標丟兩枚硬幣的示範與「would not undo the effects of lifelong exposure to a perverse contingency」皆出自此頁。"
+    },
+    {
+      "title": "Regression towards Mediocrity in Hereditary Stature",
+      "publisher": "Francis Galton，Journal of the Anthropological Institute of Great Britain and Ireland 15: 246–263；galton.org 掃描",
+      "date": "1886",
+      "url": "https://pdf.galton.org/essays/1880-1889/galton-1886-jaigi-regression-stature.pdf",
+      "note": "p.246：1877 年 2 月 9 日皇家研究院演講、種子實驗、迴歸與親代偏離成正比；p.247：「I was then blind to…the simple explanation」、懸賞徵集 Family Records 並刻意不提此研究、930 名成年子女與 205 對父母、女性乘 1.08；p.248 表 I（合計 928 名子女，本文表格與反向中位數取自此表）；p.250 mid-parent；p.252 平庸水準 68¼ 吋與三分之二定律；p.252–253 祖先與酒兌水的比喻、滑輪機器；p.255：橢圓長短軸比 √7:√2、傾角正切 ½（Hickson 計算對觀察值的修正），本報 svg 的橢圓與「中親分散較小」的推算依此；p.258 稱自己的數字只是「serviceably approximate」。「r 大約 0.47」是本報用 2/3 與 1/3 兩個近似值相乘再開根號推出，高爾頓 1886 年沒有相關係數，非其結論；p.253–254 反向讀表得三分之一、exceptional man 一句；p.256 每代每千人分布不變與集中、分散兩股作用。"
+    },
+    {
+      "title": "Regression Toward the Mean",
+      "publisher": "David M. Lane，Online Statistics Education: A Multimedia Course of Study（Rice University）",
+      "date": "",
+      "url": "https://onlinestatbook.com/2/regression/regression_toward_mean.html",
+      "note": "實力加運氣的考試例、「only the skill portion is relevant to future performance」、「This does not mean that all people who score high have above average luck. However, on average they do.」、r < 1 即有迴歸、Z_Y' = (r)(Z_X)、r = 0 時預測為平均、機運越重迴歸越多。頁面未標日期。"
+    },
+    {
+      "title": "Regression to the mean: what it is and how to deal with it",
+      "publisher": "Barnett AG, van der Pols JC, Dobson AJ，International Journal of Epidemiology 34(1): 215–220",
+      "date": "",
+      "url": "https://doi.org/10.1093/ije/dyh299",
+      "note": "依摘要（Europe PMC）：使自然變異看似真實改變；量測誤差大、只追蹤依基線值挑選的子樣本時更明顯；應永遠列為觀察到的變化的可能原因。"
+    },
+    {
+      "title": "File:PSM V29 D010 Francis Galton.jpg",
+      "publisher": "Wikimedia Commons（Popular Science Monthly Volume 29）",
+      "date": "1886",
+      "url": "https://commons.wikimedia.org/wiki/File:PSM_V29_D010_Francis_Galton.jpg",
+      "note": "頭圖，Public domain。"
+    }
+  ]
+}
