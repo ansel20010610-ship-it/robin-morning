@@ -10,7 +10,7 @@ const KEEP = [CACHE, CONTENT, IMAGES, FONTS];
 const LIMIT = { [IMAGES]: 400, [FONTS]: 400 }; // entries; the oldest go first
 const IMAGE_HOSTS = new Set(["upload.wikimedia.org", "thumb.wikimedia.org", "tile.loc.gov"]);
 const SHELL = ["index.html", "assets/style.css", "assets/app.js", "assets/util.js", "assets/blocks.js",
-  "assets/pitch.js", "assets/spotify.js", "assets/speak.js", "assets/notify.js", "assets/motion.js", "assets/marks.js", "assets/press.js", "assets/ics.js", "assets/wetter.js", "assets/robin.svg", "manifest.webmanifest"];
+  "assets/pitch.js", "assets/spotify.js", "assets/speak.js", "assets/notify.js", "assets/motion.js", "assets/marks.js", "assets/press.js", "assets/wetter.js", "assets/robin.svg", "manifest.webmanifest"];
 const DATA = ["content/config.json", "content/index.json"];
 const TIMEOUT = 4000; // ms to wait for the network before answering content from the cache
 const ROOT = new URL(self.registration.scope).pathname;
@@ -86,7 +86,7 @@ self.addEventListener("fetch", (e) => {
   const p = u.pathname.slice(ROOT.length);
   // Other pages (oauth/spotify/callback) are left to the network.
   if (e.request.mode === "navigate") { if (p === "" || p === "index.html") e.respondWith(appPage(e.request)); }
-  else if (p.startsWith("content/")) e.respondWith(networkFirst(e));
+  else if (p.startsWith("content/") || p.startsWith("ics/")) e.respondWith(networkFirst(e)); // ics/: calendar files, rewritten at every deploy
   else e.respondWith(cacheFirst(e.request));
 });
 

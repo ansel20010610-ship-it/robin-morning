@@ -27,6 +27,8 @@ jobs:
           ref: main
       - name: Build issue index
         run: python3 scripts/build_index.py
+      - name: Write calendar files (加入行事曆)
+        run: python3 scripts/build_ics.py ics
       - name: Validate today's issue (report only)
         run: |
           D=$(TZ=Asia/Taipei date +%F)
@@ -34,7 +36,7 @@ jobs:
       - name: Assemble site
         run: |
           mkdir _site
-          cp -R index.html sw.js manifest.webmanifest .nojekyll assets content oauth _site/
+          cp -R index.html sw.js manifest.webmanifest .nojekyll assets content oauth ics _site/
           git rev-parse HEAD > _site/content/version.txt   # watch.yml compares this with main
       - name: Version the app shell
         # One hash of the shell names the service worker's cache and is appended to every module URL, so a browser

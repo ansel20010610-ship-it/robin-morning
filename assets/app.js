@@ -9,7 +9,6 @@ import { renderPush, clearNotices } from "./notify.js";
 import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pressRun, ripples, flip } from "./motion.js";
 import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
 import { pressHtml } from "./press.js";
-import { icsFor, saveIcs } from "./ics.js";
 import { fetchWeather, weatherHtml } from "./wetter.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
@@ -460,17 +459,12 @@ function updatedNote(date, a) {
 // 牙周欄的證據力 (paper.evidence): shown under the takeaway, so the reader sees how solid the conclusion is.
 const evidenceOf = (a) => { const p = (a.body || []).find((b) => b?.type === "paper"); return typeof p?.evidence === "string" ? p.evidence : ""; };
 
-// 加入行事曆 (assets/ics.js): the small ghost button under a concert's show (viewConcert) or Barça's next fixture, and
-// what a tap does — the .ics goes to the share sheet or the downloads, and the toast says so. A cancel, or nothing to
-// hand over, says nothing: the reader can see nothing happened.
+// 加入行事曆: a plain link to the show's or the fixture's .ics file, written at deploy by scripts/build_ics.py (the file
+// names are its contract) and served by the site as text/calendar. Opened in Safari (a new tab, so the home-screen app
+// stays where it is) the phone shows the event with 加入 — the share-sheet and download routes a home-screen app does
+// not have. Offline, or before the next deploy has written a new show's file, the link simply fails to open.
 const ICON_CAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="5" width="16" height="15"/><path d="M4 10h16M8 3v4M16 3v4M12 13v4M10 15h4"/></svg>';
-const calBtn = (ref) => `<button class="btn ghost cal" type="button" data-ics="${esc(ref)}">${ICON_CAL}加入行事曆</button>`;
-const icsName = (t) => `${String(t).replace(/[\\/:*?"<>|]+|\s+/g, " ").trim().slice(0, 60) || "event"}.ics`;
-async function handIcs(btn, ev) {
-  btn.disabled = true;
-  try { if (await saveIcs(icsName(ev.title), icsFor(ev))) toast("已交給行事曆"); }
-  finally { btn.disabled = false; }
-}
+const calBtn = (file) => `<a class="btn ghost cal" href="ics/${esc(file)}.ics" target="_blank" rel="noopener">${ICON_CAL}加入行事曆</a>`;
 // 下一場 (football's top-level "next", SCHEMA.md; build_index.py copies it into the index entry): the fixture as the card
 // shows it, or null when the field is missing or malformed, or the kickoff has passed. The kickoff is Taiwan time with
 // its +08:00, so its date and clock are read straight off the string.
@@ -482,7 +476,7 @@ function fixtureOf(n) {
 const fixtureHtml = (f) => !f ? "" : `<aside class="fixture"><span class="lbl">下一場</span>
     <div class="when">週${gigWd(f.date)} ${gigDay(f.date)} ${esc(f.hm)}・${esc(f.competition)}</div>
     <div class="vs">巴薩 對 ${esc(f.opponent)}${f.home === null ? "" : f.home ? "（主場）" : "（客場）"}</div>
-    <div class="foot">${f.venue ? `<span class="small">${esc(f.venue)}</span>` : ""}${calBtn("fixture")}</div></aside>`;
+    <div class="foot">${f.venue ? `<span class="small">${esc(f.venue)}</span>` : ""}${calBtn(`football-${f.date}`)}</div></aside>`;
 
 async function viewArticle(date, column, my) {
   const wantMark = landMark; // 劃線本: the mark to land on, taken whatever this page turns out to be
@@ -632,11 +626,6 @@ async function viewArticle(date, column, my) {
   // (The sideways swipe that turned pages here was taken out on 2026-11-01 at the owner's request.)
   const turns = new AbortController(), { signal } = turns;
   main.querySelector("[data-contents]")?.addEventListener("click", () => openContents(date, order, idx), { signal });
-  // 下一場 → 行事曆: the tie as the title, 115 minutes from kickoff, the ground, this article as the link.
-  main.querySelector(".fixture [data-ics]")?.addEventListener("click", (ev) => handIcs(ev.currentTarget, {
-    title: `巴薩 對 ${fix.opponent}（${fix.competition}）`, start: `${fix.date}T${fix.hm}`, minutes: 115, location: fix.venue,
-    description: [`${fix.competition}${fix.home === null ? "" : fix.home ? "・主場" : "・客場"}`, a.title].join("\n"),
-    url: location.href.replace(/\?[^#]*/, ""), uid: `football-${fix.date}` }), { signal });
 
   // Read aloud: the top-bar button starts and pauses; it stops when the reader leaves the article.
   let reader = null;
@@ -882,9 +871,12 @@ const inCity = (s, c) => c === "north" ? s.city === "台北" || s.city === "新�
 // Events with shows still to come, soonest first. `here` is where an event is listed: its shows in city `c`, or
 // (for "all") its Taichung shows if it has any, else those in the city of its next show.
 function upcomingGigs(c = "all") {
-  const today = twNow().date, fresh = addDays(today, -2);
-  const at = (s) => `${s.date} ${s.time || ""}`;
-  return (Array.isArray(S.gigs?.events) ? S.gigs.events : []).flatMap((e) => {
+  const today = twNow().date, at = (s) => `${s.date} ${s.time || ""}`;
+  const events = Array.isArray(S.gigs?.events) ? S.gigs.events : [];
+  // 新 marks what the latest update added — the day the list was last checked (`checked`), or failing that the newest
+  // `added` on the list — so each day's newcomers wear it and yesterday's take it off (the owner's wish, 2026-11-02).
+  const fresh = /^\d{4}-\d{2}-\d{2}$/.test(S.gigs?.checked || "") ? S.gigs.checked : events.reduce((m, e) => (typeof e?.added === "string" && e.added > m ? e.added : m), "");
+  return events.flatMap((e) => {
     const shows = (Array.isArray(e?.shows) ? e.shows : []).filter((s) => typeof s?.date === "string" && s.date >= today)
       .sort((a, b) => at(a).localeCompare(at(b)));
     if (!shows.length || !e.title) return [];
@@ -892,7 +884,7 @@ function upcomingGigs(c = "all") {
     const here = c !== "all" ? shows.filter((s) => inCity(s, c)) : tc.length ? tc : shows.filter((s) => s.city === shows[0].city);
     if (!here.length) return [];
     const rating = Math.max(0, Math.min(5, Math.round(Number(e.rating) || 0)));
-    return [{ ...e, shows, here, rating, isNew: typeof e.added === "string" && e.added >= fresh }];
+    return [{ ...e, shows, here, rating, isNew: Boolean(fresh) && e.added === fresh }];
   }).sort((a, b) => at(a.here[0]).localeCompare(at(b.here[0])));
 }
 const stars = (n) => `<span class="stars" role="img" aria-label="值得聽 ${n} 分，滿分 5 分">${"★".repeat(n)}<i>${"★".repeat(5 - n)}</i></span>`;
@@ -926,9 +918,11 @@ async function viewConcert(id, my) {
   const link = (u, t) => (webUrl(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>` : esc(t));
   const cities = [...new Set(e.shows.map((x) => x.city))];
   // Each show's ticket link and 加入行事曆 sit together at the row's end (.acts), dropping to a line of their own under
-  // the venue when the row is full; the button's data-ics is the show's index in e.shows.
-  const row = (x, i) => `<li><span class="d">${gigShow(x)}</span><span class="v">${esc(x.venue)}</span><span class="acts">${webUrl(x.tickets) ? `<a class="tix" href="${esc(x.tickets)}" target="_blank" rel="noopener">售票頁</a>` : ""}${calBtn(i)}</span></li>`;
-  const shows = cities.map((c) => `<li><b>${esc(c)}</b><ul>${e.shows.flatMap((x, i) => (x.city === c ? row(x, i) : [])).join("")}</ul></li>`).join("");
+  // the venue when the row is full. The calendar file is named by event, day and curtain (19:30 when the hour is not
+  // known), as scripts/build_ics.py writes it.
+  const icsOf = (x) => (id && /^\d{4}-\d{2}-\d{2}$/.test(x.date) ? `gig-${id}-${x.date}-${(/^\d{2}:\d{2}$/.test(x.time || "") ? x.time : "19:30").replace(":", "")}` : "");
+  const row = (x) => `<li><span class="d">${gigShow(x)}</span><span class="v">${esc(x.venue)}</span><span class="acts">${webUrl(x.tickets) ? `<a class="tix" href="${esc(x.tickets)}" target="_blank" rel="noopener">售票頁</a>` : ""}${icsOf(x) ? calBtn(icsOf(x)) : ""}</span></li>`;
+  const shows = cities.map((c) => `<li><b>${esc(c)}</b><ul>${e.shows.flatMap((x) => (x.city === c ? row(x) : [])).join("")}</ul></li>`).join("");
   const rows = [
     e.who && ["演出", esc(e.who)],
     e.program && ["曲目", esc(e.program)],
@@ -945,16 +939,6 @@ async function viewConcert(id, my) {
     <details class="gig-key"><summary>值得聽怎麼評</summary>${RUBRIC}</details>
   </article>`;
   wireBack();
-  // 加入行事曆: the show as a two-hour entry (19:30 when the hour is not known), the venue and city as the place, the
-  // cast, programme and ticket note with the ticket link in the body; one uid per show, so a second tap updates it.
-  main.querySelector(".gig-shows").addEventListener("click", (ev) => {
-    const b = ev.target.closest("button[data-ics]"), s = e.shows[Number(b?.dataset.ics)];
-    if (!s) return;
-    const time = /^\d{2}:\d{2}$/.test(s.time || "") ? s.time : "19:30";
-    const lines = [e.who && `演出：${e.who}`, e.program && `曲目：${e.program}`, e.note && `票況：${e.note}`, webUrl(s.tickets)].filter(Boolean);
-    handIcs(b, { title: e.title, start: `${s.date}T${time}`, location: [s.venue, s.city].filter(Boolean).join("，"), description: lines.join("\n"),
-      url: webUrl(s.tickets), uid: `${id}-${s.date}-${time.replace(":", "")}` });
-  });
   document.title = `${e.title}｜${S.cfg.title}`;
 }
 // The page's back arrow: a step back in history when there is one inside the app, else the link's own target.
