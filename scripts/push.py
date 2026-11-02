@@ -117,32 +117,50 @@ def main_head():
     return out.stdout.split()[0] if out.returncode == 0 and out.stdout else None
 
 
-# The morning notice is one line, no body (the owner, 2026-11-02: short, a wink, nothing about the day's articles —
-# not what is in, not how many, not how long), stepped through by date.
-TITLES = [
-    "早安兄弟，報紙到了",
-    "印刷機剛停，你的那份在這",
-    "知更鳥比鬧鐘準時",
-    "今天的報紙，油墨還沒乾",
-    "早安，先別滑別的",
-    "出爐了，趁熱",
-    "報童在門口，開門",
-    "咖啡先放著，先翻這個",
-    "演算法還在睡，知更鳥叫了",
-    "這份報紙只有一個讀者",
-    "別存起來晚點看，晚點你不會看",
-    "翻開吧，昨天的已經讀完了",
-    "三分鐘的事，別拖成一天的事",
-    "今天也沒有廣告，只有正事和閒事",
-]
+# The morning notice: a title and a line, nothing about the day's articles (the owner, 2026-11-02: not what is in, not
+# how many, not how long). Two moods — 文藝 and 俏皮 — and the date picks the mood and the lines, so it reads as chance
+# but never repeats within a day's reruns. REMIND is the evening nudge (notify.yml 21:00 Taiwan) for a day not yet
+# finished; sw.js drops it on the phone when the issue is already read through.
+MOODS = {
+    "文藝": {
+        "titles": ["早安。報紙比天亮得早一點", "油墨還沒乾，日子已經開始", "一份報紙，一個讀者，一個早晨", "知更鳥叫了，字排好了", "今天這一期，印給你一個人",
+                   "清晨五點半的字，等七點半的你", "紙還是涼的，咖啡是熱的"],
+        "bodies": ["先讀一段，再去當大人。", "世界昨夜又轉了一圈，這裡替你抄了筆記。", "不急，字會等人，咖啡不會。", "讀報是一天裡最安靜的那幾分鐘。",
+                   "有人替你把夜裡發生的事折好了。", "把今天先翻開，再把今天過完。", "字很小，早晨很大。"],
+    },
+    "俏皮": {
+        "titles": ["早安兄弟，報紙到了", "印刷機剛停，你的那份在這", "知更鳥比鬧鐘準時", "出爐了，趁熱", "報童在門口，開門", "演算法還在睡，知更鳥叫了",
+                   "翻開吧，昨天的已經讀完了"],
+        "bodies": ["咖啡先放著，先翻這個。", "病人進來前讀得完，別裝忙。", "三分鐘的事，別拖成一天的事。", "今天也沒有廣告，只有正事和閒事。",
+                   "別存起來晚點看，晚點你不會看。", "先讀短的也行，反正不會考。", "把這期讀完，郵票才蓋得出來。"],
+    },
+}
+REMIND = {
+    "文藝": [("今天的報紙還攤在桌上", "晚上了，剩下的幾篇還亮著燈。"), ("有幾頁還沒翻", "睡前讀完，今天才算收好。"), ("知更鳥還沒回巢", "你的那一期還差一點。")],
+    "俏皮": [("兄弟，報紙還沒讀完", "郵票還沒蓋，今天不算數。"), ("還差幾篇，別裝沒看到", "讀完再睡，很快。"), ("今天的報紙在等你", "它不會自己讀完。")],
+}
+
+
+def _day(date):
+    return sum((i + 1) * int(x) for i, x in enumerate(date.split("-")))
 
 
 def issue_payload(cfg, issue):
-    """One line, from TITLES by date; nothing about the issue's contents."""
+    """Title and body from MOODS by date; nothing about the issue's contents."""
     if not any(a.get("title") for a in issue["articles"]):
         return None
-    day = sum(int(x) for x in issue["date"].split("-"))
-    return {"title": TITLES[day % len(TITLES)], "body": "", "url": "./#/", "tag": "issue-" + issue["date"], "badge": 1}
+    d = _day(issue["date"])
+    mood = MOODS["文藝" if d % 2 else "俏皮"]
+    return {"kind": "issue", "date": issue["date"], "title": mood["titles"][d % len(mood["titles"])],
+            "body": mood["bodies"][(d // 3) % len(mood["bodies"])], "url": "./#/", "tag": "issue-" + issue["date"], "badge": 1}
+
+
+def remind_payload(date):
+    """The evening nudge; the mood is the other one from the morning's, so the day gets both voices."""
+    d = _day(date)
+    pool = REMIND["俏皮" if d % 2 else "文藝"]
+    title, body = pool[(d // 2) % len(pool)]
+    return {"kind": "remind", "date": date, "title": title, "body": body, "url": "./#/", "tag": "remind-" + date}
 
 
 def live_late():
@@ -209,6 +227,27 @@ def cmd_issue(a):
             print("::error::網站上還沒有 %s 的刊期，沒有發通知" % date)
             return 1
         time.sleep(30)
+    print(json.dumps(payload, ensure_ascii=False, indent=1))
+    return send(devs, payload)
+
+
+def cmd_remind(a):
+    """notify.yml at 21:00 Taiwan: nudge about today's issue when it is on the live site. The phone decides whether to
+    show it (sw.js drops it when the issue was finished); here we only check that there is an issue to finish."""
+    devs = load_devices()
+    if not devs:
+        print("沒有登記的裝置，不發通知。")
+        return 0
+    date = a.date or tw_now().date().isoformat()
+    try:
+        issue = next((i for i in json.loads(fetch("content/index.json")).get("issues", []) if i.get("date") == date), None)
+    except Exception as e:  # noqa: BLE001
+        print("讀不到網站：%s" % e)
+        return 1
+    if not issue or not any(x.get("title") for x in issue.get("articles", [])):
+        print("網站上沒有 %s 的刊期，不提醒。" % date)
+        return 0
+    payload = remind_payload(date)
     print(json.dumps(payload, ensure_ascii=False, indent=1))
     return send(devs, payload)
 
@@ -297,6 +336,8 @@ def main():
     s = sub.add_parser("issue")
     s.add_argument("--date")
     s.add_argument("--now", action="store_true", help="send at once (manual run)")
+    s = sub.add_parser("remind")
+    s.add_argument("--date")
     s = sub.add_parser("test")
     s.add_argument("--new-since")
     s = sub.add_parser("late")
@@ -304,7 +345,7 @@ def main():
     s = sub.add_parser("keys")
     s.add_argument("out")
     a = p.parse_args()
-    return {"add": cmd_add, "issue": cmd_issue, "test": cmd_test, "late": cmd_late, "keys": cmd_keys}[a.cmd](a)
+    return {"add": cmd_add, "issue": cmd_issue, "remind": cmd_remind, "test": cmd_test, "late": cmd_late, "keys": cmd_keys}[a.cmd](a)
 
 
 if __name__ == "__main__":

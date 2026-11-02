@@ -10,15 +10,16 @@ on:
   schedule:
     - cron: "50 22 * * *"   # 06:50 Taiwan
     - cron: "12 23 * * *"   # 07:12 Taiwan
+    - cron: "0 13 * * *"    # 21:00 Taiwan: the evening reminder (push.py remind; the phone drops it when the issue is read)
   push:
     branches: [main]
     paths: ["state/push/devices.json", "content/late.json", "state/push/ping"]
   workflow_dispatch:
     inputs:
       mode:
-        description: "test = 測試通知；issue = 立刻發今天的出刊通知"
+        description: "test = 測試通知；issue = 立刻發今天的出刊通知；remind = 立刻發晚上的提醒"
         type: choice
-        options: [test, issue]
+        options: [test, issue, remind]
         default: test
 
 permissions:
@@ -37,14 +38,23 @@ jobs:
     timeout-minutes: 100
     steps:
       - uses: actions/checkout@v7
+      - name: Which notice?
+        id: kind
+        # a schedule run after noon Taiwan is the evening reminder; the morning ones announce the issue
+        run: |
+          if [ "${{ github.event_name }}" = schedule ]; then
+            if [ "$(TZ=Asia/Taipei date +%H)" -ge 12 ]; then echo "kind=remind" >> "$GITHUB_OUTPUT"; else echo "kind=issue" >> "$GITHUB_OUTPUT"; fi
+          elif [ "${{ github.event_name }}" = workflow_dispatch ]; then echo "kind=${{ inputs.mode }}" >> "$GITHUB_OUTPUT"
+          else echo "kind=push" >> "$GITHUB_OUTPUT"; fi
       - name: Already sent today?
         id: dedup
-        if: github.event_name == 'schedule'
+        if: steps.kind.outputs.kind == 'issue' && github.event_name == 'schedule'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           SINCE=$(date -u -d "$(TZ=Asia/Taipei date +%F) 00:00 +0800" +%FT%TZ)
           # if the query itself fails, send anyway: a rare duplicate (same tag, so it replaces the first) beats silence
+          # yesterday's 21:00 reminder is before SINCE, so only this morning's runs count
           N=$(gh run list --workflow notify.yml --event schedule --status success --created ">=$SINCE" \
                 --json databaseId --jq '[.[] | select(.databaseId != ${{ github.run_id }})] | length') || N=0
           case "$N" in ''|*[!0-9]*) N=0 ;; esac
@@ -58,8 +68,10 @@ jobs:
         env:
           VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
         run: |
-          case "${{ github.event_name }}" in
-            schedule) /tmp/push/bin/python scripts/push.py issue ;;
+          case "${{ steps.kind.outputs.kind }}" in
+            issue) if [ "${{ github.event_name }}" = schedule ]; then /tmp/push/bin/python scripts/push.py issue; else /tmp/push/bin/python scripts/push.py issue --now; fi ;;
+            remind) /tmp/push/bin/python scripts/push.py remind ;;
+            test) /tmp/push/bin/python scripts/push.py test ;;
             push)
               BEFORE="${{ github.event.before }}"
               git fetch -q --depth=1 origin "$BEFORE" || true
@@ -70,9 +82,6 @@ jobs:
               case "$CHANGED" in *late.json*) /tmp/push/bin/python scripts/push.py late --before "$BEFORE" || R=1 ;; esac
               case "$CHANGED" in *push/ping*) /tmp/push/bin/python scripts/push.py issue --now || R=1 ;; esac
               exit $R ;;
-            *)
-              if [ "${{ inputs.mode }}" = issue ]; then /tmp/push/bin/python scripts/push.py issue --now
-              else /tmp/push/bin/python scripts/push.py test; fi ;;
           esac
       - name: Drop devices that no longer take notifications
         if: always() && steps.dedup.outputs.sent != 'yes'
