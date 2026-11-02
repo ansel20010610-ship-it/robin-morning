@@ -1,0 +1,366 @@
+{
+  "column": "philosophy",
+  "date": "2026-11-03",
+  "title": "不出賣，也不說謊",
+  "dek": "有人逃到你這裡，追他的人來要人。塔加斯特的主教菲爾慕斯不說謊、不交人，挨了酷刑；1797 年的康德說，躲不掉的問題就得照實答。",
+  "brief": "塔加斯特的主教菲爾慕斯藏了一個逃到他那裡的人，皇帝派人來要，他說自己不能說謊，也不能出賣人，受了許多酷刑仍不改口，最後替那人求得赦免。1797 年，康德被點名後回答：躲不掉的問題，對追殺朋友的兇手也得照實說。",
+  "topic_key": "philosophy:lying-to-save-a-life",
+  "updated_at": "2026-11-03T03:22:49+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Tissot_The_Harlot_of_Jericho_and_the_Two_Spies.jpg/1280px-Tissot_The_Harlot_of_Jericho_and_the_Two_Spies.jpg",
+    "width": 1280,
+    "height": 1731,
+    "alt": "室內，喇合與兩個探子。",
+    "caption": "提索或其追隨者畫的喇合與兩個探子。約書亞記第 2 章接著寫，她把兩人藏在房頂的麻秸裡，對耶利哥王派來的人說他們已經出去了。",
+    "credit": "James Tissot 或其追隨者；紐約猶太博物館",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tissot_The_Harlot_of_Jericho_and_the_Two_Spies.jpg",
+    "made": "約 1896–1902",
+    "depicts": "約書亞記第 2 章"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "塔加斯特（Thagaste）教會從前有位主教，叫菲爾慕斯（Firmus）。有個人逃到他那裡，他盡力把人藏了起來。皇帝派差役來向他要這個人，菲爾慕斯回答：他不能說謊，也不能出賣人。"
+    },
+    {
+      "type": "p",
+      "text": "他受了許多酷刑，沒有改口。奧古斯丁記這件事時特別補了一句：當時的皇帝還不是基督徒。後來菲爾慕斯被帶到皇帝面前，顯得令人十分欽佩，毫不費力就替他藏著的那個人求到了赦免。"
+    },
+    {
+      "type": "p",
+      "text": "奧古斯丁也生在塔加斯特，在羅馬治下的非洲，今天阿爾及利亞的 Souk Ahras。故事收在他約 395 年寫的《論說謊》（De mendacio），書中寫菲爾慕斯「名叫堅定，意志更堅定」。講這個故事之前，他寫的是：說一句「我不出賣，也不說謊」，勇敢得多，也高明得多。"
+    },
+    {
+      "type": "p",
+      "text": "同一本書裡，主張可以說謊的一方出了這道題：有人逃到你這裡，你一句謊話就能讓他免於一死，你說不說？這題後來掛到康德名下，叫「門口的兇手」。聖安德魯斯大學的道德哲學教授提默曼（Jens Timmermann）考證過，它的根在希伯來聖經和色諾芬的《回憶蘇格拉底》，奧古斯丁在《論說謊》裡把它正式化，到 1797 年早已是學院辯論的老例子。他的比方是：「我們有電車難題，他們有『對兇手說謊』。」"
+    },
+    {
+      "type": "h",
+      "text": "別拿永生去換今生"
+    },
+    {
+      "type": "p",
+      "text": "《論說謊》大半是正反兩邊來回辯。主張絕不說謊的那一方這樣推：經上說「說謊的口殺害靈魂」，肉身的死只殺身體。愛鄰舍如同愛自己，這份愛有界線。基督徒可以為了別人的永生捨掉自己今生的性命；為了別人今生的性命捨掉自己今生的性命，已經是愛人多過愛自己，超出健全教導的規矩；拿自己的永生去換，更不可以。"
+    },
+    {
+      "type": "quote",
+      "text": "既然說謊會失去永生，就絕不可為了任何人今生的性命說謊。",
+      "original": "Cum igitur mentiendo vita aeterna amittatur, nunquam pro cuiusquam temporali vita mentiendum est.",
+      "cite": "奧古斯丁，《論說謊》第 6 章第 9 節（他筆下主張絕不說謊一方的論證）"
+    },
+    {
+      "type": "p",
+      "text": "這一方還拿別的事來比。有人拿著繩子來，說你不順從他的情慾，他就上吊；就算是主張可以說謊的人，也不會為了「救一條命」答應他。那為何要用謊言敗壞自己的靈魂，讓別人的肉身活下去？"
+    },
+    {
+      "type": "p",
+      "text": "奧古斯丁回頭整理自己的著作，說本來想把這本書刪掉，嫌它晦澀、繁複、整個很麻煩，一直沒有發表。後來他另寫了一本《駁說謊》（Contra mendacium），從頭到尾公開攻擊說謊，還下令舊的那本別再留著。這道命令沒有執行。最後他讓它留下，因為裡面有新書沒有的東西。"
+    },
+    {
+      "type": "h",
+      "text": "收生婆和喇合"
+    },
+    {
+      "type": "p",
+      "text": "奧古斯丁在《駁說謊》裡談到聖經裡的收生婆與喇合。法老派給希伯來收生婆殺嬰的差事，她們對法老說：「希伯來婦人與埃及婦人不同；希伯來婦人本是健壯的，收生婆還沒有到，她們已經生產了。」經文接著寫：神厚待收生婆。耶利哥的妓女喇合也對王派來的人說了一段話，見文末。"
+    },
+    {
+      "type": "p",
+      "text": "奧古斯丁說，神厚待她們，不是因為她們說謊，而是因為她們憐憫神的百姓；得賞的是善意，不是欺騙。喇合那時還沒到被要求「是就說是，不是就說不是」的程度。至於收生婆，她們若是他在談的那一類人，就會既不說假話，也坦白拒絕殺嬰的差事。有人追問：那她們會死。他答：會，而她們會得到天上的居所，那賞賜比在地上為她們建立的家大得無可比擬。"
+    },
+    {
+      "type": "h",
+      "text": "康德記不起來的那句話"
+    },
+    {
+      "type": "p",
+      "text": "1796 年，貢斯當（Benjamin Constant）在小冊子《論政治反動》裡舉的就是這道題。他說「說真話是義務」這條原則，若絕對、孤立地看，會讓一切社會都不可能；證據是一位德國哲學家，他主張對追問「你們追殺的朋友是不是躲進了你家」的兇手說謊，是一種罪。"
+    },
+    {
+      "type": "quote",
+      "text": "所以，說真話只對有權得到真話的人才是義務。而沒有人有權得到傷害別人的真話。",
+      "original": "Dire la vérité n’est donc un devoir qu’envers ceux qui ont droit à la vérité. Or nul homme n’a droit à la vérité qui nuit à autrui.",
+      "cite": "貢斯當，《論政治反動》第 8 章"
+    },
+    {
+      "type": "p",
+      "text": "義務和權利分不開，一個人的義務，對應另一個人的權利；沒有權利的地方，就沒有義務。"
+    },
+    {
+      "type": "p",
+      "text": "隔年德譯本刊出，譯者加了一條註：哥廷根的 J. D. Michaelis 比康德更早講過這種怪意見；說那位德國哲學家就是康德，是作者本人告訴他的。七十出頭的康德寫了〈論出於人類之愛而說謊的所謂權利〉回應，在譯者的註底下再添一條，署名 I. Kant：「我在此承認，這話我確實在某個地方說過，只是現在記不起是在哪裡。」"
+    },
+    {
+      "type": "h",
+      "text": "謊話傷的是整個人類"
+    },
+    {
+      "type": "p",
+      "text": "康德說，「有權得到真話」是個沒有意義的說法。真理不是財產，不能這個人有權、那個人沒權；該說的是，人對自己的誠實有權利。他把問題限定在：人在躲不掉、非答「是」或「否」不可的時候，有沒有權利不誠實。提默曼的讀法是，兇手拿屋主的命相逼，只准他答是或否，所以康德沒把沉默當出路。"
+    },
+    {
+      "type": "p",
+      "text": "康德的答案是沒有。在躲不掉的陳述裡誠實，是人對每個人的形式義務，不管這給自己或別人帶來多大的害處。就算騙那個不義逼問你的人，對他本人不算不公，你也讓人說的話根本不再被相信，基於契約的一切權利跟著失效，這是對整個人類的不義。謊話總會傷人，不傷某個人，也傷整個人類，因為它讓「法權的來源」變得無用。他在註裡說：他不打算在這裡說「不誠實違背了對自己的義務」，那屬於倫理學，這篇談的是法權上的義務。"
+    },
+    {
+      "type": "p",
+      "text": "接著他推了一個情況。你老實說他在家，他也許已經沒人察覺地出了門，兇手撲空；你說謊說他不在，他卻真的（你並不知道）已經出門，兇手在路上碰見他、殺了他，你就可以被正當地控告為他的死因。你若說了實話，兇手在屋裡搜的時候，也許趕來的鄰居就把他抓住了。康德說，說謊的人不論心地多好，都要為後果負責，甚至在民事法庭上，不論後果多麼無法預見。守住實話的人，公共司法奈何不了他，不論出現什麼意外後果。"
+    },
+    {
+      "type": "quote",
+      "text": "所以，在一切陳述中都要誠實（老實），是一條神聖的、無條件命令的、不受任何方便限制的理性誡命。",
+      "original": "Es ist also ein heiliges, unbedingt gebietendes, durch keine Convenienzen einzuschränkendes Vernunftgebot: in allen Erklärungen wahrhaft (ehrlich) zu sein.",
+      "cite": "康德，〈論出於人類之愛而說謊的所謂權利〉，1797；學院版第 8 卷頁 427"
+    },
+    {
+      "type": "p",
+      "text": "文章快結束時他又補一句：一個人被問到願不願意誠實，不是不高興被懷疑，反而先請對方讓他想想有沒有例外，這人已經是潛在的說謊者。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "portrait",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/7/79/Immanuel_Kant_-_Gemaelde_1.jpg",
+      "width": 1009,
+      "height": 1317,
+      "alt": "畫面右下，他一手拿著一本翻開的書。",
+      "caption": "貝克爾 1768 年畫的康德。回應貢斯當，是將近三十年後的事。",
+      "credit": "Johann Gottlieb Becker",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Immanuel_Kant_-_Gemaelde_1.jpg",
+      "made": "1768"
+    },
+    {
+      "type": "h",
+      "text": "貢斯當沒提到門"
+    },
+    {
+      "type": "p",
+      "text": "提默曼為這篇文章寫了一本書，《康德與所謂說謊的權利》，前後做了將近 25 年。他說貢斯當和譯者把絕對誠實的主張安在康德頭上，毫無根據，康德先前出版的著作沒這樣主張過；可是到了這一篇，康德確實在主張。"
+    },
+    {
+      "type": "p",
+      "text": "那條契約論證也不是康德自己的。米夏埃利斯 1750 年在哥廷根大學的就職小冊子就提過，康德隔了近半世紀拿來回應貢斯當，提默曼說它在哲學上「差得可憐」。他談的是法權這一層；康德在倫理學上對說謊的絕對立場，他說自己書裡很少碰。"
+    },
+    {
+      "type": "p",
+      "text": "他也提醒，現實裡謊話未必救得了人。對康德，說謊違背的是主觀的誠實，不是客觀的真實。屋主可能真心以為朋友躲在屋裡，其實人在別處，這時一句謊話反而可能讓人被找到；沙特的〈牆〉就是這個故事。他糾正一個叫錯了的名字：「貢斯當沒提到門，康德也沒有。」貢斯當寫的是躲進你家，康德問的是在不在家。"
+    },
+    {
+      "type": "h",
+      "text": "約翰生說可以，紐曼預料他會先動手"
+    },
+    {
+      "type": "p",
+      "text": "鮑斯威爾記下約翰生（Samuel Johnson）1784 年的一段話，那是約翰生去世那年。他說通則是永遠不違背真實，可是總有例外：兇手問你某人往哪裡走了，你可以告訴他不實的話，因為你先前就有義務，不把人出賣給兇手。"
+    },
+    {
+      "type": "p",
+      "text": "八十年後，紐曼（John Henry Newman）在《為己辯》的附註裡回了這段。他猜約翰生真碰上了，第一個動作會是把那人打倒，然後喊警察；要是打輸了，也不會把那惡棍要的消息給他。「我想他寧可先被殺。我不認為他會說謊。」"
+    },
+    {
+      "type": "p",
+      "text": "西季威克（Henry Sidgwick）在《倫理學方法》裡沒有談兇手，他談一般的說謊，觀察到常識並沒有斷然禁止：既然為了保護自己和別人，我們甚至可以殺人，如果說謊更能擋住對權利明顯的侵犯，卻不准說謊，就很奇怪。有人說謊言一旦被普遍允許就沒人信、等於自己取消，他的回答之一是：如果大家都明白、也都預期，問了無權過問的問題就會聽到謊話，這對正當的祕密顯然是最有效的保護。他說常識似乎承認，為對方好的欺騙有時是對的。若承認善意欺騙，何時、到什麼程度可以，只能靠權衡：拿個別欺騙的好處，去比所有違背真實都會帶來的互信損害。另外，他對常識所接受的誠實規則的結論是：它無法提升為明確的道德公理，因為對該告訴別人多少真話沒有真正的共識；而要求無論何時都絕對坦白，也找不到自明的次級原則來界定何時不必坦白。"
+    },
+    {
+      "type": "h",
+      "text": "品格好的人會說謊"
+    },
+    {
+      "type": "p",
+      "text": "1986 年，柯思嘉（Korsgaard）拿康德自己的公式重驗這道題。用普遍法則公式，對兇手說謊過得了關：兇手以為你不知道你身處這種情況，所以對騙子說謊、抵銷他欺騙的後果，這條準則可以普遍化。照她的說法，騙子靠自己的欺騙，把自己放進了道德上不受保護的位置。換成人性公式，反對說謊的論證對任何謊話都成立，兩個公式在這題上給了不同的答案。不過她說，就算照人性公式，你也不必乖乖讓人利用：「我們有權抵抗騙子和想動用暴力的人，是因為他們的手段，不是因為他們的目的。」"
+    },
+    {
+      "type": "p",
+      "text": "提默曼批評過一種替康德解套的說法：兇手在騙屋主自己的意圖，所以可以騙他。他問，真要把說謊的許可綁在兇手騙不騙人上嗎？照傳統，兇手是公開追殺、揮著武器的；可以騙說謊的兇手，難道不能騙老實的兇手？他沒點名，我看說的就是柯思嘉普遍法則的那一步。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "柯思嘉承認多數人想得比她更強：應該對兇手說謊，不說就做錯了。她給了兩個理由，一是互助的義務，二是自尊。兇手想把你變成作惡的工具，把你的老實當成可以利用的可預測性。「你對自己身上的人性有一份責任，不讓你的誠實被拿去當作惡的資源。」"
+    },
+    {
+      "type": "p",
+      "text": "可是這兩條都是德行上的義務。她的原話是：「品格好的人會說這個謊。不說，在道德上就是壞的。但沒有一條正義上的義務要你說這個謊。」不說的人不會被罰，也不算殺人的共犯；照康德，犯下這樁罪的是兇手，不是說實話的人。她還說，能用強制對付兇手就比說謊好，因為康德認為說謊本身比強制更糟；只要不必把他打成重傷，把他踢下門廊比說謊乾淨。"
+    },
+    {
+      "type": "p",
+      "text": "她引了康德講課的一句話：如果沉默救不了我，我的謊話就是防衛的武器。這出自 1770 年代學生的聽課筆記。"
+    },
+    {
+      "type": "p",
+      "text": "提默曼說，另一種替康德緩頰的做法是搬出他早年的倫理學講義，那時康德認為某些極端情況可以說不實的話；他說這同樣可疑，因為康德的誠實理論多年來變化很大：到 1790 年代，誠實的核心義務成了說話者對自己的倫理義務，而且是絕對的；1797 年這篇又不同，是法哲學的論證。"
+    },
+    {
+      "type": "p",
+      "text": "她自己也出了一道難題。一位慈善家假裝做問卷，其實在找符合條件的人送錢；你識破了，說謊就能拿到錢。照她的論證，證明不了這個謊不可以說；可是兇手那題裡支持說謊的理由，這裡一個也不在。她說最好的做法，是告訴慈善家你知道他在做什麼，甚至說你覺得這很鬼祟。"
+    },
+    {
+      "type": "table",
+      "title": "誰說可以，誰說不行",
+      "head": [
+        "誰",
+        "各家怎麼答",
+        "理由"
+      ],
+      "rows": [
+        [
+          "奧古斯丁（約 395 年）",
+          "主張絕不說謊的一方：不能說謊；菲爾慕斯不說謊，也不交人",
+          "《論說謊》裡主張絕不說謊的一方：說謊的口殺害靈魂，不可拿自己的永生換別人今生的命"
+        ],
+        [
+          "貢斯當（1796 年）",
+          "說真話的義務只對有權得到真話的人成立",
+          "義務對應權利；沒有人有權得到傷害別人的真話"
+        ],
+        [
+          "康德（1797 年）",
+          "不能，躲不掉的問題也要照實答",
+          "謊話讓陳述不再可信，基於契約的權利跟著失效，是對整個人類的不義"
+        ],
+        [
+          "西季威克（1907 年第 7 版）",
+          "沒有直接談追兵；就一般說謊，看權衡",
+          "拿個別欺騙的好處，去比對互信的損害"
+        ],
+        [
+          "柯思嘉（1986 年）",
+          "品格好的人會說，但不是正義上的義務",
+          "普遍法則公式：騙子讓自己失去道德保護；人性公式：反對說謊的論證適用於任何謊言；她另說，我們有權抵抗騙子和動武的人，因為他們的手段，不是他們的目的"
+        ]
+      ],
+      "caption": "依原典與柯思嘉 1986 年論文整理。西季威克那一列是他對一般說謊的看法。"
+    },
+    {
+      "type": "h",
+      "text": "欠誰一句真話"
+    },
+    {
+      "type": "p",
+      "text": "這幾個人排在一起，依我看，吵的是說真話這份義務欠的是誰。奧古斯丁那一方看的是說話者自己的靈魂；1797 年的康德說，這是對每個人的形式義務，不分對象；貢斯當說只欠有權得到真話的人；西季威克把好處和互信放上秤。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "換我站在那裡，我會跟約翰生一樣，告訴兇手一句不實的話，。柯思嘉說品格好的人會說，這點我同意。但我承認奧古斯丁指出的代價，也就是失去永生；菲爾慕斯那樣的第三條路，得準備受苦。"
+    },
+    {
+      "type": "p",
+      "text": "喇合對耶利哥王派來的人說的是：「天黑、要關城門的時候，他們出去了，往哪裡去我卻不知道。你們快快地去追趕，就必追上。」那兩個人，就藏在房頂上擺著的麻秸裡。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "On Lying（De mendacio，H. Browne 英譯）",
+      "publisher": "Augustine；Nicene and Post-Nicene Fathers 1st ser. vol. 3（1887），New Advent",
+      "date": "",
+      "url": "https://www.newadvent.org/fathers/1312.htm",
+      "note": "編者按：依《回顧》位置約寫於 395 年；《回顧》第一卷末章：想刪掉此書、嫌它 obscure, intricate, troublesome，《駁說謊》通篇攻擊說謊、此書大半為正反討論；§5 有人逃到你這裡的例子；§9 主張絕不說謊一方：說謊殺害靈魂、愛鄰舍如同自己、永生與今生、繩子的例子；§23 菲爾慕斯（his conduct appeared so admirable）。"
+    },
+    {
+      "title": "De mendacio liber unus（拉丁文）",
+      "publisher": "Augustinus Hipponensis；augustinus.it",
+      "date": "",
+      "url": "https://www.augustinus.it/latino/menzogna/menzogna_libro.htm",
+      "note": "6.9：Cum igitur mentiendo vita aeterna amittatur...；13.22：Nec prodam, nec mentiar；13.23：Firmus nomine, firmior voluntate。"
+    },
+    {
+      "title": "Against Lying（Contra mendacium，H. Browne 英譯）",
+      "publisher": "Augustine；New Advent",
+      "date": "",
+      "url": "https://www.newadvent.org/fathers/1313.htm",
+      "note": "§32：收生婆與喇合得賞是因憐憫不是欺騙；§33：喇合還沒到被要求「是就說是，不是就說不是」的程度；§34：她們本該既不說假話也拒絕殺嬰，死了得天上的居所。"
+    },
+    {
+      "title": "Über ein vermeintes Recht aus Menschenliebe zu lügen",
+      "publisher": "Immanuel Kant；Akademie-Ausgabe Bd. VIII，S. 423–430（korpora.org）",
+      "date": "1797",
+      "url": "https://korpora.org/kant/aa08/425.html",
+      "note": "頁 425：Constant 引文、Cramer 註（Michaelis 更早、作者親口說是康德）與康德的附註；頁 426：有權得到真話無意義、Recht auf seine eigene Wahrhaftigkeit、無法迴避是或否、Rechtsquelle，及腳註（對自己的義務屬倫理學，此處談法權義務）；頁 427：出門的朋友與鄰居、說謊者為一切後果負責、守實話者公共司法奈何不了、heiliges ... Vernunftgebot；頁 428：nocet 與 laedit、真理不是財產；頁 430：ein Lügner (in potentia)，其後尚有結語。"
+    },
+    {
+      "title": "Des réactions politiques, VIII. Des principes",
+      "publisher": "Benjamin Constant；法文維基文庫（第二版）",
+      "date": "1796",
+      "url": "https://fr.wikisource.org/wiki/Des_r%C3%A9actions_politiques_-_2nde_%C3%A9dition/VIII._Des_principes",
+      "note": "德國哲學家與 assassins 的例子、devoir 與 droits、droit à la vérité 兩句。"
+    },
+    {
+      "title": "On a Supposed Right to Tell Lies from Benevolent Motives",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/On_a_Supposed_Right_to_Tell_Lies_from_Benevolent_Motives",
+      "note": "出版背景：康德 1797 年的文章，回應貢斯當《論政治反動》；Reception 段引 Helga Varden：這個例子是批評康德者「a cherished source of scorn」。"
+    },
+    {
+      "title": "Bidding farewell to Kant’s ‘murderer at the door’",
+      "publisher": "Jens Timmermann；Fifteen Eighty Four（Cambridge University Press）",
+      "date": "2025-02-04",
+      "url": "https://cambridgeblog.org/2025/02/bidding-farewell-to-kants-murderer-at-the-door/",
+      "note": "例子源自希伯來聖經、色諾芬，奧古斯丁正式化；trolley cases 一句；Constant 與 Cramer 的歸屬 entirely without warrant；Michaelis 1750；woefully inadequate 指 1797 年的法權／契約論證，作者自言少談倫理學上的絕對主義；1770 年代與 1790 年代立場不同，拿早年講義緩和 equally questionable；無門；屋主被逼只能答是或否（提默曼的讀法）；主觀誠實與客觀真實、沙特〈牆〉；誠實的兇手（批評 some of those who seek to save Kant，未點名）；近 25 年的研究。"
+    },
+    {
+      "title": "The Methods of Ethics（7th ed.），Book III ch. VII：Veracity",
+      "publisher": "Henry Sidgwick；Project Gutenberg #46743",
+      "date": "1907",
+      "url": "https://www.gutenberg.org/ebooks/46743",
+      "note": "§2（描述常識，非針對兇手例）：kill in defence、病人與小孩的善意欺騙須權衡互信、常識的誠實規則無自明次級原則；§3：對「說謊自我取消」一般論證的三個回答之一：those who ask questions which they have no right to ask will have lies told them。"
+    },
+    {
+      "title": "The Right to Lie: Kant on Dealing with Evil",
+      "publisher": "Christine M. Korsgaard；Philosophy & Public Affairs 15:4, 325–349（Harvard DASH）",
+      "date": "1986",
+      "url": "https://dash.harvard.edu/handle/1/3200670",
+      "note": "普遍法則公式下可對騙子說謊、morally unprotected position；人性公式下反對任何謊言，但 We have a right to resist liars and those who try to use force；多數人認為應該說謊；互助與自尊屬德行義務，A person with a good character will tell the lie ... no duty of justice to tell the lie；resource for evil；LE 228 weapon of defense（LE 為 1775–1780 學生筆記）；慈善家問卷例：cannot be shown to be impermissible，但最好告訴他你知道他在做什麼；註：說謊比強制更糟、kick him off the front porch。"
+    },
+    {
+      "title": "Apologia pro Vita Sua，Note G：Lying and Equivocation",
+      "publisher": "John Henry Newman；Project Gutenberg #19690",
+      "date": "1864",
+      "url": "https://www.gutenberg.org/ebooks/19690",
+      "note": "第 3 點：knock the man down, and to call out for the police; I think he would have let himself be killed first. I do not think that he would have told a lie."
+    },
+    {
+      "title": "Life of Johnson, Volume 4（1780–1784）",
+      "publisher": "James Boswell；Project Gutenberg #10357",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/10357",
+      "note": "1784 年的談話：If, for instance, a murderer should ask you which way a man is gone, you may tell him what is not true..."
+    },
+    {
+      "title": "約書亞記 2:4–6；出埃及記 1:17–20（和合本）",
+      "publisher": "信望愛聖經工具 FHL",
+      "date": "",
+      "url": "https://bible.fhl.net/",
+      "note": "喇合的回答與麻秸；收生婆的回答與「神厚待收生婆」。"
+    },
+    {
+      "title": "Immanuel Kant",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "date": "2024-07-31",
+      "url": "https://plato.stanford.edu/entries/kant/",
+      "note": "生於 1724 年 4 月 22 日；1797 年七十出頭為本報推算。"
+    },
+    {
+      "title": "Saint Augustine",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "date": "2024-04-26",
+      "url": "https://plato.stanford.edu/entries/augustine/",
+      "note": "生於羅馬非洲的塔加斯特（今阿爾及利亞 Souk Ahras）。"
+    },
+    {
+      "title": "File:Tissot The Harlot of Jericho and the Two Spies.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Tissot_The_Harlot_of_Jericho_and_the_Two_Spies.jpg",
+      "note": "Jewish Museum, New York；James Tissot or follower，c. 1896–1902。"
+    }
+  ]
+}
