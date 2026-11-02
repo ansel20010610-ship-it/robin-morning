@@ -1,0 +1,203 @@
+{
+  "column": "poem",
+  "date": "2026-11-03",
+  "title": "愛說歡迎，他先說了不配",
+  "dek": "赫伯特《聖殿》裡「教會」一部的最後一首。愛請客人入席，客人推說不配、沒辦法看、要改當僕人。",
+  "brief": "赫伯特死前約一個月，朋友派人探病；臨別時他把一本小書託人轉交，說幫不上沮喪的靈魂就燒掉；這本書印出來就是《聖殿》。其中〈愛〉寫一位客人被請入席，一路推說不配，最後一行只有六個單音節字：我就坐下，吃了。",
+  "topic_key": "poem:herbert-love-iii",
+  "updated_at": "2026-11-03T02:08:02+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/The_Temple_%282nd_ed%29_-_George_Herbert_%281633%29.djvu/page197-500px-The_Temple_%282nd_ed%29_-_George_Herbert_%281633%29.djvu.jpg",
+    "width": 500,
+    "height": 900,
+    "alt": "一頁 17 世紀印刷的英文詩集，頁眉印著 The Church 與頁碼 183。標題 Love. 之下是三段詩，短行往右縮排；詩末印著 FINIS. 和一行英文。",
+    "caption": "《聖殿》1633 年第二版第 183 頁。〈Love.〉印完，下面就是 FINIS.，接著一行英文，意思是：榮耀歸於至高的神，地上平安，善意歸於世人。每段的短行都往右縮排。",
+    "credit": "George Herbert，《聖殿》（The Temple），劍橋，1633 年第二版；Google Books 掃描，經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Temple_(2nd_ed)_-_George_Herbert_(1633).djvu?page=197",
+    "made": "1633"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "赫伯特（George Herbert）死前大約一個月，一位牧師受他的好友所託來探病。臨別時，赫伯特交給他一本小書，請他帶給那位朋友，說裡面是神和他的靈魂之間許多場屬靈的掙扎；朋友讀了，若覺得能幫上任何一個沮喪的可憐靈魂，就出版，「不然，就讓他燒掉」。赫伯特 1633 年 3 月 1 日過世，這本書同一年在劍橋印出來，由 Ferrar 從手稿選編，就是《聖殿》。書裡「教會」那一部的最後一首，題目只有一個字，〈愛〉。"
+    },
+    {
+      "type": "quote",
+      "text": "愛對我說歡迎；我的靈魂卻往後縮，\n犯的是塵土與罪。\n可是眼快的愛，看我一路放慢，\n從我剛跨進門起，\n便走近我，溫柔地問，\n我是不是缺了什麼。\n\n一位配得上這裡的客人，我答。\n愛說，你必是他。\n我？這無情、不知感恩的人？唉，我親愛的，\n我沒辦法看你。\n愛握住我的手，微笑著回答：\n眼睛是誰造的，不就是我？\n\n說得是，主，可是我把它們毀了；讓我的羞恥\n去它該去的地方。\n你不知道嗎，愛說，是誰擔下了罪責？\n我親愛的，那我就來服侍。\n你得坐下，愛說，嚐嚐我的飯菜。\n我就坐下，吃了。",
+      "original": "Love bade me welcome: yet my soul drew back,\nGuiltie of dust and sinne.\nBut quick-ey'd Love, observing me grow slack\nFrom my first entrance in,\nDrew nearer to me, sweetly questioning,\nIf I lack'd any thing.\n\nA guest, I answer'd, worthy to be here:\nLove said, You shall be he.\nI the unkinde, ungratefull? Ah my deare,\nI cannot look on thee.\nLove took my hand, and smiling did reply,\nWho made the eyes but I?\n\nTruth Lord, but I have marr'd them: let my shame\nGo where it doth deserve.\nAnd know you not, sayes Love, who bore the blame?\nMy deare, then I will serve.\nYou must sit down, sayes Love, and taste my meat:\nSo I did sit and eat.",
+      "cite": "喬治・赫伯特，〈愛〉（Love），《聖殿》，劍橋，1633 年"
+    },
+    {
+      "type": "p",
+      "text": "第一行裡，愛說歡迎，我往後縮，中間只隔一個冒號和一個 yet。第二行短到只剩六個音節：犯的是塵土與罪。依我看，這位客人把「我是土做的」和「我有罪」排在一起，當成了同一條罪名。"
+    },
+    {
+      "type": "p",
+      "text": "第二段，他說自己無情、不知感恩，說「我沒辦法看你」，愛握住他的手，回的是：眼睛是誰造的？第 12 行原文六個字全是單音節，最後一個字是 I。"
+    },
+    {
+      "type": "p",
+      "text": "客人兩次叫愛「我親愛的」，叫「主」只有一次，在第 13 行，後面緊接著就是「可是我把它們毀了」。"
+    },
+    {
+      "type": "p",
+      "text": "中譯只做到一行對一行，原文的長短行和韻都沒留住。"
+    },
+    {
+      "type": "p",
+      "text": "九組韻腳裡，有四組是一個字整個藏在另一個字裡。前兩組我讀不出什麼，第三組 deserve 和 serve 我會停下來。客人說，讓我的羞恥去它該去的地方，「該去」原文是 deserve；兩行後他說，那我就來服侍，serve。兩個字都出自他的嘴。依我看，他給自己的羞恥判的去處裡，已經裝著他接著要宣告的身分。"
+    },
+    {
+      "type": "table",
+      "title": "藏在韻腳裡的字",
+      "head": [
+        "行",
+        "前一個韻腳",
+        "後一個韻腳"
+      ],
+      "rows": [
+        [
+          "第 2、4 行",
+          "sinne",
+          "in"
+        ],
+        [
+          "第 8、10 行",
+          "he",
+          "thee"
+        ],
+        [
+          "第 14、16 行",
+          "deserve",
+          "serve"
+        ],
+        [
+          "第 17、18 行",
+          "meat",
+          "eat"
+        ]
+      ],
+      "caption": "依 1633 年版拼法。每一組，都有一個字整個藏在另一個字裡。"
+    },
+    {
+      "type": "p",
+      "tag": "詮釋",
+      "text": "「我親愛的，那我就來服侍」是客人最後一次開口：當不成客人，他要當僕人。路加福音 12 章 37 節，「主人必叫他們坐席，自己束上帶，進前伺候他們」；欽定本這一節裡有 sit down、meat、serve，三個字都落在赫伯特的第 16、17 行。我猜愛不准他服侍，是因為這張桌上伺候人的位置已經有人了。第 15 行反問他知不知道是誰擔下罪責的，問話的就是那一位。"
+    },
+    {
+      "type": "p",
+      "text": "西蒙・薇依（Simone Weil）1938 年從一位年輕的英國天主教徒那裡，知道有一批被稱為「玄學詩人」的十七世紀英國詩人，後來讀他們的詩，自己找到這一首，在信裡只叫它〈愛〉，信裡沒寫作者。她把它背了下來，頭痛發作到最凶的時候，她常常念它。她以為自己念的只是一首美麗的詩，卻不自覺地成了祈禱。"
+    },
+    {
+      "type": "quote",
+      "text": "就是在一次這樣的背誦當中，如我先前寫信告訴過您的，基督親自降臨，抓住了我。",
+      "original": "C’est au cours d’une de ces récitations que, comme je vous l’ai écrit, le Christ lui-même est descendu et m’a prise.",
+      "cite": "西蒙・薇依，〈屬靈自傳〉，收於《等待上帝》（Attente de Dieu），1942 年寫於馬賽"
+    },
+    {
+      "type": "p",
+      "text": "愛的最後一句話在第 17 行：你得坐下，嚐嚐我的飯菜。下一行沒有「愛說」，原文六個單音節字，只剩坐下和吃兩個動作。依我看，eat 藏在愛那一句的 meat 裡。"
+    },
+    {
+      "type": "facts",
+      "title": "這首詩",
+      "items": [
+        [
+          "作者",
+          "喬治・赫伯特（George Herbert，1593–1633）"
+        ],
+        [
+          "詩題",
+          "Love.（1633 年版原題；現代版本編為 Love (III)）"
+        ],
+        [
+          "出處",
+          "《聖殿》（The Temple: Sacred Poems and Private Ejaculations），劍橋，1633 年；「教會」（The Church）一部的最後一首"
+        ],
+        [
+          "本文依據",
+          "1633 年版拼法（CCEL 電子本），對照 Commons 上 1633 年第二版掃描第 183 頁"
+        ],
+        [
+          "形式",
+          "3 段，每段 6 行，共 18 行；單數行 10 音節、雙數行 6 音節；每段押 ababcc"
+        ],
+        [
+          "中譯",
+          "逐行對齊，不押韻"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Love (III) (1633) - George Herbert（The Temple, 1633 年版拼法）",
+      "publisher": "Christian Classics Ethereal Library (CCEL)",
+      "date": "",
+      "url": "https://ccel.org/h/herbert/temple/Love3.html",
+      "note": "原文依據。首字在印本中作「LOve」為版式大寫，本文改作 Love。題名的 (III) 為現代編者所加。"
+    },
+    {
+      "title": "The Temple (2nd ed) - George Herbert (1633).djvu，第 197 頁（印本第 183 頁）",
+      "publisher": "Wikimedia Commons（Google Books 掃描）",
+      "date": "1633",
+      "url": "https://commons.wikimedia.org/wiki/File:The_Temple_(2nd_ed)_-_George_Herbert_(1633).djvu?page=197",
+      "note": "對照原文、確認本詩為「The Church」最後一首，詩末接 FINIS。前一首為 Heaven。"
+    },
+    {
+      "title": "Lives of John Donne, Henry Wotton, Rich'd Hooker, George Herbert, &c, Volume 2（Izaak Walton）",
+      "publisher": "Project Gutenberg #13139",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/13139",
+      "note": "Herbert 傳：Ferrar 在 Herbert 死前約一個月派 Edmund Duncon 探病；Duncon 第五天自 Bath 回來辭行時，Herbert 交出小書並說「if not, let him burn it」。"
+    },
+    {
+      "title": "'The finest place in the University': George Herbert (1593-1633), Public Orator",
+      "publisher": "Cambridge University Library Special Collections（Jacqueline Cox）",
+      "date": "2020-09-04",
+      "url": "https://specialcollections-blog.lib.cam.ac.uk/?p=20632",
+      "note": "卒於 1633 年 3 月 1 日；Ferrar 從臨終寄來的手稿選編，1633 年由大學印刷商 Thomas Buck 印行。"
+    },
+    {
+      "title": "George Herbert",
+      "publisher": "Westminster Abbey",
+      "date": "",
+      "url": "https://www.westminster-abbey.org/abbey-commemorations/commemorations/george-herbert",
+      "note": "1593 年 4 月 3 日生於蒙哥馬利；1630 年任 Bemerton 教區牧師；1633 年 3 月 1 日卒；《聖殿》於死後出版。"
+    },
+    {
+      "title": "Attente de Dieu / Autobiographie spirituelle",
+      "publisher": "Wikisource（La Colombe 1950 年版）",
+      "date": "1950",
+      "url": "https://fr.wikisource.org/wiki/Attente_de_Dieu/Autobiographie_spirituelle",
+      "note": "信頭「De Marseille, 15 mai environ」。Solesmes 十天；「un jeune Anglais catholique」讓她知道有十七世紀英國「poètes métaphysiques」，她後來閱讀時自己發現題為〈Amour〉的詩；背誦、頭痛時念它、「comme un beau poème」與引文皆出自此。信中未寫 Herbert 之名（SEP 說英國年輕人「介紹了 Herbert」是簡化，本文不採）。"
+    },
+    {
+      "title": "Simone Weil, Attente de Dieu（Perrin 神父序）",
+      "publisher": "Les Classiques des sciences sociales (UQAC)",
+      "date": "",
+      "url": "http://classiques.uqac.ca/classiques/weil_simone/attente_de_dieu/attente_de_dieu_preface.html",
+      "note": "頁題：Lettres écrites du 19 janvier au 26 mai 1942。"
+    },
+    {
+      "title": "The King James Bible",
+      "publisher": "Project Gutenberg #10",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/10",
+      "note": "路 12:37「make them to sit down to meat, and will come forth and serve them」。"
+    },
+    {
+      "title": "和合本 路加福音 12:37",
+      "publisher": "信望愛聖經工具 FHL",
+      "date": "",
+      "url": "https://bible.fhl.net/",
+      "note": "2026-11-03 核對。"
+    }
+  ]
+}
