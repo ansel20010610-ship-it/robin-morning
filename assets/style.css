@@ -1221,6 +1221,14 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
    count large in Cormorant and a gold rule along the top — then the saved articles as numbered rows in the lookbook's
    manner: the column and the day in spaced small type, the title, the dek, the picture a square at the right. ——— */
 .shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 18px 0 8px; }
+/* Exactly three shelves (劃線本, 畫廊, 郵票冊) share one row, set a size smaller; two or four keep the pairs. */
+.shelf:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.shelf:has(> :nth-child(3):last-child) .sh { padding: 12px 10px 11px; }
+.shelf:has(> :nth-child(3):last-child) .sh .k { font-size: 11.5px; letter-spacing: .12em; }
+.shelf:has(> :nth-child(3):last-child) .sh .k i { font-size: 12px; }
+.shelf:has(> :nth-child(3):last-child) .sh b { font-size: 30px; margin-top: 10px; }
+.shelf:has(> :nth-child(3):last-child) .sh .u { font-size: 11px; }
+.shelf:has(> :nth-child(3):last-child) .sh::after { right: 9px; bottom: 8px; font-size: 19px; }
 .sh { position: relative; display: grid; gap: 2px; padding: 13px 14px 12px; border: 1px solid var(--rule); border-top: 1px solid var(--gold); text-decoration: none; color: inherit; }
 .sh .k { display: grid; font-family: var(--sans); font-size: 12px; letter-spacing: .14em; color: var(--gold-ink); font-weight: 600; }
 .sh .k i { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 13px; color: var(--gold); }
@@ -1335,6 +1343,57 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
   .tile img { transition: transform .5s cubic-bezier(.2,.7,.2,1); transform-origin: 50% 60%; }
   .tile:active img { transform: scale(1.025); }
   .tile { animation: page-in .6s both; animation-delay: calc(min(var(--i, 0), 8) * 45ms); }
+}
+
+/* ——— 郵票冊 (Briefmarken; assets/stamps.js, app.js viewStamps): a stamp for every day the paper was read to the end ——— */
+/* The album page: the tally in Cormorant under the note, then a month per section and its stamps in a grid, three a
+   row on the phone, four from 480px, five from 700px. A stamp is a light sheet of paper (its own tokens: it stays paper
+   on the dark album page) perforated by a mask — one round hole per tenth of the width, centred on the edges — with a
+   thin frame drawn in SVG round the picture and the printing set in units of the stamp's width (cqw), so it scales
+   whole. The slot of a missed day is the same size in a dashed hairline, its day in the muted ink; today's still open
+   slot is dashed in gold. The earned stamps lean a degree or so each way (--tilt, from the date) as if licked on. */
+.album .col-note { margin-top: 4px; }
+.album .tally { margin: 14px 0 0; font-family: var(--sans); font-size: 13px; letter-spacing: .04em; color: var(--ink-2); }
+.album .tally b { font-family: var(--latin); font-size: 24px; font-weight: 600; line-height: 1; color: var(--gold-ink); font-variant-numeric: lining-nums tabular-nums; margin: 0 1px; }
+.album .empty { padding: 22px 0 6px; }
+.album .page { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 14px; margin: 18px 0 8px; }
+@media (min-width: 480px) { .album .page { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 700px) { .album .page { grid-template-columns: repeat(5, 1fr); gap: 24px 18px; } }
+.stamp { --s-paper: #EDE5D5; --s-ink: #2A241C; --s-gold: #8C6E35; position: relative; display: block; aspect-ratio: 5 / 6; container-type: inline-size; text-decoration: none; color: var(--s-ink); rotate: var(--tilt, 0deg); }
+.stamp.earned { filter: drop-shadow(0 1px 1px rgba(60, 45, 20, .22)); } /* lifts the perforated edge off the light page; the mask would clip a box-shadow */
+.stamp.t1 { --s-paper: #EDDCD6; } /* rose */
+.stamp.t2 { --s-paper: #E3E5D2; } /* sage */
+.stamp.t3 { --s-paper: #DFE3E6; } /* sky */
+.stamp.t4 { --s-paper: #EFE3C3; } /* straw */
+.stamp .sp { position: absolute; inset: 0; background: var(--s-paper); box-sizing: border-box;
+  -webkit-mask: radial-gradient(circle closest-side, transparent 0 52%, #000 58%) 50% 50% / 10% calc(100% / 12) repeat, linear-gradient(#000 0 0) 50% 50% / calc(100% - 6cqw) calc(100% - 6cqw) no-repeat;
+  mask: radial-gradient(circle closest-side, transparent 0 52%, #000 58%) 50% 50% / 10% calc(100% / 12) repeat, linear-gradient(#000 0 0) 50% 50% / calc(100% - 6cqw) calc(100% - 6cqw) no-repeat; }
+/* Two mask layers added together: the repeating holes, and a solid pane inset by a hole's radius, so the interior is
+   whole and only the edges are perforated. */
+.stamp .no { position: absolute; left: 7.5cqw; top: 3.6cqw; font-family: var(--latin); font-size: 9.5cqw; font-weight: 600; line-height: 1; letter-spacing: .02em; font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; }
+.stamp .imp { position: absolute; right: 7.5cqw; top: 4.6cqw; font-family: var(--sans); font-size: 5.6cqw; letter-spacing: .22em; line-height: 1; color: var(--s-gold); }
+.stamp .fr { position: absolute; left: 7cqw; top: 14cqw; width: 86cqw; height: 92cqw; }
+.stamp .fr img, .stamp .fr .bird { position: absolute; left: 4.5cqw; top: 4.5cqw; width: 77cqw; height: 83cqw; display: block; object-fit: cover; }
+.stamp .fr .bird { box-sizing: border-box; padding: 10cqw 9cqw; background: color-mix(in srgb, var(--s-paper) 55%, #fff); }
+.stamp .bird .e-ink { fill: var(--s-ink); } .stamp .bird .e-robin { fill: #B65A2E; } .stamp .bird .e-gold { fill: var(--s-gold); } .stamp .bird .e-paper { fill: var(--s-paper); }
+.stamp .bird .e-legs { fill: none; stroke: var(--s-ink); } .stamp .bird .e-wing { fill: none; stroke: var(--s-gold); }
+.stamp .bd { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; fill: none; stroke: var(--s-gold); stroke-width: .9; }
+.stamp .bd .thin { stroke-width: .45; }
+.stamp .bd .dots { stroke-width: 1.3; stroke-dasharray: 0 2.6; stroke-linecap: round; }
+.stamp .bd .band { stroke-width: 1.6; stroke-dasharray: 1.6 1.6; }
+.stamp .bd .leaf { fill: var(--s-gold); stroke: none; }
+.stamp .foot { position: absolute; left: 7.5cqw; right: 7.5cqw; bottom: 3.8cqw; display: flex; justify-content: space-between; align-items: baseline; gap: 4cqw; font-family: var(--latin); font-size: 8.6cqw; line-height: 1; white-space: nowrap; }
+.stamp .foot i { font-style: italic; font-weight: 500; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.stamp .foot b { font-weight: 600; font-variant-numeric: lining-nums tabular-nums; }
+.stamp.slot { color: var(--muted); }
+.stamp.slot .sp { background: none; -webkit-mask: none; mask: none; border: 1.5px dashed var(--rule); }
+.stamp.slot .miss { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 3cqw; font-family: var(--latin); font-size: 14cqw; font-weight: 500; line-height: 1; font-variant-numeric: lining-nums tabular-nums; }
+.stamp.slot .miss small { font-family: var(--sans); font-size: 7cqw; letter-spacing: .22em; padding-left: .22em; }
+.stamp.slot.open { color: var(--gold-ink); }
+.stamp.slot.open .sp { border-color: var(--gold); }
+a.stamp:active .sp { filter: brightness(.96); }
+@media (prefers-reduced-motion: no-preference) {
+  .album .stamp { animation: page-in .6s both; animation-delay: calc(min(var(--i, 0), 14) * 40ms); }
 }
 
 /* 加入行事曆 (app.js calBtn, assets/ics.js): the small ghost button at the end of a show's row and on the next-fixture card,

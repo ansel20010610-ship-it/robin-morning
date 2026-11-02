@@ -10,6 +10,7 @@ import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pr
 import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
 import { pressHtml } from "./press.js";
 import { fetchWeather, weatherHtml } from "./wetter.js";
+import { stampHtml } from "./stamps.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -395,7 +396,7 @@ function wireDigest(issue) {
     main.querySelector(".digest .streak")?.remove();
     if (!fin || fin.classList.contains("done")) return;
     fin.classList.add("done");
-    if (!was) celebrate(fin);
+    if (!was) { celebrate(fin); setTimeout(() => toast("郵票蓋好了，收在郵票冊"), 1200); } // the day's stamp (viewStamps), once the seal is down
   }
   if (fin && "IntersectionObserver" in window) {
     finishSeen = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) finish(); }, { threshold: 0.8 });
@@ -1081,11 +1082,12 @@ function viewSaved() {
     return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
       <span class="t"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title)}</b>${a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}</span>${th}</a></li>`;
   };
-  const n = allMarks().length, g = galleryItems().length;
+  const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length;
   main.innerHTML = `<div class="wrap sammlung"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
     <nav class="shelf" aria-label="收藏的角落">
       <a class="sh" href="#/marks" style="--i:0" aria-label="劃線本：${n} 處劃線"><span class="k">劃線本<i>Anstreichungen</i></span><b>${n}</b><span class="u">${n ? "處劃線" : "還沒有劃線"}</span></a>
-      <a class="sh" href="#/gallery" style="--i:1" aria-label="畫廊：${g} 幅"><span class="k">畫廊<i>Galerie</i></span><b>${g}</b><span class="u">${g ? "幅" : "牆上還沒有畫"}</span></a></nav>
+      <a class="sh" href="#/gallery" style="--i:1" aria-label="畫廊：${g} 幅"><span class="k">畫廊<i>Galerie</i></span><b>${g}</b><span class="u">${g ? "幅" : "牆上還沒有畫"}</span></a>
+      <a class="sh" href="#/stamps" style="--i:2" aria-label="郵票冊：${st} 張"><span class="k">郵票冊<i>Briefmarken</i></span><b>${st}</b><span class="u">${st ? "張" : "還沒有郵票"}</span></a></nav>
     ${rows.length ? `<div class="sec-head"><h2>收進來的</h2><span class="de">Gesammelt</span><span class="note">${rows.length} 篇</span></div><ol class="svl">${rows.map(row).join("")}</ol>`
       : `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。<br><a href="#/random">或者先隨手翻一篇 →</a></p>`}</div>`;
 }
@@ -1112,6 +1114,27 @@ function viewMarks() {
     if (q) landMark = q.dataset.mark;
   });
   document.title = `劃線本｜${S.cfg.title}`;
+}
+
+// ——— 郵票冊 (Briefmarken; assets/stamps.js): a stamp for every day the paper was read to the end ———
+// Every published issue has its place, by month, the newest month first and the days in order as on a calendar page.
+// A day finished (digestDone) shows its stamp and opens its issue; a day missed is a dashed empty slot that stays
+// empty — only today's still opens the issue, since today's paper can still be read. viewSaved counts the stamps.
+const stampsEarned = () => { const done = digestDone(); return publishedIssues().filter((i) => done.has(i.date)); };
+function viewStamps() {
+  const pubs = publishedIssues(), done = digestDone(), today = twNow().date;
+  const got = stampsEarned().length, missed = pubs.filter((i) => !done.has(i.date) && i.date !== today).length;
+  const months = new Map();
+  for (const i of pubs) months.set(i.date.slice(0, 7), [...(months.get(i.date.slice(0, 7)) || []), i]);
+  let n = 0;
+  const page = ([ym, list]) => `<div class="sec-head"><h2>${Number(ym.slice(5))} 月</h2><span class="de">${esc(monDe(ym))}</span><span class="note">${list.filter((i) => done.has(i.date)).length}／${list.length}</span></div>
+    <div class="page">${list.slice().reverse().map((i) => stampHtml({ ...i, articles: sortArticles(i.articles || [], i.date) },
+      { earned: done.has(i.date), open: i.date === today, href: done.has(i.date) || i.date === today ? `#/issue/${i.date}` : null, i: n++ })).join("")}</div>`;
+  main.innerHTML = `<div class="wrap album"><header class="page-title"><h1>郵票冊</h1><span class="de">Briefmarken</span></header>
+    <p class="col-note">每天把整份報紙讀完，就蓋出那天的郵票；錯過的日子就留一格空白。</p>
+    ${got ? `<p class="tally">集了 <b>${got}</b> 張，缺 <b>${missed}</b> 格</p>` : `<p class="empty">第一張郵票等你今天讀完。</p>`}
+    ${[...months].map(page).join("")}</div>`;
+  document.title = `郵票冊｜${S.cfg.title}`;
 }
 
 // ——— 閱讀年鑑 (Lesekalender): the reading record this phone holds, drawn as a calendar ———
@@ -1442,7 +1465,7 @@ let landKey = null, landTop = null; // 接著上次: the article tapped on the f
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamps") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
 let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising number, so a step back is recognisable
@@ -1516,6 +1539,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/archive")) viewArchive();
   else if (h.startsWith("#/stats")) viewStats();
   else if (h.startsWith("#/gallery")) viewGallery();
+  else if (h.startsWith("#/stamps")) viewStamps();
   else if (h.startsWith("#/press")) viewPress();
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
