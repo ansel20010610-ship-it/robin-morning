@@ -1,0 +1,271 @@
+{
+  "column": "music",
+  "date": "2026-11-03",
+  "title": "《藍色多瑙河》那段旋律，原本唱「維也納人，高興吧」",
+  "dek": "大提琴和圓號輕輕往上走的那幾個音，合唱版配的詞是「維也納人，高興吧！」，下一句接「喔？為什麼？」。",
+  "brief": "《藍色多瑙河》最有名的那段旋律，最早是男聲合唱團在維也納一座澡堂裡唱出來的，配的詞是「維也納人，高興吧」。首演冷場是流傳很久的說法，首演兩天後的報紙卻稱它是一首熱門曲。",
+  "topic_key": "music:strauss-ii-op314",
+  "updated_at": "2026-11-03T01:25:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "portrait",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Johann_Strauss_II_by_Josef_Kriehuber_1853.jpg/1280px-Johann_Strauss_II_by_Josef_Kriehuber_1853.jpg",
+    "width": 1280,
+    "height": 1626,
+    "alt": "石版畫：深色捲髮、八字鬍的年輕男子，深藍外套、暗紅領巾、白襯衫。左下角有簽名「Kriehuber 853」。",
+    "caption": "克里胡伯（Josef Kriehuber）1853 年畫的小約翰・史特勞斯。",
+    "credit": "Josef Kriehuber，石版畫；影像取自 Fritz Racek 編《Johann Strauss. Zum 150. Geburtstag》（維也納市立圖書館展覽目錄，1975）；經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Johann_Strauss_II_by_Josef_Kriehuber_1853.jpg",
+    "made": "1853"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "《藍色多瑙河》最有名的那段旋律，是大提琴和圓號一起奏出的三個音，輕輕往上走，豎琴伴奏；每走完三個音，圓舞曲的拍子就被加重一下。合唱版裡，這幾個往上走的音配的是「維也納人」，接下來保持的那個音，對的是「froh」（高興）。下一句是：「喔？為什麼？」"
+    },
+    {
+      "type": "p",
+      "text": "第一次唱出這兩句的，是維也納男聲合唱協會。那是 1867 年 2 月 15 日晚上，地點是一座叫 Dianabad 的澡堂：當時池子灌的是多瑙運河的水，冬天改成大廳，叫 Dianasaal（舞廳與音樂廳）。奧地利前一年輸給普魯士，協會因此沒辦照例的愚人之夜，改辦一場狂歡節歌唱晚會。作曲的小約翰・史特勞斯（Johann Strauss II）那晚沒來。"
+    },
+    {
+      "type": "h",
+      "text": "詞是一位警察寫的"
+    },
+    {
+      "type": "p",
+      "text": "寫詞的 Josef Weyl 是協會的詩人，本行是警察。第一句原本是「狂歡節到了」，首演前他才改成「維也納人，高興吧！」。歌詞是諷刺的，背景是霍亂後與 1866 年戰敗的窮日子；內容拿景況不好的人開玩笑，有房東、農夫、繳稅，還有看似前進卻原地不動的政治批評者。"
+    },
+    {
+      "type": "p",
+      "text": "曲名也是反話。「美麗的藍色多瑙河」這幾個字出自一位詩人 1852 年的詩，維也納約翰・史特勞斯學會的研究短文說，這個標題多少是碰巧選上的。研究者艾德華・史特勞斯（Eduard Strauss）在文末補了一句：標題和歌詞一樣是諷刺，也只能當諷刺讀。"
+    },
+    {
+      "type": "h",
+      "text": "隔兩天的報紙"
+    },
+    {
+      "type": "p",
+      "text": "首演冷場，是流傳很久的說法。Classic FM 的說法是，首演據說只得到一次再唱（encore），照史特勞斯的標準等於失敗。"
+    },
+    {
+      "type": "quote",
+      "text": "下半場的開場曲，是一首不折不扣的熱門曲。",
+      "original": "Die Eröffnungsnummer der zweiten Abteilung war ein entschiedener Schlager.",
+      "cite": "《新外國人報》，1867 年 2 月 17 日；轉引自 vienna.at（APA）"
+    },
+    {
+      "type": "p",
+      "text": "樂評用的字是 Schlager，熱門曲。這被視為這個詞在此意義上最早的文字用例。冷場、失敗是流傳很久的說法（傳說）；兩種說法我信報紙，依據是首演兩天後的報紙就稱它是 Schlager。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Johann_Strauss_Donauwalzer_The_Blue_Danube_silhouette_Otto_B%C3%B6hler.jpg/1280px-Johann_Strauss_Donauwalzer_The_Blue_Danube_silhouette_Otto_B%C3%B6hler.jpg",
+      "width": 1280,
+      "height": 993,
+      "alt": "黑色剪影：中央一個指揮的人影，左右各有拉小提琴與揮弓的人，四周是跳舞的人影與聽眾。",
+      "caption": "Otto Böhler 剪的《藍色多瑙河》。1900 年以前製作，1914 年收進他的剪影集。",
+      "credit": "Otto Böhler（1847–1913）；《Dr. Otto Böhler's Schattenbilder》（維也納：Wilhelm Lechner，1914）；影像經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Johann_Strauss_Donauwalzer_The_Blue_Danube_silhouette_Otto_B%C3%B6hler.jpg",
+      "made": "1900 年以前（1914 年出版）"
+    },
+    {
+      "type": "p",
+      "text": "歌詞後來換掉了。1889 年前後（來源寫 1889 或 1890）有人另寫了一版，口氣更愛國，今天唱的是這一版。1945 年，奧地利宣布獨立前後還沒有國歌，臨時政府的成員走去國會，伴著他們的是這首圓舞曲。它到今天還被當成奧地利非正式的國歌，每逢跨年少不了它；庫柏力克（Stanley Kubrick）1968 年的《2001 太空漫遊》，太空船對接太空站那場戲配的也是它。"
+    },
+    {
+      "type": "p",
+      "text": "寫嚴肅音樂的同行，也把這首當藝術品看。布拉姆斯（Johannes Brahms）是史特勞斯的朋友，也是他的仰慕者。史特勞斯的繼女愛麗絲有一把簽名扇，拿去請布拉姆斯簽。他在扇面上寫下《藍色多瑙河》開頭的幾小節，然後加上一句：「Leider nicht von Johannes Brahms」（可惜不是約翰尼斯・布拉姆斯寫的）。"
+    },
+    {
+      "type": "h",
+      "text": "顫音、五首圓舞曲和一陣鈸"
+    },
+    {
+      "type": "p",
+      "text": "序奏裡，顫音（tremolo）的小提琴和圓號奏出熟悉的圓舞曲主題，管樂以短促（staccato）的和弦回答。序奏漸強再安靜下來；短暫對比後，一個往下的低音型引出主要的圓舞曲旋律，旋律由弦樂傳給管樂，再傳給銅管。"
+    },
+    {
+      "type": "p",
+      "text": "主體是五首圓舞曲連成一串；第五首是高潮，鈸聲穿插。"
+    },
+    {
+      "type": "p",
+      "text": "尾聲回顧前面的素材。結尾前編制變薄，幾件獨奏樂器露出來；之後圓舞曲趕回來，回到第一首圓舞曲，以鼓的滾奏與大收尾結束。"
+    },
+    {
+      "type": "music",
+      "composer": "小約翰・史特勞斯（Johann Strauss II）",
+      "work": "圓舞曲《美麗的藍色多瑙河》，作品 314",
+      "work_original": "An der schönen blauen Donau, Walzer, Op. 314",
+      "composed": "合唱版 1867 年 2 月 15 日首演",
+      "performers": "卡拉揚（Herbert von Karajan）指揮 維也納愛樂（Wiener Philharmoniker）",
+      "recording": "Deutsche Grammophon，1987 年 1 月 1 日新年音樂會現場，維也納金色大廳",
+      "duration": "約 8–10 分鐘",
+      "movements": [
+        "序奏",
+        "五首圓舞曲",
+        "尾聲"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Strauss An der schönen blauen Donau Karajan Wiener Philharmoniker Neujahrskonzert 1987",
+        "artist_hint": "Karajan",
+        "track_filter": [
+          "blauen Donau",
+          "Blue Danube"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "錄音選卡拉揚 1987 年元旦在金色大廳指揮維也納愛樂的新年音樂會現場。理由借 Classic FM 那篇樂曲故事的評語：這首的好錄音很多，包括萊納、波斯科夫斯基和克萊巴的，卡拉揚這場拔得頭籌。"
+    },
+    {
+      "type": "h",
+      "text": "史特勞斯的另外兩首圓舞曲"
+    },
+    {
+      "type": "list",
+      "items": [
+        "《春之聲》（Frühlingsstimmen）：一樣是能唱的圓舞曲，管弦樂之外可以加一位女高音；1987 年卡拉揚那場也演了。",
+        "《皇帝圓舞曲》（Kaiser-Walzer）：原名《手牽手》，本來是奧皇訪問德皇時的友誼祝酒；快結束時有一段大提琴獨奏，把第一首圓舞曲的旋律再拉一遍。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "An der schönen blauen Donau（研究短文，英文版；Norbert Rubey 撰，附 Eduard Strauss〈Afterthoughts〉補記）",
+      "publisher": "Johann Strauss Gesellschaft Wien",
+      "date": "2024-12-10",
+      "url": "https://www.johann-strauss.at/en/forschung/forschungssplitter/an-der-schoenen-blauen-donau/",
+      "note": "頁面標「Fassung 10.12.2024」。首演日期、地點；Weyl 改第一句與原詞逐字英譯（「Oho, but why?」、農夫繳稅、房東、原地打轉的政治評論者）；歌詞諷刺的背景（霍亂與 1866 年戰敗）；標題出自 Beck 1852 年的詩、「chosen more or less by chance」；1889 年 Gernerth 新詞。文末 Afterthoughts 的作者 Eduard Strauss 是今天的研究者，不是作曲者的弟弟；補記說標題和歌詞一樣是諷刺、當晚報紙已稱它「hit」。英文版寫協會「thanked Strauss」送一枚金杜卡特，依德文維基的說明，那是委託作品當時慣例的酬勞，正文不用。"
+    },
+    {
+      "title": "An der schönen blauen Donau（研究短文，德文版）",
+      "publisher": "Johann Strauss Gesellschaft Wien",
+      "date": "2024-12-10",
+      "url": "https://www.johann-strauss.at/forschung/forschungssplitter/an-der-schoenen-blauen-donau/",
+      "note": "Eduard Strauss〈Nachsätze〉：第一首圓舞曲開頭 d–fis–a 對「Wiener seid」、保持的音對「froh」。同一份補記說，從當時巴黎報紙推不出它在 1867 年巴黎世博才大獲成功（《費加洛報》刊的是〈費加洛波卡〉），所以正文不寫巴黎世博的說法。"
+    },
+    {
+      "title": "Donauwalzer: Jubiläum im Hallenbad",
+      "publisher": "ORF Wien",
+      "date": "2017-02-15",
+      "url": "https://wien.orf.at/v2/news/stories/2825741/",
+      "note": "Dianabad 在利奧波德城、池子灌多瑙運河水、冬季改成 Dianasaal；史特勞斯首演不在場；這首曲子伴臨時政府成員走去國會（ORF 寫 1945 年 4 月 29 日、獨立宣言後兩天；德文維基寫 4 月 27 日獨立宣言時，正文只寫年份）；庫柏力克《2001》對接場面。"
+    },
+    {
+      "title": "Klassik-Hit: „Donauwalzer\" wird 150",
+      "publisher": "ORF Wien",
+      "date": "2016-12-07",
+      "url": "https://wien.orf.at/v2/news/stories/2813219/index.html",
+      "note": "頁面標「Publiziert am 07.12.2016」。合唱版首演 1867 年 2 月 15 日；協會因輸掉對普魯士的戰爭改辦歌唱晚會（取代愚人之夜）；每逢跨年少不了它。"
+    },
+    {
+      "title": "Vor 200. Geburtstag von Strauss: Der Donauwalzer im Porträt",
+      "publisher": "vienna.at（APA）",
+      "date": "2025-10-20",
+      "url": "https://www.vienna.at/vor-200-geburtstag-von-strauss-der-donauwalzer-im-portraet/9738989",
+      "note": "《新外國人報》1867 年 2 月 17 日評論原句與「Schlager」一詞首次見於印刷品；Weyl 的身分；「首演失敗」是流傳已久的傳說、報紙卻報導成功；新詞「更愛國」；嚴肅音樂的同行也認它是藝術品、布拉姆斯是史特勞斯的仰慕者與朋友；扇子一事此處引作「Leider nicht von mir」，正文照英文維基。"
+    },
+    {
+      "title": "An der schönen blauen Donau",
+      "publisher": "德文維基百科",
+      "date": "未註明",
+      "url": "https://de.wikipedia.org/wiki/An_der_sch%C3%B6nen_blauen_Donau",
+      "note": "史特勞斯不在場；Neues Fremdenblatt 引文（引 Linke 1982, S. 83），並說「首演失敗」與幾乎所有傳記的說法相反；金杜卡特是「當時這類委託作品慣例的酬勞」；新年音樂會上這首從不在正式節目單、永遠當安可；1945 年 4 月 27 日在國會前奏起。不採用無註腳的段落（稿費、銷量、「coda 令他遺憾」的說法）。"
+    },
+    {
+      "title": "The Blue Danube",
+      "publisher": "英文維基百科",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/The_Blue_Danube",
+      "note": "第一首圓舞曲主題：大提琴與圓號奏出輕輕上行的三音動機、豎琴伴奏、每三個音的結尾加重拍子；序奏的顫音小提琴與圓號、五首圓舞曲、第五首高潮與鈸、尾聲回顧與小鼓滾奏；布拉姆斯在愛麗絲的簽名扇上寫開頭幾小節（引 Geiringer 2007, p.151）。巴黎世博的說法有爭議，不用；「The devil take the waltz」一句無出處，不用。"
+    },
+    {
+      "title": "The Story Behind The Blue Danube",
+      "publisher": "Classic FM",
+      "date": "未註明",
+      "url": "https://www.classicfm.com/composers/strauss-ii/guides/story-behind-blue-danube/",
+      "note": "「Wiener seid's froh! Oho! Wieso?」；首演「apparently received only one encore, which in Strauss's terms equalled a flop」；錄音評語「Among many fine accounts (including Reiner, Boskovsky and Kleiber), Karajan's live 1987 performance at the New Year's Day Concert in Vienna takes the palm.」"
+    },
+    {
+      "title": "Wien – Landeshymne",
+      "publisher": "Austria-Forum",
+      "date": "2009-09-16",
+      "url": "https://austria-forum.org/af/Wissenssammlungen/Symbole/Wien_-_Landeshymne",
+      "note": "頁面建立於 2009 年 9 月 16 日。Weyl 是寫作的警察、歌詞諷刺的對象（房東等）；排在中場後的第一首；「nur eine Wiederholung verlangt」（只被要求再唱一次）。"
+    },
+    {
+      "title": "Donauwalzer（AEIOU 英文版）",
+      "publisher": "Austria-Forum",
+      "date": "1995",
+      "url": "https://austria-forum.org/af/AEIOU/Donauwalzer/Donauwalzer_english",
+      "note": "被視為奧地利非正式的國歌。"
+    },
+    {
+      "title": "2001: A Space Odyssey (soundtrack)",
+      "publisher": "英文維基百科",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(soundtrack)",
+      "note": "這首配的是太空飛機與太空站對接的場面；電影 1968 年上映。"
+    },
+    {
+      "title": "Johann Strauss II: The Blue Danube",
+      "publisher": "Classicalexburns（Alex Burns）",
+      "date": "2020-01-05",
+      "url": "https://classicalexburns.com/?p=4508",
+      "note": "序奏漸強又安靜、低音往下引出主要旋律、旋律由弦樂傳管樂再傳銅管；尾聲編制變薄、獨奏樂器露出來後收尾；全曲約 8–10 分鐘。"
+    },
+    {
+      "title": "Neujahrskonzert 1987-01-01",
+      "publisher": "維也納愛樂（Wiener Philharmoniker）",
+      "date": "1987-01-01",
+      "url": "https://www.wienerphilharmoniker.at/en/konzerte/neujahrskonzert/5049/",
+      "note": "場次列表：卡拉揚指揮、女高音 Kathleen Battle、金色大廳；曲目含《藍色多瑙河》《春之聲》《皇帝圓舞曲》。這是場次曲目列表，不是當晚節目單（德文維基說這首在新年音樂會一向是安可），正文不寫第幾首。"
+    },
+    {
+      "title": "NEW YEAR´S CONCERT 1987 / Karajan",
+      "publisher": "Deutsche Grammophon",
+      "date": "2022-12-16",
+      "url": "https://www.deutschegrammophon.com/en/catalogue/products/new-years-concert-1987-5517",
+      "note": "DG 發行這場音樂會；頁面列出的日期是出版目錄日期，不是錄音日期。"
+    },
+    {
+      "title": "Voices of Spring",
+      "publisher": "英文維基百科",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Voices_of_Spring",
+      "note": "《春之聲》Op. 410：管弦樂圓舞曲，可加女高音獨唱。"
+    },
+    {
+      "title": "Emperor Waltz",
+      "publisher": "英文維基百科",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Emperor_Waltz",
+      "note": "《皇帝圓舞曲》Op. 437：原名 Hand in Hand，奧皇訪問德皇時的「友誼的祝酒」；結尾前大提琴獨奏重現第一首圓舞曲的旋律。"
+    },
+    {
+      "title": "File:Johann Strauss II by Josef Kriehuber 1853.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Johann_Strauss_II_by_Josef_Kriehuber_1853.jpg",
+      "note": "頭圖；Public domain；Josef Kriehuber 1853 年石版畫，影像取自 1975 年維也納市立圖書館展覽目錄。原頭圖 Dianabad als Ballsaal um 1850 繪者不可考，依 IMAGES.md 撤下。"
+    },
+    {
+      "title": "File:Johann Strauss Donauwalzer The Blue Danube silhouette Otto Böhler.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Johann_Strauss_Donauwalzer_The_Blue_Danube_silhouette_Otto_B%C3%B6hler.jpg",
+      "note": "內文圖；Public domain；Otto Böhler，1914 年剪影集 p.20。"
+    }
+  ]
+}
