@@ -1232,6 +1232,11 @@ function viewStamp(date) {
     <p class="line"><b>No. ${esc(issue.no)}</b><span>${esc(fmtDate(date))}・週${esc(issue.weekday || "")}</span><i>${esc(fmtDate(date, "de"))}</i></p>
     <p class="btns"><a class="btn ghost" href="#/issue/${esc(date)}">看這一期</a></p></div>`;
   wireBack();
+  // A tap on the blank page (not the stamp, not a link) goes back to the album, as closing a thing held up to look at.
+  main.querySelector(".stamp-page").addEventListener("click", (e) => {
+    if (e.target.closest("a, button, .stamp")) return;
+    if (routed) history.back(); else location.hash = "#/stamps";
+  });
   document.title = `郵票 No. ${issue.no}｜${S.cfg.title}`;
 }
 

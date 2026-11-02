@@ -1375,7 +1375,7 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .album .tally b { font-family: var(--latin); font-size: 24px; font-weight: 600; line-height: 1; color: var(--gold-ink); font-variant-numeric: lining-nums tabular-nums; margin: 0 1px; }
 .album .empty { padding: 22px 0 6px; }
 /* One stamp large (app.js viewStamp): the sheet alone on the page, then the issue line in Cormorant and a way in. */
-.stamp-page { padding-top: 18px; }
+.stamp-page { padding-top: 18px; min-height: calc(100vh - 140px); cursor: default; } /* room below for the tap that goes back */
 .stamp-page .big { width: min(78vw, 360px); margin: 0 auto; }
 .stamp-page .big .stamp { rotate: 0deg; }
 .stamp-page .line { display: grid; justify-items: center; gap: 2px; margin: 26px 0 0; font-family: var(--sans); font-size: 13px; letter-spacing: .06em; color: var(--muted); }
