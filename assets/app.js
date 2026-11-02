@@ -419,6 +419,13 @@ function prayerBox(issue) {
 
 // ——— Reaching the end of the front page counts the day as read (the finish line, the streak) ———
 const digestDone = () => new Set(store.get("digest.done", []));
+// The service worker cannot read localStorage: the finished days are mirrored into a small cache (rm-state, outside the
+// shell caches sw.js clears) so a 12:30 or 21:00 reminder for a day already read through is dropped on the phone.
+function syncDone() {
+  try { caches.open("rm-state").then((c) => c.put("state/done", new Response(JSON.stringify(store.get("digest.done", [])), { headers: { "Content-Type": "application/json" } }))).catch(() => {}); }
+  catch { /* no Cache API (a plain http:// preview) */ }
+}
+syncDone();
 let finishSeen = null;
 const unreadIn = (date, arts) => { const read = readSet(); return arts.filter((a) => !read.has(`${date}/${a.column}`)).length; };
 // 循序閱讀's version of the digest bar: how many of the issue's articles have been read, not how many briefs seen.
@@ -458,6 +465,7 @@ function markDigestDone(date) {
   if (done.includes(date)) return;
   done.push(date);
   store.set("digest.done", done.slice(-400));
+  syncDone();
   const fin = main.querySelector(".finish");
   if (fin) fin.innerHTML = finishInner(date);
 }
@@ -1059,18 +1067,21 @@ async function viewConcerts(my) {
 function viewArchive() {
   const pubs = publishedIssues();
   const done = digestDone();
+  // Each month folds (the owner, 2026-11-02): this month open, the others shut, the reader's choice kept in
+  // rm.archive.open; a search opens every month that has a hit.
+  const thisYm = twNow().date.slice(0, 7), openSet = store.get("archive.open", {});
   const draw = (q) => {
     const ql = q.trim().toLowerCase();
-    let last = "";
-    const rows = pubs.map((iss) => {
+    const months = new Map();
+    for (const iss of pubs) {
       const arts = sortArticles(iss.articles, iss.date).filter((a) => !ql || `${a.title} ${a.dek} ${col(a.column, iss.date).name}`.toLowerCase().includes(ql));
-      if (!arts.length) return "";
-      const [y, m, d] = iss.date.split("-");
-      const head = `${y}-${m}` !== last ? `<div class="month">${Number(m)} 月 ${y}</div>` : "";
-      last = `${y}-${m}`;
-      return `${head}<a class="issue-row" href="#/issue/${iss.date}"><div class="d"><b>${Number(d)}</b><span>週${esc(iss.weekday)}・No.${iss.no}</span>${done.has(iss.date) ? seal(iss.date, 0, true) : ""}</div>
-        <ul>${arts.map((a) => `<li><i>${esc(col(a.column, iss.date).name)}</i>${esc(a.title)}</li>`).join("")}</ul></a>`;
-    }).join("");
+      if (!arts.length) continue;
+      const ym = iss.date.slice(0, 7), d = Number(iss.date.slice(8));
+      months.set(ym, [...(months.get(ym) || []), `<a class="issue-row" href="#/issue/${iss.date}"><div class="d"><b>${d}</b><span>週${esc(iss.weekday)}・No.${iss.no}</span>${done.has(iss.date) ? seal(iss.date, 0, true) : ""}</div>
+        <ul>${arts.map((a) => `<li><i>${esc(col(a.column, iss.date).name)}</i>${esc(a.title)}</li>`).join("")}</ul></a>`]);
+    }
+    const rows = [...months].map(([ym, list]) => `<details class="mon"${ql || (ym in openSet ? openSet[ym] : ym === thisYm) ? " open" : ""} data-ym="${ym}">
+      <summary class="month">${Number(ym.slice(5))} 月 ${ym.slice(0, 4)}<span class="de">${esc(monDe(ym))}</span><span class="n">${list.length} 期</span></summary>${list.join("")}</details>`).join("");
     main.querySelector(".list").innerHTML = rows || `<p class="empty">${ql ? "沒有符合的文章。" : "還沒有往期。"}</p>`;
     main.querySelector(".jahr")?.toggleAttribute("hidden", Boolean(ql)); // the month makes way for the search
   };
@@ -1080,8 +1091,14 @@ function viewArchive() {
     ${continueRow(null, readSet(), " in-archive")}
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
     <div class="hits" aria-live="polite"></div>
+    <nav class="chips cols" aria-label="專欄">${chips}</nav>
     ${calendarHtml(twNow().date.slice(0, 7), pubs, done)}
-    <nav class="chips" aria-label="專欄">${chips}</nav><div class="list"></div></div>`;
+    <div class="list"></div></div>`;
+  // Remember which months the reader folded or opened (not the search's forced opening).
+  main.querySelector(".list").addEventListener("toggle", (e) => {
+    const det = e.target.closest?.("details.mon");
+    if (det && !main.querySelector(".search").value.trim()) { openSet[det.dataset.ym] = det.open; store.set("archive.open", openSet); }
+  }, true);
   // A tap on 接著上次 lands in the article where the reader stopped (viewArticle reads landKey).
   main.querySelectorAll(".cont[data-jump]").forEach((el) => el.addEventListener("click", () => { landKey = el.dataset.jump; }));
   const input = main.querySelector(".search"), hits = main.querySelector(".hits");
@@ -1172,9 +1189,33 @@ function viewMarks() {
 // A day finished (digestDone) shows its stamp and opens its issue; a day missed is a dashed empty slot that stays
 // empty — only today's still opens the issue, since today's paper can still be read. viewSaved counts the stamps.
 const stampsEarned = () => { const done = digestDone(); return publishedIssues().filter((i) => done.has(i.date)); };
+// 閱讀年鑑's four numbers and its per-column bars live at the head and foot of the album (the owner, 2026-11-02: one
+// place for everything about one's reading); #/stats lands here.
+function yearbook(pubs, done, read) {
+  let n = 0, mins = 0;
+  const perCol = new Map(); // column → [read, published, newest date]
+  for (const i of pubs) for (const a of i.articles) {
+    const c = perCol.get(a.column) || [0, 0, i.date];
+    c[1]++;
+    if (read.has(`${i.date}/${a.column}`)) { n++; mins += Number(a.minutes) || 0; c[0]++; }
+    perCol.set(a.column, c);
+  }
+  let best = 0, run = 0;
+  for (let i = pubs.length - 1; i >= 0; i--) { run = done.has(pubs[i].date) ? run + 1 : 0; best = Math.max(best, run); }
+  const fav = saved().filter((k) => { const [d, c] = k.split("/"); return isPublished(d) && issueBy(d)?.articles.some((a) => a.column === c); }).length;
+  const h = mins / 60, time = mins < 60 ? [String(mins), "分鐘"] : [h < 10 ? h.toFixed(1).replace(/\.0$/, "") : String(Math.round(h)), "小時"];
+  const stat = (k, v, u) => `<div class="stat"><span class="k">${k}</span><b>${v}</b><span class="u">${u}</span></div>`;
+  const cols = [...perCol].map(([c, [r, t, d]]) => ({ c, r, t, name: col(c, d).name })).sort((a, b) => b.r - a.r || b.t - a.t);
+  return {
+    stats: `<div class="stats">${stat("讀完", n, "篇")}${stat("約", time[0], time[1])}${stat("最長連續", best, "天")}${stat("收藏", fav, "篇")}</div>`,
+    bars: cols.length ? `<div class="sec-head"><h2>各欄</h2><span class="de">Rubriken</span><span class="note">讀過 / 刊出</span></div>
+    <div class="colbars">${cols.map((x) => `<a class="cb" href="#/column/${esc(x.c)}" style="--p:${x.t ? (x.r / x.t).toFixed(3) : 0}"><span class="n">${esc(x.name)}</span><span class="c">${x.r} / ${x.t}</span><i class="bar"><b></b></i></a>`).join("")}</div>` : "",
+  };
+}
 function viewStamps() {
   const pubs = publishedIssues(), done = digestDone(), today = twNow().date;
   const got = stampsEarned().length, missed = pubs.filter((i) => !done.has(i.date) && i.date !== today).length;
+  const yb = yearbook(pubs, done, readSet());
   const months = new Map();
   for (const i of pubs) months.set(i.date.slice(0, 7), [...(months.get(i.date.slice(0, 7)) || []), i]);
   let n = 0;
@@ -1183,8 +1224,10 @@ function viewStamps() {
       { earned: done.has(i.date), open: i.date === today, href: done.has(i.date) || i.date === today ? `#/issue/${i.date}` : null, i: n++ })).join("")}</div>`;
   main.innerHTML = `<div class="wrap album"><header class="page-title"><h1>郵票冊</h1><span class="de">Briefmarken</span></header>
     <p class="col-note">每天把整份報紙讀完，就蓋出那天的郵票；錯過的日子就留一格空白。</p>
+    ${yb.stats}
     ${got ? `<p class="tally">集了 <b>${got}</b> 張，缺 <b>${missed}</b> 格</p>` : `<p class="empty">第一張郵票等你今天讀完。</p>`}
-    ${[...months].map(page).join("")}</div>`;
+    ${[...months].map(page).join("")}
+    ${yb.bars}</div>`;
   document.title = `郵票冊｜${S.cfg.title}`;
 }
 
@@ -1234,63 +1277,8 @@ function calendarHtml(ym, pubs, done) {
   return `<section class="jahr" aria-label="本月閱讀月曆"><div class="mon"><span>${Number(ym.slice(5))} 月</span><span class="de">${esc(monDe(ym))}</span></div>
     <div class="wd" aria-hidden="true">${["一", "二", "三", "四", "五", "六", "日"].map((w) => `<span>${w}</span>`).join("")}</div>
     <div class="grid">${cells.join("")}</div>
-    <div class="cap"><span>${got.length ? `本月 ${got.length} 期，讀完 ${fin} 期` : "本月還沒出刊"}</span><a href="#/stats">閱讀年鑑<i>Lesekalender</i>→</a></div></section>`;
+    <div class="cap"><span>${got.length ? `本月 ${got.length} 期，讀完 ${fin} 期` : "本月還沒出刊"}</span></div></section>`;
 }
-// Every day since the first issue, as one drawing: a month per block, a square per day — paper for an issue, gold for a
-// finished one, a faint square for a day without a paper; today outlined in ink. A square with an issue opens it.
-function yearCal(launch, pubs, done) {
-  const today = twNow().date, byDate = new Map(pubs.map((i) => [i.date, i]));
-  const C = 12, G = 2, L = 30, W = L + 7 * (C + G) - G;
-  const parts = [];
-  let y = 0;
-  for (let ym = launch.slice(0, 7); ym <= today.slice(0, 7); ym = nextYm(ym)) {
-    const first = dayOf(`${ym}-01`), days = daysIn(ym), m = Number(ym.slice(5));
-    parts.push(`<text class="m" x="0" y="${y + C - 2}">${esc(monDe(ym).slice(0, 3))}</text>`);
-    if (ym === launch.slice(0, 7) || m === 1) parts.push(`<text class="yr" x="0" y="${y + 2 * C + 1}">${ym.slice(0, 4)}</text>`);
-    for (let d = 1; d <= days; d++) {
-      const iso = `${ym}-${String(d).padStart(2, "0")}`;
-      if (iso < launch || iso > today) continue;
-      const i = first + d - 1, x = L + (i % 7) * (C + G), cy = y + Math.floor(i / 7) * (C + G), iss = byDate.get(iso);
-      const r = `<rect class="${done.has(iso) ? "d2" : iss ? "d1" : "d0"}${iso === today ? " now" : ""}" x="${x}" y="${cy}" width="${C}" height="${C}"/>`;
-      parts.push(iss ? `<a href="#/issue/${iso}" aria-label="${esc(fmtDate(iso, "short"))}・第 ${iss.no} 期${done.has(iso) ? "・讀完" : ""}">${r}</a>` : r);
-    }
-    y += Math.ceil((first + days) / 7) * (C + G) + 6;
-  }
-  return `<svg class="cal" viewBox="0 0 ${W} ${y - 6}" role="img" aria-label="自創刊以來每一天的閱讀紀錄">${parts.join("")}</svg>`;
-}
-// #/stats: four numbers in Cormorant (articles read, their reading time, the longest run of finished issues, what is
-// kept in 收藏), the whole calendar, and how far through each column the reader is.
-function viewStats() {
-  const pubs = publishedIssues(), done = digestDone(), read = readSet();
-  const launch = S.cfg.launch_date || pubs[pubs.length - 1]?.date || twNow().date;
-  const head = `<header class="page-title"><h1>閱讀年鑑</h1><span class="de">Lesekalender</span></header>
-    <p class="col-note">這支手機上的閱讀紀錄：讀完幾篇、連著幾天、哪一欄讀得最勤。只反映這支手機；離線也能看。</p>`;
-  if (pubs.length < 7) { main.innerHTML = `<div class="wrap yearbook">${head}<p class="empty">創刊才 ${pubs.length} 期，年鑑從第七期起編。</p></div>`; document.title = `閱讀年鑑｜${S.cfg.title}`; return; }
-  // Only articles still in the index count, so a key left over from a reissue does not.
-  let n = 0, mins = 0;
-  const perCol = new Map(); // column → [read, published, newest date]
-  for (const i of pubs) for (const a of i.articles) {
-    const c = perCol.get(a.column) || [0, 0, i.date];
-    c[1]++;
-    if (read.has(`${i.date}/${a.column}`)) { n++; mins += Number(a.minutes) || 0; c[0]++; }
-    perCol.set(a.column, c);
-  }
-  let best = 0, run = 0;
-  for (let i = pubs.length - 1; i >= 0; i--) { run = done.has(pubs[i].date) ? run + 1 : 0; best = Math.max(best, run); }
-  const fav = saved().filter((k) => { const [d, c] = k.split("/"); return isPublished(d) && issueBy(d)?.articles.some((a) => a.column === c); }).length;
-  const h = mins / 60, time = mins < 60 ? [String(mins), "分鐘"] : [h < 10 ? h.toFixed(1).replace(/\.0$/, "") : String(Math.round(h)), "小時"];
-  const stat = (k, v, u) => `<div class="stat"><span class="k">${k}</span><b>${v}</b><span class="u">${u}</span></div>`;
-  const cols = [...perCol].map(([c, [r, t, d]]) => ({ c, r, t, name: col(c, d).name })).sort((a, b) => b.r - a.r || b.t - a.t);
-  main.innerHTML = `<div class="wrap yearbook">${head}
-    <div class="stats">${stat("讀完", n, "篇")}${stat("約", time[0], time[1])}${stat("最長連續", best, "天")}${stat("收藏", fav, "篇")}</div>
-    <div class="sec-head"><h2>日曆</h2><span class="de">Kalender</span><span class="note">${esc(fmtDate(launch, "short"))}創刊・金色是讀完的日子</span></div>
-    ${yearCal(launch, pubs, done)}
-    <div class="sec-head"><h2>各欄</h2><span class="de">Rubriken</span><span class="note">讀過 / 刊出</span></div>
-    <div class="colbars">${cols.map((x) => `<a class="cb" href="#/column/${esc(x.c)}" style="--p:${x.t ? (x.r / x.t).toFixed(3) : 0}"><span class="n">${esc(x.name)}</span><span class="c">${x.r} / ${x.t}</span><i class="bar"><b></b></i></a>`).join("")}</div>
-  </div>`;
-  document.title = `閱讀年鑑｜${S.cfg.title}`;
-}
-
 // ——— 印務室 (Druckerei, assets/press.js): the owner's press room — this morning's five shifts, the reserve stock and a
 // fortnight's roster, all out of the index the app holds (its press, late and stock), so it reads the same offline.
 function viewPress() {
@@ -1436,8 +1424,6 @@ function viewSettings() {
     <section class="set"><h2>字級</h2><div class="seg" data-g="fs">${FS.map((v, i) => `<button type="button" data-v="${v}" aria-pressed="${v === fs}">${["小", "標準", "大", "特大"][i]}</button>`).join("")}</div></section>
     <section class="set"><h2>閱讀方式</h2><div class="seg" data-g="lock">${[["free", "自由閱讀"], ["seq", "循序閱讀"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${(v === "seq") === lockMode()}">${l}</button>`).join("")}</div>
       <p class="small">循序閱讀：每一期照首頁的順序，一次只開一篇；讀到文末、而且讀夠這篇預估時間的一半，下一篇才解鎖；中途離開，讀過的時間會留著，回來接著算。還沒解鎖的只顯示標題，摘要先藏起來，全部讀完才算讀完今天。之前讀過的照樣算數。</p></section>
-    <section class="set"><h2>印務室</h2><p>給社長看的：今晨五班的報到、補位與缺稿、備稿庫存、最近兩週的出勤。</p>
-      <div class="btns"><a class="btn ghost" href="#/press">打開印務室</a></div></section>
     <section class="set"><h2>外觀</h2><div class="seg" data-g="theme">${[["auto", "跟隨系統"], ["light", "日間"], ["dark", "夜間"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${v === theme}">${l}</button>`).join("")}</div></section>
     ${canSpeak() ? `<section class="set"><h2>朗讀速度</h2><div class="seg" data-g="rate">${RATES.map((r) => `<button type="button" data-v="${r}" aria-pressed="${r === getRate()}">${r === 1 ? "標準" : `${r}×`}</button>`).join("")}</div>
       <p>文章右上角的喇叭按鈕會用裝置內建的中文語音朗讀全文，不需網路服務。</p></section>` : ""}
@@ -1463,6 +1449,8 @@ function viewSettings() {
       <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>副刊</th></tr></thead><tbody>
       ${wd.map(([k, l]) => `<tr><td>${l}</td><td>${rot[k].map((c) => esc(col(c).name)).join("、")}</td></tr>`).join("")}</tbody></table></div></div>
     </section>
+    <section class="set"><h2>印務室</h2><p>給社長看的：今晨五班的報到、補位與缺稿、備稿庫存、最近兩週的出勤。</p>
+      <div class="btns"><a class="btn ghost" href="#/press">打開印務室</a></div></section>
     ${isWebKitITP() && !isStandaloneIOS() ? `<section class="set"><h2>放到主畫面</h2><p>在 Safari 按下方的「分享」按鈕，選「加入主畫面」，知更鳥晨間記事就會像 App 一樣全螢幕開啟，也能離線讀已下載的文章。</p></section>` : ""}
     <footer class="colophon"><div class="latin">${esc(S.cfg.subtitle)}</div>資料更新：${esc((S.index.generated_at || "").replace("T", " ").slice(0, 16))} UTC</footer></div>`;
   renderPush($("#push-set"), S.cfg, S.index.push).catch(() => {});
@@ -1540,7 +1528,7 @@ let landKey = null, landTop = null; // 接著上次: the article tapped on the f
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamps") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
 let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising number, so a step back is recognisable
@@ -1612,7 +1600,7 @@ async function drawRoute(h, art, my) {
   else if ((m = h.match(/^#\/issue\/(\d{4}-\d{2}-\d{2})/))) viewFront(m[1]);
   else if ((m = h.match(/^#\/column\/([\w-]+)/))) viewColumn(m[1]);
   else if (h.startsWith("#/archive")) viewArchive();
-  else if (h.startsWith("#/stats")) viewStats();
+  else if (h.startsWith("#/stats")) viewStamps(); // the yearbook now lives in the album
   else if (h.startsWith("#/gallery")) viewGallery();
   else if (h.startsWith("#/stamps")) viewStamps();
   else if (h.startsWith("#/world")) viewWorld();

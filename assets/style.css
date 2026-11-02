@@ -119,7 +119,7 @@ button { font: inherit; color: inherit; }
    hold above 正刊 — its label set like that row's, then a hairline glyph, the range, the condition, the rain and the
    sunrise, and under them the morning, noon and evening readings, the figures in Cormorant. Hidden until the forecast
    is in (an archive issue, or offline with nothing kept, never shows it). */
-.wetter { margin: 28px 0 -8px; }
+.wetter { margin: 22px 0 -8px; }
 .wetter[hidden] { display: none; }
 :is(.wetter, .reveal) .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; padding-bottom: 5px; border-bottom: 1px solid var(--ink); }
 :is(.wetter, .reveal) .lbl .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 14px; margin-left: 8px; color: var(--gold); }
@@ -129,7 +129,7 @@ button { font: inherit; color: inherit; }
    The plate keeps the picture's own proportions (--ar), never taller than 62vw; a painting (.contain) is shown whole.
    The grain is two faint dot lattices, no image. Once every tile is gone the hairline is gold and the caption carries
    the title and the way to the article; the peel is in the motion block. */
-.reveal { margin: 28px 0 -8px; }
+.reveal { margin: 22px 0 -8px; }
 .reveal .plate { position: relative; margin-top: 10px; aspect-ratio: var(--ar, 3 / 2); max-height: 62vw; overflow: hidden; background: var(--paper-3); border: 1px solid var(--rule); }
 .reveal.done .plate { border-color: var(--gold); }
 .reveal .plate img { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -491,7 +491,16 @@ tr:first-child td { border-top: 0; }
 .page-title h1 { margin: 0; font-size: 28px; letter-spacing: .14em; }
 .page-title .de { font-family: var(--latin); font-style: italic; color: var(--gold); font-size: 18px; }
 .search { width: 100%; font: inherit; font-size: 16px; padding: 10px 12px; border: 1px solid var(--rule); background: var(--paper-2); color: var(--ink); margin: 16px 0 6px; border-radius: 0; }
-.month { font-family: var(--latin); font-size: 20px; color: var(--gold-ink); margin: 26px 0 0; letter-spacing: .06em; border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
+/* 往期: each month a fold — the summary row is the month in Cormorant with its German and the count; the chevron turns
+   when open. */
+.mon { margin: 22px 0 0; }
+.mon summary.month { list-style: none; display: flex; align-items: baseline; gap: 10px; font-family: var(--latin); font-size: 20px; color: var(--gold-ink); letter-spacing: .06em; border-bottom: 1px solid var(--ink); padding: 0 0 6px; cursor: pointer; }
+.mon summary.month::-webkit-details-marker { display: none; }
+.mon summary.month .de { font-style: italic; font-weight: 500; font-size: 17px; color: var(--gold); }
+.mon summary.month .n { margin-left: auto; font-family: var(--sans); font-size: 12px; letter-spacing: .06em; color: var(--muted); }
+.mon summary.month::after { content: ""; width: 7px; height: 7px; border-right: 1px solid var(--gold-ink); border-bottom: 1px solid var(--gold-ink); transform: rotate(-45deg) translateY(-2px); flex: none; align-self: center; transition: transform .2s; }
+.mon[open] summary.month::after { transform: rotate(45deg) translateY(-3px); }
+.chips.cols { margin: 14px 0 0; }
 .issue-row { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); text-decoration: none; }
 .issue-row .d { font-family: var(--latin); text-align: center; line-height: 1.05; }
 .issue-row .d b { display: block; font-size: 32px; font-weight: 600; }

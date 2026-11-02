@@ -96,12 +96,19 @@ const inScope = (p) => new URL(p || "./", self.registration.scope).href;
 self.addEventListener("push", (e) => {
   let d = {};
   try { d = e.data?.json() || {}; } catch { d = { body: e.data?.text() || "" }; }
-  e.waitUntil(Promise.all([
-    self.registration.showNotification(d.title || "知更鳥晨間記事", {
-      body: d.body || "", tag: d.tag || "issue", lang: "zh-Hant-TW", icon: inScope("assets/icon-192.png"), data: { url: inScope(d.url) },
-    }),
-    d.badge && navigator.setAppBadge ? navigator.setAppBadge(d.badge).catch(() => {}) : null,
-  ]));
+  e.waitUntil((async () => {
+    // A reminder (push.py remind) for a day the reader has already finished: app.js mirrors digest.done into the rm-state
+    // cache. iOS still wants a notification shown for every push, so one is shown silent and closed at once.
+    let finished = false;
+    if (d.kind === "remind" && d.date) {
+      try { finished = ((await (await caches.open("rm-state")).match("state/done"))?.json ? await (await (await caches.open("rm-state")).match("state/done")).json() : []).includes(d.date); } catch { finished = false; }
+    }
+    await self.registration.showNotification(d.title || "知更鳥晨間記事", {
+      body: d.body || "", tag: d.tag || "issue", lang: "zh-Hant-TW", icon: inScope("assets/icon-192.png"), data: { url: inScope(d.url) }, silent: finished,
+    });
+    if (finished) { (await self.registration.getNotifications({ tag: d.tag || "issue" })).forEach((n) => n.close()); return; }
+    if (d.badge && navigator.setAppBadge) await navigator.setAppBadge(d.badge).catch(() => {});
+  })());
 });
 // A tap opens the paper where the notice points: in the window already open if there is one (app.js listens), else a new one.
 self.addEventListener("notificationclick", (e) => {
