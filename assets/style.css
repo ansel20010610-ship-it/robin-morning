@@ -1246,18 +1246,11 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .marks .mk .q::before { content: "— "; font-family: var(--latin); color: var(--gold); }
 .marks .mk .x { flex: 0 0 auto; width: 32px; height: 32px; margin: -2px -8px 0 0; color: var(--muted); font-size: 14px; }
 
-/* ——— 收藏 (Sammlung; app.js viewSaved): two shelves up top — 劃線本 and 畫廊, the places entered from here, each with its
-   count large in Cormorant and a gold rule along the top — then the saved articles as numbered rows in the lookbook's
-   manner: the column and the day in spaced small type, the title, the dek, the picture a square at the right. ——— */
+/* ——— 收藏 (Sammlung; app.js viewSaved): four shelves up top, two by two — 劃線本, 畫廊, 郵票冊, 你讀過的世界, the corners
+   entered from here, each with its count large in Cormorant and a gold rule along the top — then the saved articles as
+   numbered rows in the lookbook's manner: the column and the day in spaced small type, the title, the dek, the picture a
+   square at the right. ——— */
 .shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 18px 0 8px; }
-/* Exactly three shelves (劃線本, 畫廊, 郵票冊) share one row, set a size smaller; two or four keep the pairs. */
-.shelf:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, 1fr); gap: 10px; }
-.shelf:has(> :nth-child(3):last-child) .sh { padding: 12px 10px 11px; }
-.shelf:has(> :nth-child(3):last-child) .sh .k { font-size: 11.5px; letter-spacing: .12em; }
-.shelf:has(> :nth-child(3):last-child) .sh .k i { font-size: 12px; }
-.shelf:has(> :nth-child(3):last-child) .sh b { font-size: 30px; margin-top: 10px; }
-.shelf:has(> :nth-child(3):last-child) .sh .u { font-size: 11px; }
-.shelf:has(> :nth-child(3):last-child) .sh::after { right: 9px; bottom: 8px; font-size: 19px; }
 .sh { position: relative; display: grid; gap: 2px; padding: 13px 14px 12px; border: 1px solid var(--rule); border-top: 1px solid var(--gold); text-decoration: none; color: inherit; }
 .sh .k { display: grid; font-family: var(--sans); font-size: 12px; letter-spacing: .14em; color: var(--gold-ink); font-weight: 600; }
 .sh .k i { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 13px; color: var(--gold); }
@@ -1424,6 +1417,36 @@ a.stamp:active .sp { filter: brightness(.96); }
 @media (prefers-reduced-motion: no-preference) {
   .album .stamp { animation: page-in .6s both; animation-delay: calc(min(var(--i, 0), 14) * 40ms); }
 }
+
+/* ——— 你讀過的世界 (Gelesene Welt; assets/world.js, app.js viewWorld): the world as the news column has shown it. Every
+   country is paper-2 with a hairline that stays a hairline at any size; one read is gilt with a darker edge; one in today's
+   still unread 快訊 is a gold outline that breathes; Taiwan wears the robin's ring as home. The box keeps the map's shape
+   while the SVG is on its way, so the count and the rows under it do not jump. The rows are the 收藏 rows (.sv) with the
+   issues that named the country under the name, a headline a line. ——— */
+.welt .col-note { margin-top: 4px; }
+.welt .map { margin: 20px 0 0; }
+.welt .map:empty { aspect-ratio: 990 / 504; }
+.welt .map svg { display: block; width: 100%; height: auto; overflow: visible; }
+.welt .map path { fill: var(--paper-2); stroke: var(--rule); stroke-width: .5; vector-effect: non-scaling-stroke; }
+.welt .map path.read { fill: var(--gold); stroke: var(--gold-ink); }
+.welt .map path.today { fill: none; stroke: var(--gold); stroke-width: .9; }
+.welt .map .home circle { fill: none; stroke: var(--robin); stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+.welt .map .home .dot { fill: var(--robin); stroke: none; }
+.welt .map .empty { padding: 30px 0 10px; }
+.welt .tally { margin: 14px 0 0; font-family: var(--sans); font-size: 13px; letter-spacing: .04em; color: var(--ink-2); }
+.welt .tally b { font-family: var(--latin); font-size: 24px; font-weight: 600; line-height: 1; color: var(--gold-ink); font-variant-numeric: lining-nums tabular-nums; margin: 0 1px; }
+.welt .empty { padding: 22px 0 6px; }
+.welt .svl { margin-top: 10px; }
+.welt .sv .hl { display: block; margin-top: 3px; font-size: 13.5px; line-height: 1.65; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.welt .sv .hl:first-of-type { margin-top: 5px; }
+.welt .sv .hl .d { font-family: var(--sans); font-size: 10.5px; letter-spacing: .1em; margin-right: 8px; color: var(--gold-ink); font-variant-numeric: lining-nums tabular-nums; }
+@media (prefers-reduced-motion: no-preference) {
+  .welt .map path.today { animation: world-pulse 2s ease-in-out infinite; }
+  @keyframes world-pulse { 50% { stroke-opacity: .3; } }
+}
+/* 這則帶你去了 (app.js placesLine): one quiet line under a 快訊, before 延伸閱讀, the countries named being the link in. */
+.read .places { margin: 26px 0 0; font-family: var(--sans); font-size: 12.5px; line-height: 1.7; color: var(--muted); }
+.read .places a { color: var(--gold-ink); text-decoration: none; border-bottom: 1px solid var(--gold-soft); }
 
 /* 加入行事曆 (app.js calBtn, assets/ics.js): the small ghost button at the end of a show's row and on the next-fixture card,
    in the gold of the ticket link beside it. */

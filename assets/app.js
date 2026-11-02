@@ -11,6 +11,7 @@ import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
 import { pressHtml } from "./press.js";
 import { fetchWeather, weatherHtml } from "./wetter.js";
 import { stampHtml } from "./stamps.js";
+import { worldState, drawMap } from "./world.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -601,7 +602,7 @@ async function viewArticle(date, column, my) {
       <div class="toc-slot"></div>
       <div class="body"></div>
       ${a.sources?.length ? `<section class="sources"><h2>來源與閱讀範圍</h2><ol>${a.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}${s.publisher ? `，${esc(s.publisher)}` : ""}${s.date ? `，${esc(s.date)}` : ""}${s.note ? ` <span>— ${inline(s.note)}</span>` : ""}</li>`).join("")}</ol>${(a.body || []).some((b) => b.type === "quote" && b.original) ? `<p class="small">外文引文未註明譯者的，都是本報自譯。</p>` : ""}</section>` : ""}
-      ${relatedHtml(me)}
+      ${placesLine(me, column)}${relatedHtml(me)}
       <div class="unlock" hidden></div>
       ${"share" in navigator ? `<div class="share"><button class="btn ghost" type="button" data-share>${ICON.share}分享這篇</button></div>` : ""}
       <div class="next"></div>
@@ -1116,9 +1117,10 @@ function viewArchive() {
 }
 
 function viewSaved() {
-  // Set like the gallery (a lookbook): two shelves up top for 劃線本 and 畫廊 — the places entered from here, the owner's
-  // choice of 2026-11-02 — each with its count large in Cormorant; under them the saved articles as numbered rows, the
-  // column and the day in spaced small type above the title, the dek under it, the picture a square at the right.
+  // Set like the gallery (a lookbook): the shelves up top — 劃線本, 畫廊, 郵票冊, 你讀過的世界, the corners entered from
+  // here only, the owner's choice of 2026-11-02 — each with its count large in Cormorant; under them the saved articles
+  // as numbered rows, the column and the day in spaced small type above the title, the dek under it, the picture a square
+  // at the right.
   const read = readSet();
   const rows = saved().map((k) => {
     const [date, c] = k.split("/");
@@ -1130,12 +1132,13 @@ function viewSaved() {
     return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
       <span class="t"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title)}</b>${a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}</span>${th}</a></li>`;
   };
-  const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length;
+  const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length;
   main.innerHTML = `<div class="wrap sammlung"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
     <nav class="shelf" aria-label="收藏的角落">
       <a class="sh" href="#/marks" style="--i:0" aria-label="劃線本：${n} 處劃線"><span class="k">劃線本<i>Anstreichungen</i></span><b>${n}</b><span class="u">${n ? "處劃線" : "還沒有劃線"}</span></a>
       <a class="sh" href="#/gallery" style="--i:1" aria-label="畫廊：${g} 幅"><span class="k">畫廊<i>Galerie</i></span><b>${g}</b><span class="u">${g ? "幅" : "牆上還沒有畫"}</span></a>
-      <a class="sh" href="#/stamps" style="--i:2" aria-label="郵票冊：${st} 張"><span class="k">郵票冊<i>Briefmarken</i></span><b>${st}</b><span class="u">${st ? "張" : "還沒有郵票"}</span></a></nav>
+      <a class="sh" href="#/stamps" style="--i:2" aria-label="郵票冊：${st} 張"><span class="k">郵票冊<i>Briefmarken</i></span><b>${st}</b><span class="u">${st ? "張" : "還沒有郵票"}</span></a>
+      <a class="sh" href="#/world" style="--i:3" aria-label="你讀過的世界：${w} 國"><span class="k">你讀過的世界<i>Gelesene Welt</i></span><b>${w}</b><span class="u">${w ? "國" : "還沒出發"}</span></a></nav>
     ${rows.length ? `<div class="sec-head"><h2>收進來的</h2><span class="de">Gesammelt</span><span class="note">${rows.length} 篇</span></div><ol class="svl">${rows.map(row).join("")}</ol>`
       : `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。<br><a href="#/random">或者先隨手翻一篇 →</a></p>`}</div>`;
 }
@@ -1184,6 +1187,30 @@ function viewStamps() {
     ${[...months].map(page).join("")}</div>`;
   document.title = `郵票冊｜${S.cfg.title}`;
 }
+
+// ——— 你讀過的世界 (Gelesene Welt; assets/world.js): the countries the news column has taken the reader to ———
+// Out of the index (the countries each 快訊 names) and the read set, on assets/world.svg: a country read is gilt, one in
+// today's still unread 快訊 is a gold outline as the invitation, Taiwan is ringed in the robin's colour as home. Under
+// the map the count and, in the lookbook's manner, a row per country, the latest first, with the issues that named it.
+// The page is drawn at once and the map lands in its box when the SVG arrives (world.js keeps the text for next time);
+// without it the list stands alone. viewSaved counts the countries for its entrance.
+const placeName = (c) => S.index.places?.[c] || c;
+function viewWorld() {
+  const { read, today } = worldState(publishedIssues(), readSet());
+  const row = (e, i) => `<li><a class="sv" href="#/a/${e.latest[0].date}/news" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
+    <span class="t"><span class="m"><span class="k">${e.n} 則</span><span class="d">${esc(fmtDate(e.latest[0].date, "short"))}</span></span><b>${esc(placeName(e.code))}</b>
+    ${e.latest.map((l) => `<span class="hl">${e.latest.length > 1 ? `<span class="d">${esc(fmtDate(l.date, "short"))}</span>` : ""}${esc(l.title)}</span>`).join("")}</span></a></li>`;
+  main.innerHTML = `<div class="wrap welt"><header class="page-title"><h1>你讀過的世界</h1><span class="de">Gelesene Welt</span></header>
+    <p class="col-note">快訊帶你去過的地方，讀過一則，那個國家就上色。</p>
+    <div class="map"></div>
+    ${read.length ? `<p class="tally"><b>${read.length}</b> 個國家・最近去了${esc(read.slice(0, 3).map((e) => placeName(e.code)).join("、"))}</p><ol class="svl">${read.map(row).join("")}</ol>`
+      : `<p class="empty">還沒出發。讀一則快訊，地圖就開始上色。</p>`}</div>`;
+  drawMap(main.querySelector(".welt .map"), { read: read.map((e) => e.code), today });
+  document.title = `你讀過的世界｜${S.cfg.title}`;
+}
+// 這則帶你去了: under a 快訊, the countries its items named, as the one way from an article into 你讀過的世界.
+const placesLine = (entry, column) => column === "news" && Array.isArray(entry?.places) && entry.places.length
+  ? `<p class="small places">這則帶你去了：<a href="#/world">${esc(entry.places.map(placeName).join("、"))}</a></p>` : "";
 
 // ——— 閱讀年鑑 (Lesekalender): the reading record this phone holds, drawn as a calendar ———
 // Everything here is read out of localStorage (read, digest.done, saved) and the issue index, so it works offline and
@@ -1513,7 +1540,7 @@ let landKey = null, landTop = null; // 接著上次: the article tapped on the f
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamps") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/stats") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
 let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising number, so a step back is recognisable
@@ -1588,6 +1615,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/stats")) viewStats();
   else if (h.startsWith("#/gallery")) viewGallery();
   else if (h.startsWith("#/stamps")) viewStamps();
+  else if (h.startsWith("#/world")) viewWorld();
   else if (h.startsWith("#/press")) viewPress();
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
