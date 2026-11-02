@@ -1,0 +1,288 @@
+{
+  "column": "artwork",
+  "date": "reserve",
+  "reserve_written": "2026-11-02",
+  "title": "霍爾班那顆骷髏，鼻子該不該補",
+  "dek": "1533 年，法國駐英大使丹特維爾在信裡自稱最憂鬱的大使。同一年霍爾班畫下他和好友，兩人腳下之間有一道拉長的形狀。",
+  "brief": "1990 年代倫敦國家藝廊修《大使們》，地上那顆拉長的骷髏缺了下顎末端和部分鼻孔及周圍骨頭的顏料，館方拍了一個解剖用頭骨模型，對它做反向透視變形，拿來和骷髏比較。倫理問題先擱著，他們做了試探性重建，理由是骷髏要認得出來，多半是霍爾班的本意。",
+  "topic_key": "artwork:holbein-the-ambassadors",
+  "updated_at": "2026-11-02T14:50:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg/1280px-Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg/3840px-Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg",
+    "width": 1280,
+    "height": 1261,
+    "alt": "近正方形的油畫。綠色錦緞簾幕前，兩個留鬍子的男人分站左右；左邊的人戴黑帽，胸前掛金鍊，右手握著金色短劍。兩人之間是一座兩層木架，上層鋪著地毯，擺著天球儀和幾件天文儀器；下層有魯特琴、翻開的書、一本夾著角尺的書和一組長笛，木架上還有一個地球儀。兩人腳下之間有一道拉長的形狀。左上角簾幕邊緣露出一個小小的十字架。",
+    "caption": "霍爾班《大使們》全圖。畫的是法國駐英大使丹特維爾和拉沃爾主教塞爾夫；兩人腳下之間那道斜長的形狀是一顆變形的骷髏。",
+    "credit": "小漢斯・霍爾班（Hans Holbein the Younger）；倫敦國家藝廊（NG1314）；影像：Google Arts & Culture",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg",
+    "made": "1533"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1533 年 6 月 7 日，丹特維爾（Jean de Dinteville）寫信給巴黎主教。他是法王法蘭索瓦一世派駐英格蘭的大使，任期從 1 月 22 日算起，六個月。"
+    },
+    {
+      "type": "quote",
+      "text": "我以信譽擔保，要是再待下去，我很怕會把皮和骨頭都留在這裡。我在這裡，健康從來沒撐過八天。",
+      "original": "Je vous promets sur ma foy, que si je y demores encore gueres, j'ai grand peur de y laisser la peau et les os. Jamais je ne y ai eu que huit jours de santé.",
+      "cite": "丹特維爾致巴黎主教杜貝萊，1533 年 6 月 7 日（據 Hervey 1900 年書中引錄）"
+    },
+    {
+      "type": "p",
+      "text": "同一年，霍爾班（Hans Holbein the Younger）畫了他和好友塞爾夫（Georges de Selve），一般認為是丹特維爾訂的。這幅畫通稱《大使們》，橡木板油彩，約兩公尺見方，是霍爾班現存最大、完全出自他本人之手的木板畫。"
+    },
+    {
+      "type": "p",
+      "text": "兩人腳下之間有一道拉長的形狀。國家藝廊說，要從畫的右下角往上看，才看得清楚那是一顆骷髏。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.24,
+        0.75,
+        0.5,
+        0.25
+      ],
+      "position": "兩人腳下之間的拉長形狀",
+      "caption": "局部：變形的骷髏。正面看是一道斜長的灰白形狀。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "artwork",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Holbein_Skull.jpg/1280px-Holbein_Skull.jpg",
+      "width": 1280,
+      "height": 1262,
+      "alt": "一顆朝左的人類頭骨，有眼窩、鼻孔和下顎。頭骨底下和背後是被拉斜的條紋，左側是一片黑。",
+      "caption": "把骷髏用影像軟體做反向透視校正後的樣子。",
+      "credit": "霍爾班原作；透視校正影像：Wikimedia Commons 檔案頁（作者欄：Thomas Shahan，2011 年上傳）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Holbein_Skull.jpg",
+      "made": "1533"
+    },
+    {
+      "type": "h",
+      "text": "帽子上還有一顆"
+    },
+    {
+      "type": "p",
+      "text": "地上那顆是拉長的骷髏。另一顆在丹特維爾的黑帽上，一枚小小的銀骷髏，裝在一面花式盾牌上。赫維（Mary Hervey）認為，骷髏是丹特維爾的個人徽記，取自霍爾班《死亡之舞》的最後一張〈死神的紋章〉。"
+    },
+    {
+      "type": "p",
+      "text": "左上角還有一樣。綠色錦緞簾幕在那裡翻開一角，露出一個銀色十字架，就在畫板的最邊緣。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.0,
+        0.0,
+        0.06,
+        0.09
+      ],
+      "position": "畫面左上角，簾幕邊緣",
+      "caption": "局部：簾幕邊緣露出的銀色十字架。"
+    },
+    {
+      "type": "p",
+      "text": "這個十字架有一段時間是看不見的。1891 年 William Dyer 清洗這幅畫，去掉一層深綠的重畫，露出原本淺綠的簾幕，也露出被塗得一點不剩的十字架。寫這幅畫修復史的韋爾德（Martin Wyld）猜，簾幕和十字架可能是在法國或英國被塗掉的，也許是想讓買家看得上眼。"
+    },
+    {
+      "type": "p",
+      "text": "兩人的年紀寫在畫上。丹特維爾右手握著金色短劍，劍鞘上刻著 AET. SVAE 29，意思是他的第 29 個年頭，算起來 28 歲；塞爾夫手肘下那本書，書頁邊上寫著 AETATIS SVE 25，24 歲。"
+    },
+    {
+      "type": "p",
+      "text": "木架分兩層。上層是天球儀、多面日晷這些天文儀器。下層有一把斷了一根弦的魯特琴，琴盒面朝下丟在地上；一本算術書用角尺卡著，翻在講除法的那一頁；一本德文的路德派讚美詩集，歌詞和樂譜都讀得出來，翻開的兩首是〈求聖靈降臨〉和〈十誡〉；還有一組長笛，少了一支。國家藝廊把斷弦、少的那支笛子和除法頁，讀成不和諧的象徵。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "artwork",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/The_Ambassadors%2C_detail_of_globe%2C_lute%2C_and_books%2C_by_Hans_Holbein_the_Younger.jpg/1280px-The_Ambassadors%2C_detail_of_globe%2C_lute%2C_and_books%2C_by_Hans_Holbein_the_Younger.jpg",
+      "width": 1280,
+      "height": 1026,
+      "alt": "木架局部的特寫：左邊是一個地球儀，前面一本書夾著一把角尺；中間是一把魯特琴；琴前是一本攤開、印著歌詞和樂譜的書；右邊是一組長笛。",
+      "caption": "木架局部：地球儀、夾著角尺的算術書、魯特琴、攤開的讚美詩集和長笛。地球儀上標著丹特維爾城堡所在的波利西。",
+      "credit": "小漢斯・霍爾班；倫敦國家藝廊（NG1314）局部；影像：Wikimedia Commons 檔案頁",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_Ambassadors,_detail_of_globe,_lute,_and_books,_by_Hans_Holbein_the_Younger.jpg",
+      "made": "1533"
+    },
+    {
+      "type": "p",
+      "text": "桌上的地毯看起來繁複，韋爾德說其實畫得相當簡單。霍爾班先整片塗上很深的灰，再蓋一層鬆散相連的紅、黃、藍、白、灰小方塊，代表打結的絨線，幾乎整片圖案都是這麼做的。"
+    },
+    {
+      "type": "h",
+      "text": "最憂鬱的大使"
+    },
+    {
+      "type": "p",
+      "text": "5 月 23 日，丹特維爾寫信給當歐塞爾主教的弟弟。信先談牽涉教宗與婚姻的外交，接著是紫杉枝和弓箭，再來是一具橢圓規：弟弟在信上提過，他請弟弟把圖樣寄來，因為他實在弄不懂那東西是怎麼做的。接下來才是訴苦，也講到那六個月。"
+    },
+    {
+      "type": "quote",
+      "text": "我老實告訴你，我是你見過最憂鬱、最煩悶，也最惹人厭的大使。",
+      "original": "Je vous advise bien que je suis le plus melancolicque fasché et fascheux ambassadeur que vistez oncques.",
+      "cite": "丹特維爾致弟弟歐塞爾主教，1533 年 5 月 23 日（據 Hervey 1900 年書中引錄）"
+    },
+    {
+      "type": "p",
+      "text": "訴完苦，他寫到拉沃爾先生來看他，讓他很高興；又說，沒必要讓大總管知道。拉沃爾先生就是塞爾夫，當時的拉沃爾主教。赫維認為，要瞞著大總管的，是塞爾夫這趟來訪。國家藝廊說，這幅畫紀念的是兩人的友誼。"
+    },
+    {
+      "type": "h",
+      "text": "書商目錄裡的羊皮紙"
+    },
+    {
+      "type": "p",
+      "text": "地球儀上標著波利西（Polisy）。丹特維爾的城堡在那裡，這幅畫要掛的也是那裡；1589 年的財產清冊記著，它掛在波利西的大廳。"
+    },
+    {
+      "type": "p",
+      "text": "畫後來輾轉賣到英國。在英國，畫裡兩個人是誰一直沒人知道，直到 1890 年代赫維的研究。她 1895 年讀到一則 1888 年的刊物短訊，說一位書商的目錄裡有一張 17 世紀的羊皮紙。七年過去，書商還留著，她立刻買下。"
+    },
+    {
+      "type": "p",
+      "text": "紙上說，兩人「在英格蘭遇到一位出色的荷蘭畫家」，請他畫了這幅畫，畫一直保存在波利西，到 1653 年為止。霍爾班是德國南部奧格斯堡人。"
+    },
+    {
+      "type": "h",
+      "text": "鼻骨是頭骨最脆的地方"
+    },
+    {
+      "type": "p",
+      "text": "1890 年，《泰晤士報》說這幅畫狀況完美，只是蒙著一層老化的舊凡尼斯，應該小心去掉。韋爾德的評語是：可惜，這看法太樂觀了。"
+    },
+    {
+      "type": "p",
+      "text": "1891 年那次清洗，Dyer 也重建了受損的骷髏。1990 年代館方為 1997 年的霍爾班展覽再修一次，評估 Dyer 的重建高度臆測、不準確，還蓋住了一些霍爾班的原畫。"
+    },
+    {
+      "type": "p",
+      "text": "骷髏留到最後才處理，為它做了很多研究，也有很多爭論。下顎末端、一部分鼻孔和周圍的骨頭沒了顏料，先用水彩仿成灰色底層，等研究有進展再說。"
+    },
+    {
+      "type": "p",
+      "text": "他們替清洗後的骷髏拍了數位影像，在電腦上做透視變形，在三維空間裡調整觀看點，找出骷髏恢復正常的位置；再照這張圖，在同樣的光線下拍一個解剖用頭骨模型，從同一個觀看點反向變形，拿來和清洗後的骷髏比較。"
+    },
+    {
+      "type": "p",
+      "text": "修復期間他們看了許多頭骨和頭骨的圖像，每一塊鼻骨都有缺角或斷裂，各有各的特徵。鼻骨是頭骨最薄、最脆的地方。"
+    },
+    {
+      "type": "p",
+      "text": "他們先處理技術問題。倫理問題，還有這麼有名的一顆骷髏若是缺著展出、觀眾會怎麼反應，都暫時擱著。"
+    },
+    {
+      "type": "p",
+      "text": "最後做的是鼻骨和下顎末端的試探性重建，殘存的鼻骨顏料碎片也整合進去，前後調了很多次，館方認為不至於太誤導。骷髏最終認不認得出來，多半是霍爾班用意裡很要緊的一部分，所以他們決定，這一塊就照重建後的樣子給大眾看。韋爾德也寫明，重建很容易拿掉，可以退到灰色底層，或退回清洗後的樣子。"
+    },
+    {
+      "type": "p",
+      "text": "依我看，《大使們》好看，就好看在那顆骷髏要換個位置才看得清楚。站在畫前，年紀刻在劍鞘上，城堡標在地球儀上，讚美詩的樂譜讀得出來；地上那顆卻要人自己走到右下角。"
+    },
+    {
+      "type": "p",
+      "text": "反對補的人可以指出：倫理問題當時是擱著的；水彩灰本身也是修復者仿的，原本是打算等研究有進展再說；重建又把殘存的鼻骨顏料碎片整合進去。依我看，這些都擋不住補，因為重建很容易拿掉。"
+    },
+    {
+      "type": "p",
+      "text": "我還是站在補的那邊。這顆骷髏多半是要人走到右下角、認出它來的；鼻子缺一塊，走到那個位置的人看到的就是一顆殘缺的頭骨。代價我認：站對位置的人認出來的那顆頭骨，鼻子有一部分是 1990 年代補的，不是霍爾班。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "《讓・德・丹特維爾與喬治・德・塞爾夫》，通稱《大使們》（The Ambassadors）"
+        ],
+        [
+          "作者",
+          "小漢斯・霍爾班（Hans Holbein the Younger，1497／98–1543）"
+        ],
+        [
+          "年代",
+          "1533"
+        ],
+        [
+          "媒材與尺寸",
+          "橡木板油彩，207 × 209.5 公分，十條直向木板拼成"
+        ],
+        [
+          "現藏",
+          "倫敦，國家藝廊（NG1314），1890 年購入"
+        ],
+        [
+          "怎麼看骷髏",
+          "從畫的右下角往上斜看"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Jean de Dinteville and Georges de Selve ('The Ambassadors')",
+      "publisher": "The National Gallery, London",
+      "date": "",
+      "url": "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors",
+      "note": "作品頁：題名、年代、媒材、尺寸、館藏號、1890 年購入；從右下角往上看骷髏；左上角十字架；斷弦、缺笛、除法頁與不和諧的讀法；教宗拒絕廢婚、亨利八世 1533 年娶安・寶琳；路德派讚美詩集翻開的兩首；克拉策製多面日晷；地球儀上的波利西；1589 年清冊；塞爾夫 1533 年 4 至 6 月在倫敦、畫紀念兩人友誼。頁面的兩人年齡有兩種說法（深入介紹寫 28 與 24，語音導覽寫 25 與 29），本文只寫畫上銘文的字樣。"
+    },
+    {
+      "title": "Hans Holbein the Younger",
+      "publisher": "The National Gallery, London",
+      "date": "",
+      "url": "https://www.nationalgallery.org.uk/artists/hans-holbein-the-younger",
+      "note": "畫家頁：1497–98 年冬生於奧格斯堡、1519 年加入巴塞爾畫家行會、1532 年定居英格蘭、1543 年死於倫敦。"
+    },
+    {
+      "title": "The Restoration History of Holbein's Ambassadors",
+      "publisher": "Martin Wyld，National Gallery Technical Bulletin vol. 19, pp. 4–25",
+      "date": "1998",
+      "url": "https://www.nationalgallery.org.uk/upload/pdf/wyld1998.pdf",
+      "note": "掃描影像 PDF，逐頁讀圖。用了：p.4 尺寸、十條木板、最大的親筆木板畫；p.5 地毯畫法；p.9 1891 年清洗露出十字架（館方《手稿目錄》引文）；p.10 來歷、推定由丹特維爾訂製；p.11 身分直到 Hervey 才確定；p.14 1997 年展覽前的修復；p.15 評 Dyer 的骷髏重建；p.24–25 骷髏的數位透視變形、解剖模型、鼻骨、試探性重建、殘存顏料碎片、可移除。"
+    },
+    {
+      "title": "Holbein's \"Ambassadors\": The Picture and the Men. An Historical Study",
+      "publisher": "Mary F. S. Hervey，George Bell & Sons, London（Internet Archive 掃描本）",
+      "date": "1900",
+      "url": "https://archive.org/details/gri_33125001712401",
+      "note": "pp. 10–12 1888 年《Revue de Champagne et de Brie》短訊、書商 Saffroy 與 17 世紀羊皮紙全文（「un excellent peinctre holandois」）；p.76 塞爾夫的停留時間與「瞞著大總管」的詮釋；pp. 79–81 丹特維爾致弟弟的信（法文原文與英譯，含橢圓規、塞爾夫來訪、加冕花費與日期）；p. 90 致杜貝萊的信與日期；pp. 201–202 帽上銀骷髏、劍鞘 AET. SVAE 29、書口 AETATIS SVE 25、詩集可讀；書中以「第 29 個年頭」「第 25 個年頭」稱兩人的年紀。"
+    },
+    {
+      "title": "File:Hans Holbein the Younger - The Ambassadors - Google Art Project.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg",
+      "note": "頭圖，公有領域。"
+    },
+    {
+      "title": "File:Holbein Skull.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2011-02-08",
+      "url": "https://commons.wikimedia.org/wiki/File:Holbein_Skull.jpg",
+      "note": "透視校正後的骷髏；Commons 頁面標示公有領域，作者欄為 Thomas Shahan；檔案頁記錄以 Adobe Photoshop CS5 製作，原始來源只寫 Hans Holbein's The Ambassadors，校正年份與是否含 1990 年代重建未註明。"
+    },
+    {
+      "title": "File:The Ambassadors, detail of globe, lute, and books, by Hans Holbein the Younger.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:The_Ambassadors,_detail_of_globe,_lute,_and_books,_by_Hans_Holbein_the_Younger.jpg",
+      "note": "下層木架局部，公有領域。"
+    }
+  ]
+}
