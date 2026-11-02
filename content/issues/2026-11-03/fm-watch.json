@@ -1,0 +1,151 @@
+{
+  "column": "fm-watch",
+  "date": "2026-11-03",
+  "status": "update",
+  "title": "FM27 免費版收到第一個小更新",
+  "dek": "修了三個問題，歐洲賽事的球員登記是其一。3D 比賽引擎的修改，官方排在發售之後。",
+  "brief": "《足球經理 27》免費版在 11 月 3 日凌晨（台灣時間）收到第一個小更新，修的是歐洲賽事報名訊息不出現，害得資深球員沒登記、連存檔都按不下去的問題。官方說發售前還有一次更新，3D 比賽引擎要等發售後的第一個更新才處理。",
+  "topic_key": "fm-watch:2026-11-03-minor-update-1-console-deep-dive",
+  "updated_at": "2026-11-03T05:21:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "body": [
+    {
+      "type": "p",
+      "text": "免費版的第一個更新，修的是歐洲賽事的球員登記。官方的說法是，球隊在 UEFA 賽事的名單登記訊息有時不會出現，結果一線球員沒有登記進去；碰上這個狀況的人，連「存檔」選項都選不了。這是 Steam 公告裡三項修正的其中兩項，另一項是進階設定畫面加了一條可以點的捲軸，方便選到聯賽名單最下面的球隊。"
+    },
+    {
+      "type": "p",
+      "text": "更新叫 Minor Update 1，公告是 Steam 上 11 月 2 日 16:22 UTC，台灣時間 11 月 3 日 00:22 貼的，作者 Kyle Brown。官方說這三個問題是團隊「週末」找出、修好、驗證過的，所有開放免費試玩的平台都在推。免費期台灣時間明天（11 月 4 日，週三）凌晨兩點結束，這個更新幾乎就是給最後這一天用的。"
+    },
+    {
+      "type": "table",
+      "title": "Minor Update 1 的三項修正",
+      "head": [
+        "修正項目",
+        "官方描述"
+      ],
+      "rows": [
+        [
+          "進階設定畫面",
+          "新增可點擊的捲軸，方便選到聯賽名單最下面的球隊"
+        ],
+        [
+          "UEFA 賽事名單登記",
+          "修正登記訊息有時不出現，導致一線球員未登記的問題"
+        ],
+        [
+          "存檔選項",
+          "修正碰到上一項問題時「存檔」無法選取的問題"
+        ]
+      ],
+      "caption": "依 Steam 公告整理；公告沒有給版本號，也沒說明是否有其他未列出的改動。"
+    },
+    {
+      "type": "h",
+      "text": "比賽引擎排在發售之後"
+    },
+    {
+      "type": "p",
+      "text": "公告接著把後面的順序講了一遍。發售前還會再有一次更新，公告說上週已經提過，內容是「進一步的優化」。再下來是遊戲的第一個發售後更新，處理更多玩家回報，其中一個重點是 3D 比賽引擎：官方正在把內部資料和玩家回報湊在一起看，包括防守表現、逼搶、創造機會等等，決定哪些改動「能做也該做」。"
+    },
+    {
+      "type": "p",
+      "text": "三個都沒有日期，也沒有版本號。「決定哪些改動能做」是官方的原話，沒承諾哪一項會改。我猜 11 月 10 日發售當天拿到的比賽引擎，和現在免費版裡的會很接近，因為發售前那次更新官方只說優化。這只是從公告的順序推出來的，要等發售前那次的更新說明才知道。"
+    },
+    {
+      "type": "h",
+      "text": "主機版也有自己的一篇介紹"
+    },
+    {
+      "type": "p",
+      "text": "官網的功能專區另外多了一篇〈FM27 Console: New Features and Returning Favourites〉，頁面沒有標日期，Steam 與官方 YouTube 都沒有對應的貼文或影片。FM27 Console 11 月 10 日上 Xbox Series X、Series S、Xbox 掌機和 PS5，PC Game Pass 與 Xbox Game Pass Ultimate 的訂閱者也能透過 Microsoft Store 或 Xbox PC app 玩。"
+    },
+    {
+      "type": "p",
+      "text": "招募畫面有幾個畫面重做，包括球員資料庫、轉會與合約談判，新增「找類似球員」功能，談判時教練組會給即時建議。賽前準備訊息登陸主機版，最多排三堂：進攻、防守、定位球。偏好設定多了 Information Display，Larger 給坐沙發看電視的人，Smaller 給螢幕離得近的人；按鍵配置回歸，導覽與捲動可以在左右搖桿之間對調；官方還說輸入延遲降低、效能提升。"
+    },
+    {
+      "type": "p",
+      "text": "其餘是 PC 版已經介紹過的東西搬到主機：Tactical Tweaks、重做的 Shouts、傳球圖與熱區圖、抽籤儀式、比賽日氛圍。印尼文是主機版第一次有的遊戲語言。Shuffle Draft 則是這篇新交代的：主機平台第一天就有，線上離線都能玩。先前官方沒講過這個模式在主機上的狀況。"
+    },
+    {
+      "type": "p",
+      "text": "這篇是官方宣稱，沒有主機實機畫面可以對照，本報也沒玩過。Shuffle Draft 能不能和 PC 玩家同場，專頁沒有說。文末官方預告的下一篇，是 FM27 Touch。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "FM27 Minor Update 1 rolling out now, plus more info on updates",
+      "publisher": "Steam 公告（Sports Interactive）",
+      "date": "2026-11-02",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302248809",
+      "note": "Steam News API 時間戳 1793636558（2026-11-02 16:22:38 UTC），作者 Kyle Brown；三項修正、「As we covered last week」、發售前更新、發售後第一個更新與 3D 比賽引擎段落皆出自此篇。公告所說上週已提過的內容，本報未找到對應的先前公告原文；官網新聞列表至 11 月 3 日清晨仍無此更新的貼文。本報 11 月 3 日清晨查閱"
+    },
+    {
+      "title": "FM27 Console: New Features and Returning Favourites",
+      "publisher": "Football Manager 官網",
+      "date": "2026-11-02",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-console-new-features-and-returning-favourites",
+      "note": "專頁未標日期，官網新聞列表無對應貼文；本報前次紀錄（11 月 2 日清晨）只提到安裝指南專頁，features 總覽頁 sitemap lastmod 為 2026-11-02 13:59 UTC，故判斷約在 11 月 2 日下午（UTC）出現，無法確認實際上線時刻。正文與 FAQ 逐字讀過；文末「Coming next, we’ll explore FM27 Touch」。本報 11 月 3 日清晨查閱"
+    },
+    {
+      "title": "Football Manager 27 is free to play until 3 November",
+      "publisher": "Steam 公告（Sports Interactive）",
+      "date": "2026-10-29",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302235961",
+      "note": "免費期至 2026-11-03 18:00 GMT（台灣時間 11 月 4 日 02:00），付費 Launch Preview 接到 11 月 10 日"
+    },
+    {
+      "title": "Football Manager 27 launches from 10 November",
+      "publisher": "Football Manager 官網",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/news/football-manager-27-launches-10-november",
+      "note": "全平台數位版 11 月 10 日"
+    },
+    {
+      "title": "FM27: Elevated Match Day Atmosphere",
+      "publisher": "Football Manager 官網",
+      "date": "2026-09-30",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-elevated-match-day-atmosphere",
+      "note": "FAQ：實體 PS5 版 11 月 20 日"
+    }
+  ],
+  "hero": {
+    "title": "FM27 接下來的節點",
+    "caption": "依 Steam 公告、SI 官網與 SEGA 新聞稿整理，截至台灣時間 2026 年 11 月 3 日清晨。官方時刻原為 UTC／GMT，已換算成台灣時間；發售前更新與發售後更新官方都沒給日期。",
+    "items": [
+      {
+        "when": "2026.11.3",
+        "label": "Minor Update 1 推出",
+        "note": "台灣時間凌晨 00:22 的 Steam 公告，免費版各平台"
+      },
+      {
+        "when": "2026.11.4",
+        "label": "免費期結束，付費 Launch Preview 開始",
+        "note": "台灣時間 02:00（週三）"
+      },
+      {
+        "when": "發售前",
+        "label": "再一次更新，主打優化",
+        "note": "日期未公布"
+      },
+      {
+        "when": "2026.11.10",
+        "label": "全平台數位版發售",
+        "note": "確切時刻未公布"
+      },
+      {
+        "when": "發售後",
+        "label": "第一個正式更新",
+        "note": "含 3D 比賽引擎；日期未公布"
+      },
+      {
+        "when": "2026.11.20",
+        "label": "實體 PS5 版發售",
+        "note": "官方 FAQ"
+      }
+    ],
+    "type": "timeline"
+  }
+}
