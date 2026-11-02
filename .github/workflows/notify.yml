@@ -81,7 +81,11 @@ jobs:
               R=0
               case "$CHANGED" in *devices.json*) /tmp/push/bin/python scripts/push.py test --new-since "$BEFORE" || R=1 ;; esac
               case "$CHANGED" in *late.json*) /tmp/push/bin/python scripts/push.py late --before "$BEFORE" || R=1 ;; esac
-              case "$CHANGED" in *push/ping*) /tmp/push/bin/python scripts/push.py issue --now || R=1 ;; esac
+              # the ping file's last line says which notice to try: "remind" for the nudge, anything else the morning one
+              case "$CHANGED" in *push/ping*)
+                if tail -n 1 state/push/ping | grep -q '^remind'; then /tmp/push/bin/python scripts/push.py remind || R=1
+                else /tmp/push/bin/python scripts/push.py issue --now || R=1; fi ;;
+              esac
               exit $R ;;
           esac
       - name: Drop devices that no longer take notifications
