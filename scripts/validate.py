@@ -20,6 +20,7 @@ import urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import (ISSUES, ROOT, iter_reserve, RESERVE, BROWSER_IMAGE_TYPES, CJK, article_path, cjk_count, column_meta, figures_of, http_get, image_key,  # noqa: E402
                     image_page, iter_articles, load_config, load_json, raw_image_ext, TW)
+from places import NAMES as PLACE_NAMES, place_codes  # noqa: E402
 
 LENGTH = {  # (min, max) CJK characters in body
     "football": (1800, 3500), "perio": (600, 1000), "music": (1000, 1600),
@@ -549,6 +550,14 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
                     for k in ("headline", "summary", "source"):
                         if not it.get(k):
                             E("%s news[%d] 缺少 %s" % (where, i, k))
+                    if it.get("place") is not None:  # optional; the map's country when the automatic match would miss
+                        codes = place_codes(it["place"])
+                        if codes is None:
+                            E("%s news[%d] place 需為 1–4 個 ISO 3166-1 alpha-2 大寫代碼，字串或陣列（例 \"UA\"、[\"IL\",\"PS\"]）"
+                              % (where, i))
+                        for c in codes or []:
+                            if c not in PLACE_NAMES:
+                                W("%s news[%d] place %s 不在 scripts/places.py 的國名表，地圖上畫不出來" % (where, i, c))
         elif t == "scripture":
             check_scripture(b, where, E, W, check_urls)
         elif t == "music":

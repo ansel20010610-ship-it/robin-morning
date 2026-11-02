@@ -49,7 +49,7 @@
 | `table` | `head`、`rows`，選填 `title`、`caption` | 對照表、概念表 |
 | `pitch` | 見戰術圖 | 足球場形示意 |
 | `svg` | `svg`、`caption`，選填 `credit`、`title` | 原創示意圖（關係圖、路線示意、結構圖）。見下方 SVG 規則 |
-| `news` | `items`：`[{"headline","summary","source","url","when"}]`，選填 `title` | 新聞速覽 |
+| `news` | `items`：`[{"headline","summary","source","url","when"}]`，選填 `title`；每則選填 `place`（ISO 3166-1 alpha-2，一個字串或最多四個的陣列，例 `"UA"`、`["IL","PS"]`；App 用它在「你讀過的世界」地圖上把國家上色；沒填時由標題與摘要裡的國名與城市名自動判斷，見 `scripts/places.py`） | 新聞速覽 |
 | `scripture` | `ref`、`book`、`chapter`、`version`、`verses`、`source` | 經文（只用於晨光欄）。用 `scripts/bible.py` 產生；`book` 是 FHL 簡稱（如「詩」），`verses` 為 `[{"n":1,"text":"..."}]`，跨章時個別經節加 `"c": 章`。驗證時會逐節和 FHL 和合本比對 |
 | `prayer` | `text` | 禱告全文（只用於晨光欄） |
 | `music` | 見音樂區塊 | 錄音與 Spotify |

@@ -3,8 +3,9 @@
 Runs in GitHub Actions on every push.
 
 Besides the article cards, index.json carries what the app cannot work out on its own: each article's "related"
-(up to three articles that read on from it), football's "next" fixture, each issue's "press" record (the shift
-reports in state/runs/, for the owner's 印務室 page) and "late" note, and the top-level "stock" of reserve articles.
+(up to three articles that read on from it), football's "next" fixture, a news issue's "places" (the countries its
+items name, for the 讀過的世界 map; scripts/places.py), each issue's "press" record (the shift reports in state/runs/,
+for the owner's 印務室 page) and "late" note, and the top-level "stock" of reserve articles and "places" names.
 
 A malformed article is skipped with a ::warning:: annotation; it must never fail the deploy, or every
 later issue would stay offline until someone fixes the file by hand. The same goes for a malformed runs file.
@@ -22,6 +23,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import (CJK, CONTENT, ROOT, TW, WEEKDAY_ZH, article_path, cjk_count, column_meta,  # noqa: E402
                     expected_columns, issue_number, iter_articles, iter_reserve, load_config, load_json,
                     reserve_columns, reserve_target, text_of_block, wm_thumb)
+from places import NAMES as PLACE_NAMES, place_codes, places_of  # noqa: E402
 
 RUNS = os.path.join(ROOT, "state", "runs")
 SHIFTS = ("1", "2", "3", "4", "5")
@@ -71,6 +73,20 @@ def next_match(nxt):
     if isinstance(nxt.get("home"), bool):
         out["home"] = nxt["home"]
     return out
+
+
+def news_places(art):
+    """The countries a news issue touches, for the 讀過的世界 map: the union over its news blocks' items of the item's own
+    "place" when it is well formed (editorial/SCHEMA.md), else the countries and cities its headline and summary name."""
+    out = set()
+    for b in art.get("body") or []:
+        if not (isinstance(b, dict) and b.get("type") == "news" and isinstance(b.get("items"), list)):
+            continue
+        for it in b["items"]:
+            if isinstance(it, dict):
+                out.update(place_codes(it.get("place")) or
+                           places_of("%s %s" % (it.get("headline") or "", it.get("summary") or "")))
+    return sorted(out)
 
 
 def related_tokens(art):
@@ -295,6 +311,10 @@ def main():
             nxt = next_match(art.get("next"))
             if nxt:
                 entry["next"] = nxt
+            if col == "news":
+                pl = news_places(art)
+                if pl:
+                    entry["places"] = pl
             toks = related_tokens(art)
             search.setdefault(day[:7], []).append({"d": day, "c": col, "t": art.get("title", ""), "x": plain_text(art)})
         except Exception as e:  # noqa: BLE001
@@ -322,8 +342,9 @@ def main():
         if day in late:
             issue["late"] = late[day]
         issues.append(issue)
+    seen = sorted({c for a in flat for c in a.get("places", ())})  # a code the table cannot name is left off the map
     out = {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "issues": issues,
-           "push": push_devices(), "stock": stock(cfg)}
+           "push": push_devices(), "stock": stock(cfg), "places": {c: PLACE_NAMES[c] for c in seen if c in PLACE_NAMES}}
     with open(os.path.join(CONTENT, "index.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
     sdir = os.path.join(CONTENT, "search")
