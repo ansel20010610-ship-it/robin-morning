@@ -121,32 +121,20 @@ button { font: inherit; color: inherit; }
    is in (an archive issue, or offline with nothing kept, never shows it). */
 .wetter { margin: 22px 0 -8px; }
 .wetter[hidden] { display: none; }
-:is(.wetter, .reveal) .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; padding-bottom: 5px; border-bottom: 1px solid var(--ink); }
-:is(.wetter, .reveal) .lbl .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 14px; margin-left: 8px; color: var(--gold); }
+:is(.wetter, .werk) .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; padding-bottom: 5px; border-bottom: 1px solid var(--ink); }
+:is(.wetter, .werk) .lbl .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 14px; margin-left: 8px; color: var(--gold); }
 .wetter .fc { font-family: var(--sans); font-size: 15px; line-height: 1.7; color: var(--ink); letter-spacing: .03em; padding: 10px 0 11px; border-bottom: 1px solid var(--rule); }
-/* 刮開頭圖 (app.js revealBox/fillReveal): the day's picture under paper-2 cut into one tile per article, each with its
-   numeral, on a 12-unit grid so a short last row still covers the width (the tiles overlap a pixel to hide the seams).
-   The plate keeps the picture's own proportions (--ar), never taller than 62vw; a painting (.contain) is shown whole.
-   The grain is two faint dot lattices, no image. Once every tile is gone the hairline is gold and the caption carries
-   the title and the way to the article; the peel is in the motion block. */
-.reveal { margin: 22px 0 -8px; }
-.reveal .plate { position: relative; margin-top: 10px; aspect-ratio: var(--ar, 3 / 2); max-height: 62vw; overflow: hidden; background: var(--paper-3); border: 1px solid var(--rule); }
-.reveal.done .plate { border-color: var(--gold); }
-.reveal .plate img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.reveal .plate.contain img { object-fit: contain; }
-/* --rows from revealBox: an explicit row count, so a row whose tiles are all gone keeps its height for the picture. */
-.reveal .tiles { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(var(--rows, 1), 1fr); }
-.reveal .t { position: relative; margin: -1px; pointer-events: none;
-  background: radial-gradient(circle, color-mix(in srgb, var(--ink) 7%, transparent) .6px, transparent 1.1px) 0 0 / 5px 5px,
-    radial-gradient(circle, color-mix(in srgb, var(--ink) 4%, transparent) .9px, transparent 1.5px) 2px 3px / 9px 9px, var(--paper-2);
-  box-shadow: inset 0 0 0 1px var(--rule), inset 0 1px 0 1px color-mix(in srgb, var(--paper) 55%, transparent); }
-.reveal .t b { position: absolute; top: 6px; left: 8px; font-family: var(--latin); font-size: 12px; font-weight: 600; line-height: 1; letter-spacing: .06em; color: var(--gold-ink); font-variant-numeric: lining-nums tabular-nums; }
-.reveal .cap { margin: 0; padding: 9px 0 11px; border-bottom: 1px solid var(--rule); font-family: var(--sans); font-size: 13px; line-height: 1.7; color: var(--muted); letter-spacing: .03em; }
-.reveal .cap a { display: grid; gap: 1px; color: inherit; text-decoration: none; }
-.reveal .cap b { font-family: var(--serif); font-size: 16px; line-height: 1.5; font-weight: 600; color: var(--ink); letter-spacing: 0; }
-.reveal .cap .by { font-size: 12px; }
-.reveal .cap .go { margin-top: 3px; font-size: 12px; letter-spacing: .12em; font-weight: 600; color: var(--gold-ink); }
-.reveal .cap .go i { font-style: normal; margin-left: 4px; }
+/* 今日之作 (app.js werkOf/werkCard/fillDevelop): the day's picture as a print in the darkroom. --dev 0→1 (the share of
+   the issue read) lifts the blur, the sepia and the pallor off the image; developed, the plate's hairline is gold. The
+   note under the card says how many articles are left. The section's label row matches the weather box's. */
+.werk { margin: 22px 0 -8px; }
+.werk .lead { padding-top: 10px; }
+.lead.develop .ph { position: relative; border: 1px solid var(--rule); }
+.lead.develop.developed .ph { border-color: var(--gold); }
+/* .lead.develop outranks the dark-mode img filter (:root:not(…) img) and the lead's own rules. */
+.lead.develop .ph img { filter: blur(calc((1 - var(--dev, 0)) * 11px)) saturate(calc(.2 + var(--dev, 0) * .8)) sepia(calc((1 - var(--dev, 0)) * .55)) brightness(calc(.8 + var(--dev, 0) * .2)) contrast(calc(.8 + var(--dev, 0) * .2)); transform: scale(calc(1.06 - var(--dev, 0) * .06)); }
+.develop .dev-note { display: block; margin-top: 8px; font-family: var(--sans); font-size: 11.5px; letter-spacing: .14em; color: var(--gold-ink); }
+.develop.developed .dev-note { color: var(--muted); }
 .wetter .row { display: flex; flex-wrap: wrap; align-items: center; gap: 0; }
 .wetter .w { white-space: nowrap; }
 .wetter .two { font-size: 13.5px; color: var(--muted); }
@@ -698,8 +686,8 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
 
 /* A picture that could not load (offline, or the host refused): keep its box, hide the broken icon. */
 img.img-off { visibility: hidden; }
-:is(.frame, .ph, .th, .vi, .reveal .plate):has(> img.img-off) { position: relative; }
-:is(.frame, .ph, .reveal .plate):has(> img.img-off)::after {
+:is(.frame, .ph, .th, .vi):has(> img.img-off) { position: relative; }
+:is(.frame, .ph):has(> img.img-off)::after {
   content: "圖片暫時無法顯示"; position: absolute; inset: 0; display: grid; place-items: center;
   font-family: var(--sans); font-size: 12px; letter-spacing: .08em; color: var(--muted);
 }
@@ -831,6 +819,7 @@ img.img-off { visibility: hidden; }
     animation: line-run 1.2s calc(var(--d, 0ms) + .35s) cubic-bezier(.3,.7,.2,1) both; }
   @keyframes line-run { 0% { transform: scaleX(0); opacity: 1; } 55% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: 0; } }
   .lead.rv.in .ph img { animation: kenburns 3.6s var(--d, 0ms) cubic-bezier(.2,.6,.2,1) both; }
+  .lead.develop.rv.in .ph img { animation: none; } /* the darkroom print keeps its own filter; Ken Burns would end it sharp */
   @keyframes kenburns { from { transform: scale(1.22); filter: saturate(.6) brightness(1.15); } to { transform: none; filter: none; } }
   .lead.rv.in .ph::after { content: ""; position: absolute; inset: 10px; border: 1.5px solid var(--foil-hi); pointer-events: none; z-index: 1;
     box-shadow: inset 0 0 0 4px transparent, inset 0 0 0 5px color-mix(in srgb, var(--foil-hi) 60%, transparent);
@@ -917,13 +906,10 @@ img.img-off { visibility: hidden; }
   .masthead .dateline { animation-delay: 1.15s; }
   .wetter .row { animation: page-in .6s both; } /* the forecast lands whenever it arrives, the second line a beat after */
   .wetter .two { animation-delay: .12s; }
-  /* 刮開頭圖: a tile whose article was read since the last visit tears off upward a beat after the page draws; when it
-     was the last, the hairline gilds and the caption comes in once the paper is away (app.js revealBox: .peel, .just). */
-  .reveal .t.peel { animation: peel .55s .5s cubic-bezier(.4, 0, .2, 1) both; }
-  @keyframes peel { from { clip-path: inset(0); opacity: 1; } to { clip-path: inset(0 0 100% 0); opacity: 0; transform: translateY(-3px); } }
-  .reveal.just .plate { animation: gild .5s 1.05s both; }
-  @keyframes gild { from { border-color: var(--rule); } }
-  .reveal.just .cap { animation: page-in .5s 1.05s both; }
+  /* 今日之作: the print develops over a breath when the page returns with more read (app.js fillDevelop sets --dev a
+     frame after the draw); the hairline gilds with it. */
+  .lead.develop .ph img { transition: filter 1.8s cubic-bezier(.3, .6, .2, 1), transform 1.8s cubic-bezier(.3, .6, .2, 1); }
+  .lead.develop .ph { transition: border-color .6s 1.2s; }
   /* 排字 — the verse is set the way a compositor fills a line: once the dateline is in (1.3s), each glyph drops into
      place from a little above, gold and glowing first, and cools to ink as it lands; the next follows --step later
      (app.js: 45ms, shorter for a long verse, so the whole line is set within .7s). When the last has landed (--end)
