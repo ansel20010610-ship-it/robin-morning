@@ -25,5 +25,10 @@
       "news"
     ],
     "note": "philosophy（為了救命可否說謊）與 football 初稿完成，皆經審稿、總編重寫、忠實度核對"
+  },
+  "4": {
+    "finished_at": "2026-11-03T05:30:13+08:00",
+    "missing": [],
+    "note": "刊出 fm-watch（FM27 免費版小更新）、news；cosmere 靜默、football 無需更新；news 可用網域 aljazeera/france24/news.un.org/cna.com.tw/focustaiwan.tw/news.pts.org.tw/rti.org.tw/un.org/cwa.gov.tw/cdc.gov.tw，不可用 dw.com、nhk.or.jp"
   }
 }
