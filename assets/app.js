@@ -459,13 +459,23 @@ function updatedNote(date, a) {
 // 牙周欄的證據力 (paper.evidence): shown under the takeaway, so the reader sees how solid the conclusion is.
 const evidenceOf = (a) => { const p = (a.body || []).find((b) => b?.type === "paper"); return typeof p?.evidence === "string" ? p.evidence : ""; };
 
-// 加入行事曆: a webcal:// link to the show's or the fixture's .ics file, written at deploy by scripts/build_ics.py (the
-// file names are its contract) and served by the site. webcal is the one route a home-screen app on the iPhone has
-// into 行事曆: the scheme hands the address straight to the Calendar app, which asks to subscribe to that one-event
-// calendar (named after the event, X-WR-CALNAME) and shows it at once. An https link opens inside the app's own web
-// view, which cannot add a calendar file, and the share sheet offers no 行事曆 — both tried on 2026-11-02 and failed.
+// 加入 Google 日曆: the owner keeps their calendar at Google (2026-11-02), so the button is Google Calendar's own
+// event-template link — opened in a new tab it lands in the Google 日曆 app (or its site) with the event filled in,
+// one tap from saved. `start` is Taiwan time "YYYY-MM-DDTHH:MM"; Google takes the instants in UTC. Nothing of the
+// reader's goes into the address, only the event. (The .ics files scripts/build_ics.py writes at deploy stay on the
+// site for anyone on Apple's calendar: ics/gig-<id>-<date>-<HHMM>.ics, ics/football-<date>.ics, via webcal://.)
 const ICON_CAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="5" width="16" height="15"/><path d="M4 10h16M8 3v4M16 3v4M12 13v4M10 15h4"/></svg>';
-const calBtn = (file) => `<a class="btn ghost cal" href="webcal://${esc(location.host)}${esc(location.pathname.replace(/[^/]*$/, ""))}ics/${esc(file)}.ics">${ICON_CAL}加入行事曆</a>`;
+function gcalUrl({ title, start, minutes = 120, location, description, url }) {
+  const t0 = Date.parse(`${start}:00+08:00`);
+  if (Number.isNaN(t0)) return "";
+  const z = (ms) => new Date(ms).toISOString().replace(/[-:]|\.\d{3}/g, "");
+  const p = new URLSearchParams({ action: "TEMPLATE", text: title, dates: `${z(t0)}/${z(t0 + minutes * 60000)}` });
+  if (location) p.set("location", location);
+  const details = [description, url].filter(Boolean).join("\n");
+  if (details) p.set("details", details);
+  return `https://calendar.google.com/calendar/render?${p}`;
+}
+const calBtn = (ev) => { const u = gcalUrl(ev); return u ? `<a class="btn ghost cal" href="${esc(u)}" target="_blank" rel="noopener">${ICON_CAL}加入 Google 日曆</a>` : ""; };
 // 下一場 (football's top-level "next", SCHEMA.md; build_index.py copies it into the index entry): the fixture as the card
 // shows it, or null when the field is missing or malformed, or the kickoff has passed. The kickoff is Taiwan time with
 // its +08:00, so its date and clock are read straight off the string.
@@ -477,7 +487,8 @@ function fixtureOf(n) {
 const fixtureHtml = (f) => !f ? "" : `<aside class="fixture"><span class="lbl">下一場</span>
     <div class="when">週${gigWd(f.date)} ${gigDay(f.date)} ${esc(f.hm)}・${esc(f.competition)}</div>
     <div class="vs">巴薩 對 ${esc(f.opponent)}${f.home === null ? "" : f.home ? "（主場）" : "（客場）"}</div>
-    <div class="foot">${f.venue ? `<span class="small">${esc(f.venue)}</span>` : ""}${calBtn(`football-${f.date}`)}</div></aside>`;
+    <div class="foot">${f.venue ? `<span class="small">${esc(f.venue)}</span>` : ""}${calBtn({ title: `巴薩 對 ${f.opponent}（${f.competition}）`, start: `${f.date}T${f.hm}`, minutes: 115, location: f.venue,
+      description: `${f.competition}${f.home === null ? "" : f.home ? "・主場" : "・客場"}`, url: location.href.replace(/\?[^#]*/, "") })}</div></aside>`;
 
 async function viewArticle(date, column, my) {
   const wantMark = landMark; // 劃線本: the mark to land on, taken whatever this page turns out to be
@@ -919,10 +930,11 @@ async function viewConcert(id, my) {
   const link = (u, t) => (webUrl(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>` : esc(t));
   const cities = [...new Set(e.shows.map((x) => x.city))];
   // Each show's ticket link and 加入行事曆 sit together at the row's end (.acts), dropping to a line of their own under
-  // the venue when the row is full. The calendar file is named by event, day and curtain (19:30 when the hour is not
-  // known), as scripts/build_ics.py writes it.
-  const icsOf = (x) => (id && /^\d{4}-\d{2}-\d{2}$/.test(x.date) ? `gig-${id}-${x.date}-${(/^\d{2}:\d{2}$/.test(x.time || "") ? x.time : "19:30").replace(":", "")}` : "");
-  const row = (x) => `<li><span class="d">${gigShow(x)}</span><span class="v">${esc(x.venue)}</span><span class="acts">${webUrl(x.tickets) ? `<a class="tix" href="${esc(x.tickets)}" target="_blank" rel="noopener">售票頁</a>` : ""}${icsOf(x) ? calBtn(icsOf(x)) : ""}</span></li>`;
+  // the venue when the row is full. The show is a two-hour entry (19:30 when the hour is not known), the venue and city
+  // the place, the cast, programme and ticket note with the ticket link in the body.
+  const cal = (x) => calBtn({ title: e.title, start: `${x.date}T${/^\d{2}:\d{2}$/.test(x.time || "") ? x.time : "19:30"}`, location: [x.venue, x.city].filter(Boolean).join("，"),
+    description: [e.who && `演出：${e.who}`, e.program && `曲目：${e.program}`, e.note && `票況：${e.note}`].filter(Boolean).join("\n"), url: webUrl(x.tickets) });
+  const row = (x) => `<li><span class="d">${gigShow(x)}</span><span class="v">${esc(x.venue)}</span><span class="acts">${webUrl(x.tickets) ? `<a class="tix" href="${esc(x.tickets)}" target="_blank" rel="noopener">售票頁</a>` : ""}${cal(x)}</span></li>`;
   const shows = cities.map((c) => `<li><b>${esc(c)}</b><ul>${e.shows.flatMap((x) => (x.city === c ? row(x) : [])).join("")}</ul></li>`).join("");
   const rows = [
     e.who && ["演出", esc(e.who)],
