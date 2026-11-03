@@ -1,0 +1,401 @@
+{
+  "column": "football",
+  "date": "2026-11-04",
+  "title": "德米格爾過世，歐洲足總本週每場比賽為他默哀",
+  "dek": "特內里費的前鋒週一在西乙被對方門將撞在胸口，週二過世，30 歲。巴薩週三 04:00 踢維拉，名單 23 人，六人傷缺。",
+  "brief": "特內里費 30 歲的前鋒德米格爾週一在西乙比賽中被對方門將撞在胸口後送醫，心臟驟停；俱樂部宣布他週二過世；歐洲足總本週每場比賽都要為他默哀。巴薩 11 月 4 日 04:00 在諾坎普踢阿斯頓維拉，名單 23 人，六人傷缺。下一場是 11 月 9 日（週一）04:00 客場踢馬競。",
+  "topic_key": "football:2026-11-04",
+  "updated_at": "2026-11-04T02:55:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "next": {
+    "opponent": "馬德里競技",
+    "competition": "西甲",
+    "kickoff": "2026-11-09T04:00+08:00",
+    "venue": "Riyadh Air Metropolitano",
+    "home": false
+  },
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/RodriguezLopez2008.jpg/1280px-RodriguezLopez2008.jpg",
+    "width": 1280,
+    "height": 960,
+    "alt": "賽前的球場，看台上人很少；場中央立著一顆印有球隊徽章的大足球氣球，左右兩側各有幾個人在熱身。",
+    "caption": "特內里費的主場，2008 年 11 月 16 日賽前（特內里費對皇家社會）。資料照片，非當日畫面。",
+    "credit": "Edub／Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:RodriguezLopez2008.jpg",
+    "made": "2008"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "特內里費（Tenerife）的前鋒德米格爾（Jesús de Miguel）11 月 3 日週二過世（俱樂部宣布），30 歲。前一天在西班牙乙級對安道爾（FC Andorra），比賽進入補時，他在中場附近爭球，安道爾門將從對面跑來想解圍，撞在他的胸口。門將吃了直接紅牌；德米格爾被送醫，心臟驟停。比賽停在 2 比 2，補時第 7 分鐘。"
+    },
+    {
+      "type": "p",
+      "text": "西班牙法律規定，非自然死亡連意外在內都要經過司法調查，國家警察週二已經立案。聖克魯斯德特內里費的首席檢察官對 EFE 說，碰撞發生在比賽進行中，不太可能走到刑事程序。"
+    },
+    {
+      "type": "p",
+      "text": "安道爾的老闆是前巴薩球星皮克（Gerard Piqué）。球隊發了致哀聲明，皮克自己在 X 上說，他打從心底難過，願德米格爾安息。巴薩的聲明說，對這個噩耗深感難過，心意與支持都和他的家人、朋友同在。皇馬球員訓練時默哀，姆巴佩在社群媒體上寫，太多悲傷，說不出話。"
+    },
+    {
+      "type": "p",
+      "text": "西班牙足協把週二到週四所有的國王盃與女子國王盃延期。歐洲足總宣布，本週它所有的比賽都要為德米格爾默哀。"
+    },
+    {
+      "type": "quote",
+      "text": "我們找不到言語，只剩下沉默。",
+      "original": "We have searched for words and found only silence.",
+      "cite": "切費林，歐洲足總聲明，11 月 3 日"
+    },
+    {
+      "type": "h",
+      "text": "名單 23 人，後防還是缺"
+    },
+    {
+      "type": "p",
+      "text": "歐冠方面：11 月 4 日（週三）04:00，在諾坎普對阿斯頓維拉（Aston Villa），聯賽階段第 4 輪。弗利克點了 23 個人，另有六個人因傷缺陣：Eric García、孔德（Jules Koundé）、Xavi Espart、克里斯滕森（Andreas Christensen）、奧爾莫（Dani Olmo）、Roony Bardghji。官網發名單時，標題直接寫後防還缺人。"
+    },
+    {
+      "type": "p",
+      "text": "23 人裡有坎塞洛、巴爾德、Cubarsí、傑拉德・馬丁，也有 Fariñas（Brian Fariñas）。他是拉瑪西亞出身，官網的球員頁把他列在中場。10 月 31 日對阿拉維斯，他第一次代表一隊正式出賽就先發，弗利克要他踢右後衛，官網說那是他不熟悉的位置。他說，每個男孩都夢想這一刻；教練把他放在哪，他就踢哪。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Pau_Cubarsi_France_v_Spain_7.24.26-116.jpg/1280px-Pau_Cubarsi_France_v_Spain_7.24.26-116.jpg",
+      "width": 1280,
+      "height": 853,
+      "alt": "Cubarsí 穿西班牙 22 號白色客場球衣，站在球門網前，右手腕（畫面左側）纏著白色護帶；他身後左側是穿黃色球衣的 23 號門將。",
+      "caption": "Cubarsí 2026 年 7 月 14 日在世界盃替西班牙出戰法國。資料照片，非當日比賽畫面。",
+      "credit": "Bryan Berlin／Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pau_Cubarsi_France_v_Spain_7.24.26-116.jpg",
+      "made": "2026"
+    },
+    {
+      "type": "p",
+      "text": "維拉歐冠 3 戰 9 分，淨勝球不如 PSG，排第 2；英超 12 分，第 10。前鋒 Nicolas Jackson 各項賽事進了 8 球。巴薩是 5 比 1 贏費耶諾德、4 比 1 贏加拉塔薩雷、客場輸給 PSG，6 分排第 8。"
+    },
+    {
+      "type": "p",
+      "text": "兩隊上一次在正式比賽碰面，是 40 多年前：1983 年 1 月的歐洲超級盃，維拉兩回合合計 3 比 1。再往前是 1977–78 年的 UEFA 盃八強，那次巴薩合計 4 比 3 晉級。"
+    },
+    {
+      "type": "h",
+      "text": "看台重開，王子來看球"
+    },
+    {
+      "type": "p",
+      "text": "ESPN 的消息來源說，44 歲的威廉王子預計帶兒子喬治到諾坎普看這場。他是維拉球迷，今年 5 月在伊斯坦堡看維拉 3 比 0 贏弗萊堡，拿下歐霸盃。"
+    },
+    {
+      "type": "p",
+      "text": "動感看台 Gol 1957 重新開放。10 月 25 日國家德比，這個看台有成員拿旗子打了皇馬的卡馬文加（Eduardo Camavinga），球團暫停它 10 月 31 日對阿拉維斯那場的運作。11 月 2 日，管理那一區的代表跟球團高層開會，球團宣布重新開放。聲明說，代表們已經替各團體承諾，在看台上守規矩、尊重別人；又說，這類行為一再招來罰款，還讓俱樂部面臨被迫關閉球場的可能。"
+    },
+    {
+      "type": "h",
+      "text": "Gavi 傳聞"
+    },
+    {
+      "type": "p",
+      "text": "Gavi 也在這 23 人裡。ESPN 11 月 3 日的轉會欄轉述 Fabrizio Romano：巴薩無意讓 22 歲的 Gavi 離隊，弗利克把他看作長期計畫的重要一員，儘管他本季先發不多。同一欄還有《Record》的消息，巴薩和布萊頓都看上 Estoril 一名 18 歲的葡萄牙青年國手後衛，防守位置多能踢，也能踢中場。",
+      "tag": "傳聞"
+    },
+    {
+      "type": "h",
+      "text": "凱恩說接近了，亞洲盃延期"
+    },
+    {
+      "type": "news",
+      "title": "歐洲足壇速覽",
+      "items": [
+        {
+          "headline": "凱恩說新約以天計而不是以週計",
+          "summary": "凱恩（Harry Kane）11 月 2 日在對馬競的賽前記者會上說，新約細節交給律師，「我們已經非常接近了」；他還說，願意拿一座金球獎換一次歐冠冠軍。上週末拜仁 2 比 2 平多特蒙德，他罰失一個點球。主教練孔帕尼（Vincent Kompany）仍在家休養，對馬競由助教 Aaron Danks 帶隊。",
+          "source": "ESPN News Services",
+          "url": "https://www.espn.com/soccer/story/_/id/50360295/harry-kane-hopes-bayern-munich-pass-tough-champions-league-test-madrid",
+          "when": "11 月 3 日（週二）06:41",
+          "place": "DE"
+        },
+        {
+          "headline": "西漢姆聯解僱努諾，帕克接手在望",
+          "summary": "西漢姆聯上週末客場 1 比 3 輸給西布朗，英冠第 8，離自動升級位置差 4 分。俱樂部 11 月 3 日解僱努諾（Nuno Espírito Santo）；ESPN 的消息來源說，球隊快要敲定帕克（Scott Parker）接任。週三晚上對卡地夫城，由 Mark Noble 和兩位助教先帶。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50366969/west-ham-sack-nuno-espirito-santo",
+          "when": "11 月 3 日（週二）19:37",
+          "place": "GB"
+        },
+        {
+          "headline": "阿根廷公布梅西退休後的第一份名單",
+          "summary": "阿根廷足協公布 28 人名單，11 月 13 日在布宜諾斯艾利斯對烏拉圭，17 日在科爾多瓦對哥斯大黎加。梅西上個月在 3 比 0 贏貝寧的友誼賽進了球，然後告別，生涯 208 場、126 球。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50369855/argentina-callup-lionel-messi-november-friendlies",
+          "when": "11 月 4 日（週三）01:24",
+          "place": "AR"
+        },
+        {
+          "headline": "亞洲盃延到 2027 年底",
+          "summary": "亞足聯宣布，原訂 2027 年 1 月 7 日至 2 月 5 日在沙烏地阿拉伯舉行的亞洲盃，改到 2027 年 12 月 23 日至 2028 年 1 月 21 日，新日期還要國際足總核准。理由是區域情勢，後勤與交通出現嚴重困難。上個月，亞足聯主席還說照原計畫準備。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50364129/asian-football-confederation-postpones-2027-asian-cup-saudi-arabia",
+          "when": "11 月 3 日（週二）21:48",
+          "place": "SA"
+        },
+        {
+          "headline": "傳皇馬把卡拉菲奧里列為左後衛首選",
+          "summary": "TEAMtalk 說，皇馬把阿森納的卡拉菲奧里（Riccardo Calafiori）當成左後衛的首選，已經為 2027 年夏天做了初步詢問；要買，得付一大筆轉會費。ESPN 轉會欄 11 月 3 日轉述。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50366900/transfer-rumors-news-real-madrid-tracking-arsenal-calafiori",
+          "when": "11 月 3 日（週二）20:43",
+          "place": "IT"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "接下來"
+    },
+    {
+      "type": "p",
+      "text": "下一場是 11 月 9 日（週一）04:00，客場到 Riyadh Air Metropolitano 踢馬競，歐洲時間週日 21:00。西甲各踢了 11 輪，巴薩 30 分，馬競 28，皇馬 27。"
+    },
+    {
+      "type": "table",
+      "title": "巴薩 11 月賽程",
+      "head": [
+        "台灣時間",
+        "賽事",
+        "對手",
+        "場地"
+      ],
+      "rows": [
+        [
+          "11 月 4 日（週三）04:00",
+          "歐冠",
+          "阿斯頓維拉",
+          "主場，諾坎普"
+        ],
+        [
+          "11 月 9 日（週一）04:00",
+          "西甲",
+          "馬德里競技",
+          "客場，Riyadh Air Metropolitano"
+        ],
+        [
+          "11 月 22 日（週日）21:00",
+          "西甲",
+          "比利亞雷亞爾",
+          "主場，諾坎普"
+        ],
+        [
+          "11 月 25 日（歐洲日期），時間未公布",
+          "歐冠",
+          "Sabah",
+          "客場，巴庫"
+        ],
+        [
+          "11 月 28 或 29 日，待定",
+          "西甲",
+          "拉科魯尼亞（Deportivo）",
+          "客場，Riazor"
+        ]
+      ],
+      "caption": "資料：巴薩官網。台灣時間由歐洲時間換算。"
+    },
+    {
+      "type": "p",
+      "text": "德米格爾的遺體應運回托雷多省的納瓦埃爾莫薩（Navahermosa）。特內里費週六有一場客場對格拉納達的聯賽，俱樂部已經要求延期。同一天，球迷會到球隊的球場聚集悼念他。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tenerife forward Jesús de Miguel dies after on-field collision; police open investigation",
+      "publisher": "ESPN／AP／PA",
+      "date": "2026-11-03",
+      "url": "https://www.espn.com/soccer/story/_/id/50366968/tenerife-forward-jesus-de-miguel-dies-game-cardiac-arrest",
+      "note": "德米格爾經過、警方與檢察長、皮克、國王盃延期、週六悼念與延後格拉納達之戰"
+    },
+    {
+      "title": "Jesús de Miguel dies: Arsenal, Man United lead tributes from Premier League",
+      "publisher": "ESPN",
+      "date": "2026-11-03",
+      "url": "https://www.espn.com/soccer/story/_/id/50368827/jesus-de-miguel-dies-arsenal-man-united-lead-tributes-premier-league",
+      "note": "球迷獻花、阿森納與曼聯默哀；「All UEFA competition matches this week」默哀"
+    },
+    {
+      "title": "Tenerife striker Jesus de Miguel dies after cardiac arrest following collision during a match",
+      "publisher": "Sky Sports",
+      "date": "2026-11-03",
+      "url": "https://www.skysports.com/football/news/13607401/tenerife-striker-jesus-de-miguel-dies-after-cardiac-arrest-following-collision-during-a-match",
+      "note": "第二來源：比賽 11 月 2 日週一，對安道爾，死訊 11 月 3 日；碰撞對象為安道爾門將；巴薩悼念聲明"
+    },
+    {
+      "title": "Jesús de Miguel Alameda 1996-2026",
+      "publisher": "UEFA",
+      "date": "2026-11-03",
+      "url": "https://www.uefa.com/news-media/news/02ab-21fb49d59119-242bd3341b58-1000--jesus-de-miguel-alameda-1996-2026/",
+      "note": "默哀「at all UEFA matches this week」；切費林聲明節錄。UEFA 頁面未寫哪幾天、哪幾項賽事"
+    },
+    {
+      "title": "UEFA announces minute's silence across all competitions following tragic death of CD Tenerife striker Jesus de Miguel",
+      "publisher": "Goal",
+      "date": "2026-11-03",
+      "url": "https://www.goal.com/en-us/news/uefa-minute-s-silence-all-competitions-tenerife-jesus-de-miguel/bltf57394cf4e1dd3de",
+      "note": "旁證。各報對默哀範圍寫法略有出入（歐冠、歐霸、歐協聯），正文只採 UEFA 官網「本週所有歐洲足總比賽」"
+    },
+    {
+      "title": "FC Barcelona v Aston Villa（比賽頁，Champions League Matchday 4）",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-02",
+      "url": "https://www.fcbarcelona.com/en/matches/141501/fc-barcelona-aston-villa-uefa-champions-league-2026-2027",
+      "note": "11 月 3 日 21:00（CET）= 台灣 11 月 4 日 04:00；Spotify Camp Nou；主場"
+    },
+    {
+      "title": "The squad for the Aston Villa match",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-03",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4603075/the-squad-for-the-aston-villa-match",
+      "note": "23 人名單；六人傷缺：Eric、Koundé、Xavi Espart、Christensen、Olmo、Roony"
+    },
+    {
+      "title": "PREVIEW | Barça v Aston Villa",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-03",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4603354/preview-fc-barcelona-v-aston-villa",
+      "note": "雙方戰績、Jackson 進球數、維拉傷缺、1983 年超級盃與 1977–78 年 UEFA 盃交手紀錄。官網頁面只標「8 hrs ago」，無確切時間"
+    },
+    {
+      "title": "Brian Fariñas: 'Every boy dreams of this'",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-01",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4602437/brian-farinas-every-boy-dreams-of-this",
+      "note": "拉瑪西亞出身、官網列中場；10 月 31 日對阿拉維斯首度先發，踢右後衛（官網原文：不熟悉的位置）"
+    },
+    {
+      "title": "UEFA Champions League scoreboard（11 月 3 日）",
+      "publisher": "ESPN",
+      "date": "2026-11-03",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261103",
+      "note": "台灣時間 11 月 4 日 02:50 讀取：巴薩對維拉 20:00Z，狀態 Scheduled"
+    },
+    {
+      "title": "UEFA Champions League standings",
+      "publisher": "ESPN",
+      "date": "2026-11-03",
+      "url": "https://site.api.espn.com/apis/v2/sports/soccer/uefa.champions/standings",
+      "note": "台灣時間 11 月 4 日 02:50 讀取：維拉 3 戰 9 分、巴薩 3 戰 6 分"
+    },
+    {
+      "title": "Prince William to attend Barcelona vs. Aston Villa at Camp Nou - source",
+      "publisher": "ESPN",
+      "date": "2026-11-03",
+      "url": "https://www.espn.com/soccer/story/_/id/50368442/prince-william-barcelona-vs-aston-villa-camp-nou-source",
+      "note": "消息來源向 ESPN 確認；威廉王子與喬治；5 月歐霸盃決賽在伊斯坦堡"
+    },
+    {
+      "title": "Barcelona lift ban on supporters' group for Aston Villa clash",
+      "publisher": "ESPN",
+      "date": "2026-11-03",
+      "url": "https://www.espn.com/soccer/story/_/id/50367435/barcelona-lift-ban-supporters-group-aston-villa",
+      "note": "Gol 1957 解禁與球團聲明"
+    },
+    {
+      "title": "FC Barcelona will reopen Gol 1957 for the game against Aston Villa",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-02",
+      "url": "https://www.fcbarcelona.com/en/club/news/4603320/fc-barcelona-will-reopen-gol-1957-for-the-game-against-aston-villa",
+      "note": "球團聲明；頁面只標相對時間"
+    },
+    {
+      "title": "Transfer rumors, news: Real Madrid tracking Arsenal's Calafiori",
+      "publisher": "ESPN",
+      "date": "2026-11-03",
+      "url": "https://www.espn.com/soccer/story/_/id/50366900/transfer-rumors-news-real-madrid-tracking-arsenal-calafiori",
+      "note": "轉會欄：Gavi（Romano）、Arnolin（Record）、Calafiori（TEAMtalk）；皆為傳聞"
+    },
+    {
+      "title": "LALIGA EA SPORTS standings",
+      "publisher": "LaLiga",
+      "date": "2026-11-04",
+      "url": "https://www.laliga.com/en-GB/laliga-easports/standing",
+      "note": "台灣時間 11 月 4 日 03:00 前讀取，第 11 輪後：巴薩 30、馬競 28、皇馬 27；ESPN standings 一致"
+    },
+    {
+      "title": "Atlético Madrid - FC Barcelona（比賽頁，LaLiga 第 12 輪）",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-04",
+      "url": "https://www.fcbarcelona.com/en/matches/138391/atletico-fc-barcelona-la-liga-2026-2027",
+      "note": "11 月 8 日 21:00 CET = 台灣 11 月 9 日 04:00；Riyadh Air Metropolitano。頁面無發布日期，日期為讀取日"
+    },
+    {
+      "title": "Challenging November ahead",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-01",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4602385/challenging-november-ahead",
+      "note": "11 月賽程：比利亞雷亞爾 11 月 22 日 14:00 CET、Sabah（巴庫）11 月 25 日無時間、拉科魯尼亞 11 月 28/29 日待定"
+    },
+    {
+      "title": "Harry Kane says new Bayern deal 'extremely close,' will happen in coming days",
+      "publisher": "ESPN",
+      "date": "2026-11-02",
+      "url": "https://www.espn.com/soccer/story/_/id/50360295/harry-kane-hopes-bayern-munich-pass-tough-champions-league-test-madrid",
+      "note": "22:41Z 發布（台灣 11 月 3 日 06:41）；凱恩賽前記者會；孔帕尼由助教代理"
+    },
+    {
+      "title": "West Ham sack Nuno Espírito Santo, Scott Parker set to replace him - sources",
+      "publisher": "ESPN",
+      "date": "2026-11-03",
+      "url": "https://www.espn.com/soccer/story/_/id/50366969/west-ham-sack-nuno-espirito-santo",
+      "note": "11:37Z 發布（台灣 19:37）；帕克接任為消息來源說法，未見俱樂部公告"
+    },
+    {
+      "title": "Argentina sets first call-up without Lionel Messi for November friendlies",
+      "publisher": "ESPN",
+      "date": "2026-11-03",
+      "url": "https://www.espn.com/soccer/story/_/id/50369855/argentina-callup-lionel-messi-november-friendlies",
+      "note": "17:24Z 發布（台灣 11 月 4 日 01:24）"
+    },
+    {
+      "title": "Asian Football Confederation postpones 2027 Asian Cup in Saudi Arabia",
+      "publisher": "ESPN",
+      "date": "2026-11-03",
+      "url": "https://www.espn.com/soccer/story/_/id/50364129/asian-football-confederation-postpones-2027-asian-cup-saudi-arabia",
+      "note": "13:48Z 發布（台灣 21:48）；新日期待國際足總核准"
+    },
+    {
+      "title": "England draw France, Austria, Portugal in Nations League",
+      "publisher": "ESPN／PA",
+      "date": "2026-11-03",
+      "url": "https://www.espn.com/soccer/story/_/id/50368669/england-draw-france-austria-portugal-nations-league",
+      "note": "13:57Z 發布（台灣 21:57）；女子歐洲國家聯賽 A 級分組"
+    },
+    {
+      "title": "Hansi Flick, Honorary Ramblista 2026",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-02",
+      "url": "https://www.fcbarcelona.com/en/club/news/4603224/hansi-flick-honorary-ramblista-2026",
+      "note": "頁面只寫 Monday afternoon，日期依該站 11 月 2 日列表；無 Flick 直接引文，僅轉述影片致詞"
+    },
+    {
+      "title": "Scott McTominay returns to Scotland squad months after undergoing heart surgery",
+      "publisher": "ESPN／PA",
+      "date": "2026-11-03",
+      "url": "https://www.espn.com/soccer/story/_/id/50367900/scott-mctominay-returns-scotland-squad-heart-surgery",
+      "note": "18:26Z 發布（台灣 11 月 4 日 02:26）"
+    },
+    {
+      "title": "Ryan Gravenberch out of Liverpool's clash with Fenerbahce with heel injury",
+      "publisher": "ESPN／PA",
+      "date": "2026-11-03",
+      "url": "https://www.espn.com/soccer/story/_/id/50368628/ryan-gravenberch-liverpool-champions-league-heel-injury-fenerbahce",
+      "note": "13:59Z 發布（台灣 21:59）"
+    }
+  ]
+}
