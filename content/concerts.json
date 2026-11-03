@@ -1,35 +1,6 @@
 {
-  "checked": "2026-11-03",
+  "checked": "2026-11-04",
   "events": [
-    {
-      "id": "olafsson-recital-2026",
-      "title": "歐拉夫森鋼琴獨奏會",
-      "kind": "獨奏",
-      "rating": 4,
-      "why": "歐拉夫森整場只排E小調與E大調的作品，巴哈、貝多芬、舒伯特交錯，一氣呵成不設中場。這種排法本身就是一個主張。",
-      "who": "維京格．歐拉夫森（鋼琴）",
-      "program": "巴哈《E大調前奏曲》、貝多芬第27號與第30號鋼琴奏鳴曲、巴哈《第六號鍵盤組曲》、舒伯特《E小調鋼琴奏鳴曲》D 566",
-      "note": "演前 40 分鐘開放入場，有導聆",
-      "shows": [
-        {
-          "date": "2026-11-03",
-          "time": "19:30",
-          "city": "台北",
-          "venue": "國家音樂廳",
-          "tickets": "https://www.opentix.life/program/2064685082194972673"
-        }
-      ],
-      "added": "2026-11-01",
-      "uids": [
-        "6a3181c626b3243414ccd359"
-      ],
-      "sources": [
-        {
-          "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/program/2064685082194972673"
-        }
-      ]
-    },
     {
       "id": "nso-markl-jackiw-2026",
       "title": "馬寇爾、賈基夫與NSO",
@@ -779,6 +750,63 @@
         {
           "title": "OPENTIX 節目頁",
           "url": "https://www.opentix.life/program/2109223228739743745"
+        }
+      ]
+    },
+    {
+      "id": "vilnius-state-choir-2026",
+      "title": "立陶宛維爾紐斯國家合唱團",
+      "kind": "合唱",
+      "rating": 3,
+      "why": "成軍 1970 年的立陶宛國家合唱團首度來台，整場唱當代立陶宛作曲家的合唱作品，台灣舞台上少有這樣的曲目。",
+      "who": "阿爾圖拉斯．丹布勞斯卡斯（指揮）、維爾紐斯國家合唱團",
+      "program": "當代立陶宛作曲家的合唱作品，包括宗教音樂與關於自然、愛與家鄉的作品",
+      "shows": [
+        {
+          "date": "2026-12-15",
+          "time": "19:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院大劇院",
+          "tickets": "https://www.opentix.life/program/2114926880582537216"
+        }
+      ],
+      "added": "2026-11-04",
+      "uids": [
+        "6ae37f3326b3245efc753745"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2114926880582537216"
+        }
+      ]
+    },
+    {
+      "id": "schilli-ntso-winds-2027",
+      "title": "席利與國臺交管樂室內樂",
+      "kind": "室內樂",
+      "rating": 3,
+      "why": "巴伐利亞廣播交響樂團的首席雙簧管席利，帶國臺交的管樂手吹克羅梅爾、楊納切克與德佛札克的管樂作品，德佛札克《D 小調管樂小夜曲》是主菜。",
+      "who": "斯特凡．席利（雙簧管）、國立臺灣交響樂團管樂、法國號、大提琴與低音大提琴團員",
+      "program": "克羅梅爾《C 大調八重奏》、楊納切克《青春》、德佛札克《D 小調管樂小夜曲》",
+      "price": "NT$300–1,000",
+      "shows": [
+        {
+          "date": "2027-03-31",
+          "time": "19:30",
+          "city": "台中",
+          "venue": "國立臺灣交響樂團演奏廳",
+          "tickets": "https://www.opentix.life/program/2079214053353934848"
+        }
+      ],
+      "added": "2026-11-04",
+      "uids": [
+        "6a6a32d426b32427d06042ef"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2079214053353934848"
         }
       ]
     }
