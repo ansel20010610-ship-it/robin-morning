@@ -121,20 +121,9 @@ button { font: inherit; color: inherit; }
    is in (an archive issue, or offline with nothing kept, never shows it). */
 .wetter { margin: 22px 0 -8px; }
 .wetter[hidden] { display: none; }
-:is(.wetter, .werk) .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; padding-bottom: 5px; border-bottom: 1px solid var(--ink); }
-:is(.wetter, .werk) .lbl .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 14px; margin-left: 8px; color: var(--gold); }
+:is(.wetter) .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; padding-bottom: 5px; border-bottom: 1px solid var(--ink); }
+:is(.wetter) .lbl .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 14px; margin-left: 8px; color: var(--gold); }
 .wetter .fc { font-family: var(--sans); font-size: 15px; line-height: 1.7; color: var(--ink); letter-spacing: .03em; padding: 10px 0 11px; border-bottom: 1px solid var(--rule); }
-/* 今日之作 (app.js werkOf/werkCard/fillDevelop): the day's picture as a print in the darkroom. --dev 0→1 (the share of
-   the issue read) lifts the blur, the sepia and the pallor off the image; developed, the plate's hairline is gold. The
-   note under the card says how many articles are left. The section's label row matches the weather box's. */
-.werk { margin: 22px 0 -8px; }
-.werk .lead { padding-top: 10px; }
-.lead.develop .ph { position: relative; border: 1px solid var(--rule); }
-.lead.develop.developed .ph { border-color: var(--gold); }
-/* .lead.develop outranks the dark-mode img filter (:root:not(…) img) and the lead's own rules. */
-.lead.develop .ph img { filter: blur(calc((1 - var(--dev, 0)) * 11px)) saturate(calc(.2 + var(--dev, 0) * .8)) sepia(calc((1 - var(--dev, 0)) * .55)) brightness(calc(.8 + var(--dev, 0) * .2)) contrast(calc(.8 + var(--dev, 0) * .2)); transform: scale(calc(1.06 - var(--dev, 0) * .06)); }
-.develop .dev-note { display: block; margin-top: 8px; font-family: var(--sans); font-size: 11.5px; letter-spacing: .14em; color: var(--gold-ink); }
-.develop.developed .dev-note { color: var(--muted); }
 .wetter .row { display: flex; flex-wrap: wrap; align-items: center; gap: 0; }
 .wetter .w { white-space: nowrap; }
 .wetter .two { font-size: 13.5px; color: var(--muted); }
@@ -819,7 +808,6 @@ img.img-off { visibility: hidden; }
     animation: line-run 1.2s calc(var(--d, 0ms) + .35s) cubic-bezier(.3,.7,.2,1) both; }
   @keyframes line-run { 0% { transform: scaleX(0); opacity: 1; } 55% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: 0; } }
   .lead.rv.in .ph img { animation: kenburns 3.6s var(--d, 0ms) cubic-bezier(.2,.6,.2,1) both; }
-  .lead.develop.rv.in .ph img { animation: none; } /* the darkroom print keeps its own filter; Ken Burns would end it sharp */
   @keyframes kenburns { from { transform: scale(1.22); filter: saturate(.6) brightness(1.15); } to { transform: none; filter: none; } }
   .lead.rv.in .ph::after { content: ""; position: absolute; inset: 10px; border: 1.5px solid var(--foil-hi); pointer-events: none; z-index: 1;
     box-shadow: inset 0 0 0 4px transparent, inset 0 0 0 5px color-mix(in srgb, var(--foil-hi) 60%, transparent);
@@ -906,10 +894,6 @@ img.img-off { visibility: hidden; }
   .masthead .dateline { animation-delay: 1.15s; }
   .wetter .row { animation: page-in .6s both; } /* the forecast lands whenever it arrives, the second line a beat after */
   .wetter .two { animation-delay: .12s; }
-  /* 今日之作: the print develops over a breath when the page returns with more read (app.js fillDevelop sets --dev a
-     frame after the draw); the hairline gilds with it. */
-  .lead.develop .ph img { transition: filter 1.8s cubic-bezier(.3, .6, .2, 1), transform 1.8s cubic-bezier(.3, .6, .2, 1); }
-  .lead.develop .ph { transition: border-color .6s 1.2s; }
   /* 排字 — the verse is set the way a compositor fills a line: once the dateline is in (1.3s), each glyph drops into
      place from a little above, gold and glowing first, and cools to ink as it lands; the next follows --step later
      (app.js: 45ms, shorter for a long verse, so the whole line is set within .7s). When the last has landed (--end)

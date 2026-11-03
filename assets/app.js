@@ -230,40 +230,6 @@ function fillWeather() {
     if (html && box.isConnected) { box.querySelector(".fc").innerHTML = html; box.hidden = false; }
   });
 }
-// 今日之作 (Werk des Tages) — the darkroom: today's picture hangs on the front page as a print still developing. It is
-// the hero of today's 走進一件作品 or 推開一座古蹟的門 (else any painting, hero.kind artwork, else the lead's own), shown
-// as its article's card — blurred, pale and sepia at first, and sharpening a step with every article of the issue the
-// reader finishes (readSet), until, with the last, it stands clear and its hairline turns gold. The picture's article
-// is promoted to this card and left out of 副刊, so nothing is shown twice; when the picture is the lead's, the lead
-// card itself develops. --dev (0–1) drives the CSS filter; rm.develop keeps the last level of the day so a return to
-// the page develops from there (a transition in the motion block), not from scratch; the first draw of a day, and
-// reduced motion, show the state as it is. Pure from state: every redraw computes it afresh.
-const WERK_COLS = new Set(["artwork", "architecture"]);
-function werkOf(issue, arts) {
-  if (!todays(issue)) return null;
-  const src = (a) => a?.hero?.src, lead = arts.find((a) => col(a.column, issue.date).group === "main");
-  return arts.find((a) => WERK_COLS.has(a.column) && src(a)) || arts.find((a) => a.hero?.kind === "artwork" && src(a)) || (src(lead) ? lead : null);
-}
-// The level: finished articles over the articles listed (the watch items only with a brief), and the words under the card.
-function develop(issue, arts, read) {
-  const listed = arts.filter((a) => col(a.column, issue.date).group !== "watch" || a.brief);
-  const left = listed.filter((a) => !read.has(`${issue.date}/${a.column}`)).length;
-  const dev = listed.length ? (listed.length - left) / listed.length : 1;
-  const kept = store.get("develop", null), was = kept?.date === issue.date ? Number(kept.dev) : null;
-  store.set("develop", { date: issue.date, dev });
-  return { dev, from: was !== null && !calm() && was !== dev ? was : null,
-    note: left ? `顯影中・還有 ${left} 篇` : "顯影完成" };
-}
-// The card: the lead's markup with the darkroom classes; `from` is the level to start the transition at (fillDevelop).
-function werkCard(issue, a, read, d) {
-  const pm = posMark(issue.date, a, read);
-  return `<a class="lead develop${d.dev >= 1 ? " developed" : ""}${pm.cls}" style="--dev:${(d.from ?? d.dev).toFixed(3)}"${d.from !== null ? ` data-dev="${d.dev.toFixed(3)}"` : ""}${pm.st ? " " + pm.st.trim() : ""} href="#/a/${issue.date}/${a.column}">${thumb(a, "ph")}${kicker(a.column, false, issue.date)}<h3>${esc(a.title)}</h3>${summary(a)}${metaLine(issue.date, a, read)}<span class="dev-note">${d.note}</span></a>`;
-}
-// After the draw: a card that has a level to develop to moves there on the next frame, so the filter transitions.
-function fillDevelop() {
-  const card = main.querySelector(".develop[data-dev]");
-  if (card) requestAnimationFrame(() => requestAnimationFrame(() => { card.style.setProperty("--dev", card.dataset.dev); if (Number(card.dataset.dev) >= 1) card.classList.add("developed"); }));
-}
 // 排字: the verse is set a glyph at a time (style.css typeset), each code point in its own <i> numbered for its delay.
 // The glyphs stay inline — not inline-block — so line breaking, hanging punctuation and text-spacing-trim are those of
 // plain text and the paragraph takes exactly the same lines. --step shrinks for a long verse so the whole run lands
@@ -338,8 +304,6 @@ function viewFront(dateParam) {
   const supps = arts.filter((a) => col(a.column, issue.date).group === "supplement");
   const watch = arts.filter((a) => col(a.column, issue.date).group === "watch");
   const lead = mains[0];
-  const werk = werkOf(issue, arts), dev = werk ? develop(issue, arts, read) : null;
-  if (werk && werk !== lead) { const i = supps.indexOf(werk); if (i >= 0) supps.splice(i, 1); }
   // Druckfrisch: the latest issue, opened for the first time on this device (rm.opened, the last 60 dates), comes off
   // the press (motion.js pressRun). Every later visit — a redraw at 07:30, iOS waking the app, a step back from an
   // article — plays only the masthead's own entrance. Not under ?preview: looking at tomorrow's issue early must not
@@ -354,9 +318,8 @@ function viewFront(dateParam) {
     ${prayerBox(issue)}
     ${lockMode() ? lockBar(arts, issue.date) : ""}
     ${weatherBox(issue)}
-    ${werk && werk !== lead ? `<section class="werk"><div class="lbl">今日之作<span class="de">Werk des Tages</span></div>${werkCard(issue, werk, read, dev)}</section>` : ""}
     ${mains.length ? `<div class="sec-head"><h2>正刊</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
-    ${!lead ? "" : werk === lead ? werkCard(issue, lead, read, dev) : `<a class="lead${posMark(issue.date, lead, read).cls}"${posMark(issue.date, lead, read).st} href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column, false, issue.date)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>`}
+    ${lead ? `<a class="lead${posMark(issue.date, lead, read).cls}"${posMark(issue.date, lead, read).st} href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column, false, issue.date)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
     ${mains.slice(1).map((a) => itemCard(issue.date, a, read)).join("")}
     ${supps.length ? `<div class="sec-head"><h2>副刊</h2><span class="de">Feuilleton</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
@@ -373,7 +336,6 @@ function viewFront(dateParam) {
   prefetch(issue);
   wireDigest(issue);
   fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
-  fillDevelop();
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
 }
 
