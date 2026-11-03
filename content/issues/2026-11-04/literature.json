@@ -1,0 +1,310 @@
+{
+  "column": "literature",
+  "date": "2026-11-04",
+  "title": "當了作者的死人",
+  "dek": "1881 年的巴西小說，敘事者自稱已經死了，送到墓地的朋友有 11 位。他選擇從死亡寫起，理由之一是這樣比較別緻、新鮮。",
+  "brief": "布拉斯・庫巴斯死於 1869 年，送他到墓地的朋友有 11 位。他說自己不是已故的作者，而是當了作者的死人。書裡他寫童年把家中的黑奴小孩當馬騎，也寫那孩子獲得自由後，在廣場上鞭打自己買來的奴隸。",
+  "topic_key": "literature:machado-bras-cubas-1881-i",
+  "updated_at": "2026-11-04T03:03:00+08:00",
+  "spoiler": "本文後段談到《布拉斯・庫巴斯死後回憶錄》最後一章與最後一句",
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Mem%C3%B3rias_P%C3%B3sthumas_de_Braz_Cubas.djvu/page13-1280px-Mem%C3%B3rias_P%C3%B3sthumas_de_Braz_Cubas.djvu.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Mem%C3%B3rias_P%C3%B3sthumas_de_Braz_Cubas.djvu/page13-1280px-Mem%C3%B3rias_P%C3%B3sthumas_de_Braz_Cubas.djvu.jpg",
+    "width": 1280,
+    "height": 2207,
+    "alt": "一頁舊書。書名 MEMORIAS POSTHUMAS DE BRAZ CUBAS、CAPITULO I 與標題 Obito do autor，以及一段葡萄牙文正文。",
+    "caption": "《布拉斯・庫巴斯死後回憶錄》1881 年里約熱內盧初版第 9 頁，第 1 章〈作者之死〉的第一段，含「um autor defunto, mas um defunto autor」，並提到摩西與摩西五經。",
+    "credit": "馬查多・德・阿西斯著，Typographia Nacional 印行；聖保羅大學 Biblioteca Brasiliana Guita e José Mindlin 數位化（BBM Digital），影像經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mem%C3%B3rias_P%C3%B3sthumas_de_Braz_Cubas.djvu?page=13",
+    "made": "1881"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "「獻給第一隻啃食我屍體冷肉的蟲，謹以這部死後回憶錄，作為思念的紀念。」這是 1881 年初版第 vii 頁的獻詞。這部回憶錄的敘事者自稱已經死了。"
+    },
+    {
+      "type": "p",
+      "text": "他叫布拉斯・庫巴斯，1869 年 8 月某個星期五下午兩點死在卡通比的莊園，大約 64 歲，單身。送他到墓地的朋友有 11 位，他自己驚呼：「十一個朋友！」又補了一句，說是因為沒發訃聞。那天下著細雨，一位朋友在墳前致詞，說大自然在為逝者哭泣。布拉斯的評語是：好朋友！他不後悔留給那人 20 張公債。"
+    },
+    {
+      "type": "p",
+      "text": "這是巴西作家馬查多・德・阿西斯（Machado de Assis）的小說《布拉斯・庫巴斯死後回憶錄》（Memórias Póstumas de Brás Cubas）第 1 章。小說 1880 年在期刊《Revista Brasileira》連載，1881 年 1 月出書，全書 160 章。他說自己死於肺炎，真正的死因卻是「一個偉大而有用的念頭」：發明一種抗憂鬱膏藥。他承認，主要動機是想看見「布拉斯・庫巴斯膏藥」幾個字印在報紙和藥盒上。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Memorias_Posthumas_de_Braz_Cubas.jpg",
+      "width": 445,
+      "height": 744,
+      "alt": "一本書的書名頁，印有 MEMORIAS POSTHUMAS DE BRAZ CUBAS，另有手寫題字與編號章。",
+      "caption": "《布拉斯・庫巴斯死後回憶錄》的一冊書名頁。題字讀作「A Bibliotheca Nacional offerece Machado di Assis」，據 Commons 說明稱可能為作者親筆。",
+      "credit": "巴西國家圖書館（Biblioteca Nacional）網站影像，Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Memorias_Posthumas_de_Braz_Cubas.jpg",
+      "made": "1908 年以前（Commons 說明）"
+    },
+    {
+      "type": "p",
+      "text": "第 1 章一開頭，他說自己猶豫過，這部回憶錄該從出生寫起，還是從死亡寫起。他選了死亡，理由有兩個。"
+    },
+    {
+      "type": "quote",
+      "original": "Supposto o uso vulgar seja começar pelo nascimento, duas considerações me levaram a adoptar differente methodo: a primeira é que eu não sou propriamente um autor defunto, mas um defunto autor, para quem a campa foi outro berço; a segunda é que o escripto ficaria assim mais galante e mais novo. Moysés, que tambem contou a sua morte, não a poz no introito, mas no cabo: differença radical entre este livro e o Pentateuco.",
+      "text": "一般的習慣固然是從出生講起，有兩點考量卻讓我採取了不同的辦法：第一，嚴格說來，我不是一個已故的作者，而是一個當了作者的死人，對這樣的人來說，墳墓是另一個搖籃；第二，這樣寫會更別緻、更新鮮。摩西也講了自己的死，但他沒把它放在開頭，而是放在結尾：這是本書和摩西五經的根本差別。",
+      "cite": "馬查多・德・阿西斯，《布拉斯・庫巴斯死後回憶錄》第 1 章，1881 年初版第 9 頁"
+    },
+    {
+      "type": "h",
+      "text": "兩個字的順序"
+    },
+    {
+      "type": "p",
+      "text": "他把 autor defunto 與 defunto autor 兩個詞對調。ABR 書評的英譯是「not exactly an author recently deceased, but a deceased man recently an author」。"
+    },
+    {
+      "type": "p",
+      "text": "他說，對這樣的人，墳墓是另一個搖籃；第二個理由是這樣寫比較別緻、比較新鮮。他在卷首〈致讀者〉寫道：這是「死人的作品」，用嘲諷的筆和憂鬱的墨寫成。"
+    },
+    {
+      "type": "p",
+      "text": "第 1 章裡，他還用英文引了哈姆雷特那個「未知的國度」，說自己走向那裡，沒有年輕王子的焦慮和疑惑，只是慢吞吞、腳步不穩，像一個很晚才從戲院散場的人。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.08,
+        0.67,
+        0.84,
+        0.18
+      ],
+      "position": "第 1 章第一段的後半",
+      "caption": "初版裡的原句，含 autor defunto 與 defunto autor，後面接著 Moysés 與 Pentateuco。"
+    },
+    {
+      "type": "h",
+      "text": "申命記最後八節"
+    },
+    {
+      "type": "p",
+      "text": "兩個理由後面，他接著把摩西拉進來：摩西也講了自己的死，只是放在書尾，不放在開頭，他說這是這本書和摩西五經的根本差別。摩西寫下自己的死，是布拉斯的說法；這在傳統上是有爭議的問題。"
+    },
+    {
+      "type": "p",
+      "text": "申命記 34 章寫：「於是，耶和華的僕人摩西死在摩押地，正如耶和華所說的。」他死時 120 歲，「只是到今日沒有人知道他的墳墓」。《巴比倫塔木德・末門書》記下一條傳承：摩西寫了自己的書，也就是妥拉；約書亞寫了自己的書，還有妥拉裡的八節。"
+    },
+    {
+      "type": "p",
+      "text": "拉比猶大問：摩西死了，怎麼可能自己寫「摩西死在那裡」？所以寫到這裡是摩西，之後是約書亞。拉比西緬不接受：妥拉怎麼可能少一個字？他說到這裡為止，是神說、摩西複述並寫下；從這裡往後，神說，摩西含著淚寫。"
+    },
+    {
+      "type": "p",
+      "text": "拉夫說，妥拉最後八節在會堂由一個人讀完，不分給兩個人。塔木德解釋，就算照拉比西緬的說法，這八節是摩西含淚寫的，也和前面不同。"
+    },
+    {
+      "type": "h",
+      "text": "沒有觀眾了"
+    },
+    {
+      "type": "quote",
+      "original": "Talvez espante ao leitor a franqueza com que lhe exponho e realço a minha mediocridade; advirta que a franqueza é a primeira virtude de um defunto.",
+      "text": "我這樣坦白地攤開、甚至凸顯自己的平庸，讀者也許會吃驚；請注意，坦白是死人的第一美德。",
+      "cite": "《布拉斯・庫巴斯死後回憶錄》第 24 章，1881 年初版第 89 頁"
+    },
+    {
+      "type": "p",
+      "text": "他說，活著的時候，輿論的眼光、利益和貪念的衝突，逼人把舊衣服的破洞和補丁藏好；死了就可以脫掉斗篷、丟掉亮片，因為再也沒有鄰居、朋友、敵人、熟人、陌生人，「沒有觀眾了」。輿論那道「敏銳而像法官的眼光」，一踏進死亡的領地就失效；它也許還會望過來、審視、評判，但我們不在乎那審視與評判。"
+    },
+    {
+      "type": "p",
+      "text": "這一章最後一句是對活人說的：「活著的各位，世上沒有什麼比死人的輕蔑更無邊無際。」"
+    },
+    {
+      "type": "h",
+      "text": "每天的馬"
+    },
+    {
+      "type": "p",
+      "text": "第 11 章，他回憶童年。五歲起，他就有個綽號叫「小魔鬼」。六歲那年，一個女奴不給他一匙椰子甜點，他打破她的頭，往鍋裡撒灰，再向母親誣告，說她故意弄壞甜點。"
+    },
+    {
+      "type": "p",
+      "text": "家裡的黑奴小孩普魯登修（Prudencio）是他「每天的馬」：雙手著地，嘴裡套一條繩子當韁繩，布拉斯騎上去，拿細棍抽他。普魯登修有時呻吟一聲「哎，少爺！」，布拉斯回他：「閉嘴，畜生！」父親在人前責備他，只是形式，私下還親他。"
+    },
+    {
+      "type": "p",
+      "text": "第 68 章，布拉斯在 Valongo 看見一個黑人在廣場上鞭打另一個黑人。挨打的人一直求饒：「不，饒了我，老爺。」打人的每聽一次求饒，就再回一鞭，嘴上罵：「拿去，魔鬼！……再多拿點饒恕，醉鬼！」挨打的人又喊了一聲「老爺！」，打人的回他：「閉嘴，畜生！」"
+    },
+    {
+      "type": "p",
+      "text": "打人的是普魯登修。布拉斯的父親幾年前已經讓他自由，挨打的是他買來的奴隸。布拉斯叫他饒了那人，普魯登修答：「少爺是命令，不是請求。」"
+    },
+    {
+      "type": "p",
+      "text": "布拉斯說，這段插曲外表陰沉，往裡切開，卻有一個逗趣、精巧，甚至深刻的核心：普魯登修是把挨過的打轉給別人，還附上高利。這是布拉斯的解釋，普魯登修自己沒這麼說。他用一句「看這小子多精！」結束這一章。"
+    },
+    {
+      "type": "p",
+      "text": "巴西評論家施瓦茲（Roberto Schwarz）有一本研究馬查多的專書。照出版社的介紹，他特別聚焦在這部小說，主張馬查多的文風既複製、也揭露了 19 世紀巴西根深柢固的階級分裂，也指出小說的語氣和題材變化無常。介紹還說，馬查多得以拿一些令人不舒服的真相，去面對 19 世紀一些顯赫的意識形態，這些真相中不容忽視的一項，是奴隸制仍是巴西經濟的基礎。"
+    },
+    {
+      "type": "p",
+      "text": "小說 1881 年出版時，巴西的奴隸制仍然合法，要到 1888 年 5 月 13 日才以《黃金法》廢除。"
+    },
+    {
+      "type": "p",
+      "text": "依我看，布拉斯寫自己騎在普魯登修背上，和寫「看這小子多精」，用的是同一種輕快。",
+      "tag": "推論"
+    },
+    {
+      "type": "spoiler",
+      "text": "以下談到最後一章與全書最後一句"
+    },
+    {
+      "type": "h",
+      "text": "一點結餘"
+    },
+    {
+      "type": "p",
+      "text": "最後一章叫〈否定〉。布拉斯列出沒做到的事：膏藥沒讓他出名，沒當上部長，沒當上哈里發，沒結婚。另一邊也有好運：他不必「汗流滿面」去換麵包。這句讓我想到創世記 3:19 的「你必汗流滿面才得糊口」；布拉斯把免掉這件事記成一樁好運。"
+    },
+    {
+      "type": "p",
+      "text": "到了「神祕的另一邊」，他發現自己還有一點小小的結餘。第一個英譯本 1952 年出版，書名叫《一個小贏家的墓誌銘》（Epitaph of a Small Winner），我猜就是從這筆結餘來的。"
+    },
+    {
+      "type": "quote",
+      "original": "Não tive filhos, não transmitti a nenhuma creatura o legado da nossa miseria.",
+      "text": "我沒有孩子，沒有把我們這份悲慘的遺產傳給任何一個生命。",
+      "cite": "《布拉斯・庫巴斯死後回憶錄》第 160 章，1881 年初版第 389 頁"
+    },
+    {
+      "type": "facts",
+      "title": "作品與版本",
+      "items": [
+        [
+          "作者",
+          "馬查多・德・阿西斯（Machado de Assis，1839–1908）"
+        ],
+        [
+          "作品",
+          "《布拉斯・庫巴斯死後回憶錄》（Memorias Posthumas de Braz Cubas；今拼 Memórias Póstumas de Brás Cubas），160 章"
+        ],
+        [
+          "首次發表",
+          "1880 年 3 月至 12 月連載於《Revista Brasileira》；1881 年 1 月里約熱內盧 Typographia Nacional 出單行本"
+        ],
+        [
+          "本文依據的版本",
+          "1881 年初版：聖保羅大學 BBM Digital 掃描（Wikimedia Commons DjVu 檔）與 Project Gutenberg #54829 轉錄"
+        ],
+        [
+          "章節與頁碼（1881 年初版）",
+          "〈致讀者〉第 v 頁；獻詞第 vii 頁；第 1 章〈作者之死〉第 9 頁起；第 24 章第 89 頁；第 160 章〈否定〉第 388–389 頁；第 11、68 章依章次引述"
+        ],
+        [
+          "經文",
+          "申命記 34:5–7、創世記 3:19 用和合本"
+        ],
+        [
+          "中譯",
+          "小說引文皆為本報所譯"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Memorias Posthumas de Braz Cubas（eBook #54829，據 1881 年 Typographia Nacional 初版轉錄）",
+      "publisher": "Project Gutenberg",
+      "date": "2017-06-02",
+      "url": "https://www.gutenberg.org/ebooks/54829",
+      "note": "〈Ao leitor〉、獻詞、第 1、2、11、24、68、160 章；2024-10-23 更新版"
+    },
+    {
+      "title": "File:Memórias Pósthumas de Braz Cubas.djvu（1881 年初版掃描）",
+      "publisher": "Wikimedia Commons／BBM Digital（Biblioteca Brasiliana Guita e José Mindlin, USP）",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Mem%C3%B3rias_P%C3%B3sthumas_de_Braz_Cubas.djvu",
+      "note": "DjVu 第 11 頁＝獻詞（p. vii）、第 13 頁＝第 1 章（p. 9）、第 93 頁＝p. 89、第 392–393 頁＝第 160 章（pp. 388–389）、第 395 頁起為目錄；以掃描逐字核對引文"
+    },
+    {
+      "title": "File:Memorias Posthumas de Braz Cubas.jpg",
+      "publisher": "Wikimedia Commons（原圖出自巴西國家圖書館網站）",
+      "date": "2006-12-06",
+      "url": "https://commons.wikimedia.org/wiki/File:Memorias_Posthumas_de_Braz_Cubas.jpg",
+      "note": "說明：題字「A Bibliotheca Nacional offerece Machado di Assis」，reportedly 為作者親筆；Commons 只說出版於 1908 年以前"
+    },
+    {
+      "title": "Memórias Póstumas de Brás Cubas",
+      "publisher": "The Machado de Assis Digital Corpus Project, Brigham Young University",
+      "date": "",
+      "url": "https://machado.byu.edu/?p=99",
+      "note": "1880 年 3 月至 12 月連載於 Revista Brasileira；1881 年 1 月出書"
+    },
+    {
+      "title": "Bava Batra 14b–15a（William Davidson 版英譯）",
+      "publisher": "Sefaria",
+      "date": "",
+      "url": "https://www.sefaria.org/Bava_Batra.15a.4",
+      "note": "14b.12 約書亞寫妥拉八節；15a.4 拉比猶大；15a.5 拉比西緬：摩西含淚寫（בְּדֶמַע）；15a.6 最後八節由一人讀"
+    },
+    {
+      "title": "申命記 34:5–7；創世記 3:19（和合本）",
+      "publisher": "信望愛聖經工具 FHL",
+      "date": "",
+      "url": "https://bible.fhl.net/new/read.php?chineses=%E7%94%B3&chap=34",
+      "note": "2026-11-04 以 scripts/bible.py 核對"
+    },
+    {
+      "title": "The Posthumous Memoirs of Brás Cubas by Machado de Assis, translated by Flora Thomson-DeVeaux",
+      "publisher": "Australian Book Review（Andrew McLeod），no. 425",
+      "date": "2020-10",
+      "url": "https://www.australianbookreview.com.au/abr-online/archive/2020/october-2020-no-425/andrew-mcleod-reviews-the-posthumous-memoirs-of-bras-cubas-by-machado-de-assis-translated-by-flora-thomson-deveaux",
+      "note": "公開部分：引 not exactly an author recently deceased, but a deceased man recently an author；160 short, titled chapters；馬查多生卒年"
+    },
+    {
+      "title": "A Master on the Periphery of Capitalism: Machado de Assis（Roberto Schwarz 著，John Gledson 譯）",
+      "publisher": "Duke University Press",
+      "date": "2001-12",
+      "url": "https://www.dukeupress.edu/a-master-on-the-periphery-of-capitalism",
+      "note": "依出版社書介，未讀全書；書介的主詞是作者（Schwarz），聚焦在這部小說"
+    },
+    {
+      "title": "Lei Áurea",
+      "publisher": "English Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Lei_%C3%81urea",
+      "note": "1888 年 5 月 13 日簽署，廢除巴西奴隸制"
+    },
+    {
+      "title": "The Posthumous Memoirs of Brás Cubas",
+      "publisher": "English Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/The_Posthumous_Memoirs_of_Br%C3%A1s_Cubas",
+      "note": "英譯史：1952 年 William L. Grossman《Epitaph of a Small Winner》；1997 年 Rabassa；2020 年 Thomson-DeVeaux（Penguin Classics）與 Jull Costa、Patterson（Liveright）"
+    },
+    {
+      "title": "Hit no TikTok: “Brás Cubas” é o livro mais vendido em categoria da Amazon; entenda",
+      "publisher": "InfoMoney",
+      "date": "2024-05-21",
+      "url": "https://www.infomoney.com.br/consumo/hit-no-tiktok-bras-cubas-e-o-livro-mais-vendido-em-categoria-da-amazon-entenda/",
+      "note": "影片作者 Courtney Henning Novak；5 月 21 日查美國亞馬遜拉丁美洲與加勒比海文學類第一；她說可能是新的最愛、要學葡萄牙文（報導的葡文轉述）"
+    },
+    {
+      "title": "‘Brás Cubas’ fica em 2º lugar na lista de mais vendidos da Amazon",
+      "publisher": "O Povo（Eduarda Porfírio）",
+      "date": "2024-05-21",
+      "url": "https://www.opovo.com.br/vidaearte/2024/05/21/bras-cubas-fica-em-2-lugar-na-lista-de-mais-vendidos-da-amazon.html",
+      "note": "影片超過 40 萬次觀看；Read Around the World 依字母順序每國讀一本；同日報導排名第二"
+    }
+  ]
+}
