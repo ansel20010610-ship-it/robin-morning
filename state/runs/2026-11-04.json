@@ -25,5 +25,10 @@
       "news"
     ],
     "note": "football 初稿（德米格爾過世頭條）與 literature（布拉斯・庫巴斯）完成，審稿、總編重寫、忠實度核對均已做"
+  },
+  "4": {
+    "finished_at": "2026-11-04T06:01:16+08:00",
+    "missing": [],
+    "note": "news 新寫並審稿；football 賽後版（3 比 0 維拉）已審稿修正、略過總編重寫；兩觀測站皆靜默（FM：11-04 預購提醒無新事實；Sanderson：無影視新進展）；快訊用 aljazeera.com、dw.com、rti.org.tw；實測 pts、france24 RSS 可讀（france24 文章頁被擋）、cna／focustaiwan／nhk 404"
   }
 }
