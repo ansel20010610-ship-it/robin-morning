@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-02",
+  "checked": "2026-11-03",
   "events": [
     {
       "id": "olafsson-recital-2026",
@@ -237,6 +237,34 @@
       ]
     },
     {
+      "id": "garcia-garcia-ksso-2026",
+      "title": "賈西亞與高市交：李斯特與蕭士塔高維契",
+      "kind": "協奏曲",
+      "rating": 4,
+      "why": "馬丁．賈西亞．賈西亞彈李斯特第一號鋼琴協奏曲，後半場是蕭士塔高維契第十號交響曲，楊智欽指揮高市交。",
+      "who": "馬丁．賈西亞．賈西亞（鋼琴）、楊智欽（指揮）、高雄市交響樂團",
+      "program": "李斯特《死之舞》、《第一號鋼琴協奏曲》；蕭士塔高維契《第十號交響曲》",
+      "shows": [
+        {
+          "date": "2026-11-22",
+          "time": "14:30",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳",
+          "tickets": "https://www.opentix.life/program/2086778741904691201"
+        }
+      ],
+      "uids": [
+        "6a8490f526b32427d0604417"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2086778741904691201"
+        }
+      ],
+      "added": "2026-11-02"
+    },
+    {
       "id": "mahler8-nso-2026",
       "title": "馬勒第八，千人",
       "kind": "交響樂",
@@ -320,6 +348,69 @@
       "added": "2026-11-02"
     },
     {
+      "id": "didonato-recital-2026",
+      "title": "狄杜娜朵冬日音樂會",
+      "kind": "聲樂",
+      "rating": 5,
+      "why": "次女高音狄杜娜朵來台灣開獨奏會，鋼琴是泰瑞，曲目是比才、羅西尼、聖桑的歌劇選段，加上爵士風格的義大利古歌曲。",
+      "who": "喬伊斯．狄杜娜朵（次女高音）、克雷格．泰瑞（鋼琴）",
+      "program": "比才、海頓清唱劇《納克索斯島的阿莉安娜》、羅西尼、聖桑的歌劇選段，及義大利古歌曲",
+      "shows": [
+        {
+          "date": "2026-12-05",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2082425418452361217"
+        }
+      ],
+      "uids": [
+        "6a91c05c26b32434f4358075"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2082425418452361217"
+        }
+      ],
+      "added": "2026-11-02"
+    },
+    {
+      "id": "van-zweden-goerne-eso-2026",
+      "title": "梵志登與葛納、長榮交響樂團",
+      "kind": "交響樂",
+      "rating": 4,
+      "why": "梵志登帶長榮交響樂團，baritone 葛納唱舒伯特與理查．史特勞斯的藝術歌曲，壓軸蕭士塔高維契第九號。",
+      "who": "梵志登（指揮）、馬提亞斯．葛納（男中音）、長榮交響樂團",
+      "program": "貝多芬《科利奧蘭序曲》、舒伯特與理查．史特勞斯藝術歌曲（含〈暮色中〉）、蕭士塔高維契《第九號交響曲》",
+      "shows": [
+        {
+          "date": "2026-12-11",
+          "time": "19:30",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳",
+          "tickets": "https://www.opentix.life/program/2102976712891215872"
+        },
+        {
+          "date": "2026-12-13",
+          "time": "14:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2102976712891215872"
+        }
+      ],
+      "uids": [
+        "6abe953a26b324165c32e56f"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2102976712891215872"
+        }
+      ],
+      "added": "2026-11-02"
+    },
+    {
       "id": "chen-pi-hsien-recital-2026",
       "title": "陳必先鋼琴獨奏會",
       "kind": "獨奏",
@@ -363,95 +454,333 @@
       "added": "2026-11-02"
     },
     {
-      "id": "van-zweden-goerne-eso-2026",
-      "title": "梵志登與葛納、長榮交響樂團",
+      "id": "ntt-chaikovsky1-beethoven9-2027",
+      "title": "柴一與貝九",
       "kind": "交響樂",
-      "rating": 4,
-      "why": "梵志登帶長榮交響樂團，baritone 葛納唱舒伯特與理查．史特勞斯的藝術歌曲，壓軸蕭士塔高維契第九號。",
-      "who": "梵志登（指揮）、馬提亞斯．葛納（男中音）、長榮交響樂團",
-      "program": "貝多芬《科利奧蘭序曲》、舒伯特與理查．史特勞斯藝術歌曲（含〈暮色中〉）、蕭士塔高維契《第九號交響曲》",
+      "rating": 3,
+      "why": "國臺交演柴可夫斯基第一號鋼琴協奏曲，下半場接貝九終樂章，是慈善音樂會，票款全數捐出。",
+      "who": "楊智欽（指揮）、胡瀞云（鋼琴）、國立臺灣交響樂團、臺中藝術家室內合唱團",
+      "program": "柴可夫斯基《第一號鋼琴協奏曲》、臺灣民謠組曲、貝多芬《第九號交響曲》終樂章",
       "shows": [
         {
-          "date": "2026-12-11",
-          "time": "19:30",
+          "date": "2026-12-25",
+          "time": "14:30",
           "city": "高雄",
           "venue": "衛武營國家藝術文化中心音樂廳",
-          "tickets": "https://www.opentix.life/program/2102976712891215872"
+          "tickets": "https://www.opentix.life/program/2082346375042473985"
         },
         {
-          "date": "2026-12-13",
+          "date": "2026-12-26",
           "time": "14:30",
           "city": "台北",
           "venue": "國家音樂廳",
-          "tickets": "https://www.opentix.life/program/2102976712891215872"
+          "tickets": "https://www.opentix.life/program/2082346375042473985"
+        },
+        {
+          "date": "2027-01-02",
+          "time": "14:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院大劇院",
+          "tickets": "https://www.opentix.life/program/2082346375042473985"
         }
       ],
+      "added": "2026-11-03",
       "uids": [
-        "6abe953a26b324165c32e56f"
+        "6a8f1c0e26b32434f4358064"
       ],
       "sources": [
         {
           "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/program/2102976712891215872"
+          "url": "https://www.opentix.life/program/2082346375042473985"
         }
-      ],
-      "added": "2026-11-02"
+      ]
     },
     {
-      "id": "didonato-recital-2026",
-      "title": "狄杜娜朵冬日音樂會",
-      "kind": "聲樂",
-      "rating": 5,
-      "why": "次女高音狄杜娜朵來台灣開獨奏會，鋼琴是泰瑞，曲目是比才、羅西尼、聖桑的歌劇選段，加上爵士風格的義大利古歌曲。",
-      "who": "喬伊斯．狄杜娜朵（次女高音）、克雷格．泰瑞（鋼琴）",
-      "program": "比才、海頓清唱劇《納克索斯島的阿莉安娜》、羅西尼、聖桑的歌劇選段，及義大利古歌曲",
+      "id": "fulton-duo-taichung-2026",
+      "title": "富爾敦室內樂團：小提琴與中提琴二重奏",
+      "kind": "室內樂",
+      "rating": 3,
+      "why": "小提琴加中提琴的二重奏曲目少見，莫札特K.423與巴赫第一號組曲排在同一晚。",
+      "who": "鄧丞修（小提琴）、艾美．赫斯（中提琴）",
+      "program": "莫札特K. 423、巴赫無伴奏組曲第一號、卡利沃達、克洛伊茲、富克斯",
       "shows": [
         {
-          "date": "2026-12-05",
+          "date": "2026-12-27",
+          "time": "14:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院小劇場",
+          "tickets": "https://www.opentix.life/program/2090271128120614912"
+        }
+      ],
+      "added": "2026-11-03",
+      "uids": [
+        "6aa042a626b324165c32e387"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2090271128120614912"
+        }
+      ]
+    },
+    {
+      "id": "giltburg-beethoven-tso-2027",
+      "title": "吉爾特伯格的貝多芬鋼琴協奏曲全集",
+      "kind": "協奏曲",
+      "rating": 4,
+      "why": "五首貝多芬鋼琴協奏曲分兩晚聽完，吉爾特伯格彈，英紀寧帶臺北市立交響樂團。想一次補齊《皇帝》與第三號的人，這是少見的機會。",
+      "who": "鮑里斯．吉爾特伯格（鋼琴）、皮耶塔里．英紀寧（指揮）、臺北市立交響樂團",
+      "program": "第一晚：第一、四、三號；第二晚：第二號、第五號《皇帝》",
+      "note": "兩晚可買套票 8 折",
+      "shows": [
+        {
+          "date": "2027-01-06",
           "time": "19:30",
           "city": "台北",
           "venue": "國家音樂廳",
-          "tickets": "https://www.opentix.life/program/2082425418452361217"
+          "tickets": "https://www.opentix.life/program/2089260297614872577"
+        },
+        {
+          "date": "2027-01-08",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2089260297614872577"
         }
       ],
+      "added": "2026-11-03",
       "uids": [
-        "6a91c05c26b32434f4358075"
+        "6ad10a0826b324165c32e5fb",
+        "6ad10a0826b324165c32e5fc"
       ],
       "sources": [
         {
           "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/program/2082425418452361217"
+          "url": "https://www.opentix.life/program/2089260297614872577"
         }
-      ],
-      "added": "2026-11-02"
+      ]
     },
     {
-      "id": "garcia-garcia-ksso-2026",
-      "title": "賈西亞與高市交：李斯特與蕭士塔高維契",
-      "kind": "協奏曲",
-      "rating": 4,
-      "why": "馬丁．賈西亞．賈西亞彈李斯特第一號鋼琴協奏曲，後半場是蕭士塔高維契第十號交響曲，楊智欽指揮高市交。",
-      "who": "馬丁．賈西亞．賈西亞（鋼琴）、楊智欽（指揮）、高雄市交響樂團",
-      "program": "李斯特《死之舞》、《第一號鋼琴協奏曲》；蕭士塔高維契《第十號交響曲》",
+      "id": "ntso-lan-shui-chiang-2027",
+      "title": "水藍、蔣啟真與國臺交",
+      "kind": "交響樂",
+      "rating": 3,
+      "why": "水藍指揮莫札特《布拉格》與史麥塔納〈伏爾塔瓦河〉，蔣啟真唱莫札特〈欣喜，歡呼〉。",
+      "who": "水藍（指揮）、蔣啟真（女高音）、國立臺灣交響樂團",
+      "program": "莫札特《第三十八號交響曲「布拉格」》、〈欣喜，歡呼，蒙福的靈魂〉、史麥塔納〈伏爾塔瓦河〉、楊納傑克《塔拉斯．布爾巴》",
+      "price": "台中 NT$300–1,500；高雄 NT$300–2,000",
       "shows": [
         {
-          "date": "2026-11-22",
+          "date": "2027-01-08",
+          "time": "19:30",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳",
+          "tickets": "https://www.opentix.life/program/2079143354259632129"
+        },
+        {
+          "date": "2027-01-09",
+          "time": "19:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院大劇院",
+          "tickets": "https://www.opentix.life/program/2079143354259632129"
+        }
+      ],
+      "added": "2026-11-03",
+      "uids": [
+        "6a6a32d426b32427d06042ea"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2079143354259632129"
+        }
+      ]
+    },
+    {
+      "id": "van-zweden-eso-beethoven9-2027",
+      "title": "梵志登與長榮交響樂團：貝九",
+      "kind": "交響樂",
+      "rating": 4,
+      "why": "梵志登指揮貝多芬第九，四位獨唱是露西．克羅、懷特、科斯特洛與韋爾巴，編制不輸國外。",
+      "who": "梵志登（指揮）、長榮交響樂團、臺北愛樂合唱團，獨唱：克羅、懷特、科斯特洛、韋爾巴",
+      "program": "喬爾．湯普森《To See the Sky》、貝多芬《第九號交響曲》",
+      "note": "11 月 9 日 12:00 全民開賣",
+      "shows": [
+        {
+          "date": "2027-01-22",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2115013521218473985"
+        },
+        {
+          "date": "2027-01-23",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2115013521218473985"
+        }
+      ],
+      "added": "2026-11-03",
+      "uids": [
+        "6ae8c3f626b3245efc753766"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2115013521218473985"
+        }
+      ]
+    },
+    {
+      "id": "mei-bach-suites-2027",
+      "title": "梅第揚：中提琴拉巴赫無伴奏組曲全本",
+      "kind": "室內樂",
+      "rating": 4,
+      "why": "柏林愛樂中提琴首席用中提琴一晚拉完巴赫六首無伴奏大提琴組曲，順序也不照編號走。",
+      "who": "梅第揚（中提琴，柏林愛樂首席）",
+      "program": "巴赫無伴奏大提琴組曲第一、四、三、五、二、六號（中提琴版）",
+      "shows": [
+        {
+          "date": "2027-01-25",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2109220205655908353"
+        }
+      ],
+      "added": "2026-11-03",
+      "uids": [
+        "6ae22db626b3245efc753734"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2109220205655908353"
+        }
+      ]
+    },
+    {
+      "id": "borecco-suwanai-nso-2027",
+      "title": "博雷科、諏訪內晶子與NSO：天方夜譚",
+      "kind": "交響樂",
+      "rating": 4,
+      "why": "諏訪內晶子拉席曼諾夫斯基第一號小提琴協奏曲，下半場是《天方夜譚》，節目對味。",
+      "who": "安德里．博雷科（指揮）、諏訪內晶子（小提琴）、國家交響樂團",
+      "program": "羅揚《舞．舞．舞》（世界首演）、席曼諾夫斯基《第一號小提琴協奏曲》、林姆斯基-高沙可夫《天方夜譚》",
+      "note": "12 月 3 日 12:00 全民開賣",
+      "shows": [
+        {
+          "date": "2027-02-25",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2072957490703167489"
+        }
+      ],
+      "added": "2026-11-03",
+      "uids": [
+        "6a5125ec26b32427d060418a"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2072957490703167489"
+        }
+      ]
+    },
+    {
+      "id": "shoji-ntso-planets-2027",
+      "title": "庄司紗矢香、水藍與國臺交：行星",
+      "kind": "協奏曲",
+      "rating": 4,
+      "why": "庄司紗矢香拉卡斯泰爾諾沃-泰德斯科的《先知》小提琴協奏曲，下半場是霍爾斯特《行星》，加東海大學合唱團。",
+      "who": "水藍（指揮）、庄司紗矢香（小提琴）、國立臺灣交響樂團、東海大學合唱團",
+      "program": "羅西尼《塞維亞理髮師》序曲、卡斯泰爾諾沃-泰德斯科《第二號小提琴協奏曲「先知」》、霍爾斯特《行星》",
+      "price": "台北 NT$300–1,500；高雄 NT$300–2,000",
+      "shows": [
+        {
+          "date": "2027-03-06",
+          "time": "14:30",
+          "city": "台北",
+          "venue": "臺北市中山堂中正廳",
+          "tickets": "https://www.opentix.life/program/2078482062961602561"
+        },
+        {
+          "date": "2027-03-07",
           "time": "14:30",
           "city": "高雄",
           "venue": "衛武營國家藝術文化中心音樂廳",
-          "tickets": "https://www.opentix.life/program/2086778741904691201"
+          "tickets": "https://www.opentix.life/program/2078482062961602561"
         }
       ],
+      "added": "2026-11-03",
       "uids": [
-        "6a8490f526b32427d0604417"
+        "6a6a32d326b32427d06042e5"
       ],
       "sources": [
         {
           "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/program/2086778741904691201"
+          "url": "https://www.opentix.life/program/2078482062961602561"
+        }
+      ]
+    },
+    {
+      "id": "ntso-hoose-taichung-2027",
+      "title": "胡斯與國臺交：貝多芬三重協奏曲",
+      "kind": "交響樂",
+      "rating": 3,
+      "why": "貝多芬三重協奏曲由謝維庭、鍾璟棛、歐陽伶宜擔任獨奏，之後是海頓第九十三號。",
+      "who": "大衛．胡斯（指揮）、謝維庭（鋼琴）、鍾璟棛（小提琴）、歐陽伶宜（大提琴）、國立臺灣交響樂團",
+      "program": "莫札特《費加洛婚禮》序曲、貝多芬《三重協奏曲》、海頓《第九十三號交響曲》",
+      "price": "NT$300、500、800、1,000",
+      "shows": [
+        {
+          "date": "2027-03-13",
+          "time": "19:30",
+          "city": "台中",
+          "venue": "臺中市中山堂",
+          "tickets": "https://www.opentix.life/program/2079200061178986497"
         }
       ],
-      "added": "2026-11-02"
+      "added": "2026-11-03",
+      "uids": [
+        "6a6a32d426b32427d06042ed"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2079200061178986497"
+        }
+      ]
+    },
+    {
+      "id": "volodin-recital-2027",
+      "title": "瓦洛金鋼琴獨奏會",
+      "kind": "獨奏",
+      "rating": 4,
+      "why": "瓦洛金排了舒曼《狂歡節》和拉赫曼尼諾夫第一號奏鳴曲，後者很少有人敢放進獨奏會。",
+      "who": "阿列克謝．瓦洛金（鋼琴）",
+      "program": "史卡拉第 4 首奏鳴曲、蕭邦《第三號敘事曲》、舒曼《狂歡節》、拉赫曼尼諾夫《第一號鋼琴奏鳴曲》",
+      "shows": [
+        {
+          "date": "2027-03-15",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2109223228739743745"
+        }
+      ],
+      "added": "2026-11-03",
+      "uids": [
+        "6ae22db626b3245efc753735"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2109223228739743745"
+        }
+      ]
     }
   ]
 }
