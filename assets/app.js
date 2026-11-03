@@ -222,7 +222,7 @@ function hideBird(body, date, column) {
     const r = b.getBoundingClientRect();
     b.style.cssText = `position:fixed;left:${r.left}px;top:${r.top}px;margin:0;z-index:40`;
     document.body.append(b);
-    b.classList.add("found");
+    b.classList.add("found", r.left + r.width / 2 > innerWidth / 2 ? "west" : "east"); // fly toward the wider side, so the whole arc stays on screen
     const flecks = setInterval(() => {
       const q = b.getBoundingClientRect();
       if (!q.width) return;
