@@ -191,6 +191,35 @@ function sealedBy(date, column) {
   const left = order.filter((a) => a !== pick && (col(a.column, date).group !== "watch" || a.brief) && !read.has(`${date}/${a.column}`));
   return left.length ? left : null;
 }
+// 找知更鳥 (Vogelsuche): every issue hides one small robin in one of its articles — which article and after which
+// paragraph is a hash of the date, so the same for every reader and every redraw — and a tap on it keeps the day in
+// rm.birds (the stamp of that day then carries a tiny robin). The parcel's sealed article never hides it. The owner,
+// 2026-11-03: 每天藏一個知更鳥，每天可以找他.
+const birdsFound = () => new Set(store.get("birds", []));
+function birdSpot(issue) {
+  if (!issue?.date) return null;
+  const order = sortArticles(issue.articles || [], issue.date), pick = revealPick(issue, order);
+  const pool = order.filter((a) => a !== pick && col(a.column, issue.date).group !== "watch");
+  if (!pool.length) return null;
+  const h = Array.from(issue.date).reduce((x, ch) => (x * 33 + ch.charCodeAt(0)) >>> 0, 5381);
+  return { column: pool[h % pool.length].column, p: (h >>> 7) % 7 }; // the p-th paragraph, folded into the article's count
+}
+function hideBird(body, date, column) {
+  const spot = birdSpot(issueBy(date));
+  if (!spot || spot.column !== column || birdsFound().has(date)) return;
+  const ps = [...body.querySelectorAll(":scope > p")];
+  if (!ps.length) return;
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "bird-hide"; b.setAttribute("aria-label", "知更鳥");
+  b.innerHTML = `<svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>`;
+  ps[Math.min(spot.p, ps.length - 1)].append(b);
+  b.addEventListener("click", () => {
+    store.set("birds", [...birdsFound(), date].slice(-400));
+    b.classList.add("found");
+    toast("找到了，今天的知更鳥");
+    setTimeout(() => b.remove(), calm() ? 0 : 900);
+  }, { once: true });
+}
 function lockedCard(date, a, by) {
   return `<div class="item noimg locked" aria-disabled="true"><div>${kicker(a.column, false, date)}<h3>${esc(a.title)}</h3><p class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></p></div></div>`;
 }
@@ -414,6 +443,7 @@ function viewFront(dateParam) {
     ${supps.length ? `<div class="sec-head"><h2>副刊</h2><span class="de">Feuilleton</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
     ${watch.length ? `<div class="sec-head"><h2>觀測站</h2><span class="de">Beobachtung</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
+    ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdsFound().has(issue.date) ? "今天的知更鳥找到了。" : "今天有一隻知更鳥藏在某一篇裡。"}</p>` : ""}
     ${!arts.some((a) => a.brief) ? "" : lockMode() && unreadIn(issue.date, arts) ? `<div class="finish lockfin">${ICON.lock}<b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">循序閱讀：一篇一篇讀完，今天才算數。</span></div>`
       : `<div class="finish${digestDone().has(issue.date) ? " done" : ""}">${finishInner(issue.date)}</div>`}
     ${dateParam ? "" : `<section class="gigs" id="gigs" aria-label="近期演出">${gigsSection()}</section>`}
@@ -675,6 +705,7 @@ async function viewArticle(date, column, my) {
   }
   const body = main.querySelector(".body");
   body.append(renderBody(a));
+  hideBird(body, date, column);
   const firstP = body.firstElementChild;
   if (firstP && firstP.tagName === "P" && !firstP.querySelector(".tag")) firstP.classList.add("lead-p");
   // 劃線本: this article's pencil lines find their place again; one opened from the notebook is landed on (route()
@@ -1265,17 +1296,17 @@ function yearbook(pubs, done, read) {
 function viewStamps() {
   const pubs = publishedIssues(), done = digestDone(), today = twNow().date;
   const got = stampsEarned().length, missed = pubs.filter((i) => !done.has(i.date) && i.date !== today).length;
-  const yb = yearbook(pubs, done, readSet());
+  const yb = yearbook(pubs, done, readSet()), birds = birdsFound();
   const months = new Map();
   for (const i of pubs) months.set(i.date.slice(0, 7), [...(months.get(i.date.slice(0, 7)) || []), i]);
   let n = 0;
   const page = ([ym, list]) => `<div class="sec-head"><h2>${Number(ym.slice(5))} 月</h2><span class="de">${esc(monDe(ym))}</span><span class="note">${list.filter((i) => done.has(i.date)).length}／${list.length}</span></div>
     <div class="page">${list.slice().reverse().map((i) => stampHtml({ ...i, articles: sortArticles(i.articles || [], i.date) },
-      { earned: done.has(i.date), open: i.date === today, href: done.has(i.date) ? `#/stamp/${i.date}` : i.date === today ? `#/issue/${i.date}` : null, i: n++ })).join("")}</div>`;
+      { earned: done.has(i.date), open: i.date === today, href: done.has(i.date) ? `#/stamp/${i.date}` : i.date === today ? `#/issue/${i.date}` : null, i: n++, bird: birds.has(i.date) })).join("")}</div>`;
   main.innerHTML = `<div class="wrap album"><header class="page-title"><h1>郵票冊</h1><span class="de">Briefmarken</span></header>
     <p class="col-note">每天把整份報紙讀完，就蓋出那天的郵票；錯過的日子就留一格空白。</p>
     ${yb.stats}
-    ${got ? `<p class="tally">集了 <b>${got}</b> 張，缺 <b>${missed}</b> 格</p>` : `<p class="empty">第一張郵票等你今天讀完。</p>`}
+    ${got ? `<p class="tally">集了 <b>${got}</b> 張，缺 <b>${missed}</b> 格${birds.size ? `・找到 <b>${birds.size}</b> 隻知更鳥` : ""}</p>` : `<p class="empty">第一張郵票等你今天讀完。</p>`}
     ${[...months].map(page).join("")}
     ${yb.bars}</div>`;
   document.title = `郵票冊｜${S.cfg.title}`;
@@ -1287,7 +1318,7 @@ function viewStamp(date) {
   const issue = issueBy(date), done = digestDone().has(date);
   const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/stamps" aria-label="返回">${ICON.back}</a><div class="title">郵票冊</div></div></div>`;
   if (!issue || !isPublished(date) || !done) { main.innerHTML = `${top}<div class="wrap"><p class="empty">這一格還沒有郵票。<a href="#/stamps">回郵票冊</a></p></div>`; wireBack(); return; }
-  main.innerHTML = `${top}<div class="wrap stamp-page"><div class="big">${stampHtml({ ...issue, articles: sortArticles(issue.articles || [], date) }, { earned: true })}</div>
+  main.innerHTML = `${top}<div class="wrap stamp-page"><div class="big">${stampHtml({ ...issue, articles: sortArticles(issue.articles || [], date) }, { earned: true, bird: birdsFound().has(date) })}</div>
     <p class="line"><b>No. ${esc(issue.no)}</b><span>${esc(fmtDate(date))}・週${esc(issue.weekday || "")}</span><i>${esc(fmtDate(date, "de"))}</i></p>
     <p class="btns"><a class="btn ghost" href="#/issue/${esc(date)}">看這一期</a></p></div>`;
   wireBack();

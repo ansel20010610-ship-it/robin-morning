@@ -1278,6 +1278,20 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .marks .mk .q::before { content: "— "; font-family: var(--latin); color: var(--gold); }
 .marks .mk .x { flex: 0 0 auto; width: 32px; height: 32px; margin: -2px -8px 0 0; color: var(--muted); font-size: 14px; }
 
+/* ——— 找知更鳥 (app.js birdSpot/hideBird): a small robin at the end of one paragraph of one article a day, ink with
+   its red breast, no box; a tap sends it up and away and the front page's note says it was found. ——— */
+.bird-hide { display: inline-block; vertical-align: -4px; width: 22px; height: 22px; margin-left: 6px; padding: 0; border: 0; background: none; cursor: pointer; }
+.bird-hide svg { width: 22px; height: 22px; }
+.bird-hide :is(.e-ink, .e-gold) { fill: var(--ink); } .bird-hide .e-robin { fill: var(--robin); } .bird-hide .e-paper { fill: var(--paper); } .bird-hide :is(.e-wing, .e-legs) { stroke: var(--ink); fill: none; } .bird-hide .e-frame { display: none; }
+.bird-note { display: flex; align-items: center; gap: 7px; margin: 16px 0 -6px; font-family: var(--sans); font-size: 12.5px; letter-spacing: .06em; color: var(--muted); }
+.bird-note svg { width: 18px; height: 18px; flex: none; }
+.bird-note :is(.e-ink, .e-gold) { fill: var(--muted); } .bird-note .e-robin { fill: var(--robin); } .bird-note .e-paper { fill: var(--paper); } .bird-note :is(.e-wing, .e-legs) { stroke: var(--muted); fill: none; } .bird-note .e-frame { display: none; }
+.bird-note.got { color: var(--gold-ink); }
+@media (prefers-reduced-motion: no-preference) {
+  .bird-hide.found { animation: fly-off .9s cubic-bezier(.3, .6, .2, 1) both; pointer-events: none; }
+  @keyframes fly-off { 30% { transform: translate(6px, -6px) rotate(-8deg); opacity: 1; } to { transform: translate(60px, -90px) rotate(-18deg) scale(.6); opacity: 0; } }
+}
+
 /* ——— 收藏 (Sammlung; app.js viewSaved): four shelves up top, two by two — 劃線本, 畫廊, 郵票冊, 你讀過的世界, the corners
    entered from here, each with its count large in Cormorant and a gold rule along the top — then the saved articles as
    numbered rows in the lookbook's manner: the column and the day in spaced small type, the title, the dek, the picture a
@@ -1446,6 +1460,9 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .stamp .bd .band { stroke-width: 1.6; stroke-dasharray: 1.6 1.6; }
 .stamp .bd .leaf { fill: var(--s-gold); stroke: none; }
 .stamp .foot { position: absolute; left: 7.5cqw; right: 7.5cqw; bottom: 3.8cqw; display: flex; justify-content: space-between; align-items: baseline; gap: 4cqw; font-family: var(--latin); font-size: 8.6cqw; line-height: 1; white-space: nowrap; }
+/* 找知更鳥: the day's robin, found, perches on the stamp's lower-right corner over the frame. */
+.stamp .perch { position: absolute; right: 9cqw; bottom: 12cqw; width: 16cqw; height: 16cqw; }
+.stamp .perch :is(.e-ink, .e-gold) { fill: var(--s-ink); } .stamp .perch .e-robin { fill: var(--robin); } .stamp .perch .e-paper { fill: var(--s-paper); } .stamp .perch :is(.e-wing, .e-legs, .e-frame) { stroke: var(--s-ink); fill: none; }
 .stamp .foot i { font-style: italic; font-weight: 500; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .stamp .foot b { font-weight: 600; font-variant-numeric: lining-nums tabular-nums; }
 .stamp.slot { color: var(--muted); }

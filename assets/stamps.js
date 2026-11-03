@@ -51,7 +51,7 @@ const FRAMES = [
 // `earned`: the stamp in colour; otherwise the empty slot, which `open` marks as today's (still to be read). `href`
 // makes the tile a link; without it the slot is a plain span. `i` staggers the entrance (style.css), `size` a width
 // in px for a stamp outside the album's grid.
-export function stampHtml(issue, { earned = false, open = false, href = null, i = 0, size = 0 } = {}) {
+export function stampHtml(issue, { earned = false, open = false, href = null, i = 0, size = 0, bird = false } = {}) {
   const date = issue?.date || "", [y, m, d] = date.split("-").map(Number);
   const h = hash(date), frame = h % 6, tint = (h >>> 8) % 5, tilt = (((h >>> 16) % 5) - 2) * .6;
   const day = Number.isFinite(d) ? `${d}. ${roman(m)}.` : "", wd = date ? fmtDate(date, "de").split(",")[0] : "";
@@ -65,7 +65,7 @@ export function stampHtml(issue, { earned = false, open = false, href = null, i 
       : `<svg class="bird" viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>`;
     inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="imp">知更鳥</span>
       <span class="fr">${art}<svg class="bd" viewBox="0 0 ${W} ${H}" aria-hidden="true">${FRAMES[frame]()}</svg></span>
-      <span class="foot"><i>${esc(wd)}</i><b>${esc(day)}</b></span>`;
+      <span class="foot"><i>${esc(wd)}</i><b>${esc(day)}</b></span>${bird ? `<svg class="perch" viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>` : ""}`;
   } else {
     inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="miss"><b>${esc(day)}</b>${open ? "<small>今天</small>" : ""}</span>`;
   }
