@@ -1,0 +1,300 @@
+{
+  "column": "mystery",
+  "date": "2026-11-04",
+  "title": "第一頁第一個字，也許不是看起來的那幾個字母",
+  "dek": "伏尼契手稿的羊皮紙定年在 15 世紀上半葉。耶魯同一組作者交了兩篇論文：一篇說「小尺度太不隨機、不可能沒有意義」的論證被推翻了，一篇說字詞層級的好猜不能當胡寫的決定性證據。",
+  "brief": "耶魯兩位學者在同一場研討會交了兩篇論文：一篇說人手寫的無意義文字，統計上也能很像伏尼契手稿；另一篇說有些加密法，可以把拉丁文的字元熵降到伏尼契的程度。手稿羊皮紙定年的 95.4% 區間是 1404 到 1438 年，上面的字還沒有人讀得出來。",
+  "topic_key": "mystery:history-voynich-manuscript",
+  "updated_at": "2026-11-04T02:25:03+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/37/Voynich_Manuscript_%283%29.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/3/37/Voynich_Manuscript_%283%29.jpg",
+    "width": 1116,
+    "height": 1536,
+    "alt": "一頁泛黃的羊皮紙，寫滿字形不屬於任何熟悉字母的文字。",
+    "caption": "伏尼契手稿第 1 葉正面，耶魯大學 Beinecke 善本與手稿圖書館 MS 408。左上角第一行開頭就是那個轉寫成 fachys 的字。2014 年的多光譜影像裡，右側空白處浮出三欄字母。",
+    "credit": "Beinecke Rare Book & Manuscript Library, Yale University／Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Voynich_Manuscript_(3).jpg",
+    "made": "羊皮紙約 1404–1438（碳 14 定年；取樣的是第 8、26、47、68 葉，不含這一頁）；文字書寫年代不明"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "耶魯 Beinecke 圖書館收藏的伏尼契手稿（Voynich manuscript），第一頁第一個字，通行的 EVA 轉寫記成 fachys。Davis（Lisa Fagin Davis）提出，開頭的 f 也許是 te 的縮寫，就像 p 可能是 ke 的縮寫；照這樣展開，這個字該寫成 teachys。她的理由之一：te、ke 極常見，pe 只有兩例，fe 一例也沒有。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.07,
+        0.065,
+        0.17,
+        0.095
+      ],
+      "position": "左上角，第一行開頭",
+      "caption": "手稿的第一個字。轉寫系統把開頭的字元記成 f；照 Davis 的縮寫假說，它代表 te 兩個字母。"
+    },
+    {
+      "type": "p",
+      "text": "Davis 說，這些縮寫一旦展開，連全書有幾個字元都會跟著變。EVA 的訂定者之一 Zandbergen（René Zandbergen）說，「全文有幾個字元」「伏尼契字母有幾個不同的字元」這種簡單問題，都答不出來：不知道字的意思，就沒辦法靠上下文認字；字與字之間的空格，很多地方也拿不準。"
+    },
+    {
+      "type": "h",
+      "text": "皮比專家猜的都老"
+    },
+    {
+      "type": "p",
+      "text": "2009 年 1 月，亞利桑那大學的 Hodgins（Greg Hodgins）在耶魯從四葉羊皮紙上各取下約 1 × 6 公釐的一片。四個碳 14 測值很集中，加權平均、校正之後，有 95.4% 的機率落在 1404 到 1438 年。耶魯圖書館的修復師 Zyats 說碳 14 的結果出人意料，又說："
+    },
+    {
+      "type": "quote",
+      "text": "多數「專家」都認定這是 17 世紀的手稿，也許是偽作，甚至是 20 世紀的偽作。我想沒有人猜過它是 15 世紀的手稿。",
+      "original": "Most ‘experts’ were convinced that this was a 17th-century manuscript, perhaps a forgery, or even a 20th-century forgery. I don’t believe anyone was theorizing that it was a 15th-century manuscript.",
+      "cite": "Zyats，耶魯大學圖書館，Yale News，2016"
+    },
+    {
+      "type": "p",
+      "text": "墨水和顏料另外送到一家私人實驗室，成分和中世紀抄寫者用的材料相符。碳 14 的結果也推翻了 13 世紀哲學家羅傑・培根寫了這本書的說法。Hodgins 在報告信的結論段，自己留了一句提醒。"
+    },
+    {
+      "type": "quote",
+      "text": "必須記住，這次定的是羊皮紙的年代，不是在上面寫字的時間。",
+      "original": "It must be kept in mind that this exercise dated parchment, not when it was written on.",
+      "cite": "Greg Hodgins，致耶魯大學圖書館的定年報告，2009 年 2 月 17 日"
+    },
+    {
+      "type": "p",
+      "text": "Beinecke 的館藏頁至今兩句並排：科學檢驗顯示材料和 15 世紀的手稿一致；製作年代寫的是「15 世紀末或 16 世紀」。"
+    },
+    {
+      "type": "h",
+      "text": "三種說法，各缺一塊"
+    },
+    {
+      "type": "p",
+      "text": "書有 234 頁，分成六個部分，有植物、天文與占星圖、沐浴圖等。上面的字以一種未辨識的書寫系統寫成，有三種說法：自然語言、密碼，或者沒有意義。"
+    },
+    {
+      "type": "table",
+      "title": "伏尼契的文字是什麼",
+      "head": [
+        "說法",
+        "支持的證據",
+        "卡在哪裡"
+      ],
+      "rows": [
+        [
+          "自然語言",
+          "統計大多和自然語言相容、和隨機文字不相容；構詞有規律",
+          "字元太好猜，相鄰的字太像"
+        ],
+        [
+          "加密",
+          "雙字母能把拉丁文的字元熵降到伏尼契的程度；Naibbe 密碼手工可做、能解回",
+          "試過的變造沒有一種模仿得了全部特徵；簡單替換幾乎已排除"
+        ],
+        [
+          "沒有意義（騙局或胡寫）",
+          "16 世紀的密碼技術可改造來產生類似的文字；胡寫樣本也重現齊夫定律",
+          "「主題詞」這類大尺度結構是嚴重挑戰，樣本太短還沒測"
+        ]
+      ],
+      "caption": "依文末所列論文整理。"
+    },
+    {
+      "type": "p",
+      "text": "語言派的立場，Bowern（Claire Bowern）和 Lindemann 2021 年的綜述講得清楚：把它當自然語言，不當中世紀的騙局，就算讀不出內容，也能用統計談它的音韻、構詞和結構。Gaskell 與 Bowern 2022 年的論文則點出它不像自然語言的地方：條件字元熵很低，相鄰的字也高度相似。"
+    },
+    {
+      "type": "p",
+      "text": "胡寫派這邊，Rugg 2004 年說明 16 世紀的密碼技術可以改造來產生類似伏尼契的文字，初步結果顯示一個人幾個月就能寫完這麼大份量。另一組研究者提出的「自我抄引」，中世紀抄寫者不用額外工具就做得到，樣本重現了兩條齊夫定律等關鍵統計。"
+    },
+    {
+      "type": "p",
+      "text": "Bowern 和她在耶魯的合作者 Gaskell（Daniel Gaskell）找了 42 位志願者手寫胡寫，39 位是 Bowern 2018、2019 兩屆伏尼契課的大學部學生。一位 2018 年的參與者替一張圖寫了圖說 pitshol，接著在圖周圍的段落裡反覆寫 pitshol 或 pitsholh。2022 年發表的結果：依樣本不同，胡寫在他們測的幾乎每一項指標上，可以像自然語言，也可以像伏尼契，包括齊夫定律；分類模型把五份伏尼契轉寫都判成比較像胡寫，只是信心很低。「小尺度太不隨機，不可能沒有意義」這條老論證，他們說被推翻了。"
+    },
+    {
+      "type": "p",
+      "text": "他們測不了的是大尺度。樣本太短，看不出胡寫能不能重現「主題詞」這類較大的結構。兩人說，這些特徵目前是騙局說的嚴重挑戰，但現在就認定胡寫做得到或做不到，都言之過早。他們提的後續做法，是把學到的寫法做成演算法，產生更大量的胡寫。"
+    },
+    {
+      "type": "p",
+      "text": "同一場研討會，這兩人又交了一篇〈Enciphered after all?〉。他們測試了 22 種文字變造法，結果是把多個字母寫成雙字母，可以讓拉丁文的字元熵降到伏尼契的程度，但沒有任何一種變造能一次模仿全部特徵。他們的結論是，這不證明手稿加了密，但手稿在字詞層級異常好猜，也不構成它是胡寫的決定性證據。2025 年 Greshko 發表的 Naibbe 密碼，只用 15 世紀的材料、全憑手工，加密拉丁文和義大利文後能完整解回，也重現手稿許多關鍵統計；他的結論是密文假說仍然站得住。"
+    },
+    {
+      "type": "h",
+      "text": "沒有第二份同樣的字"
+    },
+    {
+      "type": "p",
+      "text": "兩篇論文擺在一起，各自只拆掉一邊的論證：前一篇說胡寫可以很像語言，推翻了「小尺度太不隨機就不可能沒有意義」；後一篇說雙字母能把拉丁文的字元熵降到伏尼契的程度，字詞層級的好猜也不能當胡寫的決定性證據。Davis 說，這套字形沒有其他例子可比。作者也不明，培根之說只是揣測。"
+    },
+    {
+      "type": "timeline",
+      "title": "這本書走過的路",
+      "items": [
+        {
+          "when": "1404–1438",
+          "label": "羊皮紙的年代",
+          "note": "碳 14 定年的 95.4% 區間"
+        },
+        {
+          "when": "1576–1612",
+          "label": "魯道夫二世在位",
+          "note": "在位年份，非購買年份。據 17 世紀的一封信，以 600 金杜卡特買下，其他證據闕如"
+        },
+        {
+          "when": "1599 年",
+          "label": "一筆可能的交易",
+          "note": "Guzy 在帳目找到皇帝以 600 弗羅林向醫師 Widemann 買下少量煉金術手稿"
+        },
+        {
+          "when": "1660 年代中",
+          "label": "寄給基爾學",
+          "note": "Marci 把手稿連同一封信寄給耶穌會學者基爾學，信至今仍和手稿在一起"
+        },
+        {
+          "when": "1912 年",
+          "label": "伏尼契買下",
+          "note": "購自羅馬附近弗拉斯卡蒂的耶穌會學院"
+        },
+        {
+          "when": "1961 年",
+          "label": "Kraus 買下",
+          "note": "書商 Kraus 買下，八年後捐給 Beinecke"
+        }
+      ],
+      "caption": "依 Beinecke 館藏頁、Yale News、Hodgins 2009 年報告與 Guzy 2022 整理。"
+    },
+    {
+      "type": "p",
+      "text": "Davis 說，任何「解答」都要交代抄寫者有幾位、怎麼分工，還有書的結構與年代。她的初步分析認出五位抄寫者；植物部分的分工按對開雙頁變化，不按頁、不按文本、也不按疊，她說這「極不尋常」。"
+    },
+    {
+      "type": "h",
+      "text": "第一頁右邊的空白"
+    },
+    {
+      "type": "p",
+      "text": "2014 年，Lazarus Project 的團隊替十頁拍了多光譜影像，第一頁也在裡面。下緣褪掉的題字讀得出來了，是「Jacobi à Tepenecz」；右側空白處浮出三欄字：羅馬字母 a 到 z、一串伏尼契字符，再一組錯開一個字母的 a 到 z。Davis 比對筆跡，認為最接近把書寄給基爾學的 Marci，推定是他 1662 到 1665 年擁有手稿時加上的。照這幾欄字母去替換，得到的是無意義的字串。"
+    },
+    {
+      "type": "quote",
+      "text": "不管它們的用途是什麼，有一件事我很確定：這幾欄字母大概幫不了我們真正解讀這份手稿。",
+      "original": "Regardless of their purpose, I do know one thing: these alphabets will likely not help us actually decipher the manuscript.",
+      "cite": "Lisa Fagin Davis，Manuscript Road Trip，2024 年 9 月 8 日"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Re: Dating Results for Voynich Manuscript Parchment Leaves 8, 26, 47 and 68",
+      "publisher": "Greg Hodgins，NSF-Arizona AMS Laboratory，致 Yale 大學圖書館的報告信（René Zandbergen 網站存放）",
+      "date": "2009-02-17",
+      "url": "https://www.voynich.nu/papers/Carbon_GH_2009.pdf",
+      "note": "第 1 頁：2009 年 1 月 15 日取樣、四葉；第 4 頁：加權平均 516 ± 18 BP、Conclusion 段兩句；第 8 頁 Figure 7：1404AD (95.4%) 1438AD。校正用 IntCal04、OxCal v3.10。"
+    },
+    {
+      "title": "University of Arizona experts determine age of book 'nobody can read'",
+      "publisher": "University of Arizona（EurekAlert! 轉載）",
+      "date": "2011-02-10",
+      "url": "https://www.eurekalert.org/news-releases/624074",
+      "note": "樣本約 1 × 6 公釐、四頁各一片；「a century older than scholars had previously thought」。新聞稿未列年代區間，區間以 Hodgins 報告為準。"
+    },
+    {
+      "title": "Voynich Manuscript",
+      "publisher": "Beinecke Rare Book & Manuscript Library, Yale University",
+      "date": "",
+      "url": "https://beinecke.library.yale.edu/collections/highlights/voynich-manuscript",
+      "note": "館藏精選頁，2026-11-03 查閱：製作年代「end of the fifteenth or during the sixteenth century」、材料與 15 世紀手稿一致、六個部分、經手者、Marci 1666 年寄給基爾學、1912 年購自弗拉斯卡蒂、1961 年 Kraus 購入後八年捐出、「if it is indeed encoded」、培根之說是揣測、迪伊之說被嚴重質疑。寄出年份：館藏頁記 1666 年，Yale News 轉述 Zandbergen 記 1665 年，Davis 2024 寫 Marci 1662–1665 年持有；正文與年表寫「1660 年代中」。"
+    },
+    {
+      "title": "Mysterious Voynich manuscript reborn in facsimile edition",
+      "publisher": "Mike Cummings，Yale News",
+      "date": "2016-10-31",
+      "url": "https://news.yale.edu/2016/10/31/mysterious-voynich-manuscript-reborn-facsimile-edition",
+      "note": "234 頁；Zyats 引文；墨水顏料由私人實驗室分析；曼徹斯特團隊胺基酸定序確認小牛皮，14 到 15 張是 Clemens 的估計；培根之說被推翻；Marci 1665 年寄給基爾學（轉述 Zandbergen）。"
+    },
+    {
+      "title": "Voynich Paleography",
+      "publisher": "Lisa Fagin Davis，International Conference on the Voynich Manuscript 2022（University of Malta），CEUR Workshop Proceedings Vol-3313",
+      "date": "2022",
+      "url": "https://ceur-ws.org/Vol-3313/keynote2.pdf",
+      "note": "第 2 節：沒有其他例子可比；第 3 節：初步分析（preliminary analysis）認出五位抄寫者；第 4 節：植物部分「varies by bifolia – not by page, text, or quire」「utterly atypical」；任何解答須交代抄寫者人數、分工、結構與年代；第 5.1 節：[f]＝[te]、[p]＝[ke]，[pe] 兩例、[fe] 零例，fachys → teachys，字元數會改變。"
+    },
+    {
+      "title": "Multispectral Imaging and the Voynich Manuscript",
+      "publisher": "Lisa Fagin Davis，Manuscript Road Trip",
+      "date": "2024-09-08",
+      "url": "https://manuscriptroadtrip.wordpress.com/2024/09/08/multispectral-imaging-and-the-voynich-manuscript/",
+      "note": "2014 年 Lazarus Project 拍攝十頁（1r、8r、17r、26r、47r、70v1、71r、93r、102v1、116v）；Jacobi à Tepenecz；右側三欄字母；推定 Marci 1662–1665；引文逐字抄錄；同篇提到 Bowern 等確立非簡單替換密碼。"
+    },
+    {
+      "title": "Transliteration of the Voynich MS text",
+      "publisher": "René Zandbergen，Voynich 2022，CEUR Workshop Proceedings Vol-3313",
+      "date": "2022",
+      "url": "https://ceur-ws.org/Vol-3313/keynote1.pdf",
+      "note": "第 1 節：轉寫的四個難處與「cannot be answered」；第 2 節：Friedman 的 First Study Group；摘要：EVA 由 Landini 與作者在 2000 年前不久定義。"
+    },
+    {
+      "title": "Gibberish after all? Voynichese is statistically similar to human-produced samples of meaningless text",
+      "publisher": "Daniel E. Gaskell、Claire L. Bowern，Voynich 2022，CEUR Workshop Proceedings Vol-3313",
+      "date": "2022",
+      "url": "https://ceur-ws.org/Vol-3313/paper4.pdf",
+      "note": "42 位志願者，其中 39 位為 Bowern 耶魯課堂學生（2018 年班 19 位、2019 年班 20 位），另 3 位為一般民眾；論文 2022 年發表。胡寫在幾乎所有指標上可像自然語言或伏尼契，包括齊夫定律；隨機森林「albeit with low confidence」；pitshol 例（2018 年一位參與者）；樣本太短「unable to test」較大尺度結構，「premature to assume that gibberish can replicate these features, … equally premature to assume that it cannot」；future work 建議以演算法產生更大量胡寫。研討會 2022 年 11 月 30 日至 12 月 1 日。"
+    },
+    {
+      "title": "Enciphered after all? Word-level text metrics are compatible with some types of encipherment",
+      "publisher": "Claire L. Bowern、Daniel E. Gaskell，Voynich 2022，CEUR Workshop Proceedings Vol-3313",
+      "date": "2022",
+      "url": "https://ceur-ws.org/Vol-3313/paper6.pdf",
+      "note": "22 種文字變造；雙字母降低拉丁文字元熵到伏尼契程度；不證明加密，但不能當胡寫的決定性證據；沒有單一變造能模仿全部特徵。"
+    },
+    {
+      "title": "The Linguistics of the Voynich Manuscript",
+      "publisher": "Claire L. Bowern、Luke Lindemann，Annual Review of Linguistics 7: 285–308",
+      "date": "2021-01-14",
+      "url": "https://doi.org/10.1146/annurev-linguistics-011619-030613",
+      "note": "只讀到摘要：主張當成自然語言而非中世紀騙局處理，可用統計討論音韻、構詞與結構。"
+    },
+    {
+      "title": "An Elegant Hoax? A Possible Solution to the Voynich Manuscript",
+      "publisher": "Gordon Rugg，Cryptologia 28(1): 31–46",
+      "date": "2004-01",
+      "url": "https://doi.org/10.1080/0161-110491892755",
+      "note": "只讀到摘要：16 世紀密碼技術可改造產生類似文字；初步結果顯示一人數月內可完成。"
+    },
+    {
+      "title": "A possible generating algorithm of the Voynich manuscript",
+      "publisher": "Torsten Timm、Andreas Schinner，Cryptologia 44(1): 1–19",
+      "date": "2019-05-25",
+      "url": "https://doi.org/10.1080/01611194.2019.1596999",
+      "note": "只讀到摘要：self-citation 程序，中世紀抄寫者不需工具即可執行，重現兩條齊夫定律。日期為線上發表日。"
+    },
+    {
+      "title": "The Naibbe cipher: a substitution cipher that encrypts Latin and Italian as Voynich Manuscript-like ciphertext",
+      "publisher": "Michael A. Greshko，Cryptologia 50(6): 573–609",
+      "date": "2025-11-26",
+      "url": "https://doi.org/10.1080/01611194.2025.2566408",
+      "note": "讀作者在 GitHub（greshko/naibbe-cipher）與 Zenodo 公布的摘要：冗長的同音替換密碼、15 世紀材料手工可行、可完整解密、重現多項統計、密文假說仍可行。"
+    },
+    {
+      "title": "Book Transactions of Emperor Rudolf II, 1576–1612: New Findings on the Earliest Ownership of the Voynich Manuscript",
+      "publisher": "Stefan Guzy，Voynich 2022，CEUR Workshop Proceedings Vol-3313",
+      "date": "2022",
+      "url": "https://ceur-ws.org/Vol-3313/paper16.pdf",
+      "note": "摘要：600 杜卡特出自 17 世紀信件、其他證據闕如；約 6,900 筆帳目、126 筆購書；1599 年向 Carl Widemann 以 600 弗羅林購入少量煉金術手稿。"
+    },
+    {
+      "title": "Probing the Statistical Properties of Unknown Texts: Application to the Voynich Manuscript",
+      "publisher": "Amancio 等，PLOS ONE 8(7): e67310",
+      "date": "2013-07",
+      "url": "https://doi.org/10.1371/journal.pone.0067310",
+      "note": "摘要：大多與自然語言相容、與隨機文字不相容。正文未直接引用，作為語言派的背景。"
+    }
+  ]
+}
