@@ -1,0 +1,153 @@
+{
+  "column": "perio",
+  "date": "2026-11-04",
+  "title": "矯正力，等牙周治療達到終點再上",
+  "dek": "EFP 第 IV 期牙周炎指引談矯正，有一條拿到最強 A 級的起跑線，靠的是專家意見與動物實驗。",
+  "brief": "EFP 第 IV 期牙周炎指引建議牙周治療達到終點才開始矯正，給了最強的 A 級，依據卻是專家意見與動物實驗。治穩之後矯正，探診深度與附著沒有顯著變化，證據中等。骨內缺損做完再生手術，指引建議不必等滿半年，依據是一個 43 人的試驗。",
+  "takeaway": "已治穩、需要矯正的第 IV 期病人可以矯正，牙周指標沒有顯著影響（證據中等，多為前後比較）。上力前先確認牙周治療終點；骨內缺損再生後，指引建議不必久等（B 級）。",
+  "topic_key": "perio:doi:10.1111/jcpe.13639",
+  "updated_at": "2026-11-04T01:17:42+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Orthodontics_canine_tourque2.JPG/1280px-Orthodontics_canine_tourque2.JPG",
+    "width": 1280,
+    "height": 851,
+    "alt": "側面拍攝的口內照：上排牙齒貼著金屬托槽，一條細線還沒扣進前牙的托槽，幾顆前牙之間有縫。",
+    "caption": "一位矯正病人的固定式矯正器，前牙的線還沒扣進托槽。Commons 使用者 Challiyan 拍攝，2010 年上傳；照片中的病人與指引、文中試驗無關。",
+    "credit": "Challiyan，Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Orthodontics_canine_tourque2.JPG",
+    "made": "2010 年或更早"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "第 IV 期牙周炎的病人要矯正，歐洲牙周病學會（EFP）的 S3 臨床指引先畫了一條起跑線：牙周治療達到終點，才開始上力。終點照第 I–III 期指引的定義，沒有探診深度（probing pocket depth, PPD）6 毫米以上的位置，5 毫米的位置也不能有探診出血（bleeding on probing, BOP）。"
+    },
+    {
+      "type": "p",
+      "text": "這條給的是 A 級，指引裡最強的建議等級，共識強度超過 95%，屬強烈共識。證據確定性卻只評為低，來源是專家意見和動物實驗：牙周炎沒控制好就施加矯正力，會重新啟動或加速附著與齒槽骨的破壞；牙周組織健康、只是變少了，移動牙齒沒看到不良影響。"
+    },
+    {
+      "type": "p",
+      "text": "依我看，證據等級低，這條還是該照做，因為指引說沒控制好的牙周炎加上矯正力，會重新啟動或加速破壞。"
+    },
+    {
+      "type": "p",
+      "text": "指引把第 IV 期病人分成四種病例型，其中可以用矯正處理的是第二型：病理性牙齒移位（pathological tooth migration），牙齒伸長、漂移、外翻。這類病人從牙周治療走到矯正的順序，指引畫成一張流程圖。"
+    },
+    {
+      "type": "svg",
+      "title": "第 IV 期病人從牙周治療到矯正",
+      "svg": "<svg viewBox=\"0 0 340 546\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"ah4\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"ink\"/></marker></defs>\n<rect x=\"8\" y=\"8\" width=\"324\" height=\"44\" rx=\"6\" class=\"soft\"/>\n<text x=\"170\" y=\"26\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"ink\">牙周治療第 1–2 步</text>\n<text x=\"170\" y=\"43\" text-anchor=\"middle\" font-size=\"11\" class=\"muted\">照第 I–III 期指引（Sanz 等，2020）</text>\n<line x1=\"170\" y1=\"52\" x2=\"170\" y2=\"68\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah4)\"/>\n<rect x=\"8\" y=\"70\" width=\"324\" height=\"64\" rx=\"6\" class=\"accent line\" stroke-width=\"2\"/>\n<text x=\"170\" y=\"89\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"accent\">再評估：是否達到治療終點</text>\n<text x=\"170\" y=\"107\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">沒有 ≥6 mm 的位置；5 mm 的位置不出血</text>\n<text x=\"170\" y=\"124\" text-anchor=\"middle\" font-size=\"11\" class=\"muted\">R7.2：A 級，證據低（專家意見）</text>\n<line x1=\"60\" y1=\"134\" x2=\"60\" y2=\"158\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah4)\"/>\n<line x1=\"170\" y1=\"134\" x2=\"170\" y2=\"158\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah4)\"/>\n<line x1=\"280\" y1=\"134\" x2=\"280\" y2=\"158\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah4)\"/>\n<rect x=\"8\" y=\"160\" width=\"104\" height=\"96\" rx=\"6\" class=\"soft\"/>\n<text x=\"60\" y=\"182\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"accent\">達標</text>\n<text x=\"60\" y=\"204\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">直接進入</text>\n<text x=\"60\" y=\"220\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">聯合評估</text>\n<rect x=\"118\" y=\"160\" width=\"104\" height=\"96\" rx=\"6\" class=\"soft\"/>\n<text x=\"170\" y=\"182\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"ink\">未達標</text>\n<text x=\"170\" y=\"204\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">做第 3 步</text>\n<text x=\"170\" y=\"220\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">再評估，達標</text>\n<text x=\"170\" y=\"236\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">才進入聯合評估</text>\n<rect x=\"228\" y=\"160\" width=\"104\" height=\"150\" rx=\"6\" class=\"soft\"/>\n<text x=\"280\" y=\"182\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"ink\">骨內缺損</text>\n<text x=\"280\" y=\"204\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">第 3 步</text>\n<text x=\"280\" y=\"220\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">做再生手術</text>\n<text x=\"280\" y=\"240\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">術後 4 週或</text>\n<text x=\"280\" y=\"256\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">6 個月開始矯正</text>\n<text x=\"280\" y=\"278\" text-anchor=\"middle\" font-size=\"11\" class=\"muted\">R7.5：矯正 A 級</text>\n<text x=\"280\" y=\"294\" text-anchor=\"middle\" font-size=\"11\" class=\"muted\">不必久等 B 級</text>\n<line x1=\"60\" y1=\"256\" x2=\"60\" y2=\"276\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah4)\"/>\n<line x1=\"170\" y1=\"256\" x2=\"170\" y2=\"276\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah4)\"/>\n<rect x=\"8\" y=\"278\" width=\"214\" height=\"34\" rx=\"6\" class=\"soft\"/>\n<text x=\"115\" y=\"299\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">牙周與矯正聯合評估、擬定計畫</text>\n<line x1=\"115\" y1=\"312\" x2=\"115\" y2=\"334\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah4)\"/>\n<line x1=\"280\" y1=\"310\" x2=\"280\" y2=\"334\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah4)\"/>\n<rect x=\"8\" y=\"336\" width=\"324\" height=\"50\" rx=\"6\" class=\"soft\"/>\n<text x=\"170\" y=\"356\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"ink\">矯正：建議用固定式矯正器</text>\n<text x=\"170\" y=\"374\" text-anchor=\"middle\" font-size=\"11\" class=\"muted\">所有要矯正的病人｜R7.6：B 級，證據低</text>\n<line x1=\"170\" y1=\"386\" x2=\"170\" y2=\"402\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah4)\"/>\n<rect x=\"8\" y=\"404\" width=\"324\" height=\"50\" rx=\"6\" class=\"soft\"/>\n<text x=\"170\" y=\"424\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"ink\">矯正期間（最長約 2 年）</text>\n<text x=\"170\" y=\"442\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">最好每次回診查牙周；復發則中斷主動矯正、同時治療（R7.7）</text>\n<line x1=\"170\" y1=\"454\" x2=\"170\" y2=\"470\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#ah4)\"/>\n<rect x=\"8\" y=\"472\" width=\"324\" height=\"66\" rx=\"6\" class=\"gold line\" stroke-width=\"2\"/>\n<text x=\"170\" y=\"492\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" class=\"ink\">矯正結束後</text>\n<text x=\"170\" y=\"511\" text-anchor=\"middle\" font-size=\"11\" class=\"ink\">終身支持性牙周照護＋永久固定式維持器</text>\n<text x=\"170\" y=\"528\" text-anchor=\"middle\" font-size=\"11\" class=\"muted\">R7.7、R7.8：A 級，證據低（專家意見）</text>\n</svg>",
+      "caption": "原創示意，依 EFP 第 IV 期牙周炎 S3 臨床指引（Herrera 等，2022）圖 2 與建議 R7.2、R7.5–R7.8 簡化重繪。A 級為 we recommend，B 級為 we suggest。"
+    },
+    {
+      "type": "h",
+      "text": "臨床附著增加 0.24 毫米，沒有對照組"
+    },
+    {
+      "type": "p",
+      "text": "已經治穩的病人去矯正，指引引用的系統性回顧收了 35 篇研究，多數是矯正前後的比較，另有 8 個隨機試驗。矯正期間，探診深度和臨床附著（clinical attachment level, CAL）沒有顯著變化，探診出血、牙齦退縮與牙根吸收也都沒有顯著影響。證據確定性中等，指引用的字眼是 suggest。"
+    },
+    {
+      "type": "p",
+      "text": "專看病理性移位的另一篇回顧收了 34 篇研究、1,090 人，每一篇都被評為高偏差風險。把單組前後比較的數據合併起來，矯正後臨床附著平均增加 0.24 毫米（7 篇，I² = 79%），牙間乳頭高了 1.42 毫米（2 篇，I² = 94%）。"
+    },
+    {
+      "type": "p",
+      "text": "依我看，這兩個數字只夠說明治穩的牙周撐得住矯正，不夠拿來當矯正的療效：沒有對照組，研究之間的 I² 也高。"
+    },
+    {
+      "type": "h",
+      "text": "再生手術後要等多久"
+    },
+    {
+      "type": "p",
+      "text": "做完再生手術的骨內缺損（intrabony defect）病人，指引建議做矯正，這部分是 A 級。依據是三篇系統性回顧裡的 16 篇研究、683 人，其中 3 個是隨機試驗，其餘是病例系列。"
+    },
+    {
+      "type": "p",
+      "text": "術後等多久才上力，依據是一個試驗。Jepsen 等人 2021 年把 43 名第 IV 期病人在再生手術後隨機分成兩組，一組 4 週後開始矯正，一組等 6 個月。一年後，附著增加 5.4 對 4.5 毫米，牙周袋閉合（探診深度 4 毫米以內）91% 對 85%，差異不顯著。指引據此建議不必等長的癒合期，等級是 B。"
+    },
+    {
+      "type": "p",
+      "text": "差異不顯著，說的是這 43 人裡沒看到明顯差別。"
+    },
+    {
+      "type": "h",
+      "text": "矯正期間，牙周要持續盯"
+    },
+    {
+      "type": "p",
+      "text": "這類矯正最長約 2 年，要定期回診。指引要密切監測、處理牙周狀況，最好每一次矯正回診都做。"
+    },
+    {
+      "type": "quote",
+      "text": "一旦發現牙周炎復發的跡象，應中斷主動矯正，受影響的牙齒維持被動，同時給予適當的牙周治療、加強口腔衛生。牙周恢復健康與穩定後，可以重新開始矯正。",
+      "original": "If signs of periodontitis recurrence are detected, active OT should be interrupted, and the affected teeth should be maintained passively, while rendering proper periodontal treatment and oral hygiene reinforcement. Once periodontal health/stability has been reestablished, OT can be re-instituted.",
+      "cite": "EFP 第 IV 期牙周炎 S3 臨床指引（Herrera 等，2022）建議 R7.7"
+    },
+    {
+      "type": "p",
+      "text": "矯正器建議用固定式，所有要矯正的第 IV 期病人都適用，但證據確定性低：只有一篇回溯比較，和透明牙套比，兩組探診深度差 1.64 毫米，放射骨高度沒有差別。"
+    },
+    {
+      "type": "p",
+      "text": "矯正結束後，指引要終身的支持性牙周照護（supportive periodontal care），回診間隔依病人風險排；牙齒用一副設計適當、永久的固定式被動維持器留住，病人終身追蹤，查維持器有沒有失效、牙齒有沒有往不想要的方向移動。"
+    },
+    {
+      "type": "paper",
+      "citation": "Herrera D, Sanz M, Kebschull M, Jepsen S, Sculean A, Berglundh T, Papapanou PN, Chapple I, Tonetti MS; EFP Workshop Participants and Methodological Consultant. Treatment of stage IV periodontitis: The EFP S3 level clinical practice guideline. *J Clin Periodontol*. 2022;49 Suppl 24:4–71.",
+      "doi": "10.1111/jcpe.13639",
+      "pmid": "35688447",
+      "link": "https://doi.org/10.1111/jcpe.13639",
+      "evidence": "EFP S3 臨床指引：依 13 篇委託系統性回顧；矯正各條證據確定性由中等到非常低",
+      "design": "S3 臨床實務指引：13 篇委託系統性回顧，加上第 17 屆歐洲牙周研討會（2021 年 11 月 7–9 日）的共識會議",
+      "sample": "第 IV 期牙周炎。矯正相關證據：R7.1 依 35 個研究；R7.3 依 34 個研究、1,090 人；R7.5 依 16 個研究、683 人；早晚開始矯正的隨機試驗（43 人）另計",
+      "question": "第 IV 期牙周炎病人的牙齒移位了，什麼時候、怎麼矯正，牙周會受到什麼影響？",
+      "access": "依全文整理（Complutense 大學機構典藏的出版版本）；早晚矯正試驗依 PubMed 摘要與指引內文"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Treatment of stage IV periodontitis: The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Herrera D 等）",
+      "date": "2022-06-10",
+      "url": "https://doi.org/10.1111/jcpe.13639",
+      "note": "主角文獻。全文讀的是 Universidad Complutense de Madrid 機構典藏 docta.ucm.es 收的出版版本 PDF（68 頁，https://docta.ucm.es/entities/publication/5bb9a012-9cb6-4447-9aa4-824afb8159bd）；Wiley 原站對本報抓取程式回 403。書目依 PubMed（PMID 35688447）與 Crossref。用到：摘要（13 篇系統性回顧）；第 17 屆歐洲牙周研討會 2021 年 11 月 7–9 日；建議等級表與表 6 共識強度；4.1.3 四種病例型（第二型）；圖 2（期刊頁 26）矯正流程：第 1–2 步後再評估，達標進入聯合評估與矯正，未達標做第 3 步，骨內缺損於第 3 步再生後術後 4 週或 6 個月開始矯正，R7.6 適用所有進入矯正的病人；R7.1（Martín 2021，35 個研究、多為前後比較、8 個隨機試驗；證據中等、B 級；療程最長約 2 年）；R7.2（期刊頁 28 原頁寫 PPD = 5 mm and BOP、PPD ≥6 mm；證據低（專家意見）、依據為專家意見與臨床前研究；A 級、strong consensus）；R7.3（Papageorgiou 2021，34 個研究、1,090 人，全為高偏差風險；CAL 0.24 mm（7 篇，I² 79%）、乳頭 1.42 mm（2 篇，I² 94%），皆為單組前後比較的間接統合分析）；R7.5（第 1 點 A 級，依三篇系統性回顧 16 個研究 683 人；第 2 點 B 級，依 Jepsen 2021 試驗；整條證據中等）；R7.6（證據低，B 級；一篇回溯研究，PPD 差 1.64 mm，放射骨高度無差）；R7.7 原文（證據低、專家意見，A 級）；R7.8（證據低、專家意見，A 級）。"
+    },
+    {
+      "title": "The effect of timing of orthodontic therapy on the outcomes of regenerative periodontal surgery in patients with stage IV periodontitis: A multicenter randomized trial",
+      "publisher": "Journal of Clinical Periodontology（Jepsen K 等）",
+      "date": "2021-08-12",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34312872/",
+      "note": "依 PubMed 摘要（efetch）。J Clin Periodontol 2021;48(10):1282–1292，DOI 10.1111/jcpe.13528。43 人，早（術後 4 週，23 人）對晚（術後 6 個月，20 人）；12 個月 CAL 增加 5.4±2.1 對 4.5±1.7 mm，PPD 減少 4.2±1.9 對 3.9±1.5 mm，牙周袋閉合（PPD ≤ 4 mm）91% 對 85%，差異不顯著。數字與指引 R7.5 背景段一致。"
+    },
+    {
+      "title": "Effect of orthodontic therapy in periodontitis and non-periodontitis patients: a systematic review with meta-analysis",
+      "publisher": "Journal of Clinical Periodontology（Martin C 等）",
+      "date": "2021-11-22",
+      "url": "https://doi.org/10.1111/jcpe.13487",
+      "note": "指引 R7.1 的支持文獻；本文只用指引內轉述的研究數與設計（35 個，多為前後比較，另有 8 個隨機試驗）。J Clin Periodontol 2022;49 Suppl 24:72–101，PMID 33998045。日期依 Crossref published-online。"
+    },
+    {
+      "title": "Effect of periodontal-orthodontic treatment of teeth with pathological tooth flaring, drifting, and elongation in patients with severe periodontitis: A systematic review with meta-analysis",
+      "publisher": "Journal of Clinical Periodontology（Papageorgiou SN 等）",
+      "date": "2021-08-18",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34327710/",
+      "note": "指引 R7.3 的支持文獻。J Clin Periodontol 2022;49 Suppl 24:102–120，PMC9290963。PubMed 摘要寫 30 個研究、914 人；指引內文寫 34 個研究（37 篇文獻）、1,090 人，本文採指引的數字。CAL 0.24 mm（7 篇）、乳頭高度 1.42 mm（2 篇）兩處一致。"
+    },
+    {
+      "title": "File:Orthodontics canine tourque2.JPG",
+      "publisher": "Wikimedia Commons（Challiyan）",
+      "date": "2010-01-17",
+      "url": "https://commons.wikimedia.org/wiki/File:Orthodontics_canine_tourque2.JPG",
+      "note": "頭圖。檔案描述：Teeth of an orthodontic patient. The fixed appliances used is Roth 022. wires are not engaged, to show how the initial placement of Nickel Titanium wire in to the anterior brackets can deepen the bite. Own work，CC BY-SA 3.0；日期為上傳日，拍攝日期未標。原頭圖 Zahnwanderung wegen Periodontitis OK 05.JPG 與 10-20 牙周欄的 OK 01 是同一位病人，為免兩週內重複而撤換。"
+    }
+  ]
+}
