@@ -1,0 +1,154 @@
+{
+ "column": "news",
+ "date": "2026-11-04",
+ "title": "美國期中選舉投票，格陵蘭批准美國安全協議",
+ "dek": "美國期中選舉週二投票，西班牙交通部長因列車事故請辭，台灣永豐銀行有 419 名客戶的存款被轉走。",
+ "brief": "美國期中選舉 11 月 3 日投票，密西根參議院席位的最後一份民調，民主黨候選人領先 11 點。格陵蘭議會通過與丹麥、美國的安全協議。台灣永豐銀行有 419 名客戶的存款被轉走，合計超過 4,000 萬元。",
+ "topic_key": "news:2026-11-04",
+ "updated_at": "2026-11-04T05:21:15+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "US Senate race Michigan",
+   "publisher": "半島電視台",
+   "date": "2026-11-03",
+   "url": "https://www.aljazeera.com/news/2026/11/3/michigan-us-senate-race-rogers-el-sayed-urge-turnout-for-critical-race",
+   "note": "投票時間、民調領先 11 點、首位穆斯林參議員"
+  },
+  {
+   "title": "Greenland parliament approves security deal",
+   "publisher": "半島電視台",
+   "date": "2026-11-03",
+   "url": "https://www.aljazeera.com/news/2026/11/3/greenland-parliament-approves-security-deal-with-us-denmark",
+   "note": "16 比 0、7 人棄權、皮圖菲克"
+  },
+  {
+   "title": "Spain transport minister offers resignation",
+   "publisher": "德國之聲",
+   "date": "2026-11-03",
+   "url": "https://www.dw.com/en/spain-s-transport-minister-offers-his-resignation-after-last-week-s-deadly-train-crash/a-79848097",
+   "note": "69 死、1 月 46 死、11 月 29 日大選"
+  },
+  {
+   "title": "波蘭總理：與俄邊境出現異常動向",
+   "publisher": "中央廣播電臺",
+   "date": "2026-11-03",
+   "url": "https://www.rti.org.tw/news?uid=3&pid=241655",
+   "note": "圖斯克談話；原報導引美聯社"
+  },
+  {
+   "title": "永豐銀爆集體盜轉",
+   "publisher": "中央廣播電臺",
+   "date": "2026-11-03",
+   "url": "https://www.rti.org.tw/news?uid=3&pid=241651",
+   "note": "427 筆、419 人、4 千萬、11 月 12 日報告"
+  },
+  {
+   "title": "中國男子程萬軍桃機尋求人道保護",
+   "publisher": "中央廣播電臺",
+   "date": "2026-11-03",
+   "url": "https://www.rti.org.tw/news?uid=3&pid=241654",
+   "note": "自稱說法；移民署回應"
+  }
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "美國期中選舉的結果，要到今天才陸續出來；台灣這邊，永豐銀行有客戶的錢昨天被轉走。"
+  },
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "美國期中選舉今天投票",
+     "place": "US",
+     "summary": "美國期中選舉 11 月 3 日（週二）投票，密西根州的參議院席位是焦點：民主黨的埃爾賽義德（Abdul El-Sayed）對上共和黨的羅傑斯（Mike Rogers），要補退休參議員彼得斯的缺。最後一份《紐約時報》與錫耶納學院民調顯示埃爾賽義德領先 11 點，他若當選會是美國第一位穆斯林參議員。密西根投票所晚上 8 點（台灣時間週三 09:00）關門，戰況緊的話，結果可能週三才有定論。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/3/michigan-us-senate-race-rogers-el-sayed-urge-turnout-for-critical-race",
+     "when": "11 月 3 日，美國當地時間"
+    },
+    {
+     "headline": "格陵蘭議會批准美國安全協議",
+     "place": [
+      "DK",
+      "US"
+     ],
+     "summary": "格陵蘭議會 11 月 3 日以 16 票對 0 票通過與丹麥、美國簽的安全協議，另有 7 人棄權。協議 9 月由川普、丹麥首相與格陵蘭總理簽署，讓美國在格陵蘭增設基地，並擴建北部的皮圖菲克太空基地。格陵蘭仍歸丹麥管轄，但就算將來獨立，協議照樣適用。協議要等丹麥與格陵蘭完成各自的議會程序才生效。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/3/greenland-parliament-approves-security-deal-with-us-denmark",
+     "when": "11 月 3 日，格陵蘭當地時間"
+    },
+    {
+     "headline": "西班牙交通部長請辭",
+     "place": "ES",
+     "summary": "西班牙交通部長普恩特（Óscar Puente）11 月 3 日在國會表示請辭，原因是 10 月 28 日馬德里以南的列車事故造成 69 人死亡。這是西班牙一年內第二次重大鐵路事故，1 月安達魯西亞的事故死了 46 人。他說一年內出兩次這種規模的事故，交通部長不能再留任。他不再列名候選人，但沒說何時離職；西班牙國會大選在 11 月 29 日。",
+     "source": "德國之聲",
+     "url": "https://www.dw.com/en/spain-s-transport-minister-offers-his-resignation-after-last-week-s-deadly-train-crash/a-79848097",
+     "when": "11 月 3 日，西班牙當地時間"
+    },
+    {
+     "headline": "波蘭加強與俄邊境戒備",
+     "place": [
+      "PL",
+      "RU"
+     ],
+     "summary": "波蘭總理圖斯克 11 月 3 日說，邊防人員前一晚在與俄羅斯飛地加里寧格勒接壤的邊境，阻止了一起疑似挑釁行動。他說當局收到更明確的情報，11 月上半月可能有破壞行動，甚至有武裝人員潛入。東北部的瓦爾米亞－馬祖里省與靠白俄羅斯的波德拉斯基省正在進行特別行動，反恐部隊也已增派。",
+     "source": "中央廣播電臺",
+     "url": "https://www.rti.org.tw/news?uid=3&pid=241655",
+     "when": "11 月 3 日，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "永豐銀行帳戶遭集體盜轉",
+     "place": "TW",
+     "summary": "永豐銀行 11 月 3 日有大批帳戶存款被轉走。金管會說，初步查到 427 筆異常交易，每筆約 10 萬元，合計超過 4,000 萬元，影響 419 名客戶，錢都匯進同業的同一個帳戶，已被凍結。客戶說自己沒有登入新版行動銀行 APP。永豐銀已先以代墊款返還客戶、把新版 APP 下架，原因還在查，並須在 11 月 12 日前向金管會提交重大偶發事件報告。",
+     "source": "中央廣播電臺",
+     "url": "https://www.rti.org.tw/news?uid=3&pid=241651",
+     "when": "11 月 3 日，台灣時間"
+    },
+    {
+     "headline": "中國男子在桃園機場求援",
+     "place": "TW",
+     "summary": "一名自稱前中央電視台節目主講人程萬軍的中國籍男子，11 月 2 日從泰國搭機抵台，原定轉機前往北京，卻在桃園機場公開求援，希望獲得短期人道保護。他說自己因言論坐牢 6 年。內政部移民署 11 月 3 日表示，已會同相關機關研議，依既有機制處置；他目前在機場管制區內休息，不能自由活動。",
+     "source": "中央廣播電臺",
+     "url": "https://www.rti.org.tw/news?uid=3&pid=241654",
+     "when": "11 月 3 日，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "永豐銀行盜轉事件（金管會 11 月 3 日說明）",
+   "head": [
+    "項目",
+    "內容"
+   ],
+   "rows": [
+    [
+     "異常交易",
+     "427 筆，每筆約 10 萬元"
+    ],
+    [
+     "合計金額",
+     "超過 4,000 萬元"
+    ],
+    [
+     "影響客戶",
+     "419 人"
+    ],
+    [
+     "重大偶發事件報告",
+     "11 月 12 日前提交"
+    ]
+   ],
+   "caption": "資料來源：中央廣播電臺。"
+  }
+ ]
+}
