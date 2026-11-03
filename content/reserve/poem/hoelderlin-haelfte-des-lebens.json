@@ -1,0 +1,207 @@
+{
+  "column": "poem",
+  "date": "reserve",
+  "reserve_written": "2026-11-03",
+  "title": "初版印的是梨，全集印成了花",
+  "dek": "兩段各七行，中間空一行。1804 年初版第一行掛的是黃色的梨，荷爾德林死後三年出的全集，印成了花。",
+  "brief": "荷爾德林〈生命的一半〉1804 年初版，第一行印的是黃色的梨；他死後三年出的全集印成了黃色的花，還把整首歸進「精神錯亂時期的詩」。初版裡「花」這個字只出現一次，在下半首：冬天的時候，去哪裡拿那些花。",
+  "topic_key": "poem:hoelderlin-haelfte-des-lebens",
+  "updated_at": "2026-11-03T14:49:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/14/H%C3%A4lfte_des_Lebens.jpg",
+    "width": 506,
+    "height": 756,
+    "alt": "一頁用德文印的舊書頁。標題 Hälfte des Lebens 底下是兩段詩，每段七行，行有長有短。",
+    "caption": "〈生命的一半〉第一次印出來的樣子，在《1805 年袖珍本》第 85 頁。第一行是 Birnen，梨；第 7 行的 heilignüchterne 印成一個字。",
+    "credit": "Friedrich Hölderlin，〈Hälfte des Lebens〉，收於《Taschenbuch für das Jahr 1805. Der Liebe und Freundschaft gewidmet》，法蘭克福，Friedrich Wilmans 出版，經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:H%C3%A4lfte_des_Lebens.jpg",
+    "made": "1804（書名年份 1805）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1846 年，荷爾德林（Friedrich Hölderlin）死後三年，他的第一套《全集》出到第二冊。編者 Christoph Theodor Schwab 在 1841 到 1843 年間去看過他好幾次。〈生命的一半〉收在這一冊，那一輯叫「精神錯亂時期的詩」，第一行掛著的是黃色的花。1804 年這首詩第一次印出來，那個字是 Birnen，梨。和初版一致的手稿，一份也沒有留下來。"
+    },
+    {
+      "type": "quote",
+      "text": "掛著黃色的梨\n又滿是野玫瑰\n這片土地垂進湖裡，\n你們，秀美的天鵝，\n醉在吻裡，\n你們把頭浸進\n神聖而清醒的水。\n\n唉，我去哪裡拿，等到\n冬天的時候，那些花，又去哪裡拿\n陽光，\n和大地的影子？\n牆立著\n無言而冷，風裡\n風向旗鏘鏘作響。",
+      "original": "Mit gelben Birnen hänget\nUnd voll mit wilden Rosen\nDas Land in den See,\nIhr holden Schwäne,\nUnd trunken von Küssen\nTunkt ihr das Haupt\nIns heilignüchterne Wasser.\n\nWeh mir, wo nehm' ich, wenn\nEs Winter ist, die Blumen, und wo\nDen Sonnenschein,\nUnd Schatten der Erde?\nDie Mauern stehn\nSprachlos und kalt, im Winde\nKlirren die Fahnen.",
+      "cite": "荷爾德林，〈生命的一半〉（Hälfte des Lebens），《1805 年袖珍本》，法蘭克福，Wilmans，1804 年"
+    },
+    {
+      "type": "p",
+      "text": "1804 年 8 月底，荷爾德林的九首詩印在一本袖珍年鑑裡，這首是第七首。書評多半在笑，有一位說，誰能理直氣壯地說自己讀懂這九首，就該頒給他一筆像樣的獎金，又說沒有什麼比裝腔作勢的胡話更惹人厭。1826 年第一本荷爾德林詩集沒收這首，編者認為它已經屬於瘋狂的那段時期。"
+    },
+    {
+      "type": "p",
+      "text": "初版裡，「花」這個字全詩只出現一次，在下半首：「冬天的時候，那些花」。上半首掛的是梨，滿是野玫瑰。依我看，第一行一印成花，下半首要去哪裡拿的東西，上半首開頭就已經掛著了。"
+    },
+    {
+      "type": "table",
+      "title": "兩個版本差在哪裡",
+      "head": [
+        "",
+        "1804 年初版",
+        "1846 年《全集》"
+      ],
+      "rows": [
+        [
+          "第 1 行",
+          "Birnen（梨）",
+          "Blumen（花）"
+        ],
+        [
+          "第 7 行",
+          "heilignüchterne（一個字）",
+          "heilig nüchterne（兩個字）"
+        ],
+        [
+          "第 7 行開頭",
+          "Ins",
+          "In's"
+        ],
+        [
+          "第 12 行行末",
+          "stehn",
+          "stehen"
+        ],
+        [
+          "放在哪裡",
+          "九首詩的第 7 首",
+          "「精神錯亂時期的詩」"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "「掛著黃色的梨／又滿是野玫瑰／這片土地垂進湖裡」：動詞 hänget 排在最前面，主詞「這片土地」到第三行才來，接著就是垂進湖裡。"
+    },
+    {
+      "type": "p",
+      "text": "前三行沒有人，只有土地、梨、野玫瑰和湖。到「你們，秀美的天鵝」，有人在對天鵝說話；說話的這個人，要到下半首開頭那聲「唉，我去哪裡拿」才提到自己。"
+    },
+    {
+      "type": "p",
+      "text": "天鵝「醉在吻裡」，隔一行，把頭浸進 heilignüchterne 的水。這個字是 heilig（神聖）加上 nüchtern（沒喝酒、清醒），初版印成一個字。醉隔一行就接清醒，水是清醒的。中文接不成一個字，只能譯成「神聖而清醒」。"
+    },
+    {
+      "type": "p",
+      "text": "上半首最後一個字是 Wasser。空一行，下半首開口是 Weh（唉），接著 wo、wenn、Winter、wo，一串 w。研究荷爾德林的 Karl Eibl 指出，這串頭韻是從 Wasser 起頭的中譯的「水」和「唉」之間，這個聲音接不上。"
+    },
+    {
+      "type": "p",
+      "text": "「唉，我去哪裡拿，等到」，這一行斷在 wenn 上。wenn 可以是「當」，也可以是「如果」，德文兩個意思都在，中文只能挑一個。Eibl 說這句向來都讀成「當」；他認為為了把所有關聯都用盡，也應該考慮「如果」，他舉的跡象是原文用現在式「是冬天」，不是「會是冬天」。他自己接著承認，德文本來就能用現在式講以後，這只是薄弱的跡象。"
+    },
+    {
+      "type": "p",
+      "tag": "詮釋",
+      "text": "Eibl 在註裡自己也舉出一份草稿：冬天我去哪裡拿花，「好為天上的神編花環」，下一句是「到那時，將會像……」，用的是未來式。他同時提醒，草稿拿來解讀要非常小心。我照通常的讀法譯成「等到」，讓這個字跟德文一樣懸在行尾，到下一行才知道等的是冬天。"
+    },
+    {
+      "type": "p",
+      "text": "Eibl 說下半首不是一幅冬景。冬天只提了一次，冰和雪都沒寫，冷只用來形容牆怎麼立著：「牆立著」斷在 stehn，下一行才是「無言而冷」。花、陽光、大地的影子都在問句裡，不在場。照 Eibl 的讀法，第二段說成在場的只有牆和 Fahnen，兩樣都是人造物；不過詩裡的風（im Winde）也在。"
+    },
+    {
+      "type": "p",
+      "text": "Fahnen，Eibl 說研究者的共識是讀成風向旗。klirren 在現代德文裡多半用在玻璃相碰，格林兄弟的《德語詞典》卻收了一大串金屬撞金屬的例子。"
+    },
+    {
+      "type": "p",
+      "text": "最後一行和第一行一樣，動詞先到：先是 Klirren，最後兩個字才是 die Fahnen。"
+    },
+    {
+      "type": "facts",
+      "title": "這首詩",
+      "items": [
+        [
+          "作者",
+          "荷爾德林（Friedrich Hölderlin，1770–1843）"
+        ],
+        [
+          "詩題",
+          "Hälfte des Lebens（生命的一半）"
+        ],
+        [
+          "初版",
+          "《Taschenbuch für das Jahr 1805. Der Liebe und Freundschaft gewidmet》，法蘭克福，Friedrich Wilmans，1804 年；第 85 頁"
+        ],
+        [
+          "本文依據",
+          "初版掃描（hoelderlin.de、Commons）與德文維基文庫轉錄"
+        ],
+        [
+          "形式",
+          "兩段各 7 行，共 14 行；不押韻，自由節奏；上半首 42 個音節，下半首 41 個"
+        ],
+        [
+          "中譯",
+          "本報自譯，逐行對齊"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Hälfte des Lebens（依 Taschenbuch für das Jahr 1805, S. 85 轉錄）",
+      "publisher": "Wikisource（德文）",
+      "date": "",
+      "url": "https://de.wikisource.org/wiki/H%C3%A4lfte_des_Lebens",
+      "note": "原文依據。第 8 行初版掃描作 nehm' ich（有省略號），本文依掃描。"
+    },
+    {
+      "title": "Wilmans Taschenbuch 1805, p. 84/85（初版掃描）",
+      "publisher": "hoelderlin.de",
+      "date": "",
+      "url": "http://www.hoelderlin.de/quellen-druck/d-27-09.html",
+      "note": "看第 85 頁：題前編號 7.；第 1 行 Birnen；第 7 行 Ins heilignüchterne（一字）；第 8 行 nehm' ich；第 12 行 stehn。正文表格的 1804 年欄依此頁。"
+    },
+    {
+      "title": "File:Hälfte des Lebens.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "1805",
+      "url": "https://commons.wikimedia.org/wiki/File:H%C3%A4lfte_des_Lebens.jpg",
+      "note": "頭圖。Public domain。"
+    },
+    {
+      "title": "Friedrich Hölderlin's sämmtliche Werke, hrsg. von Christoph Theodor Schwab, Bd. 2",
+      "publisher": "J. G. Cotta，Stuttgart und Tübingen（Internet Archive 掃描）",
+      "date": "1846",
+      "url": "https://archive.org/details/bub_gb_JR9VAAAAcAAJ_2",
+      "note": "第 341 頁：第 1 行 Mit gelben Blumen hänget；第 7 行 In's heilig nüchterne Wasser（尖角體 I／J 同形）；第 12 行 Die Mauern stehen。目錄頁 VI：Gedichte aus der Zeit des Irrsinns。正文表格的 1846 年欄依此頁。"
+    },
+    {
+      "title": "Der Blick hinter den Spiegel. Sinnbild und gedankliche Bewegung in Hölderlins „Hälfte des Lebens“",
+      "publisher": "Karl Eibl，Jahrbuch der deutschen Schillergesellschaft 27 (1983)，Goethezeitportal 重刊",
+      "date": "2004",
+      "url": "http://www.goethezeitportal.de/db/wiss/hoelderlin/haelfte_eibl.pdf",
+      "note": "S. 223：1826 年 Uhland／Gustav Schwab 版未收；S. 224：Wasser 與 w 頭韻；S. 225：Es ist kein Winterbild；S. 226 與註 12：Fahnen 讀作風向旗為共識、klirren 與《德語詞典》；S. 232：wenn「sollte man auch erwägen」作條件句，現在式「nur ein schwaches Indiz」；註 28：草稿「daß ich Kränze den Himmlischen / winde? / Dann wird es sein, als...」（引 StA 2/2 S. 664），Eibl 並說草稿要極謹慎使用。"
+    },
+    {
+      "title": "Nachtgesänge",
+      "publisher": "Wikipedia（德文）",
+      "date": "",
+      "url": "https://de.wikipedia.org/wiki/Nachtges%C3%A4nge",
+      "note": "九首詩的順序；自由節奏；九首都沒有和印本一致的手稿留存；1805 年書評（引 StA 7,4 S. 22–23）。"
+    },
+    {
+      "title": "Hälfte des Lebens",
+      "publisher": "Wikipedia（德文）",
+      "date": "",
+      "url": "https://de.wikipedia.org/wiki/H%C3%A4lfte_des_Lebens",
+      "note": "1804 年 8 月底出版；兩段 42／41 音節（本報自數相符）；1846 年版第一行的 Birnen 被 Blumen 取代（德文維基用被動語態，引 Andersen 1997），沒有交代是誰、為何。"
+    },
+    {
+      "title": "Friedrich Hölderlin",
+      "publisher": "Wikipedia（德文）",
+      "date": "",
+      "url": "https://de.wikipedia.org/wiki/Friedrich_H%C3%B6lderlin",
+      "note": "生卒；1826 年詩集編者為 Ludwig Uhland 與 Gustav Schwab；C. T. Schwab 1841–1843 年間數度探訪；1846 年版為第一套全集。"
+    }
+  ]
+}
