@@ -1135,7 +1135,7 @@ async function viewConcerts(my) {
   const checked = typeof S.gigs?.checked === "string" ? fmtDate(S.gigs.checked, "short") : "";
   const pressed = (c) => GIG_CITIES.map(([k, label]) => `<button type="button" class="chip" data-c="${k}" aria-pressed="${k === c}">${label}</button>`).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>近期演出</h1><span class="de">Spielplan</span></header>
-    <p class="gig-intro">交響樂、歌劇、音樂劇與室內樂。台中優先；台北、新北、高雄只收值得專程跑一趟的。每天下午更新，演出過了就下架。</p>
+    <p class="gig-intro">交響樂、歌劇、音樂劇與室內樂。台中優先；台北、新北、高雄只收值得專程跑一趟的。每天早上和當期一起更新，演出過了就下架。</p>
     <nav class="chips" aria-label="城市"></nav><ul class="gig-list full"></ul>
     <section class="gig-key"><h2>值得聽怎麼評</h2>${RUBRIC}
       <p class="small">資料：文化部藝文活動開放資料、各場館與售票網站${checked ? `。最後查核：${esc(checked)}` : ""}。</p></section></div>`;
