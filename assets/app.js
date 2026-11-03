@@ -248,7 +248,8 @@ function revealPick(issue, arts) {
 }
 function revealBox(issue, arts, read) {
   const date = issue.date, pick = revealPick(issue, arts);
-  const listed = arts.filter((a) => col(a.column, date).group !== "watch" || a.brief);
+  // The parcel's own article does not count: the paper is off once every other article is read (the owner, 2026-11-03).
+  const listed = arts.filter((a) => a !== pick && (col(a.column, date).group !== "watch" || a.brief));
   if (!pick || !listed.length) return "";
   const h = pick.hero, T = Math.min(12, listed.length), rows = Math.ceil(T / 4), last = T - 4 * (rows - 1);
   const key = (a) => `${date}/${a.column}`, tileOf = (i) => Math.floor((i * T) / listed.length);
@@ -291,9 +292,10 @@ function fillReveal() {
     t.addEventListener("animationend", () => t.remove(), { once: true });
     setTimeout(() => t.remove(), 1400);
   });
-  // The last piece: the page comes back to the top so the parcel is seen opening (the owner, 2026-11-03).
+  // The last piece: when the reader comes back to the front page (not on a redraw while they are already on it) the
+  // page returns to the parcel so it is seen opening (the owner, 2026-11-03).
   const fin = main.querySelector(".wrap > .reveal.just");
-  if (fin) requestAnimationFrame(() => scrollTo({ top: Math.max(0, fin.getBoundingClientRect().top + scrollY - 64), behavior: calm() ? "auto" : "smooth" }));
+  if (fin && enteredFront) requestAnimationFrame(() => scrollTo({ top: Math.max(0, fin.getBoundingClientRect().top + scrollY - 64), behavior: calm() ? "auto" : "smooth" }));
 }
 // 排字: the verse is set a glyph at a time (style.css typeset), each code point in its own <i> numbered for its delay.
 // The glyphs stay inline — not inline-block — so line breaking, hanging punctuation and text-spacing-trim are those of
@@ -1570,6 +1572,7 @@ let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns 
 // The bottom-bar tab a page belongs to.
 const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
+let enteredFront = false; // this draw of the front page came from another page (route), not from a redraw in place
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
 let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising number, so a step back is recognisable
 // Pages with a back arrow: an article, an event. Any other page keeps its scroll position for when the reader steps
@@ -1583,6 +1586,7 @@ async function route(ev) {
   if ($("#sheet")?.open) $("#sheet").close(); // the contents sheet (or any other) does not outlive the page it was raised from
   document.title = S.cfg.title;
   const h = location.hash || "#/";
+  enteredFront = shownHash !== h;
   const leaving = isDetail(shownHash); // coming out of an article or an event
   if (shownHash && !isDetail(shownHash) && shownHash !== h) places.set(shownHash, scrollY);
   const tapped = navTap;
@@ -1725,7 +1729,7 @@ async function boot() {
     if (issue === shownFront[0] && status === shownFront[1]) return;
     const line = main.querySelector(".status");
     if (issue === shownFront[0] && status && shownFront[1] && line) { line.innerHTML = status; shownFront[1] = status; }
-    else viewFront();
+    else { enteredFront = false; viewFront(); }
   };
   let fetchedAt = Date.now(), hiddenAt = 0;
   const loadIndex = async () => {
