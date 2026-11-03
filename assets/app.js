@@ -253,18 +253,30 @@ function revealBox(issue, arts, read) {
   const move = !calm() && Array.isArray(was);
   const newly = (j) => move && listed.some((a, i) => tileOf(i) === j && !was.includes(key(a))); // an article of tile j read since the last draw
   const done = gone.every(Boolean), just = done && gone.some((_, j) => newly(j));
-  // A 12-unit grid: 4 tiles of 3 to a row, the last row's few spread to 12 so the paper always covers the width.
+  // A 12-unit grid: 4 pieces of 3 to a row, the last row's few spread to 12 so the paper always covers the width. Each
+  // piece is wrapping paper torn along its edges: a clip-path polygon with three points an edge, pulled inward by a
+  // hash of the date and the piece (never more than the pieces' overlap, so no seam shows the picture).
+  const seed = Array.from(date).reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) >>> 0, 7);
+  const jit = (j, k) => { const x = Math.sin(seed + j * 97 + k * 13) * 10000; return (x - Math.floor(x)) * 4.5; }; // 0–4.5%
+  const torn = (j) => {
+    const pts = [];
+    for (let k = 0; k < 3; k++) pts.push(`${[8, 50, 92][k]}% ${jit(j, k).toFixed(1)}%`);
+    for (let k = 3; k < 6; k++) pts.push(`${(100 - jit(j, k)).toFixed(1)}% ${[8, 50, 92][k - 3]}%`);
+    for (let k = 6; k < 9; k++) pts.push(`${[92, 50, 8][k - 6]}% ${(100 - jit(j, k)).toFixed(1)}%`);
+    for (let k = 9; k < 12; k++) pts.push(`${jit(j, k).toFixed(1)}% ${[92, 50, 8][k - 9]}%`);
+    return `polygon(0 0, ${pts.slice(0, 3).join(", ")}, 100% 0, ${pts.slice(3, 6).join(", ")}, 100% 100%, ${pts.slice(6, 9).join(", ")}, 0 100%, ${pts.slice(9).join(", ")})`;
+  };
   const tiles = gone.map((g, j) => {
     if (g && !newly(j)) return "";
     const r = Math.floor(j / 4), k = j - 4 * r, span = r === rows - 1 ? 12 / last : 3;
-    return `<i class="t${g ? " peel" : ""}" style="grid-area:${r + 1}/${k * span + 1}/${r + 2}/${(k + 1) * span + 1}"><b>${String(j + 1).padStart(2, "0")}</b></i>`;
-  }).join("");
+    return `<i class="t${g ? " peel" : ""}" style="grid-area:${r + 1}/${k * span + 1}/${r + 2}/${(k + 1) * span + 1};--cp:${torn(j)};--r:${((jit(j, 12) - 2.25) * .6).toFixed(2)}deg"></i>`;
+  }).join("") + (done && !just ? "" : `<i class="wax" aria-hidden="true">${EMBLEM}</i>`); // the seal stays to fall off with the last piece
   const unread = listed.filter((a) => !read.has(key(a))).length;
   const by = [h.made ? esc(String(h.made)) : "", h.credit ? esc(h.credit) : ""].filter(Boolean).join("・");
   const cap = done ? `<a href="#/a/${date}/${pick.column}"><b>${esc(pick.title)}</b>${by ? `<span class="by">${by}</span>` : ""}<span class="go">看那篇<i aria-hidden="true">→</i></span></a>`
-    : `還有 ${unread} 篇沒讀，讀完就全揭開`;
+    : `還有 ${unread} 篇沒讀，讀完就拆開`;
   const ar = h.width > 0 && h.height > 0 ? ` style="--ar:${Number(h.width)}/${Number(h.height)}"` : "";
-  return `<section class="reveal${done ? " done" : ""}${just ? " just" : ""}" aria-label="刮開今天這幅"><div class="lbl">刮開今天這幅<span class="de">Aufgedeckt</span></div>
+  return `<section class="reveal${done ? " done" : ""}${just ? " just" : ""}" aria-label="拆開今天的包裹"><div class="lbl">拆開今天的包裹<span class="de">Das Paket</span></div>
     <div class="plate${CONTAIN.has(h.kind) ? " contain" : ""}"${ar}><img src="${esc(h.src)}" alt="${esc(h.alt || "")}" loading="eager" decoding="async" referrerpolicy="no-referrer"><div class="tiles" aria-hidden="true" style="--rows:${rows}">${tiles}</div></div>
     <p class="cap">${cap}</p></section>`;
 }
