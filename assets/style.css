@@ -1288,8 +1288,17 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .bird-note :is(.e-ink, .e-gold) { fill: var(--muted); } .bird-note .e-robin { fill: var(--robin); } .bird-note .e-paper { fill: var(--paper); } .bird-note :is(.e-wing, .e-legs) { stroke: var(--muted); fill: none; } .bird-note .e-frame { display: none; }
 .bird-note.got { color: var(--gold-ink); }
 @media (prefers-reduced-motion: no-preference) {
-  .bird-hide.found { animation: fly-off .9s cubic-bezier(.3, .6, .2, 1) both; pointer-events: none; }
-  @keyframes fly-off { 30% { transform: translate(6px, -6px) rotate(-8deg); opacity: 1; } to { transform: translate(60px, -90px) rotate(-18deg) scale(.6); opacity: 0; } }
+  /* Found: two hops on the spot (.55s), then 2s along a swooping path up and across the page — a dip, a long climb,
+     a loop over the top — wings beating all the way, the body banking with the path (offset-rotate), and a fade at the
+     end. The flecks are gold dots app.js drops along the way. */
+  .bird-hide.found { pointer-events: none; offset-path: path("M0 0 C 30 8, 55 24, 70 -14 S 95 -120, 160 -150 S 250 -90, 230 -200 S 150 -330, 260 -460"); offset-rotate: auto 0deg;
+    animation: hop .55s ease-in-out 2, take-off 2s .55s cubic-bezier(.4, .1, .3, 1) both; }
+  @keyframes hop { 0%, 100% { transform: translateY(0) scale(1, 1); } 35% { transform: translateY(-7px) scale(.96, 1.06); } 70% { transform: translateY(0) scale(1.05, .94); } }
+  @keyframes take-off { 0% { offset-distance: 0%; opacity: 1; } 80% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
+  .bird-hide.found .e-wing { transform-origin: 31px 33px; animation: flap .16s .5s ease-in-out infinite alternate; }
+  @keyframes flap { from { transform: rotate(10deg); } to { transform: rotate(-30deg); } }
+  .fleck { position: fixed; z-index: 39; width: 4px; height: 4px; border-radius: 50%; background: var(--gold); pointer-events: none; animation: fleck .9s ease-out both; }
+  @keyframes fleck { from { opacity: .9; transform: scale(1); } to { opacity: 0; transform: translateY(14px) scale(.3); } }
 }
 
 /* ——— 收藏 (Sammlung; app.js viewSaved): four shelves up top, two by two — 劃線本, 畫廊, 郵票冊, 你讀過的世界, the corners

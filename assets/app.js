@@ -213,11 +213,27 @@ function hideBird(body, date, column) {
   b.type = "button"; b.className = "bird-hide"; b.setAttribute("aria-label", "知更鳥");
   b.innerHTML = `<svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>`;
   ps[Math.min(spot.p, ps.length - 1)].append(b);
+  // Found: the bird hops twice, then takes off along a swooping path across the page (style.css fly-off, offset-path),
+  // wings beating, shedding a few gold flecks on the way, and is gone past the top. It is lifted out of the text first
+  // (position: fixed at its own spot) so the flight is over the page, not inside the paragraph.
   b.addEventListener("click", () => {
     store.set("birds", [...birdsFound(), date].slice(-400));
+    if (calm()) { b.remove(); toast("找到了，今天的知更鳥"); return; }
+    const r = b.getBoundingClientRect();
+    b.style.cssText = `position:fixed;left:${r.left}px;top:${r.top}px;margin:0;z-index:40`;
+    document.body.append(b);
     b.classList.add("found");
-    toast("找到了，今天的知更鳥");
-    setTimeout(() => b.remove(), calm() ? 0 : 900);
+    const flecks = setInterval(() => {
+      const q = b.getBoundingClientRect();
+      if (!q.width) return;
+      const f = document.createElement("i");
+      f.className = "fleck";
+      f.style.cssText = `left:${q.left + q.width / 2 + (Math.random() - .5) * 10}px;top:${q.top + q.height / 2 + (Math.random() - .5) * 10}px`;
+      document.body.append(f);
+      setTimeout(() => f.remove(), 900);
+    }, 110);
+    setTimeout(() => toast("找到了，今天的知更鳥"), 700);
+    setTimeout(() => { clearInterval(flecks); b.remove(); }, 2700);
   }, { once: true });
 }
 function lockedCard(date, a, by) {
