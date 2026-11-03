@@ -941,6 +941,11 @@ img.img-off { visibility: hidden; }
   .reveal.just .plate { animation: gild .5s 1.05s both; }
   @keyframes gild { from { border-color: var(--rule); } }
   .reveal.just .cap { animation: page-in .5s 1.05s both; }
+  /* The title of the opened parcel is typeset glyph by glyph after the paper is off (app.js: .set, --i/--n/--step);
+     the maker's line and 看那篇 follow once the last glyph has landed. */
+  .reveal .cap .ch { font-style: normal; position: relative; }
+  .reveal.just .cap b.set .ch { animation: typeset .5s calc(1.2s + var(--i, 0) * var(--step, 45ms)) cubic-bezier(.2,.7,.2,1) backwards; }
+  .reveal.just .cap b.set ~ :is(.by, .go) { animation: page-in .5s 2.6s both; } /* after the longest title has landed */
   /* 排字 — the verse is set the way a compositor fills a line: once the dateline is in (1.3s), each glyph drops into
      place from a little above, gold and glowing first, and cools to ink as it lands; the next follows --step later
      (app.js: 45ms, shorter for a long verse, so the whole line is set within .7s). When the last has landed (--end)

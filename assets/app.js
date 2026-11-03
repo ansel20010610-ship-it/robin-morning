@@ -297,7 +297,9 @@ function revealBox(issue, arts, read) {
   // Until the paper is off the parcel is sealed (the owner, 2026-11-03): no way into its article, only the column it
   // comes from and how many articles are left; opened, it is the article's card.
   const href = `#/a/${date}/${pick.column}`, pm = posMark(date, pick, read);
-  const cap = done ? `<a class="art${pm.cls}"${pm.st} href="${href}">${kicker(pick.column, false, date)}<b>${esc(pick.title)}</b>${by ? `<span class="by">${by}</span>` : ""}<span class="go">看那篇<i aria-hidden="true">→</i></span></a>`
+  // Just opened: the title is set a glyph at a time, gold cooling to ink, as the masthead's verse (verseHtml/verseVars).
+  const title = just ? `<b class="set"${verseVars(pick.title)}>${verseHtml(pick.title)}</b>` : `<b>${esc(pick.title)}</b>`;
+  const cap = done ? `<a class="art${pm.cls}"${pm.st} href="${href}">${kicker(pick.column, false, date)}${title}${by ? `<span class="by">${by}</span>` : ""}<span class="go">看那篇<i aria-hidden="true">→</i></span></a>`
     : `<div class="art">${kicker(pick.column, false, date)}<span class="left">還有 ${unread} 篇沒讀，讀完就拆開</span></div>`;
   const ar = h.width > 0 && h.height > 0 ? ` style="--ar:${Number(h.width)}/${Number(h.height)}"` : "";
   return `<section class="reveal${done ? " done" : ""}${just ? " just" : ""}" aria-label="拆開今天的包裹"><div class="lbl">拆開今天的包裹<span class="de">Das Paket</span></div>
