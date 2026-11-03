@@ -134,25 +134,16 @@ button { font: inherit; color: inherit; }
 .reveal.done .plate { border-color: var(--gold); }
 .reveal .plate img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .reveal .plate.contain img { object-fit: contain; }
-/* --rows from revealBox: an explicit row count, so a row whose tiles are all gone keeps its height for the picture. */
-.reveal .tiles { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(var(--rows, 1), 1fr); }
-/* Wrapping paper: kraft, with fibres (two faint lattices) and a torn edge (--cp from revealBox) — the pieces overlap by
-   6px so a torn edge never bares the picture; each leans a hair (--r). The wax seal sits over the middle until the last
-   piece is off. At night the kraft is darker and the fibres lighter. */
-.reveal .t { position: relative; margin: -6px; pointer-events: none; clip-path: var(--cp); rotate: var(--r, 0deg);
-  background: radial-gradient(circle, color-mix(in srgb, #3b2a14 11%, transparent) .6px, transparent 1.1px) 0 0 / 5px 5px,
-    radial-gradient(circle, color-mix(in srgb, #fff3dd 28%, transparent) .9px, transparent 1.5px) 2px 3px / 9px 9px,
-    linear-gradient(135deg, #c9a979, #b9955f 60%, #c4a26f); }
-.reveal .t::after { content: ""; position: absolute; inset: 0; clip-path: var(--cp); box-shadow: inset 0 0 0 2px color-mix(in srgb, #fff3dd 35%, transparent); }
-.reveal .wax { position: absolute; left: 50%; top: 50%; width: 56px; height: 56px; translate: -50% -50%; border-radius: 50%; display: grid; place-items: center; pointer-events: none;
-  background: radial-gradient(circle at 38% 32%, #9c3a33, #6e1f1b 70%, #561512); box-shadow: 0 1px 2px rgba(0,0,0,.35), inset 0 0 0 3px rgba(255,255,255,.08), inset 0 0 0 5px rgba(0,0,0,.18); }
-.reveal .wax .emblem { width: 34px; height: 34px; }
-.reveal .wax .emblem .e-frame { stroke: #e9c7b7; }
-.reveal .wax .emblem :is(.e-ink, .e-robin, .e-gold) { fill: #e9c7b7; }
-.reveal .wax .emblem .e-paper { fill: #6e1f1b; }
-.reveal .wax .emblem :is(.e-wing, .e-legs) { stroke: #e9c7b7; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .reveal .t { background: radial-gradient(circle, color-mix(in srgb, #000 22%, transparent) .6px, transparent 1.1px) 0 0 / 5px 5px, radial-gradient(circle, color-mix(in srgb, #e8d2b0 16%, transparent) .9px, transparent 1.5px) 2px 3px / 9px 9px, linear-gradient(135deg, #8a6a3f, #6f5330 60%, #80613a); } }
-:root[data-theme="dark"] .reveal .t { background: radial-gradient(circle, color-mix(in srgb, #000 22%, transparent) .6px, transparent 1.1px) 0 0 / 5px 5px, radial-gradient(circle, color-mix(in srgb, #e8d2b0 16%, transparent) .9px, transparent 1.5px) 2px 3px / 9px 9px, linear-gradient(135deg, #8a6a3f, #6f5330 60%, #80613a); }
+/* Venetian blinds (--n slats from revealBox): each slat a lacquered strip of paper colour with a hairline, hung on
+   two ladder cords; closed it lies flat over the picture, open it tilts edge-on (rotateX) into a thin line, so the
+   picture shows between the lines. The motion block turns a newly read slat; otherwise the state just stands. */
+.reveal .tiles { position: absolute; inset: 0; display: grid; grid-template-rows: repeat(var(--n, 1), 1fr); perspective: 900px; }
+.reveal .tiles::before, .reveal .tiles::after { content: ""; position: absolute; top: 0; bottom: 0; width: 1px; background: color-mix(in srgb, var(--ink) 45%, transparent); left: 18%; z-index: 2; }
+.reveal .tiles::after { left: auto; right: 18%; }
+.reveal .t { position: relative; transform-origin: 50% 50%; backface-visibility: hidden; margin: -1px 0;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--paper) 88%, #fff), var(--paper-2) 55%, color-mix(in srgb, var(--paper-2) 80%, var(--ink)));
+  box-shadow: 0 1px 1px rgba(0,0,0,.28), inset 0 1px 0 color-mix(in srgb, #fff 35%, transparent); }
+.reveal .t.open { transform: rotateX(-84deg); box-shadow: none; }
 .reveal .cap { margin: 0; padding: 9px 0 11px; border-bottom: 1px solid var(--rule); font-family: var(--sans); font-size: 13px; line-height: 1.7; color: var(--muted); letter-spacing: .03em; }
 .reveal .cap a { display: grid; gap: 1px; color: inherit; text-decoration: none; }
 .reveal .cap b { font-family: var(--serif); font-size: 16px; line-height: 1.5; font-weight: 600; color: var(--ink); letter-spacing: 0; }
@@ -931,10 +922,8 @@ img.img-off { visibility: hidden; }
   .wetter .two { animation-delay: .12s; }
   /* 刮開頭圖: a tile whose article was read since the last visit tears off upward a beat after the page draws; when it
      was the last, the hairline gilds and the caption comes in once the paper is away (app.js revealBox: .peel, .just). */
-  .reveal .t.peel { animation: tear .65s .5s cubic-bezier(.4, 0, .2, 1) both; transform-origin: 20% 80%; }
-  @keyframes tear { from { opacity: 1; transform: none; } 60% { opacity: 1; } to { opacity: 0; transform: translate(-14px, -26px) rotate(-14deg) scale(.92); } }
-  .reveal.just .wax { animation: wax-off .5s .9s cubic-bezier(.4, 0, .2, 1) both; }
-  @keyframes wax-off { to { opacity: 0; translate: -50% -30%; rotate: 20deg; } }
+  .reveal .t.peel { animation: slat .7s .5s cubic-bezier(.3, .7, .2, 1) both; }
+  @keyframes slat { from { transform: none; box-shadow: 0 1px 1px rgba(0,0,0,.28); } to { transform: rotateX(-84deg); box-shadow: none; } }
   .reveal.just .plate { animation: gild .5s 1.05s both; }
   @keyframes gild { from { border-color: var(--rule); } }
   .reveal.just .cap { animation: page-in .5s 1.05s both; }

@@ -245,7 +245,7 @@ function revealBox(issue, arts, read) {
   const pick = arts.find((a) => REVEAL_COLS.has(a.column) && src(a)) || arts.find((a) => a.hero?.kind === "artwork" && src(a)) || (src(lead) ? lead : null);
   const listed = arts.filter((a) => col(a.column, date).group !== "watch" || a.brief);
   if (!pick || !listed.length) return "";
-  const h = pick.hero, T = Math.min(12, listed.length), rows = Math.ceil(T / 4), last = T - 4 * (rows - 1);
+  const h = pick.hero, T = Math.min(12, listed.length);
   const key = (a) => `${date}/${a.column}`, tileOf = (i) => Math.floor((i * T) / listed.length);
   const gone = Array.from({ length: T }, (_, j) => listed.every((a, i) => tileOf(i) !== j || read.has(key(a))));
   const was = (store.get("reveal.seen", null) || {})[date];
@@ -253,38 +253,23 @@ function revealBox(issue, arts, read) {
   const move = !calm() && Array.isArray(was);
   const newly = (j) => move && listed.some((a, i) => tileOf(i) === j && !was.includes(key(a))); // an article of tile j read since the last draw
   const done = gone.every(Boolean), just = done && gone.some((_, j) => newly(j));
-  // A 12-unit grid: 4 pieces of 3 to a row, the last row's few spread to 12 so the paper always covers the width. Each
-  // piece is wrapping paper torn along its edges: a clip-path polygon with three points an edge, pulled inward by a
-  // hash of the date and the piece (never more than the pieces' overlap, so no seam shows the picture).
-  const seed = Array.from(date).reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) >>> 0, 7);
-  const jit = (j, k) => { const x = Math.sin(seed + j * 97 + k * 13) * 10000; return (x - Math.floor(x)) * 4.5; }; // 0–4.5%
-  const torn = (j) => {
-    const pts = [];
-    for (let k = 0; k < 3; k++) pts.push(`${[8, 50, 92][k]}% ${jit(j, k).toFixed(1)}%`);
-    for (let k = 3; k < 6; k++) pts.push(`${(100 - jit(j, k)).toFixed(1)}% ${[8, 50, 92][k - 3]}%`);
-    for (let k = 6; k < 9; k++) pts.push(`${[92, 50, 8][k - 6]}% ${(100 - jit(j, k)).toFixed(1)}%`);
-    for (let k = 9; k < 12; k++) pts.push(`${jit(j, k).toFixed(1)}% ${[92, 50, 8][k - 9]}%`);
-    return `polygon(0 0, ${pts.slice(0, 3).join(", ")}, 100% 0, ${pts.slice(3, 6).join(", ")}, 100% 100%, ${pts.slice(6, 9).join(", ")}, 0 100%, ${pts.slice(9).join(", ")})`;
-  };
-  const tiles = gone.map((g, j) => {
-    if (g && !newly(j)) return "";
-    const r = Math.floor(j / 4), k = j - 4 * r, span = r === rows - 1 ? 12 / last : 3;
-    return `<i class="t${g ? " peel" : ""}" style="grid-area:${r + 1}/${k * span + 1}/${r + 2}/${(k + 1) * span + 1};--cp:${torn(j)};--r:${((jit(j, 12) - 2.25) * .6).toFixed(2)}deg"></i>`;
-  }).join("") + (done && !just ? "" : `<i class="wax" aria-hidden="true">${EMBLEM}</i>`); // the seal stays to fall off with the last piece
+  // Venetian blinds: one slat per tile across the whole width, closed over the picture; a slat whose article is read
+  // stands open (tilted edge-on, a thin line); one read since the last draw turns open a beat after the page draws.
+  const tiles = gone.map((g, j) => `<i class="t${g ? " open" : ""}${g && newly(j) ? " peel" : ""}"></i>`).join("");
   const unread = listed.filter((a) => !read.has(key(a))).length;
   const by = [h.made ? esc(String(h.made)) : "", h.credit ? esc(h.credit) : ""].filter(Boolean).join("・");
   const cap = done ? `<a href="#/a/${date}/${pick.column}"><b>${esc(pick.title)}</b>${by ? `<span class="by">${by}</span>` : ""}<span class="go">看那篇<i aria-hidden="true">→</i></span></a>`
-    : `還有 ${unread} 篇沒讀，讀完就拆開`;
+    : `還有 ${unread} 篇沒讀，讀完就全開`;
   const ar = h.width > 0 && h.height > 0 ? ` style="--ar:${Number(h.width)}/${Number(h.height)}"` : "";
-  return `<section class="reveal${done ? " done" : ""}${just ? " just" : ""}" aria-label="拆開今天的包裹"><div class="lbl">拆開今天的包裹<span class="de">Das Paket</span></div>
-    <div class="plate${CONTAIN.has(h.kind) ? " contain" : ""}"${ar}><img src="${esc(h.src)}" alt="${esc(h.alt || "")}" loading="eager" decoding="async" referrerpolicy="no-referrer"><div class="tiles" aria-hidden="true" style="--rows:${rows}">${tiles}</div></div>
+  return `<section class="reveal${done ? " done" : ""}${just ? " just" : ""}" aria-label="拉開今天的百葉"><div class="lbl">拉開今天的百葉<span class="de">Die Jalousie</span></div>
+    <div class="plate${CONTAIN.has(h.kind) ? " contain" : ""}"${ar}><img src="${esc(h.src)}" alt="${esc(h.alt || "")}" loading="eager" decoding="async" referrerpolicy="no-referrer"><div class="tiles" aria-hidden="true" style="--n:${T}">${tiles}</div></div>
     <p class="cap">${cap}</p></section>`;
 }
 // A peeled tile leaves the page once its animation has run (the timer is for a browser that never ran it).
 function fillReveal() {
   main.querySelectorAll(".wrap > .reveal .t.peel").forEach((t) => {
-    t.addEventListener("animationend", () => t.remove(), { once: true });
-    setTimeout(() => t.remove(), 1400);
+    t.addEventListener("animationend", () => t.classList.remove("peel"), { once: true });
+    setTimeout(() => t.classList.remove("peel"), 1600);
   });
 }
 // 排字: the verse is set a glyph at a time (style.css typeset), each code point in its own <i> numbered for its delay.
