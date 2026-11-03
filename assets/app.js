@@ -170,14 +170,26 @@ function lockedBy(date, column) {
   if (!issue) return null;
   const read = readSet();
   if (read.has(`${date}/${column}`)) return null; // read already (before the mode, or earlier today): always open
-  // The parcel's article (revealPick) stands outside the sequence: it opens any time and holds no one else up.
+  // The parcel's article (revealPick) is sealed until every other article is read, and holds no one else up.
   const order = sortArticles(issue.articles, date), pick = revealPick(issue, order);
-  if (pick && pick.column === column) return null;
+  if (pick && pick.column === column) return order.find((a) => a !== pick && !read.has(`${date}/${a.column}`)) || null;
   for (const a of order) {
     if (a.column === column) return null;
     if (a !== pick && !read.has(`${date}/${a.column}`)) return a;
   }
   return null;
+}
+// 包裹: today's parcel article stays sealed until every other article of the issue is read, in free reading too (the
+// owner, 2026-11-03); the unread others, or null. A direct way in (search, 隨手翻, the issue page) meets viewArticle's notice.
+function sealedBy(date, column) {
+  const issue = issueBy(date);
+  if (!issue) return null;
+  const order = sortArticles(issue.articles, date), pick = revealPick(issue, order);
+  if (!pick || pick.column !== column) return null;
+  const read = readSet();
+  if (read.has(`${date}/${column}`)) return null;
+  const left = order.filter((a) => a !== pick && (col(a.column, date).group !== "watch" || a.brief) && !read.has(`${date}/${a.column}`));
+  return left.length ? left : null;
 }
 function lockedCard(date, a, by) {
   return `<div class="item noimg locked" aria-disabled="true"><div>${kicker(a.column, false, date)}<h3>${esc(a.title)}</h3><p class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></p></div></div>`;
@@ -282,11 +294,14 @@ function revealBox(issue, arts, read) {
   }).join("") + (done && !just ? "" : `<i class="wax" aria-hidden="true">${EMBLEM}</i>`); // the seal stays to fall off with the last piece
   const unread = listed.filter((a) => !read.has(key(a))).length;
   const by = [h.made ? esc(String(h.made)) : "", h.credit ? esc(h.credit) : ""].filter(Boolean).join("・");
+  // Until the paper is off the parcel is sealed (the owner, 2026-11-03): no way into its article, only the column it
+  // comes from and how many articles are left; opened, it is the article's card.
   const href = `#/a/${date}/${pick.column}`, pm = posMark(date, pick, read);
-  const cap = `<a class="art${pm.cls}"${pm.st} href="${href}">${kicker(pick.column, false, date)}<b>${esc(pick.title)}</b>${done && by ? `<span class="by">${by}</span>` : ""}${done ? `<span class="go">看那篇<i aria-hidden="true">→</i></span>` : `<span class="left">還有 ${unread} 篇沒讀，讀完就拆開</span>`}</a>`;
+  const cap = done ? `<a class="art${pm.cls}"${pm.st} href="${href}">${kicker(pick.column, false, date)}<b>${esc(pick.title)}</b>${by ? `<span class="by">${by}</span>` : ""}<span class="go">看那篇<i aria-hidden="true">→</i></span></a>`
+    : `<div class="art">${kicker(pick.column, false, date)}<span class="left">還有 ${unread} 篇沒讀，讀完就拆開</span></div>`;
   const ar = h.width > 0 && h.height > 0 ? ` style="--ar:${Number(h.width)}/${Number(h.height)}"` : "";
   return `<section class="reveal${done ? " done" : ""}${just ? " just" : ""}" aria-label="拆開今天的包裹"><div class="lbl">拆開今天的包裹<span class="de">Das Paket</span></div>
-    <a class="plate${CONTAIN.has(h.kind) ? " contain" : ""}"${ar} href="${href}" aria-label="${esc(pick.title)}"><img src="${esc(h.src)}" alt="${esc(h.alt || "")}" loading="eager" decoding="async" referrerpolicy="no-referrer"><div class="tiles" aria-hidden="true" style="--rows:${rows}">${tiles}</div></a>
+    ${done ? `<a class="plate${CONTAIN.has(h.kind) ? " contain" : ""}"${ar} href="${href}" aria-label="${esc(pick.title)}">` : `<div class="plate${CONTAIN.has(h.kind) ? " contain" : ""}"${ar} aria-label="還包著的包裹">`}<img src="${esc(h.src)}" alt="${esc(h.alt || "")}" loading="eager" decoding="async" referrerpolicy="no-referrer"><div class="tiles" aria-hidden="true" style="--rows:${rows}">${tiles}</div>${done ? "</a>" : "</div>"}
     <div class="cap">${cap}</div></section>`;
 }
 // A peeled tile leaves the page once its animation has run (the timer is for a browser that never ran it).
@@ -584,6 +599,12 @@ async function viewArticle(date, column, my) {
     main.innerHTML = `<div class="wrap"><div class="locked-page">${ICON.lock}<h1>這篇還鎖著</h1>
       <p>循序閱讀：先讀完〈${esc(by.title)}〉，這篇才會解鎖。</p><a class="btn" href="#/a/${date}/${esc(by.column)}">去讀〈${esc(by.title)}〉</a>
       <p class="small">想自由跳著讀，可以到<a href="#/settings">設定 → 閱讀方式</a>改回來。</p></div></div>`;
+    return;
+  }
+  const sealed = sealedBy(date, column);
+  if (sealed) {
+    main.innerHTML = `<div class="wrap"><div class="locked-page"><h1>這篇還包著</h1>
+      <p>今天的包裹要等其他 ${sealed.length} 篇讀完才拆開。</p><a class="btn" href="#/">回首頁去讀</a></div></div>`;
     return;
   }
   const plateNow = !plateLater; // taken once: a retry after an error plates the picture itself

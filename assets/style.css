@@ -154,7 +154,7 @@ button { font: inherit; color: inherit; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .reveal .t { background: radial-gradient(circle, color-mix(in srgb, #000 22%, transparent) .6px, transparent 1.1px) 0 0 / 5px 5px, radial-gradient(circle, color-mix(in srgb, #e8d2b0 16%, transparent) .9px, transparent 1.5px) 2px 3px / 9px 9px, linear-gradient(135deg, #8a6a3f, #6f5330 60%, #80613a); } }
 :root[data-theme="dark"] .reveal .t { background: radial-gradient(circle, color-mix(in srgb, #000 22%, transparent) .6px, transparent 1.1px) 0 0 / 5px 5px, radial-gradient(circle, color-mix(in srgb, #e8d2b0 16%, transparent) .9px, transparent 1.5px) 2px 3px / 9px 9px, linear-gradient(135deg, #8a6a3f, #6f5330 60%, #80613a); }
 .reveal .cap { margin: 0; padding: 9px 0 11px; border-bottom: 1px solid var(--rule); font-family: var(--sans); font-size: 13px; line-height: 1.7; color: var(--muted); letter-spacing: .03em; }
-.reveal .cap a { display: grid; gap: 2px; color: inherit; text-decoration: none; }
+.reveal .cap .art { display: grid; gap: 2px; color: inherit; text-decoration: none; }
 .reveal .cap .kicker { margin: 0 0 2px; }
 .reveal .cap .left { color: var(--muted); }
 .reveal .plate { display: block; text-decoration: none; }
