@@ -1,0 +1,268 @@
+{
+  "column": "mystery",
+  "date": "reserve",
+  "reserve_written": "2026-11-03",
+  "title": "象牙環上的線形文字 A，一個數字也沒有",
+  "dek": "線形文字 A 能借線形文字 B 的音值近似地唸，也懂一些詞。克諾索斯出土的象牙環刻了約 119 個符號，沒有一個數字。",
+  "brief": "克諾索斯一棟宗教建築的貯藏坑裡，出土一只刻著線形文字 A 的象牙環，約 84 個符號完整或部分留下，35 個只剩痕跡或推定，合計約 119 個，沒有一個數字。報告作者稱它是已知最長的一篇。線形文字 A 能近似地唸，也懂一些詞，記的是哪種語言，2025 年仍無定論。",
+  "topic_key": "mystery:archaeology-linear-a",
+  "updated_at": "2026-11-03T15:07:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Minoan_Linear_A%2C_Crete%2C_AMH%2C_145099.jpg/1280px-Minoan_Linear_A%2C_Crete%2C_AMH%2C_145099.jpg",
+    "width": 1280,
+    "height": 1920,
+    "alt": "阿吉亞特里亞達出土的線形文字 A 泥板，藏伊拉克利翁考古博物館。",
+    "caption": "克里特島阿吉亞特里亞達出土的線形文字 A 泥板，藏伊拉克利翁考古博物館。Commons 著錄為「可能是公元前 15 世紀」。照片攝於 2014 年。",
+    "credit": "Zde／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Minoan_Linear_A,_Crete,_AMH,_145099.jpg",
+    "made": "可能為公元前 15 世紀"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "克諾索斯現代的村子底下，有一棟公元前 1700 到 1450 年的宗教建築。2011 到 2017 年的搶救發掘，在它一號房角落的貯藏坑裡挖出一件碎成很多片的象牙器，是一個一邊開口的圓環，開口處插著一支把手。發掘者 Kanta 暫時叫它「宗教權杖」。"
+    },
+    {
+      "type": "p",
+      "text": "圓環外徑約 13.5 到 14 公分，確定有三個面刻了線形文字 A，可能四面都有。約 84 個符號完整或部分留下來，另有 35 個只剩痕跡、或照空間推定原本有，合計約 119 個。2024 年發表簡述的作者說，這是已知最長的線形文字 A 銘文。上面一個數字也沒有。"
+    },
+    {
+      "type": "svg",
+      "title": "最長的一篇有多長",
+      "svg": "<svg viewBox=\"0 0 360 180\" xmlns=\"http://www.w3.org/2000/svg\"><text class=\"muted\" x=\"8\" y=\"16\" font-size=\"10\">一件銘文有幾個符號</text><text class=\"ink\" x=\"8\" y=\"46\" font-size=\"12\">平均一件</text><rect class=\"accent\" x=\"120\" y=\"33\" width=\"9\" height=\"18\"/><text class=\"ink\" x=\"135\" y=\"47\" font-size=\"12\">約 4.9</text><text class=\"ink\" x=\"8\" y=\"94\" font-size=\"12\">泥板 HT 123</text><rect class=\"soft\" x=\"120\" y=\"81\" width=\"194\" height=\"18\"/><rect class=\"accent\" x=\"120\" y=\"81\" width=\"111\" height=\"18\"/><text class=\"ink\" x=\"318\" y=\"95\" font-size=\"12\">105</text><text class=\"muted\" x=\"120\" y=\"115\" font-size=\"10\">深色：扣掉數字與分隔號，約 60</text><text class=\"ink\" x=\"8\" y=\"148\" font-size=\"12\">象牙環</text><rect class=\"accent\" x=\"120\" y=\"135\" width=\"220\" height=\"18\"/><text class=\"paper\" x=\"334\" y=\"149\" font-size=\"12\" text-anchor=\"end\">約 119</text><text class=\"muted\" x=\"120\" y=\"169\" font-size=\"10\">一個數字也沒有</text></svg>",
+      "caption": "平均值是 7,574 個符號除以 1,534 件，本報計算；平均值不含象牙環（本報推斷）；HT 123 與象牙環的數字出自 Kanta 等人 2024 年的報告，「約 60」是作者扣掉數字與分隔號後的估計。長條依比例繪製。"
+    },
+    {
+      "type": "p",
+      "text": "頂面左半刻了 12 隻四足動物，右半是三足鼎、角杯、雙耳瓶之類的器皿符號。銘文作者認為，這可能是一場祭儀宴會要準備的東西，動物也許是要宰來獻祭的牲畜。底面有成組的符號，也有單獨的音節與表意符號，同樣沒有數字。他們說，沒有數字這一點，讓它和石製奠酒器靠在一邊，和帳目分開；也寫明環上的詞組和現存線形文字 A 文獻對得上的很少。"
+    },
+    {
+      "type": "h",
+      "text": "同一套符號，換一種語言"
+    },
+    {
+      "type": "p",
+      "text": "線形文字 A 是公元前 1800 到 1450 年左右的文字，主要用在克里特。後來講希臘語的邁錫尼人拿它當範本，改出線形文字 B，兩者有相當多符號形狀相同或高度相似。B 在 1952 年破解，是早期希臘語。把 B 的音值套回 A 上同形的符號，得到的是一個近似的讀法，這些符號被認為也同音，可用相同或至少近似的音值唸。費斯托斯（Phaistos）這個地名，A 和 B 都拼成 pa-i-to；ki-da-ro、da-i-pi-ta 幾個人名也一樣。"
+    },
+    {
+      "type": "p",
+      "text": "研究線形文字 A 的 Salgarella 把這種狀態叫「部分破解」，音標轉寫唸得出個大概，懂一些詞，也大致知道一份文件在記什麼，只是還沒辦法完整讀懂內容。帳上典型的一條，是一個詞（常是人名或地名），接一個代表商品的圖形符號，再接數字，這個格式看得出來。ku-ro 是「總計」，意思從它在帳上的位置推出來。她和 Castellan 在 2020 年介紹資料庫 SigLA 的論文裡補了一句。"
+    },
+    {
+      "type": "quote",
+      "text": "我們知道 ku-ro 是什麼意思，這是例外，不是常態。",
+      "original": "our knowing the meaning of ku-ro is more of an exception than the rule",
+      "cite": "Salgarella 與 Castellan，SigLA 資料庫論文，2020"
+    },
+    {
+      "type": "p",
+      "text": "B 能破，寇柏（Alice Kober）找到的三組詞是關鍵。她在 B 的文字裡找到只差最後一兩個音節的詞，例如 ko-no-so（克諾索斯）、ko-no-si-jo、ko-no-si-ja，看出這個語言會變詞尾，替文特里斯（Michael Ventris）的希臘語假說開了門。B 的詞和字母時代的希臘詞對上了一大批。文特里斯 1952 年上 BBC 電台，這樣形容 B 的語言。"
+    },
+    {
+      "type": "quote",
+      "text": "一種艱深、古老的希臘語，但終究是希臘語。",
+      "original": "A difficult and archaic Greek, but Greek nevertheless.",
+      "cite": "文特里斯，BBC 電台，1952"
+    },
+    {
+      "type": "p",
+      "text": "線形文字 A 的詞，和字母時代的希臘詞之間找不到可靠的對應，也看不到寇柏三組詞那樣系統性規律。A 記的語言（學者叫它米諾斯語）大量用前綴和後綴構詞，Duhoux 證明過。"
+    },
+    {
+      "type": "h",
+      "text": "1,534 件，平均不到 5 個符號"
+    },
+    {
+      "type": "p",
+      "text": "2024 年出版的線形文字 A 總集第一部補編，收進 1985 年以後發現、到 2023 年為止公開的文字，總數是 1,534 件、7,574 個符號，平均一件不到 5 個。象牙環報告 2024 年出版，本報依收錄範圍推斷不在內。Salgarella 2022 年說 B 將近 6,000 件。"
+    },
+    {
+      "type": "p",
+      "text": "大部分是帳，簡短、公式化，句法很少；裡面的交易用詞多半是縮寫，我們看到的 A 大多是速記。Salgarella 2022 年寫，少數不記帳的銘文都是奉獻或祭儀用的，像所謂的「奠酒套語」，一再重複。象牙環也不記帳，詞組卻和現存文獻少有對應。她 2022 年說，史書、外交信、紀念碑、私人信件一件也沒有。"
+    },
+    {
+      "type": "p",
+      "text": "羅塞塔石碑那樣的雙語碑，她說至今沒人找到。伊文思（Arthur Evans）一心想破另一種未知語言，也沒找到。"
+    },
+    {
+      "type": "h",
+      "text": "英語和波斯語都有 bad"
+    },
+    {
+      "type": "p",
+      "text": "伊文思把米諾斯語和伊特拉斯坎語連在一起。1950 年代末起，替它找親戚的主張一個接一個，帕爾默（Leonard Palmer）1958 年主張盧維語，一種古代安納托利亞的語言；戈登（Cyrus Gordon）主張閃語，1981 年還有一篇論文題目就叫〈米諾斯克里特的閃語〉。"
+    },
+    {
+      "type": "table",
+      "title": "線形文字 A 記的是什麼語言",
+      "head": [
+        "主張",
+        "誰提的",
+        "靠什麼",
+        "卡在哪"
+      ],
+      "rows": [
+        [
+          "希臘語或印歐語",
+          "Georgiev（1957）；Nagy（1963）",
+          "詞彙比對（來源總括）；Nagy 找像希臘語的成分",
+          "A 的詞對不上字母時代的希臘詞，也看不出寇柏三組詞那樣的規律"
+        ],
+        [
+          "閃語",
+          "戈登（1966、1969）；Best（1972、2000）",
+          "詞彙比對（來源總括）",
+          "SigLA 作者認為看不出和閃語有關"
+        ],
+        [
+          "盧維語（安納托利亞）",
+          "帕爾默（1958）；Finkelberg（1990）、Brown（1990、1993）",
+          "詞彙比對，主張出自安納托利亞語言",
+          "2022 年尚無一派勝出"
+        ],
+        [
+          "伊特拉斯坎語",
+          "伊文思；Facchetti（2001）、Negri（2003）",
+          "詞彙比對（來源總括）",
+          "同上"
+        ],
+        [
+          "胡里安語（非印歐的安納托利亞語言）",
+          "Monti（2006）、van Soesbergen（2017）",
+          "詞彙比對（來源總括）",
+          "同上"
+        ]
+      ],
+      "caption": "主張與年份依 Salgarella 2022 年在 Aeon 的整理，她沒有逐派舉證；詞源法的缺陷是她對整體做法的評語，非逐派檢驗；她也是 SigLA 共同開發者。"
+    },
+    {
+      "type": "p",
+      "text": "這幾派都靠詞源法，拿詞彙去比，這個方法本身就有毛病。光看詞彙認不出一種語言，還得懂它的文法。有些詞兩邊長得一樣，其實毫無關係。英語和波斯語都有 bad，音近、意思也一樣，來歷卻完全不同。研究透徹的語言裡，這種假同源詞還算好認，換成還沒讀懂的米諾斯語就難得多。詞彙又容易借來借去，沒認出的借詞會把結論帶偏。到 2022 年，Salgarella 的判斷是沒有哪一派勝過另一派；她 2025 年出的小書，摘要仍寫線形文字 A 還沒破解。"
+    },
+    {
+      "type": "h",
+      "text": "把手上的六個分數"
+    },
+    {
+      "type": "p",
+      "text": "插在圓環開口的那支把手，是另一份文件，筆跡不同，有數字，記的是帳。上面依序排著六個不同的分數符號，可能讓人推出這些分數誰大誰小，而它們的順序和學者過去提的不一樣。"
+    },
+    {
+      "type": "p",
+      "text": "換我押，新的長篇非帳目文字或雙語碑，比再一張詞彙對照表有用。Salgarella 說較長的文字能讓人看到句法和語言的變化，詞源法又有上述缺陷；她也盼著田野發掘挖出雙語碑。"
+    },
+    {
+      "type": "timeline",
+      "title": "從破解 B 到象牙環",
+      "items": [
+        {
+          "when": "1952 年",
+          "label": "線形文字 B 破解",
+          "note": "文特里斯在 BBC 電台說它是希臘語"
+        },
+        {
+          "when": "1957–1958 年",
+          "label": "希臘語說、盧維語說",
+          "note": "Georgiev 主張希臘語；帕爾默主張盧維語"
+        },
+        {
+          "when": "1966 年",
+          "label": "閃語說",
+          "note": "戈登提出，1969、1981 年續有論著"
+        },
+        {
+          "when": "1976–1985 年",
+          "label": "印刷版總集 GORILA",
+          "note": "Godart 與 Olivier 編，五冊"
+        },
+        {
+          "when": "2001–2017 年",
+          "label": "伊特拉斯坎語說重提、胡里安語說",
+          "note": "Facchetti、Negri；Monti、van Soesbergen"
+        },
+        {
+          "when": "2011–2017 年",
+          "label": "克諾索斯 Anetaki 地塊發掘",
+          "note": "出土刻字象牙環與把手"
+        },
+        {
+          "when": "2020 年",
+          "label": "SigLA 資料庫第一版",
+          "note": "Salgarella 與 Castellan，免費開放"
+        },
+        {
+          "when": "2024 年",
+          "label": "總集補編、象牙環簡述",
+          "note": "總數 1,534 件、7,574 個符號；象牙環約 119 個符號"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "環上那 12 隻動物的圖像，2024 年的報告沒有細談，說要留給最終報告，即 Kanta 主編的《Anetaki II：新宮殿期一號房與象牙貯藏坑》。報告發表時，這本書還列為待出版。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "SigLA: The Signs of Linear A: a palæographical database",
+      "publisher": "Ester Salgarella、Simon Castellan",
+      "date": "2020-08-20",
+      "url": "https://phis.me/sigla/paper.pdf",
+      "note": "第 1 節：「A first version of the database is available」，資料庫為第一版，當時只收克里特主要遺址的行政泥板。第 2 節：年代約公元前 1800–1450 年、主要在克里特；B 於 1952 年破解為早期希臘語；符號「the same, or a highly comparable, graphic shape」、同形同音原則只得到「an approximate reading」；表意符號在詞之後、數字之前；米諾斯語看不出和已知印歐語（尤其希臘語）或閃語有關。第 9 頁：ku-ro（understood to mean ‘total’）與「our knowing the meaning of ku-ro is more of an exception than the rule」。參考書目 [8]：GORILA 五冊，1976–1985。作者 Salgarella 與 Castellan 即 SigLA 的開發者；本文多數學界評語出自 Salgarella（另見 Aeon 與 Cambridge Elements 兩項）。"
+    },
+    {
+      "title": "Cracking the Cretan code",
+      "publisher": "Aeon（Ester Salgarella 撰）",
+      "date": "2022-06-17",
+      "url": "https://aeon.co/essays/without-a-rosetta-stone-can-linguists-decipher-minoan-script",
+      "note": "作者 Salgarella 在文中自述 SigLA 由 Castellan 與她共同開發。寇柏三組詞（ko-no-so 等）；文特里斯 1952 年 BBC 電台原話；A 與希臘詞找不到可靠對應、沒有寇柏三組詞那樣的系統規律；同形符號可用 B 的「the same, or at least approximate, phonetic value」唸；pa-i-to、ki-da-ro 等共同拼法；能「讀」而不能完整讀懂（without gaining full access to the contents）；‘partially deciphered’；Duhoux 證明大量使用前綴與後綴；Younger、Schoep 找出交易用詞，多為縮寫、A 大多是速記；Davis 的統計方法；A 不超過 1,400 件、B 將近 6,000 件；most 為經濟紀錄，少數非經濟銘文皆為 dedicatory or cultic、高度公式化（libation formula）；沒有史書與信件，這類較長文字有助看句法；沒有雙語碑（no one has so far），盼田野發掘出土；伊文思、帕爾默 1958、戈登 1966 與 1969、Georgiev 1957、Best、Finkelberg 1990、Brown 1990 與 1993、Nagy 1963、Facchetti 2001、Negri 2003、Monti 2006、van Soesbergen 2017（只列主張與年份）；「No one theory, however, has so far proven to have the edge over another」；詞源法、假同源詞 bad 與借詞；ku-ro 意為 total、依文中位置得知；「We are still out on the high seas – but at least we know where to head」。"
+    },
+    {
+      "title": "An archaeological and epigraphical overview of some inscriptions found in the Cult Center of the city of Knossos (Anetaki plot)",
+      "publisher": "A. Kanta、D. Nakassis、T. G. Palaima、M. Perna，KO-RO-NO-WE-SA（Ariadne Supplement Series 5），Rethymno，pp. 27–43",
+      "date": "2025-03-04",
+      "url": "https://ejournals.lib.uoc.gr/Ariadne/article/view/1841",
+      "note": "書內出版年 2024（KO-RO-NO-WE-SA, Rethymno 2024）；日期取 Ariadne 線上發布頁的 Published 2025-03-04。Kanta 撰考古部分：搶救發掘 2011、2012 年起，2013–2017 年續挖；新宮殿期建築 1700–1450 BC；一號房的象牙貯藏坑；圓環開口插把手，暫稱 religious scepter；Kanta 寫 all sides 都有字，銘文作者則寫 clearly carved on three of its faces, and probably on all four，本文從後者。Nakassis、Palaima、Perna 撰銘文部分：圓環 KN Zg 57 為象牙切片，外徑 c. 13.5–14 cm；A 面 12 隻四足動物、三足鼎、角杯、雙耳瓶，動物圖像留待最終報告；B 面有符號組與表意符號；約 84 個符號完整或部分保存＋35 個痕跡或推定＝119，作者稱 the longest known Linear A inscription；HT 123 有 105 個符號、四成以上為數字與分隔號、剩約 60；圓環無數字，aligns itself with stone libation vessels and divorces itself from accounting records；ritual feasting 的解讀；書法式刻字；「few parallels of the sign-groups on the Ring with sign-groups on extant Linear A texts」；把手 KN Zg 58 為帳目、筆跡不同、第一件出自祭祀建築的 A 經濟文件、六個分數符號的順序與既有提案不同。完整報告：Kanta (ed.) forthcoming, Anetaki II: the Neopalatial Room 1 and the Ivory Repository。"
+    },
+    {
+      "title": "A major addition to the Linear A corpus",
+      "publisher": "CNR DSSTTA（介紹 M. Del Freo、J. Zurbach, Recueil des inscriptions en linéaire A. Supplément 1, Études Crétoises 21.6, Athènes 2024）",
+      "date": "2025-05-22",
+      "url": "https://dta.cnr.it/?p=2364",
+      "note": "收 1985 年後發現、到 2023 年公開的文字；新增 107 件、427 個符號，總數 1,534 件銘文、7,574 個符號。平均每件約 4.9 個符號為本報計算。象牙環報告 2024 年出版，不在收錄範圍內，為本報依收錄範圍判斷。"
+    },
+    {
+      "title": "Writing in Bronze Age Crete: 'Minoan' Linear A",
+      "publisher": "Ester Salgarella，Cambridge Elements（Cambridge University Press）",
+      "date": "2025-08-21",
+      "url": "https://doi.org/10.1017/9781009520041",
+      "note": "作者同為 Salgarella。摘要：Linear A is still undeciphered, and the language it encodes ('Minoan') thus remains elusive。"
+    },
+    {
+      "title": "Luvian and Linear A",
+      "publisher": "L. R. Palmer，Transactions of the Philological Society 57: 75–100",
+      "date": "1958",
+      "url": "https://doi.org/10.1111/j.1467-968x.1958.tb01273.x",
+      "note": "盧維語假說的起點；只核對書目資料。"
+    },
+    {
+      "title": "The Semitic language of Minoan Crete",
+      "publisher": "Cyrus H. Gordon，Bono Homini Donum（Current Issues in Linguistic Theory 16）: 761–782",
+      "date": "1981",
+      "url": "https://doi.org/10.1075/cilt.16.47gor",
+      "note": "只核對題目與書目資料。"
+    },
+    {
+      "title": "File:Minoan Linear A, Crete, AMH, 145099.jpg",
+      "publisher": "Wikimedia Commons（Zde，CC BY-SA 4.0）",
+      "date": "2014-09-03",
+      "url": "https://commons.wikimedia.org/wiki/File:Minoan_Linear_A,_Crete,_AMH,_145099.jpg",
+      "note": "頭圖；著錄為阿吉亞特里亞達出土、probably 15th century BC、伊拉克利翁考古博物館。"
+    }
+  ]
+}
