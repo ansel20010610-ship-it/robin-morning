@@ -170,9 +170,12 @@ function lockedBy(date, column) {
   if (!issue) return null;
   const read = readSet();
   if (read.has(`${date}/${column}`)) return null; // read already (before the mode, or earlier today): always open
-  for (const a of sortArticles(issue.articles, date)) {
+  // The parcel's article (revealPick) stands outside the sequence: it opens any time and holds no one else up.
+  const order = sortArticles(issue.articles, date), pick = revealPick(issue, order);
+  if (pick && pick.column === column) return null;
+  for (const a of order) {
     if (a.column === column) return null;
-    if (!read.has(`${date}/${a.column}`)) return a;
+    if (a !== pick && !read.has(`${date}/${a.column}`)) return a;
   }
   return null;
 }
