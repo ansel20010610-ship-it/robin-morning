@@ -105,11 +105,12 @@
 1. 讀過去 7 期（`content/issues/` 最近 7 個日期）的全部稿件；每篇派一個審稿子代理（可平行，`model: sonnet`、`effort: high`），以懷疑的態度抽查關鍵事實、引文、圖片授權與規格。
 2. **事實錯誤**：還沒刊出的稿件（刊期在明天以後，或今天 07:30 以前）直接改正正文、補上來源，不加更正框——讀者第一次讀到就該是對的。已刊出的稿件不改寫原文，在該篇 `body` 末尾加一個 `callout` 區塊，`label` 為「更正（<稽核日期>）」，寫明哪裡錯、正確內容與來源，並在 `sources` 補上來源、把 `updated_at` 改成稽核時間。跑 `python3 scripts/validate.py <該日期> --column <欄位>` 確認沒有 ERROR。
 3. **反覆出現的問題**（兩篇以上、或同一欄連續出現）：寫進 `editorial/LESSONS.md`，一條一個問題，附出現位置與正確做法。
-4. 推送，訊息用「品質稽核 <日期>：更正 N 篇、新增教訓 M 條」，最後做班次回報（`--group audit`）。
+4. **古典欄清單**：跑 `python3 scripts/ledger.py --column music` 對照 `editorial/music-canon.md`，清單只剩不到 10 首沒寫時，照該檔末段的說明補上下一輪（由主流到進階，不要太冷門），在回報裡告知社長。
+5. 推送，訊息用「品質稽核 <日期>：更正 N 篇、新增教訓 M 條」，最後做班次回報（`--group audit`）。
 
 ## 不可以做的事
 
-- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`（每週品質稽核可以寫 `editorial/LESSONS.md`）、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/`、`content/rejected/`（只有備稿補位會寫）與 `state/`（但 `state/push/` 是出刊通知的裝置名單，不要動）。近期演出班只寫 `content/concerts.json` 與 `state/concerts/`，製刊各班不碰這兩處。
+- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`（每週品質稽核可以寫 `editorial/LESSONS.md`，並在古典欄清單快寫完時於 `editorial/music-canon.md` 補下一輪）、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/`、`content/rejected/`（只有備稿補位會寫）與 `state/`（但 `state/push/` 是出刊通知的裝置名單，不要動）。近期演出班只寫 `content/concerts.json` 與 `state/concerts/`，製刊各班不碰這兩處。
 - 不刪除或改寫過去日期的稿件。若發現過去稿件有事實錯誤，在該篇文末加「更正」區塊（見「每週品質稽核」第 2 步），並在回報中提出。
 - 不讀取、不推測讀者的私人生活；不使用讀者自己的小說設定。
 - 不使用 AI 生成圖片。不呼叫任何需要付費的 API。
