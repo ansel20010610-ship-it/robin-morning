@@ -230,6 +230,51 @@ function fillWeather() {
     if (html && box.isConnected) { box.querySelector(".fc").innerHTML = html; box.hidden = false; }
   });
 }
+// 刮開頭圖 (style.css .reveal): today's paper carries the day's picture under a sheet of paper cut into one tile per
+// article on the front page (the watch items among them only with a brief). A tile is gone once its article is read —
+// readSet, the same mark as the cards' 已讀 — and with the last one the picture stands whole, with its title and a way to
+// its article. The picture: the hero of today's 走進一件作品 or 推開一座古蹟的門, else any painting (hero.kind artwork),
+// else the lead's; without one there is no section. More than twelve articles share twelve tiles. rm.reveal.seen holds
+// the articles read at the last draw of this date: a tile whose article was read since then peels off a beat after the
+// page draws (.peel, taken out when its animation ends), the others are simply absent; the first draw of a day, and
+// reduced motion, show the state as it is. Pure from state: a redraw (refreshFront, a visibility replay) draws it afresh.
+const REVEAL_COLS = new Set(["artwork", "architecture"]);
+function revealBox(issue, arts, read) {
+  if (!todays(issue)) return "";
+  const date = issue.date, src = (a) => a?.hero?.src, lead = arts.find((a) => col(a.column, date).group === "main");
+  const pick = arts.find((a) => REVEAL_COLS.has(a.column) && src(a)) || arts.find((a) => a.hero?.kind === "artwork" && src(a)) || (src(lead) ? lead : null);
+  const listed = arts.filter((a) => col(a.column, date).group !== "watch" || a.brief);
+  if (!pick || !listed.length) return "";
+  const h = pick.hero, T = Math.min(12, listed.length), rows = Math.ceil(T / 4), last = T - 4 * (rows - 1);
+  const key = (a) => `${date}/${a.column}`, tileOf = (i) => Math.floor((i * T) / listed.length);
+  const gone = Array.from({ length: T }, (_, j) => listed.every((a, i) => tileOf(i) !== j || read.has(key(a))));
+  const was = (store.get("reveal.seen", null) || {})[date];
+  store.set("reveal.seen", { [date]: listed.filter((a) => read.has(key(a))).map(key) });
+  const move = !calm() && Array.isArray(was);
+  const newly = (j) => move && listed.some((a, i) => tileOf(i) === j && !was.includes(key(a))); // an article of tile j read since the last draw
+  const done = gone.every(Boolean), just = done && gone.some((_, j) => newly(j));
+  // A 12-unit grid: 4 tiles of 3 to a row, the last row's few spread to 12 so the paper always covers the width.
+  const tiles = gone.map((g, j) => {
+    if (g && !newly(j)) return "";
+    const r = Math.floor(j / 4), k = j - 4 * r, span = r === rows - 1 ? 12 / last : 3;
+    return `<i class="t${g ? " peel" : ""}" style="grid-area:${r + 1}/${k * span + 1}/${r + 2}/${(k + 1) * span + 1}"><b>${String(j + 1).padStart(2, "0")}</b></i>`;
+  }).join("");
+  const unread = listed.filter((a) => !read.has(key(a))).length;
+  const by = [h.made ? esc(String(h.made)) : "", h.credit ? esc(h.credit) : ""].filter(Boolean).join("・");
+  const cap = done ? `<a href="#/a/${date}/${pick.column}"><b>${esc(pick.title)}</b>${by ? `<span class="by">${by}</span>` : ""}<span class="go">看那篇<i aria-hidden="true">→</i></span></a>`
+    : `還有 ${unread} 篇沒讀，讀完就全揭開`;
+  const ar = h.width > 0 && h.height > 0 ? ` style="--ar:${Number(h.width)}/${Number(h.height)}"` : "";
+  return `<section class="reveal${done ? " done" : ""}${just ? " just" : ""}" aria-label="刮開今天這幅"><div class="lbl">刮開今天這幅<span class="de">Aufgedeckt</span></div>
+    <div class="plate${CONTAIN.has(h.kind) ? " contain" : ""}"${ar}><img src="${esc(h.src)}" alt="${esc(h.alt || "")}" loading="eager" decoding="async" referrerpolicy="no-referrer"><div class="tiles" aria-hidden="true" style="--rows:${rows}">${tiles}</div></div>
+    <p class="cap">${cap}</p></section>`;
+}
+// A peeled tile leaves the page once its animation has run (the timer is for a browser that never ran it).
+function fillReveal() {
+  main.querySelectorAll(".wrap > .reveal .t.peel").forEach((t) => {
+    t.addEventListener("animationend", () => t.remove(), { once: true });
+    setTimeout(() => t.remove(), 1400);
+  });
+}
 // 排字: the verse is set a glyph at a time (style.css typeset), each code point in its own <i> numbered for its delay.
 // The glyphs stay inline — not inline-block — so line breaking, hanging punctuation and text-spacing-trim are those of
 // plain text and the paragraph takes exactly the same lines. --step shrinks for a long verse so the whole run lands
@@ -318,6 +363,7 @@ function viewFront(dateParam) {
     ${prayerBox(issue)}
     ${lockMode() ? lockBar(arts, issue.date) : ""}
     ${weatherBox(issue)}
+    ${revealBox(issue, arts, read)}
     ${mains.length ? `<div class="sec-head"><h2>正刊</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
     ${lead ? `<a class="lead${posMark(issue.date, lead, read).cls}"${posMark(issue.date, lead, read).st} href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column, false, issue.date)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
     ${mains.slice(1).map((a) => itemCard(issue.date, a, read)).join("")}
@@ -335,6 +381,7 @@ function viewFront(dateParam) {
   </div>`;
   prefetch(issue);
   wireDigest(issue);
+  fillReveal();
   fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
 }
