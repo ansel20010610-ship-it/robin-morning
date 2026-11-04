@@ -293,8 +293,9 @@ function fillWeather() {
 // 刮開頭圖 (style.css .reveal): today's paper carries the day's picture under a sheet of paper cut into one tile per
 // article on the front page (the watch items among them only with a brief). A tile is gone once its article is read —
 // readSet, the same mark as the cards' 已讀 — and with the last one the picture stands whole, with its title and a way to
-// its article. The picture: the hero of today's 走進一件作品 or 推開一座古蹟的門, else any painting (hero.kind artwork),
-// else the lead's; without one there is no section. More than twelve articles share twelve tiles. rm.reveal.seen holds
+// its article. The picture: the hero of today's 走進一件作品 or 推開一座古蹟的門, else a supplement's painting (hero.kind
+// artwork), else any supplement with a picture; never a 正刊 article (the owner, 2026-11-04: 包裹不要包正刊), and without
+// one there is no section. More than twelve articles share twelve tiles. rm.reveal.seen holds
 // the articles read at the last draw of this date: a tile whose article was read since then peels off a beat after the
 // page draws (.peel, taken out when its animation ends), the others are simply absent; the first draw of a day, and
 // reduced motion, show the state as it is. Pure from state: a redraw (refreshFront, a visibility replay) draws it afresh.
@@ -303,8 +304,8 @@ const REVEAL_COLS = new Set(["artwork", "architecture"]);
 // it out of 正刊/副刊 — so the parcel's caption carries its kicker and title and the parcel itself opens the article.
 function revealPick(issue, arts) {
   if (!todays(issue)) return null;
-  const src = (a) => a?.hero?.src, lead = arts.find((a) => col(a.column, issue.date).group === "main");
-  return arts.find((a) => REVEAL_COLS.has(a.column) && src(a)) || arts.find((a) => a.hero?.kind === "artwork" && src(a)) || (src(lead) ? lead : null);
+  const supps = arts.filter((a) => col(a.column, issue.date).group === "supplement" && a.hero?.src);
+  return supps.find((a) => REVEAL_COLS.has(a.column)) || supps.find((a) => a.hero?.kind === "artwork") || supps[0] || null;
 }
 function revealBox(issue, arts, read) {
   const date = issue.date, pick = revealPick(issue, arts);
@@ -460,8 +461,9 @@ function viewFront(dateParam) {
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
     ${watch.length ? `<div class="sec-head"><h2>觀測站</h2><span class="de">Beobachtung</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
     ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdsFound().has(issue.date) ? "今天的知更鳥找到了。" : "今天有一隻知更鳥藏在某一篇裡。"}</p>` : ""}
-    ${!arts.some((a) => a.brief) ? "" : lockMode() && unreadIn(issue.date, arts) ? `<div class="finish lockfin">${ICON.lock}<b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">循序閱讀：一篇一篇讀完，今天才算數。</span></div>`
-      : `<div class="finish${digestDone().has(issue.date) ? " done" : ""}">${finishInner(issue.date)}</div>`}
+    ${!arts.some((a) => a.brief) ? "" : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
+      : unreadIn(issue.date, arts) ? `<div class="finish lockfin">${lockMode() ? ICON.lock : ""}<b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${lockMode() ? "循序閱讀：一篇一篇讀完，今天才算數。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的郵票才蓋得下去。`}</span></div>`
+      : `<div class="finish">${finishInner(issue.date)}</div>`}
     ${dateParam ? "" : `<section class="gigs" id="gigs" aria-label="近期演出">${gigsSection()}</section>`}
     <footer class="colophon">
       <div class="ornament" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -507,7 +509,9 @@ function prayerBox(issue) {
     <div class="prayer">${paragraphs(v.prayer)}</div></details>`;
 }
 
-// ——— Reaching the end of the front page counts the day as read (the finish line, the streak) ———
+// ——— The finish line (the day's stamp, the streak): every article of the issue read — the parcel's too — and then the
+// end of the front page reached. Scrolling to the bottom alone never stamped it since 2026-11-04 (the owner: 郵票不能
+// 滑到底就可搜集，要所有欄位都是已讀，包括包裹那篇). ———
 const digestDone = () => new Set(store.get("digest.done", []));
 // The service worker cannot read localStorage: the finished days are mirrored into a small cache (rm-state, outside the
 // shell caches sw.js clears) so a 12:30 or 21:00 reminder for a day already read through is dropped on the phone.
@@ -517,7 +521,8 @@ function syncDone() {
 }
 syncDone();
 let finishSeen = null;
-const unreadIn = (date, arts) => { const read = readSet(); return arts.filter((a) => !read.has(`${date}/${a.column}`)).length; };
+// A silent 觀測站 entry (no brief: nothing new that day) has no page to read and does not count.
+const unreadIn = (date, arts) => { const read = readSet(); return arts.filter((a) => (col(a.column, date).group !== "watch" || a.brief) && !read.has(`${date}/${a.column}`)).length; };
 // 循序閱讀's version of the digest bar: how many of the issue's articles have been read, not how many briefs seen.
 function lockBar(arts, date) {
   if (!arts.length) return "";
