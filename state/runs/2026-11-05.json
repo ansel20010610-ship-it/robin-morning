@@ -30,5 +30,10 @@
     "finished_at": "2026-11-05T05:41:51+08:00",
     "missing": [],
     "note": "訃聞刊出（Blomstedt）、快訊刊出；FM/寰宇靜默；巴薩不動；快訊實測可用：aljazeera、pts、rti、dw(curl)、france24、news.un.org；不可用：cna、focustaiwan"
+  },
+  "5": {
+    "finished_at": "2026-11-05T06:28:37+08:00",
+    "missing": [],
+    "note": "全刊八欄皆已完成，無需補稿或備稿補位；巴薩晨報無新消息，next 仍正確（11/9 馬競）"
   }
 }
