@@ -246,12 +246,43 @@ function lockedCard(date, a, by) {
 // counts for the day's stamp and the 循序 order like any article, but is no tile of the parcel.
 const serialWhere = (s) => [s.part, s.chapter].filter(Boolean).join(" ") + (s.pieces > 1 ? `・${s.pieces} 之 ${s.piece}` : "");
 const serialPlate = (s) => `<p class="plate"><span class="book">《${esc(s.book || "")}》</span><span class="by">${esc(s.author || "")}</span><span class="where">${esc(serialWhere(s))}</span></p>`;
-function serialBox(date, a, read) {
+function serialCard(date, a, read, { plate = true } = {}) {
   const s = a.serial || {}, by = lockedBy(date, a.column), done = read.has(`${date}/${a.column}`);
-  const head = `<div class="sec-head"><h2>連載</h2><span class="de">Fortsetzung folgt</span><span class="note">第 ${esc(String(s.n ?? ""))} 回${s.of ? `・共 ${esc(String(s.of))} 回` : ""}</span></div>`;
-  const inner = `${serialPlate(s)}<h3>${esc(a.title)}</h3>${a.dek ? `<p class="recap"><b>${s.n === 1 ? "開場" : "前情"}</b>${esc(a.dek)}</p>` : ""}
-    ${by ? `<p class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></p>` : `<p class="meta-s">${done ? "讀過了" : `約 ${esc(String(a.minutes || 6))} 分鐘`}${s.n > 1 ? `・<span class="back">回目在〈${esc(col(a.column, date).name)}〉</span>` : ""}</p>`}`;
-  return head + (by ? `<div class="item noimg serial-card locked" aria-disabled="true"><div>${inner}</div></div>` : `<a class="item noimg serial-card${done ? " read" : ""}" href="#/a/${date}/${a.column}"><div>${inner}</div></a>`);
+  const inner = `${plate ? serialPlate(s) : `<p class="plate"><span class="where">${esc(serialWhere(s))}</span></p>`}<h3>${esc(a.title)}</h3>${a.dek ? `<p class="recap"><b>${s.n === 1 ? "開場" : "前情"}</b>${esc(a.dek)}</p>` : ""}
+    ${by ? `<p class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></p>` : `<p class="meta-s">${esc(fmtDate(date, "short"))}・${done ? "讀過了" : `約 ${esc(String(a.minutes || 6))} 分鐘`}</p>`}`;
+  return by ? `<div class="item noimg serial-card locked" aria-disabled="true"><div>${inner}</div></div>` : `<a class="item noimg serial-card${done ? " read" : ""}" href="#/a/${date}/${a.column}"><div>${inner}</div></a>`;
+}
+function serialBox(date, a, read) {
+  const s = a.serial || {};
+  return `<a class="sec-head link" href="#/serial" aria-label="連載：全部回目"><h2>連載</h2><span class="de">Fortsetzung folgt</span><span class="note">第 ${esc(String(s.n ?? ""))} 回${s.of ? `・共 ${esc(String(s.of))} 回` : ""} →</span></a>${serialCard(date, a, read)}`;
+}
+// ——— 連載 tab (#/serial, content/serial.json): the book's plate and progress, the next installment to read, the cast,
+// and every installment published so far in order — the one home of the serial; the front page's card is the day's door.
+const loadBook = () => getJSON("content/serial.json", { fresh: true }).then((b) => { S.book = b && typeof b === "object" ? b : null; }).catch(() => {});
+async function viewSerial(my) {
+  if (S.book === undefined) { main.innerHTML = `<div class="wrap"><p class="empty">翻書中……</p></div>`; await loadBook(); if (my !== undefined && my !== routeSeq) return; }
+  const b = S.book || {}, read = readSet();
+  const parts = publishedIssues().flatMap((i) => i.articles.filter((a) => col(a.column, i.date).group === "serial").map((a) => ({ date: i.date, a }))).sort((x, y) => x.date.localeCompare(y.date));
+  const got = parts.filter((p) => read.has(`${p.date}/${p.a.column}`)).length, of = Number(b.of) || parts.at(-1)?.a.serial?.of || 0;
+  const next = parts.find((p) => !read.has(`${p.date}/${p.a.column}`));
+  const pct = (n) => (of ? Math.min(100, Math.round((n / of) * 100)) : 0);
+  const row = ({ date, a }) => { const k = `${date}/${a.column}`, s = a.serial || {}, by = lockedBy(date, a.column); const inner = `<span class="no" aria-hidden="true">${esc(String(s.n ?? "").padStart(2, "0"))}</span>
+      <span class="t"><span class="m"><span class="k">${esc(serialWhere(s))}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title.replace(/^第 \d+ 回・/, ""))}</b></span>`;
+    return by ? `<li><div class="sv locked" aria-disabled="true">${inner}</div></li>` : `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}">${inner}</a></li>`; };
+  main.innerHTML = `<div class="wrap serie"><header class="page-title"><h1>連載</h1><span class="de">Fortsetzung folgt</span></header>
+    <section class="buch">
+      <h2>《${esc(b.title || "")}》</h2>
+      <p class="by">${esc(b.author || "")}${b.year ? `・${esc(String(b.year))}` : ""}${b.original ? `・<i>${esc(b.original)}</i>` : ""}</p>
+      ${b.blurb ? `<p class="blurb">${esc(b.blurb)}</p>` : ""}
+      <div class="prog" role="img" aria-label="已刊 ${parts.length} 回，讀了 ${got} 回，共 ${of} 回"><i class="pub" style="width:${pct(parts.length)}%"></i><i class="done" style="width:${pct(got)}%"></i></div>
+      <p class="nums"><span><b>${got}</b>讀了</span><span><b>${parts.length}</b>已刊</span><span><b>${of || "—"}</b>全書</span></p>
+    </section>
+    ${next ? `<div class="sec-head"><h2>接著讀</h2><span class="de">Weiterlesen</span><span class="note">第 ${esc(String(next.a.serial?.n ?? ""))} 回</span></div>${serialCard(next.date, next.a, read, { plate: false })}`
+      : parts.length ? `<p class="empty">到今天為止的回目都讀完了，明天早上有下一回。</p>` : `<p class="empty">${b.start ? `${esc(fmtDate(b.start, "short"))}開始，每天早上一回。` : "還沒開始。"}</p>`}
+    ${Array.isArray(b.cast) && b.cast.length ? `<details class="gig-key cast"><summary>人物</summary><dl>${b.cast.map((c) => `<dt>${esc(c.name)}</dt><dd>${esc(c.who)}</dd>`).join("")}</dl></details>` : ""}
+    ${parts.length ? `<div class="sec-head"><h2>回目</h2><span class="de">Folgen</span><span class="note">${parts.length} 回</span></div><ol class="svl">${parts.map(row).join("")}</ol>` : ""}
+  </div>`;
+  document.title = `連載｜${S.cfg.title}`;
 }
 
 function itemCard(date, a, read) {
@@ -1677,7 +1708,7 @@ function viewSettings() {
 }
 
 // ——— Router ———
-const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/saved", "收藏", "saved"], ["#/music", "音樂", "music"], ["#/settings", "設定", "settings"]];
+const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/saved", "收藏", "saved"], ["#/serial", "連載", "book"], ["#/settings", "設定", "settings"]]; // 音樂 gave its tab to 連載 (the owner, 2026-11-05); the music column lives in 往期 like every column
 let cleanup = () => {};
 let stopReveal = () => {};
 let lastTapped = null, shownArticle = null; // the card picture just tapped, and the article on screen (for the picture morph)
@@ -1691,7 +1722,7 @@ let landKey = null, landTop = null; // 接著上次: the article tapped on the f
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/column/music") ? "#/music" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/music" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/serial") || h.startsWith("#/column/serial") ? "#/serial" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/archive" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let enteredFront = false; // this draw of the front page came from another page (route), not from a redraw in place
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
@@ -1774,7 +1805,8 @@ async function drawRoute(h, art, my) {
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/marks")) viewMarks();
-  else if (h.startsWith("#/music")) viewMusic();
+  else if (h.startsWith("#/serial")) await viewSerial(my);
+  else if (h.startsWith("#/music")) viewMusic(); // the old tab's address still opens the column
   else if (h.startsWith("#/settings")) viewSettings();
   else if ((m = h.match(/^#\/concert\/([\w-]+)/))) await viewConcert(m[1], my);
   else if (h.startsWith("#/concerts")) await viewConcerts(my);

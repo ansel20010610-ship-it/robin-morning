@@ -1564,3 +1564,21 @@ a.stamp:active .sp { filter: brightness(.96); }
 .serial-card .recap { margin: 6px 0 0; font-size: .92em; line-height: 1.75; color: var(--ink-2); }
 .serial-card .recap b { font-family: var(--sans); font-size: 11.5px; font-weight: 600; letter-spacing: .1em; color: var(--gold-ink); margin-right: 7px; }
 .serial-card .back { color: var(--muted); }
+/* 連載 tab (app.js viewSerial): the book's plate — title large, author and year under it, the blurb, a two-tone progress
+   line (published in gold-soft, read in gold) with the three numbers in Cormorant — then 接著讀, the cast and the list. */
+.buch { padding: 10px 0 18px; border-bottom: 1px solid var(--rule); }
+.buch h2 { margin: 0; font-size: 30px; letter-spacing: .06em; line-height: 1.3; }
+.buch .by { margin: 4px 0 0; font-family: var(--sans); font-size: 12.5px; letter-spacing: .08em; color: var(--gold-ink); }
+.buch .by i { font-family: var(--latin); font-size: 14px; letter-spacing: .02em; color: var(--muted); }
+.buch .blurb { margin: 12px 0 0; font-size: .95em; line-height: 1.8; color: var(--ink-2); }
+.buch .prog { position: relative; height: 3px; margin: 18px 0 8px; background: var(--paper-3); }
+.buch .prog i { position: absolute; left: 0; top: 0; height: 100%; }
+.buch .prog .pub { background: var(--gold-soft); }
+.buch .prog .done { background: var(--gold); }
+.buch .nums { display: flex; gap: 22px; margin: 0; font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--muted); }
+.buch .nums b { display: block; font-family: var(--latin); font-size: 26px; line-height: 1; font-weight: 600; color: var(--ink); margin-bottom: 3px; font-variant-numeric: lining-nums tabular-nums; }
+.serie .serial-card { border-bottom: 0; }
+.cast dl { margin: 6px 0 0; }
+.cast dt { font-weight: 600; margin-top: 8px; }
+.cast dd { margin: 1px 0 0; font-size: .92em; color: var(--ink-2); line-height: 1.7; }
+.sv.locked { color: var(--muted); }

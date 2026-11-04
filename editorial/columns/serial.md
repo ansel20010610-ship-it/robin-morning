@@ -1,4 +1,4 @@
-# 翻到昨天摺角的那一頁（serial，編輯部簡稱「連載」）｜每天一回，由連載班提前譯好
+# 翻到昨天摺角的那一頁（serial，編輯部簡稱「連載」）｜每天一回，由連載班每天譯
 
 ## 這一欄是什麼
 
@@ -6,7 +6,7 @@
 
 全部機器都在 `scripts/serial.py`：
 - 原文已切好：`state/serial/<slug>/src/<回>.json`（每回的俄文段落、在書中的位置、字數），計畫在 `state/serial/<slug>.json`（每回的日期）。
-- `python3 scripts/serial.py status`：哪些回已譯、譯到哪一天、還缺哪些（目標是提前 21 天）。
+- `python3 scripts/serial.py status`：哪些回已譯、譯到哪一天、還缺哪些（目標是提前 3 天：平常一天譯一回，壞掉一天也不開天窗；社長 2026-11-05：之後每天翻就好）。
 - `python3 scripts/serial.py src <slug> <n>`：印出第 n 回的原文。
 - `python3 scripts/serial.py check <slug> [<n>]`：連載專用的檢查（回數、位置、字數、有沒有漏譯的俄文、章名）。另外照常跑 `python3 scripts/validate.py <日期> --column serial`。
 - 譯名表：`state/serial/<slug>.md`，**全書譯名的唯一依據，每回譯者都要先讀**。表裡沒有的新人物、新地名，譯者決定後要加進表裡（同一次 commit）。
@@ -47,13 +47,13 @@
 - 直譯原文，不省略、不摘要、不加寫：原文每一句都要有對應的中文；長句可以斷開，順序可以為了中文調整，但不丟內容。
 - 今天台灣人讀得順的中文：主詞清楚，不仿舊譯腔，不堆成語，不用大陸用語（「視頻」「信息」「質量」）。人物說話要像人在說話；原文的語氣（嘲弄、猶疑、激動）要譯出來。
 - 對白用「」，引號內用『』；原文的破折號對白一律改成引號；內心獨白（原文 «»）也用「」。
-- 數字與中文之間留半形空格（「30 戈比」「5 樓」）；全形標點。
+- 數字照譯名表第四節：小說正文一律用中文數字（「三十戈比」「五樓」「七百三十步」），不用阿拉伯數字；全形標點。
 - 一回譯完要讀出聲一遍，改掉讀不順的句子。
 
-## 連載班的流程（每週一 16:07，台灣時間）
+## 連載班的流程（每天 16:07，台灣時間）
 
 1. `python3 scripts/serial.py status`：看缺哪些回。都齊就回報結束。
-2. 每一回派一個**譯者子代理**（`opus`／`high`）：給它 slug、回數、譯名表路徑、本手冊；它讀 `src/<n>.json` 與 `src/<n-1>.json`（寫前情），譯成上面的 JSON 寫到 `content/issues/<日期>/serial.json`（日期在 src 檔裡；資料夾不存在就建立），跑 `serial.py check <slug> <n>` 與 `validate.py <日期> --column serial`，修到沒有 ERROR。可以平行，一次最多 10 回。
+2. 每一回派一個**譯者子代理**（`opus`／`high`）：給它 slug、回數、譯名表路徑、本手冊；它讀 `src/<n>.json` 與 `src/<n-1>.json`（寫前情），譯成上面的 JSON 寫到 `content/issues/<日期>/serial.json`（日期在 src 檔裡；資料夾不存在就建立），跑 `serial.py check <slug> <n>` 與 `validate.py <日期> --column serial`，修到沒有 ERROR。平常只會缺一回；缺好幾回時可以平行，一次最多 5 回。
 3. 每一回再派一個**雙語核對子代理**（`sonnet`／`high`）：逐段對照原文（必要時再看 Garnett 英譯），列出漏譯、誤譯、譯名不合表、語氣不對的地方，直接改正譯文，再跑一次兩個檢查。
 4. 每完成一回就 `git add content/issues/<日期>/serial.json state/serial`，commit「連載 第 n 回：<小標>」，`git pull --rebase origin main && git push origin HEAD:main`。
 5. 結束時回報：譯了哪幾回、核對改了什麼、現在譯到哪一天。
