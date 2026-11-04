@@ -1,0 +1,212 @@
+{
+  "column": "wildcard",
+  "date": "reserve",
+  "reserve_written": "2026-11-04",
+  "title": "殺了人的東西，歸國王",
+  "dek": "直接害死人的東西，不管主人有沒有參與，英國法律都沒收歸國王。小刀、車輪、牛馬都算，1841 年還判到一台火車頭上。",
+  "brief": "英國的殺人案起訴書，曾經要寫明凶器值多少錢，例如一把值六便士的小刀，因為害死人的東西要沒收歸國王。這套叫 deodand 的規矩不看主人有沒有參與，1841 年還判到一台火車頭上，1846 年才廢。",
+  "topic_key": "wildcard:law-deodand-penknife-sixpence",
+  "updated_at": "2026-11-04T15:05:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/William_Blackstone%2C_Commentaries_on_the_Laws_of_England_%281st_ed%2C_1765%2C_vol_I%29.pdf/page309-500px-William_Blackstone%2C_Commentaries_on_the_Laws_of_England_%281st_ed%2C_1765%2C_vol_I%29.pdf.jpg",
+    "width": 500,
+    "height": 758,
+    "alt": "一頁 18 世紀的英文印刷書頁，頁面中段有一段談殺人案起訴書要寫明凶器的價值。",
+    "caption": "布萊克斯通《英格蘭法律釋義》第一卷初版（1765）第 291 頁。頁面中段那一句，寫的就是起訴書裡那把值六便士的小刀。",
+    "credit": "William Blackstone，《Commentaries on the Laws of England》第一卷初版，Internet Archive 多倫多大學藏本掃描",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:William_Blackstone,_Commentaries_on_the_Laws_of_England_(1st_ed,_1765,_vol_I).pdf?page=309",
+    "made": "1765"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "布萊克斯通（William Blackstone）1765 年出版的《英格蘭法律釋義》寫到，殺人案的起訴書要寫明凶器值多少錢，舉的例子是一把小刀。"
+    },
+    {
+      "type": "quote",
+      "text": "這一擊是用一把小刀打的，值六便士。",
+      "original": "that the stroke was given with a certain penknife, value sixpence",
+      "cite": "布萊克斯通，《英格蘭法律釋義》第一卷第 8 章，1765"
+    },
+    {
+      "type": "p",
+      "text": "寫價錢，是因為那把小刀要沒收。英國法律管這種東西叫 deodand，來自拉丁文 Deo dandum，意思是「要獻給上帝的」。任何直接造成人死亡的動產都算，沒收歸國王，用在虔誠的用途，由國王的施賑官拿去施捨。還得由十二個人的陪審團認定，才算數。"
+    },
+    {
+      "type": "p",
+      "text": "主人有沒有參與，不看。deodand 出自主人的不幸，不是主人的罪；就算主人沒參與，只要有人用他的劍殺了人，劍也沒收，當作「一件被詛咒的東西」。"
+    },
+    {
+      "type": "h",
+      "text": "車在動，連貨一起收"
+    },
+    {
+      "type": "p",
+      "text": "東西不動的時候，只收直接害死人的那一部分。人爬上車輪、摔下來死了，沒收的只有那個輪子。車在動就不一樣：輪子輾過人，輪子、車、車上的貨全部沒收，因為車和貨讓輪子壓得更重。"
+    },
+    {
+      "type": "p",
+      "text": "小孩另算。幼兒從停著的車或馬上摔下來死了，不算 deodand；大人這樣摔死，東西照收。要是馬、牛自己動起來殺了人，或是車輾過人，大人小孩一樣沒收。"
+    },
+    {
+      "type": "p",
+      "text": "黑爾（Matthew Hale）的理由是小孩不會照顧自己，布萊克斯通認為很不充分，自己另給了一個，牽到彌撒。他說這套制度是在「天主教（popery）當道的盲目年代」設計的，替突然死去的人贖靈魂；小孩被認為還不會犯實際的罪，用不著 deodand 去買贖罪的彌撒，大人帶著罪死去，才需要。"
+    },
+    {
+      "type": "h",
+      "text": "雅典人審過一把斧頭"
+    },
+    {
+      "type": "p",
+      "text": "摩西律法有類似的處罰。《出埃及記》寫，牛若觸死男人或是女人，「總要用石頭打死那牛，卻不可吃牠的肉；牛的主人可算無罪」。"
+    },
+    {
+      "type": "p",
+      "text": "木頭、石頭、鐵塊掉下來砸死了人，雅典人就把它們丟出國界。"
+    },
+    {
+      "type": "p",
+      "text": "雅典也確實有法庭審無生命物。公元 2 世紀的旅行家波桑尼亞斯（Pausanias）在《希臘誌》裡記下，雅典有一座法庭專審鐵器和其他沒有生命的東西。照他相信的來歷，厄瑞克透斯（Erechtheus）當雅典國王的時候，宰牛的人在祭壇邊殺了一頭牛，把斧頭留在原地，自己出國流亡。斧頭隨即受審，判了無罪，這場審判從此年年重演，一直到他那個時代。"
+    },
+    {
+      "type": "h",
+      "text": "火車頭也判了"
+    },
+    {
+      "type": "p",
+      "text": "這條規矩到 1841 年還在用。1841 年 12 月 24 日清晨 4 點半，一列大西部鐵路（Great Western Railway）的貨運列車從帕丁頓（Paddington）開出，掛著 17 節貨車、兩節三等客車和一節站務車。到了索寧切割段（Sonning Cutting），機車撞上從邊坡滑下來的土石，機車脫軌，後面的貨車還帶著衝勁往前，壓上客車，一節撞碎，另一節嚴重受損。隔天出版的官方事故報告寫，八名乘客死亡；後來一位傷者在醫院過世，總共九人。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/07/Sonning_Cutting_-_geograph.org.uk_-_763137.jpg",
+      "width": 480,
+      "height": 640,
+      "alt": "從華倫路上往下看索寧切割段，鐵軌在兩側坡面之間延伸。",
+      "caption": "索寧切割段，2008 年 4 月 6 日從華倫路（Warren Road）上往下拍，這裡是切割段最深的地方。",
+      "credit": "Andrew Smith（geograph.org.uk）",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sonning_Cutting_-_geograph.org.uk_-_763137.jpg",
+      "made": "2008"
+    },
+    {
+      "type": "p",
+      "text": "驗屍陪審團裁定意外死亡，並判了 1,000 英鎊的 deodand。據維基百科，這筆 deodand 判在機車、煤水車和車廂上；這個細節只有維基一個來源，另一個來源只寫鐵路公司被判 1,000 英鎊。驗屍程序中也有建議，以後客車要掛得離機車遠一點。"
+    },
+    {
+      "type": "p",
+      "text": "1846 年，議會把 deodand 廢了，9 月 1 日起生效，法案的前言說這套法律「不合理又不方便」。同一年還通過了坎貝爾勳爵法（Lord Campbell's Act），讓死者的遺屬可以為親人的死告上法院。兩個法案是綁在一起過的，因為坎貝爾勳爵不願廢掉這套有嚇阻疏忽效果（尤其是鐵路公司的疏忽）的制度，除非遺屬先拿到提告的權利。"
+    },
+    {
+      "type": "p",
+      "text": "廢除 deodand 的法案沒有分條，前言之後只有一個長句。它先說從此不再沒收害死人的東西，再說驗屍陪審團不准再判 deodand，最後一段免除了起訴書寫明凶器價值的要求。"
+    },
+    {
+      "type": "quote",
+      "text": "在殺人案的起訴書或驗屍書（inquisition）裡，不必寫明造成死亡的器具值多少錢，也不必寫它不值錢。",
+      "original": "it shall not be necessary in any Indictment or Inquisition for Homicide to allege the Value of the Instrument which caused the Death of the Deceased, or to allege that the same was of no Value",
+      "cite": "An Act to abolish Deodands（9 & 10 Vict. c. 62），1846"
+    },
+    {
+      "type": "h",
+      "text": "一艘租出去的遊艇"
+    },
+    {
+      "type": "p",
+      "text": "deodand 沒有成為美國普通法傳統的一部分，這句話是美國最高法院自己寫的，寫在 1974 年的一份判決裡。同一份判決，判了一艘遊艇可以沒收。"
+    },
+    {
+      "type": "p",
+      "text": "一家公司把遊艇租給兩位波多黎各居民，當局後來在船上發現大麻，警察總監沒有事先通知、也沒有聽證，就把船查封。出租公司沒有參與，也不知情。"
+    },
+    {
+      "type": "p",
+      "text": "最高法院說，沒收制度不會因為波及無辜者的財產就違憲，又說美國沒收法的歷史背景支持這個結論。它講那段歷史，是從 deodand 講起的。"
+    },
+    {
+      "type": "p",
+      "text": "照布萊克斯通的例子，主人沒參與殺人，劍照樣沒收。1974 年的遊艇案，出租公司沒參與、也不知情，波多黎各照樣可以把那艘遊艇收走。兩件事有個共同點，主人有沒有參與都不影響沒收。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Commentaries on the Laws of England, Book the First, Chapter the Eighth: Of the King's Revenue",
+      "publisher": "William Blackstone，Avalon Project（耶魯法學院）",
+      "date": "1765-01-01",
+      "url": "https://avalon.law.yale.edu/18th_century/blackstone_bk1ch8.asp",
+      "note": "deodand 的定義、動與不動、小孩與大人、起訴書寫明凶器價值、「accursed thing」；並對 Commons 上初版掃描的第 290–291 頁核對"
+    },
+    {
+      "title": "An Act to abolish Deodands (9 & 10 Vict. c. 62)",
+      "publisher": "legislation.gov.uk（King's Printer 原版 PDF）",
+      "date": "1846-08-18",
+      "url": "https://www.legislation.gov.uk/ukpga/Vict/9-10/62/pdfs/ukpga_18460062_en.pdf",
+      "note": "前言（unreasonable and inconvenient）；正文沒有分條，是一個分成三段的長句，最後一段免除起訴書寫凶器價值；9 月 1 日生效"
+    },
+    {
+      "title": "Pausanias, Description of Greece 1.28.10（Jones 英譯）",
+      "publisher": "Perseus Digital Library",
+      "date": "2026-11-04",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Paus.+1.28.10",
+      "note": "雅典專審鐵器與無生命之物的法庭、斧頭受審判無罪、年年重演"
+    },
+    {
+      "title": "Aeschines, Against Ctesiphon 3.244（Adams 英譯）",
+      "publisher": "Perseus Digital Library",
+      "date": "2026-11-04",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Aeschin.+3.244",
+      "note": "木頭、石頭、鐵塊砸死人要丟出國界"
+    },
+    {
+      "title": "The Common Law, Lecture I",
+      "publisher": "Oliver Wendell Holmes Jr.，Project Gutenberg",
+      "date": "2026-11-04",
+      "url": "https://www.gutenberg.org/cache/epub/2449/pg2449.txt",
+      "note": "波桑尼亞斯是公元 2 世紀的旅行家"
+    },
+    {
+      "title": "Accident Returns: Extract for Accident at Sonning Cutting, near Reading on 24th December 1841",
+      "publisher": "The Railways Archive（Board of Trade 報告，Sir Frederic Smith）",
+      "date": "1841-12-25",
+      "url": "https://www.railwaysarchive.co.uk/docSummary.php?docID=113",
+      "note": "清晨 4 點半從 Paddington 開出、17 節貨車、兩節三等客車與一節站務車、貨車衝上客車、報告當時八名乘客死亡"
+    },
+    {
+      "title": "Sonning Cutting",
+      "publisher": "Friends of the National Railway Museum",
+      "date": "2026-11-04",
+      "url": "https://nrmfriends.org.uk/post/sonning-cutting",
+      "note": "大西部鐵路被判 1,000 英鎊的 deodand；驗屍建議客車離機車遠一點；總共九人死亡。該頁與維基百科對 deodand 的後續（上訴後減少或推翻）說法不同，正文不寫結果"
+    },
+    {
+      "title": "Sonning Cutting railway accident",
+      "publisher": "Wikipedia",
+      "date": "2026-11-04",
+      "url": "https://en.wikipedia.org/wiki/Sonning_Cutting_railway_accident",
+      "note": "第一場驗屍判在機車、煤水車與車廂上；邊坡滑落的土石；八人當場死亡、一人後來在醫院過世；第二場驗屍建議客車離機車遠一點"
+    },
+    {
+      "title": "Calero-Toledo v. Pearson Yacht Leasing Co., 416 U.S. 663",
+      "publisher": "Cornell Legal Information Institute",
+      "date": "1974-05-15",
+      "url": "https://www.law.cornell.edu/supremecourt/text/416/663",
+      "note": "遊艇案事實、判決要旨、歷史回顧從 deodand 講起、注 16（拉丁文來源）、注 19（1846 年廢除與 Lord Campbell's Act, 9 & 10 Vict. c. 93 綁在一起、坎貝爾勳爵與鐵路）、注 27（deodand 沒有成為美國普通法傳統）"
+    },
+    {
+      "title": "和合本《出埃及記》21 章 28 節",
+      "publisher": "信望愛聖經工具（bible.fhl.net）",
+      "date": "2026-11-04",
+      "url": "https://bible.fhl.net/",
+      "note": "經文逐字取自 FHL 和合本"
+    }
+  ]
+}
