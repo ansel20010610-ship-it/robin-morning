@@ -1,0 +1,169 @@
+{
+ "column": "news",
+ "date": "2026-11-05",
+ "title": "民主黨拿下美國參眾兩院，新竹湖口松下廠爆炸",
+ "dek": "美國民主黨在期中選舉掌握國會兩院；烏克蘭札波羅熱的空襲死亡增至 40 人；新竹湖口一座工廠凌晨爆炸。",
+ "brief": "美國期中選舉由民主黨掌握國會兩院，密西根的埃爾賽義德當選第一位穆斯林參議員。烏克蘭札波羅熱州的空襲死亡升到 40 人。新竹湖口的台灣松下多層材料公司 11 月 4 日凌晨爆炸起火，5 人受傷，公視報導時仍有 2 人失聯。",
+ "topic_key": "news:2026-11-05",
+ "updated_at": "2026-11-05T05:25:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "US midterms live: 'Largely true' Iran war led to loss, Trump says",
+   "publisher": "德國之聲",
+   "date": "2026-11-04",
+   "url": "https://www.dw.com/en/us-midterms-largely-true-iran-war-led-to-loss-trump-says/live-79829440",
+   "note": "民主黨掌握兩院、埃爾賽義德當選、范斯與川普的話、1 月 3 日就職；未給席次數，正文不寫"
+  },
+  {
+   "title": "Ukraine raises death toll from Russian strike on Zaporizhia to 40 people",
+   "publisher": "半島電視台",
+   "date": "2026-11-04",
+   "url": "https://www.aljazeera.com/news/2026/11/4/ukraine-raises-death-toll-from-russian-strike-on-zaporizhia-to-40-people",
+   "note": "11 月 2 日空襲、40 人、30 多人可能被壓；阿布達比會談 11 月 10–11 日；報導未含俄方回應"
+  },
+  {
+   "title": "WHO approves trials for two new Ebola vaccines",
+   "publisher": "半島電視台",
+   "date": "2026-11-04",
+   "url": "https://www.aljazeera.com/news/2026/11/4/who-approves-trials-for-two-new-ebola-vaccines",
+   "note": "10,444 例確診（非洲疾管中心）、逾 5,300 死、結果預計 2027 年初"
+  },
+  {
+   "title": "France: Cyberattack targets blood bank refrigerators",
+   "publisher": "德國之聲",
+   "date": "2026-11-04",
+   "url": "https://www.dw.com/en/french-blood-banks-targeted-by-refrigerator-cyberattack/a-79857981",
+   "note": "法國血液機構說明；110 度與零下 30 度出自《鴨鳴報》；France 24 另有報導"
+  },
+  {
+   "title": "松下湖口廠深夜起火 釀5傷、仍有2人失聯",
+   "publisher": "公視新聞網",
+   "date": "2026-11-04",
+   "url": "https://news.pts.org.tw/article/834204",
+   "note": "凌晨 2 時許起火、5 傷 2 失聯；賠償與受損戶數見 834354"
+  },
+  {
+   "title": "湖口松下廠房爆炸波及逾百戶 鄉長擬協助災損彙整並求償",
+   "publisher": "公視新聞網",
+   "date": "2026-11-04",
+   "url": "https://news.pts.org.tw/article/834354",
+   "note": "逾百戶受影響、鄉長吳淑君、化學原料"
+  },
+  {
+   "title": "永豐銀異常轉帳原因出爐 系統遭駭無個資外洩",
+   "publisher": "中央廣播電臺",
+   "date": "2026-11-04",
+   "url": "https://www.rti.org.tw/news?uid=3&pid=241852",
+   "note": "427 筆、每筆約 10 萬元、款項已返還、北檢分案；公視報導寫 418 筆，數字不一致，正文只寫「每筆約 10 萬元」"
+  },
+  {
+   "title": "蘇花安動土提升東部交通安全 北花車程估2小時",
+   "publisher": "中央廣播電臺",
+   "date": "2026-11-04",
+   "url": "https://www.rti.org.tw/news?uid=3&pid=241856",
+   "note": "1,056 億元、近 30 公里、2032 年完工"
+  }
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "最大的事在美國：共和黨在期中選舉失去國會。台灣這邊，新竹湖口一座工廠昨天凌晨爆炸，公視報導時仍有 2 人失聯。"
+  },
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "民主黨拿下美國參眾兩院",
+     "place": "US",
+     "summary": "美國期中選舉 11 月 3 日投票，民主黨同時贏得參議院和眾議院，新國會明年 1 月 3 日就職。密西根的埃爾賽義德（Abdul El-Sayed）當選，是第一位穆斯林參議員。副總統范斯說共和黨輸在對伊朗的戰爭；川普說這話「大致屬實」，但再來一次還是會打。",
+     "source": "德國之聲",
+     "url": "https://www.dw.com/en/us-midterms-largely-true-iran-war-led-to-loss-trump-says/live-79829440",
+     "when": "11 月 4 日，美國當地時間"
+    },
+    {
+     "headline": "札波羅熱空襲死亡增至 40 人",
+     "place": "UA",
+     "summary": "俄軍 11 月 2 日（週一）轟炸烏克蘭札波羅熱州的前線村莊，當作援助站的學校被炸，地下避難室又遭第二波攻擊。烏克蘭總統澤倫斯基 11 月 4 日說死亡增至 40 人，30 多人可能壓在瓦礫下。美國安排的烏俄談判預定 11 月 10 至 11 日在阿布達比舉行。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/4/ukraine-raises-death-toll-from-russian-strike-on-zaporizhia-to-40-people",
+     "when": "11 月 4 日，烏克蘭當地時間"
+    },
+    {
+     "headline": "世衛支持兩項伊波拉疫苗試驗",
+     "place": "CD",
+     "summary": "世界衛生組織的專家小組 11 月 2 日（週一）建議，增加兩項針對本迪布焦（Bundibugyo）型伊波拉的疫苗試驗，這一型沒有專用疫苗。非洲疾管中心說，這波疫情已確診 10,444 例，5 月以來死亡超過 5,300 人。試驗結果預計 2027 年初出爐。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/4/who-approves-trials-for-two-new-ebola-vaccines",
+     "when": "11 月 4 日，台灣時間"
+    },
+    {
+     "headline": "歐洲冷凍設備遭網攻，波及血庫",
+     "place": [
+      "FR",
+      "DE"
+     ],
+     "summary": "11 月 1 日至 2 日，法國、德國等歐洲國家的超市冷凍設備遭網攻。法國血液機構說，三處存放血漿與血液檢體的冷藏點也被波及，據報導溫度被設成 110 度而不是零下 30 度，警報及時示警，沒有血液製品損失。",
+     "source": "德國之聲",
+     "url": "https://www.dw.com/en/french-blood-banks-targeted-by-refrigerator-cyberattack/a-79857981",
+     "when": "11 月 4 日，法國當地時間"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "新竹湖口電子材料廠爆炸",
+     "place": "TW",
+     "summary": "新竹縣湖口鄉台灣松下多層材料公司，11 月 4 日凌晨 2 時許起火並爆炸，5 名員工受傷，另有 2 名台籍員工失聯，消防人員下午進火場搜尋。爆炸震碎周邊門窗，超過百戶受損，鄉長說會彙整損失，交公司處理賠償。",
+     "source": "公視新聞網",
+     "url": "https://news.pts.org.tw/article/834354",
+     "when": "11 月 4 日，台灣時間"
+    },
+    {
+     "headline": "永豐銀：盜轉是外部駭客所為",
+     "place": "TW",
+     "summary": "永豐銀行 11 月 4 日公布調查：外部駭客利用新網銀交易系統供應商的安全設定，隨機試誤取得有效帳戶，客戶存款因此在 11 月 3 日被轉走。目前沒有個資外洩的跡象，款項已全數返還，台北地檢署以妨害電腦使用偵辦。",
+     "source": "中央廣播電臺",
+     "url": "https://www.rti.org.tw/news?uid=3&pid=241852",
+     "when": "11 月 4 日，台灣時間"
+    },
+    {
+     "headline": "蘇花安動土，預定 2032 年完工",
+     "place": "TW",
+     "summary": "行政院長卓榮泰 11 月 4 日在宜蘭東澳主持蘇花安動土典禮，要改善蘇花公路 3 段風險路段，完工後台北到花蓮約 2 小時。",
+     "source": "中央廣播電臺",
+     "url": "https://www.rti.org.tw/news?uid=3&pid=241856",
+     "when": "11 月 4 日，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "蘇花安計畫（11 月 4 日動土）",
+   "head": [
+    "項目",
+    "內容"
+   ],
+   "rows": [
+    [
+     "改善路段",
+     "蘇花公路 3 段，近 30 公里"
+    ],
+    [
+     "預算",
+     "1,056 億元"
+    ],
+    [
+     "預定完工",
+     "2032 年"
+    ]
+   ],
+   "caption": "資料來源：中央廣播電臺。"
+  }
+ ]
+}
