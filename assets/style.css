@@ -1544,12 +1544,12 @@ a.stamp:active .sp { filter: brightness(.96); }
 .fixture .foot .btn { margin-left: auto; }
 @media print { .btn.cal { display: none; } }
 
-/* 歷史上的今天 (app.js dayBox): one line under the finish line, before 近期演出 — a thin rule above and below like a
-   tear-off calendar leaf, the year set large in the latin face, the sentence after it. */
-.kalender { margin: 30px 0 4px; padding: 12px 0 14px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-.kalender .lbl { display: flex; align-items: baseline; gap: 10px; margin: 0 0 8px; }
-.kalender .lbl b { font-size: 13px; letter-spacing: .14em; font-weight: 700; }
-.kalender .lbl .de { font-family: var(--latin); font-style: italic; color: var(--gold); font-size: 15px; }
+/* 歷史上的今天 (app.js dayBox): a calendar leaf under the finish line, before 近期演出 — a paper-2 card like the finish
+   box, a gold rule along the top edge, the year set large in the latin face, the sentence after it in full ink. */
+.kalender { margin: 30px 0 4px; padding: 14px 16px 16px; background: var(--paper-2); border: 1px solid var(--rule); border-top: 3px double var(--gold); }
+.kalender .lbl { display: flex; align-items: baseline; gap: 10px; margin: 0 0 10px; }
+.kalender .lbl b { font-size: 14px; letter-spacing: .16em; font-weight: 700; }
+.kalender .lbl .de { font-family: var(--latin); font-style: italic; color: var(--gold); font-size: 16px; }
 .kalender .lbl .note { margin-left: auto; font-family: var(--sans); font-size: 12px; color: var(--muted); letter-spacing: .04em; }
-.kalender p { margin: 0; font-size: 15.5px; line-height: 1.85; color: var(--ink-2); }
-.kalender .yr { float: left; margin: 2px 10px 0 0; font-family: var(--latin); font-size: 34px; line-height: 1; font-weight: 600; color: var(--ink); letter-spacing: .01em; }
+.kalender p { margin: 0; font-size: 16.5px; line-height: 1.85; color: var(--ink); }
+.kalender .yr { float: left; margin: 3px 12px 0 0; font-family: var(--latin); font-size: 44px; line-height: .9; font-weight: 600; color: var(--wine); letter-spacing: .01em; }
