@@ -25,5 +25,10 @@
       "news"
     ],
     "note": "football 初稿與 canon（崔斯坦與伊索德）完成，各經審稿、總編重寫、忠實度核對；validate 無 WARN"
+  },
+  "4": {
+    "finished_at": "2026-11-05T05:41:51+08:00",
+    "missing": [],
+    "note": "訃聞刊出（Blomstedt）、快訊刊出；FM/寰宇靜默；巴薩不動；快訊實測可用：aljazeera、pts、rti、dw(curl)、france24、news.un.org；不可用：cna、focustaiwan"
   }
 }
