@@ -22,6 +22,7 @@ async function loadData() {
     getJSON("content/config.json", { fresh: true }),
     getJSON("content/index.json", { fresh: true }).catch(() => ({ issues: [] })),
     loadLate(),
+    loadDays(),
   ]);
   S.cfg = cfg;
   S.index = index;
@@ -464,6 +465,7 @@ function viewFront(dateParam) {
     ${!arts.some((a) => a.brief) ? "" : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
       : unreadIn(issue.date, arts) ? `<div class="finish lockfin">${lockMode() ? ICON.lock : ""}<b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${lockMode() ? "循序閱讀：一篇一篇讀完，今天才算數。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的郵票才蓋得下去。`}</span></div>`
       : `<div class="finish">${finishInner(issue.date)}</div>`}
+    ${dayBox(issue.date)}
     ${dateParam ? "" : `<section class="gigs" id="gigs" aria-label="近期演出">${gigsSection()}</section>`}
     <footer class="colophon">
       <div class="ornament" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -1027,6 +1029,18 @@ function snippet(text, q) {
   if (i < 0) return esc(text.slice(0, 60)) + "……";
   const a = Math.max(0, i - 28), b = Math.min(text.length, i + q.length + 40);
   return `${a > 0 ? "……" : ""}${esc(text.slice(a, i))}<mark>${esc(text.slice(i, i + q.length))}</mark>${esc(text.slice(i + q.length, b))}${b < text.length ? "……" : ""}`;
+}
+
+// ——— 歷史上的今天 (content/onthisday.json, scripts/onthisday.py): one line a day, looked up each morning by the 06:17
+// 近期演出 routine (editorial/columns/onthisday.md) and keyed by the date. The front page sets the issue's own line under
+// the finish line — one event, the year large, the sentence after it — so a past issue keeps its day too.
+const loadDays = () => getJSON("content/onthisday.json", { fresh: true }).then((d) => { S.days = d && typeof d === "object" ? d : {}; }).catch(() => {});
+function dayBox(date) {
+  const e = S.days?.[date];
+  if (!e || !Number.isInteger(e.year) || typeof e.text !== "string" || !e.text) return "";
+  const [, m, d] = date.split("-").map(Number);
+  return `<aside class="kalender" aria-label="歷史上的今天"><div class="lbl"><b>歷史上的今天</b><span class="de">Kalenderblatt</span><span class="note">${m} 月 ${d} 日</span></div>
+    <p><span class="yr">${e.year < 0 ? `西元前 ${-e.year}` : e.year}</span>${esc(e.text)}</p></aside>`;
 }
 
 // ——— 近期演出: a standing list at the foot of the front page (content/concerts.json, kept daily by the 演出資訊 routine;

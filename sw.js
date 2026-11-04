@@ -11,7 +11,7 @@ const LIMIT = { [IMAGES]: 400, [FONTS]: 400 }; // entries; the oldest go first
 const IMAGE_HOSTS = new Set(["upload.wikimedia.org", "thumb.wikimedia.org", "tile.loc.gov"]);
 const SHELL = ["index.html", "assets/style.css", "assets/app.js", "assets/util.js", "assets/blocks.js", "assets/stamps.js",
   "assets/pitch.js", "assets/spotify.js", "assets/speak.js", "assets/notify.js", "assets/motion.js", "assets/marks.js", "assets/press.js", "assets/wetter.js", "assets/world.js", "assets/robin.svg", "assets/world.svg", "manifest.webmanifest"];
-const DATA = ["content/config.json", "content/index.json"];
+const DATA = ["content/config.json", "content/index.json", "content/onthisday.json"];
 const TIMEOUT = 4000; // ms to wait for the network before answering content from the cache
 const ROOT = new URL(self.registration.scope).pathname;
 const reload = (u) => new Request(u, { cache: "reload" }); // skip the HTTP cache (GitHub Pages sends max-age=600)
