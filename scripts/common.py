@@ -11,9 +11,10 @@ CONTENT = os.path.join(ROOT, "content")
 ISSUES = os.path.join(CONTENT, "issues")
 RESERVE = os.path.join(CONTENT, "reserve")
 # Reserve articles kept per column (editorial/RESERVE.md): a main column runs every day, a supplement twice a week,
-# so the main columns keep one more.
-RESERVE_TARGET = {"main": 3, "verse": 3, "supplement": 2}
-TARGET_NOTE = "正刊每欄 3 篇、副刊每欄 2 篇"
+# so the main columns keep one more. Lowered from 3/2 on 2026-11-04: reserves were used on four days in a month, all
+# of them the quota running out, and every reserve costs a full Opus rewrite — the stock now covers a bad day, not three.
+RESERVE_TARGET = {"main": 2, "verse": 2, "supplement": 1}
+TARGET_NOTE = "正刊每欄 2 篇、副刊每欄 1 篇"
 
 
 def reserve_target(cfg, col):
