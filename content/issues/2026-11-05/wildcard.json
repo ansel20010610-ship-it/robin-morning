@@ -2,10 +2,10 @@
   "column": "wildcard",
   "date": "2026-11-05",
   "title": "電視裡的點球和收音機裡的點球",
-  "dek": "祕魯亞馬遜的一種語言裡，每句陳述都要交代消息的來路。看轉播和聽廣播，句尾要換不同的小詞。",
-  "brief": "祕魯亞馬遜的 Shipibo-Konibo 語裡，電視轉播裡的點球和廣播裡的點球要用不同的小詞：看到的用 -ra，聽說的用 -ronki。語言學家瓦倫蘇埃拉記錄到，連說自己做的夢，用的也是聽說的那一個。",
+  "dek": "祕魯亞馬遜的 Shipibo-Konibo 語，說一件事常要用小詞交代消息的來路。同一個點球，看電視和聽收音機，說法不一樣。",
+  "brief": "在祕魯亞馬遜的 Shipibo-Konibo 語裡，電視上看到的點球和收音機裡聽到的點球，要用不同的小詞：看到的用 -ra，聽說的用 -ronki。語言學家 Valenzuela 記錄到，說自己做的夢，用的也是聽說的那一個。",
   "topic_key": "wildcard:linguistics-evidentiality-shipibo-football",
-  "updated_at": "2026-11-05T01:48:00+08:00",
+  "updated_at": "2026-11-05T02:03:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -15,7 +15,7 @@
     "width": 1000,
     "height": 804,
     "alt": "貼在卡紙上的褪色老照片：河邊沙地上，一群大人與小孩坐在一座茅草棚前，後排三個人站著；卡紙下方有手寫的字。",
-    "caption": "約 1888 年，克羅勒（Charles Kroehle）在烏卡亞利河邊拍攝，館藏標題為「Conibo am Rio Ucayali」（烏卡亞利河畔的 Conibo 人）。Conibo 與 Shipibo 原為兩群人，後來通婚、共同舉行儀式而合為一族，今天合稱 Shipibo-Conibo。這是一百多年前的照片，不是今天的村落。",
+    "caption": "約 1888 年，Charles Kroehle在烏卡亞利河邊拍攝，館藏標題為「Conibo am Rio Ucayali」（烏卡亞利河畔的 Conibo 人）。Conibo 與 Shipibo 原為兩群人，後來通婚、共同舉行儀式而合為一族，今天合稱 Shipibo-Conibo。這是一百多年前的照片，不是今天的村落。",
     "credit": "Charles Kroehle（影像取自柏林國家博物館資料庫 museum-digital）",
     "license": "Public domain",
     "license_url": "",
@@ -25,23 +25,27 @@
   "body": [
     {
       "type": "p",
-      "text": "你坐在電視機前看球，說一聲「點球」。你躺在床上聽廣播，也說一聲「點球」。在祕魯東部亞馬遜的一種語言裡，這兩句話不能長得一樣。"
+      "text": "電視轉播裡看到的點球，和收音機裡聽到的點球，在祕魯亞馬遜的一種語言裡要說成兩句不同的話。"
     },
     {
       "type": "p",
-      "text": "那種語言叫 Shipibo-Konibo，是 Shipibo 人的語言。Shipibo 人約 3 萬，沿著烏卡亞利河（Ucayali River）和它的主要支流定居。語言學家瓦倫蘇埃拉（Pilar Valenzuela）在 2003 年出版的一本論文集裡替它寫了一章語法描述，舉的例子就是足球：電視轉播裡的點球，說成 Penal r-iki；廣播裡的點球，說成 Penal-ronki iki。兩句都是「這是個點球」，差在句尾的小詞。"
+      "text": "這種語言叫 Shipibo-Konibo，是 Shipibo 人的語言。他們沿著祕魯亞馬遜的烏卡亞利河（Ucayali River）和它的主要支流居住。2003 年出版的語言學論文集《Studies in Evidentiality》裡有一章專寫這種語言，作者是語言學家 Pilar Valenzuela；書裡給的人數是約 3 萬。"
     },
     {
       "type": "p",
-      "text": "-ra 的意思是：這是我自己經歷的，我親眼看到、親耳聽到、親手摸到。-ronki 的意思是：這是別人告訴我的。瓦倫蘇埃拉的說明是：電視畫面就在眼前，算親眼看見；廣播是播報員在對你講，算轉述。我們的句子可以不管消息從哪來，這種語言不行。"
+      "text": "那本書整本講的是「證據標記」（evidentiality）：用語法交代說話的人憑什麼這麼說，是自己看到的，還是聽來的。只算長在語法裡的標記，另外補一句「聽說」不算。世界語言結構地圖集（WALS）抽樣的 418 種語言裡，237 種有這種語法，英語和華語都沒有。Valenzuela 那一章專談 Shipibo-Konibo 的證據標記，再拿同一語系（帕諾語系）的其他語言來比。"
     },
     {
       "type": "p",
-      "text": "這是語法規定。她逐句請說話者判斷時發現，任何陳述句缺了 -ra 或 -ronki 都不算完整：「她的村子很大」加 -ra，表示我去過；加 -ronki，表示我沒去過，是聽人說的。語言學把這種語法叫「證據標記」（evidentiality）。世界語言結構地圖集（WALS）抽樣的 418 種語言裡，有 237 種把它寫進語法，土耳其語的過去式就分「親眼看到的」和「沒看到的」兩種後綴；英語和華語都屬於另外 181 種。"
+      "text": "她舉的例子剛好是足球。看電視轉播，說成 Penal r-iki；聽收音機，說成 Penal-ronki iki。兩句都是「這是個點球」，差在黏在句子第一個主要成分後面的那個小詞，這裡就是 Penal（點球）。-ra 表示第一手，-ronki 表示別人告訴我的；-ra 碰到後面的 iki 會縮成 r-。Valenzuela 的說明是，看電視等於自己經歷這件事，畫面就在眼前；收音機是播報員在對你講，所以算轉述。"
     },
     {
       "type": "p",
-      "text": "SOAP 病歷也在做同樣的事：「病人說」記在 S，「檢查到」記在 O，兩欄分開，來路不同的資訊不混在一起。Shipibo 人不用分欄，每一句話自己帶著。"
+      "text": "她把句子一句一句單獨拿出來問 Shipibo 說話者時，任何陳述句少了 -ra 或 -ronki，對方都覺得話沒講完。「她的村子很大」加 -ra，意思是我去過；加 -ronki，是我沒去過，聽人說的。這條規矩只管陳述句，問句和命令句都不能用這兩個小詞。講故事時也鬆一些：傳統故事常以 Moatian-ronki（「據說很久以前……」）開頭，交代過是聽來的，後面就不必每個子句都標，消息的來路換了才要再標。"
+    },
+    {
+      "type": "p",
+      "text": "-ra 管的第一手，包括自己做的、在場看到的，也包括聽到、聞到、嚐到、摸到的。警告、威脅、大家都知道的事、習慣和未來的事也用 -ra，表示說話的人很確定。"
     },
     {
       "type": "h",
@@ -49,16 +53,16 @@
     },
     {
       "type": "p",
-      "text": "電視新聞如果只聽聲音、沒看畫面，用 -ronki。報紙上讀到的也用 -ronki，說話者的理由是「報紙這麼說」；電話裡聽來的、網路上沒看影像的、書裡寫的也一樣。雙語小學教祕魯歷史時，-ronki 到處都是。地理老師的例子最乾淨：同樣一句「德國在荷蘭隔壁」，是從書上讀來的就用 -ronki，是從地圖上看到的就用 -ra。"
+      "text": "電視新聞如果只聽到聲音、沒看到畫面，用 -ronki。電話裡聽來的用 -ronki；報紙、網路上沒看到影像的、書裡讀到的也一樣，說話者的理由是「報紙這麼說」。雙語小學上祕魯歷史課，-ronki 到處都是：「（據說）我們的第一位印加王是 Manco Capac。」一位地理老師說，同樣一句「德國在荷蘭隔壁」，從書上讀來的用 -ronki，從地圖上看到的用 -ra。"
     },
     {
       "type": "p",
-      "text": "依我看，這條線畫得有道理。看轉播的人沒到過諾坎普，但球就在他眼前；語法在乎的是有沒有親眼看到，人在不在現場倒在其次。"
+      "text": "病歷的 SOAP 也在分這件事：病人說的寫在 S，自己檢查到的寫在 O。照 Shipibo 的規矩，病人說的那一欄是 -ronki；X 光片我猜會歸 -ra，影像就在眼前，跟電視和地圖一樣。"
     },
     {
       "type": "svg",
-      "title": "同一句話，兩種結尾",
-      "svg": "<svg viewBox=\"0 0 340 232\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"10\" class=\"muted\">消息的來路</text><text x=\"108\" y=\"16\" font-size=\"10\" class=\"muted\">Shipibo-Konibo 的句子</text><line x1=\"8\" y1=\"24\" x2=\"332\" y2=\"24\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"8\" y=\"46\" font-size=\"11.5\" class=\"ink\">電視轉播</text><text x=\"8\" y=\"62\" font-size=\"11\" class=\"accent\" font-weight=\"bold\">-ra</text><text x=\"108\" y=\"46\" font-size=\"11.5\" class=\"ink\">Penal r-iki</text><text x=\"108\" y=\"62\" font-size=\"10.5\" class=\"muted\">「這是個點球」</text><line x1=\"8\" y1=\"76\" x2=\"332\" y2=\"76\" class=\"soft\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\"0.4\"/><text x=\"8\" y=\"98\" font-size=\"11.5\" class=\"ink\">收音機轉播</text><text x=\"8\" y=\"114\" font-size=\"11\" class=\"accent\" font-weight=\"bold\">-ronki</text><text x=\"108\" y=\"98\" font-size=\"11.5\" class=\"ink\">Penal-ronki iki</text><text x=\"108\" y=\"114\" font-size=\"10.5\" class=\"muted\">「這是個點球」</text><line x1=\"8\" y1=\"128\" x2=\"332\" y2=\"128\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><text x=\"8\" y=\"150\" font-size=\"11.5\" class=\"ink\">看地圖</text><text x=\"8\" y=\"166\" font-size=\"11\" class=\"accent\" font-weight=\"bold\">-ra</text><text x=\"108\" y=\"150\" font-size=\"11.5\" class=\"ink\">Alemania-ra Holanda patax iki</text><text x=\"108\" y=\"166\" font-size=\"10.5\" class=\"muted\">「德國在荷蘭隔壁」</text><line x1=\"8\" y1=\"180\" x2=\"332\" y2=\"180\" class=\"soft\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\"0.4\"/><text x=\"8\" y=\"202\" font-size=\"11.5\" class=\"ink\">讀書</text><text x=\"8\" y=\"218\" font-size=\"11\" class=\"accent\" font-weight=\"bold\">-ronki</text><text x=\"108\" y=\"202\" font-size=\"11.5\" class=\"ink\">Alemania-ronki Holanda patax iki</text><text x=\"108\" y=\"218\" font-size=\"10.5\" class=\"muted\">「德國在荷蘭隔壁」</text></svg>",
+      "title": "同一句話，換一個小詞",
+      "svg": "<svg viewBox=\"0 0 340 264\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"18\" font-size=\"12.5\" class=\"muted\">消息的來路</text><text x=\"90\" y=\"18\" font-size=\"12.5\" class=\"muted\">Shipibo-Konibo 的句子</text><line x1=\"8\" y1=\"28\" x2=\"332\" y2=\"28\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"8\" y=\"53\" font-size=\"15\" class=\"ink\">電視轉播</text><text x=\"8\" y=\"74\" font-size=\"14\" class=\"accent\" font-weight=\"bold\">-ra</text><text x=\"90\" y=\"53\" font-size=\"14.5\" class=\"ink\">Penal r-iki</text><text x=\"90\" y=\"74\" font-size=\"13\" class=\"muted\">「這是個點球」</text><line x1=\"8\" y1=\"88\" x2=\"332\" y2=\"88\" class=\"soft\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\"0.4\"/><text x=\"8\" y=\"113\" font-size=\"15\" class=\"ink\">收音機轉播</text><text x=\"8\" y=\"134\" font-size=\"14\" class=\"accent\" font-weight=\"bold\">-ronki</text><text x=\"90\" y=\"113\" font-size=\"14.5\" class=\"ink\">Penal-ronki iki</text><text x=\"90\" y=\"134\" font-size=\"13\" class=\"muted\">「這是個點球」</text><line x1=\"8\" y1=\"148\" x2=\"332\" y2=\"148\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><text x=\"8\" y=\"173\" font-size=\"15\" class=\"ink\">看地圖</text><text x=\"8\" y=\"194\" font-size=\"14\" class=\"accent\" font-weight=\"bold\">-ra</text><text x=\"90\" y=\"173\" font-size=\"14.5\" class=\"ink\">Alemania-ra Holanda patax iki</text><text x=\"90\" y=\"194\" font-size=\"13\" class=\"muted\">「德國在荷蘭隔壁」</text><line x1=\"8\" y1=\"208\" x2=\"332\" y2=\"208\" class=\"soft\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\"0.4\"/><text x=\"8\" y=\"233\" font-size=\"15\" class=\"ink\">讀書</text><text x=\"8\" y=\"254\" font-size=\"14\" class=\"accent\" font-weight=\"bold\">-ronki</text><text x=\"90\" y=\"233\" font-size=\"14.5\" class=\"ink\">Alemania-ronki Holanda patax iki</text><text x=\"90\" y=\"254\" font-size=\"13\" class=\"muted\">「德國在荷蘭隔壁」</text></svg>",
       "caption": "示意：Shipibo-Konibo 的證據小詞接在句子第一個主要成分後面，-ra 在 iki 前縮成 r-。電視與收音機的句子是 Valenzuela（2003）的例 (44)，德國與荷蘭的句子是例 (46)。"
     },
     {
@@ -67,11 +71,11 @@
     },
     {
       "type": "p",
-      "text": "瓦倫蘇埃拉請一位男性說話者談草藥 piripiri，那是一大類被認為有特殊功效的草本植物。談追女人用的「愛情 piripiri」，他用 -ra：他自己用過，有效。談讓生產順利的 piripiri，也用 -ra：他看過太太用，孩子在家生下來，沒有大問題。談同樣功效的鰩魚油，他換成 -ronki，因為沒有親身經驗；不過他看起來並不懷疑它有效。"
+      "text": "Valenzuela 請一位男性說話者談 piripiri，泛指一類有益的草本植物。談追女人用的「愛情 piripiri」，他用 -ra，因為自己用過，有效。談讓生產順利的 piripiri，也用 -ra：他親眼看過太太用，她在家順利生下孩子。談同樣功效的魟魚油，他換成 -ronki，因為沒有親身經驗；不過他看起來並不懷疑它有效。"
     },
     {
       "type": "p",
-      "text": "最怪的是夢。說自己做的夢，用的是 -ronki：「（據說）我站在一大片種稻的園子中央。」夢明明是自己經歷的。瓦倫蘇埃拉推測，避開最高等級的 -ra，是在表示這段經歷不屬於現實。可是同一章裡還寫到，大薩滿服用迷幻植物 ayahuasca（死藤水）之後會旅行到另一層現實，那裡的經驗被當成真的。薩滿自己診斷病人時用 -ra；轉達精靈告訴他的事，可以用 -ronki：「（精靈告訴我）我能治好你。」"
+      "text": "夢是例外。說自己做的夢，用的是 -ronki：「（據說）我站在一大片種稻的園子中央。」夢明明是自己經歷的。Valenzuela 的假設是，避開最高等級的 -ra，是在表示這段經歷不屬於現實。"
     },
     {
       "type": "h",
@@ -79,34 +83,39 @@
     },
     {
       "type": "p",
-      "text": "別的語言分得更細。南美洲的 Tuyuca 語有五種證據標記：看到的、聽到嚐到聞到感覺到的、看到結果再推論的、假設的、聽人說的，而且從不省略。"
+      "text": "Shipibo-Konibo 其實不只兩個小詞。Valenzuela 的表上還有三個：推論的 -bira（「她的村子一定很大，那裡有中學」）、臆測的 -mein（「也許她的村子很大，我只是猜」），以及第二種轉述 -ki。另一種語言 Tuyuca 的證據標記從不省略，不管說話的人是不是知情的一方；它也有五種，切法卻不同：Shipibo-Konibo 的 -ra 把五官都包進去，Tuyuca 把「看到」和「聽到、嚐到、聞到、感覺到」分成兩種。"
     },
     {
       "type": "p",
-      "text": "巴西 Vaupés 地區的 Tariana 語，同樣不加證據標記就不成句，卻有人拿這個規矩說謊。語言學家艾肯瓦爾德（Alexandra Aikhenvald）記下一個故事，用來說明證據標記和事情本身的真假可以分開：美洲豹真的抓住了烏龜的腳，烏龜騙牠說：「你抓著的是一棵樹的根。」烏龜用的是「親眼看到」那一種，因為兩邊都看得見眼前發生的事。標記用得對，話是假的。"
+      "text": "拿一個點球套進 Tuyuca 的五格。站在看台上看到球進，是「看到」。背對著球場，只聽見球打進網的那一聲，是「聽到、嚐到、聞到、感覺到」那一格。回到電視前看見比分變了，是「看到結果再推論」。什麼消息都沒有，只是覺得應該進了，是「假設」。朋友傳訊息說進了，是「聽人說」。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "p",
+      "text": "巴西 Vaupés 地區的 Tariana 語，一般也不能省略證據標記，省了就不合語法。這本書的編者之一、語言學家 Alexandra Aikhenvald 說，證據標記也可以拿來說謊：用錯的標記講真話，或用對的標記講假話。證據標記的真假，和事情本身的真假，可以分開。書中有一個故事：美洲豹真的抓住了烏龜的腳，烏龜騙牠：「你抓著的是一棵樹的根。」烏龜用的是「親眼看到」那一種標記，因為眼前發生什麼事，兩邊都看得見。"
     }
   ],
   "sources": [
     {
       "title": "Studies in Evidentiality（第 2 章 Valenzuela, Evidentiality in Shipibo-Konibo, with a comparative overview of the category in Panoan）",
       "publisher": "John Benjamins（Aikhenvald & Dixon 編）",
-      "date": "2003-01-29",
+      "date": "2003",
       "url": "https://amerindias.github.io/referencias/aikdix03evidentiality.pdf",
-      "note": "全書 PDF 取得全文。足球電視與廣播、地圖與書本、piripiri 與魟魚油、夢用 -ronki 與薩滿的例子、約 3 萬人與烏卡亞利河，皆出自第 2 章。出版日期依書內排版戳記（Prn:29/01/2003）。"
+      "note": "全書 PDF 為第三方網站（amerindias.github.io）放置的檔案，用來讀全文；出版者為 John Benjamins，© 2003。第 2 章是 Shipibo-Konibo 證據標記的專章，附帕諾語系比較，不是整部語法描述。足球電視與廣播 (44)、地圖與書本 (46)、歷史課 (45)、村子 (1)、Table 1 的五個證據小詞（-ra、-ronki、-bira、-mein、-ki）與疑問句／命令句的限制、敘事中 -ronki 不逐句標、-ra 黏在第一個主要成分後面與表示確定的其他用法、piripiri 與魟魚油（原文 ray fat）、夢用 -ronki，皆出自第 2 章。約 3 萬人（circa 30,000）是本章 2003 年章首的說法，與 Wikipedia 等較新的估計不一致，正文標明年份。本章頁首的排版戳記為 Prn:30/12/2002，是排版列印時間，不是出版日。"
     },
     {
       "title": "Studies in Evidentiality（第 1 章 Aikhenvald, Evidentiality in typological perspective；第 6 章 Aikhenvald, Evidentiality in Tariana）",
       "publisher": "John Benjamins（Aikhenvald & Dixon 編）",
-      "date": "2003-01-29",
+      "date": "2003",
       "url": "https://amerindias.github.io/referencias/aikdix03evidentiality.pdf",
-      "note": "Tuyuca 五項證據標記與從不省略（第 1 章，引 Barnes 1984: 257）；Tariana 需有證據標記、烏龜與美洲豹的謊話例 (23)（第 6 章）；證據標記真假可與事件真假分開（第 1 章結尾）。"
+      "note": "同一本書（第三方網站放置的全書 PDF；© 2003 John Benjamins）。Tuyuca 五項證據標記與從不省略（第 1 章，引 Barnes 1984: 257）；Tariana 需有證據標記、烏龜與美洲豹的謊話例 (23)（第 6 章）；證據標記的真假可與事件真假分開（第 1 章結尾）。"
     },
     {
       "title": "Semantic Distinctions of Evidentiality（WALS Online 第 77 章，Ferdinand de Haan）",
       "publisher": "WALS Online（Dryer & Haspelmath 編，Max Planck 演化人類學研究所）",
       "date": "2013-01-01",
       "url": "https://wals.info/chapter/77",
-      "note": "418 種語言：181 種無語法證據標記、166 種只有間接證據標記、71 種直接與間接都有；有標記合計 237 為本報加總。土耳其語的看到與沒看到過去式取自章中例子。日期為 WALS Online 2013 年版，頁面本身未標發布日。"
+      "note": "418 種語言：181 種無語法證據標記、166 種只有間接證據標記、71 種直接與間接都有；有標記合計 237 為本報加總。日期為 WALS Online 2013 年版，頁面本身未標發布日。"
     },
     {
       "title": "WALS 77A 資料點：英語、華語（Mandarin）",
@@ -127,7 +136,7 @@
       "publisher": "Wikimedia Commons（影像取自 museum-digital 的柏林館藏）",
       "date": "2023-10-27",
       "url": "https://commons.wikimedia.org/wiki/File:Conibo_am_Rio_Ucayali,_circa_1888.jpg",
-      "note": "頭圖。Commons 標示 Public domain（1931 年前出版），2023 年 10 月 27 日上傳。"
+      "note": "頭圖。Commons 授權模板 PD-old-70-expired（作者過世已逾 70 年；作者 Charles Kroehle 生卒年記載約 1876–1901，Wikidata 記卒年 1902），2023 年 10 月 27 日上傳。"
     }
   ]
 }
