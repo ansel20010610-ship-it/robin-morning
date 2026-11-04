@@ -29,7 +29,7 @@ LENGTH = {  # (min, max) CJK characters in body
     "canon": (1200, 1800), "wildcard": (800, 1400), "concept": (1400, 2200), "poem": (1000, 1600), "mystery": (1200, 1800),
     "art": (2500, 4000), "photo": (2000, 3500), "city": (2500, 4000),
     "fiction": (2500, 4000), "literature": (2500, 4000), "tactics": (2000, 3500),
-    "philosophy": (2500, 4000), "fm-watch": (0, 5000), "cosmere-watch": (0, 5000),
+    "philosophy": (2500, 4000), "fm-watch": (0, 5000), "cosmere-watch": (0, 5000), "obituary": (600, 1800),
 }
 NO_HERO = {"news"}  # a few short items a day: a picture is welcome, not required
 BLOCK_TYPES = {"p", "h", "quote", "list", "facts", "figure", "detail", "timeline", "table", "pitch",
@@ -335,7 +335,7 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
         rw = art.get("reserve_written")
         if not (isinstance(rw, str) and re.match(r"^\d{4}-\d{2}-\d{2}$", rw)):
             E("備稿需要 reserve_written（撰寫日期 YYYY-MM-DD）")
-        if col in ("fm-watch", "cosmere-watch"):
+        if cfg["columns"].get(col, {}).get("group") == "watch":
             E("觀測站不做備稿")
         text = json.dumps(art.get("body", []), ensure_ascii=False) + art.get("title", "") + art.get("dek", "")
         for head in DEVOTION_HEADS:  # the devotion column's fixed headings (今日經文, 今日禱告) are not a dated word
@@ -381,7 +381,7 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
     if tk and used_topics is not None and topic_norm(tk) in used_topics:
         clash(used_topics[topic_norm(tk)], "topic_key 已在 %s 用過：%s" % (used_topics[topic_norm(tk)], tk))
 
-    is_watch = col in ("fm-watch", "cosmere-watch")
+    is_watch = cfg["columns"].get(col, {}).get("group") == "watch"
     undetermined = is_watch and art.get("status") == "undetermined"
     if is_watch and art.get("status") not in ("update", "undetermined"):
         E("觀測站需要 status：update 或 undetermined")

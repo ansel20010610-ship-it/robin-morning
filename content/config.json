@@ -12,40 +12,207 @@
     "key": "BERoBPv5tZs22xrCwg3-ebqjmpZVNjzAHyFyDh9-7KPzQ8zsdFwDARkCiw2wU5R1qKfO6kjXH3z8pUB9bciPECI"
   },
   "columns": {
-    "football":     { "group": "main", "order": 1, "name": "諾坎普散場之後", "full": "比賽結束後才開始的那一段：比分、傷兵、轉會、更衣室裡沒說完的話。每天更新到前一晚終場，也看一眼歐洲足壇。", "latin": "Sportchronik" },
-    "news":         { "group": "main", "order": 2, "since": "2026-11-02", "reserve": false, "name": "天亮以前，世界與台灣", "full": "過去一天，世界和台灣發生了哪幾件要緊的事。每件三四句：發生什麼、為什麼要緊、接下來看什麼。不湊數，不評分。", "latin": "Kleine Chronik" },
-    "perio":        { "group": "main", "order": 3, "name": "診間裡站得住的證據", "full": "每天一篇經得起追問的牙周論文：系統性回顧、大型試驗、臨床指引，而不是誰都能引的野雞論文。讀完明天看診多一分底氣。", "latin": "Klinische Evidenz" },
-    "music":        { "group": "main", "order": 4, "name": "燈暗下來，聽一首名曲", "full": "一天一部主流名作，像朋友坐在旁邊帶你聽：該在哪裡豎起耳朵、那一段為什麼會讓人起雞皮疙瘩。不講樂理，講聽感。", "latin": "Konzertführer" },
-    "civilization": { "group": "supplement", "name": "歷史課本沒寫的那一半", "full": "從你本來就認得的大事件出發——赤壁、諾曼第、鐵達尼——講課本沒寫的那一面：糧、錢、制度，事情真正是怎麼轉動的。", "latin": "Zeitläufte" },
-    "devotion":     { "group": "verse", "name": "一段經文，一篇禱告", "full": "每天一段和合本經文與一篇禱告，放在報頭底下，一天開始前先讀。2026-10-31 以前這一欄是文章「晨光裡的一句話」，往期還看得到。", "latin": "Tageslosung",
-                      "was": { "until": "2026-10-31", "group": "main", "order": 4, "name": "晨光裡的一句話", "full": "基督信仰默想", "latin": "Andacht" } },
-
-    "literature":   { "group": "supplement", "name": "書頁上劃線的那一句", "full": "從一本書裡的一句話進去，讀出整本書在做什麼。小說、散文、戲劇都有；那一句一定查得到。", "latin": "Lesefrüchte" },
-    "philosophy":   { "group": "supplement", "name": "咖啡館裡的思想實驗", "full": "一個具體的情境、幾種立場各自最強的版本，改一個條件再看一次。或者一個大問題，整理各家傳統的論證，不急著給答案。", "latin": "Kaffeehausgespräch" },
-    "artwork":      { "group": "supplement", "since": "2026-11-02", "name": "走進一件作品", "full": "一次深讀一件作品：畫、雕塑、照片，偶爾一棟建築。先看最好看的那件事，再看它怎麼來的、經歷過什麼，最後說為什麼今天還值得看。", "latin": "Bildbetrachtung" },
-    "architecture": { "group": "supplement", "since": "2026-11-02", "name": "推開一座古蹟的門", "full": "一座古蹟一篇：它怎麼蓋起來、怎麼撐住、誰為它付出、後來經歷了什麼。歐洲為主，也去中東、亞洲和美洲。", "latin": "Baukunst" },
-    "canon":        { "group": "supplement", "since": "2026-11-02", "name": "經典何以不朽", "full": "歌劇、交響曲、電影、文學、戲劇、遊戲：一部作品當時做了什麼沒人做過的事、為什麼今天還有效、影響了誰、哪裡老了。", "latin": "Nachruhm" },
-    "wildcard":     { "group": "supplement", "since": "2026-11-02", "name": "不在計畫裡的知識", "full": "一個你不會自己去找的領域，行內人覺得最有意思、外人從沒聽過的事。神學、物理、語言學都行。用來打破同溫層。", "latin": "Vermischtes" },
-    "concept":      { "group": "supplement", "since": "2026-11-02", "name": "從零理解一個概念", "full": "熵、賽局均衡、相對論、供需曲線——從它要解決的問題開始，一個例子貫穿全文，定義放最後。目標是讀完真的懂，不是認得名詞。", "latin": "Grundbegriffe" },
-    "poem":         { "group": "supplement", "since": "2026-11-03", "name": "一首詩，讀到最後一行", "full": "一次一首，中外輪流，整首刊出，然後一段一段讀給你看：這個字為什麼是這個字、這一行為什麼在這裡斷、最後一行為什麼在那裡。", "latin": "Lyrik" },
-    "mystery":      { "group": "supplement", "since": "2026-11-04", "name": "至今沒有人知道答案", "full": "科學、歷史、考古、宇宙裡真正還沒有答案的問題：我們確實知道什麼、幾種解釋各卡在哪裡、為什麼難、下一步可能從哪來。不假裝解開。", "latin": "Ungelöstes" },
-
-    "art":          { "group": "supplement", "name": "走進一幅畫", "full": "已停刊。一次一幅畫，看它怎麼畫、為什麼這樣畫。2026-11-01 起併入「走進一件作品」。", "latin": "Kunst", "until": "2026-11-01" },
-    "photo":        { "group": "supplement", "name": "一格電影，一張照片", "full": "已停刊。一格電影畫面或一張照片，看鏡頭在做什麼。2026-11-01 起併入「走進一件作品」。", "latin": "Bild", "until": "2026-11-01" },
-    "city":         { "group": "supplement", "name": "城市的第二層", "full": "已停刊。一條街、一座廣場怎麼讓人通行與停留。刊到 2026-11-01。", "latin": "Stadt", "until": "2026-11-01" },
-    "fiction":      { "group": "supplement", "name": "小說的骨架", "full": "已停刊。小說的結構與技法：設定怎麼交代、伏筆怎麼回收。刊到 2026-11-01。", "latin": "Erzählung", "until": "2026-11-01" },
-    "tactics":      { "group": "supplement", "name": "看懂一段比賽", "full": "已停刊。一段比賽裡的戰術細節，配示意圖。刊到 2026-10-31。", "latin": "Taktik", "until": "2026-10-31" },
-
-    "fm-watch":      { "group": "watch", "name": "足球經理的風吹草動", "full": "Football Manager 新作有消息才刊：上市日期、新功能、試玩心得。沒動靜就靜默，不硬寫。", "latin": "Ausguck" },
-    "cosmere-watch": { "group": "watch", "name": "寰宇片場的燈亮了", "full": "布蘭登・山德森的《迷霧之子》《颶光典籍》影視化有進展才刊：選角、開拍、上映。沒動靜就靜默。", "latin": "Ausguck" }
+    "football": {
+      "group": "main",
+      "order": 1,
+      "name": "諾坎普散場之後",
+      "full": "比賽結束後才開始的那一段：比分、傷兵、轉會、更衣室裡沒說完的話。每天更新到前一晚終場，也看一眼歐洲足壇。",
+      "latin": "Sportchronik"
+    },
+    "news": {
+      "group": "main",
+      "order": 2,
+      "since": "2026-11-02",
+      "reserve": false,
+      "name": "天亮以前，世界與台灣",
+      "full": "過去一天，世界和台灣發生了哪幾件要緊的事。每件三四句：發生什麼、為什麼要緊、接下來看什麼。不湊數，不評分。",
+      "latin": "Kleine Chronik"
+    },
+    "perio": {
+      "group": "main",
+      "order": 3,
+      "name": "診間裡站得住的證據",
+      "full": "每天一篇經得起追問的牙周論文：系統性回顧、大型試驗、臨床指引，而不是誰都能引的野雞論文。讀完明天看診多一分底氣。",
+      "latin": "Klinische Evidenz"
+    },
+    "music": {
+      "group": "main",
+      "order": 4,
+      "name": "燈暗下來，聽一首名曲",
+      "full": "一天一部主流名作，像朋友坐在旁邊帶你聽：該在哪裡豎起耳朵、那一段為什麼會讓人起雞皮疙瘩。不講樂理，講聽感。",
+      "latin": "Konzertführer"
+    },
+    "civilization": {
+      "group": "supplement",
+      "name": "歷史課本沒寫的那一半",
+      "full": "從你本來就認得的大事件出發——赤壁、諾曼第、鐵達尼——講課本沒寫的那一面：糧、錢、制度，事情真正是怎麼轉動的。",
+      "latin": "Zeitläufte"
+    },
+    "devotion": {
+      "group": "verse",
+      "name": "一段經文，一篇禱告",
+      "full": "每天一段和合本經文與一篇禱告，放在報頭底下，一天開始前先讀。2026-10-31 以前這一欄是文章「晨光裡的一句話」，往期還看得到。",
+      "latin": "Tageslosung",
+      "was": {
+        "until": "2026-10-31",
+        "group": "main",
+        "order": 4,
+        "name": "晨光裡的一句話",
+        "full": "基督信仰默想",
+        "latin": "Andacht"
+      }
+    },
+    "literature": {
+      "group": "supplement",
+      "name": "書頁上劃線的那一句",
+      "full": "從一本書裡的一句話進去，讀出整本書在做什麼。小說、散文、戲劇都有；那一句一定查得到。",
+      "latin": "Lesefrüchte"
+    },
+    "philosophy": {
+      "group": "supplement",
+      "name": "咖啡館裡的思想實驗",
+      "full": "一個具體的情境、幾種立場各自最強的版本，改一個條件再看一次。或者一個大問題，整理各家傳統的論證，不急著給答案。",
+      "latin": "Kaffeehausgespräch"
+    },
+    "artwork": {
+      "group": "supplement",
+      "since": "2026-11-02",
+      "name": "走進一件作品",
+      "full": "一次深讀一件作品：畫、雕塑、照片，偶爾一棟建築。先看最好看的那件事，再看它怎麼來的、經歷過什麼，最後說為什麼今天還值得看。",
+      "latin": "Bildbetrachtung"
+    },
+    "architecture": {
+      "group": "supplement",
+      "since": "2026-11-02",
+      "name": "推開一座古蹟的門",
+      "full": "一座古蹟一篇：它怎麼蓋起來、怎麼撐住、誰為它付出、後來經歷了什麼。歐洲為主，也去中東、亞洲和美洲。",
+      "latin": "Baukunst"
+    },
+    "canon": {
+      "group": "supplement",
+      "since": "2026-11-02",
+      "name": "經典何以不朽",
+      "full": "歌劇、交響曲、電影、文學、戲劇、遊戲：一部作品當時做了什麼沒人做過的事、為什麼今天還有效、影響了誰、哪裡老了。",
+      "latin": "Nachruhm"
+    },
+    "wildcard": {
+      "group": "supplement",
+      "since": "2026-11-02",
+      "name": "不在計畫裡的知識",
+      "full": "一個你不會自己去找的領域，行內人覺得最有意思、外人從沒聽過的事。神學、物理、語言學都行。用來打破同溫層。",
+      "latin": "Vermischtes"
+    },
+    "concept": {
+      "group": "supplement",
+      "since": "2026-11-02",
+      "name": "從零理解一個概念",
+      "full": "熵、賽局均衡、相對論、供需曲線——從它要解決的問題開始，一個例子貫穿全文，定義放最後。目標是讀完真的懂，不是認得名詞。",
+      "latin": "Grundbegriffe"
+    },
+    "poem": {
+      "group": "supplement",
+      "since": "2026-11-03",
+      "name": "一首詩，讀到最後一行",
+      "full": "一次一首，中外輪流，整首刊出，然後一段一段讀給你看：這個字為什麼是這個字、這一行為什麼在這裡斷、最後一行為什麼在那裡。",
+      "latin": "Lyrik"
+    },
+    "mystery": {
+      "group": "supplement",
+      "since": "2026-11-04",
+      "name": "至今沒有人知道答案",
+      "full": "科學、歷史、考古、宇宙裡真正還沒有答案的問題：我們確實知道什麼、幾種解釋各卡在哪裡、為什麼難、下一步可能從哪來。不假裝解開。",
+      "latin": "Ungelöstes"
+    },
+    "art": {
+      "group": "supplement",
+      "name": "走進一幅畫",
+      "full": "已停刊。一次一幅畫，看它怎麼畫、為什麼這樣畫。2026-11-01 起併入「走進一件作品」。",
+      "latin": "Kunst",
+      "until": "2026-11-01"
+    },
+    "photo": {
+      "group": "supplement",
+      "name": "一格電影，一張照片",
+      "full": "已停刊。一格電影畫面或一張照片，看鏡頭在做什麼。2026-11-01 起併入「走進一件作品」。",
+      "latin": "Bild",
+      "until": "2026-11-01"
+    },
+    "city": {
+      "group": "supplement",
+      "name": "城市的第二層",
+      "full": "已停刊。一條街、一座廣場怎麼讓人通行與停留。刊到 2026-11-01。",
+      "latin": "Stadt",
+      "until": "2026-11-01"
+    },
+    "fiction": {
+      "group": "supplement",
+      "name": "小說的骨架",
+      "full": "已停刊。小說的結構與技法：設定怎麼交代、伏筆怎麼回收。刊到 2026-11-01。",
+      "latin": "Erzählung",
+      "until": "2026-11-01"
+    },
+    "tactics": {
+      "group": "supplement",
+      "name": "看懂一段比賽",
+      "full": "已停刊。一段比賽裡的戰術細節，配示意圖。刊到 2026-10-31。",
+      "latin": "Taktik",
+      "until": "2026-10-31"
+    },
+    "fm-watch": {
+      "group": "watch",
+      "name": "足球經理的風吹草動",
+      "full": "Football Manager 新作有消息才刊：上市日期、新功能、試玩心得。沒動靜就靜默，不硬寫。",
+      "latin": "Ausguck"
+    },
+    "cosmere-watch": {
+      "group": "watch",
+      "name": "寰宇片場的燈亮了",
+      "full": "布蘭登・山德森的《迷霧之子》《颶光典籍》影視化有進展才刊：選角、開拍、上映。沒動靜就靜默。",
+      "latin": "Ausguck"
+    },
+    "obituary": {
+      "group": "watch",
+      "since": "2026-11-05",
+      "name": "人走了，留下這些",
+      "full": "有值得記的人過世才刊：作曲家、演奏家、球員、作家、科學家、醫生，或台灣人人認得的人。寫他一生留下什麼、你可以從哪裡遇見他。沒有就靜默。",
+      "latin": "Nachruf"
+    }
   },
   "rotation_by_weekday": {
-    "mon": ["artwork", "canon", "concept"],
-    "tue": ["architecture", "philosophy", "poem"],
-    "wed": ["civilization", "literature", "mystery"],
-    "thu": ["artwork", "canon", "wildcard"],
-    "fri": ["architecture", "concept", "poem"],
-    "sat": ["civilization", "philosophy", "canon"],
-    "sun": ["literature", "wildcard", "mystery"]
+    "mon": [
+      "artwork",
+      "canon",
+      "concept"
+    ],
+    "tue": [
+      "architecture",
+      "philosophy",
+      "poem"
+    ],
+    "wed": [
+      "civilization",
+      "literature",
+      "mystery"
+    ],
+    "thu": [
+      "artwork",
+      "canon",
+      "wildcard"
+    ],
+    "fri": [
+      "architecture",
+      "concept",
+      "poem"
+    ],
+    "sat": [
+      "civilization",
+      "philosophy",
+      "canon"
+    ],
+    "sun": [
+      "literature",
+      "wildcard",
+      "mystery"
+    ]
   }
 }

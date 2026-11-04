@@ -8,7 +8,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (GROUPS, TARGET_NOTE, WEEKDAY_ZH, reserve_target, article_path, columns_for_group,  # noqa: E402
+from common import (GROUPS, TARGET_NOTE, WEEKDAY_ZH, reserve_target, article_path, columns_for_group, watch_columns,  # noqa: E402
                     expected_columns, issue_number, iter_reserve, load_config, load_json, parse_date,
                     reserve_columns, supplements_for, tw_now)
 import validate  # noqa: E402
@@ -50,7 +50,7 @@ def main():
         if s != "已完成 ✓":
             missing.append(c)
         print("  - %-14s %-12s %s" % (c, cols[c]["name"], s))
-    for c in ("fm-watch", "cosmere-watch"):
+    for c in watch_columns(cfg):
         p = article_path(d, c)
         print("  - %-14s %-12s %s" % (c, cols[c]["name"], "已刊出" if os.path.exists(p) else "未刊出（無新進展時靜默）"))
     if missing:

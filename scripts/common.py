@@ -29,7 +29,7 @@ GROUPS = {
     1: ["devotion", "music", "perio"],
     2: ["@supp0", "@supp2"],  # three supplements every day from 2026-11-03 (two on 11-02 only)
     3: ["@supp1", "football"],
-    4: ["news", "football", "fm-watch", "cosmere-watch"],  # news last thing at 05:17: the freshest it can be
+    4: ["news", "football", "fm-watch", "cosmere-watch", "obituary"],  # news last thing at 05:17: the freshest it can be
     5: ["@all"],
 }
 
@@ -96,6 +96,12 @@ def columns_for_group(cfg, d, group):
             elif active(cfg, c, d):
                 out.append(c)
     return out
+
+
+def watch_columns(cfg):
+    """The conditional columns (group "watch": fm-watch, cosmere-watch, obituary): published only when there is
+    something to report, never expected, never stocked."""
+    return [k for k, v in cfg["columns"].items() if v.get("group") == "watch"]
 
 
 def reserve_columns(cfg):
