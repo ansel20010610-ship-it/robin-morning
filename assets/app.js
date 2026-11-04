@@ -88,7 +88,7 @@ async function article(date, column) {
 const weekdayKey = (date) => ["sun", "mon", "tue", "wed", "thu", "fri", "sat"][new Date(`${date}T00:00:00Z`).getUTCDay()];
 // Supplements follow that weekday's rotation (the settings table and the shifts use the same order).
 function sortArticles(arts, date) {
-  const g = { main: 0, supplement: 1, watch: 2 };
+  const g = { main: 0, supplement: 1, serial: 2, watch: 3 };
   const rot = S.cfg.rotation_by_weekday?.[weekdayKey(date)] || [];
   const pos = (c) => { const i = rot.indexOf(c); return i < 0 ? Infinity : i; };
   return [...arts].sort((a, b) => {
@@ -173,7 +173,7 @@ function lockedBy(date, column) {
   if (read.has(`${date}/${column}`)) return null; // read already (before the mode, or earlier today): always open
   // The parcel's article (revealPick) is sealed until every other article is read, and holds no one else up.
   const order = sortArticles(issue.articles, date), pick = revealPick(issue, order);
-  if (pick && pick.column === column) return order.find((a) => a !== pick && !read.has(`${date}/${a.column}`)) || null;
+  if (pick && pick.column === column) return order.find((a) => a !== pick && col(a.column, date).group !== "serial" && !read.has(`${date}/${a.column}`)) || null;
   for (const a of order) {
     if (a.column === column) return null;
     if (a !== pick && !read.has(`${date}/${a.column}`)) return a;
@@ -189,7 +189,7 @@ function sealedBy(date, column) {
   if (!pick || pick.column !== column) return null;
   const read = readSet();
   if (read.has(`${date}/${column}`)) return null;
-  const left = order.filter((a) => a !== pick && (col(a.column, date).group !== "watch" || a.brief) && !read.has(`${date}/${a.column}`));
+  const left = order.filter((a) => a !== pick && col(a.column, date).group !== "serial" && (col(a.column, date).group !== "watch" || a.brief) && !read.has(`${date}/${a.column}`));
   return left.length ? left : null;
 }
 // 找知更鳥 (Vogelsuche): every issue hides one small robin in one of its articles — which article and after which
@@ -200,7 +200,7 @@ const birdsFound = () => new Set(store.get("birds", []));
 function birdSpot(issue) {
   if (!issue?.date) return null;
   const order = sortArticles(issue.articles || [], issue.date), pick = revealPick(issue, order);
-  const pool = order.filter((a) => a !== pick && col(a.column, issue.date).group !== "watch");
+  const pool = order.filter((a) => a !== pick && !["watch", "serial"].includes(col(a.column, issue.date).group));
   if (!pool.length) return null;
   const h = Array.from(issue.date).reduce((x, ch) => (x * 33 + ch.charCodeAt(0)) >>> 0, 5381);
   return { column: pool[h % pool.length].column, p: (h >>> 7) % 7 }; // the p-th paragraph, folded into the article's count
@@ -239,6 +239,19 @@ function hideBird(body, date, column) {
 }
 function lockedCard(date, a, by) {
   return `<div class="item noimg locked" aria-disabled="true"><div>${kicker(a.column, false, date)}<h3>${esc(a.title)}</h3><p class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></p></div></div>`;
+}
+
+// 連載 (column serial, scripts/serial.py, editorial/columns/serial.md): the day's installment of the novel, one card
+// of its own under 副刊 — the book's plate, the installment's title, where it stands in the book, the recap (dek). It
+// counts for the day's stamp and the 循序 order like any article, but is no tile of the parcel.
+const serialWhere = (s) => [s.part, s.chapter].filter(Boolean).join(" ") + (s.pieces > 1 ? `・${s.pieces} 之 ${s.piece}` : "");
+const serialPlate = (s) => `<p class="plate"><span class="book">《${esc(s.book || "")}》</span><span class="by">${esc(s.author || "")}</span><span class="where">${esc(serialWhere(s))}</span></p>`;
+function serialBox(date, a, read) {
+  const s = a.serial || {}, by = lockedBy(date, a.column), done = read.has(`${date}/${a.column}`);
+  const head = `<div class="sec-head"><h2>連載</h2><span class="de">Fortsetzung folgt</span><span class="note">第 ${esc(String(s.n ?? ""))} 回${s.of ? `・共 ${esc(String(s.of))} 回` : ""}</span></div>`;
+  const inner = `${serialPlate(s)}<h3>${esc(a.title)}</h3>${a.dek ? `<p class="recap"><b>${s.n === 1 ? "開場" : "前情"}</b>${esc(a.dek)}</p>` : ""}
+    ${by ? `<p class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></p>` : `<p class="meta-s">${done ? "讀過了" : `約 ${esc(String(a.minutes || 6))} 分鐘`}${s.n > 1 ? `・<span class="back">回目在〈${esc(col(a.column, date).name)}〉</span>` : ""}</p>`}`;
+  return head + (by ? `<div class="item noimg serial-card locked" aria-disabled="true"><div>${inner}</div></div>` : `<a class="item noimg serial-card${done ? " read" : ""}" href="#/a/${date}/${a.column}"><div>${inner}</div></a>`);
 }
 
 function itemCard(date, a, read) {
@@ -311,7 +324,7 @@ function revealPick(issue, arts) {
 function revealBox(issue, arts, read) {
   const date = issue.date, pick = revealPick(issue, arts);
   // The parcel's own article does not count: the paper is off once every other article is read (the owner, 2026-11-03).
-  const listed = arts.filter((a) => a !== pick && (col(a.column, date).group !== "watch" || a.brief));
+  const listed = arts.filter((a) => a !== pick && col(a.column, date).group !== "serial" && (col(a.column, date).group !== "watch" || a.brief)); // the serial is no tile (the owner, 2026-11-05: 這欄不要刮)
   if (!pick || !listed.length) return "";
   const h = pick.hero, T = Math.min(12, listed.length), rows = Math.ceil(T / 4), last = T - 4 * (rows - 1);
   const key = (a) => `${date}/${a.column}`, tileOf = (i) => Math.floor((i * T) / listed.length);
@@ -384,12 +397,12 @@ function frontStatus() {
   const now = twNow();
   const todays = issueBy(now.date);
   const late = lateOf(now.date);
-  if (late && late.state !== "done") return lateText(late, todays ? todays.articles.filter((a) => col(a.column, now.date).group !== "watch").length : 0);
+  if (late && late.state !== "done") return lateText(late, todays ? todays.articles.filter((a) => !["watch", "serial"].includes(col(a.column, now.date).group)).length : 0);
   if (now.minutes < publishMin()) return `今天這期 <b>${esc(S.cfg.publish_time)}</b> 才出爐（還有 ${untilText(publishMin() - now.minutes)}），先翻上一期墊墊胃。`;
   if (!todays) return "今天這期還在印，好了會自己跳出來。先翻上一期撐一下。";
   const on = (c) => { const k = S.cfg.columns[c] || {}; return now.date >= (k.since || "") && now.date <= (k.until || "9999"); }; // between a column's start and its last day
   const expected = Object.keys(S.cfg.columns).filter((c) => S.cfg.columns[c].group === "main" && on(c)).length + (S.cfg.rotation_by_weekday?.[weekdayKey(now.date)]?.filter(on).length ?? 2);
-  const got = todays.articles.filter((a) => col(a.column, now.date).group !== "watch").length;
+  const got = todays.articles.filter((a) => !["watch", "serial"].includes(col(a.column, now.date).group)).length; // the serial is written weeks ahead: not a sign the issue is in
   return got < expected ? `已經到了 ${got} 篇，剩下的在路上，別走開。` : "";
 }
 // Everything the latest-issue front page shows that can change while it stays open: [issue, status line].
@@ -437,6 +450,7 @@ function viewFront(dateParam) {
   const mains = arts.filter((a) => col(a.column, issue.date).group === "main");
   const supps = arts.filter((a) => col(a.column, issue.date).group === "supplement");
   const watch = arts.filter((a) => col(a.column, issue.date).group === "watch");
+  const serial = arts.filter((a) => col(a.column, issue.date).group === "serial");
   const pick = revealPick(issue, arts); // the parcel's article is shown as the parcel only
   for (const list of [mains, supps]) { const i = list.indexOf(pick); if (i >= 0) list.splice(i, 1); }
   const lead = mains[0];
@@ -460,6 +474,7 @@ function viewFront(dateParam) {
     ${mains.slice(1).map((a) => itemCard(issue.date, a, read)).join("")}
     ${supps.length ? `<div class="sec-head"><h2>副刊</h2><span class="de">Feuilleton</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
+    ${serial.length ? serialBox(issue.date, serial[0], read) : ""}
     ${watch.length ? `<div class="sec-head"><h2>觀測站</h2><span class="de">Beobachtung</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
     ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdsFound().has(issue.date) ? "今天的知更鳥找到了。" : "今天有一隻知更鳥藏在某一篇裡。"}</p>` : ""}
     ${!arts.some((a) => a.brief) ? "" : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
@@ -699,7 +714,7 @@ async function viewArticle(date, column, my) {
       <button class="icon-btn" type="button" data-save aria-pressed="${isSaved(key)}" aria-label="收藏">${isSaved(key) ? ICON.starOn : ICON.star}</button>
     </div><div class="progress"></div></div>
     <article class="wrap"><div class="read">
-      <header class="article-head">${kicker(column, true, date)}<h1>${esc(a.title)}</h1>
+      <header class="article-head">${kicker(column, true, date)}${a.serial ? serialPlate(a.serial) : ""}<h1>${esc(a.title)}</h1>
         ${a.takeaway ? `<aside class="takeaway"><span class="lbl">帶得走的結論</span><p>${inline(a.takeaway)}</p>${evidenceOf(a) ? `<p class="ev"><b>證據力</b>${inline(evidenceOf(a))}</p>` : ""}</aside>` : ""}
         <p class="dek">${esc(a.dek)}</p>
         <div class="meta"><div class="row"><span>${esc(fmtDate(date))}</span>${issue ? `<span>第 ${issue.no} 期</span>` : ""}${minutes ? `<span>閱讀約 ${minutes} 分鐘</span>` : ""}${updatedNote(date, a)}</div></div>
@@ -1430,7 +1445,7 @@ function calendarHtml(ym, pubs, done) {
 // ——— 印務室 (Druckerei, assets/press.js): the owner's press room — this morning's five shifts, the reserve stock and a
 // fortnight's roster, all out of the index the app holds (its press, late and stock), so it reads the same offline.
 function viewPress() {
-  main.innerHTML = `<div class="wrap press">${pressHtml(S.cfg, S.index, col)}</div>`;
+  main.innerHTML = `<div class="wrap press">${pressHtml(S.cfg, { ...S.index, issues: publishedIssues() }, col)}</div>`;
   document.title = `印務室｜${S.cfg.title}`;
 }
 
@@ -1485,7 +1500,7 @@ function viewGallery() {
 // is not offered. An unread article weighs 4, a read one 1, and either is divided by 1 + how often its column came up
 // in the last five draws (random.recent), so five philosophy pieces in a row do not happen. `exclude` is the card on
 // the table when 再翻一張 is pressed.
-const RANDOM_SKIP = new Set(["football", "news"]);
+const RANDOM_SKIP = new Set(["football", "news", "serial"]);
 function randomPool() {
   return publishedIssues().flatMap((i) => i.articles.filter((a) => !RANDOM_SKIP.has(a.column) && col(a.column, i.date).group !== "watch" && !lockedBy(i.date, a.column))
     .map((a) => ({ date: i.date, a, key: `${i.date}/${a.column}` })));

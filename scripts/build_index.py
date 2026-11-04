@@ -306,6 +306,8 @@ def main():
             }
             if art.get("from_reserve"):
                 entry["from_reserve"] = True
+            if isinstance(art.get("serial"), dict):  # the novel's installment: book, number and place, for the front page's card
+                entry["serial"] = art["serial"]
             if isinstance(art.get("takeaway"), str) and art["takeaway"].strip():  # perio: shown on the saved and column lists
                 entry["takeaway"] = art["takeaway"].strip()
             nxt = next_match(art.get("next"))
@@ -321,7 +323,7 @@ def main():
             skip(path, "%s: %s" % (type(e).__name__, e))
             continue
         days.setdefault(day, []).append(entry)
-        docs.append((day, col, toks))
+        docs.append((day, col, [] if col == "serial" else toks))  # a novel's installments link to nothing and nothing links to them
         flat.append(entry)
     for i, links in related_links(docs).items():
         flat[i]["related"] = links

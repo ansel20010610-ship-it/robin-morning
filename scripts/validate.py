@@ -29,9 +29,9 @@ LENGTH = {  # (min, max) CJK characters in body
     "canon": (1200, 1800), "wildcard": (800, 1400), "concept": (1400, 2200), "poem": (1000, 1600), "mystery": (1200, 1800),
     "art": (2500, 4000), "photo": (2000, 3500), "city": (2500, 4000),
     "fiction": (2500, 4000), "literature": (2500, 4000), "tactics": (2000, 3500),
-    "philosophy": (2500, 4000), "fm-watch": (0, 5000), "cosmere-watch": (0, 5000), "obituary": (600, 1800),
+    "philosophy": (2500, 4000), "fm-watch": (0, 5000), "cosmere-watch": (0, 5000), "obituary": (600, 1800), "serial": (1100, 2600),
 }
-NO_HERO = {"news"}  # a few short items a day: a picture is welcome, not required
+NO_HERO = {"news", "serial"}  # a few short items a day: a picture is welcome, not required
 BLOCK_TYPES = {"p", "h", "quote", "list", "facts", "figure", "detail", "timeline", "table", "pitch",
                "svg", "news", "scripture", "prayer", "music", "paper", "exercise", "callout",
                "spoiler", "divider"}
@@ -597,7 +597,7 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             if not list_of(b.get("items"), list) or not all(len(x) == 2 for x in b["items"]):
                 E("%s facts.items 需為 [[\"欄名\",\"內容\"], ...]" % where)
 
-    if not undetermined and visuals < 1:
+    if not undetermined and visuals < 1 and col != "serial":  # a novel's installment is text
         E("正文需要至少一個圖或圖解（figure/timeline/table/pitch/svg），detail 不算")
 
     # column-specific rules

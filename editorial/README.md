@@ -11,6 +11,7 @@
 | 3 | 02:37 | 當日第 2 個副刊；巴薩晨報**初稿**（football） |
 | 4 | 05:17 | FM 觀測站、迷霧之子與颶光影視化、訃聞（`columns/obituary.md`，2026-11-05 起）、巴薩晨報**更新**（前一晚比賽仍在進行就最後做）、天亮以前，世界與台灣（news，快訊，2026-11-02 起，本班最後寫，消息才新）；全刊驗收，補寫缺稿 |
 | 5 | 06:27 | 安全網：補寫一切缺稿（平行子代理）、巴薩晨報最後更新；**07:05 停手推送，接著執行備稿補位** |
+| 連 | 週一 16:07 | 連載班：把 `content/issues/<日期>/serial.json` 譯到 21 天後（見 `columns/serial.md`；不屬於當天製刊，製刊各班不碰它） |
 | 備 | 14:37 | 備稿班：把備稿庫補到正刊每欄 2 篇、副刊每欄 1 篇，達標就不寫，一天最多 2 篇（見 `RESERVE.md`） |
 | 補 | 週日 15:07、17:07 | 週日補刊：只在週日凌晨額度用完、刊期沒出齊時動工（見下方「週日補刊」） |
 | 演 | 06:17 | 近期演出：更新首頁最下面的常設演出清單 `content/concerts.json`，趕在 07:30 出刊前推上去，和當天那期一起到讀者眼前（見 `columns/concerts.md`；不屬於刊期，不進驗收）。順手查「歷史上的今天」一則，寫進 `content/onthisday.json`（見 `columns/onthisday.md`） |
@@ -29,6 +30,7 @@
    |---|---|---|
    | 寫稿：牙周（perio）、文明（civilization）、哲學（philosophy）、文學（literature）、走進一件作品（artwork）、經典何以不朽（canon）、從零理解一個概念（concept）、詩（poem）、謎題（mystery） | `opus` | `high` |
    | 寫稿：巴薩晨報、古典、古蹟、不在計畫裡的知識、三個觀測站（FM、寰宇片場、訃聞） | `sonnet` | `high` |
+   | 連載翻譯（serial，連載班）：譯者 `opus`／`high`，雙語核對 `sonnet`／`high` | — | — |
    | 世界與台灣快訊（news：審稿要做，不做第 9 步；沒有備稿） | `sonnet` | `high` |
    | 今日經文與禱告（devotion，只有經文與禱告，不審稿、不做第 9 步） | `sonnet` | `medium` |
    | 審稿（第 8 步）：牙周（perio，含備稿）——錯的是社長的專業，每週稽核發現日常審稿漏掉的不少（2026-11-04 起） | `opus` | `high` |
@@ -111,7 +113,7 @@
 
 ## 不可以做的事
 
-- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`（每週品質稽核可以寫 `editorial/LESSONS.md`，並在古典欄清單快寫完時於 `editorial/music-canon.md` 補下一輪）、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/`、`content/rejected/`（只有備稿補位會寫）與 `state/`（但 `state/push/` 是出刊通知的裝置名單，不要動）。近期演出班只寫 `content/concerts.json`、`content/onthisday.json` 與 `state/concerts/`，製刊各班不碰這三處。
+- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`（每週品質稽核可以寫 `editorial/LESSONS.md`，並在古典欄清單快寫完時於 `editorial/music-canon.md` 補下一輪）、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/`、`content/rejected/`（只有備稿補位會寫）與 `state/`（但 `state/push/` 是出刊通知的裝置名單，不要動）。近期演出班只寫 `content/concerts.json`、`content/onthisday.json` 與 `state/concerts/`，製刊各班不碰這三處。 連載班只寫 `content/issues/<日期>/serial.json`（可以是未來日期）與 `state/serial/`；製刊各班、備稿補位與每週稽核都不碰 `serial.json`（稽核抽查時跳過 serial）。
 - 不刪除或改寫過去日期的稿件。若發現過去稿件有事實錯誤，在該篇文末加「更正」區塊（見「每週品質稽核」第 2 步），並在回報中提出。
 - 不讀取、不推測讀者的私人生活；不使用讀者自己的小說設定。
 - 不使用 AI 生成圖片。不呼叫任何需要付費的 API。
