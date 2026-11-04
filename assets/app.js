@@ -171,9 +171,10 @@ function lockedBy(date, column) {
   if (!issue) return null;
   const read = readSet();
   if (read.has(`${date}/${column}`)) return null; // read already (before the mode, or earlier today): always open
+  if (col(column, date).group === "serial") return null; // the novel is outside the chain: always open, holds no one up
   // The parcel's article (revealPick) is sealed until every other article is read, and holds no one else up.
-  const order = sortArticles(issue.articles, date), pick = revealPick(issue, order);
-  if (pick && pick.column === column) return order.find((a) => a !== pick && col(a.column, date).group !== "serial" && !read.has(`${date}/${a.column}`)) || null;
+  const order = sortArticles(issue.articles, date).filter((a) => col(a.column, date).group !== "serial"), pick = revealPick(issue, order);
+  if (pick && pick.column === column) return order.find((a) => a !== pick && !read.has(`${date}/${a.column}`)) || null;
   for (const a of order) {
     if (a.column === column) return null;
     if (a !== pick && !read.has(`${date}/${a.column}`)) return a;
@@ -242,8 +243,8 @@ function lockedCard(date, a, by) {
 }
 
 // 連載 (column serial, scripts/serial.py, editorial/columns/serial.md): the day's installment of the novel, one card
-// of its own under 副刊 — the book's plate, the installment's title, where it stands in the book, the recap (dek). It
-// counts for the day's stamp and the 循序 order like any article, but is no tile of the parcel.
+// of its own under 副刊 — the book's plate, the installment's title, where it stands in the book, the recap (dek). It is
+// outside the day's stamp, the 循序 chain and the parcel: the novel keeps its own progress on the 連載 tab.
 const serialWhere = (s) => [s.part, s.chapter].filter(Boolean).join(" ") + (s.pieces > 1 ? `・${s.pieces} 之 ${s.piece}` : "");
 const serialPlate = (s) => `<p class="plate"><span class="book">《${esc(s.book || "")}》</span><span class="by">${esc(s.author || "")}</span><span class="where">${esc(serialWhere(s))}</span></p>`;
 function serialCard(date, a, read, { plate = true } = {}) {
@@ -508,7 +509,7 @@ function viewFront(dateParam) {
     ${serial.length ? serialBox(issue.date, serial[0], read) : ""}
     ${watch.length ? `<div class="sec-head"><h2>觀測站</h2><span class="de">Beobachtung</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
     ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdsFound().has(issue.date) ? "今天的知更鳥找到了。" : "今天有一隻知更鳥藏在某一篇裡。"}</p>` : ""}
-    ${!arts.some((a) => a.brief) ? "" : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
+    ${!arts.some((a) => forStamp(a, issue.date) && a.brief) ? "" : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
       : unreadIn(issue.date, arts) ? `<div class="finish lockfin">${lockMode() ? ICON.lock : ""}<b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${lockMode() ? "循序閱讀：一篇一篇讀完，今天才算數。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的郵票才蓋得下去。`}</span></div>`
       : `<div class="finish">${finishInner(issue.date)}</div>`}
     ${dayBox(issue.date)}
@@ -570,9 +571,13 @@ function syncDone() {
 syncDone();
 let finishSeen = null;
 // A silent 觀測站 entry (no brief: nothing new that day) has no page to read and does not count.
-const unreadIn = (date, arts) => { const read = readSet(); return arts.filter((a) => (col(a.column, date).group !== "watch" || a.brief) && !read.has(`${date}/${a.column}`)).length; };
+// What the day's stamp counts: the issue's articles, a watch item only with a brief, never the serial — the novel keeps
+// its own progress on the 連載 tab and is read in its own order (the owner, 2026-11-05: 連載獨立計分).
+const forStamp = (a, date) => { const g = col(a.column, date).group; return g !== "serial" && (g !== "watch" || Boolean(a.brief)); };
+const unreadIn = (date, arts) => { const read = readSet(); return arts.filter((a) => forStamp(a, date) && !read.has(`${date}/${a.column}`)).length; };
 // 循序閱讀's version of the digest bar: how many of the issue's articles have been read, not how many briefs seen.
 function lockBar(arts, date) {
+  arts = arts.filter((a) => forStamp(a, date));
   if (!arts.length) return "";
   const n = arts.length, got = n - unreadIn(date, arts);
   const ring = `<span class="ring-wrap"><svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="track" cx="18" cy="18" r="15.5"/><circle class="bar" cx="18" cy="18" r="15.5" pathLength="100" style="stroke-dashoffset:${100 - Math.round((got / n) * 100)}"/></svg><span class="cnt">${got}/${n}</span></span>`;
