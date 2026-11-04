@@ -1,0 +1,251 @@
+{
+ "column": "music",
+ "date": "2026-11-05",
+ "title": "葛利格說，這段旋律他聽不下去",
+ "dek": "他寫信給朋友，說這段音樂滿是牛糞味，自己沒辦法聽。後來它成了《皮爾金》組曲裡最出名的一首。",
+ "brief": "葛利格 1874 年寫信給朋友，說自己替《皮爾金》山魔王那一場寫的音樂，滿是牛糞味和過了頭的挪威民族主義，他沒辦法聽。這段〈山魔王的大廳〉後來成了第一號組曲的最後一首，1931 年的電影《M》裡，殺人犯用口哨吹它。",
+ "topic_key": "music:grieg-op46",
+ "updated_at": "2026-11-05T00:49:06+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "hero": {
+  "kind": "portrait",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Edvard_Grieg_%281888%29_by_Elliot_and_Fry_-_02.jpg",
+  "width": 567,
+  "height": 863,
+  "alt": "黑白老照片：蓬鬆淺色頭髮、留小鬍子的中年男子，臉微微轉向左側，穿深色絲絨領外套，繫著蝴蝶結，下方有手寫的簽名「Edvard Grieg」。",
+  "caption": "1888 年 3 月，倫敦攝影工作室 Elliott & Fry 拍的葛利格肖像。同一年，《皮爾金》第一號組曲出版。",
+  "credit": "Elliott & Fry；影像來自卑爾根公共圖書館葛利格典藏；經 Wikimedia Commons",
+  "license": "Public domain",
+  "license_url": "",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Edvard_Grieg_(1888)_by_Elliot_and_Fry_-_02.jpg",
+  "made": "1888"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "1874 年，挪威作曲家葛利格（Edvard Grieg）寫信給朋友貝爾（Frants Beyer），提到自己替一齣戲寫了一段音樂："
+  },
+  {
+   "type": "quote",
+   "text": "我還替山魔王大廳那一場寫了一段，我簡直沒辦法聽它，因為它從頭到尾都是牛糞味、過了頭的挪威民族主義，還有山精自我感覺良好的氣味！不過我有預感，諷刺的意思會聽得出來。",
+   "original": "I have also written something for the scene in the hall of the mountain King – something that I literally can't bear listening to because it absolutely reeks of cow-pies, exaggerated Norwegian nationalism, and trollish self-satisfaction! But I have a hunch that the irony will be discernible.",
+   "cite": "葛利格致貝爾，1874 年，英譯據 Robert Layton 的葛利格傳記"
+  },
+  {
+   "type": "p",
+   "text": "這段音樂後來叫〈山魔王的大廳〉（In the Hall of the Mountain King），是《皮爾金》第一號組曲（Peer Gynt Suite No. 1）的最後一首。葛利格 1843 年生在卑爾根，被視為讓挪威音樂出名的人。這首曲子在電影裡出現過很多次：1931 年的德國電影《M》，殺人犯用口哨吹它，吹的其實是導演弗里茨・朗（Fritz Lang）；2010 年的《社群網戰》，溫克沃斯雙胞胎在英國輸掉划船比賽，放的是雷茲諾與羅斯（Trent Reznor、Atticus Ross）做的電子改編版。"
+  },
+  {
+   "type": "h",
+   "text": "答應易卜生之後"
+  },
+  {
+   "type": "p",
+   "text": "那齣戲是易卜生（Henrik Ibsen，挪威劇作家）的詩劇《皮爾金》（Peer Gynt），1867 年出版，主角皮爾金是個愛吹牛、愛做夢的挪威農家子弟。1874 年，易卜生請葛利格替上演寫配樂，葛利格答應了。那年 8 月，他寫信說這是個極難駕馭的題材，秋天以前不可能寫完。"
+  },
+  {
+   "type": "p",
+   "text": "配樂 1875 年完成，1876 年 2 月 24 日在克里斯蒂安尼亞（今奧斯陸）隨戲首演，葛利格親自指揮，大成功。他卻有怨言：瑞典籍的劇院管理層規定了每一段的長短和順序，他只好東拼西湊，所以每段都很短。"
+  },
+  {
+   "type": "p",
+   "text": "十幾年後，他從這部約 90 分鐘的配樂裡挑出八段，編成兩套各四個樂章的組曲。第一號 1888 年出版，〈山魔王的大廳〉本來是第二幕的一場戲。"
+  },
+  {
+   "type": "h",
+   "text": "山精的王座前"
+  },
+  {
+   "type": "p",
+   "text": "戲裡，皮爾金在夢境般的幻想裡走進山魔王的大廳。一大群山精、侏儒和小妖擠在裡面，戴著王冠的山魔王坐在王座上，兒女親戚圍著他，皮爾金就站在他面前，大廳一片大亂。山魔王提議讓他娶自己的女兒、變成山精，皮爾金談了條件，最後拒絕。兩邊的差別，戲裡有一句話：人要忠於自己，山精只要自己夠了就好。"
+  },
+  {
+   "type": "figure",
+   "id": "f1",
+   "kind": "illustration",
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Per_gynt_i_dovregubbens_hall.jpg/1280px-Per_gynt_i_dovregubbens_hall.jpg",
+   "width": 1280,
+   "height": 972,
+   "alt": "彩色手繪：穿灰背心、白襯衫的年輕人站在左側，被一大群表情各異的山精圍住，右側站著頭戴金色王冠、留著白色長鬍子、穿白毛皮外衣的山魔王，底下擠滿縮著身子、戴紅帽的小山精。",
+   "caption": "挪威畫家基泰爾森（Theodor Kittelsen，1857–1914）1913 年畫的〈皮爾金在山魔王的大廳〉。穿背心的青年是皮爾金，右邊戴王冠的是山魔王。",
+   "credit": "Theodor Kittelsen；影像來自 kittelsen.ru；經 Wikimedia Commons",
+   "license": "Public domain",
+   "license_url": "",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Per_gynt_i_dovregubbens_hall.jpg",
+   "made": "1913"
+  },
+  {
+   "type": "h",
+   "text": "從最低的地方開始"
+  },
+  {
+   "type": "p",
+   "text": "開頭很輕。大提琴、低音提琴和低音管（音域低、聲音悶的木管樂器）在樂團最低的地方奏出主題，又慢又輕。"
+  },
+  {
+   "type": "p",
+   "text": "接著同一個主題再來一遍，只改了幾個音，整個往上提高，換別的樂器奏。樂器分成兩組，音高忽遠忽近，直到撞在同一個音上。速度越來越快，聲音越來越大，最後衝進最急板（prestissimo，樂譜上最快的速度標示）。戲裡這段有合唱，組曲版只留樂團。"
+  },
+  {
+   "type": "p",
+   "text": "山精的口號是「自己夠了就好」，音樂卻從又輕又慢一路加碼，加到失控。我猜葛利格說的諷刺在這裡：一群自滿的東西，越吵越大聲。",
+   "tag": "推論"
+  },
+  {
+   "type": "h",
+   "text": "〈晨曲〉不在挪威"
+  },
+  {
+   "type": "p",
+   "text": "組曲的第一首是〈晨曲〉（Morning Mood），長笛與雙簧管輪流唱旋律，很容易聽成挪威峽灣的日出。它其實是第四幕的前奏，這一幕寫皮爾金在摩洛哥海岸做生意，後來被搶、被拋下；劇本寫的場景是黎明，相思樹和棕櫚樹。葛利格說，他想像的是太陽在第一個強音處從雲層裡衝出來。"
+  },
+  {
+   "type": "p",
+   "text": "第二首〈奧瑟之死〉，寫皮爾金的母親奧瑟臨終，來自第三幕結尾，弦樂輕聲低吟。第三首〈安妮特拉之舞〉來自第四幕，安妮特拉是酋長的女兒，皮爾金冒充先知時遇到她；葛利格形容這是一支柔和的小舞，他很希望它聽起來細緻而美。"
+  },
+  {
+   "type": "music",
+   "composer": "葛利格（Edvard Grieg）",
+   "work": "《皮爾金》第一號組曲，作品 46",
+   "work_original": "Peer Gynt, Suite No. 1, Op. 46",
+   "composed": "配樂 1875 年完成，組曲 1888 年出版",
+   "performers": "比徹姆（Thomas Beecham）指揮 皇家愛樂（Royal Philharmonic Orchestra）",
+   "recording": "EMI（現為 Warner Classics 再版），1950 年代後期錄音",
+   "duration": "四個樂章合計約 16 分鐘",
+   "movements": [
+    "I. 晨曲（Morning Mood）",
+    "II. 奧瑟之死（The Death of Åse）",
+    "III. 安妮特拉之舞（Anitra's Dance）",
+    "IV. 山魔王的大廳（In the Hall of the Mountain King）"
+   ],
+   "spotify": {
+    "album": "",
+    "tracks": [],
+    "query": "Grieg Peer Gynt Beecham Royal Philharmonic Orchestra",
+    "artist_hint": "Beecham",
+    "track_filter": [
+     "Morning Mood",
+     "Death of",
+     "Anitra",
+     "Hall of the Mountain King"
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "錄音選英國指揮比徹姆與皇家愛樂的 EMI 版。一位樂評說，他的《皮爾金》比任何人的都多一分幻想，也更細膩。"
+  },
+  {
+   "type": "h",
+   "text": "還想聽葛利格"
+  },
+  {
+   "type": "list",
+   "items": [
+    "《皮爾金》第二號組曲：葛利格 1893 年出版的另一套，收了〈索爾薇格之歌〉和〈皮爾金歸鄉〉。",
+    "《霍爾堡組曲》：葛利格先寫成鋼琴曲，再自己改編成弦樂團版。"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "title": "Edvard Grieg",
+   "publisher": "英文維基百科",
+   "date": "未註明",
+   "url": "https://en.wikipedia.org/wiki/Edvard_Grieg",
+   "note": "生卒與卑爾根；1874 年致 Frants Beyer 的信（引 Robert Layton, Grieg: Illustrated Lives of the Great Composers, Omnibus Press, 1998, p. 75，英譯）；《霍爾堡組曲》由鋼琴改編弦樂。其他譯本措辭不同（牛糞寫法、「to-thyself-be-enough-ness」），引文只取這一版；信的日期另有二手轉引為 1874 年 8 月 27 日，正文只寫 1874 年。"
+  },
+  {
+   "title": "Peer Gynt (Grieg)",
+   "publisher": "英文維基百科",
+   "date": "未註明",
+   "url": "https://en.wikipedia.org/wiki/Peer_Gynt_(Grieg)",
+   "note": "1874 年易卜生請葛利格；1874 年 8 月「terribly unmanageable subject」；1875 年完成；1876 年 2 月 24 日克里斯蒂安尼亞首演；瑞典籍劇院管理層與 patchwork 怨言；兩套組曲 1888、1893 年出版；第一號四個樂章；原譜樂段數各處說法不一，正文只用「將近 90 分鐘」。"
+  },
+  {
+   "title": "The Story Behind Edvard Grieg's Peer Gynt",
+   "publisher": "Classic FM",
+   "date": "未註明",
+   "url": "https://www.classicfm.com/composers/grieg/guides/story-behind-griegs-peer-gynt/",
+   "note": "易卜生 1867 年於義大利寫成；1874 年邀請；首演日期、地點與葛利格指揮；patchwork 怨言；組曲 1888、1893 年；〈晨曲〉為第四幕前奏、〈奧瑟之死〉為第三幕結尾。"
+  },
+  {
+   "title": "Music from Peer Gynt",
+   "publisher": "洛杉磯愛樂（Los Angeles Philharmonic）",
+   "date": "未註明",
+   "url": "https://www.laphil.com/works/music-from-peer-gynt",
+   "note": "〈晨曲〉第四幕、場景在非洲，葛利格「sun breaking through the clouds at the first forte」；〈奧瑟之死〉弦樂輕聲低吟；〈安妮特拉之舞〉葛利格的形容與皮爾金冒充先知；致 Beyer 信的另一種英譯。"
+  },
+  {
+   "title": "In the Hall of the Mountain King",
+   "publisher": "英文維基百科",
+   "date": "未註明",
+   "url": "https://en.wikipedia.org/wiki/In_the_Hall_of_the_Mountain_King",
+   "note": "第二幕第六場、Op. 23 後抽成 Op. 46；戲裡場景描述；樂曲進行（低音域起奏、升高再奏、兩組樂器、加速至 prestissimo）；《M》（1931）與朗吹口哨；《社群網戰》（2010）。"
+  },
+  {
+   "title": "I Dovregubbens hall",
+   "publisher": "挪威文維基百科",
+   "date": "未註明",
+   "url": "https://no.wikipedia.org/wiki/I_Dovregubbens_hall",
+   "note": "戲裡版本有合唱，組曲版去掉合唱。"
+  },
+  {
+   "title": "Peer Gynt",
+   "publisher": "英文維基百科",
+   "date": "未註明",
+   "url": "https://en.wikipedia.org/wiki/Peer_Gynt",
+   "note": "1867 年出版；主角與故事背景；第二幕山魔王提議與「忠於自己／自己夠了」；第四幕摩洛哥與安妮特拉；1876 年首演。"
+  },
+  {
+   "title": "Morning Mood",
+   "publisher": "英文維基百科",
+   "date": "未註明",
+   "url": "https://en.wikipedia.org/wiki/Morgenstemning",
+   "note": "劇本場景「Dawn. Acacias and palm trees」；長笛與雙簧管輪流。"
+  },
+  {
+   "title": "How Grieg's In the Hall of the Mountain King Haunts Us",
+   "publisher": "芝加哥交響樂團（Chicago Symphony Orchestra）",
+   "date": "2024-11-25",
+   "url": "https://chicagosymphony.org/inside-the-music/article/20886/how-griegs-in-the-hall-of-the-mountain-king-h",
+   "note": "《M》（1931）中殺人犯吹口哨、吹的是朗本人。"
+  },
+  {
+   "title": "The Social Network (soundtrack)",
+   "publisher": "英文維基百科",
+   "date": "未註明",
+   "url": "https://en.wikipedia.org/wiki/The_Social_Network_(soundtrack)",
+   "note": "亨利皇家賽艇會一場用的是這首；除此之外的配樂為雷茲諾與羅斯原創。"
+  },
+  {
+   "title": "Grieg: Peer Gynt etc. (Beecham)",
+   "publisher": "Qobuz",
+   "date": "2010-02-08",
+   "url": "https://www.qobuz.com/be-fr/album/grieg-peer-gynt-etc-thomas-beecham/5099996593455",
+   "note": "曲目時間（四段合計約 16 分半）與版權年 1957；錄音確切年份各處不一（Classic FM 寫 1956），資料卡寫 1950 年代後期。"
+  },
+  {
+   "title": "Grieg: Peer Gynt; Symphonic Dance Op. 64/2; In Autumn…",
+   "publisher": "Classical Music 雜誌",
+   "date": "未註明",
+   "url": "https://www.classical-music.com/reviews/reissues/grieg-29",
+   "note": "Robert Cowan 對 Beecham 版的評語：「more fantasy — more subtlety, too — than anyone else's」。"
+  },
+  {
+   "title": "Edvard Grieg (1888) by Elliot and Fry",
+   "publisher": "Wikimedia Commons",
+   "date": "1888",
+   "url": "https://commons.wikimedia.org/wiki/File:Edvard_Grieg_(1888)_by_Elliot_and_Fry_-_02.jpg",
+   "note": "頭圖；Public domain。"
+  },
+  {
+   "title": "Per Gynt i Dovregubbens hall",
+   "publisher": "Wikimedia Commons",
+   "date": "1913",
+   "url": "https://commons.wikimedia.org/wiki/File:Per_gynt_i_dovregubbens_hall.jpg",
+   "note": "正文圖；Public domain。"
+  }
+ ]
+}

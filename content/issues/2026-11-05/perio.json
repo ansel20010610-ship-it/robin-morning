@@ -1,0 +1,124 @@
+{
+  "column": "perio",
+  "date": "2026-11-05",
+  "title": "孕期治牙周，早產率看不出差別",
+  "dek": "Cochrane 合併 15 個隨機試驗、7,161 名孕婦。早產沒有明顯減少，低出生體重少了一些，兩者的證據確定性都只有低。",
+  "brief": "合併 15 個隨機試驗、7,161 名孕婦，懷孕期間治療牙周病，早產率看不出差別，證據確定性低。低出生體重是唯一顯著減少的結果，作者也說對這個估計信心有限。有報告的試驗裡，沒有出現治療不良反應。",
+  "takeaway": "孕期治療牙周病，早產風險看不出差別（RR 0.87，信賴區間跨過 1，證據確定性低）；有報告的試驗沒有出現治療不良反應。為了孕婦自己的牙周照常治療，不要向她保證能防早產。",
+  "topic_key": "perio:doi:10.1002/14651858.cd005297.pub3",
+  "updated_at": "2026-11-05T00:49:06+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Baby_being_weighed.jpg/1280px-Baby_being_weighed.jpg",
+    "width": 1280,
+    "height": 853,
+    "alt": "剛出生的嬰兒仰躺在鋪著條紋布巾的電子嬰兒秤上，肚臍上夾著臍帶夾，秤的紅色數字顯示 6 與 4.1。",
+    "caption": "嬰兒出生後量體重。Flickr 使用者 Drpoulette 2005 年拍攝；照片中的嬰兒與文中的回顧、試驗無關。",
+    "credit": "Drpoulette from Mexico City, Mexico（Flickr），Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Baby_being_weighed.jpg",
+    "made": "2005"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "每 1,000 名有牙周病、懷孕期間沒有治療的孕婦，有 131 位早產；同樣的孕婦在懷孕期間做了牙周治療，估計是 114 位。少了 17 位，看起來像有效。這個估計的 95% 信賴區間卻是 92 到 143，往下少三成、往上多一成都說得通。"
+    },
+    {
+      "type": "p",
+      "text": "數字出自 2017 年一篇 Cochrane 系統性回顧。Cochrane 是專門做系統性回顧的國際組織，這篇由它的口腔衛生組出版，問的是：孕婦的牙周病治了，能不能減少早產、低出生體重這些不良妊娠結果。早產指未滿 37 週出生，低出生體重指未滿 2,500 克。作者在背景裡寫了一般的看法：懷孕期間荷爾蒙變化，牙齦狀況容易變差。"
+    },
+    {
+      "type": "p",
+      "text": "問題來自觀察性研究。2013 年，歐洲牙周病學會（EFP）與美國牙周病學會（AAP）合辦牙周炎與全身疾病的研討會，共識報告整理過流行病學資料：低出生體重、早產、子癇前症都和母親的牙周炎有關聯，只是關聯不強，而且隨研究族群、牙周檢查方式和病例定義而變。可能的路有兩條，口腔細菌或其成分直接到達胎兒與胎盤，或發炎介質隨血液循環過去。"
+    },
+    {
+      "type": "h",
+      "text": "15 個試驗，偏差風險全部偏高"
+    },
+    {
+      "type": "p",
+      "text": "回顧收了 15 個隨機對照試驗、7,161 名孕婦，都從產前照護機構招募；14 個試驗收牙周炎，1 個收牙齦炎。治療以機械清創為主，包括刮除與根面整平（scaling and root planing），常配上口腔衛生指導，做 1 到 5 次，大多在第一或第二孕期。15 個試驗全被評為高偏差風險，主因是沒有盲化、兩組基線不平衡。"
+    },
+    {
+      "type": "p",
+      "text": "其中 11 個試驗拿治療和不治療比。早產的風險比（RR）是 0.87，95% 信賴區間 0.70–1.10，跨過 1，5,671 人，證據確定性評為低。這個等級是用 GRADE 這套分級方法評的；評為低，意思是之後的研究很可能改變這個估計。試驗之間的異質性也高（I² = 66%）。"
+    },
+    {
+      "type": "svg",
+      "title": "懷孕期間治療牙周 vs 不治療：七個結果",
+      "svg": "<svg viewBox=\"0 0 340 376\" xmlns=\"http://www.w3.org/2000/svg\">\n<text x=\"8\" y=\"14\" font-size=\"10\" class=\"muted\">結果</text>\n<text x=\"332\" y=\"14\" text-anchor=\"end\" font-size=\"10\" class=\"muted\">試驗數・人數・證據確定性</text>\n<text x=\"8\" y=\"36\" font-size=\"11.5\" class=\"ink\">早產（未滿 37 週）</text>\n<text x=\"332\" y=\"36\" text-anchor=\"end\" font-size=\"10\" class=\"muted\">11 試驗・5,671 人・低</text>\n<line x1=\"225\" y1=\"43\" x2=\"225\" y2=\"61\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n<text x=\"8\" y=\"55\" font-size=\"10\" class=\"muted\">RR 0.87（0.70–1.10）</text>\n<line x1=\"184.1\" y1=\"52\" x2=\"235.9\" y2=\"52\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"205.0\" y=\"48\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"80\" font-size=\"11.5\" class=\"ink\">早產（未滿 35 週）</text>\n<text x=\"332\" y=\"80\" text-anchor=\"end\" font-size=\"10\" class=\"muted\">2 試驗・2,557 人</text>\n<line x1=\"225\" y1=\"87\" x2=\"225\" y2=\"105\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n<text x=\"8\" y=\"99\" font-size=\"10\" class=\"muted\">RR 1.19（0.81–1.76）</text>\n<line x1=\"200.9\" y1=\"96\" x2=\"289.8\" y2=\"96\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"240.9\" y=\"92\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"124\" font-size=\"11.5\" class=\"ink\">早產（未滿 32 週）</text>\n<text x=\"332\" y=\"124\" text-anchor=\"end\" font-size=\"10\" class=\"muted\">3 試驗・2,755 人</text>\n<line x1=\"225\" y1=\"131\" x2=\"225\" y2=\"149\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n<text x=\"8\" y=\"143\" font-size=\"10\" class=\"muted\">RR 1.35（0.78–2.32）</text>\n<line x1=\"196.5\" y1=\"140\" x2=\"321.4\" y2=\"140\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"255.4\" y=\"136\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"168\" font-size=\"11.5\" class=\"accent\" font-weight=\"bold\">低出生體重（未滿 2,500 克）</text>\n<text x=\"332\" y=\"168\" text-anchor=\"end\" font-size=\"10\" class=\"muted\">7 試驗・3,470 人・低</text>\n<line x1=\"225\" y1=\"175\" x2=\"225\" y2=\"193\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n<text x=\"8\" y=\"187\" font-size=\"10\" class=\"accent\">RR 0.67（0.48–0.95）</text>\n<line x1=\"140.9\" y1=\"184\" x2=\"219.1\" y2=\"184\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"175.1\" y=\"180\" width=\"8\" height=\"8\" class=\"accent\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"212\" font-size=\"11.5\" class=\"ink\">小於妊娠年齡</text>\n<text x=\"332\" y=\"212\" text-anchor=\"end\" font-size=\"10\" class=\"muted\">3 試驗・3,610 人・低</text>\n<line x1=\"225\" y1=\"219\" x2=\"225\" y2=\"237\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n<text x=\"8\" y=\"231\" font-size=\"10\" class=\"muted\">RR 0.97（0.81–1.16）</text>\n<line x1=\"200.9\" y1=\"228\" x2=\"242.0\" y2=\"228\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"217.5\" y=\"224\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"256\" font-size=\"11.5\" class=\"ink\">周產期死亡</text>\n<text x=\"332\" y=\"256\" text-anchor=\"end\" font-size=\"10\" class=\"muted\">7 試驗・5,320 人・非常低</text>\n<line x1=\"225\" y1=\"263\" x2=\"225\" y2=\"281\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n<text x=\"8\" y=\"275\" font-size=\"10\" class=\"muted\">RR 0.85（0.51–1.43）</text>\n<line x1=\"147.8\" y1=\"272\" x2=\"266.0\" y2=\"272\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"202.4\" y=\"268\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"300\" font-size=\"11.5\" class=\"ink\">子癇前症</text>\n<text x=\"332\" y=\"300\" text-anchor=\"end\" font-size=\"10\" class=\"muted\">3 試驗・2,946 人・非常低</text>\n<line x1=\"225\" y1=\"307\" x2=\"225\" y2=\"332\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n<text x=\"8\" y=\"319\" font-size=\"10\" class=\"muted\">RR 1.10（0.74–1.62）</text>\n<line x1=\"190.5\" y1=\"316\" x2=\"280.3\" y2=\"316\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"231.9\" y=\"312\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<line x1=\"120.0\" y1=\"332\" x2=\"330.0\" y2=\"332\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<line x1=\"145.6\" y1=\"332\" x2=\"145.6\" y2=\"336\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"145.6\" y=\"348\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">0.5</text>\n<line x1=\"225.0\" y1=\"332\" x2=\"225.0\" y2=\"336\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"225.0\" y=\"348\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">1</text>\n<line x1=\"304.4\" y1=\"332\" x2=\"304.4\" y2=\"336\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"304.4\" y=\"348\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">2</text>\n<text x=\"170.2\" y=\"366\" text-anchor=\"middle\" font-size=\"10\" class=\"muted\">← 治療組較少</text>\n<text x=\"280.3\" y=\"366\" text-anchor=\"middle\" font-size=\"10\" class=\"muted\">治療組較多 →</text>\n</svg>",
+      "caption": "原創示意，依 Iheozor-Ejiofor 等（2017）Cochrane 回顧的摘要與結果摘要表重繪；橫軸為風險比（對數尺度），虛線為 1，橫線為 95% 信賴區間。未標確定性者，作者未給 GRADE 評等。"
+    },
+    {
+      "type": "h",
+      "text": "低出生體重那一格"
+    },
+    {
+      "type": "p",
+      "text": "圖上七個結果裡，信賴區間沒有碰到 1 的只有低出生體重：治療組 9.7%，不治療 12.6%，RR 0.67（0.48–0.95），7 個試驗、3,470 人。確定性同樣是低，降級原因是失訪和異質性。作者自己點出，這個結果和之前三篇系統性回顧都對不上；那三篇在早產上的結論和這篇一致。"
+    },
+    {
+      "type": "quote",
+      "text": "懷孕期間的牙周治療對早產有沒有影響，並不清楚（低品質證據）。",
+      "original": "It is not clear if periodontal treatment during pregnancy has an impact on preterm birth (low-quality evidence).",
+      "cite": "Iheozor-Ejiofor 等（2017），Cochrane 回顧摘要的作者結論"
+    },
+    {
+      "type": "p",
+      "text": "低出生體重這一格，我不會拿去跟病人講：確定性低，又和別的回顧兜不攏。作者在討論裡還點名好幾個試驗沒有報告治療後的牙周數據，他們認為這讓產科上的任何好處都要存疑。"
+    },
+    {
+      "type": "h",
+      "text": "孕婦照樣治，理由換一個"
+    },
+    {
+      "type": "list",
+      "items": [
+        "孕婦有牙周炎，照常治療。2013 年的共識報告說，孕期牙周治療安全，也能改善牙周狀況；Cochrane 回顧裡，有報告這兩項的試驗都沒有出現母親死亡或治療不良反應（各 4 個試驗）。",
+        "跟病人說治療是為了她自己的牙周，不說「治了寶寶比較不會早產」：早產的合併結果，信賴區間跨過 1。",
+        "加上全身抗生素，結果也沒變。共識報告寫，針對個案的牙周治療，不論有沒有合併全身抗生素，都沒有降低早產與低出生體重的整體比率。",
+        "要不要治得更密集，4 個比較不同治療強度的試驗差異太大，合不起來，目前沒有答案。"
+      ]
+    },
+    {
+      "type": "paper",
+      "citation": "Iheozor-Ejiofor Z, Middleton P, Esposito M, Glenny AM. Treating periodontal disease for preventing adverse birth outcomes in pregnant women. *Cochrane Database Syst Rev*. 2017;6(6):CD005297.",
+      "doi": "10.1002/14651858.cd005297.pub3",
+      "pmid": "28605006",
+      "link": "https://doi.org/10.1002/14651858.CD005297.pub3",
+      "evidence": "Cochrane 系統性回顧：15 篇隨機試驗、7,161 人；早產證據確定性低",
+      "design": "Cochrane 系統性回顧與統合分析（隨機效應模式、GRADE 評證據），文獻檢索至 2016 年 10 月",
+      "sample": "15 個隨機對照試驗、7,161 名孕婦（14 個試驗為牙周炎、1 個為牙齦炎）；治療 vs 不治療 11 個試驗，不同治療互比 4 個試驗",
+      "question": "懷孕期間治療牙周病，能不能減少早產、低出生體重等不良妊娠結果？",
+      "access": "依 PubMed 摘要與 PMC 全文（PMC6481493）的結果摘要表與討論整理"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Treating periodontal disease for preventing adverse birth outcomes in pregnant women",
+      "publisher": "Cochrane Database of Systematic Reviews（Iheozor-Ejiofor Z 等）",
+      "date": "2017-06-12",
+      "url": "https://doi.org/10.1002/14651858.CD005297.pub3",
+      "note": "主角文獻。書目依 PubMed efetch（PMID 28605006）、Europe PMC 與 Crossref（2017;6(6):CD005297，2017-06-12 出版）。摘要依 PubMed：15 個隨機試驗 7,161 人、全部高偏差風險、14 個牙周炎 1 個牙齦炎；治療 vs 不治療 11 個試驗：早產 <37 週 RR 0.87（0.70–1.10，5,671 人，低）、低出生體重 9.70% 對 12.60%，RR 0.67（0.48–0.95，3,470 人，7 試驗，低）、<35 週 RR 1.19、<32 週 RR 1.35、周產期死亡 RR 0.85（非常低）、子癇前症 RR 1.10（非常低）、SGA RR 0.97（低）；作者結論原文。全文依 PMC 頁（https://pmc.ncbi.nlm.nih.gov/articles/PMC6481493/；Cochrane Library 原站對抓取程式回 403）：結果摘要表每 1,000 人 131 對 114（92–143）、降級理由（基線不平衡、I² 66%；低出生體重為失訪、I² 59%）、母親死亡 4 試驗 2,134 人與不良反應 4 試驗 2,389 人皆為 0；GRADE 低的定義；Background 荷爾蒙變化一句；治療內容（SRP、拋光或手術，口腔衛生諮詢，1–5 次，多在第一或第二孕期）；Agreements and disagreements（低出生體重與 Polyzos 2010、Fogacci 2011、Schwendicke 2015 三篇回顧不一致，早產一致）；Discussion 指出 Farrell 2003、Jeffcoat 2003、Macones 2010、Radnai 2009、Tarannum 2007 未報告牙周結果數據。"
+    },
+    {
+      "title": "Periodontitis and adverse pregnancy outcomes: consensus report of the Joint EFP/AAP Workshop on Periodontitis and Systemic Diseases",
+      "publisher": "Journal of Clinical Periodontology（Sanz M、Kornman K；EFP/AAP 研討會第 3 工作組）",
+      "date": "2013-04-01",
+      "url": "https://doi.org/10.1111/jcpe.12083",
+      "note": "J Clin Periodontol 2013;40 Suppl 14:S164–9，PMID 23627326。依 Europe PMC 摘要：Epidemiology（關聯強度 modest，隨族群、檢查方式與分類而異）、Biological mechanisms（直接與間接兩條路徑）、Interventions（Although periodontal therapy has been shown to be safe and leads to improved periodontal conditions in pregnant women, case-related periodontal therapy, with or without systemic antibiotics does not reduce overall rates of pre-term birth and low birthweight.）。"
+    },
+    {
+      "title": "File:Baby being weighed.jpg",
+      "publisher": "Wikimedia Commons（Drpoulette from Mexico City, Mexico，經 Flickr）",
+      "date": "2005-04-23",
+      "url": "https://commons.wikimedia.org/wiki/File:Baby_being_weighed.jpg",
+      "note": "頭圖。檔案描述 Baby being weighed after birth；CC BY 2.0；日期為 Commons 記載的拍攝時間；拍攝地點未標示（作者帳號註明來自墨西哥城）。"
+    }
+  ]
+}
