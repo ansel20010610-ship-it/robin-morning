@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-04",
+  "checked": "2026-11-05",
   "events": [
     {
       "id": "nso-markl-jackiw-2026",
@@ -807,6 +807,35 @@
         {
           "title": "OPENTIX 節目頁",
           "url": "https://www.opentix.life/program/2079214053353934848"
+        }
+      ]
+    },
+    {
+      "id": "luisada-recital-2027",
+      "title": "路易沙達鋼琴獨奏會",
+      "kind": "獨奏",
+      "rating": 4,
+      "why": "法國鋼琴家路易沙達是 1985 年蕭邦大賽第五名，上半場排舒伯特與布拉姆斯，下半場是佛瑞與蕭邦，都是他的拿手曲目。",
+      "who": "路易沙達（鋼琴）",
+      "program": "舒伯特a小調奏鳴曲、f小調第一號即興曲、降A大調樂興之時；布拉姆斯《六首鋼琴小品》作品118第一至第三號；佛瑞《帕望舞曲》、第七號夜曲；蕭邦搖籃曲、第三號詼諧曲、圓舞曲作品34之2與34之3",
+      "note": "鵬博藝術上半年套票售至 2027 年 1 月 25 日",
+      "shows": [
+        {
+          "date": "2027-03-23",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/program/2109225538266103809"
+        }
+      ],
+      "added": "2026-11-05",
+      "uids": [
+        "6ae22db626b3245efc753736"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/program/2109225538266103809"
         }
       ]
     }
