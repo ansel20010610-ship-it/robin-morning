@@ -1,0 +1,281 @@
+{
+  "column": "canon",
+  "date": "2026-11-05",
+  "title": "華格納讓一個和弦等了將近四小時",
+  "dek": "從前，不和諧的和弦像問話，下一拍就得回答。《崔斯坦與伊索德》開頭的和弦一路懸著，到全劇最後才落地；從此，渴望可以直接寫進和聲。",
+  "brief": "華格納《崔斯坦與伊索德》開頭的和弦一直沒有解決，要等將近四小時，到全劇最後一個和弦才落地。在它之前，不和諧要解決到和諧是巴哈以來的規矩。維也納排練 77 次後放棄，1865 年才在慕尼黑首演；後來希區考克《迷魂記》的配樂也借了它。",
+  "topic_key": "canon:tristan-und-isolde",
+  "updated_at": "2026-11-05T02:50:00+08:00",
+  "spoiler": "本文談到《崔斯坦與伊索德》的結局。",
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Joseph_Albert_-_Ludwig_und_Malwine_Schnorr_von_Carolsfeld_-_Tristan_und_Isolde%2C_1865f.jpg/1280px-Joseph_Albert_-_Ludwig_und_Malwine_Schnorr_von_Carolsfeld_-_Tristan_und_Isolde%2C_1865f.jpg",
+    "width": 1280,
+    "height": 976,
+    "alt": "黑白老照片。一個留著濃密鬍子、捲髮、身穿盔甲與斗篷的男人坐在一張長沙發上，一個長髮披散、穿淺色長裙的女人跪在地上，雙手攀著他的肩膀，仰頭看著他。",
+    "caption": "1865 年慕尼黑首演的崔斯坦與伊索德，由一對夫妻擔綱：男高音路德維希・施諾爾・馮・卡羅斯費爾德與女高音瑪爾維娜。首演六週後，路德維希過世，29 歲。",
+    "credit": "攝影 Joseph Albert；Commons 著錄為慕尼黑巴伐利亞宮殿管理局收藏，影像取自 Zeno.org",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Joseph_Albert_-_Ludwig_und_Malwine_Schnorr_von_Carolsfeld_-_Tristan_und_Isolde,_1865f.jpg",
+    "made": "1865"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "華格納的歌劇《崔斯坦與伊索德》，第二小節有一個和弦，聽起來非往哪裡走不可，卻一直走不到。要等將近四小時，到全劇最後一個和弦，它才落地。在它之前，音樂裡的不和諧像一句問話，下一拍就得回答；《崔斯坦》讓這句問話懸著，懸了一整晚。從此作曲家知道，不回答也是一種說法，渴望可以直接寫成和聲。"
+    },
+    {
+      "type": "p",
+      "text": "先交代這部戲。華格納（Richard Wagner）是 19 世紀德國的歌劇作曲家，《崔斯坦與伊索德》（Tristan und Isolde）寫於 1857 到 1859 年，1865 年在慕尼黑首演，一場演下來約 3 小時 50 分鐘。故事取自中世紀的騎士傳說：騎士崔斯坦護送愛爾蘭公主伊索德，渡海去康瓦爾嫁給他的舅舅馬克王，兩人在船上喝了被侍女偷偷換掉的愛情藥水，從此只能偷偷相愛。"
+    },
+    {
+      "type": "p",
+      "text": "沒看過全劇的人，也可能聽過它的頭尾。音樂會常把開頭的前奏曲和結尾伊索德唱的〈愛之死〉接起來演；希區考克的電影《迷魂記》，伯納・赫曼寫的配樂在和聲上引用了它；2011 年拉斯・馮・提爾的電影《驚悲記》，整部片的配樂只用這首前奏曲。"
+    },
+    {
+      "type": "h",
+      "text": "第二小節的問號"
+    },
+    {
+      "type": "p",
+      "text": "先講規矩。至少從巴哈的時代起，西方音樂有一條默認的規則：不和諧的和弦要「解決」到和諧的和弦。白話講，刺耳的聲音是問句，後面要接一個安穩的聲音當答案，耳朵才放心。"
+    },
+    {
+      "type": "p",
+      "text": "前奏曲一開始，只有大提琴，沒有伴奏，一條旋律往上一跳，再慢慢往下滑。接著木管進來，疊出一個由 F、B、升 D、升 G 四個音組成的和弦，後來大家叫它「崔斯坦和弦」。最上面的升 G 往上滑一步，落到一個最想回家的和弦上，照規矩，下一步就該回到 A 小調的「家」。華格納不給。音樂停在休止上，然後同一句換個高度再來一次，又停住；第三次，停在一個延長的休止上。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Tristan_opening.png/1280px-Tristan_opening.png",
+      "width": 1280,
+      "height": 656,
+      "alt": "兩行鋼琴譜，標示 Lento e languido。同一個樂句出現三次，每次起點更高，每句結尾都是休止符，最後一個休止符上有延長記號。",
+      "caption": "前奏曲開頭的鋼琴縮譜。同一句問了三次，每次都停在休止上，沒有回到 A 小調。",
+      "credit": "華格納作曲；Commons 使用者 Spencerpiers 製作的縮譜",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tristan_opening.png",
+      "made": "作曲 1857–1859；縮譜 2015 年製"
+    },
+    {
+      "type": "p",
+      "text": "效果是，聽的人從第一分鐘起就被吊著。不和諧以前也常有，但答案總是很快就來，這裡連答案在哪個方向都不確定。音樂理論家為了替這第一個和聲找個說法，吵了好幾十年；作曲家荀白克 1911 年在他的《和聲學》裡叫它「遊蕩的和弦」，說它哪裡都可以來。"
+    },
+    {
+      "type": "spoiler",
+      "text": "以下談到結局。"
+    },
+    {
+      "type": "h",
+      "text": "四小時後才回家"
+    },
+    {
+      "type": "p",
+      "text": "這個和弦在整部歌劇裡反覆回來，每次都沒解決。前奏曲推到最高點時，給的也不是答案，而是把同一個和弦再疊厚一層。第二幕兩人趁國王出獵夜裡相會，被廷臣告密；第三幕崔斯坦負傷，在布列塔尼的城堡等伊索德的船，她一到，他就死在她懷裡。伊索德唱完最後一段〈愛之死〉，倒在他身上，音樂才終於落進 B 大調的主和弦。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Wagner%2C_Tristan%2C_Liebestod_closing_bars.png/1280px-Wagner%2C_Tristan%2C_Liebestod_closing_bars.png",
+      "width": 1280,
+      "height": 321,
+      "alt": "一行鋼琴譜，調號有五個升記號，共六小節，最後一小節是一個長音的和弦，譜下標著 plagal cadence。",
+      "caption": "〈愛之死〉最後幾小節的鋼琴縮譜，停在 B 大調的主和弦上：全劇第一次完整的解決。",
+      "credit": "華格納作曲；Commons 使用者 Spencerpiers 製作的縮譜",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Wagner,_Tristan,_Liebestod_closing_bars.png",
+      "made": "作曲 1857–1859；縮譜 2020 年上傳"
+    },
+    {
+      "type": "p",
+      "text": "和聲在這裡就是劇情。兩個人活著不能在一起，音樂也一直到不了家；只有在死的那一刻，兩件事一起落地。華格納 1854 年讀了哲學家叔本華，叔本華把音樂放在詩和其他藝術之上；這部戲幾乎把故事全交給樂團，人物心裡的東西都攤在和聲裡。"
+    },
+    {
+      "type": "p",
+      "text": "寫之前，他在 1854 年 12 月給好友、鋼琴家李斯特的信裡這樣交代動機："
+    },
+    {
+      "type": "quote",
+      "text": "我這一生從沒嘗過愛情真正的幸福，所以要替我所有夢裡最美的那一個立一座紀念碑，讓那份愛從頭到尾得到徹底的滿足。我腦子裡有一部《崔斯坦與伊索德》，最簡單、血氣最飽滿的音樂構想；結尾飄著的那面「黑旗」，我要拿來蓋住自己去死。",
+      "original": "As I have never in life felt the real bliss of love, I must erect a monument to the most beautiful of all my dreams, in which, from beginning to end, that love shall be thoroughly satiated. I have in my head \"Tristan and Isolde,\" the simplest but most full-blooded musical conception; with the \"black flag\" which floats at the end of it I shall cover myself to die.",
+      "cite": "華格納致李斯特，1854 年（Francis Hueffer 英譯）"
+    },
+    {
+      "type": "p",
+      "text": "他說要讓愛「從頭到尾」得到滿足，寫出來的卻是將近四小時的不滿足。我覺得這正是它高明的地方：滿足只給一次，給在最後一個和弦。"
+    },
+    {
+      "type": "h",
+      "text": "排了 77 次還是放棄"
+    },
+    {
+      "type": "p",
+      "text": "寫完之後，這部戲有好幾年被認為演不出來。維也納的宮廷歌劇院本來要首演，排練 77 次後放棄，演崔斯坦的男高音唱不下來。1865 年 6 月 10 日終於在慕尼黑首演，指揮是漢斯・馮・畢羅，台上的崔斯坦和伊索德是一對真夫妻。"
+    },
+    {
+      "type": "p",
+      "text": "反感的人也不少。1875 年，作曲家舒曼的遺孀、鋼琴家克拉拉・舒曼寫信給布拉姆斯，說這是她這輩子看過、聽過最噁心的東西，整個第二幕兩個人就是在睡、在唱，最後崔斯坦死了，這也叫有戲劇性。她其實聽得很準：台上幾乎什麼都沒發生。她沒聽進去的是，事情全發生在樂團裡。"
+    },
+    {
+      "type": "h",
+      "text": "德布西拿它開玩笑"
+    },
+    {
+      "type": "p",
+      "text": "一部作品被當成笑點，代表大家都認得它。德布西 1908 年替女兒寫的鋼琴組曲《兒童天地》裡，有一首輕快的〈黑娃娃步態舞〉，中段突然插進《崔斯坦》開頭的樂句，還標上「帶著巨大的感情」，只是把最關鍵的那個和弦拿掉了。"
+    },
+    {
+      "type": "p",
+      "text": "認真的繼承者更多。英國《BBC 音樂雜誌》的網站說，沒有《崔斯坦》，德布西不會那麼迷戀單一和弦本身的聲色，荀白克也不會一路駛離傳統調性的岸。作曲家貝爾格在《抒情組曲》的第六樂章中段引用了它，配上崔斯坦和弦，接得幾乎看不出縫。"
+    },
+    {
+      "type": "p",
+      "text": "到了電影院，它變成執迷之愛的聲音。赫曼替《迷魂記》寫的前奏，和聲引用《崔斯坦》，那部片講的也是一段執迷、以死亡收場的愛。馮・提爾拍《驚悲記》，乾脆只用前奏曲，錄了好幾個新版本來配。"
+    },
+    {
+      "type": "h",
+      "text": "哪裡老了"
+    },
+    {
+      "type": "p",
+      "text": "老實講，戲劇的部分確實吃力。將近四小時，第一幕喝藥水，第二幕夜會被抓，第三幕等待和死亡。第二幕的夜會裡，崔斯坦說白天虛假，只有黑夜、只有死亡的長夜能讓兩人永遠在一起。這套渴望死亡的叔本華哲學，今天聽來很難不覺得自我陶醉。克拉拉嫌第二幕只有睡和唱，我同意她一半。"
+    },
+    {
+      "type": "p",
+      "text": "但這些都不妨礙前奏曲開頭那幾小節。它留下來，不是因為故事，也不是因為愛情藥水，而是因為它證明了一件事：一個和弦可以不急著回家，聽的人會願意跟著等，而且等本身就是感情。德布西、荀白克、貝爾格，一直到替希區考克配樂的赫曼，都是從這個不肯回家的和弦往下走的。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        ["作品", "《崔斯坦與伊索德》（Tristan und Isolde），三幕歌劇"],
+        ["作曲與劇本", "華格納"],
+        ["創作", "1857–1859 年，最後一幕 1859 年 8 月在瑞士琉森寫完"],
+        ["首演", "1865 年 6 月 10 日，慕尼黑宮廷與國家劇院；指揮漢斯・馮・畢羅"],
+        ["演出長度", "約 3 小時 50 分鐘"],
+        ["崔斯坦和弦", "F、B、升 D、升 G，前奏曲第二小節"]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tristan und Isolde",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Tristan_und_Isolde",
+      "note": "創作年代、1857 年 8 月擱下《齊格菲》、1854 年 10 月讀叔本華、1859 年 8 月琉森完成、劇情、首演日期與指揮、原定 5 月 15 日延期、維也納 1862–1864 年 70 多次排練與男高音 Ander、全劇終止式到最後才解決、演出約 3 小時 50 分、致李斯特信日期 1854-12-16、克拉拉致布拉姆斯信日期 1875-10-23（註 53）"
+    },
+    {
+      "title": "Tristan chord",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Tristan_chord",
+      "note": "F–B–D♯–G♯；荀白克《和聲學》（1911）稱 vagierender Akkord"
+    },
+    {
+      "title": "Correspondence of Wagner and Liszt, Vol. 2（Francis Hueffer 英譯）",
+      "publisher": "Project Gutenberg #4234",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/4234",
+      "note": "第 168 封信，此版未標日期；一般定為 1854 年 12 月 16 日（見 Wikipedia）。同信前段談叔本華與「渴望死亡、渴望絕對的無意識」"
+    },
+    {
+      "title": "Prelude and Liebestod from Tristan und Isolde",
+      "publisher": "John Mangum，Hollywood Bowl 曲目解說",
+      "date": "",
+      "url": "https://www.hollywoodbowl.com/musicdb/pieces/2944/prelude-and-liebestod-from-tristan-und-isolde",
+      "note": "大提琴開頭、木管奏出未解決的和弦；和弦在劇中反覆回來，到〈愛之死〉才解決；叔本華把音樂置於詩之上、音樂本身承載戲劇"
+    },
+    {
+      "title": "The Tristan Chord: Identity and Origin",
+      "publisher": "John Rothgeb，Music Theory Online 1.1",
+      "date": "1995",
+      "url": "https://www.mtosmt.org/issues/mto.95.1.1/mto.95.1.1.rothgeb.php",
+      "note": "無伴奏的開頭；第 3 小節屬七和弦「應該」接 A 小調主和弦，被壓掉，直接接第二次的滑動與第二個崔斯坦和弦；理論家數十年來試圖解釋這第一個和聲"
+    },
+    {
+      "title": "What is the 'Tristan Chord'?",
+      "publisher": "classical-music.com（BBC Music Magazine 網站）",
+      "date": "2021-02-11",
+      "url": "https://www.classical-music.com/features/musical-terms/tristan-chord-explained",
+      "note": "巴哈以來不和諧須解決到和諧；對德布西、荀白克的影響"
+    },
+    {
+      "title": "Journey to Bliss",
+      "publisher": "Albert Innaurato，Playbill",
+      "date": "2003-09-01",
+      "url": "https://playbill.com/article/journey-to-bliss",
+      "note": "解決被延遲將近四小時；前奏曲高潮是把和弦再疊一層、多加一個音"
+    },
+    {
+      "title": "Wagner, Tristan, Liebestod closing bars（鋼琴縮譜）",
+      "publisher": "Wikimedia Commons",
+      "date": "2020-04-03",
+      "url": "https://commons.wikimedia.org/wiki/File:Wagner,_Tristan,_Liebestod_closing_bars.png",
+      "note": "五個升記號，終止於 B 大調主和弦；Wikipedia「Cadence」條目以此例說明開頭的不和諧和弦在三幕之後以小調變格終止解決"
+    },
+    {
+      "title": "Tristan und Isolde: The Love Story That Changed Opera For Good",
+      "publisher": "Tom Huizenga，NPR（Texas Public Radio 轉載）",
+      "date": "2015-06-10",
+      "url": "https://www.tpr.org/2015-06-10/tristan-und-isolde-the-love-story-that-changed-opera-for-good",
+      "note": "維也納排練 77 次後放棄；1860 年完成時被認為無法演出；1865 年 6 月 10 日慕尼黑首演。Wikipedia 作「70 多次」"
+    },
+    {
+      "title": "On This Day: 10 June: Wagner's Tristan and Isolde Was Premiered",
+      "publisher": "Georg Predota，Interlude",
+      "date": "2024-06-10",
+      "url": "https://interlude.hk/on-this-day-10-june-wagners-tristan-and-isolde-was-premiered/",
+      "note": "慕尼黑宮廷與國家劇院、畢羅指揮、伊索德失聲延期"
+    },
+    {
+      "title": "Ludwig Schnorr von Carolsfeld",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Ludwig_Schnorr_von_Carolsfeld",
+      "note": "1836 年 7 月 2 日生，1865 年 7 月 21 日於德勒斯登過世；與妻子瑪爾維娜首演崔斯坦與伊索德"
+    },
+    {
+      "title": "Truly Hellish: Clara Schumann's Best Insults",
+      "publisher": "Georg Predota，Interlude",
+      "date": "",
+      "url": "https://interlude.hk/truly-hellish-clara-schumanns-best-insults/",
+      "note": "1875 年對《崔斯坦》的評語英譯：most disgusting thing…；During the whole second act the two of them sleep and sing；Tristan dies. And that they call dramatic!!! 收信人依 Wikipedia 註 53 為布拉姆斯"
+    },
+    {
+      "title": "Debussy and Berg",
+      "publisher": "Matthew Heisterman、John Weinstock，Tristan and Isolde 網站（laits.utexas.edu）",
+      "date": "2007",
+      "url": "https://laits.utexas.edu/tristan/DebBerg.php",
+      "note": "〈黑娃娃步態舞〉（1908）插入開頭樂句、去掉崔斯坦和弦、是玩笑；貝爾格《抒情組曲》第六樂章 Largo desolato 認真引用並配崔斯坦和弦"
+    },
+    {
+      "title": "Children's Corner",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Children%27s_Corner",
+      "note": "1906–1908 年寫給女兒；〈黑娃娃步態舞〉中段的引用標 avec une grande émotion"
+    },
+    {
+      "title": "The Music of Suspense: Herrmann's Vertigo Suite",
+      "publisher": "Calvin Dotsey，Houston Symphony",
+      "date": "2018-09-21",
+      "url": "https://houstonsymphony.org/?p=41715",
+      "note": "《迷魂記》（1958）前奏的和聲引用《崔斯坦》，「另一個執迷之愛、以死亡結束的故事」"
+    },
+    {
+      "title": "A Rogue Note in Lars von Trier's Melancholia",
+      "publisher": "Scott Murphy，Sound Stage Screen",
+      "date": "",
+      "url": "https://riviste.unimi.it/index.php/sss/sss_lab/melancholia",
+      "note": "《驚悲記》的配樂只用《崔斯坦》前奏曲的多種新錄音"
+    }
+  ]
+}
