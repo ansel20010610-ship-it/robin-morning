@@ -1139,30 +1139,44 @@ async function viewConcerts(my) {
   }
   const checked = typeof S.gigs?.checked === "string" ? fmtDate(S.gigs.checked, "short") : "";
   const pressed = (c) => GIG_CITIES.map(([k, label]) => `<button type="button" class="chip" data-c="${k}" aria-pressed="${k === c}">${label}</button>`).join("");
+  // 星級 (the owner, 2026-11-04: 近期演出進去我要可以分星級篩選): a second row of chips, one per rating on the list in this
+  // city (5, 4, 3 — the rubric admits no less), each with its count; 0 = every rating. Kept in rm.gigs.stars.
+  const grades = (list, r) => [0, 5, 4, 3].map((g) => { const n = g ? list.filter((e) => e.rating === g).length : list.length; return `<button type="button" class="chip" data-r="${g}" aria-pressed="${g === r}"${!n ? " disabled" : ""}>${g ? `<span class="stars" aria-hidden="true">${"★".repeat(g)}</span><span class="sr">${g} 星</span>` : "不限"}<small>${n}</small></button>`; }).join("");
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>近期演出</h1><span class="de">Spielplan</span></header>
     <p class="gig-intro">交響樂、歌劇、音樂劇與室內樂。台中優先；台北、新北、高雄只收值得專程跑一趟的。每天早上和當期一起更新，演出過了就下架。</p>
-    <nav class="chips" aria-label="城市"></nav><ul class="gig-list full"></ul>
+    <nav class="chips" aria-label="城市"></nav><nav class="chips grade" aria-label="星級"></nav><ul class="gig-list full"></ul>
     <section class="gig-key"><h2>值得聽怎麼評</h2>${RUBRIC}
       <p class="small">資料：文化部藝文活動開放資料、各場館與售票網站${checked ? `。最後查核：${esc(checked)}` : ""}。</p></section></div>`;
-  const draw = (c) => {
+  const draw = (c, r = 0) => {
     let last = "";
-    const rows = upcomingGigs(c).map((e) => {
+    const list = upcomingGigs(c);
+    const rows = list.filter((e) => !r || e.rating === r).map((e) => {
       const m = e.here[0].date.slice(0, 7);
       const head = m !== last ? `<li class="gig-month">${Number(m.slice(5))} 月</li>` : "";
       last = m;
       return head + gigRow(e);
     }).join("");
-    main.querySelector(".chips").innerHTML = pressed(c);
-    main.querySelector(".gig-list").innerHTML = rows || `<li class="gig-none">${S.gigs ? "這個城市目前沒有收錄的演出。" : "目前讀不到演出資訊（可能是離線），請稍後再試。"}</li>`;
+    main.querySelector(".chips:not(.grade)").innerHTML = pressed(c);
+    main.querySelector(".chips.grade").innerHTML = grades(list, r);
+    main.querySelector(".gig-list").innerHTML = rows || `<li class="gig-none">${!S.gigs ? "目前讀不到演出資訊（可能是離線），請稍後再試。" : r ? `這個城市目前沒有 ${r} 星的演出。` : "這個城市目前沒有收錄的演出。"}</li>`;
   };
-  const saved = GIG_CITIES.some(([k]) => k === store.get("gigs.city")) ? store.get("gigs.city") : "all";
-  draw(saved);
-  main.querySelector(".chips").addEventListener("click", (e) => {
+  const city = () => GIG_CITIES.some(([k]) => k === store.get("gigs.city")) ? store.get("gigs.city") : "all";
+  const grade = () => [5, 4, 3].includes(store.get("gigs.stars")) ? store.get("gigs.stars") : 0;
+  draw(city(), grade());
+  main.querySelector(".chips:not(.grade)").addEventListener("click", (e) => {
     const b = e.target.closest("button[data-c]");
     if (!b) return;
     store.set("gigs.city", b.dataset.c);
-    draw(b.dataset.c);
+    draw(b.dataset.c, grade());
     main.querySelector(`.chips [data-c="${b.dataset.c}"]`)?.focus();
+  });
+  main.querySelector(".chips.grade").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-r]");
+    if (!b) return;
+    const r = Number(b.dataset.r) || 0;
+    store.set("gigs.stars", r);
+    draw(city(), r);
+    main.querySelector(`.chips.grade [data-r="${r}"]`)?.focus();
   });
 }
 

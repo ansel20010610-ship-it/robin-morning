@@ -1121,6 +1121,15 @@ details.gig-key[open] summary { margin-bottom: 6px; }
 .gig-key .small { margin-top: 10px; font-family: var(--sans); font-size: 12.5px; color: var(--muted); }
 button.chip { cursor: pointer; font-family: var(--sans); }
 .chip[aria-pressed="true"] { border-color: var(--gold); color: var(--ink); background: var(--paper-3); }
+/* 星級 chips under the city chips on 近期演出: the stars themselves as the label, the count in small type after them */
+.chips.grade { margin-top: 0; gap: 5px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.chips.grade::-webkit-scrollbar { display: none; }
+.chips.grade .chip { flex: none; }
+.chips.grade .chip { display: inline-flex; align-items: baseline; gap: 5px; padding: 5px 8px; }
+.chips.grade .chip .stars { font-size: 12px; letter-spacing: .03em; }
+.chips.grade .chip small { font-family: var(--latin); font-size: 11.5px; color: var(--muted); }
+.chips.grade .chip[disabled] { opacity: .4; cursor: default; }
+.chips.grade .chip .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
 /* ——— 今日禱告: the day's passage and prayer, folded under the masthead ——— */
 .prayer-box { margin: 18px 0 0; border: 1px solid var(--rule); background: var(--paper-2); }
