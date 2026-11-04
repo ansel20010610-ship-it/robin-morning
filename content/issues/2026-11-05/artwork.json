@@ -1,0 +1,262 @@
+{
+  "column": "artwork",
+  "date": "2026-11-05",
+  "title": "達文西投給屋簷下，大衛站到了雨裡",
+  "dek": "1504 年，佛羅倫斯找來一屋子藝術家開會，決定米開朗基羅的《大衛》放哪裡。會議紀錄逐字留了下來：有人怕石頭淋雨，有人說原地那尊銅像帶衰。",
+  "brief": "1504 年 1 月，佛羅倫斯找來三十位左右的藝術家與工匠，商量米開朗基羅的《大衛》該放哪裡，達文西主張放進有屋頂的涼廊。結果它站到政府宮殿門口，取代一尊被傳令官說成帶衰的銅像，露天站了 369 年才搬進美術館。",
+  "topic_key": "artwork:michelangelo-david",
+  "updated_at": "2026-11-05T02:03:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/%27David%27_by_Michelangelo_JBU05.JPG/1280px-%27David%27_by_Michelangelo_JBU05.JPG",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/3/3a/%27David%27_by_Michelangelo_JBU05.JPG",
+    "width": 1280,
+    "height": 1920,
+    "alt": "由下往上拍的白色大理石全身裸像，一個捲髮的年輕男子站在一塊粗糙的石座上。他的右腿打直，小腿後面貼著一截樹幹；左腿往前、膝蓋微彎，腳趾伸到石座前緣。左手舉到肩前靠近下巴，右手垂在大腿旁，手指彎著。頭轉向畫面右邊，眉頭皺起。背景是淺色的半圓形壁龕與方格天頂。",
+    "caption": "米開朗基羅，《大衛》，1501–1504，大理石，佛羅倫斯學院美術館。2008 年攝於館內。",
+    "credit": "Jörg Bittner Unna 攝",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:%27David%27_by_Michelangelo_JBU05.JPG",
+    "made": "1501–1504（攝於 2008 年）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1501 年 9 月 13 日，星期一一早，佛羅倫斯主教座堂工程處的決議簿頁邊多了一行拉丁文：米開朗基羅今天開始雕「巨人」。後面補了半句：其實這個月稍早，他已經拿鑿子敲過一兩下，把它胸口上的一個疙瘩削掉了。"
+    },
+    {
+      "type": "p",
+      "text": "這個巨人後來就是《大衛》：那尊全身赤裸、左手舉在肩前、皺著眉往旁邊看的大理石年輕人，現在站在佛羅倫斯的學院美術館（Galleria dell'Accademia），連腳下那塊雕出來的岩座高 517 公分。大衛是聖經裡用機弦甩石頭、打倒巨人歌利亞的牧羊少年。你多半在課本或旅遊照片裡見過它；舊宮門口那一尊是複製品。米開朗基羅接下這件工作時 26 歲。"
+    },
+    {
+      "type": "p",
+      "text": "胸口那個疙瘩不是他留下的。這塊石頭在工程處院子裡躺了三十多年，1460 年代雕刻家阿戈斯蒂諾（Agostino di Duccio）動過手，沒做完。1501 年 8 月 16 日的契約寫得毫不客氣：一個叫做「巨人」的大理石人像，九臂高（臂是佛羅倫斯的長度單位），「以前粗鑿過，而且鑿壞了」。同年 7 月，董事們先決議把它立起來，請懂行的人看看還救不救得回來。"
+    },
+    {
+      "type": "p",
+      "text": "替米開朗基羅寫傳的畫家瓦薩里（Giorgio Vasari）說，當時的終身執政官索德里尼（Piero Soderini）常說要找達文西來雕它；最後是米開朗基羅開口要，董事們把它當成「一件不值錢的東西」給了他。契約給他兩年。瓦薩里說，他用木板和磚牆把石頭圍起來，不讓任何人看。"
+    },
+    {
+      "type": "h",
+      "text": "先看腳，再看手"
+    },
+    {
+      "type": "p",
+      "text": "站在像前，先看他怎麼站。右腿（你的左手邊）打直撐住全身，小腿後面貼著一截樹幹；左腿往前送，膝蓋微彎，腳趾伸出岩座前緣。一條腿吃力、一條腿放鬆，這種站法叫對立式平衡（contrapposto），古希臘雕像常用，站著不動的人看起來隨時會跨出一步。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.36, 0.74, 0.42, 0.2],
+      "position": "畫面下方，兩腳與石座，約佔寬度四成、高度兩成",
+      "caption": "局部：右腳旁的樹幹替這條腿分擔重量；左腳往前，腳趾伸到石座邊上。"
+    },
+    {
+      "type": "p",
+      "text": "再看兩隻手。左手舉到肩前，指間捏著東西；右手垂在大腿邊，青筋和指節看得清楚，手指彎起來扣住。兩手之間連著一條機弦：從左肩繞過背後，另一端握在右手。石頭還沒甩出去。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.2, 0.46, 0.17, 0.14],
+      "position": "畫面左側中段，右大腿旁，約佔寬度六分之一",
+      "caption": "局部：右手。青筋從手背延伸到前臂，手指扣著機弦的末端。"
+    },
+    {
+      "type": "p",
+      "text": "最後看臉。頭轉向他自己的左邊，眉頭擠在一起。腳邊什麼都沒有。佛羅倫斯雕刻家多那太羅早先做的大衛，拿著歌利亞砍下來的頭；米開朗基羅把歌利亞整個拿掉，《史密森尼雜誌》形容他做的是「戰鬥之前，冷靜而自信的少年」。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.34, 0.02, 0.28, 0.2],
+      "position": "畫面上方中央，頭部與舉起的左手，約佔寬度三成",
+      "caption": "局部：頭轉向左邊，眉心擠出皺紋；左手舉在下巴旁邊。"
+    },
+    {
+      "type": "p",
+      "text": "我覺得拿掉歌利亞，是整件作品最大膽的一刀。英雄腳下沒有敵人，看的人只能順著他的視線，自己去想他看見了什麼。"
+    },
+    {
+      "type": "h",
+      "text": "達文西投給屋簷下"
+    },
+    {
+      "type": "p",
+      "text": "1504 年 1 月 25 日，石像差不多完成，工程處把城裡三十位左右的畫家、雕刻家、金匠、木匠，連政府的吹笛手都找來，商量它該放哪裡，每個人的話逐字記進紀錄。名單上有達文西、波提且利、佩魯吉諾。"
+    },
+    {
+      "type": "p",
+      "text": "一位木匠說出這尊像原本的去處：大教堂外牆的扶壁，也就是從外面撐住教堂的那些石墩。為什麼不放了，他說不知道。"
+    },
+    {
+      "type": "p",
+      "text": "第一個發言的是市政府（執政團）的傳令官。他最想要的位置，是政府宮殿（今天的舊宮）門口那尊《友弟德》站的地方。《友弟德》是多那太羅的青銅像，題材是次經裡斬下敵將首級的寡婦。他嫌它的理由是這樣的："
+    },
+    {
+      "type": "quote",
+      "text": "友弟德是個帶死氣的標誌，擺在那裡不合適……女人殺男人不好，何況它是在不好的星象底下立起來的。從那以後，你們每況愈下，還丟了比薩。",
+      "original": "la Iuditta è segno mortifero: e non sta bene […] non sta bene che la donna uccida l'uomo, et maxime essendo stata posta con chattiva chostellatione; perchè da poi en qua siete iti di male in peggio et perdèsi Pisa.",
+      "cite": "執政團傳令官，1504 年 1 月 25 日會議紀錄（Milanesi 1875 刊本）"
+    },
+    {
+      "type": "p",
+      "text": "建築師朱利亞諾・達・桑加羅（Giuliano da Sangallo）看的是石頭本身：這塊大理石軟，又淋過雨，放露天他看撐不久，最好放進宮殿旁那座有屋頂的領主涼廊。達文西附議，說就放在涼廊靠牆的矮牆上，別妨礙公家儀式。波提且利想放在大教堂轉角，讓路人看得到。畫家皮耶羅・迪・科西莫說，雕它的人最知道它該怎麼站。"
+    },
+    {
+      "type": "p",
+      "text": "5 月 28 日，執政團決議：大理石巨人放在宮門前銅像友弟德現在的位置，友弟德移走。最後拍板的地點，正是傳令官第一個提的那一處。"
+    },
+    {
+      "type": "h",
+      "text": "有人半夜朝它丟石頭"
+    },
+    {
+      "type": "p",
+      "text": "其實決議下來的時候，石像已經在廣場上了。佛羅倫斯人蘭杜奇（Luca Landucci）1504 年 5 月 14 日的日記寫：巨人從工程處拉出來，把門上方的牆打掉一塊才出得去。當天夜裡有人朝它丟石頭，只好派人守夜。它直立著吊在木架裡，腳不碰地，四十多個人拉，底下墊十四根抹了油的木頭輪流往前換，走了四天才到廣場。"
+    },
+    {
+      "type": "p",
+      "text": "6 月 8 日，它在宮門前的平台上就位，友弟德搬進宮裡。9 月 8 日，蘭杜奇記下：巨人完工，整個揭開。"
+    },
+    {
+      "type": "p",
+      "text": "瓦薩里另外留下一個故事。石像立好以後，索德里尼來看，覺得鼻子太粗。米開朗基羅看出他站在巨像正下方，角度看不準，就爬上鷹架，左手拿鑿子，抓一點木板上的大理石粉，輕輕敲，讓粉一點一點往下掉，鼻子一點也沒動。他往下說：「現在看看。」"
+    },
+    {
+      "type": "quote",
+      "text": "我比較喜歡了，你讓它活了過來。",
+      "original": "I like it better, you have given it life.",
+      "cite": "索德里尼，瓦薩里《藝苑名人傳》記述（de Vere 英譯，1912–1915）"
+    },
+    {
+      "type": "h",
+      "text": "在宮門口站了 369 年"
+    },
+    {
+      "type": "p",
+      "text": "1527 年，梅迪奇家族被趕出佛羅倫斯，有人為了搶政府宮殿打起來，樓上丟下一張長凳砸攻門的人，砸斷了大衛的一條手臂，碎成三截。碎塊在地上躺了三天沒人撿。瓦薩里在另一篇傳記裡說，那時他和朋友薩爾維亞蒂（後來也成了畫家）都還是孩子，兩人走進廣場，在衛兵中間把碎塊撿起來，帶回薩爾維亞蒂家。多年後，科西莫公爵用銅栓把手臂接了回去。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Michelangelo_David_Philpot.jpg/1280px-Michelangelo_David_Philpot.jpg",
+      "width": 1280,
+      "height": 1707,
+      "alt": "泛黃的老照片：大衛像站在高高的方形石座上，背後是粗糙的石塊牆面。腰間蓋著一片葉子形的遮蓋。左下方有一盞鑄鐵街燈，石座左邊靠牆立著一排步槍。",
+      "caption": "菲爾波特（J. B. Philpot）約 1860–1870 年拍攝，大衛還站在舊宮門外。腰間那片遮蓋，美國國家藝廊圖書館的著錄說是 16 世紀市政當局加上的。",
+      "credit": "John Brampton Philpot／美國國家藝廊圖書館影像典藏",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Michelangelo_David_Philpot.jpg",
+      "made": "約 1860–1870"
+    },
+    {
+      "type": "p",
+      "text": "1866 年，一個委員會認為必須盡快讓它避開風吹雨打。1873 年 7 月 30 日到 8 月 8 日，石像裝在木頭和鐵做的架子裡，沿著鐵軌搬進學院美術館，大多趁清晨搬。從 1504 年算起，它在露天站了 369 年。桑加羅那句「撐不久」，佛羅倫斯過了三百多年才照辦。"
+    },
+    {
+      "type": "p",
+      "text": "論保存，達文西和桑加羅是對的，可是我站傳令官那邊。放進涼廊，它是一尊照顧得很好的雕像；站在政府門口，它成了這座城給自己立的樣子。瓦薩里說，米開朗基羅做蠟模型時就把它當成政府宮殿的標誌：大衛保衛他的人民、公正治理他們，治理這座城的人也該如此。"
+    },
+    {
+      "type": "p",
+      "text": "瓦薩里還記下一件小事：那塊被前人鑿壞的石頭有幾處不夠用，米開朗基羅就把前一位雕刻家最早的幾道鑿痕留在石頭邊上，「其中有些至今還看得到」。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        ["作品", "《大衛》（David）"],
+        ["作者", "米開朗基羅（Michelangelo Buonarroti）"],
+        ["年代", "1501 年 9 月開工，1504 年 9 月 8 日在舊宮門前揭幕"],
+        ["媒材與尺寸", "大理石；高 517 公分（含腳下雕出的岩座，1999 年史丹佛大學掃描實測）"],
+        ["現在在哪裡", "佛羅倫斯，學院美術館（1873 年起）；舊宮門口的是複製品"]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Le lettere di Michelangelo Buonarroti, coi ricordi ed i contratti artistici（Contratti artistici IV）",
+      "publisher": "Gaetano Milanesi 編，Firenze: Successori Le Monnier，Internet Archive 掃描",
+      "date": "1875",
+      "url": "https://archive.org/details/leletteredimiche00mich",
+      "note": "pp. 620–623：1501.8.16 契約（九臂、male abozatum、兩年、月薪六弗羅林）與頁邊開工註記（1501.9.13 星期一、先前削去胸口 nodum）；註腳所引 1501.7.2 決議與 1463.4.16 交給 Agostino di Duccio；1504.1.25 選址會議全文（傳令官、Monciatto、Cosimo Rosselli、Botticelli、Giuliano da Sangallo、Leonardo、Giovanni piffero、Piero di Cosimo 等的發言）；1502.2.25、2.28 議定 400 弗羅林；1504.5.28 執政團決議放在友弟德的位置；1504.6.11 底座。原件在主教座堂工程處檔案。傳令官引文略去「havendo noi la croce per insegnia et el giglio」一句（刊本此處印十字符號）。1501.9.13 為星期一係本報以儒略曆推算"
+    },
+    {
+      "title": "Diario fiorentino dal 1450 al 1516",
+      "publisher": "Luca Landucci 著，Iodoco Del Badia 編，Firenze: Sansoni，Internet Archive 掃描",
+      "date": "1883",
+      "url": "https://archive.org/details/diariofiorentino00landuoft",
+      "note": "pp. 268–269：1504.5.14 拉出工程處、打掉門上的牆、夜裡丟石頭、懸吊、四十多人、14 根抹油木頭、4 天、18 日到廣場、6.8 安放在 ringhiera 原友弟德位置；同頁 5 月兵馬開往比薩；1504.9.8 完工揭幕"
+    },
+    {
+      "title": "Lives of the Most Eminent Painters, Sculptors and Architects, Vol. 9（Life of Michelagnolo Buonarroti）",
+      "publisher": "Giorgio Vasari 著，Gaston du C. de Vere 英譯，Project Gutenberg",
+      "date": "1915",
+      "url": "https://www.gutenberg.org/ebooks/32362",
+      "note": "大衛一節：索德里尼曾想交給達文西、桑索維諾；九臂的石頭；「as a thing of no value」；蠟模型作為宮殿標誌與其寓意；圍板密室；留下前人鑿痕「some of which are still to be seen」；桑加羅兄弟的搬運木架；鼻子與大理石粉；400 crowns。瓦薩里把前一位雕刻家記為 Simone da Fiesole，1501 年契約寫的是 Agostino，正文只寫「前一位雕刻家」"
+    },
+    {
+      "title": "Lives of the Most Eminent Painters, Sculptors and Architects, Vol. 8（Life of Francesco Salviati）",
+      "publisher": "Giorgio Vasari 著，Gaston du C. de Vere 英譯，Project Gutenberg",
+      "date": "1915",
+      "url": "https://www.gutenberg.org/ebooks/31938",
+      "note": "1527 年長凳砸斷大衛手臂成三截、碎塊躺了三天、薩爾維亞蒂與瓦薩里撿回、科西莫公爵以銅栓修復"
+    },
+    {
+      "title": "Bernini's Genius",
+      "publisher": "Arthur Lubow，Smithsonian Magazine",
+      "date": "2008-10",
+      "url": "https://www.smithsonianmag.com/arts-culture/berninis-genius-11934809/",
+      "note": "多那太羅的大衛拿著歌利亞首級；米開朗基羅表現「the coolly confident youth before the battle」"
+    },
+    {
+      "title": "150 anni dall'arrivo del David di Michelangelo alla Galleria dell'Accademia di Firenze",
+      "publisher": "Comune di Firenze，Portale Giovani",
+      "date": "2023-08-08",
+      "url": "https://portalegiovani.comune.fi.it/urlnews/webzine/46183.html",
+      "note": "1866 年委員會、1872 年決定移走、1873.7.30–8.8 搬運、木鐵架子在鐵軌上、避震車、清晨 4 點到 11 點"
+    },
+    {
+      "title": "David (Michelangelo)",
+      "publisher": "維基百科（英文）",
+      "date": "2026-11-04",
+      "url": "https://en.wikipedia.org/wiki/David_(Michelangelo)",
+      "note": "查閱日期。用了：米開朗基羅接案時 26 歲；機弦從肩膀繞到右手；contrapposto 的說明"
+    },
+    {
+      "title": "David height",
+      "publisher": "Ringling Museum 導覽員網站（轉載 1999 年史丹佛大學 Digital Michelangelo 掃描團隊記述）",
+      "date": "2026-11-04",
+      "url": "https://ringlingdocents.org/sculpture/david-height.htm",
+      "note": "查閱日期；網頁未標發布日期。517 公分（不含底座、含腳下雕出的岩石），舊書常見的 434 公分有誤"
+    },
+    {
+      "title": "Palazzo Vecchio and Piazza Signoria",
+      "publisher": "museumsinflorence.com",
+      "date": "2026-11-04",
+      "url": "https://www.museumsinflorence.com/musei/Palazzo_vecchio.html",
+      "note": "查閱日期。舊宮門前是米開朗基羅大衛的複製品"
+    },
+    {
+      "title": "File:Michelangelo David Philpot.jpg",
+      "publisher": "Wikimedia Commons（影像出自美國國家藝廊圖書館影像典藏）",
+      "date": "2026-11-04",
+      "url": "https://commons.wikimedia.org/wiki/File:Michelangelo_David_Philpot.jpg",
+      "note": "查閱日期。拍攝年代約 1860–1870；著錄說腰間遮蓋為 16 世紀市政當局所加、攝於 1873 年移入學院美術館之前"
+    },
+    {
+      "title": "File:'David' by Michelangelo JBU05.JPG",
+      "publisher": "Wikimedia Commons，Jörg Bittner Unna",
+      "date": "2008-07-08",
+      "url": "https://commons.wikimedia.org/wiki/File:%27David%27_by_Michelangelo_JBU05.JPG",
+      "note": "頭圖；攝影者釋出為公有領域。看什麼一節的姿勢、樹幹、手、頭部描述依此圖"
+    }
+  ]
+}
