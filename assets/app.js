@@ -259,6 +259,15 @@ function serialBox(date, a, read) {
 }
 // ——— 連載 tab (#/serial, content/serial.json): the book's plate and progress, the next installment to read, the cast,
 // and every installment published so far in order — the one home of the serial; the front page's card is the day's door.
+// 摺角: the 連載 tab's icon wears a folded corner while the newest published installment is unread (the owner, 2026-11-05).
+function serialUnread() {
+  const read = readSet();
+  for (const i of publishedIssues()) {
+    const a = i.articles.find((x) => col(x.column, i.date).group === "serial");
+    if (a) return !read.has(`${i.date}/${a.column}`);
+  }
+  return false;
+}
 const loadBook = () => getJSON("content/serial.json", { fresh: true }).then((b) => { S.book = b && typeof b === "object" ? b : null; }).catch(() => {});
 async function viewSerial(my) {
   if (S.book === undefined) { main.innerHTML = `<div class="wrap"><p class="empty">翻書中……</p></div>`; await loadBook(); if (my !== undefined && my !== routeSeq) return; }
@@ -1763,7 +1772,7 @@ async function route(ev) {
   if (tapped) places.delete(h);
   const place = !detail && !tapped && (back || backTo === h) ? places.get(h) : undefined;
   const active = tabOf(detail && fromList ? fromList : h);
-  $("#nav").innerHTML = NAV.map(([href, label, icon]) => `<a href="${href}" ${href === active ? 'aria-current="page"' : ""}>${ICON[icon]}<span>${label}</span></a>`).join("");
+  $("#nav").innerHTML = NAV.map(([href, label, icon]) => `<a href="${href}" ${href === active ? 'aria-current="page"' : ""}${href === "#/serial" && serialUnread() ? ' class="ear"' : ""}>${ICON[icon]}<span>${label}</span></a>`).join("");
   $(".nav .in")?.style.setProperty("--i", NAV.findIndex(([href]) => href === active));
   stopReveal();
   const prev = shownArticle;

@@ -1582,3 +1582,8 @@ a.stamp:active .sp { filter: brightness(.96); }
 .cast dt { font-weight: 600; margin-top: 8px; }
 .cast dd { margin: 1px 0 0; font-size: .92em; color: var(--ink-2); line-height: 1.7; }
 .sv.locked { color: var(--muted); }
+/* 摺角 (app.js serialUnread): the 連載 tab's book icon with its top corner folded down while today's installment is
+   unread — a small gold triangle over the icon's corner; flat again once it is read. */
+.nav a.ear { position: relative; }
+.nav a.ear::after { content: ""; position: absolute; top: 5px; left: calc(50% + 4px); width: 9px; height: 9px; background: linear-gradient(225deg, var(--gold) 50%, transparent 50%); clip-path: polygon(0 0, 100% 0, 100% 100%); pointer-events: none; }
+.nav a.ear[aria-current="page"]::after { background: linear-gradient(225deg, var(--ink) 50%, transparent 50%); }
