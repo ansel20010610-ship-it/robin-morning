@@ -18,5 +18,12 @@
       "canon"
     ],
     "note": "artwork（大衛）與 wildcard（證據標記）完成，審稿、總編重寫、忠實度核對皆做"
+  },
+  "3": {
+    "finished_at": "2026-11-05T03:11:54+08:00",
+    "missing": [
+      "news"
+    ],
+    "note": "football 初稿與 canon（崔斯坦與伊索德）完成，各經審稿、總編重寫、忠實度核對；validate 無 WARN"
   }
 }
