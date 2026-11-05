@@ -1,34 +1,6 @@
 {
-  "checked": "2026-11-05",
+  "checked": "2026-11-06",
   "events": [
-    {
-      "id": "nso-markl-jackiw-2026",
-      "title": "馬寇爾、賈基夫與NSO",
-      "kind": "協奏曲",
-      "rating": 4,
-      "why": "柴科夫斯基小提琴協奏曲配巴爾托克《管絃樂協奏曲》，都是樂團和獨奏家拿得出手的主流名作。馬寇爾帶國家交響樂團，賈基夫拉琴。",
-      "who": "準．馬寇爾（指揮）、斯蒂凡．賈基夫（小提琴）、國家交響樂團",
-      "program": "郭恩甫《恰如交響》（世界首演）、柴科夫斯基《小提琴協奏曲》、巴爾托克《管絃樂協奏曲》",
-      "shows": [
-        {
-          "date": "2026-11-05",
-          "time": "19:30",
-          "city": "台北",
-          "venue": "國家音樂廳",
-          "tickets": "https://www.opentix.life/program/2072943938696704001"
-        }
-      ],
-      "added": "2026-11-01",
-      "uids": [
-        "6a5125ec26b32427d0604188"
-      ],
-      "sources": [
-        {
-          "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/program/2072943938696704001"
-        }
-      ]
-    },
     {
       "id": "inbal-mahler9-tso-2026",
       "title": "殷巴爾與TSO之馬勒第九號",
