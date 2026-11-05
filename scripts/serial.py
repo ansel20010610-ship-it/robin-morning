@@ -47,18 +47,42 @@ def today():
 
 
 # ——— source text ———
+ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI"]
+
+
 def clean_wikitext(txt):
-    """Russian Wikisource chapter → list of paragraphs (plain text)."""
-    txt = re.sub(r"\{\{Отексте.*?\}\}\n", "", txt, flags=re.S)
+    """Russian Wikisource chapter → (list of paragraphs, chapter title or "", book title or ""). Handles the markup
+    of the Dostoevsky pages: the header template, {{roman}}, {{Опечатка|wrong|right}} (the correction), editorial
+    notes, poem and language wrappers, the chapter heading (== I. Title ==) and the book line (<center>''…''</center>)."""
+    txt = re.sub(r"\{\{Отексте.*?\}\}", "", txt, flags=re.S)
+    txt = txt.replace("__NOEDITSECTION__", "").replace("&nbsp;", " ")
     txt = re.sub(r"\[\[Категория:[^\]]*\]\]|\[\[[a-z\-]{2,7}:[^\]]*\]\]", "", txt)
     txt = re.sub(r"<ref>.*?</ref>", "", txt, flags=re.S)
-    txt = re.sub(r"\{\{poemx1\|[^|]*\|", "", txt)  # {{poemx1|title|lines...}} → the lines
-    txt = re.sub(r"<div[^>]*>|</div>|<nowiki/>|<br\s*/?>", "", txt)
+    txt = re.sub(r"\{\{roman\|(\d+)\}\}", lambda m: ROMAN[int(m.group(1))] if int(m.group(1)) < len(ROMAN) else m.group(1), txt)
+    txt = re.sub(r"\{\{Опечатка\|[^|}]*\|([^|}]*)(?:\|[^}]*)?\}\}", r"\1", txt)
+    txt = re.sub(r"\{\{(?:right|lang-[a-z]+)\|([^{}]*)\}\}", r"\1", txt)  # before the notes, which may nest a {{lang-fr}}
+    txt = re.sub(r"\{\{Примечание ВТ\|[^{}]*\}\}|\{\{примечания[^}]*\}\}|\{\{indent\|\d+\}\}|<references\s*/>", "", txt, flags=re.I)
+    txt = txt.replace("{{NB}}", "NB")
+    txt = re.sub(r"\{\{poemx?1?\|[^|}]*\|", "", txt)  # {{poemx1|title|lines}} / {{poem1|...}} → the lines
+    book = ""
+    m = re.search(r"<center>'*([^<]*?)'*</center>", txt)
+    if m:
+        book = m.group(1).strip()
+        txt = txt.replace(m.group(0), "")
+    title = ""
+    m = re.search(r"^==\s*(?:[IVXLC]+\.?\s*)?(.*?)\s*==\s*$", txt, flags=re.M)
+    if m:
+        title = m.group(1).strip()
+        txt = txt.replace(m.group(0), "")
+    txt = re.sub(r"^={3,}\s*(.*?)\s*={3,}\s*$", r"\n## \1\n", txt, flags=re.M)  # a sub-heading inside a chapter (Zosima's book) → its own "## text" paragraph
+    txt = re.sub(r"</?(?:poem|small|big|sup|sub|u|s|span|i|b|p)(?:\s[^>]*)?>", "", txt)
+    txt = re.sub(r"<center>'*([^<]*?)'*</center>", r"\1", txt)  # any other centred line (e.g. the end-of-part note) stays as text
+    txt = re.sub(r"</?onlyinclude>|<div[^>]*>|</div>|<nowiki/>|<br\s*/?>", "", txt)
     txt = re.sub(r"\[\[([^\]|]*\|)?([^\]]*)\]\]", r"\2", txt)
     txt = re.sub(r"'{2,3}", "", txt)
     txt = txt.replace("}}", "")
     paras = [re.sub(r"[ \t]+", " ", p).strip() for p in re.split(r"\n\s*\n", txt)]
-    return [p for p in paras if p]
+    return [p for p in paras if p], title, book
 
 
 def fetch(slug):
@@ -72,9 +96,9 @@ def fetch(slug):
         url = plan["source"]["raw"].format(title=urllib.parse.quote(ch["page"]))
         req = urllib.request.Request(url, headers={"User-Agent": UA})
         txt = urllib.request.urlopen(req, timeout=40).read().decode("utf-8")
-        paras = clean_wikitext(txt)
+        paras, title, book = clean_wikitext(txt)
         with open(path, "w", encoding="utf-8") as f:
-            json.dump({"key": ch["key"], "page": ch["page"], "paragraphs": paras}, f, ensure_ascii=False, indent=0)
+            json.dump({"key": ch["key"], "page": ch["page"], "title_ru": title, "book_ru": book, "paragraphs": paras}, f, ensure_ascii=False, indent=0)
         print("%s  %d 段  %d 字" % (ch["key"], len(paras), sum(len(p.split()) for p in paras)))
         time.sleep(0.5)
 
@@ -112,7 +136,8 @@ def split(slug):
     inst, n = [], 0
     for ch in plan["chapters"]:
         with open(os.path.join(STATE, slug, "chapters", ch["key"] + ".json"), encoding="utf-8") as f:
-            units = units_of(json.load(f)["paragraphs"])
+            chapter = json.load(f)
+        units = units_of(chapter["paragraphs"])
         words = [len(u["text"].split()) for u in units]
         total = sum(words)
         groups, acc, cur = [], 0, []
@@ -128,7 +153,7 @@ def split(slug):
         for p, chunk in enumerate(groups):
             n += 1
             entry = {"n": n, "date": date_of(plan, n), "part": ch["part"], "chapter": ch["chapter"], "piece": p + 1,
-                     "pieces": len(groups), "words": sum(len(u["text"].split()) for u in chunk),
+                     "pieces": len(groups), "title_ru": chapter.get("title_ru", ""), "words": sum(len(u["text"].split()) for u in chunk),
                      "opens_mid_paragraph": bool(chunk[0]["cont"]), "closes_mid_paragraph": p + 1 < len(groups) and bool(groups[p + 1][0]["cont"]),
                      "paragraphs": [u["text"] for u in chunk]}
             with open(os.path.join(src, "%03d.json" % n), "w", encoding="utf-8") as f:
@@ -222,7 +247,7 @@ def main():
     elif a.cmd == "src":
         with open(os.path.join(STATE, a.slug, "src", "%03d.json" % a.n), encoding="utf-8") as f:
             e = json.load(f)
-        print("第 %d 回  %s  %s %s（%d／%d）  %d 字\n" % (e["n"], e["date"], e["part"], e["chapter"], e["piece"], e["pieces"], e["words"]))
+        print("第 %d 回  %s  %s %s（%d／%d）  %d 字%s\n" % (e["n"], e["date"], e["part"], e["chapter"], e["piece"], e["pieces"], e["words"], ("  章名：" + e["title_ru"]) if e.get("title_ru") else ""))
         print("\n\n".join(e["paragraphs"]))
     else:
         plan = load_plan(a.slug)
