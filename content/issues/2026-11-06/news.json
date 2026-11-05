@@ -1,0 +1,159 @@
+{
+  "column": "news",
+  "date": "2026-11-06",
+  "title": "荷莫茲海峽又有油輪遇襲，布倫特原油漲到每桶 98 美元",
+  "dek": "荷莫茲海峽又有油輪被擊中；以色列、巴拉圭、法國各有大事；新竹松下廠失聯 2 人尋獲，已死亡。",
+  "brief": "伊朗軍方說荷莫茲海峽至少 5 艘油輪受損，紐約布倫特原油收在每桶 98.29 美元。巴拉圭總統因銀行風暴辭職，眾議院通過彈劾。新竹湖口松下廠火警中失聯的 2 名員工，11 月 5 日上午尋獲，已死亡。",
+  "topic_key": "news:2026-11-06",
+  "voice": "wire",
+  "updated_at": "2026-11-06T05:23:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "sources": [
+    {
+      "title": "Iran says tankers struck in Hormuz amid fears of new US attack",
+      "publisher": "半島電視台",
+      "date": "2026-11-05",
+      "url": "https://www.aljazeera.com/news/2026/11/5/iran-says-tankers-struck-in-hormuz-amid-fears-of-new-us-attack",
+      "note": "油輪受損、觸雷出自伊朗軍方與革命衛隊；英國軍方通報卡達外海一艘；美國官員告訴《紐約時報》；全文無發布時刻"
+    },
+    {
+      "title": "油輪遇襲引供應疑慮　國際油價大漲",
+      "publisher": "中央社",
+      "date": "2026-11-06",
+      "url": "https://www.cna.com.tw/news/afe/202611060011.aspx",
+      "note": "布倫特 98.29 美元、漲 3.67 美元，引路透；台灣時間 11 月 6 日 05:01 發布"
+    },
+    {
+      "title": "Israel's Herzog accepts vote results, opens talks on forming a government",
+      "publisher": "半島電視台",
+      "date": "2026-11-05",
+      "url": "https://www.aljazeera.com/news/2026/11/5/israels-herzog-accepts-vote-results-opens-talks-on-forming-a-government",
+      "note": "選舉日期、席次、28 天與 14 天延長、明年初再選"
+    },
+    {
+      "title": "Joint List says it will back Eisenkot to form Israel's next government",
+      "publisher": "半島電視台",
+      "date": "2026-11-05",
+      "url": "https://www.aljazeera.com/news/2026/11/5/joint-list-says-it-will-back-eisenkot-to-form-israels-next-government",
+      "note": "聯合名單與拉姆黨推薦艾森科特、預計 67 人推薦"
+    },
+    {
+      "title": "巴拉圭總統潘尼亞捲銀行風暴請辭　副總統阿里亞納接任",
+      "publisher": "中央社",
+      "date": "2026-11-06",
+      "url": "https://www.cna.com.tw/news/aopl/202611060007.aspx",
+      "note": "辭職、接任、央行 11 月 3 日接管、約 300 萬存戶、眾議院 78 比 0 彈劾、示威；France 24 同日報導一致"
+    },
+    {
+      "title": "Live: Interior ministry says 575,000 protest across France as unions claim 'close to 1.6 million'",
+      "publisher": "法國 24 小時電視台",
+      "date": "2026-11-05",
+      "url": "https://www.france24.com/en/france/20261105-live-france-nationwide-strikes-living-costs",
+      "note": "直播頁，內政部 575,000（先前 600,000）、CGT 近 160 萬、448 人被捕、53 名警察受傷、11 月 9 日社會會議；數字為暫計，頁面持續更新到 22:20"
+    },
+    {
+      "title": "'Inhumane punishment': Governor Gavin Newsom to commute all 548 California death sentences",
+      "publisher": "法國 24 小時電視台",
+      "date": "2026-11-05",
+      "url": "https://www.france24.com/en/americas/20261105-inhumane-punishment-california-governor-gavin-newsom-to-commute-548-death-sentences",
+      "note": "548 人改終身監禁不得假釋、2019 年暫停執行、2016 年公投；文章 20:59 發布，未標時區"
+    },
+    {
+      "title": "2 missing employees found dead after Panasonic factory fire in Hsinchu",
+      "publisher": "Focus Taiwan（中央社英文網）",
+      "date": "2026-11-05",
+      "url": "https://focustaiwan.tw/society/202611050019",
+      "note": "尋獲時間、傷者、溶劑、8 月安檢"
+    },
+    {
+      "title": "Taiwan's October CPI rises 2.33%, stays above 2% for sixth month",
+      "publisher": "Focus Taiwan（中央社英文網）",
+      "date": "2026-11-05",
+      "url": "https://focustaiwan.tw/business/202611050021",
+      "note": "主計總處 11 月 5 日公布；CPI、外食、進口物價、官員對 11 月的預期"
+    }
+  ],
+  "body": [
+    {
+      "type": "news",
+      "title": "世界",
+      "items": [
+        {
+          "headline": "荷莫茲海峽油輪遇襲，油價大漲",
+          "place": ["IR", "QA"],
+          "summary": "伊朗軍方 11 月 5 日說，荷莫茲海峽一帶至少 5 艘油輪受損，部分觸雷；英國軍方說卡達北方外海另有一艘被擊中，無人宣稱負責。紐約布倫特原油當天收在每桶 98.29 美元，漲 3.67 美元。未具名的美國官員向《紐約時報》說，美軍已就位，可隨時重啟對伊朗的作戰。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/5/iran-says-tankers-struck-in-hormuz-amid-fears-of-new-us-attack",
+          "when": "11 月 5 日，中東當地時間；油價為紐約 11 月 5 日收盤"
+        },
+        {
+          "headline": "以色列總統展開組閣磋商",
+          "place": "IL",
+          "summary": "以色列 10 月 27 日選舉後，總統赫爾佐格 11 月 4 日起與各黨磋商。組閣門檻 61 席，總理納坦雅胡陣營 53 席，在野領袖艾森科特陣營 48 席。阿拉伯政黨共 19 席，其中聯合名單與拉姆黨表示推薦艾森科特，他預計有 67 人推薦。赫爾佐格指定人選後，對方有 28 天組閣。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/5/joint-list-says-it-will-back-eisenkot-to-form-israels-next-government",
+          "when": "11 月 5 日，以色列當地時間"
+        },
+        {
+          "headline": "巴拉圭總統因銀行風暴請辭",
+          "place": "PY",
+          "summary": "巴拉圭總統潘尼亞 11 月 5 日宣布辭職，副總統阿里亞納接任；眾議院以 78 票對 0 票通過彈劾。央行 11 月 3 日接管 Ueno Bank，約 300 萬存戶無法提款，反對派指潘尼亞在監管上偏袒該行。首都亞松森有數百人示威，與警方衝突。",
+          "source": "中央社",
+          "url": "https://www.cna.com.tw/news/aopl/202611060007.aspx",
+          "when": "11 月 5 日，巴拉圭當地時間"
+        },
+        {
+          "headline": "法國全國罷工，數十萬人上街",
+          "place": "FR",
+          "summary": "法國 11 月 5 日全國罷工遊行，訴求加薪、公共服務與生活費。內政部修正後的人數是 57.5 萬，工會 CGT 稱近 160 萬；內政部暫計 448 人被捕、53 名警察受傷。總理 11 月 9 日（週一）召集工會與雇主開社會會議，談購買力與薪資。",
+          "source": "法國 24 小時電視台",
+          "url": "https://www.france24.com/en/france/20261105-live-france-nationwide-strikes-living-costs",
+          "when": "11 月 5 日，法國當地時間"
+        },
+        {
+          "headline": "加州 548 名死囚將改判終身監禁",
+          "place": "US",
+          "summary": "加州州長紐森 11 月 5 日說，將把全州 548 名死囚改為終身監禁、不得假釋。他 2019 年起暫停執行死刑，2016 年選民否決了廢除死刑的公投。",
+          "source": "法國 24 小時電視台",
+          "url": "https://www.france24.com/en/americas/20261105-inhumane-punishment-california-governor-gavin-newsom-to-commute-548-death-sentences",
+          "when": "11 月 5 日，美國當地時間"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "以色列國會席次",
+      "head": ["陣營或政黨", "席次"],
+      "rows": [
+        ["納坦雅胡陣營", "53"],
+        ["艾森科特陣營", "48"],
+        ["聯合名單（阿拉伯政黨）", "11"],
+        ["拉姆黨（阿拉伯政黨）", "8"]
+      ],
+      "caption": "國會共 120 席，組閣需 61 席。資料來源：半島電視台。"
+    },
+    {
+      "type": "news",
+      "title": "台灣",
+      "items": [
+        {
+          "headline": "湖口松下廠火警，2 人罹難",
+          "place": "TW",
+          "summary": "新竹縣湖口鄉的松下工廠 11 月 4 日凌晨約 2 時起火；縣消防局 5 日說，兩名失聯的台籍員工當天上午在瓦礫中尋獲，已死亡。另有 5 人受傷，3 人是台灣人、2 人是越南人。起火原因調查中，初步與廠內的甲醇、丁酮等可燃溶劑有關。",
+          "source": "Focus Taiwan（中央社英文網）",
+          "url": "https://focustaiwan.tw/society/202611050019",
+          "when": "11 月 5 日，台灣時間"
+        },
+        {
+          "headline": "10 月物價年增 2.33%，連六月逾 2%",
+          "place": "TW",
+          "summary": "主計總處 11 月 5 日公布，10 月消費者物價指數年增 2.33%，連續第六個月高於 2%，低於 9 月的 2.74%。外食費年增 3.01%。以新台幣計的進口物價年增 33.32%，是 1977 年 1 月編製以來最大。官員說 11 月可能續高於 2%。",
+          "source": "Focus Taiwan（中央社英文網）",
+          "url": "https://focustaiwan.tw/business/202611050021",
+          "when": "11 月 5 日，台灣時間"
+        }
+      ]
+    }
+  ]
+}
