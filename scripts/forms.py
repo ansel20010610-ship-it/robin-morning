@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, TW, load_config  # noqa: E402
 
 FORMS = ["scene", "document", "qa", "list", "timeline", "dialogue", "flow", "reverse", "argument", "walk", "compare", "number"]
-VOICES = ["plain", "storyteller", "letter", "scholar", "essay", "dry", "lyric", "report", "guide", "interview"]
+REPORTERS = {"football": "fan", "news": "wire", "perio": "colleague", "music": "listener", "civilization": "lecturer", "literature": "correspondent", "philosophy": "socratic", "artwork": "appraiser", "architecture": "walker", "canon": "critic", "wildcard": "visitor", "concept": "tutor", "poem": "reader", "mystery": "detective", "obituary": "eulogist", "fm-watch": "watchman", "cosmere-watch": "watchman"}
 EXEMPT = {"devotion", "news", "serial"}
 ISSUES = os.path.join(ROOT, "content", "issues")
 
@@ -40,7 +40,7 @@ def main():
     if len(sys.argv) > 1:
         day = sys.argv[1]
         fs = forms_of(day)
-        seen, seenv = {}, {}
+        seen = {}
         for c, (f, v) in fs.items():
             if c in EXEMPT or c in watch:
                 continue
@@ -49,10 +49,9 @@ def main():
             elif f not in FORMS: flags.append("form 不在菜單裡")
             elif f in seen: flags.append("form 和 %s 重複" % seen[f])
             if f == "scene" and seen.get("scene") and seen["scene"] != c: flags.append("scene 一期最多一篇")
-            if not v: flags.append("沒有 voice")
-            elif v not in VOICES: flags.append("voice 不在菜單裡")
-            elif v in seenv: flags.append("voice 和 %s 重複" % seenv[v])
-            seen.setdefault(f, c); seenv.setdefault(v, c)
+            if not v: flags.append("沒有 voice（這欄的記者是 %s）" % REPORTERS.get(c))
+            elif v != REPORTERS.get(c): flags.append("voice 應是這欄的記者 %s" % REPORTERS.get(c))
+            seen.setdefault(f, c)
             print("  %-13s %-10s %-12s%s" % (c, f or "—", v or "—", ("  ← " + "；".join(flags)) if flags else ""))
         return
     today = dt.datetime.now(TW).date()
@@ -70,7 +69,7 @@ def main():
         if fs:
             print("\n%s 已派的文體／聲腔：%s" % (d, "、".join("%s=%s/%s" % (c, f or "—", v or "—") for c, (f, v) in fs.items())))
             break
-    print("\n文體：" + "、".join(FORMS) + "\n聲腔：" + "、".join(VOICES) + "\n同一期的文體與聲腔都不重複；同一欄不和前一篇相同（聲腔三篇內不重複）；scene 一期最多一篇。")
+    print("\n文體：" + "、".join(FORMS) + "\n同一期的文體不重複；同一欄不和前一篇相同；scene 一期最多一篇。聲腔照各欄固定的記者（STYLE.md 〇之四）：" + "、".join("%s=%s" % kv for kv in REPORTERS.items()))
 
 
 if __name__ == "__main__":

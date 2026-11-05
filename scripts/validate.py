@@ -31,7 +31,12 @@ LENGTH = {  # (min, max) CJK characters in body
     "fiction": (2500, 4000), "literature": (2500, 4000), "tactics": (2000, 3500),
     "philosophy": (2500, 4000), "fm-watch": (0, 5000), "cosmere-watch": (0, 5000), "obituary": (600, 1800), "serial": (1100, 2600),
 }
-NO_HERO = {"news", "serial"}  # a few short items a day: a picture is welcome, not required
+NO_HERO = {"news", "serial"}
+# 每欄一位記者 (STYLE.md 〇之四): the voice each column writes in, fixed; forms rotate, voices do not.
+REPORTERS = {"football": "fan", "news": "wire", "perio": "colleague", "music": "listener", "civilization": "lecturer",
+             "literature": "correspondent", "philosophy": "socratic", "artwork": "appraiser", "architecture": "walker",
+             "canon": "critic", "wildcard": "visitor", "concept": "tutor", "poem": "reader", "mystery": "detective",
+             "obituary": "eulogist", "fm-watch": "watchman", "cosmere-watch": "watchman"}  # a few short items a day: a picture is welcome, not required
 BLOCK_TYPES = {"p", "h", "quote", "list", "facts", "figure", "detail", "timeline", "table", "pitch",
                "svg", "news", "scripture", "prayer", "music", "paper", "exercise", "callout",
                "spoiler", "divider"}
@@ -378,11 +383,11 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             W("缺少 form：派稿時指定的文體代號（STYLE.md 〇之四），同一期不重複")
         elif art["form"] not in FORMS:
             W("form「%s」不在菜單裡（%s）" % (art["form"], "、".join(FORMS)))
-        VOICES = ["plain", "storyteller", "letter", "scholar", "essay", "dry", "lyric", "report", "guide", "interview"]
+        want = REPORTERS.get(col)
         if not art.get("voice"):
-            W("缺少 voice：派稿時指定的聲腔代號（STYLE.md 〇之四），同一期不重複")
-        elif art["voice"] not in VOICES:
-            W("voice「%s」不在菜單裡（%s）" % (art["voice"], "、".join(VOICES)))
+            W("缺少 voice：這欄的記者代號是「%s」（STYLE.md 〇之四）" % want)
+        elif want and art["voice"] != want:
+            W("voice「%s」不是這欄的記者「%s」（STYLE.md 〇之四）" % (art["voice"], want))
     if len(title) > 32:
         W("標題偏長（%d 字）" % len(title))
     if len(dek) > 90:

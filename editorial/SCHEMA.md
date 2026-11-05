@@ -26,7 +26,7 @@
 
 - `topic_key`：去重鍵，格式 `<欄位>:<穩定識別>`。牙周用 `perio:doi:<DOI 小寫>`；古典用 `music:<作曲者>-<作品編號>`；畫作用 `art:<收藏館>-<館藏號或題名>`；經文用 `devotion:<書卷>-<章>-<節>`。同一個鍵不得在不同日期重複出現（`scripts/ledger.py` 可查已用過的鍵；比對不分大小寫、不計多餘空白）。
 - `form`：文體，`STYLE.md` 〇之四菜單裡的一個代號（`scene`、`document`、`qa`、`list`、`timeline`、`dialogue`、`flow`、`reverse`、`argument`、`walk`、`compare`、`number`），2026-11-06 起每篇必填（經文與禱告、快訊、觀測站、連載除外）；派稿時指定，同一期不重複。
-- `voice`：聲腔，〇之四菜單裡的一個代號（`plain`、`storyteller`、`letter`、`scholar`、`essay`、`dry`、`lyric`、`report`、`guide`、`interview`），同上必填、派稿時指定、同一期不重複。
+- `voice`：這欄的記者代號，照 `STYLE.md` 〇之四的記者表（每欄固定一位，例如 football 是 `fan`、perio 是 `colleague`），同上必填。
 - `takeaway`：**牙周欄必填**，其他欄不用。帶得走的結論，一到兩句、40–90 字，App 放在標題下方的醒目框，寫法見 `columns/perio.md`。
 - `brief`：三句話摘要，**每篇必填**（含備稿與觀測站）。讀者在首頁只讀到這一段，所以它要能獨立成立；寫法見 `STYLE.md` 第七節。
 - `spoiler`：有重大劇透時填一句提醒（例如「本文談到《迷霧之子》第一部結局」），App 會在標題下顯示。
