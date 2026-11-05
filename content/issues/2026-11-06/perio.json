@@ -1,0 +1,149 @@
+{
+  "column": "perio",
+  "date": "2026-11-06",
+  "title": "治牙周三個月，HbA1c 平均低 0.43",
+  "dek": "同一個問題，Cochrane 2015 年說證據低、半年後看不出差別；2022 年納入的人數加倍，答案跟著改了。",
+  "brief": "同時有牙周炎與糖尿病的人，接受齦下清創三到四個月後，HbA1c 平均比不治療或一般照護低 0.43 個百分點，Cochrane 評為中等確定性。這是同一題的第三版回顧，收了 35 個隨機試驗；上一版還只敢說證據低，半年後的差距幾乎是零。",
+  "takeaway": "牙周炎合併第 2 型糖尿病的病人，齦下清創後三到四個月 HbA1c 平均低 0.43 個百分點，半年仍低 0.30（中等確定性）。可以據此建議糖尿病人治牙周，但對併發症與一年以上效果的證據還不足。",
+  "form": "qa",
+  "voice": "colleague",
+  "topic_key": "perio:doi:10.1002/14651858.cd004714.pub4",
+  "updated_at": "2026-11-06T00:51:12+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Curette.jpg/1280px-Curette.jpg",
+    "width": 1280,
+    "height": 800,
+    "alt": "戴白色手套的手握著黃色握柄的刮治器，金屬尖端伸向病人張開的嘴裡下排牙齒；另一隻手拿著紅色握柄的口鏡撐開下唇。",
+    "caption": "洗牙與牙周清創用的刮治器（curette）。Milenafoto 2013 年拍攝；照片中的病人與文中的回顧、試驗無關。",
+    "credit": "Milenafoto，Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Curette.jpg",
+    "made": "2013"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "把牙周炎治好，糖尿病人的血糖會不會跟著變好，Cochrane 前後回答過三次，最近兩次的答案並不一樣。Cochrane 是專做系統性回顧的國際組織，把同一題的隨機試驗找齊、評品質、合併成一個估計值，隔幾年重做一次；這一題的第一版在 2010 年，2015 年第一次更新，這裡讀的是 2022 年 4 月出版的第二次更新，第一作者是愛丁堡大學牙醫學院的 Simpson。"
+    },
+    {
+      "type": "p",
+      "text": "2015 年那一版相當保留：證據品質低，齦下清創後三到四個月 HbA1c 只低 0.29 個百分點，第六個月差距剩 0.02。2022 年版納入的研究與人數加倍，作者明寫結論因此改變，確定性從低調到中等。HbA1c 是糖化血色素，反映前三個月左右的平均血糖；齦下清創（subgingival instrumentation）就是刮除與根面整平（SRP）。"
+    },
+    {
+      "type": "h",
+      "text": "這份回顧收了哪些試驗、哪些病人"
+    },
+    {
+      "type": "p",
+      "text": "收的全是隨機對照試驗：受試者同時有糖尿病與牙周炎，一組做齦下清創，可加抗菌劑或手術，另一組不治療，或只有口衛指導、齦上潔牙這類「一般照護」，至少追蹤三個月。文獻查到 2021 年 9 月，共 35 個試驗、3,249 人，追蹤 3 到 12 個月；除了一個試驗兼收第 1 型，全是第 2 型糖尿病，多數在醫院做。"
+    },
+    {
+      "type": "h",
+      "text": "HbA1c 實際降了多少"
+    },
+    {
+      "type": "p",
+      "text": "主要結果看三到四個月：30 個試驗、2,443 人合併後，治療組的 HbA1c 比對照組低 0.43 個百分點，95% 信賴區間 0.28 到 0.59。對照組這時的 HbA1c 中位數是 7.74%；作者舉的例子是從 7.43% 降到 7%。第六個月仍低 0.30（12 個試驗、1,457 人），第十二個月低 0.50，但只來自一個 264 人的試驗。"
+    },
+    {
+      "type": "svg",
+      "title": "兩版回顧的 HbA1c 差距",
+      "svg": "<svg viewBox=\"0 0 340 348\" xmlns=\"http://www.w3.org/2000/svg\">\n<text x=\"8\" y=\"14\" font-size=\"10\" class=\"muted\">版本・追蹤時間</text>\n<text x=\"332\" y=\"14\" text-anchor=\"end\" font-size=\"10\" class=\"muted\">HbA1c 差（百分點）</text>\n<line x1=\"276.0\" y1=\"32\" x2=\"276.0\" y2=\"308\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n<text x=\"8\" y=\"44\" font-size=\"11.5\" class=\"ink\" font-weight=\"bold\">2015 年版</text>\n<text x=\"8\" y=\"64\" font-size=\"11\" class=\"ink\">3–4 個月　−0.29</text>\n<text x=\"8\" y=\"77\" font-size=\"9.5\" class=\"muted\">（−0.48 至 −0.10）</text>\n<text x=\"8\" y=\"89\" font-size=\"9.5\" class=\"muted\">14 試驗・1,499 人・低</text>\n<line x1=\"189.6\" y1=\"72\" x2=\"258.0\" y2=\"72\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"219.8\" y=\"68\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"110\" font-size=\"11\" class=\"ink\">6 個月　−0.02</text>\n<text x=\"8\" y=\"123\" font-size=\"9.5\" class=\"muted\">（−0.20 至 +0.16）</text>\n<text x=\"8\" y=\"135\" font-size=\"9.5\" class=\"muted\">5 試驗・826 人</text>\n<line x1=\"240.0\" y1=\"118\" x2=\"304.8\" y2=\"118\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"268.4\" y=\"114\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"160\" font-size=\"11.5\" class=\"ink\" font-weight=\"bold\">2022 年版</text>\n<text x=\"8\" y=\"180\" font-size=\"11\" class=\"accent\">3–4 個月　−0.43</text>\n<text x=\"8\" y=\"193\" font-size=\"9.5\" class=\"muted\">（−0.59 至 −0.28）</text>\n<text x=\"8\" y=\"205\" font-size=\"9.5\" class=\"muted\">30 試驗・2,443 人・中等</text>\n<line x1=\"169.8\" y1=\"188\" x2=\"225.6\" y2=\"188\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"194.6\" y=\"184\" width=\"8\" height=\"8\" class=\"accent\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"226\" font-size=\"11\" class=\"ink\">6 個月　−0.30</text>\n<text x=\"8\" y=\"239\" font-size=\"9.5\" class=\"muted\">（−0.52 至 −0.08）</text>\n<text x=\"8\" y=\"251\" font-size=\"9.5\" class=\"muted\">12 試驗・1,457 人</text>\n<line x1=\"182.4\" y1=\"234\" x2=\"261.6\" y2=\"234\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"218.0\" y=\"230\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"272\" font-size=\"11\" class=\"ink\">12 個月　−0.50</text>\n<text x=\"8\" y=\"285\" font-size=\"9.5\" class=\"muted\">（−0.55 至 −0.45）</text>\n<text x=\"8\" y=\"297\" font-size=\"9.5\" class=\"muted\">1 試驗・264 人</text>\n<line x1=\"177.0\" y1=\"280\" x2=\"195.0\" y2=\"280\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"182.0\" y=\"276\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<line x1=\"150\" y1=\"308\" x2=\"330\" y2=\"308\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<line x1=\"168.0\" y1=\"308\" x2=\"168.0\" y2=\"312\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"168.0\" y=\"324\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">−0.6</text>\n<line x1=\"204.0\" y1=\"308\" x2=\"204.0\" y2=\"312\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"204.0\" y=\"324\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">−0.4</text>\n<line x1=\"240.0\" y1=\"308\" x2=\"240.0\" y2=\"312\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"240.0\" y=\"324\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">−0.2</text>\n<line x1=\"276.0\" y1=\"308\" x2=\"276.0\" y2=\"312\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"276.0\" y=\"324\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">0</text>\n<line x1=\"312.0\" y1=\"308\" x2=\"312.0\" y2=\"312\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"312.0\" y=\"324\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">+0.2</text>\n<text x=\"204.0\" y=\"340\" text-anchor=\"middle\" font-size=\"10\" class=\"muted\">← 治療組較低</text>\n<text x=\"303.0\" y=\"340\" text-anchor=\"middle\" font-size=\"10\" class=\"muted\">較高 →</text>\n</svg>",
+      "caption": "原創示意，依 Simpson 等 2015 年與 2022 年兩版 Cochrane 回顧的摘要重繪；方塊為合併後的平均差，橫線為 95% 信賴區間，虛線為零。證據確定性只標出兩版對 3–4 個月結果的評等。"
+    },
+    {
+      "type": "p",
+      "text": "只用兩個低偏差風險的試驗重算，降 0.55，和整體相近。本報 10 月 19 日讀過的 DPTT，2013 年美國那個 514 人、因看不出效果提前停止收案的試驗，也在這 35 篇裡，合併結果仍是治療組較低。"
+    },
+    {
+      "type": "h",
+      "text": "確定性只給中等，分數扣在哪裡"
+    },
+    {
+      "type": "p",
+      "text": "Cochrane 用 GRADE 評整體證據的確定性，分高、中、低、非常低四級；中等是說真正的效果大概接近估計值，但也可能有實質差距。這篇從高降一級，理由是偏差風險：35 個試驗只有 2 個低風險、14 個高、19 個不清楚，病人和治療者也不可能盲化。三到四個月的異質性 I² 達 70%，作者沒再扣分，因為各時間點的效果一致。"
+    },
+    {
+      "type": "quote",
+      "text": "比較牙周治療與不治療或一般照護的新試驗，不太可能改變這篇回顧的整體結論。",
+      "original": "Further trials evaluating periodontal treatment versus no treatment/usual care are unlikely to change the overall conclusion reached in this review.",
+      "cite": "Simpson 等（2022），Cochrane 回顧摘要的作者結論"
+    },
+    {
+      "type": "h",
+      "text": "加抗生素或漱口水會不會降得更多"
+    },
+    {
+      "type": "p",
+      "text": "回顧把三到四個月的試驗分三組：單純齦下清創 20 個、加全身或局部抗菌劑 11 個、加氯己定漱口水 3 個，三組之間看不出統計上的差異；不同療法的正面比較，留給回顧的第二部分。照目前的證據，我不會為了血糖替病人加抗生素：這種間接比較本來只能參考，何況連差別都沒看到。"
+    },
+    {
+      "type": "h",
+      "text": "跟糖尿病病人可以說到哪裡"
+    },
+    {
+      "type": "list",
+      "items": [
+        "可以說：照目前的證據，治好牙周炎，三到四個月後 HbA1c 平均低約 0.4 個百分點，確定性中等。2018 年國際糖尿病聯盟（IDF）與歐洲牙周病學會（EFP）的聯合共識估的也相近：三個月降 0.27 到 0.48。",
+        "能不能因此少吃藥，回顧沒有比較；對生活品質與糖尿病併發症，作者說證據不足以下結論。降幅照實講，不替它許諾更多。",
+        "一年後的效果先保留：第十二個月的 0.50 只有一個試驗撐著。",
+        "有評估不良反應的試驗，多半報告沒有或只有輕微傷害，嚴重不良事件兩組相近；但多數試驗沒評估。",
+        "受試者幾乎全是第 2 型，第 1 型能不能套用，這篇回顧答不了。"
+      ]
+    },
+    {
+      "type": "paper",
+      "citation": "Simpson TC, Clarkson JE, Worthington HV, MacDonald L, Weldon JC, Needleman I, Iheozor-Ejiofor Z, Wild SH, Qureshi A, Walker A, Patel VA, Boyers D, Twigg J. Treatment of periodontitis for glycaemic control in people with diabetes mellitus. *Cochrane Database Syst Rev*. 2022;4(4):CD004714.",
+      "doi": "10.1002/14651858.cd004714.pub4",
+      "pmid": "35420698",
+      "link": "https://doi.org/10.1002/14651858.CD004714.pub4",
+      "evidence": "Cochrane 系統性回顧：35 篇隨機試驗、3,249 人；HbA1c 證據確定性中等",
+      "design": "Cochrane 系統性回顧與統合分析（GRADE 評證據），本題第二次更新的第一部分；文獻檢索至 2021 年 9 月 7 日",
+      "sample": "35 個平行組隨機對照試驗、隨機分派 3,249 名糖尿病合併牙周炎者（幾乎全為第 2 型），追蹤 3 到 12 個月；主要分析 3–4 個月為 30 個試驗、2,443 人",
+      "question": "同時有糖尿病與牙周炎的人，接受齦下清創，比起不治療或一般照護，HbA1c 會不會比較低？",
+      "access": "依 PubMed 與 Europe PMC 摘要、PMC 全文（PMC9009294）的結果摘要表、證據品質與次群組分析整理"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Treatment of periodontitis for glycaemic control in people with diabetes mellitus",
+      "publisher": "Cochrane Database of Systematic Reviews（Simpson TC 等）",
+      "date": "2022-04-14",
+      "url": "https://doi.org/10.1002/14651858.CD004714.pub4",
+      "note": "主角文獻。書目依 PubMed efetch（PMID 35420698：2022 Apr 14;4(4):CD004714）、Europe PMC（PMC9009294）與 Crossref（published-online 2022-04-14，為 pub3 的新版）；Crossref 查 pub5、pub6 皆無紀錄，pub4 為目前最新版。摘要與白話摘要依 PubMed／Europe PMC：35 個試驗 3,249 人、偏差風險 2 低 14 高 19 不清楚、3–4 個月 −0.43%（−0.59 至 −0.28；30 試驗 2,443 人；中等確定性）、6 個月 −0.30%（−0.52 至 −0.08；12 試驗 1,457 人）、12 個月 −0.50%（−0.55 至 −0.45；1 試驗 264 人）、不良反應、作者結論原文；白話摘要的 7.43% 到 7% 例子與 part two 一句。全文依 PMC 頁（https://pmc.ncbi.nlm.nih.gov/articles/PMC9009294/）：結果摘要表對照組 3–4 個月 HbA1c 中位數 7.74%、降級註腳 Downgraded 1 level for high risk of bias, largely due to lack of blinding、Quality of the evidence（所有試驗無法盲化、I² 70% 因各時間點一致不降級）、GRADE 定義、低偏差風險敏感度分析（Kiran 2005、Wang S 2017：−0.55%，95% CI −1.10 至 −0.00）、次群組（SRP 20、加抗菌劑 11、加氯己定 3，P = 0.61）、Implications for practice（對生活品質與併發症證據不足）、納入研究含 Engebretson 2013。第一作者單位依 PMC XML。"
+    },
+    {
+      "title": "Treatment of periodontal disease for glycaemic control in people with diabetes mellitus",
+      "publisher": "Cochrane Database of Systematic Reviews（Simpson TC 等）",
+      "date": "2015-11-06",
+      "url": "https://doi.org/10.1002/14651858.CD004714.pub3",
+      "note": "2015 年版，PMID 26545069。依 PubMed 摘要：治療 vs 不治療 14 試驗 1,499 人，3–4 個月低 0.29%（0.48 至 0.10），6 個月低 0.02%（5 試驗 826 人；低 0.20 至高 0.16），low quality evidence；作者結論 insufficient evidence to demonstrate that this is maintained after 4 months。"
+    },
+    {
+      "title": "Scientific evidence on the links between periodontal diseases and diabetes: Consensus report and guidelines of the joint workshop on periodontal diseases and diabetes by the International Diabetes Federation and the European Federation of Periodontology",
+      "publisher": "Journal of Clinical Periodontology（Sanz M、Ceriello A、Buysschaert M 等）",
+      "date": "2017-12-26",
+      "url": "https://doi.org/10.1111/jcpe.12808",
+      "note": "J Clin Periodontol 2018;45(2):138–149，PMID 29280174，線上發表 2017-12-26。依 PubMed 摘要 Interventions：Periodontal therapy is safe and effective in people with diabetes, and it is associated with reductions in HbA1C of 0.27-0.48% after 3 months, although studies involving longer-term follow-up are inconclusive."
+    },
+    {
+      "title": "The effect of nonsurgical periodontal therapy on hemoglobin A1c levels in persons with type 2 diabetes and chronic periodontitis: a randomized clinical trial",
+      "publisher": "JAMA（Engebretson SP 等）",
+      "date": "2013-12-18",
+      "url": "https://doi.org/10.1001/jama.2013.282431",
+      "note": "DPTT 試驗，JAMA 2013;310(23):2523–32，PMID 24346989；本報 2026-10-19 已導讀。正文只用一句：514 人、Enrollment was stopped early because of futility（依 PubMed 摘要）。"
+    },
+    {
+      "title": "File:Curette.jpg",
+      "publisher": "Wikimedia Commons（Milenafoto）",
+      "date": "2013-03-07",
+      "url": "https://commons.wikimedia.org/wiki/File:Curette.jpg",
+      "note": "頭圖。檔案描述（捷克文）Dentali hygiena - kyreta v ustech pacienta；CC BY-SA 3.0；日期為 Commons 記載的拍攝時間，拍攝地點未標示。"
+    }
+  ]
+}
