@@ -1,0 +1,275 @@
+{
+  "column": "concept",
+  "date": "2026-11-06",
+  "title": "葡萄牙織布比較省工，卻向英格蘭買布",
+  "dek": "100 個英格蘭人一年織的布，換 80 個葡萄牙人一年釀的酒，兩邊都划算。李嘉圖 1817 年用四個數字講完這件事。",
+  "brief": "葡萄牙織布、釀酒都比英格蘭省工，照李嘉圖的四個數字算，兩國各做一樣再交換，同樣的人力卻能多出布、也多出酒。關鍵不在誰比較強，在做一樣東西要放棄多少另一樣。這就是比較利益，寫在他 1817 年出版的《政治經濟學及賦稅原理》裡。",
+  "topic_key": "concept:comparative-advantage",
+  "form": "argument",
+  "voice": "tutor",
+  "updated_at": "2026-11-06T02:49:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/David_Ricardo_-_On_the_principles_of_political_economy_and_taxation_%281817%2C_title%29.jpg/1280px-David_Ricardo_-_On_the_principles_of_political_economy_and_taxation_%281817%2C_title%29.jpg",
+    "width": 1280,
+    "height": 2054,
+    "alt": "泛白的書頁上，置中排著幾行黑色大寫英文：ON THE PRINCIPLES OF POLITICAL ECONOMY, AND TAXATION，下方是 By DAVID RICARDO, Esq.，再往下是 LONDON: JOHN MURRAY, ALBEMARLE-STREET 和 1817，各段之間有短橫線隔開。",
+    "caption": "李嘉圖《政治經濟學及賦稅原理》1817 年倫敦初版的書名頁，出版者是 John Murray。英格蘭與葡萄牙用布換酒的例子，在書中談對外貿易的那一章。",
+    "credit": "David Ricardo 著，John Murray 出版；影像出自 Posner Memorial Collection，經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:David_Ricardo_-_On_the_principles_of_political_economy_and_taxation_(1817,_title).jpg",
+    "made": "1817"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "比較利益只說一件事：一樣東西該不該自己做，看的是做它要放棄什麼，不是你做得比別人好多少。所以就算一方樣樣都比較強，兩邊分工再交換，還是兩邊都多拿。這句話是對的，而且比聽起來難懂。每一步的算術，你都可以自己對。"
+    },
+    {
+      "type": "p",
+      "text": "這個名詞你多半在高中公民或經濟學課本見過，旁邊跟著「機會成本」；每次吵關稅、談自由貿易，它都會被搬出來，世界貿易組織（WTO）解釋為什麼要開放貿易，用的就是它。它出自英國經濟學家李嘉圖（David Ricardo，1772–1823）1817 年在倫敦出版的《政治經濟學及賦稅原理》。李嘉圖靠股票與放款經紀發財，27 歲讀了亞當・斯密的《國富論》才迷上經濟學，後來進了國會；當時英國用「穀物法」限制外國小麥進口，他站在反對的一邊。"
+    },
+    {
+      "type": "p",
+      "text": "值得花一整篇，是因為聰明人也常卡在這裡。經濟學家薩繆森（Paul Samuelson，後來得了諾貝爾經濟學獎）1968 年在蒙特婁的國際經濟學會大會上演講，提到年輕時在哈佛，數學家烏拉姆（Stanislaw Ulam）老愛逗他：說一條社會科學裡既是真的、又不是廢話的命題來聽聽。他當年答不出來，三十年後才想到答案，就是比較利益，並補了一句："
+    },
+    {
+      "type": "quote",
+      "text": "它在邏輯上為真，這一點在數學家面前不必爭；它不是廢話，則有成千上萬重要而聰明的人可以作證：他們始終沒能自己領會這套學說，或者在別人解釋過之後仍然不信。",
+      "original": "That it is logically true need not be argued before a mathematician; that it is not trivial is attested by the thousands of important and intelligent men who have never been able to grasp the doctrine for themselves or to believe it after it was explained to them.",
+      "cite": "薩繆森，〈The Way of an Economist〉，1968 年演講，1969 年收入大會論文集"
+    },
+    {
+      "type": "h",
+      "text": "葡萄牙兩樣都比較省工"
+    },
+    {
+      "type": "p",
+      "text": "李嘉圖書裡談對外貿易的那一章，例子只有兩國、兩樣東西。他假設：在英格蘭，織出那批布要 100 個人做一年，釀出那批酒要 120 人；在葡萄牙，釀酒只要 80 人，織布要 90 人。"
+    },
+    {
+      "type": "p",
+      "text": "先確認第一件事：葡萄牙兩樣都比較省人力。同一樣東西誰用的資源少，經濟學叫「絕對利益」，葡萄牙兩樣都有。照直覺，它什麼都自己做就好。李嘉圖的結論卻是葡萄牙該專心釀酒，布向英格蘭買。"
+    },
+    {
+      "type": "p",
+      "text": "我們把問題換個問法：不問「做這批酒要幾個人」，改問「做這批酒，得少織多少布」。做一件事時放棄的另一件事，就叫「機會成本」。英格蘭釀一批酒的 120 個人，拿去織布可以織 1.2 批，所以它的一批酒值 1.2 批布。葡萄牙釀酒的 80 個人去織布，只織得出約 0.89 批。"
+    },
+    {
+      "type": "p",
+      "text": "到這一步只要抓住一件事：拿布當尺，葡萄牙的酒比較便宜。反過來拿酒當尺量布，英格蘭一批布約等於 0.83 批酒，葡萄牙要 1.125 批，英格蘭的布比較便宜。比較利益的「比較」，比的不是人力，是放棄的東西。"
+    },
+    {
+      "type": "table",
+      "title": "李嘉圖的四個數字，和背後的代價",
+      "head": [
+        "",
+        "織一批布",
+        "釀一批酒",
+        "釀一批酒，少織幾批布",
+        "織一批布，少釀幾批酒"
+      ],
+      "rows": [
+        [
+          "英格蘭",
+          "100 人做一年",
+          "120 人做一年",
+          "120 ÷ 100 = 1.2",
+          "100 ÷ 120 ≈ 0.83"
+        ],
+        [
+          "葡萄牙",
+          "90 人做一年",
+          "80 人做一年",
+          "80 ÷ 90 ≈ 0.89",
+          "90 ÷ 80 = 1.125"
+        ]
+      ],
+      "caption": "前兩欄是李嘉圖的假設，照教科書的讀法當成各一批固定的量；後兩欄是本報算出的機會成本。"
+    },
+    {
+      "type": "h",
+      "text": "人數一個沒多，布和酒都多了"
+    },
+    {
+      "type": "p",
+      "tag": "原創示範",
+      "text": "先算不交易的世界：兩國各織一批布、釀一批酒，英格蘭用掉 220 人年，葡萄牙 170 人年，全世界 2 批布、2 批酒。現在讓英格蘭的 220 人全去織布，得 2.2 批；葡萄牙的 170 人全去釀酒，170 除以 80，得 2.125 批。總人力一樣，布多了 0.2 批，酒多了 0.125 批。算出來不一樣的話，回去看表的前兩欄：分工只是把每個人搬到他放棄得比較少的那一格。"
+    },
+    {
+      "type": "p",
+      "text": "多出來的靠交換分掉。李嘉圖寫的是英格蘭拿 100 個人織的布，換葡萄牙 80 個人釀的酒，一批換一批。換完，英格蘭有 1.2 批布、1 批酒，葡萄牙有 1 批布、1.125 批酒，都比關起門來多。"
+    },
+    {
+      "type": "h",
+      "text": "價錢只能落在兩個代價之間"
+    },
+    {
+      "type": "p",
+      "text": "一批換一批不是唯一的價錢，但價錢有邊界。一批酒換不到 0.89 批布，葡萄牙不如自己織；要價超過 1.2 批布，英格蘭不如自己釀。中間任何比例，兩邊都划算。比較利益保證這一段存在；價錢落在段裡哪裡、好處多分給誰，它不管。"
+    },
+    {
+      "type": "svg",
+      "svg": "<svg viewBox=\"0 0 640 230\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"一批酒能換幾批布的數線，0.89 到 1.2 之間是雙方都划算的範圍\"><rect class=\"soft\" x=\"205.7\" y=\"96\" width=\"240.0\" height=\"48\"/><line class=\"ink line\" x1=\"60\" y1=\"120\" x2=\"600\" y2=\"120\" stroke-width=\"2\"/><line class=\"muted line\" x1=\"60.0\" y1=\"114\" x2=\"60.0\" y2=\"126\" stroke-width=\"1\"/><text class=\"muted\" x=\"60.0\" y=\"144\" font-size=\"12\" text-anchor=\"middle\">0.7</text><line class=\"muted line\" x1=\"137.1\" y1=\"114\" x2=\"137.1\" y2=\"126\" stroke-width=\"1\"/><text class=\"muted\" x=\"137.1\" y=\"144\" font-size=\"12\" text-anchor=\"middle\">0.8</text><line class=\"muted line\" x1=\"214.3\" y1=\"114\" x2=\"214.3\" y2=\"126\" stroke-width=\"1\"/><text class=\"muted\" x=\"214.3\" y=\"144\" font-size=\"12\" text-anchor=\"middle\">0.9</text><line class=\"muted line\" x1=\"291.4\" y1=\"114\" x2=\"291.4\" y2=\"126\" stroke-width=\"1\"/><text class=\"muted\" x=\"291.4\" y=\"144\" font-size=\"12\" text-anchor=\"middle\">1.0</text><line class=\"muted line\" x1=\"368.6\" y1=\"114\" x2=\"368.6\" y2=\"126\" stroke-width=\"1\"/><text class=\"muted\" x=\"368.6\" y=\"144\" font-size=\"12\" text-anchor=\"middle\">1.1</text><line class=\"muted line\" x1=\"445.7\" y1=\"114\" x2=\"445.7\" y2=\"126\" stroke-width=\"1\"/><text class=\"muted\" x=\"445.7\" y=\"144\" font-size=\"12\" text-anchor=\"middle\">1.2</text><line class=\"muted line\" x1=\"522.9\" y1=\"114\" x2=\"522.9\" y2=\"126\" stroke-width=\"1\"/><text class=\"muted\" x=\"522.9\" y=\"144\" font-size=\"12\" text-anchor=\"middle\">1.3</text><line class=\"muted line\" x1=\"600.0\" y1=\"114\" x2=\"600.0\" y2=\"126\" stroke-width=\"1\"/><text class=\"muted\" x=\"600.0\" y=\"144\" font-size=\"12\" text-anchor=\"middle\">1.4</text><line class=\"accent line\" x1=\"205.7\" y1=\"70\" x2=\"205.7\" y2=\"150\" stroke-width=\"2.5\"/><line class=\"accent line\" x1=\"445.7\" y1=\"70\" x2=\"445.7\" y2=\"150\" stroke-width=\"2.5\"/><text x=\"205.7\" y=\"44\" font-size=\"13\" text-anchor=\"middle\">葡萄牙自己釀一批酒</text><text x=\"205.7\" y=\"62\" font-size=\"13\" text-anchor=\"middle\">少織約 0.89 批布</text><text x=\"445.7\" y=\"44\" font-size=\"13\" text-anchor=\"middle\">英格蘭自己釀一批酒</text><text x=\"445.7\" y=\"62\" font-size=\"13\" text-anchor=\"middle\">少織 1.2 批布</text><circle class=\"gold\" cx=\"291.4\" cy=\"120\" r=\"6\"/><text class=\"gold\" x=\"291.4\" y=\"170\" font-size=\"13\" text-anchor=\"middle\">一批換一批（1.0）</text><text x=\"325.7\" y=\"196\" font-size=\"13\" text-anchor=\"middle\">這一段裡的任何價錢，兩國都划算</text><text class=\"muted\" x=\"132.8\" y=\"96\" font-size=\"12\" text-anchor=\"middle\">葡萄牙寧可</text><text class=\"muted\" x=\"132.8\" y=\"110\" font-size=\"12\" text-anchor=\"middle\">自己織布</text><text class=\"muted\" x=\"522.9\" y=\"96\" font-size=\"12\" text-anchor=\"middle\">英格蘭寧可</text><text class=\"muted\" x=\"522.9\" y=\"110\" font-size=\"12\" text-anchor=\"middle\">自己釀酒</text><text class=\"muted\" x=\"330\" y=\"222\" font-size=\"12\" text-anchor=\"middle\">橫軸：一批酒在市場上換得到幾批布</text></svg>",
+      "caption": "原創示意：一批酒能換到幾批布。兩條紅線是兩國自己釀一批酒要放棄的布（依李嘉圖的四個數字計算），中間淺色段是雙方都划算的交換比例；金點是李嘉圖例子裡的一批換一批。"
+    },
+    {
+      "type": "h",
+      "text": "兩個鞋匠，和這個比喻不準的地方"
+    },
+    {
+      "type": "p",
+      "text": "李嘉圖在同一章的註腳裡把它縮成兩個人："
+    },
+    {
+      "type": "quote",
+      "text": "兩個人都會做鞋和帽子，其中一人兩樣都比另一人強；但做帽子，他只勝過對手五分之一，也就是 20%，做鞋卻能勝過三分之一，也就是 33%。讓較強的人專做鞋、較弱的人專做帽子，難道不是對兩人都有利？",
+      "original": "Two men can both make shoes and hats, and one is superior to the other in both employments; but in making hats, he can only exceed his competitor by one-fifth or 20 per cent, and in making shoes he can excel him by one-third or 33 per cent;—will it not be for the interest of both, that the superior man should employ himself exclusively in making shoes, and the inferior man in making hats?",
+      "cite": "李嘉圖，《政治經濟學及賦稅原理》1821 年第三版，〈論對外貿易〉註 20"
+    },
+    {
+      "type": "p",
+      "text": "比喻好用的地方是：一個人一天的時間固定，強的那位多做一頂帽子就少做一雙鞋，而他做鞋的優勢比較大。到這裡，國家和鞋匠是同一回事。"
+    },
+    {
+      "type": "p",
+      "text": "不準的地方，李嘉圖自己點出來了。一個人沒辦法分身，國家的資本和工人卻可以搬家。他承認，英格蘭織布的資本和人力如果能整個搬到葡萄牙，對英格蘭的資本家和兩國消費者都更好，布和酒乾脆全在葡萄牙做；同一國之內正是如此，倫敦的錢賺得少，就往約克郡跑。國與國之間不一樣，是因為錢離開主人眼前就讓人不放心，人也捨不得離開出生的國家。把國家想成鞋匠時要記得，這個比喻偷偷假設了「搬不走」。"
+    },
+    {
+      "type": "h",
+      "text": "三種常見的誤會"
+    },
+    {
+      "type": "p",
+      "text": "它不是「做你最擅長的事」。葡萄牙兩樣都擅長，它放掉的是比較沒那麼擅長的那一樣；好處來自各做自己代價低的那一樣，不是來自誰最厲害。"
+    },
+    {
+      "type": "p",
+      "text": "它不保證一國之內人人都贏。鞋匠的故事裡，換工作的人和拿好處的人是同一個；國家不是。經濟學家克魯曼（Paul Krugman）在〈李嘉圖的難懂想法〉一文列過：進口可能壓低工資或造成失業，國民所得就算增加，分配也可能移到讓一大群人受害的方向。"
+    },
+    {
+      "type": "p",
+      "text": "它也不是說工資低的國家會把生意全搶走。克魯曼把這種擔心叫「窮人勞力」謬誤，說李嘉圖提出這個概念時就處理過了。前面的算術從頭到尾沒用到工資。工資自己也會動：一國的生產力趕上西方，工資也會跟上，日本就是這樣。"
+    },
+    {
+      "type": "h",
+      "text": "最後才給的那一句定義"
+    },
+    {
+      "type": "p",
+      "text": "教科書的定義是：一個國家做某樣東西，若用其他東西計算的成本比較低，它在這樣東西上就有比較利益。對回那張表，「用其他東西計算的成本」就是右邊兩欄：0.89 低於 1.2，葡萄牙在酒有比較利益；0.83 低於 1.125，英格蘭在布有。只要兩國這兩欄不同，就各有一樣，中間也一定有那條線段。"
+    },
+    {
+      "type": "p",
+      "text": "薩繆森說聰明人學不會，依我看多半卡在第一步：一聽到「誰比較會做」，人就去比人力，忘了換成「放棄了什麼」。"
+    },
+    {
+      "type": "p",
+      "text": "李嘉圖寫完資本不肯出國的那一段，最後加了一句自己的心意："
+    },
+    {
+      "type": "quote",
+      "text": "這些感情，我不願見它們變淡；它們讓多數有產業的人，甘願在自己國家拿較低的利潤，也不去外國替財富找更有利的用途。",
+      "original": "These feelings, which I should be sorry to see weakened, induce most men of property to be satisfied with a low rate of profits in their own country, rather than seek a more advantageous employment for their wealth in foreign nations.",
+      "cite": "李嘉圖，《政治經濟學及賦稅原理》1821 年第三版，〈論對外貿易〉"
+    },
+    {
+      "type": "callout",
+      "label": "如果你真的懂了，應該答得出來",
+      "items": [
+        "英格蘭發明新織法，一批布只要 50 人做一年，酒仍要 120 人；葡萄牙不變。誰該做什麼？雙方都划算的價錢範圍變成多少？",
+        "換一組數字：葡萄牙織布 75 人、釀酒 90 人，英格蘭仍是 100 和 120。兩國分工交換還有好處嗎？",
+        "李嘉圖承認，資本若能自由跨國移動，布和酒會全在葡萄牙做。這和比較利益矛盾嗎？"
+      ]
+    },
+    {
+      "type": "spoiler",
+      "text": "以下是答案"
+    },
+    {
+      "type": "callout",
+      "label": "答案",
+      "items": [
+        "英格蘭釀一批酒現在要少織 120 ÷ 50 = 2.4 批布，葡萄牙仍約 0.89 批。分工方向不變，葡萄牙釀酒、英格蘭織布；划算的範圍變寬，一批酒換 0.89 到 2.4 批布之間。",
+        "沒有。葡萄牙釀一批酒要少織 90 ÷ 75 = 1.2 批布，和英格蘭一樣。代價相同，線段縮成一個點。絕對利益再大也沒用，要的是代價不同。",
+        "不矛盾。比較利益回答的是人和資本搬不走時，各國手上的人怎麼用最划算。搬得走，兩國就像一國的兩個省，生產跟著最省人力的地方走，比的又回到人力。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "On the Principles of Political Economy and Taxation, Chapter 7: On Foreign Trade（1821 年第三版）",
+      "publisher": "David Ricardo；Econlib（Liberty Fund）線上版",
+      "date": "2018-02-05",
+      "url": "https://www.econlib.org/library/Ricardo/ricP2a.html",
+      "note": "英葡布酒四個數字、「100 人的產出換 80 人的產出」、資本不易跨國移動、「These feelings, which I should be sorry to see weakened」與註 20 鞋帽例皆出自此章。Econlib 說明初版 1817 年由 London: John Murray 出版，此為 1821 年第三版。"
+    },
+    {
+      "title": "What Economic Ideas are True and Nontrivial?",
+      "publisher": "Timothy Taylor, Conversable Economist",
+      "date": "2025-08-13",
+      "url": "https://conversableeconomist.com/2025/08/13/what-economic-ideas-are-true-and-nontrivial/",
+      "note": "轉引薩繆森演講原文整段（烏拉姆、哈佛 Society of Fellows、三十年後的答案）。原出處：Samuelson, P. A. 1969, \"Presidential Address: The Way of an Economist,\" in P. A. Samuelson (ed.), International Economic Relations, pp. 1–11。"
+    },
+    {
+      "title": "Presidential Address: The Way of an Economist",
+      "publisher": "IDEAS/RePEc（Palgrave Macmillan, International Economic Relations, 1969, pp. 1–11）",
+      "date": "1969",
+      "url": "https://ideas.repec.org/h/pal/intecp/978-1-349-00767-7_1.html",
+      "note": "書目資料。"
+    },
+    {
+      "title": "International Economic Relations: Proceedings of the Third Congress of the International Economic Association（Montreal, 2–7 Sept. 1968）",
+      "publisher": "Loughborough University Library 目錄",
+      "date": "1969",
+      "url": "https://vufind.lboro.ac.uk/Record/32403",
+      "note": "大會時間地點：1968 年 9 月 2–7 日，蒙特婁；薩繆森編，1969 年出版。"
+    },
+    {
+      "title": "Understanding the WTO: The case for open trade",
+      "publisher": "World Trade Organization",
+      "date": "",
+      "url": "https://www.wto.org/english/thewto_e/whatis_e/tif_e/fact3_e.htm",
+      "note": "WTO 以比較利益解釋開放貿易；並引薩繆森同一段話，稱他為 Nobel laureate。"
+    },
+    {
+      "title": "Ricardo's Difficult Idea",
+      "publisher": "Paul Krugman（MIT 個人網頁）",
+      "date": "1996",
+      "url": "https://web.mit.edu/krugman/www/ricardo.htm",
+      "note": "頁面未標日期，文中引用的最新文獻為 1995 年。用到：進口可能壓低工資或造成失業、所得分配可能讓一大群人受害；pauper labor 謬誤與李嘉圖；生產力趕上則工資跟上、日本為例。"
+    },
+    {
+      "title": "Principles of Economics 3e, 33.1 Absolute and Comparative Advantage",
+      "publisher": "OpenStax（Rice University）",
+      "date": "2022-12-14",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/33-1-absolute-and-comparative-advantage",
+      "note": "絕對利益、機會成本、比較利益定義（a country has a comparative advantage when it can produce a good at a lower cost in terms of other goods）；李嘉圖是商人、經濟學者、國會議員，1817 年出書。"
+    },
+    {
+      "title": "Principles of Economics 3e, 33.2 What Happens When a Country Has an Absolute Advantage in All Goods",
+      "publisher": "OpenStax（Rice University）",
+      "date": "2022-12-14",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/33-2-what-happens-when-a-country-has-an-absolute-advantage-in-all-goods",
+      "note": "一國每樣都有絕對利益時貿易仍對雙方有利；用機會成本找出對雙方都有利的交易範圍。"
+    },
+    {
+      "title": "David Ricardo (1772–1823)",
+      "publisher": "David R. Henderson, The Concise Encyclopedia of Economics（Econlib）",
+      "date": "",
+      "url": "https://www.econlib.org/library/Enc/bios/Ricardo.html",
+      "note": "生平：股票與放款經紀致富、27 歲讀《國富論》、反對穀物法、提出比較成本。"
+    },
+    {
+      "title": "The Demystification of David Ricardo's Famous Four Numbers",
+      "publisher": "Jorge Morales Meoqui, Journal of the History of Economic Thought 45(3): 447–466",
+      "date": "2023",
+      "url": "https://ideas.repec.org/p/osf/socarx/3wu6x.html",
+      "note": "正文表格說「照教科書的讀法」即因此文：這四個數字原意仍有爭論。依摘要：主張四個數字只為說明國與國之間的相對價值不由勞動量決定，並非用來衡量貿易利得，與 19 世紀中葉以來的讀法相反。DOI 10.1017/S1053837222000256。"
+    }
+  ]
+}
