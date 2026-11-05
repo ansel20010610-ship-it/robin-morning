@@ -17,8 +17,8 @@ from common import ROOT, UA, TW  # noqa: E402
 
 STATE = os.path.join(ROOT, "state", "serial")
 ISSUES = os.path.join(ROOT, "content", "issues")
-TARGET = 600   # source words per installment: Russian → Chinese runs about 2.8 characters a word, so ~1700 characters
-MIN_CJK, MAX_CJK = 1100, 2600
+TARGET = 800   # source words per installment (the owner, 2026-11-05: 每回文字可以多一點): Russian → Chinese runs about 2.8 characters a word, so ~2,200 characters
+MIN_CJK, MAX_CJK = 1100, 3800
 CJK = re.compile(r"[一-鿿]")
 CYR = re.compile(r"[Ѐ-ӿ]{3,}")
 
