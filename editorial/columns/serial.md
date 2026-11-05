@@ -8,6 +8,7 @@
 - 原文已切好：`state/serial/<slug>/src/<回>.json`（每回的俄文段落、在書中的位置、字數），計畫在 `state/serial/<slug>.json`（每回的日期）。
 - `python3 scripts/serial.py status`：哪些回已譯、譯到哪一天、還缺哪些（目標是提前 3 天：平常一天譯一回，壞掉一天也不開天窗；社長 2026-11-05：之後每天翻就好）。
 - `python3 scripts/serial.py src <slug> <n>`：印出第 n 回的原文。
+- 斷點（社長 2026-11-05：連載不要斷在奇怪地方）：切回的程式只在段落之間斷，優先斷在章內小標前、一段對話結束後接敘述的地方；不斷在冒號、逗號後面，不讓一回以一句短對白收尾，對話你來我往中間盡量不斷；一段超過 1,100 字（伊凡、佐西馬的長篇獨白）才會在句子之間斷，src 檔會標 `opens_mid_paragraph`／`closes_mid_paragraph`，譯者照樣開始或結束，不加任何「（續）」。一回的長度因此在 450 到 1,100 個原文字之間浮動，寧可長一點也不切壞。
 - `python3 scripts/serial.py check <slug> [<n>]`：連載專用的檢查（回數、位置、字數、有沒有漏譯的俄文、章名）。另外照常跑 `python3 scripts/validate.py <日期> --column serial`。
 - 譯名表：`state/serial/<slug>.md`，**全書譯名的唯一依據，每回譯者都要先讀**。表裡沒有的新人物、新地名，譯者決定後要加進表裡（同一次 commit）。
 

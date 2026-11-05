@@ -54,8 +54,9 @@ def clean_wikitext(txt):
     """Russian Wikisource chapter → (list of paragraphs, chapter title or "", book title or ""). Handles the markup
     of the Dostoevsky pages: the header template, {{roman}}, {{Опечатка|wrong|right}} (the correction), editorial
     notes, poem and language wrappers, the chapter heading (== I. Title ==) and the book line (<center>''…''</center>)."""
+    txt = re.sub(r"\{\{roman\|(\d+)\}\}", lambda m: ROMAN[int(m.group(1))] if int(m.group(1)) < len(ROMAN) else m.group(1), txt)  # first: the header nests it
     txt = re.sub(r"\{\{Отексте.*?\}\}", "", txt, flags=re.S)
-    txt = txt.replace("__NOEDITSECTION__", "").replace("&nbsp;", " ")
+    txt = re.sub(r"__[A-Z]+__", "", txt).replace("&nbsp;", " ")
     txt = re.sub(r"\[\[Категория:[^\]]*\]\]|\[\[[a-z\-]{2,7}:[^\]]*\]\]", "", txt)
     txt = re.sub(r"<ref>.*?</ref>", "", txt, flags=re.S)
     txt = re.sub(r"\{\{roman\|(\d+)\}\}", lambda m: ROMAN[int(m.group(1))] if int(m.group(1)) < len(ROMAN) else m.group(1), txt)
@@ -81,6 +82,7 @@ def clean_wikitext(txt):
     txt = re.sub(r"\[\[([^\]|]*\|)?([^\]]*)\]\]", r"\2", txt)
     txt = re.sub(r"'{2,3}", "", txt)
     txt = txt.replace("}}", "")
+    txt = re.sub(r"\s*\|\s*", "\n", txt)  # the lines of a {{poem}} are separated by |: keep them as lines
     paras = [re.sub(r"[ \t]+", " ", p).strip() for p in re.split(r"\n\s*\n", txt)]
     return [p for p in paras if p], title, book
 
@@ -104,12 +106,13 @@ def fetch(slug):
 
 
 SENT = re.compile(r"(?<=[.!?…»])\s+(?=[«—А-ЯЁ])")
-LONG = 450  # a paragraph longer than this (a letter, a monologue) may be cut between sentences
+LONG = 1100  # a paragraph longer than this (Ivan's and Zosima's monologues) may be cut between sentences; shorter ones never are
+DASH = ("—", "–", "«", "-")
 
 
 def units_of(paras):
-    """Paragraphs as units of at most ~LONG words: a long paragraph is cut between sentences into pieces whose later
-    parts carry cont=True (the translator keeps them as one paragraph across installments)."""
+    """Paragraphs as units: a paragraph longer than LONG words is cut between sentences into pieces of about LONG/2,
+    whose later parts carry cont=True (the translator keeps them as one paragraph across installments)."""
     out = []
     for p in paras:
         if len(p.split()) <= LONG:
@@ -118,7 +121,7 @@ def units_of(paras):
         acc, cont = [], False
         for sent in SENT.split(p):
             acc.append(sent)
-            if sum(len(x.split()) for x in acc) >= LONG * 0.6:
+            if sum(len(x.split()) for x in acc) >= LONG * 0.5:
                 out.append({"text": " ".join(acc), "cont": cont})
                 acc, cont = [], True
         if acc:
@@ -126,30 +129,124 @@ def units_of(paras):
     return out
 
 
+def is_dialogue(t):
+    return t.lstrip().startswith(DASH)
+
+
+def cut_score(units, i, words_so_far, target):
+    """How good a break after unit i-1 (before unit i) is — the owner, 2026-11-05: 連載不要斷在奇怪地方. A new
+    sub-heading is best; a narrative paragraph after a run of dialogue is good; the middle of an exchange, a colon,
+    a dangling short line, or the inside of a paragraph are bad."""
+    last, nxt = units[i - 1]["text"], units[i]["text"]
+    sc = 0.0
+    if nxt.startswith("## "):
+        sc += 4
+    if units[i]["cont"]:
+        sc -= 6
+    ld, nd = is_dialogue(last), is_dialogue(nxt)
+    if ld and nd:
+        sc -= 2  # the middle of an exchange
+    elif not nd:
+        sc += 2  # the next paragraph is narrative: a new beat
+    tail = last.rstrip()[-1:]
+    if tail in ":,;—–":
+        sc -= 3
+    elif tail in ".…»":
+        sc += 1
+    if nxt[:1].islower():
+        sc -= 2
+    if ld and len(last.split()) < 10:
+        sc -= 2  # a dangling one-liner at the end
+    sc -= abs(words_so_far - target) / 200.0
+    return sc
+
+
+def cut_chapter(units, target):
+    """Indices where a chapter breaks into installments: each break is the best-scoring boundary (cut_score) between
+    0.7 and 1.6 × target words from the installment's start. A short tail is folded into the installment before it,
+    or that last stretch is re-cut in two at its best middle boundary when folding would make it too long."""
+    words = [len(u["text"].split()) for u in units]
+    cum = [0]
+    for w in words:
+        cum.append(cum[-1] + w)
+    total = cum[-1]
+
+    def best_between(start, lo, hi):  # the best boundary i with lo ≤ words(start..i) ≤ hi; past hi if none fits
+        best, best_i, over = None, None, None
+        for i in range(start + 1, len(units)):
+            acc = cum[i] - cum[start]
+            if acc < lo:
+                continue
+            if acc > hi:
+                over = i  # a unit longer than the window (a monologue): the first boundary beyond it
+                break
+            sc = cut_score(units, i, acc, target)
+            if best is None or sc > best:
+                best, best_i = sc, i
+        return best_i if best_i is not None else over
+
+    cuts, start = [], 0
+    while total - cum[start] > target * 1.6:
+        i = best_between(start, target * 0.7, target * 1.6)
+        if i is None:
+            break
+        cuts.append(i)
+        start = i
+    tail = total - cum[start]
+    if cuts and tail < target * 0.45:
+        prev = cuts[-2] if len(cuts) > 1 else 0
+        if total - cum[prev] <= target * 1.6 or tail < target * 0.3:
+            cuts.pop()  # fold the tail into the installment before (a long installment beats a 30-word one)
+        else:  # re-cut the last stretch in two near its middle
+            mid = (total - cum[prev]) / 2
+            i = best_between(prev, mid * 0.7, mid * 1.3) or cuts[-1]
+            cuts[-1] = i
+    return sorted({c for c in cuts if 0 < c < len(units)})
+
+
 def split(slug):
-    """Each chapter is cut into installments of about TARGET source words at paragraph (or, in a very long paragraph,
-    sentence) boundaries; a short tail is folded into the installment before it. An installment never crosses a
-    chapter. The plan gets one entry per installment with its date."""
+    """Each chapter is cut into installments of about TARGET source words at the best break points (cut_score); an
+    installment never crosses a chapter. Installments already translated (their file exists under content/issues)
+    keep their text and number; only what follows is cut afresh. The plan gets one entry per installment with its date."""
     plan = load_plan(slug)
     src = os.path.join(STATE, slug, "src")
     os.makedirs(src, exist_ok=True)
+    old = plan.get("installments", [])
+    done = [i for i in old if os.path.exists(issue_file(i["date"]))]
     inst, n = [], 0
     for ch in plan["chapters"]:
         with open(os.path.join(STATE, slug, "chapters", ch["key"] + ".json"), encoding="utf-8") as f:
             chapter = json.load(f)
-        units = units_of(chapter["paragraphs"])
-        words = [len(u["text"].split()) for u in units]
-        total = sum(words)
-        groups, acc, cur = [], 0, []
-        for i, u in enumerate(units):
-            cur.append(u)
-            acc += words[i]
-            left = total - sum(words[:i + 1])
-            if acc >= TARGET * 0.9 and left >= TARGET * 0.45:
-                groups.append(cur)
-                cur, acc = [], 0
-        if cur:
-            groups.append(cur)
+        groups = []
+        # keep the translated pieces of this chapter as they are (their text may have been cut by an earlier rule);
+        # what follows them in the chapter is cut afresh
+        kept = sorted([i for i in done if i["part"] == ch["part"] and i["chapter"] == ch["chapter"]], key=lambda x: x["piece"])
+        norm = lambda t: re.sub(r"\s+", " ", t).strip()
+        kept_text = ""
+        for i in kept:
+            with open(os.path.join(src, "%03d.json" % i["n"]), encoding="utf-8") as f:
+                e = json.load(f)
+            groups.append([{"text": t, "cont": bool(e.get("opens_mid_paragraph")) and j == 0} for j, t in enumerate(e["paragraphs"])])
+            kept_text += ("" if not kept_text else " ") + norm(" ".join(e["paragraphs"]))
+        rest, partial, pos = [], False, 0
+        for para in chapter["paragraphs"]:
+            t = norm(para)
+            if pos >= len(kept_text):
+                rest.append(para)
+            elif kept_text.startswith(t, pos):
+                pos += len(t) + 1
+            else:  # the kept text ends inside this paragraph: its remainder opens the next installment mid-paragraph
+                head = kept_text[pos:]
+                assert t.startswith(head), "已譯的回和原文對不上（%s %s）" % (ch["part"], ch["chapter"])
+                rest.append(t[len(head):].strip())
+                partial, pos = True, len(kept_text) + 1
+        units = units_of(rest)
+        if partial and units:
+            units[0]["cont"] = True
+        if units:
+            cuts = cut_chapter(units, TARGET)
+            bounds = [0] + cuts + [len(units)]
+            groups += [units[bounds[j]:bounds[j + 1]] for j in range(len(bounds) - 1)]
         for p, chunk in enumerate(groups):
             n += 1
             entry = {"n": n, "date": date_of(plan, n), "part": ch["part"], "chapter": ch["chapter"], "piece": p + 1,
@@ -158,11 +255,14 @@ def split(slug):
                      "paragraphs": [u["text"] for u in chunk]}
             with open(os.path.join(src, "%03d.json" % n), "w", encoding="utf-8") as f:
                 json.dump(entry, f, ensure_ascii=False, indent=0)
-            inst.append({k: v for k, v in entry.items() if k != "paragraphs"})
+            inst.append({k_: v for k_, v in entry.items() if k_ != "paragraphs"})
+    for f in os.listdir(src):  # leftovers from a longer earlier plan
+        if f.endswith(".json") and int(f[:3]) > n:
+            os.remove(os.path.join(src, f))
     plan["installments"] = inst
     save_plan(slug, plan)
-    print("%s：%d 回，%s 到 %s，平均 %d 字（原文）" % (plan["title"], n, inst[0]["date"], inst[-1]["date"],
-                                                     sum(i["words"] for i in inst) / n))
+    print("%s：%d 回，%s 到 %s，平均 %d 字（原文）；保留已譯 %d 回" % (plan["title"], n, inst[0]["date"], inst[-1]["date"],
+                                                                 sum(i["words"] for i in inst) / n, len(done)))
 
 
 # ——— the translated files ———
