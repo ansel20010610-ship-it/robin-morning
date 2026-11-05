@@ -371,6 +371,18 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
     title = art.get("title") if isinstance(art.get("title"), str) else ""
     dek = art.get("dek") if isinstance(art.get("dek"), str) else ""
     check_brief(art.get("brief"), dek, d, E, W, col)
+    # 文體 (STYLE.md 〇之四): every article from 2026-11-06 names its form; the shift's orchestrator assigns them (scripts/forms.py)
+    FORMS = ["scene", "document", "qa", "list", "timeline", "dialogue", "flow", "reverse", "argument", "walk", "compare", "number"]
+    if str(d) >= "2026-11-06" and col not in ("devotion", "news", "serial") and cfg["columns"].get(col, {}).get("group") != "watch":
+        if not art.get("form"):
+            W("缺少 form：派稿時指定的文體代號（STYLE.md 〇之四），同一期不重複")
+        elif art["form"] not in FORMS:
+            W("form「%s」不在菜單裡（%s）" % (art["form"], "、".join(FORMS)))
+        VOICES = ["plain", "storyteller", "letter", "scholar", "essay", "dry", "lyric", "report", "guide", "interview"]
+        if not art.get("voice"):
+            W("缺少 voice：派稿時指定的聲腔代號（STYLE.md 〇之四），同一期不重複")
+        elif art["voice"] not in VOICES:
+            W("voice「%s」不在菜單裡（%s）" % (art["voice"], "、".join(VOICES)))
     if len(title) > 32:
         W("標題偏長（%d 字）" % len(title))
     if len(dek) > 90:
