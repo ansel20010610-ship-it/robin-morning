@@ -1,0 +1,252 @@
+{
+ "column": "music",
+ "date": "2026-11-06",
+ "title": "不想接的芭蕾，和一件要保密的樂器",
+ "dek": "劇院總監寫信給柴可夫斯基：「我為了請你寫這齣芭蕾，悔恨得受盡折磨。」",
+ "brief": "《胡桃鉗》是皇家劇院總監委託柴可夫斯基寫的，總監自己在信裡道歉，說知道他不喜歡這個故事。他一邊寫，一邊向巴黎訂了一件新樂器，叮囑出版商保密：鋼片琴，糖梅仙子那串像小鈴鐺的聲音就是它。",
+ "topic_key": "music:tchaikovsky-op71",
+ "form": "walk",
+ "voice": "listener",
+ "updated_at": "2026-11-06T00:50:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "hero": {
+  "kind": "photo",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Nutcracker_-Stanislava_Belinskaya_as_Clara%2C_Lydia_Rubtsova_as_Marianna%2C_%26_Vasily_Stukolkin_as_Fritz_-1892.JPG/1280px-Nutcracker_-Stanislava_Belinskaya_as_Clara%2C_Lydia_Rubtsova_as_Marianna%2C_%26_Vasily_Stukolkin_as_Fritz_-1892.JPG",
+  "width": 1280,
+  "height": 933,
+  "alt": "黑白老照片：舞台上布置成客廳，中間一棵掛滿小飾物的聖誕樹，左邊牆上有座大鐘；一名穿長裙的女子、一個女孩和一個穿淺色衣褲的男孩圍在樹下，地上有娃娃、小鼓和一個木頭士兵玩偶。",
+  "caption": "1892 年首演製作的劇照，攝於聖彼得堡馬林斯基劇院。這是第一幕的客廳，樹下有克拉拉、弗里茨和胡桃鉗娃娃。",
+  "credit": "攝影者不詳；Mrlopez2681 由私人收藏掃描上傳；經 Wikimedia Commons",
+  "license": "Public domain",
+  "license_url": "",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Nutcracker_-Stanislava_Belinskaya_as_Clara,_Lydia_Rubtsova_as_Marianna,_%26_Vasily_Stukolkin_as_Fritz_-1892.JPG",
+  "made": "1892"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "現在是平安夜，德國一戶人家的客廳。樂團奏起一支輕快的進行曲，孩子們排著隊跑進來，聖誕樹剛點亮。這是芭蕾舞劇《胡桃鉗》（The Nutcracker）的第一幕，俄國作曲家柴可夫斯基寫的，1892 年 12 月 18 日在聖彼得堡的馬林斯基劇院首演。故事取自德國作家霍夫曼的童話：小女孩克拉拉收到一隻胡桃鉗娃娃，半夜它活了過來，帶她去糖果王國。"
+  },
+  {
+   "type": "p",
+   "text": "這齣戲的音樂，很多人是在別處先碰到的。1940 年迪士尼的動畫電影《幻想曲》（Fantasia）拿了其中幾支舞曲配上動畫；一篇 2019 年的報導估計，美國芭蕾舞團一年的票房，大約有四成來自這一齣，每年聖誕都在演。"
+  },
+  {
+   "type": "p",
+   "text": "值得照順序走一遍，是因為柴可夫斯基自己並不想寫它。1891 年，俄國皇家劇院的總監委託他，那年 8 月，總監在信裡道歉，說他知道這個題材柴可夫斯基不喜歡，還謝謝他沒有拒絕。柴可夫斯基夏天寫完草稿，信裡說這齣比他的《睡美人》差得多。"
+  },
+  {
+   "type": "music",
+   "composer": "柴可夫斯基（Pyotr Ilyich Tchaikovsky）",
+   "work": "芭蕾舞劇《胡桃鉗》，作品 71",
+   "work_original": "The Nutcracker, Op. 71",
+   "composed": "1891–1892",
+   "performers": "安塔爾・杜拉第（Antal Dorati）指揮 倫敦交響樂團",
+   "recording": "Mercury，1962 年錄於英國 Watford Town Hall",
+   "duration": "全劇約 90 分鐘",
+   "movements": [
+    "小序曲",
+    "第一幕第一景：聖誕樹、進行曲、孩子的玩具樂器、爺爺舞、午夜之戰",
+    "第一幕第二景：杉樹林與〈雪花華爾滋〉",
+    "第二幕：糖果王國、各國舞蹈、〈花之華爾滋〉、雙人舞與〈糖梅仙子之舞〉、終曲"
+   ],
+   "spotify": {
+    "album": "",
+    "tracks": [],
+    "query": "Tchaikovsky The Nutcracker Dorati London Symphony Orchestra Mercury",
+    "artist_hint": "Dorati",
+    "track_filter": [
+     "Nutcracker"
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "錄音選杜拉第和倫敦交響樂團 1962 年那一套，因為它錄的是完整的芭蕾，不只是挑出來的幾段，這條路才走得完。一篇推薦文說，它是舞者特別愛的老牌子，幾十年來定義了《胡桃鉗》該有的聲音，帶著玩具似的氣氛。"
+  },
+  {
+   "type": "h",
+   "text": "客廳裡，孩子在吵"
+  },
+  {
+   "type": "p",
+   "text": "進行曲過去，現在聽到的是一陣亂：玩具小號、小鼓、杜鵑的叫聲、搖鈴，全是孩子手上的玩具。1891 年 3 月，柴可夫斯基寫信向他的樂譜出版商 Jurgenson 要「兒童樂器」，就是海頓和 Romberg 的交響曲裡用過的那種；Jurgenson 回信說，一箱樂器已經上火車了。這一場在戲裡是克拉拉抱著壞掉的胡桃鉗哄它睡，弗里茨和朋友在旁邊敲敲打打。派對的最後一支舞叫「爺爺舞」，旋律是 17 世紀的德國舞曲。"
+  },
+  {
+   "type": "h",
+   "text": "午夜之後，雪林裡有人在唱"
+  },
+  {
+   "type": "p",
+   "text": "鐘敲十二下，老鼠出來，玩具和老鼠打了一仗，胡桃鉗變成王子，帶克拉拉穿過冬天的杉樹林。現在聽到的是〈雪花華爾滋〉，樂團之外多了一群沒有歌詞的人聲。柴可夫斯基在總譜上寫明，要 12 位女高音、12 位女低音，最好是合唱團的少年。"
+  },
+  {
+   "type": "h",
+   "text": "寫不出糖果王國的四月"
+  },
+  {
+   "type": "p",
+   "text": "走進糖果王國以前，要回到 1891 年 4 月。柴可夫斯基人在法國魯昂（Rouen），正趕著寫前兩景的草稿，就收到妹妹亞歷珊卓過世的消息。隔天他寫：「比昨天、前天更覺得，我完全沒辦法用音樂描繪糖果王國。」他請劇院把芭蕾延到下一季，劇院答應了。他去了一趟美國，5 月底回來，才重新動筆。"
+  },
+  {
+   "type": "p",
+   "text": "下面這一串小舞，有的最早是為第一幕寫的。總監要第一幕不要舞蹈，柴可夫斯基就把草稿本裡的西班牙舞和中國舞挪到第二幕。現在聽到的是巧克力（西班牙舞）、咖啡（阿拉伯舞）、茶（中國舞）、特列帕克（俄羅斯舞，越跳越快）、蘆笛舞，一個老媽媽帶著小丑出場。茶是這一串裡最短的一支，來不及坐穩就換下一個。"
+  },
+  {
+   "type": "h",
+   "text": "最後一站，糖梅仙子"
+  },
+  {
+   "type": "p",
+   "text": "〈花之華爾滋〉以後是雙人舞（pas de deux，兩位舞者的段落），中間有糖梅仙子（Sugar Plum Fairy）的獨舞。現在聽到的是一串小鈴鐺似的聲音，旋律由它來彈。這是鋼片琴（celesta）：有鍵盤，琴鍵連著小槌，敲在一排鋼片上。巴黎的風琴製造商 Mustel 在 1886 年做出來，柴可夫斯基是第一批拿它進管弦樂團的大作曲家。"
+  },
+  {
+   "type": "p",
+   "text": "1891 年 6 月，他請 Jurgenson 向巴黎訂一台，說它的聲音「神妙得不同尋常」。9 月初他又寫信去叮嚀："
+  },
+  {
+   "type": "quote",
+   "text": "看在上帝的份上，記住：在我第一次用上它的作品演出之前，除了我，誰都不該聽到這件奇妙樂器的聲音。",
+   "original": "Ради Бога, имей в виду, что никто, кроме меня, не должен слышать звуков этого чудного инструмента до того, как сыграют моё сочинение, в коем оно впервые употребится.",
+   "cite": "柴可夫斯基致 Jurgenson，1891 年 9 月 3 日（俄曆 8 月 22 日），Tchaikovsky Research 刊出"
+  },
+  {
+   "type": "p",
+   "text": "他說的「我的作品」，先是同年 11 月在莫斯科首演的管弦樂曲《總督》，接著是這齣芭蕾。總譜上他還註明：彈鋼片琴的人應該是好鋼琴家；〈糖梅仙子之舞〉那一段，找不到鋼片琴可以用鋼琴代替。"
+  },
+  {
+   "type": "timeline",
+   "title": "從草稿到首演",
+   "caption": "依 Tchaikovsky Research 的信件與條目整理，日期換成公曆。",
+   "items": [
+    {
+     "when": "1891.3",
+     "label": "向出版商要兒童樂器",
+     "note": "Jurgenson 回信：一箱樂器已上火車"
+    },
+    {
+     "when": "1891.4",
+     "label": "魯昂",
+     "note": "趕出前兩景草稿；妹妹過世，請求延期"
+    },
+    {
+     "when": "1891.6",
+     "label": "訂鋼片琴",
+     "note": "請 Jurgenson 向巴黎訂購；同月寫第二幕"
+    },
+    {
+     "when": "1891.7",
+     "label": "草稿完成",
+     "note": "信裡說比《睡美人》差得多"
+    },
+    {
+     "when": "1891.9",
+     "label": "叮嚀保密",
+     "note": "信 4459：誰都不該先聽到那件樂器"
+    },
+    {
+     "when": "1891.11",
+     "label": "《總督》首演",
+     "note": "鋼片琴在這首先出聲"
+    },
+    {
+     "when": "1892.3",
+     "label": "組曲首演",
+     "note": "他自己挑八段編成，由他指揮，立刻受歡迎"
+    },
+    {
+     "when": "1892.12",
+     "label": "芭蕾首演",
+     "note": "馬林斯基劇院，與歌劇《約蘭塔》同晚"
+    }
+   ]
+  },
+  {
+   "type": "h",
+   "text": "散場，觀眾覺得無聊"
+  },
+  {
+   "type": "p",
+   "text": "1892 年 12 月 18 日，《胡桃鉗》和他的歌劇《約蘭塔》同一晚首演。編舞家佩蒂帕（Marius Petipa）起了頭，後來生病，由助手伊凡諾夫（Lev Ivanov）接手完成。柴可夫斯基事後這樣寫："
+  },
+  {
+   "type": "quote",
+   "text": "《胡桃鉗》演得相當好：製作華麗，一切都很順利，可是我覺得觀眾不喜歡。他們覺得無聊。",
+   "cite": "柴可夫斯基自述，據 Tchaikovsky Research 所引"
+  },
+  {
+   "type": "p",
+   "text": "反倒是組曲先紅了：他在芭蕾首演前九個月，先挑八段編成一套音樂會用的組曲，自己指揮，聽眾馬上喜歡。完整的芭蕾要等到 1954 年，編舞家巴蘭欽替紐約市立芭蕾（New York City Ballet）做的新製作，才變成每年聖誕的固定節目。想聽他自己認定更好的那一齣，接著聽《睡美人》（The Sleeping Beauty）。"
+  },
+  {
+   "type": "p",
+   "text": "1893 年 11 月 6 日，柴可夫斯基在聖彼得堡過世，53 歲，離這齣戲首演不到一年。133 年前的今天。"
+  }
+ ],
+ "sources": [
+  {
+   "title": "The Nutcracker",
+   "publisher": "Tchaikovsky Research",
+   "date": "2024-08-23",
+   "url": "https://en.tchaikovsky-research.net/pages/The_Nutcracker",
+   "note": "日期為頁面最後修改日；2026-11-05 查閱。創作經過、總監與作曲家的信、玩具樂器、無詞合唱的指示、首演與柴可夫斯基的自述"
+  },
+  {
+   "title": "The Nutcracker (suite)",
+   "publisher": "Tchaikovsky Research",
+   "date": "2023-02-14",
+   "url": "https://en.tchaikovsky-research.net/pages/The_Nutcracker_%28suite%29",
+   "note": "日期為頁面最後修改日；2026-11-05 查閱。組曲 1892 年 3 月首演；《總督》的總譜後來被他毀掉"
+  },
+  {
+   "title": "Letter 4459：Tchaikovsky to Pyotr Jurgenson，22 August/3 September 1891",
+   "publisher": "Tchaikovsky Research",
+   "date": "2022-07-12",
+   "url": "https://en.tchaikovsky-research.net/pages/Letter_4459",
+   "note": "日期為頁面最後修改日；2026-11-05 查閱。俄文原文與 Brett Langston 英譯；《總督》首演日期見該頁注 1"
+  },
+  {
+   "title": "The Nutcracker",
+   "publisher": "Wikipedia",
+   "date": "2026-11-03",
+   "url": "https://en.wikipedia.org/wiki/The_Nutcracker",
+   "note": "日期為條目最後修訂日；2026-11-05 查閱。《幻想曲》、巴蘭欽 1954 年版、劇情改編來源"
+  },
+  {
+   "title": "Celesta",
+   "publisher": "Wikipedia",
+   "date": "2026-09-11",
+   "url": "https://en.wikipedia.org/wiki/Celesta",
+   "note": "日期為條目最後修訂日；2026-11-05 查閱。鋼片琴的構造、1886 年 Mustel 發明、柴可夫斯基最早用於管弦樂"
+  },
+  {
+   "title": "Death of Pyotr Ilyich Tchaikovsky",
+   "publisher": "Wikipedia",
+   "date": "2026-05-29",
+   "url": "https://en.wikipedia.org/wiki/Death_of_Pyotr_Ilyich_Tchaikovsky",
+   "note": "日期為條目最後修訂日；2026-11-05 查閱。1893 年 11 月 6 日（俄曆 10 月 25 日）在聖彼得堡過世"
+  },
+  {
+   "title": "How the Nutcracker Ballet Went From a Flop to a Christmas Tradition",
+   "publisher": "History News Network（Bruce Chadwick）",
+   "date": "2019-12-12",
+   "url": "https://historynewsnetwork.org/article/173825",
+   "note": "美國芭蕾舞團約 40% 年票房來自《胡桃鉗》"
+  },
+  {
+   "title": "Which Nutcracker recording is for you?",
+   "publisher": "YourClassical（Jay Gabler）",
+   "date": "2016-12-23",
+   "url": "https://yourclassical.org/story/2014/12/10/best-nutcracker-recordings",
+   "note": "杜拉第／倫敦交響樂團 1962 年 Mercury 錄音的評語"
+  },
+  {
+   "title": "Tchaikovsky – The Nutcracker Ballet / Dorati / LSO",
+   "publisher": "The Skeptical Audiophile",
+   "date": "2021-05-28",
+   "url": "https://ontherecord.co/2021/05/28/tchaikovsky-the-nutcracker-ballet-dorati-lso/",
+   "note": "1962 年 Watford Town Hall 錄音資料"
+  }
+ ]
+}
