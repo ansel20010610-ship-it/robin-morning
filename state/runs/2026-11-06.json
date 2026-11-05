@@ -18,5 +18,12 @@
       "concept"
     ],
     "note": "古蹟(timeline/walker)與詩(qa/reader)兩篇完成，審稿、總編重寫、忠實度核對皆做；詩剩4條問句小標WARN"
+  },
+  "3": {
+    "finished_at": "2026-11-06T03:05:49+08:00",
+    "missing": [
+      "news"
+    ],
+    "note": "concept 比較利益（argument/tutor）、football 巴薩晨報初稿（reverse/fan）皆完成審稿、總編重寫、忠實度核對並推送"
   }
 }
