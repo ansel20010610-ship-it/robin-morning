@@ -1,149 +1,171 @@
 {
   "column": "perio",
   "date": "2026-11-06",
-  "title": "治牙周三個月，HbA1c 平均低 0.43",
-  "dek": "同一個問題，Cochrane 2015 年說證據低、半年後看不出差別；2022 年納入的人數加倍，答案跟著改了。",
-  "brief": "同時有牙周炎與糖尿病的人，接受齦下清創三到四個月後，HbA1c 平均比不治療或一般照護低 0.43 個百分點，Cochrane 評為中等確定性。這是同一題的第三版回顧，收了 35 個隨機試驗；上一版還只敢說證據低，半年後的差距幾乎是零。",
-  "takeaway": "牙周炎合併第 2 型糖尿病的病人，齦下清創後三到四個月 HbA1c 平均低 0.43 個百分點，半年仍低 0.30（中等確定性）。可以據此建議糖尿病人治牙周，但對併發症與一年以上效果的證據還不足。",
-  "form": "qa",
+  "title": "牙周炎與冠心病的關聯有據，治牙周防心肌梗塞未證實",
+  "dek": "「不足以支持，也不足以否定。」牙周與心臟兩科的專家 2019 年在馬德里坐下來，對治牙周能否防心臟病，給的就是這句。",
+  "brief": "牙周炎病人得冠心病的風險較高，歐洲牙周病學會與世界心臟聯盟 2020 年的共識報告認為流行病學證據有力；但治牙周能不能減少心肌梗塞或中風，至今沒有隨機試驗答得出來。臨床上，共識建議心血管病人的齦下清創分次做，抗血小板藥不必停。",
+  "takeaway": "照 2020 年 EFP／WHF 共識，牙周炎與冠心病的關聯證據有力，治牙周可降 CRP 等發炎指標（中等證據），能否預防心肌梗塞、中風則證據不足。心血管病人的清創分次做，每次 30–45 分鐘，抗血小板藥不必停。",
+  "form": "list",
   "voice": "colleague",
-  "topic_key": "perio:doi:10.1002/14651858.cd004714.pub4",
-  "updated_at": "2026-11-06T00:51:12+08:00",
+  "topic_key": "perio:doi:10.1111/jcpe.13189",
+  "updated_at": "2026-11-06T01:08:50+08:00",
   "spoiler": null,
   "disclaimer": "醫學教學導讀，非個別診療建議。",
   "hero": {
     "id": "hero",
-    "kind": "photo",
-    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Curette.jpg/1280px-Curette.jpg",
+    "kind": "illustration",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/2113ab_Atherosclerosis.jpg/1280px-2113ab_Atherosclerosis.jpg",
     "width": 1280,
-    "height": 800,
-    "alt": "戴白色手套的手握著黃色握柄的刮治器，金屬尖端伸向病人張開的嘴裡下排牙齒；另一隻手拿著紅色握柄的口鏡撐開下唇。",
-    "caption": "洗牙與牙周清創用的刮治器（curette）。Milenafoto 2013 年拍攝；照片中的病人與文中的回顧、試驗無關。",
-    "credit": "Milenafoto，Wikimedia Commons",
-    "license": "CC BY-SA 3.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Curette.jpg",
+    "height": 694,
+    "alt": "左半是兩段剖開的動脈示意圖：上面一段管壁平滑、血流通暢，下面一段內壁長出黃色斑塊，管腔變窄，各附一個橫切面；右半是粉紅色的顯微鏡組織切片，標出一塊淡色的斑塊。",
+    "caption": "動脈粥狀硬化：左為正常動脈與斑塊造成狹窄的動脈示意，右為顯微鏡下的斑塊組織。共識報告所說的心血管疾病，指的就是這類動脈粥狀硬化疾病，主要是冠心病、中風與周邊動脈疾病。",
+    "credit": "OpenStax College，《Anatomy & Physiology》（2013），Wikimedia Commons",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:2113ab_Atherosclerosis.jpg",
     "made": "2013"
   },
   "body": [
     {
       "type": "p",
-      "text": "把牙周炎治好，糖尿病人的血糖會不會跟著變好，Cochrane 前後回答過三次，最近兩次的答案並不一樣。Cochrane 是專做系統性回顧的國際組織，把同一題的隨機試驗找齊、評品質、合併成一個估計值，隔幾年重做一次；這一題的第一版在 2010 年，2015 年第一次更新，這裡讀的是 2022 年 4 月出版的第二次更新，第一作者是愛丁堡大學牙醫學院的 Simpson。"
+      "text": "心血管病人坐進心臟科診間，醫師該問一句：刷牙或吃東西時牙齦會不會流血、牙齒有沒有鬆。這是 2020 年一份共識報告給心臟科醫師的建議，出自歐洲牙周病學會（EFP，出 S3 牙周治療指引的那一個）與世界心臟聯盟（WHF，總部在日內瓦，會員是一百多國、兩百多個心臟學會與基金會）。"
     },
     {
       "type": "p",
-      "text": "2015 年那一版相當保留：證據品質低，齦下清創後三到四個月 HbA1c 只低 0.29 個百分點，第六個月差距剩 0.02。2022 年版納入的研究與人數加倍，作者明寫結論因此改變，確定性從低調到中等。HbA1c 是糖化血色素，反映前三個月左右的平均血糖；齦下清創（subgingival instrumentation）就是刮除與根面整平（SRP）。"
-    },
-    {
-      "type": "h",
-      "text": "這份回顧收了哪些試驗、哪些病人"
+      "text": "兩會 2019 年 2 月在馬德里合辦研討會，牙周與心臟兩科專家依四篇技術回顧（流行病學、機轉、介入研究、服抗血栓藥者的治療風險）討論，寫成這份共識，2020 年刊在 *J Clin Periodontol*。它在本欄證據階梯的最上層，但沒用 GRADE（國際通用、替證據確定性分級的系統），而是逐題以「有力、中等、有限、不足」下判斷。"
     },
     {
       "type": "p",
-      "text": "收的全是隨機對照試驗：受試者同時有糖尿病與牙周炎，一組做齦下清創，可加抗菌劑或手術，另一組不治療，或只有口衛指導、齦上潔牙這類「一般照護」，至少追蹤三個月。文獻查到 2021 年 9 月，共 35 個試驗、3,249 人，追蹤 3 到 12 個月；除了一個試驗兼收第 1 型，全是第 2 型糖尿病，多數在醫院做。"
-    },
-    {
-      "type": "h",
-      "text": "HbA1c 實際降了多少"
+      "text": "**1**　牙周炎和冠心病的關聯，共識說流行病學證據有力。它用的詞是「獨立相關」：把抽菸、糖尿病這些兩邊共有的危險因子校正掉，關聯還在；但這仍是觀察到的相關，各研究估的風險倍數隨族群與牙周炎定義差很多，所以我不會對病人報一個倍數。"
     },
     {
       "type": "p",
-      "text": "主要結果看三到四個月：30 個試驗、2,443 人合併後，治療組的 HbA1c 比對照組低 0.43 個百分點，95% 信賴區間 0.28 到 0.59。對照組這時的 HbA1c 中位數是 7.74%；作者舉的例子是從 7.43% 降到 7%。第六個月仍低 0.30（12 個試驗、1,457 人），第十二個月低 0.50，但只來自一個 264 人的試驗。"
-    },
-    {
-      "type": "svg",
-      "title": "兩版回顧的 HbA1c 差距",
-      "svg": "<svg viewBox=\"0 0 340 348\" xmlns=\"http://www.w3.org/2000/svg\">\n<text x=\"8\" y=\"14\" font-size=\"10\" class=\"muted\">版本・追蹤時間</text>\n<text x=\"332\" y=\"14\" text-anchor=\"end\" font-size=\"10\" class=\"muted\">HbA1c 差（百分點）</text>\n<line x1=\"276.0\" y1=\"32\" x2=\"276.0\" y2=\"308\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n<text x=\"8\" y=\"44\" font-size=\"11.5\" class=\"ink\" font-weight=\"bold\">2015 年版</text>\n<text x=\"8\" y=\"64\" font-size=\"11\" class=\"ink\">3–4 個月　−0.29</text>\n<text x=\"8\" y=\"77\" font-size=\"9.5\" class=\"muted\">（−0.48 至 −0.10）</text>\n<text x=\"8\" y=\"89\" font-size=\"9.5\" class=\"muted\">14 試驗・1,499 人・低</text>\n<line x1=\"189.6\" y1=\"72\" x2=\"258.0\" y2=\"72\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"219.8\" y=\"68\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"110\" font-size=\"11\" class=\"ink\">6 個月　−0.02</text>\n<text x=\"8\" y=\"123\" font-size=\"9.5\" class=\"muted\">（−0.20 至 +0.16）</text>\n<text x=\"8\" y=\"135\" font-size=\"9.5\" class=\"muted\">5 試驗・826 人</text>\n<line x1=\"240.0\" y1=\"118\" x2=\"304.8\" y2=\"118\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"268.4\" y=\"114\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"160\" font-size=\"11.5\" class=\"ink\" font-weight=\"bold\">2022 年版</text>\n<text x=\"8\" y=\"180\" font-size=\"11\" class=\"accent\">3–4 個月　−0.43</text>\n<text x=\"8\" y=\"193\" font-size=\"9.5\" class=\"muted\">（−0.59 至 −0.28）</text>\n<text x=\"8\" y=\"205\" font-size=\"9.5\" class=\"muted\">30 試驗・2,443 人・中等</text>\n<line x1=\"169.8\" y1=\"188\" x2=\"225.6\" y2=\"188\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"194.6\" y=\"184\" width=\"8\" height=\"8\" class=\"accent\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"226\" font-size=\"11\" class=\"ink\">6 個月　−0.30</text>\n<text x=\"8\" y=\"239\" font-size=\"9.5\" class=\"muted\">（−0.52 至 −0.08）</text>\n<text x=\"8\" y=\"251\" font-size=\"9.5\" class=\"muted\">12 試驗・1,457 人</text>\n<line x1=\"182.4\" y1=\"234\" x2=\"261.6\" y2=\"234\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"218.0\" y=\"230\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<text x=\"8\" y=\"272\" font-size=\"11\" class=\"ink\">12 個月　−0.50</text>\n<text x=\"8\" y=\"285\" font-size=\"9.5\" class=\"muted\">（−0.55 至 −0.45）</text>\n<text x=\"8\" y=\"297\" font-size=\"9.5\" class=\"muted\">1 試驗・264 人</text>\n<line x1=\"177.0\" y1=\"280\" x2=\"195.0\" y2=\"280\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<rect x=\"182.0\" y=\"276\" width=\"8\" height=\"8\" class=\"ink\" fill=\"currentColor\"/>\n<line x1=\"150\" y1=\"308\" x2=\"330\" y2=\"308\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<line x1=\"168.0\" y1=\"308\" x2=\"168.0\" y2=\"312\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"168.0\" y=\"324\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">−0.6</text>\n<line x1=\"204.0\" y1=\"308\" x2=\"204.0\" y2=\"312\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"204.0\" y=\"324\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">−0.4</text>\n<line x1=\"240.0\" y1=\"308\" x2=\"240.0\" y2=\"312\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"240.0\" y=\"324\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">−0.2</text>\n<line x1=\"276.0\" y1=\"308\" x2=\"276.0\" y2=\"312\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"276.0\" y=\"324\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">0</text>\n<line x1=\"312.0\" y1=\"308\" x2=\"312.0\" y2=\"312\" class=\"ink\" stroke=\"currentColor\" stroke-width=\"1\"/>\n<text x=\"312.0\" y=\"324\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">+0.2</text>\n<text x=\"204.0\" y=\"340\" text-anchor=\"middle\" font-size=\"10\" class=\"muted\">← 治療組較低</text>\n<text x=\"303.0\" y=\"340\" text-anchor=\"middle\" font-size=\"10\" class=\"muted\">較高 →</text>\n</svg>",
-      "caption": "原創示意，依 Simpson 等 2015 年與 2022 年兩版 Cochrane 回顧的摘要重繪；方塊為合併後的平均差，橫線為 95% 信賴區間，虛線為零。證據確定性只標出兩版對 3–4 個月結果的評等。"
+      "text": "**2**　機轉說得通：刷牙、咀嚼都會讓口腔細菌進入血流，牙周炎病人的菌血症更頻繁、持續更久；動脈斑塊裡驗得到牙周致病菌的 DNA 或抗原，至少兩個研究還培養出活菌。說得通，離證明治牙周能少一次心肌梗塞還遠。"
     },
     {
       "type": "p",
-      "text": "只用兩個低偏差風險的試驗重算，降 0.55，和整體相近。本報 10 月 19 日讀過的 DPTT，2013 年美國那個 514 人、因看不出效果提前停止收案的試驗，也在這 35 篇裡，合併結果仍是治療組較低。"
-    },
-    {
-      "type": "h",
-      "text": "確定性只給中等，分數扣在哪裡"
+      "text": "**3**　治牙周能不能預防心肌梗塞或中風，共識說證據不足以支持或否定。2013 年上一份同題共識以來，一級預防沒有任何隨機試驗，與會者還懷疑這種試驗做不做得起來；二級預防只有美國一個先導試驗 PAVE，兩組的心血管事件率沒有統計差異。"
     },
     {
       "type": "p",
-      "text": "Cochrane 用 GRADE 評整體證據的確定性，分高、中、低、非常低四級；中等是說真正的效果大概接近估計值，但也可能有實質差距。這篇從高降一級，理由是偏差風險：35 個試驗只有 2 個低風險、14 個高、19 個不清楚，病人和治療者也不可能盲化。三到四個月的異質性 I² 達 70%，作者沒再扣分，因為各時間點的效果一致。"
+      "text": "**4**　觀察性研究看來樂觀，其中一篇用台灣健保資料庫：五十多萬名牙周病人裡，有洗牙的心肌梗塞風險比沒牙周病的人還低，做刮治、翻瓣或拔牙等密集治療的反而略高。共識據這類資料說成功的牙周治療可能影響心血管病的進展；我把這句當待驗的假說，定期洗牙的人本來就可能比較照顧自己。"
     },
     {
-      "type": "quote",
-      "text": "比較牙周治療與不治療或一般照護的新試驗，不太可能改變這篇回顧的整體結論。",
-      "original": "Further trials evaluating periodontal treatment versus no treatment/usual care are unlikely to change the overall conclusion reached in this review.",
-      "cite": "Simpson 等（2022），Cochrane 回顧摘要的作者結論"
-    },
-    {
-      "type": "h",
-      "text": "加抗生素或漱口水會不會降得更多"
+      "type": "table",
+      "title": "共識逐題的判斷",
+      "head": [
+        "題目",
+        "共識的判斷"
+      ],
+      "rows": [
+        [
+          "牙周炎與冠心病相關",
+          "流行病學證據有力"
+        ],
+        [
+          "牙周炎與周邊動脈疾病相關",
+          "有限，但結果一致"
+        ],
+        [
+          "心血管病讓牙周炎惡化",
+          "證據有限"
+        ],
+        [
+          "治牙周降低 CRP、IL-6",
+          "中等證據"
+        ],
+        [
+          "治牙周預防心肌梗塞、中風",
+          "證據不足"
+        ],
+        [
+          "牙周治療的心血管安全性",
+          "安全"
+        ]
+      ],
+      "caption": "依 Sanz 等 2020 年共識報告第 2、4、5 節與表 1 整理，判斷用字為本報翻譯。CRP 與 IL-6 是血液裡的發炎指標，屬替代指標，不是心肌梗塞或中風本身；同一列的證據還包括內皮功能改善，本報 10 月 16 日讀過的 2007 年倫敦試驗是其中一塊。"
     },
     {
       "type": "p",
-      "text": "回顧把三到四個月的試驗分三組：單純齦下清創 20 個、加全身或局部抗菌劑 11 個、加氯己定漱口水 3 個，三組之間看不出統計上的差異；不同療法的正面比較，留給回顧的第二部分。照目前的證據，我不會為了血糖替病人加抗生素：這種間接比較本來只能參考，何況連差別都沒看到。"
+      "text": "**5**　治療本身，共識判定對心血管安全，有心血管病者亦然；但全口在 24 小時內清完，會引起約一週的全身急性發炎，所以它建議心血管病人的非手術治療分幾次做，每次 30 到 45 分鐘。牙周或植體手術前先量血壓，超過 180/100 就延後，這條共識註明是專家意見。"
     },
     {
-      "type": "h",
-      "text": "跟糖尿病病人可以說到哪裡"
+      "type": "p",
+      "text": "**6**　抗血小板藥，不論單一或雙重，現有證據都不支持在牙周治療或拔牙前停藥，出血靠局部止血；新型口服抗凝血劑在非手術治療這類低出血風險處置也不建議停，但共識強烈建議先聯絡開藥醫師。兩類藥併用的人，改藥一律和負責的醫師一起決定。"
     },
     {
-      "type": "list",
-      "items": [
-        "可以說：照目前的證據，治好牙周炎，三到四個月後 HbA1c 平均低約 0.4 個百分點，確定性中等。2018 年國際糖尿病聯盟（IDF）與歐洲牙周病學會（EFP）的聯合共識估的也相近：三個月降 0.27 到 0.48。",
-        "能不能因此少吃藥，回顧沒有比較；對生活品質與糖尿病併發症，作者說證據不足以下結論。降幅照實講，不替它許諾更多。",
-        "一年後的效果先保留：第十二個月的 0.50 只有一個試驗撐著。",
-        "有評估不良反應的試驗，多半報告沒有或只有輕微傷害，嚴重不良事件兩組相近；但多數試驗沒評估。",
-        "受試者幾乎全是第 2 型，第 1 型能不能套用，這篇回顧答不了。"
-      ]
+      "type": "p",
+      "text": "**7**　轉介是雙向的。有高血壓、糖尿病、抽菸這些危險因子、卻還沒診斷心血管病的牙周炎病人，共識要牙醫告訴他風險，請他找醫師評估；寫給心臟科醫師的那一節，則要醫師告訴病人：有效的牙周治療「可能」（may）對心血管健康有正面影響。"
     },
     {
       "type": "paper",
-      "citation": "Simpson TC, Clarkson JE, Worthington HV, MacDonald L, Weldon JC, Needleman I, Iheozor-Ejiofor Z, Wild SH, Qureshi A, Walker A, Patel VA, Boyers D, Twigg J. Treatment of periodontitis for glycaemic control in people with diabetes mellitus. *Cochrane Database Syst Rev*. 2022;4(4):CD004714.",
-      "doi": "10.1002/14651858.cd004714.pub4",
-      "pmid": "35420698",
-      "link": "https://doi.org/10.1002/14651858.CD004714.pub4",
-      "evidence": "Cochrane 系統性回顧：35 篇隨機試驗、3,249 人；HbA1c 證據確定性中等",
-      "design": "Cochrane 系統性回顧與統合分析（GRADE 評證據），本題第二次更新的第一部分；文獻檢索至 2021 年 9 月 7 日",
-      "sample": "35 個平行組隨機對照試驗、隨機分派 3,249 名糖尿病合併牙周炎者（幾乎全為第 2 型），追蹤 3 到 12 個月；主要分析 3–4 個月為 30 個試驗、2,443 人",
-      "question": "同時有糖尿病與牙周炎的人，接受齦下清創，比起不治療或一般照護，HbA1c 會不會比較低？",
-      "access": "依 PubMed 與 Europe PMC 摘要、PMC 全文（PMC9009294）的結果摘要表、證據品質與次群組分析整理"
+      "citation": "Sanz M, Marco Del Castillo A, Jepsen S, Gonzalez-Juanatey JR, D'Aiuto F, Bouchard P, Chapple I, Dietrich T, Gotsman I, Graziani F, Herrera D, Loos B, Madianos P, Michel JB, Perel P, Pieske B, Shapira L, Shechter M, Tonetti M, Vlachopoulos C, Wimmer G. Periodontitis and cardiovascular diseases: Consensus report. *J Clin Periodontol*. 2020;47(3):268–288.",
+      "doi": "10.1111/jcpe.13189",
+      "pmid": "32011025",
+      "link": "https://doi.org/10.1111/jcpe.13189",
+      "evidence": "EFP／WHF 共識報告：依 4 篇技術回顧；降發炎指標證據中等，防心血管事件證據不足",
+      "design": "共識報告：EFP 與 WHF 2019 年 2 月 18–19 日馬德里聯合研討會，依四篇技術回顧（流行病學、機轉、介入研究、抗血栓治療病人的牙周治療風險）與會中討論；未做新的統合分析，逐題以文字評證據等級",
+      "sample": "作者 21 人，牙周與心臟兩科；更新 2012 年 EFP／AAP 研討會以來的文獻，另含給牙醫、醫師與病人的建議",
+      "question": "牙周炎與動脈粥狀硬化性心血管疾病有沒有關聯、為什麼，治牙周能不能改善心血管結果，心血管病人做牙周治療要注意什麼？",
+      "access": "依 Europe PMC 開放全文（PMC7027895）整理"
     }
   ],
   "sources": [
     {
-      "title": "Treatment of periodontitis for glycaemic control in people with diabetes mellitus",
-      "publisher": "Cochrane Database of Systematic Reviews（Simpson TC 等）",
-      "date": "2022-04-14",
-      "url": "https://doi.org/10.1002/14651858.CD004714.pub4",
-      "note": "主角文獻。書目依 PubMed efetch（PMID 35420698：2022 Apr 14;4(4):CD004714）、Europe PMC（PMC9009294）與 Crossref（published-online 2022-04-14，為 pub3 的新版）；Crossref 查 pub5、pub6 皆無紀錄，pub4 為目前最新版。摘要與白話摘要依 PubMed／Europe PMC：35 個試驗 3,249 人、偏差風險 2 低 14 高 19 不清楚、3–4 個月 −0.43%（−0.59 至 −0.28；30 試驗 2,443 人；中等確定性）、6 個月 −0.30%（−0.52 至 −0.08；12 試驗 1,457 人）、12 個月 −0.50%（−0.55 至 −0.45；1 試驗 264 人）、不良反應、作者結論原文；白話摘要的 7.43% 到 7% 例子與 part two 一句。全文依 PMC 頁（https://pmc.ncbi.nlm.nih.gov/articles/PMC9009294/）：結果摘要表對照組 3–4 個月 HbA1c 中位數 7.74%、降級註腳 Downgraded 1 level for high risk of bias, largely due to lack of blinding、Quality of the evidence（所有試驗無法盲化、I² 70% 因各時間點一致不降級）、GRADE 定義、低偏差風險敏感度分析（Kiran 2005、Wang S 2017：−0.55%，95% CI −1.10 至 −0.00）、次群組（SRP 20、加抗菌劑 11、加氯己定 3，P = 0.61）、Implications for practice（對生活品質與併發症證據不足）、納入研究含 Engebretson 2013。第一作者單位依 PMC XML。"
+      "title": "Periodontitis and cardiovascular diseases: Consensus report",
+      "publisher": "Journal of Clinical Periodontology（Sanz M、Marco Del Castillo A、Jepsen S 等）",
+      "date": "2020-02-03",
+      "url": "https://doi.org/10.1111/jcpe.13189",
+      "note": "主角文獻。書目依 PubMed efetch（PMID 32011025：J Clin Periodontol 2020 Mar;47(3):268-288，Epub 2020 Feb 3）、Europe PMC（PMC7027895，開放取用，CC BY-NC-ND 4.0）與 Crossref（卷 47、期 3、頁 268–288，線上 2020-02-03）。全文依 Europe PMC 全文 XML：Introduction（研討會 2019 年 2 月 18–19 日於馬德里、EFP 與 WHF 合辦、四篇技術回顧、2012 年 EFP/AAP 研討會結論、CVD 的定義）；2.2–2.7 節（冠心病 robust evidence、腦血管 evidence、周邊動脈疾病 limited but consistent、反方向 limited、再發事件三研究中兩個大型研究無關聯、相對風險估計因族群與病例定義而異）；3.1–3.2 節（菌血症、斑塊中的牙周菌與至少兩研究培養出活菌）；4.1.1 節（2013 年以來無一級預防隨機試驗、與會者質疑可行性、觀察性研究含 Lee 2015、小結 may be influenced）；4.1.2 節（PAVE、insufficient evidence to support or refute）；4.2 節與表 1（CRP、IL-6、內皮功能 moderate；血脂 moderate 無效果；血壓、cIMT limited）；5.1 節（24 小時內全口治療引發一週急性全身發炎、治療對心血管安全）；5.2 與 6.1 節（抗血小板藥不停、DOAC 低出血風險處置不停但 strongly recommends 諮詢開藥醫師、合併治療與心臟科共同決定、30–45 分鐘分次治療、血壓 180/100 according to expert opinion、轉介有危險因子者）；6.2 節（給醫師：詢問牙齦出血、牙齒鬆動等，effective periodontal therapy may have a positive impact upon CV health）。共識未使用 GRADE，證據等級為文字描述。維生素 K 拮抗劑的 INR 門檻原文前後兩句寫法不一致，正文未採用。作者單位依全文 XML（WHF 代表單位在日內瓦）。"
     },
     {
-      "title": "Treatment of periodontal disease for glycaemic control in people with diabetes mellitus",
-      "publisher": "Cochrane Database of Systematic Reviews（Simpson TC 等）",
-      "date": "2015-11-06",
-      "url": "https://doi.org/10.1002/14651858.CD004714.pub3",
-      "note": "2015 年版，PMID 26545069。依 PubMed 摘要：治療 vs 不治療 14 試驗 1,499 人，3–4 個月低 0.29%（0.48 至 0.10），6 個月低 0.02%（5 試驗 826 人；低 0.20 至高 0.16），low quality evidence；作者結論 insufficient evidence to demonstrate that this is maintained after 4 months。"
+      "title": "Results from the Periodontitis and Vascular Events (PAVE) Study: a pilot multicentered, randomized, controlled trial to study effects of periodontal therapy in a secondary prevention model of cardiovascular disease",
+      "publisher": "Journal of Periodontology（Offenbacher S 等）",
+      "date": "2009-02-01",
+      "url": "https://doi.org/10.1902/jop.2009.080007",
+      "note": "J Periodontol 2009;80(2):190–201，PMID 19186958。依 PubMed 摘要：五個心臟—牙科合作中心，151 人對 152 人；事件率無統計差異（RR 0.72，95% CI 0.23–2.22）依 Sanz 2020 第 4.1.2 節。日期依 Crossref 只到 2009 年 2 月。"
     },
     {
-      "title": "Scientific evidence on the links between periodontal diseases and diabetes: Consensus report and guidelines of the joint workshop on periodontal diseases and diabetes by the International Diabetes Federation and the European Federation of Periodontology",
-      "publisher": "Journal of Clinical Periodontology（Sanz M、Ceriello A、Buysschaert M 等）",
-      "date": "2017-12-26",
-      "url": "https://doi.org/10.1111/jcpe.12808",
-      "note": "J Clin Periodontol 2018;45(2):138–149，PMID 29280174，線上發表 2017-12-26。依 PubMed 摘要 Interventions：Periodontal therapy is safe and effective in people with diabetes, and it is associated with reductions in HbA1C of 0.27-0.48% after 3 months, although studies involving longer-term follow-up are inconclusive."
+      "title": "Dental prophylaxis decreases the risk of acute myocardial infarction: a nationwide population-based study in Taiwan",
+      "publisher": "Clinical Interventions in Aging（Lee YL、Hu HY、Chou P、Chu D）",
+      "date": "2015-01-06",
+      "url": "https://doi.org/10.2147/CIA.S67854",
+      "note": "Clin Interv Aging 2015;10:175–182，PMID 25609934。依 PubMed 摘要：健保 Longitudinal Health Insurance Database 2000，511,630 名牙周病人、208,713 名無牙周病者；與無牙周病者相比，洗牙組急性心肌梗塞 HR 0.90（0.86–0.95），密集治療組 HR 1.09（1.03–1.15）。正文依 Sanz 2020 第 4.1.1 節的轉述，只寫方向。共識寫研究期間為 2000 至 2015 年，PubMed 摘要為 2000–2010 年、追蹤 10 年，正文不寫年代。"
     },
     {
-      "title": "The effect of nonsurgical periodontal therapy on hemoglobin A1c levels in persons with type 2 diabetes and chronic periodontitis: a randomized clinical trial",
-      "publisher": "JAMA（Engebretson SP 等）",
-      "date": "2013-12-18",
-      "url": "https://doi.org/10.1001/jama.2013.282431",
-      "note": "DPTT 試驗，JAMA 2013;310(23):2523–32，PMID 24346989；本報 2026-10-19 已導讀。正文只用一句：514 人、Enrollment was stopped early because of futility（依 PubMed 摘要）。"
+      "title": "Treatment of periodontitis and endothelial function",
+      "publisher": "New England Journal of Medicine（Tonetti MS 等）",
+      "date": "2007-03-01",
+      "url": "https://doi.org/10.1056/NEJMoa063186",
+      "note": "N Engl J Med 2007;356(9):911–920；本報 2026-10-16 已導讀。表格圖說只提一句，列為共識表 1 內皮功能證據的背景。"
     },
     {
-      "title": "File:Curette.jpg",
-      "publisher": "Wikimedia Commons（Milenafoto）",
-      "date": "2013-03-07",
-      "url": "https://commons.wikimedia.org/wiki/File:Curette.jpg",
-      "note": "頭圖。檔案描述（捷克文）Dentali hygiena - kyreta v ustech pacienta；CC BY-SA 3.0；日期為 Commons 記載的拍攝時間，拍攝地點未標示。"
+      "title": "Association between periodontal diseases and cardiovascular diseases, diabetes and respiratory diseases: Consensus report of the Joint Workshop by the EFP and WONCA Europe",
+      "publisher": "Journal of Clinical Periodontology（Herrera D、Sanz M、Shapira L 等）",
+      "date": "2023-03-22",
+      "url": "https://doi.org/10.1111/jcpe.13807",
+      "note": "J Clin Periodontol 2023;50(6):819–841，PMID 36935200。選文參考，正文未引：依摘要，其心血管部分以 2019 年 EFP/WHF 研討會共識（即 Sanz 2020）為技術回顧，結論為牙周炎與心血管疾病 independently associated，未提出新的介入證據，故主角維持 Sanz 2020。同批 2020 年技術回顧（Herrera 等，Periodontol 2000 83:66–89；Orlandi 等，83:107–124）摘要自稱 narrative review，亦不當主角。"
+    },
+    {
+      "title": "About the EFP",
+      "publisher": "European Federation of Periodontology",
+      "date": "2026-11-05",
+      "url": "https://www.efp.org/about-the-efp/",
+      "note": "背景：EFP 自述為以歐洲為核心、推動牙周科學與臨床的全球性非營利組織。日期為查閱日。"
+    },
+    {
+      "title": "Who we are",
+      "publisher": "World Heart Federation",
+      "date": "2026-11-05",
+      "url": "https://world-heart-federation.org/who-we-are/",
+      "note": "背景：會員為 100 多個國家、200 多個心臟基金會、學會與病友組織；1978 年由國際心臟學會與國際心臟病學聯合會合併成立；地址在日內瓦。日期為查閱日。"
+    },
+    {
+      "title": "File:2113ab Atherosclerosis.jpg",
+      "publisher": "Wikimedia Commons（OpenStax College）",
+      "date": "2013-06-19",
+      "url": "https://commons.wikimedia.org/wiki/File:2113ab_Atherosclerosis.jpg",
+      "note": "頭圖。出自 OpenStax《Anatomy & Physiology》（Connexions 網站，2013-06-19），CC BY 3.0；原尺寸 1965×1065。"
     }
   ]
 }
