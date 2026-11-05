@@ -1,0 +1,43 @@
+{
+  "column": "obituary",
+  "date": "2026-11-06",
+  "spoiler": null,
+  "disclaimer": null,
+  "status": "undetermined",
+  "title": "今天的訃聞：有一位作家的死訊，本報還無法確認",
+  "dek": "英文維基百科列出作家 Simon Winchester 11 月 3 日過世，但本報讀不到兩個獨立的訃聞原文，今天不刊他的生平。",
+  "brief": "英文維基百科和《紐約時報》標題顯示作家 Simon Winchester 已過世。本報讀不到兩個可開啟的獨立訃聞原文，因此今天無法判定死亡細節，查證完成後會補上。",
+  "topic_key": "obituary:undetermined-2026-11-06",
+  "updated_at": "2026-11-06T05:22:00+08:00",
+  "hero": null,
+  "body": [
+    {
+      "type": "p",
+      "text": "本報每天查過去三天過世的人。今天的索引（英文維基百科「Deaths in November 2026」）列出英國裔美籍作家 Simon Winchester，82 歲，《The Professor and the Madman》（英國版書名《The Surgeon of Crowthorne》）的作者。"
+    },
+    {
+      "type": "p",
+      "text": "本報目前只看得到《紐約時報》11 月 4 日訃聞的標題（文章本身打不開），以及出版業電子報 Publishers Lunch 11 月 5 日的標題。內文都讀不到，所以死亡日期、地點與原因，本報不確認。"
+    },
+    {
+      "type": "p",
+      "text": "本欄的規則是至少兩個獨立來源、而且編輯親眼讀過。今天湊不齊，所以不寫他的一生，也不當成「今天沒有人過世」。來源可讀之後，下一期會補上。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Simon Winchester, Author of 'The Professor and the Madman', Has Died",
+      "publisher": "The New York Times",
+      "date": "2026-11-04",
+      "url": "https://www.nytimes.com/2026/11/04/obituaries/simon-winchester-dead.html",
+      "note": "僅見標題，內文無法開啟。"
+    },
+    {
+      "title": "Obituaries: Chantelle Aimée Osman, Simon Winchester",
+      "publisher": "Publishers Lunch",
+      "date": "2026-11-05",
+      "url": "https://lunch.publishersmarketplace.com/2026/11/obituaries-chantelle-aimee-osman-simon-winchester/",
+      "note": "僅見標題，內文需登入。"
+    }
+  ]
+}
