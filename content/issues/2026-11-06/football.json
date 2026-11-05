@@ -1,0 +1,337 @@
+{
+  "column": "football",
+  "date": "2026-11-06",
+  "title": "巴薩沒買到中鋒，拉菲尼亞把約簽到 2030",
+  "dek": "19 球，13 場。8 月開幕戰前，弗利克問他願不願意繼續踢中鋒，他說可以。",
+  "brief": "拉菲尼亞昨晚台灣時間 19:00 簽下新約，續到 2030 年。他今夏改踢中鋒，各項賽事 19 球，五大聯賽最多。巴薩下一場是週一（11 月 9 日）清晨 04:00 客場馬競，拉傷的羅德里不會上，西班牙國家隊名單今天公布。",
+  "topic_key": "football:2026-11-06",
+  "form": "reverse",
+  "voice": "fan",
+  "updated_at": "2026-11-06T02:48:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "next": {
+    "opponent": "馬德里競技",
+    "competition": "西甲",
+    "kickoff": "2026-11-09T04:00+08:00",
+    "venue": "Riyadh Air Metropolitano",
+    "home": false
+  },
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Raphinha_Brazil_V_Morocco_13_June_2026-133.jpg/1280px-Raphinha_Brazil_V_Morocco_13_June_2026-133.jpg",
+    "width": 1280,
+    "height": 1920,
+    "alt": "拉菲尼亞穿巴西隊黃色 11 號球衣，兩手腕纏著白色護帶，在草地上微微張嘴看向鏡頭左側；背景是模糊的看台。",
+    "caption": "拉菲尼亞，2026 年 6 月 13 日世界盃小組賽巴西對摩洛哥（美國紐澤西）。資料照片，非當日畫面，穿的是巴西隊球衣。",
+    "credit": "Bryan Berlin／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Raphinha_Brazil_V_Morocco_13_June_2026-133.jpg",
+    "made": "2026"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "拉菲尼亞簽了。昨天（11 月 5 日，週四）台灣時間晚上 7 點，他和主席拉波爾塔（Joan Laporta）簽下新約，續到 2030 年 6 月 30 日。原本的合約只到 2028 年。這位巴西邊鋒 29 歲，2022 年從英格蘭的里茲聯來到巴薩，今年夏天被擺到中鋒的位子上，各項賽事進了 19 球，五大聯賽沒有人比他多。"
+    },
+    {
+      "type": "quote",
+      "text": "我想把最好的給球會，也想在球迷心裡有個位子。",
+      "original": "I want to give my best for the club and have a place in the hearts of the culers.",
+      "cite": "拉菲尼亞，簽約儀式，巴薩官網 11 月 5 日（culers 是巴薩球迷的自稱）"
+    },
+    {
+      "type": "p",
+      "text": "簽滿的時候他 33 歲，最後兩年是風險，我認了。一個沒人替他排好的位子，他站得上去，還站出 19 球，這個我願意賭。"
+    },
+    {
+      "type": "h",
+      "text": "沒買到的中鋒"
+    },
+    {
+      "type": "p",
+      "text": "要講這張約，得回到今年夏天。巴薩想買馬競的阿根廷前鋒阿爾瓦雷斯（Julián Álvarez），沒買成。萊萬多夫斯基（Robert Lewandowski）和費朗・托雷斯（Ferran Torres）又都離了隊。ESPN 說，季前訓練的時候，巴薩手上一個正牌中鋒也沒有。弗利克（Hansi Flick）就把拉菲尼亞擺在中路，左邊是英格蘭來的戈登（Anthony Gordon），右邊是亞馬爾（Lamine Yamal）。"
+    },
+    {
+      "type": "p",
+      "text": "8 月 23 日，西甲開幕戰，客場去艾爾切（Elche）。開球前，弗利克問他：要繼續踢中鋒，還是搬回左邊？他說，中間可以。那天巴薩 5 比 0 贏，他進兩球。"
+    },
+    {
+      "type": "p",
+      "text": "從開幕戰算起的前八場，他有七場進球。唯一沒進的是 9 月 13 日客場雷萬特（Levante），那場他送了兩個助攻，巴薩 4 比 2 贏。9 月 16 日主場對桑坦德競技（Racing Santander）他進三球，7 比 2；三天後去塞維利亞又三球，3 比 1。連著兩個帽子戲法。"
+    },
+    {
+      "type": "table",
+      "title": "拉菲尼亞這季的 19 球",
+      "head": [
+        "日期",
+        "賽事",
+        "對手",
+        "比分",
+        "進球"
+      ],
+      "rows": [
+        ["8 月 23 日", "西甲", "客場艾爾切", "5–0", "2"],
+        ["8 月 27 日", "西甲", "主場畢爾包競技", "2–0", "1"],
+        ["8 月 31 日", "西甲", "主場巴列卡諾", "5–2", "2"],
+        ["9 月 6 日", "西甲", "客場瓦倫西亞", "5–0", "1"],
+        ["9 月 9 日", "歐冠", "主場費耶諾德", "5–1", "2"],
+        ["9 月 16 日", "西甲", "主場桑坦德競技", "7–2", "3"],
+        ["9 月 19 日", "西甲", "客場塞維利亞", "3–1", "3"],
+        ["10 月 25 日", "西甲", "主場皇家馬德里", "1–2", "1"],
+        ["10 月 31 日", "西甲", "主場阿拉維斯", "6–1", "2"],
+        ["11 月 3 日", "歐冠", "主場阿斯頓維拉", "3–0", "2"]
+      ],
+      "caption": "只列有進球的 10 場，日期為比賽當地日期，比分巴薩在前。其餘 5 場（雷萬特、赫塔費、加拉塔沙雷、貝提斯、巴黎聖日耳曼）沒進。資料：ESPN 逐場比賽紀錄。"
+    },
+    {
+      "type": "h",
+      "text": "摔那一跤，輸那兩場"
+    },
+    {
+      "type": "p",
+      "text": "國際賽事週，他在巴西隊受了傷。接下來兩場，10 月 10 日赫塔費、13 日歐冠加拉塔沙雷（Galatasaray），他都沒上，巴薩兩場都贏。10 月 17 日客場貝提斯，他從板凳上場。先發回來的那兩場，10 月 20 日輸巴黎聖日耳曼 2 比 4，25 日輸皇馬 1 比 2，對皇馬他進了球。之後對阿拉維斯兩球，對阿斯頓維拉兩球。"
+    },
+    {
+      "type": "h",
+      "text": "60 球，和輸掉的兩場"
+    },
+    {
+      "type": "p",
+      "text": "巴薩官網替這支球隊算了一筆。對維拉進三球之後，15 場比賽 60 球，平均每場 4 球，官網說，只有一個世紀以前的球季比得上。那年是 1926–27，西甲還沒開辦，巴薩踢加泰隆尼亞錦標賽，外加一場西班牙錦標賽（國王盃的前身），15 場進 69 球。裡面有 10 比 2 贏 FC Gràcia，客場 9 比 0 贏 Terrassa。"
+    },
+    {
+      "type": "p",
+      "text": "這種數字我愛看，可是不想拿它當成績單。今年輸給巴黎聖日耳曼、輸給皇馬的那兩場，巴薩一共只進 3 球。"
+    },
+    {
+      "type": "h",
+      "text": "德米格爾昨天下葬"
+    },
+    {
+      "type": "p",
+      "text": "拉菲尼亞週二賽後談起的那位特內里費前鋒德米格爾（Jesús de Miguel，30 歲），昨天在托雷多省的小鎮納瓦埃爾莫薩（Navahermosa）辦了葬禮。他 11 月 2 日在西乙比賽裡和安道爾門將歐諾沃（Jesús Owono）相撞，心臟驟停，隔天過世。上百人到場，特內里費的球員從加那利群島趕來；西班牙國家隊教練德拉富恩特（Luis de la Fuente）、皇馬主席佩雷斯（Florentino Pérez）和西班牙足協主席也在。美聯社說，小鎮宣布哀悼三天。"
+    },
+    {
+      "type": "p",
+      "text": "球場外的事還在往下走。西班牙國家警察已經立案，罪名是可能的過失致死，ESPN 說這是非自然死亡的標準程序，要查歐諾沃那一撞有沒有超出比賽的正常範圍。一個西班牙護理與急救人員的協會，會長對美聯社說，他倒地到被抬上救護車約 5 分鐘，現場有沒有做心肺復甦、有沒有用去顫器，說法不一，她要求急救程序照國際標準查清楚。特內里費的大股東說，要等驗屍結果。"
+    },
+    {
+      "type": "p",
+      "text": "別的球隊也有動作。拉斯帕爾馬斯是特內里費在加那利群島上的同城死對頭，週日主場踢西乙，要改穿白藍色的第三套球衣，那是特內里費的顏色。阿爾梅里亞（羅納度持股 25% 的西乙球隊）宣布，明年 1 月 10 日主場對特內里費的門票收入，全部交給德米格爾的家屬。特內里費自己週六在 Heliodoro 球場辦悼念。"
+    },
+    {
+      "type": "h",
+      "text": "歐洲足壇速覽"
+    },
+    {
+      "type": "news",
+      "title": "歐洲足壇速覽",
+      "items": [
+        {
+          "headline": "皇馬補時第 2 分鐘絕殺雅典 AEK，3 比 2",
+          "summary": "AEK 兩度領先（第 12、75 分鐘），皇馬靠貝林厄姆（Jude Bellingham）第 32 分鐘、姆巴佩（Kylian Mbappé）第 78 分鐘追平，法爾韋德（Federico Valverde）補時第 2 分鐘從禁區外遠射得分。皇馬和巴黎聖日耳曼是歐冠四輪全勝僅存的兩隊，各 12 分；巴薩 9 分，第 5。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/match/_/gameId/401915383",
+          "when": "11 月 5 日（週四）03:55",
+          "place": "GR"
+        },
+        {
+          "headline": "科莫客場 9 比 1 大勝朗斯，歐冠客場進球紀錄",
+          "summary": "科莫是義大利北部的球隊，今年第一次踏進歐洲賽事，教練是前巴薩中場法布雷加斯（Cesc Fàbregas）。道維卡斯（Tasos Douvikas）進三球；帕斯（Nico Paz）第 40 分鐘進球後沒有慶祝，舉起印著德米格爾照片的 T 恤。9 球是歐冠客場單場最多，8 球的淨勝差追平歷來最大。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50382528/fabregas-como-4th-record-setting-9-goal-night",
+          "when": "11 月 5 日（週四）08:22",
+          "place": ["IT", "FR"]
+        },
+        {
+          "headline": "費內巴切 3 比 2 贏利物浦，紅軍歐冠首敗",
+          "summary": "利物浦 19 歲的尼奧尼（Trey Nyoni）第 25 分鐘先進球，前曼聯前鋒葛林伍德（Mason Greenwood）第 29 分鐘直接自由球追平。伊薩克（Alexander Isak）第 69 分鐘讓利物浦再領先，Archie Brown 第 73 分鐘、Vedat Muriqi 第 79 分鐘連進兩球逆轉。利物浦四輪失 10 球，是隊史歐冠聯賽階段最多。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/match/_/gameId/401915382",
+          "when": "11 月 5 日（週四）03:48",
+          "place": "TR"
+        },
+        {
+          "headline": "羅納度宣布退出葡萄牙國家隊",
+          "summary": "41 歲的羅納度（Cristiano Ronaldo）在 Instagram 影片裡宣布，國家隊 23 年，234 場 146 球，兩項都是男子國際賽史上第一。他和新教練赫蘇斯（Jorge Jesus）為了出場時間鬧翻，上個國際賽事窗口離隊，被足協禁賽 30 天，剛服完。他會繼續在沙烏地的利雅德勝利踢球，追第 1,000 球。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49266866/cristiano-ronaldo-portugal-jorge-jesus-retires-international",
+          "when": "11 月 5 日（週四）",
+          "place": "PT"
+        },
+        {
+          "headline": "凱恩和拜仁續約到 2029",
+          "summary": "33 歲的英格蘭隊長凱恩（Harry Kane）簽下新約，原約只剩這一季。他是今年的金球獎得主，本季 12 球，加盟拜仁以來 161 場 156 球。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50216815/harry-kane-signs-new-bayern-munich-contract",
+          "when": "11 月 5 日（週四）22:47",
+          "place": "DE"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "接下來"
+    },
+    {
+      "type": "p",
+      "text": "週日（11 月 8 日）歐洲時間晚上 9 點，是台灣時間週一（11 月 9 日）清晨 4 點，客場去馬德里競技的 Riyadh Air Metropolitano。巴薩 30 分，馬競 28，皇馬 27。皇馬比他們早一天，台灣時間週日清晨 4 點先去瓦倫西亞。"
+    },
+    {
+      "type": "p",
+      "text": "羅德里（Rodri）右大腿後側肌群拉傷，這場不會上。孔德（Jules Koundé）的腳踝還沒回到完整訓練；艾利克・加西亞（Eric García）和克里斯滕森（Andreas Christensen）11 月 4 日（週三）已經練了。"
+    },
+    {
+      "type": "p",
+      "text": "西甲踢完這個週末就停，進國際賽事週。西班牙教練德拉富恩特今天（週五）公布名單，西班牙 11 月 12 日對捷克、15 日對英格蘭。羅德里要是沒被徵召，ESPN 說他最快 11 月 22 日主場對比利亞雷亞爾回來。"
+    },
+    {
+      "type": "p",
+      "text": "簽約那天，拉菲尼亞談到自己現在的身體："
+    },
+    {
+      "type": "quote",
+      "text": "我現在很好，但不是 100%。我很照顧自己，所以球迷不用擔心。",
+      "original": "I'm doing very well, but I'm not at 100%. I take great care of myself, so the culers shouldn't worry.",
+      "cite": "拉菲尼亞，簽約儀式，巴薩官網 11 月 5 日"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Raphinha staying at FC Barcelona until 2030",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-05",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4604888/raphinha-staying-at-fc-barcelona-until-2030",
+      "note": "合約到 2030 年 6 月 30 日、簽約儀式上的話、190 場 94 球、19 球（西甲 15、歐冠 4）；頁面只標相對時間，日期依讀取時間推得"
+    },
+    {
+      "title": "Raphinha to sign renewal with president Laporta this Thursday",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-04",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4604460/raphinha-to-sign-renewal-with-president-laporta-this-thursday",
+      "note": "簽約對象是主席拉波爾塔、CET 12:00（台灣 19:00）；頁面只標相對時間"
+    },
+    {
+      "title": "Raphinha signs new Barcelona contract until 2030",
+      "publisher": "ESPN",
+      "date": "2026-11-05",
+      "url": "https://www.espn.com/soccer/story/_/id/50116408/raphinha-barcelona-new-contract-brazil-la-liga",
+      "note": "12:44Z 發布。原約到 2028 年、阿爾瓦雷斯沒買成、萊萬與費朗離隊、弗利克開幕戰前的提問、前八場七場進球、帽子戲法、受傷缺兩場、回來先發的兩場輸球"
+    },
+    {
+      "title": "UEFA Champions League stats: Yamal breaks Mbappe's record with 14; PSG, Madrid, Como set records; Mbappe 100; Raphinha overtakes Rivaldo",
+      "publisher": "ESPN",
+      "date": "2026-11-05",
+      "url": "https://www.espn.com/soccer/story/_/id/50384483/uefa-champions-league-2026-27-ucl-stats-lamine-yamal-breaks-kylian-mbappe-record-14-psg-real-madrid-como-set-records-raphinha-overtakes-rivaldo",
+      "note": "04:15Z 發布。拉菲尼亞 19 球為五大聯賽各項賽事最多（姆巴佩 16）、皇馬與 PSG 全勝、科莫與利物浦的紀錄"
+    },
+    {
+      "title": "Barcelona schedule and results, 2026–27",
+      "publisher": "ESPN",
+      "date": "2026-11-06",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/83/schedule?season=2026",
+      "note": "逐場比分與主客場；拉菲尼亞逐場進球數與出賽名單取自各場 summary API（如 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882883），合計 19 球與官網相符；台灣時間 11 月 6 日 02:40 前讀取"
+    },
+    {
+      "title": "Highest goalscoring Barça side in a century",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-05",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4604635/highest-goalscoring-barca-side-in-a-century",
+      "note": "15 場 60 球、1926–27 年 15 場 69 球、10 比 2 FC Gràcia、客場 9 比 0 Terrassa；頁面只標相對時間"
+    },
+    {
+      "title": "Spain coach, Real Madrid president attend funeral of Tenerife's Jesús de Miguel",
+      "publisher": "ESPN（引美聯社）",
+      "date": "2026-11-05",
+      "url": "https://www.espn.com/soccer/story/_/id/50389136/spain-coach-madrid-president-attend-de-miguel-funeral",
+      "note": "17:47Z 發布。葬禮、出席者、小鎮哀悼三天、警方調查"
+    },
+    {
+      "title": "Spanish medical official questions pitchside emergency protocols after De Miguel's death",
+      "publisher": "ESPN（引美聯社）",
+      "date": "2026-11-05",
+      "url": "https://www.espn.com/soccer/story/_/id/50383582/medical-official-pitchside-emergency-upgrades-de-miguel-death",
+      "note": "09:14Z 發布。立案調查、急救人員協會會長的說法、倒地約 5 分鐘、大股東等驗屍結果"
+    },
+    {
+      "title": "Jesús de Miguel death: Tenerife player honoured by rival club Las Palmas",
+      "publisher": "ESPN",
+      "date": "2026-11-05",
+      "url": "https://www.espn.com/soccer/story/_/id/50387105/jesus-de-miguel-death-tenerife-honoured-las-palmas",
+      "note": "11:34Z 發布。拉斯帕爾馬斯第三客場球衣、阿爾梅里亞門票收入、特內里費週六悼念、帕斯的 T 恤"
+    },
+    {
+      "title": "AEK Athens v Real Madrid — Champions League summary",
+      "publisher": "ESPN",
+      "date": "2026-11-04",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915383",
+      "note": "比賽紀錄 API：2–3；12'、32'、75'、78'、90+2' 進球。UEFA 官方賽果 API 同為 2–3（https://match.uefa.com/v5/matches?competitionId=1&fromDate=2026-11-04&toDate=2026-11-05）；ESPN 賽後稿 https://www.espn.com/soccer/story/_/id/50322768"
+    },
+    {
+      "title": "Fàbregas' Como up to 4th after record-setting 9-goal night",
+      "publisher": "ESPN",
+      "date": "2026-11-05",
+      "url": "https://www.espn.com/soccer/story/_/id/50382528/fabregas-como-4th-record-setting-9-goal-night",
+      "note": "00:22Z 發布。9 比 1、客場進球紀錄、法布雷加斯賽後的話；UEFA 官方賽果 API 同為 1–9；帕斯進球分鐘取自 ESPN 比賽紀錄 https://www.espn.com/soccer/match/_/gameId/401915305"
+    },
+    {
+      "title": "Fenerbahce v Liverpool — Champions League summary",
+      "publisher": "ESPN",
+      "date": "2026-11-04",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401915382",
+      "note": "比賽紀錄 API：3–2；25'、29'、69'、73'、79' 進球。UEFA 官方賽果 API 同為 3–2；ESPN 賽後稿 https://www.espn.com/soccer/story/_/id/50322771"
+    },
+    {
+      "title": "Cristiano Ronaldo retires from international duty after Portugal boss fallout",
+      "publisher": "ESPN",
+      "date": "2026-11-05",
+      "url": "https://www.espn.com/soccer/story/_/id/49266866/cristiano-ronaldo-portugal-jorge-jesus-retires-international",
+      "note": "23 年、234 場 146 球、與赫蘇斯鬧翻、30 天禁賽、繼續效力 Al Nassr"
+    },
+    {
+      "title": "Cristiano Ronaldo retires from international football after glittering Portugal career that spanned 23 years",
+      "publisher": "Sky Sports",
+      "date": "2026-11-05",
+      "url": "https://www.skysports.com/football/news/13593800/cristiano-ronaldo-retires-from-international-football-after-glittering-portugal-career-that-spanned-23-years",
+      "note": "第二來源：退出國家隊、146 球、234 場"
+    },
+    {
+      "title": "Harry Kane signs new Bayern Munich contract: 'I want to win many more titles'",
+      "publisher": "ESPN",
+      "date": "2026-11-05",
+      "url": "https://www.espn.com/soccer/story/_/id/50216815/harry-kane-signs-new-bayern-munich-contract",
+      "note": "14:47Z 發布。到 2029 年、原約最後一年、本季 12 球、161 場 156 球"
+    },
+    {
+      "title": "Harry Kane: England captain signs new contract at Bayern Munich running until 2029",
+      "publisher": "Sky Sports",
+      "date": "2026-11-05",
+      "url": "https://www.skysports.com/football/news/13608255/harry-kane-england-captain-signs-new-contract-at-bayern-munich-running-until-2029",
+      "note": "第二來源：續約到 2029 年"
+    },
+    {
+      "title": "Barcelona's Rodri ruled out of Atlético Madrid clash with hamstring injury",
+      "publisher": "ESPN",
+      "date": "2026-11-04",
+      "url": "https://www.espn.com/soccer/story/_/id/50378043/barcelonas-rodri-ruled-atletico-madrid-clash-hamstring-injury",
+      "note": "12:39Z 發布。羅德里缺馬競、傷停名單、西班牙名單公布日與對手、最快復出日期、皇馬週六去瓦倫西亞"
+    },
+    {
+      "title": "Atlético Madrid - FC Barcelona（比賽頁，LaLiga 第 12 輪）",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-06",
+      "url": "https://www.fcbarcelona.com/en/matches/138391/atletico-fc-barcelona-la-liga-2026-2027",
+      "note": "Sun 08 Nov、Kickoff CET 21:00 = 台灣 11 月 9 日 04:00；Riyadh Air Metropolitano；頁面無發布日期，日期為讀取日。ESPN scoreboard（dates=20261108）20:00Z 相符"
+    },
+    {
+      "title": "LaLiga standings",
+      "publisher": "ESPN",
+      "date": "2026-11-06",
+      "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+      "note": "台灣時間 11 月 6 日 02:40 前讀取：巴薩 30、馬競 28、皇馬 27，各 11 場；歐冠積分榜（uefa.champions/standings）巴薩 9 分第 5"
+    }
+  ]
+}
