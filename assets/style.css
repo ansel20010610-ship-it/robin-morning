@@ -295,7 +295,7 @@ button { font: inherit; color: inherit; }
 :is(.body, .spoiler-body) > p { margin: 0 0 1.15em; text-align: start; text-spacing-trim: trim-start; }
 .body h2 { font-size: 1.2em; line-height: 1.5; margin: 2.1em 0 .8em; font-weight: 700; display: flex; align-items: baseline; gap: .6em; }
 .body h2::before { content: ""; flex: 0 0 auto; width: .42em; height: .42em; background: var(--gold); transform: translateY(-.12em); }
-.body strong { font-weight: 700; }
+.body strong { font-weight: 600; } /* the key people, works and sentences (STYLE.md 粗體): a shade heavier, not a shout */
 .body em { font-style: normal; border-bottom: 1px dotted var(--gold); }
 .tag {
   display: inline-block; font-family: var(--sans); font-size: 11px; line-height: 1; letter-spacing: .08em; font-weight: 600;
