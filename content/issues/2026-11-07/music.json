@@ -1,0 +1,251 @@
+{
+  "column": "music",
+  "date": "2026-11-07",
+  "title": "〈哈利路亞〉寫在第 16 天",
+  "dek": "24 天，是韓德爾寫完整部《彌賽亞》用的時間。聽眾起立的那首〈哈利路亞〉，在第 16 天寫好。",
+  "brief": "聖誕季的合唱音樂會唱到〈哈利路亞〉，聽眾照慣例會站起來。這首合唱出自韓德爾的《彌賽亞》，1741 年他只用 24 天寫完整部作品，〈哈利路亞〉那一頁的日期是第 16 天。替他編歌詞的詹南斯嫌太草率，韓德爾 1742 到 1754 年間還在改。",
+  "topic_key": "music:handel-hwv56",
+  "form": "number",
+  "voice": "listener",
+  "updated_at": "2026-11-07T01:02:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Hallelujah_score_1741.jpg/1280px-Hallelujah_score_1741.jpg",
+    "width": 1280,
+    "height": 995,
+    "alt": "黑白的手寫總譜一頁，譜線上擠滿音符，左側寫著 alleluya 與 Hallelujah 的字樣，右下角是手寫的日期，可辨認為 Septemr. 6. 1741。",
+    "caption": "〈哈利路亞〉最後幾小節的手稿頁。右下角是韓德爾自己寫的日期，原文 Septemr. 6. 1741。Wikimedia Commons 說明此頁取自韓德爾的手稿，翻拍自 Watkins Shaw《The Story of Handel's Messiah》（Novello，1963）。",
+    "credit": "韓德爾（手稿，1741）；翻拍自 Watkins Shaw，Novello & Co.，1963；經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hallelujah_score_1741.jpg",
+    "made": "1741"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "聖誕季的合唱音樂會唱到〈哈利路亞〉，台下的聽眾照慣例會站起來。這首合唱出自清唱劇**《彌賽亞》**（Messiah），作曲的是**韓德爾**（George Frideric Handel），德國出生、住在倫敦的作曲家。1741 年他 56 歲，在倫敦布魯克街那棟他從 1723 年住到過世的房子裡寫這部作品，從頭到尾用了 **24 天**。"
+    },
+    {
+      "type": "p",
+      "text": "清唱劇不演戲、不搭布景，靠獨唱、合唱和樂團把一段聖經內容唱完。《彌賽亞》的歌詞是英國文人詹南斯（Charles Jennens）從欽定本聖經和《公禱書》裡的詩篇挑句子編成的，全曲分三部，〈哈利路亞〉是第二部最後一首合唱。"
+    },
+    {
+      "type": "p",
+      "text": "手稿上，〈哈利路亞〉最後幾小節那一頁的右下角，有韓德爾自己寫的日期：Septemr. 6. 1741，1741 年 9 月 6 日，就是上面這張圖。他 8 月 22 日動筆，從那天數起，這是第 16 天。24 天走到這裡，剛好三分之二。"
+    },
+    {
+      "type": "h",
+      "text": "從一聲哈利路亞開始"
+    },
+    {
+      "type": "p",
+      "text": "現在聽到的是開頭：所有聲部踩著同一個節奏，一起唱出「哈利路亞」，一個很簡單的小動機。記住它，整首會一再回到這幾個音。"
+    },
+    {
+      "type": "p",
+      "text": "接著歌詞來自《啟示錄》，和合本譯作「全能者作王了」。這句所有人先唱同一條旋律，然後聲部一個接一個進來，中間不時插進一聲「哈利路亞」。到「世上的國成了我主和主基督的國」，四個聲部排成和聲一起走，像唱聖詩。再來是「他要作王，直到永永遠遠」，變成賦格：一個聲部先唱主題，其他聲部依序追著唱同一句，這個主題的音跳得很大。"
+    },
+    {
+      "type": "p",
+      "text": "最後一段，「萬王之王，萬主之主」唱在同一個音上，「哈利路亞」和「直到永永遠遠」由女高音和小號一次比一次往高處唱。之後是一個繃緊的休止，然後是最後一聲莊嚴的「哈利路亞」。小號和定音鼓在《彌賽亞》裡只有少數幾首用得到，這首是其中之一。"
+    },
+    {
+      "type": "music",
+      "composer": "韓德爾（George Frideric Handel）",
+      "work": "清唱劇《彌賽亞》第二部終曲〈哈利路亞〉，HWV 56",
+      "work_original": "Messiah, HWV 56: Part II, Hallelujah",
+      "composed": "1741 年 8 月 22 日至 9 月 14 日（〈哈利路亞〉所在的第二部於 9 月 6 日寫完）",
+      "performers": "克里斯多福・霍格伍德（Christopher Hogwood）指揮 古樂學會（Academy of Ancient Music）、牛津基督堂座堂合唱團",
+      "recording": "L'Oiseau-Lyre，1979 年錄於倫敦漢普斯特德的 St Jude-on-the-Hill；用韓德爾 1754 年孤兒院（Foundling Hospital）版",
+      "movements": [
+        "第二部終曲：〈哈利路亞〉"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Handel Messiah Hogwood Academy of Ancient Music Christ Church Cathedral Choir Hallelujah",
+        "artist_hint": "Hogwood",
+        "track_filter": [
+          "Hallelujah"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "錄音我挑霍格伍德（Christopher Hogwood）指揮古樂學會（Academy of Ancient Music），合唱是牛津基督堂座堂合唱團，1979 年在倫敦錄的。用的是韓德爾 1754 年孤兒院（Foundling Hospital）版：編制小，人聲只有男聲和男童聲，樂器是古樂器，羊腸弦，不加顫音（讓聲音微微搖晃的那種唱法、拉法）。當年在團裡唱童聲的一位團員回憶，人少到「沒地方躲」，每個孩子的聲音都聽得到。"
+    },
+    {
+      "type": "h",
+      "text": "24 天怎麼排"
+    },
+    {
+      "type": "timeline",
+      "title": "1741 年的 24 天",
+      "caption": "起訖兩天與 9 月 6 日見於手稿，其餘依韓德爾自己的紀錄；「第幾天」以 8 月 22 日為第 1 天算起。",
+      "items": [
+        {
+          "when": "1741.8.22",
+          "label": "動筆",
+          "note": "第 1 天"
+        },
+        {
+          "when": "1741.8.28",
+          "label": "第一部的大綱完成",
+          "note": "第 7 天"
+        },
+        {
+          "when": "1741.9.6",
+          "label": "第二部完成，〈哈利路亞〉是它的最後一首",
+          "note": "第 16 天；〈哈利路亞〉譜頁上寫的就是這天"
+        },
+        {
+          "when": "1741.9.12",
+          "label": "第三部完成",
+          "note": "第 22 天"
+        },
+        {
+          "when": "1741.9.14",
+          "label": "再補寫兩天，收筆",
+          "note": "第 24 天"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "8 月 22 日到 9 月 14 日，頭尾兩天都算是 24 天；有一本英國的古典音樂雜誌不把頭尾兩天都算進去，寫成 23 天。"
+    },
+    {
+      "type": "p",
+      "text": "24 天也不全是從白紙開始。韓德爾借了自己的舊作：兩首 1741 年 7 月剛寫完的義大利文二重唱，加上一首 1722 年的。"
+    },
+    {
+      "type": "p",
+      "text": "詹南斯嫌這個速度太草率，要韓德爾改進，韓德爾不肯，兩人的關係一直很緊繃。依我看詹南斯嫌錯了地方：**24 天寫出來的，不是韓德爾對這部作品的最後定案。**從 1742 到 1754 年，韓德爾一直在修改、重寫個別的樂章，有些是為了配合當時的歌手。霍格伍德錄的是 1754 年的版本。"
+    },
+    {
+      "type": "p",
+      "text": "手稿最後，他寫了三個字母 SDG，拉丁文 Soli Deo Gloria 的縮寫：榮耀唯獨歸於神。"
+    },
+    {
+      "type": "p",
+      "text": "後來流傳一個說法：他寫〈哈利路亞〉的時候，看見整個天堂就在眼前。這個說法被當成傳說。",
+      "tag": "傳聞"
+    },
+    {
+      "type": "h",
+      "text": "第 24 天之後"
+    },
+    {
+      "type": "p",
+      "text": "9 月 14 日收筆，第一次演出卻不在倫敦。韓德爾把它帶去愛爾蘭，1742 年 4 月 13 日中午，在都柏林費沙姆街（Fishamble Street）的音樂廳首演。《都柏林日報》事先請女士別穿撐裙、男士別佩劍，那天一間設計給約 600 人的廳擠進了 700 人。收入分給三個慈善單位，其中一個救濟獄中的囚犯，釋放了 142 名欠債的囚犯。"
+    },
+    {
+      "type": "p",
+      "text": "倫敦的首演要等到 1743 年 3 月 23 日，地點是柯芬園（Covent Garden），反應冷淡。韓德爾那次只稱它「新的神聖清唱劇」，避開《彌賽亞》這個名字。"
+    },
+    {
+      "type": "p",
+      "text": "聽眾起立的由來，一般的說法是國王喬治二世在倫敦首演聽到〈哈利路亞〉，站了起來。可是沒有可靠的證據說國王那天在場；最早提到起立的，是 1756 年的一封信。"
+    },
+    {
+      "type": "p",
+      "text": "接著聽韓德爾的《祭司撒督》（Zadok the Priest），1727 年為喬治二世加冕寫的，此後每一位英國君主加冕都唱它。它還有一個後代：歐冠聯賽的主題曲，英國作曲家布瑞頓（Tony Britten）1992 年以它為底寫成。布瑞頓 2013 年受訪時說，有一句往上走的弦樂是他「從韓德爾那裡偷來的」，然後他自己寫了旋律。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "R.M.20.f.2（韓德爾《彌賽亞》手稿）",
+      "publisher": "大英圖書館 檔案與手稿目錄",
+      "date": "2026-11-06",
+      "url": "https://searcharchives.bl.uk/catalog/040-001948673",
+      "note": "日期為查閱日。手稿寫成日期為 1741 年 8 月 22 日至 9 月 14 日；一冊 140 張（folios），〈哈利路亞〉在第 100 至 106 張（正文不用）"
+    },
+    {
+      "title": "Messiah sources（《Handel: Messiah》Cambridge Handel Guides）",
+      "publisher": "Cambridge University Press",
+      "date": "2026-11-06",
+      "url": "https://www.cambridge.org/core/books/abs/handel-messiah/messiah-sources/489CAFD9DF6D0E5952452BF51F1E97AB",
+      "note": "日期為查閱日。依韓德爾自己加的日期，總譜寫於 1741 年 8 月 22 日至 9 月 14 日"
+    },
+    {
+      "title": "Messiah (Handel)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-06",
+      "url": "https://en.wikipedia.org/wiki/Messiah_(Handel)",
+      "note": "日期為查閱日。韓德爾的紀錄：8/28 第一部大綱、9/6 第二部、9/12 第三部，再兩天補寫；詹南斯嫌草率（Wikipedia 引 Glover 轉述的「careless negligence」）、要韓德爾改進而他不肯；借用舊二重唱；1742–1754 年修改；手稿末尾的 SDG 與看見天堂的傳說；歌詞取自欽定本聖經與《公禱書》詩篇；都柏林首演（約 700 人、142 人）、倫敦首演與起立說法的證據"
+    },
+    {
+      "title": "Messiah Part II",
+      "publisher": "Wikipedia",
+      "date": "2026-11-06",
+      "url": "https://en.wikipedia.org/wiki/Messiah_Part_II",
+      "note": "日期為查閱日。〈哈利路亞〉各段的寫法（開頭和弦、齊唱接模仿、四聲部、賦格、重複音、休止、最後一聲）與小號、定音鼓的用法"
+    },
+    {
+      "title": "Hallelujah Chorus",
+      "publisher": "Wikipedia",
+      "date": "2026-11-06",
+      "url": "https://en.wikipedia.org/wiki/Hallelujah_Chorus",
+      "note": "日期為查閱日。歌詞出自《啟示錄》19:6、19:16、11:15；編制"
+    },
+    {
+      "title": "Handel's Messiah: the work that caused traffic jams at its Dublin premiere",
+      "publisher": "BBC Music Magazine（classical-music.com）",
+      "date": "2024-09-07",
+      "url": "https://www.classical-music.com/features/articles/hallelujah-story-handel-s-messiah/",
+      "note": "2026-11-06 查閱。把工期寫成 23 天（正文說差在第一天算不算）；詹南斯編歌詞；都柏林首演日、廳約 600 人擠進 700 人、撐裙與佩劍、三個慈善單位"
+    },
+    {
+      "title": "Handel: 15 facts about the great composer",
+      "publisher": "Classic FM",
+      "date": "2026-11-06",
+      "url": "https://www.classicfm.com/composers/handel/guides/handel-facts-composer/",
+      "note": "日期為查閱日。聽眾習慣在〈哈利路亞〉站起來；該頁把國王起立寫成事實，與 Wikipedia 說法不同，正文採「沒有可靠證據」"
+    },
+    {
+      "title": "Handel Hendrix House press release, November 2026",
+      "publisher": "Handel & Hendrix in London",
+      "date": "2026-11-06",
+      "url": "https://handelhendrix.org/press-release/press-release-nov-2026",
+      "note": "日期為頁面標示的月份。韓德爾 1723 年起住布魯克街 25 號直到過世，《彌賽亞》寫於此；《祭司撒督》自喬治二世起每次英國加冕都演出"
+    },
+    {
+      "title": "File:Hallelujah score 1741.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-06",
+      "url": "https://commons.wikimedia.org/wiki/File:Hallelujah_score_1741.jpg",
+      "note": "日期為查閱日。〈哈利路亞〉最後幾小節的手稿頁，翻拍自 Watkins Shaw《The Story of Handel's Messiah》（Novello，1963）；右下角日期為肉眼辨讀"
+    },
+    {
+      "title": "Handel's Messiah with Christopher Hogwood",
+      "publisher": "Mark Slater（錄音時的童聲合唱團員）",
+      "date": "2026-11-06",
+      "url": "https://markslater.net/handels-messiah-with-christopher-hogwood/",
+      "note": "日期為查閱日。這版錄音用 1754 年孤兒院版、男聲與男童聲的小編制、古樂器與羊腸弦、不加顫音、1979 年在 St Jude-on-the-Hill 錄音；團員原話「There weren't enough of us to hide in」"
+    },
+    {
+      "title": "和合本 啟示錄 19:6、19:16、11:15",
+      "publisher": "信望愛聖經工具 FHL",
+      "date": "2026-11-06",
+      "url": "https://bible.fhl.net/",
+      "note": "日期為查閱日。用 scripts/bible.py 核對和合本經文"
+    },
+    {
+      "title": "Zadok the Priest",
+      "publisher": "Wikipedia",
+      "date": "2026-11-06",
+      "url": "https://en.wikipedia.org/wiki/Zadok_the_Priest",
+      "note": "日期為查閱日。1727 年為喬治二世加冕所寫，此後每次英國加冕都唱；1992 年被改編為歐冠聯賽主題曲的基礎。演唱時點各來源說法不一（本頁寫塗油之前，2023 年加冕流程是塗油時），正文不寫"
+    },
+    {
+      "title": "UEFA Champions League Anthem",
+      "publisher": "Wikipedia",
+      "date": "2026-11-06",
+      "url": "https://en.wikipedia.org/wiki/UEFA_Champions_League_Anthem",
+      "note": "日期為查閱日。布瑞頓 1992 年寫作、1992–93 賽季首次使用；2013 年受訪原話「There's a rising string phase which I pinched from Handel and then I wrote my own tune.」"
+    }
+  ]
+}
