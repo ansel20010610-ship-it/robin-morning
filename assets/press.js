@@ -3,7 +3,7 @@
 // and what is still not on disk), its late note, which of its articles came from the reserve, and the top-level stock
 // of reserve articles — so the page says the same offline as online, as of the index the app holds. app.js viewPress
 // draws pressHtml(); `col` is app.js's column meta, which honours "was".
-import { esc, fmtDate, twNow, roman } from "./util.js";
+import { esc, fmtDate, twNow, roman, issueNo } from "./util.js";
 
 // The five shifts of editorial/README.md, Taiwan time. "reserve" is the 14:37 備稿班 and "audit" the Sunday 稽核; they
 // report into the same file and show in the roster's last column and the 稽核 section.
@@ -31,7 +31,7 @@ export const overdue = (date, now = twNow()) => date < now.date || (date === now
 function morning(issue, col, now) {
   if (!issue) return `<p class="empty">還沒有任何一期。</p>`;
   const { date } = issue, press = issue.press || {};
-  const head = `<div class="sec-head"><h2>今晨</h2><span class="de">Heute früh</span><span class="note">${esc(fmtDate(date, "short"))}・週${esc(issue.weekday || "")}・第 ${esc(issue.no)} 期</span></div>`;
+  const head = `<div class="sec-head"><h2>今晨</h2><span class="de">Heute früh</span><span class="note">${esc(fmtDate(date, "short"))}・週${esc(issue.weekday || "")}・${esc(issueNo(issue.no))}</span></div>`;
   const late = overdue(date, now), shifts = press.shifts || {};
   const rows = SHIFTS.map(([k, at, duty]) => {
     const r = shifts[k], miss = r ? names(r.missing, date, col) : [];

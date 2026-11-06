@@ -65,6 +65,9 @@ export function fmtDate(iso, style = "zh") {
 }
 
 // Roman numerals for a page's place in the issue, or a month on a stamp (nothing here gets near forty).
+// Issue 1 (2026-10-11) is the founding number: 創刊號 in Chinese lines, Erstausgabe where the paper speaks Latin/German.
+export const issueNo = (no) => Number(no) === 1 ? "創刊號" : `第 ${no} 期`;
+export const issueNr = (no) => Number(no) === 1 ? "Erstausgabe" : `No. ${no}`;
 export const roman = (n) => [[10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]].reduce(([s, r], [v, l]) => { while (r >= v) { s += l; r -= v; } return [s, r]; }, ["", Math.max(0, Math.round(n))])[0];
 
 // The robin of the masthead's crest, in a 64-unit box: tail, body, head, breast, beak, eye, wing, legs and perch. app.js

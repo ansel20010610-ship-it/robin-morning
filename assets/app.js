@@ -1,5 +1,5 @@
 // 知更鳥晨間記事 — app shell, routing and views.
-import { $, esc, inline, paragraphs, store, toast, twNow, fmtDate, getJSON, ICON, ROBIN_PATHS, roman } from "./util.js";
+import { $, esc, inline, paragraphs, store, toast, twNow, fmtDate, getJSON, ICON, ROBIN_PATHS, roman, issueNo, issueNr } from "./util.js";
 import { renderBody, renderHero } from "./blocks.js";
 import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient, isWebKitITP, isStandaloneIOS, exportLinkCode, importLinkCode, defaultPlaylist,
   autoPlaylist, setAutoPlaylist, choosePlaylist, autoAdd } from "./spotify.js";
@@ -366,13 +366,13 @@ function masthead(issue, fresh = false) {
   return `<header class="masthead${fresh ? " fresh" : ""}"><div class="wrap">
     ${fresh ? `<i class="roller" aria-hidden="true"></i>` : ""}
     <hr class="rule-double">
-    <div class="topline"><span>Wien · Taipei</span><span>${issue ? `No. ${issue.no}` : ""}</span><span>${esc(fmtDate(date, "de").split(",")[0])}</span></div>
+    <div class="topline"><span>Wien · Taipei</span><span>${issue ? esc(issueNr(issue.no)) : ""}</span><span>${esc(fmtDate(date, "de").split(",")[0])}</span></div>
     ${fresh ? `<i class="stamp-date" aria-hidden="true"><b>Druckfrisch</b><span>No. ${esc(issue.no)}</span><span>${d}. ${roman(m)}. ${y}</span><i class="echo"></i></i>` : ""}
     <div class="checker" aria-hidden="true"></div>
     <div class="crest">${EMBLEM}<i class="burst" aria-hidden="true"></i><i class="wave" aria-hidden="true"></i><i class="wave w2" aria-hidden="true"></i></div>
     <h1>${esc(S.cfg.title)}</h1>
     <div class="latin">${esc(S.cfg.subtitle)}</div>
-    <div class="dateline">${esc(fmtDate(date))}${issue ? `・第 ${issue.no} 期` : ""}・${esc(S.cfg.publish_time)} 出刊</div>
+    <div class="dateline">${esc(fmtDate(date))}${issue ? `・${esc(issueNo(issue.no))}` : ""}・${esc(S.cfg.publish_time)} 出刊</div>
     <div class="checker" aria-hidden="true"></div>
     ${issue?.epigraph ? `<p class="epigraph"${verseVars(issue.epigraph.text)}>${verseHtml(issue.epigraph.text)}<span>${esc(issue.epigraph.ref)}（和合本）</span></p>` : ""}
   </div></header>`;
@@ -554,7 +554,7 @@ function viewFront(dateParam) {
   main.innerHTML = `${masthead(issue, fresh)}
   <div class="wrap">
     ${status ? `<div class="status">${status}</div>` : ""}
-    ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的第 ${issue.no} 期・<a href="#/">回到最新一期</a></div>` : ""}
+    ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的${esc(issueNo(issue.no))}・<a href="#/">回到最新一期</a></div>` : ""}
     ${lateNote(issue.date)}
     ${prayerBox(issue)}
     ${lockMode() ? lockBar(arts, issue.date) : ""}
@@ -813,7 +813,7 @@ async function viewArticle(date, column, my) {
       <header class="article-head">${kicker(column, true, date)}${a.serial ? serialPlate(a.serial) : ""}<h1>${esc(a.title)}</h1>
         ${a.takeaway ? `<aside class="takeaway"><span class="lbl">帶得走的結論</span><p>${inline(a.takeaway)}</p>${evidenceOf(a) ? `<p class="ev"><b>證據力</b>${inline(evidenceOf(a))}</p>` : ""}</aside>` : ""}
         <p class="dek">${esc(a.dek)}</p>
-        <div class="meta"><div class="row"><span>${esc(fmtDate(date))}</span>${issue ? `<span>第 ${issue.no} 期</span>` : ""}${minutes ? `<span>閱讀約 ${minutes} 分鐘</span>` : ""}${updatedNote(date, a)}</div></div>
+        <div class="meta"><div class="row"><span>${esc(fmtDate(date))}</span>${issue ? `<span>${esc(issueNo(issue.no))}</span>` : ""}${minutes ? `<span>閱讀約 ${minutes} 分鐘</span>` : ""}${updatedNote(date, a)}</div></div>
         ${fixtureHtml(fix)}
         ${a.from_reserve && column === "football" ? `<div class="banner">今晨新聞稿未能如期完成，先刊出這篇備用專題；最新消息併入下一期。</div>` : ""}
         ${a.status === "undetermined" ? `<div class="banner">本期查核未完成，無法判定是否有新進展；這不代表沒有新消息。</div>` : ""}
@@ -1064,7 +1064,7 @@ function openContents(date, order, idx) {
     return by ? `<li><div class="opt locked" aria-disabled="true">${inner}</div></li>`
       : `<li><a class="opt${now ? " now" : ""}" href="#/a/${date}/${esc(a.column)}" data-i="${i}"${now ? ' aria-current="page"' : ""}>${inner}</a></li>`;
   });
-  sheet.innerHTML = `<div class="sheet contents"><h2>本期目錄<span class="de">Inhalt</span></h2><p class="sub">${esc(fmtDate(date))}・第 ${issue.no} 期・${order.length} 篇${lockMode() ? "・循序閱讀" : ""}</p>
+  sheet.innerHTML = `<div class="sheet contents"><h2>本期目錄<span class="de">Inhalt</span></h2><p class="sub">${esc(fmtDate(date))}・${esc(issueNo(issue.no))}・${order.length} 篇${lockMode() ? "・循序閱讀" : ""}</p>
     <ol class="list">${rows.join("")}</ol><div class="btns"><button class="btn ghost" type="button" data-close>關上</button></div></div>`;
   sheet.querySelector("[data-close]").onclick = () => sheet.close();
   // The backdrop is the dialog itself; a row sets the turn's direction and lets its link go on to the router.
@@ -1366,7 +1366,7 @@ function viewArchive() {
       const arts = sortArticles(iss.articles, iss.date).filter((a) => !ql || `${a.title} ${a.dek} ${col(a.column, iss.date).name}`.toLowerCase().includes(ql));
       if (!arts.length) continue;
       const ym = iss.date.slice(0, 7), d = Number(iss.date.slice(8));
-      months.set(ym, [...(months.get(ym) || []), `<a class="issue-row" href="#/issue/${iss.date}"><div class="d"><b>${d}</b><span>週${esc(iss.weekday)}・No.${iss.no}</span>${done.has(iss.date) ? seal(iss.date, 0, true) : ""}</div>
+      months.set(ym, [...(months.get(ym) || []), `<a class="issue-row" href="#/issue/${iss.date}"><div class="d"><b>${d}</b><span>週${esc(iss.weekday)}・${esc(issueNr(iss.no))}</span>${done.has(iss.date) ? seal(iss.date, 0, true) : ""}</div>
         <ul>${arts.map((a) => `<li><i>${esc(col(a.column, iss.date).name)}</i>${esc(a.title)}</li>`).join("")}</ul></a>`]);
     }
     const rows = [...months].map(([ym, list]) => `<details class="mon"${ql || (ym in openSet ? openSet[ym] : ym === thisYm) ? " open" : ""} data-ym="${ym}">
@@ -1543,7 +1543,7 @@ function viewStamp(date) {
   const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/stamps" aria-label="返回">${ICON.back}</a><div class="title">郵票冊</div></div></div>`;
   if (!issue || !isPublished(date) || !done) { main.innerHTML = `${top}<div class="wrap"><p class="empty">這一格還沒有郵票。<a href="#/stamps">回郵票冊</a></p></div>`; wireBack(); return; }
   main.innerHTML = `${top}<div class="wrap stamp-page"><div class="big">${stampHtml({ ...issue, articles: sortArticles(issue.articles || [], date) }, { earned: true, bird: birdsFound().has(date) })}</div>
-    <p class="line"><b>No. ${esc(issue.no)}</b><span>${esc(fmtDate(date))}・週${esc(issue.weekday || "")}</span><i>${esc(fmtDate(date, "de"))}</i></p>
+    <p class="line"><b>${esc(issueNr(issue.no))}</b><span>${esc(fmtDate(date))}・週${esc(issue.weekday || "")}</span><i>${esc(fmtDate(date, "de"))}</i></p>
     <p class="btns"><a class="btn ghost" href="#/issue/${esc(date)}">看這一期</a></p></div>`;
   wireBack();
   // A tap on the blank page (not the stamp, not a link) goes back to the album, as closing a thing held up to look at.
@@ -1551,7 +1551,7 @@ function viewStamp(date) {
     if (e.target.closest("a, button, .stamp")) return;
     if (routed) history.back(); else location.hash = "#/stamps";
   });
-  document.title = `郵票 No. ${issue.no}｜${S.cfg.title}`;
+  document.title = `郵票 ${issueNr(issue.no)}｜${S.cfg.title}`;
 }
 
 // ——— 你讀過的世界 (Gelesene Welt; assets/world.js): the countries the news column has taken the reader to ———
@@ -1594,7 +1594,7 @@ function calendarHtml(ym, pubs, done) {
   for (let d = 1; d <= daysIn(ym); d++) {
     const iso = `${ym}-${String(d).padStart(2, "0")}`, iss = byDate.get(iso), fin = done.has(iso);
     const cls = ["day", iss && "pub", fin && "done", fin && (first + d - 1) % 7 && done.has(addDays(iso, -1)) && "chain", iso === today && "today"].filter(Boolean).join(" ");
-    cells.push(iss ? `<a class="${cls}" href="#/issue/${iso}" aria-label="${esc(fmtDate(iso, "short"))}・第 ${iss.no} 期${fin ? "・讀完" : ""}">${d}</a>` : `<span class="${cls}">${d}</span>`);
+    cells.push(iss ? `<a class="${cls}" href="#/issue/${iso}" aria-label="${esc(fmtDate(iso, "short"))}・${esc(issueNo(iss.no))}${fin ? "・讀完" : ""}">${d}</a>` : `<span class="${cls}">${d}</span>`);
   }
   const got = pubs.filter((i) => i.date.startsWith(ym)), fin = got.filter((i) => done.has(i.date)).length;
   return `<section class="jahr" aria-label="本月閱讀月曆"><div class="mon"><span>${Number(ym.slice(5))} 月</span><span class="de">${esc(monDe(ym))}</span></div>
@@ -1691,7 +1691,7 @@ function viewRandom(date, column) {
   const card = (x) => {
     const read = readSet(), issue = issueBy(x.date), k = col(x.a.column, x.date);
     return `${thumb(x.a, "ph")}<div class="kicker">${esc(k.name)}<span class="de">${esc(k.latin || "")}</span></div><h3>${esc(x.a.title)}</h3>${summary(x.a)}
-      <div class="meta"><div class="row"><span>${esc(fmtDate(x.date))}</span>${issue ? `<span>第 ${issue.no} 期</span>` : ""}${x.a.minutes ? `<span>約 ${x.a.minutes} 分鐘</span>` : ""}${read.has(x.key) ? `<span class="read-mark">已讀</span>` : ""}</div></div>
+      <div class="meta"><div class="row"><span>${esc(fmtDate(x.date))}</span>${issue ? `<span>${esc(issueNo(issue.no))}</span>` : ""}${x.a.minutes ? `<span>約 ${x.a.minutes} 分鐘</span>` : ""}${read.has(x.key) ? `<span class="read-mark">已讀</span>` : ""}</div></div>
       <div class="btns"><a class="btn" href="#/a/${x.key}">就讀這篇</a><button class="btn ghost" type="button" data-again>再翻一張</button></div>`;
   };
   const note = () => { const pool = randomPool(), read = readSet(), n = pool.filter((x) => !read.has(x.key)).length; return `往期可翻 ${pool.length} 篇，${n ? `${n} 篇還沒讀過，先抽它們` : "每一篇都讀過了，就隨意翻"}。`; };
