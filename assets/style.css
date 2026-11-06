@@ -1572,14 +1572,17 @@ a.stamp:active .sp { filter: brightness(.96); }
 .buch h2 { margin: 0; font-size: 30px; letter-spacing: .06em; line-height: 1.3; }
 .buch .by { margin: 4px 0 0; font-family: var(--sans); font-size: 12.5px; letter-spacing: .08em; color: var(--gold-ink); }
 .buch .by i { font-family: var(--latin); font-size: 14px; letter-spacing: .02em; color: var(--muted); }
-/* frontispiece (app.js frontispiece): the portrait mounted on a slip of paper at the left, the epigraph facing it */
+/* frontispiece (app.js frontispiece): the picture mounted on a slip of paper at the left, the epigraph facing it.
+   The epigraph is set in a kai face (霞鶩文楷 TC, OFL — assets/serial/OFL-LXGW-WenKai.txt), the typeface of Chinese
+   Bibles; the file holds only the glyphs of this book's epigraph, so a new book needs a new subset (serial.md 書版). */
+@font-face { font-family: "Epigraph"; src: url("serial/brothers-karamazov-epigraph.ttf") format("truetype"); font-weight: 400; font-display: swap; }
 .buch .front { display: flex; gap: 18px; align-items: flex-start; margin: 18px 0 0; }
 .buch .bild { flex: 0 0 34%; max-width: 150px; margin: 0; }
 .buch .bild img { display: block; width: 100%; height: auto; box-sizing: border-box; padding: 3px; border: 1px solid var(--rule); background: var(--paper-2); box-shadow: 0 1px 2px rgba(60, 45, 20, .12); }
 .buch .bild figcaption { margin-top: 6px; font-family: var(--sans); font-size: 10.5px; line-height: 1.5; letter-spacing: .03em; color: var(--muted); }
 .buch .motto { flex: 1; min-width: 0; margin: 0; padding: 4px 0 0 14px; } /* keeps the site's gold rule at the left */
-.buch .motto p { margin: 0; font-size: 16px; line-height: 1.95; color: var(--ink); }
-.buch .motto cite { display: block; margin-top: 10px; font-style: normal; font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--gold-ink); }
+.buch .motto p { margin: 0; font-family: "Epigraph", var(--serif); font-size: 17.5px; line-height: 1.95; letter-spacing: .03em; color: var(--ink); }
+.buch .motto cite { display: block; margin-top: 10px; font-style: normal; font-family: "Epigraph", var(--serif); font-size: 12.5px; letter-spacing: .05em; color: var(--gold-ink); }
 .buch .motto cite::before { content: ""; display: block; width: 26px; height: 1px; margin-bottom: 9px; background: var(--gold); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .buch .bild img { filter: brightness(.9); box-shadow: none; } }
 :root[data-theme="dark"] .buch .bild img { filter: brightness(.9); box-shadow: none; }
