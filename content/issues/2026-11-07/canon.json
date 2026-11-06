@@ -1,0 +1,295 @@
+{
+  "column": "canon",
+  "date": "2026-11-07",
+  "title": "一個照著小說過日子的人",
+  "dek": "一個照騎士小說過日子的讀者，一路被現實摔回來；到了第二部，連一本冒用他名字的書都得跟他對質。",
+  "brief": "《唐吉訶德》的主角讀騎士小說讀到信以為真，替自己取了騎士的名字，穿上曾祖的生鏽盔甲上路。到了第二部，有人把一本冒用他名字的假續集遞到他手上，書裡說他去了薩拉戈薩，他偏不去，隔天一早打聽往巴塞隆納的路。福樓拜說，自己的源頭全在這本還不識字就會背的書裡。",
+  "topic_key": "canon:don-quixote",
+  "form": "argument",
+  "voice": "critic",
+  "updated_at": "2026-11-07T02:25:21+08:00",
+  "spoiler": "本文談到《唐吉訶德》第二部的結局。",
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "illustration",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Gustave_Dor%C3%A9_-_Miguel_de_Cervantes_-_Don_Quixote_-_Part_1_-_Chapter_1_-_Plate_1_%22A_world_of_disorderly_notions%2C_picked_out_of_his_books%2C_crowded_into_his_imagination%22.jpg/1280px-thumbnail.jpg",
+    "width": 1280,
+    "height": 1656,
+    "alt": "黑白版畫。一個瘦長的男人，四周擠滿從書裡冒出來的東西。",
+    "caption": "多雷為《唐吉訶德》第一部第 1 章畫的第一張插圖，圖下印著英譯本的一句：從書裡撿來的一大堆亂七八糟的念頭，擠滿了他的想像。",
+    "credit": "古斯塔夫・多雷（Gustave Doré）原畫，埃利奧多爾・皮桑（Héliodore Pisan）刻版；掃描自 1906 年 Cassell 版英譯本",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gustave_Dor%C3%A9_-_Miguel_de_Cervantes_-_Don_Quixote_-_Part_1_-_Chapter_1_-_Plate_1_%22A_world_of_disorderly_notions,_picked_out_of_his_books,_crowded_into_his_imagination%22.jpg",
+    "made": "1863 年初版插圖；此印本 1906 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "**《唐吉訶德》**的主角是一個讀者。他把騎士小說當真，帶著書裡的規矩上路，一路被現實摔回來；到了第二部，他遇到的人已經讀過他。**一個人照著讀過的故事活，世界偏偏不配合**，這個題目它寫得很深，後來的小說家有人在書名頁上寫明仿它的筆法，有人說自己的源頭全在它身上。"
+    },
+    {
+      "type": "p",
+      "text": "作者**塞萬提斯（Miguel de Cervantes）**是西班牙人，1547 年生，打過海戰，在北非當過五年俘虜。第一部 1605 年在馬德里出版，第二部 1615 年，隔年他過世。主角是西班牙中部拉曼查的一個鄉紳，年近五十，自稱唐吉訶德。拿長矛衝向風車的騎士就是他，英文形容人不切實際的 quixotic 也從他來。"
+    },
+    {
+      "type": "p",
+      "text": "他讀的是騎士小說，滿紙魔法、決鬥和情話的遊俠騎士故事，最紅的《高盧的阿瑪迪斯》1508 年就有印本，續集出了幾十部。唐吉訶德這個名字，是他花八天照這類書替自己取的，還學阿瑪迪斯在後面加上故鄉，叫「拉曼查的唐吉訶德」。序言裡借朋友之口說，整本書是對騎士小說的抨擊。只做到這一步，它多半只是一部戲仿。"
+    },
+    {
+      "type": "p",
+      "text": "他讀到打獵和家產都不管，賣掉許多畝耕地去買書，「睡得少、讀得多，腦子乾掉了」，然後擦亮曾祖留下的生鏽盔甲，出門去做書裡騎士做的每一件事。騎士小說請讀者看騎士打仗，這本書請讀者看一個讀者上路。"
+    },
+    {
+      "type": "h",
+      "text": "巫師把巨人變成了風車"
+    },
+    {
+      "type": "p",
+      "text": "第一部第 8 章，原野上有三四十座風車。唐吉訶德說是巨人；跟他出門的侍從、農夫桑丘・潘薩（Sancho Panza）說是風車，像手臂的是風車葉。他照樣衝上去，風一轉，矛斷了，人和馬一起摔出去。"
+    },
+    {
+      "type": "p",
+      "text": "好戲在摔完之後。他說，是偷走他房間和書的巫師把巨人變成了風車，好搶走他的勝利。反證來了，信念把它吞下去，把反證收進巫師的說法裡。書把兩人看見的東西同時擺著，不替誰收場，讀者兩邊的話都聽得到，這是它到今天還管用的第一招。法國小說家**福樓拜（Gustave Flaubert）**1852 年 11 月寫信給情人，說起星期天和朋友一起讀了這本書。"
+    },
+    {
+      "type": "quote",
+      "text": "《唐吉訶德》最驚人的，是不見匠心，以及幻想與現實那種一刻不停的交融，使它既那麼好笑，又那麼有詩意。",
+      "original": "Ce qu'il y a de prodigieux dans Don Quichotte c'est l'absence d'art et cette perpétuelle fusion de l'illusion et de la réalité qui en fait un livre si comique et si poétique.",
+      "cite": "福樓拜致路易絲・科萊，1852 年 11 月 22 日"
+    },
+    {
+      "type": "h",
+      "text": "隔著一道牆，有人在讀他"
+    },
+    {
+      "type": "p",
+      "text": "第一部一出版就紅，幾個星期內里斯本就冒出三種盜版。第二部裡，同村的學士參孫告訴他，他的故事已經印出來了，讀的人很多；一對公爵夫婦讀過第一部，於是順著他的瘋，照騎士小說的禮數款待他。"
+    },
+    {
+      "type": "p",
+      "text": "1614 年，第二部還沒出，有人用筆名在塔拉戈納搶先出了一部假續集，塞萬提斯也把它寫了進去。第 59 章，唐吉訶德在客棧隔著薄牆，聽見隔壁兩位客人在讀那部假書，書裡的他去了薩拉戈薩比武。他對兩人說，「正因如此，我就不踏進薩拉戈薩一步」，好讓世人看清那位史家說謊。他說不踏進薩拉戈薩，隔天一早就打聽去巴塞隆納、不經過薩拉戈薩的路，一心要讓那個新史家成為說謊者。這是第二招。"
+    },
+    {
+      "type": "h",
+      "text": "書名頁上的那一行"
+    },
+    {
+      "type": "p",
+      "text": "英國小說家費爾丁（Henry Fielding）1742 年出版《約瑟夫・安德魯斯》，初版書名頁寫明「仿塞萬提斯的筆法寫成」。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Josephandrewsfirstedition.JPG",
+      "width": 940,
+      "height": 1500,
+      "alt": "18 世紀英文書名頁，鉛字排印，印著一行 Written in Imitation of The Manner of CERVANTES, Author of Don Quixote，以及出版年 M.DCC.XLII（1742）。",
+      "caption": "費爾丁《約瑟夫・安德魯斯》初版書名頁，1742 年倫敦 A. Millar 印行。書名頁上就交代了這本書學的是誰。",
+      "credit": "亨利・費爾丁（Henry Fielding）著",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Josephandrewsfirstedition.JPG",
+      "made": "1742"
+    },
+    {
+      "type": "p",
+      "text": "十年後，蘇格蘭作家倫諾克斯（Charlotte Lennox）寫了《女唐吉訶德》，女主角讀法國傳奇小說，以為都是真的歷史。福樓拜 1852 年 6 月在信裡說，自己的源頭全在一本還不識字就會背的書裡，就是《唐吉訶德》；那時他正在寫 1857 年出版的小說《包法利夫人》，女主角艾瑪少女時讀言情小說，婚後想弄懂書裡那麼美的「幸福、激情、陶醉」到底指什麼。依我看，她和唐吉訶德走的是同一條路。"
+    },
+    {
+      "type": "p",
+      "text": "2002 年，挪威讀書俱樂部請 54 國約 100 位作家各列 10 部世界文學作品，書單不排名，主辦方只公布《唐吉訶德》一面倒地領先，票數最多。"
+    },
+    {
+      "type": "h",
+      "text": "納博可夫嫌它殘酷"
+    },
+    {
+      "type": "p",
+      "text": "反對的人當中有寫《蘿莉塔》的小說家納博可夫（Vladimir Nabokov）。他 1952 年在哈佛講這本書，多年後愉快地回憶，自己在六百個學生面前，把這本「殘酷又粗糙的舊書」拆得七零八落。"
+    },
+    {
+      "type": "p",
+      "text": "他說對了一半，書裡的殘酷是真的。唐吉訶德把羊群揚起的塵土當成軍隊，衝進去刺羊，牧羊人用石頭砸他，打斷兩根肋骨，又打掉三四顆牙。他叫桑丘把手指伸進他嘴裡數，說右上原本四顆臼齒，不算智齒，一輩子沒拔過、沒蛀過。桑丘摸完說，下面剩兩顆半，上面一顆不剩，平得像手掌。"
+    },
+    {
+      "type": "p",
+      "text": "另一半我不同意。世界要是肯配合，唐吉訶德只是一個幸福的瘋子，沒有故事，殘酷是這個題目的代價；納博可夫自己也寫過，這位騎士的紋章是憐憫。至於「粗糙」，我站福樓拜那邊，他說這本書最驚人的正是不見匠心。"
+    },
+    {
+      "type": "p",
+      "text": "真正粗糙的，是第一部中間插進去、和主線無關的一篇中篇小說，第二部裡的人物自己就在抱怨它放錯了地方。依我看，那幾章跳過去不可惜。"
+    },
+    {
+      "type": "spoiler",
+      "text": "以下談到《唐吉訶德》第二部的結局。"
+    },
+    {
+      "type": "h",
+      "text": "清醒過來的人"
+    },
+    {
+      "type": "p",
+      "text": "最後一章，他在家發燒臥床，一覺醒來說自己清醒了，改稱善人阿隆索・吉哈諾，說騎士小說讓他憎恨。他向桑丘道歉，害他也相信世上真有遊俠騎士。桑丘哭著回答。"
+    },
+    {
+      "type": "quote",
+      "text": "哎，您別死，我的老爺，聽我的勸，多活幾年；人這輩子能做的最大的瘋事，就是沒人殺他、也沒別的手來了結他，只憑一股憂鬱，就這樣讓自己死掉。",
+      "original": "¡Ay! —respondió Sancho, llorando—: no se muera vuestra merced, señor mío, sino tome mi consejo y viva muchos años, porque la mayor locura que puede hacer un hombre en esta vida es dejarse morir, sin más ni más, sin que nadie le mate, ni otras manos le acaben que las de la melancolía.",
+      "cite": "塞萬提斯《唐吉訶德》第二部第 74 章（1615）"
+    },
+    {
+      "type": "p",
+      "text": "接著他搬出主人的書，說騎士小說裡互相打落馬是常事，今天輸的明天就贏。這個不識字、在第 8 章指著風車說不是巨人的農夫，臨終前拿書裡的規矩勸主人起來。幻想會傳染，這是第三招。"
+    },
+    {
+      "type": "p",
+      "text": "唐吉訶德沒被勸動，說自己曾經瘋過，現在清醒了。三天後他死了。神父請公證人開一張證明，寫明他已經自然死亡，免得別的作者讓他假復活。"
+    },
+    {
+      "type": "p",
+      "text": "依我看，它管用靠三件事。塞萬提斯把一個讀者放進小說當主角，讓他腦中的故事和眼前的世界一路對不上，讀者同時看見巨人和風車；再讓這個人物讀到寫錯他的那本書，就說要證明它說錯；最後讓幻想傳染，連不識字的侍從也在床邊搬出騎士小說。費爾丁、倫諾克斯、福樓拜都留下了直接承認或模仿它的字據。"
+    },
+    {
+      "type": "p",
+      "text": "納博可夫嫌的殘酷和粗糙都在，我不替它辯。可是一個不識字的侍從會在床邊搬出騎士小說，一個主角會為了讓一本書說錯，隔天就打聽另一條路，到了這一步，依我看，它寫的已經是每一個讀過書、還得回到書外過日子的人。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Don Quijote（西班牙文全文，eBook #2000）",
+      "publisher": "Project Gutenberg",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/2000",
+      "note": "第一部序言（invectiva contra los libros de caballerías）、第 1（取名：四天、八天、de la Mancha 仿 Amadís de Gaula）、6（書房檢查，Amadís 被饒）、8、10、18 章；第二部序言（Tordesillas、Tarragona）、第 3（Sansón：一萬兩千多冊、allí va Rocinante、El curioso impertinente）、30、59（兩位客人入房、Mari Gutiérrez／Teresa Panza）、60（隔天早上打聽往巴塞隆納的路）、64–65（白月騎士即 Sansón）、74 章（宣布憎恨騎士小說、遺囑、桑丘勸說、公證人的話、神父請開死亡證明、墓誌銘、Cide Hamete 的筆）"
+    },
+    {
+      "title": "Meet Cervantes",
+      "publisher": "Museo Casa Natal de Cervantes",
+      "date": "",
+      "url": "https://museocasanataldecervantes.org/meet-cervantes/",
+      "note": "1547 年生於阿爾卡拉-德埃納雷斯；勒班陀負傷；阿爾及爾五年囚禁、四次脫逃，1580 年 9 月 19 日獲釋；1616 年 4 月 22 日去世"
+    },
+    {
+      "title": "Don Quixote of la Mancha (Parts I and II)",
+      "publisher": "Museo Casa Natal de Cervantes",
+      "date": "",
+      "url": "https://museocasanataldecervantes.org/don-quixote-of-la-mancha-parts-i-and-ii/",
+      "note": "1605 年 Juan de la Cuesta 印行；1615 年第二部；Avellaneda 筆名"
+    },
+    {
+      "title": "Quijote de Avellaneda（版本頁）",
+      "publisher": "Wikisource（西班牙文）",
+      "date": "",
+      "url": "https://es.wikisource.org/wiki/Quijote_de_Avellaneda",
+      "note": "Tarragona: Felipe Roberto, 1614"
+    },
+    {
+      "title": "Amadis de Gaula",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Amadis_de_Gaula",
+      "note": "現存最早印本由 Garci Rodríguez de Montalvo 整理，1508 年薩拉戈薩四卷本；其後數十年西、義、德文續集數十部"
+    },
+    {
+      "title": "Miguel de Cervantes Saavedra (1547-1616)（Clara Panozzo、Sophie Defrance）",
+      "publisher": "Cambridge University Library, Language Collections blog",
+      "date": "2016-04-22",
+      "url": "https://languagecollections-blog.lib.cam.ac.uk/2016/04/22/miguel-de-cervantes-saavedra-1547-1616/",
+      "note": "Within a few weeks of publication at Madrid in 1605, three pirated editions of Don Quixote were issued at Lisbon；A second authorized edition, imperfectly revised, was rushed to the press at Madrid"
+    },
+    {
+      "title": "quixotic",
+      "publisher": "Merriam-Webster",
+      "date": "",
+      "url": "https://www.merriam-webster.com/dictionary/quixotic",
+      "note": "字源 Don Quixote；First Known Use 1718"
+    },
+    {
+      "title": "Correspondance, deuxième série (1850–1854)（Œuvres complètes de Gustave Flaubert, Conard）",
+      "publisher": "Internet Archive（correspondance02flauuoft）",
+      "date": "1910",
+      "url": "https://archive.org/details/correspondance02flauuoft",
+      "note": "致 Louise Colet 兩封信的原文：je retrouve toutes mes origines…（同信 la lecture de Bovary）；Ce qu'il y a de prodigieux dans Don Quichotte…（同信與 Bouilhet 星期天讀 Rabelais 與 Don Quichotte）。此版未標確切日期，日期依 Centre Flaubert"
+    },
+    {
+      "title": "19 juin 1852, de Gustave Flaubert à Louise Colet",
+      "publisher": "Centre Gustave Flaubert（Université de Rouen）",
+      "date": "1852-06-19",
+      "url": "https://flaubert.univ-rouen.fr/correspondance/correspondance/19-juin-1852-de-gustave-flaubert-%C3%A0-louise-colet/",
+      "note": "信件日期"
+    },
+    {
+      "title": "22 novembre 1852, de Gustave Flaubert à Louise Colet",
+      "publisher": "Centre Gustave Flaubert（Université de Rouen）",
+      "date": "1852-11-22",
+      "url": "https://flaubert.univ-rouen.fr/correspondance/correspondance/22-novembre-1852-de-gustave-flaubert-%C3%A0-louise-colet/",
+      "note": "信件日期"
+    },
+    {
+      "title": "Madame Bovary（法文全文，eBook #14155）",
+      "publisher": "Project Gutenberg",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/14155",
+      "note": "第一部第 5 章末（félicité, de passion et d'ivresse… si beaux dans les livres）、第 6 章修道院讀書"
+    },
+    {
+      "title": "Madame Bovary",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Madame_Bovary",
+      "note": "1856 年 10 月至 12 月《巴黎評論》連載，1857 年 4 月 12 日出書"
+    },
+    {
+      "title": "File:Josephandrewsfirstedition.JPG",
+      "publisher": "Wikimedia Commons",
+      "date": "1742",
+      "url": "https://commons.wikimedia.org/wiki/File:Josephandrewsfirstedition.JPG",
+      "note": "《約瑟夫・安德魯斯》1742 年初版書名頁；原上傳說明 Title page of the first edition (1742)"
+    },
+    {
+      "title": "The Female Quixote",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/The_Female_Quixote",
+      "note": "蘇格蘭作家 Charlotte Lennox，1752 年；模仿、戲仿《唐吉訶德》；Arabella 讀法國傳奇小說，以為所寫皆為真實歷史"
+    },
+    {
+      "title": "File:Gustave Doré - Miguel de Cervantes - Don Quixote - Part 1 - Chapter 1 - Plate 1",
+      "publisher": "Wikimedia Commons",
+      "date": "1906",
+      "url": "https://commons.wikimedia.org/wiki/File:Gustave_Dor%C3%A9_-_Miguel_de_Cervantes_-_Don_Quixote_-_Part_1_-_Chapter_1_-_Plate_1_%22A_world_of_disorderly_notions,_picked_out_of_his_books,_crowded_into_his_imagination%22.jpg",
+      "note": "原插圖 1863 年；掃描自 1906 年 Cassell 版；刻版 Héliodore Pisan"
+    },
+    {
+      "title": "Tilting At Windmills",
+      "publisher": "Reuters（CBS News 轉載）",
+      "date": "2002-05-07",
+      "url": "https://www.cbsnews.com/news/tilting-at-windmills-07-05-2002",
+      "note": "主辦為挪威讀書俱樂部（Norwegian Book Clubs, which organized the poll），記者會在挪威諾貝爾研究所；54 國約 100 位作家各列 10 部；書單為 unranked collection；《唐吉訶德》runaway winner，比普魯斯特多 50% 票；編輯 Alf van der Hagen"
+    },
+    {
+      "title": "Books: Long Shadow（Stefan Kanfer 評 Lectures on Don Quixote）",
+      "publisher": "Time",
+      "date": "1983-04-25",
+      "url": "https://time.com/archive/6857457/books-long-shadow/",
+      "note": "cruel and crude old book、six hundred students；His blazon is pity, his banner is beauty；the parody has become a paragon"
+    },
+    {
+      "title": "«Cruel and Crude»: Nabokov Reading Cervantes（Catherine Kunce）",
+      "publisher": "Cervantes: Bulletin of the Cervantes Society of America XIII.2",
+      "date": "1993",
+      "url": "https://www.letrasgalegas.org/obra-visor/cervantes-bulletin-of-the-cervantes-society-of-america--33/html/0278bd8e-82b2-11df-acc7-002185ce6064_22.html",
+      "note": "1952 年春季學期哈佛講課；講稿引文 hideous cruelty…befouls its humor（Lectures 頁 52）"
+    },
+    {
+      "title": "Nabokov Society 論壇（轉錄 Guy Davenport, Don Quixote Restored, NYT 1983-02-13）",
+      "publisher": "nabokovsociety.org",
+      "date": "",
+      "url": "https://nabokovsociety.org/node/1641",
+      "note": "Memorial Hall、600 名學生"
+    }
+  ]
+}
