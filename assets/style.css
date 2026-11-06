@@ -982,14 +982,14 @@ img.img-off { visibility: hidden; }
 
   /* The seal comes down when you reach the end — from large and turned to flat — and the card dips once under the
      blow (thump, timed for the moment the stamp lands); a gold square ripples out from under it. */
-  .finish.stamp .seal { animation: stamp .7s cubic-bezier(.2,1.5,.4,1) both; }
-  .finish.stamp { animation: thump .45s .22s cubic-bezier(.3,.6,.3,1) both; }
+  .finish.stamped .seal { animation: stamp .7s cubic-bezier(.2,1.5,.4,1) both; }
+  .finish.stamped { animation: thump .45s .22s cubic-bezier(.3,.6,.3,1) both; }
   @keyframes thump { 35% { translate: 0 3px; } }
-  .finish.stamp::before { content: ""; position: absolute; left: 50%; top: var(--seal-c, 48px); width: 60px; height: 60px; margin: -30px 0 0 -30px; border: 2px solid var(--foil);
+  .finish.stamped::before { content: ""; position: absolute; left: 50%; top: var(--seal-c, 48px); width: 60px; height: 60px; margin: -30px 0 0 -30px; border: 2px solid var(--foil);
     pointer-events: none; animation: wave 1.3s .15s cubic-bezier(.15,.7,.3,1) both; }
-  .finish.stamp .laurel ellipse { transform-box: fill-box; transform-origin: center; animation: leaf-in .45s calc(var(--i) * 70ms + .35s) cubic-bezier(.2,1.6,.4,1) both; }
+  .finish.stamped .laurel ellipse { transform-box: fill-box; transform-origin: center; animation: leaf-in .45s calc(var(--i) * 70ms + .35s) cubic-bezier(.2,1.6,.4,1) both; }
   @keyframes leaf-in { from { transform: scale(0); opacity: 0; } to { transform: none; opacity: 1; } }
-  .finish.stamp b { animation: glow-once 1.8s .4s ease both; }
+  .finish.stamped b { animation: glow-once 1.8s .4s ease both; }
   @keyframes glow-once { 30% { text-shadow: 0 0 18px color-mix(in srgb, var(--foil-hi) 85%, transparent); color: var(--foil); } }
   @keyframes stamp { from { transform: scale(2.4) rotate(-24deg); opacity: 0; } to { transform: none; opacity: 1; } }
 

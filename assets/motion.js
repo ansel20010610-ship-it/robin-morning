@@ -77,7 +77,7 @@ export async function flip(el, update) {
 // The finish line: the seal comes down (style.css .finish.stamp — the card dips once under it), a handful of gold leaf is
 // thrown up around it, and gold leaf rains down the page.
 export function celebrate(el) {
-  el.classList.add("stamp");
+  el.classList.add("stamped"); // not "stamp": that is the postage stamp tile (stamps.js), whose aspect-ratio would stretch this box (the owner, 2026-11-06)
   navigator.vibrate?.([14, 60, 22]);
   if (calm()) return;
   rain();
