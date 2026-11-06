@@ -1561,6 +1561,10 @@ a.stamp:active .sp { filter: brightness(.96); }
    its small gold label. The same plate sits over the article's title. */
 .plate { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 0 0 6px; font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--gold-ink); }
 .plate .book { font-family: var(--serif); font-size: 15px; letter-spacing: .04em; font-weight: 700; color: var(--ink); }
+/* Two lines, never a ragged three (the owner, 2026-11-06): the book and its author on the first, where in the book on
+   the second — whole, since "第一部・第一卷 第一章・2 之 1" broken at its space reads like a mistake. */
+.plate .book, .plate .by, .plate .where { white-space: nowrap; }
+.plate .where { flex-basis: 100%; }
 .article-head .plate { margin: 8px 0 2px; }
 .article-head .plate .book { font-size: 16px; }
 .serial-card .recap { margin: 6px 0 0; font-size: .92em; line-height: 1.75; color: var(--ink-2); }
