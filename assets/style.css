@@ -1075,6 +1075,8 @@ a.gig:active { background: color-mix(in srgb, var(--gold) 7%, transparent); }
 .gig .go svg { width: 14px; height: 14px; }
 .sec-head.link { text-decoration: none; color: inherit; }
 .sec-head.link .note::after { content: ""; }
+/* the count of shows not yet seen on the full list: a small robin-blue pill before the arrow */
+.sec-head.link .note .unseen { display: inline-block; min-width: 17px; margin: 0 2px 0 7px; padding: 1px 5px 2px; border-radius: 9px; text-align: center; font-size: 11px; font-weight: 600; font-style: normal; letter-spacing: 0; line-height: 1.2; color: var(--paper); background: var(--robin); vertical-align: 1px; }
 /* An event's page */
 .gig-page .article-head h1 .new { margin-left: 10px; padding: 1px 6px 2px; vertical-align: 6px; font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .1em; color: var(--wine); border: 1px solid var(--wine); }
 .gig-page .score { display: flex; align-items: center; gap: 10px; margin: 12px 0 0; font-family: var(--sans); font-size: 13px; color: var(--gold-ink); }

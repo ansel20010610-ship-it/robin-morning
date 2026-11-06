@@ -1190,15 +1190,26 @@ async function viewConcert(id, my) {
 }
 // The page's back arrow: a step back in history when there is one inside the app, else the link's own target.
 const wireBack = () => main.querySelector("[data-back]")?.addEventListener("click", (ev) => { if (routed) { ev.preventDefault(); history.back(); } });
+// What the reader has already seen on the full list (rm.gigs.seen, the ids there when 全部檔次 was last opened).
+// Anything on the list now that is not among them is unseen; the first time, today's list counts as seen.
+const gigIds = (list) => list.map(gigId).filter(Boolean);
+function gigsUnseen(all) {
+  const seen = store.get("gigs.seen");
+  if (!Array.isArray(seen)) { store.set("gigs.seen", gigIds(all)); return 0; }
+  return gigIds(all).filter((id) => !seen.includes(id)).length;
+}
 // The front page's share: Taichung within GIG_NEAR days (at most 6), and up to 3 elsewhere; newly added ones come too.
 function gigsSection() {
   const all = upcomingGigs();
   if (!all.length) return "";
+  // 全部檔次 wears a small count when the list has entries the reader has not opened the full list to see
+  // (the owner, 2026-11-06); opening it (viewConcerts) takes the count off.
+  const unseen = gigsUnseen(all);
   const until = addDays(twNow().date, GIG_NEAR);
   const pick = (list, n) => [...list.filter((e) => e.here[0].date <= until).slice(0, n), ...list.filter((e) => e.here[0].date > until && e.isNew).slice(0, 3)];
   const tc = pick(all.filter((e) => e.here[0].city === "台中"), 6);
   const away = pick(all.filter((e) => e.here[0].city !== "台中"), 3);
-  return `<a class="sec-head link" href="#/concerts" aria-label="近期演出：全部 ${all.length} 檔"><h2>近期演出</h2><span class="de">Spielplan</span><span class="note">全部 ${all.length} 檔 →</span></a>
+  return `<a class="sec-head link" href="#/concerts" aria-label="近期演出：全部 ${all.length} 檔${unseen ? `，${unseen} 檔還沒看過` : ""}"><h2>近期演出</h2><span class="de">Spielplan</span><span class="note">全部 ${all.length} 檔${unseen ? `<b class="unseen">${unseen}</b>` : ""} →</span></a>
     ${tc.length ? `<ul class="gig-list">${tc.map((e) => gigRow(e)).join("")}</ul>` : `<p class="gig-none">接下來 ${GIG_NEAR} 天，台中沒有收錄的演出。</p>`}
     ${away.length ? `<div class="gig-city">台北・高雄<span>值得專程跑一趟的</span></div><ul class="gig-list">${away.map((e) => gigRow(e)).join("")}</ul>` : ""}`;
 }
@@ -1211,6 +1222,7 @@ async function viewConcerts(my) {
     await loadGigs();
     if (my !== undefined && my !== routeSeq) return;
   }
+  store.set("gigs.seen", gigIds(upcomingGigs())); // the full list seen: the front page's count goes
   const checked = typeof S.gigs?.checked === "string" ? fmtDate(S.gigs.checked, "short") : "";
   const pressed = (c) => GIG_CITIES.map(([k, label]) => `<button type="button" class="chip" data-c="${k}" aria-pressed="${k === c}">${label}</button>`).join("");
   // 星級 (the owner, 2026-11-04: 近期演出進去我要可以分星級篩選): a second row of chips, one per rating on the list in this
