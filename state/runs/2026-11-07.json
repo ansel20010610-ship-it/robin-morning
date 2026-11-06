@@ -18,5 +18,12 @@
       "philosophy"
     ],
     "note": "文明欄（timeline/lecturer）與經典欄（argument/critic）完成，審稿、總編重寫、忠實度核對皆做；validate 無 WARN。"
+  },
+  "3": {
+    "finished_at": "2026-11-07T03:21:11+08:00",
+    "missing": [
+      "news"
+    ],
+    "note": "philosophy（compare/socratic）與 football（list/fan）完成，審稿、總編重寫、忠實度核對皆做"
   }
 }
