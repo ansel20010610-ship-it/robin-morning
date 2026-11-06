@@ -1,0 +1,328 @@
+{
+  "column": "football",
+  "date": "2026-11-07",
+  "title": "馬競那座球場，巴薩人一週去兩次",
+  "dek": "週日晚上去馬競，一週後同一座球場換西班牙迎戰英格蘭，兩邊都有巴薩的人。",
+  "brief": "巴薩下一場是週一（11 月 9 日）清晨 04:00 客場馬競，一週後同一座球場換西班牙迎戰英格蘭，兩邊都有巴薩的人。羅德里、埃里克・加西亞和奧爾莫沒進西班牙名單。巴薩 30 分，領先馬競 2 分。",
+  "topic_key": "football:2026-11-07",
+  "form": "list",
+  "voice": "fan",
+  "updated_at": "2026-11-07T02:52:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "next": {
+    "opponent": "馬德里競技",
+    "competition": "西甲",
+    "kickoff": "2026-11-09T04:00+08:00",
+    "venue": "Riyadh Air Metropolitano",
+    "home": false
+  },
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Anthony_Gordon_England_v_Ghana_23_June_2026-145.jpg/1280px-Anthony_Gordon_England_v_Ghana_23_June_2026-145.jpg",
+    "width": 1280,
+    "height": 1920,
+    "alt": "戈登穿英格蘭隊白色 18 號球衣，在邊線附近用胸口卸下一顆空中球；背景是看台上的觀眾和場邊攝影師。",
+    "caption": "戈登，2026 年 6 月 23 日世界盃小組賽英格蘭對迦納。資料照片，非當日畫面，穿的是英格蘭隊球衣。",
+    "credit": "Bryan Berlin／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Anthony_Gordon_England_v_Ghana_23_June_2026-145.jpg",
+    "made": "2026"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1　**一個禮拜，同一座球場去兩次。**這個週日（11 月 8 日）歐洲時間晚上 9 點，巴薩到馬德里的 Riyadh Air Metropolitano 踢馬競，台灣是週一清晨 4 點。再過一個週日，11 月 15 日，西班牙國家隊在同一座球場迎戰英格蘭，台灣是 16 日清晨 3 點 45 分。西班牙名單上有佩德里（Pedri）、亞馬爾（Lamine Yamal）、庫巴西（Pau Cubarsí）、費爾明（Fermín López）和門將霍安・加西亞（Joan García），英格蘭名單上有戈登（Anthony Gordon）。五個巴薩人，這回站在戈登的對面。"
+    },
+    {
+      "type": "p",
+      "text": "2　去馬競這趟，人帶不齊。**羅德里**（Rodri）右大腿後側拉傷，官網週三就確認他踢不了。週五西班牙公布 27 人名單，沒有他，埃里克・加西亞（Eric García）和奧爾莫（Dani Olmo）也不在，Goal 說三個人都還在養傷。羅德里不在名單上，我覺得這樣最好：西班牙已經晉級八強，這兩場用不著他趕回來。"
+    },
+    {
+      "type": "p",
+      "text": "3　別的傷兵，ESPN 週三整理過。加西亞和克里斯滕森（Andreas Christensen）週三已經回隊練球，孔德（Jules Koundé）的腳踝當時還沒回到完整訓練，Xavi Espart 休到年底，奧爾莫和 Roony Bardghji 還不能用。官網週五的訓練報導只寫，球隊放了一天假，回到訓練場，傷癒中的人還是單獨練，等醫療許可，另外有三個二隊球員跟著一起練。"
+    },
+    {
+      "type": "p",
+      "text": "4　ESPN 週五替**戈登**寫了一篇長稿。他在默西賽德（Merseyside）長大，小時候就想過穿巴薩的球衣；今年夏天從紐卡索（Newcastle United）過來，轉會費起價 7,000 萬歐元，現在是弗利克（Hansi Flick）前線的固定班底，跟亞馬爾、拉菲尼亞（Raphinha）排在一起。ESPN 說，週日的馬競，沒有人懷疑他會先發。"
+    },
+    {
+      "type": "p",
+      "text": "早些時候他說，英格蘭人開始尊重他踢球的品質和球商，聽的人覺得他在酸家鄉。這週他對 ESPN 說，不是那個意思："
+    },
+    {
+      "type": "quote",
+      "text": "我的意思是，他們從來沒看過我踢在一套能把這些特質顯出來的體系裡。",
+      "original": "I meant they had never seen me in a system that highlights these qualities.",
+      "cite": "戈登對 ESPN，11 月 6 日稿"
+    },
+    {
+      "type": "p",
+      "text": "在紐卡索帶過他的豪（Eddie Howe），2024 年夏天被問歡不歡迎他回來，答的是：要是長了三隻手，就用三隻手歡迎。"
+    },
+    {
+      "type": "p",
+      "text": "巴薩為什麼挑他？ESPN 的說法是，弗利克要前場一起逼搶，戈登有這個特質。同一個夏天，萊萬多夫斯基（Robert Lewandowski）自由身離開，費朗・托雷斯（Ferran Torres）以 5,500 萬歐元去了巴黎聖日耳曼，從曼聯租來的拉什福德（Marcus Rashford）回了老特拉福，球團沒有行使 3,000 萬歐元的買斷條款。運動總監德科（Deco）談戈登加盟時說，去年拉菲尼亞受傷的時候，球隊的能量掉了。"
+    },
+    {
+      "type": "p",
+      "text": "5　其他人各回各國。官網列的是：西班牙五個，葡萄牙是坎塞洛（João Cancelo），荷蘭是德容（Frenkie de Jong），英格蘭是戈登，巴西是拉菲尼亞。拉菲尼亞要飛新加坡，11 月 14 日對日本，17 日對新加坡，新加坡跟台灣同一個時區。官網說還有幾支國家隊沒公布名單，這份可能還會長。"
+    },
+    {
+      "type": "news",
+      "title": "歐洲足壇速覽",
+      "items": [
+        {
+          "headline": "德米格爾：初步解剖報告出來，調查還在走",
+          "summary": "特內里費（Tenerife）前鋒德米格爾（Jesús de Miguel）11 月 2 日比賽中和安道爾門將歐諾沃（Jesús Owono）相撞，隔天過世。Infobae 轉述當地媒體說，初步解剖報告已送到承辦法官手上，結論是意外性的胸部創傷，屬於與死亡相容的原因，法醫說還不是最終結論，毒物檢驗和住院期間的電腦斷層還沒併進來。報導也寫到，裁判在賽後報告裡，把歐諾沃那個動作描述成球還在爭奪時用力過大；檢察官認為這件事要成為刑案不容易，因為撞擊發生在比賽之中。特內里費的醫療人員週五呼籲審慎，不要臆測。",
+          "source": "Infobae（轉述當地媒體）",
+          "url": "https://www.infobae.com/deportes/2026/11/05/que-revelo-la-autopsia-del-futbolista-que-murio-tras-chocar-con-el-arquero-rival-en-pleno-partido/",
+          "when": "11 月 6 日（週五）",
+          "place": "ES"
+        },
+        {
+          "headline": "米蘭主場 0 比 2 輸費倫茨瓦羅斯",
+          "summary": "匈牙利的費倫茨瓦羅斯（Ferencváros）在聖西羅（San Siro）下半場開始後 14 分鐘內進兩球，替補上場的一人第 77 分鐘吃直接紅牌，米蘭也沒能用上多一個人的機會。米蘭歐霸 4 輪只拿 3 分，排第 28 名；教頭阿莫林（Ruben Amorim）賽後說，球隊今天沒有準備好踢職業足球。米蘭聯賽 10 場只輸過 1 場，歐洲賽 4 場倒輸了 3 場。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50393432/ruben-amorim-slams-team-questions-himself-after-shock-milan-loss",
+          "when": "11 月 6 日（週五）07:46",
+          "place": "IT"
+        },
+        {
+          "headline": "西甲兩隊在歐霸都沒贏",
+          "summary": "塞爾塔（Celta Vigo）主場 1 比 2 輸給比利時的聖吉羅斯聯合（Union Saint-Gilloise），對方一人進兩球，第一個在第 35 分鐘扳平，第二個在下半場開始 4 分鐘後。皇家社會（Real Sociedad）1 比 1 里昂，第 28 分鐘靠頭槌先領先，下半場被追平，UEFA 算過，皇家社會 5 分，比里昂少 2 分。",
+          "source": "UEFA、ESPN",
+          "url": "https://es.uefa.com/uefaeuropaleague/news/02ab-220046b5e815-1f3eb827fcfa-1000--resumen-de-la-jornada-4-de-la-europa-league-union-sg-y-ly",
+          "when": "11 月 6 日（週五）",
+          "place": [
+            "ES",
+            "BE",
+            "FR"
+          ]
+        },
+        {
+          "headline": "圖赫爾的英格蘭名單：帕爾默落選，喬布・貝林厄姆首度入選",
+          "summary": "英格蘭教頭圖赫爾（Thomas Tuchel）點了 25 人，打克羅埃西亞（11 月 12 日）和西班牙（11 月 15 日）。切爾西的帕爾默（Cole Palmer）又沒進名單，圖赫爾先前警告過他缺席集訓太多次。多特蒙德 21 歲的喬布（Jobe Bellingham）第一次進成年隊，加入皇馬的哥哥裘德（Jude）；圖赫爾說是中場有人沒準備好、有人要停賽，人手不夠。戈登和凱恩（Harry Kane）都在名單上。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50397863/jobe-bellingham-england-squad-cole-palmer-thomas-tuchel",
+          "when": "11 月 6 日（週五）19:28",
+          "place": "GB"
+        },
+        {
+          "headline": "伯恩茅斯 3 比 1 逆轉布拉格斯巴達，歐霸四戰全勝",
+          "summary": "斯巴達（Sparta Prague）有人在上半場吃第二張黃牌退場，伯恩茅斯下半場追上來，美國隊長亞當斯（Tyler Adams）第 57 分鐘追平，Evanilson 第 81 分鐘反超，Rayan 最後一分鐘再補一球。伯恩茅斯各項賽事七連勝，亞當斯賽後說球隊「翻了一頁」，指的是 5 比 1 輸給切爾西之後。",
+          "source": "ESPN、UEFA",
+          "url": "https://www.espn.com/soccer/story/_/id/50393374/tyler-adams-bournemouth-have-turned-a-page-after-seventh-straight-win",
+          "when": "11 月 6 日（週五）07:44",
+          "place": "CZ"
+        },
+        {
+          "headline": "孔帕尼在家休養，拜仁說他朝完全康復走",
+          "summary": "拜仁教頭孔帕尼（Vincent Kompany）10 月 23 日在二隊訓練時倒下，住院，診斷是腦膜刺激，也就是腦與脊髓外層組織發炎。助理教練丹克斯（Aaron Danks）週五說，他和孔帕尼通過幾次電話，對方狀況很正面，正朝完全康復走。拜仁週六客場打緬因茲，之後是國際賽事週，11 月 20 日才再踢球。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50398505/vincent-kompany-bayern-munich-boss-close-to-full-recovery-after-collapse",
+          "when": "11 月 7 日（週六）02:10",
+          "place": "DE"
+        },
+        {
+          "headline": "艾梅利：曼聯和巴薩是同一個水準",
+          "summary": "阿斯頓維拉教頭艾梅利（Unai Emery）週五說，維拉 11 月 3 日在諾坎普輸 0 比 3，是因為碰上歐冠最高的水準；週日客場對曼聯，他說對手和巴薩同一個層級。曼聯這季聯賽前 9 場只贏過 1 場，艾梅利自己也說他們聯賽不穩，拿來跟巴薩比，我不買單。他同時確認，和球團談了新約，下週還要再談。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50400069/unai-emery-confirms-new-contract-talks-with-aston-villa",
+          "when": "11 月 7 日（週六）00:12",
+          "place": "GB"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "6　**11 月 9 日清晨 4 點**，巴薩客場馬競。馬競 11 月 3 日歐冠主場 0 比 2 輸拜仁，聯賽倒是連贏 7 場，9 勝 1 和 1 負。巴薩 30 分領頭，馬競 28，皇馬 27；皇馬早一天，週日清晨 4 點客場瓦倫西亞。弗利克的賽前記者會在週六歐洲時間下午 1 點，台灣晚上 8 點。"
+    },
+    {
+      "type": "table",
+      "title": "榜首三隊的第 12 輪",
+      "head": [
+        "球隊",
+        "積分",
+        "淨勝球",
+        "本輪（台灣時間）"
+      ],
+      "rows": [
+        [
+          "巴薩",
+          "30",
+          "+34",
+          "11 月 9 日（週一）04:00，客場馬競"
+        ],
+        [
+          "馬競",
+          "28",
+          "+14",
+          "同一場，主場迎戰巴薩"
+        ],
+        [
+          "皇馬",
+          "27",
+          "+18",
+          "11 月 8 日（週日）04:00，客場瓦倫西亞"
+        ]
+      ],
+      "caption": "積分為第 11 輪賽後，資料：ESPN 與 laliga.com 積分榜。巴薩對馬競的開球時間依巴薩官網（歐洲時間 11 月 8 日 21:00）；皇馬對瓦倫西亞依 ESPN 賽程。"
+    },
+    {
+      "type": "p",
+      "text": "7　踢完馬競就是國際賽事週。巴薩下一場在 11 月 22 日（週日）主場對比利亞雷亞爾（Villarreal），這是 ESPN 賽程列的日期；ESPN 週三替羅德里算的最快復出日，也是這一天。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "When and where to watch Atlético v Barça",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-06",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4604218/when-and-where-to-watch-atletico-madrid-v-fc-barcelona",
+      "note": "週日 11 月 8 日歐洲時間 21:00 開球；頁面只標相對時間，日期依讀取時間推得"
+    },
+    {
+      "title": "Back at training",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-06",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4605545/back-at-training",
+      "note": "週五復訓、三名二隊球員、傷癒者單獨練、第 12 輪、週六記者會 13:00 CET；頁面只標相對時間"
+    },
+    {
+      "title": "Barça players called up for international duty",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-06",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4605559/large-number-of-fc-barcelona-players-called-up-for-international-duty",
+      "note": "各國家隊徵召名單；頁面只標相對時間"
+    },
+    {
+      "title": "Rodri injury news",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-04",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4604306/rodri-injury-news",
+      "note": "右大腿後側輕微拉傷、缺席馬競"
+    },
+    {
+      "title": "Barcelona's Rodri ruled out of Atlético Madrid clash with hamstring injury",
+      "publisher": "ESPN",
+      "date": "2026-11-04",
+      "url": "https://www.espn.com/soccer/story/_/id/50378043/barcelonas-rodri-ruled-out-of-atletico-madrid-clash-with-hamstring-injury",
+      "note": "11 月 22 日復出日、其他傷兵、馬競聯賽七連勝、國際賽程；12:39Z 發布"
+    },
+    {
+      "title": "Spain squad announcement for Czechia and England",
+      "publisher": "Goal",
+      "date": "2026-11-06",
+      "url": "https://www.goal.com/en-us/news/spain-squad-announcement-luis-de-la-fuente-nations-league-england-czech-republic/bltbd00ccfcbce1e9a5",
+      "note": "27 人名單、羅德里、埃里克・加西亞與奧爾莫因傷未入選、西班牙已晉級八強、Metropolitano 為 11 月 15 日主場；頁面只標 7 hrs ago"
+    },
+    {
+      "title": "England vs Spain, UEFA Nations League 2026: how to watch, kick-off time",
+      "publisher": "ESPN",
+      "date": "2026-11-06",
+      "url": "https://www.espn.com/soccer/story/_/id/49999014/england-vs-spain-nations-league-2026-how-watch-tv-channel-kick-live-stream-referee-line-ups",
+      "note": "球場 Riyadh Air Metropolitano、開球 2:45 PM（美東）；頁面日期未確認，內容與 Sky 的 11 月 15 日 19:45（英國時間）一致"
+    },
+    {
+      "title": "England squad: Cole Palmer, Phil Foden and Kobbie Mainoo left out as Jobe Bellingham and Josh King called up",
+      "publisher": "Sky Sports",
+      "date": "2026-11-06",
+      "url": "https://www.skysports.com/football/news/13608698/england-squad-cole-palmer-phil-foden-and-kobbie-mainoo-left-out-as-jobe-bellingham-and-josh-king-called-up",
+      "note": "英國時間 15:54 發布；11 月 12 日與 15 日各 19:45（英國時間）"
+    },
+    {
+      "title": "England squad for Nations League: Jobe Bellingham selected, Cole Palmer left out",
+      "publisher": "ESPN",
+      "date": "2026-11-06",
+      "url": "https://www.espn.com/soccer/story/_/id/50397863/jobe-bellingham-england-squad-cole-palmer-thomas-tuchel",
+      "note": "11:28Z 發布；25 人名單、圖赫爾談中場人手"
+    },
+    {
+      "title": "Anthony Gordon left Premier League for Barcelona to get 'respect' -- he's got it now",
+      "publisher": "ESPN",
+      "date": "2026-11-06",
+      "url": "https://www.espn.com/soccer/story/_/id/50377434/anthony-gordon-left-premier-league-for-barcelona-to-get-respect-hes-got-it-now",
+      "note": "11:02Z 發布；戈登的談話、豪的回答、7,000 萬歐元起價、先發判斷"
+    },
+    {
+      "title": "Carlo Ancelotti continues Brazil 'renewal' with squad for Japan, Singapore friendlies",
+      "publisher": "ESPN",
+      "date": "2026-10-29",
+      "url": "https://www.espn.com/soccer/story/_/id/50320646/carlo-ancelotti-brazil-squad-japan-singapore-november",
+      "note": "巴西 11 月 14 日對日本、17 日對新加坡，皆在新加坡"
+    },
+    {
+      "title": "LALIGA EA SPORTS standings 2026/27",
+      "publisher": "LALIGA",
+      "date": "2026-11-07",
+      "url": "https://www.laliga.com/en-GB/laliga-easports/standing",
+      "note": "第 11 輪後前六名；與 ESPN 積分榜核對相同"
+    },
+    {
+      "title": "LaLiga scoreboard, 8 November 2026",
+      "publisher": "ESPN",
+      "date": "2026-11-07",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261108",
+      "note": "巴薩對馬競 20:00Z、Riyadh Air Metropolitano；11 月 7 日該頁的皇馬對瓦倫西亞 20:00Z、11 月 22 日巴薩對比利亞雷亞爾 13:00Z 以同一 API 的其他日期讀取"
+    },
+    {
+      "title": "Qué reveló la autopsia del futbolista que murió tras chocar con el arquero rival en pleno partido",
+      "publisher": "Infobae",
+      "date": "2026-11-05",
+      "url": "https://www.infobae.com/deportes/2026/11/05/que-revelo-la-autopsia-del-futbolista-que-murio-tras-chocar-con-el-arquero-rival-en-pleno-partido/",
+      "note": "初步解剖、裁判報告、檢察官；轉述 El Día 與 The Athletic"
+    },
+    {
+      "title": "El cuerpo médico del CD Tenerife apela a la prudencia con la investigación",
+      "publisher": "Infobae（Europa Press）",
+      "date": "2026-11-06",
+      "url": "https://www.infobae.com/america/agencias/2026/11/06/el-cuerpo-medico-del-cd-tenerife-apela-a-la-prudencia-con-la-investigacion-sobre-la-muerte-de-jesus-de-miguel/",
+      "note": "醫療人員呼籲審慎"
+    },
+    {
+      "title": "'No excuses': Ruben Amorim slams team, questions himself after shock Milan loss",
+      "publisher": "ESPN",
+      "date": "2026-11-05",
+      "url": "https://www.espn.com/soccer/story/_/id/50393432/ruben-amorim-slams-team-questions-himself-after-shock-milan-loss",
+      "note": "23:46Z 發布；米蘭 0 比 2、紅牌、阿莫林賽後談話"
+    },
+    {
+      "title": "Europa League Matchday 4 highlights and round-up",
+      "publisher": "UEFA",
+      "date": "2026-11-05",
+      "url": "https://www.uefa.com/uefaeuropaleague/news/02ab-22004d716327-dd7c42bc0d91-1000--europa-league-matchday-4-highlights-and-round-up-ferencva/",
+      "note": "米蘭、塞爾塔、皇家社會的比分；與 ESPN 比賽紀錄核對"
+    },
+    {
+      "title": "Resumen de la jornada 4 de la Europa League: Union SG y Lyon frustran a Celta y Real Sociedad",
+      "publisher": "UEFA（西語版）",
+      "date": "2026-11-05",
+      "url": "https://es.uefa.com/uefaeuropaleague/news/02ab-220046b5e815-1f3eb827fcfa-1000--resumen-de-la-jornada-4-de-la-europa-league-union-sg-y-ly",
+      "note": "塞爾塔與皇家社會戰報、皇家社會 5 分比里昂少 2 分"
+    },
+    {
+      "title": "Tyler Adams: Bournemouth have 'turned a page' after seventh straight win",
+      "publisher": "ESPN",
+      "date": "2026-11-05",
+      "url": "https://www.espn.com/soccer/story/_/id/50393374/tyler-adams-bournemouth-have-turned-a-page-after-seventh-straight-win",
+      "note": "23:44Z 發布；伯恩茅斯 3 比 1、七連勝、亞當斯賽後談話；斯巴達球員紅牌時間依 UEFA 戰報"
+    },
+    {
+      "title": "Vincent Kompany: Bayern Munich boss close to 'full recovery' after collapse",
+      "publisher": "ESPN",
+      "date": "2026-11-06",
+      "url": "https://www.espn.com/soccer/story/_/id/50398505/vincent-kompany-bayern-munich-boss-close-to-full-recovery-after-collapse",
+      "note": "18:10Z 發布"
+    },
+    {
+      "title": "Unai Emery confirms new contract talks with Aston Villa",
+      "publisher": "ESPN",
+      "date": "2026-11-06",
+      "url": "https://www.espn.com/soccer/story/_/id/50400069/unai-emery-confirms-new-contract-talks-with-aston-villa",
+      "note": "16:12Z 發布；艾梅利談曼聯與新約、曼聯聯賽 9 場 1 勝"
+    }
+  ]
+}
