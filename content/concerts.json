@@ -1,35 +1,6 @@
 {
-  "checked": "2026-11-06",
+  "checked": "2026-11-07",
   "events": [
-    {
-      "id": "inbal-mahler9-tso-2026",
-      "title": "殷巴爾與TSO之馬勒第九號",
-      "kind": "交響樂",
-      "rating": 4,
-      "why": "殷巴爾八十分鐘不中斷，只排馬勒第九號交響曲，由他帶北市交。",
-      "who": "伊利亞胡．殷巴爾（指揮）、臺北市立交響樂團",
-      "program": "馬勒《第九號交響曲》",
-      "note": "演前導聆 18:50 起；全長約 80 分鐘無中場",
-      "shows": [
-        {
-          "date": "2026-11-06",
-          "time": "19:30",
-          "city": "台北",
-          "venue": "國家音樂廳",
-          "tickets": "https://www.opentix.life/program/1993268392975925249"
-        }
-      ],
-      "added": "2026-11-01",
-      "uids": [
-        "6929d60b26b32445dce6f3f9"
-      ],
-      "sources": [
-        {
-          "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/program/1993268392975925249"
-        }
-      ]
-    },
     {
       "id": "argerich-festival-2026",
       "title": "阿格麗希音樂節在台灣",
