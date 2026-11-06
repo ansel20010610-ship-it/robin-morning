@@ -1625,7 +1625,8 @@ a.stamp:active .sp { filter: brightness(.96); }
 .shifts .now .duty b { font-weight: 600; color: var(--robin); margin: 0; }
 .shifts .now + .shift { border-top-color: transparent; }
 /* Aa: the type size and day/night under the article's top bar (app.js aaMenu) */
-.topbar .aa-pop { position: absolute; right: 10px; top: calc(100% + 6px); z-index: 25; display: grid; gap: 12px; padding: 14px 16px 15px; background: var(--paper); border: 1px solid var(--rule); border-top: 2px solid var(--gold); box-shadow: 0 10px 28px rgba(40, 30, 10, .16); animation: page-in .25s both; }
+.topbar .in { position: relative; } /* the Aa sheet hangs off the bar's content, so it stays by its button on wide screens */
+.topbar .aa-pop { position: absolute; right: 10px; top: calc(100% + 6px); z-index: 25; display: grid; gap: 12px; padding: 14px 16px 15px; background: var(--paper); border: 1px solid var(--rule); border-top: 2px solid var(--gold); box-shadow: var(--shadow); animation: page-in .25s both; }
 .aa-pop .g { display: grid; gap: 7px; }
 .aa-pop .lbl { font-family: var(--sans); font-size: 11px; letter-spacing: .14em; color: var(--gold-ink); font-weight: 600; }
 .aa-pop .seg button { padding: 7px 12px; font-size: 13.5px; }
@@ -1643,7 +1644,7 @@ a.stamp:active .sp { filter: brightness(.96); }
 .vorher a { display: inline-block; margin-top: 8px; font-family: var(--sans); font-size: 12px; letter-spacing: .04em; color: var(--gold-ink); text-decoration: none; }
 /* 連載 分卷 (app.js viewSerial bands) */
 details.band { border-top: 1px solid var(--rule); }
-details.band:first-of-type { border-top: 0; }
+.sec-head + details.band { border-top: 0; } /* the first band sits right under 回目's own rule */
 details.band summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 10px; padding: 12px 2px; font-family: var(--sans); font-size: 13px; letter-spacing: .1em; font-weight: 600; color: var(--ink); }
 details.band summary::-webkit-details-marker { display: none; }
 details.band summary::before { content: "›"; font-family: var(--latin); font-size: 20px; line-height: 1; color: var(--gold); transition: rotate .2s; }

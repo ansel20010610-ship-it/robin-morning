@@ -841,7 +841,11 @@ async function viewArticle(date, column, my) {
   const body = main.querySelector(".body");
   body.append(renderBody(a));
   hideBird(body, date, column);
-  if (a.serial?.n > 1) lastTime(Number(a.serial.n) - 1, main.querySelector(".vorher-slot"));
+  if (a.serial?.n > 1) {
+    // The aside arrives after the page has landed: whatever is below it moves down by its height, so the landing follows.
+    const slot = main.querySelector(".vorher-slot");
+    lastTime(Number(a.serial.n) - 1, slot).then(() => { if (slot?.isConnected && slot.offsetHeight && scrollY > slot.offsetTop) window.scrollBy(0, slot.offsetHeight); });
+  }
   const firstP = body.firstElementChild;
   if (firstP && firstP.tagName === "P" && !firstP.querySelector(".tag")) firstP.classList.add("lead-p");
   // 劃線本: this article's pencil lines find their place again; one opened from the notebook is landed on (route()
@@ -1022,12 +1026,13 @@ async function viewArticle(date, column, my) {
   // The page lands where the reader stopped however it was opened (the owner, 2026-11-06: 點開直接捲到上次停的地方), a
   // toast saying so; the .resume button is kept for the day a reader scrolls up and wants the place back, but not shown.
   landKey = null;
-  if (back > 0.08) {
+  if (back > 0.08 && landTop == null) { // a pencil line tapped in 劃線本 has already chosen where to land
     landTop = topOf(back);
     toast(`接著上次・${pct(back)}%`);
     resume.onclick = () => { window.scrollTo({ top: topOf(back), behavior: calm() ? "auto" : "smooth" }); hideResume(); };
   }
   cleanup = () => {
+    aaClose?.();
     clearTimeout(trail);
     clearInterval(tick);
     saveDwell();
@@ -1156,10 +1161,10 @@ function wocheBox() {
   const today = twNow().date;
   if (weekdayKey(today) !== "sun") return "";
   const days = Array.from({ length: 7 }, (_, i) => addDays(today, i - 6)), inWeek = (d) => days.includes(d);
-  const tw = (iso) => { const t = Date.parse(iso || ""); return Number.isNaN(t) ? "" : new Date(t + 8 * 3600 * 1000).toISOString().slice(0, 10); };
   const read = [...readSet()].filter((k) => inWeek(k.slice(0, 10)));
-  const marks = allMarks().filter((m) => inWeek(tw(m.at))).length, birds = [...birdsFound()].filter(inWeek).length, done = [...digestDone()].filter(inWeek).length;
-  if (!read.length && !marks && !birds) return "";
+  // All four by the issue's date (a line drawn today in last Tuesday's paper belongs to that paper), as the yearbook counts.
+  const marks = allMarks().filter((m) => inWeek(String(m.key || "").slice(0, 10))).length, birds = [...birdsFound()].filter(inWeek).length, done = [...digestDone()].filter(inWeek).length;
+  if (!read.length && !marks && !birds && !done) return "";
   const serial = read.filter((k) => col(k.slice(11), k.slice(0, 10)).group === "serial").length;
   const n = Math.max(0, ...publishedIssues().flatMap((i) => i.articles.filter((a) => a.serial && read.includes(`${i.date}/${a.column}`)).map((a) => Number(a.serial.n) || 0)));
   const stat = (v, l) => `<span><b>${v}</b>${l}</span>`;
@@ -1746,13 +1751,15 @@ function setTheme(v, from) {
   root.style.setProperty("--vx", `${r.left + r.width / 2}px`);
   root.style.setProperty("--vy", `${r.top + r.height / 2}px`);
   root.classList.add("theme-vt");
-  document.startViewTransition(swap).finished.catch(() => {}).finally(() => root.classList.remove("theme-vt"));
+  const vt = document.startViewTransition(swap);
+  vt.ready.catch(() => {}); // cut short by the next tap: skipped, and that is fine
+  vt.finished.catch(() => {}).finally(() => root.classList.remove("theme-vt"));
 }
 // Aa (the owner, 2026-11-06: 讀的時候才需要它): the type size and day/night live in a small sheet under the article's top
 // bar, not on the settings page. The button again, a tap outside, or Escape closes it.
+let aaClose = null; // the open sheet's close(), so the button, a route change and an outside tap all shut the same one
 function aaMenu(btn) {
-  const old = document.querySelector(".aa-pop");
-  if (old) { old.remove(); btn.setAttribute("aria-expanded", "false"); return; }
+  if (aaClose) { aaClose(); return; }
   const pop = document.createElement("div");
   pop.className = "aa-pop";
   pop.setAttribute("role", "group");
@@ -1763,17 +1770,22 @@ function aaMenu(btn) {
   pop.addEventListener("click", (e) => {
     const b = e.target.closest("button");
     if (!b) return;
-    if (b.dataset.fs) setFs(b.dataset.fs); else if (b.dataset.theme) setTheme(b.dataset.theme, b);
-    draw();
+    // The pressed state is moved on the buttons themselves (no redraw): the theme swap runs inside a view transition,
+    // after this handler, and a redraw would also drop keyboard focus.
+    if (b.dataset.fs) setFs(b.dataset.fs); else if (b.dataset.theme) setTheme(b.dataset.theme, b); else return;
+    pop.querySelectorAll(b.dataset.fs ? "[data-fs]" : "[data-theme]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
   });
-  btn.closest(".topbar").append(pop);
+  btn.closest(".in").append(pop); // inside .in, so it sits by the button on wide screens too
   btn.setAttribute("aria-expanded", "true");
-  const close = (e) => {
-    if (e.type === "keydown" ? e.key !== "Escape" : pop.contains(e.target) || btn.contains(e.target)) return;
+  const close = () => {
     pop.remove(); btn.setAttribute("aria-expanded", "false");
-    document.removeEventListener("pointerdown", close, true); document.removeEventListener("keydown", close);
+    document.removeEventListener("pointerdown", onDown, true); document.removeEventListener("keydown", onKey);
+    if (aaClose === close) aaClose = null;
   };
-  setTimeout(() => { document.addEventListener("pointerdown", close, true); document.addEventListener("keydown", close); }, 0);
+  const onDown = (e) => { if (!pop.contains(e.target) && !btn.contains(e.target)) close(); };
+  const onKey = (e) => { if (e.key === "Escape") close(); };
+  aaClose = close;
+  setTimeout(() => { if (aaClose === close) { document.addEventListener("pointerdown", onDown, true); document.addEventListener("keydown", onKey); } }, 0);
 }
 
 function viewSettings() {
