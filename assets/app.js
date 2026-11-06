@@ -1516,7 +1516,14 @@ function calendarHtml(ym, pubs, done) {
 // ——— 印務室 (Druckerei, assets/press.js): the owner's press room — this morning's five shifts, the reserve stock and a
 // fortnight's roster, all out of the index the app holds (its press, late and stock), so it reads the same offline.
 function viewPress() {
-  main.innerHTML = `<div class="wrap press">${pressHtml(S.cfg, { ...S.index, issues: publishedIssues() }, col)}</div>`;
+  // The press room turns over at midnight (the owner, 2026-11-06: 印務室每天凌晨 12 點重置): 今晨 is the issue of today's
+  // date — in the index once the first shift has pushed (unpublished until 07:30, so not in publishedIssues), before that
+  // an empty record with every shift still to report — never yesterday's paper.
+  const today = twNow().date, pubs = publishedIssues();
+  const mine = (S.index.issues || []).find((i) => i.date === today)
+    || { date: today, no: (Number(pubs[0]?.no) || 0) + 1, weekday: "日一二三四五六"[new Date(`${today}T00:00:00Z`).getUTCDay()], articles: [], press: null };
+  const issues = [mine, ...pubs.filter((i) => i.date !== today)];
+  main.innerHTML = `<div class="wrap press">${pressHtml(S.cfg, { ...S.index, issues }, col)}</div>`;
   document.title = `印務室｜${S.cfg.title}`;
 }
 
@@ -1635,7 +1642,7 @@ function autoBlock() {
   const earlier = musicDates().some((d) => d < a.since);
   return `<p><b>每日自動加入「${esc(a.name)}」</b>：每天的古典錄音會在你打開晨報時自動加入；沒打開的日子，下次打開會補上。</p>
     ${a.error ? `<p class="small" style="color:var(--red)">${esc(a.error)}</p>` : ""}
-    ${miss.length ? `<p class="small">這幾期沒找到確定相符的錄音：${miss.map(([d, w]) => `<a href="#/a/${d}/music">${esc(fmtDate(d, "short"))}〈${esc(w)}〉</a>`).join("、")}。打開那一篇按「換一個版本」挑一次，之後會自動補進歌單。</p>` : ""}
+    ${miss.length ? `<details class="more"><summary>${miss.length} 期沒找到確定相符的錄音</summary><p class="small">${miss.map(([d, w]) => `<a href="#/a/${d}/music">${esc(fmtDate(d, "short"))}〈${esc(w)}〉</a>`).join("、")}。打開那一篇按「換一個版本」挑一次，之後會自動補進歌單。</p></details>` : ""}
     <div class="btns"><button class="btn ghost" data-auto-pick>換一個歌單</button>${earlier ? `<button class="btn ghost" data-auto-all>補上之前各期</button>` : ""}<button class="btn ghost" data-auto-off>停止自動加入</button></div>`;
 }
 

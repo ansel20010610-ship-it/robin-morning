@@ -25,13 +25,13 @@ export function twStamp(iso, now = twNow()) {
 // A shift that has not reported is overdue once its day is over, or today past 07:45.
 export const overdue = (date, now = twNow()) => date < now.date || (date === now.date && now.minutes > OVERDUE);
 
-// 今晨: the newest issue in the index, published or not (at 07:00 the owner wants to see this morning's). The timetable
-// of the five shifts, then who stood in from the reserve, what is still missing, and the Sunday late state.
+// 今晨: the first issue handed in (app.js viewPress: the one of today's date, from midnight on, whether it exists yet or
+// not). The timetable of the five shifts — all "未回報" while the night is young — then who stood in from the reserve,
+// what is still missing, and the Sunday late state.
 function morning(issue, col, now) {
   if (!issue) return `<p class="empty">還沒有任何一期。</p>`;
-  const { date, press } = issue;
+  const { date } = issue, press = issue.press || {};
   const head = `<div class="sec-head"><h2>今晨</h2><span class="de">Heute früh</span><span class="note">${esc(fmtDate(date, "short"))}・週${esc(issue.weekday || "")}・第 ${esc(issue.no)} 期</span></div>`;
-  if (!press) return `${head}<p class="empty">還沒有班次回報。</p>`;
   const late = overdue(date, now), shifts = press.shifts || {};
   const rows = SHIFTS.map(([k, at, duty]) => {
     const r = shifts[k], miss = r ? names(r.missing, date, col) : [];
