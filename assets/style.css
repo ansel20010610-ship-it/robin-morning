@@ -1583,16 +1583,16 @@ a.stamp:active .sp { filter: brightness(.96); }
    (serial.md 書版). Phones narrower than 340px set it horizontally instead. */
 @font-face { font-family: "Epigraph"; src: url("serial/brothers-karamazov-epigraph.ttf") format("truetype"); font-weight: 300; font-display: swap; }
 .buch .front { display: flex; gap: 16px; align-items: stretch; height: 230px; margin: 20px 0 0; } /* a fixed height: vertical text needs one to break into columns */
-.buch .bild { flex: 0 0 auto; width: max-content; margin: 0; } /* as wide as the picture: the caption (width 0, min-width 100%) adds nothing */
-.buch .bild img { display: block; height: 160px; width: auto; max-width: 150px; object-fit: cover; box-sizing: border-box; padding: 5px; border: 1px solid var(--rule); outline: 1px solid var(--gold-soft); outline-offset: -4px; background: var(--paper-2); box-shadow: 0 1px 2px rgba(60, 45, 20, .12); }
+.buch .bild { flex: 1 1 auto; min-width: 0; max-width: 230px; margin: 0; } /* every width the epigraph leaves, up to the full square: the row stays 230px tall and the picture fills it, cropped at the sides on a narrow phone */
+.buch .bild img { display: block; height: 100%; width: 100%; object-fit: cover; object-position: center; box-sizing: border-box; padding: 5px; border: 1px solid var(--rule); outline: 1px solid var(--gold-soft); outline-offset: -4px; background: var(--paper-2); box-shadow: 0 1px 2px rgba(60, 45, 20, .12); }
 .buch .bild figcaption { width: 0; min-width: 100%; margin-top: 7px; font-family: var(--sans); font-size: 10.5px; line-height: 1.5; letter-spacing: .03em; color: var(--muted); }
 .buch .motto { writing-mode: vertical-rl; flex: 0 0 auto; box-sizing: border-box; height: 100%; margin: 0 0 0 auto; padding: 2px 12px 0 0; border-left: 0; border-right: 2px solid var(--gold); }
-.buch .motto p { margin: 0; font-family: "Epigraph", var(--serif); font-weight: 300; font-size: 17px; line-height: 1.8; letter-spacing: .08em; color: var(--ink); text-align: start; }
+.buch .motto p { margin: 0; font-family: "Epigraph", var(--serif); font-weight: 300; font-size: 16px; line-height: 1.75; letter-spacing: .08em; color: var(--ink); text-align: start; }
 .buch .motto cite { display: block; margin: 0 10px 0 0; font-style: normal; font-family: "Epigraph", var(--serif); font-weight: 300; font-size: 11.5px; line-height: 1.6; letter-spacing: .18em; color: var(--gold-ink); }
 .buch .motto cite::before { content: ""; display: inline-block; width: 1px; height: 22px; margin-bottom: 9px; background: var(--gold); vertical-align: middle; }
 @media (max-width: 339px) {
   .buch .front { align-items: flex-start; height: auto; }
-  .buch .bild { flex: 0 0 34%; }
+  .buch .bild { flex: 0 0 34%; max-width: none; }
   .buch .bild img { width: 100%; height: auto; }
   .buch .bild { width: auto; }
   .buch .bild figcaption { width: auto; min-width: 0; }
