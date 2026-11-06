@@ -8,7 +8,7 @@ import { calm } from "./motion.js";
 
 const MAX = 600, CTX = 20, MIN = 2, LIMIT = 300;
 const BLOCKS = "p, li, h2"; // a mark lives inside one of these
-const SKIP = ".sources, .takeaway, .toc, figure, figcaption, .unlock, .next, .related, .music"; // not body text (the player's status line is not prose)
+const SKIP = ".sources, .takeaway, .toc, figure, figcaption, .next, .related, .music"; // not body text (the player's status line is not prose)
 
 export const allMarks = () => { const m = store.get("marks", []); return Array.isArray(m) ? m.filter((x) => x && typeof x.id === "string" && typeof x.key === "string" && typeof x.text === "string") : []; };
 export const marksOf = (key) => allMarks().filter((m) => m.key === key);

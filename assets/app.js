@@ -150,36 +150,7 @@ function metaLine(date, a, read) {
   const p = read.has(`${date}/${a.column}`) ? 0 : posOf(`${date}/${a.column}`);
   if (p) bits.push(`<span class="pos-mark">讀到 ${pct(p)}%</span>`);
   if (read.has(`${date}/${a.column}`)) bits.push('<span class="read-mark">已讀</span>');
-  else if (lockMode()) {
-    const spent = lockSpent(`${date}/${a.column}`), left = lockNeed(a.minutes) - spent;
-    if (spent) bits.push(`<span class="lock-t">已讀 ${lockClock(spent)}，${left > 0 ? `還差 ${lockClock(left)}` : "讀到文末就解鎖"}</span>`);
-  }
   return `<div class="meta-s">${bits.join("・")}</div>`;
-}
-// ——— 循序閱讀 (設定 → 閱讀方式): each issue opens one article at a time, in the front page's order. An article counts
-// as read when its end is on screen and the reader has spent at least half its estimated reading time on it, so a
-// quick fling to the bottom does not unlock the next. Articles read before the mode was turned on count as read.
-const lockMode = () => store.get("lock.mode", false) === true;
-const lockNeed = (minutes) => Math.min(240, Math.max(30, Math.round((minutes || 2) * 30))); // seconds
-const lockClock = (s) => (s >= 60 ? `${Math.floor(s / 60)} 分${s % 60 ? ` ${s % 60} 秒` : ""}` : `${s} 秒`);
-// Seconds already spent on an article; kept when the reader leaves it (or the app) and comes back.
-const lockSpent = (key) => Number(store.get("lock.t", {})[key]) || 0;
-// The first unread article before `column` in its issue, or null when `column` is open to read.
-function lockedBy(date, column) {
-  if (!lockMode()) return null;
-  const issue = issueBy(date);
-  if (!issue) return null;
-  const read = readSet();
-  if (read.has(`${date}/${column}`)) return null; // read already (before the mode, or earlier today): always open
-  if (col(column, date).group === "serial") return null; // the novel is outside the chain: always open, holds no one up
-  // The parcel's article (revealPick) is sealed until every other article is read, and holds no one else up.
-  const order = sortArticles(issue.articles, date).filter((a) => col(a.column, date).group !== "serial"), pick = revealPick(issue, order);
-  if (pick && pick.column === column) return order.find((a) => a !== pick && !read.has(`${date}/${a.column}`)) || null;
-  for (const a of order) {
-    if (a.column === column) return null;
-    if (a !== pick && !read.has(`${date}/${a.column}`)) return a;
-  }
-  return null;
 }
 // 包裹: today's parcel article stays sealed until every other article of the issue is read, in free reading too (the
 // owner, 2026-11-03); the unread others, or null. A direct way in (search, 隨手翻, the issue page) meets viewArticle's notice.
@@ -240,20 +211,16 @@ function hideBird(body, date, column) {
     setTimeout(() => { clearInterval(flecks); b.remove(); }, 2700);
   }, { once: true });
 }
-function lockedCard(date, a, by) {
-  return `<div class="item noimg locked" aria-disabled="true"><div>${kicker(a.column, false, date)}<h3>${esc(a.title)}</h3><p class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></p></div></div>`;
-}
-
 // 連載 (column serial, scripts/serial.py, editorial/columns/serial.md): the day's installment of the novel, one card
 // of its own under 副刊 — the book's plate, the installment's title, where it stands in the book, the recap (dek). It is
-// outside the day's stamp, the 循序 chain and the parcel: the novel keeps its own progress on the 連載 tab.
+// outside the day's stamp and the parcel: the novel keeps its own progress on the 連載 tab.
 const serialWhere = (s) => [s.part, s.chapter].filter(Boolean).join(" ") + (s.pieces > 1 ? `・${s.pieces} 之 ${s.piece}` : "");
 const serialPlate = (s) => `<p class="plate"><span class="book">《${esc(s.book || "")}》</span><span class="by">${esc(s.author || "")}</span><span class="where">${esc(serialWhere(s))}</span></p>`;
 function serialCard(date, a, read, { plate = true, recap = true } = {}) {
-  const s = a.serial || {}, by = lockedBy(date, a.column), done = read.has(`${date}/${a.column}`);
+  const s = a.serial || {}, done = read.has(`${date}/${a.column}`);
   const inner = `${plate ? serialPlate(s) : `<p class="plate"><span class="where">${esc(serialWhere(s))}</span></p>`}<h3>${esc(a.title)}</h3>${recap ? (a.dek ? `<p class="recap"><b>${s.n === 1 ? "開場" : "前情"}</b>${esc(a.dek)}</p>` : "") : a.brief ? `<p class="recap"><b>本回</b>${esc(a.brief)}</p>` : ""}
-    ${by ? `<p class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></p>` : `<p class="meta-s">${esc(fmtDate(date, "short"))}・${done ? "讀過了" : `約 ${esc(String(a.minutes || 6))} 分鐘`}</p>`}`;
-  return by ? `<div class="item noimg serial-card locked" aria-disabled="true"><div>${inner}</div></div>` : `<a class="item noimg serial-card${done ? " read" : ""}" href="#/a/${date}/${a.column}"><div>${inner}</div></a>`;
+    <p class="meta-s">${esc(fmtDate(date, "short"))}・${done ? "讀過了" : `約 ${esc(String(a.minutes || 6))} 分鐘`}</p>`;
+  return `<a class="item noimg serial-card${done ? " read" : ""}" href="#/a/${date}/${a.column}"><div>${inner}</div></a>`;
 }
 function serialBox(date, a, read) {
   const s = a.serial || {};
@@ -325,9 +292,9 @@ async function viewSerial(my) {
     if (!done[slug]) { done[slug] = twNow().date; store.set("serial.finished", done); }
     return `<div class="exlibris" role="img" aria-label="藏書票：${esc(fmtDate(done[slug]))}讀畢"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg><span class="ex">Ex Libris</span><span class="who">知更鳥晨間記事</span><span class="d">${esc(fmtDate(done[slug]))}讀畢</span></div>`;
   };
-  const row = ({ date, a }) => { const k = `${date}/${a.column}`, s = a.serial || {}, by = lockedBy(date, a.column); const inner = `<span class="no" aria-hidden="true">${esc(String(s.n ?? "").padStart(2, "0"))}</span>
+  const row = ({ date, a }) => { const k = `${date}/${a.column}`, s = a.serial || {}; const inner = `<span class="no" aria-hidden="true">${esc(String(s.n ?? "").padStart(2, "0"))}</span>
       <span class="t"><span class="m"><span class="k">${esc(serialWhere(s))}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title.replace(/^第 \d+ 回・/, ""))}</b></span>`;
-    return by ? `<li><div class="sv locked" aria-disabled="true">${inner}</div></li>` : `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}">${inner}</a></li>`; };
+    return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}">${inner}</a></li>`; };
   main.innerHTML = `<div class="wrap serie"><header class="page-title"><h1>連載</h1><span class="de">Fortsetzung folgt</span></header>
     <section class="buch">
       <h2>《${esc(b.title || "")}》</h2>
@@ -346,8 +313,6 @@ async function viewSerial(my) {
 }
 
 function itemCard(date, a, read) {
-  const by = lockedBy(date, a.column);
-  if (by) return lockedCard(date, a, by);
   const th = thumb(a, "th"), pm = posMark(date, a, read);
   return `<a class="item${th ? "" : " noimg"}${pm.cls}"${pm.st} href="#/a/${date}/${a.column}"><div>${kicker(a.column, false, date)}<h3>${esc(a.title)}</h3>${summary(a)}${metaLine(date, a, read)}</div>${th}</a>`;
 }
@@ -557,7 +522,6 @@ function viewFront(dateParam) {
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的${esc(issueNo(issue.no))}・<a href="#/">回到最新一期</a></div>` : ""}
     ${lateNote(issue.date)}
     ${prayerBox(issue)}
-    ${lockMode() ? lockBar(arts, issue.date) : ""}
     ${weatherBox(issue)}
     ${revealBox(issue, arts, read)}
     ${mains.length ? `<div class="sec-head"><h2>正刊</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
@@ -569,7 +533,7 @@ function viewFront(dateParam) {
     ${watch.length ? `<div class="sec-head"><h2>遠方有動靜</h2><span class="de">In der Ferne</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
     ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdsFound().has(issue.date) ? "今天的知更鳥找到了。" : "今天有一隻知更鳥藏在某一篇裡。"}</p>` : ""}
     ${!arts.some((a) => forStamp(a, issue.date) && a.brief) ? "" : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
-      : unreadIn(issue.date, arts) ? `<div class="finish lockfin">${lockMode() ? ICON.lock : ""}<b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${lockMode() ? "循序閱讀：一篇一篇讀完，今天才算數。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的郵票才蓋得下去。`}</span></div>`
+      : unreadIn(issue.date, arts) ? `<div class="finish lockfin"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的郵票才蓋得下去。</span></div>`
       : `<div class="finish">${finishInner(issue.date)}</div>`}
     ${dateParam ? "" : wocheBox()}
     ${dayBox(issue.date)}
@@ -588,14 +552,14 @@ function viewFront(dateParam) {
 }
 
 // 接著上次: the articles left part-read, newest issue first, at most two — on 往期, under the title and above the
-// search (moved off the front page on 2026-11-02, where 今日氣象 took its row). Read ones and (in 循序閱讀) locked ones
-// are not offered; the day of any that is not from `issueDate` is named — every one's, when no issue is given.
+// search (moved off the front page on 2026-11-02, where 今日氣象 took its row). Read ones are not offered; the day of
+// any that is not from `issueDate` is named — every one's, when no issue is given.
 function inProgress(read, n = 2) {
   const out = [];
   for (const k of posKeys()) {
     const [date, c] = k.split("/");
     const a = issueBy(date)?.articles.find((x) => x.column === c), p = posOf(k);
-    if (!a || !p || read.has(k) || !isPublished(date) || lockedBy(date, c)) continue;
+    if (!a || !p || read.has(k) || !isPublished(date)) continue;
     out.push({ date, a, p });
   }
   return out.sort((x, y) => y.date.localeCompare(x.date)).slice(0, n);
@@ -635,20 +599,12 @@ let finishSeen = null;
 // its own progress on the 連載 tab and is read in its own order (the owner, 2026-11-05: 連載獨立計分).
 const forStamp = (a, date) => { const g = col(a.column, date).group; return g !== "serial" && (g !== "watch" || Boolean(a.brief)); };
 const unreadIn = (date, arts) => { const read = readSet(); return arts.filter((a) => forStamp(a, date) && !read.has(`${date}/${a.column}`)).length; };
-// 循序閱讀's version of the digest bar: how many of the issue's articles have been read, not how many briefs seen.
-function lockBar(arts, date) {
-  arts = arts.filter((a) => forStamp(a, date));
-  if (!arts.length) return "";
-  const n = arts.length, got = n - unreadIn(date, arts);
-  const ring = `<span class="ring-wrap"><svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="track" cx="18" cy="18" r="15.5"/><circle class="bar" cx="18" cy="18" r="15.5" pathLength="100" style="stroke-dashoffset:${100 - Math.round((got / n) * 100)}"/></svg><span class="cnt">${got}/${n}</span></span>`;
-  return `<div class="digest lockbar${got === n ? " full" : ""}">${ring}<div><b>循序閱讀</b><span>${got === n ? "全部讀完了" : "讀完一篇，下一篇才解鎖"}</span></div></div>`;
-}
 function wireDigest(issue) {
   finishSeen?.disconnect(); finishSeen = null;
   const fin = main.querySelector(".finish:not(.lockfin)");
   // Reaching the end the first time today stamps the seal; coming back to a finished issue just shows it.
   const was = digestDone().has(issue.date);
-  const ring = lockMode() ? { stop() {}, complete() {} } : digestRing(main);
+  const ring = digestRing(main);
   let finished = false;
   function finish() {
     if (finished) return;
@@ -760,13 +716,6 @@ async function viewArticle(date, column, my) {
   const wantMark = landMark; // 劃線本: the mark to land on, taken whatever this page turns out to be
   landMark = null;
   if (!isPublished(date)) { main.innerHTML = `<div class="wrap"><p class="empty">這篇還沒出爐，別偷看。</p></div>`; return; }
-  const by = lockedBy(date, column);
-  if (by) {
-    main.innerHTML = `<div class="wrap"><div class="locked-page">${ICON.lock}<h1>這篇還鎖著</h1>
-      <p>循序閱讀：先讀完〈${esc(by.title)}〉，這篇才會解鎖。</p><a class="btn" href="#/a/${date}/${esc(by.column)}">去讀〈${esc(by.title)}〉</a>
-      <p class="small">想自由跳著讀，可以到<a href="#/settings">設定 → 閱讀方式</a>改回來。</p></div></div>`;
-    return;
-  }
   const sealed = sealedBy(date, column);
   if (sealed) {
     main.innerHTML = `<div class="wrap"><div class="locked-page"><h1>這篇還包著</h1>
@@ -826,7 +775,6 @@ async function viewArticle(date, column, my) {
       <div class="body"></div>
       ${a.sources?.length ? `<section class="sources"><h2>來源與閱讀範圍</h2><ol>${a.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}${s.publisher ? `，${esc(s.publisher)}` : ""}${s.date ? `，${esc(s.date)}` : ""}${s.note ? ` <span>— ${inline(s.note)}</span>` : ""}</li>`).join("")}</ol>${(a.body || []).some((b) => b.type === "quote" && b.original) ? `<p class="small">外文引文未註明譯者的，都是本報自譯。</p>` : ""}</section>` : ""}
       ${placesLine(me, column)}${relatedHtml(me)}
-      <div class="unlock" hidden></div>
       ${"share" in navigator ? `<div class="share"><button class="btn ghost" type="button" data-share>${ICON.share}分享這篇</button></div>` : ""}
       <div class="next"></div>
     </div></article>
@@ -866,8 +814,8 @@ async function viewArticle(date, column, my) {
   }
   // 接著讀: what to read next depends on where the reader came from. Out of 收藏 or a column's list, the next item down
   // that list (and the one before it as 上一篇); the list is searched for this article by key, never by a remembered
-  // index. Otherwise the issue's first unread article — in 循序閱讀 that is the one this article unlocks, drawn locked
-  // until it is finished — and, with the whole issue read, a small finish line instead of going round again.
+  // index. Otherwise the issue's first unread article and, with the whole issue read, a small finish line instead of
+  // going round again.
   const artOf = (k) => { if (!k) return null; const [d, c] = k.split("/"); const x = issueBy(d)?.articles.find((y) => y.column === c); return x ? { date: d, a: x } : null; };
   const listOf = () => {
     if (fromList === "#/saved") return { name: "收藏", keys: saved().filter((k) => artOf(k) && isPublished(k.slice(0, 10))) };
@@ -943,7 +891,8 @@ async function viewArticle(date, column, my) {
     if (at && was) reader.playFrom(at); else if (at) reader.seek(at);
   });
 
-  // Progress bar, read mark, and the position to come back to.
+  // Progress bar, read mark, and the position to come back to. (循序閱讀 and its reading clock were taken out — the
+  // owner, 2026-11-06.)
   const bar = main.querySelector(".progress");
   const posKey = `pos.${key}`;
   let saveT = 0, trail = 0;
@@ -953,48 +902,11 @@ async function viewArticle(date, column, my) {
     const covered = (document.querySelector(".nav")?.offsetHeight || 0) + (document.querySelector(".dock:not([hidden])")?.offsetHeight || 0);
     return body.getBoundingClientRect().bottom <= window.innerHeight - covered;
   };
-  // 循序閱讀: time spent on this article (page visible), kept across visits; the end counts once it is enough.
-  const lock = lockMode() && !readSet().has(key);
-  const need = lockNeed(minutes);
-  let dwell = lockSpent(key), tick = 0;
-  const saveDwell = () => {
-    if (!lock) return;
-    const m = store.get("lock.t", {});
-    m[key] = dwell;
-    const ks = Object.keys(m);
-    if (ks.length > 300) delete m[ks[0]];
-    store.set("lock.t", m);
-  };
-  const unlockBox = main.querySelector(".unlock");
-  const drawUnlock = () => {
-    if (!lock) return;
-    unlockBox.hidden = false;
-    unlockBox.innerHTML = readSet().has(key) ? `<b>✓ 讀完了</b>下一篇解鎖了。`
-      : dwell < need ? `${ICON.lock}<span>讀到文末、而且至少讀 ${lockClock(need)}，才會解鎖下一篇（已讀 ${lockClock(dwell)}，還差 ${lockClock(need - dwell)}；中途離開，時間會留著）。</span>`
-      : `${ICON.lock}<span>時間夠了，讀到文末就解鎖下一篇。</span>`;
-    unlockBox.classList.toggle("ok", readSet().has(key));
-  };
   const finishRead = () => {
     if (readSet().has(key)) return;
-    if (lock && dwell < need) return;
     markRead(key);
-    drawNext(); // the finish line's wording, or the unlocked next card
-    if (!lock) return;
-    clearInterval(tick);
-    saveDwell();
-    drawUnlock();
-    toast("下一篇解鎖了");
+    drawNext(); // the finish line's wording, or the next card
   };
-  if (lock) {
-    drawUnlock();
-    tick = setInterval(() => {
-      if (document.visibilityState !== "visible" || !body.isConnected) return;
-      dwell++;
-      saveDwell(); // every second: leaving the app (iOS may close it in the background) loses nothing
-      drawUnlock();
-      if (reachedEnd()) finishRead();
-    }, 1000);
-  }
   let pruned = false;
   const savePos = () => {
     if (!body.isConnected) return;
@@ -1011,10 +923,10 @@ async function viewArticle(date, column, my) {
     clearTimeout(trail);
     trail = setTimeout(savePos, 250); // also keep where the gesture ended
   };
-  const onHide = () => { if (document.visibilityState === "hidden") { saveDwell(); savePos(); } };
+  const onHide = () => { if (document.visibilityState === "hidden") savePos(); };
   window.addEventListener("scroll", onScroll, { passive: true });
   document.addEventListener("visibilitychange", onHide);
-  const onLeave = () => { saveDwell(); savePos(); };
+  const onLeave = () => savePos();
   window.addEventListener("pagehide", onLeave);
   // 從上次讀到的地方繼續: offered until the reader either takes it or scrolls on past 5% by themselves — no timer.
   // Opened from the front page's 接著上次, the page lands there at once (route() scrolls to landTop) and asks nothing.
@@ -1034,8 +946,6 @@ async function viewArticle(date, column, my) {
   cleanup = () => {
     aaClose?.();
     clearTimeout(trail);
-    clearInterval(tick);
-    saveDwell();
     savePos(); // route() runs this before drawing the next view, so the article is still on the page
     window.removeEventListener("scroll", onScroll);
     document.removeEventListener("visibilitychange", onHide);
@@ -1051,20 +961,18 @@ async function viewArticle(date, column, my) {
 
 // 本期目錄 (Inhalt): the issue's articles in the front page's order, raised as a sheet from the top bar's title. Each row
 // carries its numeral, column and title, and its minutes — or a gold tick once read; the one open has a gold bar down
-// its left. A tap turns to that article, the page sliding the way its place in the order lies. In 循序閱讀 a locked
-// article is listed but is no link, with the note on what unlocks it. The dark backdrop, Escape or 關上 close it;
-// route() closes it as the new page draws.
+// its left. A tap turns to that article, the page sliding the way its place in the order lies. The dark backdrop,
+// Escape or 關上 close it; route() closes it as the new page draws.
 function openContents(date, order, idx) {
   const issue = issueBy(date), sheet = $("#sheet");
   if (!issue || !sheet) return;
   const read = readSet();
   const rows = order.map((a, i) => {
-    const by = lockedBy(date, a.column), now = i === idx, done = read.has(`${date}/${a.column}`);
-    const inner = `<span class="n">${roman(i + 1)}</span><span class="t"><span class="k">${esc(col(a.column, date).name)}</span><b>${esc(a.title)}</b>${by ? `<span class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></span>` : ""}</span>${done ? `<span class="sum tick" role="img" aria-label="已讀">✓</span>` : `<span class="sum">${a.minutes ? `${a.minutes} 分` : ""}</span>`}`;
-    return by ? `<li><div class="opt locked" aria-disabled="true">${inner}</div></li>`
-      : `<li><a class="opt${now ? " now" : ""}" href="#/a/${date}/${esc(a.column)}" data-i="${i}"${now ? ' aria-current="page"' : ""}>${inner}</a></li>`;
+    const now = i === idx, done = read.has(`${date}/${a.column}`);
+    const inner = `<span class="n">${roman(i + 1)}</span><span class="t"><span class="k">${esc(col(a.column, date).name)}</span><b>${esc(a.title)}</b></span>${done ? `<span class="sum tick" role="img" aria-label="已讀">✓</span>` : `<span class="sum">${a.minutes ? `${a.minutes} 分` : ""}</span>`}`;
+    return `<li><a class="opt${now ? " now" : ""}" href="#/a/${date}/${esc(a.column)}" data-i="${i}"${now ? ' aria-current="page"' : ""}>${inner}</a></li>`;
   });
-  sheet.innerHTML = `<div class="sheet contents"><h2>本期目錄<span class="de">Inhalt</span></h2><p class="sub">${esc(fmtDate(date))}・${esc(issueNo(issue.no))}・${order.length} 篇${lockMode() ? "・循序閱讀" : ""}</p>
+  sheet.innerHTML = `<div class="sheet contents"><h2>本期目錄<span class="de">Inhalt</span></h2><p class="sub">${esc(fmtDate(date))}・${esc(issueNo(issue.no))}・${order.length} 篇</p>
     <ol class="list">${rows.join("")}</ol><div class="btns"><button class="btn ghost" type="button" data-close>關上</button></div></div>`;
   sheet.querySelector("[data-close]").onclick = () => sheet.close();
   // The backdrop is the dialog itself; a row sets the turn's direction and lets its link go on to the router.
@@ -1084,14 +992,14 @@ function openContents(date, order, idx) {
 
 // 延伸閱讀 (Weiterlesen): up to three kin articles after an article's sources, out of the index's "related" (build_index.py,
 // by similarity). Rows like the contents sheet's — column, title, the day, a gold tick once read — for articles still in
-// the index and published; in 循序閱讀 a locked one is listed but is no link, with the note on what unlocks it.
+// the index and published.
 function relatedHtml(entry) {
   const read = readSet();
   const rows = (Array.isArray(entry?.related) ? entry.related : []).map(({ d, c }) => ({ d, c, a: issueBy(d)?.articles.find((x) => x.column === c) }))
     .filter((x) => x.a && isPublished(x.d)).slice(0, 3).map(({ d, c, a }) => {
-      const by = lockedBy(d, c), done = read.has(`${d}/${c}`);
-      const inner = `<span class="t"><span class="k">${esc(col(c, d).name)}</span><b>${esc(a.title)}</b>${by ? `<span class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></span>` : ""}</span><span class="sum">${done ? `<i class="tick" role="img" aria-label="已讀">✓</i>` : ""}${esc(fmtDate(d, "short"))}</span>`;
-      return by ? `<div class="rel locked" aria-disabled="true">${inner}</div>` : `<a class="rel" href="#/a/${esc(d)}/${esc(c)}">${inner}</a>`;
+      const done = read.has(`${d}/${c}`);
+      const inner = `<span class="t"><span class="k">${esc(col(c, d).name)}</span><b>${esc(a.title)}</b></span><span class="sum">${done ? `<i class="tick" role="img" aria-label="已讀">✓</i>` : ""}${esc(fmtDate(d, "short"))}</span>`;
+      return `<a class="rel" href="#/a/${esc(d)}/${esc(c)}">${inner}</a>`;
     });
   return rows.length ? `<section class="related"><div class="sec-head"><h2>延伸閱讀</h2><span class="de">Weiterlesen</span></div>${rows.join("")}</section>` : "";
 }
@@ -1663,13 +1571,13 @@ function viewGallery() {
 }
 
 // ——— 隨手翻 (Zufallsfund): one article out of the back issues, drawn like a card ———
-// The pool is every published article but the day's perishables (football, news) and the 觀測站; in 循序閱讀 a locked one
-// is not offered. An unread article weighs 4, a read one 1, and either is divided by 1 + how often its column came up
-// in the last five draws (random.recent), so five philosophy pieces in a row do not happen. `exclude` is the card on
-// the table when 再翻一張 is pressed.
+// The pool is every published article but the day's perishables (football, news) and the 觀測站. An unread article
+// weighs 4, a read one 1, and either is divided by 1 + how often its column came up in the last five draws
+// (random.recent), so five philosophy pieces in a row do not happen. `exclude` is the card on the table when 再翻一張
+// is pressed.
 const RANDOM_SKIP = new Set(["football", "news", "serial"]);
 function randomPool() {
-  return publishedIssues().flatMap((i) => i.articles.filter((a) => !RANDOM_SKIP.has(a.column) && col(a.column, i.date).group !== "watch" && !lockedBy(i.date, a.column))
+  return publishedIssues().flatMap((i) => i.articles.filter((a) => !RANDOM_SKIP.has(a.column) && col(a.column, i.date).group !== "watch")
     .map((a) => ({ date: i.date, a, key: `${i.date}/${a.column}` })));
 }
 function randomPick(exclude = null) {
@@ -1686,7 +1594,7 @@ function randomPick(exclude = null) {
 // the article it opened, the reader finds the same card, now marked read, not a fresh draw.
 function viewRandom(date, column) {
   const have = date && column && issueBy(date)?.articles.find((x) => x.column === column);
-  let cur = have && isPublished(date) && !lockedBy(date, column) ? { date, a: have, key: `${date}/${column}` } : randomPick();
+  let cur = have && isPublished(date) ? { date, a: have, key: `${date}/${column}` } : randomPick();
   const keep = () => { try { history.replaceState(history.state, "", `#/random/${cur.key}`); } catch { /* ignore */ } shownHash = location.hash; };
   const card = (x) => {
     const read = readSet(), issue = issueBy(x.date), k = col(x.a.column, x.date);
@@ -1793,8 +1701,6 @@ function viewSettings() {
   const wd = [["mon", "一"], ["tue", "二"], ["wed", "三"], ["thu", "四"], ["fri", "五"], ["sat", "六"], ["sun", "日"]];
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>設定</h1><span class="de">Einstellungen</span></header>
     <section class="set" id="push-set"><h2>出刊通知</h2><p class="small">讀取中……</p></section>
-    <section class="set"><h2>閱讀方式</h2><div class="seg" data-g="lock">${[["free", "自由閱讀"], ["seq", "循序閱讀"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${(v === "seq") === lockMode()}">${l}</button>`).join("")}</div>
-      <p class="small">循序閱讀：每一期照首頁的順序，一次只開一篇；讀到文末、而且讀夠這篇預估時間的一半，下一篇才解鎖；中途離開，讀過的時間會留著，回來接著算。還沒解鎖的只顯示標題，摘要先藏起來，全部讀完才算讀完今天。之前讀過的照樣算數。</p></section>
     <section class="set"><h2>字級與日夜</h2><p>在文章頁右上角的「Aa」裡：讀的時候才需要調，就放在那裡。</p></section>
     ${canSpeak() ? `<section class="set"><h2>朗讀速度</h2><div class="seg" data-g="rate">${RATES.map((r) => `<button type="button" data-v="${r}" aria-pressed="${r === getRate()}">${r === 1 ? "標準" : `${r}×`}</button>`).join("")}</div>
       <p>文章右上角的喇叭按鈕會用裝置內建的中文語音朗讀全文，不需網路服務。</p></section>` : ""}
@@ -1827,11 +1733,6 @@ function viewSettings() {
   renderPush($("#push-set"), S.cfg, S.index.push).catch(() => {});
   // Redrawing replaces the buttons; put focus back on the one just pressed.
   const redraw = (g, v) => { viewSettings(); main.querySelector(`[data-g="${g}"] [data-v="${v}"]`)?.focus(); };
-  main.querySelectorAll('[data-g="lock"] button').forEach((b) => (b.onclick = () => {
-    store.set("lock.mode", b.dataset.v === "seq");
-    toast(b.dataset.v === "seq" ? "循序閱讀：讀完一篇才解鎖下一篇" : "自由閱讀：想讀哪篇就讀哪篇");
-    redraw("lock", b.dataset.v);
-  }));
   main.querySelectorAll('[data-g="rate"] button').forEach((b) => (b.onclick = () => { setRate(Number(b.dataset.v)); redraw("rate", b.dataset.v); }));
   // Redraw only while the settings page is still the one showing.
   const auto = (p) => p.then(() => { if ((location.hash || "").startsWith("#/settings")) viewSettings(); });

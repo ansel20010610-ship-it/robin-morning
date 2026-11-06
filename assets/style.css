@@ -453,7 +453,7 @@ tr:first-child td { border-top: 0; }
 .sources li { margin: 0 0 7px; overflow-wrap: anywhere; }
 .sources li span { color: var(--muted); }
 /* 延伸閱讀 (app.js relatedHtml): quiet rows under the sources, after the contents sheet's — column over title, the day on
-   the right and a gold tick once read; a locked one (循序閱讀) greys out like .sheet.contents .opt.locked. */
+   the right and a gold tick once read. */
 .related .sec-head { margin: 34px 0 0; }
 .rel { display: flex; align-items: flex-start; gap: 12px; padding: 11px 2px 12px; border-bottom: 1px solid var(--rule); color: inherit; text-decoration: none; }
 .rel .t { flex: 1; min-width: 0; display: grid; gap: 1px; }
@@ -461,10 +461,6 @@ tr:first-child td { border-top: 0; }
 .rel b { font-weight: 600; font-size: 15.5px; line-height: 1.5; }
 .rel .sum { flex: 0 0 auto; display: flex; align-items: baseline; gap: 6px; padding-top: 15px; font-family: var(--sans); font-size: 12.5px; color: var(--muted); letter-spacing: .03em; }
 .rel .tick { font-style: normal; font-size: 15px; font-weight: 600; color: var(--gold-ink); }
-.rel.locked { color: var(--muted); cursor: default; }
-.rel.locked b { font-weight: 500; }
-.rel.locked .k { color: inherit; }
-.rel .lock-note { margin-top: 3px !important; }
 
 .next { margin: 30px 0 10px; border-top: 1px solid var(--rule); }
 .next .lbl { margin: 14px 0 0; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
@@ -591,9 +587,6 @@ dialog.bottom { margin: auto auto 0; }
 .sheet.contents .opt .tick { font-size: 16px; font-weight: 600; color: var(--gold-ink); padding-top: 13px; }
 .sheet.contents .opt.now { box-shadow: inset 3px 0 0 var(--gold); padding-left: 14px; }
 .sheet.contents .opt.now .k { color: var(--gold-ink); }
-.sheet.contents .opt.locked { color: var(--muted); cursor: default; }
-.sheet.contents .opt.locked b { font-weight: 500; }
-.sheet.contents .opt .lock-note { margin-top: 3px !important; }
 .viewer { width: 100vw; height: 100vh; background: rgba(12, 10, 7, .96); color: #eee; display: flex; flex-direction: column; }
 .viewer .vi { flex: 1; overflow: auto; display: flex; align-items: center; justify-content: center; touch-action: pinch-zoom pan-x pan-y; }
 .viewer img { max-width: 100%; max-height: 100%; object-fit: contain; }
@@ -822,10 +815,10 @@ img.img-off { visibility: hidden; }
    and nav-pop animation are left alone. */
 @media (hover: none) and (prefers-reduced-motion: no-preference) {
   body { touch-action: manipulation; }
-  :is(.lead, .item:not(.locked), .issue-row, a.gig, .hit, .sheet .opt, .cont, a.rel) {
+  :is(.lead, .item, .issue-row, a.gig, .hit, .sheet .opt, .cont, a.rel) {
     transition: translate .26s cubic-bezier(.2,1.4,.4,1), border-color .26s ease, background .25s;
   }
-  :is(.lead, .item:not(.locked), .issue-row, a.gig, .hit, .sheet .opt, .cont, a.rel):active {
+  :is(.lead, .item, .issue-row, a.gig, .hit, .sheet .opt, .cont, a.rel):active {
     translate: 0 1px; border-bottom-color: var(--ink); transition-duration: .07s, .07s, .25s; transition-timing-function: ease-out;
   }
   :is(.chip, .seg button, .pitch .steps button) { transition: box-shadow .26s cubic-bezier(.2,1.4,.4,1), background .2s, color .2s; }
@@ -1219,14 +1212,8 @@ button.chip { cursor: pointer; font-family: var(--sans); }
 .cb .bar b { display: block; height: 100%; width: calc(var(--p, 0) * 100%); background: var(--gold); }
 @media (prefers-reduced-motion: no-preference) { .cb .bar b { transform-origin: 0 50%; animation: draw-x .9s .2s cubic-bezier(.3,.7,.2,1) both; } }
 
-/* ——— 循序閱讀: locked cards, the lock page, the unlock note at an article's end ——— */
-.item.locked { cursor: default; opacity: .62; }
-.item.locked h3 { color: var(--ink-2); }
-.lock-note { display: flex; align-items: center; gap: 6px; margin-top: 6px !important; font-family: var(--sans); font-size: 12.5px !important; color: var(--muted) !important; -webkit-line-clamp: unset !important; }
-.meta-s .lock-t { color: var(--gold-ink); }
-.lock-note svg, .unlock svg, .lockfin svg { flex: 0 0 auto; width: 15px; height: 15px; }
+/* ——— 包裹 (app.js viewArticle, sealedBy): the page in place of a sealed article ——— */
 .locked-page { padding: 64px 4px 24px; text-align: center; }
-.locked-page > svg { width: 40px; height: 40px; color: var(--gold); }
 .locked-page h1 { margin: 10px 0 8px; font-size: 24px; letter-spacing: .1em; }
 .locked-page p { color: var(--ink-2); line-height: 1.8; }
 .locked-page .btn { display: inline-block; margin: 10px 0 18px; }
@@ -1240,12 +1227,8 @@ button.chip { cursor: pointer; font-family: var(--sans); }
 .err p { margin: 0 0 18px; font-size: 15px; line-height: 1.8; color: var(--ink-2); }
 .err .btns { justify-content: center; }
 .err + .sec-head { margin-top: 30px; }
-.unlock { display: flex; align-items: flex-start; gap: 8px; margin: 26px 0 0; padding: 12px 14px; border: 1px dashed var(--rule); font-family: var(--sans); font-size: 13px; line-height: 1.6; color: var(--ink-2); }
-.unlock svg { margin-top: 2px; color: var(--gold-ink); }
-.unlock.ok { border-style: solid; border-color: var(--gold); color: var(--ink); }
-.unlock.ok b { margin-right: 6px; color: var(--gold-ink); }
+/* The front page's finish line while articles are still unread (app.js viewFront; wireDigest leaves it unobserved). */
 .finish.lockfin { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-.finish.lockfin svg { width: 22px; height: 22px; color: var(--gold-ink); }
 
 /* ——— 劃線本 (Anstreichungen, assets/marks.js) ——— */
 /* A graphite line under the words, no ground and no box: a thin, slightly uneven stroke repeated along the foot of the
@@ -1612,7 +1595,6 @@ a.stamp:active .sp { filter: brightness(.96); }
 .cast dl { margin: 6px 0 0; }
 .cast dt { font-weight: 600; margin-top: 8px; }
 .cast dd { margin: 1px 0 0; font-size: .92em; color: var(--ink-2); line-height: 1.7; }
-.sv.locked { color: var(--muted); }
 /* 摺角 (app.js serialUnread): the 連載 tab's book icon with its top corner folded down while today's installment is
    unread — a small gold triangle over the icon's corner; flat again once it is read. */
 .nav a.ear { position: relative; }
