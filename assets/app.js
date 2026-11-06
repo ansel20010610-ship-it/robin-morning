@@ -209,7 +209,9 @@ function birdSpot(issue) {
 function hideBird(body, date, column) {
   const spot = birdSpot(issueBy(date));
   if (!spot || spot.column !== column || birdsFound().has(date)) return;
-  const ps = [...body.querySelectorAll(":scope > p")];
+  // Every paragraph, however deep: 快訊 keeps its paragraphs inside sections, and a bird that no one could ever find
+  // was hidden there (2026-11-06, the owner: 我今天找不到鳥).
+  const ps = [...body.querySelectorAll("p")];
   if (!ps.length) return;
   const b = document.createElement("button");
   b.type = "button"; b.className = "bird-hide"; b.setAttribute("aria-label", "知更鳥");
@@ -528,7 +530,7 @@ function viewFront(dateParam) {
     ${supps.length ? `<div class="sec-head"><h2>副刊</h2><span class="de">Feuilleton</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
     ${serial.length ? serialBox(issue.date, serial[0], read) : ""}
-    ${watch.length ? `<div class="sec-head"><h2>觀測站</h2><span class="de">Beobachtung</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
+    ${watch.length ? `<div class="sec-head"><h2>遠方有動靜</h2><span class="de">In der Ferne</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
     ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdsFound().has(issue.date) ? "今天的知更鳥找到了。" : "今天有一隻知更鳥藏在某一篇裡。"}</p>` : ""}
     ${!arts.some((a) => forStamp(a, issue.date) && a.brief) ? "" : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
       : unreadIn(issue.date, arts) ? `<div class="finish lockfin">${lockMode() ? ICON.lock : ""}<b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${lockMode() ? "循序閱讀：一篇一篇讀完，今天才算數。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的郵票才蓋得下去。`}</span></div>`
@@ -1675,7 +1677,7 @@ function viewSettings() {
       <p class="small">${isWebKitITP() ? "iPhone／Safari 上內嵌播放器可能只能試聽 30 秒；完整收聽請按『在 Spotify 開啟』，加入歌單不受影響。"
         : "若播放器只播 30 秒試聽，請在同一個瀏覽器登入 open.spotify.com。"}</p>
     </section>
-    <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。首頁最上方每天一段和合本經文，下方「今日禱告」展開可讀整段經文與禱告。正刊四欄每日刊出（諾坎普散場之後、天亮以前，世界與台灣、診間裡站得住的證據、燈暗下來，聽一首名曲）；副刊依星期輪值，每天三篇；觀測站只在有重要新進展時刊出。</p>
+    <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。首頁最上方每天一段和合本經文，下方「今日禱告」展開可讀整段經文與禱告。正刊四欄每日刊出（諾坎普散場之後、天亮以前，世界與台灣、診間裡站得住的證據、燈暗下來，聽一首名曲）；副刊依星期輪值，每天三篇；「遠方有動靜」那幾欄只在有重要新進展時刊出。</p>
       <p>稿件由雲端排程編輯在凌晨分班撰寫，每篇再由另一位編輯獨立查核事實、引文與圖片授權。若某一欄到 07:05 仍未完成，會自動換上預先寫好、查核過的備稿，本報不開天窗。</p>
       <p>唯一的例外是週日：每週的 AI 額度在週日下午 3 點重置。若週日凌晨額度已經用完、當天沒能出齊，就不拿備稿充數，而是等 3 點額度重置後把整期重新寫過，大約傍晚出齊，出齊時會另外通知。首頁會說明當下進度。</p>
       <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>副刊</th></tr></thead><tbody>
