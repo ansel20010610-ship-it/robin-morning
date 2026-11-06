@@ -2,11 +2,12 @@
 // (digestDone) has earned its stamp; a day missed is an empty perforated slot, so the album shows where the holes are.
 // The stamp is a sheet of light paper, perforated by a CSS mask (style.css .stamp .sp), with a thin frame holding
 // the day's picture: the opening picture of the first article from a picture column (art, architecture, photo) or with
-// an artwork hero, else the first article with a picture at all, else the robin crest. Printed small on the margin: the
-// number top left, 知更鳥 as the printer's imprint top right, the German weekday and the Viennese day (2. XI.) under
-// the picture. A hash of the date picks one of six frames and one of five paper tints and leans the stamp a degree or
-// so, so no two days in the album look alike. The margin keeps its light paper in dark mode: it is a stamp on a dark
-// album page.
+// an artwork hero, else the first article with a picture at all, else the robin crest. Lettered like an engraved stamp,
+// in Latin only (the owner, 2026-11-06: no Chinese on the stamp): the number top left, the year top right, the
+// issuer's name ROTKEHLCHENS MORGENBLATT in spaced capitals under the picture, the German weekday and the Viennese
+// day (6. XI.) along the foot. A hash of the date picks one of six frames and one of five paper tints and leans the
+// stamp a degree or so, so no two days in the album look alike. The margin keeps its light paper in dark mode: it is
+// a stamp on a dark album page.
 import { esc, fmtDate, roman, ROBIN_PATHS } from "./util.js";
 
 const PICTURE = new Set(["artwork", "architecture", "art", "photo"]);
@@ -24,7 +25,7 @@ function hash(s) {
 }
 
 // The frames, drawn in an 86 × 92 box laid over the picture (one unit is one hundredth of the stamp's width).
-const W = 86, H = 92;
+const W = 86, H = 80;
 const rect = (i, cls = "") => `<rect${cls ? ` class="${cls}"` : ""} x="${i}" y="${i}" width="${W - 2 * i}" height="${H - 2 * i}"/>`;
 // A wave round the frame: an even number of bumps a side, so the phase meets itself at each corner.
 function wave(i, a = .9) {
@@ -63,11 +64,12 @@ export function stampHtml(issue, { earned = false, open = false, href = null, i 
     const pic = stampPicture(issue), hero = pic?.hero;
     const art = hero?.src ? `<img src="${esc(hero.thumb || hero.src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">`
       : `<svg class="bird" viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>`;
-    inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="imp">知更鳥</span>
+    inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="yr">${esc(Number.isFinite(y) ? y : "")}</span>
       <span class="fr">${art}<svg class="bd" viewBox="0 0 ${W} ${H}" aria-hidden="true">${FRAMES[frame]()}</svg></span>
+      <span class="name">Rotkehlchens Morgenblatt</span>
       <span class="foot"><i>${esc(wd)}</i><b>${esc(day)}</b></span>${bird ? `<svg class="perch" viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>` : ""}`;
   } else {
-    inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="miss"><b>${esc(day)}</b>${open ? "<small>今天</small>" : ""}</span>`;
+    inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="miss"><b>${esc(day)}</b>${open ? "<small>Heute</small>" : ""}</span>`;
   }
   return `<${tag} class="stamp ${earned ? `earned f${frame} t${tint}` : `slot${open ? " open" : ""}`}" style="${style}" aria-label="${esc(label)}"><span class="sp">${inner}</span></${href ? "a" : "span"}>`;
 }
