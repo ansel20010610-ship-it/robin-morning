@@ -1,0 +1,169 @@
+{
+  "column": "news",
+  "date": "2026-11-07",
+  "title": "川普任命米勒為白宮幕僚長，取代威爾斯",
+  "dek": "米勒下週一上任；伊朗開出七項條件，卡達居中；剛果疫區村莊 33 人遇害；台灣關閉駐巴紐代表處。",
+  "brief": "川普 11 月 6 日宣布，史蒂芬・米勒 11 月 9 日起接任白宮幕僚長，取代蘇西・威爾斯。伊朗官員說，美方不履行七項條件，伊朗就不重開荷莫茲海峽，也不談判。剛果東部伊波拉疫區的村莊遇襲，當地民間領袖清點到 33 具遺體。",
+  "topic_key": "news:2026-11-07",
+  "voice": "wire",
+  "updated_at": "2026-11-07T05:24:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "sources": [
+    {
+      "title": "Trump names Stephen Miller as new chief of staff, replacing Susie Wiles",
+      "publisher": "半島電視台",
+      "date": "2026-11-06",
+      "url": "https://www.aljazeera.com/news/2026/11/6/trump-says-making-adviser-stephen-miller-white-house-chief-of-staff",
+      "note": "川普 Truth Social 貼文、威爾斯週四遞辭呈、期中選舉席次（參議院淨增 7 席、眾議院 253 席截至週五）、民主黨預計調查；全文無發布時刻"
+    },
+    {
+      "title": "Russia to UAE, Iran steps up diplomacy amid Trump threats: What we know",
+      "publisher": "半島電視台",
+      "date": "2026-11-06",
+      "url": "https://www.aljazeera.com/news/2026/11/6/russia-to-uae-iran-steps-up-diplomacy-amid-trump-threats-what-we-know",
+      "note": "雷薩伊莫斯科談話、七項條件、川普週四說法、Axios、路透報導的提案、卡達埃米爾週五通話；伊朗擊落無人機為伊朗說法，未採用"
+    },
+    {
+      "title": "Armed men kill at least 33 in village in Ebola-hit eastern DRC",
+      "publisher": "半島電視台",
+      "date": "2026-11-06",
+      "url": "https://www.aljazeera.com/news/2026/11/6/armed-men-kill-at-least-33-in-village-in-ebola-hit-eastern-drc",
+      "note": "坎汀、33 具遺體（帕盧庫對美聯社）、ADF、約 180 名病人逃離、非洲疾管署 1 萬例與 5,300 死亡；全文無發布時刻"
+    },
+    {
+      "title": "Paraguay : le président Peña au bord de la destitution, tout délai rejeté",
+      "publisher": "法國 24 小時電視台（法新社）",
+      "date": "2026-11-06",
+      "url": "https://www.france24.com/fr/info-en-continu/20261106-paraguay-le-pr%C3%A9sident-pe%C3%B1a-au-bord-de-la-destitution-demande-un-d%C3%A9lai-pour-se-d%C3%A9fendre",
+      "note": "參議院否決 3 天延期、辭職未獲受理（週四未達法定人數）、免職最快週五晚間；頁面標示 16:42 發布、18:57 更新，未標時區；以 WebFetch 讀取（curl 回 403）"
+    },
+    {
+      "title": "Paraguay Congress rejects President Pena's resignation after bank collapse",
+      "publisher": "半島電視台（路透）",
+      "date": "2026-11-05",
+      "url": "https://www.aljazeera.com/economy/2026/11/5/paraguay-president-pena-resigns-in-wake-of-bank-collapse",
+      "note": "聯席會議因科羅拉多黨議員離席流會、眾議院 78 比 0、終身參議員身分與彈劾定罪、副總統阿里亞納可能接任"
+    },
+    {
+      "title": "外交部：基於國家尊嚴關閉巴紐台灣駐處　撤回派駐人員",
+      "publisher": "中央社",
+      "date": "2026-11-06",
+      "url": "https://www.cna.com.tw/news/aipl/202611060300.aspx",
+      "note": "台灣時間 11 月 6 日 19:13 發布、19:31 更新；LNG 50 萬公噸、三分之一、終止技術合作；公視 news.pts.org.tw/article/834686 同日報導佐證"
+    },
+    {
+      "title": "立院三讀老農津貼調高為每月1.5萬元　回溯至7/1生效",
+      "publisher": "中央社",
+      "date": "2026-11-06",
+      "url": "https://www.cna.com.tw/news/aipl/202611060186.aspx",
+      "note": "台灣時間 11 月 6 日 15:46 發布；1 萬 5,000 元、排富門檻、CPI 3% 機制"
+    },
+    {
+      "title": "政院：老人福利法修法有違背代際正義等3問題　不予副署",
+      "publisher": "中央社",
+      "date": "2026-11-06",
+      "url": "https://www.cna.com.tw/news/aipl/202611060260.aspx",
+      "note": "台灣時間 11 月 6 日 17:48 發布；三項理由、約 6.6 萬名、約 400 億元、第 9 案"
+    },
+    {
+      "title": "立院調高老農津貼至1.5萬　政院：超出預算支應能力",
+      "publisher": "中央社",
+      "date": "2026-11-06",
+      "url": "https://www.cna.com.tw/news/aipl/202611060307.aspx",
+      "note": "台灣時間 11 月 6 日 19:29 發布；院版 1 萬元、每年多約 320 億元、農業部長追加預算數字"
+    }
+  ],
+  "body": [
+    {
+      "type": "news",
+      "title": "世界",
+      "items": [
+        {
+          "headline": "川普任命米勒為白宮幕僚長",
+          "place": "US",
+          "summary": "川普 11 月 6 日在 Truth Social 宣布，白宮副幕僚長史蒂芬・米勒（Stephen Miller）11 月 9 日（週一）起接任幕僚長，取代蘇西・威爾斯（Susie Wiles）。半島電視台說，威爾斯 5 日遞出辭呈，轉任川普的政治團隊。共和黨在期中選舉失利，民主黨預料明年 1 月取得國會控制權後調查米勒。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/6/trump-says-making-adviser-stephen-miller-white-house-chief-of-staff",
+          "when": "11 月 6 日，美國當地時間"
+        },
+        {
+          "headline": "伊朗提七項條件，川普不排除再打",
+          "place": [
+            "IR",
+            "US",
+            "QA"
+          ],
+          "summary": "伊朗最高國家安全委員會秘書雷薩伊（Mohsen Rezaei）11 月 5 日在莫斯科說，美方不履行伊朗的七項條件，伊朗就不重開荷莫茲海峽，也不談判。川普同日說美國可能得摧毀伊朗其餘部分；Axios 引述美國官員，說美軍已準備重啟大規模作戰。卡達埃米爾 6 日與川普通電話，談卡達居中斡旋；路透社說伊朗已經卡達遞交新提案，美方研究中。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/6/russia-to-uae-iran-steps-up-diplomacy-amid-trump-threats-what-we-know",
+          "when": "11 月 5 至 6 日，莫斯科、華盛頓與卡達當地時間"
+        },
+        {
+          "headline": "剛果疫區村莊遇襲 33 死",
+          "place": "CD",
+          "summary": "剛果東部北基伍省的坎汀（Cantine）村 11 月 6 日傳出夜間遭武裝人士攻擊。民間組織領袖說已清點到 33 具遺體；地方官員指攻擊者是效忠伊斯蘭國的盟軍民主力量（ADF）。攻擊者燒毀衛生所，約 180 名病人逃離，含 1 名確診伊波拉病例。非洲疾管署紀錄，剛果疫情已超過 1 萬例、5,300 人死亡。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/6/armed-men-kill-at-least-33-in-village-in-ebola-hit-eastern-drc",
+          "when": "11 月 5 至 6 日夜間，剛果當地時間"
+        },
+        {
+          "headline": "巴拉圭國會未受理辭呈，參院審彈劾",
+          "place": "PY",
+          "summary": "本報 11 月 6 日刊出巴拉圭總統潘尼亞辭職、副總統接任，後續報導與此不同：國會 11 月 5 日未受理辭呈，聯席會議因執政黨議員離席而不足法定人數。眾議院以 78 票對 0 票通過彈劾，參議院 6 日開庭，否決他延 3 天準備辯護的請求。卸任總統通常成為終身參議員，彈劾定罪則不授此身分；法新社說免職最快 6 日晚間表決。",
+          "source": "法國 24 小時電視台（法新社）",
+          "url": "https://www.france24.com/fr/info-en-continu/20261106-paraguay-le-pr%C3%A9sident-pe%C3%B1a-au-bord-de-la-destitution-demande-un-d%C3%A9lai-pour-se-d%C3%A9fendre",
+          "when": "11 月 5 至 6 日，巴拉圭當地時間"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "老農津貼每月金額",
+      "head": [
+        "版本",
+        "金額（元）"
+      ],
+      "rows": [
+        [
+          "現行",
+          "8,110"
+        ],
+        [
+          "行政院原案（1 月 15 日通過）",
+          "10,000"
+        ],
+        [
+          "立法院三讀版（11 月 6 日）",
+          "15,000"
+        ]
+      ],
+      "caption": "資料來源：中央社。"
+    },
+    {
+      "type": "news",
+      "title": "台灣",
+      "items": [
+        {
+          "headline": "外交部關閉駐巴紐代表處",
+          "place": [
+            "TW",
+            "PG"
+          ],
+          "summary": "外交部 11 月 6 日宣布，主動關閉駐巴布亞紐幾內亞代表處，撤回所有派駐人員，並終止技術團、醫療團與獎學金等合作。巴紐 7 月單方面宣布關閉台灣駐處，台灣隨即停購當地現貨液化天然氣；近日巴紐再要求駐處人員限期離境。外交部說，台灣採購量約占巴紐出口三分之一，已找到替代氣源，國內供應不受影響。",
+          "source": "中央社",
+          "url": "https://www.cna.com.tw/news/aipl/202611060300.aspx",
+          "when": "11 月 6 日，台灣時間"
+        },
+        {
+          "headline": "老農津貼三讀 1.5 萬，政院不副署",
+          "place": "TW",
+          "summary": "立法院會 11 月 6 日三讀通過，老農津貼由每月 8,110 元調到 1 萬 5,000 元，溯及 7 月 1 日生效；行政院原案是 1 萬元，說在野版本每年多約 320 億元，將循合法合憲方式因應。同日行政院長卓榮泰宣布不副署《老人福利法》第 22 條修正案，該案讓 65 歲以上、所得稅率未達 20% 的長者健保費由中央全額補助；行政院說每年新增約 400 億元，侵害預算權。這是行政院去年起第 9 件不副署案。",
+          "source": "中央社",
+          "url": "https://www.cna.com.tw/news/aipl/202611060260.aspx",
+          "when": "11 月 6 日，台灣時間"
+        }
+      ]
+    }
+  ]
+}
