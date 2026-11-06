@@ -63,5 +63,5 @@
 
 連載頁最上面那塊書版讀這個檔：`slug`、`title`、`author`、`original`（原文書名）、`year`、`of`（全書回數，`serial.py` 重切後要同步）、`start`（第 1 回的日期）、`cast`（人物表，`name` 與 `who`）、`image`（扉頁插圖：`src` 放 `assets/serial/<slug>.jpg`，寬邊 600 上下、100 KB 以內，只用公有領域或 CC0 的圖；`alt`、`credit`、`w`、`h`）、`epigraph`（這本書自己的題詞：`text`、`source`；沒有就不寫）。不放作品簡介，書版上只有書名、作者、插圖、題詞和進度。插圖目前是佩羅夫 1872 年的杜斯妥也夫斯基肖像（擁有者 2026-11-06 定的）。
 
-題詞用楷體（霞鶩文楷 TC，OFL 授權，授權書在 `assets/serial/OFL-LXGW-WenKai.txt`）。字型檔 `assets/serial/<slug>-epigraph.ttf` 只含這段題詞用到的字，換書要重做：向 Google Fonts 要只含那些字的子集，`curl -A "robin-morning/1.0" "https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&text=<題詞與出處，URL 編碼>"`，把回傳的 `src: url(...)` 抓下來存成新檔，再把 `style.css` 的 `@font-face "Epigraph"` 指過去。
+題詞直排，用 Noto Serif TC 細體（OFL 授權，授權書在 `assets/serial/OFL-NotoSerifTC.txt`）。字型檔 `assets/serial/<slug>-epigraph.ttf` 只含這段題詞用到的字，換書要重做：向 Google Fonts 要只含那些字的子集，`curl -A "robin-morning/1.0" "https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&text=<題詞與出處，URL 編碼>"`，把回傳的 `src: url(...)` 抓下來存成新檔，再把 `style.css` 的 `@font-face "Epigraph"` 指過去。題詞長度以 50 字內為宜，直排才放得下。
 
