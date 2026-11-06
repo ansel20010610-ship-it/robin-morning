@@ -9,5 +9,14 @@
       "canon"
     ],
     "note": "devotion、music（number/listener）、perio（qa/colleague）完成，審稿與總編重寫、忠實度核對均做"
+  },
+  "2": {
+    "finished_at": "2026-11-07T02:25:43+08:00",
+    "missing": [
+      "football",
+      "news",
+      "philosophy"
+    ],
+    "note": "文明欄（timeline/lecturer）與經典欄（argument/critic）完成，審稿、總編重寫、忠實度核對皆做；validate 無 WARN。"
   }
 }
