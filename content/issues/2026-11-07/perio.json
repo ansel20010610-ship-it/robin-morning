@@ -1,0 +1,180 @@
+{
+ "column": "perio",
+ "date": "2026-11-07",
+ "title": "治植體周圍黏膜炎，先看假牙清不清得到",
+ "dek": "改了假牙的那組，半年後三分之二完全消退；沒改的，不到一成。",
+ "brief": "植體周圍黏膜炎清完創、教完清潔，再把假牙外形改到比較好清，半年後 66.6% 的病人發炎完全消退，沒改的只有 9.6%。歐洲牙周病學會 2023 年的指引對修改假牙強建議；全身抗生素雖然有效，仍強建議不要用。",
+ "takeaway": "植體周圍黏膜炎治到每支植體至多一個出血點、沒有溢膿，2–3 個月評估，沒到就重做；假牙清不到就清潔、拆下或修改（強建議）；雷射或噴砂不建議再加（弱一級），局部與全身抗生素強建議不要。",
+ "form": "qa",
+ "voice": "colleague",
+ "topic_key": "perio:doi:10.1111/jcpe.13823",
+ "updated_at": "2026-11-07T01:06:33+08:00",
+ "spoiler": null,
+ "disclaimer": "醫學教學導讀，非個別診療建議。",
+ "hero": {
+  "id": "hero",
+  "kind": "photo",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Single_crown_implant.jpg/1280px-Single_crown_implant.jpg",
+  "width": 1280,
+  "height": 2256,
+  "alt": "藍色布面上放著一整組單顆植體：上方是灰色、帶螺紋的植體本體，中間一段金屬與白色的支台，下方是瓷白色的牙冠；右側以英文標出 IMPLANT、ABUTMENT、CROWN。",
+  "caption": "單顆植體由上往下依序是植體本體、支台（abutment）與牙冠。指引建議，植體上的假牙若讓病人自己或專業人員清不乾淨，要清潔、拆下或修改。照片與本文引用的試驗無關。",
+  "credit": "Coronation Dental Specialty Group，Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Single_crown_implant.jpg"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "**歐洲牙周病學會（EFP）**2023 年 6 月刊出的植體周圍疾病臨床指引裡，講**植體周圍黏膜炎**怎麼治的那一章有 13 條建議。證據品質評為「高」的只有一條，跟器械、藥物都無關：病人自己或專業人員清不乾淨的植體假牙，要清潔、拆下或修改。"
+  },
+  {
+   "type": "p",
+   "text": "植體周圍黏膜炎（peri-implant mucositis）可以當成植體上的牙齦炎：輕探會出血、可能溢膿，骨頭卻沒有超過初期骨改建的流失。一篇系統性回顧估計，約 43% 的植體病人有黏膜炎。黏膜炎治得回健康；拖成植體周圍炎、骨頭掉了，治療壓得住發炎，完整的支持組織卻回不來。"
+  },
+  {
+   "type": "p",
+   "text": "名稱裡的「S3」指的是做法：先委託一批系統性回顧，依 GRADE 程序替證據品質評等，再由專家和各方代表在 2022 年 11 月西班牙塞哥維亞的研討會上以結構化共識定案。建議強度分三級，A 是強建議，B 弱一級，0 是可以考慮；證據品質另外評，兩者可以不一致。"
+  },
+  {
+   "type": "table",
+   "title": "指引對黏膜炎各種做法的判斷",
+   "head": [
+    "做法",
+    "指引的建議",
+    "證據品質"
+   ],
+   "rows": [
+    [
+     "病人自己清潔，加上專業機械清創",
+     "強建議（A）",
+     "無臨床研究（專家共識）"
+    ],
+    [
+     "修改清不到的植體假牙",
+     "強建議（A）",
+     "高（1 個隨機試驗，45 人）"
+    ],
+    [
+     "單用一種器械：塑膠尖超音波、甘胺酸噴砂、鈦刮匙、幾丁聚醣刷",
+     "可以考慮（0）",
+     "低"
+    ],
+    [
+     "清創之外再加噴砂或二極體雷射",
+     "建議不要（B）",
+     "中（3 個隨機試驗，313 人）"
+    ],
+    [
+     "病人在家用沖牙機（水）",
+     "可以考慮（0）",
+     "低"
+    ],
+    [
+     "局部抗菌劑、光動力治療",
+     "建議不要（B）",
+     "低"
+    ],
+    [
+     "病人自用抗菌漱口水（限時）、益生菌",
+     "可以考慮（0）",
+     "中"
+    ],
+    [
+     "局部抗生素",
+     "強建議不要（A）",
+     "沒有直接證據"
+    ],
+    [
+     "全身抗生素",
+     "強建議不要（A）",
+     "低（3 個隨機試驗）"
+    ]
+   ],
+   "caption": "依 Herrera 等 2023 年 EFP 指引第 6 章整理；建議等級與證據品質照原文，中文用語為本報翻譯。"
+  },
+  {
+   "type": "h",
+   "text": "回診時，治到什麼程度才算達標？"
+  },
+  {
+   "type": "p",
+   "text": "每支植體至多一個出血點、沒有溢膿；治療後 2 到 3 個月評估，沒達到就要再治療、重做清創。終點和重做這兩條建議都是 A 級、全體一致，可是終點那條證據低，重做那條找不到研究，靠的是專家共識。我照樣會用：回診時總算有個數得出來的標準。"
+  },
+  {
+   "type": "h",
+   "text": "清創之外，加雷射或噴砂有用嗎？"
+  },
+  {
+   "type": "p",
+   "text": "指引建議不要再加（B 級，證據中等）。最大的試驗 220 人，超音波和鈦包覆刮匙清創後，加照 980 nm 二極體雷射的那組 3 個月疾病消退 34.5%，不照的 30.9%；指引還提到，雷射多出的費用可能不划算。"
+  },
+  {
+   "type": "h",
+   "text": "病人開口要抗生素，給不給？"
+  },
+  {
+   "type": "p",
+   "text": "全身抗生素並不是沒效：試過的 azithromycin、amoxicillin，3 個月時探診出血的比例多降約 6 個百分點，6 個月多降約 21 個百分點。指引仍然強建議不要用，顧的是病人自身的健康和公共衛生。我同意；病人要藥時，就把這兩個數字和這個理由講給他聽。"
+  },
+  {
+   "type": "h",
+   "text": "評為「高」的那一條，靠哪個試驗？"
+  },
+  {
+   "type": "p",
+   "text": "靠的是 de Tapia 等人 2019 年的隨機試驗。48 位黏膜炎病人清創後隨機分組，一組把植體假牙的外形改到方便清潔，一組不改，兩組都有個人化的口腔衛生指導，45 人追蹤滿 6 個月。**同樣清創、同樣教清潔，假牙改過的那組半年後 66.6% 完全消退，也就是不出血、不溢膿；沒改的只有 9.6%。**"
+  },
+  {
+   "type": "p",
+   "text": "這個「高」我會讀得保守一點。依據只是一個 45 人、偏差風險低的試驗；同一條往下讀，整體確定性寫的是證據太少、有限，建議也標明依專家共識。試驗作者裡有指引的第一作者 Herrera 和末位作者 Sanz，後者與 Sculean 共同主持黏膜炎那一組。"
+  },
+  {
+   "type": "p",
+   "text": "代價倒是很小：指引評估好處明確、壞處極少，病人可能短期抱怨食物卡塞，一般牙醫和專科醫師都該做得來。"
+  },
+  {
+   "type": "paper",
+   "citation": "Herrera D, Berglundh T, Schwarz F, Chapple I, Jepsen S, Sculean A, Kebschull M, Papapanou PN, Tonetti MS, Sanz M; EFP workshop participants and methodological consultant. Prevention and treatment of peri-implant diseases—The EFP S3 level clinical practice guideline. *J Clin Periodontol*. 2023;50(Suppl 26):4–76.",
+   "doi": "10.1111/jcpe.13823",
+   "pmid": "37271498",
+   "link": "https://doi.org/10.1111/jcpe.13823",
+   "evidence": "EFP S3 臨床指引：依 13 篇系統性回顧；修改假牙一條證據高、A 級",
+   "design": "臨床指引：EFP 依 AWMF 方法學與 GRADE 制定，2022 年 11 月 6–9 日第 18 屆歐洲牙周病研討會結構化共識；黏膜炎一章 13 條建議",
+   "sample": "13 篇委託的系統性回顧；修改假牙一條依 1 個低偏差風險隨機試驗（45 人）",
+   "question": "植體周圍疾病如何預防與治療；本文只讀植體周圍黏膜炎的處置。",
+   "access": "依全文（開放取用，CC BY-NC-ND）整理，重點讀第 1、3、4 節與第 6 章"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Prevention and treatment of peri-implant diseases—The EFP S3 level clinical practice guideline",
+   "publisher": "Journal of Clinical Periodontology（Herrera D、Berglundh T、Schwarz F 等）",
+   "date": "2023-06-04",
+   "url": "https://doi.org/10.1111/jcpe.13823",
+   "note": "主角文獻。書目依 PubMed efetch（PMID 37271498：J Clin Periodontol 2023;50 Suppl 26:4-76，DEP 2023-06-04，received 2023-02-28、accepted 2023-03-31）與 Crossref（卷 50、S26、頁 4–76，線上 2023-06-04）。全文讀出版社 PDF（Universidad Complutense de Madrid 機構典藏 docta.ucm.es 所存，首頁授權 CC BY-NC-ND）。作者序：第一作者 Herrera、末位作者 Sanz。1.1.2（黏膜炎比作菌斑引起的牙齦炎）；1.1.3（Derks & Tomasi 2015：11 篇研究，病人層級黏膜炎 43%，95% CI 32–54）；3.3（第 18 屆歐洲牙周病研討會，La Granja de San Ildefonso, Segovia，2022 年 11 月 6–9 日，13 篇系統性回顧；第 2 工作小組「植體周圍黏膜炎的處置」由 Mariano Sanz 與 Anton Sculean 主持）；3.5.1（經費全部來自 EFP 內部資金；證據品質與建議強度可能不同，不同時於背景說明交代理由）；表 5（A：Strong recommendation，we recommend／recommend not to；B：Recommendation，we suggest／suggest not to；0：Open recommendation，may be considered）；4.3.2（黏膜炎診斷與 ID-COSM 修訂：多於一個出血點）；4.4（黏膜炎可治、治療即預防；植體周圍炎治療不會恢復完整支持組織）；第 6 章 R6.1（≤1 BOP 點、無溢膿，2–3 個月評估，≥2 位點或 ≥1 大量出血或溢膿則再治療；0.2 N、0.5 mm 探針；證據低，A 級，一致共識）、R6.2（OH＋PMPR，無臨床研究，A）、R6.3（沖牙機，低，0）、R6.4（單一器械，低，0）、R6.5（不加噴砂、二極體雷射；3 RCT 313 人，中，B；220 人試驗加雷射與不加雷射疾病消退 34.5% 與 30.9%，效果量段寫 30.9%–34.6%；經濟考量：雷射額外成本可能不划算）、R6.6（3 個月未達終點重做；終點與評估時間依口腔衛生、風險因子、修復體可清潔性調整；無研究；A）、R6.7（標為 Expert consensus-based recommendations、Question not addressed by the SR；修改修復體；表框證據品質 High，1 RCT 45 人、低偏差風險，A，一致共識，0% 迴避；6 個月疾病消退 66.6% 與 9.6%；Overall certainty of the evidence：Limited due to the scarcity of the available evidence；利弊：clear benefit and minimal harm；病人可能短期抱怨食物卡塞；一般牙醫與專科都應能執行；p.38–40）、R6.8（局部抗生素建議不要；無直接證據；A）、R6.9（局部抗菌劑等提議不要；低；B；0.12% CHX、0.95% NaOCl 無額外效果）、R6.10（光動力提議不要；低；B）、R6.11（自用抗菌漱口水可考慮；中；0）、R6.12（益生菌可考慮；中；0；3 個月有益、6 個月未維持）、R6.13（全身抗生素建議不要，理由為病人健康與公共衛生；低，3 RCT；A；一致共識；3 個月 BOP(%) WMD 5.97%（3 研究 101 人），6 個月 20.79%（2 研究 71 人））。各條證據品質欄：低、無臨床研究、低、低、中、無、高、無直接證據、低、低、中、中、低。"
+  },
+  {
+   "title": "Adjunctive effect of modifying the implant-supported prosthesis in the treatment of peri-implant mucositis",
+   "publisher": "Journal of Clinical Periodontology（de Tapia B、Mozas C、Valles C、Nart J、Sanz M、Herrera D）",
+   "date": "2019-08-04",
+   "url": "https://doi.org/10.1111/jcpe.13169",
+   "note": "J Clin Periodontol 2019;46(10):1050–1060（Crossref），PMID 31294473。摘要依 Europe PMC；全文讀 EFP 網站所存 PDF（https://www.efp.org/fileadmin/uploads/efp/Documents/Past_prize_winners/2019_F_1st_clinical_research_prize_Tapia.pdf，2019 年 EFP 臨床研究獎）。6 個月隨機試驗；塑膠刮匙與塑膠尖超音波清創後才隨機分組修改或不修改修復體，兩組都給個人化口腔衛生指導；收 48 人（男女各 24），對照組 3 人失訪，完成 45 人（試驗 24、對照 21）；6 個月改良出血指數變化對照 0.50（SD 0.70）、試驗 1.14（SD 0.96），p = 0.01；6 個月完全消退（無 BOP、無溢膿）試驗組 66.6%（16 人）、對照組 9.6%（2 人），p < 0.01。"
+  },
+  {
+   "title": "Peri-implant health and disease. A systematic review of current epidemiology",
+   "publisher": "Journal of Clinical Periodontology（Derks J、Tomasi C）",
+   "date": "2015",
+   "url": "https://doi.org/10.1111/jcpe.12334",
+   "note": "J Clin Periodontol 2015;42(Suppl 16):S158–S171。43%（95% CI 32–54）依 Herrera 2023 指引 1.1.3 節轉述，未另讀原文。"
+  },
+  {
+   "title": "File:Single crown implant.jpg",
+   "publisher": "Wikimedia Commons（Coronation Dental Specialty Group）",
+   "date": "2013-01-28",
+   "url": "https://commons.wikimedia.org/wiki/File:Single_crown_implant.jpg",
+   "note": "頭圖；CC BY-SA 3.0；描述 dental implant with the abutment and crown attached；日期為上傳時間。圖中植體本體在上、支台在中、牙冠在下。"
+  }
+ ]
+}
