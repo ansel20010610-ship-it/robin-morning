@@ -755,7 +755,7 @@ async function viewArticle(date, column, my) {
       <a class="icon-btn" data-back href="${fromList || (issue && date !== publishedIssues()[0]?.date ? `#/issue/${date}` : "#/")}" aria-label="${fromList ? "返回" : "回到本期"}">${ICON.back}</a>
       ${idx >= 0 ? `<button class="title" type="button" data-contents aria-label="本期目錄：${esc(k.name)}，第 ${idx + 1} 篇，共 ${order.length} 篇">${titleIn}</button>` : `<div class="title">${titleIn}</div>`}
       ${canSpeak() ? `<button class="icon-btn" type="button" data-speak aria-pressed="false" aria-label="朗讀本文">${ICON.speak}</button>` : ""}
-      <button class="icon-btn" type="button" data-aa aria-label="字級與日夜" aria-haspopup="true" aria-expanded="false">${ICON.text}</button>
+      <button class="icon-btn" type="button" data-aa aria-label="字級" aria-haspopup="true" aria-expanded="false">${ICON.text}</button>
       <button class="icon-btn" type="button" data-save aria-pressed="${isSaved(key)}" aria-label="收藏">${isSaved(key) ? ICON.starOn : ICON.star}</button>
     </div><div class="progress"></div></div>
     <article class="wrap"><div class="read">
@@ -1663,25 +1663,23 @@ function setTheme(v, from) {
   vt.ready.catch(() => {}); // cut short by the next tap: skipped, and that is fine
   vt.finished.catch(() => {}).finally(() => root.classList.remove("theme-vt"));
 }
-// Aa (the owner, 2026-11-06: 讀的時候才需要它): the type size and day/night live in a small sheet under the article's top
-// bar, not on the settings page. The button again, a tap outside, or Escape closes it.
+// Aa (the owner, 2026-11-06: 讀的時候才需要它): the type size lives in a small sheet under the article's top bar, not on
+// the settings page; day/night went back to 設定 the same evening. The button again, a tap outside, or Escape closes it.
 let aaClose = null; // the open sheet's close(), so the button, a route change and an outside tap all shut the same one
 function aaMenu(btn) {
   if (aaClose) { aaClose(); return; }
   const pop = document.createElement("div");
   pop.className = "aa-pop";
   pop.setAttribute("role", "group");
-  pop.setAttribute("aria-label", "字級與日夜");
-  const draw = () => { pop.innerHTML = `<div class="g"><span class="lbl">字級</span><div class="seg">${FS.map((v, i) => `<button type="button" data-fs="${v}" aria-pressed="${v === curFs()}">${FS_NAMES[i]}</button>`).join("")}</div></div>
-    <div class="g"><span class="lbl">日夜</span><div class="seg">${[["auto", "跟隨系統"], ["light", "日間"], ["dark", "夜間"]].map(([v, l]) => `<button type="button" data-theme="${v}" aria-pressed="${v === curTheme()}">${l}</button>`).join("")}</div></div>`; };
+  pop.setAttribute("aria-label", "字級");
+  const draw = () => { pop.innerHTML = `<div class="g"><span class="lbl">字級</span><div class="seg">${FS.map((v, i) => `<button type="button" data-fs="${v}" aria-pressed="${v === curFs()}">${FS_NAMES[i]}</button>`).join("")}</div></div>`; };
   draw();
   pop.addEventListener("click", (e) => {
     const b = e.target.closest("button");
     if (!b) return;
-    // The pressed state is moved on the buttons themselves (no redraw): the theme swap runs inside a view transition,
-    // after this handler, and a redraw would also drop keyboard focus.
-    if (b.dataset.fs) setFs(b.dataset.fs); else if (b.dataset.theme) setTheme(b.dataset.theme, b); else return;
-    pop.querySelectorAll(b.dataset.fs ? "[data-fs]" : "[data-theme]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    if (!b.dataset.fs) return;
+    setFs(b.dataset.fs);
+    pop.querySelectorAll("[data-fs]").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); // moved in place: a redraw would drop keyboard focus
   });
   btn.closest(".in").append(pop); // inside .in, so it sits by the button on wide screens too
   btn.setAttribute("aria-expanded", "true");
@@ -1701,7 +1699,8 @@ function viewSettings() {
   const wd = [["mon", "一"], ["tue", "二"], ["wed", "三"], ["thu", "四"], ["fri", "五"], ["sat", "六"], ["sun", "日"]];
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>設定</h1><span class="de">Einstellungen</span></header>
     <section class="set" id="push-set"><h2>出刊通知</h2><p class="small">讀取中……</p></section>
-    <section class="set"><h2>字級與日夜</h2><p>在文章頁右上角的「Aa」裡：讀的時候才需要調，就放在那裡。</p></section>
+    <section class="set"><h2>日夜</h2><div class="seg" data-g="theme">${[["auto", "跟隨系統"], ["light", "日間"], ["dark", "夜間"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${v === curTheme()}">${l}</button>`).join("")}</div>
+      <p class="small">字級在文章頁右上角的「Aa」裡，讀的時候才需要調。</p></section>
     ${canSpeak() ? `<section class="set"><h2>朗讀速度</h2><div class="seg" data-g="rate">${RATES.map((r) => `<button type="button" data-v="${r}" aria-pressed="${r === getRate()}">${r === 1 ? "標準" : `${r}×`}</button>`).join("")}</div>
       <p>文章右上角的喇叭按鈕會用裝置內建的中文語音朗讀全文，不需網路服務。</p></section>` : ""}
     <section class="set"><h2>Spotify</h2>
@@ -1734,6 +1733,11 @@ function viewSettings() {
   // Redrawing replaces the buttons; put focus back on the one just pressed.
   const redraw = (g, v) => { viewSettings(); main.querySelector(`[data-g="${g}"] [data-v="${v}"]`)?.focus(); };
   main.querySelectorAll('[data-g="rate"] button').forEach((b) => (b.onclick = () => { setRate(Number(b.dataset.v)); redraw("rate", b.dataset.v); }));
+  // The theme swaps inside a view transition after this handler, so the pressed state is moved in place, not redrawn.
+  main.querySelectorAll('[data-g="theme"] button').forEach((b) => (b.onclick = () => {
+    setTheme(b.dataset.v, b);
+    main.querySelectorAll('[data-g="theme"] button').forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+  }));
   // Redraw only while the settings page is still the one showing.
   const auto = (p) => p.then(() => { if ((location.hash || "").startsWith("#/settings")) viewSettings(); });
   main.querySelector("[data-auto-pick]")?.addEventListener("click", async () => {
