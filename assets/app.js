@@ -1525,7 +1525,7 @@ function viewStamps() {
   for (const i of pubs) months.set(i.date.slice(0, 7), [...(months.get(i.date.slice(0, 7)) || []), i]);
   let n = 0;
   const page = ([ym, list]) => `<div class="sec-head"><h2>${Number(ym.slice(5))} 月</h2><span class="de">${esc(monDe(ym))}</span><span class="note">${list.filter((i) => done.has(i.date)).length}／${list.length}</span></div>
-    <div class="page">${list.slice().reverse().map((i) => stampHtml({ ...i, articles: sortArticles(i.articles || [], i.date) },
+    <div class="page">${list.map((i) => stampHtml({ ...i, articles: sortArticles(i.articles || [], i.date) },
       { earned: done.has(i.date), open: i.date === today, href: done.has(i.date) ? `#/stamp/${i.date}` : i.date === today ? `#/issue/${i.date}` : null, i: n++, bird: birds.has(i.date) })).join("")}</div>`;
   main.innerHTML = `<div class="wrap album"><header class="page-title"><h1>郵票冊</h1><span class="de">Briefmarken</span></header>
     <p class="col-note">每天把整份報紙讀完，就蓋出那天的郵票；錯過的日子就留一格空白。</p>
