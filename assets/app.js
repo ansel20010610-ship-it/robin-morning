@@ -269,6 +269,18 @@ function serialUnread() {
   return false;
 }
 const loadBook = () => getJSON("content/serial.json", { fresh: true }).then((b) => { S.book = b && typeof b === "object" ? b : null; }).catch(() => {});
+// The book's frontispiece (content/serial.json image + epigraph; the owner, 2026-11-06): the portrait on the left as a
+// mounted plate, the book's own epigraph facing it. The picture is one of ours (assets/) or from a picture host.
+function frontispiece(b) {
+  const im = b.image && typeof b.image.src === "string" && /^(assets\/[\w./-]+|https:\/\/[^\s"']+)$/.test(b.image.src) ? b.image : null;
+  const ep = b.epigraph && typeof b.epigraph.text === "string" && b.epigraph.text ? b.epigraph : null;
+  if (!im && !ep) return "";
+  const size = Number.isInteger(im?.w) && Number.isInteger(im?.h) ? ` width="${im.w}" height="${im.h}"` : "";
+  return `<div class="front">
+      ${im ? `<figure class="bild"><img src="${esc(im.src)}" alt="${esc(im.alt || "")}"${size} loading="lazy" decoding="async">${im.credit ? `<figcaption>${esc(im.credit)}</figcaption>` : ""}</figure>` : ""}
+      ${ep ? `<blockquote class="motto"><p>${esc(ep.text)}</p>${ep.source ? `<cite>${esc(ep.source)}</cite>` : ""}</blockquote>` : ""}
+    </div>`;
+}
 async function viewSerial(my) {
   if (S.book === undefined) { main.innerHTML = `<div class="wrap"><p class="empty">翻書中……</p></div>`; await loadBook(); if (my !== undefined && my !== routeSeq) return; }
   const b = S.book || {}, read = readSet();
@@ -283,7 +295,7 @@ async function viewSerial(my) {
     <section class="buch">
       <h2>《${esc(b.title || "")}》</h2>
       <p class="by">${esc(b.author || "")}${b.year ? `・${esc(String(b.year))}` : ""}${b.original ? `・<i>${esc(b.original)}</i>` : ""}</p>
-      ${b.blurb ? `<p class="blurb">${esc(b.blurb)}</p>` : ""}
+      ${frontispiece(b)}
       <div class="prog" role="img" aria-label="已刊 ${parts.length} 回，讀了 ${got} 回，共 ${of} 回"><i class="pub" style="width:${pct(parts.length)}%"></i><i class="done" style="width:${pct(got)}%"></i></div>
       <p class="nums"><span><b>${got}</b>讀了</span><span><b>${parts.length}</b>已刊</span><span><b>${of || "—"}</b>全書</span></p>
     </section>

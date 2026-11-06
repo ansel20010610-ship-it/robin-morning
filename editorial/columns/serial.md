@@ -58,3 +58,8 @@
 3. 每一回再派一個**雙語核對子代理**（`sonnet`／`high`）：逐段對照原文（必要時再看 Garnett 英譯），列出漏譯、誤譯、譯名不合表、語氣不對的地方，直接改正譯文，再跑一次兩個檢查。
 4. 每完成一回就 `git add content/issues/<日期>/serial.json state/serial`，commit「連載 第 n 回：<小標>」，`git pull --rebase origin main && git push origin HEAD:main`。
 5. 結束時回報：譯了哪幾回、核對改了什麼、現在譯到哪一天。
+
+## 書版（`content/serial.json`）
+
+連載頁最上面那塊書版讀這個檔：`slug`、`title`、`author`、`original`（原文書名）、`year`、`of`（全書回數，`serial.py` 重切後要同步）、`start`（第 1 回的日期）、`cast`（人物表，`name` 與 `who`）、`image`（扉頁插圖：`src` 放 `assets/serial/<slug>.jpg`，寬邊 600 上下、100 KB 以內，只用公有領域或 CC0 的圖；`alt`、`credit`、`w`、`h`）、`epigraph`（這本書自己的題詞：`text`、`source`；沒有就不寫）。不放作品簡介，書版上只有書名、作者、插圖、題詞和進度。
+
