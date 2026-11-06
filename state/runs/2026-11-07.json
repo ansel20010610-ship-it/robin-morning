@@ -25,5 +25,10 @@
       "news"
     ],
     "note": "philosophy（compare/socratic）與 football（list/fan）完成，審稿、總編重寫、忠實度核對皆做"
+  },
+  "4": {
+    "finished_at": "2026-11-07T05:37:56+08:00",
+    "missing": [],
+    "note": "news 與訃聞（Lelio）刊出；FM、寰宇靜默；巴薩晨報不動；news 可用網域 aljazeera、cna、pts、rti、france24"
   }
 }
