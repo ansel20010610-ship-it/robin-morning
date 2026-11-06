@@ -481,12 +481,17 @@ async function runAuto(dates, musicOf) {
       updateAuto((x) => { const miss = { ...x.miss }; delete miss[d]; return { ...x, done: [...x.done, d].slice(-400), miss, error: "" }; });
       if (fresh.length) added.push(b.work);
     } catch (e) {
+      // A TypeError from fetch is the network, not Spotify: Safari says "Load failed", Chrome "Failed to fetch".
       const msg = e.code === "auth" ? "Spotify 登入已過期，重新連結後會自動補上。"
-        : /404/.test(e.message) ? `找不到歌單「${a.name}」，請重新選擇。` : `自動加入暫停：${e.message}`;
+        : /404/.test(e.message) ? `找不到歌單「${a.name}」，請重新選擇。`
+        : e instanceof TypeError ? "自動加入暫停：剛才連不上 Spotify（多半是網路不穩），下次打開晨報會再試。"
+        : `自動加入暫停：${e.message}`;
       updateAuto((x) => ({ ...x, error: msg }));
       return; // try again next time the app opens
     }
   }
+  // The run went through — with or without anything to add — so an earlier failure's note comes off the settings page.
+  if (autoPlaylist()?.id === a.id && autoPlaylist()?.error) updateAuto((x) => ({ ...x, error: "" }));
   if (added.length) toast(added.length === 1 ? `今日古典已加入「${a.name}」` : `已把 ${added.length} 期古典加入「${a.name}」`);
 }
 
