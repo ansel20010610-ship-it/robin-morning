@@ -40,6 +40,13 @@ function morning(issue, col, now) {
       ${miss.length ? `<div class="miss">${miss.map((n) => `<span class="chip">${n}</span>`).join("")}</div>` : ""}
       ${r?.note ? `<p class="small">${esc(r.note)}</p>` : ""}</li>`;
   });
+  // 此刻 (the owner, 2026-11-06): on tonight's timetable a hairline where the clock stands, so a look at midnight says
+  // which shift is up; gone once the night is over (07:45).
+  if (date === now.date && now.minutes < OVERDUE) {
+    const hm = `${String(Math.floor(now.minutes / 60)).padStart(2, "0")}:${String(now.minutes % 60).padStart(2, "0")}`;
+    const at = SHIFTS.filter(([, t]) => { const [h, m] = t.split(":").map(Number); return h * 60 + m <= now.minutes; }).length;
+    rows.splice(at, 0, `<li class="now" role="img" aria-label="此刻 ${hm}"><span class="no"></span><div class="duty"><b>此刻</b><span>${hm}</span></div></li>`);
+  }
   const filled = names((issue.articles || []).filter((a) => a.from_reserve).map((a) => a.column), date, col);
   const missing = names(press.missing, date, col);
   const lateState = issue.late && LATE[issue.late.state];

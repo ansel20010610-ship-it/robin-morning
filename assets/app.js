@@ -283,6 +283,20 @@ function frontispiece(b) {
       ${ep ? `<blockquote class="motto"><p>${esc(ep.text)}</p>${ep.source ? `<cite>${esc(ep.source)}</cite>` : ""}</blockquote>` : ""}
     </div>`;
 }
+// 上回說到 (the owner, 2026-11-06): the closing lines of the previous installment, quoted above this one's text — the
+// editor's recap (dek) says what happened, this is how it sounded. Fetched once the page is up; nothing when offline.
+async function lastTime(n, slot) {
+  const prev = publishedIssues().flatMap((i) => i.articles.filter((x) => Number(x.serial?.n) === n).map((x) => ({ date: i.date, column: x.column }))).find(Boolean);
+  if (!prev || !slot) return;
+  let b;
+  try { b = await article(prev.date, prev.column); } catch { return; }
+  const ps = (b?.body || []).filter((k) => k?.type === "p" && typeof k.text === "string" && k.text.trim()).map((k) => k.text.trim());
+  if (!ps.length || !slot.isConnected) return;
+  const lines = ps.at(-1).length < 60 && ps.length > 1 ? ps.slice(-2) : ps.slice(-1);
+  let text = lines.join("\n");
+  if (text.length > 170) { const tail = text.slice(-168); const cut = tail.search(/[。！？」』]/); text = `……${cut >= 0 && cut < 80 ? tail.slice(cut + 1).replace(/^\s+/, "") : tail}`; }
+  slot.innerHTML = `<aside class="vorher"><span class="lbl">上回說到</span>${text.split("\n").map((l) => `<p>${esc(l)}</p>`).join("")}<a href="#/a/${prev.date}/${prev.column}">回到第 ${n} 回 →</a></aside>`;
+}
 async function viewSerial(my) {
   if (S.book === undefined) { main.innerHTML = `<div class="wrap"><p class="empty">翻書中……</p></div>`; await loadBook(); if (my !== undefined && my !== routeSeq) return; }
   const b = S.book || {}, read = readSet();
@@ -290,6 +304,27 @@ async function viewSerial(my) {
   const got = parts.filter((p) => read.has(`${p.date}/${p.a.column}`)).length, of = Number(b.of) || parts.at(-1)?.a.serial?.of || 0;
   const next = parts.find((p) => !read.has(`${p.date}/${p.a.column}`));
   const pct = (n) => (of ? Math.min(100, Math.round((n / of) * 100)) : 0);
+  // 人物隨進度 (the owner, 2026-11-06): a character is listed once the reader has reached the installment it first
+  // appears in (serial.json cast[].from); the rest are counted, not named.
+  const seen = Math.max(1, ...parts.filter((p) => read.has(`${p.date}/${p.a.column}`)).map((p) => Number(p.a.serial?.n) || 0));
+  const castBox = (cast) => {
+    const here = cast.filter((c) => !(Number(c.from) > seen)), later = cast.length - here.length;
+    return `<details class="gig-key cast"><summary>人物<span class="n">${here.length}／${cast.length}</span></summary><dl>${here.map((c) => `<dt>${esc(c.name)}</dt><dd>${esc(c.who)}</dd>`).join("")}</dl>${later ? `<p class="small">還有 ${later} 位，讀到他們出場的那一回才會列進來。</p>` : ""}</details>`;
+  };
+  // 分卷 (the owner, 2026-11-06): the installments fold by the book's parts, the newest open; a single part stays flat.
+  const bands = (row) => {
+    const groups = [];
+    for (const p of parts) { const name = p.a.serial?.part || "", g = groups.at(-1); if (g && g.name === name) g.items.push(p); else groups.push({ name, items: [p] }); }
+    if (groups.length < 2) return `<ol class="svl">${parts.map(row).join("")}</ol>`;
+    return groups.map((g, i) => `<details class="band"${i === groups.length - 1 ? " open" : ""}><summary>${esc(g.name || "—")}<span class="n">${g.items.length} 回</span></summary><ol class="svl">${g.items.map(row).join("")}</ol></details>`).join("");
+  };
+  // 藏書票 (the owner, 2026-11-06): pasted into the book the day the last installment is read; the day is kept so it
+  // never moves afterwards.
+  const exlibris = () => {
+    const done = store.get("serial.finished", {}) || {}, slug = b.slug || "book";
+    if (!done[slug]) { done[slug] = twNow().date; store.set("serial.finished", done); }
+    return `<div class="exlibris" role="img" aria-label="藏書票：${esc(fmtDate(done[slug]))}讀畢"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg><span class="ex">Ex Libris</span><span class="who">知更鳥晨間記事</span><span class="d">${esc(fmtDate(done[slug]))}讀畢</span></div>`;
+  };
   const row = ({ date, a }) => { const k = `${date}/${a.column}`, s = a.serial || {}, by = lockedBy(date, a.column); const inner = `<span class="no" aria-hidden="true">${esc(String(s.n ?? "").padStart(2, "0"))}</span>
       <span class="t"><span class="m"><span class="k">${esc(serialWhere(s))}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title.replace(/^第 \d+ 回・/, ""))}</b></span>`;
     return by ? `<li><div class="sv locked" aria-disabled="true">${inner}</div></li>` : `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}">${inner}</a></li>`; };
@@ -300,11 +335,12 @@ async function viewSerial(my) {
       ${frontispiece(b)}
       <div class="prog" role="img" aria-label="已刊 ${parts.length} 回，讀了 ${got} 回，共 ${of} 回"><i class="pub" style="width:${pct(parts.length)}%"></i><i class="done" style="width:${pct(got)}%"></i></div>
       <p class="nums"><span><b>${got}</b>讀了</span><span><b>${parts.length}</b>已刊</span><span><b>${of || "—"}</b>全書</span></p>
+      ${of && got >= of ? exlibris() : ""}
     </section>
     ${next ? `<div class="sec-head"><h2>接著讀</h2><span class="de">Weiterlesen</span><span class="note">第 ${esc(String(next.a.serial?.n ?? ""))} 回</span></div>${serialCard(next.date, next.a, read, { plate: false })}`
       : parts.length ? `<p class="empty">到今天為止的回目都讀完了，明天早上有下一回。</p>` : `<p class="empty">${b.start ? `${esc(fmtDate(b.start, "short"))}開始，每天早上一回。` : "還沒開始。"}</p>`}
-    ${Array.isArray(b.cast) && b.cast.length ? `<details class="gig-key cast"><summary>人物</summary><dl>${b.cast.map((c) => `<dt>${esc(c.name)}</dt><dd>${esc(c.who)}</dd>`).join("")}</dl></details>` : ""}
-    ${parts.length ? `<div class="sec-head"><h2>回目</h2><span class="de">Folgen</span><span class="note">${parts.length} 回</span></div><ol class="svl">${parts.map(row).join("")}</ol>` : ""}
+    ${Array.isArray(b.cast) && b.cast.length ? castBox(b.cast) : ""}
+    ${parts.length ? `<div class="sec-head"><h2>回目</h2><span class="de">Folgen</span><span class="note">${parts.length} 回</span></div>${bands(row)}` : ""}
   </div>`;
   document.title = `連載｜${S.cfg.title}`;
 }
@@ -535,6 +571,7 @@ function viewFront(dateParam) {
     ${!arts.some((a) => forStamp(a, issue.date) && a.brief) ? "" : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
       : unreadIn(issue.date, arts) ? `<div class="finish lockfin">${lockMode() ? ICON.lock : ""}<b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${lockMode() ? "循序閱讀：一篇一篇讀完，今天才算數。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的郵票才蓋得下去。`}</span></div>`
       : `<div class="finish">${finishInner(issue.date)}</div>`}
+    ${dateParam ? "" : wocheBox()}
     ${dayBox(issue.date)}
     ${dateParam ? "" : `<section class="gigs" id="gigs" aria-label="近期演出">${gigsSection()}</section>`}
     <footer class="colophon">
@@ -769,7 +806,7 @@ async function viewArticle(date, column, my) {
       <a class="icon-btn" data-back href="${fromList || (issue && date !== publishedIssues()[0]?.date ? `#/issue/${date}` : "#/")}" aria-label="${fromList ? "返回" : "回到本期"}">${ICON.back}</a>
       ${idx >= 0 ? `<button class="title" type="button" data-contents aria-label="本期目錄：${esc(k.name)}，第 ${idx + 1} 篇，共 ${order.length} 篇">${titleIn}</button>` : `<div class="title">${titleIn}</div>`}
       ${canSpeak() ? `<button class="icon-btn" type="button" data-speak aria-pressed="false" aria-label="朗讀本文">${ICON.speak}</button>` : ""}
-      <button class="icon-btn" type="button" data-fs aria-label="調整字級">${ICON.text}</button>
+      <button class="icon-btn" type="button" data-aa aria-label="字級與日夜" aria-haspopup="true" aria-expanded="false">${ICON.text}</button>
       <button class="icon-btn" type="button" data-save aria-pressed="${isSaved(key)}" aria-label="收藏">${isSaved(key) ? ICON.starOn : ICON.star}</button>
     </div><div class="progress"></div></div>
     <article class="wrap"><div class="read">
@@ -785,6 +822,7 @@ async function viewArticle(date, column, my) {
       </header>
       <div class="hero-slot"></div>
       <div class="toc-slot"></div>
+      ${a.serial?.n > 1 ? `<div class="vorher-slot"></div>` : ""}
       <div class="body"></div>
       ${a.sources?.length ? `<section class="sources"><h2>來源與閱讀範圍</h2><ol>${a.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}${s.publisher ? `，${esc(s.publisher)}` : ""}${s.date ? `，${esc(s.date)}` : ""}${s.note ? ` <span>— ${inline(s.note)}</span>` : ""}</li>`).join("")}</ol>${(a.body || []).some((b) => b.type === "quote" && b.original) ? `<p class="small">外文引文未註明譯者的，都是本報自譯。</p>` : ""}</section>` : ""}
       ${placesLine(me, column)}${relatedHtml(me)}
@@ -803,6 +841,7 @@ async function viewArticle(date, column, my) {
   const body = main.querySelector(".body");
   body.append(renderBody(a));
   hideBird(body, date, column);
+  if (a.serial?.n > 1) lastTime(Number(a.serial.n) - 1, main.querySelector(".vorher-slot"));
   const firstP = body.firstElementChild;
   if (firstP && firstP.tagName === "P" && !firstP.querySelector(".tag")) firstP.classList.add("lead-p");
   // 劃線本: this article's pencil lines find their place again; one opened from the notebook is landed on (route()
@@ -827,7 +866,7 @@ async function viewArticle(date, column, my) {
   // until it is finished — and, with the whole issue read, a small finish line instead of going round again.
   const artOf = (k) => { if (!k) return null; const [d, c] = k.split("/"); const x = issueBy(d)?.articles.find((y) => y.column === c); return x ? { date: d, a: x } : null; };
   const listOf = () => {
-    if (fromList === "#/saved") return { name: "收藏", keys: saved().filter((k) => artOf(k) && isPublished(k.slice(0, 10))) };
+    if (fromList === "#/saved") return { name: "抽屜", keys: saved().filter((k) => artOf(k) && isPublished(k.slice(0, 10))) };
     const m = fromList?.match(/^#\/column\/([\w-]+)/);
     if (m && S.cfg.columns[m[1]]) return { name: col(m[1], date).name, keys: publishedIssues().filter((i) => i.articles.some((x) => x.column === m[1])).map((i) => `${i.date}/${m[1]}`) };
     return null;
@@ -865,7 +904,7 @@ async function viewArticle(date, column, my) {
     e.currentTarget.classList.toggle("pop", on);
     toast(on ? "已收藏" : "已取消收藏");
   };
-  main.querySelector("[data-fs]").onclick = cycleFont;
+  main.querySelector("[data-aa]").onclick = (e) => aaMenu(e.currentTarget);
   main.querySelector("[data-share]")?.addEventListener("click", () => {
     navigator.share({ title: a.title, text: a.dek, url: location.href.replace(/\?[^#]*/, "") }).catch(() => {});
   });
@@ -980,10 +1019,12 @@ async function viewArticle(date, column, my) {
   const topOf = (p) => { const h = document.documentElement; return p * (h.scrollHeight - h.clientHeight); };
   let resumeT = 0;
   const hideResume = () => { resume.classList.add("off"); clearTimeout(resumeT); resumeT = setTimeout(() => { resume.hidden = true; }, 400); };
-  if (landKey === key) { landKey = null; if (back > 0.08) landTop = topOf(back); }
-  else if (back > 0.08) {
-    resume.hidden = false;
-    resume.textContent = `從上次讀到的地方繼續・${pct(back)}%`;
+  // The page lands where the reader stopped however it was opened (the owner, 2026-11-06: 點開直接捲到上次停的地方), a
+  // toast saying so; the .resume button is kept for the day a reader scrolls up and wants the place back, but not shown.
+  landKey = null;
+  if (back > 0.08) {
+    landTop = topOf(back);
+    toast(`接著上次・${pct(back)}%`);
     resume.onclick = () => { window.scrollTo({ top: topOf(back), behavior: calm() ? "auto" : "smooth" }); hideResume(); };
   }
   cleanup = () => {
@@ -1109,6 +1150,23 @@ function snippet(text, q) {
 // 近期演出 routine (editorial/columns/onthisday.md) and keyed by the date. The front page sets the issue's own line under
 // the finish line — one event, the year large, the sentence after it — so a past issue keeps its day too.
 const loadDays = () => getJSON("content/onthisday.json", { fresh: true }).then((d) => { S.days = d && typeof d === "object" ? d : {}; }).catch(() => {});
+// 這一週 (the owner, 2026-11-06): on Sundays a card above 歷史上的今天 — the week's reading in four numbers and where the
+// novel stands. The yearbook (抽屜 → 郵票冊) keeps the long run; this is the week's.
+function wocheBox() {
+  const today = twNow().date;
+  if (weekdayKey(today) !== "sun") return "";
+  const days = Array.from({ length: 7 }, (_, i) => addDays(today, i - 6)), inWeek = (d) => days.includes(d);
+  const tw = (iso) => { const t = Date.parse(iso || ""); return Number.isNaN(t) ? "" : new Date(t + 8 * 3600 * 1000).toISOString().slice(0, 10); };
+  const read = [...readSet()].filter((k) => inWeek(k.slice(0, 10)));
+  const marks = allMarks().filter((m) => inWeek(tw(m.at))).length, birds = [...birdsFound()].filter(inWeek).length, done = [...digestDone()].filter(inWeek).length;
+  if (!read.length && !marks && !birds) return "";
+  const serial = read.filter((k) => col(k.slice(11), k.slice(0, 10)).group === "serial").length;
+  const n = Math.max(0, ...publishedIssues().flatMap((i) => i.articles.filter((a) => a.serial && read.includes(`${i.date}/${a.column}`)).map((a) => Number(a.serial.n) || 0)));
+  const stat = (v, l) => `<span><b>${v}</b>${l}</span>`;
+  return `<section class="woche" aria-label="這一週"><div class="sec-head"><h2>這一週</h2><span class="de">Diese Woche</span><span class="note">${esc(fmtDate(days[0], "short"))}－${esc(fmtDate(today, "short"))}</span></div>
+    <p class="nums">${stat(read.length, "篇讀完")}${stat(done, "天讀完整期")}${stat(marks, "處劃線")}${stat(birds, "隻知更鳥")}</p>
+    ${serial ? `<p class="line">連載這週讀了 ${serial} 回，讀到第 ${n} 回。</p>` : ""}</section>`;
+}
 function dayBox(date) {
   const e = S.days?.[date];
   if (!e || !Number.isInteger(e.year) || typeof e.text !== "string" || !e.text) return "";
@@ -1125,6 +1183,15 @@ const GIG_CITIES = [["all", "全部"], ["台中", "台中"], ["north", "台北�
 const loadGigs = () => getJSON("content/concerts.json", { fresh: true }).then((g) => { S.gigs = g; }).catch(() => {});
 const gigDay = (iso) => { const [, m, d] = iso.split("-").map(Number); return `${m}/${d}`; };
 const gigWd = (iso) => "日一二三四五六"[new Date(`${iso}T00:00:00Z`).getUTCDay()];
+// 這週六, 後天 (the owner, 2026-11-06): a show within the week gets a word for its day beside the date. The week runs
+// Monday to Sunday, so Friday's "這週日" is in two days and "下週一" in three.
+function soonLabel(iso) {
+  const today = twNow().date, n = Math.round((Date.parse(`${iso}T00:00:00Z`) - Date.parse(`${today}T00:00:00Z`)) / 864e5);
+  if (!(n >= 0 && n <= 6)) return "";
+  if (n < 3) return ["今天", "明天", "後天"][n];
+  const wd = (d) => (new Date(`${d}T00:00:00Z`).getUTCDay() + 6) % 7;
+  return `${wd(iso) >= wd(today) ? "這週" : "下週"}${gigWd(iso)}`;
+}
 const gigShow = (s) => `${gigDay(s.date)}（${gigWd(s.date)}）${s.time ? ` ${esc(s.time)}` : ""}`;
 const webUrl = (u) => (/^https?:\/\//.test(u || "") ? u : "");
 const inCity = (s, c) => c === "north" ? s.city === "台北" || s.city === "新北" : s.city === c;
@@ -1152,7 +1219,8 @@ const gigId = (e) => (typeof e.id === "string" && /^[\w-]+$/.test(e.id) ? e.id :
 // One row of the list; a tap opens the event's own page (#/concert/<id>) with every show, the programme and the links.
 function gigRow(e) {
   const s = e.here[0], id = gigId(e);
-  const inner = `<div class="when"><b>${gigDay(s.date)}</b><span>週${gigWd(s.date)}${s.time ? ` ${esc(s.time)}` : ""}</span>${e.here.length > 1 ? `<span>共 ${e.here.length} 場</span>` : ""}</div>
+  const soon = soonLabel(s.date);
+  const inner = `<div class="when"><b>${gigDay(s.date)}</b><span>週${gigWd(s.date)}${s.time ? ` ${esc(s.time)}` : ""}</span>${soon ? `<span class="soon">${soon}</span>` : ""}${e.here.length > 1 ? `<span>共 ${e.here.length} 場</span>` : ""}</div>
     <div class="what">
       <h3>${esc(e.title)}${e.isNew ? '<span class="new">新</span>' : ""}</h3>
       <p class="where">${esc(s.city)}・${esc(s.venue)}${e.kind ? `<span class="kind">${esc(e.kind)}</span>` : ""}</p>
@@ -1319,6 +1387,20 @@ function viewArchive() {
   main.querySelectorAll(".cont[data-jump]").forEach((el) => el.addEventListener("click", () => { landKey = el.dataset.jump; }));
   const input = main.querySelector(".search"), hits = main.querySelector(".hits");
   let seq = 0, timer = 0;
+  // 欄位篩選 (the owner, 2026-11-06): the full-text hits wear a row of chips, one per column found, to narrow them.
+  let lastHits = [], hitCol = "";
+  const drawHits = (q) => {
+    if (!lastHits.length) { hits.innerHTML = `<p class="hint">全文沒有找到「${esc(q)}」。</p>`; return; }
+    const counts = new Map();
+    for (const r of lastHits) counts.set(r.c, (counts.get(r.c) || 0) + 1);
+    if (hitCol && !counts.has(hitCol)) hitCol = "";
+    const list = hitCol ? lastHits.filter((r) => r.c === hitCol) : lastHits;
+    const nameOf = (c) => col(c, lastHits.find((r) => r.c === c).d).name;
+    hits.innerHTML = `<div class="sec-head"><h2>全文</h2><span class="note">${list.length}${hitCol ? `／${lastHits.length}` : ""} 篇</span></div>
+      ${counts.size > 1 ? `<nav class="chips hit-cols" aria-label="只看哪一欄"><button type="button" class="chip" data-hc="" aria-pressed="${!hitCol}">全部<small>${lastHits.length}</small></button>${[...counts].map(([c, n]) => `<button type="button" class="chip" data-hc="${esc(c)}" aria-pressed="${c === hitCol}">${esc(nameOf(c))}<small>${n}</small></button>`).join("")}</nav>` : ""}
+      ${list.map((r) => `<a class="hit" href="#/a/${r.d}/${r.c}"><span class="meta-s">${esc(fmtDate(r.d, "short"))}・${esc(col(r.c, r.d).name)}</span><b>${esc(r.t)}</b><span class="snip">${snippet(r.x, q)}</span></a>`).join("")}`;
+  };
+  hits.addEventListener("click", (e) => { const b = e.target.closest("button[data-hc]"); if (!b) return; hitCol = b.dataset.hc; drawHits(input.value.trim().toLowerCase()); });
   const fullText = async (q) => {
     const my = ++seq;
     if (q.length < 2) { hits.innerHTML = ""; return; }
@@ -1337,9 +1419,8 @@ function viewArchive() {
       if (!found.length) return;
     }
     if (my !== seq) return;
-    hits.innerHTML = found.length
-      ? `<div class="sec-head"><h2>全文</h2><span class="note">${found.length} 篇</span></div>${found.map((r) => `<a class="hit" href="#/a/${r.d}/${r.c}"><span class="meta-s">${esc(fmtDate(r.d, "short"))}・${esc(col(r.c, r.d).name)}</span><b>${esc(r.t)}</b><span class="snip">${snippet(r.x, q)}</span></a>`).join("")}`
-      : `<p class="hint">全文沒有找到「${esc(q)}」。</p>`;
+    lastHits = found;
+    drawHits(q);
   };
   input.addEventListener("input", () => {
     draw(input.value);
@@ -1366,12 +1447,15 @@ function viewSaved() {
       <span class="t"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title)}</b>${a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}</span>${th}</a></li>`;
   };
   const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length;
-  main.innerHTML = `<div class="wrap sammlung"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
-    <nav class="shelf" aria-label="收藏的角落">
-      <a class="sh" href="#/marks" style="--i:0" aria-label="劃線本：${n} 處劃線"><span class="k">劃線本<i>Anstreichungen</i></span><b>${n}</b><span class="u">${n ? "處劃線" : "還沒有劃線"}</span></a>
-      <a class="sh" href="#/gallery" style="--i:1" aria-label="畫廊：${g} 幅"><span class="k">畫廊<i>Galerie</i></span><b>${g}</b><span class="u">${g ? "幅" : "牆上還沒有畫"}</span></a>
-      <a class="sh" href="#/stamps" style="--i:2" aria-label="郵票冊：${st} 張"><span class="k">郵票冊<i>Briefmarken</i></span><b>${st}</b><span class="u">${st ? "張" : "還沒有郵票"}</span></a>
-      <a class="sh" href="#/world" style="--i:3" aria-label="你讀過的世界：${w} 國"><span class="k">你讀過的世界<i>Gelesene Welt</i></span><b>${w}</b><span class="u">${w ? "國" : "還沒出發"}</span></a></nav>
+  // 抽屜 (the owner, 2026-11-06): four drawers, each with its own picture and a line that says what is inside.
+  const DRAWERS = [
+    ["#/marks", "劃線本", "Anstreichungen", n, n ? "處劃線" : "還沒有劃線", "讀到的句子，用鉛筆留下來的。", `<svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M13 7l3 3"/><path d="M4 20l1-4"/></svg>`],
+    ["#/gallery", "畫廊", "Galerie", g, g ? "幅" : "牆上還沒有畫", "每篇文章開頭那幅畫，掛成一面牆。", `<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16"/><rect x="6" y="7" width="12" height="10"/><path d="M6 15l3-3 3 3 2-2 4 4"/></svg>`],
+    ["#/stamps", "郵票冊", "Briefmarken", st, st ? "張" : "還沒有郵票", "讀完一天，就貼上那天的郵票。", `<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z" stroke-dasharray="2 1.6"/><rect x="7.5" y="8.5" width="9" height="7"/></svg>`],
+    ["#/world", "你讀過的世界", "Gelesene Welt", w, w ? "國" : "還沒出發", "文章去過的地方，在地圖上點亮。", `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>`],
+  ];
+  main.innerHTML = `<div class="wrap sammlung"><header class="page-title"><h1>抽屜</h1><span class="de">Schublade</span></header>
+    <nav class="shelf" aria-label="抽屜">${DRAWERS.map(([href, name, de, count, unit, line, icon], i) => `<a class="sh" href="${href}" style="--i:${i}" aria-label="${name}：${count} ${unit}。${line}"><i class="ic" aria-hidden="true">${icon}</i><span class="k">${name}<i>${de}</i></span><b>${count}</b><span class="u">${unit}</span><span class="s">${line}</span></a>`).join("")}</nav>
     ${rows.length ? `<div class="sec-head"><h2>收進來的</h2><span class="de">Gesammelt</span><span class="note">${rows.length} 篇</span></div><ol class="svl">${rows.map(row).join("")}</ol>`
       : `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。<br><a href="#/random">或者先隨手翻一篇 →</a></p>`}</div>`;
 }
@@ -1646,26 +1730,60 @@ function autoBlock() {
     <div class="btns"><button class="btn ghost" data-auto-pick>換一個歌單</button>${earlier ? `<button class="btn ghost" data-auto-all>補上之前各期</button>` : ""}<button class="btn ghost" data-auto-off>停止自動加入</button></div>`;
 }
 
-const FS = ["16.5px", "18.5px", "20.5px", "23px"];
-function cycleFont() {
-  const cur = getComputedStyle(document.documentElement).getPropertyValue("--fs").trim();
-  const next = FS[(FS.indexOf(cur) + 1) % FS.length] || FS[1];
-  document.documentElement.style.setProperty("--fs", next);
-  try { localStorage.setItem("rm.fs", next); } catch { /* ignore */ }
-  toast(`字級：${["小", "標準", "大", "特大"][FS.indexOf(next)]}`);
+const FS = ["16.5px", "18.5px", "20.5px", "23px"], FS_NAMES = ["小", "標準", "大", "特大"];
+const curFs = () => getComputedStyle(document.documentElement).getPropertyValue("--fs").trim();
+const curTheme = () => { try { return localStorage.getItem("rm.theme") || "auto"; } catch { return "auto"; } };
+function setFs(v) { document.documentElement.style.setProperty("--fs", v); try { localStorage.setItem("rm.fs", v); } catch { /* ignore */ } }
+// Day/night: swapped under a circular view transition spreading from the button (style.css .theme-vt), unless 減少動態.
+function setTheme(v, from) {
+  const swap = () => {
+    try { v === "auto" ? localStorage.removeItem("rm.theme") : localStorage.setItem("rm.theme", v); } catch { /* ignore */ }
+    if (v === "auto") delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = v;
+    themeBar(v);
+  };
+  if (calm() || !document.startViewTransition || !from) { swap(); return; }
+  const r = from.getBoundingClientRect(), root = document.documentElement;
+  root.style.setProperty("--vx", `${r.left + r.width / 2}px`);
+  root.style.setProperty("--vy", `${r.top + r.height / 2}px`);
+  root.classList.add("theme-vt");
+  document.startViewTransition(swap).finished.catch(() => {}).finally(() => root.classList.remove("theme-vt"));
+}
+// Aa (the owner, 2026-11-06: 讀的時候才需要它): the type size and day/night live in a small sheet under the article's top
+// bar, not on the settings page. The button again, a tap outside, or Escape closes it.
+function aaMenu(btn) {
+  const old = document.querySelector(".aa-pop");
+  if (old) { old.remove(); btn.setAttribute("aria-expanded", "false"); return; }
+  const pop = document.createElement("div");
+  pop.className = "aa-pop";
+  pop.setAttribute("role", "group");
+  pop.setAttribute("aria-label", "字級與日夜");
+  const draw = () => { pop.innerHTML = `<div class="g"><span class="lbl">字級</span><div class="seg">${FS.map((v, i) => `<button type="button" data-fs="${v}" aria-pressed="${v === curFs()}">${FS_NAMES[i]}</button>`).join("")}</div></div>
+    <div class="g"><span class="lbl">日夜</span><div class="seg">${[["auto", "跟隨系統"], ["light", "日間"], ["dark", "夜間"]].map(([v, l]) => `<button type="button" data-theme="${v}" aria-pressed="${v === curTheme()}">${l}</button>`).join("")}</div></div>`; };
+  draw();
+  pop.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    if (b.dataset.fs) setFs(b.dataset.fs); else if (b.dataset.theme) setTheme(b.dataset.theme, b);
+    draw();
+  });
+  btn.closest(".topbar").append(pop);
+  btn.setAttribute("aria-expanded", "true");
+  const close = (e) => {
+    if (e.type === "keydown" ? e.key !== "Escape" : pop.contains(e.target) || btn.contains(e.target)) return;
+    pop.remove(); btn.setAttribute("aria-expanded", "false");
+    document.removeEventListener("pointerdown", close, true); document.removeEventListener("keydown", close);
+  };
+  setTimeout(() => { document.addEventListener("pointerdown", close, true); document.addEventListener("keydown", close); }, 0);
 }
 
 function viewSettings() {
-  const theme = (() => { try { return localStorage.getItem("rm.theme") || "auto"; } catch { return "auto"; } })();
-  const fs = getComputedStyle(document.documentElement).getPropertyValue("--fs").trim();
   const rot = S.cfg.rotation_by_weekday;
   const wd = [["mon", "一"], ["tue", "二"], ["wed", "三"], ["thu", "四"], ["fri", "五"], ["sat", "六"], ["sun", "日"]];
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>設定</h1><span class="de">Einstellungen</span></header>
     <section class="set" id="push-set"><h2>出刊通知</h2><p class="small">讀取中……</p></section>
-    <section class="set"><h2>字級</h2><div class="seg" data-g="fs">${FS.map((v, i) => `<button type="button" data-v="${v}" aria-pressed="${v === fs}">${["小", "標準", "大", "特大"][i]}</button>`).join("")}</div></section>
     <section class="set"><h2>閱讀方式</h2><div class="seg" data-g="lock">${[["free", "自由閱讀"], ["seq", "循序閱讀"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${(v === "seq") === lockMode()}">${l}</button>`).join("")}</div>
       <p class="small">循序閱讀：每一期照首頁的順序，一次只開一篇；讀到文末、而且讀夠這篇預估時間的一半，下一篇才解鎖；中途離開，讀過的時間會留著，回來接著算。還沒解鎖的只顯示標題，摘要先藏起來，全部讀完才算讀完今天。之前讀過的照樣算數。</p></section>
-    <section class="set"><h2>外觀</h2><div class="seg" data-g="theme">${[["auto", "跟隨系統"], ["light", "日間"], ["dark", "夜間"]].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${v === theme}">${l}</button>`).join("")}</div></section>
+    <section class="set"><h2>字級與日夜</h2><p>在文章頁右上角的「Aa」裡：讀的時候才需要調，就放在那裡。</p></section>
     ${canSpeak() ? `<section class="set"><h2>朗讀速度</h2><div class="seg" data-g="rate">${RATES.map((r) => `<button type="button" data-v="${r}" aria-pressed="${r === getRate()}">${r === 1 ? "標準" : `${r}×`}</button>`).join("")}</div>
       <p>文章右上角的喇叭按鈕會用裝置內建的中文語音朗讀全文，不需網路服務。</p></section>` : ""}
     <section class="set"><h2>Spotify</h2>
@@ -1697,26 +1815,6 @@ function viewSettings() {
   renderPush($("#push-set"), S.cfg, S.index.push).catch(() => {});
   // Redrawing replaces the buttons; put focus back on the one just pressed.
   const redraw = (g, v) => { viewSettings(); main.querySelector(`[data-g="${g}"] [data-v="${v}"]`)?.focus(); };
-  main.querySelectorAll('[data-g="fs"] button').forEach((b) => (b.onclick = () => {
-    document.documentElement.style.setProperty("--fs", b.dataset.v);
-    try { localStorage.setItem("rm.fs", b.dataset.v); } catch { /* ignore */ }
-    redraw("fs", b.dataset.v);
-  }));
-  main.querySelectorAll('[data-g="theme"] button').forEach((b) => (b.onclick = () => {
-    const v = b.dataset.v;
-    const swap = () => {
-      try { v === "auto" ? localStorage.removeItem("rm.theme") : localStorage.setItem("rm.theme", v); } catch { /* ignore */ }
-      if (v === "auto") delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = v;
-      themeBar(v);
-      redraw("theme", v);
-    };
-    if (calm() || !document.startViewTransition) { swap(); return; }
-    const r = b.getBoundingClientRect(), root = document.documentElement;
-    root.style.setProperty("--vx", `${r.left + r.width / 2}px`);
-    root.style.setProperty("--vy", `${r.top + r.height / 2}px`);
-    root.classList.add("theme-vt");
-    document.startViewTransition(swap).finished.catch(() => {}).finally(() => root.classList.remove("theme-vt"));
-  }));
   main.querySelectorAll('[data-g="lock"] button').forEach((b) => (b.onclick = () => {
     store.set("lock.mode", b.dataset.v === "seq");
     toast(b.dataset.v === "seq" ? "循序閱讀：讀完一篇才解鎖下一篇" : "自由閱讀：想讀哪篇就讀哪篇");
@@ -1755,7 +1853,7 @@ function viewSettings() {
 }
 
 // ——— Router ———
-const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/saved", "收藏", "saved"], ["#/serial", "連載", "book"], ["#/settings", "設定", "settings"]]; // 音樂 gave its tab to 連載 (the owner, 2026-11-05); the music column lives in 往期 like every column
+const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/saved", "抽屜", "saved"], ["#/serial", "連載", "book"], ["#/settings", "設定", "settings"]]; // 音樂 gave its tab to 連載 (the owner, 2026-11-05); the music column lives in 往期 like every column
 let cleanup = () => {};
 let stopReveal = () => {};
 let lastTapped = null, shownArticle = null; // the card picture just tapped, and the article on screen (for the picture morph)
