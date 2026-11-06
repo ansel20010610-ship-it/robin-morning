@@ -21,6 +21,17 @@
           "auth": "WdbCjzaPiIGl__co3_XqDQ"
         }
       }
+    },
+    {
+      "name": "iPhone 11-06",
+      "added": "2026-11-06",
+      "subscription": {
+        "endpoint": "https://web.push.apple.com/QKGbzeVAAuE2yC3YnkHYejBNKouBdGOlTD0YmTQf9mFqp-tAAJoZolbqxhbYfwGAV0CI5KrC1JIQNMacmv_SPnXUeRCkkA2gNoUlk63fOVTBGGCnUaf2l07QW9TjvC2CbMdQNjZIYnFDArVepO9RtSV3T4Uk1UOXJcwYGgsgssE",
+        "keys": {
+          "p256dh": "BGPNvyK7MwBV7QcSejWQ30AafR5u8oj9-JM4VJcL8P6Mo2pFe-1TKfH4YMssJcMYk5rxriPMyStSLlIfyQE7sqE",
+          "auth": "DQKschBwpcaK-Q6vMAK8nw"
+        }
+      }
     }
   ]
 }
