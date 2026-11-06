@@ -249,15 +249,15 @@ function lockedCard(date, a, by) {
 // outside the day's stamp, the 循序 chain and the parcel: the novel keeps its own progress on the 連載 tab.
 const serialWhere = (s) => [s.part, s.chapter].filter(Boolean).join(" ") + (s.pieces > 1 ? `・${s.pieces} 之 ${s.piece}` : "");
 const serialPlate = (s) => `<p class="plate"><span class="book">《${esc(s.book || "")}》</span><span class="by">${esc(s.author || "")}</span><span class="where">${esc(serialWhere(s))}</span></p>`;
-function serialCard(date, a, read, { plate = true } = {}) {
+function serialCard(date, a, read, { plate = true, recap = true } = {}) {
   const s = a.serial || {}, by = lockedBy(date, a.column), done = read.has(`${date}/${a.column}`);
-  const inner = `${plate ? serialPlate(s) : `<p class="plate"><span class="where">${esc(serialWhere(s))}</span></p>`}<h3>${esc(a.title)}</h3>${a.dek ? `<p class="recap"><b>${s.n === 1 ? "開場" : "前情"}</b>${esc(a.dek)}</p>` : ""}
+  const inner = `${plate ? serialPlate(s) : `<p class="plate"><span class="where">${esc(serialWhere(s))}</span></p>`}<h3>${esc(a.title)}</h3>${a.dek && recap ? `<p class="recap"><b>${s.n === 1 ? "開場" : "前情"}</b>${esc(a.dek)}</p>` : ""}
     ${by ? `<p class="lock-note">${ICON.lock}<span>先讀完〈${esc(by.title)}〉就解鎖</span></p>` : `<p class="meta-s">${esc(fmtDate(date, "short"))}・${done ? "讀過了" : `約 ${esc(String(a.minutes || 6))} 分鐘`}</p>`}`;
   return by ? `<div class="item noimg serial-card locked" aria-disabled="true"><div>${inner}</div></div>` : `<a class="item noimg serial-card${done ? " read" : ""}" href="#/a/${date}/${a.column}"><div>${inner}</div></a>`;
 }
 function serialBox(date, a, read) {
   const s = a.serial || {};
-  return `<a class="sec-head link" href="#/serial" aria-label="連載：全部回目"><h2>連載</h2><span class="de">Fortsetzung folgt</span><span class="note">第 ${esc(String(s.n ?? ""))} 回${s.of ? `・共 ${esc(String(s.of))} 回` : ""} →</span></a>${serialCard(date, a, read)}`;
+  return `<a class="sec-head link" href="#/serial" aria-label="連載：全部回目"><h2>連載</h2><span class="de">Fortsetzung folgt</span><span class="note">第 ${esc(String(s.n ?? ""))} 回${s.of ? `・共 ${esc(String(s.of))} 回` : ""} →</span></a>${serialCard(date, a, read, { recap: false })}`; // no 前情 on the front page (the owner, 2026-11-06)
 }
 // ——— 連載 tab (#/serial, content/serial.json): the book's plate and progress, the next installment to read, the cast,
 // and every installment published so far in order — the one home of the serial; the front page's card is the day's door.
