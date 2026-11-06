@@ -870,7 +870,7 @@ async function viewArticle(date, column, my) {
   // until it is finished — and, with the whole issue read, a small finish line instead of going round again.
   const artOf = (k) => { if (!k) return null; const [d, c] = k.split("/"); const x = issueBy(d)?.articles.find((y) => y.column === c); return x ? { date: d, a: x } : null; };
   const listOf = () => {
-    if (fromList === "#/saved") return { name: "抽屜", keys: saved().filter((k) => artOf(k) && isPublished(k.slice(0, 10))) };
+    if (fromList === "#/saved") return { name: "收藏", keys: saved().filter((k) => artOf(k) && isPublished(k.slice(0, 10))) };
     const m = fromList?.match(/^#\/column\/([\w-]+)/);
     if (m && S.cfg.columns[m[1]]) return { name: col(m[1], date).name, keys: publishedIssues().filter((i) => i.articles.some((x) => x.column === m[1])).map((i) => `${i.date}/${m[1]}`) };
     return null;
@@ -1452,15 +1452,15 @@ function viewSaved() {
       <span class="t"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title)}</b>${a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}</span>${th}</a></li>`;
   };
   const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length;
-  // 抽屜 (the owner, 2026-11-06): four drawers, each with its own picture and a line that says what is inside.
+  // 收藏 (the owner, 2026-11-06, name kept): four shelves, each with its own picture and a line that says what is inside.
   const DRAWERS = [
     ["#/marks", "劃線本", "Anstreichungen", n, n ? "處劃線" : "還沒有劃線", "讀到的句子，用鉛筆留下來的。", `<svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M13 7l3 3"/><path d="M4 20l1-4"/></svg>`],
     ["#/gallery", "畫廊", "Galerie", g, g ? "幅" : "牆上還沒有畫", "每篇文章開頭那幅畫，掛成一面牆。", `<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16"/><rect x="6" y="7" width="12" height="10"/><path d="M6 15l3-3 3 3 2-2 4 4"/></svg>`],
     ["#/stamps", "郵票冊", "Briefmarken", st, st ? "張" : "還沒有郵票", "讀完一天，就貼上那天的郵票。", `<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z" stroke-dasharray="2 1.6"/><rect x="7.5" y="8.5" width="9" height="7"/></svg>`],
     ["#/world", "你讀過的世界", "Gelesene Welt", w, w ? "國" : "還沒出發", "文章去過的地方，在地圖上點亮。", `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>`],
   ];
-  main.innerHTML = `<div class="wrap sammlung"><header class="page-title"><h1>抽屜</h1><span class="de">Schublade</span></header>
-    <nav class="shelf" aria-label="抽屜">${DRAWERS.map(([href, name, de, count, unit, line, icon], i) => `<a class="sh" href="${href}" style="--i:${i}" aria-label="${name}：${count} ${unit}。${line}"><i class="ic" aria-hidden="true">${icon}</i><span class="k">${name}<i>${de}</i></span><b>${count}</b><span class="u">${unit}</span><span class="s">${line}</span></a>`).join("")}</nav>
+  main.innerHTML = `<div class="wrap sammlung"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
+    <nav class="shelf" aria-label="收藏的角落">${DRAWERS.map(([href, name, de, count, unit, line, icon], i) => `<a class="sh" href="${href}" style="--i:${i}" aria-label="${name}：${count} ${unit}。${line}"><i class="ic" aria-hidden="true">${icon}</i><span class="k">${name}<i>${de}</i></span><b>${count}</b><span class="u">${unit}</span><span class="s">${line}</span></a>`).join("")}</nav>
     ${rows.length ? `<div class="sec-head"><h2>收進來的</h2><span class="de">Gesammelt</span><span class="note">${rows.length} 篇</span></div><ol class="svl">${rows.map(row).join("")}</ol>`
       : `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。<br><a href="#/random">或者先隨手翻一篇 →</a></p>`}</div>`;
 }
@@ -1865,7 +1865,7 @@ function viewSettings() {
 }
 
 // ——— Router ———
-const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/saved", "抽屜", "saved"], ["#/serial", "連載", "book"], ["#/settings", "設定", "settings"]]; // 音樂 gave its tab to 連載 (the owner, 2026-11-05); the music column lives in 往期 like every column
+const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/saved", "收藏", "saved"], ["#/serial", "連載", "book"], ["#/settings", "設定", "settings"]]; // 音樂 gave its tab to 連載 (the owner, 2026-11-05); the music column lives in 往期 like every column
 let cleanup = () => {};
 let stopReveal = () => {};
 let lastTapped = null, shownArticle = null; // the card picture just tapped, and the article on screen (for the picture morph)
