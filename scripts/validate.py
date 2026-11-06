@@ -287,7 +287,7 @@ def check_voice(art, d, col, W):
         elif re.search(r"不是.+[，,、]\s*(而)?是", h) or h.rstrip().endswith(("？", "?")):
             W("小標「%s」是「不是 X，是 Y」或問句的套路，直接寫內容（STYLE.md 第〇節）" % h)
     # 粗體 (STYLE.md 〇之五, 2026-11-07 起): 2–5 處, 標關鍵句與人事物; 引文、詩、經文裡不加粗。
-    if d >= "2026-11-07" and col not in ("devotion", "news", "serial", "obituary", "fm-watch", "cosmere-watch"):
+    if str(d) >= "2026-11-07" and col not in ("devotion", "news", "serial", "obituary", "fm-watch", "cosmere-watch"):
         bold = sum(len(re.findall(r"\*\*[^*\n]+\*\*", b.get("text") or "")) for b in body if b.get("type") == "p" and isinstance(b.get("text"), str))
         if bold == 0:
             W("沒有粗體：每篇標 2–5 處關鍵句與第一次出場的人事物（STYLE.md 〇之五）")
