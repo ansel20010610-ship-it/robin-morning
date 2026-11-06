@@ -1228,7 +1228,7 @@ button.chip { cursor: pointer; font-family: var(--sans); }
 .err .btns { justify-content: center; }
 .err + .sec-head { margin-top: 30px; }
 /* The front page's finish line while articles are still unread (app.js viewFront; wireDigest leaves it unobserved). */
-.finish.lockfin { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.finish.left { display: flex; flex-direction: column; align-items: center; gap: 4px; }
 
 /* ——— 劃線本 (Anstreichungen, assets/marks.js) ——— */
 /* A graphite line under the words, no ground and no box: a thin, slightly uneven stroke repeated along the foot of the

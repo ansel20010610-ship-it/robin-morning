@@ -533,7 +533,7 @@ function viewFront(dateParam) {
     ${watch.length ? `<div class="sec-head"><h2>遠方有動靜</h2><span class="de">In der Ferne</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
     ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdsFound().has(issue.date) ? "今天的知更鳥找到了。" : "今天有一隻知更鳥藏在某一篇裡。"}</p>` : ""}
     ${!arts.some((a) => forStamp(a, issue.date) && a.brief) ? "" : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
-      : unreadIn(issue.date, arts) ? `<div class="finish lockfin"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的郵票才蓋得下去。</span></div>`
+      : unreadIn(issue.date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的郵票才蓋得下去。</span></div>`
       : `<div class="finish">${finishInner(issue.date)}</div>`}
     ${dateParam ? "" : wocheBox()}
     ${dayBox(issue.date)}
@@ -601,7 +601,7 @@ const forStamp = (a, date) => { const g = col(a.column, date).group; return g !=
 const unreadIn = (date, arts) => { const read = readSet(); return arts.filter((a) => forStamp(a, date) && !read.has(`${date}/${a.column}`)).length; };
 function wireDigest(issue) {
   finishSeen?.disconnect(); finishSeen = null;
-  const fin = main.querySelector(".finish:not(.lockfin)");
+  const fin = main.querySelector(".finish:not(.left)");
   // Reaching the end the first time today stamps the seal; coming back to a finished issue just shows it.
   const was = digestDone().has(issue.date);
   const ring = digestRing(main);
