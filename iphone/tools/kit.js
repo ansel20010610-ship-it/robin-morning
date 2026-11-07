@@ -1,14 +1,11 @@
 // The iPhone in the paper's Viennese dress: a home-screen wallpaper (day and night) and still widgets for the photo
 // widget apps (Colorful Widget, iScreen). Wiener Secession / Werkstätte vocabulary: Hoffmann's lattice and chequer,
 // gold squares, the laurel dome of Olbrich's Secession building and its motto.
-// Usage: bun add @resvg/resvg-js@2.6.2, then FONTS=<dir> bun vienna.js <outdir>. <dir> holds Cormorant Garamond
-// (500, 600, 500 italic) and Noto Serif TC (300, 600) as TTF, from Google Fonts (both OFL).
+// The shared kit: palette, paper, frame, card, ornaments, the wallpaper. Rendered by build.js.
 import { Resvg } from "@resvg/resvg-js";
 import { mkdirSync, writeFileSync } from "fs";
 import { join } from "path";
 
-const OUT = process.argv[2] || "out";
-mkdirSync(OUT, { recursive: true });
 const FONTS = process.env.FONTS || join(import.meta.dir, "..", "fonts");
 const fontFiles = ["CormorantGaramond-500.ttf", "CormorantGaramond-600.ttf", "CormorantGaramond-500i.ttf", "NotoSerifTC-300.ttf", "NotoSerifTC-600.ttf"].map((f) => join(FONTS, f));
 
@@ -17,7 +14,7 @@ export const THEMES = {
   dark: { name: "dark", paper: "#15120E", paper2: "#201B14", ink: "#EDE4D3", ink2: "#CDC2AF", gold: "#CDAE68", goldInk: "#CDAE68", rule: "#564A33", fleck: "#000000", vignette: "#000000", vig: 0.5 },
 };
 
-const defs = (t, w, h) => `<defs>
+export const defs = (t, w, h) => `<defs>
   <filter id="grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
     <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="11" stitchTiles="stitch"/>
     <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  .22 0 0 0 -.07"/>
@@ -31,15 +28,15 @@ const defs = (t, w, h) => `<defs>
     <stop offset="100%" stop-color="${t.vignette}" stop-opacity="${t.vig}"/>
   </radialGradient>
 </defs>`;
-const paper = (t, w, h) => `<rect width="${w}" height="${h}" fill="${t.paper}"/>
+export const paper = (t, w, h) => `<rect width="${w}" height="${h}" fill="${t.paper}"/>
   <rect width="${w}" height="${h}" fill="${t.fleck}" filter="url(#fibre)"/>
   <rect width="${w}" height="${h}" fill="${t.fleck}" filter="url(#grain)"/>
   <rect width="${w}" height="${h}" fill="url(#vig)"/>`;
 
-const diamond = (x, y, s, fill) => `<rect x="${x - s / 2}" y="${y - s / 2}" width="${s}" height="${s}" fill="${fill}" transform="rotate(45 ${x} ${y})"/>`;
+export const diamond = (x, y, s, fill) => `<rect x="${x - s / 2}" y="${y - s / 2}" width="${s}" height="${s}" fill="${fill}" transform="rotate(45 ${x} ${y})"/>`;
 
 // Hoffmann's Gitterwerk: a lattice of hairlines with a small square at each crossing.
-function lattice(t, x0, y0, x1, y1, step, opacity) {
+export function lattice(t, x0, y0, x1, y1, step, opacity) {
   let d = "", sq = "";
   for (let x = x0; x <= x1 + 0.1; x += step) d += `M${x} ${y0}V${y1}`;
   for (let y = y0; y <= y1 + 0.1; y += step) d += `M${x0} ${y}H${x1}`;
@@ -48,7 +45,7 @@ function lattice(t, x0, y0, x1, y1, step, opacity) {
 }
 
 // A row of chequer squares (the Secession border), n squares of size s, alternate ones filled.
-function chequer(t, x, y, n, s, { rows = 2, fill = t.gold } = {}) {
+export function chequer(t, x, y, n, s, { rows = 2, fill = t.gold } = {}) {
   let out = "";
   for (let r = 0; r < rows; r++) for (let i = 0; i < n; i++) if ((i + r) % 2 === 0) out += `<rect x="${x + i * s}" y="${y + r * s}" width="${s}" height="${s}" fill="${fill}"/>`;
   return out;
@@ -56,7 +53,7 @@ function chequer(t, x, y, n, s, { rows = 2, fill = t.gold } = {}) {
 
 // The Secession dome, the "golden cabbage": a hemisphere of laurel leaves on a drum. Leaves sit on rings of latitude,
 // foreshortened toward the edge, each leaning a little; the drum is two rules and a row of squares.
-function dome(t, cx, cy, R, { opacity = 1 } = {}) {
+export function dome(t, cx, cy, R, { opacity = 1 } = {}) {
   // Jugendstil reading of Olbrich's dome: laurel sprigs growing up the meridians of a hemisphere and meeting at the
   // crown, a parallel or two as the iron hoops, the whole on its chequered drum.
   const P = (lon, lat) => [cx - Math.cos(lon) * Math.cos(lat) * R, cy - Math.sin(lat) * R];
@@ -97,13 +94,13 @@ function dome(t, cx, cy, R, { opacity = 1 } = {}) {
 
 // ——— Home-screen wallpaper ———
 const W = 1320, H = 2868; // Pro Max at 3x; iOS scales it for the smaller phones of the same shape
-function frame(t, inset = 58) {
+export function frame(t, inset = 58) {
   const a = inset, b = inset + 18, R = 190;
   return `<rect x="${a}" y="${a}" width="${W - 2 * a}" height="${H - 2 * a}" rx="${R - a}" fill="none" stroke="${t.gold}" stroke-width="3"/>
     <rect x="${b}" y="${b}" width="${W - 2 * b}" height="${H - 2 * b}" rx="${R - b}" fill="none" stroke="${t.rule}" stroke-width="1.5"/>
     ${diamond(a, H / 2, 16, t.gold)}${diamond(W - a, H / 2, 16, t.gold)}`;
 }
-function home(t) {
+export function home(t) {
   const motto = "DER ZEIT IHRE KUNST";
   const motto2 = "DER KUNST IHRE FREIHEIT";
   const my = 232; // the strip between the status bar and the first row of widgets
@@ -113,7 +110,6 @@ function home(t) {
     <text x="${W / 2 - 26}" y="${my}" text-anchor="end" font-family="Cormorant Garamond" font-weight="600" font-size="27" letter-spacing="6" fill="${t.goldInk}">${motto}</text>
     ${diamond(W / 2, my - 9, 9, t.gold)}
     <text x="${W / 2 + 26}" y="${my}" text-anchor="start" font-family="Cormorant Garamond" font-weight="600" font-size="27" letter-spacing="6" fill="${t.goldInk}">${motto2}</text>
-    ${dome(t, W / 2, 1640, 300, { opacity: t.name === "dark" ? 0.12 : 0.13 })}
     <text x="${W / 2}" y="${H - 108}" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-weight="500" font-size="30" letter-spacing="3" fill="${t.goldInk}" opacity=".7">Wien · MDCCCXCVII</text>
   </svg>`;
 }
@@ -123,7 +119,7 @@ function home(t) {
 export const SIZE = { small: [510, 510], medium: [1092, 510], large: [1092, 1146] };
 const NO_START = "，。、；：！？」』）》〉…";
 // Wrap Chinese text into lines of at most n characters, never starting a line with closing punctuation.
-function wrap(text, n) {
+export function wrap(text, n) {
   const out = [];
   let line = "";
   for (const ch of Array.from(text)) {
@@ -136,7 +132,7 @@ function wrap(text, n) {
 const escXml = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 
 // The card: paper, an inset gold rule with chequer corners (the iOS mask rounds the outside).
-function card(t, w, h, body) {
+export function card(t, w, h, body) {
   const m = 42, c = 4, s = 10;
   const corner = (x, y, fx, fy) => {
     let o = "";
@@ -151,7 +147,7 @@ function card(t, w, h, body) {
 }
 
 // Horizontal text block: lines centred as a block, a gold source line under it.
-function prose(t, w, h, { text, cite, kicker, size, per, lead = 1.75, weight = 300 }) {
+export function prose(t, w, h, { text, cite, kicker, size, per, lead = 1.75, weight = 300 }) {
   const lines = wrap(text, per);
   const lh = size * lead, blockH = lines.length * lh;
   const total = blockH - (lead - 1) * size + (cite ? size * 1.7 : 0) + (kicker ? size * 1.6 : 0); // ink from the first cap-line to the cite
@@ -169,7 +165,7 @@ function prose(t, w, h, { text, cite, kicker, size, per, lead = 1.75, weight = 3
 
 // Vertical text (直排), right to left, each glyph in its own cell; punctuation stays centred as Traditional Chinese
 // sets it. `cols` is a list of columns; the cite runs down a last, smaller column on the left with a rule.
-function vertical(t, w, h, { cols, cite, size, gap = 1.7 }) {
+export function vertical(t, w, h, { cols, cite, size, gap = 1.7 }) {
   const colW = size * gap;
   const tallest = Math.max(...cols.map((c) => Array.from(c).length));
   const blockW = cols.length * colW + (cite ? colW * 0.8 : 0);
@@ -191,7 +187,7 @@ function vertical(t, w, h, { cols, cite, size, gap = 1.7 }) {
 }
 
 // A plain ornament card: the dome on its drum with the motto, for a slot that wants a picture, not words.
-function domeCard(t, w, h) {
+export function domeCard(t, w, h) {
   const R = Math.min(w, h) * 0.27;
   return card(t, w, h, `${dome(t, w / 2, h * 0.6, R)}
     <text x="${w / 2}" y="${h * 0.6 + R * 0.16 + 72}" text-anchor="middle" font-family="Cormorant Garamond" font-weight="600" font-size="${w * 0.045}" letter-spacing="${w * 0.012}" fill="${t.goldInk}">VER SACRUM</text>`);
@@ -199,7 +195,7 @@ function domeCard(t, w, h) {
 
 // Klimt's Tree of Life (Stoclet Frieze): a trunk, branches that curl into spirals, small eyes and triangles along
 // them, a few birds' worth of dots. Spirals are Archimedean, drawn as stroked paths.
-function spiralPath(cx, cy, r, turns, dir, start = 0) {
+export function spiralPath(cx, cy, r, turns, dir, start = 0) {
   let d = "";
   const N = Math.round(turns * 48);
   for (let i = 0; i <= N; i++) {
@@ -209,7 +205,7 @@ function spiralPath(cx, cy, r, turns, dir, start = 0) {
   }
   return d;
 }
-function tree(t, w, h, { scale = 1, wide = false } = {}) {
+export function tree(t, w, h, { scale = 1, wide = false } = {}) {
   // Klimt's Lebensbaum: a trunk with eye-shapes set in it; branches rise from it and roll over into large spirals
   // that curl downward, each with a gold boss at its heart; small curls between; a crown of three triangles.
   const cx = w / 2, base = h * 0.84, top = h * (wide ? 0.2 : 0.17), sw = 4.2 * scale, H = base - top;
@@ -246,10 +242,10 @@ function tree(t, w, h, { scale = 1, wide = false } = {}) {
   const ground = `<line x1="${cx - gw / 2}" y1="${base + 3 * scale}" x2="${cx + gw / 2}" y2="${base + 3 * scale}" stroke="${t.gold}" stroke-width="${2 * scale}"/>${chequer(t, cx - Math.floor(gw / sq) * sq / 2, base + 12 * scale, Math.floor(gw / sq), sq, { rows: 1 })}`;
   return o + bosses + eyes + crown + ground;
 }
-const treeCard = (t, w, h) => { const k = w === h && w < 600 ? 0.86 : 1; return card(t, w, h, `<g transform="translate(${w * (1 - k) / 2} ${h * (1 - k) / 2}) scale(${k})">${tree(t, w, h, { scale: Math.min(w, h) / 510, wide: w > h * 1.5 })}</g>`); };
+export const treeCard = (t, w, h) => { const k = w === h && w < 600 ? 0.86 : 1; return card(t, w, h, `<g transform="translate(${w * (1 - k) / 2} ${h * (1 - k) / 2}) scale(${k})">${tree(t, w, h, { scale: Math.min(w, h) / 510, wide: w > h * 1.5 })}</g>`); };
 
 // The Secession's inscription over its door, in capitals, the Chinese beneath, laurel sprigs either side.
-function sprig(x, y, len, dir, t, sc = 1) {
+export function sprig(x, y, len, dir, t, sc = 1) {
   let o = `<path d="M ${x} ${y} q ${dir * len * 0.5} ${-len * 0.12} ${dir * len} 0" fill="none" stroke="${t.gold}" stroke-width="${2 * sc}"/>`;
   for (let i = 1; i <= 5; i++) {
     const px = x + dir * len * (i / 6), py = y - len * 0.06 * Math.sin(Math.PI * i / 6), s = 11 * sc * (1 - i * 0.08);
@@ -261,39 +257,38 @@ function sprig(x, y, len, dir, t, sc = 1) {
   }
   return o;
 }
-function mottoCard(t, w, h) {
-  const cx = w / 2, sc = w / 1092;
-  const cap = (y, s) => `<text x="${cx}" y="${y}" text-anchor="middle" font-family="Cormorant Garamond" font-weight="600" font-size="${46 * sc}" letter-spacing="${9 * sc}" fill="${t.ink}">${s}</text>`;
-  return card(t, w, h, `
-    ${chequer(t, cx - 110 * sc, h * 0.2, 22, 10 * sc, { rows: 1 })}
-    ${cap(h * 0.42, "DER ZEIT IHRE KUNST")}
-    ${cap(h * 0.58, "DER KUNST IHRE FREIHEIT")}
-    ${sprig(cx - 40 * sc, h * 0.685, 150 * sc, -1, t, sc * 1.3)}${sprig(cx + 40 * sc, h * 0.685, 150 * sc, 1, t, sc * 1.3)}
-    ${diamond(cx, h * 0.685, 10 * sc, t.gold)}
-    <text x="${cx}" y="${h * 0.79}" text-anchor="middle" font-family="Noto Serif TC" font-weight="300" font-size="${30 * sc}" letter-spacing="${10 * sc}" fill="${t.goldInk}">給時代它的藝術，給藝術它的自由</text>`);
+// The tree as a frieze (the Stoclet dining-room wall is a long band): the tree in the middle, and either side a
+// running scroll of spirals along a gold rule, each rolled toward the tree, a boss at each heart.
+export function friesCard(t, w, h) {
+  const sc = h / 510, side = h * 0.98, tx = (w - side) / 2;
+  const base = h * 0.66, r = h * 0.075;
+  let band = "";
+  for (const dir of [-1, 1]) {
+    const x0 = dir < 0 ? 96 * sc : tx + side - 70 * sc, x1 = dir < 0 ? tx + 70 * sc : w - 96 * sc;
+    band += `<line x1="${x0}" y1="${base + r * 1.15}" x2="${x1}" y2="${base + r * 1.15}" stroke="${t.gold}" stroke-width="${2.2 * sc}"/>`;
+    const n = Math.floor((x1 - x0) / (r * 2.7));
+    const start = (x0 + x1) / 2 - (n - 1) * r * 1.35;
+    for (let i = 0; i < n; i++) {
+      const sx = start + i * r * 2.7;
+      band += `<path d="${spiralPath(sx, base, r, 1.7, -dir, Math.PI / 2)}" fill="none" stroke="${t.gold}" stroke-width="${3 * sc}" stroke-linecap="round"/><circle cx="${sx}" cy="${base}" r="${r * 0.16}" fill="${t.gold}"/>`;
+    }
+  }
+  return card(t, w, h, `<g transform="translate(${tx} ${h * 0.01})">${tree(t, side, side, { scale: sc * 0.98 })}</g>${band}`);
+}
+// The dome as a wide emblem: the laurel globe on its drum in the middle, a laurel sprig reaching out from the drum
+// on either side, VER SACRUM beneath. No motto: a picture, not words.
+export function domeWide(t, w, h) {
+  const sc = w / 1092, R = h * 0.27, cx = w / 2, cy = h * 0.6, base = cy + R * 0.075;
+  return card(t, w, h, `${dome(t, cx, cy, R)}
+    ${sprig(cx - R * 1.16, base, w * 0.19, -1, t, sc * 1.6)}${sprig(cx + R * 1.16, base, w * 0.19, 1, t, sc * 1.6)}
+    <text x="${cx}" y="${h * 0.84}" text-anchor="middle" font-family="Cormorant Garamond" font-weight="600" font-size="${28 * sc}" letter-spacing="${12 * sc}" fill="${t.goldInk}">VER SACRUM</text>`);
 }
 
 const JOHN = "我實實在在的告訴你們，一粒麥子不落在地裡死了，仍舊是一粒，若是死了，就結出許多子粒來。";
-export const STILLS = {
+// The cards drawn here; the others live in motifs/*.js. build.js renders the set.
+export const KIT_STILLS = {
   "kuppel-klein": (t) => domeCard(t, ...SIZE.small),
-  "lebensbaum-klein": (t) => treeCard(t, ...SIZE.small),
-  "lebensbaum-gross": (t) => treeCard(t, ...SIZE.large),
-  "motto-mittel": (t) => mottoCard(t, ...SIZE.medium),
+  "lebensbaum-mittel": (t) => friesCard(t, ...SIZE.medium),
   "weizenkorn-klein": (t) => vertical(t, ...SIZE.small, { cols: ["一粒麥子", "不落在地裡", "死了，", "仍舊是一粒"], cite: "約翰福音十二章", size: 40, gap: 1.6 }),
-  "weizenkorn-mittel": (t) => prose(t, ...SIZE.medium, { text: JOHN, cite: "《約翰福音》十二章二十四節", size: 38, per: 22, lead: 1.75 }),
 };
-
-function render(svg, file) {
-  const png = new Resvg(svg, { font: { fontFiles, loadSystemFonts: false, defaultFontFamily: "Noto Serif TC" } }).render().asPng();
-  writeFileSync(join(OUT, file), png);
-  return png.length;
-}
-if (import.meta.main) {
-  const tag = (t) => (t.name === "light" ? "tag" : "nacht");
-  mkdirSync(join(OUT, "wallpaper"), { recursive: true }); mkdirSync(join(OUT, "widgets"), { recursive: true });
-  for (const t of Object.values(THEMES)) {
-    render(home(t), `wallpaper/wien-${tag(t)}.png`);
-    for (const [k, fn] of Object.entries(STILLS)) render(fn(t), `widgets/${k}-${tag(t)}.png`);
-  }
-  console.log("done; convert to JPEG (quality 93) before committing, as the paper grain makes the PNGs large");
-}
+export { fontFiles };
