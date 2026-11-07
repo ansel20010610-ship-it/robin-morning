@@ -646,7 +646,7 @@ function markDigestDone(date) {
 // The seal (motion.js seal) with the day on it; from a streak of two the laurel wraps round it.
 function finishInner(date) {
   const run = date === publishedIssues()[0]?.date ? streak() : null;
-  return `${seal(date, run?.today ? run.n : 0)}<b>讀完了，今天你贏了</b><span class="note">${esc(finishNote(date))}</span>`;
+  return `${seal(date, run?.today ? run.n : 0)}<b>今天的報紙，讀完了</b><span class="note">${esc(finishNote(date))}</span>`;
 }
 
 // ——— Keeping what you read: the streak ———
@@ -660,8 +660,9 @@ function streak() {
 }
 function finishNote(date) {
   const run = date === publishedIssues()[0]?.date ? streak() : null;
-  if (!run?.today || run.n < 2) return "想深挖就點進任何一篇；沒空也沒差，重點你都拿到了。";
-  return run.n >= 7 ? `連續 ${run.n} 天讀完，這已經是習慣了兄弟。` : run.n >= 3 ? `連續 ${run.n} 天讀完，穩。` : "連續 2 天讀完，開始有手感了。";
+  // The paper's own voice, not a coach's (the owner, 2026-11-07: 不要這麼 bro 的風格).
+  if (!run?.today || run.n < 2) return "想多知道一點，點進任何一篇；不點也無妨，今天該知道的都在這裡了。";
+  return run.n >= 7 ? `連著 ${run.n} 天讀完，這份報紙已經是早上的一部分了。` : run.n >= 3 ? `連著 ${run.n} 天讀完了。` : "連著兩天讀完了。";
 }
 
 // Load the issue's articles in the background: they open instantly and the service worker keeps them for offline reading,
