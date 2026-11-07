@@ -29,8 +29,9 @@ from common import CONTENT, TW, UA  # noqa: E402
 
 OUT = os.path.join(CONTENT, "wire.json")
 # (name shown on the bar, feed, how many of its newest items to take, what its text needs)
-#   "full": simplified → Taiwan Traditional with OpenCC s2twp, then the word list
-#   "words": already traditional characters; only the word list (s2twp on traditional text miscorrects: 支持 → 支援)
+#   "full": simplified → Taiwan Traditional characters with OpenCC s2tw (characters and variants only: its phrase
+#           table, s2twp, rewrites ordinary news words — 支持→支援, 制裁→製裁, 項目→專案, 文件→檔案), then the word list
+#   "words": already traditional characters; only the word list
 #   "": Taiwan's own wording already
 SOURCES = [
     ("中央社", "https://feeds.feedburner.com/rsscna/intworld", 5, ""),
@@ -38,22 +39,26 @@ SOURCES = [
     ("BBC", "https://feeds.bbci.co.uk/zhongwen/trad/rss.xml", 2, "words"),
     ("法廣", "https://www.rfi.fr/tw/rss", 2, "words"),
 ]
-# Mainland wording the traditional-character wires keep, and names Taiwan writes differently. Longest first, so
-# "特朗普（川普）" is caught before "特朗普".
+# Mainland wording the wires keep (after OpenCC the text is traditional), and names Taiwan writes differently.
+# Regular expressions, applied in order, so "特朗普（川普）" goes before "特朗普". Each rule is kept narrow: a bare
+# 首腦 is a gang boss as well as a head of state, 航天局 is the official name of an agency, 人際網絡 is not 網路.
 WORDS = [
-    ("特朗普（川普）", "川普"), ("特朗普", "川普"), ("普京", "普丁"), ("泽连斯基", "澤倫斯基"), ("澤連斯基", "澤倫斯基"),
-    ("內塔尼亞胡", "納坦雅胡"), ("意大利", "義大利"), ("悉尼", "雪梨"), ("新西蘭", "紐西蘭"),
-    ("宇航員", "太空人"), ("航天員", "太空人"), ("空間站", "太空站"), ("航天", "太空"), ("報道", "報導"),
-    ("視頻", "影片"), ("信息", "資訊"), ("網絡", "網路"), ("軟件", "軟體"), ("互聯網", "網際網路"), ("人工智能", "人工智慧"),
-    ("導彈", "飛彈"), ("短信", "簡訊"), ("出租車", "計程車"), ("首腦", "領袖"),
+    (r"特朗普（川普）", "川普"), (r"特朗普", "川普"), (r"普京", "普丁"), (r"澤連斯基", "澤倫斯基"), (r"內塔尼亞胡", "納坦雅胡"),
+    (r"意大利", "義大利"), (r"悉尼", "雪梨"), (r"新西蘭", "紐西蘭"),
+    (r"宇航員|航天員", "太空人"), (r"空間站", "太空站"), (r"首腦(?=會議|峰會|會談)", "領袖"),
+    (r"報道", "報導"), (r"視頻", "影片"), (r"信息(?=技術|安全|科技|產業)", "資訊"), (r"信息", "訊息"),
+    (r"(?<![人際關係社交])網絡", "網路"), (r"軟件", "軟體"), (r"互聯網", "網際網路"), (r"人工智能", "人工智慧"), (r"服務器", "伺服器"),
+    (r"導彈", "飛彈"), (r"短信", "簡訊"), (r"出租車", "計程車"),
+    (r"製裁", "制裁"),  # OpenCC reads 俄制裁 as 俄製 (Russian-made); 製裁 is never a word
 ]
+WORDS = [(re.compile(a), b) for a, b in WORDS]
 MAX_ITEMS = 12
 WINDOW = dt.timedelta(hours=26)  # a little over a day: the overnight wires are still news at 07:30
 LEAD_MAX = 70
 
 try:
     import opencc
-    _CC = opencc.OpenCC("s2twp")
+    _CC = opencc.OpenCC("s2tw")
 except ImportError:  # the bar still works without it; only the DW/BBC/RFI wording stays as sent
     _CC = None
     print("warning: opencc not installed; titles are not converted", file=sys.stderr)
@@ -61,29 +66,52 @@ except ImportError:  # the bar still works without it; only the DW/BBC/RFI wordi
 QUOTES = str.maketrans({"“": "「", "”": "」", "‘": "『", "’": "』"})
 
 
+def quotes(s):
+    """「」 for curly quotes, and for straight ASCII double quotes paired up (DW mixes both); an odd last one stays."""
+    n = s.count('"') // 2 * 2
+    out, opening, k = [], True, 0
+    for ch in s:
+        if ch == '"' and k < n:
+            out.append("「" if opening else "」")
+            opening, k = not opening, k + 1
+        else:
+            out.append(ch)
+    return "".join(out).translate(QUOTES)
+
+
+def balanced(s):
+    """A lead cut short inside a quotation gets its closing 」 (or 』) back."""
+    for o, c in (("「", "」"), ("『", "』")):
+        if s.count(o) > s.count(c):
+            s += c
+    return s
+
+
 def tw(s, how):
-    """Taiwan wording: OpenCC for a simplified wire, the word list for all but CNA, 臺 → 台 as the paper writes it,
-    and 「」 for curly quotes."""
+    """Taiwan wording: OpenCC characters for a simplified wire, the word list for all but CNA, 臺 → 台 as the paper
+    writes it."""
     if not how:
         return s
     if how == "full" and _CC:
         s = _CC.convert(s)
-    for a, b in WORDS:
-        s = s.replace(a, b)
-    return s.replace("臺", "台").translate(QUOTES)
+    for rx, b in WORDS:
+        s = rx.sub(b, s)
+    return s.replace("臺", "台")
 
 
 def clean(s):
     s = html.unescape(re.sub(r"<[^>]+>", "", s or ""))
-    return re.sub(r"\s+", " ", s).strip()
+    return quotes(re.sub(r"\s+", " ", s).strip())
 
 
 def first_sentence(s):
     """The lead: the first sentence of the description, without the agency's dateline, at most LEAD_MAX characters."""
     s = re.sub(r"^（中央社[^）]*）", "", clean(s))
-    m = re.match(r"(.+?[。！？])", s)
+    m = re.match(r"(.+?[。！？][」』）]*)", s)
     s = m.group(1) if m else s
-    return s if len(s) <= LEAD_MAX else s[:LEAD_MAX - 1].rstrip("，、；：") + "…"
+    if len(s) > LEAD_MAX:
+        s = s[:LEAD_MAX - 1].rstrip("，、；：「『") + "…"
+    return balanced(s)
 
 
 def when(text):

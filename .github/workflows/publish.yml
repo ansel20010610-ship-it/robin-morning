@@ -42,7 +42,8 @@ jobs:
         run: |
           curl -sf -A "robin-morning/1.0" --max-time 20 https://wiener-morgen-private.duckdns.org/content/wire.json -o content/wire.json || rm -f content/wire.json
           python3 -m venv /tmp/wire && /tmp/wire/bin/pip install -q opencc-python-reimplemented==0.1.7 || echo "::warning::opencc not installed; DW stays in simplified wording"
-          /tmp/wire/bin/python scripts/wire.py || python3 scripts/wire.py || echo "::warning::wire.py produced nothing this hour"
+          PY=/tmp/wire/bin/python; [ -x "$PY" ] || PY=python3   # the system python only when the venv itself failed, not on wire.py's own exit 1
+          "$PY" scripts/wire.py || echo "::warning::wire.py produced nothing this hour"
       - name: Assemble site
         run: |
           mkdir _site

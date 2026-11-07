@@ -393,11 +393,24 @@ function fillWire() {
   getJSON("content/wire.json", { fresh: true }).then((w) => {
     const items = (Array.isArray(w?.items) ? w.items : []).filter((i) => i?.title && /^https:\/\//.test(i.url || ""));
     if (!items.length || !box.isConnected) return;
-    const first = items[0];
+    const first = items[0], tk = box.querySelector(".tk"), ol = box.querySelector("ol");
     box.querySelector(".at").textContent = w.updated ? `${wireTime(w.updated)} 更新・中央社、德國之聲、BBC 中文、法廣` : "";
+    // The five-minute refetch mostly brings the same wires: then only the time above changes, and the list — with its
+    // focus and the row under the reader's finger — is left alone. When wires did change while the list is open, the
+    // row the reader is at is kept where it is on the screen (and keyboard focus on the same link).
+    const sig = items.map((i) => i.url).join("\n");
+    if (box.dataset.sig === sig) { box.hidden = false; return; }
+    box.dataset.sig = sig;
+    const rows = () => [...ol.querySelectorAll("li")];
+    const at = tk.open ? rows().find((li) => li.getBoundingClientRect().bottom > 0) : null;
+    const keep = at && { url: at.querySelector("a").getAttribute("href"), top: at.getBoundingClientRect().top };
+    const focus = document.activeElement?.closest?.(".wire a")?.getAttribute("href");
     box.querySelector("summary").innerHTML = `<span class="wtag">外電</span><span class="de">Telegramme</span><span class="t">${esc(wireTime(first.time))}</span><span class="src">${esc(first.src)}</span><span class="h">${esc(first.title)}</span><span class="more">${items.length} 則</span><span class="less">收起</span>`;
-    box.querySelector("ol").innerHTML = items.map((i) => `<li><a href="${esc(i.url)}" target="_blank" rel="noopener noreferrer"><span class="meta"><span class="t">${esc(wireTime(i.time))}</span><span class="src">${esc(i.src)}</span></span><b>${esc(i.title)}</b>${i.lead ? `<span class="ld">${esc(i.lead)}</span>` : ""}</a></li>`).join("");
+    ol.innerHTML = items.map((i) => `<li><a href="${esc(i.url)}" target="_blank" rel="noopener noreferrer"><span class="meta"><span class="t">${esc(wireTime(i.time))}</span><span class="src">${esc(i.src)}</span></span><b>${esc(i.title)}</b>${i.lead ? `<span class="ld">${esc(i.lead)}</span>` : ""}</a></li>`).join("");
     box.hidden = false;
+    const same = (url) => rows().find((li) => li.querySelector("a").getAttribute("href") === url);
+    if (keep) { const li = same(keep.url); if (li) window.scrollBy(0, li.getBoundingClientRect().top - keep.top); }
+    if (focus) same(focus)?.querySelector("a").focus({ preventScroll: true });
   }).catch(() => {});
 }
 // 刮開頭圖 (style.css .reveal): today's paper carries the day's picture under a sheet of paper cut into one tile per
