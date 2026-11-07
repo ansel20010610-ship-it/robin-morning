@@ -377,8 +377,9 @@ function fillWeather() {
 // filling in, all in Taiwan wording — and, opened, the last day's dozen with their leads. content/wire.json is rebuilt
 // every hour at deploy (no AI); the bar fetches it on each draw and with the five-minute refresh, and keeps itself
 // open across a refill. With no file (a preview, offline on first run) it stays hidden.
-const wireBox = () => `<section class="wire" hidden aria-label="外電"><div class="lbl">外電<span class="de">Telegramme</span><span class="at"></span></div>
-  <details class="tk"><summary></summary><ol></ol></details></section>`;
+// Unlike the weather above it, it has no heading row of its own: a quiet strip, like a length of telegraph tape —
+// a pale band with a gold edge, 外電 in small gold letters at its head (the owner, 2026-11-07: 和天氣不同，但不花俏).
+const wireBox = () => `<section class="wire" hidden aria-label="外電"><details class="tk"><summary></summary><ol></ol><p class="at"></p></details></section>`;
 // 16:05 today, 昨 23:01 for yesterday, 11/5 08:10 before that (the times are Taiwan time, +08:00).
 function wireTime(iso) {
   const d = String(iso).slice(0, 10), hm = String(iso).slice(11, 16), today = twNow().date;
@@ -393,8 +394,8 @@ function fillWire() {
     const items = (Array.isArray(w?.items) ? w.items : []).filter((i) => i?.title && /^https:\/\//.test(i.url || ""));
     if (!items.length || !box.isConnected) return;
     const first = items[0];
-    box.querySelector(".at").textContent = w.updated ? `${wireTime(w.updated)} 更新` : "";
-    box.querySelector("summary").innerHTML = `<span class="t">${esc(wireTime(first.time))}</span><span class="src">${esc(first.src)}</span><span class="h">${esc(first.title)}</span><span class="more">${items.length} 則</span><span class="less">收起</span>`;
+    box.querySelector(".at").textContent = w.updated ? `中央社・德國之聲・BBC 中文・法廣　${wireTime(w.updated)} 更新` : "";
+    box.querySelector("summary").innerHTML = `<span class="wtag">外電</span><span class="t">${esc(wireTime(first.time))}</span><span class="src">${esc(first.src)}</span><span class="h">${esc(first.title)}</span><span class="more">${items.length} 則</span><span class="less">收起</span>`;
     box.querySelector("ol").innerHTML = items.map((i) => `<li><a href="${esc(i.url)}" target="_blank" rel="noopener noreferrer"><span class="meta"><span class="t">${esc(wireTime(i.time))}</span><span class="src">${esc(i.src)}</span></span><b>${esc(i.title)}</b>${i.lead ? `<span class="ld">${esc(i.lead)}</span>` : ""}</a></li>`).join("");
     box.hidden = false;
   }).catch(() => {});
