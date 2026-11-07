@@ -8,8 +8,9 @@ becomes 義大利, 软件 軟體) and curly quotes become 「」. The result is 
 
   {"updated": "...+08:00", "items": [{"src": "中央社", "title": "...", "lead": "...", "url": "...", "time": "...+08:00"}]}
 
-newest first. A source that cannot be read this hour keeps the items it gave last time (from the previous file), so
-one broken feed never empties the bar. With nothing at all to show, the old file is left as it is.
+newest first; "updated" is the time of the last read, written on every run. A source that cannot be read this hour
+keeps the items it gave last time (from the previous file), so one broken feed never empties the bar. With nothing at
+all to show, the old file is left as it is.
 
 Usage: python3 scripts/wire.py            (needs: pip install opencc-python-reimplemented==0.1.7)
 """
@@ -166,14 +167,13 @@ def main():
     if not out:
         print("no items from any source; content/wire.json left as it was", file=sys.stderr)
         return 1
-    if out == before.get("items"):
-        print("unchanged")
-        return 0
+    # "updated" is when the wires were last read, so it moves on every run even when no wire did: the bar's
+    # "16:30 更新" then says the paper looked, not only that something came in.
     data = {"updated": now.astimezone(TW).isoformat(timespec="minutes"), "items": out}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
         f.write("\n")
-    print(f"{len(out)} items" + (f"; failed: {', '.join(failed)}" if failed else ""))
+    print(f"{len(out)} items" + (" (same as before)" if out == before.get("items") else "") + (f"; failed: {', '.join(failed)}" if failed else ""))
     return 0
 
 
