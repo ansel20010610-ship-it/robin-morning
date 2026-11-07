@@ -139,6 +139,8 @@ button { font: inherit; color: inherit; }
 /* opened, the line only names the strip and closes it: the newest wire is the list's first item, not shown twice */
 .wire .tk[open] summary :is(.t, .src, .h, .more) { display: none; }
 .wire .tk[open] summary .less { display: inline; }
+.wire summary .de { display: none; font-family: var(--latin); font-style: italic; font-weight: 500; font-size: 14px; letter-spacing: .02em; color: var(--gold); }
+.wire .tk[open] summary .de { display: inline; } /* opened, the strip names itself like the sections around it */
 .wire ol { list-style: none; margin: 0; padding: 0 12px; }
 .wire li a { display: grid; gap: 2px; padding: 9px 0 10px; border-top: 1px solid var(--rule); text-decoration: none; color: inherit; font-family: var(--sans); }
 .wire li .meta { display: flex; gap: 8px; align-items: baseline; }
