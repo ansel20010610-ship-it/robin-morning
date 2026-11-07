@@ -536,7 +536,7 @@ function viewFront(dateParam) {
     ${prayerBox(issue)}
     ${weatherBox(issue)}
     ${revealBox(issue, arts, read)}
-    ${mains.length ? `<div class="sec-head"><h2>橫線之上</h2><span class="de">Über dem Strich</span><span class="note">${mains.length} 篇</span></div>` : ""}
+    ${mains.length ? `<div class="sec-head"><h2>攤開第一頁</h2><span class="de">Erste Seite</span><span class="note">${mains.length} 篇</span></div>` : ""}
     ${lead ? `<a class="lead${posMark(issue.date, lead, read).cls}"${posMark(issue.date, lead, read).st} href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column, false, issue.date)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
     ${mains.slice(1).map((a) => itemCard(issue.date, a, read)).join("")}
     ${supps.length ? `<div class="sec-head"><h2>橫線之下</h2><span class="de">Unter dem Strich</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
@@ -1751,7 +1751,7 @@ function viewSettings() {
       <p class="small">${isWebKitITP() ? "iPhone／Safari 上內嵌播放器可能只能試聽 30 秒；完整收聽請按『在 Spotify 開啟』，加入歌單不受影響。"
         : "若播放器只播 30 秒試聽，請在同一個瀏覽器登入 open.spotify.com。"}</p>
     </section>
-    <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。首頁最上方每天一段和合本經文，下方「今日禱告」展開可讀整段經文與禱告。「橫線之上」四欄每日刊出（諾坎普散場之後、天亮以前，世界與台灣、診間裡站得住的證據、燈暗下來，聽一首名曲）；「橫線之下」依星期輪值，每天三篇（舊維也納的報紙在頭版畫一條橫線，線上是正經事，線下是文藝副刊，兩個名字從這裡來）；「遠方有動靜」那幾欄只在有重要新進展時刊出。</p>
+    <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。首頁最上方每天一段和合本經文，下方「今日禱告」展開可讀整段經文與禱告。「攤開第一頁」四欄每日刊出（諾坎普散場之後、天亮以前，世界與台灣、診間裡站得住的證據、燈暗下來，聽一首名曲）；「橫線之下」依星期輪值，每天三篇（舊維也納的報紙把文藝副刊排在頭版一條橫線的下面，名字從這裡來）；「遠方有動靜」那幾欄只在有重要新進展時刊出。</p>
       <p>稿件由雲端排程編輯在凌晨分班撰寫，每篇再由另一位編輯獨立查核事實、引文與圖片授權。若某一欄到 07:05 仍未完成，會自動換上預先寫好、查核過的備稿，本報不開天窗。</p>
       <p>唯一的例外是週日：每週的 AI 額度在週日下午 3 點重置。若週日凌晨額度已經用完、當天沒能出齊，就不拿備稿充數，而是等 3 點額度重置後把整期重新寫過，大約傍晚出齊，出齊時會另外通知。首頁會說明當下進度。</p>
       <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>橫線之下</th></tr></thead><tbody>
