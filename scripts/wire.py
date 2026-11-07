@@ -197,7 +197,10 @@ def main():
         return 1
     # "updated" is when the wires were last read, so it moves on every run even when no wire did: the bar's
     # "16:30 更新" then says the paper looked, not only that something came in.
-    data = {"updated": now.astimezone(TW).isoformat(timespec="minutes"), "items": out}
+    stamp = now.astimezone(TW)
+    if os.environ.get("WIRE_ON_THE_HOUR") == "true" and stamp.minute < 15:
+        stamp = stamp.replace(minute=0)  # wire.yml's hourly run: shown as the full hour it was started for
+    data = {"updated": stamp.isoformat(timespec="minutes"), "items": out}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
         f.write("\n")

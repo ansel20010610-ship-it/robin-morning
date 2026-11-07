@@ -1,40 +1,43 @@
 name: Wire (外電)
 
-# Keeps the front page's 外電 bar fresh: every hour it starts publish.yml, whose build reads the wires (scripts/wire.py).
+# Keeps the front page's 外電 bar fresh: on the hour, every hour, it starts publish.yml (hourly=true), whose build reads
+# the wires (scripts/wire.py) and stamps them with the hour itself (the owner, 2026-11-07: 更新時間改成整點).
 # GitHub's scheduler is not to be relied on for this (2026-11-07: the hourly cron in publish.yml never fired in four
-# hours, and other schedules ran up to seven hours late), so the hour is kept by a relay instead: one run stays up for
-# five hours, starting a deploy each hour, and before it ends starts the next run of itself. The relay is started by a
-# push of this file, by hand (workflow_dispatch), or by the cron below whenever GitHub does get round to it — so a
-# broken relay mends itself. The concurrency group keeps it to one run at a time and at most one waiting.
+# hours, and other schedules ran up to seven hours late), so the hours are kept by a relay instead: one run stays up,
+# starting a deploy at each of the next four full hours, and at ten to the next one starts the next run of itself.
+# The relay is started by a push of this file, by hand (workflow_dispatch), or by the cron below whenever GitHub does
+# get round to it — so a broken relay mends itself. The concurrency group keeps it to one run and at most one waiting.
 on:
   push:
     branches: [main]
     paths: [".github/workflows/wire.yml"]
   schedule:
-    - cron: "20 */3 * * *"
+    - cron: "50 */3 * * *"
   workflow_dispatch:
 
 permissions:
   actions: write
 
 concurrency:
-  group: wire-relay
+  group: wire-relay-hourly
   cancel-in-progress: false
 
 jobs:
   relay:
     runs-on: ubuntu-latest
-    timeout-minutes: 320
+    timeout-minutes: 340   # at most 60 + 3 x 60 + 50 minutes of waiting
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
     steps:
-      - name: A deploy every hour for five hours
+      - name: A deploy on each of the next four full hours
         run: |
-          for i in 1 2 3 4 5; do
-            gh workflow run publish.yml --ref main || echo "::warning::could not start publish.yml (hour $i)"
-            [ "$i" = 5 ] || sleep 3600
+          for i in 1 2 3 4; do
+            sleep $(( 3600 - $(date +%s) % 3600 ))   # to the next :00
+            gh workflow run publish.yml --ref main -f hourly=true || echo "::warning::could not start publish.yml (hour $i)"
           done
-      - name: Hand on to the next run
+      - name: Hand on to the next run at ten to the hour
         if: always()
-        run: sleep 3000 && gh workflow run wire.yml --ref main
+        run: |
+          sleep $(( 3000 - $(date +%s) % 3600 > 0 ? 3000 - $(date +%s) % 3600 : 0 ))
+          gh workflow run wire.yml --ref main

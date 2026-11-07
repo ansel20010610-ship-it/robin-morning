@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      hourly:
+        description: "Started by wire.yml on the hour: stamp the 外電 with the full hour"
+        required: false
+        default: "false"
 
 permissions:
   contents: read
@@ -42,7 +47,7 @@ jobs:
           curl -sf -A "robin-morning/1.0" --max-time 20 https://wiener-morgen-private.duckdns.org/content/wire.json -o content/wire.json || rm -f content/wire.json
           python3 -m venv /tmp/wire && /tmp/wire/bin/pip install -q opencc-python-reimplemented==0.1.7 || echo "::warning::opencc not installed; DW stays in simplified wording"
           PY=/tmp/wire/bin/python; [ -x "$PY" ] || PY=python3   # the system python only when the venv itself failed, not on wire.py's own exit 1
-          "$PY" scripts/wire.py || echo "::warning::wire.py produced nothing this hour"
+          WIRE_ON_THE_HOUR="${{ github.event.inputs.hourly }}" "$PY" scripts/wire.py || echo "::warning::wire.py produced nothing this hour"
       - name: Assemble site
         run: |
           mkdir _site
