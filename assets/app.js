@@ -211,6 +211,16 @@ function hideBird(body, date, column) {
     setTimeout(() => { clearInterval(flecks); b.remove(); }, 2700);
   }, { once: true });
 }
+// What closes with an installment (serial.ends from scripts/serial.py; an older file without it still closes a chapter
+// on its last piece): 「第一章　完」, 「第一卷　完」 (the 卷 is the last segment of the part name), or 「全書完」.
+function serialEnde(s) {
+  if (!s) return "";
+  const ends = s.ends || (s.pieces && Number(s.piece) === Number(s.pieces) ? "chapter" : "");
+  if (ends === "book") return "全書完";
+  if (ends === "part") return `${String(s.part || "").split("・").pop() || s.chapter || ""}　完`;
+  if (ends === "chapter") return `${s.chapter || String(s.part || "").split("・").pop() || ""}　完`;
+  return "";
+}
 // 連載 (column serial, scripts/serial.py, editorial/columns/serial.md): the day's installment of the novel, one card
 // of its own under 副刊 — the book's plate, the installment's title, where it stands in the book, the recap (dek). It is
 // outside the day's stamp and the parcel: the novel keeps its own progress on the 連載 tab.
@@ -224,7 +234,7 @@ function serialCard(date, a, read, { plate = true, recap = true } = {}) {
 }
 function serialBox(date, a, read) {
   const s = a.serial || {};
-  return `<a class="sec-head link" href="#/serial" aria-label="連載：全部回目"><h2>連載</h2><span class="de">Fortsetzung folgt</span><span class="note">第 ${esc(String(s.n ?? ""))} 回${s.of ? `・共 ${esc(String(s.of))} 回` : ""} →</span></a>${serialCard(date, a, read, { recap: false })}`; // the front page says what this installment holds (brief), not what came before (the owner, 2026-11-06)
+  return `<a class="sec-head link" href="#/serial" aria-label="長篇：全部回目"><h2>今天這一回</h2><span class="de">Fortsetzung folgt</span><span class="note">第 ${esc(String(s.n ?? ""))} 回${s.of ? `・共 ${esc(String(s.of))} 回` : ""} →</span></a>${serialCard(date, a, read, { recap: false })}`; // the front page says what this installment holds (brief), not what came before (the owner, 2026-11-06)
 }
 // ——— 連載 tab (#/serial, content/serial.json): the book's plate and progress, the next installment to read, the cast,
 // and every installment published so far in order — the one home of the serial; the front page's card is the day's door.
@@ -295,7 +305,7 @@ async function viewSerial(my) {
   const row = ({ date, a }) => { const k = `${date}/${a.column}`, s = a.serial || {}; const inner = `<span class="no" aria-hidden="true">${esc(String(s.n ?? "").padStart(2, "0"))}</span>
       <span class="t"><span class="m"><span class="k">${esc(serialWhere(s))}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title.replace(/^第 \d+ 回・/, ""))}</b></span>`;
     return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}">${inner}</a></li>`; };
-  main.innerHTML = `<div class="wrap serie"><header class="page-title"><h1>連載</h1><span class="de">Fortsetzung folgt</span></header>
+  main.innerHTML = `<div class="wrap serie"><header class="page-title"><h1>長篇</h1><span class="de">Fortsetzungsroman</span></header>
     <section class="buch">
       <h2>《${esc(b.title || "")}》</h2>
       <p class="by">${esc(b.author || "")}${b.year ? `・${esc(String(b.year))}` : ""}${b.original ? `・<i>${esc(b.original)}</i>` : ""}</p>
@@ -309,7 +319,7 @@ async function viewSerial(my) {
     ${Array.isArray(b.cast) && b.cast.length ? castBox(b.cast) : ""}
     ${parts.length ? `<div class="sec-head"><h2>回目</h2><span class="de">Folgen</span><span class="note">${parts.length} 回</span></div>${bands(row)}` : ""}
   </div>`;
-  document.title = `連載｜${S.cfg.title}`;
+  document.title = `長篇｜${S.cfg.title}`;
 }
 
 function itemCard(date, a, read) {
@@ -524,10 +534,10 @@ function viewFront(dateParam) {
     ${prayerBox(issue)}
     ${weatherBox(issue)}
     ${revealBox(issue, arts, read)}
-    ${mains.length ? `<div class="sec-head"><h2>正刊</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
+    ${mains.length ? `<div class="sec-head"><h2>頭版</h2><span class="de">Hauptblatt</span><span class="note">${mains.length} 篇</span></div>` : ""}
     ${lead ? `<a class="lead${posMark(issue.date, lead, read).cls}"${posMark(issue.date, lead, read).st} href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column, false, issue.date)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
     ${mains.slice(1).map((a) => itemCard(issue.date, a, read)).join("")}
-    ${supps.length ? `<div class="sec-head"><h2>副刊</h2><span class="de">Feuilleton</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
+    ${supps.length ? `<div class="sec-head"><h2>翻到裡頁</h2><span class="de">Feuilleton</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
     ${serial.length ? serialBox(issue.date, serial[0], read) : ""}
     ${watch.length ? `<div class="sec-head"><h2>遠方有動靜</h2><span class="de">In der Ferne</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
@@ -788,6 +798,9 @@ async function viewArticle(date, column, my) {
   }
   const body = main.querySelector(".body");
   body.append(renderBody(a));
+  // 連載: a chapter, a 卷 or the book closing with this installment is said at the foot of the text (the owner, 2026-11-07).
+  const ende = serialEnde(a.serial);
+  if (ende) body.insertAdjacentHTML("beforeend", `<p class="ende" role="note"><span>${esc(ende)}</span></p>`);
   hideBird(body, date, column);
   if (a.serial?.n > 1) {
     // The aside arrives after the page has landed: whatever is below it moves down by its height, so the landing follows.
@@ -1078,7 +1091,7 @@ function wocheBox() {
   const stat = (v, l) => `<span><b>${v}</b>${l}</span>`;
   return `<section class="woche" aria-label="這一週"><div class="sec-head"><h2>這一週</h2><span class="de">Diese Woche</span><span class="note">${esc(fmtDate(days[0], "short"))}－${esc(fmtDate(today, "short"))}</span></div>
     <p class="nums">${stat(read.length, "篇讀完")}${stat(done, "天讀完整期")}${stat(marks, "處劃線")}${stat(birds, "隻知更鳥")}</p>
-    ${serial ? `<p class="line">連載這週讀了 ${serial} 回，讀到第 ${n} 回。</p>` : ""}</section>`;
+    ${serial ? `<p class="line">長篇這週讀了 ${serial} 回，讀到第 ${n} 回。</p>` : ""}</section>`;
 }
 function dayBox(date) {
   const e = S.days?.[date];
@@ -1719,10 +1732,10 @@ function viewSettings() {
       <p class="small">${isWebKitITP() ? "iPhone／Safari 上內嵌播放器可能只能試聽 30 秒；完整收聽請按『在 Spotify 開啟』，加入歌單不受影響。"
         : "若播放器只播 30 秒試聽，請在同一個瀏覽器登入 open.spotify.com。"}</p>
     </section>
-    <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。首頁最上方每天一段和合本經文，下方「今日禱告」展開可讀整段經文與禱告。正刊四欄每日刊出（諾坎普散場之後、天亮以前，世界與台灣、診間裡站得住的證據、燈暗下來，聽一首名曲）；副刊依星期輪值，每天三篇；「遠方有動靜」那幾欄只在有重要新進展時刊出。</p>
+    <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。首頁最上方每天一段和合本經文，下方「今日禱告」展開可讀整段經文與禱告。頭版四欄每日刊出（諾坎普散場之後、天亮以前，世界與台灣、診間裡站得住的證據、燈暗下來，聽一首名曲）；裡頁依星期輪值，每天三篇；「遠方有動靜」那幾欄只在有重要新進展時刊出。</p>
       <p>稿件由雲端排程編輯在凌晨分班撰寫，每篇再由另一位編輯獨立查核事實、引文與圖片授權。若某一欄到 07:05 仍未完成，會自動換上預先寫好、查核過的備稿，本報不開天窗。</p>
       <p>唯一的例外是週日：每週的 AI 額度在週日下午 3 點重置。若週日凌晨額度已經用完、當天沒能出齊，就不拿備稿充數，而是等 3 點額度重置後把整期重新寫過，大約傍晚出齊，出齊時會另外通知。首頁會說明當下進度。</p>
-      <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>副刊</th></tr></thead><tbody>
+      <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>裡頁</th></tr></thead><tbody>
       ${wd.map(([k, l]) => `<tr><td>${l}</td><td>${rot[k].map((c) => esc(col(c).name)).join("、")}</td></tr>`).join("")}</tbody></table></div></div>
     </section>
     <section class="set"><h2>印務室</h2><p>給社長看的：今晨五班的報到、補位與缺稿、備稿庫存、最近兩週的出勤。</p>
@@ -1770,7 +1783,7 @@ function viewSettings() {
 }
 
 // ——— Router ———
-const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/saved", "收藏", "saved"], ["#/serial", "連載", "book"], ["#/settings", "設定", "settings"]]; // 音樂 gave its tab to 連載 (the owner, 2026-11-05); the music column lives in 往期 like every column
+const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/saved", "收藏", "saved"], ["#/serial", "長篇", "book"], ["#/settings", "設定", "settings"]]; // 音樂 gave its tab to 連載 (the owner, 2026-11-05); the music column lives in 往期 like every column
 let cleanup = () => {};
 let stopReveal = () => {};
 let lastTapped = null, shownArticle = null; // the card picture just tapped, and the article on screen (for the picture morph)

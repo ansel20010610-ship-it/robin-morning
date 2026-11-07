@@ -289,6 +289,8 @@ def check_one(plan, i, E):
     for k in ("book", "author", "part", "chapter", "piece", "pieces"):
         if k not in s:
             E("serial 缺少 %s" % k)
+    if s.get("ends") != ends_of(plan, i):
+        E("serial.ends 要是 %s（這一回%s）" % (json.dumps(ends_of(plan, i)), ends_label(ends_of(plan, i)) or "沒有收在章末或卷末"))
     if not re.search(r"第 %d 回" % i["n"], art.get("title", "")):
         E("title 要含「第 %d 回」" % i["n"])
     if not (art.get("dek") or "").strip():
@@ -307,6 +309,24 @@ def check_one(plan, i, E):
         E("這一回是一章的開頭，正文要有章名的 h 區塊")
 
 
+def ends_of(plan, i):
+    """What closes with installment i: "book" (the last installment), "part" (the next one opens another 卷), "chapter"
+    (its last piece), else None. The reader sees it as 「第一章　完」 at the foot of the page (app.js)."""
+    inst = plan.get("installments", [])
+    nxt = next((x for x in inst if x["n"] == i["n"] + 1), None)
+    if nxt is None:
+        return "book"
+    if nxt["part"] != i["part"]:
+        return "part"
+    if i["piece"] == i["pieces"]:
+        return "chapter"
+    return None
+
+
+def ends_label(e):
+    return {"book": "（全書完）", "part": "（卷末）", "chapter": "（章末）"}.get(e, "")
+
+
 def status(slug=None):
     slugs = [slug] if slug else sorted(f[:-5] for f in os.listdir(STATE) if f.endswith(".json"))
     t = today()
@@ -321,7 +341,7 @@ def status(slug=None):
             s, plan["title"], len(inst), plan["start"], len(have),
             "，到 %s（還有 %d 天）" % (last, (last - t).days) if last else "", plan.get("ahead", 21), len(missing)))
         for i in missing[:30]:
-            print("  待譯 第 %d 回  %s  %s %s（%d／%d）  %d 字" % (i["n"], i["date"], i["part"], i["chapter"], i["piece"], i["pieces"], i["words"]))
+            print("  待譯 第 %d 回  %s  %s %s（%d／%d）  %d 字%s" % (i["n"], i["date"], i["part"], i["chapter"], i["piece"], i["pieces"], i["words"], ends_label(ends_of(plan, i))))
         errs = []
         for i in have:
             check_one(plan, i, lambda m, i=i: errs.append("第 %d 回（%s）：%s" % (i["n"], i["date"], m)))
@@ -347,7 +367,9 @@ def main():
     elif a.cmd == "src":
         with open(os.path.join(STATE, a.slug, "src", "%03d.json" % a.n), encoding="utf-8") as f:
             e = json.load(f)
-        print("第 %d 回  %s  %s %s（%d／%d）  %d 字%s\n" % (e["n"], e["date"], e["part"], e["chapter"], e["piece"], e["pieces"], e["words"], ("  章名：" + e["title_ru"]) if e.get("title_ru") else ""))
+        plan = load_plan(a.slug)
+        print("第 %d 回  %s  %s %s（%d／%d）  %d 字%s%s\n" % (e["n"], e["date"], e["part"], e["chapter"], e["piece"], e["pieces"], e["words"], ends_label(ends_of(plan, e)), ("  章名：" + e["title_ru"]) if e.get("title_ru") else ""))
+        print("serial.ends: %s\n" % json.dumps(ends_of(plan, e)))
         print("\n\n".join(e["paragraphs"]))
     else:
         plan = load_plan(a.slug)
