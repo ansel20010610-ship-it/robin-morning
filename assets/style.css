@@ -147,7 +147,7 @@ button { font: inherit; color: inherit; }
 .wire li b { font-size: 14px; line-height: 1.5; font-weight: 500; color: var(--ink); }
 .wire li .ld { font-size: 12.5px; line-height: 1.6; color: var(--muted); }
 .wire li a:active b { color: var(--gold-ink); }
-.wire .at { margin: 0; padding: 7px 12px 9px; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 11px; letter-spacing: .04em; color: var(--muted); }
+.wire .at { margin: 0; padding: 0 12px 8px; font-family: var(--sans); font-size: 11px; letter-spacing: .04em; color: var(--muted); font-variant-numeric: tabular-nums; } /* under the strip's name when open: when the wires were last read, and whose they are */
 :is(.wetter, .reveal) .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; padding-bottom: 5px; border-bottom: 1px solid var(--ink); }
 :is(.wetter, .reveal) .lbl .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 14px; margin-left: 8px; color: var(--gold); }
 .wetter .fc { font-family: var(--sans); font-size: 15px; line-height: 1.7; color: var(--ink); letter-spacing: .03em; padding: 10px 0 11px; border-bottom: 1px solid var(--rule); }
