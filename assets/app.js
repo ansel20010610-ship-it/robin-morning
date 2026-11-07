@@ -6,6 +6,7 @@ import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasCl
 import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 import { renderPush, clearNotices } from "./notify.js";
+import { initPull } from "./pull.js";
 import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pressRun, ripples, flip } from "./motion.js";
 import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
 import { pressHtml } from "./press.js";
@@ -1992,6 +1993,17 @@ async function boot() {
   };
   setInterval(refreshFront, 60 * 1000);
   setInterval(refetch, 5 * 60 * 1000);
+  // 下拉更新 (pull.js): the index again, then the page shown drawn afresh (an article changed since is refetched, as
+  // its updated_at no longer matches); the service worker is asked to look for a newer shell too, which, found,
+  // reloads the page once installed (watchUpdates). Returns whether the index changed, for the tab's last word.
+  initPull(async () => {
+    const before = S.index?.generated_at;
+    navigator.serviceWorker?.getRegistration().then((r) => r?.update()).catch(() => {});
+    await loadIndex();
+    if ((location.hash || "#/") === "#/") { enteredFront = false; viewFront(); } else await route();
+    runAutoAdd();
+    return S.index?.generated_at !== before;
+  });
   // The status line says when the paper is the kept copy (frontStatus); back online, the index is fetched again.
   window.addEventListener("offline", refreshFront);
   window.addEventListener("online", refetch);
