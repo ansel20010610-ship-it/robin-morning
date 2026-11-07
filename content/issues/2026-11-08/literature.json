@@ -1,0 +1,412 @@
+{
+  "column": "literature",
+  "date": "2026-11-08",
+  "title": "卡夫卡不准人畫的那隻蟲",
+  "dek": "「不要這個，拜託不要這個！」1915 年秋天，卡夫卡寫信給出版社，怕封面畫家把格里高爾變成的東西畫出來。",
+  "brief": "卡夫卡《變形記》第一句說，格里高爾一覺醒來變成一隻 Ungeziefer，德文裡害蟲的總稱，整本書這個字只出現這一次。1915 年小說付印前，他寫信求出版社：那隻昆蟲本身不能畫，連從遠處讓人看見都不行。書裡唯一叫得出蟲名的，是打雜的女傭，她喊他「老糞金龜」。",
+  "topic_key": "literature:kafka-verwandlung-i-1",
+  "form": "dialogue",
+  "voice": "correspondent",
+  "updated_at": "2026-11-08T01:54:00+08:00",
+  "spoiler": "本文後段談到《變形記》第三部的結局與最後一句",
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/01/De_Kafka_Die_Verwandlung_1177.jpg",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/0/01/De_Kafka_Die_Verwandlung_1177.jpg",
+    "width": 580,
+    "height": 834,
+    "alt": "一頁德文舊雜誌。上方是手寫體的 Franz Kafka:，接著大字標題 DIE VERWANDLUNG 與羅馬數字 I.，正文以放大的 ALS 開頭，排滿整頁。",
+    "caption": "〈變形記〉第一次印出來的樣子：萊比錫月刊《Die weißen Blätter》1915 年 10 月號第 1177 頁。第一句的 Ungeziefer 在行末被斷成 Unge- 與 ziefer 兩半。",
+    "credit": "卡夫卡著；Verlag der Weißen Bücher 印行；掃描經 textkritik.de 上傳 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De_Kafka_Die_Verwandlung_1177.jpg",
+    "made": "1915"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "老朋友："
+    },
+    {
+      "type": "p",
+      "text": "你讀完《變形記》那天問我，格里高爾到底變成了什麼蟲，蟑螂還是甲蟲。我拖到現在才回信，因為去翻了德文原文，想給你一個有根據的答案。結果我找到的是另一件事：寫這本書的人，自己不准任何人回答這個問題。"
+    },
+    {
+      "type": "p",
+      "text": "先把人和書交代清楚，你以後跟別人講起來比較方便。**卡夫卡（Franz Kafka）**1883 年生在布拉格，那時布拉格屬於奧匈帝國，他家是說德語的猶太人。他白天在波希米亞王國的勞工意外保險局上班，晚上寫小說，1924 年死於喉結核，才 40 歲。後來他的姓氏成了形容詞，英文的 Kafkaesque，中文說「卡夫卡式」，韋氏字典的解釋是：像噩夢一樣複雜、怪異、不合邏輯。"
+    },
+    {
+      "type": "p",
+      "text": "**《變形記》（Die Verwandlung）**是他 1912 年寫的中篇，分成三部。1915 年 10 月先登在萊比錫的文學月刊《Die weißen Blätter》（刊名的意思是「白紙」），年底才出單行本。故事你剛讀過：旅行推銷員格里高爾・薩姆沙一早醒來變成了一隻蟲，從此關在自己房裡，父母和妹妹葛蕾特先是照顧他，後來躲他，最後放棄他。這封信我只想跟你談一句，就是第一句。"
+    },
+    {
+      "type": "quote",
+      "original": "Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte, fand er sich in seinem Bett zu einem ungeheueren Ungeziefer verwandelt.",
+      "text": "一天早上，格里高爾・薩姆沙從不安的夢中醒來，發現自己在床上變成了一隻巨大駭人的害蟲。",
+      "cite": "卡夫卡《變形記》第 I 部第一句"
+    },
+    {
+      "type": "p",
+      "text": "「害蟲」是我能找到最接近的中文，還是不夠準。原文是 Ungeziefer，德文裡把蟑螂、跳蚤、臭蟲、老鼠這一類東西放在一起的總稱，德國的大辭典解釋成「有害、寄生的小動物，尤其是昆蟲或某些囓齒類」。它不是一種蟲，是一個類別，而且是拿來嫌惡的類別。英文到現在至少有十六種譯法：有人寫「巨大的昆蟲」，有人寫 vermin（害蟲、害獸），有人寫 bug，也有人乾脆寫成蟑螂。"
+    },
+    {
+      "type": "p",
+      "text": "**整本小說裡，Ungeziefer 這個字只出現這一次。**第一句說完，卡夫卡就不再用它。接下來寫的全是身體：背像盔甲一樣硬，褐色的肚子拱起來、一節一節，好多細腿在眼前無助地晃。寫的是身體，不給名字；敘事一路叫他格里高爾，叫他「他」。"
+    },
+    {
+      "type": "p",
+      "text": "頭圖是 1915 年那本月刊的第一頁。我在掃描上看到一個小地方：排版排到第二行末尾，把這個字切成兩半，Unge- 留在行尾，ziefer 掉到下一行開頭。這當然只是斷字，可是牠第一次印成鉛字，就是斷成兩截出場的。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.04,
+        0.12,
+        0.92,
+        0.1
+      ],
+      "position": "第一頁正文最上面三行",
+      "caption": "第一句：行末的 ungeheueren Unge-，接到下一行開頭的 ziefer verwandelt."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "p",
+      "text": "再看前面那個形容詞 ungeheuer。今天它的意思是「極大」，所以多數譯本寫「巨大」。拆開來，是 un- 加上 geheuer；照德國的字源辭典，geheuer 在中古德語的意思近於「屬於家裡的」，再引申成熟悉、親切，加了 un- 就成了陰森、不對勁，同一個字當名詞用，就是「怪物」。Ungeziefer 也有一段字源：辭典推測它的本義是「不適合獻祭的動物」，古高地德語的 zebar 是祭品、獻祭用的牲畜，前面加個否定，就是連拿去祭神都不配的東西。"
+    },
+    {
+      "type": "p",
+      "text": "兩個字唸起來都是 unge-、unge-，意思裡都藏著一個「不」：不屬於家裡的，不配上祭壇的。卡夫卡想沒想到這段字源，沒有人能替他作證；可是我不相信一個寫小說的人在第一句連用兩個 unge-，耳朵會沒聽見。整個故事寫的，正是一個兒子怎麼一步一步被認定不再是這個家裡的人。",
+      "tag": "推論"
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "p",
+      "text": "這就回到你的問題。1915 年秋天，單行本要付印，出版社寫信告訴卡夫卡，封面要請畫家史塔克（Ottomar Starke）來畫。卡夫卡嚇了一跳，怕畫家真的把那隻蟲畫出來，10 月 25 日寫信給出版社，信裡寫「不要這個，拜託不要這個！」然後是這兩句："
+    },
+    {
+      "type": "quote",
+      "original": "Das Insekt selbst kann nicht gezeichnet werden. Es kann aber nicht einmal von der Ferne aus gezeigt werden.",
+      "text": "那隻昆蟲本身不能畫。就連從遠處讓人看見，都不行。",
+      "cite": "卡夫卡致 Kurt Wolff 出版社，1915 年 10 月 25 日"
+    },
+    {
+      "type": "p",
+      "text": "他客氣地說，他不是要限制畫家的地盤，只是對這個故事自然比較熟。真要畫的話，他提了兩個場面：父母和公司主任站在關著的門前；或者更好的，父母和妹妹在亮著燈的房間裡，通往隔壁那間全黑房間的門開著。他要人畫的是門、黑房間、站在外面的人，不是被看的那個東西。"
+    },
+    {
+      "type": "p",
+      "text": "信裡有個字要留意。私底下跟出版社講話，卡夫卡自己寫的是 Insekt，昆蟲。可是在小說裡，Insekt 一次也沒出現。"
+    },
+    {
+      "type": "p",
+      "text": "封面後來沒有畫蟲。研究卡夫卡出版人的學者 Herweg 寫，最後那張封面圖上既沒有昆蟲，也沒有一家人；流傳下來的那張，畫的是一個看起來完全正常、神情慌亂的男人。初版另有一種硬紙板裝幀，封面連人都沒有，只有作者、書名和出版社的標誌。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Franz_Kafka_Die_Verwandlung_1916_Orig.-Pappband.jpg",
+      "width": 920,
+      "height": 1480,
+      "alt": "一本窄長的舊書，藍綠色紙板封面，上方印著 FRANZ KAFKA 與 VERWANDLUNG，中間一個黑色圓形標誌，裡面是母狼和兩個嬰孩，下方有 KWV 三個字母；底部印著古書商的攝影署名。",
+      "caption": "《變形記》Kurt Wolff 出版社初版的原裝硬紙板裝幀本，「Der jüngste Tag」叢書第 22/23 冊，古書商著錄為 1915 年 11 月印於萊比錫。封面只有作者、書名和出版社的母狼標誌，沒有任何蟲。",
+      "credit": "攝影：H.-P. Haack（萊比錫 Antiquariat Dr. Haack），書現為維也納私人收藏",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Franz_Kafka_Die_Verwandlung_1916_Orig.-Pappband.jpg",
+      "made": "書 1915；照片 2008"
+    },
+    {
+      "type": "p",
+      "text": "不是每個人都聽他的。寫《蘿莉塔》的納博科夫後來在美國教文學，講到這篇，斷定那是一隻甲蟲，背殼底下藏著翅膀，還在自己的教學用書上把牠畫了出來。這件事我站卡夫卡這邊，理由不是作者說了算，是書裡根本沒給答案。"
+    },
+    {
+      "type": "p",
+      "text": "整本書裡叫得出蟲名的，只有一個人：家裡後來請來做粗活的老女傭，高大、骨架粗、一頭白髮亂飛，敘事者說她對格里高爾其實沒什麼嫌惡。她每天早晚把門推開一條縫瞄他一眼，喊「過來呀，老糞金龜！」「你們看這隻老糞金龜！」卡夫卡還補了一句：她大概以為這是友善的話。所以，說格里高爾是糞金龜，唯一的根據是一個女傭隨口取的綽號。納博科夫也讀到了這句，他的結論是，嚴格說來格里高爾不是糞金龜，只是一隻大甲蟲。"
+    },
+    {
+      "type": "spoiler",
+      "text": "以下談到第三部的結局與最後一句"
+    },
+    {
+      "type": "table",
+      "title": "書裡的人怎麼叫他",
+      "head": [
+        "誰",
+        "什麼時候",
+        "原文",
+        "意思"
+      ],
+      "rows": [
+        [
+          "敘事者",
+          "第一部第一句",
+          "ungeheueren Ungeziefer",
+          "巨大駭人的害蟲（全書只這一次）"
+        ],
+        [
+          "女傭",
+          "第三部",
+          "alter Mistkäfer",
+          "老糞金龜"
+        ],
+        [
+          "格里高爾自問",
+          "第三部，妹妹拉琴時",
+          "ein Tier",
+          "一隻動物"
+        ],
+        [
+          "葛蕾特",
+          "第三部，房客退租後",
+          "Untier／es／dieses Tier",
+          "怪物／牠／這隻動物"
+        ],
+        [
+          "葛蕾特",
+          "同一段，尖叫時",
+          "er",
+          "他"
+        ],
+        [
+          "女傭",
+          "第三部，隔天清晨",
+          "es ist krepiert",
+          "牠翹了"
+        ],
+        [
+          "葛蕾特",
+          "看著屍體",
+          "er",
+          "他"
+        ],
+        [
+          "女傭",
+          "最後一次登場",
+          "das Zeug von nebenan",
+          "隔壁那些東西"
+        ]
+      ],
+      "caption": "依 Project Gutenberg 據 1917 年版轉錄的德文本整理。"
+    },
+    {
+      "type": "p",
+      "text": "我最想讓你回頭再讀的，是妹妹那一段。第三部，家裡把房間分租給三個房客，葛蕾特在客廳替他們拉小提琴。格里高爾聽得出神，一路爬進客廳，卡夫卡讓他在這裡問自己一句：音樂這樣打動他，難道他是一隻動物嗎？房客看見他，當場說要退租。"
+    },
+    {
+      "type": "p",
+      "text": "葛蕾特隨即對父母說：「我不要在這頭怪物面前說我哥哥的名字，所以只說：我們得想辦法擺脫牠。」父親說她千百倍有理。她越說越急，要父親丟掉「牠就是格里高爾」這個念頭：如果牠是格里高爾，他早就明白人不可能跟這樣一隻動物住在一起，自己走掉了。"
+    },
+    {
+      "type": "p",
+      "text": "這句話的代名詞，德文前半是 es，後半變成 er，就像中文從「牠」換成「他」。她正在說服父親把哥哥當成一隻動物，可是一假設牠懂事、會替家人著想，代名詞就自己回到了人身上。再過兩句，她看見他又動了，尖叫：「你看，爸爸，他又開始了！」第二天早上看著屍體，她說的也是：「你們看，他多瘦啊。」"
+    },
+    {
+      "type": "p",
+      "text": "那天夜裡他就死了。他帶著感動和愛想著家人，覺得自己必須消失，這個意見也許比妹妹還要堅決。塔樓的鐘敲了凌晨三點，窗外開始轉亮，他還趕上了；然後頭垂下去。他背上還嵌著第二部父親丟的那顆蘋果，已經爛了。清晨女傭進門，拿掃把戳他兩下，推開臥室門喊：「您快來看，牠翹了，躺在那兒，翹得透透的！」她用的動詞是 krepieren，德文裡說動物死掉的字，用在人身上就是粗話。"
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "p",
+      "text": "寫完這篇七年後，1919 年 11 月，卡夫卡給父親寫了一封長信，手寫一百多頁，始終沒有交到父親手上，1952 年才印出來。信裡 Ungeziefer 出現了兩次。一次是回憶父親怎麼對待他的朋友，意第緒語劇團的演員勒維（Jizchak Löwy）：父親根本不認識人家，就拿他跟害蟲相比，還順手搬出那句狗和跳蚤的俗語。卡夫卡當時記下：父親這樣說我的朋友，只因為他是我的朋友。另一次在信尾，卡夫卡替父親設想回信，讓父親說：世上有兩種鬥爭，一種是騎士的，一種是害蟲的，害蟲不只叮人，還要吸血維生，「那就是你」。"
+    },
+    {
+      "type": "p",
+      "text": "我不會跟你說這封信解開了那隻蟲。小說早了七年，中間的因果我接不起來。我只確定一件事：第一句挑的那個字，在卡夫卡家裡，是父親罵人的話。"
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "p",
+      "text": "最後講結尾，因為卡夫卡自己很討厭它。1914 年 1 月 19 日的日記，他寫：在辦公室裡一陣害怕一陣自信；對《變形記》非常反感，結尾讀不下去，整篇幾乎從根上就不完美；要不是當時被一趟出差打斷，會好得多。"
+    },
+    {
+      "type": "p",
+      "text": "這一點我不同意他。格里高爾死的那天，三個人幾個月來第一次一起出門，搭電車到城外，車廂裡只有他們，曬滿了暖暖的太陽。他們盤算搬家，換一間小一點、便宜一點、地段好一點的，不再住那間「還是格里高爾挑的」公寓。然後父母幾乎同時注意到，女兒雖然這陣子臉頰都熬白了，卻已經長成一個漂亮豐潤的姑娘，該替她找個好丈夫了。"
+    },
+    {
+      "type": "quote",
+      "original": "Und es war ihnen wie eine Bestätigung ihrer neuen Träume und guten Absichten, als am Ziele ihrer Fahrt die Tochter als erste sich erhob und ihren jungen Körper dehnte.",
+      "text": "到了終點，女兒第一個站起來，伸展她年輕的身體；在他們看來，這就像是證實了他們新的夢想與美好的打算。",
+      "cite": "卡夫卡《變形記》第 III 部最後一句"
+    },
+    {
+      "type": "p",
+      "text": "你翻回第一句。格里高爾是從「不安的夢」裡醒來的；最後一句父母的「新的夢想」，德文是同一個字。中間還有一個夢，在第二部：格里高爾暗中打算，明年不管多貴，都要送愛拉小提琴的妹妹去讀音樂學院，跟她提起時，這件事「永遠只是一個美夢」。"
+    },
+    {
+      "type": "p",
+      "text": "那把小提琴，房客退租那晚，葛蕾特把它放在母親膝上就跑開了。母親的手一抖，琴從膝上滑到地上，響了一聲。從那一聲以後，書裡再也沒有提到它。"
+    },
+    {
+      "type": "facts",
+      "title": "作品與版本",
+      "items": [
+        [
+          "作者",
+          "卡夫卡（Franz Kafka，1883–1924），布拉格"
+        ],
+        [
+          "作品",
+          "《變形記》（Die Verwandlung），中篇，三部"
+        ],
+        [
+          "寫作",
+          "1912 年"
+        ],
+        [
+          "首次發表",
+          "《Die weißen Blätter》第 2 年第 10 期，1915 年 10 月，第 1177–1230 頁，萊比錫"
+        ],
+        [
+          "單行本",
+          "Kurt Wolff 出版社「Der jüngste Tag」叢書第 22/23 冊，1915 年底"
+        ],
+        [
+          "本文依據的版本",
+          "Project Gutenberg #22367（據 1917 年 Kurt Wolff 版轉錄）；第一句另對照 1915 年《Die weißen Blätter》第 1177 頁掃描"
+        ],
+        [
+          "引文位置",
+          "第一句：第 I 部開頭；女傭、葛蕾特、臨終與結尾：第 III 部；音樂學院的「美夢」：第 II 部"
+        ],
+        [
+          "其他原文",
+          "卡夫卡 1915 年 10 月 25 日致出版社信；1914 年 1 月 19 日日記；1919 年《給父親的信》"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Die Verwandlung（eBook #22367，據 1917 年 Kurt Wolff 版轉錄）",
+      "publisher": "Project Gutenberg",
+      "date": "2007-08-21",
+      "url": "https://www.gutenberg.org/ebooks/22367",
+      "note": "全文；2017-12-29 更新版。第 I 部第一句；第 II 部音樂學院計畫與蘋果；第 III 部女傭、拉琴、葛蕾特的話、臨終、結尾。字數統計（Ungeziefer、Insekt、Träume、Violine）以此版為準"
+    },
+    {
+      "title": "File:De Kafka Die Verwandlung 1177.jpg（Die weißen Blätter 1915 年 10 月號第 1177 頁）",
+      "publisher": "Wikimedia Commons／textkritik.de",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:De_Kafka_Die_Verwandlung_1177.jpg",
+      "note": "第一句與斷字 Unge-/ziefer"
+    },
+    {
+      "title": "Kafka：Drucke zu Lebzeiten（Die weißen Blätter 2. Jg., Heft 10, Oktober 1915, S. 1177–1230）",
+      "publisher": "textkritik.de",
+      "date": "",
+      "url": "http://www.textkritik.de/kafkazs/kafkadrucke.htm",
+      "note": "首刊卷期與頁碼"
+    },
+    {
+      "title": "Kafkas erster Verleger（Nikola Herweg）",
+      "publisher": "Münchner Beiträge zur jüdischen Geschichte und Kultur, 2024 年第 1 期，頁 60–68",
+      "date": "2024-04-01",
+      "url": "https://mb-jgk.ub.uni-muenchen.de/index.php/mbjgk/article/view/331",
+      "note": "引卡夫卡 1915-10-25 致 Kurt Wolff 出版社信全文（出自《Kurt Wolff. Briefwechsel eines Verlegers》第 37 頁）；封面「既無昆蟲也無全家人」。Herweg 寫單行本「最後在 1916 年」出版，與 Wikipedia 的 1915 年 12 月、古書商著錄的 1915 年 11 月印刷不同，正文寫「年底」"
+    },
+    {
+      "title": "Ungeziefer（含 Pfeifer《德語字源辭典》條目）",
+      "publisher": "DWDS",
+      "date": "",
+      "url": "https://www.dwds.de/wb/Ungeziefer",
+      "note": "釋義與字源：mhd. ungezibere，ahd. zebar「Opfer, Opfertier」"
+    },
+    {
+      "title": "ungeheuer（含 Pfeifer《德語字源辭典》條目）",
+      "publisher": "DWDS",
+      "date": "",
+      "url": "https://www.dwds.de/wb/ungeheuer",
+      "note": "geheuer、ungeheuer 的字源與今義"
+    },
+    {
+      "title": "krepieren",
+      "publisher": "DWDS",
+      "date": "",
+      "url": "https://www.dwds.de/wb/krepieren",
+      "note": "用於動物＝verenden；用於人標 vulgär"
+    },
+    {
+      "title": "Tagebücher 1910–1923：1914",
+      "publisher": "Projekt Gutenberg-DE",
+      "date": "",
+      "url": "https://projekt-gutenberg.org/authors/franz-kafka/books/tagebuecher-19101923/chapter/6/",
+      "note": "1914 年 1 月 19 日：Großer Widerwillen vor ›Verwandlung‹. Unlesbares Ende."
+    },
+    {
+      "title": "Brief an den Vater",
+      "publisher": "Projekt Gutenberg-DE",
+      "date": "",
+      "url": "https://projekt-gutenberg.org/authors/franz-kafka/books/brief-an-den-vater/chapter/2/",
+      "note": "Löwy 與 Ungeziefer；信尾設想的父親回信「Kampf des Ungeziefers … das bist Du」"
+    },
+    {
+      "title": "Brief an den Vater",
+      "publisher": "Wikipedia（德文）",
+      "date": "",
+      "url": "https://de.wikipedia.org/wiki/Brief_an_den_Vater",
+      "note": "1919 年 11 月寫、手寫 103 頁、未交給父親、1952 年首刊"
+    },
+    {
+      "title": "Die Verwandlung",
+      "publisher": "Wikipedia（德文）",
+      "date": "",
+      "url": "https://de.wikipedia.org/wiki/Die_Verwandlung",
+      "note": "1912 年寫成；1915 年 10 月首刊、12 月出單行本；Starke 繪封面"
+    },
+    {
+      "title": "Franz Kafka",
+      "publisher": "Wikipedia（英文）",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Franz_Kafka",
+      "note": "生卒、保險局任職"
+    },
+    {
+      "title": "The Metamorphosis",
+      "publisher": "Wikipedia（英文）",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/The_Metamorphosis",
+      "note": "ungeheueren Ungeziefer 至少十六種英譯；納博科夫《文學講稿》認為是甲蟲、女傭的 dung beetle 只是友善的稱呼"
+    },
+    {
+      "title": "Franz Kafka Says the Insect in The Metamorphosis Should Never Be Drawn; and Vladimir Nabokov Draws It Anyway（Josh Jones）",
+      "publisher": "Open Culture",
+      "date": "2022-03-17",
+      "url": "https://openculture.com/2015/10/franz-kafka-says-the-insect-in-the-metamorphosis-should-never-be-drawn.html",
+      "note": "原版封面是一個看來正常、神情慌亂的男人；納博科夫在教學用書上畫了這隻蟲"
+    },
+    {
+      "title": "Metamorphosis（eBook #5200，David Wyllie 英譯）",
+      "publisher": "Project Gutenberg",
+      "date": "2005-08-17",
+      "url": "https://www.gutenberg.org/ebooks/5200",
+      "note": "第一句譯作 horrible vermin；女傭那句譯作 old dung-beetle"
+    },
+    {
+      "title": "Kafkaesque",
+      "publisher": "Merriam-Webster",
+      "date": "",
+      "url": "https://www.merriam-webster.com/dictionary/Kafkaesque",
+      "note": "釋義；最早用例 1939"
+    },
+    {
+      "title": "File:Franz Kafka Die Verwandlung 1916 Orig.-Pappband.jpg",
+      "publisher": "Wikimedia Commons（H.-P. Haack）",
+      "date": "2008-04-13",
+      "url": "https://commons.wikimedia.org/wiki/File:Franz_Kafka_Die_Verwandlung_1916_Orig.-Pappband.jpg",
+      "note": "古書商著錄：Leipzig: Kurt Wolff 1915，72 頁，Der jüngste Tag 22/23，1915 年 11 月 Poeschel & Trepte 印刷"
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "column": "mystery",
+  "date": "2026-11-08",
+  "title": "宇宙膨脹的速度，算出來 67，量出來 73",
+  "dek": "7%。宇宙現在膨脹得多快，兩套方法各自把誤差壓到 1% 上下，答案卻差了這麼多，十年來沒有一邊讓步。",
+  "brief": "宇宙現在膨脹得多快，從宇宙最早的光往前推算是 67，從近處星系一階一階量上來是 73，兩邊的誤差都只有 1% 上下。近處那條路最可疑的一環，韋伯太空望遠鏡已經重查一遍，沒找到錯。天文學家把這叫哈伯張力。",
+  "topic_key": "mystery:cosmos-hubble-tension",
+  "form": "number",
+  "voice": "detective",
+  "updated_at": "2026-11-08T01:56:28+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/NGC_5584_%28Webb_NIRCam_%2B_Hubble_WFC3%29_%2801H9NTTMJBGTV6GVSGQ723MRQW%29.png/1280px-NGC_5584_%28Webb_NIRCam_%2B_Hubble_WFC3%29_%2801H9NTTMJBGTV6GVSGQ723MRQW%29.png",
+    "width": 1280,
+    "height": 1203,
+    "alt": "一個正面朝向我們的螺旋星系，中央偏黃，旋臂上散布藍白色的亮點和暗紅色的塵埃帶，背景是黑色太空與零星的小星系。",
+    "caption": "螺旋星系 NGC 5584，距地球約 7,200 萬光年。星系裡有造父變星，也有過一顆 Ia 型超新星，距離梯子的第二階和第三階在同一個星系裡碰頭。韋伯太空望遠鏡近紅外相機與哈伯望遠鏡 WFC3 的合成影像，NASA 2023 年 9 月發布。",
+    "credit": "Image: NASA, ESA, CSA, Adam G. Riess (JHU, STScI)；Image Processing: Alyssa Pagan (STScI)",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:NGC_5584_(Webb_NIRCam_%2B_Hubble_WFC3)_(01H9NTTMJBGTV6GVSGQ723MRQW).png",
+    "made": "2023"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1935 年，英國天文學家**愛丁頓**（Arthur Eddington）在《皇家天文學會月刊》上宣布，他用相對論加量子力學，算出了星系彼此退開的極限速度，而且認定這就是答案。"
+    },
+    {
+      "type": "quote",
+      "text": "我現在已經得到這個問題的解答，我認為它是最終的。結果是每百萬秒差距每秒 865 公里。",
+      "original": "I have now been able to reach a solution of the problem which I regard as definitive. The result is 865 km. per sec. per megaparsec.",
+      "cite": "愛丁頓，〈星系的退行速度〉，《皇家天文學會月刊》，1935"
+    },
+    {
+      "type": "p",
+      "text": "今天天文學家手上的數字在 67 到 73 之間，愛丁頓大了十二倍左右。"
+    },
+    {
+      "type": "p",
+      "text": "這個數字叫**哈伯常數**，名字來自美國天文學家哈伯（Edwin Hubble），哈伯太空望遠鏡紀念的就是他。1929 年他發表論文，指出星系離我們越遠，退開得越快；哈伯常數說的是快多少：距離每多 326 萬光年（1 百萬秒差距），退開的速度就多出六七十公里每秒。數字越大，宇宙現在膨脹得越快。"
+    },
+    {
+      "type": "p",
+      "text": "案情是這樣：今天有兩套方法量它，誤差都壓到 1% 上下，**一套得到約 67，一套得到約 73，相差約 7%**，天文學界叫它「哈伯張力」。兩套都沒做錯的話，該改的就是描述整個宇宙的那套標準模型，所以這個差距吵了將近十年。"
+    },
+    {
+      "type": "h",
+      "text": "500，比地球還年輕"
+    },
+    {
+      "type": "p",
+      "text": "哈伯 1929 年的第一個估計是 500。假設宇宙一直等速膨脹，起點離現在的時間就是哈伯常數的倒數，500 算出來只有 20 億年左右；可是到 1931 年，岩石定年已經給出地球 20 到 30 億歲。宇宙比地球還年輕，說不過去。"
+    },
+    {
+      "type": "p",
+      "text": "之後的修正幾乎都往下走。造父變星是會規律脈動的亮星，週期和本身的亮度綁在一起，可以當量距離的標準燈；二戰期間，天文學家巴德（Walter Baade）趁洛杉磯燈火管制在威爾遜山觀測，發現它分兩種，星系的距離一下子放大一倍。到了 1970、80 年代，兩派天文學家各寫了一系列論文，一派說 50 到 57，一派說 90 到 110。"
+    },
+    {
+      "type": "p",
+      "text": "1999 年 5 月，NASA 宣布哈伯太空望遠鏡的「關鍵計畫」量到 70，誤差 10%，帶隊的是天文學家弗里德曼（Wendy Freedman）。哈佛的天文學家柯什納在同一份新聞稿裡打了個比方。"
+    },
+    {
+      "type": "quote",
+      "text": "我們以前差到兩倍，現在為了 10% 一樣吵得起勁。差兩倍，像是不確定自己有一隻腳還是兩隻腳；10% 像是在爭一根腳趾。",
+      "original": "We used to disagree by a factor of 2; now we are just as passionate about 10 percent. A factor of two is like being unsure if you have one foot or two. Ten percent is like arguing about one toe.",
+      "cite": "柯什納，NASA 新聞稿，1999 年 5 月 25 日"
+    },
+    {
+      "type": "p",
+      "text": "現在吵的是 7%，比那根腳趾還小一點。"
+    },
+    {
+      "type": "h",
+      "text": "67 是從一張老照片推出來的"
+    },
+    {
+      "type": "p",
+      "text": "證物一，低的數字，主要來自歐洲太空總署的普朗克衛星（Planck）。它拍的是宇宙微波背景：宇宙大約 37 萬歲時放出的光，到今天還布滿整片天空。那時的宇宙是一鍋熱湯，聲波在裡面能傳多遠，物理算得出來；這段距離在天上撐開約 0.6 度，普朗克量到萬分之三的精度。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "map",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/WMAP_2012.png/1280px-WMAP_2012.png",
+      "width": 1280,
+      "height": 640,
+      "alt": "一張橢圓形的全天圖，布滿藍、綠、黃、紅交錯的細小斑點。",
+      "caption": "宇宙微波背景的全天溫度圖，顏色代表極小的溫度差。這張是普朗克的前一代、NASA 的 WMAP 衛星以九年資料畫成，2012 年發布；普朗克在同一片天空上量得更細。",
+      "credit": "NASA / WMAP Science Team",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:WMAP_2012.png",
+      "made": "2012",
+      "depicts": "宇宙約 37 萬歲時發出的光"
+    },
+    {
+      "type": "p",
+      "text": "知道一把尺真正多長、看起來多大，就算得出它多遠；再用天文學界的標準宇宙模型從 37 萬年推到今天，得到 67.4，誤差 0.5。**67 並沒有直接量今天的宇宙，它是一張很老的照片，加上一套模型，一路推到 138 億年後的今天。**"
+    },
+    {
+      "type": "p",
+      "text": "南極和智利的望遠鏡照同一條路走，都在 67 到 68 之間；不用微波背景、改用星系分布裡同一把聲波尺，也落在低的這邊。"
+    },
+    {
+      "type": "h",
+      "text": "73 是一階一階爬上來的"
+    },
+    {
+      "type": "p",
+      "text": "證物二，高的數字，從近處量起，方法叫「距離梯子」。第一階用幾何：蓋亞衛星（Gaia）測的銀河系恆星視差、星系 NGC 4258 中心的水分子微波雷射、大麥哲倫雲裡互相遮擋的雙星。第二階是造父變星，第三階是 Ia 型超新星，一種亮度可以校準、看得很遠的恆星爆炸，每一階用前一階校準，最後拿遠方星系的超新星和退開速度算出哈伯常數。"
+    },
+    {
+      "type": "p",
+      "text": "2022 年，約翰霍普金斯大學的物理學家黎斯（Adam Riess）帶領的 SH0ES 團隊，用哈伯望遠鏡量了 42 顆超新星所在星系裡的造父變星，得到 73.04，誤差 1.04，和普朗克差了 5σ，也就是統計上一般認定「不像巧合」的門檻。"
+    },
+    {
+      "type": "h",
+      "text": "頭號嫌疑是擠在一起的星光"
+    },
+    {
+      "type": "p",
+      "text": "梯子越往上越遠，造父變星在影像裡越小，旁邊恆星的光可能混進來，距離就量偏了。2024 年，黎斯團隊用解析度更高的韋伯太空望遠鏡重拍一千多顆造父變星，最遠到 1.3 億光年外的 NGC 5468。兩台望遠鏡量出的距離幾乎一樣，「沒察覺的擁擠」以 8.2σ 被排除。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Cepheid_Variable_Star_P42_in_NGC_5468_%282024-108%29.png/1280px-Cepheid_Variable_Star_P42_in_NGC_5468_%282024-108%29.png",
+      "width": 1280,
+      "height": 716,
+      "alt": "左右兩格放大到看得見像素的星場，左邊較清楚，正中一顆星與周圍的點分得開；右邊較模糊，光點糊在一起。",
+      "caption": "星系 NGC 5468 裡編號 P42 的造父變星。左邊是韋伯近紅外相機，右邊是哈伯 WFC3 紅外通道，拍的是同一小塊天區；每個像素可能是一顆或好幾顆星。NASA 2024 年 3 月發布。",
+      "credit": "Image: NASA, ESA, CSA, STScI, Adam G. Riess (JHU, STScI)",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cepheid_Variable_Star_P42_in_NGC_5468_(2024-108).png",
+      "made": "2024"
+    },
+    {
+      "type": "quote",
+      "text": "量測誤差排除之後，剩下的是一個真實而令人興奮的可能：我們誤解了宇宙。",
+      "original": "With measurement errors negated, what remains is the real and exciting possibility we have misunderstood the universe.",
+      "cite": "黎斯，NASA 新聞稿，2024 年 3 月 11 日"
+    },
+    {
+      "type": "p",
+      "text": "另一位證人的說法不同。帶過關鍵計畫的弗里德曼，現在主持芝加哥—卡內基哈伯計畫（CCHP），改用不靠造父變星的標準燈：紅巨星核心點燃氦的那一刻，亮度有個穩定的上限。她的團隊 2025 年得到 70.39，誤差約 1.9，論文說結果與標準模型相符。"
+    },
+    {
+      "type": "p",
+      "text": "2026 年 4 月，117 位作者署名的「本地距離網路」（H0DN）報告，把各種近處量法合起來算，得到 73.50，誤差 0.81；拿掉造父變星或拿掉紅巨星，答案幾乎不動。兩份證詞都還在卷宗裡，沒有誰撤回。"
+    },
+    {
+      "type": "svg",
+      "title": "近年幾個主要的量測值",
+      "svg": "<svg viewBox=\"0 0 340 276\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"210.0\" y1=\"24\" x2=\"210.0\" y2=\"254\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><text x=\"210.0\" y=\"22\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">約 68</text><line x1=\"285.0\" y1=\"24\" x2=\"285.0\" y2=\"254\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><text x=\"285.0\" y=\"22\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">約 73</text><text x=\"8\" y=\"12\" font-size=\"10\" class=\"muted\">哈伯常數，單位：公里／秒／百萬秒差距</text><text x=\"8\" y=\"38\" font-size=\"10.5\" class=\"muted\">早期宇宙＋標準模型推算</text><text x=\"8\" y=\"57\" font-size=\"11\" class=\"ink\">普朗克衛星（2018）</text><text x=\"8\" y=\"69\" font-size=\"9.5\" class=\"muted\">67.4 ± 0.5</text><line x1=\"193.5\" y1=\"62\" x2=\"208.5\" y2=\"62\" class=\"gold\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"201.0\" cy=\"62\" r=\"4\" class=\"gold\" fill=\"currentColor\"/><text x=\"8\" y=\"87\" font-size=\"11\" class=\"ink\">南極望遠鏡 SPT-3G（2025）</text><text x=\"8\" y=\"99\" font-size=\"9.5\" class=\"muted\">66.66 ± 0.60</text><line x1=\"180.9\" y1=\"92\" x2=\"198.9\" y2=\"92\" class=\"gold\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"189.9\" cy=\"92\" r=\"4\" class=\"gold\" fill=\"currentColor\"/><text x=\"8\" y=\"117\" font-size=\"11\" class=\"ink\">ACT＋DESI 星系巡天（2025）</text><text x=\"8\" y=\"129\" font-size=\"9.5\" class=\"muted\">68.43 ± 0.27</text><line x1=\"212.4\" y1=\"122\" x2=\"220.5\" y2=\"122\" class=\"gold\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"216.5\" cy=\"122\" r=\"4\" class=\"gold\" fill=\"currentColor\"/><text x=\"8\" y=\"152\" font-size=\"10.5\" class=\"muted\">近處星系直接量</text><text x=\"8\" y=\"171\" font-size=\"11\" class=\"ink\">SH0ES 造父變星（2022）</text><text x=\"8\" y=\"183\" font-size=\"9.5\" class=\"muted\">73.04 ± 1.04</text><line x1=\"270.0\" y1=\"176\" x2=\"301.2\" y2=\"176\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"285.6\" cy=\"176\" r=\"4\" class=\"accent\" fill=\"currentColor\"/><text x=\"8\" y=\"201\" font-size=\"11\" class=\"ink\">CCHP 紅巨星（2025）</text><text x=\"8\" y=\"213\" font-size=\"9.5\" class=\"muted\">70.39 ± 1.9</text><line x1=\"216.8\" y1=\"206\" x2=\"274.9\" y2=\"206\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"245.9\" cy=\"206\" r=\"4\" class=\"accent\" fill=\"currentColor\"/><text x=\"8\" y=\"231\" font-size=\"11\" class=\"ink\">H0DN 共識（2026）</text><text x=\"8\" y=\"243\" font-size=\"9.5\" class=\"muted\">73.50 ± 0.81</text><line x1=\"280.3\" y1=\"236\" x2=\"304.7\" y2=\"236\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"292.5\" cy=\"236\" r=\"4\" class=\"accent\" fill=\"currentColor\"/><line x1=\"150\" y1=\"254\" x2=\"330\" y2=\"254\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"150.0\" y1=\"254\" x2=\"150.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"150.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">64</text><line x1=\"180.0\" y1=\"254\" x2=\"180.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"180.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">66</text><line x1=\"210.0\" y1=\"254\" x2=\"210.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"210.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">68</text><line x1=\"240.0\" y1=\"254\" x2=\"240.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"240.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">70</text><line x1=\"270.0\" y1=\"254\" x2=\"270.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"270.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">72</text><line x1=\"300.0\" y1=\"254\" x2=\"300.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"300.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">74</text><line x1=\"330.0\" y1=\"254\" x2=\"330.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"330.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">76</text></svg>",
+      "caption": "圓點是各團隊公布的中央值，橫線是一倍標準差的誤差範圍（CCHP 的 1.9 是本報把統計、系統與超新星三項誤差合起來的結果）。虛線標出綜述歸納的兩群：約 68 與約 73。2017 年重力波量到的 70（上 12、下 8）範圍太寬，沒有畫進圖裡。資料：Planck 2018、SPT-3G 2025、ACT DR6 2025、Riess 等 2022、Freedman 等 2025、H0DN 2026。"
+    },
+    {
+      "type": "h",
+      "text": "多 7% 或少 7%"
+    },
+    {
+      "type": "p",
+      "text": "我照前面那個粗算法算了一下：67.4 倒推約 145 億年，73 約 134 億年，差十億年出頭。真實的宇宙膨脹時快時慢，這只是量級，但 7% 不是小數點後面的事。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "真要改模型，空間很窄。巴塞隆納大學的宇宙學家韋爾德（Licia Verde）等人 2024 年的綜述寫，那等於把聲波尺改短約 7%，新的物理只能在宇宙 37 萬歲前那一小段時間起作用、隨即消失；至今每個嘗試都弄壞了別處的吻合，沒有一種解法得到共識。"
+    },
+    {
+      "type": "table",
+      "title": "三種嫌疑",
+      "head": [
+        "嫌疑",
+        "站得住的理由",
+        "卡在哪裡"
+      ],
+      "rows": [
+        [
+          "近處量錯了",
+          "不靠造父變星的紅巨星量法得到 70.39，比 73 低",
+          "韋伯重查以 8.2σ 排除星光擁擠；H0DN 拿掉造父變星，答案幾乎不動"
+        ],
+        [
+          "早期宇宙少算了東西",
+          "普朗克、SPT、ACT、DESI 各自獨立，都落在 67 到 68",
+          "聲波尺要改短約 7%，至今每個修法都弄壞別處"
+        ],
+        [
+          "我們住在一個大空洞裡",
+          "空洞裡的物質往外流，近處量到的膨脹自然偏快；2026 年仍有論文替它辯護",
+          "同年一篇十年回顧認為，這類在地解釋早就被排除，算不上主要原因"
+        ]
+      ],
+      "caption": "資料：Riess 等 2024、Freedman 等 2025、H0DN 2026、Verde 等 2024、Banik 等 2026、Cai 與 Wang 2026。"
+    },
+    {
+      "type": "p",
+      "text": "還有一位誰都不靠的證人：2017 年 8 月兩顆中子星合併，從它的重力波量到 70，誤差上 12、下 8，寬到兩派都能引用。"
+    },
+    {
+      "type": "p",
+      "text": "卷宗讀到這裡，我押早期宇宙那一端缺了一塊：近處換了方法、換了望遠鏡，答案大多還在 73 附近，頭號嫌疑也查過了。但弗里德曼的 70 還擺著，模型那邊也還沒有人交出不弄壞別處的修法。"
+    },
+    {
+      "type": "p",
+      "text": "2026 年 12 月 2 日，歐洲太空總署會公布蓋亞衛星的第四批資料，用的是 66 個月的觀測。距離梯子最底下那一階，銀河系恆星的視差，會換上新的一批。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Speed of Recession of the Galaxies",
+      "publisher": "Monthly Notices of the Royal Astronomical Society 95, 636（A. S. Eddington）",
+      "date": "1935-06",
+      "url": "https://doi.org/10.1093/mnras/95.8.636",
+      "note": "引文與「距離縮短 20-30 per cent」讀自 NASA ADS 掃描原頁 https://articles.adsabs.harvard.edu/pdf/1935MNRAS..95..636E"
+    },
+    {
+      "title": "A relation between distance and radial velocity among extra-galactic nebulae",
+      "publisher": "PNAS 15, 168（E. Hubble）",
+      "date": "1929-03-15",
+      "url": "https://doi.org/10.1073/pnas.15.3.168",
+      "note": "速度—距離關係的原始論文；最初數值 500 依 Tully 綜述"
+    },
+    {
+      "title": "The Hubble Constant: A Historical Review",
+      "publisher": "R. B. Tully，收於 Springer《The Hubble Constant Tension》（Di Valentino & Brout 編）；arXiv:2305.11950",
+      "date": "2023-05-19",
+      "url": "https://arxiv.org/abs/2305.11950",
+      "note": "哈伯 500 與 530、1/H0 對應 20 億年、1931 年地球 20–30 億歲、巴德與兩種造父變星、1974–1986 年 50 對 100 之爭、紅巨星分支頂端的原理、勒維特週光關係"
+    },
+    {
+      "title": "Hubble Completes Eight-Year Effort to Measure Expanding Universe",
+      "publisher": "NASA",
+      "date": "1999-05-25",
+      "url": "https://science.nasa.gov/missions/hubble/hubble-completes-eight-year-effort-to-measure-expanding-universe/",
+      "note": "70、誤差 10%；柯什納引文；弗里德曼為團隊主持人"
+    },
+    {
+      "title": "Final Results from the Hubble Space Telescope Key Project to Measure the Hubble Constant",
+      "publisher": "ApJ 553, 47（Freedman et al.）",
+      "date": "2001-05",
+      "url": "https://doi.org/10.1086/320638",
+      "note": "H0 = 72 ± 8"
+    },
+    {
+      "title": "Planck 2018 results. VI. Cosmological parameters",
+      "publisher": "A&A 641, A6（Planck Collaboration）",
+      "date": "2020-09",
+      "url": "https://doi.org/10.1051/0004-6361/201833910",
+      "note": "H0 = 67.4 ± 0.5；100θ* = 1.04109 ± 0.00030（0.03%），θ* ≈ 0.596°；年齡 13.787 ± 0.020 Gyr"
+    },
+    {
+      "title": "SPT-3G D1: CMB temperature and polarization power spectra and cosmology from 2019 and 2020 observations of the SPT-3G Main field",
+      "publisher": "Physical Review D 113, 083504（Camphuis et al.）；arXiv:2506.20707",
+      "date": "2026-04-01",
+      "url": "https://doi.org/10.1103/7wt3-9v2y",
+      "note": "SPT-3G 單獨 66.66 ± 0.60，與 SH0ES 差 6.2σ；arXiv 首版 2025-06"
+    },
+    {
+      "title": "The Atacama Cosmology Telescope: DR6 Power Spectra, Likelihoods and ΛCDM Parameters",
+      "publisher": "ACT Collaboration（Louis et al.），arXiv:2503.14452",
+      "date": "2025-03-18",
+      "url": "https://arxiv.org/abs/2503.14452",
+      "note": "P-ACT 加 DESI DR2：68.43 ± 0.27"
+    },
+    {
+      "title": "A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km/s/Mpc Uncertainty from the Hubble Space Telescope and the SH0ES Team",
+      "publisher": "ApJ Letters 934, L7（Riess et al.）",
+      "date": "2022-07-01",
+      "url": "https://doi.org/10.3847/2041-8213/ac5c5b",
+      "note": "42 顆 Ia 超新星宿主；錨點為 Gaia EDR3 視差、NGC 4258 水邁射、大麥哲倫雲食雙星；73.04 ± 1.04，與 Planck+ΛCDM 差 5σ"
+    },
+    {
+      "title": "JWST Observations Reject Unrecognized Crowding of Cepheid Photometry as an Explanation for the Hubble Tension at 8σ Confidence",
+      "publisher": "ApJ Letters 962, L17（Riess et al.）",
+      "date": "2024-02-01",
+      "url": "https://doi.org/10.3847/2041-8213/ad1ddd",
+      "note": "NGC 4258 與 5 個宿主星系、逾 1,000 顆造父變星；HST 與 JWST 距離差 −0.01 ± 0.03 mag；8.2σ"
+    },
+    {
+      "title": "NASA's Webb, Hubble Telescopes Affirm Universe's Expansion Rate, Puzzle Persists",
+      "publisher": "NASA",
+      "date": "2024-03-11",
+      "url": "https://science.nasa.gov/missions/hubble/nasas-webb-hubble-telescopes-affirm-universes-expansion-rate-puzzle-persists/",
+      "note": "黎斯引文、NGC 5468 距離 1.3 億光年、星光混合的疑慮、黎斯的諾貝爾獎"
+    },
+    {
+      "title": "Webb Confirms Accuracy of Universe's Expansion Rate Measured by Hubble, Deepens Mystery of Hubble Constant Tension",
+      "publisher": "NASA",
+      "date": "2023-09-12",
+      "url": "https://science.nasa.gov/blogs/webb/2023/09/12/webb-confirms-accuracy-of-universes-expansion-rate-measured-by-hubble-deepens-mystery-of-hubble-constant-tension/",
+      "note": "頭圖 NGC 5584：7,200 萬光年，含造父變星與 Ia 型超新星"
+    },
+    {
+      "title": "Cepheid Variable Star P42 in NGC 5468",
+      "publisher": "NASA",
+      "date": "2024-03-11",
+      "url": "https://science.nasa.gov/asset/hubble/cepheid-variable-star-p42-in-ngc-5468/",
+      "note": "左為 JWST NIRCam F150W，右為 HST WFC3/IR F160W"
+    },
+    {
+      "title": "Status Report on the Chicago-Carnegie Hubble Program (CCHP): Measurement of the Hubble Constant Using the Hubble and James Webb Space Telescopes",
+      "publisher": "ApJ 985, 203（Freedman et al.）",
+      "date": "2025-05-27",
+      "url": "https://doi.org/10.3847/1538-4357/adce78",
+      "note": "70.39 ± 1.22（統計）± 1.33（系統）± 0.70（超新星），24 顆超新星校準；韋伯單獨 TRGB 68.81；「consistent with the current standard LambdaCDM model」。合計誤差 1.9 為本報平方和開根。2025-11-10 勘誤只改附錄 B 圖，不影響 H0"
+    },
+    {
+      "title": "The Local Distance Network: A community consensus report on the measurement of the Hubble constant at ∼1% precision",
+      "publisher": "A&A 708, A166（H0DN Collaboration）",
+      "date": "2026-04",
+      "url": "https://doi.org/10.1051/0004-6361/202557993",
+      "note": "117 位作者；73.50 ± 0.81；與 Planck+SPT+ACT 擬合 ΛCDM 差 7.1σ，與 BBN+BAO（DESI DR2）差 5.0σ；拿掉造父變星或 TRGB 影響極小。arXiv:2510.23823"
+    },
+    {
+      "title": "A Tale of Many H0",
+      "publisher": "Annual Review of Astronomy and Astrophysics 62, 287（Verde, Schöneberg, Gil-Marín）",
+      "date": "2024-09-12",
+      "url": "https://doi.org/10.1146/annurev-astro-052622-033813",
+      "note": "讀 arXiv:2311.13305 版本：兩群約 68 與約 73、相差約 7%、量測誤差約 1%；聲波視界需改約 7%、新物理須在復合前一個 e-fold 內作用、至今嘗試皆破壞其他吻合；無共識。韋爾德任職巴塞隆納大學宇宙科學研究所（ICC-UB）"
+    },
+    {
+      "title": "The Hubble tension: A decade review",
+      "publisher": "Research in Astronomy and Astrophysics 26, 084011（Cai & Wang）；arXiv:2606.20434",
+      "date": "2026-06-18",
+      "url": "https://arxiv.org/abs/2606.20434",
+      "note": "不論早期端是否用 Planck、晚期端是否用距離梯子，差異都在；local Hubble bubble or cosmic void「has long been ruled out as a significant contribution」"
+    },
+    {
+      "title": "The local void model for the Hubble and BAO tensions",
+      "publisher": "Banik, Desmond, Kalaitzidis, Mazurenko，arXiv:2602.03928",
+      "date": "2026-02-03",
+      "url": "https://arxiv.org/abs/2602.03928",
+      "note": "主張銀河系位於大型低密度區，可解釋張力只出現在低紅移"
+    },
+    {
+      "title": "A gravitational-wave standard siren measurement of the Hubble constant",
+      "publisher": "Nature 551, 85（LIGO Scientific Collaboration, Virgo Collaboration et al.）",
+      "date": "2017-10-16",
+      "url": "https://doi.org/10.1038/nature24471",
+      "note": "GW170817：H0 = 70.0 +12.0/−8.0"
+    },
+    {
+      "title": "Gaia Data Release Scenario",
+      "publisher": "ESA",
+      "date": "2026-05-07",
+      "url": "https://www.cosmos.esa.int/web/gaia/release",
+      "note": "Gaia DR4（66 個月資料）定於 2026 年 12 月 2 日；本報 2026-11-08 查閱"
+    }
+  ]
+}
