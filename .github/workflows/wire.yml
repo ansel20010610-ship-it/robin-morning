@@ -1,0 +1,23 @@
+name: Wire (外電)
+
+# Every hour: rebuild the site so the front page's 外電 bar (scripts/wire.py, run inside publish.yml) is fetched afresh.
+# A schedule added to publish.yml itself was not picked up by GitHub for hours (2026-11-07), so the hour is kept here,
+# in a workflow of its own, which starts the deploy the way fill.yml does. GitHub may start it some minutes late.
+on:
+  schedule:
+    - cron: "20 * * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Start the deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh workflow run publish.yml --ref main

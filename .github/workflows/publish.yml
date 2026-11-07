@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: "20 * * * *"  # every hour: the 外電 bar on the front page (scripts/wire.py) is fetched at build time
+    - cron: "20 * * * *"  # every hour, for the 外電 bar; wire.yml carries the same hour, since GitHub was slow to register this one
   workflow_dispatch:
 
 permissions:
