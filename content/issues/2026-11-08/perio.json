@@ -1,0 +1,145 @@
+{
+  "column": "perio",
+  "date": "2026-11-08",
+  "title": "全口一天做完或分四次，囊袋深度看不出差別",
+  "dek": "Cochrane 2022 年比了三種做法：分象限、全口清創、加抗菌劑的全口除菌。作者的結論是，選哪一種應把病人的偏好和治療排程的方便納入考量。",
+  "brief": "把齦下清創在 24 小時內做完，或照傳統一次一個象限、每次至少隔一週，6 到 8 個月後的囊袋深度與附著看不出差別，Cochrane 2022 年的回顧評這項證據確定性低。這批試驗都沒有報告牙齒喪失。作者的結論是，選哪一種應把病人的偏好和治療排程的方便納入考量。",
+  "takeaway": "24 小時內全口清創和分象限相比，6 到 8 個月的探測深度平均只差 0.03 毫米，附著也看不出差別，證據確定性低；試驗沒有量牙齒喪失。選擇時，病人的偏好與治療排程的方便應納入考量。",
+  "topic_key": "perio:doi:10.1002/14651858.cd004622.pub4",
+  "form": "argument",
+  "voice": "colleague",
+  "updated_at": "2026-11-08T01:15:49+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/US_Navy_090611-F-5647K-005_LCpl_Carla_Thomas%2C_an_Antigua_and_Barbuda_defense_force_dental_hygienist_aboard_hospital_ship_USNS_Comfort_%28T-AH_20%29_cleans_and_scales_a_Colombian_patient%27s_teeth.jpg/1280px-thumbnail.jpg",
+    "width": 1280,
+    "height": 1925,
+    "alt": "穿藍色上衣、戴口罩、護目鏡和白手套的醫護人員一手拿口鏡、一手拿器械伸進仰躺病人的口中；上方一盞軟管檯燈，背後是斑駁的牆，牆上掛著黑色塑膠袋。",
+    "caption": "2009 年 6 月 11 日，哥倫比亞圖馬科，美國醫療船 USNS Comfort 的人道任務中，一位安地卡及巴布達國防軍的牙科衛生士替哥倫比亞病人洗牙、刮除牙結石。照片中的人與文中的試驗無關。",
+    "credit": "U.S. Air Force photo by Airman 1st Class Clara Karwacinski（美國空軍），Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:US_Navy_090611-F-5647K-005_LCpl_Carla_Thomas,_an_Antigua_and_Barbuda_defense_force_dental_hygienist_aboard_hospital_ship_USNS_Comfort_(T-AH_20)_cleans_and_scales_a_Colombian_patient%27s_teeth.jpg",
+    "made": "2009"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "齦下清創要在 24 小時內把全口做完，還是照傳統一次一個象限、每次至少隔一週，**照目前的證據，6 到 8 個月的囊袋深度和附著看不出哪一種比較好**，所以我會把它當成排程問題：作者的結論是，選擇時應把病人的偏好和治療排程的方便納入考量。根據是專做系統性回顧的國際組織 Cochrane 旗下口腔衛生組 2022 年 6 月發表的回顧，收了 20 個隨機對照試驗、944 名成人牙周炎病人。"
+    },
+    {
+      "type": "p",
+      "text": "回顧比的是三種做法。除了傳統的分象限刮除與根面整平（quadrant scaling and root planing），全口清創（full-mouth scaling，FMS）把四個象限放在 24 小時內、分一到兩次做完；全口除菌（full-mouth disinfection，FMD）排程一樣，另加氯己定之類的抗菌劑。全口的理由是再感染：致病菌也住在舌頭、黏膜、唾液和扁桃腺，剛清完的深囊袋，可能在穩定之前就被還沒處理的囊袋或這些地方再定殖。"
+    },
+    {
+      "type": "svg",
+      "title": "兩種排程",
+      "svg": "<svg viewBox=\"0 0 340 196\" xmlns=\"http://www.w3.org/2000/svg\">\n<text x=\"8\" y=\"22\" font-size=\"12\" class=\"ink\" font-weight=\"bold\">分象限清創</text>\n<line x1=\"24\" y1=\"52\" x2=\"250\" y2=\"52\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<circle cx=\"34\" cy=\"52\" r=\"7\" class=\"accent\" fill=\"currentColor\"/>\n<circle cx=\"96\" cy=\"52\" r=\"7\" class=\"accent\" fill=\"currentColor\"/>\n<circle cx=\"158\" cy=\"52\" r=\"7\" class=\"accent\" fill=\"currentColor\"/>\n<circle cx=\"220\" cy=\"52\" r=\"7\" class=\"accent\" fill=\"currentColor\"/>\n<text x=\"65\" y=\"42\" text-anchor=\"middle\" font-size=\"9\" class=\"muted\">隔 1 週以上</text>\n<text x=\"127\" y=\"42\" text-anchor=\"middle\" font-size=\"9\" class=\"muted\">隔 1 週以上</text>\n<text x=\"189\" y=\"42\" text-anchor=\"middle\" font-size=\"9\" class=\"muted\">隔 1 週以上</text>\n<text x=\"34\" y=\"74\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">第 1 次</text>\n<text x=\"96\" y=\"74\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">第 2 次</text>\n<text x=\"158\" y=\"74\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">第 3 次</text>\n<text x=\"220\" y=\"74\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">第 4 次</text>\n<text x=\"8\" y=\"104\" font-size=\"12\" class=\"ink\" font-weight=\"bold\">全口清創／全口除菌</text>\n<line x1=\"24\" y1=\"132\" x2=\"250\" y2=\"132\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n<circle cx=\"34\" cy=\"132\" r=\"7\" class=\"accent\" fill=\"currentColor\"/>\n<circle cx=\"52\" cy=\"132\" r=\"7\" class=\"accent\" fill=\"currentColor\"/>\n<text x=\"66\" y=\"128\" font-size=\"10\" class=\"ink\">24 小時內做完四個象限（1 到 2 次）</text>\n<text x=\"66\" y=\"150\" font-size=\"9\" class=\"muted\">全口除菌另加氯己定等抗菌劑</text>\n<line x1=\"250\" y1=\"52\" x2=\"264\" y2=\"92\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n<line x1=\"250\" y1=\"132\" x2=\"264\" y2=\"92\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n<rect x=\"264\" y=\"50\" width=\"70\" height=\"84\" rx=\"6\" class=\"soft\" fill=\"currentColor\"/>\n<text x=\"299\" y=\"70\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\" font-weight=\"bold\">6 到 8 個月</text>\n<text x=\"299\" y=\"86\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">比較</text>\n<text x=\"299\" y=\"102\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">探測深度</text>\n<text x=\"299\" y=\"116\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">附著程度</text>\n<text x=\"299\" y=\"130\" text-anchor=\"middle\" font-size=\"10\" class=\"ink\">探診出血</text>\n<text x=\"8\" y=\"184\" font-size=\"9\" class=\"muted\">時間軸示意，不按比例</text>\n</svg>",
+      "caption": "原創示意，依 Jervøe-Storm 等（2022）Cochrane 回顧摘要與白話摘要對兩種做法的定義繪製；時間軸不按比例。"
+    },
+    {
+      "type": "h",
+      "text": "魯汶的十個病人"
+    },
+    {
+      "type": "p",
+      "text": "比利時魯汶大學牙周團隊的 **Quirynen** 等人 1995 年發表的試驗，是這個做法最早的試驗之一：10 位進展型慢性牙周炎病人，試驗組在 24 小時內分兩次清完全口，並用氯己定刷舌、漱口、沖洗每個囊袋，一兩個月時，深囊袋的探測深度減少得比較多；這篇試驗因追蹤不滿三個月，不在 Cochrane 這篇回顧裡。同一團隊 2000 年再報告，全口做法不論加不加氯己定，都比分象限好；但其他研究中心較新的研究無法證明全口清創優於傳統。"
+    },
+    {
+      "type": "h",
+      "text": "兩種做法差不多？證據不夠確定"
+    },
+    {
+      "type": "p",
+      "text": "全口清創對分象限，追蹤 6 到 8 個月，探測深度的平均差只有 **0.03 毫米**，信賴區間跨過零，附著也看不出差別；加了抗菌劑的全口除菌對分象限，或兩種全口做法互比，探測深度的信賴區間同樣跨過零。作者依牙根數、起始囊袋深度做的次分析，有些結果並不一致。作者用 GRADE 這套評估證據確定性的方法，把探測深度與附著的估計評為低：真正的效果可能和估計值差很多，原因是試驗少、人少、設計有限制。"
+    },
+    {
+      "type": "quote",
+      "text": "實務上，選擇哪一種非手術牙周治療方式，應該把病人的偏好和治療排程的方便納入考量。",
+      "original": "In practice, the decision to select one approach to non‐surgical periodontal therapy over another should include patient preference and the convenience of the treatment schedule.",
+      "cite": "Jervøe-Storm 等（2022），Cochrane 回顧摘要的作者結論"
+    },
+    {
+      "type": "p",
+      "text": "這個「看不出差別」，指的只是囊袋深度和附著：沒有一個試驗報告牙齒喪失，追蹤也只有 3 到 12 個月。試驗多半在大學診所做，只有一個完全在一般診所，作者提醒結果可能是在沒有時間壓力的環境下得到的；全口做法會不會讓操作者比較累，沒有試驗研究過。"
+    },
+    {
+      "type": "h",
+      "text": "排診之前想三件事"
+    },
+    {
+      "type": "list",
+      "items": [
+        "病人偏好一次做完，全口 24 小時內處理是站得住的選擇。歐洲牙周病學會（EFP）2020 年的第 I–III 期牙周炎臨床指引寫的是「我們建議」兩種都可以，屬 B 級，比 A 級的「我們推薦」低一級；同一條也提醒，全口做法有急性全身發炎反應的證據，選它要先想病人的全身健康。",
+        "2015 年一個 38 人的隨機試驗，受試者是一般牙周炎病人：全口組做完 24 小時後的急性期發炎反應比分象限高，之後的追蹤就看不出差別。心血管病人另有專家共識：EFP 與世界心臟聯盟 2020 年建議，這類病人的非手術牙周治療最好分成幾次 30 到 45 分鐘的療程，以減少急性全身發炎的高峰。試驗排除了有全身疾病的人，所以這題沒有答案。",
+        "加氯己定看不出多了什麼：兩種全口做法互比看不出差別（確定性低），有一個試驗還回報氯己定組出現牙齒染色和味覺改變。回顧找到最重要的傷害是全口做法後體溫上升。"
+      ]
+    },
+    {
+      "type": "paper",
+      "citation": "Jervøe-Storm PM, Eberhard J, Needleman I, Worthington HV, Jepsen S. Full-mouth treatment modalities (within 24 hours) for periodontitis in adults. *Cochrane Database Syst Rev*. 2022;6(6):CD004622.",
+      "doi": "10.1002/14651858.cd004622.pub4",
+      "pmid": "35763286",
+      "link": "https://doi.org/10.1002/14651858.CD004622.pub4",
+      "evidence": "Cochrane 系統性回顧：20 篇隨機試驗、944 人；6–8 個月探測深度證據確定性低",
+      "design": "Cochrane 系統性回顧（GRADE 評證據），2008 年原版的第二次更新，文獻檢索至 2021 年 6 月",
+      "sample": "20 個隨機對照試驗、944 名成人牙周炎病人；全口清創對分象限 13 個試驗、全口除菌對分象限 13 個、兩種全口做法互比 6 個；追蹤 3 到 12 個月",
+      "question": "24 小時內做完全口的齦下清創（加不加抗菌劑），探測深度、附著等臨床指標是否優於每次至少隔一週的分象限傳統做法？",
+      "access": "依 PubMed 摘要與 PMC 全文（PMC9239328）的結果摘要表、不良反應與討論整理"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Full-mouth treatment modalities (within 24 hours) for periodontitis in adults",
+      "publisher": "Cochrane Database of Systematic Reviews（Jervøe-Storm PM 等）",
+      "date": "2022-06-28",
+      "url": "https://doi.org/10.1002/14651858.CD004622.pub4",
+      "note": "主角文獻。書目依 PubMed efetch（PMID 35763286）、Europe PMC 與 Crossref（2022;6(6):CD004622）。全文讀 PMC 頁 https://pmc.ncbi.nlm.nih.gov/articles/PMC9239328/ ：20 個 RCT、944 人、9 個新試驗；SoF 1 全口清創 vs 分象限 6–8 個月 PPD MD 0.03 mm（-0.14 到 0.20），148 人 5 試驗，低（偏差風險降兩級），CAL 0.10 mm 低，BOP 2.64% 非常低，表內備註 Similar results at 3–4 months；SoF 2、3 的 PPD 信賴區間皆跨 0（FMD vs 對照的人數 SoF 表 214、摘要 224，正文不寫）；Summary of main results 的 some inconsistent findings；Pocket closure 9 試驗 8 無差別、Koshy 2005 例外；Discussion：大學診所為主、僅一試驗在一般診所、追蹤 3–12 個月、無試驗報告牙齒喪失、未研究操作者疲勞；Adverse events：13 試驗有資料、3 試驗報告反應、最重要的傷害為體溫上升、Fonseca 2015 氯己定染色與味覺改變；Background：致病菌可定殖舌、黏膜、唾液、扁桃腺，Quirynen 2000 報告全口優於傳統而其他中心未能證明；Excluded studies：Quirynen 1995 追蹤未滿三個月。GRADE 低的定義依 SoF 表註。"
+    },
+    {
+      "title": "Full- vs. partial-mouth disinfection in the treatment of periodontal infections: short-term clinical and microbiological observations",
+      "publisher": "Journal of Dental Research（Quirynen M 等）",
+      "date": "1995",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7560400/",
+      "note": "J Dent Res 1995;74(8):1459-67，PMID 7560400。依 Europe PMC 摘要：10 位進展型慢性牙周炎病人隨機分組；試驗組 24 小時內兩次清完全口，1% 氯己定凝膠刷舌、0.2% 漱口、1% 齦下沖洗；一個月與兩個月時深囊袋探測深度減少顯著較多。日期只記年份。作者單位：Catholic University of Leuven, Department of Periodontology, Belgium。Cochrane Background 說全口除菌最早由同一團隊在一系列研究中評估（Vandekerckhove 1996〔先導試驗的長期追蹤〕、Bollen 1998、Mongardini 1999）；本篇早於這些，正文寫「最早的試驗之一」，不寫起點。"
+    },
+    {
+      "title": "The rôle of chlorhexidine in the one-stage full-mouth disinfection treatment of patients with advanced adult periodontitis. Long-term clinical and microbiological observations",
+      "publisher": "Journal of Clinical Periodontology（Quirynen M 等，比利時魯汶大學牙周科）",
+      "date": "2000",
+      "url": "https://doi.org/10.1034/j.1600-051x.2000.027008578.x",
+      "note": "J Clin Periodontol 2000;27(8):578-89，PMID 10959784。依 PubMed 摘要：3 組各 12 名進展型牙周炎病人，追蹤 8 個月；全口做法加或不加氯己定都比分象限對照好，兩個全口組差別可忽略。Cochrane Background 引為 Quirynen 2000（後來的報告稱全口不論加不加氯己定都較好，其他中心未能證明）。日期只記年份。"
+    },
+    {
+      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Sanz M 等）",
+      "date": "2020",
+      "url": "https://doi.org/10.1111/jcpe.13290",
+      "note": "J Clin Periodontol 2020;47 Suppl 22:4-60，PMID 32383274，PMC7891343 全文。R2.3：We suggest that subgingival periodontal instrumentation can be performed with either traditional quadrant‐wise or full mouth delivery within 24 hr；Grade B（↑）；8 個 RCT（212 人）追蹤 ≥6 個月；同段提醒全口做法有急性全身發炎反應的證據，須考量全身健康。Table 4：A＝we recommend、B＝we suggest、0＝may be considered。"
+    },
+    {
+      "title": "Acute-phase response following full-mouth versus quadrant non-surgical periodontal treatment: a randomized clinical trial",
+      "publisher": "Journal of Clinical Periodontology（Graziani F 等）",
+      "date": "2015",
+      "url": "https://doi.org/10.1111/jcpe.12451",
+      "note": "J Clin Periodontol 2015;42:843-52，PMID 26309133。依 Europe PMC 摘要：38 名一般牙周炎病人（periodontitis-affected subjects，非心血管病人）隨機分全口或分象限；全口組 24 小時後急性期反應較大（CRP 三倍、IL-6 兩倍），之後追蹤無組間差別，兩組臨床改善相當。日期只記年份。"
+    },
+    {
+      "title": "Periodontitis and cardiovascular diseases: Consensus report",
+      "publisher": "Journal of Clinical Periodontology（Sanz M 等；EFP 與世界心臟聯盟）",
+      "date": "2020",
+      "url": "https://doi.org/10.1111/jcpe.13189",
+      "note": "J Clin Periodontol 2020;47(3):268-288，PMID 32011025，PMC7027895 全文：Irrespective of the level of CVD or specific medication, non‐surgical periodontal therapy should be provided, preferably in several 30‐ to 45‐min sessions, in order to minimize a spike of acute systemic inflammation。正文轉述帶「最好」，並寫明是共識建議。"
+    },
+    {
+      "title": "File:US Navy 090611-F-5647K-005 LCpl Carla Thomas ... cleans and scales a Colombian patient's teeth.jpg",
+      "publisher": "Wikimedia Commons（U.S. Air Force photo by Airman 1st Class Clara Karwacinski）",
+      "date": "2009-06-11",
+      "url": "https://commons.wikimedia.org/wiki/File:US_Navy_090611-F-5647K-005_LCpl_Carla_Thomas,_an_Antigua_and_Barbuda_defense_force_dental_hygienist_aboard_hospital_ship_USNS_Comfort_(T-AH_20)_cleans_and_scales_a_Colombian_patient%27s_teeth.jpg",
+      "note": "頭圖。頭圖說明：2009 年 6 月 11 日，哥倫比亞圖馬科，USNS Comfort 的人道任務中，一位安地卡及巴布達國防軍的牙科衛生士 cleans and scales 哥倫比亞病人的牙齒；美國政府作品，Public domain。"
+    }
+  ]
+}
