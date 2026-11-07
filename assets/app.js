@@ -26,6 +26,7 @@ async function loadData() {
   ]);
   S.cfg = cfg;
   S.index = index;
+  syncDone(); // the reminder gate (rm-state) sees today's issue as soon as the index is in
   initSpotify(cfg.spotify);
   loadGigs().then(fillGigs); // not waited for: the front page draws without it
 }
@@ -110,7 +111,7 @@ function toggleSaved(k) {
   return i < 0;
 }
 const readSet = () => new Set(store.get("read", []));
-function markRead(k) { const r = store.get("read", []); if (!r.includes(k)) { r.push(k); store.set("read", r.slice(-2000)); } }
+function markRead(k) { const r = store.get("read", []); if (!r.includes(k)) { r.push(k); store.set("read", r.slice(-2000)); syncDone(); } }
 
 // ——— Shared pieces ———
 const CONTAIN = new Set(["artwork", "document", "portrait", "illustration"]);
@@ -598,11 +599,15 @@ function prayerBox(issue) {
 const digestDone = () => new Set(store.get("digest.done", []));
 // The service worker cannot read localStorage: the finished days are mirrored into a small cache (rm-state, outside the
 // shell caches sw.js clears) so a 12:30 or 21:00 reminder for a day already read through is dropped on the phone.
+// A day counts as finished once every article the stamp counts is read, whether or not the seal has been seen yet
+// (the owner, 2026-11-07: 都讀完就不用通知了); so this runs after every markRead and once the index is in.
 function syncDone() {
-  try { caches.open("rm-state").then((c) => c.put("state/done", new Response(JSON.stringify(store.get("digest.done", [])), { headers: { "Content-Type": "application/json" } }))).catch(() => {}); }
-  catch { /* no Cache API (a plain http:// preview) */ }
+  try {
+    const done = new Set(store.get("digest.done", []));
+    for (const i of publishedIssues()) if ((i.articles || []).length && !unreadIn(i.date, i.articles)) done.add(i.date);
+    caches.open("rm-state").then((c) => c.put("state/done", new Response(JSON.stringify([...done]), { headers: { "Content-Type": "application/json" } }))).catch(() => {});
+  } catch { /* no Cache API (a plain http:// preview) */ }
 }
-syncDone();
 let finishSeen = null;
 // A silent 觀測站 entry (no brief: nothing new that day) has no page to read and does not count.
 // What the day's stamp counts: the issue's articles, a watch item only with a brief, never the serial — the novel keeps
