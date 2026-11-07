@@ -287,8 +287,6 @@ export function domeWide(t, w, h) {
 const JOHN = "我實實在在的告訴你們，一粒麥子不落在地裡死了，仍舊是一粒，若是死了，就結出許多子粒來。";
 // The cards drawn here; the others live in motifs/*.js. build.js renders the set.
 export const KIT_STILLS = {
-  "kuppel-klein": (t) => domeCard(t, ...SIZE.small),
-  "lebensbaum-mittel": (t) => friesCard(t, ...SIZE.medium),
   "weizenkorn-klein": (t) => vertical(t, ...SIZE.small, { cols: ["一粒麥子", "不落在地裡", "死了，", "仍舊是一粒"], cite: "約翰福音十二章", size: 40, gap: 1.6 }),
 };
 export { fontFiles };
