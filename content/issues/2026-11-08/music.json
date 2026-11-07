@@ -1,0 +1,302 @@
+{
+  "column": "music",
+  "date": "2026-11-08",
+  "title": "綠線進站的夜曲，獻給白遼士的前未婚妻",
+  "dek": "台北捷運綠線列車進站的那段旋律，原曲是蕭邦二十歲左右寫的夜曲，譜上獻給一位曾和白遼士訂婚的鋼琴家。",
+  "brief": "台北捷運綠線列車進站的旋律，原曲是蕭邦二十歲左右寫的《降 E 大調夜曲》作品 9 之 2，由周岳澄用爵士手法改編。譜上題獻的普雷耶爾夫人瑪麗・莫克，1830 年和白遼士訂過婚；白遼士在《回憶錄》裡說，婚約破裂後他曾打算殺了她。",
+  "topic_key": "music:chopin-op9-2",
+  "form": "timeline",
+  "voice": "listener",
+  "updated_at": "2026-11-08T01:04:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "portrait",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Eug%C3%A8ne_Delacroix_-_Fr%C3%A9d%C3%A9ric_Chopin_-_WGA06194.jpg",
+    "width": 800,
+    "height": 1075,
+    "alt": "一幅油畫肖像：蕭邦半身，臉微微低下，深色頭髮，穿深色外套，背景是暗褐色。",
+    "caption": "德拉克洛瓦（Eugène Delacroix）畫的蕭邦，1838 年，作品 9 出版後幾年。這幅畫原本和他的伴侶喬治・桑畫在同一幅畫布上，後來被分成兩半，蕭邦這一半今天在巴黎羅浮宮。",
+    "credit": "Eugène Delacroix（1838）；經 Web Gallery of Art 與 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Delacroix_-_Fr%C3%A9d%C3%A9ric_Chopin_-_WGA06194.jpg",
+    "made": "1838"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "台北捷運松山新店線，也就是綠線，列車進站時會響起一段帶爵士味的旋律。原曲是波蘭作曲家蕭邦的**《降 E 大調夜曲》，作品 9 之 2**，改編的人是**周岳澄**。他是台北捷運「聲音地景」計畫的創作者之一，捷運的進站音樂、轉乘音樂、悠遊卡的音效，都有他經手。"
+    },
+    {
+      "type": "p",
+      "text": "蕭邦（Frédéric Chopin）是鋼琴家，也是作曲家，1810 年生在華沙附近，1849 年在巴黎過世，39 歲。這首是他二十歲左右寫的，1832 到 1833 年間出版，是三首一組的作品 9 裡的第二首，也是他頭一回正式出版夜曲。它常被看成蕭邦最有名的一首曲子；寫過《聽見蕭邦》的音樂學者焦元溥，叫它「古典音樂不敗的入門」。"
+    },
+    {
+      "type": "p",
+      "text": "夜曲（nocturne）是一種鋼琴小品：右手唱一條像歌的旋律，左手用流動的音型在底下托著。這個名字是愛爾蘭鋼琴家費爾德（John Field）先用的，蕭邦拿過來推廣、撐大。我想講這一首，是因為它的譜上題獻給一位夫人，而她的前未婚夫說過，他曾經打算殺了她。"
+    },
+    {
+      "type": "timeline",
+      "title": "這首曲子的幾個時刻",
+      "caption": "作品 9 的出版年份，各家記載在 1832 到 1833 年之間。",
+      "items": [
+        {
+          "when": "1830 年",
+          "label": "白遼士與瑪麗・莫克訂婚",
+          "note": "她 19 歲，是鋼琴家"
+        },
+        {
+          "when": "1830.11.2",
+          "label": "蕭邦離開華沙",
+          "note": "此後沒有再回波蘭"
+        },
+        {
+          "when": "1831.4",
+          "label": "婚約破裂",
+          "note": "白遼士人在義大利；她要嫁給普雷耶爾"
+        },
+        {
+          "when": "1831.10.5",
+          "label": "蕭邦到巴黎",
+          "note": "經人介紹認識普雷耶爾"
+        },
+        {
+          "when": "1832.2.26",
+          "label": "蕭邦在巴黎第一次登台",
+          "note": "在普雷耶爾的演奏廳"
+        },
+        {
+          "when": "1832–33",
+          "label": "作品 9 出版",
+          "note": "題獻給普雷耶爾夫人，也就是瑪麗"
+        },
+        {
+          "when": "1965 年",
+          "label": "魯賓斯坦錄下夜曲全集",
+          "note": "羅馬，RCA"
+        },
+        {
+          "when": "2015 年起",
+          "label": "台北捷運重做站內的聲音",
+          "note": "周岳澄負責松山新店線，他選了蕭邦"
+        },
+        {
+          "when": "2021 年",
+          "label": "兩部台灣電影用了它",
+          "note": "《瀑布》《青春弒戀》"
+        }
+      ]
+    },
+    {
+      "type": "music",
+      "composer": "蕭邦（Frédéric Chopin）",
+      "work": "降 E 大調夜曲，作品 9 之 2",
+      "work_original": "Nocturne in E-flat major, Op. 9, No. 2",
+      "composed": "1830 年代初",
+      "performers": "亞瑟・魯賓斯坦（Arthur Rubinstein）鋼琴",
+      "recording": "RCA Red Seal 的蕭邦夜曲全集，1965 年 8 月 30 日至 9 月 2 日錄於羅馬 RCA Italiana 錄音室（整套只有作品 55 之 2 是 1967 年 2 月補錄）；1984 年發行 CD，後由 Sony Classical 再版。選它的理由：演奏者以蕭邦為專長，整套夜曲都在同一張，接著要聽的作品 9 之 3、作品 27 之 2 也在裡面",
+      "duration": "4 分 26 秒（1984 年 RCA CD 版）",
+      "movements": [],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Chopin Nocturnes Op. 9 No. 2 Arthur Rubinstein",
+        "artist_hint": "Rubinstein",
+        "track_filter": [
+          "Op. 9",
+          "No. 2"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "按下播放。現在聽到的是開頭：右手輕聲唱出那條旋律，音往上跳，越往後跳得越寬。左手的伴奏音隔得很開，靠踏板連成一片，三拍一組地搖，有一點華爾滋的味道。這條旋律整首會再回來三次，每回來一次就多一層裝飾。**可以跟著那幾層裝飾聽。**"
+    },
+    {
+      "type": "p",
+      "text": "1830 年，法國作曲家白遼士（Hector Berlioz）和 19 歲的鋼琴家**瑪麗・莫克**（Marie Moke）訂了婚。那年 12 月他辦了《幻想交響曲》的首演，不久動身去義大利。1831 年 4 月，他人還在義大利，婚約被女方解除：她要嫁給鋼琴製造公司的繼承人普雷耶爾（Camille Pleyel）。"
+    },
+    {
+      "type": "p",
+      "text": "接下來的事，是白遼士自己在《回憶錄》裡講的，這本書在他死後，1870 年才出版。他說他備好了手槍和喬裝的衣服，要回巴黎把她、她母親和普雷耶爾都殺了；走到尼斯，打消了念頭。他在尼斯住了幾個星期，寫了《李爾王》序曲。"
+    },
+    {
+      "type": "p",
+      "text": "現在聽到的是旋律第二次回來。還是那條歌，多了裝飾音；每回來一次，裝飾更繁複，也出現了顫音。蕭邦在這首讓右手變成女高音，唱的是焦元溥形容的「千迴百折的花腔」。"
+    },
+    {
+      "type": "p",
+      "text": "1831 年 10 月 5 日，蕭邦到了巴黎。前一年 11 月 2 日他離開華沙，不到一個月華沙就爆發起義，他再也沒有回去。到巴黎以後，經人介紹，他認識了普雷耶爾，就是瑪麗要嫁的那一位，從此和普雷耶爾的鋼琴打了很久的交道。1832 年 2 月 26 日，他在巴黎第一次登台，就在普雷耶爾的演奏廳，廣受讚賞；後來他在巴黎最後一次開音樂會，也在那裡。"
+    },
+    {
+      "type": "p",
+      "text": "1832 到 1833 年間，作品 9 的三首夜曲印出來，譜上題獻給**普雷耶爾夫人**，也就是瑪麗・莫克，那位曾經和白遼士訂婚的鋼琴家。手槍和喬裝這些細節，出自白遼士自己的《回憶錄》；題獻則印在譜上。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "portrait",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Marie_Pleyel_Litho.JPG",
+      "width": 952,
+      "height": 1430,
+      "alt": "一幅黑白石版畫肖像：一位年輕女子半身，頭髮梳成髻，穿著領口寬的十九世紀洋裝，臉微微側向一邊。",
+      "caption": "瑪麗・普雷耶爾（Marie Moke-Pleyel，1811–1875），Josef Kriehuber 繪的石版畫，1839 年。蕭邦作品 9 的題獻對象，也是曾和白遼士訂婚的人。",
+      "credit": "Josef Kriehuber（石版畫，1839）；Albertina（維也納）藏原作之翻拍；經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Marie_Pleyel_Litho.JPG",
+      "made": "1839"
+    },
+    {
+      "type": "p",
+      "text": "現在聽到的是中間插進來的另一條旋律。它和開頭那條輪流出場，兩條都一樣，每回來一次，就比上一次多一點裝飾。"
+    },
+    {
+      "type": "p",
+      "text": "1965 年，魯賓斯坦（Arthur Rubinstein）在羅馬替 RCA 唱片錄下蕭邦的夜曲全集。他生在波蘭，1946 年入了美國籍，《紐約時報》說蕭邦是他的專長。這篇挑這一套，理由有兩個：彈的人專攻蕭邦；整套夜曲都在同一張，這首聽完，下一軌就是作品 9 之 3。"
+    },
+    {
+      "type": "p",
+      "text": "現在聽到的是快結束的地方。譜上在這裡寫著 senza tempo，意思是不照拍子走，節奏放得很自由。"
+    },
+    {
+      "type": "p",
+      "text": "2015 年起，台北市替捷運重做站內的聲音：閘門的警示音、車廂裡轉乘和終點站的提示旋律、列車專屬的進站音樂。周岳澄負責松山新店線，他選了蕭邦的夜曲，用爵士的手法改編。"
+    },
+    {
+      "type": "quote",
+      "text": "我知道如果推出的是全新音樂，大家一開始一定會有一點排斥，這算是策略成功。再加上使用蕭邦的音樂可以避免版權問題，實務上可以完成任務。",
+      "cite": "周岳澄，中央社文化+，2020 年 4 月 24 日"
+    },
+    {
+      "type": "p",
+      "text": "2021 年，兩部台灣電影也用了它。《瀑布》牛排館的那場戲，請鋼琴家葉綠娜錄了這首；《青春弒戀》裡，女主角在公車上聽起這首以後，它就如影隨形，還當了預告片的主題曲。"
+    },
+    {
+      "type": "p",
+      "text": "這首聽完，接著聽同一組的作品 9 之 3。焦元溥說蕭邦在那一首「改變了夜曲的預設」，給了「強烈激動的情感轉折」，中段標著 Agitato，激動地彈。再來是作品 27 之 2，它和這首大概是蕭邦夜曲裡最歷久不衰的兩首。在魯賓斯坦那一套裡，它是第 8 軌。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "台北捷運 × 蕭邦夜曲【美感音樂焦學 Vol.1】",
+      "publisher": "Pen tw（焦元溥）",
+      "date": "2024-06-19",
+      "url": "https://www.pen-online.tw/muisc-vol1-taipei-metro/",
+      "note": "2024 年 6 月 19 日刊出。松山新店線列車進站配樂為周岳澄改編的作品 9 之 2；2021 年兩部台灣電影《瀑布》（牛排館場景，葉綠娜錄製）、《青春弒戀》（預告片主題曲）；「古典音樂不敗的入門」「千迴百折的花腔」；費爾德；第 3 首「改變了夜曲的預設」「強烈激動的情感轉折」；作者簡介（《聽見蕭邦》）"
+    },
+    {
+      "title": "捷運聲景 構築一座城市的記憶",
+      "publisher": "中央社文化+（趙靜瑜）",
+      "date": "2020-04-24",
+      "url": "https://www.cna.com.tw/culture/article/20200424w001",
+      "note": "周岳澄的身分（2015 年聲音地景計畫，進站、轉乘音樂與悠遊卡音效）、負責松山新店線並選了蕭邦的夜曲、引文。本文同時寫他做的是「轉乘音樂」與「進站音樂」，正文的「進站」以 Pen tw 與維基百科為準；文中未指明哪一首夜曲"
+    },
+    {
+      "title": "Nocturnes, Op. 9 (Chopin)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-07",
+      "url": "https://en.wikipedia.org/wiki/Nocturnes,_Op._9_(Chopin)",
+      "note": "日期為查閱日。作品 9 之 2 的曲式、拍號、裝飾與 senza tempo；寫成年代 1831–32，與 IMSLP 的 1830–31 不同，正文寫 1830 到 1832"
+    },
+    {
+      "title": "Nocturne in E-flat major, Op. 9, No. 2 (Chopin)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-08",
+      "url": "https://en.wikipedia.org/wiki/Nocturne_in_E-flat_major,_Op._9,_No._2",
+      "note": "日期為查閱日。常被看成蕭邦最有名的作品；台北捷運松山新店線列車進站音樂"
+    },
+    {
+      "title": "Nocturnes, Op.9 (Chopin, Frédéric)",
+      "publisher": "IMSLP",
+      "date": "2026-11-07",
+      "url": "https://imslp.org/wiki/Nocturnes,_Op.9_(Chopin,_Fr%C3%A9d%C3%A9ric)",
+      "note": "日期為查閱日。題獻 à Madame Camille Pleyel（Marie Pleyel, 1811–1875）；寫成 1830–31；首次出版 1832–33"
+    },
+    {
+      "title": "Frédéric Chopin",
+      "publisher": "Wikipedia",
+      "date": "2026-11-07",
+      "url": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin",
+      "note": "日期為查閱日。1830 年 11 月 2 日離開華沙、1831 年 10 月 5 日抵達巴黎、1832 年 2 月 26 日首場演出、認識普雷耶爾"
+    },
+    {
+      "title": "Hector Berlioz",
+      "publisher": "Wikipedia",
+      "date": "2026-11-07",
+      "url": "https://en.wikipedia.org/wiki/Hector_Berlioz",
+      "note": "日期為查閱日。1830 年訂婚、12 月《幻想交響曲》首演後赴義大利、女方解除婚約、殺人計畫與尼斯、《李爾王》序曲、《回憶錄》1870 年死後出版。殺人計畫各來源細節不一（毒藥、寫信人、收信地點），正文只寫一致的部分並歸給《回憶錄》"
+    },
+    {
+      "title": "Why did Berlioz resolve to murder 'two guilty women and an innocent man'?",
+      "publisher": "Classical Music（BBC Music Magazine）",
+      "date": "2024-08-01",
+      "url": "https://www.classical-music.com/features/composers/berlioz-camille-moke",
+      "note": "婚約 1831 年 4 月破裂；殺人計畫（手槍、女裝喬裝，對象是她、她母親與普雷耶爾）出自白遼士《回憶錄》；在尼斯打消念頭"
+    },
+    {
+      "title": "Camille Pleyel",
+      "publisher": "Wikipedia",
+      "date": "2026-11-07",
+      "url": "https://en.wikipedia.org/wiki/Camille_Pleyel",
+      "note": "日期為查閱日。普雷耶爾的身分、妻子 Marie Moke（1811–1875）、作品 9 題獻"
+    },
+    {
+      "title": "Marie Pleyel",
+      "publisher": "Wikipedia",
+      "date": "2026-11-07",
+      "url": "https://en.wikipedia.org/wiki/Marie_Pleyel",
+      "note": "日期為查閱日。Marie Moke 為嫁給 Camille Pleyel 而解除與白遼士的婚約"
+    },
+    {
+      "title": "Nocturnes (Chopin)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-07",
+      "url": "https://en.wikipedia.org/wiki/Nocturnes_(Chopin)",
+      "note": "日期為查閱日。蕭邦夜曲總數；作品 9 之 2 與作品 27 之 2 並列最長銷"
+    },
+    {
+      "title": "John Field (composer)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-07",
+      "url": "https://en.wikipedia.org/wiki/John_Field_(composer)",
+      "note": "日期為查閱日。費爾德被視為夜曲的發明者"
+    },
+    {
+      "title": "The Chopin Collection: The Nocturnes（Rubinstein）",
+      "publisher": "MusicBrainz",
+      "date": "2026-11-07",
+      "url": "https://musicbrainz.org/release/7cc34e83-e43b-417f-897f-41ce448ac738",
+      "note": "日期為查閱日。RCA Red Seal 5613-2-RC（1984，美國）；專輯註記整套錄於 1965 年 8 月 30、31 日與 9 月 1、2 日，羅馬 RCA Italiana；作品 9 之 2 在此版長 4 分 26 秒，第 2 軌，作品 27 之 2 第 8 軌。作品 9 之 2 確切是哪一天錄的不詳"
+    },
+    {
+      "title": "Chopin: Nocturnes (1999 Remastered) — Arthur Rubinstein",
+      "publisher": "Qobuz（Sony Classical）",
+      "date": "2026-11-08",
+      "url": "https://www.qobuz.com/gb-en/album/chopin-nocturnes-1999-remastered-arthur-rubinstein/0886443706675",
+      "note": "日期為查閱日。錄音 1965 年 8 至 9 月，只有作品 55 之 2 在 1967 年 2 月補錄"
+    },
+    {
+      "title": "Arthur Rubinstein",
+      "publisher": "Wikipedia",
+      "date": "2026-11-07",
+      "url": "https://en.wikipedia.org/wiki/Arthur_Rubinstein",
+      "note": "日期為查閱日。1887 年生於波蘭、1946 年入美國籍；以蕭邦聞名"
+    },
+    {
+      "title": "File:Marie Pleyel Litho.JPG",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-07",
+      "url": "https://commons.wikimedia.org/wiki/File:Marie_Pleyel_Litho.JPG",
+      "note": "圖片授權與作者"
+    },
+    {
+      "title": "File:Eugène Delacroix - Frédéric Chopin - WGA06194.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-07",
+      "url": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Delacroix_-_Fr%C3%A9d%C3%A9ric_Chopin_-_WGA06194.jpg",
+      "note": "圖片授權與作者"
+    }
+  ]
+}
