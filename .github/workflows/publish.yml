@@ -3,8 +3,6 @@ name: Publish
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: "20 * * * *"  # every hour, for the 外電 bar; wire.yml carries the same hour, since GitHub was slow to register this one
   workflow_dispatch:
 
 permissions:
@@ -37,7 +35,8 @@ jobs:
           D=$(TZ=Asia/Taipei date +%F)
           python3 scripts/validate.py "$D" || echo "::warning::validate.py reported problems for $D"
       - name: Wire (外電)
-        # content/wire.json is not in the repository: each build fetches the four wires afresh (no AI), starting from
+        # wire.yml starts this workflow every hour for the wires. content/wire.json is not in the repository: each
+        # build fetches the four wires afresh (no AI), starting from
         # the live file so a wire that cannot be read this hour keeps last hour's items. Nothing here can stop a deploy.
         run: |
           curl -sf -A "robin-morning/1.0" --max-time 20 https://wiener-morgen-private.duckdns.org/content/wire.json -o content/wire.json || rm -f content/wire.json

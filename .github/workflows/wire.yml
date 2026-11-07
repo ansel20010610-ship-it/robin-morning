@@ -1,23 +1,40 @@
 name: Wire (外電)
 
-# Every hour: rebuild the site so the front page's 外電 bar (scripts/wire.py, run inside publish.yml) is fetched afresh.
-# A schedule added to publish.yml itself was not picked up by GitHub for hours (2026-11-07), so the hour is kept here,
-# in a workflow of its own, which starts the deploy the way fill.yml does. GitHub may start it some minutes late.
+# Keeps the front page's 外電 bar fresh: every hour it starts publish.yml, whose build reads the wires (scripts/wire.py).
+# GitHub's scheduler is not to be relied on for this (2026-11-07: the hourly cron in publish.yml never fired in four
+# hours, and other schedules ran up to seven hours late), so the hour is kept by a relay instead: one run stays up for
+# five hours, starting a deploy each hour, and before it ends starts the next run of itself. The relay is started by a
+# push of this file, by hand (workflow_dispatch), or by the cron below whenever GitHub does get round to it — so a
+# broken relay mends itself. The concurrency group keeps it to one run at a time and at most one waiting.
 on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/wire.yml"]
   schedule:
-    - cron: "20 * * * *"
+    - cron: "20 */3 * * *"
   workflow_dispatch:
 
 permissions:
   actions: write
 
+concurrency:
+  group: wire-relay
+  cancel-in-progress: false
+
 jobs:
-  deploy:
+  relay:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 320
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
     steps:
-      - name: Start the deploy
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
-        run: gh workflow run publish.yml --ref main
+      - name: A deploy every hour for five hours
+        run: |
+          for i in 1 2 3 4 5; do
+            gh workflow run publish.yml --ref main || echo "::warning::could not start publish.yml (hour $i)"
+            [ "$i" = 5 ] || sleep 3600
+          done
+      - name: Hand on to the next run
+        if: always()
+        run: sleep 3000 && gh workflow run wire.yml --ref main
