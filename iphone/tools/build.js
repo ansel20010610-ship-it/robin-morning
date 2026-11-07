@@ -1,8 +1,8 @@
-// The iPhone set: the home-screen wallpaper (day, night), three drawn widgets and seven framed pictures.
+// The iPhone set: the home-screen wallpaper (day, night), three drawn widgets and five framed painting details.
 // Usage: bun add @resvg/resvg-js@2.6.2, then FONTS=<dir> bun build.js <outdir>. <dir> holds Cormorant Garamond
 // (500, 600, 500 italic) and Noto Serif TC (300, 600) as TTF, from Google Fonts (both OFL). Convert the PNGs to
-// JPEG (quality 92) before committing: the paper grain makes them large. The pictures are in photos/, already
-// cropped to the widget's shape; where they come from and their licences are in ../README.md.
+// JPEG (quality 92) before committing: the paper grain makes them large. The painting details are in photos/,
+// already cropped to the widget's shape; where they come from is in ../README.md (all public domain).
 import { Resvg } from "@resvg/resvg-js";
 import { mkdirSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
@@ -13,7 +13,7 @@ import { draw as kiss } from "./motifs/kuss-mosaik.js";
 
 const OUT = process.argv[2] || "out";
 const pic = (name) => "data:image/jpeg;base64," + readFileSync(join(import.meta.dir, "photos", `${name}.jpg`)).toString("base64");
-const PHOTOS = { kaffeehaus: "medium", karlskirche: "medium", attersee: "medium", secession: "small", schiele: "small", melange: "small", wagner: "small" };
+const PHOTOS = { naschmarkt: "medium", moser: "medium", vierbaeume: "small", sonnenblumen: "small", floege: "small" };
 const STILLS = {
   ...KIT_STILLS,
   "mozart40-mittel": (t) => mozart(t, ...SIZE.medium),

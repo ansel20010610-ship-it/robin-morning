@@ -28,22 +28,20 @@
 
 ## 圖片組件
 
-用 Colorful Widget 或 iScreen 的「照片」組件，選對應尺寸放進去。一共九格，每格一個不同的題材：
+用 Colorful Widget 或 iScreen 的「照片」組件，選對應尺寸放進去。五張是維也納名畫的局部，三張是手繪：
 
 | 檔案 | 尺寸 | 內容 |
 | --- | --- | --- |
-| `widgets/kaffeehaus-mittel-*.jpg` | 中 | 中央咖啡館（Café Central）的拱頂，照片 |
-| `widgets/karlskirche-mittel-*.jpg` | 中 | 查理教堂夜景，照片 |
+| `widgets/naschmarkt-mittel-*.jpg` | 中 | Carl Moll〈維也納納許市集〉，1894 |
+| `widgets/moser-mittel-*.jpg` | 中 | Koloman Moser〈從托爾博萊眺望加爾達湖西岸〉，1912 |
 | `widgets/mozart40-mittel-*.jpg` | 中 | 莫札特第 40 號交響曲 g 小調開頭的樂譜，手繪 |
-| `widgets/secession-klein-*.jpg` | 小 | 分離派展覽館的金頂，照片 |
-| `widgets/schiele-klein-*.jpg` | 小 | Egon Schiele〈克魯毛：屋群〉，1915，畫作 |
-| `widgets/melange-klein-*.jpg` | 小 | 皇家糕點師 Demel 的一杯咖啡，照片 |
+| `widgets/vierbaeume-klein-*.jpg` | 小 | Egon Schiele〈四棵樹〉，1917 |
+| `widgets/sonnenblumen-klein-*.jpg` | 小 | Gustav Klimt〈有向日葵的農家花園〉，約 1907 |
+| `widgets/floege-klein-*.jpg` | 小 | Gustav Klimt〈艾蜜莉・芙洛格肖像〉，1902 |
 | `widgets/kuss-klein-*.jpg` | 小 | Der Kuss：Klimt《吻》的金色馬賽克，手繪 |
 | `widgets/weizenkorn-klein-*.jpg` | 小 | 一粒麥子，《約翰福音》十二章，直排，手繪 |
 
-加上會變的維也納日曆（中型）就是九格。照片和畫作都嵌在同一張米色紙卡裡，外圍一道金線、一道細線，四角各一顆小金方塊。
-
-另有兩張備選，想換的時候用：`attersee-mittel`（Klimt〈阿特湖中的島〉）、`wagner-klein`（Otto Wagner 的卡爾廣場地鐵站）。
+加上會變的維也納日曆（中型）就是九格。畫作嵌在同一張米色紙卡裡，外圍一道金線、一道細線，四角各一顆小金方塊。
 
 照片組件不會跟著日夜模式換圖，挑和桌布同一色的那一版（tag 日間、nacht 夜間）。
 
@@ -51,24 +49,22 @@
 
 每頁 4×6 格剛好填滿，App 分三頁（4、8、8 個），Dock 不變。
 
-- **第一頁**：中型日曆；小型分離派金頂＋4 個 App；中型中央咖啡館。
-- **第二頁**：4 個 App＋小型 Schiele；中型莫札特；小型咖啡＋4 個 App。
-- **第三頁**：中型查理教堂；4 個 App＋小型 Der Kuss；小型一粒麥子＋4 個 App。
+- **第一頁**：中型日曆；小型〈四棵樹〉＋4 個 App；中型〈納許市集〉。
+- **第二頁**：4 個 App＋小型〈芙洛格〉；中型莫札特；小型〈向日葵〉＋4 個 App。
+- **第三頁**：中型〈加爾達湖〉；4 個 App＋小型 Der Kuss；小型一粒麥子＋4 個 App。
 
-## 照片與畫作的來源
+## 畫作的來源
 
-都來自 Wikimedia Commons，經裁切並加上紙卡外框。CC BY-SA 的作品，裁切後的版本同樣以 CC BY-SA 釋出。
+都是 Wikimedia Commons 上的館方掃描，畫家都在 1945 年前過世，畫作已是公共領域。組件用的是裁切後的局部。
 
-| 組件 | 原作 | 作者 | 授權 |
-| --- | --- | --- | --- |
-| 查理教堂 | [Iglesia de San Carlos Borromeo, Viena](https://commons.wikimedia.org/wiki/File:Iglesia_de_San_Carlos_Borromeo,_Viena,_Austria,_2020-01-31,_DD_164-166_HDR.jpg) | Diego Delso | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
-| 中央咖啡館 | [Vault Café Central Vienna Wien](https://commons.wikimedia.org/wiki/File:Vault_Caf%C3%A9_Central_Vienna_Wien.jpg) | Jebulon | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
-| 分離派金頂 | [Wiener Secessionsgebäude Kuppel 20230811](https://commons.wikimedia.org/wiki/File:Wiener_Secessionsgeb%C3%A4ude_Kuppel_20230811.jpg) | Uoaei1 | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
-| 咖啡 | [Hofzuckerbäcker Demel Frühstück 07](https://commons.wikimedia.org/wiki/File:Hofzuckerb%C3%A4cker_Demel_Fr%C3%BChst%C3%BCck_07.jpg) | Geolina163 | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
-| Wagner 地鐵站 | [Otto-Wagner-Pavillon Wien](https://commons.wikimedia.org/wiki/File:Otto-Wagner-Pavillon_Wien.jpg) | Thomas Wolf, www.foto-tw.de | [CC BY-SA 3.0 de](https://creativecommons.org/licenses/by-sa/3.0/de/deed.en) |
-| Schiele | [Krumau – Crescent of Houses (The small City V)](https://commons.wikimedia.org/wiki/File:Egon_Schiele_-_Krumau_-_Crescent_of_Houses_(The_small_City_V)_-_Google_Art_Project.jpg) | Egon Schiele（Google Art Project 掃描） | 公共領域 |
-| 阿特湖 | [Insel im Attersee](https://commons.wikimedia.org/wiki/File:Gustav_Klimt_-_Insel_im_Attersee_(c._1901-02).jpg) | Gustav Klimt | 公共領域 |
+| 組件 | 原作 | 收藏 |
+| --- | --- | --- |
+| 納許市集 | [Carl Moll, Der Naschmarkt in Wien](https://commons.wikimedia.org/wiki/File:Carl_Moll_-_Der_Naschmarkt_in_Wien_-_252_-_%C3%96sterreichische_Galerie_Belvedere.jpg) | Belvedere, Wien |
+| 加爾達湖 | [Koloman Moser, Blick von Torbole auf das Westufer des Gardasees](https://commons.wikimedia.org/wiki/File:Koloman_Moser_-_Blick_von_Torbole_auf_das_Westufer_des_Gardasees_-_2153_-_Belvedere.jpg) | Belvedere, Wien |
+| 四棵樹 | [Egon Schiele, Vier Bäume](https://commons.wikimedia.org/wiki/File:Egon_Schiele_-_Vier_B%C3%A4ume_-_3917_-_%C3%96sterreichische_Galerie_Belvedere.jpg) | Belvedere, Wien |
+| 向日葵 | [Gustav Klimt, Bauerngarten mit Sonnenblumen](https://commons.wikimedia.org/wiki/File:Gustav_Klimt,_1907,_Farm_Garden_with_Sunflowers,_%C3%96sterreichische_Galerie_Belvedere.jpg) | Belvedere, Wien |
+| 芙洛格 | [Gustav Klimt, Bildnis Emilie Flöge](https://commons.wikimedia.org/wiki/File:Gustav_Klimt_-_Bildnis_Emilie_Fl%C3%B6ge.jpg) | Wien Museum |
 
 ## 重新產生圖片
 
-`tools/build.js` 產生桌布和全部圖片組件：`tools/kit.js` 是共用的紙、金框、方格角與桌布，`tools/photo.js` 是照片的紙卡外框，`tools/motifs/` 是手繪的樂譜與 Der Kuss，`tools/photos/` 是裁好的照片。SVG 用 resvg 輸出；字型用 Cormorant Garamond 與 Noto Serif TC，都是 Google Fonts 的開放授權字型，不放在 repo 裡，用法寫在 build.js 開頭。
+`tools/build.js` 產生桌布和全部圖片組件：`tools/kit.js` 是共用的紙、金框、方格角與桌布，`tools/photo.js` 是畫作的紙卡外框，`tools/motifs/` 是手繪的樂譜與 Der Kuss，`tools/photos/` 是裁好的畫作局部。SVG 用 resvg 輸出；字型用 Cormorant Garamond 與 Noto Serif TC，都是 Google Fonts 的開放授權字型，不放在 repo 裡，用法寫在 build.js 開頭。
