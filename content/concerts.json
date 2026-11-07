@@ -781,6 +781,51 @@
           "url": "https://www.opentix.life/program/2109225538266103809"
         }
       ]
+    },
+    {
+      "id": "thielemann-staatskapelle-berlin-2026",
+      "title": "提勒曼與柏林國家歌劇院管弦樂團",
+      "kind": "交響樂",
+      "rating": 5,
+      "why": "提勒曼睽違十四年再來台，帶著首度訪台的柏林國家歌劇院管弦樂團：台北首晚是他最拿手的布魯克納《浪漫》，另兩場是理查．史特勞斯的《最後四首歌》與《阿爾卑斯交響曲》。",
+      "who": "克里斯提安．提勒曼（指揮）、柏林國家歌劇院管弦樂團；魯道夫．布赫賓德（鋼琴，11/21）、卡蜜拉．尼倫德（女高音，11/22、11/24）",
+      "program": "11/21：莫札特《第二十一號鋼琴協奏曲》、布魯克納《第四號交響曲「浪漫」》；11/22、11/24：理查．史特勞斯《最後四首歌》《阿爾卑斯交響曲》",
+      "note": "牛耳藝術售票，非 OPENTIX；11/22 票款全數捐慈善",
+      "shows": [
+        {
+          "date": "2026-11-21",
+          "time": "19:45",
+          "city": "台北",
+          "venue": "臺北國家音樂廳",
+          "tickets": "https://ticket.mna.com.tw/UTK0201_?PRODUCT_ID=P1ETF1DD"
+        },
+        {
+          "date": "2026-11-22",
+          "time": "14:00",
+          "city": "台北",
+          "venue": "臺北國家音樂廳",
+          "tickets": "https://ticket.mna.com.tw/UTK0201_?PRODUCT_ID=P1ETF1DD"
+        },
+        {
+          "date": "2026-11-24",
+          "time": "19:00",
+          "city": "高雄",
+          "venue": "衛武營音樂廳",
+          "tickets": "https://ticket.mna.com.tw/UTK0201_?PRODUCT_ID=P1ETF1DD"
+        }
+      ],
+      "added": "2026-11-07",
+      "uids": [],
+      "sources": [
+        {
+          "title": "牛耳藝術節目頁",
+          "url": "https://www.mna.com.tw/concerts_detail.html?id=774"
+        },
+        {
+          "title": "鏡週刊：提勒曼率柏林國家歌劇院管弦樂團來台",
+          "url": "https://www.mirrormedia.mg/story/20260907-197ins-122335"
+        }
+      ]
     }
   ]
 }
