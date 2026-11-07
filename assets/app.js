@@ -837,7 +837,7 @@ async function viewArticle(date, column, my) {
       ${"share" in navigator ? `<div class="share"><button class="btn ghost" type="button" data-share>${ICON.share}分享這篇</button></div>` : ""}
       <div class="next"></div>
     </div></article>
-    <button class="resume" type="button" hidden>從上次讀到的地方繼續</button>`;
+    <button class="resume" type="button" hidden>上次讀到這裡</button>`;
   const hero = renderHero(a.hero);
   if (hero) {
     // 銅版畫 (style.css .plate, motion.js plate): the picture settles, is gilt-framed and drifts with the scroll — unless it
@@ -994,19 +994,32 @@ async function viewArticle(date, column, my) {
   // Opened from the front page's 接著上次, the page lands there at once (route() scrolls to landTop) and asks nothing.
   const back = store.get(posKey, 0);
   const resume = main.querySelector(".resume");
+  // position: fixed inside #main would be fixed to the animated page, not the screen (its entrance transform makes it
+  // the containing block): the button lives on <body> while the article is open, and goes with it (cleanup).
+  document.body.append(resume);
   const topOf = (p) => { const h = document.documentElement; return p * (h.scrollHeight - h.clientHeight); };
   let resumeT = 0;
   const hideResume = () => { resume.classList.add("off"); clearTimeout(resumeT); resumeT = setTimeout(() => { resume.hidden = true; }, 400); };
-  // The page lands where the reader stopped however it was opened (the owner, 2026-11-06: 點開直接捲到上次停的地方), a
-  // toast saying so; the .resume button is kept for the day a reader scrolls up and wants the place back, but not shown.
+  // An article opens at its top, and the place the reader stopped is offered at the foot of the screen: one tap there
+  // and the page glides down to it (the owner, 2026-11-07: 點進去在最上面，下面跳「上次讀到這」，點了再滑過去). Two ways in
+  // still land at once, because choosing them already says where to go: a pencil line tapped in 劃線本 (landTop is
+  // already set) and a card of 接著上次 on 往期 (landKey).
+  const fromContinue = landKey === key;
   landKey = null;
-  if (back > 0.08 && landTop == null) { // a pencil line tapped in 劃線本 has already chosen where to land
-    landTop = topOf(back);
-    toast(`接著上次・${pct(back)}%`);
+  if (back > 0.08 && landTop == null) {
     resume.onclick = () => { window.scrollTo({ top: topOf(back), behavior: calm() ? "auto" : "smooth" }); hideResume(); };
+    if (fromContinue) {
+      landTop = topOf(back);
+      toast(`接著上次・${pct(back)}%`);
+    } else {
+      resume.innerHTML = `上次讀到 ${pct(back)}%<span aria-hidden="true">・接著讀 ↓</span>`;
+      resume.classList.remove("off");
+      resume.hidden = false;
+    }
   }
   cleanup = () => {
     aaClose?.();
+    resume.remove();
     clearTimeout(trail);
     savePos(); // route() runs this before drawing the next view, so the article is still on the page
     window.removeEventListener("scroll", onScroll);
