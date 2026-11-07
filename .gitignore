@@ -4,3 +4,4 @@ __pycache__/
 _site/
 content/search/
 ics/
+content/wire.json

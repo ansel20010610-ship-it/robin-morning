@@ -372,6 +372,33 @@ function fillWeather() {
     if (html && box.isConnected) { box.querySelector(".fc").innerHTML = html; box.hidden = false; }
   });
 }
+// 外電 (Telegramme; scripts/wire.py, the owner 2026-11-07: the paper should not be finished once read): a thin bar under
+// the weather on the latest issue's front page, the newest wire on one line — 中央社 and 德國之聲 first, BBC 中文 and 法廣
+// filling in, all in Taiwan wording — and, opened, the last day's dozen with their leads. content/wire.json is rebuilt
+// every hour at deploy (no AI); the bar fetches it on each draw and with the five-minute refresh, and keeps itself
+// open across a refill. With no file (a preview, offline on first run) it stays hidden.
+const wireBox = () => `<section class="wire" hidden aria-label="外電"><div class="lbl">外電<span class="de">Telegramme</span><span class="at"></span></div>
+  <details class="tk"><summary></summary><ol></ol></details></section>`;
+// 16:05 today, 昨 23:01 for yesterday, 11/5 08:10 before that (the times are Taiwan time, +08:00).
+function wireTime(iso) {
+  const d = String(iso).slice(0, 10), hm = String(iso).slice(11, 16), today = twNow().date;
+  if (d === today) return hm;
+  const y = new Date(Date.parse(`${today}T00:00:00Z`) - 864e5).toISOString().slice(0, 10);
+  return d === y ? `昨 ${hm}` : `${Number(d.slice(5, 7))}/${Number(d.slice(8, 10))} ${hm}`;
+}
+function fillWire() {
+  const box = main.querySelector(".wrap > .wire");
+  if (!box) return;
+  getJSON("content/wire.json", { fresh: true }).then((w) => {
+    const items = (Array.isArray(w?.items) ? w.items : []).filter((i) => i?.title && /^https:\/\//.test(i.url || ""));
+    if (!items.length || !box.isConnected) return;
+    const first = items[0];
+    box.querySelector(".at").textContent = w.updated ? `${wireTime(w.updated)} 更新` : "";
+    box.querySelector("summary").innerHTML = `<span class="t">${esc(wireTime(first.time))}</span><span class="src">${esc(first.src)}</span><span class="h">${esc(first.title)}</span><span class="more">${items.length} 則</span><span class="less">收起</span>`;
+    box.querySelector("ol").innerHTML = items.map((i) => `<li><a href="${esc(i.url)}" target="_blank" rel="noopener noreferrer"><span class="meta"><span class="t">${esc(wireTime(i.time))}</span><span class="src">${esc(i.src)}</span></span><b>${esc(i.title)}</b>${i.lead ? `<span class="ld">${esc(i.lead)}</span>` : ""}</a></li>`).join("");
+    box.hidden = false;
+  }).catch(() => {});
+}
 // 刮開頭圖 (style.css .reveal): today's paper carries the day's picture under a sheet of paper cut into one tile per
 // article on the front page (the watch items among them only with a brief). A tile is gone once its article is read —
 // readSet, the same mark as the cards' 已讀 — and with the last one the picture stands whole, with its title and a way to
@@ -535,6 +562,7 @@ function viewFront(dateParam) {
     ${lateNote(issue.date)}
     ${prayerBox(issue)}
     ${weatherBox(issue)}
+    ${dateParam ? "" : wireBox()}
     ${revealBox(issue, arts, read)}
     ${mains.length ? `<div class="sec-head"><h2>攤開第一頁</h2><span class="de">Erste Seite</span><span class="note">${mains.length} 篇</span></div>` : ""}
     ${lead ? `<a class="lead${posMark(issue.date, lead, read).cls}"${posMark(issue.date, lead, read).st} href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column, false, issue.date)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
@@ -559,6 +587,7 @@ function viewFront(dateParam) {
   prefetch(issue);
   wireDigest(issue);
   fillReveal();
+  fillWire();
   fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
 }
@@ -1989,6 +2018,7 @@ async function boot() {
   const refetch = async () => {
     await loadIndex();
     refreshFront();
+    fillWire(); // the wire changes every hour whether or not the issue did
     runAutoAdd();
   };
   setInterval(refreshFront, 60 * 1000);

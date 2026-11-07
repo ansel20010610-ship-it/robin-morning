@@ -3,6 +3,8 @@ name: Publish
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "20 * * * *"  # every hour: the 外電 bar on the front page (scripts/wire.py) is fetched at build time
   workflow_dispatch:
 
 permissions:
@@ -34,6 +36,13 @@ jobs:
         run: |
           D=$(TZ=Asia/Taipei date +%F)
           python3 scripts/validate.py "$D" || echo "::warning::validate.py reported problems for $D"
+      - name: Wire (外電)
+        # content/wire.json is not in the repository: each build fetches the four wires afresh (no AI), starting from
+        # the live file so a wire that cannot be read this hour keeps last hour's items. Nothing here can stop a deploy.
+        run: |
+          curl -sf -A "robin-morning/1.0" --max-time 20 https://wiener-morgen-private.duckdns.org/content/wire.json -o content/wire.json || rm -f content/wire.json
+          python3 -m venv /tmp/wire && /tmp/wire/bin/pip install -q opencc-python-reimplemented==0.1.7 || echo "::warning::opencc not installed; DW stays in simplified wording"
+          /tmp/wire/bin/python scripts/wire.py || python3 scripts/wire.py || echo "::warning::wire.py produced nothing this hour"
       - name: Assemble site
         run: |
           mkdir _site
