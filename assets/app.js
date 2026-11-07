@@ -632,6 +632,16 @@ function wireDigest(issue) {
     finishSeen = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) finish(); }, { threshold: 0.8 });
     finishSeen.observe(fin);
   }
+  // Back from the issue's last article (the parcel's, as a rule) with nothing left unread: the page carries the reader
+  // down to the seal, so the stamping is seen rather than found later (the owner, 2026-11-07). Two frames on, so it
+  // runs after the scroll restore and after fillReveal's return to the parcel.
+  if (fin && !was && enteredFront && cameFrom.startsWith(`#/a/${issue.date}/`)) {
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      if (!fin.isConnected) return;
+      const top = fin.getBoundingClientRect().top + scrollY - Math.max(24, (innerHeight - fin.offsetHeight) / 2);
+      scrollTo({ top: Math.max(0, top), behavior: calm() ? "auto" : "smooth" });
+    }));
+  }
   cleanup = () => { finishSeen?.disconnect(); finishSeen = null; ring.stop(); };
 }
 function markDigestDone(date) {
@@ -646,7 +656,7 @@ function markDigestDone(date) {
 // The seal (motion.js seal) with the day on it; from a streak of two the laurel wraps round it.
 function finishInner(date) {
   const run = date === publishedIssues()[0]?.date ? streak() : null;
-  return `${seal(date, run?.today ? run.n : 0)}<b>今天的報紙，讀完了</b><span class="note">${esc(finishNote(date))}</span>`;
+  return `${seal(date, run?.today ? run.n : 0)}<b>今天這一份，讀到了最後一行</b><span class="note">${esc(finishNote(date))}</span>`;
 }
 
 // ——— Keeping what you read: the streak ———
@@ -661,8 +671,10 @@ function streak() {
 function finishNote(date) {
   const run = date === publishedIssues()[0]?.date ? streak() : null;
   // The paper's own voice, not a coach's (the owner, 2026-11-07: 不要這麼 bro 的風格).
-  if (!run?.today || run.n < 2) return "想多知道一點，點進任何一篇；不點也無妨，今天該知道的都在這裡了。";
-  return run.n >= 7 ? `連著 ${run.n} 天讀完，這份報紙已經是早上的一部分了。` : run.n >= 3 ? `連著 ${run.n} 天讀完了。` : "連著兩天讀完了。";
+  if (!run?.today || run.n < 2) return "早上的報紙就讀到這裡。想再往深處走，任何一篇都還在原處等著；不往下走也無妨，今天該知道的，都已經在你這裡了。";
+  if (run.n >= 7) return `連著 ${run.n} 個早晨都讀完了。到了這個天數，已經不是你在讀這份報紙，是它在替你把早上排好。`;
+  if (run.n >= 3) return `連著 ${run.n} 個早晨都讀完了。一份報紙讀到底不是什麼大事，可是每天都做到，就慢慢成了這一天的開頭。`;
+  return "連著兩個早晨都讀完了。報紙是一天一份的東西，兩天連在一起，就開始有了節奏。";
 }
 
 // Load the issue's articles in the background: they open instantly and the service worker keeps them for offline reading,
@@ -1801,6 +1813,7 @@ let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns 
 const tabOf = (h) => h.startsWith("#/serial") || h.startsWith("#/column/serial") ? "#/serial" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/archive" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let enteredFront = false; // this draw of the front page came from another page (route), not from a redraw in place
+let cameFrom = ""; // the hash the reader left for this one
 let routed = 0; // in-app navigations so far: a back arrow can step back in history only after the first
 let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising number, so a step back is recognisable
 // Pages with a back arrow: an article, an event. Any other page keeps its scroll position for when the reader steps
@@ -1815,6 +1828,7 @@ async function route(ev) {
   document.title = S.cfg.title;
   const h = location.hash || "#/";
   enteredFront = shownHash !== h;
+  cameFrom = shownHash || "";
   const leaving = isDetail(shownHash); // coming out of an article or an event
   if (shownHash && !isDetail(shownHash) && shownHash !== h) places.set(shownHash, scrollY);
   const tapped = navTap;
