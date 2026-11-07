@@ -235,7 +235,7 @@ function serialCard(date, a, read, { plate = true, recap = true } = {}) {
 }
 function serialBox(date, a, read) {
   const s = a.serial || {};
-  return `<a class="sec-head link" href="#/serial" aria-label="小說：全部回目"><h2>小說</h2><span class="de">Fortsetzung folgt</span><span class="note">第 ${esc(String(s.n ?? ""))} 回${s.of ? `・共 ${esc(String(s.of))} 回` : ""} →</span></a>${serialCard(date, a, read, { recap: false })}`; // the front page says what this installment holds (brief), not what came before (the owner, 2026-11-06)
+  return `<a class="sec-head link" href="#/serial" aria-label="連載：全部回目"><h2>連載</h2><span class="de">Fortsetzung folgt</span><span class="note">第 ${esc(String(s.n ?? ""))} 回${s.of ? `・共 ${esc(String(s.of))} 回` : ""} →</span></a>${serialCard(date, a, read, { recap: false })}`; // the front page says what this installment holds (brief), not what came before (the owner, 2026-11-06)
 }
 // ——— 連載 tab (#/serial, content/serial.json): the book's plate and progress, the next installment to read, the cast,
 // and every installment published so far in order — the one home of the serial; the front page's card is the day's door.
@@ -306,7 +306,7 @@ async function viewSerial(my) {
   const row = ({ date, a }) => { const k = `${date}/${a.column}`, s = a.serial || {}; const inner = `<span class="no" aria-hidden="true">${esc(String(s.n ?? "").padStart(2, "0"))}</span>
       <span class="t"><span class="m"><span class="k">${esc(serialWhere(s))}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title.replace(/^第 \d+ 回・/, ""))}</b></span>`;
     return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}">${inner}</a></li>`; };
-  main.innerHTML = `<div class="wrap serie"><header class="page-title"><h1>小說</h1><span class="de">Roman</span></header>
+  main.innerHTML = `<div class="wrap serie"><header class="page-title"><h1>連載</h1><span class="de">Fortsetzung folgt</span></header>
     <section class="buch">
       <h2>《${esc(b.title || "")}》</h2>
       <p class="by">${esc(b.author || "")}${b.year ? `・${esc(String(b.year))}` : ""}${b.original ? `・<i>${esc(b.original)}</i>` : ""}</p>
@@ -320,7 +320,7 @@ async function viewSerial(my) {
     ${Array.isArray(b.cast) && b.cast.length ? castBox(b.cast) : ""}
     ${parts.length ? `<div class="sec-head"><h2>回目</h2><span class="de">Folgen</span><span class="note">${parts.length} 回</span></div>${bands(row)}` : ""}
   </div>`;
-  document.title = `小說｜${S.cfg.title}`;
+  document.title = `連載｜${S.cfg.title}`;
 }
 
 function itemCard(date, a, read) {
@@ -1109,7 +1109,7 @@ function wocheBox() {
   const stat = (v, l) => `<span><b>${v}</b>${l}</span>`;
   return `<section class="woche" aria-label="這一週"><div class="sec-head"><h2>這一週</h2><span class="de">Diese Woche</span><span class="note">${esc(fmtDate(days[0], "short"))}－${esc(fmtDate(today, "short"))}</span></div>
     <p class="nums">${stat(read.length, "篇讀完")}${stat(done, "天讀完整期")}${stat(marks, "處劃線")}${stat(birds, "隻知更鳥")}</p>
-    ${serial ? `<p class="line">那本書這週讀了 ${serial} 回，讀到第 ${n} 回。</p>` : ""}</section>`;
+    ${serial ? `<p class="line">連載這週讀了 ${serial} 回，讀到第 ${n} 回。</p>` : ""}</section>`;
 }
 function dayBox(date) {
   const e = S.days?.[date];
@@ -1801,7 +1801,7 @@ function viewSettings() {
 }
 
 // ——— Router ———
-const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/saved", "收藏", "saved"], ["#/serial", "小說", "book"], ["#/settings", "設定", "settings"]]; // 音樂 gave its tab to 連載 (the owner, 2026-11-05); the music column lives in 往期 like every column
+const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/saved", "收藏", "saved"], ["#/serial", "連載", "book"], ["#/settings", "設定", "settings"]]; // 音樂 gave its tab to 連載 (the owner, 2026-11-05); the music column lives in 往期 like every column
 let cleanup = () => {};
 let stopReveal = () => {};
 let lastTapped = null, shownArticle = null; // the card picture just tapped, and the article on screen (for the picture morph)
