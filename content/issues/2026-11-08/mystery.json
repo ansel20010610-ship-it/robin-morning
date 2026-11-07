@@ -2,12 +2,12 @@
   "column": "mystery",
   "date": "2026-11-08",
   "title": "宇宙膨脹的速度，算出來 67，量出來 73",
-  "dek": "7%。宇宙膨脹速度的兩種量法都把誤差壓到 1% 上下，答案卻一個 67、一個 73，沒有一邊讓步。",
+  "dek": "兩種量法都說自己的誤差在 1% 上下，答案卻一個約 67、一個約 73。",
   "brief": "宇宙現在膨脹得多快，從宇宙最早的光推算是 67，從近處星系一階一階量上來是 73。近處那條路最可疑的一環，韋伯太空望遠鏡重查一遍，沒找到擠在一起的星光造成的錯。距離梯子最底層用的蓋亞衛星視差，第四批資料預定 2026 年 12 月 2 日公布。",
   "topic_key": "mystery:cosmos-hubble-tension",
   "form": "number",
   "voice": "detective",
-  "updated_at": "2026-11-08T02:11:24+08:00",
+  "updated_at": "2026-11-08T02:14:12+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -16,7 +16,7 @@
     "width": 1280,
     "height": 1203,
     "alt": "一個正面朝向我們的螺旋星系，中央偏黃，旋臂上散布藍白色的亮點和暗紅色的塵埃帶，背景是黑色太空與零星的小星系。",
-    "caption": "螺旋星系 NGC 5584，距地球約 7,200 萬光年。星系裡有造父變星，也有過一顆 Ia 型超新星，距離梯子的第二階和第三階在同一個星系裡碰頭。韋伯太空望遠鏡近紅外相機與哈伯望遠鏡 WFC3 的合成影像，NASA 2023 年 9 月發布。",
+    "caption": "螺旋星系 NGC 5584，距地球約 7,200 萬光年。星系裡有造父變星，也有 Ia 型超新星。韋伯太空望遠鏡近紅外相機與哈伯望遠鏡 WFC3 的合成影像，NASA 2023 年 9 月發布。",
     "credit": "Image: NASA, ESA, CSA, Adam G. Riess (JHU, STScI)；Image Processing: Alyssa Pagan (STScI)",
     "license": "Public domain",
     "license_url": "",
@@ -36,7 +36,7 @@
     },
     {
       "type": "p",
-      "text": "865 是上限。他接著說，星系間的引力會拉住一些，實際值會小一點，但不大可能低於 750；所以當時量出的遠方星系距離太大，該縮短兩到三成。理論和望遠鏡對不上，他改的是望遠鏡那一邊。"
+      "text": "865 是上限。他接著說，星系間有引力，實際值會比這個小一點，但不大可能低於 750；所以當時量出的遠方星系距離太大，該縮短兩到三成。"
     },
     {
       "type": "p",
@@ -44,11 +44,11 @@
     },
     {
       "type": "p",
-      "text": "今天量它的兩套方法，各自把誤差壓到 1% 上下，**一套得到約 67，一套得到約 73，相差約 7%**，天文學界叫它「哈伯張力」。兩套都沒做錯的話，該改的就是描述整個宇宙的那套標準模型。"
+      "text": "今天量它的兩套方法，各自把誤差壓到 1% 上下，**一套得到約 67，一套得到約 73**，綜述把兩群數字歸納成約 68 與約 73，差約 7%，天文學界叫它「哈伯張力」。若兩邊量測都對，要改的是描述宇宙的標準模型。"
     },
     {
       "type": "p",
-      "text": "7% 換成時間也不小。假設宇宙一直等速膨脹，起點到現在的時間就是哈伯常數的倒數；我拿 67.4 和 73.04 去算，一個約 145 億年，一個約 134 億年，差 11 億年上下。這只是量級，不是宇宙年齡：宇宙並不是等速膨脹，普朗克照標準模型算出的年齡是 138 億年。"
+      "text": "這個差距換成時間也不小。假設宇宙一直等速膨脹，起點到現在的時間就是哈伯常數的倒數；我拿 67.4 和 73.04 去算，一個約 145 億年，一個約 134 億年，差 11 億年上下。這只是量級，不是宇宙年齡：宇宙並不是等速膨脹，普朗克照標準模型算出的年齡是 138 億年。"
     },
     {
       "type": "h",
@@ -56,15 +56,15 @@
     },
     {
       "type": "p",
-      "text": "哈伯最初估的是 500，照同樣的粗算，宇宙只有約 20 億歲；可是到 1931 年，岩石定年已給出地球 20 到 30 億歲。宇宙比地球年輕，一定哪裡錯了。"
+      "text": "哈伯最初估的是 500，照同樣的粗算，宇宙只有約 20 億歲；可是到 1931 年，岩石定年已給出地球 20 到 30 億歲。宇宙比地球年輕，這說不通。"
     },
     {
       "type": "p",
-      "text": "之後的修正幾乎都往下走。造父變星是一種規律脈動的亮星，天文學家勒維特（Henrietta Leavitt）1912 年確立它的週期和真正亮度綁在一起，可以當量距離的標準燈。"
+      "text": "造父變星是一種規律脈動的亮星，天文學家勒維特（Henrietta Leavitt）1912 年確立它的週期和真正亮度綁在一起，可以當量距離的標準燈。"
     },
     {
       "type": "p",
-      "text": "二戰期間，天文學家巴德（Walter Baade）趁洛杉磯燈火管制，在威爾遜山分辨出仙女座星系裡的紅巨星，把恆星分成年輕的「星族 I」和年老的「星族 II」。到 1950 年代才弄清造父變星也分兩種，年輕的那種同週期下亮得多，宇宙的距離因此放大一倍。"
+      "text": "二戰期間，天文學家巴德（Walter Baade）利用洛杉磯燈火管制，在威爾遜山分辨出仙女座星系裡的紅巨星，把恆星分成年輕的「星族 I」和年老的「星族 II」。到 1950 年代才弄清造父變星也分兩種，年輕的那種同週期下亮得多，宇宙的距離因此放大一倍。"
     },
     {
       "type": "p",
@@ -72,7 +72,7 @@
     },
     {
       "type": "quote",
-      "text": "我們以前差到兩倍，現在為了 10% 一樣吵得起勁。差兩倍，像是不確定自己有一隻腳還是兩隻腳；10% 像是在爭一根腳趾。",
+      "text": "我們以前差到兩倍，現在為了 10% 一樣爭得激烈。差兩倍，像是不確定自己有一隻腳還是兩隻腳；10% 像是在爭一根腳趾。",
       "original": "We used to disagree by a factor of 2; now we are just as passionate about 10 percent. A factor of two is like being unsure if you have one foot or two. Ten percent is like arguing about one toe.",
       "cite": "柯什納，NASA 新聞稿，1999 年 5 月 25 日"
     },
@@ -82,7 +82,7 @@
     },
     {
       "type": "p",
-      "text": "低的數字主要來自歐洲太空總署的普朗克衛星（Planck）。它拍的是宇宙微波背景，宇宙約 37 萬歲時放出的光。在那之前，光和物質攪成一鍋熱湯，聲波在裡面傳；到光放出來那一刻聲波走了多遠，物理算得出來。"
+      "text": "低的數字主要來自歐洲太空總署的普朗克衛星（Planck）。它拍的是宇宙微波背景，宇宙約 37 萬歲時放出的光。在那之前，光和物質混在一起，聲波在裡面傳；聲波在那之前走了多遠，標準模型算得出來。"
     },
     {
       "type": "figure",
@@ -92,7 +92,7 @@
       "width": 1280,
       "height": 640,
       "alt": "一張橢圓形的全天圖，布滿藍、綠、黃、紅交錯的細小斑點。",
-      "caption": "宇宙微波背景的全天溫度圖，顏色代表極小的溫度差。這張是普朗克的前一代、NASA 的 WMAP 衛星用九年資料畫成，2012 年發布。",
+      "caption": "宇宙微波背景的全天溫度圖，顏色代表極小的溫度差。這張不是普朗克的圖，是 NASA 的 WMAP 衛星用九年資料畫成，2012 年發布。",
       "credit": "NASA / WMAP Science Team",
       "license": "Public domain",
       "license_url": "",
@@ -102,7 +102,7 @@
     },
     {
       "type": "p",
-      "text": "這段距離就是一把長度已知的尺。普朗克量到它在天上撐開約 0.6 度。尺多長、看起來多大都知道，就算得出它多遠；這段距離取決於宇宙這 138 億年怎麼膨脹，套進標準模型，就解出今天的速度：67.4。"
+      "text": "聲波走的這段距離，成了天上的一把尺。普朗克量到它撐開約 0.6 度；把整張圖的斑點分布套進標準模型擬合，推出今天的速度：67.4。這把尺的長度本身也是標準模型算出來的。"
     },
     {
       "type": "p",
@@ -122,7 +122,7 @@
     },
     {
       "type": "p",
-      "text": "我最先會懷疑造父變星那一階。星系越遠，造父變星在影像裡越小，旁邊恆星的光可能混進來，距離就量偏了。2024 年，黎斯團隊用韋伯太空望遠鏡重拍一千多顆造父變星，最遠到 1.3 億光年外，兩台望遠鏡量出的距離幾乎一樣，「沒察覺的星光擁擠」以 8.2σ 被排除。"
+      "text": "造父變星那一階最容易出問題。旁邊恆星的光若混進來，造父變星的亮度就量錯，距離跟著量偏。2024 年，黎斯團隊用韋伯太空望遠鏡重拍一千多顆造父變星，最遠到 1.3 億光年外，兩台望遠鏡量出的距離幾乎一樣，「沒察覺的星光擁擠」以 8.2σ 被排除。"
     },
     {
       "type": "figure",
@@ -132,7 +132,7 @@
       "width": 1280,
       "height": 716,
       "alt": "左右兩格放大到看得見像素的星場，左邊較清楚，正中一顆星與周圍的點分得開；右邊較模糊，光點糊在一起。",
-      "caption": "星系 NGC 5468 裡編號 P42 的造父變星，左右拍的是同一小塊天區：左邊是韋伯，右邊是哈伯。每個像素可能是一顆星，也可能是好幾顆擠在一起。NASA 2024 年 3 月發布。",
+      "caption": "星系 NGC 5468 裡編號 P42 的造父變星：左邊是韋伯，右邊是哈伯。NASA 2024 年 3 月發布。",
       "credit": "Image: NASA, ESA, CSA, STScI, Adam G. Riess (JHU, STScI)",
       "license": "Public domain",
       "license_url": "",
@@ -151,7 +151,7 @@
     },
     {
       "type": "p",
-      "text": "帶過關鍵計畫的弗里德曼，現在主持芝加哥—卡內基哈伯計畫（CCHP），改用不靠造父變星的標準燈：紅巨星核心點燃氦的那一刻，亮度有個穩定的上限。她的團隊 2025 年得到 70.39，論文說結果和標準模型相符。誤差分成統計 1.22、系統 1.33、超新星 0.70 三項，我平方相加再開根號，合起來約 1.9。"
+      "text": "帶過關鍵計畫的弗里德曼，現在主持芝加哥—卡內基哈伯計畫（CCHP），改用不靠造父變星的標準燈：紅巨星分支頂端（TRGB）的紅巨星。她的團隊 2025 年得到 70.39，論文說結果和標準模型相符。誤差分成統計 1.22、系統 1.33、超新星 0.70 三項，我平方相加再開根號，合起來約 1.9。"
     },
     {
       "type": "p",
@@ -159,13 +159,13 @@
     },
     {
       "type": "p",
-      "text": "站在 73 這邊的是 2026 年 4 月刊出的「本地距離網路」（H0DN）報告，三十多位研究者把各種近處量法合算，得到 73.50，誤差 0.81，拿掉造父變星或紅巨星都幾乎不動。只是作者裡就有黎斯，弗里德曼不在名單上，它不能當成跟 SH0ES 無關的旁證。"
+      "text": "站在 73 這邊的是 2026 年 4 月刊出的「本地距離網路」（H0DN）報告，37 位具名作者把各種近處量法合算，得到 73.50，誤差 0.81，拿掉造父變星或紅巨星都幾乎不動。只是作者裡就有黎斯，弗里德曼不在名單上，它不能當成跟 SH0ES 無關的旁證。"
     },
     {
       "type": "svg",
       "title": "近年幾個主要的量測值",
       "svg": "<svg viewBox=\"0 0 340 276\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"210.0\" y1=\"24\" x2=\"210.0\" y2=\"254\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><text x=\"210.0\" y=\"22\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">約 68</text><line x1=\"285.0\" y1=\"24\" x2=\"285.0\" y2=\"254\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><text x=\"285.0\" y=\"22\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">約 73</text><text x=\"8\" y=\"12\" font-size=\"10\" class=\"muted\">哈伯常數，單位：公里／秒／百萬秒差距</text><text x=\"8\" y=\"38\" font-size=\"10.5\" class=\"muted\">早期宇宙＋標準模型推算</text><text x=\"8\" y=\"57\" font-size=\"11\" class=\"ink\">普朗克衛星（2018）</text><text x=\"8\" y=\"69\" font-size=\"9.5\" class=\"muted\">67.4 ± 0.5</text><line x1=\"193.5\" y1=\"62\" x2=\"208.5\" y2=\"62\" class=\"gold\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"201.0\" cy=\"62\" r=\"4\" class=\"gold\" fill=\"currentColor\"/><text x=\"8\" y=\"87\" font-size=\"11\" class=\"ink\">南極望遠鏡 SPT-3G 單獨（2025）</text><text x=\"8\" y=\"99\" font-size=\"9.5\" class=\"muted\">66.66 ± 0.60</text><line x1=\"180.9\" y1=\"92\" x2=\"198.9\" y2=\"92\" class=\"gold\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"189.9\" cy=\"92\" r=\"4\" class=\"gold\" fill=\"currentColor\"/><text x=\"8\" y=\"117\" font-size=\"11\" class=\"ink\">ACT＋普朗克等合算（2025）</text><text x=\"8\" y=\"129\" font-size=\"9.5\" class=\"muted\">68.43 ± 0.27</text><line x1=\"212.4\" y1=\"122\" x2=\"220.5\" y2=\"122\" class=\"gold\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"216.5\" cy=\"122\" r=\"4\" class=\"gold\" fill=\"currentColor\"/><text x=\"8\" y=\"152\" font-size=\"10.5\" class=\"muted\">近處星系直接量</text><text x=\"8\" y=\"171\" font-size=\"11\" class=\"ink\">SH0ES 造父變星（2022）</text><text x=\"8\" y=\"183\" font-size=\"9.5\" class=\"muted\">73.04 ± 1.04</text><line x1=\"270.0\" y1=\"176\" x2=\"301.2\" y2=\"176\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"285.6\" cy=\"176\" r=\"4\" class=\"accent\" fill=\"currentColor\"/><text x=\"8\" y=\"201\" font-size=\"11\" class=\"ink\">CCHP 紅巨星（2025）</text><text x=\"8\" y=\"213\" font-size=\"9.5\" class=\"muted\">70.39 ± 1.9</text><line x1=\"216.8\" y1=\"206\" x2=\"274.9\" y2=\"206\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"245.9\" cy=\"206\" r=\"4\" class=\"accent\" fill=\"currentColor\"/><text x=\"8\" y=\"231\" font-size=\"11\" class=\"ink\">H0DN 合併（2026）</text><text x=\"8\" y=\"243\" font-size=\"9.5\" class=\"muted\">73.50 ± 0.81</text><line x1=\"280.3\" y1=\"236\" x2=\"304.7\" y2=\"236\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"292.5\" cy=\"236\" r=\"4\" class=\"accent\" fill=\"currentColor\"/><line x1=\"150\" y1=\"254\" x2=\"330\" y2=\"254\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"150.0\" y1=\"254\" x2=\"150.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"150.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">64</text><line x1=\"180.0\" y1=\"254\" x2=\"180.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"180.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">66</text><line x1=\"210.0\" y1=\"254\" x2=\"210.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"210.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">68</text><line x1=\"240.0\" y1=\"254\" x2=\"240.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"240.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">70</text><line x1=\"270.0\" y1=\"254\" x2=\"270.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"270.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">72</text><line x1=\"300.0\" y1=\"254\" x2=\"300.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"300.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">74</text><line x1=\"330.0\" y1=\"254\" x2=\"330.0\" y2=\"258\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"330.0\" y=\"269\" font-size=\"9.5\" text-anchor=\"middle\" class=\"muted\">76</text></svg>",
-      "caption": "圓點是各團隊公布的中央值，橫線是一倍標準差的誤差範圍。南極望遠鏡 SPT-3G 是只用自家資料的值；ACT 是和普朗克、DESI 星系巡天等資料合起來算的值；CCHP 的 1.9 是把論文分開列的三項誤差合併而成。虛線是韋爾德等人綜述歸納的兩群：約 68 與約 73。2017 年重力波量到的 70 範圍太寬，沒有畫進圖裡。"
+      "caption": "圓點是各團隊的中央值，橫線是各團隊給的誤差範圍。南極望遠鏡 SPT-3G 是只用自家資料的值；ACT 是和普朗克、DESI 星系巡天等資料合起來算的值；CCHP 的 1.9 是把論文分開列的三項誤差合併而成。虛線是韋爾德等人綜述歸納的兩群：約 68 與約 73。2017 年重力波量到的 70 範圍太寬，沒有畫進圖裡。"
     },
     {
       "type": "h",
@@ -173,7 +173,7 @@
     },
     {
       "type": "p",
-      "text": "兩邊都沒量錯，就得改模型，空間卻很窄。巴塞隆納大學的宇宙學家韋爾德（Licia Verde）等人 2024 年的綜述指出，那等於把聲波尺改約 7%，新物理只能在光放出來前很短的一段時間起作用；至今每個嘗試都弄壞了別處原本的吻合。"
+      "text": "若兩邊都沒量錯，就得改模型，空間卻很窄。巴塞隆納大學的宇宙學家韋爾德（Licia Verde）等人 2024 年的綜述指出，那等於把聲波尺改約 7%，新物理只能在光放出來前很短的一段時間起作用；至今每個嘗試都弄壞了別處原本的吻合。"
     },
     {
       "type": "p",
@@ -181,7 +181,7 @@
     },
     {
       "type": "p",
-      "text": "換我押，我押近處沒量錯、問題在模型：星光擁擠韋伯查過了，南極望遠鏡不用普朗克的資料，算出來還更低。反方也擺上來：弗里德曼只用韋伯資料的兩個值都在 68 上下；H0DN 有黎斯署名，不能替 SH0ES 作證；模型那邊也沒人交出不弄壞別處的修法。所以我押的只是哪邊比較有希望。"
+      "text": "換我押，我押近處沒量錯、問題在模型：星光擁擠韋伯查過了，南極望遠鏡只用自家資料，得到的值也在低的那邊。反方也擺上來：弗里德曼只用韋伯資料的兩個值都在 68 上下；H0DN 有黎斯署名，不能替 SH0ES 作證；2024 年的綜述也說，模型那邊至今的嘗試都弄壞了別處。所以我押的只是哪邊比較有希望。"
     },
     {
       "type": "p",
