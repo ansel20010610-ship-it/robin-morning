@@ -541,7 +541,7 @@ function viewFront(dateParam) {
     ${supps.length ? `<div class="sec-head"><h2>橫線之下</h2><span class="de">Unter dem Strich</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
     ${serial.length ? serialBox(issue.date, serial[0], read) : ""}
-    ${watch.length ? `<div class="sec-head"><h2>遠方有動靜</h2><span class="de">In der Ferne</span><span class="note">有新進展才刊出</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
+    ${watch.length ? `<div class="sec-head"><h2>遠方有動靜</h2><span class="de">In der Ferne</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
     ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdsFound().has(issue.date) ? "今天的知更鳥找到了。" : "今天有一隻知更鳥藏在某一篇裡。"}</p>` : ""}
     ${!arts.some((a) => forStamp(a, issue.date) && a.brief) ? "" : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
       : unreadIn(issue.date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的郵票才蓋得下去。</span></div>`
