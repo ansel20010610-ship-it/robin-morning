@@ -252,10 +252,17 @@ def example_grams(n=7):
     return frozenset(out)
 
 
+# Writing advice for the reader's own novel (the owner, 2026-11-07: 以後不要有給史詩創作者的建議這種內容).
+WRITER_ADVICE = re.compile(r"史詩創作|給(?:史詩)?創作者|給寫作者|寫作者(?:可以|不妨|會)|換我寫史詩|你的(?:小說|史詩|世界觀)|寫小說的人")
+
+
 def check_voice(art, d, col, W):
     """STYLE.md sections 0-4: the tics, labels and scaffolding that make the paper read machine-made."""
     text = prose_of(art)
     body = [b for b in art.get("body") or [] if isinstance(b, dict)]
+    advice = sorted(set(WRITER_ADVICE.findall(text)))
+    if advice:
+        W("寫給創作者的建議，刪掉（社長 2026-11-07，STYLE.md 開頭）：%s" % "、".join("「%s」" % a for a in advice))
     hits = [ph for ph in MACHINE if ph in text]
     if hits:
         W("機器腔（STYLE.md 第一節，一律改掉）：%s" % "、".join("「%s」" % h for h in hits))
@@ -619,6 +626,9 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
         elif t == "callout":
             if b.get("items") is not None and not list_of(b["items"], str):
                 E("%s callout.items 需為字串陣列" % where)
+            said = json.dumps([b.get("label"), b.get("text"), b.get("items")], ensure_ascii=False)
+            if WRITER_ADVICE.search(said):
+                E("%s 不寫給史詩創作者／寫作者的建議或提問（社長 2026-11-07，STYLE.md 開頭）" % where)
         elif t == "facts":
             if not list_of(b.get("items"), list) or not all(len(x) == 2 for x in b["items"]):
                 E("%s facts.items 需為 [[\"欄名\",\"內容\"], ...]" % where)

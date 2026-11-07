@@ -79,12 +79,7 @@
     { "type": "p", "tag": "學者解釋", "text": "亞里斯多德在《政治學》第 3 卷看得更冷。他說民主城邦追求平等，把權力、財富或人脈太突出的人放逐，跟僭主佩里安德（Periander）砍平最高的麥穗是同一個道理。他也承認這招被濫用了：" },
     { "type": "quote", "text": "「很多人根本不顧城邦的利益，而是把陶片放逐當成派系鬥爭手上的武器。」", "original": "for many did not regard the benefit of their respective communities, but made the ostracism a weapon in the hand of sedition.", "cite": "亞里斯多德《政治學》第 3 卷，William Ellis 英譯；本文自譯" },
     { "type": "p", "tag": "本文讀法", "text": "我的讀法是：陶片放逐把貴族鬥爭關進籠子，一年最多一場，輸家搬家 10 年、財產還在，沒有人得死。它防的不是某個壞人，而是兩強對決升級成內戰。所以如果普魯塔克說得沒錯，兩強發現可以不打、聯手把票投給第三個人，這套制度就失去意義了。" },
-    { "type": "p", "tag": "本文讀法", "text": "帶走這句就夠了：照普魯塔克的版本，在雅典，最危險的不是寫在陶片上的那個名字，而是兩個說好不寫對方名字的人。" },
-    { "type": "callout", "label": "給史詩創作者的制度問題", "items": [
-      "你的世界有沒有不用罪名就能讓人離開權力中心的程序？門檻多高？",
-      "被趕走的人會不會變成敵國的資產，像地米斯托克利那樣？",
-      "當兩個最大的派系發現可以聯手對付第三者，這套制度靠什麼防？"
-    ] }
+    { "type": "p", "tag": "本文讀法", "text": "帶走這句就夠了：照普魯塔克的版本，在雅典，最危險的不是寫在陶片上的那個名字，而是兩個說好不寫對方名字的人。" }
   ],
   "sources": [
     { "title": "Aristotle, Athenian Constitution, chapter 22 (tr. H. Rackham, Loeb Classical Library, Vol. 20)", "publisher": "Perseus Digital Library, Tufts University", "date": "1952", "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0046%3Achapter%3D22", "note": "22.1（克里斯提尼的放逐法）、22.3（馬拉松兩年後、斐尼普斯任執政官時首次啟動，防庇西特拉圖式人物）、22.4（卡爾穆斯之子希帕庫斯）、22.5（麥加克勒斯）、22.6（前三年趕僭主的朋友、第四年起克桑提波斯）、22.7（馬羅尼亞銀礦 100 塔蘭特、100 艘戰船、亞里斯提德）、22.8（三年後召回、格賴斯托斯到斯基萊翁的界線）；編者註（馬拉松 490 年）" },

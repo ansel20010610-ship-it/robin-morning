@@ -57,7 +57,7 @@
 | `music` | 見音樂區塊 | 錄音與 Spotify |
 | `paper` | `citation`（期刊縮寫用 `*...*`）、`doi`、`pmid`、`link`、`access`（資料範圍，例「依摘要與後續文獻整理」）、`evidence`（證據力：設計、規模、確定性；牙周欄 2026-11-01 起必填），選填 `design`、`sample`、`question` | 論文卡 |
 | `exercise` | `title`、`steps`、`criteria`，選填 `note` | 練習：步驟與「怎樣算做到」 |
-| `callout` | `label`、`text` 或 `items` | 框起來的提問或提醒，例如「給史詩創作者的制度問題」 |
+| `callout` | `label`、`text` 或 `items` | 框起來的提醒或清單，例如連載開頭的「人物」 |
 | `spoiler` | `text` | 劇透分隔線，放在劇透段落之前 |
 | `divider` | — | 分節裝飾線 |
 
