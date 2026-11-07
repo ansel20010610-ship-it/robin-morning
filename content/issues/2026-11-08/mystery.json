@@ -2,12 +2,12 @@
   "column": "mystery",
   "date": "2026-11-08",
   "title": "宇宙膨脹的速度，算出來 67，量出來 73",
-  "dek": "7%。宇宙膨脹速度的兩種量法都把誤差壓到 1% 上下，答案卻一個 67、一個 73，十年來沒有一邊讓步。",
-  "brief": "宇宙現在膨脹得多快，從宇宙最早的光推算是 67，從近處星系一階一階量上來是 73。近處那條路最可疑的是擠在一起的星光，韋伯太空望遠鏡重查一遍，沒找到擠在一起的星光造成的錯。距離梯子最底層的蓋亞衛星視差，第四批資料預定 2026 年 12 月 2 日公布。",
+  "dek": "7%。宇宙膨脹速度的兩種量法都把誤差壓到 1% 上下，答案卻一個 67、一個 73，沒有一邊讓步。",
+  "brief": "宇宙現在膨脹得多快，從宇宙最早的光推算是 67，從近處星系一階一階量上來是 73。近處那條路最可疑的一環，韋伯太空望遠鏡重查一遍，沒找到擠在一起的星光造成的錯。距離梯子最底層用的蓋亞衛星視差，第四批資料預定 2026 年 12 月 2 日公布。",
   "topic_key": "mystery:cosmos-hubble-tension",
   "form": "number",
   "voice": "detective",
-  "updated_at": "2026-11-08T02:11:06+08:00",
+  "updated_at": "2026-11-08T02:11:24+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -36,7 +36,7 @@
     },
     {
       "type": "p",
-      "text": "865 是上限。他接著說，星系間的引力會拉住一些，實際值會小一點，但不大可能低於 750；所以天文學家量出的遠方星系距離太大，該縮短兩到三成。理論和望遠鏡對不上，他改的是望遠鏡那一邊。"
+      "text": "865 是上限。他接著說，星系間的引力會拉住一些，實際值會小一點，但不大可能低於 750；所以當時量出的遠方星系距離太大，該縮短兩到三成。理論和望遠鏡對不上，他改的是望遠鏡那一邊。"
     },
     {
       "type": "p",
@@ -293,13 +293,6 @@
       "date": "2024-09-12",
       "url": "https://doi.org/10.1146/annurev-astro-052622-033813",
       "note": "讀 arXiv:2311.13305 版本：兩群約 68 與約 73、相差約 7%、量測誤差約 1%；聲波視界需改約 7%、新物理須在復合前一個 e-fold 內作用、至今嘗試皆破壞其他吻合；無共識。韋爾德任職巴塞隆納大學宇宙科學研究所（ICC-UB）"
-    },
-    {
-      "title": "The Hubble tension: A decade review",
-      "publisher": "Research in Astronomy and Astrophysics 26, 084011（Cai & Wang）；arXiv:2606.20434",
-      "date": "2026-06-18",
-      "url": "https://arxiv.org/abs/2606.20434",
-      "note": "不論早期端是否用 Planck、晚期端是否用距離梯子，差異都在；local Hubble bubble or cosmic void「has long been ruled out as a significant contribution」"
     },
     {
       "title": "A gravitational-wave standard siren measurement of the Hubble constant",
