@@ -195,7 +195,9 @@ function block(b, figs) {
         <h4>怎麼做</h4><ol>${(b.steps || []).map((s) => `<li>${inline(s)}</li>`).join("")}</ol>
         <h4>怎樣算做到</h4><ul>${(b.criteria || []).map((s) => `<li>${inline(s)}</li>`).join("")}</ul></section>`);
     case "callout":
-      return html(`<section class="callout"><div class="lbl">${esc(b.label || "")}</div>${b.text ? paragraphs(b.text) : ""}${b.items ? `<ul>${b.items.map((s) => `<li>${inline(s)}</li>`).join("")}</ul>` : ""}</section>`);
+      // 更正 (editorial/README.md: the audit's 「更正（YYYY-MM-DD）」 at the foot of the body) wears its own class, so it is
+      // set apart from an ordinary note and the header's 本篇有更正 → can find it (app.js viewArticle).
+      return html(`<section class="callout${/^更正/.test(String(b.label || "")) ? " correction" : ""}"><div class="lbl">${esc(b.label || "")}</div>${b.text ? paragraphs(b.text) : ""}${b.items ? `<ul>${b.items.map((s) => `<li>${inline(s)}</li>`).join("")}</ul>` : ""}</section>`);
     case "spoiler":
       return html(`<div class="spoiler" role="note">${esc(b.text || "以下有劇透")}</div>`);
     case "divider":

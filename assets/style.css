@@ -251,6 +251,15 @@ button { font: inherit; color: inherit; }
 .item .th.contain img { object-fit: contain; }
 .meta-s { font-family: var(--sans); font-size: 12px; color: var(--muted); margin-top: 6px; letter-spacing: .03em; }
 .meta-s .read-mark { color: var(--gold-ink); }
+.meta-s .corr-mark { color: var(--red); font-weight: 600; }
+/* 更正 (app.js correctionLine; audit 2026-11-08, findings 32/43): one quiet sans line under a card's brief — the label in
+   red, the sentence in the second ink — on the lead, the item cards, the random card and the saved rows. It escapes the
+   item's three-line clamp, which is for the brief alone. */
+.lead p.corr, .item p.corr, .random .card p.corr, .sv .corr { display: block; -webkit-line-clamp: unset; line-clamp: unset; overflow: visible; margin: 6px 0 0; font-family: var(--sans); font-size: 12.5px; line-height: 1.65; color: var(--ink-2); }
+.corr b { color: var(--red); font-weight: 600; font-size: 11px; letter-spacing: .14em; margin-right: 7px; }
+.issue-row li .corr-tag { font-style: normal; font-family: var(--sans); font-size: 10.5px; letter-spacing: .1em; color: var(--red); margin-left: 6px; }
+.article-head .meta .corr button { background: none; border: 0; padding: 0; margin: 0; font: inherit; color: var(--red); font-weight: 600; cursor: pointer; }
+.article-head .meta .corr button:focus-visible { outline: 1px solid var(--red); outline-offset: 2px; }
 
 .feuilleton { display: grid; gap: 0; }
 @media (min-width: 720px) {
@@ -470,6 +479,13 @@ tr:first-child td { border-top: 0; }
 .exercise h4 { font-family: var(--sans); font-size: 13px; color: var(--ink-2); margin: 12px 0 2px; font-weight: 600; letter-spacing: .06em; }
 .exercise ol, .exercise ul, .callout ul { padding-left: 1.3em; margin: 4px 0 12px; font-size: .95em; }
 .callout p { margin: 6px 0 12px; }
+/* 更正 (blocks.js .callout.correction): the same box as a note, but ruled in red, so the correction is told from an
+   ordinary aside at a glance; .lit is the glow it gets when the header's 本篇有更正 → brings the reader to it. */
+.callout.correction { border-color: var(--red); }
+.callout.correction::before { border-color: color-mix(in srgb, var(--red) 40%, transparent); }
+.callout.correction .lbl { color: var(--red); }
+.callout.correction.lit { animation: corr-lit 1.6s ease-out 1; }
+@keyframes corr-lit { 0% { background: color-mix(in srgb, var(--red) 14%, transparent); } 100% { background: transparent; } }
 .exercise .nt { font-family: var(--sans); font-size: 12px; color: var(--muted); margin: 0 0 10px; }
 
 .spoiler { margin: 2em 0 1.4em; text-align: center; font-family: var(--sans); font-size: 13px; color: var(--wine); display: flex; align-items: center; gap: 10px; }
@@ -548,6 +564,8 @@ tr:first-child td { border-top: 0; }
 .issue-row li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .issue-row li i { font-style: normal; font-family: var(--sans); font-size: 11.5px; color: var(--gold-ink); margin-right: 6px; }
 .empty { padding: 40px 0; text-align: center; color: var(--muted); font-size: 15px; }
+.empty.serial-wait { padding: 20px 0 8px; } /* under the 摺角那一頁 head when today's installment has not come (app.js serialWaitBox) */
+.empty.serial-wait a { color: var(--gold-ink); }
 
 /* ——— Settings ——— */
 .set { margin: 24px 0; }
@@ -1363,6 +1381,7 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .sv .m .tick { flex: 0 0 auto; color: var(--gold); letter-spacing: 0; }
 .sv b { display: block; margin-top: 3px; font-size: 16.5px; line-height: 1.45; font-weight: 600; }
 .sv .dek { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; margin-top: 4px; font-size: 13.5px; line-height: 1.65; color: var(--muted); }
+.sv .corr b { display: inline; margin-top: 0; font-size: 11px; line-height: inherit; } /* the 更正 label stays a small inline word, not the row's block title (.sv b) */
 .sv .th { display: block; width: 72px; height: 72px; overflow: hidden; border-bottom: 1px solid var(--gold-soft); background: var(--paper-3); }
 .sv .th img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .sv.read b { color: var(--ink-2); font-weight: 500; }
@@ -1430,7 +1449,8 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .press .total { font-family: var(--sans); font-size: 12.5px; letter-spacing: .04em; color: var(--muted); text-align: right; margin: 8px 0 0; }
 /* The roster: a row per issue, a mark per shift and one for the reserve shift — a gold tick, a red count, a muted dot. */
 .roster { margin: 10px 0 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); font-variant-numeric: lining-nums tabular-nums; }
-.pr { display: grid; grid-template-columns: minmax(0, 1fr) repeat(6, 34px); align-items: center; padding: 7px 0; border-top: 1px solid var(--rule); text-decoration: none; text-align: center; }
+.pr { display: grid; grid-template-columns: minmax(0, 1fr) repeat(6, 30px) repeat(2, 26px); align-items: center; padding: 7px 0; border-top: 1px solid var(--rule); text-decoration: none; text-align: center; }
+.pr .x { font-size: 12px; } /* the 演出班 and 連載班 marks: smaller, since they only say reported or not */
 .pr:first-child { border-top: 0; }
 .pr.head { padding: 6px 0 5px; font-family: var(--sans); font-size: 11px; letter-spacing: .1em; color: var(--muted); }
 .pr .d { display: flex; align-items: baseline; gap: 6px; text-align: left; font-family: var(--latin); font-size: 17px; font-weight: 600; line-height: 1.2; }
@@ -1440,6 +1460,17 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .pr .c2 { font-family: var(--latin); font-size: 17px; font-weight: 600; color: var(--red); }
 .press .legend { font-family: var(--sans); font-size: 11.5px; letter-spacing: .03em; color: var(--muted); margin: 8px 0 0; }
 .press .audit { font-family: var(--sans); font-size: 13.5px; line-height: 1.7; color: var(--ink-2); margin: 8px 0 24px; }
+/* The articles the last audit corrected (press.js audit): a small head, then rows like the saved list's — column and
+   day in spaced small type, the title, and the correction's first sentence under it. */
+.press .sec-head.small { margin: 0 0 4px; border-bottom-color: var(--rule); }
+.press .sec-head.small h3 { font-size: 15px; font-weight: 600; margin: 0; }
+.press .fixes { list-style: none; margin: 0 0 24px; padding: 0; }
+.press .fixes li { border-bottom: 1px solid var(--rule); }
+.press .fixes a { display: block; padding: 10px 0 11px; text-decoration: none; color: inherit; }
+.press .fixes .m { display: flex; gap: 8px; font-family: var(--sans); font-size: 10.5px; letter-spacing: .14em; line-height: 1.5; color: var(--gold-ink); white-space: nowrap; }
+.press .fixes .m .d { color: var(--muted); }
+.press .fixes b { display: block; margin-top: 2px; font-size: 15.5px; line-height: 1.45; font-weight: 600; }
+.press .fixes .what { display: block; margin-top: 3px; font-family: var(--sans); font-size: 12.5px; line-height: 1.6; color: var(--ink-2); }
 
 /* ——— 畫廊 (Galerie; app.js viewGallery): the opening pictures of the art, architecture and photo columns, hung as a wall ——— */
 /* Set like a lookbook. A row of tabs with a gold underline under the one chosen and its German in italic; the newest
