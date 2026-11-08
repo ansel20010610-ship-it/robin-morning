@@ -1,21 +1,21 @@
 {
  "column": "football",
  "date": "2026-11-09",
- "title": "清晨四點，巴薩去馬競家守榜首",
- "dek": "皇馬同樣 30 分，還多踢一場。巴薩要在馬競家把榜首坐穩，再去國際賽事週。",
- "brief": "巴薩週一（11 月 9 日）清晨 4 點客場踢馬競，贏了就領先馬競 5 分。孔德、奧爾莫、Espart 和羅德里不在名單，埃里克・加西亞與克里斯滕森傷癒回到名單。本篇在開賽前截稿，賽果見更新版。",
+ "title": "馬競先進球，Fermín 兩球讓巴薩逆轉",
+ "dek": "30 分變 33 分。巴薩帶著榜首去過國際賽事週，領先皇馬 3 分、馬競 5 分。",
+ "brief": "巴薩台灣時間週一（11 月 9 日）清晨在馬競家 2 比 1 逆轉，Fermín López 第 45 與第 66 分鐘各進一球，馬競的 Giuliano Simeone 第 10 分鐘先進。巴薩 33 分，領先皇馬 3 分、馬競 5 分；下一場 11 月 22 日（週日）台灣時間 21:00 回 Camp Nou 對比利亞雷亞爾。",
  "topic_key": "football:2026-11-09",
  "form": "timeline",
  "voice": "fan",
- "updated_at": "2026-11-09T03:02:00+08:00",
+ "updated_at": "2026-11-09T06:27:00+08:00",
  "spoiler": null,
  "disclaimer": null,
  "next": {
-  "opponent": "馬德里競技",
+  "opponent": "比利亞雷亞爾",
   "competition": "西甲",
-  "kickoff": "2026-11-09T04:00+08:00",
-  "venue": "Riyadh Air Metropolitano",
-  "home": false
+  "kickoff": "2026-11-22T21:00+08:00",
+  "venue": "Spotify Camp Nou",
+  "home": true
  },
  "hero": {
   "id": "hero",
@@ -34,19 +34,11 @@
  "body": [
   {
    "type": "p",
-   "text": "**台灣時間 11 月 9 日（週一）清晨 4 點**，巴薩在馬德里踢西甲第 12 輪，對手是馬德里競技，大家叫馬競。球場是馬競的主場 Riyadh Air Metropolitano，歐洲時間是週日晚上 9 點。巴薩官網列的台灣轉播商是 DAZN。"
+   "text": "**巴薩在馬競家贏了，2 比 1。** 西甲第 12 輪，台灣時間 11 月 9 日（週一）清晨 4 點，在馬德里競技（大家叫馬競）的主場 Riyadh Air Metropolitano 開踢。兩個進球都是巴薩中場 Fermín López 的，一個在第 45 分鐘，一個在第 66 分鐘；馬競只在第 10 分鐘進了一球，進球的是 Giuliano Simeone。"
   },
   {
    "type": "p",
-   "text": "這篇寫到 11 月 9 日 02:50，球還沒開。你打開的時候比賽早就踢完了，賽果在更新版。"
-  },
-  {
-   "type": "p",
-   "text": "想看的話，官網有文字直播，App 也有，Barça Live（Barça Play）和巴薩的 YouTube 頻道也在官網的名單上。官網提醒，列出的轉播商有本季的權利，但不一定轉播這一場，要以當地節目表為準。"
-  },
-  {
-   "type": "p",
-   "text": "西甲榜上巴薩 30 分，馬競 28 分，皇馬也是 30 分，只是多踢了一場。**巴薩贏，領先馬競 5 分；巴薩輸，榜首就換馬競坐。** 這場之後，下一場要等到 11 月 22 日，中間隔著國際賽事週。弗利克（Hansi Flick，巴薩教頭）賽前是這樣說的："
+   "text": "賭注賽前就擺在那裡：巴薩 30 分、馬競 28 分，皇馬也是 30 分，只是多踢了一場。現在巴薩 33 分。弗利克（Hansi Flick，巴薩教頭）賽前說的是這句："
   },
   {
    "type": "quote",
@@ -56,78 +48,119 @@
   },
   {
    "type": "timeline",
-   "title": "這一夜的鐘點（台灣時間）",
+   "title": "這一場的鐘點（比賽分鐘）",
    "items": [
     {
-     "when": "11.9 02:50",
-     "label": "寫到這裡",
-     "note": "名單與積分榜都是這個時間的樣子。"
+     "when": "10'",
+     "label": "Simeone 先進",
+     "note": "馬競 1 比 0，阿爾瓦雷斯助攻。"
     },
     {
-     "when": "04:00",
-     "label": "開球",
-     "note": "歐洲時間週日 21:00，Riyadh Air Metropolitano；主哨是 Javier Alberola Rojas。"
+     "when": "12'–13'",
+     "label": "比賽停下",
+     "note": "為特內里費前鋒 Jesús de Miguel 致哀。"
     },
     {
-     "when": "06:00 前後",
+     "when": "45'",
+     "label": "Fermín 扳平",
+     "note": "1 比 1；中場休息，德容換下 Fariñas。"
+    },
+    {
+     "when": "66'",
+     "label": "Fermín 再進",
+     "note": "亞馬爾直傳，巴薩 2 比 1。"
+    },
+    {
+     "when": "74'",
+     "label": "連換兩人",
+     "note": "埃里克換下 Bernal，Gavi 換下 Fermín。"
+    },
+    {
+     "when": "90'+4'",
      "label": "終場",
-     "note": "歐洲 21:00 開球的比賽，台灣時間約 06:00 踢完。"
+     "note": "補時 4 分鐘；拉菲尼亞最後一腳任意球射高。"
     }
    ]
   },
   {
    "type": "h",
-   "text": "開球之前：名單出來了"
+   "text": "第 10 分鐘：馬競先進"
   },
   {
    "type": "p",
-   "text": "官網已經公布 23 人名單。**埃里克・加西亞（Eric García）和克里斯滕森（Andreas Christensen）**傷好了，回到名單，分別缺了 4 場和 6 場。不能上的有四個：孔德（Jules Koundé）、奧爾莫（Dani Olmo）、Xavi Espart，還有羅德里（Rodri）。官網預覽另外還列了 Roony Bardghji 缺陣，兩篇各列一部分。門將是 Joan García、Szczęsny 和 Livaković；前場除了亞馬爾、拉菲尼亞、戈登，還有 Gabriel Jesus 和 Karim Adeyemi。"
+   "text": "先發名單上，弗利克比對阿斯頓維拉那場只換了一個人：Bernal 頂替受傷的羅德里（Rodri）。開場十分鐘，兩邊的門框都挨了打。第 6 分鐘馬競前鋒阿爾瓦雷斯（Julián Álvarez）單刀面對 Joan García，想繞過門將，García 把他逼到邊上，機會散了（ESPN）。Marc Pubill 接著在角球後頭槌，球打中橫樑；巴薩的佩德里（Pedri）第 7 分鐘左腳射門，也打中橫樑，傳球的是亞馬爾（Lamine Yamal）。"
   },
   {
    "type": "p",
-   "text": "羅德里 11 月 3 日對阿斯頓維拉時覺得肌肉不適，檢查確認右大腿後側有輕微傷，球團說這場一定缺，復出時間看恢復的情況。他空出來的位置是這場最大的問號：德容（Frenkie de Jong）和 Marc Bernal 二選一。弗利克說兩個人類似，德容經驗多，身體百分之百沒問題；Bernal 的優點是跑位，總在該在的地方。"
-  },
-  {
-   "type": "p",
-   "text": "先發要到開球前才會公布，這裡先放媒體的預測。西班牙《世界體育報》（Mundo Deportivo）預測 4-2-3-1：門將 Joan García，後防線依序是 Fariñas、Cubarsí、Gerard Martín、坎塞洛（Cancelo），中場是 Bernal 配 Pedri 或 Fermín López，戈登（Anthony Gordon）和拉菲尼亞（Raphinha）在前場，但 Goal 說這份預測列得不完整。Goal 轉述時另外說亞馬爾（Lamine Yamal）站右路。右後衛各家說法不一，弗利克賽前一天（11 月 7 日）只說埃里克有可能先發，要再看。",
-   "tag": "推論"
+   "text": "第 10 分鐘，馬競反擊，阿爾瓦雷斯在左路傳中，Giuliano Simeone 在門前近距離右腳推進。1 比 0。"
   },
   {
    "type": "h",
-   "text": "04:00 開球：進球最多的碰上丟球最少的"
+   "text": "第 12 分鐘：球停了一分鐘"
   },
   {
    "type": "p",
-   "text": "馬競是巴薩上季的剋星。上季國王盃和歐冠，都是巴薩被他們淘汰。歐冠八強那次，第一回合巴薩在自己家 0 比 2 輸，第二回合到 Metropolitano 2 比 1 贏了，兩回合總比分 2 比 3，還是出局。ESPN 數最近五次交手，巴薩 3 勝、馬競 2 勝，沒有和局。"
+   "text": "進球兩分鐘後，比賽停了大約一分鐘，場上放了一段影片，全場鼓掌。這是為 **Jesús de Miguel** 致哀：他是西班牙乙級特內里費（CD Tenerife）的前鋒，背號 9，11 月 2 日對安道爾（Andorra）的比賽中被對方門將撞到，隔天過世。這一輪西甲每一場都有致哀。巴薩官網寫，兩隊球員和裁判一起進場，穿著印有「Siempre en nuestro recuerdo」（永遠在我們的記憶中）和 9 號的上衣，兩隊隊長在中圈獻花，默哀一分鐘，球員戴黑袖章。"
   },
   {
    "type": "p",
-   "text": "官網的算法站在巴薩這邊：最近四次聯賽作客馬競，巴薩都贏了。再贏一次，就是第三支在馬競主場連贏五次聯賽的球隊。"
+   "text": "官網說，原本要在第 9 分鐘停球，向他的背號致意，那一刻剛好是 Simeone 進球，所以延後了幾分鐘。"
+  },
+  {
+   "type": "h",
+   "text": "第 45 分鐘：Fermín 把球撈回來"
   },
   {
    "type": "p",
-   "text": "巴薩自己這陣子有點起伏。10 月 20 日歐冠客場 2 比 4 輸巴黎聖日耳曼，10 月 25 日西甲主場 1 比 2 輸皇馬，那是本季聯賽唯一一場敗仗。後面 10 月 31 日 6 比 1 贏阿拉維斯，11 月 3 日歐冠 3 比 0 贏阿斯頓維拉，回到原來的軌道。"
+   "text": "重新開球後，巴薩才找到站腳的地方：Fermín 的射門被擋，戈登（Anthony Gordon）第 32 分鐘的射門被 Oblak 撲出。馬競也沒有退，第 26 分鐘 Simeone 傳球，阿爾瓦雷斯一腳射門穿過 García 的胯下，球在越線之前被 García 撈進懷裡（ESPN）。Goal 說坎塞洛（Cancelo）這個晚上不好過，他的一次失誤也讓阿爾瓦雷斯有了機會。"
   },
   {
    "type": "p",
-   "text": "進球是這隊的招牌。聯賽 11 場進 46 球，官網說西班牙聯賽賽季同階段，只有 1930/31 年的畢爾包競技（49 球）比他們多；各項賽事 15 場進了 60 球。"
+   "text": "上半場快結束，球落到禁區裡 Fermín 的腳邊，他左腳打進右下角，1 比 1。Goal 的描述是攻勢從佩德里發動，球經過 Pubill 身上折射。馬競的 Baena 兩分鐘前剛吃了黃牌。"
   },
   {
    "type": "p",
-   "text": "馬競這季聯賽 11 場 9 勝 1 和 1 負，只丟了 8 球，是西甲最少。從 9 月 13 日起 7 連勝，裡面有一場 2 比 1 贏皇馬。各項賽事最近五場是三勝一和一負：10 月 17 日客場 1 比 0 贏西班牙人，10 月 20 日歐冠客場 1 比 1 和斯圖加特，10 月 24 日 1 比 0 贏拉科魯尼亞，10 月 31 日客場 2 比 0 贏萊萬特，11 月 3 日歐冠主場 0 比 2 輸給拜仁。"
+   "text": "賽前各家都在猜右後衛是誰。ESPN 的名單給的答案是 Fariñas，但 Goal 說德容（Frenkie de Jong）原本坐板凳，中場休息換下 Fariñas，補的就是右後衛的位置。"
+  },
+  {
+   "type": "h",
+   "text": "第 66 分鐘：亞馬爾一腳直傳"
   },
   {
    "type": "p",
-   "text": "進了 46 球的巴薩，要去撞只丟 8 球的馬競，孔德缺陣，右後衛那一格各家說法不一，是這場最大的變數。",
-   "tag": "推論"
+   "text": "下半場，巴薩的壓力一點一點加上去，亞馬爾第 46、48 分鐘各射一腳，都偏了。第 55 分鐘，阿爾瓦雷斯又一次單刀，這回他選擇用挑射，球飛過橫樑，馬競有些球迷不太高興（ESPN）。"
   },
   {
    "type": "p",
-   "text": "馬競那邊，Cuti Romero 還在養傷。Cardoso 官網預覽列他缺陣，ESPN 和 Goal 說他回來了，要看開球前的名單。Goal 轉述 Marca 的預測，教頭西蒙尼（Diego Simeone）排 4-4-2，前面是 Lee Kang-in 搭**阿爾瓦雷斯（Julián Álvarez）**。主哨 Javier Alberola Rojas，哨還沒響，先不罵他。"
+   "text": "十一分鐘後，亞馬爾在中路送出一記直傳，Fermín 在禁區中路右腳一次射門，打進 Jan Oblak 把守的球門，2 比 1。**這是他的西甲第 100 場，梅開二度。** Goal 引用統計帳號 Mister Chip 的說法：巴薩球員在西甲生涯第 100 場進至少兩球，前面只有 Kubala（1956）、Eladio（1966）、Rivaldo（1999）。"
+  },
+  {
+   "type": "p",
+   "text": "領先之後，巴薩官網的說法是最後階段相當輕鬆，球在巴薩腳下，馬競沒什麼威脅；第 83 分鐘亞馬爾接戈登的傳中，差一點進球。"
+  },
+  {
+   "type": "h",
+   "text": "後半場的換人和最後一腳"
+  },
+  {
+   "type": "p",
+   "text": "第 60 分鐘，克里斯滕森（Andreas Christensen）換下坎塞洛；第 74 分鐘，Bernal 吃黃牌後被埃里克・加西亞（Eric García）換下，Gavi 同時換下 Fermín，Goal 說德容這時從右後衛回到中場；第 86 分鐘 Adeyemi 換下戈登。賽前官網說傷癒回到名單的克里斯滕森和埃里克，兩個人都上了場。"
+  },
+  {
+   "type": "p",
+   "text": "馬競一口氣換了四個人，從 Sørloth 到 Jonathan David，Llorente 與 Pubill 在第 87、88 分鐘接連吃黃牌，馬競全場三張，巴薩一張。補時 4 分鐘，第 90 分鐘加 4 分，拉菲尼亞（Raphinha）的直接任意球射高了，主哨 Javier Alberola Rojas 吹終場。"
+  },
+  {
+   "type": "p",
+   "text": "ESPN 的數據：巴薩控球 63%，射門 19 次，馬競 9 次，雙方射正都是 4 次；犯規各 14 次。到場 69,788 人。"
+  },
+  {
+   "type": "h",
+   "text": "榜首的樣子"
   },
   {
    "type": "table",
-   "title": "西甲積分榜前五名（11 月 9 日 02:50 讀取）",
+   "title": "西甲積分榜前五名（11 月 9 日 06:27 讀取）",
    "head": [
     "名次",
     "球隊",
@@ -140,10 +173,10 @@
     [
      "1",
      "巴薩",
-     "11",
-     "10-0-1",
-     "+34",
-     "30"
+     "12",
+     "11-0-1",
+     "+35",
+     "33"
     ],
     [
      "2",
@@ -156,9 +189,9 @@
     [
      "3",
      "馬競",
-     "11",
-     "9-1-1",
-     "+14",
+     "12",
+     "9-1-2",
+     "+13",
      "28"
     ],
     [
@@ -178,66 +211,63 @@
      "22"
     ]
    ],
-   "caption": "資料：ESPN、laliga.com。皇馬 11 月 7 日已踢完第 12 輪，巴薩與馬競各踢 11 場；兩家榜上都把巴薩排第一。"
-  },
-  {
-   "type": "h",
-   "text": "06:00 前後：榜首換不換人"
+   "caption": "資料：ESPN 積分榜。各隊都已踢 12 場。"
   },
   {
    "type": "p",
-   "text": "終場以後，榜上只有三種樣子，贏 3 分、和 1 分、輸 0 分。皇馬這輪已經踢完，30 分不動。"
-  },
-  {
-   "type": "table",
-   "title": "三種結果之後的積分（自算，三分制）",
-   "head": [
-    "結果",
-    "巴薩",
-    "皇馬",
-    "馬競",
-    "榜首"
-   ],
-   "rows": [
-    [
-     "巴薩贏",
-     "33",
-     "30",
-     "28",
-     "巴薩"
-    ],
-    [
-     "和局",
-     "31",
-     "30",
-     "29",
-     "巴薩"
-    ],
-    [
-     "巴薩輸",
-     "30",
-     "30",
-     "31",
-     "馬競"
-    ]
-   ],
-   "caption": "依三分制自算，不含同分時的排序規則；皇馬積分不變。"
-  },
-  {
-   "type": "p",
-   "text": "和局的話，巴薩 31 分還在榜首，馬競 29 分，皇馬 30 分夾在中間。輸的話，榜首要到 11 月 22 日那一輪才有機會拿回來。"
+   "text": "皇馬 11 月 7 日已經踢完第 12 輪，30 分沒動；巴薩贏下這場，拉開到 3 分。這個領先要帶進國際賽事週，西甲下一輪是 11 月 22 日。"
   },
   {
    "type": "news",
    "title": "歐洲足壇速覽",
    "items": [
     {
-     "headline": "曼聯 4 比 4 維拉，兩度落後兩球追平",
-     "summary": "維拉前 4 分鐘就 2 比 0，第 53 分鐘又拉開到 4 比 2。曼聯靠 Zirkzee 和 Dorgu 在補時進球追平，Dorgu 那球是補時第 6 分鐘。曼聯排英超第 18，連續 8 場聯賽沒贏，教頭卡里克（Michael Carrick）的位置，ESPN 說未必保得住。開球是台灣時間 11 月 9 日 00:30。",
+     "headline": "曼聯 4 比 4 維拉之後，卡里克說自己該留任",
+     "summary": "曼聯兩度落後兩球，補時靠 Zirkzee 和 Dorgu 追平，聯賽只贏過一場，仍在降級區。教頭卡里克（Michael Carrick）賽後被問到自己是不是該繼續帶隊，回答 \"Yeah, 100%, yeah\"；Sky Sports 問他會不會考慮辭職，他說 \"That's not going to happen.\"。曼聯下一場是 11 月 22 日，客場去安菲爾德（Anfield）對利物浦。",
      "source": "ESPN",
-     "url": "https://www.espn.com/soccer/story/_/id/50421297",
+     "url": "https://www.espn.com/soccer/story/_/id/50423657/michael-carrick-man-united-future",
      "when": "11 月 8 日（週日）",
      "place": "GB"
+    },
+    {
+     "headline": "佛羅倫斯 2 比 2 尤文圖斯，Bremer 角球後追平",
+     "summary": "佛羅倫斯 Pellegrino 第 4 分鐘頭槌先進，Woltemade 第 32 分鐘追平；Njie 第 54 分鐘讓佛羅倫斯再度領先，尤文的 Bremer 第 66 分鐘在角球後近距離再扳平。尤文 11 場 18 分，排義甲第 7。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/match/_/gameId/401875003",
+     "when": "11 月 8 日（週日）",
+     "place": "IT"
+    },
+    {
+     "headline": "朗斯 1 比 2 馬賽，Abdallah 第 82 分鐘絕殺",
+     "summary": "馬賽 Gouiri 第 2 分鐘先進，朗斯的 Thauvin 第 20 分鐘頭槌扳平；Keyliane Abdallah 第 82 分鐘右腳近距離破門。馬賽 10 場 18 分，排法甲第 4，巴黎聖日耳曼 23 分居首。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/match/_/gameId/401876404",
+     "when": "11 月 8 日（週日）",
+     "place": "FR"
+    },
+    {
+     "headline": "霍芬海姆 2 比 1 沙爾克",
+     "summary": "Asllani 第 10 分鐘、Lemperle 第 26 分鐘讓霍芬海姆 2 比 0 領先；沙爾克的 Adamu 第 81 分鐘在角球後追回一球。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/match/_/gameId/401884742",
+     "when": "11 月 8 日（週日）",
+     "place": "DE"
+    },
+    {
+     "headline": "利茲譴責後衛 Bogle 遭網路種族歧視辱罵",
+     "summary": "利茲 11 月 8 日發聲明，說後衛 Jayden Bogle 在週六 1 比 0 贏熱刺之後遭到網路種族歧視辱罵，球團會與英超和有關當局合作找出當事人；熱刺表示願意協助。英超在 X 上說，罪證確鑿者會面臨球會禁令與刑事追訴。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/story/_/id/50422908/leeds-jayden-bogle-racist-abuse",
+     "when": "11 月 8 日（週日）",
+     "place": "GB"
+    },
+    {
+     "headline": "諾伊爾右腳受傷，拜仁沒說要休多久",
+     "summary": "拜仁 11 月 8 日聲明，門將諾伊爾（Manuel Neuer）在前一天 2 比 1 贏美因茲時右腳受傷，「暫時」無法出賽，沒有給復出日期。替補上場的 Urbig 今年 23 歲，與諾伊爾本季聯賽各出賽 5 場。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/story/_/id/50419800",
+     "when": "11 月 8 日（週日）",
+     "place": "DE"
     },
     {
      "headline": "利物浦 3 比 1 水晶宮，Wirtz 本季英超第一球",
@@ -254,38 +284,6 @@
      "url": "https://www.espn.com/soccer/story/_/id/50393742",
      "when": "11 月 8 日（週日）",
      "place": "GB"
-    },
-    {
-     "headline": "AC 米蘭 2 比 1 熱那亞，Pulisic 近三場先發進第三球",
-     "summary": "Cissè 第 13 分鐘、Pulisic 第 19 分鐘進球，熱那亞的 Ellertsson 第 88 分鐘追回一球。米蘭上一場歐霸輸給 Ferencvaros，這場回到義甲第 4（24 分）；教頭 Amorim 賽後說，週四鬆懈、週日再開機，這種事行不通。",
-     "source": "ESPN",
-     "url": "https://www.espn.com/soccer/story/_/id/50393900",
-     "when": "11 月 8 日（週日）",
-     "place": "IT"
-    },
-    {
-     "headline": "拿坡里 1 比 1 拉齊奧，拉齊奧仍居義甲榜首",
-     "summary": "Frattesi 第 28 分鐘讓拉齊奧領先，拿坡里靠拉齊奧的 Pedraza 第 48 分鐘烏龍球扳平。拉齊奧 11 場 29 分，領先第 2 名羅馬 2 分。",
-     "source": "ESPN",
-     "url": "https://www.espn.com/soccer/match/_/gameId/401874810",
-     "when": "11 月 8 日（週日）",
-     "place": "IT"
-    },
-    {
-     "headline": "諾伊爾右腳受傷，拜仁沒說要休多久",
-     "summary": "拜仁 11 月 8 日聲明，門將諾伊爾（Manuel Neuer）在前一天 2 比 1 贏美因茲時右腳受傷，「暫時」無法出賽，沒有給復出日期。替補上場的 Urbig 今年 23 歲，與諾伊爾本季聯賽各出賽 5 場。",
-     "source": "ESPN",
-     "url": "https://www.espn.com/soccer/story/_/id/50419800",
-     "when": "11 月 8 日（週日）",
-     "place": "DE"
-    },
-    {
-     "headline": "貝蒂斯 2 比 0 埃爾切，西甲第 4",
-     "summary": "Rodrigo Riquelme 第 81 分鐘、Marc Bartra 第 89 分鐘頭球進球。貝蒂斯 12 場 26 分，落後馬競 2 分。",
-     "source": "ESPN",
-     "url": "https://www.espn.com/soccer/match/_/gameId/401882814",
-     "when": "11 月 8 日（週日）",
-     "place": "ES"
     }
    ]
   },
@@ -295,160 +293,174 @@
   },
   {
    "type": "p",
-   "text": "國際賽事週以後，巴薩 11 月 22 日（週日）台灣時間 21:00 回 Spotify Camp Nou，對比利亞雷亞爾。11 月 25 日（週三）歐冠聯賽階段客場去巴庫踢 Sabah FK，台灣時間是 11 月 26 日（週四）01:45。再來是 11 月 29 日客場去拉科魯尼亞（Deportivo）的 Riazor，12 月 8 日（台灣時間 12 月 9 日 04:00 前後）歐冠主場對曼城。這幾場的時間都是 ESPN 賽程，官網還沒公告。"
+   "text": "巴薩下一場在 11 月 22 日（週日）西班牙時間 14:00、台灣時間 21:00，在 Spotify Camp Nou 踢西甲第 13 輪，對手是比利亞雷亞爾（Villarreal）。他們 11 月 8 日 2 比 0 贏了 Getafe，進球是 Buchanan 和 Carlos Romero，都在最後十分鐘。"
   },
   {
    "type": "p",
-   "text": "西甲方面，12 月 2 日（歐洲時間週三，台灣時間 12 月 3 日 04:30 前後）馬競到 Camp Nou 踢聯賽回合，官網預覽說這場是因為西班牙超級盃而提前的。"
+   "text": "接著是歐冠聯賽階段第 5 輪：11 月 25 日（週三）西班牙時間 18:45，客場去巴庫對 Sabah，台灣時間 11 月 26 日（週四）01:45。11 月 29 日（週日）16:15 客場去拉科魯尼亞的 Riazor，台灣時間 23:15。12 月 2 日（週三）西班牙時間 21:30 馬競回訪 Camp Nou，台灣時間 12 月 3 日 04:30，這是官網賽程頁列的西甲第 23 輪，官網預覽說因為西班牙超級盃而提前。"
   }
  ],
  "sources": [
   {
-   "title": "The squad for Atlético v Barça",
+   "title": "Atlético Madrid 1-2 FC Barcelona: Comeback to stay top",
    "publisher": "FC Barcelona",
-   "date": "2026-11-08",
-   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4606030/the-squad-for-atletico-madrid-v-fc-barcelona",
-   "note": "23 人名單；孔德、奧爾莫、Espart、羅德里不能上；埃里克與克里斯滕森傷癒（缺 4 場、6 場）；頁面只標 9 hrs ago，日期依新聞列表（08 Nov 26）"
+   "date": "2026-11-09",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4606439/atletico-madrid-1-2-fc-barcelona-comeback-to-stay-top",
+   "note": "官網賽後報導（作者 Mike Roberts）：Bernal 頂替受傷的羅德里、開場阿爾瓦雷斯單刀被 Joan García 擋、德容換 Fariñas 補右後衛、83' 亞馬爾差一點進、最後階段輕鬆；報導寫第二球 67 分鐘，ESPN 與 laliga.com 記 66'，正文用 66'；頁面只標 13 mins ago，台灣時間 11 月 9 日約 06:01 刊出"
   },
   {
-   "title": "PREVIEW | Atlético v Barça",
-   "publisher": "FC Barcelona",
-   "date": "2026-11-08",
-   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4605936/preview-atletico-madrid-v-fc-barcelona",
-   "note": "弗利克賽前談話、巴薩與馬競近況與缺陣名單、上季盃賽淘汰與總比分 3 比 2、巴薩最近四次聯賽作客馬競皆勝、12 月 2 日回訪；頁面只標 9 hrs ago，日期依新聞列表"
-  },
-  {
-   "title": "When and where to watch Atlético v Barça",
-   "publisher": "FC Barcelona",
-   "date": "2026-11-06",
-   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4604218/when-and-where-to-watch-atletico-madrid-v-fc-barcelona",
-   "note": "Kick-off 9pm CET、週日 11 月 8 日；台灣 DAZN、週一 04:00；頁面註明列出頻道不一定轉播此場"
-  },
-  {
-   "title": "Hansi Flick: 'Eric and Christensen will be in the squad'",
-   "publisher": "FC Barcelona",
-   "date": "2026-11-07",
-   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4605960/hansi-flick-eric-and-christensen-will-be-in-the-squad",
-   "note": "埃里克可能先發（明天再看）、德容與 Bernal 二選一、德容 100% fit；頁面標 Nov 7"
-  },
-  {
-   "title": "Highest goalscoring Barça side in a century",
-   "publisher": "FC Barcelona",
-   "date": "2026-11-05",
-   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4604635/highest-goalscoring-barca-side-in-a-century",
-   "note": "各項賽事 15 場 60 球"
-  },
-  {
-   "title": "Barcelona LaLiga 2026-27 schedule and results",
+   "title": "López double leads Barcelona past Atleti to go clear atop LaLiga",
    "publisher": "ESPN",
-   "date": "2026-11-09",
-   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/83/schedule",
-   "note": "10 月 25 日 1 比 2 輸皇馬、10 月 31 日 6 比 1 贏阿拉維斯、前 9 場聯賽全勝；歐冠 10 月 20 日 2 比 4 輸巴黎聖日耳曼、11 月 3 日 3 比 0 贏維拉見比賽頁 lastFiveGames"
-  },
-  {
-   "title": "Rodri injury news",
-   "publisher": "FC Barcelona",
-   "date": "2026-11-04",
-   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4604306/rodri-injury-news",
-   "note": "右大腿後側輕微拉傷、缺馬競一戰"
-  },
-  {
-   "title": "LALIGA EA SPORTS results 2026/27",
-   "publisher": "LALIGA",
-   "date": "2026-11-09",
-   "url": "https://www.laliga.com/en-GB/laliga-easports/results",
-   "note": "Atlético de Madrid 對 FC Barcelona，Sunday 8 November 20:00（與 ESPN 20:00Z 一致），主裁判 Javier Alberola Rojas"
-  },
-  {
-   "title": "LaLiga standings 2026/27",
-   "publisher": "LALIGA",
-   "date": "2026-11-09",
-   "url": "https://www.laliga.com/en-GB/laliga-easports/standing",
-   "note": "巴薩第一，30 分，+34，少踢一場；皇馬 30 分 +21；馬競 28 分；貝蒂斯 26 分；皇家社會 22 分"
-  },
-  {
-   "title": "LaLiga standings 2026/27",
-   "publisher": "ESPN",
-   "date": "2026-11-09",
-   "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
-   "note": "積分榜前五，11 月 9 日 02:49 讀取"
+   "date": "2026-11-08",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401882816",
+   "note": "賽後報導（API 稿 50393803）：2 比 1 反超、Álvarez 第 6 分鐘與第 55 分鐘單刀、García 與 Pubill 橫樑、致哀暫停、巴薩三分領先；沒有教練賽後引言；11 月 9 日 06:17 讀取；台灣時間 11 月 9 日 06:11 刊出"
   },
   {
    "title": "Atlético Madrid vs Barcelona, match summary",
    "publisher": "ESPN",
    "date": "2026-11-09",
    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882816",
-   "note": "Scheduled、20:00Z、Riyadh Air Metropolitano；最近五次交手巴薩 3 勝馬競 2 勝（4/8 巴薩 0 比 2、4/14 馬競 1 比 2 巴薩）"
+   "note": "終場 1 比 2；進球 10'、45'、66'；12'–13' Delay；換人、黃牌、先發名單、數據、到場 69,788 人（11 月 9 日 05:56 讀取）"
   },
   {
-   "title": "Barcelona 2026-27 schedule",
-   "publisher": "ESPN",
-   "date": "2026-11-09",
-   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/83/schedule?fixture=true",
-   "note": "11 月 22 日 13:00Z 主場對比利亞雷亞爾；11 月 25 日 17:45Z 客場對 Sabah FK；12 月 2 日馬競作客；ESPN 賽程，非官方公告"
+   "title": "Atlético de Madrid vs FC Barcelona, matchday 12",
+   "publisher": "LALIGA",
+   "date": "2026-11-08",
+   "url": "https://www.laliga.com/en-GB/match/temporada-2026-2027-laliga-ea-sports-atletico-de-madrid-fc-barcelona-12",
+   "note": "終場 1 比 2、進球 10'/45'/66'、黃牌與換人與主裁判；逐分鐘紀錄 12' Delay in match 沒寫原因；與 ESPN 一致"
   },
   {
-   "title": "Atlético Madrid 2026-27 schedule",
-   "publisher": "ESPN",
-   "date": "2026-11-09",
-   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/1068/schedule",
-   "note": "馬競聯賽自 9 月 13 日起 7 連勝（含 2 比 1 贏皇馬）、9 月 5 日 0 比 3 輸畢爾包競技"
-  },
-  {
-   "title": "Diego Simeone backs Julián Álvarez for Barcelona clash after Atlético transfer saga",
-   "publisher": "ESPN",
-   "date": "2026-11-07",
-   "url": "https://www.espn.com/soccer/story/_/id/50407601/diego-simeone-julian-alvarez-barcelona-atletico-madrid",
-   "note": "Cardoso 回歸、Cuti Romero 仍在養傷"
-  },
-  {
-   "title": "Flick's dilemma: Barcelona's expected line-up in the battle against Atlético",
+   "title": "Video: Fermín López turns the tables on Atlético Madrid",
    "publisher": "Goal",
    "date": "2026-11-08",
-   "url": "https://www.goal.com/en/lists/flick-s-dilemma-barcelona-s-expected-line-up-in-the-battle-against-atletico/blt67fc4a5ea51d0079",
-   "note": "轉述 Mundo Deportivo 的 4-2-3-1 預測（Goal 自己說名單不完整）、亞馬爾右路；頁面開球時間用美洲當地時間，不採"
+   "url": "https://www.goal.com/en/news/video-fermin-lopez-turns-the-tables-on-atletico-madrid/bltf84e9f353f6124de",
+   "note": "2 比 1 反超、Fermín 兩球、第二球亞馬爾直傳、Oblak；扳平球寫 43 分鐘，ESPN 與 laliga.com 記 45'，正文用 45'"
   },
   {
-   "title": "Simeone shapes Atlético's line-up for the Barcelona battle",
+   "title": "Barcelona turn clash with Atlético completely around thanks to Fermín López",
    "publisher": "Goal",
-   "date": "2026-11-06",
-   "url": "https://www.goal.com/en/news/simeone-shapes-atletico-s-line-up-for-the-barcelona-battle/blta1518733a0ee47a3",
-   "note": "轉述 Marca 的 4-4-2 預測與 Cardoso、Romero 近況；頁面開球時間不採"
+   "date": "2026-11-08",
+   "url": "https://www.goal.com/en-in/news/barcelona-turn-blockbuster-clash-with-atletico-completely-around-thanks-to-fermin-lopez/bltc67e891009c07aa0",
+   "note": "賽後報導：扳平球經 Pubill 折射、德容中場休息補右後衛、74' 後回中場、Cancelo 失誤、阿爾瓦雷斯錯失機會；沒有教練引言、沒有傷情；頁面日期 11 月 8 日（美洲當地時間）；搜尋摘要曾把頁面日期誤標 22 Nov，不採"
+  },
+  {
+   "title": "He entered the history books: Fermin Lopez repeats the feat of 3 legends against Atletico Madrid",
+   "publisher": "Goal",
+   "date": "2026-11-08",
+   "url": "https://www.goal.com/en-in/news/he-makes-history-fermin-lopez-repeats-a-feat-achieved-by-three-legends-against-atletico-madrid/blt1a7a9dbd89d2ff5c",
+   "note": "西甲第 100 場梅開二度，Kubala 1956、Eladio 1966、Rivaldo 1999；Goal 轉引統計帳號 Mister Chip，屬二手"
+  },
+  {
+   "title": "Day marked by tributes to Jesús de Miguel",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-08",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4606427/day-marked-by-tributes-to-jesus-de-miguel",
+   "note": "賽前致哀、9 號上衣、獻花默哀、原定第 9 分鐘停球因 Simeone 進球延後；頁面只標 1 hr ago，日期依新聞列表"
+  },
+  {
+   "title": "Spanish medical official questions pitchside emergency protocols after De Miguel's death",
+   "publisher": "ESPN",
+   "date": "2026-11-05",
+   "url": "https://www.espn.com/soccer/story/_/id/50383582/medical-official-pitchside-emergency-upgrades-de-miguel-death",
+   "note": "Jesús de Miguel：特內里費前鋒，與安道爾比賽中被對方門將撞擊，隔天（週二）過世"
+  },
+  {
+   "title": "PREVIEW | Atlético v Barça",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-08",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4605936/preview-atletico-madrid-v-fc-barcelona",
+   "note": "弗利克賽前談話引文；12 月 2 日馬競回訪因西班牙超級盃提前；頁面只標 9 hrs ago，日期依新聞列表"
+  },
+  {
+   "title": "The squad for Atlético v Barça",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-08",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4606030/the-squad-for-atletico-madrid-v-fc-barcelona",
+   "note": "埃里克與克里斯滕森傷癒回到名單"
+  },
+  {
+   "title": "LaLiga standings 2026/27",
+   "publisher": "ESPN",
+   "date": "2026-11-09",
+   "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+   "note": "賽後積分榜前五名，11 月 9 日 06:27 讀取：巴薩 12 場 33 分 +35、皇馬 30、馬競 28、貝蒂斯 26、皇家社會 22"
+  },
+  {
+   "title": "First Team Schedule",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-09",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/schedule",
+   "note": "頁面標示「All times in peninsular Spain time」：11 月 22 日 14:00 西甲第 13 輪 Camp Nou 對比利亞雷亞爾；11 月 25 日 18:45 Sabah；11 月 29 日 16:15 Riazor；12 月 2 日 21:30 馬競；11 月 9 日 06:00 讀取"
+  },
+  {
+   "title": "FC Barcelona vs Villarreal CF, matchday 13",
+   "publisher": "LALIGA",
+   "date": "2026-11-09",
+   "url": "https://www.laliga.com/en-GB/match/temporada-2026-2027-laliga-ea-sports-fc-barcelona-villarreal-cf-13",
+   "note": "22 日 13:00（英國時間頁面，未標時區，與官網 14:00 西班牙時間相差一小時，兩者一致）、Spotify Camp Nou"
+  },
+  {
+   "title": "Villarreal vs Getafe, match summary",
+   "publisher": "ESPN",
+   "date": "2026-11-08",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882807",
+   "note": "2 比 0；Buchanan 80'、Carlos Romero 90'+1'"
+  },
+  {
+   "title": "Man United in relegation zone, but Michael Carrick insists: I deserve to keep job",
+   "publisher": "ESPN",
+   "date": "2026-11-08",
+   "url": "https://www.espn.com/soccer/story/_/id/50423657/michael-carrick-man-united-future",
+   "note": "卡里克賽後記者會與 Sky Sports 訪問的原話；聯賽只贏一場、11 月 22 日安菲爾德"
   },
   {
    "title": "Man United rescue 4-4 draw vs. Aston Villa but remain in relegation zone",
    "publisher": "ESPN",
    "date": "2026-11-08",
    "url": "https://www.espn.com/soccer/story/_/id/50421297",
-   "note": "4 比 4、維拉 2 比 0 與 4 比 2 領先、曼聯第 18、8 場聯賽未勝；ESPN 稱 Dorgu 為第 97 分鐘，比賽紀錄為補時第 6 分鐘，正文用補時第 6 分鐘"
+   "note": "4 比 4、兩度落後兩球、補時進球"
   },
   {
-   "title": "Alexander Isak, Florian Wirtz-inspired Liverpool beat poor Crystal Palace 3-1",
+   "title": "Fiorentina vs Juventus, match summary",
    "publisher": "ESPN",
    "date": "2026-11-08",
-   "url": "https://www.espn.com/soccer/story/_/id/50393731",
-   "note": "進球與經過；進球分鐘依 ESPN 比賽紀錄；排名依 ESPN 英超積分榜"
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401875003",
+   "note": "2 比 2；Pellegrino 4'、Woltemade 32'、Njie 54'、Bremer 66'"
   },
   {
-   "title": "Chelsea fall to defeat at PL strugglers Sunderland after Enzo Le Fée penalty",
+   "title": "Serie A standings 2026/27",
    "publisher": "ESPN",
-   "date": "2026-11-08",
-   "url": "https://www.espn.com/soccer/story/_/id/50393742",
-   "note": "Le Fée 第 36 分鐘點球、桑德蘭 8 月之後首場聯賽勝、切爾西第 4 場聯賽敗、掉出前四"
+   "date": "2026-11-09",
+   "url": "https://site.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
+   "note": "尤文 11 場 18 分排第 7"
   },
   {
-   "title": "Christian Pulisic scores again as Amorim's AC Milan bounce back with Genoa win",
+   "title": "Lens vs Marseille, match summary",
    "publisher": "ESPN",
    "date": "2026-11-08",
-   "url": "https://www.espn.com/soccer/story/_/id/50393900",
-   "note": "進球與 Amorim 賽後說法；頁面首發於 11 月 6 日、11 月 8 日更新；米蘭第 4 依 ESPN 義甲積分榜"
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/summary?event=401876404",
+   "note": "1 比 2；Gouiri 2'、Thauvin 20'、Abdallah 82'"
   },
   {
-   "title": "Napoli vs Lazio, match summary",
+   "title": "Ligue 1 standings 2026/27",
+   "publisher": "ESPN",
+   "date": "2026-11-09",
+   "url": "https://site.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
+   "note": "馬賽 10 場 18 分排第 4；巴黎聖日耳曼 23 分第 1"
+  },
+  {
+   "title": "Hoffenheim vs Schalke 04, match summary",
    "publisher": "ESPN",
    "date": "2026-11-08",
-   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874810",
-   "note": "Frattesi 28'、Pedraza（拉齊奧）烏龍球 48'；拉齊奧 11 場 29 分、羅馬 27 分依 ESPN 義甲積分榜"
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/summary?event=401884742",
+   "note": "2 比 1；Asllani 10'、Lemperle 26'、Adamu 81'"
+  },
+  {
+   "title": "Leeds condemn 'disgusting' alleged racist abuse of Jayden Bogle after Spurs game",
+   "publisher": "ESPN",
+   "date": "2026-11-08",
+   "url": "https://www.espn.com/soccer/story/_/id/50422908/leeds-jayden-bogle-racist-abuse",
+   "note": "利茲聲明、熱刺回應、英超在 X 上的說法"
   },
   {
    "title": "Bayern Munich's Manuel Neuer set for spell on sidelines with foot injury",
@@ -458,18 +470,25 @@
    "note": "拜仁聲明：右腳部分肌腱撕裂、暫時缺陣、未給時間；Urbig 與諾伊爾本季各 5 場聯賽"
   },
   {
-   "title": "Elche vs Real Betis, match summary",
+   "title": "Alexander Isak, Florian Wirtz-inspired Liverpool beat poor Crystal Palace 3-1",
    "publisher": "ESPN",
    "date": "2026-11-08",
-   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882814",
-   "note": "Riquelme 81'、Bartra 89' 頭球"
+   "url": "https://www.espn.com/soccer/story/_/id/50393731",
+   "note": "進球與經過；進球分鐘依 ESPN 比賽紀錄；排名依 ESPN 英超積分榜（11 月 9 日讀取）"
+  },
+  {
+   "title": "Chelsea fall to defeat at PL strugglers Sunderland after Enzo Le Fée penalty",
+   "publisher": "ESPN",
+   "date": "2026-11-08",
+   "url": "https://www.espn.com/soccer/story/_/id/50393742",
+   "note": "Le Fée 第 36 分鐘點球、桑德蘭 8 月之後首場聯賽勝、切爾西第 4 場聯賽敗、掉出前四"
   },
   {
    "title": "Premier League standings 2026/27",
    "publisher": "ESPN",
    "date": "2026-11-09",
    "url": "https://site.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
-   "note": "曼聯第 18（8 分）、桑德蘭第 19（8 分）、水晶宮第 20（7 分）、利物浦第 4（18 分）、切爾西第 5（16 分）"
+   "note": "利物浦第 4（18 分）、桑德蘭第 19、水晶宮第 20（7 分）"
   }
  ]
 }
