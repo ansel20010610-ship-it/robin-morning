@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-07",
+  "checked": "2026-11-09",
   "events": [
     {
       "id": "argerich-festival-2026",
@@ -824,6 +824,52 @@
         {
           "title": "鏡週刊：提勒曼率柏林國家歌劇院管弦樂團來台",
           "url": "https://www.mirrormedia.mg/story/20260907-197ins-122335"
+        }
+      ]
+    },
+    {
+      "id": "yuja-wang-mco-2026",
+      "title": "王羽佳與馬勒室內樂團：布拉姆斯雙鋼琴協奏曲",
+      "kind": "協奏曲",
+      "rating": 4,
+      "why": "王羽佳首度在台灣邊彈邊指揮，一個晚上把布拉姆斯兩首鋼琴協奏曲連著彈完；台中場是這個組合的全本，台北場則換成較輕巧的曲目。",
+      "who": "王羽佳（鋼琴、領奏）、馬勒室內樂團",
+      "program": "台中、高雄場：布拉姆斯《第一號鋼琴協奏曲》《第二號鋼琴協奏曲》；台北場：史特拉汶斯基《丹巴頓橡樹園》、普羅高菲夫《古典交響曲》、卡普斯汀《第四號鋼琴協奏曲》、莫札特《第二十九號交響曲》",
+      "price": "NT$2,980–7,980",
+      "note": "牛耳藝術售票，非 OPENTIX",
+      "shows": [
+        {
+          "date": "2026-11-21",
+          "time": "14:00",
+          "city": "高雄",
+          "venue": "衛武營音樂廳",
+          "tickets": "https://ticket.mna.com.tw/UTK0102_?TYPE=0"
+        },
+        {
+          "date": "2026-11-22",
+          "time": "20:00",
+          "city": "台北",
+          "venue": "臺北國家音樂廳",
+          "tickets": "https://ticket.mna.com.tw/UTK0102_?TYPE=0"
+        },
+        {
+          "date": "2026-11-24",
+          "time": "19:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院大劇院",
+          "tickets": "https://ticket.mna.com.tw/UTK0102_?TYPE=0"
+        }
+      ],
+      "added": "2026-11-08",
+      "uids": [],
+      "sources": [
+        {
+          "title": "牛耳藝術節目頁",
+          "url": "https://www.mna.com.tw/concerts_detail.html?id=775"
+        },
+        {
+          "title": "經濟日報：5 大歐陸交響樂團將訪台",
+          "url": "https://udn.com/news/story/7270/9659928"
         }
       ]
     }
