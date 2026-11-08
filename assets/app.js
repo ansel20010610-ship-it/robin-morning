@@ -1027,6 +1027,20 @@ async function viewArticle(date, column, my) {
     const box = main.querySelector(".next");
     if (!box) return;
     const read = readSet(), list = listOf();
+    // 連載: an installment leads on to the next one of the book, wherever it was opened from (the owner, 2026-11-08:
+    // 之前的連載回點進去最下面要可以前往下一回) — with 上一回 beside it, and when the next has not been printed yet,
+    // a line saying when it comes (or that the book is done) and the way to the 連載 tab.
+    if (a.serial) {
+      const n = Number(a.serial.n) || 0;
+      const at = (k) => publishedIssues().flatMap((i) => i.articles.filter((x) => x.serial && Number(x.serial.n) === k).map((x) => ({ date: i.date, a: x })))[0] || null;
+      const nx = at(n + 1), pv = n > 1 ? at(n - 1) : null;
+      const of = Number(a.serial.of) || Number(S.book?.of) || 0;
+      const tail = of && n >= of ? "全書完。" : serialOver(twNow().date) ? "全書完，下一本待定。" : `第 ${n + 1} 回明天早上 ${esc(S.cfg.publish_time)} 刊出。`;
+      box.innerHTML = `<div class="lbl"><span>${nx ? `下一回・第 ${nx.a.serial.n} 回` : "下一回"}</span>${pv ? `<a class="prev" href="#/a/${pv.date}/${pv.a.column}">‹ 上一回</a>` : ""}</div>`
+        + (nx ? serialCard(nx.date, nx.a, read, { plate: false })
+          : `<p class="serial-tail">${tail}<a href="#/serial">回到連載 →</a></p>`);
+      return;
+    }
     let label = "接著讀", nxt = null, prv = null;
     if (list) {
       const i = list.keys.indexOf(key);
