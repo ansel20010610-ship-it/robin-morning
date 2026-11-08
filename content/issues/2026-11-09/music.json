@@ -1,0 +1,200 @@
+{
+  "column": "music",
+  "date": "2026-11-09",
+  "title": "奧福叫出版社：我以前寫的，都可以回收了",
+  "dek": "兩分多鐘的〈噢，命運女神〉，詩是 13 世紀的無名氏寫的，抄本在修道院裡躺到 1803 年才被翻出來。",
+  "brief": "奧福看完《布蘭詩歌》首演，據說寫信叫出版社把他以前印過的樂譜全部回收，說自己的全集從這一部開始。開頭的〈噢，命運女神〉不到三分鐘，詩的作者沒人知道名字，抄本 1803 年才在巴伐利亞的修道院被翻出來。",
+  "topic_key": "music:orff-carmina-burana",
+  "form": "list",
+  "voice": "listener",
+  "updated_at": "2026-11-09T00:45:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/CarminaBurana_wheel.jpg/1280px-CarminaBurana_wheel.jpg",
+    "width": 1280,
+    "height": 1860,
+    "alt": "一頁中世紀羊皮紙抄本：上半頁是綠框裡的彩色插畫，中間一位戴冠的女子坐在大輪子裡，輪子四周有四個人，頂端戴冠者坐著，右邊一人頭下腳上往下墜，底下一人趴在地上；下半頁是密密的拉丁文手寫字，開頭有紅色大字母。",
+    "caption": "《布蘭詩歌》抄本第一頁（約 1230 年）：命運女神轉著輪子，輪邊四句拉丁文依序是「我統治」「我將統治」「我曾統治」「我失去王國」。頁面下半部的拉丁文裡，就有〈噢，命運女神〉的詩。抄本今藏慕尼黑的巴伐利亞邦立圖書館。",
+    "credit": "佚名（約 1230 年）；巴伐利亞邦立圖書館藏，Clm 4660；經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:CarminaBurana_wheel.jpg",
+    "made": "約 1230 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "這段音樂的出沒地點很多：英國 1970 年代的 Old Spice 男性保養品廣告；1981 年亞瑟王電影《Excalibur》的預告片，整首放完；英國選秀節目 The X Factor 介紹四位評審的時候；英格蘭的吉靈漢（Gillingham）足球隊，球員主場進場也踩著它跑出來。"
+    },
+    {
+      "type": "p",
+      "text": "它是德國作曲家**奧福**（Carl Orff）的清唱劇**《布蘭詩歌》**（Carmina Burana）開頭那一首，〈噢，命運女神〉（O Fortuna）。清唱劇是合唱、獨唱加樂團的大型聲樂作品。奧福是慕尼黑人，1936 年寫完這部，1937 年 6 月 8 日在法蘭克福歌劇院首演，那年他 41 歲。歌詞不是他寫的，是一首 13 世紀的拉丁文詩。"
+    },
+    {
+      "type": "music",
+      "composer": "奧福（Carl Orff）",
+      "work": "清唱劇《布蘭詩歌》：〈噢，命運女神〉",
+      "work_original": "Carmina Burana: O Fortuna",
+      "composed": "1935–1936",
+      "performers": "Eugen Jochum 指揮 柏林德意志歌劇院合唱團與樂團；Gundula Janowitz 女高音、Gerhard Stolze 男高音、Dietrich Fischer-Dieskau 男中音",
+      "recording": "Deutsche Grammophon，1967 年 10 月錄於柏林 Ufa 錄音室，1968 年發行。選它的理由：維基百科說奧福本人認可這一版，NPR 的經典 50 張也推薦它",
+      "duration": "〈噢，命運女神〉不到 3 分鐘",
+      "movements": [
+        "O Fortuna（全曲第 1 首，也是最後一首）"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Orff Carmina Burana Jochum Deutsche Oper Berlin Fischer-Dieskau",
+        "artist_hint": "Jochum",
+        "track_filter": [
+          "O Fortuna"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "1. 現在聽到的是開頭。鼓先出聲，合唱團一下子壓成近乎耳語，同一組樂句一遍一遍重來，每遍都添一點力氣，弦樂和圓號短短幾個音往上疊。最後拖出一個又長又響的音，然後戛然而止。反覆的伴奏像一個輪子在轉，這正是歌詞的主角：命運之輪。全曲最後一首，這一段會再來一次，頭尾接成一個圓。"
+    },
+    {
+      "type": "p",
+      "text": "2. 詩的作者不詳。內容是在抱怨命運女神：祂像月亮，一下圓一下缺；祂轉著輪子，把人捧高，又摔下來。結尾三行是："
+    },
+    {
+      "type": "quote",
+      "text": "因為命運把強者打倒，所有的人，都來陪我哭！",
+      "original": "Quod per sortem / Sternit fortem, / Mecum omnes plangite!",
+      "cite": "〈O Fortuna〉結尾，13 世紀拉丁文詩；原文據 Classic FM 刊載的版本"
+    },
+    {
+      "type": "p",
+      "text": "**歌詞是在哭，不是在凱旋。** 廣告和預告片要的是那股氣勢，詩裡說話的卻是被命運踩在腳下的人，請大家陪他一起哭。我覺得這正是它好用的地方：聲音一路往上爬，歌詞一路往下掉。"
+    },
+    {
+      "type": "p",
+      "text": "3. 這首詩能留到今天，靠的是一本手抄本。1803 年，巴伐利亞南部的本篤會修道院博伊倫（Benediktbeuern）因為政府推動世俗化被解散，圖書館員阿雷廷（Johann Christoph von Aretin）奉命把藏書運去慕尼黑，在書堆裡翻出它。他一度把它帶在身邊當旅途讀物，還寫信告訴朋友，他找到一批詩和散文，多半在諷刺教宗的寶座。1847 年，學者施梅勒（Johann Andreas Schmeller）把整批詩編印成書，取名《Carmina Burana》，意思大約是「博伊倫之歌」。那本抄本今天收在慕尼黑的巴伐利亞邦立圖書館，頭圖就是它的第一頁。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Kloster_Benediktbeuern_Durchgang_2.jpg/1280px-Kloster_Benediktbeuern_Durchgang_2.jpg",
+      "width": 1280,
+      "height": 960,
+      "alt": "從一條拱頂的白色通道往外看：通道盡頭是一座鋪著碎石的院子，一棵落葉的樹，對面是白牆紅瓦、窗框漆成綠色的長形建築，兩個人在院子裡走。",
+      "caption": "博伊倫修道院（Benediktbeuern Abbey）的院子，2011 年拍攝。抄本在這裡的圖書館裡放到 1803 年。",
+      "credit": "Schlaier，2011 年；經 Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kloster_Benediktbeuern_Durchgang_2.jpg",
+      "made": "2011"
+    },
+    {
+      "type": "p",
+      "text": "4. 奧福在 1930 年代中期翻到施梅勒那一版。他找了一位懂拉丁文的年輕人霍夫曼（Michel Hofmann）幫忙，從裡面挑出 24 首詩當歌詞，大部分是拉丁文，也有中古德文和古法文。抄本裡的旋律，他一條也沒用，曲子全是自己寫的。全曲 25 首，頭尾各是一次〈噢，命運女神〉，中間是春天、酒館和愛情；樂團裡有 5 顆定音鼓、兩台鋼琴和一台鋼片琴，另外有合唱團和兒童合唱團。"
+    },
+    {
+      "type": "p",
+      "text": "5. 首演大獲成功。據說奧福隨後寫信給德國的樂譜出版社 Schott，說他以前寫的、出版社「很遺憾」印出來的那些東西，現在可以全部回收了："
+    },
+    {
+      "type": "quote",
+      "text": "我到目前為止寫的、而您很遺憾地印出來的東西，現在都可以回收了！我的全集，從《布蘭詩歌》開始！",
+      "original": "Alles, was ich bisher geschrieben und was Sie leider gedruckt haben, können Sie nun einstampfen! Mit Carmina Burana beginnen meine gesammelten Werke!",
+      "cite": "奧福致出版社 Schott，轉引自德文維基百科"
+    },
+    {
+      "type": "p",
+      "text": "這句話最早見諸印刷，是 1955 年一本經奧福本人認可的傳記；他後來又把幾部舊作修訂，重新拿出來演。所以它比較像一句興奮的話，不是真的銷毀令。"
+    },
+    {
+      "type": "p",
+      "text": "6. 《布蘭詩歌》在納粹統治的德國很受歡迎，奧福的名字也因此常被連到那個時代。研究這段歷史的學者 Oliver Rathkolb 說，這個印象被誇大了，當時別的作品上演得更多。奧福沒有入納粹黨，但他是帝國音樂院的成員（當時要當職業音樂人都得加入）；戰後美國占領當局審查他，評為「灰色 C，可接受」。"
+    },
+    {
+      "type": "p",
+      "text": "7. 開頭聽完，想要同樣把人壓在椅背上的合唱，可以去找威爾第《安魂曲》的〈震怒之日〉。留在這部作品裡的話，第 14 首〈In taberna quando sumus〉是男聲合唱的酒館歌；第 12 首〈Olim lacus colueram〉的歌詞，是一隻正被烤著的天鵝唱的。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Carmina Burana (Orff)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-09",
+      "url": "https://en.wikipedia.org/wiki/Carmina_Burana_(Orff)",
+      "note": "日期為查閱日。首演（1937 年 6 月 8 日、Oper Frankfurt、Wetzelsberger）、24 首詩與 Michel Hofmann、25 首與頭尾 O Fortuna、編制、Jochum 1967 年 DG 錄音（錄於柏林 Ufa-Studio、1968 年發行、奧福認可）、第 12 首第 14 首曲目表。Hofmann 的身分各處不一（維基說法律系學生，Schott 德文頁說檔案官），正文只寫「懂拉丁文的年輕人」；奧福碰到詩集的年份維基寫 1934、NPR 寫 1935，正文只寫 1930 年代中期"
+    },
+    {
+      "title": "Carmina Burana (Orff)",
+      "publisher": "Wikipedia（德文）",
+      "date": "2026-11-09",
+      "url": "https://de.wikipedia.org/wiki/Carmina_Burana_(Orff)",
+      "note": "日期為查閱日。奧福致出版社的德文原句；Hofmann 為「junger Jurastudent」、Latein- und Griechisch-Enthusiast；編制（5 Pauken、2 Klaviere、Celesta）；全名的拉丁文與德文譯法"
+    },
+    {
+      "title": "O Fortuna",
+      "publisher": "Wikipedia",
+      "date": "2026-11-09",
+      "url": "https://en.wikipedia.org/wiki/O_Fortuna",
+      "note": "日期為查閱日。13 世紀初拉丁文詩、作者不詳；音樂結構（鼓與耳語般的合唱、漸強、突然結束、伴奏反覆）；1970 年代英國 Old Spice 廣告；1981 年《Excalibur》預告片整首使用"
+    },
+    {
+      "title": "What are the lyrics to ‘O Fortuna’ from Carmina Burana?",
+      "publisher": "Classic FM",
+      "date": "2023-09-18",
+      "url": "https://www.classicfm.com/composers/orff/o-fortuna-carmina-burana-lyrics/",
+      "note": "拉丁原文與英譯（結尾三行）；詩是對命運的哀歌；The X Factor 用它介紹四位評審；《Excalibur》預告片整首使用。日期為頁面更新日"
+    },
+    {
+      "title": "Carl Orff – Carmina Burana",
+      "publisher": "Classic FM",
+      "date": "2026-11-09",
+      "url": "https://www.classicfm.com/composers/orff/music/carmina-burana/",
+      "note": "日期為查閱日。Old Spice 廣告、The X Factor、吉靈漢球員進場；〈O Fortuna〉不到三分鐘；全名與意思"
+    },
+    {
+      "title": "'Carmina Burana,' Music Of Monks And Drunks",
+      "publisher": "NPR（Ted Libbey）",
+      "date": "2009-04-27",
+      "url": "https://www.npr.org/2011/07/18/103529038/carmina-burana-music-of-monks-and-drunks",
+      "note": "約兩打詩、沒用抄本裡的旋律；1936 年完成、1937 年 6 月 8 日首演；Goliard 的說明；Jochum 錄音推薦"
+    },
+    {
+      "title": "Carmina Burana",
+      "publisher": "Wikipedia",
+      "date": "2026-11-09",
+      "url": "https://en.wikipedia.org/wiki/Carmina_Burana",
+      "note": "日期為查閱日。1803 年發現、今藏巴伐利亞邦立圖書館（Clm 4660）、1847 年 Schmeller 編本與書名"
+    },
+    {
+      "title": "Carmina Burana",
+      "publisher": "Wikipedia（德文）",
+      "date": "2026-11-09",
+      "url": "https://de.wikipedia.org/wiki/Carmina_Burana",
+      "note": "日期為查閱日。1803 年修道院在世俗化中被解散、Aretin 負責把藏書運往慕尼黑、拿它當旅途讀物；信裡「多半針對教宗寶座」的德文原句"
+    },
+    {
+      "title": "Carl Orff",
+      "publisher": "Wikipedia",
+      "date": "2026-11-09",
+      "url": "https://en.wikipedia.org/wiki/Carl_Orff",
+      "note": "日期為查閱日。1895 年 7 月 10 日慕尼黑出生；納粹時期的接受度、Kater 與 Rathkolb 的看法、帝國音樂院成員、戰後評為 Grey C；1955 年 Liess 傳記與 Helm 文章對「全部回收」說法的註腳"
+    },
+    {
+      "title": "File:CarminaBurana wheel.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-09",
+      "url": "https://commons.wikimedia.org/wiki/File:CarminaBurana_wheel.jpg",
+      "note": "頭圖授權與來源：Codex Buranus Clm 4660 fol. 1r，約 1230 年，公版"
+    },
+    {
+      "title": "File:Kloster Benediktbeuern Durchgang 2.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-09",
+      "url": "https://commons.wikimedia.org/wiki/File:Kloster_Benediktbeuern_Durchgang_2.jpg",
+      "note": "正文圖授權與作者：Schlaier，2011-03-06，CC BY-SA 3.0"
+    }
+  ]
+}
