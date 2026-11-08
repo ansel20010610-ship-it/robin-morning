@@ -52,10 +52,14 @@ jobs:
         run: python3 scripts/build_index.py
       - name: Write calendar files (加入行事曆)
         run: python3 scripts/build_ics.py ics
-      - name: Validate today's issue (report only)
+      - name: Validate today's issue and config.json (report only)
+        # neither can stop a deploy: the newest content always goes out, and the problem is shown in the run's log —
+        # a config.json inconsistency (a supplement retired but still in the rotation, a new column never scheduled,
+        # a mistyped code) is what every night shift's plan_day.py stops on, so it is an error, not a warning
         run: |
           D=$(TZ=Asia/Taipei date +%F)
           python3 scripts/validate.py "$D" || echo "::warning::validate.py reported problems for $D"
+          python3 scripts/validate.py --config || echo "::error::config.json 設定不一致（scripts/validate.py --config）"
       - name: Wire (外電)
         # wire.yml starts this workflow every hour for the wires. content/wire.json is not in the repository: each
         # build fetches the four wires afresh (no AI), starting from

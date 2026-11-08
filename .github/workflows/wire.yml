@@ -7,6 +7,12 @@ name: Wire (外電)
 # starting a deploy at each of the next four full hours, and at ten to the next one starts the next run of itself.
 # The relay is started by a push of this file, by hand (workflow_dispatch), or by the cron below whenever GitHub does
 # get round to it — so a broken relay mends itself. The concurrency group keeps it to one run and at most one waiting.
+#
+# The morning rides on the same hours (2026-11-08: the 07:12 fill, the 07:30 notice and the 07:45 watch all ran around
+# 10:30, started by their own crons three hours late). At the 07:00 tick the relay also starts fill.yml (which waits to
+# 07:12 and, if need be, 07:22), notify.yml mode=morning (which waits to 07:30:20) and watch.yml (which waits to 07:45);
+# at 12:00 and 21:00 the two reminders; on a Sunday at 19:00 the evening check on the 週日補刊. Their own crons stay as
+# backup, and each of those workflows is written so that a second start sends or alarms nothing twice.
 on:
   push:
     branches: [main]
@@ -30,11 +36,21 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
     steps:
-      - name: A deploy on each of the next four full hours
+      - name: A deploy on each of the next four full hours, and the morning and the reminders on theirs
         run: |
+          start() { gh workflow run "$1" --ref main "${@:2}" || echo "::warning::could not start $1 (hour $i)"; }
           for i in 1 2 3 4; do
             sleep $(( 3600 - $(date +%s) % 3600 ))   # to the next :00
-            gh workflow run publish.yml --ref main -f hourly=true || echo "::warning::could not start publish.yml (hour $i)"
+            start publish.yml -f hourly=true
+            case "$(TZ=Asia/Taipei date +%u%H)" in
+              ?07)
+                start fill.yml -f wait_until=07:12
+                start notify.yml -f mode=morning
+                start watch.yml -f wait_until=07:45 ;;
+              ?12) start notify.yml -f mode=noon ;;
+              719) start watch.yml -f evening=true ;;
+              ?21) start notify.yml -f mode=evening ;;
+            esac
           done
       - name: Hand on to the next run at ten to the hour
         if: always()

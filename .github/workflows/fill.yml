@@ -2,7 +2,12 @@ name: Fill from reserve
 
 # Last line of defence against a missing column: from 07:12 Taiwan time, any column of today's issue that is
 # still missing (or fails validation) is filled from content/reserve/. No AI involved. Shift 5 runs the same
-# script itself at 07:05; these runs are the fallback. GitHub may start scheduled runs late, hence several.
+# script itself at 07:05; these runs are the fallback. GitHub's schedules start hours late (10:27 on 2026-11-08),
+# so the reliable start is wire.yml's hourly relay: at 07:00 it dispatches this workflow with wait_until=07:12,
+# and the run sleeps to that minute, fetches the newest main (shift 5 pushes until 07:05) and fills. When the issue
+# is still short afterwards and the day was not held for 週日補刊, it sleeps to 07:22 and fills once more: on a Sunday
+# late.py refuses to judge the quota before 07:20 when only shift 5 is silent (it may still be pushing), so the
+# 07:22 pass is the one that marks the day waiting. The crons below stay as backup.
 on:
   schedule:
     - cron: "12 23 * * *"
@@ -13,6 +18,9 @@ on:
     inputs:
       date:
         description: "Issue date (YYYY-MM-DD, Taiwan). Empty = today."
+        required: false
+      wait_until:
+        description: "Taiwan time HH:MM to sleep to before filling (the relay passes 07:12); a second pass follows at 07:22 if the issue is still short"
         required: false
 
 permissions:
@@ -26,41 +34,78 @@ concurrency:
 jobs:
   fill:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v7
       - name: Fill missing columns
         id: fill
+        env:
+          WAIT_UNTIL: ${{ github.event.inputs.wait_until }}
         run: |
           D="${{ github.event.inputs.date }}"
           [ -z "$D" ] && D=$(TZ=Asia/Taipei date +%F)
           echo "date=$D" >> "$GITHUB_OUTPUT"
+          # seconds from now to a Taiwan HH:MM today (0 when it has passed)
+          until_tw() { local t=$(( $(TZ=Asia/Taipei date -d "$1" +%s) - $(date +%s) )); [ "$t" -gt 0 ] && echo "$t" || echo 0; }
+          if [ -n "$WAIT_UNTIL" ]; then
+            S=$(until_tw "$WAIT_UNTIL"); echo "等到台灣時間 $WAIT_UNTIL 再補位（$S 秒）……"; sleep "$S"
+            # the checkout is from when the run was queued: shift 5 pushes until 07:05
+            git fetch -q origin main && git reset -q --hard origin/main
+          fi
           # exit code 2 = some column still has no usable reserve; commit what was filled anyway
           # exit code 3 = Sunday whose AI quota ran out: nothing filled, content/late.json marks it for 週日補刊 at 15:00
-          R=0; python3 scripts/fill_from_reserve.py "$D" || R=$?
+          #               (or, before 07:20 with only shift 5 silent, nothing decided yet: the 07:22 pass decides)
+          # The script's output is kept (fill.log): its 「補位附註：…」 line — what it had to do beyond a plain swap, such
+          # as taking a reserve piece with a flaw or leaving a column as it was — goes into the commit message, where
+          # the owner reads the morning's history (fill_from_reserve.py prints it for exactly that).
+          fill() { python3 scripts/fill_from_reserve.py "$D" 2>&1 | tee -a fill.log; return "${PIPESTATUS[0]}"; }
+          R=0; fill || R=$?
+          # A second pass only when the first changed nothing under content/: a weekday fill that got some columns in
+          # is committed now (the reader is waiting), a filled late.json means the hold has spoken, and an unchanged tree
+          # with a non-zero exit is the Sunday "07:20 前不判斷" refusal (exit 3) or an empty reserve — both worth one more
+          # look at 07:22, when shift 5 has reported or is silent for good.
+          if [ -n "$WAIT_UNTIL" ] && [ "$R" != 0 ] && [ -z "$(git status --porcelain content)" ]; then
+            S=$(until_tw 07:22)
+            if [ "$S" -gt 0 ]; then
+              echo "刊期還沒齊，07:22 再補一次（$S 秒）……"; sleep "$S"
+              git fetch -q origin main && git reset -q --hard origin/main
+              R=0; fill || R=$?
+            fi
+          fi
           if [ "$R" = 3 ]; then echo "msg=$D：週日額度不足，不用備稿，15:00 後週日補刊" >> "$GITHUB_OUTPUT"
           else
             echo "msg=$D：以備稿補上缺稿" >> "$GITHUB_OUTPUT"
             [ "$R" = 0 ] || echo "::warning::$D 仍有欄位缺稿（備稿不足），07:45 監看會開 issue"
           fi
+          # the last 補位附註 line, when the script printed one (a single line; the second paragraph of the commit message)
+          NOTE=$(grep '^補位附註' fill.log | tail -n 1 || true)
+          [ -n "$NOTE" ] && echo "note=$NOTE" >> "$GITHUB_OUTPUT"
+          [ "$R" = 0 ] && echo "complete=yes" >> "$GITHUB_OUTPUT"
           if [ -n "$(git status --porcelain content)" ]; then echo "changed=yes" >> "$GITHUB_OUTPUT"; fi
       - name: Commit and push
         id: push
         if: steps.fill.outputs.changed == 'yes'
+        env:
+          MSG: ${{ steps.fill.outputs.msg }}
+          NOTE: ${{ steps.fill.outputs.note }}
         run: |
           D="${{ steps.fill.outputs.date }}"
           git config user.name "robin-morning-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # the 補位附註 line (when there is one) is the commit message's second paragraph
+          commit() { if [ -n "$NOTE" ]; then git commit -m "$MSG" -m "$NOTE"; else git commit -m "$MSG"; fi; }
           git add -A content
-          git commit -m "${{ steps.fill.outputs.msg }}"
+          commit
           for i in 1 2 3; do
             if git push origin HEAD:main; then echo "pushed=yes" >> "$GITHUB_OUTPUT"; exit 0; fi
             sleep 5
             # someone pushed meanwhile: start again from the newest main (columns written since are skipped)
             git fetch origin main && git reset --hard origin/main
-            python3 scripts/fill_from_reserve.py "$D" || true
+            python3 scripts/fill_from_reserve.py "$D" | tee refill.log || true
             if [ -z "$(git status --porcelain content)" ]; then echo "main 已齊備"; exit 0; fi
+            NOTE=$(grep '^補位附註' refill.log | tail -n 1 || true)
             git add -A content
-            git commit -m "${{ steps.fill.outputs.msg }}"
+            commit
           done
           echo "::error::$D 備稿補位推送三次都失敗"
           exit 1
@@ -70,3 +115,18 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run publish.yml --ref main
+      - name: Tell the reader the paper is whole
+        # A fill that lands after the 07:30 notice went out (which then said 「今天少一欄…補上了會再叫你」) and before the
+        # morning is over: start notify.yml, whose push.py issue --now waits for this fill's deploy and sends the
+        # ordinary notice on the same tag, replacing the partial one on the phone. Nothing before 07:30 (the morning
+        # run announces the filled paper itself) and nothing after 11:00 (push.py's own cut-off for the morning).
+        if: steps.push.outputs.pushed == 'yes' && steps.fill.outputs.complete == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          H=$(( 10#$(TZ=Asia/Taipei date +%H%M) ))
+          if [ "${{ steps.fill.outputs.date }}" = "$(TZ=Asia/Taipei date +%F)" ] && [ "$H" -ge 730 ] && [ "$H" -lt 1100 ]; then
+            gh workflow run notify.yml --ref main -f mode=issue || echo "::warning::could not start notify.yml"
+          else
+            echo "不在 07:30–11:00 之間（或不是今天的刊期），不另發通知。"
+          fi
