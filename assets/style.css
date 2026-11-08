@@ -581,6 +581,9 @@ tr:first-child td { border-top: 0; }
 .issue-row .d { font-family: var(--latin); text-align: center; line-height: 1.05; }
 .issue-row .d b { display: block; font-size: 32px; font-weight: 600; }
 .issue-row .d span { font-family: var(--sans); font-size: 11.5px; color: var(--muted); }
+/* The finished issue's seal (motion.js seal, .mini) is a span too: the rule above greyed it (the owner, 2026-11-08: 往期每天旁邊那隻鳥
+   現在是灰色). It keeps the wine of the seal stamped on the front page. */
+.issue-row .d .seal { color: var(--wine); }
 .issue-row ul { list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 1.65; }
 .issue-row li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .issue-row li i { font-style: normal; font-family: var(--sans); font-size: 11.5px; color: var(--gold-ink); margin-right: 6px; }
