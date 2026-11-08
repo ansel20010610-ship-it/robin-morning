@@ -1,1 +1,11 @@
-{}
+{
+  "2026-11-08": {
+    "state": "waiting",
+    "held_at": "10:27",
+    "missing": [
+      "football",
+      "news",
+      "wildcard"
+    ]
+  }
+}
