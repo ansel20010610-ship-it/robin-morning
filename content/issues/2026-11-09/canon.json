@@ -1,0 +1,312 @@
+{
+ "column": "canon",
+ "date": "2026-11-09",
+ "title": "先把七個人找齊，再讓觀眾數敵人",
+ "dek": "《七武士》先讓觀眾一個一個認識上場的人，再讓一場大混戰從頭到尾看得懂；後來許多動作片、搶劫片都有招兵這場戲。",
+ "brief": "《七武士》讓動作片學會先花工夫讓觀眾認識每一個上場的人，仗打得再亂，觀眾也知道誰在哪裡、山賊還剩幾個。黑澤明學了西部片的文法，雨中決戰同時架好幾台攝影機拍。好萊塢後來把它改成西部片，又有人把它搬上外太空。",
+ "topic_key": "canon:seven-samurai",
+ "form": "qa",
+ "voice": "critic",
+ "updated_at": "2026-11-09T03:19:00+08:00",
+ "spoiler": "本文談到《七武士》的結局。",
+ "disclaimer": null,
+ "hero": {
+  "id": "hero",
+  "kind": "photo",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Akirakurosawa-onthesetof7samurai-1953-page88.jpg/1280px-Akirakurosawa-onthesetof7samurai-1953-page88.jpg",
+  "width": 1280,
+  "height": 2144,
+  "alt": "黑白照片。一個戴白色布帽的男人側著臉抬頭往上看，肩上搭著淺色外套，背景是暗色的布幕。",
+  "caption": "黑澤明在《七武士》片場，1953 年。照片刊在日本電影雜誌《映畫之友》1953 年 12 月號；這部片一直拍到 1954 年才殺青。",
+  "credit": "《映畫之友》（映画の友），1953 年 12 月號；掃描自原雜誌",
+  "license": "Public domain",
+  "license_url": "",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Akirakurosawa-onthesetof7samurai-1953-page88.jpg",
+  "made": "1953"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "**《七武士》**把先組隊、再打仗做成了動作片的原型設定：仗打起來以前，先一個一個找人，讓觀眾認得每個要上場的人；仗打起來以後，再亂也讓觀眾知道誰在哪裡、敵人還剩幾個。**先認得人，再看懂仗，每個倒下的人才有分量。**一位英國影評人說，它的招兵段落如今是許多動作片和搶劫片的必備戲。"
+  },
+  {
+   "type": "p",
+   "text": "導演是日本的**黑澤明**，1951 年以《羅生門》拿下威尼斯影展金獅獎。《七武士》1954 年 4 月在日本首映，原版長 207 分鐘。故事在 16 世紀的日本：一個窮山村怕山賊收成後來搶，進城雇武士，能給的只有白米飯。不少人先認識的是 1960 年好萊塢的西部片翻拍**《豪勇七蛟龍》**。"
+  },
+  {
+   "type": "figure",
+   "id": "f1",
+   "kind": "document",
+   "src": "https://upload.wikimedia.org/wikipedia/commons/7/79/Seven_Samurai_US_Release_Poster.png",
+   "width": 548,
+   "height": 836,
+   "alt": "黑白電影海報。右上方一個穿護甲的人舉刀躍起，左邊三格劇照，中間印著大字 AKIRA KUROSAWA'S THE MAGNIFICENT SEVEN，右下角有月桂葉框起的威尼斯影展得獎字樣。",
+   "caption": "《七武士》1956 年 11 月在美國上映時的海報，片名印的是 The Magnificent Seven，右下角寫著在威尼斯影展得獎。四年後好萊塢的翻拍片用了同一個英文片名。",
+   "credit": "Kingsley International；Columbia International（海報印「A Toho Production・A Kingsley International Release」）；掃描經 Cine Material",
+   "license": "Public domain",
+   "license_url": "",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Seven_Samurai_US_Release_Poster.png",
+   "made": "1956"
+  },
+  {
+   "type": "h",
+   "text": "在它之前，武士片怎麼打？"
+  },
+  {
+   "type": "p",
+   "text": "照舞台的規矩打。日本的古裝片叫時代劇，打鬥深受歌舞伎影響，講究架式漂亮，服裝也照舞台美化。黑澤明想拍一種新的時代劇。"
+  },
+  {
+   "type": "quote",
+   "text": "現在的時代劇最要不得的，就是那套「形式」。那全是無視歷史事實、變了形的歌舞伎套路。",
+   "original": "今の時代劇で一番いけないのはあの「形式」です。あれはみんな歴史的な事実を無視し変形したカブキからの型なんだ。",
+   "cite": "黑澤明〈私の作品〉，《映画旬刊》1956 年 1 月上旬號；轉引自日文維基百科〈七人の侍〉"
+  },
+  {
+   "type": "p",
+   "text": "黑澤明也敬重美國西部片導演約翰・福特，說過西部片拍了又拍，磨出一套文法，他就是跟這套文法學的。馬隊奔馳時，他照福特的樣子讓沙塵揚起來；決戰反著來：西部片總是晴天揚塵，他偏讓它下大雨。"
+  },
+  {
+   "type": "p",
+   "text": "湊一群人去救一個地方，西部片早就常用。研究黑澤明的學者認為，它是在片廠慣例上做的變奏：把不同角色個別化，又讓他們在社會群體之內與之間取得平衡。"
+  },
+  {
+   "type": "h",
+   "text": "找齊七個人花那麼久，不悶嗎？"
+  },
+  {
+   "type": "p",
+   "text": "長是真的長，但不拖，因為每找一個人都是一場性格戲。頭一個是志村喬演的勘兵衛，出場時剃掉髮髻、扮成和尚，制伏一個挾持小孩的小偷。剃髮髻對武士是大忌，他照剃。農民求他，他推說老了，仗打膩了；同住客棧的苦力罵農民自己吃稗子，卻把白米飯捧給武士。勘兵衛叫他別嚷，端起那碗飯。"
+  },
+  {
+   "type": "quote",
+   "text": "這碗飯，我不會隨隨便便吃下去。",
+   "original": "このめし、おろそかには食わんぞ",
+   "cite": "勘兵衛（志村喬）；台詞據演員千秋實回憶志村喬的文章轉引"
+  },
+  {
+   "type": "p",
+   "text": "其他人各有入隊方式，比如一個被找到時正在劈柴，那是武士不屑做的粗活，一個在決鬥裡砍倒對手。三船敏郎演的菊千代喝醉闖來，自稱武士，被拆穿了還一路跟到村子；他其實是農民的兒子。"
+  },
+  {
+   "type": "p",
+   "text": "入隊那一刻就是人物介紹。寫劇本時，黑澤明替每個武士寫了筆記，連說話的樣子、怎麼綁鞋帶都有。等村子開打，觀眾記得誰肯劈柴、誰是冒牌貨，誰倒下都很重。"
+  },
+  {
+   "type": "h",
+   "text": "雨裡那場混戰，憑什麼看得懂？"
+  },
+  {
+   "type": "p",
+   "text": "開打前，武士拿著地圖巡村子外圍，地圖在鏡頭前給觀眾看；勘兵衛還有一張名冊，名冊上每個山賊各畫一個記號，死一個打一個叉。有這兩樣，後面再亂，觀眾也知道身在何處、還剩幾個敵人。"
+  },
+  {
+   "type": "p",
+   "text": "黑澤明也從這部片開始一場戲同時架好幾台攝影機。他解釋，大雨中山賊衝進村子會發生什麼無法預料，一個鏡頭一個鏡頭拍，沒有動作能保證再來一次。他再用望遠鏡頭把觀眾拉到打鬥旁邊。觀眾一下看見全局，一下被推進泥水裡，有地圖墊底也不迷路。"
+  },
+  {
+   "type": "h",
+   "text": "當年的影評人嫌它什麼？"
+  },
+  {
+   "type": "p",
+   "text": "嫌長，嫌打得單調，但說話的人都先誇過它。美國《綜藝》從威尼斯影展發稿，說它處處是冒險和刺激，唯一缺點是長度，可以剪；其實威尼斯放的已是剪掉 47 分鐘的國際版。"
+  },
+  {
+   "type": "p",
+   "text": "英國一份影評月刊稱它了不起，說黑澤明的技術當代無人能及，只有那串戰鬥全用同一手法拍，攝影機像參戰的人跟著衝殺和泥濘走，才讓人覺得單調。英國導演東尼・李察遜在《視與聽》（Sight and Sound）雜誌也讚他懸疑、驚奇的技巧樣樣精通，只嫌那串戰鬥有一絲單調。"
+  },
+  {
+   "type": "p",
+   "text": "他們看得準，結論卻錯了。被嫌單調的，是那串戰鬥一路貼著人拍的做法；而它在西方導演之間的影響，特別落在多機拍動作上。"
+  },
+  {
+   "type": "p",
+   "text": "在日本，它是東寶那年最賣座的片，BFI 稱為日本最受敬重的電影雜誌的《電影旬報》年度評選給它第三。《視與聽》的影史票選，1982 年它排第三，2022 年排第 20。"
+  },
+  {
+   "type": "p",
+   "text": "老的地方也有。207 分鐘對今天的觀眾是實在的門檻，當年二、三輪戲院放的是短版。片裡的女人只出現在這類情節裡：一個農民把女兒扮成男孩，怕她被武士看上；另一個村民的妻子早被山賊擄走。"
+  },
+  {
+   "type": "h",
+   "text": "後來的電影從它身上拿走了什麼？"
+  },
+  {
+   "type": "p",
+   "text": "《豪勇七蛟龍》拿走整個故事，把日本山村換成墨西哥村子，武士換成槍手。黑澤明說美國版令人失望，好看歸好看，但不是《七武士》。"
+  },
+  {
+   "type": "p",
+   "text": "1980 年的美國太空片 Battle Beyond the Stars 借得很細：受威脅的農業星球叫 Akir，居民叫 Akira，向黑澤明致敬；他們只拿得出食物和住處去雇傭兵。編劇說，傭兵本該最犬儒，但傭兵和村民的摩擦就是好戲。"
+  },
+  {
+   "type": "p",
+   "text": "1975 年的印度片 Sholay 情節相似：一個當過警官的地主，雇兩個小賊對付常來搶村子的盜匪，印度影評認為故事可能取自《七武士》。"
+  },
+  {
+   "type": "spoiler",
+   "text": "以下談到《七武士》的結局。"
+  },
+  {
+   "type": "h",
+   "text": "打贏了，領頭的為什麼說輸了？"
+  },
+  {
+   "type": "p",
+   "text": "仗打完，七個武士剩三個。四座新墳插著刀當墓碑；田裡，村民吹笛打鼓，開始插秧。勘兵衛對老部下說："
+  },
+  {
+   "type": "quote",
+   "text": "這一仗，又是輸了。……贏的是那些農民，不是我們。",
+   "original": "今度もまた、負け戦だったな……勝ったのはあの百姓たちだ、わしたちではない",
+   "cite": "勘兵衛，《七武士》結尾；台詞據日文維基百科〈七人の侍〉劇情段轉引"
+  },
+  {
+   "type": "p",
+   "text": "李察遜嫌它少了深度和對生命的寬厚，這句我不同意。花三個多小時讓觀眾喜歡上這七個人，最後讓領頭的說贏的是農民，村子照樣插秧；肯這樣收尾，我不覺得叫缺乏寬厚。"
+  },
+  {
+   "type": "p",
+   "text": "我認為《七武士》的經典地位來自它把西部片的文法揉進時代劇，做出一個後來許多動作片都用的招兵與開打順序：先把每個人介紹清楚，再用地圖、名冊和幾台攝影機讓雨裡的混戰始終看得清楚，於是每個人的死都算數。它還多走一步，讓打贏的人自己說，贏的是農民。"
+  },
+  {
+   "type": "facts",
+   "title": "作品資料",
+   "items": [
+    [
+     "片名",
+     "七武士（七人の侍，Seven Samurai）"
+    ],
+    [
+     "導演",
+     "黑澤明"
+    ],
+    [
+     "主演",
+     "志村喬（勘兵衛）、三船敏郎（菊千代）"
+    ],
+    [
+     "製片廠",
+     "東寶"
+    ],
+    [
+     "日本首映",
+     "1954 年 4 月 26 日"
+    ],
+    [
+     "原版片長",
+     "207 分鐘"
+    ],
+    [
+     "獎項",
+     "1954 年威尼斯影展銀獅獎（與《山椒大夫》並列）"
+    ],
+    [
+     "翻拍",
+     "《豪勇七蛟龍》（1960）"
+    ]
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "title": "Seven Samurai: the rocky road to classic status of Akira Kurosawa's action masterpiece",
+   "publisher": "BFI（Jasper Sharp）",
+   "date": "2014-04-15",
+   "url": "https://www.bfi.org.uk/features/seven-samurai-akira-kurosawa-classic-status",
+   "note": "首映日 1954-04-26、207 分鐘原版只在幾個大城市放、二三輪戲院放短版、160 分鐘國際版、英國版再少五分鐘；東寶當年最賣座；Kinema Junpo（Japan's most respected film journal）年度第三；威尼斯與《山椒大夫》並列銀獅；Variety 1954-08-31（High adventure and excitement are stamped all over this solid-core film／a good feeling for characterization／lone drawback is its length, which can be sheered）；Monthly Film Bulletin（remarkable film；brilliance is unsurpassed by any director in contemporary cinema；only in the series of battle sequences, all of which are filmed by the same technique – the camera almost as a participant in the action … a degree of monotony is felt）；Tony Richardson, Sight & Sound 1955 春季號（virtuoso exponent of every technique of suspense, surprise, excitement … Only in his handling of the series of battles is there a hint of monotony；All the elements are there except the depth and the generosity of life）；多數評論指出福特的影響；美國 1956 年以 The Magnificent Seven 片名上映、1960 年翻拍後改回原名；1982 年 Sight & Sound 第三；組隊設定片單（directly modelled on it, referenced it, or acknowledged its archetypal plot setup：The Dirty Dozen、Sholay、Star Wars、Battle Beyond the Stars 等）；《羅生門》1951 年金獅、第一位在大型國際影展得獎的日本導演"
+  },
+  {
+   "title": "Behind the Classics: The Seven Samurai (1954)",
+   "publisher": "TCM（Rob Nixon）",
+   "date": "2008-01-08",
+   "url": "https://www.tcm.com/articles/behind-the-classics/191474/behind-the-classics-the-seven-samurai-1954",
+   "note": "地圖與名冊（so that we know how many have been defeated and how many remain）、黑澤明談多機拍攝的原話（because it was impossible to predict exactly what would happen …）、望遠鏡頭（to put the viewer very close to the frenetic action）"
+  },
+  {
+   "title": "志村喬 最も日本人らしい日本人——を演じた名優",
+   "publisher": "文藝春秋PLUS（千秋實）",
+   "date": "2026-05-30",
+   "url": "https://bunshun.jp/bungeishunju/articles/h12141",
+   "note": "千秋實（演平八）回憶志村喬，寫的是正月重看後的回想：木賃宿一場「出来ぬ相談だな」「それにワシも戦にはあきた、年だでなァ」、苦力罵農民吃稗、「このめし、おろそかには食わんぞ」（台詞為他文中轉引，非劇本原件；おろそか＝輕忽、馬虎，故譯「隨隨便便」）；米飯條件；野武士 40 騎；他對這一句的評語（ハッキリ引受けたとも云わないのに、めしを見る目と一言のせりふで……）"
+  },
+  {
+   "title": "Why is Seven Samurai so good?",
+   "publisher": "BBC Culture（Anne Billson）",
+   "date": "2018-10-30",
+   "url": "https://www.bbc.com/culture/article/20181025-why-is-seven-samurai-so-good",
+   "note": "the mother of all 'assembling the team' sequences, now an obligatory part of so many action and heist movies；combine the conventions of the western with a radical new fusion of Japanese genres；We always know who's who … every death hits hard；2016 年再翻拍、Battle Beyond the Stars"
+  },
+  {
+   "title": "Why Akira Kurosawa's 'Seven Samurai' keeps inspiring new retellings like 'The Magnificent Seven'",
+   "publisher": "Los Angeles Times（Lewis Beale）",
+   "date": "2016-09-23",
+   "url": "https://www.latimes.com/entertainment/movies/la-ca-mn-seven-samurai-magnificent-seven-20160913-snap-story.html",
+   "note": "黑澤明談西部片（a kind of grammar has evolved. I have learned from this grammar of the western）、早年受福特牛仔片影響；1960 年版救墨西哥村子；製片 Walter Mirisch（very easily translatable into an American western；a premise that's been used frequently in American westerns）；Battle Beyond the Stars 編劇 John Sayles 談傭兵與村民（Mercenaries are meant to be the ultimate cynics … the tensions between the mercenaries and the villagers makes for good personal drama）"
+  },
+  {
+   "title": "The Greatest Films of All Time",
+   "publisher": "BFI Sight and Sound",
+   "date": "2022-12-01",
+   "url": "https://www.bfi.org.uk/sight-and-sound/greatest-films-all-time",
+   "note": "2022 年影評人票選：Seven Samurai 第 20"
+  },
+  {
+   "title": "Seven Samurai Scene 2 Summary",
+   "publisher": "Shmoop",
+   "date": "",
+   "url": "https://www.shmoop.com/study-guides/seven-samurai/scene-2-summary.html",
+   "note": "勘兵衛剃頭扮和尚救小孩（a serious no-no among his kind）、木棍試人、平八劈柴、久藏決鬥、七郎次是老部下、菊千代被揭穿仍跟到村子"
+  },
+  {
+   "title": "Seven Samurai Scene 3 Summary／Scene 4 Summary",
+   "publisher": "Shmoop",
+   "date": "",
+   "url": "https://www.shmoop.com/study-guides/seven-samurai/scene-3-summary.html",
+   "note": "萬造把女兒志乃扮成男孩；菊千代在村裡被收作第七人；（scene-4-summary.html）菊千代是農民之子、利吉的妻子在山賊那裡"
+  },
+  {
+   "title": "七人の侍",
+   "publisher": "Wikipedia（日文）",
+   "date": "",
+   "url": "https://ja.wikipedia.org/wiki/%E4%B8%83%E4%BA%BA%E3%81%AE%E4%BE%8D",
+   "note": "「時代劇映画の革新」段：舊時代劇受歌舞伎影響（據佐藤 2002）、黑澤明〈私の作品〉（《映画旬刊》1956 年 1 月上旬號，頁 43）原話；黑澤明敬重福特、照福特揚沙塵、西部片總是晴天故用雨（據《ニューフリックス》1991、堀川 2000、土屋 2002）；結尾：笛や太鼓で囃しながら田植、刀插在四座土饅頭上、勘兵衛「今度もまた、負け戦だったな」「勝ったのはあの百姓たちだ、わしたちではない」（台詞皆為二手轉引）"
+  },
+  {
+   "title": "豪勇七蛟龍",
+   "publisher": "Wikipedia（中文）",
+   "date": "",
+   "url": "https://zh.wikipedia.org/wiki/%E8%B1%AA%E5%8B%87%E4%B8%83%E8%9B%9F%E9%BE%8D",
+   "note": "1960 年版台灣譯名《豪勇七蛟龍》"
+  },
+  {
+   "title": "Seven Samurai",
+   "publisher": "Wikipedia（英文）",
+   "date": "",
+   "url": "https://en.wikipedia.org/wiki/Seven_Samurai",
+   "note": "黑澤明生年 1910、演員表；美軍佔領期壓制武士片、黑澤明想拍新的時代劇（Galbraith 2002；Yoshimoto 2000）；Yoshimoto：individualization … a unique iteration on established conventions among studio films for the time（2000, p.240）；黑澤明替每個武士寫筆記（說話方式、綁鞋帶）、原本六人後加菊千代（Galbraith 2002）；勝四郎求拜師；拍攝延續到 1954 年、決戰最後拍於隆冬（Galbraith 2002，圖說「1954 年才殺青」所據）；多機拍動作在西方導演間的影響（Lacey 2016）；黑澤明評翻拍：The American copy is a disappointment … it is not a version of Seven Samurai（Cardullo 2008）；Sholay 受其啟發"
+  },
+  {
+   "title": "Battle Beyond the Stars",
+   "publisher": "Wikipedia（英文）",
+   "date": "",
+   "url": "https://en.wikipedia.org/wiki/Battle_Beyond_the_Stars",
+   "note": "1980 年、Roger Corman 製作；農業星球 Akir 受軍閥 Sador 威脅，只能以食物與住處為酬雇傭兵；Akir／Akira 之名向黑澤明致敬"
+  },
+  {
+   "title": "Classics Revisited: Why Sholay is a cult classic",
+   "publisher": "Rediff（Dinesh Raheja）",
+   "date": "2002-08-09",
+   "url": "https://www.rediff.com/movies/2002/aug/09dinesh.htm",
+   "note": "地主兼警官被盜匪 Gabbar Singh 滅門，雇兩個小賊復仇、盜匪不時來搶村子；The story may have been inspired by the Akira Kurosawa classic The Seven Samurai"
+  },
+  {
+   "title": "Seven Samurai（Criterion DVD 評論）",
+   "publisher": "Salon",
+   "date": "2001-05-31",
+   "url": "https://www.salon.com/ent/movies/dvd/review/2001/05/31/samurai/",
+   "note": "16 世紀日本村莊"
+  }
+ ]
+}
