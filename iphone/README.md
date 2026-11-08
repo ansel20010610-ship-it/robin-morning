@@ -26,9 +26,39 @@
 
 建議用中型：左邊是當天的星期、日期、月份，右邊一頁月曆（週一開頭，像維也納的月曆）。小型和大型也可以用。鎖定畫面的三種小組件也可以用。日夜模式會自動換色，每天午夜換一頁。它不連網，不讀任何資料。
 
-## 圖片組件
+## 會跟著日夜換的圖片組件：Wiener Galerie
 
-用 Colorful Widget 或 iScreen 的「照片」組件，選對應尺寸放進去。五張是維也納名畫的局部，三張是手繪：
+`wiener-galerie.js`，一樣用 Scriptable。下面八張圖片組件都改由這一支腳本來畫：紙色、金框、方格角、Der Kuss 的長袍都是原生繪製，手繪卡片拆成墨色、金色兩層單色圖，用 `Color.dynamic` 上色。所以手機一切到深色，九格會和日曆一起**當下**換成夜間版，不用等組件刷新，也不靠時鐘猜。
+
+1. 把 `wiener-galerie.js` 放進 iCloud Drive → Scriptable（或在 Scriptable 按＋貼上，命名 wiener-galerie）。
+2. 主畫面加 Scriptable 小工具（小或中）→ 編輯小工具 → Script 選 wiener-galerie → Parameter 填作品名：
+
+| Parameter | 尺寸 | 作品 |
+| --- | --- | --- |
+| `naschmarkt` 或 `納許市集` | 中 | Moll〈維也納納許市集〉 |
+| `moser` 或 `加爾達湖` | 中 | Moser〈加爾達湖西岸〉 |
+| `mozart40` 或 `莫札特` | 中 | 莫札特第 40 號 |
+| `vierbaeume` 或 `四棵樹` | 小 | Schiele〈四棵樹〉 |
+| `sonnenblumen` 或 `向日葵` | 小 | Klimt〈向日葵〉 |
+| `floege` 或 `芙洛格` | 小 | Klimt〈芙洛格〉 |
+| `kuss` 或 `吻` | 小 | Der Kuss |
+| `weizenkorn` 或 `麥子` | 小 | 一粒麥子 |
+| 留空或 `galerie` | 小／中 | **今日畫廊**：每天午夜換一件（同尺寸的作品輪流）；`galerie 2`、`galerie 3` 從別件開始，兩格不會撞 |
+
+3. 第一次顯示時會從 `https://wiener-morgen-private.duckdns.org/iphone/galerie/` 下載圖檔，之後存在手機上，不再連網。要先全部存好：在 Scriptable 裡直接執行 wiener-galerie → 「存下全部圖檔」。不想連網：把 `galerie/` 整個資料夾放到 iCloud Drive → Scriptable → `wiener-galerie`。
+
+**點一下組件**會打開那件作品的 Saalzettel（展覽牆上的作品說明卡）：同樣紙色金框、跟著深淺色，有畫作局部、德文原名與中文名、畫家與收藏館、一小段說明；莫札特那張多一個「聆聽」按鈕，直接開 Spotify；一粒麥子那張是整節經文直排。在 Scriptable 裡直接執行則可以預覽每一件。
+
+### 桌布也一起日夜交替
+
+組件跟著系統深淺色走，所以：
+
+1. 設定 → 螢幕顯示與亮度 → 外觀選「自動」（日落到日出）。
+2. 桌布 iOS 不會自己換，交給捷徑：捷徑 → 自動化 → ＋ → 時刻 → 日落 → 立即執行，動作加「設定背景圖片」（選用 `wien-nacht.jpg` 那組背景）；再做一個日出的，選 `wien-tag.jpg` 那組。先在設定 → 背景圖片裡把兩組都加好，動作裡才選得到。
+
+## 圖片組件（舊方法：照片組件）
+
+不想用 Scriptable 的話，也可以用 Colorful Widget 或 iScreen 的「照片」組件，選對應尺寸放進去，只是不會跟著日夜換圖。五張是維也納名畫的局部，三張是手繪：
 
 | 檔案 | 尺寸 | 內容 |
 | --- | --- | --- |
@@ -68,3 +98,5 @@
 ## 重新產生圖片
 
 `tools/build.js` 產生桌布和全部圖片組件：`tools/kit.js` 是共用的紙、金框、方格角與桌布，`tools/photo.js` 是畫作的紙卡外框，`tools/motifs/` 是手繪的樂譜與 Der Kuss，`tools/photos/` 是裁好的畫作局部。SVG 用 resvg 輸出；字型用 Cormorant Garamond 與 Noto Serif TC，都是 Google Fonts 的開放授權字型，不放在 repo 裡，用法寫在 build.js 開頭。
+
+`tools/galerie.py` 從 `widgets/` 的日夜兩版算出 Wiener Galerie 用的單色圖層（同一區只有一種顏色，日夜兩張一起解出透明度），另外產生紙紋和縮好的畫作，都寫到 `galerie/`。手繪卡片改了以後重跑一次（要 numpy 和 Pillow）；`python3 galerie.py <資料夾>` 會順便輸出日夜預覽圖，檢查圖層有沒有對齊。圖層的位置也寫在 `wiener-galerie.js` 的 `layers` 裡，兩邊要一致。
