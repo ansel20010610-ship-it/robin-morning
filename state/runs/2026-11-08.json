@@ -18,5 +18,10 @@
       "wildcard"
     ],
     "note": "文學（Kafka《變形記》，dialogue）、謎題（哈伯張力，number）完成；審稿、總編重寫、忠實度核對皆做"
+  },
+  "late": {
+    "finished_at": "2026-11-08T15:38:41+08:00",
+    "missing": [],
+    "note": "週日補刊：補 football、news、wildcard，全刊驗證通過；news 實測可用 aljazeera、cna、france24、pts，dw 不可用"
   }
 }
