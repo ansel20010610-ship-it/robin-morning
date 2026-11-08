@@ -12,6 +12,7 @@ import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
 import { pressHtml } from "./press.js";
 import { fetchWeather, weatherHtml } from "./wetter.js";
 import { stampHtml } from "./stamps.js";
+import { feastOf } from "./feasts.js";
 import { worldState, drawMap } from "./world.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
@@ -656,6 +657,7 @@ function viewFront(dateParam) {
     ${status ? `<div class="status">${status}</div>` : ""}
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的${esc(issueNo(issue.no))}・<a href="#/">回到最新一期</a></div>` : ""}
     ${lateNote(issue.date)}
+    ${festBox(issue)}
     ${prayerBox(issue)}
     ${erst ? inhaltBox(issue, arts) : ""}
     ${weatherBox(issue)}
@@ -670,7 +672,7 @@ function viewFront(dateParam) {
     ${watch.length ? `<div class="sec-head"><h2>遠方有動靜</h2><span class="de">In der Ferne</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
     ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdsFound().has(issue.date) ? "今天的知更鳥找到了。" : "今天有一隻知更鳥藏在某一篇裡。"}</p>` : ""}
     ${!arts.some((a) => forStamp(a, issue.date) && a.brief) ? "" : !issueOpen(issue.date) ? `<div class="finish left"><b>今天這一份還沒出齊</b><span class="note">下午補刊到齊以後，包裹和郵票才會開。</span></div>`
-      : unreadIn(issue.date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${digestDone().has(issue.date) ? "早上的郵票已經蓋好了；後來補上的這幾篇也讀完，今天這一份才算讀到最後一行。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的郵票才蓋得下去。`}</span></div>`
+      : unreadIn(issue.date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${digestDone().has(issue.date) ? "早上的郵票已經蓋好了；後來補上的這幾篇也讀完，今天這一份才算讀到最後一行。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的${feastOf(issue.date) ? `${esc(feastOf(issue.date).zh)}紀念郵票` : "郵票"}才蓋得下去。`}</span></div>`
       : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
       : `<div class="finish">${finishInner(issue.date)}</div>`}
     ${dateParam ? "" : wocheBox()}
@@ -770,7 +772,7 @@ function wireDigest(issue) {
     main.querySelector(".digest .streak")?.remove();
     if (!fin || fin.classList.contains("done")) return;
     fin.classList.add("done");
-    if (!was) { celebrate(fin); setTimeout(() => toast("郵票蓋好了，收在郵票冊"), 1200); } // the day's stamp (viewStamps), once the seal is down
+    if (!was) { const f = feastOf(issue.date); celebrate(fin); setTimeout(() => toast(f ? `${f.zh}紀念郵票蓋好了，收在郵票冊` : "郵票蓋好了，收在郵票冊"), 1200); } // the day's stamp (viewStamps), once the seal is down
   }
   if (fin && "IntersectionObserver" in window) {
     finishSeen = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) finish(); }, { threshold: 0.8 });
@@ -796,6 +798,18 @@ function markDigestDone(date) {
   syncDone();
   const fin = main.querySelector(".finish");
   if (fin) fin.innerHTML = finishInner(date);
+}
+// 紀念郵票 on the front page (the owner, 2026-11-08: 那天在主頁可以提示有紀念郵票): on a feast day (feasts.js) today's
+// paper opens with a small card — the commemorative stamp itself, faded until it is earned (a blank slot is unreadable at
+// this size), beside a line saying which stamp this paper will earn; once earned, in full colour and linking to it in
+// the album. Only on today's paper, not on an archive issue.
+function festBox(issue) {
+  const fest = feastOf(issue.date);
+  if (!fest || !todays(issue)) return "";
+  const got = digestDone().has(issue.date);
+  const stamp = stampHtml({ ...issue, articles: sortArticles(issue.articles || [], issue.date) }, { earned: true, size: 58, href: got ? `#/stamp/${issue.date}` : null });
+  return `<aside class="fest-note fest-${esc(fest.key)}${got ? " got" : ""}" aria-label="${esc(fest.zh)}紀念郵票">${stamp}<div><b>今日紀念郵票</b><span class="de">${esc(fest.name)}</span>
+    <p>${got ? `今天的${esc(fest.zh)}紀念郵票已經收進郵票冊。` : `${esc(fest.line)}。這一份讀到最後一行，郵票冊會收進一枚${esc(fest.zh)}紀念郵票。`}</p></div></aside>`;
 }
 // The seal (motion.js seal) with the day on it; from a streak of two the laurel wraps round it.
 function finishInner(date) {
@@ -1682,11 +1696,11 @@ function viewStamp(date) {
   // 創刊紀念郵票 opens with a show (the owner, 2026-11-08: 點開來個特效): it turns in out of the dark like a coin, a glint
   // runs across it, a ring of light goes out, a sunburst wakes behind it and keeps turning, gold flakes fall (style.css
   // .stamp-page.erst-page, goldRain).
-  const erst = Number(issue.no) === 1;
-  main.innerHTML = `${top}<div class="wrap stamp-page${erst ? " erst-page" : ""}"><div class="big">${erst ? `<i class="esun" aria-hidden="true"></i><i class="ring" aria-hidden="true"></i>` : ""}${stampHtml({ ...issue, articles: sortArticles(issue.articles || [], date) }, { earned: true, bird: birdsFound().has(date) })}</div>
-    <p class="line"><b>${esc(issueNr(issue.no))}</b><span>${esc(fmtDate(date))}・週${esc(issue.weekday || "")}</span><i>${esc(fmtDate(date, "de"))}</i></p>
+  const erst = Number(issue.no) === 1, fest = erst ? null : feastOf(date), gala = erst || Boolean(fest); // 紀念郵票 open with the same show
+  main.innerHTML = `${top}<div class="wrap stamp-page${gala ? " gala" : ""}${fest ? ` fest-${esc(fest.key)}` : ""}"><div class="big">${gala ? `<i class="esun" aria-hidden="true"></i><i class="ring" aria-hidden="true"></i>` : ""}${stampHtml({ ...issue, articles: sortArticles(issue.articles || [], date) }, { earned: true, bird: birdsFound().has(date) })}</div>
+    <p class="line"><b>${esc(issueNr(issue.no))}</b><span>${esc(fmtDate(date))}・週${esc(issue.weekday || "")}${fest ? `・${esc(fest.zh)}紀念郵票` : ""}</span><i>${esc(fmtDate(date, "de"))}</i></p>${fest?.pic ? `<p class="credit">${esc(fest.pic.credit)}</p>` : ""}
     <p class="btns"><a class="btn ghost" href="#/issue/${esc(date)}">看這一期</a></p></div>`;
-  if (erst) setTimeout(() => goldRain(main.querySelector(".stamp-page .big")), 1050);
+  if (gala) setTimeout(() => goldRain(main.querySelector(".stamp-page .big")), 1050);
   wireBack();
   // A tap on the blank page (not the stamp, not a link) goes back to the album, as closing a thing held up to look at.
   main.querySelector(".stamp-page").addEventListener("click", (e) => {

@@ -9,6 +9,7 @@
 // stamp a degree or so, so no two days in the album look alike. The margin keeps its light paper in dark mode: it is
 // a stamp on a dark album page.
 import { esc, fmtDate, roman, ROBIN_PATHS } from "./util.js";
+import { feastOf } from "./feasts.js";
 
 // Which picture the day's stamp carries (the owner, 2026-11-08: 所有郵票要挑那期好看的照片，不要足球那類的): a painting
 // first, then an engraving, a portrait, a photograph — and never the sports, news and clinical columns, whose pictures
@@ -72,22 +73,28 @@ export function stampHtml(issue, { earned = false, open = false, href = null, i 
   // faint 1 behind the picture, band and laurel round it, ERSTAUSGABE on a wine ribbon under the picture and the
   // issuer's name along the foot; it stands straight and glows, at the album's ordinary size (style.css .stamp.erst).
   const erst = Number(issue?.no) === 1;
-  const h = hash(date), frame = erst ? 4 : h % 6, tint = erst ? 5 : (h >>> 8) % 5, tilt = erst ? 0 : (((h >>> 16) % 5) - 2) * .6;
+  // 紀念郵票 (feasts.js; the owner, 2026-11-08): Christmas, New Year, Easter and the other days carry the painting chosen for
+  // the day, their own paper and ribbon (style.css .stamp.fest-<key>), the day's German name on the ribbon; they stand
+  // straight like the first issue's.
+  const fest = erst ? null : feastOf(date);
+  const gala = erst || Boolean(fest);
+  const h = hash(date), frame = gala ? 4 : h % 6, tint = erst ? 5 : fest ? 0 : (h >>> 8) % 5, tilt = gala ? 0 : (((h >>> 16) % 5) - 2) * .6;
   const day = Number.isFinite(d) ? `${d}. ${roman(m)}.` : "", wd = date ? fmtDate(date, "de").split(",")[0] : "";
-  const label = [date && fmtDate(date, "short"), issue?.no && `第 ${issue.no} 期`, earned ? "已蓋郵票" : open ? "今天還沒讀完" : "錯過，留白"].filter(Boolean).join("・");
+  const label = [date && fmtDate(date, "short"), issue?.no && `第 ${issue.no} 期`, fest && `${fest.zh}紀念郵票`, earned ? "已蓋郵票" : open ? "今天還沒讀完" : "錯過，留白"].filter(Boolean).join("・");
   const style = `--i:${i}${earned ? `;--tilt:${tilt}deg` : ""}${size > 0 ? `;width:${size}px` : ""}`;
   const tag = href ? `a href="${esc(href)}"` : `span role="img"`; // a role, or the span's aria-label is not read out
   let inner;
   if (earned) {
-    const pic = stampPicture(issue), hero = pic?.hero;
-    const art = hero?.src ? `<img src="${esc(hero.thumb || hero.src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">`
+    const hero = fest?.pic || stampPicture(issue)?.hero;
+    const pos = fest?.pic?.position ? ` style="object-position:${esc(fest.pic.position)}"` : "";
+    const art = hero?.src ? `<img src="${esc(hero.thumb || hero.src)}" alt=""${pos} loading="lazy" decoding="async" referrerpolicy="no-referrer">`
       : `<svg class="bird" viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>`;
     inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="yr">${esc(Number.isFinite(y) ? y : "")}</span>
-      <span class="fr">${art}<svg class="bd" viewBox="0 0 ${W} ${H}" aria-hidden="true">${erst ? ERST_FRAME() : FRAMES[frame]()}</svg></span>
-      <span class="name">${erst ? "Erstausgabe" : "Rotkehlchens Morgenblatt"}</span>
-      <span class="foot"><i>${erst ? "Rotkehlchens Morgenblatt" : esc(wd)}</i><b>${esc(day)}</b></span>${bird ? `<svg class="perch" viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>` : ""}`;
+      <span class="fr">${art}<svg class="bd" viewBox="0 0 ${W} ${H}" aria-hidden="true">${gala ? ERST_FRAME() : FRAMES[frame]()}</svg></span>
+      <span class="name">${erst ? "Erstausgabe" : fest ? esc(fest.name) : "Rotkehlchens Morgenblatt"}</span>
+      <span class="foot"><i>${gala ? "Rotkehlchens Morgenblatt" : esc(wd)}</i><b>${esc(day)}</b></span>${bird ? `<svg class="perch" viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>` : ""}`;
   } else {
-    inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="miss"><b>${esc(day)}</b>${open ? "<small>Heute</small>" : erst ? "<small>Erstausgabe</small>" : ""}</span>`;
+    inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="miss"><b>${esc(day)}</b>${fest ? `<small>${esc(fest.name)}</small>` : open ? "<small>Heute</small>" : erst ? "<small>Erstausgabe</small>" : ""}</span>`;
   }
-  return `<${tag} class="stamp ${earned ? `earned f${frame} t${tint}` : `slot${open ? " open" : ""}`}${erst ? " erst" : ""}" style="${style}" aria-label="${esc(label)}${erst ? "・創刊紀念郵票" : ""}"><span class="sp">${inner}</span></${href ? "a" : "span"}>`;
+  return `<${tag} class="stamp ${earned ? `earned f${frame} t${tint}` : `slot${open ? " open" : ""}`}${erst ? " erst" : ""}${fest ? ` fest fest-${fest.key}` : ""}" style="${style}" aria-label="${esc(label)}${erst ? "・創刊紀念郵票" : ""}"><span class="sp">${inner}</span></${href ? "a" : "span"}>`;
 }

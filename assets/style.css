@@ -1844,22 +1844,75 @@ details.band .svl { margin: 0 0 10px; }
    held up to the light, a gold glint runs across it, a ring of light goes out from its edge, a sunburst wakes behind it
    and keeps slowly turning, and gold flakes fall (app.js goldRain). All of it only without prefers-reduced-motion. */
 .stamp-page .big { position: relative; }
-.stamp-page.erst-page .big { perspective: 1000px; }
-.stamp-page.erst-page .big .stamp { position: relative; z-index: 2; transform-style: preserve-3d; }
-.stamp-page.erst-page .esun { position: absolute; left: 50%; top: 50%; width: 170%; aspect-ratio: 1; translate: -50% -50%; border-radius: 50%; z-index: 0; pointer-events: none; opacity: .5;
+.stamp-page.gala .big { perspective: 1000px; }
+.stamp-page.gala .big .stamp { position: relative; z-index: 2; transform-style: preserve-3d; }
+.stamp-page.gala .esun { position: absolute; left: 50%; top: 50%; width: 170%; aspect-ratio: 1; translate: -50% -50%; border-radius: 50%; z-index: 0; pointer-events: none; opacity: .5;
   background: repeating-conic-gradient(from 0deg, color-mix(in srgb, var(--foil-hi) 70%, transparent) 0 4deg, transparent 4deg 12deg);
   -webkit-mask: radial-gradient(circle, #000 0 10%, transparent 60%); mask: radial-gradient(circle, #000 0 10%, transparent 60%); }
-.stamp-page.erst-page .ring { position: absolute; inset: 0; z-index: 1; border: 2px solid var(--foil); opacity: 0; pointer-events: none; }
-.stamp-page.erst-page .big::after { content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none; opacity: 0; mix-blend-mode: screen;
+.stamp-page.gala .ring { position: absolute; inset: 0; z-index: 1; border: 2px solid var(--foil); opacity: 0; pointer-events: none; }
+.stamp-page.gala .big::after { content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none; opacity: 0; mix-blend-mode: screen;
   background: linear-gradient(115deg, transparent 38%, color-mix(in srgb, var(--foil-hi) 85%, #fff) 50%, transparent 62%) -120% 0 / 60% 100% no-repeat; }
 .stamp-page .big .flakes { top: 50%; z-index: 4; }
 @media (prefers-reduced-motion: no-preference) {
-  .stamp-page.erst-page .big .stamp { animation: erst-turn 1.5s cubic-bezier(.2, .85, .25, 1) both; }
+  .stamp-page.gala .big .stamp { animation: erst-turn 1.5s cubic-bezier(.2, .85, .25, 1) both; }
   @keyframes erst-turn { 0% { opacity: 0; transform: rotateY(-120deg) scale(.6) translateY(40px); } 55% { opacity: 1; transform: rotateY(14deg) scale(1.05); } 100% { transform: none; } }
-  .stamp-page.erst-page .esun { animation: esun-wake 1.6s .5s ease-out both, esun 60s 2.1s linear infinite; }
+  .stamp-page.gala .esun { animation: esun-wake 1.6s .5s ease-out both, esun 60s 2.1s linear infinite; }
   @keyframes esun-wake { from { opacity: 0; scale: .3; } to { opacity: .55; scale: 1; } }
-  .stamp-page.erst-page .ring { animation: erst-ring 1.4s 1s cubic-bezier(.15, .7, .3, 1) both; }
+  .stamp-page.gala .ring { animation: erst-ring 1.4s 1s cubic-bezier(.15, .7, .3, 1) both; }
   @keyframes erst-ring { 0% { opacity: .9; scale: 1; } 100% { opacity: 0; scale: 1.5; } }
-  .stamp-page.erst-page .big::after { animation: erst-glint 1.3s 1.15s ease-in-out both; }
+  .stamp-page.gala .big::after { animation: erst-glint 1.3s 1.15s ease-in-out both; }
   @keyframes erst-glint { 0% { opacity: 0; background-position: -120% 0; } 15%, 85% { opacity: 1; } 100% { opacity: 0; background-position: 220% 0; } }
 }
+
+/* ——— 紀念郵票 (feasts.js; the owner, 2026-11-08: 一些特殊日子我也想要有紀念郵票) ——— each feast its own paper, ribbon and
+   glow, built like the 創刊紀念郵票: the painting chosen for the day in the laurel frame, the day's German name on a ribbon
+   under it, the issuer along the foot, standing straight. --f-paper the paper, --f-band the ribbon, --f-ink the
+   ribbon's lettering and the number, --f-glow the halo. */
+.stamp.fest { --f-paper: #EFE6D2; --f-band: #6E2536; --f-band2: #3E101D; --f-ink: #F6D06A; --f-num: #6E2536; --f-glow: rgba(214, 165, 66, .45);
+  filter: drop-shadow(0 2px 3px rgba(60, 45, 20, .3)) drop-shadow(0 0 12px var(--f-glow)); }
+.stamp.fest .sp { background: var(--f-paper); }
+.stamp.fest .no, .stamp.fest .foot b { color: var(--f-num); }
+.stamp.fest .yr { color: var(--f-num); font-weight: 600; }
+.stamp.fest .fr img, .stamp.fest .fr .bird { left: 7.4cqw; top: 7.4cqw; width: 71.2cqw; height: 65.2cqw; }
+.stamp.fest .fr img { filter: saturate(1.02) contrast(1.04); } /* the day's painting in its own colours, not the album's sepia */
+.stamp.fest .bd { stroke-width: 1.1; }
+.stamp.fest .name { left: 0; right: 0; top: 96cqw; padding: 1.8cqw 0 2cqw; background: linear-gradient(90deg, var(--f-band2), var(--f-band) 25% 75%, var(--f-band2)); color: var(--f-ink); font-size: 5.6cqw; letter-spacing: .26em; padding-left: .26em; text-transform: none; font-style: italic; }
+.stamp.fest .foot { bottom: 3.6cqw; gap: 2cqw; }
+.stamp.fest .foot i { font-style: normal; font-size: 3.4cqw; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--f-num); overflow: visible; }
+.stamp.fest .foot b { font-size: 7cqw; }
+.stamp.slot.fest .sp { background: color-mix(in srgb, var(--f-paper) 70%, transparent); }
+.stamp.slot.fest .miss small { font-style: italic; color: var(--f-num); letter-spacing: .06em; }
+.stamp.fest-christmas { --f-paper: #EEE6D0; --f-band: #1F4A33; --f-band2: #102A1D; --f-ink: #F2CF73; --f-num: #8A1C24; --f-glow: rgba(196, 150, 60, .5); }
+.stamp.fest-newyear { --f-paper: #E6E8EE; --f-band: #1E2A4A; --f-band2: #0F1730; --f-ink: #E9E2C8; --f-num: #1E2A4A; --f-glow: rgba(150, 165, 200, .5); }
+.stamp.fest-lunar { --f-paper: #F2E2C8; --f-band: #A3221C; --f-band2: #6A120F; --f-ink: #F5D27A; --f-num: #A3221C; --f-glow: rgba(214, 120, 60, .45); }
+.stamp.fest-easter { --f-paper: #F4EFE2; --f-band: #E2C877; --f-band2: #BC9A45; --f-ink: #3D2A55; --f-num: #5A3F7A; --f-glow: rgba(240, 220, 150, .6); }
+.stamp.fest-midautumn { --f-paper: #E9E4D6; --f-band: #24304F; --f-band2: #121a30; --f-ink: #F1DE9E; --f-num: #24304F; --f-glow: rgba(240, 215, 130, .55); }
+.stamp.fest-founding { --f-paper: #F1E3CF; --f-band: #B65A2E; --f-band2: #7A3517; --f-ink: #FBE9C8; --f-num: #8A3F1C; --f-glow: rgba(214, 140, 80, .5); }
+.stamp.fest-barca { --f-paper: #ECE6DA; --f-band: #A50044; --f-band2: #004D98; --f-ink: #F6D06A; --f-num: #004D98; --f-glow: rgba(165, 0, 68, .3); }
+.stamp.fest-barca .name { background: linear-gradient(90deg, #004D98 0 50%, #A50044 50% 100%); }
+.stamp.fest-lantern { --f-paper: #F3E4C9; --f-band: #B8321F; --f-band2: #7C1C12; --f-ink: #F7D98A; --f-num: #9A2A1A; --f-glow: rgba(235, 150, 60, .5); }
+.stamp.fest-dragonboat { --f-paper: #E5E8D8; --f-band: #2F5E4E; --f-band2: #18382D; --f-ink: #F0D88E; --f-num: #2F5E4E; --f-glow: rgba(140, 180, 150, .45); }
+.stamp.fest-advent { --f-paper: #E8E2EC; --f-band: #4B2E63; --f-band2: #2A173A; --f-ink: #EED9A0; --f-num: #4B2E63; --f-glow: rgba(160, 130, 190, .45); }
+.stamp.fest-pentecost { --f-paper: #F4E6D8; --f-band: #B0291F; --f-band2: #6E140E; --f-ink: #FBE0A0; --f-num: #8E2118; --f-glow: rgba(240, 120, 70, .45); }
+.stamp.fest-oralhealth { --f-paper: #EEF2F0; --f-band: #3E6C77; --f-band2: #224149; --f-ink: #F4ECD6; --f-num: #3E6C77; --f-glow: rgba(150, 200, 210, .45); }
+.stamp.fest-mozart { --f-paper: #F1E6EA; --f-band: #7A2C46; --f-band2: #4A1428; --f-ink: #F3D58A; --f-num: #7A2C46; --f-glow: rgba(214, 150, 170, .45); }
+.stamp.fest-beethoven { --f-paper: #E7E3DA; --f-band: #2C2C34; --f-band2: #121216; --f-ink: #E9C878; --f-num: #2C2C34; --f-glow: rgba(180, 160, 120, .45); }
+.stamp.fest-bookday { --f-paper: #EFE7D3; --f-band: #5A3A22; --f-band2: #34200F; --f-ink: #F2D896; --f-num: #5A3A22; --f-glow: rgba(200, 160, 100, .45); }
+.stamp.fest-klimt { --f-paper: #EBD9A6; --f-band: #1E1A14; --f-band2: #000; --f-ink: #E8C25A; --f-num: #6B4E14; --f-glow: rgba(220, 175, 70, .6); }
+.stamp.fest-dostoevsky { --f-paper: #E6E1D6; --f-band: #3A3F2E; --f-band2: #1E2218; --f-ink: #E6D3A0; --f-num: #5A1E1E; --f-glow: rgba(160, 150, 120, .45); }
+.stamp-page .credit { margin: 8px 0 0; text-align: center; font-family: var(--sans); font-size: 11.5px; line-height: 1.6; color: var(--muted); }
+
+/* 今日紀念郵票 on the front page (app.js festBox): the stamp in its slot beside a line, on a paper strip with the
+   feast's ribbon colour along its left edge. */
+.fest-note { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 14px; align-items: center; margin: 14px 0 6px; padding: 12px 14px; background: var(--paper-2); border: 1px solid var(--rule); border-left: 3px solid var(--gold); }
+.fest-note .stamp { width: 58px; }
+.fest-note:not(.got) .stamp { filter: grayscale(.7) opacity(.55); } /* still to be earned */
+.fest-note b { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .16em; color: var(--gold-ink); }
+.fest-note .de { margin-left: 8px; font-family: var(--latin); font-style: italic; font-size: 14px; color: var(--gold); }
+.fest-note p { margin: 4px 0 0; font-size: 14.5px; line-height: 1.7; color: var(--ink-2); }
+.fest-note.fest-christmas { border-left-color: #1F4A33; } .fest-note.fest-lunar { border-left-color: #A3221C; } .fest-note.fest-newyear { border-left-color: #1E2A4A; }
+.fest-note.fest-easter { border-left-color: #BC9A45; } .fest-note.fest-midautumn { border-left-color: #24304F; } .fest-note.fest-founding { border-left-color: #B65A2E; }
+.fest-note.fest-barca { border-image: linear-gradient(#004D98 0 50%, #A50044 50% 100%) 0 0 0 1; }
+.fest-note.fest-lantern { border-left-color: #B8321F; } .fest-note.fest-dragonboat { border-left-color: #2F5E4E; } .fest-note.fest-advent { border-left-color: #4B2E63; }
+.fest-note.fest-pentecost { border-left-color: #B0291F; } .fest-note.fest-oralhealth { border-left-color: #3E6C77; } .fest-note.fest-mozart { border-left-color: #7A2C46; }
+.fest-note.fest-beethoven { border-left-color: #2C2C34; } .fest-note.fest-bookday { border-left-color: #5A3A22; } .fest-note.fest-klimt { border-left-color: #C9A043; } .fest-note.fest-dostoevsky { border-left-color: #3A3F2E; }
