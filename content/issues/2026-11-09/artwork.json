@@ -1,0 +1,282 @@
+{
+  "column": "artwork",
+  "date": "2026-11-09",
+  "title": "整間廚房，只有牛奶在動",
+  "dek": "「一個倒牛奶的女僕，畫得極好……」1696 年的拍賣目錄只給她這一行，她的價錢在同場 21 幅維梅爾裡排第二。",
+  "brief": "維梅爾畫《倒牛奶的女僕》時，在她頭後的牆上用黑色顏料打過一個掛陶壺的壺架草稿，後來牆刷成白的；阿姆斯特丹國家博物館 2022 年掃描找到壺架草稿，並認出右下角的籃子是火籃。她腰間那條工作圍裙，用的是青金石磨成、從阿富汗運來的天然群青。",
+  "topic_key": "artwork:vermeer-the-milkmaid",
+  "form": "scene",
+  "voice": "appraiser",
+  "updated_at": "2026-11-09T02:09:02+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Vermeer_The_Milkmaid_1660_ca.jpg/1280px-Vermeer_The_Milkmaid_1660_ca.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Vermeer_The_Milkmaid_1660_ca.jpg/3840px-Vermeer_The_Milkmaid_1660_ca.jpg",
+    "width": 1280,
+    "height": 1442,
+    "alt": "油畫：一間白牆的小廚房。戴白頭巾、穿黃上衣和深藍圍裙的年輕女人站在桌後，低頭把紅褐色陶壺裡的牛奶倒進一只陶鍋，一道細白的牛奶從壺口落下。桌上鋪綠布，有一籃麵包、散放的麵包塊、一只藍灰色的壺和一塊垂下的藍布。左上方是一扇格子窗，窗邊牆上掛著藤籃和銅壺；右下角牆腳有一排藍白磁磚和一個木頭腳爐。",
+    "caption": "維梅爾，《倒牛奶的女僕》，約 1660 年，油彩畫布，高 45.5 公分、寬 41 公分，阿姆斯特丹國家博物館（SK-A-2344）。",
+    "credit": "Johannes Vermeer／Rijksmuseum, Amsterdam",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vermeer_The_Milkmaid_1660_ca.jpg",
+    "made": "約 1660"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "一道牛奶從紅褐色的陶壺口流出來，細得像一條線，落進桌上一只雙耳陶鍋。倒牛奶的女人低著頭，右手握著壺把，左手扶著壺身下緣。收藏這幅畫的阿姆斯特丹國家博物館替它寫的說明裡有一句：除了那道牛奶，畫裡的一切都是靜止的。"
+    },
+    {
+      "type": "p",
+      "text": "這幅畫叫**《倒牛奶的女僕》**，畫家是**維梅爾**（Johannes Vermeer）。《戴珍珠耳環的少女》也是他畫的，那一幅的故事後來被寫成小說，又拍成史嘉蕾・喬韓森主演的電影。他 1632 年生在荷蘭的台夫特，1675 年死在同一座城，存世的畫只有三十幾幅。這一幅畫於 1660 年前後，油彩畫布，高 45.5 公分、寬 41 公分。英文標題直譯是「擠奶姑娘」，據 Essential Vermeer 的說法其實叫錯了人：擠奶姑娘是替牛擠奶的，她在廚房幹活，是女僕。"
+    },
+    {
+      "type": "p",
+      "text": "2022 年 9 月，國家博物館公布掃描結果：掃描找到她頭後牆上的壺架草稿，並認出畫面右下角的籃子是火籃，兩樣後來都被維梅爾蓋掉了；另外她左臂下還掃出一道粗黑線，是第三處發現。"
+    },
+    {
+      "type": "h",
+      "text": "壺口裡面是暗的"
+    },
+    {
+      "type": "p",
+      "text": "有人指出，以畫家的視線高度，壺裡的牛奶本來應該看得見，維梅爾沒畫，壺口裡面是暗的。往上一點，她右手上方的顏料層裡有一個針孔：維梅爾在那裡插過一根針，定出消失點，也就是透視畫法裡，所有往畫面深處延伸的線會合的那一點。消失點定在她右臂稍上方，看畫的人因此是微微仰著頭看她。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.27,
+        0.45,
+        0.2,
+        0.18
+      ],
+      "position": "畫面中央偏左，雙手與陶壺，約佔寬度五分之一",
+      "caption": "局部：右手握壺把，左手扶著壺身；壺口裡是暗的，壺緣和落下的那道牛奶有白色的亮點。"
+    },
+    {
+      "type": "p",
+      "text": "桌上是一籃麵包和一堆掰開的碎塊，旁邊一只藍灰色的石質壺。麵包表面布滿幾百個亮點，館方叫它們「光」的點；一位評論家 1950 年寫，這些光點不管底下是什麼質地，都照樣撒上去。館方說她大概在做麵包布丁，把乾麵包泡進牛奶。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.06,
+        0.63,
+        0.43,
+        0.14
+      ],
+      "position": "畫面左下，桌上的麵包籃與碎麵包，約佔寬度四成",
+      "caption": "局部：麵包、籃子的提把和藤編上，一顆一顆的亮點。"
+    },
+    {
+      "type": "h",
+      "text": "工作圍裙上的群青"
+    },
+    {
+      "type": "p",
+      "text": "她穿黃上衣，顏料是鉛錫黃，當時能買到最亮的黃。兩隻前臂套著綠色袖套，荷蘭文叫 morsmouwen，意思是「弄髒用的袖子」，和上衣分開穿，防污。腰間是深藍的圍裙；桌角垂下的藍布，用的也是群青。維梅爾用的是**天然群青**：青金石磨成的粉，從阿富汗經威尼斯運進來，他在上面刷了一到兩層厚的透明色。同時代的畫家畫藍色，多半用比較便宜的石青（一種藍色礦石顏料）。"
+    },
+    {
+      "type": "p",
+      "text": "女僕的圍裙當時常做成深藍，因為不顯髒；維梅爾給它上的是昂貴的群青。有學者推測顏料是台夫特的贊助人范・魯伊文（Pieter van Ruijven）供應的。畫這幅畫的前幾年，維梅爾連畫家行會（聖路加公會）的入會費都付不出全額。"
+    },
+    {
+      "type": "p",
+      "text": "左上角是一扇格子窗，一片玻璃破了一角，窗邊掛著藤籃和銅壺。牆的高處有一根釘子，光是從左邊來的。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.375,
+        0.0,
+        0.235,
+        0.1
+      ],
+      "position": "畫面頂端中央，白牆高處，約佔寬度四分之一",
+      "caption": "局部：牆上的釘子，在灰泥上投下一小道往右的影子。"
+    },
+    {
+      "type": "p",
+      "text": "研究維梅爾的學者惠洛克（Wheelock）指出，這間房的光其實不合理：窗那一側的牆光太少，右側大片白牆光太多。維梅爾還沿著人物的一整側勾了一道細細的白線，讓她微微發亮。"
+    },
+    {
+      "type": "p",
+      "text": "再往下，牆腳貼著一排台夫特藍白磁磚，地上一個木頭腳爐，頂蓋有孔，裡面放炭火。腳爐左邊那塊磁磚上，一個邱比特拉著弓；右邊另一塊，看起來像一個拄杖的人。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.7,
+        0.8,
+        0.3,
+        0.12
+      ],
+      "position": "畫面右下角，牆腳與地面，約佔寬度三成",
+      "caption": "局部：腳爐和一排磁磚。腳爐左邊、靠近裙襬的那塊，是拉弓的邱比特。"
+    },
+    {
+      "type": "h",
+      "text": "白牆底下的壺架"
+    },
+    {
+      "type": "p",
+      "text": "2022 年 9 月 8 日，國家博物館館長狄比茲（Taco Dibbits）站在這幅畫前開記者會。館裡的修復師和科學家跟海牙莫瑞泰斯皇家美術館的同事，為隔年的維梅爾大展，用 X 射線螢光和反射影像光譜把畫逐點掃過。"
+    },
+    {
+      "type": "p",
+      "text": "掃出來三樣東西。她左臂下方有一道匆匆刷上的粗黑線：維梅爾先用明暗把整個場面很快鋪出來，再回頭畫細節。她頭後的牆上，他用黑色顏料打了一個陶壺架和幾只壺的草稿，沒有再畫下去，後來整面牆刷成了白的。壺架是一塊釘著木栓的木板，用來掛陶壺。"
+    },
+    {
+      "type": "p",
+      "text": "右下角那只早就被發現的籃子，這次認出是柳條編的火籃：裡面放一盆紅炭，用來替新生兒保暖、烘乾尿布。維梅爾的遺產清冊顯示，他家也有一個，那個家孩子很多。火籃是畫出來之後才被蓋掉的：**他後來用腳爐、磁磚和地板，把它整個蓋住。**"
+    },
+    {
+      "type": "h",
+      "text": "175 盾，同場第二"
+    },
+    {
+      "type": "p",
+      "text": "這幅畫的第一位主人，館方的來歷紀錄列的是范・魯伊文，前面打了問號。1696 年 5 月 16 日，它出現在阿姆斯特丹的一場拍賣上，據 Hoet 轉錄的目錄，第 1 號是另一幅維梅爾，第 2 號只有一行："
+    },
+    {
+      "type": "quote",
+      "text": "一個倒牛奶的女僕，畫得極好，同上。",
+      "original": "Een Meyd di Melk uytgiet, uytnemende goet van dito.",
+      "cite": "1696 年拍賣目錄，據 Hoet 1752 年轉錄"
+    },
+    {
+      "type": "p",
+      "text": "「同上」是說作者和第 1 號一樣。這場拍賣共有 21 幅維梅爾，這一幅賣了 175 盾，只比第 31 號的《台夫特一景》少 25 盾，而《台夫特一景》的尺寸比它大好幾倍。"
+    },
+    {
+      "type": "p",
+      "text": "1907 年，西克斯（Six）家族的收藏要出售，事情吵上報紙、吵進國會：莫瑞泰斯的館長確信美國富豪摩根（J. Pierpont Morgan）想要這幅畫，國會多數站在主張不惜代價留在荷蘭的那一邊。1908 年，國家博物館在林布蘭協會（Vereniging Rembrandt）的支持下，以 550,000 盾向西克斯家族的繼承人買下它和另外 38 幅畫。報上的漫畫把她畫成「荷蘭最好看的牛奶姑娘」，回絕美國追求者山姆大叔；另有一幅，Jan Rinke 畫的〈部長林克與 Six 收藏的牛奶姑娘〉，登在 1907 年 11 月 9 日，119 年前的今天。"
+    },
+    {
+      "type": "h",
+      "text": "腳爐左邊那塊磚"
+    },
+    {
+      "type": "p",
+      "text": "那塊邱比特磁磚，研究者各有讀法。Liedtke（大都會博物館前策展人）說，當時的荷蘭觀眾熟知廚房女僕、尤其牛奶姑娘以性方面容易得手聞名，這塊磚把她標成「含蓄的慾望對象」；惠洛克卻讚她是「人性尊嚴的理想」。狄比茲的看法是：這種邱比特磁磚荷蘭人家裡到處都是，出現在這裡可能只是巧合。有學者因為沒有當時的文字證明風俗畫家會這樣埋象徵，仍然存疑。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "artwork",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Veld_van_achtenveertig_tegels_met_Cupido%27s%2C_BK-1955-301.jpg/1280px-Veld_van_achtenveertig_tegels_met_Cupido%27s%2C_BK-1955-301.jpg",
+      "width": 1280,
+      "height": 1690,
+      "alt": "一面 8×6 的磁磚，每塊一個邱比特，好幾塊在拉弓，四角有牛頭紋飾。",
+      "caption": "和維梅爾同時代的荷蘭磁磚，約 1630–1670 年，48 塊，每塊一個邱比特，好幾塊在拉弓。錫釉陶，阿姆斯特丹國家博物館藏（BK-1955-301）。",
+      "credit": "Rijksmuseum, Amsterdam",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Veld_van_achtenveertig_tegels_met_Cupido%27s,_BK-1955-301.jpg",
+      "made": "約 1630–1670"
+    },
+    {
+      "type": "p",
+      "text": "邱比特那塊磚，是維梅爾蓋掉火籃時換上去的磁磚之一。壺架則只留下黑色草稿，後來整面牆刷成了白的。館方的說法是，蓋掉壺架草稿以後，所有的注意力都集中在這個女人和她手上的事。畫裡看得到那面白牆、她頭右邊的幾個釘孔，和牆頂那根釘子投在灰泥上、往右的一小道影子。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "《倒牛奶的女僕》（Het melkmeisje／The Milkmaid）"
+        ],
+        [
+          "作者",
+          "維梅爾（Johannes Vermeer，1632–1675），台夫特"
+        ],
+        [
+          "年代",
+          "約 1660 年"
+        ],
+        [
+          "媒材與尺寸",
+          "油彩畫布，高 45.5 公分、寬 41 公分"
+        ],
+        [
+          "現在在哪裡",
+          "阿姆斯特丹國家博物館，榮譽廳（館藏號 SK-A-2344，1908 年購入）"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Milkmaid, Johannes Vermeer, c. 1660（SK-A-2344）",
+      "publisher": "Rijksmuseum",
+      "date": "2026-11-08",
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2344",
+      "note": "查閱日期。作品說明（Except for the stream of milk, everything else is still；hundreds of colourful dots）、荷蘭文著錄（kookpot、stenen kruik、rieten mand、koperen pot、stoofje）、尺寸、Gallery of Honour；provenance：? Pieter Claesz van Ruijven；1696.5.16 拍賣第 2 號 fl. 175 售予 Isaac Rooleeuw；1908 年 Six 繼承人連同另 38 幅以 fl. 550,000 售予博物館，Vereniging Rembrandt 贊助。館方新聞稿另寫 1657–58，正文從作品頁寫約 1660"
+    },
+    {
+      "title": "Rijksmuseum reveals major discoveries on Vermeer's painting The Milkmaid",
+      "publisher": "Rijksmuseum（新聞稿）",
+      "date": "2022-09-08",
+      "url": "https://www.rijksmuseum.nl/en/press/press-releases/rijksmuseum-reveals-major-discoveries-on-vermeer-s-painting-the-milkmaid",
+      "note": "Dibbits 記者會；與 Mauritshuis 合作；Macro-XRF 與 RIS（也用於 Operation Night Watch）；左臂下的黑色底稿線與「畫得慢」看法的修正；壺架與幾只壺的黑色草稿、壺架用途、維梅爾家食物間也有；火籃用途、遺產清冊、孩子多；以腳爐、台夫特磁磚與地板蓋掉。新聞稿稱作品約 35 幅"
+    },
+    {
+      "title": "Vermeer exhibition texts",
+      "publisher": "Rijksmuseum",
+      "date": "2026-11-08",
+      "url": "https://www.rijksmuseum.nl/en/whats-on/exhibitions/past/vermeer/vermeer-exhibition-text",
+      "note": "查閱日期（2023 年特展文字）。1632–1675 台夫特；約 37 幅；消失點的定義、用針定點且針孔還在、觀者微微仰視；白牆與蓋掉壺架；hundreds of dots of 'light'；麵包布丁"
+    },
+    {
+      "title": "The Milkmaid by Johannes Vermeer",
+      "publisher": "Essential Vermeer（Jonathan Janson）",
+      "date": "2026-11-08",
+      "url": "https://www.essentialvermeer.com/catalogue/milkmaid.html",
+      "note": "查閱日期。kitchen maid 而非 milkmaid；壺內沒畫牛奶；針孔在右手上方；釘子影子與釘孔；破玻璃；鉛錫黃、morsmouwen、天然群青（阿富汗經威尼斯）與石青、深藍圍裙；聖路加公會入會費；Cupid 為後加磁磚之一、Liedtke 與 Wheelock 的讀法、Dibbits 的懷疑；1907 年 Six 收藏爭議（Bredius、Morgan、Troelstra、De Stuers）、Uncle Sam 漫畫、Jan Rinke 1907.11.9《Het Vaderland》漫畫"
+    },
+    {
+      "title": "Understanding The Milkmaid by Johannes Vermeer",
+      "publisher": "Essential Vermeer（摘錄 Gowing 1950、Nevitt、Wheelock 1995）",
+      "date": "2026-11-08",
+      "url": "https://www.essentialvermeer.com/cat_about/milkmaid.html",
+      "note": "查閱日期。Gowing（Vermeer, 1950）：麵包表面 lost under a separate crust of incandescence、光點不管底下質地；Wheelock（Vermeer and the Art of Painting, 1995, pp. 65–67）：光的分布不合理、右側白色輪廓線；Nevitt：右邊磁磚像拄杖的人"
+    },
+    {
+      "title": "Advertisement of Vermeer paintings in the Dissius Amsterdam sale of 1696",
+      "publisher": "Essential Vermeer",
+      "date": "2026-11-08",
+      "url": "https://www.essentialvermeer.com/clients_patrons/dissius_auction.html",
+      "note": "查閱日期。目錄第 1 號（J. vander Meer van Delft，155 盾）、第 2 號原文與 175 盾、第 31 號《台夫特一景》200 盾、21 幅合計；工匠日薪 1.2–1.5 盾。拍賣目錄原文取自 Hoet II 的《Catalogus of Naamlyst van Schilderyen》（1752–1780 多卷本，記錄拍賣品與價格），Essential Vermeer 轉錄；quote.cite 因此標為「據 Hoet 1752 年轉錄」，本報未見 1696 年目錄原件"
+    },
+    {
+      "title": "Girl with a Pearl Earring: The most famous girl in the world",
+      "publisher": "Mauritshuis",
+      "date": "2026-11-08",
+      "url": "https://www.mauritshuis.nl/en/our-collection/stories/the-girl-our-most-famous-painting",
+      "note": "查閱日期。Chevalier 小說改編成史嘉蕾・喬韓森主演的電影"
+    },
+    {
+      "title": "File:Vermeer The Milkmaid 1660 ca.jpg",
+      "publisher": "Wikimedia Commons（影像來源 Rijksmuseum）",
+      "date": "2026-11-08",
+      "url": "https://commons.wikimedia.org/wiki/File:Vermeer_The_Milkmaid_1660_ca.jpg",
+      "note": "查閱日期。頭圖，公有領域；畫面描述與局部位置依此圖"
+    },
+    {
+      "title": "File:Veld van achtenveertig tegels met Cupido's, BK-1955-301.jpg",
+      "publisher": "Wikimedia Commons（Rijksmuseum，CC0）",
+      "date": "2026-11-08",
+      "url": "https://commons.wikimedia.org/wiki/File:Veld_van_achtenveertig_tegels_met_Cupido%27s,_BK-1955-301.jpg",
+      "note": "查閱日期。48 塊（8×6）、每塊一個邱比特、荷蘭製、約 1630–1670、錫釉陶（aardewerk tinglazuur）"
+    }
+  ]
+}
