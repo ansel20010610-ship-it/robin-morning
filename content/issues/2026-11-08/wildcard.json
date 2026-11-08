@@ -1,0 +1,170 @@
+{
+  "column": "wildcard",
+  "date": "2026-11-08",
+  "title": "冰河一路流到赤道的海邊",
+  "dek": "約 7 億年前有一場冰期，開始和結束的定年相隔約 5,800 萬年。古地磁顯示，那時的冰河很可能流到了赤道附近的海平面。",
+  "brief": "「雪球地球」是地質學家的一個假說：約 7 億年前，地球從兩極到赤道的海面幾乎都被冰封住。Hoffman 等人說，最讓同行認真看待它的是定年：好幾塊大陸的冰期結束時間，看來是同步的。赤道有沒有留下一圈開放的海水，2006 年在瑞士評估這個假說的會議上還沒有共識。",
+  "topic_key": "wildcard:geology-snowball-earth-cryogenian",
+  "form": "qa",
+  "voice": "visitor",
+  "updated_at": "2026-11-08T15:40:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "h1",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Tillite_%28Elatina_Formation%2C_Neoproterozoic%3B_Enorama_Creek_section%2C_Flinders_Ranges%2C_South_Australia%29_18.jpg/1280px-Tillite_%28Elatina_Formation%2C_Neoproterozoic%3B_Enorama_Creek_section%2C_Flinders_Ranges%2C_South_Australia%29_18.jpg",
+    "width": 1280,
+    "height": 851,
+    "alt": "紅色的冰磧岩岩面，嵌著大小不一的碎石。",
+    "caption": "南澳弗林德斯山脈 Enorama Creek 的 Elatina 層紅色冰磧岩。這一帶約 300 公尺厚，含有帶條痕的礫石，是被水流改造過的冰河堆積，其上緊接 Nuccaleena 蓋帽層。",
+    "credit": "James St. John（Flickr 發布，Wikimedia Commons）",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tillite_(Elatina_Formation,_Neoproterozoic;_Enorama_Creek_section,_Flinders_Ranges,_South_Australia)_18.jpg",
+    "made": "2006（照片）",
+    "depicts": "新元古代的冰河沉積"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "南澳的弗林德斯山脈（Flinders Ranges）裡有一條小溪，叫 Enorama Creek。溪邊露出一層紅色的岩石，大大小小的碎石嵌在裡面。地質學家叫它**冰磧岩**，是冰河搬來的碎石堆積壓成的石頭。"
+    },
+    {
+      "type": "p",
+      "text": "岩石凝固時會記下當時地磁場的方向，從方向推得回它離赤道多遠，這叫古地磁。古地磁顯示，至少兩次新元古代冰期裡，冰線很可能降到靠近赤道的海平面；2006 年那場會議的報告裡，Kirschvink 列的證據之一，就是 Elatina 冰川單元的古地磁，把它放在海平面、赤道上或非常靠近赤道。1992 年，Kirschvink 在一本論文集裡寫了只有兩頁的一章，標題後半就是「**雪球地球**」（The Snowball Earth）：冰把陽光反射回去的效應一旦失控，整片海洋幾乎都會被海冰蓋住。"
+    },
+    {
+      "type": "p",
+      "text": "我原本以為冰河期就是兩極的冰往外擴，總會停在某條緯度。雪球地球講的是約 7 億年前的成冰紀（Cryogenian），那時有兩次冰期，冰蓋接地到所有緯度的海平面。兩次叫 Sturtian 和 Marinoan，都是南澳阿得雷德附近的地名，一百多年前在那裡辨認出來。據 Hoffman 等人，它們和動物出現多細胞身體的時期相鄰。"
+    },
+    {
+      "type": "p",
+      "text": "第一次冰期的開始和結束，定年相減約 **5,800 萬年**。這是起訖相減，不等於冰原封不動擺了那麼久：有些研究者認為裡面是好幾次分開的冰期，低緯度的冰也可能在海洋最後解凍前就先退了。"
+    },
+    {
+      "type": "h",
+      "text": "世界各地的那些冰河沉積，是同一場冰期嗎？"
+    },
+    {
+      "type": "p",
+      "text": "晚前寒武紀的冰河沉積分布全球，1930 年代就知道了。當時一派說是異常的氣候，一派說是大陸漂移，各地的冰期根本不同時。雪球假說押了一個推得翻的預測：各地冰期應該在低緯度同時開始，到處同時結束。可是 2004 年以前，沒有一層成冰紀的冰河沉積直接定過年。"
+    },
+    {
+      "type": "p",
+      "text": "2017 年，哈佛的地質學家 Paul Hoffman 和同事寫了一篇長綜述，把各地的定年排在一起。**他們的說法是，第一次冰期的開始、兩次冰期的結束，看來都是全球同步的。**說到這套定年，他們的評語是："
+    },
+    {
+      "type": "quote",
+      "text": "這是了不起的成就，比任何其他因素都更讓地質學家認真看待這個假說。",
+      "original": "This is a remarkable achievement and, more than any other factor, encourages the hypothesis to be taken seriously by geologists.",
+      "cite": "Hoffman 等 27 位作者，Science Advances，2017；「這」指把冰期的開始與結束定到百萬年的精度。"
+    },
+    {
+      "type": "svg",
+      "title": "兩次冰期的起訖定年（相減，不是連續冰封）",
+      "svg": "<svg viewBox=\"0 0 340 166\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"30\" y=\"16\" font-size=\"12\" class=\"ink\">第一次（Sturtian）起訖相減約 5,800 萬年</text><text x=\"332\" y=\"32\" font-size=\"12\" text-anchor=\"end\" class=\"ink\">第二次（Marinoan）</text><rect x=\"30.0\" y=\"40\" width=\"193.3\" height=\"24\" class=\"accent\"/><rect x=\"253.3\" y=\"40\" width=\"36.7\" height=\"24\" class=\"soft\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 2\"/><rect x=\"290.0\" y=\"40\" width=\"13.3\" height=\"24\" class=\"accent\"/><line x1=\"20\" y1=\"78\" x2=\"320\" y2=\"78\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"20.0\" y1=\"78\" x2=\"20.0\" y2=\"83\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"20.0\" y=\"97\" font-size=\"11\" text-anchor=\"middle\" class=\"muted\">720</text><line x1=\"86.7\" y1=\"78\" x2=\"86.7\" y2=\"83\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"86.7\" y=\"97\" font-size=\"11\" text-anchor=\"middle\" class=\"muted\">700</text><line x1=\"153.3\" y1=\"78\" x2=\"153.3\" y2=\"83\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"153.3\" y=\"97\" font-size=\"11\" text-anchor=\"middle\" class=\"muted\">680</text><line x1=\"220.0\" y1=\"78\" x2=\"220.0\" y2=\"83\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"220.0\" y=\"97\" font-size=\"11\" text-anchor=\"middle\" class=\"muted\">660</text><line x1=\"286.7\" y1=\"78\" x2=\"286.7\" y2=\"83\" class=\"muted\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"286.7\" y=\"97\" font-size=\"11\" text-anchor=\"middle\" class=\"muted\">640</text><text x=\"170\" y=\"114\" font-size=\"11\" text-anchor=\"middle\" class=\"muted\">距今幾百萬年前</text><text x=\"8\" y=\"138\" font-size=\"12\" class=\"ink\">第二次約 300 萬至 1,520 萬年，淡色段為起點不確定範圍</text><text x=\"8\" y=\"158\" font-size=\"12\" class=\"ink\">兩次之間無冰的一段：860 萬至 2,030 萬年</text></svg>",
+      "caption": "示意：兩次冰期的位置與長度，依 Hoffman 等人 2017 年 Table 1 的定年繪製。長度都是起訖定年相減，不是連續冰封。第二次的起點只能框在 6 億 4,990 萬到 6 億 3,900 萬年前，淡色段表示不確定。"
+    },
+    {
+      "type": "h",
+      "text": "凍成這樣，地球又是怎麼解凍的？"
+    },
+    {
+      "type": "p",
+      "text": "冰把陽光反射回太空，冷一點就多一點冰，多一點冰又更冷；冰線推過某個門檻，就一路衝到赤道。那怎麼解凍？Hoffman 等人的說法在火山：凍結時地表處處低於冰點，沒有雨把二氧化碳洗出空氣，二氧化碳也不溶於雪，火山照常噴，二氧化碳就一年年積起來。這是硬雪球的情形；赤道有沒有留下開放水面，並沒有共識。"
+    },
+    {
+      "type": "p",
+      "text": "冰退得多快，2006 年那場會議的看法和原型假說不同。假說最初的版本與後來的氣候模型，把冰退想成 2,000 到 10,000 年的快速災變，這個數字是模型算出來的；會議上與會者同意，冰退大概至少花了 10 萬到 100 萬年，依據是蓋帽碳酸鹽中的地磁倒轉。兩個數字我都記著。"
+    },
+    {
+      "type": "h",
+      "text": "冰磧岩上面那層淡色的石頭，是怎麼來的？"
+    },
+    {
+      "type": "p",
+      "text": "冰磧岩之上緊接著 Nuccaleena 蓋帽層，是白雲岩，一種碳酸鹽岩。Hoffman 等人描述，這類白雲岩淡粉到米色，緊接在最後的冰河與冰緣沉積上，沒有明顯間斷。這種緊接在冰河沉積上的一層，叫蓋帽碳酸鹽。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Cap_carbonate_%28Nuccaleena_Formation%2C_Neoproterozoic%3B_Enorama_Creek_section%2C_Flinders_Ranges%2C_South_Australia%29_18.jpg/1280px-Cap_carbonate_%28Nuccaleena_Formation%2C_Neoproterozoic%3B_Enorama_Creek_section%2C_Flinders_Ranges%2C_South_Australia%29_18.jpg",
+      "width": 1280,
+      "height": 851,
+      "alt": "Nuccaleena 蓋帽層的白雲岩露頭。",
+      "caption": "同一條溪邊、緊接在冰磧岩上面的 Nuccaleena 層，白雲岩，就是蓋帽碳酸鹽。拍攝者記載這裡的白雲岩約 5 公尺厚，往南約 15 公尺。",
+      "credit": "James St. John（Flickr 發布，Wikimedia Commons）",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cap_carbonate_(Nuccaleena_Formation,_Neoproterozoic;_Enorama_Creek_section,_Flinders_Ranges,_South_Australia)_18.jpg",
+      "made": "2006（照片）",
+      "depicts": "新元古代冰河沉積之上的蓋帽碳酸鹽"
+    },
+    {
+      "type": "p",
+      "text": "海底直接沉澱的碳酸鹽通常只出現在暖水裡，這裡卻直接壓在冰河的碎石上。這是雪球地球得解釋的事，Hoffman 等人的解釋是：冰退後風化極強、海水上下分層，冰融讓海面上升淹進陸地時沉積下來。這類蓋帽白雲岩分布跨 110 度古緯度，從華南（當時在北緯 45 度）到西非（南緯 65 度）；全球只有最後一次冰退之後才有蓋帽碳酸鹽，每次冰期內沒有發現多層。"
+    },
+    {
+      "type": "p",
+      "text": "碳同位素偏低的碳酸鹽，原本被看成雪球融化的招牌訊號；到了 2006 年那場會議，冰期與碳同位素偏低碳酸鹽的因果被強烈質疑。共同召集人 Allen 在報告裡說，這根「支柱」連同另外兩根都被丟棄了，Kirschvink 和 Hoffman 各寫信反駁。我偏好看定年：那是好幾塊大陸上一個個量出來的年齡，個別誤差從正負 45 萬年到 590 萬年不等。"
+    },
+    {
+      "type": "h",
+      "text": "那地球到底有沒有整顆凍透？"
+    },
+    {
+      "type": "p",
+      "text": "2006 年 7 月，75 位研究者在瑞士的 Ascona 開了這場會。大家同意：冰期在約 6 億 3,500 萬年前結束，納米比亞和華南這兩塊相距很遠的陸地都記錄到；冰河很可能在各種緯度、包括熱帶，流到了海平面；在模型裡，掉進雪球比爬出來容易。沒談攏的，正是我最想知道的：水的循環停了多少、赤道有沒有留下開放的水面、生物受了多大衝擊。"
+    },
+    {
+      "type": "p",
+      "text": "至於生物怎麼熬過，Hoffman 等人提出：赤道一帶的塵埃落在冰面，冰上的融水池可能一年到頭都有水，適合藍菌（會行光合作用的細菌）和某些真核生物（細胞裡有細胞核的生物，動物、植物都屬這類）。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Snowball Earth climate dynamics and Cryogenian geology-geobiology",
+      "publisher": "Science Advances 3(11): e1600983（Hoffman 等 27 位作者；開放取用）",
+      "date": "2017-11-08",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5677351/",
+      "note": "讀全文（UVic 典藏版 PDF 與 PMC 版）。摘要（兩次冰期；U-Pb 與 Re-Os 定年「suggests」Sturtian 開始與兩次結束為全球同步；CO2 約 10^2 PAL；蓋帽碳酸鹽是強烈風化與海洋分層的產物）、引言（參考文獻 24 即 Kirschvink 1992；2004 年前沒有成冰紀冰河沉積直接定年；理論預測冰期在低緯同時開始、各處同時結束）、Table 1 的定年（Sturtian 717.5–716.3 Ma 開始、659.3–658.5 Ma 結束，57.0–59.0 百萬年，屬起訖相減，文中另說有人認為 Sturtian 包含多次分開的冰期、低緯冰蓋可能在海洋解凍前先退；兩次之間 8.6–20.3 百萬年；Marinoan 起點 649.9–639.0 Ma、結束 636.0–634.7 Ma，歷時 3.0–15.2 百萬年；個別定年誤差 ±0.45 至 ±5.9 百萬年）、Fig. 1 圖說（一維能量平衡模型示意；CO2 累積數百萬至數千萬年、冰線約 2,000 年退回，皆為模型值）、Fig. 23 圖說（蓋帽白雲岩跨 110° 古緯度）、冰面融水池與水帶一節。原文「nearly as long as the entire Cenozoic era」未給新生代長度，稿件不用。"
+    },
+    {
+      "title": "Late Proterozoic Low-Latitude Global Glaciation: the Snowball Earth",
+      "publisher": "Kirschvink, J. L.，收於 Schopf & Klein 編《The Proterozoic Biosphere: A Multidisciplinary Study》，Cambridge University Press，pp. 51–52（CaltechAUTHORS 典藏）",
+      "date": "1992-08",
+      "url": "https://authors.library.caltech.edu/records/vaysf-cca32",
+      "note": "書中一章，不是期刊論文；「雪球地球」之名出自本章標題。Hoffman 等 2017 參考文獻第 24 條即此章。"
+    },
+    {
+      "title": "A Neoproterozoic Snowball Earth",
+      "publisher": "Science 281: 1342–1346（Hoffman, Kaufman, Halverson, Schrag）",
+      "date": "1998-08-28",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9721097/",
+      "note": "讀 Harvard 課程站放置的 PDF 全文第 1 至 2 頁。古地磁顯示至少兩次冰期的冰線降到靠近赤道的海平面；Kirschvink（1992）提出冰反照率失控與水循環停擺；碳酸鹽通常限於暖水。"
+    },
+    {
+      "title": "Snowball Earth on Trial（Allen 的 2006 年 Ascona 會議報告，加 Kirschvink、Hoffman 兩封信）",
+      "publisher": "snowballearth.org",
+      "date": "2006",
+      "url": "http://snowballearth.org/pillars.html",
+      "note": "會議為 2006 年 7 月 16–21 日，瑞士 Ascona，75 位參與者，Allen 為共同召集人。共識（635 Ma 結束、各緯度含熱帶冰河到海平面、進入雪球比離開容易、冰退大概至少 10 萬到 100 萬年，而原型假說設想 2,000–10,000 年）與爭議（水循環、開放水面、生物衝擊；冰期與碳同位素負偏的因果被強烈質疑；Allen 稱原有支柱被丟棄）皆出自此頁。Kirschvink 回信列的證據含 Elatina 單元在海平面、赤道上或非常靠近赤道，並說各地冰期同步「is still being debated heavily」。頁面未標發表日期，date 只填年份。"
+    },
+    {
+      "title": "Tillite (Elatina Formation, Neoproterozoic; Enorama Creek section, Flinders Ranges, South Australia) 18.jpg",
+      "publisher": "Wikimedia Commons（James St. John，CC BY 2.0）",
+      "date": "2006-08-19",
+      "url": "https://commons.wikimedia.org/wiki/File:Tillite_(Elatina_Formation,_Neoproterozoic;_Enorama_Creek_section,_Flinders_Ranges,_South_Australia)_18.jpg",
+      "note": "頭圖圖說；冰磧岩「In this area」約 300 公尺厚、碎石經水流改造、礫石有冰河擦痕，出自拍攝者寫在 Commons 的檔案說明，不是研究文獻。"
+    },
+    {
+      "title": "Cap carbonate (Nuccaleena Formation, Neoproterozoic; Enorama Creek section, Flinders Ranges, South Australia) 18.jpg",
+      "publisher": "Wikimedia Commons（James St. John，CC BY 2.0）",
+      "date": "2006-08-19",
+      "url": "https://commons.wikimedia.org/wiki/File:Cap_carbonate_(Nuccaleena_Formation,_Neoproterozoic;_Enorama_Creek_section,_Flinders_Ranges,_South_Australia)_18.jpg",
+      "note": "正文圖與圖說；「At this site」白雲岩約 5 公尺、往南約 15 公尺，出自拍攝者寫在 Commons 的檔案說明（與頭圖的 300 公尺範圍不同）。"
+    }
+  ]
+}
