@@ -1665,9 +1665,14 @@ function viewStamp(date) {
   const issue = issueBy(date), done = digestDone().has(date);
   const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/stamps" aria-label="返回">${ICON.back}</a><div class="title">郵票冊</div></div></div>`;
   if (!issue || !isPublished(date) || !done) { main.innerHTML = `${top}<div class="wrap"><p class="empty">這一格還沒有郵票。<a href="#/stamps">回郵票冊</a></p></div>`; wireBack(); return; }
-  main.innerHTML = `${top}<div class="wrap stamp-page"><div class="big">${stampHtml({ ...issue, articles: sortArticles(issue.articles || [], date) }, { earned: true, bird: birdsFound().has(date) })}</div>
+  // 創刊紀念郵票 opens with a show (the owner, 2026-11-08: 點開來個特效): it turns in out of the dark like a coin, a glint
+  // runs across it, a ring of light goes out, a sunburst wakes behind it and keeps turning, gold flakes fall (style.css
+  // .stamp-page.erst-page, goldRain).
+  const erst = Number(issue.no) === 1;
+  main.innerHTML = `${top}<div class="wrap stamp-page${erst ? " erst-page" : ""}"><div class="big">${erst ? `<i class="esun" aria-hidden="true"></i><i class="ring" aria-hidden="true"></i>` : ""}${stampHtml({ ...issue, articles: sortArticles(issue.articles || [], date) }, { earned: true, bird: birdsFound().has(date) })}</div>
     <p class="line"><b>${esc(issueNr(issue.no))}</b><span>${esc(fmtDate(date))}・週${esc(issue.weekday || "")}</span><i>${esc(fmtDate(date, "de"))}</i></p>
     <p class="btns"><a class="btn ghost" href="#/issue/${esc(date)}">看這一期</a></p></div>`;
+  if (erst) setTimeout(() => goldRain(main.querySelector(".stamp-page .big")), 1050);
   wireBack();
   // A tap on the blank page (not the stamp, not a link) goes back to the album, as closing a thing held up to look at.
   main.querySelector(".stamp-page").addEventListener("click", (e) => {
