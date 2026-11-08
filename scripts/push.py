@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """出刊通知: tell the reader's phone that the day's issue is out (Web Push; no AI, no paid service).
 
-notify.yml runs this at 07:30 Taiwan time; the device's own push service (Apple's, for the iPhone home-screen app)
-delivers it. Sending needs the VAPID private key in the VAPID_PRIVATE_KEY secret; its public half is
+notify.yml runs this at 07:30 Taiwan time (started by wire.yml's hourly relay at 07:00, with GitHub's own schedules as
+backup); the device's own push service (Apple's, for the iPhone home-screen app) delivers it. Sending needs the VAPID private key in the VAPID_PRIVATE_KEY secret; its public half is
 content/config.json → push.key. The devices are listed in state/push/devices.json: on the phone, 設定 → 出刊通知 →
 複製裝置代碼, then `add` that code, commit and push; notify.yml sends the new device a test notification.
 
   python3 scripts/push.py add <裝置代碼> [--name iPhone]
-  python3 scripts/push.py issue [--date YYYY-MM-DD] [--now]   waits for 07:30 and for the live site, unless --now
+  python3 scripts/push.py issue [--date YYYY-MM-DD] [--now]   waits for 07:30, then for the live site; --now skips the 07:30 wait
+  python3 scripts/push.py remind [--which noon|evening]         the 12:30 / 21:00 nudge; nothing while a Sunday issue is held
   python3 scripts/push.py test [--new-since <git rev>]          only devices added since that commit
-  python3 scripts/push.py late --before <git rev>               a 週日補刊 that this push finished: its issue is out
+  python3 scripts/push.py late --before <git rev>               a 週日補刊 this push finished (or gave up): tell the phone
   python3 scripts/push.py keys <private-key.pem>                a new key pair: every device must subscribe again
 
 `add` needs only the standard library; the others need pywebpush (notify.yml installs it).
@@ -31,7 +32,11 @@ from common import ROOT, UA, column_meta, expected_columns, load_config, tw_now 
 DEVICES = os.path.join(ROOT, "state", "push", "devices.json")
 SITE = "https://wiener-morgen-private.duckdns.org/"
 SEND_AT = (7, 30, 20)  # just after 07:30, so an app whose clock runs a little slow already shows the new issue
-TOO_LATE = (11, 0)     # a run GitHub starts this late sends nothing: the morning is over
+TOO_LATE = (11, 0)     # a run GitHub starts this late sends nothing: the morning is over (and the run fails, so it is seen)
+OPEN_LATE = ("waiting", "regenerating")  # late.json states of a Sunday issue still to come (scripts/late.py OPEN)
+# The reminders' hours (Taiwan): the relay starts a run on the hour and the run waits for the half hour; a run that
+# GitHub's own schedule brings hours late says nothing after the window (a nudge at 23:40 is noise, not a reminder).
+REMIND_WINDOW = {"noon": ((12, 30), (17, 0)), "evening": ((21, 0), (23, 30))}
 WAIT_SITE = 45 * 60    # seconds to wait for the live site to carry today's issue
 WAIT_DEPLOY = 10 * 60  # seconds to wait for a deploy still running at 07:30 (e.g. a late reserve fill)
 TTL = 4 * 3600         # a phone that is switched off still gets the notice within this time
@@ -176,18 +181,54 @@ def live_late():
         return {}
 
 
+def late_state(date):
+    """late.json's state for the day, or None. The live site first; when it has no entry for the day, the run's own
+    checkout: notify.yml checks out main as it starts and fill.yml pushes late.json before its deploy, so the local
+    copy can be ahead of the site for a few minutes, never behind by more than the run's own age."""
+    entry = live_late().get(date)
+    if not entry:
+        try:
+            with open(os.path.join(ROOT, "content", "late.json"), encoding="utf-8") as f:
+                entry = json.load(f).get(date)
+        except (OSError, ValueError, AttributeError):
+            entry = None
+    return (entry or {}).get("state") if isinstance(entry, dict) else None
+
+
 def late_notice(date):
     """07:30 on a Sunday held for 週日補刊: say why the issue is not there, instead of announcing it."""
     return {"title": "早安兄弟，今天這期延到下午", "body": "本週的 AI 額度凌晨用完了。週日不拿備稿充數：下午 3 點額度重置後整期重寫，出齊再叫你。",
             "url": "./#/", "tag": "issue-" + date}
 
 
-def complete(cfg, issue):
-    """Every column the issue needs is there. Counted by column, not by number: the serial (written days ahead) and
-    the watch items are not expected, so they must not stand in for a missing main column (audit 2026-11-08)."""
+def unfinished_notice(date):
+    """A 週日補刊 given up (late.py giveup → state "unfinished"): one apology, on the issue's own tag, in place of the
+    evening nudge — the reader must not be told to finish a paper that never came (the owner, 2026-11-08)."""
+    return {"kind": "issue", "date": date, "title": "今天的補刊沒能全部完成，抱歉", "body": "明天 07:30 照常出刊。",
+            "url": "./#/", "tag": "issue-" + date}
+
+
+def missing_columns(cfg, issue):
+    """Columns the issue still needs, in the paper's order. Counted by column, not by number: the serial (written days
+    ahead) and the watch items are not expected, so they must not stand in for a missing main column (audit
+    2026-11-08). The verse (devotion) is not an article in index.json, so it is not looked for there."""
     d = dt.date.fromisoformat(issue["date"])
-    want = {c for c in expected_columns(cfg, d) if column_meta(cfg, c, d)["group"] != "verse"}
-    return want <= {a["column"] for a in issue["articles"]}
+    have = {a["column"] for a in issue["articles"]}
+    return [c for c in expected_columns(cfg, d) if column_meta(cfg, c, d)["group"] != "verse" and c not in have]
+
+
+def partial_notice(cfg, date, missing):
+    """A weekday issue announced with a column short: the notice says so instead of 「出爐了」. Not the contents, not the
+    count of articles (the owner's rule of 2026-11-02 stands: a notice says nothing about what is in the paper) — a
+    column that did not make it is the paper's state, not its contents, so it is named, by the name the reader knows
+    it by, with the promise that the paper will call again when it is filled (fill.yml starts notify.yml then, and the
+    ordinary notice on the same tag replaces this one on the phone). One voice for this, whatever the day's mood: the
+    owner also reads it as the morning's first word that shift 5 or the fill did not get there."""
+    d = dt.date.fromisoformat(date)
+    names = "、".join("「%s」" % (column_meta(cfg, c, d) or {}).get("name", c) for c in missing)
+    title = "早安兄弟，今天少幾欄" if len(missing) > 1 else "早安兄弟，今天少一欄"
+    return {"kind": "issue", "date": date, "title": title, "body": "%s沒趕上，其餘先讀；補上了會再叫你。" % names,
+            "url": "./#/", "tag": "issue-" + date, "badge": 1}
 
 
 def silent_on_main(date):
@@ -211,57 +252,87 @@ def cmd_issue(a):
     date = a.date or now.date().isoformat()
     if not a.now:
         if (now.hour, now.minute) >= TOO_LATE:
-            print("已過 %02d:%02d，今天不再發出刊通知。" % TOO_LATE)
-            return 0
+            # The morning is over: nothing goes out, and the run fails where the owner can see it. An exit 0 here
+            # counted as "sent" for notify.yml's dedup on 2026-11-08 (both morning schedules ran after 09:50), and the
+            # day passed without a notice and without a word about it.
+            print("::error::已過 %02d:%02d 才輪到出刊通知，今天沒有發出。" % TOO_LATE)
+            return 1
         at = now.replace(hour=SEND_AT[0], minute=SEND_AT[1], second=SEND_AT[2], microsecond=0)
         if now < at:
             print("等到 %s 再發……" % at.strftime("%H:%M:%S"), flush=True)
             time.sleep((at - now).total_seconds())
-    # Send what the reader will see: today's issue on the live site, after the newest deploy if one is still running.
-    # A Sunday issue still short of columns is either about to be held for 週日補刊 or filled from the reserves, both by
-    # fill.yml (07:12–07:22, and GitHub often starts it late): wait for that to reach the site, up to WAIT_SITE, before
-    # announcing a partial issue. On other days a partial issue is announced after WAIT_DEPLOY.
+    # Send what the reader will see: today's issue on the live site, after the newest deploy if one is still running
+    # (--now skips the 07:30 wait, not this: fill.yml starts a --now run right after its deploy, and the notice must
+    # describe the filled paper, not the one still on the site). A Sunday issue short of columns is either held for
+    # 週日補刊 or filled from the reserves, both by fill.yml (07:12–07:22; the relay starts it, GitHub's own schedule
+    # ran 3 h late on 11-08): wait for that to reach the site, up to WAIT_SITE. On other days a partial issue is
+    # announced after WAIT_DEPLOY, and the notice says which column is short (partial_notice).
     sunday = dt.date.fromisoformat(date).weekday() == 6
-    start, payload, held = time.time(), None, False
+    start, payload, held, missing = time.time(), None, False, []
     while True:
         waited = time.time() - start
-        if live_late().get(date, {}).get("state") in ("waiting", "regenerating"):
+        if late_state(date) in OPEN_LATE:
             payload = late_notice(date)
             break
         try:
             issue = next((i for i in json.loads(fetch("content/index.json")).get("issues", []) if i.get("date") == date), None)
             payload = issue and issue_payload(cfg, issue)
-            current = payload and fetch("content/version.txt").strip() == main_head()
-            held = bool(sunday and issue and not complete(cfg, issue) and not a.now)
-            if current and held:
-                current = False
+            missing = missing_columns(cfg, issue) if issue else []
+            current = fetch("content/version.txt").strip() == main_head()
+            held = bool(sunday and not a.now and (issue is None or missing))
         except Exception as e:  # noqa: BLE001
             print("讀不到網站：%s" % e, flush=True)
             current = False
-        if current or (payload and waited >= (WAIT_SITE if held else WAIT_DEPLOY)) or a.now and payload:
-            # A held Sunday that fill.yml still has not reached after WAIT_SITE (GitHub's cron ran 3 h late on 11-08):
-            # judge the quota here by late.py's own rule — shifts that never reported — rather than announce a paper
-            # missing its main columns and then announce it again when the 補刊 is done.
-            if held and not current and silent_on_main(date):
-                payload = late_notice(date)
+        if held and silent_on_main(date):
+            # Judged here, at once, by late.py's own rule (a Sunday, columns missing, shifts that never reported):
+            # waiting WAIT_SITE for fill.yml to write late.json first meant announcing a paper missing its main columns
+            # at 08:15 and announcing it again when the 補刊 was done. Shift 5 reports by 07:20; at 07:30 a silent
+            # shift is the quota, not a shift still pushing.
+            payload = late_notice(date)
             break
-        if waited >= WAIT_SITE or a.now:
+        if payload and (current or waited >= (WAIT_SITE if held else WAIT_DEPLOY)):
+            break
+        if waited >= WAIT_SITE:
             print("::error::網站上還沒有 %s 的刊期，沒有發通知" % date)
             return 1
         time.sleep(30)
+    if payload.get("kind") == "issue" and missing:
+        payload = partial_notice(cfg, date, missing)
     print(json.dumps(payload, ensure_ascii=False, indent=1))
     return send(devs, payload)
 
 
 def cmd_remind(a):
-    """notify.yml at 21:00 Taiwan: nudge about today's issue when it is on the live site. The phone decides whether to
-    show it (sw.js drops it when the issue was finished); here we only check that there is an issue to finish."""
+    """notify.yml at 12:30 and 21:00 Taiwan (the relay starts the run on the hour, the schedules are backup): nudge about
+    today's issue when it is on the live site. The phone decides whether to show it (sw.js drops it when the issue was
+    finished); here we check that there is an issue to finish. Nothing while a Sunday issue is held or being written
+    again (late.json waiting/regenerating): the 07:30 notice said it comes in the afternoon, the app keeps the parcel
+    sealed, and cmd_late announces the finished 補刊 — a nudge in between would tell the reader to finish a paper the
+    paper itself says is not out. A 補刊 given up ("unfinished") gets one apology instead of the nudge."""
     devs = load_devices()
     if not devs:
         print("沒有登記的裝置，不發通知。")
         return 0
     now = tw_now()
     date = a.date or now.date().isoformat()
+    which = a.which or ("noon" if now.hour < 17 else "evening")
+    if a.which:  # a relay or schedule run keeps to its window; a manual run (no --which) says it whenever asked
+        (h0, m0), (h1, m1) = REMIND_WINDOW[which]
+        at = now.replace(hour=h0, minute=m0, second=0, microsecond=0)
+        if now < at and (at - now) <= dt.timedelta(hours=1):
+            print("等到 %s 再提醒……" % at.strftime("%H:%M"), flush=True)
+            time.sleep((at - now).total_seconds())
+        elif now < at or (now.hour, now.minute) >= (h1, m1):
+            print("現在 %s，不在 %s 提醒的時段（%02d:%02d–%02d:%02d），不提醒。" % (now.strftime("%H:%M"), which, h0, m0, h1, m1))
+            return 0
+    state = late_state(date)
+    if state in OPEN_LATE:
+        print("%s 是週日補刊（%s）：出齊時另有「補刊出爐了」的通知，不提醒。" % (date, state))
+        return 0
+    if state == "unfinished":
+        payload = unfinished_notice(date)
+        print(json.dumps(payload, ensure_ascii=False, indent=1))
+        return send(devs, payload)
     try:
         issue = next((i for i in json.loads(fetch("content/index.json")).get("issues", []) if i.get("date") == date), None)
     except Exception as e:  # noqa: BLE001
@@ -270,24 +341,38 @@ def cmd_remind(a):
     if not issue or not any(x.get("title") for x in issue.get("articles", [])):
         print("網站上沒有 %s 的刊期，不提醒。" % date)
         return 0
-    payload = remind_payload(date, noon=now.hour < 17)
+    payload = remind_payload(date, noon=which == "noon")
     print(json.dumps(payload, ensure_ascii=False, indent=1))
     return send(devs, payload)
 
 
 def cmd_late(a):
-    """notify.yml on a push that changed content/late.json: if it finished a 週日補刊, announce that issue."""
+    """notify.yml on a push that changed content/late.json: if it finished a 週日補刊, announce that issue; if it gave
+    one up (late.py giveup → "unfinished"), send the apology at once rather than at 21:00 — the owner learns the same
+    minute, from the phone, that the day's paper is not coming (watch.yml opens the GitHub issue)."""
     now = json.load(open(os.path.join(ROOT, "content", "late.json"), encoding="utf-8"))
     old = subprocess.run(["git", "show", "%s:content/late.json" % a.before], cwd=ROOT, capture_output=True, text=True)
     try:
         before = json.loads(old.stdout) if old.returncode == 0 else {}
     except ValueError:
         before = {}
-    dates = [d for d, v in now.items() if v.get("state") == "done" and (before.get(d) or {}).get("state") != "done"]
+
+    def turned(state):
+        return [d for d, v in now.items() if v.get("state") == state and (before.get(d) or {}).get("state") != state]
+    devs = load_devices()
+    gave_up = turned("unfinished")
+    if gave_up:
+        if not devs:
+            print("沒有登記的裝置，不發通知。")
+            return 0
+        payload = unfinished_notice(max(gave_up))
+        print(json.dumps(payload, ensure_ascii=False, indent=1))
+        return send(devs, payload)
+    dates = turned("done")
     if not dates:
         print("這次推送沒有完成週日補刊，不發通知。")
         return 0
-    date, devs, cfg = max(dates), load_devices(), load_config()
+    date, cfg = max(dates), load_config()
     if not devs:
         print("沒有登記的裝置，不發通知。")
         return 0
@@ -358,9 +443,10 @@ def main():
     s.add_argument("--name", default="iPhone")
     s = sub.add_parser("issue")
     s.add_argument("--date")
-    s.add_argument("--now", action="store_true", help="send at once (manual run)")
+    s.add_argument("--now", action="store_true", help="skip the 07:30 wait and the 11:00 cut-off (manual run, or fill.yml after a fill)")
     s = sub.add_parser("remind")
     s.add_argument("--date")
+    s.add_argument("--which", choices=sorted(REMIND_WINDOW), help="noon (12:30) or evening (21:00); omitted: by the clock, at once")
     s = sub.add_parser("test")
     s.add_argument("--new-since")
     s = sub.add_parser("late")

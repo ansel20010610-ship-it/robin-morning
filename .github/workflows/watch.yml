@@ -1,53 +1,205 @@
 name: Issue watch
 
-# 07:45 Taiwan time: check that today's issue is complete. If not, open (or update) a GitHub issue,
-# which GitHub emails to the repository owner.
+# 07:45 Taiwan time: check that today's issue is complete — the columns, the serial installment, the watch columns'
+# check records, the shift reports (the 演出班 among them) and the live site. If not, open (or update) a GitHub issue,
+# which GitHub emails to the repository owner. GitHub's own cron ran this at 10:44 on 2026-11-08, so the reliable
+# start is wire.yml's hourly relay: at 07:00 it dispatches a run with wait_until=07:45, which sleeps to that minute
+# and then reads the newest main; the cron stays as backup and stands down when the relay's run already checked.
+# On a Sunday the relay starts a second run at 19:00 (evening=true): the 週日補刊 (15:07 and 17:07) should be done by
+# then, and a day still marked waiting/regenerating, or given up (unfinished), opens or updates the day's issue —
+# before that, nobody would have known until the next morning (2026-11-08).
+# A push to content/late.json, content/issues/ or state/runs/ runs the closing step only: an issue whose day is now
+# complete (the 補位, a 補刊 done, a column written by hand) is commented on and closed. A push never opens one — at
+# 03:00 the paper is incomplete by design.
 on:
   schedule:
-    - cron: "45 23 * * *"
+    - cron: "45 23 * * *"   # 07:45 Taiwan: backup for the relay's run
+    - cron: "0 11 * * 0"    # 19:00 Taiwan on Sundays: backup for the relay's evening run
+  push:
+    branches: [main]
+    paths: ["content/late.json", "content/issues/**", "state/runs/**"]
   workflow_dispatch:
+    inputs:
+      wait_until:
+        description: "Taiwan time HH:MM to sleep to before checking (the relay passes 07:45)"
+        required: false
+      evening:
+        description: "Sunday evening check: is the 週日補刊 done?"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
   issues: write
+  actions: read   # to see whether a deploy (publish.yml) is still running before LIVE≠HEAD counts
 
 jobs:
   check:
+    # The job's name says which check this run is (morning, evening, manual, push): the backup cron reads the names of
+    # today's successful runs to know whether the relay's run already did this check.
+    name: watch ${{ github.event_name == 'schedule' && (github.event.schedule == '45 23 * * *' && 'morning' || 'evening') || github.event_name == 'workflow_dispatch' && (inputs.evening && 'evening' || inputs.wait_until != '' && 'morning' || 'manual') || 'push' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v7
+      - name: Already checked today?
+        id: dedup
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          SINCE=$(date -u -d "$(TZ=Asia/Taipei date +%F) 00:00 +0800" +%FT%TZ)
+          case "${{ github.event.schedule }}" in "45 23 * * *") WHICH=morning ;; *) WHICH=evening ;; esac
+          N=0
+          for ID in $(gh run list --workflow watch.yml --status success --created ">=$SINCE" --limit 50 \
+                        --json databaseId --jq '.[] | select(.databaseId != ${{ github.run_id }}) | .databaseId' 2>/dev/null); do
+            if gh run view "$ID" --json jobs --jq '.jobs[].name' 2>/dev/null | grep -qx "watch $WHICH"; then N=$(( N + 1 )); fi
+          done
+          echo "earlier successful $WHICH checks today: $N"
+          if [ "$N" -gt 0 ]; then echo "done=yes" >> "$GITHUB_OUTPUT"; fi
+      - name: Wait for the appointed minute, then read the newest main
+        env:
+          WAIT_UNTIL: ${{ inputs.wait_until }}
+        run: |
+          if [ -n "$WAIT_UNTIL" ]; then
+            S=$(( $(TZ=Asia/Taipei date -d "$WAIT_UNTIL" +%s) - $(date +%s) )); [ "$S" -gt 0 ] || S=0
+            echo "等到台灣時間 $WAIT_UNTIL 再檢查（$S 秒）……"; sleep "$S"
+          fi
+          # the checkout is from when the run was queued (the relay's at 07:00); fill.yml and the shifts push until then
+          git fetch -q origin main && git reset -q --hard origin/main
+      - name: Is the live site serving main?
+        id: live
+        # A deploy takes a few minutes, and a push (the 補位, the 連載班, a 補刊) may have started one this minute: while a
+        # publish.yml run is queued or running, wait for it (up to 15 minutes) before a version mismatch counts.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 30); do
+            HEAD=$(git ls-remote -q origin refs/heads/main 2>/dev/null | cut -f1); [ -n "$HEAD" ] || HEAD=$(git rev-parse HEAD)
+            LIVE=$(curl -fsS "https://wiener-morgen-private.duckdns.org/content/version.txt?t=$(date +%s)" 2>/dev/null || echo "（無法讀取）")
+            if [ "$LIVE" = "$HEAD" ]; then break; fi
+            alive=0
+            for st in in_progress queued waiting requested pending; do
+              n=$(gh run list --workflow publish.yml --status "$st" --json databaseId --jq length 2>/dev/null) || n=0
+              case "$n" in ''|*[!0-9]*) n=0 ;; esac
+              alive=$(( alive + n ))
+            done
+            if [ "$alive" = 0 ] && [ "$i" -gt 2 ]; then break; fi   # a minute's grace for a deploy not yet queued
+            echo "網站 $LIVE ≠ main $HEAD；部署中（$alive）……"; sleep 30
+          done
+          echo "live=$LIVE" >> "$GITHUB_OUTPUT"
+          echo "head=$HEAD" >> "$GITHUB_OUTPUT"
+          if [ "$LIVE" = "$HEAD" ]; then echo "ok=yes" >> "$GITHUB_OUTPUT"; fi
+          echo "網站：$LIVE　main：$HEAD"
       - name: Check today's issue
         id: check
+        if: github.event_name != 'push' && steps.dedup.outputs.done != 'yes'
+        env:
+          EVENING: ${{ inputs.evening == true || github.event.schedule == '0 11 * * 0' }}
+          LIVE: ${{ steps.live.outputs.live }}
+          HEAD: ${{ steps.live.outputs.head }}
+          LIVE_OK: ${{ steps.live.outputs.ok }}
         run: |
           D=$(TZ=Asia/Taipei date +%F)
-          echo "date=$D" >> "$GITHUB_OUTPUT"
-          python3 scripts/plan_day.py --date "$D" > plan.txt 2>&1 || true
-          V=0; python3 scripts/validate.py "$D" > validate.txt 2>&1 || V=$?
-          # the live site must be serving the newest commit (a failed or late deploy leaves readers on old content)
-          LIVE=$(curl -fsS "https://wiener-morgen-private.duckdns.org/content/version.txt?t=$(date +%s)" 2>/dev/null || echo "（無法讀取）")
-          HEAD=$(git rev-parse HEAD)
-          MISSING=$(grep '^缺稿：' plan.txt | sed 's/^缺稿：//' || true)
-          # every shift leaves a record in state/runs/<date>.json; a shift that ran but could not push leaves none
-          # a Sunday whose AI quota ran out is written again after 15:00 (scripts/late.py): expected, not an alarm
-          LATE=$(python3 -c "import json,os; print((json.load(open('content/late.json')) if os.path.exists('content/late.json') else {}).get('$D', {}).get('state', ''))" 2>/dev/null || true)
-          NOREPORT=$(python3 -c "import json,sys; d=json.load(open('state/runs/$D.json')) if __import__('os').path.exists('state/runs/$D.json') else {}; print('、'.join('第 %s 班' % g for g in '12345' if g not in d))")
-          # the morning after an unfinished 週日補刊: late.json still says waiting/regenerating for yesterday and nothing
-          # else would ever notice (the app keeps showing 補刊中) — raised here once, for yesterday only
           Y=$(TZ=Asia/Taipei date -d yesterday +%F)
-          YLATE=$(python3 -c "import json,os; print((json.load(open('content/late.json')) if os.path.exists('content/late.json') else {}).get('$Y', {}).get('state', ''))" 2>/dev/null || true)
+          NOW=$(TZ=Asia/Taipei date +%H:%M)
+          echo "date=$D" >> "$GITHUB_OUTPUT"
+          P=0; python3 scripts/plan_day.py --date "$D" > plan.txt 2>&1 || P=$?
+          V=0; python3 scripts/validate.py "$D" > validate.txt 2>&1 || V=$?
+          # the end of the book is a date the system can see coming: exit 2 means the owner has to choose the next one
+          # (editorial/columns/serial.md 換書) — raised here because nobody else would say it before the serial went quiet
+          HZ=0; python3 scripts/serial.py horizon > horizon.txt 2>&1 || HZ=$?
+          MISSING=$(grep '^缺稿：' plan.txt | sed 's/^缺稿：//' || true)
+          SERIAL=$(grep '^連載缺稿：' plan.txt | sed 's/^連載缺稿：//' || true)       # today's installment due and absent: nobody else would notice (補刊 does not touch serial)
+          UNCHECKED=$(grep '^觀測站未查核：' plan.txt | sed 's/^觀測站未查核：//' || true)  # watch columns with no check record for the day
+          CONFIGERR=$(grep '^設定錯誤：' plan.txt || true); [ "$P" = 2 ] && [ -z "$CONFIGERR" ] && CONFIGERR="設定錯誤：plan_day.py 以 2 結束"
+          # the day's states and reports, judged by late.py's own rules so this check does not depend on fill.yml having run
+          # first (the two crons each ran hours late on 11-08, in no fixed order): a Sunday with columns missing and shifts
+          # that never reported is the quota, held for 週日補刊 whether or not late.json says so yet
+          GITHUB_ACTIONS=true python3 - "$D" "$Y" > vars.sh <<'EOF' || echo "::warning::late.py 的判斷失敗，以 late.json 為準"
+          import datetime as dt, json, os, shlex, sys
+          sys.path.insert(0, "scripts")
+          import common, late
+          D, Y = sys.argv[1], sys.argv[2]
+          d = dt.date.fromisoformat(D)
+          cfg = common.load_config()
+          data = late.load()
+          st, yst = (data.get(D) or {}).get("state", ""), (data.get(Y) or {}).get("state", "")
+          try:
+              runs = json.load(open("state/runs/%s.json" % D, encoding="utf-8"))
+          except (OSError, ValueError):
+              runs = {}
+          silent = late.silent_shifts(d)
+          noreport = [("第 %s 班" % g) for g in silent]
+          # 演出班 (06:17): its report in state/runs, or concerts.json checked today, or 歷史上的今天 for today — any one is delivery
+          try:
+              checked = json.load(open("content/concerts.json", encoding="utf-8")).get("checked", "")
+          except (OSError, ValueError, AttributeError):
+              checked = ""
+          try:
+              otd = json.load(open("content/onthisday.json", encoding="utf-8"))
+          except (OSError, ValueError):
+              otd = {}
+          concerts_ok = "concerts" in runs or checked == D or (isinstance(otd, dict) and D in otd)
+          if not concerts_ok:
+              noreport.append("演出班")
+          try:
+              unfinished = late.unfinished(cfg, d)
+          except Exception:  # noqa: BLE001 — a config error: plan_day already says so
+              unfinished = []
+          held = st in late.OPEN or (d.weekday() == 6 and st not in ("done", "unfinished") and bool(silent) and bool(unfinished))
+          q = shlex.quote
+          print("LATE=%s" % q(st)); print("YLATE=%s" % q(yst)); print("HELD=%s" % ("yes" if held else ""))
+          print("NOREPORT=%s" % q("、".join(noreport))); print("SHIFT4=%s" % ("yes" if "4" in runs else ""))
+          print("LATE_MISSING=%s" % q("、".join((data.get(D) or {}).get("missing") or (data.get(D) or {}).get("left") or unfinished)))
+          EOF
+          LATE=; YLATE=; HELD=; NOREPORT=; SHIFT4=; LATE_MISSING=
+          . ./vars.sh
+          # a 補刊 still running pushes a commit every so often; silence for 40 minutes means it has stopped (the routine's
+          # own test); the checkout is shallow, so fetch enough history to see past this evening's other commits
+          git fetch -q --deepen=30 origin main 2>/dev/null || true
+          RUNNING=$(git log -1 --since='40 minutes ago' --grep='週日補刊' --format=%h origin/main 2>/dev/null || true)
           {
-            echo "台灣時間 07:45 檢查 $D 的刊期。"
+            if [ "$EVENING" = true ]; then echo "台灣時間 $NOW 檢查 $D 的週日補刊。"; else echo "台灣時間 $NOW 檢查 $D 的刊期。"; fi
             echo
-            if [ "$LATE" = waiting ] || [ "$LATE" = regenerating ]; then
+            if [ -n "$CONFIGERR" ]; then
+              echo "### 設定錯誤"
+              echo "content/config.json 不一致，各班的 plan_day 會停在這裡：$CONFIGERR"
+              echo
+            fi
+            if [ "$EVENING" = true ]; then
               echo "### 週日補刊"
-              echo "凌晨 AI 額度用完，依規則不用備稿；15:00 額度重置後由週日補刊重新製作今天這期（目前狀態：$LATE）。"
+              case "$LATE" in
+                done) echo "補刊已完成（late.json：done）。" ;;
+                unfinished) echo "補刊已放棄（late.py giveup）：仍缺 $LATE_MISSING。手機已收到致歉通知；明天 07:30 照常出刊。到 https://claude.ai/code/routines 看兩次執行的紀錄。" ;;
+                waiting|regenerating)
+                  if [ -n "$RUNNING" ]; then echo "補刊還在進行（最近 40 分鐘內有 commit $RUNNING，狀態 $LATE）。"
+                  else echo "到 $NOW 補刊還沒完成（狀態 $LATE，缺：$LATE_MISSING），而且最近 40 分鐘沒有新的補刊 commit：15:07 與 17:07 兩次都沒做完。額度已重置，可以手動再跑一次週日補刊；到 https://claude.ai/code/routines 看兩次執行的紀錄。"; fi ;;
+                *)
+                  if [ -n "$HELD" ]; then echo "今天是額度週日（第 $NOREPORT 沒有回報、刊期缺 $LATE_MISSING），但 late.json 從沒標記、補刊也沒有開工。到 https://claude.ai/code/routines 看 15:07 與 17:07 的執行紀錄。"
+                  else echo "今天沒有週日補刊的需要（刊期齊備或不是額度週日）。"; fi ;;
+              esac
+              echo
+            else
+              if [ -n "$HELD" ]; then
+                echo "### 週日補刊"
+                if [ -n "$LATE" ]; then echo "凌晨 AI 額度用完，依規則不用備稿；15:00 額度重置後由週日補刊重新製作今天這期（目前狀態：$LATE）。"
+                else echo "凌晨 AI 額度用完（$NOREPORT 沒有回報，刊期缺 $LATE_MISSING），依規則不用備稿；15:00 額度重置後由週日補刊重新製作今天這期。late.json 還沒標記：fill.yml 可能還沒跑到，不算異常。"; fi
+                echo
+              fi
+              case "$YLATE" in waiting|regenerating|unfinished)
+                echo "### 昨天的週日補刊沒有完成"
+                echo "content/late.json 裡 $Y 仍是「$YLATE」：下午的補刊沒有做完，或做完了沒有標記完成（late.py done）；App 會一直顯示補刊中。到 https://claude.ai/code/routines 看週日補刊兩次執行的紀錄。"
+                echo ;;
+              esac
+            fi
+            if [ -n "$SERIAL" ] || [ "$HZ" = 2 ]; then
+              echo "### 連載"
+              [ -n "$SERIAL" ] && echo "今天該刊的連載缺了：$SERIAL（連載班 16:07 提前三天譯好；補刊與製刊各班都不碰它，要手動跑連載班）。"
+              [ "$HZ" = 2 ] && { echo "書快譯完了，下一本還沒定（scripts/serial.py horizon）："; echo '```'; cat horizon.txt; echo '```'; }
               echo
             fi
-            if [ "$YLATE" = waiting ] || [ "$YLATE" = regenerating ]; then
-              echo "### 昨天的週日補刊沒有完成"
-              echo "content/late.json 裡 $Y 仍是「$YLATE」：下午的補刊沒有做完，或做完了沒有標記完成（late.py done）；App 會一直顯示補刊中。到 https://claude.ai/code/routines 看週日補刊兩次執行的紀錄。"
-              echo
-            fi
+            [ -n "$UNCHECKED" ] && { echo "### 觀測站"; echo "今天沒有查核紀錄：$UNCHECKED（content/issues/<日期>/<欄>.json 或 state/watch/ 的「已查」行都沒有）。"; echo; }
             echo '### 出刊狀態'
             echo '```'
             cat plan.txt
@@ -59,25 +211,77 @@ jobs:
             echo '```'
             echo
             echo "### 班次回報"
-            if [ -n "$NOREPORT" ]; then echo "沒有回報：$NOREPORT（可能沒執行完、或推送被拒；到 https://claude.ai/code/routines 看該班的執行紀錄）"; else echo "第 1–5 班都已回報。"; fi
+            if [ -n "$NOREPORT" ]; then echo "沒有回報：$NOREPORT（可能沒執行完、或推送被拒；演出班以 state/runs 的 concerts、concerts.json 的 checked 或當天的歷史上的今天為準；到 https://claude.ai/code/routines 看該班的執行紀錄）"; else echo "第 1–5 班與演出班都已回報。"; fi
             [ -f "state/runs/$D.json" ] && { echo '```'; cat "state/runs/$D.json"; echo '```'; }
             echo
             echo "### 線上版本"
             echo "網站：$LIVE"
             echo "main：$HEAD"
+            [ "$LIVE_OK" = yes ] || echo "（等過部署，網站仍不是 main 的版本）"
             echo
             echo "排程執行紀錄：https://claude.ai/code/routines"
           } > report.md
-          if [ "$YLATE" = waiting ] || [ "$YLATE" = regenerating ]; then echo "problem=yes" >> "$GITHUB_OUTPUT"; fi
-          if [ "$LATE" = waiting ] || [ "$LATE" = regenerating ]; then
-            if [ "$LIVE" != "$HEAD" ]; then echo "problem=yes" >> "$GITHUB_OUTPUT"; fi
-          elif [ -n "$MISSING" ] || [ "$V" -ne 0 ] || [ "$LIVE" != "$HEAD" ] || [ -n "$NOREPORT" ]; then echo "problem=yes" >> "$GITHUB_OUTPUT"; fi
+          PROBLEM=
+          [ -n "$CONFIGERR" ] && PROBLEM=yes
+          [ -n "$SERIAL" ] && PROBLEM=yes          # even on a held Sunday: the 補刊 does not touch the serial
+          [ "$HZ" = 2 ] && [ "$EVENING" != true ] && PROBLEM=yes   # the morning check says it; the evening one is about the 補刊
+          if [ "$EVENING" = true ]; then
+            case "$LATE" in
+              unfinished) PROBLEM=yes ;;
+              waiting|regenerating) [ -z "$RUNNING" ] && PROBLEM=yes ;;
+              done) ;;
+              *) [ -n "$HELD" ] && PROBLEM=yes ;;
+            esac
+          else
+            case "$YLATE" in waiting|regenerating|unfinished) PROBLEM=yes ;; esac
+            if [ -n "$HELD" ]; then
+              [ "$LIVE_OK" = yes ] || PROBLEM=yes
+            else
+              if [ -n "$MISSING" ] || [ "$V" -ne 0 ] || [ "$LIVE_OK" != yes ] || [ -n "$NOREPORT" ]; then PROBLEM=yes; fi
+              # the watch stations are shift 4's (05:17): a missing check record is shift 4's fault only when shift 4
+              # reported (it ran and skipped them — 11-07 obituary); a shift 4 that never ran is already in NOREPORT, and
+              # on a held Sunday the 補刊 takes the stations over (late.py done refuses while one is unchecked)
+              if [ -n "$UNCHECKED" ] && [ -n "$SHIFT4" ]; then PROBLEM=yes; fi
+            fi
+          fi
+          [ -n "$PROBLEM" ] && echo "problem=yes" >> "$GITHUB_OUTPUT"
           cat report.md
       - name: Open or update an issue
-        if: always() && steps.check.outputs.problem == 'yes'
+        if: always() && github.event_name != 'push' && steps.check.outputs.problem == 'yes'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           T="出刊異常：${{ steps.check.outputs.date }}"
           N=$(gh issue list --state open --search "in:title $T" --json number --jq '.[0].number')
           if [ -n "$N" ]; then gh issue comment "$N" --body-file report.md; else gh issue create --title "$T" --body-file report.md; fi
+      - name: Close issues whose day is now complete
+        # Every open 出刊異常 issue is judged again by its own date: no missing column or serial installment, validation
+        # clean, no 補刊 pending or given up, and for today's date the live site on main. The report that opened it stays;
+        # the closing comment says what was verified. An issue this very run raised for today is left alone.
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TODAY_PROBLEM: ${{ steps.check.outputs.problem }}
+          LIVE_OK: ${{ steps.live.outputs.ok }}
+        run: |
+          D0=$(TZ=Asia/Taipei date +%F)
+          gh issue list --state open --search "出刊異常 in:title" --limit 50 --json number,title --jq '.[] | "\(.number) \(.title)"' | while read -r N T; do
+            D=${T#出刊異常：}
+            case "$D" in 20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]) ;; *) continue ;; esac
+            [ "$D" \> "$D0" ] && continue
+            if [ "$D" = "$D0" ]; then
+              [ "$TODAY_PROBLEM" = yes ] && { echo "#$N $D：本次檢查仍有問題，不結案"; continue; }
+              [ "$LIVE_OK" = yes ] || { echo "#$N $D：網站還不是 main 的版本，不結案"; continue; }
+            fi
+            if ! python3 scripts/plan_day.py --date "$D" > "plan-$D.txt" 2>&1; then echo "#$N $D：plan_day 失敗，不結案"; continue; fi
+            if grep -q '^缺稿：\|^連載缺稿：' "plan-$D.txt"; then echo "#$N $D：仍有缺稿，不結案"; continue; fi
+            if ! python3 scripts/validate.py "$D" > /dev/null 2>&1; then echo "#$N $D：驗證未通過，不結案"; continue; fi
+            ST=$(python3 -c "import json,os; print((json.load(open('content/late.json')) if os.path.exists('content/late.json') else {}).get('$D', {}).get('state', ''))" 2>/dev/null || true)
+            case "$ST" in waiting|regenerating|unfinished) echo "#$N $D：週日補刊 $ST，不結案"; continue ;; esac
+            {
+              echo "$D 的刊期現在齊備了：每一欄都在、驗證通過、連載到位$( [ "$ST" = done ] && echo "、週日補刊已完成" )$( [ "$D" = "$D0" ] && echo "、網站已更新到 main" )。"
+              echo
+              echo "班次回報與觀測站查核的紀錄不會回頭補，當時的報告留在上面。由 watch.yml 自動結案（台灣時間 $(TZ=Asia/Taipei date +%F\ %H:%M)）。"
+            } > "close-$D.md"
+            gh issue comment "$N" --body-file "close-$D.md" && gh issue close "$N" && echo "#$N $D：已結案"
+          done
