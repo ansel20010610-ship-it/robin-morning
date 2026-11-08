@@ -1,0 +1,388 @@
+{
+  "column": "football",
+  "date": "2026-11-08",
+  "title": "皇馬追到 30 分，巴薩週一清晨去馬競",
+  "dek": "兩隊都是 30 分，皇馬多踢了一場。巴薩那一場在週一清晨 4 點，地點是馬競的球場。",
+  "brief": "皇馬今天清晨在瓦倫西亞 3 比 0 獲勝，西甲積分追到 30 分，和巴薩並列。巴薩明天（11 月 9 日，週一）清晨 4 點客場踢馬競，埃里克・加西亞和克里斯滕森回到名單，羅德里缺陣。",
+  "topic_key": "football:2026-11-08",
+  "form": "scene",
+  "voice": "fan",
+  "updated_at": "2026-11-08T15:31:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "next": {
+    "opponent": "馬德里競技",
+    "competition": "西甲",
+    "kickoff": "2026-11-09T04:00+08:00",
+    "venue": "Riyadh Air Metropolitano",
+    "home": false
+  },
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Madrid_-_Estadio_Wanda_Metropolitano_07.jpg/1280px-Madrid_-_Estadio_Wanda_Metropolitano_07.jpg",
+    "width": 1280,
+    "height": 939,
+    "alt": "晴天底下的大型球場外牆，紅色弧形屋頂向外挑出，牆上有白色大字 WANDA METROPOLITANO，底下是空蕩的廣場與幾位遠處的工作人員。",
+    "caption": "馬競的主場，2018 年 11 月拍攝，當時球場叫萬達大都會（Wanda Metropolitano），牆上招牌即是；現在的名稱是 Riyadh Air Metropolitano。資料照片，非當日畫面。",
+    "credit": "Zarateman／Wikimedia Commons",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Madrid_-_Estadio_Wanda_Metropolitano_07.jpg",
+    "made": "2018"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "第 28 分鐘，姆巴佩（Kylian Mbappé）的任意球踢在人牆上，皇馬隊長巴爾韋德（Federico Valverde）先碰一下，從 22 碼外右腳一記低平球，打進左下角。"
+    },
+    {
+      "type": "p",
+      "text": "這是**皇馬今天清晨在瓦倫西亞 3 比 0** 的第一球。西甲第 12 輪，皇馬作客 Mestalla 球場，對手瓦倫西亞排倒數第二；歐洲時間 11 月 7 日（週六）晚上 9 點開球，台灣是今天清晨 4 點。巴薩的早報拿皇馬開頭，我也不甘願，可是**這一贏，皇馬的積分到了 30 分，跟巴薩一樣**。巴薩這輪還沒踢，**明天（11 月 9 日，週一）清晨 4 點**客場去馬競。"
+    },
+    {
+      "type": "p",
+      "text": "皇馬教練穆里尼奧（José Mourinho）這季第二度回來帶隊，開季走得跌跌撞撞，這場他把巴爾韋德擺到右後衛，阿諾德（Trent Alexander-Arnold）坐板凳。維尼修斯（Vinícius Júnior）還在禁賽，四場的最後一場，頂他先發的是土耳其攻擊手居勒爾（Arda Güler）。第 36 分鐘，貝林厄姆（Jude Bellingham）衝進禁區傳中，球被擋偏，居勒爾補進，2 比 0，他五場進了三球。第 75 分鐘居勒爾直傳，姆巴佩在小禁區邊右腳推進，本季第 17 球，3 比 0。瓦倫西亞的加亞（José Gayà）第 79 分鐘吃紅牌。"
+    },
+    {
+      "type": "p",
+      "text": "數字一面倒：控球 68 比 32，射門 19 比 4。只有犯規倒過來，瓦倫西亞 26 次，皇馬 6 次。"
+    },
+    {
+      "type": "p",
+      "text": "榜上兩隊同分，皇馬踢了 12 場，巴薩 11 場；淨勝球巴薩 +34，皇馬 +21。皇馬各項賽事連贏 8 場，上一次輸球是 9 月 20 日，在馬競的主場，就是巴薩明天清晨要去的地方。多踢一場換來同分，這種追平我不怕，我怕的是明天。"
+    },
+    {
+      "type": "quote",
+      "text": "我看到一間很開心的更衣室，音樂又難聽又大聲。",
+      "original": "I see a happy dressing room, with horrible, loud music.",
+      "cite": "穆里尼奧，11 月 7 日賽後記者會（ESPN 11 月 8 日報導）"
+    },
+    {
+      "type": "p",
+      "text": "穆里尼奧說最高興的是球隊從來沒亂過，一直很冷靜。連贏 8 場的時候講冷靜，誰都講得出口，我要等他輸一場再聽他講一次。他的西甲勝場來到 97，再贏 3 場，就是皇馬隊史第四位拿到百勝的教練。"
+    },
+    {
+      "type": "p",
+      "text": "接下來是國際賽事週，今年最後一次。他也擔心：球員留在他和教練組身邊，恢復會照顧得特別細，可是他們要去國家隊；他沒帶過國家隊，但想得到國家隊教練也想練人，而這些球員現在要的是休息和照料。這段我同意。"
+    },
+    {
+      "type": "h",
+      "text": "明天清晨四點，Metropolitano"
+    },
+    {
+      "type": "p",
+      "text": "巴薩這邊，明天清晨 4 點、歐洲時間週日晚上 9 點，到馬競的主場 Riyadh Air Metropolitano 踢第 12 輪。開球前巴薩 11 場 30 分，馬競 11 場 28 分，馬競贏了就跳上榜首。球隊週日上午出發去馬德里；週六最後一次練球，能上場的一線球員全到，四個二隊球員也一起練。"
+    },
+    {
+      "type": "p",
+      "text": "弗利克（Hansi Flick）週六的賽前記者會帶回兩個人：後衛埃里克・加西亞（Eric García）和克里斯滕森（Andreas Christensen）都進名單，埃里克還可能先發。右後衛派埃里克，還是青年隊的 Brian Fariñas，他還沒拍板。換我就派埃里克，客場去馬競，我寧可要一張熟面孔。"
+    },
+    {
+      "type": "p",
+      "text": "羅德里（Rodri）大腿後側受傷，這場不能踢。補他的是德容（Frenkie de Jong）或 Marc Bernal，弗利克說德容的身體百分之百沒問題，誰先發還沒決定。"
+    },
+    {
+      "type": "h",
+      "text": "馬競那邊，有個想來巴薩的人"
+    },
+    {
+      "type": "p",
+      "text": "最該盯的是**阿爾瓦雷斯**（Julián Álvarez），26 歲的阿根廷前鋒。他 6 月對 ESPN 說想離開馬競，消息人士說他想去的就是巴薩；萊萬多夫斯基（Robert Lewandowski）和費蘭・托雷斯（Ferran Torres）離隊後，前鋒位置是弗利克原本想補的。馬競拒絕 1 億歐元報價，人留了下來。他被自家球迷噓過，後來道了歉；馬競最近 4 場他都先發，進了 2 球。"
+    },
+    {
+      "type": "quote",
+      "text": "對我來說，阿爾瓦雷斯是很棒的球員，但他是為馬競踢球。我要把心思放在自己的球隊上。",
+      "original": "For me, Julián Álvarez is a fantastic player, but he is playing for Atlético. I have to focus on my team.",
+      "cite": "弗利克，11 月 7 日記者會（ESPN 轉述）"
+    },
+    {
+      "type": "p",
+      "text": "標準答案，多一句都沒有。談到戈登，弗利克說得具體：他說戈登進到最後三分之一，一對一的時候可以再自私一點，最近幾場已經踢得很好。對別人家的前鋒講客氣話，對戈登說「可以再自私一點」，這種教練我放心。"
+    },
+    {
+      "type": "p",
+      "text": "馬競的 Cuti Romero 還在養傷，美籍中場 Johnny Cardoso 回來了。上季聯賽兩次碰頭巴薩都贏，國王盃和歐冠的淘汰賽卻都被馬競踢出去。弗利克說過去的事不重要。我忘不了，不過他說得對，明天清晨那 90 分鐘跟去年無關。"
+    },
+    {
+      "type": "table",
+      "title": "週一清晨這一場，三隊的積分會變成什麼樣",
+      "head": [
+        "球隊",
+        "目前（場數／積分／淨勝球）",
+        "巴薩贏馬競",
+        "平手",
+        "巴薩輸"
+      ],
+      "rows": [
+        [
+          "巴薩",
+          "11／30／+34",
+          "33",
+          "31",
+          "30"
+        ],
+        [
+          "皇馬",
+          "12／30／+21",
+          "30",
+          "30",
+          "30"
+        ],
+        [
+          "馬競",
+          "11／28／+14",
+          "28",
+          "29",
+          "31"
+        ]
+      ],
+      "caption": "目前欄為皇馬賽後的 ESPN 積分榜，右三欄是依三分制算出的積分，皇馬這輪已踢完，積分不變；未計淨勝球。巴薩輸球，馬競登上榜首，皇馬與巴薩同為 30 分。"
+    },
+    {
+      "type": "p",
+      "text": "明天只要不輸，巴薩就還是一個人站在最上面；輸了，換馬競。我要的不只是不輸。"
+    },
+    {
+      "type": "news",
+      "title": "歐洲足壇速覽",
+      "items": [
+        {
+          "headline": "森林 3 比 1 贏曼城，德拉普進兩球",
+          "summary": "諾丁漢森林的 Jair Cunha 第 6 分鐘先進，今年夏天以隊史最高身價從切爾西轉來的前鋒德拉普（Liam Delap）第 18、73 分鐘各進一球，曼城只有 Cherki 第 52 分鐘那一球。曼城開季七連勝，現在英超三連敗，落後榜首阿森納 6 分。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50393720",
+          "when": "11 月 7 日（週六）",
+          "place": "GB"
+        },
+        {
+          "headline": "阿森納 1 比 0 赫爾城，VAR 判了犯規又改越位",
+          "summary": "厄德高（Martin Ødegaard）第 72 分鐘進球，阿森納主場七連勝，10 場 27 分在榜首。上半場 VAR 先判赫爾的 Mendy 拉扯哈弗茨（Kai Havertz）犯規，接著又宣布哈弗茨越位，改給赫爾自由球；ESPN 認為哈弗茨並未爭球，照規則該判犯規。這種事落在巴薩頭上，我會罵一整個禮拜。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50393663",
+          "when": "11 月 7 日（週六）",
+          "place": "GB"
+        },
+        {
+          "headline": "里茲聯 1 比 0 熱刺，替補上來 97 秒就進球",
+          "summary": "里茲的 Noah Okafor 第 79 分鐘破門，離他替補上場才 97 秒，熱刺的連勝停在這裡。吵的是第 30 分鐘里茲 Bogle 對熱刺 Tel 那一下鏟球，沒給紅牌；熱刺教頭德澤爾比（De Zerbi）說自己沒看清楚、不能多講，里茲教頭法克（Farke）說 Bogle 是「一隻蝴蝶」。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50410224",
+          "when": "11 月 7 日（週六）",
+          "place": "GB"
+        },
+        {
+          "headline": "拜仁 2 比 1 美因茲，凱恩兩次助攻，諾伊爾傷退",
+          "summary": "基米希（Joshua Kimmich）第 14 分鐘、卡爾（Lennart Karl）第 57 分鐘進球，兩球都是今年金球獎得主凱恩（Harry Kane）傳的；美因茲的 Tietz 補時第 2 分鐘追回一球。門將諾伊爾（Manuel Neuer）上半場因傷下場，Urbig 替上，傷勢輕重還沒公布。拜仁德甲客場 31 場不敗，和多特蒙德同為 9 場 21 分。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50393762",
+          "when": "11 月 7 日（週六）",
+          "place": "DE"
+        },
+        {
+          "headline": "巴黎聖日耳曼 1 比 0 Troyes，各項賽事 11 連勝",
+          "summary": "Zabarnyi 第 39 分鐘頭球，巴黎聖日耳曼連贏第 11 場。同在巴黎的 Paris FC 1 比 0 贏了 Auxerre，還是落後 3 分。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50393812",
+          "when": "11 月 7 日（週六）",
+          "place": "FR"
+        },
+        {
+          "headline": "奧薩蘇納 1 比 1 畢爾包競技，第 90 分鐘追平",
+          "summary": "畢爾包競技的 Nico Williams 第 84 分鐘打反擊破門。奧薩蘇納的 Alejandro Catena 第 90 分鐘在角球之後，禁區中路右腳一記射門追平。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/match/_/gameId/401882811/athletic-club-osasuna",
+          "when": "11 月 7 日（週六）",
+          "place": "ES"
+        },
+        {
+          "headline": "塞維利亞 0 比 0 阿拉維斯",
+          "summary": "歐洲時間週五晚上 9 點，塞維利亞在主場 Ramón Sánchez Pizjuán 和阿拉維斯互交白卷，台灣是 11 月 7 日（週六）清晨 4 點開球。全場四張黃牌，一個進球都沒有。",
+          "source": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261106",
+          "when": "11 月 6 日（週五）",
+          "place": "ES"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "接下來"
+    },
+    {
+      "type": "p",
+      "text": "照目前的賽程，巴薩下一場是 11 月 22 日（週日）台灣晚上 9 點，主場對比利亞雷亞爾；皇馬也是兩週後才踢，主場對塞爾塔。"
+    },
+    {
+      "type": "p",
+      "text": "今晚 10 點，利物浦客場踢水晶宮，切爾西客場踢桑德蘭。到了台灣時間 11 月 9 日（週一）00:30，曼聯在老特拉福德（Old Trafford）迎戰阿斯頓維拉，就是 11 月 3 日 0 比 3 輸給巴薩的那支維拉。"
+    },
+    {
+      "type": "p",
+      "text": "曼聯現在人在降級區：11 月 7 日（週六）森林贏了曼城，那天的英超踢完，曼聯排進倒數三名。照 ESPN 的統計，賽季踢過至少 9 場還在降級區收工，上一次是 1986 年 11 月。他們聯賽從 8 月 30 日 5 比 2 贏伊普斯威奇之後就沒贏過，教頭是卡里克（Michael Carrick）。曼聯對維拉開球之後三個半小時，巴薩在 Metropolitano 開球。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "When and where to watch Atlético v Barça",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-06",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4604218/when-and-where-to-watch-atletico-madrid-v-fc-barcelona",
+      "note": "「Kick-off is at 9pm CET」，節目表標 Sunday 8 November；頁面標 06 Nov 26；歐洲冬令時間 21:00 CET 為台灣 11 月 9 日 04:00"
+    },
+    {
+      "title": "Hansi Flick: 'Eric and Christensen will be in the squad'",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-07",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4605960/hansi-flick-eric-and-christensen-will-be-in-the-squad",
+      "note": "埃里克與克里斯滕森入名單、埃里克可能先發、羅德里缺陣、德容與 Bernal 二選一、德容體能無虞；頁面只標 18 hrs ago (Nov 7)，日期依頁面標示"
+    },
+    {
+      "title": "Eric and Christensen are back",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-07",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4605954/last-workout-before-the-metropolitano",
+      "note": "週六練球所有可用一線球員到齊、球隊週日上午前往馬德里、Metropolitano 21:00 CET；頁面只標 18 hrs ago (Nov 7)"
+    },
+    {
+      "title": "Diego Simeone backs Julián Álvarez for Barcelona clash after Atlético transfer saga",
+      "publisher": "ESPN",
+      "date": "2026-11-07",
+      "url": "https://www.espn.com/soccer/story/_/id/50407601/diego-simeone-julian-alvarez-barcelona-atletico-madrid",
+      "note": "14:35Z 發布；阿爾瓦雷斯的夏天、弗利克談阿爾瓦雷斯與戈登的原話、右後衛埃里克或 Brian Fariñas、馬競 Cuti Romero 傷與 Cardoso 回歸、上季盃賽淘汰與聯賽兩勝"
+    },
+    {
+      "title": "Flick dismisses Atlético Madrid memories and defends his decisions in Rodri's case",
+      "publisher": "Goal",
+      "date": "2026-11-07",
+      "url": "https://www.goal.com/en/news/flick-dismisses-atletico-madrid-memories-and-defends-his-decisions-in-the-rodri-file/bltb2a9c11d97da57c6",
+      "note": "弗利克說埃里克與克里斯滕森都會在名單、埃里克可能先發；正文只採這兩點，與官網核對相同"
+    },
+    {
+      "title": "Güler inspires Real Madrid's 8th straight win to go level with Barcelona",
+      "publisher": "ESPN",
+      "date": "2026-11-07",
+      "url": "https://www.espn.com/soccer/story/_/id/50393790",
+      "note": "22:36Z 更新；3 比 0、維尼修斯最後一場禁賽、加亞第 79 分鐘紅牌、姆巴佩本季第 17 球、進球過程"
+    },
+    {
+      "title": "Mourinho on Real Madrid's latest win: Happy dressing room -- with horrible music",
+      "publisher": "ESPN",
+      "date": "2026-11-08",
+      "url": "https://www.espn.com/soccer/story/_/id/50414787",
+      "note": "01:26Z 發布；穆里尼奧賽後原話與談國家隊的擔心、本季第二度執教開季不順、9 月 20 日客場輸馬競後連贏 8 場、隊長巴爾韋德踢右後衛、土耳其攻擊手居勒爾頂替禁賽的維尼修斯並五場三球、西甲勝場 97、皇馬下一場主場對塞爾塔"
+    },
+    {
+      "title": "Valencia vs Real Madrid, match summary and key events",
+      "publisher": "ESPN",
+      "date": "2026-11-08",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882808",
+      "note": "比賽紀錄：進球 28'、36'、75'，紅牌 79'，控球、射門、犯規；Full Time；11 月 8 日 15:10（台灣時間）讀取"
+    },
+    {
+      "title": "LaLiga scoreboard, 7 November 2026",
+      "publisher": "ESPN",
+      "date": "2026-11-08",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261107",
+      "note": "Valencia 0、Real Madrid 3，20:00Z，Full Time"
+    },
+    {
+      "title": "LaLiga scoreboard, 8 November 2026",
+      "publisher": "ESPN",
+      "date": "2026-11-08",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261108",
+      "note": "Atlético Madrid 對 Barcelona，20:00Z，Riyadh Air Metropolitano，Scheduled"
+    },
+    {
+      "title": "LaLiga scoreboard, 22 November 2026",
+      "publisher": "ESPN",
+      "date": "2026-11-08",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261122",
+      "note": "Barcelona 對 Villarreal，13:00Z（台灣 21:00），Spotify Camp Nou；ESPN 賽程，非官方開球公告"
+    },
+    {
+      "title": "LALIGA EA SPORTS results 2026/27",
+      "publisher": "LALIGA",
+      "date": "2026-11-08",
+      "url": "https://www.laliga.com/en-GB/laliga-easports/results",
+      "note": "Valencia CF 0-3 Real Madrid（Matchday 12，11 月 7 日）；Atlético de Madrid 對 FC Barcelona 為 Matchday 12，11 月 8 日 20:00（頁面不標時區，與 ESPN 20:00Z 一致）"
+    },
+    {
+      "title": "LaLiga standings 2026/27",
+      "publisher": "ESPN",
+      "date": "2026-11-08",
+      "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+      "note": "皇馬賽後：巴薩 11 場 30 分 +34、皇馬 12 場 30 分 +21、馬競 11 場 28 分 +14"
+    },
+    {
+      "title": "Man City slip to third straight defeat as Liam Delap inspires Nottingham Forest",
+      "publisher": "ESPN",
+      "date": "2026-11-07",
+      "url": "https://www.espn.com/soccer/story/_/id/50393720",
+      "note": "19:34Z 發布；進球與經過；進球分鐘另依 ESPN 比賽紀錄（Delap 18'、73'，Cunha 6'，Cherki 52'）"
+    },
+    {
+      "title": "Enzo Maresca calls for 'balance' after Man City suffer third straight Premier League defeat",
+      "publisher": "ESPN",
+      "date": "2026-11-07",
+      "url": "https://www.espn.com/soccer/story/_/id/50412227",
+      "note": "21:52Z 發布；古納與格瓦迪奧爾中場休息因傷被換下、曼城落後榜首 6 分"
+    },
+    {
+      "title": "Man United hit 40-year low after dropping into Premier League relegation zone",
+      "publisher": "ESPN",
+      "date": "2026-11-07",
+      "url": "https://www.espn.com/soccer/story/_/id/50410672",
+      "note": "曼聯 1986 年 11 月以來首度在賽過至少 9 場後進降級區；週日（歐洲時間）對維拉"
+    },
+    {
+      "title": "Premier League scoreboard, 8 November 2026",
+      "publisher": "ESPN",
+      "date": "2026-11-08",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261108",
+      "note": "Old Trafford 曼聯對維拉 16:30Z（台灣 11 月 9 日 00:30）；水晶宮對利物浦、桑德蘭對切爾西 14:00Z（台灣 22:00）；ESPN 賽程，非官方開球公告"
+    },
+    {
+      "title": "Martin Ødegaard scores winner as Arsenal scrape past Hull to extend PL lead",
+      "publisher": "ESPN",
+      "date": "2026-11-07",
+      "url": "https://www.espn.com/soccer/story/_/id/50393663",
+      "note": "17:52Z 發布；VAR 判犯規後又判越位的經過；阿森納主場七連勝"
+    },
+    {
+      "title": "VAR controversy ignites Elland Road as Leeds bring Tottenham back down to earth",
+      "publisher": "ESPN",
+      "date": "2026-11-07",
+      "url": "https://www.espn.com/soccer/story/_/id/50410224",
+      "note": "19:41Z 發布；Okafor 替補 97 秒進球、Bogle 與 Tel、德澤爾比與法克賽後說法"
+    },
+    {
+      "title": "Ballon d'Or winner Harry Kane notches two assists as Bayern Munich beat Mainz",
+      "publisher": "ESPN",
+      "date": "2026-11-07",
+      "url": "https://www.espn.com/soccer/story/_/id/50393762",
+      "note": "16:44Z 發布；進球與助攻、諾伊爾傷退（ESPN 寫上半場受傷下場，傷情未說）；進球分鐘依 ESPN 比賽紀錄；拜仁、多特各 21 分依 ESPN 德甲積分榜"
+    },
+    {
+      "title": "PSG cruise to 11th straight win as Illia Zabarnyi nets winner against Troyes",
+      "publisher": "ESPN",
+      "date": "2026-11-07",
+      "url": "https://www.espn.com/soccer/story/_/id/50393812",
+      "note": "22:26Z 發布；Zabarnyi 第 39 分鐘（依 ESPN 比賽紀錄）、Troyes 進球因越位取消、領先 Paris FC 3 分；Paris FC 1 比 0 Auxerre 依 ESPN 法甲賽果"
+    },
+    {
+      "title": "Osasuna vs Athletic Club, match summary",
+      "publisher": "ESPN",
+      "date": "2026-11-07",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401882811/athletic-club-osasuna",
+      "note": "比賽紀錄（keyEvents）：Nico Williams 84' 反擊破門；Catena 90' 角球後禁區中路右腳射門"
+    },
+    {
+      "title": "LaLiga scoreboard, 6 November 2026",
+      "publisher": "ESPN",
+      "date": "2026-11-08",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261106",
+      "note": "Sevilla 0、Alavés 0，20:00Z（台灣 11 月 7 日 04:00），Ramón Sánchez Pizjuán Stadium，Full Time；黃牌 4 張"
+    }
+  ]
+}
