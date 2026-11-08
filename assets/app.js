@@ -24,6 +24,7 @@ async function loadData() {
     getJSON("content/index.json", { fresh: true }).catch(() => ({ issues: [] })),
     loadLate(),
     loadDays(),
+    loadBook(), // content/serial.json (2.5 KB): the front page must know which installment is due today (serialDueOn)
   ]);
   S.cfg = cfg;
   S.index = index;
@@ -71,11 +72,15 @@ const issueBy = (date) => (S.index.issues || []).find((i) => i.date === date);
 // with "until", so its past issues keep their name and place.
 const col = (c, date) => { const k = S.cfg.columns[c] || { name: c, group: "supplement" }; return k.was && date && date <= k.was.until ? k.was : k; };
 
-// The copy in memory is the current one (opening it needs no network).
+// The copy in memory is the current one (opening it needs no network). A correction (corrected_at: the Sunday audit's
+// stamp, editorial/README.md; updated_at stays the article's own cut-off) must reach a copy already in memory as a
+// rewrite would, so either stamp changing makes the copy stale (audit 2026-11-08, finding 42).
 function isFresh(date, column) {
   const have = S.articles.get(`${date}/${column}`);
-  const want = issueBy(date)?.articles.find((x) => x.column === column)?.updated_at;
-  return Boolean(have && (!want || have.updated_at === want));
+  const want = issueBy(date)?.articles.find((x) => x.column === column);
+  if (!have) return false;
+  if (!want) return true;
+  return (have.updated_at ?? null) === (want.updated_at ?? null) && (have.corrected_at ?? null) === (want.corrected_at ?? null);
 }
 async function article(date, column) {
   const k = `${date}/${column}`;
@@ -136,7 +141,13 @@ function kicker(c, link = false, date = null) {
   return link ? `<a class="kicker" href="#/column/${esc(c)}">${inner}</a>` : `<div class="kicker">${inner}</div>`;
 }
 // The front page is the digest: each card carries the three-sentence brief (older articles fall back to the dek).
-const summary = (a) => a.brief ? `<p class="brief">${esc(a.brief)}</p>` : `<p>${esc(a.dek)}</p>`;
+// 更正 (editorial/README.md: the Sunday audit adds a 「更正（YYYY-MM-DD）」 callout at the foot of the body and never
+// rewrites the text; scripts/build_index.py lifts the newest one into the entry as corrected, correction, corrected_at).
+// The brief is what the reader read, so the card keeps it and says under it, in one quiet line, what was wrong — a
+// correction nobody is told about is no correction (audit 2026-11-08, findings 32 and 43).
+const md = (iso) => { const [, m, d] = String(iso || "").split("-").map(Number); return m && d ? `${m}/${d}` : ""; };
+const correctionLine = (a) => a.corrected ? `<p class="corr"><b>更正</b>${esc(a.correction || `本篇 ${md(a.corrected)} 有更正，見文末。`)}</p>` : "";
+const summary = (a) => (a.brief ? `<p class="brief">${esc(a.brief)}</p>` : `<p>${esc(a.dek)}</p>`) + correctionLine(a);
 // 上次讀到: where the reader left an article (pos.<key>, a 0–1 scroll ratio; dropped once it is read to the end).
 // Under 8% is not worth coming back to.
 const posOf = (key) => { const p = Number(store.get(`pos.${key}`, 0)); return p > 0.08 && p < 1 ? p : 0; };
@@ -152,6 +163,7 @@ const posMark = (date, a, read) => { const p = read.has(`${date}/${a.column}`) ?
 function metaLine(date, a, read) {
   const bits = [a.brief ? `全文約 ${a.minutes} 分鐘` : `約 ${a.minutes} 分鐘`];
   if (a.status === "undetermined") bits.unshift("查核未完成");
+  if (a.corrected) bits.unshift(`<span class="corr-mark">已更正 ${md(a.corrected)}</span>`); // read or not: the summary above may be what was corrected
   if (a.from_reserve) bits.push("備稿");
   const p = read.has(`${date}/${a.column}`) ? 0 : posOf(`${date}/${a.column}`);
   if (p) bits.push(`<span class="pos-mark">讀到 ${pct(p)}%</span>`);
@@ -243,6 +255,24 @@ function serialBox(date, a, read) {
   const s = a.serial || {};
   return `<a class="sec-head link" href="#/serial" aria-label="連載：全部回目"><h2>摺角那一頁</h2><span class="de">Fortsetzung folgt</span><span class="note">第 ${esc(String(s.n ?? ""))}${s.of ? `／${esc(String(s.of))}` : ""} 回 →</span></a>${serialCard(date, a, read, { recap: false })}`; // the front page says what this installment holds (brief), not what came before (the owner, 2026-11-06)
 }
+// 今天該有的一回 (content/serial.json start and of; scripts/serial.py plans one installment a day with no day skipped,
+// so the n-th is due on start + n − 1 days): the installment due on `date`, or null outside the book's run. The book is
+// loaded at boot (loadData), so the front page can tell a day whose installment never came from one with none due —
+// the reader used to be told 都讀完了 when the 16:07 shift had simply not delivered (audit 2026-11-08, finding 36).
+function serialDueOn(date) {
+  const b = S.book;
+  if (!b?.start || !(Number(b.of) > 0)) return null;
+  const n = Math.round((Date.parse(`${date}T00:00:00Z`) - Date.parse(`${b.start}T00:00:00Z`)) / 864e5) + 1;
+  return n >= 1 && n <= Number(b.of) ? n : null;
+}
+const serialOver = (date) => Boolean(S.book?.start) && Number(S.book.of) > 0 && date > S.book.start && serialDueOn(date) === null;
+// The front page's serial section on a day whose installment is due but not in the issue: the same head, and a line
+// that says so instead of leaving the place empty as if nothing were due.
+function serialWaitBox(date) {
+  const n = serialDueOn(date);
+  return `<a class="sec-head link" href="#/serial" aria-label="連載：全部回目"><h2>摺角那一頁</h2><span class="de">Fortsetzung folgt</span><span class="note">第 ${esc(String(n))} 回 →</span></a>
+    <p class="empty serial-wait">今天這一回還沒送到。前面的回目都在<a href="#/serial">連載</a>裡，先翻回去重讀一段也好。</p>`;
+}
 // ——— 連載 tab (#/serial, content/serial.json): the book's plate and progress, the next installment to read, the cast,
 // and every installment published so far in order — the one home of the serial; the front page's card is the day's door.
 // 摺角: the 連載 tab's icon wears a folded corner while the newest published installment is unread (the owner, 2026-11-05).
@@ -309,6 +339,10 @@ async function viewSerial(my) {
     if (!done[slug]) { done[slug] = twNow().date; store.set("serial.finished", done); }
     return `<div class="exlibris" role="img" aria-label="藏書票：${esc(fmtDate(done[slug]))}讀畢"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg><span class="ex">Ex Libris</span><span class="who">知更鳥晨間記事</span><span class="d">${esc(fmtDate(done[slug]))}讀畢</span></div>`;
   };
+  // 今天的一回 (finding 36): due (serialDueOn) and past 07:30 but not in any published issue — say so, not 都讀完了;
+  // past the book's last day (serialOver) — say the book is done and the next one not yet chosen.
+  const today = twNow().date, hasToday = parts.some((p) => p.date === today), dueN = isPublished(today) ? serialDueOn(today) : null;
+  const restNote = dueN && !hasToday ? `到手的回目都讀完了；今天這一回（第 ${dueN} 回）還沒送到，送到了會出現在這裡。` : serialOver(today) ? "全書完，下一本待定。" : "到今天為止的回目都讀完了，明天早上有下一回。";
   const row = ({ date, a }) => { const k = `${date}/${a.column}`, s = a.serial || {}; const inner = `<span class="no" aria-hidden="true">${esc(String(s.n ?? "").padStart(2, "0"))}</span>
       <span class="t"><span class="m"><span class="k">${esc(serialWhere(s))}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title.replace(/^第 \d+ 回・/, ""))}</b></span>`;
     return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}">${inner}</a></li>`; };
@@ -322,7 +356,7 @@ async function viewSerial(my) {
       ${of && got >= of ? exlibris() : ""}
     </section>
     ${next ? `<div class="sec-head"><h2>接著讀</h2><span class="de">Weiterlesen</span><span class="note">第 ${esc(String(next.a.serial?.n ?? ""))} 回</span></div>${serialCard(next.date, next.a, read, { plate: false })}`
-      : parts.length ? `<p class="empty">到今天為止的回目都讀完了，明天早上有下一回。</p>` : `<p class="empty">${b.start ? `${esc(fmtDate(b.start, "short"))}開始，每天早上一回。` : "還沒開始。"}</p>`}
+      : parts.length ? `<p class="empty">${restNote}</p>` : `<p class="empty">${b.start ? `${esc(fmtDate(b.start, "short"))}開始，每天早上一回。` : "還沒開始。"}</p>`}
     ${Array.isArray(b.cast) && b.cast.length ? castBox(b.cast) : ""}
     ${parts.length ? `<div class="sec-head"><h2>回目</h2><span class="de">Folgen</span><span class="note">${parts.length} 回</span></div>${bands(row)}` : ""}
   </div>`;
@@ -514,13 +548,31 @@ function frontStatus() {
   const now = twNow();
   const todays = issueBy(now.date);
   const late = lateOf(now.date);
-  if (late && late.state !== "done") return lateText(late, todays ? todays.articles.filter((a) => !["watch", "serial"].includes(col(a.column, now.date).group)).length : 0);
+  const got = todays ? todays.articles.filter((a) => !["watch", "serial"].includes(col(a.column, now.date).group)).length : 0; // the serial is written weeks ahead: not a sign the issue is in
+  if (late && late.state !== "done") return lateText(late, got);
   if (now.minutes < publishMin()) return `今天這期 <b>${esc(S.cfg.publish_time)}</b> 才出爐（還有 ${untilText(publishMin() - now.minutes)}），先翻上一期墊墊胃。`;
   if (!todays) return "今天這期還在印，好了會自己跳出來。先翻上一期撐一下。";
   const on = (c) => { const k = S.cfg.columns[c] || {}; return now.date >= (k.since || "") && now.date <= (k.until || "9999"); }; // between a column's start and its last day
-  const expected = Object.keys(S.cfg.columns).filter((c) => S.cfg.columns[c].group === "main" && on(c)).length + (S.cfg.rotation_by_weekday?.[weekdayKey(now.date)]?.filter(on).length ?? 2);
-  const got = todays.articles.filter((a) => !["watch", "serial"].includes(col(a.column, now.date).group)).length; // the serial is written weeks ahead: not a sign the issue is in
-  return got < expected ? `已經到了 ${got} 篇，剩下的在路上，別走開。` : "";
+  const expected = [...Object.keys(S.cfg.columns).filter((c) => S.cfg.columns[c].group === "main"), ...(S.cfg.rotation_by_weekday?.[weekdayKey(now.date)] || [])].filter(on);
+  const have = new Set(todays.articles.map((a) => a.column));
+  const missing = expected.filter((c) => !have.has(c));
+  if (!missing.length) return "";
+  // 額度週日 (scripts/late.py hold(); the owner, 2026-11-08): on a Sunday before the 15:00 reset, a short issue with a
+  // night shift that never reported is the week's quota gone, not articles on their way — and content/late.json, written
+  // by a GitHub cron that ran three hours late that day, may not say so yet. The same rule as late.py's, read here from
+  // the index's own shift reports, so the front page says 延到下午 from 07:30 on; late.json takes over once it arrives.
+  const shifts = todays.press?.shifts || {};
+  if (new Date(`${now.date}T00:00:00Z`).getUTCDay() === 0 && now.minutes < 15 * 60 && [..."12345"].some((k) => !shifts[k])) return lateText({ state: "waiting" }, got);
+  // Otherwise name what is missing. The reserve's last fill is 07:05 (editorial/README.md), so until 08:00 a column with
+  // a reserve may still come; after that nothing more does — 「剩下的在路上」 once stood all day (audit 2026-11-08,
+  // finding 10). A column without a reserve (config.json reserve: false, 快訊) is not coming at any hour.
+  const name = (c) => `〈${esc(col(c, now.date).name)}〉`;
+  const gone = missing.filter((c) => S.cfg.columns[c]?.reserve === false), coming = missing.filter((c) => S.cfg.columns[c]?.reserve !== false);
+  if (now.minutes < 8 * 60) {
+    const bits = [coming.length ? `少了${coming.map(name).join("、")}，補位還在路上` : "", gone.length ? `${gone.map(name).join("、")}今天沒趕上，不另補稿` : ""].filter(Boolean);
+    return `已經到了 ${got} 篇，${bits.join("；")}。`;
+  }
+  return `今天少了${missing.map(name).join("、")}，其餘 ${got} 篇照讀。`;
 }
 // Everything the latest-issue front page shows that can change while it stays open: [issue, status line].
 const frontState = () => [JSON.stringify(publishedIssues()[0] || null), frontStatus()];
@@ -591,7 +643,7 @@ function viewFront(dateParam) {
     ${mains.slice(1).map((a) => itemCard(issue.date, a, read)).join("")}
     ${supps.length ? `<div class="sec-head"><h2>橫線之下</h2><span class="de">Unter dem Strich</span><span class="note">星期${esc(issue.weekday)}輪值</span></div>
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
-    ${serial.length ? serialBox(issue.date, serial[0], read) : ""}
+    ${serial.length ? serialBox(issue.date, serial[0], read) : todays(issue) && serialDueOn(issue.date) ? serialWaitBox(issue.date) : ""}
     ${watch.length ? `<div class="sec-head"><h2>遠方有動靜</h2><span class="de">In der Ferne</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
     ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdsFound().has(issue.date) ? "今天的知更鳥找到了。" : "今天有一隻知更鳥藏在某一篇裡。"}</p>` : ""}
     ${!arts.some((a) => forStamp(a, issue.date) && a.brief) ? "" : !issueOpen(issue.date) ? `<div class="finish left"><b>今天這一份還沒出齊</b><span class="note">下午補刊到齊以後，包裹和郵票才會開。</span></div>`
@@ -752,7 +804,9 @@ function prefetch(issue) {
   if ("requestIdleCallback" in window) requestIdleCallback(run, { timeout: 4000 }); else setTimeout(run, 1500);
 }
 
-// When a news article was last updated after it went out, or its cut-off time.
+// When a news article was last updated after it went out, or its cut-off time. updated_at is the article's own clock
+// (the news window of the next football issue starts from it: columns/football.md); a correction leaves it alone and
+// writes corrected_at instead, which the header shows through correctionOf, not here (finding 42).
 function updatedNote(date, a) {
   if (!a.updated_at || /^\d{4}-\d{2}-\d{2}$/.test(a.updated_at)) return "";
   const t = new Date(/(Z|[+-]\d{2}:?\d{2})$/i.test(a.updated_at) ? a.updated_at : `${a.updated_at}+08:00`);
@@ -762,6 +816,15 @@ function updatedNote(date, a) {
   const hm = `${String(tw.getUTCHours()).padStart(2, "0")}:${String(tw.getUTCMinutes()).padStart(2, "0")}`;
   if (t > pub) return `<span>更新於 ${tw.getUTCMonth() + 1}/${tw.getUTCDate()} ${hm}</span>`;
   return a.column === "football" ? `<span>截稿 ${hm}</span>` : "";
+}
+
+// The article's own correction day: corrected_at (the audit's stamp since 2026-11-08) or the newest 「更正（YYYY-MM-DD）」
+// callout in the body (files corrected before corrected_at existed carry only the callout, and the audit's time in
+// updated_at). "" when there is none.
+function correctionOf(a) {
+  const days = (a.body || []).filter((b) => b?.type === "callout").map((b) => (String(b.label || "").match(/^更正（(\d{4}-\d{2}-\d{2})）/) || [])[1]).filter(Boolean);
+  if (typeof a.corrected_at === "string" && /^\d{4}-\d{2}-\d{2}/.test(a.corrected_at)) days.push(a.corrected_at.slice(0, 10));
+  return days.sort().at(-1) || "";
 }
 
 // `my` is this route's number: if the reader has moved on while the article loads, draw nothing.
@@ -837,6 +900,9 @@ async function viewArticle(date, column, my) {
   // The name is boxed on its own (.nm) so it is what gets the ellipsis on a narrow bar; the numeral always stays whole.
   const titleIn = `<span class="col"><span class="nm">${esc(k.name)}</span>${idx >= 0 ? `<i class="pg">・${roman(idx + 1)}／${roman(order.length)}</i>` : ""}</span><span class="art">${esc(a.title)}</span>`;
   const fix = column === "football" ? fixtureOf(me?.next ?? a.next) : null;
+  // 更正 (findings 32, 42): the header points at the correction itself, not at a generic 更新於 — and when updated_at is
+  // only the old audit's stamp of that same day, it is not shown as an update of the news.
+  const corr = correctionOf(a);
   main.innerHTML = `
     <div class="topbar"><div class="in">
       <a class="icon-btn" data-back href="${fromList || (issue && date !== publishedIssues()[0]?.date ? `#/issue/${date}` : "#/")}" aria-label="${fromList ? "返回" : "回到本期"}">${ICON.back}</a>
@@ -849,7 +915,7 @@ async function viewArticle(date, column, my) {
       <header class="article-head">${kicker(column, true, date)}${a.serial ? serialPlate(a.serial) : ""}<h1>${esc(a.title)}</h1>
         ${a.takeaway ? `<aside class="takeaway"><span class="lbl">帶得走的結論</span><p>${inline(a.takeaway)}</p>${evidenceOf(a) ? `<p class="ev"><b>證據力</b>${inline(evidenceOf(a))}</p>` : ""}</aside>` : ""}
         <p class="dek">${esc(a.dek)}</p>
-        <div class="meta"><div class="row"><span>${esc(fmtDate(date))}</span>${issue ? `<span>${esc(issueNo(issue.no))}</span>` : ""}${minutes ? `<span>閱讀約 ${minutes} 分鐘</span>` : ""}${updatedNote(date, a)}</div></div>
+        <div class="meta"><div class="row"><span>${esc(fmtDate(date))}</span>${issue ? `<span>${esc(issueNo(issue.no))}</span>` : ""}${minutes ? `<span>閱讀約 ${minutes} 分鐘</span>` : ""}${corr ? `<span class="corr"><button type="button" data-corr aria-label="跳到文末的更正">本篇有更正（${md(corr)}）→</button></span>` : ""}${corr && String(a.updated_at || "").slice(0, 10) === corr ? "" : updatedNote(date, a)}</div></div>
         ${fixtureHtml(fix)}
         ${a.from_reserve && column === "football" ? `<div class="banner">今晨新聞稿未能如期完成，先刊出這篇備用專題；最新消息併入下一期。</div>` : ""}
         ${a.status === "undetermined" ? `<div class="banner">本期查核未完成，無法判定是否有新進展；這不代表沒有新消息。</div>` : ""}
@@ -879,6 +945,11 @@ async function viewArticle(date, column, my) {
   const ende = serialEnde(a.serial);
   if (ende) body.insertAdjacentHTML("beforeend", `<p class="ende" role="note"><span>${esc(ende)}</span></p>`);
   hideBird(body, date, column);
+  // 本篇有更正 →: the newest correction callout (blocks.js .callout.correction), brought to the middle of the screen.
+  main.querySelector("[data-corr]")?.addEventListener("click", () => {
+    const c = [...body.querySelectorAll(".callout.correction")].at(-1);
+    if (c) { c.scrollIntoView({ behavior: calm() ? "auto" : "smooth", block: "center" }); c.classList.add("lit"); }
+  });
   if (a.serial?.n > 1) {
     // The aside arrives after the page has landed: whatever is below it moves down by its height, so the landing follows.
     const slot = main.querySelector(".vorher-slot");
@@ -1378,7 +1449,7 @@ function viewArchive() {
       if (!arts.length) continue;
       const ym = iss.date.slice(0, 7), d = Number(iss.date.slice(8));
       months.set(ym, [...(months.get(ym) || []), `<a class="issue-row" href="#/issue/${iss.date}"><div class="d"><b>${d}</b><span>週${esc(iss.weekday)}・${esc(issueNr(iss.no))}</span>${done.has(iss.date) ? seal(iss.date, 0, true) : ""}</div>
-        <ul>${arts.map((a) => `<li><i>${esc(col(a.column, iss.date).name)}</i>${esc(a.title)}</li>`).join("")}</ul></a>`]);
+        <ul>${arts.map((a) => `<li><i>${esc(col(a.column, iss.date).name)}</i>${esc(a.title)}${a.corrected ? `<em class="corr-tag">已更正</em>` : ""}</li>`).join("")}</ul></a>`]);
     }
     const rows = [...months].map(([ym, list]) => `<details class="mon"${ql || (ym in openSet ? openSet[ym] : ym === thisYm) ? " open" : ""} data-ym="${ym}">
       <summary class="month">${Number(ym.slice(5))} 月 ${ym.slice(0, 4)}<span class="de">${esc(monDe(ym))}</span><span class="n">${list.length} 期</span></summary>${list.join("")}</details>`).join("");
@@ -1461,7 +1532,7 @@ function viewSaved() {
   const row = ({ date, a, k }, i) => {
     const h = a.hero, th = h?.src ? `<span class="th"><img src="${esc(h.thumb || h.src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span>` : "";
     return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
-      <span class="t"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title)}</b>${a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}</span>${th}</a></li>`;
+      <span class="t"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title)}</b>${a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}${a.corrected ? `<span class="corr"><b>更正</b>${esc(a.correction || `${md(a.corrected)} 有更正，見文末`)}</span>` : ""}</span>${th}</a></li>`;
   };
   const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length;
   // 收藏 (the owner, 2026-11-06, name kept): four shelves, each with its own picture and a line that says what is inside.
