@@ -5,6 +5,7 @@ Usage:
   python3 scripts/validate.py 2026-10-11
   python3 scripts/validate.py 2026-10-11 --column music --check-urls
   python3 scripts/validate.py --concerts      (近期演出 content/concerts.json; same as scripts/concerts.py check)
+  python3 scripts/validate.py --config        (content/config.json itself: rotation, since/until, order; see check_config)
 
 Exit code 1 when any ERROR is found. A malformed article is reported as ERROR, never as a traceback.
 """
@@ -18,8 +19,9 @@ import sys
 import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (ISSUES, ROOT, iter_reserve, RESERVE, BROWSER_IMAGE_TYPES, CJK, article_path, cjk_count, column_meta, figures_of, http_get, image_key,  # noqa: E402
-                    image_page, iter_articles, load_config, load_json, raw_image_ext, TW)
+from common import (ISSUES, ROOT, iter_reserve, RESERVE, BROWSER_IMAGE_TYPES, CJK, WEEKDAY_KEYS, WEEKDAY_ZH, active, article_path,  # noqa: E402
+                    cjk_count, column_meta, figures_of, http_get, image_key, image_page, iter_articles, load_config, load_json,
+                    raw_image_ext, TW, tw_now)
 from places import NAMES as PLACE_NAMES, place_codes, places_of  # noqa: E402
 
 LENGTH = {  # (min, max) CJK characters in body
@@ -47,7 +49,14 @@ TAGS = {"史實", "史料", "學者解釋", "推論", "本文讀法", "原創假
 AI_PHRASES = ["值得一提的是", "不可否認", "毋庸置疑", "總而言之", "綜上所述", "總的來說", "深入探討",
               "神秘面紗", "一場旅程", "的旅程", "交織出", "譜寫", "完美詮釋", "長河中", "時光荏苒",
               "歷久彌新", "嘆為觀止", "史詩級", "讓我們一起", "在這個資訊爆炸", "不禁讓人"]
-STALE_WORDS = ["今天", "今日", "今晨", "今早", "昨天", "昨晚", "昨日", "明天", "本週", "這週", "上週", "本月", "創刊"]
+# Words that date a text (RESERVE.md 寫法: a reserve must hold on whatever day it runs). The relative-time words were
+# added 2026-11-08 after a reserve three weeks in stock went out saying 最近. Weekday names and 現在 are left out on
+# purpose: the stock uses them legitimately in historical narration (1974 年 2 月 17 日，週日晚上; 每週二、五晚間;
+# quoted letters saying 下週二), so they would flag history as stale.
+STALE_WORDS = ["今天", "今日", "今晨", "今早", "昨天", "昨晚", "昨日", "明天", "本週", "這週", "上週", "本月", "創刊",
+               "最近", "目前", "今年", "去年", "明年", "上個月", "上個週末", "近年", "本季", "本賽季"]
+# An ISO timestamp with its offset, as updated_at and corrected_at are written (2026-10-11T06:40:00+08:00).
+TIMESTAMP = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:\d{2})$")
 # The newsroom's own bookkeeping, which belongs in sources[].note, not in front of the reader (STYLE.md section 3).
 BACKSTAGE = ["本報沒有查證", "本報未查證", "本報無法查證", "本報無法核實", "截稿", "一併補報", "與內文不一致"]
 # The voice rules (STYLE.md sections 0-4) apply to issues from this date on and to every reserve.
@@ -220,14 +229,17 @@ def spans(text, flagged, n):
 
 @functools.lru_cache(maxsize=None)
 def recent_grams(d, n=5):
-    """{n-gram: columns using it} over issue d and the 7 issues before it (the latest 7 for a reserve)."""
+    """{n-gram: columns using it} over issue d and the 7 issues before it (for a reserve: the latest 7 published
+    issues, i.e. dated up to today in Taiwan). The serial's installments run up to three days ahead, so content/issues/
+    holds future dates that are not issues yet, and a novel's prose is not a column's phrasing: serial.json is left out."""
     days = sorted(x for x in (os.listdir(ISSUES) if os.path.isdir(ISSUES) else []) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", x))
-    days = days[-7:] if d == "reserve" else [x for x in days if x <= d][-8:]
+    today = tw_now().date().isoformat()
+    days = [x for x in days if x <= today][-7:] if d == "reserve" else [x for x in days if x <= d][-8:]
     idx = {}
     for day in days:
         ddir = os.path.join(ISSUES, day)
         for f in os.listdir(ddir):
-            if not f.endswith(".json"):
+            if not f.endswith(".json") or f == "serial.json":
                 continue
             try:
                 art = load_json(os.path.join(ddir, f))
@@ -322,6 +334,160 @@ def check_voice(art, d, col, W):
         W("「我覺得／依我看」這類表態出現 %d 次，像定時插入：留兩三次真的有話要說的（STYLE.md 第〇節）" % me)
 
 
+def stale_words(art):
+    """The dated words a reserve uses (STALE_WORDS), in list order; empty when it would hold on any day. Checked in
+    the title, dek, brief and body; the devotion column's fixed headings (今日經文, 今日禱告) are not dated words.
+    The reserve branch of check_article reports them as WARN, and fill_from_reserve.py uses the same list to put
+    the clean reserves first and to say which words a filled article carries."""
+    text = json.dumps(art.get("body", []), ensure_ascii=False)
+    text += "".join(v for v in (art.get("title"), art.get("dek"), art.get("brief")) if isinstance(v, str))
+    for head in DEVOTION_HEADS:
+        text = text.replace(head, "")
+    return [w for w in STALE_WORDS if w in text]
+
+
+# The WARN classes that make a reserve 需修正 (the owner, 2026-11-08, LESSONS 31: a reserve with 機器腔, 出處類標籤 or
+# 分類詞小標 WARNs is not stock; the reserve shift rewrites those before writing anything new). Only the stable rule
+# violations count: length, title/dek length, brief size, the moving window of phrases shared with the last 7 days,
+# and anything about the network are not here, so a reserve cannot drop out of the stock by the calendar turning.
+BLOCKING_WARN = re.compile(r"^(?:機器腔|出處類標籤不再使用|小標「.*」(?:用了規格裡的分類詞|是「不是 X，是 Y」的套路|是問句的套路)"
+                           r"|quote 區塊 \d+ 個|段落 tag \d+ 個|缺少 form|form「|缺少 voice|voice「|沒有粗體|粗體 \d+ 處"
+                           r"|和範文一樣的句子|寫給創作者的建議|備稿要在任何一天都成立)")
+
+
+def reserve_blocking(warns):
+    """The warnings in `warns` that make a reserve article 需修正 (see BLOCKING_WARN), in the order given."""
+    return [w for w in warns if isinstance(w, str) and BLOCKING_WARN.match(w)]
+
+
+def check_source_urls(art):
+    """[(url, why)] for every sources[] url that did not answer: an HTTP error, a dead host name, a timeout.
+    One short GET each (the first kilobyte, 10 s, no retries), so the caller is not stalled by a host that is down.
+    fill_from_reserve.py runs this on a reserve about to be published unread (LESSONS 25: a reserve's source site
+    had turned into a gambling site by the time it ran); a hit is a warning for the shift report, never a block,
+    because a flawed article still beats an empty column."""
+    import http.client
+    import socket
+    import urllib.error
+    out = []
+    for s in art.get("sources") or []:
+        url = s.get("url") if isinstance(s, dict) else None
+        if not isinstance(url, str) or not url.startswith("http"):
+            continue
+        try:
+            status, _, _ = http_get(url, headers={"Range": "bytes=0-1023"}, timeout=10, retries=0)
+            if status not in (200, 206):
+                out.append((url, "HTTP %s" % status))
+        except urllib.error.HTTPError as e:
+            out.append((url, "HTTP %s" % e.code))
+        except urllib.error.URLError as e:
+            out.append((url, "找不到主機" if isinstance(e.reason, socket.gaierror) else str(e.reason)[:80]))
+        except (OSError, http.client.HTTPException) as e:
+            out.append((url, (str(e) or type(e).__name__)[:80]))
+        except Exception as e:  # noqa: BLE001
+            out.append((url, str(e)[:80]))
+    return out
+
+
+# What config.json may say a column is. "serial": the novel, written days ahead by its own routine, never stocked.
+KNOWN_GROUPS = {"main", "verse", "supplement", "watch", "serial"}
+# Three supplements a day from this date (editorial/README.md; two on 2026-11-02 only).
+THREE_SUPPLEMENTS_SINCE = dt.date(2026, 11, 3)
+
+
+def check_config(cfg, today=None):
+    """The inconsistencies in content/config.json, as messages (empty when it is sound). Changing columns is the
+    owner's routine maintenance and nothing else complains: supplements_for() filters silently, so a column
+    retired with "until" but left in the rotation gives a two-supplement day that every shift, the watch and the
+    App all call complete; a new column not put into the rotation is never written but is stocked; a misspelt
+    code in the rotation is a KeyError in plan_day.py at 23:00. plan_day.py prints these as 設定錯誤 and exits 2
+    before it plans anything; publish.yml's validate step reports them without blocking the deploy."""
+    out = []
+    cols = cfg.get("columns")
+    if not isinstance(cols, dict) or not cols:
+        return ["columns 需為非空的物件"]
+
+    def date_of(v):
+        try:
+            return dt.date.fromisoformat(v) if isinstance(v, str) else None
+        except ValueError:
+            return None
+
+    orders = {}
+    for c, m in cols.items():
+        if not isinstance(m, dict):
+            out.append("欄位 %s 需為物件（目前是%s）" % (c, jtype(m)))
+            continue
+        for k in ("group", "name"):
+            if not isinstance(m.get(k), str) or not m[k].strip():
+                out.append("欄位 %s 缺少 %s" % (c, k))
+        if isinstance(m.get("group"), str) and m["group"] not in KNOWN_GROUPS:
+            out.append("欄位 %s 的 group「%s」不認得（只有 %s）" % (c, m["group"], "、".join(sorted(KNOWN_GROUPS))))
+        for k in ("since", "until"):
+            if m.get(k) is not None and date_of(m[k]) is None:
+                out.append("欄位 %s 的 %s 不是合法日期（YYYY-MM-DD）：%r" % (c, k, m[k]))
+        since, until = date_of(m.get("since")), date_of(m.get("until"))
+        if since and until and since > until:
+            out.append("欄位 %s 的 since（%s）晚於 until（%s）" % (c, since, until))
+        was = m.get("was")
+        if was is not None and (not isinstance(was, dict) or date_of(was.get("until")) is None):
+            out.append("欄位 %s 的 was 需為物件並有合法日期 until" % c)
+        if m.get("group") == "main" and "until" not in m:
+            if not isinstance(m.get("order"), int) or isinstance(m.get("order"), bool):
+                out.append("正刊欄位 %s 缺少整數 order" % c)
+            else:
+                orders.setdefault(m["order"], []).append(c)
+    for o, cs in sorted(orders.items()):
+        if len(cs) > 1:
+            out.append("正刊 order %d 重複：%s" % (o, "、".join(cs)))
+
+    rot = cfg.get("rotation_by_weekday")
+    if not isinstance(rot, dict):
+        out.append("rotation_by_weekday 需為物件（星期代號 → 副刊代號陣列）")
+        return out
+    scheduled = set()
+    for day in WEEKDAY_KEYS:
+        lst = rot.get(day)
+        if not isinstance(lst, list):
+            out.append("rotation_by_weekday 缺少 %s（或不是陣列）" % day)
+            continue
+        seen = set()
+        for c in lst:
+            if not isinstance(c, str) or c not in cols:
+                out.append("rotation_by_weekday.%s 有不存在的欄位代號 %r" % (day, c))
+                continue
+            if c in seen:
+                out.append("rotation_by_weekday.%s 重複排了 %s" % (day, c))
+            seen.add(c)
+            scheduled.add(c)
+            g = cols[c].get("group") if isinstance(cols[c], dict) else None
+            if g != "supplement":
+                out.append("rotation_by_weekday.%s 排了 %s，但它是 %s 欄，不是副刊" % (day, c, g))
+    for day in sorted(set(rot) - set(WEEKDAY_KEYS)):
+        out.append("rotation_by_weekday 有不認得的星期代號 %r" % day)
+
+    today = today or tw_now().date()
+    for c, m in cols.items():
+        if not isinstance(m, dict) or m.get("group") != "supplement" or c in scheduled:
+            continue
+        until = date_of(m.get("until"))
+        if "until" not in m or (until and until >= today):
+            out.append("副刊 %s（%s）沒有排進任何一天的輪值，永遠不會被寫" % (c, m.get("name", "")))
+    # The count is checked by date, not by weekday: since/until are dates, so the same weekday can be short next
+    # week and fine this week. Two weeks ahead is enough to catch a change before it reaches the press.
+    for i in range(14):
+        d = today + dt.timedelta(days=i)
+        if d < THREE_SUPPLEMENTS_SINCE:
+            continue
+        lst = rot.get(WEEKDAY_KEYS[d.weekday()])
+        if not isinstance(lst, list):
+            continue
+        on = [c for c in lst if isinstance(c, str) and isinstance(cols.get(c), dict) and active(cfg, c, d)]
+        if len(on) != 3:
+            out.append("%s（星期%s）有 %d 篇副刊，應為 3 篇：%s" % (d, WEEKDAY_ZH[d.weekday()], len(on), "、".join(on) or "（無）"))
+    return out
+
+
 def validate_file(cfg, d, col, path, check_urls=False, used_images=None, used_topics=None):
     """Return (errors, warnings) for one article file. Never raises on malformed content."""
     errs, warns = [], []
@@ -364,10 +530,7 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             E("備稿需要 reserve_written（撰寫日期 YYYY-MM-DD）")
         if cfg["columns"].get(col, {}).get("group") == "watch":
             E("觀測站不做備稿")
-        text = json.dumps(art.get("body", []), ensure_ascii=False) + art.get("title", "") + art.get("dek", "")
-        for head in DEVOTION_HEADS:  # the devotion column's fixed headings (今日經文, 今日禱告) are not a dated word
-            text = text.replace(head, "")
-        stale = [w for w in STALE_WORDS if w in text]
+        stale = stale_words(art)
         if stale:
             W("備稿要在任何一天都成立，避免會過期的字眼：%s" % "、".join(stale))
     elif art.get("date") != str(d):
@@ -384,7 +547,8 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
         elif not v or not v.strip():
             E("缺少 %s" % k)
     ua = art.get("updated_at")
-    if isinstance(ua, str) and ua.strip() and not re.match(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:\d{2})$", ua):
+    when = None
+    if isinstance(ua, str) and ua.strip() and not TIMESTAMP.match(ua):
         E("updated_at 需含時區，例如 2026-10-11T06:40:00+08:00（目前：%s）" % ua)
     elif isinstance(ua, str) and ua.strip() and d != "reserve":
         # The news window of the next Barça update starts here, so a guessed (future) time hides news.
@@ -395,6 +559,7 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             when = None
         if when and when > dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=10):
             E("updated_at（%s）晚於現在：填實際完稿時間，用 TZ=Asia/Taipei date +%%Y-%%m-%%dT%%H:%%M:00+08:00" % ua)
+    check_corrected_at(art, d, when, E, W)
     title = art.get("title") if isinstance(art.get("title"), str) else ""
     dek = art.get("dek") if isinstance(art.get("dek"), str) else ""
     check_brief(art.get("brief"), dek, d, E, W, col)
@@ -719,6 +884,36 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
         check_voice(art, d, col, W)
 
 
+def correction_labels(art):
+    """The labels of the article's 更正 callouts (editorial/README.md 每週品質稽核 step 2: a correction is a callout at the
+    end of body labelled 更正（<稽核日期>）; the original text stays as the reader read it)."""
+    return [b["label"] for b in art.get("body") or []
+            if isinstance(b, dict) and b.get("type") == "callout" and isinstance(b.get("label"), str) and b["label"].startswith("更正（")]
+
+
+def check_corrected_at(art, d, updated, E, W):
+    """SCHEMA.md corrected_at (2026-11-08): when the audit adds a 更正 callout it records the moment in corrected_at and
+    leaves updated_at alone, because updated_at is the article's news deadline (columns/football.md: the next Barça
+    update's window starts at the previous article's updated_at; moving it to the audit's time swallowed a weekend of
+    news). The App compares both to know when to fetch the article again."""
+    ca = art.get("corrected_at")
+    labels = correction_labels(art)
+    if ca is None:
+        if labels and str(d) != "reserve":
+            W("有更正框「%s」但沒有 corrected_at：稽核加更正時填 corrected_at（更正時刻，ISO、+08:00），updated_at 不動（SCHEMA.md）" % labels[-1])
+        return
+    if not isinstance(ca, str) or not TIMESTAMP.match(ca):
+        E("corrected_at 需含時區，例如 2026-11-08T15:59:00+08:00（目前：%s）" % (ca if isinstance(ca, str) else jtype(ca)))
+        return
+    if updated is not None:
+        try:
+            fixed = dt.datetime.fromisoformat(ca.replace("Z", "+00:00"))
+        except ValueError:
+            fixed = None
+        if fixed and fixed < updated:
+            E("corrected_at（%s）早於 updated_at（%s）：更正只填 corrected_at，updated_at 是這篇的截稿時間，不往後改（SCHEMA.md）" % (ca, art.get("updated_at")))
+
+
 def inline_texts(b):
     """Texts of a block that the App renders through inline() (assets/util.js), i.e. where links work."""
     t = b.get("type")
@@ -1035,14 +1230,17 @@ def ledgers_excluding(day, col, paths=None):
 
 
 def reserve_status(cfg, column=None):
-    """{column: [(path, errors)]} for every reserve article: errors are empty when the article is ready to run.
+    """{column: [(path, errors, blocking)]} for every reserve article: it counts as stock (reserve.py, plan_day.py)
+    only when both lists are empty. `errors` are the ERRORs; `blocking` are the WARNs of reserve_blocking(), the
+    rule violations the owner said make a reserve 需修正 rather than stock (fill_from_reserve.py still looks at
+    ERRORs alone, so the safety net keeps filling with such an article rather than leaving a column empty).
     Checked against published articles and the other reserves, so two reserves sharing a topic or an image
     show up here (one of them would fail once the other has run)."""
     out = {}
     for col, p in iter_reserve(column):
         imgs, tops = ledgers_excluding("reserve", col, paths=[p])
-        errs, _ = validate_file(cfg, "reserve", col, p, False, imgs, tops)
-        out.setdefault(col, []).append((p, errs))
+        errs, warns = validate_file(cfg, "reserve", col, p, False, imgs, tops)
+        out.setdefault(col, []).append((p, errs, reserve_blocking(warns)))
     return out
 
 
@@ -1082,11 +1280,18 @@ def main():
     ap.add_argument("--check-urls", action="store_true")
     ap.add_argument("--reserve", action="store_true", help="驗證備稿庫 content/reserve/")
     ap.add_argument("--concerts", action="store_true", help="驗證近期演出 content/concerts.json")
+    ap.add_argument("--config", action="store_true", help="檢查 content/config.json 本身：輪值、since/until、order 是否一致")
     a = ap.parse_args()
     if a.concerts:
         import concerts
         return concerts.check(a)
     cfg = load_config()
+    if a.config:
+        problems = check_config(cfg)
+        for msg in problems:
+            print("   ERROR 設定錯誤：" + msg)
+        print("✗ config.json 有 %d 處不一致" % len(problems) if problems else "✓ config.json 一致：輪值、since/until、order 都對得上")
+        return 1 if problems else 0
     if a.reserve:
         return 1 if validate_reserve(cfg, a.column, a.check_urls) else 0
     if not a.date:
