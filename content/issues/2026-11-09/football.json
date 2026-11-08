@@ -3,11 +3,11 @@
  "date": "2026-11-09",
  "title": "馬競先進球，Fermín 兩球讓巴薩逆轉",
  "dek": "30 分變 33 分。巴薩帶著榜首去過國際賽事週，領先皇馬 3 分、馬競 5 分。",
- "brief": "巴薩台灣時間週一（11 月 9 日）清晨在馬競家 2 比 1 逆轉，Fermín López 第 45 與第 66 分鐘各進一球，馬競的 Giuliano Simeone 第 10 分鐘先進。巴薩 33 分，領先皇馬 3 分、馬競 5 分；下一場 11 月 22 日（週日）台灣時間 21:00 回 Camp Nou 對比利亞雷亞爾。",
+ "brief": "巴薩台灣時間週一（11 月 9 日）清晨在馬競家 2 比 1 逆轉，Fermín López 上半場結束前（ESPN 記第 45 分鐘）與第 66 分鐘各進一球，馬競的 Giuliano Simeone 第 10 分鐘先進。巴薩 33 分，領先皇馬 3 分、馬競 5 分；下一場 11 月 22 日（週日）台灣時間 21:00 回 Camp Nou 對比利亞雷亞爾。",
  "topic_key": "football:2026-11-09",
  "form": "timeline",
  "voice": "fan",
- "updated_at": "2026-11-09T06:34:00+08:00",
+ "updated_at": "2026-11-09T06:38:00+08:00",
  "spoiler": null,
  "disclaimer": null,
  "next": {
@@ -48,7 +48,7 @@
   },
   {
    "type": "p",
-   "text": "贏是贏了，牢騷我先發。全場射門 19 比 9，控球 63%，射正卻兩邊一樣，各 4 腳。球多踢了一倍，進的只多一個。"
+   "text": "全場射門 19 比 9，控球 63%，射正兩邊一樣，各 4 腳。"
   },
   {
    "type": "timeline",
@@ -67,7 +67,7 @@
     {
      "when": "45'",
      "label": "Fermín 扳平",
-     "note": "1 比 1。"
+     "note": "1 比 1。ESPN、laliga.com 記 45'；Goal 影片稿記 43'。"
     },
     {
      "when": "66'",
@@ -75,9 +75,9 @@
      "note": "巴薩 2 比 1。"
     },
     {
-     "when": "90'+4'",
-     "label": "終場",
-     "note": "拉菲尼亞最後一腳任意球射高。"
+     "when": "終場前",
+     "label": "拉菲尼亞任意球",
+     "note": "拉菲尼亞的直接任意球射高，是終場前最後一次直接任意球。"
     }
    ]
   },
@@ -87,15 +87,15 @@
   },
   {
    "type": "p",
-   "text": "先替馬競說句公道話。他們的前鋒阿爾瓦雷斯（Julián Álvarez）第 6 分鐘就單刀面對巴薩門將 Joan García，想繞過去，被 García 逼到邊上。後來一腳射門穿過 García 胯下，又被他在後面撿了起來。第 55 分鐘再一次單刀，這回阿爾瓦雷斯挑射，球飛過橫樑，主場有些球迷不高興。兩次單刀，一球沒進。"
+   "text": "先替馬競說句公道話。馬競的阿爾瓦雷斯（Julián Álvarez）第 6 分鐘單刀面對巴薩門將 Joan García，被 García 逼到邊上。還有一腳射門穿過 García 胯下，球被撿了起來。第 55 分鐘再一次單刀，阿爾瓦雷斯挑射，球飛過橫樑，主場有些球迷不高興。兩次單刀，一球沒進。"
   },
   {
    "type": "p",
-   "text": "我們這邊也有人要挨罵。坎塞洛（João Cancelo）這一晚不好過，Goal 點名他一次失誤，給了阿爾瓦雷斯機會。"
+   "text": "我們這邊也有人要挨罵。Goal 點名坎塞洛（Cancelo）一次失誤，讓阿爾瓦雷斯有了機會。"
   },
   {
    "type": "p",
-   "text": "馬競那一球在第 10 分鐘：阿爾瓦雷斯從左路傳中，馬競的 Giuliano Simeone 在門前近距離右腳推進。在那之前，兩邊的橫樑各挨了一下，先是馬競的 Marc Pubill 角球後頭槌，再來是佩德里（Pedri）接亞馬爾（Lamine Yamal）的傳球左腳射門。"
+   "text": "馬競那一球在第 10 分鐘：阿爾瓦雷斯從左路傳中，馬競的 Giuliano Simeone 近距離右腳推進。在那之前，兩邊的橫樑各挨了一下，先是馬競的 Marc Pubill 角球後頭槌，再來是佩德里（Pedri）接亞馬爾（Lamine Yamal）的傳球左腳射門。"
   },
   {
    "type": "h",
@@ -103,31 +103,31 @@
   },
   {
    "type": "p",
-   "text": "進球兩分鐘後，比賽停了大約一分鐘，場上放影片，全場鼓掌。這是給 **Jesús de Miguel** 的：西班牙乙級特內里費（CD Tenerife）的前鋒，背號 9。他在對安道爾（Andorra）的比賽中被對方門將撞到，送醫，隔天 11 月 3 日（週二）過世。這一輪西甲每一場都在致哀。"
+   "text": "進球兩分鐘後，比賽停了大約一分鐘，場上放影片，全場鼓掌。這是給 **Jesús de Miguel** 的：西班牙乙級特內里費（CD Tenerife）的前鋒，背號 9。他在對安道爾（Andorra）的比賽中被對方門將撞擊，送醫，11 月 3 日（週二）過世。這一輪西甲每一場都在致哀。"
   },
   {
    "type": "p",
-   "text": "巴薩官網說，原本要在第 9 分鐘停，對著他的背號，偏偏那一刻 Simeone 進球，只好往後挪幾分鐘。賽前兩隊球員和裁判一起進場，上衣印著「Siempre en nuestro recuerdo」（永遠在我們的記憶中）和 9 號，兩隊隊長在中圈獻花，默哀一分鐘，球員戴黑袖章。"
+   "text": "巴薩官網說，原本要在第 9 分鐘停，對著他的背號，但那一刻剛好是 Simeone 進球，所以改到幾分鐘後。賽前兩隊球員和裁判一起進場，上衣印著「Siempre en nuestro recuerdo」（永遠在我們的記憶中，本報自譯）和 9 號，兩隊隊長在中圈獻花，默哀一分鐘，球員戴黑袖章。"
   },
   {
    "type": "h",
-   "text": "Fermín 的第 100 場"
+   "text": "Fermín 的雙響"
   },
   {
    "type": "p",
-   "text": "巴薩上半場一直在敲門：Fermín 一腳被擋，亞馬爾切進去，逼得馬競門將 Oblak 出手。上半場快結束，佩德里發動一波，球擦過 Pubill 折射，落到禁區裡 Fermín 腳邊，他近距離左腳打進右下角，1 比 1。"
+   "text": "巴薩上半場也有機會：Fermín 一腳被擋，亞馬爾切入，逼得馬競門將 Oblak 出手。上半場快結束，佩德里發動一波，球經 Pubill 折射，Fermín 在禁區近距離左腳打進右下角，1 比 1。"
   },
   {
    "type": "p",
-   "text": "中場休息，弗利克動了右後衛。這場先發右後衛是 Fariñas（Brian Fariñas），德容（Frenkie de Jong）坐板凳，這個安排我看名單時沒想到。下半場德容換下 Fariñas，補的就是那個位置。先發名單只換了一個人：Bernal 頂替受傷的羅德里。"
+   "text": "中場休息，弗利克動了右後衛。這場先發右後衛是 Fariñas（Brian Fariñas），德容（Frenkie de Jong）坐板凳；中場休息德容換下 Fariñas，補的就是那個位置。官網說，先發名單只換一人：Bernal 頂替受傷的羅德里。"
   },
   {
    "type": "p",
-   "text": "第 66 分鐘，亞馬爾在中路一記直傳，Fermín 在禁區中路右腳打正中，2 比 1。兩個球，一個佩德里起頭，一個亞馬爾送到腳下，Fermín 兩次都站在對的地方。統計帳號 Mister Chip 說，這是 Fermín 的西甲第 100 場；巴薩球員在西甲第 100 場進兩球以上，他之前只有 Kubala（1956）、Eladio（1966）、Rivaldo（1999）。"
+   "text": "第 66 分鐘，亞馬爾直傳，Fermín 在禁區右腳打正中，2 比 1。Goal 轉引統計帳號 Mister Chip：這是他的西甲第 100 場；巴薩球員在西甲第 100 場進兩球以上，他之前只有 Kubala（1956）、Eladio（1966）、Rivaldo（1999）。"
   },
   {
    "type": "p",
-   "text": "領先之後，官網的說法是巴薩穩穩把比賽握在手上。第 83 分鐘亞馬爾接戈登（Anthony Gordon）的傳中，差一點就 3 比 1。馬競最後吃了四張黃牌，巴薩一張。補時 4 分鐘，最後一腳是拉菲尼亞（Raphinha）的直接任意球，射高了。這種贏法不好看，我照收。"
+   "text": "領先之後，官網說最後階段巴薩穩穩掌控。第 83 分鐘亞馬爾接戈登（Gordon）的傳中，差一點就 3 比 1。馬競最後吃了四張黃牌，巴薩一張。補時 4 分鐘，終場前最後一次直接任意球是拉菲尼亞（Raphinha）的，射高了。"
   },
   {
    "type": "h",
@@ -190,20 +190,12 @@
   },
   {
    "type": "p",
-   "text": "這張表要擺兩個禮拜。國際賽事週，西甲停賽，下一輪 11 月 22 日才踢。"
+   "text": "國際賽事週西甲停賽，巴薩下一場 11 月 22 日才踢。"
   },
   {
    "type": "news",
    "title": "歐洲足壇速覽",
    "items": [
-    {
-     "headline": "曼聯 4 比 4 維拉之後，卡里克說自己該留任",
-     "summary": "曼聯兩度落後兩球，補時靠 Zirkzee 和 Dorgu 追平，聯賽只贏過一場，仍在降級區。教頭卡里克（Michael Carrick）賽後被問到自己是不是該繼續帶隊，回答 \"Yeah, 100%, yeah\"；Sky Sports 問他會不會考慮辭職，他說 \"That's not going to happen.\"。曼聯下一場是 11 月 22 日，客場去安菲爾德（Anfield）對利物浦。",
-     "source": "ESPN",
-     "url": "https://www.espn.com/soccer/story/_/id/50423657/michael-carrick-man-united-future",
-     "when": "11 月 8 日（週日）",
-     "place": "GB"
-    },
     {
      "headline": "佛羅倫斯 2 比 2 尤文圖斯，Bremer 角球後追平",
      "summary": "佛羅倫斯 Pellegrino 第 4 分鐘頭槌先進，Woltemade 第 32 分鐘追平；Njie 第 54 分鐘讓佛羅倫斯再度領先，尤文的 Bremer 第 66 分鐘在角球後近距離再扳平。尤文 11 場 18 分，排義甲第 7。",
@@ -213,8 +205,8 @@
      "place": "IT"
     },
     {
-     "headline": "朗斯 1 比 2 馬賽，Abdallah 第 82 分鐘絕殺",
-     "summary": "馬賽 Gouiri 第 2 分鐘先進，朗斯的 Thauvin 第 20 分鐘頭槌扳平；Keyliane Abdallah 第 82 分鐘右腳近距離破門。馬賽 10 場 18 分，排法甲第 4，巴黎聖日耳曼 23 分居首。",
+     "headline": "朗斯 1 比 2 馬賽，Abdallah 第 82 分鐘進球",
+     "summary": "馬賽 Gouiri 第 2 分鐘先進，朗斯的 Thauvin 第 20 分鐘頭槌扳平；Keyliane Abdallah 第 82 分鐘右腳從小禁區右側打進右下角。馬賽 10 場 18 分，排法甲第 4，巴黎聖日耳曼 23 分居首。",
      "source": "ESPN",
      "url": "https://www.espn.com/soccer/match/_/gameId/401876404",
      "when": "11 月 8 日（週日）",
@@ -237,26 +229,10 @@
      "place": "GB"
     },
     {
-     "headline": "諾伊爾右腳受傷，拜仁沒說要休多久",
-     "summary": "拜仁 11 月 8 日聲明，門將諾伊爾（Manuel Neuer）在前一天 2 比 1 贏美因茲時右腳受傷，「暫時」無法出賽，沒有給復出日期。替補上場的 Urbig 今年 23 歲，與諾伊爾本季聯賽各出賽 5 場。",
+     "headline": "曼聯卡里克賽後說自己該留任",
+     "summary": "曼聯 4 比 4 平維拉後，聯賽只贏過一場，仍在降級區。教頭卡里克（Michael Carrick）賽後被問到自己是不是該繼續帶隊，回答 \"Yeah, 100%, yeah\"；Sky Sports 問他會不會考慮辭職，他說 \"That's not going to happen.\"。曼聯下一場是 11 月 22 日，客場去安菲爾德（Anfield）。",
      "source": "ESPN",
-     "url": "https://www.espn.com/soccer/story/_/id/50419800",
-     "when": "11 月 8 日（週日）",
-     "place": "DE"
-    },
-    {
-     "headline": "利物浦 3 比 1 水晶宮，Wirtz 本季英超第一球",
-     "summary": "Mac Allister 第 40 分鐘頭球先進，Wirtz 第 54 分鐘、Isak 第 89 分鐘跟上；水晶宮的 Nketiah 補時第 5 分鐘罰球扳回一球。利物浦升到第 4（18 分），水晶宮 10 場 7 分墊底。",
-     "source": "ESPN",
-     "url": "https://www.espn.com/soccer/story/_/id/50393731",
-     "when": "11 月 8 日（週日）",
-     "place": "GB"
-    },
-    {
-     "headline": "桑德蘭 1 比 0 切爾西，8 月之後第一場聯賽勝",
-     "summary": "Enzo Le Fée 第 36 分鐘罰進點球，起因是 Colwill 在禁區放倒 Brobbey。桑德蘭離開墊底，排第 19；切爾西輸掉本季第 4 場聯賽，掉出前四。",
-     "source": "ESPN",
-     "url": "https://www.espn.com/soccer/story/_/id/50393742",
+     "url": "https://www.espn.com/soccer/story/_/id/50423657/michael-carrick-man-united-future",
      "when": "11 月 8 日（週日）",
      "place": "GB"
     }
@@ -268,7 +244,7 @@
   },
   {
    "type": "p",
-   "text": "下一場 11 月 22 日（週日）台灣時間 21:00，回 Spotify Camp Nou 踢西甲第 13 輪，對手比利亞雷亞爾（Villarreal）。接著 11 月 25 日歐冠客場去亞塞拜然打 Sabah（台灣 26 日 01:45），29 日去拉科魯尼亞體育會（Deportivo de La Coruña）的主場 Riazor；12 月 2 日馬競回訪 Camp Nou，台灣時間 12 月 3 日 04:30。"
+   "text": "下一場 11 月 22 日（週日）台灣時間 21:00，回 Spotify Camp Nou 踢西甲第 13 輪，對手比利亞雷亞爾（Villarreal）。接著 11 月 25 日歐冠客場去巴庫（Baku）打 Sabah（台灣 26 日 01:45），29 日去拉科魯尼亞體育會（Deportivo de La Coruña）的主場 Riazor；12 月 2 日馬競回訪 Camp Nou，台灣時間 12 月 3 日 04:30。"
   }
  ],
  "sources": [
@@ -277,7 +253,14 @@
    "publisher": "FC Barcelona",
    "date": "2026-11-09",
    "url": "https://www.fcbarcelona.com/en/football/first-team/news/4606439/atletico-madrid-1-2-fc-barcelona-comeback-to-stay-top",
-   "note": "官網賽後報導（作者 Mike Roberts）：Bernal 頂替受傷的羅德里、開場阿爾瓦雷斯單刀被 Joan García 擋、德容換 Fariñas 補右後衛、83' 亞馬爾差一點進、最後階段輕鬆；報導寫第二球 67 分鐘，ESPN 與 laliga.com 記 66'，正文用 66'；頁面只標 13 mins ago，台灣時間 11 月 9 日約 06:01 刊出"
+   "note": "官網賽後報導（作者 Mike Roberts）：Bernal 頂替受傷的羅德里、開場阿爾瓦雷斯單刀被 Joan García 擋、德容換 Fariñas 補右後衛、83' 亞馬爾差一點進、最後階段巴薩穩穩掌控；報導寫第二球 67 分鐘，ESPN 與 laliga.com 記 66'，正文用 66'；頁面只標 13 mins ago，台灣時間 11 月 9 日約 06:01 刊出"
+  },
+  {
+   "title": "File:Pedri Argentina v Spain 19 July 2026-164.jpg",
+   "publisher": "Wikimedia Commons",
+   "date": "2026-07-19",
+   "url": "https://commons.wikimedia.org/wiki/File:Pedri_Argentina_v_Spain_19_July_2026-164.jpg",
+   "note": "hero 圖：Bryan Berlin 拍攝，CC BY-SA 4.0；資料照片，非當日比賽畫面"
   },
   {
    "title": "López double leads Barcelona past Atleti to go clear atop LaLiga",
@@ -333,7 +316,7 @@
    "publisher": "ESPN",
    "date": "2026-11-05",
    "url": "https://www.espn.com/soccer/story/_/id/50383582/medical-official-pitchside-emergency-upgrades-de-miguel-death",
-   "note": "Jesús de Miguel：特內里費前鋒，與安道爾比賽中被對方門將撞擊，隔天（週二）過世"
+   "note": "Jesús de Miguel：特內里費前鋒，與安道爾比賽中被對方門將撞擊，送醫，11 月 3 日（週二）過世"
   },
   {
    "title": "PREVIEW | Atlético v Barça",
@@ -343,25 +326,18 @@
    "note": "弗利克賽前談話引文；12 月 2 日馬競回訪因西班牙超級盃提前；頁面只標 9 hrs ago，日期依新聞列表"
   },
   {
-   "title": "The squad for Atlético v Barça",
-   "publisher": "FC Barcelona",
-   "date": "2026-11-08",
-   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4606030/the-squad-for-atletico-madrid-v-fc-barcelona",
-   "note": "埃里克與克里斯滕森傷癒回到名單"
-  },
-  {
    "title": "LaLiga standings 2026/27",
    "publisher": "ESPN",
    "date": "2026-11-09",
    "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
-   "note": "賽後積分榜前五名，11 月 9 日 06:27 讀取：巴薩 12 場 33 分 +35、皇馬 30、馬競 28、貝蒂斯 26、皇家社會 22"
+   "note": "賽後積分榜前五名，11 月 9 日 06:27 讀取（06:37 以 API 再核對）：巴薩 12 場 11-0-1 +35 33 分、皇馬 10-0-2 +21 30 分、馬競 9-1-2 +13 28 分、貝蒂斯 8-2-2 +5 26 分、皇家社會 7-1-4 +1 22 分"
   },
   {
    "title": "First Team Schedule",
    "publisher": "FC Barcelona",
    "date": "2026-11-09",
    "url": "https://www.fcbarcelona.com/en/football/first-team/schedule",
-   "note": "頁面標示「All times in peninsular Spain time」：11 月 22 日 14:00 西甲第 13 輪 Camp Nou 對比利亞雷亞爾；11 月 25 日 18:45 Sabah；11 月 29 日 16:15 Riazor；12 月 2 日 21:30 馬競；11 月 9 日 06:00 讀取"
+   "note": "頁面標示「All times in peninsular Spain time」：11 月 22 日 14:00 西甲第 13 輪 Camp Nou 對比利亞雷亞爾；11 月 25 日 18:45 Sabah；11 月 29 日 16:15 Riazor；12 月 2 日 21:30 馬競；11 月 9 日 06:00 讀取；賽程頁列 Sabah 場地為 Baku Olympic Stadium、對手 Deportivo de La Coruña（Riazor）"
   },
   {
    "title": "FC Barcelona vs Villarreal CF, matchday 13",
@@ -371,25 +347,11 @@
    "note": "22 日 13:00（英國時間頁面，未標時區，與官網 14:00 西班牙時間相差一小時，兩者一致）、Spotify Camp Nou"
   },
   {
-   "title": "Villarreal vs Getafe, match summary",
-   "publisher": "ESPN",
-   "date": "2026-11-08",
-   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882807",
-   "note": "2 比 0；Buchanan 80'、Carlos Romero 90'+1'"
-  },
-  {
    "title": "Man United in relegation zone, but Michael Carrick insists: I deserve to keep job",
    "publisher": "ESPN",
    "date": "2026-11-08",
    "url": "https://www.espn.com/soccer/story/_/id/50423657/michael-carrick-man-united-future",
    "note": "卡里克賽後記者會與 Sky Sports 訪問的原話；聯賽只贏一場、11 月 22 日安菲爾德"
-  },
-  {
-   "title": "Man United rescue 4-4 draw vs. Aston Villa but remain in relegation zone",
-   "publisher": "ESPN",
-   "date": "2026-11-08",
-   "url": "https://www.espn.com/soccer/story/_/id/50421297",
-   "note": "4 比 4、兩度落後兩球、補時進球"
   },
   {
    "title": "Fiorentina vs Juventus, match summary",
@@ -432,34 +394,6 @@
    "date": "2026-11-08",
    "url": "https://www.espn.com/soccer/story/_/id/50422908/leeds-jayden-bogle-racist-abuse",
    "note": "利茲聲明、熱刺回應、英超在 X 上的說法"
-  },
-  {
-   "title": "Bayern Munich's Manuel Neuer set for spell on sidelines with foot injury",
-   "publisher": "ESPN",
-   "date": "2026-11-08",
-   "url": "https://www.espn.com/soccer/story/_/id/50419800",
-   "note": "拜仁聲明：右腳部分肌腱撕裂、暫時缺陣、未給時間；Urbig 與諾伊爾本季各 5 場聯賽"
-  },
-  {
-   "title": "Alexander Isak, Florian Wirtz-inspired Liverpool beat poor Crystal Palace 3-1",
-   "publisher": "ESPN",
-   "date": "2026-11-08",
-   "url": "https://www.espn.com/soccer/story/_/id/50393731",
-   "note": "進球與經過；進球分鐘依 ESPN 比賽紀錄；排名依 ESPN 英超積分榜（11 月 9 日讀取）"
-  },
-  {
-   "title": "Chelsea fall to defeat at PL strugglers Sunderland after Enzo Le Fée penalty",
-   "publisher": "ESPN",
-   "date": "2026-11-08",
-   "url": "https://www.espn.com/soccer/story/_/id/50393742",
-   "note": "Le Fée 第 36 分鐘點球、桑德蘭 8 月之後首場聯賽勝、切爾西第 4 場聯賽敗、掉出前四"
-  },
-  {
-   "title": "Premier League standings 2026/27",
-   "publisher": "ESPN",
-   "date": "2026-11-09",
-   "url": "https://site.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
-   "note": "利物浦第 4（18 分）、桑德蘭第 19、水晶宮第 20（7 分）"
   }
  ]
 }
