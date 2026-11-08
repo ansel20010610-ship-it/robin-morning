@@ -6,7 +6,12 @@ article file content/issues/<date>/serial.json written ahead of time by the week
 
   python3 scripts/serial.py fetch <slug>            # download the chapters listed in the plan's `chapters` (Wikisource)
   python3 scripts/serial.py split <slug>            # cut the chapters into installments (~TARGET words each) and date them
-  python3 scripts/serial.py status [<slug>]         # which installments are due, which are on disk, how many days ahead
+  python3 scripts/serial.py status [<slug>]         # which installments are due, which are on disk, how many days ahead;
+                                                    #   warns (⚠) when a book is within 30 installments of its end and
+                                                    #   no next plan exists, and says so when the whole book is translated
+  python3 scripts/serial.py horizon [<slug>]        # only that warning line; exit 2 when the owner's attention is needed
+                                                    #   (the 稽核 and watch.yml read it; `status` itself always exits 0,
+                                                    #   because the 連載班 reads its text, not its exit code)
   python3 scripts/serial.py src <slug> <n>          # print installment n's source text (for a translator)
   python3 scripts/serial.py check <slug> [<n>]      # the serial-specific checks of the translated file(s)
 """
@@ -327,15 +332,75 @@ def ends_label(e):
     return {"book": "（全書完）", "part": "（卷末）", "chapter": "（章末）"}.get(e, "")
 
 
+def all_slugs():
+    return sorted(f[:-5] for f in os.listdir(STATE) if f.endswith(".json")) if os.path.isdir(STATE) else []
+
+
+def due_on(d):
+    """(slug, plan, installment) for the installment dated d in any plan, or None: nothing is due before a book starts
+    or after it ends. plan_day.py prints the day's 連載 line from this."""
+    for s in all_slugs():
+        plan = load_plan(s)
+        for i in plan.get("installments", []):
+            if i["date"] == str(d):
+                return s, plan, i
+    return None
+
+
+def missing_due(plan, t=None):
+    """The installments due within the plan's `ahead` days of t that have no file yet (the 連載班's work list)."""
+    t = t or today()
+    due = [i for i in plan.get("installments", []) if dt.date.fromisoformat(i["date"]) <= t + dt.timedelta(days=plan.get("ahead", 21))]
+    return [i for i in due if not os.path.exists(issue_file(i["date"]))]
+
+
+HORIZON = 30  # untranslated installments left when the owner is asked to choose the next book
+
+
+def next_plan(slug, plan):
+    """Another plan in state/serial/ that starts after this book's last installment: the next book, if it is prepared."""
+    inst = plan.get("installments", [])
+    last = inst[-1]["date"] if inst else plan.get("start", "")
+    for s in all_slugs():
+        if s == slug:
+            continue
+        other = load_plan(s)
+        if other.get("start", "") > last:
+            return other
+    return None
+
+
+def horizon_line(slug, plan):
+    """(line, attention) about the end of the book. A book is a date the system can see coming (the owner was never
+    told, 2026-11-08 review): with HORIZON installments or fewer left to translate and no next plan prepared, the
+    owner has to choose the next book — editorial/columns/serial.md 換書; once every installment is translated and
+    nothing follows, the serial goes quiet on the day after the last one unless someone acts. None when nothing is
+    worth saying."""
+    inst = plan.get("installments", [])
+    if not inst:
+        return None
+    left = sum(1 for i in inst if not os.path.exists(issue_file(i["date"])))
+    nxt = next_plan(slug, plan)
+    last = inst[-1]["date"]
+    if left == 0:
+        if nxt:
+            return "《%s》全書已譯完，刊到 %s；下一本《%s》從 %s 接上" % (plan["title"], last, nxt["title"], nxt["start"]), False
+        return "《%s》全書已譯完，刊到 %s；下一本待定，請社長決定（見 editorial/columns/serial.md 換書）" % (plan["title"], last), True
+    if left <= HORIZON:
+        if nxt:
+            return "《%s》還剩 %d 回沒譯，最後一回 %s 刊出；下一本《%s》從 %s 接上" % (plan["title"], left, last, nxt["title"], nxt["start"]), False
+        return "⚠ 《%s》還剩 %d 回沒譯，最後一回 %s 刊出，還沒有下一本：請社長決定（見 editorial/columns/serial.md 換書）" % (plan["title"], left, last), True
+    return None
+
+
 def status(slug=None):
-    slugs = [slug] if slug else sorted(f[:-5] for f in os.listdir(STATE) if f.endswith(".json"))
+    slugs = [slug] if slug else all_slugs()
     t = today()
     for s in slugs:
         plan = load_plan(s)
         inst = plan.get("installments", [])
         have = [i for i in inst if os.path.exists(issue_file(i["date"]))]
-        due = [i for i in inst if dt.date.fromisoformat(i["date"]) <= t + dt.timedelta(days=plan.get("ahead", 21))]
-        missing = [i for i in due if not os.path.exists(issue_file(i["date"]))]
+        missing = missing_due(plan, t)
         last = max((dt.date.fromisoformat(i["date"]) for i in have), default=None)
         print("%s《%s》：共 %d 回，%s 開始；已譯 %d 回%s；%d 天前置目標；缺 %d 回" % (
             s, plan["title"], len(inst), plan["start"], len(have),
@@ -347,14 +412,28 @@ def status(slug=None):
             check_one(plan, i, lambda m, i=i: errs.append("第 %d 回（%s）：%s" % (i["n"], i["date"], m)))
         for e in errs:
             print("  ERROR " + e)
-        if not missing and not errs:
+        h = horizon_line(s, plan)
+        if h:
+            print("  " + h[0])
+        if not missing and not errs and not (h and len(have) == len(inst)):
             print("  都齊了。")
     return 0
 
 
+def horizon(slug=None):
+    """Only the end-of-book line(s); exit 2 when the owner has to decide."""
+    attention = False
+    for s in [slug] if slug else all_slugs():
+        h = horizon_line(s, load_plan(s))
+        if h:
+            print(h[0])
+            attention = attention or h[1]
+    return 2 if attention else 0
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["fetch", "split", "status", "src", "check"])
+    ap.add_argument("cmd", choices=["fetch", "split", "status", "horizon", "src", "check"])
     ap.add_argument("slug", nargs="?")
     ap.add_argument("n", nargs="?", type=int)
     a = ap.parse_args()
@@ -364,6 +443,8 @@ def main():
         split(a.slug)
     elif a.cmd == "status":
         status(a.slug)
+    elif a.cmd == "horizon":
+        sys.exit(horizon(a.slug))
     elif a.cmd == "src":
         with open(os.path.join(STATE, a.slug, "src", "%03d.json" % a.n), encoding="utf-8") as f:
             e = json.load(f)

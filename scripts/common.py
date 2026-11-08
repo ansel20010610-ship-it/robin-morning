@@ -74,8 +74,12 @@ def column_meta(cfg, col, d=None):
 
 def active(cfg, col, d):
     """Whether the column runs on day d: from its `since` (a new column is not missing before it starts) to its `until`
-    (a retired column keeps its past issues in the app, but is no longer expected, written or stocked)."""
-    meta = cfg["columns"].get(col, {})
+    (a retired column keeps its past issues in the app, but is no longer expected, written or stocked). A column
+    config.json does not know is never active: a code misspelt in rotation_by_weekday used to pass here and become an
+    expected column nothing could write (check_config reports the misspelling itself)."""
+    meta = cfg["columns"].get(col)
+    if meta is None:
+        return False
     return meta.get("since", "") <= str(d) <= meta.get("until", "9999-12-31")
 
 
@@ -102,6 +106,113 @@ def watch_columns(cfg):
     """The conditional columns (group "watch": fm-watch, cosmere-watch, obituary): published only when there is
     something to report, never expected, never stocked."""
     return [k for k, v in cfg["columns"].items() if v.get("group") == "watch"]
+
+
+# Each watch column keeps its check log in state/watch/<file>: one line per issue day, "- <date> 已查（…）：…", written
+# by the shift that checked (editorial/columns/*.md). The owner's rule (2026-11-08): 沒有寫紀錄就不算查過 — a shift that
+# reports 靜默 without a line here has not checked. config.json's watch entries do not name the file, so the map lives
+# here, where plan_day.py, late.py and validate.py can share it.
+WATCH_STATE = {"fm-watch": "fm27.md", "cosmere-watch": "cosmere.md", "obituary": "obituary.md"}
+WATCH_DIR = os.path.join(ROOT, "state", "watch")
+
+
+def watch_checked(col, d):
+    """Whether watch column `col` was checked for issue day d: either an article (update or undetermined) exists for
+    that day, or its log in state/watch/ has a line containing "<d> 已查" (the current format of all three files is
+    "- <d> 已查（刊期 …）：…"). Reads only; the log is written by the shift itself."""
+    if os.path.exists(article_path(d, col)):
+        return True
+    fn = WATCH_STATE.get(col)
+    if not fn:
+        return False
+    try:
+        with open(os.path.join(WATCH_DIR, fn), encoding="utf-8") as f:
+            needle = "%s 已查" % d
+            return any(needle in line for line in f)
+    except OSError:
+        return False
+
+
+def last_watch_article(col, d):
+    """The latest issue of watch column `col` before day d, as (date_str, article) — or None. plan_day.py uses it to
+    carry an undetermined short piece (查核失敗) over to the next shift, which must settle it."""
+    best = None
+    for day, c, p in iter_articles():
+        if c == col and day < str(d):
+            best = (day, p)
+    if not best:
+        return None
+    try:
+        return best[0], load_json(best[1])
+    except (OSError, ValueError):
+        return best[0], {}
+
+
+def check_config(cfg, today):
+    """Inconsistencies in content/config.json, as a list of sentences (empty when the file is sound). Run before
+    anything plans a day from it: a supplement left out of every rotation day silently never runs, and a code misspelt
+    in rotation_by_weekday was, before `active` learnt to refuse unknown columns, an expected column nobody could
+    write. The rules: every un-retired supplement appears in some rotation day; no day lists a code twice; every
+    rotation code exists and is a supplement; since/until/was.until are ISO dates with since ≤ until; from 2026-11-03
+    (three supplements a day, README) each of the next 14 days has exactly three active supplements; the main columns
+    active on a day have distinct orders. validate.py --config prints the same list."""
+    errs = []
+    cols = cfg.get("columns") or {}
+    rot = cfg.get("rotation_by_weekday") or {}
+
+    def iso(s):
+        try:
+            dt.date.fromisoformat(s)
+            return True
+        except (TypeError, ValueError):
+            return False
+
+    for code, meta in cols.items():
+        for k in ("since", "until"):
+            if k in meta and not iso(meta[k]):
+                errs.append("%s 的 %s 不是 YYYY-MM-DD：%r" % (code, k, meta[k]))
+        if iso(meta.get("since")) and iso(meta.get("until")) and meta["since"] > meta["until"]:
+            errs.append("%s 的 since（%s）晚於 until（%s）" % (code, meta["since"], meta["until"]))
+        was = meta.get("was")
+        if was is not None and (not isinstance(was, dict) or not iso(was.get("until"))):
+            errs.append("%s 的 was.until 不是 YYYY-MM-DD" % code)
+        if meta.get("group") == "main" and not isinstance(meta.get("order"), int):
+            errs.append("%s 是正刊欄，缺 order" % code)
+    for key in WEEKDAY_KEYS:
+        day = rot.get(key)
+        if not isinstance(day, list):
+            errs.append("rotation_by_weekday 缺 %s" % key)
+            continue
+        seen = set()
+        for code in day:
+            if code in seen:
+                errs.append("rotation_by_weekday.%s 重複列了 %s" % (key, code))
+            seen.add(code)
+            if code not in cols:
+                errs.append("rotation_by_weekday.%s 的 %s 不在 columns 裡" % (key, code))
+            elif cols[code].get("group") != "supplement":
+                errs.append("rotation_by_weekday.%s 的 %s 不是副刊（group %s）" % (key, code, cols[code].get("group")))
+    listed = {c for day in rot.values() if isinstance(day, list) for c in day}
+    for code, meta in cols.items():
+        if meta.get("group") == "supplement" and "until" not in meta and code not in listed:
+            errs.append("副刊 %s 沒有排進任何一天的 rotation_by_weekday" % code)
+    if errs:
+        return errs  # the day-by-day checks below would only repeat the same fault fourteen times
+    for i in range(14):
+        d = today + dt.timedelta(days=i)
+        if str(d) >= "2026-11-03":
+            supp = supplements_for(cfg, d)
+            if len(supp) != 3:
+                errs.append("%s（星期%s）有 %d 個副刊在刊（%s），應為 3 個" % (d, WEEKDAY_ZH[d.weekday()], len(supp), "、".join(supp) or "無"))
+        orders = {}
+        for code, meta in cols.items():
+            if meta.get("group") == "main" and active(cfg, code, d):
+                orders.setdefault(meta.get("order"), []).append(code)
+        for o, codes in orders.items():
+            msg = "正刊 order %s 重複：%s（%s 起）" % (o, "、".join(codes), d)
+            if len(codes) > 1 and not any(e.startswith(msg.split("（")[0]) for e in errs):
+                errs.append(msg)
+    return errs
 
 
 def reserve_columns(cfg):
