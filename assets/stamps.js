@@ -70,7 +70,7 @@ export function stampHtml(issue, { earned = false, open = false, href = null, i 
   const date = issue?.date || "", [y, m, d] = date.split("-").map(Number);
   // 創刊紀念郵票 (the owner, 2026-11-08: 特別浮誇好看): No. 1 has its own issue — gold-foil paper with a sheen, a huge
   // faint 1 behind the picture, band and laurel round it, ERSTAUSGABE on a wine ribbon under the picture and the
-  // issuer's name along the foot; it stands straight, glows, and takes a row of the album to itself (style.css .stamp.erst).
+  // issuer's name along the foot; it stands straight and glows, at the album's ordinary size (style.css .stamp.erst).
   const erst = Number(issue?.no) === 1;
   const h = hash(date), frame = erst ? 4 : h % 6, tint = erst ? 5 : (h >>> 8) % 5, tilt = erst ? 0 : (((h >>> 16) % 5) - 2) * .6;
   const day = Number.isFinite(d) ? `${d}. ${roman(m)}.` : "", wd = date ? fmtDate(date, "de").split(",")[0] : "";

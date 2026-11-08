@@ -1818,8 +1818,8 @@ details.band .svl { margin: 0 0 10px; }
   @keyframes esun { to { transform: rotate(360deg); } }
 }
 /* 創刊紀念郵票 (stamps.js, erst): gold-foil paper with a slow sheen, a huge faint 1 behind the picture, the number and the
-   year in wine, ERSTAUSGABE on a wine ribbon under the picture, the issuer along the foot; it glows, stands straight, and
-   takes a row of the album to itself. */
+   year in wine, ERSTAUSGABE on a wine ribbon under the picture, the issuer along the foot; it glows and stands straight,
+   at the same size as the other days (the owner, 2026-11-08: 郵票冊裡大小正常就好). */
 .stamp.erst { --s-paper: #E9D28F; --s-gold: #7A5A1E; filter: drop-shadow(0 2px 3px rgba(60, 45, 20, .35)) drop-shadow(0 0 14px rgba(214, 165, 66, .55)); }
 .stamp.erst .sp { background: linear-gradient(135deg, #F7E9B8 0%, #DEBE6A 26%, #F8ECC4 50%, #D9B560 74%, #F4E3AA 100%) 0 0 / 300% 300%; }
 .stamp.erst .sp::before { content: "1"; position: absolute; left: 50%; top: 55%; transform: translate(-50%, -50%); font-family: var(--latin); font-weight: 600; font-size: 118cqw; line-height: 1; color: #8A6420; opacity: .11; pointer-events: none; }
@@ -1833,7 +1833,6 @@ details.band .svl { margin: 0 0 10px; }
 .stamp.erst .foot b { font-size: 7cqw; }
 .stamp.erst .foot b { color: #6E2536; }
 .stamp.slot.erst .miss small { letter-spacing: .14em; padding-left: .14em; }
-.album .page .stamp.erst { grid-column: 1 / -1; width: 78%; justify-self: center; margin: 18px 0 8px; }
 @media (prefers-reduced-motion: no-preference) {
   .stamp.erst .sp { animation: erst-sheen 7s ease-in-out infinite alternate; }
   @keyframes erst-sheen { from { background-position: 0% 0%; } to { background-position: 100% 100%; } }
