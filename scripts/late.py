@@ -94,8 +94,10 @@ def unchecked(cfg, d):
     from common import load_json
     runs = runs_of(d)
     out = []
-    if "4" not in runs:
-        out += [c for c in watch_columns(cfg) if not watch_checked(c, d)]
+    # By the check record alone, not by whether shift 4 reported: a shift that reported 「靜默」 without writing the
+    # line (11-07 obituary) has not checked either (the owner, 2026-11-08: 沒有寫紀錄就不算查過) — same rule as
+    # plan_day --group 5.
+    out += [c for c in watch_columns(cfg) if not watch_checked(c, d)]
     if CONCERTS not in runs:
         try:
             checked = load_json(os.path.join(CONTENT, "concerts.json")).get("checked")

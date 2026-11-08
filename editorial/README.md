@@ -9,19 +9,19 @@
 | 1 | 00:37 | 一段經文，一篇禱告（devotion，不是文章，見 `columns/devotion.md`）、燈暗下來，聽一首名曲（music，古典欄）、診間裡站得住的證據（perio，牙周欄） |
 | 2 | 01:37 | 當日第 1 個與第 3 個副刊（2026-11-03 起每天三篇副刊） |
 | 3 | 02:37 | 當日第 2 個副刊；巴薩晨報**初稿**（football） |
-| 4 | 05:17 | FM 觀測站、迷霧之子與颶光影視化、訃聞（`columns/obituary.md`，2026-11-05 起）、巴薩晨報**更新**（前一晚比賽仍在進行就最後做）、天亮以前，世界與台灣（news，快訊，2026-11-02 起，本班最後寫，消息才新）；全刊驗收，補寫缺稿 |
-| 5 | 06:27 | 安全網：補寫一切缺稿（平行子代理）、巴薩晨報最後更新；**07:05 停手推送，接著執行備稿補位** |
-| 連 | 16:07 | 連載班：每天譯一回，把 `content/issues/<日期>/serial.json` 維持在 3 天後（見 `columns/serial.md`；不屬於當天製刊，製刊各班不碰它） |
+| 4 | 05:17 | FM 觀測站、迷霧之子與颶光影視化、訃聞（`columns/obituary.md`，2026-11-05 起）——每一站查完都要在 `state/watch/`（fm27.md、cosmere.md、obituary.md）寫一行「- <刊期> 已查（…）：…」，成稿也要寫，沒這一行 plan_day 就印「未查核」、下一班會重查；印出「前期無法判定」的先補查那一位——、巴薩晨報**更新**（前一晚比賽仍在進行就最後做）、天亮以前，世界與台灣（news，快訊，2026-11-02 起，本班最後寫，消息才新）；全刊驗收，補寫缺稿 |
+| 5 | 06:27 | 安全網：補寫一切缺稿（平行子代理）、巴薩晨報最後更新；**第 4 班沒留下查核紀錄的觀測站由本班接著查**（見「第 4、5 班」）；**07:05 停手推送，接著執行備稿補位** |
+| 連 | 16:07 | 連載班：每天譯一回，把 `content/issues/<日期>/serial.json` 維持在 3 天後（見 `columns/serial.md`；不屬於當天製刊，製刊各班不碰它）。結束一律 `report_run.py --group serial`；`serial.py status` 印出 ⚠（剩不到 30 回、還沒有下一本）或「下一本待定」時，回報第一行照抄 |
 | 備 | 14:37 | 備稿班：把備稿庫補到正刊每欄 2 篇、副刊每欄 1 篇，達標就不寫，一天最多 2 篇（見 `RESERVE.md`） |
 | 補 | 週日 15:07、17:07 | 週日補刊：只在週日凌晨額度用完、刊期沒出齊時動工（見下方「週日補刊」） |
-| 演 | 06:17 | 近期演出：更新首頁最下面的常設演出清單 `content/concerts.json`，趕在 07:30 出刊前推上去，和當天那期一起到讀者眼前（見 `columns/concerts.md`；不屬於刊期，不進驗收）。順手查「歷史上的今天」一則，寫進 `content/onthisday.json`（見 `columns/onthisday.md`） |
+| 演 | 06:17 | 近期演出：更新首頁最下面的常設演出清單 `content/concerts.json`，趕在 07:30 出刊前推上去，和當天那期一起到讀者眼前（見 `columns/concerts.md`；不屬於刊期，不進驗收）。順手查「歷史上的今天」一則，寫進 `content/onthisday.json`（見 `columns/onthisday.md`），還有時間就用 `onthisday.py missing` 補最近三天的空格。結束一律 `report_run.py --group concerts`（查核失敗、來不及也要回報，note 寫原因）：07:45 的監看靠它知道演出班有沒有跑 |
 
-07:05 第 5 班自己執行備稿補位；07:12、07:15、07:18、07:22 再由 GitHub Actions 補位（不經 AI，作為後備）；07:45 再檢查一次，仍有問題就開 GitHub issue 通知社長。副刊依星期輪替（`content/config.json` 的 `rotation_by_weekday`）：2026-11-03 起每天三篇（11-02 是兩篇）。2026-11-02 起的陣容：正刊四欄（諾坎普散場之後＝巴薩晨報、天亮以前，世界與台灣＝快訊、診間裡站得住的證據＝牙周欄、燈暗下來，聽一首名曲＝古典欄），副刊八欄各每週兩次（走進一件作品與推開一座古蹟的門輪流：週一、四作品，週二、五古蹟；歷史課本沒寫的那一半＝文明欄、書頁上劃線的那一句＝文學欄、咖啡館裡的思想實驗、經典何以不朽（每週三次）、不在計畫裡的知識、從零理解一個概念、一首詩，讀到最後一行＝詩欄（11-03 起）、至今沒有人知道答案＝謎題欄（11-04 起））。**欄名是讀者看到的；手冊與 routine 裡的「巴薩晨報」「快訊」「牙周欄」「古典欄」「文明欄」「文學欄」「FM 觀測站」是編輯部簡稱，對照見各 `columns/<code>.md` 第一行；讀者在首頁看到的觀測站區塊標題是「遠方有動靜」（2026-11-06 起）**；走進一幅畫、一格電影一張照片、小說的骨架、城市的第二層於 2026-11-01 停刊。欄位在 config.json 有 `since` 的，從那天起才算進刊期；停刊的欄位不要從 config.json 刪掉，加 `until`（最後一天），往期才看得到它的文章（例：tactics）。一欄改了意思的，舊的設定放在 `was` 裡（例：devotion 到 2026-10-31 是文章，之後只是經文與禱告）。
+07:05 第 5 班自己執行備稿補位；07:12、07:22 再由 GitHub Actions 補位（不經 AI，作為後備）；07:30 發出刊通知；07:45 再檢查一次，仍有問題就開 GitHub issue 通知社長。這三步由外電中繼（`.github/workflows/wire.yml`，每個整點可靠醒來）在 07:00 那一拍發動，GitHub 自己的排程只是備援（2026-11-08 它晚了三小時）；中午與晚上的提醒、週日傍晚的補刊檢查也走同一條路。副刊依星期輪替（`content/config.json` 的 `rotation_by_weekday`）：2026-11-03 起每天三篇（11-02 是兩篇）。2026-11-02 起的陣容：正刊四欄（諾坎普散場之後＝巴薩晨報、天亮以前，世界與台灣＝快訊、診間裡站得住的證據＝牙周欄、燈暗下來，聽一首名曲＝古典欄），副刊八欄各每週兩次（走進一件作品與推開一座古蹟的門輪流：週一、四作品，週二、五古蹟；歷史課本沒寫的那一半＝文明欄、書頁上劃線的那一句＝文學欄、咖啡館裡的思想實驗、經典何以不朽（每週三次）、不在計畫裡的知識、從零理解一個概念、一首詩，讀到最後一行＝詩欄（11-03 起）、至今沒有人知道答案＝謎題欄（11-04 起））。**欄名是讀者看到的；手冊與 routine 裡的「巴薩晨報」「快訊」「牙周欄」「古典欄」「文明欄」「文學欄」「FM 觀測站」是編輯部簡稱，對照見各 `columns/<code>.md` 第一行；讀者在首頁看到的觀測站區塊標題是「遠方有動靜」（2026-11-06 起）**；走進一幅畫、一格電影一張照片、小說的骨架、城市的第二層於 2026-11-01 停刊。欄位在 config.json 有 `since` 的，從那天起才算進刊期；停刊的欄位不要從 config.json 刪掉，加 `until`（最後一天），往期才看得到它的文章（例：tactics）。一欄改了意思的，舊的設定放在 `was` 裡（例：devotion 到 2026-10-31 是文章，之後只是經文與禱告）。
 
 ## 每班流程
 
 1. **確認任務**：`python3 scripts/plan_day.py --group <班號>`。會印出刊期日期、期數、本班欄位、全刊狀態。已存在且驗證通過的稿件**不要重寫**（巴薩晨報的更新除外，見下）。
-   **沒事就結束**：本班欄位都已存在且驗證通過，而且沒有其他任務（第 4 班的觀測站與巴薩更新、第 5 班的補位與巴薩更新、備稿班的庫存另計），就直接做第 11 步班次回報後結束，不必再讀規則檔——每次讀完整份手冊都很耗額度。
+   **沒事就結束**：本班欄位都已存在且驗證通過，而且沒有其他任務（第 4 班的觀測站與巴薩更新、第 5 班的補位、巴薩更新與「觀測站未查核」那一行、備稿班的庫存另計），就直接做第 11 步班次回報後結束，不必再讀規則檔——每次讀完整份手冊都很耗額度。plan_day 若印出「設定錯誤：」，不要寫稿，在回報第一行照抄給社長。
 2. **讀規則**（每次都讀，不憑記憶）：`editorial/STYLE.md`（先讀第〇、一節：聲音與機器腔黑名單）、`editorial/SCHEMA.md`、`editorial/IMAGES.md`、`editorial/LESSONS.md`（編輯部教訓，過去反覆出現的錯）、`editorial/columns/<欄位>.md`，以及 `editorial/examples/` 裡最接近本欄的一篇範文（新聞類看 football.md，學術類看 perio.md，其他看 philosophy.md）。
 3. **分工**：本班有兩篇以上時，用 Agent 工具為每一欄各派一個子代理**同時**撰寫。給子代理的指示要包含：專案路徑、日期、欄位、要先讀的規則檔、第 4–7 步、只寫自己那一個檔、不要 git commit。 **先替每篇指定文體**（`STYLE.md` 〇之四：跑 `python3 scripts/forms.py` 看最近各欄用過什麼，同一期不重複、同一欄不和前一篇相同、`scene` 一期最多一篇），聲腔照〇之四的記者表（每欄固定一位記者），粗體照〇之五（2–5 處），都寫進指示，子代理寫進稿件的 `"form"` 與 `"voice"`。你負責第 8–10 步。第 5 班一律平行。
    **模型分工（額度有限，照表指定，不要全部用最強的模型）**：用 Agent 工具派子代理時，一律帶 `model` 與 `effort` 參數：
@@ -65,7 +65,7 @@
     git add state/runs && git commit -m "<日期> 第 <班號> 班回報"
     git pull --rebase origin main && git push origin HEAD:main
     ```
-    07:45 的監看會檢查第 1–5 班都有回報；沒有回報代表該班沒跑完或推送失敗，會開 issue 通知社長。備稿班用 `--group reserve`。
+    07:45 的監看會檢查第 1–5 班、演出班、連載班都有回報；沒有回報代表該班沒跑完或推送失敗，會開 issue 通知社長。備稿班用 `--group reserve`，演出班 `--group concerts`，連載班 `--group serial`，週日補刊 `--group late`。
     **推送被拒（例如 403、沒有寫入權限）時**：不要只把修補檔留在對話裡，要在回報與結尾訊息的第一行寫明「推送失敗：<錯誤訊息>」，讓社長立刻看到。
     **手機通知（PushNotification）只在需要社長動手時才發**：推送被拒、07:05 仍有欄位缺稿且無備稿可補、同一個錯誤反覆出現而本班修不好。一句話寫明問題與要他做什麼。一切正常、或問題已自行解決，就**不要**發——各班都在深夜到清晨執行，例行的完成通知只會吵醒他。
 
@@ -79,12 +79,13 @@
 
 - `python3 scripts/plan_day.py --group 4`（或 5）會列出全刊缺稿與驗證失敗的稿件。
 - 先完成本班欄位，再依「主欄 → 副刊」的順序補寫缺稿；第 5 班用平行子代理同時補。
+- **第 5 班接觀測站**（社長 2026-11-08：補刊當然要觀測站，平日的安全網也一樣）：`plan_day.py --group 5` 把當天沒有查核紀錄的觀測站列為本班任務（「觀測站未查核：…」；判準是 `state/watch/` 當天有沒有「<日期> 已查」那一行或當天有沒有稿，不是第 4 班有沒有回報，所以第 4 班查過就不會重查）。每一站照 `columns/<欄>.md` 與第 4 班的做法查一次，查核紀錄照格式寫進 `state/watch/`，有新進展才成稿；前一期是「無法判定」的要收尾。**沒有寫紀錄就不算查過**，回報裡每站一句。
 - 第 5 班 **07:05** 一定要停手：確認所有子代理都已結束、不再寫檔，推送已完成的稿件。接著執行備稿補位：
   ```
   git pull --rebase origin main
   python3 scripts/fill_from_reserve.py <日期> || true
   git add -A content/issues/<日期> content/reserve content/rejected content/late.json
-  git commit -m "<日期>：以備稿補上缺稿"      # 沒有變更就略過
+  git commit -m "<日期>：以備稿補上缺稿（<補位附註>）"      # 沒有變更就略過；腳本結尾印出「補位附註」（過期字眼、連不上的來源）就附上，回報也寫
   git pull --rebase origin main && git push origin HEAD:main
   ```
   補位會從備稿庫刪除用掉的備稿，並把驗證失敗、已被替換的稿件移到 `content/rejected/`，所以這一步要 `git add -A` 這三個資料夾。
@@ -98,27 +99,31 @@
 - 下午：週日補刊 routine 在 15:07 執行（17:07 再跑一次，接續沒完成的）。流程同第 5 班（安全網），但日期一律用 `--date <當天>`（下午的預設日期是明天），不跑 `fill_from_reserve.py`、不動備稿；第 9 步（總編重寫、忠實度核對）照做，時間足夠。開工先 `python3 scripts/late.py start`，出齊後 `python3 scripts/late.py done`，各自 commit `content/late.json` 推送：App 會顯示「補刊中」，完成時 `notify.yml` 自動發出「補刊出爐了」通知。
 - 補刊也要接下那天沒跑的班（社長 2026-11-08：補刊有沒有查訃聞等觀測站，要說得出來）。額度用完時，第 4 班的觀測站與 06:17 的演出班多半也沒跑：
   - `state/runs/<日期>.json` 沒有 `"4"`：三個觀測站（fm-watch、cosmere-watch、obituary）照各自 `columns/*.md` 與第 4 班的做法各查核一次，查核紀錄照格式寫進 `state/watch/`（時間窗、查過的來源、判定），有新進展才成稿；**沒有寫紀錄就不算查過**，回報裡不可以寫「靜默」。
-  - `git log -1 --grep='近期演出 <日期>' origin/main` 沒有輸出：照 `columns/concerts.md` 的每天流程補做近期演出，照 `columns/onthisday.md` 補「歷史上的今天」，只改 `content/concerts.json`、`content/onthisday.json`、`state/concerts/`。
-  - 回報多寫兩行：每個觀測站一句（刊出／靜默，附時間窗），演出班有沒有補做。App 的印務室把補刊列為當天時間表的第六行（`state/runs` 的 `late` 條目）。
+  - 演出班沒跑（`state/runs/<日期>.json` 沒有 `concerts`，`content/concerts.json` 的 `checked` 不是當天，`content/onthisday.json` 也沒有當天）：照 `columns/concerts.md` 的每天流程補做近期演出，照 `columns/onthisday.md` 補「歷史上的今天」，只改 `content/concerts.json`、`content/onthisday.json`、`state/concerts/`，結束跑 `report_run.py --group concerts`。
+  - `python3 scripts/late.py status --date <日期>` 會把沒接的班列在「還沒接下沒跑的班」；`late.py done` 在這一行清空前會拒絕標記完成——程式把關，不靠記性。
+  - 回報多寫兩行：每個觀測站一句（刊出／靜默，附時間窗），演出班有沒有補做。App 的印務室把補刊列為當天時間表的一行（`state/runs` 的 `late` 條目）；演出班與連載班也在同一張時間表（`concerts`、`serial` 條目），只記有沒有回報。
+  - 17:07 那一趟：第一趟還在推稿（40 分鐘內有「週日補刊」的 commit、而且還沒 done）才讓路；第一趟已經停了就接手做完。真的寫不出來就跑 `python3 scripts/late.py giveup --date <日期>` 並推送 `content/late.json`：App 改口、手機收到一句話，傍晚的監看也會開 issue，不要讓它停在「補刊中」。
 - 不是週日，或每一班都有回報（缺稿是一般失敗，不是額度），照平常用備稿補位。
 - 最後跑 `python3 scripts/validate.py <日期>`，在回報中列出：已刊出、補了哪些、觀測站結果（刊出／靜默／無法判定）、仍缺哪些與原因。
 
 ## 備稿班
 
-依 `RESERVE.md`。先跑 `python3 scripts/reserve.py` 看各欄庫存；只補它列為「不足」的欄位（正刊每欄 2 篇、副刊每欄 1 篇），從庫存最少的開始，每次最多寫 2 篇，都達標就只處理「需修正」，沒有就回報結束，流程同上（含審稿子代理），驗證改用 `python3 scripts/validate.py --reserve --check-urls`，推送訊息用「備稿 <欄位>：<標題>」。
+依 `RESERVE.md`。先跑 `python3 scripts/reserve.py` 看各欄庫存；它列為「需修正」的備稿（有 ERROR，或不合現行規格：缺 form／voice、機器腔、出處類標籤、分類詞小標、沒有粗體、過期字眼）**不算庫存，先修這些再寫新稿**。只有一兩處機器腔或過期字眼的（「依我看」「換我」「目前」「最近」），直接改掉那幾個字、順手補上 form 與 voice 就算修好，不必重寫；整篇是舊規則的（「我的讀法」「重點來了」、出處類標籤、分類詞小標）才從庫存稿的正文與 sources 重建事實清單，依第 9 步派總編重寫（帶 forms.py 指定的 form 與該欄的 voice）。每天 2 篇的額度先用於修稿。然後只補它列為「不足」的欄位（正刊每欄 2 篇、副刊每欄 1 篇），從庫存最少的開始，每次最多寫 2 篇，全部達標且沒有需修正才直接回報結束，流程同上（含審稿子代理），驗證改用 `python3 scripts/validate.py --reserve --check-urls`，推送訊息用「備稿 <欄位>：<標題>」。
 
 ## 每週品質稽核（週日 15:37）
 
-1. 讀過去 7 期（`content/issues/` 最近 7 個日期）的全部稿件；每篇派一個審稿子代理（可平行，`model: sonnet`、`effort: high`），以懷疑的態度抽查關鍵事實、引文、圖片授權與規格。
-2. **事實錯誤**：還沒刊出的稿件（刊期在明天以後，或今天 07:30 以前）直接改正正文、補上來源，不加更正框——讀者第一次讀到就該是對的。已刊出的稿件不改寫原文，在該篇 `body` 末尾加一個 `callout` 區塊，`label` 為「更正（<稽核日期>）」，寫明哪裡錯、正確內容與來源，並在 `sources` 補上來源、把 `updated_at` 改成稽核時間。跑 `python3 scripts/validate.py <該日期> --column <欄位>` 確認沒有 ERROR。
+0. 先跑 `python3 scripts/late.py status --date <今天>`。印出「需要補刊」（當天還在補刊、或沒標記完成）時，**補刊優先用額度**：當天那期暫不抽查，先做其他六期與第 3、4 步，派審稿子代理前若 `git log -1 --grep='週日補刊完成' origin/main` 仍沒有今天的紀錄，就先做第 4、5 步等它；收尾前再查一次，完成了才補抽當天那期，沒完成就在回報寫「當天補刊未完成，未抽查」，下週把那一天一起抽。順手跑 `python3 scripts/serial.py horizon`，印出 ⚠ 或「下一本待定」就在回報裡告知社長。
+1. 讀過去 7 期（`content/issues/` 裡**日期 ≤ 今天**的最近 7 個日期：連載班提前譯好的未來資料夾不算一期；serial 跳過）的全部稿件；每篇派一個審稿子代理（可平行，`model: sonnet`、`effort: high`），以懷疑的態度抽查關鍵事實、引文、圖片授權與規格。
+2. **事實錯誤**：還沒刊出的稿件（刊期在明天以後，或今天 07:30 以前）直接改正正文、補上來源，不加更正框——讀者第一次讀到就該是對的。已刊出的稿件不改寫原文，在該篇 `body` 末尾加一個 `callout` 區塊，`label` 為「更正（<稽核日期>）」，寫明哪裡錯、正確內容與來源，並在 `sources` 補上來源、在頂層填 `corrected_at`（稽核時間，+08:00）；**`updated_at` 不動**——它是這篇的新聞截稿時間，巴薩晨報下一期的時間窗從它起算（2026-11-08 起；App 靠 `corrected_at` 重新下載、在卡片標「已更正」）。「已刊出」的定義：刊期在今天 07:30 以前，而且 `content/late.json` 當天不是補刊中（補刊完成前讀者還沒讀到）。跑 `python3 scripts/validate.py <該日期> --column <欄位>` 確認沒有 ERROR。
 3. **反覆出現的問題**（兩篇以上、或同一欄連續出現）：寫進 `editorial/LESSONS.md`，一條一個問題，附出現位置與正確做法。
 4. **古典欄清單**：跑 `python3 scripts/ledger.py --column music` 對照 `editorial/music-canon.md`，清單只剩不到 10 首沒寫時，照該檔末段的說明補上下一輪（由主流到進階，不要太冷門），在回報裡告知社長。
 5. 推送，訊息用「品質稽核 <日期>：更正 N 篇、新增教訓 M 條」，最後做班次回報（`--group audit`）。
 
 ## 不可以做的事
 
-- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`（每週品質稽核可以寫 `editorial/LESSONS.md`，並在古典欄清單快寫完時於 `editorial/music-canon.md` 補下一輪）、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/`、`content/rejected/`（只有備稿補位會寫）與 `state/`（但 `state/push/` 是出刊通知的裝置名單，不要動）。近期演出班只寫 `content/concerts.json`、`content/onthisday.json` 與 `state/concerts/`，製刊各班不碰這三處。 連載班只寫 `content/issues/<日期>/serial.json`（可以是未來日期）與 `state/serial/`；製刊各班、備稿補位與每週稽核都不碰 `serial.json`（稽核抽查時跳過 serial）。
-- 不刪除或改寫過去日期的稿件。若發現過去稿件有事實錯誤，在該篇文末加「更正」區塊（見「每週品質稽核」第 2 步），並在回報中提出。
+- 不修改 `index.html`、`assets/`、`scripts/`、`editorial/`（每週品質稽核可以寫 `editorial/LESSONS.md`，並在古典欄清單快寫完時於 `editorial/music-canon.md` 補下一輪）、`.github/`、`oauth/`。只寫 `content/issues/`、`content/reserve/`、`content/rejected/`（只有備稿補位會寫）與 `state/`（但 `state/push/` 是出刊通知的裝置名單，不要動）。近期演出班只寫 `content/concerts.json`、`content/onthisday.json`、`state/concerts/` 與班次回報 `state/runs/`，製刊各班不碰前三處。 連載班只寫 `content/issues/<日期>/serial.json`（可以是未來日期）、`state/serial/` 與班次回報 `state/runs/`；製刊各班、備稿補位與每週稽核都不碰 `serial.json`（稽核抽查時跳過 serial）。
+- 不刪除或改寫過去日期的稿件。若發現過去稿件有事實錯誤，在該篇文末加「更正」區塊並填 `corrected_at`（見「每週品質稽核」第 2 步），並在回報中提出。
+- 改 `content/config.json`（開欄、停刊、輪值）之後跑 `python3 scripts/validate.py --config`：排漏、排錯、日期不合法都會列出來；plan_day 遇到設定錯誤會停下，publish.yml 的驗證步驟也會報。
 - 不讀取、不推測讀者的私人生活；不使用讀者自己的小說設定。
 - 不使用 AI 生成圖片。不呼叫任何需要付費的 API。
 - **不把社長的任何個人資料送出去**：email、姓名、帳號、git 設定裡的資料，都不可以放進請求的標頭、網址或內容。有些館藏 API 要求在標頭附聯絡方式（例如芝加哥藝術博物館的 `AIC-User-Agent`），一律只寫 `robin-morning (https://github.com/ansel20010610-ship-it/robin-morning)`，也就是 `scripts/common.py` 的 `UA`。派子代理時把這一條寫進指示。

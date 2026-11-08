@@ -350,9 +350,12 @@ def stale_words(art):
 # 分類詞小標 WARNs is not stock; the reserve shift rewrites those before writing anything new). Only the stable rule
 # violations count: length, title/dek length, brief size, the moving window of phrases shared with the last 7 days,
 # and anything about the network are not here, so a reserve cannot drop out of the stock by the calendar turning.
+# The owner's rule (LESSONS 31, 2026-11-01): a reserve with a blacklist phrase, a source-type tag or a category-word
+# heading is 需修正, not stock. Missing form/voice/bold are metadata of the newer spec and do not by themselves make an
+# article read as the old rules — twenty reserves would otherwise go 需修正 at once (2026-11-08) and the stock would show
+# empty while the safety net still fills from them; the 備稿班 adds form and voice when it next touches a reserve.
 BLOCKING_WARN = re.compile(r"^(?:機器腔|出處類標籤不再使用|小標「.*」(?:用了規格裡的分類詞|是「不是 X，是 Y」的套路|是問句的套路)"
-                           r"|quote 區塊 \d+ 個|段落 tag \d+ 個|缺少 form|form「|缺少 voice|voice「|沒有粗體|粗體 \d+ 處"
-                           r"|和範文一樣的句子|寫給創作者的建議|備稿要在任何一天都成立)")
+                           r"|quote 區塊 \d+ 個|段落 tag \d+ 個|和範文一樣的句子|寫給創作者的建議|備稿要在任何一天都成立)")
 
 
 def reserve_blocking(warns):

@@ -14,7 +14,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (GROUPS, TARGET_NOTE, WATCH_DIR, WATCH_STATE, WEEKDAY_ZH, active, article_path, check_config,  # noqa: E402
+from common import (GROUPS, TARGET_NOTE, WATCH_DIR, WATCH_STATE, WEEKDAY_ZH, active, article_path,  # noqa: E402
                     columns_for_group, expected_columns, issue_number, last_watch_article, load_config, load_json,
                     parse_date, reserve_columns, reserve_target, supplements_for, tw_now, watch_checked, watch_columns)
 import late  # noqa: E402
@@ -106,7 +106,7 @@ def main():
     d = parse_date(a.date)
     # the configuration first: a plan drawn from an inconsistent config.json would send a shift to write a column
     # that does not exist, or quietly leave a supplement out of the week
-    bad = check_config(cfg, tw_now().date())
+    bad = validate.check_config(cfg, tw_now().date())
     for e in bad:
         print("設定錯誤：%s" % e)
     if bad:
@@ -155,7 +155,7 @@ def main():
     stock = {c: 0 for c in reserve_columns(cfg)}
     for c, rows in validate.reserve_status(cfg).items():
         if c in stock:
-            stock[c] += sum(1 for _, errs in rows if not errs)
+            stock[c] += sum(1 for _, errs, blocking in rows if not errs and not blocking)  # 需修正 (舊規則稿) is not stock
     short = [c for c, n in stock.items() if n < reserve_target(cfg, c)]
     print("\n可用備稿（目標：%s）：%s" % (TARGET_NOTE, "、".join("%s %d" % (c, n) for c, n in stock.items())))
     if short:
