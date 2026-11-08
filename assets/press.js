@@ -5,7 +5,7 @@
 // draws pressHtml(); `col` is app.js's column meta, which honours "was".
 import { esc, fmtDate, twNow, roman, issueNo } from "./util.js";
 
-// The five shifts of editorial/README.md, Taiwan time. "reserve" is the 14:37 備稿班 and "audit" the Sunday 稽核; they
+// The five shifts of editorial/README.md, Taiwan time. "reserve" is the 17:37 備稿班 and "audit" the Sunday 稽核; they
 // report into the same file and show in the roster's last columns and the 稽核 section.
 export const SHIFTS = [["1", "00:37", "經文・古典・牙周"], ["2", "01:37", "副刊一、三"], ["3", "02:37", "副刊二・巴薩初稿"],
   ["4", "05:17", "快訊・巴薩更新・遠方有動靜"], ["5", "06:27", "安全網"]];

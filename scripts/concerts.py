@@ -27,6 +27,12 @@ from common import CONTENT, ROOT, http_get, tw_now  # noqa: E402
 
 FILE = os.path.join(CONTENT, "concerts.json")
 SEEN = os.path.join(ROOT, "state", "concerts", "seen.json")
+# The sweep for productions the open data never carries (concerts.md step 8): every second day (the owner, 2026-11-08:
+# 每兩天跑一次; it was Mondays only, and a tour announced on a Tuesday waited six days). Kept by the date of the last
+# finished sweep rather than by the calendar's parity, so a day the 演出班 fails or runs out of time simply leaves the
+# sweep due the next morning.
+SWEEP = os.path.join(ROOT, "state", "concerts", "sweep.json")
+SWEEP_EVERY = 2  # days
 TMP = "/tmp/robin"
 CANDS = os.path.join(TMP, "concert-candidates")
 # 文化部藝文活動開放資料 (https://cloud.culture.tw): category 1 = 音樂, 2 = 戲劇. No key; OPENTIX, 年代 and the venues feed it.
@@ -412,6 +418,34 @@ def check(a):
     return 1 if E else 0
 
 
+def sweep_last():
+    try:
+        with open(SWEEP, encoding="utf-8") as f:
+            return dt.date.fromisoformat(json.load(f).get("last", ""))
+    except (OSError, ValueError, TypeError, AttributeError):
+        return None
+
+
+def sweep_due(a):
+    """Prints 「補查：今天要做」 or 「補查：今天不用（上次 <日期>）」; exit 0 either way (the routine reads the line)."""
+    today, last = tw_now().date(), sweep_last()
+    if last is None or (today - last).days >= SWEEP_EVERY:
+        print("補查：今天要做（上次 %s）" % (last or "沒有紀錄"))
+    else:
+        print("補查：今天不用（上次 %s，每 %d 天一次）" % (last, SWEEP_EVERY))
+    return 0
+
+
+def sweep_done(a):
+    """Records today as the last finished sweep (state/concerts/sweep.json)."""
+    os.makedirs(os.path.dirname(SWEEP), exist_ok=True)
+    with open(SWEEP, "w", encoding="utf-8") as f:
+        json.dump({"last": tw_now().date().isoformat()}, f, ensure_ascii=False)
+        f.write("\n")
+    print("補查：已記下 %s" % tw_now().date())
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -420,8 +454,11 @@ def main():
     c.add_argument("--keep", nargs="*", help="這次還不能判斷、下次再看的 UID")
     sub.add_parser("prune")
     sub.add_parser("check")
+    sub.add_parser("sweep-due", help="補查（第 8 步）今天要不要做：每兩天一次")
+    sub.add_parser("sweep-done", help="補查做完，記下今天")
     a = ap.parse_args()
-    return {"fetch": fetch, "close": close, "prune": prune, "check": check}[a.cmd](a)
+    return {"fetch": fetch, "close": close, "prune": prune, "check": check,
+            "sweep-due": sweep_due, "sweep-done": sweep_done}[a.cmd](a)
 
 
 if __name__ == "__main__":
