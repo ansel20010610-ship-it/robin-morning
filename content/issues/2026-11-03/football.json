@@ -5,7 +5,7 @@
   "dek": "夏天花 7,000 萬歐元買來的戈登說，最好的他大家還沒看過。週三凌晨對維拉，是他到西班牙後第一次碰上英超球隊。",
   "brief": "戈登給自己的開季打 7.5 分，說大家還沒看過最好的他。巴薩週三 04:00 在諾坎普踢歐冠，對手是三戰全勝的阿斯頓維拉；弗利克說眼前的目標是打進前八，巴薩現在第 8。",
   "topic_key": "football:2026-11-03",
-  "updated_at": "2026-11-03T02:57:00+08:00",
+  "updated_at": "2026-11-08T15:59:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "next": {
@@ -238,6 +238,11 @@
     {
       "type": "p",
       "text": "同一個鐘點開踢的還有馬競對拜仁、曼聯對羅馬、比利亞雷亞爾對 PSG。巴薩踢完維拉，下一場是 11 月 9 日（週一）04:00 客場踢馬競。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-08）",
+      "text": "兩處更正。一、接下來那段說阿斯頓維拉英超 9 輪 12 分「排第 9」，應為第 10：同為 12 分的伯恩茅斯（淨勝球 +1）、熱刺（0）都排在維拉（-3）前面；本報 11 月 4 日的寫法是對的。二、速覽說里斯本競技「週一」發聲明與博爾赫斯談終止合約，聲明是 11 月 1 日（週日）發的。依據：ESPN 英超各隊賽程重算；dnoticias.pt 11 月 1 日報導（「anunciou hoje」）。"
     }
   ],
   "sources": [
@@ -359,6 +364,20 @@
       "date": "2026-11-02",
       "url": "https://www.espn.com/soccer/story/_/id/50358011/aston-villa-drop-jamie-carragher-legal-action-report",
       "note": "14:42Z（台灣 22:42）發布，byline 為 PA；卡拉格道歉用字；維拉不再追究為單一匿名消息（the sources have told Press Association）"
+    },
+    {
+      "title": "Sporting anuncia saída do treinador Rui Borges",
+      "publisher": "dnoticias.pt",
+      "date": "2026-11-01",
+      "url": "https://www.dnoticias.pt/2026/11/1/511235-sporting-anuncia-saida-do-treinador-rui-borges/",
+      "note": "UTC 20:43 發布，「anunciou hoje」（2026-11-08 稽核查閱）"
+    },
+    {
+      "title": "Premier League Standings",
+      "publisher": "ESPN",
+      "date": "2026-11-02",
+      "url": "https://www.espn.com/soccer/standings/_/league/eng.1",
+      "note": "稽核時以各隊賽程重算 11 月 2 日的排名：伯恩茅斯、熱刺、維拉同為 12 分，維拉淨勝球 -3 排第 10"
     }
   ]
 }

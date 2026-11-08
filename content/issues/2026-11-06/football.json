@@ -7,7 +7,7 @@
   "topic_key": "football:2026-11-06",
   "form": "reverse",
   "voice": "fan",
-  "updated_at": "2026-11-06T03:05:00+08:00",
+  "updated_at": "2026-11-08T15:59:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "next": {
@@ -274,6 +274,11 @@
     {
       "type": "p",
       "text": "西甲積分，巴薩 30 分領頭，馬競 28，皇馬 27。皇馬早一天，台灣時間週日清晨 4 點客場踢瓦倫西亞。馬競只落後兩分；照積分算，巴薩這場要是在馬德里輸了，榜首就換成他們。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-08）",
+      "text": "速覽拉斯帕爾馬斯那則說阿爾梅里亞是「前巴西球星羅納度（Ronaldo Nazário）持股 25%」。持股 25% 的是葡萄牙的 C 羅（Cristiano Ronaldo），他 2026 年 2 月買下這批股份。依據：ESPN 該篇報導原文「UD Almería, the Spanish second division club which Cristiano Ronaldo has a 25% stake in」。"
     }
   ],
   "sources": [

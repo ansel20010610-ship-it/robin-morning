@@ -7,7 +7,7 @@
   "topic_key": "philosophy:immortality-meaning-of-death",
   "form": "compare",
   "voice": "socratic",
-  "updated_at": "2026-11-07T03:14:00+08:00",
+  "updated_at": "2026-11-08T15:59:00+08:00",
   "spoiler": "本文談到劇本與歌劇《馬克羅普洛斯事件》的結局",
   "disclaimer": null,
   "hero": {
@@ -89,7 +89,8 @@
     { "type": "h", "text": "兩道題分開答" },
     { "type": "p", "text": "回到開頭那兩道題。「死對死掉的人，算不算壞事」，伊比鳩魯說不算，威廉斯說早死算，兩人正好相反；「永遠活下去，值不值得要」，兩人卻都沒有替永生說話。我猜這是整場爭論最容易看漏的地方：死是不是壞事，和要不要永生，可以分開答。我還猜，真正卡住的是威廉斯那一步，一個人能不能一直是自己，又一直有新的東西想要。說不能，就站到威廉斯那邊；說能，有兩條路：費雪和百科作者的慢慢換，或奧古斯丁的換一個沒有窮盡的對象。" },
     { "type": "p", "text": "我站威廉斯這邊，只限於「同一個我，過更多同樣的日子」這種永生。費雪的可重複樂趣撐得了很久，但要撐到沒有盡頭，得假設每一次重來都和前一次一樣好，這一點我不敢押。我的猜測是，威廉斯的論證碰不到奧古斯丁，因為奧古斯丁押的那個對象，不在威廉斯設的題目裡。至於死亡還有沒有意義：照威廉斯，死是讓人不必受夠自己的出口；照保羅，死是最後要被毀滅的仇敵（林前 15:26）。依我看，兩邊都不覺得死無所謂，這一點倒是一起跟伊比鳩魯唱了反調。" },
-    { "type": "p", "text": "恰佩克的劇本裡，克莉絲蒂娜的父親，律師事務所的書記維提克，有一句台詞：「永生！現在人們要永遠去找它了。也許我們在這裡就有了。」" }
+    { "type": "p", "text": "恰佩克的劇本裡，克莉絲蒂娜的父親，律師事務所的書記維提克，有一句台詞：「永生！現在人們要永遠去找它了。也許我們在這裡就有了。」" },
+    { "type": "callout", "label": "更正（2026-11-08）", "text": "第三段寫楊納傑克的歌劇結局：「克莉絲蒂娜一樣把它燒了，她用希臘文念出主禱文的頭幾句，倒了下去。」念主禱文、倒下的是艾蜜莉亞（劇中舊名 Elina），克莉絲蒂娜只是把藥方放進燭火燒掉；本篇頭圖圖說的寫法是對的。依據：英文維基百科〈The Makropulos Affair (opera)〉劇情大綱：Elina collapses as she recites the first words of the Lord's Prayer in Greek. However, Kristina burns the parchment in a candle flame." }
   ],
   "sources": [
     { "title": "Death", "publisher": "Stanford Encyclopedia of Philosophy（Steven Luper）", "date": "", "url": "https://plato.stanford.edu/entries/death/", "note": "§3.1 伊比鳩魯論證（善惡在感覺、死亡是感覺的剝奪），並引 Nagel 1970 為 seminal essay；§3.2 剝奪說／比較說（early proponents: Nagel 1970, Quinn 1984, Feldman 1991）；§5.2 盧克萊修對稱論證與 Nagel 的回應（不可能早很多出生、卻可能活更久）；§7.1 Nagel：experience itself supplies positive weight（1970: 60）、if there is no limit to the amount of life that it would be good to have, a bad end is in store for us all（1970: 69），以及作者以手術麻醉為例的批評；§7.2 威廉斯：定言欲望與有條件欲望（想死的女人仍要吃穿；父親希望女兒好）、早死是不幸而會死是好事、oppressive boredom、not possible to make eternal life desirable（作者說明此主張不等於永生必然不好）、兩個條件（1973: 83）；Nagel 1986、Glover 1977、Fischer 1994 認為超長壽者的人生 need not become dull；作者回應：威廉斯只說不清楚是同一人、未說清楚不是，且在〈The Self and the Future〉主張身體連續標準；逐步連續的轉變好過毀滅。2026-11-07 總編重核。內格爾 1970 原文未讀，全部轉引自此。" },

@@ -7,7 +7,7 @@
  "topic_key": "music:tchaikovsky-op71",
  "form": "walk",
  "voice": "listener",
- "updated_at": "2026-11-06T00:50:00+08:00",
+ "updated_at": "2026-11-08T15:59:00+08:00",
  "spoiler": null,
  "disclaimer": null,
  "hero": {
@@ -202,6 +202,11 @@
   {
    "type": "p",
    "text": "1893 年的今天，11 月 6 日，柴可夫斯基在聖彼得堡過世，53 歲，離《胡桃鉗》首演不到一年。"
+  },
+  {
+   "type": "callout",
+   "label": "更正（2026-11-08）",
+   "text": "第二幕那一段說柴可夫斯基寫信給弟弟莫傑斯特，「比昨天、三天前更覺得」寫不出糖果王國。俄文原信是「Больше, чем вчера и третьего дня」，третьего дня 是「前天」，應作「比昨天、前天更覺得」。依據：Tchaikovsky Research 收錄的書信原文（Letter 4365）。"
   }
  ],
  "sources": [

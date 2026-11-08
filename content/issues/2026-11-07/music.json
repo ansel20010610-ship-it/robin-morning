@@ -7,7 +7,7 @@
   "topic_key": "music:handel-hwv56",
   "form": "number",
   "voice": "listener",
-  "updated_at": "2026-11-07T01:02:00+08:00",
+  "updated_at": "2026-11-08T15:59:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -153,6 +153,11 @@
     {
       "type": "p",
       "text": "接著聽韓德爾的《祭司撒督》（Zadok the Priest），1727 年為喬治二世加冕寫的，此後每一位英國君主加冕都唱它。它還有一個後代：歐冠聯賽的主題曲，英國作曲家布瑞頓（Tony Britten）1992 年以它為底寫成。布瑞頓 2013 年受訪時說，有一句往上走的弦樂是他「從韓德爾那裡偷來的」，然後他自己寫了旋律。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-08）",
+      "text": "推薦錄音那段說霍格伍德 1979 年版「人聲只有男聲和男童聲」。只有合唱團是男聲和男童聲（牛津基督堂座堂合唱團）；獨唱有女高音尼爾森（Judith Nelson）、柯克比（Emma Kirkby）與女中音華金森（Carolyn Watkinson），另有兩位男聲。依據：Decca 官方唱片目錄。"
     }
   ],
   "sources": [
@@ -246,6 +251,13 @@
       "date": "2026-11-06",
       "url": "https://en.wikipedia.org/wiki/UEFA_Champions_League_Anthem",
       "note": "日期為查閱日。布瑞頓 1992 年寫作、1992–93 賽季首次使用；2013 年受訪原話「There's a rising string phase which I pinched from Handel and then I wrote my own tune.」"
+    },
+    {
+      "title": "Handel: Messiah – Hogwood",
+      "publisher": "Decca Classics",
+      "date": "2015-03-23",
+      "url": "https://www.deccaclassics.com/en/catalogue/products/handel-messiah-hogwood-11762",
+      "note": "獨唱：Judith Nelson、Emma Kirkby、Carolyn Watkinson、David Thomas、Paul Elliott；合唱：Choir of Christ Church Cathedral, Oxford（2026-11-08 稽核查閱；日期為目錄頁標示）"
     }
   ]
 }

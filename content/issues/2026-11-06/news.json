@@ -6,7 +6,7 @@
   "brief": "伊朗軍方說荷莫茲海峽至少 5 艘油輪受損，紐約布倫特原油收在每桶 98.29 美元。以色列總統赫爾佐格 11 月 4 日起與各黨磋商組閣。巴拉圭總統因銀行風暴辭職，眾議院通過彈劾。",
   "topic_key": "news:2026-11-06",
   "voice": "wire",
-  "updated_at": "2026-11-06T05:27:00+08:00",
+  "updated_at": "2026-11-08T15:59:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "sources": [
@@ -72,6 +72,13 @@
       "date": "2026-11-05",
       "url": "https://focustaiwan.tw/business/202611050021",
       "note": "主計總處 11 月 5 日公布；CPI、外食、進口物價、官員對 11 月的預期"
+    },
+    {
+      "title": "Paraguay: le président Peña, au bord de la destitution, demande un délai pour se défendre",
+      "publisher": "France 24（法新社）",
+      "date": "2026-11-06",
+      "url": "https://www.france24.com/fr/info-en-continu/20261106-paraguay-le-pr%C3%A9sident-pe%C3%B1a-au-bord-de-la-destitution-demande-un-d%C3%A9lai-pour-se-d%C3%A9fendre",
+      "note": "「le Parlement l'avait refusée」：國會未受理辭呈；阿里亞納在罷免當天就任（2026-11-08 稽核查閱）"
     }
   ],
   "body": [
@@ -172,6 +179,11 @@
           "when": "11 月 5 日，台灣時間"
         }
       ]
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-08）",
+      "text": "巴拉圭那則寫潘尼亞 11 月 5 日「宣布辭職，副總統阿里亞納接任」，標題、導言與摘要也說他「請辭」。實際上他雖提出辭呈，國會沒有受理，辭職沒有生效；參議院 11 月 6 日以 44 票罷免他，阿里亞納同日宣誓接任總統（本報 11 月 8 日已報）。依據：法新社 11 月 6 日報導（France 24 轉載）。"
     }
   ]
 }
