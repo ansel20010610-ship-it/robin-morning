@@ -10,10 +10,21 @@
 // a stamp on a dark album page.
 import { esc, fmtDate, roman, ROBIN_PATHS } from "./util.js";
 
-const PICTURE = new Set(["artwork", "architecture", "art", "photo"]);
+// Which picture the day's stamp carries (the owner, 2026-11-08: 所有郵票要挑那期好看的照片，不要足球那類的): a painting
+// first, then an engraving, a portrait, a photograph — and never the sports, news and clinical columns, whose pictures
+// are a coach at a press conference or a gum. The picture columns and the verse's paintings get a little extra; among
+// equals the first in the issue's order wins. Nothing suitable → the robin crest (stampHtml).
+const NO_STAMP = new Set(["football", "tactics", "news", "perio", "fm-watch", "cosmere-watch", "obituary", "serial"]);
+const KIND_SCORE = { artwork: 6, illustration: 4, portrait: 3, photo: 3, map: 2, document: 1 };
+const PICTURE = new Set(["artwork", "architecture", "art", "photo", "city"]);
 export function stampPicture(issue) {
-  const arts = (issue?.articles || []).filter((a) => a?.hero?.src);
-  return arts.find((a) => PICTURE.has(a.column) || a.hero.kind === "artwork") || arts[0] || null;
+  let best = null, bestScore = 0;
+  for (const a of issue?.articles || []) {
+    if (!a?.hero?.src || NO_STAMP.has(a.column)) continue;
+    const score = (KIND_SCORE[a.hero.kind] ?? 2) + (PICTURE.has(a.column) ? 2 : a.column === "devotion" ? 1 : 0);
+    if (score > bestScore) { best = a; bestScore = score; }
+  }
+  return best;
 }
 // djb2 over the date, then murmur's final mix: the same day always gets the same stamp, and neighbouring days (which
 // differ in their last character only) do not walk through the frames in order.
@@ -40,6 +51,9 @@ function wave(i, a = .9) {
 }
 // A laurel sprig growing out of a corner along the diagonal: a stem, two leaves either side, one at the tip.
 const sprig = (x, y, r) => `<g transform="translate(${x} ${y}) rotate(${r})"><path d="M0 0L6.2 6.2"/><ellipse class="leaf" cx="4.3" cy="1.9" rx="2.1" ry=".85" transform="rotate(45 4.3 1.9)"/><ellipse class="leaf" cx="1.9" cy="4.3" rx="2.1" ry=".85" transform="rotate(45 1.9 4.3)"/><ellipse class="leaf" cx="7.4" cy="7.4" rx="2.1" ry=".85" transform="rotate(45 7.4 7.4)"/></g>`;
+// 創刊紀念郵票's frame: the outer rule, the Secession band, a hairline, laurel in all four corners — the picture sits inside
+// it all (style.css .stamp.erst .fr img).
+const ERST_FRAME = () => rect(.6) + rect(2.4, "band") + rect(4.8, "thin") + sprig(5.8, 5.8, 0) + sprig(W - 5.8, 5.8, 90) + sprig(W - 5.8, H - 5.8, 180) + sprig(5.8, H - 5.8, 270);
 const FRAMES = [
   () => rect(.6), // plain
   () => rect(.6) + rect(3, "thin"), // double rule
@@ -54,7 +68,11 @@ const FRAMES = [
 // in px for a stamp outside the album's grid.
 export function stampHtml(issue, { earned = false, open = false, href = null, i = 0, size = 0, bird = false } = {}) {
   const date = issue?.date || "", [y, m, d] = date.split("-").map(Number);
-  const h = hash(date), frame = h % 6, tint = (h >>> 8) % 5, tilt = (((h >>> 16) % 5) - 2) * .6;
+  // 創刊紀念郵票 (the owner, 2026-11-08: 特別浮誇好看): No. 1 has its own issue — gold-foil paper with a sheen, a huge
+  // faint 1 behind the picture, band and laurel round it, ERSTAUSGABE on a wine ribbon under the picture and the
+  // issuer's name along the foot; it stands straight, glows, and takes a row of the album to itself (style.css .stamp.erst).
+  const erst = Number(issue?.no) === 1;
+  const h = hash(date), frame = erst ? 4 : h % 6, tint = erst ? 5 : (h >>> 8) % 5, tilt = erst ? 0 : (((h >>> 16) % 5) - 2) * .6;
   const day = Number.isFinite(d) ? `${d}. ${roman(m)}.` : "", wd = date ? fmtDate(date, "de").split(",")[0] : "";
   const label = [date && fmtDate(date, "short"), issue?.no && `第 ${issue.no} 期`, earned ? "已蓋郵票" : open ? "今天還沒讀完" : "錯過，留白"].filter(Boolean).join("・");
   const style = `--i:${i}${earned ? `;--tilt:${tilt}deg` : ""}${size > 0 ? `;width:${size}px` : ""}`;
@@ -65,11 +83,11 @@ export function stampHtml(issue, { earned = false, open = false, href = null, i 
     const art = hero?.src ? `<img src="${esc(hero.thumb || hero.src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">`
       : `<svg class="bird" viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>`;
     inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="yr">${esc(Number.isFinite(y) ? y : "")}</span>
-      <span class="fr">${art}<svg class="bd" viewBox="0 0 ${W} ${H}" aria-hidden="true">${FRAMES[frame]()}</svg></span>
-      <span class="name">Rotkehlchens Morgenblatt</span>
-      <span class="foot"><i>${esc(wd)}</i><b>${esc(day)}</b></span>${bird ? `<svg class="perch" viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>` : ""}`;
+      <span class="fr">${art}<svg class="bd" viewBox="0 0 ${W} ${H}" aria-hidden="true">${erst ? ERST_FRAME() : FRAMES[frame]()}</svg></span>
+      <span class="name">${erst ? "Erstausgabe" : "Rotkehlchens Morgenblatt"}</span>
+      <span class="foot"><i>${erst ? "Rotkehlchens Morgenblatt" : esc(wd)}</i><b>${esc(day)}</b></span>${bird ? `<svg class="perch" viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>` : ""}`;
   } else {
-    inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="miss"><b>${esc(day)}</b>${open ? "<small>Heute</small>" : ""}</span>`;
+    inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="miss"><b>${esc(day)}</b>${open ? "<small>Heute</small>" : erst ? "<small>Erstausgabe</small>" : ""}</span>`;
   }
-  return `<${tag} class="stamp ${earned ? `earned f${frame} t${tint}` : `slot${open ? " open" : ""}`}" style="${style}" aria-label="${esc(label)}"><span class="sp">${inner}</span></${href ? "a" : "span"}>`;
+  return `<${tag} class="stamp ${earned ? `earned f${frame} t${tint}` : `slot${open ? " open" : ""}`}${erst ? " erst" : ""}" style="${style}" aria-label="${esc(label)}${erst ? "・創刊紀念郵票" : ""}"><span class="sp">${inner}</span></${href ? "a" : "span"}>`;
 }

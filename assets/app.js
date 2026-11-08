@@ -373,15 +373,36 @@ const EMBLEM = `<svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
   <g class="e-gold"><rect x="1" y="1" width="4" height="4"/><rect x="59" y="1" width="4" height="4"/><rect x="1" y="59" width="4" height="4"/><rect x="59" y="59" width="4" height="4"/></g>
   ${ROBIN_PATHS}</svg>`; // the robin itself is util.js ROBIN_PATHS, shared with the seal (motion.js)
 
+// A laurel branch for the 創刊號 band (masthead): a stem rising to the right with leaves either side; mirrored by CSS.
+const LAUREL = `<svg class="laurel" viewBox="0 0 48 20" aria-hidden="true"><path class="stem" d="M1 18 C14 16 30 12 47 2"/>${[5, 13, 21, 29, 37].map((x) => { const y = 18 - (x - 1) * 16 / 46; return `<ellipse cx="${x}" cy="${(y - 3).toFixed(1)}" rx="4.4" ry="1.7" transform="rotate(-40 ${x} ${(y - 3).toFixed(1)})"/><ellipse cx="${x + 3}" cy="${(y + 2.2).toFixed(1)}" rx="4.4" ry="1.7" transform="rotate(-8 ${x + 3} ${(y + 2.2).toFixed(1)})"/>`; }).join("")}</svg>`;
+
+// 創刊號 opens with a scatter of gold from the crest (the owner, 2026-11-08: 特別浮誇好看) — the finish seal's flakes
+// (style.css .flakes), more of them, slower to settle.
+function goldRain(el) {
+  if (!el || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const burst = document.createElement("i");
+  burst.className = "flakes";
+  burst.setAttribute("aria-hidden", "true");
+  for (let i = 0; i < 44; i++) {
+    const a = (i / 44) * Math.PI * 2 + Math.random() * .35, r = 70 + Math.random() * 160;
+    const f = document.createElement("i");
+    f.style.cssText = `--x:${(Math.cos(a) * r).toFixed(1)}px;--y:${(Math.sin(a) * r * .75 - 30).toFixed(1)}px;--r:${Math.round(Math.random() * 600 - 300)}deg;--s:${(.6 + Math.random()).toFixed(2)};--d:${Math.round(Math.random() * 420)}ms`;
+    burst.append(f);
+  }
+  el.prepend(burst);
+  setTimeout(() => burst.remove(), 2600);
+}
+
 // `fresh` (viewFront, Druckfrisch): the issue is opened for the first time on this device — the masthead carries the
 // press roller's ink line and the wine date stamp, and holds its own entrance (.fresh, style.css) until motion.js
 // pressRun lets it go. The stamp is decoration: the topline already says the number and the day.
 function masthead(issue, fresh = false) {
   const date = issue?.date || twNow().date;
   const [y, m, d] = date.split("-").map(Number);
-  return `<header class="masthead${fresh ? " fresh" : ""}"><div class="wrap">
+  const erst = Number(issue?.no) === 1; // 創刊號 wears its own dress (the owner, 2026-11-08; style.css .masthead.erst)
+  return `<header class="masthead${fresh ? " fresh" : ""}${erst ? " erst" : ""}"><div class="wrap">
     ${fresh ? `<i class="roller" aria-hidden="true"></i>` : ""}
-    <hr class="rule-double">
+    ${erst ? `<i class="esun" aria-hidden="true"></i><div class="erst-band">${LAUREL}<span>創刊號</span>${LAUREL.replace('class="laurel"', 'class="laurel r"')}<i>Erstausgabe · Nummer 1 · MMXXVI</i></div><i class="ecorn tl"></i><i class="ecorn tr"></i><i class="ecorn bl"></i><i class="ecorn br"></i>` : `<hr class="rule-double">`}
     <div class="topline"><span>Wien · Taipei</span><span>${issue ? esc(issueNr(issue.no)) : ""}</span><span>${esc(fmtDate(date, "de").split(",")[0])}</span></div>
     ${fresh ? `<i class="stamp-date" aria-hidden="true"><b>Druckfrisch</b><span>No. ${esc(issue.no)}</span><span>${d}. ${roman(m)}. ${y}</span><i class="echo"></i></i>` : ""}
     <div class="checker" aria-hidden="true"></div>
@@ -629,12 +650,14 @@ function viewFront(dateParam) {
   // spend its morning.
   const fresh = !dateParam && !isPreview() && !store.get("opened", []).includes(issue.date);
   if (fresh) store.set("opened", [...store.get("opened", []), issue.date].slice(-60));
+  const erst = Number(issue.no) === 1; // 創刊號: its own contents page and gold hairlines (inhaltBox, style.css .erst-issue)
   main.innerHTML = `${masthead(issue, fresh)}
-  <div class="wrap">
+  <div class="wrap${erst ? " erst-issue" : ""}">
     ${status ? `<div class="status">${status}</div>` : ""}
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的${esc(issueNo(issue.no))}・<a href="#/">回到最新一期</a></div>` : ""}
     ${lateNote(issue.date)}
     ${prayerBox(issue)}
+    ${erst ? inhaltBox(issue, arts) : ""}
     ${weatherBox(issue)}
     ${dateParam ? "" : wireBox()}
     ${revealBox(issue, arts, read)}
@@ -655,7 +678,7 @@ function viewFront(dateParam) {
     ${dateParam ? "" : `<section class="gigs" id="gigs" aria-label="近期演出">${gigsSection()}</section>`}
     <footer class="colophon">
       <div class="ornament" aria-hidden="true"><i></i><i></i><i></i></div>
-      <div class="latin">Gegründet im Oktober 2026</div>
+      <div class="latin">${erst ? `Erstausgabe · Nummer 1 · ${Number(issue.date.slice(8))}. ${roman(Number(issue.date.slice(5, 7)))}. ${issue.date.slice(0, 4)}` : "Gegründet im Oktober 2026"}</div>
       每日台灣時間 ${esc(S.cfg.publish_time)} 出刊・稿件由排程編輯撰寫並逐篇核對來源<br>圖片皆為公版、開放授權或本報原創圖解，授權見各篇文末
     </footer>
   </div>`;
@@ -665,6 +688,16 @@ function viewFront(dateParam) {
   fillWire();
   fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
+  if (erst) setTimeout(() => goldRain(main.querySelector(".masthead.erst .crest")), fresh ? 2200 : 700);
+}
+
+// 創刊號目錄 (the owner, 2026-11-08: 創刊號那期的格式與設計要與眾不同): the first number alone opens with a table of
+// contents in roman numerals, as a first number used to, and one line on where the paper came from, pointing at 刊史館.
+function inhaltBox(issue, arts) {
+  const rows = arts.map((a, i) => `<li><a href="#/a/${esc(issue.date)}/${esc(a.column)}"><i>${roman(i + 1)}</i><span><span class="k">${esc(col(a.column, issue.date).name)}</span><b>${esc(a.title)}</b></span></a></li>`).join("");
+  return `<section class="inhalt" aria-label="創刊號目錄"><div class="sec-head"><h2>創刊號目錄</h2><span class="de">Inhalt</span><span class="note">${arts.length} 篇</span></div>
+    <ol>${rows}</ol>
+    <p class="erst-note">這是第一期。報館在前一晚開張，期數從這天數起；之後改過什麼、哪一天沒有出，都記在<a href="#/chronik">刊史館</a>。</p></section>`;
 }
 
 // 接著上次: the articles left part-read, newest issue first, at most two — on 往期, under the title and above the

@@ -1771,3 +1771,70 @@ details.band .svl { margin: 0 0 10px; }
 .hit-cols { margin: 8px 0 10px; }
 .hit-cols .chip { cursor: pointer; }
 .hit-cols .chip small { margin-left: 5px; font-size: 11px; color: var(--muted); }
+
+/* ——— 創刊號 (Erstausgabe; the owner, 2026-11-08: 格式與設計要與眾不同，特別浮誇好看) ——— the first number alone, dressed
+   for a gala: a gold wash and a slowly turning sunburst behind the masthead, a double gold frame with gold studs at the
+   corners, a wine band with the name in gold foil between two laurel branches, a huge faint roman I behind the crest, the
+   title's gold sweep never stopping, gold flakes from the crest on opening (app.js goldRain); a table of contents with
+   foil roman numerals; every card in its own Secession frame. */
+.masthead.erst { background: radial-gradient(ellipse 90% 60% at 50% 20%, color-mix(in srgb, var(--foil-hi) 24%, transparent), transparent 70%); }
+.masthead.erst .wrap { margin: 14px 0 0; padding: 0 14px 20px; border: 2px solid var(--gold); outline: 1px solid var(--gold); outline-offset: 4px; box-shadow: inset 0 0 0 1px var(--paper), inset 0 0 0 2px var(--gold-soft), 0 0 30px color-mix(in srgb, var(--foil) 30%, transparent); }
+.masthead.erst .wrap::before { content: "I"; position: absolute; left: 50%; top: 46%; transform: translate(-50%, -50%); font-family: var(--latin); font-weight: 600; font-size: 320px; line-height: 1; color: var(--foil); opacity: .09; pointer-events: none; z-index: 0; }
+.masthead.erst .wrap > * { position: relative; z-index: 1; }
+.masthead.erst .esun { position: absolute; left: 50%; top: 190px; width: 460px; height: 460px; margin: -230px 0 0 -230px; border-radius: 50%; z-index: 0; pointer-events: none; opacity: .5;
+  background: repeating-conic-gradient(from 0deg, color-mix(in srgb, var(--foil-hi) 60%, transparent) 0 4deg, transparent 4deg 12deg);
+  -webkit-mask: radial-gradient(circle, #000 0 8%, transparent 64%); mask: radial-gradient(circle, #000 0 8%, transparent 64%); }
+.masthead.erst .ecorn { position: absolute; width: 14px; height: 14px; background: var(--gold); z-index: 3; box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--gold); }
+.masthead.erst .ecorn.tl { left: -9px; top: -9px; } .masthead.erst .ecorn.tr { right: -9px; top: -9px; } .masthead.erst .ecorn.bl { left: -9px; bottom: -9px; } .masthead.erst .ecorn.br { right: -9px; bottom: -9px; }
+.erst-band { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 2px 12px; margin: 0 -14px; padding: 12px 10px 10px; border-bottom: 1px solid var(--foil);
+  background: linear-gradient(90deg, #3E101D, #6E2536 28% 72%, #3E101D); font-family: var(--serif); font-weight: 700; font-size: 23px; letter-spacing: .42em; }
+.erst-band span { padding-left: .42em; background: linear-gradient(105deg, var(--foil) 0 30%, var(--foil-hi) 50%, var(--foil) 70% 100%) 0 0 / 220% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; }
+.erst-band i { flex-basis: 100%; text-align: center; font-family: var(--latin); font-style: italic; font-weight: 500; font-size: 14.5px; letter-spacing: .1em; color: var(--foil-hi); }
+.laurel { width: 46px; height: 19px; fill: var(--foil); } .laurel .stem { fill: none; stroke: var(--foil); stroke-width: 1.4; } .laurel.r { transform: scaleX(-1); }
+.masthead.erst .crest { width: 74px; height: 74px; margin-top: 22px; filter: drop-shadow(0 0 10px color-mix(in srgb, var(--foil-hi) 70%, transparent)); }
+.masthead.erst .latin { color: var(--foil); font-size: clamp(19px, 5vw, 24px); }
+.masthead.erst .dateline { color: var(--wine); font-weight: 700; letter-spacing: .05em; font-size: 13.5px; }
+.masthead.erst .epigraph { font-size: 16.5px; }
+.erst-issue .inhalt { margin-top: 10px; padding: 4px 16px 16px; border: 1px solid var(--gold); outline: 1px solid var(--gold-soft); outline-offset: 3px; background: color-mix(in srgb, var(--paper-2) 75%, transparent); }
+.erst-issue .inhalt .sec-head { margin-top: 16px; }
+.inhalt ol { list-style: none; margin: 6px 0 0; padding: 0; }
+.inhalt li a { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--gold-soft); text-decoration: none; color: inherit; }
+.inhalt li:last-child a { border-bottom: 0; }
+.inhalt li i { font-family: var(--latin); font-style: normal; font-size: 34px; font-weight: 600; line-height: 1; text-align: center; font-variant-numeric: lining-nums;
+  background: linear-gradient(160deg, var(--foil-hi), var(--foil) 55%, #8A6420); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.inhalt li .k { display: block; font-family: var(--sans); font-size: 10.5px; letter-spacing: .16em; color: var(--gold-ink); margin-bottom: 3px; }
+.inhalt li b { font-weight: 600; font-size: 16px; line-height: 1.5; }
+.inhalt .erst-note { margin: 14px 0 0; padding-top: 12px; border-top: 3px double var(--gold); font-family: var(--sans); font-size: 12.5px; line-height: 1.7; color: var(--muted); text-align: center; }
+.inhalt .erst-note a { color: var(--gold-ink); }
+.erst-issue .sec-head { justify-content: center; border-bottom: 3px double var(--gold); margin-top: 40px; }
+.erst-issue .lead, .erst-issue .item { padding: 16px 16px 18px; margin: 18px 0 0; border: 1px solid var(--gold); outline: 1px solid var(--gold-soft); outline-offset: 3px; background: var(--paper-2); }
+.erst-issue .lead .ph { margin-top: 0; box-shadow: 0 0 0 1px var(--paper), 0 0 0 2px var(--gold-soft); }
+.erst-issue .colophon { border-top: 3px double var(--gold); }
+.erst-issue .colophon .latin { font-size: 18px; color: var(--foil); }
+@media (prefers-reduced-motion: no-preference) {
+  .erst-band span { animation: foil-loop 5s 1s linear infinite; }
+  .masthead.erst h1 { animation-iteration-count: 1, infinite; animation-duration: 1.3s, 7s; }
+  .masthead.erst .esun { animation: esun 48s linear infinite; }
+  @keyframes esun { to { transform: rotate(360deg); } }
+}
+/* 創刊紀念郵票 (stamps.js, erst): gold-foil paper with a slow sheen, a huge faint 1 behind the picture, the number and the
+   year in wine, ERSTAUSGABE on a wine ribbon under the picture, the issuer along the foot; it glows, stands straight, and
+   takes a row of the album to itself. */
+.stamp.erst { --s-paper: #E9D28F; --s-gold: #7A5A1E; filter: drop-shadow(0 2px 3px rgba(60, 45, 20, .35)) drop-shadow(0 0 14px rgba(214, 165, 66, .55)); }
+.stamp.erst .sp { background: linear-gradient(135deg, #F7E9B8 0%, #DEBE6A 26%, #F8ECC4 50%, #D9B560 74%, #F4E3AA 100%) 0 0 / 300% 300%; }
+.stamp.erst .sp::before { content: "1"; position: absolute; left: 50%; top: 55%; transform: translate(-50%, -50%); font-family: var(--latin); font-weight: 600; font-size: 118cqw; line-height: 1; color: #8A6420; opacity: .11; pointer-events: none; }
+.stamp.erst .no { color: #6E2536; font-size: 9.6cqw; } .stamp.erst .yr { color: #6E2536; font-weight: 600; }
+.stamp.erst .fr img, .stamp.erst .fr .bird { left: 7.4cqw; top: 7.4cqw; width: 71.2cqw; height: 65.2cqw; }
+.stamp.erst .fr img { filter: sepia(.1) saturate(1.05) contrast(1.05); }
+.stamp.erst .bd { stroke-width: 1.1; }
+.stamp.erst .name { left: 0; right: 0; top: 96cqw; padding: 1.8cqw 0 2cqw; background: linear-gradient(90deg, #3E101D, #6E2536 25% 75%, #3E101D); color: #F6D06A; font-size: 6.2cqw; letter-spacing: .34em; padding-left: .34em; }
+.stamp.erst .foot { bottom: 3.6cqw; gap: 2cqw; }
+.stamp.erst .foot i { font-style: normal; font-size: 3.4cqw; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #6E2536; overflow: visible; }
+.stamp.erst .foot b { font-size: 7cqw; }
+.stamp.erst .foot b { color: #6E2536; }
+.stamp.slot.erst .miss small { letter-spacing: .14em; padding-left: .14em; }
+.album .page .stamp.erst { grid-column: 1 / -1; width: 78%; justify-self: center; margin: 18px 0 8px; }
+@media (prefers-reduced-motion: no-preference) {
+  .stamp.erst .sp { animation: erst-sheen 7s ease-in-out infinite alternate; }
+  @keyframes erst-sheen { from { background-position: 0% 0%; } to { background-position: 100% 100%; } }
+}
