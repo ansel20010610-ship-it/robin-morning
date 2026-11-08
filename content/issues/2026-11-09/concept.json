@@ -1,0 +1,195 @@
+{
+  "column": "concept",
+  "date": "2026-11-09",
+  "title": "一道檢驗題，最多人答 95%，答案是 2%",
+  "dek": "一張陽性報告有多可信，要看檢查準不準，也要看來驗的是哪些人。",
+  "brief": "一道檢驗題，醫學生和醫師最多人答 95%，正確答案約 2%：病很少見時，驗出陽性的人大多是被驗錯的健康人。三十五年後在波士頓原題重問，答對的比例和當年沒有顯著差別。算這件事的工具叫貝氏定理。",
+  "topic_key": "concept:bayes-theorem",
+  "form": "flow",
+  "voice": "tutor",
+  "updated_at": "2026-11-09T02:00:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/An_Essay_towards_Solving_a_Problem_in_the_Doctrine_of_Chances._By_the_Late_Rev._Mr._Bayes%2C_F._R._S._Communicated_by_Mr._Price%2C_in_a_Letter_to_John_Canton%2C_A._M._F._R._S._%28IA_jstor-105741%29.pdf/page1-500px-thumbnail.pdf.jpg",
+    "width": 500,
+    "height": 788,
+    "alt": "白底灰黑的掃描書頁，頁首有頁碼 370 和幾行小字，一條橫線下是斜體標題 LII. An Essay towards solving a Problem in the Doctrine of Chances. By the late Rev. Mr. Bayes, F. R. S. communicated by Mr. Price, in a Letter to John Canton, A. M. F. R. S.，接著是以 Dear Sir 起頭的信，頁邊小字寫著 Read Dec. 23, 1763。",
+    "caption": "《皇家學會哲學會刊》第 53 卷第 370 頁：普萊斯致皇家學會會員坎頓（John Canton）的信，附上貝葉斯遺稿〈An Essay towards solving a Problem in the Doctrine of Chances〉。頁邊註明 1763 年 12 月 23 日宣讀；信的第一句說，這篇文章是在「已故友人貝葉斯先生」的遺稿裡找到的。",
+    "credit": "Thomas Bayes 著、Richard Price 寄送，Royal Society 刊印；JSTOR 掃描，經 Internet Archive 與 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:An_Essay_towards_Solving_a_Problem_in_the_Doctrine_of_Chances._By_the_Late_Rev._Mr._Bayes,_F._R._S._Communicated_by_Mr._Price,_in_a_Letter_to_John_Canton,_A._M._F._R._S._(IA_jstor-105741).pdf?page=1",
+    "made": "1763"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1978 年，波士頓的哈佛醫學院有 60 個人被問了同一道題，醫學生、住院醫師、主治醫師各一組。題目只有一句，也不給症狀和徵象："
+    },
+    {
+      "type": "quote",
+      "text": "有一種檢驗，用來篩檢一種盛行率千分之一的疾病，偽陽性率 5%。假設你對這個人的症狀和徵象一無所知，一個驗出陽性的人，真的有這種病的機會是多少？",
+      "original": "If a test to detect a disease whose prevalence is 1/1000 has a false positive rate of 5%, what is the chance that a person found to have a positive result actually has the disease, assuming you know nothing about the person's symptoms or signs?",
+      "cite": "Casscells、Schoenberger、Graboys 的研究題目，《新英格蘭醫學期刊》1978 年 11 月；原文據 2014 年重做這道題的論文"
+    },
+    {
+      "type": "p",
+      "text": "先把兩個詞講清楚。盛行率千分之一，是說一群人裡每 1,000 個有 1 個得了這個病。偽陽性率 5%，是說沒病的人去驗，每 100 個會有 5 個被驗成陽性。題目要的是反過來的那個數：驗出陽性的人裡，有多少真的有病。臨床管它叫陽性預測值，一張陽性報告值多少，看的就是它。"
+    },
+    {
+      "type": "p",
+      "text": "最多人答 **95%**，60 個人裡有 27 個。照 2014 年那篇論文的算法，正確答案大約是 2%，答對的只有 11 個。這項研究的三位作者，同年 11 月把結果發表在《新英格蘭醫學期刊》。算陽性預測值的工具叫**貝氏定理**（Bayes' theorem），它管的是：看到一個新證據之後，一件事變得多可能。"
+    },
+    {
+      "type": "p",
+      "text": "我們先不碰百分比，改數人頭。找 1,000 個人來驗。千分之一的病，這 1,000 人裡大約 1 個有病，999 個沒有。題目沒說檢查會不會漏掉病人，這裡先假設不會漏，所以那 1 個有病的人，報告是陽性。"
+    },
+    {
+      "type": "p",
+      "text": "再來是沒病的那 999 個。偽陽性率 5%，999 乘上 5% 是 49.95，算它 50 個。數一下手上的報告：陽性大約 51 張，1 張是真的，50 張是驗錯的。"
+    },
+    {
+      "type": "p",
+      "text": "最後一步只是除法。51 張陽性報告，背後真的有病的是 1 個人，1 除以 51，約 2%，算精確一點是 1.96%。下面這張表的左欄，就是剛才這三步。"
+    },
+    {
+      "type": "table",
+      "title": "1,000 個人去驗，同一個檢查，兩群人",
+      "head": [
+        "",
+        "盛行率千分之一",
+        "盛行率十分之一"
+      ],
+      "rows": [
+        [
+          "有病的人",
+          "1",
+          "100"
+        ],
+        [
+          "有病，驗出陽性",
+          "1",
+          "100"
+        ],
+        [
+          "沒病的人",
+          "999",
+          "900"
+        ],
+        [
+          "沒病，卻驗出陽性（5%）",
+          "約 50",
+          "45"
+        ],
+        [
+          "陽性報告合計",
+          "約 51",
+          "145"
+        ],
+        [
+          "陽性的人真的有病",
+          "1 ÷ 51 ≈ 2%",
+          "100 ÷ 145 ≈ 69%"
+        ]
+      ],
+      "caption": "本報以 1,000 人計算。假設檢查不會漏掉病人：1978 年那道題沒給這個數字，2014 年重做這題的論文評分時也是這樣假設。"
+    },
+    {
+      "type": "p",
+      "text": "答 95%，等於認定陽性報告裡只有 5% 是錯的，這個想法錯在條件和結果對調了。5% 講的是「沒病的人裡，多少驗出陽性」，題目問的是「陽性的人裡，多少真的有病」，字差不多，數的是兩群不同的人。打個比方：巴薩的球員個個會踢足球，可是會踢足球的人，絕大多數不是巴薩球員。這個比方有一點不準：會踢球的人比巴薩球員多太多，誰都看得出來；檢驗這一題，那 999 個沒病的人藏在「千分之一」四個字後面，不一個一個數出來，就看不見。"
+    },
+    {
+      "type": "p",
+      "text": "把同一個檢查搬到另一個房間。這回來驗的那群人，假設十個裡就有一個真的有病。1,000 人裡 100 個有病，全部陽性；900 個沒病，5% 是 45 個陽性。陽性報告 145 張，100 張是真的，約 69%，就是表的右欄。**檢查本身一個數字都沒改，換了一群人，同一張陽性報告就從 2% 變成 69%。**"
+    },
+    {
+      "type": "p",
+      "text": "2013 年 7 月，五位研究者在波士頓地區一家醫院把這題原封不動再問一遍，對象是 24 位主治醫師、26 位住院醫師、10 位醫學生和 1 位退休醫師，共 61 人。最多人選的還是 95%，27 個；答對的 14 個，和 35 年前比沒有顯著差別；不過這是一個方便取樣的小樣本，代表不了所有醫師。答案從 0.005% 到 96% 都有，中位數 66%。論文隔年 6 月刊出，作者主張醫學院入學前的課程，用統計取代微積分。"
+    },
+    {
+      "type": "p",
+      "text": "數人頭的算法寫成式子，是 P(病｜陽) = P(陽｜病) × P(病) ÷ P(陽)。P 是機率，括號裡的直線「｜」念作「在……的條件下」。P(病｜陽) 念「在驗出陽性的條件下，有病的機率」，就是題目問的數。P(陽｜病) 倒過來，是有病的人驗出陽性的機率，我們假設不漏，它是 100%。P(病) 是還沒看報告時有病的機率，千分之一，叫事前機率。P(陽) 是隨便一個人去驗、驗出陽性的機率，約千分之五十一。代進去，100% 乘千分之一、再除以千分之五十一，還是 1 除以 51，約 2%；這個看過報告之後的數，叫事後機率。換房間那一步，P(病) 變了，P(陽) 跟著變，P(陽｜病) 不變。"
+    },
+    {
+      "type": "p",
+      "text": "這條式子掛的是一位 18 世紀英國牧師的名字。**湯瑪斯・貝葉斯**（Thomas Bayes）跟父親一樣是「非國教派」牧師，不屬於英格蘭國教會，在肯特郡坦布里奇韋爾斯的長老會禮拜堂服事，1761 年在那裡過世。他的朋友普萊斯（Richard Price）在遺稿裡翻出一篇談機率的文章，寄給英國皇家學會，那是倫敦的科學家團體。文章 1763 年 12 月 23 日在學會宣讀，頭圖是這篇文章在學會期刊上的第一頁，也就是普萊斯的來信。"
+    },
+    {
+      "type": "p",
+      "text": "普萊斯在信裡轉述貝葉斯起初想解的題目：一件事在同樣的情況下，已經發生了幾次、落空了幾次，除此之外一無所知，要怎麼判斷它發生的機率。由結果倒推原因，我覺得這和那道檢驗題的方向相同。信的下一頁，普萊斯寫："
+    },
+    {
+      "type": "quote",
+      "text": "每一位明理的人都會察覺，剛才提到的問題絕不只是機率學說裡一個新奇的推敲；它必須解決，我們對過去的事實、對往後可能發生的事所做的一切推理，才有穩固的基礎。",
+      "original": "Every judicious person will be sensible that the problem now mentioned is by no means merely a curious speculation in the doctrine of chances, but necessary to be solved in order to a sure foundation for all our reasonings concerning past facts, and what is likely to be hereafter.",
+      "cite": "普萊斯致皇家學會會員坎頓（John Canton）的信，《皇家學會哲學會刊》第 53 卷，第 371 頁"
+    },
+    {
+      "type": "callout",
+      "label": "如果你真的懂了，應該答得出來",
+      "items": [
+        "同一個檢查（不漏掉病人、偽陽性率 5%），拿去驗一群兩個裡就有一個有病的人。驗出陽性的人有病的機會是多少？",
+        "回到千分之一的病。第一次驗出陽性的人再驗一次，又是陽性。假設兩次檢查出錯互不相干，現在他有病的機會大約是多少？"
+      ]
+    },
+    {
+      "type": "spoiler",
+      "text": "以下是答案"
+    },
+    {
+      "type": "callout",
+      "label": "答案",
+      "items": [
+        "約 95%。1,000 人裡 500 個有病，全部陽性；500 個沒病，5% 是 25 個陽性。500 ÷ 525 ≈ 95%。這個檢查要在兩個人裡就有一個有病時，陽性才有約 95% 的可信度。",
+        "約 29%。第一次陽性之後，他有病的機會是 51 分之 1，這就是第二次的事前機率。把那 51 個陽性的人再驗一次：有病的 1 個仍是陽性，沒病的 50 個裡 5% 是 2.5 個。1 ÷ 3.5 ≈ 29%。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Interpretation by physicians of clinical laboratory results",
+      "publisher": "Casscells W, Schoenberger A, Graboys TB. New England Journal of Medicine 299(18):999–1001（PubMed 692627）",
+      "date": "1978-11-02",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/692627/",
+      "note": "書目資料；PubMed 無摘要。研究地點、人數、答對人數與最常見答案依 Manrai 2014 的轉述。"
+    },
+    {
+      "title": "Medicine's uncomfortable relationship with math: calculating positive predictive value",
+      "publisher": "Manrai AK, Bhatia G, Strymish J, Kohane IS, Jain SH. JAMA Internal Medicine 174(6):991–993（PMC4955674）",
+      "date": "2014-06",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4955674/",
+      "note": "題目原文；1978 年在哈佛醫學院、60 人分三組、11 人答對、27 人答 95%；2014 年論文的調查做於 2013 年 7 月，樣本為波士頓地區一家醫院的 24/26/10/1 共 61 人、14 人答對、27 人答 95%、答案範圍 0.005%–96%、中位數 66%（正確答案的 33 倍）、與 1978 年無顯著差異；假設檢驗完全敏感時正確答案 1.96%；主張以統計取代微積分列入醫學院入學前課程。"
+    },
+    {
+      "title": "An Essay towards Solving a Problem in the Doctrine of Chances（Philosophical Transactions 53:370–418 掃描，IA jstor-105741）",
+      "publisher": "Thomas Bayes；Richard Price 致 John Canton 的信；Wikimedia Commons",
+      "date": "1763",
+      "url": "https://commons.wikimedia.org/wiki/File:An_Essay_towards_Solving_a_Problem_in_the_Doctrine_of_Chances._By_the_Late_Rev._Mr._Bayes,_F._R._S._Communicated_by_Mr._Price,_in_a_Letter_to_John_Canton,_A._M._F._R._S._(IA_jstor-105741).pdf",
+      "note": "第 370 頁：Read Dec. 23, 1763；在已故友人貝葉斯遺稿中找到；貝葉斯起初想解的題目。第 371 頁：Every judicious person… 引文。"
+    },
+    {
+      "title": "LII. An essay towards solving a problem in the doctrine of chances",
+      "publisher": "Philosophical Transactions of the Royal Society of London（DOI 10.1098/rstl.1763.0053）",
+      "date": "1763",
+      "url": "https://doi.org/10.1098/rstl.1763.0053",
+      "note": "頁碼 370–418，Crossref 記為 1763 年。MacTutor 與 SEP 記刊出年為 1764，正文只寫宣讀日期。"
+    },
+    {
+      "title": "Bayes' Theorem",
+      "publisher": "James Joyce, Stanford Encyclopedia of Philosophy",
+      "date": "2003",
+      "url": "https://plato.stanford.edu/entries/bayes-theorem/",
+      "note": "貝氏定理是計算條件機率的簡單公式；其意義最早由英國神職人員貝葉斯看出；公式與展開式；prior 與 posterior。"
+    },
+    {
+      "title": "Thomas Bayes",
+      "publisher": "MacTutor History of Mathematics, University of St Andrews",
+      "date": "",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Bayes/",
+      "note": "非國教派牧師，在坦布里奇韋爾斯的長老會禮拜堂服事；1761 年 4 月 17 日卒於坦布里奇韋爾斯（肯特郡）；普萊斯在遺稿中找到文章並寄給皇家學會。"
+    }
+  ]
+}
