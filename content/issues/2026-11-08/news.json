@@ -1,0 +1,185 @@
+{
+ "column": "news",
+ "date": "2026-11-08",
+ "title": "美軍成立特遣隊阻斷伊朗陸路運補，艾森科特奉命組閣",
+ "dek": "克拉科夫槍擊 6 死；日本靜岡規模 5.7 地震；東北季風 10 日最強。",
+ "brief": "美軍中央司令部 11 月 7 日宣布成立「鐵門」特遣隊，要阻斷伊朗經陸路運補武器和受制裁物資。以色列總統指定前參謀總長艾森科特組閣，他有 28 天組成政府。巴拉圭被罷免的前總統潘尼亞，先被檢方下令居家拘禁，法官 7 日改裁定羈押。",
+ "topic_key": "news:2026-11-08",
+ "form": "list",
+ "voice": "wire",
+ "updated_at": "2026-11-08T15:15:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "US launches task force to disrupt Iran's land-based supply routes",
+   "publisher": "半島電視台",
+   "date": "2026-11-08",
+   "url": "https://www.aljazeera.com/news/2026/11/8/us-launches-task-force-to-disrupt-irans-land-based-supply-routes",
+   "note": "CENTCOM 週六宣布、IRNA 報導爆炸、革命衛隊稱油輪觸水雷；全文無發布時刻，無伊朗政府對特遣隊的直接回應"
+  },
+  {
+   "title": "Israel's president picks Eisenkot over Netanyahu to form next government",
+   "publisher": "半島電視台",
+   "date": "2026-11-07",
+   "url": "https://www.aljazeera.com/news/2026/11/7/israels-president-picks-eisenkot-over-netanyahu-to-form-next-government",
+   "note": "67 對 46、大選席次、28 天加 14 天；典禮預定週日，未見後續報導"
+  },
+  {
+   "title": "Paraguay's Santiago Pena under arrest, new president Pedro Alliana sworn in",
+   "publisher": "半島電視台",
+   "date": "2026-11-07",
+   "url": "https://www.aljazeera.com/news/2026/11/7/paraguays-santiago-pena-under-arrest-new-president-pedro-alliana-sworn-in",
+   "note": "參議院 44 票、1 人棄權、阿里亞納（Alliana）宣誓、Ueno Bank"
+  },
+  {
+   "title": "巴拉圭前總統羈押候審　央行已支付1.6億美元",
+   "publisher": "中央社",
+   "date": "2026-11-08",
+   "url": "https://www.cna.com.tw/news/aopl/202611080022.aspx",
+   "note": "台灣時間 11 月 8 日 10:15 發布；法官奧塔蘇裁定羈押於軍事設施、背信等罪嫌、律師否認"
+  },
+  {
+   "title": "波蘭槍擊案釀6死15傷　駐處尚無接獲台灣人傷亡",
+   "publisher": "中央社",
+   "date": "2026-11-08",
+   "url": "https://www.cna.com.tw/news/aipl/202611080056.aspx",
+   "note": "台灣時間 11 月 8 日 12:07 發布；11 月 7 日約 15:00 當地時間、中央廣場、嫌犯住處另有 3 具遺體；外交部說法"
+  },
+  {
+   "title": "Polish PM calls deadly Krakow shooting an act of 'terrorism'",
+   "publisher": "半島電視台",
+   "date": "2026-11-08",
+   "url": "https://www.aljazeera.com/video/newsfeed/2026/11/8/polish-pm-calls-deadly-krakow-shooting-an-act-of",
+   "note": "圖斯克稱「恐怖主義」、6 死 15 傷；頁面無嫌犯姓名與動機"
+  },
+  {
+   "title": "Earthquake hits central Japan, injuring more than 20 people",
+   "publisher": "半島電視台",
+   "date": "2026-11-08",
+   "url": "https://www.aljazeera.com/news/2026/11/8/earthquake-hits-central-japan-injuring-more-than-20-people",
+   "note": "JMA 規模 5.7、1:04 當地、約 40 公里、新幹線延誤、未來兩三天強震警告"
+  },
+  {
+   "title": "日本中部規模5.7地震　觀光署：無旅行團受影響",
+   "publisher": "中央社",
+   "date": "2026-11-08",
+   "url": "https://www.cna.com.tw/news/ahel/202611080084.aspx",
+   "note": "台灣時間 11 月 8 日 14:05 發布；深度 41 公里、知多市震度 5 強、至少 24 人受傷、觀光署說法"
+  },
+  {
+   "title": "空軍對美採購　第2批3架F-16V blk70飛抵台東",
+   "publisher": "中央社",
+   "date": "2026-11-08",
+   "url": "https://www.cna.com.tw/news/aipl/202611080059.aspx",
+   "note": "台灣時間 11 月 8 日 12:17 發布、14:34 更新；機號、第 1 批 10 月 2 日、66 架與預算、空軍說法"
+  },
+  {
+   "title": "11/8晚起東北季風增強 10日低溫探16度",
+   "publisher": "中央社",
+   "date": "2026-11-07",
+   "url": "https://www.cna.com.tw/news/ahel/202611070138.aspx",
+   "note": "台灣時間 11 月 7 日 17:20 發布、17:48 更新；氣象署預報員張承傳；逐日預報；11/8 晨他報導引述的氣象署預報（9 日局部較大雨勢、10 日低溫 16 至 17 度）與此一致，未採民間預報員的 15 度"
+  }
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "伊朗戰事新增陸路這一條線；以色列總統把組閣任務交給前參謀總長艾森科特。台灣這邊，第 2 批 F-16V 戰機降落台東，東北季風今晚增強。"
+  },
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "美軍成立特遣隊阻斷伊朗陸路運補",
+     "place": [
+      "IR",
+      "US"
+     ],
+     "summary": "美軍中央司令部（CENTCOM）11 月 7 日宣布成立「鐵門」特遣隊，據中央司令部的說法，目的是阻止伊朗經陸路與裏海運入先進武器和受制裁物資；美軍自 7 月起已對伊朗港口實施海上封鎖。伊朗官方通訊社 IRNA 同日報導荷莫茲海峽的蓋什姆島有爆炸。半島電視台報導中未見伊朗政府對特遣隊的回應。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/8/us-launches-task-force-to-disrupt-irans-land-based-supply-routes",
+     "when": "11 月 7 日，美國與伊朗當地時間"
+    },
+    {
+     "headline": "赫爾佐格指定艾森科特組閣",
+     "place": "IL",
+     "summary": "以色列總統赫爾佐格 11 月 7 日晚間通知前參謀總長艾森科特由他組閣，不是總理納坦雅胡。67 名議員推薦艾森科特，46 名推薦納坦雅胡；10 月 27 日大選沒有一方過半（120 席需 61 席）。艾森科特有 28 天組閣，可延 14 天。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/7/israels-president-picks-eisenkot-over-netanyahu-to-form-next-government",
+     "when": "11 月 7 日，以色列當地時間"
+    },
+    {
+     "headline": "巴拉圭前總統被裁定羈押",
+     "place": "PY",
+     "summary": "巴拉圭參議院 11 月 6 日以 44 票罷免總統潘尼亞（Santiago Peña），1 人棄權，副總統阿里亞納同日宣誓接任。檢方原先下令他居家拘禁，法官 7 日裁定以背信等罪嫌羈押於軍事設施；他的律師說他否認指控。案子起於數位銀行 Ueno Bank 倒閉。",
+     "source": "中央社、半島電視台",
+     "url": "https://www.cna.com.tw/news/aopl/202611080022.aspx",
+     "when": "11 月 6 至 7 日，巴拉圭當地時間"
+    },
+    {
+     "headline": "克拉科夫槍擊 6 死 15 傷",
+     "place": "PL",
+     "summary": "波蘭克拉科夫中央廣場 11 月 7 日下午約 3 時發生槍擊，6 人死亡、至少 15 人受傷；警方在嫌犯住處另發現 3 具遺體，疑為其近親。總理圖斯克稱這是「恐怖主義」。外交部說，駐處尚未接獲台灣人傷亡。",
+     "source": "中央社、半島電視台",
+     "url": "https://www.cna.com.tw/news/aipl/202611080056.aspx",
+     "when": "11 月 7 日，波蘭當地時間"
+    },
+    {
+     "headline": "日本靜岡規模 5.7 地震",
+     "place": "JP",
+     "summary": "日本時間 11 月 8 日 1 時 04 分（台灣時間 0 時 04 分），靜岡縣西部發生規模 5.7 地震，深度約 40 公里，至少 24 人受傷，未發布海嘯警報。氣象廳提醒未來兩三天可能再有強震。觀光署說，洽詢旅行業公協會後，尚未接獲台灣旅行團受影響的通報。",
+     "source": "中央社、半島電視台",
+     "url": "https://www.cna.com.tw/news/ahel/202611080084.aspx",
+     "when": "11 月 8 日 0 時 04 分，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "第 2 批 F-16V 抵台東",
+     "place": "TW",
+     "summary": "空軍 11 月 8 日上午接收第 2 批 3 架 F-16V Block 70 戰機，降落台東志航基地；第 1 批 2 架 10 月 2 日抵台。這是向美國採購 66 架（鳳翔專案）的一部分，預算約 2,472 億元。空軍說換裝訓練按計畫進行，逐步達初始戰力。",
+     "source": "中央社",
+     "url": "https://www.cna.com.tw/news/aipl/202611080059.aspx",
+     "when": "11 月 8 日上午，台灣時間"
+    },
+    {
+     "headline": "東北季風增強，10 日最強",
+     "place": "TW",
+     "summary": "氣象署預報，東北季風 11 月 8 日晚間增強，9 日大台北與東北部有短暫雨，需慎防較大雨勢。10 日是這波最強的一天，北部、中部和東北部低溫 16 至 17 度，白天北部、宜蘭、花蓮約 20 至 23 度；12 日起減弱。",
+     "source": "中央社",
+     "url": "https://www.cna.com.tw/news/ahel/202611070138.aspx",
+     "when": "11 月 8 至 12 日預報，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "以色列 10 月 27 日大選席次",
+   "head": [
+    "陣營",
+    "席次"
+   ],
+   "rows": [
+    [
+     "納坦雅胡的右派與宗教集團",
+     "53"
+    ],
+    [
+     "艾森科特的四黨聯盟",
+     "48"
+    ],
+    [
+     "阿拉伯政黨",
+     "19"
+    ]
+   ],
+   "caption": "國會共 120 席，過半需 61 席。資料來源：半島電視台。"
+  }
+ ]
+}
