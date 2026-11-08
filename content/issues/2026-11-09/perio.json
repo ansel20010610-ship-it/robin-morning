@@ -3,8 +3,8 @@
   "date": "2026-11-09",
   "title": "上顎那一刀，換到的是角化組織",
   "dek": "1.06 毫米：從上顎多取一塊結締組織，比塗釉基質蛋白多換到的角化組織寬度。",
-  "brief": "冠向推移瓣底下墊一塊上顎取來的結締組織，跟改塗釉基質蛋白比，根面蓋回多少分不出高下，角化組織卻多約 1 毫米，長期牙齦邊緣也比較守得住。代價在上顎：疼痛不適多來自取組織的地方，集中在術後第一週。",
-  "takeaway": "單顆、鄰面附著完整的退縮，冠向推移瓣下墊結締組織或塗釉基質蛋白，完全覆蓋的機會都比單做瓣高；兩者蓋回的量分不出高下，結締組織多約 1 毫米角化組織、長期較穩，代價是上顎多一個傷口。",
+  "brief": "冠向推移瓣底下墊一塊上顎取來的結締組織，跟改塗釉基質蛋白比，Cochrane 判定直接比較的證據不足，2014 年的統合分析則是完全覆蓋與退縮減少量都由結締組織勝出。結締組織還多換到約 1 毫米角化組織，長期牙齦邊緣也比較守得住。代價在上顎：疼痛不適多來自取組織的地方，集中在術後第一週。",
+  "takeaway": "單顆、鄰面附著完整的退縮，瓣下墊結締組織或塗釉基質蛋白，完全覆蓋都比單做瓣好；兩者互比，結締組織蓋得較多，角化組織多約 1 毫米（確定性低）、長期較穩，代價是上顎多一個傷口。",
   "topic_key": "perio:doi:10.1002/14651858.cd007161.pub3",
   "form": "compare",
   "voice": "colleague",
@@ -17,7 +17,7 @@
     "src": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Subepithelial_graft.jpeg",
     "width": 1168,
     "height": 671,
-    "alt": "四格臨床照片，各標編號 1 到 4。1：上顎腭側後牙旁一道切開的傷口；2：一條取下來的粉紅色組織放在白色紗布上，旁邊兩支有刻度的牙周探針；3：那塊組織放在下方幾顆牙的牙根上；4：牙齦瓣蓋回，牙頸部縫了幾針。",
+    "alt": "四格臨床照片，各標編號 1 到 4。1：上顎腭側後牙旁一道切開的傷口；2：一條取下來的粉紅色組織放在白色紗布上，旁邊兩支有刻度的牙周探針；3：那塊組織放在上顎前牙的牙根上；4：牙齦瓣蓋回，牙頸部縫了幾針。",
     "caption": "上皮下結締組織移植的四個步驟：從上顎腭側取組織（1、2），放到退縮處的牙根上（3），再把瓣蓋回縫合（4）。照片中的病人與文中的試驗無關。",
     "credit": "DRosenbach at English Wikipedia（Own work），Wikimedia Commons",
     "license": "CC BY-SA 3.0",
@@ -28,15 +28,15 @@
   "body": [
     {
       "type": "p",
-      "text": "牙齦退縮的病人同意開刀之後，常要決定的是冠向推移瓣底下要不要再放東西：從上顎腭側取一塊結締組織縫進去，或在根面塗一層釉基質蛋白，讓病人少挨一刀。2014 年**歐洲牙周病學會（EFP）第 10 屆歐洲牙周研討會**的共識兩條路都認可，證據強度中等；兩者差在哪，要看後來的統合分析。"
+      "text": "牙齦退縮的病人同意開刀之後，常要決定的是冠向推移瓣底下要不要再放東西：從上顎腭側取一塊結締組織縫進去，或在根面塗一層釉基質蛋白，讓病人少挨一刀。2014 年**歐洲牙周病學會（EFP）第 10 屆歐洲牙周研討會**的共識依三篇系統性回顧、用改良 GRADE 評等，兩條路都認可，證據強度中等。"
     },
     {
       "type": "p",
-      "text": "冠向推移瓣（coronally advanced flap，CAF）是把退縮處根尖側的軟組織瓣往牙冠方向拉上來縫住，蓋回露出的根面；上皮下結締組織移植（connective tissue graft，CTG）是在瓣下多墊一塊自己的組織，頭圖四格就是這個流程；釉基質蛋白（enamel matrix derivative，EMD）是塗在根面的生物材料，不必取組織。主要證據是專做系統性回顧的國際組織 Cochrane 2018 年的回顧：**48 個隨機對照試驗、1,227 名成人**，退縮都是 Miller 第 I、II 類、深 3 毫米以上，鄰面骨與軟組織都還在。"
+      "text": "冠向推移瓣（CAF）把根尖側的牙齦瓣往牙冠方向拉上來蓋住根面，結締組織移植（CTG）在瓣下多墊一塊上顎取來的組織，頭圖四格就是這個流程，釉基質蛋白（EMD）則是直接塗在根面、不必取組織的生物材料。主要證據是專做系統性回顧的國際組織 Cochrane 2018 年的回顧：**48 個隨機對照試驗、1,227 名成人**，退縮都是 Miller 第 I、II 類、深 3 毫米以上，鄰面骨與軟組織都還在。"
     },
     {
       "type": "p",
-      "text": "共識劃的範圍很窄：單顆、中等深度、多在上顎、鄰面沒有附著喪失的退縮，等於 10 月 18 日這一欄談過的 Cairo 分類 RT1。這種退縮，CAF 加 CTG 或加 EMD，完全蓋住根面的機會都比單做 CAF 高，可當上顎前牙與小臼齒的首選。共識依據的系統性回顧（Cairo 等，2014 年，51 個試驗）還看到，加 CTG 完全覆蓋的頻率比加 EMD 高。"
+      "text": "共識劃的範圍很窄：單顆、中等深度、多在上顎、鄰面沒有附著喪失的退縮，等於 10 月 18 日這一欄談過的 Cairo 分類 RT1。這種退縮，CAF 加 CTG 或加 EMD，完全蓋住根面的機會都比單做 CAF 高，可當上顎前牙與小臼齒的首選。"
     },
     {
       "type": "table",
@@ -56,13 +56,13 @@
         ],
         [
           "根面蓋回多少，兩者互比",
-          "分不出高下",
-          "分不出高下",
-          "Cochrane 2018，證據不足"
+          "完全覆蓋、退縮減少都較多",
+          "較少",
+          "Cairo 等 2014 統合分析；Cochrane 2018 判為證據不足"
         ],
         [
           "角化組織增加",
-          "多 1.06 毫米",
+          "多 **1.06 毫米**",
           "—",
           "Cochrane 2018，確定性低"
         ],
@@ -79,27 +79,27 @@
           "2014 年共識；Cairo 等 2020"
         ]
       ],
-      "caption": "依 Chambrone（2018）、Tonetti 與 Jepsen（2014）、Tavelli（2019）、Cairo（2020）等人的摘要整理。"
+      "caption": "依 Chambrone（2018）、Tonetti 與 Jepsen（2014）、Cairo（2014）、Tavelli（2019）、Cairo（2020）等人的摘要整理。"
     },
     {
       "type": "h",
-      "text": "蓋回多少，分不出來"
+      "text": "蓋回多少，統合分析偏向結締組織"
     },
     {
       "type": "p",
-      "text": "照目前的證據還分不出來：Cochrane 裡直接比 CTG 和 EMD 的試驗不多，退縮減少量與附著都是證據不足以判斷差別，不能讀成兩者一樣好。"
+      "text": "Cochrane 裡直接比 CTG 和 EMD 的試驗不多，退縮減少量與附著都判為證據不足、分不出差別。共識依據的那篇系統性回顧（Cairo 等，2014 年，51 個試驗、1,574 名病人）統合出來，兩項都是 CTG 較好：完全覆蓋的頻率比 EMD 高，退縮減少量也比較多。證據不足不等於一樣好，蓋回多少這件事，CTG 至少有一份統合分析站在它那邊。"
     },
     {
       "type": "h",
-      "text": "差在角化組織，和時間"
+      "text": "多出來的角化組織，守得住的邊緣"
     },
     {
       "type": "p",
-      "text": "分得出來的是角化組織：CTG 組多長出 **1.06 毫米**，用 GRADE 這套評證據確定性的方法評為低，真實效果可能和估計差不少。Cochrane 作者據此寫，要蓋根面又要增加角化組織寬度時，結締組織移植的結果稍好。"
+      "text": "Cochrane 這組比較裡算得出差距的是角化組織：CTG 組多長出 1.06 毫米，只來自 2 個試驗、62 人，用 GRADE 這套評證據確定性的方法評為低，真實效果可能和估計差不少。Cochrane 作者寫，要蓋根面又要增加角化組織寬度時，結締組織移植的結果稍好。"
     },
     {
       "type": "p",
-      "text": "時間拉長，才分得清楚。Tavelli 等人 2019 年在《牙科研究期刊》（J Dent Res）發表的網絡統合分析（把各術式的直接與間接比較放進同一個模型），收 60 個試驗、1,864 名病人，結果 CTG 和 EMD 初期的退縮減少都勝過單做瓣，但**只有以 CTG 為基礎的術式，能讓牙齦邊緣長期守在原位**，EMD、膠原基質和單做瓣都有類似的退縮復發趨勢。作者提醒，斜率是線性模型估的。"
+      "text": "Tavelli 等人 2019 年在《牙科研究期刊》（J Dent Res）發表的網絡統合分析，把各術式的直接與間接比較放進同一個線性模型，估牙齦邊緣隨時間的斜率，收 60 個試驗、1,864 名病人。CTG 和 EMD 初期的退縮減少都勝過單做瓣，但**只有以 CTG 為基礎的術式，能讓牙齦邊緣長期守在原位**，EMD、膠原基質和單做瓣都有類似的退縮復發趨勢。"
     },
     {
       "type": "h",
@@ -107,11 +107,11 @@
     },
     {
       "type": "p",
-      "text": "Cochrane 整理的不良反應以不適與疼痛為主，大多來自取組織的部位、集中在術後第一週。Cairo 等人 2020 年的網絡統合分析（26 個試驗、867 名病人）也看到，CTG 術後併發症較多，美觀表現與病人滿意度卻較高，只是移植組織的質地和顏色有時不如單做瓣自然。"
+      "text": "Cochrane 整理的不良反應以不適與疼痛為主，大多來自取組織的部位、集中在術後第一週，也不影響根面覆蓋的結果。Cairo 等人 2020 年的網絡統合分析（26 個試驗、867 名病人）看病人自評的術後疼痛與不適，CTG 的術式較多，美觀表現與病人滿意度卻也是 CTG 較高。"
     },
     {
       "type": "quote",
-      "text": "附加的好處，要放在供區併發症增加或成本增加的脈絡裡衡量。",
+      "text": "附加的好處，要放在取組織處的術後負擔增加或成本增加的脈絡裡衡量。",
       "original": "The adjunctive benefit needs to be put in the context of increased morbidity of the donor area or increased cost.",
       "cite": "Tonetti 與 Jepsen（2014），第 10 屆歐洲牙周研討會第 2 組共識報告摘要"
     },
@@ -122,9 +122,9 @@
     {
       "type": "list",
       "items": [
-        "單顆、鄰面附著完整、在上顎前牙或小臼齒：墊 CTG 或塗 EMD，完全覆蓋的機會都比單做 CAF 高。病人很怕上顎那一刀時，EMD 也有證據撐著，但要先講明，牙齦邊緣長期有退回的趨勢。",
-        "角化組織本來就窄，或病人在意十年後邊緣還在不在：CTG 的理由最充分。",
-        "鄰面已有附著喪失，或多顆相鄰退縮：上面的證據大多不適用，共識認為這兩種情況都還需要更多研究。"
+        "上顎前牙或小臼齒的單顆退縮、鄰面附著還在：墊 CTG 或塗 EMD，完全覆蓋的機會都比單做 CAF 高，兩者互比是 CTG 蓋得較多。病人很怕上顎那一刀，EMD 也有證據撐著，但要先講明，牙齦邊緣長期有退回的趨勢。",
+        "角化組織本來就窄，或病人在意長期邊緣守不守得住：CTG 的理由最充分。",
+        "鄰面已有附著喪失，或多顆相鄰退縮：Cairo 2014 的結論是，單顆退縮不論鄰面有沒有附著喪失，CAF 加 CTG 的臨床結果都最好；多顆退縮，Cochrane 只收到 5 個試驗。共識認為這兩種情況的術式設計都還需要更多研究。"
       ]
     },
     {
@@ -146,21 +146,21 @@
       "publisher": "Cochrane Database of Systematic Reviews（Chambrone L 等）",
       "date": "2018-10-02",
       "url": "https://doi.org/10.1002/14651858.CD007161.pub3",
-      "note": "主角文獻。書目依 PubMed esummary（PMID 30277568）、Europe PMC（PMC6517255）與 Crossref（2018;10(10):CD007161，7 位作者）。PMC efetch 只回摘要與白話摘要，未取得全文。摘要：48 RCT；偏差風險 1 低、12 高、35 不明；SCTG+CAF vs EMP+CAF 角化組織 MD −1.06 mm（95% CI −1.36 到 −0.76；2 試驗 62 人；low-quality）；退縮減少與附著 insufficient evidence of a difference；SCTG+CAF vs GTR rm+CAF 角化組織 MD −1.77 mm（very low）；ADMG 為 the soft tissue substitute that may provide the most similar outcomes（some weak evidence）。白話摘要：1,227 adults、5 個多顆退縮試驗、多數追蹤 6–12 個月、不良反應主要與取組織部位有關且在術後第一週、不影響根面覆蓋結果、證據品質低或非常低。"
+      "note": "主角文獻。書目依 PubMed esummary（PMID 30277568）、Europe PMC（PMC6517255）與 Crossref（2018;10(10):CD007161，7 位作者）。PMC efetch 只回摘要與白話摘要，未取得全文。摘要：48 RCT；偏差風險 1 低、12 高、35 不明；SCTG+CAF vs EMP+CAF 角化組織 MD −1.06 mm（95% CI −1.36 到 −0.76；2 試驗 62 人；low-quality）；退縮減少與附著 insufficient evidence of a difference；SCTG+CAF vs GTR rm+CAF 角化組織 MD −1.77 mm（95% CI −2.66 到 −0.89；very low）；ADMG 為 the soft tissue substitute that may provide the most similar outcomes（some weak evidence）。白話摘要：1,227 adults、5 個多顆退縮試驗、多數追蹤 6–12 個月、不良反應主要與取組織部位有關且在術後第一週、不影響根面覆蓋結果、證據品質低或非常低。"
     },
     {
       "title": "Clinical efficacy of periodontal plastic surgery procedures: consensus report of Group 2 of the 10th European Workshop on Periodontology",
       "publisher": "Journal of Clinical Periodontology（Tonetti MS, Jepsen S 與第 10 屆歐洲牙周研討會第 2 組）",
       "date": "2014-04",
       "url": "https://doi.org/10.1111/jcpe.12219",
-      "note": "J Clin Periodontol 2014;41 Suppl 15:S36–S43，PMID 24640999。依摘要：三篇系統性回顧為依據、改良 GRADE；中等強度證據支持單顆（moderately deep, mostly maxillary）、無鄰面附著喪失的退縮 CAF 加 CTG、加 EMD 改善結果；may be considered the procedure of choice at maxillary anterior and premolar teeth；引文為摘要結論原句；emerging data 指鄰面有部分附著喪失也可能完全覆蓋；多顆退縮 preliminary data；強調 complex, technique-sensitive、需報告術者經驗。日期依 PubMed 出刊月份。"
+      "note": "J Clin Periodontol 2014;41 Suppl 15:S36–S43，PMID 24640999。依摘要：三篇系統性回顧為依據、改良 GRADE；中等強度證據支持單顆（moderately deep, mostly maxillary）、無鄰面附著喪失的退縮 CAF 加 CTG、加 EMD 改善結果；may be considered the procedure of choice at maxillary anterior and premolar teeth；引文為摘要結論原句；emerging data 指鄰面有部分附著喪失也可能完全覆蓋；多顆退縮 preliminary data；additional research is needed 於多顆退縮、有鄰面附著喪失的退縮與植體周圍軟組織不足的術式設計；強調 complex, technique-sensitive、需報告術者經驗。日期依 PubMed 出刊月份。"
     },
     {
       "title": "Efficacy of periodontal plastic surgery procedures in the treatment of localized facial gingival recessions. A systematic review",
       "publisher": "Journal of Clinical Periodontology（Cairo F, Nieri M, Pagliaro U）",
       "date": "2014-04",
       "url": "https://doi.org/10.1111/jcpe.12182",
-      "note": "J Clin Periodontol 2014;41 Suppl 15:S44–S62，PMID 24641000。依摘要：51 RCT（53 篇）、1,574 名病人、1,744 處退縮；CAF+CTG 達完全覆蓋的頻率高於 CAF+EMD。日期依 PubMed 出刊月份。"
+      "note": "J Clin Periodontol 2014;41 Suppl 15:S44–S62，PMID 24641000。依摘要：51 RCT（53 篇）、1,574 名病人、1,744 處退縮；CAF+CTG 或 CAF+EMD 的完全覆蓋與 RecRed 優於單做 CAF；CAF+CTG 達完全覆蓋的頻率高於 CAF+EMD，RecRed 也高於 CAF+EMD（及 CAF+GTR、CAF+CM）；結論 CAF+CTG achieved the best clinical outcomes in single gingival recessions with or without iCAL。日期依 PubMed 出刊月份。"
     },
     {
       "title": "The Effect of Time on Root Coverage Outcomes: A Network Meta-analysis",
@@ -174,7 +174,7 @@
       "publisher": "Journal of Clinical Periodontology（Cairo F 等）",
       "date": "2020-09-09",
       "url": "https://doi.org/10.1111/jcpe.13346",
-      "note": "J Clin Periodontol 2020;47(11):1403–1415，PMID 32654220。依摘要：26 RCT、867 名病人、1,708 處退縮；CTG 術式整體美觀表現最高、病人滿意度較高、morbidity 較多；graft integration might impair soft tissue colour and appearance（CAF+CTG 質地 −0.21，95% CI −0.34 到 −0.08，相對 CAF）。"
+      "note": "J Clin Periodontol 2020;47(11):1403–1415，PMID 32654220。依摘要：26 RCT、867 名病人、1,708 處退縮；CTG 術式整體美觀表現最高、病人滿意度較高、病人自評術後疼痛／不適（self-reported morbidity）較多；graft integration might impair soft tissue colour and appearance（CAF+CTG 質地 −0.21，95% CI −0.34 到 −0.08，相對 CAF）。"
     },
     {
       "title": "The interproximal clinical attachment level to classify gingival recessions and predict root coverage outcomes: an explorative and reliability study",
