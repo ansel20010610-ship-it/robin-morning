@@ -351,11 +351,14 @@ def stale_words(art):
 # violations count: length, title/dek length, brief size, the moving window of phrases shared with the last 7 days,
 # and anything about the network are not here, so a reserve cannot drop out of the stock by the calendar turning.
 # The owner's rule (LESSONS 31, 2026-11-01): a reserve with a blacklist phrase, a source-type tag or a category-word
-# heading is 需修正, not stock. Missing form/voice/bold are metadata of the newer spec and do not by themselves make an
-# article read as the old rules — twenty reserves would otherwise go 需修正 at once (2026-11-08) and the stock would show
-# empty while the safety net still fills from them; the 備稿班 adds form and voice when it next touches a reserve.
+# heading is 需修正, not stock. Since 2026-11-08 (the owner: 缺 form／voice 或有機器腔的算需修正，先修再寫新的) a reserve
+# without its form and voice, or with the wrong reporter, is 需修正 too: all 23 reserves lacked them that day, so the
+# stock reads near zero until the 備稿班 has been through them — a form/voice-only fix is a read and two fields, not a
+# rewrite, and does not count toward its two articles a day (README 備稿班). The safety net still fills from such a
+# reserve (fill_from_reserve.py looks at ERRORs alone): a reserve without a form beats an empty column.
 BLOCKING_WARN = re.compile(r"^(?:機器腔|出處類標籤不再使用|小標「.*」(?:用了規格裡的分類詞|是「不是 X，是 Y」的套路|是問句的套路)"
-                           r"|quote 區塊 \d+ 個|段落 tag \d+ 個|和範文一樣的句子|寫給創作者的建議|備稿要在任何一天都成立)")
+                           r"|quote 區塊 \d+ 個|段落 tag \d+ 個|和範文一樣的句子|寫給創作者的建議|備稿要在任何一天都成立"
+                           r"|缺少 form|form「|缺少 voice|voice「)")
 
 
 def reserve_blocking(warns):

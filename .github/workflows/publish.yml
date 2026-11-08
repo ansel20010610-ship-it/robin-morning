@@ -60,6 +60,8 @@ jobs:
           D=$(TZ=Asia/Taipei date +%F)
           python3 scripts/validate.py "$D" || echo "::warning::validate.py reported problems for $D"
           python3 scripts/validate.py --config || echo "::error::config.json 設定不一致（scripts/validate.py --config）"
+          # the writers' one-line copy of the lessons must carry every lesson the audit added to the full file
+          python3 scripts/lessons.py check || echo "::warning::editorial/LESSONS-short.md 和 LESSONS.md 的條目不一致（scripts/lessons.py check）"
       - name: Wire (外電)
         # wire.yml starts this workflow every hour for the wires. content/wire.json is not in the repository: each
         # build fetches the four wires afresh (no AI), starting from

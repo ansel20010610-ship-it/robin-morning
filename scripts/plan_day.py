@@ -8,13 +8,14 @@ Lines other tools read (watch.yml greps them, so their prefixes are fixed):
   觀測站未查核：<col>、<col>    watch stations with no check record for the day (and no article)
   連載缺稿：第 N 回             today's serial installment is due but absent or fails serial.py check
   設定錯誤：…                   content/config.json is inconsistent (exit 2, nothing else is printed)
+  巴薩晨報：…                   (--group 5 only) shift 4 has not reported: whether shift 5 may touch football.json yet
 """
 import argparse
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (GROUPS, TARGET_NOTE, WATCH_DIR, WATCH_STATE, WEEKDAY_ZH, active, article_path,  # noqa: E402
+from common import (GROUPS, ROOT, TARGET_NOTE, WATCH_DIR, WATCH_STATE, WEEKDAY_ZH, active, article_path,  # noqa: E402
                     columns_for_group, expected_columns, issue_number, last_watch_article, load_config, load_json,
                     parse_date, reserve_columns, reserve_target, supplements_for, tw_now, watch_checked, watch_columns)
 import late  # noqa: E402
@@ -77,6 +78,39 @@ def carried_over(cfg, d, col):
     return prev[0], prev[1].get("title") or ""
 
 
+def football_guard(d, now=None):
+    """What shift 5 may do with the Barça report while shift 4 has not reported (the owner, 2026-11-08: 先確認第 4 班已回報
+    再動巴薩晨報). Shift 4 (05:17) writes the 賽後版 and pushes it in pieces; shift 5 (06:27) updating the same file
+    meanwhile overwrote it. So: with no "4" in state/runs, hands off until 06:50; after that, a commit to football.json
+    in the last 20 minutes means shift 4 is still pushing (wait to 07:00); otherwise shift 4 is gone and shift 5 takes
+    the update over. Returns the line to print, or None when shift 4 reported or there is no football.json to protect
+    (a missing column is 缺稿 and is written at once — the first push wins, the other shift rebases onto it)."""
+    import datetime as dt
+    import subprocess
+    if "4" in late.runs_of(d):
+        return None
+    p = article_path(d, "football")
+    if not os.path.exists(p):
+        return None
+    now = now or tw_now()
+    last = None
+    try:
+        out = subprocess.run(["git", "log", "-1", "--format=%cI", "--", p], capture_output=True, text=True, cwd=ROOT,
+                             timeout=20).stdout.strip()
+        if out:
+            last = dt.datetime.fromisoformat(out.replace("Z", "+00:00")).astimezone(now.tzinfo)
+    except (OSError, ValueError, subprocess.SubprocessError):
+        last = None
+    when = ("最近一次提交 " + last.strftime("%H:%M")) if last else "還沒有任何提交"
+    cutoff = now.replace(hour=6, minute=50, second=0, microsecond=0)
+    if now.date() == d and now < cutoff:
+        return ("巴薩晨報：第 4 班還沒回報，先不要動 football.json（%s）；先做別的，06:50 後再跑一次 "
+                "plan_day --group 5 看這一行" % when)
+    if last and now - last < dt.timedelta(minutes=20):
+        return "巴薩晨報：第 4 班還沒回報，但 football.json 剛有提交（%s），可能還在推賽後版；等到 07:00 再看，仍沒回報才由本班更新" % when
+    return "巴薩晨報：第 4 班沒有回報、football.json 最近 20 分鐘沒有提交（%s），由本班接手更新（賽後版照第 9 步）" % when
+
+
 def serial_line(cfg, d):
     """(text, missing_n): the day's 連載 installment and whether it is on disk and sound. The serial is not an
     expected column — the 製刊 shifts never write it (README) — so a gap is reported on its own line, 連載缺稿, which
@@ -123,6 +157,10 @@ def main():
             print("  - %-14s %-12s %s" % (c, cols[c]["name"], status(cfg, d, c)))
             print("    規格：editorial/columns/%s.md" % c)
             print("    檔案：content/issues/%s/%s.json" % (d, c))
+        if a.group == 5:
+            guard = football_guard(d)
+            if guard:
+                print("  " + guard)
         if a.group == 5 and unchecked:
             # the safety net takes over the stations shift 4 left unchecked (a quota that ran out, or a shift that
             # skipped them): 沒有寫紀錄就不算查過, so the record in state/watch/ is the task, the article only if there is news
