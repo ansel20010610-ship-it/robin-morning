@@ -4,8 +4,11 @@ Runs in GitHub Actions on every push.
 
 Besides the article cards, index.json carries what the app cannot work out on its own: each article's "related"
 (up to three articles that read on from it), football's "next" fixture, a news issue's "places" (the countries its
-items name, for the 讀過的世界 map; scripts/places.py), each issue's "press" record (the shift reports in state/runs/,
-for the owner's 印務室 page) and "late" note, and the top-level "stock" of reserve articles and "places" names.
+items name, for the 讀過的世界 map; scripts/places.py), a corrected article's "corrected" date and one-line
+"correction" (from the 更正 callouts the weekly audit adds at the end of body, so the card can say so without the
+reader scrolling to the last block) and its "corrected_at", each issue's "press" record (the shift reports in
+state/runs/, for the owner's 印務室 page) and "late" note, and the top-level "stock" of reserve articles and
+"places" names.
 
 A malformed article is skipped with a ::warning:: annotation; it must never fail the deploy, or every
 later issue would stay offline until someone fixes the file by hand. The same goes for a malformed runs file.
@@ -168,6 +171,42 @@ def verse(art):
     return out
 
 
+CORRECTION_LABEL = re.compile(r"^更正（(\d{4}-\d{2}-\d{2})）")
+CORRECTION_MAX = 80
+
+
+def correction(art):
+    """(date, one line) of the article's latest 更正 callout, or (None, None). The weekly audit does not rewrite a
+    published article (editorial/README.md 不可以做的事); it adds a callout labelled 更正（<稽核日期>） at the end of body.
+    The date goes on the card as 已更正 and the first sentence of the text under the brief, so a reader who only ever
+    reads the front page learns that what he read was corrected, and roughly how."""
+    best = None
+    for b in art.get("body") or []:
+        if not isinstance(b, dict) or b.get("type") != "callout" or not isinstance(b.get("label"), str):
+            continue
+        m = CORRECTION_LABEL.match(b["label"])
+        if not m:
+            continue
+        text = b.get("text") if isinstance(b.get("text"), str) else ""
+        if not text.strip() and isinstance(b.get("items"), list):
+            text = next((x for x in b["items"] if isinstance(x, str) and x.strip()), "")
+        if best is None or m.group(1) >= best[0]:  # several corrections: the latest date, the last one on a tie
+            best = (m.group(1), text.strip())
+    if best is None:
+        return None, None
+    date, text = best
+    # The first sentence, or the first few when the callout opens with a lead-in like 兩處更正。 that says nothing by
+    # itself; a 。 inside 「…」 does not end a sentence.
+    first = ""
+    for sentence in re.split(r"(?<=[。！？])(?![」』）])", text):
+        first += sentence.strip()
+        if len(first) >= 15:
+            break
+    if len(first) > CORRECTION_MAX:
+        first = first[:CORRECTION_MAX - 1].rstrip("，、；：") + "…"
+    return date, first
+
+
 def plain_text(art):
     parts = [art.get("title", ""), art.get("dek", "")]
     for b in art.get("body") or []:
@@ -227,8 +266,10 @@ def press(cfg, d):
     except Exception as e:  # noqa: BLE001
         skip(path, "%s: %s" % (type(e).__name__, e))
         return out
-    # One broken entry loses that shift alone, not the day's whole record.
-    for k in SHIFTS + ("reserve", "audit", "late"):  # "late": the 週日補刊's report (scripts/late.py, report_run.py --group late)
+    # One broken entry loses that shift alone, not the day's whole record. Besides the five shifts: "reserve" (備稿班),
+    # "audit" (週日稽核), "late" (週日補刊, scripts/late.py), "serial" (連載班) and "concerts" (06:17 演出班), all filed by
+    # report_run.py --group <name> under the day they ran; the last two so the 印務室 can see those routines ran at all.
+    for k in SHIFTS + ("reserve", "audit", "late", "serial", "concerts"):
         if k not in runs:
             continue
         try:
@@ -306,6 +347,13 @@ def main():
             }
             if art.get("from_reserve"):
                 entry["from_reserve"] = True
+            cdate, ctext = correction(art)
+            if cdate:
+                entry["corrected"] = cdate
+                if ctext:
+                    entry["correction"] = ctext
+            if isinstance(art.get("corrected_at"), str) and art["corrected_at"].strip():  # SCHEMA.md: when the audit corrected it
+                entry["corrected_at"] = art["corrected_at"].strip()
             if isinstance(art.get("serial"), dict):  # the novel's installment: book, number and place, for the front page's card
                 entry["serial"] = art["serial"]
             if isinstance(art.get("takeaway"), str) and art["takeaway"].strip():  # perio: shown on the saved and column lists
@@ -318,7 +366,10 @@ def main():
                 if pl:
                     entry["places"] = pl
             toks = related_tokens(art)
-            search.setdefault(day[:7], []).append({"d": day, "c": col, "t": art.get("title", ""), "x": plain_text(art)})
+            row = {"d": day, "c": col, "t": art.get("title", ""), "x": plain_text(art)}
+            if cdate:
+                row["corrected"] = cdate  # a search hit on a corrected passage can say so
+            search.setdefault(day[:7], []).append(row)
         except Exception as e:  # noqa: BLE001
             skip(path, "%s: %s" % (type(e).__name__, e))
             continue
