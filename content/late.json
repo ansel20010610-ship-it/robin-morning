@@ -1,12 +1,13 @@
 {
   "2026-11-08": {
-    "state": "regenerating",
+    "state": "done",
     "held_at": "10:27",
     "missing": [
       "football",
       "news",
       "wildcard"
     ],
-    "started_at": "15:08"
+    "started_at": "15:08",
+    "done_at": "15:38"
   }
 }
