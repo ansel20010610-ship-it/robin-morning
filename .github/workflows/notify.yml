@@ -2,7 +2,7 @@ name: Issue notification
 
 # 07:30 Taiwan time: tell the reader's phone that today's issue is out (Web Push through the phone's own push
 # service; no AI, no paid service). See scripts/push.py. GitHub's schedules start hours late or not at all (both
-# morning crons ran after 09:50 on 2026-11-08), so the reliable path is wire.yml's hourly relay: at 07:00 it starts a
+# morning crons ran after 09:50 on 2026-11-08), so the reliable path is wire.yml's half-hour relay: at 07:00 it starts a
 # run with mode=morning, which waits for 07:30:20 and for the live site exactly as a scheduled run does; the two
 # morning crons stay as backup, and whichever run is first sends — the others see it (the dedup step) and stop. The
 # same for the noon (12:30) and evening (21:00) reminders: the relay starts mode=noon at 12:00 and mode=evening at

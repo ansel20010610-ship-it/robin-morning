@@ -1,18 +1,22 @@
 name: Wire (外電)
 
-# Keeps the front page's 外電 bar fresh: on the hour, every hour, it starts publish.yml (hourly=true), whose build reads
-# the wires (scripts/wire.py) and stamps them with the hour itself (the owner, 2026-11-07: 更新時間改成整點).
+# Keeps the front page's 外電 bar fresh: every half hour, on the hour and at half past, it starts publish.yml
+# (hourly=true), whose build reads the wires (scripts/wire.py) and stamps them with that half hour (the owner,
+# 2026-11-07: 更新時間改成整點; 2026-11-08: 改成每半小時).
 # GitHub's scheduler is not to be relied on for this (2026-11-07: the hourly cron in publish.yml never fired in four
-# hours, and other schedules ran up to seven hours late), so the hours are kept by a relay instead: one run stays up,
-# starting a deploy at each of the next four full hours, and at ten to the next one starts the next run of itself.
+# hours, and other schedules ran up to seven hours late), so the ticks are kept by a relay instead: one run stays up,
+# starting a deploy at each of the next eight half hours (four hours), and at ten to the next full hour starts the
+# next run of itself.
 # The relay is started by a push of this file, by hand (workflow_dispatch), or by the cron below whenever GitHub does
 # get round to it — so a broken relay mends itself. The concurrency group keeps it to one run and at most one waiting.
 #
-# The morning rides on the same hours (2026-11-08: the 07:12 fill, the 07:30 notice and the 07:45 watch all ran around
+# The morning rides on the same ticks (2026-11-08: the 07:12 fill, the 07:30 notice and the 07:45 watch all ran around
 # 10:30, started by their own crons three hours late). At the 07:00 tick the relay also starts fill.yml (which waits to
 # 07:12 and, if need be, 07:22), notify.yml mode=morning (which waits to 07:30:20) and watch.yml (which waits to 07:45);
 # at 12:00 and 21:00 the two reminders; on a Sunday at 19:00 the evening check on the 週日補刊. Their own crons stay as
 # backup, and each of those workflows is written so that a second start sends or alarms nothing twice.
+# The 07:30 tick starts no deploy: publish.yml cancels a deploy still running when a new one starts, and a wire deploy
+# at 07:30 could push back the live issue the 07:30:20 notice waits for; the wires come again at 08:00.
 on:
   push:
     branches: [main]
@@ -31,25 +35,29 @@ concurrency:
 jobs:
   relay:
     runs-on: ubuntu-latest
-    timeout-minutes: 340   # at most 60 + 3 x 60 + 50 minutes of waiting
+    timeout-minutes: 340   # at most 30 + 7 x 30 + 50 minutes of waiting
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
     steps:
-      - name: A deploy on each of the next four full hours, and the morning and the reminders on theirs
+      - name: A deploy on each of the next eight half hours, and the morning and the reminders on theirs
         run: |
-          start() { gh workflow run "$1" --ref main "${@:2}" || echo "::warning::could not start $1 (hour $i)"; }
-          for i in 1 2 3 4; do
-            sleep $(( 3600 - $(date +%s) % 3600 ))   # to the next :00
-            start publish.yml -f hourly=true
-            case "$(TZ=Asia/Taipei date +%u%H)" in
-              ?07)
+          start() { gh workflow run "$1" --ref main "${@:2}" || echo "::warning::could not start $1 (tick $i)"; }
+          for i in 1 2 3 4 5 6 7 8; do
+            sleep $(( 1800 - $(date +%s) % 1800 ))   # to the next :00 or :30
+            tick="$(TZ=Asia/Taipei date +%u%H%M)"    # weekday, hour, minute in Taiwan
+            case "$tick" in
+              ?0730) echo "07:30: no wire deploy, the issue is going out" ;;
+              *) start publish.yml -f hourly=true ;;
+            esac
+            case "$tick" in
+              ?0700)
                 start fill.yml -f wait_until=07:12
                 start notify.yml -f mode=morning
                 start watch.yml -f wait_until=07:45 ;;
-              ?12) start notify.yml -f mode=noon ;;
-              719) start watch.yml -f evening=true ;;
-              ?21) start notify.yml -f mode=evening ;;
+              ?1200) start notify.yml -f mode=noon ;;
+              71900) start watch.yml -f evening=true ;;
+              ?2100) start notify.yml -f mode=evening ;;
             esac
           done
       - name: Hand on to the next run at ten to the hour

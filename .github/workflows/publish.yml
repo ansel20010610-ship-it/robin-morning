@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       hourly:
-        description: "Started by wire.yml on the hour: stamp the 外電 with the full hour"
+        description: "Started by wire.yml every half hour: the 外電 are stamped with that half hour"
         required: false
         default: "false"
 
@@ -63,14 +63,14 @@ jobs:
           # the writers' one-line copy of the lessons must carry every lesson the audit added to the full file
           python3 scripts/lessons.py check || echo "::warning::editorial/LESSONS-short.md 和 LESSONS.md 的條目不一致（scripts/lessons.py check）"
       - name: Wire (外電)
-        # wire.yml starts this workflow every hour for the wires. content/wire.json is not in the repository: each
-        # build fetches the four wires afresh (no AI), starting from
-        # the live file so a wire that cannot be read this hour keeps last hour's items. Nothing here can stop a deploy.
+        # wire.yml starts this workflow every half hour for the wires. content/wire.json is not in the repository: each
+        # build fetches the four wires afresh (no AI), starting from the live file so a wire that cannot be read this
+        # time keeps the items it gave last time. Nothing here can stop a deploy.
         run: |
           curl -sf -A "robin-morning/1.0" --max-time 20 https://wiener-morgen-private.duckdns.org/content/wire.json -o content/wire.json || rm -f content/wire.json
           python3 -m venv /tmp/wire && /tmp/wire/bin/pip install -q opencc-python-reimplemented==0.1.7 || echo "::warning::opencc not installed; DW stays in simplified wording"
           PY=/tmp/wire/bin/python; [ -x "$PY" ] || PY=python3   # the system python only when the venv itself failed, not on wire.py's own exit 1
-          WIRE_ON_THE_HOUR="${{ github.event.inputs.hourly }}" "$PY" scripts/wire.py || echo "::warning::wire.py produced nothing this hour"
+          WIRE_ON_THE_HOUR="${{ github.event.inputs.hourly }}" "$PY" scripts/wire.py || echo "::warning::wire.py produced nothing this time"
       - name: Assemble site
         run: |
           mkdir _site

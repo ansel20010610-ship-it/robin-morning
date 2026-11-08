@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""外電 (Telegramme): the wire on the front page, refreshed every hour by .github/workflows/wire.yml. No AI.
+"""外電 (Telegramme): the wire on the front page, refreshed every half hour by .github/workflows/wire.yml. No AI.
 
 Four Chinese-language wires, read from their public RSS: 中央社 and 德國之聲 lead, BBC 中文 and 法廣 fill in
 (the owner, 2026-11-07). Each source gives at most its share of the newest items from the last day; titles and a
@@ -8,8 +8,9 @@ becomes 義大利, 软件 軟體) and curly quotes become 「」. The result is 
 
   {"updated": "...+08:00", "items": [{"src": "中央社", "title": "...", "lead": "...", "url": "...", "time": "...+08:00"}]}
 
-newest first; "updated" is the hour of the last read (always the full hour), written on every run. A source that cannot be read this hour
-keeps the items it gave last time (from the previous file), so one broken feed never empties the bar. With nothing at
+newest first; "updated" is the half hour of the last read (always :00 or :30), written on every run. A source that
+cannot be read this time keeps the items it gave last time (from the previous file), so one broken feed never empties
+the bar. With nothing at
 all to show, the old file is left as it is.
 
 Usage: python3 scripts/wire.py            (needs: pip install opencc-python-reimplemented==0.1.7)
@@ -180,7 +181,7 @@ def main():
         except Exception as e:  # noqa: BLE001 — one feed down must not stop the others
             failed.append(name)
             print(f"{name}: {e}", file=sys.stderr)
-            # keep what it gave last hour, while still within the window
+            # keep what it gave last time, while still within the window
             items += [i for i in before.get("items", []) if i.get("src") == name
                       and now - dt.datetime.fromisoformat(i["time"]) <= WINDOW]
     # the same story from two wires: keep the newer telling
@@ -197,9 +198,10 @@ def main():
         return 1
     # "updated" is when the wires were last read, so it moves on every run even when no wire did: the bar's
     # "16:30 更新" then says the paper looked, not only that something came in.
-    # Shown as the full hour, whichever deploy ran it — the hourly relay or a night shift's push at 01:19 — so the bar
-    # reads "01:00 更新" all through the hour (the owner, 2026-11-08: 整點; a push at 06:30 used to write 06:30).
-    stamp = now.astimezone(TW).replace(minute=0)
+    # Shown as the half hour, whichever deploy ran it — the relay at :00 and :30 or a night shift's push at 01:19 — so
+    # the bar reads "01:00 更新" until 01:30 (the owner, 2026-11-08: 整點, then 每半小時; a push at 06:20 used to write 06:20).
+    t = now.astimezone(TW)
+    stamp = t.replace(minute=t.minute // 30 * 30)
     data = {"updated": stamp.isoformat(timespec="minutes"), "items": out}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)

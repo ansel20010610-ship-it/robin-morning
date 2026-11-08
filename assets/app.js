@@ -414,7 +414,7 @@ function fillWeather() {
 // 外電 (Telegramme; scripts/wire.py, the owner 2026-11-07: the paper should not be finished once read): a thin bar under
 // the weather on the latest issue's front page, the newest wire on one line — 中央社 and 德國之聲 first, BBC 中文 and 法廣
 // filling in, all in Taiwan wording — and, opened, the last day's dozen with their leads. content/wire.json is rebuilt
-// every hour at deploy (no AI); the bar fetches it on each draw and with the five-minute refresh, and keeps itself
+// every half hour at deploy (no AI); the bar fetches it on each draw and with the five-minute refresh, and keeps itself
 // open across a refill. With no file (a preview, offline on first run) it stays hidden.
 // Unlike the weather above it, it has no heading row of its own: a quiet strip, like a length of telegraph tape —
 // a pale band with a gold edge, 外電 in small gold letters at its head (the owner, 2026-11-07: 和天氣不同，但不花俏).
@@ -2164,7 +2164,7 @@ async function boot() {
   const refetch = async () => {
     await loadIndex();
     refreshFront();
-    fillWire(); // the wire changes every hour whether or not the issue did
+    fillWire(); // the wire changes every half hour whether or not the issue did
     runAutoAdd();
   };
   setInterval(refreshFront, 60 * 1000);

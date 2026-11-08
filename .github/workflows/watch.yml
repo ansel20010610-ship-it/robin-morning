@@ -3,7 +3,7 @@ name: Issue watch
 # 07:45 Taiwan time: check that today's issue is complete — the columns, the serial installment, the watch columns'
 # check records, the shift reports (the 演出班 among them) and the live site. If not, open (or update) a GitHub issue,
 # which GitHub emails to the repository owner. GitHub's own cron ran this at 10:44 on 2026-11-08, so the reliable
-# start is wire.yml's hourly relay: at 07:00 it dispatches a run with wait_until=07:45, which sleeps to that minute
+# start is wire.yml's half-hour relay: at 07:00 it dispatches a run with wait_until=07:45, which sleeps to that minute
 # and then reads the newest main; the cron stays as backup and stands down when the relay's run already checked.
 # On a Sunday the relay starts a second run at 19:00 (evening=true): the 週日補刊 (15:07 and 17:07) should be done by
 # then, and a day still marked waiting/regenerating, or given up (unfinished), opens or updates the day's issue —

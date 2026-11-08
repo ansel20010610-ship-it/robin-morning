@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """出刊通知: tell the reader's phone that the day's issue is out (Web Push; no AI, no paid service).
 
-notify.yml runs this at 07:30 Taiwan time (started by wire.yml's hourly relay at 07:00, with GitHub's own schedules as
+notify.yml runs this at 07:30 Taiwan time (started by wire.yml's half-hour relay at 07:00, with GitHub's own schedules as
 backup); the device's own push service (Apple's, for the iPhone home-screen app) delivers it. Sending needs the VAPID private key in the VAPID_PRIVATE_KEY secret; its public half is
 content/config.json → push.key. The devices are listed in state/push/devices.json: on the phone, 設定 → 出刊通知 →
 複製裝置代碼, then `add` that code, commit and push; notify.yml sends the new device a test notification.

@@ -3,7 +3,7 @@ name: Fill from reserve
 # Last line of defence against a missing column: from 07:12 Taiwan time, any column of today's issue that is
 # still missing (or fails validation) is filled from content/reserve/. No AI involved. Shift 5 runs the same
 # script itself at 07:05; these runs are the fallback. GitHub's schedules start hours late (10:27 on 2026-11-08),
-# so the reliable start is wire.yml's hourly relay: at 07:00 it dispatches this workflow with wait_until=07:12,
+# so the reliable start is wire.yml's half-hour relay: at 07:00 it dispatches this workflow with wait_until=07:12,
 # and the run sleeps to that minute, fetches the newest main (shift 5 pushes until 07:05) and fills. When the issue
 # is still short afterwards and the day was not held for 週日補刊, it sleeps to 07:22 and fills once more: on a Sunday
 # late.py refuses to judge the quota before 07:20 when only shift 5 is silent (it may still be pushing), so the
