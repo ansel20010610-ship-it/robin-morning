@@ -1,11 +1,12 @@
 {
   "2026-11-08": {
-    "state": "waiting",
+    "state": "regenerating",
     "held_at": "10:27",
     "missing": [
       "football",
       "news",
       "wildcard"
-    ]
+    ],
+    "started_at": "15:08"
   }
 }
