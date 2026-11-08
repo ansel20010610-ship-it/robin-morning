@@ -1,0 +1,187 @@
+{
+ "column": "news",
+ "date": "2026-11-09",
+ "title": "川普說談判有進展就不太會攻擊伊朗，台股限空令今天上路",
+ "dek": "埃及火車追撞至少 7 死；塞內加爾外海移民船翻覆；台共主席遭羈押禁見。",
+ "brief": "川普 11 月 8 日對 CNN 說，只要談判持續有進展，極不可能再下令攻擊伊朗；伊朗外長說調停人要等一段時間才會回來。烏克蘭與俄羅斯在阿布達比的會談訂 11 月 10 日開始，法國說歐洲會到場。台灣金管會的 5 項穩定股市措施，今天起實施。",
+ "topic_key": "news:2026-11-09",
+ "form": "list",
+ "voice": "wire",
+ "updated_at": "2026-11-09T05:24:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "Iran threatens to 'rain down hell' if US escalates war",
+   "publisher": "半島電視台",
+   "date": "2026-11-08",
+   "url": "https://www.aljazeera.com/news/2026/11/8/iran-threatens-to-rain-down-hell-if-us-escalates-war",
+   "note": "川普對 CNN 的說法、3 艘航艦、38 座橋；阿拉格齊在 X 的貼文與 2 天提案"
+  },
+  {
+   "title": "川普：若談判取得進展就不太可能下令攻擊伊朗",
+   "publisher": "中央社",
+   "date": "2026-11-09",
+   "url": "https://www.cna.com.tw/news/aopl/202611090003.aspx",
+   "note": "台灣時間 11 月 9 日 02:45 發布；阿拉格齊對法新社說調停人自期中選舉後未赴中東"
+  },
+  {
+   "title": "Europe will take part in US-mediated Ukraine talks in Abu Dhabi, French FM says",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-08",
+   "url": "https://www.france24.com/en/europe/20261108-europe-will-take-part-us-mediated-ukraine-peace-talks-abu-dhabi-french-fm-says",
+   "note": "會談為週二、週三，原文未寫日曆日期（11 月 10、11 日為本稿依週日刊期推算）；巴侯（Barrot）在 RTL 的談話；庫許納的說法；與會名單未公布"
+  },
+  {
+   "title": "埃及開羅以南火車追撞　數節車廂出軌至少7死112傷",
+   "publisher": "中央社",
+   "date": "2026-11-09",
+   "url": "https://www.cna.com.tw/news/aopl/202611090002.aspx",
+   "note": "台灣時間 11 月 9 日 02:29 發布；埃及衛生部數字、國家鐵路局、塞西下令調查"
+  },
+  {
+   "title": "Train crash kills seven, injures dozens near Egypt's Cairo city",
+   "publisher": "半島電視台",
+   "date": "2026-11-08",
+   "url": "https://www.aljazeera.com/news/2026/11/8/train-crash-kills-four-injures-dozens-near-egypts-cairo-city",
+   "note": "吉薩省阿亞特區、目擊者說約當地 13:30、傷者超過 125 人；標題與內文數字不同，取內文"
+  },
+  {
+   "title": "Migrant boat sinks off Senegal, killing at least 34 people, authorities say",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-08",
+   "url": "https://www.france24.com/en/africa/20261108-migrant-boat-sinks-off-senegal-killing-at-least-34-people-authorities-say",
+   "note": "官方通訊社 APS 至少 34 死、內政部先前臨時數字 21 具遺體；沉沒日期週五或週六說法不一"
+  },
+  {
+   "title": "西非塞內加爾外海1艘非法移民船沉沒　至少21死",
+   "publisher": "中央社",
+   "date": "2026-11-08",
+   "url": "https://www.cna.com.tw/news/aopl/202611080193.aspx",
+   "note": "台灣時間 11 月 8 日 23:20 發布；內政部 21 具遺體、1 人獲救、克貝梅爾外海約距達卡 180 公里"
+  },
+  {
+   "title": "台股重挫金管會祭限空令等5大救市措施 11/9實施",
+   "publisher": "中央社",
+   "date": "2026-11-06",
+   "url": "https://www.cna.com.tw/news/afe/202611060293.aspx",
+   "note": "台灣時間 11 月 6 日 18:48 發布；5 項措施與數字；指數收盤與盤中跌點"
+  },
+  {
+   "title": "台股崩跌信心不足 國安基金宣布第10次進場護盤",
+   "publisher": "中央社",
+   "date": "2026-11-06",
+   "url": "https://www.cna.com.tw/news/afe/202611060270.aspx",
+   "note": "台灣時間 11 月 6 日 18:08 發布；國安基金第 10 次、最高 5,000 億元"
+  },
+  {
+   "title": "台共黨主席林德旺涉受中共資助參選里長　遭羈押禁見",
+   "publisher": "中央社",
+   "date": "2026-11-08",
+   "url": "https://www.cna.com.tw/news/asoc/202611080045.aspx",
+   "note": "台灣時間 11 月 8 日 11:25 發布、11:47 更新；台南地檢署新聞稿；陳震宙 5 萬元交保"
+  },
+  {
+   "title": "Taiwan People's Communist Party chief detained in China funding probe",
+   "publisher": "中央社英文網",
+   "date": "2026-11-08",
+   "url": "https://focustaiwan.tw/society/202611080010",
+   "note": "涉嫌違反反滲透法與選罷法；11 月 6 日同步搜索；新竹檢方預期對陳震宙的裁定抗告"
+  }
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "美伊談判暫停，川普與伊朗外長各自放話；烏俄在阿布達比的會談 11 月 10 日開始。台灣方面，金管會的 5 項穩定股市措施今天上路，台南檢方查辦台共主席。"
+  },
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "川普：談判有進展就不太攻擊伊朗",
+     "place": [
+      "IR",
+      "US"
+     ],
+     "summary": "川普 11 月 8 日對 CNN 說，伊朗若簽下「非常強而有力的協議」，再下令攻擊「極不可能有這個必要」；他說美軍鎖定 38 座橋、3 艘航艦待命。伊朗外長阿拉格齊（Abbas Araghchi）對法新社說，期中選舉造成「震撼」，調停人要過一段時間才會恢復往返。",
+     "source": "半島電視台、中央社",
+     "url": "https://www.aljazeera.com/news/2026/11/8/iran-threatens-to-rain-down-hell-if-us-escalates-war",
+     "when": "11 月 8 日，美國與伊朗當地時間"
+    },
+    {
+     "headline": "烏俄阿布達比會談 10 日登場",
+     "place": [
+      "UA",
+      "RU",
+      "AE"
+     ],
+     "summary": "美國居中調停的烏克蘭、俄羅斯會談，訂 11 月 10 日（週二）與 11 日在阿布達比舉行，與會名單未公布。法國外長 Jean-Noël Barrot 說法國會到場、讓歐洲的聲音被聽見；俄方先前表示談判桌上沒有歐洲人的位子。",
+     "source": "法國 24 電視台",
+     "url": "https://www.france24.com/en/europe/20261108-europe-will-take-part-us-mediated-ukraine-peace-talks-abu-dhabi-french-fm-says",
+     "when": "11 月 10 至 11 日，阿聯當地時間"
+    },
+    {
+     "headline": "埃及火車追撞 7 死逾百傷",
+     "place": "EG",
+     "summary": "埃及吉薩省（開羅南郊）11 月 8 日下午，吉薩開往法尤姆的火車追撞開羅開往亞斯文的列車，後者數節車廂出軌。衛生部說至少 7 死；傷者中央社報 112 人，半島電視台報超過 125 人。總統塞西下令調查，起因未公布。",
+     "source": "中央社、半島電視台",
+     "url": "https://www.cna.com.tw/news/aopl/202611090002.aspx",
+     "when": "11 月 8 日，埃及當地時間"
+    },
+    {
+     "headline": "塞內加爾移民船翻覆至少 34 死",
+     "place": "SN",
+     "summary": "塞內加爾北部克貝梅爾（Kebemer）外海，一艘前往西班牙加那利群島的移民船翻覆。官方通訊社 APS 報至少 34 死，內政部先前的臨時數字是 21 具遺體；只找到 1 名生還者，失蹤人數不明。",
+     "source": "法國 24 電視台、中央社",
+     "url": "https://www.france24.com/en/africa/20261108-migrant-boat-sinks-off-senegal-killing-at-least-34-people-authorities-say",
+     "when": "11 月 6 至 8 日，塞內加爾當地時間"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "金管會 5 項穩股市措施今天上路",
+     "place": "TW",
+     "summary": "11 月 6 日台股加權指數收 39,701.64 點，盤中一度跌 3,737.67 點，為史上最大盤中跌點；國安基金同日宣布第 10 次進場，最高可動用 5,000 億元。金管會 11 月 9 日起實施 5 項措施，除下表兩項調整，另放寬補繳擔保品，並鼓勵公司買回庫藏股、召開法說會。",
+     "source": "中央社",
+     "url": "https://www.cna.com.tw/news/afe/202611060293.aspx",
+     "when": "11 月 9 日起，台灣時間"
+    },
+    {
+     "headline": "台共主席林德旺遭羈押禁見",
+     "place": "TW",
+     "summary": "台南與新竹地檢署 11 月 8 日公布，台灣人民共產黨主席林德旺涉嫌受中共指示與資助參選台南里長，並招待選民赴中國旅遊以賄選。台南地方法院裁定林德旺羈押禁見；黨內中央委員陳震宙在新竹以 5 萬元交保。",
+     "source": "中央社",
+     "url": "https://www.cna.com.tw/news/asoc/202611080045.aspx",
+     "when": "11 月 8 日，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "金管會 11 月 9 日起的限空措施",
+   "head": [
+    "項目",
+    "原本",
+    "11 月 9 日起"
+   ],
+   "rows": [
+    [
+     "每日盤中借券賣出上限",
+     "30%",
+     "3%"
+    ],
+    [
+     "融券保證金成數",
+     "90%",
+     "130%"
+    ]
+   ],
+   "caption": "借券賣出上限為占該股前 30 個營業日日均量的比例，證券商避險與造市不在此限。資料來源：中央社。"
+  }
+ ]
+}
