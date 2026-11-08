@@ -1503,14 +1503,14 @@ function viewArchive() {
   // rm.archive.open; a search opens every month that has a hit.
   const thisYm = twNow().date.slice(0, 7), openSet = store.get("archive.open", {});
   const draw = (q) => {
-    const ql = q.trim().toLowerCase(), read = readSet(); // each article's 已讀 tick (style.css .issue-row li .rd)
+    const ql = q.trim().toLowerCase();
     const months = new Map();
     for (const iss of pubs) {
       const arts = sortArticles(iss.articles, iss.date).filter((a) => !ql || `${a.title} ${a.dek} ${col(a.column, iss.date).name}`.toLowerCase().includes(ql));
       if (!arts.length) continue;
       const ym = iss.date.slice(0, 7), d = Number(iss.date.slice(8));
       months.set(ym, [...(months.get(ym) || []), `<a class="issue-row" href="#/issue/${iss.date}"><div class="d"><b>${d}</b><span>週${esc(iss.weekday)}・${esc(issueNr(iss.no))}</span>${done.has(iss.date) ? seal(iss.date, 0, true) : ""}</div>
-        <ul>${arts.map((a) => { const r = read.has(`${iss.date}/${a.column}`); return `<li${r ? ' class="done"' : ""}><i>${r ? `<em class="rd" role="img" aria-label="已讀">✓</em>` : ""}${esc(col(a.column, iss.date).name)}</i>${esc(a.title)}${a.corrected ? `<em class="corr-tag">已更正</em>` : ""}</li>`; }).join("")}</ul></a>`]);
+        <ul>${arts.map((a) => `<li><i>${esc(col(a.column, iss.date).name)}</i>${esc(a.title)}${a.corrected ? `<em class="corr-tag">已更正</em>` : ""}</li>`).join("")}</ul></a>`]);
     }
     const rows = [...months].map(([ym, list]) => `<details class="mon"${ql || (ym in openSet ? openSet[ym] : ym === thisYm) ? " open" : ""} data-ym="${ym}">
       <summary class="month">${Number(ym.slice(5))} 月 ${ym.slice(0, 4)}<span class="de">${esc(monDe(ym))}</span><span class="n">${list.length} 期</span></summary>${list.join("")}</details>`).join("");
@@ -1552,10 +1552,9 @@ function viewArchive() {
     if (hitCol && !counts.has(hitCol)) hitCol = "";
     const list = hitCol ? lastHits.filter((r) => r.c === hitCol) : lastHits;
     const nameOf = (c) => col(c, lastHits.find((r) => r.c === c).d).name;
-    const seen = readSet();
     hits.innerHTML = `<div class="sec-head"><h2>全文</h2><span class="note">${list.length}${hitCol ? `／${lastHits.length}` : ""} 篇</span></div>
       ${counts.size > 1 ? `<nav class="chips hit-cols" aria-label="只看哪一欄"><button type="button" class="chip" data-hc="" aria-pressed="${!hitCol}">全部<small>${lastHits.length}</small></button>${[...counts].map(([c, n]) => `<button type="button" class="chip" data-hc="${esc(c)}" aria-pressed="${c === hitCol}">${esc(nameOf(c))}<small>${n}</small></button>`).join("")}</nav>` : ""}
-      ${list.map((r) => `<a class="hit" href="#/a/${r.d}/${r.c}"><span class="meta-s">${esc(fmtDate(r.d, "short"))}・${esc(col(r.c, r.d).name)}${seen.has(`${r.d}/${r.c}`) ? '<span class="read-mark">已讀</span>' : ""}</span><b>${esc(r.t)}</b><span class="snip">${snippet(r.x, q)}</span></a>`).join("")}`;
+      ${list.map((r) => `<a class="hit" href="#/a/${r.d}/${r.c}"><span class="meta-s">${esc(fmtDate(r.d, "short"))}・${esc(col(r.c, r.d).name)}</span><b>${esc(r.t)}</b><span class="snip">${snippet(r.x, q)}</span></a>`).join("")}`;
   };
   hits.addEventListener("click", (e) => { const b = e.target.closest("button[data-hc]"); if (!b) return; hitCol = b.dataset.hc; drawHits(input.value.trim().toLowerCase()); });
   const fullText = async (q) => {

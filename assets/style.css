@@ -17,7 +17,6 @@
   --robin: #B65A2E;
   --blue: #23395B;
   --red: #8E2A2E;
-  --read: #3D6A4C; /* 已讀 (the owner, 2026-11-08: 往期裡已讀標示要有顏色): a moss green no other mark uses, 5.5:1 on paper */
   --shadow: 0 1px 0 rgba(60, 45, 20, .06), 0 8px 24px -16px rgba(60, 45, 20, .35);
   --fs: 18.5px;
   --serif: "Noto Serif TC", "Songti TC", "Source Han Serif TC", "PMingLiU", serif;
@@ -36,7 +35,7 @@
     --paper: #15120E; --paper-2: #201B14; --paper-3: #2C261C;
     --ink: #EDE4D3; --ink-2: #CDC2AF; --muted: #998F7E;
     --rule: #564A33; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36; --foil: #E3B957; --foil-hi: #FFF0BF;
-    --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82; --read: #94C3A2;
+    --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82;
     --shadow: 0 1px 0 rgba(0,0,0,.4), 0 10px 28px -18px rgba(0,0,0,.9);
     color-scheme: dark;
   }
@@ -45,7 +44,7 @@
   --paper: #15120E; --paper-2: #201B14; --paper-3: #2C261C;
   --ink: #EDE4D3; --ink-2: #CDC2AF; --muted: #998F7E;
   --rule: #564A33; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36; --foil: #E3B957; --foil-hi: #FFF0BF;
-  --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82; --read: #94C3A2;
+  --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82;
   --shadow: 0 1px 0 rgba(0,0,0,.4), 0 10px 28px -18px rgba(0,0,0,.9);
   color-scheme: dark;
 }
@@ -251,14 +250,7 @@ button { font: inherit; color: inherit; }
 .item .th img { width: 100%; height: 100%; object-fit: cover; }
 .item .th.contain img { object-fit: contain; }
 .meta-s { font-family: var(--sans); font-size: 12px; color: var(--muted); margin-top: 6px; letter-spacing: .03em; }
-/* 已讀: a small moss-green label wherever an article's line says it was read — the cards, 隨手翻, the search hits — and a
-   moss tick in the lists (往期's month rows, 本期目錄, 延伸閱讀). */
-.read-mark { display: inline-block; padding: 0 6px; border-radius: 3px; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .08em; line-height: 1.6;
-  color: var(--read); background: color-mix(in srgb, var(--read) 13%, transparent); border: 1px solid color-mix(in srgb, var(--read) 35%, transparent); }
-.issue-row li.done i { color: var(--read); font-weight: 600; } /* the tick leads the line: a long title's ellipsis cannot hide it */
-.issue-row li .rd { font-style: normal; font-weight: 700; margin-right: 3px; }
-.issue-row li.done { color: var(--ink-2); }
-.hit .read-mark { margin-left: 6px; }
+.meta-s .read-mark { color: var(--gold-ink); }
 .meta-s .corr-mark { color: var(--red); font-weight: 600; }
 /* 更正 (app.js correctionLine; audit 2026-11-08, findings 32/43): one quiet sans line under a card's brief — the label in
    red, the sentence in the second ink — on the lead, the item cards, the random card and the saved rows. It escapes the
@@ -512,7 +504,7 @@ tr:first-child td { border-top: 0; }
 .rel .k { font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--gold-ink); font-weight: 600; }
 .rel b { font-weight: 600; font-size: 15.5px; line-height: 1.5; }
 .rel .sum { flex: 0 0 auto; display: flex; align-items: baseline; gap: 6px; padding-top: 15px; font-family: var(--sans); font-size: 12.5px; color: var(--muted); letter-spacing: .03em; }
-.rel .tick { font-style: normal; font-size: 15px; font-weight: 600; color: var(--read); }
+.rel .tick { font-style: normal; font-size: 15px; font-weight: 600; color: var(--gold-ink); }
 
 .next { margin: 30px 0 10px; border-top: 1px solid var(--rule); }
 .next .lbl { margin: 14px 0 0; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
@@ -654,7 +646,7 @@ dialog.bottom { margin: auto auto 0; }
 .sheet.contents .opt .k { font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--muted); }
 .sheet.contents .opt b { font-weight: 600; font-size: 15.5px; line-height: 1.5; }
 .sheet.contents .opt .sum { flex: 0 0 auto; font-family: var(--sans); font-size: 12.5px; color: var(--muted); padding-top: 15px; }
-.sheet.contents .opt .tick { font-size: 16px; font-weight: 600; color: var(--read); padding-top: 13px; }
+.sheet.contents .opt .tick { font-size: 16px; font-weight: 600; color: var(--gold-ink); padding-top: 13px; }
 .sheet.contents .opt.now { box-shadow: inset 3px 0 0 var(--gold); padding-left: 14px; }
 .sheet.contents .opt.now .k { color: var(--gold-ink); }
 .viewer { width: 100vw; height: 100vh; background: rgba(12, 10, 7, .96); color: #eee; display: flex; flex-direction: column; }
@@ -1249,6 +1241,7 @@ button.chip { cursor: pointer; font-family: var(--sans); }
 .random .card p { margin: 0 16px; color: var(--ink-2); font-size: .95em; line-height: 1.8; }
 .random .card p.brief { color: var(--ink); font-size: 1em; }
 .random .card .meta { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 12.5px; color: var(--muted); letter-spacing: .04em; overflow: hidden; font-variant-numeric: tabular-nums; }
+.random .card .meta .read-mark { color: var(--gold-ink); }
 .random .card .btns { margin: 16px 16px 18px; }
 .random .rnd-note { margin: 12px 2px 0; text-align: center; }
 
