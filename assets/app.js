@@ -1456,16 +1456,23 @@ function viewArchive() {
     main.querySelector(".list").innerHTML = rows || `<p class="empty">${ql ? "沒有符合的文章。" : "還沒有往期。"}</p>`;
     main.querySelector(".jahr")?.toggleAttribute("hidden", Boolean(ql)); // the month makes way for the search
   };
-  const chips = Object.entries(S.cfg.columns).filter(([, k]) => k.group !== "verse").map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
+  const cols = Object.entries(S.cfg.columns).filter(([, k]) => k.group !== "verse");
+  const chips = cols.map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
+  // The column chips fold (the owner, 2026-11-08: 搜尋下面那一堆格子我要可以收合): one summary line, open until the reader
+  // shuts it, the choice kept in rm.archive.cols. 刊史館 is a second stamp in the page head beside 隨手翻 (the owner, the
+  // same day: the door at the very bottom of the archive was awkward to reach).
+  const colsOpen = store.get("archive.cols", true);
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span>
+      <a class="stamp-btn second" href="#/chronik" aria-label="刊史館：從創刊號到今天的沿革"><b>刊史館</b><i>Chronik</i></a>
       <a class="stamp-btn" href="#/random" aria-label="隨手翻一篇：從往期裡抽一篇沒讀過的"><b>隨手翻</b><i>Zufall</i></a></header>
     ${continueRow(null, readSet(), " in-archive")}
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
     <div class="hits" aria-live="polite"></div>
-    <nav class="chips cols" aria-label="專欄">${chips}</nav>
+    <details class="cols-fold"${colsOpen ? " open" : ""}><summary><span>專欄</span><span class="de">Spalten</span><span class="n">${cols.length} 欄</span></summary>
+      <nav class="chips cols" aria-label="專欄">${chips}</nav></details>
     ${calendarHtml(twNow().date.slice(0, 7), pubs, done)}
-    <div class="list"></div>
-    <a class="sec-head link door" href="#/chronik" aria-label="刊史館：從創刊號到今天的沿革"><h2>刊史館</h2><span class="de">Chronik</span><span class="note">創刊以來 →</span></a></div>`;
+    <div class="list"></div></div>`;
+  main.querySelector(".cols-fold").addEventListener("toggle", (e) => store.set("archive.cols", e.target.open));
   // Remember which months the reader folded or opened (not the search's forced opening).
   main.querySelector(".list").addEventListener("toggle", (e) => {
     const det = e.target.closest?.("details.mon");

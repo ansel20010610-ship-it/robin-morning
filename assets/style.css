@@ -556,6 +556,16 @@ tr:first-child td { border-top: 0; }
 .mon summary.month::after { content: ""; width: 7px; height: 7px; border-right: 1px solid var(--gold-ink); border-bottom: 1px solid var(--gold-ink); transform: rotate(-45deg) translateY(-2px); flex: none; align-self: center; transition: transform .2s; }
 .mon[open] summary.month::after { transform: rotate(45deg) translateY(-3px); }
 .chips.cols { margin: 14px 0 0; }
+/* 往期: the column chips fold under one line (the owner, 2026-11-08: 搜尋下面那一堆格子我要可以收合) — spaced small
+   type with its German, the count at the right, the month folds' chevron. */
+.cols-fold { margin: 14px 0 0; }
+.cols-fold summary { list-style: none; display: flex; align-items: baseline; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--rule); font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .14em; color: var(--gold-ink); cursor: pointer; }
+.cols-fold summary::-webkit-details-marker { display: none; }
+.cols-fold summary .de { font-family: var(--latin); font-style: italic; font-weight: 400; letter-spacing: 0; font-size: 13px; color: var(--gold); }
+.cols-fold summary .n { margin-left: auto; font-weight: 400; letter-spacing: .06em; color: var(--muted); }
+.cols-fold summary::after { content: ""; width: 7px; height: 7px; border-right: 1px solid var(--gold-ink); border-bottom: 1px solid var(--gold-ink); transform: rotate(-45deg) translateY(-2px); flex: none; align-self: center; transition: transform .2s; }
+.cols-fold[open] summary::after { transform: rotate(45deg) translateY(-3px); }
+.cols-fold .chips.cols { margin-top: 10px; }
 .issue-row { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); text-decoration: none; }
 .issue-row .d { font-family: var(--latin); text-align: center; line-height: 1.05; }
 .issue-row .d b { display: block; font-size: 32px; font-weight: 600; }
@@ -1207,6 +1217,8 @@ button.chip { cursor: pointer; font-family: var(--sans); }
   box-shadow: inset 0 0 0 2px var(--paper), inset 0 0 0 3px var(--gold-soft); display: grid; place-content: center; text-align: center; text-decoration: none; rotate: -8deg; line-height: 1; }
 .stamp-btn b { display: block; font-family: var(--sans); font-size: 9px; font-weight: 600; letter-spacing: .14em; padding-left: .14em; margin-bottom: 2px; }
 .stamp-btn i { display: block; font-family: var(--latin); font-style: italic; font-size: 12px; font-weight: 600; letter-spacing: .02em; }
+/* A second stamp to the left of the first (往期: 刊史館 beside 隨手翻), leaning the other way. */
+.stamp-btn.second { right: 58px; rotate: 6deg; }
 .random .col-note { margin-top: 2px; }
 /* The card: the lead's face in a Secession frame (an ink line, a hairline inside) so it reads as one card drawn from the
    pile; it is the thing motion.js flip turns over, so it owns its transform and sits on a stage with depth. */
