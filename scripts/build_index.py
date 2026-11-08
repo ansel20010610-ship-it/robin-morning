@@ -228,7 +228,7 @@ def press(cfg, d):
         skip(path, "%s: %s" % (type(e).__name__, e))
         return out
     # One broken entry loses that shift alone, not the day's whole record.
-    for k in SHIFTS + ("reserve", "audit"):
+    for k in SHIFTS + ("reserve", "audit", "late"):  # "late": the 週日補刊's report (scripts/late.py, report_run.py --group late)
         if k not in runs:
             continue
         try:

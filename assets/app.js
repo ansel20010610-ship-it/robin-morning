@@ -36,6 +36,10 @@ async function loadData() {
 // ran out overnight is not patched with reserves; the whole issue is written again after 15:00, and the app says so.
 const loadLate = () => getJSON("content/late.json", { fresh: true }).then((l) => { S.late = l && typeof l === "object" ? l : {}; }).catch(() => {});
 const lateOf = (date) => S.late?.[date] || null;
+// A Sunday that came out in parts (the night's articles at 07:30, the rest after the 15:00 reset) is not whole until
+// late.py marks it done: until then its parcel stays sealed and its stamp is not given, whatever is read (the owner,
+// 2026-11-08: 要等全部刊完才能拆包裹和郵票). From the next day on the issue counts as it stands, finished or not.
+const issueOpen = (date) => { const l = lateOf(date); return !l || l.state === "done" || date !== twNow().date; };
 function lateText(late, got) {
   const now = twNow();
   if (late.state === "waiting" && now.minutes < publishMin())
@@ -164,6 +168,7 @@ function sealedBy(date, column) {
   const read = readSet();
   if (read.has(`${date}/${column}`)) return null;
   const left = order.filter((a) => a !== pick && col(a.column, date).group !== "serial" && (col(a.column, date).group !== "watch" || a.brief) && !read.has(`${date}/${a.column}`));
+  if (!issueOpen(date)) { left.pending = true; return left; } // the issue itself is not whole yet (viewArticle says so)
   return left.length ? left : null;
 }
 // 找知更鳥 (Vogelsuche): every issue hides one small robin in one of its articles — which article and after which
@@ -173,7 +178,7 @@ function sealedBy(date, column) {
 const birdsFound = () => new Set(store.get("birds", []));
 function birdSpot(issue) {
   if (!issue?.date) return null;
-  const order = sortArticles(issue.articles || [], issue.date), pick = revealPick(issue, order);
+  const order = sortArticles(issue.articles || [], issue.date), pick = parcelOf(issue, order);
   const pool = order.filter((a) => a !== pick && !["watch", "serial"].includes(col(a.column, issue.date).group));
   if (!pool.length) return null;
   const h = Array.from(issue.date).reduce((x, ch) => (x * 33 + ch.charCodeAt(0)) >>> 0, 5381);
@@ -425,8 +430,10 @@ function fillWire() {
 const REVEAL_COLS = new Set(["artwork", "architecture"]);
 // The parcel's article (the owner, 2026-11-03): it is shown only as the parcel, not again in its list — viewFront takes
 // it out of 正刊/副刊 — so the parcel's caption carries its kicker and title and the parcel itself opens the article.
-function revealPick(issue, arts) {
-  if (!todays(issue)) return null;
+function revealPick(issue, arts) { return todays(issue) ? parcelOf(issue, arts) : null; }
+// Which article the parcel wraps, whatever the clock says — birdSpot leaves it out of its pool by this, so the robin
+// stays where it was hidden after midnight and in an archive issue (audit 2026-11-08: the pool changed with todays()).
+function parcelOf(issue, arts) {
   const supps = arts.filter((a) => col(a.column, issue.date).group === "supplement" && a.hero?.src);
   return supps.find((a) => REVEAL_COLS.has(a.column)) || supps.find((a) => a.hero?.kind === "artwork") || supps[0] || null;
 }
@@ -437,9 +444,10 @@ function revealBox(issue, arts, read) {
   if (!pick || !listed.length) return "";
   const h = pick.hero, T = Math.min(12, listed.length), rows = Math.ceil(T / 4), last = T - 4 * (rows - 1);
   const key = (a) => `${date}/${a.column}`, tileOf = (i) => Math.floor((i * T) / listed.length);
-  const gone = Array.from({ length: T }, (_, j) => listed.every((a, i) => tileOf(i) !== j || read.has(key(a))));
+  const open = issueOpen(date); // a Sunday still coming out in parts: every tile stays on, whatever is read
+  const gone = Array.from({ length: T }, (_, j) => open && listed.every((a, i) => tileOf(i) !== j || read.has(key(a))));
   const was = (store.get("reveal.seen", null) || {})[date];
-  store.set("reveal.seen", { [date]: listed.filter((a) => read.has(key(a))).map(key) });
+  store.set("reveal.seen", { [date]: open ? listed.filter((a) => read.has(key(a))).map(key) : [] }); // shut: everything read peels together when it opens
   const move = !calm() && Array.isArray(was);
   const newly = (j) => move && listed.some((a, i) => tileOf(i) === j && !was.includes(key(a))); // an article of tile j read since the last draw
   const done = gone.every(Boolean), just = done && gone.some((_, j) => newly(j));
@@ -469,7 +477,7 @@ function revealBox(issue, arts, read) {
   // Just opened: the title is set a glyph at a time, gold cooling to ink, as the masthead's verse (verseHtml/verseVars).
   const title = just ? `<b class="set"${verseVars(pick.title)}>${verseHtml(pick.title)}</b>` : `<b>${esc(pick.title)}</b>`;
   const cap = done ? `<a class="art${pm.cls}"${pm.st} href="${href}">${kicker(pick.column, false, date)}${title}${by ? `<span class="by">${by}</span>` : ""}<span class="go">看那篇<i aria-hidden="true">→</i></span></a>`
-    : `<div class="art">${kicker(pick.column, false, date)}<span class="left">還有 ${unread} 篇沒讀，讀完就拆開</span></div>`;
+    : `<div class="art">${kicker(pick.column, false, date)}<span class="left">${open ? `還有 ${unread} 篇沒讀，讀完就拆開` : "今天的報紙下午才出齊，到齊之後再拆"}</span></div>`;
   const ar = h.width > 0 && h.height > 0 ? ` style="--ar:${Number(h.width)}/${Number(h.height)}"` : "";
   return `<section class="reveal${done ? " done" : ""}${just ? " just" : ""}" aria-label="拆開今天的包裹"><div class="lbl">拆開今天的包裹<span class="de">Das Paket</span></div>
     ${done ? `<a class="plate${CONTAIN.has(h.kind) ? " contain" : ""}"${ar} href="${href}" aria-label="${esc(pick.title)}">` : `<div class="plate${CONTAIN.has(h.kind) ? " contain" : ""}"${ar} aria-label="還包著的包裹">`}<img src="${esc(h.src)}" alt="${esc(h.alt || "")}" loading="eager" decoding="async" referrerpolicy="no-referrer"><div class="tiles" aria-hidden="true" style="--rows:${rows}">${tiles}</div>${done ? "</a>" : "</div>"}
@@ -586,8 +594,9 @@ function viewFront(dateParam) {
     ${serial.length ? serialBox(issue.date, serial[0], read) : ""}
     ${watch.length ? `<div class="sec-head"><h2>遠方有動靜</h2><span class="de">In der Ferne</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
     ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdsFound().has(issue.date) ? "今天的知更鳥找到了。" : "今天有一隻知更鳥藏在某一篇裡。"}</p>` : ""}
-    ${!arts.some((a) => forStamp(a, issue.date) && a.brief) ? "" : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
-      : unreadIn(issue.date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的郵票才蓋得下去。</span></div>`
+    ${!arts.some((a) => forStamp(a, issue.date) && a.brief) ? "" : !issueOpen(issue.date) ? `<div class="finish left"><b>今天這一份還沒出齊</b><span class="note">下午補刊到齊以後，包裹和郵票才會開。</span></div>`
+      : unreadIn(issue.date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${digestDone().has(issue.date) ? "早上的郵票已經蓋好了；後來補上的這幾篇也讀完，今天這一份才算讀到最後一行。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的郵票才蓋得下去。`}</span></div>`
+      : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
       : `<div class="finish">${finishInner(issue.date)}</div>`}
     ${dateParam ? "" : wocheBox()}
     ${dayBox(issue.date)}
@@ -648,7 +657,8 @@ const digestDone = () => new Set(store.get("digest.done", []));
 function syncDone() {
   try {
     const done = new Set(store.get("digest.done", []));
-    for (const i of publishedIssues()) if ((i.articles || []).length && !unreadIn(i.date, i.articles)) done.add(i.date);
+    // an issue holding only the serial (written days ahead) has nothing the stamp counts: not finished, so the reminders still come
+    for (const i of publishedIssues()) { const arts = i.articles || []; if (issueOpen(i.date) && arts.some((a) => forStamp(a, i.date)) && !unreadIn(i.date, arts)) done.add(i.date); }
     caches.open("rm-state").then((c) => c.put("state/done", new Response(JSON.stringify([...done]), { headers: { "Content-Type": "application/json" } }))).catch(() => {});
   } catch { /* no Cache API (a plain http:// preview) */ }
 }
@@ -729,11 +739,16 @@ function finishNote(date) {
 // Load the issue's articles in the background: they open instantly and the service worker keeps them for offline reading,
 // together with each article's opening picture (the other pictures are kept once they have been seen).
 function prefetch(issue) {
-  const saveData = navigator.connection?.saveData;
-  const run = () => issue.articles.forEach((a) => {
-    article(issue.date, a.column).catch(() => {});
-    if (a.hero?.src && !saveData) { const im = new Image(); im.referrerPolicy = "no-referrer"; im.src = a.hero.src; }
-  });
+  // The cards show the 500px thumb; the 1280px hero is only needed inside the article. Prefetching every hero cost
+  // ~4.6 MB a morning (audit 2026-11-08), so only the unread 正刊 articles' pictures, at most two, and none on a
+  // metered or slow connection — the rest load when the article opens and are kept by the service worker from then on.
+  const c = navigator.connection, slow = Boolean(c?.saveData) || /(^|-)2g$|^3g$/.test(c?.effectiveType || "");
+  const read = readSet();
+  const heroes = slow ? [] : issue.articles.filter((a) => a.hero?.src && col(a.column, issue.date).group === "main" && !read.has(`${issue.date}/${a.column}`)).slice(0, 2);
+  const run = () => {
+    issue.articles.forEach((a) => article(issue.date, a.column).catch(() => {}));
+    heroes.forEach((a) => { const im = new Image(); im.referrerPolicy = "no-referrer"; im.src = a.hero.src; });
+  };
   if ("requestIdleCallback" in window) requestIdleCallback(run, { timeout: 4000 }); else setTimeout(run, 1500);
 }
 
@@ -791,7 +806,7 @@ async function viewArticle(date, column, my) {
   const sealed = sealedBy(date, column);
   if (sealed) {
     main.innerHTML = `<div class="wrap"><div class="locked-page"><h1>這篇還包著</h1>
-      <p>今天的包裹要等其他 ${sealed.length} 篇讀完才拆開。</p><a class="btn" href="#/">回首頁去讀</a></div></div>`;
+      <p>${sealed.pending ? "今天的報紙下午才會出齊，包裹要等全部到齊才拆。" : `今天的包裹要等其他 ${sealed.length} 篇讀完才拆開。`}</p><a class="btn" href="#/">回首頁去讀</a></div></div>`;
     return;
   }
   const plateNow = !plateLater; // taken once: a retry after an error plates the picture itself
@@ -1378,7 +1393,8 @@ function viewArchive() {
     <div class="hits" aria-live="polite"></div>
     <nav class="chips cols" aria-label="專欄">${chips}</nav>
     ${calendarHtml(twNow().date.slice(0, 7), pubs, done)}
-    <div class="list"></div></div>`;
+    <div class="list"></div>
+    <a class="sec-head link door" href="#/chronik" aria-label="刊史館：從創刊號到今天的沿革"><h2>刊史館</h2><span class="de">Chronik</span><span class="note">創刊以來 →</span></a></div>`;
   // Remember which months the reader folded or opened (not the search's forced opening).
   main.querySelector(".list").addEventListener("toggle", (e) => {
     const det = e.target.closest?.("details.mon");
@@ -1610,6 +1626,34 @@ function viewPress() {
   const issues = [mine, ...pubs.filter((i) => i.date !== today)];
   main.innerHTML = `<div class="wrap press">${pressHtml(S.cfg, { ...S.index, issues }, col)}</div>`;
   document.title = `印務室｜${S.cfg.title}`;
+}
+
+// ——— 刊史館 (Chronik, content/chronik.json): the paper's own history as one timeline from the first issue — columns
+// opened, closed and renamed, what the app learned to do, the nights the paper was late or did not come — kept by the
+// owner's editor, not by the shifts (the owner, 2026-11-08: 在往期加入刊史館，用時間線講述此刊的歷史，從創刊開始介紹各種沿革).
+// Oldest first, month by month, so it reads from the founding down to today; an entry on a day with an issue opens it.
+const CHRONIK_KINDS = { founding: ["創刊", "Gründung"], column: ["欄位", "Rubrik"], feature: ["新功能", "Neu"], process: ["編輯部", "Redaktion"], incident: ["出刊異常", "Störung"], rename: ["更名", "Umbenannt"], other: ["沿革", "Chronik"] };
+async function viewChronik() {
+  const head = `<header class="page-title"><h1>刊史館</h1><span class="de">Chronik</span></header>`;
+  main.innerHTML = `<div class="wrap chronik">${head}<p class="loading">翻開刊史……</p></div>`;
+  document.title = `刊史館｜${S.cfg.title}`;
+  let data = null;
+  try { data = await getJSON("content/chronik.json", { fresh: true }); } catch { /* offline, or not written yet */ }
+  if (!(location.hash || "#/").startsWith("#/chronik")) return;
+  const entries = (Array.isArray(data?.entries) ? data.entries : []).filter((e) => /^\d{4}-\d{2}-\d{2}$/.test(e.date || "") && e.title).sort((a, b) => a.date.localeCompare(b.date));
+  if (!entries.length) { main.innerHTML = `<div class="wrap chronik">${head}<p class="empty">${data ? "刊史還沒有寫。" : "目前讀不到刊史（可能是離線），請稍後再試。"}</p></div>`; return; }
+  const pubs = publishedIssues(), first = pubs[pubs.length - 1], byDate = new Map(pubs.map((i) => [i.date, i]));
+  const arts = pubs.reduce((n, i) => n + (i.articles || []).length, 0);
+  const months = new Map();
+  for (const e of entries) months.set(e.date.slice(0, 7), [...(months.get(e.date.slice(0, 7)) || []), e]);
+  const item = (e) => {
+    const k = CHRONIK_KINDS[e.kind] || CHRONIK_KINDS.other, iss = byDate.get(e.date);
+    return `<li class="ev ${esc(e.kind || "other")}"><time datetime="${esc(e.date)}"><b>${Number(e.date.slice(8))}</b><i>日</i></time><div class="ev-body"><span class="kind">${k[0]}<span class="de">${k[1]}</span></span><h3>${esc(e.title)}</h3>${e.text ? `<p>${inline(e.text)}</p>` : ""}${iss ? `<a class="go" href="#/issue/${esc(e.date)}">${esc(issueNo(iss.no))}<i aria-hidden="true">→</i></a>` : ""}</div></li>`;
+  };
+  main.innerHTML = `<div class="wrap chronik">${head}
+    <p class="col-note">${first ? `${esc(fmtDate(first.date, "short"))} 創刊，至今 ${pubs.length} 期、${arts} 篇。` : ""}這份報紙從第一期到今天改過什麼、哪一天沒有出，都記在這裡。</p>
+    ${[...months].map(([ym, list]) => `<div class="sec-head"><h2>${Number(ym.slice(5))} 月 ${ym.slice(0, 4)}</h2><span class="de">${esc(monDe(ym))}</span><span class="note">${list.length} 則</span></div><ol class="tl">${list.map(item).join("")}</ol>`).join("")}
+    <p class="meta-s today">寫到 ${esc(fmtDate(twNow().date, "short"))}，明天再續。</p></div>`;
 }
 
 // ——— 畫廊 (Galerie): the opening pictures of the art, architecture and photo columns — and any other hero that is a
@@ -1872,7 +1916,7 @@ let landKey = null, landTop = null; // 接著上次: the article tapped on the f
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/serial") || h.startsWith("#/column/serial") ? "#/serial" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/archive" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/serial") || h.startsWith("#/column/serial") ? "#/serial" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/chronik") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/archive" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let enteredFront = false; // this draw of the front page came from another page (route), not from a redraw in place
 let cameFrom = ""; // the hash the reader left for this one
@@ -1904,7 +1948,8 @@ async function route(ev) {
   const detail = isDetail(h);
   // The page an article (or event) was opened from; its back button returns there (history.back) instead of to the
   // issue. (From one article on to another it keeps pointing the same way: back then steps through them like a browser.)
-  if (!detail || !ev || tapped) fromList = null;
+  if (!ev && shownHash === h) { /* a redraw of the page on screen (下拉更新): keep where it was opened from */ }
+  else if (!detail || !ev || tapped) fromList = null;
   else if (!leaving) fromList = shownHash;
   shownHash = h;
   if (tapped) places.delete(h);
@@ -1954,6 +1999,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/stamp/")) viewStamp(h.slice(8).split("?")[0]);
   else if (h.startsWith("#/world")) viewWorld();
   else if (h.startsWith("#/press")) viewPress();
+  else if (h.startsWith("#/chronik")) viewChronik();
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/marks")) viewMarks();
@@ -2039,7 +2085,9 @@ async function boot() {
   let fetchedAt = Date.now(), hiddenAt = 0;
   const loadIndex = async () => {
     loadGigs();
-    await loadLate();
+    // the day's files together with the index: a PWA kept alive overnight otherwise shows no 歷史上的今天 and a stale
+    // 連載 cast for the new day (audit 2026-11-08); each keeps its last copy when offline
+    await Promise.all([loadLate(), loadDays(), S.book === undefined ? null : loadBook()]);
     try { S.index = await getJSON("content/index.json", { fresh: true }); fetchedAt = Date.now(); } catch { /* offline: still redraw the clock */ }
   };
   const refetch = async () => {

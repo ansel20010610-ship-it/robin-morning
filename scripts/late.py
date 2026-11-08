@@ -77,12 +77,14 @@ def silent_shifts(d):
 def hold(cfg, d, now=None):
     """Why the reserve fill must not run for issue `d` now, or None. Marks the day waiting when it holds."""
     now = now or tw_now()
-    if d.weekday() != 6 or now.date() != d or now.hour >= RESET_HOUR:
-        return None
     data = load()
     entry = data.get(str(d)) or {}
+    # first the state, then the clock: a fill that GitHub starts after 15:00 (3 h late on 2026-11-08) must still stand
+    # aside for a day already marked for the 補刊, whatever the hour
     if entry.get("state") in OPEN:
         return "今天已標記為週日補刊（%s）" % entry["state"]
+    if d.weekday() != 6 or now.date() != d or now.hour >= RESET_HOUR:
+        return None
     missing = unfinished(cfg, d)
     silent = silent_shifts(d)
     if not missing or not silent:

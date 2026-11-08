@@ -26,8 +26,8 @@ export function twStamp(iso, now = twNow()) {
 export const overdue = (date, now = twNow()) => date < now.date || (date === now.date && now.minutes > OVERDUE);
 
 // 今晨: the first issue handed in (app.js viewPress: the one of today's date, from midnight on, whether it exists yet or
-// not). The timetable of the five shifts — all "未回報" while the night is young — then who stood in from the reserve,
-// what is still missing, and the Sunday late state.
+// not). The timetable of the five shifts — all "未回報" while the night is young — and on a Sunday held for the afternoon
+// the 補刊 as a sixth row; then who stood in from the reserve, what is still missing, and the late day's clock.
 function morning(issue, col, now) {
   if (!issue) return `<p class="empty">還沒有任何一期。</p>`;
   const { date } = issue, press = issue.press || {};
@@ -47,13 +47,27 @@ function morning(issue, col, now) {
     const at = SHIFTS.filter(([, t]) => { const [h, m] = t.split(":").map(Number); return h * 60 + m <= now.minutes; }).length;
     rows.splice(at, 0, `<li class="now" role="img" aria-label="此刻 ${hm}"><span class="no"></span><div class="duty"><b>此刻</b><span>${hm}</span></div></li>`);
   }
+  // 週日補刊 (the owner, 2026-11-08: 禮拜天補刊印務室也要有訊息): on a Sunday held for the afternoon the regeneration is a
+  // shift of its own at the foot of the timetable — which columns it had to write again, when it handed in (its report
+  // in state/runs, key "late") or where it stands (content/late.json), and its note — so the press room tells the
+  // whole day, not only the night.
+  const lt = issue.late, lr = press.late;
+  if (lt || lr) {
+    const cols = names(lr?.missing?.length ? lr.missing : lt?.missing, date, col);
+    const at = lr ? esc(lr.at || "已回報") : lt?.state === "regenerating" ? "補刊中" : lt?.state === "waiting" ? (date === now.date && now.minutes < 15 * 60 ? "等 15:00" : "待補刊") : "已回報";
+    rows.push(`<li class="shift extra${lr ? "" : lt?.state === "regenerating" ? "" : " wait"}"><span class="no zh">補</span><div class="duty"><b>15:07</b><span>週日補刊・重寫凌晨缺的</span></div>
+      <span class="at">${at}</span>
+      ${cols.length ? `<div class="miss">${cols.map((n) => `<span class="chip">${n}</span>`).join("")}</div>` : ""}
+      ${lr?.note ? `<p class="small">${esc(lr.note)}</p>` : ""}</li>`);
+  }
   const filled = names((issue.articles || []).filter((a) => a.from_reserve).map((a) => a.column), date, col);
   const missing = names(press.missing, date, col);
-  const lateState = issue.late && LATE[issue.late.state];
+  // The late day's clock: when the morning fill stood aside, when the regeneration started, when the issue was whole.
+  const lateLine = lt && ([lt.held_at && `${esc(lt.held_at)} 早上停手`, lt.started_at && `${esc(lt.started_at)} 開工`, lt.done_at && `${esc(lt.done_at)} 出齊`].filter(Boolean).join("・") || LATE[lt.state] || "");
   return `${head}<ol class="shifts">${rows.join("")}</ol>
     <dl class="kv"><dt>補位</dt><dd>${filled.length ? filled.join("、") : "無"}</dd>
       ${missing.length ? `<dt>缺稿</dt><dd class="red">${missing.join("、")}</dd>` : ""}
-      ${lateState ? `<dt>補刊</dt><dd>${lateState}</dd>` : ""}</dl>`;
+      ${lateLine ? `<dt>補刊</dt><dd>${lateLine}</dd>` : ""}</dl>`;
 }
 
 // 備稿庫存: one bar per column against its target, mains first, then the supplements in config.json's order.

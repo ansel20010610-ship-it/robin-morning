@@ -1373,6 +1373,28 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 
 /* ——— 印務室 (Druckerei; assets/press.js, app.js viewPress): the owner's press room ——— */
 .press .col-note { margin-top: 4px; }
+
+/* 刊史館 (app.js viewChronik): the paper's own timeline — a rail down the left, a gold lozenge per event as the
+   articles' timelines wear, the day in the Latin face in the margin; an incident's lozenge is red. The door to it sits
+   at the foot of 往期, where the archive runs out and the founding begins. */
+.archive .door, .door { margin-top: 28px; }
+.chronik .col-note { margin-top: 4px; }
+.chronik .tl { list-style: none; margin: 0 0 6px; padding: 0 0 0 56px; position: relative; }
+.chronik .tl::before { content: ""; position: absolute; left: 44px; top: 10px; bottom: 10px; width: 1px; background: var(--rule); }
+.chronik .ev { position: relative; padding: 10px 0 18px; }
+.chronik .ev::before { content: ""; position: absolute; left: -16px; top: 19px; width: 7px; height: 7px; background: var(--paper); border: 2px solid var(--gold); transform: rotate(45deg); }
+.chronik .ev.incident::before { border-color: var(--red); }
+.chronik .ev.founding::before { background: var(--gold); }
+.chronik .ev time { position: absolute; left: -56px; top: 9px; width: 32px; text-align: right; line-height: 1; }
+.chronik .ev time b { display: block; font-family: var(--latin); font-size: 22px; font-weight: 600; color: var(--gold-ink); font-variant-numeric: lining-nums; }
+.chronik .ev time i { display: block; font-style: normal; font-family: var(--sans); font-size: 10px; color: var(--muted); letter-spacing: .1em; margin-top: 4px; }
+.chronik .kind { display: inline-flex; gap: 7px; align-items: baseline; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .14em; color: var(--gold-ink); }
+.chronik .kind .de { font-family: var(--latin); font-style: italic; font-weight: 400; letter-spacing: 0; font-size: 12.5px; color: var(--gold); }
+.chronik .ev h3 { margin: 4px 0 6px; font-size: 17px; line-height: 1.45; letter-spacing: .02em; }
+.chronik .ev p { margin: 0; font-size: 14.5px; line-height: 1.8; color: var(--ink-2); }
+.chronik .ev .go { display: inline-block; margin-top: 8px; font-family: var(--sans); font-size: 12px; color: var(--muted); text-decoration: none; letter-spacing: .04em; }
+.chronik .ev .go i { font-style: normal; margin-left: 4px; }
+.chronik .today { text-align: center; color: var(--muted); margin: 12px 0 30px; }
 .press .small { font-family: var(--sans); font-size: 12.5px; line-height: 1.6; color: var(--muted); margin: 5px 0 0; }
 .press .red { color: var(--red); }
 /* The timetable, set like the yearbook's numbers: a 2px ink rule over it, hairlines between the shifts, 1px ink under.
@@ -1383,6 +1405,7 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .shift { display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; column-gap: 10px; align-items: baseline; padding: 11px 0 12px; border-top: 1px solid var(--rule); }
 .shift:first-child { border-top: 0; }
 .shift .no { font-family: var(--latin); font-size: 22px; font-weight: 600; line-height: 1; color: var(--gold-ink); }
+.shift .no.zh { font-family: inherit; font-size: 17px; letter-spacing: .06em; } /* 補: the Sunday regeneration's row */
 .shift .duty { font-family: var(--sans); font-size: 13.5px; line-height: 1.5; color: var(--ink); }
 .shift .duty b { font-weight: 500; color: var(--muted); margin-right: 8px; }
 .shift .at { font-family: var(--latin); font-size: 19px; font-weight: 600; line-height: 1; color: var(--ink); white-space: nowrap; }

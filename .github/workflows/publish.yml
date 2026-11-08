@@ -14,6 +14,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: write   # to restart wire.yml's relay
 
 concurrency:
   group: pages
@@ -27,6 +28,22 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy1.outputs.page_url || steps.deploy2.outputs.page_url }}
     steps:
+      - name: Mend the wire relay if it has dropped (wire.yml)
+        # The relay hands itself on with one API call at :50; if that call fails, only its cron (hours late on
+        # 2026-11-07) would restart it. Every deploy — the hourly one included — checks for a live run and starts one
+        # when there is none, so the hours (and whatever rides on them) are never more than a deploy away.
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          alive=0
+          for st in in_progress queued waiting requested pending; do
+            n=$(gh run list --workflow wire.yml --status "$st" --json databaseId --jq length 2>/dev/null) || n=1
+            case "$n" in ''|*[!0-9]*) n=1 ;; esac
+            alive=$(( alive + n ))
+          done
+          if [ "$alive" = 0 ]; then gh workflow run wire.yml --ref main && echo "wire relay restarted"; else echo "wire relay alive ($alive run(s))"; fi
       # always build the newest main, so an older run finishing late cannot replace a newer deploy
       - uses: actions/checkout@v7
         with:

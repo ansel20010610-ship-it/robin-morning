@@ -59,7 +59,9 @@ MACHINE = ["我的讀法", "本文的讀法", "本報的讀法", "本文推測",
            "先別急著", "後面會", "下面會", "文末有", "今天帶走", "帶走這個", "帶走這句", "讀完你會帶走", "說得很直接",
            "寫得很直接", "講得最白", "說得更白", "說得很白", "最毒", "很毒", "最酸", "很有畫面", "最有畫面", "最燙",
            "最有看頭", "扯吧", "笑死", "這波", "超狠", "說真的", "恭喜，你", "換你是", "你一定在哪裡聽過", "你一定聽過",
-           "病人問：", "病人回診："]
+           "病人問：", "病人回診：",
+           # LESSONS 32/37 (稽核 2026-11-01, 11-08): the paper talking about itself, and the two judgement openers
+           "本報的看法", "本報注意到", "本報的觀察", "本報推測", "本報套用", "本報把", "依我看", "換我"]
 VOICE_TAGS = {"推論", "詮釋", "原創假設", "原創示範", "傳聞", "戰術推論"}
 SPEC_HEADS = ["問題：", "起始站位", "持球者的選項", "無球跑動", "對手的反應", "什麼條件下有效", "什麼情況下有效",
               "怎麼破解", "失敗的風險", "第一眼", "構圖骨架", "明天看診怎麼用", "今天看診怎麼用", "要小心的地方",
@@ -253,7 +255,8 @@ def example_grams(n=7):
 
 
 # Writing advice for the reader's own novel (the owner, 2026-11-07: 以後不要有給史詩創作者的建議這種內容).
-WRITER_ADVICE = re.compile(r"史詩創作|給(?:史詩)?創作者|給寫作者|寫作者(?:可以|不妨|會)|換我寫史詩|你的(?:小說|史詩|世界觀)|寫小說的人")
+WRITER_ADVICE = re.compile(r"史詩創作|給(?:史詩)?創作者|給寫作者|寫作者(?:可以|不妨|會)|換我寫史詩|你的(?:小說|史詩|世界觀)|寫小說的人"
+                           r"|寫史詩時|想寫(?:史詩|小說|長篇)的人|對(?:史詩)?創作者來說|(?:史詩|奇幻)創作者(?:可以|不妨|該)|你(?:正在|自己)寫的(?:史詩|小說)")
 
 
 def check_voice(art, d, col, W):
@@ -291,8 +294,11 @@ def check_voice(art, d, col, W):
             continue
         if any(x in h for x in SPEC_HEADS):
             W("小標「%s」用了規格裡的分類詞，改寫成這一節的內容（STYLE.md 第〇節）" % h)
-        elif re.search(r"不是.+[，,、]\s*(而)?是", h) or h.rstrip().endswith(("？", "?")):
-            W("小標「%s」是「不是 X，是 Y」或問句的套路，直接寫內容（STYLE.md 第〇節）" % h)
+        elif re.search(r"不是.+[，,、]\s*(而)?是", h):
+            W("小標「%s」是「不是 X，是 Y」的套路，直接寫內容（STYLE.md 第〇節）" % h)
+        elif h.rstrip().endswith(("？", "?")) and not (art.get("form") == "qa" and col not in ("poem", "mystery")):
+            # the 問答 form (STYLE.md 〇之四) is made of question headings; the poem and mystery columns never take it
+            W("小標「%s」是問句的套路，直接寫內容（STYLE.md 第〇節）" % h)
     # 粗體 (STYLE.md 〇之五, 2026-11-07 起): 2–5 處, 標關鍵句與人事物; 引文、詩、經文裡不加粗。
     if str(d) >= "2026-11-07" and col not in ("devotion", "news", "serial", "obituary", "fm-watch", "cosmere-watch"):
         bold = sum(len(re.findall(r"\*\*[^*\n]+\*\*", b.get("text") or "")) for b in body if b.get("type") == "p" and isinstance(b.get("text"), str))

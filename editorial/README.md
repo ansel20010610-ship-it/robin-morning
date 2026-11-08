@@ -96,6 +96,10 @@
 
 - 早上：`fill_from_reserve.py`（第 5 班 07:05、`fill.yml` 07:12 起）在週日遇到「刊期沒出齊、而且有班次沒回報」時不補位，改在 `content/late.json` 記下 `waiting`。App 首頁說明延到下午；07:30 的通知改成「今天這期延到下午」；07:45 監看不開異常 issue。
 - 下午：週日補刊 routine 在 15:07 執行（17:07 再跑一次，接續沒完成的）。流程同第 5 班（安全網），但日期一律用 `--date <當天>`（下午的預設日期是明天），不跑 `fill_from_reserve.py`、不動備稿；第 9 步（總編重寫、忠實度核對）照做，時間足夠。開工先 `python3 scripts/late.py start`，出齊後 `python3 scripts/late.py done`，各自 commit `content/late.json` 推送：App 會顯示「補刊中」，完成時 `notify.yml` 自動發出「補刊出爐了」通知。
+- 補刊也要接下那天沒跑的班（社長 2026-11-08：補刊有沒有查訃聞等觀測站，要說得出來）。額度用完時，第 4 班的觀測站與 06:17 的演出班多半也沒跑：
+  - `state/runs/<日期>.json` 沒有 `"4"`：三個觀測站（fm-watch、cosmere-watch、obituary）照各自 `columns/*.md` 與第 4 班的做法各查核一次，查核紀錄照格式寫進 `state/watch/`（時間窗、查過的來源、判定），有新進展才成稿；**沒有寫紀錄就不算查過**，回報裡不可以寫「靜默」。
+  - `git log -1 --grep='近期演出 <日期>' origin/main` 沒有輸出：照 `columns/concerts.md` 的每天流程補做近期演出，照 `columns/onthisday.md` 補「歷史上的今天」，只改 `content/concerts.json`、`content/onthisday.json`、`state/concerts/`。
+  - 回報多寫兩行：每個觀測站一句（刊出／靜默，附時間窗），演出班有沒有補做。App 的印務室把補刊列為當天時間表的第六行（`state/runs` 的 `late` 條目）。
 - 不是週日，或每一班都有回報（缺稿是一般失敗，不是額度），照平常用備稿補位。
 - 最後跑 `python3 scripts/validate.py <日期>`，在回報中列出：已刊出、補了哪些、觀測站結果（刊出／靜默／無法判定）、仍缺哪些與原因。
 

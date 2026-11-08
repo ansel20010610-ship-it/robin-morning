@@ -5,3 +5,6 @@ _site/
 content/search/
 ics/
 content/wire.json
+
+# the desktop app's preview launcher (local only)
+.claude/

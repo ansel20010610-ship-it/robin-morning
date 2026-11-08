@@ -183,9 +183,22 @@ def late_notice(date):
 
 
 def complete(cfg, issue):
+    """Every column the issue needs is there. Counted by column, not by number: the serial (written days ahead) and
+    the watch items are not expected, so they must not stand in for a missing main column (audit 2026-11-08)."""
     d = dt.date.fromisoformat(issue["date"])
-    want = len([c for c in expected_columns(cfg, d) if column_meta(cfg, c, d)["group"] != "verse"])
-    return sum(1 for a in issue["articles"] if (column_meta(cfg, a["column"], d) or {}).get("group") != "watch") >= want
+    want = {c for c in expected_columns(cfg, d) if column_meta(cfg, c, d)["group"] != "verse"}
+    return want <= {a["column"] for a in issue["articles"]}
+
+
+def silent_on_main(date):
+    """Shifts without a report for the day, read from origin/main this minute (the run's checkout may be an hour old)."""
+    try:
+        subprocess.run(["git", "fetch", "-q", "origin", "main"], check=False, timeout=60)
+        out = subprocess.run(["git", "show", "origin/main:state/runs/%s.json" % date], capture_output=True, text=True, timeout=30)
+        runs = json.loads(out.stdout) if out.returncode == 0 else {}
+    except Exception:  # noqa: BLE001 — no git, no file: treat every shift as silent only if nothing can be read
+        runs = {}
+    return [g for g in "12345" if g not in runs]
 
 
 def cmd_issue(a):
@@ -226,6 +239,11 @@ def cmd_issue(a):
             print("讀不到網站：%s" % e, flush=True)
             current = False
         if current or (payload and waited >= (WAIT_SITE if held else WAIT_DEPLOY)) or a.now and payload:
+            # A held Sunday that fill.yml still has not reached after WAIT_SITE (GitHub's cron ran 3 h late on 11-08):
+            # judge the quota here by late.py's own rule — shifts that never reported — rather than announce a paper
+            # missing its main columns and then announce it again when the 補刊 is done.
+            if held and not current and silent_on_main(date):
+                payload = late_notice(date)
             break
         if waited >= WAIT_SITE or a.now:
             print("::error::網站上還沒有 %s 的刊期，沒有發通知" % date)

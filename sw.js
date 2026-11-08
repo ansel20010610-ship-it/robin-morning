@@ -8,6 +8,7 @@ const IMAGES = "robin-images";
 const FONTS = "robin-fonts";
 const KEEP = [CACHE, CONTENT, IMAGES, FONTS];
 const LIMIT = { [IMAGES]: 400, [FONTS]: 400 }; // entries; the oldest go first
+const BYTES = { [IMAGES]: 60 * 1024 * 1024 }; // and a byte budget for the pictures: 400 heroes ran to ~180 MB (audit 2026-11-08), Safari's quota is the real limit
 const IMAGE_HOSTS = new Set(["upload.wikimedia.org", "thumb.wikimedia.org", "tile.loc.gov"]);
 const SHELL = ["index.html", "assets/style.css", "assets/app.js", "assets/util.js", "assets/blocks.js", "assets/stamps.js",
   "assets/pitch.js", "assets/pull.js", "assets/spotify.js", "assets/speak.js", "assets/notify.js", "assets/motion.js", "assets/marks.js", "assets/press.js", "assets/wetter.js", "assets/world.js", "assets/robin.svg", "assets/world.svg", "manifest.webmanifest"];
@@ -59,7 +60,7 @@ async function kept(e, name) {
   let r;
   try { r = await fetch(e.request.url, { mode: "cors", credentials: "omit", referrerPolicy: "no-referrer" }); }
   catch { return fetch(e.request); }
-  if (r.ok) e.waitUntil(c.put(e.request.url, r.clone()).then(() => trim(c, LIMIT[name])).catch(() => {}));
+  if (r.ok) e.waitUntil(c.put(e.request.url, r.clone()).then(() => trim(c, LIMIT[name], BYTES[name])).catch(() => {}));
   return r;
 }
 // The Google Fonts stylesheet can change (new font files): answer from the cache at once and refresh it behind.
@@ -71,9 +72,22 @@ async function revalidated(e, name) {
   e.waitUntil(net.catch(() => {}));
   return hit || net.catch(() => fetch(e.request));
 }
-async function trim(c, max) {
+async function trim(c, max, bytes) {
   const keys = await c.keys(); // in the order they were stored
   for (const k of keys.slice(0, Math.max(0, keys.length - max))) await c.delete(k);
+  // The byte budget: measured every twentieth addition once the cache is big enough to matter (a scan reads every
+  // entry's size), the oldest dropped first until it fits.
+  if (!bytes) return;
+  const rest = await c.keys();
+  if (rest.length < 100 || rest.length % 20) return;
+  let total = 0;
+  const sizes = [];
+  for (const k of rest) {
+    const r = await c.match(k);
+    const n = r ? Number(r.headers.get("content-length")) || (await r.clone().blob()).size : 0;
+    sizes.push([k, n]); total += n;
+  }
+  for (const [k, n] of sizes) { if (total <= bytes) break; await c.delete(k); total -= n; }
 }
 
 self.addEventListener("fetch", (e) => {

@@ -8,7 +8,7 @@ becomes 義大利, 软件 軟體) and curly quotes become 「」. The result is 
 
   {"updated": "...+08:00", "items": [{"src": "中央社", "title": "...", "lead": "...", "url": "...", "time": "...+08:00"}]}
 
-newest first; "updated" is the time of the last read, written on every run. A source that cannot be read this hour
+newest first; "updated" is the hour of the last read (always the full hour), written on every run. A source that cannot be read this hour
 keeps the items it gave last time (from the previous file), so one broken feed never empties the bar. With nothing at
 all to show, the old file is left as it is.
 
@@ -197,9 +197,9 @@ def main():
         return 1
     # "updated" is when the wires were last read, so it moves on every run even when no wire did: the bar's
     # "16:30 更新" then says the paper looked, not only that something came in.
-    stamp = now.astimezone(TW)
-    if os.environ.get("WIRE_ON_THE_HOUR") == "true" and stamp.minute < 15:
-        stamp = stamp.replace(minute=0)  # wire.yml's hourly run: shown as the full hour it was started for
+    # Shown as the full hour, whichever deploy ran it — the hourly relay or a night shift's push at 01:19 — so the bar
+    # reads "01:00 更新" all through the hour (the owner, 2026-11-08: 整點; a push at 06:30 used to write 06:30).
+    stamp = now.astimezone(TW).replace(minute=0)
     data = {"updated": stamp.isoformat(timespec="minutes"), "items": out}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
