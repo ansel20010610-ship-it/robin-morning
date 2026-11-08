@@ -3,7 +3,9 @@
 It is not part of any issue; the 演出資訊 routine keeps it current (editorial/columns/concerts.md).
 
   python3 scripts/concerts.py fetch            # new candidates from the Ministry of Culture's open data
-                                               #   → /tmp/robin/concert-candidates.md (+ .json for `close`)
+                                               #   → /tmp/robin/concert-candidates.md (+ .json for `close`); the same
+                                               #   file ends with 「## 已列入演出的異動」 when the feed's shows for a
+                                               #   listed event differ from concerts.json (vanished, changed, new)
   python3 scripts/concerts.py close [--keep UID ...]
                                                # after rating: every candidate of the last fetch counts as seen
                                                #   (listed if an event names its UID, else rejected), except --keep
@@ -91,7 +93,10 @@ def fetch(a):
     end = (dt.date.fromisoformat(day) + dt.timedelta(days=WINDOW)).isoformat()
     seen = load(SEEN, {})
     data = load(FILE, {"events": []})
-    listed = {u for e in data.get("events", []) for u in e.get("uids", [])}
+    listed = {u: e for e in data.get("events", []) for u in e.get("uids", [])}
+    feed_shows = {}  # listed event id → the feed's shows for its UIDs (a listed event is never a candidate again, but
+    #                  its shows are compared: a listing was checked once, on the day it was rated, and then never —
+    #                  cancellations, new dates and new cities went unnoticed, review 2026-11-08)
     raw = []
     for cat in (1, 2):
         try:
@@ -110,18 +115,25 @@ def fetch(a):
         if SKIP.search(title):
             skipped += 1
             continue
-        shows = []
+        shows, in_window = [], []
         for s in e.get("showInfo") or []:
             when = (s.get("time") or "").replace("/", "-")
             date, time = when[:10], when[11:16]
             city = city_of(s)
             venue = (s.get("locationName") or "").strip()
-            if city and DATE_RE.match(date) and day <= date <= end and (city == "台中" or BIG_HALL.search(venue)):
-                shows.append({"date": date, "time": time if TIME_RE.match(time) else "", "city": city,
-                              "venue": venue, "price": (s.get("price") or "").strip()})
+            if city and DATE_RE.match(date) and day <= date <= end:
+                show = {"date": date, "time": time if TIME_RE.match(time) else "", "city": city,
+                        "venue": venue, "price": (s.get("price") or "").strip()}
+                in_window.append(show)  # every show in the window, for the comparison with a listed event
+                if city == "台中" or BIG_HALL.search(venue):
+                    shows.append(show)  # a candidate only where the trip is worth it
+        if uid in listed:
+            known += 1
+            feed_shows.setdefault(listed[uid]["id"], []).extend(in_window)
+            continue
         if not shows:
             continue
-        if uid in seen or uid in listed:
+        if uid in seen:
             known += 1
             continue
         shows.sort(key=lambda s: (s["date"], s["time"]))
@@ -170,13 +182,60 @@ def fetch(a):
             lines.append("  - 可能和已列入的 %s 是同一製作" % "、".join("`%s`" % i for i in c["maybe"]))
         if c["twins"]:
             lines.append("  - 可能和候選 %s 是同一製作" % "、".join("`%s`" % u for u in c["twins"]))
+    changed = listed_changes(data, feed_shows, day, end)
+    if changed:
+        lines += ["", "## 已列入演出的異動", "",
+                  "開放資料和 concerts.json 對不上的場次。先開該筆的售票頁確認，再改 shows／note；開放資料整筆消失不等於取消，以售票頁為準。", ""]
+        for e, notes in changed:
+            lines.append("- `%s`｜%s" % (e["id"], e.get("title", "")))
+            lines += ["  - " + n for n in notes]
     with open(CANDS + ".md", "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
     by = {k: sum(1 for c in cands if any(s["city"] == k for s in c["shows"])) for k in CITY_ORDER}
-    print("新候選 %d 筆（%s）；%s已看過 %d 筆；明顯不相關略過 %d 筆。清單：%s.md" % (
+    print("新候選 %d 筆（%s）；%s已看過 %d 筆；明顯不相關略過 %d 筆%s。清單：%s.md" % (
         len(cands), "、".join("%s %d" % kv for kv in by.items()), "還有 %d 筆留到下次；" % waiting if waiting else "",
-        known, skipped, CANDS))
+        known, skipped, "；已列入有異動 %d 筆（見清單末段）" % len(changed) if changed else "", CANDS))
     return 0
+
+
+def listed_changes(data, feed_shows, day, end):
+    """[(event, [notes])] for listed events whose upcoming shows differ from what the feed now says about their UIDs:
+    a listed show the feed no longer has (cancelled, or moved — a move shows up as one vanished and one new), a show
+    whose time or venue changed, a show the feed has and the listing does not (a new date or city). An event whose
+    UIDs have all left the feed is noted as such; events without UIDs (found by hand) are not in the feed at all."""
+    out = []
+    squeeze = lambda v: re.sub(r"\s+", "", v or "")
+    for e in data.get("events", []):
+        if not e.get("uids"):
+            continue
+        upcoming = {(s["date"], s["city"]): s for s in e.get("shows", []) if day <= s.get("date", "") <= end and s.get("city")}
+        if e["id"] not in feed_shows:
+            if upcoming:
+                out.append((e, ["開放資料裡已找不到這筆（UID %s）；整筆消失不等於取消，以售票頁為準" % "、".join(e["uids"])]))
+            continue
+        feed = {}
+        for s in feed_shows[e["id"]]:
+            feed.setdefault((s["date"], s["city"]), s)
+        notes = []
+        for k in sorted(set(upcoming) - set(feed)):
+            s = upcoming[k]
+            notes.append("消失：%s %s %s %s（可能取消或改期）" % (s["date"], s.get("time") or "", s["city"], s.get("venue") or ""))
+        for k in sorted(set(feed) - set(upcoming)):
+            s = feed[k]
+            notes.append("新場次：%s %s %s %s%s" % (s["date"], s["time"], s["city"], s["venue"], "（%s）" % s["price"] if s["price"] else ""))
+        for k in sorted(set(feed) & set(upcoming)):
+            a, b = upcoming[k], feed[k]
+            diff = []
+            if a.get("time") and b["time"] and a["time"] != b["time"]:
+                diff.append("時間 %s → %s" % (a["time"], b["time"]))
+            va, vb = squeeze(a.get("venue")), squeeze(b["venue"])
+            if va and vb and va != vb and va not in vb and vb not in va:
+                diff.append("場地 %s → %s" % (a["venue"], b["venue"]))
+            if diff:
+                notes.append("改動：%s %s %s" % (k[0], k[1], "；".join(diff)))
+        if notes:
+            out.append((e, notes))
+    return out
 
 
 def close(a):
@@ -231,6 +290,31 @@ def cjk(s):
     return len(re.findall(r"[一-鿿]", s or ""))
 
 
+def stale_sale_date(e, today_=None):
+    """The ISO date of a 「M 月 D 日 … 開賣」 note that is already behind us, or None. A note is written once and never
+    revisited (review 2026-11-08), so 「11 月 9 日 12:00 全民開賣」 would stay on the card until the concert. The year
+    is not in the note: it is the last time that month and day fell on or before the first show."""
+    note = e.get("note") if isinstance(e.get("note"), str) else ""
+    if "開賣" not in note:
+        return None
+    m = re.search(r"(\d{1,2})\s*月\s*(\d{1,2})\s*日", note)
+    if not m:
+        return None
+    dates = [s["date"] for s in e.get("shows", []) if isinstance(s, dict) and isinstance(s.get("date"), str) and DATE_RE.match(s["date"])]
+    if not dates:
+        return None
+    first = dt.date.fromisoformat(min(dates))
+    for year in (first.year, first.year - 1):
+        try:
+            sale = dt.date(year, int(m.group(1)), int(m.group(2)))
+        except ValueError:
+            return None
+        if sale <= first:
+            break
+    t = today_ or tw_now().date()
+    return sale.isoformat() if sale < t else None
+
+
 def check_data(data):
     """(errors, warnings) for the concerts file."""
     import validate  # MACHINE: the machine-voice phrases editorial/STYLE.md §一 bans
@@ -269,6 +353,9 @@ def check_data(data):
                 E.append(at + " %s 要是字串" % k)
         if e.get("note") and len(e["note"]) > 30:
             W.append(at + " note 太長（30 字內，例如「已售完」「11 月 5 日 12:00 開賣」）")
+        sale = stale_sale_date(e)
+        if sale:
+            W.append(at + " note 的開賣日 %s 已過：刪掉，或改成票況（已售完／尚有票）" % sale)
         for text in (title, why, e.get("program") or "", e.get("note") or ""):
             for p in validate.MACHINE:
                 if p in text:

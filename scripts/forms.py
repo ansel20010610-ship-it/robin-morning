@@ -55,7 +55,9 @@ def main():
             print("  %-13s %-10s %-12s%s" % (c, f or "—", v or "—", ("  ← " + "；".join(flags)) if flags else ""))
         return
     today = dt.datetime.now(TW).date()
-    recent = [d for d in days if d >= (today - dt.timedelta(days=7)).isoformat()]
+    # up to today only: the 連載班 writes serial.json days ahead, so content/issues/ holds future folders whose dates
+    # would otherwise head the table as if those issues had run
+    recent = [d for d in days if (today - dt.timedelta(days=7)).isoformat() <= d <= today.isoformat()]
     cols = [c for c in cfg["columns"] if c not in EXEMPT and c not in watch and "until" not in cfg["columns"][c]]
     table = {d: forms_of(d) for d in recent}
     print("最近各欄的文體（%s）：" % "、".join(d[5:] for d in recent))

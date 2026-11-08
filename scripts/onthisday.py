@@ -6,12 +6,15 @@ own date, so a past issue keeps its line. Only the last KEEP days are kept.
   python3 scripts/onthisday.py add --date 2026-11-04 --year 1922 --text "……" --source URL [--source URL]
   python3 scripts/onthisday.py show [--date 2026-11-04]
   python3 scripts/onthisday.py check            # validate every entry (also run by `add`)
+  python3 scripts/onthisday.py missing [--days N]   # recent days (default 3, today excluded) that have an issue but no line
 """
 import argparse, datetime as dt, json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FILE = ROOT / "content" / "onthisday.json"
+ISSUES = ROOT / "content" / "issues"
+TW = dt.timezone(dt.timedelta(hours=8))
 KEEP = 400
 MIN_LEN, MAX_LEN = 25, 70
 BAD = ["！", "!", "震驚", "意義深遠", "影響深遠", "載入史冊", "名垂青史", "劃時代", "永遠改變", "史上最"]
@@ -71,8 +74,24 @@ def main():
     s = sub.add_parser("show")
     s.add_argument("--date")
     sub.add_parser("check")
+    m = sub.add_parser("missing")
+    m.add_argument("--days", type=int, default=3)
     args = ap.parse_args()
     d = load()
+    if args.cmd == "missing":
+        # the 演出班 may skip the line when out of time (onthisday.md), and it does not run again for a past day, so a
+        # gap stays until someone sees it; today is left out because the shift that writes it runs at 06:17
+        today = dt.datetime.now(TW).date()
+        gaps = []
+        for i in range(1, args.days + 1):
+            day = (today - dt.timedelta(days=i)).isoformat()
+            if (ISSUES / day).is_dir() and day not in d:
+                gaps.append(day)
+        if gaps:
+            print("歷史上的今天 空白：" + "、".join(sorted(gaps)))
+        else:
+            print(f"最近 {args.days} 天都有「歷史上的今天」。")
+        return
     if args.cmd == "add":
         e = {"year": args.year, "text": args.text.strip(), "sources": args.source}
         bad = problems(args.date, e)
