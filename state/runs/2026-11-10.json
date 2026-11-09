@@ -18,5 +18,12 @@
       "philosophy"
     ],
     "note": "architecture(walk/walker)、poem(reverse/reader)完成；第9步：古蹟重寫1／詩修正1；正刊三欄已齊無需接稿；validate無機器腔WARN"
+  },
+  "3": {
+    "finished_at": "2026-11-10T03:04:44+08:00",
+    "missing": [
+      "news"
+    ],
+    "note": "football 初稿（非比賽夜，已做第8、9步，修正即可）、philosophy 中文房間（argument/socratic，判定重寫，已重寫）；football form=list/fan；未接第1班缺稿；football 剩字數略低 WARN"
   }
 }
