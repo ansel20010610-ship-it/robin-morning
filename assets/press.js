@@ -18,7 +18,8 @@ export const EXTRA = [["concerts", "06:17", "演", "近期演出・歷史上的�
 const OVERDUE = 7 * 60 + 45; // 07:45, when the monitor itself checks that every shift has reported
 const GROUP_RANK = { main: 0, verse: 1, supplement: 2 };
 const LATE = { waiting: "週日補刊：等 15:00 額度重置", regenerating: "補刊中", done: "補刊已出" };
-const names = (cols, date, col) => (Array.isArray(cols) ? cols : []).map((c) => esc(col(c, date).name));
+// report_run.py marks a column that failed validation "perio（驗證失敗）": the column's name, then the mark kept.
+const names = (cols, date, col) => (Array.isArray(cols) ? cols : []).map((c) => { const [, k, why = ""] = /^(.*?)(（[^）]*）)?$/s.exec(c); return esc(col(k, date).name + why); });
 const mins = (hm) => { const [h, m] = hm.split(":").map(Number); return h * 60 + m; };
 
 // generated_at (an ISO stamp, UTC) as Taiwan HH:MM, with M/D in front when it is not today's; "" when unreadable.
@@ -71,8 +72,10 @@ function morning(issue, col, now) {
   const lt = issue.late, lr = press.late;
   if (lt || lr) {
     const cols = names(lr?.missing?.length ? lr.missing : lt?.missing, date, col);
-    const at = lr ? esc(lr.at || "已回報") : lt?.state === "regenerating" ? "補刊中" : lt?.state === "waiting" ? (date === now.date && now.minutes < 15 * 60 ? "等 15:00" : "待補刊") : "已回報";
-    rows.push([15 * 60 + 7, `<li class="shift extra${lr ? "" : lt?.state === "regenerating" ? "" : " wait"}"><span class="no zh">補</span><div class="duty"><b>15:07</b><span>週日補刊・重寫凌晨缺的</span></div>
+    // late.py giveup (state "unfinished"): the row says the 補刊 was given up, reported or not, never 已回報 alone.
+    const gaveUp = lt?.state === "unfinished";
+    const at = gaveUp ? "已放棄" : lr ? esc(lr.at || "已回報") : lt?.state === "regenerating" ? "補刊中" : lt?.state === "waiting" ? (date === now.date && now.minutes < 15 * 60 ? "等 15:00" : "待補刊") : "已回報";
+    rows.push([15 * 60 + 7, `<li class="shift extra${gaveUp ? " late" : lr ? "" : lt?.state === "regenerating" ? "" : " wait"}"><span class="no zh">補</span><div class="duty"><b>15:07</b><span>週日補刊・重寫凌晨缺的</span></div>
       <span class="at">${at}</span>
       ${cols.length ? `<div class="miss">${cols.map((n) => `<span class="chip">${n}</span>`).join("")}</div>` : ""}
       ${lr?.note ? `<p class="small">${esc(lr.note)}</p>` : ""}</li>`]);
@@ -80,8 +83,10 @@ function morning(issue, col, now) {
   rows.sort((a, b) => a[0] - b[0]);
   const filled = names((issue.articles || []).filter((a) => a.from_reserve).map((a) => a.column), date, col);
   const missing = names(press.missing, date, col);
-  // The late day's clock: when the morning fill stood aside, when the regeneration started, when the issue was whole.
-  const lateLine = lt && ([lt.held_at && `${esc(lt.held_at)} 早上停手`, lt.started_at && `${esc(lt.started_at)} 開工`, lt.done_at && `${esc(lt.done_at)} 出齊`].filter(Boolean).join("・") || LATE[lt.state] || "");
+  // The late day's clock: when the morning fill stood aside, when the regeneration started, when the issue was whole —
+  // or when it was given up.
+  const lateLine = lt && ([lt.held_at && `${esc(lt.held_at)} 早上停手`, lt.started_at && `${esc(lt.started_at)} 開工`, lt.done_at && `${esc(lt.done_at)} 出齊`,
+    lt.state === "unfinished" && `${lt.gave_up_at ? `${esc(lt.gave_up_at)} ` : ""}放棄`].filter(Boolean).join("・") || LATE[lt.state] || "");
   return `${head}<ol class="shifts">${rows.map((r) => r[1]).join("")}</ol>
     <dl class="kv"><dt>補位</dt><dd>${filled.length ? filled.join("、") : "無"}</dd>
       ${missing.length ? `<dt>缺稿</dt><dd class="red">${missing.join("、")}</dd>` : ""}
