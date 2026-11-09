@@ -1,0 +1,171 @@
+{
+  "column": "music",
+  "date": "2026-11-10",
+  "title": "獨行俠的主題曲，本來是瑞士人在打仗",
+  "dek": "十二分鐘，四個樂段不停頓：黎明、暴風雨、牧牛的呼喚，然後一路衝刺。",
+  "brief": "《威廉泰爾》序曲的最後三分鐘，從 1933 年起成了美國廣播劇《獨行俠》的主題曲；它本來是羅西尼最後一齣歌劇的前奏，寫完之後他又活了將近四十年，再沒寫過歌劇。",
+  "topic_key": "music:rossini-william-tell",
+  "form": "flow",
+  "voice": "listener",
+  "updated_at": "2026-11-10T00:46:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "portrait",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Nadar_-_%28Gioacchino_Rossini%29_-_Google_Art_Project.jpg/1280px-Nadar_-_%28Gioacchino_Rossini%29_-_Google_Art_Project.jpg",
+    "width": 1280,
+    "height": 1784,
+    "alt": "棕褐色調的老式人像照：一位頭髮往旁梳、兩頰留著白色鬢角的老先生，穿深色大衣與白領結，一隻手收在大衣裡，看著鏡頭。",
+    "caption": "羅西尼，Nadar 拍攝，約 1855–1857 年。那時距離《威廉泰爾》首演已二十多年，他早已不寫歌劇。",
+    "credit": "Nadar（Félix Nadar）；經 Google Arts & Culture 與 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Nadar_-_(Gioacchino_Rossini)_-_Google_Art_Project.jpg",
+    "made": "約 1855–1857 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1933 年 1 月 31 日，美國底特律的電台 WXYZ 開播一齣西部廣播劇，主角是蒙面騎士《獨行俠》（The Lone Ranger）。它後來拍成電視影集，從 1949 年播到 1957 年，每一版他策馬衝出來的時候，背景都是同一段快得停不下來的音樂。廣播版一共播了 2,956 集，電台選古典音樂，理由很實際：作品已是公版，不必付錢給作曲家。"
+    },
+    {
+      "type": "p",
+      "text": "那段音樂是義大利作曲家**羅西尼**（Gioachino Rossini）寫的，出自歌劇**《威廉泰爾》**（Guillaume Tell）的序曲。序曲是開演前先奏的那首管弦樂，常被單獨拿出來演。歌劇 1829 年 8 月 3 日在巴黎歌劇院首演，羅西尼 37 歲，這是他的第 39 部歌劇，劇本改編自德國劇作家席勒的戲劇。威廉泰爾是瑞士傳說裡的神射手，劇中被奧地利派來的總督逼著，用弓箭射自己兒子頭上的蘋果。"
+    },
+    {
+      "type": "p",
+      "text": "電影《發條橘子》用過一版電子音樂改編的它，兔寶寶（Looney Tunes）卡通也用過，西部喜劇《Bugs Bunny Rides Again》是一例，達菲鴨還拿它填過新詞來唱。美國有人因此開玩笑，說所謂知識分子，就是聽得了這首序曲而不想到獨行俠的人；這句話常記在 1962 年《丹佛郵報》（The Denver Post）的專欄作家 Jack Guinn 名下（也有人把這句話記在別人名下）。**獨行俠策馬衝出來的那一段，在歌劇裡是瑞士士兵打勝仗的進行曲。**"
+    },
+    {
+      "type": "music",
+      "composer": "羅西尼（Gioachino Rossini）",
+      "work": "歌劇《威廉泰爾》序曲",
+      "work_original": "Guillaume Tell: Overture",
+      "composed": "1829 年首演",
+      "performers": "賴納（Fritz Reiner）指揮 芝加哥交響樂團",
+      "recording": "RCA Victor Red Seal《Rossini Overtures》，1958 年 11 月 22 日錄於芝加哥，1959 年出版。選它的理由：整首序曲完整收錄，錄音年份與廠牌都有紀錄可查",
+      "duration": "約 12 分鐘",
+      "movements": [
+        "黎明",
+        "暴風雨",
+        "牧牛的呼喚（Ranz des vaches）",
+        "瑞士士兵進行曲"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Rossini Overtures Reiner Chicago Symphony Orchestra William Tell",
+        "artist_hint": "Reiner",
+        "track_filter": [
+          "William Tell",
+          "Guillaume Tell"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "現在聽到的是黎明。序曲不到 12 分鐘，分四段，中間不停頓。第一段約三分鐘，五把獨奏大提琴加上低音大提琴，慢慢地唱；結尾定音鼓輕輕滾兩下，像遠處的悶雷。"
+    },
+    {
+      "type": "p",
+      "text": "悶雷接著變成真的。第二段是暴風雨，也約三分鐘：小提琴和中提琴先起頭，木管插進短短幾句，然後圓號、小號、長號和大鼓一起上來，風暴整個壓下來，再慢慢退去。"
+    },
+    {
+      "type": "p",
+      "text": "雨停了，英國管（音色比雙簧管低一點的木管）吹起第三段，兩分多鐘。那是牧牛人呼喚牛群的調子，法文叫 ranz des vaches，長笛和它輪流出聲，三角鐵在旁邊伴著。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Eug%C3%A8ne_Du_Faget_-_Costume_designs_for_Guillaume_Tell_-_1-3._Laure_Cinti-Damoreau_as_Mathilde%2C_Adolphe_Nourrit_as_Arnold_Melchtal%2C_and_Nicolas_Levasseur_as_Walter_Furst.jpg/1280px-thumbnail.jpg",
+      "width": 1280,
+      "height": 873,
+      "alt": "淺米色底上並排三個穿中世紀服裝的人物水彩：左邊的女子戴黑色荷葉邊帽、穿深綠色長裙，一隻手伸向前方；中間的男子捲髮、藍色短上衣，繫腰帶掛一個網袋，披棕色斗篷；右邊的白鬍子老人穿深藍上衣、紅色長襪。",
+      "caption": "1829 年《威廉泰爾》首演的服裝設計水彩（Eugène Du Faget 繪）。三張原圖由 Wikimedia Commons 使用者拼合成一幅，人物名字手寫在畫的底緣。",
+      "credit": "Eugène Du Faget（1829 年）；Adam Cuerden 據 Gallica 掃描拼合；經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Du_Faget_-_Costume_designs_for_Guillaume_Tell_-_1-3._Laure_Cinti-Damoreau_as_Mathilde,_Adolphe_Nourrit_as_Arnold_Melchtal,_and_Nicolas_Levasseur_as_Walter_Furst.jpg",
+      "made": "1829"
+    },
+    {
+      "type": "p",
+      "text": "然後號角吹出訊號，第四段開始，全樂團一起衝上去，約三分鐘。它是一首加洛普（galop，節奏飛快的舞曲），就是獨行俠的那一段。劇中，瑞士人打贏一仗，把家鄉從奧地利人的壓迫下解放出來。"
+    },
+    {
+      "type": "p",
+      "text": "這段旋律被借用的次數多到驚人。維也納的圓舞曲作曲家老約翰・史特勞斯寫過一首《威廉泰爾加洛普》，直接引它；匈牙利的李斯特在 1838 年替它改了鋼琴版；俄國作曲家蕭士塔高維契在第十五號交響曲裡又引了一回。《獨行俠》比較柔和的部分，借的是捷克作曲家史麥塔納的〈莫爾道河〉，想接著聽，可以去找那一首。"
+    },
+    {
+      "type": "p",
+      "text": "法國作曲家白遼士向來不喜歡羅西尼的作品，對這首序曲卻破了例，說它是一首分四個部分的交響曲。"
+    },
+    {
+      "type": "p",
+      "text": "歌劇本身的運氣差得多。首演後三場之內就開始刪，一年後只剩三幕在演，全本演下來約四個小時，至今常常刪著演。義大利的審查官限制它在當地上演，理由是它歌頌對抗權威的革命人物；維也納倒是愛它，1830 到 1907 年間演了 422 場。據說有人告訴羅西尼，一位仰慕者前一晚聽了這齣歌劇，他回了一句：什麼？整齣？"
+    },
+    {
+      "type": "p",
+      "text": "羅西尼之後再也沒寫過歌劇，原因沒有完整的說法；指揮家路易西（Fabio Luisi）說，他動筆的時候，就打算讓它當最後一齣。他 1868 年 11 月 13 日在巴黎過世，七十六歲，先葬在巴黎的拉榭思神父公墓，1887 年遷到佛羅倫斯的聖十字教堂。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "William Tell Overture",
+      "publisher": "Wikipedia",
+      "date": "2026-11-10",
+      "url": "https://en.wikipedia.org/wiki/William_Tell_Overture",
+      "note": "日期為查閱日。四個樂段的編制、長度與調性；約 12 分鐘；《獨行俠》主題曲；《發條橘子》電子改編；兔寶寶卡通；白遼士稱它為「a symphony in four parts」；蕭士塔高維契第十五號交響曲引用；羅西尼的第 39 部也是最後一部歌劇"
+    },
+    {
+      "title": "William Tell (opera)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-10",
+      "url": "https://en.wikipedia.org/wiki/William_Tell_(opera)",
+      "note": "日期為查閱日。1829 年 8 月 3 日在巴黎歌劇院（Salle Le Peletier）首演；劇情（蘋果）；三場內開始刪節、一年後只演三幕；長度約四小時、常被刪減演出；指揮路易西說羅西尼動筆時就打算讓它當最後一齣；羅西尼之後活了將近 40 年"
+    },
+    {
+      "title": "Gioachino Rossini: William Tell",
+      "publisher": "Classic FM",
+      "date": "2026-11-10",
+      "url": "https://www.classicfm.com/composers/rossini/music/william-tell/",
+      "note": "日期為查閱日。《獨行俠》；第 39 部歌劇、1829 年 8 月 3 日首演；席勒戲劇改編；終曲描繪瑞士人戰勝奧地利的壓迫"
+    },
+    {
+      "title": "The Lone Ranger (radio series)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-10",
+      "url": "https://en.wikipedia.org/wiki/The_Lone_Ranger_(radio_series)",
+      "note": "日期為查閱日。1933 年 1 月 31 日在底特律 WXYZ 首播；主題曲主要取自《威廉泰爾》序曲終曲，較柔和的部分取自〈莫爾道河〉；因公版而成本低；電視影集 1949–1957 年八季（只讀前 100,000 字）"
+    },
+    {
+      "title": "Gioachino Rossini",
+      "publisher": "Wikipedia",
+      "date": "2026-11-10",
+      "url": "https://en.wikipedia.org/wiki/Gioachino_Rossini",
+      "note": "日期為查閱日。1792 年 2 月 29 日生於佩薩羅、1868 年 11 月 13 日卒於巴黎帕西、76 歲；退出歌劇的原因「has never been fully explained」（只讀前 100,000 字）；葬於 Père Lachaise、1887 年遷至佛羅倫斯 Santa Croce 大殿"
+    },
+    {
+      "title": "File:Guillaume Tell - Overture - (Rossini, Gioacchino) by Fritz Reiner (conductor).mp3",
+      "publisher": "Wikimedia Commons（轉自 IMSLP）",
+      "date": "2026-11-10",
+      "url": "https://commons.wikimedia.org/wiki/File:Guillaume_Tell_-_Overture_-_(Rossini,_Gioacchino)_by_Fritz_Reiner_(conductor).mp3",
+      "note": "日期為查閱日。賴納指揮芝加哥交響樂團，1958 年 11 月 22 日錄於芝加哥，RCA Victor Red Seal《Rossini Overtures》LSC 2318（1959）"
+    },
+    {
+      "title": "File:Nadar - (Gioacchino Rossini) - Google Art Project.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-10",
+      "url": "https://commons.wikimedia.org/wiki/File:Nadar_-_(Gioacchino_Rossini)_-_Google_Art_Project.jpg",
+      "note": "頭圖授權與年代：公版，約 1855–1857 年"
+    },
+    {
+      "title": "File:Eugène Du Faget - Costume designs for Guillaume Tell",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-10",
+      "url": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Du_Faget_-_Costume_designs_for_Guillaume_Tell_-_1-3._Laure_Cinti-Damoreau_as_Mathilde,_Adolphe_Nourrit_as_Arnold_Melchtal,_and_Nicolas_Levasseur_as_Walter_Furst.jpg",
+      "note": "正文圖授權與年代：公版，1829 年；Adam Cuerden 拼合 Gallica 掃描"
+    }
+  ]
+}
