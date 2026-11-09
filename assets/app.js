@@ -14,7 +14,7 @@ import { fetchWeather, weatherHtml } from "./wetter.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { worldState, drawMap } from "./world.js";
-import { nestBox, renderNest, feedNest, syncNest, nestUnseen, nestSeen, liveBird } from "./nest.js";
+import { nestBox, renderNest, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest } from "./nest.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -132,7 +132,7 @@ async function sonderHash(code) {
   const h = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(normSonder(code)));
   return [...new Uint8Array(h)].map((b) => b.toString(16).padStart(2, "0")).join("");
 }
-// Reading a piece also feeds the nest's robin one bite (nest.js), on a 特供版 phone that is in a nest.
+// Reading a piece also feeds the yard's robin one bite (nest.js), on a 特供版 phone that has a 後院.
 function markRead(k) { const r = store.get("read", []); if (!r.includes(k)) { r.push(k); store.set("read", r.slice(-2000)); syncDone(); if (sonder() && feedNest(k)) { toast("餵了知更鳥一口"); syncNest(S.cfg.nest?.api); } } }
 
 // ——— Shared pieces ———
@@ -697,6 +697,13 @@ function viewFront(dateParam) {
   </div>`;
   prefetch(issue);
   wireDigest(issue);
+  // 後院 (nest.js scrollFlyer): on a 特供版 phone with a yard, the bird now and then flies across the paper as the reader
+  // scrolls today's front page (the owner, 2026-11-09: 我在滑首頁的時候鳥會飛出來).
+  if (!dateParam && sonder() && nest()) {
+    const onFly = scrollFlyer(), prev = cleanup;
+    window.addEventListener("scroll", onFly, { passive: true });
+    cleanup = () => { prev(); window.removeEventListener("scroll", onFly); };
+  }
   fillReveal();
   fillWire();
   fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
@@ -1636,7 +1643,7 @@ function viewSaved() {
     ["#/stamps", "郵票冊", "Briefmarken", st, st ? "張" : "還沒有郵票", `<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z" stroke-dasharray="2 1.6"/><rect x="7.5" y="8.5" width="9" height="7"/></svg>`],
     ["#/world", "你讀過的世界", "Gelesene Welt", w, w ? "國" : "還沒出發", `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>`],
   ];
-  // 巢 (nest.js nestBox): on a 特供版 phone the robin's plate heads the page; what the others fed since last time
+  // 後院 (nest.js nestBox): on a 特供版 phone the robin's plate heads the page; what the others fed since last time
   // arrives with a sync and the plate is drawn again, and looking here is what takes the mark off the tab (nestSeen).
   main.innerHTML = `<div class="wrap sammlung"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
     ${sonder() ? nestBox() : ""}
@@ -1795,12 +1802,12 @@ function calendarHtml(ym, pubs, done) {
     <div class="grid">${cells.join("")}</div>
     <div class="cap"><span>${got.length ? `本月 ${got.length} 期，讀完 ${fin} 期` : "本月還沒出刊"}</span><a href="#/chronik" aria-label="刊史館：從創刊號到今天的沿革">刊史館<i>Chronik</i>→</a></div></section>`;
 }
-// ——— 巢 (Nest, assets/nest.js): the robin raised together; the page builds, joins, shows and leaves a nest ———
+// ——— 後院 (Hinterhof, assets/nest.js): the robin raised together; the page opens, joins, shows and leaves a yard ———
 function viewNest() {
   main.innerHTML = `<div class="wrap nest-page"></div>`;
-  if (!sonder()) { main.querySelector(".nest-page").innerHTML = `<header class="page-title"><h1>巢</h1><span class="de">Nest</span></header><p class="empty">巢是特供版才有的。到<a href="#/settings">設定</a>輸入代碼，這支手機就開了。</p>`; document.title = `巢｜${S.cfg.title}`; return; }
+  if (!sonder()) { main.querySelector(".nest-page").innerHTML = `<header class="page-title"><h1>後院</h1><span class="de">Hinterhof</span></header><p class="empty">後院是特供版才有的。到<a href="#/settings">設定</a>輸入代碼，這支手機就開了。</p>`; document.title = `後院｜${S.cfg.title}`; return; }
   renderNest(main.querySelector(".nest-page"), S.cfg.nest?.api);
-  document.title = `巢｜${S.cfg.title}`;
+  document.title = `後院｜${S.cfg.title}`;
 }
 // ——— 印務室 (Druckerei, assets/press.js): the owner's press room — this morning's five shifts, the reserve stock and a
 // fortnight's roster, all out of the index the app holds (its press, late and stock), so it reads the same offline.
@@ -2046,10 +2053,10 @@ function viewSettings() {
       <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>橫線之下</th></tr></thead><tbody>
       ${wd.map(([k, l]) => `<tr><td>${l}</td><td>${rot[k].map((c) => esc(col(c).name)).join("、")}</td></tr>`).join("")}</tbody></table></div></div>
     </section>
-    ${sonder() ? `<section class="set"><h2>巢</h2><p>和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口，大家讀的加在一起，牠從蛋長成會唱歌的鳥。邀請碼在巢裡。</p>
-      <div class="btns"><a class="btn ghost" href="#/nest">打開巢</a></div></section>` : ""}
+    ${sonder() ? `<section class="set"><h2>後院</h2><p>和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口，大家讀的加在一起，牠從蛋長成會唱歌的鳥。邀請碼在後院裡。</p>
+      <div class="btns"><a class="btn ghost" href="#/nest">到後院去</a></div></section>` : ""}
     <section class="set" id="sonder-set"><h2>特供版<span class="de">Sonderausgabe</span></h2>${sonder()
-      ? `<p>這支手機是特供版：多了「巢」。</p><div class="btns"><button type="button" class="btn ghost" data-sonder-off>關閉特供版</button></div>`
+      ? `<p>這支手機是特供版：多了「後院」。</p><div class="btns"><button type="button" class="btn ghost" data-sonder-off>關閉特供版</button></div>`
       : `<p>有些功能只給拿到代碼的人。向社長請求代碼，在這裡輸入，這支手機就開了。</p>
         <input class="search" data-sonder-code autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="代碼" aria-label="特供版代碼">
         <div class="btns"><button type="button" class="btn ghost" data-sonder-on>啟用</button></div>`}</section>
@@ -2066,7 +2073,7 @@ function viewSettings() {
     if (!ok) { btn.disabled = false; toast("代碼不對"); return; }
     store.set("sonder", true); toast("特供版開了"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" });
   });
-  main.querySelector("[data-sonder-off]")?.addEventListener("click", () => { store.del("sonder"); toast("特供版關了；巢的紀錄還留著"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" }); });
+  main.querySelector("[data-sonder-off]")?.addEventListener("click", () => { store.del("sonder"); toast("特供版關了；後院的紀錄還留著"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" }); });
   // Redrawing replaces the buttons; put focus back on the one just pressed.
   const redraw = (g, v) => { viewSettings(); main.querySelector(`[data-g="${g}"] [data-v="${v}"]`)?.focus(); };
   main.querySelectorAll('[data-g="rate"] button').forEach((b) => (b.onclick = () => { setRate(Number(b.dataset.v)); redraw("rate", b.dataset.v); }));

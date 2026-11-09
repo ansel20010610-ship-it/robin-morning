@@ -15,6 +15,7 @@
   --foil: #D29F2E; --foil-hi: #F6D06A; /* the masthead's gold sweep */
   --wine: #6E2536;
   --robin: #B65A2E;
+  --nest-brown: #7B5A3E; --nest-dark: #4F3826; --nest-cream: #F3EADA;
   --blue: #23395B;
   --red: #8E2A2E;
   --shadow: 0 1px 0 rgba(60, 45, 20, .06), 0 8px 24px -16px rgba(60, 45, 20, .35);
@@ -35,7 +36,7 @@
     --paper: #15120E; --paper-2: #201B14; --paper-3: #2C261C;
     --ink: #EDE4D3; --ink-2: #CDC2AF; --muted: #998F7E;
     --rule: #564A33; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36; --foil: #E3B957; --foil-hi: #FFF0BF;
-    --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82;
+    --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82; --nest-brown: #A98A6A; --nest-dark: #6D5440; --nest-cream: #E6DAC4;
     --shadow: 0 1px 0 rgba(0,0,0,.4), 0 10px 28px -18px rgba(0,0,0,.9);
     color-scheme: dark;
   }
@@ -44,7 +45,7 @@
   --paper: #15120E; --paper-2: #201B14; --paper-3: #2C261C;
   --ink: #EDE4D3; --ink-2: #CDC2AF; --muted: #998F7E;
   --rule: #564A33; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36; --foil: #E3B957; --foil-hi: #FFF0BF;
-  --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82;
+  --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82; --nest-brown: #A98A6A; --nest-dark: #6D5440; --nest-cream: #E6DAC4;
   --shadow: 0 1px 0 rgba(0,0,0,.4), 0 10px 28px -18px rgba(0,0,0,.9);
   color-scheme: dark;
 }
@@ -1921,69 +1922,96 @@ details.band .svl { margin: 0 0 10px; }
 .fest-note.fest-pentecost { border-left-color: #B0291F; } .fest-note.fest-oralhealth { border-left-color: #3E6C77; } .fest-note.fest-mozart { border-left-color: #7A2C46; }
 .fest-note.fest-beethoven { border-left-color: #2C2C34; } .fest-note.fest-bookday { border-left-color: #5A3A22; } .fest-note.fest-klimt { border-left-color: #C9A043; } .fest-note.fest-dostoevsky { border-left-color: #3A3F2E; }
 
-/* 巢 (nest.js nestBox, renderNest): the robin a nest of readers raises. At the head of 收藏, a framed plate the width of
-   the shelf under it, framed like the shelf's cards (hairline, gold top rule): the bird on its perch at the left, the
-   label, its stage and today's bites at the right, a hairline bar to the next stage. The bird is the crest's robin grown by stage: an egg (s0), a grey nestling (s1), fluff (s2), a half-red
-   fledgling (s3), the full robin (s4), and the singer with its notes (s5); fed three times today it sits a little
-   rounder (.full). Colours follow the emblem's; nothing here is a game's green bar. */
+/* 後院 (nest.js nestBox, renderNest, flyBy): the robin a yard of readers raises. At the head of 收藏, a framed plate
+   the width of the shelf under it (hairline, gold top rule): the bird on its perch at the left, the label, its name,
+   its stage and today's bites at the right, a hairline bar to the next thing. The bird is nest.js robinSvg: --g (size
+   and the first colour, 0 → 1 over eighty bites) and --m (the plumage, 0 → 1 over four hundred) come from the state,
+   so it is a little different after every bite; the stages add what a number cannot (no wing yet, fluff, the singer's
+   notes). Colours are the paper's tokens plus the three --nest-* browns. */
 .nest.plate { display: flex; align-items: center; gap: 16px; margin: 18px 0 -2px; padding: 14px 16px 13px; border: 1px solid var(--rule); border-top: 1px solid var(--gold); text-decoration: none; color: inherit; }
 .nest.plate:active { border-color: var(--gold); }
 .nest .txt { display: grid; gap: 3px; min-width: 0; flex: 1; font-family: var(--sans); }
 .nest .txt .k { font-size: 12px; letter-spacing: .14em; color: var(--gold-ink); font-weight: 600; margin-bottom: 2px; }
 .nest .txt .k i { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 13px; color: var(--gold); margin-left: 8px; }
+.nest .txt b { font-family: var(--serif); font-size: 19px; letter-spacing: .08em; color: var(--ink); line-height: 1.3; }
+.nest .stage, .nest-stage .stage { display: block; font-family: var(--sans); font-size: 12px; letter-spacing: .1em; color: var(--gold-ink); font-weight: 600; }
+.nest .stage i, .nest-stage .stage i { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 13px; color: var(--gold); margin-left: 6px; }
+.nest .stage em, .nest-stage .stage em { font-style: normal; font-weight: 500; color: var(--muted); margin-left: 8px; letter-spacing: .08em; }
 .nest.hint .txt b { font-size: 16px; }
 .nest.hint .next { color: var(--gold-ink); font-weight: 600; }
-.nest .txt b { font-family: var(--serif); font-size: 17px; letter-spacing: .08em; color: var(--ink); }
-.nest .txt b i, .nest-stage b i { font-family: var(--latin); font-style: italic; font-weight: 500; font-size: 14px; letter-spacing: .02em; color: var(--gold); margin-left: 8px; }
 .nest .say, .nest-stage .today { font-size: 13.5px; line-height: 1.6; color: var(--ink-2); margin: 0; }
 .nest .bar, .nest-stage .bar { display: block; height: 1px; background: var(--rule); margin-top: 4px; position: relative; }
 .nest .bar i, .nest-stage .bar i { position: absolute; left: 0; top: -1px; height: 3px; background: var(--gold); transition: width .6s ease; }
 .nest .next, .nest-stage .next { font-size: 11.5px; letter-spacing: .06em; color: var(--muted); }
-.nest .bird { position: relative; flex: none; width: 64px; height: 64px; }
-:is(.nest, .nest-stage) .bird { z-index: 2; will-change: transform; }
-/* in the air (nest.js liveBird): the wing beats */
-:is(.nest, .nest-stage) .bird.flying .e-wing { transform-box: view-box; transform-origin: 31px 33px; animation: nest-flap .17s ease-in-out infinite alternate; }
-@keyframes nest-flap { from { transform: rotate(-26deg) scaleY(.7); } to { transform: rotate(14deg) scaleY(1.15); } }
-.nest .bird svg, .nest-stage .bird svg { width: 100%; height: 100%; overflow: visible; transform-origin: 50% 83%; transition: transform .6s ease; }
-.nest-stage .bird { position: relative; width: 132px; height: 132px; margin: 6px auto 2px; }
+.nest .bird { position: relative; flex: none; width: 72px; height: 72px; }
+:is(.nest, .nest-stage, .flyby) .bird { z-index: 2; will-change: transform; }
+:is(.nest, .nest-stage, .flyby) .bird svg { width: 100%; height: 100%; overflow: visible; transform-origin: 50% 83%; transform: scale(calc(.5 + .5 * var(--g, 1))) scaleX(var(--full, 1)); transition: transform .6s ease; }
+.nest-stage .bird { position: relative; width: 150px; height: 150px; margin: 4px auto 0; }
 /* the egg */
-.nest .shell, .nest-stage .shell { fill: var(--paper-2); stroke: var(--gold); stroke-width: 1.2; }
-.nest .spk, .nest-stage .spk { fill: var(--gold-soft); }
-/* the robin by stage */
-:is(.nest, .nest-stage) .bird :is(.e-ink, .e-gold) { fill: var(--ink); }
-:is(.nest, .nest-stage) .bird .e-paper { fill: var(--paper); }
-:is(.nest, .nest-stage) .bird :is(.e-wing, .e-legs) { stroke: var(--ink); fill: none; }
-/* --g (nest.js birdSvg) runs 0 → 1 over the first eighty bites: the bird grows and its breast reddens a little with
-   every bite, the stages only adding what a number cannot (no wing yet, fluff, the singer's gold wing). */
-:is(.nest, .nest-stage) .bird svg { transform: scale(calc(.55 + .45 * var(--g, 1))) scaleX(var(--full, 1)); }
-:is(.nest, .nest-stage) .bird .e-robin { fill: color-mix(in srgb, var(--robin) calc(var(--g, 1) * 100%), var(--muted)); transition: fill .6s ease; }
-:is(.nest, .nest-stage) .bird.s1 .e-wing { display: none; }
-:is(.nest, .nest-stage) .bird.s2 .e-wing { stroke-dasharray: 1 2.2; }
-:is(.nest, .nest-stage) .bird.s5 .e-wing { stroke: var(--gold); }
-:is(.nest, .nest-stage) .bird.full { --full: 1.08; }
-:is(.nest, .nest-stage) .bird .leaf { fill: color-mix(in srgb, var(--gold) 45%, var(--paper)); stroke: var(--gold); stroke-width: .5; }
-:is(.nest, .nest-stage) .bird .bloom { fill: var(--gold); }
-:is(.nest, .nest-stage) .bird .berry { fill: var(--robin); }
-:is(.nest, .nest-stage) .bird .note { position: absolute; right: 6%; top: 18%; font-family: var(--latin); font-size: 15px; color: var(--gold); opacity: 0; }
-:is(.nest, .nest-stage) .bird .note.two { right: -4%; top: 4%; font-size: 12px; }
-:is(.nest, .nest-stage) .bird .note.three { right: 18%; top: 0; font-size: 11px; }
+:is(.nest, .nest-stage, .flyby) .shell { fill: var(--nest-cream); stroke: var(--gold); stroke-width: .9; }
+:is(.nest, .nest-stage, .flyby) .spk { fill: var(--gold-soft); }
+/* the robin: grey as a nestling, its colours coming up with --g; the red deepening and the brown warming with --m */
+:is(.nest, .nest-stage, .flyby) .r-back { fill: color-mix(in srgb, var(--nest-brown) calc(var(--g, 1) * 100%), var(--muted)); }
+:is(.nest, .nest-stage, .flyby) .r-wing { fill: color-mix(in srgb, var(--nest-dark) calc(var(--g, 1) * 100%), var(--muted)); }
+:is(.nest, .nest-stage, .flyby) .r-tail { fill: var(--nest-dark); }
+:is(.nest, .nest-stage, .flyby) .r-breast { fill: color-mix(in srgb, color-mix(in srgb, var(--robin), #8E2A2A calc(var(--m, 0) * 45%)) calc(var(--g, 1) * 100%), var(--muted)); transition: fill .6s ease; }
+:is(.nest, .nest-stage, .flyby) .r-belly { fill: var(--nest-cream); }
+:is(.nest, .nest-stage, .flyby) .r-line { fill: none; stroke: var(--nest-cream); stroke-width: .55; stroke-linecap: round; opacity: .75; }
+:is(.nest, .nest-stage, .flyby) .r-speck { fill: var(--nest-cream); opacity: .9; }
+:is(.nest, .nest-stage, .flyby) .r-eye { fill: var(--ink); }
+:is(.nest, .nest-stage, .flyby) .r-eyehi { fill: var(--paper); }
+:is(.nest, .nest-stage, .flyby) .r-beak { fill: var(--ink); }
+:is(.nest, .nest-stage, .flyby) .r-leg { fill: none; stroke: var(--nest-dark); stroke-width: 1.05; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby) .r-perch { fill: none; stroke: var(--nest-brown); stroke-width: 1.7; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby) .bird.s1 .r-wingg { display: none; }
+:is(.nest, .nest-stage, .flyby) .bird.s2 .r-back { stroke: var(--muted); stroke-width: 1.1; stroke-dasharray: .5 1.3; stroke-linecap: round; opacity: .96; } /* the nestling's fluff: a soft dotted edge */
+:is(.nest, .nest-stage, .flyby) .bird.full { --full: 1.07; }
+/* what the yard has gathered */
+:is(.nest, .nest-stage, .flyby) .sc-twig { fill: none; stroke: var(--nest-brown); stroke-width: .9; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby) .sc-branch { fill: none; stroke: var(--nest-brown); stroke-width: 1.3; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby) .sc-leaf { fill: color-mix(in srgb, var(--gold) 45%, var(--paper)); stroke: var(--gold); stroke-width: .5; }
+:is(.nest, .nest-stage, .flyby) .sc-moss { fill: none; stroke: var(--gold-soft); stroke-width: 1.3; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby) .sc-bloom { fill: var(--nest-cream); stroke: var(--gold); stroke-width: .45; }
+:is(.nest, .nest-stage, .flyby) .sc-bloomc { fill: var(--gold); }
+:is(.nest, .nest-stage, .flyby) .sc-berry { fill: var(--robin); }
+:is(.nest, .nest-stage, .flyby) .sc-egg { fill: var(--nest-cream); stroke: var(--gold-soft); stroke-width: .4; }
+:is(.nest, .nest-stage, .flyby) .sc-chick { fill: var(--muted); }
+:is(.nest, .nest-stage, .flyby) .sc-lady { fill: var(--red); }
+:is(.nest, .nest-stage, .flyby) .sc-dot { fill: var(--ink); }
+:is(.nest, .nest-stage, .flyby) .sc-bfly { fill: var(--gold); transform-box: fill-box; transform-origin: center; }
+/* in the air (nest.js liveBird, flyBy): the wing beats */
+:is(.nest, .nest-stage, .flyby) .bird.flying .r-wingg { transform-box: view-box; transform-origin: 31px 32px; animation: nest-flap .16s ease-in-out infinite alternate; }
+@keyframes nest-flap { from { transform: rotate(-24deg) scaleY(.72); } to { transform: rotate(12deg) scaleY(1.12); } }
+/* the singer's notes */
+:is(.nest, .nest-stage, .flyby) .bird .note { position: absolute; right: 6%; top: 18%; font-family: var(--latin); font-size: 15px; color: var(--gold); opacity: 0; }
+:is(.nest, .nest-stage, .flyby) .bird .note.two { right: -4%; top: 4%; font-size: 12px; }
+:is(.nest, .nest-stage, .flyby) .bird .note.three { right: 18%; top: 0; font-size: 11px; }
 .nest-stage .bird .note { font-size: 24px; } .nest-stage .bird .note.two { font-size: 18px; } .nest-stage .bird .note.three { font-size: 16px; }
-.nest .songs, .nest-stage .songs { display: block; font-family: var(--sans); font-size: 11.5px; font-weight: 500; letter-spacing: .1em; color: var(--gold-ink); margin-top: 2px; }
 @media (prefers-reduced-motion: no-preference) {
-  :is(.nest, .nest-stage) .bird .note { animation: nest-note 3.2s ease-in-out infinite; }
-  :is(.nest, .nest-stage) .bird .note.two { animation-delay: 1.4s; }
-  :is(.nest, .nest-stage) .bird .note.three { animation-delay: 2.3s; }
+  :is(.nest, .nest-stage, .flyby) .bird .note { animation: nest-note 3.2s ease-in-out infinite; }
+  :is(.nest, .nest-stage, .flyby) .bird .note.two { animation-delay: 1.4s; }
+  :is(.nest, .nest-stage, .flyby) .bird .note.three { animation-delay: 2.3s; }
   @keyframes nest-note { 0%, 100% { opacity: 0; transform: translateY(4px); } 20%, 60% { opacity: 1; } 80% { opacity: 0; transform: translateY(-10px); } }
+  :is(.nest, .nest-stage, .flyby) .sc-bfly { animation: nest-bfly 4.5s ease-in-out infinite; }
+  :is(.nest, .nest-stage, .flyby) .sc-bfly path { transform-box: fill-box; transform-origin: 100% 50%; animation: nest-wing .35s ease-in-out infinite alternate; }
+  :is(.nest, .nest-stage, .flyby) .sc-bfly path + path { transform-origin: 0 50%; animation-direction: alternate-reverse; }
+  @keyframes nest-bfly { 0%, 100% { transform: translate(0, 0); } 30% { transform: translate(-6px, -5px); } 60% { transform: translate(3px, -9px); } 80% { transform: translate(-2px, -3px); } }
+  @keyframes nest-wing { from { transform: scaleX(1); } to { transform: scaleX(.35); } }
 }
-@media (prefers-reduced-motion: reduce) { :is(.nest, .nest-stage) .bird .note { opacity: .8; } }
+@media (prefers-reduced-motion: reduce) { :is(.nest, .nest-stage, .flyby) .bird .note { opacity: .8; } }
+/* across the paper (nest.js flyBy): a fixed box the bird flies in, over everything but the nav; a tap opens the yard */
+.flyby { position: fixed; left: 0; top: 0; z-index: 35; width: 64px; height: 64px; pointer-events: auto; }
+.flyby .bird { width: 100%; height: 100%; }
+.flyby .r-perch, .flyby .r-leg, .flyby .sc-twig, .flyby .sc-branch, .flyby .sc-leaf, .flyby .sc-moss, .flyby .sc-bloom, .flyby .sc-bloomc, .flyby .sc-berry, .flyby .sc-egg, .flyby .sc-chick, .flyby .sc-lady, .flyby .sc-dot, .flyby .sc-bfly, .flyby .note { display: none; }
 /* the page */
 .nest-stage { text-align: center; padding: 6px 0 14px; border-bottom: 1px solid var(--rule); }
-.nest-stage b { display: block; font-size: 22px; letter-spacing: .14em; margin-top: 4px; }
-.nest-stage .say { font-family: var(--serif); font-size: 15.5px; line-height: 1.8; color: var(--ink-2); margin: 6px auto 2px; max-width: 30em; }
+.nest-stage b { display: block; font-size: 24px; letter-spacing: .14em; margin-top: 2px; }
+.nest-stage .stage { margin-top: 4px; }
+.nest-stage .say { font-family: var(--serif); font-size: 15.5px; line-height: 1.8; color: var(--ink-2); margin: 8px auto 2px; max-width: 30em; }
 .nest-stage .today { font-family: var(--sans); margin: 4px 0 8px; }
 .nest-stage .bar { max-width: 260px; margin: 8px auto 0; }
 .nest-stage .next { display: block; margin-top: 6px; }
-.nest-stage .small { font-family: var(--sans); font-size: 12px; color: var(--muted); margin: 8px 0 0; }
+.nest-stage .small { font-family: var(--sans); font-size: 12px; color: var(--muted); margin: 8px 0 0; line-height: 1.7; }
 .nest-week { list-style: none; margin: 4px 0 0; padding: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; height: 74px; align-items: end; }
 .nest-week li { position: relative; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; }
 .nest-week li i { display: block; width: 100%; min-height: 2px; background: var(--gold-soft); border-top: 2px solid var(--gold); }
@@ -1995,3 +2023,4 @@ details.band .svl { margin: 0 0 10px; }
 .nest-code { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 6px; }
 .nest-code code { font-family: var(--latin); font-size: 22px; font-weight: 600; letter-spacing: .14em; color: var(--ink); padding: 8px 12px; border: 1px solid var(--rule); background: var(--paper-2); user-select: all; -webkit-user-select: all; }
 .nest-page .nest-note { border-left: 2px solid var(--gold); padding-left: 10px; }
+.nest-page .chips { margin: 2px 0 10px; }

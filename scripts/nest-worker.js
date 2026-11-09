@@ -7,8 +7,8 @@
 //   3. Its address (https://robin-nest.<account>.workers.dev) goes into content/config.json as `"nest": {"api": "…"}`
 //      and into index.html's Content-Security-Policy `connect-src`.
 //
-// One nest is one key (its invite code). POST /{code} with {member: {id, name}, feeds: [{d, w, k}]} merges the member
-// and the feeds (one bite per member per article) and answers the whole nest {members, feeds}. Nothing personal is
+// One nest is one key (its invite code). POST /{code} with {member: {id, name}, feeds: [{d, w, k}], pet?: {name, p}} merges
+// the member, the feeds (one bite per member per article) and the bird's name, and answers the whole nest {members, feeds, pet}. Nothing personal is
 // kept: a nest's members are the names its readers chose, their ids random strings. Anyone holding the code can read
 // and feed the nest — the code is the whole secret, which is what an invite code is for.
 const CODE = /^NEST-[A-Z2-9]{4}-[A-Z2-9]{4}$/;
@@ -31,6 +31,8 @@ export default {
     const nest = (await env.NEST.get(code, "json")) || { members: {}, feeds: [] };
     if (!(m.id in nest.members) && Object.keys(nest.members).length >= MAX_MEMBERS) return json({ error: "nest full" }, 409);
     nest.members[m.id] = name;
+    // the bird's name and how it is called (牠/他/她), the yard's to change: the latest rename wins
+    if (body.pet && typeof body.pet === "object" && typeof body.pet.name === "string") nest.pet = { name: body.pet.name.slice(0, 12), p: ["牠", "他", "她"].includes(body.pet.p) ? body.pet.p : "牠" };
     const seen = new Set(nest.feeds.map((f) => `${f.w}|${f.k}`));
     for (const f of Array.isArray(body.feeds) ? body.feeds.slice(0, 500) : []) {
       if (!FEED(f) || f.w !== m.id || seen.has(`${f.w}|${f.k}`)) continue; // a phone feeds only as itself
