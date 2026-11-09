@@ -1,0 +1,203 @@
+{
+ "column": "news",
+ "date": "2026-11-10",
+ "title": "土耳其鋼鐵廠爆炸 16 死，COP31 氣候峰會在安塔利亞開幕",
+ "dek": "法國基本薪資 12 月 1 日起調漲，工會 17 日再上街；塞普勒斯兩邊領導人同意開兩個新通道。",
+ "brief": "土耳其伊茲米爾省的鋼鐵廠爆炸，總統說 16 人死亡。聯合國氣候峰會 COP31 同日在安塔利亞開幕，為期兩週。川普 11 月 9 日在社群平台質疑上週的期中選舉，沒有提出證據。",
+ "topic_key": "news:2026-11-10",
+ "form": "list",
+ "voice": "wire",
+ "updated_at": "2026-11-10T05:24:40+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "Explosion at Turkish steel plant kills at least 16 people",
+   "publisher": "半島電視台",
+   "date": "2026-11-09",
+   "url": "https://www.aljazeera.com/news/2026/11/9/explosion-at-turkish-steel-plant-kills-at-least-16-people",
+   "note": "11:46 當地時間、HABAS 工廠、阿利亞加、天車墜入爐中、16 死 13 傷"
+  },
+  {
+   "title": "Turkey: Workers killed in Izmir steel plant blast",
+   "publisher": "德國之聲",
+   "date": "2026-11-09",
+   "url": "https://www.dw.com/en/turkey-workers-killed-in-izmir-steel-plant-blast/a-79900748",
+   "note": "總統在內閣會議後公布 16 死 13 傷、2 人重傷；4 名檢察官；現場約 200 人"
+  },
+  {
+   "title": "COP31 opens in Antalya: Can climate promises finally deliver results?",
+   "publisher": "聯合國新聞",
+   "date": "2026-11-09",
+   "url": "https://news.un.org/en/story/2026/11/1168763",
+   "note": "開幕、近 200 國、Stiell 開幕致詞、Kurum 與 Bowen 共同主持"
+  },
+  {
+   "title": "COP31 opens under climate and finance pressure",
+   "publisher": "法國 24 電視台（法新社）",
+   "date": "2026-11-09",
+   "url": "https://www.france24.com/en/live-news/20261109-cop31-opens-as-climate-and-geopolitical-pressures-mount",
+   "note": "兩週會期、古特雷斯聲明、氣候融資議程爭執"
+  },
+  {
+   "title": "Trump reverses stance, alleges fraud in recent US midterm elections",
+   "publisher": "半島電視台",
+   "date": "2026-11-09",
+   "url": "https://www.aljazeera.com/news/2026/11/9/trump-reverses-stance-alleges-fraud-in-recent-us-midterm-elections",
+   "note": "Truth Social 發文原話、60 Minutes 訪問、舒默回應；文中說川普未提供證據"
+  },
+  {
+   "title": "川普質疑期中選舉正當性　再度指控選舉舞弊",
+   "publisher": "中央社",
+   "date": "2026-11-10",
+   "url": "https://www.cna.com.tw/news/aopl/202611100002.aspx",
+   "note": "台灣時間 11 月 10 日 01:25 發布；法新社電；民主黨橫掃參眾兩院"
+  },
+  {
+   "title": "法政府回應民怨基本薪資漲破1500歐元　工會不滿繼續示威",
+   "publisher": "中央社",
+   "date": "2026-11-09",
+   "url": "https://www.cna.com.tw/news/aopl/202611090289.aspx",
+   "note": "基本薪資 1,502 歐元、12 月 1 日生效、漲幅 1.6%；總工會號召 17 日示威；10 月通膨 3.4%"
+  },
+  {
+   "title": "French PM brings forward hike in minimum wage to calm protesters",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-09",
+   "url": "https://www.france24.com/en/video/20261109-french-pm-brings-forward-hike-in-minimum-wage-to-calm-protesters",
+   "note": "原定 1 月的調漲提前到 12 月；工會稱為「碎屑」"
+  },
+  {
+   "title": "Cyprus rivals agree new crossings across island's dividing line",
+   "publisher": "半島電視台",
+   "date": "2026-11-09",
+   "url": "https://www.aljazeera.com/news/2026/11/9/cyprus-rivals-agree-new-crossings-across-islands-dividing-line",
+   "note": "兩位領導人與聯合國特使會面；兩個新通道、緊急應變協調、檔案共享；通道增至 11 個"
+  },
+  {
+   "title": "中國4海警船頂惡劣海象擾金門　海巡廣播驅離",
+   "publisher": "中央社",
+   "date": "2026-11-09",
+   "url": "https://www.cna.com.tw/news/aipl/202611090216.aspx",
+   "note": "海巡署新聞稿；14:50 偵獲、16:50 全數航出；近 2 週第 6 度"
+  },
+  {
+   "title": "國安基金、限空令齊發 台股收漲1960點創史上第二大",
+   "publisher": "公視新聞網",
+   "date": "2026-11-09",
+   "url": "https://news.pts.org.tw/article/834992",
+   "note": "收盤 41,661 點、漲 1,960 點；外資賣超約 900 億元；新台幣 32.882 元"
+  },
+  {
+   "title": "易遊網遭駭69萬人個資外洩 業者：未涉及信用卡號",
+   "publisher": "中央社",
+   "date": "2026-11-09",
+   "url": "https://www.cna.com.tw/news/ahel/202611090202.aspx",
+   "note": "11 月 7 日偵測、11 月 9 日公告；外洩資料範圍；已通報主管機關與警政單位"
+  }
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "土耳其鋼鐵廠爆炸造成 16 人死亡，COP31 氣候峰會在安塔利亞開幕。台灣方面，台股在限空令後收漲，金門海域有 4 艘中國海警船被驅離。"
+  },
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "土耳其鋼鐵廠爆炸 16 死",
+     "place": "TR",
+     "summary": "伊茲米爾省阿利亞加的 HABAS 鋼鐵廠 11 月 9 日 11:46 發生爆炸，一台天車墜入爐中。總統艾爾段（Erdogan）說，16 人死亡、13 人受傷，其中 2 人重傷。司法部長派 4 名檢察官偵辦。",
+     "source": "半島電視台、德國之聲",
+     "url": "https://www.aljazeera.com/news/2026/11/9/explosion-at-turkish-steel-plant-kills-at-least-16-people",
+     "when": "11 月 9 日，土耳其當地時間"
+    },
+    {
+     "headline": "COP31 在安塔利亞開幕",
+     "place": "TR",
+     "summary": "近 200 國代表 11 月 9 日抵達土耳其南岸的安塔利亞，展開為期兩週的聯合國氣候峰會。土耳其環境部長庫魯姆（Murat Kurum）擔任主席，澳洲氣候部長鮑文（Chris Bowen）主持談判。開幕前，各國為氣候融資是否列入議程談到當天清晨。",
+     "source": "聯合國新聞、法國 24 電視台",
+     "url": "https://news.un.org/en/story/2026/11/1168763",
+     "when": "11 月 9 日，土耳其當地時間"
+    },
+    {
+     "headline": "川普質疑期中選舉結果",
+     "place": "US",
+     "summary": "川普 11 月 9 日在社群平台「真實社群」寫道：「真的有人相信這場『選舉』是誠實公正的嗎？」他說大量提前投票使共和黨不可能贏，沒有提出證據。民主黨在上週的選舉拿下國會參眾兩院；川普前一天在《60 分鐘》訪談中仍表示願意接受結果。",
+     "source": "半島電視台、中央社",
+     "url": "https://www.aljazeera.com/news/2026/11/9/trump-reverses-stance-alleges-fraud-in-recent-us-midterm-elections",
+     "when": "11 月 9 日，美國當地時間"
+    },
+    {
+     "headline": "法國基本薪資 12 月起調漲",
+     "place": "FR",
+     "summary": "總理勒克努（Sébastien Lecornu）11 月 9 日宣布，原訂 1 月的基本薪資調漲提前到 12 月 1 日。法國已示威數週，10 月通膨率 3.4%。總工會（CGT）說調幅不夠，號召 11 月 17 日再上街。",
+     "source": "中央社、法國 24 電視台",
+     "url": "https://www.cna.com.tw/news/aopl/202611090289.aspx",
+     "when": "11 月 9 日，法國當地時間"
+    },
+    {
+     "headline": "塞普勒斯兩邊同意開兩個新通道",
+     "place": "CY",
+     "summary": "希裔領導人 Nikos Christodoulides 與土裔領導人 Tufan Erhurman，11 月 9 日在聯合國緩衝區會見聯合國特使，同意開放兩個新的邊界通道、協調緊急應變、共享檔案。通道將增為 11 個。上一輪正式和談在 2017 年破局。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/9/cyprus-rivals-agree-new-crossings-across-islands-dividing-line",
+     "when": "11 月 9 日，塞普勒斯當地時間"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "台股限空令後首日收漲 1,960 點",
+     "place": "TW",
+     "summary": "11 月 9 日加權指數收 41,661 點，漲 1,960 點，為史上收盤漲點第 2 大。當天是國安基金第 10 度進場、金管會限空措施上路的第一個交易日。外資賣超約 900 億元。",
+     "source": "公視新聞網",
+     "url": "https://news.pts.org.tw/article/834992",
+     "when": "11 月 9 日，台灣時間"
+    },
+    {
+     "headline": "4 艘中國海警船闖金門限制水域",
+     "place": "TW",
+     "summary": "海巡署說，4 艘中國海警船 11 月 9 日 14:50 編隊航入金門限制水域，當時海象惡劣。巡防艇以中、英文廣播驅離，16:50 全數航出。近 2 週中國海警船已 6 度編隊進入。",
+     "source": "中央社",
+     "url": "https://www.cna.com.tw/news/aipl/202611090216.aspx",
+     "when": "11 月 9 日，台灣時間"
+    },
+    {
+     "headline": "易遊網 69 萬人個資外洩",
+     "place": "TW",
+     "summary": "旅遊業者易遊網 11 月 7 日偵測到會員中心遭外部攻擊，11 月 9 日公告：逾 69 萬人的姓名、電子郵件、電話與訂購資訊被取得。業者說不含信用卡號與身分證字號，已通報主管機關與警政單位。",
+     "source": "中央社",
+     "url": "https://www.cna.com.tw/news/ahel/202611090202.aspx",
+     "when": "11 月 9 日，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "法國基本薪資",
+   "head": [
+    "",
+    "稅後月薪",
+    "生效日"
+   ],
+   "rows": [
+    [
+     "現行",
+     "1,477.93 歐元",
+     "—"
+    ],
+    [
+     "調整後",
+     "1,502 歐元（+1.6%）",
+     "12 月 1 日"
+    ]
+   ],
+   "caption": "資料來源：中央社。"
+  }
+ ]
+}
