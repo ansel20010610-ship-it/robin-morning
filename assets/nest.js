@@ -294,33 +294,17 @@ export function scrollFlyer() {
   };
 }
 
-// ——— The page (#/nest) ———
-// Without a yard: open one or join one. With one: the bird large, its name, the week, the people, the invite code to
-// pass on, the name to change, and the way out. `api` is config.json nest.api; without it the page says the yard is
-// this phone alone. `afterSync`: this draw follows a sync, so it does not start another (a draw that synced, and a
-// sync that redrew, chased each other round until the store refused the phone, 2026-11-09).
+// ——— The pages (#/nest, #/nest/settings) ———
+// The yard's page is the bird: its name, stage, today, the week, the people, and one row to its settings. Everything
+// that is set rather than watched — opening or joining a yard, the bird's name, the invite code, leaving — lives on
+// 後院設定, one page (the owner, 2026-11-09: 關於巢的設定全部收納到一個他的設定頁面). Without a yard the page is the
+// settings page, since there is nothing to watch yet. `api` is config.json nest.api; without it the pages say the
+// yard is this phone alone. `afterSync`: this draw follows a sync, so it does not start another (a draw that synced,
+// and a sync that redrew, chased each other round until the store refused the phone, 2026-11-09).
 export function renderNest(el, api, afterSync = false) {
   const n = nest();
+  if (!n) { renderNestSettings(el, api); return; }
   const head = `<header class="page-title"><h1>後院</h1><span class="de">Hinterhof</span></header>`;
-  if (!n) {
-    el.innerHTML = `${head}
-      <p class="gig-intro">兩個人以上一起養一隻知更鳥。每讀完一篇，就是餵牠一口；大家讀的加在一起，牠從一顆蛋長成會唱歌的鳥，院子裡也一直有新的東西。餓著不會死，只會瘦一點。</p>
-      <section class="set"><h2>開一個後院</h2><p class="small">先填一個名字，院子裡的人會看到是誰餵的；開好會拿到一組邀請碼，傳給另一個有這份報紙的人。</p>
-        <input class="search" data-build-name maxlength="12" placeholder="你的名字（朋友會看到，最多 12 字）" aria-label="你的名字">
-        <div class="btns"><button type="button" class="btn" data-build>開後院</button></div></section>
-      <section class="set"><h2>加入別人的後院</h2>
-        <input class="search" data-join-code autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="NEST-XXXX-XXXX" aria-label="邀請碼">
-        <input class="search" data-join-name maxlength="12" placeholder="你的名字（朋友會看到，最多 12 字）" aria-label="你的名字">
-        <div class="btns"><button type="button" class="btn ghost" data-join>加入</button></div></section>
-      ${api ? "" : `<p class="small nest-note">共用儲存還沒接上：現在開的後院只在這支手機裡，接上以後，餵食紀錄和院子裡的人會自動同步。</p>`}`;
-    el.querySelector("[data-build]").onclick = () => { buildNest(el.querySelector("[data-build-name]").value.trim().slice(0, 12)); toast("後院開好了"); renderNest(el, api, true); syncNest(api).then((ok) => ok && el.isConnected && renderNest(el, api, true)); };
-    el.querySelector("[data-join]").onclick = () => {
-      const code = normCode(el.querySelector("[data-join-code]").value);
-      if (!CODE_RE.test(code)) { toast("邀請碼要像 NEST-XXXX-XXXX"); return; }
-      joinNest(code, el.querySelector("[data-join-name]").value.trim().slice(0, 12)); toast("加入了"); renderNest(el, api, true); syncNest(api).then((ok) => ok && el.isConnected && renderNest(el, api, true));
-    };
-    return;
-  }
   const st = nestState(n), today = twNow().date, pet = st.pet;
   const names = Object.entries(n.members || {}).map(([id, name]) => `<li><span>${id === n.me ? `${esc(name)}（你）` : esc(name)}</span><b>${st.members[id] || 0} 口</b></li>`).join("");
   const wk = st.week.map((w) => `<li${w.d === today ? ' class="today"' : ""}><i style="height:${Math.min(100, w.n * 14)}%"></i><span>${Number(w.d.slice(8))}</span></li>`).join("");
@@ -336,28 +320,72 @@ export function renderNest(el, api, afterSync = false) {
     <section class="set"><h2>這七天</h2><ol class="nest-week" aria-label="這七天每天餵了幾口">${wk}</ol></section>
     <section class="set"><h2>院子裡的人</h2><ul class="nest-members">${names}</ul>
       ${api ? `<p class="small">${synced || "還沒同步過"}。</p>` : `<p class="small nest-note">共用儲存還沒接上：現在只有這支手機的紀錄，接上以後會把大家的餵食和名字同步過來。</p>`}</section>
+    <a class="sec-head link nest-to-set" href="#/nest/settings"><h2>後院設定</h2><span class="de">Einstellungen</span><span class="note">取名、邀請碼、離開 →</span></a>`;
+  liveBird(el.querySelector(".nest-stage"));
+  if (!afterSync) syncNest(api).then((ok) => { if (ok && el.isConnected && location.hash === "#/nest") renderNest(el, api, true); });
+}
+// 後院設定: open a yard or join one; with a yard, the bird's name and how it is called, the invite code to pass on,
+// joining another yard instead (which leaves this one), and the way out.
+export function renderNestSettings(el, api, afterSync = false) {
+  const n = nest();
+  const head = `<header class="page-title"><h1>後院設定</h1><span class="de">Einstellungen</span></header>`;
+  const joinForm = (ghost) => `<input class="search" data-join-code autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="NEST-XXXX-XXXX" aria-label="邀請碼">
+        <input class="search" data-join-name maxlength="12" placeholder="你的名字（朋友會看到，最多 12 字）" aria-label="你的名字">
+        <div class="btns"><button type="button" class="btn${ghost ? " ghost" : ""}" data-join>加入</button></div>`;
+  const wireJoin = (sure) => {
+    el.querySelector("[data-join]").onclick = (e) => {
+      const code = normCode(el.querySelector("[data-join-code]").value);
+      if (!CODE_RE.test(code)) { toast("邀請碼要像 NEST-XXXX-XXXX"); return; }
+      if (sure && !e.currentTarget.dataset.sure) { e.currentTarget.dataset.sure = "1"; e.currentTarget.textContent = "會離開現在的後院，確定就再按一次"; return; }
+      joinNest(code, el.querySelector("[data-join-name]").value.trim().slice(0, 12)); toast("加入了");
+      location.hash = "#/nest";
+    };
+  };
+  if (!n) {
+    el.innerHTML = `${head}
+      <p class="gig-intro">兩個人以上一起養一隻知更鳥。每讀完一篇，就是餵牠一口；大家讀的加在一起，牠從一顆蛋長成會唱歌的鳥，院子裡也一直有新的東西。餓著不會死，只會瘦一點。</p>
+      <section class="set"><h2>開一個後院</h2><p class="small">先填一個名字，院子裡的人會看到是誰餵的；開好會拿到一組邀請碼，傳給另一個有這份報紙的人。</p>
+        <input class="search" data-build-name maxlength="12" placeholder="你的名字（朋友會看到，最多 12 字）" aria-label="你的名字">
+        <div class="btns"><button type="button" class="btn" data-build>開後院</button></div></section>
+      <section class="set"><h2>加入別人的後院</h2>${joinForm(true)}</section>
+      ${api ? "" : `<p class="small nest-note">共用儲存還沒接上：現在開的後院只在這支手機裡，接上以後，餵食紀錄和院子裡的人會自動同步。</p>`}`;
+    el.querySelector("[data-build]").onclick = () => { buildNest(el.querySelector("[data-build-name]").value.trim().slice(0, 12)); toast("後院開好了"); location.hash = "#/nest/settings"; renderNestSettings(el, api, true); syncNest(api).then((ok) => ok && el.isConnected && renderNestSettings(el, api, true)); };
+    wireJoin(false);
+    return;
+  }
+  const pet = petOf(n);
+  el.innerHTML = `${head}
     <section class="set"><h2>取名</h2><p class="small">院子裡的人都會看到這個名字。知更鳥公鳥和母鳥長得一樣，看不出來，所以${pet.p}是他還是她，由你們決定。</p>
       <input class="search" data-pet-name maxlength="12" value="${esc(pet.named ? pet.name : "")}" placeholder="牠的名字（最多 12 字）" aria-label="鳥的名字">
       <nav class="chips" aria-label="怎麼稱呼">${PRONOUNS.map((p) => `<button type="button" class="chip" data-p="${p}" aria-pressed="${p === pet.p}">${p}</button>`).join("")}</nav>
       <div class="btns"><button type="button" class="btn ghost" data-pet-save>改好了</button></div></section>
     <section class="set"><h2>邀請碼</h2><p class="small">給另一個有這份報紙的人，在設定裡的「後院」輸入，就進同一個院子。</p>
       <div class="nest-code"><code>${esc(n.code)}</code><button type="button" class="btn ghost" data-copy>複製</button></div></section>
+    <section class="set"><h2>你在院子裡的名字</h2><p class="small">餵食紀錄旁邊顯示的名字，現在是「${esc(n.name)}」。</p>
+      <input class="search" data-me-name maxlength="12" value="${esc(n.name)}" placeholder="你的名字（最多 12 字）" aria-label="你的名字">
+      <div class="btns"><button type="button" class="btn ghost" data-me-save>改好了</button></div></section>
+    <section class="set"><h2>換一個後院</h2><p class="small">輸入別人的邀請碼就搬過去；這支手機會離開現在的院子，鳥和院子都還在，別人可以繼續養。</p>${joinForm(true)}</section>
     <section class="set"><h2>離開</h2><p class="small">離開以後，這支手機不再餵這隻鳥；院子和鳥都還在，別人可以繼續養。</p>
-      <div class="btns"><button type="button" class="btn ghost" data-leave>離開這個後院</button></div></section>`;
+      <div class="btns"><button type="button" class="btn ghost" data-leave>離開這個後院</button></div></section>
+    ${api ? "" : `<p class="small nest-note">共用儲存還沒接上：現在只有這支手機的紀錄。</p>`}`;
   el.querySelector("[data-copy]").onclick = async () => { try { await navigator.clipboard.writeText(n.code); toast("邀請碼複製好了"); } catch { toast("複製不了，請長按邀請碼複製"); } };
   el.querySelector("[data-leave]").onclick = (e) => {
-    if (e.currentTarget.dataset.sure) { leaveNest(); toast("離開了"); renderNest(el, api); return; }
+    if (e.currentTarget.dataset.sure) { leaveNest(); toast("離開了"); renderNestSettings(el, api); return; }
     e.currentTarget.dataset.sure = "1"; e.currentTarget.textContent = "確定離開？再按一次";
   };
   el.querySelector(".chips").addEventListener("click", (e) => { const b = e.target.closest("button[data-p]"); if (!b) return; el.querySelectorAll(".chips [data-p]").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); });
   el.querySelector("[data-pet-save]").onclick = () => {
     namePet(el.querySelector("[data-pet-name]").value, el.querySelector('.chips [aria-pressed="true"]')?.dataset.p);
     toast(petOf().named ? `${petOf().name}，記住了` : "名字拿掉了，叫回知更鳥");
-    renderNest(el, api, true);
-    syncNest(api).then((ok) => { if (ok && el.isConnected && location.hash.startsWith("#/nest")) renderNest(el, api, true); });
+    syncNest(api);
   };
-  liveBird(el.querySelector(".nest-stage"));
-  if (!afterSync) syncNest(api).then((ok) => { if (ok && el.isConnected && location.hash.startsWith("#/nest")) renderNest(el, api, true); });
+  el.querySelector("[data-me-save]").onclick = () => {
+    const cur = nest(), v = el.querySelector("[data-me-name]").value.trim().slice(0, 12);
+    if (!cur || !v) { toast("名字不能空白"); return; }
+    cur.name = v; cur.members[cur.me] = v; save(cur); toast("記住了"); syncNest(api).then(() => el.isConnected && renderNestSettings(el, api, true));
+  };
+  wireJoin(true);
+  if (!afterSync) syncNest(api).then((ok) => { if (ok && el.isConnected && location.hash === "#/nest/settings") renderNestSettings(el, api, true); });
 }
 
 // ——— Sharing ———

@@ -14,7 +14,7 @@ import { fetchWeather, weatherHtml } from "./wetter.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { worldState, drawMap } from "./world.js";
-import { nestBox, renderNest, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest } from "./nest.js";
+import { nestBox, renderNest, renderNestSettings, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest } from "./nest.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -1803,11 +1803,11 @@ function calendarHtml(ym, pubs, done) {
     <div class="cap"><span>${got.length ? `本月 ${got.length} 期，讀完 ${fin} 期` : "本月還沒出刊"}</span><a href="#/chronik" aria-label="刊史館：從創刊號到今天的沿革">刊史館<i>Chronik</i>→</a></div></section>`;
 }
 // ——— 後院 (Hinterhof, assets/nest.js): the robin raised together; the page opens, joins, shows and leaves a yard ———
-function viewNest() {
+function viewNest(settings = false) {
   main.innerHTML = `<div class="wrap nest-page"></div>`;
   if (!sonder()) { main.querySelector(".nest-page").innerHTML = `<header class="page-title"><h1>後院</h1><span class="de">Hinterhof</span></header><p class="empty">後院是特供版才有的。到<a href="#/settings">設定</a>輸入代碼，這支手機就開了。</p>`; document.title = `後院｜${S.cfg.title}`; return; }
-  renderNest(main.querySelector(".nest-page"), S.cfg.nest?.api);
-  document.title = `後院｜${S.cfg.title}`;
+  (settings ? renderNestSettings : renderNest)(main.querySelector(".nest-page"), S.cfg.nest?.api);
+  document.title = `${settings ? "後院設定" : "後院"}｜${S.cfg.title}`;
 }
 // ——— 印務室 (Druckerei, assets/press.js): the owner's press room — this morning's five shifts, the reserve stock and a
 // fortnight's roster, all out of the index the app holds (its press, late and stock), so it reads the same offline.
@@ -2053,8 +2053,8 @@ function viewSettings() {
       <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>橫線之下</th></tr></thead><tbody>
       ${wd.map(([k, l]) => `<tr><td>${l}</td><td>${rot[k].map((c) => esc(col(c).name)).join("、")}</td></tr>`).join("")}</tbody></table></div></div>
     </section>
-    ${sonder() ? `<section class="set"><h2>後院</h2><p>和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口，大家讀的加在一起，牠從蛋長成會唱歌的鳥。邀請碼在後院裡。</p>
-      <div class="btns"><a class="btn ghost" href="#/nest">到後院去</a></div></section>` : ""}
+    ${sonder() ? `<section class="set"><h2>後院</h2><p>和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口，大家讀的加在一起，牠從蛋長成會唱歌的鳥。取名、邀請碼、加入別人的院子、離開，都在後院設定。</p>
+      <div class="btns"><a class="btn ghost" href="#/nest">到後院去</a><a class="btn ghost" href="#/nest/settings">後院設定</a></div></section>` : ""}
     <section class="set" id="sonder-set"><h2>特供版<span class="de">Sonderausgabe</span></h2>${sonder()
       ? `<p>這支手機是特供版：多了「後院」。</p><div class="btns"><button type="button" class="btn ghost" data-sonder-off>關閉特供版</button></div>`
       : `<p>有些功能只給拿到代碼的人。向社長請求代碼，在這裡輸入，這支手機就開了。</p>
@@ -2212,7 +2212,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/world")) viewWorld();
   else if (h.startsWith("#/press")) viewPress();
   else if (h.startsWith("#/chronik")) viewChronik();
-  else if (h.startsWith("#/nest")) viewNest();
+  else if (h.startsWith("#/nest")) viewNest(h.startsWith("#/nest/settings"));
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/marks")) viewMarks();

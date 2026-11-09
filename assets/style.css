@@ -2024,3 +2024,4 @@ details.band .svl { margin: 0 0 10px; }
 .nest-code code { font-family: var(--latin); font-size: 22px; font-weight: 600; letter-spacing: .14em; color: var(--ink); padding: 8px 12px; border: 1px solid var(--rule); background: var(--paper-2); user-select: all; -webkit-user-select: all; }
 .nest-page .nest-note { border-left: 2px solid var(--gold); padding-left: 10px; }
 .nest-page .chips { margin: 2px 0 10px; }
+.nest-page .nest-to-set { margin-top: 26px; }
