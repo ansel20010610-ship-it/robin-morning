@@ -25,5 +25,10 @@
       "news"
     ],
     "note": "football 初稿（非比賽夜，已做第8、9步，修正即可）、philosophy 中文房間（argument/socratic，判定重寫，已重寫）；football form=list/fan；未接第1班缺稿；football 剩字數略低 WARN"
+  },
+  "4": {
+    "finished_at": "2026-11-10T05:33:40+08:00",
+    "missing": [],
+    "note": "觀測站 FM／寰宇片場靜默（已記錄）；訃聞 Arpita Singh 刊出（重寫1／修正0）；巴薩無賽事無新消息未動；快訊刊出（修正1，不做重寫）；網域：aljazeera、dw、news.un.org、france24、cna.com.tw、news.pts.org.tw 可用；dw、nhk 不可放進 WebSearch allowed_domains（400）"
   }
 }
