@@ -30,5 +30,10 @@
     "finished_at": "2026-11-10T05:33:40+08:00",
     "missing": [],
     "note": "觀測站 FM／寰宇片場靜默（已記錄）；訃聞 Arpita Singh 刊出（重寫1／修正0）；巴薩無賽事無新消息未動；快訊刊出（修正1，不做重寫）；網域：aljazeera、dw、news.un.org、france24、cna.com.tw、news.pts.org.tw 可用；dw、nhk 不可放進 WebSearch allowed_domains（400）"
+  },
+  "concerts": {
+    "finished_at": "2026-11-10T06:23:16+08:00",
+    "missing": [],
+    "note": "新增 0、更新 0；補查今天不用；歷史上的今天 1871；開放資料不完整，尼德豪瑟場次售票頁仍在"
   }
 }
