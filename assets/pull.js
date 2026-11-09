@@ -19,6 +19,7 @@ export function initPull(refresh) {
   const off = () => { on = false; bar.classList.remove("on"); root.classList.remove("pulling"); draw(0); };
   document.addEventListener("touchstart", (e) => {
     y0 = null;
+    if (on && !busy) off(); // a second finger mid-pull left the pull drawn with nothing to end it; any new touch clears it
     if (busy || scrollY > 0 || e.touches.length !== 1 || document.querySelector("dialog[open]")) return;
     y0 = e.touches[0].clientY; x0 = e.touches[0].clientX;
   }, { passive: true });

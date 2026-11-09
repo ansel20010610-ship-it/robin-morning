@@ -161,7 +161,7 @@ export function nestState(n = nest()) {
   const week = Array.from({ length: 7 }, (_, i) => { const d = addDays(today, i - 6); return { d, n: feeds.filter((f) => f.d === d).length }; });
   const lastDay = feeds.reduce((m, f) => (f.d > m ? f.d : m), ""), idle = lastDay ? Math.round((Date.parse(`${today}T00:00:00Z`) - Date.parse(`${lastDay}T00:00:00Z`)) / 864e5) : null;
   const fed = todays.length;
-  const hunger = fed === 0 ? (idle !== null && idle >= 3 ? `${pet.name}瘦了一點，等人來餵。` : `${pet.name}今天還沒吃東西。`) : fed <= 2 ? "今天吃了一點。" : fed <= 5 ? "今天吃飽了。" : "今天吃得圓滾滾。";
+  const hunger = fed === 0 ? (idle !== null && idle >= 3 ? `${esc(pet.name)}瘦了一點，等人來餵。` : `${esc(pet.name)}今天還沒吃東西。`) : fed <= 2 ? "今天吃了一點。" : fed <= 5 ? "今天吃飽了。" : "今天吃得圓滾滾。";
   const who = Object.entries(todayBy).sort((a, b) => b[1] - a[1]).map(([id, c]) => `${id === n.me ? "你" : esc(n.members?.[id] || "朋友")} ${c}`);
   // grow 0 → 1 over the first eighty bites (size, the first colour); mature 0 → 1 over four hundred (the plumage: a
   // longer tail, more feather lines, specks on the wing, a deeper red) — so the bird itself is a little different
@@ -537,7 +537,7 @@ export function renderNestSettings(el, api, afterSync = false) {
       if (!CODE_RE.test(code)) { toast("邀請碼要像 NEST-XXXX-XXXX"); return; }
       if (sure && !e.currentTarget.dataset.sure) { e.currentTarget.dataset.sure = "1"; e.currentTarget.textContent = "會離開現在的後院，確定就再按一次"; return; }
       joinNest(code, el.querySelector("[data-join-name]").value.trim().slice(0, 12)); toast("加入了");
-      location.hash = "#/nest";
+      if (location.hash === "#/nest") renderNest(el, api); else location.hash = "#/nest"; // the yard-less #/nest is this form: the same hash fires no hashchange, so draw (and sync) the yard here
     };
   };
   if (!n) {
@@ -613,9 +613,14 @@ export function syncNest(api) {
       const sent = new Set((n.pending || []).map((f) => `${f.w}|${f.k}`)), got = new Set(data.feeds.map((f) => `${f.w}|${f.k}`));
       const cur = nest(); if (!cur || cur.code !== n.code) return false;
       cur.members = { ...data.members, [cur.me]: cur.name };
+      // This phone's own bites of the last month the store no longer holds (another phone's write, from a stale KV read,
+      // overwrote them after they were confirmed) go out again; the store keeps one bite per member and article.
+      const back = addDays(twNow().date, -30);
+      for (const f of cur.feeds || []) if (f.w === cur.me && f.d >= back && !got.has(`${f.w}|${f.k}`) && !(cur.pending || []).some((g) => g.w === f.w && g.k === f.k)) (cur.pending ||= []).push(f);
       cur.feeds = data.feeds.filter((f) => f && typeof f.d === "string" && typeof f.w === "string" && typeof f.k === "string");
       cur.pending = (cur.pending || []).filter((f) => !sent.has(`${f.w}|${f.k}`) || !got.has(`${f.w}|${f.k}`)); // kept: fed since the request went out, or the store lost it
       for (const f of cur.pending) if (!cur.feeds.some((g) => g.w === f.w && g.k === f.k)) cur.feeds.push(f);
+      for (const f of cur.feeds) if (/^\d{4}-\d{2}-\d{2}$/.test(f.d) && (!cur.since || f.d < cur.since)) cur.since = f.d; // a joining phone's since is its join day; the yard opened by its first bite at the latest
       if (body.pet && cur.petDirty && JSON.stringify(cur.pet) === JSON.stringify(body.pet)) cur.petDirty = false; // unless renamed again meanwhile
       if (!cur.petDirty && data.pet && typeof data.pet === "object") cur.pet = { name: String(data.pet.name || "").slice(0, 12), p: PRONOUNS.includes(data.pet.p) ? data.pet.p : "牠" };
       cur.synced = Date.now();
