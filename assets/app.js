@@ -630,8 +630,11 @@ function frontStatus() {
   }
   return `今天少了${missing.map(name).join("、")}，其餘 ${got} 篇照讀。`;
 }
-// Everything the latest-issue front page shows that can change while it stays open: [issue, status line].
-const frontState = () => [JSON.stringify(publishedIssues()[0] || null), frontStatus()];
+// Everything the latest-issue front page shows that can change while it stays open: [issue, status line]. The day and
+// whether the issue is open go with the issue: past midnight (todays) or once a Sunday's late issue opens (issueOpen),
+// the weather, the parcel, the feast card and the seal change while the issue and a non-empty status line may not (audit c11).
+const frontKey = (issue) => JSON.stringify([twNow().date, Boolean(issue) && issueOpen(issue.date), issue || null]);
+const frontState = () => [frontKey(publishedIssues()[0]), frontStatus()];
 let shownFront = [];
 
 // 印刷故障: the one card for anything that fails to load — the paper's data at boot, an article that is not there or not
@@ -661,11 +664,14 @@ async function keptCards(date, column) {
 
 // ——— Views ———
 function viewFront(dateParam) {
+  // A redraw in place (refreshFront, 下拉更新) does not pass through route(): take down the last draw's scroll flyer,
+  // seal watcher and ring first, or each redraw leaves one more bird listening on every page (audit c1).
+  cleanup(); cleanup = () => {};
   const pubs = publishedIssues();
   const issue = dateParam ? issueBy(dateParam) : pubs[0];
   if (dateParam && (!issue || !isPublished(issue.date))) { main.innerHTML = `${masthead(null)}<div class="wrap"><p class="empty">這期還沒出爐，別急。</p></div>`; return; }
   const status = dateParam ? "" : frontStatus();
-  if (!dateParam) shownFront = [JSON.stringify(issue || null), status];
+  if (!dateParam) shownFront = [frontKey(issue), status];
   if (!issue) {
     main.innerHTML = `${masthead(null)}<div class="wrap">${status ? `<div class="status">${status}</div>` : ""}<p class="empty">創刊號即將出刊。</p></div>`;
     return;
@@ -1611,7 +1617,7 @@ function viewArchive() {
   const input = main.querySelector(".search"), hits = main.querySelector(".hits");
   let seq = 0, timer = 0;
   // 欄位篩選 (the owner, 2026-11-06): the full-text hits wear a row of chips, one per column found, to narrow them.
-  let lastHits = [], hitCol = "";
+  let lastHits = [], hitCol = "", lastPartial = false;
   const drawHits = (q) => {
     if (!lastHits.length) { hits.innerHTML = `<p class="hint">全文沒有找到「${esc(q)}」。</p>`; return; }
     const counts = new Map();
@@ -1620,6 +1626,7 @@ function viewArchive() {
     const list = hitCol ? lastHits.filter((r) => r.c === hitCol) : lastHits;
     const nameOf = (c) => col(c, lastHits.find((r) => r.c === c).d).name;
     hits.innerHTML = `<div class="sec-head"><h2>全文</h2><span class="note">${list.length}${hitCol ? `／${lastHits.length}` : ""} 篇</span></div>
+      ${lastPartial ? `<p class="hint">部分月份暫時讀不到（可能是離線），結果可能不完整。</p>` : ""}
       ${counts.size > 1 ? `<nav class="chips hit-cols" aria-label="只看哪一欄"><button type="button" class="chip" data-hc="" aria-pressed="${!hitCol}">全部<small>${lastHits.length}</small></button>${[...counts].map(([c, n]) => `<button type="button" class="chip" data-hc="${esc(c)}" aria-pressed="${c === hitCol}">${esc(nameOf(c))}<small>${n}</small></button>`).join("")}</nav>` : ""}
       ${list.map((r) => `<a class="hit" href="#/a/${r.d}/${r.c}"><span class="meta-s">${esc(fmtDate(r.d, "short"))}・${esc(col(r.c, r.d).name)}</span><b>${esc(r.t)}</b><span class="snip">${snippet(r.x, q)}</span></a>`).join("")}`;
   };
@@ -1629,6 +1636,7 @@ function viewArchive() {
     if (q.length < 2) { hits.innerHTML = ""; return; }
     hits.innerHTML = `<p class="hint">搜尋全文中……</p>`;
     const found = [];
+    let partial = false;
     try {
       for (const m of await searchMonths()) {
         for (const r of await searchMonth(m)) {
@@ -1638,11 +1646,11 @@ function viewArchive() {
         if (found.length >= 40) break;
       }
     } catch {
-      if (my === seq) hits.innerHTML = `<p class="hint">${found.length ? "部分月份暫時讀不到，" : ""}目前無法搜尋全文（可能是離線），請稍後再試。</p>`;
-      if (!found.length) return;
+      if (!found.length) { if (my === seq) hits.innerHTML = `<p class="hint">目前無法搜尋全文（可能是離線），請稍後再試。</p>`; return; }
+      partial = true; // the hits so far are drawn, and drawHits says they are not all (audit c16: the note was overwritten at once)
     }
     if (my !== seq) return;
-    lastHits = found;
+    lastHits = found; lastPartial = partial;
     drawHits(q);
   };
   input.addEventListener("input", () => {
@@ -1847,15 +1855,19 @@ function viewNest(settings = false) {
 }
 // ——— 印務室 (Druckerei, assets/press.js): the owner's press room — this morning's five shifts, the reserve stock and a
 // fortnight's roster, all out of the index the app holds (its press, late and stock), so it reads the same offline.
-function viewPress() {
+let shownPress = ""; // the press room as last drawn, so a tick that changes nothing leaves the page alone
+function viewPress(tick = false) {
   // The press room turns over at midnight (the owner, 2026-11-06: 印務室每天凌晨 12 點重置): 今晨 is the issue of today's
   // date — in the index once the first shift has pushed (unpublished until 07:30, so not in publishedIssues), before that
-  // an empty record with every shift still to report — never yesterday's paper.
-  const today = twNow().date, pubs = publishedIssues();
+  // an empty record with every shift still to report — never yesterday's paper. A Sunday held for the afternoon with not
+  // one article yet has no issue in the index: its late note comes from late.json, so the 補 row shows (audit c22).
+  const today = twNow().date, pubs = publishedIssues(), late = lateOf(today);
   const mine = (S.index.issues || []).find((i) => i.date === today)
-    || { date: today, no: (Number(pubs[0]?.no) || 0) + 1, weekday: "日一二三四五六"[new Date(`${today}T00:00:00Z`).getUTCDay()], articles: [], press: null };
+    || { date: today, no: (Number(pubs[0]?.no) || 0) + 1, weekday: "日一二三四五六"[new Date(`${today}T00:00:00Z`).getUTCDay()], articles: [], press: late ? { missing: late.missing } : null, late: late || undefined };
   const issues = [mine, ...pubs.filter((i) => i.date !== today)];
-  main.innerHTML = `<div class="wrap press">${pressHtml(S.cfg, { ...S.index, issues }, col)}</div>`;
+  const html = `<div class="wrap press">${pressHtml(S.cfg, { ...S.index, issues }, col)}</div>`;
+  if (tick && html === shownPress) return;
+  main.innerHTML = shownPress = html;
   document.title = `印務室｜${S.cfg.title}`;
 }
 
@@ -2142,10 +2154,10 @@ function viewSettings() {
     catch (e) { toast(e.message || "無法複製，請再試一次"); }
   });
   main.querySelector("[data-sp-paste]")?.addEventListener("click", async (e) => {
-    const input = e.currentTarget.parentElement.querySelector("input");
-    e.currentTarget.disabled = true;
+    const btn = e.currentTarget, input = btn.parentElement.querySelector("input"); // currentTarget is gone after the await (audit c17)
+    btn.disabled = true;
     try { await importLinkCode(input.value); toast("已連結 Spotify"); viewSettings(); }
-    catch (err) { toast(err.message); e.currentTarget.disabled = false; }
+    catch (err) { toast(err.message); btn.disabled = false; }
   });
 }
 
@@ -2159,7 +2171,7 @@ let routeSeq = 0; // bumped on every route; an older route still loading must no
 // Coming back out of an article lands where the reader was on the page they tapped it from; a tap on the bottom bar
 // starts that page from the top. `places` holds the scroll position of each list page last left.
 const places = new Map();
-let shownHash = null, navTap = false, fromList = null;
+let shownHash = null, navTap = false, fromList = null, fromHops = 0; // fromHops: how many history entries past fromList the page on screen is
 let landKey = null, landTop = null; // 接著上次: the article tapped on the front page, and where in it to land
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
@@ -2198,7 +2210,8 @@ async function route(ev) {
   // issue. (From one article on to another it keeps pointing the same way: back then steps through them like a browser.)
   if (!ev && shownHash === h) { /* a redraw of the page on screen (下拉更新): keep where it was opened from */ }
   else if (!detail || !ev || tapped) fromList = null;
-  else if (!leaving) fromList = shownHash;
+  else if (!leaving) { fromList = shownHash; fromHops = 1; }
+  else fromHops = Math.max(1, fromHops + (back ? -1 : 1)); // on to the next article, or a step back among them
   shownHash = h;
   if (tapped) places.delete(h);
   const place = !detail && !tapped && (back || backTo === h) ? places.get(h) : undefined;
@@ -2247,7 +2260,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/stamp/")) viewStamp(h.slice(8).split("?")[0]);
   else if (h.startsWith("#/world")) viewWorld();
   else if (h.startsWith("#/press")) viewPress();
-  else if (h.startsWith("#/chronik")) viewChronik();
+  else if (h.startsWith("#/chronik")) await viewChronik(); // awaited, so a step back lands where 刊史館 was left, not on its loading line (audit c15)
   else if (h.startsWith("#/nest")) viewNest(h.startsWith("#/nest/settings"));
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
@@ -2313,7 +2326,7 @@ async function boot() {
       window.scrollTo({ top: 0, behavior: calm() ? "auto" : "smooth" });
     } else if (here.startsWith("#/a/") && fromList && tabOf(fromList) === href) {
       e.preventDefault();
-      history.back();
+      history.go(-fromHops); // past every article read on from there, not one article back (audit c7)
     } else navTap = true;
   });
   main.addEventListener("click", (e) => { lastTapped = e.target.closest("a.lead, a.item, a.tile")?.querySelector("img") || null; }, true);
@@ -2324,6 +2337,8 @@ async function boot() {
   // and pick up late articles. Nothing changed: leave the page alone. Only the countdown moved: rewrite that line
   // in place, so focus and the reader's position survive the minute-by-minute tick. Anything else redraws.
   const refreshFront = () => {
+    // 印務室 is drawn as of one moment too (今晨's date, 此刻, which shift is overdue): kept current on the same ticks (audit c19)
+    if ((location.hash || "#/").startsWith("#/press")) { viewPress(true); return; }
     if ((location.hash || "#/") !== "#/") return;
     const [issue, status] = frontState();
     if (issue === shownFront[0] && status === shownFront[1]) return;
@@ -2369,6 +2384,9 @@ async function boot() {
     clearNotices();
     const replay = hiddenAt && Date.now() - hiddenAt > 30 * 1000 && (location.hash || "#/") === "#/" && scrollY < 400;
     const stale = Date.now() - fetchedAt > 60 * 1000;
+    // Coming back to a page kept alive is not a navigation, so the browser does not look for a newer shell by itself:
+    // ask, as 下拉更新 does; one found reloads the page once installed (watchUpdates) (audit c8).
+    if (stale) navigator.serviceWorker?.getRegistration().then((r) => r?.update()).catch(() => {});
     if (stale) await loadIndex();
     if (replay) route(); else refreshFront();
     if (stale) runAutoAdd();
