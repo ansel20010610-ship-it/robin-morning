@@ -375,6 +375,71 @@ export function scrollFlyer() {
   };
 }
 
+// ——— The feed notice ———
+// What the reader sees when a piece they finished fed the bird (app.js markRead; the owner, 2026-11-09: 讀完文章為了鳥的
+// 通知有美感一點): not the plain toast but a small card above the nav — the robin itself, hopping in, the bird's name,
+// one line in the paper's voice (different each time; the stage or the thing this very bite brought, when it did),
+// and what the next bite is for. A tap opens the yard; it leaves on its own after a few seconds.
+const FEED_LINES = [
+  (n, p) => `${n}吃了一口，歪著頭看你。`, (n) => `一口下肚，${n}抖了抖羽毛。`, (n) => `${n}接住了這一口，跳到枝頭另一邊。`,
+  (n, p) => `${n}吃了一口，${p}把嘴在枝上擦了擦。`, (n) => `${n}一口吞下，又張開嘴等下一口。`, (n, p) => `這一口${p}吃得很慢，像在想什麼。`,
+];
+export function feedNotice(before, after) {
+  if (!after) return;
+  document.querySelector(".feed-note")?.remove();
+  const n = after.pet.name, p = after.pet.p;
+  let line;
+  if (before && after.si > before.si) line = `這一口，${n}${after.si === 1 ? "破殼了" : after.si === 2 ? "長出絨毛了" : after.si === 3 ? "開始學飛了" : after.si === 4 ? "長成成鳥了" : "成了歌者"}。`;
+  else if (before && after.songs > before.songs) line = `這一口，${n}學會了第${cn(after.songs)}首歌。`;
+  else if (before && Object.values(after.items).reduce((a, b) => a + b, 0) > Object.values(before.items).reduce((a, b) => a + b, 0)) line = `這一口，${WORDS[Object.keys(after.items).find((k) => (after.items[k] || 0) > (before.items[k] || 0))] || "院子裡多了一樣東西"}。`;
+  else line = FEED_LINES[Math.floor(Math.random() * FEED_LINES.length)](n, p);
+  const el = document.createElement("a");
+  el.href = "#/nest"; el.className = "feed-note"; el.setAttribute("role", "status");
+  el.innerHTML = `${birdSvg(after)}<span class="t"><b>${esc(n)}</b><span class="l">${esc(line)}</span><span class="n">再 ${after.toNext} 口就${esc(after.next.zh)}</span></span>`;
+  document.body.append(el);
+  requestAnimationFrame(() => el.classList.add("on"));
+  const away = () => { el.classList.remove("on"); setTimeout(() => el.remove(), 500); };
+  const t = setTimeout(away, 4200);
+  el.addEventListener("click", () => { clearTimeout(t); el.remove(); });
+}
+
+// ——— A tap on the bird ———
+// In the yard the bird answers a tap (the owner, 2026-11-09: 在後院點一下鳥可以有互動): it tilts its head, calls, hops a
+// little nearer, shakes its feathers, or — a singer — sings one of its songs, notes rising; an egg only rocks, a
+// nestling gapes for food. One line under it says what it did. The reaction rides on top of whatever liveBird is
+// doing (composite add), and taps while one plays are let go.
+let poking = false;
+export function pokeBird(root, st) {
+  const bird = root?.querySelector(".bird"), robin = bird?.querySelector(".robin");
+  if (!bird || !robin || poking) return;
+  poking = true;
+  const n = st.pet.name, p = st.pet.p;
+  const say = (text) => { const l = root.querySelector(".poke-line"); if (!l) return; l.textContent = text; l.classList.add("on"); clearTimeout(l._t); l._t = setTimeout(() => l.classList.remove("on"), 2400); };
+  const still = calm();
+  const run = (frames, ms, easing = "ease-in-out") => still ? Promise.resolve() : robin.animate(frames, { duration: ms, easing, fill: "none", composite: "add" }).finished.catch(() => {});
+  const T = (x, y, rot = 0, sx = 1) => ({ transform: `translate(${x}px, ${y}px) rotate(${rot}deg) scaleX(${sx})` });
+  const notes = (k) => { for (let i = 0; i < k; i++) setTimeout(() => { const e = document.createElement("i"); e.className = "poke-note"; e.textContent = ["♪", "♫", "♬"][i % 3]; e.style.left = `${52 + Math.random() * 18}%`; bird.append(e); setTimeout(() => e.remove(), 1500); }, i * 260); };
+  let act;
+  if (st.si === 0) act = async () => { say("蛋晃了一下。"); await run([T(0, 0), T(0, 0, -8), T(0, 0, 7), T(0, 0, -4), T(0, 0)], 700); };
+  else if (st.si < 3) act = [
+    async () => { say(`${n}張大了嘴，以為有東西吃。`); await run([T(0, 0), T(0, -3, -6), T(0, -3, -6), T(0, 0)], 900); },
+    async () => { say(`${n}縮成一團，又慢慢探出頭。`); await run([T(0, 2, 0, .9), T(0, 2, 0, .9), T(0, 0, 0, 1)], 1300); },
+    async () => { say(`${n}細細地叫了一聲。`); notes(1); await run([T(0, 0), T(0, -2, -4), T(0, 0)], 500); },
+    async () => { say(`${n}往你這邊挪了挪。`); await run([T(0, 0), T(-5, -3), T(-8, 0), T(-8, 0), T(0, 0)], 1200, "ease-out"); },
+  ][Math.floor(Math.random() * 4)];
+  else {
+    const picks = [
+      async () => { say(`${n}歪著頭看你。`); await run([T(0, 0), T(0, 0, -13), T(0, 0, -13), T(0, 0)], 1300); },
+      async () => { say(`${n}叫了一聲。`); notes(1); await run([T(0, 0), T(0, -2, -5), T(0, 0)], 500); },
+      async () => { say(`${n}跳近了一點。`); await run([T(0, 0), T(-9, -8), T(-16, 0), T(-16, 0), T(-8, -6), T(0, 0)], 1400, "ease-out"); },
+      async () => { say(`${n}抖了抖羽毛。`); await run([T(0, 0), T(0, 0, 0, 1.07), T(0, 0, 0, .94), T(0, 0, 0, 1.06), T(0, 0, 0, .96), T(0, 0)], 700, "linear"); },
+    ];
+    if (st.songs) { const named = st.songNames.filter(Boolean); picks.push(async () => { say(`${n}唱起${named.length ? named[Math.floor(Math.random() * named.length)] : `第${cn(1 + Math.floor(Math.random() * st.songs))}首歌`}。`); notes(3); await run([T(0, 0), T(0, -2, -4), T(0, 0), T(0, -2, -4), T(0, 0)], 1400); }); }
+    act = picks[Math.floor(Math.random() * picks.length)];
+  }
+  act().finally(() => { poking = false; });
+}
+
 // ——— The pages (#/nest, #/nest/settings) ———
 // The yard's page is the bird: its name, stage, today, the week, the people, and one row to its settings. Everything
 // that is set rather than watched — opening or joining a yard, the bird's name, the invite code, leaving — lives on
@@ -392,7 +457,7 @@ export function renderNest(el, api, afterSync = false) {
   const synced = n.synced ? `上次同步 ${new Date(n.synced).toLocaleTimeString("zh-TW", { hour: "2-digit", minute: "2-digit", hour12: false })}` : "";
   const got = Object.entries(st.items).map(([k, c]) => `${cn(c)}${THINGS[k]}`);
   el.innerHTML = `${head}
-    <div class="nest-stage">${birdSvg(st)}
+    <div class="nest-stage">${birdSvg(st)}<p class="poke-line" aria-live="polite"></p>
       <b>${esc(pet.name)}</b>${stageLine(st)}
       <p class="say">${st.songs > 1 ? `又學會了一首，現在會唱${cn(st.songs)}首歌；每首都比上一首長一點。` : esc(st.stage.say(pet.p))}</p>
       <p class="today">${st.fed ? `今天吃了 ${st.fed} 口：${st.who.join("、")}。${st.everyone > 1 ? "大家都餵過了。" : ""}` : st.hunger}</p>
@@ -406,6 +471,10 @@ export function renderNest(el, api, afterSync = false) {
       ${api ? `<p class="small">${synced || "還沒同步過"}。</p>` : `<p class="small nest-note">共用儲存還沒接上：現在只有這支手機的紀錄，接上以後會把大家的餵食和名字同步過來。</p>`}</section>
     <a class="sec-head link nest-to-set" href="#/nest/settings"><h2>後院設定</h2><span class="de">Einstellungen</span><span class="note">取名、邀請碼、離開 →</span></a>`;
   liveBird(el.querySelector(".nest-stage"));
+  const stageEl = el.querySelector(".nest-stage"), birdEl = stageEl.querySelector(".bird");
+  birdEl.setAttribute("role", "button"); birdEl.setAttribute("aria-label", `摸摸${pet.name}`); birdEl.removeAttribute("aria-hidden"); birdEl.tabIndex = 0;
+  birdEl.addEventListener("click", () => pokeBird(stageEl, nestState()));
+  birdEl.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pokeBird(stageEl, nestState()); } });
   if (!afterSync) syncNest(api).then((ok) => { if (ok && el.isConnected && location.hash === "#/nest") renderNest(el, api, true); });
 }
 // 後院設定: open a yard or join one; with a yard, the bird's name and how it is called, the invite code to pass on,

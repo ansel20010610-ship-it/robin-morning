@@ -1944,62 +1944,62 @@ details.band .svl { margin: 0 0 10px; }
 .nest .bar i, .nest-stage .bar i { position: absolute; left: 0; top: -1px; height: 3px; background: var(--gold); transition: width .6s ease; }
 .nest .next, .nest-stage .next { font-size: 11.5px; letter-spacing: .06em; color: var(--muted); }
 .nest .bird { position: relative; flex: none; width: 72px; height: 72px; }
-:is(.nest, .nest-stage, .flyby) .bird { z-index: 2; will-change: transform; }
-:is(.nest, .nest-stage, .flyby) .bird svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .bird { z-index: 2; will-change: transform; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .bird svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 /* the size by --g sits on the inner group, so the hops and flights (animations of .robin's own transform) never
    replace it — a nestling that grew to full size at every hop and shrank back after (the owner, 2026-11-09: 為啥剛破殼
    他會變大變小) */
-:is(.nest, .nest-stage, .flyby) .bird svg.robin { will-change: transform; }
-:is(.nest, .nest-stage, .flyby) .bird svg.robin .body { transform-box: view-box; transform-origin: 32px 53px; transform: scale(calc(.5 + .5 * var(--g, 1))) scaleX(var(--full, 1)); transition: transform .6s ease; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .bird svg.robin { will-change: transform; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .bird svg.robin .body { transform-box: view-box; transform-origin: 32px 53px; transform: scale(calc(.5 + .5 * var(--g, 1))) scaleX(var(--full, 1)); transition: transform .6s ease; }
 .nest-stage .bird { position: relative; width: 150px; height: 150px; margin: 4px auto 0; }
 /* the egg */
-:is(.nest, .nest-stage, .flyby) .shell { fill: var(--nest-cream); stroke: var(--gold); stroke-width: .9; }
-:is(.nest, .nest-stage, .flyby) .spk { fill: var(--gold-soft); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .shell { fill: var(--nest-cream); stroke: var(--gold); stroke-width: .9; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .spk { fill: var(--gold-soft); }
 /* the robin: grey as a nestling, its colours coming up with --g; the red deepening and the brown warming with --m */
-:is(.nest, .nest-stage, .flyby) .r-back { fill: color-mix(in srgb, var(--nest-brown) calc(var(--g, 1) * 100%), var(--muted)); }
-:is(.nest, .nest-stage, .flyby) .r-wing { fill: color-mix(in srgb, var(--nest-dark) calc(var(--g, 1) * 100%), var(--muted)); }
-:is(.nest, .nest-stage, .flyby) .r-tail { fill: var(--nest-dark); }
-:is(.nest, .nest-stage, .flyby) .r-breast { fill: color-mix(in srgb, color-mix(in srgb, var(--robin), #8E2A2A calc(var(--m, 0) * 45%)) calc(var(--g, 1) * 100%), var(--muted)); transition: fill .6s ease; }
-:is(.nest, .nest-stage, .flyby) .r-belly { fill: var(--nest-cream); }
-:is(.nest, .nest-stage, .flyby) .r-line { fill: none; stroke: var(--nest-cream); stroke-width: .55; stroke-linecap: round; opacity: .75; }
-:is(.nest, .nest-stage, .flyby) .r-speck { fill: var(--nest-cream); opacity: .9; }
-:is(.nest, .nest-stage, .flyby) .r-eye { fill: var(--ink); }
-:is(.nest, .nest-stage, .flyby) .r-eyehi { fill: var(--paper); }
-:is(.nest, .nest-stage, .flyby) .r-beak { fill: var(--ink); }
-:is(.nest, .nest-stage, .flyby) .r-leg { fill: none; stroke: var(--nest-dark); stroke-width: 1.05; stroke-linecap: round; }
-:is(.nest, .nest-stage, .flyby) .r-perch { fill: none; stroke: var(--nest-brown); stroke-width: 1.7; stroke-linecap: round; }
-:is(.nest, .nest-stage, .flyby) .bird.s1 .r-wingg { display: none; }
-:is(.nest, .nest-stage, .flyby) .bird.s2 .r-back { stroke: var(--muted); stroke-width: 1.1; stroke-dasharray: .5 1.3; stroke-linecap: round; opacity: .96; } /* the nestling's fluff: a soft dotted edge */
-:is(.nest, .nest-stage, .flyby) .bird.full { --full: 1.07; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .r-back { fill: color-mix(in srgb, var(--nest-brown) calc(var(--g, 1) * 100%), var(--muted)); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .r-wing { fill: color-mix(in srgb, var(--nest-dark) calc(var(--g, 1) * 100%), var(--muted)); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .r-tail { fill: var(--nest-dark); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .r-breast { fill: color-mix(in srgb, color-mix(in srgb, var(--robin), #8E2A2A calc(var(--m, 0) * 45%)) calc(var(--g, 1) * 100%), var(--muted)); transition: fill .6s ease; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .r-belly { fill: var(--nest-cream); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .r-line { fill: none; stroke: var(--nest-cream); stroke-width: .55; stroke-linecap: round; opacity: .75; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .r-speck { fill: var(--nest-cream); opacity: .9; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .r-eye { fill: var(--ink); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .r-eyehi { fill: var(--paper); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .r-beak { fill: var(--ink); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .r-leg { fill: none; stroke: var(--nest-dark); stroke-width: 1.05; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .r-perch { fill: none; stroke: var(--nest-brown); stroke-width: 1.7; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .bird.s1 .r-wingg { display: none; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .bird.s2 .r-back { stroke: var(--muted); stroke-width: 1.1; stroke-dasharray: .5 1.3; stroke-linecap: round; opacity: .96; } /* the nestling's fluff: a soft dotted edge */
+:is(.nest, .nest-stage, .flyby, .feed-note) .bird.full { --full: 1.07; }
 /* what the yard has gathered */
-:is(.nest, .nest-stage, .flyby) .sc-twig { fill: none; stroke: var(--nest-brown); stroke-width: .9; stroke-linecap: round; }
-:is(.nest, .nest-stage, .flyby) .sc-branch { fill: none; stroke: var(--nest-brown); stroke-width: 1.3; stroke-linecap: round; }
-:is(.nest, .nest-stage, .flyby) .sc-leaf { fill: color-mix(in srgb, var(--gold) 45%, var(--paper)); stroke: var(--gold); stroke-width: .5; }
-:is(.nest, .nest-stage, .flyby) .sc-moss { fill: none; stroke: var(--gold-soft); stroke-width: 1.3; stroke-linecap: round; }
-:is(.nest, .nest-stage, .flyby) .sc-bloom { fill: var(--nest-cream); stroke: var(--gold); stroke-width: .45; }
-:is(.nest, .nest-stage, .flyby) .sc-bloomc { fill: var(--gold); }
-:is(.nest, .nest-stage, .flyby) .sc-berry { fill: var(--robin); }
-:is(.nest, .nest-stage, .flyby) .sc-egg { fill: var(--nest-cream); stroke: var(--gold-soft); stroke-width: .4; }
-:is(.nest, .nest-stage, .flyby) .sc-chick { fill: var(--muted); }
-:is(.nest, .nest-stage, .flyby) .sc-lady { fill: var(--red); }
-:is(.nest, .nest-stage, .flyby) .sc-dot { fill: var(--ink); }
-:is(.nest, .nest-stage, .flyby) .sc-bfly { fill: var(--gold); transform-box: fill-box; transform-origin: center; }
-:is(.nest, .nest-stage, .flyby) .sc-bath { fill: var(--nest-dark); }
-:is(.nest, .nest-stage, .flyby) .sc-water { fill: var(--blue, #8FB0E0); opacity: .7; }
-:is(.nest, .nest-stage, .flyby) .sc-snail { fill: var(--nest-brown); stroke: var(--nest-dark); stroke-width: .4; }
-:is(.nest, .nest-stage, .flyby) .sc-snailf { fill: none; stroke: var(--nest-dark); stroke-width: .7; stroke-linecap: round; }
-:is(.nest, .nest-stage, .flyby) .sc-beeb { fill: var(--gold); }
-:is(.nest, .nest-stage, .flyby) .sc-beew { fill: none; stroke: var(--muted); stroke-width: .5; stroke-linecap: round; }
-:is(.nest, .nest-stage, .flyby) .sc-bee .sc-dot { fill: none; stroke: var(--ink); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-twig { fill: none; stroke: var(--nest-brown); stroke-width: .9; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-branch { fill: none; stroke: var(--nest-brown); stroke-width: 1.3; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-leaf { fill: color-mix(in srgb, var(--gold) 45%, var(--paper)); stroke: var(--gold); stroke-width: .5; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-moss { fill: none; stroke: var(--gold-soft); stroke-width: 1.3; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-bloom { fill: var(--nest-cream); stroke: var(--gold); stroke-width: .45; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-bloomc { fill: var(--gold); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-berry { fill: var(--robin); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-egg { fill: var(--nest-cream); stroke: var(--gold-soft); stroke-width: .4; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-chick { fill: var(--muted); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-lady { fill: var(--red); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-dot { fill: var(--ink); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-bfly { fill: var(--gold); transform-box: fill-box; transform-origin: center; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-bath { fill: var(--nest-dark); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-water { fill: var(--blue, #8FB0E0); opacity: .7; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-snail { fill: var(--nest-brown); stroke: var(--nest-dark); stroke-width: .4; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-snailf { fill: none; stroke: var(--nest-dark); stroke-width: .7; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-beeb { fill: var(--gold); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-beew { fill: none; stroke: var(--muted); stroke-width: .5; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sc-bee .sc-dot { fill: none; stroke: var(--ink); }
 /* the year: blossom, full leaf, turning leaves, snow; a star at Christmas; the mate a shade behind */
-:is(.nest, .nest-stage, .flyby) .sea-blossom { fill: color-mix(in srgb, var(--robin) 22%, var(--nest-cream)); stroke: var(--gold); stroke-width: .4; }
-:is(.nest, .nest-stage, .flyby) .sea-leaf { fill: color-mix(in srgb, var(--gold) 55%, var(--paper)); stroke: var(--gold); stroke-width: .5; }
-:is(.nest, .nest-stage, .flyby) .season-autumn :is(.sc-leaf, .sea-fallen) { fill: color-mix(in srgb, var(--robin) 55%, var(--gold)); stroke: var(--robin); }
-:is(.nest, .nest-stage, .flyby) .season-winter .sc-leaf { opacity: .3; }
-:is(.nest, .nest-stage, .flyby) .sea-snow { fill: none; stroke: var(--nest-cream); stroke-width: 1.7; stroke-linecap: round; }
-:is(.nest, .nest-stage, .flyby) .sea-flake { fill: var(--nest-cream); stroke: var(--rule); stroke-width: .25; }
-:is(.nest, .nest-stage, .flyby) .sea-star { fill: var(--foil, var(--gold)); }
-:is(.nest, .nest-stage, .flyby) .mate { opacity: .82; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sea-blossom { fill: color-mix(in srgb, var(--robin) 22%, var(--nest-cream)); stroke: var(--gold); stroke-width: .4; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sea-leaf { fill: color-mix(in srgb, var(--gold) 55%, var(--paper)); stroke: var(--gold); stroke-width: .5; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .season-autumn :is(.sc-leaf, .sea-fallen) { fill: color-mix(in srgb, var(--robin) 55%, var(--gold)); stroke: var(--robin); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .season-winter .sc-leaf { opacity: .3; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sea-snow { fill: none; stroke: var(--nest-cream); stroke-width: 1.7; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sea-flake { fill: var(--nest-cream); stroke: var(--rule); stroke-width: .25; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .sea-star { fill: var(--foil, var(--gold)); }
+:is(.nest, .nest-stage, .flyby, .feed-note) .mate { opacity: .82; }
 .nest-stage .season { font-family: var(--serif); font-size: 14px; line-height: 1.7; color: var(--muted); margin: 2px auto 4px; max-width: 30em; }
 .nest-stage .songs { color: var(--gold-ink); }
 /* 院子裡有什麼: the inventory and the songs, folded (the owner, 2026-11-09: 可以收合) */
@@ -2011,25 +2011,25 @@ details.band .svl { margin: 0 0 10px; }
 .nest-more[open] summary::after { content: "▴"; }
 .nest-more .small { margin: 4px 0 0; }
 /* in the air (nest.js liveBird, flyBy): the wing beats */
-:is(.nest, .nest-stage, .flyby) .bird.flying .r-wingg { transform-box: view-box; transform-origin: 31px 32px; animation: nest-flap .16s ease-in-out infinite alternate; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .bird.flying .r-wingg { transform-box: view-box; transform-origin: 31px 32px; animation: nest-flap .16s ease-in-out infinite alternate; }
 @keyframes nest-flap { from { transform: rotate(-24deg) scaleY(.72); } to { transform: rotate(12deg) scaleY(1.12); } }
 /* the singer's notes */
-:is(.nest, .nest-stage, .flyby) .bird .note { position: absolute; right: 6%; top: 18%; font-family: var(--latin); font-size: 15px; color: var(--gold); opacity: 0; }
-:is(.nest, .nest-stage, .flyby) .bird .note.two { right: -4%; top: 4%; font-size: 12px; }
-:is(.nest, .nest-stage, .flyby) .bird .note.three { right: 18%; top: 0; font-size: 11px; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .bird .note { position: absolute; right: 6%; top: 18%; font-family: var(--latin); font-size: 15px; color: var(--gold); opacity: 0; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .bird .note.two { right: -4%; top: 4%; font-size: 12px; }
+:is(.nest, .nest-stage, .flyby, .feed-note) .bird .note.three { right: 18%; top: 0; font-size: 11px; }
 .nest-stage .bird .note { font-size: 24px; } .nest-stage .bird .note.two { font-size: 18px; } .nest-stage .bird .note.three { font-size: 16px; }
 @media (prefers-reduced-motion: no-preference) {
-  :is(.nest, .nest-stage, .flyby) .bird .note { animation: nest-note 3.2s ease-in-out infinite; }
-  :is(.nest, .nest-stage, .flyby) .bird .note.two { animation-delay: 1.4s; }
-  :is(.nest, .nest-stage, .flyby) .bird .note.three { animation-delay: 2.3s; }
+  :is(.nest, .nest-stage, .flyby, .feed-note) .bird .note { animation: nest-note 3.2s ease-in-out infinite; }
+  :is(.nest, .nest-stage, .flyby, .feed-note) .bird .note.two { animation-delay: 1.4s; }
+  :is(.nest, .nest-stage, .flyby, .feed-note) .bird .note.three { animation-delay: 2.3s; }
   @keyframes nest-note { 0%, 100% { opacity: 0; transform: translateY(4px); } 20%, 60% { opacity: 1; } 80% { opacity: 0; transform: translateY(-10px); } }
-  :is(.nest, .nest-stage, .flyby) .sc-bfly { animation: nest-bfly 4.5s ease-in-out infinite; }
-  :is(.nest, .nest-stage, .flyby) .sc-bfly path { transform-box: fill-box; transform-origin: 100% 50%; animation: nest-wing .35s ease-in-out infinite alternate; }
-  :is(.nest, .nest-stage, .flyby) .sc-bfly path + path { transform-origin: 0 50%; animation-direction: alternate-reverse; }
+  :is(.nest, .nest-stage, .flyby, .feed-note) .sc-bfly { animation: nest-bfly 4.5s ease-in-out infinite; }
+  :is(.nest, .nest-stage, .flyby, .feed-note) .sc-bfly path { transform-box: fill-box; transform-origin: 100% 50%; animation: nest-wing .35s ease-in-out infinite alternate; }
+  :is(.nest, .nest-stage, .flyby, .feed-note) .sc-bfly path + path { transform-origin: 0 50%; animation-direction: alternate-reverse; }
   @keyframes nest-bfly { 0%, 100% { transform: translate(0, 0); } 30% { transform: translate(-6px, -5px); } 60% { transform: translate(3px, -9px); } 80% { transform: translate(-2px, -3px); } }
   @keyframes nest-wing { from { transform: scaleX(1); } to { transform: scaleX(.35); } }
 }
-@media (prefers-reduced-motion: reduce) { :is(.nest, .nest-stage, .flyby) .bird .note { opacity: .8; } }
+@media (prefers-reduced-motion: reduce) { :is(.nest, .nest-stage, .flyby, .feed-note) .bird .note { opacity: .8; } }
 /* across the paper (nest.js flyBy): a fixed box the bird flies in, over everything but the nav; a tap opens the yard */
 .flyby { position: fixed; left: 0; top: 0; z-index: 35; width: 64px; height: 64px; pointer-events: auto; }
 .flyby .bird { width: 100%; height: 100%; }
@@ -2056,3 +2056,27 @@ details.band .svl { margin: 0 0 10px; }
 .nest-page .nest-note { border-left: 2px solid var(--gold); padding-left: 10px; }
 .nest-page .chips { margin: 2px 0 10px; }
 .nest-page .nest-to-set { margin-top: 26px; }
+
+/* 餵食通知 (nest.js feedNotice): a card above the nav when a piece just read fed the bird — the robin hopping in at the
+   left, the name, one line, what the next bite is for. Paper-2 on a hairline, a gold rule on top like the shelf cards;
+   it rises in and sinks away. */
+.feed-note { position: fixed; left: 50%; bottom: calc(var(--nav-h) + var(--dock-h, 0px) + env(safe-area-inset-bottom) + 14px); transform: translate(-50%, 14px); z-index: 45; display: flex; align-items: center; gap: 12px; width: min(92vw, 26rem); padding: 10px 14px 10px 10px; background: var(--paper-2); border: 1px solid var(--rule); border-top: 1px solid var(--gold); box-shadow: 0 8px 24px color-mix(in srgb, var(--ink) 12%, transparent); text-decoration: none; color: inherit; opacity: 0; transition: opacity .35s ease, transform .45s cubic-bezier(.2, .8, .2, 1); pointer-events: auto; }
+.feed-note.on { opacity: 1; transform: translate(-50%, 0); }
+.feed-note .bird { flex: none; width: 54px; height: 54px; position: relative; }
+.feed-note .scene { opacity: .55; }
+.feed-note .robin .body { transform: scale(.92) !important; } /* on the card the bird is an icon: readable whatever its age */
+.feed-note .note { display: none; }
+.feed-note .t { display: grid; gap: 2px; min-width: 0; font-family: var(--sans); }
+.feed-note .t b { font-family: var(--serif); font-size: 15px; letter-spacing: .08em; color: var(--ink); }
+.feed-note .t .l { font-family: var(--serif); font-size: 14px; line-height: 1.6; color: var(--ink-2); }
+.feed-note .t .n { font-size: 11px; letter-spacing: .06em; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) {
+  .feed-note.on .robin { animation: feed-hop .9s ease-out .15s 1; }
+  @keyframes feed-hop { 0% { transform: translateY(0); } 25% { transform: translateY(-9px); } 50% { transform: translateY(0); } 70% { transform: translateY(-4px); } 100% { transform: translateY(0); } }
+}
+/* a tap on the bird (nest.js pokeBird): the line it answers with, and the notes it lets out */
+.nest-stage .bird[role="button"] { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.nest-stage .poke-line { min-height: 1.4em; margin: -2px 0 2px; font-family: var(--serif); font-style: italic; font-size: 13.5px; color: var(--gold-ink); letter-spacing: .04em; opacity: 0; transition: opacity .3s ease; }
+.nest-stage .poke-line.on { opacity: 1; }
+.nest-stage .bird .poke-note { position: absolute; top: 30%; font-family: var(--latin); font-size: 20px; color: var(--gold); pointer-events: none; animation: poke-note 1.4s ease-out forwards; }
+@keyframes poke-note { 0% { opacity: 0; transform: translateY(6px) scale(.8); } 20% { opacity: 1; } 100% { opacity: 0; transform: translateY(-34px) scale(1.1); } }

@@ -14,7 +14,7 @@ import { fetchWeather, weatherHtml } from "./wetter.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { worldState, drawMap } from "./world.js";
-import { nestBox, renderNest, renderNestSettings, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup } from "./nest.js";
+import { nestBox, renderNest, renderNestSettings, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -134,7 +134,14 @@ async function sonderHash(code) {
   return [...new Uint8Array(h)].map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 // Reading a piece also feeds the yard's robin one bite (nest.js), on a 特供版 phone that has a 後院.
-function markRead(k) { const r = store.get("read", []); if (!r.includes(k)) { r.push(k); store.set("read", r.slice(-2000)); syncDone(); if (sonder() && feedNest(k)) { toast("餵了知更鳥一口"); syncNest(S.cfg.nest?.api); } } }
+function markRead(k) {
+  const r = store.get("read", []);
+  if (r.includes(k)) return;
+  r.push(k); store.set("read", r.slice(-2000)); syncDone();
+  if (!sonder()) return;
+  const before = nestState();
+  if (feedNest(k)) { feedNotice(before, nestState()); syncNest(S.cfg.nest?.api); } // the bird's own notice, not a toast
+}
 
 // ——— Shared pieces ———
 const CONTAIN = new Set(["artwork", "document", "portrait", "illustration"]);
