@@ -1922,11 +1922,11 @@ details.band .svl { margin: 0 0 10px; }
 .fest-note.fest-beethoven { border-left-color: #2C2C34; } .fest-note.fest-bookday { border-left-color: #5A3A22; } .fest-note.fest-klimt { border-left-color: #C9A043; } .fest-note.fest-dostoevsky { border-left-color: #3A3F2E; }
 
 /* 巢 (nest.js nestBox, renderNest): the robin a nest of readers raises. On the front page a boxed section like the
-   weather's: the bird on its perch at the left, its stage and today's bites at the right, a hairline bar to the next
+   weather's, right under the wire and above the parcel (the owner, 2026-11-09: 我不想要巢藏在首頁最下面): the bird on its perch at the left, its stage and today's bites at the right, a hairline bar to the next
    stage. The bird is the crest's robin grown by stage: an egg (s0), a grey nestling (s1), fluff (s2), a half-red
    fledgling (s3), the full robin (s4), and the singer with its notes (s5); fed three times today it sits a little
    rounder (.full). Colours follow the emblem's; nothing here is a game's green bar. */
-.nest { margin: 18px 0 -8px; }
+.nest { margin: 22px 0 -8px; }
 .nest .body { display: flex; align-items: center; gap: 14px; padding: 12px 0 12px; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; }
 .nest .txt { display: grid; gap: 3px; min-width: 0; flex: 1; font-family: var(--sans); }
 .nest .txt b { font-family: var(--serif); font-size: 17px; letter-spacing: .08em; color: var(--ink); }
