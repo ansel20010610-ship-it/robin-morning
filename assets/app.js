@@ -14,7 +14,7 @@ import { fetchWeather, weatherHtml } from "./wetter.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { worldState, drawMap } from "./world.js";
-import { nestBox, renderNest, feedNest, syncNest } from "./nest.js";
+import { nestBox, renderNest, feedNest, syncNest, nestUnseen, nestSeen, liveBird } from "./nest.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -673,7 +673,6 @@ function viewFront(dateParam) {
     ${erst ? inhaltBox(issue, arts) : ""}
     ${weatherBox(issue)}
     ${dateParam ? "" : wireBox()}
-    ${dateParam || !sonder() ? "" : nestBox()}
     ${revealBox(issue, arts, read)}
     ${mains.length ? `<div class="sec-head"><h2>攤開第一頁</h2><span class="de">Erste Seite</span><span class="note">${mains.length} 篇</span></div>` : ""}
     ${lead ? `<a class="lead${posMark(issue.date, lead, read).cls}"${posMark(issue.date, lead, read).st} href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column, false, issue.date)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
@@ -701,8 +700,6 @@ function viewFront(dateParam) {
   fillReveal();
   fillWire();
   fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
-  // The nest: what the others fed since last time arrives with a sync, and the box is drawn again with it.
-  if (!dateParam && sonder()) syncNest(S.cfg.nest?.api).then((ok) => { const box = main.querySelector(".nest"); if (ok && box?.isConnected) box.outerHTML = nestBox(); });
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
   if (erst) setTimeout(() => goldRain(main.querySelector(".masthead.erst .crest")), fresh ? 2200 : 700);
 }
@@ -1639,10 +1636,18 @@ function viewSaved() {
     ["#/stamps", "郵票冊", "Briefmarken", st, st ? "張" : "還沒有郵票", `<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z" stroke-dasharray="2 1.6"/><rect x="7.5" y="8.5" width="9" height="7"/></svg>`],
     ["#/world", "你讀過的世界", "Gelesene Welt", w, w ? "國" : "還沒出發", `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>`],
   ];
+  // 巢 (nest.js nestBox): on a 特供版 phone the robin's plate heads the page; what the others fed since last time
+  // arrives with a sync and the plate is drawn again, and looking here is what takes the mark off the tab (nestSeen).
   main.innerHTML = `<div class="wrap sammlung"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
+    ${sonder() ? nestBox() : ""}
     <nav class="shelf" aria-label="收藏的角落">${DRAWERS.map(([href, name, de, count, unit, icon], i) => `<a class="sh" href="${href}" style="--i:${i}" aria-label="${name}：${count} ${unit}"><i class="ic" aria-hidden="true">${icon}</i><span class="k">${name}<i>${de}</i></span><b>${count}</b><span class="u">${unit}</span></a>`).join("")}</nav>
     ${rows.length ? `<div class="sec-head"><h2>收進來的</h2><span class="de">Gesammelt</span><span class="note">${rows.length} 篇</span></div><ol class="svl">${rows.map(row).join("")}</ol>`
       : `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。<br><a href="#/random">或者先隨手翻一篇 →</a></p>`}</div>`;
+  if (sonder()) {
+    nestSeen();
+    liveBird(main.querySelector(".nest.plate"), { fly: false });
+    syncNest(S.cfg.nest?.api).then((ok) => { const plate = main.querySelector(".nest.plate"); if (ok && plate?.isConnected) { plate.outerHTML = nestBox(); nestSeen(); liveBird(main.querySelector(".nest.plate"), { fly: false }); } });
+  }
 }
 
 // ——— 劃線本 (Anstreichungen): every pencil line this phone holds, by article, the one marked most recently first ———
@@ -1823,7 +1828,8 @@ async function viewChronik() {
   let data = null;
   try { data = await getJSON("content/chronik.json", { fresh: true }); } catch { /* offline, or not written yet */ }
   if (!(location.hash || "#/").startsWith("#/chronik")) return;
-  const entries = (Array.isArray(data?.entries) ? data.entries : []).filter((e) => /^\d{4}-\d{2}-\d{2}$/.test(e.date || "") && e.title).sort((a, b) => a.date.localeCompare(b.date));
+  // An entry marked `sonder` is about a 特供版 feature: only a 特供版 phone reads it (the owner, 2026-11-09: 刊史館裡的巢只有特供版看得到).
+  const entries = (Array.isArray(data?.entries) ? data.entries : []).filter((e) => /^\d{4}-\d{2}-\d{2}$/.test(e.date || "") && e.title && (!e.sonder || sonder())).sort((a, b) => a.date.localeCompare(b.date));
   if (!entries.length) { main.innerHTML = `<div class="wrap chronik">${head}<p class="empty">${data ? "刊史還沒有寫。" : "目前讀不到刊史（可能是離線），請稍後再試。"}</p></div>`; return; }
   const pubs = publishedIssues(), first = pubs[pubs.length - 1], byDate = new Map(pubs.map((i) => [i.date, i]));
   const arts = pubs.reduce((n, i) => n + (i.articles || []).length, 0);
@@ -2115,7 +2121,7 @@ let landKey = null, landTop = null; // 接著上次: the article tapped on the f
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/serial") || h.startsWith("#/column/serial") ? "#/serial" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/chronik") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/archive" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/serial") || h.startsWith("#/column/serial") ? "#/serial" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/chronik") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/nest") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/archive" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let enteredFront = false; // this draw of the front page came from another page (route), not from a redraw in place
 let cameFrom = ""; // the hash the reader left for this one
@@ -2154,7 +2160,7 @@ async function route(ev) {
   if (tapped) places.delete(h);
   const place = !detail && !tapped && (back || backTo === h) ? places.get(h) : undefined;
   const active = tabOf(detail && fromList ? fromList : h);
-  $("#nav").innerHTML = NAV.map(([href, label, icon]) => `<a href="${href}" ${href === active ? 'aria-current="page"' : ""}${href === "#/serial" && serialUnread() ? ' class="ear"' : ""}>${ICON[icon]}<span>${label}</span></a>`).join("");
+  $("#nav").innerHTML = NAV.map(([href, label, icon]) => `<a href="${href}" ${href === active ? 'aria-current="page"' : ""}${(href === "#/serial" && serialUnread()) || (href === "#/saved" && sonder() && nestUnseen()) ? ' class="ear"' : ""}>${ICON[icon]}<span>${label}</span></a>`).join("");
   $(".nav .in")?.style.setProperty("--i", NAV.findIndex(([href]) => href === active));
   stopReveal();
   const prev = shownArticle;
