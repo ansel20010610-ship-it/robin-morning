@@ -222,8 +222,8 @@ function robinSvg(st, { perch = true } = {}) {
     <circle class="r-eye" cx="21.6" cy="29.2" r="1.45"/><circle class="r-eyehi" cx="22.1" cy="28.7" r=".45"/>`;
 }
 // The egg, before the first bite: on two twigs, on the perch.
-const EGG = `<path class="r-perch" d="M13 53 L51 53"/><path class="sc-twig" d="M24 54.2 Q32 61 40 54.2 M26.5 54.2 Q32 58.6 37.5 54.2"/>
-  <ellipse class="shell" cx="32" cy="42" rx="8.6" ry="11"/><circle class="spk" cx="29" cy="38" r=".9"/><circle class="spk" cx="35" cy="35.5" r=".7"/><circle class="spk" cx="35.5" cy="44.5" r="1"/><circle class="spk" cx="28.5" cy="46.5" r=".7"/>`;
+const EGG_SCENE = `<path class="r-perch" d="M13 53 L51 53"/><path class="sc-twig" d="M24 54.2 Q32 61 40 54.2 M26.5 54.2 Q32 58.6 37.5 54.2"/>`;
+const EGG = `<ellipse class="shell" cx="32" cy="42" rx="8.6" ry="11"/><circle class="spk" cx="29" cy="38" r=".9"/><circle class="spk" cx="35" cy="35.5" r=".7"/><circle class="spk" cx="35.5" cy="44.5" r="1"/><circle class="spk" cx="28.5" cy="46.5" r=".7"/>`;
 // What the yard has gathered (nestState items), drawn around the perch: twigs under it make a nest, leaves, blossoms
 // and berries along the branch and the fork, moss and eggs and the chick in the nest, the butterfly in the air, the
 // ladybird on the branch.
@@ -262,7 +262,10 @@ function sceneSvg(it, story) {
 }
 // The mate (storyOf): a second, slightly smaller robin at the right end of the branch, facing the same way.
 const mateSvg = (st) => `<g class="mate" transform="translate(37 23.85) scale(.55)">${robinSvg({ ...st, mature: Math.min(st.mature, .5) }, { perch: false })}</g>`;
-export const birdSvg = (st) => `<div class="bird s${st.si}${st.full ? " full" : ""} season-${st.story?.season || "none"}" style="--g:${st.grow.toFixed(3)};--m:${st.mature.toFixed(3)}" aria-hidden="true"><svg viewBox="0 0 64 64">${st.si ? (st.story?.mate ? mateSvg(st) : "") + robinSvg(st) + sceneSvg(st.items, st.story) : EGG}</svg>${st.si >= 5 ? `<i class="note">♪</i><i class="note two">♫</i>${st.songs >= 3 ? '<i class="note three">♬</i>' : ""}` : ""}</div>`;
+// Two layers (the owner, 2026-11-09: 樹葉枝枒不應該跟著鳥飛): the scene — perch, nest, leaves, the mate, the year — stands
+// still in its own svg, and only the robin's svg hops, looks round and flies (liveBird animates .robin).
+const PERCH = (long) => `<path class="r-perch" d="M13 53 L${long ? 61 : 51} 53"/>`;
+export const birdSvg = (st) => `<div class="bird s${st.si}${st.full ? " full" : ""} season-${st.story?.season || "none"}" style="--g:${st.grow.toFixed(3)};--m:${st.mature.toFixed(3)}" aria-hidden="true"><svg class="scene" viewBox="0 0 64 64">${st.si ? PERCH(st.story?.mate) + (st.story?.mate ? mateSvg(st) : "") + sceneSvg(st.items, st.story) : EGG_SCENE}</svg><svg class="robin" viewBox="0 0 64 64">${st.si ? robinSvg(st, { perch: false }) : EGG}</svg>${st.si >= 5 ? `<i class="note">♪</i><i class="note two">♫</i>${st.songs >= 3 ? '<i class="note three">♬</i>' : ""}` : ""}</div>`;
 const bar = (st) => `<span class="bar"><i style="width:${Math.round(((st.total - st.from) / Math.max(1, st.next.at - st.from)) * 100)}%"></i></span><span class="next">再 ${st.toNext} 口就${st.next.zh}</span>`;
 // Under the name: the stage, and for the singer how many songs it knows.
 const stageLine = (st) => `<span class="stage">${esc(st.stage.zh)}<i>${esc(st.stage.de)}</i>${st.songs ? `<em>會唱${st.songs === 1 ? "一首歌" : `${cn(st.songs)}首歌`}</em>` : ""}</span>`;
@@ -273,7 +276,7 @@ const stageLine = (st) => `<span class="stage">${esc(st.stage.zh)}<i>${esc(st.st
 // that opens the page where a yard is opened.
 export function nestBox() {
   const n = nest();
-  if (!n) return `<a class="nest plate hint" href="#/nest" aria-label="後院：還沒有後院"><div class="bird s0" aria-hidden="true"><svg viewBox="0 0 64 64">${EGG}</svg></div><div class="txt"><span class="k">後院<i>Hinterhof</i></span><b>還沒有後院</b><span class="say">和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口。</span><span class="next">開一個後院 →</span></div></a>`;
+  if (!n) return `<a class="nest plate hint" href="#/nest" aria-label="後院：還沒有後院"><div class="bird s0" aria-hidden="true"><svg class="scene" viewBox="0 0 64 64">${EGG_SCENE}</svg><svg class="robin" viewBox="0 0 64 64">${EGG}</svg></div><div class="txt"><span class="k">後院<i>Hinterhof</i></span><b>還沒有後院</b><span class="say">和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口。</span><span class="next">開一個後院 →</span></div></a>`;
   const st = nestState(n);
   return `<a class="nest plate" href="#/nest" aria-label="後院：${esc(st.pet.name)}，${esc(st.stage.zh)}，今天吃了 ${st.fed} 口">${birdSvg(st)}<div class="txt">
       <span class="k">後院<i>Hinterhof</i></span>
@@ -295,12 +298,12 @@ export function nestSeen() { const n = nest(); if (n) { n.seen = n.feeds.filter(
 const between = (a, b) => a + Math.random() * (b - a);
 const calm = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 export function liveBird(root, { fly = true } = {}) {
-  const bird = root?.querySelector(".bird");
-  if (!bird || calm()) return;
+  const bird = root?.querySelector(".bird"), robin = bird?.querySelector(".robin");
+  if (!bird || !robin || calm()) return;
   const si = Number((bird.className.match(/\bs(\d)\b/) || [])[1] || 0);
   const timers = [];
   const wait = (ms) => new Promise((r) => timers.push(setTimeout(r, ms)));
-  const run = (frames, ms, easing = "ease-in-out") => bird.animate(frames, { duration: ms, easing, fill: "none" }).finished.catch(() => {});
+  const run = (frames, ms, easing = "ease-in-out") => robin.animate(frames, { duration: ms, easing, fill: "none" }).finished.catch(() => {});
   const T = (x, y, flip = false, rot = 0) => ({ transform: `translate(${x}px, ${y}px) scaleX(${flip ? -1 : 1}) rotate(${rot}deg)` });
   const amp = () => Math.max(60, Math.min(230, (root.clientWidth || 320) / 2 - 60));
   const rock = () => run([T(0, 0), T(0, 0, false, -6), T(0, 0, false, 5), T(0, 0, false, -3), T(0, 0)], 900);
@@ -395,8 +398,9 @@ export function renderNest(el, api, afterSync = false) {
       <p class="today">${st.fed ? `今天吃了 ${st.fed} 口：${st.who.join("、")}。${st.everyone > 1 ? "大家都餵過了。" : ""}` : st.hunger}</p>
       ${st.si ? `<p class="season">${esc(st.story.line)}</p>` : ""}
       ${bar(st)}
-      <p class="small">全院一共讀了 ${st.total} 篇${n.since ? `，從 ${esc(fmtDate(n.since, "short"))} 開院算起` : ""}${got.length ? `。院子裡有${got.join("、")}` : ""}${st.story.mate ? "，還有一隻伴侶" : ""}。</p>
-      ${st.songs ? `<p class="small songs">會唱的歌：${st.songNames.map((s, i) => s ? esc(s) : `第${cn(i + 1)}首`).join("、")}。</p>` : ""}</div>
+      <details class="nest-more"><summary>院子裡有什麼<span class="de">Inventar</span></summary>
+        <p class="small">全院一共讀了 ${st.total} 篇${n.since ? `，從 ${esc(fmtDate(n.since, "short"))} 開院算起` : ""}${got.length ? `。院子裡有${got.join("、")}` : ""}${st.story.mate ? "，還有一隻伴侶" : ""}。</p>
+        ${st.songs ? `<p class="small songs">會唱的歌：${st.songNames.map((s, i) => s ? esc(s) : `第${cn(i + 1)}首`).join("、")}。</p>` : ""}</details></div>
     <section class="set"><h2>這七天</h2><ol class="nest-week" aria-label="這七天每天餵了幾口">${wk}</ol></section>
     <section class="set"><h2>院子裡的人</h2><ul class="nest-members">${names}</ul>
       ${api ? `<p class="small">${synced || "還沒同步過"}。</p>` : `<p class="small nest-note">共用儲存還沒接上：現在只有這支手機的紀錄，接上以後會把大家的餵食和名字同步過來。</p>`}</section>

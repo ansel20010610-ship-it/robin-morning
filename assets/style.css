@@ -1945,7 +1945,8 @@ details.band .svl { margin: 0 0 10px; }
 .nest .next, .nest-stage .next { font-size: 11.5px; letter-spacing: .06em; color: var(--muted); }
 .nest .bird { position: relative; flex: none; width: 72px; height: 72px; }
 :is(.nest, .nest-stage, .flyby) .bird { z-index: 2; will-change: transform; }
-:is(.nest, .nest-stage, .flyby) .bird svg { width: 100%; height: 100%; overflow: visible; transform-origin: 50% 83%; transform: scale(calc(.5 + .5 * var(--g, 1))) scaleX(var(--full, 1)); transition: transform .6s ease; }
+:is(.nest, .nest-stage, .flyby) .bird svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+:is(.nest, .nest-stage, .flyby) .bird svg.robin { transform-origin: 50% 83%; transform: scale(calc(.5 + .5 * var(--g, 1))) scaleX(var(--full, 1)); transition: transform .6s ease; will-change: transform; }
 .nest-stage .bird { position: relative; width: 150px; height: 150px; margin: 4px auto 0; }
 /* the egg */
 :is(.nest, .nest-stage, .flyby) .shell { fill: var(--nest-cream); stroke: var(--gold); stroke-width: .9; }
@@ -1997,6 +1998,14 @@ details.band .svl { margin: 0 0 10px; }
 :is(.nest, .nest-stage, .flyby) .mate { opacity: .82; }
 .nest-stage .season { font-family: var(--serif); font-size: 14px; line-height: 1.7; color: var(--muted); margin: 2px auto 4px; max-width: 30em; }
 .nest-stage .songs { color: var(--gold-ink); }
+/* 院子裡有什麼: the inventory and the songs, folded (the owner, 2026-11-09: 可以收合) */
+.nest-more { margin: 12px auto 0; max-width: 34em; text-align: left; }
+.nest-more summary { list-style: none; cursor: pointer; text-align: center; font-family: var(--sans); font-size: 12px; letter-spacing: .14em; color: var(--gold-ink); font-weight: 600; padding: 6px 0; }
+.nest-more summary::-webkit-details-marker { display: none; }
+.nest-more summary .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 13px; color: var(--gold); margin-left: 8px; }
+.nest-more summary::after { content: "▾"; margin-left: 6px; color: var(--muted); font-size: 11px; }
+.nest-more[open] summary::after { content: "▴"; }
+.nest-more .small { margin: 4px 0 0; }
 /* in the air (nest.js liveBird, flyBy): the wing beats */
 :is(.nest, .nest-stage, .flyby) .bird.flying .r-wingg { transform-box: view-box; transform-origin: 31px 32px; animation: nest-flap .16s ease-in-out infinite alternate; }
 @keyframes nest-flap { from { transform: rotate(-24deg) scaleY(.72); } to { transform: rotate(12deg) scaleY(1.12); } }
@@ -2020,7 +2029,7 @@ details.band .svl { margin: 0 0 10px; }
 /* across the paper (nest.js flyBy): a fixed box the bird flies in, over everything but the nav; a tap opens the yard */
 .flyby { position: fixed; left: 0; top: 0; z-index: 35; width: 64px; height: 64px; pointer-events: auto; }
 .flyby .bird { width: 100%; height: 100%; }
-.flyby .r-perch, .flyby .r-leg, .flyby .sc-twig, .flyby .sc-branch, .flyby .sc-leaf, .flyby .sc-moss, .flyby .sc-bloom, .flyby .sc-bloomc, .flyby .sc-berry, .flyby .sc-egg, .flyby .sc-chick, .flyby .sc-lady, .flyby .sc-dot, .flyby .sc-bfly, .flyby .note { display: none; }
+.flyby .scene, .flyby .r-leg, .flyby .note { display: none; }
 /* the page */
 .nest-stage { text-align: center; padding: 6px 0 14px; border-bottom: 1px solid var(--rule); }
 .nest-stage b { display: block; font-size: 24px; letter-spacing: .14em; margin-top: 2px; }
