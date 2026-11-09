@@ -14,6 +14,7 @@ import { fetchWeather, weatherHtml } from "./wetter.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { worldState, drawMap } from "./world.js";
+import { nestBox, renderNest, feedNest, syncNest } from "./nest.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -122,7 +123,8 @@ function toggleSaved(k) {
   return i < 0;
 }
 const readSet = () => new Set(store.get("read", []));
-function markRead(k) { const r = store.get("read", []); if (!r.includes(k)) { r.push(k); store.set("read", r.slice(-2000)); syncDone(); } }
+// Reading a piece also feeds the nest's robin one bite (nest.js), when this phone is in a nest.
+function markRead(k) { const r = store.get("read", []); if (!r.includes(k)) { r.push(k); store.set("read", r.slice(-2000)); syncDone(); if (feedNest(k)) { toast("餵了知更鳥一口"); syncNest(S.cfg.nest?.api); } } }
 
 // ——— Shared pieces ———
 const CONTAIN = new Set(["artwork", "document", "portrait", "illustration"]);
@@ -675,6 +677,7 @@ function viewFront(dateParam) {
       : unreadIn(issue.date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${digestDone().has(issue.date) ? "早上的郵票已經蓋好了；後來補上的這幾篇也讀完，今天這一份才算讀到最後一行。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的${feastOf(issue.date) ? `${esc(feastOf(issue.date).zh)}紀念郵票` : "郵票"}才蓋得下去。`}</span></div>`
       : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
       : `<div class="finish">${finishInner(issue.date)}</div>`}
+    ${dateParam ? "" : nestBox()}
     ${dateParam ? "" : wocheBox()}
     ${dayBox(issue.date)}
     ${dateParam ? "" : `<section class="gigs" id="gigs" aria-label="近期演出">${gigsSection()}</section>`}
@@ -1776,6 +1779,12 @@ function calendarHtml(ym, pubs, done) {
     <div class="grid">${cells.join("")}</div>
     <div class="cap"><span>${got.length ? `本月 ${got.length} 期，讀完 ${fin} 期` : "本月還沒出刊"}</span><a href="#/chronik" aria-label="刊史館：從創刊號到今天的沿革">刊史館<i>Chronik</i>→</a></div></section>`;
 }
+// ——— 巢 (Nest, assets/nest.js): the robin raised together; the page builds, joins, shows and leaves a nest ———
+function viewNest() {
+  main.innerHTML = `<div class="wrap nest-page"></div>`;
+  renderNest(main.querySelector(".nest-page"), S.cfg.nest?.api);
+  document.title = `巢｜${S.cfg.title}`;
+}
 // ——— 印務室 (Druckerei, assets/press.js): the owner's press room — this morning's five shifts, the reserve stock and a
 // fortnight's roster, all out of the index the app holds (its press, late and stock), so it reads the same offline.
 function viewPress() {
@@ -2019,6 +2028,8 @@ function viewSettings() {
       <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>橫線之下</th></tr></thead><tbody>
       ${wd.map(([k, l]) => `<tr><td>${l}</td><td>${rot[k].map((c) => esc(col(c).name)).join("、")}</td></tr>`).join("")}</tbody></table></div></div>
     </section>
+    <section class="set"><h2>巢</h2><p>和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口，大家讀的加在一起，牠從蛋長成會唱歌的鳥。邀請碼在巢裡。</p>
+      <div class="btns"><a class="btn ghost" href="#/nest">打開巢</a></div></section>
     <section class="set"><h2>印務室</h2><p>給社長看的：今晨五班的報到、補位與缺稿、備稿庫存、最近兩週的出勤。</p>
       <div class="btns"><a class="btn ghost" href="#/press">打開印務室</a></div></section>
     ${isWebKitITP() && !isStandaloneIOS() ? `<section class="set"><h2>放到主畫面</h2><p>在 Safari 按下方的「分享」按鈕，選「加入主畫面」，知更鳥晨間記事就會像 App 一樣全螢幕開啟，也能離線讀已下載的文章。</p></section>` : ""}
@@ -2162,6 +2173,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/world")) viewWorld();
   else if (h.startsWith("#/press")) viewPress();
   else if (h.startsWith("#/chronik")) viewChronik();
+  else if (h.startsWith("#/nest")) viewNest();
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/marks")) viewMarks();

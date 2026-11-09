@@ -148,8 +148,8 @@ button { font: inherit; color: inherit; }
 .wire li .ld { font-size: 12.5px; line-height: 1.6; color: var(--muted); }
 .wire li a:active b { color: var(--gold-ink); }
 .wire .at { margin: 0; padding: 0 12px 8px; font-family: var(--sans); font-size: 11px; letter-spacing: .04em; color: var(--muted); font-variant-numeric: tabular-nums; } /* under the strip's name when open: when the wires were last read, and whose they are */
-:is(.wetter, .reveal) .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; padding-bottom: 5px; border-bottom: 1px solid var(--ink); }
-:is(.wetter, .reveal) .lbl .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 14px; margin-left: 8px; color: var(--gold); }
+:is(.wetter, .reveal, .nest) .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; padding-bottom: 5px; border-bottom: 1px solid var(--ink); }
+:is(.wetter, .reveal, .nest) .lbl .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 14px; margin-left: 8px; color: var(--gold); }
 .wetter .fc { font-family: var(--sans); font-size: 15px; line-height: 1.7; color: var(--ink); letter-spacing: .03em; padding: 10px 0 11px; border-bottom: 1px solid var(--rule); }
 /* 刮開頭圖 (app.js revealBox/fillReveal): the day's picture under paper-2 cut into one tile per article, each with its
    numeral, on a 12-unit grid so a short last row still covers the width (the tiles overlap a pixel to hide the seams).
@@ -1919,3 +1919,66 @@ details.band .svl { margin: 0 0 10px; }
 .fest-note.fest-lantern { border-left-color: #B8321F; } .fest-note.fest-dragonboat { border-left-color: #2F5E4E; } .fest-note.fest-advent { border-left-color: #4B2E63; }
 .fest-note.fest-pentecost { border-left-color: #B0291F; } .fest-note.fest-oralhealth { border-left-color: #3E6C77; } .fest-note.fest-mozart { border-left-color: #7A2C46; }
 .fest-note.fest-beethoven { border-left-color: #2C2C34; } .fest-note.fest-bookday { border-left-color: #5A3A22; } .fest-note.fest-klimt { border-left-color: #C9A043; } .fest-note.fest-dostoevsky { border-left-color: #3A3F2E; }
+
+/* 巢 (nest.js nestBox, renderNest): the robin a nest of readers raises. On the front page a boxed section like the
+   weather's: the bird on its perch at the left, its stage and today's bites at the right, a hairline bar to the next
+   stage. The bird is the crest's robin grown by stage: an egg (s0), a grey nestling (s1), fluff (s2), a half-red
+   fledgling (s3), the full robin (s4), and the singer with its notes (s5); fed three times today it sits a little
+   rounder (.full). Colours follow the emblem's; nothing here is a game's green bar. */
+.nest { margin: 18px 0 -8px; }
+.nest .body { display: flex; align-items: center; gap: 14px; padding: 12px 0 12px; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; }
+.nest .txt { display: grid; gap: 3px; min-width: 0; flex: 1; font-family: var(--sans); }
+.nest .txt b { font-family: var(--serif); font-size: 17px; letter-spacing: .08em; color: var(--ink); }
+.nest .txt b i, .nest-stage b i { font-family: var(--latin); font-style: italic; font-weight: 500; font-size: 14px; letter-spacing: .02em; color: var(--gold); margin-left: 8px; }
+.nest .say, .nest-stage .today { font-size: 13.5px; line-height: 1.6; color: var(--ink-2); margin: 0; }
+.nest .bar, .nest-stage .bar { display: block; height: 1px; background: var(--rule); margin-top: 4px; position: relative; }
+.nest .bar i, .nest-stage .bar i { position: absolute; left: 0; top: -1px; height: 3px; background: var(--gold); transition: width .6s ease; }
+.nest .next, .nest-stage .next { font-size: 11.5px; letter-spacing: .06em; color: var(--muted); }
+.nest.hint a { display: flex; align-items: center; gap: 12px; padding: 10px 0 11px; border-bottom: 1px solid var(--rule); text-decoration: none; font-family: var(--sans); font-size: 12.5px; line-height: 1.6; letter-spacing: .04em; color: var(--muted); }
+.nest.hint svg { width: 26px; height: 26px; flex: none; }
+.nest.hint b { color: var(--gold-ink); font-weight: 600; margin-left: 4px; white-space: nowrap; }
+.nest .bird { position: relative; flex: none; width: 64px; height: 64px; }
+.nest .bird svg, .nest-stage .bird svg { width: 100%; height: 100%; overflow: visible; transform-origin: 50% 83%; transition: transform .6s ease; }
+.nest-stage .bird { position: relative; width: 132px; height: 132px; margin: 6px auto 2px; }
+/* the egg */
+.nest .shell, .nest-stage .shell { fill: var(--paper-2); stroke: var(--gold); stroke-width: 1.2; }
+.nest .spk, .nest-stage .spk { fill: var(--gold-soft); }
+/* the robin by stage */
+:is(.nest, .nest-stage) .bird :is(.e-ink, .e-gold) { fill: var(--ink); }
+:is(.nest, .nest-stage) .bird .e-paper { fill: var(--paper); }
+:is(.nest, .nest-stage) .bird :is(.e-wing, .e-legs) { stroke: var(--ink); fill: none; }
+:is(.nest, .nest-stage) .bird .e-robin { fill: var(--robin); transition: fill .6s ease; }
+:is(.nest, .nest-stage) .bird.s1 svg { transform: scale(.58); } :is(.nest, .nest-stage) .bird.s1 .e-robin { fill: var(--muted); } :is(.nest, .nest-stage) .bird.s1 .e-wing { display: none; }
+:is(.nest, .nest-stage) .bird.s2 svg { transform: scale(.7); } :is(.nest, .nest-stage) .bird.s2 .e-robin { fill: color-mix(in srgb, var(--robin) 40%, var(--muted)); } :is(.nest, .nest-stage) .bird.s2 .e-wing { stroke-dasharray: 1 2.2; }
+:is(.nest, .nest-stage) .bird.s3 svg { transform: scale(.84); } :is(.nest, .nest-stage) .bird.s3 .e-robin { fill: color-mix(in srgb, var(--robin) 72%, var(--muted)); }
+:is(.nest, .nest-stage) .bird.s5 .e-wing { stroke: var(--gold); }
+:is(.nest, .nest-stage) .bird.full svg { transform: scaleX(1.08) scaleY(1.02); }
+:is(.nest, .nest-stage) .bird.s1.full svg { transform: scale(.58) scaleX(1.1); } :is(.nest, .nest-stage) .bird.s2.full svg { transform: scale(.7) scaleX(1.1); } :is(.nest, .nest-stage) .bird.s3.full svg { transform: scale(.84) scaleX(1.08); }
+:is(.nest, .nest-stage) .bird .note { position: absolute; right: 6%; top: 18%; font-family: var(--latin); font-size: 15px; color: var(--gold); opacity: 0; }
+:is(.nest, .nest-stage) .bird .note.two { right: -4%; top: 4%; font-size: 12px; }
+.nest-stage .bird .note { font-size: 24px; } .nest-stage .bird .note.two { font-size: 18px; }
+@media (prefers-reduced-motion: no-preference) {
+  :is(.nest, .nest-stage) .bird .note { animation: nest-note 3.2s ease-in-out infinite; }
+  :is(.nest, .nest-stage) .bird .note.two { animation-delay: 1.4s; }
+  @keyframes nest-note { 0%, 100% { opacity: 0; transform: translateY(4px); } 20%, 60% { opacity: 1; } 80% { opacity: 0; transform: translateY(-10px); } }
+}
+@media (prefers-reduced-motion: reduce) { :is(.nest, .nest-stage) .bird .note { opacity: .8; } }
+/* the page */
+.nest-stage { text-align: center; padding: 6px 0 14px; border-bottom: 1px solid var(--rule); }
+.nest-stage b { display: block; font-size: 22px; letter-spacing: .14em; margin-top: 4px; }
+.nest-stage .say { font-family: var(--serif); font-size: 15.5px; line-height: 1.8; color: var(--ink-2); margin: 6px auto 2px; max-width: 30em; }
+.nest-stage .today { font-family: var(--sans); margin: 4px 0 8px; }
+.nest-stage .bar { max-width: 260px; margin: 8px auto 0; }
+.nest-stage .next { display: block; margin-top: 6px; }
+.nest-stage .small { font-family: var(--sans); font-size: 12px; color: var(--muted); margin: 8px 0 0; }
+.nest-week { list-style: none; margin: 4px 0 0; padding: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; height: 74px; align-items: end; }
+.nest-week li { position: relative; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; }
+.nest-week li i { display: block; width: 100%; min-height: 2px; background: var(--gold-soft); border-top: 2px solid var(--gold); }
+.nest-week li span { font-family: var(--latin); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.nest-week li.today span { color: var(--ink); font-weight: 600; }
+.nest-members { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 14px; }
+.nest-members li { display: flex; justify-content: space-between; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--rule); color: var(--ink); }
+.nest-members li b { font-family: var(--latin); font-weight: 600; color: var(--gold-ink); font-variant-numeric: tabular-nums; }
+.nest-code { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 6px; }
+.nest-code code { font-family: var(--latin); font-size: 22px; font-weight: 600; letter-spacing: .14em; color: var(--ink); padding: 8px 12px; border: 1px solid var(--rule); background: var(--paper-2); user-select: all; -webkit-user-select: all; }
+.nest-page .nest-note { border-left: 2px solid var(--gold); padding-left: 10px; }
