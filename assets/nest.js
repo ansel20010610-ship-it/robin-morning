@@ -148,11 +148,13 @@ export function renderNest(el, api) {
 // (members, every feed), which replaces the local log — the store is the one truth, the phone's pending list the only
 // thing it can add. Resolves true when the local state changed. No api, offline, or a failing store: nothing changes,
 // the pending feeds wait for next time.
-let syncing = null;
+let syncing = null, again = false;
 export function syncNest(api) {
   const n = nest();
   if (!n || !api || !/^https:\/\//.test(api)) return Promise.resolve(false);
-  if (syncing) return syncing;
+  // A feed during a sync in flight is not in that request: run once more when it is done, so nothing waits for the
+  // next page (the owner's first bite on 2026-11-09 sat pending until the nest page was opened again).
+  if (syncing) { again = true; return syncing; }
   syncing = (async () => {
     try {
       const r = await fetch(`${api.replace(/\/$/, "")}/${n.code}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: { id: n.me, name: n.name }, feeds: n.pending || [] }) });
@@ -168,7 +170,7 @@ export function syncNest(api) {
       cur.synced = Date.now();
       save(cur);
       return true;
-    } catch { return false; } finally { syncing = null; }
+    } catch { return false; } finally { syncing = null; if (again) { again = false; syncNest(api); } }
   })();
   return syncing;
 }

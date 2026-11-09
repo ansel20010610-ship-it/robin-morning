@@ -701,6 +701,8 @@ function viewFront(dateParam) {
   fillReveal();
   fillWire();
   fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
+  // The nest: what the others fed since last time arrives with a sync, and the box is drawn again with it.
+  if (!dateParam && sonder()) syncNest(S.cfg.nest?.api).then((ok) => { const box = main.querySelector(".nest"); if (ok && box?.isConnected) box.outerHTML = nestBox(); });
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
   if (erst) setTimeout(() => goldRain(main.querySelector(".masthead.erst .crest")), fresh ? 2200 : 700);
 }
