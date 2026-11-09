@@ -1351,6 +1351,11 @@ function upcomingGigs(c = "all") {
   // 新 marks what the latest update added — the day the list was last checked (`checked`), or failing that the newest
   // `added` on the list — so each day's newcomers wear it and yesterday's take it off (the owner's wish, 2026-11-02).
   const fresh = /^\d{4}-\d{2}-\d{2}$/.test(S.gigs?.checked || "") ? S.gigs.checked : events.reduce((m, e) => (typeof e?.added === "string" && e.added > m ? e.added : m), "");
+  // It also marks what this reader has not seen yet — the shows the front page's count stands for — so the count and
+  // the marks never disagree (the owner, 2026-11-09: 近期演出有跳新的，但點進去裡面的沒有標示新的). Opening the full
+  // list takes the count off but keeps those marks for the rest of the day (gigsFresh).
+  const seen = store.get("gigs.seen"), mine = gigsFresh();
+  const unseen = (e) => { const id = gigId(e); return Boolean(id) && (mine.includes(id) || (Array.isArray(seen) && !seen.includes(id))); };
   return events.flatMap((e) => {
     const shows = (Array.isArray(e?.shows) ? e.shows : []).filter((s) => typeof s?.date === "string" && s.date >= today)
       .sort((a, b) => at(a).localeCompare(at(b)));
@@ -1359,7 +1364,7 @@ function upcomingGigs(c = "all") {
     const here = c !== "all" ? shows.filter((s) => inCity(s, c)) : tc.length ? tc : shows.filter((s) => s.city === shows[0].city);
     if (!here.length) return [];
     const rating = Math.max(0, Math.min(5, Math.round(Number(e.rating) || 0)));
-    return [{ ...e, shows, here, rating, isNew: Boolean(fresh) && e.added === fresh }];
+    return [{ ...e, shows, here, rating, isNew: (Boolean(fresh) && e.added === fresh) || unseen(e) }];
   }).sort((a, b) => at(a.here[0]).localeCompare(at(b.here[0])));
 }
 const stars = (n) => `<span class="stars" role="img" aria-label="值得聽 ${n} 分，滿分 5 分">${"★".repeat(n)}<i>${"★".repeat(5 - n)}</i></span>`;
@@ -1423,6 +1428,12 @@ const wireBack = () => main.querySelector("[data-back]")?.addEventListener("clic
 // What the reader has already seen on the full list (rm.gigs.seen, the ids there when 全部檔次 was last opened).
 // Anything on the list now that is not among them is unseen; the first time, today's list counts as seen.
 const gigIds = (list) => list.map(gigId).filter(Boolean);
+// The ones that were unseen when the reader last opened the full list today (rm.gigs.fresh {date, ids}): they keep 新
+// on the list and on their own pages until the day is over, though the count has gone.
+function gigsFresh() {
+  const f = store.get("gigs.fresh");
+  return f && f.date === twNow().date && Array.isArray(f.ids) ? f.ids : [];
+}
 function gigsUnseen(all) {
   const seen = store.get("gigs.seen");
   if (!Array.isArray(seen)) { store.set("gigs.seen", gigIds(all)); return 0; }
@@ -1452,7 +1463,13 @@ async function viewConcerts(my) {
     await loadGigs();
     if (my !== undefined && my !== routeSeq) return;
   }
-  store.set("gigs.seen", gigIds(upcomingGigs())); // the full list seen: the front page's count goes
+  // The full list seen: the front page's count goes, and what it counted keeps its 新 for today (gigsFresh).
+  const before = store.get("gigs.seen"), ids = gigIds(upcomingGigs());
+  if (Array.isArray(before)) {
+    const add = ids.filter((id) => !before.includes(id));
+    if (add.length) store.set("gigs.fresh", { date: twNow().date, ids: [...new Set([...gigsFresh(), ...add])] });
+  }
+  store.set("gigs.seen", ids);
   const checked = typeof S.gigs?.checked === "string" ? fmtDate(S.gigs.checked, "short") : "";
   const pressed = (c) => GIG_CITIES.map(([k, label]) => `<button type="button" class="chip" data-c="${k}" aria-pressed="${k === c}">${label}</button>`).join("");
   // 星級 (the owner, 2026-11-04: 近期演出進去我要可以分星級篩選): a second row of chips, one per rating on the list in this

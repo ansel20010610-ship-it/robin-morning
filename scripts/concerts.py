@@ -244,6 +244,30 @@ def listed_changes(data, feed_shows, day, end):
     return out
 
 
+def committed_ids():
+    """Ids on the committed list (git HEAD), or None when there is no git or no committed file."""
+    import subprocess
+    try:
+        out = subprocess.run(["git", "-C", ROOT, "show", "HEAD:content/concerts.json"], capture_output=True, text=True, check=True).stdout
+        return {e.get("id") for e in json.loads(out).get("events", []) if isinstance(e, dict)}
+    except (OSError, subprocess.CalledProcessError, ValueError, AttributeError):
+        return None
+
+
+def stamp_added(data):
+    """Sets `added` to today (Taiwan) on every event not on the committed list. The app marks 新 on what the latest
+    update added, by `added` == `checked`; on 2026-11-09 a run at 六點十九分 wrote the UTC date (11-08) by hand and the
+    new show went out unmarked. The date is the script's to write, not the routine's. Returns the ids it changed."""
+    old, day, fixed = committed_ids(), today(), []
+    if old is None:
+        return fixed
+    for e in data.get("events", []):
+        if isinstance(e, dict) and e.get("id") not in old and e.get("added") != day:
+            e["added"] = day
+            fixed.append(e.get("id"))
+    return fixed
+
+
 def close(a):
     last = load(CANDS + ".json", None)
     if not last:
@@ -267,6 +291,8 @@ def close(a):
         n[v] += 1
     save(SEEN, dict(sorted(seen.items())))
     data["checked"] = last["date"]
+    for i in stamp_added(data):
+        print("added 改成今天：%s" % i)
     save(FILE, data)
     print("已記錄：列入 %d、不收 %d、留待下次 %d" % (n["listed"], n["rejected"], len(keep)))
     return 0
@@ -409,6 +435,11 @@ def check(a):
         print("✓ concerts.json 還沒有內容")
         return 0
     E, W = check_data(data)
+    old, day = committed_ids(), today()
+    if old is not None and isinstance(data, dict):
+        for e in data.get("events", []):
+            if isinstance(e, dict) and e.get("id") not in old and e.get("added") != day:
+                E.append("（%s）新加入的演出 added 要是今天 %s（跑 close 或 sweep-done 會自動改）" % (e.get("id"), day))
     n = len(data.get("events", [])) if isinstance(data, dict) else 0
     print("%s concerts.json（%d 筆演出）" % ("✗" if E else "✓", n))
     for x in E:
@@ -437,7 +468,13 @@ def sweep_due(a):
 
 
 def sweep_done(a):
-    """Records today as the last finished sweep (state/concerts/sweep.json)."""
+    """Records today as the last finished sweep (state/concerts/sweep.json), and stamps today on what it added."""
+    data = load(FILE, None)
+    if isinstance(data, dict):
+        fixed = stamp_added(data)
+        if fixed:
+            save(FILE, data)
+            print("added 改成今天：%s" % "、".join(fixed))
     os.makedirs(os.path.dirname(SWEEP), exist_ok=True)
     with open(SWEEP, "w", encoding="utf-8") as f:
         json.dump({"last": tw_now().date().isoformat()}, f, ensure_ascii=False)
