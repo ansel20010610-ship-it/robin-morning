@@ -10,7 +10,7 @@ name: Issue notification
 # Adding a device to state/push/devices.json sends that device a test notification. A push that finishes a 週日補刊
 # (content/late.json, scripts/late.py) sends that issue's notification; one that gives it up sends the apology.
 # Touching state/push/ping (any change) sends today's notice at once, so the owner can see the day's wording on the
-# phone without waiting for 07:30. fill.yml starts a mode=issue run after a fill between 07:30 and 11:00, so a
+# phone without waiting for 07:30. fill.yml starts a mode=filled run after a fill between 07:30 and 11:00, so a
 # reader told 「今天少一欄」 hears that the paper is whole.
 on:
   schedule:
@@ -24,9 +24,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "test = 測試通知；issue = 立刻發今天的出刊通知；remind = 立刻發提醒；morning / noon / evening = 接力（wire.yml）用：等到 07:30 / 12:30 / 21:00 再發"
+        description: "test = 測試通知；issue = 立刻發今天的出刊通知；remind = 立刻發提醒；morning / noon / evening = 接力（wire.yml）用：等到 07:30 / 12:30 / 21:00 再發；filled = 補位（fill.yml）用：等補齊的刊期上線再發"
         type: choice
-        options: [test, issue, remind, morning, noon, evening]
+        options: [test, issue, remind, morning, noon, evening, filled]
         default: test
 
 permissions:
@@ -75,15 +75,17 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          SINCE=$(date -u -d "$(TZ=Asia/Taipei date +%F) 00:00 +0800" +%FT%TZ)
           case "${{ steps.kind.outputs.kind }}" in
-            issue)   PAT='^notify (50 22 \* \* \*|12 23 \* \* \*|morning)$' ;;
-            noon)    PAT='^notify (30 4 \* \* \*|noon)$' ;;
-            evening) PAT='^notify (0 13 \* \* \*|evening)$' ;;
-            *)       PAT='^$' ;;
+            issue)   PAT='^notify (50 22 \* \* \*|12 23 \* \* \*|morning)$'; FROM=06:00 ;;
+            noon)    PAT='^notify (30 4 \* \* \*|noon)$'; FROM=11:30 ;;
+            evening) PAT='^notify (0 13 \* \* \*|evening)$'; FROM=20:00 ;;
+            *)       PAT='^$'; FROM=00:00 ;;
           esac
+          # count only runs started near this notice's own hour, not since midnight: yesterday's 21:00 cron that GitHub
+          # started after midnight ends green outside its window without sending (push.py), and it must not pass for
+          # tonight's reminder (audit c27)
+          SINCE=$(date -u -d "$(TZ=Asia/Taipei date +%F) $FROM +0800" +%FT%TZ)
           # if the queries fail, send anyway: a rare duplicate (same tag, so it replaces the first) beats silence
-          # yesterday's 21:00 reminder is before SINCE, so only today's runs count
           N=0
           for ID in $(gh run list --workflow notify.yml --status success --created ">=$SINCE" --limit 50 \
                         --json databaseId --jq '.[] | select(.databaseId != ${{ github.run_id }}) | .databaseId' 2>/dev/null); do
@@ -100,9 +102,10 @@ jobs:
           VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
         run: |
           case "${{ steps.kind.outputs.kind }}" in
-            # the morning notice waits for 07:30:20 and for the live site (push.py), unless the owner asked for it now;
-            # fill.yml's mode=issue after a fill also goes through here: --now still waits for the fill's own deploy
+            # the morning notice waits for 07:30:20 and for the live site (push.py), unless the owner asked for it now
             issue) if [ "${{ github.event_name }}" = schedule ] || [ "${{ inputs.mode }}" = morning ]; then /tmp/push/bin/python scripts/push.py issue; else /tmp/push/bin/python scripts/push.py issue --now; fi ;;
+            # fill.yml after a fill: waits for the filled paper on the site and never sends 「少一欄」 again (audit c28)
+            filled) /tmp/push/bin/python scripts/push.py issue --now --after-fill ;;
             noon) /tmp/push/bin/python scripts/push.py remind --which noon ;;
             evening) /tmp/push/bin/python scripts/push.py remind --which evening ;;
             remind) /tmp/push/bin/python scripts/push.py remind ;;

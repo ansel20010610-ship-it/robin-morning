@@ -117,16 +117,17 @@ jobs:
         run: gh workflow run publish.yml --ref main
       - name: Tell the reader the paper is whole
         # A fill that lands after the 07:30 notice went out (which then said 「今天少一欄…補上了會再叫你」) and before the
-        # morning is over: start notify.yml, whose push.py issue --now waits for this fill's deploy and sends the
-        # ordinary notice on the same tag, replacing the partial one on the phone. Nothing before 07:30 (the morning
-        # run announces the filled paper itself) and nothing after 11:00 (push.py's own cut-off for the morning).
+        # morning is over: start notify.yml mode=filled, whose push.py issue --now --after-fill waits for this fill's
+        # deploy and sends the ordinary notice on the same tag, replacing the partial one on the phone. Nothing before
+        # 07:30 (the morning run announces the filled paper itself) and nothing after 11:00 (push.py's own cut-off for
+        # the morning).
         if: steps.push.outputs.pushed == 'yes' && steps.fill.outputs.complete == 'yes'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           H=$(( 10#$(TZ=Asia/Taipei date +%H%M) ))
           if [ "${{ steps.fill.outputs.date }}" = "$(TZ=Asia/Taipei date +%F)" ] && [ "$H" -ge 730 ] && [ "$H" -lt 1100 ]; then
-            gh workflow run notify.yml --ref main -f mode=issue || echo "::warning::could not start notify.yml"
+            gh workflow run notify.yml --ref main -f mode=filled || echo "::warning::could not start notify.yml"
           else
             echo "不在 07:30–11:00 之間（或不是今天的刊期），不另發通知。"
           fi

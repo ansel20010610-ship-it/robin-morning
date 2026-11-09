@@ -227,7 +227,11 @@ def partial_notice(cfg, date, missing):
     d = dt.date.fromisoformat(date)
     names = "、".join("「%s」" % (column_meta(cfg, c, d) or {}).get("name", c) for c in missing)
     title = "早安兄弟，今天少幾欄" if len(missing) > 1 else "早安兄弟，今天少一欄"
-    return {"kind": "issue", "date": date, "title": title, "body": "%s沒趕上，其餘先讀；補上了會再叫你。" % names,
+    # The promise only when a reserve can fill every missing column: 快訊 (config.json reserve: false) is written again
+    # only by the 17:37 shift, which calls no one, and while it is short fill.yml never calls either (audit c42).
+    promise = all((cfg["columns"].get(c) or {}).get("reserve", True) for c in missing)
+    return {"kind": "issue", "date": date, "title": title,
+            "body": "%s沒趕上，其餘先讀%s" % (names, "；補上了會再叫你。" if promise else "。"),
             "url": "./#/", "tag": "issue-" + date, "badge": 1}
 
 
@@ -290,12 +294,20 @@ def cmd_issue(a):
             # shift is the quota, not a shift still pushing.
             payload = late_notice(date)
             break
-        if payload and (current or waited >= (WAIT_SITE if held else WAIT_DEPLOY)):
+        # after a fill (fill.yml → notify.yml mode=filled) this is the promised call: wait for the filled paper as long
+        # as for a morning's, and go as soon as the site carries it whole (audit c28)
+        if payload and (current or (a.after_fill and not missing)
+                        or waited >= (WAIT_SITE if held or a.after_fill else WAIT_DEPLOY)):
             break
         if waited >= WAIT_SITE:
             print("::error::網站上還沒有 %s 的刊期，沒有發通知" % date)
             return 1
         time.sleep(30)
+    if a.after_fill and missing and payload.get("kind") == "issue":
+        # The site still shows the paper short: 07:30 already said so, and saying it again with 「補上了會再叫你」
+        # would break that promise a second time (audit c28). Nothing goes out, and the run fails where it is seen.
+        print("::error::補位後網站上的 %s 仍缺 %s，沒有發通知" % (date, "、".join(missing)))
+        return 1
     if payload.get("kind") == "issue" and missing:
         payload = partial_notice(cfg, date, missing)
     print(json.dumps(payload, ensure_ascii=False, indent=1))
@@ -444,6 +456,7 @@ def main():
     s = sub.add_parser("issue")
     s.add_argument("--date")
     s.add_argument("--now", action="store_true", help="skip the 07:30 wait and the 11:00 cut-off (manual run, or fill.yml after a fill)")
+    s.add_argument("--after-fill", action="store_true", help="fill.yml after a fill: wait for the filled paper; never announce it short again")
     s = sub.add_parser("remind")
     s.add_argument("--date")
     s.add_argument("--which", choices=sorted(REMIND_WINDOW), help="noon (12:30) or evening (21:00); omitted: by the clock, at once")
