@@ -222,5 +222,6 @@
       "mystery"
     ]
   },
-  "sonder": {"hash": "f4f6fcb04337f5e923886a0bfdd48daa9873358430a5b9afe6c9d8a9ce11a783"}
+  "sonder": {"hash": "f4f6fcb04337f5e923886a0bfdd48daa9873358430a5b9afe6c9d8a9ce11a783"},
+  "nest": {"api": "https://robin-nest.ansel20010610.workers.dev"}
 }

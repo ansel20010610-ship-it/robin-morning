@@ -2051,11 +2051,11 @@ function viewSettings() {
     <footer class="colophon"><div class="latin">${esc(S.cfg.subtitle)}</div>資料更新：${esc((S.index.generated_at || "").replace("T", " ").slice(0, 16))} UTC</footer></div>`;
   renderPush($("#push-set"), S.cfg, S.index.push).catch(() => {});
   main.querySelector("[data-sonder-on]")?.addEventListener("click", async (e) => {
-    const code = main.querySelector("[data-sonder-code]").value;
+    const code = main.querySelector("[data-sonder-code]").value, btn = e.currentTarget; // currentTarget is gone after the await
     if (!normSonder(code)) { toast("請輸入代碼"); return; }
-    e.currentTarget.disabled = true;
+    btn.disabled = true;
     const ok = S.cfg.sonder?.hash && (await sonderHash(code).catch(() => "")) === S.cfg.sonder.hash;
-    if (!ok) { e.currentTarget.disabled = false; toast("代碼不對"); return; }
+    if (!ok) { btn.disabled = false; toast("代碼不對"); return; }
     store.set("sonder", true); toast("特供版開了"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" });
   });
   main.querySelector("[data-sonder-off]")?.addEventListener("click", () => { store.del("sonder"); toast("特供版關了；巢的紀錄還留著"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" }); });
