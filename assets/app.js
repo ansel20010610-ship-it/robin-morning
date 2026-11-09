@@ -43,14 +43,26 @@ const lateOf = (date) => S.late?.[date] || null;
 // A Sunday that came out in parts (the night's articles at 07:30, the rest after the 15:00 reset) is not whole until
 // late.py marks it done: until then its parcel stays sealed and its stamp is not given, whatever is read (the owner,
 // 2026-11-08: 要等全部刊完才能拆包裹和郵票). From the next day on the issue counts as it stands, finished or not.
-const issueOpen = (date) => { const l = lateOf(date); return !l || l.state === "done" || date !== twNow().date; };
+// A 補刊 given up (late.py giveup, state unfinished) opens the day at once with what came (the owner, 2026-11-09).
+// Before late.json says anything, a quota Sunday by the shift reports (quotaHeld) is shut the same way.
+const issueOpen = (date) => { const l = lateOf(date); return l ? l.state === "done" || l.state === "unfinished" || date !== twNow().date : !quotaHeld(date); };
+// 額度週日 by the index's own shift reports (scripts/late.py hold()'s rule): today, a Sunday before the 15:00 reset,
+// short of a column, with a night shift that never reported. The status line and issueOpen both go by it, so a
+// late.json that arrives hours late cannot let the parcel open and the stamp go down meanwhile (audit 2026-11-09).
+function quotaHeld(date) {
+  const now = twNow(), issue = issueBy(date), shifts = issue?.press?.shifts || {};
+  if (!issue || date !== now.date || new Date(`${date}T00:00:00Z`).getUTCDay() !== 0 || now.minutes >= 15 * 60 || ![..."12345"].some((k) => !shifts[k])) return false;
+  const on = (c) => { const k = S.cfg.columns[c] || {}; return date >= (k.since || "") && date <= (k.until || "9999"); };
+  const have = new Set(issue.articles.map((a) => a.column));
+  return [...Object.keys(S.cfg.columns).filter((c) => S.cfg.columns[c].group === "main"), ...(S.cfg.rotation_by_weekday?.[weekdayKey(date)] || [])].some((c) => on(c) && !have.has(c));
+}
 function lateText(late, got) {
   const now = twNow();
   if (late.state === "waiting" && now.minutes < publishMin())
     return `本週的 AI 額度在凌晨用完，今天這期 ${esc(S.cfg.publish_time)} 不會出齊。週日不拿備稿充數：額度<b>下午 3 點</b>重置後，整期重新寫過，大約傍晚出齊，好了會通知你。先翻上一期。`;
   if (late.state === "waiting" && now.minutes < 15 * 60)
     return `本週的 AI 額度在凌晨用完，今天這期沒能在 ${esc(S.cfg.publish_time)} 出齊。週日不拿備稿充數：額度<b>下午 3 點</b>重置後，整期重新寫過，大約傍晚出齊，好了會通知你。${got ? `已經寫好的 ${got} 篇先放上來。` : "先翻上一期。"}`;
-  if (now.minutes >= 21 * 60)
+  if (late.state === "unfinished" || now.minutes >= 21 * 60) // given up: say so at once, not 正在重新寫 until 21:00
     return `今天的補刊沒能全部完成${got ? `（到了 ${got} 篇）` : ""}，抱歉。明天 ${esc(S.cfg.publish_time)} 照常出刊。`;
   return `額度在下午 3 點重置了，今天這期正在重新寫，寫好一篇就上一篇，出齊會通知你。${got ? `目前到了 ${got} 篇。` : ""}`;
 }
@@ -137,7 +149,7 @@ async function sonderHash(code) {
 function markRead(k) {
   const r = store.get("read", []);
   if (r.includes(k)) return;
-  r.push(k); store.set("read", r.slice(-2000)); syncDone();
+  r.push(k); store.set("read", r); syncDone(); // kept whole: the serial's progress, the stamps and the yearbook read it (~20 bytes a key; audit 2026-11-09)
   if (!sonder()) return;
   const before = nestState();
   if (feedNest(k)) { feedNotice(before, nestState()); syncNest(S.cfg.nest?.api); } // the bird's own notice, not a toast
@@ -231,7 +243,7 @@ function hideBird(body, date, column) {
   // wings beating, shedding a few gold flecks on the way, and is gone past the top. It is lifted out of the text first
   // (position: fixed at its own spot) so the flight is over the page, not inside the paragraph.
   b.addEventListener("click", () => {
-    store.set("birds", [...birdsFound(), date].slice(-400));
+    store.set("birds", [...birdsFound(), date]); // kept whole, as digest.done: a cap would take the oldest stamps' robins away
     if (calm()) { b.remove(); toast("找到了，今天的知更鳥"); return; }
     const r = b.getBoundingClientRect();
     b.style.cssText = `position:fixed;left:${r.left}px;top:${r.top}px;margin:0;z-index:40`;
@@ -328,7 +340,7 @@ async function lastTime(n, slot) {
   if (!ps.length || !slot.isConnected) return;
   const lines = ps.at(-1).length < 60 && ps.length > 1 ? ps.slice(-2) : ps.slice(-1);
   let text = lines.join("\n");
-  if (text.length > 170) { const tail = text.slice(-168); const cut = tail.search(/[。！？」』]/); text = `……${cut >= 0 && cut < 80 ? tail.slice(cut + 1).replace(/^\s+/, "") : tail}`; }
+  if (text.length > 170) { const tail = text.slice(-168); const cut = tail.search(/[。！？」』]/); text = `……${cut >= 0 && cut < 80 ? tail.slice(cut + 1).replace(/^[\s，、；：。！？」』）]+/, "") : tail}`; } // no stray 「；」 or 「。」 after a closing quote
   slot.innerHTML = `<aside class="vorher"><span class="lbl">上回說到</span>${text.split("\n").map((l) => `<p>${esc(l)}</p>`).join("")}<a href="#/a/${prev.date}/${prev.column}">回到第 ${n} 回 →</a></aside>`;
 }
 async function viewSerial(my) {
@@ -362,7 +374,9 @@ async function viewSerial(my) {
   // 今天的一回 (finding 36): due (serialDueOn) and past 07:30 but not in any published issue — say so, not 都讀完了;
   // past the book's last day (serialOver) — say the book is done and the next one not yet chosen.
   const today = twNow().date, hasToday = parts.some((p) => p.date === today), dueN = isPublished(today) ? serialDueOn(today) : null;
-  const restNote = dueN && !hasToday ? `到手的回目都讀完了；今天這一回（第 ${dueN} 回）還沒送到，送到了會出現在這裡。` : serialOver(today) ? "全書完，下一本待定。" : "到今天為止的回目都讀完了，明天早上有下一回。";
+  const restNote = dueN && !hasToday ? `到手的回目都讀完了；今天這一回（第 ${dueN} 回）還沒送到，送到了會出現在這裡。` : serialOver(today) ? "全書完，下一本待定。"
+    : !isPublished(today) && serialDueOn(today) ? `到手的回目都讀完了，第 ${serialDueOn(today)} 回今天早上 ${esc(S.cfg.publish_time)} 刊出。` // after midnight, before 07:30
+    : "到今天為止的回目都讀完了，明天早上有下一回。";
   const row = ({ date, a }) => { const k = `${date}/${a.column}`, s = a.serial || {}; const inner = `<span class="no" aria-hidden="true">${esc(String(s.n ?? "").padStart(2, "0"))}</span>
       <span class="t"><span class="m"><span class="k">${esc(serialWhere(s))}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title.replace(/^第 \d+ 回・/, ""))}</b></span>`;
     return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}">${inner}</a></li>`; };
@@ -602,8 +616,7 @@ function frontStatus() {
   // night shift that never reported is the week's quota gone, not articles on their way — and content/late.json, written
   // by a GitHub cron that ran three hours late that day, may not say so yet. The same rule as late.py's, read here from
   // the index's own shift reports, so the front page says 延到下午 from 07:30 on; late.json takes over once it arrives.
-  const shifts = todays.press?.shifts || {};
-  if (new Date(`${now.date}T00:00:00Z`).getUTCDay() === 0 && now.minutes < 15 * 60 && [..."12345"].some((k) => !shifts[k])) return lateText({ state: "waiting" }, got);
+  if (quotaHeld(now.date)) return lateText({ state: "waiting" }, got); // the same rule shuts the parcel and the stamp (issueOpen)
   // Otherwise name what is missing. The reserve's last fill is 07:05 (editorial/README.md), so until 08:00 a column with
   // a reserve may still come; after that nothing more does — 「剩下的在路上」 once stood all day (audit 2026-11-08,
   // finding 10). A column without a reserve (config.json reserve: false, 快訊) is not coming at any hour.
@@ -793,6 +806,7 @@ function wireDigest(issue) {
     finished = true;
     finishSeen?.disconnect();
     markDigestDone(issue.date);
+    const fest = main.querySelector(".fest-note"); if (fest) fest.outerHTML = festBox(issue); // the feast card at the top: earned now, not still 「會收進」
     ring.complete();
     main.querySelector(".digest")?.classList.add("done", "full");
     main.querySelector(".digest .streak")?.remove();
@@ -820,7 +834,7 @@ function markDigestDone(date) {
   const done = store.get("digest.done", []);
   if (done.includes(date)) return;
   done.push(date);
-  store.set("digest.done", done.slice(-400));
+  store.set("digest.done", done); // kept whole: the album and the streaks read it, and nothing could rebuild a dropped stamp (audit 2026-11-09)
   syncDone();
   const fin = main.querySelector(".finish");
   if (fin) fin.innerHTML = finishInner(date);
@@ -1075,7 +1089,10 @@ async function viewArticle(date, column, my) {
       const at = (k) => publishedIssues().flatMap((i) => i.articles.filter((x) => x.serial && Number(x.serial.n) === k).map((x) => ({ date: i.date, a: x })))[0] || null;
       const nx = at(n + 1), pv = n > 1 ? at(n - 1) : null;
       const of = Number(a.serial.of) || Number(S.book?.of) || 0;
-      const tail = of && n >= of ? "全書完。" : serialOver(twNow().date) ? "全書完，下一本待定。" : `第 ${n + 1} 回明天早上 ${esc(S.cfg.publish_time)} 刊出。`;
+      // The next one due today comes this morning before 07:30, and is late after it — not 明天早上 (audit 2026-11-09).
+      const today = twNow().date, due = serialDueOn(today) === n + 1;
+      const tail = of && n >= of ? "全書完。" : serialOver(today) ? "全書完，下一本待定。" : due && isPublished(today) ? `第 ${n + 1} 回今天還沒送到，送到了會出現在連載。`
+        : `第 ${n + 1} 回${due ? "今天" : "明天"}早上 ${esc(S.cfg.publish_time)} 刊出。`;
       box.innerHTML = `<div class="lbl"><span>${nx ? `下一回・第 ${nx.a.serial.n} 回` : "下一回"}</span>${pv ? `<a class="prev" href="#/a/${pv.date}/${pv.a.column}">‹ 上一回</a>` : ""}</div>`
         + (nx ? serialCard(nx.date, nx.a, read, { plate: false })
           : `<p class="serial-tail">${tail}<a href="#/serial">回到連載 →</a></p>`);
@@ -1087,10 +1104,15 @@ async function viewArticle(date, column, my) {
       if (i >= 0) { nxt = artOf(list.keys[i + 1]); prv = artOf(list.keys[i - 1]); label = `接著讀・${list.name}`; }
     }
     if (!nxt && issue) {
-      const arts = sortArticles(issue.articles, date), i = arts.findIndex((x) => x.column === column);
-      const u = arts.find((x) => x.column !== column && !read.has(`${date}/${x.column}`));
+      // Today's unread parcel is never 接著讀 or 上一篇: sealed, its card would show what the front page keeps wrapped and
+      // lead to the locked page; it is unwrapped on the front page (audit 2026-11-09).
+      const arts = sortArticles(issue.articles, date), i = arts.findIndex((x) => x.column === column), pick = revealPick(issue, arts);
+      const parcel = pick && pick.column !== column && !read.has(`${date}/${pick.column}`) ? pick : null;
+      const u = arts.find((x) => x !== parcel && x.column !== column && !read.has(`${date}/${x.column}`));
+      if (!u && parcel) { box.innerHTML = `<div class="lbl"><span>接著讀</span></div><p class="serial-tail">剩下今天的包裹，在首頁拆開。<a href="#/">回首頁 →</a></p>`; return; }
       if (!u) { box.innerHTML = issueFinish(arts, read); return; }
-      nxt = { date, a: u }; prv ||= i > 0 ? { date, a: arts[i - 1] } : null; label = "接著讀";
+      const before = arts.slice(0, Math.max(0, i)).filter((x) => x !== parcel).at(-1);
+      nxt = { date, a: u }; prv ||= before ? { date, a: before } : null; label = "接著讀";
     }
     box.innerHTML = nxt ? `<div class="lbl"><span>${label}</span>${prv ? `<a class="prev" href="#/a/${prv.date}/${prv.a.column}">‹ 上一篇</a>` : ""}</div>${card(nxt, read)}` : "";
   };
@@ -1229,8 +1251,9 @@ function openContents(date, order, idx) {
   if (!issue || !sheet) return;
   const read = readSet();
   const rows = order.map((a, i) => {
-    const now = i === idx, done = read.has(`${date}/${a.column}`);
-    const inner = `<span class="n">${roman(i + 1)}</span><span class="t"><span class="k">${esc(col(a.column, date).name)}</span><b>${esc(a.title)}</b></span>${done ? `<span class="sum tick" role="img" aria-label="已讀">✓</span>` : `<span class="sum">${a.minutes ? `${a.minutes} 分` : ""}</span>`}`;
+    const now = i === idx, done = read.has(`${date}/${a.column}`), shut = !now && sealedBy(date, a.column); // the sealed parcel: its column only, no title, no way in
+    const inner = `<span class="n">${roman(i + 1)}</span><span class="t"><span class="k">${esc(col(a.column, date).name)}</span><b>${shut ? "今天的包裹，還包著" : esc(a.title)}</b></span>${done ? `<span class="sum tick" role="img" aria-label="已讀">✓</span>` : `<span class="sum">${a.minutes ? `${a.minutes} 分` : ""}</span>`}`;
+    if (shut) return `<li><span class="opt">${inner}</span></li>`;
     return `<li><a class="opt${now ? " now" : ""}" href="#/a/${date}/${esc(a.column)}" data-i="${i}"${now ? ' aria-current="page"' : ""}>${inner}</a></li>`;
   });
   sheet.innerHTML = `<div class="sheet contents"><h2>本期目錄<span class="de">Inhalt</span></h2><p class="sub">${esc(fmtDate(date))}・${esc(issueNo(issue.no))}・${order.length} 篇</p>
@@ -1257,7 +1280,7 @@ function openContents(date, order, idx) {
 function relatedHtml(entry) {
   const read = readSet();
   const rows = (Array.isArray(entry?.related) ? entry.related : []).map(({ d, c }) => ({ d, c, a: issueBy(d)?.articles.find((x) => x.column === c) }))
-    .filter((x) => x.a && isPublished(x.d)).slice(0, 3).map(({ d, c, a }) => {
+    .filter((x) => x.a && isPublished(x.d) && !sealedBy(x.d, x.c)).slice(0, 3).map(({ d, c, a }) => { // not today's sealed parcel
       const done = read.has(`${d}/${c}`);
       const inner = `<span class="t"><span class="k">${esc(col(c, d).name)}</span><b>${esc(a.title)}</b></span><span class="sum">${done ? `<i class="tick" role="img" aria-label="已讀">✓</i>` : ""}${esc(fmtDate(d, "short"))}</span>`;
       return `<a class="rel" href="#/a/${esc(d)}/${esc(c)}">${inner}</a>`;
@@ -1718,7 +1741,9 @@ function yearbook(pubs, done, read) {
   };
 }
 function viewStamps() {
-  const pubs = publishedIssues(), done = digestDone(), today = twNow().date;
+  // "Today's" slot is the current issue, as on the front page and in streak(): before 07:30 that is yesterday's paper,
+  // still to be read and stamped, not a day missed (audit 2026-11-09).
+  const pubs = publishedIssues(), done = digestDone(), today = pubs[0]?.date;
   const got = stampsEarned().length, missed = pubs.filter((i) => !done.has(i.date) && i.date !== today).length;
   const yb = yearbook(pubs, done, readSet()), birds = birdsFound();
   const months = new Map();
