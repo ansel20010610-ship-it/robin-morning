@@ -1979,6 +1979,24 @@ details.band .svl { margin: 0 0 10px; }
 :is(.nest, .nest-stage, .flyby) .sc-lady { fill: var(--red); }
 :is(.nest, .nest-stage, .flyby) .sc-dot { fill: var(--ink); }
 :is(.nest, .nest-stage, .flyby) .sc-bfly { fill: var(--gold); transform-box: fill-box; transform-origin: center; }
+:is(.nest, .nest-stage, .flyby) .sc-bath { fill: var(--nest-dark); }
+:is(.nest, .nest-stage, .flyby) .sc-water { fill: var(--blue, #8FB0E0); opacity: .7; }
+:is(.nest, .nest-stage, .flyby) .sc-snail { fill: var(--nest-brown); stroke: var(--nest-dark); stroke-width: .4; }
+:is(.nest, .nest-stage, .flyby) .sc-snailf { fill: none; stroke: var(--nest-dark); stroke-width: .7; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby) .sc-beeb { fill: var(--gold); }
+:is(.nest, .nest-stage, .flyby) .sc-beew { fill: none; stroke: var(--muted); stroke-width: .5; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby) .sc-bee .sc-dot { fill: none; stroke: var(--ink); }
+/* the year: blossom, full leaf, turning leaves, snow; a star at Christmas; the mate a shade behind */
+:is(.nest, .nest-stage, .flyby) .sea-blossom { fill: color-mix(in srgb, var(--robin) 22%, var(--nest-cream)); stroke: var(--gold); stroke-width: .4; }
+:is(.nest, .nest-stage, .flyby) .sea-leaf { fill: color-mix(in srgb, var(--gold) 55%, var(--paper)); stroke: var(--gold); stroke-width: .5; }
+:is(.nest, .nest-stage, .flyby) .season-autumn :is(.sc-leaf, .sea-fallen) { fill: color-mix(in srgb, var(--robin) 55%, var(--gold)); stroke: var(--robin); }
+:is(.nest, .nest-stage, .flyby) .season-winter .sc-leaf { opacity: .3; }
+:is(.nest, .nest-stage, .flyby) .sea-snow { fill: none; stroke: var(--nest-cream); stroke-width: 1.7; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby) .sea-flake { fill: var(--nest-cream); stroke: var(--rule); stroke-width: .25; }
+:is(.nest, .nest-stage, .flyby) .sea-star { fill: var(--foil, var(--gold)); }
+:is(.nest, .nest-stage, .flyby) .mate { opacity: .82; }
+.nest-stage .season { font-family: var(--serif); font-size: 14px; line-height: 1.7; color: var(--muted); margin: 2px auto 4px; max-width: 30em; }
+.nest-stage .songs { color: var(--gold-ink); }
 /* in the air (nest.js liveBird, flyBy): the wing beats */
 :is(.nest, .nest-stage, .flyby) .bird.flying .r-wingg { transform-box: view-box; transform-origin: 31px 32px; animation: nest-flap .16s ease-in-out infinite alternate; }
 @keyframes nest-flap { from { transform: rotate(-24deg) scaleY(.72); } to { transform: rotate(12deg) scaleY(1.12); } }

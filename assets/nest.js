@@ -83,22 +83,30 @@ const SONG = 60;
 // 增加葉子): twigs that make a nest under the perch, leaves on the branch, the branch forking, a butterfly, moss, blossoms,
 // a ladybird, berries, eggs in the nest, a chick out of them — then, past the list, a leaf, a blossom or a berry every
 // EVERY bites, for as long as the yard keeps reading. WORDS says each in the paper's voice (the bar's 「再 N 口就…」).
-const MILESTONES = [[20, "twig"], [28, "twig"], [45, "twig"], [55, "leaf"], [70, "leaf"], [95, "fork"], [110, "butterfly"], [125, "leaf"], [140, "moss"],
-  [175, "leaf"], [190, "bloom"], [220, "ladybird"], [250, "bloom"], [280, "leaf"], [310, "berry"], [340, "bloom"], [370, "egg"], [400, "egg"], [430, "berry"],
-  [460, "chick"], [490, "leaf"], [520, "berry"], [550, "bloom"], [580, "moss"], [610, "leaf"], [640, "berry"]].map(([at, k]) => ({ at, k }));
-const CYCLE = ["leaf", "bloom", "berry"], EVERY = 30;
-const WORDS = { twig: "院子裡多一根樹枝", leaf: "枝上長一片葉子", fork: "樹枝分出一枝", butterfly: "有一隻蝴蝶來", moss: "巢裡鋪上青苔", bloom: "開一朵花", ladybird: "來一隻瓢蟲", berry: "結一顆果子", egg: "巢裡多一顆蛋", chick: "蛋孵出一隻雛鳥" };
-const THINGS = { twig: "根樹枝", leaf: "片葉子", fork: "枝分枝", butterfly: "隻蝴蝶", moss: "層青苔", bloom: "朵花", ladybird: "隻瓢蟲", berry: "顆果子", egg: "顆蛋", chick: "隻雛鳥" };
+// Two readers who finish the paper feed it ten to fifteen times a day, so the list is paced for months, not days (the
+// owner, 2026-11-09: 這樣兩個人每天餵會不會很快沒招 — the first draft ran out in two months): a thing every ten to thirty
+// bites in the first weeks, every fifty to two hundred later, the gap growing, and past the list a leaf, a blossom or
+// a berry at those long gaps for as long as the yard reads. Eggs and chicks are not on it: they come with the spring
+// (storyOf). Rare days — a hundred songs, the yard's birthday — are the story's too.
+const MILESTONES = [[24, "twig"], [36, "twig"], [50, "twig"], [64, "leaf"], [78, "leaf"], [100, "fork"], [118, "butterfly"], [136, "leaf"], [150, "moss"],
+  [180, "leaf"], [200, "bloom"], [230, "ladybird"], [260, "bloom"], [290, "leaf"], [320, "berry"], [350, "bloom"], [380, "bath"], [410, "snail"], [440, "berry"],
+  [470, "bee"], [500, "leaf"], [530, "berry"], [560, "bloom"], [590, "moss"], [620, "leaf"], [650, "berry"]].map(([at, k]) => ({ at, k }));
+const CYCLE = ["leaf", "bloom", "berry"], GAPS = [50, 50, 80, 80, 120, 120, 160, 160, 200];
+const WORDS = { twig: "院子裡多一根樹枝", leaf: "枝上長一片葉子", fork: "樹枝分出一枝", butterfly: "有一隻蝴蝶來", moss: "巢裡鋪上青苔", bloom: "開一朵花", ladybird: "來一隻瓢蟲", berry: "結一顆果子", bath: "院子裡放一個水盆", snail: "來一隻蝸牛", bee: "有一隻蜜蜂來" };
+const THINGS = { twig: "根樹枝", leaf: "片葉子", fork: "枝分枝", butterfly: "隻蝴蝶", moss: "層青苔", bloom: "朵花", ladybird: "隻瓢蟲", berry: "顆果子", bath: "個水盆", snail: "隻蝸牛", bee: "隻蜜蜂" };
+// The milestones reached, the listed ones then the long-gap ones.
 function milestones(total) {
-  const got = MILESTONES.filter((m) => m.at <= total), last = MILESTONES[MILESTONES.length - 1].at;
-  if (total >= last) for (let i = 1; i <= Math.floor((total - last) / EVERY); i++) got.push({ at: last + i * EVERY, k: CYCLE[(i - 1) % CYCLE.length] });
+  const got = MILESTONES.filter((m) => m.at <= total);
+  let at = MILESTONES[MILESTONES.length - 1].at, i = 0;
+  while (true) { at += GAPS[Math.min(i, GAPS.length - 1)]; if (at > total) break; got.push({ at, k: CYCLE[i % CYCLE.length] }); i++; }
   return got;
 }
 function nextMilestone(total) {
   const m = MILESTONES.find((x) => x.at > total);
   if (m) return m;
-  const last = MILESTONES[MILESTONES.length - 1].at, i = Math.floor((total - last) / EVERY) + 1;
-  return { at: last + i * EVERY, k: CYCLE[(i - 1) % CYCLE.length] };
+  let at = MILESTONES[MILESTONES.length - 1].at, i = 0;
+  while (at <= total) { at += GAPS[Math.min(i, GAPS.length - 1)]; i++; }
+  return { at, k: CYCLE[(i - 1) % CYCLE.length] };
 }
 // Chinese numerals (第三首、十二片、一百零四).
 function cn(n) {
@@ -110,6 +118,31 @@ function cn(n) {
   return out.replace(/零+$/, "");
 }
 const addDays = (iso, n) => new Date(Date.parse(`${iso}T00:00:00Z`) + n * 864e5).toISOString().slice(0, 10);
+// The yard follows the real year, whatever the reading (the owner, 2026-11-09, on my proposal: 四季與節日跟真實日期走、
+// 每年一輪的故事): blossom in spring, full leaf in summer, leaves turning and falling in autumn, snow on the branch in
+// winter, a star at Christmas. And the bird's own year: it moults in September and October (its colours fade a while),
+// rebuilds the nest in March; once the yard has read five hundred pieces a mate comes, and from then on there are eggs
+// in the nest in April and May, chicks in June, and in July the young have flown. The yard's birthday is the day it
+// was opened; a hundredth song is a day too.
+const SEASON = (m) => (m >= 3 && m <= 5 ? "spring" : m >= 6 && m <= 8 ? "summer" : m >= 9 && m <= 11 ? "autumn" : "winter");
+function storyOf(total, songs, since, date) {
+  const [y, m, d] = date.split("-").map(Number), season = SEASON(m), mate = total >= 500;
+  const s = { season, mate, molt: m === 9 || m === 10, rebuilt: m === 3, eggs: mate && (m === 4 || m === 5), chicks: mate && m === 6, fledged: mate && m === 7,
+    christmas: m === 12 && d >= 20 && d <= 26, birthday: Boolean(since) && since.slice(5) === date.slice(5) && since < date, years: since ? y - Number(since.slice(0, 4)) : 0, hundredth: songs > 0 && songs % 100 === 0 };
+  const lines = [];
+  if (s.birthday) lines.push(`今天是院子開張${s.years === 1 ? "一週年" : `${cn(s.years)}週年`}。`);
+  if (s.hundredth) lines.push(`第${cn(songs)}首歌學會了。`);
+  if (s.molt) lines.push("秋天換羽，顏色會淡一陣子，新的羽毛長出來就回來。");
+  if (s.rebuilt) lines.push("春天，巢重新築過了。");
+  if (s.eggs) lines.push("巢裡有兩顆蛋，兩隻輪流孵。");
+  if (s.chicks) lines.push("雛鳥孵出來了，從早到晚張著嘴。");
+  if (s.fledged) lines.push("幼鳥飛走了，院子安靜下來。");
+  if (!lines.length && mate && m >= 8) lines.push("伴侶還在，兩隻常常一起站在枝上。");
+  if (s.christmas) lines.push("枝頭掛了一顆小星星，聖誕快樂。");
+  if (!lines.length) lines.push({ spring: "春天，枝上開了花。", summer: "夏天，葉子長滿了枝。", autumn: "秋天，葉子黃了，一片一片掉。", winter: "冬天，枝上積了一層雪。" }[season]);
+  s.line = lines.join("");
+  return s;
+}
 export function nestState(n = nest()) {
   if (!n) return null;
   const today = twNow().date, feeds = n.feeds || [], pet = petOf(n);
@@ -133,8 +166,37 @@ export function nestState(n = nest()) {
   // grow 0 → 1 over the first eighty bites (size, the first colour); mature 0 → 1 over four hundred (the plumage: a
   // longer tail, more feather lines, specks on the wing, a deeper red) — so the bird itself is a little different
   // after every bite for a long time (the owner: 外觀也要持續變化).
-  return { total, stage, si, next, toNext: next.at - total, from, songs, items, grow: Math.min(1, total / STAGES[4].at), mature: Math.min(1, total / 400),
-    pet, fed, todayBy, who, week, idle, hunger, full: fed >= 3, members: byMember(feeds), everyone: Object.keys(todayBy).length };
+  const story = storyOf(total, songs, n.since, today), mature = Math.min(1, total / 400) * (story.molt ? .6 : 1);
+  return { total, stage, si, next, toNext: next.at - total, from, songs, items, story, grow: Math.min(1, total / STAGES[4].at), mature,
+    pet, fed, todayBy, who, week, idle, hunger, full: fed >= 3, members: byMember(feeds), everyone: Object.keys(todayBy).length, songNames: songNames(n, songs) };
+}
+
+// ——— The songs ———
+// Each song the singer learns is named after the 古典欄 piece the yard was reading then (the owner, 2026-11-09, on my
+// proposal): the k-th song came with the bite at 160 + 60(k−1); the music article read at or before that bite names
+// it by the work in 《》 or 〈〉 in its title or dek. app.js gives the lookup (setLookup); without it, or with no work
+// to be found, the song stays 第幾首.
+let lookup = null;
+export const setLookup = (fn) => { lookup = typeof fn === "function" ? fn : null; };
+function songNames(n, songs) {
+  if (!songs || !lookup) return [];
+  // the k-th song is named by the last music piece read in the sixty bites that taught it (never a piece that already
+  // names an earlier song); none there → the song keeps its number
+  const feeds = [...(n.feeds || [])].sort((a, b) => a.d.localeCompare(b.d) || a.k.localeCompare(b.k)), out = [], used = new Set();
+  const first = STAGES[STAGES.length - 1].at;
+  for (let k = 1; k <= songs; k++) {
+    const to = Math.min(feeds.length - 1, first + SONG * (k - 1) - 1), from = k === 1 ? 0 : first + SONG * (k - 2);
+    let name = "";
+    for (let i = to; i >= from && !name; i--) {
+      const [d, c] = feeds[i].k.split("/");
+      if (c !== "music") continue;
+      const a = lookup(d, c), m = `${a?.title || ""} ${a?.dek || ""}`.match(/[《〈]([^》〉]{1,20})[》〉]/);
+      if (m && !used.has(m[0])) name = m[0];
+    }
+    if (name) used.add(name);
+    out.push(name);
+  }
+  return out;
 }
 
 // ——— Drawing ———
@@ -144,10 +206,10 @@ export function nestState(n = nest()) {
 // and style.css deepens the red with --m. `grow` sets the size and brings the colour up from nestling grey (--g).
 const WING_LINES = ["M33 33.6 l5.6 4.4", "M35.8 31.8 l6.4 5.6", "M38.6 31 l6 6.2", "M31.2 36.4 l5 3.4", "M41.2 31.6 l4.4 5.8"];
 const WING_SPECKS = [[35.2, 35.2], [39.4, 33.8], [42.6, 36.6], [37.2, 38.2], [33.6, 31.8], [44.2, 39.2]];
-function robinSvg(st) {
+function robinSvg(st, { perch = true } = {}) {
   const m = st.mature, tail = 6 + 7 * m, lines = 1 + Math.floor(m * 4), specks = Math.floor(m * 6);
   const tx = 44 + tail * 1.5, ty = 41.6 - tail * 1.05;
-  return `<path class="r-perch" d="M13 53 L51 53"/>
+  return `${perch ? `<path class="r-perch" d="M13 53 L${st.story?.mate ? 61 : 51} 53"/>` : ""}
     <path class="r-tail" d="M43.6 43.4 L${tx.toFixed(1)} ${ty.toFixed(1)} L${(tx + 1.4).toFixed(1)} ${(ty + 2.6).toFixed(1)} L46 46.2 Z"/>
     <path class="r-leg" d="M28.6 48.6 L27.6 53 M34.6 48.2 L35 53 M25.4 53 h4.4 M32.8 53 h4.4"/>
     <path class="r-back" d="M17.6 27.2 C13.2 32.8 13.8 42 20.4 46.8 C26.6 51.2 37.4 51.4 43.4 45.6 C46.8 42.2 47.6 36.8 45.4 32.2 C42.4 26 33 21.6 25 23 C21.8 23.6 19.4 25 17.6 27.2 Z"/>
@@ -166,8 +228,8 @@ const EGG = `<path class="r-perch" d="M13 53 L51 53"/><path class="sc-twig" d="M
 // and berries along the branch and the fork, moss and eggs and the chick in the nest, the butterfly in the air, the
 // ladybird on the branch.
 const TWIGS = ["M24 54.2 Q32 61 40 54.2", "M26.5 54.2 Q32 58.6 37.5 54.2", "M22 54.2 Q32 63.5 42 54.2"];
-function sceneSvg(it) {
-  const out = [], n = (k) => it[k] || 0;
+function sceneSvg(it, story) {
+  const out = [], n = (k) => it[k] || 0, sea = story?.season;
   for (let i = 0; i < Math.min(n("twig"), 3); i++) out.push(`<path class="sc-twig" d="${TWIGS[i]}"/>`);
   if (n("moss")) out.push(`<path class="sc-moss" d="M25 55.4 q3.5 -2.6 7 0 q3.5 -2.6 7 0"/>`);
   if (n("moss") > 1) out.push(`<path class="sc-moss" d="M27 57.2 q2.5 -2 5 0 q2.5 -2 5 0"/>`);
@@ -182,9 +244,25 @@ function sceneSvg(it) {
   if (n("chick")) out.push(`<circle class="sc-chick" cx="32" cy="56.2" r="2.3"/><path class="r-beak" d="M29.8 56.2 l-1.7 .5 l1.7 .6z"/><circle class="r-eye" cx="31" cy="55.6" r=".42"/>`);
   if (n("ladybird")) out.push(`<circle class="sc-lady" cx="43.4" cy="51.5" r="1.5"/><circle class="sc-dot" cx="42.8" cy="51" r=".36"/><circle class="sc-dot" cx="44.1" cy="51.9" r=".36"/>`);
   if (n("butterfly")) out.push(`<g class="sc-bfly"><path d="M56 26 l-3.4 -2.8 l.5 5.4z"/><path d="M56 26 l3.4 -2.8 l-.5 5.4z"/></g>`);
+  if (n("bath")) out.push(`<ellipse class="sc-bath" cx="10" cy="59.5" rx="4.6" ry="1.5"/><ellipse class="sc-water" cx="10" cy="59.2" rx="3.4" ry=".8"/>`);
+  if (n("snail")) out.push(`<circle class="sc-snail" cx="55.5" cy="51.4" r="1.6"/><path class="sc-snailf" d="M54 52.8 h3.4 l1.2 -1.4"/>`);
+  if (n("bee")) out.push(`<g class="sc-bee"><ellipse class="sc-beeb" cx="8" cy="24" rx="1.5" ry="1"/><path class="sc-beew" d="M7.4 23.2 l-.8 -1.6 M8.6 23.2 l.8 -1.6"/><path class="sc-dot" d="M7.6 23.3 v1.4 M8.4 23.3 v1.4" stroke-width=".35"/></g>`);
+  // the year's layer
+  if (story) {
+    if (sea === "spring" || story.rebuilt) for (let i = 0; i < 3; i++) { const x = 19 + i * 11, y = i % 2 ? 56 : 50; out.push(`<circle class="sea-blossom" cx="${x}" cy="${y}" r="1.4"/><circle class="sc-bloomc" cx="${x}" cy="${y}" r=".4"/>`); }
+    if (sea === "summer") for (let i = 0; i < 3; i++) { const x = 21 + i * 9.5, up = i % 2 === 0, y = up ? 50.4 : 55.8; out.push(`<ellipse class="sea-leaf" cx="${x}" cy="${y}" rx="2.8" ry="1.3" transform="rotate(${up ? -28 : 28} ${x} ${y})"/>`); }
+    if (sea === "autumn") for (let i = 0; i < 3; i++) { const x = 15 + i * 13, y = 59 + (i % 2) * 2; out.push(`<ellipse class="sea-fallen" cx="${x}" cy="${y}" rx="2.1" ry=".9" transform="rotate(${-20 + i * 25} ${x} ${y})"/>`); }
+    if (sea === "winter") { out.push(`<path class="sea-snow" d="M14 52.1 L50 52.1"/>`); for (let i = 0; i < 5; i++) out.push(`<circle class="sea-flake" cx="${8 + i * 12}" cy="${14 + (i % 3) * 7}" r=".7"/>`); }
+    if (story.christmas) out.push(`<path class="sea-star" d="M58 44 l.9 1.9 2.1 .3 -1.5 1.5 .4 2.1 -1.9 -1 -1.9 1 .4 -2.1 -1.5 -1.5 2.1 -.3z"/>`);
+    if (story.eggs || story.chicks) { if (n("twig") < 2) out.push(`<path class="sc-twig" d="${TWIGS[0]}"/><path class="sc-twig" d="${TWIGS[1]}"/>`); }
+    if (story.eggs) for (let i = 0; i < 2; i++) out.push(`<ellipse class="sc-egg" cx="${30 + i * 4}" cy="57.2" rx="1.6" ry="2"/><circle class="spk" cx="${30.4 + i * 4}" cy="56.4" r=".3"/>`);
+    if (story.chicks) for (let i = 0; i < 2; i++) out.push(`<circle class="sc-chick" cx="${30 + i * 4.4}" cy="56.4" r="2.1"/><path class="r-beak" d="M${28 + i * 4.4} 56.4 l-1.5 .5 l1.5 .6z"/><circle class="r-eye" cx="${29.2 + i * 4.4} " cy="55.8" r=".4"/>`);
+  }
   return out.join("");
 }
-export const birdSvg = (st) => `<div class="bird s${st.si}${st.full ? " full" : ""}" style="--g:${st.grow.toFixed(3)};--m:${st.mature.toFixed(3)}" aria-hidden="true"><svg viewBox="0 0 64 64">${st.si ? robinSvg(st) + sceneSvg(st.items) : EGG}</svg>${st.si >= 5 ? `<i class="note">♪</i><i class="note two">♫</i>${st.songs >= 3 ? '<i class="note three">♬</i>' : ""}` : ""}</div>`;
+// The mate (storyOf): a second, slightly smaller robin at the right end of the branch, facing the same way.
+const mateSvg = (st) => `<g class="mate" transform="translate(37 23.85) scale(.55)">${robinSvg({ ...st, mature: Math.min(st.mature, .5) }, { perch: false })}</g>`;
+export const birdSvg = (st) => `<div class="bird s${st.si}${st.full ? " full" : ""} season-${st.story?.season || "none"}" style="--g:${st.grow.toFixed(3)};--m:${st.mature.toFixed(3)}" aria-hidden="true"><svg viewBox="0 0 64 64">${st.si ? (st.story?.mate ? mateSvg(st) : "") + robinSvg(st) + sceneSvg(st.items, st.story) : EGG}</svg>${st.si >= 5 ? `<i class="note">♪</i><i class="note two">♫</i>${st.songs >= 3 ? '<i class="note three">♬</i>' : ""}` : ""}</div>`;
 const bar = (st) => `<span class="bar"><i style="width:${Math.round(((st.total - st.from) / Math.max(1, st.next.at - st.from)) * 100)}%"></i></span><span class="next">再 ${st.toNext} 口就${st.next.zh}</span>`;
 // Under the name: the stage, and for the singer how many songs it knows.
 const stageLine = (st) => `<span class="stage">${esc(st.stage.zh)}<i>${esc(st.stage.de)}</i>${st.songs ? `<em>會唱${st.songs === 1 ? "一首歌" : `${cn(st.songs)}首歌`}</em>` : ""}</span>`;
@@ -315,8 +393,10 @@ export function renderNest(el, api, afterSync = false) {
       <b>${esc(pet.name)}</b>${stageLine(st)}
       <p class="say">${st.songs > 1 ? `又學會了一首，現在會唱${cn(st.songs)}首歌；每首都比上一首長一點。` : esc(st.stage.say(pet.p))}</p>
       <p class="today">${st.fed ? `今天吃了 ${st.fed} 口：${st.who.join("、")}。${st.everyone > 1 ? "大家都餵過了。" : ""}` : st.hunger}</p>
+      ${st.si ? `<p class="season">${esc(st.story.line)}</p>` : ""}
       ${bar(st)}
-      <p class="small">全院一共讀了 ${st.total} 篇${n.since ? `，從 ${esc(fmtDate(n.since, "short"))} 開院算起` : ""}${got.length ? `。院子裡有${got.join("、")}` : ""}。</p></div>
+      <p class="small">全院一共讀了 ${st.total} 篇${n.since ? `，從 ${esc(fmtDate(n.since, "short"))} 開院算起` : ""}${got.length ? `。院子裡有${got.join("、")}` : ""}${st.story.mate ? "，還有一隻伴侶" : ""}。</p>
+      ${st.songs ? `<p class="small songs">會唱的歌：${st.songNames.map((s, i) => s ? esc(s) : `第${cn(i + 1)}首`).join("、")}。</p>` : ""}</div>
     <section class="set"><h2>這七天</h2><ol class="nest-week" aria-label="這七天每天餵了幾口">${wk}</ol></section>
     <section class="set"><h2>院子裡的人</h2><ul class="nest-members">${names}</ul>
       ${api ? `<p class="small">${synced || "還沒同步過"}。</p>` : `<p class="small nest-note">共用儲存還沒接上：現在只有這支手機的紀錄，接上以後會把大家的餵食和名字同步過來。</p>`}</section>

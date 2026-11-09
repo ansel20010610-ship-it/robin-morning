@@ -14,7 +14,7 @@ import { fetchWeather, weatherHtml } from "./wetter.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { worldState, drawMap } from "./world.js";
-import { nestBox, renderNest, renderNestSettings, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest } from "./nest.js";
+import { nestBox, renderNest, renderNestSettings, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup } from "./nest.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -30,6 +30,7 @@ async function loadData() {
   ]);
   S.cfg = cfg;
   S.index = index;
+  setLookup((date, column) => issueBy(date)?.articles?.find((a) => a.column === column)); // the yard names its songs after the music column read
   syncDone(); // the reminder gate (rm-state) sees today's issue as soon as the index is in
   initSpotify(cfg.spotify);
   loadGigs().then(fillGigs); // not waited for: the front page draws without it
