@@ -33,6 +33,22 @@ SEEN = os.path.join(ROOT, "state", "concerts", "seen.json")
 # sweep due the next morning.
 SWEEP = os.path.join(ROOT, "state", "concerts", "sweep.json")
 SWEEP_EVERY = 2  # days
+# What a sweep must have looked at before sweep-done takes it as done (the owner, 2026-11-09: 為啥近期演出沒有 12/27 貝九).
+# The sweep of 2026-11-09 opened one presenter's page, saw Currentzis and Lang Lang there without listing them, never
+# looked at the others or at the three venues, and was recorded as finished all the same; the Ukrainian National Opera
+# orchestra's 貝九 (12/26 衛武營, 12/27 國家音樂廳, sold outside OPENTIX) was on none of the pages it opened.
+SWEEP_SOURCES = {
+    "mna": "牛耳藝術（mna.com.tw，逐一打開每一檔的詳情頁）",
+    "pbc": "鵬博藝術",
+    "newaspect": "新象",
+    "tanart": "傳大藝術",
+    "kham": "寬宏藝術（kham.com.tw）",
+    "udn": "聯合數位文創（udnfunlife）與其他音樂劇、歌劇主辦",
+    "ntch": "國家兩廳院節目頁（npac-ntch.org，含 TIFA 與 NSO 樂季）",
+    "ntt": "臺中國家歌劇院節目頁（npac-ntt.org）",
+    "wwy": "衛武營節目頁（npac-weiwuying.org）",
+    "news": "新聞與售票系統關鍵字（來台巡演、年底貝九與新年音樂會；誠品、年代、KKTIX、wekengo）",
+}
 TMP = "/tmp/robin"
 CANDS = os.path.join(TMP, "concert-candidates")
 # 文化部藝文活動開放資料 (https://cloud.culture.tw): category 1 = 音樂, 2 = 戲劇. No key; OPENTIX, 年代 and the venues feed it.
@@ -189,6 +205,15 @@ def fetch(a):
         if c["twins"]:
             lines.append("  - 可能和候選 %s 是同一製作" % "、".join("`%s`" % u for u in c["twins"]))
     changed = listed_changes(data, feed_shows, day, end)
+    # A feed that comes back short (2026-11-09 06:18: 23 of the 24 listed events "gone", all back by noon) is not 23
+    # cancellations: when most of the listed events are missing at once, say the feed was incomplete and leave the
+    # whole-event notes out — the next fetch compares again.
+    gone = [x for x in changed if x[1] and x[1][0].startswith("開放資料裡已找不到")]
+    with_uids = sum(1 for e in data.get("events", []) if e.get("uids") and any(day <= s.get("date", "") <= end for s in e.get("shows", [])))
+    partial = len(gone) >= 3 and len(gone) * 2 > with_uids
+    if partial:
+        changed = [x for x in changed if x not in gone]
+        print("注意：開放資料這次不完整（已列入的 %d 筆裡有 %d 筆整筆不在回應裡），不當作取消，異動段落略過這些；明天再比。" % (with_uids, len(gone)))
     if changed:
         lines += ["", "## 已列入演出的異動", "",
                   "開放資料和 concerts.json 對不上的場次。先開該筆的售票頁確認，再改 shows／note；開放資料整筆消失不等於取消，以售票頁為準。", ""]
@@ -468,7 +493,20 @@ def sweep_due(a):
 
 
 def sweep_done(a):
-    """Records today as the last finished sweep (state/concerts/sweep.json), and stamps today on what it added."""
+    """Records today as the last finished sweep (state/concerts/sweep.json), and stamps today on what it added. Refuses
+    unless --checked names every source in SWEEP_SOURCES: a sweep that looked at one page is not a sweep."""
+    got = {k.strip().lower() for k in (a.checked or []) for k in k.split(",") if k.strip()}
+    unknown = sorted(got - set(SWEEP_SOURCES))
+    missing = [k for k in SWEEP_SOURCES if k not in got]
+    if unknown:
+        print("補查：不認得的來源 %s（可用：%s）" % ("、".join(unknown), " ".join(SWEEP_SOURCES)))
+        return 2
+    if missing:
+        print("補查：還沒查完，不記下。缺：")
+        for k in missing:
+            print("  - %s：%s" % (k, SWEEP_SOURCES[k]))
+        print("每一個都查過後再跑 sweep-done --checked %s" % " ".join(SWEEP_SOURCES))
+        return 2
     data = load(FILE, None)
     if isinstance(data, dict):
         fixed = stamp_added(data)
@@ -477,7 +515,7 @@ def sweep_done(a):
             print("added 改成今天：%s" % "、".join(fixed))
     os.makedirs(os.path.dirname(SWEEP), exist_ok=True)
     with open(SWEEP, "w", encoding="utf-8") as f:
-        json.dump({"last": tw_now().date().isoformat()}, f, ensure_ascii=False)
+        json.dump({"last": tw_now().date().isoformat(), "checked": list(SWEEP_SOURCES)}, f, ensure_ascii=False)
         f.write("\n")
     print("補查：已記下 %s" % tw_now().date())
     return 0
@@ -492,7 +530,8 @@ def main():
     sub.add_parser("prune")
     sub.add_parser("check")
     sub.add_parser("sweep-due", help="補查（第 8 步）今天要不要做：每兩天一次")
-    sub.add_parser("sweep-done", help="補查做完，記下今天")
+    sd = sub.add_parser("sweep-done", help="補查做完，記下今天（--checked 要列出每一個來源）")
+    sd.add_argument("--checked", nargs="*", help="查過的來源：%s" % " ".join(SWEEP_SOURCES))
     a = ap.parse_args()
     return {"fetch": fetch, "close": close, "prune": prune, "check": check,
             "sweep-due": sweep_due, "sweep-done": sweep_done}[a.cmd](a)
