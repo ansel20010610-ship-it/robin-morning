@@ -1,0 +1,203 @@
+{
+  "column": "poem",
+  "date": "2026-11-10",
+  "title": "塞納河流回來了，愛情沒有",
+  "dek": "24 行詩，河、愛情、日子、星期都在走，詩停在「我留下」。",
+  "brief": "阿波利奈爾〈米拉波橋〉的最後一節，全詩第一行原封不動回來：米拉波橋下流著塞納河；就在上面兩行，逝去的時光和愛情都不再回來。這首 1912 年登出的情詩，手稿上第一行後面有句號，《醇酒集》的印本裡一個標點也沒有。",
+  "topic_key": "poem:apollinaire-le-pont-mirabeau",
+  "form": "reverse",
+  "voice": "reader",
+  "updated_at": "2026-11-10T01:50:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Manuscrit_de_Sous_le_pont_Mirabeau_%28avec_la_ponctuation_%21%29.jpg/1280px-Manuscrit_de_Sous_le_pont_Mirabeau_%28avec_la_ponctuation_%21%29.jpg",
+    "width": 1280,
+    "height": 1874,
+    "alt": "一頁書頁，中間是一首手寫的法文詩，標題 Le Pont Mirabeau。行尾看得到句號、逗號、問號和驚嘆號。最下方簽著 Guillaume Apollinaire，頁碼 43。",
+    "caption": "〈米拉波橋〉的手稿，翻拍自一本手稿複製本的第 43 頁。每節還是三行長句，第一行「塞納河」後面是句號，第二行有逗號和問號；《醇酒集》的印本一個標點也沒有，中間那一行也切成了兩行。",
+    "credit": "Guillaume Apollinaire 手稿；複製本頁面由 Stefan jaouen 拍攝，經 Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Manuscrit_de_Sous_le_pont_Mirabeau_(avec_la_ponctuation_!).jpg",
+    "made": "2019（翻拍）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "「日子離去我留下」：法國詩人**阿波利奈爾**（Guillaume Apollinaire）的〈米拉波橋〉停在這一句，而這已經是它在詩裡第四次出現。詩寫的是巴黎塞納河上的一座橋，1912 年 2 月登在他和幾個朋友剛創辦的雜誌《巴黎晚會》創刊號，隔年收進他的詩集《醇酒集》（Alcools）。他 1880 年生在羅馬，1918 年 11 月 9 日在巴黎死於西班牙流感，離一次大戰停戰只差兩天。下面是全詩，譯文跟原文一樣，一個標點都沒加。"
+    },
+    {
+      "type": "quote",
+      "text": "米拉波橋下流著塞納河\n和我們的愛情\n非得讓我想起嗎\n歡樂從前總是在痛苦之後來\n\n夜來吧鐘點敲響\n日子離去我留下\n\n手握著手讓我們留著面對面\n而在那底下\n穿過我們手臂搭成的橋\n永恆凝望的水波如此倦\n\n夜來吧鐘點敲響\n日子離去我留下\n\n愛情離去像這道流水\n愛情離去\n生命多麼緩慢\n而希望多麼猛烈\n\n夜來吧鐘點敲響\n日子離去我留下\n\n過去了日子過去了星期\n逝去的時光\n和愛情都不再回來\n米拉波橋下流著塞納河\n\n夜來吧鐘點敲響\n日子離去我留下",
+      "original": "Sous le pont Mirabeau coule la Seine\nEt nos amours\nFaut-il qu’il m’en souvienne\nLa joie venait toujours après la peine\n\nVienne la nuit sonne l’heure\nLes jours s’en vont je demeure\n\nLes mains dans les mains restons face à face\nTandis que sous\nLe pont de nos bras passe\nDes éternels regards l’onde si lasse\n\nVienne la nuit sonne l’heure\nLes jours s’en vont je demeure\n\nL’amour s’en va comme cette eau courante\nL’amour s’en va\nComme la vie est lente\nEt comme l’Espérance est violente\n\nVienne la nuit sonne l’heure\nLes jours s’en vont je demeure\n\nPassent les jours et passent les semaines\nNi temps passé\nNi les amours reviennent\nSous le pont Mirabeau coule la Seine\n\nVienne la nuit sonne l’heure\nLes jours s’en vont je demeure",
+      "cite": "阿波利奈爾，〈米拉波橋〉（Le Pont Mirabeau），依《醇酒集》第三版，1920 年；初刊《巴黎晚會》創刊號，1912 年，收入《醇酒集》初版，1913 年"
+    },
+    {
+      "type": "p",
+      "text": "**米拉波橋**是 1893 到 1896 年蓋的，橋上 16 區那一頭有一塊銅牌，刻著這首詩的片段。法文維基說詩的靈感來自畫家瑪麗・羅蘭珊（Marie Laurencin）：兩人 1907 年認識，談了七年時好時壞的戀愛，常一起走過這座橋。"
+    },
+    {
+      "type": "p",
+      "text": "從最後一句往回讀。每節後面重複的兩行疊句，第一行「夜來吧鐘點敲響」開頭的 Vienne 是虛擬式，口氣是「讓夜來吧」；後面的 sonne 在虛擬式和直接陳述的時態裡拼法一模一樣，可以是「讓鐘敲吧」，也可以只是「鐘在敲」，我譯成「鐘點敲響」，兩種都過得去。研究法國詩律的學者 Cornulier 注意到，疊句裡的 vienne、s’en vont 和 demeure 形成對比：前兩個是來和去，最後一個是留下。"
+    },
+    {
+      "type": "p",
+      "text": "再往前一節，最後的第四行「米拉波橋下流著塞納河」，和全詩第一行一字不差，河流回來了。就在它上面兩行，說的是「逝去的時光／和愛情都不再回來」。Cornulier 讀第一行，說「橋下」和「流」排在「塞納河」前面，是在說河就在那裡；這一節開頭的「過去了日子過去了星期」，動詞同樣排在日子和星期前面，中文也照這個順序。"
+    },
+    {
+      "type": "p",
+      "text": "第三節的「愛情離去像這道流水」，Cornulier 指出，凝望、愛情都被明明白白比成塞納河的水。這個 comme 在同一節裡換了工作：第一行是「像」，到了第三、四行變成感嘆的「多麼」，「生命多麼緩慢／而希望多麼猛烈」，中文得用兩個詞，法文只用一個。還有一處只有看原文才看得到：押韻的 lente（緩慢）整個藏在 violente（猛烈）的後半截裡。"
+    },
+    {
+      "type": "p",
+      "text": "第二節，兩個人一起在場。「手握著手讓我們留著面對面」，restons 是「讓我們待著」的口氣，Cornulier 讀這一行是五個音節對五個音節，兩半各自對稱，手對手、臉對臉，像一對人，也像橋的側影。他也提到，學者早就查出這首詩的格律套的是一首 13 世紀的歌，那首歌裡的少女正是手牽手去泉邊洗浴。接下來，兩人的手臂搭成一座橋，這一節最後一行 Des éternels regards l’onde si lasse 沒有動詞，可以讀成永恆凝望的水波很倦，也可以讀成水波倦了永恆的凝望，中文也只好讓它沒有動詞。"
+    },
+    {
+      "type": "p",
+      "text": "「而在那底下／穿過我們手臂搭成的橋」在手稿上是一整行，印進《醇酒集》時被切開，斷在 sous 後面，橋本身被推到下一行；中文的「在……下」拆不開，只好把「底下」單獨留在行尾。Cornulier 提到，阿波利奈爾 1913 年 12 月在索邦錄下自己朗讀的那份有名的錄音裡，念到這一行時 sous 上有一個輕微的重音，Cornulier 自己也說這證明不了什麼，只是讓這樣切更說得通。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/85/Alcools016.jpg",
+      "width": 848,
+      "height": 1128,
+      "alt": "一頁印刷的法文書頁，標題 LE PONT MIRABEAU 用大寫，下面是詩的前兩段和兩次疊句，各行縮排深淺不一，沒有任何標點。",
+      "caption": "《醇酒集》1920 年第三版（新法蘭西評論出版）第 16 頁：每節第二、三行縮進去，是原本那一行長句被切開的兩半。整頁沒有一個標點。",
+      "credit": "Guillaume Apollinaire，《Alcools》，Paris，Nouvelle Revue Française，1920；Gallica 掃描，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Alcools016.jpg",
+      "made": "1920"
+    },
+    {
+      "type": "p",
+      "text": "最後回到開頭。**手稿上，第一行「塞納河」後面是一個句號**，第二行寫成「和我們的愛情，非得讓我想起嗎？」，愛情和後面的問句連成一句。《醇酒集》的印本沒有這個句號，原本那一行長句又切成兩行，「和我們的愛情」單獨掛在「橋下流著塞納河」底下，可以往上接，變成河和愛情一起在橋下流；也可以往下接，成了那個問句裡要他想起的東西。我不替他選邊，譯成「和」，讓這個字上下都搆得到。"
+    },
+    {
+      "type": "p",
+      "text": "「非得讓我想起嗎」用的是一個老派的句法，法文的「想起」裡藏著 venir（來）這個字，Cornulier 把 venir 看成全詩的中心概念，列出 vienne、souvienne、reviennent，也把 s’en va 和 passer 算進去。這個「來」在詩裡一路出現：第四行「歡樂從前總是在痛苦之後來」，venait 是過去的反覆，每一次都來；疊句的「夜來吧」；最後一節的「不再回來」。"
+    },
+    {
+      "type": "p",
+      "text": "回到最後一句。第二節的 restons 是「讓我們待著」，這裡的 demeure 也是留下，只是主詞從「我們」變成了「我」。"
+    },
+    {
+      "type": "facts",
+      "title": "這首詩",
+      "items": [
+        [
+          "作者",
+          "阿波利奈爾（Guillaume Apollinaire，1880–1918）"
+        ],
+        [
+          "詩題",
+          "Le Pont Mirabeau（米拉波橋）"
+        ],
+        [
+          "初次發表",
+          "《巴黎晚會》（Les Soirées de Paris）創刊號，1912 年 2 月"
+        ],
+        [
+          "收入",
+          "《醇酒集》（Alcools），Mercure de France，1913 年；排在全書第二首"
+        ],
+        [
+          "本文依據",
+          "法文維基文庫轉錄的《醇酒集》1920 年第三版第 16–17 頁"
+        ],
+        [
+          "形式",
+          "24 行；四個詩節，每節 10、4、6、10 音節，第一、三、四行同韻，每節第 2 行不押；每節後接兩行 7 音節的疊句"
+        ],
+        [
+          "中譯",
+          "本報自譯，逐行對齊，照原文不加標點"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Alcools/Le Pont Mirabeau（依 NRF 1920 年第三版第 16–17 頁校對）",
+      "publisher": "Wikisource（法文）",
+      "date": "",
+      "url": "https://fr.wikisource.org/wiki/Alcools/Le_Pont_Mirabeau",
+      "note": "原文依據，校對等級「已驗證」。印本全無標點；每節第 2、3 行縮排。"
+    },
+    {
+      "title": "Sur la versification d’Apollinaire dans Alcools, à propos de Zone, Le Pont Mirabeau, Palais, Rosemonde",
+      "publisher": "Benoît de Cornulier，Laboratoire de Linguistique de Nantes／Centre d’Études Métriques",
+      "date": "2014-08",
+      "url": "https://www.normalesup.org/~bdecornulier/Apollinaire.pdf",
+      "note": "2012 年發表，2014 年 8 月修訂上線。第 2.1 節：起初是 10.10.10 的三行段、疊句 7 音節、vienne 的虛擬式、13 世紀歌的格律模型（Mario Roques 1949）；第 2.2 節：標點消失帶來歧義、第 6 行讀作 5-5；第 3.3 節：手稿第 1、2、7–8、11、17 行抄錄，il me souvient de 是過時句法，錄音裡 sous 有輕微重音；註 37：中世紀歌裡的 main et main；註 50：vienne、s’en vont 與 demeure 的對比。"
+    },
+    {
+      "title": "File:Manuscrit de Sous le pont Mirabeau (avec la ponctuation !).jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2019-11-10",
+      "url": "https://commons.wikimedia.org/wiki/File:Manuscrit_de_Sous_le_pont_Mirabeau_(avec_la_ponctuation_!).jpg",
+      "note": "頭圖。CC BY-SA 4.0，Stefan jaouen 攝。畫面是手稿複製本第 43 頁；Commons 未註明原件收藏處。"
+    },
+    {
+      "title": "File:Alcools016.jpg",
+      "publisher": "Wikimedia Commons（Gallica 掃描）",
+      "date": "1920",
+      "url": "https://commons.wikimedia.org/wiki/File:Alcools016.jpg",
+      "note": "正文圖。Public domain；分類為 Alcools, 1920, Nouvelle Revue Française。"
+    },
+    {
+      "title": "Le Pont Mirabeau",
+      "publisher": "Wikipédia（法文）",
+      "date": "",
+      "url": "https://fr.wikipedia.org/wiki/Le_Pont_Mirabeau",
+      "note": "首刊於《巴黎晚會》創刊號（1912 年 2 月）、1913 年收入《醇酒集》排第二首、靈感來自羅蘭珊而兩人常走過此橋、橋上銅牌。"
+    },
+    {
+      "title": "Guillaume Apollinaire",
+      "publisher": "Wikipédia（法文）",
+      "date": "",
+      "url": "https://fr.wikipedia.org/wiki/Guillaume_Apollinaire",
+      "note": "1880 年 8 月 26 日生於羅馬；1918 年 11 月 9 日死於巴黎，西班牙流感；1907 年認識羅蘭珊，七年的感情；1912 年 2 月創辦《巴黎晚會》；1913 年 Mercure de France 出版《醇酒集》。"
+    },
+    {
+      "title": "Guillaume Apollinaire",
+      "publisher": "Wikipedia（英文）",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Guillaume_Apollinaire",
+      "note": "生卒、流感死因、寫詩不加標點。"
+    },
+    {
+      "title": "Pont Mirabeau",
+      "publisher": "Wikipédia（法文）",
+      "date": "",
+      "url": "https://fr.wikipedia.org/wiki/Pont_Mirabeau",
+      "note": "1893–1896 年建造，連接 15 區與 16 區，長 173 公尺；16 區一側有刻這首詩片段的銅牌。"
+    },
+    {
+      "title": "Le voyageur ; Le Pont Mirabeau ; Marie / Guillaume Apollinaire, voix [Archives de la parole]",
+      "publisher": "Bibliothèque nationale de France，書目紀錄",
+      "date": "1913-12-24",
+      "url": "https://catalogue.bnf.fr/ark:/12148/cb38299850m",
+      "note": "1913 年 12 月 24 日於巴黎大學索邦錄音；同一張唱片收〈旅人〉〈米拉波橋〉〈瑪麗〉。"
+    },
+    {
+      "title": "Armistice of 11 November 1918",
+      "publisher": "Wikipedia（英文）",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Armistice_of_11_November_1918",
+      "note": "停戰日期，用於「離停戰只差兩天」。"
+    },
+    {
+      "title": "Conjugaison:français/sonner",
+      "publisher": "Wiktionnaire",
+      "date": "",
+      "url": "https://fr.wiktionary.org/wiki/Conjugaison:fran%C3%A7ais/sonner",
+      "note": "現在時直述式與虛擬式第三人稱單數都是 sonne；venir 的虛擬式是 vienne。"
+    }
+  ]
+}
