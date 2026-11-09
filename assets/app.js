@@ -1537,11 +1537,9 @@ function viewArchive() {
   const cols = Object.entries(S.cfg.columns).filter(([, k]) => k.group !== "verse");
   const chips = cols.map(([c, k]) => `<a class="chip" href="#/column/${esc(c)}">${esc(k.name)}</a>`).join("");
   // The column chips fold (the owner, 2026-11-08: 搜尋下面那一堆格子我要可以收合): one summary line, open until the reader
-  // shuts it, the choice kept in rm.archive.cols. 刊史館 is a second stamp in the page head beside 隨手翻 (the owner, the
-  // same day: the door at the very bottom of the archive was awkward to reach).
+  // shuts it, the choice kept in rm.archive.cols. 刊史館 is entered from the month calendar's caption (calendarHtml).
   const colsOpen = store.get("archive.cols", true);
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>往期</h1><span class="de">Archiv</span>
-      <a class="stamp-btn second" href="#/chronik" aria-label="刊史館：從創刊號到今天的沿革"><b>刊史館</b><i>Chronik</i></a>
       <a class="stamp-btn" href="#/random" aria-label="隨手翻一篇：從往期裡抽一篇沒讀過的"><b>隨手翻</b><i>Zufall</i></a></header>
     ${continueRow(null, readSet(), " in-archive")}
     <input class="search" type="search" placeholder="搜尋全文：人名、作品、主題……" aria-label="搜尋往期全文">
@@ -1761,6 +1759,9 @@ const monDe = (ym) => fmtDate(`${ym}-01`, "de").split(" ")[2]; // "Sonntag, 1. N
 // One month as seven columns. A published day is a paper tile that opens its issue; a day whose finish line was reached
 // carries a gold diamond and, when the day before was finished too, a gold link across to it; today is ringed in gold.
 // On the archive page, under the search box (hidden while a search is on); its caption leads to the yearbook.
+// The caption under the days carries the door to 刊史館: the archive's calendar is where the paper's dates live, so its
+// history opens beside them (the owner: the door at the very bottom was awkward to reach, 2026-11-08; the stamp in the
+// page head's top right was not wanted either, 2026-11-09).
 function calendarHtml(ym, pubs, done) {
   const today = twNow().date, byDate = new Map(pubs.map((i) => [i.date, i]));
   const first = dayOf(`${ym}-01`), cells = Array.from({ length: first }, () => "<i></i>");
@@ -1773,7 +1774,7 @@ function calendarHtml(ym, pubs, done) {
   return `<section class="jahr" aria-label="本月閱讀月曆"><div class="mon"><span>${Number(ym.slice(5))} 月</span><span class="de">${esc(monDe(ym))}</span></div>
     <div class="wd" aria-hidden="true">${["一", "二", "三", "四", "五", "六", "日"].map((w) => `<span>${w}</span>`).join("")}</div>
     <div class="grid">${cells.join("")}</div>
-    <div class="cap"><span>${got.length ? `本月 ${got.length} 期，讀完 ${fin} 期` : "本月還沒出刊"}</span></div></section>`;
+    <div class="cap"><span>${got.length ? `本月 ${got.length} 期，讀完 ${fin} 期` : "本月還沒出刊"}</span><a href="#/chronik" aria-label="刊史館：從創刊號到今天的沿革">刊史館<i>Chronik</i>→</a></div></section>`;
 }
 // ——— 印務室 (Druckerei, assets/press.js): the owner's press room — this morning's five shifts, the reserve stock and a
 // fortnight's roster, all out of the index the app holds (its press, late and stock), so it reads the same offline.

@@ -1225,7 +1225,6 @@ button.chip { cursor: pointer; font-family: var(--sans); }
 .stamp-btn b { display: block; font-family: var(--sans); font-size: 9px; font-weight: 600; letter-spacing: .14em; padding-left: .14em; margin-bottom: 2px; }
 .stamp-btn i { display: block; font-family: var(--latin); font-style: italic; font-size: 12px; font-weight: 600; letter-spacing: .02em; }
 /* A second stamp to the left of the first (往期: 刊史館 beside 隨手翻), leaning the other way. */
-.stamp-btn.second { right: 58px; rotate: 6deg; }
 .random .col-note { margin-top: 2px; }
 /* The card: the lead's face in a Secession frame (an ink line, a hairline inside) so it reads as one card drawn from the
    pile; it is the thing motion.js flip turns over, so it owns its transform and sits on a stage with depth. */
