@@ -2407,6 +2407,10 @@ async function boot() {
   navigator.serviceWorker?.addEventListener("message", (e) => {
     if (e.data?.type !== "open") return;
     const h = new URL(e.data.url).hash || "#/";
+    // A tapped notice is where the app most often comes back from the background (the 07:30 paper): look for a new
+    // shell here too, since visibilitychange skipped it if the app had been left on an article. The notices all point
+    // at a list page, so a reload for a new shell lands there, never in the middle of a read.
+    if (!isDetail(h) && !/^#\/(settings|nest)/.test(h)) navigator.serviceWorker.getRegistration().then((r) => r?.update()).catch(() => {});
     if ((location.hash || "#/") !== h) location.hash = h; else refetch();
   });
   if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
