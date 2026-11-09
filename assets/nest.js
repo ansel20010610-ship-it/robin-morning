@@ -469,7 +469,7 @@ export function renderNest(el, api, afterSync = false) {
     <section class="set"><h2>這七天</h2><ol class="nest-week" aria-label="這七天每天餵了幾口">${wk}</ol></section>
     <section class="set"><h2>院子裡的人</h2><ul class="nest-members">${names}</ul>
       ${api ? `<p class="small">${synced || "還沒同步過"}。</p>` : `<p class="small nest-note">共用儲存還沒接上：現在只有這支手機的紀錄，接上以後會把大家的餵食和名字同步過來。</p>`}</section>
-    <a class="sec-head link nest-to-set" href="#/nest/settings"><h2>後院設定</h2><span class="de">Einstellungen</span><span class="note">取名、邀請碼、離開 →</span></a>`;
+    <p class="nest-to-set"><a href="#/nest/settings">後院設定<span class="de">Einstellungen</span> →</a></p>`;
   liveBird(el.querySelector(".nest-stage"));
   const stageEl = el.querySelector(".nest-stage"), birdEl = stageEl.querySelector(".bird");
   birdEl.setAttribute("role", "button"); birdEl.setAttribute("aria-label", `摸摸${pet.name}`); birdEl.removeAttribute("aria-hidden"); birdEl.tabIndex = 0;

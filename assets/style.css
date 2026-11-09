@@ -2055,7 +2055,10 @@ details.band .svl { margin: 0 0 10px; }
 .nest-code code { font-family: var(--latin); font-size: 22px; font-weight: 600; letter-spacing: .14em; color: var(--ink); padding: 8px 12px; border: 1px solid var(--rule); background: var(--paper-2); user-select: all; -webkit-user-select: all; }
 .nest-page .nest-note { border-left: 2px solid var(--gold); padding-left: 10px; }
 .nest-page .chips { margin: 2px 0 10px; }
-.nest-page .nest-to-set { margin-top: 26px; }
+/* the way to 後院設定: a small line at the page's bottom right (the owner, 2026-11-09: 後院設定放右下角就好) */
+.nest-page .nest-to-set { margin: 22px 0 0; text-align: right; font-family: var(--sans); font-size: 12px; letter-spacing: .12em; font-weight: 600; }
+.nest-page .nest-to-set a { color: var(--gold-ink); text-decoration: none; }
+.nest-page .nest-to-set .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 13px; color: var(--gold); margin-left: 6px; }
 
 /* 餵食通知 (nest.js feedNotice): a card above the nav when a piece just read fed the bird — the robin hopping in at the
    left, the name, one line, what the next bite is for. Paper-2 on a hairline, a gold rule on top like the shelf cards;
