@@ -97,7 +97,7 @@ def unchecked(cfg, d):
     # By the check record alone, not by whether shift 4 reported: a shift that reported 「靜默」 without writing the
     # line (11-07 obituary) has not checked either (the owner, 2026-11-08: 沒有寫紀錄就不算查過) — same rule as
     # plan_day --group 5.
-    out += [c for c in watch_columns(cfg) if not watch_checked(c, d)]
+    out += [c for c in watch_columns(cfg, d) if not watch_checked(c, d)]
     if CONCERTS not in runs:
         try:
             checked = load_json(os.path.join(CONTENT, "concerts.json")).get("checked")
@@ -146,8 +146,10 @@ def hold(cfg, d, now=None):
     silent = silent_shifts(d)
     if not missing or not silent:
         return None
-    if now.date() == d and silent == ["5"] and (now.hour, now.minute) < (7, 20):  # shift 5 stops at 07:05 and may still be pushing or reporting
-        return "第 5 班還沒回報，可能還在收尾：07:20 前不判斷額度，這次不補位"
+    # shift 5 stops at 07:05 and may still be pushing or reporting; so may shift 4, whose 賽後版 may be pushed as late
+    # as 07:05 (columns/football.md): before 07:20 neither silence is the quota yet, and a waiting mark is never undone
+    if now.date() == d and set(silent) <= {"4", "5"} and (now.hour, now.minute) < (7, 20):
+        return "第 %s 班還沒回報，可能還在收尾：07:20 前不判斷額度，這次不補位" % "、".join(silent)
     reason = "週日額度不足（第 %s 班沒有回報），缺 %s：不用備稿，%d:00 額度重置後由週日補刊重新製作" % (
         "、".join(silent), "、".join(missing), RESET_HOUR)
     if now.date() != d:

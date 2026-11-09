@@ -102,10 +102,11 @@ def columns_for_group(cfg, d, group):
     return out
 
 
-def watch_columns(cfg):
+def watch_columns(cfg, d=None):
     """The conditional columns (group "watch": fm-watch, cosmere-watch, obituary): published only when there is
-    something to report, never expected, never stocked."""
-    return [k for k, v in cfg["columns"].items() if v.get("group") == "watch"]
+    something to report, never expected, never stocked. Given a day, only the stations active on it: one retired with
+    `until` is no longer checked, so it must not stay on the unchecked list for ever."""
+    return [k for k, v in cfg["columns"].items() if v.get("group") == "watch" and (d is None or active(cfg, k, d))]
 
 
 # Each watch column keeps its check log in state/watch/<file>: one line per issue day, "- <date> 已查（…）：…", written

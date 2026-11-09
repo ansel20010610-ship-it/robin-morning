@@ -150,7 +150,7 @@ def main():
     print("刊期：%s（星期%s）第 %d 期，07:30 發布" % (d, WEEKDAY_ZH[d.weekday()], issue_number(cfg, d)))
     print("今日副刊：" + "、".join("%s（%s）" % (cols[c]["name"], c) for c in supplements_for(cfg, d)))
     print()
-    unchecked = [c for c in watch_columns(cfg) if not watch_checked(c, d)]
+    unchecked = [c for c in watch_columns(cfg, d) if not watch_checked(c, d)]
     if a.group:
         print("第 %d 班負責：" % a.group if a.group < 5 else "第 5 班（安全網）負責全刊：")
         for c in columns_for_group(cfg, d, a.group):
@@ -177,7 +177,7 @@ def main():
         if s != "已完成 ✓":
             missing.append(c)
         print("  - %-14s %-12s %s" % (c, cols[c]["name"], s))
-    for c in watch_columns(cfg):
+    for c in watch_columns(cfg, d):
         print("  - %-14s %-12s %s" % (c, cols[c]["name"], watch_status(cfg, d, c)))
         prev = carried_over(cfg, d, c)
         if prev:

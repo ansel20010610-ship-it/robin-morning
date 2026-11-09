@@ -6,7 +6,7 @@ name: Fill from reserve
 # so the reliable start is wire.yml's half-hour relay: at 07:00 it dispatches this workflow with wait_until=07:12,
 # and the run sleeps to that minute, fetches the newest main (shift 5 pushes until 07:05) and fills. When the issue
 # is still short afterwards and the day was not held for 週日補刊, it sleeps to 07:22 and fills once more: on a Sunday
-# late.py refuses to judge the quota before 07:20 when only shift 5 is silent (it may still be pushing), so the
+# late.py refuses to judge the quota before 07:20 when only shift 5 (or 4) is silent (it may still be pushing), so the
 # 07:22 pass is the one that marks the day waiting. The crons below stay as backup.
 on:
   schedule:
@@ -54,7 +54,7 @@ jobs:
           fi
           # exit code 2 = some column still has no usable reserve; commit what was filled anyway
           # exit code 3 = Sunday whose AI quota ran out: nothing filled, content/late.json marks it for 週日補刊 at 15:00
-          #               (or, before 07:20 with only shift 5 silent, nothing decided yet: the 07:22 pass decides)
+          #               (or, before 07:20 with only shift 5 or 4 silent, nothing decided yet: the 07:22 pass decides)
           # The script's output is kept (fill.log): its 「補位附註：…」 line — what it had to do beyond a plain swap, such
           # as taking a reserve piece with a flaw or leaving a column as it was — goes into the commit message, where
           # the owner reads the morning's history (fill_from_reserve.py prints it for exactly that).

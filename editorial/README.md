@@ -93,12 +93,12 @@
   ```
   git pull --rebase origin main
   python3 scripts/fill_from_reserve.py <日期> || true
-  git add -A content/issues/<日期> content/reserve content/rejected content/late.json
+  git add -A content
   git commit -m "<日期>：以備稿補上缺稿（<補位附註>）"      # 沒有變更就略過；腳本結尾印出「補位附註」（過期字眼、連不上的來源）就附上，回報也寫
   git pull --rebase origin main && git push origin HEAD:main
   ```
-  補位會從備稿庫刪除用掉的備稿，並把驗證失敗、已被替換的稿件移到 `content/rejected/`，所以這一步要 `git add -A` 這三個資料夾。
-  **週日例外**：週日若有前面的班次沒有回報（額度用完的跡象）而刊期沒出齊，補位會印出「週日額度不足……」並什麼都不補，只在 `content/late.json` 標記待補刊，照樣 commit 推送。這是社長的規定，不要改用別的方式補備稿。
+  補位會從備稿庫刪除用掉的備稿，並把驗證失敗、已被替換的稿件移到 `content/rejected/`，所以這一步和 `fill.yml` 一樣 `git add -A content`。不要逐一列出資料夾：沒有撤下原稿時 `content/rejected/` 不存在，列了它 git add 會整個失敗、什麼都沒加進去。
+  **週日例外**：週日若有前面的班次沒有回報（額度用完的跡象）而刊期沒出齊，補位會印出「週日額度不足……」並什麼都不補，只在 `content/late.json` 標記待補刊，照樣 commit 推送。這是社長的規定，不要改用別的方式補備稿。只有第 4 班還沒回報時（它的賽後版可以推到 07:05），07:20 前補位印「第 4 班還沒回報，可能還在收尾……這次不補位」、什麼都不寫，交給 07:22 的 `fill.yml` 判斷；照常回報即可。
 
 ## 週日補刊
 
@@ -107,9 +107,9 @@
 - 早上：`fill_from_reserve.py`（第 5 班 07:05、`fill.yml` 07:12 起）在週日遇到「刊期沒出齊、而且有班次沒回報」時不補位，改在 `content/late.json` 記下 `waiting`。App 首頁說明延到下午；07:30 的通知改成「今天這期延到下午」（通知與監看自己也會依 late.py 的規則判斷，不等 fill.yml 寫入）；07:45 監看不開異常 issue。被扣住的那一天 12:30 與 21:00 都不催讀：出齊時由 `late.py done` 觸發「補刊出爐了」；做不完就 `late.py giveup`——手機當場收到「今天的補刊沒能全部完成，抱歉；明天 07:30 照常出刊」，21:00 的提醒改成同一句，19:00 的監看會開 issue。
 - 下午：週日補刊 routine 在 15:07 執行（17:07 再跑一次，接續沒完成的）。流程同第 5 班（安全網），但日期一律用 `--date <當天>`（下午的預設日期是明天），不跑 `fill_from_reserve.py`、不動備稿；第 9 步（總編重寫、忠實度核對）照做，時間足夠。開工先 `python3 scripts/late.py start`，出齊後 `python3 scripts/late.py done`，各自 commit `content/late.json` 推送：App 會顯示「補刊中」，完成時 `notify.yml` 自動發出「補刊出爐了」通知。
 - 補刊也要接下那天沒跑的班（社長 2026-11-08：補刊有沒有查訃聞等觀測站，要說得出來）。額度用完時，第 4 班的觀測站與 06:17 的演出班多半也沒跑：
-  - `state/runs/<日期>.json` 沒有 `"4"`：三個觀測站（fm-watch、cosmere-watch、obituary）照各自 `columns/*.md` 與第 4 班的做法各查核一次，查核紀錄照格式寫進 `state/watch/`（時間窗、查過的來源、判定），有新進展才成稿；**沒有寫紀錄就不算查過**，回報裡不可以寫「靜默」。
+  - 當天沒有查核紀錄的觀測站（fm-watch、cosmere-watch、obituary；判準同第 5 班：`state/watch/` 沒有「<日期> 已查」那一行、當天也沒有稿，第 4 班有回報但沒留紀錄也算）：照各自 `columns/*.md` 與第 4 班的做法各查核一次，查核紀錄照格式寫進 `state/watch/`（時間窗、查過的來源、判定），有新進展才成稿；**沒有寫紀錄就不算查過**，回報裡不可以寫「靜默」。
   - 演出班沒跑（`state/runs/<日期>.json` 沒有 `concerts`，`content/concerts.json` 的 `checked` 不是當天，`content/onthisday.json` 也沒有當天）：照 `columns/concerts.md` 的每天流程補做近期演出，照 `columns/onthisday.md` 補「歷史上的今天」，只改 `content/concerts.json`、`content/onthisday.json`、`state/concerts/`，結束跑 `report_run.py --group concerts`。
-  - `python3 scripts/late.py status --date <日期>` 會把沒接的班列在「還沒接下沒跑的班」；`late.py done` 在這一行清空前會拒絕標記完成——程式把關，不靠記性。
+  - `python3 scripts/late.py status --date <日期>` 會把沒接的班列在「還沒查核：…」那一行；`late.py done` 在這一行清空前會拒絕標記完成——程式把關，不靠記性。
   - 回報多寫兩行：每個觀測站一句（刊出／靜默，附時間窗），演出班有沒有補做。App 的印務室把補刊列為當天時間表的一行（`state/runs` 的 `late` 條目）；演出班與連載班也在同一張時間表（`concerts`、`serial` 條目），只記有沒有回報。
   - 17:07 那一趟：第一趟還在推稿（40 分鐘內有「週日補刊」的 commit、而且還沒 done）才讓路；第一趟已經停了就接手做完。真的寫不出來就跑 `python3 scripts/late.py giveup --date <日期>` 並推送 `content/late.json`：App 改口、手機收到一句話，傍晚的監看也會開 issue，不要讓它停在「補刊中」。
 - 不是週日，或每一班都有回報（缺稿是一般失敗，不是額度），照平常用備稿補位。
