@@ -1868,6 +1868,9 @@ function viewPress(tick = false) {
   const html = `<div class="wrap press">${pressHtml(S.cfg, { ...S.index, issues }, col)}</div>`;
   if (tick && html === shownPress) return;
   main.innerHTML = shownPress = html;
+  // A tick's redraw is the same page a minute on: no entrance again, or the page's fade-in and every stock bar's draw-x
+  // replay each minute while 此刻 moves through the night (audit c19).
+  if (tick) main.querySelectorAll(".wrap.press, .sk .bar b").forEach((el) => { el.style.animation = "none"; });
   document.title = `印務室｜${S.cfg.title}`;
 }
 
@@ -2172,6 +2175,10 @@ let routeSeq = 0; // bumped on every route; an older route still loading must no
 // starts that page from the top. `places` holds the scroll position of each list page last left.
 const places = new Map();
 let shownHash = null, navTap = false, fromList = null, fromHops = 0; // fromHops: how many history entries past fromList the page on screen is
+// An article entry's fromHops by its stamp: landing on one seen before takes its own count, so a jump of several entries
+// at once (Safari's history list) is not counted as one step. Stamp differences would not do: a branch read and stepped
+// back from leaves gaps in the stamps (audit c7).
+const hopsAt = new Map();
 let landKey = null, landTop = null; // 接著上次: the article tapped on the front page, and where in it to land
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
@@ -2211,7 +2218,8 @@ async function route(ev) {
   if (!ev && shownHash === h) { /* a redraw of the page on screen (下拉更新): keep where it was opened from */ }
   else if (!detail || !ev || tapped) fromList = null;
   else if (!leaving) { fromList = shownHash; fromHops = 1; }
-  else fromHops = Math.max(1, fromHops + (back ? -1 : 1)); // on to the next article, or a step back among them
+  else fromHops = hopsAt.get(stamped) ?? Math.max(1, fromHops + (back ? -1 : 1)); // on to the next article, or a step back among them
+  if (fromList && Number.isInteger(history.state?.i)) hopsAt.set(history.state.i, fromHops);
   shownHash = h;
   if (tapped) places.delete(h);
   const place = !detail && !tapped && (back || backTo === h) ? places.get(h) : undefined;
@@ -2385,8 +2393,11 @@ async function boot() {
     const replay = hiddenAt && Date.now() - hiddenAt > 30 * 1000 && (location.hash || "#/") === "#/" && scrollY < 400;
     const stale = Date.now() - fetchedAt > 60 * 1000;
     // Coming back to a page kept alive is not a navigation, so the browser does not look for a newer shell by itself:
-    // ask, as 下拉更新 does; one found reloads the page once installed (watchUpdates) (audit c8).
-    if (stale) navigator.serviceWorker?.getRegistration().then((r) => r?.update()).catch(() => {});
+    // ask, as 下拉更新 does; one found reloads the page once installed (watchUpdates) (audit c8). Not on an article or an
+    // event (the reload would drop the reader mid-page and where it was opened from), nor on 設定 or 後院, where a code
+    // fetched from another app is about to be pasted: there the new shell waits for the next list page or 下拉更新.
+    const h = location.hash || "#/";
+    if (stale && !isDetail(h) && !/^#\/(settings|nest)/.test(h)) navigator.serviceWorker?.getRegistration().then((r) => r?.update()).catch(() => {});
     if (stale) await loadIndex();
     if (replay) route(); else refreshFront();
     if (stale) runAutoAdd();
