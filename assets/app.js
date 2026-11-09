@@ -123,8 +123,17 @@ function toggleSaved(k) {
   return i < 0;
 }
 const readSet = () => new Set(store.get("read", []));
-// Reading a piece also feeds the nest's robin one bite (nest.js), when this phone is in a nest.
-function markRead(k) { const r = store.get("read", []); if (!r.includes(k)) { r.push(k); store.set("read", r.slice(-2000)); syncDone(); if (feedNest(k)) { toast("餵了知更鳥一口"); syncNest(S.cfg.nest?.api); } } }
+// 特供版 (Sonderausgabe; the owner, 2026-11-09: 我不要每個裝置都有這功能，用代碼啟動): features for the phones that
+// entered the code in 設定 — today the nest. config.json `sonder.hash` is the SHA-256 of the code (upper case, letters
+// and digits only); the phone keeps only that it is one (rm.sonder). The code itself is never in the repository.
+const sonder = () => store.get("sonder") === true;
+const normSonder = (s) => String(s || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+async function sonderHash(code) {
+  const h = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(normSonder(code)));
+  return [...new Uint8Array(h)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+// Reading a piece also feeds the nest's robin one bite (nest.js), on a 特供版 phone that is in a nest.
+function markRead(k) { const r = store.get("read", []); if (!r.includes(k)) { r.push(k); store.set("read", r.slice(-2000)); syncDone(); if (sonder() && feedNest(k)) { toast("餵了知更鳥一口"); syncNest(S.cfg.nest?.api); } } }
 
 // ——— Shared pieces ———
 const CONTAIN = new Set(["artwork", "document", "portrait", "illustration"]);
@@ -677,7 +686,7 @@ function viewFront(dateParam) {
       : unreadIn(issue.date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${digestDone().has(issue.date) ? "早上的郵票已經蓋好了；後來補上的這幾篇也讀完，今天這一份才算讀到最後一行。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的${feastOf(issue.date) ? `${esc(feastOf(issue.date).zh)}紀念郵票` : "郵票"}才蓋得下去。`}</span></div>`
       : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
       : `<div class="finish">${finishInner(issue.date)}</div>`}
-    ${dateParam ? "" : nestBox()}
+    ${dateParam || !sonder() ? "" : nestBox()}
     ${dateParam ? "" : wocheBox()}
     ${dayBox(issue.date)}
     ${dateParam ? "" : `<section class="gigs" id="gigs" aria-label="近期演出">${gigsSection()}</section>`}
@@ -1782,6 +1791,7 @@ function calendarHtml(ym, pubs, done) {
 // ——— 巢 (Nest, assets/nest.js): the robin raised together; the page builds, joins, shows and leaves a nest ———
 function viewNest() {
   main.innerHTML = `<div class="wrap nest-page"></div>`;
+  if (!sonder()) { main.querySelector(".nest-page").innerHTML = `<header class="page-title"><h1>巢</h1><span class="de">Nest</span></header><p class="empty">巢是特供版才有的。到<a href="#/settings">設定</a>輸入代碼，這支手機就開了。</p>`; document.title = `巢｜${S.cfg.title}`; return; }
   renderNest(main.querySelector(".nest-page"), S.cfg.nest?.api);
   document.title = `巢｜${S.cfg.title}`;
 }
@@ -2028,13 +2038,27 @@ function viewSettings() {
       <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>橫線之下</th></tr></thead><tbody>
       ${wd.map(([k, l]) => `<tr><td>${l}</td><td>${rot[k].map((c) => esc(col(c).name)).join("、")}</td></tr>`).join("")}</tbody></table></div></div>
     </section>
-    <section class="set"><h2>巢</h2><p>和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口，大家讀的加在一起，牠從蛋長成會唱歌的鳥。邀請碼在巢裡。</p>
-      <div class="btns"><a class="btn ghost" href="#/nest">打開巢</a></div></section>
+    ${sonder() ? `<section class="set"><h2>巢</h2><p>和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口，大家讀的加在一起，牠從蛋長成會唱歌的鳥。邀請碼在巢裡。</p>
+      <div class="btns"><a class="btn ghost" href="#/nest">打開巢</a></div></section>` : ""}
+    <section class="set" id="sonder-set"><h2>特供版<span class="de">Sonderausgabe</span></h2>${sonder()
+      ? `<p>這支手機是特供版：多了「巢」。</p><div class="btns"><button type="button" class="btn ghost" data-sonder-off>關閉特供版</button></div>`
+      : `<p>有些功能只給拿到代碼的人。向社長請求代碼，在這裡輸入，這支手機就開了。</p>
+        <input class="search" data-sonder-code autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="代碼" aria-label="特供版代碼">
+        <div class="btns"><button type="button" class="btn ghost" data-sonder-on>啟用</button></div>`}</section>
     <section class="set"><h2>印務室</h2><p>給社長看的：今晨五班的報到、補位與缺稿、備稿庫存、最近兩週的出勤。</p>
       <div class="btns"><a class="btn ghost" href="#/press">打開印務室</a></div></section>
     ${isWebKitITP() && !isStandaloneIOS() ? `<section class="set"><h2>放到主畫面</h2><p>在 Safari 按下方的「分享」按鈕，選「加入主畫面」，知更鳥晨間記事就會像 App 一樣全螢幕開啟，也能離線讀已下載的文章。</p></section>` : ""}
     <footer class="colophon"><div class="latin">${esc(S.cfg.subtitle)}</div>資料更新：${esc((S.index.generated_at || "").replace("T", " ").slice(0, 16))} UTC</footer></div>`;
   renderPush($("#push-set"), S.cfg, S.index.push).catch(() => {});
+  main.querySelector("[data-sonder-on]")?.addEventListener("click", async (e) => {
+    const code = main.querySelector("[data-sonder-code]").value;
+    if (!normSonder(code)) { toast("請輸入代碼"); return; }
+    e.currentTarget.disabled = true;
+    const ok = S.cfg.sonder?.hash && (await sonderHash(code).catch(() => "")) === S.cfg.sonder.hash;
+    if (!ok) { e.currentTarget.disabled = false; toast("代碼不對"); return; }
+    store.set("sonder", true); toast("特供版開了"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" });
+  });
+  main.querySelector("[data-sonder-off]")?.addEventListener("click", () => { store.del("sonder"); toast("特供版關了；巢的紀錄還留著"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" }); });
   // Redrawing replaces the buttons; put focus back on the one just pressed.
   const redraw = (g, v) => { viewSettings(); main.querySelector(`[data-g="${g}"] [data-v="${v}"]`)?.focus(); };
   main.querySelectorAll('[data-g="rate"] button').forEach((b) => (b.onclick = () => { setRate(Number(b.dataset.v)); redraw("rate", b.dataset.v); }));
