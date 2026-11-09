@@ -158,7 +158,7 @@ def expected_columns(cfg, d):
     """Everything the day's issue needs: the main columns, the daily verse and prayer (group "verse": devotion, which
     is not an article; the app shows its verse at the top and its prayer on the front page), and the supplements."""
     mains = sorted([k for k, v in cfg["columns"].items() if v["group"] == "main" and active(cfg, k, d)],
-                   key=lambda k: cfg["columns"][k]["order"])
+                   key=lambda k: cfg["columns"][k].get("order", 99))  # no order (check_config reports it): last, not a KeyError
     verse = [k for k, v in cfg["columns"].items() if v["group"] == "verse" and active(cfg, k, d)]
     return mains + verse + supplements_for(cfg, d)
 

@@ -196,9 +196,20 @@ def correction(art):
         return None, None
     date, text = best
     # The first sentence, or the first few when the callout opens with a lead-in like 兩處更正。 that says nothing by
-    # itself; a 。 inside 「…」 does not end a sentence.
+    # itself; a 。 inside 「…」 does not end a sentence. The bracket depth is counted, not just the character after the
+    # 。, or a quotation of two sentences is cut after its first and the card shows half a quote.
+    parts, start, depth = [], 0, 0
+    for i, ch in enumerate(text):
+        if ch in "「『（":
+            depth += 1
+        elif ch in "」』）":
+            depth = max(0, depth - 1)
+        elif ch in "。！？" and not depth and text[i + 1:i + 2] not in ("」", "』", "）"):
+            parts.append(text[start:i + 1])
+            start = i + 1
+    parts.append(text[start:])
     first = ""
-    for sentence in re.split(r"(?<=[。！？])(?![」』）])", text):
+    for sentence in parts:
         first += sentence.strip()
         if len(first) >= 15:
             break
@@ -300,15 +311,26 @@ def late_entries():
 
 
 def stock(cfg):
-    """Reserve articles on hand per column (editorial/RESERVE.md) against the target, for the 印務室 page."""
+    """Reserve articles on hand per column (editorial/RESERVE.md) against the target, for the 印務室 page. Counted as
+    reserve.py and plan_day.py count it (validate.reserve_status): one on hold, with an ERROR or 需修正 is not stock,
+    or the bar shows a column as stocked when nothing in it is usable. Should validate fail, every file counts."""
+    try:
+        import validate  # here, not at the top: a fault in it may cost the bar its precision, never the deploy
+        status = validate.reserve_status(cfg)
+    except Exception as e:  # noqa: BLE001
+        skip(os.path.join(CONTENT, "reserve"), "%s: %s" % (type(e).__name__, e))
+        status = None
     out = {}
     for col in reserve_columns(cfg):
         n = 0
-        for _, path in iter_reserve(col):
-            try:
-                n += 1 if isinstance(load_json(path), dict) else 0
-            except Exception as e:  # noqa: BLE001
-                skip(path, "%s: %s" % (type(e).__name__, e))
+        if status is not None:
+            n = sum(1 for _, errs, blocking in status.get(col, []) if not errs and not blocking)
+        else:
+            for _, path in iter_reserve(col):
+                try:
+                    n += 1 if isinstance(load_json(path), dict) else 0
+                except Exception as e:  # noqa: BLE001
+                    skip(path, "%s: %s" % (type(e).__name__, e))
         out[col] = {"n": n, "target": reserve_target(cfg, col)}
     return out
 

@@ -35,6 +35,16 @@ def items(path):
     return {int(n): t.strip() for n, t in ITEM.findall(text)}
 
 
+def repeated(path):
+    """The numbers more than one lesson in a file carries: items() keeps only the last of them, so check counts here."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            nums = [int(n) for n, _ in ITEM.findall(f.read())]
+    except OSError:
+        return []
+    return sorted({n for n in nums if nums.count(n) > 1})
+
+
 def check():
     full, short = items(FULL), items(SHORT)
     if full is None or short is None:
@@ -49,9 +59,10 @@ def check():
             print("第 %d 條只在 LESSONS.md（寫手的一行版還沒加）：%s" % (n, a)); bad += 1
         elif a != b:
             print("第 %d 條標題不同：LESSONS.md「%s」／LESSONS-short.md「%s」" % (n, a, b)); bad += 1
-    dup = [n for n in full if list(full).count(n) > 1]
-    if dup:
-        print("LESSONS.md 編號重複：%s" % dup); bad += 1
+    for path in (FULL, SHORT):
+        dup = repeated(path)
+        if dup:
+            print("%s 編號重複：%s" % (os.path.basename(path), dup)); bad += 1
     if bad:
         return 1
     print("✓ 教訓清單兩份一致：%d 條" % len(full))

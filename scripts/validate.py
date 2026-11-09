@@ -438,10 +438,12 @@ def check_config(cfg, today=None):
         was = m.get("was")
         if was is not None and (not isinstance(was, dict) or date_of(was.get("until")) is None):
             out.append("欄位 %s 的 was 需為物件並有合法日期 until" % c)
-        if m.get("group") == "main" and "until" not in m:
+        # A retired main column is still active up to its until, and expected_columns sorts by its order, so every
+        # main column needs one; only the running ones must not share it (a successor may take a retired one's place).
+        if m.get("group") == "main":
             if not isinstance(m.get("order"), int) or isinstance(m.get("order"), bool):
                 out.append("正刊欄位 %s 缺少整數 order" % c)
-            else:
+            elif "until" not in m:
                 orders.setdefault(m["order"], []).append(c)
     for o, cs in sorted(orders.items()):
         if len(cs) > 1:
