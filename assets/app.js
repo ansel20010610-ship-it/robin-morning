@@ -46,12 +46,13 @@ const lateOf = (date) => S.late?.[date] || null;
 // A 補刊 given up (late.py giveup, state unfinished) opens the day at once with what came (the owner, 2026-11-09).
 // Before late.json says anything, a quota Sunday by the shift reports (quotaHeld) is shut the same way.
 const issueOpen = (date) => { const l = lateOf(date); return l ? l.state === "done" || l.state === "unfinished" || date !== twNow().date : !quotaHeld(date); };
-// 額度週日 by the index's own shift reports (scripts/late.py hold()'s rule): today, a Sunday before the 15:00 reset,
-// short of a column, with a night shift that never reported. The status line and issueOpen both go by it, so a
-// late.json that arrives hours late cannot let the parcel open and the stamp go down meanwhile (audit 2026-11-09).
+// 額度週日 by the index's own shift reports (scripts/late.py hold()'s rule): today, a Sunday short of a column, with a
+// night shift that never reported — held whatever the hour, as hold(), since late.json may not come until the 15:07
+// 補刊 has started and pushed, or at all. The status line and issueOpen both go by it, so a late.json that arrives
+// hours late cannot let the parcel open and the stamp go down meanwhile (audit 2026-11-09). Midnight still opens it.
 function quotaHeld(date) {
   const now = twNow(), issue = issueBy(date), shifts = issue?.press?.shifts || {};
-  if (!issue || date !== now.date || new Date(`${date}T00:00:00Z`).getUTCDay() !== 0 || now.minutes >= 15 * 60 || ![..."12345"].some((k) => !shifts[k])) return false;
+  if (!issue || date !== now.date || new Date(`${date}T00:00:00Z`).getUTCDay() !== 0 || ![..."12345"].some((k) => !shifts[k])) return false;
   const on = (c) => { const k = S.cfg.columns[c] || {}; return date >= (k.since || "") && date <= (k.until || "9999"); };
   const have = new Set(issue.articles.map((a) => a.column));
   return [...Object.keys(S.cfg.columns).filter((c) => S.cfg.columns[c].group === "main"), ...(S.cfg.rotation_by_weekday?.[weekdayKey(date)] || [])].some((c) => on(c) && !have.has(c));
@@ -612,10 +613,11 @@ function frontStatus() {
   const have = new Set(todays.articles.map((a) => a.column));
   const missing = expected.filter((c) => !have.has(c));
   if (!missing.length) return "";
-  // 額度週日 (scripts/late.py hold(); the owner, 2026-11-08): on a Sunday before the 15:00 reset, a short issue with a
-  // night shift that never reported is the week's quota gone, not articles on their way — and content/late.json, written
-  // by a GitHub cron that ran three hours late that day, may not say so yet. The same rule as late.py's, read here from
-  // the index's own shift reports, so the front page says 延到下午 from 07:30 on; late.json takes over once it arrives.
+  // 額度週日 (scripts/late.py hold(); the owner, 2026-11-08): on a Sunday, a short issue with a night shift that never
+  // reported is the week's quota gone, not articles on their way — and content/late.json, written by a GitHub cron that
+  // ran three hours late that day, may not say so yet. The same rule as late.py's, read here from the index's own shift
+  // reports and at any hour (after 15:00 lateText says 正在重新寫, in step with the still-sealed parcel), so the front page
+  // says 延到下午 from 07:30 on; late.json takes over once it arrives.
   if (quotaHeld(now.date)) return lateText({ state: "waiting" }, got); // the same rule shuts the parcel and the stamp (issueOpen)
   // Otherwise name what is missing. The reserve's last fill is 07:05 (editorial/README.md), so until 08:00 a column with
   // a reserve may still come; after that nothing more does — 「剩下的在路上」 once stood all day (audit 2026-11-08,
@@ -1109,7 +1111,8 @@ async function viewArticle(date, column, my) {
       const arts = sortArticles(issue.articles, date), i = arts.findIndex((x) => x.column === column), pick = revealPick(issue, arts);
       const parcel = pick && pick.column !== column && !read.has(`${date}/${pick.column}`) ? pick : null;
       const u = arts.find((x) => x !== parcel && x.column !== column && !read.has(`${date}/${x.column}`));
-      if (!u && parcel) { box.innerHTML = `<div class="lbl"><span>接著讀</span></div><p class="serial-tail">剩下今天的包裹，在首頁拆開。<a href="#/">回首頁 →</a></p>`; return; }
+      // A Sunday still coming out in parts (issueOpen) has more on the way and a parcel the front page keeps wrapped.
+      if (!u && parcel) { box.innerHTML = `<div class="lbl"><span>接著讀</span></div><p class="serial-tail">${issueOpen(date) ? "剩下今天的包裹，在首頁拆開。" : "今天的報紙還沒出齊，包裹等下午到齊後再拆。"}<a href="#/">回首頁 →</a></p>`; return; }
       if (!u) { box.innerHTML = issueFinish(arts, read); return; }
       const before = arts.slice(0, Math.max(0, i)).filter((x) => x !== parcel).at(-1);
       nxt = { date, a: u }; prv ||= before ? { date, a: before } : null; label = "接著讀";
@@ -1253,7 +1256,7 @@ function openContents(date, order, idx) {
   const rows = order.map((a, i) => {
     const now = i === idx, done = read.has(`${date}/${a.column}`), shut = !now && sealedBy(date, a.column); // the sealed parcel: its column only, no title, no way in
     const inner = `<span class="n">${roman(i + 1)}</span><span class="t"><span class="k">${esc(col(a.column, date).name)}</span><b>${shut ? "今天的包裹，還包著" : esc(a.title)}</b></span>${done ? `<span class="sum tick" role="img" aria-label="已讀">✓</span>` : `<span class="sum">${a.minutes ? `${a.minutes} 分` : ""}</span>`}`;
-    if (shut) return `<li><span class="opt">${inner}</span></li>`;
+    if (shut) return `<li><span class="opt" style="pointer-events:none">${inner}</span></li>`; // no pointer, press or ripple (motion.js) on a row that leads nowhere
     return `<li><a class="opt${now ? " now" : ""}" href="#/a/${date}/${esc(a.column)}" data-i="${i}"${now ? ' aria-current="page"' : ""}>${inner}</a></li>`;
   });
   sheet.innerHTML = `<div class="sheet contents"><h2>本期目錄<span class="de">Inhalt</span></h2><p class="sub">${esc(fmtDate(date))}・${esc(issueNo(issue.no))}・${order.length} 篇</p>
