@@ -403,6 +403,52 @@ export function feedNotice(before, after) {
   el.addEventListener("click", () => { clearTimeout(t); el.remove(); });
 }
 
+// ——— The voice ———
+// A robin's calls, made on the spot with the Web Audio API — no sound file, nothing fetched, works offline (the owner,
+// 2026-11-09: 可以有聲音嗎，點它一下的時候). Short high whistles with a quick pitch bend: a nestling's thin peep, the
+// 「tic」 of a look, a two-note call, a song of five to eight notes that is never the same twice, a rustle of feathers
+// (filtered noise), and the egg's soft knock. Only on a tap, never on its own; quiet; and 後院設定 can turn it off
+// (rm.nest.sound). The context is made inside the tap, which is what iOS needs.
+let actx = null;
+export const soundOn = () => nest()?.sound !== false;
+export function setSound(on) { const n = nest(); if (n) { n.sound = Boolean(on); save(n); } }
+function audio() {
+  try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); if (actx.state === "suspended") actx.resume(); return actx; } catch { return null; }
+}
+function whistle(ctx, t0, f0, f1, dur, vol = .11, type = "sine") {
+  const o = ctx.createOscillator(), g = ctx.createGain();
+  o.type = type; o.frequency.setValueAtTime(f0, t0); o.frequency.exponentialRampToValueAtTime(Math.max(40, f1), t0 + dur);
+  g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(vol, t0 + .012); g.gain.exponentialRampToValueAtTime(.0001, t0 + dur);
+  o.connect(g).connect(ctx.destination); o.start(t0); o.stop(t0 + dur + .03);
+}
+function rustle(ctx, t0, dur = .16, vol = .05) {
+  const b = ctx.createBuffer(1, Math.ceil(ctx.sampleRate * dur), ctx.sampleRate), d = b.getChannelData(0);
+  for (let i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * (1 - i / d.length);
+  const src = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+  src.buffer = b; f.type = "bandpass"; f.frequency.value = 2600; f.Q.value = .8; g.gain.value = vol;
+  src.connect(f).connect(g).connect(ctx.destination); src.start(t0);
+}
+export function chirp(kind) {
+  if (!soundOn()) return;
+  const ctx = audio(); if (!ctx) return;
+  const t = ctx.currentTime + .02;
+  if (kind === "peep") whistle(ctx, t, 5200, 6300, .08, .07);
+  else if (kind === "tic") whistle(ctx, t, 3200, 2500, .035, .07);
+  else if (kind === "call") { whistle(ctx, t, 3700, 4700, .07); whistle(ctx, t + .12, 4400, 3500, .09, .09); }
+  else if (kind === "hop") { whistle(ctx, t, 3000, 2600, .03, .06); whistle(ctx, t + .28, 3000, 2600, .03, .06); }
+  else if (kind === "rustle") rustle(ctx, t);
+  else if (kind === "egg") whistle(ctx, t, 230, 170, .09, .07, "triangle");
+  else if (kind === "song") {
+    let at = t; const n = 5 + Math.floor(Math.random() * 4);
+    for (let i = 0; i < n; i++) {
+      const f0 = 2400 + Math.random() * 3000, bend = .7 + Math.random() * .7, dur = .06 + Math.random() * .09;
+      whistle(ctx, at, f0, f0 * bend, dur, .1);
+      if (Math.random() < .3) whistle(ctx, at + dur * .5, f0 * 1.5, f0 * 1.2, dur * .5, .05); // a trill on top now and then
+      at += dur + .05 + Math.random() * .11;
+    }
+  }
+}
+
 // ——— A tap on the bird ———
 // In the yard the bird answers a tap (the owner, 2026-11-09: 在後院點一下鳥可以有互動): it tilts its head, calls, hops a
 // little nearer, shakes its feathers, or — a singer — sings one of its songs, notes rising; an egg only rocks, a
@@ -420,21 +466,21 @@ export function pokeBird(root, st) {
   const T = (x, y, rot = 0, sx = 1) => ({ transform: `translate(${x}px, ${y}px) rotate(${rot}deg) scaleX(${sx})` });
   const notes = (k) => { for (let i = 0; i < k; i++) setTimeout(() => { const e = document.createElement("i"); e.className = "poke-note"; e.textContent = ["♪", "♫", "♬"][i % 3]; e.style.left = `${52 + Math.random() * 18}%`; bird.append(e); setTimeout(() => e.remove(), 1500); }, i * 260); };
   let act;
-  if (st.si === 0) act = async () => { say("蛋晃了一下。"); await run([T(0, 0), T(0, 0, -8), T(0, 0, 7), T(0, 0, -4), T(0, 0)], 700); };
+  if (st.si === 0) act = async () => { chirp("egg"); say("蛋晃了一下。"); await run([T(0, 0), T(0, 0, -8), T(0, 0, 7), T(0, 0, -4), T(0, 0)], 700); };
   else if (st.si < 3) act = [
-    async () => { say(`${n}張大了嘴，以為有東西吃。`); await run([T(0, 0), T(0, -3, -6), T(0, -3, -6), T(0, 0)], 900); },
-    async () => { say(`${n}縮成一團，又慢慢探出頭。`); await run([T(0, 2, 0, .9), T(0, 2, 0, .9), T(0, 0, 0, 1)], 1300); },
-    async () => { say(`${n}細細地叫了一聲。`); notes(1); await run([T(0, 0), T(0, -2, -4), T(0, 0)], 500); },
-    async () => { say(`${n}往你這邊挪了挪。`); await run([T(0, 0), T(-5, -3), T(-8, 0), T(-8, 0), T(0, 0)], 1200, "ease-out"); },
+    async () => { chirp("peep"); say(`${n}張大了嘴，以為有東西吃。`); await run([T(0, 0), T(0, -3, -6), T(0, -3, -6), T(0, 0)], 900); },
+    async () => { chirp("rustle"); say(`${n}縮成一團，又慢慢探出頭。`); await run([T(0, 2, 0, .9), T(0, 2, 0, .9), T(0, 0, 0, 1)], 1300); },
+    async () => { chirp("peep"); say(`${n}細細地叫了一聲。`); notes(1); await run([T(0, 0), T(0, -2, -4), T(0, 0)], 500); },
+    async () => { chirp("hop"); say(`${n}往你這邊挪了挪。`); await run([T(0, 0), T(-5, -3), T(-8, 0), T(-8, 0), T(0, 0)], 1200, "ease-out"); },
   ][Math.floor(Math.random() * 4)];
   else {
     const picks = [
-      async () => { say(`${n}歪著頭看你。`); await run([T(0, 0), T(0, 0, -13), T(0, 0, -13), T(0, 0)], 1300); },
-      async () => { say(`${n}叫了一聲。`); notes(1); await run([T(0, 0), T(0, -2, -5), T(0, 0)], 500); },
-      async () => { say(`${n}跳近了一點。`); await run([T(0, 0), T(-9, -8), T(-16, 0), T(-16, 0), T(-8, -6), T(0, 0)], 1400, "ease-out"); },
-      async () => { say(`${n}抖了抖羽毛。`); await run([T(0, 0), T(0, 0, 0, 1.07), T(0, 0, 0, .94), T(0, 0, 0, 1.06), T(0, 0, 0, .96), T(0, 0)], 700, "linear"); },
+      async () => { chirp("tic"); say(`${n}歪著頭看你。`); await run([T(0, 0), T(0, 0, -13), T(0, 0, -13), T(0, 0)], 1300); },
+      async () => { chirp("call"); say(`${n}叫了一聲。`); notes(1); await run([T(0, 0), T(0, -2, -5), T(0, 0)], 500); },
+      async () => { chirp("hop"); say(`${n}跳近了一點。`); await run([T(0, 0), T(-9, -8), T(-16, 0), T(-16, 0), T(-8, -6), T(0, 0)], 1400, "ease-out"); },
+      async () => { chirp("rustle"); say(`${n}抖了抖羽毛。`); await run([T(0, 0), T(0, 0, 0, 1.07), T(0, 0, 0, .94), T(0, 0, 0, 1.06), T(0, 0, 0, .96), T(0, 0)], 700, "linear"); },
     ];
-    if (st.songs) { const named = st.songNames.filter(Boolean); picks.push(async () => { say(`${n}唱起${named.length ? named[Math.floor(Math.random() * named.length)] : `第${cn(1 + Math.floor(Math.random() * st.songs))}首歌`}。`); notes(3); await run([T(0, 0), T(0, -2, -4), T(0, 0), T(0, -2, -4), T(0, 0)], 1400); }); }
+    if (st.songs) { const named = st.songNames.filter(Boolean); picks.push(async () => { chirp("song"); say(`${n}唱起${named.length ? named[Math.floor(Math.random() * named.length)] : `第${cn(1 + Math.floor(Math.random() * st.songs))}首歌`}。`); notes(3); await run([T(0, 0), T(0, -2, -4), T(0, 0), T(0, -2, -4), T(0, 0)], 1400); }); }
     act = picks[Math.floor(Math.random() * picks.length)];
   }
   act().finally(() => { poking = false; });
@@ -512,6 +558,8 @@ export function renderNestSettings(el, api, afterSync = false) {
       <input class="search" data-pet-name maxlength="12" value="${esc(pet.named ? pet.name : "")}" placeholder="牠的名字（最多 12 字）" aria-label="鳥的名字">
       <nav class="chips" aria-label="怎麼稱呼">${PRONOUNS.map((p) => `<button type="button" class="chip" data-p="${p}" aria-pressed="${p === pet.p}">${p}</button>`).join("")}</nav>
       <div class="btns"><button type="button" class="btn ghost" data-pet-save>改好了</button></div></section>
+    <section class="set"><h2>聲音</h2><p class="small">在後院點${pet.p}的時候會叫一聲。只有點的時候才響，不會自己叫。</p>
+      <nav class="chips" aria-label="聲音"><button type="button" class="chip" data-snd="1" aria-pressed="${soundOn()}">開</button><button type="button" class="chip" data-snd="0" aria-pressed="${!soundOn()}">關</button></nav></section>
     <section class="set"><h2>邀請碼</h2><p class="small">給另一個有這份報紙的人，在設定裡的「後院」輸入，就進同一個院子。</p>
       <div class="nest-code"><code>${esc(n.code)}</code><button type="button" class="btn ghost" data-copy>複製</button></div></section>
     <section class="set"><h2>你在院子裡的名字</h2><p class="small">餵食紀錄旁邊顯示的名字，現在是「${esc(n.name)}」。</p>
@@ -527,6 +575,7 @@ export function renderNestSettings(el, api, afterSync = false) {
     e.currentTarget.dataset.sure = "1"; e.currentTarget.textContent = "確定離開？再按一次";
   };
   el.querySelector(".chips").addEventListener("click", (e) => { const b = e.target.closest("button[data-p]"); if (!b) return; el.querySelectorAll(".chips [data-p]").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); });
+  el.querySelectorAll("[data-snd]").forEach((b) => b.addEventListener("click", () => { setSound(b.dataset.snd === "1"); el.querySelectorAll("[data-snd]").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); if (b.dataset.snd === "1") chirp("call"); }));
   el.querySelector("[data-pet-save]").onclick = () => {
     namePet(el.querySelector("[data-pet-name]").value, el.querySelector('.chips [aria-pressed="true"]')?.dataset.p);
     toast(petOf().named ? `${petOf().name}，記住了` : "名字拿掉了，叫回知更鳥");
