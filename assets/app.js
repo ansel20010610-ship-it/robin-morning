@@ -901,7 +901,8 @@ async function creditBox(el) {
 // 問這篇 (Fragen; the owner, 2026-11-10): on a 特供版 phone with a yard, a question about the article being read, answered
 // in a few seconds by the yard's shared store (nest-worker.js /{code}/ask, Claude on the owner's Console credits) from
 // this article alone. Marked as not checked by the editors; the medical columns add the paper's disclaimer. The phone
-// keeps the last few questions of each article (rm.ask), nothing is kept anywhere else.
+// keeps the last few questions of each article (rm.ask), nothing is kept anywhere else. 清除問答 (the owner, 2026-11-11:
+// 刪除答案，類似重置) takes this article's questions off the phone, on a second press within three seconds.
 function askBox(el, date, column) {
   const n = nest(), api = S.cfg.nest?.api;
   if (!el || !n || !api) return;
@@ -912,9 +913,21 @@ function askBox(el, date, column) {
     <p class="small">讀到不懂、想多知道一點，直接問。只根據這篇回答，幾秒就好。</p>
     <div class="ask-list">${mine.map(qa).join("")}</div>
     <textarea maxlength="300" rows="2" placeholder="例如：這個數字是怎麼算出來的？"></textarea>
-    <div class="btns"><button class="btn" type="button" data-ask>問</button><span class="small ask-wait" hidden>編輯想一下……</span></div>
+    <div class="btns"><button class="btn" type="button" data-ask>問</button><span class="small ask-wait" hidden>編輯想一下……</span><button class="btn ghost ask-clear" type="button" data-ask-clear${mine.length ? "" : " hidden"}>清除問答</button></div>
     <p class="ask-note">即時回答，未經編輯部查核${med ? "；醫學教學導讀，非個別診療建議" : ""}。</p>`;
   const ta = el.querySelector("textarea"), btn = el.querySelector("[data-ask]"), wait = el.querySelector(".ask-wait"), list = el.querySelector(".ask-list");
+  const clear = el.querySelector("[data-ask-clear]");
+  let unsure;
+  clear.addEventListener("click", () => {
+    if (!clear.dataset.sure) {
+      clear.dataset.sure = "1"; clear.textContent = "確定清除？再按一次";
+      unsure = setTimeout(() => { delete clear.dataset.sure; clear.textContent = "清除問答"; }, 3000);
+      return;
+    }
+    clearTimeout(unsure); delete clear.dataset.sure; clear.textContent = "清除問答";
+    const cur = store.get("ask", {}); delete cur[key]; store.set("ask", cur);
+    list.innerHTML = ""; clear.hidden = true; toast("這篇的問答清掉了");
+  });
   btn.addEventListener("click", async () => {
     const q = ta.value.trim();
     if (!q) { toast("先寫一個問題"); return; }
@@ -929,7 +942,7 @@ function askBox(el, date, column) {
         cur[key] = [...(Array.isArray(cur[key]) ? cur[key] : []), x].slice(-5);
         const keys = Object.keys(cur); if (keys.length > 40) delete cur[keys[0]]; // the last forty articles asked about
         store.set("ask", cur);
-        list.insertAdjacentHTML("beforeend", qa(x)); ta.value = "";
+        list.insertAdjacentHTML("beforeend", qa(x)); ta.value = ""; clear.hidden = false;
       }
     } catch { toast("沒問成，問題還留著"); }
     btn.disabled = false; wait.hidden = true;
