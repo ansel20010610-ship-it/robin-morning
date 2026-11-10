@@ -413,10 +413,10 @@ export const birdSvg = (st) => `<div class="bird s${st.si}${st.full ? " full" : 
 // out twice — wide on the 後院 page, a lower strip on the 收藏 plate; `x, y, s` is the bird's box in the drawing's units
 // (300 wide), so its perch ends at the bough. A fixed aspect ratio: the plate keeps its height when it is drawn again
 // after a sync (iPhone Safari has no scroll anchoring).
-const YARD = { page: { h: 170, s: 120, x: 166, y: 36 }, plate: { h: 118, s: 100, x: 186, y: 12 } };
+const YARD = { page: { h: 170, s: 120, x: 162, y: 50 }, plate: { h: 118, s: 100, x: 182, y: 18 } };
 function yardSvg(L, sea) {
   const { h: H, s, x, y } = L, f = (n) => Math.round(n * 10) / 10, k = H > 140 ? 1 : .78;
-  const hy = f(y + .66 * s), py = f(y + .828 * s), tx = f(x + .797 * s), wx = f(58 * k), wt = f(hy - 80 * k);
+  const hy = f(y + .66 * s), py = f(y + .828 * s), pe = f(x + .797 * s), tx = f(x + .955 * s), wx = f(58 * k), wt = f(hy - 80 * k);
   const snow = sea === "winter", o = [];
   o.push(`<rect class="y-sky" x="0" y="0" width="300" height="${H}"/>`);
   const cloud = (cx, cy, r) => `<g class="y-cloud"><ellipse cx="${f(cx)}" cy="${f(cy)}" rx="${f(r * 1.6)}" ry="${f(r * .55)}"/><circle cx="${f(cx - r * .45)}" cy="${f(cy - r * .35)}" r="${f(r * .55)}"/><circle cx="${f(cx + r * .25)}" cy="${f(cy - r * .5)}" r="${f(r * .7)}"/></g>`;
@@ -467,7 +467,7 @@ function yardSvg(L, sea) {
   // the tree, its bough (the bird's perch ends on it) and its crown
   o.push(`<path class="y-trunk" d="M${f(tx + 1)} ${H} L${f(tx + 4)} ${f(H - 8 * k)} L${f(tx + 4)} 0 L${f(tx + 15 * k)} 0 L${f(tx + 15 * k)} ${f(H - 8 * k)} L${f(tx + 19 * k)} ${H} Z"/>`);
   o.push(`<path class="y-bark" d="M${f(tx + 8 * k)} ${f(py + 12)} v${f(10 * k)} M${f(tx + 11 * k)} ${f(py - 30 * k)} v${f(9 * k)} M${f(tx + 7 * k)} ${f(H - 10 * k)} v${f(6 * k)}"/>`);
-  o.push(`<path class="y-bough" d="M${f(tx + 8 * k)} ${f(py - 9 * k)} Q${f(tx + 3)} ${f(py - 1)} ${f(tx - 2)} ${py}"/>`);
+  o.push(`<path class="y-bough" d="M${f(tx + 8 * k)} ${f(py - 9 * k)} Q${f(tx + 2)} ${f(py - 1)} ${f(pe - 1)} ${py}"/>`);
   if (snow) {
     o.push(`<path class="y-twigs" d="M${f(tx + 8 * k)} ${f(32 * k)} L${f(tx - 30 * k)} ${f(4 * k)} M${f(tx - 14 * k)} ${f(20 * k)} L${f(tx - 18 * k)} 0 M${f(tx + 10 * k)} ${f(26 * k)} L${f(tx + 40 * k)} ${f(2 * k)} M${f(tx + 28 * k)} ${f(13 * k)} L${f(tx + 44 * k)} ${f(16 * k)} M${f(tx + 8 * k)} ${f(46 * k)} L${f(tx - 16 * k)} ${f(34 * k)}"/>`);
     o.push(`<path class="y-snow-line" d="M${f(tx - 28 * k)} ${f(4 * k)} L${f(tx - 8 * k)} ${f(18 * k)} M${f(tx + 14 * k)} ${f(22 * k)} L${f(tx + 36 * k)} ${f(5 * k)}"/>`);
@@ -482,7 +482,7 @@ function yardSvg(L, sea) {
 const yardOf = (st) => st?.story?.season || SEASON(Number(twNow().date.slice(5, 7)));
 // the bird in its yard: the drawing behind, the bird's own box placed on it in the drawing's proportions
 const inYard = (kind, sea, bird) => { const L = YARD[kind], pc = (a, b) => `${(a / b * 100).toFixed(3)}%`;
-  return `<div class="yard ${kind} yard-${sea}" style="aspect-ratio:300/${L.h}"><svg class="yard-bg" viewBox="0 0 300 ${L.h}" aria-hidden="true">${yardSvg(L, sea)}</svg><div class="yard-spot" style="left:${pc(L.x, 300)};top:${pc(L.y, L.h)};width:${pc(L.s, 300)};height:${pc(L.s, L.h)}">${bird}</div></div>`; };
+  return `<div class="yard yard-${kind} yard-${sea}" style="aspect-ratio:300/${L.h}"><svg class="yard-bg" viewBox="0 0 300 ${L.h}" aria-hidden="true">${yardSvg(L, sea)}</svg><div class="yard-spot" style="left:${pc(L.x, 300)};top:${pc(L.y, L.h)};width:${pc(L.s, 300)};height:${pc(L.s, L.h)}">${bird}</div></div>`; };
 const nextLine = (st) => (st.away ? `${st.back <= 1 ? "明天" : `${cn(st.back)}天後`}從${st.away.place}回來` : st.sick ? `再 ${st.sick.left} 口藥就會好` : `再 ${st.toNext} 口就${st.next.zh}`);
 const bar = (st) => { const w = st.away ? 1 - st.back / Math.max(1, daysTo(st.away.from, st.away.until) + 1) : st.sick ? 1 - st.sick.left / st.sick.need : (st.total - st.from) / Math.max(1, st.next.at - st.from);
   return `<span class="bar${st.sick ? " sick" : st.away ? " away" : ""}"><i style="width:${Math.round(Math.max(0, Math.min(1, w)) * 100)}%"></i></span><span class="next">${esc(nextLine(st))}</span>`; };
@@ -536,8 +536,11 @@ export function liveBird(root, { fly = true } = {}) {
   const T = (x, y, flip = false, rot = 0) => ({ transform: `translate(${x}px, ${y}px) scaleX(${flip ? -1 : 1}) rotate(${rot}deg)` });
   // which way it flies and how far: towards the side with room, no farther than the yard (or the box) is wide — in the
   // yard the bird sits right of the middle, on the tree's bough
-  const room = () => { const r = root.getBoundingClientRect(), b = bird.getBoundingClientRect(), cx = b.left + b.width / 2 - r.left, L = cx - 30, R = (r.width || 320) - cx - 30;
-    const d = R < 60 ? -1 : L < 60 ? 1 : Math.random() < .5 ? 1 : -1; return [d, Math.max(40, Math.min(230, d > 0 ? R : L))]; };
+  let vy = 1; // how high a flight may climb, as a share of its full height: in the yard, no higher than its sky
+  const room = () => { const box = bird.closest(".yard") || root, r = box.getBoundingClientRect(), b = bird.getBoundingClientRect(), cx = b.left + b.width / 2 - r.left, half = Math.max(30, b.width * .42), L = cx - half, R = (r.width || 320) - cx - half;
+    vy = box === root ? 1 : Math.max(.3, Math.min(1, (b.top + b.height * .35 - r.top - 4) / 130));
+    const d = R < 60 ? -1 : L < 60 ? 1 : Math.random() < .5 ? 1 : -1; return [d, Math.max(40, Math.min(230, d > 0 ? R : L)), Math.max(0, d > 0 ? L : R)]; };
+  const F = (x, y, flip) => T(x, y * vy, flip);
   const rock = () => run([T(0, 0), T(0, 0, false, -6), T(0, 0, false, 5), T(0, 0, false, -3), T(0, 0)], 900);
   const hop = () => run([T(0, 0), T(0, -7), T(0, 0), T(0, -4), T(0, 0)], 520, "ease-out");
   const peck = () => run([T(0, 0), T(0, 3, false, 10), T(0, 0), T(0, 3, false, 10), T(0, 0)], 700);
@@ -545,11 +548,11 @@ export function liveBird(root, { fly = true } = {}) {
   const preen = () => run([T(0, 0), T(2, 1, false, -14), T(2, 1, false, -12), T(2, 1, false, -14), T(0, 0)], 1300);
   const fliers = [
     () => { const [d, a] = room(); // swoop out and back
-      return run([T(0, 0), T(.3 * a * d, -55, d > 0), T(.75 * a * d, -25, d > 0), T(a * d, -80, d > 0), T(.5 * a * d, -115, d < 0), T(.1 * a * d, -40, d < 0), T(0, 0)], between(2600, 3400)); },
-    () => { const [d, r] = room(), a = r * .8; // a loop in the air
-      return run([T(0, 0), T(.4 * a * d, -70, d > 0), T(a * d, -40, d > 0), T(.9 * a * d, -120, d < 0), T(.3 * a * d, -130, d < 0), T(-.2 * a * d, -70, d < 0), T(0, 0)], between(3000, 3800)); },
+      return run([F(0, 0), F(.3 * a * d, -55, d > 0), F(.75 * a * d, -25, d > 0), F(a * d, -80, d > 0), F(.5 * a * d, -115, d < 0), F(.1 * a * d, -40, d < 0), F(0, 0)], between(2600, 3400)); },
+    () => { const [d, r, back] = room(), a = r * .8, b = Math.min(.2 * a, back); // a loop in the air
+      return run([F(0, 0), F(.4 * a * d, -70, d > 0), F(a * d, -40, d > 0), F(.9 * a * d, -120, d < 0), F(.3 * a * d, -130, d < 0), F(-b * d, -70, d < 0), F(0, 0)], between(3000, 3800)); },
     () => { const [d, a] = room(); // a dash to the side, a pause there, a glide home
-      return (async () => { await run([T(0, 0), T(.6 * a * d, -60, d > 0), T(a * d, -30, d > 0)], 1100, "ease-out"); await wait(between(500, 1400)); await run([T(a * d, -30, d < 0), T(.5 * a * d, -70, d < 0), T(0, 0)], 1300, "ease-in-out"); })(); },
+      return (async () => { await run([F(0, 0), F(.6 * a * d, -60, d > 0), F(a * d, -30, d > 0)], 1100, "ease-out"); await wait(between(500, 1400)); await run([F(a * d, -30, d < 0), F(.5 * a * d, -70, d < 0), F(0, 0)], 1300, "ease-in-out"); })(); },
     () => run([T(0, 0), T(-10, -6), T(-14, 0), T(-4, -6), T(6, 0), T(14, -6), T(10, 0), T(0, -4), T(0, 0)], 1500, "ease-in-out"), // hopping along the branch
   ];
   let lastFly = -1;
