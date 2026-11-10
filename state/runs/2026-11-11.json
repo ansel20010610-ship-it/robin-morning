@@ -9,5 +9,14 @@
       "mystery"
     ],
     "note": "devotion、music（qa）、perio（number）完成；perio 審稿判定重寫→重寫 1、music 修正即可→修正 1；validate 無 WARN"
+  },
+  "2": {
+    "finished_at": "2026-11-11T02:20:32+08:00",
+    "missing": [
+      "football",
+      "news",
+      "literature"
+    ],
+    "note": "文明（argument/lecturer，審稿判定重寫→總編重寫）、謎題（list/detective，修正即可）；重寫1／修正1；未接第1班缺稿（三欄皆已完成）；validate 無 WARN"
   }
 }
