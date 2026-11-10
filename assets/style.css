@@ -2146,3 +2146,22 @@ details.band .svl { margin: 0 0 10px; }
 .photo-view .poke-line.on { opacity: 1; }
 .photo-view .pv-text { max-width: 340px; margin: 0; font-family: var(--serif); font-size: 15px; line-height: 1.75; color: #F5EEDF; text-align: center; }
 .photo-view .pv-close { margin-top: 10px; padding: 8px 22px; font-family: var(--sans); font-size: 13px; letter-spacing: .12em; color: #F5EEDF; background: none; border: 1px solid rgb(245 238 223 / .5); cursor: pointer; }
+/* What happens to the bird (nest.js lifeOf): ill, it is paler, its eyes half shut, a knitted scarf round its neck;
+   away, the perch is empty but for a postcard; on a cat's day the cat's ears and eyes show at the foot of the yard and
+   the bird has slipped down behind the leaves; in a typhoon it sits low in the nest. */
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .bird.sick svg.robin { filter: saturate(.45) brightness(1.04); }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .r-lid { fill: color-mix(in srgb, var(--nest-brown) 70%, var(--robin)); }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .r-scarf { fill: none; stroke: #4F7FA8; stroke-width: 2.6; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .r-scarf.end { stroke-width: 1.7; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .bird.away svg.robin { display: none; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .sc-card rect { fill: var(--nest-cream); stroke: var(--gold); stroke-width: .45; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .sc-card path { fill: none; stroke: var(--muted); stroke-width: .45; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .sc-card .stamp { fill: var(--robin); stroke: none; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .sc-cat path { fill: color-mix(in srgb, var(--ink) 80%, var(--paper)); }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .sc-cat .eye { fill: #E9C24B; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .bird.hiding svg.robin { translate: 0 12%; opacity: .55; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .bird.hiding.storm svg.robin { translate: 0 7%; opacity: 1; }
+.nest .bar.sick i, .nest-stage .bar.sick i { background: #4F7FA8; }
+.nest .bar.away i, .nest-stage .bar.away i { background: var(--gold-soft); }
+.nest-stage .life { font-family: var(--serif); font-size: 14.5px; line-height: 1.7; color: var(--gold-ink); margin: 2px auto 4px; max-width: 30em; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .bird:is(.sick, .away) .note { display: none; } /* no song from an empty perch or a sore throat */

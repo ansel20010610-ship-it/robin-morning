@@ -143,10 +143,95 @@ function storyOf(total, songs, since, date) {
   s.line = lines.join("");
   return s;
 }
+// ——— What happens to the bird: colds, trips, a cat, a visitor, the weather ———
+// The owner, 2026-11-10: 我想增加一點隨機事件，像是生病或是去旅遊，不然這樣長大太簡單了. Every phone of a yard must see the
+// same bird, so whether something happens on a day comes from the yard's code and the date alone (a hash, never
+// Math.random), not from who read what — except one rule anyone can follow: two whole days with no one feeding and the
+// bird catches cold. Nothing it has is ever taken away; what an event costs is growth: while it is ill, the bites go
+// to medicine (LIFE.need of them, at most LIFE.dose a day, so a cold lasts a few days; or it gets well by itself after
+// LIFE.coldMax days), and while it is away travelling
+// the pieces read reach it on the road like letters, and do not make it grow. It comes home with something from where
+// it went. A cat, a visiting bird, a typhoon, a rainy day or a find cost nothing; they are the yard's days. The events
+// begin on EVENTS_FROM — the yard's past is as it was — and at most one starts on a day, with LIFE.rest quiet days after
+// it. A day's bites are counted by the day, medicine first, so the order of bites within a day changes nothing.
+const EVENTS_FROM = "2026-11-12";
+const LIFE = { cold: .025, cat: .02, visit: .025, storm: .03, rain: .015, found: .02, trip: .02, rest: 4, idle: 2, need: [6, 10], dose: 4, coldMax: 10, tripDays: [2, 4] };
+const TRIPS = [["維也納", "一張音樂會的票根"], ["薩爾斯堡", "一張金色的巧克力包裝紙"], ["京都", "一片紅楓葉"], ["花蓮", "一顆白色的大理石子"], ["墾丁", "一枚小貝殼"], ["阿里山", "一顆小松果"],
+  ["布拉格", "一枚舊硬幣"], ["倫敦", "一枚印著知更鳥的郵票"], ["巴黎", "一張塞納河的明信片"], ["金門", "一小片紅磚"], ["北海道", "一根白色的羽毛"], ["蘇格蘭", "一小枝石楠花"]];
+const VISITORS = ["麻雀", "綠繡眼", "白頭翁", "五色鳥", "臺灣藍鵲", "紅嘴黑鵯"];
+const FINDS = ["一顆亮亮的瓶蓋", "一條紅色的毛線", "一枚鈕扣", "一顆玻璃珠", "一片藍色的羽毛", "一小段緞帶"];
+const hashOf = (str) => { let h = 2166136261; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); } h ^= h >>> 13; h = Math.imul(h, 0x5bd1e995); h ^= h >>> 15; return (h >>> 0) / 4294967296; };
+const daysTo = (a, b) => Math.round((Date.parse(`${b}T00:00:00Z`) - Date.parse(`${a}T00:00:00Z`)) / 864e5);
+const stageOf = (g) => STAGES.reduce((i, s, j) => (g >= s.at ? j : i), 0);
+const sortFeeds = (n) => [...(n?.feeds || [])].filter((f) => f && /^\d{4}-\d{2}-\d{2}$/.test(f.d) && typeof f.k === "string" && typeof f.w === "string").sort((a, b) => a.d.localeCompare(b.d) || a.k.localeCompare(b.k));
+export function lifeOf(n, today = twNow().date, from = EVENTS_FROM) {
+  const feeds = sortFeeds(n), code = String(n?.code || ""), pet = petOf(n), N = esc(pet.name), P = pet.p;
+  const roll = (d, what) => hashOf(`${code}|${d}|${what}`);
+  const byDay = new Map();
+  feeds.forEach((f, i) => { if (!byDay.has(f.d)) byDay.set(f.d, []); byDay.get(f.d).push(i); });
+  const effAt = [], kindAt = [], events = [], days = new Map(), treasures = [], went = [];
+  let g = 0, sick = null, trip = null, rest = "", lastFed = "";
+  const first = [n?.since, feeds[0]?.d].filter(Boolean).sort()[0] || today, last = [today, feeds.at(-1)?.d || today].sort()[1];
+  for (let d = first; d <= last; d = addDays(d, 1)) {
+    let hiding = "", visitor = "";
+    const idx = byDay.get(d) || [];
+    if (d >= from) {
+      const si = stageOf(g), m = Number(d.slice(5, 7));
+      if (trip && d > trip.until) {
+        treasures.push(trip.gift);
+        events.push({ d, kind: "home", text: `${N}從${trip.place}回來了，帶回${trip.gift}。路上收到 ${trip.letters} 封信。`, photo: true, big: true });
+        lastFed = [lastFed, trip.until].sort()[1]; trip = null; rest = d; // away is not neglected
+      }
+      if (sick && sick.why === "cold" && daysTo(sick.since, d) >= LIFE.coldMax) { events.push({ d, kind: "well", text: `${N}自己慢慢好起來了。` }); sick = null; rest = d; }
+      // neglect: two whole days with no one feeding
+      if (!sick && !trip && si >= 1 && lastFed && daysTo(lastFed, d) > LIFE.idle && d >= addDays(from, LIFE.idle)) {
+        const need = Math.min(12, 6 + 2 * (daysTo(lastFed, d) - LIFE.idle - 1));
+        sick = { since: d, need, left: need, why: "neglect" };
+        events.push({ d, kind: "sick", text: `好幾天沒有人來餵，${N}著涼生病了。要 ${need} 口才會好。`, photo: true, sick: true });
+      }
+      if (!sick && !trip && si >= 1 && (!rest || daysTo(rest, d) > LIFE.rest)) {
+        const r = roll(d, "day"), wet = m >= 7 && m <= 10, canGo = si >= 3 && !(g >= 500 && m >= 4 && m <= 6);
+        // trip last: whether it can happen (the stage) moves no other event's chance
+        const table = [["cold", LIFE.cold], ["cat", LIFE.cat], ["visit", LIFE.visit], [wet ? "storm" : "rain", wet ? LIFE.storm : LIFE.rain], ["found", LIFE.found], ["trip", canGo ? LIFE.trip : 0]];
+        let acc = 0, ev = "";
+        for (const [k, pr] of table) { acc += pr; if (r < acc) { ev = k; break; } }
+        if (ev === "cold") {
+          const need = LIFE.need[0] + Math.floor(roll(d, "need") * (LIFE.need[1] - LIFE.need[0] + 1));
+          sick = { since: d, need, left: need, why: "cold" };
+          events.push({ d, kind: "sick", text: `${N}感冒了，縮成一團。接下來 ${need} 口要當藥吃（一天最多吃 ${LIFE.dose} 口藥），吃完就會好。`, photo: true, sick: true });
+        } else if (ev === "trip") {
+          const len = LIFE.tripDays[0] + Math.floor(roll(d, "len") * (LIFE.tripDays[1] - LIFE.tripDays[0] + 1));
+          const pool = TRIPS.filter(([pl]) => !went.slice(-4).includes(pl)), [place, gift] = pool[Math.floor(roll(d, "where") * pool.length)];
+          went.push(place);
+          trip = { from: d, until: addDays(d, len - 1), place, gift, letters: 0 };
+          events.push({ d, kind: "trip", text: `${N}出門旅行了，去${place}，要 ${len} 天。這幾天讀的每一篇，會像信一樣寄到路上給${P}。`, photo: true, away: place });
+        } else if (ev === "cat") { hiding = "cat"; rest = d; events.push({ d, kind: "cat", text: `一隻貓在院子外面晃，${N}嚇得躲在葉子後面一整天。`, photo: true, hiding: "cat" }); }
+        else if (ev === "visit") { visitor = VISITORS[Math.floor(roll(d, "who") * VISITORS.length)]; rest = d; events.push({ d, kind: "visit", text: `一隻${visitor}來串門子，和${N}在枝上站了一會兒。` }); }
+        else if (ev === "storm") { hiding = "storm"; rest = d; events.push({ d, kind: "storm", text: `颱風來了，${N}縮在巢裡等風停。` }); }
+        else if (ev === "rain") { rest = d; events.push({ d, kind: "rain", text: `下了一整天雨，${N}的羽毛濕濕的。` }); }
+        else if (ev === "found") { const left = FINDS.filter((x) => !treasures.includes(x)); if (left.length) { const t = left[Math.floor(roll(d, "what") * left.length)]; treasures.push(t); rest = d; events.push({ d, kind: "found", text: `${N}撿到${t}，藏在巢裡。` }); } }
+      }
+    }
+    // the day's bites: on the road they are letters; while ill, medicine first (LIFE.dose a day); the rest make it grow
+    let doses = 0;
+    for (const i of idx) {
+      if (trip) { kindAt[i] = "letter"; trip.letters++; }
+      else if (sick && doses < LIFE.dose) {
+        kindAt[i] = "med"; sick.left--; doses++;
+        if (sick.left <= 0) { events.push({ d, kind: "well", text: `${N}的病好了。` }); sick = null; rest = d; }
+      } else { g++; kindAt[i] = "grow"; }
+      effAt[i] = g;
+    }
+    if (idx.length) lastFed = d;
+    days.set(d, { g, sick: Boolean(sick), away: trip ? trip.place : "", hiding, visitor, doses });
+  }
+  const now = days.get(today) || {};
+  return { g, feeds, effAt, kindAt, events, treasures, sick, trip, hiding: now.hiding || "", visitor: now.visitor || "", dosed: (now.doses || 0) >= LIFE.dose, day: (d) => days.get(d) || {}, todays: events.filter((e) => e.d === today) };
+}
 export function nestState(n = nest()) {
   if (!n) return null;
-  const today = twNow().date, feeds = n.feeds || [], pet = petOf(n);
-  const total = feeds.length, si = STAGES.reduce((i, s, j) => (total >= s.at ? j : i), 0), stage = STAGES[si];
+  const today = twNow().date, feeds = n.feeds || [], pet = petOf(n), life = lifeOf(n, today);
+  const total = life.g, si = stageOf(total), stage = STAGES[si]; // growth: the bites that went to it, not to medicine or the road
   const last = STAGES[STAGES.length - 1].at, songs = total >= last ? 1 + Math.floor((total - last) / SONG) : 0;
   // what the bar runs to: whichever comes first of the next stage, the next thing in the yard, the next song
   const cands = [nextMilestone(total)].map((m) => ({ at: m.at, zh: WORDS[m.k] }));
@@ -167,8 +252,9 @@ export function nestState(n = nest()) {
   // longer tail, more feather lines, specks on the wing, a deeper red) — so the bird itself is a little different
   // after every bite for a long time (the owner: 外觀也要持續變化).
   const story = storyOf(total, songs, n.since, today), mature = Math.min(1, total / 400) * (story.molt ? .6 : 1);
-  return { total, stage, si, next, toNext: next.at - total, from, songs, items, story, grow: Math.min(1, total / STAGES[4].at), mature,
-    pet, fed, todayBy, who, week, idle, hunger, full: fed >= 3, members: byMember(feeds), everyone: Object.keys(todayBy).length, songNames: songNames(n, songs) };
+  return { total, read: feeds.length, stage, si, next, toNext: next.at - total, from, songs, items, story, grow: Math.min(1, total / STAGES[4].at), mature,
+    pet, fed, todayBy, who, week, idle, hunger, full: fed >= 3, members: byMember(feeds), everyone: Object.keys(todayBy).length, songNames: songNames(n, songs, life),
+    life, sick: life.sick, away: life.trip, hiding: life.hiding, back: life.trip ? daysTo(today, life.trip.until) + 1 : 0 };
 }
 
 // ——— The songs ———
@@ -178,11 +264,11 @@ export function nestState(n = nest()) {
 // to be found, the song stays 第幾首.
 let lookup = null;
 export const setLookup = (fn) => { lookup = typeof fn === "function" ? fn : null; };
-function songNames(n, songs) {
+function songNames(n, songs, life = lifeOf(n)) {
   if (!songs || !lookup) return [];
   // the k-th song is named by the last music piece read in the sixty bites that taught it (never a piece that already
-  // names an earlier song); none there → the song keeps its number
-  const feeds = [...(n.feeds || [])].sort((a, b) => a.d.localeCompare(b.d) || a.k.localeCompare(b.k)), out = [], used = new Set();
+  // names an earlier song); none there → the song keeps its number. The bites that taught are the ones it grew by.
+  const feeds = life.feeds.filter((_, i) => life.kindAt[i] === "grow"), out = [], used = new Set();
   const first = STAGES[STAGES.length - 1].at;
   for (let k = 1; k <= songs; k++) {
     const to = Math.min(feeds.length - 1, first + SONG * (k - 1) - 1), from = k === 1 ? 0 : first + SONG * (k - 2);
@@ -219,7 +305,8 @@ function robinSvg(st, { perch = true } = {}) {
       ${WING_LINES.slice(0, lines).map((d) => `<path class="r-line" d="${d}"/>`).join("")}
       ${WING_SPECKS.slice(0, specks).map(([x, y]) => `<circle class="r-speck" cx="${x}" cy="${y}" r=".55"/>`).join("")}</g>
     <path class="r-beak" d="M15.6 29.6 L9.8 30.9 L15.7 32.2 Z"/>
-    <circle class="r-eye" cx="21.6" cy="29.2" r="1.45"/><circle class="r-eyehi" cx="22.1" cy="28.7" r=".45"/>`;
+    <circle class="r-eye" cx="21.6" cy="29.2" r="1.45"/><circle class="r-eyehi" cx="22.1" cy="28.7" r=".45"/>
+    ${st.sick ? `<path class="r-lid" d="M20 28.3 Q21.6 27.4 23.2 28.3 L23.2 29.2 Q21.6 28.6 20 29.2 Z"/><path class="r-scarf" d="M16.8 35.2 Q23.5 39.6 30.6 35.4"/><path class="r-scarf end" d="M27.6 37.2 l2.6 6.4 M25.8 37.8 l1.4 6.2"/>` : ""}`;
 }
 // The egg, before the first bite: on two twigs, on the perch.
 const EGG_SCENE = `<path class="r-perch" d="M13 53 L51 53"/><path class="sc-twig" d="M24 54.2 Q32 61 40 54.2 M26.5 54.2 Q32 58.6 37.5 54.2"/>`;
@@ -265,8 +352,21 @@ const mateSvg = (st) => `<g class="mate" transform="translate(37 23.85) scale(.5
 // Two layers (the owner, 2026-11-09: 樹葉枝枒不應該跟著鳥飛): the scene — perch, nest, leaves, the mate, the year — stands
 // still in its own svg, and only the robin's svg hops, looks round and flies (liveBird animates .robin).
 const PERCH = (long) => `<path class="r-perch" d="M13 53 L${long ? 61 : 51} 53"/>`;
-export const birdSvg = (st) => `<div class="bird s${st.si}${st.full ? " full" : ""} season-${st.story?.season || "none"}" style="--g:${st.grow.toFixed(3)};--m:${st.mature.toFixed(3)}" aria-hidden="true"><svg class="scene" viewBox="0 0 64 64">${st.si ? PERCH(st.story?.mate) + (st.story?.mate ? mateSvg(st) : "") + sceneSvg(st.items, st.story) : EGG_SCENE}</svg><svg class="robin" viewBox="0 0 64 64"><g class="body">${st.si ? robinSvg(st, { perch: false }) : EGG}</g></svg>${st.si >= 5 ? `<i class="note">♪</i><i class="note two">♫</i>${st.songs >= 3 ? '<i class="note three">♬</i>' : ""}` : ""}</div>`;
-const bar = (st) => `<span class="bar"><i style="width:${Math.round(((st.total - st.from) / Math.max(1, st.next.at - st.from)) * 100)}%"></i></span><span class="next">再 ${st.toNext} 口就${st.next.zh}</span>`;
+// While it is away, a postcard leans on the empty perch; on a cat's day, two ears and two eyes at the foot of the yard.
+const POSTCARD = `<g class="sc-card" transform="rotate(-8 30 47)"><rect x="24" y="43" width="13" height="9" rx=".6"/><path d="M26 46 h5 M26 48 h6 M26 50 h4"/><rect class="stamp" x="33" y="44.2" width="2.6" height="3" /></g>`;
+const CAT = `<g class="sc-cat"><path d="M49 64 L49 57.5 L51.2 59.4 L53.6 57.2 L56 59.4 L58.2 57.5 L58.2 64 Z"/><circle class="eye" cx="51.8" cy="61" r=".7"/><circle class="eye" cx="55.4" cy="61" r=".7"/></g>`;
+const moodOf = (st) => `${st.sick ? " sick" : ""}${st.away ? " away" : ""}${st.hiding ? ` hiding ${st.hiding}` : ""}`;
+export const birdSvg = (st) => `<div class="bird s${st.si}${st.full ? " full" : ""}${moodOf(st)} season-${st.story?.season || "none"}" style="--g:${st.grow.toFixed(3)};--m:${st.mature.toFixed(3)}" aria-hidden="true"><svg class="scene" viewBox="0 0 64 64">${st.si ? PERCH(st.story?.mate) + (st.story?.mate ? mateSvg(st) : "") + sceneSvg(st.items, st.story) + (st.away ? POSTCARD : "") + (st.hiding === "cat" ? CAT : "") : EGG_SCENE}</svg><svg class="robin" viewBox="0 0 64 64"><g class="body">${st.si ? robinSvg(st, { perch: false }) : EGG}</g></svg>${st.si >= 5 ? `<i class="note">♪</i><i class="note two">♫</i>${st.songs >= 3 ? '<i class="note three">♬</i>' : ""}` : ""}</div>`;
+const nextLine = (st) => (st.away ? `${st.back <= 1 ? "明天" : `${cn(st.back)}天後`}從${st.away.place}回來` : st.sick ? `再 ${st.sick.left} 口藥就會好` : `再 ${st.toNext} 口就${st.next.zh}`);
+const bar = (st) => { const w = st.away ? 1 - st.back / Math.max(1, daysTo(st.away.from, st.away.until) + 1) : st.sick ? 1 - st.sick.left / st.sick.need : (st.total - st.from) / Math.max(1, st.next.at - st.from);
+  return `<span class="bar${st.sick ? " sick" : st.away ? " away" : ""}"><i style="width:${Math.round(Math.max(0, Math.min(1, w)) * 100)}%"></i></span><span class="next">${esc(nextLine(st))}</span>`; };
+// What it is doing today, when something is going on: ill, away, hiding, a guest, a find.
+const lifeLine = (st) => {
+  const N = esc(st.pet.name), P = st.pet.p;
+  if (st.away) return `${N}去${esc(st.away.place)}旅行了，${st.back <= 1 ? "明天" : `${cn(st.back)}天後`}回來。你們讀的每一篇，${P}在路上都收到了，像收信一樣，只是這幾口不算長大。`;
+  if (st.sick) return `${N}${st.sick.why === "neglect" ? "著涼生病了" : "感冒了"}，縮在巢裡。${st.life.dosed ? `今天的藥吃夠了，再讀的會讓${P}長大；明天接著吃，再 ${st.sick.left} 口就會好。` : `讀的幾篇先當藥吃，再 ${st.sick.left} 口就會好。`}`;
+  return st.life.todays.map((e) => e.text).join(""); // today's own events (a guest, a find, a cat, getting well, coming home)
+};
 // Under the name: the stage, and for the singer how many songs it knows.
 const stageLine = (st) => `<span class="stage">${esc(st.stage.zh)}<i>${esc(st.stage.de)}</i>${st.songs ? `<em>會唱${st.songs === 1 ? "一首歌" : `${cn(st.songs)}首歌`}</em>` : ""}</span>`;
 
@@ -281,7 +381,7 @@ export function nestBox() {
   return `<a class="nest plate" href="#/nest" aria-label="後院：${esc(st.pet.name)}，${esc(st.stage.zh)}，今天吃了 ${st.fed} 口">${birdSvg(st)}<div class="txt">
       <span class="k">後院<i>Hinterhof</i></span>
       <b>${esc(st.pet.name)}</b>${stageLine(st)}
-      <span class="say">${st.fed ? `今天吃了 ${st.fed} 口：${st.who.join("、")}。` : st.hunger}</span>
+      <span class="say">${st.away ? `去${esc(st.away.place)}旅行了。` : st.sick ? `生病了，在吃藥。` : st.fed ? `今天吃了 ${st.fed} 口：${st.who.join("、")}。` : st.hunger}</span>
       ${bar(st)}</div></a>`;
 }
 // Bites by the others that this reader has not looked at yet (rm.nest.seen = how many of theirs were there when 收藏
@@ -301,6 +401,8 @@ export function liveBird(root, { fly = true } = {}) {
   const bird = root?.querySelector(".bird"), robin = bird?.querySelector(".robin");
   if (!bird || !robin || calm()) return;
   const si = Number((bird.className.match(/\bs(\d)\b/) || [])[1] || 0);
+  if (bird.classList.contains("away")) return; // nobody on the perch
+  if (bird.classList.contains("sick") || bird.classList.contains("hiding")) fly = false; // it stays put today
   const timers = [];
   const wait = (ms) => new Promise((r) => timers.push(setTimeout(r, ms)));
   const run = (frames, ms, easing = "ease-in-out") => robin.animate(frames, { duration: ms, easing, fill: "none" }).finished.catch(() => {});
@@ -410,7 +512,7 @@ export function flyBy() {
   const n = nest();
   if (!n || calm() || document.querySelector(".flyby")) return false;
   const st = nestState(n);
-  if (st.si === 0) return false;
+  if (st.si === 0 || st.sick || st.away || st.hiding) return false; // ill, away or hiding, it does not come out of 收藏
   const W = innerWidth, H = innerHeight, s = Math.random() < .5 ? 1 : -1;
   // the room between the bar at the top (an article's or a page's, if any) and the nav at the foot
   const top = Math.max(0, document.querySelector(".topbar")?.getBoundingClientRect().bottom || 0);
@@ -514,13 +616,17 @@ export function feedNotice(before, after) {
   document.querySelector(".feed-note")?.remove();
   const n = after.pet.name, p = after.pet.p;
   let line;
-  if (before && after.si > before.si) line = `這一口，${p}${after.si === 1 ? "破殼了" : after.si === 2 ? "長出絨毛了" : after.si === 3 ? "開始學飛了" : after.si === 4 ? "長成成鳥了" : "成了歌者"}。`;
+  if (after.away) line = `${p}不在家。這一篇像一封信，寄到${after.away.place}給${p}。`;
+  else if (before?.sick && !after.sick) line = `吃完這一口，${p}的病好了。`;
+  else if (after.sick && before && after.total === before.total) line = `這一口當藥吃了。`;
+  else if (after.sick) line = `今天的藥吃夠了，這一口讓${p}長大一點。`;
+  else if (before && after.si > before.si) line = `這一口，${p}${after.si === 1 ? "破殼了" : after.si === 2 ? "長出絨毛了" : after.si === 3 ? "開始學飛了" : after.si === 4 ? "長成成鳥了" : "成了歌者"}。`;
   else if (before && after.songs > before.songs) line = `這一口，${p}學會了第${cn(after.songs)}首歌。`;
   else if (before && Object.values(after.items).reduce((a, b) => a + b, 0) > Object.values(before.items).reduce((a, b) => a + b, 0)) line = `這一口，${WORDS[Object.keys(after.items).find((k) => (after.items[k] || 0) > (before.items[k] || 0))] || "院子裡多了一樣東西"}。`;
   else line = FEED_LINES[Math.floor(Math.random() * FEED_LINES.length)](p);
   const el = document.createElement("a");
   el.href = "#/nest"; el.className = "feed-note"; el.setAttribute("role", "status");
-  el.innerHTML = `${birdSvg(after)}<span class="t"><b>${esc(n)}</b><span class="l">${esc(line)}</span><span class="n">再 ${after.toNext} 口就${esc(after.next.zh)}</span></span>`;
+  el.innerHTML = `${birdSvg(after)}<span class="t"><b>${esc(n)}</b><span class="l">${esc(line)}</span><span class="n">${esc(nextLine(after))}</span></span>`;
   document.body.append(el);
   requestAnimationFrame(() => el.classList.add("on"));
   const away = () => { el.classList.remove("on"); setTimeout(() => el.remove(), 500); };
@@ -591,7 +697,14 @@ export function pokeBird(root, st) {
   const T = (x, y, rot = 0, sx = 1) => ({ transform: `translate(${x}px, ${y}px) rotate(${rot}deg) scaleX(${sx})` });
   const notes = (k) => { for (let i = 0; i < k; i++) setTimeout(() => { const e = document.createElement("i"); e.className = "poke-note"; e.textContent = ["♪", "♫", "♬"][i % 3]; e.style.left = `${52 + Math.random() * 18}%`; bird.append(e); setTimeout(() => e.remove(), 1500); }, i * 260); };
   let act;
-  if (st.si === 0) act = async () => { chirp("egg"); say("蛋晃了一下。"); await run([T(0, 0), T(0, 0, -8), T(0, 0, 7), T(0, 0, -4), T(0, 0)], 700); };
+  if (st.away) { say(`${n}不在家，去${st.away.place}了。`); poking = false; return; }
+  if (st.sick && st.si > 0) act = [
+    async () => { chirp("peep"); say(`${n}咳了一聲，往巢裡縮。`); await run([T(0, 0), T(0, 2, 4, .96), T(0, 0)], 700); },
+    async () => { chirp("tic"); say(`${n}抬頭看你一眼，又閉上眼睛。`); await run([T(0, 0), T(0, -2, -6), T(0, -2, -6), T(0, 1)], 1200); },
+    async () => { say(`${n}縮成一團，圍巾拉得緊緊的。`); await run([T(0, 0), T(0, 2, 0, .92), T(0, 2, 0, .92), T(0, 0)], 1300); },
+  ][Math.floor(Math.random() * 3)];
+  else if (st.hiding && st.si > 0) act = async () => { chirp("tic"); say(st.hiding === "cat" ? `${n}從葉子後面探出頭，確定貓走了沒。` : `${n}縮在巢裡，等風停。`); await run([T(0, 0), T(0, -10), T(0, -10), T(0, 0)], 1300); };
+  else if (st.si === 0) act = async () => { chirp("egg"); say("蛋晃了一下。"); await run([T(0, 0), T(0, 0, -8), T(0, 0, 7), T(0, 0, -4), T(0, 0)], 700); };
   else if (st.si < 3) act = [
     async () => { chirp("peep"); say(`${n}張大了嘴，以為有東西吃。`); await run([T(0, 0), T(0, -3, -6), T(0, -3, -6), T(0, 0)], 900); },
     async () => { chirp("rustle"); say(`${n}縮成一團，又慢慢探出頭。`); await run([T(0, 2, 0, .9), T(0, 2, 0, .9), T(0, 0, 0, 1)], 1300); },
@@ -630,12 +743,14 @@ export function renderNest(el, api, afterSync = false) {
   el.innerHTML = `${head}
     <div class="nest-stage">${birdSvg(st)}<p class="poke-line" aria-live="polite"></p>
       <b>${esc(pet.name)}</b>${stageLine(st)}
-      <p class="say">${st.songs > 1 ? `又學會了一首，現在會唱${cn(st.songs)}首歌；每首都比上一首長一點。` : esc(st.stage.say(pet.p))}</p>
-      <p class="today">${st.fed ? `今天吃了 ${st.fed} 口：${st.who.join("、")}。${st.everyone > 1 ? "大家都餵過了。" : ""}` : st.hunger}</p>
+      <p class="say">${st.away || st.sick ? lifeLine(st) : st.songs > 1 ? `又學會了一首，現在會唱${cn(st.songs)}首歌；每首都比上一首長一點。` : esc(st.stage.say(pet.p))}</p>
+      ${!st.away && !st.sick && st.life.todays.length ? `<p class="life">${lifeLine(st)}</p>` : ""}
+      <p class="today">${st.away ? (st.fed ? `今天寄了 ${st.fed} 封信給${esc(pet.p)}：${st.who.join("、")}。` : `今天還沒有人寫信給${esc(pet.p)}。`) : st.fed ? `今天吃了 ${st.fed} 口：${st.who.join("、")}。${st.everyone > 1 ? "大家都餵過了。" : ""}` : st.hunger}</p>
       ${st.si ? `<p class="season">${esc(st.story.line)}</p>` : ""}
       ${bar(st)}
       <details class="nest-more"><summary>院子裡有什麼<span class="de">Inventar</span></summary>
-        <p class="small">全院一共讀了 ${st.total} 篇${n.since ? `，從 ${esc(fmtDate(n.since, "short"))} 開院算起` : ""}${got.length ? `。院子裡有${got.join("、")}` : ""}${st.story.mate ? "，還有一隻伴侶" : ""}。</p>
+        <p class="small">全院一共讀了 ${st.read} 篇${n.since ? `，從 ${esc(fmtDate(n.since, "short"))} 開院算起` : ""}${st.read > st.total ? `，其中 ${st.total} 口讓${esc(pet.p)}長大` : ""}${got.length ? `。院子裡有${got.join("、")}` : ""}${st.story.mate ? "，還有一隻伴侶" : ""}。</p>
+        ${st.life.treasures.length ? `<p class="small">巢裡藏著的寶貝：${st.life.treasures.map(esc).join("、")}。</p>` : ""}
         ${st.songs ? `<p class="small songs">會唱的歌：${st.songNames.map((s, i) => s ? esc(s) : `第${cn(i + 1)}首`).join("、")}。</p>` : ""}</details>
       <a class="nest-album-link" href="#/nest/album">翻翻${esc(pet.name)}的相簿<span class="de">Album</span> →</a></div>
     <section class="set"><h2>這七天</h2><ol class="nest-week" aria-label="這七天每天餵了幾口">${wk}</ol></section>
@@ -657,42 +772,49 @@ export function renderNest(el, api, afterSync = false) {
 // yard opened (an egg), each stage, the mate, a new season, the moult, eggs, chicks, the young flown, Christmas, a
 // birthday — and the smaller things (a twig, a leaf, a song and its name, a hundredth bite, a friend's first bite)
 // are lines under the day. A bite has no hour, so a day says who fed that day, not who fed which bite.
-function lookAt(total, date, since) {
+function lookAt(total, date, since, flags = {}) {
   const si = STAGES.reduce((i, s, j) => (total >= s.at ? j : i), 0), last = STAGES[STAGES.length - 1].at;
   const songs = total >= last ? 1 + Math.floor((total - last) / SONG) : 0, items = {};
   for (const m of milestones(total)) items[m.k] = (items[m.k] || 0) + 1;
   const story = storyOf(total, songs, since, date);
-  return { si, songs, items, story, full: false, grow: Math.min(1, total / STAGES[4].at), mature: Math.min(1, total / 400) * (story.molt ? .6 : 1) };
+  return { si, songs, items, story, full: false, grow: Math.min(1, total / STAGES[4].at), mature: Math.min(1, total / 400) * (story.molt ? .6 : 1), ...flags };
 }
 export function albumOf(n = nest()) {
   if (!n) return null;
-  const pet = petOf(n), today = twNow().date;
-  const feeds = [...(n.feeds || [])].filter((f) => f && /^\d{4}-\d{2}-\d{2}$/.test(f.d) && typeof f.k === "string").sort((a, b) => a.d.localeCompare(b.d) || a.k.localeCompare(b.k));
+  const pet = petOf(n), today = twNow().date, life = lifeOf(n, today), feeds = life.feeds;
   const start = [n.since, feeds[0]?.d].filter(Boolean).sort()[0] || today, since = start;
   const who = (id) => (id === n.me ? "你" : esc(n.members?.[id] || "朋友"));
-  const total = feeds.length, last = STAGES[STAGES.length - 1].at, songs = total >= last ? 1 + Math.floor((total - last) / SONG) : 0, names = songNames(n, songs);
-  const days = new Map(); // date → { ev: [{ text, photo?: {total, date}, big }], by: {member: bites} }
+  // the growth count, not the bites read: what went to medicine or reached it on the road made it no bigger (lifeOf)
+  const g = life.g, last = STAGES[STAGES.length - 1].at, songs = g >= last ? 1 + Math.floor((g - last) / SONG) : 0, names = songNames(n, songs, life);
+  const days = new Map(); // date → { ev: [{ text, photo?: {total, raw, date, flags}, big }], by: {member: bites} }
   const day = (d) => { if (!days.has(d)) days.set(d, { ev: [], by: {} }); return days.get(d); };
-  const snap = (c, d) => ({ total: c, date: d });
-  day(start).ev.push({ text: `院子開張，${pet.p}還是一顆蛋。`, photo: snap(0, start), big: true });
+  const snap = (c, raw, d, flags = {}) => ({ total: c, raw, date: d, flags });
+  day(start).ev.push({ text: `院子開張，${pet.p}還是一顆蛋。`, photo: snap(0, 0, start), big: true });
   const firstOf = new Set();
   feeds.forEach((f, i) => {
-    const c = i + 1, d = f.d, D = day(d);
+    const raw = i + 1, d = f.d, D = day(d);
     D.by[f.w] = (D.by[f.w] || 0) + 1;
     if (!firstOf.has(f.w)) { firstOf.add(f.w); if (d !== start) D.ev.push({ text: `${who(f.w)}第一次來餵。` }); } // who fed on the opening day opened it together
-    const st = STAGES.findIndex((x, j) => j > 0 && x.at === c);
-    if (st > 0) D.ev.push({ text: `${esc(pet.name)}${["", "破殼了", "長出絨毛了", "開始學飛了", "長成成鳥了", "成了歌者"][st]}。${STAGES[st].say(pet.p)}${st === STAGES.length - 1 && names[0] ? `第一首歌是${esc(names[0])}。` : ""}`, photo: snap(c, d), big: true, stage: st });
+    if (raw % 100 === 0) D.ev.push({ text: `讀到第${cn(raw)}篇。` });
+    if (life.kindAt[i] !== "grow") return;
+    const c = life.effAt[i], st = STAGES.findIndex((x, j) => j > 0 && x.at === c);
+    if (st > 0) D.ev.push({ text: `${esc(pet.name)}${["", "破殼了", "長出絨毛了", "開始學飛了", "長成成鳥了", "成了歌者"][st]}。${STAGES[st].say(pet.p)}${st === STAGES.length - 1 && names[0] ? `第一首歌是${esc(names[0])}。` : ""}`, photo: snap(c, raw, d), big: true, stage: st });
     if (c > last && (c - last) % SONG === 0) { const k = (c - last) / SONG + 1; D.ev.push({ text: `學會第${cn(k)}首歌${names[k - 1] ? `：${esc(names[k - 1])}` : ""}。` }); }
-    if (c === 500) D.ev.push({ text: `一隻伴侶飛來了，站在枝的另一頭。`, photo: snap(c, d), big: true });
+    if (c === 500) D.ev.push({ text: `一隻伴侶飛來了，站在枝的另一頭。`, photo: snap(c, raw, d), big: true });
     for (const m of milestones(c)) if (m.at === c) D.ev.push({ text: `${WORDS[m.k]}。` });
-    if (c % 100 === 0 && c !== 500) D.ev.push({ text: `第${cn(c)}口。` });
   });
+  const rawBy = (d) => { let lo = 0, hi = feeds.length; while (lo < hi) { const m = (lo + hi) >> 1; if (feeds[m].d <= d) lo = m + 1; else hi = m; } return lo; };
+  const gBy = (d) => life.day(d).g ?? 0;
+  // what happened to it: colds, trips, a cat, a guest, the weather, a find (lifeOf), with a photo where it looked different
+  for (const e of life.events) {
+    const flags = e.sick ? { sick: true } : e.away ? { away: { place: e.away } } : e.hiding ? { hiding: e.hiding } : {};
+    day(e.d).ev.push({ text: e.text, big: Boolean(e.big || e.photo), ...(e.photo ? { photo: snap(gBy(e.d), rawBy(e.d), e.d, flags) } : {}) });
+  }
   // the calendar: what came with the day, not with a bite
-  const countBy = (d) => { let lo = 0, hi = feeds.length; while (lo < hi) { const m = (lo + hi) >> 1; if (feeds[m].d <= d) lo = m + 1; else hi = m; } return lo; };
   const SEASONS = { spring: "春天來了，枝上開花。", summer: "入夏，葉子長滿了枝。", autumn: "入秋，葉子黃了。", winter: "冬天到了，枝上積了雪。" };
-  let prev = storyOf(countBy(start), 0, since, start);
+  let prev = storyOf(gBy(start), 0, since, start);
   for (let d = addDays(start, 1); d <= today; d = addDays(d, 1)) {
-    const c = countBy(d), sg = c >= last ? 1 + Math.floor((c - last) / SONG) : 0, s2 = storyOf(c, sg, since, d), out = [];
+    const c = gBy(d), sg = c >= last ? 1 + Math.floor((c - last) / SONG) : 0, s2 = storyOf(c, sg, since, d), out = [];
     if (s2.birthday) out.push({ text: `院子開張${s2.years === 1 ? "一週年" : `${cn(s2.years)}週年`}。`, big: true });
     if (s2.season !== prev.season) out.push({ text: SEASONS[s2.season] });
     if (s2.molt && !prev.molt && c) out.push({ text: `${pet.p}開始換羽，顏色淡了一些。` });
@@ -702,12 +824,13 @@ export function albumOf(n = nest()) {
     if (s2.chicks && !prev.chicks) out.push({ text: "雛鳥孵出來了。", big: true });
     if (s2.fledged && !prev.fledged) out.push({ text: "幼鳥飛走了，院子安靜下來。" });
     if (s2.christmas && !prev.christmas) out.push({ text: "枝頭掛上一顆小星星。" });
-    if (out.length) { const D = day(d); D.ev.push(...out.map((e, j) => (j === 0 ? { ...e, photo: snap(c, d) } : e))); } // after the day's bites: the chicks of a mate that came that day
+    const ds = life.day(d), flags = ds.sick ? { sick: true } : ds.away ? { away: { place: ds.away } } : {};
+    if (out.length) { const D = day(d); D.ev.push(...out.map((e, j) => (j === 0 ? { ...e, photo: snap(c, rawBy(d), d, flags) } : e))); } // after the day's bites: the chicks of a mate that came that day
     prev = s2;
   }
   const list = [...days.entries()].filter(([, v]) => v.ev.length).sort((a, b) => a[0].localeCompare(b[0])).map(([date, v]) => ({ date, ...v }));
-  const reached = STAGES.map((x, j) => ({ ...x, j, on: j === 0 ? start : feeds[x.at - 1]?.d || null }));
-  return { pet, start, total, list, reached, n, names, lookAt: (c, d) => lookAt(c, d, since) };
+  const reached = STAGES.map((x, j) => ({ ...x, j, on: j === 0 ? start : feeds[life.effAt.findIndex((e, i) => life.kindAt[i] === "grow" && e >= x.at)]?.d || null }));
+  return { pet, start, total: feeds.length, g, list, reached, n, names, away: (d) => Boolean(life.day(d).away), lookAt: (c, d, flags) => lookAt(c, d, since, flags) };
 }
 export function renderNestAlbum(el, api, afterSync = false) {
   const n = nest();
@@ -715,18 +838,18 @@ export function renderNestAlbum(el, api, afterSync = false) {
   const a = albumOf(n), pet = a.pet, today = twNow().date;
   const days = Math.round((Date.parse(`${today}T00:00:00Z`) - Date.parse(`${a.start}T00:00:00Z`)) / 864e5) + 1;
   const md = (d) => `${Number(d.slice(5, 7))} 月 ${Number(d.slice(8))} 日`;
-  const grow = a.reached.map((x) => `<li class="${x.on ? "on" : ""}"><b>${esc(x.zh)}</b><span>${x.on ? esc(md(x.on)) : `再 ${x.at - a.total} 口`}</span></li>`).join("");
+  const grow = a.reached.map((x) => `<li class="${x.on ? "on" : ""}"><b>${esc(x.zh)}</b><span>${x.on ? esc(md(x.on)) : `再 ${x.at - a.g} 口`}</span></li>`).join("");
   let pic = 0, month = "";
   const shots = []; // every print on the page, for the enlarged view: where it was taken and what happened
-  const cap = (p) => `${esc(md(p.date))}・${p.total ? `第 ${p.total} 口` : "開院"}`;
-  const photo = (p, big, text) => { const st = { ...a.lookAt(p.total, p.date), pet }; const tilt = [-1.6, 1.2, -.8, 1.7, -1.2, .7][pic % 6]; shots.push({ p, text }); return `<figure class="nest-photo${big ? " big" : ""}" style="--tilt:${tilt}deg" data-shot="${pic++}" role="button" tabindex="0" aria-label="放大 ${esc(md(p.date))} 的照片">${birdSvg(st)}<figcaption>${cap(p)}</figcaption></figure>`; };
+  const cap = (p) => `${esc(md(p.date))}・${p.raw ? `第 ${p.raw} 口` : "開院"}`;
+  const photo = (p, big, text) => { const st = { ...a.lookAt(p.total, p.date, p.flags), pet }; const tilt = [-1.6, 1.2, -.8, 1.7, -1.2, .7][pic % 6]; shots.push({ p, text }); return `<figure class="nest-photo${big ? " big" : ""}" style="--tilt:${tilt}deg" data-shot="${pic++}" role="button" tabindex="0" aria-label="放大 ${esc(md(p.date))} 的照片">${birdSvg(st)}<figcaption>${cap(p)}</figcaption></figure>`; };
   const body = a.list.map((d) => {
     const m = d.date.slice(0, 7), head = m !== month ? `<h2 class="album-mon"><span>${Number(m.slice(5))} 月</span><i>${m.slice(0, 4)}</i></h2>` : "";
     month = m;
     const by = Object.entries(d.by).sort((x, y) => y[1] - x[1]).map(([id, c]) => `${id === n.me ? "你" : esc(n.members?.[id] || "朋友")} ${c} 口`);
     const pics = d.ev.filter((e) => e.photo).map((e) => photo(e.photo, e.big, e.text)).join("");
     const lines = d.ev.map((e) => `<li${e.big ? ' class="big"' : ""}>${e.text}</li>`).join("");
-    return `${head}<section class="album-day"><time datetime="${d.date}">${esc(md(d.date))}</time>${pics ? `<div class="album-pics">${pics}</div>` : ""}<ul>${lines}</ul>${by.length ? `<p class="by">這天餵的：${by.join("、")}</p>` : ""}</section>`;
+    return `${head}<section class="album-day"><time datetime="${d.date}">${esc(md(d.date))}</time>${pics ? `<div class="album-pics">${pics}</div>` : ""}<ul>${lines}</ul>${by.length ? `<p class="by">${a.away(d.date) ? "這天寫信的" : "這天餵的"}：${by.join("、")}</p>` : ""}</section>`;
   }).join("");
   // 回到後院 at the top left, where a way back is looked for (the owner, 2026-11-10: 回到後院放到左上角)
   el.innerHTML = `<a class="album-back" href="#/nest"><span aria-hidden="true">‹</span> 回到後院<span class="de">Hinterhof</span></a>
@@ -741,7 +864,7 @@ export function renderNestAlbum(el, api, afterSync = false) {
   const open = (fig) => {
     const i = Number(fig.dataset.shot), shot = shots[i];
     if (!shot || document.querySelector(".photo-view")) return;
-    const st = { ...a.lookAt(shot.p.total, shot.p.date), pet };
+    const st = { ...a.lookAt(shot.p.total, shot.p.date, shot.p.flags), pet };
     st.songNames = a.names.slice(0, st.songs);
     const view = document.createElement("div");
     view.className = "photo-view"; view.setAttribute("role", "dialog"); view.setAttribute("aria-modal", "true"); view.setAttribute("aria-label", `${md(shot.p.date)}的照片`);
