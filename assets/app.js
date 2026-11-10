@@ -2352,9 +2352,10 @@ async function boot() {
   // 後院 (nest.js scrollFlyer): on a 特供版 phone with a yard, the bird now and then flies across the screen as the reader
   // scrolls — any page, articles included (the owner, 2026-11-09: 我在滑首頁的時候鳥會飛出來; 2026-11-10: 不只是滑首頁，
   // 其他地方也要跑出來). One listener for the whole app, so the pacing (first after a short scroll, then at least 35 s
-  // apart) carries across pages; not in the yard itself, where the bird already is.
+  // apart) carries across pages. It comes out of the 收藏 tab, where the yard is (nest.js flyBy), so not on 收藏 itself
+  // or in the yard, where the bird already is.
   const onFly = scrollFlyer();
-  window.addEventListener("scroll", () => { if (sonder() && nest() && !(location.hash || "").startsWith("#/nest")) onFly(); }, { passive: true });
+  window.addEventListener("scroll", () => { if (sonder() && nest() && !/^#\/(nest|saved)/.test(location.hash || "")) onFly(); }, { passive: true });
   try { await route(); } catch (e) { console.warn("route failed", e); }
   runAutoAdd();
   // While the front page stays open: keep the countdown and the day change current, flip to the new issue at 07:30,
