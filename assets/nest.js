@@ -11,6 +11,7 @@
 // posts what this phone fed (and the bird's name when it changed here) and takes back the yard's members, every feed
 // and the name; without it the yard is this phone alone and says so. The bird never dies.
 import { esc, store, twNow, fmtDate, toast } from "./util.js";
+import { drawCard, cardWords, cardMood } from "./postcard.js";
 
 const ALPHA = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"; // no I, L, O, 0, 1: a code read aloud or typed from a photo stays right
 const rnd = (n) => { const a = crypto.getRandomValues(new Uint8Array(n)); return [...a].map((b) => ALPHA[b % ALPHA.length]).join(""); };
@@ -159,22 +160,22 @@ const EVENTS_FROM = "2026-11-12";
 // Harder since the owner asked (2026-11-10: 調難一點): colds and trips come about twice as often and last longer, a
 // cold takes three doses a day, and a single whole day with no one feeding is enough to catch one.
 const LIFE = { cold: .045, cat: .02, visit: .02, storm: .03, rain: .015, found: .015, trip: .04, idle: 1, need: [9, 15], dose: 3, coldMax: 10, tripDays: [3, 5] };
-// Where it goes, and the postcard it sends from there (the owner, 2026-11-10: 我要他去旅行可以帶明信片回來): the place in
-// Chinese and in its own name, a view (a city's roofs, mountains or the sea), the colours of its sky and ground, and
-// a line in the bird's own words; the souvenir it brings home goes into the nest.
+// Where it goes: the place in Chinese and in its own name, the id of its drawing (postcard.js), and the souvenir it
+// brings home to the nest. From the road it sends a postcard every day (the owner, 2026-11-10: 我要他去旅行可以帶明信片
+// 回來; 文案和照片每天都不一樣), each drawn and written for its day.
 const TRIPS = [
-  { zh: "維也納", de: "Wien", view: "city", sky: "#E9D7B4", ground: "#9C6B4E", gift: "一張音樂會的票根", line: "我在歌劇院的屋簷上站了一晚，樓下的人都穿得好正式，音樂從窗縫一直流出來。" },
-  { zh: "薩爾斯堡", de: "Salzburg", view: "hills", sky: "#D6E2E6", ground: "#6F8A5E", gift: "一張金色的巧克力包裝紙", line: "這裡的山很近，城堡站在山頂，街上到處都在放莫札特。" },
-  { zh: "京都", de: "Kyōto", view: "hills", sky: "#F1DCCB", ground: "#A4483A", gift: "一片紅楓葉", line: "寺院的屋頂一層一層的，楓葉紅得像我的胸口，我躲在裡面沒人找得到。" },
-  { zh: "花蓮", de: "Hualien", view: "sea", sky: "#CFE0E8", ground: "#2F5D78", gift: "一顆白色的大理石子", line: "海是很深很深的藍，山直接站在海邊，浪聲整晚都沒停。" },
-  { zh: "墾丁", de: "Kenting", view: "sea", sky: "#F3E3BC", ground: "#3D7F8E", gift: "一枚小貝殼", line: "沙灘好燙，我只敢站在椰子樹的影子裡，看別人下水。" },
-  { zh: "阿里山", de: "Alishan", view: "hills", sky: "#E6D2C8", ground: "#40624B", gift: "一顆小松果", line: "清晨四點大家都在等日出，我比太陽還早醒，在神木上等。" },
-  { zh: "布拉格", de: "Praha", view: "city", sky: "#DCD4C4", ground: "#7A5A48", gift: "一枚舊硬幣", line: "橋上有好多雕像，我挑了一尊站上去，一個下午都沒人發現。" },
-  { zh: "倫敦", de: "London", view: "city", sky: "#D3D6D8", ground: "#5B5F66", gift: "一枚印著知更鳥的郵票", line: "這裡的人說知更鳥是他們最喜歡的鳥，每個人都對我特別好。" },
-  { zh: "巴黎", de: "Paris", view: "city", sky: "#E4DCE6", ground: "#6E6385", gift: "一張舊書攤的小書籤", line: "塞納河邊的書攤老闆分了我一點麵包屑，還讓我站在書堆上。" },
-  { zh: "金門", de: "Kinmen", view: "sea", sky: "#E8DACB", ground: "#9A4E3C", gift: "一小片紅磚", line: "紅磚房子的屋簷剛好可以躲雨，風很大，吹得我站不穩。" },
-  { zh: "北海道", de: "Hokkaidō", view: "hills", sky: "#E3E9EE", ground: "#8DA3B5", gift: "一根白色的羽毛", line: "下雪了，我把羽毛蓬起來，看起來圓了一整圈。" },
-  { zh: "蘇格蘭", de: "Scotland", view: "hills", sky: "#DDD8E6", ground: "#7B5C86", gift: "一小枝石楠花", line: "荒野上開滿紫色的石楠花，風裡有海的味道。" },
+  { id: "wien", zh: "維也納", de: "Wien", gift: "一張音樂會的票根" },
+  { id: "salzburg", zh: "薩爾斯堡", de: "Salzburg", gift: "一張金色的巧克力包裝紙" },
+  { id: "kyoto", zh: "京都", de: "Kyōto", gift: "一片紅楓葉" },
+  { id: "hualien", zh: "花蓮", de: "Hualien", gift: "一顆白色的大理石子" },
+  { id: "kenting", zh: "墾丁", de: "Kenting", gift: "一枚小貝殼" },
+  { id: "alishan", zh: "阿里山", de: "Alishan", gift: "一顆小松果" },
+  { id: "praha", zh: "布拉格", de: "Praha", gift: "一枚舊硬幣" },
+  { id: "london", zh: "倫敦", de: "London", gift: "一枚印著知更鳥的郵票" },
+  { id: "paris", zh: "巴黎", de: "Paris", gift: "一張舊書攤的小書籤" },
+  { id: "kinmen", zh: "金門", de: "Kinmen", gift: "一小片紅磚" },
+  { id: "hokkaido", zh: "北海道", de: "Hokkaidō", gift: "一根白色的羽毛" },
+  { id: "scotland", zh: "蘇格蘭", de: "Scotland", gift: "一小枝石楠花" },
 ];
 const VISITORS = ["麻雀", "綠繡眼", "白頭翁", "五色鳥", "臺灣藍鵲", "紅嘴黑鵯"];
 const FINDS = ["一顆亮亮的瓶蓋", "一條紅色的毛線", "一枚鈕扣", "一顆玻璃珠", "一片藍色的羽毛", "一小段緞帶"];
@@ -187,7 +188,7 @@ export function lifeOf(n, today = twNow().date, from = EVENTS_FROM) {
   const roll = (d, what) => hashOf(`${code}|${d}|${what}`);
   const byDay = new Map();
   feeds.forEach((f, i) => { if (!byDay.has(f.d)) byDay.set(f.d, []); byDay.get(f.d).push(i); });
-  const effAt = [], kindAt = [], events = [], days = new Map(), treasures = [], went = [], postcards = [];
+  const effAt = [], kindAt = [], events = [], days = new Map(), treasures = [], went = [], postcards = [], perPlace = {};
   let g = 0, sick = null, trip = null, lastFed = "";
   const first = [n?.since, feeds[0]?.d].filter(Boolean).sort()[0] || today, last = [today, feeds.at(-1)?.d || today].sort()[1];
   for (let d = first; d <= last; d = addDays(d, 1)) {
@@ -197,10 +198,7 @@ export function lifeOf(n, today = twNow().date, from = EVENTS_FROM) {
       const si = stageOf(g), m = Number(d.slice(5, 7));
       if (trip && d > trip.until) {
         treasures.push(trip.gift);
-        // the postcard: from the place, posted the last day there, naming one of the pieces that reached it on the road
-        const pc = { to: trip.to, from: trip.from, until: trip.until, letters: trip.letters, keys: trip.keys, at: Math.floor(roll(d, "card") * Math.max(1, trip.keys.length)) };
-        postcards.push(pc);
-        events.push({ d, kind: "home", text: `${N}從${trip.place}回來了，帶回${trip.gift}，還有一張明信片。路上收到 ${trip.letters} 封信。`, photo: true, big: true, postcard: pc });
+        events.push({ d, kind: "home", text: `${N}從${trip.place}回來了，帶回${trip.gift}。這趟寄回 ${trip.cards} 張明信片，路上收到 ${trip.letters} 封信。`, photo: true, big: true });
         lastFed = [lastFed, trip.until].sort()[1]; trip = null; // away is not neglected
       }
       if (sick && sick.why === "cold" && daysTo(sick.since, d) >= LIFE.coldMax) { events.push({ d, kind: "well", text: `${N}自己慢慢好起來了。` }); sick = null; }
@@ -225,7 +223,7 @@ export function lifeOf(n, today = twNow().date, from = EVENTS_FROM) {
           const pool = TRIPS.filter((t) => !went.slice(-4).includes(t.zh)), to = pool[Math.floor(roll(d, "where") * pool.length)];
           went.push(to.zh);
           const place = to.zh;
-          trip = { from: d, until: addDays(d, len - 1), place, gift: to.gift, to, letters: 0, keys: [] };
+          trip = { from: d, until: addDays(d, len - 1), place, gift: to.gift, to, letters: 0, cards: 0 };
           events.push({ d, kind: "trip", text: `${N}出門旅行了，去${place}，要 ${len} 天。這幾天讀的每一篇，會像信一樣寄到路上給${P}。`, photo: true, away: place });
         } else if (ev === "cat") { hiding = "cat"; events.push({ d, kind: "cat", text: `一隻貓在院子外面晃，${N}嚇得躲在葉子後面一整天。`, photo: true, hiding: "cat" }); }
         else if (ev === "visit") { visitor = VISITORS[Math.floor(roll(d, "who") * VISITORS.length)]; events.push({ d, kind: "visit", text: `一隻${visitor}來串門子，和${N}在枝上站了一會兒。` }); }
@@ -237,12 +235,19 @@ export function lifeOf(n, today = twNow().date, from = EVENTS_FROM) {
     // the day's bites: on the road they are letters; while ill, medicine first (LIFE.dose a day); the rest make it grow
     let doses = 0;
     for (const i of idx) {
-      if (trip) { kindAt[i] = "letter"; trip.letters++; trip.keys.push(feeds[i].k); }
+      if (trip) { kindAt[i] = "letter"; trip.letters++; }
       else if (sick && doses < LIFE.dose) {
         kindAt[i] = "med"; sick.left--; doses++;
         if (sick.left <= 0) { events.push({ d, kind: "well", text: `${N}的病好了。` }); sick = null; }
       } else { g++; kindAt[i] = "grow"; }
       effAt[i] = g;
+    }
+    // a day away: the day's postcard, drawn and written for this day (postcard.js), naming a piece read that day
+    if (trip && d >= trip.from && d <= trip.until) {
+      const k = (perPlace[trip.to.id] = (perPlace[trip.to.id] ?? -1) + 1); // this place's k-th card in the yard
+      const pc = { place: trip.to.id, zh: trip.to.zh, de: trip.to.de, d, day: daysTo(trip.from, d) + 1, len: daysTo(trip.from, trip.until) + 1, n: idx.length, keys: idx.map((i) => feeds[i].k), seed: roll(d, "card"), k, order: hashOf(`${code}|${trip.to.id}`) };
+      postcards.push(pc); trip.cards++;
+      events.push({ d, kind: "card", text: `${N}從${trip.place}寄來一張明信片。`, postcard: pc });
     }
     if (idx.length) lastFed = d;
     days.set(d, { g, sick: Boolean(sick), away: trip ? trip.place : "", hiding, visitor, doses });
@@ -789,28 +794,25 @@ export function renderNest(el, api, afterSync = false) {
   if (!afterSync) syncNest(api).then((ok) => { if (ok && el.isConnected && location.hash === "#/nest") renderNest(el, api, true); });
 }
 // ——— 明信片 (Postkarten) ———
-// A postcard from a trip: on the front the place's view in its own colours, its name in Chinese and in its own
-// language, a robin stamp and the postmark of the day it was posted; on the back the bird's line from there, the
-// letters it got on the road — naming one piece, through the paper's index (setLookup) — and its name. A tap on a
-// card in the yard or the album opens it large; a tap on the large card turns it over.
-const VIEWS = {
-  city: (g) => `<path fill="${g}" d="M0 70 V52 h8 V44 h6 V50 h7 V38 h4 V34 h3 V38 h4 V48 h9 V40 h10 V50 h6 V30 l4 -6 l4 6 V50 h8 V42 h9 V54 h10 V46 h8 V52 h12 V70 Z"/>`,
-  hills: (g) => `<path fill="${g}" opacity=".55" d="M0 70 V48 L18 30 L32 44 L50 22 L70 46 L84 34 L100 50 V70 Z"/><path fill="${g}" d="M0 70 V56 L22 42 L40 54 L62 38 L80 52 L100 46 V70 Z"/>`,
-  sea: (g) => `<circle cx="74" cy="26" r="9" fill="#F4C46B" opacity=".9"/><path fill="${g}" d="M0 70 V46 q8 -4 16 0 t16 0 t16 0 t16 0 t16 0 t20 0 V70 Z"/><path fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.2" d="M6 56 q6 -3 12 0 t12 0 M48 60 q6 -3 12 0 t12 0"/>`,
-};
+// The postcards from the road: the front drawn for its day by postcard.js — the place's landmark at that hour, in that
+// weather and season, the robin somewhere in it — with the place's name over it, a robin stamp and the postmark; the
+// back written for its day — where it sat, what it saw, the piece of the paper that reached it that day, how many
+// days are left — and signed. A tap on a card in the yard or the album opens it large; a tap on the large card turns
+// it over.
 const pmark = (d) => `${Number(d.slice(8))}・${["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"][Number(d.slice(5, 7)) - 1]}・${d.slice(0, 4)}`;
+let pcUid = 0;
 function postcardHtml(pc, pet, big = false) {
-  // the piece it names: the one picked for this card, or the next one after it the paper's index still has
-  let art = null;
-  for (let j = 0; lookup && !art?.title && j < (pc.keys || []).length; j++) { const [kd, kc] = pc.keys[(pc.at + j) % pc.keys.length].split("/"); art = lookup(kd, kc); }
-  const t = pc.to;
-  const named = art?.title ? `，最喜歡〈${esc(art.title)}〉那一封` : "";
-  const front = `<div class="pc-front" style="--sky:${t.sky};--ground:${t.ground}"><svg viewBox="0 0 100 70" preserveAspectRatio="xMidYMax slice" aria-hidden="true">${VIEWS[t.view](t.ground)}</svg>
-    <span class="pc-greet">Grüße aus</span><b class="pc-place">${esc(t.zh)}</b><i class="pc-de">${esc(t.de)}</i>
-    <span class="pc-stamp" aria-hidden="true"><svg viewBox="0 0 64 64">${ROBIN_STAMP}</svg></span><span class="pc-mark" aria-hidden="true">${pmark(pc.until)}</span></div>`;
+  const dark = cardMood(pc.place, pc.seed, pc.d).time.dark >= .3, uid = `p${++pcUid}`;
+  const front = `<div class="pc-front${dark ? " dark" : ""}">${drawCard(pc.place, pc.seed, pc.d, uid)}
+    <span class="pc-greet">Grüße aus</span><b class="pc-place">${esc(pc.zh)}</b><i class="pc-de">${esc(pc.de)}</i>
+    <span class="pc-stamp" aria-hidden="true"><svg viewBox="0 0 64 64">${ROBIN_STAMP}</svg></span><span class="pc-mark" aria-hidden="true">${pmark(pc.d)}</span></div>`;
   if (!big) return front;
-  const back = `<div class="pc-back"><p class="pc-msg">${esc(t.line)}</p><p class="pc-msg">你們寄來的 ${pc.letters} 封信我都收到了${named}。</p><p class="pc-sign">—— ${esc(pet.name)}，寄自${esc(t.zh)}</p>
-    <div class="pc-to"><span class="pc-stamp" aria-hidden="true"><svg viewBox="0 0 64 64">${ROBIN_STAMP}</svg></span><span class="pc-mark" aria-hidden="true">${pmark(pc.until)}</span><span class="pc-line">寄給 後院的大家</span><span class="pc-line"></span><span class="pc-line"></span></div></div>`;
+  // the piece it names: of the day's letters, the first the paper's index has
+  let art = null;
+  for (const k of [...(pc.keys || [])].sort()) { if (!lookup) break; const [kd, kc] = k.split("/"); art = lookup(kd, kc); if (art?.title) break; }
+  const words = cardWords(pc.place, pc.seed, pc.d, { day: pc.day, len: pc.len, zh: pc.zh, n: pc.n, title: art?.title || "", k: pc.k, order: pc.order });
+  const back = `<div class="pc-back">${words.map((w) => `<p class="pc-msg">${esc(w)}</p>`).join("")}<p class="pc-sign">—— ${esc(pet.name)}</p>
+    <div class="pc-to"><span class="pc-stamp" aria-hidden="true"><svg viewBox="0 0 64 64">${ROBIN_STAMP}</svg></span><span class="pc-mark" aria-hidden="true">${pmark(pc.d)}</span><span class="pc-line">寄給 後院的大家</span><span class="pc-line"></span><span class="pc-line"></span></div></div>`;
   return `<div class="pc-flip">${front}${back}</div>`;
 }
 // a small robin for the stamp, the drawing's own colours
@@ -818,7 +820,7 @@ const ROBIN_STAMP = `<rect x="3" y="3" width="58" height="58" fill="#FBF6EA"/><p
 export function openPostcard(pc, pet, from) {
   if (!pc || document.querySelector(".photo-view")) return;
   const view = document.createElement("div");
-  view.className = "photo-view pc-view"; view.setAttribute("role", "dialog"); view.setAttribute("aria-modal", "true"); view.setAttribute("aria-label", `${pc.to.zh}寄來的明信片`);
+  view.className = "photo-view pc-view"; view.setAttribute("role", "dialog"); view.setAttribute("aria-modal", "true"); view.setAttribute("aria-label", `${pc.zh}寄來的明信片`);
   view.innerHTML = `<button class="postcard big" type="button" aria-label="翻面">${postcardHtml(pc, pet, true)}</button><p class="pv-text pc-hint">點明信片翻到背面</p><button class="pv-close" type="button">關上</button>`;
   document.body.append(view);
   const card = view.querySelector(".postcard"), hint = view.querySelector(".pc-hint");
@@ -834,7 +836,7 @@ export function openPostcard(pc, pet, from) {
   addEventListener("hashchange", close, { once: true });
   card.focus({ preventScroll: true });
 }
-const postcardThumb = (pc, i) => `<button class="postcard" type="button" data-pc="${i}" aria-label="${esc(pc.to.zh)}寄來的明信片，${Number(pc.until.slice(5, 7))} 月 ${Number(pc.until.slice(8))} 日">${postcardHtml(pc)}</button>`;
+const postcardThumb = (pc, i) => `<button class="postcard" type="button" data-pc="${i}" aria-label="${esc(pc.zh)}寄來的明信片，${Number(pc.d.slice(5, 7))} 月 ${Number(pc.d.slice(8))} 日">${postcardHtml(pc)}</button>`;
 
 // ——— 相簿 (Album) ———
 // The bird's life, read back out of the feed log (the owner, 2026-11-10: 我想加入養的鳥的相簿，可以回憶她以前長怎樣、發生過
@@ -880,7 +882,9 @@ export function albumOf(n = nest()) {
   // what happened to it: colds, trips, a cat, a guest, the weather, a find (lifeOf), with a photo where it looked different
   for (const e of life.events) {
     const flags = e.sick ? { sick: true } : e.away ? { away: { place: e.away } } : e.hiding ? { hiding: e.hiding } : {};
-    day(e.d).ev.push({ text: e.text, big: Boolean(e.big || e.photo), ...(e.photo ? { photo: snap(gBy(e.d), rawBy(e.d), e.d, flags) } : {}), ...(e.postcard ? { postcard: e.postcard } : {}) });
+    // a postcard's day quotes the card itself, so no two days read alike
+    const pc = e.postcard, text = pc ? `${esc(pet.name)}從${esc(pc.zh)}寄來明信片：「${esc(cardWords(pc.place, pc.seed, pc.d, { day: pc.day, len: pc.len, zh: pc.zh, n: pc.n, k: pc.k, order: pc.order })[0])}」` : e.text;
+    day(e.d).ev.push({ text, big: Boolean(e.big || e.photo), ...(e.photo ? { photo: snap(gBy(e.d), rawBy(e.d), e.d, flags) } : {}), ...(pc ? { postcard: pc } : {}) });
   }
   // the calendar: what came with the day, not with a bite
   const SEASONS = { spring: "春天來了，枝上開花。", summer: "入夏，葉子長滿了枝。", autumn: "入秋，葉子黃了。", winter: "冬天到了，枝上積了雪。" };
