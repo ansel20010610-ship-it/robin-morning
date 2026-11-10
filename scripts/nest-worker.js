@@ -180,7 +180,7 @@ async function credits(req, env, code) {
     u.searchParams.set("starting_at", start); u.searchParams.set("limit", "31"); if (page) u.searchParams.set("page", page);
     const r = await fetch(u, { headers: { "x-api-key": AK, "anthropic-version": "2026-10-21" } });
     const d = await r.json().catch(() => ({}));
-    if (!r.ok) return json({ error: "admin api error" }, 502);
+    if (!r.ok) return json({ error: "admin api error", status: r.status, detail: String(d?.error?.type || "") + " " + String(d?.error?.message || "").slice(0, 300) }, 502);
     for (const b of d.data || []) { let c = 0; for (const x of b.results || []) c += Number(x.amount) || 0; cents += c; days.push({ d: String(b.starting_at || "").slice(0, 10), usd: Math.round(c) / 100 }); }
     if (!d.has_more || !d.next_page) break;
     page = d.next_page;
