@@ -1,9 +1,9 @@
 {
  "column": "civilization",
  "date": "2026-11-11",
- "title": "將軍認的輸，議員背的罪",
- "dek": "「這鍋湯是他們替我們煮的，現在讓他們自己喝下去！」1918 年 10 月，德軍將領魯登道夫這樣說國內的政治人物。",
- "brief": "1918 年 10 月初，德軍將領魯登道夫先承認仗贏不了，還說和約就讓國內的政治人物去締結。11 月帶團去簽停戰的，是國會議員埃茨貝格爾；據他的回憶錄，興登堡元帥對他說，停戰由政治人物而非軍人締結，大概是世界史上頭一回。一年後，興登堡在國民議會作證，說德軍是被人從背後捅了一刀。",
+ "title": "將軍認的輸，議員挨的罵",
+ "dek": "「這鍋湯是他們給我們惹出來的，現在就讓他們自己喝下去！」1918 年 10 月，德軍將領魯登道夫這樣說國內的政治人物。",
+ "brief": "1918 年 10 月初，德軍將領魯登道夫先承認仗贏不了，還說和約就讓國內的政治人物去締結。11 月帶團去簽停戰的，是國會議員埃茨貝格爾；據他的回憶錄，興登堡元帥對他說，停戰由政治人物而非軍人締結，大概是世界史上頭一回。一年後，興登堡在國民議會作證，引英國將軍的話，說德軍是被人從背後捅了一刀，還說那話說得對。",
  "form": "argument",
  "voice": "lecturer",
  "topic_key": "civilization:germany-erzberger-armistice-1918",
@@ -26,11 +26,11 @@
  "body": [
   {
    "type": "p",
-   "text": "108 年前的今天上午 11 點，第一次世界大戰的西線停火。停戰協定是那天清晨在法國貢比涅森林的一節火車車廂裡簽的，簽約的另一方是協約國總司令、法國元帥福煦。帶德國代表團去的，是國會議員**馬蒂亞斯・埃茨貝格爾**。我一直覺得，這場停戰最該記住的，是德國由誰出面。仗是將軍打輸的，也是將軍自己先認的輸；後來替敗仗背罪名的，卻是這個去簽字的平民。"
+   "text": "108 年前的今天上午 11 點，第一次世界大戰的西線停火。停戰協定是那天清晨在法國貢比涅森林的一節火車車廂裡簽的，簽約的另一方是協約國總司令、法國元帥福煦。帶德國代表團去的，是國會議員**馬蒂亞斯・埃茨貝格爾**。我一直覺得，這場停戰最該記住的，是德國由誰出面。將軍自己先承認贏不了；後來為這場敗仗挨罵、最後被殺的，卻是這個帶團去簽字的平民。"
   },
   {
    "type": "p",
-   "text": "埃茨貝格爾屬於中央黨，那是個天主教政黨。一次大戰後期，德國真正掌權的是最高陸軍指揮部，下面簡稱大本營，兩位首腦是陸軍元帥**興登堡**和**魯登道夫**。1918 年 10 月，德國換了新政府，首相是巴登親王馬克斯。埃茨貝格爾入閣當不管部的國務秘書，就是在內閣有一席、但不分管哪一個部。"
+   "text": "埃茨貝格爾屬於天主教的中央黨。一次大戰後期，德國真正掌權的是最高陸軍指揮部，下面簡稱大本營，兩位首腦是陸軍元帥**興登堡**和第一軍需總監**魯登道夫**。1918 年 10 月，德國換了新政府，首相是巴登親王馬克斯。埃茨貝格爾入閣當不管部的國務秘書，就是在內閣有一席、但不分管哪一個部。"
   },
   {
    "type": "p",
@@ -42,11 +42,11 @@
   },
   {
    "type": "p",
-   "text": "1918 年 10 月 1 日，魯登道夫對大本營的參謀講話，參謀軍官塔爾當天記進日記。魯登道夫說，他和興登堡已經向皇帝報告：仗贏不了，最後的失敗大概躲不掉，西線隨時可能被突破。大本營已經要求皇帝和首相，立刻向美國總統威爾遜請求停戰。下面這段話裡的「那些人」，指的是國內的政治人物。"
+   "text": "1918 年 10 月 1 日，魯登道夫對大本營的參謀講話，參謀軍官塔爾記進日記。魯登道夫說，他和興登堡已經向皇帝報告：仗贏不了，最後的失敗大概躲不掉，西線隨時可能被突破。大本營已經要求皇帝和首相，立刻向美國總統威爾遜請求停戰。下面這段話裡的「那些人」，指的是國內的文人政治勢力。"
   },
   {
    "type": "quote",
-   "text": "我已經請求皇上，現在也把那些人拉進政府，我們會落到這一步，主要就是拜他們所賜。所以我們會看到這些先生搬進各部會。現在非締結不可的和約，就讓他們去締結。這鍋湯是他們替我們煮的，現在讓他們自己喝下去！",
+   "text": "我已經請求皇上，現在也把那些人拉進政府，我們會落到這一步，主要就是拜他們所賜。所以我們會看到這些先生搬進各部會。現在非締結不可的和約，就讓他們去締結。這鍋湯是他們給我們惹出來的，現在就讓他們自己喝下去！",
    "original": "Ich habe aber S.M. gebeten, jetzt auch diejenigen Kreise an die Regierung zu bringen, denen wir es in der Hauptsache zu danken haben, daß wir so weit gekommen sind. Wir werden also diese Herren jetzt in die Ministerien einziehen sehen. Die sollen nun den Frieden schließen, der jetzt geschlossen werden muß. Sie sollen die Suppe jetzt essen, die sie uns eingebrockt haben!",
    "cite": "魯登道夫對大本營參謀的講話，1918 年 10 月 1 日，塔爾上校日記"
   },
@@ -71,11 +71,11 @@
   },
   {
    "type": "p",
-   "text": "挑埃茨貝格爾的，其實不是將軍。11 月 6 日，首相在戰時內閣提議由他帶團去見福煦，他推辭，其他國務秘書堅持要他去。他拿到的全權委任書上，排第一的原本是金德爾將軍；到了比利時斯帕的大本營，外交部的代表說金德爾不適合談判，政府才同意改由埃茨貝格爾當團長。"
+   "text": "提名埃茨貝格爾的是首相和內閣。11 月 6 日，首相在戰時內閣提議由他帶團去見福煦，他推辭，其他國務秘書堅持要他去，他就此受命負責談判。他拿到的全權委任書上，排第一的原本是金德爾將軍；到了比利時斯帕的大本營，外交部的代表說金德爾不適合談判，政府才同意由埃茨貝格爾正式當主席。"
   },
   {
    "type": "p",
-   "text": "據埃茨貝格爾的回憶錄，興登堡在斯帕對他說，讓政治人物而不是軍人去締結停戰，大概是世界史上頭一回；但他完全同意，軍隊無論如何需要安寧。英國開放大學的史家蒙鮑爾認為，軍方首腦派他去，是要一個平民替軍方的失敗頂罪。提名的明明是首相和內閣，她這話說得太滿；不過把締和交給文人，本來就是魯登道夫十月那天先開的口。"
+   "text": "據埃茨貝格爾的回憶錄，興登堡在斯帕對他說，讓政治人物而不是軍人去締結停戰，大概是世界史上頭一回；興登堡接著說自己完全同意，因為大本營已不再發布政治方針，軍隊無論如何也需要安寧。英國開放大學的史家蒙鮑爾認為，軍方首腦派他去，是要一個平民替軍方的失敗頂罪。我覺得這一點證據不足：提名他的是首相和內閣。不過把締和交給文人，本來就是魯登道夫十月那天先開的口。"
   },
   {
    "type": "h",
@@ -83,15 +83,15 @@
   },
   {
    "type": "p",
-   "text": "11 月 8 日上午，雙方在福煦的專用列車上見面。埃茨貝格爾說來聽停戰的建議，福煦回答：「我沒有建議要提。」他只給 72 小時，條件不談，只能接受或拒絕。"
+   "text": "11 月 8 日上午，雙方在福煦的專用列車上見面。據回憶錄，埃茨貝格爾說來聽停戰的建議，福煦回答：「我沒有建議要提。」他只給 72 小時，條件不談，只能接受或拒絕。"
   },
   {
    "type": "p",
-   "text": "10 日晚上，大本營發來興登堡署名的電報，列了幾點想爭取的減輕，最後一句是：爭取不到，仍應簽約。兩個多小時後，又來一封准許簽字的明碼電報，結尾署著「首相 Schluß」。法方的翻譯官問，Schluß 是不是新首相的名字，埃茨貝格爾只好解釋那是「句點」。那幾天柏林正在革命。他隔天上午才聽說，這封授權其實是大本營自己發的，因為那天是週日，聯絡不上柏林；首相是事後才同意的。"
+   "text": "10 日晚上，大本營發來興登堡署名的電報，列了幾點想爭取的減輕，最後一句是：爭取不到，仍應簽約。兩個多小時後，又來一封准許簽字的明碼電報，結尾署著「首相 Schluß」。法方的翻譯官問，Schluß 是不是新首相的名字，埃茨貝格爾解釋那是「句點」。簽字之後，11 日上午約 10 點他才聽說，這封授權其實是大本營自己發的，因為那天是週日，聯絡不上柏林；首相是事後才同意的。"
   },
   {
    "type": "p",
-   "text": "11 日凌晨重開會議，一條一條爭到五點多。簽字時間寫成 5 點，六小時後停火。代表團裡有兩位軍人，前駐巴黎武官溫特費爾特將軍和海軍上校萬瑟洛，埃茨貝格爾寫說他們拿起筆時，眼裡都含著淚。埃茨貝格爾念的聲明，最後一句是：「一個七千萬人的民族會受苦，但不會死。」雙方起立告別，沒有握手。"
+   "text": "11 日凌晨重開會議，一條一條爭到五點多。協議書上簽字時間記 5 點，實際 5 點 20 分才開始簽，六小時後停火。代表團裡有兩位軍人，前駐巴黎武官溫特費爾特將軍和海軍上校萬瑟洛，埃茨貝格爾寫說他們拿起筆時，眼裡都含著淚。埃茨貝格爾念的聲明，最後一句是：「一個七千萬人的民族會受苦，但不會死。」雙方起立告別，沒有握手。"
   },
   {
    "type": "h",
@@ -99,7 +99,7 @@
   },
   {
    "type": "p",
-   "text": "1919 年 11 月 18 日，戰後的國民議會調查德國為什麼戰敗，興登堡出席作證，念了一份事先和魯登道夫、前副首相赫弗里希一起擬好的聲明。"
+   "text": "1919 年 11 月 18 日，戰後國民議會的調查委員會調查德國為什麼戰敗，興登堡出席作證，念了一份事先和魯登道夫、前副首相赫弗里希一起擬好的聲明。"
   },
   {
    "type": "quote",
@@ -109,7 +109,7 @@
   },
   {
    "type": "p",
-   "text": "這份聲明把敗仗歸到背後捅刀，對政治和軍事領導的失誤，連大本營自己的，一個字也沒提。這個說法不是他想出來的：1918 年 12 月，一份瑞士報紙把一位英國將軍的文章講歪了，它就傳開了。興登堡 1925 年選上總統，1933 年任命希特勒為總理。"
+   "text": "依 GHDI 編者說明，這份聲明把敗仗歸到背後捅刀，對政治和軍事領導的失誤，連大本營自己的，一個字也沒提。編者還說，這個說法並非由他首創，1918 年 12 月已在傳（瑞士報紙曲解了一位英國將軍的文章）。興登堡 1925 年選上總統，1933 年任命希特勒為總理（見[美國大屠殺紀念博物館的興登堡條目](https://encyclopedia.ushmm.org/content/en/article/paul-von-hindenburg)）。"
   },
   {
    "type": "p",
@@ -117,12 +117,12 @@
   },
   {
    "type": "p",
-   "text": "我得承認，同一篇演說裡他也替這個安排辯護，而且說得通。他說，要是當初去找福煦的是魯登道夫和興登堡，結果會是「色當重演，一場徹底投降」。色當是 1870 年普法戰爭的戰場，法軍在那裡投降，法國皇帝拿破崙三世被俘。由文人出面，德軍才撤得回國。可是這只說明了該由誰去簽，沒說明簽字的人為什麼要替輸仗負責。他對右派議員說的是這一段。"
+   "text": "我得承認，同一篇演說裡他也替這個安排辯護，而且說得通。他說，要是當初去找福煦的是魯登道夫和興登堡，結果會是「色當重演，一場徹底投降」。色當是 1870 年普法戰爭的戰場，法軍在那裡投降，法國皇帝拿破崙三世被俘。他說，由文人出面，軍隊才撤得回國。可是這只說明了該由誰去簽，沒說明簽字的人為什麼要替輸仗負責。他認為沒能爭到更好的和平，責任在拒絕 1917 年和平決議的右派。"
   },
   {
    "type": "quote",
-   "text": "我們不得不簽下你們的停戰、你們的和約，就這樣替你們的罪責贖了罪。這份罪責你們永遠甩不掉，就算你們想用一聲「不」把手洗上一百次，洗成無辜。",
-   "original": "Dadurch, daß wir Ihren Waffenstillstand und Ihren Frieden unterzeichnen mußten, haben wir für Ihre Schuld gebüßt. Diese Schuld werden Sie niemals los, und wenn Sie hundertmal Ihre Hände durch ein „Nein“ in Unschuld waschen wollen.",
+   "text": "我們不得不簽下你們的停戰、你們的和約，就這樣替你們的罪責贖了罪。這份罪責你們永遠甩不掉。",
+   "original": "Dadurch, daß wir Ihren Waffenstillstand und Ihren Frieden unterzeichnen mußten, haben wir für Ihre Schuld gebüßt. Diese Schuld werden Sie niemals los.",
    "cite": "埃茨貝格爾在國民議會的演說，1919 年 7 月 25 日"
   },
   {
@@ -135,7 +135,7 @@
   },
   {
    "type": "p",
-   "text": "在 1921 年遇刺之前的兩年裡，已經有好幾次刺殺沒成功。那年 8 月 26 日，他在黑森林的巴德格里斯巴赫附近散步，被兩名前海軍軍官開槍打死。德國歷史博物館的年表說，他們針對的是他作為威瑪共和代表的身分。8 月 31 日的喪禮，成了一場政治集會。"
+   "text": "在 1921 年遇刺之前的兩年裡，已經有好幾次刺殺沒成功。那年 8 月 26 日，他在黑森林的巴德格里斯巴赫附近散步，被兩名前海軍軍官開槍打死。德國歷史博物館的年表說，刺殺針對的是他作為威瑪共和代表的身分。8 月 31 日的喪禮，成了一場政治集會。"
   },
   {
    "type": "timeline",
@@ -149,17 +149,17 @@
     },
     {
      "when": "1918.11.6",
-     "label": "內閣派埃茨貝格爾帶團去見福煦",
+     "label": "內閣派埃茨貝格爾負責停戰談判，去見福煦",
      "note": ""
     },
     {
      "when": "1918.11.11",
-     "label": "清晨 5 點 20 分簽字，上午 11 點停火",
+     "label": "清晨 5 點 20 分開始簽字，上午 11 點停火",
      "note": ""
     },
     {
      "when": "1919.11.18",
-     "label": "興登堡作證：德軍是被從背後捅了一刀",
+     "label": "興登堡作證，引「背後捅刀」說法",
      "note": ""
     },
     {
@@ -190,42 +190,42 @@
    "publisher": "German History in Documents and Images (GHDI)",
    "date": "2026-11-11（讀取日）",
    "url": "https://germanhistorydocs.org/de/die-weimarer-republik-1918-1933/ghdi:document-5380",
-   "note": "原出處：Verhandlungen der Nationalversammlung, 66. Sitzung, S. 1926–1943。英文版：https://germanhistorydocs.org/en/weimar-germany-1918-1933/we-have-atoned-for-your-guilt-matthias-erzberger-on-the-responsibility-for-germany-s-plight-july-25-1919 。用到：該派 Ludendorff 去、軍人的 Zivilkourage、色當重演、349／437 人與兩萬人、11 月 10 日興登堡電報、贖罪一段。"
+   "note": "原出處：Verhandlungen der Nationalversammlung, 66. Sitzung, S. 1926–1943。英文版：https://germanhistorydocs.org/en/weimar-germany-1918-1933/we-have-atoned-for-your-guilt-matthias-erzberger-on-the-responsibility-for-germany-s-plight-july-25-1919 。用到：該派 Ludendorff 去、軍人的 Zivilkourage、色當重演、贖罪一段。"
   },
   {
    "title": "Erlebnisse im Weltkrieg（第 23 章 Der Gang nach Compiègne）",
    "publisher": "Matthias Erzberger；Stuttgart/Berlin: Deutsche Verlags-Anstalt（Internet Archive 掃描，University of Toronto 藏本）",
    "date": "1920",
    "url": "https://archive.org/details/erlebnisseimwelt00erzbuoft",
-   "note": "pp. 325–339：11 月 6 日內閣決定與提名、Gündell 被換下、興登堡在 Spa 的話（間接引語）、獨子臨終（前一章）、349／437 人、福煦「Ich habe keine Vorschläge zu machen」、72 小時、興登堡電報「Gelingt Durchsetzung dieser Punkte nicht, so wäre trotzdem abzuschließen」、「Reichskanzler Schluß」、授權實由 OHL 發出、2:15–5:12、5:20 簽字、溫特費爾特與萬瑟洛含淚、「Ein Volk von siebzig Millionen leidet, aber es stirbt nicht」、Très bien、無握手、11 月 12 日興登堡致謝。OCR 全文檔 erlebnisseimwelt00erzbuoft_djvu.txt。"
+   "note": "pp. 325–339：11 月 6 日內閣決定與提名、Gündell 被換下、興登堡在 Spa 的話（間接引語）、福煦「Ich habe keine Vorschläge zu machen」、72 小時、興登堡電報「Gelingt Durchsetzung dieser Punkte nicht, so wäre trotzdem abzuschließen」、「Reichskanzler Schluß」、授權實由 OHL 發出、2:15–5:12、5:20 簽字、溫特費爾特與萬瑟洛含淚、「Ein Volk von siebzig Millionen leidet, aber es stirbt nicht」、無握手。OCR 全文檔 erlebnisseimwelt00erzbuoft_djvu.txt。"
   },
   {
    "title": "Matthias Erzberger 1875–1921",
    "publisher": "LeMO, Deutsches Historisches Museum（Kai-Britt Albrecht）",
    "date": "2014",
    "url": "https://www.dhm.de/lemo/biografie/matthias-erzberger",
-   "note": "年表：1918-10-03 國務秘書、11-06 主持停戰委員會、11-11 第一個簽字、Novemberverbrecher／Volksverräter、Fort mit Erzberger、1920-03-12 判決與辭職、1921-08-26 遇刺（兩名前海軍軍官、Brigade Ehrhardt、Germanenorden／Killinger 策劃）、08-31 喪禮成政治集會。"
+   "note": "年表：1918-10-03 國務秘書、11-06 主持停戰委員會、Novemberverbrecher／Volksverräter、Fort mit Erzberger、1920-03-12 判決與辭職、1921-08-26 遇刺（兩名前海軍軍官；針對的是他作為共和代表的身分）、08-31 喪禮成政治集會。"
   },
   {
    "title": "Erzberger, Matthias",
    "publisher": "1914-1918-online. International Encyclopedia of the First World War（Christopher Dowe）",
    "date": "2016-01-18",
    "url": "https://encyclopedia.1914-1918-online.net/article/erzberger-matthias",
-   "note": "生地、戰爭初期主張兼併、1917 年和平決議、「Consul」組織、兩年內多次刺殺未遂、背後捅刀傳說作為對付他的武器。讀的是 ?format=pdf 版本。"
+   "note": "1921 年遇刺前兩年內多次刺殺未遂、背後捅刀傳說作為對付他與年輕民主政體的武器。讀的是 ?format=pdf 版本。"
   },
   {
    "title": "Erzberger: Negotiating the Armistice for Germany",
    "publisher": "OpenLearn, The Open University（Annika Mombauer）",
    "date": "2018-10-30",
    "url": "https://www.open.edu/openlearn/history-the-arts/history/erzberger-negotiating-the-armistice-germany",
-   "note": "代表團原由將軍率領、他是團中唯一平民；約清晨 5 點簽字、11 點生效；沒有握手；興登堡與格勒納派他去當「a civilian scapegoat for the military defeat that they had created」。"
+   "note": "約清晨 5 點簽字、11 點生效；沒有握手；興登堡與格勒納派他去當「a civilian scapegoat for the military defeat that they had created」。"
   },
   {
    "title": "Hindenburg Spreads Stab-in-the-Back Myth",
    "publisher": "United States Holocaust Memorial Museum, Holocaust Encyclopedia",
    "date": "2026-11-11（讀取日）",
    "url": "https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/before-1933/hindenburg-spreads-stab-in-the-back-myth",
-   "note": "傳說使共和與和約在許多德國人眼中不正當；納粹黨等右派用它攻擊共和、社會主義者、共產黨人與猶太人。"
+   "note": "1919-11-18 興登堡在國民議會調查委員會作證。"
   },
   {
    "title": "Paul von Hindenburg",
@@ -239,7 +239,7 @@
    "publisher": "Musée de l'Armée",
    "date": "2018-08-28",
    "url": "https://actualites.musee-armee.fr/expositions/1918-armistices-episode-9/?lang=en",
-   "note": "Gündell 原本宣布、後被撤下；溫特費爾特曾任駐巴黎武官、會說法語；四名德方簽字者。"
+   "note": "Gündell 原本宣布、後被撤下；溫特費爾特曾任駐巴黎武官。"
   },
   {
    "title": "Battle of Sedan",
