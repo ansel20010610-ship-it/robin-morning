@@ -897,6 +897,43 @@ function letterForm(el, night = false) {
     } catch { toast("沒寄出去，稿子還留著"); btn.disabled = false; }
   });
 }
+// 問這篇 (Fragen; the owner, 2026-11-10): on a 特供版 phone with a yard, a question about the article being read, answered
+// in a few seconds by the yard's shared store (nest-worker.js /{code}/ask, Claude on the owner's Console credits) from
+// this article alone. Marked as not checked by the editors; the medical columns add the paper's disclaimer. The phone
+// keeps the last few questions of each article (rm.ask), nothing is kept anywhere else.
+function askBox(el, date, column) {
+  const n = nest(), api = S.cfg.nest?.api;
+  if (!el || !n || !api) return;
+  const key = `${date}/${column}`, all = store.get("ask", {}), mine = Array.isArray(all[key]) ? all[key] : [];
+  const med = column === "perio";
+  const qa = (x) => `<div class="ask-qa"><p class="q">${esc(x.q)}</p><div class="a">${paragraphs(x.a)}</div></div>`;
+  el.innerHTML = `<div class="lbl"><b>問這篇</b><span class="de">Fragen</span></div>
+    <p class="small">讀到不懂、想多知道一點，直接問。只根據這篇回答，幾秒就好。</p>
+    <div class="ask-list">${mine.map(qa).join("")}</div>
+    <textarea maxlength="300" rows="2" placeholder="例如：這個數字是怎麼算出來的？"></textarea>
+    <div class="btns"><button class="btn" type="button" data-ask>問</button><span class="small ask-wait" hidden>編輯想一下……</span></div>
+    <p class="ask-note">即時回答，未經編輯部查核${med ? "；醫學教學導讀，非個別診療建議" : ""}。</p>`;
+  const ta = el.querySelector("textarea"), btn = el.querySelector("[data-ask]"), wait = el.querySelector(".ask-wait"), list = el.querySelector(".ask-list");
+  btn.addEventListener("click", async () => {
+    const q = ta.value.trim();
+    if (!q) { toast("先寫一個問題"); return; }
+    btn.disabled = true; wait.hidden = false;
+    try {
+      const r = await fetch(`${api}/${encodeURIComponent(n.code)}/ask`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me, date, column, q }) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || !j.a) {
+        toast(r.status === 429 ? "今天已經問了四十題" : r.status === 403 ? "這個後院不能問" : j.error === "out of credit" ? "這個月的額度用完了" : r.status === 503 ? "還沒接好，過一陣子再試" : "沒問成，問題還留著");
+      } else {
+        const x = { q, a: j.a }, cur = store.get("ask", {});
+        cur[key] = [...(Array.isArray(cur[key]) ? cur[key] : []), x].slice(-5);
+        const keys = Object.keys(cur); if (keys.length > 40) delete cur[keys[0]]; // the last forty articles asked about
+        store.set("ask", cur);
+        list.insertAdjacentHTML("beforeend", qa(x)); ta.value = "";
+      }
+    } catch { toast("沒問成，問題還留著"); }
+    btn.disabled = false; wait.hidden = true;
+  });
+}
 // 創刊號目錄 (the owner, 2026-11-08: 創刊號那期的格式與設計要與眾不同): the first number alone opens with a table of
 // contents in roman numerals, as a first number used to, and one line on where the paper came from, pointing at 刊史館.
 function inhaltBox(issue, arts) {
@@ -1182,6 +1219,7 @@ async function viewArticle(date, column, my) {
       ${a.serial?.n > 1 ? `<div class="vorher-slot"></div>` : ""}
       <div class="body"></div>
       ${a.chairside ? chairsideBox(a) : ""}
+      ${sonder() && nest() && S.cfg.nest?.api ? `<section class="ask-box" aria-label="問這篇"></section>` : ""}
       ${a.sources?.length ? `<section class="sources"><h2>來源與閱讀範圍</h2><ol>${a.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}${s.publisher ? `，${esc(s.publisher)}` : ""}${s.date ? `，${esc(s.date)}` : ""}${s.note ? ` <span>— ${inline(s.note)}</span>` : ""}</li>`).join("")}</ol>${(a.body || []).some((b) => b.type === "quote" && b.original) ? `<p class="small">外文引文未註明譯者的，都是本報自譯。</p>` : ""}</section>` : ""}
       ${placesLine(me, column)}${relatedHtml(me)}
       ${"share" in navigator ? `<div class="share"><button class="btn ghost" type="button" data-share>${ICON.share}分享這篇</button></div>` : ""}
@@ -1302,6 +1340,7 @@ async function viewArticle(date, column, my) {
   });
   main.querySelector("[data-chair-copy]")?.addEventListener("click", () => navigator.clipboard?.writeText(a.chairside).then(() => toast("已複製")).catch(() => toast("沒辦法複製")));
   main.querySelector("[data-chair-card]")?.addEventListener("click", () => chairCard(a, date));
+  askBox(main.querySelector(".ask-box"), date, column);
 
   // 本期目錄: the top bar's numeral opens the issue's contents sheet (openContents); a page chosen there slides in.
   // (The sideways swipe that turned pages here was taken out on 2026-11-01 at the owner's request.)

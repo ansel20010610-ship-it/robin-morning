@@ -2379,3 +2379,16 @@ details.band .svl { margin: 0 0 10px; }
 .night-back .moon { width: 18px; height: 18px; }
 .night-back .moon path { fill: var(--gold-soft); stroke: var(--gold); stroke-width: 2; }
 .night-back .moon .st { fill: var(--gold); }
+/* 問這篇 (app.js askBox) */
+.ask-box { margin: 26px 0 8px; padding: 16px 18px 12px; border: 1px solid var(--rule); border-top: 2px solid var(--gold); }
+.ask-box .lbl { display: flex; align-items: baseline; gap: 10px; font-family: var(--sans); }
+.ask-box .lbl b { font-size: 12.5px; letter-spacing: .14em; color: var(--gold-ink); }
+.ask-box .lbl .de { font-family: var(--latin); font-style: italic; font-size: 13px; color: var(--gold); }
+.ask-box .small { font-size: 13px; line-height: 1.6; color: var(--ink-2); margin: 6px 0 0; }
+.ask-box textarea { width: 100%; box-sizing: border-box; margin: 10px 0 8px; padding: 10px 12px; font: inherit; font-size: 15px; line-height: 1.6; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 2px; resize: vertical; }
+.ask-box .btns { display: flex; align-items: center; gap: 12px; }
+.ask-box .ask-qa { margin: 14px 0 0; padding-top: 12px; border-top: 1px dashed var(--rule); }
+.ask-box .ask-qa .q { margin: 0 0 6px; font-weight: 600; color: var(--ink); }
+.ask-box .ask-qa .a p { margin: 0 0 8px; line-height: 1.8; color: var(--ink-2); }
+.ask-box .ask-note { margin: 10px 0 0; font-family: var(--sans); font-size: 11.5px; color: var(--muted); }
+

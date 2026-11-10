@@ -1,0 +1,70 @@
+# API 版班次 (scripts/api_shift.py): a shift run by Claude Code on the owner's monthly Console API credits instead of
+# the claude.ai plan's weekly quota (the owner, 2026-11-10). Started by wire.yml's half-hour relay (GitHub's own
+# schedules start hours late): concerts 06:00, rescue 06:30, serial 16:00, reserve 17:30 (Taiwan time). The claude.ai
+# routines of the same names still run later as the backup and stop at once when this run did the work.
+# Without the ANTHROPIC_API_KEY secret, or past the month's cap, it spends nothing. The repo is public: the log shows
+# only the shift's short report and its cost.
+name: API shift
+
+on:
+  workflow_dispatch:
+    inputs:
+      shift:
+        description: "serial | reserve | concerts | rescue"
+        required: true
+        type: choice
+        options: [serial, reserve, concerts, rescue]
+
+permissions:
+  contents: write
+  actions: write   # to start publish.yml after a push (a push by this token starts no workflow by itself)
+
+concurrency:
+  group: api-shift-${{ inputs.shift }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      SHIFT: ${{ inputs.shift }}
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Decide whether to spend
+        id: go
+        run: python3 scripts/api_shift.py decide "$SHIFT" | tee -a "$GITHUB_OUTPUT"
+      - uses: actions/setup-node@v4
+        if: steps.go.outputs.go == 'yes'
+        with:
+          node-version: 22
+      - name: Install Claude Code
+        if: steps.go.outputs.go == 'yes'
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Run the shift
+        if: steps.go.outputs.go == 'yes'
+        run: |
+          git config --global user.name "robin-morning-bot"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          claude -p "$(cat "editorial/api-shifts/$SHIFT.md")" \
+            --model sonnet \
+            --allowedTools "Bash,Read,Write,Edit,Glob,Grep,Agent,WebSearch,WebFetch" \
+            --max-turns 300 \
+            --max-budget-usd "${{ steps.go.outputs.budget }}" \
+            --output-format json > out.json || true
+      - name: Record the cost
+        if: always() && steps.go.outputs.go == 'yes'
+        run: |
+          python3 scripts/api_shift.py record "$SHIFT" out.json | tee -a "$GITHUB_STEP_SUMMARY"
+          git add state/api/spend.json
+          git commit -m "API 班次花費：$SHIFT" || exit 0
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && break
+            sleep 5
+          done
+      - name: Deploy what was pushed
+        if: always() && steps.go.outputs.go == 'yes'
+        run: gh workflow run publish.yml --ref main || echo "::warning::could not start publish.yml"
