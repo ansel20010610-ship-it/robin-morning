@@ -1,0 +1,239 @@
+{
+  "column": "fm-watch",
+  "date": "2026-11-11",
+  "status": "update",
+  "title": "FM27 正式發售，免費期存檔可接",
+  "dek": "官方在台灣時間 11 月 11 日凌晨發出開賣公告。Steam 台灣標價回到原價，預購九折沒了；官方說資料還在審核，部分球隊球員素材可能缺席。",
+  "brief": "官方在台灣時間 11 月 11 日凌晨發出《足球經理 27》開賣公告，免費期與付費期的存檔可接續。Steam 台灣標價 NT$1,790，預購九折已不在。官方註腳仍寫部分球隊與球員素材可能缺席，發售前更新內容未說明。",
+  "topic_key": "fm-watch:2026-11-11-fm27-launch",
+  "updated_at": "2026-11-11T05:25:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "timeline",
+    "title": "FM27 開賣前後的時程",
+    "caption": "依 Steam 公告、SEGA 新聞稿與 SI 官網整理，時間皆為台灣時間。各平台實際解鎖的時刻，官方沒有逐一公布。",
+    "items": [
+      {
+        "when": "2026.10.30",
+        "label": "免費 Launch Preview 開始",
+        "note": "02:00，PC／Mac"
+      },
+      {
+        "when": "2026.11.4",
+        "label": "免費期結束，付費 Launch Preview 開始",
+        "note": "02:00"
+      },
+      {
+        "when": "2026.11.11",
+        "label": "SEGA 新聞稿發稿時間",
+        "note": "00:00（倫敦 11 月 10 日 16:00）；Steam 公告 00:13。各平台實際開放時刻官方未公布"
+      },
+      {
+        "when": "2026.11.20",
+        "label": "實體 PS5 版發售",
+        "note": "官網 FAQ"
+      },
+      {
+        "when": "日期未公布",
+        "label": "發售後第一個更新",
+        "note": "官方 11 月 2 日說 3D 比賽引擎是重點之一"
+      }
+    ]
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "《足球經理》是英國 Sports Interactive 做、SEGA 發行的足球經理模擬遊戲，每年出一代，今年這代叫 27。官方公布的發售日是 11 月 10 日，SEGA 新聞稿的發稿時間是倫敦 11 月 10 日 16:00，換成台灣時間是 **11 月 11 日凌晨 00:00**。新聞稿正文沒有標開賣時刻，只說遊戲「現在在所有平台上線並可遊玩」，句尾帶一個星號。Steam 公告和官方預告片，在發稿後十幾分鐘貼出。"
+    },
+    {
+      "type": "p",
+      "text": "星號對應的小字是：不同平台可能不是同一個時刻開放。這和官方先前的說法有落差：10 月 5 日 Tactical Tweaks 功能介紹的 FAQ 說，發售會在全球同一時刻發生，確切時間會在發售前確認。新聞稿加了「可能不同」這句註腳，官方也沒有公布逐平台時間表。官方沒有公布各家商店實際的解鎖時間。"
+    },
+    {
+      "type": "h",
+      "text": "哪些平台，什麼價錢"
+    },
+    {
+      "type": "p",
+      "text": "電腦版（PC／Mac）在 Steam、Epic、Microsoft Store 買得到，PC Game Pass 和 Xbox Game Pass Ultimate 的訂閱者也能直接玩（Game Pass 是微軟的訂閱制遊戲庫）。Launch Preview 是官方讓預購者提前試玩的版本，今年 10 月 30 日到 11 月 4 日（台灣時間）免費開放，之後要預購才能玩，Game Pass 訂閱者則靠訂閱續玩。免費期和付費期開的存檔，可以接著玩，不用重來。主機版上 Xbox 和 PS5，實體 PS5 版要到 11 月 20 日（官網 FAQ）。Touch 版在 Apple Arcade，是 Apple 裝置專用；Mobile 版還是只給 Netflix 訂閱者。"
+    },
+    {
+      "type": "table",
+      "title": "四個版本",
+      "head": [
+        "版本",
+        "在哪裡玩",
+        "官方提到的新東西"
+      ],
+      "rows": [
+        [
+          "FM27（PC／Mac）",
+          "Steam、Epic、Microsoft Store、PC Game Pass、Xbox Game Pass Ultimate",
+          "Tactical Effectiveness、Tactical Tweaks、更直覺的導覽（以上出自官方 YouTube 影片說明）"
+        ],
+        [
+          "FM27 Console",
+          "Xbox、PS5、Xbox Game Pass",
+          "賽前準備訊息、Tactical Tweaks 第一次上主機"
+        ],
+        [
+          "FM27 Touch",
+          "Apple Arcade（iPhone、iPad、Mac、Apple TV）",
+          "iPhone 介面整個重做"
+        ],
+        [
+          "FM27 Mobile",
+          "Netflix（iOS、Android）",
+          "2D 比賽引擎、新增 xG"
+        ]
+      ],
+      "caption": "依 SEGA 新聞稿、SI 官網與官方 YouTube 影片說明整理；這些都是官方的說法"
+    },
+    {
+      "type": "p",
+      "text": "價錢方面，Steam 台灣區現在標 **NT$1,790**，沒有折扣。10 月 30 日預購期的九折價 NT$1,611 已經不在了，英國 £49.99、美國 $59.99 也都是原價。新聞稿只寫零售價 £49.99。"
+    },
+    {
+      "type": "h",
+      "text": "官方報的人數"
+    },
+    {
+      "type": "p",
+      "text": "Sports Interactive 的工作室總監在新聞稿裡說，免費試玩期有超過 62.5 萬人參加，累積超過 700 萬小時、1,380 萬場比賽。這是官方給的數字，怎麼算的沒有說明。Steam 的第三方統計站 SteamDB 另外說，發售日 Steam 上同時在線的人數最高到 72,471，只算 Steam。SteamDB 發文是台灣時間 04:50，當時倫敦的 11 月 10 日還沒過完，數字之後可能還會變。"
+    },
+    {
+      "type": "h",
+      "text": "資料還在審核"
+    },
+    {
+      "type": "p",
+      "text": "新聞稿、官網和 Steam 公告最後都附了同一段小字：這個版本含有仍在授權方（權利人）審核流程中的資料，**部分球隊與球員素材可能缺席**。同一段話在 10 月 21 日公布免費試玩時就出現過，發售版仍附這段註腳。授權清單在 10 月 28 日已經公布過。官方沒有說缺的是哪些。"
+    },
+    {
+      "type": "h",
+      "text": "發售前那次更新呢"
+    },
+    {
+      "type": "p",
+      "text": "11 月 2 日的 Steam 公告說，發售前還有一次優化更新，發售後第一個更新，3D 比賽引擎是重點之一。這次的開賣公告、官網新聞和新聞稿都沒有提版本號，也沒有更新內容。Steam 公告列表在 11 月 2 日之後，只多了這一則開賣公告。所以那次優化更新有沒有包在發售版裡、改了什麼，官方文字看不出來；發售後第一個更新的日期，同樣沒有公布。"
+    },
+    {
+      "type": "h",
+      "text": "Touch 和 Mobile 的官方介紹"
+    },
+    {
+      "type": "p",
+      "text": "官網有兩篇功能介紹，頁面都沒標日期；Mobile 總覽頁的網站紀錄顯示 11 月 5 日更新過。"
+    },
+    {
+      "type": "p",
+      "text": "官方介紹說，Touch 版（Apple Arcade 上的 Apple 裝置版）的球員資料庫、球員推薦與招募重點重做，加了「找類似球員」，談判時幕後團隊會給即時建議。賽前準備訊息最多排三堂：有球、無球、定位球。Tactical Tweaks 和傳球圖、熱區圖也都帶進來，印尼文第一次成為 Touch 系列的遊戲語言。FM24 或 FM26 的存檔可以接續。"
+    },
+    {
+      "type": "p",
+      "text": "官方介紹說，Mobile 版（Netflix 訂閱者專屬），官方說 Mobile 版的 2D 比賽引擎是系列史上最先進的一版，並且新增 xG（預期進球，用來看球隊創造的機會夠不夠好）。球員關係那一塊多了更衣室衝突、進球荒之類的訊息，回應選項多了 Satisfied 和 Encourage。訓練可以指定要練或要去掉的球員特質，董事會信心下新增球迷支持度分頁，傷病有物理治療師報告。哥倫比亞成為可玩的聯賽，但沒有授權。"
+    },
+    {
+      "type": "h",
+      "text": "還要再等的事"
+    },
+    {
+      "type": "p",
+      "text": "除 SteamDB 的人數外，以上全是官方自己的描述。發售日有沒有出狀況、Steam 上的評論往哪個方向走、資料缺得多不多，目前都還沒有可引用的資料。另外，官方 11 月 2 日說過的發售後第一個更新，到現在還沒有日期。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "It's Time To Make The Call: Football Manager 27 Out Now",
+      "publisher": "SEGA 新聞稿（sega.prezly.com）",
+      "date": "2026-11-10",
+      "url": "https://sega.prezly.com/its-time-to-make-the-call-football-manager-27-out-now",
+      "note": "RSS 時間 2026-11-10 16:00:00 UTC（台灣 11-11 00:00）。上線平台、存檔續玩、62.5 萬人與 700 萬小時、1,380 萬場比賽（工作室總監 Miles Jacobson 引言）、零售價 £49.99、「各平台可能不同時間上線」與資料審核註腳皆出自此稿。新聞稿標示的是發稿時間，不是各商店實際解鎖時刻。"
+    },
+    {
+      "title": "Make The Call: Football Manager 27 is live across platforms",
+      "publisher": "Football Manager 官網",
+      "date": "2026-11-10",
+      "url": "https://www.footballmanager.com/news/make-call-football-manager-27-live-across-platforms",
+      "note": "頁面標 10.11.26（FM Admin），sitemap 更新時間 2026-11-10 16:08 UTC。與新聞稿同調；無版本號、無更新說明。"
+    },
+    {
+      "title": "Make The Call: Football Manager 27 is live across platforms",
+      "publisher": "Steam 公告（Sports Interactive）",
+      "date": "2026-11-10",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643360161",
+      "note": "Steam News API 時間 2026-11-10 16:13:27 UTC（台灣 11-11 00:13），作者 Jimmy Wong。窗內 Steam 官方公告只有此一則，11 月 2 日 Minor Update 1 之後沒有更新說明。"
+    },
+    {
+      "title": "Football Manager 27 | Official Launch Trailer | #FM27 #MakeTheCall",
+      "publisher": "Football Manager 官方 YouTube",
+      "date": "2026-11-10",
+      "url": "https://www.youtube.com/watch?v=LdhGqvvBO1M",
+      "note": "上傳 RSS 時間 2026-11-10 16:12:57 UTC（台灣 11-11 00:12）。本報只讀到 RSS 標題與說明，影片頁未開。"
+    },
+    {
+      "title": "Football Manager 27 peaks at 72k players",
+      "publisher": "SteamDB（第三方統計，經 Steam 新聞饋送）",
+      "date": "2026-11-10",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/SteamDB/1848664643360367",
+      "note": "饋送時間 2026-11-10 20:50 UTC（台灣 11-11 04:50，倫敦 11-10 20:50）：發售日同時在線最高 72,471。第三方數字，只含 Steam；發文時倫敦的 11 月 10 日尚未結束，數字可能再變。"
+    },
+    {
+      "title": "Football Manager 27",
+      "publisher": "Steam 商店頁",
+      "date": "2026-11-11",
+      "url": "https://store.steampowered.com/app/4530370/Football_Manager_27/",
+      "note": "appdetails（cc=tw、gb、us）於台灣時間 11 月 11 日清晨讀取：已非 coming_soon，發售日 10 Nov 2026，NT$1,790／£49.99／$59.99，折扣 0%。 預購九折價 NT$1,611 為 10 月 30 日本報查閱 Steam 台灣區所見（NT$1,790 的九折，見 2026-10-30 刊期來源）。"
+    },
+    {
+      "title": "FM27: Tactical Tweaks and Match Engine Upgrades（Steam 公告，含 FAQ）",
+      "publisher": "Steam 公告（Sports Interactive）",
+      "date": "2026-10-05",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656394121",
+      "note": "2026-10-05 17:04 UTC 發布。FAQ 問「FM27 會在每個地區的 11 月 10 日上線嗎」，答：發售會在全球同一時刻發生，部分國家與時區可能是 11 月 11 日，確切時間發售前會確認。同題名的官網專頁 https://www.footballmanager.com/fm27/features/fm27-tactical-tweaks-and-match-engine-upgrades 本報 11 月 11 日查閱時已看不到這一題，故以 Steam 公告原文為準。"
+    },
+    {
+      "title": "FM27 Touch: New Features, New Possibilities",
+      "publisher": "Football Manager 官網",
+      "date": "2026-11-11",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-touch-new-features-new-possibilities",
+      "note": "專頁未標發布日期，date 欄為本報查閱日。功能為官方宣稱。"
+    },
+    {
+      "title": "FM27 Mobile: More Influence at Your Fingertips",
+      "publisher": "Football Manager 官網",
+      "date": "2026-11-11",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-mobile-more-influence-your-fingertips",
+      "note": "專頁未標發布日期，date 欄為本報查閱日；Mobile 總覽頁 sitemap 更新時間為 2026-11-05。功能為官方宣稱。"
+    },
+    {
+      "title": "FM27 Minor Update 1 rolling out now, plus more info on updates",
+      "publisher": "Steam 公告（Sports Interactive）",
+      "date": "2026-11-02",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302248809",
+      "note": "發售前優化更新與發售後首更新（含 3D 比賽引擎）的原始說法，均無日期。"
+    },
+    {
+      "title": "Play Free: Football Manager 27 Launch Preview",
+      "publisher": "Steam 公告（Sports Interactive）",
+      "date": "2026-10-21",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114028442",
+      "note": "預購九折（10%）、Launch Preview 免費期（台灣 10-30 02:00 至 11-04 02:00）與之後預購者／Game Pass 續玩的出處，及先前資料審核註腳的出處。"
+    },
+    {
+      "title": "FM27 官網首頁 FAQ（When does FM27 release?）",
+      "publisher": "Football Manager 官網",
+      "date": "2026-11-11",
+      "url": "https://www.footballmanager.com/fm27",
+      "note": "頁面未標日期，date 欄為本報查閱日。FAQ：數位版 11 月 10 日，實體 PC 版 11 月 10 日，實體 PS5 版 11 月 20 日；同段 FAQ 也見於 fm27-elevated-match-day-atmosphere 專頁。"
+    },
+    {
+      "title": "Football Manager 27 Licences",
+      "publisher": "Football Manager 官網",
+      "date": "2026-10-28",
+      "url": "https://www.footballmanager.com/news/football-manager-27-licences",
+      "note": "頁面標 28.10.26（FM Admin），為 FM27 授權清單頁；本報 11 月 11 日確認頁面仍在。"
+    }
+  ]
+}
