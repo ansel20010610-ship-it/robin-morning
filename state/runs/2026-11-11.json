@@ -1,0 +1,13 @@
+{
+  "1": {
+    "finished_at": "2026-11-11T01:03:36+08:00",
+    "missing": [
+      "football",
+      "news",
+      "civilization",
+      "literature",
+      "mystery"
+    ],
+    "note": "devotion、music（qa）、perio（number）完成；perio 審稿判定重寫→重寫 1、music 修正即可→修正 1；validate 無 WARN"
+  }
+}
