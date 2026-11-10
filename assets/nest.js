@@ -546,8 +546,9 @@ export function flyBy() {
   const navEl = document.querySelector(".nav"), foot = navEl?.getBoundingClientRect().top || H;
   const tab = navEl?.querySelector('a[href="#/saved"]'), icon = tab?.querySelector("svg"), ir = (icon || tab)?.getBoundingClientRect();
   const cx = ir ? ir.left + ir.width / 2 : W / 2, cy = ir ? ir.top + ir.height / 2 : H - 40;
-  // the nest stands on the nav over the tab; the bird's box (64 px) sits low in it, the rim across its belly
-  const nx = cx - 36, ny = foot - 30, S = [nx + 4, ny - 37], IN = [cx - 31, cy - 41], SUNK = 18;
+  // the nest sits right on the 收藏 tab, over its icon (the owner, 2026-11-10: 巢要在收藏的上面（重疊），不要跑到底下那欄
+  // 的上方); the bird's box (64 px) sits low in it, the rim across its belly
+  const nx = cx - 36, ny = cy - 22, S = [nx + 4, ny - 37], IN = [cx - 31, cy - 41], SUNK = 18;
   const back = document.createElement("div"), front = document.createElement("div"), bird = document.createElement("a");
   back.className = "fly-nest back"; front.className = "fly-nest front";
   back.innerHTML = NEST_BACK; front.innerHTML = nestFront(st.items?.moss);
