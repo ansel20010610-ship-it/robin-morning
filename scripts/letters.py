@@ -75,11 +75,23 @@ def check(path):
     return 1 if probs else 0
 
 
+def tw_today():
+    import datetime as dt
+    return dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d")
+
+
 def publish(path):
     probs, rows = problems(path)
     if probs:
         for p in probs: print(p)
         return 1
+    # the answers go with this morning's issue, Taiwan's date: the cloud's clock is UTC, still yesterday before 08:00
+    # (2026-11-11: an answer written at 04:47 was dated the 10th and never reached the front page)
+    today = tw_today()
+    for l in rows:
+        if l.get("date") != today:
+            print(f"{l.get('id')}：date {l.get('date')} 改成今天（台灣）{today}")
+            l["date"] = today
     r = call(f"{code()}/letters/answers", {"answers": rows})
     print(f"存進院子：{r.get('saved')} 封（院子裡共 {r.get('total')} 封回信）" if r.get("saved") else f"沒存成：{r}")
     return 0 if r.get("saved") else 1
