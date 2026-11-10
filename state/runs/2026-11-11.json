@@ -18,5 +18,12 @@
       "literature"
     ],
     "note": "文明（argument/lecturer，審稿判定重寫→總編重寫）、謎題（list/detective，修正即可）；重寫1／修正1；未接第1班缺稿（三欄皆已完成）；validate 無 WARN"
+  },
+  "3": {
+    "finished_at": "2026-11-11T03:23:19+08:00",
+    "missing": [
+      "news"
+    ],
+    "note": "副刊二 literature（document/correspondent，審稿判定重寫→總編重寫＋忠實度修正）、football 初稿（timeline/fan，非比賽夜，審稿判定重寫→總編重寫＋忠實度修正）；重寫2／修正0；未接第1班缺稿（三欄已完成）；validate 只剩 next.kickoff 與 Wikimedia 429 WARN"
   }
 }
