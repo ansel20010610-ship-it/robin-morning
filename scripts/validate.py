@@ -834,8 +834,8 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
         toks = mo.split() if isinstance(mo, str) else []
         if col != "music":
             E("motif 只有古典欄用")
-        elif not 6 <= len(toks) <= 16 or not all(re.fullmatch(r"(?:[A-G](?:#|b)?[1-7]|R)(?::\d+(?:\.\d+)?)?", t) for t in toks):
-            E("motif 格式不對：6–16 個音，像 G4:1 G4:1 G4:1 Eb4:4（columns/music.md）")
+        elif not 4 <= len(toks) <= 16 or not all(re.fullmatch(r"(?:[A-G](?:#|b)?[1-7]|R)(?::\d+(?:\.\d+)?)?", t) for t in toks):
+            E("motif 格式不對：4–16 個音，像 G4:1 G4:1 G4:1 Eb4:4（columns/music.md）")
     if col == "perio":
         if "paper" not in types:
             E("牙周欄缺少 paper 論文卡")

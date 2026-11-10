@@ -590,6 +590,7 @@ function skyArt(sky, L, sea) {
   }
   if (sky.kind === "rain" || sky.kind === "storm") out.fg = momentArt("rain", L, sea).fg.replace('class="m-rain"', `class="m-rain${sky.kind === "storm" ? " heavy" : ""}"`);
   if (sky.kind === "fog") out.fg = `<rect class="w-fog" x="0" y="0" width="300" height="${H}"/>`;
+  if (sky.kind === "cloud" || sky.kind === "rain" || sky.kind === "storm") out.sky += `<rect class="w-overcast" x="0" y="0" width="300" height="${hy}"/>`;
   return out;
 }
 const nextLine = (st) => (st.away ? `${st.back <= 1 ? "明天" : `${cn(st.back)}天後`}從${st.away.place}回來` : st.sick ? `再 ${st.sick.left} 口藥就會好` : `再 ${st.toNext} 口就${st.next.zh}`);
@@ -638,7 +639,7 @@ export function liveBird(root, { fly = true } = {}) {
   if (!bird || !robin || calm()) return;
   const si = Number((bird.className.match(/\bs(\d)\b/) || [])[1] || 0);
   if (bird.classList.contains("away") || bird.classList.contains("mood-out") || bird.classList.contains("napping")) return; // nobody on the perch, or asleep
-  if (bird.classList.contains("rainy") || bird.classList.contains("watching") || bird.closest(".yard-night, .wx-rain, .wx-storm")) fly = false; // sitting the rain out, or keeping an eye on the cat
+  if (bird.classList.contains("rainy") || bird.classList.contains("watching") || bird.closest(".wx-rain, .wx-storm")) fly = false; // at night it flies on until it is told goodnight (napping) // sitting the rain out, or keeping an eye on the cat
   if (bird.classList.contains("mood-sun")) fly = false; // basking: it does not leave its spot
   if (bird.classList.contains("sick") || bird.classList.contains("hiding")) fly = false; // it stays put today
   const timers = [];
@@ -1205,9 +1206,10 @@ function diaryHtml(n, pet) {
   const e = diaryList(n).sort((a, b) => a.d.localeCompare(b.d)).at(-1), today = twNow().date;
   if (!e && !diaryBusy) return "";
   const head = `<h2>${esc(pet.name)}的日記<span class="de">Tagebuch</span></h2>`;
-  if (!e || (diaryBusy && e.d !== today)) return `<section class="set nest-diary">${head}<p class="small diary-busy">${esc(pet.name)}正在寫今天的日記……</p></section>`;
+  const busy = diaryBusy && (!e || e.d !== today) ? `<p class="small diary-busy">${esc(pet.name)}正在寫今天的日記……</p>` : "";
+  if (!e) return `<section class="set nest-diary">${head}${busy}</section>`;
   const span = e.from && e.from !== e.to ? `${mdZh(e.from)}到${mdZh(e.to)}` : mdZh(e.to);
-  return `<section class="set nest-diary">${head}<p class="diary-when">${e.d === today ? "今天早上" : esc(mdZh(e.d))}寫的，記${esc(span)}</p><div class="diary-text">${paragraphs(e.text)}</div><p class="small"><a href="#/nest/album">以前的日記都貼在相簿裡 →</a></p></section>`;
+  return `<section class="set nest-diary">${head}${busy}<p class="diary-when">${e.d === today ? "今天早上" : esc(mdZh(e.d))}寫的，記${esc(span)}</p><div class="diary-text">${paragraphs(e.text)}</div><p class="small"><a href="#/nest/album">以前的日記都貼在相簿裡 →</a></p></section>`;
 }
 // What a visit to the yard fetches besides the sync, once (not on the redraw after it): the goodnights, the diary, and
 // the morning's entry if nobody has written it yet. Each says whether the page should be drawn again.

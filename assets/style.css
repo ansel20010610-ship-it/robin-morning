@@ -2219,7 +2219,7 @@ details.band .svl { margin: 0 0 10px; }
 .yard .w-stars circle { fill: #F4E7B8; animation: w-star 4s ease-in-out infinite; }
 @keyframes w-star { 0%, 100% { opacity: .95; } 50% { opacity: .3; } }
 .yard.yard-night .y-win { filter: drop-shadow(0 0 4px rgb(242 213 138 / .6)); }
-.yard.wx-cloud:not(.yard-night) { --y-sky: #D6DBD8; --y-cloud: #E9EAE6; }
+.yard .w-overcast { fill: #7E8A94; opacity: .16; }
 .yard .m-rain.heavy path { stroke-width: 1; opacity: .9; } .yard .m-rain.heavy { animation-duration: .3s; }
 .yard.wx-storm .m-gloom { opacity: .26; }
 .yard .w-fog { fill: #E8EBEC; opacity: .5; animation: w-fog 9s ease-in-out infinite alternate; }
