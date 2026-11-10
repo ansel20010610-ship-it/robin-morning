@@ -13,6 +13,8 @@ from common import ROOT, TW, load_config  # noqa: E402
 FORMS = ["scene", "document", "qa", "list", "timeline", "dialogue", "flow", "reverse", "argument", "walk", "compare", "number"]
 REPORTERS = {"football": "fan", "news": "wire", "perio": "colleague", "music": "listener", "civilization": "lecturer", "literature": "correspondent", "philosophy": "socratic", "artwork": "appraiser", "architecture": "walker", "canon": "critic", "wildcard": "visitor", "concept": "tutor", "poem": "reader", "mystery": "detective", "obituary": "eulogist", "fm-watch": "watchman", "cosmere-watch": "watchman"}
 EXEMPT = {"devotion", "news", "serial"}
+# forms a column never takes (columns/<code>.md): philosophy opens on its scene and keeps the answer open (2026-11-10)
+NOT_FOR = {"philosophy": {"argument", "reverse", "list"}}
 ISSUES = os.path.join(ROOT, "content", "issues")
 
 
@@ -47,6 +49,7 @@ def main():
             flags = []
             if not f: flags.append("沒有 form")
             elif f not in FORMS: flags.append("form 不在菜單裡")
+            elif f in NOT_FOR.get(c, ()): flags.append("這欄不用 %s（columns/%s.md）" % (f, c))
             elif f in seen: flags.append("form 和 %s 重複" % seen[f])
             if f == "scene" and seen.get("scene") and seen["scene"] != c: flags.append("scene 一期最多一篇")
             if not v: flags.append("沒有 voice（這欄的記者是 %s）" % REPORTERS.get(c))
@@ -71,7 +74,7 @@ def main():
         if fs:
             print("\n%s 已派的文體／聲腔：%s" % (d, "、".join("%s=%s/%s" % (c, f or "—", v or "—") for c, (f, v) in fs.items())))
             break
-    print("\n文體：" + "、".join(FORMS) + "\n同一期的文體不重複；同一欄不和前一篇相同；scene 一期最多一篇。聲腔照各欄固定的記者（STYLE.md 〇之四）：" + "、".join("%s=%s" % kv for kv in REPORTERS.items()))
+    print("\n文體：" + "、".join(FORMS) + "\n同一期的文體不重複；同一欄不和前一篇相同；scene 一期最多一篇；哲學欄不用 argument、reverse、list。聲腔照各欄固定的記者（STYLE.md 〇之四）：" + "、".join("%s=%s" % kv for kv in REPORTERS.items()))
 
 
 if __name__ == "__main__":

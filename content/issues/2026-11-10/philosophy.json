@@ -1,270 +1,186 @@
 {
-  "column": "philosophy",
-  "date": "2026-11-10",
-  "title": "房裡的人不懂中文，不等於沒有誰懂",
-  "dek": "「機器能思考嗎？」塞爾的答案是當然能，我們就是這種機器。他不信的，是光憑程式就能懂。",
-  "brief": "1980 年，美國哲學家塞爾設想自己被鎖在房裡，照英文寫的規則把中文符號換成別的中文符號遞出去，答案和母語者分不出來，他卻完全不懂。他說會讀故事、答問題的電腦程式也是這樣。2024 年，一部哲學百科記下一段問答：有人拿這題去問 ChatGPT，它說塞爾的論證適用於它自己。",
-  "topic_key": "philosophy:searle-chinese-room",
-  "form": "argument",
-  "voice": "socratic",
-  "updated_at": "2026-11-10T03:02:00+08:00",
-  "spoiler": null,
-  "disclaimer": null,
-  "hero": {
-    "id": "hero",
-    "kind": "photo",
-    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/John_Searle_speaking_at_Google_1.jpg/1280px-John_Searle_speaking_at_Google_1.jpg",
-    "width": 1280,
-    "height": 853,
-    "alt": "一位白髮老先生的胸像特寫，穿深灰色西裝外套和藍白格子襯衫，領口別著小麥克風，背景是模糊的藍色窗景。",
-    "caption": "塞爾，2015 年 11 月在加州山景城的 Google 演講〈人工智慧裡的意識〉。那年他 83 歲，離中文房間發表已經 35 年。",
-    "credit": "攝影：FranksValli",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source_url": "https://commons.wikimedia.org/wiki/File:John_Searle_speaking_at_Google_1.jpg",
-    "made": "2015"
+ "column": "philosophy",
+ "date": "2026-11-10",
+ "title": "後場的阿哲不懂芬蘭文，這家店懂不懂？",
+ "dek": "一本夠好的規則書，能讓完全不懂的人答得像懂。塞爾說電腦就是這個人；可是說「我不懂」的，只能替自己作證。",
+ "brief": "1980 年，美國哲學家塞爾想像自己照一套規則搬中文符號，答案和母語者分不出來，他卻完全不懂；他說電腦也是這樣。2024 年有人拿這題問 ChatGPT，它說這個論證適用於它自己，可它幾分鐘前才說自己懂英文字。",
+ "topic_key": "philosophy:searle-chinese-room",
+ "form": "scene",
+ "voice": "socratic",
+ "updated_at": "2026-11-10T16:19:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "hero": {
+  "id": "hero",
+  "kind": "photo",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/John_Searle_speaking_at_Google_1.jpg/1280px-John_Searle_speaking_at_Google_1.jpg",
+  "width": 1280,
+  "height": 853,
+  "alt": "一位白髮老先生的胸像特寫，穿深灰色西裝外套和藍白格子襯衫，領口別著小麥克風，背景是模糊的藍色窗景。",
+  "caption": "塞爾，2015 年 11 月在加州山景城的 Google 演講〈人工智慧裡的意識〉。那年他 83 歲，離中文房間發表已經 35 年。",
+  "credit": "攝影：FranksValli",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:John_Searle_speaking_at_Google_1.jpg",
+  "made": "2015"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "台北一家咖啡館，後場的牆上開了一個投信口。芬蘭客人把手寫的芬蘭文紙條塞進去，紙條上是一則小故事：一位客人點了熱拿鐵，送來是冷的，他沒付錢就走了。故事底下問：「他喝了嗎？」後場的店員阿哲一個芬蘭字也不認得，手邊只有一本中文寫的厚規則書：看到這種形狀的字串，就照抄那種形狀的字串遞出去。他照書抄了一行塞回去，客人讀到的是「沒有」。規則書寫得夠好，每張回條都答得對，店外的芬蘭人都以為後場坐著一位芬蘭人。",
+   "tag": "原創假設"
   },
-  "body": [
-    {
-      "type": "p",
-      "text": "在塞爾的設想裡，一個完全不懂中文的人，只要手上的規則書夠好，可以把中文問題答得和母語者一樣好。美國哲學家**塞爾**（John Searle）1980 年用這個**中文房間**，要證明電腦只是照程式搬符號，搬得再好也不會懂。房裡那個人確實不懂，這一半站得住。另一半我覺得他沒走穩：他從「我不懂」推到「這裡沒有誰懂」，可是他能作證的只有他自己。他另外兩條理由，搬符號搬不出意思、理解要靠大腦那種生物構造，不靠這一步，我也駁不倒。"
-    },
-    {
-      "type": "p",
-      "text": "塞爾是加州大學柏克萊分校的哲學家，1932 年生，2025 年 9 月過世。中文房間刊在期刊《行為與腦科學》，篇名〈心、腦與程式〉，同一期附了 27 位認知科學研究者的評論。史丹佛大學編的線上哲學百科說，它大概是圖靈測驗之後，認知科學裡被討論得最多的哲學論證；圖靈測驗是電腦理論先驅圖靈（Alan Turing）1950 年的提議：電腦如果能在文字對話裡被當成人，就該承認它有智能。今天的聊天機器人（大型語言模型）是讀者最可能碰到的那種機器，那部百科 2024 年的修訂版為它們專寫了一節。"
-    },
-    {
-      "type": "p",
-      "text": "塞爾設想的是他自己。他被鎖在一個房間裡，先拿到一大疊中文。他特別聲明這是實情：他不會讀也不會說中文，連中文和日文都不確定分得出來，在他眼裡全是沒有意義的彎彎曲曲。接著送進來第二疊、第三疊，附上英文寫的規則，教他看到哪種形狀，就交出哪種形狀。他不知道，外面的人把第二疊叫「故事」，第三疊叫「問題」，他交出去的叫「答案」，那套英文規則叫「程式」。他越做越熟，程式越寫越好。"
-    },
-    {
-      "type": "quote",
-      "text": "單看我的答案，沒有人看得出我一個中文字也不會說。",
-      "original": "Nobody just looking at my answers can tell that I don't speak a word of Chinese.",
-      "cite": "塞爾〈心、腦與程式〉，1980"
-    },
-    {
-      "type": "p",
-      "text": "他瞄準的是耶魯大學研究者尚克（Roger Schank）團隊的程式。那套程式讀一則短故事：有人進餐廳點了漢堡，漢堡烤焦了，他氣得沒付錢就走。問它「他吃了漢堡嗎？」它和人一樣答「沒有」。塞爾把一種主張叫做「強人工智慧」：寫對了程式的電腦真的就是一個心，可以照字面說它懂了這個故事。只把電腦當成研究心智的利器，叫「弱人工智慧」，那個他沒有異議。"
-    },
-    {
-      "type": "p",
-      "text": "把房間搬到台北一家咖啡館的後場。芬蘭客人把手寫的芬蘭文紙條從牆上的投信口塞進去，後場的店員阿哲一個芬蘭字都不認得，手邊只有一本中文寫的厚規則書：看到這種形狀的字串，就照抄那種形狀的字串遞出去。紙條上是一則小故事：一位客人點了熱拿鐵，送來是冷的，他沒付錢就走了；後面問：「他喝了嗎？」阿哲照書抄出一行，客人讀到的是「沒有」。規則書寫得夠好，店外的芬蘭人都以為後場坐著一位芬蘭人。這是我依塞爾的設定改寫的：換了語言，漢堡換成拿鐵。",
-      "tag": "原創假設"
-    },
-    {
-      "type": "h",
-      "text": "電腦就是他"
-    },
-    {
-      "type": "p",
-      "text": "塞爾說，在這個例子裡，他對那些中文故事全然不懂：輸入輸出和母語者分不出來，程式隨你怎麼寫，他還是什麼都不懂。在中文這一邊，他就像一台電腦，只是那個程式的一個實例；所以尚克的電腦也什麼故事都不懂，它的理解不是打了折扣，而是零。"
-    },
-    {
-      "type": "p",
-      "text": "程式只管符號的形狀和排列，哲學上叫語法；符號指的是什麼、意思是什麼，叫語意。塞爾的口號是：電腦只有語法，沒有語意。哲學家還有一個詞叫「意向性」，白話是「關於某個東西」：想吃巧克力、想到曼哈頓，心思都關於某樣東西。塞爾說，照形式搬符號，本身沒有意向性。"
-    },
-    {
-      "type": "quote",
-      "text": "沒有人會以為，電腦模擬一場最高等級的火警，會把整個街區燒掉；或者模擬一場暴雨，會把我們全淋濕。那到底為什麼會有人以為，電腦模擬理解，就真的理解了什麼？",
-      "original": "No one supposes that computer simulations of a five-alarm fire will burn the neighborhood down or that a computer simulation of a rainstorm will leave us all drenched. Why on earth would anyone suppose that a computer simulation of understanding actually understood anything?",
-      "cite": "塞爾〈心、腦與程式〉，1980"
-    },
-    {
-      "type": "p",
-      "text": "這不等於說電腦永遠不會懂。文章最後，塞爾自己問：機器能思考嗎？答案是「當然能。我們正是這樣的機器。」造一台有神經元、有軸突和樹突、跟我們夠像的機器，他也說能。他反對的只有一件事：光靠跑對了程式，就能思考、理解。在他看來，理解來自大腦這種生物構造的因果力；火星人若用別的材料長出腦，也許一樣行，那是經驗問題，就像問光合作用能不能不靠葉綠素。"
-    },
-    {
-      "type": "h",
-      "text": "背下整本書也一樣"
-    },
-    {
-      "type": "p",
-      "text": "對塞爾的反駁有好幾路。塞爾以外，這篇裡其他人的話，我都是從那部線上哲學百科的〈中文房間論證〉條目讀來的，他們的原文我沒讀到；條目的作者**柯爾**（David Cole）自己也提出了反駁。有一種反駁叫「系統回應」：房裡的人只是中央處理器，規則書、資料、草稿紙加在一起的整個系統，才是懂中文的那一個。布洛克（Ned Block）是最早這樣說的人之一，丹尼特（Dennett）也這樣說。"
-    },
-    {
-      "type": "p",
-      "text": "塞爾的回法，是把整個系統塞進那個人：讓他把規則和資料全背下來，在腦子裡算，連房間都不要，到戶外去做。"
-    },
-    {
-      "type": "quote",
-      "text": "即使如此，他對中文還是一無所知；系統就更不懂了，因為系統裡沒有任何東西不在他身上。",
-      "original": "All the same, he understands nothing of the Chinese, and a fortiori neither does the system, because there isn't anything in the system that isn't in him.",
-      "cite": "塞爾〈心、腦與程式〉，1980"
-    },
-    {
-      "type": "p",
-      "text": "他還說，連給這個回答都有點不好意思：一個人不懂中文，這個人加上幾張紙卻懂，實在太難相信。照系統回應的算法，胃在某個層次上也在處理資訊，胃、心、肝都要算成「理解的子系統」了。在他看來，那個人腦子裡的中文子系統，只知道某一串彎彎曲曲後面接另一串。"
-    },
-    {
-      "type": "h",
-      "text": "問他多高"
-    },
-    {
-      "type": "p",
-      "text": "塞爾這個回法的前提，在我看來是：系統裡的東西既然全在他身上，系統懂的，他就該懂。一個人背下來的東西，就一定是他自己嗎？柯爾和布洛克都說，就算規則全背進腦子，也不是塞爾變成了那個系統，比較像多重人格，一顆頭裡兩個人。"
-    },
-    {
-      "type": "p",
-      "text": "柯爾的辦法是把對話問得具體。用中文問那個房間：「你多高？」「你住哪裡？」「早餐吃什麼？」那些中文答案顯然不是塞爾的答案，看不到他的信念、記憶和個性，除了他很勤勞。同時再用英文問，房裡就像有兩個人：一個講塞爾自己的事，一個有不同的人生經歷與知識。"
-    },
-    {
-      "type": "p",
-      "text": "柯爾從這裡推出一個條件句：如果跑這個程式真的造出了對中文的理解，懂的那一位也不是操作員，而是另一個人，信念和欲望來自程式和資料；所以塞爾在房裡不懂，證明不了沒有理解產生。這叫「虛擬心靈回應」。莫德林（Maudlin）1989 年也說，塞爾沒有排除兩個互不相干的心同時存在。"
-    },
-    {
-      "type": "p",
-      "text": "塞爾在 1980 年回應過另一個說法：一個人裡有兩個子系統，一個懂英文、一個懂中文；他答，中文那個只知道符號接符號，只是英文那個的一部分。站在塞爾這邊的，還有數學物理學家潘洛斯（Penrose），他反對虛擬心靈回應。柯爾的條件句只說到這裡：如果有理解產生，塞爾在房裡不懂，並不能證明沒有。"
-    },
-    {
-      "type": "h",
-      "text": "加一台攝影機"
-    },
-    {
-      "type": "p",
-      "text": "另一路反駁認為，符號要有意思，得接上外界。「機器人回應」把電腦裝進有攝影機、麥克風、輪子和手臂的機器人身體，讓它像小孩一樣邊看邊做，符號就接上了意思。塞爾的回答是，攝影機送進來的也只是更多符號。假設房間角落多了一條紙帶，送進一串數字，他不知道那是攝影機的數位輸出，對他來說只是多一點工作。"
-    },
-    {
-      "type": "p",
-      "text": "塞爾還指出，機器人回應等於默默承認，認知不只是形式上搬符號，因為它加上了和外界的因果關係。條目在這一節還提到克蘭（Tim Crane）1991 年的看法：塞爾如果不只背規則，還開始在中文世界裡生活行動，很可能不久就會明白那些符號的意思。"
-    },
-    {
-      "type": "h",
-      "text": "揮磁鐵的人"
-    },
-    {
-      "type": "p",
-      "text": "還有一種反駁不寫規則書，直接模擬。「腦模擬回應」要程式跟著一位中文母語者懂中文時的每一個神經元、每一次放電走。塞爾把它換成水管：那個人操作一大套水管和閥門，每個接頭對應中文腦裡的一個突觸，他照英文程式開關水龍頭，中文答案從另一頭流出來。人不懂，水管也不懂。條目指出：到了水管版，塞爾的根據已經不只是「我自己不懂」，還要靠「水管不會懂」這種直覺。"
-    },
-    {
-      "type": "p",
-      "text": "1990 年 1 月，《科學人》雜誌刊出塞爾談中文房間的文章，同一期登了邱奇蘭夫婦（Paul and Patricia Churchland）的回應。他們同意那個房間不懂中文，卻說這個論證利用了我們對認知的無知，還編了一個對照，叫「發光的房間」：有人在暗房裡揮一塊磁鐵，沒看到光，就宣布馬克士威「光是電磁波」的理論錯了。他們也說，自己腦中沒有一個神經元懂英文，整個腦卻懂。平克（Steven Pinker）1997 年支持這個反例，說關鍵在速度：思想實驗把波放慢到我們不再當它是光，也把心智運算放慢到我們不再叫它理解。"
-    },
-    {
-      "type": "p",
-      "text": "照平克的思路把阿哲調快：他一秒翻過幾千頁規則書，客人的筆剛放下，回條就從投信口出來。櫃台前的芬蘭客人分不出後場坐的是一位芬蘭人，還是翻書飛快的阿哲；阿哲不懂芬蘭文，這件事只有阿哲自己能作證。",
-      "tag": "原創假設"
-    },
-    {
-      "type": "p",
-      "text": "丹尼特 1980 年稱中文房間是「直覺幫浦」。布洛克同一年的評論也說，塞爾的論證之所以有力，靠的是「某些東西不會思考」的直覺。"
-    },
-    {
-      "type": "table",
-      "title": "說「懂」的那一位在哪裡",
-      "head": [
-        "回應",
-        "誰懂",
-        "塞爾怎麼回"
-      ],
-      "rows": [
-        [
-          "系統回應（布洛克、丹尼特）",
-          "人加規則書、草稿紙的整個系統",
-          "規則全背進腦子，還是不懂"
-        ],
-        [
-          "虛擬心靈回應（柯爾）",
-          "程式跑出來的另一個心",
-          "1980 年回應過「一個人裡有兩個子系統」的說法：中文那個只知道符號接符號"
-        ],
-        [
-          "機器人回應（克蘭）",
-          "接上攝影機和手腳的機器人",
-          "攝影機送進來的也只是符號"
-        ],
-        [
-          "腦模擬回應",
-          "照母語者神經元運作的程式",
-          "換成水管：人和水管都不懂"
-        ],
-        [
-          "他心回應（接近圖靈）",
-          "只能看行為，電腦原則上也能通過行為測試",
-          "問題在把認知狀態歸給別人時歸的是什麼"
-        ]
-      ],
-      "caption": "依塞爾 1980 年原文與史丹佛大學線上哲學百科的〈中文房間論證〉條目整理；括號裡只列條目在該回應下提到的部分人名或說法。"
-    },
-    {
-      "type": "h",
-      "text": "它自己說適用"
-    },
-    {
-      "type": "p",
-      "text": "「他心回應」最樸素：我們判斷別人懂不懂中文，也只能看他的回答；電腦原則上一樣能通過這種行為測試。柯爾說這接近圖靈本人的立場。塞爾只回了短短一段：問題不在他怎麼知道別人有認知狀態，而在他把認知狀態歸給別人時，歸的是什麼；在這裡假裝被麻醉，算不上回答。柯爾的評語是，這段回答也許太短了。"
-    },
-    {
-      "type": "p",
-      "text": "2022 年底，以大型語言模型為基礎的 AI 系統受到廣泛注意。柯爾 2024 年修訂條目時比了一下：尚克的程式和資料庫是手工建的，只能就餐廳說上一兩句；大型語言模型能一段接一段寫出連寫程式的人都沒想到的內容。條目記下 2024 年的一段問答：問 ChatGPT「你懂英文字嗎？」它說懂。再問「塞爾的論證適用於 ChatGPT 嗎？」它說適用，還說自己並不真正理解「人類意義上的」意義。柯爾的評語是：這個系統看起來懂得自己不懂，卻沒注意到這和幾分鐘前的回答不一致。"
-    },
-    {
-      "type": "p",
-      "text": "條目還說：如果某個系統在每一種場合都把語言用得跟人一樣好，一個思想實驗卻仍說它不是「真的」懂，那「真的懂」就成了測不到、不起作用、無關緊要的東西。這個論證到底成不成立，柯爾在條目結尾說至今沒有共識；丹尼特 2013 年的評語站在其中一端：一個顯然錯誤、又誤導人的論證。"
-    },
-    {
-      "type": "h",
-      "text": "走進磨坊"
-    },
-    {
-      "type": "p",
-      "text": "**萊布尼茲**（Leibniz）1714 年用法文寫成《單子論》，第 17 節要讀者想像一台會思考、會感覺、會知覺的機器，按比例放大，大到人可以走進去，像走進一座磨坊。柯爾說，他和塞爾相隔三個世紀，直覺卻很像：都看著一個由簡單操作組成的複雜系統，指出看不出理解從哪裡來。"
-    },
-    {
-      "type": "figure",
-      "id": "f1",
-      "kind": "portrait",
-      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_%28ca._1695%29.jpg/1280px-Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_%28ca._1695%29.jpg",
-      "width": 1280,
-      "height": 1580,
-      "alt": "油畫半身像：一位戴著深色長捲假髮的中年男子，白色領巾，身上披著褐色絲絨外袍，背景是深褐色。",
-      "caption": "萊布尼茲像，Christoph Bernhard Francke 約 1695 年繪，油彩、畫布，81 × 66 公分，赫爾佐格・安東・烏爾里希博物館藏（GG 558）。畫成大約二十年後，他寫下走進磨坊的那一節。",
-      "credit": "Christoph Bernhard Francke；Herzog Anton Ulrich-Museum",
-      "license": "Public domain",
-      "license_url": "",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_(ca._1695).jpg",
-      "made": "約 1695"
-    },
-    {
-      "type": "p",
-      "text": "走進那座磨坊，萊布尼茲說，只會看到零件一個推著一個，找不到任何東西能解釋一個知覺。"
-    }
-  ],
-  "sources": [
-    {
-      "title": "Minds, brains, and programs",
-      "publisher": "John R. Searle，The Behavioral and Brain Sciences 3 (1980): 417–457",
-      "date": "1980",
-      "url": "https://zoo.cs.yale.edu/classes/cs458/materials/minds-brains-and-programs.pdf",
-      "note": "讀刊出版掃描（Yale 課程網站），並對照 Buffalo 的預印本 HTML。用到：強／弱 AI 的定義；尚克的漢堡故事；房間設定（不確定分得出中文與日文、三批符號、英文規則、外面的人叫它們故事／問題／答案／程式）；Nobody just looking 一句；I still understand nothing、it is zero；系統回應與 a fortiori 一句、embarrassed、squiggle／squoggle；機器人回應（tacitly concedes）；腦模擬回應的水管；他心回應的 feign anesthesia；Could a machine think? 的問答、火星人與光合作用；five-alarm fire／rainstorm 一句。DOI 10.1017/S0140525X00005756。"
-    },
-    {
-      "title": "The Chinese Room Argument",
-      "publisher": "Stanford Encyclopedia of Philosophy（David Cole）",
-      "date": "2024-10-23",
-      "url": "https://plato.stanford.edu/entries/chinese-room/",
-      "note": "2004 年初版，2024-10-23 實質修訂。用到：塞爾 1932–2025、最廣為討論的論證；§2.1 萊布尼茲磨坊（《單子論》§17，Latta 英譯）；§2.2 圖靈 1950；§3 刊出時附 27 篇評論、1990 年 1 月《科學人》與邱奇蘭夫婦；§4.1 系統回應（Block、Dennett 等）、Cole 與 Block 的「一頭兩人」；§4.1.1 虛擬心靈回應、Cole 的早餐問題、Penrose 反對虛擬心靈回應；§4.2 機器人回應、紙帶與攝影機、Tim Crane 1991；§4.3 水管版改靠萊布尼茲式直覺、邱奇蘭夫婦的發光房間與 no neuron 一句；§4.4 他心回應、may be too short；§4.5 Pinker 1997 速度論、Dennett 1980 intuition pump 與 2013 clearly a fallacious and misleading argument；§4.6 LLM、作者 2024 年問 ChatGPT 的問答與評語、真正理解變得測不到；結論：沒有共識。邱奇蘭夫婦 1990 原文未讀，相關內容轉引自此。"
-    },
-    {
-      "title": "John Searle",
-      "publisher": "Wikipedia",
-      "date": "",
-      "url": "https://en.wikipedia.org/wiki/John_Searle",
-      "note": "生卒：1932-07-31 生於丹佛，2025-09-17 卒；據此算出 2015 年演講時 83 歲。"
-    },
-    {
-      "title": "Monadology",
-      "publisher": "Wikipedia",
-      "date": "",
-      "url": "https://en.wikipedia.org/wiki/Monadology",
-      "note": "《單子論》1714 年以法文寫成；德譯本 1720 年出版，法文原文 1840 年才刊出。"
-    },
-    {
-      "title": "File:Christoph Bernhard Francke - Bildnis des Philosophen Leibniz (ca. 1695).jpg",
-      "publisher": "Wikimedia Commons",
-      "date": "",
-      "url": "https://commons.wikimedia.org/wiki/File:Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_(ca._1695).jpg",
-      "note": "畫作尺寸 81 × 66 公分、館藏編號 GG 558 取自檔案內嵌的館方描述（EXIF）。"
-    }
-  ]
+  {
+   "type": "p",
+   "text": "阿哲不懂芬蘭文，這點沒有疑問。那這家店呢？客人問什麼，店都答得對，你會說這家店懂芬蘭文嗎？"
+  },
+  {
+   "type": "p",
+   "text": "這家咖啡館是我改寫的。原版在 1980 年：美國哲學家**塞爾**（John Searle）想像自己被鎖在一個房間裡。他不會讀也不會說中文，中文在他眼裡只是彎彎曲曲的形狀；手邊有一套英文寫的規則，教他看到哪種形狀，就交出哪種形狀。外面的人把送進來的叫「故事」和「問題」，把他交出去的叫「答案」。這就是有名的**中文房間**。他瞄準的是當年耶魯大學一套會讀故事的程式：讀一則有人進餐廳點了漢堡、漢堡烤焦、他氣得沒付錢就走的故事，問它「他吃了漢堡嗎？」，它和人一樣答「沒有」。我只把語言換成芬蘭文，漢堡換成拿鐵。"
+  },
+  {
+   "type": "quote",
+   "text": "單看我的答案，沒有人看得出我一個中文字也不會說。",
+   "original": "Nobody just looking at my answers can tell that I don't speak a word of Chinese.",
+   "cite": "塞爾〈心、腦與程式〉，1980"
+  },
+  {
+   "type": "p",
+   "text": "這題放到今天更不好躲。聊天機器人做的事，看起來就是這家店：一段話丟進去，一段話遞出來。史丹佛大學編的線上哲學百科，2024 年記下一段問答：有人問 ChatGPT「你懂英文字嗎？」它說懂。再問「塞爾的論證適用於 ChatGPT 嗎？」它說適用，還說自己並不真正理解「人類意義上的」意義。"
+  },
+  {
+   "type": "h",
+   "text": "電腦就是阿哲"
+  },
+  {
+   "type": "p",
+   "text": "塞爾的意思是：電腦就是阿哲。程式只管一串符號長什麼樣、後面該接哪一串，不管它說的是什麼；就像阿哲只認形狀，不知道自己抄的「沒有」講的是那杯拿鐵。答得再好，理解也不是打了折，而是零。"
+  },
+  {
+   "type": "quote",
+   "text": "沒有人會以為，電腦模擬一場最高等級的火警，會把整個街區燒掉；或者模擬一場暴雨，會把我們全淋濕。那到底為什麼會有人以為，電腦模擬理解，就真的理解了什麼？",
+   "original": "No one supposes that computer simulations of a five-alarm fire will burn the neighborhood down or that a computer simulation of a rainstorm will leave us all drenched. Why on earth would anyone suppose that a computer simulation of understanding actually understood anything?",
+   "cite": "塞爾〈心、腦與程式〉，1980"
+  },
+  {
+   "type": "p",
+   "text": "這不等於說機器永遠不會懂。塞爾自己問過：機器能思考嗎？他答：「當然能。我們正是這樣的機器。」他反對的只有一件事：光靠跑對了程式，就能懂。在他看來，懂靠的是大腦這種生物構造；換一種材料能不能長出一樣的東西，是要去查的事，就像問光合作用能不能不靠葉綠素。"
+  },
+  {
+   "type": "h",
+   "text": "讓阿哲把書背下來"
+  },
+  {
+   "type": "p",
+   "text": "有一種反駁是：懂芬蘭文的不是阿哲，是整家店。阿哲只是其中一個零件，阿哲加上規則書，加上他抄寫用的草稿紙，合起來才是那個答題的。"
+  },
+  {
+   "type": "p",
+   "text": "塞爾的回法是把店拆掉：讓阿哲把整本規則書背下來，在腦子裡算，連後場都不要，站到街上回紙條。"
+  },
+  {
+   "type": "quote",
+   "text": "即使如此，他對中文還是一無所知；系統就更不懂了，因為系統裡沒有任何東西不在他身上。",
+   "original": "All the same, he understands nothing of the Chinese, and a fortiori neither does the system, because there isn't anything in the system that isn't in him.",
+   "cite": "塞爾〈心、腦與程式〉，1980"
+  },
+  {
+   "type": "p",
+   "text": "他還說，連給這個回答都有點不好意思：一個人不懂，這個人加上幾張紙卻懂了，實在太難相信。"
+  },
+  {
+   "type": "h",
+   "text": "用芬蘭文問他多高"
+  },
+  {
+   "type": "p",
+   "text": "可是書背進腦子以後，懂的就該是阿哲嗎？寫那部百科條目的哲學家**柯爾**（David Cole）有個辦法：把問題問具體。照他的辦法，用芬蘭文問：「你多高？」「你住哪裡？」「早餐吃什麼？」回條上的答案，不會是阿哲的身高、住址和早餐。同時用中文問阿哲，他講的是自己的事。一顆頭裡，像住了兩個人。"
+  },
+  {
+   "type": "p",
+   "text": "柯爾因此說：如果跑這套規則真的生出了理解，懂的也不是操作的人，而是另一位，他的信念和欲望來自規則和資料。阿哲說「我不懂」是真話，可是他只能替自己作證，證明不了店裡沒有誰懂。塞爾就是在這一步走得太快。他另外兩條理由，搬形狀搬不出意思、懂要靠大腦的生物構造，不靠這一步，我也駁不倒。"
+  },
+  {
+   "type": "h",
+   "text": "讓阿哲快一千倍"
+  },
+  {
+   "type": "p",
+   "text": "還有一路反駁說：我們覺得阿哲不懂，是因為我們在看慢動作。一對哲學家夫婦打了個比方：有人在暗房裡揮一塊磁鐵，沒看到光，就說「光是一種電磁波」這個理論錯了。可是光確實是電磁波，只是手揮出來的波太慢，慢到眼睛看不見。認知心理學家**平克**（Steven Pinker）1997 年接著說：中文房間也一樣，把心智的運算放慢成一頁一頁翻書，我們就不再叫它理解。"
+  },
+  {
+   "type": "p",
+   "text": "那就把阿哲調快。他一秒翻過幾千頁規則書，客人的筆剛放下，回條就從投信口出來。站在櫃台前，你分得出後場坐的是一位芬蘭人，還是翻書飛快的阿哲嗎？"
+  },
+  {
+   "type": "table",
+   "title": "懂芬蘭文的是誰",
+   "head": [
+    "說法",
+    "懂芬蘭文的是誰"
+   ],
+   "rows": [
+    [
+     "塞爾",
+     "沒有誰：阿哲不懂，電腦就是阿哲"
+    ],
+    [
+     "整家店",
+     "阿哲加規則書和草稿紙；塞爾回：書背進腦子，阿哲還是不懂"
+    ],
+    [
+     "另一個人（柯爾）",
+     "規則跑出來的另一位，不是阿哲"
+    ],
+    [
+     "太慢了（平克）",
+     "放慢成翻書才看不出來；快到分不出時，也許就算懂"
+    ]
+   ],
+   "caption": "依塞爾 1980 年原文與史丹佛大學線上哲學百科〈中文房間論證〉條目整理；咖啡館版是本報改寫。"
+  },
+  {
+   "type": "h",
+   "text": "它說它不懂"
+  },
+  {
+   "type": "p",
+   "text": "回到那段和 ChatGPT 的問答。柯爾的評語是：這個系統看起來懂得自己不懂，卻沒注意到，幾分鐘前它才說自己懂英文字。"
+  },
+  {
+   "type": "p",
+   "text": "條目還有一句更重的話：如果一個系統在每一種場合都把語言用得跟人一樣好，一個思想實驗卻仍說它不是「真的」懂，那「真的懂」就成了測不到、不起作用的東西。這個論證到底成不成立，柯爾在條目結尾說，至今沒有共識。"
+  },
+  {
+   "type": "p",
+   "text": "我偏向柯爾。阿哲那句「我不懂」我全信，只是它管不到投信口的另一頭。可是你要我指出店裡哪裡藏著一位懂芬蘭文的人，我也指不出來。"
+  },
+  {
+   "type": "p",
+   "text": "芬蘭客人拿著回條走出咖啡館，紙上寫著「沒有」。他不知道後場坐的是誰，只知道答案是對的。"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Minds, brains, and programs",
+   "publisher": "John R. Searle，The Behavioral and Brain Sciences 3 (1980): 417–457",
+   "date": "1980",
+   "url": "https://zoo.cs.yale.edu/classes/cs458/materials/minds-brains-and-programs.pdf",
+   "note": "讀刊出版掃描（Yale 課程網站），並對照 Buffalo 的預印本 HTML。用到：強／弱 AI 的定義；尚克的漢堡故事；房間設定（不確定分得出中文與日文、三批符號、英文規則、外面的人叫它們故事／問題／答案／程式）；Nobody just looking 一句；I still understand nothing、it is zero；系統回應與 a fortiori 一句、embarrassed、squiggle／squoggle；機器人回應（tacitly concedes）；腦模擬回應的水管；他心回應的 feign anesthesia；Could a machine think? 的問答、火星人與光合作用；five-alarm fire／rainstorm 一句。DOI 10.1017/S0140525X00005756。"
+  },
+  {
+   "title": "The Chinese Room Argument",
+   "publisher": "Stanford Encyclopedia of Philosophy（David Cole）",
+   "date": "2024-10-23",
+   "url": "https://plato.stanford.edu/entries/chinese-room/",
+   "note": "2004 年初版，2024-10-23 實質修訂。用到：塞爾 1932–2025、最廣為討論的論證；§2.2 圖靈 1950；§3 刊出時附 27 篇評論、1990 年 1 月《科學人》與邱奇蘭夫婦；§4.1 系統回應（Block、Dennett 等）、Cole 與 Block 的「一頭兩人」；§4.1.1 虛擬心靈回應、Cole 的早餐問題、Penrose 反對虛擬心靈回應；§4.2 機器人回應、紙帶與攝影機、Tim Crane 1991；§4.3 水管版改靠萊布尼茲式直覺、邱奇蘭夫婦的發光房間與 no neuron 一句；§4.4 他心回應、may be too short；§4.5 Pinker 1997 速度論、Dennett 1980 intuition pump 與 2013 clearly a fallacious and misleading argument；§4.6 LLM、作者 2024 年問 ChatGPT 的問答與評語、真正理解變得測不到；結論：沒有共識。邱奇蘭夫婦 1990 原文未讀，相關內容轉引自此。Cole 早餐問題原文以中文／英文問塞爾，本文搬到咖啡館改成芬蘭文／中文問阿哲；本文其他學者的說法都轉引自此條目，原文未讀。"
+  },
+  {
+   "title": "John Searle",
+   "publisher": "Wikipedia",
+   "date": "",
+   "url": "https://en.wikipedia.org/wiki/John_Searle",
+   "note": "生卒：1932-07-31 生於丹佛，2025-09-17 卒；據此算出 2015 年演講時 83 歲。"
+  }
+ ]
 }

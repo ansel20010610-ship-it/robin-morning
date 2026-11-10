@@ -31,7 +31,7 @@ LENGTH = {  # (min, max) CJK characters in body
     "canon": (1200, 1800), "wildcard": (800, 1400), "concept": (1400, 2200), "poem": (1000, 1600), "mystery": (1200, 1800),
     "art": (2500, 4000), "photo": (2000, 3500), "city": (2500, 4000),
     "fiction": (2500, 4000), "literature": (2500, 4000), "tactics": (2000, 3500),
-    "philosophy": (2500, 4000), "fm-watch": (0, 5000), "cosmere-watch": (0, 5000), "obituary": (600, 1800), "serial": (1100, 2600),
+    "philosophy": (1800, 3000), "fm-watch": (0, 5000), "cosmere-watch": (0, 5000), "obituary": (600, 1800), "serial": (1100, 2600),
 }
 NO_HERO = {"news", "serial"}
 # 每欄一位記者 (STYLE.md 〇之四): the voice each column writes in, fixed; forms rotate, voices do not.
@@ -358,7 +358,7 @@ def stale_words(art):
 # reserve (fill_from_reserve.py looks at ERRORs alone): a reserve without a form beats an empty column.
 BLOCKING_WARN = re.compile(r"^(?:機器腔|出處類標籤不再使用|小標「.*」(?:用了規格裡的分類詞|是「不是 X，是 Y」的套路|是問句的套路)"
                            r"|quote 區塊 \d+ 個|段落 tag \d+ 個|和範文一樣的句子|寫給創作者的建議|備稿要在任何一天都成立"
-                           r"|缺少 form|form「|缺少 voice|voice「)")
+                           r"|缺少 form|form「|缺少 voice|voice「|哲學欄)")
 
 
 def reserve_blocking(warns):
@@ -578,6 +578,8 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             W("缺少 form：派稿時指定的文體代號（STYLE.md 〇之四），同一期不重複")
         elif art["form"] not in FORMS:
             W("form「%s」不在菜單裡（%s）" % (art["form"], "、".join(FORMS)))
+        elif col == "philosophy" and art["form"] in ("argument", "reverse", "list") and str(d) >= "2026-11-10":
+            E("哲學欄不用 form「%s」：先擺情境、不急著給答案（columns/philosophy.md「先讓人看得懂」）" % art["form"])
         want = REPORTERS.get(col)
         if not art.get("voice"):
             W("缺少 voice：這欄的記者代號是「%s」（STYLE.md 〇之四）" % want)
@@ -879,6 +881,10 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             W("正文 %d 字，低於建議 %d–%d" % (n, lo, hi))
         elif n > hi * 1.2:
             W("正文 %d 字，高於建議 %d–%d" % (n, lo, hi))
+        # 2026-11-10 (the owner: 咖啡廳裡的思想實驗看不懂): a philosophy piece past 3,000 is the catalogue of every reply the
+        # handbook now forbids; it blocks a reserve (BLOCKING_WARN), so the 備稿班 rewrites it under「先讓人看得懂」
+        if col == "philosophy" and n > 3000:
+            W("哲學欄正文 %d 字，超過 3,000（columns/philosophy.md「先讓人看得懂」：一條主線，立場最多三種）" % n)
     full = json.dumps(body, ensure_ascii=False)
     for ph in AI_PHRASES:
         if ph in full:
