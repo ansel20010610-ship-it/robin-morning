@@ -1,0 +1,173 @@
+{
+ "column": "news",
+ "date": "2026-11-11",
+ "title": "美俄烏阿布達比會談，保加利亞連環車禍 11 死",
+ "dek": "美國、俄羅斯、烏克蘭 10 日在阿布達比坐下來談；西班牙今天全國大罷工；台灣央行說外資匯出是正常調度。",
+ "brief": "美國、俄羅斯、烏克蘭代表昨天在阿布達比會談，是今年 2 月以來第一次。保加利亞一條高速公路在大霧中連環車禍，11 人死亡。西班牙兩大工會今天發動全國罷工。",
+ "topic_key": "news:2026-11-11",
+ "voice": "wire",
+ "updated_at": "2026-11-11T05:30:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "Live: First day of Ukraine-Russia talks 'constructive and quite substantive', Zelensky says",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-10",
+   "url": "https://www.france24.com/en/europe/20261110-live-ukraine-russia-and-us-to-resume-peace-talks-in-abu-dhabi",
+   "note": "會談首日結束、澤倫斯基說法、11 日上午續談、拉夫羅夫對立即停火的立場"
+  },
+  {
+   "title": "美籲俄烏止戰與歐洲安全架構綁定 歐洲質疑",
+   "publisher": "中央社",
+   "date": "2026-11-11",
+   "url": "https://www.cna.com.tw/news/aopl/202611110008.aspx",
+   "note": "台灣時間 11 月 11 日 04:23 發布；美方提議、歐洲疑慮、拉夫羅夫與卡拉斯的說法"
+  },
+  {
+   "title": "Bulgaria motorway pileup kills 11, injures dozens",
+   "publisher": "法國 24 電視台（法新社）",
+   "date": "2026-11-10",
+   "url": "https://www.france24.com/en/live-news/20261110-bulgaria-motorway-pileup-kills-11-dozens-injured",
+   "note": "衛生部修正數字：10 人當場死亡、1 人送醫後死亡；51 人送醫、13 人重傷；內政部長說明原因；全國哀悼日"
+  },
+  {
+   "title": "Spain braces for nationwide strike as anger over housing, costs boils over",
+   "publisher": "半島電視台",
+   "date": "2026-11-10",
+   "url": "https://www.aljazeera.com/news/2026/11/10/spain-braces-for-nationwide-walkout-as-anger-over-housing-costs-boils-over",
+   "note": "CCOO 與 UGT、11 月 11 日零時起 24 小時、2012 年以來第一次、提前大選日期 11 月 29 日"
+  },
+  {
+   "title": "川普稱伊朗戰爭基本結束 目前無須升高軍事行動",
+   "publisher": "中央社",
+   "date": "2026-11-10",
+   "url": "https://www.cna.com.tw/news/aopl/202611100112.aspx",
+   "note": "台灣時間 11 月 10 日 12:50 發布；川普在白宮的談話；戰爭 2 月 28 日開打"
+  },
+  {
+   "title": "美伊終戰前景未明 伊朗國安首長稱目前未與華府談判",
+   "publisher": "中央社",
+   "date": "2026-11-11",
+   "url": "https://www.cna.com.tw/news/aopl/202611110009.aspx",
+   "note": "台灣時間 11 月 11 日 04:35 發布；雷札伊的說法；據路透社，伊朗要求美方先滿足 6 月臨時協議的七項條件"
+  },
+  {
+   "title": "本月外資匯出逾100億美元 楊金龍：再配置非養套殺",
+   "publisher": "公視新聞網",
+   "date": "2026-11-10",
+   "url": "https://news.pts.org.tw/article/835168",
+   "note": "20:04 發布；加權指數收 42,711 點、新台幣收 32.865 元"
+  },
+  {
+   "title": "Taiwan sees US$10 billion in capital outflows in November",
+   "publisher": "Focus Taiwan（中央社英文網）",
+   "date": "2026-11-10",
+   "url": "https://focustaiwan.tw/business/202611100013",
+   "note": "楊金龍：正常資金調度；新台幣本月貶值 1.20%；10 月外資淨匯出約 280 億美元"
+  },
+  {
+   "title": "秋冬登革熱勿輕忽 新北增今年首例本土登革熱病例",
+   "publisher": "公視新聞網",
+   "date": "2026-11-10",
+   "url": "https://news.pts.org.tw/article/835050",
+   "note": "15:01 發布；新莊區 40 多歲女性；疾管署說明白線斑蚊；今年累計 246 例（本土 18、境外移入 228）"
+  }
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "美國、俄羅斯、烏克蘭 11 月 10 日在阿布達比會談，11 日續談。伊朗戰爭前景未明，保加利亞連環車禍，西班牙今天大罷工。台灣方面，央行說明外資匯出，新北有今年首例本土登革熱。"
+  },
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "美俄烏在阿布達比會談",
+     "place": [
+      "UA",
+      "RU",
+      "AE"
+     ],
+     "summary": "美國、俄羅斯、烏克蘭代表 11 月 10 日在阿布達比會談，是九個多月來第一次三方會談。澤倫斯基說首日「有建設性，而且相當實質」。美國特使庫許納提議，停戰和新的歐洲安全架構一起談。俄外長拉夫羅夫說，俄方不同意立即停火，應先談歐洲未來安全架構，先談框架「完全合理」。歐盟的卡拉斯說，歐洲已有安全架構，問題是俄方不遵守。阿布達比 11 日早上續談。",
+     "source": "法國 24 電視台、中央社",
+     "url": "https://www.france24.com/en/europe/20261110-live-ukraine-russia-and-us-to-resume-peace-talks-in-abu-dhabi",
+     "when": "11 月 10 日，阿布達比當地時間"
+    },
+    {
+     "headline": "川普說伊朗戰爭基本結束",
+     "place": [
+      "IR",
+      "US"
+     ],
+     "summary": "川普在白宮與卡達總理會面後說，伊朗戰爭「基本上已經結束」，目前不需軍事行動，但美軍已「上膛待命」。伊朗國安首長雷札伊 11 月 10 日說，兩國目前沒有談判。據路透社，伊朗要美方先滿足 6 月臨時協議的七項條件，才會重新開放荷莫茲海峽航運。",
+     "source": "中央社（兩篇）",
+     "url": "https://www.cna.com.tw/news/aopl/202611100112.aspx",
+     "when": "中央社 11 月 10 日報導川普談話（華盛頓電）；雷札伊談話 11 月 10 日"
+    },
+    {
+     "headline": "保加利亞高速公路連環車禍",
+     "place": "BG",
+     "summary": "11 月 10 日上午，索菲亞通往布爾加斯的高速公路在揚博爾附近發生連環車禍，約 50 輛汽車和貨車雙向受損。衛生部說 11 人死亡，51 人送醫。內政部長說，主因是天氣突變，能見度驟降。政府提議今天為全國哀悼日。",
+     "source": "法國 24 電視台",
+     "url": "https://www.france24.com/en/live-news/20261110-bulgaria-motorway-pileup-kills-11-dozens-injured",
+     "when": "11 月 10 日，保加利亞當地時間"
+    },
+    {
+     "headline": "西班牙今天全國大罷工",
+     "place": "ES",
+     "summary": "西班牙兩大工會 CCOO 與 UGT 發動 24 小時全國罷工，11 月 11 日零時起，訴求是工資、住房、物價；兩會上一次發動總罷工是 2012 年。交通、醫院預期受影響。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/10/spain-braces-for-nationwide-walkout-as-anger-over-housing-costs-boils-over",
+     "when": "11 月 11 日，西班牙當地時間"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "央行：外資匯出屬正常調度",
+     "place": "TW",
+     "summary": "央行總裁楊金龍 11 月 10 日說，11 月以來外資匯出逾 100 億美元，是把在台灣賺到的股利和獲利重新配置，屬正常調度。他否認外界所說的「養套殺」，即先養高股價再套現。新台幣 9 日盤前本月累計貶值 1.20%，10 日升值收 32.865 元。同日加權指數大漲 1,050 點，因國安基金進場、金管會限制放空。",
+     "source": "公視新聞網、Focus Taiwan",
+     "url": "https://news.pts.org.tw/article/835168",
+     "when": "11 月 10 日，台灣時間"
+    },
+    {
+     "headline": "新北出現今年首例本土登革熱",
+     "place": "TW",
+     "summary": "新北市新莊區一名 40 多歲女性，11 月初確診，是新北今年首例本土病例，感染源還在查。疾管署說，北部主要病媒蚊白線斑蚊比埃及斑蚊耐低溫，11 到 15 度還能叮咬傳播，秋冬也要防蚊。",
+     "source": "公視新聞網",
+     "url": "https://news.pts.org.tw/article/835050",
+     "when": "11 月 10 日，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "今年登革熱病例",
+   "head": [
+    "項目",
+    "病例數"
+   ],
+   "rows": [
+    [
+     "全國累計",
+     "246"
+    ],
+    [
+     "本土",
+     "18"
+    ],
+    [
+     "境外移入",
+     "228"
+    ]
+   ],
+   "caption": "疾管署統計，經公視新聞網報導，統計至 11 月 10 日。"
+  }
+ ]
+}
