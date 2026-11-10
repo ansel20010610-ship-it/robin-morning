@@ -386,10 +386,18 @@ const FLIGHTS = {
   zigzag: (S, s, W, H, X) => { const pts = [S], n = 5 + Math.floor(Math.random() * 3), w = between(50, 100), dy = (S[1] - between(60, 120)) / n;
     for (let k = 1; k <= n; k++) pts.push([S[0] + s * (40 + (k % 2) * w + k * 12), S[1] - k * dy, between(220, 300)]); pts.push([X, between(-40, 60), between(550, 750)]); return { pts }; },
 };
-const HOPS = { // the nestling's: no flight yet. [x, y, ms, facing (1 = toward the open screen, -1 = back), flutter]
-  peek: (S) => [[S[0], S[1], 0, 1], [S[0], S[1], 500, -1], [S[0], S[1], 600, 1], [S[0], S[1] - 5, 160, 1], [S[0], S[1], 160, 1], [S[0], S[1], 500, 1]],
-  flutter: (S) => [[S[0], S[1] - 9, 260, 1, 1], [S[0], S[1] - 14, 220, 1, 1], [S[0], S[1] - 9, 220, 1, 1], [S[0], S[1] - 14, 220, 1, 1], [S[0], S[1] - 9, 220, 1, 1], [S[0], S[1], 300, 1]],
-  rim: (S, s) => [[S[0], S[1] - 10, 260, 1], [S[0] + s * 12, S[1] - 14, 220, 1], [S[0] + s * 18, S[1] - 9, 200, 1], [S[0] + s * 18, S[1] - 9, 500, -1], [S[0] + s * 6, S[1] - 13, 220, -1], [S[0], S[1], 260, -1]],
+const HOPS = { // the nestling's: no flight yet. [x, y, ms, facing (1 = toward the open screen, -1 = back), flutter], drawn afresh each time
+  peek: (S) => { const out = [], looks = 1 + Math.floor(Math.random() * 3); let f = 1;
+    for (let i = 0; i < looks; i++) { f = -f; out.push([S[0], S[1] - between(0, 3), between(380, 720), f]); }
+    out.push([S[0], S[1] - between(4, 8), between(140, 190), 1], [S[0], S[1], between(140, 190), 1], [S[0], S[1], between(300, 650), 1]); return out; },
+  flutter: (S) => { const out = [[S[0], S[1] - between(7, 10), between(220, 300), 1, 1]], n = 3 + Math.floor(Math.random() * 3), hi = between(12, 17);
+    for (let i = 0; i < n; i++) out.push([S[0] + between(-2, 2), S[1] - (i % 2 ? between(7, 10) : hi), between(170, 250), 1, 1]);
+    out.push([S[0], S[1], between(260, 360), 1]); return out; },
+  rim: (S, s) => { const out = [[S[0], S[1] - between(9, 12), between(220, 300), 1]], n = 1 + Math.floor(Math.random() * 3); let x = S[0];
+    for (let i = 0; i < n; i++) { x += s * between(7, 13); out.push([x, S[1] - between(12, 16), between(150, 200), 1], [x, S[1] - between(8, 11), between(130, 180), 1]); }
+    out.push([x, S[1] - 9, between(350, 700), -1]);
+    for (let i = n - 1; i >= 0; i--) { x -= s * (x - S[0]) / (i + 1); out.push([x, S[1] - between(11, 14), between(170, 220), -1]); }
+    out.push([S[0], S[1], between(220, 300), -1]); return out; },
 };
 function freshPick(names, key) {
   const last = store.get(key, []), pool = names.filter((k) => !last.includes(k)), k = (pool.length ? pool : names)[Math.floor(Math.random() * (pool.length || names.length))];
@@ -403,7 +411,10 @@ export function flyBy() {
   if (st.si === 0) return false;
   const W = innerWidth, H = innerHeight, left = Math.random() < .5, s = left ? 1 : -1;
   // where the nest is: a corner above the nav, the middle of an edge, or a corner under the top bar
-  const ny = [H - 130 - between(0, 30), H * between(.3, .6), between(84, 120)][Math.floor(Math.random() * 3)];
+  // the room between the bar at the top (an article's or a page's, if any) and the nav at the foot
+  const top = Math.max(0, document.querySelector(".topbar")?.getBoundingClientRect().bottom || 0);
+  const foot = document.querySelector(".nav")?.getBoundingClientRect().top || H;
+  const ny = [foot - 46 - between(0, 30), top + (foot - top) * between(.3, .6), top + between(60, 90)][Math.floor(Math.random() * 3)];
   const nx = left ? -12 : W - 60, S = [nx + 4, ny - 37]; // the bird's box (64 px) seated low in the bowl, the rim across its belly
   const SUNK = 18, shift = left ? -90 : 90, IN = 450, OUT = 450, flies = st.si >= 3;
   const back = document.createElement("div"), front = document.createElement("div"), bird = document.createElement("a");
@@ -423,13 +434,15 @@ export function flyBy() {
   at(0, F(S[0] + shift, S[1] + SUNK, face)); go(IN, S[0], S[1] + SUNK, face); // in with the nest, still sunk
   go(380, S[0], S[1], face); // up: it peeks over the rim
   go(between(380, 650), S[0], S[1], -face); go(between(450, 700), S[0], S[1], -face); // a look the other way, and back
-  let home = true, takeoff = 0, landed = 0;
+  let home = true, takeoff = 0, landed = 0, flutterOn = 0, flutterOff = 0;
   if (flies) {
     const X = s > 0 ? W + 40 : -110, kind = freshPick(Object.keys(FLIGHTS), "flyways"), fl = FLIGHTS[kind]([S[0], S[1], 0], s, W, H, X);
     home = Boolean(fl.home);
     go(160, S[0], S[1] - 6, face); go(140, S[0], S[1], face); // the crouch before the spring
     takeoff = t;
-    const pts = fl.pts.map((p, i) => (i === 0 ? [S[0], S[1], 0] : [p[0], Math.max(-140, p[1]), p[2] * between(.9, 1.15)]));
+    // on the screen between the bars, except the last point of a flight that leaves (off the edge, or over the top)
+    const lo = top + 4, hi = foot - 70, last = fl.pts.length - 1;
+    const pts = fl.pts.map((p, i) => (i === 0 ? [S[0], S[1], 0] : [p[0], i === last && !fl.home ? Math.max(-140, Math.min(hi, p[1])) : Math.max(lo, Math.min(hi, p[1])), p[2] * between(.9, 1.15)]));
     const path = curve(pts);
     for (let i = 1; i < path.length; i++) {
       const p = path[i], q = path[i - 1], dx = p.x - q.x, dy = p.y - q.y;
@@ -441,20 +454,22 @@ export function flyBy() {
     if (home) { landed = t; go(260, S[0], S[1], -s); go(520, S[0], S[1], -s); go(380, S[0], S[1] + SUNK, -s); }
   } else {
     const kind = freshPick(Object.keys(HOPS), "hopways"), hops = HOPS[kind](S, s);
-    for (const [x, y, ms, f, flap] of hops) { go(ms, x, y, f * -s); if (flap) bird.dataset.flutter = "1"; }
+    for (const [x, y, ms, f, flap] of hops) { if (flap && !flutterOn) flutterOn = t; go(ms, x, y, f * -s); if (flap) flutterOff = t; }
     go(380, S[0], S[1] + SUNK, face);
   }
   // the nest leaves after the bird has settled into it, or soon after it has flown off the screen
   const nestOut = home ? t + 120 : takeoff + Math.min(1400, (t - takeoff) * .45);
   const total = home ? nestOut + OUT : Math.max(t, nestOut + OUT);
-  at(total, frames.at(-1)); // held to the end: off the screen, or sunk in the nest while it slides away
-  const kf = frames.map((f, i) => ({ ...f, offset: times[i] / total }));
+  // the end: off the screen, held there; or sunk in the nest, and away with it as it slides out (the same ease)
+  const outAt = frames.length;
+  if (home) { at(nestOut, F(S[0], S[1] + SUNK, face)); at(total, F(S[0] + shift, S[1] + SUNK, face)); } else at(total, frames.at(-1));
+  const kf = frames.map((f, i) => ({ ...f, offset: times[i] / total, ...(i === 0 ? { easing: "ease-out" } : home && i === outAt ? { easing: "ease-in" } : {}) }));
   // each slide eased on its own (an easing on the whole run would still be sliding the nest in a second later)
   const nestKf = [{ transform: `translateX(${shift}px)`, offset: 0, easing: "ease-out" }, { transform: "none", offset: IN / total }, { transform: "none", offset: nestOut / total, easing: "ease-in" }, { transform: `translateX(${shift}px)`, offset: Math.min(1, (nestOut + OUT) / total) }];
   if (nestKf[3].offset < 1) nestKf.push({ transform: `translateX(${shift}px)`, offset: 1 });
   const flap = bird.querySelector(".bird"), timers = [];
   if (flies) { timers.push(setTimeout(() => flap?.classList.add("flying"), takeoff)); if (home) timers.push(setTimeout(() => flap?.classList.remove("flying"), landed)); }
-  else if (bird.dataset.flutter) { timers.push(setTimeout(() => flap?.classList.add("flutter"), IN + 1320)); timers.push(setTimeout(() => flap?.classList.remove("flutter"), IN + 2800)); }
+  else if (flutterOff) { timers.push(setTimeout(() => flap?.classList.add("flutter"), flutterOn)); timers.push(setTimeout(() => flap?.classList.remove("flutter"), flutterOff)); }
   for (const el of [back, front]) el.animate(nestKf, { duration: total, fill: "both" });
   const done = () => { timers.forEach(clearTimeout); back.remove(); front.remove(); bird.remove(); };
   bird.animate(kf, { duration: total, easing: "linear", fill: "both" }).finished.then(done, done);
