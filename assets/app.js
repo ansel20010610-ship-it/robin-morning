@@ -884,7 +884,7 @@ async function creditBox(el) {
     const ago = Math.round((Date.now() - c.at) / 60000);
     el.innerHTML = `${head}<p class="credit-left"><b>US$ ${c.left.toFixed(2)}</b>剩下</p>
       <span class="credit-bar"><i style="width:${pct.toFixed(1)}%"></i></span>
-      <p class="small">${esc(c.month.replace("-", " 年 "))} 月已用 US$ ${c.used.toFixed(2)}／${c.budget} 美元；每月重給，用不完不累積。${ago > 1 ? `這是 ${ago} 分鐘前的數字。` : ""}</p>
+      <p class="small">${esc(c.month.replace("-", " 年 "))} 月已用 US$ ${c.used.toFixed(2)}／${c.budget} 美元；每月重給，用不完不累積。Anthropic 每天早上八點結算前一天，當天花的隔天才算進來。${ago > 1 ? `這是 ${ago} 分鐘前的數字。` : ""}</p>
       ${days.length ? `<ul class="credit-days">${days.map((x) => `<li><span>${Number(x.d.slice(5, 7))}/${Number(x.d.slice(8))}</span><b>US$ ${x.usd.toFixed(2)}</b></li>`).join("")}</ul>` : ""}`;
   };
   const kept = store.get("credits");
