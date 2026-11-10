@@ -1,0 +1,166 @@
+{
+  "column": "perio",
+  "date": "2026-11-11",
+  "title": "抽菸的人，牙周炎風險多 85%",
+  "dek": "1.85 倍。先記下誰抽菸、再往後追，抽菸的人牙周炎新發生或變嚴重的風險，就是不抽菸的人的這麼多倍。",
+  "brief": "抽菸的人，牙周炎新發生或變嚴重的風險比不抽菸的人多 85%，這是丹麥研究者把 14 篇追蹤研究合起來算的。美國一次性調查算出的 4 倍，問的是另一個問題。歐洲牙周病學會的指引把戒菸介入列為最強的一級建議，治療期和維護期都要做。",
+  "takeaway": "前瞻研究合起來算，抽菸讓牙周炎發生或惡化的風險多 85%，相對風險 1.85。初診問清楚一天幾支，新分類拿它來調整分級。治療期和維護期都做戒菸介入，這是歐洲指引最強的一級建議。",
+  "chairside": "研究長期追蹤抽菸和不抽菸的人，抽菸的人牙周病發生或變嚴重的風險多了 85%。戒菸是牙周治療第一步就要做的事，您願意試的話，我們可以幫您轉介，找專人和藥物一起幫忙。",
+  "topic_key": "perio:doi:10.1016/j.amepre.2018.02.014",
+  "form": "number",
+  "voice": "colleague",
+  "updated_at": "2026-11-11T01:03:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Periodontitis_Cr%C3%B3nica_Severa.JPG",
+    "width": 750,
+    "height": 563,
+    "alt": "張開的嘴，上下前牙之間有明顯縫隙，牙齒排列歪斜，牙面有褐色沉積；牙齦紅腫，下前牙的牙齦邊緣在出血，上排側門牙附近也在出血。",
+    "caption": "上傳者說明這是一位 60 歲男性的重度慢性牙周炎，照片日期戳是 2007 年 10 月。病人是否抽菸不明，與文中研究的受試者無關。",
+    "credit": "Agustin Zeron，Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Periodontitis_Cr%C3%B3nica_Severa.JPG",
+    "made": "2007 年 10 月（照片日期戳）；2010 年 2 月上傳"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "**1.85** 這個數字，講的是抽菸的人得牙周炎的風險。抽菸傷牙周，我們都會講，可是真要說多多少，多數人手上沒有數字。2018 年，丹麥奧胡斯大學牙周科的 **Leite** 和三位同事把追蹤研究合起來算，算出抽菸的人風險是不抽菸的人的 1.85 倍，也就是多 85%。這裡的風險，指的是牙周炎新發生，或原本就有的變嚴重。"
+    },
+    {
+      "type": "p",
+      "text": "他們只收前瞻性的研究，就是先記下誰抽菸，再往後追，看誰的牙周新發病或變壞。文獻翻到 2017 年 5 月，符合的有 28 篇，可是只有 14 篇的資料能合起來算。合出來的數字校正過其他因素，就是 1.85。這題大概不會有人做隨機試驗，所以我覺得，追蹤研究合起來算，已經是這題最硬的證據。"
+    },
+    {
+      "type": "p",
+      "text": "1.85 也有一個範圍。照這批資料，真正的倍數大約在 1.5 到 2.2 之間，取低的那一頭，風險也多了五成。各篇研究算出來的倍數不一樣，作者就拿各研究的特徵去比，看差在哪裡。差距有 54.2% 可以用受試者的年齡解釋；牙周炎用什麼標準定義，只解釋了 2.1%。"
+    },
+    {
+      "type": "h",
+      "text": "美國調查算出來是 4 倍"
+    },
+    {
+      "type": "p",
+      "text": "美國疾病管制與預防中心的研究者 2000 年發表過一份分析，用的是美國第三次全國健康與營養調查 1988 到 1994 年收的資料。現在抽菸的人有牙周炎的勝算，是從不抽菸的人的 3.97 倍。勝算的算法，是拿有病的人數除以沒病的人數；兩群人的勝算一除，就是這個倍數。這是橫斷研究，看的是檢查當下誰已經有牙周炎。"
+    },
+    {
+      "type": "p",
+      "text": "所以 4 倍和 1.85 問的是兩件事。一次性的調查問的是，檢查那一刻，抽菸的人裡已經有病的多不多。前瞻研究問的是，從記下抽菸那天起，往後誰新發病、誰變壞。"
+    },
+    {
+      "type": "p",
+      "text": "兩個數字問的是不同的事，不宜直接比大小。跟病人講風險，我會用 1.85，比較不會說過頭。"
+    },
+    {
+      "type": "svg",
+      "title": "兩種研究，兩個倍數",
+      "svg": "<svg viewBox=\"0 0 420 290\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect class=\"paper\" x=\"0\" y=\"0\" width=\"420\" height=\"290\"/>\n<line class=\"muted\" x1=\"96\" y1=\"30\" x2=\"96\" y2=\"205\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/>\n<text class=\"muted\" x=\"102\" y=\"22\" font-size=\"14\">虛線：1 倍，和不抽菸一樣</text>\n<text class=\"ink\" x=\"20\" y=\"58\" font-size=\"15\">前瞻研究合併（Leite 等，2018）</text>\n<line class=\"accent\" x1=\"134.0\" y1=\"88\" x2=\"187.2\" y2=\"88\" stroke-width=\"3\"/>\n<circle class=\"accent\" cx=\"160.6\" cy=\"88\" r=\"7\"/>\n<text class=\"accent\" x=\"197.2\" y=\"93\" font-size=\"15\">1.85（1.5–2.2）</text>\n<text class=\"ink\" x=\"20\" y=\"134\" font-size=\"15\">美國橫斷調查（Tomar 與 Asma，2000）</text>\n<line class=\"gold\" x1=\"263.2\" y1=\"166\" x2=\"394.7\" y2=\"166\" stroke-width=\"3\"/>\n<circle class=\"gold\" cx=\"321.7\" cy=\"166\" r=\"7\"/>\n<text class=\"ink\" x=\"253.2\" y=\"171\" font-size=\"15\" text-anchor=\"end\">3.97（3.20–4.93）</text>\n<line class=\"ink\" x1=\"20\" y1=\"205\" x2=\"400\" y2=\"205\" stroke-width=\"1\"/>\n<line class=\"ink\" x1=\"20\" y1=\"205\" x2=\"20\" y2=\"211\" stroke-width=\"1\"/>\n<text class=\"muted\" x=\"20\" y=\"229\" font-size=\"14\" text-anchor=\"middle\">0</text>\n<line class=\"ink\" x1=\"96\" y1=\"205\" x2=\"96\" y2=\"211\" stroke-width=\"1\"/>\n<text class=\"muted\" x=\"96\" y=\"229\" font-size=\"14\" text-anchor=\"middle\">1</text>\n<line class=\"ink\" x1=\"172\" y1=\"205\" x2=\"172\" y2=\"211\" stroke-width=\"1\"/>\n<text class=\"muted\" x=\"172\" y=\"229\" font-size=\"14\" text-anchor=\"middle\">2</text>\n<line class=\"ink\" x1=\"248\" y1=\"205\" x2=\"248\" y2=\"211\" stroke-width=\"1\"/>\n<text class=\"muted\" x=\"248\" y=\"229\" font-size=\"14\" text-anchor=\"middle\">3</text>\n<line class=\"ink\" x1=\"324\" y1=\"205\" x2=\"324\" y2=\"211\" stroke-width=\"1\"/>\n<text class=\"muted\" x=\"324\" y=\"229\" font-size=\"14\" text-anchor=\"middle\">4</text>\n<line class=\"ink\" x1=\"400\" y1=\"205\" x2=\"400\" y2=\"211\" stroke-width=\"1\"/>\n<text class=\"muted\" x=\"400\" y=\"229\" font-size=\"14\" text-anchor=\"middle\">5</text>\n<text class=\"muted\" x=\"210\" y=\"256\" font-size=\"14\" text-anchor=\"middle\">抽菸者對不抽菸者的倍數</text>\n<text class=\"muted\" x=\"210\" y=\"276\" font-size=\"14\" text-anchor=\"middle\">線段是 95% 信賴區間</text>\n</svg>",
+      "caption": "依兩篇論文摘要的數據重繪。上面是前瞻研究合併的相對風險，下面是一次性調查的盛行勝算比，兩種數字算法不同，並排只為看出大小差距。",
+      "credit": "本報原創圖解；數據出自 Leite 等 2018、Tomar 與 Asma 2000 的摘要"
+    },
+    {
+      "type": "h",
+      "text": "戒菸排在治療的第一步"
+    },
+    {
+      "type": "p",
+      "text": "**歐洲牙周病學會**2020 年出了一份第 I 到 III 期牙周炎的治療指引。在德國醫學界的指引分級裡，它屬於最高的一級，要先系統地回顧文獻，再由專家照固定程序取得共識。指引把治療分成幾步，第一步不論分期，每個牙周炎病人都要做，戒菸就排在這一步。"
+    },
+    {
+      "type": "quote",
+      "text": "我們建議，對正在接受牙周炎治療的病人實施戒菸介入。",
+      "original": "We recommend tobacco smoking cessation interventions to be implemented in patients undergoing periodontitis therapy.",
+      "cite": "Sanz 等（2020），EFP S3 臨床指引，建議 1.6"
+    },
+    {
+      "type": "p",
+      "text": "這是指引裡最強的一級建議，全體一致通過；維護期的病人另有一條，也是最強的一級。**這條建議的依據是六篇追蹤至少半年的前瞻研究，指引沒有把它們合起來算**，也就沒有替它算出一個合併的數字。指引另引了兩篇研究，戒成功的人牙周結果比繼續抽、或戒了又抽的人好。"
+    },
+    {
+      "type": "h",
+      "text": "一天幾支，寫進病歷"
+    },
+    {
+      "type": "list",
+      "items": [
+        "初診問抽不抽、一天幾支。Leite 的結論是，抽菸要和其他危險因子一起評估。2017 年的牙周炎新分類也把抽菸當成往上調分級的因素：一天不到 10 支，至少算 B 級；10 支以上算 C 級，也就是進展最快的一級。",
+        "戒菸介入可以很短，就是簡短的諮商，必要時再轉介做進一步的諮商和藥物治療。指引說，這不算口腔醫療人員的直接責任，可以轉介，但他們的角色要被強調。",
+        "一到兩年後戒成功的，大約 4% 到 30%，另有一篇例外。"
+      ]
+    },
+    {
+      "type": "paper",
+      "citation": "Leite FRM, Nascimento GG, Scheutz F, López R. Effect of Smoking on Periodontitis: A Systematic Review and Meta-regression. *Am J Prev Med*. 2018;54(6):831-841.",
+      "doi": "10.1016/j.amepre.2018.02.014",
+      "pmid": "29656920",
+      "link": "https://doi.org/10.1016/j.amepre.2018.02.014",
+      "evidence": "系統性回顧與統合分析：28 篇前瞻研究，14 篇合併計算",
+      "design": "系統性回顧、統合分析與統合迴歸，只收前瞻性縱向研究",
+      "sample": "28 篇研究納入回顧，其中 14 篇進入統合分析",
+      "question": "吸菸和牙周炎的發生、惡化有沒有關係，關係多大",
+      "access": "依摘要與後續文獻整理（全文需訂閱）；EFP S3 指引依全文"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Effect of Smoking on Periodontitis: A Systematic Review and Meta-regression",
+      "publisher": "American Journal of Preventive Medicine（Leite FRM 等）",
+      "date": "2018-04-12",
+      "url": "https://doi.org/10.1016/j.amepre.2018.02.014",
+      "note": "主角文獻。書目依 PubMed efetch（PMID 29656920）、Crossref 與 Europe PMC 核對；2018 年 6 月刊於 54 卷 6 期。全文需訂閱，數字依摘要：28 篇研究、14 篇合併、校正後 RR 1.85（95% CI 1.5–2.2）、統合迴歸各因素解釋比例。"
+    },
+    {
+      "title": "Effect of Smoking on Periodontitis: A Systematic Review and Meta-regression（PubMed 摘要）",
+      "publisher": "PubMed",
+      "date": "2018-04-12",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29656920/",
+      "note": "作者單位：奧胡斯大學牙醫系牙周科。"
+    },
+    {
+      "title": "Smoking-attributable periodontitis in the United States: findings from NHANES III",
+      "publisher": "Journal of Periodontology（Tomar SL、Asma S）",
+      "date": "2000-05-01",
+      "url": "https://doi.org/10.1902/jop.2000.71.5.743",
+      "note": "PMID 10872955，依摘要。2000 年發表；作者單位為美國疾病管制與預防中心口腔衛生部門。橫斷研究，NHANES III 資料 1988–1994 年收，12,329 名成人；現在吸菸者 ORp 3.97（3.20–4.93）。"
+    },
+    {
+      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Sanz M 等）",
+      "date": "2020-07-27",
+      "url": "https://doi.org/10.1111/jcpe.13290",
+      "note": "PMID 32383274，依 PMC7891343 全文：治療第一步含危險因子控制、不論分期；建議 1.6（Evidence‐based recommendation，Grade A，全體一致共識）與 4.18（Grade A，Strong consensus），依據都是六篇至少追蹤 6 個月的前瞻研究；危險因子控制一節「No meta‐analysis was performed」；戒菸成功率 1–2 年後 4%–30%；Table 4 建議強度定義（A 為最強的 We recommend）。"
+    },
+    {
+      "title": "Impact of risk factor control interventions for smoking cessation and promotion of healthy lifestyles in patients with periodontitis: A systematic review",
+      "publisher": "Journal of Clinical Periodontology（Ramseier CA 等）",
+      "date": "2020-07-27",
+      "url": "https://doi.org/10.1111/jcpe.13240",
+      "note": "PMID 31912512，依摘要；EFP 指引建議 1.6、4.18 的依據文獻。"
+    },
+    {
+      "title": "Staging and grading of periodontitis: Framework and proposal of a new classification and case definition",
+      "publisher": "Journal of Clinical Periodontology（Tonetti MS、Greenwell H、Kornman KS）",
+      "date": "2018-06-20",
+      "url": "https://doi.org/10.1111/jcpe.12945",
+      "note": "PMID 29926495。摘要：「Risk factor analysis is used as grade modifier.」吸菸各級的支數依下一筆美國牙周病學會整理的表格核對。"
+    },
+    {
+      "title": "Staging and Grading Periodontitis",
+      "publisher": "American Academy of Periodontology",
+      "date": "2019-08-01",
+      "url": "https://www.perio.org/wp-content/uploads/2019/08/Staging-and-Grading-Periodontitis.pdf",
+      "note": "分級表：先假設 B 級，有證據再往 A 或 C 調；Grade modifiers／Smoking：A 級 Non-smoker、B 級 <10 cigarettes/day、C 級 ≥10 cigarettes/day；C 級為 Rapid rate。日期依網址上傳路徑。"
+    },
+    {
+      "title": "File:Periodontitis Crónica Severa.JPG",
+      "publisher": "Wikimedia Commons",
+      "date": "2010-02-12",
+      "url": "https://commons.wikimedia.org/wiki/File:Periodontitis_Cr%C3%B3nica_Severa.JPG",
+      "note": "頭圖；Public domain，作者 Agustin Zeron。"
+    }
+  ]
+}
