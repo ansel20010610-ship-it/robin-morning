@@ -1,13 +1,13 @@
 {
   "column": "football",
   "date": "2026-11-11",
-  "title": "訓練城只剩九個人，塔赫的傳聞卻來了",
-  "dek": "國際賽事週的訓練城冷冷清清，這一天的熱鬧都在別人家。",
-  "brief": "巴薩前一晚沒有比賽，沒被叫走的球員週二在訓練城練了最後一次團練。ESPN 轉述德國天空體育的報導：巴薩問過拜仁的中後衛塔赫，拜仁沒有放人的意思。西甲下一場是 11 月 22 日（週日）台灣時間 21:00，主場對比利亞雷亞爾。",
+  "title": "巴薩探詢塔赫，拜仁不想放人",
+  "dek": "週二還留在巴薩訓練基地一起團練的一線球員，只有八個。",
+  "brief": "巴薩去詢問過能不能簽下拜仁中後衛塔赫，這是 ESPN 轉述德國天空體育的傳聞，拜仁不想放人。女足歐冠對阿森納因為西班牙總罷工延後一天，台灣時間週五凌晨 1 點 45 分在主場開踢。西甲下一場是 11 月 22 日週日晚上 9 點，主場對比利亞雷亞爾。",
   "topic_key": "football:2026-11-11",
   "form": "timeline",
   "voice": "fan",
-  "updated_at": "2026-11-11T02:51:00+08:00",
+  "updated_at": "2026-11-11T03:00:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "next": {
@@ -34,73 +34,77 @@
   "body": [
     {
       "type": "p",
-      "text": "週二的訓練城，場上點得出人頭：**一線八個，加二隊一個**。守門員 Szczęsny 在，後衛有巴爾德（Alejandro Balde）、Eric García 和傑拉德・馬丁（Gerard Martín），中場有加維（Gavi）。其他人不是被國家隊叫走，就是還在養傷，各練各的。巴薩官網說，這是本週最後一次團練，全隊要等到下週一（11 月 16 日）才再碰頭。這週是 2026 年最後一個國際賽事週，西甲停賽，巴薩前一晚也沒有比賽。"
-    },
-    {
-      "type": "p",
-      "text": "Eric García 能站在場上，不算小事。弗利克 11 月 7 日才說，他和克里斯滕森（Andreas Christensen）會回到對馬競的名單。"
+      "tag": "傳聞",
+      "text": "巴薩這一天最大的消息，是一則轉會傳聞。ESPN 週二的轉會彙整轉述德國天空體育的報導，說巴薩去詢問過能不能簽下拜仁的中後衛**塔赫（Jonathan Tah）**。塔赫 30 歲，是德國國腳，跟拜仁的合約到 2029 年。巴薩運動總監德科想在 1 月補一個有經驗的後衛，站在庫巴西旁邊。可是拜仁不太想放人，塔赫自己也沒在考慮轉隊。"
     },
     {
       "type": "timeline",
-      "title": "這一天一夜的鐘點（台灣時間）",
+      "title": "從週二到下一場西甲（台灣時間）",
       "items": [
-        { "when": "11.10 週二", "label": "訓練城最後一次團練", "note": "場上九個人，下週一才再集合" },
-        { "when": "11.10 20:00", "label": "ESPN：曼聯準備換掉卡里克", "note": "接班首選是美國隊的波切蒂諾" },
-        { "when": "11.10 22:21", "label": "英格蘭後衛 Konsa 退出", "note": "伯恩茅斯的 Hill 補上" },
-        { "when": "11.10 22:58", "label": "孔帕尼回到拜仁訓練基地", "note": "10 月 23 日倒下後第一次回來" },
-        { "when": "11.10 23:14", "label": "ESPN 轉述：巴薩問起塔赫", "note": "傳聞，拜仁沒有放人的意思" },
-        { "when": "11.11 01:13", "label": "邦馬蒂開完記者會", "note": "女足歐冠對阿森納，延到週四" }
-      ],
-      "caption": "鐘點是 ESPN 刊出的時間，不是事情發生的時間；週二團練官網沒有標鐘點。"
+        {
+          "when": "11.10 週二",
+          "label": "傳聞說巴薩探詢塔赫",
+          "note": "拜仁不想放人"
+        },
+        {
+          "when": "11.10 週二",
+          "label": "一線隊本週最後一次團練",
+          "note": "八個一線球員，加二隊一人"
+        },
+        {
+          "when": "11.10 週二",
+          "label": "邦馬蒂開記者會",
+          "note": "談斷腿之後的復出"
+        },
+        {
+          "when": "11.13 週五 01:45",
+          "label": "女足歐冠主場對阿森納",
+          "note": "因西班牙總罷工延後一天"
+        },
+        {
+          "when": "11.13 週五 03:45",
+          "label": "捷克對西班牙、英格蘭對克羅埃西亞",
+          "note": "亞馬爾缺西班牙這場"
+        },
+        {
+          "when": "11.14 週六 03:45",
+          "label": "荷蘭對希臘",
+          "note": "德容"
+        },
+        {
+          "when": "11.14 週六 18:15",
+          "label": "日本對巴西",
+          "note": "拉菲尼亞"
+        },
+        {
+          "when": "11.15 週日 03:45",
+          "label": "葡萄牙對丹麥",
+          "note": "坎塞洛"
+        },
+        {
+          "when": "11.16 週一 03:45",
+          "label": "西班牙對英格蘭",
+          "note": "戈登對上西班牙的巴薩隊友"
+        },
+        {
+          "when": "11.16 週一",
+          "label": "巴薩全隊回來集合",
+          "note": "國際賽事週結束"
+        },
+        {
+          "when": "11.22 週日 21:00",
+          "label": "西甲主場對比利亞雷亞爾",
+          "note": "Spotify Camp Nou"
+        }
+      ]
     },
     {
       "type": "p",
-      "text": "晚上 8 點，ESPN 報了隔壁英超的一件事：曼聯準備換掉總教練卡里克（Michael Carrick）。他 45 歲，夏天才簽兩年約，英超 10 輪只贏 1 場，現在掉在降級區裡。ESPN 引消息人士說，接班首選是美國隊總教練**波切蒂諾（Mauricio Pochettino）**，54 歲，帶過熱刺、切爾西和巴黎聖日耳曼。他 8 月才跟美國足協續約到 2030 年，合約裡有一條 1,000 萬美元的條款，曼聯願意付這筆錢就能談。"
+      "text": "週二也是巴薩一線隊這週最後一次團練，地點在巴薩的訓練基地。來練的一線球員只有八個，什琴斯尼、巴爾德、Eric García、傑拉德・馬丁、加維、Gabriel Jesús、Brian 和 Adeyemi。二隊的 Max Bonfill 也上來一起練。其他人照著自己的計畫做個別訓練。巴薩官網說，全隊要到下週一，也就是 11 月 16 日，才會再集合。"
     },
     {
       "type": "p",
-      "text": "決定還沒下。曼聯高層這週在摩納哥有一場早就排好的會，老闆之一 Ratcliffe 也在；卡里克週二照常進訓練場。晚上 11 點多，ESPN 又補了一則，說波切蒂諾自己願意聽。ESPN 說卡里克很可能在 11 月 22 日客場對利物浦之前離開。一支 10 輪只贏 1 場的球隊，拖到國際賽事週才動刀，已經算有耐性了。"
-    },
-    {
-      "type": "p",
-      "text": "晚上 10 點 21 分，英格蘭那邊少了一個後衛。阿森納的中後衛 Konsa 退出週四對克羅埃西亞的比賽（台灣時間週五清晨 3 點 45 分，溫布利），伯恩茅斯 24 歲、還沒踢過國際賽的 Hill 補上。週一退出的是曼城的 Guéhi，ESPN 數了一遍，Stones 和 Chalobah 也帶著傷。英格蘭足協說 Konsa 自己練，週內回全隊，週日對西班牙還有機會上。"
-    },
-    {
-      "type": "p",
-      "text": "這跟巴薩有關。戈登（Anthony Gordon）在英格蘭的名單裡，11 月 16 日（週一）清晨 3 點 45 分，馬德里，他要對著自己的隊友踢：亞馬爾的右膝要是沒事，佩德里、庫巴西也都在西班牙的名單上。英格蘭的中後衛換來換去，對面那幾位大概不會難過。"
-    },
-    {
-      "type": "table",
-      "title": "國家聯賽 A3 組：每隊剩兩場",
-      "head": ["球隊", "積分", "剩下兩場"],
-      "rows": [
-        ["西班牙", "12", "客場捷克、主場英格蘭"],
-        ["英格蘭", "9", "主場克羅埃西亞、客場西班牙"],
-        ["克羅埃西亞", "3", "客場英格蘭、主場捷克"],
-        ["捷克", "0", "主場西班牙、客場克羅埃西亞"]
-      ],
-      "caption": "資料：ESPN 國家聯賽積分榜（11 月 11 日查閱，各隊 4 場）、巴薩官網賽程。ESPN 說，西班牙贏捷克、和英格蘭，就拿下小組第一；前兩名明年 3 月進八強。"
-    },
-    {
-      "type": "p",
-      "text": "10 點 58 分，拜仁總教練孔帕尼（Vincent Kompany）回到訓練基地。他 40 歲，10 月 23 日在訓練場上倒下，診斷是腦膜受到刺激，之後缺席了拜仁五場比賽。球團說他正在康復。ESPN 報導說他倒下時脫臼了肩膀，這回回去是做肩傷復健，手臂還吊著。他不在的這五場，助教丹克斯（Aaron Danks）帶隊，歐冠 2 比 0 贏馬競，德甲和多特蒙德 2 比 2。拜仁現在以淨勝球領先多特蒙德，11 月 20 日（週五）主場對科隆。"
-    },
-    {
-      "type": "p",
-      "tag": "傳聞",
-      "text": "十六分鐘後，拜仁又出現在 ESPN 的轉會彙整裡，這回是巴薩問起他們的人。ESPN 轉述德國天空體育的報導：巴薩問過中後衛**塔赫（Jonathan Tah）**的狀況。他 30 歲，德國國腳，去年夏天從勒沃庫森免費轉到拜仁，合約到 2029 年。報導說，運動總監德科（Deco）想找一個有經驗的人站在庫巴西旁邊，目標是 1 月。同一份彙整說，拜仁沒有放人的意思，塔赫自己也沒打算走。"
-    },
-    {
-      "type": "p",
-      "text": "這個傳聞我先放著。三十歲的主力，合約到 2029 年，東家不想賣，1 月要談成不容易。想給庫巴西找個老大哥，這個方向我同意；可是 Eric García 和克里斯滕森才剛回來，我寧可先看他們踢幾場，再去敲慕尼黑的門。"
-    },
-    {
-      "type": "p",
-      "text": "凌晨 1 點 13 分，ESPN 刊出邦馬蒂（Aitana Bonmatí）週二的記者會。巴薩女足在歐冠聯賽階段對阿森納，原訂週三，西班牙 11 月 11 日這天總罷工，球團說賽事辦不成，和阿森納談好延一天：11 月 12 日（週四）當地 18:45，在 Spotify Camp Nou，台灣時間 11 月 13 日（週五）01:45。巴薩 3 戰全勝，進 19 球，積 9 分；阿森納 7 分。去年的決賽在里斯本，阿森納 1 比 0 贏了巴薩。"
-    },
-    {
-      "type": "p",
-      "text": "邦馬蒂 28 歲，一年前摔斷腿，4 月復出，9 月底才打本季第一場，到現在出賽 7 場，11 月初對 Badalona 才有本季第一次助攻。ESPN 說她預計週四先發。她在記者會上這樣講復出這件事："
+      "text": "同一天，巴薩女足的**邦馬蒂（Aitana Bonmatí）**開了記者會。她 28 歲，拿過三座金球獎，一年前摔斷了腿。她 4 月復出，這一季到 9 月底才踢第一場，之後又上了 6 場。這個月對巴達洛納，她才有本季第一次助攻。"
     },
     {
       "type": "quote",
@@ -109,52 +113,123 @@
       "cite": "邦馬蒂，11 月 10 日記者會（ESPN 轉述）"
     },
     {
+      "type": "p",
+      "text": "ESPN 說她預計週四先發，那是女足歐冠聯賽階段，巴薩主場對阿森納。比賽原本排在週三，西班牙 11 月 11 日這天總罷工，就改到週四當地 18:45，在 Spotify Camp Nou 踢。台灣這邊是**週五凌晨 1 點 45 分**。巴薩是這屆歐冠唯一三戰全勝的球隊。阿森納在英格蘭的聯賽踢了 9 場只拿 13 分，到了歐冠倒是兩勝一和。兩隊上一次碰面是 2025 年在里斯本的決賽，阿森納 1 比 0 贏了。"
+    },
+    {
+      "type": "p",
+      "text": "國家隊這邊，巴薩球員最早上場的是週五清晨 3 點 45 分那兩場。西班牙去布拉格踢捷克，佩德里、庫巴西、費爾明和 Joan Garcia 都在名單上。亞馬爾這場不踢，他右膝有狀況，先留在巴塞隆納治療，目標是趕上對英格蘭。同一個鐘點，戈登跟著英格蘭在溫布利踢克羅埃西亞，巴薩的利瓦科維奇在克羅埃西亞那邊。"
+    },
+    {
+      "type": "p",
+      "text": "週六清晨 3 點 45 分輪到德容，荷蘭對希臘。同一天傍晚 6 點 15 分，拉菲尼亞跟著巴西踢日本，這場是友誼賽。週日清晨 3 點 45 分，坎塞洛的葡萄牙對丹麥。"
+    },
+    {
+      "type": "p",
+      "text": "週一清晨 3 點 45 分那場，是我這週最想看的。西班牙在馬德里主場踢英格蘭，戈登要對上自己在巴薩的隊友。亞馬爾的膝蓋要是來得及，他也會站在西班牙那邊。同一天，巴薩全隊也要回來集合。"
+    },
+    {
+      "type": "table",
+      "title": "國家聯賽 A3 組：每隊剩兩場",
+      "head": [
+        "球隊",
+        "積分",
+        "剩下兩場"
+      ],
+      "rows": [
+        [
+          "西班牙",
+          "12",
+          "客場捷克、主場英格蘭"
+        ],
+        [
+          "英格蘭",
+          "9",
+          "主場克羅埃西亞、客場西班牙"
+        ],
+        [
+          "克羅埃西亞",
+          "3",
+          "客場英格蘭、主場捷克"
+        ],
+        [
+          "捷克",
+          "0",
+          "主場西班牙、客場克羅埃西亞"
+        ]
+      ],
+      "caption": "資料：ESPN 國家聯賽積分榜（11 月 11 日查閱，各隊 4 場）、巴薩官網賽程。ESPN 說，西班牙贏捷克、和英格蘭，就拿下小組第一；前兩名明年 3 月進八強。"
+    },
+    {
+      "type": "h",
+      "text": "曼聯在找人，孔帕尼回來了"
+    },
+    {
       "type": "news",
       "title": "歐洲足壇速覽",
       "items": [
         {
-          "headline": "梅西的 Cornellà：青年隊贏了阿森納，一線隊搶到一分",
-          "summary": "梅西 4 月接手的西班牙第五級球隊 UE Cornellà，上個月 U16 隊在邁阿密的 Messi Cup 打敗曼城、國際米蘭和阿森納，進了決賽。同一段時間，一線隊在巴塞隆納只搶下 1 分，整季表現不好。球團消息人士對 ESPN 說，這不是溫斯漢姆那種故事，各有各的計畫。",
+          "headline": "曼聯準備換掉卡里克，首選是波切蒂諾",
+          "summary": "ESPN 引消息人士說，曼聯準備解僱 45 歲的總教練卡里克，接班首選是美國隊總教練波切蒂諾（Mauricio Pochettino），他本人也願意考慮。曼聯英超 10 輪只贏 1 場，掉進了降級區，不過最後的決定還沒做。",
           "source": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/50441349",
+          "url": "https://www.espn.com/soccer/story/_/id/50436306",
           "when": "11 月 10 日（週二）",
-          "place": "ES"
+          "place": "GB"
         },
         {
-          "headline": "成都蓉城領先 14 分，最後把冠軍丟了",
-          "summary": "中超成都蓉城剩五輪時領先 14 分，結果五場全輸，最後一輪 2 比 3 輸山東泰山。冠軍被大連英博拿走，因為中超先看兩隊直接對戰成績，大連兩場都贏。成都在週二解僱主帥 John Aloisi。",
+          "headline": "英格蘭又少一個中後衛",
+          "summary": "阿森納中後衛 Konsa 退出英格蘭週四對克羅埃西亞的比賽，週一已經有另一個中後衛退出。英格蘭足協說他週內會回全隊練球，週日去馬德里踢西班牙還有機會上。",
           "source": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/50436840",
+          "url": "https://www.espn.com/soccer/story/_/id/50441308",
           "when": "11 月 10 日（週二）",
-          "place": "CN"
+          "place": "GB"
         },
         {
-          "headline": "皇馬的 Endrick 想踢球，穆里尼奧說拜託安切洛蒂",
-          "summary": "皇馬 20 歲前鋒 Endrick 本季只踢了 141 分鐘。穆里尼奧週六 3 比 0 贏瓦倫西亞後說，安切洛蒂如果讓他上場，他會感謝。Endrick 在巴西隊名單裡，11 月 14 日對日本、17 日對新加坡，拉菲尼亞也在。",
+          "headline": "孔帕尼第一次回到拜仁訓練基地",
+          "summary": "拜仁總教練孔帕尼 40 歲，10 月 23 日在二隊的訓練課上倒下，診斷是腦膜受到刺激，缺了拜仁五場比賽。週二他第一次回到訓練基地，球團說他正在康復。他不在的這段時間，助教帶隊在歐冠 2 比 0 贏了馬競。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50442324",
+          "when": "11 月 10 日（週二）",
+          "place": "DE"
+        },
+        {
+          "headline": "Endrick 在皇馬只踢了 141 分鐘",
+          "summary": "皇馬 20 歲前鋒 Endrick 本季在穆里尼奧手下只踢了 141 分鐘。穆里尼奧週六 3 比 0 贏瓦倫西亞後說，巴西隊教練安切洛蒂要是讓 Endrick 上場，他會感激。巴西這週踢日本和新加坡兩場友誼賽，拉菲尼亞也在名單上。",
           "source": "ESPN",
           "url": "https://www.espn.com/soccer/story/_/id/50441089",
           "when": "11 月 10 日（週二）",
-          "place": ["ES", "BR"]
+          "place": [
+            "ES",
+            "BR"
+          ]
         },
         {
-          "headline": "麥克托米奈：世界盃開打前兩天，我的心臟被電擊過",
-          "summary": "拿坡里中場麥克托米奈（Scott McTominay）29 歲，說蘇格蘭世界盃首戰對海地的前兩天，他做了心臟電擊。9 月他在曼徹斯特做了心臟消融手術，處理輕微的良性心律不整。蘇格蘭當時對外說他缺練是因為腸胃不舒服。",
+          "headline": "蘇格蘭首戰對海地前兩天，麥克托米奈的心臟做過電擊",
+          "summary": "拿坡里 29 歲的中場麥克托米奈說，今年世界盃蘇格蘭首戰對海地的前兩天，他的心臟做了電擊。9 月他在曼徹斯特做了心臟消融手術，治的是輕微的良性心律不整。蘇格蘭當時對外說，他缺練是因為腸胃問題。",
           "source": "ESPN",
           "url": "https://www.espn.com/soccer/story/_/id/50444096",
           "when": "11 月 10 日（週二）",
           "place": "IT"
         },
         {
-          "headline": "Xavi Simons 的十字韌帶：夜裡有過很壞的時刻",
-          "summary": "曾在巴薩踢過球的熱刺球員 Xavi Simons，23 歲，4 月 25 日對狼隊傷了前十字韌帶。復健比預期快，預計 11 月稍晚進入第三階段，可以回球隊一起練。他在牛津辯論社說，躺在病床上看球隊打降級戰，很不好受。",
+          "headline": "Xavi Simons 的十字韌帶快好了",
+          "summary": "前巴薩青訓出身的熱刺球員 Xavi Simons 今年 23 歲，4 月 25 日對狼隊傷了前十字韌帶。他復健比預期快，預計 11 月稍晚進入第三階段，可以回球隊一起練。上個月他在牛津辯論社說，夜裡有過很難熬的時候。",
           "source": "ESPN",
           "url": "https://www.espn.com/soccer/story/_/id/50442502",
           "when": "11 月 10 日（週二）",
           "place": "GB"
         },
         {
-          "headline": "足總盃第二輪抽籤：第七級的 Wimborne 抽到甲級聯賽的 Bradford",
-          "summary": "第七級的 Wimborne Town 週日 2 比 0 贏了 Crawley Town，隊史第一次進足總盃第二輪，下一場主場迎戰英甲的 Bradford City。Dover Athletic 主場對 Leicester City。第二輪在 12 月 5 日到 6 日。",
+          "headline": "梅西的 Cornellà，青年隊贏了阿森納，一線隊只搶到一分",
+          "summary": "梅西 4 月接手了西班牙第五級球隊 UE Cornellà。上個月，他們的 U16 隊在邁阿密的 Messi Cup 打敗曼城、國際米蘭和阿森納，進了決賽。同一段時間，一線隊在巴塞隆納只搶下 1 分，整季踢得不好。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50441349",
+          "when": "11 月 10 日（週二）",
+          "place": "ES"
+        },
+        {
+          "headline": "足總盃第二輪，第七級的 Wimborne 抽到英甲的 Bradford",
+          "summary": "第七級的 Wimborne Town 週日 2 比 0 贏了 Crawley Town，隊史第一次進足總盃第二輪，下一場主場迎戰英甲的 Bradford City。Dover Athletic 主場對 Leicester City。第二輪在 12 月 5 日到 6 日踢。",
           "source": "ESPN",
           "url": "https://www.espn.com/soccer/story/_/id/50440434",
           "when": "11 月 10 日（週二）",
@@ -168,11 +243,7 @@
     },
     {
       "type": "p",
-      "text": "國際賽事週的鐘點全在清晨（台灣時間）：11 月 13 日（週五）01:45 女足對阿森納，03:45 捷克對西班牙、英格蘭對克羅埃西亞；14 日（週六）03:45 荷蘭對希臘，德容要上，18:15 日本對巴西，拉菲尼亞要上；15 日（週日）03:45 葡萄牙對丹麥，坎塞洛要上；16 日（週一）03:45 西班牙對英格蘭。亞馬爾預計從英格蘭那場歸隊。"
-    },
-    {
-      "type": "p",
-      "text": "西甲積分榜巴薩 33 分，皇馬 30 分，馬競 28 分，各踢了 12 場。巴薩下一場是 **11 月 22 日（週日）台灣時間 21:00**，主場 Spotify Camp Nou，西甲第 13 輪，對比利亞雷亞爾。"
+      "text": "國家隊比賽週一過，西甲就回來了。西甲踢完 12 輪，巴薩 33 分排第一，皇馬 30 分，馬競 28 分。巴薩下一場是西甲第 13 輪，主場 Spotify Camp Nou 對比利亞雷亞爾，時間是台灣 **11 月 22 日（週日）晚上 9 點**。"
     }
   ],
   "sources": [
@@ -182,12 +253,6 @@
       "date": "2026-11-10",
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4607323/work-continues-at-the-ciutat-esportiva",
       "note": "週二團練名單、下週一才再集合；頁面只標 6 hrs ago，圖檔路徑為 2026/11/10"
-    },
-    {
-      "title": "'Eric and Christensen will be in the squad'",
-      "publisher": "FC Barcelona",
-      "date": "2026-11-07",
-      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4605960/hansi-flick-eric-and-christensen-will-be-in-the-squad"
     },
     {
       "title": "FC Barcelona international diary",
@@ -201,35 +266,28 @@
       "publisher": "ESPN",
       "date": "2026-11-10",
       "url": "https://www.espn.com/soccer/story/_/id/50436306",
-      "note": "頁面時間 12:00 UTC（台灣 20:00）"
+      "note": "首發 11:21 UTC（台灣 11 月 10 日 19:21），最後更新 12:00 UTC"
     },
     {
       "title": "Man United executives, Sir Jim Ratcliffe meeting to discuss Carrick future - sources",
       "publisher": "ESPN",
       "date": "2026-11-10",
       "url": "https://www.espn.com/soccer/story/_/id/50441594",
-      "note": "摩納哥預排會議、最終決定未下、11 月 22 日對利物浦之前"
+      "note": "首發 12:35 UTC（台灣 20:35），最後更新 12:47 UTC；摩納哥預排會議、最終決定未下"
     },
     {
       "title": "Mauricio Pochettino would be open to becoming Man United head coach - sources",
       "publisher": "ESPN",
       "date": "2026-11-10",
       "url": "https://www.espn.com/soccer/story/_/id/50442407",
-      "note": "頁面時間 15:10 UTC（台灣 23:10）"
-    },
-    {
-      "title": "Mauricio Pochettino would consider Manchester United job if Michael Carrick is sacked - Paper Talk",
-      "publisher": "Sky Sports",
-      "date": "2026-11-10",
-      "url": "https://www.skysports.com/football/news/13610409/mauricio-pochettino-would-consider-manchester-united-job-if-michael-carrick-is-sacked-paper-talk",
-      "note": "各報說法：方向一致，但「沒有最終決定」"
+      "note": "首發 15:01 UTC（台灣 23:01），最後更新 15:10 UTC；波切蒂諾願意考慮"
     },
     {
       "title": "Ezri Konsa ruled out of England's clash with Croatia, James Hill called up",
       "publisher": "ESPN",
       "date": "2026-11-10",
       "url": "https://www.espn.com/soccer/story/_/id/50441308",
-      "note": "頁面時間 14:21 UTC（台灣 22:21）"
+      "note": "首發 11:21 UTC（台灣 11 月 10 日 19:21），最後更新 14:21 UTC"
     },
     {
       "title": "Barcelona's Lamine Yamal (knee) to miss next Spain Nations League game",
@@ -257,21 +315,21 @@
       "publisher": "ESPN",
       "date": "2026-11-10",
       "url": "https://www.espn.com/soccer/story/_/id/50442324",
-      "note": "頁面時間 14:58 UTC（台灣 22:58）"
+      "note": "首發 14:43 UTC（台灣 22:43），最後更新 14:58 UTC"
     },
     {
       "title": "Transfer rumors, news: Arsenal to offload three players, with Atlético Madrid keen",
       "publisher": "ESPN",
       "date": "2026-11-10",
       "url": "https://www.espn.com/soccer/story/_/id/50440438",
-      "note": "頁面時間 15:14 UTC（台灣 23:14）；塔赫一則轉述 Sky Sports Deutschland"
+      "note": "首發 15:14 UTC（台灣 23:14）；塔赫一則轉述 Sky Sports Deutschland，原文 made an enquiry about signing"
     },
     {
       "title": "Aitana Bonmatí on returning to Barça after breaking leg: Players are not robots",
       "publisher": "ESPN",
       "date": "2026-11-10",
       "url": "https://www.espn.com/soccer/story/_/id/50442779",
-      "note": "頁面時間 17:13 UTC（台灣 11 月 11 日 01:13）；記者會為週二"
+      "note": "首發 15:26 UTC（台灣 11 月 10 日 23:26），最後更新 17:13 UTC；記者會在週二（11 月 10 日）"
     },
     {
       "title": "FC Barcelona statement",
@@ -292,12 +350,6 @@
       "publisher": "ESPN",
       "date": "2026-11-10",
       "url": "https://www.espn.com/soccer/story/_/id/50441349"
-    },
-    {
-      "title": "Chengdu sack Aloisi after stunning 14-point Chinese Super League title choke",
-      "publisher": "ESPN",
-      "date": "2026-11-10",
-      "url": "https://www.espn.com/soccer/story/_/id/50436840"
     },
     {
       "title": "José Mourinho: I'll be 'grateful' if Brazil boss Ancelotti gives Endrick minutes",
