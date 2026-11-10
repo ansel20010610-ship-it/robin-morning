@@ -14,15 +14,17 @@
 const CODE = /^NEST-[A-Z2-9]{4}-[A-Z2-9]{4}$/;
 const FEED = (f) => f && typeof f.d === "string" && /^\d{4}-\d{2}-\d{2}$/.test(f.d) && typeof f.w === "string" && /^[A-Z2-9]{8}$/.test(f.w) && typeof f.k === "string" && /^\d{4}-\d{2}-\d{2}\/[\w-]{1,40}$/.test(f.k);
 const MAX_FEEDS = 20000, MAX_MEMBERS = 12;
-const CORS = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "POST, OPTIONS", "Access-Control-Allow-Headers": "Content-Type", "Cache-Control": "no-store" };
+const CORS = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "GET, POST, OPTIONS", "Access-Control-Allow-Headers": "Content-Type", "Cache-Control": "no-store" };
 const json = (body, status = 200) => new Response(JSON.stringify(body), { status, headers: { ...CORS, "Content-Type": "application/json" } });
 
 export default {
   async fetch(req, env) {
     if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
-    if (req.method !== "POST") return json({ error: "POST only" }, 405);
     const code = decodeURIComponent(new URL(req.url).pathname.replace(/^\/+/, "").split("/")[0] || "").toUpperCase();
     if (!CODE.test(code)) return json({ error: "bad code" }, 400);
+    // GET: the yard read-only, for the 地圖班 (scripts/postcards.py demand) — the feeds and the bird, no names, nothing written
+    if (req.method === "GET") { const n = await env.NEST.get(code, "json"); return n ? json({ feeds: n.feeds, pet: n.pet || null }) : json({ error: "no such nest" }, 404); }
+    if (req.method !== "POST") return json({ error: "GET or POST only" }, 405);
     let body;
     try { body = await req.json(); } catch { return json({ error: "bad json" }, 400); }
     const m = body?.member;

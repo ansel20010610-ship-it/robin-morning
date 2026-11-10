@@ -2174,7 +2174,7 @@ details.band .svl { margin: 0 0 10px; }
 .pc-row .postcard { flex: 0 0 auto; scroll-snap-align: start; }
 .postcard .pc-front, .postcard .pc-back { position: relative; width: 156px; aspect-ratio: 3 / 2; overflow: hidden; border: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); box-shadow: 0 3px 10px color-mix(in srgb, var(--ink) 12%, transparent); }
 .album-pics .postcard { align-self: center; rotate: 1.4deg; }
-.pc-front { background: var(--sky); color: #2B241D; }
+.pc-front { background: #E7DFCF; color: #2B241D; } /* until the day's drawing is in (nest.js fillCards) */
 .pc-front > svg.pc-art { position: absolute; inset: 0; width: 100%; height: 100%; display: block; } /* the day's drawing (postcard.js) under the name */
 .pc-front :is(.pc-greet, .pc-place, .pc-de) { text-shadow: 0 0 6px rgb(255 250 240 / .85), 0 0 2px rgb(255 250 240 / .9); }
 .pc-front.dark :is(.pc-greet, .pc-place, .pc-de) { color: #FBF3E2; text-shadow: 0 1px 4px rgb(10 12 30 / .7); }
@@ -2203,3 +2203,15 @@ details.band .svl { margin: 0 0 10px; }
 .pc-view .postcard.big .pc-front .pc-mark { font-size: 12px; }
 .pc-view .pc-hint { font-family: var(--sans); font-size: 12px; letter-spacing: .08em; color: rgb(245 238 223 / .75); margin-top: 10px; }
 @media (prefers-reduced-motion: reduce) { .pc-view .postcard.big .pc-flip { transition: none; } }
+/* The everyday moods (nest.js lifeOf, the owner 2026-11-10: 再增加一點別的小鳥活動): basking with the wing lifted, a bath's
+   splash, a squirrel on the branch, a winter snowman, and on a lost day the perch empty but for a feather. */
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .bird.mood-sun .r-wingg { transform-box: view-box; transform-origin: 31px 32px; transform: rotate(-28deg) scaleY(1.15); }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .bird.mood-out svg.robin { display: none; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .sc-splash circle { fill: #8FC3E0; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .sc-squirrel { fill: #A0623A; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .sc-snowman circle { fill: #FBFBF8; stroke: #C9D0D6; stroke-width: .4; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .sc-snowman .arm { fill: none; stroke: var(--nest-brown); stroke-width: .6; stroke-linecap: round; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .sc-snowman .nose { fill: #E08A3C; }
+:is(.nest, .nest-stage, .flyby, .feed-note, .nest-photo) .sc-feather { fill: color-mix(in srgb, var(--robin) 70%, var(--nest-brown)); }
+.pc-front .pc-sight { display: none; } /* the sight's name: a caption on the large card only, clear of the drawing's middle */
+.pc-view .postcard.big .pc-front .pc-sight { display: block; position: absolute; left: 4%; bottom: 5%; padding: 3px 9px 4px; background: rgb(251 246 234 / .9); color: #3A3027; font-family: var(--serif); font-size: 13px; letter-spacing: .1em; box-shadow: 0 1px 3px rgb(0 0 0 / .15); }
