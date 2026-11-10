@@ -21,8 +21,26 @@ const CORS = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods
 // no code is written here. A letter is kept 30 days; three a phone a day at most; 300 characters.
 const LETTER_YARDS = ["9c3409217fa036c19a1b6691e358025de5ebbde5b1d80d1598da07bd3704e57e", "41bb7d226a7c1c3c09923896f9c73f01a8a97e846d3267979824b9ce5dc33d26"];
 const sha256 = async (t) => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)))].map((b) => b.toString(16).padStart(2, "0")).join("");
-async function letters(req, env, code) {
+// The answers (2026-11-10, the owner: 回信改成只有院子裡的人看得到) live here too, not in the public repo: the letters
+// routine POSTs /{code}/letters/answers {answers: [{id, date, q, a, sources}]}, the yard's phones GET them.
+const ANS = (x) => x && typeof x.id === "string" && /^L[0-9A-Z]{6,16}$/.test(x.id) && /^\d{4}-\d{2}-\d{2}$/.test(x.date || "") && typeof x.q === "string" && x.q.length <= 200 && typeof x.a === "string" && x.a.length <= 3000;
+async function answers(req, env, code) {
+  const key = `answers:${code}`, all = (await env.NEST.get(key, "json")) || [];
+  if (req.method === "GET") return json({ answers: all });
+  if (req.method !== "POST") return json({ error: "GET or POST only" }, 405);
+  let body;
+  try { body = await req.json(); } catch { return json({ error: "bad json" }, 400); }
+  const add = (Array.isArray(body?.answers) ? body.answers : []).filter(ANS).map((x) => ({ id: x.id, date: x.date, q: x.q, a: x.a, sources: (Array.isArray(x.sources) ? x.sources : []).filter((u) => u && /^https:\/\//.test(u.url || "")).slice(0, 5).map((u) => ({ title: String(u.title || "").slice(0, 200), url: String(u.url).slice(0, 500) })) }));
+  if (!add.length) return json({ error: "no valid answers" }, 400);
+  const byId = new Map(all.map((x) => [x.id, x]));
+  for (const x of add) byId.set(x.id, x);
+  const out = [...byId.values()].slice(-300);
+  await env.NEST.put(key, JSON.stringify(out));
+  return json({ saved: add.length, total: out.length });
+}
+async function letters(req, env, code, sub) {
   if (!LETTER_YARDS.includes(await sha256(code))) return json({ error: "no letters here" }, 403);
+  if (sub === "answers") return answers(req, env, code);
   const key = `letters:${code}`, now = Date.now();
   const box = ((await env.NEST.get(key, "json")) || []).filter((l) => now - Date.parse(l.at) < 30 * 864e5);
   if (req.method === "GET") return json({ letters: box });
@@ -94,7 +112,7 @@ export default {
     const parts = new URL(req.url).pathname.replace(/^\/+/, "").split("/");
     const code = decodeURIComponent(parts[0] || "").toUpperCase();
     if (!CODE.test(code)) return json({ error: "bad code" }, 400);
-    if (parts[1] === "letters") return letters(req, env, code);
+    if (parts[1] === "letters") return letters(req, env, code, parts[2]);
     if (parts[1] === "ask") return ask(req, env, code);
     // GET: the yard read-only, for the 地圖班 (scripts/postcards.py demand) — the feeds and the bird, no names, nothing written
     if (req.method === "GET") { const n = await env.NEST.get(code, "json"); return n ? json({ feeds: n.feeds, pet: n.pet || null }) : json({ error: "no such nest" }, 404); }

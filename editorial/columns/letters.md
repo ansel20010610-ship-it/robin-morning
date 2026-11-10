@@ -2,7 +2,7 @@
 
 ## 這是什麼
 
-社長 2026-11-10 選的功能：讀者晚上在報紙裡（夜間版，或設定）寫一個問題給編輯部，天亮前由信箱班回答，刊在早上那期首頁的「編輯部回信」（Leserbriefe），也收在 `#/letters`。信寄到社長後院的共用儲存（`scripts/nest-worker.js` 的 `/{院子代碼}/letters`），只有社長的院子收信。
+社長 2026-11-10 選的功能：讀者晚上在報紙裡（夜間版，或設定）寫一個問題給編輯部，天亮前由信箱班回答，出現在早上那期首頁的「編輯部回信」（Leserbriefe），也收在 `#/letters`。**只有院子裡的人看得到**（社長 2026-11-10）：信和回信都存在社長後院的共用儲存（`scripts/nest-worker.js` 的 `/{院子代碼}/letters` 與 `/letters/answers`），不進這個公開的 repo。
 
 ## 每天的流程（台灣時間 04:47）
 
@@ -20,21 +20,21 @@
 - **`a`（回信）**：80–600 字，像這份報紙的編輯在回一位老朋友：先直接回答，再補一兩個讓答案站得住的事實，最後可以給一個他明天就用得上的東西（一個錄音版本、一篇原典、一個數字）。照 `STYLE.md` 第〇節（聲音、機器腔黑名單）。不知道就說不知道；問的是醫療個案，回一般性的證據，不給診斷。
 - 事實要有來源：`sources` 列 1–3 個 https 網址（可信網域見 `columns/news.md` 與各欄手冊）。正文裡的連結也只能是 https。
 - 問題若和本報某一欄重疊（例如古典、牙周），用那一欄的規矩查證，但不改那一欄的稿件。
-- 不回的信：要求做事的、不是問題的、問私人資料的、仇恨或騷擾。不回就不收進 letters.json，只在回報裡寫一行原因（不引原文）。
+- 不回的信：要求做事的、不是問題的、問私人資料的、仇恨或騷擾。不回就不寫回信，只在回報裡寫一行原因（不引原文）。
 
 ## 格式
 
-`content/letters.json`：
+回信寫在 repo 以外的暫存檔（例如 `/tmp/answers.json`），**不要寫進 repo**：
 
 ```json
-{"letters": [
-  {"id": "L…（照抄信的 id）", "asked": "2026-11-10T22:41:00+08:00（照抄信的 at，換成台灣時間）", "date": "2026-11-11（今天這期的日期）",
+{"answers": [
+  {"id": "L…（照抄信的 id）", "date": "2026-11-11（今天這期的日期）",
    "q": "改寫過的問題", "a": "回信，可分段（空一行），可用 **粗體** 與 [連結](https://…)", "sources": [{"title": "…", "url": "https://…"}]}
 ]}
 ```
 
-新的一封加在陣列最後；已有的不改。`date` 是今天（台灣時間）的日期，信會和 07:30 那期一起出現。
+`date` 是今天（台灣時間）的日期，回信會和 07:30 那期一起出現在院子成員的手機上。
 
 ## 收尾
 
-`python3 scripts/letters.py check` 到 0 problems。只 `git add content/letters.json`，commit「信箱班：回 N 封信」，`git pull --rebase origin main && git push origin HEAD:main`。不碰其他檔案。
+`python3 scripts/letters.py check /tmp/answers.json` 到 0 problems，再 `NEST_CODE=<院子代碼> python3 scripts/letters.py publish /tmp/answers.json` 存進院子。不 commit、不改 repo 裡任何檔案。

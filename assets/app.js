@@ -26,11 +26,11 @@ async function loadData() {
     getJSON("content/index.json", { fresh: true }).catch(() => ({ issues: [] })),
     loadLate(),
     loadDays(),
-    loadLetters(),
     loadBook(), // content/serial.json (2.5 KB): the front page must know which installment is due today (serialDueOn)
   ]);
   S.cfg = cfg;
   S.index = index;
+  loadLetters(); // needs the config (the yard's store); draws its slot when it arrives
   setLookup((date, column) => issueBy(date)?.articles?.find((a) => a.column === column)); // the yard names its songs after the music column read
   syncDone(); // the reminder gate (rm-state) sees today's issue as soon as the index is in
   initSpotify(cfg.spotify);
@@ -649,14 +649,21 @@ function frontStatus() {
 // 夜間版 (the owner, 2026-11-10, from my list of ideas: 4): from nine in the evening until five in the morning the front
 // page is another paper — what is still unread of the day, the parcel and the stamp as always, the day's passage again,
 // the day's piece of music once more, and what comes in the morning. 「看早上的那份報」 keeps the day paper for the
-// rest of that night (sessionStorage, keyed by the night). `?night=1` / `?night=0` force it, for checking.
+// rest of that visit (nightOn). `?night=1` / `?night=0` force it, for checking.
 const nightOf = () => { const n = twNow(); return n.minutes < 5 * 60 ? addDays(n.date, -1) : n.date; };
 const nightHours = () => { const m = twNow().minutes; return m >= 21 * 60 || m < 5 * 60; };
+// Once a night (the owner, 2026-11-10: 夜間版跳出一次就好，之後點進去還是回原本的): the first time the front page is
+// opened in the night hours it is the night paper; it stays while the reader is on it (the minute ticks, a pull), and
+// any later visit — back from an article, the app opened again — is the day paper. 「回到夜間版」 brings it back until
+// the reader leaves the front page again.
+let nightSticky = false;
+addEventListener("hashchange", () => { if ((location.hash || "#/") !== "#/") nightSticky = false; });
 function nightOn() {
   const q = new URLSearchParams(location.search).get("night");
   if (q === "1" || q === "0") return q === "1";
   if (!nightHours()) return false;
-  try { return sessionStorage.getItem("rm.dayview") !== nightOf(); } catch { return true; }
+  if (nightSticky) return true;
+  try { return localStorage.getItem("rm.night.seen") !== nightOf(); } catch { return true; }
 }
 const frontKey = (issue) => JSON.stringify([twNow().date, Boolean(issue) && issueOpen(issue.date), issue || null, nightOn()]);
 const frontState = () => [frontKey(publishedIssues()[0]), frontStatus()];
@@ -744,7 +751,7 @@ function viewFront(dateParam) {
       : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
       : `<div class="finish">${finishInner(issue.date)}</div>`}
     ${dateParam ? "" : wocheBox()}
-    ${lettersBox(issue.date)}
+    <div class="letters-slot" data-date="${esc(issue.date)}">${lettersBox(issue.date)}</div>
     ${dayBox(issue.date)}
     ${dateParam ? "" : `<section class="gigs" id="gigs" aria-label="近期演出">${gigsSection()}</section>`}
     <footer class="colophon">
@@ -759,7 +766,7 @@ function viewFront(dateParam) {
   fillWire();
   fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
   main.querySelector("[data-nightback]")?.addEventListener("click", () => {
-    try { sessionStorage.removeItem("rm.dayview"); } catch { /* nothing kept */ }
+    nightSticky = true;
     enteredFront = false; viewFront(); scrollTo(0, 0);
   });
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
@@ -808,6 +815,8 @@ async function chairCard(a, date) {
 // are left for the morning.
 const MOON = `<svg class="moon" viewBox="0 0 64 64" aria-hidden="true"><path d="M40 8a24 24 0 1 0 16 38A20 20 0 0 1 40 8z"/><circle class="st" cx="14" cy="14" r="1.4"/><circle class="st" cx="24" cy="6" r=".9"/><circle class="st" cx="8" cy="30" r=".9"/></svg>`;
 function viewNight(issue, arts, read, pick, status) {
+  nightSticky = true;
+  try { localStorage.setItem("rm.night.seen", nightOf()); } catch { /* private mode: every visit is the first */ }
   const date = issue.date, open = arts.filter((a) => a !== pick && forStamp(a, date) && !read.has(`${date}/${a.column}`));
   const v = issue.verse, verses = Array.isArray(v?.verses) ? v.verses : [];
   const music = arts.find((a) => a.column === "music");
@@ -838,7 +847,7 @@ function viewNight(issue, arts, read, pick, status) {
   wireDigest(issue);
   fillReveal();
   main.querySelector("[data-dayview]")?.addEventListener("click", () => {
-    try { sessionStorage.setItem("rm.dayview", nightOf()); } catch { /* private mode: the day page this once */ }
+    nightSticky = false;
     enteredFront = false; viewFront(); scrollTo(0, 0);
   });
   if (sonder() && nest()) letterForm(main.querySelector(".night-letter-slot"), true);
@@ -846,9 +855,23 @@ function viewNight(issue, arts, read, pick, status) {
 // ——— 寫信給編輯部 (Leserbriefe; the owner, 2026-11-10, from my list of ideas: 1) ———
 // A question written at night (the night paper, or 設定) goes to the shared store of the reader's yard (nest-worker.js
 // /{code}/letters; only the owner's yard takes letters); the letters routine (editorial/columns/letters.md) answers one
-// or two before dawn into content/letters.json, and the morning's issue prints them under 編輯部回信, the question
+// or two before dawn into the yard's store (/{code}/letters/answers), and the morning's front page shows them to the yard's phones under 編輯部回信, the question
 // shortened and unsigned. The phone keeps what it sent (rm.letters.sent) to show each one's state, and the draft.
-const loadLetters = () => getJSON("content/letters.json", { fresh: true }).then((d) => { S.letters = Array.isArray(d?.letters) ? d.letters : []; }).catch(() => { S.letters = S.letters || []; });
+// Only the yard's phones see the answers (the owner, 2026-11-10: 回信改成只有院子裡的人看得到): they live in the yard's
+// shared store, read with the yard code; the last copy is kept on the phone (rm.letters.cache) for the front page to
+// draw at once and offline, and the 編輯部回信 slot is filled again when a fresher copy arrives.
+const letterYard = () => (sonder() && nest() && S.cfg?.nest?.api ? nest() : null);
+function loadLetters() {
+  const n = letterYard();
+  if (!n) { S.letters = []; return Promise.resolve(); }
+  if (!S.letters) S.letters = store.get("letters.cache", []);
+  return fetch(`${S.cfg.nest.api}/${encodeURIComponent(n.code)}/letters/answers`, { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((d) => {
+    if (!Array.isArray(d?.answers)) return;
+    const before = JSON.stringify(S.letters);
+    S.letters = d.answers; store.set("letters.cache", d.answers);
+    if (JSON.stringify(S.letters) !== before) document.querySelectorAll(".letters-slot").forEach((el) => { el.innerHTML = lettersBox(el.dataset.date); });
+  }).catch(() => {});
+}
 const letterAnswered = (id) => (S.letters || []).find((l) => l.id === id);
 function letterHtml(l) {
   return `<article class="letter" id="${esc(l.id)}"><p class="q"><span class="lbl">讀者來信</span>${esc(l.q)}</p><div class="a">${paragraphs(l.a)}</div>${Array.isArray(l.sources) && l.sources.length ? `<p class="src">${l.sources.filter((x) => /^https:\/\//.test(x.url || "")).map((x) => `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title || x.url)}</a>`).join("・")}</p>` : ""}</article>`;
@@ -860,6 +883,7 @@ function lettersBox(date) {
     <p class="letters-more"><a href="#/letters">以前的回信 →</a></p></section>`;
 }
 function viewLetters() {
+  if (!letterYard()) { main.innerHTML = `<div class="wrap"><header class="page-title"><h1>編輯部回信</h1><span class="de">Leserbriefe</span></header><p class="empty">回信只有後院裡的人看得到。</p></div>`; document.title = `編輯部回信｜${S.cfg.title}`; return; }
   const ls = [...(S.letters || [])].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>編輯部回信</h1><span class="de">Leserbriefe</span></header>
     ${ls.length ? ls.map((l) => `<p class="letter-date">${esc(fmtDate(l.date))}</p>${letterHtml(l)}`).join("") : `<p class="empty">還沒有回信。晚上打開報紙（夜間版），或到設定，就能寫信給編輯部。</p>`}</div>`;
