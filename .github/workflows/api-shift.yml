@@ -1,6 +1,6 @@
 # API 版班次 (scripts/api_shift.py): a shift run by Claude Code on the owner's monthly Console API credits instead of
 # the claude.ai plan's weekly quota (the owner, 2026-11-10). Started by wire.yml's half-hour relay (GitHub's own
-# schedules start hours late): concerts 06:00, rescue 06:30, serial 16:00, reserve 17:30 (Taiwan time). The claude.ai
+# schedules start hours late): concerts 05:30, rescue 06:30, serial 16:00, reserve 17:30 (Taiwan time). The claude.ai
 # routines of the same names still run later as the backup and stop at once when this run did the work.
 # Without the ANTHROPIC_API_KEY secret, or past the month's cap, it spends nothing. The repo is public: the log shows
 # only the shift's short report and its cost.

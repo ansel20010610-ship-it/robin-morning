@@ -54,7 +54,8 @@ const flat = (b) => !b || typeof b !== "object" ? "" : b.type === "table" ? [b.t
 async function ask(req, env, code) {
   if (!(ASK_YARDS.includes(await sha256(code)))) return json({ error: "no asking here" }, 403);
   if (req.method !== "POST") return json({ error: "POST only" }, 405);
-  if (!env.ANTHROPIC_API_KEY) return json({ error: "not set up" }, 503);
+  const KEY = env.ANTHROPIC_API_KEY || env.NTHROPIC_API_KEY; // the secret was first saved as NTHROPIC_API_KEY (2026-11-10)
+  if (!KEY) return json({ error: "not set up" }, 503);
   let body;
   try { body = await req.json(); } catch { return json({ error: "bad json" }, 400); }
   const { member, date, column } = body || {}, q = typeof body?.q === "string" ? body.q.trim() : "";
@@ -76,7 +77,7 @@ async function ask(req, env, code) {
   ];
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
-    headers: { "content-type": "application/json", "x-api-key": env.ANTHROPIC_API_KEY, "anthropic-version": "2026-10-21", "anthropic-beta": "server-side-fallback-2026-07-01" },
+    headers: { "content-type": "application/json", "x-api-key": KEY, "anthropic-version": "2026-10-21", "anthropic-beta": "server-side-fallback-2026-07-01" },
     body: JSON.stringify({ model: "claude-opus-5-5", max_tokens: 8000, output_config: { effort: "low" }, fallbacks: "default", system, messages: [{ role: "user", content: q }] }),
   });
   const out = await res.json().catch(() => ({}));

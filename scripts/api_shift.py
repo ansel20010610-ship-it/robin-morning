@@ -8,7 +8,7 @@ a run should spend anything, and records what it cost.
                                                       cost, appends it to state/api/spend.json
   python3 scripts/api_shift.py month                  this month's spend so far
 
-Shifts: serial (16:00), reserve (17:30), concerts (06:00), rescue (06:30; only when shifts 1-3 of the night all failed to
+Shifts: serial (16:00), reserve (17:30), concerts (05:30), rescue (06:30; only when shifts 1-3 of the night all failed to
 report — the weekly quota is gone — including Sundays, the owner, 2026-11-10). Their instructions are
 editorial/api-shifts/<shift>.md. The repo is public: nothing secret is ever printed or written here.
 """
