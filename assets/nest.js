@@ -336,14 +336,19 @@ export function liveBird(root, { fly = true } = {}) {
   })();
 }
 // Out of the yard and across the paper (the owner, 2026-11-09: 我在滑首頁的時候鳥會飛出來; 2026-11-10: 每次都不一樣的
-// 飛法; 鳥從收藏那個地方飛出來，不用有巢). The yard lives in 收藏, so the bird comes out of the 收藏 tab in the nav: it
-// pops up out of the icon onto the bar, looks round, and takes off along one of nine flights — an arc away, a loop,
-// the bounding flight of a small bird, a circle round the screen and home, a spiral up and out, a dart-and-hover, a
-// figure eight, a climb and dive, a zigzag. None of the last three is flown again, and every one is drawn afresh —
-// heights, widths, turns and pace at random — so no two are alike. Some come home and slip back into the tab, the
-// others leave the screen. A nestling cannot fly yet: it peeks out of the tab, flutters on the bar or hops along it,
-// and slips back in. The tab's icon gives a little bounce as it goes and comes. Tap the bird: the yard. One at a
-// time, and never with reduced motion.
+// 飛法; 鳥從收藏那個地方飛出來; 剛開始跑出來的時候可以有巢，就在收藏那邊，跑走之後巢消失). The yard lives in 收藏, so a
+// small nest grows up out of the 收藏 tab in the nav, the bird peeks over its rim, looks round and takes off along one
+// of nine flights — an arc away, a loop, the bounding flight of a small bird, a circle round the screen and home, a
+// spiral up and out, a dart-and-hover, a figure eight, a climb and dive, a zigzag — and the nest shrinks back into
+// the tab behind it. None of the last three flights is flown again, and every one is drawn afresh — heights, widths,
+// turns and pace at random — so no two are alike. Some come home: the nest grows again to take the bird in, and both
+// slip back into the tab; the others leave the screen. A nestling cannot fly yet: it peeks out, flutters on the rim
+// or hops along it, and sinks back. The tab's icon gives a little bounce as the nest comes and goes. Tap the bird:
+// the yard. One at a time, and never with reduced motion.
+const NEST_BACK = `<svg viewBox="0 0 72 34" aria-hidden="true"><ellipse class="fn-hollow" cx="36" cy="12" rx="27" ry="5"/><path class="fn-tw" d="M8 12 Q36 2.5 64 12 M14 9.5 Q30 5 46 6.5"/></svg>`;
+const nestFront = (moss) => `<svg viewBox="0 0 72 34" aria-hidden="true"><path class="fn-bowl" d="M8 12 Q36 21 64 12 C64 24 52 31.5 36 31.5 C20 31.5 8 24 8 12 Z"/>
+  <path class="fn-tw" d="M8.5 15 Q30 25 55 19 M11 21 Q36 30 62 17.5 M17 26.5 Q38 24 57 26 M9 13 Q34 22 64 13 M2 11 L9 13.5 M63 13 L71 9.5 M58 24 L67 27 M13 24 L5 27.5 M24 28.5 L19 33"/>
+  ${moss ? `<path class="fn-moss" d="M14 14.6 q4 -2.4 8 0 q4 -2.4 8 0 q4 -2.4 8 0 q4 -2.4 8 0 q4 -2.4 8 0"/>` : ""}</svg>`;
 // A Catmull-Rom curve through the waypoints [x, y, ms-from-the-last], sampled every ~50 ms: the keyframes' places and times.
 function curve(pts) {
   const out = [{ x: pts[0][0], y: pts[0][1], t: 0 }];
@@ -360,7 +365,7 @@ function curve(pts) {
   }
   return out;
 }
-// The flights, from where the bird stands on the bar S, `s` the side it heads to (+1 right, -1 left), W × H the screen.
+// The flights, from the bird's seat in the nest S, `s` the side it heads to (+1 right, -1 left), W × H the screen.
 // Each returns its waypoints and whether it comes home.
 const FLIGHTS = {
   arc: (S, s, W, H, X) => ({ pts: [S, [S[0] + s * W * between(.12, .25), S[1] - H * between(.15, .3), between(550, 800)], [S[0] + s * W * between(.4, .6), H * between(.1, .3), between(650, 900)], [X, H * between(.02, .25), between(700, 1000)]] }),
@@ -383,7 +388,7 @@ const FLIGHTS = {
   zigzag: (S, s, W, H, X) => { const pts = [S], n = 5 + Math.floor(Math.random() * 3), w = between(50, 100), dy = (S[1] - between(60, 120)) / n;
     for (let k = 1; k <= n; k++) pts.push([S[0] + s * (40 + (k % 2) * w + k * 12), S[1] - k * dy, between(220, 300)]); pts.push([X, between(-40, 60), between(550, 750)]); return { pts }; },
 };
-const HOPS = { // the nestling's on the bar: no flight yet. [x, y, ms, facing (1 = the way it set off, -1 = back), flutter], drawn afresh each time
+const HOPS = { // the nestling's in the nest: no flight yet. [x, y, ms, facing (1 = the way it set off, -1 = back), flutter], drawn afresh each time
   peek: (S) => { const out = [], looks = 1 + Math.floor(Math.random() * 3); let f = 1;
     for (let i = 0; i < looks; i++) { f = -f; out.push([S[0], S[1] - between(0, 3), between(380, 720), f]); }
     out.push([S[0], S[1] - between(4, 8), between(140, 190), 1], [S[0], S[1], between(140, 190), 1], [S[0], S[1], between(300, 650), 1]); return out; },
@@ -412,11 +417,15 @@ export function flyBy() {
   const navEl = document.querySelector(".nav"), foot = navEl?.getBoundingClientRect().top || H;
   const tab = navEl?.querySelector('a[href="#/saved"]'), icon = tab?.querySelector("svg"), ir = (icon || tab)?.getBoundingClientRect();
   const cx = ir ? ir.left + ir.width / 2 : W / 2, cy = ir ? ir.top + ir.height / 2 : H - 40;
-  const IN = [cx - 31, cy - 41], UP = [cx - 31, foot - 52]; // the bird's box: its body on the icon; standing on the bar
-  const bird = document.createElement("a");
+  // the nest stands on the nav over the tab; the bird's box (64 px) sits low in it, the rim across its belly
+  const nx = cx - 36, ny = foot - 30, S = [nx + 4, ny - 37], IN = [cx - 31, cy - 41], SUNK = 18;
+  const back = document.createElement("div"), front = document.createElement("div"), bird = document.createElement("a");
+  back.className = "fly-nest back"; front.className = "fly-nest front";
+  back.innerHTML = NEST_BACK; front.innerHTML = nestFront(st.items?.moss);
+  for (const el of [back, front]) el.style.cssText = `left:${nx}px;top:${ny}px`;
   bird.href = "#/nest"; bird.className = "flyby"; bird.setAttribute("aria-label", `${st.pet.name}從收藏飛出來了，到後院看${st.pet.p}`);
   bird.innerHTML = birdSvg(st);
-  document.body.append(bird);
+  document.body.append(back, bird, front);
   // frames: the bird's box, facing (1 = left, the drawing's way; -1 = right), a tilt into the climb or the dive, its size
   const F = (x, y, face, rot = 0, k = 1) => ({ transform: `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) scaleX(${face}) rotate(${rot.toFixed(1)}deg) scale(${k})`, opacity: k < .5 ? 0 : 1 });
   const frames = [], times = [];
@@ -424,19 +433,21 @@ export function flyBy() {
   // a move of `ms` to (x, y): a turn on the way is a quick flip at its end, not a slow squeeze through the whole move
   let t = 0, face = -s;
   const go = (ms, x, y, f, k = 1) => { if (f !== face && ms > 160) { at(t + ms - 110, F(x, y, face)); } t += ms; at(t, F(x, y, f, 0, k)); face = f; };
-  const bump = (when) => { if (icon) setTimeout(() => icon.animate([{ transform: "none" }, { transform: "translateY(-3px) scale(1.22)" }, { transform: "none" }], { duration: 340, easing: "ease-out" }), when); };
+  const bump = (when) => { if (icon) setTimeout(() => icon.animate([{ transform: "none" }, { transform: "translateY(-3px) scale(1.22)" }, { transform: "none" }], { duration: 340, easing: "ease-out" }), Math.max(0, when)); };
+  const GROW = 320;
   at(0, F(IN[0], IN[1], face, 0, .2)); bump(0);
-  go(340, UP[0], UP[1], face); // out of the icon, onto the bar
-  go(between(380, 650), UP[0], UP[1], -face); go(between(450, 700), UP[0], UP[1], -face); // a look the other way, and back
+  go(GROW, S[0], S[1] + SUNK, face); // up out of the tab with the nest, still sunk in it
+  go(380, S[0], S[1], face); // a peek over the rim
+  go(between(380, 650), S[0], S[1], -face); go(between(450, 700), S[0], S[1], -face); // a look the other way, and back
   let home = true, takeoff = 0, landed = 0, flutterOn = 0, flutterOff = 0;
   if (st.si >= 3) {
-    const X = s > 0 ? W + 40 : -110, kind = freshPick(Object.keys(FLIGHTS), "flyways"), fl = FLIGHTS[kind]([UP[0], UP[1], 0], s, W, H, X);
+    const X = s > 0 ? W + 40 : -110, kind = freshPick(Object.keys(FLIGHTS), "flyways"), fl = FLIGHTS[kind]([S[0], S[1], 0], s, W, H, X);
     home = Boolean(fl.home);
-    go(160, UP[0], UP[1] + 4, face); go(140, UP[0], UP[1], face); // the crouch before the spring
+    go(160, S[0], S[1] - 6, face); go(140, S[0], S[1], face); // the crouch before the spring
     takeoff = t;
-    // on the screen between the bars, except where it ends: off the edge or over the top, or back on the bar
-    const lo = top + 4, hi = foot - 70, last = fl.pts.length - 1;
-    const pts = fl.pts.map((p, i) => (i === 0 ? [UP[0], UP[1], 0] : i === last && home ? [UP[0], UP[1], p[2]] : [p[0], i === last ? Math.max(-140, Math.min(hi, p[1])) : Math.max(lo, Math.min(hi, p[1])), p[2] * between(.9, 1.15)]));
+    // on the screen between the bars, except where it ends: off the edge or over the top, or back in the nest
+    const lo = top + 4, hi = foot - 90, last = fl.pts.length - 1;
+    const pts = fl.pts.map((p, i) => (i === 0 ? [S[0], S[1], 0] : i === last && home ? [S[0], S[1], p[2]] : [p[0], i === last ? Math.max(-140, Math.min(hi, p[1])) : Math.max(lo, Math.min(hi, p[1])), p[2] * between(.9, 1.15)]));
     const path = curve(pts);
     for (let i = 1; i < path.length; i++) {
       const p = path[i], q = path[i - 1], dx = p.x - q.x, dy = p.y - q.y;
@@ -445,18 +456,31 @@ export function flyBy() {
       at(takeoff + p.t, F(p.x, p.y, face, i === path.length - 1 && home ? 0 : rot));
     }
     t = takeoff + path.at(-1).t;
-    if (home) { landed = t; go(between(300, 700), UP[0], UP[1], face); }
+    if (home) { landed = t; go(between(300, 650), S[0], S[1], face); go(380, S[0], S[1] + SUNK, face); }
   } else {
-    const kind = freshPick(Object.keys(HOPS), "hopways"), hops = HOPS[kind](UP, s);
+    const kind = freshPick(Object.keys(HOPS), "hopways"), hops = HOPS[kind](S, s);
     for (const [x, y, ms, f, flap] of hops) { if (flap && !flutterOn) flutterOn = t; go(ms, x, y, f * -s); if (flap) flutterOff = t; }
+    go(380, S[0], S[1] + SUNK, face);
   }
-  if (home) { go(320, IN[0], IN[1], face, .2); bump(t - 120); } // back into the tab
+  if (home) { go(GROW, IN[0], IN[1], face, .2); bump(t - GROW); } // back into the tab, nest and all
   const total = t;
   const kf = frames.map((f, i) => ({ ...f, offset: times[i] / total, ...(i === 0 ? { easing: "ease-out" } : {}) }));
+  // the nest: up out of the tab, down into it once the bird has flown, up again to take a homecoming bird in
+  const ON = { transform: "none", opacity: 1 }, OFF = { transform: `translateY(${(cy - ny - 17).toFixed(1)}px) scale(.2)`, opacity: 0 };
+  const nk = [[0, OFF, "ease-out"], [GROW, ON]];
+  if (st.si >= 3) {
+    const gone = takeoff + 260;
+    nk.push([gone, ON, "ease-in"], [gone + GROW, OFF]);
+    if (home) { const back2 = Math.max(gone + GROW + 50, landed - GROW - 60); nk.push([back2, OFF, "ease-out"], [back2 + GROW, ON]); }
+  }
+  if (home) { nk.push([total - GROW, ON, "ease-in"], [total, OFF]); } else if (nk.at(-1)[0] < total) nk.push([total, OFF]);
+  const nestKf = nk.map(([ms, f, easing]) => ({ ...f, offset: Math.min(1, ms / total), ...(easing ? { easing } : {}) }));
+  if (st.si >= 3) bump(takeoff + 260 + GROW - 200);
   const flap = bird.querySelector(".bird"), timers = [];
   if (st.si >= 3) { timers.push(setTimeout(() => flap?.classList.add("flying"), takeoff)); if (home) timers.push(setTimeout(() => flap?.classList.remove("flying"), landed)); }
   else if (flutterOff) { timers.push(setTimeout(() => flap?.classList.add("flutter"), flutterOn)); timers.push(setTimeout(() => flap?.classList.remove("flutter"), flutterOff)); }
-  const done = () => { timers.forEach(clearTimeout); bird.remove(); };
+  for (const el of [back, front]) el.animate(nestKf, { duration: total, fill: "both" });
+  const done = () => { timers.forEach(clearTimeout); back.remove(); front.remove(); bird.remove(); };
   bird.animate(kf, { duration: total, easing: "linear", fill: "both" }).finished.then(done, done);
   return true;
 }
