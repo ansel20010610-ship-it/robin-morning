@@ -707,7 +707,7 @@ export function albumOf(n = nest()) {
   }
   const list = [...days.entries()].filter(([, v]) => v.ev.length).sort((a, b) => a[0].localeCompare(b[0])).map(([date, v]) => ({ date, ...v }));
   const reached = STAGES.map((x, j) => ({ ...x, j, on: j === 0 ? start : feeds[x.at - 1]?.d || null }));
-  return { pet, start, total, list, reached, n, lookAt: (c, d) => lookAt(c, d, since) };
+  return { pet, start, total, list, reached, n, names, lookAt: (c, d) => lookAt(c, d, since) };
 }
 export function renderNestAlbum(el, api, afterSync = false) {
   const n = nest();
@@ -717,20 +717,58 @@ export function renderNestAlbum(el, api, afterSync = false) {
   const md = (d) => `${Number(d.slice(5, 7))} 月 ${Number(d.slice(8))} 日`;
   const grow = a.reached.map((x) => `<li class="${x.on ? "on" : ""}"><b>${esc(x.zh)}</b><span>${x.on ? esc(md(x.on)) : `再 ${x.at - a.total} 口`}</span></li>`).join("");
   let pic = 0, month = "";
-  const photo = (p, big) => { const st = { ...a.lookAt(p.total, p.date), pet }; const tilt = [-1.6, 1.2, -.8, 1.7, -1.2, .7][pic++ % 6]; return `<figure class="nest-photo${big ? " big" : ""}" style="--tilt:${tilt}deg">${birdSvg(st)}<figcaption>${esc(md(p.date))}・${p.total ? `第 ${p.total} 口` : "開院"}</figcaption></figure>`; };
+  const shots = []; // every print on the page, for the enlarged view: where it was taken and what happened
+  const cap = (p) => `${esc(md(p.date))}・${p.total ? `第 ${p.total} 口` : "開院"}`;
+  const photo = (p, big, text) => { const st = { ...a.lookAt(p.total, p.date), pet }; const tilt = [-1.6, 1.2, -.8, 1.7, -1.2, .7][pic % 6]; shots.push({ p, text }); return `<figure class="nest-photo${big ? " big" : ""}" style="--tilt:${tilt}deg" data-shot="${pic++}" role="button" tabindex="0" aria-label="放大 ${esc(md(p.date))} 的照片">${birdSvg(st)}<figcaption>${cap(p)}</figcaption></figure>`; };
   const body = a.list.map((d) => {
     const m = d.date.slice(0, 7), head = m !== month ? `<h2 class="album-mon"><span>${Number(m.slice(5))} 月</span><i>${m.slice(0, 4)}</i></h2>` : "";
     month = m;
     const by = Object.entries(d.by).sort((x, y) => y[1] - x[1]).map(([id, c]) => `${id === n.me ? "你" : esc(n.members?.[id] || "朋友")} ${c} 口`);
-    const pics = d.ev.filter((e) => e.photo).map((e) => photo(e.photo, e.big)).join("");
+    const pics = d.ev.filter((e) => e.photo).map((e) => photo(e.photo, e.big, e.text)).join("");
     const lines = d.ev.map((e) => `<li${e.big ? ' class="big"' : ""}>${e.text}</li>`).join("");
     return `${head}<section class="album-day"><time datetime="${d.date}">${esc(md(d.date))}</time>${pics ? `<div class="album-pics">${pics}</div>` : ""}<ul>${lines}</ul>${by.length ? `<p class="by">這天餵的：${by.join("、")}</p>` : ""}</section>`;
   }).join("");
-  el.innerHTML = `<header class="page-title"><h1>${esc(pet.name)}的相簿</h1><span class="de">Album</span></header>
+  // 回到後院 at the top left, where a way back is looked for (the owner, 2026-11-10: 回到後院放到左上角)
+  el.innerHTML = `<a class="album-back" href="#/nest"><span aria-hidden="true">‹</span> 回到後院<span class="de">Hinterhof</span></a>
+    <header class="page-title"><h1>${esc(pet.name)}的相簿</h1><span class="de">Album</span></header>
     <p class="album-lead">從 ${esc(fmtDate(a.start, "short"))} 開院，到今天第 ${days} 天，一共吃了 ${a.total} 口。</p>
     <section class="set album-grow"><h2>什麼時候長大的</h2><ol>${grow}</ol></section>
-    <div class="album">${body}</div>
-    <p class="nest-to-set"><a href="#/nest">回到後院<span class="de">Hinterhof</span> →</a></p>`;
+    <div class="album">${body}</div>`;
+  // A print tapped opens large, and the bird in it comes alive (the owner, 2026-11-10: 點相片裡可以放大相片，然後鳥會動，
+  // 飛來飛去之類的): it hops, looks round, and — from the fledgling on — flies about inside the photo, as in the yard
+  // (liveBird); tapped, it answers as in the yard (pokeBird, with its voice unless 後院設定 has it off). The print grows
+  // out of the thumbnail; the dark round it, 關上 or Escape put it back.
+  const open = (fig) => {
+    const i = Number(fig.dataset.shot), shot = shots[i];
+    if (!shot || document.querySelector(".photo-view")) return;
+    const st = { ...a.lookAt(shot.p.total, shot.p.date), pet };
+    st.songNames = a.names.slice(0, st.songs);
+    const view = document.createElement("div");
+    view.className = "photo-view"; view.setAttribute("role", "dialog"); view.setAttribute("aria-modal", "true"); view.setAttribute("aria-label", `${md(shot.p.date)}的照片`);
+    view.innerHTML = `<figure class="nest-photo live">${birdSvg(st)}<figcaption>${cap(shot.p)}</figcaption></figure><p class="poke-line" aria-live="polite"></p>${shot.text ? `<p class="pv-text">${shot.text}</p>` : ""}<button class="pv-close" type="button">關上</button>`;
+    document.body.append(view);
+    const big = view.querySelector(".nest-photo"), b = big.querySelector(".bird");
+    b.removeAttribute("aria-hidden"); b.setAttribute("role", "button"); b.tabIndex = 0; b.setAttribute("aria-label", `摸摸${pet.name}`);
+    const poke = (e) => { e.stopPropagation(); pokeBird(view, st); };
+    b.addEventListener("click", poke);
+    b.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); poke(e); } });
+    const html = document.documentElement, was = html.style.overflow;
+    html.style.overflow = "hidden";
+    const from = fig.getBoundingClientRect(), to = big.getBoundingClientRect();
+    if (!calm() && to.width) big.animate([{ transform: `translate(${from.left + from.width / 2 - to.left - to.width / 2}px, ${from.top + from.height / 2 - to.top - to.height / 2}px) scale(${from.width / to.width})` }, { transform: "none" }], { duration: 320, easing: "cubic-bezier(.2,.8,.2,1)" });
+    if (!calm()) view.animate([{ backgroundColor: "transparent" }, {}], { duration: 260, easing: "ease-out" });
+    liveBird(big, { fly: true });
+    const close = () => { view.remove(); html.style.overflow = was; removeEventListener("keydown", onKey); removeEventListener("hashchange", close); fig.focus({ preventScroll: true }); };
+    const onKey = (e) => { if (e.key === "Escape") close(); };
+    view.addEventListener("click", (e) => { if (e.target === view || e.target.closest(".pv-close")) close(); });
+    addEventListener("keydown", onKey);
+    addEventListener("hashchange", close, { once: true });
+    view.querySelector(".pv-close").focus({ preventScroll: true });
+  };
+  el.querySelectorAll(".nest-photo[data-shot]").forEach((fig) => {
+    fig.addEventListener("click", () => open(fig));
+    fig.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(fig); } });
+  });
   if (!afterSync) syncNest(api).then((ok) => { if (ok && el.isConnected && location.hash === "#/nest/album") renderNestAlbum(el, api, true); });
 }
 // 後院設定: open a yard or join one; with a yard, the bird's name and how it is called, the invite code to pass on,

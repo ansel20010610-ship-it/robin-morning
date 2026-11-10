@@ -2095,7 +2095,7 @@ details.band .svl { margin: 0 0 10px; }
 .nest-stage .bird[role="button"] { cursor: pointer; -webkit-tap-highlight-color: transparent; }
 .nest-stage .poke-line { min-height: 1.4em; margin: -2px 0 2px; font-family: var(--serif); font-style: italic; font-size: 13.5px; color: var(--gold-ink); letter-spacing: .04em; opacity: 0; transition: opacity .3s ease; }
 .nest-stage .poke-line.on { opacity: 1; }
-.nest-stage .bird .poke-note { position: absolute; top: 30%; font-family: var(--latin); font-size: 20px; color: var(--gold); pointer-events: none; animation: poke-note 1.4s ease-out forwards; }
+:is(.nest-stage, .photo-view) .bird .poke-note { position: absolute; top: 30%; font-family: var(--latin); font-size: 20px; color: var(--gold); pointer-events: none; animation: poke-note 1.4s ease-out forwards; }
 @keyframes poke-note { 0% { opacity: 0; transform: translateY(6px) scale(.8); } 20% { opacity: 1; } 100% { opacity: 0; transform: translateY(-34px) scale(1.1); } }
 
 /* ——— 相簿 (nest.js renderNestAlbum): the bird's life, day by day. Each moment its look changed is a small photo — the
@@ -2103,6 +2103,10 @@ details.band .svl { margin: 0 0 10px; }
    rest are short lines under the day's date; months are headed like the yearbook's. ——— */
 .nest-album-link { display: inline-block; margin-top: 12px; font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: .06em; color: var(--gold-ink); text-decoration: none; }
 .nest-album-link .de, .album-mon i { font-family: var(--latin); font-style: italic; font-weight: 500; color: var(--gold); margin-left: 6px; }
+.album-back { display: inline-flex; align-items: baseline; gap: 4px; margin-top: 16px; font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: .06em; color: var(--gold-ink); text-decoration: none; }
+.album-back span[aria-hidden] { font-size: 17px; line-height: 1; margin-right: 2px; }
+.album-back .de { font-family: var(--latin); font-style: italic; font-weight: 500; color: var(--gold); margin-left: 4px; }
+.album-back + .page-title { padding-top: 10px; }
 .album-lead { font-family: var(--serif); font-size: 15px; line-height: 1.8; color: var(--ink-2); margin: 6px 0 4px; }
 .album-grow ol { list-style: none; margin: 6px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .album-grow li { padding: 8px 10px; border: 1px solid var(--rule); background: var(--paper-2); color: var(--muted); }
@@ -2130,3 +2134,15 @@ details.band .svl { margin: 0 0 10px; }
 .album-day .by { margin: 6px 0 0; font-family: var(--sans); font-size: 12px; color: var(--muted); letter-spacing: .04em; }
 :root[data-theme="dark"] .nest-photo { background: color-mix(in srgb, #fff 8%, var(--paper)); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .nest-photo { background: color-mix(in srgb, #fff 8%, var(--paper)); } }
+/* A print opened large (nest.js renderNestAlbum open): the photo on a dark ground, the bird in it alive — hopping,
+   looking round, flying about inside the frame (clipped to it, as a photo) — with what happened that day under it. */
+.nest-photo[data-shot] { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.nest-photo[data-shot]:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.photo-view { position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: calc(24px + env(safe-area-inset-top)) 16px calc(24px + env(safe-area-inset-bottom)); background: color-mix(in srgb, #15120E 72%, transparent); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+.photo-view .nest-photo.live { width: min(86vw, 360px); padding: 12px 12px 10px; rotate: -1deg; box-shadow: 0 14px 40px rgb(0 0 0 / .35); }
+.photo-view .nest-photo.live .bird { overflow: hidden; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.photo-view .nest-photo.live figcaption { font-size: 12px; letter-spacing: .08em; margin-top: 8px; }
+.photo-view .poke-line { min-height: 1.4em; margin: 8px 0 0; font-family: var(--serif); font-style: italic; font-size: 14px; color: #F3DFAE; letter-spacing: .04em; opacity: 0; transition: opacity .3s ease; text-align: center; }
+.photo-view .poke-line.on { opacity: 1; }
+.photo-view .pv-text { max-width: 340px; margin: 0; font-family: var(--serif); font-size: 15px; line-height: 1.75; color: #F5EEDF; text-align: center; }
+.photo-view .pv-close { margin-top: 10px; padding: 8px 22px; font-family: var(--sans); font-size: 13px; letter-spacing: .12em; color: #F5EEDF; background: none; border: 1px solid rgb(245 238 223 / .5); cursor: pointer; }
