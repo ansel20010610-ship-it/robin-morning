@@ -367,7 +367,10 @@ export function flyBy() {
 export function scrollFlyer() {
   let acc = 0, last = 0, lastY = window.scrollY, times = 0;
   return () => {
-    const y = window.scrollY; acc += Math.abs(y - lastY); lastY = y;
+    // A jump of the page (a route restoring its place, 接著讀, a tap on the tab) is not the reader scrolling: a finger moves
+    // the page well under a screen between two scroll events, so a bigger step is left out of the count.
+    const y = window.scrollY, step = Math.abs(y - lastY); lastY = y;
+    if (step < 1200) acc += step;
     if (document.hidden || acc < (times ? 900 : 320) || Date.now() - last < (times ? 35000 : 0)) return;
     acc = 0;
     if (times && Math.random() < .45) return;

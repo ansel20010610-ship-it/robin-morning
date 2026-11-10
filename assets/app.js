@@ -676,8 +676,8 @@ async function keptCards(date, column) {
 
 // ——— Views ———
 function viewFront(dateParam) {
-  // A redraw in place (refreshFront, 下拉更新) does not pass through route(): take down the last draw's scroll flyer,
-  // seal watcher and ring first, or each redraw leaves one more bird listening on every page (audit c1).
+  // A redraw in place (refreshFront, 下拉更新) does not pass through route(): take down the last draw's
+  // seal watcher and ring first, or each redraw leaves one more watcher behind (audit c1).
   cleanup(); cleanup = () => {};
   const pubs = publishedIssues();
   const issue = dateParam ? issueBy(dateParam) : pubs[0];
@@ -738,13 +738,6 @@ function viewFront(dateParam) {
   </div>`;
   prefetch(issue);
   wireDigest(issue);
-  // 後院 (nest.js scrollFlyer): on a 特供版 phone with a yard, the bird now and then flies across the paper as the reader
-  // scrolls today's front page (the owner, 2026-11-09: 我在滑首頁的時候鳥會飛出來).
-  if (!dateParam && sonder() && nest()) {
-    const onFly = scrollFlyer(), prev = cleanup;
-    window.addEventListener("scroll", onFly, { passive: true });
-    cleanup = () => { prev(); window.removeEventListener("scroll", onFly); };
-  }
   fillReveal();
   fillWire();
   fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
@@ -2356,6 +2349,12 @@ async function boot() {
   });
   main.addEventListener("click", (e) => { lastTapped = e.target.closest("a.lead, a.item, a.tile")?.querySelector("img") || null; }, true);
   ripples();
+  // 後院 (nest.js scrollFlyer): on a 特供版 phone with a yard, the bird now and then flies across the screen as the reader
+  // scrolls — any page, articles included (the owner, 2026-11-09: 我在滑首頁的時候鳥會飛出來; 2026-11-10: 不只是滑首頁，
+  // 其他地方也要跑出來). One listener for the whole app, so the pacing (first after a short scroll, then at least 35 s
+  // apart) carries across pages; not in the yard itself, where the bird already is.
+  const onFly = scrollFlyer();
+  window.addEventListener("scroll", () => { if (sonder() && nest() && !(location.hash || "").startsWith("#/nest")) onFly(); }, { passive: true });
   try { await route(); } catch (e) { console.warn("route failed", e); }
   runAutoAdd();
   // While the front page stays open: keep the countdown and the day change current, flip to the new issue at 07:30,
