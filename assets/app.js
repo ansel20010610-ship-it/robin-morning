@@ -14,7 +14,7 @@ import { fetchWeather, weatherHtml } from "./wetter.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { worldState, drawMap } from "./world.js";
-import { nestBox, renderNest, renderNestSettings, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
+import { nestBox, renderNest, renderNestSettings, renderNestAlbum, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -1857,11 +1857,11 @@ function calendarHtml(ym, pubs, done) {
     <div class="cap"><span>${got.length ? `本月 ${got.length} 期，讀完 ${fin} 期` : "本月還沒出刊"}</span><a href="#/chronik" aria-label="刊史館：從創刊號到今天的沿革">刊史館<i>Chronik</i>→</a></div></section>`;
 }
 // ——— 後院 (Hinterhof, assets/nest.js): the robin raised together; the page opens, joins, shows and leaves a yard ———
-function viewNest(settings = false) {
+function viewNest(which = "") {
   main.innerHTML = `<div class="wrap nest-page"></div>`;
   if (!sonder()) { main.querySelector(".nest-page").innerHTML = `<header class="page-title"><h1>後院</h1><span class="de">Hinterhof</span></header><p class="empty">後院是特供版才有的。到<a href="#/settings">設定</a>輸入代碼，這支手機就開了。</p>`; document.title = `後院｜${S.cfg.title}`; return; }
-  (settings ? renderNestSettings : renderNest)(main.querySelector(".nest-page"), S.cfg.nest?.api);
-  document.title = `${settings ? "後院設定" : "後院"}｜${S.cfg.title}`;
+  ({ settings: renderNestSettings, album: renderNestAlbum }[which] || renderNest)(main.querySelector(".nest-page"), S.cfg.nest?.api);
+  document.title = `${{ settings: "後院設定", album: "相簿" }[which] || "後院"}｜${S.cfg.title}`;
 }
 // ——— 印務室 (Druckerei, assets/press.js): the owner's press room — this morning's five shifts, the reserve stock and a
 // fortnight's roster, all out of the index the app holds (its press, late and stock), so it reads the same offline.
@@ -2279,7 +2279,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/world")) viewWorld();
   else if (h.startsWith("#/press")) viewPress();
   else if (h.startsWith("#/chronik")) await viewChronik(); // awaited, so a step back lands where 刊史館 was left, not on its loading line (audit c15)
-  else if (h.startsWith("#/nest")) viewNest(h.startsWith("#/nest/settings"));
+  else if (h.startsWith("#/nest")) viewNest(h.startsWith("#/nest/settings") ? "settings" : h.startsWith("#/nest/album") ? "album" : ""); // 相簿: the bird's life (nest.js renderNestAlbum)
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/marks")) viewMarks();

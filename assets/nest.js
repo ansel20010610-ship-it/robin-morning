@@ -636,7 +636,8 @@ export function renderNest(el, api, afterSync = false) {
       ${bar(st)}
       <details class="nest-more"><summary>院子裡有什麼<span class="de">Inventar</span></summary>
         <p class="small">全院一共讀了 ${st.total} 篇${n.since ? `，從 ${esc(fmtDate(n.since, "short"))} 開院算起` : ""}${got.length ? `。院子裡有${got.join("、")}` : ""}${st.story.mate ? "，還有一隻伴侶" : ""}。</p>
-        ${st.songs ? `<p class="small songs">會唱的歌：${st.songNames.map((s, i) => s ? esc(s) : `第${cn(i + 1)}首`).join("、")}。</p>` : ""}</details></div>
+        ${st.songs ? `<p class="small songs">會唱的歌：${st.songNames.map((s, i) => s ? esc(s) : `第${cn(i + 1)}首`).join("、")}。</p>` : ""}</details>
+      <a class="nest-album-link" href="#/nest/album">翻翻${esc(pet.name)}的相簿<span class="de">Album</span> →</a></div>
     <section class="set"><h2>這七天</h2><ol class="nest-week" aria-label="這七天每天餵了幾口">${wk}</ol></section>
     <section class="set"><h2>院子裡的人</h2><ul class="nest-members">${names}</ul>
       ${api ? `<p class="small">${synced || "還沒同步過"}。</p>` : `<p class="small nest-note">共用儲存還沒接上：現在只有這支手機的紀錄，接上以後會把大家的餵食和名字同步過來。</p>`}</section>
@@ -647,6 +648,90 @@ export function renderNest(el, api, afterSync = false) {
   birdEl.addEventListener("click", () => pokeBird(stageEl, nestState()));
   birdEl.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pokeBird(stageEl, nestState()); } });
   if (!afterSync) syncNest(api).then((ok) => { if (ok && el.isConnected && location.hash === "#/nest") renderNest(el, api, true); });
+}
+// ——— 相簿 (Album) ———
+// The bird's life, read back out of the feed log (the owner, 2026-11-10: 我想加入養的鳥的相簿，可以回憶她以前長怎樣、發生過
+// 什麼事、什麼時候長大的). The log is the bites in one order — by day, then by article, as songNames reads it — so the
+// k-th bite has a day, and the bird as it was after k bites can be drawn again: its size, its plumage, what the yard
+// held, and the season and the bird's own year on that day. A photo is taken at each moment its look changed — the
+// yard opened (an egg), each stage, the mate, a new season, the moult, eggs, chicks, the young flown, Christmas, a
+// birthday — and the smaller things (a twig, a leaf, a song and its name, a hundredth bite, a friend's first bite)
+// are lines under the day. A bite has no hour, so a day says who fed that day, not who fed which bite.
+function lookAt(total, date, since) {
+  const si = STAGES.reduce((i, s, j) => (total >= s.at ? j : i), 0), last = STAGES[STAGES.length - 1].at;
+  const songs = total >= last ? 1 + Math.floor((total - last) / SONG) : 0, items = {};
+  for (const m of milestones(total)) items[m.k] = (items[m.k] || 0) + 1;
+  const story = storyOf(total, songs, since, date);
+  return { si, songs, items, story, full: false, grow: Math.min(1, total / STAGES[4].at), mature: Math.min(1, total / 400) * (story.molt ? .6 : 1) };
+}
+export function albumOf(n = nest()) {
+  if (!n) return null;
+  const pet = petOf(n), today = twNow().date;
+  const feeds = [...(n.feeds || [])].filter((f) => f && /^\d{4}-\d{2}-\d{2}$/.test(f.d) && typeof f.k === "string").sort((a, b) => a.d.localeCompare(b.d) || a.k.localeCompare(b.k));
+  const start = [n.since, feeds[0]?.d].filter(Boolean).sort()[0] || today, since = start;
+  const who = (id) => (id === n.me ? "你" : esc(n.members?.[id] || "朋友"));
+  const total = feeds.length, last = STAGES[STAGES.length - 1].at, songs = total >= last ? 1 + Math.floor((total - last) / SONG) : 0, names = songNames(n, songs);
+  const days = new Map(); // date → { ev: [{ text, photo?: {total, date}, big }], by: {member: bites} }
+  const day = (d) => { if (!days.has(d)) days.set(d, { ev: [], by: {} }); return days.get(d); };
+  const snap = (c, d) => ({ total: c, date: d });
+  day(start).ev.push({ text: `院子開張，${pet.p}還是一顆蛋。`, photo: snap(0, start), big: true });
+  const firstOf = new Set();
+  feeds.forEach((f, i) => {
+    const c = i + 1, d = f.d, D = day(d);
+    D.by[f.w] = (D.by[f.w] || 0) + 1;
+    if (!firstOf.has(f.w)) { firstOf.add(f.w); if (d !== start) D.ev.push({ text: `${who(f.w)}第一次來餵。` }); } // who fed on the opening day opened it together
+    const st = STAGES.findIndex((x, j) => j > 0 && x.at === c);
+    if (st > 0) D.ev.push({ text: `${esc(pet.name)}${["", "破殼了", "長出絨毛了", "開始學飛了", "長成成鳥了", "成了歌者"][st]}。${STAGES[st].say(pet.p)}${st === STAGES.length - 1 && names[0] ? `第一首歌是${esc(names[0])}。` : ""}`, photo: snap(c, d), big: true, stage: st });
+    if (c > last && (c - last) % SONG === 0) { const k = (c - last) / SONG + 1; D.ev.push({ text: `學會第${cn(k)}首歌${names[k - 1] ? `：${esc(names[k - 1])}` : ""}。` }); }
+    if (c === 500) D.ev.push({ text: `一隻伴侶飛來了，站在枝的另一頭。`, photo: snap(c, d), big: true });
+    for (const m of milestones(c)) if (m.at === c) D.ev.push({ text: `${WORDS[m.k]}。` });
+    if (c % 100 === 0 && c !== 500) D.ev.push({ text: `第${cn(c)}口。` });
+  });
+  // the calendar: what came with the day, not with a bite
+  const countBy = (d) => { let lo = 0, hi = feeds.length; while (lo < hi) { const m = (lo + hi) >> 1; if (feeds[m].d <= d) lo = m + 1; else hi = m; } return lo; };
+  const SEASONS = { spring: "春天來了，枝上開花。", summer: "入夏，葉子長滿了枝。", autumn: "入秋，葉子黃了。", winter: "冬天到了，枝上積了雪。" };
+  let prev = storyOf(countBy(start), 0, since, start);
+  for (let d = addDays(start, 1); d <= today; d = addDays(d, 1)) {
+    const c = countBy(d), sg = c >= last ? 1 + Math.floor((c - last) / SONG) : 0, s2 = storyOf(c, sg, since, d), out = [];
+    if (s2.birthday) out.push({ text: `院子開張${s2.years === 1 ? "一週年" : `${cn(s2.years)}週年`}。`, big: true });
+    if (s2.season !== prev.season) out.push({ text: SEASONS[s2.season] });
+    if (s2.molt && !prev.molt && c) out.push({ text: `${pet.p}開始換羽，顏色淡了一些。` });
+    if (!s2.molt && prev.molt && c) out.push({ text: "新的羽毛長好了。" });
+    if (s2.rebuilt && !prev.rebuilt && c) out.push({ text: "春天，巢重新築過。" });
+    if (s2.eggs && !prev.eggs) out.push({ text: "巢裡有了兩顆蛋。", big: true });
+    if (s2.chicks && !prev.chicks) out.push({ text: "雛鳥孵出來了。", big: true });
+    if (s2.fledged && !prev.fledged) out.push({ text: "幼鳥飛走了，院子安靜下來。" });
+    if (s2.christmas && !prev.christmas) out.push({ text: "枝頭掛上一顆小星星。" });
+    if (out.length) { const D = day(d); D.ev.push(...out.map((e, j) => (j === 0 ? { ...e, photo: snap(c, d) } : e))); } // after the day's bites: the chicks of a mate that came that day
+    prev = s2;
+  }
+  const list = [...days.entries()].filter(([, v]) => v.ev.length).sort((a, b) => a[0].localeCompare(b[0])).map(([date, v]) => ({ date, ...v }));
+  const reached = STAGES.map((x, j) => ({ ...x, j, on: j === 0 ? start : feeds[x.at - 1]?.d || null }));
+  return { pet, start, total, list, reached, n, lookAt: (c, d) => lookAt(c, d, since) };
+}
+export function renderNestAlbum(el, api, afterSync = false) {
+  const n = nest();
+  if (!n) { renderNestSettings(el, api); return; }
+  const a = albumOf(n), pet = a.pet, today = twNow().date;
+  const days = Math.round((Date.parse(`${today}T00:00:00Z`) - Date.parse(`${a.start}T00:00:00Z`)) / 864e5) + 1;
+  const md = (d) => `${Number(d.slice(5, 7))} 月 ${Number(d.slice(8))} 日`;
+  const grow = a.reached.map((x) => `<li class="${x.on ? "on" : ""}"><b>${esc(x.zh)}</b><span>${x.on ? esc(md(x.on)) : `再 ${x.at - a.total} 口`}</span></li>`).join("");
+  let pic = 0, month = "";
+  const photo = (p, big) => { const st = { ...a.lookAt(p.total, p.date), pet }; const tilt = [-1.6, 1.2, -.8, 1.7, -1.2, .7][pic++ % 6]; return `<figure class="nest-photo${big ? " big" : ""}" style="--tilt:${tilt}deg">${birdSvg(st)}<figcaption>${esc(md(p.date))}・${p.total ? `第 ${p.total} 口` : "開院"}</figcaption></figure>`; };
+  const body = a.list.map((d) => {
+    const m = d.date.slice(0, 7), head = m !== month ? `<h2 class="album-mon"><span>${Number(m.slice(5))} 月</span><i>${m.slice(0, 4)}</i></h2>` : "";
+    month = m;
+    const by = Object.entries(d.by).sort((x, y) => y[1] - x[1]).map(([id, c]) => `${id === n.me ? "你" : esc(n.members?.[id] || "朋友")} ${c} 口`);
+    const pics = d.ev.filter((e) => e.photo).map((e) => photo(e.photo, e.big)).join("");
+    const lines = d.ev.map((e) => `<li${e.big ? ' class="big"' : ""}>${e.text}</li>`).join("");
+    return `${head}<section class="album-day"><time datetime="${d.date}">${esc(md(d.date))}</time>${pics ? `<div class="album-pics">${pics}</div>` : ""}<ul>${lines}</ul>${by.length ? `<p class="by">這天餵的：${by.join("、")}</p>` : ""}</section>`;
+  }).join("");
+  el.innerHTML = `<header class="page-title"><h1>${esc(pet.name)}的相簿</h1><span class="de">Album</span></header>
+    <p class="album-lead">從 ${esc(fmtDate(a.start, "short"))} 開院，到今天第 ${days} 天，一共吃了 ${a.total} 口。</p>
+    <section class="set album-grow"><h2>什麼時候長大的</h2><ol>${grow}</ol></section>
+    <div class="album">${body}</div>
+    <p class="nest-to-set"><a href="#/nest">回到後院<span class="de">Hinterhof</span> →</a></p>`;
+  if (!afterSync) syncNest(api).then((ok) => { if (ok && el.isConnected && location.hash === "#/nest/album") renderNestAlbum(el, api, true); });
 }
 // 後院設定: open a yard or join one; with a yard, the bird's name and how it is called, the invite code to pass on,
 // joining another yard instead (which leaves this one), and the way out.
