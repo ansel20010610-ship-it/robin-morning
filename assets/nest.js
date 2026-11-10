@@ -41,9 +41,11 @@ export const leaveNest = () => store.del("nest");
 
 // One bite for one article read by this phone, once (the owner reads the same piece twice: still one bite). Returns
 // true when the bird was fed, so the caller can say so.
+const fedNow = new Set(); // this visit's bites, in memory: a storage that refuses the write must not feed the same piece twice
 export function feedNest(k) {
   const n = nest();
-  if (!n || typeof k !== "string") return false;
+  if (!n || typeof k !== "string" || fedNow.has(k)) return false;
+  fedNow.add(k);
   if (n.feeds.some((f) => f.w === n.me && f.k === k)) return false;
   const f = { d: twNow().date, w: n.me, k };
   n.feeds.push(f); n.pending.push(f);

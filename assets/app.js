@@ -137,7 +137,11 @@ function toggleSaved(k) {
   store.set("saved", s);
   return i < 0;
 }
-const readSet = () => new Set(store.get("read", []));
+// What was read in this visit is also kept in memory (readNow): a phone whose storage refuses the write (full) still
+// shows 已讀 and does not count the same piece again on every scroll — which fed the bird and popped its card anew each
+// time (the owner, 2026-11-11: 讀完跳餵食通知再往下滑 通知又一直亂跳 也沒有標已讀).
+const readNow = new Set();
+const readSet = () => { const s = new Set(store.get("read", [])); for (const k of readNow) s.add(k); return s; };
 // 特供版 (Sonderausgabe; the owner, 2026-11-09: 我不要每個裝置都有這功能，用代碼啟動): features for the phones that
 // entered the code in 設定 — today the nest. config.json `sonder.hash` is the SHA-256 of the code (upper case, letters
 // and digits only); the phone keeps only that it is one (rm.sonder). The code itself is never in the repository.
@@ -149,9 +153,13 @@ async function sonderHash(code) {
 }
 // Reading a piece also feeds the yard's robin one bite (nest.js), on a 特供版 phone that has a 後院.
 function markRead(k) {
+  if (readNow.has(k)) return;
+  readNow.add(k);
   const r = store.get("read", []);
   if (r.includes(k)) return;
-  r.push(k); store.set("read", r); syncDone(); // kept whole: the serial's progress, the stamps and the yearbook read it (~20 bytes a key; audit 2026-11-09)
+  r.push(k);
+  if (!store.set("read", r)) toast("手機的儲存空間滿了，讀過的紀錄存不進去"); // store.set has already tried freeing room
+  syncDone(); // kept whole: the serial's progress, the stamps and the yearbook read it (~20 bytes a key; audit 2026-11-09)
   if (!sonder()) return;
   const before = nestState();
   if (feedNest(k)) { feedNotice(before, nestState()); syncNest(S.cfg.nest?.api); } // the bird's own notice, not a toast

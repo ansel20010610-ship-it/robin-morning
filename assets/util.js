@@ -29,7 +29,19 @@ export function paragraphs(s) {
 
 export const store = {
   get(k, d = null) { try { const v = localStorage.getItem("rm." + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
-  set(k, v) { try { localStorage.setItem("rm." + k, JSON.stringify(v)); } catch { /* private mode */ } },
+  // true when it was written. A full storage (QuotaExceededError) first gives up what can be fetched or rebuilt again —
+  // the places to come back to in articles, the Spotify lookups, the cached weather, letters, credits, concert marks — and tries once more.
+  set(k, v) {
+    const s = JSON.stringify(v), put = () => { localStorage.setItem("rm." + k, s); return true; };
+    try { return put(); } catch (e) {
+      if (!/quota/i.test(`${e?.name} ${e?.message}`)) return false; // private mode or storage off
+      try {
+        const spare = /^rm\.(pos\.|sp\.resolve|wx$|letters\.cache$|credits$|gigs\.(seen|fresh)$|random\.recent$|reveal\.seen$)/;
+        for (const key of Object.keys(localStorage)) if (spare.test(key) && key !== "rm." + k) localStorage.removeItem(key);
+        return put();
+      } catch { return false; }
+    }
+  },
   del(k) { try { localStorage.removeItem("rm." + k); } catch { /* ignore */ } },
 };
 
