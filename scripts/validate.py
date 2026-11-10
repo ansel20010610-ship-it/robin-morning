@@ -838,6 +838,19 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
                 E("缺少 takeaway：帶得走的結論，一到兩句、40–90 字，放在標題下方（columns/perio.md）")
             elif not 25 <= len(CJK.findall(take)) <= 110:
                 W("takeaway %d 字，建議 40–90 字" % len(CJK.findall(take)))
+            # 明天在診間怎麼說 (2026-11-11 on, columns/perio.md): the line for the patient, no more than the article claims
+            chair = art.get("chairside") if isinstance(art.get("chairside"), str) else ""
+            if str(d) != "reserve" and str(d) >= "2026-11-11" and not chair.strip():
+                W("缺少 chairside：明天在診間對病人怎麼說，一到兩句、40–100 字（columns/perio.md）")
+            if chair.strip():
+                if not 30 <= len(CJK.findall(chair)) <= 120:
+                    W("chairside %d 字，建議 40–100 字" % len(CJK.findall(chair)))
+                if re.search(r"[A-Za-z]{2,}", chair):
+                    W("chairside 有英文或縮寫（病人聽不懂）：%s" % "、".join(sorted(set(re.findall(r"[A-Za-z]{2,}", chair)))))
+                said = take + json.dumps(body, ensure_ascii=False)
+                extra = [n for n in re.findall(r"\d+(?:\.\d+)?", chair) if n not in said]
+                if extra:
+                    W("chairside 的數字不在正文或 takeaway 裡：%s（只能說文章說過的）" % "、".join(extra))
             if not (isinstance(card.get("access"), str) and card["access"].strip()):
                 E("paper 論文卡缺少 access（資料範圍：依全文，或依摘要與後續文獻整理）")
             if str(d) == "reserve" or str(d) >= EVIDENCE_SINCE:

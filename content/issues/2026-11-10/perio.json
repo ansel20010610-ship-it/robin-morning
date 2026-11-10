@@ -1,205 +1,206 @@
 {
-  "column": "perio",
-  "date": "2026-11-10",
-  "title": "根分岔的臼齒，掉牙風險約是 2 倍",
-  "dek": "根分岔的大臼齒，時間拉長了確實比較容易掉。該拔還是該留，一篇統合分析和一份歐洲指引都站在留的那一邊。",
-  "brief": "在維護治療下追蹤 10 到 15 年，有根分岔病變的臼齒掉牙的相對風險是沒有的 2.21 倍，可是同一篇統合分析的結論是多數臼齒連第 III 度都對治療反應良好。歐洲牙周病學會的臨床指引寫明根分岔不是拔牙的理由，下顎第 II 度病變留有殘餘囊袋的，強建議做再生手術。",
-  "takeaway": "追蹤 10 到 15 年，有根分岔的臼齒掉牙相對風險約是沒有的 2.2 倍，但多數臼齒治療反應良好。本文的判斷：根分岔是掉牙的風險因子，不是拔牙的理由。",
-  "topic_key": "perio:doi:10.1111/jcpe.12497",
-  "form": "qa",
-  "voice": "colleague",
-  "updated_at": "2026-11-10T01:00:19+08:00",
-  "spoiler": null,
-  "disclaimer": "醫學教學導讀，非個別診療建議。",
-  "hero": {
-    "id": "hero",
-    "kind": "photo",
-    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Hemisection_1_lower_right_number_6_at_June_1997.JPG/1280px-Hemisection_1_lower_right_number_6_at_June_1997.JPG",
-    "width": 1280,
-    "height": 853,
-    "alt": "一張翻拍的根尖 X 光片，畫面裡並排三顆下顎後牙，中間是一顆兩根的大臼齒，右側底片邊緣印著字母。",
-    "caption": "右下第一大臼齒（46）做半切除之前的 X 光片，上傳者標示為 1997 年 6 月。這是維基共享資源上的一組病例照片，與文中研究的受試者無關。",
-    "credit": "Bin im Garten，Wikimedia Commons",
-    "license": "CC BY-SA 3.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Hemisection_1_lower_right_number_6_at_June_1997.JPG",
-    "made": "1997 年 6 月（依檔名）；2013 年 5 月上傳"
+ "column": "perio",
+ "date": "2026-11-10",
+ "title": "根分岔的臼齒，掉牙風險約是 2 倍",
+ "dek": "根分岔的大臼齒，時間拉長了確實比較容易掉。該拔還是該留，一篇統合分析和一份歐洲指引都站在留的那一邊。",
+ "brief": "在維護治療下追蹤 10 到 15 年，有根分岔病變的臼齒掉牙的相對風險是沒有的 2.21 倍，可是同一篇統合分析的結論是多數臼齒連第 III 度都對治療反應良好。歐洲牙周病學會的臨床指引寫明根分岔不是拔牙的理由，下顎第 II 度病變留有殘餘囊袋的，強建議做再生手術。",
+ "takeaway": "追蹤 10 到 15 年，有根分岔的臼齒掉牙相對風險約是沒有的 2.2 倍，但多數臼齒治療反應良好。本文的判斷：根分岔是掉牙的風險因子，不是拔牙的理由。",
+ "chairside": "您這顆臼齒的牙根分叉處有骨頭流失，長期看確實比較容易掉；可是研究追蹤十到十五年，多數這樣的牙經過治療和定期回診都還留得住。所以我們先治療、好好維護，不急著拔。",
+ "topic_key": "perio:doi:10.1111/jcpe.12497",
+ "form": "qa",
+ "voice": "colleague",
+ "updated_at": "2026-11-10T01:00:19+08:00",
+ "spoiler": null,
+ "disclaimer": "醫學教學導讀，非個別診療建議。",
+ "hero": {
+  "id": "hero",
+  "kind": "photo",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Hemisection_1_lower_right_number_6_at_June_1997.JPG/1280px-Hemisection_1_lower_right_number_6_at_June_1997.JPG",
+  "width": 1280,
+  "height": 853,
+  "alt": "一張翻拍的根尖 X 光片，畫面裡並排三顆下顎後牙，中間是一顆兩根的大臼齒，右側底片邊緣印著字母。",
+  "caption": "右下第一大臼齒（46）做半切除之前的 X 光片，上傳者標示為 1997 年 6 月。這是維基共享資源上的一組病例照片，與文中研究的受試者無關。",
+  "credit": "Bin im Garten，Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Hemisection_1_lower_right_number_6_at_June_1997.JPG",
+  "made": "1997 年 6 月（依檔名）；2013 年 5 月上傳"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "**Nibali** 等人（作者單位含倫敦大學學院伊士曼牙醫研究所）2016 年發表一篇系統性回顧與統合分析，問的是診間常碰到的事：初診就有根分岔病變（furcation involvement）的臼齒，進了維護治療以後，是不是比較容易掉。21 篇追蹤至少三年的縱向研究合起來，追到 10 到 15 年，答案是會；結論的下一句，作者勸的卻是盡力留牙。"
   },
-  "body": [
-    {
-      "type": "p",
-      "text": "**Nibali** 等人（作者單位含倫敦大學學院伊士曼牙醫研究所）2016 年發表一篇系統性回顧與統合分析，問的是診間常碰到的事：初診就有根分岔病變（furcation involvement）的臼齒，進了維護治療以後，是不是比較容易掉。21 篇追蹤至少三年的縱向研究合起來，追到 10 到 15 年，答案是會；結論的下一句，作者勸的卻是盡力留牙。"
-    },
-    {
-      "type": "p",
-      "text": "分度一般照 Hamp 1975 的分法（Hamp 是提出這套分度的作者）：第 II 度水平探入至少 3 毫米但沒有穿透，第 III 度貫穿整個牙寬。**歐洲牙周病學會（EFP）** 2020 年的牙周炎治療指引（S3 級，是德國科學醫學會聯合會 AWMF 分級中，兼有系統性文獻評讀與結構化共識的一級）處理根分岔時，把這篇列為先前的系統性回顧之一。"
-    },
-    {
-      "type": "h",
-      "text": "有根分岔的臼齒，真的掉得比較多嗎？"
-    },
-    {
-      "type": "p",
-      "text": "要看追多久。最多追蹤 10 年的研究，相對風險（有根分岔的臼齒掉牙比例，除以沒有的）是 1.46，信賴區間 0.99 到 2.15，看不出顯著差別；追到 10 到 15 年，升到 **2.21**（1.79–2.74），而且掉牙風險隨第 II、III 度逐級往上。合併的都是縱向研究。**根分岔是掉牙的風險因子，但風險升高不等於該拔。**"
-    },
-    {
-      "type": "h",
-      "text": "風險加倍，作者為什麼還勸人留牙？"
-    },
-    {
-      "type": "quote",
-      "text": "然而，大多數臼齒，即使是第 III 度根分岔，對牙周治療的反應都很好，這表示只要可能，就應盡一切努力保留這些牙。",
-      "original": "However, most molars, even with grade III FI respond well to periodontal therapy, suggesting that every effort should be made to maintain these teeth when possible.",
-      "cite": "Nibali 等（2016），摘要結論"
-    },
-    {
-      "type": "p",
-      "text": "留得住的證據不只這一篇。EFP 為指引另做的系統性回顧（Dommisch 等，2020）收了 2,021 顆第 II、III 度根分岔的牙，治療後 4 到 30.8 年，1,515 顆還在；截根、牙根分離、隧道術和齦下清創或翻瓣清創比，存活率可能相近。指引的總則也是這個方向："
-    },
-    {
-      "type": "quote",
-      "text": "根分岔病變不是拔牙的理由。",
-      "original": "Furcation involvement is no reason for extraction.",
-      "cite": "EFP 第 I–III 期牙周炎 S3 臨床指引（Sanz 等，2020）"
-    },
-    {
-      "type": "h",
-      "text": "下顎第 II 度，值得做再生手術嗎？"
-    },
-    {
-      "type": "p",
-      "text": "指引的建議分三級：A 級是強建議，B 級是提議，0 級是可以考慮。下顎第 II 度有殘留囊袋的，指引強建議再生手術。背後的統合分析（Jepsen 等，2020）收了 20 個根分岔再生手術的隨機試驗（19 個第 II 度、1 個第 III 度），和單純翻瓣清創比，垂直附著多 1.3 毫米；根分岔閉合或降成第 I 度的勝算比是 20.9，白話是改善的勝算約為對照組的 20.9 倍，只是 90% 可信區間 5.81–69.41，估計很寬。其中 17 個試驗屬下顎第 II 度，是下表 A 級的依據。這些試驗都沒有報告掉牙，所以多出來的附著能不能換成多留幾年牙，這份資料沒有答案。"
-    },
-    {
-      "type": "table",
-      "title": "殘留囊袋合併根分岔，EFP 指引怎麼建議",
-      "head": [
-        "根分岔",
-        "做法",
-        "等級",
-        "依據"
-      ],
-      "rows": [
-        [
-          "下顎第 II 度",
-          "再生手術",
-          "A",
-          "17 個隨機試驗，證據品質高"
-        ],
-        [
-          "上顎頰側第 II 度",
-          "再生手術",
-          "B",
-          "3 個隨機試驗，中等"
-        ],
-        [
-          "上顎鄰面第 II 度",
-          "可考慮清創、翻瓣、再生或截根",
-          "0",
-          "觀察性研究，低"
-        ],
-        [
-          "第 III 度，或一顆多處第 II 度",
-          "可考慮清創、翻瓣、隧道或截根",
-          "0",
-          "觀察性研究，低"
-        ]
-      ],
-      "caption": "依 Sanz 等（2020）EFP S3 指引全文整理；截根欄含牙根分離。"
-    },
-    {
-      "type": "h",
-      "text": "第 III 度和上顎鄰面那幾種，又該怎麼辦？"
-    },
-    {
-      "type": "list",
-      "items": [
-        "這幾種都只拿到 0 級，證據是品質低的觀察性研究；指引列出幾種可以考慮的做法，沒有指定哪一種，要臨床醫師在分度之外，再考慮骨流失、上下顎等條件。",
-        "這類手術常常複雜，指引以專家共識建議交給受過額外訓練的牙醫或轉診中心。",
-        "轉不了時，最低限度是反覆齦下清創，需要時加翻瓣，配上頻繁的支持性牙周治療。"
-      ]
-    },
-    {
-      "type": "p",
-      "text": "頭圖那顆右下第一大臼齒，1997 年 6 月還是完整的兩根。下面這張標的是 2013 年 2 月，上傳者的說明寫著半切除 16 年後，剩下的那一半還站在原位；當然，這只是單一病例，說明不了機率。"
-    },
-    {
-      "type": "figure",
-      "id": "f1",
-      "kind": "photo",
-      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Hemisection_3_lower_right_number_6_at_February_2013.JPG/1280px-Hemisection_3_lower_right_number_6_at_February_2013.JPG",
-      "width": 1280,
-      "height": 853,
-      "alt": "一張翻拍的根尖 X 光片，下顎後牙區，中間一顆只剩單根的牙，牙冠做了修復，兩側是相鄰的牙。",
-      "caption": "同一顆 46 半切除後的 X 光片，上傳者標示為 2013 年 2 月，說明寫的是半切除 16 年後。與文中研究的受試者無關。",
-      "credit": "Bin im Garten，Wikimedia Commons",
-      "license": "CC BY-SA 3.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Hemisection_3_lower_right_number_6_at_February_2013.JPG",
-      "made": "2013 年 2 月（依檔名）；2013 年 5 月上傳"
-    },
-    {
-      "type": "paper",
-      "citation": "Nibali L, Zavattini A, Nagata K, Di Iorio A, Lin GH, Needleman I, Donos N. Tooth loss in molars with and without furcation involvement – a systematic review and meta-analysis. *J Clin Periodontol*. 2016;43(2):156–166.",
-      "doi": "10.1111/jcpe.12497",
-      "pmid": "26932323",
-      "link": "https://doi.org/10.1111/jcpe.12497",
-      "evidence": "系統性回顧與統合分析：21 篇追蹤至少 3 年的縱向研究",
-      "design": "系統性回顧與統合分析（Medline、Embase、LILACS、Cochrane Library）",
-      "sample": "21 篇有根分岔測量與掉牙資料、追蹤至少 3 年的縱向研究",
-      "question": "初診時有根分岔病變的臼齒，在維護治療中掉牙的風險是否較高？",
-      "access": "主角論文依 PubMed 摘要；臨床建議依 EFP S3 指引全文；Jepsen 與 Dommisch 兩篇依摘要"
-    }
-  ],
-  "sources": [
-    {
-      "title": "Tooth loss in molars with and without furcation involvement – a systematic review and meta-analysis",
-      "publisher": "Journal of Clinical Periodontology（Nibali L 等）",
-      "date": "2016-02-12",
-      "url": "https://doi.org/10.1111/jcpe.12497",
-      "note": "主角文獻。J Clin Periodontol 2016;43(2):156–166，PMID 26932323；書目依 PubMed efetch 與 Crossref（線上出版 2016-02-12）。Wiley 全文頁回 403，依 PubMed 摘要：21 篇研究（1,207 個標題起篩）；RR 1.46（95% CI 0.99–2.15，p = 0.06，至 10 年）、2.21（95% CI 1.79–2.74，p < 0.0001，10–15 年）；第 II、III 度風險逐級上升；結論原句照抄。作者單位依 PubMed。摘要未報告 GRADE。"
-    },
-    {
-      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
-      "publisher": "Journal of Clinical Periodontology（Sanz M 等）",
-      "date": "2020-07-27",
-      "url": "https://doi.org/10.1111/jcpe.13290",
-      "note": "J Clin Periodontol 2020;47(Suppl 22):4–60，PMID 32383274，PMC7891343；讀 Europe PMC 全文 XML。用到：方法（AWMF 與 GRADE、15 篇系統性回顧、2019 年 11 月 10–13 日拉格蘭哈研討會）、建議分級表（A／B／0）、根分岔建議 3.10–3.16（引文為 3.10 原句；3.13 共識強度 Simple majority）、專家共識 3.4、3.5；3.10 背景把 Nibali 2016 列為先前的系統性回顧。日期依 Crossref 的期刊線上日期。"
-    },
-    {
-      "title": "Regenerative surgical treatment of furcation defects: A systematic review and Bayesian network meta-analysis of randomized clinical trials",
-      "publisher": "Journal of Clinical Periodontology（Jepsen S 等）",
-      "date": "2020-07-27",
-      "url": "https://doi.org/10.1111/jcpe.13238",
-      "note": "J Clin Periodontol 2020;47(Suppl 22):352–374，PMID 31860125；指引內引作 Jepsen 等 2019（線上先行）。依 Europe PMC 摘要：20 個 RCT、575 人、787 個缺損；未報告掉牙；根分岔改善 OR 20.9（90% CrI 5.81–69.41）；VCAL 多 1.3 mm、PPD 多減 1.3 mm。"
-    },
-    {
-      "title": "Resective surgery for the treatment of furcation involvement: A systematic review",
-      "publisher": "Journal of Clinical Periodontology（Dommisch H 等）",
-      "date": "2020-07-27",
-      "url": "https://doi.org/10.1111/jcpe.13241",
-      "note": "J Clin Periodontol 2020;47(Suppl 22):375–391，PMID 31912534。依 Europe PMC 摘要：7 篇研究、667 位病人、2,021 顆第 II／III 度根分岔牙；1,515 顆於治療後 4–30.8 年存活；第 II 度結果較第 III 度好；SRP、OFD 與截根、牙根分離、隧道術存活率可能相近。"
-    },
-    {
-      "title": "AWMF Guidance Manual and Rules for Guideline Development, Version 2.1",
-      "publisher": "德國科學醫學會聯合會（AWMF）常設指引委員會",
-      "date": "2023-09-05",
-      "url": "https://www.awmf.org/fileadmin/user_upload/dateien/downloads_regelwerk/en_20230905_AWMF-Regelwerk_2023_V2.1.pdf",
-      "note": "S 分級表：S1 專家建議；S2k 共識型；S2e 證據型；S3 證據加共識型（代表性委員會、系統性檢索篩選評讀文獻、結構化共識）。「最完整」依 S3 同時涵蓋 S2k 與 S2e 兩組要求。"
-    },
-    {
-      "title": "Furcation defect",
-      "publisher": "Wikipedia",
-      "date": "2026-11-09",
-      "url": "https://en.wikipedia.org/wiki/Furcation_defect",
-      "note": "Hamp 分類（Hamp、Nyman、Lindhe，1975）：第 I 度不到 3 mm、第 II 度至少 3 mm 未穿透、第 III 度貫穿整個牙寬。日期為查閱日。"
-    },
-    {
-      "title": "File:Hemisection 1 lower right number 6 at June 1997.JPG；File:Hemisection 3 lower right number 6 at February 2013.JPG",
-      "publisher": "Wikimedia Commons（Bin im Garten）",
-      "date": "2013-05-07",
-      "url": "https://commons.wikimedia.org/wiki/File:Hemisection_3_lower_right_number_6_at_February_2013.JPG",
-      "note": "CC BY-SA 3.0。上傳說明（德文）：Hemisektion Zahn 46；系列含半切除前後 X 光、16 年後 X 光與半顆牙口內照、Prämolarisation。拍攝年月依檔名。半切除的原因說明未提。"
-    }
-  ]
+  {
+   "type": "p",
+   "text": "分度一般照 Hamp 1975 的分法（Hamp 是提出這套分度的作者）：第 II 度水平探入至少 3 毫米但沒有穿透，第 III 度貫穿整個牙寬。**歐洲牙周病學會（EFP）** 2020 年的牙周炎治療指引（S3 級，是德國科學醫學會聯合會 AWMF 分級中，兼有系統性文獻評讀與結構化共識的一級）處理根分岔時，把這篇列為先前的系統性回顧之一。"
+  },
+  {
+   "type": "h",
+   "text": "有根分岔的臼齒，真的掉得比較多嗎？"
+  },
+  {
+   "type": "p",
+   "text": "要看追多久。最多追蹤 10 年的研究，相對風險（有根分岔的臼齒掉牙比例，除以沒有的）是 1.46，信賴區間 0.99 到 2.15，看不出顯著差別；追到 10 到 15 年，升到 **2.21**（1.79–2.74），而且掉牙風險隨第 II、III 度逐級往上。合併的都是縱向研究。**根分岔是掉牙的風險因子，但風險升高不等於該拔。**"
+  },
+  {
+   "type": "h",
+   "text": "風險加倍，作者為什麼還勸人留牙？"
+  },
+  {
+   "type": "quote",
+   "text": "然而，大多數臼齒，即使是第 III 度根分岔，對牙周治療的反應都很好，這表示只要可能，就應盡一切努力保留這些牙。",
+   "original": "However, most molars, even with grade III FI respond well to periodontal therapy, suggesting that every effort should be made to maintain these teeth when possible.",
+   "cite": "Nibali 等（2016），摘要結論"
+  },
+  {
+   "type": "p",
+   "text": "留得住的證據不只這一篇。EFP 為指引另做的系統性回顧（Dommisch 等，2020）收了 2,021 顆第 II、III 度根分岔的牙，治療後 4 到 30.8 年，1,515 顆還在；截根、牙根分離、隧道術和齦下清創或翻瓣清創比，存活率可能相近。指引的總則也是這個方向："
+  },
+  {
+   "type": "quote",
+   "text": "根分岔病變不是拔牙的理由。",
+   "original": "Furcation involvement is no reason for extraction.",
+   "cite": "EFP 第 I–III 期牙周炎 S3 臨床指引（Sanz 等，2020）"
+  },
+  {
+   "type": "h",
+   "text": "下顎第 II 度，值得做再生手術嗎？"
+  },
+  {
+   "type": "p",
+   "text": "指引的建議分三級：A 級是強建議，B 級是提議，0 級是可以考慮。下顎第 II 度有殘留囊袋的，指引強建議再生手術。背後的統合分析（Jepsen 等，2020）收了 20 個根分岔再生手術的隨機試驗（19 個第 II 度、1 個第 III 度），和單純翻瓣清創比，垂直附著多 1.3 毫米；根分岔閉合或降成第 I 度的勝算比是 20.9，白話是改善的勝算約為對照組的 20.9 倍，只是 90% 可信區間 5.81–69.41，估計很寬。其中 17 個試驗屬下顎第 II 度，是下表 A 級的依據。這些試驗都沒有報告掉牙，所以多出來的附著能不能換成多留幾年牙，這份資料沒有答案。"
+  },
+  {
+   "type": "table",
+   "title": "殘留囊袋合併根分岔，EFP 指引怎麼建議",
+   "head": [
+    "根分岔",
+    "做法",
+    "等級",
+    "依據"
+   ],
+   "rows": [
+    [
+     "下顎第 II 度",
+     "再生手術",
+     "A",
+     "17 個隨機試驗，證據品質高"
+    ],
+    [
+     "上顎頰側第 II 度",
+     "再生手術",
+     "B",
+     "3 個隨機試驗，中等"
+    ],
+    [
+     "上顎鄰面第 II 度",
+     "可考慮清創、翻瓣、再生或截根",
+     "0",
+     "觀察性研究，低"
+    ],
+    [
+     "第 III 度，或一顆多處第 II 度",
+     "可考慮清創、翻瓣、隧道或截根",
+     "0",
+     "觀察性研究，低"
+    ]
+   ],
+   "caption": "依 Sanz 等（2020）EFP S3 指引全文整理；截根欄含牙根分離。"
+  },
+  {
+   "type": "h",
+   "text": "第 III 度和上顎鄰面那幾種，又該怎麼辦？"
+  },
+  {
+   "type": "list",
+   "items": [
+    "這幾種都只拿到 0 級，證據是品質低的觀察性研究；指引列出幾種可以考慮的做法，沒有指定哪一種，要臨床醫師在分度之外，再考慮骨流失、上下顎等條件。",
+    "這類手術常常複雜，指引以專家共識建議交給受過額外訓練的牙醫或轉診中心。",
+    "轉不了時，最低限度是反覆齦下清創，需要時加翻瓣，配上頻繁的支持性牙周治療。"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "頭圖那顆右下第一大臼齒，1997 年 6 月還是完整的兩根。下面這張標的是 2013 年 2 月，上傳者的說明寫著半切除 16 年後，剩下的那一半還站在原位；當然，這只是單一病例，說明不了機率。"
+  },
+  {
+   "type": "figure",
+   "id": "f1",
+   "kind": "photo",
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Hemisection_3_lower_right_number_6_at_February_2013.JPG/1280px-Hemisection_3_lower_right_number_6_at_February_2013.JPG",
+   "width": 1280,
+   "height": 853,
+   "alt": "一張翻拍的根尖 X 光片，下顎後牙區，中間一顆只剩單根的牙，牙冠做了修復，兩側是相鄰的牙。",
+   "caption": "同一顆 46 半切除後的 X 光片，上傳者標示為 2013 年 2 月，說明寫的是半切除 16 年後。與文中研究的受試者無關。",
+   "credit": "Bin im Garten，Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Hemisection_3_lower_right_number_6_at_February_2013.JPG",
+   "made": "2013 年 2 月（依檔名）；2013 年 5 月上傳"
+  },
+  {
+   "type": "paper",
+   "citation": "Nibali L, Zavattini A, Nagata K, Di Iorio A, Lin GH, Needleman I, Donos N. Tooth loss in molars with and without furcation involvement – a systematic review and meta-analysis. *J Clin Periodontol*. 2016;43(2):156–166.",
+   "doi": "10.1111/jcpe.12497",
+   "pmid": "26932323",
+   "link": "https://doi.org/10.1111/jcpe.12497",
+   "evidence": "系統性回顧與統合分析：21 篇追蹤至少 3 年的縱向研究",
+   "design": "系統性回顧與統合分析（Medline、Embase、LILACS、Cochrane Library）",
+   "sample": "21 篇有根分岔測量與掉牙資料、追蹤至少 3 年的縱向研究",
+   "question": "初診時有根分岔病變的臼齒，在維護治療中掉牙的風險是否較高？",
+   "access": "主角論文依 PubMed 摘要；臨床建議依 EFP S3 指引全文；Jepsen 與 Dommisch 兩篇依摘要"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Tooth loss in molars with and without furcation involvement – a systematic review and meta-analysis",
+   "publisher": "Journal of Clinical Periodontology（Nibali L 等）",
+   "date": "2016-02-12",
+   "url": "https://doi.org/10.1111/jcpe.12497",
+   "note": "主角文獻。J Clin Periodontol 2016;43(2):156–166，PMID 26932323；書目依 PubMed efetch 與 Crossref（線上出版 2016-02-12）。Wiley 全文頁回 403，依 PubMed 摘要：21 篇研究（1,207 個標題起篩）；RR 1.46（95% CI 0.99–2.15，p = 0.06，至 10 年）、2.21（95% CI 1.79–2.74，p < 0.0001，10–15 年）；第 II、III 度風險逐級上升；結論原句照抄。作者單位依 PubMed。摘要未報告 GRADE。"
+  },
+  {
+   "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+   "publisher": "Journal of Clinical Periodontology（Sanz M 等）",
+   "date": "2020-07-27",
+   "url": "https://doi.org/10.1111/jcpe.13290",
+   "note": "J Clin Periodontol 2020;47(Suppl 22):4–60，PMID 32383274，PMC7891343；讀 Europe PMC 全文 XML。用到：方法（AWMF 與 GRADE、15 篇系統性回顧、2019 年 11 月 10–13 日拉格蘭哈研討會）、建議分級表（A／B／0）、根分岔建議 3.10–3.16（引文為 3.10 原句；3.13 共識強度 Simple majority）、專家共識 3.4、3.5；3.10 背景把 Nibali 2016 列為先前的系統性回顧。日期依 Crossref 的期刊線上日期。"
+  },
+  {
+   "title": "Regenerative surgical treatment of furcation defects: A systematic review and Bayesian network meta-analysis of randomized clinical trials",
+   "publisher": "Journal of Clinical Periodontology（Jepsen S 等）",
+   "date": "2020-07-27",
+   "url": "https://doi.org/10.1111/jcpe.13238",
+   "note": "J Clin Periodontol 2020;47(Suppl 22):352–374，PMID 31860125；指引內引作 Jepsen 等 2019（線上先行）。依 Europe PMC 摘要：20 個 RCT、575 人、787 個缺損；未報告掉牙；根分岔改善 OR 20.9（90% CrI 5.81–69.41）；VCAL 多 1.3 mm、PPD 多減 1.3 mm。"
+  },
+  {
+   "title": "Resective surgery for the treatment of furcation involvement: A systematic review",
+   "publisher": "Journal of Clinical Periodontology（Dommisch H 等）",
+   "date": "2020-07-27",
+   "url": "https://doi.org/10.1111/jcpe.13241",
+   "note": "J Clin Periodontol 2020;47(Suppl 22):375–391，PMID 31912534。依 Europe PMC 摘要：7 篇研究、667 位病人、2,021 顆第 II／III 度根分岔牙；1,515 顆於治療後 4–30.8 年存活；第 II 度結果較第 III 度好；SRP、OFD 與截根、牙根分離、隧道術存活率可能相近。"
+  },
+  {
+   "title": "AWMF Guidance Manual and Rules for Guideline Development, Version 2.1",
+   "publisher": "德國科學醫學會聯合會（AWMF）常設指引委員會",
+   "date": "2023-09-05",
+   "url": "https://www.awmf.org/fileadmin/user_upload/dateien/downloads_regelwerk/en_20230905_AWMF-Regelwerk_2023_V2.1.pdf",
+   "note": "S 分級表：S1 專家建議；S2k 共識型；S2e 證據型；S3 證據加共識型（代表性委員會、系統性檢索篩選評讀文獻、結構化共識）。「最完整」依 S3 同時涵蓋 S2k 與 S2e 兩組要求。"
+  },
+  {
+   "title": "Furcation defect",
+   "publisher": "Wikipedia",
+   "date": "2026-11-09",
+   "url": "https://en.wikipedia.org/wiki/Furcation_defect",
+   "note": "Hamp 分類（Hamp、Nyman、Lindhe，1975）：第 I 度不到 3 mm、第 II 度至少 3 mm 未穿透、第 III 度貫穿整個牙寬。日期為查閱日。"
+  },
+  {
+   "title": "File:Hemisection 1 lower right number 6 at June 1997.JPG；File:Hemisection 3 lower right number 6 at February 2013.JPG",
+   "publisher": "Wikimedia Commons（Bin im Garten）",
+   "date": "2013-05-07",
+   "url": "https://commons.wikimedia.org/wiki/File:Hemisection_3_lower_right_number_6_at_February_2013.JPG",
+   "note": "CC BY-SA 3.0。上傳說明（德文）：Hemisektion Zahn 46；系列含半切除前後 X 光、16 年後 X 光與半顆牙口內照、Prämolarisation。拍攝年月依檔名。半切除的原因說明未提。"
+  }
+ ]
 }

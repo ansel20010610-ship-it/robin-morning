@@ -26,6 +26,7 @@ async function loadData() {
     getJSON("content/index.json", { fresh: true }).catch(() => ({ issues: [] })),
     loadLate(),
     loadDays(),
+    loadLetters(),
     loadBook(), // content/serial.json (2.5 KB): the front page must know which installment is due today (serialDueOn)
   ]);
   S.cfg = cfg;
@@ -645,7 +646,19 @@ function frontStatus() {
 // Everything the latest-issue front page shows that can change while it stays open: [issue, status line]. The day and
 // whether the issue is open go with the issue: past midnight (todays) or once a Sunday's late issue opens (issueOpen),
 // the weather, the parcel, the feast card and the seal change while the issue and a non-empty status line may not (audit c11).
-const frontKey = (issue) => JSON.stringify([twNow().date, Boolean(issue) && issueOpen(issue.date), issue || null]);
+// 夜間版 (the owner, 2026-11-10, from my list of ideas: 4): from nine in the evening until five in the morning the front
+// page is another paper — what is still unread of the day, the parcel and the stamp as always, the day's passage again,
+// the day's piece of music once more, and what comes in the morning. 「看早上的那份報」 keeps the day paper for the
+// rest of that night (sessionStorage, keyed by the night). `?night=1` / `?night=0` force it, for checking.
+const nightOf = () => { const n = twNow(); return n.minutes < 5 * 60 ? addDays(n.date, -1) : n.date; };
+function nightOn() {
+  const q = new URLSearchParams(location.search).get("night");
+  if (q === "1" || q === "0") return q === "1";
+  const m = twNow().minutes;
+  if (m >= 5 * 60 && m < 21 * 60) return false;
+  try { return sessionStorage.getItem("rm.dayview") !== nightOf(); } catch { return true; }
+}
+const frontKey = (issue) => JSON.stringify([twNow().date, Boolean(issue) && issueOpen(issue.date), issue || null, nightOn()]);
 const frontState = () => [frontKey(publishedIssues()[0]), frontStatus()];
 let shownFront = [];
 
@@ -701,9 +714,11 @@ function viewFront(dateParam) {
   // the press (motion.js pressRun). Every later visit — a redraw at 07:30, iOS waking the app, a step back from an
   // article — plays only the masthead's own entrance. Not under ?preview: looking at tomorrow's issue early must not
   // spend its morning.
-  const fresh = !dateParam && !isPreview() && !store.get("opened", []).includes(issue.date);
+  const night = !dateParam && nightOn(); // 夜間版: no press-run, and the issue's first morning opening is still to come
+  const fresh = !night && !dateParam && !isPreview() && !store.get("opened", []).includes(issue.date);
   if (fresh) store.set("opened", [...store.get("opened", []), issue.date].slice(-60));
   const erst = Number(issue.no) === 1; // 創刊號: its own contents page and gold hairlines (inhaltBox, style.css .erst-issue)
+  if (night) { viewNight(issue, arts, read, pick, status); return; }
   main.innerHTML = `${masthead(issue, fresh)}
   <div class="wrap${erst ? " erst-issue" : ""}">
     ${status ? `<div class="status">${status}</div>` : ""}
@@ -728,6 +743,7 @@ function viewFront(dateParam) {
       : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
       : `<div class="finish">${finishInner(issue.date)}</div>`}
     ${dateParam ? "" : wocheBox()}
+    ${lettersBox(issue.date)}
     ${dayBox(issue.date)}
     ${dateParam ? "" : `<section class="gigs" id="gigs" aria-label="近期演出">${gigsSection()}</section>`}
     <footer class="colophon">
@@ -745,6 +761,137 @@ function viewFront(dateParam) {
   if (erst) setTimeout(() => goldRain(main.querySelector(".masthead.erst .crest")), fresh ? 2200 : 700);
 }
 
+// 明天在診間怎麼說 (the owner, 2026-11-10, from my list of ideas: 5): the perio article's evidence turned into the one or
+// two sentences he can say to a patient tomorrow (`chairside`, columns/perio.md), at the end of the article, to copy or
+// to keep as a card in Photos — a paper slip drawn on a canvas, shared as a PNG where the phone can share files.
+function chairsideBox(a) {
+  return `<aside class="chairside" aria-label="明天在診間怎麼說"><div class="lbl"><b>明天在診間怎麼說</b><span class="de">Am Behandlungsstuhl</span></div>
+    <p>${esc(a.chairside)}</p>
+    <div class="btns"><button class="btn ghost" type="button" data-chair-card>存成卡片</button>${navigator.clipboard ? `<button class="btn ghost" type="button" data-chair-copy>複製</button>` : ""}</div></aside>`;
+}
+async function chairCard(a, date) {
+  const W = 1080, H = 1350, c = document.createElement("canvas"); c.width = W; c.height = H;
+  const g = c.getContext("2d"), serif = getComputedStyle(document.documentElement).getPropertyValue("--serif") || "serif";
+  try { await document.fonts?.ready; } catch { /* drawn with what is there */ }
+  g.fillStyle = "#F5F0E6"; g.fillRect(0, 0, W, H);
+  g.strokeStyle = "#A5843F"; g.lineWidth = 3; g.strokeRect(60, 60, W - 120, H - 120); g.lineWidth = 1; g.strokeRect(74, 74, W - 148, H - 148);
+  g.fillStyle = "#7A5F2A"; g.font = `600 34px ${serif}`; g.fillText("明天在診間怎麼說", 130, 190);
+  g.fillStyle = "#A5843F"; g.font = `italic 28px ${serif}`; g.fillText("Am Behandlungsstuhl", 130, 236);
+  g.fillRect(130, 268, 120, 3);
+  // the line, wrapped by measure: CJK breaks anywhere, a Latin word or a number stays whole
+  g.fillStyle = "#1F1B16"; g.font = `500 52px ${serif}`;
+  const maxW = W - 260, lines = []; let cur = "";
+  for (const tok of a.chairside.match(/[A-Za-z0-9.%~–\-]+|./gu) || []) {
+    // closing punctuation never starts a line: it stays at the end of the one before, a little past the measure
+    if (g.measureText(cur + tok).width > maxW && cur && !/^[，。、；：！？）」』…]$/.test(tok)) { lines.push(cur); cur = tok.trimStart(); } else cur += tok;
+  }
+  if (cur) lines.push(cur);
+  lines.slice(0, 11).forEach((l, i) => g.fillText(l, 130, 380 + i * 84));
+  g.fillStyle = "#4A433A"; g.font = `28px ${serif}`;
+  const t = a.title.length > 26 ? `${a.title.slice(0, 25)}…` : a.title;
+  g.fillText(`〈${t}〉`, 130, H - 210);
+  g.fillStyle = "#998F7E"; g.font = `24px ${serif}`; g.fillText(`知更鳥晨間記事・${fmtDate(date)}・醫學教學導讀，非個別診療建議`, 130, H - 160);
+  const blob = await new Promise((r) => c.toBlob(r, "image/png"));
+  if (!blob) { toast("卡片做不出來"); return; }
+  const file = new File([blob], `診間-${date}.png`, { type: "image/png" });
+  if (navigator.canShare?.({ files: [file] })) { navigator.share({ files: [file], title: "明天在診間怎麼說" }).catch(() => {}); return; }
+  const url = URL.createObjectURL(blob), link = document.createElement("a");
+  link.href = url; link.download = file.name; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 4000);
+}
+// The night paper (nightOn). The same issue, taken in for the night: the stamp is still earned here — the parcel, the
+// finish block and wireDigest are the day page's own — but the wire, the weather, the concerts and the cards already read
+// are left for the morning.
+const MOON = `<svg class="moon" viewBox="0 0 64 64" aria-hidden="true"><path d="M40 8a24 24 0 1 0 16 38A20 20 0 0 1 40 8z"/><circle class="st" cx="14" cy="14" r="1.4"/><circle class="st" cx="24" cy="6" r=".9"/><circle class="st" cx="8" cy="30" r=".9"/></svg>`;
+function viewNight(issue, arts, read, pick, status) {
+  const date = issue.date, open = arts.filter((a) => a !== pick && forStamp(a, date) && !read.has(`${date}/${a.column}`));
+  const v = issue.verse, verses = Array.isArray(v?.verses) ? v.verses : [];
+  const music = arts.find((a) => a.column === "music");
+  const tomorrow = addDays(date, 1), tIssue = issueBy(tomorrow), tSerial = tIssue?.articles?.find((a) => a.column === "serial"), tFest = feastOf(tomorrow);
+  const morning = [
+    tSerial ? `<li><span class="k">連載</span>${esc(tSerial.title)}</li>` : "",
+    tFest ? `<li><span class="k">郵票</span>明天是${esc(tFest.zh)}，讀完那一份，郵票冊會收進一枚紀念郵票</li>` : "",
+    `<li><span class="k">出刊</span>台灣時間 ${esc(S.cfg.publish_time)}，早上見</li>`,
+  ].join("");
+  main.innerHTML = `<header class="night-head"><div class="wrap">${MOON}<div class="t"><span class="k">夜間版<i>Abendblatt</i></span><h1>${esc(S.cfg.title)}</h1><span class="d">${esc(fmtDate(date))}・${esc(issueNo(issue.no))}</span></div></div></header>
+  <div class="wrap night">
+    ${status ? `<div class="status">${status}</div>` : ""}
+    ${lateNote(date)}
+    <div class="sec-head"><h2>今晚還沒讀的</h2><span class="de">Noch offen</span>${open.length ? `<span class="note">${open.length} 篇</span>` : ""}</div>
+    ${open.length ? open.map((a) => itemCard(date, a, read)).join("") : `<p class="night-done">今天這一份，白天都讀過了。</p>`}
+    ${revealBox(issue, arts, read)}
+    ${!arts.some((a) => forStamp(a, date) && a.brief) ? "" : !issueOpen(date) ? `<div class="finish left"><b>今天這一份還沒出齊</b><span class="note">下午補刊到齊以後，包裹和郵票才會開。</span></div>`
+      : unreadIn(date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(date, arts)} 篇沒讀</b><span class="note">都讀完，今天的郵票就蓋得下去。</span></div>`
+      : digestDone().has(date) ? `<div class="finish done">${finishInner(date)}</div>` : `<div class="finish">${finishInner(date)}</div>`}
+    ${verses.length ? `<section class="night-verse"><div class="lbl"><b>睡前一段</b><span class="de">Zur Nacht</span></div><blockquote>${verses.map((x) => `<sup>${esc(x.c ? `${x.c}:${x.n}` : String(x.n ?? ""))}</sup>${esc(x.text)}`).join("")}<cite>${esc(v.ref || "")}（和合本）</cite></blockquote></section>` : ""}
+    ${music ? `<a class="night-music" href="#/a/${date}/music"><span class="lbl"><b>今晚再聽一次</b><span class="de">Noch einmal hören</span></span><b class="ti">${esc(music.title)}</b>${music.dek ? `<span class="dek">${esc(music.dek)}</span>` : ""}</a>` : ""}
+    <div class="night-letter-slot"></div>
+    <section class="night-morning"><div class="lbl"><b>明早</b><span class="de">Morgen früh</span></div><ul>${morning}</ul></section>
+    <p class="night-day"><button class="btn ghost" type="button" data-dayview>看早上的那份報</button></p>
+    <footer class="colophon"><div class="ornament" aria-hidden="true"><i></i><i></i><i></i></div><div class="latin">Gute Nacht</div>晚上九點到清晨五點，首頁是夜間版</footer>
+  </div>`;
+  prefetch(issue);
+  wireDigest(issue);
+  fillReveal();
+  main.querySelector("[data-dayview]")?.addEventListener("click", () => {
+    try { sessionStorage.setItem("rm.dayview", nightOf()); } catch { /* private mode: the day page this once */ }
+    enteredFront = false; viewFront(); scrollTo(0, 0);
+  });
+  if (sonder() && nest()) letterForm(main.querySelector(".night-letter-slot"), true);
+}
+// ——— 寫信給編輯部 (Leserbriefe; the owner, 2026-11-10, from my list of ideas: 1) ———
+// A question written at night (the night paper, or 設定) goes to the shared store of the reader's yard (nest-worker.js
+// /{code}/letters; only the owner's yard takes letters); the letters routine (editorial/columns/letters.md) answers one
+// or two before dawn into content/letters.json, and the morning's issue prints them under 編輯部回信, the question
+// shortened and unsigned. The phone keeps what it sent (rm.letters.sent) to show each one's state, and the draft.
+const loadLetters = () => getJSON("content/letters.json", { fresh: true }).then((d) => { S.letters = Array.isArray(d?.letters) ? d.letters : []; }).catch(() => { S.letters = S.letters || []; });
+const letterAnswered = (id) => (S.letters || []).find((l) => l.id === id);
+function letterHtml(l) {
+  return `<article class="letter" id="${esc(l.id)}"><p class="q"><span class="lbl">讀者來信</span>${esc(l.q)}</p><div class="a">${paragraphs(l.a)}</div>${Array.isArray(l.sources) && l.sources.length ? `<p class="src">${l.sources.filter((x) => /^https:\/\//.test(x.url || "")).map((x) => `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title || x.url)}</a>`).join("・")}</p>` : ""}</article>`;
+}
+function lettersBox(date) {
+  const ls = (S.letters || []).filter((l) => l.date === date);
+  if (!ls.length) return "";
+  return `<section class="letters" aria-label="編輯部回信"><div class="sec-head"><h2>編輯部回信</h2><span class="de">Leserbriefe</span></div>${ls.map(letterHtml).join("")}
+    <p class="letters-more"><a href="#/letters">以前的回信 →</a></p></section>`;
+}
+function viewLetters() {
+  const ls = [...(S.letters || [])].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  main.innerHTML = `<div class="wrap"><header class="page-title"><h1>編輯部回信</h1><span class="de">Leserbriefe</span></header>
+    ${ls.length ? ls.map((l) => `<p class="letter-date">${esc(fmtDate(l.date))}</p>${letterHtml(l)}`).join("") : `<p class="empty">還沒有回信。晚上打開報紙（夜間版），或到設定，就能寫信給編輯部。</p>`}</div>`;
+  document.title = `編輯部回信｜${S.cfg.title}`;
+  const id = decodeURIComponent((location.hash.split("/")[2] || ""));
+  if (id) main.querySelector(`#${CSS.escape(id)}`)?.scrollIntoView({ block: "start" });
+}
+function letterForm(el, night = false) {
+  const n = nest(), api = S.cfg.nest?.api;
+  if (!el || !n || !api) return;
+  const sent = store.get("letters.sent", []).slice(-5).reverse();
+  const md = (iso) => { const t = new Date(new Date(iso).getTime() + 8 * 3600e3); return `${t.getUTCMonth() + 1}/${t.getUTCDate()} ${String(t.getUTCHours()).padStart(2, "0")}:${String(t.getUTCMinutes()).padStart(2, "0")}`; };
+  el.innerHTML = `<div class="letter-form${night ? " night-letter" : ""}">
+    ${night ? `<div class="lbl"><b>寫信給編輯部</b><span class="de">Leserbrief</span></div>` : `<h2>寫信給編輯部</h2>`}
+    <p class="small">問一個你想知道的問題。天亮前編輯部挑一兩封回答，刊在早上的報上，不署名，問題會稍微改寫。不要寫病人或私人的事。</p>
+    <textarea maxlength="300" rows="3" placeholder="例如：布拉姆斯第四號該從哪個版本聽起？">${esc(store.get("letters.draft", ""))}</textarea>
+    <div class="btns"><button class="btn" type="button" data-letter-send>寄出</button><span class="count small"></span></div>
+    ${sent.length ? `<ul class="letters-sent">${sent.map((x) => { const a = letterAnswered(x.id); return `<li><span class="t">${esc(x.text.length > 28 ? `${x.text.slice(0, 27)}…` : x.text)}</span>${a ? `<a href="#/letters/${esc(x.id)}">刊在 ${esc(fmtDate(a.date, "short"))} →</a>` : `<span class="st">寄出了 ${esc(md(x.at))}，等回信</span>`}</li>`; }).join("")}</ul>` : ""}
+  </div>`;
+  const ta = el.querySelector("textarea"), count = el.querySelector(".count"), btn = el.querySelector("[data-letter-send]");
+  const upd = () => { count.textContent = `${ta.value.length} / 300`; store.set("letters.draft", ta.value); };
+  ta.addEventListener("input", upd); upd();
+  btn.addEventListener("click", async () => {
+    const text = ta.value.trim();
+    if (!text) { toast("先寫一句"); return; }
+    btn.disabled = true;
+    try {
+      const r = await fetch(`${api}/${encodeURIComponent(n.code)}/letters`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me, text }) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || !j.id) { toast(r.status === 429 ? "今天已經寄了三封" : r.status === 403 ? "這個後院不能寄信" : "沒寄出去，稿子還留著"); btn.disabled = false; return; }
+      store.set("letters.sent", [...store.get("letters.sent", []), { id: j.id, at: j.at, text }].slice(-20));
+      store.del("letters.draft");
+      toast("寄出了");
+      letterForm(el, night);
+    } catch { toast("沒寄出去，稿子還留著"); btn.disabled = false; }
+  });
+}
 // 創刊號目錄 (the owner, 2026-11-08: 創刊號那期的格式與設計要與眾不同): the first number alone opens with a table of
 // contents in roman numerals, as a first number used to, and one line on where the paper came from, pointing at 刊史館.
 function inhaltBox(issue, arts) {
@@ -1029,6 +1176,7 @@ async function viewArticle(date, column, my) {
       <div class="toc-slot"></div>
       ${a.serial?.n > 1 ? `<div class="vorher-slot"></div>` : ""}
       <div class="body"></div>
+      ${a.chairside ? chairsideBox(a) : ""}
       ${a.sources?.length ? `<section class="sources"><h2>來源與閱讀範圍</h2><ol>${a.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}${s.publisher ? `，${esc(s.publisher)}` : ""}${s.date ? `，${esc(s.date)}` : ""}${s.note ? ` <span>— ${inline(s.note)}</span>` : ""}</li>`).join("")}</ol>${(a.body || []).some((b) => b.type === "quote" && b.original) ? `<p class="small">外文引文未註明譯者的，都是本報自譯。</p>` : ""}</section>` : ""}
       ${placesLine(me, column)}${relatedHtml(me)}
       ${"share" in navigator ? `<div class="share"><button class="btn ghost" type="button" data-share>${ICON.share}分享這篇</button></div>` : ""}
@@ -1147,6 +1295,8 @@ async function viewArticle(date, column, my) {
   main.querySelector("[data-share]")?.addEventListener("click", () => {
     navigator.share({ title: a.title, text: a.dek, url: location.href.replace(/\?[^#]*/, "") }).catch(() => {});
   });
+  main.querySelector("[data-chair-copy]")?.addEventListener("click", () => navigator.clipboard?.writeText(a.chairside).then(() => toast("已複製")).catch(() => toast("沒辦法複製")));
+  main.querySelector("[data-chair-card]")?.addEventListener("click", () => chairCard(a, date));
 
   // 本期目錄: the top bar's numeral opens the issue's contents sheet (openContents); a page chosen there slides in.
   // (The sideways swipe that turned pages here was taken out on 2026-11-01 at the owner's request.)
@@ -2116,6 +2266,7 @@ function viewSettings() {
     </section>
     ${sonder() ? `<section class="set"><h2>後院</h2><p>和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口，大家讀的加在一起，牠從蛋長成會唱歌的鳥。取名、邀請碼、加入別人的院子、離開，都在後院設定。</p>
       <div class="btns"><a class="btn ghost" href="#/nest">到後院去</a><a class="btn ghost" href="#/nest/settings">後院設定</a></div></section>` : ""}
+    ${sonder() && nest() ? `<section class="set" id="letter-set"></section>` : ""}
     <section class="set" id="sonder-set"><h2>特供版<span class="de">Sonderausgabe</span></h2>${sonder()
       ? `<p>這支手機是特供版：多了「後院」。</p><div class="btns"><button type="button" class="btn ghost" data-sonder-off>關閉特供版</button></div>`
       : `<p>有些功能只給拿到代碼的人。向社長請求代碼，在這裡輸入，這支手機就開了。</p>
@@ -2134,6 +2285,7 @@ function viewSettings() {
     if (!ok) { btn.disabled = false; toast("代碼不對"); return; }
     store.set("sonder", true); toast("特供版開了"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" });
   });
+  letterForm(main.querySelector("#letter-set"));
   main.querySelector("[data-sonder-off]")?.addEventListener("click", () => { store.del("sonder"); toast("特供版關了；後院的紀錄還留著"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" }); });
   // Redrawing replaces the buttons; put focus back on the one just pressed.
   const redraw = (g, v) => { viewSettings(); main.querySelector(`[data-g="${g}"] [data-v="${v}"]`)?.focus(); };
@@ -2278,6 +2430,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/stamp/")) viewStamp(h.slice(8).split("?")[0]);
   else if (h.startsWith("#/world")) viewWorld();
   else if (h.startsWith("#/press")) viewPress();
+  else if (h.startsWith("#/letters")) viewLetters();
   else if (h.startsWith("#/chronik")) await viewChronik(); // awaited, so a step back lands where 刊史館 was left, not on its loading line (audit c15)
   else if (h.startsWith("#/nest")) viewNest(h.startsWith("#/nest/settings") ? "settings" : h.startsWith("#/nest/album") ? "album" : ""); // 相簿: the bird's life (nest.js renderNestAlbum)
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
@@ -2376,7 +2529,7 @@ async function boot() {
     loadGigs();
     // the day's files together with the index: a PWA kept alive overnight otherwise shows no 歷史上的今天 and a stale
     // 連載 cast for the new day (audit 2026-11-08); each keeps its last copy when offline
-    await Promise.all([loadLate(), loadDays(), S.book === undefined ? null : loadBook()]);
+    await Promise.all([loadLate(), loadDays(), loadLetters(), S.book === undefined ? null : loadBook()]);
     try { S.index = await getJSON("content/index.json", { fresh: true }); fetchedAt = Date.now(); } catch { /* offline: still redraw the clock */ }
   };
   const refetch = async () => {
