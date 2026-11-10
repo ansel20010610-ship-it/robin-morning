@@ -405,6 +405,84 @@ const MOOD_PROPS = {
   out: `<path class="sc-feather" d="M28 52.4 q4 -3 8 -1.4 q-4 1 -8 1.4 Z"/>`,
 };
 export const birdSvg = (st) => `<div class="bird s${st.si}${st.full ? " full" : ""}${moodOf(st)} season-${st.story?.season || "none"}" style="--g:${st.grow.toFixed(3)};--m:${st.mature.toFixed(3)}" aria-hidden="true"><svg class="scene" viewBox="0 0 64 64">${st.si ? PERCH(st.story?.mate) + (st.story?.mate ? mateSvg(st) : "") + sceneSvg(st.items, st.story) + (st.away ? POSTCARD : "") + (st.hiding === "cat" ? CAT : "") + (MOOD_PROPS[st.mood] || "") : EGG_SCENE}</svg><svg class="robin" viewBox="0 0 64 64"><g class="body">${st.si ? robinSvg(st, { perch: false }) : EGG}</g></svg>${st.si >= 5 ? `<i class="note">♪</i><i class="note two">♫</i>${st.songs >= 3 ? '<i class="note three">♬</i>' : ""}` : ""}</div>`;
+// The yard itself (the owner, 2026-11-10: 收藏裡的後院格子和後院本身的畫面要有後院的樣子): the bird's branch is the low
+// bough of a tree at the right; behind it a picket fence with a hedge over it, the corner of the house at the left with
+// its window, window box and back door, a step and stepping stones across the grass, a flower bed along the fence. It
+// follows the real season like the branch does: blossom on the tree in spring, full leaf in summer, gold leaves on the
+// tree and the grass in autumn, a bare tree and snow on the ground, the fence and the roof in winter. One drawing, laid
+// out twice — wide on the 後院 page, a lower strip on the 收藏 plate; `x, y, s` is the bird's box in the drawing's units
+// (300 wide), so its perch ends at the bough. A fixed aspect ratio: the plate keeps its height when it is drawn again
+// after a sync (iPhone Safari has no scroll anchoring).
+const YARD = { page: { h: 170, s: 120, x: 166, y: 36 }, plate: { h: 118, s: 100, x: 186, y: 12 } };
+function yardSvg(L, sea) {
+  const { h: H, s, x, y } = L, f = (n) => Math.round(n * 10) / 10, k = H > 140 ? 1 : .78;
+  const hy = f(y + .66 * s), py = f(y + .828 * s), tx = f(x + .797 * s), wx = f(58 * k), wt = f(hy - 80 * k);
+  const snow = sea === "winter", o = [];
+  o.push(`<rect class="y-sky" x="0" y="0" width="300" height="${H}"/>`);
+  const cloud = (cx, cy, r) => `<g class="y-cloud"><ellipse cx="${f(cx)}" cy="${f(cy)}" rx="${f(r * 1.6)}" ry="${f(r * .55)}"/><circle cx="${f(cx - r * .45)}" cy="${f(cy - r * .35)}" r="${f(r * .55)}"/><circle cx="${f(cx + r * .25)}" cy="${f(cy - r * .5)}" r="${f(r * .7)}"/></g>`;
+  o.push(cloud(118, 24 * k, 11 * k), cloud(196, 12 * k, 7 * k));
+  // the hedge over the fence
+  const hedge = [];
+  for (let i = 0, xx = wx + 4; xx < 306; i++, xx += 15) hedge.push(`<circle cx="${f(xx)}" cy="${f(hy - (31 + (i % 3) * 3) * k)}" r="${f((11 + (i % 2) * 2.5) * k)}"/>`);
+  o.push(`<g class="y-hedge">${hedge.join("")}<rect x="${wx}" y="${f(hy - 32 * k)}" width="${f(300 - wx)}" height="${f(32 * k)}"/></g>`);
+  if (snow) o.push(`<g class="y-snow">${hedge.map((c) => c.replace(/r="([\d.]+)"/, (m, r) => `r="${f(r * .55)}"`).replace(/cy="([\d.]+)"/, (m, cy) => `cy="${f(cy - 6 * k)}"`)).join("")}</g>`);
+  // the picket fence
+  const pk = [];
+  for (let xx = wx + 2; xx < 300; xx += 9 * k) pk.push(`<path d="M${f(xx)} ${f(hy + 2)} V${f(hy - 29 * k)} L${f(xx + 3 * k)} ${f(hy - 33 * k)} L${f(xx + 6 * k)} ${f(hy - 29 * k)} V${f(hy + 2)} Z"/>`);
+  o.push(`<g class="y-fence">${pk.join("")}<rect x="${wx}" y="${f(hy - 24 * k)}" width="${f(300 - wx)}" height="${f(2.6 * k)}"/><rect x="${wx}" y="${f(hy - 10 * k)}" width="${f(300 - wx)}" height="${f(2.6 * k)}"/></g>`);
+  if (snow) o.push(`<g class="y-snow">${pk.map((d, i) => { const xx = wx + 2 + i * 9 * k; return `<ellipse cx="${f(xx + 3 * k)}" cy="${f(hy - 30.5 * k)}" rx="${f(3.6 * k)}" ry="${f(1.6 * k)}"/>`; }).join("")}</g>`);
+  // the grass
+  o.push(`<rect class="y-grass" x="0" y="${hy}" width="300" height="${f(H - hy)}"/>`);
+  const tufts = [];
+  for (let i = 0; i < 16; i++) { const xx = f((i * 37 + 13) % 292 + 4), yy = f(hy + 7 + ((i * 23) % Math.max(8, H - hy - 9))); tufts.push(`M${xx} ${yy} l${f(1.1 * k)} ${f(-3.2 * k)} M${f(xx + 2 * k)} ${yy} v${f(-3.8 * k)} M${f(xx + 4 * k)} ${yy} l${f(-1.1 * k)} ${f(-3.2 * k)}`); }
+  o.push(`<path class="y-tuft" d="${tufts.join(" ")}"/>`);
+  // the flower bed along the fence
+  const b0 = wx + 10, b1 = x + 14;
+  o.push(`<ellipse class="y-soil" cx="${f((b0 + b1) / 2)}" cy="${f(hy + 3 * k)}" rx="${f((b1 - b0) / 2)}" ry="${f(3.4 * k)}"/>`);
+  if (!snow) {
+    const fl = [];
+    for (let i = 0, xx = b0 + 6; xx < b1 - 4; i++, xx += 9 * k) {
+      const top = f(hy - (5 + (i % 3) * 2.5) * k), cls = sea === "autumn" ? (i % 2 ? "y-fl-c" : "y-fl-b") : (i % 2 ? "y-fl-a" : "y-fl-b");
+      fl.push(`<path class="y-stem" d="M${f(xx)} ${f(hy + 2 * k)} V${top}"/><circle class="${cls}" cx="${f(xx)}" cy="${top}" r="${f(2.2 * k)}"/>`);
+    }
+    o.push(fl.join(""));
+  } else o.push(`<ellipse class="y-snow" cx="${f((b0 + b1) / 2)}" cy="${f(hy + 1.6 * k)}" rx="${f((b1 - b0) / 2 - 2)}" ry="${f(2.6 * k)}"/>`);
+  // the corner of the house: wall with siding, roof, window and window box, the back door and its step
+  const sid = [];
+  for (let yy = wt + 7 * k; yy < hy + 10; yy += 7 * k) sid.push(`M0 ${f(yy)} H${wx}`);
+  o.push(`<rect class="y-wall" x="-1" y="${wt}" width="${f(wx + 1)}" height="${f(hy + 12 - wt)}"/><path class="y-siding" d="${sid.join(" ")}"/>`);
+  o.push(`<path class="y-roof" d="M-2 ${f(wt + 1)} L${f(wx + 7 * k)} ${f(wt + 1)} L${f(wx - 6 * k)} ${f(wt - 16 * k)} L-2 ${f(wt - 16 * k)} Z"/>`);
+  if (snow) o.push(`<path class="y-snow" d="M-2 ${f(wt - 15 * k)} L${f(wx - 6 * k)} ${f(wt - 15 * k)} L${f(wx - 3 * k)} ${f(wt - 11 * k)} Q${f(wx * .5)} ${f(wt - 9 * k)} -2 ${f(wt - 11 * k)} Z"/>`);
+  const wy = f(wt + 14 * k), ww = f(18 * k), wh = f(17 * k), wx0 = f(7 * k);
+  o.push(`<rect class="y-win" x="${wx0}" y="${wy}" width="${ww}" height="${wh}"/><path class="y-mull" d="M${f(wx0 + ww / 2)} ${wy} v${wh} M${wx0} ${f(wy + wh / 2)} h${ww}"/>`);
+  o.push(`<rect class="y-box" x="${f(wx0 - 2 * k)}" y="${f(wy + wh)}" width="${f(ww + 4 * k)}" height="${f(4 * k)}"/>`);
+  if (!snow) o.push([0, 1, 2, 3].map((i) => `<circle class="${sea === "autumn" ? "y-fl-c" : i % 2 ? "y-fl-a" : "y-fl-b"}" cx="${f(wx0 + 2 * k + i * 4.6 * k)}" cy="${f(wy + wh - 1.4 * k)}" r="${f(1.8 * k)}"/>`).join(""));
+  const dx = f(wx - 21 * k), dw = f(14 * k), dt = f(hy - 30 * k);
+  o.push(`<rect class="y-door" x="${dx}" y="${dt}" width="${dw}" height="${f(hy + 10 - dt)}"/><circle class="y-knob" cx="${f(dx + dw - 3 * k)}" cy="${f(hy - 9 * k)}" r="${f(1 * k)}"/>`);
+  o.push(`<rect class="y-stone" x="${f(dx - 3 * k)}" y="${f(hy + 10)}" width="${f(dw + 6 * k)}" height="${f(3.4 * k)}"/>`);
+  for (let t = 0; t < 4; t++) {
+    const cx = f(wx - 12 * k + t * 17 * k), cy = f(hy + 19 * k + t * ((H - hy - 22 * k) / 3.2));
+    if (cy < H - 1) o.push(`<ellipse class="y-stone" cx="${cx}" cy="${cy}" rx="${f((5 + t * 1.4) * k)}" ry="${f((1.9 + t * .5) * k)}"/>`);
+  }
+  // the tree, its bough (the bird's perch ends on it) and its crown
+  o.push(`<path class="y-trunk" d="M${f(tx + 1)} ${H} L${f(tx + 4)} ${f(H - 8 * k)} L${f(tx + 4)} 0 L${f(tx + 15 * k)} 0 L${f(tx + 15 * k)} ${f(H - 8 * k)} L${f(tx + 19 * k)} ${H} Z"/>`);
+  o.push(`<path class="y-bark" d="M${f(tx + 8 * k)} ${f(py + 12)} v${f(10 * k)} M${f(tx + 11 * k)} ${f(py - 30 * k)} v${f(9 * k)} M${f(tx + 7 * k)} ${f(H - 10 * k)} v${f(6 * k)}"/>`);
+  o.push(`<path class="y-bough" d="M${f(tx + 8 * k)} ${f(py - 9 * k)} Q${f(tx + 3)} ${f(py - 1)} ${f(tx - 2)} ${py}"/>`);
+  if (snow) {
+    o.push(`<path class="y-twigs" d="M${f(tx + 8 * k)} ${f(32 * k)} L${f(tx - 30 * k)} ${f(4 * k)} M${f(tx - 14 * k)} ${f(20 * k)} L${f(tx - 18 * k)} 0 M${f(tx + 10 * k)} ${f(26 * k)} L${f(tx + 40 * k)} ${f(2 * k)} M${f(tx + 28 * k)} ${f(13 * k)} L${f(tx + 44 * k)} ${f(16 * k)} M${f(tx + 8 * k)} ${f(46 * k)} L${f(tx - 16 * k)} ${f(34 * k)}"/>`);
+    o.push(`<path class="y-snow-line" d="M${f(tx - 28 * k)} ${f(4 * k)} L${f(tx - 8 * k)} ${f(18 * k)} M${f(tx + 14 * k)} ${f(22 * k)} L${f(tx + 36 * k)} ${f(5 * k)}"/>`);
+  } else {
+    const crown = [[8, 6, 27], [-20, 2, 22], [34, 20, 22], [-38, 16, 15], [12, 30, 17], [-6, 24, 15]];
+    o.push(`<g class="y-crown ${sea === "autumn" ? "aut" : ""}">${crown.map(([dx2, dy, r], i) => `<circle class="${i % 2 ? "b" : ""}" cx="${f(tx + dx2 * k)}" cy="${f(dy * k)}" r="${f(r * k)}"/>`).join("")}</g>`);
+    if (sea === "spring") o.push(`<g class="y-blossom">${[[-22, 6], [-6, 14], [12, 4], [26, 22], [-34, 18], [4, 30], [20, 34], [-14, 24]].map(([dx2, dy]) => `<circle cx="${f(tx + dx2 * k)}" cy="${f(dy * k)}" r="${f(1.9 * k)}"/>`).join("")}</g>`);
+  }
+  if (sea === "autumn") o.push(`<g class="y-fallen">${[[96, 14], [150, 26], [40, 30], [214, 12], [128, 40], [250, 34]].map(([xx, dy], i) => { const cy = f(Math.min(H - 3, hy + dy * k)); return `<ellipse cx="${xx}" cy="${cy}" rx="${f(2.4 * k)}" ry="${f(1 * k)}" transform="rotate(${-30 + i * 23} ${xx} ${cy})"/>`; }).join("")}</g>`);
+  return o.join("");
+}
+const yardOf = (st) => st?.story?.season || SEASON(Number(twNow().date.slice(5, 7)));
+// the bird in its yard: the drawing behind, the bird's own box placed on it in the drawing's proportions
+const inYard = (kind, sea, bird) => { const L = YARD[kind], pc = (a, b) => `${(a / b * 100).toFixed(3)}%`;
+  return `<div class="yard ${kind} yard-${sea}" style="aspect-ratio:300/${L.h}"><svg class="yard-bg" viewBox="0 0 300 ${L.h}" aria-hidden="true">${yardSvg(L, sea)}</svg><div class="yard-spot" style="left:${pc(L.x, 300)};top:${pc(L.y, L.h)};width:${pc(L.s, 300)};height:${pc(L.s, L.h)}">${bird}</div></div>`; };
 const nextLine = (st) => (st.away ? `${st.back <= 1 ? "明天" : `${cn(st.back)}天後`}從${st.away.place}回來` : st.sick ? `再 ${st.sick.left} 口藥就會好` : `再 ${st.toNext} 口就${st.next.zh}`);
 const bar = (st) => { const w = st.away ? 1 - st.back / Math.max(1, daysTo(st.away.from, st.away.until) + 1) : st.sick ? 1 - st.sick.left / st.sick.need : (st.total - st.from) / Math.max(1, st.next.at - st.from);
   return `<span class="bar${st.sick ? " sick" : st.away ? " away" : ""}"><i style="width:${Math.round(Math.max(0, Math.min(1, w)) * 100)}%"></i></span><span class="next">${esc(nextLine(st))}</span>`; };
@@ -424,9 +502,9 @@ const stageLine = (st) => `<span class="stage">${esc(st.stage.zh)}<i>${esc(st.st
 // that opens the page where a yard is opened.
 export function nestBox() {
   const n = nest();
-  if (!n) return `<a class="nest plate hint" href="#/nest" aria-label="後院：還沒有後院"><div class="bird s0" aria-hidden="true"><svg class="scene" viewBox="0 0 64 64">${EGG_SCENE}</svg><svg class="robin" viewBox="0 0 64 64"><g class="body">${EGG}</g></svg></div><div class="txt"><span class="k">後院<i>Hinterhof</i></span><b>還沒有後院</b><span class="say">和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口。</span><span class="next">開一個後院 →</span></div></a>`;
+  if (!n) return `<a class="nest plate hint" href="#/nest" aria-label="後院：還沒有後院">${inYard("plate", yardOf(), `<div class="bird s0" aria-hidden="true"><svg class="scene" viewBox="0 0 64 64">${EGG_SCENE}</svg><svg class="robin" viewBox="0 0 64 64"><g class="body">${EGG}</g></svg></div>`)}<div class="txt"><span class="k">後院<i>Hinterhof</i></span><b>還沒有後院</b><span class="say">和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口。</span><span class="next">開一個後院 →</span></div></a>`;
   const st = nestState(n);
-  return `<a class="nest plate" href="#/nest" aria-label="後院：${esc(st.pet.name)}，${esc(st.stage.zh)}，今天吃了 ${st.fed} 口">${birdSvg(st)}<div class="txt">
+  return `<a class="nest plate" href="#/nest" aria-label="後院：${esc(st.pet.name)}，${esc(st.stage.zh)}，今天吃了 ${st.fed} 口">${inYard("plate", yardOf(st), birdSvg(st))}<div class="txt">
       <span class="k">後院<i>Hinterhof</i></span>
       <b>${esc(st.pet.name)}</b>${stageLine(st)}
       <span class="say">${st.away ? `去${esc(st.away.place)}旅行了。` : st.sick ? `生病了，在吃藥。` : st.fed ? `今天吃了 ${st.fed} 口：${st.who.join("、")}。` : st.hunger}</span>
@@ -456,18 +534,21 @@ export function liveBird(root, { fly = true } = {}) {
   const wait = (ms) => new Promise((r) => timers.push(setTimeout(r, ms)));
   const run = (frames, ms, easing = "ease-in-out") => robin.animate(frames, { duration: ms, easing, fill: "none" }).finished.catch(() => {});
   const T = (x, y, flip = false, rot = 0) => ({ transform: `translate(${x}px, ${y}px) scaleX(${flip ? -1 : 1}) rotate(${rot}deg)` });
-  const amp = () => Math.max(60, Math.min(230, (root.clientWidth || 320) / 2 - 60));
+  // which way it flies and how far: towards the side with room, no farther than the yard (or the box) is wide — in the
+  // yard the bird sits right of the middle, on the tree's bough
+  const room = () => { const r = root.getBoundingClientRect(), b = bird.getBoundingClientRect(), cx = b.left + b.width / 2 - r.left, L = cx - 30, R = (r.width || 320) - cx - 30;
+    const d = R < 60 ? -1 : L < 60 ? 1 : Math.random() < .5 ? 1 : -1; return [d, Math.max(40, Math.min(230, d > 0 ? R : L))]; };
   const rock = () => run([T(0, 0), T(0, 0, false, -6), T(0, 0, false, 5), T(0, 0, false, -3), T(0, 0)], 900);
   const hop = () => run([T(0, 0), T(0, -7), T(0, 0), T(0, -4), T(0, 0)], 520, "ease-out");
   const peck = () => run([T(0, 0), T(0, 3, false, 10), T(0, 0), T(0, 3, false, 10), T(0, 0)], 700);
   const look = async () => { await run([T(0, 0), T(0, 0, true)], 120); await wait(between(500, 1500)); await run([T(0, 0, true), T(0, 0)], 120); };
   const preen = () => run([T(0, 0), T(2, 1, false, -14), T(2, 1, false, -12), T(2, 1, false, -14), T(0, 0)], 1300);
   const fliers = [
-    () => { const a = amp(), d = Math.random() < .5 ? 1 : -1; // swoop out and back
+    () => { const [d, a] = room(); // swoop out and back
       return run([T(0, 0), T(.3 * a * d, -55, d > 0), T(.75 * a * d, -25, d > 0), T(a * d, -80, d > 0), T(.5 * a * d, -115, d < 0), T(.1 * a * d, -40, d < 0), T(0, 0)], between(2600, 3400)); },
-    () => { const a = amp() * .8, d = Math.random() < .5 ? 1 : -1; // a loop in the air
+    () => { const [d, r] = room(), a = r * .8; // a loop in the air
       return run([T(0, 0), T(.4 * a * d, -70, d > 0), T(a * d, -40, d > 0), T(.9 * a * d, -120, d < 0), T(.3 * a * d, -130, d < 0), T(-.2 * a * d, -70, d < 0), T(0, 0)], between(3000, 3800)); },
-    () => { const a = amp(), d = Math.random() < .5 ? 1 : -1; // a dash to the side, a pause there, a glide home
+    () => { const [d, a] = room(); // a dash to the side, a pause there, a glide home
       return (async () => { await run([T(0, 0), T(.6 * a * d, -60, d > 0), T(a * d, -30, d > 0)], 1100, "ease-out"); await wait(between(500, 1400)); await run([T(a * d, -30, d < 0), T(.5 * a * d, -70, d < 0), T(0, 0)], 1300, "ease-in-out"); })(); },
     () => run([T(0, 0), T(-10, -6), T(-14, 0), T(-4, -6), T(6, 0), T(14, -6), T(10, 0), T(0, -4), T(0, 0)], 1500, "ease-in-out"), // hopping along the branch
   ];
@@ -795,7 +876,7 @@ export function renderNest(el, api, afterSync = false) {
   const synced = n.synced ? `上次同步 ${new Date(n.synced).toLocaleTimeString("zh-TW", { hour: "2-digit", minute: "2-digit", hour12: false })}` : "";
   const got = Object.entries(st.items).map(([k, c]) => `${cn(c)}${THINGS[k]}`);
   el.innerHTML = `${head}
-    <div class="nest-stage">${birdSvg(st)}<p class="poke-line" aria-live="polite"></p>
+    <div class="nest-stage">${inYard("page", yardOf(st), birdSvg(st))}<p class="poke-line" aria-live="polite"></p>
       <b>${esc(pet.name)}</b>${stageLine(st)}
       <p class="say">${st.away || st.sick ? lifeLine(st) : st.songs > 1 ? `又學會了一首，現在會唱${cn(st.songs)}首歌；每首都比上一首長一點。` : esc(st.stage.say(pet.p))}</p>
       ${!st.away && !st.sick && st.life.todays.length ? `<p class="life">${lifeLine(st)}</p>` : ""}

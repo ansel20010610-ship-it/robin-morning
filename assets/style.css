@@ -1928,7 +1928,8 @@ details.band .svl { margin: 0 0 10px; }
    and the first colour, 0 → 1 over eighty bites) and --m (the plumage, 0 → 1 over four hundred) come from the state,
    so it is a little different after every bite; the stages add what a number cannot (no wing yet, fluff, the singer's
    notes). Colours are the paper's tokens plus the three --nest-* browns. */
-.nest.plate { display: flex; align-items: center; gap: 16px; margin: 18px 0 -2px; padding: 14px 16px 13px; border: 1px solid var(--rule); border-top: 1px solid var(--gold); text-decoration: none; color: inherit; }
+.nest.plate { display: block; margin: 18px 0 -2px; padding: 0; border: 1px solid var(--rule); border-top: 1px solid var(--gold); text-decoration: none; color: inherit; }
+.nest.plate .txt { padding: 11px 16px 13px; }
 .nest.plate:active { border-color: var(--gold); }
 .nest .txt { display: grid; gap: 3px; min-width: 0; flex: 1; font-family: var(--sans); }
 .nest .txt .k { font-size: 12px; letter-spacing: .14em; color: var(--gold-ink); font-weight: 600; margin-bottom: 2px; }
@@ -2050,6 +2051,48 @@ details.band .svl { margin: 0 0 10px; }
 .flyby .bird.flutter .r-wingg { display: inline; transform-box: view-box; transform-origin: 31px 32px; animation: nest-flap .12s ease-in-out infinite alternate; } /* the nestling tries its wings on the rim */
 /* the page */
 .nest-stage { text-align: center; padding: 6px 0 14px; border-bottom: 1px solid var(--rule); }
+/* the yard (nest.js yardSvg / inYard): the drawing at a fixed aspect ratio, the bird's box placed on it in its
+   proportions; colours of its own, muted to the paper, with a dark set */
+.yard { position: relative; width: 100%; --y-sky: #E5EAE4; --y-cloud: #F7F4EC; --y-hedge: #A3AB7C; --y-grass: #C2C696; --y-tuft: #8E9662; --y-fence: #EFE7D6; --y-fence-line: #B8A57E; --y-wall: #DFCDA9; --y-siding: #CCB78F; --y-roof: #9C624A; --y-win: #CBD6D3; --y-door: #7F8F6D; --y-soil: #8C6E50; --y-stone: #D9D0BF; --y-fl-a: #D88C8E; --y-fl-b: #E2BE58; --y-fl-c: #D2802E; --y-stem: #7E8A58; --y-leaf: #93A067; --y-leaf-2: #808E57; --y-aut: #CD9B44; --y-aut-2: #BC7336; --y-blossom: #F1C5C8; --y-snow: #F8F6F1; --y-snow-shade: #D5DDE1; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .yard { --y-sky: #1D2023; --y-cloud: #2A2D2F; --y-hedge: #39402D; --y-grass: #3F4630; --y-tuft: #5C6642; --y-fence: #4C4537; --y-fence-line: #6E614B; --y-wall: #3A3126; --y-siding: #4A3F30; --y-roof: #5C3A2C; --y-win: #2C383A; --y-door: #3E4A37; --y-soil: #3A2E23; --y-stone: #4A443A; --y-fl-a: #B4707A; --y-fl-b: #BFA04A; --y-fl-c: #B5682C; --y-stem: #56603E; --y-leaf: #4A5634; --y-leaf-2: #3F4A2C; --y-aut: #8C6A2E; --y-aut-2: #80502A; --y-blossom: #A47C84; --y-snow: #C4C8C8; --y-snow-shade: #8A9399; } }
+:root[data-theme="dark"] .yard { --y-sky: #1D2023; --y-cloud: #2A2D2F; --y-hedge: #39402D; --y-grass: #3F4630; --y-tuft: #5C6642; --y-fence: #4C4537; --y-fence-line: #6E614B; --y-wall: #3A3126; --y-siding: #4A3F30; --y-roof: #5C3A2C; --y-win: #2C383A; --y-door: #3E4A37; --y-soil: #3A2E23; --y-stone: #4A443A; --y-fl-a: #B4707A; --y-fl-b: #BFA04A; --y-fl-c: #B5682C; --y-stem: #56603E; --y-leaf: #4A5634; --y-leaf-2: #3F4A2C; --y-aut: #8C6A2E; --y-aut-2: #80502A; --y-blossom: #A47C84; --y-snow: #C4C8C8; --y-snow-shade: #8A9399; }
+.yard .yard-bg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.yard .yard-spot { position: absolute; }
+.yard .yard-spot .bird { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; }
+.nest-stage .yard { max-width: 460px; margin: 4px auto 10px; border: 1px solid var(--rule); }
+.nest.plate .yard { border-bottom: 1px solid var(--rule); }
+.yard .y-sky { fill: var(--y-sky); }
+.yard .y-cloud { fill: var(--y-cloud); }
+.yard .y-hedge { fill: var(--y-hedge); }
+.yard .y-fence { fill: var(--y-fence); stroke: var(--y-fence-line); stroke-width: .6; stroke-linejoin: round; }
+.yard .y-grass { fill: var(--y-grass); }
+.yard .y-tuft { fill: none; stroke: var(--y-tuft); stroke-width: .7; stroke-linecap: round; }
+.yard .y-soil { fill: var(--y-soil); }
+.yard .y-stem { fill: none; stroke: var(--y-stem); stroke-width: .8; }
+.yard .y-fl-a { fill: var(--y-fl-a); } .yard .y-fl-b { fill: var(--y-fl-b); } .yard .y-fl-c { fill: var(--y-fl-c); }
+.yard .y-wall { fill: var(--y-wall); }
+.yard .y-siding { fill: none; stroke: var(--y-siding); stroke-width: .6; }
+.yard .y-roof { fill: var(--y-roof); }
+.yard .y-win { fill: var(--y-win); stroke: var(--nest-brown); stroke-width: 1; }
+.yard .y-mull { fill: none; stroke: var(--nest-brown); stroke-width: .8; }
+.yard .y-box { fill: var(--nest-brown); }
+.yard .y-door { fill: var(--y-door); stroke: var(--nest-dark); stroke-width: .7; }
+.yard .y-knob { fill: var(--gold); }
+.yard .y-stone { fill: var(--y-stone); }
+.yard .y-trunk { fill: var(--nest-brown); }
+.yard .y-bark { fill: none; stroke: var(--nest-dark); stroke-width: .8; stroke-linecap: round; opacity: .6; }
+.yard .y-bough { fill: none; stroke: var(--nest-brown); stroke-width: 3.4; stroke-linecap: round; }
+.yard .y-twigs { fill: none; stroke: var(--nest-brown); stroke-width: 1.8; stroke-linecap: round; }
+.yard .y-snow-line { fill: none; stroke: var(--y-snow); stroke-width: 1.4; stroke-linecap: round; }
+.yard .y-crown circle { fill: var(--y-leaf); } .yard .y-crown circle.b { fill: var(--y-leaf-2); }
+.yard .y-crown.aut circle { fill: var(--y-aut); } .yard .y-crown.aut circle.b { fill: var(--y-aut-2); }
+.yard .y-blossom { fill: var(--y-blossom); }
+.yard .y-fallen { fill: var(--y-aut-2); }
+.yard .y-snow { fill: var(--y-snow); }
+.yard.yard-winter .y-grass { fill: var(--y-snow); }
+.yard.yard-winter .y-tuft { stroke: var(--y-snow-shade); }
+.yard.yard-winter .y-stone { fill: var(--y-snow-shade); }
+
 .nest-stage b { display: block; font-size: 24px; letter-spacing: .14em; margin-top: 2px; }
 .nest-stage .stage { margin-top: 4px; }
 .nest-stage .say { font-family: var(--serif); font-size: 15.5px; line-height: 1.8; color: var(--ink-2); margin: 8px auto 2px; max-width: 30em; }
