@@ -651,11 +651,11 @@ function frontStatus() {
 // the day's piece of music once more, and what comes in the morning. 「看早上的那份報」 keeps the day paper for the
 // rest of that night (sessionStorage, keyed by the night). `?night=1` / `?night=0` force it, for checking.
 const nightOf = () => { const n = twNow(); return n.minutes < 5 * 60 ? addDays(n.date, -1) : n.date; };
+const nightHours = () => { const m = twNow().minutes; return m >= 21 * 60 || m < 5 * 60; };
 function nightOn() {
   const q = new URLSearchParams(location.search).get("night");
   if (q === "1" || q === "0") return q === "1";
-  const m = twNow().minutes;
-  if (m >= 5 * 60 && m < 21 * 60) return false;
+  if (!nightHours()) return false;
   try { return sessionStorage.getItem("rm.dayview") !== nightOf(); } catch { return true; }
 }
 const frontKey = (issue) => JSON.stringify([twNow().date, Boolean(issue) && issueOpen(issue.date), issue || null, nightOn()]);
@@ -721,6 +721,7 @@ function viewFront(dateParam) {
   if (night) { viewNight(issue, arts, read, pick, status); return; }
   main.innerHTML = `${masthead(issue, fresh)}
   <div class="wrap${erst ? " erst-issue" : ""}">
+    ${!dateParam && nightHours() && !nightOn() ? `<p class="night-back"><button class="btn ghost" type="button" data-nightback>${MOON}回到夜間版</button></p>` : ""}
     ${status ? `<div class="status">${status}</div>` : ""}
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的${esc(issueNo(issue.no))}・<a href="#/">回到最新一期</a></div>` : ""}
     ${lateNote(issue.date)}
@@ -757,6 +758,10 @@ function viewFront(dateParam) {
   fillReveal();
   fillWire();
   fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
+  main.querySelector("[data-nightback]")?.addEventListener("click", () => {
+    try { sessionStorage.removeItem("rm.dayview"); } catch { /* nothing kept */ }
+    enteredFront = false; viewFront(); scrollTo(0, 0);
+  });
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
   if (erst) setTimeout(() => goldRain(main.querySelector(".masthead.erst .crest")), fresh ? 2200 : 700);
 }

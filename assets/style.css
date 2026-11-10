@@ -2374,3 +2374,8 @@ details.band .svl { margin: 0 0 10px; }
 .letter .src { margin: 6px 0 0; font-family: var(--sans); font-size: 12.5px; color: var(--muted); }
 .letters-more { margin: 0; text-align: right; font-size: 13.5px; }
 .letter-date { margin: 18px 0 0; font-family: var(--sans); font-size: 12.5px; letter-spacing: .08em; color: var(--muted); }
+.night-back { margin: 14px 0 0; text-align: center; }
+.night-back .btn { display: inline-flex; align-items: center; gap: 8px; }
+.night-back .moon { width: 18px; height: 18px; }
+.night-back .moon path { fill: var(--gold-soft); stroke: var(--gold); stroke-width: 2; }
+.night-back .moon .st { fill: var(--gold); }
