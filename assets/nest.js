@@ -940,14 +940,27 @@ export function pokeBird(root, st) {
 // settings page, since there is nothing to watch yet. `api` is config.json nest.api; without it the pages say the
 // yard is this phone alone. `afterSync`: this draw follows a sync, so it does not start another (a draw that synced,
 // and a sync that redrew, chased each other round until the store refused the phone, 2026-11-09).
-let visitMoment = null; // this visit's moment (pickMoment), kept when the page is drawn again after a sync
+// This visit's moment (pickMoment). A visit begins when the reader comes to #/nest from another page; within it the
+// moment stays — through the redraw after a sync, the paper's 下拉更新, and a reload of the page itself (the owner,
+// 2026-11-10: 同一次進去重新整理不要換新場景), which keeps it in sessionStorage for the tab.
+let visitMoment = null, inVisit = false;
+const VISIT_KEY = "rm-nest-visit", bootHash = location.hash;
+let bootKeep = (() => { try { return performance.getEntriesByType("navigation")[0]?.type === "reload"; } catch { return false; } })();
+addEventListener("hashchange", () => { if (location.hash !== "#/nest") { inVisit = false; bootKeep = false; } });
+const keptVisit = () => { try { const v = sessionStorage.getItem(VISIT_KEY); return v === null ? undefined : MOMENTS.find((m) => m.id === v) || null; } catch { return undefined; } };
+const keepVisit = (m) => { try { sessionStorage.setItem(VISIT_KEY, m ? m.id : "-"); } catch { /* private mode: a reload picks anew */ } };
 export function renderNest(el, api, afterSync = false) {
   const n = nest();
   if (!n) { renderNestSettings(el, api); return; }
   const head = `<header class="page-title"><h1>後院</h1><span class="de">Hinterhof</span></header>`;
   const st = nestState(n), today = twNow().date, pet = st.pet, sea = yardOf(st);
   const mc = { si: st.si, sea, sick: Boolean(st.sick), away: Boolean(st.away), hiding: st.hiding || "", mood: st.mood || "" };
-  if (!afterSync || (visitMoment && !momentFits(visitMoment, mc))) visitMoment = pickMoment(mc);
+  if (!inVisit) { // a new visit — unless the page was reloaded right here, on #/nest
+    const kept = bootKeep && bootHash === "#/nest" ? keptVisit() : undefined;
+    visitMoment = kept !== undefined ? kept : pickMoment(mc); inVisit = true; bootKeep = false;
+  }
+  if (visitMoment && !momentFits(visitMoment, mc)) visitMoment = null; // the day changed under it (fell ill, a cat came)
+  keepVisit(visitMoment);
   const moment = visitMoment;
   const names = Object.entries(n.members || {}).map(([id, name]) => `<li><span>${id === n.me ? `${esc(name)}（你）` : esc(name)}</span><b>${st.members[id] || 0} 口</b></li>`).join("");
   const wk = st.week.map((w) => `<li${w.d === today ? ' class="today"' : ""}><i style="height:${Math.min(100, w.n * 14)}%"></i><span>${Number(w.d.slice(8))}</span></li>`).join("");
