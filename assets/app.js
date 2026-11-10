@@ -432,7 +432,9 @@ function goldRain(el) {
 // `fresh` (viewFront, Druckfrisch): the issue is opened for the first time on this device — the masthead carries the
 // press roller's ink line and the wine date stamp, and holds its own entrance (.fresh, style.css) until motion.js
 // pressRun lets it go. The stamp is decoration: the topline already says the number and the day.
-function masthead(issue, fresh = false) {
+// `moon`: the latest issue's front page from nine in the evening until five in the morning hangs a small moon beside the
+// crest (the owner, 2026-11-10, when the night paper went: 晚上還是可以有月亮).
+function masthead(issue, fresh = false, moon = false) {
   const date = issue?.date || twNow().date;
   const [y, m, d] = date.split("-").map(Number);
   const erst = Number(issue?.no) === 1; // 創刊號 wears its own dress (the owner, 2026-11-08; style.css .masthead.erst)
@@ -442,7 +444,7 @@ function masthead(issue, fresh = false) {
     <div class="topline"><span>Wien · Taipei</span><span>${issue ? esc(issueNr(issue.no)) : ""}</span><span>${esc(fmtDate(date, "de").split(",")[0])}</span></div>
     ${fresh ? `<i class="stamp-date" aria-hidden="true"><b>Druckfrisch</b><span>No. ${esc(issue.no)}</span><span>${d}. ${roman(m)}. ${y}</span><i class="echo"></i></i>` : ""}
     <div class="checker" aria-hidden="true"></div>
-    <div class="crest">${EMBLEM}<i class="burst" aria-hidden="true"></i><i class="wave" aria-hidden="true"></i><i class="wave w2" aria-hidden="true"></i></div>
+    <div class="crest">${EMBLEM}${moon ? MOON.replace('class="moon"', 'class="moon night-moon"') : ""}<i class="burst" aria-hidden="true"></i><i class="wave" aria-hidden="true"></i><i class="wave w2" aria-hidden="true"></i></div>
     <h1>${esc(S.cfg.title)}</h1>
     <div class="latin">${esc(S.cfg.subtitle)}</div>
     <div class="dateline">${esc(fmtDate(date))}${issue ? `・${esc(issueNo(issue.no))}` : ""}・${esc(S.cfg.publish_time)} 出刊</div>
@@ -646,26 +648,16 @@ function frontStatus() {
 // Everything the latest-issue front page shows that can change while it stays open: [issue, status line]. The day and
 // whether the issue is open go with the issue: past midnight (todays) or once a Sunday's late issue opens (issueOpen),
 // the weather, the parcel, the feast card and the seal change while the issue and a non-empty status line may not (audit c11).
-// 夜間版 (the owner, 2026-11-10, from my list of ideas: 4): from nine in the evening until five in the morning the front
-// page is another paper — what is still unread of the day, the parcel and the stamp as always, the day's passage again,
-// the day's piece of music once more, and what comes in the morning. 「看早上的那份報」 keeps the day paper for the
-// rest of that visit (nightOn). `?night=1` / `?night=0` force it, for checking.
-const nightOf = () => { const n = twNow(); return n.minutes < 5 * 60 ? addDays(n.date, -1) : n.date; };
-const nightHours = () => { const m = twNow().minutes; return m >= 21 * 60 || m < 5 * 60; };
-// Once a night (the owner, 2026-11-10: 夜間版跳出一次就好，之後點進去還是回原本的): the first time the front page is
-// opened in the night hours it is the night paper; it stays while the reader is on it (the minute ticks, a pull), and
-// any later visit — back from an article, the app opened again — is the day paper. 「回到夜間版」 brings it back until
-// the reader leaves the front page again.
-let nightSticky = false;
-addEventListener("hashchange", () => { if ((location.hash || "#/") !== "#/") nightSticky = false; });
-function nightOn() {
+// 晚上寫信 (the owner, 2026-11-10: 我想刪掉夜間版 但寄信功能維持晚上出現): the night paper is gone; what stays of it is
+// the letter to the editors, folded at the top of the latest issue's front page from nine in the evening until five in
+// the morning on a phone whose yard takes letters (and in 設定 at any hour). `?night=1` / `?night=0` force the hours,
+// for checking.
+const nightHours = () => {
   const q = new URLSearchParams(location.search).get("night");
   if (q === "1" || q === "0") return q === "1";
-  if (!nightHours()) return false;
-  if (nightSticky) return true;
-  try { return localStorage.getItem("rm.night.seen") !== nightOf(); } catch { return true; }
-}
-const frontKey = (issue) => JSON.stringify([twNow().date, Boolean(issue) && issueOpen(issue.date), issue || null, nightOn()]);
+  const m = twNow().minutes; return m >= 21 * 60 || m < 5 * 60;
+};
+const frontKey = (issue) => JSON.stringify([twNow().date, Boolean(issue) && issueOpen(issue.date), issue || null, nightHours()]);
 const frontState = () => [frontKey(publishedIssues()[0]), frontStatus()];
 let shownFront = [];
 
@@ -721,14 +713,13 @@ function viewFront(dateParam) {
   // the press (motion.js pressRun). Every later visit — a redraw at 07:30, iOS waking the app, a step back from an
   // article — plays only the masthead's own entrance. Not under ?preview: looking at tomorrow's issue early must not
   // spend its morning.
-  const night = !dateParam && nightOn(); // 夜間版: no press-run, and the issue's first morning opening is still to come
-  const fresh = !night && !dateParam && !isPreview() && !store.get("opened", []).includes(issue.date);
+  const fresh = !dateParam && !isPreview() && !store.get("opened", []).includes(issue.date);
   if (fresh) store.set("opened", [...store.get("opened", []), issue.date].slice(-60));
+  const evening = !dateParam && nightHours() && Boolean(letterYard()); // 晚上寫信: the folded letter at the top
   const erst = Number(issue.no) === 1; // 創刊號: its own contents page and gold hairlines (inhaltBox, style.css .erst-issue)
-  if (night) { viewNight(issue, arts, read, pick, status); return; }
-  main.innerHTML = `${masthead(issue, fresh)}
+  main.innerHTML = `${masthead(issue, fresh, !dateParam && nightHours())}
   <div class="wrap${erst ? " erst-issue" : ""}">
-    ${!dateParam && nightHours() && !nightOn() ? `<p class="night-back"><button class="btn ghost" type="button" data-nightback>${MOON}回到夜間版</button></p>` : ""}
+    ${evening ? `<div class="night-letter-slot"></div>` : ""}
     ${status ? `<div class="status">${status}</div>` : ""}
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的${esc(issueNo(issue.no))}・<a href="#/">回到最新一期</a></div>` : ""}
     ${lateNote(issue.date)}
@@ -765,10 +756,7 @@ function viewFront(dateParam) {
   fillReveal();
   fillWire();
   fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
-  main.querySelector("[data-nightback]")?.addEventListener("click", () => {
-    nightSticky = true;
-    enteredFront = false; viewFront(); scrollTo(0, 0);
-  });
+  if (evening) letterForm(main.querySelector(".night-letter-slot"), true);
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
   if (erst) setTimeout(() => goldRain(main.querySelector(".masthead.erst .crest")), fresh ? 2200 : 700);
 }
@@ -810,50 +798,10 @@ async function chairCard(a, date) {
   const url = URL.createObjectURL(blob), link = document.createElement("a");
   link.href = url; link.download = file.name; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 4000);
 }
-// The night paper (nightOn). The same issue, taken in for the night: the stamp is still earned here — the parcel, the
-// finish block and wireDigest are the day page's own — but the wire, the weather, the concerts and the cards already read
-// are left for the morning.
+// The evening moon: beside the masthead's crest (masthead) and on the folded evening letter (letterForm).
 const MOON = `<svg class="moon" viewBox="0 0 64 64" aria-hidden="true"><path d="M40 8a24 24 0 1 0 16 38A20 20 0 0 1 40 8z"/><circle class="st" cx="14" cy="14" r="1.4"/><circle class="st" cx="24" cy="6" r=".9"/><circle class="st" cx="8" cy="30" r=".9"/></svg>`;
-function viewNight(issue, arts, read, pick, status) {
-  nightSticky = true;
-  try { localStorage.setItem("rm.night.seen", nightOf()); } catch { /* private mode: every visit is the first */ }
-  const date = issue.date, open = arts.filter((a) => a !== pick && forStamp(a, date) && !read.has(`${date}/${a.column}`));
-  const v = issue.verse, verses = Array.isArray(v?.verses) ? v.verses : [];
-  const music = arts.find((a) => a.column === "music");
-  const tomorrow = addDays(date, 1), tIssue = issueBy(tomorrow), tSerial = tIssue?.articles?.find((a) => a.column === "serial"), tFest = feastOf(tomorrow);
-  const morning = [
-    tSerial ? `<li><span class="k">連載</span>${esc(tSerial.title)}</li>` : "",
-    tFest ? `<li><span class="k">郵票</span>明天是${esc(tFest.zh)}，讀完那一份，郵票冊會收進一枚紀念郵票</li>` : "",
-    `<li><span class="k">出刊</span>台灣時間 ${esc(S.cfg.publish_time)}，早上見</li>`,
-  ].join("");
-  main.innerHTML = `<header class="night-head"><div class="wrap">${MOON}<div class="t"><span class="k">夜間版<i>Abendblatt</i></span><h1>${esc(S.cfg.title)}</h1><span class="d">${esc(fmtDate(date))}・${esc(issueNo(issue.no))}</span></div></div></header>
-  <div class="wrap night">
-    ${status ? `<div class="status">${status}</div>` : ""}
-    ${lateNote(date)}
-    <div class="sec-head"><h2>今晚還沒讀的</h2><span class="de">Noch offen</span>${open.length ? `<span class="note">${open.length} 篇</span>` : ""}</div>
-    ${open.length ? open.map((a) => itemCard(date, a, read)).join("") : `<p class="night-done">今天這一份，白天都讀過了。</p>`}
-    ${revealBox(issue, arts, read)}
-    ${!arts.some((a) => forStamp(a, date) && a.brief) ? "" : !issueOpen(date) ? `<div class="finish left"><b>今天這一份還沒出齊</b><span class="note">下午補刊到齊以後，包裹和郵票才會開。</span></div>`
-      : unreadIn(date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(date, arts)} 篇沒讀</b><span class="note">都讀完，今天的郵票就蓋得下去。</span></div>`
-      : digestDone().has(date) ? `<div class="finish done">${finishInner(date)}</div>` : `<div class="finish">${finishInner(date)}</div>`}
-    ${verses.length ? `<section class="night-verse"><div class="lbl"><b>睡前一段</b><span class="de">Zur Nacht</span></div><blockquote>${verses.map((x) => `<sup>${esc(x.c ? `${x.c}:${x.n}` : String(x.n ?? ""))}</sup>${esc(x.text)}`).join("")}<cite>${esc(v.ref || "")}（和合本）</cite></blockquote></section>` : ""}
-    ${music ? `<a class="night-music" href="#/a/${date}/music"><span class="lbl"><b>今晚再聽一次</b><span class="de">Noch einmal hören</span></span><b class="ti">${esc(music.title)}</b>${music.dek ? `<span class="dek">${esc(music.dek)}</span>` : ""}</a>` : ""}
-    <div class="night-letter-slot"></div>
-    <section class="night-morning"><div class="lbl"><b>明早</b><span class="de">Morgen früh</span></div><ul>${morning}</ul></section>
-    <p class="night-day"><button class="btn ghost" type="button" data-dayview>看早上的那份報</button></p>
-    <footer class="colophon"><div class="ornament" aria-hidden="true"><i></i><i></i><i></i></div><div class="latin">Gute Nacht</div>晚上九點到清晨五點，首頁是夜間版</footer>
-  </div>`;
-  prefetch(issue);
-  wireDigest(issue);
-  fillReveal();
-  main.querySelector("[data-dayview]")?.addEventListener("click", () => {
-    nightSticky = false;
-    enteredFront = false; viewFront(); scrollTo(0, 0);
-  });
-  if (sonder() && nest()) letterForm(main.querySelector(".night-letter-slot"), true);
-}
 // ——— 寫信給編輯部 (Leserbriefe; the owner, 2026-11-10, from my list of ideas: 1) ———
-// A question written at night (the night paper, or 設定) goes to the shared store of the reader's yard (nest-worker.js
+// A question written at night (folded at the top of the front page, or in 設定 at any hour) goes to the shared store of the reader's yard (nest-worker.js
 // /{code}/letters; only the owner's yard takes letters); the letters routine (editorial/columns/letters.md) answers one
 // or two before dawn into the yard's store (/{code}/letters/answers), and the morning's front page shows them to the yard's phones under 編輯部回信, the question
 // shortened and unsigned. The phone keeps what it sent (rm.letters.sent) to show each one's state, and the draft.
@@ -886,23 +834,25 @@ function viewLetters() {
   if (!letterYard()) { main.innerHTML = `<div class="wrap"><header class="page-title"><h1>編輯部回信</h1><span class="de">Leserbriefe</span></header><p class="empty">回信只有後院裡的人看得到。</p></div>`; document.title = `編輯部回信｜${S.cfg.title}`; return; }
   const ls = [...(S.letters || [])].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>編輯部回信</h1><span class="de">Leserbriefe</span></header>
-    ${ls.length ? ls.map((l) => `<p class="letter-date">${esc(fmtDate(l.date))}</p>${letterHtml(l)}`).join("") : `<p class="empty">還沒有回信。晚上打開報紙（夜間版），或到設定，就能寫信給編輯部。</p>`}</div>`;
+    ${ls.length ? ls.map((l) => `<p class="letter-date">${esc(fmtDate(l.date))}</p>${letterHtml(l)}`).join("") : `<p class="empty">還沒有回信。晚上九點以後打開報紙，首頁最上面就能寫信給編輯部；設定裡也可以寫。</p>`}</div>`;
   document.title = `編輯部回信｜${S.cfg.title}`;
   const id = decodeURIComponent((location.hash.split("/")[2] || ""));
   if (id) main.querySelector(`#${CSS.escape(id)}`)?.scrollIntoView({ block: "start" });
 }
-function letterForm(el, night = false) {
+// In the evening (night = true) the form is folded under one line at the top of the front page — a moon, 寫信給編輯部 —
+// and opens on a tap; it stays open while a draft is kept, and after a letter goes out to show it among the sent.
+function letterForm(el, night = false, open = false) {
   const n = nest(), api = S.cfg.nest?.api;
   if (!el || !n || !api) return;
   const sent = store.get("letters.sent", []).slice(-5).reverse();
   const md = (iso) => { const t = new Date(new Date(iso).getTime() + 8 * 3600e3); return `${t.getUTCMonth() + 1}/${t.getUTCDate()} ${String(t.getUTCHours()).padStart(2, "0")}:${String(t.getUTCMinutes()).padStart(2, "0")}`; };
-  el.innerHTML = `<div class="letter-form${night ? " night-letter" : ""}">
-    ${night ? `<div class="lbl"><b>寫信給編輯部</b><span class="de">Leserbrief</span></div>` : `<h2>寫信給編輯部</h2>`}
+  const wait = sent.filter((x) => !letterAnswered(x.id)).length;
+  el.innerHTML = `${night ? `<details class="letter-form night-letter"${open || store.get("letters.draft", "") ? " open" : ""}><summary>${MOON}<b>寫信給編輯部</b><span class="de">Leserbrief</span><span class="note">${wait ? `${wait} 封等回信` : "晚上才開的信箱"}</span></summary>` : `<div class="letter-form"><h2>寫信給編輯部</h2>`}
     <p class="small">問一個你想知道的問題。天亮前編輯部挑一兩封回答，刊在早上的報上，不署名，問題會稍微改寫。不要寫病人或私人的事。</p>
     <textarea maxlength="300" rows="3" placeholder="例如：布拉姆斯第四號該從哪個版本聽起？">${esc(store.get("letters.draft", ""))}</textarea>
     <div class="btns"><button class="btn" type="button" data-letter-send>寄出</button><span class="count small"></span></div>
     ${sent.length ? `<ul class="letters-sent">${sent.map((x) => { const a = letterAnswered(x.id); return `<li><span class="t">${esc(x.text.length > 28 ? `${x.text.slice(0, 27)}…` : x.text)}</span>${a ? `<a href="#/letters/${esc(x.id)}">刊在 ${esc(fmtDate(a.date, "short"))} →</a>` : `<span class="st">寄出了 ${esc(md(x.at))}，等回信</span>`}</li>`; }).join("")}</ul>` : ""}
-  </div>`;
+  ${night ? "</details>" : "</div>"}`;
   const ta = el.querySelector("textarea"), count = el.querySelector(".count"), btn = el.querySelector("[data-letter-send]");
   const upd = () => { count.textContent = `${ta.value.length} / 300`; store.set("letters.draft", ta.value); };
   ta.addEventListener("input", upd); upd();
@@ -917,7 +867,7 @@ function letterForm(el, night = false) {
       store.set("letters.sent", [...store.get("letters.sent", []), { id: j.id, at: j.at, text }].slice(-20));
       store.del("letters.draft");
       toast("寄出了");
-      letterForm(el, night);
+      letterForm(el, night, true);
     } catch { toast("沒寄出去，稿子還留著"); btn.disabled = false; }
   });
 }

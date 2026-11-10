@@ -2325,34 +2325,6 @@ details.band .svl { margin: 0 0 10px; }
 .pc-front .pc-sight { display: none; } /* the sight's name: a caption on the large card only, clear of the drawing's middle */
 .pc-view .postcard.big .pc-front .pc-sight { display: block; position: absolute; left: 4%; bottom: 5%; padding: 3px 9px 4px; background: rgb(251 246 234 / .9); color: #3A3027; font-family: var(--serif); font-size: 13px; letter-spacing: .1em; box-shadow: 0 1px 3px rgb(0 0 0 / .15); }
 
-/* 夜間版 (app.js viewNight): a quieter head — a moon, the title small, the night's name — and the evening's few things */
-.night-head { padding: calc(env(safe-area-inset-top, 0px) + 26px) 0 18px; border-bottom: 1px solid var(--rule); background: linear-gradient(180deg, color-mix(in srgb, var(--blue) 14%, var(--paper)), var(--paper)); }
-.night-head .wrap { display: flex; align-items: center; gap: 16px; }
-.night-head .moon { flex: none; width: 54px; height: 54px; }
-.night-head .moon path { fill: var(--gold-soft); stroke: var(--gold); stroke-width: 1.2; }
-.night-head .moon .st { fill: var(--gold); }
-.night-head .t { display: grid; gap: 2px; }
-.night-head .k { font-family: var(--sans); font-size: 12px; letter-spacing: .2em; color: var(--gold-ink); font-weight: 600; }
-.night-head .k i { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 13px; color: var(--gold); margin-left: 8px; }
-.night-head h1 { margin: 0; font-family: var(--serif); font-size: 24px; letter-spacing: .12em; color: var(--ink); }
-.night-head .d { font-family: var(--sans); font-size: 12.5px; color: var(--muted); letter-spacing: .06em; }
-.night .night-done { margin: 6px 0 18px; color: var(--ink-2); }
-.night :is(.night-verse, .night-morning) .lbl, .night-music .lbl { display: flex; align-items: baseline; gap: 10px; font-family: var(--sans); }
-.night :is(.night-verse, .night-morning) .lbl b, .night-music .lbl b { font-size: 12.5px; letter-spacing: .14em; color: var(--gold-ink); }
-.night :is(.night-verse, .night-morning) .lbl .de, .night-music .lbl .de { font-family: var(--latin); font-style: italic; font-size: 13px; color: var(--gold); }
-.night .night-verse { margin: 26px 0 0; padding: 16px 0 4px; border-top: 1px solid var(--rule); }
-.night .night-verse blockquote { margin: 10px 0 0; font-size: 1.04em; line-height: 1.95; color: var(--ink); }
-.night .night-verse sup { font-family: var(--sans); font-size: 10px; color: var(--gold); margin: 0 3px 0 6px; }
-.night .night-verse cite { display: block; margin-top: 8px; font-style: normal; font-family: var(--sans); font-size: 12.5px; color: var(--muted); }
-.night .night-music { display: grid; gap: 4px; margin: 22px 0 0; padding: 14px 16px; border: 1px solid var(--rule); border-left: 3px solid var(--gold); text-decoration: none; color: inherit; background: var(--paper-2); }
-.night .night-music .ti { font-family: var(--serif); font-size: 17px; color: var(--ink); line-height: 1.5; }
-.night .night-music .dek { font-size: 13.5px; line-height: 1.6; color: var(--ink-2); }
-.night .night-morning { margin: 26px 0 0; padding-top: 16px; border-top: 1px solid var(--rule); }
-.night .night-morning ul { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; }
-.night .night-morning li { font-size: 14.5px; line-height: 1.6; color: var(--ink-2); }
-.night .night-morning li .k { display: inline-block; min-width: 3.2em; margin-right: 8px; font-family: var(--sans); font-size: 12px; letter-spacing: .12em; color: var(--gold-ink); font-weight: 600; }
-.night .night-day { margin: 26px 0 8px; text-align: center; }
-
 /* 寫信給編輯部 and 編輯部回信 (app.js letterForm, lettersBox, viewLetters) */
 .letter-form textarea { width: 100%; box-sizing: border-box; margin: 8px 0 8px; padding: 10px 12px; font: inherit; font-size: 15px; line-height: 1.6; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 2px; resize: vertical; }
 .letter-form .btns { display: flex; align-items: center; gap: 12px; }
@@ -2361,11 +2333,7 @@ details.band .svl { margin: 0 0 10px; }
 .letter-form .letters-sent li { display: flex; justify-content: space-between; gap: 10px; color: var(--ink-2); }
 .letter-form .letters-sent .st { color: var(--muted); white-space: nowrap; }
 .letter-form .letters-sent a { white-space: nowrap; color: var(--gold-ink); }
-.night .night-letter { margin: 22px 0 0; padding: 14px 16px 14px; border: 1px solid var(--rule); background: var(--paper-2); }
 .letter-form .small { font-size: 13px; line-height: 1.65; color: var(--ink-2); margin: 6px 0 0; }
-.night .night-letter .lbl { display: flex; align-items: baseline; gap: 10px; font-family: var(--sans); }
-.night .night-letter .lbl b { font-size: 12.5px; letter-spacing: .14em; color: var(--gold-ink); }
-.night .night-letter .lbl .de { font-family: var(--latin); font-style: italic; font-size: 13px; color: var(--gold); }
 .letters { margin: 26px 0 0; }
 .letter { margin: 10px 0 18px; padding: 14px 16px; border: 1px solid var(--rule); border-top: 2px solid var(--gold); }
 .letter .q { margin: 0 0 10px; font-weight: 600; color: var(--ink); line-height: 1.7; }
@@ -2374,11 +2342,29 @@ details.band .svl { margin: 0 0 10px; }
 .letter .src { margin: 6px 0 0; font-family: var(--sans); font-size: 12.5px; color: var(--muted); }
 .letters-more { margin: 0; text-align: right; font-size: 13.5px; }
 .letter-date { margin: 18px 0 0; font-family: var(--sans); font-size: 12.5px; letter-spacing: .08em; color: var(--muted); }
-.night-back { margin: 14px 0 0; text-align: center; }
-.night-back .btn { display: inline-flex; align-items: center; gap: 8px; }
-.night-back .moon { width: 18px; height: 18px; }
-.night-back .moon path { fill: var(--gold-soft); stroke: var(--gold); stroke-width: 2; }
-.night-back .moon .st { fill: var(--gold); }
+/* The evening moon beside the crest (app.js masthead `moon`, 21:00–05:00 on the latest front page): a gold crescent and
+   three stars that breathe slowly; still when the phone asks for less motion */
+.crest .night-moon { position: absolute; left: calc(100% + 12px); top: -8px; width: 26px; height: 26px; z-index: 2; overflow: visible; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--gold) 45%, transparent)); }
+.crest .night-moon path { fill: var(--gold-soft); stroke: var(--gold); stroke-width: 2; }
+.crest .night-moon .st { fill: var(--gold); animation: moon-star 3.6s ease-in-out infinite; }
+.crest .night-moon .st:nth-of-type(2) { animation-delay: 1.2s; }
+.crest .night-moon .st:nth-of-type(3) { animation-delay: 2.4s; }
+@keyframes moon-star { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+@media (prefers-reduced-motion: reduce) { .crest .night-moon .st { animation: none; } }
+/* 晚上寫信 (app.js viewFront, letterForm night): one folded line at the top of the front page, a moon and the label */
+.night-letter { margin: 16px 0 4px; padding: 0 16px; border: 1px solid var(--rule); border-left: 3px solid var(--gold); background: var(--paper-2); }
+.night-letter summary { display: flex; align-items: center; gap: 10px; padding: 12px 0; cursor: pointer; list-style: none; font-family: var(--sans); }
+.night-letter summary::-webkit-details-marker { display: none; }
+.night-letter summary .moon { flex: none; width: 20px; height: 20px; }
+.night-letter summary .moon path { fill: var(--gold-soft); stroke: var(--gold); stroke-width: 2; }
+.night-letter summary .moon .st { fill: var(--gold); }
+.night-letter summary b { font-size: 13.5px; letter-spacing: .14em; color: var(--gold-ink); }
+.night-letter summary .de { font-family: var(--latin); font-style: italic; font-size: 13px; color: var(--gold); }
+.night-letter summary .note { margin-left: auto; font-size: 12px; color: var(--muted); }
+.night-letter summary::after { content: "＋"; font-size: 14px; color: var(--gold); }
+.night-letter[open] summary::after { content: "－"; }
+.night-letter[open] { padding-bottom: 14px; }
+.night-letter[open] .small:first-of-type { margin-top: 0; }
 /* 問這篇 (app.js askBox) */
 .ask-box { margin: 26px 0 8px; padding: 16px 18px 12px; border: 1px solid var(--rule); border-top: 2px solid var(--gold); }
 .ask-box .lbl { display: flex; align-items: baseline; gap: 10px; font-family: var(--sans); }
