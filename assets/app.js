@@ -1005,7 +1005,10 @@ async function viewArticle(date, column, my) {
   const order = issue ? sortArticles(issue.articles, date) : [], idx = order.findIndex((x) => x.column === column);
   [order[idx - 1], order[idx + 1]].forEach((n) => { if (n) article(date, n.column).catch(() => {}); });
   // The name is boxed on its own (.nm) so it is what gets the ellipsis on a narrow bar; the numeral always stays whole.
-  const titleIn = `<span class="col"><span class="nm">${esc(k.name)}</span>${idx >= 0 ? `<i class="pg">・${roman(idx + 1)}／${roman(order.length)}</i>` : ""}</span><span class="art">${esc(a.title)}</span>`;
+  // 連載: the bar's title leads to the 連載 page instead of the contents sheet (the owner, 2026-11-10: 讀連載時按最上面的
+  // 標題可以回到連載主頁), so its mark is an arrow, not the issue's numeral.
+  const toSerial = Boolean(a.serial);
+  const titleIn = `<span class="col"><span class="nm">${esc(k.name)}</span>${toSerial ? `<i class="pg" aria-hidden="true">→</i>` : idx >= 0 ? `<i class="pg">・${roman(idx + 1)}／${roman(order.length)}</i>` : ""}</span><span class="art">${esc(a.title)}</span>`;
   const fix = column === "football" ? fixtureOf(me?.next ?? a.next) : null;
   // 更正 (findings 32, 42): the header points at the correction itself, not at a generic 更新於 — and when updated_at is
   // only the old audit's stamp of that same day, it is not shown as an update of the news.
@@ -1013,7 +1016,7 @@ async function viewArticle(date, column, my) {
   main.innerHTML = `
     <div class="topbar"><div class="in">
       <a class="icon-btn" data-back href="${fromList || (issue && date !== publishedIssues()[0]?.date ? `#/issue/${date}` : "#/")}" aria-label="${fromList ? "返回" : "回到本期"}">${ICON.back}</a>
-      ${idx >= 0 ? `<button class="title" type="button" data-contents aria-label="本期目錄：${esc(k.name)}，第 ${idx + 1} 篇，共 ${order.length} 篇">${titleIn}</button>` : `<div class="title">${titleIn}</div>`}
+      ${toSerial ? `<a class="title" href="#/serial" data-to-serial aria-label="連載：全部回目">${titleIn}</a>` : idx >= 0 ? `<button class="title" type="button" data-contents aria-label="本期目錄：${esc(k.name)}，第 ${idx + 1} 篇，共 ${order.length} 篇">${titleIn}</button>` : `<div class="title">${titleIn}</div>`}
       ${canSpeak() ? `<button class="icon-btn" type="button" data-speak aria-pressed="false" aria-label="朗讀本文">${ICON.speak}</button>` : ""}
       <button class="icon-btn" type="button" data-aa aria-label="字級" aria-haspopup="true" aria-expanded="false">${ICON.text}</button>
       <button class="icon-btn" type="button" data-save aria-pressed="${isSaved(key)}" aria-label="收藏">${isSaved(key) ? ICON.starOn : ICON.star}</button>
@@ -1156,6 +1159,8 @@ async function viewArticle(date, column, my) {
   // (The sideways swipe that turned pages here was taken out on 2026-11-01 at the owner's request.)
   const turns = new AbortController(), { signal } = turns;
   main.querySelector("[data-contents]")?.addEventListener("click", () => openContents(date, order, idx), { signal });
+  // Opened from 連載 (perhaps a few installments on): step back to that page, where it was left, as the 連載 tab does.
+  main.querySelector("[data-to-serial]")?.addEventListener("click", (e) => { if (fromList === "#/serial") { e.preventDefault(); history.go(-fromHops); } }, { signal });
 
   // Read aloud: the top-bar button starts and pauses; it stops when the reader leaves the article.
   let reader = null;

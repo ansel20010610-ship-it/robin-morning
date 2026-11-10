@@ -300,6 +300,7 @@ button { font: inherit; color: inherit; }
 /* In an article the title is a button that raises the contents sheet (app.js openContents); after the column's name
    comes the page's place in the issue in Roman numerals, set like the paper's German — Cormorant italic, gold. */
 .topbar button.title { -webkit-appearance: none; appearance: none; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; align-self: stretch; align-content: center; }
+.topbar a.title { text-decoration: none; align-self: stretch; align-content: center; } /* a 連載 installment's bar: the way to the 連載 page */
 .topbar .title .pg { font-family: var(--latin); font-style: italic; font-size: 15px; letter-spacing: .04em; color: var(--gold-ink); margin-left: 1px; flex: 0 0 auto; }
 /* On a 375px bar the five buttons leave the title about 125px; the column's name (the long new ones run to nine
    characters) is what gets the ellipsis, so the numeral — the way into the contents sheet — is always whole. */
