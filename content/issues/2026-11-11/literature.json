@@ -1,14 +1,14 @@
 {
   "column": "literature",
   "date": "2026-11-11",
-  "title": "十八頁的信，他只要求她公平",
-  "dek": "求婚被拒的隔天早上，他寫滿了兩張信紙，第一句先保證不會再求一次。",
-  "brief": "《傲慢與偏見》裡，達西被伊莉莎白拒婚，隔天交給她一封信，不求她回心轉意，只要她拿出公正來讀。這封信在 1813 年初版裡印了 18 頁，逐條回應她前一晚的兩項指控。她第一遍讀完認定全是謊話，在小路上反覆讀了兩個小時，才承認自己看錯了人。",
+  "title": "被拒婚的第二天早上，達西遞給她一封信",
+  "dek": "「我向你的公正要求。」求婚被拒的第二天早上，達西在信裡這樣寫。",
+  "brief": "《傲慢與偏見》裡，達西求婚被伊莉莎白拒絕，第二天早上交給她一封長信，不求她回心轉意，只要她拿公正來讀。這封信在 1813 年初版從第 138 頁印到第 155 頁，逐條回答她前一晚的兩項指控。她第一遍讀得又急又氣，後來在小路上走來走去，想了兩個小時。",
   "topic_key": "literature:austen-pride-and-prejudice-ii-12",
   "form": "document",
   "voice": "correspondent",
-  "updated_at": "2026-11-11T02:53:00+08:00",
-  "spoiler": "本文後段談到伊莉莎白後來去彭伯里，以及第 58 章兩人和好後提起這封信",
+  "updated_at": "2026-11-11T03:13:00+08:00",
+  "spoiler": "本文談到達西信裡講的韋翰與喬治安娜、伊莉莎白讀信之後的轉變，以及第 58 章兩人和好後提起這封信",
   "disclaimer": null,
   "hero": {
     "id": "hero",
@@ -25,74 +25,364 @@
     "made": "1813"
   },
   "body": [
-    {"type": "p", "text": "信封裡裝著兩張信紙，從頭寫到尾，字擠得很密，連信封本身也寫滿了。信上註明寫於羅辛斯，早上八點。你上次問我，伊莉莎白怎麼會在半本書之內，就把達西整個人看反過來。我想答案大半就在這個信封裡，所以這封回信，我打算從頭到尾跟著那封信走。"},
-    {"type": "p", "text": "先把書交代一下。這是英國小說家**珍・奧斯汀（Jane Austen）**的**《傲慢與偏見》（Pride and Prejudice）**。她 1775 年生在英格蘭南部漢普郡的鄉下，父親是村裡的牧師，1817 年過世，才 41 歲。這本書她二十出頭就寫好了，那時叫《第一印象》（First Impressions）。父親寫信問倫敦一位書商要不要看稿，對方回信就拒絕了。她擱了十幾年，改過一遍，1813 年 1 月 28 日才出版，分成三冊，封面沒有署名。"},
-    {"type": "p", "text": "開頭那句「有錢的單身漢一定想娶個太太，這是舉世公認的真理」，很多人背得出來；1995 年 BBC 那套柯林・佛斯演達西的影集，2005 年綺拉・奈特莉演伊莉莎白的電影，大多數人至少看過一部。這封信放在全書的正中間：61 章裡的第 35 章，一位研究奧斯汀書信的學者叫它整本小說的樞紐。在初版的第二冊，它從第 138 頁印到第 155 頁，**整整 18 頁**。整本書裡，讀者只有這一次，能從頭到尾聽達西用自己的話講他自己。"},
-    {"type": "h", "text": "前一晚的客廳"},
-    {"type": "p", "text": "信要從前一晚讀起。伊莉莎白那時還不滿 21 歲，是赫特福郡班奈特家五個女兒裡的老二，到肯特郡探望剛嫁給柯林斯牧師的好友夏綠蒂。隔壁的大莊園羅辛斯，是達西的姨媽凱瑟琳夫人的家。達西是德比郡彭伯里莊園的主人，一年收入一萬鎊，正好來姨媽家作客。那天晚上他一個人上門，開口就說他掙扎過了，沒有用，他的感情壓不住了。"},
-    {"type": "p", "text": "他的愛講得很好，可是她家門第有多低、娶她有多委屈，他講得一樣起勁。伊莉莎白拒絕了，還當面指控他兩件事：一是拆散了她大姊珍和他的好朋友賓利；二是害了一個叫韋翰的年輕軍官，把老達西先生答應給韋翰的前途扣住不給。她說，他求婚的態度只有一個用處，就是省得她拒絕時心裡過意不去；要是他「像個紳士一點」，她拒絕時還會難過。他是全世界她最不可能嫁的人。他走以後，她坐下來哭了半個小時。"},
-    {"type": "p", "text": "第二天早上她出門散步，特意避開平常那條路，沿著莊園柵欄外的小徑走。達西還是從樹林裡走了出來，叫住她，把信遞過去，問她肯不肯賞光讀一讀。然後微微一鞠躬，轉身回到林子裡。"},
-    {"type": "figure", "id": "f1", "kind": "illustration", "src": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Illustration_by_C_E_Brock_for_Pride_and_Prejudice_-_Will_you_do_me_the_honour_of_reading_that_letter.jpg", "width": 1218, "height": 2046, "alt": "鋼筆插畫。莊園的木柵門邊，一位穿長外套、高筒靴的男子一手舉著禮帽和手杖，一手把信遞出去；對面的女子戴著帽子，雙手揣在毛皮手筒裡，伸出一隻手去接。圖下一行英文斜體字。", "caption": "插畫家布洛克替 1895 年倫敦 Macmillan 版畫的這一幕，圖下題的是達西那句「你肯賞光讀一讀這封信嗎？」", "credit": "Charles Edmund Brock（1870–1938）；大英圖書館藏，經 Wikimedia Commons", "license": "Public domain", "license_url": "", "source_url": "https://commons.wikimedia.org/wiki/File:Illustration_by_C_E_Brock_for_Pride_and_Prejudice_-_Will_you_do_me_the_honour_of_reading_that_letter.jpg", "made": "1895", "depicts": "小說情節，約 1790 年代"},
-    {"type": "h", "text": "先保證不會再求一次"},
-    {"type": "p", "text": "信是這樣開頭的。"},
-    {"type": "quote", "original": "Be not alarmed, Madam, on receiving this letter, by the apprehension of its containing any repetition of those sentiments, or renewal of those offers, which were last night so disgusting to you.", "text": "收到這封信，請不要驚慌，以為信裡又要重提那些心意、再提那些請求；昨晚，它們讓你那麼厭惡。", "cite": "達西致伊莉莎白的信，第一句"},
-    {"type": "p", "text": "前一晚她的反感，他自己替她寫進了第一句：那些心意、那些請求，讓她厭惡。先把收信人想說的話說完，再保證不會重提，這是一個被拒絕的人很少有的開法。他接著說，寫這封信不是要讓她難受，也不是要放低身段；要不是為了自己的名聲，寫信和讀信的這番力氣，本來都可以省下。然後是這一句。"},
-    {"type": "quote", "original": "You must, therefore, pardon the freedom with which I demand your attention; your feelings, I know, will bestow it unwillingly, but I demand it of your justice.", "text": "所以，請原諒我這樣冒昧，要你費神讀下去；我知道，你的感情不會甘願給，可是我向你的公正要求。", "cite": "同上，第一段最後一句"},
-    {"type": "p", "text": "他沒有請她原諒，也沒有請她回心轉意。他承認她的感情不會想讀，所以乾脆不去碰感情。**他不求她的感情，只求她的公正。**我覺得這是整封信最聰明的一步。伊莉莎白最得意的，就是自己有判斷、講道理；愛可以拒絕，一個自認講理的人，卻很難拒絕把一份陳述公平地讀完。"},
-    {"type": "p", "text": "所以接下來的十幾頁，讀起來像法庭上的答辯。初版裡這封信只分兩段，第一段到「公正」為止，第二段一口氣寫到底，開頭就是：「你昨晚加在我身上的兩項罪名，性質大不相同，輕重也絕不相等。」後面他逐條回應，說自己找得到不只一位可靠的證人，最後請她「從此判我對韋翰並無殘忍之罪」。"},
-    {"type": "h", "text": "大姊和賓利"},
-    {"type": "p", "text": "第一條是賓利和珍。他說賓利戀愛過很多次，他本來沒當真。直到一場舞會上，他正和伊莉莎白跳舞，旁人隨口說起大家都在等賓利和珍訂婚，他才開始留意。他看珍，看到的是開朗、親切，和平常一樣，卻看不出她對賓利有什麼特別的情意。「如果你在這件事上沒看錯，那錯的就是我。」"},
-    {"type": "p", "text": "他又說，他不是因為希望珍不在乎，才相信她不在乎，他是出於公正的判斷。這句寫得很用力，我反而不太買帳，因為同一段裡他也承認，他確實很想相信珍不在乎。"},
-    {"type": "p", "text": "然後是讓伊莉莎白最難堪的一段。他說，她母親、她三個妹妹，偶爾甚至她父親，在人前幾乎一貫地不得體。寫到父親，他在句子中間停下來，插了一句「原諒我，冒犯你，我也難受」。可是他沒有把這句話刪掉，道完歉就繼續往下寫，最後才回頭稱讚她和珍，說她們兩人從來沒有這些毛病。"},
-    {"type": "p", "text": "這一條他只認了一個錯：珍到了倫敦，他知道，卻瞞著賓利。他說這樣的隱瞞，也許有失他的身分，「可是事情做了，而且是為了好」。他至今還學不會責怪自己當時的動機。這是一個不太會道歉的人寫的信，認的錯只有一點點，認得也很硬。"},
-    {"type": "h", "text": "三千鎊和一個十五歲的女孩"},
-    {"type": "p", "text": "第二條是韋翰，這裡要先講一件當時的事。英國鄉下一個教區的牧師職位，連同它的收入，常常是由當地的地主家族決定要給誰。奧斯汀對這種事很熟：她父親能當上村裡的牧師，就是一位有錢的親戚把這個位子給了他。"},
-    {"type": "p", "text": "韋翰的父親替達西家管了很多年的產業，韋翰是老達西先生的教子。老達西供他念書，一路念到劍橋，過世前在遺囑裡交代兒子：韋翰如果當牧師，家裡有一個收入不錯的牧師職位，一空出來就給他；另外再留他 1,000 鎊。不到半年，韋翰寫信來說不想當牧師了，想讀法律，要現金。達西給了他 3,000 鎊，他放棄那個職位。讀法律只是藉口，他在倫敦過得遊手好閒。大約三年後，那個職位真的空出來了，韋翰又寫信來要，說他現在下定決心當牧師。達西拒絕，之後每一次都拒絕。"},
-    {"type": "p", "text": "韋翰當初跟伊莉莎白講的，是另一個版本：老先生答應給他的牧師職位，被做兒子的扣下了。兩人的說法前半段對得上，到了遺囑之後就分岔了。"},
-    {"type": "p", "text": "接下來是信裡最私密的一段。達西說，這件事他自己也想忘掉，要不是眼前非說不可，他不會告訴任何人；「說了這麼多，我不懷疑你會保密」。他的妹妹喬治安娜比他小十歲以上，前一年夏天，由照顧她的女伴帶去海邊小鎮拉姆斯蓋特。韋翰也去了，有那位女伴幫忙，說動喬治安娜相信自己戀愛了，答應跟他私奔。「她那時才十五歲，這只能算是她的藉口。」私奔前一兩天，達西突然趕到；妹妹不忍讓這個幾乎像父親一樣的哥哥傷心，全都說了。喬治安娜的財產是三萬鎊。"},
-    {"type": "p", "text": "我佩服他的，是這一段。前一晚才被拒絕、被當面說成冷酷無情的人，隔天早上把妹妹差點私奔的家醜，寫給剛拒絕他的人看，只附一句「我不懷疑你會保密」。他要她公正，自己先把最不能讓外人知道的事交到她手上。"},
-    {"type": "h", "text": "最後一句是祝福"},
-    {"type": "p", "text": "信快寫完時，他已經料到她不會信他：「如果你對我的厭惡讓我的話一文不值，同樣的理由總攔不住你去信我的表哥。」表哥是費茲威廉上校，喬治安娜的另一位監護人，也是老達西遺囑的執行人之一，這幾天正好也住在羅辛斯。他說，會想辦法在上午把信交到她手上，好讓她還來得及去問上校。最後一句是：「我只再說一句：願上帝保佑你。」"},
-    {"type": "p", "text": "署名是 Fitzwilliam Darcy，連名帶姓。整本書裡，這個全名只出現兩次。另一次在第 25 章，伊莉莎白的舅媽想起，以前聽人說過，小時候的費茲威廉・達西是個「很驕傲、脾氣很壞的男孩」。頭一次是別人嘴裡的閒話，第二次是他自己簽下的名字。"},
-    {"type": "h", "text": "小路上的兩個小時"},
-    {"type": "p", "text": "伊莉莎白讀第一遍的時候，奧斯汀寫她對他可能說的每一句話，都懷著強烈的偏見。她急著知道下一句寫什麼，連眼前這一句都讀不進去。讀到珍那段，她認定他說的不是真的；讀到她家人那段，她氣得根本不想對他公平。她的結論是：口氣一點也不懊悔，只有傲慢，「全是驕傲和無禮」。"},
-    {"type": "p", "text": "讀到韋翰，她叫了出來：這一定是假的，不可能，這是最惡劣的謊話。她把信收起來，說再也不看了。不到半分鐘，信又打開了。"},
-    {"type": "p", "text": "這一次，她逼自己把每一句的意思都弄清楚。她放下信，把每一件事放在心裡秤，用她自以為公正的秤。可是韋翰講的和達西寫的，各自都只是一面之詞。1894 年替這本書畫插圖的湯姆森，在第 36 章開頭就畫了這個樣子：她坐在椅子上，一手拿著信，一手提著一把天平。"},
-    {"type": "figure", "id": "f2", "kind": "illustration", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Thomson-PP-Ch35-36.JPG/1280px-Thomson-PP-Ch35-36.JPG", "src_large": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Thomson-PP-Ch35-36.JPG", "width": 1280, "height": 1723, "alt": "一頁英文書，分左右兩欄。右上角是一幅鋼筆畫：穿長裙的年輕女子坐在椅子上，右手拿著一張信紙，左手伸直提著一把天平。左下角有一把直立的劍，劍下是章首的大寫字母。", "caption": "湯姆森替 1894 年倫敦 George Allen 版畫的插圖，掃描在一頁翻印本上：左欄是達西的信最後幾段和署名，右上是第 36 章的章首圖，左下那把劍是第 36 章第一個字母的裝飾。", "credit": "Hugh Thomson（1860–1920）；Wikimedia Commons 掃描", "license": "Public domain", "license_url": "", "source_url": "https://commons.wikimedia.org/wiki/File:Thomson-PP-Ch35-36.JPG", "made": "插圖 1894"},
-    {"type": "detail", "of": "f2", "region": [0.55, 0.0, 0.44, 0.33], "position": "右上角，約佔寬度四成、高度三分之一", "caption": "一手拿信，一手提天平。這幅章首圖，畫的就是她在小路上把每一件事放在心裡秤。"},
-    {"type": "p", "text": "最後讓秤傾斜的，不是信裡的證據，是她自己的記憶。她想找出韋翰做過的一件好事，想不出來，只記得他的風度、他的口才、鄰居都喜歡他。她想起他頭一次見面，就對一個陌生人講達西家的事；想起他誇口說不怕見達西，下一週的舞會卻沒來；想起達西他們離開以前，這段故事他只講給她一個人聽，人一走，就到處講。"},
-    {"type": "p", "text": "她羞愧得無地自容，覺得自己對這兩個人都是盲目的、偏心的、有偏見的、荒唐的。「我還一向以自己識人的眼光自豪！」她說，要是她在戀愛，也不會瞎得比這更可憐；可是讓她犯傻的不是愛，是虛榮。"},
-    {"type": "quote", "original": "Till this moment, I never knew myself.", "text": "直到這一刻，我才認識自己。", "cite": "伊莉莎白讀信之後，1813 年初版第二冊第 13 章（通行本第 36 章）"},
-    {"type": "p", "text": "書名的兩個詞，讀者通常一個分給達西，一個分給伊莉莎白。在這條小路上，她發現兩樣她都有：她最自豪的是眼光，看錯人的偏偏也就是這雙眼睛。"},
-    {"type": "p", "text": "然後她回頭重讀珍那一段，「第二遍讀，效果大不相同」。她想起好友夏綠蒂早就說過，珍的感情不太露在臉上。她在那條小路上走了兩個小時才回家。家裡人說，達西來辭行過，上校等了她一個鐘頭。奧斯汀寫，她心裡只想著她的信。前一天，那還是他硬塞過來的東西。"},
-    {"type": "spoiler", "text": "以下談到伊莉莎白後來去彭伯里，以及兩人和好後提起這封信"},
-    {"type": "h", "text": "她沒有就此回心轉意"},
-    {"type": "p", "text": "接下來幾個禮拜，她差不多把信背了下來，每一句都研究過。想到他寫信的口氣，她還是生氣；想到自己怎麼冤枉他，氣就轉到自己身上。她感激他的愛，尊敬他的為人。可是奧斯汀寫得清清楚楚：她不贊成他，一刻也不後悔拒絕他，一點也不想再見到他。"},
-    {"type": "p", "text": "這就是你問的那個轉折。她沒有在一封信裡愛上他。信要的是公正，她給的也就是公正，一分不多。要是伊莉莎白讀完信就回頭，這本書就只是一本好看的愛情小說；奧斯汀讓她先承認自己看錯人，愛要等到下半本，等她自己走進彭伯里，看見那個人在家裡是什麼樣子。"},
-    {"type": "p", "text": "出版那時的事，我也去翻了奧斯汀自己的信。1813 年 1 月 29 日，她寫信給姊姊卡珊卓，說「我那個寶貝孩子」從倫敦寄到了。當晚她和母親把第一冊讀了半本給一位來訪的女客聽，沒說是誰寫的。她說伊莉莎白是她見過「印在書上最討人喜歡的人物」，不喜歡伊莉莎白的人，她真不知道要怎麼忍。她也嫌第二冊比她希望的短，說那一冊敘述的比例比較大。這封信，就在第二冊裡。"},
-    {"type": "p", "text": "2 月 4 日她又寫：這本書「太輕、太亮、太閃了，缺一點陰影」，她想在中間塞一長章正經東西，談寫作也好，評司各特也好，講拿破崙也好。這一點我不同意她。陰影已經在書裡，就在第二冊那 18 頁：錢、遺囑、一個差點被騙走的 15 歲女孩，還有一個男人寫到她父親時，停下來說一聲原諒我。"},
-    {"type": "p", "text": "最後說說那封信的下場。快到書尾，兩人已經和好，達西問她，那封信有沒有很快就讓她對他改觀。他說希望她已經把信毀了，尤其是開頭那一段，他怕她還能拿出來重讀。他說寫的時候自以為冷靜，後來才明白，是在極深的苦澀裡寫的。"},
-    {"type": "p", "text": "伊莉莎白說，他要是真覺得有必要，她一定把信燒掉。然後她說：「信也許是在苦澀裡開頭的，可是不是這樣結尾的。那句告別，就是仁慈本身。」那句告別，是「願上帝保佑你」。"},
-    {"type": "facts", "title": "這封信", "items": [
-      ["作者", "珍・奧斯汀（Jane Austen，1775–1817），英格蘭漢普郡"],
-      ["作品", "《傲慢與偏見》（Pride and Prejudice），原名《第一印象》，寫於 1796–1797 年，1811–1812 年修改"],
-      ["首次出版", "1813 年 1 月 28 日，倫敦 T. Egerton，三冊，匿名"],
-      ["本文依據的版本", "引文依 1813 年初版第二冊掃描（Wikisource 轉錄，牛津大學藏本）；其餘章節另對照 Project Gutenberg #1342（據 1894 年 George Allen 版轉錄）"],
-      ["引文位置", "達西的信：初版第二冊第 12 章，第 138–155 頁（通行本第 35 章）；「直到這一刻」：第二冊第 13 章第 166 頁（通行本第 36 章）；信的下場：第三冊第 16 章（通行本第 58 章）"],
-      ["奧斯汀的信", "1813 年 1 月 29 日、2 月 4 日致姊姊卡珊卓，據 Project Gutenberg #42078《The Letters of Jane Austen》"]
-    ]}
+    {
+      "type": "p",
+      "text": "老朋友，你上次問我，**《傲慢與偏見》**裡的信那麼多，要是只重讀一封，該讀哪一封。我查到的說法是，書裡引用或提到的信大約有四十封。我會選達西寫給伊莉莎白的那一封。前一天晚上，他向她求婚，被她當面拒絕；第二天早上，他把這封信交給她。那是在英國的肯特郡，兩個人都在那裡作客。"
+    },
+    {
+      "type": "p",
+      "text": "這本書是英國小說家**珍・奧斯汀**寫的，1813 年初在倫敦出版，當時沒有署名。她 1775 年生在英格蘭南部的漢普郡，父親是鄉下的牧師，1817 年過世時才 41 歲。書是她二十出頭寫的，原本叫《第一印象》。父親寫信問倫敦一位書商要不要看稿，對方回信就拒絕了；十幾年後她大改一遍，才賣給出版商。你要是看過 1995 年柯林・佛斯演達西的 BBC 影集，或 2005 年綺拉・奈特莉演伊莉莎白的電影，講的都是這個故事。"
+    },
+    {
+      "type": "p",
+      "text": "這封信在第 35 章。全書 61 章，它差不多就在中間。北美奧斯汀學會的期刊上有一篇文章，說這封信是這本書轉彎的地方。初版分成三冊，信在第二冊，**從第 138 頁印到第 155 頁**，跨了 18 頁。下面引的原文，我都照那一版的掃描翻給你。"
+    },
+    {
+      "type": "h",
+      "text": "求婚那一晚"
+    },
+    {
+      "type": "p",
+      "text": "伊莉莎白那時還不滿 21 歲，是赫特福郡班奈特家五個女兒裡的老二。她到肯特郡的漢斯福，探望嫁給柯林斯牧師的好友夏綠蒂。牧師家旁邊就是羅辛斯莊園，主人凱瑟琳夫人是達西的姨媽。達西是德比郡彭伯里莊園的主人，很有錢，那年 28 歲，正在姨媽家作客。"
+    },
+    {
+      "type": "p",
+      "text": "那天晚上他開口就說，他掙扎過了，沒有用，他的感情壓不住了，請她容他說出自己有多愛慕她、多愛她。可是她的門第有多低、娶她有多委屈、她家裡有多少阻礙，他也講了不少。伊莉莎白拒絕了，還當面指控他兩件事。一件是拆散了她大姊珍和他的好朋友賓利，她說他在這件事上不公道、不厚道。另一件是害了一個叫韋翰的民兵軍官。"
+    },
+    {
+      "type": "p",
+      "text": "她還說，要是他求婚時像個紳士一點，她拒絕時也許還會過意不去。他是全世界她最不可能嫁的人。他走了以後，她坐下來哭了半個小時。"
+    },
+    {
+      "type": "p",
+      "text": "第二天早上她出門散步，避開了平常常走的那條路，沿著莊園柵欄外的小路走。達西從樹林裡走出來，叫了她的名字，把信遞過來，她不自覺就接了。他問她肯不肯賞光讀一讀這封信，然後微微一鞠躬，走回林子裡。信封裡是兩張信紙，從頭寫到尾，字很密，連信封上也寫滿了。信上註明寫於羅辛斯，早上八點。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Illustration_by_C_E_Brock_for_Pride_and_Prejudice_-_Will_you_do_me_the_honour_of_reading_that_letter.jpg",
+      "width": 1218,
+      "height": 2046,
+      "alt": "鋼筆插畫。莊園的木柵門邊，一位穿長外套、高筒靴的男子一手舉著禮帽和手杖，一手把信遞出去；對面的女子戴著帽子，雙手揣在毛皮手筒裡，伸出一隻手去接。圖下一行英文斜體字。",
+      "caption": "插畫家布洛克替 1895 年倫敦 Macmillan 版畫的這一幕，圖下題的是達西那句「你肯賞光讀一讀這封信嗎？」",
+      "credit": "Charles Edmund Brock（1870–1938）；大英圖書館藏，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Illustration_by_C_E_Brock_for_Pride_and_Prejudice_-_Will_you_do_me_the_honour_of_reading_that_letter.jpg",
+      "made": "1895",
+      "depicts": "小說情節"
+    },
+    {
+      "type": "h",
+      "text": "第一句先保證不再提"
+    },
+    {
+      "type": "p",
+      "text": "拆開信，第一句是這樣寫的。"
+    },
+    {
+      "type": "quote",
+      "original": "Be not alarmed, Madam, on receiving this letter, by the apprehension of its containing any repetition of those sentiments, or renewal of those offers, which were last night so disgusting to you.",
+      "text": "收到這封信，請不要驚慌，以為信裡又要重提那些心意、再提那些請求；昨晚，它們讓你那麼厭惡。",
+      "cite": "達西致伊莉莎白的信，第一句"
+    },
+    {
+      "type": "p",
+      "text": "她前一晚的反感，他自己寫進了第一句：那些心意、那些請求，讓她厭惡。接著他說，寫這封信不是要讓她難受，也不是要放低自己的身段。要不是為了他的名聲，寫信和讀信的這番力氣，本來都可以省下來。第一段寫到最後，他提了一個要求。"
+    },
+    {
+      "type": "quote",
+      "original": "You must, therefore, pardon the freedom with which I demand your attention; your feelings, I know, will bestow it unwillingly, but I demand it of your justice.",
+      "text": "所以，請原諒我這樣冒昧，要你費神讀下去；我知道，你的感情不會甘願給，可是我向你的公正要求。",
+      "cite": "同上，第一段最後一句"
+    },
+    {
+      "type": "p",
+      "text": "他先為這份冒昧請她原諒，然後把感情和公正分開來講。**感情，他知道她不會甘願給；公正，他直接開口要。**初版這封信只分兩段，第一段就停在「公正」這個詞上。第二段一口氣寫到署名，開頭是：「你昨晚加在我身上的兩項罪名，性質大不相同，輕重也絕不相等。」"
+    },
+    {
+      "type": "h",
+      "text": "大姊和賓利"
+    },
+    {
+      "type": "p",
+      "text": "第一項是珍和賓利。他說，在一場舞會上，有人告訴他，大家都在等賓利和珍訂婚。他從那時起留意珍，卻看不出她對賓利有什麼特別的情意。他寫：「如果你在這件事上沒看錯，那錯的一定是我。」原文裡「你」和「我」都印成斜體。"
+    },
+    {
+      "type": "p",
+      "text": "接著他說，他相信珍不在乎，不是因為他希望如此，他是公正地判斷出來的；只不過，他也承認自己真心這樣希望。這句我不太信。他自己都說心裡盼著這個結果，判斷時還能有多公正，我很懷疑。"
+    },
+    {
+      "type": "p",
+      "text": "然後他講到她的家人。他說，她母親、她三個妹妹，偶爾連她父親，常常不得體。寫到父親，他在句子中間停下來，插了一句：「原諒我，冒犯你，我也難受。」接著他稱讚她和珍，說她們兩人沒有這些毛病。"
+    },
+    {
+      "type": "p",
+      "text": "這一項，他只認了一個錯。珍到了倫敦，他知道，卻瞞著賓利。他說，這樣隱瞞也許有失他的身分，「可是事情已經做了，而且是為了好」。他還說，自己到現在都還學不會責怪那時的動機。"
+    },
+    {
+      "type": "spoiler",
+      "text": "以下談到達西信裡講的韋翰與喬治安娜、伊莉莎白讀信之後怎麼想，以及兩人後來和好時提起這封信"
+    },
+    {
+      "type": "h",
+      "text": "三千鎊"
+    },
+    {
+      "type": "p",
+      "text": "第二項是韋翰。你在書裡讀到的「牧師職位」，背後是當時英國鄉下的一個習慣：一個教區的牧師職位，連同它的收入，常由當地的地主家族決定給誰。奧斯汀家也是這樣，她父親在家鄉的村子當牧師，這個位子是家族一位有錢的姻親給的。"
+    },
+    {
+      "type": "p",
+      "text": "韋翰的父親替達西家管彭伯里的產業，韋翰是老達西先生的教子。老達西大約五年前過世，遺囑交代兒子：韋翰要是當牧師，家裡有一個收入不錯的牧師職位，一空出來就給他。不到半年，韋翰寫信來說他不當牧師了，想去讀法律，要拿現金。達西給了他三千鎊，他就放棄了那個職位。達西說，讀法律只是幌子。"
+    },
+    {
+      "type": "p",
+      "text": "大約三年後，那個職位真的空出來了，韋翰又寫信來要。達西拒絕了，之後他每次來要，達西都拒絕。達西說，這些事他找得到不只一位可靠的證人。他也替伊莉莎白說了一句話：韋翰的底細，她沒辦法看穿，也不會想去懷疑。"
+    },
+    {
+      "type": "h",
+      "text": "十五歲的妹妹"
+    },
+    {
+      "type": "p",
+      "text": "接下來他寫了一件家裡的事。他說，這件事他自己都想忘掉，要不是眼前非說不可，他不會告訴任何人。「說了這麼多，我不懷疑你會保密。」他的妹妹喬治安娜比他小十歲以上，由他和表哥費茲威廉上校一起監護。"
+    },
+    {
+      "type": "p",
+      "text": "去年夏天，照顧她的女伴楊格太太帶她去海邊小鎮拉姆斯蓋特。韋翰也去了，說動喬治安娜答應跟他私奔。達西寫：「她那時才十五歲，情有可原。」私奔前一兩天，達西趕到，她自己把事情全說了。她名下的財產是三萬鎊。"
+    },
+    {
+      "type": "p",
+      "text": "跟你說，整封信我停最久的，是那句保密。前一晚她才說他做事不公道、不厚道。隔天早上，他就把妹妹差點私奔的事寫下來，交給這個剛拒絕他的人。"
+    },
+    {
+      "type": "h",
+      "text": "去問我表哥"
+    },
+    {
+      "type": "p",
+      "text": "他也料到她可能不信。他寫：「就算你討厭我到不信我，你總不會連我表哥也不信。」費茲威廉上校是他母親的外甥，也是老達西遺囑的執行人之一。他說，這是一份忠實的陳述，請她從此別再說他虧待了韋翰。"
+    },
+    {
+      "type": "p",
+      "text": "信的署名是 Fitzwilliam Darcy，連名帶姓。整本書裡，這個全名只出現兩次。另一次在第 25 章：伊莉莎白的舅媽說，她以前聽人講過，小時候的費茲威廉・達西是個很驕傲、脾氣很壞的男孩。"
+    },
+    {
+      "type": "h",
+      "text": "小路上的兩個小時"
+    },
+    {
+      "type": "p",
+      "text": "第 36 章寫她讀信。第一遍，她對他可能說的每一句話都帶著很深的偏見。她急著知道下一句寫什麼，連眼前這句都讀不進去。讀到珍那段，她立刻斷定他說的是假的；讀到家人那段，她氣得根本不想對他公平。她覺得他的口氣沒有一點悔意，只有傲慢，「全是驕傲和無禮」。"
+    },
+    {
+      "type": "p",
+      "text": "讀到韋翰，她一再叫出來：這一定是假的，不可能，這是最惡劣的謊話。她把信收起來，說再也不看了。不到半分鐘，信又打開了。"
+    },
+    {
+      "type": "p",
+      "text": "這一次，她逼自己把每一句的意思都弄清楚。韋翰也跟她講過他和達西家的事，到遺囑以前，兩邊的說法都對得上；到了遺囑，就差遠了。她放下信，把每一件事放在心裡秤，用的是她自以為公正的那把秤。可是兩邊都只是一面之詞。1894 年替這本書畫插圖的湯姆森，在第 36 章的章首就畫了這個樣子，我附在下面給你看：她坐在椅子上，一手拿著信，一手提著一把天平。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Thomson-PP-Ch35-36.JPG/1280px-Thomson-PP-Ch35-36.JPG",
+      "src_large": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Thomson-PP-Ch35-36.JPG",
+      "width": 1280,
+      "height": 1723,
+      "alt": "一頁英文書，分左右兩欄。右上角是一幅鋼筆畫：穿長裙的年輕女子坐在椅子上，右手拿著一張信紙，左手伸直提著一把天平。左下角有一把直立的劍，劍下是章首的大寫字母。",
+      "caption": "湯姆森替 1894 年倫敦 George Allen 版畫的插圖，掃描在一頁翻印本上：左欄是達西的信最後幾段和署名，右上是第 36 章的章首圖，左下那把劍是第 36 章第一個字母的裝飾。",
+      "credit": "Hugh Thomson（1860–1920）；Wikimedia Commons 掃描",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Thomson-PP-Ch35-36.JPG",
+      "made": "插圖 1894"
+    },
+    {
+      "type": "detail",
+      "of": "f2",
+      "region": [
+        0.55,
+        0.0,
+        0.44,
+        0.33
+      ],
+      "position": "右上角，約佔寬度四成、高度三分之一",
+      "caption": "一手拿信，一手提天平。這幅章首圖，畫的就是她在小路上把每一件事放在心裡秤。"
+    },
+    {
+      "type": "p",
+      "text": "她努力想韋翰做過什麼好事，一件也想不出來。她只記得他的風度，和鄰居對他的好評。讀到喬治安娜那段，有一部分和前一天早上上校跟她說的話對得上。信裡又叫她直接去問上校。"
+    },
+    {
+      "type": "p",
+      "text": "她也想起一些以前沒在意的事。韋翰第一次見面，就跟剛認識的她講起達西家的事。他誇口說不怕見達西，下一週的舞會卻沒來。賓利一家還沒離開以前，這段故事他只講給她一個人聽；人一走，他就到處講。"
+    },
+    {
+      "type": "p",
+      "text": "她羞愧極了。想到達西，想到韋翰，她都覺得自己盲目、偏心、有成見、荒唐。她說，她一向以自己看人的眼光自豪。要是她在戀愛，也不會瞎得比這更可憐；讓她犯傻的是虛榮，跟愛沒有關係。"
+    },
+    {
+      "type": "quote",
+      "original": "Till this moment, I never knew myself.",
+      "text": "直到這一刻，我才認識自己。",
+      "cite": "伊莉莎白讀信之後，1813 年初版第二冊第 13 章（通行本第 36 章）"
+    },
+    {
+      "type": "p",
+      "text": "然後她回頭重讀珍那一段，「第二遍讀，效果大不相同」。她想起夏綠蒂一向說，珍的感情不太露在外面。她在那條小路上走來走去，想了兩個小時，才回去。一進門，牧師公館的人就告訴她，達西來辭行過，上校等了她至少一個鐘頭。奧斯汀寫，她心裡只想著她的信。"
+    },
+    {
+      "type": "h",
+      "text": "讀完以後"
+    },
+    {
+      "type": "p",
+      "text": "你也問過我，她讀完信是不是就對他動心了。第 37 章裡，那封信她很快就要背熟了，每一句都研究過。想到他寫信的口氣，她還是生氣。她感激他的感情，也尊敬他的為人。可是奧斯汀寫明了：她不贊成他，一刻也不後悔拒絕他，一點也不想再見到他。"
+    },
+    {
+      "type": "h",
+      "text": "奧斯汀寫給姊姊的信"
+    },
+    {
+      "type": "p",
+      "text": "奧斯汀自己的信，我也找來讀了。書剛出版那幾天，她寫了兩封信給姊姊卡珊卓。1813 年 1 月 29 日那封，說她那個「寶貝孩子」從倫敦來了。書是兩天前的週三寄到的，那天有位女客來家裡吃飯，晚上她和母親把第一冊讀了一半給客人聽，沒說是誰寫的。"
+    },
+    {
+      "type": "p",
+      "text": "她在信裡說，伊莉莎白是印在書上最討人喜歡的人物。她也嫌第二冊比她希望的短，說那一冊敘述的比例比較大。達西這封信，就在第二冊。"
+    },
+    {
+      "type": "p",
+      "text": "2 月 4 日那封，她先說自己夠得意、也夠滿意了，接著說這本書「太輕、太亮、太閃了，缺一點陰影」。後面那幾句是半開玩笑的。她說，可以在書裡撐進一長章正經的道理；找不到道理，就來一章一本正經的胡說，談寫作、講拿破崙都行。這樣一對比，讀者回到全書的俏皮時，會更高興。"
+    },
+    {
+      "type": "h",
+      "text": "那封信後來"
+    },
+    {
+      "type": "p",
+      "text": "快到書尾，兩人已經和好，也訂了婚。達西問她，那封信有沒有很快就讓她對他改觀。他說希望她已經把信毀了，尤其是開頭那一段，他怕她還能拿出來重讀。"
+    },
+    {
+      "type": "p",
+      "text": "伊莉莎白說，要是他認為非把信燒了，才保得住她對他的好感，她一定燒。可是她又說，她的想法沒那麼容易變。達西說，他寫信的時候，自以為冷靜得很；後來才明白，那是在極深的苦澀裡寫的。"
+    },
+    {
+      "type": "p",
+      "text": "她回他：「信也許是在苦澀裡開頭的，可是結尾不是。那句告別，就是仁慈本身。」她指的是信的最後一行：「我只再說一句：願上帝保佑你。」"
+    },
+    {
+      "type": "facts",
+      "title": "這封信",
+      "items": [
+        [
+          "作者",
+          "珍・奧斯汀（Jane Austen，1775–1817），英格蘭漢普郡"
+        ],
+        [
+          "作品",
+          "《傲慢與偏見》（Pride and Prejudice），原名《第一印象》，寫於 1796–1797 年，1811–1812 年修改"
+        ],
+        [
+          "首次出版",
+          "1813 年 1 月 28 日，倫敦 T. Egerton，三冊，匿名"
+        ],
+        [
+          "本文依據的版本",
+          "引文依 1813 年初版第二冊掃描（Wikisource 轉錄，牛津大學藏本）；其餘章節另對照 Project Gutenberg #1342（據 1894 年 George Allen 版轉錄）"
+        ],
+        [
+          "引文位置",
+          "達西的信：初版第二冊第 12 章，第 138–155 頁（通行本第 35 章）；「直到這一刻」：第二冊第 13 章第 166 頁（通行本第 36 章）；信的下場：第三冊第 16 章（通行本第 58 章）"
+        ],
+        [
+          "奧斯汀的信",
+          "1813 年 1 月 29 日、2 月 4 日致姊姊卡珊卓，據 Project Gutenberg #42078《The Letters of Jane Austen》"
+        ]
+      ]
+    }
   ],
   "sources": [
-    {"title": "Pride and Prejudice (1813)/Volume 2/Chapter 12", "publisher": "Wikisource", "date": "", "url": "https://en.wikisource.org/wiki/Pride_and_Prejudice_(1813)/Volume_2/Chapter_12", "note": "據 Index:Jane Austen, Pride and Prejudice (1st ed, 1813, vol 2).pdf 掃描轉錄（PDF 第 144–163 頁＝印刷頁 136–155）。信從印刷頁 138 開始，第 155 頁署名。引文 Q1、Q2 逐字照此版（Madam 大寫、formation, and the perusal）；信分兩段；you／I 斜體在印刷頁 141 附近"},
-    {"title": "Pride and Prejudice (1813)/Volume 2/Chapter 13", "publisher": "Wikisource", "date": "", "url": "https://en.wikisource.org/wiki/Pride_and_Prejudice_(1813)/Volume_2/Chapter_13", "note": "PDF 第 173–174 頁＝印刷頁 165–166：blind, partial, prejudiced, absurd；Till this moment, I never knew myself.（1894 版 blameless 一字，初版作 blameable）"},
-    {"title": "Pride and Prejudice (1813)/Volume 3/Chapter 16", "publisher": "Wikisource", "date": "", "url": "https://en.wikisource.org/wiki/Pride_and_Prejudice_(1813)/Volume_3/Chapter_16", "note": "達西提起那封信、bitterness of spirit、伊莉莎白 Think only of the past（通行本第 58 章）"},
-    {"title": "Pride and Prejudice（eBook #1342）", "publisher": "Project Gutenberg", "date": "1998-06-01", "url": "https://www.gutenberg.org/ebooks/1342", "note": "據 1894 年倫敦 George Allen 版（Hugh Thomson 插圖）轉錄；2026-09-01 更新版。第 3 章 ten thousand a year；第 25 章 Mr. Fitzwilliam Darcy（全文檢索全名僅此處與署名兩次）；第 29 章 I am not one-and-twenty；第 34 章求婚與拒絕；第 35–37 章交信、讀信、knowing by heart；第 58 章 eight-and-twenty 與信的下場；第 36 章章首插圖 images/i_282_a.jpg（天平）"},
-    {"title": "The Letters of Jane Austen（eBook #42078，Brabourne 編選，Sarah Chauncey Woolsey 編）", "publisher": "Project Gutenberg", "date": "2013-02-12", "url": "https://www.gutenberg.org/ebooks/42078", "note": "第 XL 封（1813 年 1 月 29 日，Chawton）：my own darling child、delightful a creature as ever appeared in print、second volume is shorter；第 XLI 封（2 月 4 日）：too light and bright and sparkling: it wants shade。日期括號為編者所加"},
-    {"title": "Pride and Prejudice", "publisher": "Wikipedia", "date": "", "url": "https://en.wikipedia.org/wiki/Pride_and_Prejudice", "note": "寫作年代 1796 年 10 月至 1797 年 8 月；1797 年 11 月 1 日 Cadell 回信拒絕；1811–1812 修改；1813 年 1 月 28 日三冊出版；匿名；改編（1940、1995 BBC、2005）"},
-    {"title": "Jane Austen", "publisher": "Wikipedia", "date": "", "url": "https://en.wikipedia.org/wiki/Jane_Austen", "note": "生卒年月與地點；父親 George Austen 為 Steventon 與 Deane 教區牧師，Steventon 的牧師職位（living）由 Thomas Knight 給予"},
-    {"title": "Corresponding Fictions: Elizabeth Bennet's Letters（Mia Barzilay Freund）", "publisher": "Persuasions On-Line 45.1，Jane Austen Society of North America", "date": "2024-01-01", "url": "https://jasna.org/publications-2/persuasions-online/volume-45-no-1/freund/", "note": "稱達西的信是小說 hinge at the approximate center；書信體初稿說只靠家族回憶，無實物證據"},
-    {"title": "File:Jane Austen, Pride and Prejudice (1st ed, 1813, vol 2).pdf（第 146 頁）", "publisher": "Wikimedia Commons", "date": "", "url": "https://commons.wikimedia.org/wiki/File:Jane_Austen,_Pride_and_Prejudice_(1st_ed,_1813,_vol_2).pdf?page=146", "note": "頭圖；印刷頁 138"},
-    {"title": "File:Illustration by C E Brock for Pride and Prejudice - Will you do me the honour of reading that letter.jpg", "publisher": "Wikimedia Commons／British Library", "date": "", "url": "https://commons.wikimedia.org/wiki/File:Illustration_by_C_E_Brock_for_Pride_and_Prejudice_-_Will_you_do_me_the_honour_of_reading_that_letter.jpg", "note": "1895 年倫敦 Macmillan 版插圖"},
-    {"title": "File:Thomson-PP-Ch35-36.JPG", "publisher": "Wikimedia Commons", "date": "2013-05-06", "url": "https://commons.wikimedia.org/wiki/File:Thomson-PP-Ch35-36.JPG", "note": "Commons 說明標為 1894 年 George Allen 版的整頁；頁面文字排版為後來的翻印本（章名作 Chapter 36），插圖與 Gutenberg #1342 的 1894 版第 36 章章首圖相同"}
+    {
+      "title": "Pride and Prejudice (1813)/Volume 2/Chapter 12",
+      "publisher": "Wikisource",
+      "date": "",
+      "url": "https://en.wikisource.org/wiki/Pride_and_Prejudice_(1813)/Volume_2/Chapter_12",
+      "note": "據 Index:Jane Austen, Pride and Prejudice (1st ed, 1813, vol 2).pdf 掃描轉錄（PDF 第 144–163 頁＝印刷頁 136–155）。信從印刷頁 138 開始，第 155 頁署名。引文 Q1、Q2 逐字照此版（Madam 大寫、formation, and the perusal）；信分兩段；you／I 斜體在印刷頁 141 附近"
+    },
+    {
+      "title": "Pride and Prejudice (1813)/Volume 2/Chapter 13",
+      "publisher": "Wikisource",
+      "date": "",
+      "url": "https://en.wikisource.org/wiki/Pride_and_Prejudice_(1813)/Volume_2/Chapter_13",
+      "note": "PDF 第 173–174 頁＝印刷頁 165–166：blind, partial, prejudiced, absurd；Till this moment, I never knew myself.（1894 版 blameless 一字，初版作 blameable）"
+    },
+    {
+      "title": "Pride and Prejudice (1813)/Volume 3/Chapter 16",
+      "publisher": "Wikisource",
+      "date": "",
+      "url": "https://en.wikisource.org/wiki/Pride_and_Prejudice_(1813)/Volume_3/Chapter_16",
+      "note": "達西提起那封信、burnt 的條件與 my opinions… not so easily changed、bitterness of spirit、The adieu is charity itself（通行本第 58 章）"
+    },
+    {
+      "title": "Pride and Prejudice（eBook #1342）",
+      "publisher": "Project Gutenberg",
+      "date": "1998-06-01",
+      "url": "https://www.gutenberg.org/ebooks/1342",
+      "note": "據 1894 年倫敦 George Allen 版（Hugh Thomson 插圖）轉錄；2026-09-01 更新版。第 3 章 ten thousand a year；第 25 章 Mr. Fitzwilliam Darcy（全文檢索全名僅此處與署名兩次）；第 29 章 I am not one-and-twenty；第 34 章求婚與拒絕；第 35–37 章交信、讀信、knowing by heart；第 58 章 eight-and-twenty 與信的下場；第 36 章章首插圖 images/i_282_a.jpg（天平）"
+    },
+    {
+      "title": "The Letters of Jane Austen（eBook #42078，Brabourne 編選，Sarah Chauncey Woolsey 編）",
+      "publisher": "Project Gutenberg",
+      "date": "2013-02-12",
+      "url": "https://www.gutenberg.org/ebooks/42078",
+      "note": "第 XL 封（1813 年 1 月 29 日，Chawton）：週三收到書、Miss B. 當天來吃飯、晚上讀了半冊；my own darling child、delightful a creature as ever appeared in print、second volume is shorter；第 XLI 封（2 月 4 日）：vain enough and well satisfied enough、too light and bright and sparkling: it wants shade、a long chapter of sense… solemn specious nonsense… form a contrast。日期括號為編者所加"
+    },
+    {
+      "title": "Pride and Prejudice",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Pride_and_Prejudice",
+      "note": "寫作年代 1796 年 10 月至 1797 年 8 月；1797 年 11 月 1 日 Cadell 回信拒絕；1811–1812 修改；1813 年 1 月 28 日三冊出版；匿名；改編（1940、1995 BBC、2005）"
+    },
+    {
+      "title": "Jane Austen",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Jane_Austen",
+      "note": "生卒年月與地點；父親 George Austen 為 Steventon 與 Deane 教區牧師，Steventon 的牧師職位（living）由 Thomas Knight 給予"
+    },
+    {
+      "title": "Corresponding Fictions: Elizabeth Bennet's Letters（Mia Barzilay Freund）",
+      "publisher": "Persuasions On-Line 45.1，Jane Austen Society of North America",
+      "date": "2024",
+      "url": "https://jasna.org/publications-2/persuasions-online/volume-45-no-1/freund/",
+      "note": "稱達西的信是小說 hinge at the approximate center；書信體初稿說只靠家族回憶，無實物證據；頁面只標 Winter 2024"
+    },
+    {
+      "title": "File:Jane Austen, Pride and Prejudice (1st ed, 1813, vol 2).pdf（第 146 頁）",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Jane_Austen,_Pride_and_Prejudice_(1st_ed,_1813,_vol_2).pdf?page=146",
+      "note": "頭圖；印刷頁 138"
+    },
+    {
+      "title": "File:Illustration by C E Brock for Pride and Prejudice - Will you do me the honour of reading that letter.jpg",
+      "publisher": "Wikimedia Commons／British Library",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Illustration_by_C_E_Brock_for_Pride_and_Prejudice_-_Will_you_do_me_the_honour_of_reading_that_letter.jpg",
+      "note": "1895 年倫敦 Macmillan 版插圖"
+    },
+    {
+      "title": "File:Thomson-PP-Ch35-36.JPG",
+      "publisher": "Wikimedia Commons",
+      "date": "2013-05-06",
+      "url": "https://commons.wikimedia.org/wiki/File:Thomson-PP-Ch35-36.JPG",
+      "note": "Commons 說明標為 1894 年 George Allen 版的整頁；頁面文字排版為後來的翻印本（章名作 Chapter 36），插圖與 Gutenberg #1342 的 1894 版第 36 章章首圖相同"
+    }
   ]
 }
