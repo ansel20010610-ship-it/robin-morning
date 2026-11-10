@@ -146,18 +146,36 @@ function storyOf(total, songs, since, date) {
 // ——— What happens to the bird: colds, trips, a cat, a visitor, the weather ———
 // The owner, 2026-11-10: 我想增加一點隨機事件，像是生病或是去旅遊，不然這樣長大太簡單了. Every phone of a yard must see the
 // same bird, so whether something happens on a day comes from the yard's code and the date alone (a hash, never
-// Math.random), not from who read what — except one rule anyone can follow: two whole days with no one feeding and the
-// bird catches cold. Nothing it has is ever taken away; what an event costs is growth: while it is ill, the bites go
+// Math.random), not from who read what — except one rule anyone can follow: a whole day (LIFE.idle) with no one feeding
+// and the bird catches cold. Nothing it has is ever taken away; what an event costs is growth: while it is ill, the bites go
 // to medicine (LIFE.need of them, at most LIFE.dose a day, so a cold lasts a few days; or it gets well by itself after
 // LIFE.coldMax days), and while it is away travelling
 // the pieces read reach it on the road like letters, and do not make it grow. It comes home with something from where
 // it went. A cat, a visiting bird, a typhoon, a rainy day or a find cost nothing; they are the yard's days. The events
-// begin on EVENTS_FROM — the yard's past is as it was — and at most one starts on a day, with LIFE.rest quiet days after
-// it. A day's bites are counted by the day, medicine first, so the order of bites within a day changes nothing.
+// begin on EVENTS_FROM — the yard's past is as it was — and at most one starts on a day; none starts while it is ill
+// or away (the quiet days after each event were taken out at the owner's word, 2026-11-10: 刪掉每件事之後會安靜的設定).
+// A day's bites are counted by the day, medicine first, so the order of bites within a day changes nothing.
 const EVENTS_FROM = "2026-11-12";
-const LIFE = { cold: .025, cat: .02, visit: .025, storm: .03, rain: .015, found: .02, trip: .02, rest: 4, idle: 2, need: [6, 10], dose: 4, coldMax: 10, tripDays: [2, 4] };
-const TRIPS = [["維也納", "一張音樂會的票根"], ["薩爾斯堡", "一張金色的巧克力包裝紙"], ["京都", "一片紅楓葉"], ["花蓮", "一顆白色的大理石子"], ["墾丁", "一枚小貝殼"], ["阿里山", "一顆小松果"],
-  ["布拉格", "一枚舊硬幣"], ["倫敦", "一枚印著知更鳥的郵票"], ["巴黎", "一張塞納河的明信片"], ["金門", "一小片紅磚"], ["北海道", "一根白色的羽毛"], ["蘇格蘭", "一小枝石楠花"]];
+// Harder since the owner asked (2026-11-10: 調難一點): colds and trips come about twice as often and last longer, a
+// cold takes three doses a day, and a single whole day with no one feeding is enough to catch one.
+const LIFE = { cold: .045, cat: .02, visit: .02, storm: .03, rain: .015, found: .015, trip: .04, idle: 1, need: [9, 15], dose: 3, coldMax: 10, tripDays: [3, 5] };
+// Where it goes, and the postcard it sends from there (the owner, 2026-11-10: 我要他去旅行可以帶明信片回來): the place in
+// Chinese and in its own name, a view (a city's roofs, mountains or the sea), the colours of its sky and ground, and
+// a line in the bird's own words; the souvenir it brings home goes into the nest.
+const TRIPS = [
+  { zh: "維也納", de: "Wien", view: "city", sky: "#E9D7B4", ground: "#9C6B4E", gift: "一張音樂會的票根", line: "我在歌劇院的屋簷上站了一晚，樓下的人都穿得好正式，音樂從窗縫一直流出來。" },
+  { zh: "薩爾斯堡", de: "Salzburg", view: "hills", sky: "#D6E2E6", ground: "#6F8A5E", gift: "一張金色的巧克力包裝紙", line: "這裡的山很近，城堡站在山頂，街上到處都在放莫札特。" },
+  { zh: "京都", de: "Kyōto", view: "hills", sky: "#F1DCCB", ground: "#A4483A", gift: "一片紅楓葉", line: "寺院的屋頂一層一層的，楓葉紅得像我的胸口，我躲在裡面沒人找得到。" },
+  { zh: "花蓮", de: "Hualien", view: "sea", sky: "#CFE0E8", ground: "#2F5D78", gift: "一顆白色的大理石子", line: "海是很深很深的藍，山直接站在海邊，浪聲整晚都沒停。" },
+  { zh: "墾丁", de: "Kenting", view: "sea", sky: "#F3E3BC", ground: "#3D7F8E", gift: "一枚小貝殼", line: "沙灘好燙，我只敢站在椰子樹的影子裡，看別人下水。" },
+  { zh: "阿里山", de: "Alishan", view: "hills", sky: "#E6D2C8", ground: "#40624B", gift: "一顆小松果", line: "清晨四點大家都在等日出，我比太陽還早醒，在神木上等。" },
+  { zh: "布拉格", de: "Praha", view: "city", sky: "#DCD4C4", ground: "#7A5A48", gift: "一枚舊硬幣", line: "橋上有好多雕像，我挑了一尊站上去，一個下午都沒人發現。" },
+  { zh: "倫敦", de: "London", view: "city", sky: "#D3D6D8", ground: "#5B5F66", gift: "一枚印著知更鳥的郵票", line: "這裡的人說知更鳥是他們最喜歡的鳥，每個人都對我特別好。" },
+  { zh: "巴黎", de: "Paris", view: "city", sky: "#E4DCE6", ground: "#6E6385", gift: "一張舊書攤的小書籤", line: "塞納河邊的書攤老闆分了我一點麵包屑，還讓我站在書堆上。" },
+  { zh: "金門", de: "Kinmen", view: "sea", sky: "#E8DACB", ground: "#9A4E3C", gift: "一小片紅磚", line: "紅磚房子的屋簷剛好可以躲雨，風很大，吹得我站不穩。" },
+  { zh: "北海道", de: "Hokkaidō", view: "hills", sky: "#E3E9EE", ground: "#8DA3B5", gift: "一根白色的羽毛", line: "下雪了，我把羽毛蓬起來，看起來圓了一整圈。" },
+  { zh: "蘇格蘭", de: "Scotland", view: "hills", sky: "#DDD8E6", ground: "#7B5C86", gift: "一小枝石楠花", line: "荒野上開滿紫色的石楠花，風裡有海的味道。" },
+];
 const VISITORS = ["麻雀", "綠繡眼", "白頭翁", "五色鳥", "臺灣藍鵲", "紅嘴黑鵯"];
 const FINDS = ["一顆亮亮的瓶蓋", "一條紅色的毛線", "一枚鈕扣", "一顆玻璃珠", "一片藍色的羽毛", "一小段緞帶"];
 const hashOf = (str) => { let h = 2166136261; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); } h ^= h >>> 13; h = Math.imul(h, 0x5bd1e995); h ^= h >>> 15; return (h >>> 0) / 4294967296; };
@@ -169,8 +187,8 @@ export function lifeOf(n, today = twNow().date, from = EVENTS_FROM) {
   const roll = (d, what) => hashOf(`${code}|${d}|${what}`);
   const byDay = new Map();
   feeds.forEach((f, i) => { if (!byDay.has(f.d)) byDay.set(f.d, []); byDay.get(f.d).push(i); });
-  const effAt = [], kindAt = [], events = [], days = new Map(), treasures = [], went = [];
-  let g = 0, sick = null, trip = null, rest = "", lastFed = "";
+  const effAt = [], kindAt = [], events = [], days = new Map(), treasures = [], went = [], postcards = [];
+  let g = 0, sick = null, trip = null, lastFed = "";
   const first = [n?.since, feeds[0]?.d].filter(Boolean).sort()[0] || today, last = [today, feeds.at(-1)?.d || today].sort()[1];
   for (let d = first; d <= last; d = addDays(d, 1)) {
     let hiding = "", visitor = "";
@@ -179,17 +197,20 @@ export function lifeOf(n, today = twNow().date, from = EVENTS_FROM) {
       const si = stageOf(g), m = Number(d.slice(5, 7));
       if (trip && d > trip.until) {
         treasures.push(trip.gift);
-        events.push({ d, kind: "home", text: `${N}從${trip.place}回來了，帶回${trip.gift}。路上收到 ${trip.letters} 封信。`, photo: true, big: true });
-        lastFed = [lastFed, trip.until].sort()[1]; trip = null; rest = d; // away is not neglected
+        // the postcard: from the place, posted the last day there, naming one of the pieces that reached it on the road
+        const pc = { to: trip.to, from: trip.from, until: trip.until, letters: trip.letters, keys: trip.keys, at: Math.floor(roll(d, "card") * Math.max(1, trip.keys.length)) };
+        postcards.push(pc);
+        events.push({ d, kind: "home", text: `${N}從${trip.place}回來了，帶回${trip.gift}，還有一張明信片。路上收到 ${trip.letters} 封信。`, photo: true, big: true, postcard: pc });
+        lastFed = [lastFed, trip.until].sort()[1]; trip = null; // away is not neglected
       }
-      if (sick && sick.why === "cold" && daysTo(sick.since, d) >= LIFE.coldMax) { events.push({ d, kind: "well", text: `${N}自己慢慢好起來了。` }); sick = null; rest = d; }
+      if (sick && sick.why === "cold" && daysTo(sick.since, d) >= LIFE.coldMax) { events.push({ d, kind: "well", text: `${N}自己慢慢好起來了。` }); sick = null; }
       // neglect: two whole days with no one feeding
       if (!sick && !trip && si >= 1 && lastFed && daysTo(lastFed, d) > LIFE.idle && d >= addDays(from, LIFE.idle)) {
-        const need = Math.min(12, 6 + 2 * (daysTo(lastFed, d) - LIFE.idle - 1));
+        const need = Math.min(15, 9 + 2 * (daysTo(lastFed, d) - LIFE.idle - 1));
         sick = { since: d, need, left: need, why: "neglect" };
         events.push({ d, kind: "sick", text: `好幾天沒有人來餵，${N}著涼生病了。要 ${need} 口才會好。`, photo: true, sick: true });
       }
-      if (!sick && !trip && si >= 1 && (!rest || daysTo(rest, d) > LIFE.rest)) {
+      if (!sick && !trip && si >= 1) {
         const r = roll(d, "day"), wet = m >= 7 && m <= 10, canGo = si >= 3 && !(g >= 500 && m >= 4 && m <= 6);
         // trip last: whether it can happen (the stage) moves no other event's chance
         const table = [["cold", LIFE.cold], ["cat", LIFE.cat], ["visit", LIFE.visit], [wet ? "storm" : "rain", wet ? LIFE.storm : LIFE.rain], ["found", LIFE.found], ["trip", canGo ? LIFE.trip : 0]];
@@ -201,24 +222,25 @@ export function lifeOf(n, today = twNow().date, from = EVENTS_FROM) {
           events.push({ d, kind: "sick", text: `${N}感冒了，縮成一團。接下來 ${need} 口要當藥吃（一天最多吃 ${LIFE.dose} 口藥），吃完就會好。`, photo: true, sick: true });
         } else if (ev === "trip") {
           const len = LIFE.tripDays[0] + Math.floor(roll(d, "len") * (LIFE.tripDays[1] - LIFE.tripDays[0] + 1));
-          const pool = TRIPS.filter(([pl]) => !went.slice(-4).includes(pl)), [place, gift] = pool[Math.floor(roll(d, "where") * pool.length)];
-          went.push(place);
-          trip = { from: d, until: addDays(d, len - 1), place, gift, letters: 0 };
+          const pool = TRIPS.filter((t) => !went.slice(-4).includes(t.zh)), to = pool[Math.floor(roll(d, "where") * pool.length)];
+          went.push(to.zh);
+          const place = to.zh;
+          trip = { from: d, until: addDays(d, len - 1), place, gift: to.gift, to, letters: 0, keys: [] };
           events.push({ d, kind: "trip", text: `${N}出門旅行了，去${place}，要 ${len} 天。這幾天讀的每一篇，會像信一樣寄到路上給${P}。`, photo: true, away: place });
-        } else if (ev === "cat") { hiding = "cat"; rest = d; events.push({ d, kind: "cat", text: `一隻貓在院子外面晃，${N}嚇得躲在葉子後面一整天。`, photo: true, hiding: "cat" }); }
-        else if (ev === "visit") { visitor = VISITORS[Math.floor(roll(d, "who") * VISITORS.length)]; rest = d; events.push({ d, kind: "visit", text: `一隻${visitor}來串門子，和${N}在枝上站了一會兒。` }); }
-        else if (ev === "storm") { hiding = "storm"; rest = d; events.push({ d, kind: "storm", text: `颱風來了，${N}縮在巢裡等風停。` }); }
-        else if (ev === "rain") { rest = d; events.push({ d, kind: "rain", text: `下了一整天雨，${N}的羽毛濕濕的。` }); }
-        else if (ev === "found") { const left = FINDS.filter((x) => !treasures.includes(x)); if (left.length) { const t = left[Math.floor(roll(d, "what") * left.length)]; treasures.push(t); rest = d; events.push({ d, kind: "found", text: `${N}撿到${t}，藏在巢裡。` }); } }
+        } else if (ev === "cat") { hiding = "cat"; events.push({ d, kind: "cat", text: `一隻貓在院子外面晃，${N}嚇得躲在葉子後面一整天。`, photo: true, hiding: "cat" }); }
+        else if (ev === "visit") { visitor = VISITORS[Math.floor(roll(d, "who") * VISITORS.length)]; events.push({ d, kind: "visit", text: `一隻${visitor}來串門子，和${N}在枝上站了一會兒。` }); }
+        else if (ev === "storm") { hiding = "storm"; events.push({ d, kind: "storm", text: `颱風來了，${N}縮在巢裡等風停。` }); }
+        else if (ev === "rain") {; events.push({ d, kind: "rain", text: `下了一整天雨，${N}的羽毛濕濕的。` }); }
+        else if (ev === "found") { const left = FINDS.filter((x) => !treasures.includes(x)); if (left.length) { const t = left[Math.floor(roll(d, "what") * left.length)]; treasures.push(t); events.push({ d, kind: "found", text: `${N}撿到${t}，藏在巢裡。` }); } }
       }
     }
     // the day's bites: on the road they are letters; while ill, medicine first (LIFE.dose a day); the rest make it grow
     let doses = 0;
     for (const i of idx) {
-      if (trip) { kindAt[i] = "letter"; trip.letters++; }
+      if (trip) { kindAt[i] = "letter"; trip.letters++; trip.keys.push(feeds[i].k); }
       else if (sick && doses < LIFE.dose) {
         kindAt[i] = "med"; sick.left--; doses++;
-        if (sick.left <= 0) { events.push({ d, kind: "well", text: `${N}的病好了。` }); sick = null; rest = d; }
+        if (sick.left <= 0) { events.push({ d, kind: "well", text: `${N}的病好了。` }); sick = null; }
       } else { g++; kindAt[i] = "grow"; }
       effAt[i] = g;
     }
@@ -226,7 +248,7 @@ export function lifeOf(n, today = twNow().date, from = EVENTS_FROM) {
     days.set(d, { g, sick: Boolean(sick), away: trip ? trip.place : "", hiding, visitor, doses });
   }
   const now = days.get(today) || {};
-  return { g, feeds, effAt, kindAt, events, treasures, sick, trip, hiding: now.hiding || "", visitor: now.visitor || "", dosed: (now.doses || 0) >= LIFE.dose, day: (d) => days.get(d) || {}, todays: events.filter((e) => e.d === today) };
+  return { g, feeds, effAt, kindAt, events, treasures, postcards, sick, trip, hiding: now.hiding || "", visitor: now.visitor || "", dosed: (now.doses || 0) >= LIFE.dose, day: (d) => days.get(d) || {}, todays: events.filter((e) => e.d === today) };
 }
 export function nestState(n = nest()) {
   if (!n) return null;
@@ -753,17 +775,67 @@ export function renderNest(el, api, afterSync = false) {
         ${st.life.treasures.length ? `<p class="small">巢裡藏著的寶貝：${st.life.treasures.map(esc).join("、")}。</p>` : ""}
         ${st.songs ? `<p class="small songs">會唱的歌：${st.songNames.map((s, i) => s ? esc(s) : `第${cn(i + 1)}首`).join("、")}。</p>` : ""}</details>
       <a class="nest-album-link" href="#/nest/album">翻翻${esc(pet.name)}的相簿<span class="de">Album</span> →</a></div>
+    ${st.life.postcards.length ? `<section class="set"><h2>明信片<span class="de">Postkarten</span></h2><div class="pc-row">${st.life.postcards.map(postcardThumb).reverse().join("")}</div></section>` : ""}
     <section class="set"><h2>這七天</h2><ol class="nest-week" aria-label="這七天每天餵了幾口">${wk}</ol></section>
     <section class="set"><h2>院子裡的人</h2><ul class="nest-members">${names}</ul>
       ${api ? `<p class="small">${synced || "還沒同步過"}。</p>` : `<p class="small nest-note">共用儲存還沒接上：現在只有這支手機的紀錄，接上以後會把大家的餵食和名字同步過來。</p>`}</section>
     <p class="nest-to-set"><a href="#/nest/settings">後院設定<span class="de">Einstellungen</span> →</a></p>`;
   liveBird(el.querySelector(".nest-stage"));
+  el.querySelectorAll("[data-pc]").forEach((b) => b.addEventListener("click", () => openPostcard(st.life.postcards[Number(b.dataset.pc)], pet, b)));
   const stageEl = el.querySelector(".nest-stage"), birdEl = stageEl.querySelector(".bird");
   birdEl.setAttribute("role", "button"); birdEl.setAttribute("aria-label", `摸摸${pet.name}`); birdEl.removeAttribute("aria-hidden"); birdEl.tabIndex = 0;
   birdEl.addEventListener("click", () => pokeBird(stageEl, nestState()));
   birdEl.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pokeBird(stageEl, nestState()); } });
   if (!afterSync) syncNest(api).then((ok) => { if (ok && el.isConnected && location.hash === "#/nest") renderNest(el, api, true); });
 }
+// ——— 明信片 (Postkarten) ———
+// A postcard from a trip: on the front the place's view in its own colours, its name in Chinese and in its own
+// language, a robin stamp and the postmark of the day it was posted; on the back the bird's line from there, the
+// letters it got on the road — naming one piece, through the paper's index (setLookup) — and its name. A tap on a
+// card in the yard or the album opens it large; a tap on the large card turns it over.
+const VIEWS = {
+  city: (g) => `<path fill="${g}" d="M0 70 V52 h8 V44 h6 V50 h7 V38 h4 V34 h3 V38 h4 V48 h9 V40 h10 V50 h6 V30 l4 -6 l4 6 V50 h8 V42 h9 V54 h10 V46 h8 V52 h12 V70 Z"/>`,
+  hills: (g) => `<path fill="${g}" opacity=".55" d="M0 70 V48 L18 30 L32 44 L50 22 L70 46 L84 34 L100 50 V70 Z"/><path fill="${g}" d="M0 70 V56 L22 42 L40 54 L62 38 L80 52 L100 46 V70 Z"/>`,
+  sea: (g) => `<circle cx="74" cy="26" r="9" fill="#F4C46B" opacity=".9"/><path fill="${g}" d="M0 70 V46 q8 -4 16 0 t16 0 t16 0 t16 0 t16 0 t20 0 V70 Z"/><path fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.2" d="M6 56 q6 -3 12 0 t12 0 M48 60 q6 -3 12 0 t12 0"/>`,
+};
+const pmark = (d) => `${Number(d.slice(8))}・${["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"][Number(d.slice(5, 7)) - 1]}・${d.slice(0, 4)}`;
+function postcardHtml(pc, pet, big = false) {
+  // the piece it names: the one picked for this card, or the next one after it the paper's index still has
+  let art = null;
+  for (let j = 0; lookup && !art?.title && j < (pc.keys || []).length; j++) { const [kd, kc] = pc.keys[(pc.at + j) % pc.keys.length].split("/"); art = lookup(kd, kc); }
+  const t = pc.to;
+  const named = art?.title ? `，最喜歡〈${esc(art.title)}〉那一封` : "";
+  const front = `<div class="pc-front" style="--sky:${t.sky};--ground:${t.ground}"><svg viewBox="0 0 100 70" preserveAspectRatio="xMidYMax slice" aria-hidden="true">${VIEWS[t.view](t.ground)}</svg>
+    <span class="pc-greet">Grüße aus</span><b class="pc-place">${esc(t.zh)}</b><i class="pc-de">${esc(t.de)}</i>
+    <span class="pc-stamp" aria-hidden="true"><svg viewBox="0 0 64 64">${ROBIN_STAMP}</svg></span><span class="pc-mark" aria-hidden="true">${pmark(pc.until)}</span></div>`;
+  if (!big) return front;
+  const back = `<div class="pc-back"><p class="pc-msg">${esc(t.line)}</p><p class="pc-msg">你們寄來的 ${pc.letters} 封信我都收到了${named}。</p><p class="pc-sign">—— ${esc(pet.name)}，寄自${esc(t.zh)}</p>
+    <div class="pc-to"><span class="pc-stamp" aria-hidden="true"><svg viewBox="0 0 64 64">${ROBIN_STAMP}</svg></span><span class="pc-mark" aria-hidden="true">${pmark(pc.until)}</span><span class="pc-line">寄給 後院的大家</span><span class="pc-line"></span><span class="pc-line"></span></div></div>`;
+  return `<div class="pc-flip">${front}${back}</div>`;
+}
+// a small robin for the stamp, the drawing's own colours
+const ROBIN_STAMP = `<rect x="3" y="3" width="58" height="58" fill="#FBF6EA"/><path fill="#7A5A44" d="M17.6 27.2 C13.2 32.8 13.8 42 20.4 46.8 C26.6 51.2 37.4 51.4 43.4 45.6 C46.8 42.2 47.6 36.8 45.4 32.2 C42.4 26 33 21.6 25 23 C21.8 23.6 19.4 25 17.6 27.2 Z"/><path fill="#C8553D" d="M17.6 27.2 C14 32 14.4 40 19.6 45.2 C22.6 48 27.6 49 32 47.6 C32.4 40.2 29.4 32 25.2 27 C23.4 25.6 20.4 25.4 17.6 27.2 Z"/><path fill="#3B2C22" d="M15.6 29.6 L9.8 30.9 L15.7 32.2 Z M43.6 43.4 L56 33 L57.4 35.6 L46 46.2 Z"/><circle cx="21.6" cy="29.2" r="1.4" fill="#22180F"/>`;
+export function openPostcard(pc, pet, from) {
+  if (!pc || document.querySelector(".photo-view")) return;
+  const view = document.createElement("div");
+  view.className = "photo-view pc-view"; view.setAttribute("role", "dialog"); view.setAttribute("aria-modal", "true"); view.setAttribute("aria-label", `${pc.to.zh}寄來的明信片`);
+  view.innerHTML = `<button class="postcard big" type="button" aria-label="翻面">${postcardHtml(pc, pet, true)}</button><p class="pv-text pc-hint">點明信片翻到背面</p><button class="pv-close" type="button">關上</button>`;
+  document.body.append(view);
+  const card = view.querySelector(".postcard"), hint = view.querySelector(".pc-hint");
+  card.addEventListener("click", (e) => { e.stopPropagation(); card.classList.toggle("turned"); hint.textContent = card.classList.contains("turned") ? "點一下翻回正面" : "點明信片翻到背面"; });
+  const html = document.documentElement, was = html.style.overflow;
+  html.style.overflow = "hidden";
+  const fr = from?.getBoundingClientRect(), to = card.getBoundingClientRect();
+  if (fr && !calm() && to.width) card.animate([{ transform: `translate(${fr.left + fr.width / 2 - to.left - to.width / 2}px, ${fr.top + fr.height / 2 - to.top - to.height / 2}px) scale(${fr.width / to.width})` }, { transform: "none" }], { duration: 320, easing: "cubic-bezier(.2,.8,.2,1)" });
+  const close = () => { view.remove(); html.style.overflow = was; removeEventListener("keydown", onKey); removeEventListener("hashchange", close); from?.focus({ preventScroll: true }); };
+  const onKey = (e) => { if (e.key === "Escape") close(); };
+  view.addEventListener("click", (e) => { if (e.target === view || e.target.closest(".pv-close")) close(); });
+  addEventListener("keydown", onKey);
+  addEventListener("hashchange", close, { once: true });
+  card.focus({ preventScroll: true });
+}
+const postcardThumb = (pc, i) => `<button class="postcard" type="button" data-pc="${i}" aria-label="${esc(pc.to.zh)}寄來的明信片，${Number(pc.until.slice(5, 7))} 月 ${Number(pc.until.slice(8))} 日">${postcardHtml(pc)}</button>`;
+
 // ——— 相簿 (Album) ———
 // The bird's life, read back out of the feed log (the owner, 2026-11-10: 我想加入養的鳥的相簿，可以回憶她以前長怎樣、發生過
 // 什麼事、什麼時候長大的). The log is the bites in one order — by day, then by article, as songNames reads it — so the
@@ -808,7 +880,7 @@ export function albumOf(n = nest()) {
   // what happened to it: colds, trips, a cat, a guest, the weather, a find (lifeOf), with a photo where it looked different
   for (const e of life.events) {
     const flags = e.sick ? { sick: true } : e.away ? { away: { place: e.away } } : e.hiding ? { hiding: e.hiding } : {};
-    day(e.d).ev.push({ text: e.text, big: Boolean(e.big || e.photo), ...(e.photo ? { photo: snap(gBy(e.d), rawBy(e.d), e.d, flags) } : {}) });
+    day(e.d).ev.push({ text: e.text, big: Boolean(e.big || e.photo), ...(e.photo ? { photo: snap(gBy(e.d), rawBy(e.d), e.d, flags) } : {}), ...(e.postcard ? { postcard: e.postcard } : {}) });
   }
   // the calendar: what came with the day, not with a bite
   const SEASONS = { spring: "春天來了，枝上開花。", summer: "入夏，葉子長滿了枝。", autumn: "入秋，葉子黃了。", winter: "冬天到了，枝上積了雪。" };
@@ -840,14 +912,14 @@ export function renderNestAlbum(el, api, afterSync = false) {
   const md = (d) => `${Number(d.slice(5, 7))} 月 ${Number(d.slice(8))} 日`;
   const grow = a.reached.map((x) => `<li class="${x.on ? "on" : ""}"><b>${esc(x.zh)}</b><span>${x.on ? esc(md(x.on)) : `再 ${x.at - a.g} 口`}</span></li>`).join("");
   let pic = 0, month = "";
-  const shots = []; // every print on the page, for the enlarged view: where it was taken and what happened
+  const shots = [], cards = []; // every print and postcard on the page, for the enlarged views
   const cap = (p) => `${esc(md(p.date))}・${p.raw ? `第 ${p.raw} 口` : "開院"}`;
   const photo = (p, big, text) => { const st = { ...a.lookAt(p.total, p.date, p.flags), pet }; const tilt = [-1.6, 1.2, -.8, 1.7, -1.2, .7][pic % 6]; shots.push({ p, text }); return `<figure class="nest-photo${big ? " big" : ""}" style="--tilt:${tilt}deg" data-shot="${pic++}" role="button" tabindex="0" aria-label="放大 ${esc(md(p.date))} 的照片">${birdSvg(st)}<figcaption>${cap(p)}</figcaption></figure>`; };
   const body = a.list.map((d) => {
     const m = d.date.slice(0, 7), head = m !== month ? `<h2 class="album-mon"><span>${Number(m.slice(5))} 月</span><i>${m.slice(0, 4)}</i></h2>` : "";
     month = m;
     const by = Object.entries(d.by).sort((x, y) => y[1] - x[1]).map(([id, c]) => `${id === n.me ? "你" : esc(n.members?.[id] || "朋友")} ${c} 口`);
-    const pics = d.ev.filter((e) => e.photo).map((e) => photo(e.photo, e.big, e.text)).join("");
+    const pics = d.ev.filter((e) => e.photo).map((e) => photo(e.photo, e.big, e.text)).join("") + d.ev.filter((e) => e.postcard).map((e) => { cards.push(e.postcard); return postcardThumb(e.postcard, cards.length - 1); }).join("");
     const lines = d.ev.map((e) => `<li${e.big ? ' class="big"' : ""}>${e.text}</li>`).join("");
     return `${head}<section class="album-day"><time datetime="${d.date}">${esc(md(d.date))}</time>${pics ? `<div class="album-pics">${pics}</div>` : ""}<ul>${lines}</ul>${by.length ? `<p class="by">${a.away(d.date) ? "這天寫信的" : "這天餵的"}：${by.join("、")}</p>` : ""}</section>`;
   }).join("");
@@ -888,6 +960,7 @@ export function renderNestAlbum(el, api, afterSync = false) {
     addEventListener("hashchange", close, { once: true });
     view.querySelector(".pv-close").focus({ preventScroll: true });
   };
+  el.querySelectorAll("[data-pc]").forEach((b) => b.addEventListener("click", () => openPostcard(cards[Number(b.dataset.pc)], pet, b)));
   el.querySelectorAll(".nest-photo[data-shot]").forEach((fig) => {
     fig.addEventListener("click", () => open(fig));
     fig.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(fig); } });
