@@ -369,6 +369,8 @@ def main():
             }
             if art.get("from_reserve"):
                 entry["from_reserve"] = True
+            if col == "music" and isinstance(art.get("motif"), str) and art["motif"].strip():
+                entry["motif"] = art["motif"].strip()  # the yard's robin sings it (nest.js playMotif)
             cdate, ctext = correction(art)
             if cdate:
                 entry["corrected"] = cdate

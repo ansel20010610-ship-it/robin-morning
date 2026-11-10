@@ -2211,6 +2211,49 @@ details.band .svl { margin: 0 0 10px; }
    bird drawn as it was then, on a print with a white border, set a little askew like prints in an album — and the
    rest are short lines under the day's date; months are headed like the yearbook's. ——— */
 .nest-album-link { display: inline-block; margin-top: 12px; font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: .06em; color: var(--gold-ink); text-decoration: none; }
+/* The real sky over the yard (nest.js realSky, skyArt): after dark a night palette, the window lit, on a clear night a
+   crescent and a few stars; rain or a storm comes down, fog hangs; a cold hour fluffs the bird up */
+.yard.yard-night { --y-sky: #1E2A3D; --y-cloud: #2E3A4C; --y-hedge: #2E3A2C; --y-grass: #34402E; --y-tuft: #4A5840; --y-fence: #4A4A4C; --y-fence-line: #5E5A54; --y-wall: #3C3934; --y-siding: #4A463E; --y-roof: #4A3530; --y-win: #F2D58A; --y-door: #33402F; --y-soil: #3A3026; --y-stone: #4C4C4A; --y-leaf: #33422C; --y-leaf-2: #2C3A26; --y-aut: #6E5A30; --y-aut-2: #64462A; --y-blossom: #8C7680; --y-snow: #B8C0CC; --y-snow-shade: #7E8A98; --m-glow: #F2D58A; }
+.yard .w-moon circle { fill: #F4E7B8; } .yard .w-moon .cut { fill: var(--y-sky); }
+.yard .w-moon { filter: drop-shadow(0 0 3px rgb(244 231 184 / .55)); }
+.yard .w-stars circle { fill: #F4E7B8; animation: w-star 4s ease-in-out infinite; }
+@keyframes w-star { 0%, 100% { opacity: .95; } 50% { opacity: .3; } }
+.yard.yard-night .y-win { filter: drop-shadow(0 0 4px rgb(242 213 138 / .6)); }
+.yard.wx-cloud:not(.yard-night) { --y-sky: #D6DBD8; --y-cloud: #E9EAE6; }
+.yard .m-rain.heavy path { stroke-width: 1; opacity: .9; } .yard .m-rain.heavy { animation-duration: .3s; }
+.yard.wx-storm .m-gloom { opacity: .26; }
+.yard .w-fog { fill: #E8EBEC; opacity: .5; animation: w-fog 9s ease-in-out infinite alternate; }
+.yard.yard-night .w-fog { fill: #8A96A6; opacity: .35; }
+@keyframes w-fog { to { opacity: .3; } }
+:is(.nest-stage, .nest.plate) .bird.fluffed .robin .body { transform-box: fill-box; transform-origin: 50% 80%; transform: scale(1.07, 1.04); }
+@media (prefers-reduced-motion: reduce) { .yard :is(.w-stars circle, .w-fog) { animation: none; } }
+/* 晚安 (nest.js gnHtml): a button under the yard in the evening, and the line of who said it */
+.nest-stage .gn { margin: 2px auto 6px; }
+.nest-stage .gn-btn { display: inline-flex; align-items: center; gap: 8px; }
+.nest-stage .gn-said { margin: 4px auto 0; max-width: 30em; font-size: 13px; line-height: 1.6; color: var(--muted); }
+.nest-stage .gn-moon { width: 15px; height: 15px; vertical-align: -2px; margin-right: 6px; }
+.nest-stage .gn-btn .gn-moon { margin-right: 0; }
+.nest-stage .gn-moon path { fill: var(--gold-soft); stroke: var(--gold); stroke-width: 3; }
+/* 小瓜的日記 (nest.js diaryHtml) and the album's copies */
+.nest-diary .diary-when { margin: 0 0 6px; font-family: var(--sans); font-size: 12.5px; letter-spacing: .06em; color: var(--muted); }
+.nest-diary .diary-text, .album-diary { font-family: var(--serif); font-size: 15.5px; line-height: 1.9; color: var(--ink); }
+.nest-diary .diary-text p { margin: 0 0 10px; }
+.nest-diary .diary-busy { color: var(--muted); }
+.album-diary { margin: 8px 0 6px; padding: 10px 14px; border-left: 2px solid var(--gold); background: var(--paper-2); font-size: 14.5px; line-height: 1.8; }
+.album-diary .lbl { display: block; margin-bottom: 4px; font-family: var(--sans); font-size: 11.5px; letter-spacing: .14em; color: var(--gold-ink); }
+.album-diary p { margin: 0 0 6px; }
+/* 會唱的歌 and 院子年鑑 in the album (nest.js renderNestAlbum, yearbookHtml) */
+.album-songs ol { list-style: none; margin: 6px 0 4px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.album-songs .song { font: inherit; font-family: var(--serif); font-size: 14.5px; padding: 7px 12px; border: 1px solid var(--rule); border-radius: 999px; background: var(--paper-2); color: var(--ink); cursor: pointer; }
+.album-songs .song i { font-style: normal; color: var(--gold); margin-right: 6px; display: inline-block; }
+.album-songs .song.on i { animation: song-on 1.2s ease-out; }
+@keyframes song-on { 30% { transform: translateY(-5px) rotate(-12deg); } 60% { transform: translateY(1px) rotate(6deg); } }
+.album-year .yb-span { margin: 0 0 10px; font-family: var(--sans); font-size: 13px; letter-spacing: .06em; color: var(--muted); }
+.album-year .yb-nums { list-style: none; margin: 0 0 12px; padding: 12px 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.album-year .yb-nums b { display: block; font-family: var(--latin); font-size: 34px; font-weight: 500; line-height: 1.1; color: var(--ink); }
+.album-year .yb-nums span { font-family: var(--sans); font-size: 12.5px; color: var(--gold-ink); letter-spacing: .1em; }
+.album-year .yb-lines { margin: 0 0 14px; padding-left: 1.1em; display: grid; gap: 6px; font-size: 14.5px; line-height: 1.7; color: var(--ink-2); }
+@media (prefers-reduced-motion: reduce) { .album-songs .song.on i { animation: none; } }
 .nest-album-link .de, .album-mon i { font-family: var(--latin); font-style: italic; font-weight: 500; color: var(--gold); margin-left: 6px; }
 .album-back { display: inline-flex; align-items: baseline; gap: 4px; margin-top: 16px; font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: .06em; color: var(--gold-ink); text-decoration: none; }
 .album-back span[aria-hidden] { font-size: 17px; line-height: 1; margin-right: 2px; }

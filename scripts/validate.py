@@ -828,6 +828,14 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
             E("晨光欄缺少 prayer")
     if col == "music" and "music" not in types:
         E("今日古典缺少 music 區塊")
+    # motif (2026-11-10, columns/music.md): the theme's opening for the yard's robin to sing — optional, but well formed
+    if "motif" in art:
+        mo = art.get("motif")
+        toks = mo.split() if isinstance(mo, str) else []
+        if col != "music":
+            E("motif 只有古典欄用")
+        elif not 6 <= len(toks) <= 16 or not all(re.fullmatch(r"(?:[A-G](?:#|b)?[1-7]|R)(?::\d+(?:\.\d+)?)?", t) for t in toks):
+            E("motif 格式不對：6–16 個音，像 G4:1 G4:1 G4:1 Eb4:4（columns/music.md）")
     if col == "perio":
         if "paper" not in types:
             E("牙周欄缺少 paper 論文卡")
