@@ -380,19 +380,19 @@ export function scrollFlyer() {
 // 通知有美感一點): not the plain toast but a small card above the nav — the robin itself, hopping in, the bird's name,
 // one line in the paper's voice (different each time; the stage or the thing this very bite brought, when it did),
 // and what the next bite is for. A tap opens the yard; it leaves on its own after a few seconds.
-const FEED_LINES = [
-  (n, p) => `${n}吃了一口，歪著頭看你。`, (n) => `一口下肚，${n}抖了抖羽毛。`, (n) => `${n}接住了這一口，跳到枝頭另一邊。`,
-  (n, p) => `${n}吃了一口，${p}把嘴在枝上擦了擦。`, (n) => `${n}一口吞下，又張開嘴等下一口。`, (n, p) => `這一口${p}吃得很慢，像在想什麼。`,
+const FEED_LINES = [ // the card carries the name above the line, so the line says 牠/他/她 and never the name again
+  (p) => `${p}吃了一口，歪著頭看你。`, (p) => `一口下肚，${p}抖了抖羽毛。`, (p) => `${p}接住了這一口，跳到枝頭另一邊。`,
+  (p) => `吃了一口，${p}把嘴在枝上擦了擦。`, (p) => `${p}一口吞下，又張開嘴等下一口。`, (p) => `這一口${p}吃得很慢，像在想什麼。`,
 ];
 export function feedNotice(before, after) {
   if (!after) return;
   document.querySelector(".feed-note")?.remove();
   const n = after.pet.name, p = after.pet.p;
   let line;
-  if (before && after.si > before.si) line = `這一口，${n}${after.si === 1 ? "破殼了" : after.si === 2 ? "長出絨毛了" : after.si === 3 ? "開始學飛了" : after.si === 4 ? "長成成鳥了" : "成了歌者"}。`;
-  else if (before && after.songs > before.songs) line = `這一口，${n}學會了第${cn(after.songs)}首歌。`;
+  if (before && after.si > before.si) line = `這一口，${p}${after.si === 1 ? "破殼了" : after.si === 2 ? "長出絨毛了" : after.si === 3 ? "開始學飛了" : after.si === 4 ? "長成成鳥了" : "成了歌者"}。`;
+  else if (before && after.songs > before.songs) line = `這一口，${p}學會了第${cn(after.songs)}首歌。`;
   else if (before && Object.values(after.items).reduce((a, b) => a + b, 0) > Object.values(before.items).reduce((a, b) => a + b, 0)) line = `這一口，${WORDS[Object.keys(after.items).find((k) => (after.items[k] || 0) > (before.items[k] || 0))] || "院子裡多了一樣東西"}。`;
-  else line = FEED_LINES[Math.floor(Math.random() * FEED_LINES.length)](n, p);
+  else line = FEED_LINES[Math.floor(Math.random() * FEED_LINES.length)](p);
   const el = document.createElement("a");
   el.href = "#/nest"; el.className = "feed-note"; el.setAttribute("role", "status");
   el.innerHTML = `${birdSvg(after)}<span class="t"><b>${esc(n)}</b><span class="l">${esc(line)}</span><span class="n">再 ${after.toNext} 口就${esc(after.next.zh)}</span></span>`;

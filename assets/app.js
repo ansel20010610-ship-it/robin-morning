@@ -281,7 +281,7 @@ const serialPlate = (s) => `<p class="plate"><span class="book">《${esc(s.book 
 function serialCard(date, a, read, { plate = true, recap = true } = {}) {
   const s = a.serial || {}, done = read.has(`${date}/${a.column}`);
   const inner = `${plate ? serialPlate(s) : `<p class="plate"><span class="where">${esc(serialWhere(s))}</span></p>`}<h3>${esc(a.title)}</h3>${recap ? (a.dek ? `<p class="recap"><b>${s.n === 1 ? "開場" : "前情"}</b>${esc(a.dek)}</p>` : "") : a.brief ? `<p class="recap"><b>本回</b>${esc(a.brief)}</p>` : ""}
-    <p class="meta-s">${esc(fmtDate(date, "short"))}・${done ? "讀過了" : `約 ${esc(String(a.minutes || 6))} 分鐘`}</p>`;
+    <p class="meta-s">${esc(fmtDate(date, "short"))}・${done ? '<span class="read-mark">已讀</span>' : `約 ${esc(String(a.minutes || 6))} 分鐘`}</p>`; // the same gold 已讀 as every other card (the owner, 2026-11-10: 到首頁不會標示已讀 — the serial's 讀過了 did not read as one)
   return `<a class="item noimg serial-card${done ? " read" : ""}" href="#/a/${date}/${a.column}"><div>${inner}</div></a>`;
 }
 function serialBox(date, a, read) {
@@ -482,31 +482,43 @@ function wireTime(iso) {
   const y = new Date(Date.parse(`${today}T00:00:00Z`) - 864e5).toISOString().slice(0, 10);
   return d === y ? `昨 ${hm}` : `${Number(d.slice(5, 7))}/${Number(d.slice(8, 10))} ${hm}`;
 }
+// The last wires fetched stay in memory and are drawn at once on every later front page (a step back from an article,
+// a redraw), so the line is there when the page lands: shown only when the fetch returned, the box opened 40px above
+// the reader a moment after the scroll was restored — a jump on a phone without scroll anchoring (iOS Safari; the owner,
+// 2026-11-10: 滑動會亂跳). The fetch then refreshes it in place, and only the time changes when the wires are the same.
+let lastWire = null;
 function fillWire() {
   const box = main.querySelector(".wrap > .wire");
   if (!box) return;
+  if (lastWire) drawWire(box, lastWire);
   getJSON("content/wire.json", { fresh: true }).then((w) => {
     const items = (Array.isArray(w?.items) ? w.items : []).filter((i) => i?.title && /^https:\/\//.test(i.url || ""));
-    if (!items.length || !box.isConnected) return;
-    const first = items[0], tk = box.querySelector(".tk"), ol = box.querySelector("ol");
-    box.querySelector(".at").textContent = w.updated ? `${wireTime(w.updated)} 更新・中央社、德國之聲、BBC 中文、法廣` : "";
-    // The five-minute refetch mostly brings the same wires: then only the time above changes, and the list — with its
-    // focus and the row under the reader's finger — is left alone. When wires did change while the list is open, the
-    // row the reader is at is kept where it is on the screen (and keyboard focus on the same link).
-    const sig = items.map((i) => i.url).join("\n");
-    if (box.dataset.sig === sig) { box.hidden = false; return; }
-    box.dataset.sig = sig;
-    const rows = () => [...ol.querySelectorAll("li")];
-    const at = tk.open ? rows().find((li) => li.getBoundingClientRect().bottom > 0) : null;
-    const keep = at && { url: at.querySelector("a").getAttribute("href"), top: at.getBoundingClientRect().top };
-    const focus = document.activeElement?.closest?.(".wire a")?.getAttribute("href");
-    box.querySelector("summary").innerHTML = `<span class="wtag">外電</span><span class="de">Telegramme</span><span class="t">${esc(wireTime(first.time))}</span><span class="src">${esc(first.src)}</span><span class="h">${esc(first.title)}</span><span class="more">${items.length} 則</span><span class="less">收起</span>`;
-    ol.innerHTML = items.map((i) => `<li><a href="${esc(i.url)}" target="_blank" rel="noopener noreferrer"><span class="meta"><span class="t">${esc(wireTime(i.time))}</span><span class="src">${esc(i.src)}</span></span><b>${esc(i.title)}</b>${i.lead ? `<span class="ld">${esc(i.lead)}</span>` : ""}</a></li>`).join("");
-    box.hidden = false;
-    const same = (url) => rows().find((li) => li.querySelector("a").getAttribute("href") === url);
-    if (keep) { const li = same(keep.url); if (li) window.scrollBy(0, li.getBoundingClientRect().top - keep.top); }
-    if (focus) same(focus)?.querySelector("a").focus({ preventScroll: true });
+    if (!items.length) return;
+    lastWire = w;
+    if (box.isConnected) drawWire(box, w);
   }).catch(() => {});
+}
+function drawWire(box, w) {
+  const items = (Array.isArray(w?.items) ? w.items : []).filter((i) => i?.title && /^https:\/\//.test(i.url || ""));
+  if (!items.length) return;
+  const first = items[0], tk = box.querySelector(".tk"), ol = box.querySelector("ol");
+  box.querySelector(".at").textContent = w.updated ? `${wireTime(w.updated)} 更新・中央社、德國之聲、BBC 中文、法廣` : "";
+  // The five-minute refetch mostly brings the same wires: then only the time above changes, and the list — with its
+  // focus and the row under the reader's finger — is left alone. When wires did change while the list is open, the
+  // row the reader is at is kept where it is on the screen (and keyboard focus on the same link).
+  const sig = items.map((i) => i.url).join("\n");
+  if (box.dataset.sig === sig) { box.hidden = false; return; }
+  box.dataset.sig = sig;
+  const rows = () => [...ol.querySelectorAll("li")];
+  const at = tk.open ? rows().find((li) => li.getBoundingClientRect().bottom > 0) : null;
+  const keep = at && { url: at.querySelector("a").getAttribute("href"), top: at.getBoundingClientRect().top };
+  const focus = document.activeElement?.closest?.(".wire a")?.getAttribute("href");
+  box.querySelector("summary").innerHTML = `<span class="wtag">外電</span><span class="de">Telegramme</span><span class="t">${esc(wireTime(first.time))}</span><span class="src">${esc(first.src)}</span><span class="h">${esc(first.title)}</span><span class="more">${items.length} 則</span><span class="less">收起</span>`;
+  ol.innerHTML = items.map((i) => `<li><a href="${esc(i.url)}" target="_blank" rel="noopener noreferrer"><span class="meta"><span class="t">${esc(wireTime(i.time))}</span><span class="src">${esc(i.src)}</span></span><b>${esc(i.title)}</b>${i.lead ? `<span class="ld">${esc(i.lead)}</span>` : ""}</a></li>`).join("");
+  box.hidden = false;
+  const same = (url) => rows().find((li) => li.querySelector("a").getAttribute("href") === url);
+  if (keep) { const li = same(keep.url); if (li) window.scrollBy(0, li.getBoundingClientRect().top - keep.top); }
+  if (focus) same(focus)?.querySelector("a").focus({ preventScroll: true });
 }
 // 刮開頭圖 (style.css .reveal): today's paper carries the day's picture under a sheet of paper cut into one tile per
 // article on the front page (the watch items among them only with a brief). A tile is gone once its article is read —

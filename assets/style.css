@@ -103,12 +103,16 @@ button { font: inherit; color: inherit; }
 .emblem .e-paper { fill: var(--paper); }
 .emblem .e-wing { fill: none; stroke: var(--gold); }
 .emblem .e-legs { fill: none; stroke: var(--ink); }
+/* One line each, whatever the tracking: title-in and tracking-in (below) open the letters wide, and a title allowed to
+   wrap would take two lines for a second and then one, moving everything under it by a line — on a phone without scroll
+   anchoring (iOS Safari) the page jumped under the reader's thumb on every return to the front page (the owner,
+   2026-11-10: 滑動會亂跳). The widest moment is clipped by the masthead's overflow: hidden, while the title is still faint. */
 .masthead h1 {
-  font-family: var(--serif); font-weight: 700; margin: 0; line-height: 1.25;
+  font-family: var(--serif); font-weight: 700; margin: 0; line-height: 1.25; white-space: nowrap;
   font-size: clamp(30px, 8.6vw, 46px); letter-spacing: .16em; padding-left: .16em;
 }
 .masthead .latin {
-  font-family: var(--latin); font-style: italic; font-size: clamp(17px, 4.4vw, 21px);
+  font-family: var(--latin); font-style: italic; font-size: clamp(17px, 4.4vw, 21px); white-space: nowrap;
   color: var(--gold); margin: 2px 0 12px; letter-spacing: .04em;
 }
 .masthead .dateline {
