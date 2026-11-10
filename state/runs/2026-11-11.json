@@ -25,5 +25,10 @@
       "news"
     ],
     "note": "副刊二 literature（document/correspondent，審稿判定重寫→總編重寫＋忠實度修正）、football 初稿（timeline/fan，非比賽夜，審稿判定重寫→總編重寫＋忠實度修正）；重寫2／修正0；未接第1班缺稿（三欄已完成）；validate 只剩 next.kickoff 與 Wikimedia 429 WARN"
+  },
+  "concerts": {
+    "finished_at": "2026-11-11T05:32:38+08:00",
+    "missing": [],
+    "note": "新增 1、更新 0；補查沒做完（鵬博、新象、傳大、兩廳院、衛武營、聯合數位文創網站連不上或無內容，未跑 sweep-done）；開放資料不完整；歷史上的今天 1918"
   }
 }
