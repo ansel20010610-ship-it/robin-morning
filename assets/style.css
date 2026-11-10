@@ -2034,6 +2034,18 @@ details.band .svl { margin: 0 0 10px; }
 .flyby { position: fixed; left: 0; top: 0; z-index: 35; width: 64px; height: 64px; pointer-events: auto; }
 .flyby .bird { width: 100%; height: 100%; }
 .flyby .scene, .flyby .r-leg, .flyby .note { display: none; }
+/* The nest it comes out of (nest.js flyBy): two layers at one place — the hollow behind the bird, the bowl and its twigs
+   in front, so the bird sits in it, peeks over the rim and sinks back. Not a target: only the bird opens the yard. */
+.fly-nest { position: fixed; width: 72px; height: 34px; pointer-events: none; }
+.fly-nest.back { z-index: 34; }
+.fly-nest.front { z-index: 36; }
+.fly-nest svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.fly-nest .fn-hollow { fill: var(--nest-dark); }
+.fly-nest .fn-bowl { fill: var(--nest-brown); }
+.fly-nest .fn-tw { fill: none; stroke: var(--nest-dark); stroke-width: 1.1; stroke-linecap: round; opacity: .85; }
+.fly-nest.back .fn-tw { stroke: var(--nest-brown); stroke-width: 1.4; }
+.fly-nest .fn-moss { fill: none; stroke: var(--gold-soft); stroke-width: 1.6; stroke-linecap: round; }
+.flyby .bird.flutter .r-wingg { display: inline; transform-box: view-box; transform-origin: 31px 32px; animation: nest-flap .12s ease-in-out infinite alternate; } /* the nestling tries its wings on the rim */
 /* the page */
 .nest-stage { text-align: center; padding: 6px 0 14px; border-bottom: 1px solid var(--rule); }
 .nest-stage b { display: block; font-size: 24px; letter-spacing: .14em; margin-top: 2px; }
