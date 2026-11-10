@@ -1,0 +1,244 @@
+{
+  "column": "music",
+  "date": "2026-11-11",
+  "title": "《卡門》首演，鬥牛士之歌唱完台下就冷了",
+  "dek": "《卡門》的音樂，電影和冰上都用過；首演那晚，台下聽完卻是冷的。",
+  "brief": "《卡門》首演夜，兩位編劇之一哈列維在信裡寫，〈鬥牛士之歌〉唱完，台下只剩冷淡。作曲的比才三個月後過世，才 36 歲，他自己也認定這齣戲失敗了。它後來成了古典曲目裡最受歡迎、最常上演的歌劇之一。",
+  "topic_key": "music:bizet-carmen",
+  "form": "qa",
+  "voice": "listener",
+  "updated_at": "2026-11-11T00:56:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "illustration",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Prudent-Louis_Leray_-_Poster_for_the_premi%C3%A8re_of_Georges_Bizet%27s_Carmen.jpg/1280px-Prudent-Louis_Leray_-_Poster_for_the_premi%C3%A8re_of_Georges_Bizet%27s_Carmen.jpg",
+    "width": 1280,
+    "height": 1752,
+    "alt": "黑白石版畫海報：馬蹄形的拱門下，一名女子身體向後倒在地上，一名男子在她身旁仰頭、伸出一隻手；拱門外遠處是擠滿人的鬥牛場看台，牆上貼著寫有 Escamillo 的鬥牛海報；右側一群人圍著一名穿鬥牛士服的男子。下方印著 CARMEN、Opéra-Comique en quatre actes，以及編劇與作曲者的名字。",
+    "caption": "1875 年《卡門》首演的石版海報，Prudent-Louis Leray 繪，Choudens 出版社發行。看來畫的是最後一幕：卡門倒在鬥牛場外，遠處是鬥牛場。",
+    "credit": "Prudent-Louis Leray；Adam Cuerden 修復；Gallica",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Prudent-Louis_Leray_-_Poster_for_the_premi%C3%A8re_of_Georges_Bizet%27s_Carmen.jpg",
+    "made": "1875 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "一齣歌劇開演前，樂團會先奏一段序曲。這一段是歌劇**《卡門》**（Carmen）的序曲：樂團一開頭是熱鬧的進行曲；到了中段，一段大旋律出來，那是〈鬥牛士之歌〉裡一再回來的那一句。作曲的是法國人**比才**（Georges Bizet）。這齣戲 1875 年 3 月 3 日在巴黎的喜歌劇院首演，他那年 36 歲。它首演那晚，從第二幕中段起轉冷，這是後面要講的事。"
+    },
+    {
+      "type": "p",
+      "text": "故事發生在 1820 年左右的西班牙塞維亞。一個叫唐荷西的伍長在菸廠外站崗，菸廠女工卡門走出來，唱了一首歌，把一朵花丟給他。他放她逃走，自己被捕；後來被拉進走私客的圈子，卡門卻轉而喜歡上鬥牛士。最後一幕，荷西在鬥牛場外殺了她。"
+    },
+    {
+      "type": "p",
+      "text": "這些旋律在別的地方也出現過。1976 年的美國少年棒球電影《The Bad News Bears》的配樂改編了《卡門》的主要主題。1988 年冬季奧運在加拿大卡加利舉行，東德的花式滑冰選手維特和美國的湯瑪斯，各自選了《卡門》的音樂來滑自由滑，後來大家管這場對決叫「卡門之戰」，維特拿了金牌。"
+    },
+    {
+      "type": "music",
+      "composer": "比才（Georges Bizet）",
+      "work": "歌劇《卡門》",
+      "work_original": "Carmen",
+      "composed": "1875 年首演",
+      "performers": "Maria Callas（卡門）、Nicolai Gedda（唐荷西）；Georges Prêtre 指揮 巴黎國家歌劇院管弦樂團",
+      "recording": "1964 年錄音，Warner Classics 發行",
+      "movements": [
+        "序曲",
+        "第一幕（含〈哈巴奈拉〉）",
+        "第二幕（含〈鬥牛士之歌〉）",
+        "第三幕",
+        "第四幕"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Bizet Carmen Callas Gedda Prêtre Orchestre du Théâtre National de l'Opéra de Paris",
+        "artist_hint": "Callas",
+        "track_filter": [
+          "Carmen",
+          "Habanera",
+          "Prélude"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "我挑 1964 年這版：卡拉絲唱卡門，這是她唯一一部完整錄下來的法國歌劇。"
+    },
+    {
+      "type": "h",
+      "text": "首演那天晚上，台下是什麼反應？"
+    },
+    {
+      "type": "p",
+      "text": "冷。兩位編劇之一的哈列維，在信裡記下了那一晚：第一幕有掌聲，還謝了好幾次幕；第二幕前半也順利，可是**〈鬥牛士之歌〉一唱完，台下只剩冷淡**；第三幕只有一首獨唱曲得到掌聲。"
+    },
+    {
+      "type": "p",
+      "text": "第四幕他說台下從頭到尾都是冰的。那一幕演的是卡門在鬥牛場外被殺，場內正傳出歡呼。比才身邊只剩幾個朋友在安慰他。"
+    },
+    {
+      "type": "p",
+      "text": "喜歌劇不是搞笑歌劇，意思是歌和歌之間用說的。劇院的負責人之一說，這是一間讓全家人一起來看的劇院，他反對這個題目，怕嚇跑觀眾。有一位歌手不肯演卡門，因為卡門要死在台上。這齣戲講的是一個女工、一個軍人，最後女工在鬥牛場外被殺。"
+    },
+    {
+      "type": "p",
+      "text": "隔天的評論有失望的，也有憤怒的。當時保守的批評家嫌它太像華格納，《音樂藝術》雜誌的評論說它沉悶。"
+    },
+    {
+      "type": "quote",
+      "text": "沉悶而晦澀……耳朵一直在等樂句收尾，那個收尾卻永遠不來，等得累了。",
+      "original": "dull and obscure ... the ear grows weary of waiting for the cadence that never comes.",
+      "cite": "埃斯屈迪耶（Léon Escudier），《音樂藝術》評論，1875 年；英譯轉引自維基百科〈Carmen〉條"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Atelier_Nadar_-_Galli-Mari%C3%A9_in_Bizet%27s_Carmen.jpg/1280px-Atelier_Nadar_-_Galli-Mari%C3%A9_in_Bizet%27s_Carmen.jpg",
+      "width": 1280,
+      "height": 1749,
+      "alt": "棕褐色的老照片：一位穿西班牙式服裝的女子，頭上蓋著白色蕾絲頭紗，一手扠腰、一手拿著黑色摺扇，側著臉微笑看向左邊；上身是鑲絨球的短背心，下身是蕾絲裙。",
+      "caption": "Galli-Marié 扮演卡門的照片，Atelier Nadar 攝，約 1875–1883 年間。她是首演時唱卡門的歌手；首演後有評論說她演的卡門是「罪惡的化身」。",
+      "credit": "Atelier Nadar（歸於 Paul Nadar）；Adam Cuerden 修復；Gallica",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atelier_Nadar_-_Galli-Mari%C3%A9_in_Bizet%27s_Carmen.jpg",
+      "made": "約 1875–1883 年"
+    },
+    {
+      "type": "h",
+      "text": "比才有沒有看到它成功？"
+    },
+    {
+      "type": "p",
+      "text": "沒有，他自己也認定這齣戲失敗了。首演當天，他獲頒榮譽軍團騎士勳章。三個月後的 6 月 3 日，他過世，才 36 歲。那天正好是他的結婚紀念日，當晚的《卡門》演出取消了。"
+    },
+    {
+      "type": "p",
+      "tag": "傳聞",
+      "text": "有人說，是首演的打擊害死了他。這只是懷疑。後來的醫師判斷，死因是急性關節風濕引發的心臟問題；也有人傳是自殺，真相始終沒有定論。"
+    },
+    {
+      "type": "h",
+      "text": "那它是怎麼翻身的？"
+    },
+    {
+      "type": "p",
+      "text": "先說維也納。比才過世前不久，才跟維也納宮廷歌劇院簽下合約。1875 年 10 月 23 日，維也納版開演。比才的作曲家朋友吉羅，把原來用說的台詞改成唱的，讓它變成大歌劇的格式。維也納的觀眾很買帳。"
+    },
+    {
+      "type": "p",
+      "text": "另外是同行。德國作曲家布拉姆斯據說看了二十遍，還說為了擁抱比才，他願意走到天邊。俄國作曲家柴可夫斯基寫信給資助他的梅克夫人，說這部歌劇各方面都是傑作。"
+    },
+    {
+      "type": "p",
+      "text": "現在它是古典曲目裡最受歡迎、最常上演的歌劇之一，紐約大都會歌劇院到 2011 年初，已經演了將近一千場。"
+    },
+    {
+      "type": "h",
+      "text": "卡門出場唱的那首，是比才自己寫的嗎？"
+    },
+    {
+      "type": "p",
+      "text": "現在聽到的是**〈哈巴奈拉〉**。卡門第一次出場就唱它，歌詞第一句是「愛情是一隻不受管的鳥」。哈巴奈拉原本是古巴哈瓦那一帶的舞曲，樂團在底下一直打著同一個搖擺的節奏。聽的時候可以留意底下那個搖擺的節奏。"
+    },
+    {
+      "type": "p",
+      "text": "旋律不是他從零寫的，是從西班牙音樂家伊拉迪耶 1863 年出版的一首歌〈El arreglito〉改來的。比才一開始以為那是民謠。有人告訴他，作者是十年前過世的人，他就在自己編的歌譜上加了註，把來源交代清楚。"
+    },
+    {
+      "type": "p",
+      "text": "不過他也沒照抄。歌詞是他自己寫的，他保留原曲的結構，加進半音的色彩，副歌的變化和伴奏的和聲也是他添的。這首出場曲，他前前後後改了好幾次，改到他和首演唱卡門的 Galli-Marié 都滿意為止。"
+    },
+    {
+      "type": "h",
+      "text": "聽完這首，接著聽什麼？"
+    },
+    {
+      "type": "p",
+      "text": "想只聽樂團、不聽人唱，可以找《卡門》組曲。比才過世後，吉羅把歌劇裡的音樂編成兩套組曲，序曲、〈哈巴奈拉〉、〈鬥牛士之歌〉都在裡面。想多聽比才，可以找歌劇《採珠人》裡的二重唱。那部歌劇 1863 年首演，演了 18 場就下檔，要到 1886 年才又上演。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Carmen",
+      "publisher": "Wikipedia",
+      "date": "2026-11-10",
+      "url": "https://en.wikipedia.org/wiki/Carmen",
+      "note": "維基百科條目，無單一發布日期，標查閱日。首演日期與劇院、哈列維信中的首演夜描述、Escudier 引文、維也納版與吉羅、布拉姆斯與柴可夫斯基、劇情時地、喜歌劇的定義、大都會演出場數"
+    },
+    {
+      "title": "Habanera (aria)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-10",
+      "url": "https://en.wikipedia.org/wiki/Habanera_(aria)",
+      "note": "查閱日。伊拉迪耶原曲、比才的註、多次改寫、歌詞出自比才、哈巴奈拉的來歷與節奏"
+    },
+    {
+      "title": "Toreador Song",
+      "publisher": "Wikipedia",
+      "date": "2026-11-10",
+      "url": "https://en.wikipedia.org/wiki/Toreador_Song",
+      "note": "查閱日。副歌是第一幕序曲的中段"
+    },
+    {
+      "title": "Georges Bizet",
+      "publisher": "Wikipedia",
+      "date": "2026-11-10",
+      "url": "https://en.wikipedia.org/wiki/Georges_Bizet",
+      "note": "查閱日。比才生平、死因與傳言、結婚日期、吉羅、《採珠人》18 場與 1886 年"
+    },
+    {
+      "title": "Did the rocky premiere of \"Carmen\" kill Bizet?",
+      "publisher": "Interlude",
+      "date": "2026-11-10",
+      "url": "https://interlude.hk/bizet-carmenpremiered-today-1875/",
+      "note": "查閱日，頁面未標發布日。首演當天獲頒榮譽軍團騎士勳章；隔天評論從失望到憤怒；首演打擊害死比才為「懷疑」"
+    },
+    {
+      "title": "Bizet: 10 facts about the great composer",
+      "publisher": "Classic FM",
+      "date": "2026-11-10",
+      "url": "https://www.classicfm.com/composers/bizet/guides/facts-gallery/",
+      "note": "查閱日。比才認定歌劇失敗；題材令劇院擔心"
+    },
+    {
+      "title": "Carmen Synopsis",
+      "publisher": "Opera Philadelphia",
+      "date": "2026-11-10",
+      "url": "https://www.operaphila.org/whats-on/on-stage-2017-2018/carmen/full-synopsis/",
+      "note": "2017–18 演季頁面，確切發布日未標。第一幕與第四幕劇情"
+    },
+    {
+      "title": "Battle of the Carmens",
+      "publisher": "Wikipedia",
+      "date": "2026-11-10",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_the_Carmens",
+      "note": "查閱日。1988 年卡加利冬奧，維特與湯瑪斯皆以《卡門》滑自由滑，維特金牌"
+    },
+    {
+      "title": "The Bad News Bears (1976 film)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-10",
+      "url": "https://en.wikipedia.org/wiki/The_Bad_News_Bears_(1976_film)",
+      "note": "查閱日。1976 年美國少年棒球喜劇；配樂改編《卡門》主要主題"
+    },
+    {
+      "title": "Bizet: Carmen (Prêtre, Callas)",
+      "publisher": "Warner Classics",
+      "date": "2026-11-10",
+      "url": "https://www.warnerclassics.com/release/bizet-carmen-pretre-callas",
+      "note": "再版資訊。演出者；卡拉絲唯一一部完整的法國歌劇錄音"
+    },
+    {
+      "title": "Carmen Suites (Bizet/Guiraud)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-10",
+      "url": "https://en.wikipedia.org/wiki/Carmen_Suites_(Bizet/Guiraud)",
+      "note": "查閱日。兩套組曲由吉羅在比才過世後編成，含序曲、哈巴奈拉、鬥牛士之歌"
+    }
+  ]
+}
