@@ -41,6 +41,11 @@
     "missing": [],
     "note": "新增 0、更新 0；補查今天不用；歷史上的今天 1871；開放資料不完整，尼德豪瑟場次售票頁仍在"
   },
+  "reserve": {
+    "finished_at": "2026-11-10T18:02:31+08:00",
+    "missing": [],
+    "note": "備稿修正 1（football 改字）、重寫 2（literature、philosophy），快訊已完成無需補寫"
+  },
   "serial": {
     "finished_at": "2026-11-10T16:13:14+08:00",
     "missing": [],
