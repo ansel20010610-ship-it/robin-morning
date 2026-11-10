@@ -2408,6 +2408,13 @@ details.band .svl { margin: 0 0 10px; }
 .night-letter[open] summary::after { content: "－"; }
 .night-letter[open] { padding-bottom: 14px; }
 .night-letter[open] .small:first-of-type { margin-top: 0; }
+/* API 額度 (app.js creditBox) */
+#credit-set .credit-left { margin: 4px 0 8px; font-family: var(--sans); color: var(--ink-2); }
+#credit-set .credit-left b { font-family: var(--latin); font-size: 30px; font-weight: 500; color: var(--ink); margin-right: 8px; }
+#credit-set .credit-bar { display: block; height: 3px; margin: 0 0 8px; background: var(--rule); }
+#credit-set .credit-bar i { display: block; height: 100%; background: var(--gold); }
+#credit-set .credit-days { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 4px; font-size: 13px; color: var(--ink-2); }
+#credit-set .credit-days li { display: flex; justify-content: space-between; border-bottom: 1px dotted var(--rule); padding: 2px 0; }
 /* 問這篇 (app.js askBox) */
 .ask-box { margin: 26px 0 8px; padding: 16px 18px 12px; border: 1px solid var(--rule); border-top: 2px solid var(--gold); }
 .ask-box .lbl { display: flex; align-items: baseline; gap: 10px; font-family: var(--sans); }
@@ -2419,5 +2426,6 @@ details.band .svl { margin: 0 0 10px; }
 .ask-box .ask-qa { margin: 14px 0 0; padding-top: 12px; border-top: 1px dashed var(--rule); }
 .ask-box .ask-qa .q { margin: 0 0 6px; font-weight: 600; color: var(--ink); }
 .ask-box .ask-qa .a p { margin: 0 0 8px; line-height: 1.8; color: var(--ink-2); }
+.ask-box .ask-clear { margin-left: auto; }
 .ask-box .ask-note { margin: 10px 0 0; font-family: var(--sans); font-size: 11.5px; color: var(--muted); }
 

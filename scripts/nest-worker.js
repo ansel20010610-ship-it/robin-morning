@@ -162,6 +162,33 @@ async function diary(req, env, code) {
   await env.NEST.put(key, JSON.stringify(now.slice(-400)));
   return json({ entry, entries: now.slice(-400) });
 }
+// API 額度 (the owner, 2026-11-11: 我想在設定頁加入可以看api剩餘額度): GET /{code}/credits → {month, used, budget, left,
+// days: [{d, usd}]} — what the Console organisation has spent this month (UTC calendar month), from the Admin API's cost
+// report (amounts in cents), against the 200 USD a month that does not carry over. Needs the Worker secret
+// ANTHROPIC_ADMIN_KEY (an sk-ant-admin key from the Console; it can read the organisation, not send messages). Only the
+// owner's yard; kept for ten minutes.
+async function credits(req, env, code) {
+  if (!ASK_YARDS.includes(await sha256(code))) return json({ error: "no credits here" }, 403);
+  const AK = env.ANTHROPIC_ADMIN_KEY;
+  if (!AK) return json({ error: "not set up" }, 503);
+  const ck = `credits:${code}`, kept = await env.NEST.get(ck, "json");
+  if (kept && Date.now() - kept.at < 600e3) return json(kept);
+  const start = `${new Date().toISOString().slice(0, 7)}-01T00:00:00Z`, days = [];
+  let page = "", cents = 0;
+  for (let i = 0; i < 3; i++) {
+    const u = new URL("https://api.anthropic.com/v1/organizations/cost_report");
+    u.searchParams.set("starting_at", start); u.searchParams.set("limit", "31"); if (page) u.searchParams.set("page", page);
+    const r = await fetch(u, { headers: { "x-api-key": AK, "anthropic-version": "2026-10-21" } });
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok) return json({ error: "admin api error" }, 502);
+    for (const b of d.data || []) { let c = 0; for (const x of b.results || []) c += Number(x.amount) || 0; cents += c; days.push({ d: String(b.starting_at || "").slice(0, 10), usd: Math.round(c) / 100 }); }
+    if (!d.has_more || !d.next_page) break;
+    page = d.next_page;
+  }
+  const used = Math.round(cents) / 100, out = { at: Date.now(), month: start.slice(0, 7), used, budget: 200, left: Math.max(0, Math.round((200 - used) * 100) / 100), days };
+  await env.NEST.put(ck, JSON.stringify(out), { expirationTtl: 3600 });
+  return json(out);
+}
 const json = (body, status = 200) => new Response(JSON.stringify(body), { status, headers: { ...CORS, "Content-Type": "application/json" } });
 
 export default {
@@ -174,6 +201,7 @@ export default {
     if (parts[1] === "ask") return ask(req, env, code);
     if (parts[1] === "goodnight") return goodnight(req, env, code);
     if (parts[1] === "diary") return diary(req, env, code);
+    if (parts[1] === "credits") return credits(req, env, code);
     // GET: the yard read-only, for the 地圖班 (scripts/postcards.py demand) — the feeds and the bird, no names, nothing written
     if (req.method === "GET") { const n = await env.NEST.get(code, "json"); return n ? json({ feeds: n.feeds, pet: n.pet || null }) : json({ error: "no such nest" }, 404); }
     if (req.method !== "POST") return json({ error: "GET or POST only" }, 405);

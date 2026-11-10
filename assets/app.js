@@ -650,7 +650,7 @@ function frontStatus() {
 // the weather, the parcel, the feast card and the seal change while the issue and a non-empty status line may not (audit c11).
 // 晚上寫信 (the owner, 2026-11-10: 我想刪掉夜間版 但寄信功能維持晚上出現): the night paper is gone; what stays of it is
 // the letter to the editors, folded at the top of the latest issue's front page from nine in the evening until five in
-// the morning on a phone whose yard takes letters (and in 設定 at any hour). `?night=1` / `?night=0` force the hours,
+// the morning on a phone whose yard takes letters (設定 no longer has it: the owner, 2026-11-11). `?night=1` / `?night=0` force the hours,
 // for checking.
 const nightHours = () => {
   const q = new URLSearchParams(location.search).get("night");
@@ -801,7 +801,7 @@ async function chairCard(a, date) {
 // The evening moon: beside the masthead's crest (masthead) and on the folded evening letter (letterForm).
 const MOON = `<svg class="moon" viewBox="0 0 64 64" aria-hidden="true"><path d="M40 8a24 24 0 1 0 16 38A20 20 0 0 1 40 8z"/><circle class="st" cx="14" cy="14" r="1.4"/><circle class="st" cx="24" cy="6" r=".9"/><circle class="st" cx="8" cy="30" r=".9"/></svg>`;
 // ——— 寫信給編輯部 (Leserbriefe; the owner, 2026-11-10, from my list of ideas: 1) ———
-// A question written at night (folded at the top of the front page, or in 設定 at any hour) goes to the shared store of the reader's yard (nest-worker.js
+// A question written at night (folded at the top of the front page) goes to the shared store of the reader's yard (nest-worker.js
 // /{code}/letters; only the owner's yard takes letters); the letters routine (editorial/columns/letters.md) answers one
 // or two before dawn into the yard's store (/{code}/letters/answers), and the morning's front page shows them to the yard's phones under 編輯部回信, the question
 // shortened and unsigned. The phone keeps what it sent (rm.letters.sent) to show each one's state, and the draft.
@@ -834,7 +834,7 @@ function viewLetters() {
   if (!letterYard()) { main.innerHTML = `<div class="wrap"><header class="page-title"><h1>編輯部回信</h1><span class="de">Leserbriefe</span></header><p class="empty">回信只有後院裡的人看得到。</p></div>`; document.title = `編輯部回信｜${S.cfg.title}`; return; }
   const ls = [...(S.letters || [])].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>編輯部回信</h1><span class="de">Leserbriefe</span></header>
-    ${ls.length ? ls.map((l) => `<p class="letter-date">${esc(fmtDate(l.date))}</p>${letterHtml(l)}`).join("") : `<p class="empty">還沒有回信。晚上九點以後打開報紙，首頁最上面就能寫信給編輯部；設定裡也可以寫。</p>`}</div>`;
+    ${ls.length ? ls.map((l) => `<p class="letter-date">${esc(fmtDate(l.date))}</p>${letterHtml(l)}`).join("") : `<p class="empty">還沒有回信。晚上九點以後打開報紙，首頁最上面就能寫信給編輯部。</p>`}</div>`;
   document.title = `編輯部回信｜${S.cfg.title}`;
   const id = decodeURIComponent((location.hash.split("/")[2] || ""));
   if (id) main.querySelector(`#${CSS.escape(id)}`)?.scrollIntoView({ block: "start" });
@@ -870,6 +870,33 @@ function letterForm(el, night = false, open = false) {
       letterForm(el, night, true);
     } catch { toast("沒寄出去，稿子還留著"); btn.disabled = false; }
   });
+}
+// API 額度 (the owner, 2026-11-11: 我想在設定頁加入可以看api剩餘額度): on the owner's yard, this month's spend on the
+// Console API credits (the 200 USD a month that does not carry over) and what is left, out of the yard's store
+// (nest-worker.js /{code}/credits, the Admin API's cost report, ten minutes old at most). Another yard has none: the
+// section goes. The last copy (rm.credits) shows at once, and offline.
+async function creditBox(el) {
+  const n = nest(), api = S.cfg.nest?.api;
+  if (!el || !n || !api) return;
+  const head = `<h2>API 額度<span class="de">Guthaben</span></h2>`;
+  const draw = (c) => {
+    const pct = Math.max(0, Math.min(100, (c.used / c.budget) * 100)), days = (c.days || []).filter((x) => x.usd > 0).slice(-7).reverse();
+    const ago = Math.round((Date.now() - c.at) / 60000);
+    el.innerHTML = `${head}<p class="credit-left"><b>US$ ${c.left.toFixed(2)}</b>剩下</p>
+      <span class="credit-bar"><i style="width:${pct.toFixed(1)}%"></i></span>
+      <p class="small">${esc(c.month.replace("-", " 年 "))} 月已用 US$ ${c.used.toFixed(2)}／${c.budget} 美元；每月重給，用不完不累積。${ago > 1 ? `這是 ${ago} 分鐘前的數字。` : ""}</p>
+      ${days.length ? `<ul class="credit-days">${days.map((x) => `<li><span>${Number(x.d.slice(5, 7))}/${Number(x.d.slice(8))}</span><b>US$ ${x.usd.toFixed(2)}</b></li>`).join("")}</ul>` : ""}`;
+  };
+  const kept = store.get("credits");
+  if (kept?.month && typeof kept.used === "number") draw(kept);
+  try {
+    const r = await fetch(`${api}/${encodeURIComponent(n.code)}/credits`, { cache: "no-store" });
+    if (r.status === 403) { el.remove(); return; }
+    const c = await r.json().catch(() => null);
+    if (!el.isConnected) return;
+    if (r.ok && typeof c?.used === "number" && typeof c?.left === "number") { store.set("credits", c); draw(c); return; }
+    if (!kept) el.innerHTML = `${head}<p class="small">還沒接上：要在後院的共用儲存放一把 Console 的 Admin 金鑰（只能看帳、不能拿來寫稿），才讀得到這個月用了多少。</p>`;
+  } catch { if (!kept) el.innerHTML = `${head}<p class="small">現在讀不到，可能離線了。</p>`; }
 }
 // 問這篇 (Fragen; the owner, 2026-11-10): on a 特供版 phone with a yard, a question about the article being read, answered
 // in a few seconds by the yard's shared store (nest-worker.js /{code}/ask, Claude on the owner's Console credits) from
@@ -2276,15 +2303,13 @@ function viewSettings() {
       <p class="small">${isWebKitITP() ? "iPhone／Safari 上內嵌播放器可能只能試聽 30 秒；完整收聽請按『在 Spotify 開啟』，加入歌單不受影響。"
         : "若播放器只播 30 秒試聽，請在同一個瀏覽器登入 open.spotify.com。"}</p>
     </section>
-    <section class="set"><h2>出刊</h2><p>每日台灣時間 ${esc(S.cfg.publish_time)} 出刊。首頁最上方每天一段和合本經文，下方「今日禱告」展開可讀整段經文與禱告。「攤開第一頁」四欄每日刊出（諾坎普散場之後、天亮以前，世界與台灣、診間裡站得住的證據、燈暗下來，聽一首名曲）；「橫線之下」依星期輪值，每天三篇（舊維也納的報紙把文藝副刊排在頭版一條橫線的下面，名字從這裡來）；「遠方有動靜」那幾欄只在有重要新進展時刊出。</p>
-      <p>稿件由雲端排程編輯在凌晨分班撰寫，每篇再由另一位編輯獨立查核事實、引文與圖片授權。若某一欄到 07:05 仍未完成，會自動換上預先寫好、查核過的備稿，本報不開天窗。</p>
-      <p>唯一的例外是週日：每週的 AI 額度在週日下午 3 點重置。若週日凌晨額度已經用完、當天沒能出齊，就不拿備稿充數，而是等 3 點額度重置後把整期重新寫過，大約傍晚出齊，出齊時會另外通知。首頁會說明當下進度。</p>
+    <section class="set"><h2>出刊</h2>
       <div class="table"><div class="scroll"><table class="rot"><thead><tr><th>星期</th><th>橫線之下</th></tr></thead><tbody>
       ${wd.map(([k, l]) => `<tr><td>${l}</td><td>${rot[k].map((c) => esc(col(c).name)).join("、")}</td></tr>`).join("")}</tbody></table></div></div>
     </section>
     ${sonder() ? `<section class="set"><h2>後院</h2><p>和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口，大家讀的加在一起，牠從蛋長成會唱歌的鳥。取名、邀請碼、加入別人的院子、離開，都在後院設定。</p>
       <div class="btns"><a class="btn ghost" href="#/nest">到後院去</a><a class="btn ghost" href="#/nest/settings">後院設定</a></div></section>` : ""}
-    ${sonder() && nest() ? `<section class="set" id="letter-set"></section>` : ""}
+    ${sonder() && nest() && S.cfg.nest?.api ? `<section class="set" id="credit-set"><h2>API 額度<span class="de">Guthaben</span></h2><p class="small">讀取中……</p></section>` : ""}
     <section class="set" id="sonder-set"><h2>特供版<span class="de">Sonderausgabe</span></h2>${sonder()
       ? `<p>這支手機是特供版：多了「後院」。</p><div class="btns"><button type="button" class="btn ghost" data-sonder-off>關閉特供版</button></div>`
       : `<p>有些功能只給拿到代碼的人。向社長請求代碼，在這裡輸入，這支手機就開了。</p>
@@ -2295,6 +2320,7 @@ function viewSettings() {
     ${isWebKitITP() && !isStandaloneIOS() ? `<section class="set"><h2>放到主畫面</h2><p>在 Safari 按下方的「分享」按鈕，選「加入主畫面」，知更鳥晨間記事就會像 App 一樣全螢幕開啟，也能離線讀已下載的文章。</p></section>` : ""}
     <footer class="colophon"><div class="latin">${esc(S.cfg.subtitle)}</div>資料更新：${esc((S.index.generated_at || "").replace("T", " ").slice(0, 16))} UTC</footer></div>`;
   renderPush($("#push-set"), S.cfg, S.index.push).catch(() => {});
+  creditBox(main.querySelector("#credit-set"));
   main.querySelector("[data-sonder-on]")?.addEventListener("click", async (e) => {
     const code = main.querySelector("[data-sonder-code]").value, btn = e.currentTarget; // currentTarget is gone after the await
     if (!normSonder(code)) { toast("請輸入代碼"); return; }
@@ -2303,7 +2329,6 @@ function viewSettings() {
     if (!ok) { btn.disabled = false; toast("代碼不對"); return; }
     store.set("sonder", true); toast("特供版開了"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" });
   });
-  letterForm(main.querySelector("#letter-set"));
   main.querySelector("[data-sonder-off]")?.addEventListener("click", () => { store.del("sonder"); toast("特供版關了；後院的紀錄還留著"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" }); });
   // Redrawing replaces the buttons; put focus back on the one just pressed.
   const redraw = (g, v) => { viewSettings(); main.querySelector(`[data-g="${g}"] [data-v="${v}"]`)?.focus(); };
