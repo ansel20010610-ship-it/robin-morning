@@ -414,11 +414,15 @@ export const birdSvg = (st) => `<div class="bird s${st.si}${st.full ? " full" : 
 // (300 wide), so its perch ends at the bough. A fixed aspect ratio: the plate keeps its height when it is drawn again
 // after a sync (iPhone Safari has no scroll anchoring).
 const YARD = { page: { h: 170, s: 120, x: 162, y: 50 }, plate: { h: 118, s: 100, x: 182, y: 18 } };
-function yardSvg(L, sea) {
-  const { h: H, s, x, y } = L, f = (n) => Math.round(n * 10) / 10, k = H > 140 ? 1 : .78;
-  const hy = f(y + .66 * s), py = f(y + .828 * s), pe = f(x + .797 * s), tx = f(x + .955 * s), wx = f(58 * k), wt = f(hy - 80 * k);
+const fr = (n) => Math.round(n * 10) / 10;
+function geoOf(L) {
+  const { h: H, s, x, y } = L, f = fr, k = H > 140 ? 1 : .78, hy = f(y + .66 * s);
+  return { H, s, x, y, f, k, hy, py: f(y + .828 * s), pe: f(x + .797 * s), tx: f(x + .955 * s), wx: f(58 * k), wt: f(hy - 80 * k) };
+}
+function yardSvg(L, sea, sky = "") {
+  const { H, s, x, y, f, k, hy, py, pe, tx, wx, wt } = geoOf(L);
   const snow = sea === "winter", o = [];
-  o.push(`<rect class="y-sky" x="0" y="0" width="300" height="${H}"/>`);
+  o.push(`<rect class="y-sky" x="0" y="0" width="300" height="${H}"/>`, sky);
   const cloud = (cx, cy, r) => `<g class="y-cloud"><ellipse cx="${f(cx)}" cy="${f(cy)}" rx="${f(r * 1.6)}" ry="${f(r * .55)}"/><circle cx="${f(cx - r * .45)}" cy="${f(cy - r * .35)}" r="${f(r * .55)}"/><circle cx="${f(cx + r * .25)}" cy="${f(cy - r * .5)}" r="${f(r * .7)}"/></g>`;
   o.push(cloud(118, 24 * k, 11 * k), cloud(196, 12 * k, 7 * k));
   // the hedge over the fence
@@ -479,10 +483,75 @@ function yardSvg(L, sea) {
   if (sea === "autumn") o.push(`<g class="y-fallen">${[[96, 14], [150, 26], [40, 30], [214, 12], [128, 40], [250, 34]].map(([xx, dy], i) => { const cy = f(Math.min(H - 3, hy + dy * k)); return `<ellipse cx="${xx}" cy="${cy}" rx="${f(2.4 * k)}" ry="${f(1 * k)}" transform="rotate(${-30 + i * 23} ${xx} ${cy})"/>`; }).join("")}</g>`);
   return o.join("");
 }
+// A moment of the visit (the owner, 2026-11-10: 想要加一些小鳥日常是每次點進去有可能會出現而不是每天一次的): each time
+// the 後院 page is opened there is a good chance something small is going on in the yard — a worm on the grass, a
+// butterfly over the flower bed, a squirrel running along the fence, the neighbours' cat walking it, a sparrow on a
+// picket, the bird dozing, a shower, snow, leaves coming down, a snail, dandelion fluff, a dragonfly, the window
+// opened and a dish of water put out, a rainbow. Drawn in the yard, moving, with one line under it. It is this phone's
+// and this visit's only: chosen at random on opening (never the same one twice running), kept when the page is drawn
+// again after a sync, gone on the next visit. It changes nothing — not the growth, not the events, not the album —
+// which stay the yard's, the same on every phone. None on a day something else is going on (a cat or a storm, a bath,
+// the sun …); away or still an egg, only the ones that need no bird; ill, only the quiet ones; each in its season.
+const MOMENTS = [
+  { id: "worm", bird: true, when: (c) => c.sea !== "winter", say: (N) => `草地上有一條蟲在扭，${N}歪著頭盯著牠看。` },
+  { id: "butterfly", calm: true, when: (c) => c.sea === "spring" || c.sea === "summer", say: () => "一隻黃蝴蝶飛進院子，在花圃上繞來繞去。" },
+  { id: "bee", when: (c) => c.sea === "spring" || c.sea === "summer", say: () => "一隻蜜蜂在花圃裡鑽進鑽出，嗡嗡響。" },
+  { id: "squirrel", say: (N) => N ? `一隻松鼠沿著圍籬頂跑過去，${N}的眼睛跟著牠轉。` : "一隻松鼠沿著圍籬頂跑過去。" },
+  { id: "cat", bird: true, cls: "watching", say: (N) => `鄰居的貓沿著圍籬慢慢走過，${N}一動也不敢動。` },
+  { id: "sparrow", calm: true, say: (N, c) => N ? `一隻麻雀停在圍籬上，跟${N}互看了好一會兒。` : c.si ? "一隻麻雀停在圍籬上，東張西望。" : "一隻麻雀停在圍籬上，探頭看了看枝上的蛋。" },
+  { id: "nap", bird: true, calm: true, cls: "napping", say: (N) => `${N}把頭縮進羽毛裡，在枝上打盹。` },
+  { id: "rain", calm: true, cls: "rainy", when: (c) => c.sea !== "winter", say: (N) => N ? `下起一陣小雨，${N}把羽毛蓬起來，躲在葉子底下。` : "下起一陣小雨，雨滴打在葉子上。" },
+  { id: "snow", calm: true, when: (c) => c.sea === "winter", say: () => "天上飄起小雪，一片一片落進院子。" },
+  { id: "leaves", calm: true, when: (c) => c.sea === "autumn", say: () => "風一吹，樹上的葉子一片一片飄下來。" },
+  { id: "snail", calm: true, when: (c) => c.sea !== "winter", say: () => "一隻蝸牛慢慢爬過踏腳石。" },
+  { id: "dandelion", when: (c) => c.sea === "spring", say: () => "蒲公英的絨毛飄進院子，在半空中打轉。" },
+  { id: "dragonfly", when: (c) => c.sea === "summer", say: () => "一隻蜻蜓停在半空，一下子又衝到別處。" },
+  { id: "window", calm: true, say: () => "屋裡有人推開窗，在窗台上放了一小碟水。" },
+  { id: "rainbow", calm: true, odds: .4, when: (c) => c.sea !== "winter", say: () => "雨剛停，院子上方掛著一道淡淡的彩虹。" },
+];
+const MOMENT_KEY = "rm-nest-moment";
+const momentFits = (m, c) => !c.hiding && !c.mood && (!m.when || m.when(c)) && (!m.bird || (c.si > 0 && !c.away)) && (!c.sick || m.calm);
+function pickMoment(c) {
+  if (Math.random() > .7) return null; // now and then nothing at all: a quiet yard
+  let last = ""; try { last = localStorage.getItem(MOMENT_KEY) || ""; } catch { /* private mode */ }
+  const pool = MOMENTS.filter((m) => m.id !== last && momentFits(m, c));
+  let r = Math.random() * pool.reduce((a, m) => a + (m.odds ?? 1), 0);
+  const m = pool.find((x) => (r -= x.odds ?? 1) < 0) || null;
+  if (m) try { localStorage.setItem(MOMENT_KEY, m.id); } catch { /* fine */ }
+  return m;
+}
+// the moment's drawing, in the yard's own units: `sky` goes behind the hedge, `bg` over the yard and behind the bird,
+// `fg` in front of everything (rain, snow, falling leaves, fluff), `html` beside the bird (the sleeper's z's)
+function momentArt(id, L, sea) {
+  const { H, s, x, f, k, hy, tx, wx, wt } = geoOf(L), ft = f(hy - 33 * k), b0 = wx + 10, b1 = x + 14, out = { sky: "", bg: "", fg: "", html: "" };
+  const at = (X, Y, inner, cls = "", style = "", sc = 1) => `<g class="${cls}"${style ? ` style="${style}"` : ""}><g transform="translate(${f(X)} ${f(Y)}) scale(${sc})">${inner}</g></g>`;
+  if (id === "worm") out.bg = at(x + .1 * s, hy + (H - hy) * .62, `<path class="m-worm" d="M0 0 q2 -2.6 4 0 t4 0 t4 0"/><circle class="m-wormh" cx="12.2" cy="0" r="1"/>`, "", "", 1.5);
+  if (id === "butterfly") out.bg = at(b0 + 24, hy - 26, `<g class="m-flap"><path class="m-bfly" d="M0 0 l-4.4 -3.6 l.8 6.4 Z M0 0 l4.4 -3.6 l-.8 6.4 Z"/></g>`, "m-wander", "", 2.2);
+  if (id === "bee") out.bg = at((b0 + b1) / 2 - 14, hy - 9, `<ellipse class="m-wing" cx="-.6" cy="-2.2" rx="1.6" ry="1.1"/><ellipse class="m-bee" cx="0" cy="0" rx="2.4" ry="1.6"/><path class="m-stripe" d="M-.6 -1.4 v2.8 M.9 -1.4 v2.8"/>`, "m-buzz", "", 1.9);
+  if (id === "squirrel") out.bg = at(wx - 20, ft - 1, `<g class="m-bob" transform="scale(-1 1)"><path class="m-sq" d="M5 -2 q7 -2 7 -9 q0 -4 -4 -4 q2 3 -1 6 q-2 2 -2 7 Z"/><ellipse class="m-sq" cx="0" cy="-2.6" rx="5" ry="2.8"/><circle class="m-sq" cx="-5" cy="-4.6" r="2.3"/><path class="m-sq" d="M-5.6 -6.4 l.3 -1.8 l1 1.4 Z"/><circle class="m-eye" cx="-5.9" cy="-4.9" r=".45"/></g>`, "m-run", `--run:${f(316 - wx)}px`, 2.1);
+  if (id === "cat") out.bg = at(304, ft - 1, `<g class="m-walk"><path class="m-cat" d="M8 -5 q6 -1 6 -9" fill="none"/><ellipse class="m-cat" cx="0" cy="-4.6" rx="9" ry="4"/><circle class="m-cat" cx="-9" cy="-8" r="3.6"/><path class="m-cat" d="M-12 -10 l.4 -3.6 l2.2 2.4 Z M-7.6 -11 l1.4 -3.2 l1.2 3 Z"/><path class="m-catleg" d="M-6 -1.6 v2 M-2 -1.4 v2 M4 -1.4 v2 M7 -1.6 v2"/><circle class="m-eye light" cx="-10.4" cy="-8.4" r=".55"/></g>`, "m-prowl", `--run:${f(-(340 - wx))}px`, 1.9);
+  if (id === "sparrow") { const i = Math.round(((b0 + b1) / 2 - wx - 2) / (9 * k)), px = wx + 2 + i * 9 * k + 3 * k;
+    out.bg = at(px, ft - 1.6, `<g transform="scale(-1 1)"><path class="m-spar-t" d="M3 -2 l4.4 -2.2"/><ellipse class="m-spar" cx="0" cy="-2.6" rx="3.8" ry="2.6"/><circle class="m-spar" cx="-3.2" cy="-5" r="2"/><path class="m-spar-c" d="M-5 -5.6 q1.8 -2.4 3.8 -.4"/><path class="m-beak" d="M-5.1 -5 l-1.6 .5 l1.6 .5 Z"/><circle class="m-eye" cx="-3.8" cy="-5.3" r=".4"/></g>`, "m-hop", "", 2.4); }
+  if (id === "nap") out.html = `<i class="zz">z</i><i class="zz two">z</i>`;
+  if (id === "rain") { const st = []; for (let c2 = 0, xx = 4; xx < 304; c2++, xx += 11) for (let yy = -36 + (c2 * 7) % 18; yy < H; yy += 18) st.push(`M${f(xx)} ${f(yy)} l-1.3 6`);
+    out.fg = `<rect class="m-gloom" x="0" y="0" width="300" height="${H}"/><g class="m-rain"><path d="${st.join(" ")}"/></g>`; }
+  if (id === "snow") { const fl = (off, cls) => { const c2 = []; for (let i = 0, xx = 6 + off; xx < 304; i++, xx += 17) for (let yy = -48 + (i * 9) % 24; yy < H; yy += 24) c2.push(`<circle cx="${f(xx + ((yy * 7) % 5))}" cy="${f(yy)}" r="${cls === "far" ? .8 : 1.3}"/>`); return `<g class="m-snow ${cls}">${c2.join("")}</g>`; };
+    out.fg = fl(0, "near") + fl(8, "far"); }
+  if (id === "leaves") out.fg = [[-26, 14, -70, .2], [-8, 26, -110, 1.6], [10, 10, -40, 3.1], [-40, 22, -130, 4.4], [4, 36, -90, 5.6]].map(([dx, dy, run, dl]) => `<g class="m-fall" style="--dx:${run}px;--dy:${f(H - dy - 8)}px;animation-delay:${dl}s"><ellipse cx="${f(tx + dx)}" cy="${dy}" rx="2.6" ry="1.1"/></g>`).join("");
+  if (id === "snail") { const cx = wx - 12 + 2 * 17 * k, cy = hy + 19 * k + 2 * ((H - hy - 22 * k) / 3.2);
+    out.bg = at(cx - 6, cy - .6, `<path class="m-snailb" d="M-3 1 h8 q2 0 2.6 -2 l.6 -1.6 M5.6 -1 l1 -2.4"/><circle class="m-shell" cx="1.6" cy="-1.6" r="2.6"/><path class="m-spiral" d="M1.6 -1.6 m-1 0 a1 1 0 1 1 1 1"/>`, "m-creep", "", 1.6); }
+  if (id === "dandelion") out.fg = [[20, hy - 30, 0], [-10, hy - 50, 3.5], [40, hy - 14, 6.5], [0, hy - 70, 9]].map(([X, Y, dl]) => `<g class="m-drift" style="animation-delay:${dl}s"><g transform="translate(${f(X)} ${f(Y)}) scale(3)"><path class="m-fluff" d="M0 0 v3 M0 0 l-1.8 -1 M0 0 l1.8 -1 M0 0 l-1 -1.8 M0 0 l1 -1.8 M0 0 v-2"/><circle class="m-seed" cx="0" cy="3.2" r=".5"/></g></g>`).join("");
+  if (id === "dragonfly") out.bg = at(b0 + 40, hy - 22, `<path class="m-dfly" d="M-6 0 h12"/><g class="m-dwings"><ellipse cx="-.6" cy="-2" rx="1.2" ry="3.6" transform="rotate(-24)"/><ellipse cx=".8" cy="-2" rx="1.2" ry="3.6" transform="rotate(24)"/></g><circle class="m-dfly-h" cx="-6.2" cy="0" r="1"/>`, "m-dart", "", 1.7);
+  if (id === "window") { const wx0 = 7 * k, wy = wt + 14 * k, ww = 18 * k, wh = 17 * k;
+    out.bg = `<rect class="m-glow" x="${f(wx0 + 1)}" y="${f(wy + 1)}" width="${f(ww - 2)}" height="${f(wh - 2)}"/><path class="m-curtain" d="M${f(wx0 + 1)} ${f(wy + 1)} h4 q-1.6 7 -4 ${f(wh - 2)} Z M${f(wx0 + ww - 1)} ${f(wy + 1)} h-4 q1.6 7 4 ${f(wh - 2)} Z"/><ellipse class="m-dish" cx="${f(wx0 + ww - 4)}" cy="${f(wy + wh - .6)}" rx="3.2" ry="1.2"/><ellipse class="m-water" cx="${f(wx0 + ww - 4)}" cy="${f(wy + wh - .9)}" rx="2.2" ry=".6"/>`; }
+  if (id === "rainbow") out.sky = `<g class="m-bow">${["a", "b", "c", "d"].map((c2, i) => `<path class="${c2}" d="M${30 + i * 4} ${hy} A${120 - i * 4} ${104 - i * 4} 0 0 1 ${270 - i * 4} ${hy}"/>`).join("")}</g>`;
+  return out;
+}
 const yardOf = (st) => st?.story?.season || SEASON(Number(twNow().date.slice(5, 7)));
 // the bird in its yard: the drawing behind, the bird's own box placed on it in the drawing's proportions
-const inYard = (kind, sea, bird) => { const L = YARD[kind], pc = (a, b) => `${(a / b * 100).toFixed(3)}%`;
-  return `<div class="yard yard-${kind} yard-${sea}" style="aspect-ratio:300/${L.h}"><svg class="yard-bg" viewBox="0 0 300 ${L.h}" aria-hidden="true">${yardSvg(L, sea)}</svg><div class="yard-spot" style="left:${pc(L.x, 300)};top:${pc(L.y, L.h)};width:${pc(L.s, 300)};height:${pc(L.s, L.h)}">${bird}</div></div>`; };
+const inYard = (kind, sea, bird, m = null) => { const L = YARD[kind], pc = (a, b) => `${(a / b * 100).toFixed(3)}%`, art = m ? momentArt(m.id, L, sea) : { sky: "", bg: "", fg: "", html: "" };
+  if (m?.cls) bird = bird.replace('class="bird ', `class="bird ${m.cls} `);
+  return `<div class="yard yard-${kind} yard-${sea}${m ? ` moment-${m.id}` : ""}" style="aspect-ratio:300/${L.h}"><svg class="yard-bg" viewBox="0 0 300 ${L.h}" aria-hidden="true">${yardSvg(L, sea, art.sky)}${art.bg}</svg><div class="yard-spot" style="left:${pc(L.x, 300)};top:${pc(L.y, L.h)};width:${pc(L.s, 300)};height:${pc(L.s, L.h)}">${bird}${art.html}</div>${art.fg ? `<svg class="yard-fg" viewBox="0 0 300 ${L.h}" aria-hidden="true">${art.fg}</svg>` : ""}</div>`; };
 const nextLine = (st) => (st.away ? `${st.back <= 1 ? "明天" : `${cn(st.back)}天後`}從${st.away.place}回來` : st.sick ? `再 ${st.sick.left} 口藥就會好` : `再 ${st.toNext} 口就${st.next.zh}`);
 const bar = (st) => { const w = st.away ? 1 - st.back / Math.max(1, daysTo(st.away.from, st.away.until) + 1) : st.sick ? 1 - st.sick.left / st.sick.need : (st.total - st.from) / Math.max(1, st.next.at - st.from);
   return `<span class="bar${st.sick ? " sick" : st.away ? " away" : ""}"><i style="width:${Math.round(Math.max(0, Math.min(1, w)) * 100)}%"></i></span><span class="next">${esc(nextLine(st))}</span>`; };
@@ -527,7 +596,8 @@ export function liveBird(root, { fly = true } = {}) {
   const bird = root?.querySelector(".bird"), robin = bird?.querySelector(".robin");
   if (!bird || !robin || calm()) return;
   const si = Number((bird.className.match(/\bs(\d)\b/) || [])[1] || 0);
-  if (bird.classList.contains("away") || bird.classList.contains("mood-out")) return; // nobody on the perch
+  if (bird.classList.contains("away") || bird.classList.contains("mood-out") || bird.classList.contains("napping")) return; // nobody on the perch, or asleep
+  if (bird.classList.contains("rainy") || bird.classList.contains("watching")) fly = false; // sitting the rain out, or keeping an eye on the cat
   if (bird.classList.contains("mood-sun")) fly = false; // basking: it does not leave its spot
   if (bird.classList.contains("sick") || bird.classList.contains("hiding")) fly = false; // it stays put today
   const timers = [];
@@ -831,6 +901,7 @@ export function pokeBird(root, st) {
   const T = (x, y, rot = 0, sx = 1) => ({ transform: `translate(${x}px, ${y}px) rotate(${rot}deg) scaleX(${sx})` });
   const notes = (k) => { for (let i = 0; i < k; i++) setTimeout(() => { const e = document.createElement("i"); e.className = "poke-note"; e.textContent = ["♪", "♫", "♬"][i % 3]; e.style.left = `${52 + Math.random() * 18}%`; bird.append(e); setTimeout(() => e.remove(), 1500); }, i * 260); };
   let act;
+  if (bird.classList.contains("napping")) { bird.classList.remove("napping"); root.querySelectorAll(".zz").forEach((z) => z.remove()); say(`${n}被吵醒了，眨了眨眼睛。`); poking = false; liveBird(root); return; }
   if (st.away) { say(`${n}不在家，去${st.away.place}了。`); poking = false; return; }
   if (st.mood === "out") { say(`${n}還沒回來，枝上只剩一根羽毛。`); poking = false; return; }
   if (st.mood === "sun" && st.si > 0) act = async () => { chirp("tic"); say(`${n}瞇著眼睛，翅膀還攤著，不想動。`); await run([T(0, 0), T(0, 1, 3), T(0, 0)], 900); };
@@ -869,17 +940,21 @@ export function pokeBird(root, st) {
 // settings page, since there is nothing to watch yet. `api` is config.json nest.api; without it the pages say the
 // yard is this phone alone. `afterSync`: this draw follows a sync, so it does not start another (a draw that synced,
 // and a sync that redrew, chased each other round until the store refused the phone, 2026-11-09).
+let visitMoment = null; // this visit's moment (pickMoment), kept when the page is drawn again after a sync
 export function renderNest(el, api, afterSync = false) {
   const n = nest();
   if (!n) { renderNestSettings(el, api); return; }
   const head = `<header class="page-title"><h1>後院</h1><span class="de">Hinterhof</span></header>`;
-  const st = nestState(n), today = twNow().date, pet = st.pet;
+  const st = nestState(n), today = twNow().date, pet = st.pet, sea = yardOf(st);
+  const mc = { si: st.si, sea, sick: Boolean(st.sick), away: Boolean(st.away), hiding: st.hiding || "", mood: st.mood || "" };
+  if (!afterSync || (visitMoment && !momentFits(visitMoment, mc))) visitMoment = pickMoment(mc);
+  const moment = visitMoment;
   const names = Object.entries(n.members || {}).map(([id, name]) => `<li><span>${id === n.me ? `${esc(name)}（你）` : esc(name)}</span><b>${st.members[id] || 0} 口</b></li>`).join("");
   const wk = st.week.map((w) => `<li${w.d === today ? ' class="today"' : ""}><i style="height:${Math.min(100, w.n * 14)}%"></i><span>${Number(w.d.slice(8))}</span></li>`).join("");
   const synced = n.synced ? `上次同步 ${new Date(n.synced).toLocaleTimeString("zh-TW", { hour: "2-digit", minute: "2-digit", hour12: false })}` : "";
   const got = Object.entries(st.items).map(([k, c]) => `${cn(c)}${THINGS[k]}`);
   el.innerHTML = `${head}
-    <div class="nest-stage">${inYard("page", yardOf(st), birdSvg(st))}<p class="poke-line" aria-live="polite"></p>
+    <div class="nest-stage">${inYard("page", sea, birdSvg(st), moment)}${moment ? `<p class="moment">${esc(moment.say(st.si > 0 && !st.away ? pet.name : "", mc))}</p>` : ""}<p class="poke-line" aria-live="polite"></p>
       <b>${esc(pet.name)}</b>${stageLine(st)}
       <p class="say">${st.away || st.sick ? lifeLine(st) : st.songs > 1 ? `又學會了一首，現在會唱${cn(st.songs)}首歌；每首都比上一首長一點。` : esc(st.stage.say(pet.p))}</p>
       ${!st.away && !st.sick && st.life.todays.length ? `<p class="life">${lifeLine(st)}</p>` : ""}
