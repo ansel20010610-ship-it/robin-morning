@@ -1,0 +1,213 @@
+{
+  "column": "wildcard",
+  "date": "2026-11-12",
+  "title": "央行故意讓物價每年漲 2%",
+  "dek": "聯準會、歐洲央行、日本央行都把目標訂在 2%。紐西蘭和美國各有一段紀錄，談物價該漲多少：一段來自電視訪問，一段來自會議逐字稿。",
+  "brief": "聯準會的目標是物價每年漲 2%，不是零。1996 年一場內部會議上，主席葛林斯潘說零，耶倫說物價指數量不準，該朝 2 走，但她自己的主要理由是名目工資不易下調。紐西蘭另有一套算法，和聯準會之間沒有查到關聯。",
+  "topic_key": "wildcard:economics-central-bank-two-percent",
+  "form": "number",
+  "voice": "visitor",
+  "updated_at": "2026-11-12T02:06:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "portrait",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Roger_Douglas_by_Rob_Tucker.jpg/1280px-Roger_Douglas_by_Rob_Tucker.jpg",
+    "width": 1280,
+    "height": 915,
+    "alt": "一位頭髮灰白、留八字鬍的男子坐在室內，微笑看著鏡頭，身穿深色毛衣。",
+    "caption": "紐西蘭前財政部長道格拉斯。Auckland Libraries 典藏標示拍攝於 1980 或 1990 年代，不是 1988 年電視訪問當時的畫面。",
+    "credit": "Rob Tucker（Auckland Libraries Heritage Collections）",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Roger_Douglas_by_Rob_Tucker.jpg",
+    "made": "1980s or 1990s"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "美國的中央銀行叫聯準會，它白紙黑字寫的目標是：**物價每年漲 2%**。聯準會管利率，也盯著物價漲得快不快。2012 年 1 月它把這個數字寫進正式聲明。歐洲中央銀行 2021 年訂的是中期內對稱的 2%，日本銀行 2013 年 1 月訂的也是 2%。"
+    },
+    {
+      "type": "p",
+      "text": "2% 的意思是，今年賣 100 元的東西，明年賣 102 元。一年看不出來，連漲 35 年，同樣的東西差不多要 200 元，剛好翻一倍。央行是故意要這樣的。我想知道為什麼是 2，不是 0，也不是 4，就去讀行內人自己留下的紀錄。"
+    },
+    {
+      "type": "h",
+      "text": "一場電視訪問，一個「0 到 1」"
+    },
+    {
+      "type": "p",
+      "text": "先看紐西蘭。1988 年，紐西蘭的物價漲幅十五年來差不多頭一次掉進個位數（1980 年代初短暫的物價凍結期除外）。財政部長**道格拉斯**（Roger Douglas）擔心民眾會期待央行放鬆貨幣政策，接受物價停在 5% 到 7%。4 月 1 日他上電視受訪，說他心裡想的是真正的物價穩定，「大約 0，或者 0 到 1%」。這段是後來的央行總裁布拉許（Don Brash）在回憶裡記下來的。"
+    },
+    {
+      "type": "p",
+      "text": "布拉許那年 9 月 1 日上任，任務已經很清楚：把物價漲幅壓在 0 以上、2% 以下。他們的算法是這樣。消費者物價指數漲 1%，大約就是真正的穩定，因為他們假設這個指數高估了 1 個百分點。另外再留上下各 1 個百分點，因為貨幣政策不可能打得那麼準。**紐西蘭的 2，是 1 加 1。**而且那個 2 是上限，不是要瞄準的點。"
+    },
+    {
+      "type": "p",
+      "text": "1989 年中，布拉許準備央行年報，寫下他有信心在到 1993 年 3 月止的年度把物價漲幅壓到 2% 以下，並和財政部長談了這件事。布拉許回憶裡的這位財政部長，當時已不是道格拉斯（道格拉斯 1988 年 12 月卸任）。他問能不能在 1992 年底做到，也說他喜歡「0 to 2 by '92」這個說法。這句話後來成了布拉許和同事一再掛在嘴邊的口號。1989 年底通過的新央行法規定，總裁任命或續任時，總裁和財政部長要簽一份公開的書面協議，寫明「物價穩定」是什麼意思。"
+    },
+    {
+      "type": "h",
+      "text": "聯準會的會議室，有人要他報個數字"
+    },
+    {
+      "type": "p",
+      "text": "美國這邊留下的是會議逐字稿。1996 年 7 月 2 日和 3 日，聯準會裡決定利率的委員會在華盛頓開會。主席是葛林斯潘（Alan Greenspan）。"
+    },
+    {
+      "type": "p",
+      "text": "他請理事**耶倫**（Janet Yellen）和另一位委員，各用三句話回答：長期的物價穩定，是不是聯準會該有的目標。耶倫後來當上聯準會主席，又當過美國財政部長。她先請葛林斯潘定義什麼叫物價穩定。他給了一句定義，她接著追問：能不能給個數字？逐字稿在這裡記了一筆「笑聲」。"
+    },
+    {
+      "type": "quote",
+      "text": "如果物價有量對的話，我會說是零。",
+      "original": "I would say the number is zero, if inflation is properly measured.",
+      "cite": "葛林斯潘，聯準會公開市場委員會會議逐字稿，1996 年 7 月 2–3 日"
+    },
+    {
+      "type": "quote",
+      "text": "量不準的話，我認為朝 2% 的通膨走是個好主意，而且要慢慢走，邊走邊看會發生什麼事。",
+      "original": "Improperly measured, I believe that heading toward 2 percent inflation would be a good idea, and that we should do so in a slow fashion, looking at what happens along the way.",
+      "cite": "耶倫，同一場會議"
+    },
+    {
+      "type": "p",
+      "text": "葛林斯潘問能不能就停在這裡，然後請下一位發言。"
+    },
+    {
+      "type": "p",
+      "text": "耶倫在同一場會議稍早（pp.43–44）講過她的理由，有兩個：一是通膨稍高一點，衰退時實質利率才降得下去，名目利率有降到 0 附近的限制；二是她認為最重要的一個，人們很討厭名目工資被砍（薪水的數字變少），通膨接近零的時候，失業的代價不會消失。她引用的模擬是，零通膨時約三分之一的企業會想砍工資。到了 p.65，她又說，不該把她講的 3% 和 2% 一定當成是指消費者物價指數。"
+    },
+    {
+      "type": "p",
+      "text": "同一頁，葛林斯潘說：「2% 是什麼的 2%？」他在同一段話裡說，一旦寫下數字，免不了有人問你指的是什麼。他在更早的地方（p.12）說過，消費者物價指數的偏誤是 0.5 到 1.5 個百分點，而且有證據顯示偏誤在變大。紐西蘭假設高估 1 個點，這裡是 0.5 到 1.5。兩邊的 2 在「指數量不準」這一點上有重疊；但耶倫自己的主要理由是別的，就是上面那個工資的論點。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "副主席麥克唐諾在同一場會議也講了理由。一個是通縮：通膨不好，物價整體下跌的通縮更糟。他說，執行時如果小小偏高，他把那當成保險費，防的是通縮，所以他落點差不多在耶倫那邊，2% 一帶。另一個接著耶倫的工資論點：照她的數字，零通膨時約三分之一的企業會想砍工資，他說這行不通（it will not fly），委員會能接受的通膨數字不會是零。他還主張這個委員會最好不要自己對外表態，免得和民眾站到對立面。逐字稿裡看不到對外訂出數字的決議。"
+    },
+    {
+      "type": "p",
+      "text": "2012 年 1 月，聯準會發表長期目標聲明，把數字寫了下來：用個人消費支出物價指數量，年增 2%，長期來看最符合聯準會的法定職責。"
+    },
+    {
+      "type": "h",
+      "text": "少一點，多一點"
+    },
+    {
+      "type": "p",
+      "text": "這場會議裡出現的理由有這些：耶倫的兩個（通膨稍高，衰退時實質利率才降得下去；人們不願被砍名目工資），麥克唐諾的保險論點（防通縮），還有指數量不準：葛林斯潘的 0 和耶倫的朝 2 走，中間差的就是量得準不準。"
+    },
+    {
+      "type": "p",
+      "text": "降息的空間，IMF 的報告也談到。國際貨幣基金（IMF）有三位經濟學家在 2010 年的報告寫道，平均通膨越低，平常的名目利率也越低，碰到零下限之後，能降的幅度就越小，遇到衝擊時用貨幣政策刺激經濟的空間也越少。2008 年金融危機一來，多數央行很快把利率降到接近 0；報告說，如果降得動，它們本來會再降，以簡單的公式估算，美國還會再降 3 到 5 個百分點，但名目利率的零下限擋住了。"
+    },
+    {
+      "type": "table",
+      "title": "同樣的東西，35 年後的價錢",
+      "head": [
+        "每年漲幅",
+        "今天 100 元的東西，35 年後",
+        "這個數字出現在哪裡"
+      ],
+      "rows": [
+        [
+          "0%",
+          "100 元",
+          "葛林斯潘 1996 年的答案（物價量得準的話）"
+        ],
+        [
+          "2%",
+          "約 200 元",
+          "聯準會、歐洲央行、日本央行的目標"
+        ],
+        [
+          "4%",
+          "約 395 元",
+          "IMF 2010 年的報告拿來發問的數字"
+        ]
+      ],
+      "caption": "假設每年固定上漲、連漲 35 年，自行試算：1.02 的 35 次方約 2.0，1.04 的 35 次方約 3.95。"
+    },
+    {
+      "type": "p",
+      "text": "往高的方向，同一份 IMF 報告也問過。它問：目標改成 4%，通膨的壞處真的比 2% 大很多嗎？要讓大家相信物價會停在 4%，是不是比停在 2% 難？三位作者在這一段把這些寫成問題，沒有下結論。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Practical Experiences in Reducing Inflation: The Case of New Zealand（Don Brash，收於《The Great Inflation》）",
+      "publisher": "NBER／University of Chicago Press",
+      "date": "2013-06",
+      "url": "https://www.nber.org/chapters/c11630",
+      "note": "讀了全文；1988 年電視訪問、0 到 2 的算法、1989 年新法與「0 to 2 by '92」都在 pp.29–30"
+    },
+    {
+      "title": "Meeting of the Federal Open Market Committee, July 2–3, 1996（逐字稿）",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "date": "1996-07-03",
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/FOMC19960703meeting.pdf",
+      "note": "日期為會議日；逐字稿事後公開。耶倫與葛林斯潘的對話、耶倫的工資與零下限論點（pp.43–44）、「不一定是 CPI」（p.65）、物價指數高估 0.5 到 1.5 個百分點、麥克唐諾的發言（pp.54、66–67）皆出自此件"
+    },
+    {
+      "title": "Federal Reserve issues FOMC statement of longer-run goals and policy strategy",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "date": "2012-01-25",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20120125c.htm"
+    },
+    {
+      "title": "Rethinking Macroeconomic Policy（SPN/10/03，Blanchard、Dell'Ariccia、Mauro）",
+      "publisher": "International Monetary Fund",
+      "date": "2010-02-12",
+      "url": "https://www.imf.org/external/pubs/ft/spn/2010/spn1003.PDF",
+      "note": "多數央行目標約 2%、降息空間、3 到 5 個百分點、4% 的提問"
+    },
+    {
+      "title": "ECB's Governing Council approves its new monetary policy strategy",
+      "publisher": "European Central Bank",
+      "date": "2021-07-08",
+      "url": "https://www.ecb.europa.eu/press/pr/date/2021/html/ecb.pr210708~dc78cc4b0d.en.html"
+    },
+    {
+      "title": "Introduction of the \"Price Stability Target\" and the \"Open-Ended Asset Purchasing Method\"",
+      "publisher": "Bank of Japan",
+      "date": "2013-01-22",
+      "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2013/k130122a.pdf"
+    },
+    {
+      "title": "Alan Greenspan",
+      "publisher": "Federal Reserve History",
+      "url": "https://www.federalreservehistory.org/people/alan-greenspan",
+      "note": "任期 1987–2006；頁面未標發布日期"
+    },
+    {
+      "title": "Janet L. Yellen",
+      "publisher": "Federal Reserve History",
+      "url": "https://www.federalreservehistory.org/people/janet-l-yellen",
+      "note": "聯準會主席 2014–2018；頁面未標發布日期"
+    },
+    {
+      "title": "Janet Yellen (2021-2025)",
+      "publisher": "U.S. Department of the Treasury",
+      "url": "https://home.treasury.gov/about/history/prior-secretaries/janet-yellen-2021-2025",
+      "note": "美國財政部長任期；頁面未標發布日期"
+    },
+    {
+      "title": "Roger Douglas",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Roger_Douglas",
+      "note": "財政部長任期止於 1988 年 12 月 14 日（僅此一項出自此頁，屬二級來源）"
+    },
+    {
+      "title": "File:Roger Douglas by Rob Tucker.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Roger_Douglas_by_Rob_Tucker.jpg",
+      "note": "頭圖，CC BY 4.0，Rob Tucker／Auckland Libraries"
+    }
+  ]
+}
