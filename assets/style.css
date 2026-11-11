@@ -2432,10 +2432,13 @@ details.band .svl { margin: 0 0 10px; }
 .letter-form textarea { width: 100%; box-sizing: border-box; margin: 8px 0 8px; padding: 10px 12px; font: inherit; font-size: 16px; /* 16px, as .search: iPhone Safari zooms the page into any field set smaller */ line-height: 1.6; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 2px; resize: vertical; }
 .letter-form .btns { display: flex; align-items: center; gap: 12px; }
 .letter-form .count { color: var(--muted); }
-.letter-form .letters-sent { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 6px; font-size: 13px; }
-.letter-form .letters-sent li { display: flex; justify-content: space-between; gap: 10px; color: var(--ink-2); }
-.letter-form .letters-sent .st { color: var(--muted); white-space: nowrap; }
-.letter-form .letters-sent a { white-space: nowrap; color: var(--gold-ink); }
+/* 寄過的信 (設定; app.js sentLetters): the letter in full, under it when it went and, once answered, the way to the reply */
+.letters-sent { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 12px; }
+.letters-sent li { padding-left: 12px; border-left: 2px solid var(--rule); }
+.letters-sent .t { margin: 0; font-size: 14px; line-height: 1.7; color: var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; }
+.letters-sent .st { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); }
+.letters-sent .st a { margin-left: 10px; white-space: nowrap; color: var(--gold-ink); }
+.set details.more .letters-sent { margin-top: 12px; }
 .letter-form .small { font-size: 13px; line-height: 1.65; color: var(--ink-2); margin: 6px 0 0; }
 .letters { margin: 26px 0 0; }
 .letter { margin: 10px 0 18px; padding: 14px 16px; border: 1px solid var(--rule); border-top: 2px solid var(--gold); }

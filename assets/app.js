@@ -836,7 +836,7 @@ const MOON = `<svg class="moon" viewBox="0 0 64 64" aria-hidden="true"><path d="
 // A question written at night (folded at the top of the front page) goes to the shared store of the reader's yard (nest-worker.js
 // /{code}/letters; only the owner's yard takes letters); the letters routine (editorial/columns/letters.md) answers one
 // or two before dawn into the yard's store (/{code}/letters/answers), and the morning's front page shows them to the yard's phones under 編輯部回信, the question
-// shortened and unsigned. The phone keeps what it sent (rm.letters.sent) to show each one's state, and the draft.
+// shortened and unsigned. The phone keeps what it sent (rm.letters.sent; listed in 設定 under 寄過的信, sentLetters), and the draft.
 // Only the yard's phones see the answers (the owner, 2026-11-10: 回信改成只有院子裡的人看得到): they live in the yard's
 // shared store, read with the yard code; the last copy is kept on the phone (rm.letters.cache) for the front page to
 // draw at once and offline, and the 編輯部回信 slot is filled again when a fresher copy arrives.
@@ -854,6 +854,8 @@ function loadLetters() {
     document.querySelectorAll(".letters-slot").forEach((el) => { el.innerHTML = lettersBox(el.dataset.date); });
     const list = main.querySelector(".letters-list"); // #/letters open on the kept copy (the app woken on it): the answers that just came
     if (list) list.innerHTML = lettersList();
+    const sent = main.querySelector(".sent-letters"); // 設定 open: a letter just answered takes its 刊在 … → in place
+    if (sent) sent.innerHTML = sentLetters(Boolean(sent.querySelector("details[open]")));
   }).catch(() => {});
 }
 const letterAnswered = (id) => (S.letters || []).find((l) => l.id === id);
@@ -870,7 +872,7 @@ function viewLetters() {
   if (!letterYard()) { main.innerHTML = `<div class="wrap"><header class="page-title"><h1>編輯部回信</h1><span class="de">Leserbriefe</span></header><p class="empty">回信只有後院裡的人看得到。</p></div>`; document.title = `編輯部回信｜${S.cfg.title}`; return; }
   main.innerHTML = `<div class="wrap"><header class="page-title"><h1>編輯部回信</h1><span class="de">Leserbriefe</span></header><div class="letters-list">${lettersList()}</div></div>`;
   document.title = `編輯部回信｜${S.cfg.title}`;
-  // 刊在 … → (letterForm) lands on that reply: route() places the page after the view is drawn, so the place is handed
+  // 刊在 … → (設定's 寄過的信, sentLetters) lands on that reply: route() places the page after the view is drawn, so the place is handed
   // to it (landTop) — a scrollIntoView here was undone at once by its scrollTo(0, 0) (audit 2026-11-11).
   const id = decodeURIComponent((location.hash.split("/")[2] || "")), at = id && main.querySelector(`#${CSS.escape(id)}`);
   if (at) landTop = Math.max(0, at.getBoundingClientRect().top + scrollY - 16);
@@ -888,22 +890,15 @@ function lettersList() {
   return ls.length ? ls.map((l) => `<p class="letter-date">${esc(fmtDate(l.date))}</p>${letterHtml(l)}`).join("") : `<p class="empty">${emptyArt("letters")}還沒有回信。晚上九點以後打開報紙，首頁最上面就能寫信給編輯部。</p>`;
 }
 // In the evening (night = true) the form is folded under one line at the top of the front page — a moon, 寫信給編輯部 —
-// and opens on a tap; it stays open while a draft is kept, and after a letter goes out to show it among the sent.
+// and opens on a tap; it stays open while a draft is kept. Only the form: the letters already sent are in 設定
+// (sentLetters), and the fold counts none of them (the owner, 2026-11-11: 每天晚上首頁的不要有過去的信).
 function letterForm(el, night = false, open = false) {
   const n = nest(), api = S.cfg.nest?.api;
   if (!el || !n || !api) return;
-  const sent = store.get("letters.sent", []).slice(-5).reverse();
-  const md = (iso) => { const t = new Date(new Date(iso).getTime() + 8 * 3600e3); return `${t.getUTCMonth() + 1}/${t.getUTCDate()} ${String(t.getUTCHours()).padStart(2, "0")}:${String(t.getUTCMinutes()).padStart(2, "0")}`; };
-  // A letter two dawns old with no answer is not waiting any more (the editors answer questions only, two a morning at
-  // most): it says so, where 等回信 stood for good and the fold counted it every night (the owner, 2026-11-11: 我昨天寄的信
-  // 怎麼沒回). An answer that still comes takes its line over as before.
-  const passed = (x) => Date.now() - Date.parse(x.at) > 36 * 3600e3;
-  const wait = sent.filter((x) => !letterAnswered(x.id) && !passed(x)).length;
-  el.innerHTML = `${night ? `<details class="letter-form night-letter"${open || store.get("letters.draft", "") ? " open" : ""}><summary>${MOON}<b>寫信給編輯部</b><span class="de">Leserbrief</span><span class="note">${wait ? `${wait} 封等回信` : "晚上才開的信箱"}</span></summary>` : `<div class="letter-form"><h2>寫信給編輯部</h2>`}
+  el.innerHTML = `${night ? `<details class="letter-form night-letter"${open || store.get("letters.draft", "") ? " open" : ""}><summary>${MOON}<b>寫信給編輯部</b><span class="de">Leserbrief</span><span class="note">晚上才開的信箱</span></summary>` : `<div class="letter-form"><h2>寫信給編輯部</h2>`}
     <p class="small">問一個你想知道的問題。天亮前編輯部挑一兩封回答，刊在早上的報上，不署名，問題會稍微改寫。不要寫病人或私人的事。</p>
     <textarea maxlength="300" rows="3" placeholder="例如：布拉姆斯第四號該從哪個版本聽起？">${esc(store.get("letters.draft", ""))}</textarea>
     <div class="btns"><button class="btn" type="button" data-letter-send>寄出</button><span class="count small"></span></div>
-    ${sent.length ? `<ul class="letters-sent">${sent.map((x) => { const a = letterAnswered(x.id); return `<li><span class="t">${esc(x.text.length > 28 ? `${x.text.slice(0, 27)}…` : x.text)}</span>${a ? `<a href="#/letters/${esc(x.id)}">刊在 ${esc(fmtDate(a.date, "short"))} →</a>` : `<span class="st">寄出了 ${esc(md(x.at))}，${passed(x) ? "這封沒有回信（編輯部只回問題）" : "等回信"}</span>`}</li>`; }).join("")}</ul>` : ""}
   ${night ? "</details>" : "</div>"}`;
   const ta = el.querySelector("textarea"), count = el.querySelector(".count"), btn = el.querySelector("[data-letter-send]");
   const upd = () => { count.textContent = `${ta.value.length} / 300`; store.set("letters.draft", ta.value); };
@@ -923,10 +918,26 @@ function letterForm(el, night = false, open = false) {
       if (!r.ok || !j.id) { toast(r.status === 429 ? "二十四小時內已經寄了三封，晚一點再寄；稿子還留著" : r.status === 403 ? (j.error === "not in this yard" ? "這支手機還沒跟院子對上，先打開一次後院再寄；稿子還留著" : "這個後院不能寄信") : "沒寄出去，稿子還留著"); btn.disabled = false; return; }
       store.set("letters.sent", [...store.get("letters.sent", []), { id: j.id, at: j.at, text }].slice(-20));
       store.del("letters.draft"); store.del("letters.cid");
-      toast("寄出了");
-      letterForm(el, night, true);
+      toast("寄出了，收在設定的「寄過的信」");
+      letterForm(el, night); // folded again: the toast says it went, and the letter itself is in 設定
     } catch { toast("沒寄出去，稿子還留著"); btn.disabled = false; }
   });
+}
+// 寄過的信 (設定; the owner, 2026-11-11: 把過去寫的放在設定的一個地方，每天晚上首頁的不要有過去的信，如果沒有回信也不要寫在
+// 等回信): what this phone sent (rm.letters.sent, the last twenty), each in full with when it went; an answered one
+// links to its reply, an unanswered one says nothing more. The newest three stand open, the older ones fold under a line.
+function sentLetters(open = false) {
+  const kept = store.get("letters.sent", []), sent = (Array.isArray(kept) ? kept : []).filter((x) => x && x.id && typeof x.text === "string").reverse();
+  if (!sent.length) return `<p class="small">還沒寄過信。晚上九點以後，首頁最上面可以寫信給編輯部。</p>`;
+  const md = (iso) => { const t = new Date(new Date(iso).getTime() + 8 * 3600e3); return Number.isNaN(t.getTime()) ? "" : `${t.getUTCMonth() + 1}/${t.getUTCDate()} ${String(t.getUTCHours()).padStart(2, "0")}:${String(t.getUTCMinutes()).padStart(2, "0")}`; };
+  // A letter two dawns old with no answer is not coming (the editors answer questions only, two a morning at most): it
+  // says so (the owner, 2026-11-11: 我昨天寄的信怎麼沒回). An answer that still comes takes its line over.
+  const passed = (x) => Date.now() - Date.parse(x.at) > 36 * 3600e3;
+  const row = (x) => { const a = letterAnswered(x.id); return `<li><p class="t">${esc(x.text)}</p><p class="st">寄出 ${esc(md(x.at))}${a ? `<a href="#/letters/${esc(x.id)}">刊在 ${esc(fmtDate(a.date, "short"))} →</a>` : passed(x) ? "・這封沒有回信（編輯部只回問題）" : ""}</p></li>`; };
+  const rest = sent.slice(3);
+  return `<ul class="letters-sent">${sent.slice(0, 3).map(row).join("")}</ul>
+    ${rest.length ? `<details class="more"${open ? " open" : ""}><summary>更早的 ${rest.length} 封</summary><ul class="letters-sent">${rest.map(row).join("")}</ul></details>` : ""}
+    <p class="small">只記在這支手機上，留最近二十封。</p>`;
 }
 // API 額度 (the owner, 2026-11-11: 我想在設定頁加入可以看api剩餘額度): on the owner's yard, this month's spend on the
 // Console API credits (the 200 USD a month that does not carry over) and what is left, out of the yard's store
@@ -2450,6 +2461,7 @@ function viewSettings() {
     </section>
     ${sonder() ? `<section class="set"><h2>後院</h2><p>和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口，大家讀的加在一起，牠從蛋長成會唱歌的鳥。取名、邀請碼、加入別人的院子、離開，都在後院設定。</p>
       <div class="btns"><a class="btn ghost" href="#/nest">到後院去</a><a class="btn ghost" href="#/nest/settings">後院設定</a></div></section>` : ""}
+    ${letterYard() ? `<section class="set" id="sent-set"><h2>寄過的信<span class="de">Meine Briefe</span></h2><div class="sent-letters">${sentLetters()}</div></section>` : ""}
     ${sonder() && nest() && S.cfg.nest?.api ? `<section class="set" id="credit-set"><h2>API 額度<span class="de">Guthaben</span></h2><p class="small">讀取中……</p></section>` : ""}
     <section class="set" id="sonder-set"><h2>特供版<span class="de">Sonderausgabe</span></h2>${sonder()
       ? `<p>這支手機是特供版：多了「後院」。</p><div class="btns"><button type="button" class="btn ghost" data-sonder-off>關閉特供版</button></div>`
