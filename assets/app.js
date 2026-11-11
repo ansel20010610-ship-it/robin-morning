@@ -905,12 +905,16 @@ function letterForm(el, night = false, open = false) {
     if (!text) { toast("先寫一句"); return; }
     btn.disabled = true;
     try {
-      const r = await fetch(`${api}/${encodeURIComponent(n.code)}/letters`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me, text }), ...within(20000) });
+      // one id per letter, kept until it is sent: pressed again after an answer that never came, the store finds it already in the box
+      // (the same words only: a letter changed after a send that may have gone through goes as a new one)
+      let { c: cid, t } = store.get("letters.cid", {}) || {};
+      if (t !== text || !/^[A-Za-z0-9]{6,24}$/.test(cid || "")) { cid = Math.random().toString(36).slice(2, 12) + Date.now().toString(36); store.set("letters.cid", { c: cid, t: text }); }
+      const r = await fetch(`${api}/${encodeURIComponent(n.code)}/letters`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me, text, cid }), ...within(20000) });
       const j = await r.json().catch(() => ({}));
       // 403 is two things at the store: a yard that takes no letters, or this phone not yet among the yard's members there (a first sync that never went through)
       if (!r.ok || !j.id) { toast(r.status === 429 ? "二十四小時內已經寄了三封，晚一點再寄；稿子還留著" : r.status === 403 ? (j.error === "not in this yard" ? "這支手機還沒跟院子對上，先打開一次後院再寄；稿子還留著" : "這個後院不能寄信") : "沒寄出去，稿子還留著"); btn.disabled = false; return; }
       store.set("letters.sent", [...store.get("letters.sent", []), { id: j.id, at: j.at, text }].slice(-20));
-      store.del("letters.draft");
+      store.del("letters.draft"); store.del("letters.cid");
       toast("寄出了");
       letterForm(el, night, true);
     } catch { toast("沒寄出去，稿子還留著"); btn.disabled = false; }
@@ -986,7 +990,7 @@ function askBox(el, date, column) {
       const r = await fetch(`${api}/${encodeURIComponent(n.code)}/ask`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me, date, column, q }), ...within(60000) });
       const j = await r.json().catch(() => ({}));
       if (!r.ok || !j.a) {
-        toast(r.status === 429 ? "今天已經問了四十題" : r.status === 403 ? (j.error === "not in this yard" ? "這支手機還沒跟院子對上，先打開一次後院再問；問題還留著" : "這個後院不能問") : j.error === "out of credit" ? "這個月的額度用完了" : r.status === 503 ? "還沒接好，過一陣子再試" : "沒問成，問題還留著");
+        toast(r.status === 429 ? "今天已經問了四十題" : r.status === 403 ? (j.error === "not in this yard" ? "這支手機還沒跟院子對上，先打開一次後院再問；問題還留著" : "這個後院不能問") : j.error === "out of credit" ? "這個月的額度用完了" : j.error === "busy" ? "現在問的人多，過一分鐘再試；問題還留著" : r.status === 503 ? "還沒接好，過一陣子再試" : "沒問成，問題還留著");
       } else {
         const x = { q, a: j.a }, cur = store.get("ask", {});
         cur[key] = [...(Array.isArray(cur[key]) ? cur[key] : []), x].slice(-5);

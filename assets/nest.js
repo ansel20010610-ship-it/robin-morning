@@ -1142,7 +1142,9 @@ async function sendGoodnight(api) {
   const n = nest();
   if (!n || !api) return false;
   try {
-    const r = await fetch(yardUrl(api, n, "goodnight"), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me }), ...within(15000) });
+    // with the time it was said: one sent the next morning (no signal at night) stays on its own night (nest-worker.js)
+    const said = n.gnPending ? gnList(n).find((g) => g.w === n.me && g.n === n.gnPending)?.at : undefined;
+    const r = await fetch(yardUrl(api, n, "goodnight"), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me, at: said }), ...within(15000) });
     const d = r.ok ? await r.json() : null, cur = nest();
     if (!cur || cur.code !== n.code || !Array.isArray(d?.goodnights)) return false; // not yet deployed: the main store answers instead
     cur.gn = d.goodnights; delete cur.gnPending; save(cur);
@@ -1166,13 +1168,15 @@ function sayGoodnight(root, api, pet) {
 async function loadGoodnights(api) {
   const n = nest();
   if (!n || !api) return false;
-  if (n.gnPending && n.gnPending === nightOf()) return sendGoodnight(api);
+  // tonight's, or last night's that never got through: the store takes both with the time it was said
+  const owed = (x) => x.gnPending && [nightOf(), addDays(nightOf(), -1)].includes(x.gnPending);
+  if (owed(n)) return sendGoodnight(api);
   try {
     const r = await fetch(yardUrl(api, n, "goodnight"), { cache: "no-store", ...within(15000) });
     const d = r.ok ? await r.json() : null, cur = nest();
     if (!cur || cur.code !== n.code || !Array.isArray(d?.goodnights)) return false;
     const mine = cur.gnPending ? gnList(cur).filter((g) => g.w === cur.me && g.n === cur.gnPending) : [];
-    if (cur.gnPending && cur.gnPending !== nightOf()) delete cur.gnPending; // a night gone by: the store would stamp it tonight
+    if (cur.gnPending && !owed(cur)) delete cur.gnPending; // older than last night: the store no longer takes it
     const next = [...d.goodnights, ...mine.filter((m) => !d.goodnights.some((g) => g.w === m.w && g.n === m.n))];
     if (JSON.stringify(next) === JSON.stringify(cur.gn || [])) return false;
     cur.gn = next; save(cur);
@@ -1241,6 +1245,10 @@ async function writeDiaryNow(api) {
   diaryBusy = true;
   try {
     const r = await fetch(yardUrl(api, n, "diary"), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me, from, facts: diaryFacts(n, from, to) }), ...within(60000) }); // the entry is written while the phone waits: a minute at most, then 正在寫…… goes and the next visit asks again
+    if (r.status === 409) { // the other phone is writing it this minute: read it once it is in
+      for (let i = 0; i < 4; i++) { await new Promise((ok) => setTimeout(ok, 12000)); if (await loadDiary(api) || diaryList(nest()).some((e) => e.d === today)) return true; }
+      return false;
+    }
     const d = r.ok ? await r.json() : null, cur = nest();
     if (r.status === 403) diaryOff = true;
     if (!cur || cur.code !== n.code || !Array.isArray(d?.entries)) return false;
@@ -1255,7 +1263,7 @@ function diaryHtml(n, pet) {
   const busy = diaryBusy && (!e || e.d !== today) ? `<p class="small diary-busy">${esc(pet.name)}正在寫今天的日記……</p>` : "";
   if (!e) return `<section class="set nest-diary">${head}${busy}</section>`;
   const span = e.from && e.from !== e.to ? `${mdZh(e.from)}到${mdZh(e.to)}` : mdZh(e.to);
-  return `<section class="set nest-diary">${head}${busy}<p class="diary-when">${e.d === today ? "今天早上" : esc(mdZh(e.d))}寫的，記${esc(span)}</p><div class="diary-text">${paragraphs(e.text)}</div><p class="small"><a href="#/nest/album">以前的日記都貼在相簿裡 →</a></p></section>`;
+  return `<section class="set nest-diary">${head}${busy}<p class="diary-when">${e.d === today ? `今天${e.at && !Number.isNaN(Date.parse(e.at)) ? ` ${hhmm(e.at)} ` : ""}` : esc(mdZh(e.d))}寫的，記${esc(span)}</p><div class="diary-text">${paragraphs(e.text)}</div><p class="small"><a href="#/nest/album">以前的日記都貼在相簿裡 →</a></p></section>`;
 }
 // What a visit to the yard fetches besides the sync, once (not on the redraw after it): the goodnights, the diary, and
 // the morning's entry if nobody has written it yet. Each says whether the page should be drawn again.
