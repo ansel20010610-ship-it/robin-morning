@@ -188,9 +188,11 @@ async function diary(req, env, code) {
   await env.NEST.delete(lk).catch(() => {});
   return json({ entry, entries: now.slice(-400) });
 }
-// API 額度 (the owner, 2026-11-11: 我想在設定頁加入可以看api剩餘額度): GET /{code}/credits → {month, used, budget, left,
-// days: [{d, usd}]} — what the Console organisation has spent this month (UTC calendar month), from the Admin API's cost
-// report (amounts in cents), against the 200 USD a month that does not carry over. Needs the Worker secret
+// API 額度 (the owner, 2026-11-11: 我想在設定頁加入可以看api剩餘額度): GET /{code}/credits → {month, from, until, used,
+// budget, left, days: [{d, usd}]} — what the Console organisation has spent in this credit cycle, from the Admin API's
+// cost report (amounts in cents), against the 200 USD a cycle that does not carry over. The cycle is the plan's billing
+// cycle, not the calendar month (Console → Billing, 2026-11-11: the grant of 11-10 expires 12-13 00:00 UTC): the 13th
+// to the 13th, UTC, the first from the grant — the same rule as scripts/api_shift.py cycle(). Needs the Worker secret
 // ANTHROPIC_ADMIN_KEY (an sk-ant-admin key from the Console; it can read the organisation, not send messages). Only the
 // owner's yard; kept for ten minutes.
 async function credits(req, env, code) {
@@ -199,9 +201,13 @@ async function credits(req, env, code) {
   if (!AK) return json({ error: "not set up" }, 503);
   const ck = `credits:${code}`, kept = await env.NEST.get(ck, "json");
   if (kept && Date.now() - kept.at < 600e3) return json(kept);
-  const start = `${new Date().toISOString().slice(0, 7)}-01T00:00:00Z`, days = [];
+  const now = new Date(), iso = (d) => d.toISOString().slice(0, 10);
+  let from = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - (now.getUTCDate() < 13 ? 1 : 0), 13));
+  let until = new Date(Date.UTC(from.getUTCFullYear(), from.getUTCMonth() + 1, 13));
+  if (now < new Date("2026-12-13T00:00:00Z")) { from = new Date("2026-11-10T00:00:00Z"); until = new Date("2026-12-13T00:00:00Z"); }
+  const start = `${iso(from)}T00:00:00Z`, days = [];
   let page = "", cents = 0;
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     const u = new URL("https://api.anthropic.com/v1/organizations/cost_report");
     u.searchParams.set("starting_at", start); u.searchParams.set("limit", "31"); if (page) u.searchParams.set("page", page);
     const r = await fetch(u, { headers: { "x-api-key": AK, "anthropic-version": "2026-10-21" } });
@@ -211,7 +217,7 @@ async function credits(req, env, code) {
     if (!d.has_more || !d.next_page) break;
     page = d.next_page;
   }
-  const used = Math.round(cents) / 100, out = { at: Date.now(), month: start.slice(0, 7), used, budget: 200, left: Math.max(0, Math.round((200 - used) * 100) / 100), days };
+  const used = Math.round(cents) / 100, out = { at: Date.now(), month: iso(now).slice(0, 7), from: iso(from), until: iso(until), used, budget: 200, left: Math.max(0, Math.round((200 - used) * 100) / 100), days };
   await env.NEST.put(ck, JSON.stringify(out), { expirationTtl: 3600 });
   return json(out);
 }

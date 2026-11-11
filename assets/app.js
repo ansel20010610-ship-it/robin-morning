@@ -960,7 +960,18 @@ async function creditBox(el) {
   const draw = (c) => {
     const pct = Math.max(0, Math.min(100, (c.used / c.budget) * 100)), days = (c.days || []).filter((x) => x.usd > 0).slice(-7).reverse();
     const ago = Math.round((Date.now() - c.at) / 60000), age = ago < 60 ? `${ago} 分鐘` : ago < 48 * 60 ? `${Math.round(ago / 60)} 小時` : `${Math.round(ago / 1440)} 天`;
-    // a kept copy from a month gone by: its remainder is not this month's (the credits were given again on the 1st, UTC)
+    // The credits follow the plan's billing cycle, not the calendar month (Console → Billing, 2026-11-11: this grant
+    // expires 12-13 00:00 UTC): the store sends the cycle as from/until. A kept copy of a cycle that has ended is not
+    // this cycle's remainder. A store not yet updated sends only `month`, and is drawn as before.
+    const md = (s) => `${Number(s.slice(5, 7))}/${Number(s.slice(8, 10))}`;
+    if (c.until) {
+      if (c.until <= new Date().toISOString().slice(0, 10)) { el.innerHTML = `${head}<p class="small">手機裡存的是上一期（到 ${md(c.until)}）的數字，那一期用了 US$ ${c.used.toFixed(2)}；這一期的還沒讀到。</p>`; return; }
+      el.innerHTML = `${head}<p class="credit-left"><b>US$ ${c.left.toFixed(2)}</b>剩下</p>
+      <span class="credit-bar"><i style="width:${pct.toFixed(1)}%"></i></span>
+      <p class="small">這一期（${md(c.from)}–${md(c.until)}）已用 US$ ${c.used.toFixed(2)}／${c.budget} 美元；${md(c.until)} 早上八點到期，用不完不累積，下一期在訂閱扣款後發放。Anthropic 每天早上八點結算前一天，當天花的隔天才算進來。${ago > 1 ? `這是 ${age}前的數字。` : ""}</p>
+      ${days.length ? `<ul class="credit-days">${days.map((x) => `<li><span>${Number(x.d.slice(5, 7))}/${Number(x.d.slice(8))}</span><b>US$ ${x.usd.toFixed(2)}</b></li>`).join("")}</ul>` : ""}`;
+      return;
+    }
     if (c.month !== new Date().toISOString().slice(0, 7)) { el.innerHTML = `${head}<p class="small">手機裡存的是 ${esc(c.month.replace("-", " 年 "))} 月的數字（那個月用了 US$ ${c.used.toFixed(2)}）；這個月的還沒讀到。</p>`; return; }
     el.innerHTML = `${head}<p class="credit-left"><b>US$ ${c.left.toFixed(2)}</b>剩下</p>
       <span class="credit-bar"><i style="width:${pct.toFixed(1)}%"></i></span>
