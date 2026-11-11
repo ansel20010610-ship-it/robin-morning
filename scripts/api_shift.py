@@ -31,7 +31,7 @@ SPEND = os.path.join(ROOT, "state", "api", "spend.json")
 MONTH_CAP = 185.0  # USD; Console's own monthly limit (200) is the hard stop, this leaves a margin for 問這篇
 SOFT_CAP = 160.0   # column, reserve and sweep stop here: the last 25 of the cap stay for concerts, serial, mend and rescue
 SOFT = ("column", "reserve", "sweep")
-BUDGET = {"serial": 4, "reserve": 10, "concerts": 4, "rescue": 25, "column": 8, "mend": 25, "sweep": 25}  # per run, claude --max-budget-usd
+BUDGET = {"serial": 4, "reserve": 10, "concerts": 4, "rescue": 25, "column": 12, "mend": 25, "sweep": 25}  # per run, claude --max-budget-usd
 COLUMNS = ["perio"]     # what the column shift writes each evening (the owner, 2026-11-11: 每天一欄); one word to change
 SWEEP_DAYS = 6          # the sweep runs on the last six days of the UTC month
 HOLD_PER_DAY = 6.0      # USD the sweep leaves for each day still to come (the column, concerts, the daily serial)
@@ -96,12 +96,13 @@ def column_work(t=None):
     return d, missing_of([c for c in COLUMNS if c in common.expected_columns(common.load_config(), d)], d)
 
 
-def mend_work(t=None):
-    """(issue date, what shifts 1-3 left missing) for the mend shift, or (None, []) outside 03:45-04:45: earlier a shift
-    may still be writing (the latest report of shift 3 so far is 03:25), later shift 4 (05:17) is too near. football is
-    left out: shift 3 only drafts it, shifts 4 and 5 own the file."""
+def mend_work(t=None, gate=True):
+    """(issue date, what shifts 1-3 left missing) for the mend shift. With the gate (the decision to start), (None, [])
+    outside 03:45-04:45: earlier a shift may still be writing (the latest report of shift 3 so far is 03:25), later
+    shift 4 (05:17) is too near. The running shift asks again before each article and each push, at any minute, so its
+    own list has no gate. football is left out: shift 3 only drafts it, shifts 4 and 5 own the file."""
     t = t or now()
-    if not (3, 45) <= (t.hour, t.minute) < (4, 45):
+    if gate and not (3, 45) <= (t.hour, t.minute) < (4, 45):
         return None, []
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import common
@@ -122,6 +123,8 @@ def activity(day):
             r = subprocess.run(["gh", "api", "-X", "GET", "repos/%s/commits" % os.environ.get("GH_REPO", ""), "-f", "path=" + path,
                                 "-f", "since=" + since.strftime("%Y-%m-%dT%H:%M:%SZ"), "-f", "per_page=5", "--jq", "length"],
                                capture_output=True, text=True, timeout=30)
+            if r.returncode != 0:
+                return None  # an error body could still count as a number
             n += int(r.stdout.strip())
         except (OSError, ValueError, subprocess.SubprocessError):
             return None
@@ -239,7 +242,7 @@ def work(shift):
             print("  第 %d 回  %s  %s %s（%d／%d）  %d 字  原文 state/serial/%s/src/%03d.json  譯名表 state/serial/%s.md" % (
                 i["n"], i["date"], i["part"], i["chapter"], i["piece"], i["pieces"], i["words"], slug, i["n"], slug))
         return None
-    d, cols = column_work() if shift == "column" else mend_work()
+    d, cols = column_work() if shift == "column" else mend_work(gate=False)
     if not cols:
         return print("沒有要寫的。" if shift == "column" else "沒有要補的。")
     print("刊期：%s" % d)
