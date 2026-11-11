@@ -292,7 +292,7 @@ function serialCard(date, a, read, { plate = true, recap = true } = {}) {
   const s = a.serial || {}, done = read.has(`${date}/${a.column}`);
   const inner = `${plate ? serialPlate(s) : `<p class="plate"><span class="where">${esc(serialWhere(s))}</span></p>`}<h3>${esc(a.title)}</h3>${recap ? (a.dek ? `<p class="recap"><b>${s.n === 1 ? "開場" : "前情"}</b>${esc(a.dek)}</p>` : "") : a.brief ? `<p class="recap"><b>本回</b>${esc(a.brief)}</p>` : ""}
     <p class="meta-s">${esc(fmtDate(date, "short"))}・${done ? '<span class="read-mark">已讀</span>' : `約 ${esc(String(a.minutes || 6))} 分鐘`}</p>`; // the same gold 已讀 as every other card (the owner, 2026-11-10: 到首頁不會標示已讀 — the serial's 讀過了 did not read as one)
-  return `<a class="item noimg serial-card${done ? " read" : ""}" href="#/a/${date}/${a.column}"><div>${inner}</div></a>`;
+  return `<a class="item noimg serial-card${done ? " read" : ""}" href="#/a/${date}/${a.column}"><div>${inner}</div>${done ? "" : '<i class="ecke" aria-hidden="true"></i>'}</a>`; // 摺角: the turned-down corner of a page not yet read
 }
 function serialBox(date, a, read) {
   const s = a.serial || {};
@@ -330,12 +330,12 @@ function serialUnread() {
 const loadBook = () => getJSON("content/serial.json", { fresh: true }).then((b) => { S.book = b && typeof b === "object" ? b : null; }).catch(() => {});
 // The book's frontispiece (content/serial.json image + epigraph; the owner, 2026-11-06): the portrait on the left as a
 // mounted plate, the book's own epigraph facing it. The picture is one of ours (assets/) or from a picture host.
-function frontispiece(b) {
+function frontispiece(b, mark = null) { // mark: the share of the book read (0–1), drawn as the bookmark ribbon (style.css .front.marked)
   const im = b.image && typeof b.image.src === "string" && /^(assets\/[\w./-]+|https:\/\/[^\s"']+)$/.test(b.image.src) ? b.image : null;
   const ep = b.epigraph && typeof b.epigraph.text === "string" && b.epigraph.text ? b.epigraph : null;
   if (!im && !ep) return "";
   const size = Number.isInteger(im?.w) && Number.isInteger(im?.h) ? ` width="${im.w}" height="${im.h}"` : "";
-  return `<div class="front">
+  return `<div class="front${im && mark !== null ? ` marked" style="--bm:${Math.max(0, Math.min(1, Number(mark) || 0)).toFixed(4)}` : ""}">
       ${im ? `<figure class="bild"><img src="${esc(im.src)}" alt="${esc(im.alt || "")}"${size} loading="lazy" decoding="async">${im.credit ? `<figcaption>${esc(im.credit)}</figcaption>` : ""}</figure>` : ""}
       ${ep ? `<blockquote class="motto"><p>${esc(ep.text)}</p>${ep.source ? `<cite>${esc(ep.source)}</cite>` : ""}</blockquote>` : ""}
     </div>`;
@@ -395,7 +395,7 @@ async function viewSerial(my) {
     <section class="buch">
       <h2>《${esc(b.title || "")}》</h2>
       <p class="by">${esc(b.author || "")}${b.year ? `・${esc(String(b.year))}` : ""}${b.original ? `・<i>${esc(b.original)}</i>` : ""}</p>
-      ${frontispiece(b)}
+      ${frontispiece(b, of ? got / of : 0)}
       <div class="prog" role="img" aria-label="已刊 ${parts.length} 回，讀了 ${got} 回，共 ${of} 回"><i class="pub" style="width:${pct(parts.length)}%"></i><i class="done" style="width:${pct(got)}%"></i></div>
       <p class="nums"><span><b>${got}</b>讀了</span><span><b>${parts.length}</b>已刊</span><span><b>${of || "—"}</b>全書</span></p>
       ${of && got >= of ? exlibris() : ""}
