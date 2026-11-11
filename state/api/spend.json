@@ -27,8 +27,9 @@
   {
    "at": "2026-11-11T22:46+08:00",
    "shift": "column",
-   "usd": 12.0,
-   "status": "unknown"
+   "usd": 4.1,
+   "status": "success",
+   "note": "the run left no cost file and was booked at its 12 USD budget; 4.10 is the drop in the Console balance over the run (194.65 to 190.55)"
   }
  ]
 }

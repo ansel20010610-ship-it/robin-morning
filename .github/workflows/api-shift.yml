@@ -49,6 +49,9 @@ jobs:
         run: npm install -g @anthropic-ai/claude-code
       - name: Run the shift
         if: steps.go.outputs.go == 'yes'
+        # The result (and its cost) goes to a file outside the checkout: the first column run (2026-11-11) left no cost
+        # to read — an untracked out.json in the repo root is one `git clean` away from a shift told to tidy up — and
+        # was charged its whole 12 USD budget for a run that cost about 4.
         run: |
           git config --global user.name "robin-morning-bot"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -57,11 +60,11 @@ jobs:
             --allowedTools "Bash,Read,Write,Edit,Glob,Grep,Agent,WebSearch,WebFetch" \
             --max-turns 300 \
             --max-budget-usd "${{ steps.go.outputs.budget }}" \
-            --output-format json > out.json || true
+            --output-format json > "$RUNNER_TEMP/claude-out.json" || true
       - name: Record the cost
         if: always() && steps.go.outputs.go == 'yes'
         run: |
-          python3 scripts/api_shift.py record "$SHIFT" out.json "${{ steps.go.outputs.budget }}" | tee -a "$GITHUB_STEP_SUMMARY"
+          python3 scripts/api_shift.py record "$SHIFT" "$RUNNER_TEMP/claude-out.json" "${{ steps.go.outputs.budget }}" | tee -a "$GITHUB_STEP_SUMMARY"
           git add state/api/spend.json
           git commit -m "API 班次花費：$SHIFT" || exit 0
           for i in 1 2 3; do

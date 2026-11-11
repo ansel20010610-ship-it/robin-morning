@@ -284,11 +284,21 @@ def work(shift):
 
 
 def record(shift, path, budget=None):
+    why = ""
     try:
         with open(path, encoding="utf-8") as f:
-            r = json.load(f)
-    except (OSError, ValueError):
-        r = {}
+            raw = f.read()
+        r = json.loads(raw) if raw.strip() else {}
+        if not raw.strip():
+            why = "the result file is empty"
+        elif not isinstance(r, dict):
+            why = "the result is a %s, not an object" % type(r).__name__
+        elif "total_cost_usd" not in r:
+            why = "the result has no total_cost_usd (keys: %s)" % ", ".join(sorted(map(str, r))[:12])
+    except OSError as e:
+        r, why = {}, "no result file (%s)" % type(e).__name__
+    except ValueError:
+        r, why = {}, "the result file is not JSON (%d bytes)" % len(raw)
     if not isinstance(r, dict):
         r = {}
     usd = float(r.get("total_cost_usd") or 0)
@@ -301,6 +311,7 @@ def record(shift, path, budget=None):
         except ValueError:
             usd = float(BUDGET.get(shift, 0))
         sub = "unknown"
+        print(f"花費讀不到（{why}）：照預算上限 {usd:.2f} USD 記帳")
     print(f"結果（{shift}，{sub or 'success'}，{usd:.2f} USD）：")
     print(str(r.get("result") or "（沒有輸出）")[:1500])
     d = load()
