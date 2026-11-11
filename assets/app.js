@@ -2470,7 +2470,7 @@ function viewSettings() {
     </section>
     ${sonder() ? `<section class="set"><h2>後院</h2><p>和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口，大家讀的加在一起，牠從蛋長成會唱歌的鳥。取名、邀請碼、加入別人的院子、離開，都在後院設定。</p>
       <div class="btns"><a class="btn ghost" href="#/nest">到後院去</a><a class="btn ghost" href="#/nest/settings">後院設定</a></div></section>` : ""}
-    ${letterYard() ? `<section class="set" id="sent-set"><h2>寄過的信<span class="de">Meine Briefe</span></h2><div class="sent-letters">${sentLetters()}</div></section>` : ""}
+    ${letterYard() ? `<section class="set" id="sent-set"><details class="sent-fold"${store.get("letters.open") === true ? " open" : ""}><summary><h2>寄過的信<span class="de">Meine Briefe</span></h2><span class="note">${sentKept().length ? `${sentKept().length} 封` : "還沒寄過"}</span></summary><div class="sent-letters">${sentLetters()}</div></details></section>` : ""}
     ${sonder() && nest() && S.cfg.nest?.api ? `<section class="set" id="credit-set"><h2>API 額度<span class="de">Guthaben</span></h2><p class="small">讀取中……</p></section>` : ""}
     <section class="set" id="sonder-set"><h2>特供版<span class="de">Sonderausgabe</span></h2>${sonder()
       ? `<p>這支手機是特供版：多了「後院」。</p><div class="btns"><button type="button" class="btn ghost" data-sonder-off>關閉特供版</button></div>`
@@ -2483,6 +2483,9 @@ function viewSettings() {
     <footer class="colophon"><div class="latin">${esc(S.cfg.subtitle)}</div>資料更新：${Number.isNaN(Date.parse(S.index.generated_at)) ? "—" : esc(new Date(Date.parse(S.index.generated_at) + 8 * 3600e3).toISOString().replace("T", " ").slice(0, 16))}（台灣時間）</footer></div>`;
   renderPush($("#push-set"), S.cfg, S.index.push).catch(() => {});
   creditBox(main.querySelector("#credit-set"));
+  // 寄過的信 folds under its heading (the owner, 2026-11-11: 設定裡寄過的信要可以收合), shut until opened; the phone keeps
+  // which way it was left, so a redraw of this page or a later visit finds it the same.
+  main.querySelector(".sent-fold")?.addEventListener("toggle", (e) => store.set("letters.open", e.currentTarget.open));
   main.querySelector("[data-sonder-on]")?.addEventListener("click", async (e) => {
     const code = main.querySelector("[data-sonder-code]").value, btn = e.currentTarget; // currentTarget is gone after the await
     if (!normSonder(code)) { toast("請輸入代碼"); return; }

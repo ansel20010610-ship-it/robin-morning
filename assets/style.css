@@ -2441,6 +2441,13 @@ details.band .svl { margin: 0 0 10px; }
 .letters-sent .st { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); }
 .letters-sent .st a { margin-left: 10px; white-space: nowrap; color: var(--gold-ink); }
 .set details.more .letters-sent { margin-top: 12px; }
+/* the whole of 寄過的信 folds under its heading (app.js viewSettings .sent-fold): the count at the right, ＋／－ as the evening letter's fold */
+.sent-fold > summary { display: flex; align-items: baseline; gap: 10px; cursor: pointer; list-style: none; }
+.sent-fold > summary::-webkit-details-marker { display: none; }
+.sent-fold > summary h2 { margin: 0; }
+.sent-fold > summary .note { margin-left: auto; font-family: var(--sans); font-size: 12px; color: var(--muted); }
+.sent-fold > summary::after { content: "＋"; font-size: 14px; color: var(--gold); }
+.sent-fold[open] > summary::after { content: "－"; }
 .letter-form .small { font-size: 13px; line-height: 1.65; color: var(--ink-2); margin: 6px 0 0; }
 .letters { margin: 26px 0 0; }
 .letter { margin: 10px 0 18px; padding: 14px 16px; border: 1px solid var(--rule); border-top: 2px solid var(--gold); }
