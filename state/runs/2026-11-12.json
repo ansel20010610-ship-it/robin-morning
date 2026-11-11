@@ -1,0 +1,15 @@
+{
+  "column": {
+    "finished_at": "2026-11-11T22:46:12+08:00",
+    "missing": [
+      "football",
+      "news",
+      "music",
+      "devotion",
+      "artwork",
+      "canon",
+      "wildcard"
+    ],
+    "note": "先發班寫了牙周欄（糖尿病與牙周治療，Cochrane Simpson 2022；文體 flow），審稿判定修正即可，另依忠實度核對修正 15 項"
+  }
+}
