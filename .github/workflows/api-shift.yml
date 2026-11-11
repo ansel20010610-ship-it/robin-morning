@@ -2,6 +2,9 @@
 # the claude.ai plan's weekly quota (the owner, 2026-11-10). Started by wire.yml's half-hour relay (GitHub's own
 # schedules start hours late): concerts 05:30, rescue 06:30, serial 16:00, reserve 17:30 (Taiwan time). The claude.ai
 # routines of the same names still run later as the backup and stop at once when this run did the work.
+# Since 2026-11-11 (the owner: 月底清倉譯連載、每天一欄、救援班放寬) also column 22:30 (one column of the coming issue,
+# before shift 1), mend 04:00 (what shifts 1-3 left missing) and sweep 18:30 (the month's last days: serial installments
+# ahead with what the credits have left). scripts/api_shift.py decides each time whether a run may spend anything.
 # Without the ANTHROPIC_API_KEY secret, or past the month's cap, it spends nothing. The repo is public: the log shows
 # only the shift's short report and its cost.
 name: API shift
@@ -10,10 +13,10 @@ on:
   workflow_dispatch:
     inputs:
       shift:
-        description: "serial | reserve | concerts | rescue"
+        description: "serial | reserve | concerts | rescue | column | mend | sweep"
         required: true
         type: choice
-        options: [serial, reserve, concerts, rescue]
+        options: [serial, reserve, concerts, rescue, column, mend, sweep]
 
 permissions:
   contents: write
@@ -58,7 +61,7 @@ jobs:
       - name: Record the cost
         if: always() && steps.go.outputs.go == 'yes'
         run: |
-          python3 scripts/api_shift.py record "$SHIFT" out.json | tee -a "$GITHUB_STEP_SUMMARY"
+          python3 scripts/api_shift.py record "$SHIFT" out.json "${{ steps.go.outputs.budget }}" | tee -a "$GITHUB_STEP_SUMMARY"
           git add state/api/spend.json
           git commit -m "API 班次花費：$SHIFT" || exit 0
           for i in 1 2 3; do

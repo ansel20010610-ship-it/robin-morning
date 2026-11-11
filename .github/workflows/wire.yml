@@ -55,10 +55,13 @@ jobs:
                 start fill.yml -f wait_until=07:12
                 start notify.yml -f mode=morning
                 start watch.yml -f wait_until=07:45 ;;
+              ?0400) start api-shift.yml -f shift=mend ;;
               ?0530) start api-shift.yml -f shift=concerts ;;
               ?0630) start api-shift.yml -f shift=rescue ;;
               ?1600) start api-shift.yml -f shift=serial ;;
               ?1730) start api-shift.yml -f shift=reserve ;;
+              ?1830) start api-shift.yml -f shift=sweep ;;
+              ?2230) start api-shift.yml -f shift=column ;;
               ?1200) start notify.yml -f mode=noon ;;
               71900) start watch.yml -f evening=true ;;
               ?2100) start notify.yml -f mode=evening ;;
