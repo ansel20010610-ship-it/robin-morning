@@ -1,224 +1,224 @@
 {
- "column": "news",
- "date": "2026-11-12",
- "title": "俄烏談成大規模換囚，伊朗威脅打歐洲美軍基地",
- "dek": "阿布達比會談兩天沒有突破，但談成換囚；美國通膨高於預期；台灣總統府宣布施振榮出席 APEC。",
- "brief": "俄羅斯與烏克蘭在阿布達比談成大規模換囚，但終戰沒有突破。美國 10 月消費者物價月增 0.4%，高於預期，市場看 12 月升息。總統府宣布由施振榮代表台灣出席深圳 APEC。",
- "topic_key": "news:2026-11-12",
- "voice": "wire",
- "updated_at": "2026-11-12T05:22:25+08:00",
- "spoiler": null,
- "disclaimer": null,
- "sources": [
-  {
-   "title": "Russia-Ukraine talks in Abu Dhabi end with prisoner exchange agreement",
-   "publisher": "半島電視台",
-   "date": "2026-11-11",
-   "url": "https://www.aljazeera.com/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement",
-   "note": "兩天會談 11 日結束；梅金斯基說大規模換囚；庫許納說人數 12 日定案；領土最難；TASS 說兩三週內執行"
-  },
-  {
-   "title": "Tehran will strike US bases in Europe if used to attack Iran, security chief says",
-   "publisher": "法國 24 電視台（法新社）",
-   "date": "2026-11-11",
-   "url": "https://www.france24.com/en/france/20261111-tehran-will-strike-us-bases-in-europe-if-used-to-attack-iran-security-chief-says",
-   "note": "雷札伊對 Al Mayadeen 電視台的談話；卡達與巴基斯坦斡旋；荷莫茲海峽"
-  },
-  {
-   "title": "Oil production nears pre-Iran war levels, OPEC says",
-   "publisher": "半島電視台",
-   "date": "2026-11-11",
-   "url": "https://www.aljazeera.com/news/2026/11/11/oil-production-near-pre-iran-war-levels-opec-says",
-   "note": "OPEC 月報：沙烏地 10 月日產 1056.3 萬桶；OPEC+ 4123 萬桶，約為 2 月的 97%"
-  },
-  {
-   "title": "US inflation slows less than expected, lifting rate hike odds",
-   "publisher": "法國 24 電視台",
-   "date": "2026-11-10",
-   "url": "https://www.france24.com/en/live-news/20261110-us-inflation-slows-less-than-expected-lifting-rate-hike-odds",
-   "note": "10 月 CPI 月增 0.4%（預期 0.3%）；9 月 0.6%；無年增率；期貨 85% 升 1 碼、15% 升 2 碼"
-  },
-  {
-   "title": "美國10月CPI高於市場預期 聯準會升息壓力增",
-   "publisher": "中央社",
-   "date": "2026-11-10",
-   "url": "https://www.cna.com.tw/news/aopl/202611100366.aspx",
-   "note": "台灣時間 11 月 10 日 22:30 發布；核心 CPI 月增 0.3%；Fed 12 月 8 至 9 日開會；9 月升息 1 碼、10 月按兵不動"
-  },
-  {
-   "title": "General strike over housing brings out tens of thousands in Spain",
-   "publisher": "法國 24 電視台",
-   "date": "2026-11-11",
-   "url": "https://www.france24.com/en/general-strike-over-housing-brings-out-tens-of-thousands-in-spain",
-   "note": "數萬人上街；2012 年以來第一次 24 小時全國罷工；工會稱部分行業響應明顯、企業界淡化"
-  },
-  {
-   "title": "At least 12 people killed in motorway crash in southeastern Bulgaria",
-   "publisher": "半島電視台",
-   "date": "2026-11-10",
-   "url": "https://www.aljazeera.com/news/2026/11/10/at-least-12-people-killed-in-motorway-crash-in-southeastern-bulgaria",
-   "note": "衛生部長：10 人當場死亡、2 人送醫途中死亡、46 人送醫；州長說約 50 輛車；公視報導 11 日為全國哀悼日"
-  },
-  {
-   "title": "總統府宣布施振榮代表出席APEC 籲中方確保平等參與",
-   "publisher": "中央社",
-   "date": "2026-11-11",
-   "url": "https://www.cna.com.tw/news/aipl/202611110185.aspx",
-   "note": "11 日 15:24 發布；領袖會議 11 月 18 至 19 日深圳；12 日 10:30 行前記者會"
-  },
-  {
-   "title": "Acer founder Stan Shih named Taiwan's envoy to 2026 APEC summit",
-   "publisher": "Focus Taiwan（中央社英文網）",
-   "date": "2026-11-11",
-   "url": "https://focustaiwan.tw/business/202611110022",
-   "note": "郭雅慧說明選任理由；2007 年雪梨會議；書面保證；CEO 高峰會 11 月 14 至 18 日"
-  },
-  {
-   "title": "首例瘦瘦針疑釀眼中風失明 申請藥害救濟審議中",
-   "publisher": "中央社",
-   "date": "2026-11-11",
-   "url": "https://www.cna.com.tw/news/ahel/202611110217.aspx",
-   "note": "案例與藥害救濟審議"
-  },
-  {
-   "title": "美國要求瘦瘦針加註視神經病變警語 食藥署：啟動安全評估",
-   "publisher": "中央社",
-   "date": "2026-11-11",
-   "url": "https://www.cna.com.tw/news/ahel/202611110096.aspx",
-   "note": "12:18 發布；食藥署將重新評估 GLP-1 類藥品；今年通報 63 件"
-  },
-  {
-   "title": "美FDA示警視神經病變風險 台現首例瘦瘦針疑引發失明通報",
-   "publisher": "公視新聞網",
-   "date": "2026-11-11",
-   "url": "https://news.pts.org.tw/article/835327",
-   "note": "美國 FDA 9 日警訊；50 歲男性用藥約 4 個月後右眼失明；2023 年以來累計通報 314 件"
-  },
-  {
-   "title": "失智症基本法朝野共15版本 條文3.5萬字首度導入AI宣讀",
-   "publisher": "公視新聞網",
-   "date": "2026-11-11",
-   "url": "https://news.pts.org.tw/article/835325",
-   "note": "只通過法案名稱、第一條保留、12 日續審；衛福部對單一疾病基本法有保留"
-  },
-  {
-   "title": "AI宣讀法條立院首例 失智症基本法15案70分鐘讀完",
-   "publisher": "中央社",
-   "date": "2026-11-11",
-   "url": "https://www.cna.com.tw/news/aipl/202611110121.aspx",
-   "note": "9:32 至 10:42 宣讀；傳統唸法估 2 小時 11 分"
-  }
- ],
- "body": [
-  {
-   "type": "p",
-   "text": "俄烏兩天會談 11 日在阿布達比結束，談成大規模換囚，終戰沒有突破。伊朗警告美軍若從歐洲基地出擊，就打那些基地。"
-  },
-  {
-   "type": "news",
-   "title": "世界",
-   "items": [
+  "column": "news",
+  "date": "2026-11-12",
+  "title": "俄烏談成大規模換囚，伊朗威脅打歐洲美軍基地",
+  "dek": "阿布達比會談兩天沒有突破，但談成換囚；美國通膨高於預期；台灣總統府宣布施振榮出席 APEC。",
+  "brief": "俄羅斯與烏克蘭在阿布達比談成大規模換囚，但終戰沒有突破。伊朗放話，歐洲的美軍基地若被用來攻擊它就是目標。美國 10 月消費者物價月增 0.4%，高於預期。",
+  "topic_key": "news:2026-11-12",
+  "voice": "wire",
+  "updated_at": "2026-11-12T05:25:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "sources": [
     {
-     "headline": "俄烏談成大規模換囚",
-     "place": [
-      "UA",
-      "RU",
-      "AE"
-     ],
-     "summary": "俄方首席談判代表梅金斯基說，雙方同意「大規模」換囚；美國特使庫許納說人數 12 日定案，俄官媒塔斯社報導兩三週內執行。結束戰爭沒有突破，庫許納說領土最難談。庫許納接著去莫斯科。",
-     "source": "半島電視台",
-     "url": "https://www.aljazeera.com/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement",
-     "when": "11 月 11 日，阿布達比當地時間"
+      "title": "Russia-Ukraine talks in Abu Dhabi end with prisoner exchange agreement",
+      "publisher": "半島電視台",
+      "date": "2026-11-11",
+      "url": "https://www.aljazeera.com/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement",
+      "note": "兩天會談 11 日結束；梅金斯基說大規模換囚；庫許納說人數 12 日定案；領土最難；TASS 說兩三週內執行"
     },
     {
-     "headline": "伊朗：美軍從歐洲出擊就打",
-     "place": [
-      "IR",
-      "US"
-     ],
-     "summary": "伊朗國安首長雷札伊對黎巴嫩 Al Mayadeen 電視台說，美機若從歐洲基地起飛轟炸伊朗，那些基地也會是目標。伊朗要求美方解凍資產、解除制裁，才重開荷莫茲海峽。OPEC 月報顯示，OPEC+ 10 月產量約回到 2 月的 97%。",
-     "source": "法國 24 電視台（法新社）、半島電視台",
-     "url": "https://www.france24.com/en/france/20261111-tehran-will-strike-us-bases-in-europe-if-used-to-attack-iran-security-chief-says",
-     "when": "11 月 11 日，台灣時間"
+      "title": "Tehran will strike US bases in Europe if used to attack Iran, security chief says",
+      "publisher": "法國 24 電視台（法新社）",
+      "date": "2026-11-11",
+      "url": "https://www.france24.com/en/france/20261111-tehran-will-strike-us-bases-in-europe-if-used-to-attack-iran-security-chief-says",
+      "note": "雷札伊對 Al Mayadeen 電視台的談話；卡達與巴基斯坦斡旋；荷莫茲海峽"
     },
     {
-     "headline": "美國通膨高於預期",
-     "place": "US",
-     "summary": "美國 10 月消費者物價指數月增 0.4%，高於分析師預期的 0.3%，核心指數月增 0.3%；勞工部沒有公布年增率。期貨市場約 85% 押聯準會 12 月升息 1 碼、15% 押 2 碼，聯準會 12 月 8 至 9 日開會。",
-     "source": "法國 24 電視台、中央社",
-     "url": "https://www.france24.com/en/live-news/20261110-us-inflation-slows-less-than-expected-lifting-rate-hike-odds",
-     "when": "11 月 10 日，美東時間"
+      "title": "Oil production nears pre-Iran war levels, OPEC says",
+      "publisher": "半島電視台",
+      "date": "2026-11-11",
+      "url": "https://www.aljazeera.com/news/2026/11/11/oil-production-near-pre-iran-war-levels-opec-says",
+      "note": "OPEC 月報：沙烏地 10 月日產 1056.3 萬桶；OPEC+ 4123 萬桶，約為 2 月的 97%"
     },
     {
-     "headline": "西班牙罷工數萬人上街",
-     "place": "ES",
-     "summary": "西班牙 11 日舉行 2012 年以來第一次全國 24 小時罷工，訴求是房價與購買力，數萬人上街。工會說部分行業響應明顯，企業界說有限。",
-     "source": "法國 24 電視台",
-     "url": "https://www.france24.com/en/general-strike-over-housing-brings-out-tens-of-thousands-in-spain",
-     "when": "11 月 11 日，西班牙當地時間"
+      "title": "US inflation slows less than expected, lifting rate hike odds",
+      "publisher": "法國 24 電視台",
+      "date": "2026-11-10",
+      "url": "https://www.france24.com/en/live-news/20261110-us-inflation-slows-less-than-expected-lifting-rate-hike-odds",
+      "note": "10 月 CPI 月增 0.4%（預期 0.3%）；9 月 0.6%；無年增率；期貨 85% 升 1 碼、15% 升 2 碼"
     },
     {
-     "headline": "保加利亞車禍死亡增為 12 人",
-     "place": "BG",
-     "summary": "10 日索菲亞通往布爾加斯的高速公路大霧連環追撞，衛生部長說至少 12 人死亡，10 人當場死亡、2 人送醫途中死亡。本報昨天寫 11 人。",
-     "source": "半島電視台",
-     "url": "https://www.aljazeera.com/news/2026/11/10/at-least-12-people-killed-in-motorway-crash-in-southeastern-bulgaria",
-     "when": "11 月 10 日，保加利亞當地時間"
+      "title": "美國10月CPI高於市場預期 聯準會升息壓力增",
+      "publisher": "中央社",
+      "date": "2026-11-10",
+      "url": "https://www.cna.com.tw/news/aopl/202611100366.aspx",
+      "note": "台灣時間 11 月 10 日 22:30 發布；核心 CPI 月增 0.3%；Fed 12 月 8 至 9 日開會；9 月升息 1 碼、10 月按兵不動"
+    },
+    {
+      "title": "General strike over housing brings out tens of thousands in Spain",
+      "publisher": "法國 24 電視台",
+      "date": "2026-11-11",
+      "url": "https://www.france24.com/en/general-strike-over-housing-brings-out-tens-of-thousands-in-spain",
+      "note": "數萬人上街；2012 年以來第一次 24 小時全國罷工；工會稱部分行業響應明顯、企業界淡化"
+    },
+    {
+      "title": "At least 12 people killed in motorway crash in southeastern Bulgaria",
+      "publisher": "半島電視台",
+      "date": "2026-11-10",
+      "url": "https://www.aljazeera.com/news/2026/11/10/at-least-12-people-killed-in-motorway-crash-in-southeastern-bulgaria",
+      "note": "衛生部長：10 人當場死亡、2 人送醫途中死亡、46 人送醫；州長說約 50 輛車；公視報導 11 日為全國哀悼日"
+    },
+    {
+      "title": "總統府宣布施振榮代表出席APEC 籲中方確保平等參與",
+      "publisher": "中央社",
+      "date": "2026-11-11",
+      "url": "https://www.cna.com.tw/news/aipl/202611110185.aspx",
+      "note": "11 日 15:24 發布；領袖會議 11 月 18 至 19 日深圳；12 日 10:30 行前記者會"
+    },
+    {
+      "title": "Acer founder Stan Shih named Taiwan's envoy to 2026 APEC summit",
+      "publisher": "Focus Taiwan（中央社英文網）",
+      "date": "2026-11-11",
+      "url": "https://focustaiwan.tw/business/202611110022",
+      "note": "郭雅慧說明選任理由；2007 年雪梨會議；書面保證；CEO 高峰會 11 月 14 至 18 日"
+    },
+    {
+      "title": "首例瘦瘦針疑釀眼中風失明 申請藥害救濟審議中",
+      "publisher": "中央社",
+      "date": "2026-11-11",
+      "url": "https://www.cna.com.tw/news/ahel/202611110217.aspx",
+      "note": "案例與藥害救濟審議"
+    },
+    {
+      "title": "美國要求瘦瘦針加註視神經病變警語 食藥署：啟動安全評估",
+      "publisher": "中央社",
+      "date": "2026-11-11",
+      "url": "https://www.cna.com.tw/news/ahel/202611110096.aspx",
+      "note": "12:18 發布；食藥署將重新評估 GLP-1 類藥品；今年通報 63 件"
+    },
+    {
+      "title": "美FDA示警視神經病變風險 台現首例瘦瘦針疑引發失明通報",
+      "publisher": "公視新聞網",
+      "date": "2026-11-11",
+      "url": "https://news.pts.org.tw/article/835327",
+      "note": "美國 FDA 9 日警訊；50 歲男性用藥約 4 個月後右眼失明；2023 年以來累計通報 314 件"
+    },
+    {
+      "title": "失智症基本法朝野共15版本 條文3.5萬字首度導入AI宣讀",
+      "publisher": "公視新聞網",
+      "date": "2026-11-11",
+      "url": "https://news.pts.org.tw/article/835325",
+      "note": "只通過法案名稱、第一條保留、12 日續審；衛福部對單一疾病基本法有保留"
+    },
+    {
+      "title": "AI宣讀法條立院首例 失智症基本法15案70分鐘讀完",
+      "publisher": "中央社",
+      "date": "2026-11-11",
+      "url": "https://www.cna.com.tw/news/aipl/202611110121.aspx",
+      "note": "9:32 至 10:42 宣讀；傳統唸法估 2 小時 11 分"
     }
-   ]
-  },
-  {
-   "type": "news",
-   "title": "台灣",
-   "items": [
+  ],
+  "body": [
     {
-     "headline": "施振榮代表台灣出席 APEC",
-     "place": "TW",
-     "summary": "總統府 11 日宣布，賴清德總統請宏碁創辦人施振榮擔任領袖代表，出席 18 至 19 日在深圳舉行的 APEC 經濟領袖會議。總統府說台灣依 1991 年入會備忘錄平等參與，與一中原則無關，要求中方提供書面保證，讓代表團在平等、尊嚴與安全下與會。",
-     "source": "中央社、Focus Taiwan",
-     "url": "https://www.cna.com.tw/news/aipl/202611110185.aspx",
-     "when": "11 月 11 日，台灣時間"
+      "type": "p",
+      "text": "俄烏兩天會談 11 日在阿布達比結束，談成大規模換囚，終戰沒有突破。伊朗則放話，美軍若借道歐洲基地攻擊它，基地就是目標。"
     },
     {
-     "headline": "食藥署重評瘦瘦針安全",
-     "place": "TW",
-     "summary": "美國 FDA 示警，GLP-1 類藥物可能增加罕見的視神經病變風險。台灣出現首例疑似通報：一名 50 歲男性施打約 4 個月後右眼失明，藥害救濟審議中，因果未定。食藥署將重新評估這類藥的安全性，提醒民眾別買網路來路不明的藥。",
-     "source": "中央社、公視新聞網",
-     "url": "https://www.cna.com.tw/news/ahel/202611110096.aspx",
-     "when": "11 月 11 日，台灣時間"
+      "type": "news",
+      "title": "世界",
+      "items": [
+        {
+          "headline": "俄烏談成大規模換囚",
+          "place": [
+            "UA",
+            "RU",
+            "AE"
+          ],
+          "summary": "美國居中調停的阿布達比會談，俄方首席談判代表梅金斯基說，雙方同意「大規模」換囚；美國特使庫許納說人數 12 日定案，俄官媒塔斯社報導兩三週內執行。戰爭怎麼結束，還是沒有進展，庫許納說領土最難談。庫許納接著去莫斯科。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement",
+          "when": "11 月 11 日，阿布達比當地時間"
+        },
+        {
+          "headline": "伊朗：美軍從歐洲出擊就打",
+          "place": [
+            "IR",
+            "US"
+          ],
+          "summary": "伊朗國安首長雷札伊對黎巴嫩 Al Mayadeen 電視台說，美機若從歐洲基地起飛轟炸伊朗，那些基地也會是目標。荷莫茲海峽目前被伊朗封鎖，他說要美方解凍資產、解除制裁，才會重開。",
+          "source": "法國 24 電視台（法新社）、半島電視台",
+          "url": "https://www.france24.com/en/france/20261111-tehran-will-strike-us-bases-in-europe-if-used-to-attack-iran-security-chief-says",
+          "when": "11 月 11 日，德黑蘭當地時間"
+        },
+        {
+          "headline": "美國通膨高於預期",
+          "place": "US",
+          "summary": "美國 10 月消費者物價指數月增 0.4%，高於分析師預期的 0.3%；核心指數月增 0.3%，勞工部沒有公布年增率。期貨市場多數押聯準會 12 月再升息，聯準會 12 月 8 至 9 日開會。",
+          "source": "法國 24 電視台、中央社",
+          "url": "https://www.france24.com/en/live-news/20261110-us-inflation-slows-less-than-expected-lifting-rate-hike-odds",
+          "when": "11 月 10 日，美東時間"
+        },
+        {
+          "headline": "西班牙罷工數萬人上街",
+          "place": "ES",
+          "summary": "西班牙 11 日舉行 2012 年以來第一次全國 24 小時罷工，訴求是房價與購買力，數萬人上街。工會說部分行業響應明顯，企業界說參與沒那麼多。",
+          "source": "法國 24 電視台",
+          "url": "https://www.france24.com/en/general-strike-over-housing-brings-out-tens-of-thousands-in-spain",
+          "when": "11 月 11 日，西班牙當地時間"
+        },
+        {
+          "headline": "保加利亞車禍死亡增為 12 人",
+          "place": "BG",
+          "summary": "10 日索菲亞通往布爾加斯的高速公路大霧連環追撞，衛生部長說至少 12 人死亡，10 人當場死亡、2 人送醫途中死亡。本報昨天寫 11 人。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/10/at-least-12-people-killed-in-motorway-crash-in-southeastern-bulgaria",
+          "when": "11 月 10 日，保加利亞當地時間"
+        }
+      ]
     },
     {
-     "headline": "失智症基本法開始逐條審",
-     "place": "TW",
-     "summary": "立法院衛環委員會 11 日開始逐條審查失智症基本法，朝野共 15 個版本，首次用 AI 語音宣讀條文。當天只通過法案名稱，第一條保留，12 日續審。行政院沒有提版本，衛福部對單一疾病立基本法有保留。",
-     "source": "公視新聞網、中央社",
-     "url": "https://news.pts.org.tw/article/835325",
-     "when": "11 月 11 日，台灣時間"
+      "type": "news",
+      "title": "台灣",
+      "items": [
+        {
+          "headline": "施振榮代表台灣出席 APEC",
+          "place": "TW",
+          "summary": "總統府 11 日宣布，賴清德總統請宏碁創辦人施振榮擔任領袖代表，出席 18 至 19 日在深圳舉行的 APEC 經濟領袖會議。總統府說台灣依 1991 年入會備忘錄平等參與，與一中原則無關，要求中方提供書面保證，讓代表團在平等、尊嚴與安全下與會。",
+          "source": "中央社、Focus Taiwan",
+          "url": "https://www.cna.com.tw/news/aipl/202611110185.aspx",
+          "when": "11 月 11 日，台灣時間"
+        },
+        {
+          "headline": "食藥署重評瘦瘦針安全",
+          "place": "TW",
+          "summary": "美國 FDA 示警，GLP-1 類藥物（俗稱瘦瘦針）可能增加罕見的視神經病變風險。台灣出現首例疑似通報：一名 50 歲男性施打約 4 個月後右眼失明，藥害救濟審議中，因果未定。食藥署將重新評估這類藥的安全性，提醒民眾別買網路來路不明的藥。",
+          "source": "中央社、公視新聞網",
+          "url": "https://news.pts.org.tw/article/835327",
+          "when": "11 月 11 日，台灣時間"
+        },
+        {
+          "headline": "失智症基本法開始逐條審",
+          "place": "TW",
+          "summary": "立法院衛生及環境委員會 11 日開始逐條審查失智症基本法，朝野共 15 個版本，首次用 AI 語音宣讀條文。當天只通過法案名稱，第一條保留，12 日續審。行政院沒有提版本，衛福部對單一疾病立基本法有保留。",
+          "source": "公視新聞網、中央社",
+          "url": "https://news.pts.org.tw/article/835325",
+          "when": "11 月 11 日，台灣時間"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "美國消費者物價月增率",
+      "head": [
+        "項目",
+        "月增率"
+      ],
+      "rows": [
+        [
+          "9 月",
+          "0.6%"
+        ],
+        [
+          "10 月預期",
+          "0.3%"
+        ],
+        [
+          "10 月實際",
+          "0.4%"
+        ]
+      ],
+      "caption": "法國 24 電視台、中央社。"
     }
-   ]
-  },
-  {
-   "type": "table",
-   "title": "美國消費者物價月增率",
-   "head": [
-    "項目",
-    "月增率"
-   ],
-   "rows": [
-    [
-     "9 月",
-     "0.6%"
-    ],
-    [
-     "10 月預期",
-     "0.3%"
-    ],
-    [
-     "10 月實際",
-     "0.4%"
-    ]
-   ],
-   "caption": "法國 24 電視台、中央社。"
-  }
- ]
+  ]
 }
