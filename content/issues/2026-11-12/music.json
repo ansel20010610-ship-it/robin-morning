@@ -1,0 +1,192 @@
+{
+ "column": "music",
+ "date": "2026-11-12",
+ "title": "耳朵全聾以後，史麥塔納寫了一條河",
+ "dek": "十三分鐘，從兩條小溪走到布拉格；寫它的人，什麼也聽不見。",
+ "brief": "〈莫爾道河〉的作曲家史麥塔納，寫它的時候已經全聾。這首約 13 分鐘的管弦樂，沿著布拉格的伏爾塔瓦河，從山裡的兩條小溪一路走到河邊的古堡壘。路上的聖約翰急流，如今已經淹在水庫底下。",
+ "topic_key": "music:smetana-moldau",
+ "form": "walk",
+ "voice": "listener",
+ "updated_at": "2026-11-12T00:50:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "hero": {
+  "kind": "illustration",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Svatojanske_proudy_1896_Liebscher.jpg",
+  "width": 768,
+  "height": 581,
+  "alt": "19 世紀末出版的版畫，畫的是伏爾塔瓦河聖約翰急流一帶的河景，圖中有後來被遷走的紀念物。",
+  "caption": "聖約翰急流，Karel Liebscher 繪，1896 年出版於《文字與圖畫中的奧匈帝國》波西米亞卷。這一帶 1940、1950 年代水壩完工後被水庫淹沒，圖中的紀念物當時遷走。",
+  "credit": "Karel Liebscher；Die Österreichisch-ungarische Monarchie in Wort und Bild, Böhmen 卷，頁 128",
+  "license": "Public domain",
+  "license_url": "",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Svatojanske_proudy_1896_Liebscher.jpg",
+  "made": "1896 年"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "**〈莫爾道河〉**（捷克語叫〈伏爾塔瓦〉，Vltava）是一首約 13 分鐘的管弦樂，寫的是流過布拉格的那條河，從山裡的源頭一路寫到首都。作曲的是捷克人**史麥塔納**（Bedřich Smetana），在捷克被稱為「捷克音樂之父」。這首 1874 年底寫成，隔年 4 月 4 日在布拉格首演，他那年 50 歲。"
+  },
+  {
+   "type": "p",
+   "text": "它是六首一組的《我的祖國》（Má vlast）裡的第二首。這六首都是交響詩，也就是用管弦樂講一個故事或畫一片風景的曲子，每首寫捷克的一個地方或一個傳說。這條河全長約 430 公里，最後匯進易北河，常被叫做捷克的「民族之河」。〈莫爾道河〉常被單獨拿出來演，要聽它不必先懂什麼，跟著河走就行。"
+  },
+  {
+   "type": "p",
+   "text": "寫它的時候，史麥塔納的兩隻耳朵都已經聽不見了。1874 年夏天耳朵開始出毛病，10 月右耳、左耳先後失聰。11 月 20 日他動筆，不到三個星期就寫完了。旋律你可能在別處碰過：導演馬利克 2011 年的電影《生命樹》用過它；以色列國歌〈希望〉的旋律，和它是同一支文藝復興時代義大利老歌的後代。"
+  },
+  {
+   "type": "music",
+   "composer": "史麥塔納（Bedřich Smetana）",
+   "work": "〈莫爾道河〉（《我的祖國》第二首）",
+   "work_original": "Vltava (Má vlast, No. 2)",
+   "composed": "1874 年",
+   "performers": "克貝利克（Rafael Kubelík）指揮 捷克愛樂",
+   "recording": "Supraphon，1990 年現場錄音，布拉格之春音樂節",
+   "duration": "約 13 分鐘",
+   "movements": [
+    "兩條源頭",
+    "獵人的號角、農民的婚禮",
+    "月光下的水妖",
+    "聖約翰急流",
+    "布拉格與 Vyšehrad"
+   ],
+   "spotify": {
+    "album": "",
+    "tracks": [],
+    "query": "Smetana Má vlast Vltava Kubelik Czech Philharmonic 1990",
+    "artist_hint": "Kubelik",
+    "track_filter": [
+     "Vltava",
+     "Moldau"
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "我挑的是 1990 年的現場錄音。指揮克貝利克也是捷克人，1948 年共產黨掌權後他離開了國家，1990 年才應邀回來，在布拉格之春音樂節指揮捷克愛樂。布拉格之春音樂節從 1952 年起，每年 5 月 12 日史麥塔納的忌日，都用《我的祖國》開幕。這個錄音是他第五次錄《我的祖國》。"
+  },
+  {
+   "type": "p",
+   "text": "這種照著路線寫的音樂，最怕變成導覽詞。這首沒有，因為路線決定了音樂什麼時候安靜、什麼時候亂，不看說明也跟得上。照史麥塔納自己寫給出版商的路線，一站一站走。"
+  },
+  {
+   "type": "h",
+   "text": "兩條小溪"
+  },
+  {
+   "type": "p",
+   "text": "現在聽到的是開頭，輕輕的流水聲。史麥塔納的說明裡寫，這條河有兩個源頭，一條叫冷伏爾塔瓦，一條叫暖伏爾塔瓦，都是波西米亞森林裡的小溪，匯成一股。接著弦樂拉出一條寬廣的旋律，這就是河。弦樂和木管先把它帶出來，低音的弦樂在底下起伏，像水浪。這條旋律之後會一直回來，每到一站就換一個樣子。"
+  },
+  {
+   "type": "h",
+   "text": "號角，然後是婚禮"
+  },
+  {
+   "type": "p",
+   "text": "河穿過森林。現在聽到的是獵人的號角，一聲一聲從岸邊傳來。號角遠了，換成一首波卡，那是兩個人一組轉圈跳的輕快舞曲：岸邊的農民在辦婚禮。"
+  },
+  {
+   "type": "h",
+   "text": "月光下"
+  },
+  {
+   "type": "p",
+   "text": "天黑了，這是整首最安靜的地方。弦樂裝了弱音器，聲音悶悶的，木管在上面閃爍。史麥塔納的說明寫的是水妖在月光下圍成圈跳舞，岸邊的岩石上，城堡、宮殿和廢墟隱約立著。"
+  },
+  {
+   "type": "h",
+   "text": "已經不在地圖上的急流"
+  },
+  {
+   "type": "p",
+   "text": "天亮了，河的旋律回來，可是很快就亂了：水衝進聖約翰急流，音樂一路越來越激烈。這是河上離布拉格不遠的一段險灘，頭圖就是 1896 年出版的版畫裡的樣子。**這段急流今天已經看不到了**：1940 到 1950 年代水壩蓋好，水庫把它整段淹在水底。"
+  },
+  {
+   "type": "h",
+   "text": "到站"
+  },
+  {
+   "type": "p",
+   "text": "過了急流，河面變寬，主旋律換成大調，亮了起來，布拉格到了。河從 Vyšehrad 旁邊流過，這個地名的意思是高堡，是河東岸一座古老的堡壘，在布拉格城堡東南方約三公里，如今是座公園。《我的祖國》的第一首就叫〈Vyšehrad〉，那首裡的四音短動機，在這裡又出現一次。說明的最後一句，是河在遠處匯進易北河，音樂也在那裡收了。"
+  },
+  {
+   "type": "figure",
+   "id": "f1",
+   "kind": "illustration",
+   "src": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Vincenc_Morstadt_-_Pohled_od_Vy%C5%A1ehradu_k_Pra%C5%BEsk%C3%A9mu_hradu.jpg",
+   "width": 717,
+   "height": 499,
+   "alt": "1835 年的風景圖，視角從 Vyšehrad 望向河對面的布拉格城堡。",
+   "caption": "Vincenc Morstadt，《從 Vyšehrad 望向布拉格城堡》，1835 年。視角站在〈莫爾道河〉的最後一站，望向河對岸的城堡。",
+   "credit": "Vincenc Morstadt",
+   "license": "Public domain",
+   "license_url": "",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Vincenc_Morstadt_-_Pohled_od_Vy%C5%A1ehradu_k_Pra%C5%BEsk%C3%A9mu_hradu.jpg",
+   "made": "1835 年"
+  },
+  {
+   "type": "p",
+   "text": "想接著聽，就聽《我的祖國》的第一首〈Vyšehrad〉，寫的就是這座堡壘。堡壘裡有一座墓園，史麥塔納葬在那裡，寫《新世界》的德弗札克也在。"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Bedřich Smetana",
+   "publisher": "Wikipedia",
+   "date": "2026-11-11",
+   "url": "https://en.wikipedia.org/wiki/Bed%C5%99ich_Smetana",
+   "note": "查閱日。生平、捷克音樂之父、耳聾經過（1874 年夏起，10 月左耳全聾）、整套 1882 年首演、葬於 Vyšehrad 墓園（分類）"
+  },
+  {
+   "title": "Má vlast",
+   "publisher": "Wikipedia",
+   "date": "2026-11-11",
+   "url": "https://en.wikipedia.org/wiki/M%C3%A1_vlast",
+   "note": "查閱日。六首交響詩、〈Vltava〉1874 年 11 月 20 日至 12 月 8 日寫成、1875 年 4 月 4 日首演、約 13 分鐘、史麥塔納的路線說明、聖約翰急流被 Štěchovice 水庫淹沒、四音 Vyšehrad 動機、《生命樹》"
+  },
+  {
+   "title": "Smetana: Vyšehrad, Moldau (Má vlast)",
+   "publisher": "Boston Symphony Orchestra",
+   "date": "2026-11-11",
+   "url": "https://www.bso.org/works/smetana-vysehrad-moldau-ma-vlast",
+   "note": "查閱日。史麥塔納寫信給出版商附上六首的說明；〈Vltava〉1874 年 11 月底起寫（寫完日期與維基差兩天，正文只寫不到三個星期）"
+  },
+  {
+   "title": "From Bohemia's Meadows and Forests, Sárka, and The Moldau from \"My Fatherland\"",
+   "publisher": "Los Angeles Philharmonic",
+   "date": "2026-11-11",
+   "url": "https://www.laphil.com/works/from-bohemias-meadows-and-forests-sarka-and-the-moldau-from-my-fatherland",
+   "note": "查閱日。曲中順序：流水聲與弦樂主旋律、號角、婚禮波卡、月光段的弱音弦樂與木管、急流、大調的主旋律、Vyšehrad"
+  },
+  {
+   "title": "Vltava",
+   "publisher": "Wikipedia",
+   "date": "2026-11-11",
+   "url": "https://en.wikipedia.org/wiki/Vltava",
+   "note": "查閱日。冷、暖兩條源頭在波西米亞森林一帶、匯入易北河、Štěchovice 水庫蓋在聖約翰急流之上"
+  },
+  {
+   "title": "Vyšehrad",
+   "publisher": "Wikipedia",
+   "date": "2026-11-11",
+   "url": "https://en.wikipedia.org/wiki/Vy%C5%A1ehrad",
+   "note": "查閱日。河東岸古堡壘、布拉格城堡東南約 3 公里、今為公園、墓園葬有史麥塔納與德弗札克"
+  },
+  {
+   "title": "Hatikvah",
+   "publisher": "Wikipedia",
+   "date": "2026-11-11",
+   "url": "https://en.wikipedia.org/wiki/Hatikvah",
+   "note": "查閱日。旋律根據 16 世紀義大利歌曲 La Mantovana；史麥塔納的用法是它成為猶太復國主義歌曲之前最有名的一次"
+  },
+  {
+   "title": "Rafael Kubelík",
+   "publisher": "Wikipedia",
+   "date": "2026-11-11",
+   "url": "https://en.wikipedia.org/wiki/Rafael_Kubel%C3%ADk",
+   "note": "查閱日。1948 年離開捷克、1990 年應邀回國在布拉格之春指揮捷克愛樂、與 Supraphon 的現場錄音，是他第五次錄《我的祖國》"
+  }
+ ]
+}
