@@ -21,15 +21,18 @@ report — the weekly quota is gone — including Sundays, the owner, 2026-11-10
   sweep (18:30)   月底清倉: on the last SWEEP_DAYS days of the month, what the credits have left goes into serial
                   installments beyond the daily shift's three days — the one thing here that keeps (the credits do not).
 Money: everything stops at MONTH_CAP; column, reserve and sweep already at SOFT_CAP, so that the end of a month still
-has room for the rescues, concerts and the daily serial. Their instructions are editorial/api-shifts/<shift>.md. The
+has room for the rescues, concerts and the daily serial (the sweep takes that room too on the month's last day). Their instructions are editorial/api-shifts/<shift>.md. The
 repo is public: nothing secret is ever printed or written here.
 """
 import datetime as dt, json, os, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SPEND = os.path.join(ROOT, "state", "api", "spend.json")
-MONTH_CAP = 185.0  # USD; Console's own monthly limit (200) is the hard stop, this leaves a margin for 問這篇
-SOFT_CAP = 160.0   # column, reserve and sweep stop here: the last 25 of the cap stay for concerts, serial, mend and rescue
+# USD. Console's own monthly limit (200) is the hard stop — the owner confirmed on 2026-11-11 that nothing is charged
+# past it (no card, no auto-reload) — so a cap here guards no money, only work: past 200 a running shift dies half way
+# and 問這篇 and the diary (the yard Worker, whose spend this file cannot see: 0.61 on 2026-11-10) stop until the 1st.
+MONTH_CAP = 190.0
+SOFT_CAP = 165.0   # column, reserve and sweep stop here: the last 25 of the cap stay for concerts, serial, mend and rescue
 SOFT = ("column", "reserve", "sweep")
 BUDGET = {"serial": 4, "reserve": 10, "concerts": 4, "rescue": 25, "column": 12, "mend": 25, "sweep": 25}  # per run, claude --max-budget-usd
 COLUMNS = ["perio"]     # what the column shift writes each evening (the owner, 2026-11-11: 每天一欄); one word to change
@@ -133,13 +136,15 @@ def activity(day):
 
 def sweep_room(spent=None, u=None):
     """(USD the month-end sweep may spend now, whole days left in the UTC month after today). Nothing before the last
-    SWEEP_DAYS days; then what SOFT_CAP has left once every remaining day (today's evening included) keeps HOLD_PER_DAY."""
+    SWEEP_DAYS days; then what SOFT_CAP has left once every remaining day (today's evening included) keeps HOLD_PER_DAY.
+    On the month's last day the 25 kept for the rescues goes too, up to MONTH_CAP: a rescue that night is unlikely and
+    would still have the reserves behind it, while what is left at 08:00 Taiwan time the next morning is gone for certain."""
     u = u or dt.datetime.now(dt.timezone.utc).date()
     left = ((u.replace(day=28) + dt.timedelta(days=4)).replace(day=1) - u).days - 1
     if left >= SWEEP_DAYS:
         return 0.0, left
     spent = month_total() if spent is None else spent
-    return max(0.0, round(SOFT_CAP - spent - HOLD_PER_DAY * (left + 1), 2)), left
+    return max(0.0, round((SOFT_CAP if left else MONTH_CAP) - spent - HOLD_PER_DAY * (left + 1), 2)), left
 
 
 def sweep_list(n, t=None):
