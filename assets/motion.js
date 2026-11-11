@@ -249,21 +249,35 @@ export function digestRing(root) {
   return { stop: () => io.disconnect(), complete };
 }
 
+// 動作感應 (for 郵票反光): may the page read how the phone is held? An iPhone answers only when asked inside a tap, with
+// its own dialog the first time; once allowed it answers without a tap for as long as the page lives, and a refusal
+// stands for as long too. Other phones give the readings unasked. So there is no button (the owner, 2026-11-11:
+// 一律開啟，郵票底下不要有按鈕): it is asked on the tap that opens a stamp from the album (app.js viewStamps) or, failing
+// that, the first touch on the stamp, and remembered here. null = not known yet (asked outside a tap: try again).
+let tiltOk = null;
+export async function tiltGrant() {
+  if (tiltOk !== null) return tiltOk;
+  const E = window.DeviceOrientationEvent;
+  if (!E || calm() || !matchMedia("(pointer: coarse)").matches) return (tiltOk = false); // a desk machine has nothing to tilt
+  if (typeof E.requestPermission !== "function") return (tiltOk = true);
+  try { return (tiltOk = (await E.requestPermission()) === "granted"); } catch { return false; } // not in a tap: still unknown
+}
+
 // 郵票反光 (app.js viewStamp; the owner, 2026-11-11): the one stamp held up to look at catches the light. A finger drawn
 // across it moves a glare over the paper and leans the stamp a few degrees toward the finger; with the phone's motion
-// sensor allowed (`tilt`, a button — iOS only gives it on a tap) the lean follows the hand holding the phone instead.
+// sensor allowed (tiltGrant above) the lean follows the hand holding the phone as well, with nothing to switch on.
 // `stage` is the box round the stamp (.big): it is leaned, not the stamp, whose entrance animation keeps its own
 // transform. Everything is two custom properties (--gx, --gy, −1…1) and a class, so nothing in the page moves;
 // returns the function that takes the listeners off again. Nothing happens with reduced motion.
-export function shine(stage, tilt = null) {
+export function shine(stage) {
   const stamp = stage?.querySelector(".stamp"), sp = stamp?.querySelector(".sp");
-  if (!sp || calm()) { tilt?.remove(); return () => {}; }
+  if (!sp || calm()) return () => {};
   const glare = document.createElement("i");
   glare.className = "glare"; glare.setAttribute("aria-hidden", "true");
   sp.append(glare);
   stage.classList.add("shiny");
   const clamp = (v) => Math.max(-1, Math.min(1, v));
-  let held = false, sensing = false, base = null, frame = 0, next = null;
+  let held = false, sensing = false, base = null, frame = 0, next = null, alive = true;
   const set = (x, y, on) => {
     next = [x, y, on];
     if (frame) return;
@@ -277,30 +291,25 @@ export function shine(stage, tilt = null) {
   const at = (e) => { const r = stamp.getBoundingClientRect(); return [clamp(((e.clientX - r.left) / r.width) * 2 - 1), clamp(((e.clientY - r.top) / r.height) * 2 - 1)]; };
   const down = (e) => { held = true; try { stamp.setPointerCapture(e.pointerId); } catch { /* an old pointer */ } stage.classList.add("held"); set(...at(e), true); };
   const move = (e) => { if (held) set(...at(e), true); };
-  const up = () => { if (!held) return; held = false; stage.classList.remove("held"); if (!sensing) set(0, 0, false); };
-  stamp.addEventListener("pointerdown", down);
-  stamp.addEventListener("pointermove", move);
-  stamp.addEventListener("pointerup", up);
-  stamp.addEventListener("pointercancel", up);
   // the hand: the first reading is "level", 22° either way is the full lean
   const turn = (e) => {
     if (held || e.gamma == null || e.beta == null) return;
     if (!base) base = [e.gamma, e.beta];
     set(clamp((e.gamma - base[0]) / 22), clamp((e.beta - base[1]) / 22), true);
   };
-  const sense = () => { sensing = true; addEventListener("deviceorientation", turn); if (tilt) { tilt.textContent = "傾斜手機看看"; tilt.disabled = true; } };
-  const ask = async () => {
-    try {
-      const need = window.DeviceOrientationEvent?.requestPermission;
-      if (typeof need === "function" && (await need.call(window.DeviceOrientationEvent)) !== "granted") { tilt.textContent = "沒有開啟動作感應"; tilt.disabled = true; return; }
-      sense();
-    } catch { tilt.textContent = "這台裝置沒有動作感應"; tilt.disabled = true; }
+  const sense = (ok) => { if (ok && alive && !sensing) { sensing = true; addEventListener("deviceorientation", turn); } };
+  const up = () => {
+    if (!held) return;
+    held = false; stage.classList.remove("held");
+    if (!sensing) { set(0, 0, false); tiltGrant().then(sense); } // a finger lifting is a tap: the moment an iPhone may be asked
   };
-  if (tilt) {
-    if ("DeviceOrientationEvent" in window && matchMedia("(pointer: coarse)").matches) tilt.addEventListener("click", ask);
-    else tilt.remove(); // a desk machine has nothing to tilt
-  }
+  stamp.addEventListener("pointerdown", down);
+  stamp.addEventListener("pointermove", move);
+  stamp.addEventListener("pointerup", up);
+  stamp.addEventListener("pointercancel", up);
+  tiltGrant().then(sense); // already allowed (this visit, or a phone that does not ask): on at once
   return () => {
+    alive = false;
     removeEventListener("deviceorientation", turn);
     if (frame) cancelAnimationFrame(frame);
     stamp.removeEventListener("pointerdown", down); stamp.removeEventListener("pointermove", move);

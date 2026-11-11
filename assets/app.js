@@ -7,7 +7,7 @@ import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
 import { renderPush, clearNotices } from "./notify.js";
 import { initPull } from "./pull.js";
-import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pressRun, ripples, flip, shine } from "./motion.js";
+import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pressRun, ripples, flip, shine, tiltGrant } from "./motion.js";
 import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
 import { pressHtml } from "./press.js";
 import { fetchWeather, weatherHtml, keptWeather } from "./wetter.js";
@@ -2101,6 +2101,9 @@ function viewStamps() {
     ${got ? `<p class="tally">集了 <b>${got}</b> 張，缺 <b>${missed}</b> 格${birds.size ? `・找到 <b>${birds.size}</b> 隻知更鳥` : ""}</p>` : `<p class="empty">第一張郵票等你今天讀完。</p>`}
     ${[...months].map(page).join("")}
     ${yb.bars}</div>`;
+  // 郵票反光: the tap that opens a stamp is the moment an iPhone may be asked for its motion sensor (motion.js tiltGrant),
+  // so the stamp can lean with the hand from the first look, with no button on its page.
+  main.querySelector(".album")?.addEventListener("click", (e) => { if (e.target.closest('a[href^="#/stamp/"]')) tiltGrant(); });
   document.title = `郵票冊｜${S.cfg.title}`;
 }
 
@@ -2116,11 +2119,11 @@ function viewStamp(date) {
   const erst = Number(issue.no) === 1, fest = erst ? null : feastOf(date), gala = erst || Boolean(fest); // 紀念郵票 open with the same show
   main.innerHTML = `${top}<div class="wrap stamp-page${gala ? " gala" : ""}${fest ? ` fest-${esc(fest.key)}` : ""}"><div class="big">${gala ? `<i class="esun" aria-hidden="true"></i><i class="ring" aria-hidden="true"></i>` : ""}${stampHtml({ ...issue, articles: sortArticles(issue.articles || [], date) }, { earned: true, bird: birdsFound().has(date) })}</div>
     <p class="line"><b>${esc(issueNr(issue.no))}</b><span>${esc(fmtDate(date))}${fest ? `・${esc(fest.zh)}紀念郵票` : ""}</span><i>${esc(fmtDate(date, "de"))}</i></p>${fest?.pic ? `<p class="credit">${esc(fest.pic.credit)}</p>` : ""}
-    <p class="btns"><a class="btn ghost" href="#/issue/${esc(date)}">看這一期</a>${calm() ? "" : `<button type="button" class="btn ghost tilt">開啟傾斜反光</button>`}</p>
+    <p class="btns"><a class="btn ghost" href="#/issue/${esc(date)}">看這一期</a></p>
     ${calm() ? "" : `<p class="hint">手指滑過郵票，紙面會跟著反光。</p>`}</div>`;
   if (gala) setTimeout(() => goldRain(main.querySelector(".stamp-page .big")), 1050);
   wireBack();
-  cleanup = shine(main.querySelector(".stamp-page .big"), main.querySelector(".stamp-page .tilt")); // 郵票反光 (motion.js): a finger across it, or the phone tilted
+  cleanup = shine(main.querySelector(".stamp-page .big")); // 郵票反光 (motion.js): a finger across it, or the phone tilted
   // A tap on the blank page (not the stamp, not a link) goes back to the album, as closing a thing held up to look at.
   main.querySelector(".stamp-page").addEventListener("click", (e) => {
     if (e.target.closest("a, button, .stamp")) return;
