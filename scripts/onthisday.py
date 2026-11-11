@@ -40,7 +40,7 @@ def problems(date, e):
     except ValueError:
         out.append("日期格式要是 YYYY-MM-DD")
     year, text, src = e.get("year"), e.get("text"), e.get("sources")
-    if not isinstance(year, int) or not (-3000 < year <= dt.date.today().year):
+    if not isinstance(year, int) or not (-3000 < year <= dt.datetime.now(TW).year):
         out.append("year 要是整數年份")
     if not isinstance(text, str) or not text.strip():
         return out + ["text 不能空"]
@@ -71,6 +71,7 @@ def main():
     a.add_argument("--year", required=True, type=int)
     a.add_argument("--text", required=True)
     a.add_argument("--source", action="append", default=[])
+    a.add_argument("--force", action="store_true", help="寫入不是台灣今天的日期（補過去某天的空格）")
     s = sub.add_parser("show")
     s.add_argument("--date")
     sub.add_parser("check")
@@ -95,6 +96,13 @@ def main():
     if args.cmd == "add":
         e = {"year": args.year, "text": args.text.strip(), "sources": args.source}
         bad = problems(args.date, e)
+        # The routine's clock is UTC: at 06:17 Taiwan time it is still yesterday there, and a date worked out by hand
+        # went onto yesterday's line, over the one already there (the letters answer of 2026-11-11 was dated the same
+        # way). Only Taiwan's today is written without --force; today's own line may be written again (the 05:30 API
+        # shift and the 06:17 routine both may).
+        today = dt.datetime.now(TW).date().isoformat()
+        if not args.force and args.date != today:
+            bad.append(f"--date {args.date} 不是台灣時間的今天（{today}）；用 TZ=Asia/Taipei date +%F 取日期，真的要補那一天再加 --force")
         if bad:
             print("ERROR 沒有寫入：\n  " + "\n  ".join(bad))
             sys.exit(1)

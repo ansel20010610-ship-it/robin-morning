@@ -33,9 +33,20 @@ def load():
         return {"runs": []}
 
 
+def utc_month(at):
+    """The UTC calendar month an `at` stamp (Taiwan time, +08:00) falls in, or ""."""
+    try:
+        return dt.datetime.fromisoformat(str(at)).astimezone(dt.timezone.utc).strftime("%Y-%m")
+    except ValueError:
+        return ""
+
+
 def month_total(d=None):
-    m = now().strftime("%Y-%m")
-    return round(sum(r.get("usd", 0) for r in (d or load())["runs"] if str(r.get("at", "")).startswith(m)), 2)
+    # The credits are given again on the 1st by UTC (Console's month; the yard store's /credits counts the same way):
+    # on the 1st, Taiwan 00:00-08:00 is still last month there, and the 05:30 and 06:30 shifts of that morning counted
+    # as a fresh month while they were spending the old one (audit 2026-11-11).
+    m = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m")
+    return round(sum(r.get("usd", 0) for r in (d or load())["runs"] if utc_month(r.get("at", "")) == m), 2)
 
 
 def decide(shift):

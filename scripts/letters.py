@@ -10,7 +10,7 @@ public repo: only the yard's phones read them.
 The yard code is the only key to the mailbox; it lives in the routine's prompt, never in a file, commit or report.
 Write the answers file outside the repo (e.g. /tmp/answers.json).
 """
-import json, os, re, sys, urllib.request
+import json, os, re, sys, urllib.error, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CJK = re.compile(r"[㐀-鿿]")
@@ -24,7 +24,15 @@ def api():
 def call(path, body=None):
     req = urllib.request.Request(f"{api()}/{path}", data=None if body is None else json.dumps(body, ensure_ascii=False).encode("utf-8"),
                                  headers={"User-Agent": "robin-morning-letters", "Content-Type": "application/json"}, method="GET" if body is None else "POST")
-    return json.load(urllib.request.urlopen(req, timeout=30))
+    try:
+        return json.load(urllib.request.urlopen(req, timeout=30))
+    except urllib.error.HTTPError as e:
+        # the store's own word (「no valid answers」, 「no letters here」) instead of a bare traceback
+        try:
+            detail = json.load(e)
+        except ValueError:
+            detail = {}
+        return {"error": detail.get("error") or f"HTTP {e.code}", "status": e.code}
 
 
 def code():
@@ -36,8 +44,12 @@ def code():
 
 def pending():
     c = code()
-    box = call(f"{c}/letters").get("letters", [])
-    done = {a.get("id") for a in call(f"{c}/letters/answers").get("answers", [])}
+    got, ans = call(f"{c}/letters"), call(f"{c}/letters/answers")
+    for r in (got, ans):
+        if r.get("error"):  # a wrong code or the store refusing is 讀不到 (letters.md step 1), not an empty mailbox
+            sys.exit(f"讀不到信箱：{r['error']}")
+    box = got.get("letters", [])
+    done = {a.get("id") for a in ans.get("answers", [])}
     waiting = [{"id": l["id"], "at": l["at"], "text": l["text"]} for l in box if l.get("id") not in done]
     print(json.dumps(waiting, ensure_ascii=False, indent=1))
     print(f"{len(waiting)} 封等回信", file=sys.stderr)
@@ -60,6 +72,9 @@ def problems(path):
         q, a = str(l.get("q", "")), str(l.get("a", ""))
         if not 6 <= len(CJK.findall(q)) <= 80: probs.append(f"{w}：q（改寫過的問題）{len(CJK.findall(q))} 字，要 6–80 字")
         if not 80 <= len(CJK.findall(a)) <= 600: probs.append(f"{w}：a（回信）{len(CJK.findall(a))} 字，要 80–600 字")
+        # the store's own limits, counted in characters with the links and Latin in (nest-worker.js ANS): past them it drops the answer without a word
+        if len(q) > 200: probs.append(f"{w}：q 連標點共 {len(q)} 個字元，院子的儲存最多收 200")
+        if len(a) > 3000: probs.append(f"{w}：a 連網址共 {len(a)} 個字元，院子的儲存最多收 3000；把長網址移到 sources")
         if re.search(r"\]\((?!https://)", a): probs.append(f"{w}：回信裡的連結只能是 https")
         for s in l.get("sources", []) or []:
             if not isinstance(s, dict) or not str(s.get("url", "")).startswith("https://"): probs.append(f"{w}：sources 每一項要有 https 的 url")
@@ -93,8 +108,13 @@ def publish(path):
             print(f"{l.get('id')}：date {l.get('date')} 改成今天（台灣）{today}")
             l["date"] = today
     r = call(f"{code()}/letters/answers", {"answers": rows})
-    print(f"存進院子：{r.get('saved')} 封（院子裡共 {r.get('total')} 封回信）" if r.get("saved") else f"沒存成：{r}")
-    return 0 if r.get("saved") else 1
+    # every answer sent must be kept: the store keeps the ones it accepts and says nothing of the rest, and 「存進院子：1 封」
+    # for two sent read as done while one reader's letter went unanswered (audit 2026-11-11)
+    if r.get("saved") == len(rows):
+        print(f"存進院子：{r.get('saved')} 封（院子裡共 {r.get('total')} 封回信）")
+        return 0
+    print(f"沒存成：送了 {len(rows)} 封，院子收下 {r.get('saved') or 0} 封（{r.get('error') or '有回信不合院子的格式：id、q 200 字元內、a 3000 字元內'}）。修好再 publish 一次，同一個 id 會蓋過去。")
+    return 1
 
 
 if __name__ == "__main__":

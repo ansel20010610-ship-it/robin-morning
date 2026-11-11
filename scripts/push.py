@@ -168,7 +168,10 @@ def remind_payload(date, noon=False):
     """The noon or evening nudge; the mood is the other one from the morning's, so the day gets both voices."""
     d = _day(date)
     pool = (REMIND_NOON if noon else REMIND)["俏皮" if d % 2 else "文藝"]
-    title, body = pool[(d // 2) % len(pool)]
+    # d grows by 3 a day, so a mood comes back every other day with d six higher: by d // 6 its three lines take turns.
+    # By d // 2 the index moved by three each time — the same line of each mood all month, four of the six never said
+    # (audit 2026-11-11).
+    title, body = pool[(d // 6) % len(pool)]
     return {"kind": "remind", "date": date, "title": title, "body": body, "url": "./#/", "tag": "remind-" + date}
 
 
