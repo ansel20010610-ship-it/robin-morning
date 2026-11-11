@@ -710,18 +710,6 @@ h1, h2, h3, .lead h3, .item h3 { text-wrap: balance; }
   float: left; font-size: 3.05em; line-height: .96; font-weight: 700; color: var(--wine);
   margin: .06em .14em -.05em 0; padding-top: .02em;
 }
-/* 花飾首字 (2026-11-11): a Han initial stands in a gilt Secession panel — a gold rule round it and a small gold square
-   in each corner. The panel takes the room the bare initial took (two lines), so the paragraph wraps as before. */
-.body > p.lead-p.han::first-letter {
-  font-size: 2.62em; line-height: 1; padding: .1em .13em .13em; margin: .1em .17em 0 0;
-  border: 1px solid var(--gold);
-  background:
-    linear-gradient(var(--gold), var(--gold)) 2px 2px / 4px 4px no-repeat,
-    linear-gradient(var(--gold), var(--gold)) calc(100% - 2px) 2px / 4px 4px no-repeat,
-    linear-gradient(var(--gold), var(--gold)) 2px calc(100% - 2px) / 4px 4px no-repeat,
-    linear-gradient(var(--gold), var(--gold)) calc(100% - 2px) calc(100% - 2px) / 4px 4px no-repeat,
-    var(--paper-2);
-}
 /* 文末花飾: the article closes on a small diamond between two gold rules, before the boxes and the sources */
 .body::after { content: "◆"; display: block; width: 112px; margin: 2.1em auto .5em; text-align: center; font-size: 9px; line-height: 9px; color: var(--gold);
   background: linear-gradient(var(--gold-soft), var(--gold-soft)) 0 50% / 42px 1px no-repeat, linear-gradient(var(--gold-soft), var(--gold-soft)) 100% 50% / 42px 1px no-repeat; }
