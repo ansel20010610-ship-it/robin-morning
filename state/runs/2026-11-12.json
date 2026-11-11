@@ -19,6 +19,13 @@
     ],
     "note": "artwork(timeline/appraiser)、wildcard(number/visitor)完成；第9步皆判修正即可，重寫0／修正2；未接第1班缺稿；validate無WARN"
   },
+  "3": {
+    "finished_at": "2026-11-12T03:13:57+08:00",
+    "missing": [
+      "news"
+    ],
+    "note": "canon《時之笛》(compare/critic)、football 初稿(list/fan，非比賽夜)；審稿皆判修正即可，第9步重寫0／修正2；未接第1班缺稿；football 字數WARN 1756，其餘無機器腔WARN"
+  },
   "column": {
     "finished_at": "2026-11-11T22:46:12+08:00",
     "missing": [
