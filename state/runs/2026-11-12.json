@@ -10,6 +10,15 @@
     ],
     "note": "devotion 詩篇46:10–11（sonnet/自寫）；music 莫爾道河（walk/listener），審稿判定修正即可，第9步重寫0／修正1，忠實度核對已刪推論；perio 原已完成；validate 無機器腔 WARN"
   },
+  "2": {
+    "finished_at": "2026-11-12T02:08:41+08:00",
+    "missing": [
+      "football",
+      "news",
+      "canon"
+    ],
+    "note": "artwork(timeline/appraiser)、wildcard(number/visitor)完成；第9步皆判修正即可，重寫0／修正2；未接第1班缺稿；validate無WARN"
+  },
   "column": {
     "finished_at": "2026-11-11T22:46:12+08:00",
     "missing": [
