@@ -981,8 +981,9 @@ async function creditBox(el) {
   } catch { if (!drawn) el.innerHTML = `${head}<p class="small">現在讀不到，可能離線了。</p>`; }
 }
 // 問這篇 (Fragen; the owner, 2026-11-10): on a 特供版 phone with a yard, a question about the article being read, answered
-// in a few seconds by the yard's shared store (nest-worker.js /{code}/ask, Claude on the owner's Console credits) from
-// this article alone. Marked as not checked by the editors; the medical columns add the paper's disclaimer. The phone
+// in a few seconds by the yard's shared store (nest-worker.js /{code}/ask, Claude on the owner's Console credits): from
+// this article first, and past it from the model's own knowledge, said to be so and not looked up (the owner,
+// 2026-11-11: 要讓「問這篇」也能回答文章以外的問題). Marked as not checked by the editors; the medical columns add the paper's disclaimer. The phone
 // keeps the last few questions of each article (rm.ask), nothing is kept anywhere else. 清除問答 (the owner, 2026-11-11:
 // 刪除答案，類似重置) takes this article's questions off the phone, on a second press within three seconds.
 function askBox(el, date, column) {
@@ -992,11 +993,11 @@ function askBox(el, date, column) {
   const med = column === "perio";
   const qa = (x) => `<div class="ask-qa"><p class="q">${esc(x.q)}</p><div class="a">${paragraphs(x.a)}</div></div>`;
   el.innerHTML = `<div class="lbl"><b>問這篇</b><span class="de">Fragen</span></div>
-    <p class="small">讀到不懂、想多知道一點，直接問。只根據這篇回答，幾秒就好。</p>
+    <p class="small">讀到不懂、想多知道一點，直接問，幾秒就好。先看這篇怎麼寫；文章沒寫到的也會回答，會說明那是文章以外的。</p>
     <div class="ask-list">${mine.map(qa).join("")}</div>
     <textarea maxlength="300" rows="2" placeholder="例如：這個數字是怎麼算出來的？"></textarea>
     <div class="btns"><button class="btn" type="button" data-ask>問</button><span class="small ask-wait" hidden>編輯想一下……</span><button class="btn ghost ask-clear" type="button" data-ask-clear${mine.length ? "" : " hidden"}>清除問答</button></div>
-    <p class="ask-note">即時回答，未經編輯部查核${med ? "；醫學教學導讀，非個別診療建議" : ""}。</p>`;
+    <p class="ask-note">即時回答，未經編輯部查核；文章以外的部分沒有上網查證${med ? "；醫學教學導讀，非個別診療建議" : ""}。</p>`;
   const ta = el.querySelector("textarea"), btn = el.querySelector("[data-ask]"), wait = el.querySelector(".ask-wait"), list = el.querySelector(".ask-list");
   const clear = el.querySelector("[data-ask-clear]");
   let unsure;
