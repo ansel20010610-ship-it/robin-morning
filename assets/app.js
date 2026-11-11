@@ -1249,8 +1249,7 @@ async function viewArticle(date, column, my) {
     main.innerHTML = `<div class="wrap">${errorCard({ offline, text: offline ? `目前可能離線，〈${esc(name)}〉這篇還沒存下來；連上網路後再試一次。` : `〈${esc(name)}〉這篇找不到，可能被風吹走了。` })}${cards}</div>`;
     // The retry is not a route(): it places the page itself, on the place a 接著上次 card or a pencil line asked for
     // (landMark is handed back for it), and leaves no landTop behind for the next page to land on (audit 2026-11-11).
-    landMark = wantMark;
-    main.querySelector("[data-retry]").onclick = async (ev) => { ev.currentTarget.disabled = true; await viewArticle(date, column, my); if (my === routeSeq) { window.scrollTo(0, landTop ?? 0); landTop = null; } };
+    main.querySelector("[data-retry]").onclick = async (ev) => { ev.currentTarget.disabled = true; landMark = wantMark; await viewArticle(date, column, my); if (my === routeSeq) { window.scrollTo(0, landTop ?? 0); landTop = null; } };
     return;
   }
   if (my !== routeSeq) return;
@@ -1321,7 +1320,9 @@ async function viewArticle(date, column, my) {
     if (!c) return;
     // In a spoiler still folded the callout has no box to scroll to, and the button did nothing (audit 2026-11-11). The
     // fold is the reader's to open: the page goes to its gate and says the correction is behind it.
-    const gate = c.closest(".spoiler-body[hidden]")?.previousElementSibling;
+    let box = c.closest(".spoiler-body[hidden]"); // the outermost fold still shut: a later spoiler sits inside the one before it (blocks.js)
+    for (let up; box && (up = box.parentElement?.closest(".spoiler-body[hidden]"));) box = up;
+    const gate = box?.previousElementSibling;
     if (gate) { gate.scrollIntoView({ behavior: calm() ? "auto" : "smooth", block: "center" }); toast("更正寫在劇透的段落裡，按「顯示劇透內容」就看得到"); return; }
     c.scrollIntoView({ behavior: calm() ? "auto" : "smooth", block: "center" }); c.classList.add("lit");
   });
@@ -2382,7 +2383,8 @@ function aaMenu(btn) {
     if (!b.dataset.fs) return;
     // The paragraph at the top of the screen stays where it is while the type changes size: the iPhone does not hold
     // the place itself (no scroll anchoring), and a change mid-article threw the reader screens away (audit 2026-11-11).
-    const at = [...main.querySelectorAll(".body > *, .article-head")].find((el) => el.getBoundingClientRect().bottom > 60), y0 = at?.getBoundingClientRect().top;
+    // the leaves: 快訊's items and an opened spoiler sit inside one big block
+    const at = [...main.querySelectorAll(".article-head, .body p, .body li, .body h2, .body h3, .body figure, .body blockquote, .body table")].find((el) => el.getBoundingClientRect().bottom > 60), y0 = at?.getBoundingClientRect().top;
     setFs(b.dataset.fs);
     if (at?.isConnected) window.scrollBy(0, at.getBoundingClientRect().top - y0);
     pop.querySelectorAll("[data-fs]").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); // moved in place: a redraw would drop keyboard focus
@@ -2730,10 +2732,11 @@ async function boot() {
       // The card under the reader's eye stays where it is: at 21:00, 00:00 and 05:00 the page above it changes height
       // (the letter fold, the weather and feast boxes), and the iPhone does not hold the place itself.
       const a = scrollY > 0 ? [...main.querySelectorAll('a[href^="#/a/"]')].find((el) => el.getBoundingClientRect().bottom > 0) : null, href = a?.getAttribute("href"), y0 = a?.getBoundingClientRect().top;
+      const same = (h) => [...main.querySelectorAll(`a[href="${h}"]`)], nth = href ? same(href).indexOf(a) : -1; // the opened parcel has two links to one article
       const opened = [...main.querySelectorAll("details[open]")].map((d) => d.className).filter(Boolean); // 今日禱告, the wires, the letter fold: what the reader opened stays open
       enteredFront = false; viewFront();
       for (const cls of opened) { const d = [...main.querySelectorAll("details")].find((x) => x.className === cls); if (d) d.open = true; }
-      const b = href ? main.querySelector(`a[href="${href}"]`) : null;
+      const b = href ? same(href)[nth] || same(href)[0] : null;
       if (b) window.scrollBy(0, b.getBoundingClientRect().top - y0);
     }
   };
@@ -2799,8 +2802,10 @@ async function boot() {
     // 後院 and 收藏's plate are drawn as of an hour too (asleep or awake, 今天吃了幾口, last night's goodnights, the morning's
     // diary): left open in the evening and woken in the morning, they stood as they were until the reader went away and
     // came back (audit 2026-11-11). Away for ten minutes or more, they are drawn afresh.
-    const yard = hiddenAt && Date.now() - hiddenAt > 10 * 60 * 1000 && /^#\/(nest|saved)$/.test(location.hash || "") && !typing();
-    if ((replay && (location.hash || "#/") === "#/" && scrollY < 400 && !typing()) || yard) route(); else refreshFront();
+    // (收藏 only on a phone that has the yard's plate on it; the page keeps its place.)
+    const yard = hiddenAt && Date.now() - hiddenAt > 10 * 60 * 1000 && (location.hash === "#/nest" || (location.hash === "#/saved" && sonder() && nest())) && !typing();
+    if (yard) { const y = scrollY; route().then(() => window.scrollTo(0, y)); }
+    else if (replay && (location.hash || "#/") === "#/" && scrollY < 400 && !typing()) route(); else refreshFront();
     if (stale) runAutoAdd();
   });
   clearNotices();

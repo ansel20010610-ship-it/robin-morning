@@ -37,10 +37,13 @@ export const store = {
       if (!/quota/i.test(`${e?.name} ${e?.message}`)) return false; // private mode or storage off
       try {
         const spare = /^rm\.(pos\.|sp\.resolve|wx$|wire\.last$|letters\.cache$|credits$|gigs\.(seen|fresh)$|random\.recent$|reveal\.seen$)/;
-        // Only for something worth it: a rebuildable key that does not fit (the wires and the letters are written every
-        // five minutes) must not clear the reader's places in every article to make room for itself.
-        if (spare.test("rm." + k)) return false;
-        for (const key of Object.keys(localStorage)) if (spare.test(key) && key !== "rm." + k) localStorage.removeItem(key);
+        // Only for something worth it: a cheap copy that does not fit (the wires and the letters are written every five
+        // minutes) gives up rather than clear anything; a place in an article or a concert mark may clear only the cheap
+        // copies; anything else clears every rebuildable key.
+        const cheap = /^rm\.(sp\.resolve|wx$|wire\.last$|letters\.cache$|credits$|random\.recent$|reveal\.seen$)/;
+        if (cheap.test("rm." + k)) return false;
+        const drop = spare.test("rm." + k) ? cheap : spare;
+        for (const key of Object.keys(localStorage)) if (drop.test(key) && key !== "rm." + k) localStorage.removeItem(key);
         return put();
       } catch { return false; }
     }
