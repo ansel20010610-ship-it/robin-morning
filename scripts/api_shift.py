@@ -7,7 +7,7 @@ a run should spend anything, and records what it cost.
   python3 scripts/api_shift.py record <shift> <out> [budget]
                                                       reads claude -p --output-format json, prints the result and the
                                                       cost, appends it to state/api/spend.json
-  python3 scripts/api_shift.py month                  this month's spend so far
+  python3 scripts/api_shift.py month                  this credit cycle's spend so far
   python3 scripts/api_shift.py column | mend | sweep  what that shift is to write now (its instructions run this)
 
 Shifts: serial (16:00), reserve (17:30), concerts (05:30), rescue (06:30; when shifts 1-3 of the night all failed to
@@ -20,8 +20,9 @@ report — the weekly quota is gone — including Sundays, the owner, 2026-11-10
                   rescue now also runs when only some of shifts 1-3 reported and shift 4 shows no sign of life.
   sweep (18:30)   月底清倉: on the last SWEEP_DAYS days of the month, what the credits have left goes into serial
                   installments beyond the daily shift's three days — the one thing here that keeps (the credits do not).
-Money: everything stops at MONTH_CAP; column, reserve and sweep already at SOFT_CAP, so that the end of a month still
-has room for the rescues, concerts and the daily serial (the sweep takes that room too on the month's last day). Their instructions are editorial/api-shifts/<shift>.md. The
+Money: a "month" here is the credit cycle, the 13th to the 13th (see CYCLE_DAY), not the calendar month. Everything
+stops at MONTH_CAP; column, reserve and sweep already at SOFT_CAP, so that the end of a cycle still has room for the
+rescues, concerts and the daily serial (the sweep takes that room too on the cycle's last day). Their instructions are editorial/api-shifts/<shift>.md. The
 repo is public: nothing secret is ever printed or written here.
 """
 import datetime as dt, json, os, subprocess, sys
@@ -32,11 +33,23 @@ SPEND = os.path.join(ROOT, "state", "api", "spend.json")
 # past it (no card, no auto-reload) — so a cap here guards no money, only work: past 200 a running shift dies half way
 # and 問這篇 and the diary (the yard Worker, whose spend this file cannot see: 0.61 on 2026-11-10) stop until the 1st.
 MONTH_CAP = 190.0
+# The credits follow the plan's billing cycle, not the calendar month (Console → Billing, read with the owner on
+# 2026-11-11: the 200 USD granted on 2026-11-10 expire on 2026-12-13 00:00 UTC; Anthropic's help page: a new grant
+# comes shortly after each plan payment, what is left of the old one is gone). So the cycle runs from the 13th 00:00 UTC
+# to the next 13th; the first began with the grant. Until 2026-11-11 this file counted calendar months, a guess.
+# CHECK after 2026-12-13 that the next grant's dates on the Billing page fit CYCLE_DAY.
+CYCLE_DAY = 13
+FIRST_GRANT = dt.datetime(2026, 11, 10, tzinfo=dt.timezone.utc)
+FIRST_END = dt.datetime(2026, 12, 13, tzinfo=dt.timezone.utc)
+# Nothing is spent in a cycle's first day: the new grant comes "shortly after" the payment, at an hour nobody here can
+# see, and until it does a request would eat the owner's purchased balance (3.70 USD on 2026-11-11; auto-reload is off)
+# or fail. The claude.ai routines and shift 1 do that day's work on the plan, as they did before these shifts existed.
+QUIET_HOURS = 24
 SOFT_CAP = 165.0   # column, reserve and sweep stop here: the last 25 of the cap stay for concerts, serial, mend and rescue
 SOFT = ("column", "reserve", "sweep")
 BUDGET = {"serial": 4, "reserve": 10, "concerts": 4, "rescue": 25, "column": 12, "mend": 25, "sweep": 25}  # per run, claude --max-budget-usd
 COLUMNS = ["perio"]     # what the column shift writes each evening (the owner, 2026-11-11: 每天一欄); one word to change
-SWEEP_DAYS = 6          # the sweep runs on the last six days of the UTC month
+SWEEP_DAYS = 6          # the sweep runs on the last six days of the credit cycle
 HOLD_PER_DAY = 6.0      # USD the sweep leaves for each day still to come (the column, concerts, the daily serial)
 PER_INSTALLMENT = 1.2   # USD a serial installment costs (0.94 measured on 2026-11-11), with a margin
 SWEEP_MAX = 20          # installments in one sweep run: four batches of five inside the job's two hours
@@ -55,20 +68,31 @@ def load():
         return {"runs": []}
 
 
-def utc_month(at):
-    """The UTC calendar month an `at` stamp (Taiwan time, +08:00) falls in, or ""."""
-    try:
-        return dt.datetime.fromisoformat(str(at)).astimezone(dt.timezone.utc).strftime("%Y-%m")
-    except ValueError:
-        return ""
+def cycle(t=None):
+    """(start, end) in UTC of the credit cycle that t (default: now) falls in."""
+    t = t or dt.datetime.now(dt.timezone.utc)
+    if t < FIRST_END:
+        return FIRST_GRANT, FIRST_END
+    start = t.replace(day=CYCLE_DAY, hour=0, minute=0, second=0, microsecond=0)
+    if start > t:
+        start = (start.replace(day=1) - dt.timedelta(days=1)).replace(day=CYCLE_DAY)
+    return start, (start.replace(day=28) + dt.timedelta(days=4)).replace(day=CYCLE_DAY)
 
 
-def month_total(d=None):
-    # The credits are given again on the 1st by UTC (Console's month; the yard store's /credits counts the same way):
-    # on the 1st, Taiwan 00:00-08:00 is still last month there, and the 05:30 and 06:30 shifts of that morning counted
-    # as a fresh month while they were spending the old one (audit 2026-11-11).
-    m = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m")
-    return round(sum(r.get("usd", 0) for r in (d or load())["runs"] if utc_month(r.get("at", "")) == m), 2)
+def month_total(d=None, t=None):
+    """What the shifts spent in the credit cycle of t (default: now) — the name is from when it was a calendar month."""
+    start, end = cycle(t)
+    total = 0.0
+    for r in (d or load())["runs"]:
+        try:
+            at = dt.datetime.fromisoformat(str(r.get("at", "")))
+        except ValueError:
+            continue
+        if at.tzinfo is None:
+            at = at.replace(tzinfo=TW)
+        if start <= at < end:
+            total += r.get("usd", 0)
+    return round(total, 2)
 
 
 def missing_of(cols, d):
@@ -134,16 +158,17 @@ def activity(day):
     return n
 
 
-def sweep_room(spent=None, u=None):
-    """(USD the month-end sweep may spend now, whole days left in the UTC month after today). Nothing before the last
-    SWEEP_DAYS days; then what SOFT_CAP has left once every remaining day (today's evening included) keeps HOLD_PER_DAY.
-    On the month's last day the 25 kept for the rescues goes too, up to MONTH_CAP: a rescue that night is unlikely and
-    would still have the reserves behind it, while what is left at 08:00 Taiwan time the next morning is gone for certain."""
-    u = u or dt.datetime.now(dt.timezone.utc).date()
-    left = ((u.replace(day=28) + dt.timedelta(days=4)).replace(day=1) - u).days - 1
+def sweep_room(spent=None, t=None):
+    """(USD the cycle-end sweep may spend now, whole UTC days left in the credit cycle after today). Nothing before the
+    last SWEEP_DAYS days; then what SOFT_CAP has left once every remaining day (today's evening included) keeps
+    HOLD_PER_DAY. On the cycle's last day the 25 kept for the rescues goes too, up to MONTH_CAP: a rescue that night is
+    unlikely and would still have the reserves behind it, while what is left at 08:00 Taiwan time the next morning (00:00
+    UTC, when the grant expires) is gone for certain."""
+    t = t or dt.datetime.now(dt.timezone.utc)
+    left = (cycle(t)[1].date() - t.date()).days - 1
     if left >= SWEEP_DAYS:
         return 0.0, left
-    spent = month_total() if spent is None else spent
+    spent = month_total(t=t) if spent is None else spent
     return max(0.0, round((SOFT_CAP if left else MONTH_CAP) - spent - HOLD_PER_DAY * (left + 1), 2)), left
 
 
@@ -188,8 +213,11 @@ def decide(shift):
         return out(False, "no ANTHROPIC_API_KEY secret yet")
     spent = month_total()
     cap = SOFT_CAP if shift in SOFT else MONTH_CAP
+    start, end = cycle()
+    if start != FIRST_GRANT and dt.datetime.now(dt.timezone.utc) - start < dt.timedelta(hours=QUIET_HOURS):
+        return out(False, f"the cycle began {start:%m-%d %H:%M} UTC: its first {QUIET_HOURS} hours spend nothing, the new credits may not be there yet")
     if spent >= cap:
-        return out(False, f"this month's spend {spent} USD has reached {cap}")
+        return out(False, f"this cycle's spend {spent} USD has reached {cap} (the credits expire {end:%m-%d} 00:00 UTC)")
     if shift == "rescue":
         day = now().strftime("%Y-%m-%d")
         runs = runs_of(day)
@@ -215,7 +243,7 @@ def decide(shift):
             return out(False, "after 00:20 the coming issue belongs to the night shifts")
         if not cols:
             return out(False, f"{d}: {', '.join(COLUMNS)} already written or not due")
-        return out(True, f"{d}: {', '.join(cols)}; month so far {spent} USD")
+        return out(True, f"{d}: {', '.join(cols)}; cycle so far {spent} USD")
     if shift == "mend":
         d, cols = mend_work()
         if d is None:
@@ -226,13 +254,13 @@ def decide(shift):
     if shift == "sweep":
         room, left = sweep_room(spent)
         if left >= SWEEP_DAYS:
-            return out(False, f"{left} days of the month left: the sweep runs on the last {SWEEP_DAYS}")
+            return out(False, f"{left} days of the cycle left (to {end:%m-%d}): the sweep runs on the last {SWEEP_DAYS}")
         budget = min(float(BUDGET["sweep"]), room)
         n = len(sweep_list(sweep_count(budget)))
         if not n:
             return out(False, f"nothing to sweep: {room} USD free of the soft cap, or no installment left to translate")
-        return out(True, f"{n} installments; month so far {spent} USD, {room} free with {left} days left", round(budget, 2))
-    return out(True, f"month so far {spent} USD")
+        return out(True, f"{n} installments; cycle so far {spent} USD, {room} free with {left} days left", round(budget, 2))
+    return out(True, f"cycle so far {spent} USD (to {end:%m-%d})")
 
 
 def work(shift):
@@ -242,7 +270,7 @@ def work(shift):
         todo = sweep_list(sweep_count(budget))
         if not todo:
             return print("沒有要譯的。")
-        print("月底清倉：這次最多譯 %d 回（照順序，一批 5 回）" % len(todo))
+        print("額度到期前清倉：這次最多譯 %d 回（照順序，一批 5 回）" % len(todo))
         for slug, plan, i in todo:
             print("  第 %d 回  %s  %s %s（%d／%d）  %d 字  原文 state/serial/%s/src/%03d.json  譯名表 state/serial/%s.md" % (
                 i["n"], i["date"], i["part"], i["chapter"], i["piece"], i["pieces"], i["words"], slug, i["n"], slug))
@@ -282,7 +310,7 @@ def record(shift, path, budget=None):
     with open(SPEND, "w", encoding="utf-8") as f:
         json.dump(d, f, ensure_ascii=False, indent=1)
         f.write("\n")
-    print(f"本月累計 {month_total(d)} USD")
+    print(f"本期累計 {month_total(d)} USD（這期額度 {cycle()[1]:%m-%d} 00:00 UTC 到期）")
 
 
 if __name__ == "__main__":
