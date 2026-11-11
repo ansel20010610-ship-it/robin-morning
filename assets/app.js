@@ -2152,8 +2152,7 @@ function viewStamp(date) {
   const erst = Number(issue.no) === 1, fest = erst ? null : feastOf(date), gala = erst || Boolean(fest); // 紀念郵票 open with the same show
   main.innerHTML = `${top}<div class="wrap stamp-page${gala ? " gala" : ""}${fest ? ` fest-${esc(fest.key)}` : ""}"><div class="big">${gala ? `<i class="esun" aria-hidden="true"></i><i class="ring" aria-hidden="true"></i>` : ""}${stampHtml({ ...issue, articles: sortArticles(issue.articles || [], date) }, { earned: true, bird: birdsFound().has(date) })}</div>
     <p class="line"><b>${esc(issueNr(issue.no))}</b><span>${esc(fmtDate(date))}${fest ? `・${esc(fest.zh)}紀念郵票` : ""}</span><i>${esc(fmtDate(date, "de"))}</i></p>${fest?.pic ? `<p class="credit">${esc(fest.pic.credit)}</p>` : ""}
-    <p class="btns"><a class="btn ghost" href="#/issue/${esc(date)}">看這一期</a></p>
-    ${calm() ? "" : `<p class="hint">手指滑過郵票，紙面會跟著反光。</p>`}</div>`;
+    <p class="btns"><a class="btn ghost" href="#/issue/${esc(date)}">看這一期</a></p></div>`;
   if (gala) setTimeout(() => goldRain(main.querySelector(".stamp-page .big")), 1050);
   wireBack();
   cleanup = shine(main.querySelector(".stamp-page .big")); // 郵票反光 (motion.js): a finger across it, or the phone tilted
