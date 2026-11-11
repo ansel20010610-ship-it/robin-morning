@@ -13,7 +13,7 @@ import { pressHtml } from "./press.js";
 import { fetchWeather, weatherHtml, keptWeather } from "./wetter.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
-import { worldState, drawMap } from "./world.js";
+import { worldState, drawGlobe } from "./world.js";
 import { nestBox, renderNest, renderNestSettings, renderNestAlbum, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
@@ -2147,10 +2147,10 @@ function viewWorld() {
     ${e.latest.map((l) => `<span class="hl">${e.latest.length > 1 ? `<span class="d">${esc(fmtDate(l.date, "short"))}</span>` : ""}${esc(l.title)}</span>`).join("")}</span></a></li>`;
   main.innerHTML = `<div class="wrap welt"><header class="page-title"><h1>你讀過的世界</h1><span class="de">Gelesene Welt</span></header>
     <p class="col-note">快訊帶你去過的地方，讀過一則，那個國家就上色。</p>
-    <div class="map"></div>
+    <div class="map globe"></div>
     ${read.length ? `<p class="tally"><b>${read.length}</b> 個國家・最近去了${esc(read.slice(0, 3).map((e) => placeName(e.code)).join("、"))}</p><ol class="svl">${read.map(row).join("")}</ol>`
       : `<p class="empty">還沒出發。讀一則快訊，地圖就開始上色。</p>`}</div>`;
-  drawMap(main.querySelector(".welt .map"), { read: read.map((e) => e.code), today });
+  drawGlobe(main.querySelector(".welt .map"), { read: read.map((e) => e.code), today }); // the globe; the flat map if its outlines cannot be had (world.js)
   document.title = `你讀過的世界｜${S.cfg.title}`;
 }
 // 這則帶你去了: under a 快訊, the countries its items named, as the one way from an article into 你讀過的世界.

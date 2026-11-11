@@ -1667,6 +1667,11 @@ a.stamp:active .sp { filter: brightness(.96); }
 .welt .col-note { margin-top: 4px; }
 .welt .map { margin: 20px 0 0; }
 .welt .map:empty { aspect-ratio: 990 / 504; }
+/* 地球儀 (world.js drawGlobe): a square box of the globe's size from the first draw, so the list under it never moves;
+   the canvas takes sideways strokes for turning and leaves up-and-down ones to the page. */
+.welt .map.globe { display: grid; place-items: center; aspect-ratio: auto; height: min(calc(100vw - 2 * var(--gutter)), 340px); }
+.welt .map.globe canvas { display: block; width: min(100%, 340px); aspect-ratio: 1; touch-action: pan-y; cursor: grab; -webkit-user-select: none; user-select: none;
+  filter: drop-shadow(0 10px 14px rgba(60, 45, 20, .22)); }
 .welt .map svg { display: block; width: 100%; height: auto; overflow: visible; }
 .welt .map path { fill: var(--paper-2); stroke: var(--rule); stroke-width: .5; vector-effect: non-scaling-stroke; }
 .welt .map path.read { fill: var(--gold); stroke: var(--gold-ink); }
