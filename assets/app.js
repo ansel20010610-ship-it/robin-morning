@@ -1743,7 +1743,7 @@ function gigRow(e) {
       ${e.why ? `<p class="why">${esc(e.why)}</p>` : ""}
       <p class="score">${stars(e.rating)}<span>值得聽 ${e.rating}</span>${e.note ? `<span class="tag">${esc(e.note)}</span>` : ""}<i class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></i></p>
     </div>`;
-  return id ? `<li><a class="gig" href="#/concert/${id}">${inner}</a></li>` : `<li><div class="gig">${inner}</div></li>`;
+  return id ? `<li><a class="gig r${e.rating}" href="#/concert/${id}">${inner}</a></li>` : `<li><div class="gig r${e.rating}">${inner}</div></li>`;
 }
 const RUBRIC = `<p>${stars(5)} 5：年度級。難得來台的頂尖樂團、指揮、獨奏家，或國際級的製作。</p>
       <p>${stars(4)} 4：值得專程跑一趟。</p>

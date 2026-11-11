@@ -1160,7 +1160,21 @@ img.img-off { visibility: hidden; }
 
 /* ——— 近期演出 (Spielplan): the standing list at the foot of the front page, and its own page ——— */
 .gig-list { list-style: none; margin: 0; padding: 0; }
-.gig { display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 14px; padding: 14px 0 15px; border-bottom: 1px solid var(--rule); color: inherit; text-decoration: none; }
+/* 票根 (2026-11-11): each show is a ticket — the date is the stub, torn off along a dotted line with a notch punched
+   at either end (the two discs are the page showing through; half of each is clipped away so only the bite is seen),
+   the stars are foil, and a five-star show carries a foil edge. No transform here: reveal() moves the row. */
+.gig { position: relative; display: grid; grid-template-columns: 78px minmax(0, 1fr); gap: 0; margin: 10px 0 0; padding: 0; border: 1px solid var(--rule); border-radius: 3px; background: var(--paper-2); color: inherit; text-decoration: none; }
+.gig::before, .gig::after { content: ""; position: absolute; left: 71px; width: 12px; height: 12px; border: 1px solid var(--rule); border-radius: 50%; background: var(--paper); pointer-events: none; }
+.gig::before { top: -7px; clip-path: inset(6px -1px -1px -1px); }
+.gig::after { bottom: -7px; clip-path: inset(-1px -1px 6px -1px); }
+.gig .what { min-width: 0; padding: 12px 12px 13px 14px; }
+.gig.r5 { border-color: var(--gold); box-shadow: inset 0 2px 0 var(--foil); }
+.gig.r5::before, .gig.r5::after { border-color: var(--gold); }
+.gig .stars, .gig-page .score .stars { background: linear-gradient(100deg, var(--foil), var(--foil-hi) 50%, var(--foil)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+/* 節目單: the show's own page opens like a programme's cover — centred, in a double gold frame */
+.gig-page .article-head { margin-top: 20px; padding: 20px 16px 18px; text-align: center; border: 1px solid var(--gold); outline: 1px solid var(--gold-soft); outline-offset: 4px; }
+.gig-page .article-head .score { justify-content: center; }
+.gig-page .article-head .dek { text-align: left; }
 a.gig { transition: background .25s; }
 a.gig:active { background: color-mix(in srgb, var(--gold) 7%, transparent); }
 .gig .go { margin-left: auto; font-style: normal; color: var(--gold); display: inline-flex; }
@@ -1187,7 +1201,7 @@ a.gig:active { background: color-mix(in srgb, var(--gold) 7%, transparent); }
 details.gig-key { margin-top: 28px; }
 details.gig-key summary { cursor: pointer; font-size: 15px; letter-spacing: .1em; color: var(--ink); }
 details.gig-key[open] summary { margin-bottom: 6px; }
-.gig .when { display: flex; flex-direction: column; padding-top: 3px; font-family: var(--sans); font-size: 12px; line-height: 1.55; color: var(--muted); letter-spacing: .02em; }
+.gig .when { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 14px 4px 12px; border-right: 2px dotted var(--rule); font-family: var(--sans); font-size: 12px; line-height: 1.55; color: var(--muted); letter-spacing: .02em; }
 .gig .when b { font-family: var(--latin); font-size: 27px; line-height: 1; font-weight: 600; color: var(--ink); margin-bottom: 5px; font-variant-numeric: lining-nums; }
 .gig h3 { margin: 0 0 3px; font-size: 17.5px; line-height: 1.5; font-weight: 600; }
 .gig .new { margin-left: 8px; padding: 1px 5px 2px; vertical-align: 2px; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .1em; color: var(--paper); background: var(--robin); }
