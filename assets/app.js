@@ -939,13 +939,14 @@ function sentRow(x) {
 }
 // 寄過的信 (設定; the owner, 2026-11-11: 把過去寫的放在設定的一個地方，每天晚上首頁的不要有過去的信，如果沒有回信也不要寫在
 // 等回信): what this phone sent (rm.letters.sent, the last twenty), each in full with when it went; an answered one
-// links to its reply, an unanswered one says nothing more. The newest three stand open, the older ones fold under a line.
+// links to its reply, an unanswered one says nothing more. The newest three stand open, the older ones fold under
+// 讀更多 and shut again with 收起 (the owner, 2026-11-11: 顯示前三篇，之後要可以收合（讀更多之類的）).
 function sentLetters(open = false) {
   const sent = sentKept();
   if (!sent.length) return `<p class="small">還沒寄過信。晚上九點以後，首頁最上面可以寫信給編輯部。</p>`;
   const rest = sent.slice(3);
   return `<ul class="letters-sent">${sent.slice(0, 3).map(sentRow).join("")}</ul>
-    ${rest.length ? `<details class="more"${open ? " open" : ""}><summary>更早的 ${rest.length} 封</summary><ul class="letters-sent">${rest.map(sentRow).join("")}</ul></details>` : ""}
+    ${rest.length ? `<details class="more"${open ? " open" : ""}><summary><span class="shut">讀更多（還有 ${rest.length} 封）</span><span class="opened">收起</span></summary><ul class="letters-sent">${rest.map(sentRow).join("")}</ul></details>` : ""}
     <p class="small">只記在這支手機上，留最近二十封。</p>`;
 }
 // API 額度 (the owner, 2026-11-11: 我想在設定頁加入可以看api剩餘額度): on the owner's yard, this month's spend on the
@@ -2471,7 +2472,7 @@ function viewSettings() {
     </section>
     ${sonder() ? `<section class="set"><h2>後院</h2><p>和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口，大家讀的加在一起，牠從蛋長成會唱歌的鳥。取名、邀請碼、加入別人的院子、離開，都在後院設定。</p>
       <div class="btns"><a class="btn ghost" href="#/nest">到後院去</a><a class="btn ghost" href="#/nest/settings">後院設定</a></div></section>` : ""}
-    ${letterYard() ? `<section class="set" id="sent-set"><details class="sent-fold"${store.get("letters.open") === true ? " open" : ""}><summary><h2>寄過的信<span class="de">Meine Briefe</span></h2><span class="note">${sentKept().length ? `${sentKept().length} 封` : "還沒寄過"}</span></summary><div class="sent-letters">${sentLetters()}</div></details></section>` : ""}
+    ${letterYard() ? `<section class="set" id="sent-set"><h2>寄過的信<span class="de">Meine Briefe</span></h2><div class="sent-letters">${sentLetters()}</div></section>` : ""}
     ${sonder() && nest() && S.cfg.nest?.api ? `<section class="set" id="credit-set"><h2>API 額度<span class="de">Guthaben</span></h2><p class="small">讀取中……</p></section>` : ""}
     <section class="set" id="sonder-set"><h2>特供版<span class="de">Sonderausgabe</span></h2>${sonder()
       ? `<p>這支手機是特供版：多了「後院」。</p><div class="btns"><button type="button" class="btn ghost" data-sonder-off>關閉特供版</button></div>`
@@ -2483,11 +2484,7 @@ function viewSettings() {
     ${isWebKitITP() && !isStandaloneIOS() ? `<section class="set"><h2>放到主畫面</h2><p>在 Safari 按下方的「分享」按鈕，選「加入主畫面」，知更鳥晨間記事就會像 App 一樣全螢幕開啟，也能離線讀已下載的文章。</p></section>` : ""}
     <footer class="colophon"><div class="latin">${esc(S.cfg.subtitle)}</div>資料更新：${Number.isNaN(Date.parse(S.index.generated_at)) ? "—" : esc(new Date(Date.parse(S.index.generated_at) + 8 * 3600e3).toISOString().replace("T", " ").slice(0, 16))}（台灣時間）</footer></div>`;
   renderPush($("#push-set"), S.cfg, S.index.push).catch(() => {});
-  creditBox(main.querySelector("#credit-set"));
-  // 寄過的信 folds under its heading (the owner, 2026-11-11: 設定裡寄過的信要可以收合), shut until opened; the phone keeps
-  // which way it was left, so a redraw of this page or a later visit finds it the same.
-  main.querySelector(".sent-fold")?.addEventListener("toggle", (e) => store.set("letters.open", e.currentTarget.open));
-  main.querySelector("[data-sonder-on]")?.addEventListener("click", async (e) => {
+  creditBox(main.querySelector("#credit-set"));  main.querySelector("[data-sonder-on]")?.addEventListener("click", async (e) => {
     const code = main.querySelector("[data-sonder-code]").value, btn = e.currentTarget; // currentTarget is gone after the await
     if (!normSonder(code)) { toast("請輸入代碼"); return; }
     btn.disabled = true;
