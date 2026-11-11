@@ -1736,12 +1736,6 @@ a.stamp:active .sp { filter: brightness(.96); }
   .serial-card .ecke { transition: transform .28s cubic-bezier(.3, .7, .3, 1); }
   .serial-card:active .ecke { transform: scale(.15); }
 }
-/* 書籤絲帶 (app.js frontispiece): a wine ribbon hangs out of the book over its picture, as long as the share of the book
-   read (--bm, 0–1) — a stub on the first day, the picture's whole height on the last. */
-.buch .front.marked { position: relative; }
-.buch .front.marked::before { content: ""; position: absolute; z-index: 1; left: 16px; top: -7px; width: 13px; height: calc(22px + (100% - 26px) * var(--bm, 0));
-  background: linear-gradient(90deg, #58192A, #6E2536 35%, #86384A 60%, #6E2536); /* the day edition's wine in both themes: it lies on a painting, not on the page */
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 7px), 0 100%); filter: drop-shadow(0 1px 1px rgba(40, 20, 10, .35)); }
 .serial-card .recap { margin: 6px 0 0; font-size: .92em; line-height: 1.75; color: var(--ink-2); }
 .serial-card .recap b { font-family: var(--sans); font-size: 11.5px; font-weight: 600; letter-spacing: .1em; color: var(--gold-ink); margin-right: 7px; }
 .serial-card .back { color: var(--muted); }
