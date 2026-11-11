@@ -1344,7 +1344,11 @@ async function viewArticle(date, column, my) {
     lastTime(Number(a.serial.n) - 1, slot).then(() => { if (slot?.isConnected && slot.offsetHeight && scrollY > slot.offsetTop) window.scrollBy(0, slot.offsetHeight); });
   }
   const firstP = body.firstElementChild;
-  if (firstP && firstP.tagName === "P" && !firstP.querySelector(".tag")) firstP.classList.add("lead-p");
+  if (firstP && firstP.tagName === "P" && !firstP.querySelector(".tag")) {
+    firstP.classList.add("lead-p");
+    // 花飾首字: only a Han character is set in the gold frame — a digit, a Latin letter or an opening 「《 keeps the plain initial
+    if (/^\p{Script=Han}/u.test(firstP.textContent.trimStart())) firstP.classList.add("han");
+  }
   // 劃線本: this article's pencil lines find their place again; one opened from the notebook is landed on (route()
   // scrolls to landTop) and glows once. A mark inside a spoiler still folded has no box to measure, so its gate(s) are
   // opened first (blocks.js) — before the contents list, which lists the opened section's headings. Then the pill that
