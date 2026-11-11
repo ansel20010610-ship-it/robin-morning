@@ -875,9 +875,17 @@ function viewLetters() {
   const id = decodeURIComponent((location.hash.split("/")[2] || "")), at = id && main.querySelector(`#${CSS.escape(id)}`);
   if (at) landTop = Math.max(0, at.getBoundingClientRect().top + scrollY - 16);
 }
+// A small engraving over the one line of an empty page (劃線本, 編輯部回信, an empty stamp slot), drawn here in the house
+// line: it stands in the page from the first draw, so nothing moves when it comes (style.css .e-art).
+const EMPTY_ART = {
+  marks: `<path class="l" d="M16 30h52M16 46h40M16 62h46"/><path class="g" d="M16 52c5-3 8 3 13 0s8 3 13 0 8 3 14 0"/><path class="k" d="M62 50l18-18 6 6-18 18-8 2zM76 36l6 6"/>`,
+  letters: `<rect class="k" x="16" y="28" width="64" height="44" rx="1"/><path class="k" d="M16 29l32 25 32-25"/><circle class="w" cx="48" cy="58" r="7"/>`,
+  stamp: `<rect class="d" x="24" y="18" width="48" height="60"/><rect class="k" x="31" y="26" width="34" height="36"/><path class="g" d="M36 70h24"/><path class="l" d="M20 24V14h10M66 14h10v10M76 72v10H66M30 82H20V72"/>`,
+};
+const emptyArt = (k) => `<svg class="e-art" viewBox="0 0 96 96" aria-hidden="true">${EMPTY_ART[k] || ""}</svg>`;
 function lettersList() {
   const ls = [...(S.letters || [])].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
-  return ls.length ? ls.map((l) => `<p class="letter-date">${esc(fmtDate(l.date))}</p>${letterHtml(l)}`).join("") : `<p class="empty">還沒有回信。晚上九點以後打開報紙，首頁最上面就能寫信給編輯部。</p>`;
+  return ls.length ? ls.map((l) => `<p class="letter-date">${esc(fmtDate(l.date))}</p>${letterHtml(l)}`).join("") : `<p class="empty">${emptyArt("letters")}還沒有回信。晚上九點以後打開報紙，首頁最上面就能寫信給編輯部。</p>`;
 }
 // In the evening (night = true) the form is folded under one line at the top of the front page — a moon, 寫信給編輯部 —
 // and opens on a tap; it stays open while a draft is kept, and after a letter goes out to show it among the sent.
@@ -2034,7 +2042,7 @@ function viewMarks() {
   }).join("");
   main.innerHTML = `<div class="wrap marks"><header class="page-title"><h1>劃線本</h1><span class="de">Anstreichungen</span></header>
     ${rows ? `<p class="col-note">讀文章時劃下的句子，${all.length} 處。只存在這支手機；點一句就回到它在文章裡的位置。</p>${rows}`
-      : `<p class="empty">還沒有劃線。讀文章時選一段字，按「劃線」，就會收在這裡。</p>`}</div>`;
+      : `<p class="empty">${emptyArt("marks")}還沒有劃線。讀文章時選一段字，按「劃線」，就會收在這裡。</p>`}</div>`;
   main.querySelector(".marks").addEventListener("click", (e) => {
     const del = e.target.closest("[data-del]");
     // Two presses, as in the article (移除劃線 after a tap on the line): the ✕ sits beside the link that opens the
@@ -2101,7 +2109,7 @@ function viewStamps() {
 function viewStamp(date) {
   const issue = issueBy(date), done = digestDone().has(date);
   const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/stamps" aria-label="返回">${ICON.back}</a><div class="title">郵票冊</div></div></div>`;
-  if (!issue || !isPublished(date) || !done) { main.innerHTML = `${top}<div class="wrap"><p class="empty">這一格還沒有郵票。<a href="#/stamps">回郵票冊</a></p></div>`; wireBack(); return; }
+  if (!issue || !isPublished(date) || !done) { main.innerHTML = `${top}<div class="wrap"><p class="empty">${emptyArt("stamp")}這一格還沒有郵票。<a href="#/stamps">回郵票冊</a></p></div>`; wireBack(); return; }
   // 創刊紀念郵票 opens with a show (the owner, 2026-11-08: 點開來個特效): it turns in out of the dark like a coin, a glint
   // runs across it, a ring of light goes out, a sunburst wakes behind it and keeps turning, gold flakes fall (style.css
   // .stamp-page.erst-page, goldRain).

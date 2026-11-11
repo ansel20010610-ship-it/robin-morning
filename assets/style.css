@@ -586,6 +586,10 @@ tr:first-child td { border-top: 0; }
 .issue-row li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .issue-row li i { font-style: normal; font-family: var(--sans); font-size: 11.5px; color: var(--gold-ink); margin-right: 6px; }
 .empty { padding: 40px 0; text-align: center; color: var(--muted); font-size: 15px; }
+/* the small engraving over an empty page's line (app.js emptyArt) */
+.e-art { display: block; width: 84px; height: 84px; margin: 0 auto 14px; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.e-art .l { stroke: var(--rule); } .e-art .k { stroke: var(--ink-2); } .e-art .g { stroke: var(--gold); }
+.e-art .d { stroke: var(--gold); stroke-width: 2; stroke-dasharray: 0 4.2; } .e-art .w { fill: var(--wine); stroke: none; }
 .empty.serial-wait { padding: 20px 0 8px; } /* under the 摺角那一頁 head when today's installment has not come (app.js serialWaitBox) */
 .empty.serial-wait a { color: var(--gold-ink); }
 
@@ -593,10 +597,12 @@ tr:first-child td { border-top: 0; }
 .set { margin: 24px 0; }
 .set h2 { font-family: var(--sans); font-size: 12px; letter-spacing: .18em; color: var(--gold-ink); margin: 0 0 8px; }
 .set h2 .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 13px; margin-left: 8px; color: var(--gold); }
-.seg { display: inline-flex; border: 1px solid var(--ink); }
-.seg button { border: 0; background: none; padding: 8px 14px; font-family: var(--sans); font-size: 14px; cursor: pointer; }
-.seg button + button { border-left: 1px solid var(--ink); }
-.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+/* 切換鈕 (日夜, 朗讀速度, the Aa sheet's 字級): a paper tray with the chosen one lifted out of it on a gold rule — it was
+   the one place in the app set in black blocks (2026-11-11). */
+.seg { display: inline-flex; gap: 3px; padding: 3px; border: 1px solid var(--rule); background: var(--paper-2); }
+.seg button { border: 1px solid transparent; background: none; padding: 7px 13px; font-family: var(--sans); font-size: 14px; color: var(--ink-2); cursor: pointer; transition: background .25s, color .25s, border-color .25s, box-shadow .25s; }
+.seg button[aria-pressed="true"] { background: var(--paper); color: var(--ink); font-weight: 600; border-color: var(--gold); box-shadow: inset 0 -2px 0 var(--foil); }
+.seg button:not([aria-pressed="true"]):active { background: color-mix(in srgb, var(--gold) 12%, transparent); }
 .set p { font-family: var(--sans); font-size: 14px; color: var(--ink-2); line-height: 1.7; margin: 8px 0; }
 .rot { width: 100%; font-family: var(--sans); font-size: 13px; }
 .rot td, .rot th { padding: 7px 6px; }
