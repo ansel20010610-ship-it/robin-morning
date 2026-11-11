@@ -46,9 +46,7 @@ const lateOf = (date) => S.late?.[date] || null;
 // 2026-11-08: 要等全部刊完才能拆包裹和郵票). From the next day on the issue counts as it stands, finished or not.
 // A 補刊 given up (late.py giveup, state unfinished) opens the day at once with what came (the owner, 2026-11-09).
 // Before late.json says anything, a quota Sunday by the shift reports (quotaHeld) is shut the same way.
-// From 21:00 the status line itself gives the 補刊 up (lateText), whatever late.json says: the day opens then too, or the
-// page said 沒能全部完成 over a parcel still waiting for 下午補刊到齊 (audit 2026-11-11).
-const issueOpen = (date) => { const l = lateOf(date), gaveUp = twNow().minutes >= 21 * 60; return l ? l.state === "done" || l.state === "unfinished" || date !== twNow().date || gaveUp : !quotaHeld(date) || gaveUp; };
+const issueOpen = (date) => { const l = lateOf(date); return l ? l.state === "done" || l.state === "unfinished" || date !== twNow().date : !quotaHeld(date); };
 // 額度週日 by the index's own shift reports (scripts/late.py hold()'s rule): today, a Sunday short of a column, with a
 // night shift that never reported — held whatever the hour, as hold(), since late.json may not come until the 15:07
 // 補刊 has started and pushed, or at all. The status line and issueOpen both go by it, so a late.json that arrives

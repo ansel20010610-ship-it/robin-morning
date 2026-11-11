@@ -37,6 +37,9 @@ export const store = {
       if (!/quota/i.test(`${e?.name} ${e?.message}`)) return false; // private mode or storage off
       try {
         const spare = /^rm\.(pos\.|sp\.resolve|wx$|wire\.last$|letters\.cache$|credits$|gigs\.(seen|fresh)$|random\.recent$|reveal\.seen$)/;
+        // Only for something worth it: a rebuildable key that does not fit (the wires and the letters are written every
+        // five minutes) must not clear the reader's places in every article to make room for itself.
+        if (spare.test("rm." + k)) return false;
         for (const key of Object.keys(localStorage)) if (spare.test(key) && key !== "rm." + k) localStorage.removeItem(key);
         return put();
       } catch { return false; }
