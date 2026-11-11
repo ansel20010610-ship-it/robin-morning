@@ -1,0 +1,136 @@
+{
+  "column": "perio",
+  "date": "2026-11-12",
+  "title": "糖尿病人治牙周，3 到 4 個月後 HbA1c 多降 0.43",
+  "dek": "同一個 Cochrane 題目，6 個月那一格，2015 年版算出 0.02，2022 年版算出 0.30。",
+  "brief": "同時有牙周炎和糖尿病的人做完齦下清創，三到四個月後，糖化血色素平均比沒治療或一般照護的人低 0.43 個百分點，確定性中等。Cochrane 上一版說，證據不足以證明效果撐得過四個月；這次作者改了結論。",
+  "takeaway": "Cochrane 回顧合併 30 篇隨機試驗：糖尿病合併牙周炎者做齦下清創，3–4 個月平均比不治療或一般照護低 0.43 個百分點（確定性中等）；6 個月低 0.30（12 篇）。",
+  "chairside": "您有糖尿病又有牙周病的話，把牙齦底下清乾淨，三到四個月後，糖化血色素（驗您過去三個月平均血糖的那項）平均會比沒治療或一般照護的人多降一些，例如從 7.43% 降到 7%。這是一群人的平均，這篇沒有拿它和藥物比。",
+  "topic_key": "perio:doi:10.1002/14651858.cd004714.pub4",
+  "form": "flow",
+  "voice": "colleague",
+  "updated_at": "2026-11-11T22:45:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Altus_AFB_lab_test_120110-F-FV476-045.jpg/1280px-Altus_AFB_lab_test_120110-F-FV476-045.jpg",
+    "width": 1280,
+    "height": 1792,
+    "alt": "檢驗室裡，一名空軍檢驗技術人員正替糖化血色素檢驗的品管小瓶加水。",
+    "caption": "美國空軍第 97 醫療支援中隊的檢驗室，一位檢驗技術主管正替糖化血色素檢驗的品管小瓶加水；這項檢驗用來追蹤糖尿病人的血糖控制得好不好。照片與文中研究的受試者無關。",
+    "credit": "Airman 1st Class Franklin Ramos，美國空軍；Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Altus_AFB_lab_test_120110-F-FV476-045.jpg",
+    "made": "2012 年 1 月（Commons 檔案日期；原說明文字寫 2011 年 1 月 10 日）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "替糖尿病人治牙周，血糖會不會跟著好一點？2015 年，**Cochrane** 的一篇系統性回顧說，治療後 3 到 4 個月，糖化血色素平均多降 0.29 個百分點。6 個月是 0.02（5 篇），信賴區間跨過零。2015 年那版的證據品質評為低。2022 年 4 月，Cochrane 出了更新版，換了說法：同時有牙周炎和糖尿病的人做齦下清創，血糖控制會改善，幅度在臨床上有意義。這一版 3 到 4 個月那一格的確定性評為中等。"
+    },
+    {
+      "type": "p",
+      "text": "Cochrane 自己說，它是全球獨立的非營利網絡，1993 年在英國牛津成立。專門把同一個題目的研究全部找來，合在一起算，這叫系統性回顧。它也說不收可能影響回顧的經費。回顧看的是糖化血色素，英文縮寫 HbA1c，反映過去三個月的平均血糖。作者說，糖尿病人控制得很好時，大約是 6.5%。"
+    },
+    {
+      "type": "p",
+      "text": "牙醫該管這件事，是因為兩種病會互相拖累。2018 年歐洲牙周病學會和國際糖尿病聯盟一起寫了一份共識，說兩者互為雙向關聯。世代研究顯示，有牙周炎的糖尿病人，HbA1c 明顯比牙周健康的高。牙周炎也和第 2 型糖尿病的新發生風險增加有關。牙周治療後 3 個月，HbA1c 降 0.27 到 0.48%；更長期追蹤的研究，結論還不確定。"
+    },
+    {
+      "type": "p",
+      "text": "2022 年這一版只問一件事：做齦下清創，跟不治療或一般照護比，HbA1c 差多少。一般照護是口腔衛生指導、衛教或支持，和／或齦上洗牙（專業機械式菌斑清除）；治療組有些另外加了抗菌藥或手術。文獻找到 2021 年 9 月，收進 35 篇隨機試驗、3,249 人，都是平行設計，追蹤 3 到 12 個月。除了一篇同時收第 1 型和第 2 型，其他受試者都是第 2 型糖尿病。多數試驗在醫院裡做。"
+    },
+    {
+      "type": "p",
+      "text": "治療後 3 到 4 個月，治療組的 HbA1c 平均比對照組多降 **0.43 個百分點**。作者舉的例子是從 7.43% 降到 7%。到 6 個月，差距是 0.30。12 個月那一格只有 1 篇、264 人。"
+    },
+    {
+      "type": "svg",
+      "title": "兩版 Cochrane 回顧：治療組比對照組多降多少",
+      "svg": "<svg viewBox='0 0 420 350' xmlns='http://www.w3.org/2000/svg'><rect class='paper' x='0' y='0' width='420' height='350'/><text class='muted' x='20' y='24' font-size='13'>點：合併結果；橫線：95% 信賴區間；越往左，降得越多</text><line class='muted' x1='315' y1='38' x2='315' y2='282' stroke-width='1.5' stroke-dasharray='4 4'/><text class='ink' x='20' y='56' font-size='13'>2015 年版・治療後 3–4 個月（14 篇，1,499 人）</text><line class='gold' x1='111' y1='72' x2='272.5' y2='72' stroke-width='3'/><circle class='gold' cx='191.75' cy='72' r='6'/><text class='ink' x='280' y='77' font-size='13'>−0.29</text><text class='ink' x='20' y='102' font-size='13'>2015 年版・6 個月（5 篇，826 人）</text><line class='gold' x1='230' y1='118' x2='383' y2='118' stroke-width='3'/><circle class='gold' cx='306.5' cy='118' r='6'/><text class='ink' x='222' y='123' font-size='13' text-anchor='end'>−0.02</text><text class='ink' x='20' y='158' font-size='13'>2022 年版・3–4 個月（30 篇，2,443 人）</text><line class='accent' x1='64.25' y1='174' x2='196' y2='174' stroke-width='3'/><circle class='accent' cx='132.25' cy='174' r='6'/><text class='ink' x='204' y='179' font-size='13'>−0.43</text><text class='ink' x='20' y='204' font-size='13'>2022 年版・6 個月（12 篇，1,457 人）</text><line class='accent' x1='94' y1='220' x2='281' y2='220' stroke-width='3'/><circle class='accent' cx='187.5' cy='220' r='6'/><text class='ink' x='289' y='225' font-size='13'>−0.30</text><text class='ink' x='20' y='250' font-size='13'>2022 年版・12 個月（1 篇，264 人）</text><line class='accent' x1='81.25' y1='266' x2='123.75' y2='266' stroke-width='3'/><circle class='accent' cx='102.5' cy='266' r='6'/><text class='ink' x='132' y='271' font-size='13'>−0.50</text><line class='ink' x1='60' y1='290' x2='400' y2='290' stroke-width='1'/><line class='ink' x1='60' y1='290' x2='60' y2='296' stroke-width='1'/><line class='ink' x1='145' y1='290' x2='145' y2='296' stroke-width='1'/><line class='ink' x1='230' y1='290' x2='230' y2='296' stroke-width='1'/><line class='ink' x1='315' y1='290' x2='315' y2='296' stroke-width='1'/><line class='ink' x1='400' y1='290' x2='400' y2='296' stroke-width='1'/><text class='muted' x='60' y='312' font-size='12' text-anchor='middle'>−0.6</text><text class='muted' x='145' y='312' font-size='12' text-anchor='middle'>−0.4</text><text class='muted' x='230' y='312' font-size='12' text-anchor='middle'>−0.2</text><text class='muted' x='315' y='312' font-size='12' text-anchor='middle'>0</text><text class='muted' x='400' y='312' font-size='12' text-anchor='end'>+0.2</text><text class='muted' x='230' y='336' font-size='13' text-anchor='middle'>HbA1c 和對照組的差（百分點）</text></svg>",
+      "caption": "依兩版回顧摘要的數字重繪。金色是 2015 年版，酒紅是 2022 年版；虛線是零，代表兩組一樣。2015 年版 6 個月的橫線跨過零，2022 年版的都沒有碰到零。",
+      "credit": "本報原創圖解，數據取自 Simpson 等 2015、2022 年 Cochrane 回顧摘要"
+    },
+    {
+      "type": "p",
+      "text": "兩版在 6 個月那一格的數字不同。2015 年版能合併 6 個月的試驗只有 5 篇，結果從多降 0.20 到反而多升 0.16 都有可能，作者說證據不足以證明效果撐得過 4 個月。2022 年同一格有 12 篇，範圍不再碰到零。2015 年版 3 到 4 個月那一格本來也達顯著，是 0.29。2022 年作者自己的說法是，試驗和人數加倍，改變了他們的結論，也改變了他們對結論的確定程度。3 到 4 個月那一格的確定性，從低升到中等。"
+    },
+    {
+      "type": "quote",
+      "text": "再做治療對比不治療／一般照護的試驗，不太可能改變本回顧的整體結論。",
+      "original": "Further trials evaluating periodontal treatment versus no treatment/usual care are unlikely to change the overall conclusion reached in this review.",
+      "cite": "Simpson 等（2022），Cochrane 回顧摘要的作者結論"
+    },
+    {
+      "type": "p",
+      "text": "話說得很有把握，底下的試驗卻不算整齊。偏差風險的意思是，試驗做法有漏洞，結果可能偏掉。35 篇裡只有 2 篇偏差風險低，14 篇高，19 篇資料不夠，判斷不了。**只用那 2 篇低偏差風險的試驗重算，結論不變。**副作用多數試驗沒有評估；有評估的，多半報告沒有傷害或只有輕微的傷害。"
+    },
+    {
+      "type": "p",
+      "text": "0.43 是一群人的平均差，不是每個人都會降這麼多。對照組也不一定什麼都沒做，說不出眼前這位病人會降多少。這篇沒有拿治牙周和降血糖藥做比較，用藥照原本主治醫師的安排。2015 年版的作者另外建議，要讓改善撐過 6 個月，得靠持續的專業牙周治療，這是他們的建議，不是試驗驗證過的結果。醫師與口腔醫療人員共同照護，則是 2018 年共識的主張。"
+    },
+    {
+      "type": "p",
+      "text": "不同治療方式之間的比較，作者留給第二部分。"
+    },
+    {
+      "type": "paper",
+      "citation": "Simpson TC, Clarkson JE, Worthington HV, MacDonald L, Weldon JC, Needleman I, Iheozor-Ejiofor Z, Wild SH, Qureshi A, Walker A, Patel VA, Boyers D, Twigg J. Treatment of periodontitis for glycaemic control in people with diabetes mellitus. *Cochrane Database Syst Rev*. 2022;4(4):CD004714.",
+      "doi": "10.1002/14651858.CD004714.pub4",
+      "pmid": "35420698",
+      "link": "https://doi.org/10.1002/14651858.CD004714.pub4",
+      "evidence": "Cochrane 系統性回顧：35 篇隨機試驗、3,249 人；3–4 個月的主要結果確定性中等",
+      "design": "系統性回顧與統合分析，收隨機對照試驗（都是平行設計）；比較齦下清創與不治療或一般照護",
+      "sample": "35 篇試驗、隨機分配 3,249 人；3–4 個月的主要分析 30 篇、2,443 人",
+      "question": "替糖尿病合併牙周炎的人治療牙周，HbA1c 會不會比較低",
+      "access": "依摘要與白話摘要整理；2015 年版與 2018 年 EFP／IDF 共識依摘要"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Treatment of periodontitis for glycaemic control in people with diabetes mellitus",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "date": "2022-04-14",
+      "url": "https://doi.org/10.1002/14651858.CD004714.pub4",
+      "note": "主文獻。PMID 35420698，PMC9009294。讀了摘要與白話摘要；書目以 Crossref、PubMed 核對。全文頁面這次無法取得，數字只取摘要。"
+    },
+    {
+      "title": "Treatment of periodontitis for glycaemic control in people with diabetes mellitus（PubMed Central 摘要頁）",
+      "publisher": "PubMed Central",
+      "date": "2022-04-14",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9009294/",
+      "note": "HbA1c 的定義、6.5% 與 7.43% 到 7% 的例子、第二部分的預告，取自白話摘要。"
+    },
+    {
+      "title": "Treatment of periodontal disease for glycaemic control in people with diabetes mellitus",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "date": "2015-11-06",
+      "url": "https://doi.org/10.1002/14651858.CD004714.pub3",
+      "note": "2015 年版，PMID 26545069。依 PubMed 摘要：14 篇 1,499 人 3–4 個月低 0.29%；6 個月 5 篇 826 人低 0.02%；證據品質低；持續專業治療一句出自作者結論。"
+    },
+    {
+      "title": "Scientific evidence on the links between periodontal diseases and diabetes: Consensus report and guidelines of the joint workshop on periodontal diseases and diabetes by the International Diabetes Federation and the European Federation of Periodontology",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "2017-12-26",
+      "url": "https://doi.org/10.1111/jcpe.12808",
+      "note": "Sanz 等，J Clin Periodontol 2018;45(2):138-149，PMID 29280174。依摘要。"
+    },
+    {
+      "title": "About us",
+      "publisher": "Cochrane",
+      "date": "2026-11-11",
+      "url": "https://www.cochrane.org/about-us",
+      "note": "查閱日期。Cochrane 的性質、系統性回顧的做法與經費原則。"
+    },
+    {
+      "title": "Our story",
+      "publisher": "Cochrane",
+      "date": "2026-11-11",
+      "url": "https://www.cochrane.org/about-us/our-story",
+      "note": "查閱日期。1993 年在牛津成立。"
+    }
+  ]
+}
