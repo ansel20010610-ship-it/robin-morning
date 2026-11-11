@@ -2,13 +2,13 @@
   "column": "canon",
   "date": "2026-11-12",
   "title": "讓其他敵人站著等的那顆鍵",
-  "dek": "「先上一個，其他人等著。」任天堂的設計師在京都片場的古裝武打秀裡發現這條規矩，3D 遊戲的刀劍打鬥從此看得清楚。",
-  "brief": "1998 年的《薩爾達傳說：時之笛》給了 3D 遊戲一顆鎖定鍵：按住它，鏡頭和主角一起盯住一個敵人，別的敵人先不動手。點子來自設計師在京都片場看的古裝武打秀，一個英雄打二十個人，其實是一個一個上。任天堂上週四推出 Switch 2 重製版，介面關到最少，還留著鎖定的標示。",
+  "dek": "1998 年的《時之笛》讓玩家按下一顆鍵，鏡頭和主角一起盯住一個敵人；一個人打一群，在遊戲裡變成一連串的一對一。",
+  "brief": "1998 年的《薩爾達傳說：時之笛》讓玩家按下 Z 鍵，鏡頭和主角一起盯住一個敵人。更早的《古墓奇兵》只有自動瞄準，鏡頭不會跟著轉。設計師小泉歡晃說，京都片場的一場武打秀給了他線索。",
   "topic_key": "canon:zelda-ocarina-of-time",
   "form": "compare",
   "voice": "critic",
   "updated_at": "2026-11-12T02:51:00+08:00",
-  "spoiler": "本文談到《薩爾達傳說：時之笛》的結局。",
+  "spoiler": null,
   "disclaimer": null,
   "hero": {
     "id": "hero",
@@ -27,11 +27,76 @@
   "body": [
     {
       "type": "p",
-      "text": "**《薩爾達傳說：時之笛》**（The Legend of Zelda: Ocarina of Time）是經典，因為它替 3D 遊戲解決了一件最基本的事：在一個可以四面八方走動的空間裡，怎麼好好跟一個敵人打一架。在它之前，3D 遊戲裡想打眼前的敵人常常打不準，鏡頭也不一定跟得上。它讓玩家按住一顆鍵，鏡頭和主角就一起對準眼前那個敵人，其他敵人站在旁邊等著輪到。**後來的 3D 動作遊戲，一款接一款學走了這顆鎖定鍵。**"
+      "text": "**《薩爾達傳說：時之笛》**（The Legend of Zelda: Ocarina of Time）是經典，因為它讓 3D 遊戲有了一個好用的打架辦法：按下一顆鍵，鏡頭和主角就一起盯住一個敵人。一個人打一群，在遊戲裡變成一連串的一對一。在它之前，任天堂自己做《超級瑪利歐 64》時，就卡在怎麼打眼前的敵人。"
     },
     {
       "type": "p",
-      "text": "先交代它是什麼。《薩爾達傳說》是任天堂的遊戲系列，1986 年出第一代，主角是穿綠衣的少年林克，薩爾達其實是公主的名字。《時之笛》是這個系列第一次做成 3D，1998 年 11 月 21 日在日本上市，用的是任天堂 64，一台接電視玩的遊戲機。3D 遊戲的畫面像一台跟在主角背後的攝影機，人可以往前後左右走；之前的薩爾達都是平面的。上週四，也就是 11 月 5 日，任天堂在新遊戲機 Switch 2 推出了它的重製版。"
+      "text": "《薩爾達傳說》是任天堂的遊戲系列，主角是穿綠衣的少年林克；薩爾達是公主的名字。《時之笛》是這個系列第一次做成 3D，1998 年在日本上市，玩家用的是任天堂 64，一台接電視玩的遊戲機。"
+    },
+    {
+      "type": "p",
+      "text": "3D 就是畫面像有台攝影機跟在主角背後，人可以往前後左右走。以前的薩爾達都是平面的。上週四，任天堂在新遊戲機 Switch 2 推出了它的重製版。"
+    },
+    {
+      "type": "h",
+      "text": "對不齊的劍"
+    },
+    {
+      "type": "p",
+      "text": "任天堂 64 上市時，同時推出的《超級瑪利歐 64》讓瑪利歐第一次在 3D 裡跑跳。**小泉歡晃**做過那款瑪利歐，後來在《時之笛》負責鏡頭。他說，做瑪利歐時想打正前方的敵人很難，角色和敵人的方向總是對不齊。總導演大澤徹說，瑪利歐想讀一塊告示牌，有時也只會繞著牌子打轉。"
+    },
+    {
+      "type": "p",
+      "text": "初代《古墓奇兵》裡，女主角蘿拉靠近敵人會自動把槍口轉過去，可是鏡頭不跟著轉，遊戲網站 VGC 說玩家常對著畫面外的敵人開槍。所以鎖定不是《時之笛》第一個想到的。它多走的一步，是讓鏡頭、林克的身體和遠距攻擊，都跟著同一個目標。"
+    },
+    {
+      "type": "p",
+      "text": "系列的創作者宮本茂起先提過一個省事的辦法：乾脆不讓林克出現，用第一人稱走。小泉不肯，他做了林克，就要一直看得到。代價是鏡頭和戰鬥這兩件事變難了。2011 年任天堂社長岩田聰找當年的製作群聊天，說小泉是自己給自己套繩子。小泉說，為了解決，他們做了一堆新裝置，鎖定是其中之一。"
+    },
+    {
+      "type": "h",
+      "text": "京都片場的那個夏天"
+    },
+    {
+      "type": "p",
+      "text": "大澤記得，起點是他的一句提議：既然要做刀劍武打，那就去**東映太秦映畫村**。那是東映電影公司在京都的片場，一部分開放成樂園，遊客可以看古裝劇的布景和武打表演。上司同意了，三個人在很熱的夏天出發。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/130706_Toei_Kyoto_Studio_Park_Kyoto_Japan04s3.jpg/1280px-130706_Toei_Kyoto_Studio_Park_Kyoto_Japan04s3.jpg",
+      "width": 1280,
+      "height": 853,
+      "alt": "白牆前的沙地上，兩個穿和服、褲裙的男人各舉一把刀對峙，左邊的人雙手把刀舉過頭，右邊的人側身揮刀；右側牆邊站著幾名觀眾。",
+      "caption": "京都東映太秦映畫村的武打表演，2013 年 7 月。《時之笛》的設計師說，鎖定鍵的點子來自這座片場樂園的武打秀；照片不是他們看的那一場。",
+      "credit": "663highland，Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:130706_Toei_Kyoto_Studio_Park_Kyoto_Japan04s3.jpg",
+      "made": "2013"
+    },
+    {
+      "type": "p",
+      "text": "小泉說，他注意到的是片場固定上演的戲：一個英雄被二十個壞人圍住，最後全部打倒。他覺得不對勁，就盯著看。"
+    },
+    {
+      "type": "quote",
+      "text": "這是武打戲，有劇本，有安排。敵人不會一起上。先上一個，其他人等著。第一個倒下，下一個才補上，就這樣輪下去。",
+      "original": "It's a sword battle, so there's a script and a certain setup. The enemies don't all attack at once. First, one attacks while the others wait. When the first guy goes down, the next one steps in, and so on.",
+      "cite": "小泉歡晃，任天堂「社長提問」訪談《時之笛 3D》篇，2011 年"
+    },
+    {
+      "type": "p",
+      "text": "他那時正卡在一個問題：照一般的做法，敵人會一擁而上，畫面亂成一團。小泉說，鎖定就是標出其中一個對手，叫其他敵人等著；打倒這一個，再換下一個。森林神殿裡林克對兩具骷髏的那場戲，小泉說，沒去那趟片場就做不出來。"
+    },
+    {
+      "type": "p",
+      "text": "兩個人記得的不完全一樣。大澤說，他們熱得躲進一間小劇場，台上演忍者秀：忍者甩出鎖鐮，就是鐮刀接鐵鍊的武器，武士用手臂接住，鍊子拉直，忍者繞著他轉圈。大澤想到的是，鎖定時林克和敵人之間好像有條看不見的鍊子：搖桿往前推，慢慢逼近；往旁邊推，就繞著對手轉。"
+    },
+    {
+      "type": "p",
+      "text": "按下手把背面的 Z 鍵，一個黃色的游標套住敵人，畫面上下出現黑邊，鏡頭轉到林克肩後，一直對著那個敵人，林克的妖精同伴娜薇飛到敵人頭上。遠距的攻擊也會自動朝它飛。"
     },
     {
       "type": "table",
@@ -45,93 +110,32 @@
       "rows": [
         [
           "打眼前的敵人",
-          "《超級瑪利歐 64》裡方向對不齊，很難打中",
-          "按住 Z，林克一直面向敵人",
-          "許多新遊戲都有一顆鎖定鍵"
+          "《瑪利歐 64》：小泉說，方向總是對不齊",
+          "按下 Z，林克一直面向被鎖定的敵人",
+          "VGC 2026：到今天還有很多新遊戲附鎖定敵人的鍵"
         ],
         [
           "鏡頭",
-          "《古墓奇兵》自動瞄準，鏡頭卻不跟著轉",
-          "鏡頭轉到林克肩後，對著敵人",
-          "重製版介面關到最少，還留著鎖定標示"
+          "《古墓奇兵》：自動瞄準，鏡頭不跟著轉",
+          "鏡頭轉到林克肩後，對著被鎖定的敵人",
+          "GamesRadar 2010：《銀河戰士 Prime》到《碧血狂殺》都有"
         ],
         [
           "一打多",
-          "敵人一擁而上，亂成一團",
-          "一次鎖一個，其他敵人等著",
-          "被稱為現代動作遊戲的地基"
+          "小泉說：照一般做法，敵人會一擁而上",
+          "小泉說：標出一個對手，叫其他敵人等著",
+          "GamesRadar+ 2017 的評論者：它可以算是現代動作遊戲的地基"
         ]
       ],
-      "caption": "依任天堂 2011 年的製作群訪談、IGN 1998 年評測、VGC 與 GamesRadar+ 的評論整理。"
+      "caption": "依任天堂訪談、IGN、VGC 與 GamesRadar 的文章整理。"
     },
     {
       "type": "h",
-      "text": "對不齊的劍"
+      "text": "後來的遊戲"
     },
     {
       "type": "p",
-      "text": "任天堂 64 是 1996 年上市的，同時推出的《超級瑪利歐 64》，讓瑪利歐第一次在 3D 裡跑跳。**小泉歡晃**做過那款瑪利歐，後來在《時之笛》負責鏡頭設計，也親手做林克的模型。他說做瑪利歐時，想打正前方的敵人都很難，角色和敵人的方向總是對不齊。瑪利歐想走過去讀一塊告示牌，也常常只能繞著牌子打轉。"
-    },
-    {
-      "type": "p",
-      "text": "最省事的解法其實擺在桌上。系列的創作者宮本茂一開始就問，要不要乾脆讓林克不出現，用第一人稱走，遇到敵人再切換畫面。小泉不肯，他做了林克，就要一直看得到林克。代價是鏡頭和戰鬥這兩件在第一人稱裡很簡單的事，全都變難了。2011 年任天堂社長岩田聰找當年的製作群聊天，聽到這裡笑他自找麻煩。這個麻煩找得對，鎖定鍵就是為了收拾它才做出來的。"
-    },
-    {
-      "type": "h",
-      "text": "京都片場的那個夏天"
-    },
-    {
-      "type": "p",
-      "text": "總導演大澤徹記得的起點是一句提議：既然要做刀劍武打，那就去**東映太秦映畫村**。那是東映電影公司在京都的片場，一部分開放成樂園，遊客可以逛古裝劇的布景、看武打表演。上司同意了，三個人在一個很熱的夏天出發。熱到受不了，他們躲進一間小劇場乘涼，台上剛好在演忍者秀。"
-    },
-    {
-      "type": "figure",
-      "id": "f1",
-      "kind": "photo",
-      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/130706_Toei_Kyoto_Studio_Park_Kyoto_Japan04s3.jpg/1280px-130706_Toei_Kyoto_Studio_Park_Kyoto_Japan04s3.jpg",
-      "width": 1280,
-      "height": 853,
-      "alt": "白牆前的沙地上，兩個穿和服、褲裙的男人各舉一把刀對峙，左邊的人雙手把刀舉過頭，右邊的人側身揮刀；右側牆邊站著幾名觀眾。",
-      "caption": "京都東映太秦映畫村的武打表演，2013 年 7 月。《時之笛》的設計師在這座片場樂園看武打秀，想出了鎖定鍵；照片不是他們看的那一場。",
-      "credit": "663highland，Wikimedia Commons",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source_url": "https://commons.wikimedia.org/wiki/File:130706_Toei_Kyoto_Studio_Park_Kyoto_Japan04s3.jpg",
-      "made": "2013"
-    },
-    {
-      "type": "p",
-      "text": "小泉注意到的是片場固定上演的另一種戲：一個英雄被二十個壞人圍住，最後全部打倒。他覺得不對勁，一個人被二十個人圍，不可能贏，就盯著看，看出了門道。"
-    },
-    {
-      "type": "quote",
-      "text": "這是武打戲，有劇本，有安排。敵人不會一起上。先上一個，其他人等著。第一個倒下，下一個才補上，就這樣輪下去。",
-      "original": "It's a sword battle, so there's a script and a certain setup. The enemies don't all attack at once. First, one attacks while the others wait. When the first guy goes down, the next one steps in, and so on.",
-      "cite": "小泉歡晃，任天堂「社長提問」訪談《時之笛 3D》篇，2011 年"
-    },
-    {
-      "type": "p",
-      "text": "他那時正卡在一個問題：照一般的做法，敵人會一擁而上，畫面亂成一團。片場的規矩給了答案。按下鎖定，就是告訴其中一個敵人「輪到你」，其他敵人先等著；打倒這一個，再把鎖定換到下一個。一個人打一群，變成一連串的一對一。森林神殿裡有一場戲，林克同時面對兩具拿劍的骷髏，小泉說，沒去那趟片場，這場就做不出來。"
-    },
-    {
-      "type": "p",
-      "text": "同一場秀，大澤看的是忍者甩出的鎖鐮，就是鐮刀接一條鐵鍊的那種武器。主角用手臂接住，鍊子拉直，忍者繞著他轉圈。大澤把這條鍊子搬進遊戲：鎖定的時候，林克和敵人之間好像有一條看不見的鍊子，手把上的小搖桿往前推，慢慢逼近；往旁邊推，就繞著對手轉，繞到背後找破綻。"
-    },
-    {
-      "type": "p",
-      "text": "玩起來是這樣的：扣下手把背面的 Z 鍵，一個黃色的游標套住敵人，畫面上下出現兩條黑邊，鏡頭轉到林克肩後，一直對著那個敵人。遠距的攻擊也會自動朝它飛。玩家只剩兩件事要想，往哪裡繞、什麼時候砍。美國遊戲網站 IGN 1998 年的評測說，習慣之後，走動和打怪都成了本能。"
-    },
-    {
-      "type": "p",
-      "text": "宮本沒去那趟片場，他的點子在別處。某個休假日，他想到讓林克自動跳，週一早上宣布要拿掉跳躍鍵，一群做瑪利歐的人的反應是「什麼？」。從此跳不跳、怎麼跳，由遊戲看前方的地形決定，連跳下瀑布時頭朝下的姿勢都能事先排好。"
-    },
-    {
-      "type": "h",
-      "text": "後來的遊戲把它學走了"
-    },
-    {
-      "type": "p",
-      "text": "當年就有人看出來了。日本的電玩週刊《Fami 通》四位評審都給它 10 分，拿到滿分。IGN 也給了 10 分，評測寫到 Z 鍵時說："
+      "text": "當年就有人看出來了。日本的電玩週刊《Fami 通》四位評審都給 10 分，是滿分。美國遊戲網站 IGN 也給 10 分，評測寫到 Z 鍵時說："
     },
     {
       "type": "quote",
@@ -141,41 +145,31 @@
     },
     {
       "type": "p",
-      "text": "這個預言應驗了。英國遊戲新聞網站 VGC 在重製版上市當天寫，到今天還有那麼多新遊戲附一顆鎖定敵人的鍵，就說明了這項發明多重要。當過任天堂官方雜誌資深編輯的評論者說，光憑鎖定系統，《時之笛》就可以算是現代動作遊戲的地基。做《黑暗靈魂》系列的日本導演宮崎英高，被問到自己的遊戲為什麼像薩爾達時說，薩爾達成了 3D 動作遊戲的一種教科書。"
+      "text": "沒有哪位開發者白紙黑字說自己抄了這顆鍵，可是幾種說法指向同一邊。做《黑暗靈魂》的宮崎英高，被拿來和薩爾達比時說，如果有相似，多半是因為薩爾達成了 3D 動作遊戲的一種教科書。這是 Siliconera 轉引《滾石》雜誌的訪談，他講的是整個薩爾達系列，不是只講鎖定。"
     },
     {
       "type": "p",
-      "text": "公平地說，鎖定不是它第一個想到的。初代《古墓奇兵》裡，女主角蘿拉就會自動把槍對準靠近的敵人，可是鏡頭不跟著轉，玩家常常對著畫面外看不見的敵人開槍。《時之笛》多走的那一步，是讓鏡頭、主角的身體、敵人出手的順序，全部替同一場一對一服務。我認為後來的遊戲照抄的是這一整套，不只是自動瞄準。"
+      "text": "2023 年，Epic 一位前技術設計師說，她想在《LEGO Fortnite》加目標鎖定，公司嫌太「硬派」不讓加；她說，Z 鎖定當年是任天堂為了沒玩過 3D 遊戲的人發明的。這是 GoNintendo 轉述的翻譯。GamesRadar 2010 年的專題則說，後來從《銀河戰士 Prime》（Metroid Prime）到《碧血狂殺》，都讓玩家選一個敵人當焦點。"
     },
     {
       "type": "h",
-      "text": "卡在水之神殿的人"
+      "text": "今天還好用，也有它的限制"
     },
     {
       "type": "p",
-      "text": "老的地方也有。遊戲裡的水之神殿，玩過的人都會提。當年設計了六座迷宮的青沼英二，後來成了這個系列的製作人，2011 年替掌上遊戲機 3DS 做重製版，第一個想修的就是這裡：玩家點一下觸控螢幕，林克就能一瞬間穿上或脫下那雙鐵靴。"
-    },
-    {
-      "type": "quote",
-      "text": "最難受的，是想到可能有多少人在那裡放棄了。",
-      "original": "The worst thing was thinking about how many people may have given up there.",
-      "cite": "青沼英二，任天堂「社長提問」訪談《時之笛 3D》篇，2011 年"
+      "text": "任天堂替這次重製版做的訪談裡，系列製作人青沼英二說，任天堂 64 的手把只有一根搖桿，沒辦法像現在的手把那樣自由轉鏡頭，所以才有用 Z 鍵把鏡頭鎖在敵人身上的辦法。鎖定的好處是打架時不用管鏡頭，操作也簡單。"
     },
     {
       "type": "p",
-      "text": "1998 年的 IGN 也挑過畫面偶爾變慢、有些材質模糊。這些是那台機器的極限，老了很正常。鎖定鍵沒有老。今年的重製版可以把血量、地圖都從畫面上關掉，唯一留下的介面是鎖定敵人的標示；連那個也關掉，還有林克的妖精娜薇飛到敵人頭上。"
-    },
-    {
-      "type": "spoiler",
-      "text": "以下談到《時之笛》的結局。"
+      "text": "同一篇訪談裡，另一位製作人說，鎖定在後來的 3D 薩爾達裡大致沒變，到今天還有效。重製版可以把血量、地圖都關掉，唯一留下的介面是鎖定標示；最難的模式連那個也關掉，還有娜薇飛到敵人頭上。"
     },
     {
       "type": "p",
-      "text": "遊戲最後，林克打倒魔王，公主薩爾達用時之笛把他送回童年。那隻一路飛到每個敵人頭上替他指路的妖精娜薇，在這時離開了他。少年林克又走進城堡的庭院，再一次見到小時候的薩爾達。"
+      "text": "它也有自己的限制。IGN 1998 年寫的是，鎖上之後，要再按一次 Z 或轉身走開才會解開；另有替代設定，要一直按住 Z 才維持鎖定，但手指大概會累。更大的變化在手把：GamesRadar 2010 年說，有了雙搖桿，連自己對準敵人都容易多了。"
     },
     {
       "type": "p",
-      "text": "所以《時之笛》留下來，是因為它回答了 3D 遊戲繞不開的一題：一個人在立體空間裡打一群敵人，要怎麼讓玩家看得清楚、打得到。它的答案取自京都片場一齣武打秀的老規矩，一次只讓一個敵人上前，鏡頭和主角都對著它。在它之前，3D 遊戲裡的攻擊常常對不準；在它之後，動作遊戲換過好幾代主機，那顆鎖定鍵一直都在。"
+      "text": "《時之笛》留下來，是因為它替 3D 打鬥找到一個答案。在它之前，瑪利歐 64 的方向對不齊，古墓奇兵的鏡頭跟不上。它取了京都片場的一個老規矩，**讓鏡頭、林克和攻擊都跟著同一個目標，一個人打一群，就拆成一連串的一對一**。在它之後，IGN 預言這顆鍵會出現在未來的 3D 遊戲裡；二十八年後的新遊戲，還在附這樣一顆鍵。"
     },
     {
       "type": "facts",
@@ -223,25 +217,11 @@
       "note": "1998 年 11 月日本首發；五位導演、大澤是總導演；小泉負責 3D 環境、鏡頭設計、林克；青沼設計六座前中期迷宮；註 3：瑪利歐 64 1996 年 6 月與主機同時在日本發售"
     },
     {
-      "title": "Iwata Asks: The Legend of Zelda: Ocarina of Time 3D — Vol. 5: Mr Shigeru Miyamoto, 5. A Sword & Sorcery Tale Admired Worldwide",
-      "publisher": "Nintendo（英國站）",
-      "date": "2011",
-      "url": "https://www.nintendo.com/en-gb/Iwata-Asks/Iwata-Asks-The-Legend-of-Zelda-Ocarina-of-Time-3D/Vol-5-Mr-Shigeru-Miyamoto/5-A-Sword-Sorcery-Tale-Admired-Worldwide/5-A-Sword-Sorcery-Tale-Admired-Worldwide-224778.html",
-      "note": "岩田 11 月 21 日帶零售版回家；宮本休假日想到自動跳躍、週一宣布、「Everyone's response was, \"What?!\"」、做瑪利歐的團隊放棄跳躍鍵、依地形決定跳法（瀑布頭朝下跳水）；宮本「I didn't go though」；看時代劇做劍與魔法、武士刀雙手握而林克單手；「A lot of people around the world think Zelda is that guy in the green outfit!」"
-    },
-    {
-      "title": "Iwata Asks: The Legend of Zelda: Ocarina of Time 3D — Vol. 4: Development Staff, 3. \"I've Got to Fix the Water Temple!\"",
-      "publisher": "Nintendo（英國站）",
-      "date": "2011",
-      "url": "https://www.nintendo.com/en-gb/Iwata-Asks/Iwata-Asks-The-Legend-of-Zelda-Ocarina-of-Time-3D/Vol-4-Development-Staff/3-I-ve-Got-to-Fix-the-Water-Temple-/3-I-ve-Got-to-Fix-the-Water-Temple--235888.html",
-      "note": "青沼做 3DS 版的動機是水之神殿；引文原句；岩田「like a bone caught in your throat for 13 years」；3DS 版讓林克「put on and take off his Iron Boots in a flash」。原版穿脫鐵靴要進選單，是從這段推得的"
-    },
-    {
       "title": "Legend of Zelda: Ocarina of Time review",
       "publisher": "IGN（Peer Schneider）",
       "date": "1998-11-26",
       "url": "https://www.ign.com/articles/1998/11/26/the-legend-of-zelda-ocarina-of-time-review",
-      "note": "Z 鍵：黃色游標鎖住目標、鏡頭停在肩後、繞圈側跳、黑邊、娜薇在目標頭上；引文原句；「navigating the environments and fighting against enemies becomes second nature」；「Many of the problems that plagued Mario 64 in the camera and control department are a thing of the past」；「a little slowdown and a few blurry textures here and there」；滿分 10 分見維基百科資訊框"
+      "note": "Z 鍵（press the Z trigger，按一下鎖定；再按一次或轉身解除；另有替代設定 hold down the Z button 才維持鎖定，「your fingers will probably get tired」）：黃色游標鎖住目標、鏡頭停在肩後、繞圈側跳、黑邊、娜薇在目標頭上；引文原句；「navigating the environments and fighting against enemies becomes second nature」；「Many of the problems that plagued Mario 64 in the camera and control department are a thing of the past」；「a little slowdown and a few blurry textures here and there」；滿分 10 分見維基百科資訊框"
     },
     {
       "title": "Zelda Receives Highest Ever Famitsu Score",
@@ -276,7 +256,7 @@
       "publisher": "Siliconera",
       "date": "2016-10-05",
       "url": "https://www.siliconera.com/dark-souls-creator-discusses-difference-similarities-legend-zelda/",
-      "note": "轉引 Rolling Stone 訪談（原頁 https://www.rollingstone.com/culture/news/dark-souls-creator-miyazaki-on-zelda-sequels-w443435 讀不到）：「If there are similarities, they probably stem from the fact that The Legend of Zelda became a sort of textbook for 3D action games.」講的是整個系列"
+      "note": "轉引 Rolling Stone 訪談（原頁讀不到）：「If there are similarities, they probably stem from the fact that The Legend of Zelda became a sort of textbook for 3D action games.」被拿來和薩爾達比時的回答；講的是整個系列，同篇另有「different games belonging to different genres」"
     },
     {
       "title": "The Legend of Zelda: Ocarina of Time Remake Launches This November",
@@ -290,7 +270,7 @@
       "publisher": "英文維基百科",
       "date": "2026-11-12",
       "url": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Ocarina_of_Time",
-      "note": "Z-targeting：鏡頭跟著目標、林克一直面向目標、遠距攻擊自動對準；IGN 評測 10/10（資訊框）；劇情結尾：薩爾達用時之笛把林克送回童年、娜薇離開、少年林克在城堡庭院再見少女薩爾達。查閱日 2026-11-12"
+      "note": "Z-targeting：鏡頭跟著目標、林克一直面向目標、遠距攻擊自動對準。查閱日 2026-11-12"
     },
     {
       "title": "What Makes Ocarina Of Time Great, 20 Years Later",
@@ -298,6 +278,27 @@
       "date": "2018-11-21",
       "url": "https://kotaku.com/what-makes-ocarina-of-time-great-20-years-later-1830596483",
       "note": "1998 年 11 月 21 日日本發售，美國幾天後"
+    },
+    {
+      "title": "Ask the Developer Vol. 24, The Legend of Zelda: Ocarina of Time — Chapter 1: A turning point for the series",
+      "publisher": "Nintendo（英國站）",
+      "date": "2026-11",
+      "url": "https://www.nintendo.com/en-gb/News/2026/November/Ask-the-Developer-Vol-24-The-Legend-of-Zelda-Ocarina-of-Time-Chapter-1-3230318.html",
+      "note": "青沼：N64 手把只有一根搖桿、不能像現在自由控鏡頭，宮本與小泉等人想出用 Z 鍵把鏡頭鎖在敵人身上的玩法；註 5：鎖定讓人不用注意鏡頭、只用簡單操作；另一位製作人（藤林）：Z-targeting 在後來的 3D 薩爾達裡「largely unchanged」「still effective today」。頁面只標 11 月，未標日"
+    },
+    {
+      "title": "Zelda-style Z-Targeting was deemed 'too hardcore' for LEGO Fortnite",
+      "publisher": "GoNintendo",
+      "date": "2023-12-11",
+      "url": "https://gonintendo.com/contents/29763-zelda-style-z-targeting-was-deemed-too-hardcore-for-lego-fortnite",
+      "note": "Epic 前資深技術設計師 Cristina Ramos 的貼文（經 Nintenduo 翻譯、GoNintendo 轉述；原推文讀不到）：想加 target lock 被認為「too hardcore」，「z-targeting was invented by Nintendo for people who had never played a 3d game before」"
+    },
+    {
+      "title": "Gaming's most important evolutions（第 7 頁：Lock-on targeting）",
+      "publisher": "GamesRadar",
+      "date": "2010-10-09",
+      "url": "https://gamesradar.com/gamings-most-important-evolutions/7",
+      "note": "35 項改變互動娛樂的演進之一；「Lock-on targeting … has been used in countless games since. Everything from FPSes (Metroid Prime, Red Steel 2) to third-person shooters (Crackdown, Red Dead Redemption) let players select an enemy as their focal point」；「with modern dual-stick controls, even that once-painful endeavor has become immensely easier」。作者署名 GamesRadar_US"
     }
   ]
 }
