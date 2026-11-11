@@ -30,6 +30,12 @@
    "usd": 4.1,
    "status": "success",
    "note": "the run left no cost file and was booked at its 12 USD budget; 4.10 is the drop in the Console balance over the run (194.65 to 190.55)"
+  },
+  {
+   "at": "2026-11-12T05:32+08:00",
+   "shift": "concerts",
+   "usd": 0.361,
+   "status": "success"
   }
  ]
 }
