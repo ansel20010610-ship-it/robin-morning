@@ -1651,7 +1651,7 @@ export function renderNestSettings(el, api, afterSync = false) {
     const cur = nest(), v = el.querySelector("[data-me-name]").value.trim().slice(0, 12);
     if (!cur || !v) { toast("名字不能空白"); return; }
     cur.name = v; cur.members[cur.me] = v; save(cur); toast("記住了");
-    el.querySelector("[data-me-name]").defaultValue = v; // saved: no longer a field with something unsaved in it (busy)
+    const f = el.querySelector("[data-me-name]"); f.defaultValue = v; f.blur(); // saved: no longer a field with something unsaved in it, nor the one with the cursor (busy) — the page may be drawn again with the new name
     syncNest(api).then(() => { if (el.isConnected && location.hash === "#/nest/settings" && !busy()) renderNestSettings(el, api, true); });
   };
   wireJoin(true);

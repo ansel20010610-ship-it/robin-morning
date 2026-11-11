@@ -85,9 +85,12 @@ async function trim(c, max, bytes) {
   // entry's size), the oldest dropped first until it fits.
   if (!bytes) return;
   const rest = await c.keys();
-  // every twentieth addition, by a count of its own: the cache's size stands at the 400-entry limit once it is full —
-  // a multiple of twenty — and by that test every picture added read all four hundred entries again (audit 2026-11-11)
-  if (rest.length < 100 || ++adds % 20) return;
+  // Every twentieth addition while the cache grows (by its size, which outlives this worker). Once it stands at the
+  // entry limit its size no longer moves — a multiple of twenty, so every picture added read all four hundred entries
+  // again (audit 2026-11-11): there the count is this worker's own, the first addition after it wakes and every
+  // twentieth after (iOS stops an idle worker within seconds, so a count from zero alone would seldom reach twenty).
+  adds += 1;
+  if (rest.length < 100 || (rest.length < max ? rest.length % 20 : adds % 20 !== 1)) return;
   let total = 0;
   const sizes = [];
   for (const k of rest) {
