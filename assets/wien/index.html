@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>維也納地圖首頁・原型</title>
+<link rel="icon" href="../robin.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif+TC:wght@400;600;700&display=swap">
+<!--
+  PROTOTYPE (2026-11-11): the front page as a walk through a 3D model of Vienna's inner city. Not linked from the app.
+  One file on purpose: sw.js answers everything under assets/ cache-first and keeps it until the next shell change, so
+  the page keeps its code inline (a navigation goes to the network) and the model carries its version in its name.
+  Model: scripts/wien/build.py from Stadt Wien open data (Baukörpermodell LOD1.4, CC BY 4.0) — flat-topped prisms, no roof shapes.
+-->
+<style>
+:root {
+  --paper: #F5F0E6; --paper-2: #EDE5D5; --ink: #1F1B16; --ink-2: #4A433A; --muted: #6F665A; --rule: #CBB98F;
+  --gold: #A5843F; --gold-ink: #7C642F; --foil: #D29F2E; --foil-hi: #F6D06A;
+  --serif: "Noto Serif TC", "Songti TC", "Source Han Serif TC", "PMingLiU", serif;
+  --latin: "Cormorant Garamond", "Cormorant", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Helvetica Neue", sans-serif;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --paper: #15120E; --paper-2: #201B14; --ink: #EDE4D3; --ink-2: #CDC2AF; --muted: #998F7E; --rule: #564A33;
+  --gold: #CDAE68; --gold-ink: #CDAE68; --foil: #E3B957; --foil-hi: #FFF0BF;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); overscroll-behavior-y: none; -webkit-tap-highlight-color: transparent; }
+#track { width: 1px; }
+/* the largest viewport: Safari's address bar sliding away must not resize the drawing */
+#stage { position: fixed; left: 0; top: 0; width: 100%; height: 100vh; height: 100lvh; overflow: hidden; }
+#gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+/* the page's edges fall back into paper, so the map sits on the sheet like an engraving */
+#stage::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to bottom, var(--paper) 0, transparent 13%, transparent 78%, color-mix(in srgb, var(--paper) 55%, transparent) 100%); }
+
+.top { position: fixed; left: 0; right: 0; top: 0; z-index: 3; padding: calc(env(safe-area-inset-top) + 10px) 18px 0; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; pointer-events: none; }
+.top .name { font-weight: 700; font-size: 17px; letter-spacing: .12em; white-space: nowrap; }
+.top .sub { font-family: var(--latin); font-style: italic; font-size: 15px; color: var(--gold-ink); white-space: nowrap; }
+.top a { pointer-events: auto; font-family: var(--sans); font-size: 12px; letter-spacing: .1em; color: var(--gold-ink); text-decoration: none; border: 1px solid var(--rule); padding: 5px 10px; border-radius: 99px; background: color-mix(in srgb, var(--paper) 80%, transparent); white-space: nowrap; }
+
+.intro, .outro { position: fixed; left: 0; right: 0; z-index: 2; text-align: center; padding: 0 24px; pointer-events: none; will-change: opacity, transform; }
+.intro { top: 15%; }
+.outro { bottom: calc(env(safe-area-inset-bottom) + 12%); opacity: 0; }
+.intro h1, .outro h1 { margin: 0; font-size: 44px; font-weight: 700; letter-spacing: .3em; text-indent: .3em; white-space: nowrap; }
+.intro .de { font-family: var(--latin); font-style: italic; font-size: 24px; color: var(--gold-ink); margin-top: 2px; white-space: nowrap; }
+.intro .hint { margin-top: 18px; font-family: var(--sans); font-size: 13px; letter-spacing: .14em; color: var(--muted); }
+.intro .hint b { display: block; font-weight: 400; font-size: 18px; color: var(--gold); margin-top: 6px; animation: nudge 1.8s ease-in-out infinite; }
+@keyframes nudge { 50% { transform: translateY(-6px); } }
+.outro h1 { font-size: 30px; }
+.outro a { pointer-events: auto; display: inline-block; margin-top: 14px; font-family: var(--sans); font-size: 14px; letter-spacing: .1em; color: #1a150d; background: linear-gradient(100deg, var(--foil), var(--foil-hi) 50%, var(--foil)); padding: 10px 18px; border-radius: 99px; text-decoration: none; }
+
+/* 刊別的欄位: one card per stop, all stacked in the same place; the script moves them by opacity and transform only */
+.cards { position: fixed; left: 0; right: 0; bottom: 0; z-index: 2; padding: 0 14px calc(env(safe-area-inset-bottom) + 16px); pointer-events: none; }
+.card { position: absolute; left: 14px; right: 14px; bottom: calc(env(safe-area-inset-bottom) + 16px); max-width: 34rem; margin: 0 auto; background: color-mix(in srgb, var(--paper) 93%, transparent);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--rule); border-radius: 4px; padding: 15px 17px 14px; opacity: 0; will-change: opacity, transform;
+  box-shadow: 0 1px 0 rgba(60,45,20,.06), 0 14px 34px -18px rgba(40,30,10,.55); text-decoration: none; color: inherit; display: block; overflow: hidden; }
+.card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--foil) 20%, var(--foil-hi) 50%, var(--foil) 80%, transparent); background-size: 200% 100%; animation: sweep 3.2s linear infinite; }
+@keyframes sweep { to { background-position: -200% 0; } }
+.card .place { display: flex; align-items: baseline; gap: 8px; font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; white-space: nowrap; }
+.card .place i { font-family: var(--latin); font-style: italic; font-weight: 500; font-size: 15px; letter-spacing: .02em; }
+.card .col { margin-top: 7px; font-size: 13px; color: var(--muted); letter-spacing: .06em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card h2 { margin: 5px 0 6px; font-size: 20px; line-height: 1.38; font-weight: 700; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card p { margin: 0; font-size: 15px; line-height: 1.7; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.card .go { margin-top: 10px; display: flex; justify-content: space-between; align-items: baseline; font-family: var(--sans); font-size: 12px; letter-spacing: .12em; color: var(--gold-ink); }
+.card .go b { font-weight: 600; }
+.card.none h2 { color: var(--muted); font-weight: 400; font-size: 17px; }
+
+/* the stops on the overview, and the dots to jump with */
+.pin { position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none; opacity: 0; will-change: opacity, transform; font-family: var(--sans); font-size: 11px; letter-spacing: .1em; color: var(--ink); white-space: nowrap; }
+.pin span { display: block; transform: translate(-50%, -100%); padding: 3px 8px 4px; background: color-mix(in srgb, var(--paper) 88%, transparent); border: 1px solid var(--gold); border-radius: 99px; }
+.pin span::after { content: ""; position: absolute; left: 50%; top: 100%; width: 1px; height: 14px; background: var(--gold); }
+.dots { position: fixed; right: 8px; top: 50%; z-index: 3; transform: translateY(-50%); display: flex; flex-direction: column; gap: 4px; }
+.dots button { all: unset; width: 26px; height: 26px; display: grid; place-items: center; cursor: pointer; }
+.dots button i { width: 7px; height: 7px; transform: rotate(45deg); border: 1px solid var(--gold); background: var(--paper); transition: background .25s, transform .25s; }
+.dots button.on i { background: var(--foil); transform: rotate(45deg) scale(1.35); }
+.dots button.done i { background: var(--gold); }
+
+.tools { position: fixed; left: 10px; top: calc(env(safe-area-inset-top) + 44px); z-index: 3; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; font-family: var(--sans); font-size: 11px; }
+.tools .row { display: flex; gap: 6px; }
+.tools button { all: unset; cursor: pointer; padding: 5px 9px; border: 1px solid var(--rule); border-radius: 99px; color: var(--gold-ink); background: color-mix(in srgb, var(--paper) 80%, transparent); letter-spacing: .08em; }
+#meter { font: 11px/1.5 ui-monospace, Menlo, monospace; color: var(--ink-2); background: color-mix(in srgb, var(--paper) 86%, transparent); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 8px; white-space: pre; }
+.credit { position: fixed; left: 0; right: 0; bottom: calc(env(safe-area-inset-bottom) + 2px); z-index: 1; text-align: center; font-family: var(--sans); font-size: 9px; letter-spacing: .06em; color: var(--muted); pointer-events: none; }
+.wait { position: fixed; inset: 0; z-index: 5; display: grid; place-items: center; text-align: center; background: var(--paper); font-size: 16px; color: var(--muted); letter-spacing: .1em; transition: opacity .6s; padding: 24px; line-height: 2; }
+.wait a { color: var(--gold-ink); }
+.wait.gone { opacity: 0; pointer-events: none; }
+/* when the drawing rests, so do these: nothing on the page repaints until the next touch */
+body.rest .intro .hint b, body.rest .card::before { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .intro .hint b, .card::before { animation: none; } }
+</style>
+<script>
+try { var t = localStorage.getItem("rm.theme"); document.documentElement.dataset.theme = t === "light" || t === "dark" ? t : matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } catch (e) { document.documentElement.dataset.theme = "light"; }
+</script>
+</head>
+<body>
+<div id="track"></div>
+<div id="stage"><canvas id="gl"></canvas></div>
+<header class="top"><div><span class="name">知更鳥晨間記事</span></div><span class="sub" id="date"></span><a href="../../">清單版</a></header>
+<section class="intro" id="intro"><h1>維也納</h1><div class="de">Wien, Innere Stadt</div><div class="hint">往上滑，沿著金線走進今天的報紙<b>︿</b></div></section>
+<section class="outro" id="outro"><h1>走完一圈了</h1><a href="../../">回到清單版</a></section>
+<div id="pins"></div>
+<div class="cards" id="cards"></div>
+<nav class="dots" id="dots" aria-label="站點"></nav>
+<div class="tools"><div class="row"><button type="button" id="b-night">日／夜</button><button type="button" id="b-dpr">畫質</button><button type="button" id="b-meter">數字</button></div><div id="meter"></div></div>
+<div class="credit">原型・建築資料 Datenquelle: Stadt Wien – data.wien.gv.at (CC BY 4.0)</div>
+<div class="wait" id="wait">正在攤開維也納……</div>
+
+<script>
+"use strict";
+const MODEL = "stadt-1.bin";
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const smooth = (t) => { t = clamp(t); return t * t * (3 - 2 * t); };
+const mix = (a, b, t) => a + (b - a) * t;
+const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// ---------- shaders ----------
+const VS = `#version 300 es
+layout(location=0) in vec3 aPos; layout(location=1) in float aTop; layout(location=2) in vec4 aK; layout(location=3) in float aS;
+uniform mat4 uPV;
+out vec3 vW; out float vTop; flat out vec4 vK; flat out float vS;
+void main() { vW = aPos * 0.1; vTop = aTop * 0.1; vK = aK; vS = aS; gl_Position = uPV * vec4(vW, 1.0); }`;
+
+const FS = `#version 300 es
+precision highp float;
+in vec3 vW; in float vTop; flat in vec4 vK; flat in float vS;
+uniform vec3 uEye; uniform vec2 uHead, uHalf; uniform float uProg, uTime, uNight, uStop, uStopW, uFog0, uFog1, uGlow;
+out vec4 o;
+float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+void main() {
+  float kind = vK.x, seed = vK.z / 255.0;
+  vec3 n = normalize(cross(dFdx(vW), dFdy(vW)));
+  vec3 toEye = uEye - vW; float dist = length(toEye);
+  if (dot(n, toEye) < 0.0) n = -n;
+  float night = uNight;
+  vec3 paper = mix(vec3(.961, .941, .902), vec3(.082, .071, .055), night);
+  vec3 foil = mix(vec3(.824, .624, .180), vec3(.890, .725, .341), night), foilHi = mix(vec3(.965, .816, .416), vec3(1., .941, .749), night);
+  vec3 col; float gold = 0.0;
+  // light pooling on the ground and the fronts round the head of the gold line
+  float dh = distance(vW.xy, uHead);
+  float pool = exp(-dh * dh / 9000.0) * uGlow;
+  if (kind > 2.5) {            // ground
+    col = mix(vec3(.905, .870, .790), vec3(.105, .090, .068), night);
+    gold = pool * .36;
+  } else if (kind > 1.5) {     // parks
+    col = mix(vec3(.780, .805, .665), vec3(.105, .135, .092), night);
+    gold = pool * .3;
+  } else if (kind > 0.5) {     // water
+    float rip = .5 + .5 * sin(vW.x * .11 + vW.y * .07 + uTime * .6);
+    col = mix(vec3(.690, .755, .770), vec3(.075, .118, .155), night) + rip * .018;
+  } else {
+    float roof = step(.6, n.z);
+    vec3 sun = normalize(vec3(-.42, -.58, .70));
+    float lam = clamp(dot(n, sun) * .5 + .5, 0., 1.);
+    vec3 wall = mix(mix(vec3(.800, .750, .650), vec3(.975, .945, .880), lam), mix(vec3(.105, .090, .068), vec3(.190, .162, .120), lam), night);
+    wall *= mix(.80, 1.0, smoothstep(0., 16., vW.z));                    // the street's own shade
+    float high = clamp(vTop / 48., 0., 1.);
+    vec3 top = mix(mix(vec3(.700, .640, .540), vec3(.820, .770, .670), high), mix(vec3(.060, .052, .040), vec3(.118, .100, .074), high), night);
+    top *= .96 + .08 * seed;
+    col = mix(wall, top, roof);
+    float detail = (1. - smoothstep(260., 1100., dist)) * (1. - roof);
+    vec2 t2 = normalize(vec2(-n.y, n.x) + 1e-5);
+    float along = dot(vW.xy, t2);
+    // window rhythm: 2.7 m bays, 3.5 m storeys, drawn as engraved marks by day and lit panes by night
+    vec2 cell = vec2(along / 2.7, vW.z / 3.5); vec2 f = fract(cell), id = floor(cell);
+    float win = step(.30, f.x) * step(f.x, .70) * step(.26, f.y) * step(f.y, .80) * step(3.0, vW.z) * step(vW.z, vTop - 1.6);
+    float lit = step(.74, hash(id + seed * 31.)) * night;
+    col = mix(col, mix(col * .70, vec3(.96, .76, .36), lit), win * detail * mix(.55, .9, lit));
+    float cornice = (1. - smoothstep(.5, 1.5, vTop - vW.z)) * (1. - roof);
+    col = mix(col, col * mix(.62, 1.5, night), cornice * .55 * detail);
+    // 流金: fronts along the route turn to gold leaf as the line passes them; the brightest stretch is at its head
+    float on = step(vS, 64999.);
+    float passed = on * (1. - smoothstep(uProg - 30., uProg + 12., vS));
+    float head = on * exp(-pow((vS - uProg) / 110., 2.)) * uGlow;
+    float band = smoothstep(.80, 1., sin((vW.x + vW.y) * .035 + vW.z * .09 - uTime * 1.7 + seed * 4.) * .5 + .5);
+    gold = max(passed * (cornice * .95 + roof * .10 + .07), head * (.34 + .5 * band + cornice * .4)) + pool * (1. - roof) * .2;
+    // the stop's own building: gilded whole while its card is up
+    float mine = step(abs(vK.y - uStop), .5) * step(.5, vK.y) * uStopW;
+    float sweep = smoothstep(.55, 1., sin(vW.z * .07 + (vW.x - vW.y) * .02 - uTime * 1.3) * .5 + .5);
+    gold = max(gold, mine * (.52 + .4 * sweep + cornice * .3) * mix(1., .8, roof));
+    foil = mix(foil, foilHi, clamp(band * .7 + sweep * mine, 0., 1.));
+    foil *= mix(.82, 1.08, lam);
+  }
+  col = mix(col, foil, clamp(gold, 0., 1.));
+  // the sheet's edge and the far distance go back to paper
+  vec2 e = abs(vW.xy) / uHalf; float edge = smoothstep(.72, .98, max(e.x, e.y));
+  float fog = max(edge, smoothstep(uFog0, uFog1, dist));
+  o = vec4(mix(col, paper, fog), 1.0);
+}`;
+
+const RVS = `#version 300 es
+layout(location=0) in vec2 aP; layout(location=1) in vec2 aN; layout(location=2) in float aSide; layout(location=3) in float aS;
+uniform mat4 uPV; uniform float uWidth;
+out float vS; out float vSide; out vec2 vP;
+void main() { vec2 p = aP + aN * aSide * uWidth * .5; vS = aS; vSide = aSide; vP = p; gl_Position = uPV * vec4(p, 0.6, 1.0); }`;
+const RFS = `#version 300 es
+precision highp float;
+in float vS; in float vSide; in vec2 vP;
+uniform float uProg, uTime, uNight, uTotal; uniform vec2 uHalf;
+out vec4 o;
+void main() {
+  vec3 foil = mix(vec3(.824, .624, .180), vec3(.890, .725, .341), uNight), hi = mix(vec3(.985, .875, .520), vec3(1., .955, .800), uNight);
+  vec2 e = abs(vP) / uHalf; float edge = 1. - smoothstep(.72, .98, max(e.x, e.y));
+  float soft = 1. - smoothstep(.55, 1., abs(vSide));
+  if (vS <= uProg) {
+    float run = pow(.5 + .5 * sin(vS * .05 - uTime * 3.2), 10.);           // glints running down the line
+    float head = exp(-pow((uProg - vS) / 55., 2.));
+    o = vec4(mix(foil, hi, clamp(run * .8 + head, 0., 1.)), (0.55 + .45 * soft) * edge);
+  } else {
+    float dash = step(fract(vS / 16.), .45);
+    o = vec4(foil, dash * .42 * soft * edge);
+  }
+}`;
+
+// ---------- small matrix kit (column-major) ----------
+function perspective(fovy, aspect, near, far, shiftY) {
+  const f = 1 / Math.tan(fovy / 2), m = new Float32Array(16);
+  m[0] = f / aspect; m[5] = f; m[9] = shiftY; m[10] = (far + near) / (near - far); m[11] = -1; m[14] = 2 * far * near / (near - far);
+  return m;
+}
+function lookAt(e, t) {
+  let fx = t[0] - e[0], fy = t[1] - e[1], fz = t[2] - e[2]; const fl = Math.hypot(fx, fy, fz); fx /= fl; fy /= fl; fz /= fl;
+  let sx = fy, sy = -fx, sz = 0; const sl = Math.hypot(sx, sy) || 1; sx /= sl; sy /= sl;   // f x up(0,0,1)
+  const ux = sy * fz - sz * fy, uy = sz * fx - sx * fz, uz = sx * fy - sy * fx;
+  const m = new Float32Array(16);
+  m[0] = sx; m[4] = sy; m[8] = sz; m[12] = -(sx * e[0] + sy * e[1] + sz * e[2]);
+  m[1] = ux; m[5] = uy; m[9] = uz; m[13] = -(ux * e[0] + uy * e[1] + uz * e[2]);
+  m[2] = -fx; m[6] = -fy; m[10] = -fz; m[14] = fx * e[0] + fy * e[1] + fz * e[2];
+  m[15] = 1; return m;
+}
+function mul(a, b) {
+  const o = new Float32Array(16);
+  for (let c = 0; c < 4; c++) for (let r = 0; r < 4; r++) o[c * 4 + r] = a[r] * b[c * 4] + a[4 + r] * b[c * 4 + 1] + a[8 + r] * b[c * 4 + 2] + a[12 + r] * b[c * 4 + 3];
+  return o;
+}
+
+// ---------- the model: prisms -> one mesh ----------
+function parseModel(buf) {
+  const dv = new DataView(buf);
+  if (dv.getUint32(0, true) !== 0x4E454957) throw new Error("not a WIEN file");
+  const jl = dv.getUint32(4, true);
+  const meta = JSON.parse(new TextDecoder().decode(new Uint8Array(buf, 8, jl)));
+  const start = 8 + jl;
+  // first pass: sizes
+  let nv = 4, ni = 6, o = start; const end = buf.byteLength;
+  while (o < end) {
+    const kind = dv.getUint8(o), rings = dv.getUint8(o + 2), wide = dv.getUint8(o + 3), n = dv.getUint16(o + 8, true), t = dv.getUint16(o + 10, true);
+    nv += kind === 0 ? 2 * n : n; ni += 3 * t + (kind === 0 ? 6 * n : 0);
+    o += 16 + 2 * rings + 4 * n + 3 * t * (wide ? 2 : 1);
+  }
+  const vb = new ArrayBuffer(nv * 16), i16 = new Int16Array(vb), u8 = new Uint8Array(vb), u16 = new Uint16Array(vb);
+  const flatIdx = [], bldIdx = new Uint32Array(ni); let bi = 0, v = 0;
+  const put = (x, y, z, top, kind, stop, seed, s) => { const a = v * 8; i16[a] = x; i16[a + 1] = y; i16[a + 2] = z; i16[a + 3] = top; u8[v * 16 + 8] = kind; u8[v * 16 + 9] = stop; u8[v * 16 + 10] = seed; u16[a + 6] = s; return v++; };
+  // the ground: one sheet under everything
+  const G = 32000; const g0 = put(-G, -G, 0, 0, 3, 0, 0, 65535); put(G, -G, 0, 0, 3, 0, 0, 65535); put(G, G, 0, 0, 3, 0, 0, 65535); put(-G, G, 0, 0, 3, 0, 0, 65535);
+  const ground = [g0, g0 + 1, g0 + 2, g0, g0 + 2, g0 + 3];
+  o = start; let seedN = 7;
+  while (o < end) {
+    const kind = dv.getUint8(o), stop = dv.getUint8(o + 1), rings = dv.getUint8(o + 2), wide = dv.getUint8(o + 3);
+    const base = dv.getUint16(o + 4, true), top = dv.getUint16(o + 6, true), n = dv.getUint16(o + 8, true), t = dv.getUint16(o + 10, true), s = dv.getUint16(o + 12, true);
+    let p = o + 16; const lens = [];
+    for (let r = 0; r < rings; r++) { lens.push(dv.getUint16(p, true)); p += 2; }
+    const xy = p; p += 4 * n;
+    seedN = (seedN * 1103515245 + 12345) >>> 0; const seed = (seedN >>> 16) & 255;
+    const first = v;
+    if (kind === 0) {
+      for (let i = 0; i < n; i++) { const x = dv.getInt16(xy + 4 * i, true), y = dv.getInt16(xy + 4 * i + 2, true); put(x, y, top, top, 0, stop, seed, s); put(x, y, base, top, 0, stop, seed, s); }
+      for (let k = 0; k < t; k++) for (let c = 0; c < 3; c++) bldIdx[bi++] = first + 2 * (wide ? dv.getUint16(p + 2 * (3 * k + c), true) : dv.getUint8(p + 3 * k + c));
+      let r0 = 0;
+      for (const len of lens) {
+        for (let i = 0; i < len; i++) {
+          const a = first + 2 * (r0 + i), b = first + 2 * (r0 + (i + 1) % len);   // a, b: tops; +1: bases
+          bldIdx[bi++] = a + 1; bldIdx[bi++] = b + 1; bldIdx[bi++] = b; bldIdx[bi++] = a + 1; bldIdx[bi++] = b; bldIdx[bi++] = a;
+        }
+        r0 += len;
+      }
+    } else {
+      for (let i = 0; i < n; i++) put(dv.getInt16(xy + 4 * i, true), dv.getInt16(xy + 4 * i + 2, true), 0, 0, kind, 0, seed, 65535);
+      for (let k = 0; k < t; k++) for (let c = 0; c < 3; c++) flatIdx.push(first + (wide ? dv.getUint16(p + 2 * (3 * k + c), true) : dv.getUint8(p + 3 * k + c)));
+    }
+    o = p + 3 * t * (wide ? 2 : 1);
+  }
+  const idx = new Uint32Array(ground.length + flatIdx.length + bi);
+  idx.set(ground, 0); idx.set(flatIdx, ground.length); idx.set(bldIdx.subarray(0, bi), ground.length + flatIdx.length);
+  return { meta, vb, idx, flats: ground.length + flatIdx.length, verts: v, bytes: buf.byteLength };
+}
+
+// ---------- the route: where the line runs, and how the camera turns along it ----------
+function buildRoute(meta) {
+  const P = meta.route, cum = [0];
+  for (let i = 1; i < P.length; i++) cum.push(cum[i - 1] + Math.hypot(P[i][0] - P[i - 1][0], P[i][1] - P[i - 1][1]));
+  const total = cum[cum.length - 1];
+  const at = (s) => { s = clamp(s, 0, total); let i = 1; while (i < P.length - 1 && cum[i] < s) i++; const t = (s - cum[i - 1]) / ((cum[i] - cum[i - 1]) || 1); return [mix(P[i - 1][0], P[i][0], t), mix(P[i - 1][1], P[i][1], t)]; };
+  // samples every 10 m; the camera's target is the line rounded off (±50 m), its heading the direction of a much rounder line
+  const step = 10, n = Math.ceil(total / step) + 1, raw = [];
+  for (let i = 0; i < n; i++) raw.push(at(i * step));
+  const box = (arr, w) => arr.map((_, i) => { let x = 0, y = 0, c = 0; for (let j = i - w; j <= i + w; j++) { const q = arr[clamp(j, 0, arr.length - 1)]; x += q[0]; y += q[1]; c++; } return [x / c, y / c]; });
+  const soft = box(raw, 5), wide = box(box(raw, 14), 14);
+  let ang = [], prev = 0;
+  for (let i = 0; i < n; i++) {
+    const a = wide[clamp(i - 6, 0, n - 1)], b = wide[clamp(i + 6, 0, n - 1)];
+    let th = Math.hypot(b[0] - a[0], b[1] - a[1]) > 2 ? Math.atan2(b[1] - a[1], b[0] - a[0]) : prev;
+    while (th - prev > Math.PI) th -= 2 * Math.PI; while (th - prev < -Math.PI) th += 2 * Math.PI;
+    ang.push(th); prev = th;
+  }
+  for (let pass = 0; pass < 2; pass++) ang = ang.map((_, i) => { let s = 0, c = 0; for (let j = i - 12; j <= i + 12; j++) { s += ang[clamp(j, 0, n - 1)]; c++; } return s / c; });
+  const lerpArr = (arr, s) => { const f = clamp(s / step, 0, n - 1), i = Math.min(n - 2, Math.floor(f)), t = f - i; return typeof arr[0] === "number" ? mix(arr[i], arr[i + 1], t) : [mix(arr[i][0], arr[i + 1][0], t), mix(arr[i][1], arr[i + 1][1], t)]; };
+  // the ribbon: two vertices per point, mitred
+  const rb = new Float32Array(P.length * 2 * 6);
+  for (let i = 0; i < P.length; i++) {
+    const a = P[Math.max(0, i - 1)], b = P[i], c = P[Math.min(P.length - 1, i + 1)];
+    let d1x = b[0] - a[0], d1y = b[1] - a[1], d2x = c[0] - b[0], d2y = c[1] - b[1];
+    let l1 = Math.hypot(d1x, d1y), l2 = Math.hypot(d2x, d2y);
+    if (!l1) { d1x = d2x; d1y = d2y; l1 = l2; } if (!l2) { d2x = d1x; d2y = d1y; l2 = l1; }
+    d1x /= l1; d1y /= l1; d2x /= l2; d2y /= l2;
+    let nx = -(d1y + d2y), ny = d1x + d2x; const nl = Math.hypot(nx, ny);
+    if (nl < .2) { nx = -d1y; ny = d1x; } else { nx /= nl; ny /= nl; const m = Math.min(2.2, 1 / Math.max(.3, nx * -d1y + ny * d1x)); nx *= m; ny *= m; }
+    for (let s = 0; s < 2; s++) rb.set([b[0], b[1], nx, ny, s ? 1 : -1, cum[i]], (i * 2 + s) * 6);
+  }
+  return { total, at, target: (s) => lerpArr(soft, s), heading: (s) => lerpArr(ang, s), rb, count: P.length * 2 };
+}
+
+// ---------- the scroll: screens of travel and of standing still ----------
+function buildScript(meta, route) {
+  const segs = []; let u = 0;
+  const add = (type, len, k) => { segs.push({ type, k, u0: u, u1: u + len }); u += len; };
+  const N = meta.stops.length;
+  add("intro", 1.0, 0);
+  for (let k = 0; k < N; k++) { add("dwell", .85, k); add("travel", .55 + (meta.marks[k + 1] - meta.marks[k]) / 950, k); }
+  add("home", .7, 0); add("outro", .8, 0);
+  const dwell = segs.filter((s) => s.type === "dwell");
+  const state = (uu) => {
+    uu = clamp(uu || 0, 0, u - 1e-4);
+    const g = segs.find((s) => uu < s.u1), t = (uu - g.u0) / (g.u1 - g.u0);
+    const st = { s: 0, ov: 0, focus: new Array(N).fill(0), intro: 0, outro: 0, seg: g, t };
+    if (g.type === "intro") { const d = smooth((t - .3) / .7); st.ov = 1 - d; st.focus[0] = d; st.intro = 1 - smooth(t / .45); }
+    else if (g.type === "dwell") { st.s = meta.marks[g.k]; st.focus[g.k] = 1; }
+    else if (g.type === "travel") {
+      st.s = mix(meta.marks[g.k], meta.marks[g.k + 1], mix(t, smooth(t), .55));
+      st.focus[g.k] = 1 - smooth(t / .2); st.focus[(g.k + 1) % N] = Math.max(st.focus[(g.k + 1) % N], smooth((t - .8) / .2));
+    } else if (g.type === "home") { st.s = route.total; st.focus[0] = 1 - smooth((t - .5) / .5); st.ov = smooth((t - .5) / .5) * .0; }
+    else { st.s = route.total; st.ov = smooth(t / .8); st.outro = smooth((t - .25) / .5); }
+    // how far round each stop the camera has walked: runs on before and after the dwell, so nothing kinks
+    st.orbit = dwell.map((d) => (uu - d.u0) / (d.u1 - d.u0));
+    st.homeOrbit = (uu - segs[segs.length - 2].u0) / .7;
+    st.home = g.type === "home" || g.type === "outro" || (g.type === "travel" && g.k === N - 1 && t > .5);
+    st.cardFor = g.type === "dwell" ? g.k : g.type === "travel" ? (t < .2 ? g.k : t > .8 ? (g.k + 1) % N : -1) : g.type === "intro" && t > .8 ? 0 : -1;
+    return st;
+  };
+  return { segs, total: u, state, dwell };
+}
+
+// ---------- GL ----------
+const cv = $("gl");
+let gl, prog, rprog, U = {}, RU = {}, model, route, script, vao, rvao, lost = false;
+function compile(vs, fs) {
+  const p = gl.createProgram();
+  for (const [type, src] of [[gl.VERTEX_SHADER, vs], [gl.FRAGMENT_SHADER, fs]]) {
+    const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
+    gl.attachShader(p, s);
+  }
+  gl.linkProgram(p);
+  if (!gl.getProgramParameter(p, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p));
+  return p;
+}
+const uniforms = (p, names) => Object.fromEntries(names.map((n) => [n, gl.getUniformLocation(p, n)]));
+function setupGL() {
+  gl = cv.getContext("webgl2", { antialias: true, alpha: false, powerPreference: "high-performance" });
+  if (!gl) return false;
+  prog = compile(VS, FS); rprog = compile(RVS, RFS);
+  U = uniforms(prog, ["uPV", "uEye", "uHead", "uHalf", "uProg", "uTime", "uNight", "uStop", "uStopW", "uFog0", "uFog1", "uGlow"]);
+  RU = uniforms(rprog, ["uPV", "uWidth", "uProg", "uTime", "uNight", "uTotal", "uHalf"]);
+  vao = gl.createVertexArray(); gl.bindVertexArray(vao);
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer()); gl.bufferData(gl.ARRAY_BUFFER, model.vb, gl.STATIC_DRAW);
+  gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 3, gl.SHORT, false, 16, 0);
+  gl.enableVertexAttribArray(1); gl.vertexAttribPointer(1, 1, gl.SHORT, false, 16, 6);
+  gl.enableVertexAttribArray(2); gl.vertexAttribPointer(2, 4, gl.UNSIGNED_BYTE, false, 16, 8);
+  gl.enableVertexAttribArray(3); gl.vertexAttribPointer(3, 1, gl.UNSIGNED_SHORT, false, 16, 12);
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, gl.createBuffer()); gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, model.idx, gl.STATIC_DRAW);
+  rvao = gl.createVertexArray(); gl.bindVertexArray(rvao);
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer()); gl.bufferData(gl.ARRAY_BUFFER, route.rb, gl.STATIC_DRAW);
+  gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 24, 0);
+  gl.enableVertexAttribArray(1); gl.vertexAttribPointer(1, 2, gl.FLOAT, false, 24, 8);
+  gl.enableVertexAttribArray(2); gl.vertexAttribPointer(2, 1, gl.FLOAT, false, 24, 16);
+  gl.enableVertexAttribArray(3); gl.vertexAttribPointer(3, 1, gl.FLOAT, false, 24, 20);
+  gl.bindVertexArray(null);
+  gl.enable(gl.CULL_FACE); gl.frontFace(gl.CCW);
+  return true;
+}
+cv.addEventListener("webglcontextlost", (e) => { e.preventDefault(); lost = true; });
+cv.addEventListener("webglcontextrestored", () => { lost = false; try { setupGL(); poke(); } catch (err) { fail(err); } });
+
+// ---------- state ----------
+let night = document.documentElement.dataset.theme === "dark" ? 1 : 0;
+let dprCap = 2, vh = innerHeight, W = 0, H = 0, clock = 0, lastT = 0, activeUntil = 0, raf = 0, showMeter = true;
+const frames = []; let cpuMs = 0;
+const cards = [], pins = [], dots = [];
+
+function resize() {
+  const dpr = Math.min(devicePixelRatio || 1, dprCap), w = Math.round(cv.clientWidth * dpr), h = Math.round(cv.clientHeight * dpr);
+  if (w !== W || h !== H) { W = cv.width = w; H = cv.height = h; }
+}
+function layout() {
+  // the height of the walk is fixed once per width, so an address bar sliding away does not move the page
+  vh = innerHeight || vh || 800; $("track").style.height = Math.round((script.total + 1) * vh) + "px"; poke();
+}
+
+function camera(st) {
+  const stops = model.meta.stops, aspect = W / H;
+  const rt = route.target(st.s), head = route.at(st.s);
+  let tx = rt[0], ty = rt[1], tz = 0, D = aspect < 1 ? 330 : 300, phi = 40 * Math.PI / 180, th = route.heading(st.s), lift = 0;
+  for (let k = 0; k < stops.length; k++) {
+    let w = st.focus[k]; if (!w) continue;
+    const sp = stops[k];
+    const orbit = st.home && k === 0 ? 1 + st.homeOrbit * .5 : st.orbit[k];
+    // stand off toward where the line came from, then walk a little way round
+    const from = Math.atan2(sp.y - rt[1], sp.x - rt[0]);
+    let dth = from - th; while (dth > Math.PI) dth -= 2 * Math.PI; while (dth < -Math.PI) dth += 2 * Math.PI;
+    const thk = th + dth * .6 + (orbit - .5) * 1.15;
+    tx = mix(tx, sp.x, w); ty = mix(ty, sp.y, w); tz = mix(tz, Math.min(sp.h * .5, 70), w);
+    D = mix(D, 150 + sp.r * 2.5 + sp.h * .9, w); phi = mix(phi, 27 * Math.PI / 180, w); th = mix(th, thk, w); lift = Math.max(lift, w);
+  }
+  const fovy = (aspect < 1 ? 50 : 36) * Math.PI / 180;
+  if (st.ov) {   // the whole walk on one sheet, north up
+    const w = st.ov, xs = stops.map((p) => p.x), ys = stops.map((p) => p.y), ph = 56 * Math.PI / 180;
+    const cx = (Math.min(...xs) + Math.max(...xs)) / 2, cy = (Math.min(...ys) + Math.max(...ys)) / 2;
+    const hw = (Math.max(...xs) - Math.min(...xs)) / 2 + 360, hh = (Math.max(...ys) - Math.min(...ys)) / 2 + 300;
+    const far = Math.max(hw / (Math.tan(fovy / 2) * aspect), hh * Math.sin(ph) / Math.tan(fovy / 2) * 1.15);
+    let dth = Math.PI / 2 - th; while (dth > Math.PI) dth -= 2 * Math.PI; while (dth < -Math.PI) dth += 2 * Math.PI;
+    tx = mix(tx, cx, w); ty = mix(ty, cy, w); tz = mix(tz, 0, w); D = mix(D, far, w); phi = mix(phi, ph, w); th += dth * w; lift *= 1 - w;
+  }
+  const eye = [tx - Math.cos(phi) * Math.cos(th) * D, ty - Math.cos(phi) * Math.sin(th) * D, tz + Math.sin(phi) * D];
+  // with a card up, the picture's centre moves into the upper part of the screen
+  const P = perspective(fovy, aspect, 8, 9000, -(aspect < 1 ? .36 : .2) * lift), V = lookAt(eye, [tx, ty, tz]);
+  return { pv: mul(P, V), eye, head, D, ov: st.ov };
+}
+
+function draw(now) {
+  raf = 0;
+  if (lost || !gl) return;
+  const dt = Math.min(.05, (now - lastT) / 1000 || 0); lastT = now;
+  if (!calm) clock += dt;
+  if (frames.push(now) > 90) frames.shift();
+  const t0 = performance.now();
+  resize();
+  const st = script.state(scrollY / vh), cam = camera(st);
+  const hb = model.meta.bounds, half = [Math.min(-hb[0], hb[2]), Math.min(-hb[1], hb[3])];
+  const active = st.focus.reduce((b, w, k) => (w > st.focus[b] ? k : b), 0), aw = st.focus[active];
+  const paper = night ? [.082, .071, .055] : [.961, .941, .902];
+  gl.viewport(0, 0, W, H); gl.clearColor(paper[0], paper[1], paper[2], 1); gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+  gl.useProgram(prog); gl.bindVertexArray(vao);
+  gl.uniformMatrix4fv(U.uPV, false, cam.pv); gl.uniform3fv(U.uEye, cam.eye); gl.uniform2fv(U.uHead, cam.head); gl.uniform2fv(U.uHalf, half);
+  gl.uniform1f(U.uProg, st.s); gl.uniform1f(U.uTime, clock); gl.uniform1f(U.uNight, night); gl.uniform1f(U.uStop, active + 1); gl.uniform1f(U.uStopW, smooth(aw) * (1 - st.ov));
+  gl.uniform1f(U.uFog0, mix(900, 5200, st.ov)); gl.uniform1f(U.uFog1, mix(3200, 9000, st.ov)); gl.uniform1f(U.uGlow, (1 - st.ov) * (1 - .6 * aw));
+  gl.disable(gl.BLEND); gl.disable(gl.DEPTH_TEST); gl.depthMask(false);
+  gl.drawElements(gl.TRIANGLES, model.flats, gl.UNSIGNED_INT, 0);                                   // the ground, water, parks: painted, no depth
+  gl.enable(gl.DEPTH_TEST); gl.depthMask(true);
+  gl.drawElements(gl.TRIANGLES, model.idx.length - model.flats, gl.UNSIGNED_INT, model.flats * 4);   // the city
+  gl.useProgram(rprog); gl.bindVertexArray(rvao);
+  gl.uniformMatrix4fv(RU.uPV, false, cam.pv); gl.uniform1f(RU.uWidth, Math.max(5, cam.D * .011)); gl.uniform1f(RU.uProg, st.s); gl.uniform1f(RU.uTime, clock);
+  gl.uniform1f(RU.uNight, night); gl.uniform1f(RU.uTotal, route.total); gl.uniform2fv(RU.uHalf, half);
+  gl.enable(gl.BLEND); gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA); gl.depthMask(false); gl.disable(gl.CULL_FACE);
+  gl.drawArrays(gl.TRIANGLE_STRIP, 0, route.count);                                                  // the gold line, hidden where a house stands in front
+  gl.enable(gl.CULL_FACE); gl.depthMask(true);
+  cpuMs = mix(cpuMs, performance.now() - t0, .1);
+  overlay(st, cam);
+  if (now < activeUntil) raf = requestAnimationFrame(draw); else { document.body.classList.add("rest"); meter(true); }
+}
+
+function overlay(st, cam) {
+  const N = cards.length;
+  for (let k = 0; k < N; k++) {
+    const home = st.home;
+    const w = home && k === 0 ? 0 : smooth((st.focus[k] - .35) / .5) * (1 - st.ov);
+    const c = cards[k]; c.style.opacity = w.toFixed(3); c.style.transform = `translate3d(0,${((1 - w) * 26).toFixed(1)}px,0)`; c.style.pointerEvents = w > .6 ? "auto" : "none";
+    c.style.visibility = w > .001 ? "visible" : "hidden";
+    dots[k].classList.toggle("on", st.focus[k] > .5 && !home); dots[k].classList.toggle("done", st.s > model.meta.marks[k] + 1 || home);
+    // the stop's name stands over its building on the overview
+    const sp = model.meta.stops[k], m = cam.pv, x = sp.x, y = sp.y, z = sp.h + 30;
+    const cw = m[3] * x + m[7] * y + m[11] * z + m[15], px = (m[0] * x + m[4] * y + m[8] * z + m[12]) / cw, py = (m[1] * x + m[5] * y + m[9] * z + m[13]) / cw;
+    const p = pins[k], vis = cw > 0 ? st.ov : 0;
+    p.style.opacity = smooth((vis - .5) / .4).toFixed(3); p.style.transform = `translate3d(${((px * .5 + .5) * innerWidth).toFixed(1)}px,${((.5 - py * .5) * cv.clientHeight).toFixed(1)}px,0)`;
+  }
+  const io = $("intro"), oo = $("outro");
+  io.style.opacity = st.intro.toFixed(3); io.style.transform = `translate3d(0,${((st.intro - 1) * 40).toFixed(1)}px,0)`; io.style.visibility = st.intro > .001 ? "visible" : "hidden";
+  oo.style.opacity = st.outro.toFixed(3); oo.style.visibility = st.outro > .001 ? "visible" : "hidden"; oo.style.pointerEvents = st.outro > .6 ? "auto" : "none";
+  meter(false);
+}
+let meterAt = 0;
+function meter(idle) {
+  if (!showMeter) return;
+  const now = performance.now(); if (!idle && now - meterAt < 400) return; meterAt = now;
+  let fps = 0, worst = 0, avg = 0;
+  if (frames.length > 5) { const ds = []; for (let i = 1; i < frames.length; i++) ds.push(frames[i] - frames[i - 1]); const live = ds.filter((d) => d < 250); avg = live.reduce((a, b) => a + b, 0) / (live.length || 1); worst = Math.max(...live, 0); fps = 1000 / (avg || 1); }
+  $("meter").textContent = `${idle ? "靜止（不重畫）" : fps.toFixed(0) + " fps"} · 每幀 ${avg.toFixed(1)} ms · 最慢 ${worst.toFixed(0)} ms\n繪製指令 ${cpuMs.toFixed(1)} ms · ${W}×${H} · 畫質 ${Math.min(devicePixelRatio || 1, dprCap)}x\n${(model.idx.length / 3 / 1000).toFixed(0)}k 三角形 · ${(model.verts / 1000).toFixed(0)}k 頂點 · 模型 ${(model.bytes / 1e6).toFixed(2)} MB`;
+}
+// draw while something moves, and for a few seconds after (the gold keeps running a moment), then rest
+function poke(ms = calm ? 300 : 3500) { activeUntil = performance.now() + ms; document.body.classList.remove("rest"); if (!raf) { lastT = performance.now(); raf = requestAnimationFrame(draw); } }
+
+// ---------- the day's paper on the cards ----------
+async function paper() {
+  const get = (u) => fetch(u).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  const [index, config] = await Promise.all([get("../../content/index.json"), get("../../content/config.json")]);
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Taipei" }).format(new Date());
+  const issues = (index?.issues || []).filter((i) => i.date <= today).sort((a, b) => (a.date < b.date ? 1 : -1));
+  const issue = issues[0];
+  $("date").textContent = issue ? `${issue.date.replaceAll("-", ".")}　第 ${issue.no} 號` : "Wien";
+  model.meta.stops.forEach((sp, k) => {
+    const col = config?.columns?.[sp.column] || {};
+    let hit = null, date = "";
+    for (const i of issues) { const a = (i.articles || []).find((x) => x.column === sp.column); if (a) { hit = a; date = i.date; break; } }
+    const c = cards[k];
+    const vi = col.group === "verse" ? issues.find((i) => i.verse?.verses?.length) : null;
+    const place = `<div class="place"><span>${esc(sp.zh)}</span><i>${esc(sp.de)}</i></div><div class="col">${esc(col.name || sp.column)}${col.latin ? `　<i style="font-family:var(--latin)">${esc(col.latin)}</i>` : ""}</div>`;
+    if (vi) {   // 今日經文與禱告: the app folds it under the masthead, so the card leads to the list
+      const v = vi.verse;
+      c.href = "../../";
+      c.innerHTML = `${place}<h2>${esc(v.ref || "今日經文")}</h2><p>${esc(v.verses.map((x) => x.text).join(""))}</p><div class="go"><span>${vi.date === issue.date ? "今天" : vi.date.slice(5).replace("-", "/")}・今日禱告</span><b>到清單版展開 →</b></div>`;
+    } else if (hit) {
+      c.href = `../../#/a/${date}/${sp.column}`;
+      c.innerHTML = `${place}<h2>${esc(hit.title)}</h2><p>${esc(hit.brief || hit.dek || "")}</p><div class="go"><span>${date === issue.date ? "今天" : date.slice(5).replace("-", "/") + " 刊出"}${hit.minutes ? `・${hit.minutes} 分鐘` : ""}</span><b>讀這篇 →</b></div>`;
+    } else { c.classList.add("none"); c.removeAttribute("href"); c.innerHTML = `${place}<h2>這一站今天沒有出刊</h2>`; }
+  });
+}
+
+function fail(err) {
+  console.error(err);
+  $("wait").classList.remove("gone");
+  $("wait").innerHTML = `<div>這台裝置畫不出立體地圖<br><span style="font-size:12px">${esc(err?.message || err)}</span><br><a href="../../">回到清單版</a></div>`;
+}
+
+(async function start() {
+  try {
+    const buf = await (await fetch(MODEL)).arrayBuffer();
+    const t0 = performance.now();
+    model = parseModel(buf); route = buildRoute(model.meta); script = buildScript(model.meta, route);
+    model.buildMs = performance.now() - t0;
+    model.meta.stops.forEach((sp, k) => {
+      const c = document.createElement("a"); c.className = "card"; $("cards").append(c); cards.push(c);
+      const p = document.createElement("div"); p.className = "pin"; p.innerHTML = `<span>${esc(sp.zh)}</span>`; $("pins").append(p); pins.push(p);
+      const d = document.createElement("button"); d.type = "button"; d.setAttribute("aria-label", sp.zh); d.innerHTML = "<i></i>"; $("dots").append(d); dots.push(d);
+      d.addEventListener("click", () => scrollTo({ top: (script.dwell[k].u0 + .45) * vh, behavior: calm ? "auto" : "smooth" }));
+    });
+    if (!setupGL()) throw new Error("沒有 WebGL2");
+    layout();
+    try {
+      history.scrollRestoration = "manual";   // the track has no height until the model is in, so the browser cannot do it
+      const nav = performance.getEntriesByType("navigation")[0], u = parseFloat(sessionStorage.getItem("wien.u"));
+      if (nav && (nav.type === "back_forward" || nav.type === "reload") && u > 0) scrollTo(0, u * vh);
+    } catch { /* private mode */ }
+    addEventListener("pagehide", () => { try { sessionStorage.setItem("wien.u", String(scrollY / vh)); } catch { /* ignore */ } });
+    addEventListener("pageshow", (e) => { if (e.persisted) poke(); });
+    addEventListener("scroll", () => poke(), { passive: true });
+    addEventListener("touchstart", () => poke(), { passive: true });
+    let lastW = innerWidth;
+    addEventListener("resize", () => { if (innerWidth !== lastW) { lastW = innerWidth; layout(); } else poke(); });
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) poke(); });
+    $("b-night").addEventListener("click", () => { night = night ? 0 : 1; document.documentElement.dataset.theme = night ? "dark" : "light"; poke(); });
+    $("b-dpr").addEventListener("click", () => { dprCap = dprCap === 2 ? 1 : dprCap === 1 ? 1.5 : 2; poke(); });
+    $("b-meter").addEventListener("click", () => { showMeter = !showMeter; $("meter").hidden = !showMeter; poke(); });
+    paper().then(() => poke());
+    requestAnimationFrame(() => $("wait").classList.add("gone"));
+    window.__wien = { get model() { return model; }, get script() { return script; }, get route() { return route; }, frames, poke };
+  } catch (err) { fail(err); }
+})();
+</script>
+</body>
+</html>
