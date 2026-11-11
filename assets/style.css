@@ -2435,6 +2435,8 @@ details.band .svl { margin: 0 0 10px; }
 /* 寄過的信 (設定; app.js sentLetters): the letter in full, under it when it went and, once answered, the way to the reply */
 .letters-sent { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 12px; }
 .letters-sent li { padding-left: 12px; border-left: 2px solid var(--rule); }
+.letters-sent p { font-family: var(--sans); }
+.letter-form .letters-sent { margin-top: 14px; } /* 今晚寄的 under the evening form (letterForm) */
 .letters-sent .t { margin: 0; font-size: 14px; line-height: 1.7; color: var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; }
 .letters-sent .st { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); }
 .letters-sent .st a { margin-left: 10px; white-space: nowrap; color: var(--gold-ink); }

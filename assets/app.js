@@ -890,15 +890,19 @@ function lettersList() {
   return ls.length ? ls.map((l) => `<p class="letter-date">${esc(fmtDate(l.date))}</p>${letterHtml(l)}`).join("") : `<p class="empty">${emptyArt("letters")}還沒有回信。晚上九點以後打開報紙，首頁最上面就能寫信給編輯部。</p>`;
 }
 // In the evening (night = true) the form is folded under one line at the top of the front page — a moon, 寫信給編輯部 —
-// and opens on a tap; it stays open while a draft is kept. Only the form: the letters already sent are in 設定
-// (sentLetters), and the fold counts none of them (the owner, 2026-11-11: 每天晚上首頁的不要有過去的信).
+// and opens on a tap; it stays open while a draft is kept, and after a letter goes out to show it under the form.
+// Under the form only the letters of this night (since 21:00, Taiwan), with when they went and no 等回信; the ones
+// before are in 設定 (sentLetters) (the owner, 2026-11-11: 每天晚上首頁的不要有過去的信; 當期問的還是可以顯示在下面).
+const nightStart = () => { const t = new Date(Date.now() + 8 * 3600e3); return Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate(), 21) - 8 * 3600e3 - (t.getUTCHours() < 21 ? 864e5 : 0); };
 function letterForm(el, night = false, open = false) {
   const n = nest(), api = S.cfg.nest?.api;
   if (!el || !n || !api) return;
-  el.innerHTML = `${night ? `<details class="letter-form night-letter"${open || store.get("letters.draft", "") ? " open" : ""}><summary>${MOON}<b>寫信給編輯部</b><span class="de">Leserbrief</span><span class="note">晚上才開的信箱</span></summary>` : `<div class="letter-form"><h2>寫信給編輯部</h2>`}
+  const since = nightStart(), tonight = sentKept().filter((x) => Date.parse(x.at) >= since);
+  el.innerHTML = `${night ? `<details class="letter-form night-letter"${open || store.get("letters.draft", "") ? " open" : ""}><summary>${MOON}<b>寫信給編輯部</b><span class="de">Leserbrief</span><span class="note">${tonight.length ? `今晚寄了 ${tonight.length} 封` : "晚上才開的信箱"}</span></summary>` : `<div class="letter-form"><h2>寫信給編輯部</h2>`}
     <p class="small">問一個你想知道的問題。天亮前編輯部挑一兩封回答，刊在早上的報上，不署名，問題會稍微改寫。不要寫病人或私人的事。</p>
     <textarea maxlength="300" rows="3" placeholder="例如：布拉姆斯第四號該從哪個版本聽起？">${esc(store.get("letters.draft", ""))}</textarea>
     <div class="btns"><button class="btn" type="button" data-letter-send>寄出</button><span class="count small"></span></div>
+    ${tonight.length ? `<ul class="letters-sent">${tonight.map(sentRow).join("")}</ul>` : ""}
   ${night ? "</details>" : "</div>"}`;
   const ta = el.querySelector("textarea"), count = el.querySelector(".count"), btn = el.querySelector("[data-letter-send]");
   const upd = () => { count.textContent = `${ta.value.length} / 300`; store.set("letters.draft", ta.value); };
@@ -918,25 +922,30 @@ function letterForm(el, night = false, open = false) {
       if (!r.ok || !j.id) { toast(r.status === 429 ? "二十四小時內已經寄了三封，晚一點再寄；稿子還留著" : r.status === 403 ? (j.error === "not in this yard" ? "這支手機還沒跟院子對上，先打開一次後院再寄；稿子還留著" : "這個後院不能寄信") : "沒寄出去，稿子還留著"); btn.disabled = false; return; }
       store.set("letters.sent", [...store.get("letters.sent", []), { id: j.id, at: j.at, text }].slice(-20));
       store.del("letters.draft"); store.del("letters.cid");
-      toast("寄出了，收在設定的「寄過的信」");
-      letterForm(el, night); // folded again: the toast says it went, and the letter itself is in 設定
+      toast("寄出了");
+      letterForm(el, night, true);
     } catch { toast("沒寄出去，稿子還留著"); btn.disabled = false; }
   });
+}
+// What this phone sent (rm.letters.sent, the last twenty), newest first, and one of them as a line: the letter in full,
+// when it went, and the way to its reply once answered — never 等回信 (the owner, 2026-11-11).
+const sentKept = () => { const kept = store.get("letters.sent", []); return (Array.isArray(kept) ? kept : []).filter((x) => x && x.id && typeof x.text === "string").reverse(); };
+function sentRow(x) {
+  const t = new Date(new Date(x.at).getTime() + 8 * 3600e3), at = Number.isNaN(t.getTime()) ? "" : `${t.getUTCMonth() + 1}/${t.getUTCDate()} ${String(t.getUTCHours()).padStart(2, "0")}:${String(t.getUTCMinutes()).padStart(2, "0")}`;
+  // A letter two dawns old with no answer is not coming (the editors answer questions only, two a morning at most): it
+  // says so (the owner, 2026-11-11: 我昨天寄的信怎麼沒回). An answer that still comes takes its line over.
+  const a = letterAnswered(x.id), passed = Date.now() - Date.parse(x.at) > 36 * 3600e3;
+  return `<li><p class="t">${esc(x.text)}</p><p class="st">寄出 ${esc(at)}${a ? `<a href="#/letters/${esc(x.id)}">刊在 ${esc(fmtDate(a.date, "short"))} →</a>` : passed ? "・這封沒有回信（編輯部只回問題）" : ""}</p></li>`;
 }
 // 寄過的信 (設定; the owner, 2026-11-11: 把過去寫的放在設定的一個地方，每天晚上首頁的不要有過去的信，如果沒有回信也不要寫在
 // 等回信): what this phone sent (rm.letters.sent, the last twenty), each in full with when it went; an answered one
 // links to its reply, an unanswered one says nothing more. The newest three stand open, the older ones fold under a line.
 function sentLetters(open = false) {
-  const kept = store.get("letters.sent", []), sent = (Array.isArray(kept) ? kept : []).filter((x) => x && x.id && typeof x.text === "string").reverse();
+  const sent = sentKept();
   if (!sent.length) return `<p class="small">還沒寄過信。晚上九點以後，首頁最上面可以寫信給編輯部。</p>`;
-  const md = (iso) => { const t = new Date(new Date(iso).getTime() + 8 * 3600e3); return Number.isNaN(t.getTime()) ? "" : `${t.getUTCMonth() + 1}/${t.getUTCDate()} ${String(t.getUTCHours()).padStart(2, "0")}:${String(t.getUTCMinutes()).padStart(2, "0")}`; };
-  // A letter two dawns old with no answer is not coming (the editors answer questions only, two a morning at most): it
-  // says so (the owner, 2026-11-11: 我昨天寄的信怎麼沒回). An answer that still comes takes its line over.
-  const passed = (x) => Date.now() - Date.parse(x.at) > 36 * 3600e3;
-  const row = (x) => { const a = letterAnswered(x.id); return `<li><p class="t">${esc(x.text)}</p><p class="st">寄出 ${esc(md(x.at))}${a ? `<a href="#/letters/${esc(x.id)}">刊在 ${esc(fmtDate(a.date, "short"))} →</a>` : passed(x) ? "・這封沒有回信（編輯部只回問題）" : ""}</p></li>`; };
   const rest = sent.slice(3);
-  return `<ul class="letters-sent">${sent.slice(0, 3).map(row).join("")}</ul>
-    ${rest.length ? `<details class="more"${open ? " open" : ""}><summary>更早的 ${rest.length} 封</summary><ul class="letters-sent">${rest.map(row).join("")}</ul></details>` : ""}
+  return `<ul class="letters-sent">${sent.slice(0, 3).map(sentRow).join("")}</ul>
+    ${rest.length ? `<details class="more"${open ? " open" : ""}><summary>更早的 ${rest.length} 封</summary><ul class="letters-sent">${rest.map(sentRow).join("")}</ul></details>` : ""}
     <p class="small">只記在這支手機上，留最近二十封。</p>`;
 }
 // API 額度 (the owner, 2026-11-11: 我想在設定頁加入可以看api剩餘額度): on the owner's yard, this month's spend on the
