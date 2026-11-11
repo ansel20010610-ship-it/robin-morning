@@ -1,0 +1,448 @@
+{
+  "column": "football",
+  "date": "2026-11-12",
+  "title": "阿森納教練說「得吃點苦」，巴薩女足週五凌晨開踢",
+  "dek": "2025 年歐冠決賽，阿森納 1 比 0 贏了巴薩。週五凌晨 1 點 45 分，兩隊又在諾坎普碰上。",
+  "brief": "巴薩女足週五凌晨 1 點 45 分在諾坎普迎戰阿森納，原本排週三，被西班牙總罷工推遲一天。亞馬爾的右膝還在治療，不跟西班牙隊去布拉格。男足下一場是 11 月 22 日週日晚上 9 點，主場對比利亞雷亞爾。",
+  "topic_key": "football:2026-11-12",
+  "form": "list",
+  "voice": "fan",
+  "updated_at": "2026-11-12T02:49:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "next": {
+    "opponent": "比利亞雷亞爾",
+    "competition": "西甲",
+    "kickoff": "2026-11-22T21:00+08:00",
+    "venue": "Spotify Camp Nou",
+    "home": true
+  },
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/UWCL_2025-26_Final_A40.jpg/1280px-UWCL_2025-26_Final_A40.jpg",
+    "width": 1280,
+    "height": 853,
+    "alt": "球場邊線旁，一群穿藍紅條紋球衣的球員聚在一起，後面的看台坐滿球迷，不少人舉著圍巾。",
+    "caption": "巴薩女足球員在場邊聚在一起，看台上是巴薩球迷。2026 年 5 月 23 日女子歐冠決賽，巴薩對 OL Lyonnes，MichaelEmilio 拍攝。資料照片，非當日比賽畫面。",
+    "credit": "MichaelEmilio／Wikimedia Commons",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:UWCL_2025-26_Final_A40.jpg",
+    "made": "2026"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1. 巴薩女足這場要熬夜，**11 月 13 日（週五）凌晨 1 點 45 分**，在諾坎普對阿森納，歐冠聯賽階段第 4 輪。兩隊上一次在歐冠碰頭是 2025 年決賽，在里斯本，阿森納 1 比 0 贏，拿了睽違 17 年的歐冠冠軍。今年 5 月換巴薩，在奧斯陸 4 比 0 打敗里昂女足，Pajor 和 Paralluelo 各進兩球。"
+    },
+    {
+      "type": "p",
+      "text": "這場本來排在週三。11 月 11 日西班牙總罷工，巴薩 10 月就發了聲明，說那天辦不了比賽該有的條件，延一天，買了週三票的人，票照樣能用。週三又碰上暴風雨 Charles，葡萄牙的 Benfica 對 Austria Wien 已經延到週四。ESPN 週三的說法是，巴薩這場照原定時間踢。"
+    },
+    {
+      "type": "p",
+      "text": "積分榜上巴薩 3 戰全勝，進了 19 球，9 分排第一。阿森納 3 戰 7 分，排第五。"
+    },
+    {
+      "type": "table",
+      "title": "女足歐冠聯賽階段，前八名",
+      "head": [
+        "名次",
+        "球隊",
+        "場數",
+        "積分",
+        "淨勝球"
+      ],
+      "rows": [
+        [
+          "1",
+          "巴薩",
+          "3",
+          "9",
+          "+17"
+        ],
+        [
+          "2",
+          "拜仁",
+          "4",
+          "8",
+          "+4"
+        ],
+        [
+          "3",
+          "切爾西",
+          "4",
+          "8",
+          "+3"
+        ],
+        [
+          "4",
+          "里昂女足",
+          "3",
+          "7",
+          "+14"
+        ],
+        [
+          "5",
+          "阿森納",
+          "3",
+          "7",
+          "+4"
+        ],
+        [
+          "6",
+          "尤文圖斯",
+          "3",
+          "6",
+          "+5"
+        ],
+        [
+          "7",
+          "曼城",
+          "4",
+          "6",
+          "+3"
+        ],
+        [
+          "8",
+          "皇馬",
+          "4",
+          "6",
+          "+3"
+        ]
+      ],
+      "caption": "資料：ESPN 積分榜，11 月 12 日 03:00 左右查閱。里昂對尤文圖斯台灣時間 11 月 12 日 04:00 才開踢，還沒算進去。"
+    },
+    {
+      "type": "p",
+      "text": "阿森納總教練 Renee Slegers 週三開了賽前記者會。"
+    },
+    {
+      "type": "quote",
+      "text": "我們得吃點苦。我們得拚上身體，也得非常守紀律。不過我們隊上也有很多實力。",
+      "original": "We will have to suffer. We'll have to put bodies on the line. We'll have to be really disciplined. But we have a lot of quality in our team as well.",
+      "cite": "Renee Slegers，11 月 11 日賽前記者會（ESPN 轉述）"
+    },
+    {
+      "type": "p",
+      "text": "巴薩在諾坎普的歐冠主場，過去 8 場 7 勝 1 和，進了 35 球。UEFA 的賽前預告還說，Pajor 要是再進一球，會是連續第 9 場進球，這是這項賽事的紀錄。阿森納這邊傷兵不少，UEFA 沒有點名。"
+    },
+    {
+      "type": "p",
+      "text": "2. 亞馬爾右膝在痛，人還留在巴塞隆納治療，沒有去西班牙隊報到，所以週五凌晨 3 點 45 分在布拉格對捷克，西班牙沒有他。這件事上一期報過了。這兩天吵起來的是另一件：**被徵召的球員，可以在集訓期間回俱樂部養傷嗎？** Goal 整理了西班牙媒體的說法。《Sport》報導檢查沒有大問題，巴薩和西班牙隊的醫療組一起決定不冒險。一位前國腳贊成，說巴薩一直在追蹤亞馬爾，病歷最完整。一位分析員就不放心，他想不起以前有哪個被徵召的球員，在集訓中回俱樂部養傷。"
+    },
+    {
+      "type": "quote",
+      "text": "特別的球員，想怎樣就怎樣。",
+      "original": "The special player can do whatever he wants.",
+      "cite": "記者 Miguel Martín Talavera，Goal 11 月 11 日整理；西班牙文原話由 Goal 譯成英文"
+    },
+    {
+      "type": "p",
+      "text": "這場爭論多半要等週一凌晨 3 點 45 分（西班牙是週日晚上），馬德里對英格蘭那場才收得了尾。亞馬爾預計回來，他要是跑得正常，就沒人再提。捷克這場，Goal 預測先發名單裡有佩德里和庫巴西，不過教練還沒公布名單。"
+    },
+    {
+      "type": "p",
+      "text": "3. **拉菲尼亞**到了新加坡的巴西隊營地，第一天沒有跟大家練球，只在健身房做訓練。Goal 轉述巴西的 Globo Esporte、經《Sport》報導，說安切洛蒂在小心處理他的狀況。另外還有三個人也被休息，說法是預防性的工作量安排。弗利克本來就跟運動總監德科提過，希望他少踢一點，Goal 引的是上次國際賽事週他肌肉出狀況之後的話。巴西 11 月 14 日（週六）台灣時間傍晚 6 點 15 分對日本，17 日傍晚 6 點對新加坡，兩場都是友誼賽，都在新加坡國家體育場。"
+    },
+    {
+      "type": "p",
+      "text": "4. 曼聯那邊，ESPN 11 月 11 日報導，消息人士說總教練卡里克預計會被解僱，球團已經找上 54 歲的**波切蒂諾**的經紀團隊談，快談妥了。他是美國隊總教練，8 月才續約到 2030 年世界盃，不過合約有一條：歐洲大球會付 1,000 萬美元，就能跟他談。曼聯的執行長和足球總監週三在摩納哥，跟持股人拉特克利夫開會，卡里克的事會是主題。球團說最後決定還沒下，要拉特克利夫和格雷澤家族點頭。其他被考慮過的人選，有前紐卡索教練豪伊和前德國隊教練納格爾斯曼。曼聯下一場是 11 月 22 日去安菲爾德踢利物浦。"
+    },
+    {
+      "type": "news",
+      "title": "歐洲足壇速覽",
+      "items": [
+        {
+          "headline": "姆巴佩大腿傷，缺席法國對義大利",
+          "summary": "ESPN 引《隊報》說，姆巴佩大腿後肌有傷，不會踢週四在米蘭對義大利的比賽，台灣是週五凌晨 3 點 45 分，週日在波爾多對土耳其還有機會。教練齊達內首度徵召巴黎聖日耳曼的 Senny Mayulu。國際米蘭的 Thuram 因為同樣的傷退出，Tchouaméni 內收肌舊傷復發，回皇馬復健。法國 4 場 10 分居組首，贏義大利就晉級三月八強。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50452835",
+          "when": "11 月 11 日（週三）",
+          "place": "FR"
+        },
+        {
+          "headline": "凱恩要成為英格蘭出賽最多的人",
+          "summary": "33 歲的凱恩週四在溫布利對克羅埃西亞，台灣是週五凌晨 3 點 45 分，會是他第 126 次代表英格蘭，超過和前門將 Peter Shilton 並列的 125 場。他上個月第一次拿金球獎，上週和拜仁續約。他說 2020 年起跟一位加拿大的針灸醫師合作，之後七年只缺了 10 到 15 場，之前七年是 60 到 70 場。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50453418",
+          "when": "11 月 11 日（週三）",
+          "place": "GB"
+        },
+        {
+          "headline": "Courtois：皇馬需要穆里尼奧這種人",
+          "summary": "皇馬門將 Courtois 在里斯本的網路高峰會上說，穆里尼奧一走進房間，大家就感覺到他在，這是球隊需要的。他說穆里尼奧比 12 年前在切爾西時溫和一點，人格沒變。皇馬現在八連勝，包括 10 月 25 日在巴塞隆納 2 比 1 贏巴薩。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50452113",
+          "when": "11 月 11 日（週三）",
+          "place": "ES"
+        },
+        {
+          "headline": "Zubimendi：沒想過離開阿森納",
+          "summary": "阿森納的西班牙中場 Zubimendi 在西班牙隊集訓時對《馬卡報》說，去馬競的傳聞離事實很遠，他沒跟任何人聯絡。他今年英超 7 場只踢了 100 分鐘，去年是 38 場全部出賽。他的合約到 2030 年，他希望留到球季結束。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50451966",
+          "when": "11 月 11 日（週三）",
+          "place": [
+            "GB",
+            "ES"
+          ]
+        },
+        {
+          "headline": "女足歐冠週二：曼城首勝，切爾西被逼和",
+          "summary": "11 月 10 日（週二）的第 4 輪，曼城客場 4 比 1 贏國際米蘭，是這季歐冠第一勝；拜仁客場 2 比 1 贏巴黎聖日耳曼；皇馬 3 比 0 贏巴黎 FC；切爾西客場 0 比 0 和 BK Häcken。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/report/_/gameId/401916988",
+          "when": "11 月 10 日（週二）",
+          "place": [
+            "GB",
+            "DE",
+            "FR",
+            "IT"
+          ]
+        },
+        {
+          "headline": "Kuyt 離開 Fenerbahçe，一週前才贏了利物浦",
+          "summary": "Dirk Kuyt 11 月 11 日離開土耳其的 Fenerbahçe。一週前他以代理教練的身分帶隊，歐冠 3 比 2 贏了老東家利物浦，那時球團其實已經談好由前隊長 Emre Belözoğlu 接任。球隊歐冠聯賽階段排第 19，下一場 11 月 25 日在倫敦對 Shakhtar Donetsk。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50452035",
+          "when": "11 月 11 日（週三）",
+          "place": "TR"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "5. 巴薩男足下一場是 **11 月 22 日（週日）晚上 9 點**，西甲第 13 輪，主場對比利亞雷亞爾。西甲踢完 12 輪，巴薩 33 分第一，皇馬 30 分，馬競 28 分。國際賽事週結束，一線隊 11 月 16 日週一恢復團練。往後三個星期的賽程在下面，歐冠那場要去巴庫，台灣時間是 11 月 26 日凌晨 1 點 45 分。"
+    },
+    {
+      "type": "table",
+      "title": "巴薩男足接下來四場（台灣時間）",
+      "head": [
+        "時間",
+        "賽事",
+        "對手",
+        "場地"
+      ],
+      "rows": [
+        [
+          "11 月 22 日（週日）21:00",
+          "西甲",
+          "比利亞雷亞爾",
+          "主場 Spotify Camp Nou"
+        ],
+        [
+          "11 月 26 日（週四）01:45",
+          "歐冠",
+          "巴庫的 Sabah",
+          "客場 巴庫奧林匹克體育場"
+        ],
+        [
+          "11 月 29 日（週日）23:15",
+          "西甲",
+          "Deportivo",
+          "客場 Riazor"
+        ],
+        [
+          "12 月 3 日（週四）04:30",
+          "西甲",
+          "馬競",
+          "主場 Spotify Camp Nou"
+        ]
+      ],
+      "caption": "資料：巴薩官網與 ESPN 賽程，西班牙時間加 7 小時換成台灣時間。12 月 6 日對塞爾塔的開球時間還沒定。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "FC Barcelona statement",
+      "publisher": "FC Barcelona",
+      "date": "2026-10-14",
+      "url": "https://www.fcbarcelona.com/en/football/womens-football/news/4592187/fc-barcelona-statement",
+      "note": "對阿森納改到 11 月 12 日 18:45，原因是 11 月 11 日總罷工；原日期的票有效"
+    },
+    {
+      "title": "Women's Champions League Matchday 4 preview",
+      "publisher": "UEFA",
+      "date": "2026-11-10",
+      "url": "https://www.uefa.com/womenschampionsleague/news/02ab-2201607f4c99-fa0969df1c68-1000--women-s-champions-league-matchday-4-preview-paris-saint-/",
+      "note": "諾坎普 8 場 7 勝 1 和 35 球；Pajor 連續第 9 場進球的紀錄；阿森納傷兵"
+    },
+    {
+      "title": "Storm Charles wreaks havoc, UWCL game postponed",
+      "publisher": "ESPN",
+      "date": "2026-11-11",
+      "url": "https://www.espn.com/soccer/story/_/id/50451816",
+      "note": "Benfica 對 Austria Wien 延到 11 月 12 日；巴薩對阿森納「currently scheduled to go ahead as planned」；11 日總罷工"
+    },
+    {
+      "title": "UEFA matches in Portugal postponed due to Storm Charles",
+      "publisher": "UEFA",
+      "date": "2026-11-10",
+      "url": "https://www.uefa.com/news-media/news/02ab-2209e8267c40-cadb2ec0869e-1000--uefa-matches-in-portugal-postponed-due-to-storm-charles/",
+      "note": "葡萄牙境內 UEFA 賽事延到 11 月 12 日"
+    },
+    {
+      "title": "Arsenal boss Renee Slegers: We will 'suffer' against Barcelona",
+      "publisher": "ESPN",
+      "date": "2026-11-11",
+      "url": "https://www.espn.com/soccer/story/_/id/50452175",
+      "note": "首發 13:10 UTC；2025 年決賽 1 比 0"
+    },
+    {
+      "title": "Where the 2026 Women's Champions League final was won: Barcelona 4-0 OL Lyonnes",
+      "publisher": "UEFA",
+      "date": "2026-05-24",
+      "url": "https://www.uefa.com/womenschampionsleague/news/02a5-20b2372a6365-2baba1547370-1000--where-the-2026-women-s-champions-league-final-was-won-barc/",
+      "note": "2026 年 5 月 23 日奧斯陸決賽；Pajor、Paralluelo 各兩球"
+    },
+    {
+      "title": "Women's Champions League standings",
+      "publisher": "ESPN",
+      "date": "2026-11-12",
+      "url": "https://site.api.espn.com/apis/v2/sports/soccer/uefa.wchampions/standings",
+      "note": "11 月 12 日 03:00 左右查閱"
+    },
+    {
+      "title": "Women's Champions League scoreboard, 10 November",
+      "publisher": "ESPN",
+      "date": "2026-11-10",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.wchampions/scoreboard?dates=20261110",
+      "note": "11 月 10 日第 4 輪賽果；11 月 12 日 17:45 UTC 巴薩對阿森納"
+    },
+    {
+      "title": "Yamal sparks controversy in Spain after De la Fuente's decision: has he become \"above the law\"?",
+      "publisher": "Goal",
+      "date": "2026-11-11",
+      "url": "https://www.goal.com/en/news/yamal-sparks-controversy-in-spain-after-de-la-fuente-s-decision-has-he-become-above-the-law/blt3b9f842240ae3660",
+      "note": "頁面標 Last updated 11 Nov 2026, 11:39；引文為 Goal 英文版"
+    },
+    {
+      "title": "Czechia vs Spain UEFA Nations League A preview: All you need to know",
+      "publisher": "Goal",
+      "date": "2026-11-10",
+      "url": "https://www.goal.com/en/news/czechia-spain-uefa-nations-league-preview/blt45cbbe8b2225b2a8",
+      "note": "捷克對西班牙；預測先發有 Pedri、Cubarsí（教練未公布）"
+    },
+    {
+      "title": "Barça's Lamine Yamal (knee) to miss next Spain Nations League game",
+      "publisher": "ESPN",
+      "date": "2026-11-09",
+      "url": "https://www.espn.com/soccer/story/_/id/50431764",
+      "note": "亞馬爾缺捷克、預計回英格蘭一戰"
+    },
+    {
+      "title": "After Barcelona's concerns: an indirect message from Ancelotti to Flick",
+      "publisher": "Goal",
+      "date": "2026-11-10",
+      "url": "https://goal.com/en/news/after-barcelona-s-concerns-an-indirect-message-from-ancelotti-to-flick/blt1e34f39bf83dcb1c",
+      "note": "頁面標 2026-11-10 13:40（UTC-6）；Globo Esporte 經 Sport；弗利克的話沒標日期"
+    },
+    {
+      "title": "International friendlies scoreboard",
+      "publisher": "ESPN",
+      "date": "2026-11-14",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/scoreboard?dates=20261114",
+      "note": "巴西對日本 10:15 UTC、新加坡國家體育場；11 月 17 日巴西對新加坡 10:00 UTC；11 月 15 日西班牙對英格蘭 19:45 UTC"
+    },
+    {
+      "title": "Man United near Mauricio Pochettino deal, Michael Carrick awaits verdict - sources",
+      "publisher": "ESPN",
+      "date": "2026-11-11",
+      "url": "https://www.espn.com/soccer/story/_/id/50451384",
+      "note": "首發 17:09 UTC（台灣 11 月 12 日 01:09）"
+    },
+    {
+      "title": "Kylian Mbappé (hamstring) set to miss France clash with Italy",
+      "publisher": "ESPN",
+      "date": "2026-11-11",
+      "url": "https://www.espn.com/soccer/story/_/id/50452835",
+      "note": "AP 稿；《隊報》"
+    },
+    {
+      "title": "France woes mount as Tchouaméni, Thuram leave squad due to injuries",
+      "publisher": "ESPN",
+      "date": "2026-11-11",
+      "url": "https://www.espn.com/soccer/story/_/id/50446771",
+      "note": "首發 01:23 UTC（台灣 11 月 11 日 09:23）；法國 4 場 10 分"
+    },
+    {
+      "title": "Kane thanks doctor who reinvigorated his career ahead of record-breaking 126th cap",
+      "publisher": "ESPN",
+      "date": "2026-11-11",
+      "url": "https://www.espn.com/soccer/story/_/id/50453418",
+      "note": "首發 17:52 UTC"
+    },
+    {
+      "title": "Courtois on Mourinho: Madrid need a coach with his personality",
+      "publisher": "ESPN",
+      "date": "2026-11-11",
+      "url": "https://www.espn.com/soccer/story/_/id/50452113",
+      "note": "首發 12:08 UTC"
+    },
+    {
+      "title": "Arsenal's Martin Zubimendi denies wanting to leave amid Atlético Madrid links",
+      "publisher": "ESPN",
+      "date": "2026-11-11",
+      "url": "https://www.espn.com/soccer/story/_/id/50451966",
+      "note": "首發 11:37 UTC；原始訪問為《馬卡報》"
+    },
+    {
+      "title": "Fenerbahçe: Kuyt leaves a week after defeating Liverpool",
+      "publisher": "ESPN",
+      "date": "2026-11-11",
+      "url": "https://www.espn.com/soccer/story/_/id/50452035",
+      "note": "Dirk Kuyt leaves Fenerbahce a week after defeating Liverpool；首發 11:27 UTC"
+    },
+    {
+      "title": "Fujino brace gives Man City first UWCL win with rout of Inter",
+      "publisher": "ESPN",
+      "date": "2026-11-10",
+      "url": "https://www.espn.com/soccer/report/_/gameId/401916988",
+      "note": "曼城 4 比 1 國米；同日賽果另核對 ESPN scoreboard"
+    },
+    {
+      "title": "First Team Schedule",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-12",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/schedule",
+      "note": "11 月 22 日 14:00（西班牙時間）Confirmed；11 月 25 日歐冠客場 Sabah 18:45；11 月 29 日 Deportivo 16:15；12 月 2 日馬競 21:30；12 月 6 日塞爾塔待定"
+    },
+    {
+      "title": "FC Barcelona vs Villarreal CF, matchday 13",
+      "publisher": "LaLiga",
+      "date": "2026-11-12",
+      "url": "https://www.laliga.com/en-GB/match/temporada-2026-2027-laliga-ea-sports-fc-barcelona-villarreal-cf-13",
+      "note": "英國版顯示 13:00（英國時間）＝台灣 21:00"
+    },
+    {
+      "title": "Barcelona schedule",
+      "publisher": "ESPN",
+      "date": "2026-11-12",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/83/schedule?fixture=true",
+      "note": "11 月 22 日 13:00Z、29 日 15:15Z、12 月 2 日 20:30Z"
+    },
+    {
+      "title": "LaLiga standings",
+      "publisher": "ESPN",
+      "date": "2026-11-12",
+      "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+      "note": "11 月 12 日查閱：巴薩 33、皇馬 30、馬競 28，各 12 場"
+    },
+    {
+      "title": "Work continues at the Ciutat Esportiva",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-10",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4607323/work-continues-at-the-ciutat-esportiva",
+      "note": "團練休到 11 月 16 日週一"
+    },
+    {
+      "title": "File:UWCL 2025-26 Final A40.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-05-23",
+      "url": "https://commons.wikimedia.org/wiki/File:UWCL_2025-26_Final_A40.jpg",
+      "note": "頭圖，CC BY 4.0，MichaelEmilio"
+    }
+  ]
+}
