@@ -10,7 +10,7 @@
 // reach (scripts/nest-worker.js, a Cloudflare Worker on the free tier): with config.json `nest.api` set, syncNest()
 // posts what this phone fed (and the bird's name when it changed here) and takes back the yard's members, every feed
 // and the name; without it the yard is this phone alone and says so. The bird never dies.
-import { esc, store, twNow, fmtDate, toast, paragraphs } from "./util.js";
+import { esc, store, twNow, fmtDate, toast, paragraphs, within } from "./util.js";
 import { wmoWord } from "./wetter.js"; // the real sky over the yard: Taichung's, as the front page's 今日氣象 keeps it (rm.wx)
 import { CITY_META } from "./cities.js"; // the 30 cities abroad, their sights' names and souvenirs (the drawings: postcard.js, loaded when shown)
 
@@ -49,8 +49,7 @@ export function feedNest(k) {
   if (n.feeds.some((f) => f.w === n.me && f.k === k)) return false;
   const f = { d: twNow().date, w: n.me, k };
   n.feeds.push(f); n.pending.push(f);
-  save(n);
-  return true;
+  return save(n); // false when the phone could not keep it (storage full): no bite is announced that is gone at the next start
 }
 
 // ——— The bird's name ———
@@ -121,6 +120,10 @@ function cn(n) {
   String(n).split("").map(Number).reverse().forEach((x, i) => { if (x) { out = d[x] + u[i] + out; zero = false; } else if (!zero && out) { out = d[0] + out; zero = true; } });
   return out.replace(/零+$/, "");
 }
+// A count of things: two of them are 兩 (兩首歌、兩天後、兩根樹枝); cn stays for the ordinals (第二首) and the rest.
+function qty(n) {
+  return n === 2 ? "兩" : cn(n);
+}
 const addDays = (iso, n) => new Date(Date.parse(`${iso}T00:00:00Z`) + n * 864e5).toISOString().slice(0, 10);
 // The yard follows the real year, whatever the reading (the owner, 2026-11-09, on my proposal: 四季與節日跟真實日期走、
 // 每年一輪的故事): blossom in spring, full leaf in summer, leaves turning and falling in autumn, snow on the branch in
@@ -134,7 +137,7 @@ function storyOf(total, songs, since, date) {
   const s = { season, mate, molt: m === 9 || m === 10, rebuilt: m === 3, eggs: mate && (m === 4 || m === 5), chicks: mate && m === 6, fledged: mate && m === 7,
     christmas: m === 12 && d >= 20 && d <= 26, birthday: Boolean(since) && since.slice(5) === date.slice(5) && since < date, years: since ? y - Number(since.slice(0, 4)) : 0, hundredth: songs > 0 && songs % 100 === 0 };
   const lines = [];
-  if (s.birthday) lines.push(`今天是院子開張${s.years === 1 ? "一週年" : `${cn(s.years)}週年`}。`);
+  if (s.birthday) lines.push(`今天是院子開張${s.years === 1 ? "一週年" : `${qty(s.years)}週年`}。`);
   if (s.hundredth) lines.push(`第${cn(songs)}首歌學會了。`);
   if (s.molt) lines.push("秋天換羽，顏色會淡一陣子，新的羽毛長出來就回來。");
   if (s.rebuilt) lines.push("春天，巢重新築過了。");
@@ -201,7 +204,8 @@ export function lifeOf(n, today = twNow().date, from = EVENTS_FROM) {
       if (!sick && !trip && si >= 1 && lastFed && daysTo(lastFed, d) > LIFE.idle && d >= addDays(from, LIFE.idle)) {
         const need = Math.min(15, 9 + 2 * (daysTo(lastFed, d) - LIFE.idle - 1));
         sick = { since: d, need, left: need, why: "neglect" };
-        events.push({ d, kind: "sick", text: `好幾天沒有人來餵，${N}著涼生病了。要 ${need} 口才會好。`, photo: true, sick: true });
+        const gap = daysTo(lastFed, d) - 1; // whole days nobody came: one is enough (LIFE.idle), and one is not 好幾天
+        events.push({ d, kind: "sick", text: `${gap <= 1 ? "昨天" : `${qty(gap)}天`}沒有人來餵，${N}著涼生病了。要 ${need} 口才會好。`, photo: true, sick: true });
       }
       if (!sick && !trip && si >= 1) {
         const r = roll(d, "day"), wet = m >= 7 && m <= 10, canGo = si >= 3 && !(g >= 500 && m >= 4 && m <= 6);
@@ -393,7 +397,7 @@ function sceneSvg(it, story) {
   return out.join("");
 }
 // The mate (storyOf): a second, slightly smaller robin at the right end of the branch, facing the same way.
-const mateSvg = (st) => `<g class="mate" transform="translate(37 23.85) scale(.55)">${robinSvg({ ...st, mature: Math.min(st.mature, .5) }, { perch: false })}</g>`;
+const mateSvg = (st) => `<g class="mate" transform="translate(37 23.85) scale(.55)">${robinSvg({ ...st, sick: null, mature: Math.min(st.mature, .5) }, { perch: false })}</g>`; // the cold is the one bird's: no scarf or heavy eyelid on its mate
 // Two layers (the owner, 2026-11-09: 樹葉枝枒不應該跟著鳥飛): the scene — perch, nest, leaves, the mate, the year — stands
 // still in its own svg, and only the robin's svg hops, looks round and flies (liveBird animates .robin).
 const PERCH = (long) => `<path class="r-perch" d="M13 53 L${long ? 61 : 51} 53"/>`;
@@ -579,8 +583,12 @@ function realSky() {
 }
 // the sky for this bird today: the yard's own weather or mood of the day keeps its look
 function yardSky(st) {
-  const sky = realSky(), own = st && (st.hiding || st.mood || st.away || st.life?.todays?.some((e) => e.kind === "rain" || e.kind === "storm"));
-  if (own) { sky.kind = ""; sky.cold = false; }
+  // The yard's own rain or typhoon day (lifeOf) rains in the yard, on every phone and whatever the hour's real weather:
+  // blanked like the other days of its own, it was drawn dry — under the moon and stars at night — while the page said
+  // 下了一整天雨 (audit 2026-11-11). A cat, a mood or a trip keeps its own look, without the real weather.
+  const sky = realSky(), wet = st?.life?.todays?.find((e) => e.kind === "rain" || e.kind === "storm");
+  if (wet) { sky.kind = wet.kind; sky.cold = false; }
+  else if (st && (st.hiding || st.mood || st.away)) { sky.kind = ""; sky.cold = false; }
   return sky;
 }
 function skyArt(sky, L, sea) {
@@ -595,18 +603,18 @@ function skyArt(sky, L, sea) {
   if (sky.kind === "cloud" || sky.kind === "rain" || sky.kind === "storm") out.sky += `<rect class="w-overcast" x="0" y="0" width="300" height="${hy}"/>`;
   return out;
 }
-const nextLine = (st) => (st.away ? `${st.back <= 1 ? "明天" : `${cn(st.back)}天後`}從${st.away.place}回來` : st.sick ? `再 ${st.sick.left} 口藥就會好` : `再 ${st.toNext} 口就${st.next.zh}`);
+const nextLine = (st) => (st.away ? `${st.back <= 1 ? "明天" : `${qty(st.back)}天後`}從${st.away.place}回來` : st.sick ? `再 ${st.sick.left} 口藥就會好` : `再 ${st.toNext} 口就${st.next.zh}`);
 const bar = (st) => { const w = st.away ? 1 - st.back / Math.max(1, daysTo(st.away.from, st.away.until) + 1) : st.sick ? 1 - st.sick.left / st.sick.need : (st.total - st.from) / Math.max(1, st.next.at - st.from);
   return `<span class="bar${st.sick ? " sick" : st.away ? " away" : ""}"><i style="width:${Math.round(Math.max(0, Math.min(1, w)) * 100)}%"></i></span><span class="next">${esc(nextLine(st))}</span>`; };
 // What it is doing today, when something is going on: ill, away, hiding, a guest, a find.
 const lifeLine = (st) => {
   const N = esc(st.pet.name), P = st.pet.p;
-  if (st.away) return `${N}去${esc(st.away.place)}旅行了，${st.back <= 1 ? "明天" : `${cn(st.back)}天後`}回來。你們讀的每一篇，${P}在路上都收到了，像收信一樣，只是這幾口不算長大。`;
+  if (st.away) return `${N}去${esc(st.away.place)}旅行了，${st.back <= 1 ? "明天" : `${qty(st.back)}天後`}回來。你們讀的每一篇，${P}在路上都收到了，像收信一樣，只是這幾口不算長大。`;
   if (st.sick) return `${N}${st.sick.why === "neglect" ? "著涼生病了" : "感冒了"}，縮在巢裡。${st.life.dosed ? `今天的藥吃夠了，再讀的會讓${P}長大；明天接著吃，再 ${st.sick.left} 口就會好。` : `讀的幾篇先當藥吃，再 ${st.sick.left} 口就會好。`}`;
   return st.life.todays.map((e) => e.text).join(""); // today's own events (a guest, a find, a cat, getting well, coming home)
 };
 // Under the name: the stage, and for the singer how many songs it knows.
-const stageLine = (st) => `<span class="stage">${esc(st.stage.zh)}<i>${esc(st.stage.de)}</i>${st.songs ? `<em>會唱${st.songs === 1 ? "一首歌" : `${cn(st.songs)}首歌`}</em>` : ""}</span>`;
+const stageLine = (st) => `<span class="stage">${esc(st.stage.zh)}<i>${esc(st.stage.de)}</i>${st.songs ? `<em>會唱${st.songs === 1 ? "一首歌" : `${qty(st.songs)}首歌`}</em>` : ""}</span>`;
 
 // The plate at the head of 收藏 (app.js viewSaved; the owner, 2026-11-09: 放到收藏會好一點 — the yard is the reader's own
 // thing, like the stamps): a framed card the width of the shelf, the bird on its perch at the left, the bird's name,
@@ -678,10 +686,17 @@ export function liveBird(root, { fly = true } = {}) {
     lastFly = i;
     return () => { bird.classList.add("flying"); return fliers[i]().finally(() => bird.classList.remove("flying")); };
   };
+  // One loop a bird: waking it (pokeBird) comes here again, and a second loop doubled every hop and flight. Told
+  // goodnight after the loop began (sayGoodnight), it sits still until it is woken (audit 2026-11-11: 說了晚安還在飛).
+  if (bird._live) return;
+  bird._live = true;
   (async () => {
     await wait(between(800, 2000));
-    while (bird.isConnected) { await pick()(); await wait(between(1800, 6000)); }
-    timers.forEach(clearTimeout);
+    while (bird.isConnected) {
+      if (bird.classList.contains("napping")) { await wait(1000); continue; }
+      await pick()(); await wait(between(1800, 6000));
+    }
+    timers.forEach(clearTimeout); bird._live = false;
   })();
 }
 // Out of the yard and across the paper (the owner, 2026-11-09: 我在滑首頁的時候鳥會飛出來; 2026-11-10: 每次都不一樣的
@@ -831,7 +846,9 @@ export function flyBy() {
   else if (flutterOff) { timers.push(setTimeout(() => flap?.classList.add("flutter"), flutterOn)); timers.push(setTimeout(() => flap?.classList.remove("flutter"), flutterOff)); }
   for (const el of [back, front]) el.animate(nestKf, { duration: total, fill: "both" });
   const done = () => { timers.forEach(clearTimeout); back.remove(); front.remove(); bird.remove(); };
-  bird.animate(kf, { duration: total, easing: "linear", fill: "both" }).finished.then(done, done);
+  const flight = bird.animate(kf, { duration: total, easing: "linear", fill: "both" });
+  flight.finished.then(done, done);
+  bird.addEventListener("click", () => flight.cancel()); // tapped: the link opens the yard, where the bird sits — its flying copy and the little nest go at once, not across the yard page for seconds more
   return true;
 }
 // The front page's scroll handler (app.js viewFront): a first fly-by after a little scrolling, then now and then — a
@@ -892,7 +909,8 @@ let actx = null;
 export const soundOn = () => nest()?.sound !== false;
 export function setSound(on) { const n = nest(); if (n) { n.sound = Boolean(on); save(n); } }
 function audio() {
-  try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); if (actx.state === "suspended") actx.resume(); return actx; } catch { return null; }
+  // anything but running is woken: the iPhone leaves the context "interrupted" (not "suspended") after a call, a lock or another app, and the bird stayed mute until the app was closed
+  try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); if (actx.state !== "running") actx.resume()?.catch?.(() => {}); return actx; } catch { return null; }
 }
 function whistle(ctx, t0, f0, f1, dur, vol = .11, type = "sine") {
   const o = ctx.createOscillator(), g = ctx.createGain();
@@ -956,7 +974,15 @@ export function playMotif(str) {
   }
   return (at - ctx.currentTime) * 1000;
 }
-const sing = (name) => { const m = MOTIF.get(name); if (!(m && playMotif(m))) chirp("song"); };
+// One song at a time: a tap while a tune is still sounding (they run up to five seconds) starts no second one over it.
+// Answers how long the tune lasts in ms (0: the bird's own short warble; -1: still singing the last one).
+let songEnd = 0;
+const sing = (name) => {
+  if (performance.now() < songEnd) return -1;
+  const m = MOTIF.get(name), ms = m ? playMotif(m) : 0;
+  if (ms) songEnd = performance.now() + ms; else chirp("song");
+  return ms;
+};
 
 // ——— A tap on the bird ———
 // In the yard the bird answers a tap (the owner, 2026-11-09: 在後院點一下鳥可以有互動): it tilts its head, calls, hops a
@@ -969,7 +995,7 @@ export function pokeBird(root, st) {
   if (!bird || !robin || poking) return;
   poking = true;
   const n = st.pet.name, p = st.pet.p;
-  const say = (text) => { const l = root.querySelector(".poke-line"); if (!l) return; l.textContent = text; l.classList.add("on"); clearTimeout(l._t); l._t = setTimeout(() => l.classList.remove("on"), 2400); };
+  const say = (text, ms = 2400) => { const l = root.querySelector(".poke-line"); if (!l) return; l.textContent = text; l.classList.add("on"); clearTimeout(l._t); l._t = setTimeout(() => l.classList.remove("on"), ms); };
   const still = calm();
   const run = (frames, ms, easing = "ease-in-out") => still ? Promise.resolve() : robin.animate(frames, { duration: ms, easing, fill: "none", composite: "add" }).finished.catch(() => {});
   const T = (x, y, rot = 0, sx = 1) => ({ transform: `translate(${x}px, ${y}px) rotate(${rot}deg) scaleX(${sx})` });
@@ -1001,7 +1027,9 @@ export function pokeBird(root, st) {
       async () => { chirp("hop"); say(`${n}跳近了一點。`); await run([T(0, 0), T(-9, -8), T(-16, 0), T(-16, 0), T(-8, -6), T(0, 0)], 1400, "ease-out"); },
       async () => { chirp("rustle"); say(`${n}抖了抖羽毛。`); await run([T(0, 0), T(0, 0, 0, 1.07), T(0, 0, 0, .94), T(0, 0, 0, 1.06), T(0, 0, 0, .96), T(0, 0)], 700, "linear"); },
     ];
-    if (st.songs) { const named = st.songNames.filter(Boolean); picks.push(async () => { const pick = named.length ? named[Math.floor(Math.random() * named.length)] : ""; sing(pick); say(`${n}唱起${pick || `第${cn(1 + Math.floor(Math.random() * st.songs))}首歌`}。`); notes(3); await run([T(0, 0), T(0, -2, -4), T(0, 0), T(0, -2, -4), T(0, 0)], 1400); }); }
+    if (st.songs) { const named = st.songNames.filter(Boolean); picks.push(async () => { const pick = named.length ? named[Math.floor(Math.random() * named.length)] : "", ms = Math.max(0, sing(pick)); say(`${n}唱起${pick || `第${cn(1 + Math.floor(Math.random() * st.songs))}首歌`}。`, Math.max(2400, ms)); notes(3);
+      // the tap is let go only when the tune is over: the next one used to start a second song on top of it
+      await Promise.all([run([T(0, 0), T(0, -2, -4), T(0, 0), T(0, -2, -4), T(0, 0)], 1400), new Promise((r) => setTimeout(r, ms))]); }); }
     act = picks[Math.floor(Math.random() * picks.length)];
   }
   act().finally(() => { poking = false; });
@@ -1038,20 +1066,28 @@ export function renderNest(el, api, afterSync = false) {
   // said goodnight here tonight: asleep on its branch for the rest of the night, whatever the visit's moment was
   const moment = gn.asleep && st.si > 0 && !st.away && !st.hiding && !st.mood ? NAP : visitMoment;
   const names = Object.entries(n.members || {}).map(([id, name]) => `<li><span>${id === n.me ? `${esc(name)}（你）` : esc(name)}</span><b>${st.members[id] || 0} 口</b></li>`).join("");
-  const wk = st.week.map((w) => `<li${w.d === today ? ' class="today"' : ""}><i style="height:${Math.min(100, w.n * 14)}%"></i><span>${Number(w.d.slice(8))}</span></li>`).join("");
-  const synced = n.synced ? `上次同步 ${new Date(n.synced).toLocaleTimeString("zh-TW", { hour: "2-digit", minute: "2-digit", hour12: false })}` : "";
-  const got = Object.entries(st.items).map(([k, c]) => `${cn(c)}${THINGS[k]}`);
+  // the bars against the week's fullest day (eight bites at least, so a quiet week is not drawn tall): at 14% a bite
+  // every day from eight bites up was the same full bar, and two readers pass that most days (audit 2026-11-11)
+  const wkTop = Math.max(8, ...st.week.map((w) => w.n));
+  const wk = st.week.map((w) => `<li${w.d === today ? ' class="today"' : ""} aria-label="${Number(w.d.slice(8))} 日 ${w.n} 口" title="${w.n} 口"><i style="height:${Math.round((w.n / wkTop) * 100)}%"></i><span>${Number(w.d.slice(8))}</span></li>`).join("");
+  const moreOpen = Boolean(el.querySelector(".nest-more")?.open); // the page is drawn again as the sync, the goodnights and the diary arrive: 院子裡有什麼 stays open if the reader opened it
+  // When the yard last answered, in Taiwan time like every other hour on the page, with its day once that is not
+  // today; and the bites still on this phone only, so a reader offline for a while can tell the others have not seen
+  // them (audit 2026-11-11: a bare 上次同步 14:05 two days old read as today's, and nothing said three bites were waiting).
+  const syncDay = n.synced ? new Date(n.synced + 8 * 3600e3).toISOString().slice(0, 10) : "", waiting = (n.pending || []).length;
+  const synced = n.synced ? `上次同步 ${syncDay === today ? "" : `${mdZh(syncDay)} `}${hhmm(new Date(n.synced).toISOString())}${waiting ? `。有 ${waiting} 口還沒送到院子，連上網路會自己補上` : ""}` : waiting ? `還沒同步過；有 ${waiting} 口等連上網路再送` : "";
+  const got = Object.entries(st.items).map(([k, c]) => `${qty(c)}${THINGS[k]}`);
   el.innerHTML = `${head}
     <div class="nest-stage">${inYard("page", sea, birdSvg(st), moment, sky)}${moment ? `<p class="moment">${esc(moment === NAP && gn.asleep ? `${pet.name}把頭埋進羽毛裡，睡了。` : moment.say(st.si > 0 && !st.away ? pet.name : "", mc))}</p>` : ""}<p class="poke-line" aria-live="polite"></p>
       ${st.si > 0 && !st.away ? gnHtml(gn, pet) : ""}
       <b>${esc(pet.name)}</b>${stageLine(st)}
-      <p class="say">${st.away || st.sick ? lifeLine(st) : st.songs > 1 ? `又學會了一首，現在會唱${cn(st.songs)}首歌；每首都比上一首長一點。` : esc(st.stage.say(pet.p))}</p>
+      <p class="say">${st.away || st.sick ? lifeLine(st) : st.songs > 1 ? `又學會了一首，現在會唱${qty(st.songs)}首歌；每首都比上一首長一點。` : esc(st.stage.say(pet.p))}</p>
       ${!st.away && !st.sick && st.life.todays.length ? `<p class="life">${lifeLine(st)}</p>` : ""}
       <p class="today">${st.away ? (st.fed ? `今天寄了 ${st.fed} 封信給${esc(pet.p)}：${st.who.join("、")}。` : `今天還沒有人寫信給${esc(pet.p)}。`) : st.fed ? `今天吃了 ${st.fed} 口：${st.who.join("、")}。${st.everyone > 1 ? "大家都餵過了。" : ""}` : st.hunger}</p>
       ${st.si ? `<p class="season">${esc(st.story.line)}</p>` : ""}
-      ${st.story?.birthday ? `<p class="season"><a href="#/nest/album">今天院子滿${st.story.years === 1 ? "一" : cn(st.story.years)}年，${esc(pet.name)}的年鑑做好了 →</a></p>` : ""}
+      ${st.story?.birthday ? `<p class="season"><a href="#/nest/album">今天院子滿${st.story.years === 1 ? "一" : qty(st.story.years)}年，${esc(pet.name)}的年鑑做好了 →</a></p>` : ""}
       ${bar(st)}
-      <details class="nest-more"><summary>院子裡有什麼<span class="de">Inventar</span></summary>
+      <details class="nest-more"${moreOpen ? " open" : ""}><summary>院子裡有什麼<span class="de">Inventar</span></summary>
         <p class="small">全院一共讀了 ${st.read} 篇${n.since ? `，從 ${esc(fmtDate(n.since, "short"))} 開院算起` : ""}${st.read > st.total ? `，其中 ${st.total} 口讓${esc(pet.p)}長大` : ""}${got.length ? `。院子裡有${got.join("、")}` : ""}${st.story.mate ? "，還有一隻伴侶" : ""}。</p>
         ${st.life.treasures.length ? `<p class="small">巢裡藏著的寶貝：${st.life.treasures.map(esc).join("、")}。</p>` : ""}
         ${st.songs ? `<p class="small songs">會唱的歌：${st.songNames.map((s, i) => s ? esc(s) : `第${cn(i + 1)}首`).join("、")}。</p>` : ""}</details>
@@ -1072,7 +1108,7 @@ export function renderNest(el, api, afterSync = false) {
   el.querySelector("[data-gn]")?.addEventListener("click", () => sayGoodnight(stageEl, api, pet));
   if (!afterSync) {
     const again = () => { if (el.isConnected && location.hash === "#/nest") renderNest(el, api, true); };
-    syncNest(api).then((ok) => { if (ok) again(); return visitExtras(el, api, again); });
+    syncNest(api).then((ok) => { if (ok) again(); return visitExtras(el, api, again, ok); });
   }
 }
 // ——— 晚安 (the owner, 2026-11-10, from my list of ideas: 3) ———
@@ -1097,7 +1133,8 @@ function gnHtml(g, pet) {
   const N = esc(pet.name);
   if (g.evening) return `<div class="gn">${g.mine ? `<p class="gn-said">${MOON_GN}你 ${hhmm(g.mine.at)} 跟${N}說了晚安。${g.tonight.length ? `${g.tonight.join("、")} 也說了。` : ""}</p>`
     : `<button class="btn ghost gn-btn" type="button" data-gn>${MOON_GN}跟${N}說晚安</button>${g.tonight.length ? `<p class="gn-said">${g.tonight.join("、")} 已經跟${N}說了晚安。</p>` : ""}`}</div>`;
-  return g.last.length ? `<div class="gn"><p class="gn-said">${MOON_GN}昨晚 ${g.last.join("、")}，跟${N}說了晚安。</p></div>` : "";
+  // one person: 昨晚 23:40，你跟小瓜說了晚安。 Two: 昨晚 23:40 你、00:20 小美，跟小瓜說了晚安。
+  return g.last.length ? `<div class="gn"><p class="gn-said">${MOON_GN}昨晚 ${g.last.length === 1 ? g.last[0].replace(" ", "，") : `${g.last.join("、")}，`}跟${N}說了晚安。</p></div>` : "";
 }
 const MOON_GN = `<svg class="gn-moon" viewBox="0 0 64 64" aria-hidden="true"><path d="M40 8a24 24 0 1 0 16 38A20 20 0 0 1 40 8z"/></svg>`;
 const yardUrl = (api, n, sub) => `${api.replace(/\/$/, "")}/${encodeURIComponent(n.code)}/${sub}`;
@@ -1105,7 +1142,7 @@ async function sendGoodnight(api) {
   const n = nest();
   if (!n || !api) return false;
   try {
-    const r = await fetch(yardUrl(api, n, "goodnight"), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me }) });
+    const r = await fetch(yardUrl(api, n, "goodnight"), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me }), ...within(15000) });
     const d = r.ok ? await r.json() : null, cur = nest();
     if (!cur || cur.code !== n.code || !Array.isArray(d?.goodnights)) return false; // not yet deployed: the main store answers instead
     cur.gn = d.goodnights; delete cur.gnPending; save(cur);
@@ -1131,7 +1168,7 @@ async function loadGoodnights(api) {
   if (!n || !api) return false;
   if (n.gnPending && n.gnPending === nightOf()) return sendGoodnight(api);
   try {
-    const r = await fetch(yardUrl(api, n, "goodnight"), { cache: "no-store" });
+    const r = await fetch(yardUrl(api, n, "goodnight"), { cache: "no-store", ...within(15000) });
     const d = r.ok ? await r.json() : null, cur = nest();
     if (!cur || cur.code !== n.code || !Array.isArray(d?.goodnights)) return false;
     const mine = cur.gnPending ? gnList(cur).filter((g) => g.w === cur.me && g.n === cur.gnPending) : [];
@@ -1171,7 +1208,7 @@ function diaryFacts(n, from, to) {
     out.push(lines.join("\n"));
   }
   const sky = realSky();
-  if (sky.word) out.push(`今天早上的天氣：${sky.word}${sky.temp != null ? `，${sky.temp} 度` : ""}`);
+  if (sky.word) out.push(`${twNow().minutes < 12 * 60 ? "今天早上" : "現在"}的天氣：${sky.word}${sky.temp != null ? `，${sky.temp} 度` : ""}`); // the hour's weather: 早上 only when the first visit of the day is in the morning
   return out.join("\n").slice(0, 3800);
 }
 async function loadDiary(api) {
@@ -1179,7 +1216,7 @@ async function loadDiary(api) {
   if (!n || !api || diaryOff) return false;
   let changed = false;
   try {
-    const r = await fetch(yardUrl(api, n, "diary"), { cache: "no-store" });
+    const r = await fetch(yardUrl(api, n, "diary"), { cache: "no-store", ...within(15000) });
     if (r.status === 403) { diaryOff = true; return false; } // not a yard with a diary
     const d = r.ok ? await r.json() : null, cur = nest();
     if (!cur || cur.code !== n.code || !Array.isArray(d?.entries)) return false; // not yet deployed
@@ -1187,7 +1224,14 @@ async function loadDiary(api) {
   } catch { return false; }
   return changed;
 }
-async function writeDiary(api) {
+// One writing at a time, and whoever asks while it runs waits for the same one: a second visit to the yard during the
+// POST (away to 往期 and back, 下拉更新) used to get `false` at once, draw 正在寫…… and never hear of the entry when it
+// landed on the first visit's page, by then off the screen (audit 2026-11-11).
+let diaryJob = null;
+function writeDiary(api) {
+  return (diaryJob ||= writeDiaryNow(api).finally(() => { diaryJob = null; }));
+}
+async function writeDiaryNow(api) {
   const n = nest(), today = twNow().date;
   if (!n || !api || diaryOff || diaryBusy || twNow().minutes < 5 * 60 || diaryList(n).some((e) => e.d === today)) return false;
   const since = [n.since, sortFeeds(n)[0]?.d].filter(Boolean).sort()[0];
@@ -1196,7 +1240,7 @@ async function writeDiary(api) {
   if (!since || from > to) return false; // a yard opened today has no yesterday yet
   diaryBusy = true;
   try {
-    const r = await fetch(yardUrl(api, n, "diary"), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me, from, facts: diaryFacts(n, from, to) }) });
+    const r = await fetch(yardUrl(api, n, "diary"), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me, from, facts: diaryFacts(n, from, to) }), ...within(60000) }); // the entry is written while the phone waits: a minute at most, then 正在寫…… goes and the next visit asks again
     const d = r.ok ? await r.json() : null, cur = nest();
     if (r.status === 403) diaryOff = true;
     if (!cur || cur.code !== n.code || !Array.isArray(d?.entries)) return false;
@@ -1215,10 +1259,12 @@ function diaryHtml(n, pet) {
 }
 // What a visit to the yard fetches besides the sync, once (not on the redraw after it): the goodnights, the diary, and
 // the morning's entry if nobody has written it yet. Each says whether the page should be drawn again.
-async function visitExtras(el, api, again) {
+async function visitExtras(el, api, again, synced = true) {
   const a = await Promise.all([loadGoodnights(api), loadDiary(api)]);
   if (a.some(Boolean)) again();
-  if (!diaryOff && nest() && !diaryList(nest()).some((e) => e.d === twNow().date) && twNow().minutes >= 5 * 60) {
+  // The day's one entry is written out of this phone's copy of the yard: only after a sync that worked, or the others'
+  // bites of last evening are missing from it and the entry, written once, says nobody came (audit 2026-11-11).
+  if (synced && !diaryOff && nest() && !diaryList(nest()).some((e) => e.d === twNow().date) && twNow().minutes >= 5 * 60) {
     const w = writeDiary(api);
     if (diaryBusy) { again(); await w; again(); } // 正在寫…, then the entry (or the busy line taken away)
   }
@@ -1233,7 +1279,7 @@ const pmark = (d) => `${Number(d.slice(8))}・${["I", "II", "III", "IV", "V", "V
 // The drawings (postcard.js and its 180 sights) are fetched the first time a card is on screen, not with the paper:
 // a card is first a plain one with its city's name, and is drawn as soon as they are in.
 let cardsMod = null;
-const loadCards = () => (cardsMod ||= import("./postcard.js"));
+const loadCards = () => (cardsMod ||= import("./postcard.js").catch((e) => { cardsMod = null; throw e; })); // a fetch that failed once (a tunnel, a stalled request) is tried again at the next card, not kept as the answer for the whole visit
 const waitingCards = new Map();
 let pcUid = 0;
 const labels = (pc) => `<span class="pc-greet">Grüße aus</span><b class="pc-place">${esc(pc.zh)}</b><i class="pc-de">${esc(pc.de)}</i>${pc.sightZh ? `<span class="pc-sight">${esc(pc.sightZh)}</span>` : ""}
@@ -1350,7 +1396,7 @@ export function albumOf(n = nest()) {
   let prev = storyOf(gBy(start), 0, since, start);
   for (let d = addDays(start, 1); d <= today; d = addDays(d, 1)) {
     const c = gBy(d), sg = c >= last ? 1 + Math.floor((c - last) / SONG) : 0, s2 = storyOf(c, sg, since, d), out = [];
-    if (s2.birthday) out.push({ text: `院子開張${s2.years === 1 ? "一週年" : `${cn(s2.years)}週年`}。`, big: true });
+    if (s2.birthday) out.push({ text: `院子開張${s2.years === 1 ? "一週年" : `${qty(s2.years)}週年`}。`, big: true });
     if (s2.season !== prev.season) out.push({ text: SEASONS[s2.season] });
     if (s2.molt && !prev.molt && c) out.push({ text: `${pet.p}開始換羽，顏色淡了一些。` });
     if (!s2.molt && prev.molt && c) out.push({ text: "新的羽毛長好了。" });
@@ -1379,6 +1425,9 @@ function yearbookOf(n, a = albumOf(n)) {
   if (!n || !a) return null;
   const life = lifeOf(n), today = twNow().date, start = a.start, last = STAGES[STAGES.length - 1].at;
   let k = 1; while (addYears(start, k) <= today) k++;
+  // On the birthday (the yard page says 年鑑做好了) and for the fortnight after it, the year shown is the one just
+  // finished, whole: the new year, a day old, has nothing to tell yet (audit 2026-11-11: the link opened 第二年, 1 天 0 口).
+  if (k > 1 && daysTo(addYears(start, k - 1), today) < 14) k--;
   const from = addYears(start, k - 1), end = addDays(addYears(start, k), -1), to = end < today ? end : today;
   const inR = (d) => d >= from && d <= to, name = (id) => n.members?.[id] || "朋友";
   const songsAt = (g) => (g >= last ? 1 + Math.floor((g - last) / SONG) : 0);
@@ -1432,22 +1481,37 @@ async function yearCard(y) {
     g.fillStyle = "#7A5F2A"; g.font = `30px ${serif}`; g.fillText(l, x, 566);
   });
   g.fillStyle = "#A5843F"; g.fillRect(130, 604, W - 260, 1);
-  g.fillStyle = "#1F1B16"; g.font = `36px ${serif}`;
-  const maxW = W - 260; let yy = 680;
-  for (const line of yearLines(y)) {
-    let cur = "";
-    for (const tok of line.match(/[A-Za-z0-9.%~–\-]+|./gu) || []) {
-      // closing punctuation stays at the end of the line before, an opening one goes down with what it opens
-      if (g.measureText(cur + tok).width > maxW && cur && !/^[，。、；：！？）」』》〉…]$/.test(tok)) { const open = cur.match(/[「『（《〈]+$/)?.[0] || ""; if (yy < H - 230) g.fillText(cur.slice(0, cur.length - open.length), 130, yy); yy += 54; cur = open + tok; } else cur += tok;
+  // The year's lines, broken into rows: [text, last row of its line]. A year with many songs and cities does not fit
+  // at 36px; the type steps down until every line is on the card — none is left out (audit 2026-11-11: 誰餵的 and the
+  // goodnights, the personal part, were the ones that fell off the bottom).
+  const maxW = W - 260, top = 680, room = H - 230 - top;
+  const wrap = (px) => {
+    g.font = `${px}px ${serif}`;
+    const rows = [];
+    for (const line of yearLines(y)) {
+      let cur = "";
+      for (const tok of line.match(/[A-Za-z0-9.%~–\-]+|./gu) || []) {
+        // closing punctuation stays at the end of the line before, an opening one goes down with what it opens
+        if (g.measureText(cur + tok).width > maxW && cur && !/^[，。、；：！？）」』》〉…]$/.test(tok)) { const open = cur.match(/[「『（《〈]+$/)?.[0] || ""; rows.push([cur.slice(0, cur.length - open.length), false]); cur = open + tok; } else cur += tok;
+      }
+      if (cur) rows.push([cur, true]);
     }
-    if (cur && yy < H - 230) g.fillText(cur, 130, yy);
-    yy += 72;
-  }
+    return rows;
+  };
+  const step = (px, end) => px * (end ? 2 : 1.5);
+  let px = 36, rows = wrap(px);
+  while (px > 22 && rows.reduce((h, [, end]) => h + step(px, end), 0) - step(px, true) >= room) { px -= 2; rows = wrap(px); }
+  g.fillStyle = "#1F1B16"; g.font = `${px}px ${serif}`;
+  let yy = top;
+  for (const [text, end] of rows) { g.fillText(text, 130, yy); yy += step(px, end); }
   g.fillStyle = "#998F7E"; g.font = `26px ${serif}`; g.fillText("知更鳥晨間記事・後院 Hinterhof", 130, H - 140);
   const blob = await new Promise((r) => c.toBlob(r, "image/png"));
   if (!blob) { toast("卡片做不出來"); return; }
   const file = new File([blob], `年鑑-${y.pet.name}-${y.k}.png`, { type: "image/png" });
-  if (navigator.canShare?.({ files: [file] })) { await navigator.share({ files: [file], title: `${y.pet.name}的年鑑` }).catch(() => {}); return; }
+  if (navigator.canShare?.({ files: [file] })) {
+    // closed by the reader: nothing more. Refused (iOS: the tap has aged while the card was drawn) or failed: keep it as a file instead of doing nothing.
+    try { await navigator.share({ files: [file], title: `${y.pet.name}的年鑑` }); return; } catch (e) { if (e?.name === "AbortError") return; }
+  }
   const url = URL.createObjectURL(blob), link = document.createElement("a");
   link.href = url; link.download = file.name; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 4000);
 }
@@ -1460,7 +1524,7 @@ export function renderNestAlbum(el, api, afterSync = false) {
   const grow = a.reached.map((x) => `<li class="${x.on ? "on" : ""}"><b>${esc(x.zh)}</b><span>${x.on ? esc(md(x.on)) : `再 ${x.at - a.g} 口`}</span></li>`).join("");
   let pic = 0, month = "";
   const shots = [], cards = []; // every print and postcard on the page, for the enlarged views
-  const cap = (p) => `${esc(md(p.date))}・${p.raw ? `第 ${p.raw} 口` : "開院"}`;
+  const cap = (p) => `${esc(md(p.date))}${p.raw ? `・第 ${p.raw} 口` : p.date === a.start ? "・開院" : ""}`; // a print from before the first bite (a season turning over the egg) is not the opening day's
   const photo = (p, big, text) => { const st = { ...a.lookAt(p.total, p.date, p.flags), pet }; const tilt = [-1.6, 1.2, -.8, 1.7, -1.2, .7][pic % 6]; shots.push({ p, text }); return `<figure class="nest-photo${big ? " big" : ""}" style="--tilt:${tilt}deg" data-shot="${pic++}" role="button" tabindex="0" aria-label="放大 ${esc(md(p.date))} 的照片">${birdSvg(st)}<figcaption>${cap(p)}</figcaption></figure>`; };
   const body = a.list.map((d) => {
     const m = d.date.slice(0, 7), head = m !== month ? `<h2 class="album-mon"><span>${Number(m.slice(5))} 月</span><i>${m.slice(0, 4)}</i></h2>` : "";
@@ -1535,7 +1599,8 @@ export function renderNestSettings(el, api, afterSync = false) {
     el.querySelector("[data-join]").onclick = (e) => {
       const code = normCode(el.querySelector("[data-join-code]").value);
       if (!CODE_RE.test(code)) { toast("邀請碼要像 NEST-XXXX-XXXX"); return; }
-      if (sure && !e.currentTarget.dataset.sure) { e.currentTarget.dataset.sure = "1"; e.currentTarget.textContent = "會離開現在的後院，確定就再按一次"; return; }
+      if (nest()?.code === code) { toast("你已經在這個後院了"); return; } // joining one's own yard again would make this phone a second, empty member of it
+      if (sure &&!e.currentTarget.dataset.sure) { e.currentTarget.dataset.sure = "1"; e.currentTarget.textContent = "會離開現在的後院，確定就再按一次"; return; }
       joinNest(code, el.querySelector("[data-join-name]").value.trim().slice(0, 12)); toast("加入了");
       if (location.hash === "#/nest") renderNest(el, api); else location.hash = "#/nest"; // the yard-less #/nest is this form: the same hash fires no hashchange, so draw (and sync) the yard here
     };
@@ -1558,7 +1623,7 @@ export function renderNestSettings(el, api, afterSync = false) {
       <input class="search" data-pet-name maxlength="12" value="${esc(pet.named ? pet.name : "")}" placeholder="牠的名字（最多 12 字）" aria-label="鳥的名字">
       <nav class="chips" aria-label="怎麼稱呼">${PRONOUNS.map((p) => `<button type="button" class="chip" data-p="${p}" aria-pressed="${p === pet.p}">${p}</button>`).join("")}</nav>
       <div class="btns"><button type="button" class="btn ghost" data-pet-save>改好了</button></div></section>
-    <section class="set"><h2>聲音</h2><p class="small">在後院點${pet.p}的時候會叫一聲。只有點的時候才響，不會自己叫。</p>
+    <section class="set"><h2>聲音</h2><p class="small">在後院點${pet.p}的時候會叫一聲。只有點的時候才響，不會自己叫。手機側邊的靜音開著時，聽不到。</p>
       <nav class="chips" aria-label="聲音"><button type="button" class="chip" data-snd="1" aria-pressed="${soundOn()}">開</button><button type="button" class="chip" data-snd="0" aria-pressed="${!soundOn()}">關</button></nav></section>
     <section class="set"><h2>邀請碼</h2><p class="small">給另一個有這份報紙的人，在設定裡的「後院」輸入，就進同一個院子。</p>
       <div class="nest-code"><code>${esc(n.code)}</code><button type="button" class="btn ghost" data-copy>複製</button></div></section>
@@ -1579,15 +1644,22 @@ export function renderNestSettings(el, api, afterSync = false) {
   el.querySelector("[data-pet-save]").onclick = () => {
     namePet(el.querySelector("[data-pet-name]").value, el.querySelector('.chips [aria-pressed="true"]')?.dataset.p);
     toast(petOf().named ? `${petOf().name}，記住了` : "名字拿掉了，叫回知更鳥");
+    const f = el.querySelector("[data-pet-name]"); f.defaultValue = f.value; // saved: not a field with something unsaved in it (busy)
     syncNest(api);
   };
   el.querySelector("[data-me-save]").onclick = () => {
     const cur = nest(), v = el.querySelector("[data-me-name]").value.trim().slice(0, 12);
     if (!cur || !v) { toast("名字不能空白"); return; }
-    cur.name = v; cur.members[cur.me] = v; save(cur); toast("記住了"); syncNest(api).then(() => el.isConnected && renderNestSettings(el, api, true));
+    cur.name = v; cur.members[cur.me] = v; save(cur); toast("記住了");
+    el.querySelector("[data-me-name]").defaultValue = v; // saved: no longer a field with something unsaved in it (busy)
+    syncNest(api).then(() => { if (el.isConnected && location.hash === "#/nest/settings" && !busy()) renderNestSettings(el, api, true); });
   };
   wireJoin(true);
-  if (!afterSync) syncNest(api).then((ok) => { if (ok && el.isConnected && location.hash === "#/nest/settings") renderNestSettings(el, api, true); });
+  // The page is drawn again once the yard has answered (names, the bird's name) — but not under the reader's hands: a
+  // field with the cursor in it or changed, or a button waiting for its second press (離開, 加入), keeps the page as it
+  // is; the redraw emptied the code being typed and put 確定離開？ back to its first label (audit 2026-11-11).
+  function busy() { return Boolean(el.querySelector("[data-sure]")) || [...el.querySelectorAll("input")].some((i) => i === document.activeElement || i.value !== i.defaultValue); }
+  if (!afterSync) syncNest(api).then((ok) => { if (ok && el.isConnected && location.hash === "#/nest/settings" && !busy()) renderNestSettings(el, api, true); });
 }
 
 // ——— Sharing ———
@@ -1606,7 +1678,7 @@ export function syncNest(api) {
     try {
       const body = { member: { id: n.me, name: n.name }, feeds: n.pending || [] };
       if (n.petDirty && n.pet) body.pet = n.pet;
-      const r = await fetch(`${api.replace(/\/$/, "")}/${n.code}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+      const r = await fetch(`${api.replace(/\/$/, "")}/${n.code}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body), ...within(15000) }); // a request left hanging (Wi-Fi to cellular, a tunnel) kept `syncing` set, and nothing was sent until the app was closed
       if (!r.ok) throw new Error(String(r.status));
       const data = await r.json();
       if (!data || typeof data.members !== "object" || !Array.isArray(data.feeds)) throw new Error("shape");

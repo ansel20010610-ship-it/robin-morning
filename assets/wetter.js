@@ -2,9 +2,14 @@
 // free, no key, and nothing of the reader's goes out but the city's coordinates. One answer serves the morning: it is
 // kept in localStorage (rm.wx) and reused while it is today's and under three hours old; when the network fails, today's
 // kept copy still serves, and with none the masthead simply has no line.
-import { esc, store, twNow } from "./util.js";
+import { esc, store, twNow, within } from "./util.js";
 
-const API = "https://api.open-meteo.com/v1/forecast?latitude=24.1477&longitude=120.6736&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&hourly=temperature_2m,precipitation_probability,weather_code&timezone=Asia%2FTaipei&forecast_days=1";
+// Today's kept copy whatever its age, or null: the front page draws the box out of it at once and lets the fresh answer
+// fill it in place — hidden until the network answered, it came in above the first article and pushed the page down
+// under the reader (the iPhone has no scroll anchoring; audit 2026-11-11).
+export const keptWeather = () => { const k = store.get("wx"); return k?.date === twNow().date && k.data ? k.data : null; };
+
+const API ="https://api.open-meteo.com/v1/forecast?latitude=24.1477&longitude=120.6736&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&hourly=temperature_2m,precipitation_probability,weather_code&timezone=Asia%2FTaipei&forecast_days=1";
 const MAX_AGE = 3 * 3600 * 1000;
 
 // The day's forecast as Open-Meteo sends it (daily.* one value each, hourly.* twenty-four), or null. Never throws.
@@ -13,7 +18,7 @@ export async function fetchWeather() {
   const todays = kept?.date === now.date && kept.data ? kept : null;
   if (todays && now.ms - Number(todays.at) < MAX_AGE) return todays.data;
   try {
-    const r = await fetch(API, { cache: "no-cache" });
+    const r = await fetch(API, { cache: "no-cache", ...within(8000) });
     if (!r.ok) throw new Error(String(r.status));
     const data = await r.json();
     if (!Array.isArray(data?.daily?.weather_code) || !Array.isArray(data?.hourly?.time)) throw new Error("shape");

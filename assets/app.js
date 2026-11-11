@@ -1,5 +1,5 @@
 // 知更鳥晨間記事 — app shell, routing and views.
-import { $, esc, inline, paragraphs, store, toast, twNow, fmtDate, getJSON, ICON, ROBIN_PATHS, roman, issueNo, issueNr } from "./util.js";
+import { $, esc, inline, paragraphs, store, toast, twNow, fmtDate, getJSON, within, ICON, ROBIN_PATHS, roman, issueNo, issueNr } from "./util.js";
 import { renderBody, renderHero } from "./blocks.js";
 import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasClient, isWebKitITP, isStandaloneIOS, exportLinkCode, importLinkCode, defaultPlaylist,
   autoPlaylist, setAutoPlaylist, choosePlaylist, autoAdd } from "./spotify.js";
@@ -10,7 +10,7 @@ import { initPull } from "./pull.js";
 import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pressRun, ripples, flip } from "./motion.js";
 import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
 import { pressHtml } from "./press.js";
-import { fetchWeather, weatherHtml } from "./wetter.js";
+import { fetchWeather, weatherHtml, keptWeather } from "./wetter.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { worldState, drawMap } from "./world.js";
@@ -23,7 +23,7 @@ const main = $("#main");
 async function loadData() {
   const [cfg, index] = await Promise.all([
     getJSON("content/config.json", { fresh: true }),
-    getJSON("content/index.json", { fresh: true }).catch(() => ({ issues: [] })),
+    getJSON("content/index.json", { fresh: true }).catch(() => ({ issues: [], failed: true })), // failed: viewFront says the index could not be read, not 創刊號即將出刊
     loadLate(),
     loadDays(),
     loadBook(), // content/serial.json (2.5 KB): the front page must know which installment is due today (serialDueOn)
@@ -46,7 +46,9 @@ const lateOf = (date) => S.late?.[date] || null;
 // 2026-11-08: 要等全部刊完才能拆包裹和郵票). From the next day on the issue counts as it stands, finished or not.
 // A 補刊 given up (late.py giveup, state unfinished) opens the day at once with what came (the owner, 2026-11-09).
 // Before late.json says anything, a quota Sunday by the shift reports (quotaHeld) is shut the same way.
-const issueOpen = (date) => { const l = lateOf(date); return l ? l.state === "done" || l.state === "unfinished" || date !== twNow().date : !quotaHeld(date); };
+// From 21:00 the status line itself gives the 補刊 up (lateText), whatever late.json says: the day opens then too, or the
+// page said 沒能全部完成 over a parcel still waiting for 下午補刊到齊 (audit 2026-11-11).
+const issueOpen = (date) => { const l = lateOf(date), gaveUp = twNow().minutes >= 21 * 60; return l ? l.state === "done" || l.state === "unfinished" || date !== twNow().date || gaveUp : !quotaHeld(date) || gaveUp; };
 // 額度週日 by the index's own shift reports (scripts/late.py hold()'s rule): today, a Sunday short of a column, with a
 // night shift that never reported — held whatever the hour, as hold(), since late.json may not come until the 15:07
 // 補刊 has started and pushed, or at all. The status line and issueOpen both go by it, so a late.json that arrives
@@ -134,7 +136,7 @@ function toggleSaved(k) {
   const s = saved();
   const i = s.indexOf(k);
   if (i >= 0) s.splice(i, 1); else s.unshift(k);
-  store.set("saved", s);
+  if (!store.set("saved", s)) { toast("手機的儲存空間滿了，收藏存不進去"); return null; } // not a filled star and 已收藏 for a piece that is gone at the next start
   return i < 0;
 }
 // What was read in this visit is also kept in memory (readNow): a phone whose storage refuses the write (full) still
@@ -243,7 +245,8 @@ function hideBird(body, date, column) {
   if (!spot || spot.column !== column || birdsFound().has(date)) return;
   // Every paragraph, however deep: 快訊 keeps its paragraphs inside sections, and a bird that no one could ever find
   // was hidden there (2026-11-06, the owner: 我今天找不到鳥).
-  const ps = [...body.querySelectorAll("p")];
+  // …but not inside a spoiler still folded, where it cannot be seen either (audit 2026-11-11) — unless the whole text is behind the fold.
+  const every = [...body.querySelectorAll("p")], seen = every.filter((p) => !p.closest(".spoiler-body[hidden]")), ps = seen.length ? seen : every;
   if (!ps.length) return;
   const b = document.createElement("button");
   b.type = "button"; b.className = "bird-hide"; b.setAttribute("aria-label", "知更鳥");
@@ -468,7 +471,11 @@ function masthead(issue, fresh = false, moon = false) {
 // Today's paper: the latest issue, dated today — not an archive issue, nor yesterday's paper before 07:30.
 const todays = (issue) => Boolean(issue) && issue.date === twNow().date && issue.date === publishedIssues()[0]?.date;
 function weatherBox(issue) {
-  return todays(issue) ? `<section class="wetter" hidden aria-label="今日氣象"><div class="lbl">今日氣象<span class="de">Wetter</span></div><div class="fc"></div></section>` : "";
+  if (!todays(issue)) return "";
+  // drawn at once from today's kept copy (wetter.js keptWeather), so the box holds its place while fillWeather asks
+  // again; only the day's first look, with nothing kept, starts without it
+  const kept = keptWeather(), html = kept ? weatherHtml(kept) : "";
+  return `<section class="wetter"${html ? "" : " hidden"} aria-label="今日氣象"><div class="lbl">今日氣象<span class="de">Wetter</span></div><div class="fc">${html}</div></section>`;
 }
 function fillWeather() {
   const box = main.querySelector(".wrap > .wetter");
@@ -501,11 +508,15 @@ let lastWire = null;
 function fillWire() {
   const box = main.querySelector(".wrap > .wire");
   if (!box) return;
+  // A cold start has nothing in memory: the copy kept on the phone (rm.wire.last, rebuildable) stands in, so the strip
+  // is in its place when the page lands on the day's first open too (audit 2026-11-11).
+  lastWire ||= store.get("wire.last");
   if (lastWire) drawWire(box, lastWire);
   getJSON("content/wire.json", { fresh: true }).then((w) => {
     const items = (Array.isArray(w?.items) ? w.items : []).filter((i) => i?.title && /^https:\/\//.test(i.url || ""));
     if (!items.length) return;
     lastWire = w;
+    store.set("wire.last", { updated: w.updated, items: items.slice(0, 14) });
     if (box.isConnected) drawWire(box, w);
   }).catch(() => {});
 }
@@ -642,6 +653,10 @@ function frontStatus() {
   // reports and at any hour (after 15:00 lateText says 正在重新寫, in step with the still-sealed parcel), so the front page
   // says 延到下午 from 07:30 on; late.json takes over once it arrives.
   if (quotaHeld(now.date)) return lateText({ state: "waiting" }, got); // the same rule shuts the parcel and the stamp (issueOpen)
+  // The day's entry is there but holds only what was written ahead (the serial, a watch piece): nothing of today's has
+  // come. It is still printing, as with no entry at all — not 「其餘 0 篇照讀」 — and the last issue is one tap away,
+  // since the front page now stands on this hollow one (audit 2026-11-11).
+  if (!got) { const prev = publishedIssues().find((i) => i.date < now.date); return `今天這期還在印，好了會自己跳出來。${prev ? `先翻<a href="#/issue/${prev.date}">上一期</a>撐一下。` : ""}`; }
   // Otherwise name what is missing. The reserve's last fill is 07:05 (editorial/README.md), so until 08:00 a column with
   // a reserve may still come; after that nothing more does — 「剩下的在路上」 once stood all day (audit 2026-11-08,
   // finding 10). A column without a reserve (config.json reserve: false, 快訊) is not coming at any hour.
@@ -705,6 +720,13 @@ function viewFront(dateParam) {
   const status = dateParam ? "" : frontStatus();
   if (!dateParam) shownFront = [frontKey(issue), status];
   if (!issue) {
+    // No issue because the index itself could not be fetched (and nothing was kept): the paper is there, only out of
+    // reach — said so, with a way to try again; 創刊號即將出刊 was told to a reader of issue 32 (audit 2026-11-11).
+    if (S.index?.failed) {
+      main.innerHTML = `${masthead(null)}<div class="wrap">${errorCard({ text: "讀不到今天的報紙目錄，可能是網路的問題。", home: false })}</div>`;
+      main.querySelector("[data-retry]").onclick = (ev) => { ev.currentTarget.disabled = true; location.reload(); };
+      return;
+    }
     main.innerHTML = `${masthead(null)}<div class="wrap">${status ? `<div class="status">${status}</div>` : ""}<p class="empty">創刊號即將出刊。</p></div>`;
     return;
   }
@@ -721,7 +743,8 @@ function viewFront(dateParam) {
   // the press (motion.js pressRun). Every later visit — a redraw at 07:30, iOS waking the app, a step back from an
   // article — plays only the masthead's own entrance. Not under ?preview: looking at tomorrow's issue early must not
   // spend its morning.
-  const fresh = !dateParam && !isPreview() && !store.get("opened", []).includes(issue.date);
+  const fresh = !dateParam && !isPreview() && !store.get("opened", []).includes(issue.date)
+    && arts.some((a) => !["watch", "serial"].includes(col(a.column, issue.date).group)); // not spent on a morning whose paper has not come yet (only the serial written ahead)
   if (fresh) store.set("opened", [...store.get("opened", []), issue.date].slice(-60));
   const evening = !dateParam && nightHours() && Boolean(letterYard()); // 晚上寫信: the folded letter at the top
   const erst = Number(issue.no) === 1; // 創刊號: its own contents page and gold hairlines (inhaltBox, style.css .erst-issue)
@@ -802,7 +825,10 @@ async function chairCard(a, date) {
   const blob = await new Promise((r) => c.toBlob(r, "image/png"));
   if (!blob) { toast("卡片做不出來"); return; }
   const file = new File([blob], `診間-${date}.png`, { type: "image/png" });
-  if (navigator.canShare?.({ files: [file] })) { navigator.share({ files: [file], title: "明天在診間怎麼說" }).catch(() => {}); return; }
+  if (navigator.canShare?.({ files: [file] })) {
+    // closed by the reader: nothing more. Refused (iOS: the tap has aged while the card was drawn) or failed: kept as a file below instead of nothing at all.
+    try { await navigator.share({ files: [file], title: "明天在診間怎麼說" }); return; } catch (e) { if (e?.name === "AbortError") return; }
+  }
   const url = URL.createObjectURL(blob), link = document.createElement("a");
   link.href = url; link.download = file.name; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 4000);
 }
@@ -821,11 +847,15 @@ function loadLetters() {
   const n = letterYard();
   if (!n) { S.letters = []; return Promise.resolve(); }
   if (!S.letters) S.letters = store.get("letters.cache", []);
-  return fetch(`${S.cfg.nest.api}/${encodeURIComponent(n.code)}/letters/answers`, { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((d) => {
+  // eight seconds at most: the yard's store is another host, outside the service worker's stall fallback (sw.js TIMEOUT)
+  return fetch(`${S.cfg.nest.api}/${encodeURIComponent(n.code)}/letters/answers`, { cache: "no-store", ...within(8000) }).then((r) => r.ok ? r.json() : null).then((d) => {
     if (!Array.isArray(d?.answers)) return;
     const before = JSON.stringify(S.letters);
     S.letters = d.answers; store.set("letters.cache", d.answers);
-    if (JSON.stringify(S.letters) !== before) document.querySelectorAll(".letters-slot").forEach((el) => { el.innerHTML = lettersBox(el.dataset.date); });
+    if (JSON.stringify(S.letters) === before) return;
+    document.querySelectorAll(".letters-slot").forEach((el) => { el.innerHTML = lettersBox(el.dataset.date); });
+    const list = main.querySelector(".letters-list"); // #/letters open on the kept copy (the app woken on it): the answers that just came
+    if (list) list.innerHTML = lettersList();
   }).catch(() => {});
 }
 const letterAnswered = (id) => (S.letters || []).find((l) => l.id === id);
@@ -840,12 +870,16 @@ function lettersBox(date) {
 }
 function viewLetters() {
   if (!letterYard()) { main.innerHTML = `<div class="wrap"><header class="page-title"><h1>編輯部回信</h1><span class="de">Leserbriefe</span></header><p class="empty">回信只有後院裡的人看得到。</p></div>`; document.title = `編輯部回信｜${S.cfg.title}`; return; }
-  const ls = [...(S.letters || [])].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
-  main.innerHTML = `<div class="wrap"><header class="page-title"><h1>編輯部回信</h1><span class="de">Leserbriefe</span></header>
-    ${ls.length ? ls.map((l) => `<p class="letter-date">${esc(fmtDate(l.date))}</p>${letterHtml(l)}`).join("") : `<p class="empty">還沒有回信。晚上九點以後打開報紙，首頁最上面就能寫信給編輯部。</p>`}</div>`;
+  main.innerHTML = `<div class="wrap"><header class="page-title"><h1>編輯部回信</h1><span class="de">Leserbriefe</span></header><div class="letters-list">${lettersList()}</div></div>`;
   document.title = `編輯部回信｜${S.cfg.title}`;
-  const id = decodeURIComponent((location.hash.split("/")[2] || ""));
-  if (id) main.querySelector(`#${CSS.escape(id)}`)?.scrollIntoView({ block: "start" });
+  // 刊在 … → (letterForm) lands on that reply: route() places the page after the view is drawn, so the place is handed
+  // to it (landTop) — a scrollIntoView here was undone at once by its scrollTo(0, 0) (audit 2026-11-11).
+  const id = decodeURIComponent((location.hash.split("/")[2] || "")), at = id && main.querySelector(`#${CSS.escape(id)}`);
+  if (at) landTop = Math.max(0, at.getBoundingClientRect().top + scrollY - 16);
+}
+function lettersList() {
+  const ls = [...(S.letters || [])].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  return ls.length ? ls.map((l) => `<p class="letter-date">${esc(fmtDate(l.date))}</p>${letterHtml(l)}`).join("") : `<p class="empty">還沒有回信。晚上九點以後打開報紙，首頁最上面就能寫信給編輯部。</p>`;
 }
 // In the evening (night = true) the form is folded under one line at the top of the front page — a moon, 寫信給編輯部 —
 // and opens on a tap; it stays open while a draft is kept, and after a letter goes out to show it among the sent.
@@ -854,12 +888,16 @@ function letterForm(el, night = false, open = false) {
   if (!el || !n || !api) return;
   const sent = store.get("letters.sent", []).slice(-5).reverse();
   const md = (iso) => { const t = new Date(new Date(iso).getTime() + 8 * 3600e3); return `${t.getUTCMonth() + 1}/${t.getUTCDate()} ${String(t.getUTCHours()).padStart(2, "0")}:${String(t.getUTCMinutes()).padStart(2, "0")}`; };
-  const wait = sent.filter((x) => !letterAnswered(x.id)).length;
+  // A letter two dawns old with no answer is not waiting any more (the editors answer questions only, two a morning at
+  // most): it says so, where 等回信 stood for good and the fold counted it every night (the owner, 2026-11-11: 我昨天寄的信
+  // 怎麼沒回). An answer that still comes takes its line over as before.
+  const passed = (x) => Date.now() - Date.parse(x.at) > 36 * 3600e3;
+  const wait = sent.filter((x) => !letterAnswered(x.id) && !passed(x)).length;
   el.innerHTML = `${night ? `<details class="letter-form night-letter"${open || store.get("letters.draft", "") ? " open" : ""}><summary>${MOON}<b>寫信給編輯部</b><span class="de">Leserbrief</span><span class="note">${wait ? `${wait} 封等回信` : "晚上才開的信箱"}</span></summary>` : `<div class="letter-form"><h2>寫信給編輯部</h2>`}
     <p class="small">問一個你想知道的問題。天亮前編輯部挑一兩封回答，刊在早上的報上，不署名，問題會稍微改寫。不要寫病人或私人的事。</p>
     <textarea maxlength="300" rows="3" placeholder="例如：布拉姆斯第四號該從哪個版本聽起？">${esc(store.get("letters.draft", ""))}</textarea>
     <div class="btns"><button class="btn" type="button" data-letter-send>寄出</button><span class="count small"></span></div>
-    ${sent.length ? `<ul class="letters-sent">${sent.map((x) => { const a = letterAnswered(x.id); return `<li><span class="t">${esc(x.text.length > 28 ? `${x.text.slice(0, 27)}…` : x.text)}</span>${a ? `<a href="#/letters/${esc(x.id)}">刊在 ${esc(fmtDate(a.date, "short"))} →</a>` : `<span class="st">寄出了 ${esc(md(x.at))}，等回信</span>`}</li>`; }).join("")}</ul>` : ""}
+    ${sent.length ? `<ul class="letters-sent">${sent.map((x) => { const a = letterAnswered(x.id); return `<li><span class="t">${esc(x.text.length > 28 ? `${x.text.slice(0, 27)}…` : x.text)}</span>${a ? `<a href="#/letters/${esc(x.id)}">刊在 ${esc(fmtDate(a.date, "short"))} →</a>` : `<span class="st">寄出了 ${esc(md(x.at))}，${passed(x) ? "這封沒有回信（編輯部只回問題）" : "等回信"}</span>`}</li>`; }).join("")}</ul>` : ""}
   ${night ? "</details>" : "</div>"}`;
   const ta = el.querySelector("textarea"), count = el.querySelector(".count"), btn = el.querySelector("[data-letter-send]");
   const upd = () => { count.textContent = `${ta.value.length} / 300`; store.set("letters.draft", ta.value); };
@@ -869,9 +907,10 @@ function letterForm(el, night = false, open = false) {
     if (!text) { toast("先寫一句"); return; }
     btn.disabled = true;
     try {
-      const r = await fetch(`${api}/${encodeURIComponent(n.code)}/letters`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me, text }) });
+      const r = await fetch(`${api}/${encodeURIComponent(n.code)}/letters`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me, text }), ...within(20000) });
       const j = await r.json().catch(() => ({}));
-      if (!r.ok || !j.id) { toast(r.status === 429 ? "今天已經寄了三封" : r.status === 403 ? "這個後院不能寄信" : "沒寄出去，稿子還留著"); btn.disabled = false; return; }
+      // 403 is two things at the store: a yard that takes no letters, or this phone not yet among the yard's members there (a first sync that never went through)
+      if (!r.ok || !j.id) { toast(r.status === 429 ? "二十四小時內已經寄了三封，晚一點再寄；稿子還留著" : r.status === 403 ? (j.error === "not in this yard" ? "這支手機還沒跟院子對上，先打開一次後院再寄；稿子還留著" : "這個後院不能寄信") : "沒寄出去，稿子還留著"); btn.disabled = false; return; }
       store.set("letters.sent", [...store.get("letters.sent", []), { id: j.id, at: j.at, text }].slice(-20));
       store.del("letters.draft");
       toast("寄出了");
@@ -889,22 +928,27 @@ async function creditBox(el) {
   const head = `<h2>API 額度<span class="de">Guthaben</span></h2>`;
   const draw = (c) => {
     const pct = Math.max(0, Math.min(100, (c.used / c.budget) * 100)), days = (c.days || []).filter((x) => x.usd > 0).slice(-7).reverse();
-    const ago = Math.round((Date.now() - c.at) / 60000);
+    const ago = Math.round((Date.now() - c.at) / 60000), age = ago < 60 ? `${ago} 分鐘` : ago < 48 * 60 ? `${Math.round(ago / 60)} 小時` : `${Math.round(ago / 1440)} 天`;
+    // a kept copy from a month gone by: its remainder is not this month's (the credits were given again on the 1st, UTC)
+    if (c.month !== new Date().toISOString().slice(0, 7)) { el.innerHTML = `${head}<p class="small">手機裡存的是 ${esc(c.month.replace("-", " 年 "))} 月的數字（那個月用了 US$ ${c.used.toFixed(2)}）；這個月的還沒讀到。</p>`; return; }
     el.innerHTML = `${head}<p class="credit-left"><b>US$ ${c.left.toFixed(2)}</b>剩下</p>
       <span class="credit-bar"><i style="width:${pct.toFixed(1)}%"></i></span>
-      <p class="small">${esc(c.month.replace("-", " 年 "))} 月已用 US$ ${c.used.toFixed(2)}／${c.budget} 美元；每月重給，用不完不累積。Anthropic 每天早上八點結算前一天，當天花的隔天才算進來。${ago > 1 ? `這是 ${ago} 分鐘前的數字。` : ""}</p>
+      <p class="small">${esc(c.month.replace("-", " 年 "))} 月已用 US$ ${c.used.toFixed(2)}／${c.budget} 美元；每月重給，用不完不累積。Anthropic 每天早上八點結算前一天，當天花的隔天才算進來。${ago > 1 ? `這是 ${age}前的數字。` : ""}</p>
       ${days.length ? `<ul class="credit-days">${days.map((x) => `<li><span>${Number(x.d.slice(5, 7))}/${Number(x.d.slice(8))}</span><b>US$ ${x.usd.toFixed(2)}</b></li>`).join("")}</ul>` : ""}`;
   };
-  const kept = store.get("credits");
-  if (kept?.month && typeof kept.used === "number") draw(kept);
+  const kept = store.get("credits"), drawn = Boolean(kept?.month && typeof kept.used === "number" && typeof kept.left === "number");
+  if (drawn) draw(kept);
   try {
-    const r = await fetch(`${api}/${encodeURIComponent(n.code)}/credits`, { cache: "no-store" });
+    const r = await fetch(`${api}/${encodeURIComponent(n.code)}/credits`, { cache: "no-store", ...within(15000) });
     if (r.status === 403) { el.remove(); return; }
     const c = await r.json().catch(() => null);
     if (!el.isConnected) return;
     if (r.ok && typeof c?.used === "number" && typeof c?.left === "number") { store.set("credits", c); draw(c); return; }
-    if (!kept) el.innerHTML = `${head}<p class="small">還沒接上：要在後院的共用儲存放一把 Console 的 Admin 金鑰（只能看帳、不能拿來寫稿），才讀得到這個月用了多少。</p>`;
-  } catch { if (!kept) el.innerHTML = `${head}<p class="small">現在讀不到，可能離線了。</p>`; }
+    // 503 is the store saying the key is not there; anything else (Anthropic's report failing or refusing for a moment)
+    // is not a reason to ask for a key that is already in place (audit 2026-11-11)
+    if (!drawn) el.innerHTML = r.status === 503 ? `${head}<p class="small">還沒接上：要在後院的共用儲存放一把 Console 的 Admin 金鑰（只能看帳、不能拿來寫稿），才讀得到這個月用了多少。</p>`
+      : `${head}<p class="small">暫時讀不到這個月的用量，晚一點再看。</p>`;
+  } catch { if (!drawn) el.innerHTML = `${head}<p class="small">現在讀不到，可能離線了。</p>`; }
 }
 // 問這篇 (Fragen; the owner, 2026-11-10): on a 特供版 phone with a yard, a question about the article being read, answered
 // in a few seconds by the yard's shared store (nest-worker.js /{code}/ask, Claude on the owner's Console credits) from
@@ -941,10 +985,10 @@ function askBox(el, date, column) {
     if (!q) { toast("先寫一個問題"); return; }
     btn.disabled = true; wait.hidden = false;
     try {
-      const r = await fetch(`${api}/${encodeURIComponent(n.code)}/ask`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me, date, column, q }) });
+      const r = await fetch(`${api}/${encodeURIComponent(n.code)}/ask`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ member: n.me, date, column, q }), ...within(60000) });
       const j = await r.json().catch(() => ({}));
       if (!r.ok || !j.a) {
-        toast(r.status === 429 ? "今天已經問了四十題" : r.status === 403 ? "這個後院不能問" : j.error === "out of credit" ? "這個月的額度用完了" : r.status === 503 ? "還沒接好，過一陣子再試" : "沒問成，問題還留著");
+        toast(r.status === 429 ? "今天已經問了四十題" : r.status === 403 ? (j.error === "not in this yard" ? "這支手機還沒跟院子對上，先打開一次後院再問；問題還留著" : "這個後院不能問") : j.error === "out of credit" ? "這個月的額度用完了" : r.status === 503 ? "還沒接好，過一陣子再試" : "沒問成，問題還留著");
       } else {
         const x = { q, a: j.a }, cur = store.get("ask", {});
         cur[key] = [...(Array.isArray(cur[key]) ? cur[key] : []), x].slice(-5);
@@ -1008,7 +1052,8 @@ function syncDone() {
   try {
     const done = new Set(store.get("digest.done", []));
     // an issue holding only the serial (written days ahead) has nothing the stamp counts: not finished, so the reminders still come
-    for (const i of publishedIssues()) { const arts = i.articles || []; if (issueOpen(i.date) && arts.some((a) => forStamp(a, i.date)) && !unreadIn(i.date, arts)) done.add(i.date); }
+    const read = readSet(); // once, not once an issue: the list is parsed out of storage each time, and this runs as an article is finished
+    for (const i of publishedIssues()) { const arts = i.articles || []; if (issueOpen(i.date) && arts.some((a) => forStamp(a, i.date)) && !unreadIn(i.date, arts, read)) done.add(i.date); }
     caches.open("rm-state").then((c) => c.put("state/done", new Response(JSON.stringify([...done]), { headers: { "Content-Type": "application/json" } }))).catch(() => {});
   } catch { /* no Cache API (a plain http:// preview) */ }
 }
@@ -1017,7 +1062,7 @@ let finishSeen = null;
 // What the day's stamp counts: the issue's articles, a watch item only with a brief, never the serial — the novel keeps
 // its own progress on the 連載 tab and is read in its own order (the owner, 2026-11-05: 連載獨立計分).
 const forStamp = (a, date) => { const g = col(a.column, date).group; return g !== "serial" && (g !== "watch" || Boolean(a.brief)); };
-const unreadIn = (date, arts) => { const read = readSet(); return arts.filter((a) => forStamp(a, date) && !read.has(`${date}/${a.column}`)).length; };
+const unreadIn = (date, arts, read = readSet()) => arts.filter((a) => forStamp(a, date) && !read.has(`${date}/${a.column}`)).length;
 function wireDigest(issue) {
   finishSeen?.disconnect(); finishSeen = null;
   const fin = main.querySelector(".finish:not(.left)");
@@ -1029,7 +1074,7 @@ function wireDigest(issue) {
     if (finished) return;
     finished = true;
     finishSeen?.disconnect();
-    markDigestDone(issue.date);
+    if (markDigestDone(issue.date) === false) return; // could not be kept: no seal, no 郵票蓋好了
     const fest = main.querySelector(".fest-note"); if (fest) fest.outerHTML = festBox(issue); // the feast card at the top: earned now, not still 「會收進」
     ring.complete();
     main.querySelector(".digest")?.classList.add("done", "full");
@@ -1058,7 +1103,9 @@ function markDigestDone(date) {
   const done = store.get("digest.done", []);
   if (done.includes(date)) return;
   done.push(date);
-  store.set("digest.done", done); // kept whole: the album and the streaks read it, and nothing could rebuild a dropped stamp (audit 2026-11-09)
+  // kept whole: the album and the streaks read it, and nothing could rebuild a dropped stamp (audit 2026-11-09). A
+  // stamp that could not be written is not shown as struck: it would be gone at the next start.
+  if (!store.set("digest.done", done)) { toast("手機的儲存空間滿了，今天的郵票蓋不下去"); return false; }
   syncDone();
   const fin = main.querySelector(".finish");
   if (fin) fin.innerHTML = finishInner(date);
@@ -1149,10 +1196,16 @@ const evidenceOf = (a) => { const p = (a.body || []).find((b) => b?.type === "pa
 // site for anyone on Apple's calendar: ics/gig-<id>-<date>-<HHMM>.ics, ics/football-<date>.ics, via webcal://.)
 const ICON_CAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="5" width="16" height="15"/><path d="M4 10h16M8 3v4M16 3v4M12 13v4M10 15h4"/></svg>';
 function gcalUrl({ title, start, minutes = 120, location, description, url }) {
-  const t0 = Date.parse(`${start}:00+08:00`);
-  if (Number.isNaN(t0)) return "";
-  const z = (ms) => new Date(ms).toISOString().replace(/[-:]|\.\d{3}/g, "");
-  const p = new URLSearchParams({ action: "TEMPLATE", text: title, dates: `${z(t0)}/${z(t0 + minutes * 60000)}` });
+  let dates;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(start)) { // a day whose hour is not known: an all-day entry, not an hour the page never claimed
+    dates = `${start.replaceAll("-", "")}/${new Date(Date.parse(`${start}T00:00:00Z`) + 864e5).toISOString().slice(0, 10).replaceAll("-", "")}`;
+  } else {
+    const t0 = Date.parse(`${start}:00+08:00`);
+    if (Number.isNaN(t0)) return "";
+    const z = (ms) => new Date(ms).toISOString().replace(/[-:]|\.\d{3}/g, "");
+    dates = `${z(t0)}/${z(t0 + minutes * 60000)}`;
+  }
+  const p = new URLSearchParams({ action: "TEMPLATE", text: title, dates });
   if (location) p.set("location", location);
   const details = [description, url].filter(Boolean).join("\n");
   if (details) p.set("details", details);
@@ -1196,7 +1249,10 @@ async function viewArticle(date, column, my) {
     const cards = offline ? await keptCards(date, column) : "";
     if (my !== routeSeq) return;
     main.innerHTML = `<div class="wrap">${errorCard({ offline, text: offline ? `目前可能離線，〈${esc(name)}〉這篇還沒存下來；連上網路後再試一次。` : `〈${esc(name)}〉這篇找不到，可能被風吹走了。` })}${cards}</div>`;
-    main.querySelector("[data-retry]").onclick = (ev) => { ev.currentTarget.disabled = true; viewArticle(date, column, my); };
+    // The retry is not a route(): it places the page itself, on the place a 接著上次 card or a pencil line asked for
+    // (landMark is handed back for it), and leaves no landTop behind for the next page to land on (audit 2026-11-11).
+    landMark = wantMark;
+    main.querySelector("[data-retry]").onclick = async (ev) => { ev.currentTarget.disabled = true; await viewArticle(date, column, my); if (my === routeSeq) { window.scrollTo(0, landTop ?? 0); landTop = null; } };
     return;
   }
   if (my !== routeSeq) return;
@@ -1264,7 +1320,12 @@ async function viewArticle(date, column, my) {
   // 本篇有更正 →: the newest correction callout (blocks.js .callout.correction), brought to the middle of the screen.
   main.querySelector("[data-corr]")?.addEventListener("click", () => {
     const c = [...body.querySelectorAll(".callout.correction")].at(-1);
-    if (c) { c.scrollIntoView({ behavior: calm() ? "auto" : "smooth", block: "center" }); c.classList.add("lit"); }
+    if (!c) return;
+    // In a spoiler still folded the callout has no box to scroll to, and the button did nothing (audit 2026-11-11). The
+    // fold is the reader's to open: the page goes to its gate and says the correction is behind it.
+    const gate = c.closest(".spoiler-body[hidden]")?.previousElementSibling;
+    if (gate) { gate.scrollIntoView({ behavior: calm() ? "auto" : "smooth", block: "center" }); toast("更正寫在劇透的段落裡，按「顯示劇透內容」就看得到"); return; }
+    c.scrollIntoView({ behavior: calm() ? "auto" : "smooth", block: "center" }); c.classList.add("lit");
   });
   if (a.serial?.n > 1) {
     // The aside arrives after the page has landed: whatever is below it moves down by its height, so the landing follows.
@@ -1349,6 +1410,7 @@ async function viewArticle(date, column, my) {
   drawNext();
   main.querySelector("[data-save]").onclick = (e) => {
     const on = toggleSaved(key);
+    if (on === null) return; // could not be written: the star stays as it was (toggleSaved has said why)
     e.currentTarget.setAttribute("aria-pressed", on);
     e.currentTarget.innerHTML = on ? ICON.starOn : ICON.star;
     e.currentTarget.classList.remove("pop");
@@ -1361,7 +1423,8 @@ async function viewArticle(date, column, my) {
     navigator.share({ title: a.title, text: a.dek, url: location.href.replace(/\?[^#]*/, "") }).catch(() => {});
   });
   main.querySelector("[data-chair-copy]")?.addEventListener("click", () => navigator.clipboard?.writeText(a.chairside).then(() => toast("已複製")).catch(() => toast("沒辦法複製")));
-  main.querySelector("[data-chair-card]")?.addEventListener("click", () => chairCard(a, date));
+  // one card at a time: the button waits while the card is drawn (fonts, the canvas), or a second tap drew a second card that fell through to a download
+  main.querySelector("[data-chair-card]")?.addEventListener("click", (e) => { const b = e.currentTarget; b.disabled = true; chairCard(a, date).catch(() => {}).finally(() => { b.disabled = false; }); });
   askBox(main.querySelector(".ask-box"), date, column);
 
   // 本期目錄: the top bar's numeral opens the issue's contents sheet (openContents); a page chosen there slides in.
@@ -1417,6 +1480,10 @@ async function viewArticle(date, column, my) {
     if (!body.isConnected) return;
     if (reachedEnd()) { finishRead(); if (readSet().has(key)) { store.del(posKey); return; } }
     const p = ratio();
+    // The place kept from last time stands until the reader is past it: a flick down to look at the picture and back
+    // out used to write 6% over 60%, and the offer to go on was gone for good (audit 2026-11-11).
+    if (keepOld && p < back) return;
+    keepOld = false;
     if (p > 0.05) { saveT = Date.now(); store.set(posKey, Math.round(p * 1000) / 1000); if (!pruned) { pruned = true; prunePos(80); } }
   };
   // The reading line: drawn by the scroll itself where CSS can (style.css, animation-timeline); written here otherwise.
@@ -1436,6 +1503,7 @@ async function viewArticle(date, column, my) {
   // 從上次讀到的地方繼續: offered until the reader either takes it or scrolls on past 5% by themselves — no timer.
   // Opened from the front page's 接著上次, the page lands there at once (route() scrolls to landTop) and asks nothing.
   const back = store.get(posKey, 0);
+  let keepOld = back > 0.08; // savePos: see there
   const resume = main.querySelector(".resume");
   // position: fixed inside #main would be fixed to the animated page, not the screen (its entrance transform makes it
   // the containing block): the button lives on <body> while the article is open, and goes with it (cleanup).
@@ -1531,7 +1599,7 @@ function buildToc(body, slot) {
   slot.innerHTML = `<details class="toc"><summary>本篇段落（${heads.length}）</summary><ol>${heads.map((h, i) => `<li><button type="button" data-i="${i}">${esc(h.textContent)}</button></li>`).join("")}</ol></details>`;
   slot.querySelectorAll("button").forEach((b) => (b.onclick = () => {
     slot.querySelector("details").open = false; // collapse first, or the target moves up by the list's height
-    heads[Number(b.dataset.i)].scrollIntoView({ behavior: "smooth", block: "start" });
+    heads[Number(b.dataset.i)].scrollIntoView({ behavior: calm() ? "auto" : "smooth", block: "start" });
   }));
 }
 
@@ -1679,14 +1747,17 @@ async function viewConcert(id, my) {
   }
   const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/concerts" aria-label="返回">${ICON.back}</a><div class="title">近期演出</div></div></div>`;
   const e = upcomingGigs().find((x) => gigId(x) === id);
-  if (!e) { main.innerHTML = `${top}<div class="wrap"><p class="empty">這檔演出已經下架，或找不到。<a href="#/concerts">看全部演出</a></p></div>`; wireBack(); return; }
+  // the list itself could not be read (offline, nothing kept): that is not the show being taken down
+  if (!e) { main.innerHTML = `${top}<div class="wrap"><p class="empty">${S.gigs ? "這檔演出已經下架，或找不到。" : "目前讀不到演出資訊（可能是離線），請稍後再試。"}<a href="#/concerts">看全部演出</a></p></div>`; wireBack(); return; }
   const link = (u, t) => (webUrl(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>` : esc(t));
   const cities = [...new Set(e.shows.map((x) => x.city))];
   // Each show's ticket link and 加入行事曆 sit together at the row's end (.acts), dropping to a line of their own under
   // the venue when the row is full. The show is a two-hour entry (19:30 when the hour is not known), the venue and city
-  // the place, the cast, programme and ticket note with the ticket link in the body.
-  const cal = (x) => calBtn({ title: e.title, start: `${x.date}T${/^\d{2}:\d{2}$/.test(x.time || "") ? x.time : "19:30"}`, location: [x.venue, x.city].filter(Boolean).join("，"),
-    description: [e.who && `演出：${e.who}`, e.program && `曲目：${e.program}`, e.note && `票況：${e.note}`].filter(Boolean).join("\n"), url: webUrl(x.tickets) });
+  // the place, the cast, programme and ticket note with the ticket link in the body. A show whose hour the list does
+  // not have goes in as an all-day entry that says so (it used to be put down for 19:30, an hour nobody had checked).
+  const timed = (x) => /^\d{2}:\d{2}$/.test(x.time || "");
+  const cal = (x) => calBtn({ title: e.title, start: timed(x) ? `${x.date}T${x.time}` : x.date, location: [x.venue, x.city].filter(Boolean).join("，"),
+    description: [!timed(x) && "開演時間還沒查到，請以售票頁為準。", e.who && `演出：${e.who}`, e.program && `曲目：${e.program}`, e.note && `票況：${e.note}`].filter(Boolean).join("\n"), url: webUrl(x.tickets) });
   const row = (x) => `<li><span class="d">${gigShow(x)}</span><span class="v">${esc(x.venue)}</span><span class="acts">${webUrl(x.tickets) ? `<a class="tix" href="${esc(x.tickets)}" target="_blank" rel="noopener">售票頁</a>` : ""}${cal(x)}</span></li>`;
   const shows = cities.map((c) => `<li><b>${esc(c)}</b><ul>${e.shows.flatMap((x) => (x.city === c ? row(x) : [])).join("")}</ul></li>`).join("");
   const rows = [
@@ -1749,11 +1820,13 @@ async function viewConcerts(my) {
   }
   // The full list seen: the front page's count goes, and what it counted keeps its 新 for today (gigsFresh).
   const before = store.get("gigs.seen"), ids = gigIds(upcomingGigs());
-  if (Array.isArray(before)) {
-    const add = ids.filter((id) => !before.includes(id));
-    if (add.length) store.set("gigs.fresh", { date: twNow().date, ids: [...new Set([...gigsFresh(), ...add])] });
+  if (S.gigs) { // only a list that was really read: an empty one written as seen made every show 新 when the data came
+    if (Array.isArray(before)) {
+      const add = ids.filter((id) => !before.includes(id));
+      if (add.length) store.set("gigs.fresh", { date: twNow().date, ids: [...new Set([...gigsFresh(), ...add])] });
+    }
+    store.set("gigs.seen", ids);
   }
-  store.set("gigs.seen", ids);
   const checked = typeof S.gigs?.checked === "string" ? fmtDate(S.gigs.checked, "short") : "";
   const pressed = (c) => GIG_CITIES.map(([k, label]) => `<button type="button" class="chip" data-c="${k}" aria-pressed="${k === c}">${label}</button>`).join("");
   // 星級 (the owner, 2026-11-04: 近期演出進去我要可以分星級篩選): a second row of chips, one per rating on the list in this
@@ -1775,7 +1848,7 @@ async function viewConcerts(my) {
     }).join("");
     main.querySelector(".chips:not(.grade)").innerHTML = pressed(c);
     main.querySelector(".chips.grade").innerHTML = grades(list, r);
-    main.querySelector(".gig-list").innerHTML = rows || `<li class="gig-none">${!S.gigs ? "目前讀不到演出資訊（可能是離線），請稍後再試。" : r ? `這個城市目前沒有 ${r} 星的演出。` : "這個城市目前沒有收錄的演出。"}</li>`;
+    main.querySelector(".gig-list").innerHTML = rows || `<li class="gig-none">${!S.gigs ? "目前讀不到演出資訊（可能是離線），請稍後再試。" : r ? `${c === "all" ? "" : "這個城市"}目前沒有 ${r} 星的演出，改選「不限」看看。` : `${c === "all" ? "" : "這個城市"}目前沒有收錄的演出。`}</li>`;
   };
   const city = () => GIG_CITIES.some(([k]) => k === store.get("gigs.city")) ? store.get("gigs.city") : "all";
   const grade = () => [5, 4, 3].includes(store.get("gigs.stars")) ? store.get("gigs.stars") : 0;
@@ -1804,10 +1877,10 @@ function viewArchive() {
   // rm.archive.open; a search opens every month that has a hit.
   const thisYm = twNow().date.slice(0, 7), openSet = store.get("archive.open", {});
   const draw = (q) => {
-    const ql = q.trim().toLowerCase();
+    const ql = q.trim().toLowerCase(), terms = ql.split(/\s+/).filter(Boolean); // 「貝多芬 第九」: both words, anywhere
     const months = new Map();
     for (const iss of pubs) {
-      const arts = sortArticles(iss.articles, iss.date).filter((a) => !ql || `${a.title} ${a.dek} ${col(a.column, iss.date).name}`.toLowerCase().includes(ql));
+      const arts = sortArticles(iss.articles, iss.date).filter((a) => { const hay = `${a.title} ${a.dek} ${col(a.column, iss.date).name}`.toLowerCase(); return terms.every((t) => hay.includes(t)); });
       if (!arts.length) continue;
       const ym = iss.date.slice(0, 7), d = Number(iss.date.slice(8));
       months.set(ym, [...(months.get(ym) || []), `<a class="issue-row" href="#/issue/${iss.date}"><div class="d"><b>${d}</b><span>週${esc(iss.weekday)}・${esc(issueNr(iss.no))}</span>${done.has(iss.date) ? seal(iss.date, 0, true) : ""}</div>
@@ -1843,8 +1916,10 @@ function viewArchive() {
   const input = main.querySelector(".search"), hits = main.querySelector(".hits");
   let seq = 0, timer = 0;
   // 欄位篩選 (the owner, 2026-11-06): the full-text hits wear a row of chips, one per column found, to narrow them.
-  let lastHits = [], hitCol = "", lastPartial = false;
+  let lastHits = [], hitCol = "", lastPartial = false, lastCapped = false;
+  const termsOf = (q) => q.split(/\s+/).filter(Boolean);
   const drawHits = (q) => {
+    archiveKept = { q, hits: lastHits, partial: lastPartial, capped: lastCapped, col: hitCol };
     if (!lastHits.length) { hits.innerHTML = `<p class="hint">全文沒有找到「${esc(q)}」。</p>`; return; }
     const counts = new Map();
     for (const r of lastHits) counts.set(r.c, (counts.get(r.c) || 0) + 1);
@@ -1853,39 +1928,56 @@ function viewArchive() {
     const nameOf = (c) => col(c, lastHits.find((r) => r.c === c).d).name;
     hits.innerHTML = `<div class="sec-head"><h2>全文</h2><span class="note">${list.length}${hitCol ? `／${lastHits.length}` : ""} 篇</span></div>
       ${lastPartial ? `<p class="hint">部分月份暫時讀不到（可能是離線），結果可能不完整。</p>` : ""}
+      ${lastCapped ? `<p class="hint">符合的很多，只列出最近的 ${lastHits.length} 篇；多打幾個字（中間空一格）可以縮小範圍。</p>` : ""}
       ${counts.size > 1 ? `<nav class="chips hit-cols" aria-label="只看哪一欄"><button type="button" class="chip" data-hc="" aria-pressed="${!hitCol}">全部<small>${lastHits.length}</small></button>${[...counts].map(([c, n]) => `<button type="button" class="chip" data-hc="${esc(c)}" aria-pressed="${c === hitCol}">${esc(nameOf(c))}<small>${n}</small></button>`).join("")}</nav>` : ""}
-      ${list.map((r) => `<a class="hit" href="#/a/${r.d}/${r.c}"><span class="meta-s">${esc(fmtDate(r.d, "short"))}・${esc(col(r.c, r.d).name)}</span><b>${esc(r.t)}</b><span class="snip">${snippet(r.x, q)}</span></a>`).join("")}`;
+      ${list.map((r) => `<a class="hit" href="#/a/${r.d}/${r.c}"><span class="meta-s">${esc(fmtDate(r.d, "short"))}・${esc(col(r.c, r.d).name)}</span><b>${esc(r.t)}</b><span class="snip">${snippet(r.x, termsOf(q).find((t) => r.x.toLowerCase().includes(t)) || q)}</span></a>`).join("")}`;
   };
   hits.addEventListener("click", (e) => { const b = e.target.closest("button[data-hc]"); if (!b) return; hitCol = b.dataset.hc; drawHits(input.value.trim().toLowerCase()); });
   const fullText = async (q) => {
-    const my = ++seq;
-    if (q.length < 2) { hits.innerHTML = ""; return; }
+    const my = ++seq, terms = termsOf(q);
+    if (terms.join("").length < 2) { hits.innerHTML = ""; archiveKept = null; return; }
     hits.innerHTML = `<p class="hint">搜尋全文中……</p>`;
     const found = [];
-    let partial = false;
+    let partial = false, capped = false;
     try {
-      for (const m of await searchMonths()) {
+      const all = await searchMonths();
+      for (const [i, m] of all.entries()) {
         for (const r of await searchMonth(m)) {
-          if (isPublished(r.d) && `${r.t} ${r.x}`.toLowerCase().includes(q)) found.push(r);
+          const hay = `${r.t} ${r.x}`.toLowerCase();
+          if (isPublished(r.d) && terms.every((t) => hay.includes(t))) found.push(r); // every word of the query, anywhere in the piece
         }
         if (my !== seq) return;
-        if (found.length >= 40) break;
+        if (found.length >= 40) { capped = i < all.length - 1; break; } // older months were not read: drawHits says so (audit 2026-11-11: the forty stood as the whole result)
       }
     } catch {
       if (!found.length) { if (my === seq) hits.innerHTML = `<p class="hint">目前無法搜尋全文（可能是離線），請稍後再試。</p>`; return; }
       partial = true; // the hits so far are drawn, and drawHits says they are not all (audit c16: the note was overwritten at once)
     }
     if (my !== seq) return;
-    lastHits = found; lastPartial = partial;
+    lastHits = found; lastPartial = partial; lastCapped = capped;
     drawHits(q);
   };
-  input.addEventListener("input", () => {
+  // Not while a character is still being composed (注音: every ㄅㄆㄇ fired a search and a 沒有找到 for half a syllable).
+  const onInput = (e) => {
+    if (e.isComposing) return;
+    archiveQ = input.value;
     draw(input.value);
     clearTimeout(timer);
     timer = setTimeout(() => fullText(input.value.trim().toLowerCase()), 280);
-  });
-  draw("");
+  };
+  input.addEventListener("input", onInput);
+  input.addEventListener("compositionend", () => onInput({ isComposing: false }));
+  // Back from a hit (or a redraw by 下拉更新): the search stands as it was left, its hits drawn at once from the last
+  // answer so the page is as tall as when its place was kept (audit 2026-11-11: the query and the hits were gone at
+  // every step back). A tap on the 往期 tab starts the page clean (route()).
+  if (archiveQ.trim()) {
+    input.value = archiveQ;
+    draw(archiveQ);
+    const q = archiveQ.trim().toLowerCase();
+    if (archiveKept?.q === q) { lastHits = archiveKept.hits; lastPartial = archiveKept.partial; lastCapped = archiveKept.capped; hitCol = archiveKept.col; drawHits(q); } else fullText(q);
+  } else draw("");
 }
+let archiveQ = "", archiveKept = null; // 往期's search as the reader left it, and its last full-text answer
 
 function viewSaved() {
   // Set like the gallery (a lookbook): the shelves up top — 劃線本, 畫廊, 郵票冊, 你讀過的世界, the corners entered from
@@ -1942,6 +2034,9 @@ function viewMarks() {
       : `<p class="empty">還沒有劃線。讀文章時選一段字，按「劃線」，就會收在這裡。</p>`}</div>`;
   main.querySelector(".marks").addEventListener("click", (e) => {
     const del = e.target.closest("[data-del]");
+    // Two presses, as in the article (移除劃線 after a tap on the line): the ✕ sits beside the link that opens the
+    // line, and one stray tap took a sentence kept on this phone alone, for good (audit 2026-11-11).
+    if (del && !del.dataset.sure) { del.dataset.sure = "1"; del.textContent = "移除？"; del.classList.add("sure"); setTimeout(() => { if (del.isConnected) { delete del.dataset.sure; del.textContent = "✕"; del.classList.remove("sure"); } }, 3000); return; }
     if (del) { removeMark(del.dataset.del); viewMarks(); return; }
     const q = e.target.closest("[data-mark]");
     if (q) landMark = q.dataset.mark;
@@ -2009,7 +2104,7 @@ function viewStamp(date) {
   // .stamp-page.erst-page, goldRain).
   const erst = Number(issue.no) === 1, fest = erst ? null : feastOf(date), gala = erst || Boolean(fest); // 紀念郵票 open with the same show
   main.innerHTML = `${top}<div class="wrap stamp-page${gala ? " gala" : ""}${fest ? ` fest-${esc(fest.key)}` : ""}"><div class="big">${gala ? `<i class="esun" aria-hidden="true"></i><i class="ring" aria-hidden="true"></i>` : ""}${stampHtml({ ...issue, articles: sortArticles(issue.articles || [], date) }, { earned: true, bird: birdsFound().has(date) })}</div>
-    <p class="line"><b>${esc(issueNr(issue.no))}</b><span>${esc(fmtDate(date))}・週${esc(issue.weekday || "")}${fest ? `・${esc(fest.zh)}紀念郵票` : ""}</span><i>${esc(fmtDate(date, "de"))}</i></p>${fest?.pic ? `<p class="credit">${esc(fest.pic.credit)}</p>` : ""}
+    <p class="line"><b>${esc(issueNr(issue.no))}</b><span>${esc(fmtDate(date))}${fest ? `・${esc(fest.zh)}紀念郵票` : ""}</span><i>${esc(fmtDate(date, "de"))}</i></p>${fest?.pic ? `<p class="credit">${esc(fest.pic.credit)}</p>` : ""}
     <p class="btns"><a class="btn ghost" href="#/issue/${esc(date)}">看這一期</a></p></div>`;
   if (gala) setTimeout(() => goldRain(main.querySelector(".stamp-page .big")), 1050);
   wireBack();
@@ -2158,17 +2253,21 @@ function viewGallery() {
     // across the wall like a catalogue; two columns, three from 700px.
     const [first, ...rest] = rows, n = wide.matches ? 3 : 2, cols = Array.from({ length: n }, () => []);
     rest.forEach((x, i) => cols[i % n].push(tile(x, i + 1)));
-    main.querySelector(".wall").innerHTML = first ? `${tile(first, 0, true)}<div class="cols">${cols.map((c) => `<div class="col">${c.join("")}</div>`).join("")}</div>` : `<p class="empty">牆上還沒有畫。</p>`;
+    main.querySelector(".wall").innerHTML = first ? `${tile(first, 0, true)}<div class="cols">${cols.map((c) => `<div class="col">${c.join("")}</div>`).join("")}</div>` : `<p class="empty">${f === "all" ? "牆上還沒有畫。" : "這一類還沒有作品，看看別的分類。"}</p>`;
   };
   const wide = matchMedia("(min-width: 700px)");
-  const kept = GALLERY_F.some(([k]) => k === store.get("gallery.f")) ? store.get("gallery.f") : "all";
-  draw(kept);
-  const onWide = () => { if (main.querySelector(".gallery")) draw(store.get("gallery.f") || "all"); else wide.removeEventListener("change", onWide); };
+  let cur = GALLERY_F.some(([k]) => k === store.get("gallery.f")) ? store.get("gallery.f") : "all";
+  draw(cur);
+  // One listener for the page, taken down as it is left (cleanup): each visit used to leave its own behind, all of
+  // them redrawing the wall at the next turn of the phone.
+  const onWide = () => draw(cur);
   wide.addEventListener("change", onWide);
+  cleanup = () => wide.removeEventListener("change", onWide);
   main.querySelector(".gtabs").addEventListener("click", (e) => {
     const b = e.target.closest("button[data-f]");
     if (!b) return;
-    store.set("gallery.f", b.dataset.f);
+    cur = b.dataset.f;
+    store.set("gallery.f", cur);
     draw(b.dataset.f);
     main.querySelector(`.gtabs [data-f="${b.dataset.f}"]`)?.focus();
   });
@@ -2283,7 +2382,11 @@ function aaMenu(btn) {
     const b = e.target.closest("button");
     if (!b) return;
     if (!b.dataset.fs) return;
+    // The paragraph at the top of the screen stays where it is while the type changes size: the iPhone does not hold
+    // the place itself (no scroll anchoring), and a change mid-article threw the reader screens away (audit 2026-11-11).
+    const at = [...main.querySelectorAll(".body > *, .article-head")].find((el) => el.getBoundingClientRect().bottom > 60), y0 = at?.getBoundingClientRect().top;
     setFs(b.dataset.fs);
+    if (at?.isConnected) window.scrollBy(0, at.getBoundingClientRect().top - y0);
     pop.querySelectorAll("[data-fs]").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); // moved in place: a redraw would drop keyboard focus
   });
   btn.closest(".in").append(pop); // inside .in, so it sits by the button on wide screens too
@@ -2339,7 +2442,7 @@ function viewSettings() {
     <section class="set"><h2>印務室</h2><p>給社長看的：今晨五班的報到、補位與缺稿、備稿庫存、最近兩週的出勤。</p>
       <div class="btns"><a class="btn ghost" href="#/press">打開印務室</a></div></section>
     ${isWebKitITP() && !isStandaloneIOS() ? `<section class="set"><h2>放到主畫面</h2><p>在 Safari 按下方的「分享」按鈕，選「加入主畫面」，知更鳥晨間記事就會像 App 一樣全螢幕開啟，也能離線讀已下載的文章。</p></section>` : ""}
-    <footer class="colophon"><div class="latin">${esc(S.cfg.subtitle)}</div>資料更新：${esc((S.index.generated_at || "").replace("T", " ").slice(0, 16))} UTC</footer></div>`;
+    <footer class="colophon"><div class="latin">${esc(S.cfg.subtitle)}</div>資料更新：${Number.isNaN(Date.parse(S.index.generated_at)) ? "—" : esc(new Date(Date.parse(S.index.generated_at) + 8 * 3600e3).toISOString().replace("T", " ").slice(0, 16))}（台灣時間）</footer></div>`;
   renderPush($("#push-set"), S.cfg, S.index.push).catch(() => {});
   creditBox(main.querySelector("#credit-set"));
   main.querySelector("[data-sonder-on]")?.addEventListener("click", async (e) => {
@@ -2350,10 +2453,17 @@ function viewSettings() {
     if (!ok) { btn.disabled = false; toast("代碼不對"); return; }
     store.set("sonder", true); toast("特供版開了"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" });
   });
-  main.querySelector("[data-sonder-off]")?.addEventListener("click", () => { store.del("sonder"); toast("特供版關了；後院的紀錄還留著"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" }); });
-  // Redrawing replaces the buttons; put focus back on the one just pressed.
-  const redraw = (g, v) => { viewSettings(); main.querySelector(`[data-g="${g}"] [data-v="${v}"]`)?.focus(); };
-  main.querySelectorAll('[data-g="rate"] button').forEach((b) => (b.onclick = () => { setRate(Number(b.dataset.v)); redraw("rate", b.dataset.v); }));
+  // Two presses, as 離開這個後院: one stray tap took 後院, the letters and 問這篇 off the phone, and the way back is a code only the owner has.
+  main.querySelector("[data-sonder-off]")?.addEventListener("click", (e) => {
+    const b = e.currentTarget;
+    if (!b.dataset.sure) { b.dataset.sure = "1"; b.textContent = "再按一次就關（要再開得重新輸入代碼）"; setTimeout(() => { if (b.isConnected) { delete b.dataset.sure; b.textContent = "關閉特供版"; } }, 4000); return; }
+    store.del("sonder"); toast("特供版關了；後院的紀錄還留著"); viewSettings(); main.querySelector("#sonder-set")?.scrollIntoView({ block: "center" });
+  });
+  // The keyboard's return key in a code field presses the button beside it.
+  main.querySelectorAll("[data-sonder-code], .code-in input").forEach((i) => i.addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.isComposing) { e.preventDefault(); (i.matches("[data-sonder-code]") ? main.querySelector("[data-sonder-on]") : i.parentElement.querySelector("button"))?.click(); } }));
+  // The pressed state is moved in place: a redraw of the whole page for one button made 出刊通知 and 額度 fold to 讀取中……
+  // and open again under the finger (no scroll anchoring on the iPhone).
+  main.querySelectorAll('[data-g="rate"] button').forEach((b) => (b.onclick = () => { setRate(Number(b.dataset.v)); main.querySelectorAll('[data-g="rate"] button').forEach((x) => x.setAttribute("aria-pressed", String(x === b))); }));
   // The theme swaps inside a view transition after this handler, so the pressed state is moved in place, not redrawn.
   main.querySelectorAll('[data-g="theme"] button').forEach((b) => (b.onclick = () => {
     setTheme(b.dataset.v, b);
@@ -2380,15 +2490,17 @@ function viewSettings() {
   main.querySelector("[data-sp-out]")?.addEventListener("click", () => { logout(); viewSettings(); });
   main.querySelector("[data-sp-code]")?.addEventListener("click", async () => {
     try { await exportLinkCode(); toast("已複製連結碼；這個瀏覽器已中斷連結"); viewSettings(); }
-    catch (e) { toast(e.message || "無法複製，請再試一次"); }
+    catch (e) { toast(ownWords(e) || "複製不了連結碼，請再按一次"); } // the browser's own refusal is English: only the app's own messages are shown as they are
   });
   main.querySelector("[data-sp-paste]")?.addEventListener("click", async (e) => {
     const btn = e.currentTarget, input = btn.parentElement.querySelector("input"); // currentTarget is gone after the await (audit c17)
     btn.disabled = true;
     try { await importLinkCode(input.value); toast("已連結 Spotify"); viewSettings(); }
-    catch (err) { toast(err.message); btn.disabled = false; }
+    catch (err) { toast(ownWords(err) || "連結不上，請再試一次"); btn.disabled = false; }
   });
 }
+// An error's message when it is one the app wrote itself (Chinese), else "": a DOMException or a fetch failure carries the browser's English.
+const ownWords = (e) => (/[一-鿿]/.test(e?.message || "") ? e.message : "");
 
 // ——— Router ———
 const NAV = [["#/", "今日", "today"], ["#/archive", "往期", "archive"], ["#/saved", "收藏", "saved"], ["#/serial", "連載", "book"], ["#/settings", "設定", "settings"]]; // 音樂 gave its tab to 連載 (the owner, 2026-11-05); the music column lives in 往期 like every column
@@ -2424,6 +2536,7 @@ async function route(ev) {
   if (ev) routed++;
   cleanup(); cleanup = () => {};
   if ($("#sheet")?.open) $("#sheet").close(); // the contents sheet (or any other) does not outlive the page it was raised from
+  if ($("#viewer")?.open) $("#viewer").close(); // nor a picture opened large (blocks.js openViewer): a step back left it standing over the page before
   document.title = S.cfg.title;
   const h = location.hash || "#/";
   enteredFront = shownHash !== h;
@@ -2434,6 +2547,7 @@ async function route(ev) {
   navTap = false;
   const backTo = leaving ? fromList : null; // the page the article on screen was opened from
   const stamped = history.state?.i;
+  if (Number.isInteger(stamped)) navIdx = Math.max(navIdx, stamped); // after a reload the entries keep their stamps while the counter starts over: new ones must still rise above them, or a step back is not seen as one
   const back = Boolean(ev) && Number.isInteger(stamped) && stamped < lastIdx; // landed on an entry stamped earlier
   if (!Number.isInteger(stamped)) { try { history.replaceState({ ...(history.state || {}), i: ++navIdx }, ""); } catch { /* ignore */ } }
   lastIdx = Number.isInteger(history.state?.i) ? history.state.i : lastIdx;
@@ -2448,6 +2562,7 @@ async function route(ev) {
   if (fromList && Number.isInteger(history.state?.i)) hopsAt.set(history.state.i, fromHops);
   shownHash = h;
   if (tapped) places.delete(h);
+  if (tapped && h.startsWith("#/archive")) { archiveQ = ""; archiveKept = null; } // the tab starts 往期 clean, its search too
   const place = !detail && !tapped && (back || backTo === h) ? places.get(h) : undefined;
   const active = tabOf(detail && fromList ? fromList : h);
   $("#nav").innerHTML = NAV.map(([href, label, icon]) => `<a href="${href}" ${href === active ? 'aria-current="page"' : ""}${(href === "#/serial" && serialUnread()) || (href === "#/saved" && sonder() && nestUnseen()) ? ' class="ear"' : ""}>${ICON[icon]}<span>${label}</span></a>`).join("");
@@ -2466,11 +2581,20 @@ async function route(ev) {
   // A page turned within the issue (openContents): the slide in its direction instead of the cross-fade and
   // the picture morph — again only for an article already in memory.
   if (turnDir && ev && art && isFresh(art[1], art[2])) morph = { dir: turnDir, lean: turnLean, ms: turnMs };
+  // A page that waits for the network before it draws (刊史館 every time; 演出 and 連載 until their data is in) opens
+  // without a transition, as an article still to be fetched does: the page before it would stand as a still picture,
+  // its taps dead, the loading line hidden behind it, for as long as the answer takes (audit 2026-11-11).
+  if (!art && (h.startsWith("#/chronik") || (/^#\/concert/.test(h) && !S.gigs) || (h.startsWith("#/serial") && S.book === undefined))) morph = null;
   turnDir = null; turnLean = 0; turnMs = 0;
   lastTapped = null;
   plateLater = Boolean(art && morph?.to);
   const draw = async () => {
-    await drawRoute(h, art, my);
+    // A view that throws (a piece of content it did not expect) leaves the 印刷故障 card and a way on, not the page
+    // before it under the new tab — or, at the first draw, index.html's 知更鳥正在送報…… for good (audit 2026-11-11).
+    try { await drawRoute(h, art, my); } catch (e) {
+      console.warn("view failed", h, e);
+      if (my === routeSeq) { main.innerHTML = `<div class="wrap">${errorCard({ text: "這一頁印壞了，請再試一次；還是不行的話，先回到今日。", offline: false })}</div>`; main.querySelector("[data-retry]").onclick = () => route(); }
+    }
     if (my === routeSeq) window.scrollTo(0, place ?? landTop ?? 0);
     landTop = null;
   };
@@ -2515,12 +2639,15 @@ async function drawRoute(h, art, my) {
 function watchUpdates() {
   if (!("serviceWorker" in navigator)) return;
   const had = Boolean(navigator.serviceWorker.controller);
-  let reloading = false;
-  navigator.serviceWorker.addEventListener("controllerchange", () => {
-    if (!had || reloading) return;
-    reloading = true;
-    location.reload();
-  });
+  let reloading = false, waiting = false;
+  // Not in the middle of a read, a paste or a letter: on an article or an event, on 設定 or 後院 (a code fetched from
+  // another app is about to be pasted), or with the cursor in a field, the reload waits for the next page that is none
+  // of those. A cold start asks for the new shell by itself, whatever the page — the care taken where app.js asks
+  // (visibilitychange, a tapped notice) did not cover the reload itself (audit 2026-11-11).
+  const busy = () => { const h = location.hash || "#/", a = document.activeElement; return isDetail(h) || /^#\/(settings|nest)/.test(h) || Boolean(a && /^(TEXTAREA|INPUT)$/.test(a.tagName)); };
+  const reload = () => { if (reloading) return; if (busy()) { waiting = true; return; } reloading = true; location.reload(); };
+  navigator.serviceWorker.addEventListener("controllerchange", () => { if (had) reload(); });
+  window.addEventListener("hashchange", () => { if (waiting) reload(); });
 }
 
 // The browser's toolbar colour (index.html's theme-color metas) follows the system scheme; a theme forced in 設定 paints it too.
@@ -2529,8 +2656,21 @@ function themeBar(v) {
   document.querySelectorAll('meta[name="theme-color"]').forEach((m) => { m.content = BAR[v] || BAR[/dark/.test(m.media) ? "dark" : "light"]; });
 }
 
+// Once on each phone: what features that are gone left in its storage (the reading lock, the perio cards, the darkroom
+// picture, the night edition's mark, the first Spotify lookup cache) — nothing reads them any more, and the storage is
+// the one thing that has filled up on the owner's phone (2026-11-11). Then the browser is asked to keep this site's
+// data (the stamps, what was read, the pencil lines live nowhere else) when the phone runs short of room.
+function tidyStorage() {
+  if (store.get("swept") !== 1) {
+    try { for (const k of Object.keys(localStorage)) if (/^rm\.(sp\.resolve\.|night\.seen$|cards(\.today)?$|develop$|intro$|lock\.(mode|t)$)/.test(k)) localStorage.removeItem(k); } catch { /* storage off */ }
+    store.set("swept", 1);
+  }
+  try { navigator.storage?.persist?.()?.catch?.(() => {}); } catch { /* not offered */ }
+}
+
 async function boot() {
   watchUpdates();
+  tidyStorage();
   themeBar(document.documentElement.dataset.theme || "auto");
   // No paper at all (config.json unreachable and not kept yet): the 印刷故障 card, and another try on the button or as
   // soon as the connection is back. There is no page to go back to yet, so no 回到今日.
@@ -2572,7 +2712,8 @@ async function boot() {
   // apart) carries across pages. It comes out of the 收藏 tab, where the yard is (nest.js flyBy), so not on 收藏 itself
   // or in the yard, where the bird already is.
   const onFly = scrollFlyer();
-  window.addEventListener("scroll", () => { if (sonder() && nest() && !/^#\/(nest|saved)/.test(location.hash || "")) onFly(); }, { passive: true });
+  // (No nest() here: it parses the whole yard out of storage, and this runs at every scroll event of every page; flyBy asks for the yard itself, on the rare scroll that lets a bird out.)
+  window.addEventListener("scroll", () => { if (sonder() && !/^#\/(nest|saved)/.test(location.hash || "")) onFly(); }, { passive: true });
   try { await route(); } catch (e) { console.warn("route failed", e); }
   runAutoAdd();
   // While the front page stays open: keep the countdown and the day change current, flip to the new issue at 07:30,
@@ -2586,14 +2727,33 @@ async function boot() {
     if (issue === shownFront[0] && status === shownFront[1]) return;
     const line = main.querySelector(".status");
     if (issue === shownFront[0] && status && shownFront[1] && line) { line.innerHTML = status; shownFront[1] = status; }
-    else { enteredFront = false; viewFront(); }
+    else if (typing()) return; // a letter being written at the top of the page: drawn again on the tick after the field is left, not under the keyboard
+    else {
+      // The card under the reader's eye stays where it is: at 21:00, 00:00 and 05:00 the page above it changes height
+      // (the letter fold, the weather and feast boxes), and the iPhone does not hold the place itself.
+      const a = scrollY > 0 ? [...main.querySelectorAll('a[href^="#/a/"]')].find((el) => el.getBoundingClientRect().bottom > 0) : null, href = a?.getAttribute("href"), y0 = a?.getBoundingClientRect().top;
+      const opened = [...main.querySelectorAll("details[open]")].map((d) => d.className).filter(Boolean); // 今日禱告, the wires, the letter fold: what the reader opened stays open
+      enteredFront = false; viewFront();
+      for (const cls of opened) { const d = [...main.querySelectorAll("details")].find((x) => x.className === cls); if (d) d.open = true; }
+      const b = href ? main.querySelector(`a[href="${href}"]`) : null;
+      if (b) window.scrollBy(0, b.getBoundingClientRect().top - y0);
+    }
   };
+  // A field of the page has the cursor (the evening letter): a redraw would take the focus, the keyboard and a
+  // half-composed character with it (audit 2026-11-11). The draft itself is kept either way (rm.letters.draft).
+  const typing = () => { const a = document.activeElement; return Boolean(a && main.contains(a) && /^(TEXTAREA|INPUT)$/.test(a.tagName)); };
   let fetchedAt = Date.now(), hiddenAt = 0;
   const loadIndex = async () => {
     loadGigs();
     // the day's files together with the index: a PWA kept alive overnight otherwise shows no 歷史上的今天 and a stale
     // 連載 cast for the new day (audit 2026-11-08); each keeps its last copy when offline
-    await Promise.all([loadLate(), loadDays(), loadLetters(), S.book === undefined ? null : loadBook()]);
+    // The letters are the yard's store, another host: not waited for (they fill their own slots when they come), so a
+    // stalled answer there cannot hold the index and 下拉更新 back. The book again whether or not the last fetch worked:
+    // one that failed at boot was never asked for again (audit 2026-11-11).
+    loadLetters();
+    // config.json too: it is content, so a deploy that adds a column or moves the rotation reloads nothing, and an app
+    // kept alive for days went on with the list it started with — a new column's pieces under their raw key (audit 2026-11-11).
+    await Promise.all([loadLate(), loadDays(), loadBook(), getJSON("content/config.json", { fresh: true }).then((c) => { if (c && typeof c === "object" && c.columns && c.title) S.cfg = c; }).catch(() => {})]);
     try { S.index = await getJSON("content/index.json", { fresh: true }); fetchedAt = Date.now(); } catch { /* offline: still redraw the clock */ }
   };
   const refetch = async () => {
@@ -2613,6 +2773,9 @@ async function boot() {
     await loadIndex();
     if ((location.hash || "#/") === "#/") { enteredFront = false; viewFront(); } else await route();
     runAutoAdd();
+    // Offline, the index above came out of the service worker's kept copy: 「已經是最新的」 would be a promise nobody
+    // checked. pull.js says 連不上 for a throw. (iOS's onLine is sometimes wrong the other way; then the old word stands.)
+    if (!navigator.onLine) throw new Error("offline");
     return S.index?.generated_at !== before;
   });
   // The status line says when the paper is the kept copy (frontStatus); back online, the index is fetched again.
@@ -2624,7 +2787,7 @@ async function boot() {
   document.addEventListener("visibilitychange", async () => {
     if (document.hidden) { hiddenAt = Date.now(); return; }
     clearNotices();
-    const replay = hiddenAt && Date.now() - hiddenAt > 30 * 1000 && (location.hash || "#/") === "#/" && scrollY < 400;
+    const replay = hiddenAt && Date.now() - hiddenAt > 30 * 1000 && (location.hash || "#/") === "#/" && scrollY < 400 && !typing();
     const stale = Date.now() - fetchedAt > 60 * 1000;
     // Coming back to a page kept alive is not a navigation, so the browser does not look for a newer shell by itself:
     // ask, as 下拉更新 does; one found reloads the page once installed (watchUpdates) (audit c8). Not on an article or an
@@ -2633,7 +2796,13 @@ async function boot() {
     const h = location.hash || "#/";
     if (stale && !isDetail(h) && !/^#\/(settings|nest)/.test(h)) navigator.serviceWorker?.getRegistration().then((r) => r?.update()).catch(() => {});
     if (stale) await loadIndex();
-    if (replay) route(); else refreshFront();
+    // asked again after the wait: the reader may have tapped into an article or 設定 while the index was on its way,
+    // and a replay decided for the front page would draw that page afresh, from its top (audit 2026-11-11)
+    // 後院 and 收藏's plate are drawn as of an hour too (asleep or awake, 今天吃了幾口, last night's goodnights, the morning's
+    // diary): left open in the evening and woken in the morning, they stood as they were until the reader went away and
+    // came back (audit 2026-11-11). Away for ten minutes or more, they are drawn afresh.
+    const yard = hiddenAt && Date.now() - hiddenAt > 10 * 60 * 1000 && /^#\/(nest|saved)$/.test(location.hash || "") && !typing();
+    if ((replay && (location.hash || "#/") === "#/" && scrollY < 400 && !typing()) || yard) route(); else refreshFront();
     if (stale) runAutoAdd();
   });
   clearNotices();

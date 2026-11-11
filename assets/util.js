@@ -36,7 +36,7 @@ export const store = {
     try { return put(); } catch (e) {
       if (!/quota/i.test(`${e?.name} ${e?.message}`)) return false; // private mode or storage off
       try {
-        const spare = /^rm\.(pos\.|sp\.resolve|wx$|letters\.cache$|credits$|gigs\.(seen|fresh)$|random\.recent$|reveal\.seen$)/;
+        const spare = /^rm\.(pos\.|sp\.resolve|wx$|wire\.last$|letters\.cache$|credits$|gigs\.(seen|fresh)$|random\.recent$|reveal\.seen$)/;
         for (const key of Object.keys(localStorage)) if (spare.test(key) && key !== "rm." + k) localStorage.removeItem(key);
         return put();
       } catch { return false; }
@@ -89,6 +89,12 @@ export const ROBIN_PATHS = `<path class="e-ink" d="M44.5 37.5 L55 30.5 L56.5 34 
   <path class="e-gold" d="M15.4 24.2 L9.5 25.8 L15.6 27.4 Z"/><circle class="e-ink" cx="20.6" cy="23.4" r="1.6"/><circle class="e-paper" cx="21.1" cy="22.9" r=".55"/>
   <path class="e-wing" d="M31 33 C36 31 42 32.5 45 36.5" stroke-width="1" stroke-linecap="round"/>
   <path class="e-legs" d="M30.5 47 L29.5 52.5 M36 46 L36 52.5 M15 53 L50 53" stroke-width="1.3" stroke-linecap="round"/>`;
+
+// A fetch to another host (the yard's store) gives up after `ms`: the service worker's stall fallback covers only the
+// paper's own files, and a request that neither answered nor failed held the sync, the diary or a button for as long
+// as the phone kept the socket (audit 2026-11-11). Spread into fetch's options: fetch(url, { ...within(15000) }).
+// Without AbortSignal.timeout (Safari before 16) nothing changes.
+export const within = (ms) => (typeof AbortSignal !== "undefined" && AbortSignal.timeout ? { signal: AbortSignal.timeout(ms) } : {});
 
 export async function getJSON(url, { fresh = false } = {}) {
   const r = await fetch(url, { cache: fresh ? "no-cache" : "default" });

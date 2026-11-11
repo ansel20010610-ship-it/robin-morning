@@ -20,7 +20,7 @@ export function initPull(refresh) {
   document.addEventListener("touchstart", (e) => {
     y0 = null;
     if (on && !busy) off(); // a second finger mid-pull left the pull drawn with nothing to end it; any new touch clears it
-    if (busy || scrollY > 0 || e.touches.length !== 1 || document.querySelector("dialog[open]")) return;
+    if (busy || scrollY > 0 || e.touches.length !== 1 || document.querySelector("dialog[open], .photo-view, .pc-view")) return; // nor under a photo or postcard opened large (nest.js): a drag down on it pulled the page behind
     y0 = e.touches[0].clientY; x0 = e.touches[0].clientX;
   }, { passive: true });
   document.addEventListener("touchmove", (e) => {

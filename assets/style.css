@@ -665,7 +665,8 @@ dialog.bottom { margin: auto auto 0; }
 .toast {
   position: fixed; left: 50%; transform: translateX(-50%) translateY(20px); opacity: 0; pointer-events: none;
   bottom: calc(var(--nav-h) + var(--dock-h) + 16px + env(safe-area-inset-bottom)); z-index: 50;
-  background: var(--ink); color: var(--paper); font-family: var(--sans); font-size: 14px; padding: 10px 16px; transition: .25s; max-width: 90vw;
+  background: var(--ink); color: var(--paper); font-family: var(--sans); font-size: 14px; padding: 10px 16px; transition: .25s;
+  width: max-content; max-width: min(90vw, 26rem); /* its own width up to the screen's: with left: 50% alone the box could only be half the screen wide, and a sentence stood as a narrow column of three or four lines */
 }
 .toast.on { opacity: 1; transform: translateX(-50%) translateY(0); }
 /* 下拉更新 (pull.js): the page comes down with the finger (--pull on <html>), a small tab in the gap it opens above. */
@@ -692,6 +693,8 @@ html:not(.pulling) .ptr { transition: opacity .15s, transform .28s cubic-bezier(
   .crest { width: 62px; height: 62px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+/* three keyframe animations the rule above does not reach (it stops transitions only): the notes over a tapped bird, the 更正 flash, the Aa popover's entrance */
+@media (prefers-reduced-motion: reduce) { .poke-note { display: none; } .callout.correction.lit, .topbar .aa-pop { animation: none; } }
 
 /* ——— Chinese typography ——— */
 body { text-autospace: normal; text-spacing-trim: normal; line-break: strict; hanging-punctuation: allow-end; }
@@ -782,7 +785,7 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
 .set .small { font-size: 12.5px; color: var(--muted); }
 .set .steps { font-family: var(--sans); font-size: 14px; line-height: 1.7; color: var(--ink-2); padding-left: 1.4em; margin: 6px 0 10px; }
 .code-in { display: flex; gap: 8px; margin: 8px 0; }
-.code-in input { flex: 1; min-width: 0; font: 15px var(--sans); padding: 9px 10px; border: 1px solid var(--rule); background: var(--paper-2); color: var(--ink); border-radius: 0; }
+.code-in input { flex: 1; min-width: 0; font: 16px var(--sans); padding: 9px 10px; border: 1px solid var(--rule); background: var(--paper-2); color: var(--ink); border-radius: 0; }
 .set details.more summary { cursor: pointer; font-family: var(--sans); font-size: 13px; color: var(--gold-ink); margin-top: 10px; }
 
 .body h2 { scroll-margin-top: calc(60px + env(safe-area-inset-top)); }
@@ -903,8 +906,8 @@ img.img-off { visibility: hidden; }
    shrinks, a tab's glyph dips. Pressed in 70ms, released over 260ms with a little overshoot. Touch screens only, and
    not under reduced motion. `translate` is used rather than `transform` so the reveal (.rv) and the tab's own transform
    and nav-pop animation are left alone. */
+@media (hover: none) { body { touch-action: manipulation; } } /* no double-tap zoom on a touch screen — whatever the motion setting: under 減少動態 a quick second tap used to zoom the page */
 @media (hover: none) and (prefers-reduced-motion: no-preference) {
-  body { touch-action: manipulation; }
   :is(.lead, .item, .issue-row, a.gig, .hit, .sheet .opt, .cont, a.rel) {
     transition: translate .26s cubic-bezier(.2,1.4,.4,1), border-color .26s ease, background .25s;
   }
@@ -1356,6 +1359,7 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .marks .mk .q { flex: 1; min-width: 0; text-decoration: none; font-size: 16px; line-height: 1.9; color: var(--ink-2); padding-left: 1.3em; text-indent: -1.3em; }
 .marks .mk .q::before { content: "— "; font-family: var(--latin); color: var(--gold); }
 .marks .mk .x { flex: 0 0 auto; width: 32px; height: 32px; margin: -2px -8px 0 0; color: var(--muted); font-size: 14px; }
+.marks .mk .x.sure { width: auto; padding: 0 8px; margin-right: -4px; color: var(--robin); font-family: var(--sans); font-size: 13px; white-space: nowrap; } /* 移除？ — the second press removes the line (app.js viewMarks) */
 
 /* ——— 找知更鳥 (app.js birdSpot/hideBird): a small robin at the end of one paragraph of one article a day, ink with
    its red breast, no box; a tap sends it up and away and the front page's note says it was found. ——— */
@@ -1377,8 +1381,8 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
   .bird-hide.found.west svg { transform: scaleY(-1); } /* auto-rotation along a leftward path turns the bird over; the flip sets it upright, facing where it flies */
   @keyframes hop { 0%, 100% { transform: translateY(0) scale(1, 1); } 35% { transform: translateY(-7px) scale(.96, 1.06); } 70% { transform: translateY(0) scale(1.05, .94); } }
   @keyframes take-off { 0% { offset-distance: 0%; opacity: 1; } 80% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
-  .bird-hide.found .e-wing { transform-origin: 31px 33px; animation: flap .16s .5s ease-in-out infinite alternate; }
-  @keyframes flap { from { transform: rotate(10deg); } to { transform: rotate(-30deg); } }
+  .bird-hide.found .e-wing { transform-origin: 31px 33px; animation: hide-flap .16s .5s ease-in-out infinite alternate; }
+  @keyframes hide-flap { from { transform: rotate(10deg); } to { transform: rotate(-30deg); } } /* its own name: as a second `flap` it replaced the masthead emblem's (keyframe names are global, the last one wins) */
   .fleck { position: fixed; z-index: 39; width: 4px; height: 4px; border-radius: 50%; background: var(--gold); pointer-events: none; animation: fleck .9s ease-out both; }
   @keyframes fleck { from { opacity: .9; transform: scale(1); } to { opacity: 0; transform: translateY(14px) scale(.3); } }
 }
@@ -1517,7 +1521,7 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .tile .no { position: absolute; top: 7px; left: 9px; z-index: 1; font-family: var(--latin); font-size: 13px; font-weight: 600; letter-spacing: .06em; color: #fff; text-shadow: 0 0 8px rgba(0,0,0,.55), 0 1px 2px rgba(0,0,0,.4); font-variant-numeric: lining-nums tabular-nums; }
 .tile .mat { display: block; overflow: hidden; border-bottom: 1px solid var(--gold-soft); background: var(--paper-3); }
 .tile img { display: block; width: 100%; height: auto; }
-.tile .lbl { display: grid; gap: 3px; padding: 9px 0 0; }
+.tile .lbl { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3px; padding: 9px 0 0; } /* the one track never wider than the plate: the nowrap column-and-day line (.m) would stretch it past a narrow phone's edge */
 .tile .m { display: flex; gap: 8px; font-family: var(--sans); font-size: 10.5px; letter-spacing: .14em; line-height: 1.5; color: var(--gold-ink); white-space: nowrap; }
 .tile .k { min-width: 0; overflow: hidden; text-overflow: ellipsis; } /* a long column name gives way; the day stays whole */
 .tile .d { flex: 0 0 auto; color: var(--muted); }
@@ -2369,7 +2373,7 @@ details.band .svl { margin: 0 0 10px; }
 .pc-view .postcard.big .pc-front .pc-sight { display: block; position: absolute; left: 4%; bottom: 5%; padding: 3px 9px 4px; background: rgb(251 246 234 / .9); color: #3A3027; font-family: var(--serif); font-size: 13px; letter-spacing: .1em; box-shadow: 0 1px 3px rgb(0 0 0 / .15); }
 
 /* 寫信給編輯部 and 編輯部回信 (app.js letterForm, lettersBox, viewLetters) */
-.letter-form textarea { width: 100%; box-sizing: border-box; margin: 8px 0 8px; padding: 10px 12px; font: inherit; font-size: 15px; line-height: 1.6; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 2px; resize: vertical; }
+.letter-form textarea { width: 100%; box-sizing: border-box; margin: 8px 0 8px; padding: 10px 12px; font: inherit; font-size: 16px; /* 16px, as .search: iPhone Safari zooms the page into any field set smaller */ line-height: 1.6; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 2px; resize: vertical; }
 .letter-form .btns { display: flex; align-items: center; gap: 12px; }
 .letter-form .count { color: var(--muted); }
 .letter-form .letters-sent { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 6px; font-size: 13px; }
@@ -2421,7 +2425,7 @@ details.band .svl { margin: 0 0 10px; }
 .ask-box .lbl b { font-size: 12.5px; letter-spacing: .14em; color: var(--gold-ink); }
 .ask-box .lbl .de { font-family: var(--latin); font-style: italic; font-size: 13px; color: var(--gold); }
 .ask-box .small { font-size: 13px; line-height: 1.6; color: var(--ink-2); margin: 6px 0 0; }
-.ask-box textarea { width: 100%; box-sizing: border-box; margin: 10px 0 8px; padding: 10px 12px; font: inherit; font-size: 15px; line-height: 1.6; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 2px; resize: vertical; }
+.ask-box textarea { width: 100%; box-sizing: border-box; margin: 10px 0 8px; padding: 10px 12px; font: inherit; font-size: 16px; line-height: 1.6; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 2px; resize: vertical; }
 .ask-box .btns { display: flex; align-items: center; gap: 12px; }
 .ask-box .ask-qa { margin: 14px 0 0; padding-top: 12px; border-top: 1px dashed var(--rule); }
 .ask-box .ask-qa .q { margin: 0 0 6px; font-weight: 600; color: var(--ink); }

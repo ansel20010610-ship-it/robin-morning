@@ -137,7 +137,10 @@ async function accessToken(stale = null) {
 }
 
 async function api(path, opts = {}) {
-  const send = (tok) => fetch(API + path, { ...opts, headers: { Authorization: `Bearer ${tok}`, "Content-Type": "application/json", ...(opts.headers || {}) } });
+  // A request that cannot go out fails as the browser's own TypeError (「Load failed」 on Safari), which reached the reader
+  // as a toast in English: said in the paper's words, and still a TypeError for the callers that tell the network from
+  // an answer (runAuto).
+  const send = async (tok) => { try { return await fetch(API + path, { ...opts, headers: { Authorization: `Bearer ${tok}`, "Content-Type": "application/json", ...(opts.headers || {}) } }); } catch { throw new TypeError("連不上 Spotify，請確認網路後再試"); } };
   const tok = await accessToken();
   if (!tok) throw authError("請先連結 Spotify");
   let r = await send(tok);

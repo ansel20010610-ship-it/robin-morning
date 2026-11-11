@@ -20,7 +20,9 @@ const reload = (u) => new Request(u, { cache: "reload" }); // skip the HTTP cach
 self.addEventListener("install", (e) => {
   e.waitUntil(Promise.all([
     caches.open(CACHE).then((c) => c.addAll(SHELL.map(reload))),
-    caches.open(CONTENT).then((c) => c.addAll(DATA.map(reload))),
+    // best effort: three small files kept for a first offline open. One of them failing (a dropped connection, a file
+    // renamed) must not fail the install — the old shell then stayed, and every start downloaded the new one again for nothing
+    caches.open(CONTENT).then((c) => c.addAll(DATA.map(reload))).catch(() => {}),
   ]).then(() => self.skipWaiting()));
 });
 self.addEventListener("activate", (e) => {
@@ -35,7 +37,10 @@ async function appPage(req) {
 // Shell URLs carry ?v=<this version> (scripts/version_shell.py); the precached copies are stored without it.
 async function cacheFirst(req) {
   const c = await caches.open(CACHE);
-  return (await c.match(req, { ignoreSearch: true })) || fetch(req).then((r) => { if (r.ok) c.put(req, r.clone()); return r; });
+  // A page answered in place of a script or a picture (a captive portal's 200 text/html) is not kept: it would stand
+  // for that file until the next deploy (the postcard drawings are fetched here on first use, not precached).
+  const page = (r) => /text\/html/.test(r.headers.get("content-type") || "") && !/\.html(\?|$)/.test(req.url);
+  return (await c.match(req, { ignoreSearch: true })) || fetch(req).then((r) => { if (r.ok && !page(r)) c.put(req, r.clone()); return r; });
 }
 // On a stalled connection, answer from the cache after TIMEOUT; a late network copy is still stored.
 // With nothing cached, wait for the network; JSON never falls back to index.html. Only a good answer is stored or
@@ -72,6 +77,7 @@ async function revalidated(e, name) {
   e.waitUntil(net.catch(() => {}));
   return hit || net.catch(() => fetch(e.request));
 }
+let adds = 0; // additions to a budgeted cache since this worker woke (trim)
 async function trim(c, max, bytes) {
   const keys = await c.keys(); // in the order they were stored
   for (const k of keys.slice(0, Math.max(0, keys.length - max))) await c.delete(k);
@@ -79,7 +85,9 @@ async function trim(c, max, bytes) {
   // entry's size), the oldest dropped first until it fits.
   if (!bytes) return;
   const rest = await c.keys();
-  if (rest.length < 100 || rest.length % 20) return;
+  // every twentieth addition, by a count of its own: the cache's size stands at the 400-entry limit once it is full —
+  // a multiple of twenty — and by that test every picture added read all four hundred entries again (audit 2026-11-11)
+  if (rest.length < 100 || ++adds % 20) return;
   let total = 0;
   const sizes = [];
   for (const k of rest) {

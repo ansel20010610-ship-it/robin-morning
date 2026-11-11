@@ -50,7 +50,7 @@ export function createReader(root, { onState, selector = READ } = {}) {
     if (!el) return;
     el.classList.add("speaking");
     const r = el.getBoundingClientRect();
-    if (r.top < 70 || r.bottom > window.innerHeight - 140) el.scrollIntoView({ block: "center", behavior: "smooth" });
+    if (r.top < 70 || r.bottom > window.innerHeight - 140) el.scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
   };
 
   function speakNext() {

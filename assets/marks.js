@@ -15,7 +15,7 @@ export const marksOf = (key) => allMarks().filter((m) => m.key === key);
 const rid = () => Math.random().toString(36).slice(2, 10);
 function addMark(key, text, ctx) {
   const m = { id: rid(), key, text, ctx, at: new Date().toISOString() };
-  store.set("marks", [...allMarks(), m].slice(-MAX));
+  if (!store.set("marks", [...allMarks(), m].slice(-MAX))) { toast("手機的儲存空間滿了，這一句劃線存不進去"); return null; } // no line drawn that is gone at the next start
   return m;
 }
 export function removeMark(id) { store.set("marks", allMarks().filter((m) => m.id !== id)); }
@@ -133,6 +133,7 @@ export function pencil(body, key) {
     const off = pre.toString().length, all = block.textContent;
     if (all.slice(off, off + text.length) !== text) return; // the text moved under the pill (a spoiler opened, say)
     const m = addMark(key, text, { before: all.slice(Math.max(0, off - CTX), off), after: all.slice(off + text.length, off + text.length + CTX) });
+    if (!m) return;
     gather(block); // may move the text nodes, so the mark is placed by its offsets, not by the selection's range
     const at = rangeAt(block, off, text.length);
     if (at) wrap(at, m.id);

@@ -57,7 +57,7 @@ export async function renderPush(el, cfg, registered = []) {
         if ((await Notification.requestPermission()) !== "granted") throw new Error("沒有允許通知");
         await (await registration()).pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: unb64u(key) });
         toast("已允許通知，還差一步：複製裝置代碼");
-      } catch (err) { toast(err.message || "無法開啟通知，請再試一次"); }
+      } catch (err) { toast(/[一-鿿]/.test(err?.message || "") ? err.message : "無法開啟通知，請再試一次"); } // the browser's own refusal is English: only the app's own words are shown as they are
       again();
     };
     return;
@@ -80,8 +80,12 @@ export async function renderPush(el, cfg, registered = []) {
     }
   });
   el.querySelector("[data-push-off]")?.addEventListener("click", async (e) => {
-    e.currentTarget.disabled = true;
-    try { await sub.unsubscribe(); toast("已關閉出刊通知；之後要再開，需要重新傳一次裝置代碼"); }
+    // Two presses, as the app's other ways out: one stray tap cost the morning notice until a new 裝置代碼 had been
+    // sent and listed again, and the only word on that was a toast after the fact.
+    const b = e.currentTarget;
+    if (!b.dataset.sure) { b.dataset.sure = "1"; b.textContent = "確定關掉？要再開得重新傳一次代碼"; setTimeout(() => { if (b.isConnected) { delete b.dataset.sure; b.textContent = "關閉通知"; } }, 4000); return; }
+    b.disabled = true;
+    try { await sub.unsubscribe(); toast("出刊通知關了"); }
     catch { toast("無法關閉，請再試一次"); }
     again();
   });
