@@ -338,7 +338,14 @@ def stock(cfg):
 def main():
     cfg = load_config()
     days, epigraphs, verses, search, docs, flat = {}, {}, {}, {}, [], []
+    # Installments of the serial are written ahead — three days by the 連載班, weeks or months by the month-end sweep
+    # (scripts/api_shift.py, 2026-11-11). The app shows no issue before its 07:30, so anything later than tomorrow only
+    # weighs on index.json (1.2 KB an installment, fetched at every launch) and on the search files: it joins the index
+    # on the eve of its day — a deploy runs every half hour.
+    horizon = str(dt.datetime.now(TW).date() + dt.timedelta(days=1))
     for day, col, path in iter_articles():
+        if str(day) > horizon:
+            continue
         meta = column_meta(cfg, col, day)  # a retired column stays in config.json with "until", so its issues stay listed
         if meta is None:
             skip(path, "欄位代號 %s 不在 config.json（停刊的欄位要留在 config.json 並加 until，往期才看得到）" % col)
