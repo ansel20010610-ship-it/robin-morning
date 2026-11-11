@@ -1,0 +1,308 @@
+{
+  "column": "artwork",
+  "date": "2026-11-12",
+  "title": "羅丹要他們站在地上，加萊把他們抬高一公尺半",
+  "dek": "1.5 公尺：1895 年加萊替羅丹的六個人墊上的底座高度。羅丹說過，他根本不要底座。",
+  "brief": "羅丹要《加萊義民》的六個人直接站在市政廳前的鋪石上，看起來像正要出城走向敵營；加萊在 1895 年還是把他們架上約 1.5 公尺高的底座，外面圍了鐵欄杆。等到 1924 年雕像搬到市政廳前，欄杆拆了、底座矮了很多，羅丹已經不在了。",
+  "topic_key": "artwork:rodin-the-burghers-of-calais",
+  "form": "timeline",
+  "voice": "appraiser",
+  "updated_at": "2026-11-12T02:08:11+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/The_Burghers_of_Calais_MET_DP221863.jpg/1280px-The_Burghers_of_Calais_MET_DP221863.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/The_Burghers_of_Calais_MET_DP221863.jpg/3840px-The_Burghers_of_Calais_MET_DP221863.jpg",
+    "width": 1280,
+    "height": 975,
+    "alt": "青銅群像：六個赤腳、穿粗布長衫的男人站在同一塊長方形銅座上，各朝不同方向。左邊一人舉起一隻手；中間一人留著大鬍子，脖子掛著繩子；他身後一人舉臂遮住臉；右前方一人兩手在腰前握著一把大鑰匙，肩上搭著繩子；右後方一人雙手抱頭。",
+    "caption": "羅丹，《加萊義民》，1884–1895 年塑造，1985 年鑄造，青銅，高 209.6、寬 238.8、深 241.3 公分，紐約大都會博物館（1989.407）。",
+    "credit": "Auguste Rodin／The Metropolitan Museum of Art, Gift of Iris and B. Gerald Cantor, 1989",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Burghers_of_Calais_MET_DP221863.jpg",
+    "made": "1884–1895 塑造，1985 鑄造",
+    "depicts": "1347 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "東京上野的國立西洋美術館，前院站著六個銅鑄的男人。他們赤腳，穿著長衫，脖子上套著繩子；有一個雙手抱住頭，有一個兩手握著一把大鑰匙。這組雕像叫**《加萊義民》**（Les Bourgeois de Calais），作者是法國雕塑家**羅丹**（Auguste Rodin），《沉思者》也是他做的。東京這座 1953 年鑄成，1959 年由日本政府買下。"
+    },
+    {
+      "type": "p",
+      "text": "最早的那一座在加萊，法國在英吉利海峽邊的港口。加萊市議會 1884 年決定立像，雕像 1895 年揭幕，1924 年又搬了一次家。這中間有記錄的摩擦有兩件：1885 年，雙方爭的是人物的姿勢與群像的輪廓；1895 年，雕像立上的是高底座。**羅丹本來要他們站在地上。**"
+    },
+    {
+      "type": "timeline",
+      "title": "四十年，從一個決定到一次搬家",
+      "items": [
+        {
+          "when": "1347 年",
+          "label": "加萊被圍 11 個月後，六名市民出城當人質",
+          "note": ""
+        },
+        {
+          "when": "1884.9",
+          "label": "加萊市議會決定替厄斯塔什立像",
+          "note": ""
+        },
+        {
+          "when": "1885.1",
+          "label": "市議會看了小模型，選中羅丹",
+          "note": ""
+        },
+        {
+          "when": "1885.8",
+          "label": "第二個模型拿掉底座，委員會不滿",
+          "note": ""
+        },
+        {
+          "when": "1886 年",
+          "label": "加萊財政危機，委託暫停",
+          "note": ""
+        },
+        {
+          "when": "1889 春",
+          "label": "整組石膏像在巴黎的莫內－羅丹聯展展出",
+          "note": ""
+        },
+        {
+          "when": "1893.9",
+          "label": "加萊市長恢復委託，開始找鑄造廠",
+          "note": ""
+        },
+        {
+          "when": "1895.6.3",
+          "label": "在里希留花園揭幕",
+          "note": "約 1.5 公尺高的底座，外圍鐵欄杆"
+        },
+        {
+          "when": "1917.11.17",
+          "label": "羅丹過世",
+          "note": ""
+        },
+        {
+          "when": "1924 年",
+          "label": "搬到市政廳前，拆欄杆、底座降低",
+          "note": ""
+        }
+      ],
+      "caption": "依大都會博物館的教師手冊整理。"
+    },
+    {
+      "type": "p",
+      "text": "故事要從 1347 年講起，那是英法百年戰爭裡的一段。照 14 世紀編年史家傅華薩的記載，英王愛德華三世圍攻加萊，圍了 11 個月，城裡缺糧也缺水。六個有錢、有身分的市民站出來，願意去當人質，換全城平安。"
+    },
+    {
+      "type": "p",
+      "text": "國王答應了，條件是他們只穿粗布衣、脖子套上繩索、帶著城門鑰匙走到他的營地。他本來要殺他們，懷孕的王后菲莉帕勸他饒命，說他們的死對她未出世的孩子是凶兆，國王便饒了他們。第一個站出來的，是城裡最有錢、年紀最大的厄斯塔什。"
+    },
+    {
+      "type": "p",
+      "text": "1884 年 9 月，加萊市議會決定替厄斯塔什立一座像。1885 年 1 月，市議會根據一個小型黏土模型，選中了他。早先的藝術家處理這個故事，多半只做厄斯塔什一個；羅丹讀了傅華薩，決定六個人全做。"
+    },
+    {
+      "type": "p",
+      "text": "合約規定，完工前還要再交一個模型，大小是成品的三分之一。第一個模型裡，六個人站在一個底座上，用一條繩子串著往前走；1885 年 8 月交出的第二個模型，羅丹把那個底座拿掉了，六個人分開做，高度一樣，各站各的。委員會看完寫了報告："
+    },
+    {
+      "type": "quote",
+      "text": "我們想像中，我們光榮的市民走向英王營地，不是這個樣子。他們一副戰敗的姿態，冒犯了我們的信仰……",
+      "original": "This is not the way we envisaged our glorious citizens going to the camp of the King of England. Their defeated postures offended our religion. . .",
+      "cite": "委員會對第二個模型的報告，1885 年（英譯，轉引自大都會博物館《羅丹〈加萊義民〉教師手冊》）"
+    },
+    {
+      "type": "p",
+      "text": "報告還要羅丹改姿勢、改輪廓，建議讓六個人高低錯開。那時候的紀念雕像習慣排成金字塔，好讓最重要的人物一眼可辨。羅丹寫信給加萊市長，說把人頭排成金字塔，就是向學院派的規矩（官方認可的那一套）低頭，他堅決反對，那樣做出來的作品冰冷、靜止、老套。"
+    },
+    {
+      "type": "p",
+      "text": "市議會不滿意，還是讓他做下去。1886 年 6 月羅丹領到 2,000 法郎，同一年加萊碰上財政危機，委託停了，募款一擱就是七年。羅丹沒有停手。"
+    },
+    {
+      "type": "h",
+      "text": "赤腳、套繩、一把鑰匙"
+    },
+    {
+      "type": "p",
+      "text": "1889 年春天，羅丹把整組石膏像搬進巴黎的「莫內－羅丹」聯展。接下來看的，是紐約大都會博物館那座 1985 年鑄的銅像：全組高約 2.1 公尺，寬和深都在 2.4 公尺上下。"
+    },
+    {
+      "type": "p",
+      "text": "六個人站在同一塊底座上，沒有誰比誰高。他們面朝不同方向，彼此不看，也不碰，沒有單一正面，要繞著看。他們穿一樣的粗布衣，體格相近，臉上的表情卻各不相同。手和腳都比身體的比例大，又大又重。羅丹說，他毫不猶豫把他們做得越瘦越弱越好；經過長期圍城，他們只剩皮包骨。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.555,
+        0.48,
+        0.18,
+        0.17
+      ],
+      "position": "畫面右前方人像的腰間，約佔寬度五分之一",
+      "caption": "局部：讓・戴爾雙手握著一把城門鑰匙。"
+    },
+    {
+      "type": "p",
+      "text": "正面右前方那位是讓・戴爾，第二個自願的人。他站得很穩，下巴繃緊，雙手握著一把城門鑰匙。正中間留大鬍子的是厄斯塔什，城裡最有錢、年紀最大、第一個自願，羅丹卻把他做得駝背、瘦、年老，看起來在猶豫，不像帶頭往前走的人。右後方那位雙手抱著頭，彎著身子，一雙大手遮住臉，他叫安德里厄・丹德爾。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.72,
+        0.21,
+        0.1,
+        0.18
+      ],
+      "position": "畫面右上方、最後面的人像，約佔寬度十分之一",
+      "caption": "局部：安德里厄・丹德爾雙手抱頭，一雙大手遮住了臉。"
+    },
+    {
+      "type": "p",
+      "text": "有兩處是重複用的。讓・戴爾和安德里厄・丹德爾用的是同一個頭、同一張臉；德維桑兄弟（雅克和皮耶）用的是同一隻右手。羅丹一輩子做過許多手腳軀幹的石膏模，反覆拿來用在不同作品。"
+    },
+    {
+      "type": "h",
+      "text": "一公尺半的底座"
+    },
+    {
+      "type": "p",
+      "text": "1893 年 9 月，加萊市長恢復委託。羅丹找到一家鑄造廠，答應把六個人各自整件鑄出來，再接成一組。"
+    },
+    {
+      "type": "p",
+      "text": "1895 年 6 月 3 日，《加萊義民》在加萊的里希留花園揭幕。雕像放在一座約 1.5 公尺高的底座上，外面還圍了一圈鐵欄杆。羅丹說過："
+    },
+    {
+      "type": "quote",
+      "text": "我不要給這些人像底座。我要他們就放在、甚至固定在加萊市政廳前廣場的鋪石上，看起來就像正要出發，走向敵營。",
+      "original": "I did not want a pedestal for these figures. I wanted them to be placed on, even affixed to, the paving stones of the square in front of the Hôtel de Ville in Calais so that it looked as if they were leaving in order to go to the enemy camp.",
+      "cite": "羅丹（英譯，轉引自大都會博物館《羅丹〈加萊義民〉教師手冊》）"
+    },
+    {
+      "type": "p",
+      "text": "他想的是，路人走過會擦撞到他們，感受到活生生的過去就在身邊。他說，委託他的人完全不懂他的想法，覺得他瘋了：雕像不放底座，哪裡見過？一定要有底座，沒有別的辦法。"
+    },
+    {
+      "type": "p",
+      "text": "1917 年 11 月 17 日，羅丹過世，葬在默東，墓上立著一座《沉思者》。"
+    },
+    {
+      "type": "p",
+      "text": "1924 年，《加萊義民》搬到加萊市政廳正前方。鐵欄杆拆了，底座降低了很多。大都會博物館的手冊說，這樣更接近羅丹當初要的。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Les_Bourgeois_de_Calais_devant_l%27h%C3%B4tel_de_ville.jpg/1280px-Les_Bourgeois_de_Calais_devant_l%27h%C3%B4tel_de_ville.jpg",
+      "width": 1280,
+      "height": 1456,
+      "alt": "照片：紅磚與白石的市政廳和高聳的鐘樓前，一片圓形草地中央立著六個人的青銅群像，銅色發綠；群像下面是一層矮矮的淺色石座；後方有一圈黑色鐵欄杆，圍著花木。",
+      "caption": "加萊市政廳前的《加萊義民》，這是 1895 年揭幕的第一座銅鑄，1924 年搬到這裡。2019 年 7 月攝。背景的欄杆圍的是花圃。",
+      "credit": "Jörg Braukmann／Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Les_Bourgeois_de_Calais_devant_l%27h%C3%B4tel_de_ville.jpg",
+      "made": "2019"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "這組像的高度，本身就是作品的一部分。照大都會那座的照片看，讓・戴爾握鑰匙的手大約在銅像的半腰；擺在 1.5 公尺的底座上，那雙手會比路人的頭還高，看的人只能仰著頭。底座降下來，手和鑰匙才回到人的眼前。"
+    },
+    {
+      "type": "p",
+      "text": "羅丹要的鋪石地，加萊到今天也沒有完全照做：2019 年的照片裡，六個人腳下還墊著一層矮石座。那把鑰匙，還握在讓・戴爾的雙手裡。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "加萊義民"
+        ],
+        [
+          "作者",
+          "羅丹，法國，1840–1917"
+        ],
+        [
+          "年代",
+          "1884–1895 年塑造；第一座銅鑄 1895 年在加萊揭幕"
+        ],
+        [
+          "媒材與尺寸",
+          "青銅；大都會博物館那座高 209.6、寬 238.8、深 241.3 公分"
+        ],
+        [
+          "在哪裡",
+          "法國加萊市政廳前；另有東京國立西洋美術館、倫敦國會花園、紐約大都會博物館等地的鑄件"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Auguste Rodin · The Burghers of Calais: A Resource for Educators",
+      "publisher": "The Metropolitan Museum of Art（Nelly Silagy Benedek）",
+      "date": "2000",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Auguste_Rodin_The_Burghers_of_Calais_A_Resource_for_Educators.pdf",
+      "note": "主要來源。傅華薩的故事（1347、11 個月、繩索、鑰匙、菲莉帕王后勸王饒他們）；各人說明：厄斯塔什第一個自願、讓・戴爾第二個自願；History of the Commission：1884.9 市議會決定立厄斯塔什像、1885.1 選中羅丹、合約要第二模型（成品的三分之一）；委員會報告出自 committee、1885.8 第二模型與委員會報告（引 Tancock）、羅丹致市長 Dewavrin 信（Miller & Marotta p.44）、1886.6.17 收 2,000 法郎與財政危機、1889 春莫內－羅丹聯展、1893.9 恢復委託、Le Blanc-Barbédienne、1895.6.3 里希留花園高底座與鐵欄、1924 遷市政廳前；Rodin's Innovations：同一高度、方向各異、手腳大、各人姿態、羅丹談底座（Tancock）與「越瘦越弱」；同頭同手；鑄件與 12 座限制；年表：1857 美院落榜、1880《沉思者》、1895 五英尺底座、1917.11.17 過世葬默東《沉思者》下。PDF 的數字用舊式字型，抽字後對照還原。Musée Rodin 法文頁寫 1895 年安置在市政廳廣場，與此不同，正文照大都會。"
+    },
+    {
+      "title": "The Burghers of Calais（1989.407）",
+      "publisher": "The Metropolitan Museum of Art",
+      "date": "2026-11-11",
+      "url": "https://www.metmuseum.org/art/collection/search/207812",
+      "note": "查閱日期。modeled 1884–95, cast 1985；209.6 × 238.8 × 241.3 cm；Gift of Iris and B. Gerald Cantor, 1989；Open Access。半腰位置是依照片目測"
+    },
+    {
+      "title": "The Weeping Burgher (Andrieu d'Andres)",
+      "publisher": "The Metropolitan Museum of Art",
+      "date": "2026-11-11",
+      "url": "https://www.metmuseum.org/art/collection/search/198567",
+      "note": "查閱日期。用單件像核對群像裡雙手抱頭的是安德里厄・丹德爾"
+    },
+    {
+      "title": "Monument aux Bourgeois de Calais",
+      "publisher": "Musée Rodin",
+      "date": "2026-11-11",
+      "url": "https://www.musee-rodin.fr/musee/collections/oeuvres/monument-aux-bourgeois-de-calais",
+      "note": "查閱日期。1884 年加萊委託、1889 年完成；同一底座、彼此不看不碰、長衫、繩、赤腳"
+    },
+    {
+      "title": "Burghers of Calais（S.1959-0008）",
+      "publisher": "The National Museum of Western Art, Tokyo",
+      "date": "2026-11-11",
+      "url": "https://collection.nmwa.go.jp/en/S.1959-0008.html",
+      "note": "查閱日期。1884–88 模型、1953 鑄造、1959 年日本政府購入"
+    },
+    {
+      "title": "Architecture",
+      "publisher": "The National Museum of Western Art, Tokyo",
+      "date": "2026-11-11",
+      "url": "https://www.nmwa.go.jp/en/about/building.html",
+      "note": "查閱日期。前院的《沉思者》與《加萊義民》"
+    },
+    {
+      "title": "The Burghers of Calais",
+      "publisher": "Wikipedia",
+      "date": "2026-11-11",
+      "url": "https://en.wikipedia.org/wiki/The_Burghers_of_Calais",
+      "note": "查閱日期。只用於加萊是英吉利海峽邊的港口"
+    },
+    {
+      "title": "File:Les Bourgeois de Calais devant l'hôtel de ville.jpg",
+      "publisher": "Wikimedia Commons（Jörg Braukmann）",
+      "date": "2019-07-11",
+      "url": "https://commons.wikimedia.org/wiki/File:Les_Bourgeois_de_Calais_devant_l%27h%C3%B4tel_de_ville.jpg",
+      "note": "現況照片，CC BY-SA 4.0；矮石座依圖描述"
+    }
+  ]
+}
