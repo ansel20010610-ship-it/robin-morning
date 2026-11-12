@@ -20,6 +20,13 @@
     ],
     "note": "古蹟 architecture 科隆大教堂（timeline/walker）、詩 poem 霍普金斯〈春與秋〉（walk/reader，qa 詩欄不適用故改 walk）；第9步重寫1（architecture）／修正1（poem）；未接第1班缺稿（第1班已回報）；validate 無 WARN"
   },
+  "3": {
+    "finished_at": "2026-11-13T03:47:51+08:00",
+    "missing": [
+      "news"
+    ],
+    "note": "concept（compare/tutor，審稿判重寫→總編重寫→忠實度核對）、football（number/fan，非比賽夜，審稿修正即可→忠實度核對修正）；第 9 步重寫 1／修正 1；未接第 1 班缺稿；football 字數 WARN 1586<1800，女足 1 比 1 已入稿，西班牙／英格蘭國家隊賽果待第 4 班補"
+  },
   "column": {
     "finished_at": "2026-11-12T22:46:21+08:00",
     "missing": [
