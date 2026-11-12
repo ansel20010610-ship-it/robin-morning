@@ -1,0 +1,274 @@
+{
+  "column": "concept",
+  "date": "2026-11-13",
+  "title": "六十五年前那場麻疹，還護著法羅群島的老人",
+  "dek": "第一次碰到麻疹，身體要十天才拿得出抗體；第二次只要幾天。中間那幾十年，身體留著什麼？",
+  "brief": "1846 年麻疹橫掃北大西洋的法羅群島，1781 年得過麻疹的老人，醫師一個個查問，沒有人再得。護著他們的，是第一次生病後留下的兩種細胞：一種一直在做抗體，一種下次碰到能更快擴增。這就叫免疫記憶。",
+  "topic_key": "concept:immunological-memory",
+  "form": "compare",
+  "voice": "tutor",
+  "updated_at": "2026-11-13T02:51:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/Emanuel_Larsen_-_Indsejlingen_til_en_f%C3%A6r%C3%B8sk_bygd.png",
+    "width": 1018,
+    "height": 672,
+    "alt": "橫幅油畫。左邊岸上有兩棟木造房子，屋前是一道石堤伸進海裡；遠處是低矮的褐色山丘。海面起伏，右邊一艘掛著兩面帆的木船正往岸邊駛來，天空很高，雲淡。",
+    "caption": "丹麥畫家拉森的〈駛進一座法羅村落〉，油彩畫布，46×68 公分。拉森 1845 年到過法羅群島，隔年麻疹就上了島。",
+    "credit": "Emanuel Larsen；影像出自 Bruun Rasmussen 拍賣目錄，經 Wikimedia Commons；收藏地不詳",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Emanuel_Larsen_-_Indsejlingen_til_en_f%C3%A6r%C3%B8sk_bygd.png",
+    "made": "1845–1859"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1846 年 4 月初，麻疹上了法羅群島。這是北大西洋上的一串島，在蘇格蘭和冰島中間，當時歸丹麥管。島上上一次鬧麻疹是 1781 年，中間隔了 65 年，大半的島民從沒得過。不到半年，7,782 位居民病倒了大約 6,000 個。"
+    },
+    {
+      "type": "p",
+      "text": "丹麥政府派了一位剛考完醫師考試的年輕人過去，他叫**潘努姆**（Peter Ludvig Panum），那年 26 歲。他在島上待了將近五個月，一個村一個村地問。回國後他把觀察寫成報告，裡面有這一段："
+    },
+    {
+      "type": "quote",
+      "text": "一般認為，麻疹有時會讓同一個人得兩次。可是很值得注意的是，島上還活著的許多老人，1781 年得過麻疹，就我仔細查問所知，沒有一個再得第二次。我自己就見過 98 位這樣的老人，他們因為年輕時得過，這次逃過了。",
+      "original": "It is known to be generally supposed that measles sometimes attacks one and the same individual twice. In this connection it is quite remarkable however, that of the many old people still living on the Faroes who had had the measles in 1781, not one, as far as I could find out by careful inquiry, was attacked the second time. I myself saw 98 such old people, who were exempt because they had had the disease in their youth.",
+      "cite": "潘努姆，《1846 年法羅群島麻疹流行期間的觀察》，1847 年；據 A. S. Hatcher 英譯本第 41 頁"
+    },
+    {
+      "type": "p",
+      "text": "同一頁他還寫，沒得過麻疹的老人，一碰上就病了，年紀大並沒有讓人比較不容易得。所以護著那 98 個人的不是年紀，是 65 年前那一場病。這件事今天叫**免疫記憶**。打疫苗、每十年補一劑破傷風，靠的都是它。"
+    },
+    {
+      "type": "p",
+      "text": "麻煩出在時間上。抗體是血裡黏住病毒的蛋白質，一個抗體分子在血裡，大約三週就少掉一半。照這個速度，1781 年做出來的抗體，幾個月後就所剩無幾。我們把同一個人碰到麻疹的兩次並排，一列一列看，撐下來的是什麼就清楚了。"
+    },
+    {
+      "type": "table",
+      "title": "同一個人，碰到麻疹兩次",
+      "head": ["", "第一次", "第二次"],
+      "rows": [
+        ["誰認得麻疹", "極少數剛好合得上的 B 細胞", "第一次擴增後留下來的一批記憶 B 細胞"],
+        ["血裡有沒有現成的抗體", "沒有", "有，漿細胞一直在做"],
+        ["多久測得到新的抗體", "約 10 天", "幾天"],
+        ["主力抗體", "先是 IgM，IgG 約三週才到頂", "主要是 IgG，量多得多"],
+        ["抗體黏得多牢", "一般", "比較牢"],
+        ["結果", "約第 14 天出疹，病一場", "潘努姆那 98 位老人：沒再得"]
+      ],
+      "caption": "前五列依 OpenStax《微生物學》教科書對初次與二次抗體反應的整理，天數是一般情形；出疹天數是潘努姆 1846 年在法羅群島的觀察。"
+    },
+    {
+      "type": "h",
+      "text": "上百萬把鑰匙，只有幾把合用"
+    },
+    {
+      "type": "p",
+      "text": "先看第一列。B 細胞是一種白血球，表面布滿受體，用來抓外來的東西。同一個 B 細胞上的受體，全都只認同一種形狀；全身的 B 細胞加起來，認得的形狀有上百萬種。這些形狀是事先做好擺著的，身體並不知道會碰上麻疹，所以剛好合得上麻疹的，只是極少數。"
+    },
+    {
+      "type": "p",
+      "text": "打個比方。一個大鑰匙圈上掛了上百萬把鑰匙，麻疹是一把新鎖。第一次，身體得先找出能開的那幾把，再大量複製：合得上的 B 細胞一直分裂，變成一大群一模一樣的細胞。這群細胞有的變成漿細胞，專門分泌抗體，教科書叫它抗體工廠；有的留下來，成了記憶 B 細胞。到這裡先抓住一件事就好：第二次上場的，不是當初那幾把鑰匙，是複製出來的一整串。"
+    },
+    {
+      "type": "h",
+      "text": "十天的空窗"
+    },
+    {
+      "type": "p",
+      "text": "第三、四列講時間。第一次碰到時，前面大約 10 天，血裡測不到對付它的抗體，找鑰匙、複製都要時間。之後先冒出來的是 IgM，這是第一批趕到的抗體，約第 14 天最多；另一種叫 IgG 的抗體慢慢接手，大約三週到頂。第二次，延遲縮短到幾天，做出來的 IgG 也多得多。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "潘努姆在 52 個村鎮查過，從接觸病人到出疹，總是第 13 或 14 天。這和教科書上那段空窗差不多疊在一起：病毒有將近兩週可以自己繁殖，抗體才大批趕到。換成第二次，空窗只剩幾天，加上血裡本來就有抗體，病毒很難站穩。"
+    },
+    {
+      "type": "h",
+      "text": "鑰匙會自己重磨"
+    },
+    {
+      "type": "p",
+      "text": "第五列是鑰匙比喻開始不準的地方。真的鑰匙打好就不會變，B 細胞會。第一次反應時，那群複製出來的細胞聚在淋巴結裡叫「生發中心」的小區域，受體的基因不斷出現小突變。黏得比較牢的留下來繼續分裂，黏不牢的被淘汰。研究生發中心的學者，直接把這叫作一種達爾文式的過程。"
+    },
+    {
+      "type": "p",
+      "text": "所以第二次做出來的抗體，黏得比第一次牢。細胞並沒有「學會」麻疹長什麼樣子，比較像在幾週裡跑完一場小小的演化，留下來的都是最合的那幾把。"
+    },
+    {
+      "type": "h",
+      "text": "貨撐不久，工廠撐得久"
+    },
+    {
+      "type": "p",
+      "text": "開頭那個時間上的麻煩，答案在第二列。抗體分子確實撐不久，撐得久的是做抗體的細胞。1998 年，美國艾默里大學的團隊在小鼠身上，把記憶 B 細胞清掉，發現仍有相當一部分漿細胞活著，照樣分泌抗體，一年以上。"
+    },
+    {
+      "type": "p",
+      "text": "放到人身上，時間拉得更長。2007 年，美國奧勒岡的一個團隊追蹤了 45 個人的抗體，最久的追了 26 年。麻疹抗體的半衰期，他們估計超過 200 年。我照這個速度算了一下，65 年後至少還剩八成。**抗體分子三週就少一半，撐過 65 年的，是一直在做抗體的細胞。**"
+    },
+    {
+      "type": "p",
+      "text": "同一篇研究還發現，八種抗原裡有五種，血裡記憶 B 細胞的數量和抗體濃度對不起來。作者認為這兩群細胞是各自調控的：漿細胞讓血裡隨時有抗體，記憶 B 細胞負責下一次快速擴增。"
+    },
+    {
+      "type": "h",
+      "text": "收成一句話"
+    },
+    {
+      "type": "p",
+      "text": "免疫記憶，是免疫系統第一次碰到某個病原之後，留下專門認得它的細胞，讓下一次的反應來得更快、更大、抗體黏得更牢。對回法羅群島：1781 年那場病是第一次，替每位老人留下了記憶 B 細胞和長壽的漿細胞；1846 年麻疹一上岸，就撞上現成的抗體和一支早就擴編好的隊伍。這篇只講抗體這一半。另一種白血球 T 細胞也會留下記憶細胞，第二次一樣出手又快又重。"
+    },
+    {
+      "type": "h",
+      "text": "它護不到的地方"
+    },
+    {
+      "type": "p",
+      "text": "第一個誤會，兩千多年前就有人記下來了。公元前 430 年，雅典和斯巴達打仗的第二年，雅典爆發大瘟疫。古希臘史家修昔底德（Thucydides）自己染病，活了下來。他寫，病好的人不怕照顧病人，因為同一個人不會得第二次，至少不會因它而死。接著是這一句："
+    },
+    {
+      "type": "quote",
+      "text": "這些人不只受旁人道賀，自己也在一時的興奮裡，半懷著虛妄的希望，以為往後什麼病都不會得了。",
+      "original": "And such persons not only received the congratulations of others, but themselves also, in the elation of the moment, half entertained the vain hope that they were for the future safe from any disease whatsoever.",
+      "cite": "修昔底德《伯羅奔尼撒戰爭史》卷二，據 Richard Crawley 英譯"
+    },
+    {
+      "type": "p",
+      "text": "那個希望確實落空。免疫記憶認的是一個形狀，不是「生病」這件事；麻疹的鑰匙，開不了別種病的鎖。"
+    },
+    {
+      "type": "p",
+      "text": "第二個誤會，是以為記住了就永遠認得。流感一再得，不是記憶壞了，是病毒換了鎖。流感病毒的基因一直有小突變，累積多了，表面的形狀就變了，舊抗體認不太出來。美國疾病管制與預防中心說，這是一個人一輩子會得好幾次流感的重要原因，疫苗成分也因此每年重新檢討。"
+    },
+    {
+      "type": "p",
+      "text": "第三個，是以為每種記憶都一樣長。2007 年那份追蹤裡，破傷風抗體的半衰期只有 11 年，比麻疹短得多。美國疾管中心建議，成人每 10 年補打一劑破傷風。"
+    },
+    {
+      "type": "callout",
+      "label": "如果你真的懂了，應該答得出來",
+      "items": [
+        "一個從沒得過麻疹、但打過兩劑疫苗的孩子碰上麻疹。上面那張表，他比較像哪一欄？為什麼？",
+        "破傷風抗體半衰期 11 年。打完一劑後 33 年都沒補，血裡的抗體大約剩多少？同樣 33 年，麻疹抗體（半衰期取 200 年）大約剩多少？",
+        "去年冬天得過流感，今年冬天又得了。是他的免疫記憶變差了嗎？"
+      ]
+    },
+    {
+      "type": "spoiler",
+      "text": "以下是答案"
+    },
+    {
+      "type": "callout",
+      "label": "答案",
+      "items": [
+        "第二欄。疫苗讓他在不生病的情況下過完「第一次」：找到合用的 B 細胞、擴增、留下記憶 B 細胞和漿細胞。美國疾管中心的數字是，兩劑麻疹疫苗預防麻疹的有效率約 97%。",
+        "33 年是 3 個 11 年，破傷風抗體剩二分之一的三次方，約八分之一，12% 左右。麻疹抗體是 0.5 的 33/200 次方，約 89%，將近九成。",
+        "多半不是。流感病毒表面的形狀一年年在變，他的記憶 B 細胞和抗體認的是舊形狀；新的病毒對他來說，有一部分等於第一次碰到。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Observations made during the epidemic of measles on the Faroe Islands in the year 1846",
+      "publisher": "P. L. Panum，A. S. Hatcher 英譯（原刊 Bibliothek for Laeger, Copenhagen 1847, pp. 270–344）；Internet Archive（University of Toronto Gerstein 館藏）",
+      "date": "1847",
+      "url": "https://archive.org/details/observationsmade00panuuoft",
+      "note": "讀頁影像。p.29：1781 年後未流行、1846 年 4 月初爆發、4 月 4 或 5 日首例於托爾斯港、7,782 人中約 6,000 人得病。p.39–41：從感染到出疹第 13 或 14 天、52 個村鎮。p.41：1781 年得過的老人無人再得、親見 98 位、沒得過的老人一碰就病。p.1：在島上將近五個月。英譯本未標出版年，原刊年 1847。"
+    },
+    {
+      "title": "Peter Panum and the \"geography of disease\"",
+      "publisher": "Kathryne Dycus, Hektoen International",
+      "date": "2021-08-18",
+      "url": "https://hekint.org/2021/08/18/peter-panum-and-the-geography-of-disease/",
+      "note": "1820 年生於博恩霍爾姆島；1845 年通過醫師考試；丹麥政府派往法羅群島；停留五個月；法羅群島位於蘇格蘭與冰島之間。1846 年 26 歲為依生年推算。"
+    },
+    {
+      "title": "The History of the Peloponnesian War（Richard Crawley 英譯）",
+      "publisher": "Thucydides；Project Gutenberg #7142",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/7142",
+      "note": "卷二瘟疫段：as I had the disease myself；for the same man was never attacked twice—never at least fatally；引文 And such persons not only received…"
+    },
+    {
+      "title": "Plague of Athens",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Plague_of_Athens",
+      "note": "伯羅奔尼撒戰爭第二年，公元前 430 年；修昔底德染病並存活。"
+    },
+    {
+      "title": "18.4 B Lymphocytes and Humoral Immunity, Microbiology",
+      "publisher": "OpenStax（Parker, Schneegurt, Thi Tu, Lister, Forster）",
+      "date": "2016-11-01",
+      "url": "https://openstax.org/books/microbiology/pages/18-4-b-lymphocytes-and-humoral-immunity",
+      "note": "單一 B 細胞的受體認同一種抗原；上百萬種結合位；株系增殖；漿細胞是抗體工廠；記憶 B 細胞；初次反應延遲期約 10 天、IgM 約第 14 天達峰、IgG 約三週達峰；二次反應延遲僅數天、IgG 明顯較多、親和力較高、主要為 IgG。"
+    },
+    {
+      "title": "18.3 T Lymphocytes and Cellular Immunity, Microbiology",
+      "publisher": "OpenStax",
+      "date": "2016-11-01",
+      "url": "https://openstax.org/books/microbiology/pages/18-3-t-lymphocytes-and-cellular-immunity",
+      "note": "記憶輔助 T 細胞與記憶殺手 T 細胞，二次反應快而強。"
+    },
+    {
+      "title": "IgG Subclasses and Allotypes: From Structure to Effector Functions",
+      "publisher": "Vidarsson G, Dekkers G, Rispens T. Frontiers in Immunology 5:520",
+      "date": "2014-10-20",
+      "url": "https://www.frontiersin.org/articles/10.3389/fimmu.2014.00520/full",
+      "note": "IgG 半衰期約 3 週（表 1：IgG1 21 天）。"
+    },
+    {
+      "title": "Humoral immunity due to long-lived plasma cells",
+      "publisher": "Slifka MK, Antia R, Whitmire JK, Ahmed R. Immunity 8(3):363–372（PMID 9529153）",
+      "date": "1998-03",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9529153/",
+      "note": "依摘要：小鼠清除記憶 B 細胞後，相當比例漿細胞仍存活並分泌抗體超過一年。"
+    },
+    {
+      "title": "Duration of humoral immunity to common viral and vaccine antigens",
+      "publisher": "Amanna IJ, Carlson NE, Slifka MK. New England Journal of Medicine 357(19):1903–1915（PMID 17989383）",
+      "date": "2007-11-08",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17989383/",
+      "note": "依摘要：45 人、最長 26 年；麻疹、腮腺炎抗體半衰期估計超過 200 年；破傷風 11 年、白喉 19 年；8 種抗原中 5 種記憶 B 細胞數與抗體濃度無顯著相關；兩群細胞可能各自調控。65 年剩約八成、33 年的比例為本報依半衰期自算。"
+    },
+    {
+      "title": "Germinal Centers",
+      "publisher": "Victora GD, Nussenzweig MC. Annual Review of Immunology 40:413–442（PMID 35113731）",
+      "date": "2022-02-03",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35113731/",
+      "note": "依摘要：生發中心是 B 細胞株系擴增與抗體親和力成熟之處，經歷達爾文式的體細胞變異與依親和力的篩選。"
+    },
+    {
+      "title": "How Flu Viruses Can Change: \"Drift\" and \"Shift\"",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "date": "2024-09-17",
+      "url": "https://www.cdc.gov/flu/php/viruses/change.html",
+      "note": "抗原漂移使既有抗體認不得；是一生多次得流感的重要原因；疫苗成分每年檢討。"
+    },
+    {
+      "title": "Tetanus Vaccination",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "date": "2026-09-10",
+      "url": "https://www.cdc.gov/tetanus/vaccines/index.html",
+      "note": "成人每 10 年一劑破傷風追加劑。"
+    },
+    {
+      "title": "Measles Vaccine Recommendations（clinical considerations）",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "date": "2026-03-03",
+      "url": "https://www.cdc.gov/measles/hcp/vaccine-considerations/index.html",
+      "note": "兩劑麻疹疫苗有效率 97%，一劑 93%。"
+    },
+    {
+      "title": "File:Emanuel Larsen - Indsejlingen til en færøsk bygd.png",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Emanuel_Larsen_-_Indsejlingen_til_en_f%C3%A6r%C3%B8sk_bygd.png",
+      "note": "油彩畫布 46×68 cm，1845–1859；拉森 1845 年到過法羅群島；2001 年 Bruun Rasmussen 拍賣，收藏機構不詳；PD-old。"
+    }
+  ]
+}
