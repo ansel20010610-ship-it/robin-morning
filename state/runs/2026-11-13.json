@@ -1,4 +1,16 @@
 {
+  "1": {
+    "finished_at": "2026-11-13T01:04:15+08:00",
+    "missing": [
+      "football",
+      "news",
+      "music（驗證失敗）",
+      "architecture",
+      "concept",
+      "poem"
+    ],
+    "note": "devotion 詩23:1-4、music 華格納女武神（reverse/listener）；第9步重寫1／修正0；perio 先發班已完成；validate 無 WARN"
+  },
   "column": {
     "finished_at": "2026-11-12T22:46:21+08:00",
     "missing": [
