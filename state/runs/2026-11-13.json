@@ -11,6 +11,15 @@
     ],
     "note": "devotion 詩23:1-4、music 華格納女武神（reverse/listener）；第9步重寫1／修正0；perio 先發班已完成；validate 無 WARN"
   },
+  "2": {
+    "finished_at": "2026-11-13T02:05:55+08:00",
+    "missing": [
+      "football",
+      "news",
+      "concept"
+    ],
+    "note": "古蹟 architecture 科隆大教堂（timeline/walker）、詩 poem 霍普金斯〈春與秋〉（walk/reader，qa 詩欄不適用故改 walk）；第9步重寫1（architecture）／修正1（poem）；未接第1班缺稿（第1班已回報）；validate 無 WARN"
+  },
   "column": {
     "finished_at": "2026-11-12T22:46:21+08:00",
     "missing": [
