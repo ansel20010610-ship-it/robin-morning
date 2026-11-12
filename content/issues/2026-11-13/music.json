@@ -1,0 +1,216 @@
+{
+  "column": "music",
+  "date": "2026-11-13",
+  "title": "唱片公司說不行，柯波拉直接去找指揮",
+  "dek": "這段音樂原本是女武神載著陣亡的英雄上山；它的作者，一度連單獨演出都不准。",
+  "brief": "電影《現代啟示錄》要放〈女武神的騎行〉時，唱片公司回絕，導演柯波拉繞過公司去找指揮蕭提，蕭提一口答應。這是華格納《女武神》第三幕的開場，1870 年在國王的堅持下首演，華格納本人極力反對。",
+  "topic_key": "music:wagner-ride-of-the-valkyries",
+  "form": "reverse",
+  "voice": "listener",
+  "updated_at": "2026-11-13T00:46:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/45/The_Ride_of_the_Valkyries_by_William_T._Maud.jpg",
+    "width": 800,
+    "height": 633,
+    "alt": "威廉・莫德 1890 年的畫作《女武神的騎行》。",
+    "caption": "威廉・莫德（William T. Maud）繪，《女武神的騎行》，1890 年。畫名就是這首曲子的名字。",
+    "credit": "William T. Maud（英國，1865–1903）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Ride_of_the_Valkyries_by_William_T._Maud.jpg",
+    "made": "1890 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "**〈女武神的騎行〉**，今天大多數人是在電影院裡認識的。1979 年的電影《現代啟示錄》（Apocalypse Now）裡，一隊美軍直升機飛向越南海邊的一座村子，機上的擴音器放著這首曲子，銅管一路往上衝，接著整座村子遭到攻擊。導演是柯波拉，那場戲演的是吉爾戈中校帶著直升機部隊發動進攻。"
+    },
+    {
+      "type": "p",
+      "text": "曲子的作者是德國作曲家**華格納**（Richard Wagner），生於 1813 年。他寫了四部連著演的歌劇，合稱《尼貝龍根的指環》，《女武神》（Die Walküre）是第二部。〈女武神的騎行〉就是《女武神》第三幕一開場的音樂。女武神是天神沃坦的女兒們，工作是把戰死的英雄載去英靈殿；幕一升起，舞台上是一座岩石山頂，雲被風暴吹得亂跑，她們一個接一個趕到，每個人帶著一位陣亡的英雄。"
+    },
+    {
+      "type": "p",
+      "text": "現在聽到的是它的開頭。弦樂在底下不停地打轉，木管吹著顫音，伴奏一層一層疊上去，疊到幕升起，大家都哼得出來的那句旋律才由整個樂團唱出來。銅管齊聲吹出來的那一段，和女武神裡最受沃坦疼愛的布倫希爾德有關。在歌劇院裡，這段約 8 分鐘，女武神們還要互相招呼、喊出戰吼；到了音樂會，常只演樂團的部分，短的只要 3 分鐘左右。"
+    },
+    {
+      "type": "music",
+      "composer": "華格納（Richard Wagner）",
+      "work": "歌劇《女武神》第三幕〈女武神的騎行〉",
+      "work_original": "Die Walküre, Act III: Ride of the Valkyries",
+      "composed": "1854–1856",
+      "performers": "蕭提（Georg Solti）指揮 維也納愛樂",
+      "recording": "Decca，1965 年 10 月底至 11 月中錄於維也納索菲恩廳（Sofiensaal）",
+      "duration": "歌劇裡約 8 分鐘；音樂會版約 3 分鐘",
+      "movements": [],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Wagner Die Walküre Solti Wiener Philharmoniker Ride of the Valkyries",
+        "artist_hint": "Solti",
+        "track_filter": [
+          "Ride of the Valkyries",
+          "Walküre"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "我挑蕭提的這一張，因為電影用的就是它。聽完這一段，同一幕的最後，沃坦向女兒告別，火焰圍起來，那是〈魔火音樂〉，可以接著聽。"
+    },
+    {
+      "type": "h",
+      "text": "唱片公司說不行"
+    },
+    {
+      "type": "p",
+      "text": "電影用這首曲子的點子，最早來自編劇米利厄斯。他 1969 年寫劇本的時候，就想到要讓直升機放著音樂去打仗。多年後他在《哈潑》雜誌的訪談裡這樣說："
+    },
+    {
+      "type": "quote",
+      "text": "女武神那一場，來自我想像過的、打仗時那股亢奮。",
+      "original": "That Valkyrie scene came from a vision I had of the exhilaration of war",
+      "cite": "米利厄斯接受 Lawrence Weschler 訪談，《哈潑》雜誌 2005 年；轉引自墨奇 2015 年文章"
+    },
+    {
+      "type": "p",
+      "text": "負責這部片聲音的墨奇回憶，他們要的就是蕭提 1965 年的那張錄音，可是唱片公司 Decca 一口回絕。劇組同時走了三條路：繼續求 Decca、找舊金山交響樂團重錄、買現成的錄音來比。他們買了 19 張，只有一張速度接近，可是弦樂太軟，海面的藍看起來像死的，所以還是想要蕭提的。最後柯波拉繞過公司的守門人，在芝加哥直接找到**蕭提**。蕭提的回答是："
+    },
+    {
+      "type": "quote",
+      "text": "當然可以，老弟，你怎麼不一開始就來找我？",
+      "original": "Of course, dear boy, why didn't you talk to me in the first place?",
+      "cite": "蕭提，轉述自墨奇，Nautilus，2015 年"
+    },
+    {
+      "type": "p",
+      "text": "我覺得這場戲最讓人不安的地方，是音樂一點都不陰沉。它本來是替陣亡的英雄開路，掛到直升機上以後，聽起來是興奮的，米利厄斯說的就是這個。"
+    },
+    {
+      "type": "p",
+      "text": "電影用的那張錄音，是 Decca 1958 到 1965 年間錄成的第一套完整《指環》的一部分，《女武神》是四部裡最後錄的，1965 年 10 月底到 11 月中，在維也納錄完。"
+    },
+    {
+      "type": "h",
+      "text": "更早的畫面"
+    },
+    {
+      "type": "p",
+      "text": "把音樂配在飛機上的，電影也不是第一個。1941 年 6 月 4 日，德國的新聞影片就拿這首曲子，配飛機清晨低空飛近克里特島的畫面。"
+    },
+    {
+      "type": "h",
+      "text": "作曲的人自己不准"
+    },
+    {
+      "type": "p",
+      "text": "再往前，1877 年 5 月 12 日，華格納在倫敦親自指揮了這首曲子，還重複演了一次當安可。這件事有點諷刺，因為六年前，也就是 1871 年 1 月，他才下令不准把這段音樂單獨拿出來演。萊比錫的出版社照樣把它印出來賣，華格納寫信向出版商抱怨。他的妻子柯西瑪在 1872 年耶誕節的日記裡寫，又來了讓人不愉快的信，裡頭都是要〈女武神的騎行〉的。"
+    },
+    {
+      "type": "p",
+      "text": "禁令是 1876 年解的。那年 8 月，華格納蓋的拜魯特節日劇院開幕，第一次把整套《指環》從頭演到尾，《女武神》是 8 月 14 日、第二天的節目。這一輪演完，他就解除了禁令。"
+    },
+    {
+      "type": "h",
+      "text": "國王硬要演"
+    },
+    {
+      "type": "p",
+      "text": "再往前，就是首演。1870 年 6 月 26 日，《女武神》在慕尼黑的國家劇院第一次上演。要演的是巴伐利亞國王路德維希二世，他 1864 年 18 歲就登基，是華格納的粉絲，還替他還清過大筆債務。國王堅持把寫好的《指環》搬上舞台，華格納大力反對，主要是私事：他那時和有夫之婦柯西瑪住在瑞士，回慕尼黑會鬧出醜聞，也就沒辦法親自管製作。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Die_Walk%C3%BCre_1870_Act1_NGO4p1091.jpg/1280px-Die_Walk%C3%BCre_1870_Act1_NGO4p1091.jpg",
+      "width": 1280,
+      "height": 1290,
+      "alt": "1870 年製作《女武神》第一幕的插圖：女主角遞給男主角一角杯蜜酒。",
+      "caption": "1870 年慕尼黑製作的《女武神》第一幕，Therese Vogl 與 Heinrich Vogl 飾演兩位主角，圖中是女主角遞一角杯蜜酒給男主角。這是第一幕，不是騎行的那一幕。圖出自《新格羅夫歌劇辭典》第 4 冊第 1091 頁的掃描，作者不詳。",
+      "credit": "作者不詳；《The New Grove Dictionary of Opera》第 4 冊第 1091 頁掃描",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Die_Walk%C3%BCre_1870_Act1_NGO4p1091.jpg",
+      "made": "約 1870 年"
+    },
+    {
+      "type": "p",
+      "text": "華格納從 1854 年 6 月開始譜這部歌劇，1856 年 3 月寫完整份總譜。而〈女武神的騎行〉的主旋律，更早就有了：**1851 年 7 月 23 日**，它第一次被寫在紙上。那時候，《女武神》的歌詞還要再等將近一年才寫完。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ride of the Valkyries",
+      "publisher": "Wikipedia",
+      "date": "2026-11-12",
+      "url": "https://en.wikipedia.org/wiki/Ride_of_the_Valkyries",
+      "note": "查閱日。主旋律 1851 年 7 月 23 日寫下、1854 初稿、1856 年 3 月配器完；1870 年違背作曲家意願首演；1871 年 1 月禁令、Schott 出版與抱怨、柯西瑪 1872 年耶誕日記；1876 年後解禁；1877 年 5 月 12 日倫敦指揮與安可；1941 年 6 月 4 日德國新聞影片；歌劇內約 8 分鐘、單獨約 3 分鐘；《現代啟示錄》"
+    },
+    {
+      "title": "Die Walküre",
+      "publisher": "Wikipedia",
+      "date": "2026-11-12",
+      "url": "https://en.wikipedia.org/wiki/Die_Walk%C3%BCre",
+      "note": "查閱日。1870 年 6 月 26 日慕尼黑首演、路德維希二世堅持、華格納反對與柯西瑪、Vogl 夫妻卡司、1876 年 8 月 14 日拜魯特、第三幕開場、歌詞 1852 年寫完、1854–1856 譜曲"
+    },
+    {
+      "title": "Apocalypse Now",
+      "publisher": "Wikipedia",
+      "date": "2026-11-12",
+      "url": "https://en.wikipedia.org/wiki/Apocalypse_Now",
+      "note": "查閱日。1979 年上映、導演柯波拉、吉爾戈中校（Robert Duvall 飾）、空襲村子時擴音器放〈女武神的騎行〉"
+    },
+    {
+      "title": "How I Tried to Transplant the Musical Heart of Apocalypse Now",
+      "publisher": "Nautilus（Walter Murch）",
+      "date": "2015-11-10",
+      "url": "https://nautil.us/how-i-tried-to-transplant-the-musical-heart-of-apocalypse-now-235684",
+      "note": "米利厄斯 1969 年劇本的點子與《哈潑》2005 年訪談引文；蕭提 1965 年維也納愛樂 Decca 錄音；Decca 回絕、柯波拉在芝加哥找蕭提；買 19 張錄音比對"
+    },
+    {
+      "title": "Der Ring des Nibelungen (Georg Solti recording)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-12",
+      "url": "https://en.wikipedia.org/wiki/Der_Ring_des_Nibelungen_(Georg_Solti_recording)",
+      "note": "查閱日。Decca 1958–1965 年第一套完整錄音；《女武神》1965 年 10 月 31 日至 11 月 19 日錄於維也納 Sofiensaal，維也納愛樂、蕭提指揮"
+    },
+    {
+      "title": "Richard Wagner",
+      "publisher": "Wikipedia",
+      "date": "2026-11-12",
+      "url": "https://en.wikipedia.org/wiki/Richard_Wagner",
+      "note": "查閱日。生年 1813、《女武神》1854–1856 譜成、路德維希二世 1864 年 18 歲登基與替華格納還債、拜魯特 1876 年 8 月 13 日開幕"
+    },
+    {
+      "title": "Wagner: Die Walküre Act III（節目說明 John Henken）",
+      "publisher": "Los Angeles Philharmonic",
+      "date": "2026-11-12",
+      "url": "https://www.laphil.com/works/die-walkuere-act-iii-ride-of-the-valkyries",
+      "note": "查閱日。女武神是沃坦的女兒、布倫希爾德最受疼愛；弦樂打轉與木管顫音、銅管齊奏布倫希爾德動機；沃坦告別與魔火音樂"
+    },
+    {
+      "title": "Wagner: Ride of the Valkyries",
+      "publisher": "Utah Symphony | Utah Opera",
+      "date": "2026-11-12",
+      "url": "https://usuo.org/explore/2022/09/wagner-ride-of-the-valkyries",
+      "note": "查閱日。岩石山頂與風暴雲的舞台意象、女武神載陣亡英雄去英靈殿、歌劇版有戰吼、現在多聽短的純樂團版"
+    },
+    {
+      "title": "The Ride of the Valkyries by William T. Maud",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-12",
+      "url": "https://commons.wikimedia.org/wiki/File:The_Ride_of_the_Valkyries_by_William_T._Maud.jpg",
+      "note": "頭圖；Public domain，作者 William T. Maud（1865–1903），1890"
+    },
+    {
+      "title": "Die Walküre 1870 Act1",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-12",
+      "url": "https://commons.wikimedia.org/wiki/File:Die_Walk%C3%BCre_1870_Act1_NGO4p1091.jpg",
+      "note": "內文圖；Public domain；New Grove Dictionary of Opera 第 4 冊 p. 1091 掃描"
+    }
+  ]
+}
