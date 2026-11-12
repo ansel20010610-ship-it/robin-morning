@@ -1,0 +1,298 @@
+{
+  "column": "architecture",
+  "date": "2026-11-13",
+  "title": "科隆大教堂的起重機，在南塔上等了三百多年",
+  "dek": "從動工到完工 632 年，中間有三百多年，塔頂上只放著一台木頭起重機。",
+  "brief": "科隆大教堂蓋到一半停了三百多年，南塔頂上那台木頭起重機成了科隆的地標。19 世紀，中世紀的西正面圖紙在兩個城市先後找回來，後人照著把雙塔蓋完，1880 年完工時它是世界最高的建築。",
+  "topic_key": "architecture:cologne-cathedral",
+  "form": "timeline",
+  "voice": "walker",
+  "updated_at": "2026-11-13T01:49:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/K%C3%B6lner_Dom_-_Westfassade_2022_ohne_Ger%C3%BCst-0968.jpg/1280px-K%C3%B6lner_Dom_-_Westfassade_2022_ohne_Ger%C3%BCst-0968.jpg",
+    "width": 1280,
+    "height": 2077,
+    "alt": "深灰色的哥德式教堂西正面，兩座細長的尖塔直指天空，正面佈滿尖拱、小尖塔與雕像。",
+    "caption": "科隆大教堂的西正面，2022 年 3 月拍攝，當時沒有搭鷹架。兩座塔各高 157 公尺多，要到 1880 年才蓋完。",
+    "credit": "Raimond Spekking",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:K%C3%B6lner_Dom_-_Westfassade_2022_ohne_Ger%C3%BCst-0968.jpg",
+    "made": "2022"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "**科隆大教堂**的南塔，在 16 世紀初停了工，塔只蓋到大約三分之一高。工人留下一台木頭起重機在塔頂，它就一直待在那裡，到 1868 年才拆下來。"
+    },
+    {
+      "type": "p",
+      "text": "科隆大教堂在德國西部、萊茵河邊的科隆市，是天主教的主教座堂，哥德式，正面兩座尖塔都高 157 公尺多。它是為了安放三王的遺骨蓋的。三王，就是聖經裡從東方來朝拜嬰孩耶穌的博士。1164 年，遺骨從米蘭運到科隆，這裡從此成了基督教世界最重要的朝聖地之一。1996 年，聯合國教科文組織把它列入世界遺產。"
+    },
+    {
+      "type": "p",
+      "text": "這座教堂 1248 年動工，1880 年才完工，前後 632 年。這篇照時間走一遍。教堂是從東邊先蓋的：東端放祭壇的那一段叫唱詩班，最先蓋好；西邊的雙塔正面最後完工。所以我們也從東邊往西走，一站一個年代。"
+    },
+    {
+      "type": "timeline",
+      "title": "科隆大教堂的施工年表",
+      "items": [
+        {
+          "when": "1164 年",
+          "label": "三王的遺骨運到科隆",
+          "note": "從米蘭運來"
+        },
+        {
+          "when": "1248.8.15",
+          "label": "新大教堂奠基",
+          "note": ""
+        },
+        {
+          "when": "1322 年",
+          "label": "唱詩班啟用",
+          "note": "第一個蓋好的部分"
+        },
+        {
+          "when": "約 1520 年",
+          "label": "停工",
+          "note": "一停三百多年"
+        },
+        {
+          "when": "1814、1816",
+          "label": "西正面圖紙先後找回",
+          "note": "達姆施塔特、巴黎"
+        },
+        {
+          "when": "1842.9.4",
+          "label": "復工奠基",
+          "note": "同年成立民間建造協會"
+        },
+        {
+          "when": "1868 年",
+          "label": "南塔上的起重機拆除",
+          "note": ""
+        },
+        {
+          "when": "1880.10.15",
+          "label": "完工慶典",
+          "note": "雙塔 157 公尺多"
+        },
+        {
+          "when": "1948、1956",
+          "label": "戰後修復",
+          "note": "唱詩班與橫翼、中殿"
+        },
+        {
+          "when": "2004–2006",
+          "label": "列入、移出瀕危名單",
+          "note": "1996 年已列世界遺產"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "東端，先蓋好的唱詩班"
+    },
+    {
+      "type": "p",
+      "text": "先站在東端，唱詩班外面。三王的遺骨 1164 年運到時，這塊地上立著一座 873 年啟用的老教堂。1248 年 8 月 15 日，一座新的哥德式大教堂在這裡奠基。教堂官方的說法是，它想超過所有先前的大教堂，設計大膽到接近當時技術的極限。"
+    },
+    {
+      "type": "p",
+      "text": "1322 年，唱詩班先啟用，是整座教堂第一個蓋好的部分。"
+    },
+    {
+      "type": "h",
+      "text": "往西走到底，抬頭看南塔"
+    },
+    {
+      "type": "p",
+      "text": "從東端沿著教堂往西走到底，就是西正面，雙塔該立的地方。1520 年前後，工程停了，一停就是三百多年。停工那時，雙塔和中殿、橫翼都沒蓋完：從西正面進門的那一長段叫中殿，和它交叉的橫向那一段叫橫翼，兩處都只用臨時的屋頂蓋著，屋頂下面是開的。官方形容它看起來像一座蓋到一半的廢墟。"
+    },
+    {
+      "type": "p",
+      "text": "抬頭看，南塔只有大約三分之一高，北塔的外牆大部分只有五公尺左右。南塔殘段上放著那台木頭起重機。教堂官方說，它是 1868 年拆掉以前科隆的招牌，也被當成提醒：有一天要把教堂蓋完。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Lovro_Jan%C5%A1a_-_Pogled_na_k%C3%B6lnsko_katedralo.jpg/1280px-Lovro_Jan%C5%A1a_-_Pogled_na_k%C3%B6lnsko_katedralo.jpg",
+      "width": 1280,
+      "height": 925,
+      "alt": "上色的版畫：左邊一座頂端殘缺的石塔，塔頂斜斜伸出一根長臂；右邊是已蓋好的教堂東段；前景是民房、空地和一群牛。",
+      "caption": "約 1795 年，從東南邊看科隆大教堂的上色銅版畫。左邊那座沒蓋完的塔頂上斜伸出起重機的長臂，右邊是已經蓋好的東段，前景草地上有牛。",
+      "credit": "Laurenz Janscha 原畫，Johann Ziegler 刻版",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lovro_Jan%C5%A1a_-_Pogled_na_k%C3%B6lnsko_katedralo.jpg",
+      "made": "約 1795"
+    },
+    {
+      "type": "h",
+      "text": "圖紙從巴黎回來"
+    },
+    {
+      "type": "p",
+      "text": "停工的三百年裡，教堂的圖紙不見了。舊工坊的檔案 1794 年被法國革命軍帶到巴黎，從那時起被當成遺失。19 世紀初，少數中世紀的圖紙又冒出來，最重要的一張叫 **Riss F**，4 公尺多高，畫的是西正面蓋完的樣子。官方說它約 1280 年畫成，照它蓋出來的正面，要再等 600 年才完工。"
+    },
+    {
+      "type": "p",
+      "text": "這張圖的兩個部分，是分開找回來的：1814 年在達姆施塔特，1816 年在巴黎。教堂官方把這件事看成命運的安排，也是催人把大教堂蓋完的提醒。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Fassadenplan_F_vom_Koelner_Dom.jpg/960px-Fassadenplan_F_vom_Koelner_Dom.jpg",
+      "width": 960,
+      "height": 502,
+      "alt": "兩大片泛黃的羊皮紙，上面用細線畫滿哥德式的塔、尖拱與窗花；兩片中間隔著一塊空白，底下有一小塊紙連著。",
+      "caption": "中世紀的西正面圖紙 Riss F。畫面裡是左右兩片，中間有缺口。圖的年代，學界有爭論。",
+      "credit": "中世紀圖紙，作者不詳（Commons 標示 14 世紀）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fassadenplan_F_vom_Koelner_Dom.jpg",
+      "made": "13–14 世紀"
+    },
+    {
+      "type": "h",
+      "text": "1842 年，奠基石砌在塔上"
+    },
+    {
+      "type": "p",
+      "text": "1842 年 9 月 4 日，普魯士國王腓特烈・威廉四世為復工奠基。那塊奠基石被吊上還沒完工的南塔，砌在那裡。國王不想一個人出錢，同一年，民間成立了**中央大教堂建造協會**（Zentral-Dombau-Verein），出了大約 60% 的建造費用。"
+    },
+    {
+      "type": "p",
+      "text": "蓋塔時盡量照中世紀的圖紙，工具卻是 19 世紀最新的：裝在鐵軌上、在鷹架上跑的絞車車廂，還有蒸汽機。工地上同時最多有 500 多個工匠，只用 38 年就蓋完。1860 年蓋的鐵屋架，今天還在。**隔了三百多年，後人沒有重新設計，而是把一張找回來的舊圖蓋完。**我覺得這比 632 年這個數字更值得記。"
+    },
+    {
+      "type": "h",
+      "text": "1880 年，一把雨傘"
+    },
+    {
+      "type": "p",
+      "text": "1880 年 10 月 15 日，完工慶典辦了起來，德皇威廉一世也出席。雙塔 157 公尺多，是當時世界最高的建築。"
+    },
+    {
+      "type": "p",
+      "text": "不過官方說的完工，不是真的收工。修補、拆鷹架和內部陳設，又拖了二十年。1902 年，當時的大教堂建築師臨死前宣布，教堂確定蓋完了。四年後，1906 年 5 月 20 日，週日大彌撒剛結束，主入口上方一座天使像的翅膀掉了下來。一把雨傘擋了一下，沒有人受傷。"
+    },
+    {
+      "type": "h",
+      "text": "炸彈之後"
+    },
+    {
+      "type": "p",
+      "text": "二戰期間，大教堂中了 14 顆重型炸彈和 70 多次燃燒彈。多數中殿的拱頂塌了，管風琴和 19 世紀的窗戶被毀；中世紀的窗和不少陳設，事先已經拆下或搬走。從遠處看，它像是毫髮無傷地從廢墟裡立著，走近才看得出傷得多重。1948 年，奠基 700 週年，唱詩班與橫翼重新開放；傷得最重的中殿，到 1956 年才修好。"
+    },
+    {
+      "type": "figure",
+      "id": "f3",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Zerst%C3%B6rtes_K%C3%B6ln.jpg/500px-Zerst%C3%B6rtes_K%C3%B6ln.jpg",
+      "width": 500,
+      "height": 681,
+      "alt": "黑白照片：遠處兩座細長尖塔的教堂，前景是殘牆、碎石，和一棵沒有葉子的樹。",
+      "caption": "戰後的科隆，從廢墟中望向大教堂的雙塔。Commons 標示的拍攝日期是 1946 年 6 月 15 日。",
+      "credit": "Walter Dick",
+      "license": "CC BY-SA 3.0 de",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Zerst%C3%B6rtes_K%C3%B6ln.jpg",
+      "made": "1946"
+    },
+    {
+      "type": "h",
+      "text": "1996 年以後"
+    },
+    {
+      "type": "p",
+      "text": "1996 年，教科文組織把大教堂列入世界遺產，說它從 13 世紀到 19 世紀，各階段都嚴格尊重原來的設計。2004 年，因為附近的高樓計畫，它被放上瀕危名單；2006 年，訂下高度限制後移除。"
+    },
+    {
+      "type": "p",
+      "text": "1842 年成立的那個民間協會，今天還在，每年約出大教堂工坊預算的 60%。工坊裡約 100 個人，其中約 80 個是石匠、玻璃師、修復師這類工匠。"
+    },
+    {
+      "type": "facts",
+      "title": "資料卡",
+      "items": [
+        [
+          "所在地",
+          "德國，科隆"
+        ],
+        [
+          "建造年代",
+          "1248–1880 年，約 1520 年起停工三百多年"
+        ],
+        [
+          "風格",
+          "盛期哥德式"
+        ],
+        [
+          "規模",
+          "長 144.5 公尺，橫翼寬 86.25 公尺，西正面雙塔高 157.22 公尺"
+        ],
+        [
+          "世界遺產",
+          "1996 年列入；2004–2006 年曾在瀕危名單"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Geschichte",
+      "publisher": "科隆大教堂（Metropolitankapitel）官方網站",
+      "date": "2026-11-13",
+      "url": "https://www.koelner-dom.de/erleben/geschichte",
+      "note": "1164、1248、1322；停工後的樣子（南塔、北塔高度、臨時屋頂）；起重機到 1868 年拆除；戰時 14 顆炸彈、70 多次燃燒彈；1948、1956。南塔高度與官方另一份 PDF 差 2 公尺，正文只寫約三分之一"
+    },
+    {
+      "title": "Geschichte der Kölner Dombauhütte",
+      "publisher": "科隆大教堂（Metropolitankapitel）",
+      "date": "2026-11-13",
+      "url": "https://www.koelner-dom.de/fileadmin/media/PDF/newsroom/Geschichte_der_Koelner_Dombauhuette.pdf",
+      "note": "檔案 1794 年被帶到巴黎；Riss F（4 公尺多、約 1280 年）；約 1520 年停工；1842 奠基與建造協會（約 60%，今天仍約 60% 年度預算）；38 年、500 多名工匠、絞車與蒸汽機、1860 年鐵屋架；1880 後又拖 20 年、1902 宣布完工、1906 天使翅膀與雨傘；戰後修復；工坊約 100 人"
+    },
+    {
+      "title": "Der Dom kurz und bündig",
+      "publisher": "科隆大教堂（Metropolitankapitel）",
+      "date": "2017-05-04",
+      "url": "https://www.koelner-dom.de/fileadmin/media/PDF/newsroom/Der_Dom_kurz_und_buendig_I_-_Der_Koelner_Dom.pdf",
+      "note": "1164 遺骨自米蘭運來、873 年的老教堂、1248 奠基與「超越所有先前大教堂」、南塔約三分之一高與起重機、1880 世界最高、戰時 14 顆炸彈；PDF 屬性日期 2017-05-04"
+    },
+    {
+      "title": "Aufgerissen: Die mittelalterlichen Baurisse des Kölner Domes",
+      "publisher": "科隆大教堂（Metropolitankapitel）",
+      "date": "2026-11-13",
+      "url": "https://www.koelner-dom.de/aktuelles/aufgerissen-die-mittelalterlichen-baurisse-des-koelner-domes",
+      "note": "圖紙 1814 年（達姆施塔特）、1816 年（巴黎）的發現、「命運的安排」與催人完工的提醒；圖紙年代有爭議，正文寫「官方說約 1280 年」"
+    },
+    {
+      "title": "Cologne Cathedral",
+      "publisher": "UNESCO World Heritage Centre",
+      "date": "1996",
+      "url": "https://whc.unesco.org/en/list/292/",
+      "note": "1996 年登錄；長 144.5 公尺、橫翼寬 86.25 公尺、正面高 157.22 公尺；13 至 19 世紀嚴格尊重原設計；2006 年 7 月 10 日自瀕危名單移除（頁面新聞列）"
+    },
+    {
+      "title": "Cologne Cathedral",
+      "publisher": "Wikipedia",
+      "date": "2026-11-13",
+      "url": "https://en.wikipedia.org/wiki/Cologne_Cathedral",
+      "note": "1880 年 10 月 15 日慶典威廉一世出席；2004 年因高樓計畫列入瀕危、2006 年訂高度限制後移除。館方與 Wikipedia 對停工年代說法不同（Wikipedia 寫 1473），正文用館方的約 1520 年"
+    },
+    {
+      "title": "Hoher Dom zu Köln",
+      "publisher": "Wikipedia（德文）",
+      "date": "2026-11-13",
+      "url": "https://de.wikipedia.org/wiki/Hoher_Dom_zu_K%C3%B6ln",
+      "note": "1842 年 9 月 4 日奠基石砌在南塔；1880 年 10 月 15 日官方完工慶典；圖紙 1814、1816 年在達姆施塔特與巴黎找回"
+    }
+  ]
+}
