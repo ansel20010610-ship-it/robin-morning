@@ -400,7 +400,7 @@ async function viewSerial(my) {
       <p class="nums"><span><b>${got}</b>讀了</span><span><b>${parts.length}</b>已刊</span><span><b>${of || "—"}</b>全書</span></p>
       ${of && got >= of ? exlibris() : ""}
     </section>
-    ${next ? `<div class="sec-head"><h2>接著讀</h2><span class="de">Weiterlesen</span><span class="note">第 ${esc(String(next.a.serial?.n ?? ""))} 回</span></div>${serialCard(next.date, next.a, read, { plate: false })}`
+    ${next ? `<div class="sec-head"><h2>接著讀</h2><span class="de">Weiterlesen</span><span class="note">第 ${esc(String(next.a.serial?.n ?? ""))} 回</span></div>${serialCard(next.date, next.a, read, { plate: false, recap: false })}` // 本回 as on the front page, not the recap (the owner, 2026-11-12)
       : parts.length ? `<p class="empty">${restNote}</p>` : `<p class="empty">${b.start ? `${esc(fmtDate(b.start, "short"))}開始，每天早上一回。` : "還沒開始。"}</p>`}
     ${Array.isArray(b.cast) && b.cast.length ? castBox(b.cast) : ""}
     ${parts.length ? `<div class="sec-head"><h2>回目</h2><span class="de">Folgen</span><span class="note">${parts.length} 回</span></div>${bands(row)}` : ""}
