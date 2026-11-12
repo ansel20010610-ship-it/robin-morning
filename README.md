@@ -30,7 +30,7 @@ routine 所用雲端環境的網路存取必須設為 **Full**（已設定）；
 - 製刊規則：`editorial/`（文風、格式、圖像守則、各欄規格、製刊手冊、備稿庫）
 - 特供版：設定裡輸入代碼才開的功能（目前是後院）。config.json `sonder.hash` 是代碼的 SHA-256（大寫、只留英數）；換代碼：`python3 -c "import hashlib;print(hashlib.sha256('新代碼大寫去符號'.encode()).hexdigest())"`。代碼本身不進倉庫，由社長口頭給人。
 - 後院（原名巢）：`assets/nest.js`（讀者共同養的知更鳥，入口是收藏頁最上面的主版，狀態在手機 rm.nest；共用儲存是 `scripts/nest-worker.js`，Cloudflare Worker 免費方案，部署後把網址填進 config.json `nest.api` 與 index.html 的 connect-src；沒填就只有單機模式）
-- 刊史：`content/chronik.json`（App 的刊史館）——只記大事（創刊與里程碑、欄位開停與更名、重要新功能、改變寫法的新規則、讀者看得到的重大出刊異常），由社長的編輯當天補一條；修 bug、小調整、資料更正不記；班次與 routine 不寫
+- 刊史：`content/chronik.json`（App 的刊史館）——只記大事（創刊與里程碑、欄位開停與更名、重要新功能、改變寫法的新規則、讀者看得到的重大出刊異常），由社長的編輯當天補一條；修 bug、小調整、資料更正不記；班次與 routine 不寫。2026-11-13 起暫時收起（app.js `CHRONIK_OPEN = false`：往期月曆與創刊號的入口拿掉，`#/chronik` 開往期），檔案照留
 - 稿件：`content/issues/<日期>/<欄位>.json`；備稿：`content/reserve/<欄位>/`
 - 欄位設定與副刊輪替：`content/config.json`
 - 觀測站基準：`state/watch/`

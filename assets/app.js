@@ -18,6 +18,9 @@ import { nestBox, renderNest, renderNestSettings, renderNestAlbum, feedNest, syn
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
+// 刊史館 暫時收起 (the owner, 2026-11-13: 先暫時刪掉刊史館): its doors (the month calendar's caption, the first number's
+// note) are left out and #/chronik opens 往期. content/chronik.json and viewChronik stay; true brings it all back.
+const CHRONIK_OPEN = false;
 
 // ——— Data ———
 async function loadData() {
@@ -1049,7 +1052,7 @@ function inhaltBox(issue, arts) {
   const rows = arts.map((a, i) => `<li><a href="#/a/${esc(issue.date)}/${esc(a.column)}"><i>${roman(i + 1)}</i><span><span class="k">${esc(col(a.column, issue.date).name)}</span><b>${esc(a.title)}</b></span></a></li>`).join("");
   return `<section class="inhalt" aria-label="創刊號目錄"><div class="sec-head"><h2>創刊號目錄</h2><span class="de">Inhalt</span><span class="note">${arts.length} 篇</span></div>
     <ol>${rows}</ol>
-    <p class="erst-note">這是第一期。報館在前一晚開張，期數從這天數起；之後改過什麼、哪一天沒有出，都記在<a href="#/chronik">刊史館</a>。</p></section>`;
+    <p class="erst-note">這是第一期。報館在前一晚開張，期數從這天數起${CHRONIK_OPEN ? '；之後改過什麼、哪一天沒有出，都記在<a href="#/chronik">刊史館</a>' : ""}。</p></section>`;
 }
 
 // 接著上次: the articles left part-read, newest issue first, at most two — on 往期, under the title and above the
@@ -2213,7 +2216,7 @@ function calendarHtml(ym, pubs, done) {
   return `<section class="jahr" aria-label="本月閱讀月曆"><div class="mon"><span>${Number(ym.slice(5))} 月</span><span class="de">${esc(monDe(ym))}</span></div>
     <div class="wd" aria-hidden="true">${["一", "二", "三", "四", "五", "六", "日"].map((w) => `<span>${w}</span>`).join("")}</div>
     <div class="grid">${cells.join("")}</div>
-    <div class="cap"><span>${got.length ? `本月 ${got.length} 期，讀完 ${fin} 期` : "本月還沒出刊"}</span><a href="#/chronik" aria-label="刊史館：從創刊號到今天的沿革">刊史館<i>Chronik</i>→</a></div></section>`;
+    <div class="cap"><span>${got.length ? `本月 ${got.length} 期，讀完 ${fin} 期` : "本月還沒出刊"}</span>${CHRONIK_OPEN ? '<a href="#/chronik" aria-label="刊史館：從創刊號到今天的沿革">刊史館<i>Chronik</i>→</a>' : ""}</div></section>`;
 }
 // ——— 後院 (Hinterhof, assets/nest.js): the robin raised together; the page opens, joins, shows and leaves a yard ———
 function viewNest(which = "") {
@@ -2668,7 +2671,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/world")) viewWorld();
   else if (h.startsWith("#/press")) viewPress();
   else if (h.startsWith("#/letters")) viewLetters();
-  else if (h.startsWith("#/chronik")) await viewChronik(); // awaited, so a step back lands where 刊史館 was left, not on its loading line (audit c15)
+  else if (h.startsWith("#/chronik")) { if (CHRONIK_OPEN) await viewChronik(); else viewArchive(); } // awaited, so a step back lands where 刊史館 was left, not on its loading line (audit c15)
   else if (h.startsWith("#/nest")) viewNest(h.startsWith("#/nest/settings") ? "settings" : h.startsWith("#/nest/album") ? "album" : ""); // 相簿: the bird's life (nest.js renderNestAlbum)
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
