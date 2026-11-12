@@ -11,7 +11,7 @@ const LIMIT = { [IMAGES]: 400, [FONTS]: 400 }; // entries; the oldest go first
 const BYTES = { [IMAGES]: 60 * 1024 * 1024 }; // and a byte budget for the pictures: 400 heroes ran to ~180 MB (audit 2026-11-08), Safari's quota is the real limit
 const IMAGE_HOSTS = new Set(["upload.wikimedia.org", "thumb.wikimedia.org", "tile.loc.gov"]);
 const SHELL = ["index.html", "assets/style.css", "assets/app.js", "assets/util.js", "assets/blocks.js", "assets/stamps.js", "assets/feasts.js",
-  "assets/pitch.js", "assets/pull.js", "assets/spotify.js", "assets/speak.js", "assets/notify.js", "assets/motion.js", "assets/marks.js", "assets/press.js", "assets/wetter.js", "assets/world.js", "assets/nest.js", "assets/cities.js", "assets/robin.svg", "assets/world.svg", "assets/globe.json", "manifest.webmanifest"];
+  "assets/pitch.js", "assets/pull.js", "assets/spotify.js", "assets/speak.js", "assets/notify.js", "assets/motion.js", "assets/marks.js", "assets/press.js", "assets/wetter.js", "assets/world.js", "assets/nest.js", "assets/jupiter.js", "assets/cities.js", "assets/robin.svg", "assets/world.svg", "assets/globe.json", "manifest.webmanifest"];
 const DATA = ["content/config.json", "content/index.json", "content/onthisday.json"];
 const TIMEOUT = 4000; // ms to wait for the network before answering content from the cache
 const ROOT = new URL(self.registration.scope).pathname;

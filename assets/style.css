@@ -84,6 +84,9 @@ button { font: inherit; color: inherit; }
 .ornament { display: flex; justify-content: center; gap: 7px; margin: 2.2em 0; }
 .ornament i { width: 7px; height: 7px; background: var(--gold); display: block; }
 .ornament i:nth-child(2) { background: var(--ink); }
+/* the colophon's four squares step like Do Re Fa Mi, 朱彼特's four notes (app.js viewFront) */
+.colophon .ornament { align-items: flex-end; }
+.colophon .ornament i:nth-child(2) { transform: translateY(-3px); } .colophon .ornament i:nth-child(3) { transform: translateY(-9px); } .colophon .ornament i:nth-child(4) { transform: translateY(-6px); background: var(--ink); }
 
 /* ——— Masthead ——— */
 .masthead { padding-top: calc(14px + env(safe-area-inset-top)); text-align: center; position: relative; overflow: hidden; }
@@ -710,9 +713,12 @@ h1, h2, h3, .lead h3, .item h3 { text-wrap: balance; }
   float: left; font-size: 3.05em; line-height: .96; font-weight: 700; color: var(--wine);
   margin: .06em .14em -.05em 0; padding-top: .02em;
 }
-/* 文末花飾: the article closes on a small diamond between two gold rules, before the boxes and the sources */
-.body::after { content: "◆"; display: block; width: 112px; margin: 2.1em auto .5em; text-align: center; font-size: 9px; line-height: 9px; color: var(--gold);
-  background: linear-gradient(var(--gold-soft), var(--gold-soft)) 0 50% / 42px 1px no-repeat, linear-gradient(var(--gold-soft), var(--gold-soft)) 100% 50% / 42px 1px no-repeat; }
+/* 文末花飾: the article closes on four small diamonds between two gold rules, before the boxes and the sources. They
+   climb and fall like the four notes 朱彼特's finale opens with, Do Re Fa Mi (the owner, 2026-11-13: 用那四個音的輪廓做花飾).
+   One gold mask: the rules faint, the diamonds full, so it follows the theme's gold in both modes. */
+.body::after { content: ""; display: block; width: 112px; height: 12px; margin: 2.1em auto .5em; background: var(--gold);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 112 12'%3E%3Crect y='5.5' width='41' height='1' fill-opacity='.45'/%3E%3Crect x='71' y='5.5' width='41' height='1' fill-opacity='.45'/%3E%3Crect x='-1.6' y='-1.6' width='3.2' height='3.2' transform='translate(47 8) rotate(45)'/%3E%3Crect x='-1.6' y='-1.6' width='3.2' height='3.2' transform='translate(53 6.5) rotate(45)'/%3E%3Crect x='-1.6' y='-1.6' width='3.2' height='3.2' transform='translate(59 3.5) rotate(45)'/%3E%3Crect x='-1.6' y='-1.6' width='3.2' height='3.2' transform='translate(65 5) rotate(45)'/%3E%3C/svg%3E") center / 112px 12px no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 112 12'%3E%3Crect y='5.5' width='41' height='1' fill-opacity='.45'/%3E%3Crect x='71' y='5.5' width='41' height='1' fill-opacity='.45'/%3E%3Crect x='-1.6' y='-1.6' width='3.2' height='3.2' transform='translate(47 8) rotate(45)'/%3E%3Crect x='-1.6' y='-1.6' width='3.2' height='3.2' transform='translate(53 6.5) rotate(45)'/%3E%3Crect x='-1.6' y='-1.6' width='3.2' height='3.2' transform='translate(59 3.5) rotate(45)'/%3E%3Crect x='-1.6' y='-1.6' width='3.2' height='3.2' transform='translate(65 5) rotate(45)'/%3E%3C/svg%3E") center / 112px 12px no-repeat; }
 
 /* ——— Masthead epigraph (the day's verse) ——— */
 .epigraph { margin: 14px auto 2px; max-width: 26em; font-size: 15px; line-height: 1.8; color: var(--ink-2); }
@@ -1341,6 +1347,22 @@ button.chip { cursor: pointer; font-family: var(--sans); }
 .err + .sec-head { margin-top: 30px; }
 /* The front page's finish line while articles are still unread (app.js viewFront; wireDigest leaves it unobserved). */
 .finish.left { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+/* 朱彼特's coda (jupiter.js): five threads, one per voice of the finale's last pages, under the finish box's words —
+   gold once a voice has come in, a faint trace before; a tap plays them and a wine line runs across with the music */
+.finish .coda { display: block; width: 100%; max-width: 320px; margin: 12px auto 0; padding: 6px 0 0; background: none; border: 0; color: inherit; font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.finish .coda svg { display: block; width: 100%; height: auto; aspect-ratio: 300 / 46; overflow: visible; }
+.finish .coda .bl { stroke: var(--rule); stroke-width: .6; stroke-dasharray: 1.5 2.5; }
+.finish .coda .n { fill: none; stroke: var(--rule); stroke-width: 1.6; stroke-linecap: round; opacity: .55; }
+.finish .coda .v.on .n { stroke: var(--gold); stroke-width: 2.1; opacity: 1; }
+.finish .coda .ph { stroke: var(--wine); stroke-width: 1; opacity: 0; }
+.finish .coda svg.play .ph { animation: coda-ph 4.5s linear; }
+.finish .coda svg.play .v.on .n { animation: coda-n var(--d) ease-out var(--t); }
+@keyframes coda-ph { from { opacity: .8; transform: translateX(0); } to { opacity: .8; transform: translateX(292px); } }
+@keyframes coda-n { from { stroke: var(--wine); stroke-width: 3.6; } to { stroke: var(--gold); stroke-width: 2.1; } }
+.finish .coda .cap { display: block; margin-top: 6px; font-family: var(--sans); font-size: 11.5px; line-height: 1.6; color: var(--muted); letter-spacing: .04em; }
+.finish .coda .cap i { display: block; font-family: var(--latin); font-size: 12.5px; color: var(--gold-ink); letter-spacing: .08em; }
+.finish:not(.left) > .seal { cursor: pointer; }
+@media (prefers-reduced-motion: reduce) { .finish .coda svg.play :is(.ph, .n) { animation: none; } }
 
 /* ——— 劃線本 (Anstreichungen, assets/marks.js) ——— */
 /* A graphite line under the words, no ground and no box: a thin, slightly uneven stroke repeated along the foot of the
@@ -1973,6 +1995,9 @@ details.band .svl { margin: 0 0 10px; }
 .stamp.fest-bookday { --f-paper: #EFE7D3; --f-band: #5A3A22; --f-band2: #34200F; --f-ink: #F2D896; --f-num: #5A3A22; --f-glow: rgba(200, 160, 100, .45); }
 .stamp.fest-klimt { --f-paper: #EBD9A6; --f-band: #1E1A14; --f-band2: #000; --f-ink: #E8C25A; --f-num: #6B4E14; --f-glow: rgba(220, 175, 70, .6); }
 .stamp.fest-dostoevsky { --f-paper: #E6E1D6; --f-band: #3A3F2E; --f-band2: #1E2218; --f-ink: #E6D3A0; --f-num: #5A1E1E; --f-glow: rgba(160, 150, 120, .45); }
+/* 朱彼特 (10 August, feasts.js): Mozart's own first page under a night-blue band, gold like the planet */
+.stamp.fest-jupiter { --f-paper: #ECE5D3; --f-band: #23325A; --f-band2: #111A33; --f-ink: #F1D27C; --f-num: #23325A; --f-glow: rgba(214, 180, 90, .55); }
+.fest-note.fest-jupiter { border-left-color: #23325A; }
 .stamp-page .credit { margin: 8px 0 0; text-align: center; font-family: var(--sans); font-size: 11.5px; line-height: 1.6; color: var(--muted); }
 
 /* 今日紀念郵票 on the front page (app.js festBox): the stamp in its slot beside a line, on a paper strip with the
@@ -2278,6 +2303,10 @@ details.band .svl { margin: 0 0 10px; }
 .yard .w-moon circle { fill: #F4E7B8; } .yard .w-moon .cut { fill: var(--y-sky); }
 .yard .w-moon { filter: drop-shadow(0 0 3px rgb(244 231 184 / .55)); }
 .yard .w-stars circle { fill: #F4E7B8; animation: w-star 4s ease-in-out infinite; }
+/* 木星 (nest.js skyArt): steadier and warmer than the stars — a planet does not twinkle; jupiterTap answers a tap on it */
+.yard .w-jup circle { fill: #FBEFC9; } .yard .w-jup { filter: drop-shadow(0 0 2.5px rgb(251 239 201 / .85)); }
+.yard .jup-hit { position: absolute; z-index: 3; width: 40px; height: 40px; margin: -20px 0 0 -20px; padding: 0; border: 0; border-radius: 50%; background: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.yard .jup-hit:focus-visible { outline: 1px dashed #F4E7B8; outline-offset: -8px; }
 @keyframes w-star { 0%, 100% { opacity: .95; } 50% { opacity: .3; } }
 .yard.yard-night .y-win { filter: drop-shadow(0 0 4px rgb(242 213 138 / .6)); }
 .yard .w-overcast { fill: #7E8A94; opacity: .16; }

@@ -15,6 +15,7 @@ import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { worldState, drawGlobe } from "./world.js";
 import { nestBox, renderNest, renderNestSettings, renderNestAlbum, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
+import { codaHtml, codaVoices, playCoda } from "./jupiter.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -770,7 +771,7 @@ function viewFront(dateParam) {
     ${watch.length ? `<div class="sec-head"><h2>遠方有動靜</h2><span class="de">In der Ferne</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
     ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdsFound().has(issue.date) ? "今天的知更鳥找到了。" : "今天有一隻知更鳥藏在某一篇裡。"}</p>` : ""}
     ${!arts.some((a) => forStamp(a, issue.date) && a.brief) ? "" : !issueOpen(issue.date) ? `<div class="finish left"><b>今天這一份還沒出齊</b><span class="note">下午補刊到齊以後，包裹和郵票才會開。</span></div>`
-      : unreadIn(issue.date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${digestDone().has(issue.date) ? "早上的郵票已經蓋好了；後來補上的這幾篇也讀完，今天這一份才算讀到最後一行。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的${feastOf(issue.date) ? `${esc(feastOf(issue.date).zh)}紀念郵票` : "郵票"}才蓋得下去。`}</span></div>`
+      : unreadIn(issue.date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${digestDone().has(issue.date) ? "早上的郵票已經蓋好了；後來補上的這幾篇也讀完，今天這一份才算讀到最後一行。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的${feastOf(issue.date) ? `${esc(feastOf(issue.date).zh)}紀念郵票` : "郵票"}才蓋得下去。`}</span>${codaFor(issue.date, arts)}</div>`
       : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
       : `<div class="finish">${finishInner(issue.date)}</div>`}
     ${dateParam ? "" : wocheBox()}
@@ -778,7 +779,7 @@ function viewFront(dateParam) {
     ${dayBox(issue.date)}
     ${dateParam ? "" : `<section class="gigs" id="gigs" aria-label="近期演出">${gigsSection()}</section>`}
     <footer class="colophon">
-      <div class="ornament" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="ornament" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       <div class="latin">${erst ? `Erstausgabe · Nummer 1 · ${Number(issue.date.slice(8))}. ${roman(Number(issue.date.slice(5, 7)))}. ${issue.date.slice(0, 4)}` : "Gegründet im Oktober 2026"}</div>
       每日台灣時間 ${esc(S.cfg.publish_time)} 出刊・稿件由排程編輯撰寫並逐篇核對來源<br>圖片皆為公版、開放授權或本報原創圖解，授權見各篇文末
     </footer>
@@ -1109,6 +1110,8 @@ let finishSeen = null;
 // its own progress on the 連載 tab and is read in its own order (the owner, 2026-11-05: 連載獨立計分).
 const forStamp = (a, date) => { const g = col(a.column, date).group; return g !== "serial" && (g !== "watch" || Boolean(a.brief)); };
 const unreadIn = (date, arts, read = readSet()) => arts.filter((a) => forStamp(a, date) && !read.has(`${date}/${a.column}`)).length;
+// 朱彼特 (jupiter.js): the strip in the 還有 N 篇沒讀 box — how many of the finale's five voices the day's reading has brought in
+const codaFor = (date, arts) => { const n = arts.filter((a) => forStamp(a, date)).length; return codaHtml(codaVoices(n - unreadIn(date, arts), n)); };
 function wireDigest(issue) {
   finishSeen?.disconnect(); finishSeen = null;
   const fin = main.querySelector(".finish:not(.left)");
@@ -1171,7 +1174,7 @@ function festBox(issue) {
 // The seal (motion.js seal) with the day on it; from a streak of two the laurel wraps round it.
 function finishInner(date) {
   const run = date === publishedIssues()[0]?.date ? streak() : null;
-  return `${seal(date, run?.today ? run.n : 0)}<b>今天這一份，讀到了最後一行</b><span class="note">${esc(finishNote(date))}</span>`;
+  return `${seal(date, run?.today ? run.n : 0)}<b>今天這一份，讀到了最後一行</b><span class="note">${esc(finishNote(date))}</span>${codaHtml(5, true)}`;
 }
 
 // ——— Keeping what you read: the streak ———
@@ -2757,6 +2760,9 @@ async function boot() {
     } else navTap = true;
   });
   main.addEventListener("click", (e) => { lastTapped = e.target.closest("a.lead, a.item, a.tile")?.querySelector("img") || null; }, true);
+  // 朱彼特 (jupiter.js): a tap on the finish box's strip, or on its seal once the paper is read, plays the voices that
+  // have come in. Delegated: markDigestDone rewrites the box's contents when the stamp goes down.
+  main.addEventListener("click", (e) => { const t = e.target.closest(".finish .coda, .finish:not(.left) > .seal"); if (t) playCoda(t.closest(".finish")?.querySelector(".coda")); });
   ripples();
   // 後院 (nest.js scrollFlyer): on a 特供版 phone with a yard, the bird now and then flies across the screen as the reader
   // scrolls — any page, articles included (the owner, 2026-11-09: 我在滑首頁的時候鳥會飛出來; 2026-11-10: 不只是滑首頁，

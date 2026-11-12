@@ -29,6 +29,10 @@ export const FEASTS = {
   bookday: { zh: "世界閱讀日", name: "Welttag des Buches", line: "今天是世界閱讀日", pic: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Jean_Honor%C3%A9_Fragonard%2C_Young_Girl_Reading%2C_c._1769%2C_NGA_46303.jpg/1280px-Jean_Honor%C3%A9_Fragonard%2C_Young_Girl_Reading%2C_c._1769%2C_NGA_46303.jpg", "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Jean_Honor%C3%A9_Fragonard%2C_Young_Girl_Reading%2C_c._1769%2C_NGA_46303.jpg/1280px-Jean_Honor%C3%A9_Fragonard%2C_Young_Girl_Reading%2C_c._1769%2C_NGA_46303.jpg", "position": "50% 30%", "credit": "讀書的少女・福拉哥納爾・約 1769"} },
   klimt: { zh: "克林姆誕辰", name: "Klimt · 1862", line: "克林姆在 1862 年的今天出生", pic: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Gustav_Klimt%2C_1907%2C_Adele_Bloch-Bauer_I%2C_Neue_Galerie_New_York.jpg/1280px-Gustav_Klimt%2C_1907%2C_Adele_Bloch-Bauer_I%2C_Neue_Galerie_New_York.jpg", "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Gustav_Klimt%2C_1907%2C_Adele_Bloch-Bauer_I%2C_Neue_Galerie_New_York.jpg/500px-Gustav_Klimt%2C_1907%2C_Adele_Bloch-Bauer_I%2C_Neue_Galerie_New_York.jpg", "position": "60% 20%", "credit": "阿黛爾・布洛赫－鮑爾肖像一號・克林姆・1907"} },
   dostoevsky: { zh: "杜斯妥也夫斯基誕辰", name: "Dostojewski · 1821", line: "杜斯妥也夫斯基在 1821 年的今天出生，連載的那本書就是他寫的", pic: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg/1280px-Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg", "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg/500px-Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg", "position": "50% 20%", "credit": "杜斯妥也夫斯基肖像・彼羅夫・1872"} },
+  // 朱彼特 (the owner, 2026-11-13: 我很喜歡莫札特 41 交響曲, his pick of a stamp for it): 10 August 1788, the day Mozart
+  // entered his last symphony in his own catalogue of works (as the 2026-11-02 古典欄 piece has it); the stamp carries
+  // the first page in his hand.
+  jupiter: { zh: "朱彼特", name: "Jupiter · 1788", line: "莫札特在 1788 年的今天，把第 41 號交響曲記進作品目錄", pic: {"src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/First_page_Mozart_k_551.jpg/1280px-First_page_Mozart_k_551.jpg", "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/First_page_Mozart_k_551.jpg/500px-First_page_Mozart_k_551.jpg", "position": "50% 0%", "credit": "第 41 號交響曲手稿第一頁・莫札特・1788"} },
 };
 
 // 正月初一, 五月初五 and 八月十五, Gregorian. 元宵 (正月十五) is always 正月初一 + 14 days.
@@ -79,6 +83,7 @@ export function feastOf(date) {
   else if (md === "04-23") key = "bookday";
   else if (md === "07-14") key = "klimt";
   else if (md === "11-11") key = "dostoevsky";
+  else if (md === "08-10") key = "jupiter";
   if (!key) return null;
   const f = { key, ...FEASTS[key] };
   if (key === "founding") {

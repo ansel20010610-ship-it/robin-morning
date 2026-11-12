@@ -597,6 +597,9 @@ function skyArt(sky, L, sea) {
     const stars = [[26, 9], [92, 5], [134, 28], [178, 7], [222, 22], [252, 6], [66, 30], [204, 40]].filter(([, y]) => y * k < hy - 40 * k);
     out.sky = `<g class="w-stars">${stars.map(([x, y], i) => `<circle cx="${x}" cy="${f(y * k)}" r="${i % 3 ? .7 : 1.1}" style="animation-delay:${(i * .7).toFixed(1)}s"/>`).join("")}</g>`
       + `<g class="w-moon"><circle cx="150" cy="${f(18 * k)}" r="${f(8 * k)}"/><circle class="cut" cx="${f(150 + 3.6 * k)}" cy="${f(15.6 * k)}" r="${f(7 * k)}"/></g>`;
+    // 木星 (the owner, 2026-11-13, one of his 朱彼特 picks): one bright point that does not twinkle, the way a planet
+    // shines; on the yard page a tap on it (jupiterTap) has the bird whistle the finale's four notes, as far as it can.
+    if (30 * k < hy - 40 * k) out.sky += `<g class="w-jup"><circle cx="176" cy="${f(30 * k)}" r="1.7"/></g>`; // below the moon's right, clear of the tree and the clouds
   }
   if (sky.kind === "rain" || sky.kind === "storm") out.fg = momentArt("rain", L, sea).fg.replace('class="m-rain"', `class="m-rain${sky.kind === "storm" ? " heavy" : ""}"`);
   if (sky.kind === "fog") out.fg = `<rect class="w-fog" x="0" y="0" width="300" height="${H}"/>`;
@@ -912,6 +915,7 @@ function audio() {
   // anything but running is woken: the iPhone leaves the context "interrupted" (not "suspended") after a call, a lock or another app, and the bird stayed mute until the app was closed
   try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); if (actx.state !== "running") actx.resume()?.catch?.(() => {}); return actx; } catch { return null; }
 }
+export const audioCtx = audio; // the one context, also for the finish box's 朱彼特 (jupiter.js playCoda)
 function whistle(ctx, t0, f0, f1, dur, vol = .11, type = "sine") {
   const o = ctx.createOscillator(), g = ctx.createGain();
   o.type = type; o.frequency.setValueAtTime(f0, t0); o.frequency.exponentialRampToValueAtTime(Math.max(40, f1), t0 + dur);
@@ -1035,6 +1039,33 @@ export function pokeBird(root, st) {
   act().finally(() => { poking = false; });
 }
 
+// ——— 木星 (the owner, 2026-11-13, one of his 朱彼特 picks) ———
+// A tap on Jupiter in the clear night sky of the yard page (skyArt draws it, renderNest lays a button over it): the
+// bird looks up and whistles the four notes the symphony's finale opens with, C D F E, as much of them as it can at
+// its age — a nestling only peeps, the fledgling gets two notes, the grown bird three, the singer all four. Asleep,
+// away, ill or hiding it cannot; the planet just shines. The sound is the bird's own: only on the tap, and off with
+// 後院設定's 聲音.
+const JUPITER = ["C5:2", "D5:2", "F5:2", "E5:2"];
+export function jupiterTap(root, st) {
+  const bird = root?.querySelector(".bird");
+  if (!bird || poking || !st?.pet) return;
+  const n = st.pet.name;
+  const say = (text, ms = 3200) => { const l = root.querySelector(".poke-line"); if (!l) return; l.textContent = text; l.classList.add("on"); clearTimeout(l._t); l._t = setTimeout(() => l.classList.remove("on"), ms); };
+  if (bird.classList.contains("napping")) return say(`${n}睡著了。木星亮著，等${st.pet.p}醒來再吹。`);
+  if (st.away) return say(`${n}去${st.away.place}了，木星還亮在老地方。`);
+  if (st.mood === "out") return say(`${n}還沒回來，木星還亮著。`);
+  if (!st.si) return say("蛋還不會唱歌。木星照著院子。");
+  if (st.sick) { chirp("peep"); return say(`${n}抬頭看了木星一眼，又縮回巢裡。`); }
+  if (st.hiding) { chirp("tic"); return say(`${n}躲著，只探頭看了木星一眼。`); }
+  if (performance.now() < songEnd) return;
+  const k = st.si >= 5 ? 4 : st.si >= 4 ? 3 : st.si >= 3 ? 2 : 0;
+  if (!k) { chirp("peep"); return say(`${n}抬頭看木星，細細地啾了一聲。`); }
+  const ms = playMotif(JUPITER.slice(0, k).join(" "));
+  if (ms) songEnd = performance.now() + ms;
+  if (!calm()) for (let i = 0; i < k; i++) setTimeout(() => { const e = document.createElement("i"); e.className = "poke-note"; e.textContent = ["♪", "♫", "♬"][i % 3]; e.style.left = `${52 + Math.random() * 18}%`; bird.append(e); setTimeout(() => e.remove(), 1500); }, i * 480);
+  say(k === 4 ? `${n}對著木星吹了四個音：Do、Re、Fa、Mi。朱彼特的終樂章就是這樣開始的。` : k === 3 ? `${n}對著木星吹了三個音，最後一個還想不起來。` : `${n}對著木星吹了兩個音，後面的還不會。`, Math.max(3200, ms + 2200));
+}
+
 // ——— The pages (#/nest, #/nest/settings) ———
 // The yard's page is the bird: its name, stage, today, the week, the people, and one row to its settings. Everything
 // that is set rather than watched — opening or joining a yard, the bird's name, the invite code, leaving — lives on
@@ -1106,6 +1137,15 @@ export function renderNest(el, api, afterSync = false) {
   birdEl.addEventListener("click", () => pokeBird(stageEl, nestState()));
   birdEl.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pokeBird(stageEl, nestState()); } });
   el.querySelector("[data-gn]")?.addEventListener("click", () => sayGoodnight(stageEl, api, pet));
+  // 木星: a button over the planet, on this page only (the 收藏 plate is a link); drawn again with the page after a sync
+  const jup = stageEl.querySelector(".yard-bg .w-jup circle"), yardEl = stageEl.querySelector(".yard");
+  if (jup && yardEl) {
+    const vb = jup.ownerSVGElement.viewBox.baseVal, b = document.createElement("button");
+    b.type = "button"; b.className = "jup-hit"; b.setAttribute("aria-label", "木星");
+    b.style.left = `${(jup.cx.baseVal.value / vb.width) * 100}%`; b.style.top = `${(jup.cy.baseVal.value / vb.height) * 100}%`;
+    b.addEventListener("click", (e) => { e.stopPropagation(); jupiterTap(stageEl, nestState()); });
+    yardEl.append(b);
+  }
   if (!afterSync) {
     const again = () => { if (el.isConnected && location.hash === "#/nest") renderNest(el, api, true); };
     syncNest(api).then((ok) => { if (ok) again(); return visitExtras(el, api, again, ok); });
