@@ -1174,7 +1174,8 @@ function festBox(issue) {
 // The seal (motion.js seal) with the day on it; from a streak of two the laurel wraps round it.
 function finishInner(date) {
   const run = date === publishedIssues()[0]?.date ? streak() : null;
-  return `${seal(date, run?.today ? run.n : 0)}<b>今天這一份，讀到了最後一行</b><span class="note">${esc(finishNote(date))}</span>${codaHtml(5, true)}`;
+  const note = finishNote(date);
+  return `${seal(date, run?.today ? run.n : 0)}<b>今天這一份，讀到了最後一行</b>${note ? `<span class="note">${esc(note)}</span>` : ""}${codaHtml(5, true)}`;
 }
 
 // ——— Keeping what you read: the streak ———
@@ -1190,9 +1191,9 @@ function finishNote(date) {
   const run = date === publishedIssues()[0]?.date ? streak() : null;
   // The paper's own voice, not a coach's (the owner, 2026-11-07: 不要這麼 bro 的風格).
   if (!run?.today || run.n < 2) return "早上的報紙就讀到這裡。想再往深處走，任何一篇都還在原處等著；不往下走也無妨，今天該知道的，都已經在你這裡了。";
-  if (run.n >= 7) return `連著 ${run.n} 個早晨都讀完了。到了這個天數，已經不是你在讀這份報紙，是它在替你把早上排好。`;
-  if (run.n >= 3) return `連著 ${run.n} 個早晨都讀完了。一份報紙讀到底不是什麼大事，可是每天都做到，就慢慢成了這一天的開頭。`;
-  return "連著兩個早晨都讀完了。報紙是一天一份的東西，兩天連在一起，就開始有了節奏。";
+  // The streak lines (連著 N 個早晨都讀完了…) are gone (the owner, 2026-11-13: 連續提示都刪): a day in a run of two or more
+  // has no line under the title. The laurel round the seal and 最長連續 in the stamp album stay.
+  return "";
 }
 
 // Load the issue's articles in the background: they open instantly and the service worker keeps them for offline reading,

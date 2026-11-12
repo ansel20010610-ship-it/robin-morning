@@ -1347,22 +1347,28 @@ button.chip { cursor: pointer; font-family: var(--sans); }
 .err + .sec-head { margin-top: 30px; }
 /* The front page's finish line while articles are still unread (app.js viewFront; wireDigest leaves it unobserved). */
 .finish.left { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-/* 朱彼特's coda (jupiter.js): five threads, one per voice of the finale's last pages, under the finish box's words —
-   gold once a voice has come in, a faint trace before; a tap plays them and a wine line runs across with the music */
-.finish .coda { display: block; width: 100%; max-width: 320px; margin: 12px auto 0; padding: 6px 0 0; background: none; border: 0; color: inherit; font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
-.finish .coda svg { display: block; width: 100%; height: auto; aspect-ratio: 300 / 46; overflow: visible; }
-.finish .coda .bl { stroke: var(--rule); stroke-width: .6; stroke-dasharray: 1.5 2.5; }
-.finish .coda .n { fill: none; stroke: var(--rule); stroke-width: 1.6; stroke-linecap: round; opacity: .55; }
-.finish .coda .v.on .n { stroke: var(--gold); stroke-width: 2.1; opacity: 1; }
-.finish .coda .ph { stroke: var(--wine); stroke-width: 1; opacity: 0; }
-.finish .coda svg.play .ph { animation: coda-ph 4.5s linear; }
-.finish .coda svg.play .v.on .n { animation: coda-n var(--d) ease-out var(--t); }
-@keyframes coda-ph { from { opacity: .8; transform: translateX(0); } to { opacity: .8; transform: translateX(292px); } }
-@keyframes coda-n { from { stroke: var(--wine); stroke-width: 3.6; } to { stroke: var(--gold); stroke-width: 2.1; } }
+/* 朱彼特's coda (jupiter.js): a medallion under the finish box's words — Jupiter in the middle, five rings of beads,
+   one per voice of the finale's last pages (the bass's Do Re Fa Mi innermost in wine), gold once a voice has come in,
+   a dotted trace before. A tap plays them: the hand, its trail and the traced circle are animated from jupiter.js. */
+.finish .coda { display: block; margin: 12px auto 0; padding: 4px 0 0; background: none; border: 0; color: inherit; font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.finish .coda svg { display: block; width: 176px; height: 176px; margin: 0 auto; overflow: visible; }
+.finish .coda .rg { fill: none; stroke: var(--rule); stroke-width: .6; stroke-dasharray: 1 2.6; }
+.finish .coda .rg.on { stroke: var(--gold-soft); stroke-dasharray: none; }
+.finish .coda .rg.on.cf { stroke: var(--wine); stroke-opacity: .45; }
+.finish .coda .bd { fill: var(--rule); opacity: .5; transform-box: fill-box; transform-origin: center; }
+.finish .coda .bd.on { fill: var(--gold); opacity: 1; }
+.finish .coda .bd.on.cf { fill: var(--wine); }
+.finish .coda .jd { fill: #E9D7AE; }
+.finish .coda .jb { fill: none; stroke: var(--gold); stroke-width: 2.2; stroke-opacity: .55; }
+.finish .coda .js { fill: var(--wine); fill-opacity: .55; }
+.finish .coda .trace { fill: none; stroke: var(--gold); stroke-width: .9; stroke-linecap: round; stroke-dasharray: 439.82; stroke-dashoffset: 439.82; opacity: 0; }
+.finish .coda :is(.hand, .hand-t) { transform-box: view-box; transform-origin: 80px 80px; opacity: 0; }
+.finish .coda .needle { fill: var(--wine); }
+.finish .coda .moon { fill: #FBEFC9; stroke: var(--gold); stroke-width: .6; }
+.finish .coda .t0 { stop-color: var(--gold); stop-opacity: 0; } .finish .coda .t1 { stop-color: var(--gold); stop-opacity: .38; }
 .finish .coda .cap { display: block; margin-top: 6px; font-family: var(--sans); font-size: 11.5px; line-height: 1.6; color: var(--muted); letter-spacing: .04em; }
 .finish .coda .cap i { display: block; font-family: var(--latin); font-size: 12.5px; color: var(--gold-ink); letter-spacing: .08em; }
 .finish:not(.left) > .seal { cursor: pointer; }
-@media (prefers-reduced-motion: reduce) { .finish .coda svg.play :is(.ph, .n) { animation: none; } }
 
 /* ——— 劃線本 (Anstreichungen, assets/marks.js) ——— */
 /* A graphite line under the words, no ground and no box: a thin, slightly uneven stroke repeated along the foot of the

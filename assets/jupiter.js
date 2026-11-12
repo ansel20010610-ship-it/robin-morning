@@ -1,7 +1,7 @@
 // 朱彼特 (the owner, 2026-11-13: 我很喜歡莫札特 41 交響曲，我可以如何把元素塞進 app — he picked all five ideas).
 // This file is the finish box's part: the last pages of the symphony's finale, where its five themes sound at once,
 // as the day's paper read to the end. Each article read brings one more voice in (four while reading, the fifth with
-// the last article); a tap on the strip, or on the seal once the paper is read, plays the voices gathered so far.
+// the last article); a tap on the medallion, or on the seal once the paper is read, plays the voices gathered so far.
 // The yard's Jupiter (nest.js jupiterTap), the four-note end mark (style.css .body::after) and the 10 August stamp
 // (feasts.js jupiter) live where their neighbours do.
 //
@@ -27,69 +27,102 @@ const VOICES = [
 const BEATS = 18, Q = .25; // seconds a quarter note lasts: half note = 120
 const STEP = { C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 };
 const midi = (p) => { const m = /^([A-G])(#|b)?(\d)$/.exec(p); return m ? 12 * (Number(m[3]) + 1) + STEP[m[1]] + (m[2] === "#" ? 1 : m[2] === "b" ? -1 : 0) : NaN; };
-// Every voice must fill the eighteen beats exactly and every pitch must read; otherwise the strip is left out rather
+// Every voice must fill the eighteen beats exactly and every pitch must read; otherwise the medallion is left out rather
 // than playing something that is not in the score.
 const OK = VOICES.every((v) => Math.abs(v.notes.reduce((s, [, b]) => s + b, 0) - BEATS) < 1e-9 && v.notes.every(([p, b]) => b > 0 && (p === "R" || Number.isFinite(midi(p)))));
-const LO = 48, HI = 81; // C3 … A5, the lowest and highest notes
 const CN = ["", "一", "兩", "三", "四", "五"];
 
 // How many voices a reading has brought: four come one by one while the articles are read, the fifth only with the last.
 export const codaVoices = (read, total) => (total > 0 && read >= total ? 5 : total > 0 ? Math.max(0, Math.min(4, Math.ceil((4 * read) / total))) : 0);
 
-// The strip: each voice drawn as a thread of short strokes at the height of its notes (a piano roll), the voices that
-// have come in gold, the others as a faint trace. A button: a tap plays what has come.
+// The medallion (the owner, 2026-11-13, picked from three samples: 木星的五道環, with the music box): Jupiter in the
+// middle and five rings round it, one per voice, the bass's Do Re Fa Mi innermost in wine. Each note is a bead on its
+// ring, round the clock from twelve as the eighteen beats go by, a little in or out with its pitch. Voices that have
+// come in are gold, the others a dotted trace. A button: a tap plays what has come, and a slender wine hand with a small
+// moon at its tip sweeps once round (he asked for 指針繞一圈再美化一點): a fading gold trail behind it, the beads swelling
+// as it reaches them, the circle it travels drawn in gold and shining once when it closes, the Great Red Spot drifting
+// across the planet.
+let uid = 0;
+const C0 = 80, RINGS = [26, 35, 44, 53, 62], ORBIT = 70, CIRC = 2 * Math.PI * ORBIT;
+const at = (r, a) => [C0 + r * Math.sin(a), C0 - r * Math.cos(a)]; // a: radians clockwise from twelve o'clock
+const f1 = (x) => x.toFixed(1);
 export function codaHtml(n, done = false) {
   try {
     if (!OK) return "";
-    const W = 300, H = 46, x = (b) => (4 + (b * 292) / BEATS).toFixed(1), y = (m) => (3 + ((HI - m) * 40) / (HI - LO)).toFixed(1);
-    const bars = [2, 6, 10, 14].map((b) => `<path class="bl" d="M${x(b)} 0V${H}"/>`).join("");
-    const threads = VOICES.map((v, i) => {
-      let at = 0;
-      const segs = v.notes.map(([p, b]) => {
-        const s = at; at += b;
+    const id = `jc${++uid}`, cf = (i) => (i ? "" : " cf"), on = (i) => (i < n ? " on" : "");
+    const rings = RINGS.map((r, i) => `<circle class="rg${on(i)}${cf(i)}" cx="${C0}" cy="${C0}" r="${r}"/>`).join("");
+    const beads = VOICES.map((v, i) => {
+      const ms = v.notes.filter(([p]) => p !== "R").map(([p]) => midi(p)), lo = Math.min(...ms), hi = Math.max(...ms);
+      let s = 0;
+      return v.notes.map(([p, b]) => {
+        const t = s; s += b;
         if (p === "R") return "";
-        const x0 = 4 + (s * 292) / BEATS, x1 = Math.max(x0 + 1.2, 4 + (at * 292) / BEATS - 1.4);
-        return `<path class="n" d="M${x0.toFixed(1)} ${y(midi(p))}H${x1.toFixed(1)}" style="--t:${(s * Q).toFixed(3)}s;--d:${Math.max(.12, b * Q).toFixed(3)}s"/>`;
+        const [x, y] = at(RINGS[i] + (hi > lo ? ((midi(p) - lo) / (hi - lo) - .5) * 5 : 0), (2 * Math.PI * t) / BEATS);
+        const r = Math.min(3.2, 1.3 + .4 * b) * (i < n ? 1 : .7);
+        return `<circle class="bd${on(i)}${cf(i)}" data-t="${(t * Q).toFixed(3)}" data-d="${(b * Q).toFixed(3)}" cx="${f1(x)}" cy="${f1(y)}" r="${r.toFixed(2)}"/>`;
       }).join("");
-      return `<g class="v${i < n ? " on" : ""}">${segs}</g>`;
     }).join("");
+    const [tx, ty] = at(ORBIT, -(2 * Math.PI) / 9); // the trail reaches 40° back
+    const defs = `<defs><linearGradient id="${id}t" gradientUnits="userSpaceOnUse" x1="${f1(tx)}" y1="${f1(ty)}" x2="${C0}" y2="${C0 - ORBIT}"><stop class="t0" offset="0"/><stop class="t1" offset="1"/></linearGradient><clipPath id="${id}p"><circle cx="${C0}" cy="${C0}" r="15"/></clipPath></defs>`;
+    const trail = `<g class="hand-t"><path d="M${C0} ${C0}L${f1(tx)} ${f1(ty)}A${ORBIT} ${ORBIT} 0 0 1 ${C0} ${C0 - ORBIT}Z" fill="url(#${id}t)"/></g>`;
+    const planet = `<g class="jp" clip-path="url(#${id}p)"><circle class="jd" cx="${C0}" cy="${C0}" r="15"/><path class="jb" d="M64 75H96M64 81H96M64 87H96"/><ellipse class="js" cx="86" cy="84" rx="3" ry="1.8"/></g>`;
+    const trace = `<circle class="trace" cx="${C0}" cy="${C0}" r="${ORBIT}" transform="rotate(-90 ${C0} ${C0})"/>`;
+    const hand = `<g class="hand"><path class="needle" d="M${C0} 62.5L78.9 40 ${C0} 13.5 81.1 40Z"/><circle class="moon" cx="${C0}" cy="${C0 - ORBIT}" r="2.6"/></g>`;
     const cap = done || n >= 5 ? "五個主題都到齊了，點一下聽" : n ? `${CN[n]}個聲部進來了，點一下聽` : "讀一篇，第一個聲部就進來";
     return `<button type="button" class="coda${n >= 5 ? " full" : ""}" data-coda="${n}" aria-label="朱彼特終樂章的尾聲：${CN[n] || "零"}個聲部${n ? "，點一下播放" : ""}">`
-      + `<svg viewBox="0 0 ${W} ${H}" aria-hidden="true">${bars}${threads}<path class="ph" d="M4 0V${H}"/></svg>`
+      + `<svg viewBox="0 0 160 160" aria-hidden="true">${defs}${trail}${rings}${beads}${trace}${planet}${hand}</svg>`
       + `<span class="cap"><i>Jupiter · Coda</i>${cap}</span></button>`;
   } catch { return ""; }
 }
 
 // ——— The sound ———
-// Made on the spot with the Web Audio API (nest.js keeps the one context; the tap is what lets iOS start it). Each
-// voice a soft sawtooth through one low-pass filter, a little shorter than written so the notes stay apart; the last
-// notes are let ring. Only on a tap, never on its own; one playing at a time.
-let busy = 0;
+// A music box, as he chose: made on the spot with the Web Audio API (nest.js keeps the one context; the tap is what lets
+// iOS start it). Each note a sine plucked and left to die away, with a faint partial two octaves up for the comb's
+// shimmer, through a little room made of decaying noise. Only on a tap, never on its own; one playing at a time.
+let busy = 0, room = null, roomOf = null;
+function reverb(ctx) {
+  if (room && roomOf === ctx) return room;
+  const L = Math.floor(ctx.sampleRate * 2.6), buf = ctx.createBuffer(2, L, ctx.sampleRate);
+  for (let k = 0; k < 2; k++) { const d = buf.getChannelData(k); for (let i = 0; i < L; i++) d[i] = (Math.random() * 2 - 1) * (1 - i / L) ** 2.8; }
+  room = ctx.createConvolver(); room.buffer = buf; room.connect(ctx.destination); roomOf = ctx;
+  return room;
+}
+function pluck(ctx, out, f, t, d, vol) {
+  const g = ctx.createGain(), a = ctx.createOscillator(), b = ctx.createOscillator(), bg = ctx.createGain();
+  a.type = b.type = "sine"; a.frequency.value = f; b.frequency.value = f * 4; bg.gain.value = .12;
+  g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(vol * 1.4, t + .004); g.gain.setTargetAtTime(0, t + .004, .32 + .12 * d);
+  a.connect(g); b.connect(bg).connect(g); g.connect(out);
+  a.start(t); b.start(t); a.stop(t + 3); b.stop(t + 3);
+}
 export function playCoda(btn) {
   const n = Number(btn?.dataset?.coda) || 0;
   if (!OK) return;
   if (!n) { toast("讀完一篇，第一個聲部就會進來"); return; }
   if (performance.now() < busy) return;
   const ctx = audioCtx(); if (!ctx) return;
-  const t0 = ctx.currentTime + .08;
-  const lp = ctx.createBiquadFilter(), comp = ctx.createDynamicsCompressor(), out = ctx.createGain();
-  lp.type = "lowpass"; lp.frequency.value = 2400; lp.Q.value = .4; out.gain.value = .9;
-  lp.connect(comp).connect(out).connect(ctx.destination);
-  for (const v of VOICES.slice(0, n)) {
-    let t = t0;
-    v.notes.forEach(([p, b], k) => {
-      const d = b * Q;
-      if (p !== "R") {
-        const last = k === v.notes.length - 1, o = ctx.createOscillator(), g = ctx.createGain(), end = t + d * (last ? 1 : .9);
-        o.type = "sawtooth"; o.frequency.setValueAtTime(440 * 2 ** ((midi(p) - 69) / 12), t);
-        g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(v.vol, t + .02); g.gain.setTargetAtTime(v.vol * .7, t + .02, .09); g.gain.setTargetAtTime(0, end, last ? .35 : .035);
-        o.connect(g).connect(lp); o.start(t); o.stop(end + (last ? 2 : .3));
-      }
-      t += d;
-    });
-  }
+  const t0 = ctx.currentTime + .08, comp = ctx.createDynamicsCompressor(), out = ctx.createGain(), wet = ctx.createGain();
+  out.gain.value = .9; wet.gain.value = .32;
+  comp.connect(out).connect(ctx.destination); comp.connect(wet).connect(reverb(ctx));
+  VOICES.slice(0, n).forEach((v) => { let t = t0; for (const [p, b] of v.notes) { if (p !== "R") pluck(ctx, comp, 440 * 2 ** ((midi(p) - 69) / 12), t, b * Q, v.vol); t += b * Q; } });
   const ms = BEATS * Q * 1000;
   busy = performance.now() + ms + 300;
-  const svg = btn.querySelector("svg");
-  if (svg) { svg.classList.remove("play"); svg.getBoundingClientRect(); svg.classList.add("play"); setTimeout(() => svg.classList.remove("play"), ms + 400); }
+  sweep(btn.querySelector("svg"), ms);
+}
+
+// The hand's one turn, in step with the music (it starts with the first note, 80 ms after the tap).
+function sweep(svg, T) {
+  if (!svg || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const cs = getComputedStyle(svg), WINE = cs.getPropertyValue("--wine").trim() || "#6E2536", GOLD = cs.getPropertyValue("--gold").trim() || "#A5843F", lead = 80;
+  const turn = [{ transform: "rotate(0deg)", opacity: 0 }, { opacity: 1, offset: .04 }, { opacity: 1, offset: .96 }, { transform: "rotate(360deg)", opacity: 0 }];
+  svg.querySelectorAll(".hand, .hand-t").forEach((g) => g.animate(turn, { duration: T, delay: lead, easing: "linear" }));
+  const trace = svg.querySelector(".trace");
+  if (trace) {
+    trace.animate([{ strokeDashoffset: CIRC, opacity: .85 }, { strokeDashoffset: 0, opacity: .85 }], { duration: T, delay: lead, easing: "linear" });
+    trace.animate([{ strokeDashoffset: 0, opacity: 1, strokeWidth: 2 }, { strokeDashoffset: 0, opacity: 0, strokeWidth: .8 }], { duration: 1400, delay: lead + T, easing: "ease-out" });
+  }
+  svg.querySelectorAll(".bd.on").forEach((el) => {
+    const c = el.classList.contains("cf") ? WINE : GOLD, hi = c === WINE ? GOLD : WINE;
+    el.animate([{ transform: "scale(1)", fill: c }, { transform: "scale(2)", fill: hi, offset: .12 }, { transform: "scale(1)", fill: c }], { duration: Math.max(520, Number(el.dataset.d) * 1000 + 320), delay: lead + Number(el.dataset.t) * 1000, easing: "ease-out" });
+  });
+  svg.querySelector(".js")?.animate([{ transform: "translateX(-16px)" }, { transform: "translateX(0)" }], { duration: T, delay: lead, easing: "ease-in-out" });
 }
