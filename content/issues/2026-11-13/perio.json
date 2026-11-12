@@ -1,0 +1,173 @@
+{
+  "column": "perio",
+  "date": "2026-11-13",
+  "title": "刷一次牙菌斑少 42%，牙縫交給牙間刷",
+  "dek": "牙齦炎清掉菌斑就會退。該叫病人回家拿哪一支刷子，歐洲牙周病學會 2015 年的共識依四篇證據整理討論過。",
+  "brief": "歐洲牙周病學會 2015 年的共識說，牙齦發炎的病人清牙縫，首選是牙間刷；牙線只在牙齦健康、牙間刷穿過去會造成創傷的牙縫才派得上用場。手動刷一次牙，菌斑平均少約 42%。拿消炎藥治牙齦炎，共識不推薦。",
+  "takeaway": "牙齦炎是清掉菌斑就會退的發炎，管好它就是在預防牙周炎。手動刷一次牙，菌斑平均少約 42%。給大眾的建議是每天刷兩次、每次至少 2 分鐘；有牙齦發炎就當面教牙間刷，加用它比只刷牙清掉更多菌斑（證據中等）；漱口水可以加，消炎藥證據不足。",
+  "chairside": "牙齦流血是發炎的訊號，把牙菌斑清乾淨，發炎通常會退。請您每天刷兩次、每次至少刷兩分鐘，牙縫用我教您的牙間刷，它清掉的菌斑比牙線多。",
+  "topic_key": "perio:doi:10.1111/jcpe.12366",
+  "form": "list",
+  "voice": "colleague",
+  "updated_at": "2026-11-12T22:39:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/78/Gingivitis_before_and_after.jpg",
+    "width": 495,
+    "height": 639,
+    "alt": "上下兩張口內照。上圖上下排前牙的牙齦紅腫鼓起，蓋住一部分牙面；下圖同一區的牙齦已經消腫，顏色變淡。",
+    "caption": "上傳者說明這是嚴重的牙齦炎，上圖是洗牙前，下圖是洗牙後。照片與文中研究的受試者無關。",
+    "credit": "DRosenbach；Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gingivitis_before_and_after.jpg",
+    "made": "2010 年（Commons 上傳日期）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1965 年，在丹麥奧胡斯牙醫學院任教的 Löe 讓一群牙齦健康的人停止刷牙，牙齦就發炎，恢復清潔又退回去。Löe 的合作者 Theilade 後來寫道，她 1966 年和 Löe 合寫的續作，後來成了多數牙醫學院的必讀，有些學生還得親身做一次。"
+    },
+    {
+      "type": "p",
+      "text": "**歐洲牙周病學會**在 2015 年整理過這件事。這個學會以歐洲為主，是非營利的組織。它辦的第 11 屆研討會整屆都談預防，最後寫成 4 份共識報告。今天讀第二工作小組的〈牙周炎的初級預防：管理牙齦炎〉，第一作者是伯明罕大學的 Chapple。"
+    },
+    {
+      "type": "p",
+      "text": "它底下有四篇證據整理。刷牙和清牙縫這兩題，是把別人做好的系統性回顧收來重看一遍，沒有從頭做；漱口水和消炎藥是一般的系統性回顧。共識沒給整份結論打總的證據等級，只在個別項目寫中等或弱。"
+    },
+    {
+      "type": "p",
+      "text": "1. 會退的是發炎；治療過的牙周炎病人再發炎，仍算牙周炎病人。2017 年世界研討會，是美國與歐洲牙周學會一起訂新分類的那次會議。那次會議的一篇回顧說，清掉菌斑，發炎會退。同次會議的共識說，治療過的牙周炎病人，就算牙齦恢復健康，復發風險仍比較高。這種人牙齦再發炎，仍算牙周炎病人。2015 年的共識則說，管好牙齦炎，對沒得過牙周炎的人是預防，對治療過的人是防復發。"
+    },
+    {
+      "type": "p",
+      "text": "2. 手動牙刷刷一次，菌斑平均少約 **42%**。依菌斑指數不同，落在 30% 到 53%。手動刷牙讓牙齦發炎減多少，這份共識寫的時候還沒有統合分析的數字。"
+    },
+    {
+      "type": "p",
+      "text": "3. 電動牙刷在對照研究裡，菌斑和牙齦發炎都多減一些（數字見 11 月 1 日那篇）。對長期牙齒健康有多大好處，共識自己也說不清楚。"
+    },
+    {
+      "type": "p",
+      "text": "4. **牙齦發炎的病人清牙縫，首選是牙間刷。**加用牙間刷，菌斑比只刷牙清得多，證據等級中等；跟牙線、牙籤比，結果一貫是牙間刷清掉更多，病人也比較愛用。只是牙齦發炎因此少了多少，證據有限，原因不清楚，可能是指數評不好牙縫裡的發炎，也可能是各研究之間差太多。"
+    },
+    {
+      "type": "quote",
+      "text": "牙線無法推薦，除非是牙齦與牙周健康、牙間刷穿過去一定會造成創傷的部位。其他情況，牙間刷是清除牙縫菌斑的首選工具。",
+      "original": "Flossing cannot be recommended other than for sites of gingival and periodontal health, where inter-dental brushes (IDBs) will not pass through the interproximal area without trauma. Otherwise, IDBs are the device of choice for interproximal plaque removal.",
+      "cite": "Chapple 等（2015），共識報告摘要"
+    },
+    {
+      "type": "p",
+      "text": "5. 牙線退到後排。共識寫明，多數研究證明不了牙線能有效清菌斑、減少牙齦發炎。照目前的證據，我覺得牙線該往後挪，只留給牙齦健康、牙間刷穿過去會造成創傷的牙縫；牙齦在發炎的病人先拿到牙間刷，有人當面教他怎麼放進牙縫。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/60/Interdental-brushes.JPG",
+      "width": 650,
+      "height": 450,
+      "alt": "白底條紋布上放著三支牙間刷，刷毛的粗細不一樣。",
+      "caption": "三支粗細與握柄都不同的牙間刷。共識提醒，牙間刷要由專業人員教，避免創傷。",
+      "credit": "Hondrej；Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Interdental-brushes.JPG",
+      "made": "2008 年（Commons 檔案日期）"
+    },
+    {
+      "type": "p",
+      "text": "6. 漱口水可以加，消炎藥先不要。刷牙之外，再用加了抗菌斑成分的漱口水或牙膏，牙齦發炎和菌斑都有明確改善（各研究差異大，長期好處不清楚），代價是費用和染色。全身吃的非類固醇消炎藥只有弱證據，局部用的沒有證據，共識不推薦。"
+    },
+    {
+      "type": "p",
+      "text": "7. 兩分鐘是給一般人的數字。給大眾的建議是每天刷兩次、每次至少 2 分鐘、用含氟牙膏，每天清牙縫。對牙周炎病人，共識說 2 分鐘大概不夠，這一句是專家意見。"
+    },
+    {
+      "type": "p",
+      "text": "8. 要打的折扣。撐起這些統合分析的試驗多半是廠商出錢，工作小組說這些試驗遵守國際公認的設計與報告標準，所以仍納入；也沒有統合分析看病人在意的結果。報告列出兩位贊助代表，分別是嬌生與寶僑。這份共識談的是牙齦炎，不適用於還沒治療的牙周炎病人。"
+    },
+    {
+      "type": "paper",
+      "citation": "Chapple ILC, Van der Weijden F, Doerfer C, Herrera D, Shapira L, Polak D, Madianos P, Louropoulou A, Machtei E, Donos N, Greenwell H, Van Winkelhoff AJ, Eren Kuru B, Arweiler N, Teughels W, Aimetti M, Molina A, Montero E, Graziani F. Primary prevention of periodontitis: managing gingivitis. *J Clin Periodontol*. 2015;42(Suppl 16):S71–S76.",
+      "doi": "10.1111/jcpe.12366",
+      "pmid": "25639826",
+      "link": "https://doi.org/10.1111/jcpe.12366",
+      "evidence": "EFP 第 11 屆歐洲研討會共識報告：依 2 篇統合回顧與 2 篇系統性回顧",
+      "design": "共識報告；工作小組依四篇證據整理逐題討論，提出臨床、研究與公共衛生建議",
+      "sample": "統合回顧 2 篇（刷牙、牙縫清潔）；系統性回顧 2 篇（化學性菌斑控制、抗發炎藥）",
+      "question": "怎麼控制牙齦發炎，才能預防牙周炎",
+      "access": "依全文（作者稿，杜林大學機構典藏）；2017 年世界研討會兩篇與研討會導論依摘要"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Primary prevention of periodontitis: managing gingivitis",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "2015-03-31",
+      "url": "https://doi.org/10.1111/jcpe.12366",
+      "note": "主文獻。J Clin Periodontol 2015;42(Suppl 16):S71–S76，PMID 25639826；書目以 PubMed efetch、Crossref、Europe PMC 核對。全文讀的是作者稿（下一筆）。"
+    },
+    {
+      "title": "Primary prevention of periodontitis: managing gingivitis（作者稿 PDF）",
+      "publisher": "AperTO，杜林大學機構典藏",
+      "date": "2015-12-02",
+      "url": "https://hdl.handle.net/2318/1530801",
+      "note": "讀了全文：42%、46%、口腔衛生指導的 6%、牙間刷與牙線、化學性菌斑控制、消炎藥、公共衛生建議、廠商出資與贊助代表。"
+    },
+    {
+      "title": "Primary and secondary prevention of periodontal and peri-implant diseases: Introduction to, and objectives of the 11th European Workshop on Periodontology consensus conference",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "2015-04",
+      "url": "https://doi.org/10.1111/jcpe.12382",
+      "note": "Tonetti、Chapple、Jepsen、Sanz，J Clin Periodontol 2015;42(Suppl 16):S1–S4，PMID 25683242。依摘要：16 篇系統性回顧與統合回顧、4 份共識報告。"
+    },
+    {
+      "title": "Dental plaque-induced gingival conditions",
+      "publisher": "Journal of Clinical Periodontology",
+      "date": "2018-06",
+      "url": "https://doi.org/10.1111/jcpe.12937",
+      "note": "Murakami、Mealey、Mariotti、Chapple，J Clin Periodontol 2018;45(Suppl 20):S17–S27，PMID 29926503；2017 年世界研討會的回顧。依摘要：發炎在移除或打散生物膜後可逆。"
+    },
+    {
+      "title": "Periodontal health and gingival diseases and conditions on an intact and a reduced periodontium: Consensus report of workgroup 1 of the 2017 World Workshop",
+      "publisher": "Journal of Periodontology",
+      "date": "2018-06",
+      "url": "https://doi.org/10.1002/JPER.17-0719",
+      "note": "Chapple、Mealey、Van Dyke 等，J Periodontol 2018;89(Suppl 1):S74–S84，PMID 29926944。依摘要：治療後牙齦健康可恢復；牙周炎病人有牙齦發炎仍是牙周炎病人，復發風險較高。"
+    },
+    {
+      "title": "Experimental gingivitis in man",
+      "publisher": "Journal of Periodontology",
+      "date": "1965-05",
+      "url": "https://doi.org/10.1902/jop.1965.36.3.177",
+      "note": "Löe、Theilade、Jensen，J Periodontol 1965;36(3):177–187，PMID 14296927。正文只提它是停止刷牙的實驗，研究在奧胡斯做；本報 2026-10-11 導讀過。"
+    },
+    {
+      "title": "This Week's Citation Classic：Experimental gingivitis in man. II（Else Theilade 撰寫的回顧）",
+      "publisher": "Current Contents（ISI），1987 年第 5 期",
+      "date": "1987-02-02",
+      "url": "https://garfield.library.upenn.edu/classics1987/A1987F714600001.pdf",
+      "note": "牙醫系必讀、有些學生要在自己嘴裡重做一次的說法出自這裡，指的是 1966 年 Löe 與 Theilade 合寫的續作；Theilade 稱 1965 年那次是成功的先導研究。"
+    },
+    {
+      "title": "About the EFP",
+      "publisher": "European Federation of Periodontology",
+      "date": "2026-11-12",
+      "url": "https://www.efp.org/about-the-efp/",
+      "note": "查閱日期。學會的性質：以歐洲為核心的全球性非營利組織。"
+    },
+    {
+      "title": "Perio Workshop",
+      "publisher": "European Federation of Periodontology",
+      "date": "2026-11-12",
+      "url": "https://www.efp.org/news-events/perio-workshop/",
+      "note": "查閱日期。證明歐洲牙周研討會就是 EFP 的 Perio Workshop；2014 年那屆由 J&J 與 P&G 贊助。"
+    }
+  ]
+}
