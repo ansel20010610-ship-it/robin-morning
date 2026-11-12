@@ -1,0 +1,198 @@
+{
+  "column": "news",
+  "date": "2026-11-13",
+  "title": "普丁會美國特使不讓步，黃仁勳辭去輝達執行長",
+  "dek": "普丁沒讓步，輝達換了人，密西西比換了參議員。",
+  "brief": "普丁在莫斯科見美國特使，提出前線一座城市短期停火，其他立場不讓步。輝達共同創辦人黃仁勳辭去執行長，由財務長暫代。台灣政府說，報導中疑為中國間諜的黃樂，入境許可已撤銷。",
+  "topic_key": "news:2026-11-13",
+  "voice": "wire",
+  "updated_at": "2026-11-13T05:25:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "sources": [
+    {
+      "title": "LIVE: US envoys to meet Putin and Zelensky after Abu Dhabi talks",
+      "publisher": "法國 24 電視台",
+      "date": "2026-11-12",
+      "url": "https://www.france24.com/en/europe/20261112-live-us-envoys-to-meet-putin-and-zelensky-after-abu-dhabi-talks",
+      "note": "直播頁；停火、聯合人道任務、400 至 500 名平民、合法目標、APEC 與川普談烏克蘭；停火城市的期間來源沒給"
+    },
+    {
+      "title": "US envoys meet Putin in Moscow to discuss Russia-Ukraine war",
+      "publisher": "半島電視台",
+      "date": "2026-11-12",
+      "url": "https://www.aljazeera.com/news/2026/11/12/us-envoys-arrive-in-moscow-for-russia-ukraine-talks-with-putin",
+      "note": "莫斯科會談；普丁稱歐洲軍隊為合法目標；特使預定週五在都柏林見澤倫斯基（France 24 說 12 日深夜已抵達都柏林附近）"
+    },
+    {
+      "title": "俄烏阿布達比會談現轉機 美特使將分晤普丁澤倫斯基",
+      "publisher": "中央社",
+      "date": "2026-11-12",
+      "url": "https://www.cna.com.tw/news/aopl/202611120061.aspx",
+      "note": "魏科夫、庫許納的中文名依此；特使先赴莫斯科再去都柏林"
+    },
+    {
+      "title": "黃仁勳辭執行長並退出董事會 AI巨擘輝達前景添變數",
+      "publisher": "中央社",
+      "date": "2026-11-12",
+      "url": "https://www.cna.com.tw/news/aopl/202611120383.aspx",
+      "note": "23:01 發布；克瑞斯任臨時執行長；瓊斯任董事長；美國當局認定黃樂是中國情報人員，北京否認；股價內容不採"
+    },
+    {
+      "title": "Why did Nvidia CEO Jensen Huang resign, and who is Colette Kress?",
+      "publisher": "半島電視台",
+      "date": "2026-11-12",
+      "url": "https://www.aljazeera.com/news/2026/11/12/why-did-nvidia-ceo-jensen-huang-resign-and-who-is-colette-kress",
+      "note": "黃仁勳週日（11 月 8 日）承認不忠；董事會說沒有理由認為國安受損；沒有確立的證據顯示他明知協助北京"
+    },
+    {
+      "title": "Israeli strike on Gaza's Nasser Hospital kills surgeon, five others",
+      "publisher": "半島電視台",
+      "date": "2026-11-11",
+      "url": "https://www.aljazeera.com/news/2026/11/11/israeli-strikes-hit-tent-camp-as-five-killed-in-gaza",
+      "note": "頁面日期 11 月 11 日，內文為 12 日清晨空襲；至少 6 死、20 傷；以軍稱目標為哈瑪斯指揮官；哈瑪斯否認；第七次攻擊該醫院；停火後至少 1,600 人死亡（加薩衛生部）"
+    },
+    {
+      "title": "Palestinian baby dies from cold in Gaza amid Israeli restrictions on aid",
+      "publisher": "半島電視台（法新社）",
+      "date": "2026-11-12",
+      "url": "https://www.aljazeera.com/news/2026/11/12/palestinian-baby-dies-from-cold-in-gaza-amid-israeli-restrictions-on-aid",
+      "note": "9 個月大嬰兒在汗尤尼斯帳篷失溫死亡；內唐亞胡稱已放行 91,000 頂帳篷"
+    },
+    {
+      "title": "民主黨柯隆逆轉奪密西西比州參議員 創140多年首位非裔紀錄",
+      "publisher": "中央社",
+      "date": "2026-11-12",
+      "url": "https://www.cna.com.tw/news/aopl/202611120025.aspx",
+      "note": "08:20 發布；電視網 11 日預測、美聯社後來確認；海德－史密斯發言人證實她致電認輸；不採得票差與最後一位民主黨參議員的年份（來源說法不一）"
+    },
+    {
+      "title": "Democrat Scott Colom wins closely watched US Senate race in Mississippi",
+      "publisher": "半島電視台",
+      "date": "2026-11-11",
+      "url": "https://www.aljazeera.com/news/2026/11/11/democrat-scott-colom-wins-closely-watched-us-senate-race-in-mississippi",
+      "note": "計票逾一週；明年 1 月就任；阿拉斯加一席未定；川普 2024 年在該州贏 22 個多百分點"
+    },
+    {
+      "title": "黃樂疑為中國間諜　政院：涉及跨國合作調查不便多說",
+      "publisher": "中央社",
+      "date": "2026-11-12",
+      "url": "https://www.cna.com.tw/news/aipl/202611120222.aspx",
+      "note": "15:48 發布；院會後記者會；移民署林貽俊說入境許可依法撤銷、限制入境；調查中"
+    },
+    {
+      "title": "11/28「廢除非核家園」公投案　通過門檻、怎麼投一次看",
+      "publisher": "中央社",
+      "date": "2026-11-12",
+      "url": "https://www.cna.com.tw/news/aipl/202611120231.aspx",
+      "note": "題目全文、通過門檻、選舉人 20,007,484 人、門檻約 5,001,871 票（中選會初步統計，確切數字投票前公布）；歷次核能公投結果"
+    },
+    {
+      "title": "廢除非核家園公投　正方盼接軌國際、反方批題目荒謬",
+      "publisher": "中央社",
+      "date": "2026-11-12",
+      "url": "https://www.cna.com.tw/news/aipl/202611120287.aspx",
+      "note": "中選會首場意見發表會；牛煦庭、陳培瑜各自說法"
+    }
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "美國特使 12 日在莫斯科見了普丁，沒談出讓步。同一天，輝達創辦人辭去執行長，加薩一家醫院遭空襲，台灣撤銷一名中國女商人的入境許可。"
+    },
+    {
+      "type": "news",
+      "title": "世界",
+      "items": [
+        {
+          "headline": "普丁會美國特使，不讓步",
+          "place": [
+            "RU",
+            "UA",
+            "IE"
+          ],
+          "summary": "魏科夫與庫許納 12 日在莫斯科見普丁。普丁提出前線城市康斯坦丁尼夫卡短期停火，並說外國軍隊駐在烏克蘭就是「合法目標」。克宮說，他本月稍後在 APEC 會議與川普談烏克蘭。特使接著飛往都柏林見澤倫斯基。",
+          "source": "法國 24 電視台、半島電視台",
+          "url": "https://www.france24.com/en/europe/20261112-live-us-envoys-to-meet-putin-and-zelensky-after-abu-dhabi-talks",
+          "when": "11 月 12 日，莫斯科當地時間"
+        },
+        {
+          "headline": "黃仁勳辭去輝達執行長",
+          "place": "US",
+          "summary": "輝達（Nvidia）宣布，共同創辦人黃仁勳辭去執行長並退出董事會，財務長克瑞斯暫代。黃仁勳日前承認有婚外情；報導說牽涉一名被美國當局認定為中國情報人員的女性，北京否認。董事會說沒有理由認為國安受損。",
+          "source": "中央社、半島電視台",
+          "url": "https://www.cna.com.tw/news/aopl/202611120383.aspx",
+          "when": "11 月 12 日，美東時間"
+        },
+        {
+          "headline": "加薩納賽爾醫院遭空襲",
+          "place": [
+            "PS",
+            "IL"
+          ],
+          "summary": "以色列 12 日清晨空襲加薩南部汗尤尼斯的納賽爾醫院，至少 6 人死亡，包括一名外科醫師。以軍說目標是醫院裡的哈瑪斯指揮官，哈瑪斯否認。同一夜，一個 9 個月大的嬰兒在帳篷裡因失溫死亡。",
+          "source": "半島電視台、法新社",
+          "url": "https://www.aljazeera.com/news/2026/11/11/israeli-strikes-hit-tent-camp-as-five-killed-in-gaza",
+          "when": "11 月 12 日，加薩當地時間"
+        },
+        {
+          "headline": "密西西比選出首位黑人參議員",
+          "place": "US",
+          "summary": "民主黨的柯隆確定擊敗共和黨現任參議員海德－史密斯，拿下密西西比州一席，計票拖了一個多星期。他是該州 140 多年來第一位黑人聯邦參議員，明年 1 月就任。",
+          "source": "中央社、半島電視台",
+          "url": "https://www.cna.com.tw/news/aopl/202611120025.aspx",
+          "when": "11 月 11 日，美國當地時間"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "title": "台灣",
+      "items": [
+        {
+          "headline": "黃樂入境許可遭撤銷",
+          "place": "TW",
+          "summary": "移民署官員在行政院院會後說，報導中疑為中國間諜的黃樂，入境許可已依法撤銷並限制入境。她曾多次持香港護照來台。案件仍在調查，細節不便公開。",
+          "source": "中央社",
+          "url": "https://www.cna.com.tw/news/aipl/202611120222.aspx",
+          "when": "11 月 12 日，台灣時間"
+        },
+        {
+          "headline": "非核家園公投辦意見發表會",
+          "place": "TW",
+          "summary": "中選會 12 日辦首場「廢除非核家園」公投意見發表會。公投 11 月 28 日與地方選舉同日投票，同意票要多於不同意票，且達全體選舉人四分之一，初步算約 500 萬票。國民黨立委牛煦庭說核電可緩解電價壓力，民進黨立委陳培瑜說題目荒謬。",
+          "source": "中央社",
+          "url": "https://www.cna.com.tw/news/aipl/202611120231.aspx",
+          "when": "11 月 12 日，台灣時間"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "歷次核能公投",
+      "head": [
+        "年份",
+        "案名",
+        "結果"
+      ],
+      "rows": [
+        [
+          "2018",
+          "以核養綠",
+          "通過"
+        ],
+        [
+          "2021",
+          "重啟核四",
+          "不通過"
+        ],
+        [
+          "2025",
+          "核三延役",
+          "未達門檻"
+        ]
+      ],
+      "caption": "中央社。2021 年同意票少於不同意票；2025 年同意票較多，但沒達四分之一門檻。"
+    }
+  ]
+}
