@@ -1,0 +1,191 @@
+{
+  "column": "perio",
+  "date": "2026-11-14",
+  "title": "根面蓋回幾成，病人的分數看不出跟著走",
+  "dek": "醫師看根面蓋回幾成，病人照鏡子時，看的是同一件事嗎？",
+  "brief": "醫師評美觀用的那把尺，滿分 10 分裡有 6 分只看牙齦邊緣蓋到哪裡；病人自己打的美觀分數，和根面蓋回多少看不出關聯。好幾顆相鄰的退縮，隨機試驗合併起來，根面平均蓋回 82.6%。",
+  "takeaway": "多顆相鄰退縮做根面覆蓋，平均蓋回 82.6% 的根面，完全蓋滿的比例是 62.7%；病人自評美觀平均 8.59 分，和蓋回多少看不出關聯。術前要講明可能蓋不滿，也要問清楚病人在意的是什麼。",
+  "chairside": "好幾顆連在一起的牙齦退縮，手術平均能把露出來的牙根蓋回八成以上，但不一定蓋得滿。研究裡的病人術後替外觀打分，平均 8.59 分，滿分 10 分。開刀前請先告訴我，您最在意的是哪一點。",
+  "topic_key": "perio:doi:10.1111/prd.70050",
+  "form": "reverse",
+  "voice": "colleague",
+  "updated_at": "2026-11-13T22:40:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/43/Recession_parodontale.jpg",
+    "width": 407,
+    "height": 262,
+    "alt": "上顎前牙的口內照。兩顆正中門牙的牙齦往上退，牙頸部露出一截顏色偏黃的牙根，兩顆之間的牙齦缺了一塊，留下一道黑色的縫。",
+    "caption": "上傳者說明這是上顎正中門牙的牙周退縮。照片與文中研究的受試者無關。",
+    "credit": "Damdent；Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Recession_parodontale.jpg",
+    "made": "2005 年（Commons 標示日期）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "好幾顆相鄰的牙齦退縮開完刀，多半追蹤半年到一年。病人自己替術後的外觀打分數，滿分 10 分。把這些研究合併起來，平均 **8.59 分**。根面平均蓋回 82.6%，蓋得多或少，病人的分數看不出跟著高低。醫師打的美觀分數，卻大致跟著覆蓋率高低走。"
+    },
+    {
+      "type": "p",
+      "text": "這些數字來自一篇系統性回顧，第一作者 Stefanini 在義大利波隆那大學牙周科。這篇 2026 年 5 月登在《Periodontology 2000》網站上，掛在 2025 年 10 月號。它是為**歐洲牙周病學會**一場專題研討會做的回顧之一，那場研討會的主題是牙周與植牙治療後好不好看，以及病人自己怎麼說。11 月 9 日這一欄談的是以單顆為主的退縮，這次換成好幾顆連著退。"
+    },
+    {
+      "type": "p",
+      "text": "單顆的根面覆蓋證據多，結果可預期。好幾顆連在一起就難得多：手術範圍大，解剖變異比較多，例如牙根突出、前庭淺、缺損大小不一，該用哪一種做法還不確定。這篇納入的試驗，常見的兩種做法，一種是冠向推移瓣，把牙齦瓣往牙冠方向推上去蓋根面。另一種是隧道術，從底下把頰側組織剝鬆。兩種都常在瓣下墊病人自己的結締組織，或改用替代材料。"
+    },
+    {
+      "type": "p",
+      "text": "回顧收了 32 個隨機對照試驗、**1,012 名病人**、3,589 處退縮，都是兩顆以上相鄰，追蹤至少半年。完全蓋滿的比例是 62.7%。冠向推移瓣加輔助材料與隧道術，病人分數相近（8.52、8.61），但這不是直接比較。"
+    },
+    {
+      "type": "table",
+      "title": "多顆相鄰退縮做完根面覆蓋，合併後的結果",
+      "head": [
+        "看什麼",
+        "合併平均",
+        "95% 信賴區間"
+      ],
+      "rows": [
+        [
+          "退縮減少的深度",
+          "2.22 毫米",
+          "2.11–2.32"
+        ],
+        [
+          "平均根面覆蓋率",
+          "82.6%",
+          "71.3–93.9"
+        ],
+        [
+          "完全蓋滿的比例",
+          "62.7%",
+          "57.0–68.4"
+        ],
+        [
+          "醫師評的美觀分數",
+          "8.31",
+          "8.11–8.50"
+        ],
+        [
+          "病人自評的美觀分數",
+          "8.59",
+          "8.29–8.89"
+        ],
+        [
+          "術後疼痛（0 到 10 分）",
+          "2.67",
+          "2.28–3.06"
+        ]
+      ],
+      "caption": "依 Stefanini 等全文整理；美觀分數滿分 10，各項納入的研究數不同。"
+    },
+    {
+      "type": "h",
+      "text": "醫師那把尺，6 分給牙齦邊緣"
+    },
+    {
+      "type": "p",
+      "text": "根面覆蓋美觀分數（Root Coverage Esthetic Score）是 Cairo 等人 2009 年在《Journal of Periodontology》提出的，滿分 10 分，其中 6 分只看牙齦邊緣蓋到哪裡：完全蓋滿 6 分，蓋一部分 3 分，退回原處或更往根尖方向 0 分。邊緣輪廓、組織質地、膜齦線對齊、牙齦顏色，各 1 分。設計的人把完全覆蓋當主要目標。把各試驗的結果排在一起看，覆蓋率越高的，醫師分數也越高。這可能有一部分是配分造成的，論文沒有這樣說。"
+    },
+    {
+      "type": "p",
+      "text": "病人那邊，**覆蓋率和病人自評的美觀分數之間，看不出關聯。**同樣排在一起看，醫師打分高的試驗組，病人打的反而偏低。同一場研討會另一篇看單顆退縮的回顧（Cairo 等，50 個試驗、1,820 人）發現覆蓋率越高，醫師分數越高，但與病人自評的關聯沒有統計意義。"
+    },
+    {
+      "type": "quote",
+      "text": "這表示，退縮缺損只要有任何改善，即使根面沒有完全蓋滿，或許就足以提高病人的滿意度。",
+      "original": "indicating that probably any improvement (i.e., incomplete root coverage) in a recession defect, may be sufficient to enhance the patient's satisfaction.",
+      "cite": "Stefanini 等，討論"
+    },
+    {
+      "type": "h",
+      "text": "這份證據要打的折扣"
+    },
+    {
+      "type": "p",
+      "text": "這篇合併的都是隨機試驗，但沒有報告證據確定性分級；有幾個地方要一起算。各研究差異很大，病人自評的試驗沒有一篇整體評為低偏誤風險；作者也說這篇不是設計來直接比較術式的。追蹤多半只有半年到一年，超過一年的只有 4 篇。"
+    },
+    {
+      "type": "list",
+      "items": [
+        "術前講白：好幾顆一起做，平均蓋回八成多，完全蓋滿的比例約六成多，蓋不滿是常態。",
+        "先問病人在意什麼。醫師量的是邊緣到哪裡，病人自評的美觀分數和覆蓋率看不出關聯，他介意的地方得當面問。",
+        "疼痛平均 2.67 分要配著條件讀：除了一篇沒報告，每個試驗都開了止痛藥，多數還給抗生素，多數試驗收的是不抽菸的人。",
+        "這篇排不出術式名次；作者的結論是，兩種做法加上自體組織，醫師和病人的美觀評價都有改善。"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "頭圖那兩顆上顎正中門牙，牙根各露出一截，中間的牙齦缺了一塊。照片與研究受試者無關，只是示意多顆退縮大概長什麼樣子。"
+    },
+    {
+      "type": "paper",
+      "citation": "Stefanini M, Mounssif I, Figuero E, Zucchelli G, Sculean A, Cosgarea R. Esthetical and patient-reported outcomes after root coverage procedures for multiple gingival recessions: A systematic review and meta-analysis. *Periodontol 2000*. 2025;99(1):21–41.",
+      "doi": "10.1111/prd.70050",
+      "pmid": "42130372",
+      "link": "https://doi.org/10.1111/prd.70050",
+      "evidence": "EFP 研討會系統性回顧與統合分析：32 篇隨機試驗、1,012 人、3,589 處退縮",
+      "design": "系統性回顧與統合分析（隨機效應模型），加上統合迴歸；PROSPERO 預先登錄",
+      "sample": "32 個隨機對照試驗、1,012 名成人、3,589 處多顆相鄰退縮；追蹤至少 6 個月",
+      "question": "多顆相鄰的牙齦退縮做根面覆蓋手術，醫師評的美觀與病人自評的結果如何",
+      "access": "依全文（開放取用，CC BY 4.0）；Cairo 2025 依全文；Cairo 2009、Zuhr 2007 依摘要"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Esthetical and patient-reported outcomes after root coverage procedures for multiple gingival recessions: A systematic review and meta-analysis",
+      "publisher": "Periodontology 2000",
+      "date": "2026-05-14",
+      "url": "https://doi.org/10.1111/prd.70050",
+      "note": "主文獻。Periodontol 2000 2025;99(1):21–41（2025 年 10 月號，2026-05-14 線上），PMID 42130372；書目以 PubMed efetch、Crossref、Europe PMC 核對。讀全文：納入條件、合併結果與信賴區間、統合迴歸、偏誤風險、追蹤時間、止痛藥與抗生素、作者解讀。"
+    },
+    {
+      "title": "Esthetical and patient-reported outcomes after root coverage procedures for multiple gingival recessions（全文）",
+      "publisher": "Europe PMC（PMC13428093）",
+      "date": "2026-05-14",
+      "url": "https://europepmc.org/article/PMC/PMC13428093",
+      "note": "開放取用全文，CC BY 4.0。"
+    },
+    {
+      "title": "Clinician- and patient-reported outcomes following the surgical treatment of single gingival recession defects: A systematic review",
+      "publisher": "Periodontology 2000",
+      "date": "2025-07-22",
+      "url": "https://doi.org/10.1111/prd.12641",
+      "note": "Cairo F 等，Periodontol 2000 2025;99(1):7–20，PMID 40693671。同一場 EFP 專題研討會；讀全文（PMC13428094）：50 個試驗、1,820 人、2,219 處單顆退縮；覆蓋率與 RES 正相關，與病人自評的關聯未達統計意義。"
+    },
+    {
+      "title": "Root coverage esthetic score: a system to evaluate the esthetic outcome of the treatment of gingival recession through evaluation of clinical cases",
+      "publisher": "Journal of Periodontology",
+      "date": "2009-04",
+      "url": "https://doi.org/10.1902/jop.2009.080565",
+      "note": "Cairo F、Rotundo R、Miller PD、Pini Prato GP，J Periodontol 2009;80(4):705–710，PMID 19335093。依摘要：五項評分、牙齦邊緣占 60%（完全覆蓋 6 分、部分 3 分、0 分），其他四項各 1 分。"
+    },
+    {
+      "title": "Covering of gingival recessions with a modified microsurgical tunnel technique: case report",
+      "publisher": "International Journal of Periodontics & Restorative Dentistry",
+      "date": "2007-10",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17990442/",
+      "note": "Zuhr O、Fickl S、Wachtel H、Bolz W、Hürzeler MB，Int J Periodontics Restorative Dent 2007;27(5):457–463。依摘要，只取隧道術「從底下剝離頰側組織」的描述。"
+    },
+    {
+      "title": "Root coverage procedures for treating localised and multiple recession-type defects",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "date": "2018-10-02",
+      "url": "https://doi.org/10.1002/14651858.CD007161.pub3",
+      "note": "本欄 2026-11-09 的主文獻（單顆退縮為主）；本篇正文只以「11 月 9 日這一欄」帶過。"
+    },
+    {
+      "title": "About the EFP",
+      "publisher": "European Federation of Periodontology",
+      "date": "2026-11-13",
+      "url": "https://www.efp.org/about-the-efp/",
+      "note": "查閱日期。學會的性質：以歐洲為核心的非營利組織。"
+    }
+  ]
+}
