@@ -1,35 +1,6 @@
 {
-  "checked": "2026-11-13",
+  "checked": "2026-11-14",
   "events": [
-    {
-      "id": "inbal-kholodenko-tso-2026",
-      "title": "殷巴爾、霍洛登科與TSO",
-      "kind": "交響樂",
-      "rating": 4,
-      "why": "殷巴爾指揮《春之祭》，前面是李斯特《死之舞》和巴爾托克《神奇的官大人》，節目排得很緊，全場都是節奏與色彩。",
-      "who": "伊利亞胡．殷巴爾（指揮）、瓦迪姆．霍洛登科（鋼琴）、臺北市立交響樂團",
-      "program": "李斯特《死之舞》、巴爾托克《神奇的官大人》組曲、斯特拉溫斯基《春之祭》",
-      "note": "演前導聆 18:50 起",
-      "shows": [
-        {
-          "date": "2026-11-13",
-          "time": "19:30",
-          "city": "台北",
-          "venue": "國家音樂廳",
-          "tickets": "https://www.opentix.life/program/1993269592550359041"
-        }
-      ],
-      "added": "2026-11-01",
-      "uids": [
-        "6929d60b26b32445dce6f3fa"
-      ],
-      "sources": [
-        {
-          "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/program/1993269592550359041"
-        }
-      ]
-    },
     {
       "id": "rattle-brso-2026",
       "title": "拉圖與巴伐利亞廣播交響樂團",
@@ -1061,40 +1032,6 @@
       ]
     },
     {
-      "id": "dang-thai-son-recital-2026",
-      "title": "鄧泰山鋼琴獨奏會",
-      "kind": "獨奏",
-      "rating": 4,
-      "why": "蕭邦大賽史上第一位亞洲冠軍鄧泰山，下半場整場彈蕭邦，壓軸換成第二號詼諧曲。上半場是拉威爾《鏡》，前面先彈幾首西班牙作曲家蒙波的抒情短曲。",
-      "who": "鄧泰山（鋼琴）",
-      "program": "蒙波《前奏曲》第1、7號、《風景》〈湖〉、《歌與舞》第3、7、8號；拉威爾《鏡》；蕭邦夜曲 Op.9-1、Op.62-2、升C小調波蘭舞曲 Op.26-1、第三號即興曲 Op.51、三首馬厝卡 Op.50、第二號詼諧曲 Op.31",
-      "price": "NT$600–2,600",
-      "note": "壓軸由第一號敘事曲改為第二號詼諧曲",
-      "shows": [
-        {
-          "date": "2026-11-13",
-          "time": "19:30",
-          "city": "高雄",
-          "venue": "衛武營國家藝術文化中心音樂廳",
-          "tickets": "https://www.opentix.life/event/2086709571007508481"
-        }
-      ],
-      "added": "2026-11-09",
-      "uids": [
-        "6a833f7626b32427d06043e9"
-      ],
-      "sources": [
-        {
-          "title": "衛武營節目頁",
-          "url": "https://www.npac-weiwuying.org/programs/6a54a8db8f8c17000769c894?lang=zh"
-        },
-        {
-          "title": "OPENTIX 售票頁",
-          "url": "https://www.opentix.life/event/2086709571007508481"
-        }
-      ]
-    },
-    {
       "id": "venzago-gugnin-nso-2026",
       "title": "凡薩戈、古寧與國家交響樂團",
       "kind": "協奏曲",
@@ -1530,44 +1467,6 @@
         {
           "title": "OPENTIX 售票頁",
           "url": "https://www.opentix.life/event/2079139102634627073"
-        }
-      ]
-    },
-    {
-      "id": "niederhauser-tang-duo-2026",
-      "title": "尼德豪瑟與湯詩渝大提琴鋼琴二重奏",
-      "kind": "室內樂",
-      "rating": 3,
-      "why": "琉森交響樂團大提琴首席尼德豪瑟，把克拉拉與羅伯特．舒曼夫婦各寫的三首浪漫曲排在一起，最後是布瑞頓的 C 大調大提琴奏鳴曲。",
-      "who": "薩繆爾．尼德豪瑟（大提琴）、湯詩渝（鋼琴）",
-      "program": "孟德爾頌《第二號大提琴奏鳴曲》Op.58、蓋哈德《大提琴與鋼琴奏鳴曲》、克拉拉．舒曼《三首浪漫曲》Op.22、羅伯特．舒曼《三首浪漫曲》Op.94、布瑞頓《C 大調大提琴奏鳴曲》Op.65",
-      "price": "NT$600（單一票價）",
-      "note": "學生與 65 歲以上 8 折，歌劇院會員 9 折",
-      "shows": [
-        {
-          "date": "2026-11-13",
-          "time": "19:30",
-          "city": "台中",
-          "venue": "臺中國家歌劇院小劇場",
-          "tickets": "https://www.opentix.life/event/2084130068362047489"
-        }
-      ],
-      "added": "2026-11-09",
-      "uids": [
-        "6a67d88826b32427d06042ca"
-      ],
-      "sources": [
-        {
-          "title": "臺中國家歌劇院節目頁",
-          "url": "https://www.npac-ntt.org/program/events/c-12Zp9T6Q3OB"
-        },
-        {
-          "title": "歐普思音樂藝術節目頁",
-          "url": "https://www.opusmusic.com.tw/show/%E6%B9%AF%E8%A9%A9%E6%B8%9D%E8%88%87%E8%96%A9%E7%B9%86%E7%88%BE%C2%B7%E5%B0%BC%E5%BE%B7%E8%B1%AA%E7%91%9F%E9%8B%BC%E7%90%B4%E8%88%87%E5%A4%A7%E6%8F%90%E7%90%B4%E4%BA%8C%E9%87%8D%E5%A5%8F%E9%9F%B3%E6%A8%82%E6%9C%83"
-        },
-        {
-          "title": "OPENTIX 售票頁",
-          "url": "https://www.opentix.life/event/2084130068362047489"
         }
       ]
     },
