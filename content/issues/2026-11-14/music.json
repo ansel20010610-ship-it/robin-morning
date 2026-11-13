@@ -1,0 +1,240 @@
+{
+  "column": "music",
+  "date": "2026-11-14",
+  "title": "據多雷說，德布西對薩替說：我來讓你聽聽你的音樂",
+  "dek": "薩替 1888 年寫的三分鐘鋼琴小曲，到了德布西手上配成管弦樂，連編號都換了。",
+  "brief": "據指揮家多雷回憶，薩替有一晚把自己的《吉姆諾佩迪》彈給他聽，彈得不好，在場的德布西說：「等一下，老朋友，我來讓你聽聽你的音樂。」德布西後來只配了其中兩首的管弦樂，1897 年在巴黎首演，旋律交給雙簧管、長笛或小提琴。他把編號對調，薩替的第一號成了他的第二首。",
+  "topic_key": "music:satie-gymnopedie-1",
+  "form": "compare",
+  "voice": "listener",
+  "motif": "R:1 F#5:1 A5:1 G5:1 F#5:1 C#5:1 B4:1 C#5:1 D5:1 A4:3",
+  "updated_at": "2026-11-14T01:09:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Gymnop%C3%A9die_1_d%27Erik_Satie%2C_autographe.jpg",
+    "width": 1024,
+    "height": 1271,
+    "alt": "一張泛黃的樂譜手稿，頁頂是手繪的大字標題 Gymnopédie，右上角有 Erik Satie 的簽名，下面是四行樂譜。",
+    "caption": "薩替親筆寫的第一號手稿首頁，1888 年。頁頂的手繪標題寫著「1ère Gymnopédie」。數位化自法國國家圖書館典藏。",
+    "credit": "Erik Satie；Gallica／法國國家圖書館",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gymnop%C3%A9die_1_d%27Erik_Satie,_autographe.jpg",
+    "made": "1888 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "據指揮家多雷（Gustave Doret）回憶，那是一個星期一晚上，法國作曲家**薩替**（Erik Satie）把自己的鋼琴曲帶去給他，譜印得很講究。薩替架好眼鏡，擺出要上陣的架勢，在鋼琴前坐下來彈。多雷說作曲家**德布西**（Claude Debussy）也在場。這一晚是多雷記下來的，寫在他 1942 年出版的回憶錄裡。"
+    },
+    {
+      "type": "quote",
+      "text": "可是他彈得不好，沒能把作品最好的地方表現出來。「等一下，老朋友，」德布西說，「我來讓你聽聽你的音樂。」",
+      "original": "But his defective playing did not display his compositions to their best advantage. ‘Hang on, my old friend’, said Debussy. ‘I will let you hear your music.’",
+      "cite": "多雷回憶錄《Temps et contretemps》（1942）；本報未見原書，英譯見 Billie Eaves 2011 年碩士論文第 19 頁，該文轉引多雷回憶錄第 98 頁"
+    },
+    {
+      "type": "p",
+      "text": "那晚的曲子叫**《吉姆諾佩迪》**（Gymnopédies），是薩替 1888 年寫的三首鋼琴小曲。三首都慢，都是三拍子，一首大約三分鐘。寫的時候他二十出頭，剛搬到巴黎的藝術家區蒙馬特，在黑貓酒館當鋼琴手。電影和影集常用這組曲子，《天才一族》就用過；2001 年珍娜・傑克森的歌〈Someone to Call My Lover〉，取樣的就是第一號。"
+    },
+    {
+      "type": "p",
+      "text": "多雷接著寫，德布西一彈，曲子就亮了起來。多雷說應該照這樣配成管弦樂，德布西回他：「只要薩替不反對，我明天就開工。」後來德布西真的接了多雷的委託，只配了第一號和第三號，1897 年在巴黎首演。我想拿第一號的兩個版本對照著聽：薩替自己的一架鋼琴，和德布西配給管弦樂團的那一份。"
+    },
+    {
+      "type": "music",
+      "composer": "薩替（Erik Satie）",
+      "work": "《吉姆諾佩迪》第一號",
+      "work_original": "Gymnopédie No. 1 (Lent et douloureux)",
+      "composed": "1888 年",
+      "performers": "羅傑（Pascal Rogé）鋼琴",
+      "recording": "Decca，1983 年錄音",
+      "duration": "約 3 分鐘",
+      "movements": [
+        "Lent et douloureux"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Satie Gymnopédies Pascal Rogé Gymnopédie No. 1",
+        "artist_hint": "Rogé",
+        "track_filter": [
+          "Gymnopédie No. 1",
+          "Gymnopédie n° 1"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "現在聽到的是鋼琴家羅傑彈的原版。開頭一小段還沒有旋律，只有伴奏：每小節先一個低音，撐到小節結束，後兩拍一個和弦，兩個和弦輪流出現。接著高音的旋律進來，一拍一個音，最後停在一個拉長的音上。薩替在譜上寫的速度是 Lent et douloureux，法文的意思是「慢，而且帶著痛楚」。"
+    },
+    {
+      "type": "table",
+      "title": "同一首第一號，兩個版本",
+      "head": [
+        "",
+        "薩替的鋼琴原版",
+        "德布西的管弦樂版"
+      ],
+      "rows": [
+        [
+          "年代",
+          "1888 年寫成",
+          "1897 年首演"
+        ],
+        [
+          "旋律",
+          "鋼琴的高音",
+          "雙簧管、長笛或小提琴"
+        ],
+        [
+          "低音與和弦",
+          "鋼琴的低音與和弦",
+          "弦樂接手；低音提琴只在每小節第一拍撥弦，豎琴主要補後兩拍"
+        ],
+        [
+          "德布西加的",
+          "—",
+          "鈸、豎琴琶音"
+        ],
+        [
+          "編號",
+          "第一號",
+          "第二首"
+        ]
+      ],
+      "caption": "管弦樂版指德布西的第二首，就是薩替的第一號。"
+    },
+    {
+      "type": "p",
+      "text": "換成管弦樂版，先聽旋律。鋼琴版裡它是高音，現在換成雙簧管、長笛或小提琴來唱。"
+    },
+    {
+      "type": "p",
+      "text": "再聽底下。鋼琴那個撐滿整小節的低音，現在交給弦樂。低音提琴只在每小節第一拍撥一下，用手指撥弦，不用弓拉；後兩拍的和弦，主要由豎琴補上。研究這組曲子的 Eaves 說，德布西大致守著薩替的原譜。"
+    },
+    {
+      "type": "p",
+      "text": "他也加了一點東西：鈸的敲擊，還有豎琴的琶音。琶音是把和弦的幾個音一個接一個撥出來，不是同時響。"
+    },
+    {
+      "type": "p",
+      "text": "編號也換了。德布西把薩替的第三號排在前面，當成自己的第一首，**薩替的第一號，到了德布西手上成了第二首**。第二號他沒有編。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Debussy_Gymnopedie_1%2C_arrangement_of_Satie%E2%80%99s_Gymnopedie_3.png/1280px-Debussy_Gymnopedie_1%2C_arrangement_of_Satie%E2%80%99s_Gymnopedie_3.png",
+      "width": 1280,
+      "height": 976,
+      "alt": "六小節的管弦樂總譜，開頭標著 Lent et grave，由上到下是多件管弦樂器的譜表。",
+      "caption": "薩替第三號管弦樂版開頭六小節的總譜節錄，現代重新排版。德布西把這首排成第一首；旋律進來的地方標了 doux et expressif，意思是「柔和而有表情」。",
+      "credit": "薩替曲，德布西編；Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Debussy_Gymnopedie_1,_arrangement_of_Satie%E2%80%99s_Gymnopedie_3.png",
+      "made": "2020 年排版"
+    },
+    {
+      "type": "p",
+      "text": "首演在 1897 年 2 月 20 日，巴黎的厄拉爾廳，指揮就是多雷。三年前，德布西《牧神的午後前奏曲》首演，指揮也是他。"
+    },
+    {
+      "type": "p",
+      "text": "多雷那段回憶，研究薩替的學者 Robert Orledge 認為誇大了，連薩替的琴藝也被說得太差：要彈自己這幾首，薩替的程度綽綽有餘（這是 Eaves 論文的轉述，本報沒看過 Orledge 的書）。這段對話只有多雷一人的記載；可以確認的是，德布西編了曲，1897 年的首演由多雷指揮。出版這組曲譜的 Henle 在序言裡說，那場首演替這幾首曲子打下了一直延續到今天的成功。"
+    },
+    {
+      "type": "p",
+      "text": "聽完這兩個版本，可以接著聽德布西排在第一首的那首，就是薩替的第三號，總譜節錄那張圖就是它的開頭。樂團 Blood, Sweat & Tears 1968 年錄過第一、二號的搖滾版，叫〈Variations on a Theme by Erik Satie〉。找管弦樂版的錄音時看一下曲目：標著「第一號」的，可能是薩替的第三號。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Vorwort／Preface to Gymnopédies (Henle HN 1072)",
+      "publisher": "G. Henle Verlag（Ulrich Krämer，2011）",
+      "date": "2011-10-25",
+      "url": "https://www.henle.de/media/d4/79/64/1697725847/1072-1697725846-sync.pdf",
+      "note": "版序（德英法三語）。1888 年 2 月至 4 月初寫成、薩替搬到蒙馬特、德布西受多雷委託編曲並經薩替同意、德布西 1891 年起與薩替交好、1897 年 2 月 20 日於厄拉爾廳首演、首演「laid the foundation for the pieces' success, which has lasted to this day」"
+    },
+    {
+      "title": "Gymnopédies",
+      "publisher": "Wikipedia",
+      "date": "2026-11-13",
+      "url": "https://en.wikipedia.org/wiki/Gymnop%C3%A9dies",
+      "note": "查閱日。每首約三分鐘、慢速三拍子、德布西只編第一號與第三號並對調編號、影視使用（含《天才一族》）、2001 年珍娜・傑克森〈Someone to Call My Lover〉取樣第一號、1968 年 Blood, Sweat & Tears 錄第一、二號"
+    },
+    {
+      "title": "The Reception of Erik Satie's Gymnopédies: Audience, Identity, and Commercialization",
+      "publisher": "Ohio State University（Billie Eaves，碩士論文）",
+      "date": "2011-01-01",
+      "url": "https://etd.ohiolink.edu/acprod/odb_etd/ws/send_file/send?accession=osu1299643553&disposition=inline",
+      "note": "讀了全文 PDF。德布西配器細節（弦樂取代左手、旋律用雙簧管長笛小提琴、低音提琴第一拍撥弦、豎琴補第二三拍、鈸與豎琴琶音、doux et expressif）。多雷回憶錄（Temps et contretemps，1942，頁 98）的英譯是 Eaves 引自 Robert Orledge《Satie the Composer》（1990）頁 50；「誇大」是 Eaves 轉述 Orledge 看法的措辭，薩替琴藝「certainly above the Grade IV standard」一語引自同書頁 51。本報未見多雷與 Orledge 原書，皆為二手轉引"
+    },
+    {
+      "title": "List of compositions by Claude Debussy",
+      "publisher": "Wikipedia",
+      "date": "2026-11-13",
+      "url": "https://en.wikipedia.org/wiki/List_of_compositions_by_Claude_Debussy",
+      "note": "查閱日。德布西只編薩替第一號與第三號、順序相反（Lent et grave、Lent et douloureux）"
+    },
+    {
+      "title": "Erik Satie",
+      "publisher": "Wikipedia",
+      "date": "2026-11-13",
+      "url": "https://en.wikipedia.org/wiki/Erik_Satie",
+      "note": "查閱日。1866 年 5 月 17 日生、黑貓酒館鋼琴手"
+    },
+    {
+      "title": "Gustave Doret",
+      "publisher": "Wikipedia",
+      "date": "2026-11-13",
+      "url": "https://en.wikipedia.org/wiki/Gustave_Doret",
+      "note": "查閱日。瑞士作曲家與指揮、1894 年指揮《牧神的午後前奏曲》首演"
+    },
+    {
+      "title": "Erik Satie: Gymnopédies",
+      "publisher": "Classic FM",
+      "date": "2026-11-13",
+      "url": "https://www.classicfm.com/composers/satie/music/gymnopedies/",
+      "note": "查閱日。推薦羅傑的 Decca 鋼琴錄音（410 220）"
+    },
+    {
+      "title": "Satie – Pascal Rogé – 3 Gymnopédies & Other Piano Works（Decca 410 220-2）",
+      "publisher": "Discogs",
+      "date": "2026-11-14",
+      "url": "https://www.discogs.com/release/8620325-Satie-Pascal-Roge-3-Gymnop%C3%A9dies-Other-Piano-Works",
+      "note": "查閱日。唱片目錄資料：Decca 410 220-2，1983 年 5 月於倫敦 Kingsway Hall 錄音；本報未能自動開啟此頁（403），年份依搜尋結果的目錄摘要"
+    },
+    {
+      "title": "3 Gymnopédies (Satie, Erik)",
+      "publisher": "IMSLP",
+      "date": "2026-11-13",
+      "url": "https://imslp.org/wiki/3_Gymnop%C3%A9dies_(Satie,_Erik)",
+      "note": "查閱日。三首速度標示"
+    },
+    {
+      "title": "File:Satie Gymnopedie 1 first eight bars.png",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-13",
+      "url": "https://commons.wikimedia.org/wiki/File:Satie_Gymnopedie_1_first_eight_bars.png",
+      "note": "開頭八小節譜例，用來核對 motif、開頭只有低音與和弦、旋律的走向"
+    },
+    {
+      "title": "Gymnopédie 1 d'Erik Satie, autographe",
+      "publisher": "Gallica／法國國家圖書館（經 Wikimedia Commons）",
+      "date": "1888-01-01",
+      "url": "https://commons.wikimedia.org/wiki/File:Gymnop%C3%A9die_1_d%27Erik_Satie,_autographe.jpg",
+      "note": "頭圖：第一號手稿首頁"
+    },
+    {
+      "title": "File:Debussy Gymnopedie 1, arrangement of Satie’s Gymnopedie 3.png",
+      "publisher": "Wikimedia Commons",
+      "date": "2020-08-31",
+      "url": "https://commons.wikimedia.org/wiki/File:Debussy_Gymnopedie_1,_arrangement_of_Satie%E2%80%99s_Gymnopedie_3.png",
+      "note": "正文圖：2020 年 8 月 31 日由使用者上傳的現代排版節錄，6 小節，內容是薩替第三號（德布西第一首）的開頭，可見 Lent et grave、con sord.、doux et expressif。Commons 頁面標的 1898 年不是這張圖的製作年，圖說與 made 不採用"
+    }
+  ]
+}
