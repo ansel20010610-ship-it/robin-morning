@@ -26,6 +26,11 @@
     ],
     "note": "哲學欄(裘格斯戒指,qa/socratic)、巴薩晨報初稿(timeline/fan)完成；非比賽夜；第9步重寫2／修正0；無接第1班缺稿；validate 無 WARN"
   },
+  "4": {
+    "finished_at": "2026-11-14T05:43:56+08:00",
+    "missing": [],
+    "note": "巴薩小幅更新（國腳賽果三筆，無第9步）；FM、寰宇觀測站靜默；訃聞寫 Åström（第9步：修正1／重寫0，忠實度核對已做）；快訊修正1／重寫0。快訊可用網域：aljazeera、france24、news.pts.org.tw、focustaiwan、cna；不可用：dw、nhk、rti（403）、cwa（無內容）；荷蘭對希臘比分僅ESPN單一來源，未寫比分，建議第5班再核"
+  },
   "column": {
     "finished_at": "2026-11-13T22:45:33+08:00",
     "missing": [

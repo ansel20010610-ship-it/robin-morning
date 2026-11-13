@@ -7,7 +7,7 @@
   "topic_key": "football:2026-11-14",
   "form": "timeline",
   "voice": "fan",
-  "updated_at": "2026-11-14T03:06:29+08:00",
+  "updated_at": "2026-11-14T05:43:24+08:00",
   "spoiler": null,
   "disclaimer": null,
   "next": {
@@ -66,7 +66,7 @@
         {
           "when": "11.14 週六 03:45",
           "label": "阿姆斯特丹，荷蘭對希臘",
-          "note": "哈維賽前指定德容當隊長"
+          "note": "德容先發，45 分鐘被換下；賽前哈維指定他當隊長"
         },
         {
           "when": "11.14 週六 18:15",
@@ -148,7 +148,7 @@
     },
     {
       "type": "p",
-      "text": "荷蘭今天凌晨 3 點 45 分在阿姆斯特丹主場對希臘。賽前兩隊都是 8 分，搶這一組的第一。荷蘭現在的總教練是哈維。隊長范戴克這次不在，哈維賽前指定德容當隊長，還說他把德容算作世界上最好的中場之一。德容說，當隊長對誰都是莫大的光榮，他也一樣。荷蘭下一場是 11 月 17 日（週二）清晨 3 點 45 分，去柏林踢德國。"
+      "text": "荷蘭今天凌晨 3 點 45 分在阿姆斯特丹主場踢希臘，賽前兩隊都是 8 分，搶這一組的第一。荷蘭現在的總教練是哈維。隊長范戴克這次不在，哈維賽前指定德容當隊長，還說他把德容算作世界上最好的中場之一。德容說，當隊長對誰都是莫大的光榮，他也一樣。比賽已經踢完，德容先發，45 分鐘被隊友 Koopmeiners 換下。荷蘭下一場是 11 月 17 日（週二）清晨 3 點 45 分，去柏林踢德國。"
     },
     {
       "type": "h",
@@ -164,7 +164,7 @@
     },
     {
       "type": "p",
-      "text": "坎塞洛的葡萄牙已經確定進八強，週日凌晨先踢丹麥，週三凌晨再踢威爾斯，那是我們國腳這一週最晚的一場。利瓦科維奇的克羅埃西亞週一清晨對捷克，跟馬德里那場同時開踢。巴薩的 Marc Bernal 在西班牙 U21，Hamza Abdelkarim 在埃及，下一場也都排在週二、週三。十二個人散在各地踢，週三踢完，一個一個都要完整地回來。"
+      "text": "坎塞洛的葡萄牙已經確定進八強，週日凌晨先踢丹麥，週三凌晨再踢威爾斯，那是我們國腳這一週最晚的一場。利瓦科維奇的克羅埃西亞週一清晨對捷克，跟馬德里那場同時開踢。另外兩個人今天凌晨已經踢完這週的第一場。西班牙 U21 在阿爾門德拉萊霍 2 比 0 贏日本 U21，巴薩的 Marc Bernal 先發，45 分鐘被換下。埃及在開羅 5 比 0 贏馬拉威，那是 2027 年非洲國家盃的資格賽，巴薩的 Hamza Abdelkarim 72 分鐘替補埃及的 Trézéguet 上場。他們兩個下一場也都排在週二、週三。十二個人散在各地踢，週三踢完，一個一個都要完整地回來。"
     },
     {
       "type": "table",
@@ -461,14 +461,42 @@
       "publisher": "ESPN",
       "date": "2026-11-13",
       "url": "https://www.espn.com/soccer/match/_/gameId/401861159",
-      "note": "19:45Z 開球（台灣 11 月 14 日 03:45），阿姆斯特丹；A2 組荷蘭、希臘都 8 分"
+      "note": "19:45Z 開球（台灣 11 月 14 日 03:45），阿姆斯特丹；A2 組荷蘭、希臘都 8 分。ESPN summary（11 月 14 日 05:20–05:38 重查）：德容先發、45 分鐘由 Koopmeiners 換下；全場比分只有 ESPN 一個來源，UEFA、Goal、Sky 頁面都還沒有終場資料，依規則不寫比分"
     },
     {
       "title": "African Cup of Nations and Nations League action",
       "publisher": "FC Barcelona",
       "date": "2026-11-13",
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4607914/fc-barcelona-international-diary",
-      "note": "巴薩國腳名單與國家隊賽程（CET，換算台灣時間 +7 小時）；捷克一戰巴薩球員出場"
+      "note": "巴薩國腳名單與國家隊賽程（CET，換算台灣時間 +7 小時）；捷克一戰巴薩球員出場；11 月 14 日重查：名單共 12 人，與稿中表格一致"
+    },
+    {
+      "title": "Egypt vs. Malawi, 2027 Africa Cup of Nations qualifying",
+      "publisher": "ESPN",
+      "date": "2026-11-13",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401927190",
+      "note": "ESPN summary（11 月 14 日 05:20–05:38 查閱）：開羅國際體育場，終場 5 比 0；Hamza Abdelkarim 72 分鐘替補 Trézéguet 上場"
+    },
+    {
+      "title": "Video: Egypt begins the Ali Maher era with a crushing victory, Salah brace",
+      "publisher": "Goal",
+      "date": "2026-11-13",
+      "url": "https://www.goal.com/en/news/video-egypt-begins-the-ali-maher-era-with-a-crushing-victory-salah-brace/blt89e3855fba19a056",
+      "note": "第二來源：埃及 5 比 0 馬拉威、開羅國際體育場，稱 Hamza Abdelkarim 為巴薩前鋒"
+    },
+    {
+      "title": "Spain U21 vs. Japan U21, international friendly",
+      "publisher": "ESPN",
+      "date": "2026-11-13",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401933835",
+      "note": "ESPN summary（11 月 14 日 05:20–05:38 查閱）：Almendralejo，終場 2 比 0；Marc Bernal 先發、45 分鐘被換下"
+    },
+    {
+      "title": "Spain U21 vs Japan U21, live commentary",
+      "publisher": "Sky Sports",
+      "date": "2026-11-13",
+      "url": "https://www.skysports.com/football/spain-u21-vs-japan-u21/579166",
+      "note": "第二來源：終場 2 比 0，進球 22 分鐘、89 分鐘；Bernal 45 分鐘被換下（頁面未列先發名單，先發以 ESPN 為準）"
     },
     {
       "title": "FC Barcelona international schedule",
