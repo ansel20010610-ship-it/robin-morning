@@ -19,6 +19,13 @@
     ],
     "note": "文明欄(貞德,flow/lecturer)、經典欄(春之祭,list/critic)完成;第9步重寫1(canon)／修正1(civilization);無接第1班缺稿"
   },
+  "3": {
+    "finished_at": "2026-11-14T03:06:42+08:00",
+    "missing": [
+      "news"
+    ],
+    "note": "哲學欄(裘格斯戒指,qa/socratic)、巴薩晨報初稿(timeline/fan)完成；非比賽夜；第9步重寫2／修正0；無接第1班缺稿；validate 無 WARN"
+  },
   "column": {
     "finished_at": "2026-11-13T22:45:33+08:00",
     "missing": [
