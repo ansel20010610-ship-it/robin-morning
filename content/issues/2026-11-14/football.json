@@ -1,0 +1,558 @@
+{
+  "column": "football",
+  "date": "2026-11-14",
+  "title": "亞馬爾歇一場，西班牙照贏；週一戈登對上自己人",
+  "dek": "43 場不敗。西班牙少了亞馬爾還是贏，週一清晨在馬德里等英格蘭，也等戈登。",
+  "brief": "亞馬爾膝蓋痛沒踢，西班牙照樣在布拉格 2 比 0 贏捷克，連續 43 場不敗。週一清晨 3 點 45 分西班牙在馬德里對英格蘭，巴薩五個人在西班牙那邊，戈登在英格蘭那邊。巴薩下一場是 11 月 22 日晚上 9 點，主場對比利亞雷亞爾。",
+  "topic_key": "football:2026-11-14",
+  "form": "timeline",
+  "voice": "fan",
+  "updated_at": "2026-11-14T03:06:29+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "next": {
+    "opponent": "比利亞雷亞爾",
+    "competition": "西甲",
+    "kickoff": "2026-11-22T21:00+08:00",
+    "venue": "Spotify Camp Nou",
+    "home": true
+  },
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Lamine_Yamal_Argentina_v_Spain_19_July_2026-214.jpg/1280px-Lamine_Yamal_Argentina_v_Spain_19_July_2026-214.jpg",
+    "width": 1280,
+    "height": 853,
+    "alt": "西班牙隊球衣的亞馬爾在球場上，2026 年 7 月世界盃決賽。",
+    "caption": "亞馬爾，2026 年 7 月 19 日世界盃決賽，西班牙對阿根廷，Bryan Berlin 拍攝。資料照片，非當日比賽畫面。",
+    "credit": "Bryan Berlin／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lamine_Yamal_Argentina_v_Spain_19_July_2026-214.jpg",
+    "made": "2026"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "西班牙那邊五個巴薩的，英格蘭那邊一個巴薩的，週一清晨 3 點 45 分要在馬德里碰頭。這週是國家隊比賽週，巴薩自己沒有比賽，我們不少人被叫去替自己的國家踢球。偏偏這一場，自己人分站兩邊：西班牙有亞馬爾、佩德里、費爾明、庫巴西和 Joan García，英格蘭只有一個，我們的邊鋒**戈登**。"
+    },
+    {
+      "type": "p",
+      "text": "他們踢的是國家聯賽，歐洲各國國家隊自己的聯賽。四隊一組，各踢六場，前兩名進 2027 年 3 月的八強。西班牙和英格蘭同一組，兩隊都已經確定晉級，週一爭的是小組第一。西班牙五戰全勝拿 15 分，英格蘭 12 分。照 ESPN 的算法，英格蘭贏球就會以淨勝球超過西班牙；西班牙不輸就能保住第一。"
+    },
+    {
+      "type": "p",
+      "text": "兩隊台灣時間週五凌晨都先踢了一場，也都贏了。西班牙那場少了**亞馬爾**，他膝蓋痛沒踢，這是他本季巴薩加國家隊第一次缺席。西班牙是今年夏天的世界盃冠軍，少了他照樣 2 比 0 贏球，各項賽事已經連續 43 場沒輸。"
+    },
+    {
+      "type": "timeline",
+      "title": "巴薩的人這一週在哪裡（台灣時間）",
+      "items": [
+        {
+          "when": "11.13 週五 03:45",
+          "label": "布拉格，西班牙 2 比 0 捷克",
+          "note": "亞馬爾膝蓋痛沒踢"
+        },
+        {
+          "when": "11.13 週五 03:45",
+          "label": "溫布利，英格蘭 2 比 1 克羅埃西亞",
+          "note": "戈登先發，利瓦科維奇守對面的門"
+        },
+        {
+          "when": "11.13 週五",
+          "label": "拉菲尼亞說話被誤解",
+          "note": "巴西週六傍晚在新加坡踢日本"
+        },
+        {
+          "when": "11.14 週六 03:45",
+          "label": "阿姆斯特丹，荷蘭對希臘",
+          "note": "哈維賽前指定德容當隊長"
+        },
+        {
+          "when": "11.14 週六 18:15",
+          "label": "新加坡，巴西對日本",
+          "note": "拉菲尼亞預定當隊長"
+        },
+        {
+          "when": "11.15 週日 03:45",
+          "label": "葡萄牙對丹麥",
+          "note": "坎塞洛"
+        },
+        {
+          "when": "11.16 週一 03:45",
+          "label": "馬德里，西班牙對英格蘭",
+          "note": "爭小組第一"
+        },
+        {
+          "when": "11.22 週日 21:00",
+          "label": "巴薩主場對比利亞雷亞爾",
+          "note": "西甲第 13 輪"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "週五凌晨，布拉格沒有亞馬爾"
+    },
+    {
+      "type": "p",
+      "text": "布拉格那場沒有亞馬爾。ESPN 幫他算過，本季在這之前，巴薩加西班牙一共 20 場，他場場先發，進了 17 球，助攻 13 次。"
+    },
+    {
+      "type": "p",
+      "text": "我們自己的人上了三個。庫巴西先發踢滿全場，32 分鐘一個角球飛過來，他一頭頂在橫樑上，就差那麼一點。費爾明也先發，82 分鐘被換下。佩德里要等到 76 分鐘才換上場，這種用法我向來有意見。Joan García 坐了一整場板凳。"
+    },
+    {
+      "type": "p",
+      "text": "兩個進球都跟巴薩無關。39 分鐘捷克有人在禁區手球，西班牙罰進；補時第 6 分鐘再補一球。捷克 72 分鐘還被罰下一個人。"
+    },
+    {
+      "type": "p",
+      "text": "西班牙總教練德拉富恩特（Luis de la Fuente）賽後先報喜：亞馬爾現在感覺不錯，很想歸隊，會回到備戰英格蘭的隊伍裡。西班牙上一次輸球，要追到 2024 年 3 月輸給哥倫比亞那場。"
+    },
+    {
+      "type": "h",
+      "text": "同一個鐘點，溫布利也是自己人對自己人"
+    },
+    {
+      "type": "p",
+      "text": "同一時間在倫敦溫布利，英格蘭 2 比 1 贏克羅埃西亞。場上兩個巴薩的：戈登先發踢左路，77 分鐘被換下；對面守門的是我們的利瓦科維奇，克羅埃西亞的門將，踢滿全場，丟了兩球。"
+    },
+    {
+      "type": "p",
+      "text": "英格蘭 24 分鐘先進球，克羅埃西亞 59 分鐘在一個角球之後扳平。63 分鐘，克羅埃西亞球員在禁區拉了英格蘭球員的球衣，裁判看完 VAR 判罰球，64 分鐘英格蘭隊長凱恩一腳罰進。凱恩 33 歲，效力拜仁，前陣子剛拿了金球獎。這是他第 126 次替英格蘭出賽，超過了希爾頓（Peter Shilton）的紀錄，成了英格蘭國家隊出賽最多的人；國家隊進球也來到 92 個。"
+    },
+    {
+      "type": "p",
+      "text": "戈登自己有兩個鏡頭。48 分鐘他起腳想把球捲進去，弧度沒出來，偏得很遠。55 分鐘他在禁區被對手撞倒，英格蘭喊罰球，裁判說沒犯規。八分鐘後換隊友被拉倒，看完 VAR，罰球就給了。一個被撞倒沒事，一個被拉衣服就有，這種尺度要是出現在西甲，我早就罵出聲了。"
+    },
+    {
+      "type": "h",
+      "text": "週五晚上，拉菲尼亞說他被聽錯了"
+    },
+    {
+      "type": "p",
+      "text": "拉菲尼亞跟著巴西準備踢日本。他之前說過，跟巴西總教練安切洛蒂（Carlo Ancelotti）談過要控制他在國家隊的出賽時間，因為前三次國家隊比賽週，他每次回來大腿後側都帶著傷。這段話在巴西很不受歡迎。"
+    },
+    {
+      "type": "p",
+      "text": "週五他出來講清楚，說那段話被誤解了。他的意思是，只要身體狀況可以，教練隨時都能用他；他想踢每一場，分鐘也想盡量多踢，身體允許的話，他會拿出全部。安切洛蒂也表態，說球員的健康永遠擺第一。"
+    },
+    {
+      "type": "p",
+      "text": "他還證實了一件事：他左耳的囊腫已經開過刀。ESPN 說，巴薩原本希望他排在國家隊比賽週做；他卻在 10 月 25 日輸給皇馬那場德比之後就先開了，為的是趕上巴西這個月的兩場友誼賽。巴薩的比賽他一場也沒缺，這點我認。可是要我選，我寧可他照俱樂部排的時間開刀，巴西少他兩場友誼賽又不會怎樣。"
+    },
+    {
+      "type": "h",
+      "text": "週六凌晨，哈維賽前指定德容當隊長"
+    },
+    {
+      "type": "p",
+      "text": "荷蘭今天凌晨 3 點 45 分在阿姆斯特丹主場對希臘。賽前兩隊都是 8 分，搶這一組的第一。荷蘭現在的總教練是哈維。隊長范戴克這次不在，哈維賽前指定德容當隊長，還說他把德容算作世界上最好的中場之一。德容說，當隊長對誰都是莫大的光榮，他也一樣。荷蘭下一場是 11 月 17 日（週二）清晨 3 點 45 分，去柏林踢德國。"
+    },
+    {
+      "type": "h",
+      "text": "週六傍晚，拉菲尼亞預定在新加坡戴袖標"
+    },
+    {
+      "type": "p",
+      "text": "今天傍晚 6 點 15 分，巴西在新加坡國家體育場踢日本，拉菲尼亞預定當巴西隊長。他 29 歲，本季替巴薩 14 場進了 19 球，是我們現在最不能少的人。踢完日本，巴西 11 月 17 日（週二）下午 5 點還有一場，對主辦的新加坡，那是這次巴西集訓的最後一場。"
+    },
+    {
+      "type": "h",
+      "text": "週日凌晨起，其他人輪流上場"
+    },
+    {
+      "type": "p",
+      "text": "坎塞洛的葡萄牙已經確定進八強，週日凌晨先踢丹麥，週三凌晨再踢威爾斯，那是我們國腳這一週最晚的一場。利瓦科維奇的克羅埃西亞週一清晨對捷克，跟馬德里那場同時開踢。巴薩的 Marc Bernal 在西班牙 U21，Hamza Abdelkarim 在埃及，下一場也都排在週二、週三。十二個人散在各地踢，週三踢完，一個一個都要完整地回來。"
+    },
+    {
+      "type": "table",
+      "title": "巴薩國腳接下來的比賽",
+      "head": [
+        "球員",
+        "代表隊",
+        "接下來（台灣時間）"
+      ],
+      "rows": [
+        [
+          "坎塞洛",
+          "葡萄牙",
+          "11 月 15 日（週日）03:45 對丹麥；11 月 18 日（週三）03:45 對威爾斯"
+        ],
+        [
+          "亞馬爾、佩德里、費爾明、庫巴西、Joan García",
+          "西班牙",
+          "11 月 16 日（週一）03:45 對英格蘭"
+        ],
+        [
+          "戈登",
+          "英格蘭",
+          "11 月 16 日（週一）03:45 對西班牙"
+        ],
+        [
+          "利瓦科維奇",
+          "克羅埃西亞",
+          "11 月 16 日（週一）03:45 對捷克"
+        ],
+        [
+          "德容",
+          "荷蘭",
+          "11 月 17 日（週二）03:45 對德國"
+        ],
+        [
+          "拉菲尼亞",
+          "巴西",
+          "11 月 17 日（週二）17:00 對新加坡"
+        ],
+        [
+          "Hamza Abdelkarim",
+          "埃及",
+          "11 月 17 日（週二）21:00 對馬拉威"
+        ],
+        [
+          "Marc Bernal",
+          "西班牙 U21",
+          "11 月 18 日（週三）02:00 對阿爾巴尼亞 U21"
+        ]
+      ],
+      "caption": "資料取自巴薩官網 2026 年 11 月 13 日的國家隊日誌，時間換算成台灣時間。"
+    },
+    {
+      "type": "h",
+      "text": "週一清晨，戈登要對上自己人"
+    },
+    {
+      "type": "p",
+      "text": "馬德里這一場踢在馬競的主場 Metropolitano。西班牙少一個羅德里，他是巴薩今年夏天從曼城簽來的中場，ESPN 說他帶傷趕不上這一場。英格蘭的後防這邊，兩名中衛有傷，對克羅埃西亞那場派出的後衛四人組，之前從來沒有一起先發過。"
+    },
+    {
+      "type": "p",
+      "text": "戈登現在就在西班牙踢球。ESPN 週五一篇專文引了他早先講過的話：他說人在西班牙踢了球，才比較有資格講，西班牙人留住球的方式就是不一樣。"
+    },
+    {
+      "type": "quote",
+      "text": "我說不上那是什麼，也許我們永遠叫不出它的名字，可是他們就是不一樣。",
+      "original": "I don't know what it is, something that maybe we can't ever put a name to, but they're definitely built different.",
+      "cite": "戈登（ESPN 11 月 13 日專文引述）"
+    },
+    {
+      "type": "p",
+      "text": "英格蘭總教練圖赫爾（Thomas Tuchel）踢完克羅埃西亞就說，他們要的就是去西班牙踢這一場，現在它是爭小組第一的決賽。兩隊 9 月 26 日在溫布利踢過這一組的第一場，西班牙 3 比 2 贏。德拉富恩特在布拉格賽後，也談到了這 43 場。"
+    },
+    {
+      "type": "quote",
+      "text": "每打一場，輸球就離我們近一點。事情就是這樣，不過我們很高興，也很珍惜我們做到的事。",
+      "original": "The thing is, with every match that goes by, defeat gets closer. That's just how it is, but we're happy and appreciate what we're achieving.",
+      "cite": "德拉富恩特，11 月 12 日賽後（ESPN）"
+    },
+    {
+      "type": "table",
+      "title": "國家聯賽 A3 組，剩最後一輪",
+      "head": [
+        "球隊",
+        "積分",
+        "淨勝球",
+        "最後一輪"
+      ],
+      "rows": [
+        [
+          "西班牙",
+          "15",
+          "+9",
+          "主場對英格蘭"
+        ],
+        [
+          "英格蘭",
+          "12",
+          "+12",
+          "客場對西班牙"
+        ],
+        [
+          "克羅埃西亞",
+          "3",
+          "-11",
+          "對捷克"
+        ],
+        [
+          "捷克",
+          "0",
+          "-10",
+          "對克羅埃西亞"
+        ]
+      ],
+      "caption": "ESPN 積分榜，2026 年 11 月 14 日查閱。淨勝球是進球減失球，照 ESPN 的算法，英格蘭贏球就會以淨勝球超過西班牙。"
+    },
+    {
+      "type": "p",
+      "text": "**這場我偏心西班牙，五比一，人數說了算。**要是亞馬爾歸隊，我押西班牙不輸。可是戈登要是進球，我照樣替他高興，他是我們的人。"
+    },
+    {
+      "type": "h",
+      "text": "11 月 22 日，等人回到諾坎普"
+    },
+    {
+      "type": "p",
+      "text": "國腳們踢完，巴薩下一場是 **11 月 22 日（週日）晚上 9 點**，西甲第 13 輪，在 Spotify Camp Nou 主場對比利亞雷亞爾。接著是 11 月 25 日歐冠，去巴庫踢 Sabah；11 月 29 日客場踢 Deportivo。12 月 2 日，等馬競。"
+    },
+    {
+      "type": "h",
+      "text": "別人家的週五"
+    },
+    {
+      "type": "news",
+      "title": "歐洲足壇速覽",
+      "items": [
+        {
+          "headline": "曼聯請來波切蒂諾，第一場就去安菲爾德",
+          "summary": "曼聯週五正式宣布，54 歲的阿根廷教練波切蒂諾接任總教練，合約兩年半，接替週四被開除的卡里克。他原本帶美國隊，曼聯付了約 1,000 萬美元解約金；他會先帶美國隊踢完兩場對海地，11 月 18 日到曼聯上班，第一場就是 11 月 22 日去安菲爾德踢利物浦。告別美國隊的記者會上他掉了淚，說這是他職業生涯最難的決定。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50469660",
+          "when": "11 月 13 日（週五）",
+          "place": [
+            "GB",
+            "US"
+          ]
+        },
+        {
+          "headline": "義大利 3 比 1 贏法國，一對兄弟的罰球",
+          "summary": "義大利週五凌晨在米蘭 3 比 1 贏法國，這是 1962 年以來第一次在米蘭贏法國，也是齊達內接手法國後的第一場敗仗。國際米蘭 21 歲的前鋒 Pio Esposito 進了兩球，第二球是罰球；在那之前，同隊的哥哥先罰丟了一次。Pio 賽後說，那一腳也是要讓大家忘掉哥哥的失誤；義大利教練曼奇尼說，這是一家人的事。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50465651",
+          "when": "11 月 13 日（週五）凌晨",
+          "place": [
+            "IT",
+            "FR"
+          ]
+        },
+        {
+          "headline": "法國後防又少一個，孔德也在缺陣名單",
+          "summary": "法國隊週五說，拜仁的後衛 Upamecano 因為個人因素離隊回慕尼黑，教練齊達內同意。這週還有兩人確定缺陣，更早就少了孔德等一串名字。姆巴佩對義大利輪休，最後一輪對土耳其可能回來。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50470365",
+          "when": "11 月 13 日（週五）",
+          "place": "FR"
+        },
+        {
+          "headline": "國家聯賽八強 11 月 20 日抽籤",
+          "summary": "八強抽籤在 11 月 20 日（週五）台灣時間晚上 7 點，八強在 2027 年 3 月下旬踢兩回合。各組第一是種子，次回合還在自己主場。西班牙、英格蘭、葡萄牙已經確定晉級。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50472529",
+          "when": "11 月 20 日（週五）"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Spain beat Czechia to extend record unbeaten run to 43 games",
+      "publisher": "ESPN",
+      "date": "2026-11-12",
+      "url": "https://www.espn.com/soccer/story/_/id/50456337",
+      "note": "比分、進球分鐘、庫巴西 32 分鐘角球頭槌撞橫樑"
+    },
+    {
+      "title": "Czechia 0-2 Spain, UEFA Nations League",
+      "publisher": "ESPN",
+      "date": "2026-11-12",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401861148",
+      "note": "ESPN summary 名單與 keyEvents（11 月 14 日重查）：39 分鐘罰球、72 分鐘紅牌、90+6 分鐘進球；庫巴西先發未換下、費爾明 82 分鐘換下、佩德里 76 分鐘上場、Joan García 替補未上場"
+    },
+    {
+      "title": "Spain welcome Yamal back, aim to extend record streak vs. England",
+      "publisher": "ESPN",
+      "date": "2026-11-12",
+      "url": "https://www.espn.com/soccer/story/_/id/50465395",
+      "note": "亞馬爾因膝蓋痛缺席（knee pain，未寫在何處治療）；本季第一場缺席；20 場 17 球 13 助攻；德拉富恩特賽後談話；43 場不敗、上一敗 2024 年 3 月對哥倫比亞；週日在 Metropolitano"
+    },
+    {
+      "title": "England mark Harry Kane's night with a win, but defense remains a concern",
+      "publisher": "ESPN",
+      "date": "2026-11-12",
+      "url": "https://www.espn.com/soccer/story/_/id/50464165",
+      "note": "進球分鐘、VAR 判罰球、凱恩第 126 場破希爾頓紀錄、92 球；後衛四人組從未一起先發；兩名中衛受傷"
+    },
+    {
+      "title": "England vs. Croatia, UEFA Nations League",
+      "publisher": "ESPN",
+      "date": "2026-11-12",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401861150",
+      "note": "ESPN summary：戈登先發、77 分鐘換下；利瓦科維奇先發未換下；59 分鐘進球為角球後"
+    },
+    {
+      "title": "England 2-1 Croatia: Harry Kane scores winner as he becomes Three Lions record appearance maker",
+      "publisher": "Sky Sports",
+      "date": "2026-11-12",
+      "url": "https://www.skysports.com/football/england-vs-croatia/report/554088",
+      "note": "賽中文字：48 分鐘戈登射偏、55 分鐘罰球要求判無犯規、63 分鐘 VAR 判罰球、64 分鐘凱恩進球；寫 Stanisic 是凱恩的拜仁隊友"
+    },
+    {
+      "title": "How Harry Kane rose to win Ballon d'Or and became an England legend",
+      "publisher": "ESPN",
+      "date": "2026-11-11",
+      "url": "https://www.espn.com/soccer/story/_/id/50442704",
+      "note": "凱恩效力拜仁、剛拿金球獎"
+    },
+    {
+      "title": "England record-breaker Kane inspired by Modric as he chases 'biggest dream'",
+      "publisher": "ESPN",
+      "date": "2026-11-13",
+      "url": "https://www.espn.com/soccer/story/_/id/50465261",
+      "note": "凱恩比希爾頓舊紀錄多一場"
+    },
+    {
+      "title": "UEFA Nations League Matchday 5 highlights: Harry Kane sends England into quarter-finals, Italy sink France",
+      "publisher": "UEFA",
+      "date": "2026-11-12",
+      "url": "https://www.uefa.com/uefanationsleague/news/02ab-220e66a3c090-9304054ed1ca-1000--uefa-nations-league-matchday-5-highlights-harry-kane-sends-/",
+      "note": "三場比分第二來源"
+    },
+    {
+      "title": "Has the 'gap' closed? England's progress under Thomas Tuchel faces defining Spain test",
+      "publisher": "ESPN",
+      "date": "2026-11-13",
+      "url": "https://www.espn.com/soccer/story/_/id/50471902",
+      "note": "戈登引文（專文寫 at the time，未給日期，正文寫「早先」）；圖赫爾賽後談話；9 月 26 日溫布利 3 比 2；羅德里受傷缺陣"
+    },
+    {
+      "title": "Spain vs. England is 'winner takes it all' - Thomas Tuchel",
+      "publisher": "ESPN",
+      "date": "2026-11-13",
+      "url": "https://www.espn.com/soccer/story/_/id/50470366",
+      "note": "圖赫爾對克羅埃西亞賽後談小組第一的「決賽」；凱恩 33 歲、近期拿金球獎"
+    },
+    {
+      "title": "England Nations League permutations: What they need vs. Spain and why it matters",
+      "publisher": "ESPN",
+      "date": "2026-11-13",
+      "url": "https://www.espn.com/soccer/story/_/id/50472529",
+      "note": "積分、英格蘭贏球即以淨勝球居首、種子與次回合主場、八強抽籤 11 月 20 日 11:00 GMT 與賽程"
+    },
+    {
+      "title": "UEFA Nations League standings",
+      "publisher": "ESPN",
+      "date": "2026-11-14",
+      "url": "https://site.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "note": "2026 年 11 月 14 日 02:56 查閱：A3 組西班牙 15 分 +9、英格蘭 12 分 +12、克羅埃西亞 3 分 -11、捷克 0 分 -10"
+    },
+    {
+      "title": "Raphinha clears up Brazil comments: 'If my body allows it, I will give my best'",
+      "publisher": "ESPN",
+      "date": "2026-11-13",
+      "url": "https://www.espn.com/soccer/story/_/id/50470476",
+      "note": "拉菲尼亞澄清（as many minutes as I can）、耳囊腫手術提前、安切洛蒂談健康第一、29 歲、14 場 19 球、週六當隊長、11 月 17 日對新加坡"
+    },
+    {
+      "title": "Japan vs Brazil, international friendly",
+      "publisher": "ESPN",
+      "date": "2026-11-13",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401916337",
+      "note": "10:15Z 開球（台灣 18:15），新加坡國家體育場"
+    },
+    {
+      "title": "Xavi names Frenkie de Jong as Netherlands captain ahead of Greece clash",
+      "publisher": "Goal",
+      "date": "2026-11-12",
+      "url": "https://goal.com/en/news/xavi-frenkie-de-jong-netherlands-captain-greece-nations-league/blt4c6ad67d76d79d0f",
+      "note": "週四記者會；范戴克缺陣；哈維與德容談隊長。頁面未顯示確切發布時間"
+    },
+    {
+      "title": "Greece at Netherlands, UEFA Nations League",
+      "publisher": "ESPN",
+      "date": "2026-11-13",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401861159",
+      "note": "19:45Z 開球（台灣 11 月 14 日 03:45），阿姆斯特丹；A2 組荷蘭、希臘都 8 分"
+    },
+    {
+      "title": "African Cup of Nations and Nations League action",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-13",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4607914/fc-barcelona-international-diary",
+      "note": "巴薩國腳名單與國家隊賽程（CET，換算台灣時間 +7 小時）；捷克一戰巴薩球員出場"
+    },
+    {
+      "title": "FC Barcelona international schedule",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-10",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4607335/fc-barcelona-international-schedule",
+      "note": "國家隊賽程（CET）"
+    },
+    {
+      "title": "Man United confirm Mauricio Pochettino as Michael Carrick replacement",
+      "publisher": "ESPN",
+      "date": "2026-11-13",
+      "url": "https://www.espn.com/soccer/story/_/id/50469660",
+      "note": "合約 2 年半、解約金約 1,000 萬美元、11 月 18 日上班、11 月 22 日利物浦；美國隊兩場對海地"
+    },
+    {
+      "title": "Mauricio Pochettino appointed as Manchester United head coach after Michael Carrick's sacking at Old Trafford",
+      "publisher": "Sky Sports",
+      "date": "2026-11-13",
+      "url": "https://www.skysports.com/football/news/13610882/mauricio-pochettino-appointed-as-manchester-united-head-coach-after-michael-carricks-sacking-at-old-trafford",
+      "note": "第二來源：2026-11-13 14:27 英國時間發布；合約到 2029 年夏天；首戰 11 月 22 日利物浦"
+    },
+    {
+      "title": "Tearful Pochettino on USMNT exit: Toughest decision of my career",
+      "publisher": "ESPN",
+      "date": "2026-11-13",
+      "url": "https://www.espn.com/soccer/story/_/id/50470928",
+      "note": "波切蒂諾在美國隊記者會掉淚：most difficult decision of my career"
+    },
+    {
+      "title": "Italy beat France at home for first time since '62, hand Zidane 1st loss",
+      "publisher": "ESPN",
+      "date": "2026-11-12",
+      "url": "https://www.espn.com/soccer/story/_/id/50456369",
+      "note": "比分、罰球、1962 年以來首次、齊達內首敗"
+    },
+    {
+      "title": "Italy vs France, UEFA Nations League",
+      "publisher": "ESPN",
+      "date": "2026-11-12",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401861151",
+      "note": "ESPN summary keyEvents；時間軸誤列哥哥 60 分鐘進球，與各報導不符，採報導（踢偏）"
+    },
+    {
+      "title": "Pio Esposito continues impressive scoring streak for Italy with brace vs. France",
+      "publisher": "ESPN",
+      "date": "2026-11-12",
+      "url": "https://www.espn.com/soccer/story/_/id/50465651",
+      "note": "Pio 21 歲；兄弟檔；Pio 與曼奇尼賽後談話"
+    },
+    {
+      "title": "Dayot Upamecano leaves France camp for 'personal reason' amid Nations League",
+      "publisher": "ESPN",
+      "date": "2026-11-13",
+      "url": "https://www.espn.com/soccer/story/_/id/50470365",
+      "note": "Upamecano 離營；Thuram、Kalulu 本週缺陣；Saliba、Koundé 等早已缺陣；Mbappé 可能回來"
+    },
+    {
+      "title": "Barcelona's Rodri ruled out of Atlético Madrid clash with hamstring injury",
+      "publisher": "ESPN",
+      "date": "2026-11-04",
+      "url": "https://www.espn.com/soccer/story/_/id/50378043",
+      "note": "羅德里今夏從曼城加盟巴薩"
+    },
+    {
+      "title": "First Team Schedule",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-14",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/schedule",
+      "note": "11 月 22 日 14:00（西班牙時間）對比利亞雷亞爾，Spotify Camp Nou；11 月 25 日 Sabah、11 月 29 日 Deportivo、12 月 2 日馬競"
+    },
+    {
+      "title": "FC Barcelona vs Villarreal CF, matchday 13",
+      "publisher": "LaLiga",
+      "date": "2026-11-14",
+      "url": "https://www.laliga.com/en-GB/match/temporada-2026-2027-laliga-ea-sports-fc-barcelona-villarreal-cf-13",
+      "note": "英國版 13:00（英國時間）＝台灣 21:00"
+    },
+    {
+      "title": "File:Lamine Yamal Argentina v Spain 19 July 2026-214.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-07-19",
+      "url": "https://commons.wikimedia.org/wiki/File:Lamine_Yamal_Argentina_v_Spain_19_July_2026-214.jpg",
+      "note": "頭圖，CC BY-SA 4.0，Bryan Berlin"
+    }
+  ]
+}
