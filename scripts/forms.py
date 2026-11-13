@@ -31,7 +31,10 @@ def forms_of(day):
                 a = json.load(fh)
         except ValueError:
             continue
-        out[f[:-5]] = (a.get("form"), a.get("voice"))
+        if not isinstance(a, dict):  # validate.py reports it; the table goes on without this one
+            continue
+        form = a.get("form")
+        out[f[:-5]] = (form if isinstance(form, str) else None, a.get("voice"))  # a form that is not a string counts as none
     return out
 
 

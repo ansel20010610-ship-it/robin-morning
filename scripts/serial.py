@@ -22,8 +22,12 @@ from common import ROOT, UA, TW  # noqa: E402
 
 STATE = os.path.join(ROOT, "state", "serial")
 ISSUES = os.path.join(ROOT, "content", "issues")
-TARGET = 800   # source words per installment (the owner, 2026-11-05: 每回文字可以多一點): Russian → Chinese runs about 2.8 characters a word, so ~2,200 characters
+TARGET = 800   # source words per installment (the owner, 2026-11-05: 每回文字可以多一點): Russian → Chinese runs about 2.1 characters a word (2.01–2.28 over installments 1–10), so ~1,700 characters
 MIN_CJK, MAX_CJK = 1100, 3800
+# A short installment's floor follows its source text. 1,100 was reckoned at 2.8 characters a word: the faithful 1,065
+# characters of installment 5 (530 words) failed it and were padded to 1,103, and installments 32, 47, 87, 117 and 209
+# (360–452 words) could not reach it at any ratio measured. 1.7 is under the lowest of those; the floor never rises above MIN_CJK.
+MIN_RATIO = 1.7
 CJK = re.compile(r"[一-鿿]")
 CYR = re.compile(r"[Ѐ-ӿ]{3,}")
 
@@ -303,8 +307,10 @@ def check_one(plan, i, E):
     body = art.get("body") or []
     text = "".join(b.get("text", "") for b in body if isinstance(b, dict))
     n = len(CJK.findall(text))
-    if not MIN_CJK <= n <= MAX_CJK:
-        E("正文 %d 字，要在 %d–%d 之間（原文 %d 字）" % (n, MIN_CJK, MAX_CJK, i["words"]))
+    words = i.get("words")  # a plan entry without its word count keeps the fixed floor, and is not read unless the length fails
+    lo = min(MIN_CJK, int(words * MIN_RATIO)) if isinstance(words, (int, float)) else MIN_CJK
+    if not lo <= n <= MAX_CJK:
+        E("正文 %d 字，要在 %d–%d 之間（原文 %d 字）" % (n, lo, MAX_CJK, i["words"]))
     cyr = CYR.findall(text + art.get("title", "") + art.get("dek", ""))
     if cyr:
         E("有沒譯的俄文：%s" % "、".join(cyr[:5]))

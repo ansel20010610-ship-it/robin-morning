@@ -354,6 +354,10 @@ def main():
             art = load_json(path)
             if not isinstance(art, dict):
                 raise ValueError("頂層不是 JSON 物件")
+            # Python reads a lone surrogate (half an emoji written as an escape) and NaN/Infinity, but the files below
+            # cannot be written with the first (the deploy stopped there) and no browser reads the second: this
+            # article is skipped here, like any other malformed one (validate.py reports both as ERROR).
+            json.dumps(art, ensure_ascii=False, allow_nan=False).encode("utf-8")
             if cfg["columns"][col]["group"] == "verse":  # the masthead verse and the front page's prayer come from this file
                 epi, v = epigraph(art), verse(art)
                 if epi:
@@ -430,12 +434,12 @@ def main():
     out = {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "issues": issues,
            "push": push_devices(), "stock": stock(cfg), "places": {c: PLACE_NAMES[c] for c in seen if c in PLACE_NAMES}}
     with open(os.path.join(CONTENT, "index.json"), "w", encoding="utf-8") as f:
-        json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
+        json.dump(out, f, ensure_ascii=False, allow_nan=False, separators=(",", ":"))
     sdir = os.path.join(CONTENT, "search")
     os.makedirs(sdir, exist_ok=True)
     for month, rows in search.items():
         with open(os.path.join(sdir, month + ".json"), "w", encoding="utf-8") as f:
-            json.dump(sorted(rows, key=lambda r: r["d"], reverse=True), f, ensure_ascii=False, separators=(",", ":"))
+            json.dump(sorted(rows, key=lambda r: r["d"], reverse=True), f, ensure_ascii=False, allow_nan=False, separators=(",", ":"))
     with open(os.path.join(sdir, "months.json"), "w", encoding="utf-8") as f:
         json.dump(sorted(search, reverse=True), f)
     arts = [a for i in issues for a in i["articles"]]
