@@ -1,0 +1,295 @@
+{
+  "column": "philosophy",
+  "date": "2026-11-14",
+  "title": "戒面一轉就隱形，小費罐你碰不碰",
+  "dek": "「凡是一個人自認能安全做壞事的地方，他就會做。」說這句話的葛勞孔自己不信，他要蘇格拉底替正義本身辯護。",
+  "brief": "柏拉圖在《理想國》裡讓哥哥葛勞孔講了一個故事：牧羊人從一具屍體身上取下金戒指，戒面一轉就沒人看得見他，後來殺了國王、奪了王位。葛勞孔說換誰戴上都會這樣做，但他自己不信這套。蘇格拉底的回答是：有沒有這枚戒指，都該做正義的事。",
+  "topic_key": "philosophy:ring-of-gyges",
+  "form": "qa",
+  "voice": "socratic",
+  "updated_at": "2026-11-14T02:44:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Der_Ring_des_Gyges_%28Ferrara_16_Jh%29.jpg/1280px-Der_Ring_des_Gyges_%28Ferrara_16_Jh%29.jpg",
+    "width": 1280,
+    "height": 1302,
+    "alt": "〈裘格斯的戒指〉，16 世紀費拉拉畫派的方形油畫。",
+    "caption": "〈裘格斯的戒指〉，16 世紀費拉拉畫派，油彩、木板，89×89 公分。",
+    "credit": "作者不詳（費拉拉畫派）；影像來源：Dorotheum",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Der_Ring_des_Gyges_(Ferrara_16_Jh).jpg",
+    "made": "16 世紀"
+  },
+  "body": [
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "台北巷子裡的一家咖啡館，週六下午。你坐在靠窗的沙發上，手往沙發縫裡一摸，摸出一枚舊金戒指。戴上以後，把戒面往掌心一轉，別人就看不見你；往外轉，你又回來了。櫃台上有一個玻璃小費罐，貼著手寫的「謝謝你」，裡面大約有三千塊。店員剛走進後場。拿了，不會有人知道，不會有人被冤枉，這枚戒指也永遠不會失靈。"
+    },
+    {
+      "type": "p",
+      "text": "問題只有一個：**沒有任何人會知道的時候，你會不會把手伸進罐子裡？**為什麼不會？"
+    },
+    {
+      "type": "p",
+      "text": "這枚戒指不是我發明的。戴上就隱形的戒指，看過《魔戒》的人不陌生；柏拉圖這一枚，早了兩千多年。柏拉圖是古希臘雅典的哲學家，書多半寫成對話，主角常是他的老師蘇格拉底。他最有名的一本是**《理想國》**，整本書都在問：正義的人，是不是比不正義的人過得好？到了第二卷，柏拉圖的哥哥**葛勞孔**接手和蘇格拉底對談，這枚戒指就是他拿出來的。"
+    },
+    {
+      "type": "h",
+      "text": "牧羊人是怎麼拿到這枚戒指的？"
+    },
+    {
+      "type": "p",
+      "text": "葛勞孔講的是一個牧羊人，替當時呂底亞的國王放羊。有一天下了一場大雨，又有地震，他放羊的地方裂開了。他下到裂縫裡，看見一匹中空的青銅馬，馬身上有門。往裡看，有一具屍體，看起來比常人高大，身上什麼都沒有，只有一枚金戒指。他把戒指取下來，回到地面。"
+    },
+    {
+      "type": "p",
+      "text": "牧人每個月照慣例聚一次，向國王報告羊群的情況。他戴著戒指去，坐著的時候碰巧把戒面轉向手心，旁邊的人就看不見他了，講起話來好像他不在場。他把戒面往外轉，又出現了。試了幾次，都一樣。後來他設法讓自己被選為派去宮廷的信差，一到就勾引王后，和她一起殺了國王，奪走了王國。"
+    },
+    {
+      "type": "p",
+      "text": "手稿寫的是「呂底亞人裘格斯的祖先」；後世和柏拉圖自己在最後一卷，都把這枚戒指叫「裘格斯的戒指」。為了方便，下文也把牧羊人叫**裘格斯**（Gyges）。"
+    },
+    {
+      "type": "h",
+      "text": "換一個正義的人戴上，會不一樣嗎？"
+    },
+    {
+      "type": "p",
+      "text": "他說，給兩枚這樣的戒指，一枚給正義的人，一枚給不正義的人，不會有人鐵石心腸到守得住正義。能安心從市場拿走想要的東西、進別人家、殺人、放人出獄，在人間活得像神一樣。到最後，兩個人做的事會一模一樣。"
+    },
+    {
+      "type": "quote",
+      "text": "凡是一個人自認能安全做壞事的地方，他就會做。",
+      "original": "wherever any one thinks that he can safely be unjust, there he is unjust.",
+      "cite": "葛勞孔，柏拉圖《理想國》卷二 360c（Jowett 英譯）"
+    },
+    {
+      "type": "p",
+      "text": "那個戴著戒指、卻從來不做壞事、不碰別人東西的人呢？葛勞孔說，旁人會覺得他是最可憐的傻瓜。只是當著他的面，大家還是會稱讚他，因為怕自己吃虧。"
+    },
+    {
+      "type": "p",
+      "text": "正義又是從哪裡來的？葛勞孔轉述一般人的說法：做壞事又不受罰，最好；被人害了又沒辦法報復，最糟。人兩邊都嘗過，躲不掉被害，又做不到只害別人，就彼此約好兩樣都不要，法律和約定就是這樣來的。照這個說法，正義只是兩頭之間的折衷。大家容忍它，是因為自己沒本事做壞事，不是因為它好。"
+    },
+    {
+      "type": "p",
+      "text": "可是葛勞孔自己信這一套嗎？他明說不信。他是故意站到對面，扮魔鬼代言人，替這種看法說話，因為他想聽有人替正義本身辯護。他先把好東西分成三類：有的只為它本身而要，像無害的快樂；有的為它本身、也為它帶來的後果而要，像健康；有的本身讓人難受，只為了後果才要，像鍛鍊和醫術。一般人把正義放在第三類。蘇格拉底卻把它放進第二類，而且說那是最好的一類。"
+    },
+    {
+      "type": "h",
+      "text": "如果戒指偶爾會失靈呢？"
+    },
+    {
+      "type": "p",
+      "text": "我把咖啡館裡那枚戒指改一下：十次裡有一次會失靈。這時候你走到櫃台前，手伸不伸進去？"
+    },
+    {
+      "type": "p",
+      "text": "手伸不伸，要看怕不怕被看穿、以後有沒有人信你。這類理由，17 世紀的英國哲學家**霍布斯**（Thomas Hobbes）談過。他 1651 年出版《利維坦》，是最早把「社會契約」講完整的人之一。社會契約，就是拿「一群人會同意什麼」來替政治規則找理由。有學者說，葛勞孔轉述的那套正義起源，就是霍布斯這套想法的粗糙版本。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Leviathan_-_Hobbes%27_Leviathan_%281651%29%2C_title_page_-_BL.jpg",
+      "width": 1016,
+      "height": 1574,
+      "alt": "《利維坦》1651 年的卷首版畫。",
+      "caption": "霍布斯《利維坦》1651 年的卷首版畫。大英圖書館提供。",
+      "credit": "Abraham Bosse；大英圖書館數位館藏",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Leviathan_-_Hobbes%27_Leviathan_(1651),_title_page_-_BL.jpg",
+      "made": "1651"
+    },
+    {
+      "type": "p",
+      "text": "《利維坦》第 15 章寫到一種人。"
+    },
+    {
+      "type": "quote",
+      "text": "愚人心裡說，根本沒有正義這回事；有時候嘴上也這麼說。",
+      "original": "The Foole hath sayd in his heart, there is no such thing as Justice; and sometimes also with his tongue",
+      "cite": "霍布斯《利維坦》第 15 章，1651"
+    },
+    {
+      "type": "p",
+      "text": "這句話套的是《詩篇》第 14 篇的句型：「愚頑人心裡說：沒有　神。」霍布斯在同一段也寫了，這個愚人心裡也說沒有神。愚人的主張是，守約也好，破約也好，只要對自己有利，就不違反理性。"
+    },
+    {
+      "type": "p",
+      "text": "霍布斯怎麼回他？他說，一個破了約、還表明自己破得有理的人，沒有哪個為了和平與防衛結合起來的團體會收他，除非收他的人看走了眼。就算收了，也留不住。別人看走眼這種事，誰都不能合理地拿來當自己安全的依靠。他還說，一件照所能預見、所能計算都會毀掉自己的事，就算碰巧有意外讓它變成好處，也不算做得合理或明智。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "愚人談的是破約，小費罐卻不是約定；把霍布斯搬到櫃台前，是我自己接上去的。接上去以後，那枚十次失靈一次的戒指就好懂了：伸手，等於賭自己不是那第十次，賭贏了也不算明智。那麼，戒指如果永不失靈呢？霍布斯的理由靠的是別人：你可能被看穿，破約的人以後沒人肯再跟他立約。完美的戒指正好把這一條拿掉。所以我覺得，他的回答管得到會失靈的那一枚，管不太到葛勞孔那一枚。"
+    },
+    {
+      "type": "table",
+      "title": "三種回答，碰上完美的戒指",
+      "head": [
+        "誰的回答",
+        "不拿的理由",
+        "戴上永不失靈的戒指之後"
+      ],
+      "rows": [
+        [
+          "葛勞孔轉述的一般看法",
+          "正義是怕被害才訂的約定；不拿，是因為沒辦法安全地拿",
+          "理由消失：誰都會拿，不拿的人被當成可憐的傻瓜"
+        ],
+        [
+          "霍布斯",
+          "破約的人要靠別人看走眼才待得下去，而別人看走眼不能當靠山",
+          "戒指會失靈時有效；永不失靈時，理由幾乎落空"
+        ],
+        [
+          "柏拉圖（借蘇格拉底之口）",
+          "做不正義的事會敗壞自己的靈魂，而靈魂敗壞是最大的不幸",
+          "有沒有戒指，都該做正義的事（卷十 612b）"
+        ]
+      ],
+      "caption": "依柏拉圖《理想國》卷二、卷九、卷十與霍布斯《利維坦》第 15 章整理。霍布斯那一列最後一格是推論，不是他本人的說法，見上一段。"
+    },
+    {
+      "type": "h",
+      "text": "如果當好人還得背黑鍋呢？"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "再把咖啡館的條件改狠一點。上週罐子少了錢，店裡的人都認定是你。真正拿錢的那個人戴著戒指，還被當成店裡最大方的熟客。"
+    },
+    {
+      "type": "p",
+      "text": "這一步，葛勞孔自己就加過。他要一個壞到極點的人，同時享有最好的正義名聲；再要一個真正正義的人，被所有人當成最壞的人，一直到死。這個好人會被鞭打、上刑架、綑綁、燒瞎眼睛，最後被處死。葛勞孔說，這些話是替讚美不正義的人說的，不是他自己的話。然後他問：這兩個人，誰比較幸福？"
+    },
+    {
+      "type": "p",
+      "text": "名聲沒了，懲罰也輪不到壞人，還剩什麼能讓人選正義？葛勞孔和柏拉圖的另一個哥哥，要蘇格拉底證明的，就是這件事：不管人和神給什麼獎懲，正義都值得選。所以蘇格拉底得說服他們，一個極不幸、被人唾棄的正義的人，過得比一個被誤當成完美正義、還受獎賞的不正義的人好。"
+    },
+    {
+      "type": "h",
+      "text": "蘇格拉底拿什麼回答？"
+    },
+    {
+      "type": "p",
+      "text": "有學者說，《理想國》裡說正義比不正義好的論證，可以找出多達五個。其中一個在第九卷，是一幅畫。他要葛勞孔想像三樣東西：一頭怪獸，身上長著一圈各種野獸的頭，還會變形；一頭獅子；一個人。三樣由大到小，長成一體，外面再包上一層人形。只看外殼的人，會以為裡面就是一個人。"
+    },
+    {
+      "type": "p",
+      "text": "這幅畫裡，該由誰作主？蘇格拉底說，主張不正義划算的人，等於主張餵飽多頭怪獸、把獅子養壯，讓裡面那個人餓瘦，任另外兩個拖著走。替正義說話的人，則要裡面那個人完全作主，像好農夫照顧那頭多頭獸，養大溫馴的，不讓野的長出來，再讓獅子當盟友。他接著問：一個人收下金銀，條件是讓自己最高貴的部分去當最壞部分的奴隸，他賺到了什麼？"
+    },
+    {
+      "type": "p",
+      "text": "不過，同一位學者也說，這幅畫是第五個論證，比較像收尾時的勸勉，不算證明。也有人把柏拉圖的回答歸成一類：做不正義的事，會敗壞自己的靈魂，而靈魂敗壞是最大的不幸。"
+    },
+    {
+      "type": "p",
+      "text": "到了全書最後一卷，蘇格拉底說，他的論證沒有借用詩人講的那些正義的報酬，已經證明了正義本身對靈魂本身最好。說完這句，他回到那枚戒指上。"
+    },
+    {
+      "type": "quote",
+      "text": "讓人去做正義的事，不管他有沒有裘格斯的戒指；就算除了戒指，再戴上冥王的頭盔，也一樣。",
+      "original": "Let a man do what is just, whether he have the ring of Gyges or not, and even if in addition to the ring of Gyges he put on the helmet of Hades.",
+      "cite": "蘇格拉底，柏拉圖《理想國》卷十 612b（Jowett 英譯）"
+    },
+    {
+      "type": "p",
+      "text": "冥王的頭盔，是希臘神話裡另一件能讓人隱形的東西。接著，蘇格拉底要葛勞孔「還債」。當初為了把論證講下去，他們先假設正義和不正義的真相可以瞞過神和人，雖然那其實辦不到。現在他要收回這個假設：正義的人和不正義的人是什麼樣子，神都知道。收回以後，他才才列出正義的人在生前、死後，從神和人那裡得到的報酬。"
+    },
+    {
+      "type": "p",
+      "text": "這個順序值得注意：先證明，再還債，報酬排在最後。戒指那句話，說在收回假設之前，也說在列出報酬之前。"
+    },
+    {
+      "type": "p",
+      "text": "回到最初的版本：店員進了後場，櫃台上的罐子貼著「謝謝你」。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Republic (tr. Benjamin Jowett)",
+      "publisher": "Plato；Project Gutenberg #1497",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/1497",
+      "note": "讀卷二（357a–362c：三類好東西、葛勞孔聲明自己不這樣想、正義起源、牧羊人與戒指、兩枚戒指、wherever any one thinks…一句、最可憐的白痴、完美的壞人與被當成壞人的好人、受刑）、卷九（588b 以下多頭獸、獅子、人的靈魂圖像，收金銀當奴隸一問）、卷十（612b 論證沒有借用荷馬、赫西俄德講的報酬，接著戒指與冥王頭盔一句；612c–e 收回「可以瞞過神和人」的讓步，之後才列舉報酬）。引文照此譯本。Stephanus 頁碼對照 Perseus 的 Shorey 譯本。"
+    },
+    {
+      "title": "Republic (tr. Paul Shorey)",
+      "publisher": "Plato；Perseus Digital Library, Tufts University",
+      "date": "1969",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0168:book=2:section=359d",
+      "note": "對照 359a、359d、360b–d、361e、588c、612b、612e 的段落與頁碼。359d 注：手稿作「呂底亞人裘格斯的祖先」，後世與柏拉圖卷十都稱「裘格斯的戒指」，正文引此注，並為方便把牧羊人叫裘格斯；希羅多德另有沒有魔戒的裘格斯故事。612b 注：冥王頭盔典出《伊里亞德》卷五。"
+    },
+    {
+      "title": "Plato's Ethics and Politics in The Republic",
+      "publisher": "Stanford Encyclopedia of Philosophy（Eric Brown）",
+      "date": "2017-09-12",
+      "url": "https://plato.stanford.edu/entries/plato-ethics-politics/",
+      "note": "2003 年初版，2017-09-12 實質修訂。用到：兄弟倆要蘇格拉底證明正義不論獎懲都值得選；358a 正義屬最好一類；書中多達五個論證，靈魂圖像（588b 以下）是第五個，比較像收尾的勸勉。"
+    },
+    {
+      "title": "Justice, Western Theories of",
+      "publisher": "Internet Encyclopedia of Philosophy（Wayne P. Pomerleau）",
+      "date": "",
+      "url": "https://iep.utm.edu/justwest/",
+      "note": "用到：葛勞孔與阿德曼托斯是柏拉圖的哥哥；葛勞孔扮魔鬼代言人；他講的正義起源是後來霍布斯社會契約論的粗糙版本。"
+    },
+    {
+      "title": "Plato: The Republic",
+      "publisher": "Internet Encyclopedia of Philosophy",
+      "date": "",
+      "url": "https://iep.utm.edu/republic/",
+      "note": "用到：《理想國》是柏拉圖最有名的對話錄，主角是蘇格拉底；全書主要在證明正義的人比不正義的人過得好；卷二的章節段落。"
+    },
+    {
+      "title": "Leviathan",
+      "publisher": "Thomas Hobbes；Project Gutenberg #3207",
+      "date": "",
+      "url": "https://www.gutenberg.org/ebooks/3207",
+      "note": "讀第 15 章 Justice Not Contrary To Reason 一節：愚人一句、同段 the same Foole hath said in his heart there is no God、破約者只能靠收留者的錯誤待在團體裡、which errours a man cannot reasonably reckon upon、意外得利不算做得合理。"
+    },
+    {
+      "title": "Game Theory and Ethics",
+      "publisher": "Stanford Encyclopedia of Philosophy（Keith Hankins、Peter Vanderschraaf）",
+      "date": "2021-09-27",
+      "url": "https://plato.stanford.edu/entries/game-ethics/",
+      "note": "§3：愚人的挑戰（Leviathan 15:5）；柏拉圖屬「分不開的好處」策略（不正義敗壞靈魂），霍布斯屬「社會制裁」策略（破約者以後沒人願意和他立約）。"
+    },
+    {
+      "title": "Hobbes's Moral and Political Philosophy",
+      "publisher": "Stanford Encyclopedia of Philosophy（Sharon A. Lloyd、Susanne Sreedhar）",
+      "date": "2022-09-12",
+      "url": "https://plato.stanford.edu/entries/hobbes-moral/",
+      "note": "用到：17 世紀英國哲學家；英文版《利維坦》1651 年出版；以早而完整地發展社會契約論著稱。"
+    },
+    {
+      "title": "Plato",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "date": "2026-04-24",
+      "url": "https://plato.stanford.edu/entries/plato/",
+      "note": "柏拉圖生卒 429?–347 B.C.E.；IEP 的 Plato 條目寫 427–347。正文只寫柏拉圖這一枚戒指比《魔戒》早「兩千多年」。"
+    },
+    {
+      "title": "詩篇 14 篇（和合本）",
+      "publisher": "信望愛聖經工具 FHL",
+      "date": "",
+      "url": "https://bible.fhl.net/new/read.php?chineses=%E8%A9%A9&chap=14",
+      "note": "14:1「愚頑人心裡說：沒有神。」"
+    },
+    {
+      "title": "One Ring",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/One_Ring",
+      "note": "《哈比人》（1937）裡那枚戒指讓配戴者隱形；有人拿它和裘格斯的戒指相比，但沒有證據顯示托爾金借用，正文不寫影響關係。"
+    }
+  ]
+}
