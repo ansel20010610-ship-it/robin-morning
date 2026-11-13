@@ -1,0 +1,298 @@
+{
+ "commit": "ed42202",
+ "date": "2026-10-18",
+ "gate": {
+  "by_col": {
+   "art": {
+    "2026-10-12": [
+     3,
+     0
+    ]
+   },
+   "city": {
+    "2026-10-12": [
+     3,
+     0
+    ]
+   },
+   "civilization": {
+    "2026-10-05": [
+     1,
+     0
+    ],
+    "2026-10-12": [
+     7,
+     1
+    ]
+   },
+   "devotion": {
+    "2026-10-05": [
+     1,
+     0
+    ],
+    "2026-10-12": [
+     7,
+     0
+    ]
+   },
+   "fiction": {
+    "2026-10-12": [
+     3,
+     1
+    ]
+   },
+   "fm-watch": {
+    "2026-10-05": [
+     1,
+     0
+    ],
+    "2026-10-12": [
+     2,
+     0
+    ]
+   },
+   "football": {
+    "2026-10-05": [
+     1,
+     0
+    ],
+    "2026-10-12": [
+     7,
+     2
+    ]
+   },
+   "literature": {
+    "2026-10-05": [
+     1,
+     1
+    ],
+    "2026-10-12": [
+     3,
+     1
+    ]
+   },
+   "music": {
+    "2026-10-05": [
+     1,
+     0
+    ],
+    "2026-10-12": [
+     7,
+     2
+    ]
+   },
+   "perio": {
+    "2026-10-05": [
+     1,
+     0
+    ],
+    "2026-10-12": [
+     7,
+     0
+    ]
+   },
+   "philosophy": {
+    "2026-10-05": [
+     1,
+     0
+    ],
+    "2026-10-12": [
+     3,
+     0
+    ]
+   },
+   "photo": {
+    "2026-10-12": [
+     3,
+     0
+    ]
+   },
+   "tactics": {
+    "2026-10-05": [
+     1,
+     0
+    ],
+    "2026-10-12": [
+     3,
+     0
+    ]
+   }
+  },
+  "fills": {
+   "2026-10-18": 5
+  },
+  "fills_all": 5,
+  "missing": {
+   "2": [
+    "10-18"
+   ],
+   "3": [
+    "10-18"
+   ],
+   "4": [
+    "10-18"
+   ],
+   "5": [
+    "10-18"
+   ],
+   "reserve": [
+    "10-13",
+    "10-18"
+   ]
+  },
+  "reserve_ever": 29,
+  "stock": [
+   [
+    "art/nglondon-ng186",
+    7
+   ],
+   [
+    "art/npm-guhua000826",
+    8
+   ],
+   [
+    "city/amsterdam-begijnhof",
+    8
+   ],
+   [
+    "city/singapore-telok-ayer-street",
+    7
+   ],
+   [
+    "civilization/assur-kanesh-tin-caravans-19c-bce",
+    7
+   ],
+   [
+    "civilization/england-domesday-inquest-1086",
+    7
+   ],
+   [
+    "devotion/1ki-19-3",
+    7
+   ],
+   [
+    "devotion/mk-4-26",
+    7
+   ],
+   [
+    "devotion/ps-131-1",
+    8
+   ],
+   [
+    "fiction/in-medias-res-backstory",
+    8
+   ],
+   [
+    "fiction/prophecy-foreshadowing-payoff",
+    7
+   ],
+   [
+    "football/la-masia-can-planes",
+    7
+   ],
+   [
+    "football/member-ownership-1990-sports-law",
+    7
+   ],
+   [
+    "literature/akutagawa-rashomon-ending",
+    7
+   ],
+   [
+    "music/bach-bwv1004",
+    7
+   ],
+   [
+    "music/haydn-op76-3",
+    8
+   ],
+   [
+    "music/schubert-d118",
+    7
+   ],
+   [
+    "perio/doi-10-1111-j-1600-051x-1986-tb01487-x",
+    7
+   ],
+   [
+    "perio/doi-10-1111-j-1600-051x-1990-tb01059-x",
+    7
+   ],
+   [
+    "perio/doi-10-1902-jop-1978-49-5-225",
+    8
+   ],
+   [
+    "philosophy/jackson-mary-room",
+    7
+   ],
+   [
+    "photo/delano-lc-usw3-015486-e",
+    8
+   ],
+   [
+    "photo/fenton-valley-of-the-shadow-of-death",
+    7
+   ],
+   [
+    "tactics/rest-defence-counter-press",
+    7
+   ]
+  ],
+  "warn_kinds": {
+   "正文 N 字，高於建議 N–N": 7
+  },
+  "weeks": [
+   {
+    "corrected": 1,
+    "n": 9,
+    "partial": false,
+    "warn_articles": 1,
+    "warns": 1,
+    "week": "2026-10-05"
+   },
+   {
+    "corrected": 7,
+    "n": 58,
+    "partial": false,
+    "warn_articles": 6,
+    "warns": 6,
+    "week": "2026-10-12"
+   }
+  ]
+ },
+ "rules": {
+  "LESSONS": 9402,
+  "LESSONS-short": 0,
+  "README": 10071,
+  "STYLE": 5636,
+  "files": 20,
+  "list_words": 34,
+  "rules_bytes": 75696,
+  "validate_lines": 785,
+  "words": {
+   "AI_PHRASES": 21,
+   "BACKSTAGE": 0,
+   "MACHINE": 0,
+   "SPEC_HEADS": 0,
+   "STALE_WORDS": 13
+  }
+ },
+ "writer_max": 10773,
+ "writer_tokens": {
+  "art": 9636,
+  "city": 9561,
+  "civilization": 9813,
+  "cosmere-watch": 9832,
+  "devotion": 9938,
+  "fiction": 9621,
+  "fm-watch": 9759,
+  "football": 10457,
+  "literature": 9617,
+  "music": 9696,
+  "perio": 10773,
+  "philosophy": 9546,
+  "photo": 9638,
+  "tactics": 9594
+ }
+}
