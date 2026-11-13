@@ -1,0 +1,214 @@
+{
+  "column": "news",
+  "date": "2026-11-14",
+  "title": "歐洲確定派五國代表談烏克蘭，立法院三讀產假延長至 14 週",
+  "dek": "荷莫茲海峽又一艘船觸雷起火，微軟雲端故障進入第二天，土耳其與卡達簽下共同防禦協定。",
+  "brief": "歐盟領袖在都柏林決定，英、法、德、義、波蘭五國加歐盟機構，代表歐洲參加下一輪烏克蘭談判，克宮說尚未決定。伊朗革命衛隊說，一艘氣體運輸船在荷莫茲海峽觸雷起火。立法院三讀通過，產假從 8 週延長為 14 週。",
+  "topic_key": "news:2026-11-14",
+  "voice": "wire",
+  "updated_at": "2026-11-14T05:40:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "sources": [
+    {
+      "title": "EU agrees on five countries to represent Europe in Ukraine peace talks",
+      "publisher": "半島電視台",
+      "date": "2026-11-13",
+      "url": "https://www.aljazeera.com/news/2026/11/13/europe-seeks-seat-at-ukraine-peace-talks-but-lacks-unified-voice",
+      "note": "歐洲理事會主席宣布；克宮稱尚未決定；梅爾茨說川普下週與普丁在中國會談"
+    },
+    {
+      "title": "Ukraine live: France among five major powers to represent EU in talks",
+      "publisher": "法國 24 電視台",
+      "date": "2026-11-13",
+      "url": "https://www.france24.com/en/europe/20261113-live-zelensky-and-kushner-confirm-that-europe-will-join-next-round-of-russia-ukraine-talks",
+      "note": "直播頁；澤倫斯基與庫許納說歐洲將加入下一輪；歐盟官員說代表為英法德義波蘭與歐盟機構；不採 1,200 架無人機（只有標題）"
+    },
+    {
+      "title": "Finland detects strike on Russian warship as Zelenskyy meets US envoys",
+      "publisher": "半島電視台",
+      "date": "2026-11-13",
+      "url": "https://www.aljazeera.com/news/2026/11/13/finland-detects-strike-on-russian-warship-as-zelenskyy-meets-us-envoys",
+      "note": "澤倫斯基 11 月 12 日（週四）在都柏林西邊的 Casement 機場見魏科夫與庫許納；前一篇寫 13 日，以此為準"
+    },
+    {
+      "title": "IRGC says tanker caught fire after hitting mines in Strait of Hormuz",
+      "publisher": "半島電視台",
+      "date": "2026-11-13",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/13/irgc-says-tanker-caught-fire-after-hitting-mines-in-strait-of-hormuz",
+      "note": "影音頁；革命衛隊稱液化氣體運輸船不理警告、走未經許可航道；無船名、無傷亡資訊；未獨立證實"
+    },
+    {
+      "title": "Iran denies talks with US, says Hormuz will stay shut until demands are met",
+      "publisher": "半島電視台（路透社）",
+      "date": "2026-11-11",
+      "url": "https://www.aljazeera.com/news/2026/11/11/iran-denies-talks-with-us-says-hormuz-will-stay-shut-until-demands-are-met",
+      "note": "11 月 10 日（週二）伊朗官員說法；戰爭進入第九個月；10 月海峽內外至少 37 起船隻遭攻擊（海運監測公司）"
+    },
+    {
+      "title": "Microsoft says services still returning amid widespread outage",
+      "publisher": "半島電視台",
+      "date": "2026-11-13",
+      "url": "https://www.aljazeera.com/news/2026/11/13/microsoft-says-services-still-returning-amid-widespread-outage",
+      "note": "11 月 12 日約 16:00 GMT 起；74 國；微軟稱無網路攻擊跡象；郵件佇列「大幅縮短」；服務尚未完全恢復"
+    },
+    {
+      "title": "Microsoft 365大當機波及AI平台 微軟：部分伺服器無法運作",
+      "publisher": "公視新聞網",
+      "date": "2026-11-13",
+      "url": "https://news.pts.org.tw/article/835554",
+      "note": "12:09 發布；台灣用戶凌晨 3 時到上午 9 時累積上百筆故障通報（Downdetector）；微軟稱部分伺服器失效拖累其他伺服器"
+    },
+    {
+      "title": "Turkiye and Qatar sign mutual defence agreement",
+      "publisher": "半島電視台",
+      "date": "2026-11-13",
+      "url": "https://www.aljazeera.com/news/2026/11/13/turkiye-and-qatar-sign-mutual-defence-agreement",
+      "note": "伊斯坦堡；條文細節來源沒給；8 月土耳其、巴基斯坦、沙烏地阿拉伯區域防禦協定；不採分析師對部署的預測"
+    },
+    {
+      "title": "Nigeria ends 21-day Ebola contact monitoring with no secondary transmission",
+      "publisher": "半島電視台",
+      "date": "2026-11-13",
+      "url": "https://www.aljazeera.com/news/2026/11/13/nigeria-ends-21-day-ebola-contact-monitoring-with-no-secondary-transmission",
+      "note": "10 月 20 日確診；62 名接觸者、13 人發燒皆陰性；防疫中心說不等於疫情結束，須再數 42 天；剛果民主共和國疫情逾 11,000 感染、5,000 死亡（政府數據）"
+    },
+    {
+      "title": "立院三讀拍板產假增為14週 育兒留停期限放寬至子女滿9歲",
+      "publisher": "公視新聞網",
+      "date": "2026-11-13",
+      "url": "https://news.pts.org.tw/article/835623",
+      "note": "16:47 發布；產假、陪產檢及陪產假、流產假、留停、每名子女 60 天；預計 2027 年 1 月 1 日施行"
+    },
+    {
+      "title": "Lawmakers approve more leave days for parents",
+      "publisher": "焦點台灣（中央社英文網）",
+      "date": "2026-11-13",
+      "url": "https://focustaiwan.tw/politics/202611130016",
+      "note": "18:49 發布；另修就業保險法；施行日由行政院決定（與公視預計說法不同，正文兩者並陳）"
+    },
+    {
+      "title": "Prosecutors indict couple over Chinese chips in drones",
+      "publisher": "焦點台灣（中央社英文網）",
+      "date": "2026-11-13",
+      "url": "https://focustaiwan.tw/society/202611130017",
+      "note": "19:05 發布；台中地檢署；無人機數量來源沒給；求刑至少 5 年"
+    }
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "歐盟領袖 13 日在都柏林敲定歐洲的烏克蘭談判代表團。荷莫茲海峽又有船觸雷起火，微軟雲端故障過了一天一夜還沒修好。"
+    },
+    {
+      "type": "news",
+      "title": "世界",
+      "items": [
+        {
+          "headline": "歐洲選出烏克蘭談判代表",
+          "place": [
+            "UA",
+            "RU",
+            "IE"
+          ],
+          "summary": "歐盟領袖 13 日在都柏林決定下一輪烏克蘭談判的歐洲代表為英、法、德、義、波蘭五國加歐盟機構。美國特使魏科夫與庫許納 12 日先見普丁，再在都柏林附近見澤倫斯基；澤倫斯基與庫許納說歐洲會加入。克宮說尚未決定。",
+          "source": "半島電視台、法國 24 電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/13/europe-seeks-seat-at-ukraine-peace-talks-but-lacks-unified-voice",
+          "when": "11 月 13 日，都柏林當地時間"
+        },
+        {
+          "headline": "荷莫茲海峽又一艘船觸雷",
+          "place": [
+            "IR"
+          ],
+          "summary": "伊朗革命衛隊說，一艘液化氣體運輸船在荷莫茲海峽觸雷起火，因為船不理警告、走未經許可的航道。船名與傷亡沒有公布，也沒有獨立來源證實。伊朗官員 10 日說，海峽要等美方滿足條件才重開。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/13/irgc-says-tanker-caught-fire-after-hitting-mines-in-strait-of-hormuz",
+          "when": "11 月 13 日，伊朗報導"
+        },
+        {
+          "headline": "微軟雲端故障進入第二天",
+          "place": [
+            "US",
+            "TW"
+          ],
+          "summary": "微軟 365 的故障約從台灣時間 13 日零時開始，Outlook、Teams 與 Copilot 受影響，據報波及 74 個國家和地區。微軟說沒有網路攻擊跡象，是部分伺服器失效拖累其他伺服器；最新說明是信件佇列已大幅縮短，服務尚未完全恢復。台灣有上百筆故障通報。",
+          "source": "半島電視台、公視新聞網",
+          "url": "https://www.aljazeera.com/news/2026/11/13/microsoft-says-services-still-returning-amid-widespread-outage",
+          "when": "11 月 13 日，台灣時間"
+        },
+        {
+          "headline": "土耳其與卡達簽共同防禦協定",
+          "place": [
+            "TR",
+            "QA"
+          ],
+          "summary": "土耳其總統與卡達埃米爾 13 日在伊斯坦堡會面後，兩國簽署共同防禦協定。土耳其總統府說，雙方會繼續努力避免波灣再度開戰。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/13/turkiye-and-qatar-sign-mutual-defence-agreement",
+          "when": "11 月 13 日，伊斯坦堡當地時間"
+        },
+        {
+          "headline": "奈及利亞結束伊波拉接觸者追蹤",
+          "place": [
+            "NG",
+            "CD"
+          ],
+          "summary": "奈及利亞首例伊波拉病例 10 月 20 日確診，是一名到過烏干達的瑞士女子，已痊癒。62 名接觸者的追蹤期結束，無人染病。防疫中心說這不等於疫情結束，還要再數 42 天。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/13/nigeria-ends-21-day-ebola-contact-monitoring-with-no-secondary-transmission",
+          "when": "11 月 13 日，奈及利亞報導"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "title": "台灣",
+      "items": [
+        {
+          "headline": "立法院三讀延長產假",
+          "place": "TW",
+          "summary": "立法院 13 日三讀修正性別平等工作法，產假與陪產假都延長，育嬰留職停薪可請到子女滿 9 歲，另有每名子女最多 60 天的彈性照顧假。公視報導預計 2027 年 1 月 1 日施行，焦點台灣說施行日由行政院決定。",
+          "source": "公視新聞網、焦點台灣",
+          "url": "https://news.pts.org.tw/article/835623",
+          "when": "11 月 13 日，台灣時間"
+        },
+        {
+          "headline": "軍用無人機被控用中國晶片",
+          "place": "TW",
+          "summary": "台中地檢署 13 日起訴台中一家公司的杜姓負責人與擔任副總的妻子。這家公司供應陸軍官校和陸軍後勤指揮部的無人機。檢方指合約禁用中國零件，兩人卻在機內裝中國晶片。依國家安全法等罪起訴，各求刑 5 年以上。",
+          "source": "焦點台灣",
+          "url": "https://focustaiwan.tw/society/202611130017",
+          "when": "11 月 13 日，台灣時間"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "性別平等工作法修正",
+      "head": [
+        "項目",
+        "修正前",
+        "修正後"
+      ],
+      "rows": [
+        [
+          "產假",
+          "8 週",
+          "14 週"
+        ],
+        [
+          "陪產假",
+          "7 天",
+          "14 天"
+        ],
+        [
+          "育嬰留職停薪",
+          "子女滿 3 歲",
+          "子女滿 9 歲"
+        ]
+      ],
+      "caption": "公視新聞網、焦點台灣。"
+    }
+  ]
+}
