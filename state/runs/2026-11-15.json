@@ -1,4 +1,15 @@
 {
+  "1": {
+    "finished_at": "2026-11-15T00:58:14+08:00",
+    "missing": [
+      "football",
+      "news",
+      "literature",
+      "wildcard",
+      "mystery"
+    ],
+    "note": "devotion 約一4:7-10、music 巴哈BWV565（number/listener）完成；perio 先發班已有；第9步重寫1／修正0（另依忠實度核對修正17條）"
+  },
   "column": {
     "finished_at": "2026-11-14T22:44:42+08:00",
     "missing": [
