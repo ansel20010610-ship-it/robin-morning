@@ -1,0 +1,242 @@
+{
+  "column": "mystery",
+  "date": "2026-11-15",
+  "title": "「世界第一批神廟」，挖它的人先改口了",
+  "dek": "5.5 公尺高的石柱，立它的人還沒開始種田。後來考古隊在同一座土丘上挖到的，是房子、爐灶和墳墓。",
+  "brief": "土耳其東南部的哥貝克力石陣，是一萬一千多年前還沒種田的人立起的巨石柱圈，曾被叫做世界第一批神廟。考古隊後來在土丘上挖出小圓屋、爐灶，還有埋在長方形建築地板下、至少三個人的墓，改說它是帶有顯著祭祀成分的聚落。那幾座大圓建築本身做什麼用，仍沒有定論。",
+  "topic_key": "mystery:archaeology-gobekli-tepe",
+  "form": "argument",
+  "voice": "detective",
+  "updated_at": "2026-11-15T01:53:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/The_archaeological_site_of_G%C3%B6bekli_Tepe_-_main_excavation_area.png/1280px-The_archaeological_site_of_G%C3%B6bekli_Tepe_-_main_excavation_area.png",
+    "width": 1280,
+    "height": 1687,
+    "alt": "從正上方拍的發掘現場：四座圓形大建築和旁邊的長方形建築。",
+    "caption": "哥貝克力石陣的主發掘區，從空中往下看，有四座大圓建築和旁邊的長方形建築。照片刊在考古隊 2019 年的論文裡。",
+    "credit": "German Archaeological Institute, photo E. Kücük；刊於 Dietrich et al., PLOS ONE 14(5): e0215214（2019）",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_archaeological_site_of_G%C3%B6bekli_Tepe_-_main_excavation_area.png",
+    "made": "2019 年刊出"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "案情先講結論：**哥貝克力石陣**（Göbekli Tepe）是「世界第一批神廟」這個說法，連挖它的考古隊都說有弱點，非修正不可。不過他們仍相信大圓建築有儀式用途，只是不再說這裡沒人住。"
+    },
+    {
+      "type": "p",
+      "text": "地點在土耳其東南部的一座土丘，年代約西元前 9500 到前 8000 年。那時近東的人才剛要從打獵採集走向種田，這座山頭卻找不到種出來的作物或養的牲口。立起石柱的人仍靠打獵採集過活。"
+    },
+    {
+      "type": "p",
+      "text": "他們蓋的是圓形大圍場，下文叫大圓建築。周圍的柱子每根 3 到 4 公尺高，正中兩根最高 5.5 公尺，是球門高度的兩倍多。柱子上刻著狐狸、蛇、蠍子、野豬和鳥，有些還刻了手臂和手。觀光宣傳把它叫做「世界第一批神廟」。"
+    },
+    {
+      "type": "h",
+      "text": "神廟說是怎麼立案的"
+    },
+    {
+      "type": "p",
+      "text": "1963 年的聯合調查登記過這座土丘，但沒人看出它特別，以為地上可能是伊斯蘭墓地。1994 年，德國考古學家**施密特**（Klaus Schmidt）認出那些石頭是 T 字形石柱，隔年開挖。"
+    },
+    {
+      "type": "p",
+      "text": "施密特的團隊下判斷，靠三項觀察：有刻著石柱的特殊建築；找不到住家；附近沒有可靠的水源。"
+    },
+    {
+      "type": "p",
+      "text": "沒人住，也沒水，那就是純粹的祭祀地。照這個說法，各群人在祭祀時節聚到山頭蓋特殊建築；養活工人要靠種田，所以宗教熱情可能是走向農耕的起因之一。2012 年的論文說，圍場用過後被迅速而刻意地回填，填土裡敲碎取骨髓的獸骨超過同時代聚落的任何已知紀錄，被當成大規模宴飲的強烈跡象。"
+    },
+    {
+      "type": "h",
+      "text": "三項觀察，至少一項動搖"
+    },
+    {
+      "type": "p",
+      "text": "翻案的是**克萊爾**（Lee Clare），德國考古研究院的研究者，現任計畫主持人。他 2020 年的報告寫道："
+    },
+    {
+      "type": "quote",
+      "text": "所以，把哥貝克力石陣當成「世界第一批神廟」所在地、這個如今流行的看法，正是考古學家自己提出、再一路培養起來的。",
+      "original": "Therefore, it was the archaeologists themselves who delivered and subsequently cultivated the now popular opinion that Göbekli Tepe is the site of the »World’s First Temples«.",
+      "cite": "克萊爾，德國考古研究院研究報告，2020"
+    },
+    {
+      "type": "p",
+      "text": "第一號證物是房子。2015、2016 年在土丘西北部挖的深坑裡，出現一群擠在一起的小圓屋，旁邊的活動區有一連串爐灶，還有比例特別高的骨器。下一期（前 8700–8200 年）出現長方形建築，數量多、空間延續，可能指向密集的住家聚落。"
+    },
+    {
+      "type": "p",
+      "text": "第二號證物是水，但它沒給答案。西北部鑿進石頭的大坑直徑約 8 公尺，克萊爾說它有可能是當地取水系統的一部分；附近高地上有鑿出的水道和可能是新石器時代的蓄水坑。2019 年的論文算出，蓄水坑共 153 立方公尺，雨水只在秋冬補得滿，限制了常住的人數；附近沒有已知的泉水。有人在想辦法取水，但水量有限，這一項方向不明。"
+    },
+    {
+      "type": "p",
+      "text": "第三號證物是填土。考古隊檢討證據後，現在認為填土是較高坡地的堆積滑下來的，不是刻意回填。用灰泥測年後，有些特殊建築最後一期的建造，比初建晚了五百年以上，大圓建築和長方形建築在時間上重疊。"
+    },
+    {
+      "type": "p",
+      "text": "第四號證物是人，但有限定。2017 年秋天，東南部一棟長方形建築地板下挖出一個墓坑，至少三個人：一個年輕男人、一個中年以上的女人、一個十一到十四歲的女孩。2026 年 9 月的人骨論文說，這是遺址第一次挖到完整的墳墓，共兩座，都屬較晚的前 8700–8000 年；另一座是單人墓，不在房子裡。"
+    },
+    {
+      "type": "p",
+      "text": "「沒有住家」被房子和墳墓動搖了；「沒有可靠的水源」是有取水跡象，水量卻有限。剩下的是大圓建築。德國考古研究院現在稱這裡為「帶有顯著祭祀成分的聚落」。"
+    },
+    {
+      "type": "h",
+      "text": "班寧說，那可能是房子"
+    },
+    {
+      "type": "p",
+      "text": "早在 2011 年，多倫多大學的考古學家**班寧**（Ted Banning）就提出另一種讀法：這些建築可能是房子，只是充滿象徵意義，遺址上有打燧石、準備食物的痕跡。他拿北美西北海岸的大木板屋作比，那種屋子有壯觀的屋柱和圖騰柱；大圓建築可能住著規模相當大的家戶，也是辦各種儀式的地方。"
+    },
+    {
+      "type": "quote",
+      "text": "不過一般來說，沒有理由先入為主地認定——就算它們跟哥貝克力石陣的建築一樣壯觀——它們就不會同時也是人住的房子。",
+      "original": "Yet there is generally no reason to presume a priori, even when these are as impressive as the buildings at Göbekli Tepe, that they were not also people’s houses.",
+      "cite": "班寧，2011，轉引自芝加哥大學出版社期刊部新聞稿"
+    },
+    {
+      "type": "p",
+      "text": "考古隊 2019 年的立場是：7,268 件磨石，數量對日常使用太多；一把手持磨石磨八小時的麵粉，夠五到十個人吃。他們把活動的季節高峰（瞪羚肉在仲夏到秋天容易取得）讀成「工作宴」的證據，看成特殊建築高度集中的專門場所。他們仍認為大圓建築有儀式用途，不只是裝飾華麗的住所，但居家和儀式要放在一起看。"
+    },
+    {
+      "type": "table",
+      "title": "三種說法，各自的證據與缺口",
+      "head": [
+        "說法",
+        "最有力的證據",
+        "卡在哪裡"
+      ],
+      "rows": [
+        [
+          "山頂聖所，沒人常住（施密特）",
+          "巨大的刻紋石柱；填土裡大量獸骨",
+          "房子、爐灶、地板下的墓陸續出土"
+        ],
+        [
+          "大圓建築就是大房子（班寧）",
+          "打燧石、備餐的痕跡；北美西北海岸壯觀屋柱的大木板屋",
+          "考古隊 2019 年認為磨石數量太多，大圓建築有儀式用途"
+        ],
+        [
+          "有祭祀中心的村子（考古隊）",
+          "小圓屋、爐灶、地板下的墓",
+          "最早的小圓屋還沒有碳十四年代（2020 年報告時）"
+        ]
+      ],
+      "caption": "依考古隊的論文與報告、德國考古研究院計畫頁，以及班寧論文的新聞稿整理。"
+    },
+    {
+      "type": "p",
+      "text": "我的看法：磨石多只說明有大批人聚來吃飯，三派都解釋得通，連施密特 2012 年也主張大規模宴飲。真能挑戰「沒人住」的是房子、爐灶和地板下的墓。大圓建築住不住人，證據分不出班寧和考古隊。考古隊自己寫下了缺口：2019 年的論文承認，和最老一期大圓建築同時代的住家還沒清楚辨認；2020 年的報告說西北部的小圓屋還沒有碳十四年代。最早的大圈子旁邊有沒有人住，只能推論。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/G%C3%B6bekli_Tepe_Pilar_Arm_and_Fox.JPG/1280px-G%C3%B6bekli_Tepe_Pilar_Arm_and_Fox.JPG",
+      "width": 1280,
+      "height": 1707,
+      "alt": "一根 T 字形石柱的側面，柱身上有刻出來的手臂，下方刻著一隻狐狸。",
+      "caption": "一根 T 字形石柱的側面：刻出來的手臂，下面是一隻狐狸。2011 年拍攝。",
+      "credit": "Guérin Nicolas／Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:G%C3%B6bekli_Tepe_Pilar_Arm_and_Fox.JPG",
+      "made": "2011"
+    },
+    {
+      "type": "h",
+      "text": "證據自己搬過家"
+    },
+    {
+      "type": "p",
+      "text": "這件案子難，因為現場被土丘自己動過。填土和建築之間共有 928 片人骨碎片，多半互不相連，主要出自大圓建築的填土。2026 年的論文推測，它們原本埋在高處的房子地板下，被坡地沖了下來。"
+    },
+    {
+      "type": "p",
+      "text": "2012 年的論文把填土裡的獸骨當成宴席的證據。2020 年的報告說，同一批填土是從較高的鄰近坡地滑下來的聚落堆積。獸骨是宴席剩菜還是廚餘，要看原本在哪裡，而滑坡抹掉了這一點。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "下一步：2020 年的報告說，建築考古和絕對定年會在未來幾年處理長方形建築這一章；2026 年的人骨論文說，更多骨骼分析和定年是必要的。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Göbekli Tepe, Turkey. A brief summary of research at a new World Heritage Site (2015–2019)",
+      "publisher": "e-Forschungsberichte des DAI 2020-2, § 1–13（Lee Clare）",
+      "date": "2020-10-12",
+      "url": "https://doi.org/10.34780/efb.v0i2.1012",
+      "note": "讀全文 PDF：「weaknesses of the temple-narrative…revision…unavoidable」、三項觀察、考古學家自己培養神廟說的引文、西北角小圓屋與爐灶（無碳十四年代）、長方形建築、岩盤大坑 8 × 2.8 公尺（作為蓄水系統是 distinct possibility）、填土改判為坡地滑落、灰泥測年與年代重疊、2018-07-01 列入世界遺產、媒體「Zero Point in Time」"
+    },
+    {
+      "title": "The role of cult and feasting in the emergence of Neolithic communities. New evidence from Göbekli Tepe, south-eastern Turkey",
+      "publisher": "Antiquity 86: 674–695（O. Dietrich, M. Heun, J. Notroff, K. Schmidt, M. Zarnkow）",
+      "date": "2012",
+      "url": "https://doi.org/10.1017/S0003598X00047840",
+      "note": "讀全文 PDF：not as a settlement, but as a hill sanctuary；柱上動物與手臂；地球物理推估至少 20 座圍場、已挖 A–H；刻意回填；填土獸骨多於同時代聚落；參考書目列施密特 2006 年《Sie bauten die ersten Tempel》（C.H. Beck）"
+    },
+    {
+      "title": "Cereal processing at Early Neolithic Göbekli Tepe, southeastern Turkey",
+      "publisher": "PLOS ONE 14(5): e0215214（L. Dietrich 等）",
+      "date": "2019-05-01",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0215214",
+      "note": "7,268 件磨石、每把手持磨石（handstone）8 小時約 4,800 克麵粉夠五到十人、蓄水坑（possibly Neolithic cisterns）總容量 153 立方公尺且限制常住人數、附近無已知泉水、仲夏到秋天的季節高峰與工作宴、同時代住家尚未清楚辨認、結論引文（引用時刪去文獻編號 [122][123]）"
+    },
+    {
+      "title": "So Fair a House: Göbekli Tepe and the Identification of Temples in the Pre-Pottery Neolithic of the Near East",
+      "publisher": "Current Anthropology 52(5): 619–660（E. B. Banning）",
+      "date": "2011-10",
+      "url": "https://doi.org/10.1086/661207",
+      "note": "期刊頁擋抓取；論點與引文依下一項新聞稿轉引"
+    },
+    {
+      "title": "Archaeologist argues world's oldest temples were not temples at all",
+      "publisher": "University of Chicago Press Journals（EurekAlert!）",
+      "date": "2011-10-06",
+      "url": "https://www.eurekalert.org/news-releases/489520",
+      "note": "班寧的論點、木板屋比喻與 a priori 那一句；ScienceDaily 同稿互證：https://www.sciencedaily.com/releases/2011/10/111006162535.htm"
+    },
+    {
+      "title": "First burials give insights into mortuary rites at Göbeklitepe, Early Neolithic Türkiye",
+      "publisher": "PLOS ONE 21(9): e0358979（J. Gresky, L. Clare）",
+      "date": "2026-09-22",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0358979",
+      "note": "最先發現的兩座完整墓葬（first two intact burials，PPNB 前 8700–8000 年）：2017 年腎形墓坑三人的年齡性別；2012 年發現、2022 年挖完、在特殊建築 A 西邊小空間的單人墓；928 片多半互不相連的碎骨（出自建築填土與建築之間）、坡地滑落的解釋、不排除頭骨崇拜、2017 年頭骨刻痕由三人改為五人、呼籲骨骼分析與絕對定年"
+    },
+    {
+      "title": "New publication: Human remains and burial practices at Göbeklitepe",
+      "publisher": "Deutsches Archäologisches Institut",
+      "date": "2026-09-21",
+      "url": "https://www.dainst.org/en/newsroom/neue-veroeffentlichung-menschliche-ueberreste-und-bestattungsbraeuche-in-goebeklitepe/924",
+      "note": "當時的墓通常在聚落裡、地板下或門口"
+    },
+    {
+      "title": "Göbekli Tepe – the first 20 years of research",
+      "publisher": "DAI Tepe Telegrams（Oliver Dietrich）",
+      "date": "2016-06-02",
+      "url": "https://www.dainst.org/en/blogs/goebekli-tepe-the-first-20-years-of-research/630",
+      "note": "1963 年伊斯坦堡大學與芝加哥大學調查、以為是伊斯蘭墓地、1994 年施密特走訪並認出 T 字形石柱、1995 年開挖、施密特生卒 1953–2014"
+    },
+    {
+      "title": "Geometry and Architectural Planning at Göbekli Tepe, Turkey",
+      "publisher": "Cambridge Archaeological Journal 30(2): 343–357（G. Haklay, A. Gopher）",
+      "date": "2020",
+      "url": "https://doi.org/10.1017/S0959774319000660",
+      "note": "周圍石柱 3–4 公尺、中央石柱最高 5.5 公尺"
+    },
+    {
+      "title": "Göbekli Tepe（研究計畫頁）",
+      "publisher": "Deutsches Archäologisches Institut",
+      "url": "https://www.dainst.org/en/research/projects/noslug/5746",
+      "note": "「settlement site with a pronounced ritual component」、石柱最高 5.5 公尺、計畫主持人 Lee Clare；2026-11-14 查閱"
+    }
+  ]
+}
