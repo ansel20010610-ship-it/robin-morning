@@ -1,0 +1,182 @@
+{
+  "column": "wildcard",
+  "date": "2026-11-15",
+  "title": "網路上的鎖頭，英國政府 1973 年就有了",
+  "dek": "讓陌生人在公開線路上談出祕密的辦法，英國政府三位研究者的想法，都比美國學界公開的版本早，卻被保密二十多年。",
+  "brief": "現在網路銀行用的公開金鑰加密，英國政府通訊總部的研究員早在 1973 年就寫出了幾乎等於 RSA 的演算法。總部認為當時的電腦做這件事太慢、太貴，沒有採用，報告也一直保密。1997 年才公開，GCHQ 裡第一個想到辦法的 Ellis 在公開前不到一個月過世。",
+  "topic_key": "wildcard:cryptography-gchq-public-key-secret",
+  "form": "walk",
+  "voice": "visitor",
+  "updated_at": "2026-11-15T02:46:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Aerial_of_GCHQ%2C_Cheltenham%2C_Gloucestershire%2C_England_24May2017_arp.jpg/1280px-Aerial_of_GCHQ%2C_Cheltenham%2C_Gloucestershire%2C_England_24May2017_arp.jpg",
+    "width": 1280,
+    "height": 964,
+    "alt": "從空中拍攝的環形大樓，中間是圓形草地庭院，四周是停車場，外圍是住宅區與道路。",
+    "caption": "英國政府通訊總部在契爾騰漢的大樓，2017 年空拍。這棟樓 2002 年落成。",
+    "credit": "Adrian Pingstone",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_of_GCHQ,_Cheltenham,_Gloucestershire,_England_24May2017_arp.jpg",
+    "made": "2017"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "網址旁邊那個小鎖頭，還有網路銀行、網路購物，背後用的是同一類辦法，叫**公開金鑰加密**。兩個沒見過面的人，在誰都偷聽得到的線路上，也能談出只有彼此知道的祕密。常見的一種叫 RSA，1977 年由麻省理工學院的三位研究者發表，名字取自三人姓氏的開頭字母。我原本以為故事到這裡就講完了。後來讀到英國政府 1997 年公開的文件，才知道 1970 年就有人證明這件事做得到。1973 年，又有人寫出幾乎等於 RSA 的做法。"
+    },
+    {
+      "type": "p",
+      "text": "寫出這些的是**英國政府通訊總部（GCHQ）**的研究員。這個機關做通訊情報，總部在契爾騰漢，裡面負責通訊安全的部門叫 CESG。這些報告一直留在內部，到 1997 年才解除機密。"
+    },
+    {
+      "type": "h",
+      "text": "往電話線上加雜訊"
+    },
+    {
+      "type": "p",
+      "text": "1960 年代，想祕密通訊，雙方得先拿到同一把金鑰，軍隊要管的金鑰多到傷腦筋。GCHQ 裡第一個想到辦法的是 **Ellis**，他後來寫過，當時人人都認為這繞不過去，包括他自己。"
+    },
+    {
+      "type": "quote",
+      "text": "畢竟，如果兩邊的處境一模一樣，怎麼可能一個收得到，另一個收不到？所以沒有人有動機去找一件顯然不可能的事。",
+      "original": "After all, if they were in identical situations how could one possibly be able to receive what the other could not? Thus there was no incentive to look for something so clearly impossible.",
+      "cite": "J. H. Ellis，〈The Story of Non-Secret Encryption〉，1987 年寫成"
+    },
+    {
+      "type": "p",
+      "text": "改變他想法的，是貝爾電話實驗室 1944 年 10 月的《Project C43 最終報告》，作者不詳。它講電話保密，辦法是**讓收話的人自己在線路上加雜訊**，把說話聲蓋住。雜訊是他加的，他知道是什麼，事後減掉就好。Ellis 指出，攔截者可以知道整套系統；他假扮收話人也收不到，只會用自己加的雜訊把訊息毀掉。這套東西缺點太明顯，沒有真的用過。Ellis 注意到的是它的結構：沒有事先交換的鑰匙，收話人沒有特別知識也能聽懂，因為加密的過程他也有一份。"
+    },
+    {
+      "type": "h",
+      "text": "躺在床上想到的證明"
+    },
+    {
+      "type": "p",
+      "text": "下一個問題很自然：同樣的招數，能不能用在一般的加密上？Ellis 說這個念頭是某天晚上躺在床上冒出來的，證明只花了幾分鐘。1970 年 1 月，他把它寫成 CESG 的內部報告。他證明的是做得到，沒有給出能實際用的做法。"
+    },
+    {
+      "type": "p",
+      "text": "做法照圖走三步比文字快：收信人藏一個數 k，算出 x 寄出去；寄信人用 x 把訊息 p 鎖成 z，寄回；收信人用 k 打開 z。攔截者看得到 x 和 z，沒有 k 就讀不出 p。他的證明用的是幾張大到不切實際、但原則上造得出來的查表，能用的版本，他坦白說自己數論不強，留給別人。他還提過，一直有人擔心這是不是想破壞某條微妙的數學定律。"
+    },
+    {
+      "type": "svg",
+      "title": "Ellis 的三步",
+      "svg": "<svg viewBox=\"0 0 640 250\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\">\n<rect class=\"soft\" x=\"180\" y=\"20\" width=\"280\" height=\"170\" rx=\"6\"/>\n<text class=\"muted\" x=\"320\" y=\"40\" font-size=\"12\" text-anchor=\"middle\">公開線路，誰都看得到</text>\n<rect class=\"soft\" x=\"10\" y=\"20\" width=\"160\" height=\"170\" rx=\"6\"/>\n<rect class=\"ink\" x=\"10\" y=\"20\" width=\"160\" height=\"170\" rx=\"6\" fill=\"none\" stroke-width=\"2\"/>\n<text class=\"ink\" x=\"90\" y=\"50\" font-size=\"16\" text-anchor=\"middle\">收信人</text>\n<text class=\"muted\" x=\"90\" y=\"72\" font-size=\"12\" text-anchor=\"middle\">自己藏著一個數 k</text>\n<text class=\"accent\" x=\"90\" y=\"158\" font-size=\"13\" text-anchor=\"middle\">③ 用 k 打開 z</text>\n<text class=\"accent\" x=\"90\" y=\"178\" font-size=\"13\" text-anchor=\"middle\">讀出 p</text>\n<rect class=\"soft\" x=\"470\" y=\"20\" width=\"160\" height=\"170\" rx=\"6\"/>\n<rect class=\"ink\" x=\"470\" y=\"20\" width=\"160\" height=\"170\" rx=\"6\" fill=\"none\" stroke-width=\"2\"/>\n<text class=\"ink\" x=\"550\" y=\"50\" font-size=\"16\" text-anchor=\"middle\">寄信人</text>\n<text class=\"muted\" x=\"550\" y=\"72\" font-size=\"12\" text-anchor=\"middle\">手上有要寄的訊息 p</text>\n<line class=\"ink\" x1=\"172\" y1=\"105\" x2=\"458\" y2=\"105\" stroke-width=\"2\"/>\n<polygon class=\"ink\" points=\"458,100 468,105 458,110\"/>\n<text class=\"ink\" x=\"320\" y=\"95\" font-size=\"13\" text-anchor=\"middle\">① x（用 k 算出來的）</text>\n<line class=\"ink\" x1=\"468\" y1=\"150\" x2=\"182\" y2=\"150\" stroke-width=\"2\"/>\n<polygon class=\"ink\" points=\"182,145 172,150 182,155\"/>\n<text class=\"ink\" x=\"320\" y=\"140\" font-size=\"13\" text-anchor=\"middle\">② z（用 x 把 p 鎖起來）</text>\n<text class=\"accent\" x=\"320\" y=\"226\" font-size=\"14\" text-anchor=\"middle\">攔截者看得到 x 和 z，沒有 k，就讀不出 p。</text>\n</svg>",
+      "caption": "示意圖，原創，依 Ellis 的回憶文章整理。x 今天叫公開金鑰，k 是私密金鑰。"
+    },
+    {
+      "type": "h",
+      "text": "一個晚上，一對質數"
+    },
+    {
+      "type": "p",
+      "text": "能用的版本，是 1973 年 9 月進 CESG 的 Clifford Cocks 想出來的。他當時 22 歲，在牛津大學念數論博士班，沒念完就離開。有天下午，一位同事把這個題目講給他聽，說這題很酷，只是沒人真的做出什麼。Cocks 當晚在家想，一晚就有了頭緒。"
+    },
+    {
+      "type": "p",
+      "text": "他要的是一個方向很好算、反方向很難算的運算，數論正好有。7 乘 13 馬上知道是 91，反過來給你 91，你得一個個試；質數夠大，要拆回去就難到不實際。於是私密的 k 是那兩個質數，公開的 x 是它們的乘積。報告日期是 1973 年 11 月 20 日。多年後 Ellis 評這**基本上就是 RSA**，Cocks 的版本還是 RSA 的特例。這段數學我只能轉述他們的說法，沒辦法替你驗算。"
+    },
+    {
+      "type": "p",
+      "text": "大約兩個月後，Cocks 從小的朋友 Williamson 想出另一套，用的是指數運算可以交換順序的做法。更簡單的版本，他 1976 年 8 月才寫成文：兩個人各挑一個大數，各算一個結果寄給對方，再各自用收到的結果和自己的數算一次，兩邊得到同一把鑰匙，鑰匙本身沒走過線路。這就是今天叫 Diffie-Hellman 的做法，Ellis 特別聲明功勞是 Williamson 的。"
+    },
+    {
+      "type": "h",
+      "text": "保密二十多年，與兩個日期"
+    },
+    {
+      "type": "p",
+      "text": "GCHQ 沒有用。Cocks 說，總部很認真想過，結論是太貴。以當時的電腦，得做專用硬體。做出來還是慢。而 Ellis 想省的本來就是管金鑰的錢，花更多就沒意義。Cocks 認為以當時的條件，這個結論沒有錯。"
+    },
+    {
+      "type": "p",
+      "text": "1976 年，美國史丹佛大學的 Diffie 和 Hellman 公開發表了論文，開頭第一句是："
+    },
+    {
+      "type": "quote",
+      "text": "我們今天正站在密碼學革命的邊緣。",
+      "original": "We stand today on the brink of a revolution in cryptography.",
+      "cite": "Whitfield Diffie、Martin Hellman，〈New Directions in Cryptography〉，1976 年 11 月"
+    },
+    {
+      "type": "p",
+      "text": "1977 年 RSA 出來。Ellis 在回憶的結尾，把公開世界後來冒出來的這些技術稱為「重新發現」（rediscovery）。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "讓它變成網路基礎的，是公開的論文；GCHQ 的報告再早，也一直留在內部。Ellis 在回憶裡自己點出：多數科學家想搶先發表，因為東西流傳出去才有價值；密碼學的價值卻在於讓對手知道得越少越好。"
+    },
+    {
+      "type": "p",
+      "text": "Ellis 1987 年退休後，上頭請他寫下這段歷史，寫完決定留在內部。十年後，Cocks 要在英格蘭一場密碼學會議上發表新成果，預期會有人問他是不是參與過早期的演算法，GCHQ 因此決定解除機密。CESG 在 Ellis 那篇回憶的前言裡寫（文中的 James 就是 Ellis）："
+    },
+    {
+      "type": "quote",
+      "text": "文章準備發表的時候，我們聽說 James 病得很重。他在文章發表之前過世了。",
+      "original": "As the paper was being prepared for publication we heard that James had become very ill. He died before the paper was published.",
+      "cite": "CESG 公布 Ellis 回憶文章時所附前言，1997 年 12 月"
+    },
+    {
+      "type": "p",
+      "text": "1997 年 11 月 25 日，Ellis 過世。三個星期後的 12 月 16 日，他的回憶放上了 CESG 的網站。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Story of Non-Secret Encryption",
+      "publisher": "J. H. Ellis／CESG（Cryptome 轉載）",
+      "date": "1997-12-16",
+      "url": "https://cryptome.org/jya/ellisdoc.htm",
+      "note": "Ellis 1987 年寫成的回憶，1997 年 12 月 16 日由 CESG 公布。第 4–22 段與文獻表（含第 5 筆 RSA：MIT 備忘錄 1977、Comm ACM 1978 年 2 月）是本文主要依據。"
+    },
+    {
+      "title": "In conversation with Clifford Cocks",
+      "publisher": "Chalkdust",
+      "date": "2019-10-23",
+      "url": "https://chalkdustmagazine.com/interviews/clifford-cocks/",
+      "note": "Cocks 談 Patterson、一晚上的進展、為什麼沒採用，以及 1997 年解密。"
+    },
+    {
+      "title": "New Directions in Cryptography",
+      "publisher": "IEEE Transactions on Information Theory IT-22(6)",
+      "date": "1976-11",
+      "url": "https://www-ee.stanford.edu/~hellman/publications/24.pdf",
+      "note": "Diffie 與 Hellman；開頭第一句、作者單位。"
+    },
+    {
+      "title": "Clifford Cocks",
+      "publisher": "Wikipedia",
+      "date": "2026-11-02",
+      "url": "https://en.wikipedia.org/wiki/Clifford_Cocks",
+      "note": "生日、學歷、1973 年 9 月進 CESG、1997 年 12 月 18 日演講。"
+    },
+    {
+      "title": "James H. Ellis",
+      "publisher": "Wikipedia",
+      "date": "2026-11-02",
+      "url": "https://en.wikipedia.org/wiki/James_H._Ellis",
+      "note": "生卒日期、1952 年進 GCHQ、1970 年 1 月的報告。"
+    },
+    {
+      "title": "Malcolm Williamson",
+      "publisher": "GCHQ",
+      "date": "2026-11-14",
+      "url": "https://www.gchq.gov.uk/person/malcolm-williamson",
+      "note": "Williamson 的經歷與他想出的金鑰交換法。"
+    },
+    {
+      "title": "File:Aerial of GCHQ, Cheltenham, Gloucestershire, England 24May2017 arp.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2017-05-24",
+      "url": "https://commons.wikimedia.org/wiki/File:Aerial_of_GCHQ,_Cheltenham,_Gloucestershire,_England_24May2017_arp.jpg",
+      "note": "頭圖，Public domain；頁面描述註明大樓 2002 年建成。"
+    }
+  ]
+}
