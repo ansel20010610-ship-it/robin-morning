@@ -10,6 +10,15 @@
     ],
     "note": "devotion 約一4:7-10、music 巴哈BWV565（number/listener）完成；perio 先發班已有；第9步重寫1／修正0（另依忠實度核對修正17條）"
   },
+  "2": {
+    "finished_at": "2026-11-15T02:19:26+08:00",
+    "missing": [
+      "football",
+      "news",
+      "wildcard"
+    ],
+    "note": "literature 荷馬伊利亞德24卷（scene/correspondent）、mystery 哥貝克力石陣（argument/detective）完成；未接第1班缺稿（第1班已回報）；第9步重寫0／修正2（另依忠實度核對各修一輪）；validate 無WARN"
+  },
   "column": {
     "finished_at": "2026-11-14T22:44:42+08:00",
     "missing": [
