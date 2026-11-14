@@ -3,11 +3,11 @@
   "date": "2026-11-15",
   "title": "拉菲尼亞下場後吃紅牌，德容不去柏林",
   "dek": "國家隊比賽週還沒打完，巴薩有三個人缺一場：兩個停賽，一個身體不適。",
-  "brief": "巴西在新加坡 2 比 3 輸日本，拉菲尼亞在場邊抗議被罰下，Goal 報導他停賽一場，週二對新加坡不能上。荷蘭足協說德容有輕微不適，不去柏林踢德國；坎塞洛停賽，週日凌晨對丹麥那場沒上。巴薩下一場是 11 月 22 日晚上 9 點，主場對比利亞雷亞爾。",
+  "brief": "巴西在新加坡 2 比 3 輸日本，拉菲尼亞在場邊抗議被罰下，Goal 報導他停賽一場，週二對新加坡不能上。荷蘭足協說德容有輕微不適，不去柏林踢德國；坎塞洛停賽沒上，葡萄牙週日凌晨 1 比 4 輸丹麥。巴薩下一場是 11 月 22 日晚上 9 點，主場對比利亞雷亞爾。",
   "topic_key": "football:2026-11-15",
   "form": "list",
   "voice": "fan",
-  "updated_at": "2026-11-15T03:02:00+08:00",
+  "updated_at": "2026-11-15T05:42:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "next": {
@@ -58,7 +58,7 @@
     },
     {
       "type": "p",
-      "text": "3. **坎塞洛**停賽，週日凌晨 3 點 45 分葡萄牙對丹麥那場他沒上，已經踢完了。巴薩官網的國腳日誌寫他 suspended for the game，也就是那場不能上；停賽「一場」是 Goal 說的。Goal 還說葡萄牙這次 27 人在營，他是被排出比賽名單的四個人之一。下一場是 11 月 18 日（週三）凌晨 3 點 45 分對威爾斯。昨天那期（11 月 14 日）我寫他會踢丹麥，寫錯了，他其實停賽，抱歉。"
+      "text": "3. **坎塞洛**停賽，週日凌晨 3 點 45 分葡萄牙在布拉加對丹麥，他沒上。巴薩官網的國腳日誌寫他不能踢那場；Goal 說是停賽一場，葡萄牙這次 27 人在營，他是被排出比賽名單的四個人之一。ESPN 的名單裡也找不到他。葡萄牙 1 比 4 輸了：丹麥 43 分鐘靠十二碼領先，Højlund 下半場 49、57 分鐘連進兩球，75 分鐘再一個頭槌球，Bernardo Silva 到補時第 3 分鐘才進了一球。葡萄牙還是 12 分，丹麥現在 9 分。坎塞洛只停一場，11 月 18 日（週三）凌晨 3 點 45 分到威爾斯踢，不受影響。昨天那期（11 月 14 日）我寫他會踢丹麥，寫錯了，他其實停賽，抱歉。"
     },
     {
       "type": "p",
@@ -86,7 +86,7 @@
         [
           "坎塞洛",
           "葡萄牙",
-          "停賽；11 月 15 日（週日）03:45 對丹麥那場沒上，已踢完；11 月 18 日（週三）03:45 對威爾斯"
+          "停賽一場；11 月 15 日（週日）03:45 對丹麥沒上，葡萄牙 1 比 4 輸；11 月 18 日（週三）03:45 對威爾斯"
         ],
         [
           "亞馬爾、佩德里、費爾明、庫巴西、Joan García",
@@ -149,10 +149,18 @@
         },
         {
           "headline": "葡萄牙的 7 號球衣換了圖樣",
-          "summary": "羅納度（Cristiano Ronaldo）本月稍早宣布退出國家隊，留下 234 場、146 球。葡萄牙足協宣布 7 號球衣換新圖樣，號碼上多一個小十字。週日凌晨對丹麥那場已經踢完，是羅納度退出後的第一場。ESPN 說，FIFA 的規定讓他們不能把 7 號封存。Goal 賽前說穿 7 號的是布魯日（Club Brugge）的 Forbs。",
+          "summary": "羅納度（Cristiano Ronaldo）本月稍早宣布退出國家隊，留下 234 場、146 球。葡萄牙足協宣布 7 號球衣換新圖樣，號碼上多一個小十字。週日凌晨對丹麥那場是羅納度退出後的第一場，葡萄牙 1 比 4 輸了。ESPN 說，FIFA 的規定讓他們不能把 7 號封存。Goal 賽前說穿 7 號的是布魯日（Club Brugge）的 Forbs，ESPN 的名單上他 64 分鐘替補上場。",
           "source": "ESPN",
           "url": "https://www.espn.com/soccer/story/_/id/50480173",
           "when": "11 月 14 日（週六）"
+        },
+        {
+          "headline": "挪威 3 比 1 贏威爾斯，哈蘭罰進十二碼",
+          "summary": "挪威週日凌晨 1 點在奧斯陸主場踢威爾斯。Nusa 59 分鐘先進球，哈蘭（Erling Haaland）助攻 Schjelderup 在 68 分鐘再進一球。Brooks 79 分鐘回敬一球，哈蘭 88 分鐘自己罰進十二碼。威爾斯週三凌晨 3 點 45 分在主場等葡萄牙，也就是坎塞洛的下一場。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/match/_/gameId/401861165",
+          "when": "11 月 14 日（週六）",
+          "place": ["NO", "GB"]
         },
         {
           "headline": "安道爾門將被停賽 12 場",
@@ -188,7 +196,28 @@
       "publisher": "FC Barcelona",
       "date": "2026-11-14",
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4607914/fc-barcelona-international-diary",
-      "note": "拉菲尼亞踢 71 分鐘後在場邊被罰下、坎塞洛停賽、Bernal 與 Hamza 的出賽"
+      "note": "拉菲尼亞踢 71 分鐘後在場邊被罰下、坎塞洛停賽（不能踢丹麥那場）、Bernal 與 Hamza 的出賽；頁面只有相對時間，11 月 15 日 05:20 重讀"
+    },
+    {
+      "title": "Denmark at Portugal, UEFA Nations League",
+      "publisher": "ESPN",
+      "date": "2026-11-14",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401861167",
+      "note": "葡萄牙 1 比 4 丹麥的比賽紀錄：進球與分鐘、名單裡沒有坎塞洛、Forbs 穿 7 號 64 分鐘替補；11 月 15 日 05:40 終場"
+    },
+    {
+      "title": "Portugal vs Denmark, UEFA Nations League",
+      "publisher": "Sky Sports",
+      "date": "2026-11-14",
+      "url": "https://www.skysports.com/football/portugal-vs-denmark/554108",
+      "note": "第二個來源核對比分 1 比 4 與進球者、分鐘"
+    },
+    {
+      "title": "Wales at Norway, UEFA Nations League",
+      "publisher": "ESPN",
+      "date": "2026-11-14",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401861165",
+      "note": "比賽紀錄：挪威 3 比 1 威爾斯的進球、助攻與分鐘"
     },
     {
       "title": "FC Barcelona international schedule",
