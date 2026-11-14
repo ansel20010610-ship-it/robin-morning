@@ -6,13 +6,22 @@ It is not part of any issue; the 演出資訊 routine keeps it current (editoria
                                                #   → /tmp/robin/concert-candidates.md (+ .json for `close`); the same
                                                #   file ends with 「## 已列入演出的異動」 when the feed's shows for a
                                                #   listed event differ from concerts.json (vanished, changed, new)
-  python3 scripts/concerts.py close [--keep UID ...]
-                                               # after rating: every candidate of the last fetch counts as seen
-                                               #   (listed if an event names its UID, else rejected), except --keep
+  python3 scripts/concerts.py close [--reject UID=理由 ...] [--keep UID ...]
+                                               # after rating: a candidate an event names is listed, one given a reason
+                                               #   is rejected (title, shows and reason kept), the rest come back
+  python3 scripts/concerts.py blocked [--since DATE]   # what was turned away, and why
+  python3 scripts/concerts.py reopen [UID ...] [--all] [--since DATE] [--old-rules]   # rejections back to candidates
   python3 scripts/concerts.py prune            # drop shows already over, and seen UIDs whose shows are over
   python3 scripts/concerts.py check            # the file's schema and voice (validate.py --concerts runs the same)
+  python3 scripts/concerts.py sweep-due        # is the sweep due; when it is, the sources and the evidence format
+  python3 scripts/concerts.py sweep-done --evidence FILE
 
-Seen UIDs live in state/concerts/seen.json, so a candidate is rated once. Stdlib only.
+Exit codes, for other programs: 0 done; 2 nothing recorded (fetch: no feed or an empty one; sweep-done: no evidence or a
+malformed one); 3 not finished (fetch: the feed was incomplete; sweep-done: evidence kept but a source was not looked
+at; sweep-due: the sweep is overdue).
+
+Seen UIDs live in state/concerts/seen.json: a listed or rejected candidate is not offered again, unless a rejected one
+gets a new date or city, or `reopen` puts it back. Stdlib only.
 """
 import argparse
 import datetime as dt
@@ -27,6 +36,8 @@ from common import CONTENT, ROOT, http_get, tw_now  # noqa: E402
 
 FILE = os.path.join(CONTENT, "concerts.json")
 SEEN = os.path.join(ROOT, "state", "concerts", "seen.json")
+FETCHED = os.path.join(ROOT, "state", "concerts", "fetch.json")  # the last fetch: was the feed whole, what the filters dropped
+RULES = os.path.join(ROOT, "editorial", "columns", "concerts.md")
 # The sweep for productions the open data never carries (concerts.md step 8): every second day (the owner, 2026-11-08:
 # 每兩天跑一次; it was Mondays only, and a tour announced on a Tuesday waited six days). Kept by the date of the last
 # finished sweep rather than by the calendar's parity, so a day the 演出班 fails or runs out of time simply leaves the
@@ -39,15 +50,17 @@ SWEEP_EVERY = 2  # days
 # orchestra's 貝九 (12/26 衛武營, 12/27 國家音樂廳, sold outside OPENTIX) was on none of the pages it opened.
 SWEEP_SOURCES = {
     "mna": "牛耳藝術（mna.com.tw，逐一打開每一檔的詳情頁）",
-    "pbc": "鵬博藝術",
-    "newaspect": "新象",
-    "tanart": "傳大藝術",
+    "pbc": "鵬博藝術的節目頁",
+    "newaspect": "新象的節目頁",
+    "tanart": "傳大藝術的節目頁",
     "kham": "寬宏藝術（kham.com.tw）",
-    "udn": "聯合數位文創（udnfunlife）與其他音樂劇、歌劇主辦",
-    "ntch": "國家兩廳院節目頁（npac-ntch.org，含 TIFA 與 NSO 樂季）",
+    "udn": "聯合數位文創（udnfunlife）與其他音樂劇、歌劇主辦（時藝多媒體等；售票在 KKTIX、年代、寬宏）",
+    "ntch": "國家兩廳院節目頁（npac-ntch.org，含 TIFA 與 NSO 樂季；場館自售的不一定進開放資料）",
     "ntt": "臺中國家歌劇院節目頁（npac-ntt.org）",
     "wwy": "衛武營節目頁（npac-weiwuying.org）",
-    "news": "新聞與售票系統關鍵字（來台巡演、年底貝九與新年音樂會；誠品、年代、KKTIX、wekengo）",
+    "news": "新聞與售票系統（誠品 meet.eslite.com、年代、KKTIX、wekengo）關鍵字：「交響樂團 來台」「訪台 音樂會 國家音樂廳」"
+            "「歌劇院 來台」「鋼琴家 來台 獨奏會」「音樂劇 原版 來台」；十月到一月另查「貝九 12月」「聖誕 音樂會 國家音樂廳」"
+            "「跨年 音樂會 衛武營」「新年音樂會 台中」",
 }
 TMP = "/tmp/robin"
 CANDS = os.path.join(TMP, "concert-candidates")
@@ -63,9 +76,10 @@ VENUE_CITY = [("臺中國家歌劇院", "台中"), ("台中國家歌劇院", "�
 # outside Taichung a show is worth the trip only in a main hall (editorial/columns/concerts.md); smaller rooms are skipped
 BIG_HALL = re.compile(r"國家音樂廳|國家戲劇院|臺北表演藝術中心.*(大劇院|球劇場)|中山堂中正廳|國際會議中心|衛武營.*(音樂廳|歌劇院|戲劇院)|至德堂")
 LIMIT = 60  # candidates per run, nearest first; the rest wait for the next run
-# clearly not what the list is for; anything doubtful is left to the editor
+# clearly not what the list is for; anything doubtful is left to the editor (比賽／大賽 were here, and took a
+# competition winner's recital with them); what this drops is kept in fetch.json and shown by `blocked`
 SKIP = re.compile(r"兒童|親子|寶寶|幼兒|布袋戲|木偶|偶戲|歌仔戲|京劇|豫劇|崑曲|崑劇|客家戲|相聲|說唱|講座|工作坊|研習|營隊|徵選|甄選|"
-                  r"比賽|大賽|成果發表|成果展|期末|畢業|彩排|體驗|導覽|市集")
+                  r"成果發表|成果展|期末|畢業|彩排|體驗|導覽|市集")
 # 戲劇 (category 2) counts only for opera and musicals; 歌劇院 and 歌劇團 (歌仔戲 troupes) are not opera
 STAGE = re.compile(r"音樂劇|歌劇|musical|opera", re.I)
 KINDS = ["交響樂", "協奏曲", "歌劇", "音樂劇", "室內樂", "獨奏", "聲樂", "合唱", "其他"]
@@ -110,6 +124,29 @@ def norm_title(t):
     return t.replace("力晶", "")
 
 
+def rules_version():
+    """A short hash of what a rating goes by (concerts.md from 收什麼 up to 每天的流程; whitespace does not count). close
+    keeps it on every rejection and fetch says how many standing rejections were made under other rules: 13 of the 24
+    shows the full sweep of 2026-11-09 brought in had been rejected on 11-01..03, before 國外樂團演完整名作算 4 分."""
+    import hashlib
+    try:
+        with open(RULES, encoding="utf-8") as f:
+            text = f.read()
+    except OSError:
+        return ""
+    m = re.search(r"\n## 收什麼.*?(?=\n## 每天的流程)", text, re.S)
+    return hashlib.sha1(re.sub(r"\s+", "", m.group(0) if m else text).encode("utf-8")).hexdigest()[:8]
+
+
+def note_fetch(day, problem, dropped=None):
+    """Writes fetch.json: `complete` (false with the reason in `note`; `incomplete_since` is the first day of a run of
+    such fetches) and `dropped`, what the title filters kept from being rated (left as it was when the feed failed)."""
+    old = load(FETCHED, {})
+    save(FETCHED, {"date": day, "complete": not problem, "note": problem,
+                   "incomplete_since": (old.get("incomplete_since") or day) if problem else None,
+                   "dropped": old.get("dropped", {}) if dropped is None else dropped})
+
+
 def fetch(a):
     day = today()
     end = (dt.date.fromisoformat(day) + dt.timedelta(days=WINDOW)).isoformat()
@@ -123,26 +160,34 @@ def fetch(a):
     for cat in (1, 2):
         try:
             status, _, body = http_get(FEED % cat, timeout=60)
-            raw += [(cat, e) for e in json.loads(body.decode("utf-8"))]
+            rows = json.loads(body.decode("utf-8"))
+            if not rows:  # an empty answer is not 「今天沒有新演出」
+                raise ValueError("回應是空的")
+            raw += [(cat, e) for e in rows]
         except Exception as e:  # noqa: BLE001 — any failure means the check could not be made today
             print("查核失敗：讀不到文化部開放資料（category %d）：%s" % (cat, e))
+            note_fetch(day, "讀不到 category %d：%s" % (cat, e))
             return 2
-    cands, skipped, known = [], 0, 0
+    cands, known, info, dropped, filled = [], 0, {}, {}, False
     for cat, e in raw:
         uid, title = e.get("UID") or "", (e.get("title") or "").strip()
         if not uid or not title:
             continue
+        drop = ""
         if cat == 2 and not STAGE.search(title.replace("歌劇院", "").replace("歌劇團", "")):
-            continue
-        if SKIP.search(title):
-            skipped += 1
-            continue
-        shows, in_window = [], []
+            drop = "戲劇類，標題沒有「音樂劇」或「歌劇」"
+        elif SKIP.search(title):
+            drop = "標題含「%s」" % SKIP.search(title).group(0)
+        if drop and uid in listed:
+            continue  # as before: a listed event is not looked up under a filtered title
+        shows, in_window, sig = [], [], set()
         for s in e.get("showInfo") or []:
             when = (s.get("time") or "").replace("/", "-")
             date, time = when[:10], when[11:16]
             city = city_of(s)
             venue = (s.get("locationName") or "").strip()
+            if city and DATE_RE.match(date) and day <= date and (city == "台中" or BIG_HALL.search(venue)):
+                sig.add("%s %s" % (date, city))  # every show to come, not the window's: the window slides by a day a day
             if city and DATE_RE.match(date) and day <= date <= end:
                 show = {"date": date, "time": time if TIME_RE.match(time) else "", "city": city,
                         "venue": venue, "price": (s.get("price") or "").strip()}
@@ -155,15 +200,30 @@ def fetch(a):
             continue
         if not shows:
             continue
-        if uid in seen:
-            known += 1
+        sig = sorted(sig)
+        if drop:  # would have been a candidate: keep what was dropped and why
+            dropped[uid] = {"title": title, "shows": sig, "why": drop}
             continue
+        again = ""
+        if uid in seen:
+            r = seen[uid]
+            new = [s for s in sig if s not in r.get("shows", sig)]
+            if r.get("v") == "rejected" and "shows" not in r:  # a record from before titles were kept: fill it in
+                r["title"], r["shows"], filled = title, sig, True
+            if r.get("v") != "rejected" or not new:
+                known += 1
+                continue
+            # rejected, and now with a date or a city it did not have (a Taichung show added): rate it again
+            again = "曾判不收（%s：%s）；多了場次：%s" % (r.get("seen"), r.get("why") or "沒留理由", "、".join(new))
+        info[uid] = {"title": title, "shows": sig}
         shows.sort(key=lambda s: (s["date"], s["time"]))
         desc = re.sub(r"\s+", " ", e.get("descriptionFilterHtml") or "").strip()
         units = "、".join(u for u in (e.get("masterUnit") or []) + [e.get("showUnit") or ""] if u)
-        cands.append({"uids": [uid], "category": "音樂" if cat == 1 else "戲劇", "title": title, "shows": shows,
+        cands.append({"uids": [uid], "category": "音樂" if cat == 1 else "戲劇", "title": title, "shows": shows, "again": again,
                       "url": e.get("sourceWebPromote") or e.get("webSales") or "", "sales": e.get("webSales") or "",
                       "source": e.get("sourceWebName") or "", "units": units, "desc": desc[:240]})
+    if filled:
+        save(SEEN, seen)
     # The same listing often comes twice (OPENTIX's program page and its event page): merge those. One production
     # touring several cities usually has a UID per city: point at likely matches and leave the merge to the editor.
     merged = {}
@@ -174,6 +234,7 @@ def fetch(a):
             m["uids"] += c["uids"]
             m["units"] = m["units"] or c["units"]
             m["desc"] = m["desc"] or c["desc"]
+            m["again"] = m["again"] or c["again"]
             m["shows"] += [s for s in c["shows"] if (s["date"], s["time"], s["city"]) not in {(x["date"], x["time"], x["city"]) for x in m["shows"]}]
         else:
             merged[k] = c
@@ -187,7 +248,8 @@ def fetch(a):
         c["maybe"] = [i for i, t in titles if t and n and difflib.SequenceMatcher(None, n, t).ratio() >= 0.6]
         c["twins"] = [o["uids"][0] for o in cands if o is not c and difflib.SequenceMatcher(None, n, norm_title(o["title"])).ratio() >= 0.75]
     os.makedirs(TMP, exist_ok=True)
-    save(CANDS + ".json", {"date": day, "uids": [u for c in cands for u in c["uids"]]})
+    save(CANDS + ".json", {"date": day, "uids": [u for c in cands for u in c["uids"]],
+                           "info": {u: info[u] for c in cands for u in c["uids"]}})
     lines = ["# 演出候選 %s（%d 筆；%s 到 %s%s）" % (day, len(cands), day, end, "；另有 %d 筆留到下次" % waiting if waiting else ""), ""]
     for c in cands:
         where = "；".join("%s %s %s %s%s" % (s["date"], s["time"], s["city"], s["venue"], "（%s）" % s["price"] if s["price"] else "")
@@ -204,6 +266,8 @@ def fetch(a):
             lines.append("  - 可能和已列入的 %s 是同一製作" % "、".join("`%s`" % i for i in c["maybe"]))
         if c["twins"]:
             lines.append("  - 可能和候選 %s 是同一製作" % "、".join("`%s`" % u for u in c["twins"]))
+        if c["again"]:
+            lines.append("  - " + c["again"])
     changed = listed_changes(data, feed_shows, day, end)
     # A feed that comes back short (2026-11-09 06:18: 23 of the 24 listed events "gone", all back by noon) is not 23
     # cancellations: when most of the listed events are missing at once, say the feed was incomplete and leave the
@@ -213,7 +277,14 @@ def fetch(a):
     partial = len(gone) >= 3 and len(gone) * 2 > with_uids
     if partial:
         changed = [x for x in changed if x not in gone]
-        print("注意：開放資料這次不完整（已列入的 %d 筆裡有 %d 筆整筆不在回應裡），不當作取消，異動段落略過這些；明天再比。" % (with_uids, len(gone)))
+        print("注意：開放資料這次不完整（已列入的 %d 筆裡有 %d 筆整筆不在回應裡），不當作取消，異動段落略過這些；明天再比。"
+              "新候選照常評分；這次算沒查完（結束碼 3）。" % (with_uids, len(gone)))
+    note_fetch(day, "已列入的 %d 筆裡有 %d 筆整筆不在回應裡" % (with_uids, len(gone)) if partial else "", dropped)
+    rules = rules_version()
+    rej = [v for v in seen.values() if v.get("v") == "rejected"]
+    stale = sum(1 for v in rej if v.get("rules") != rules)
+    if stale:
+        print("注意：判不收的 %d 筆裡有 %d 筆是照舊的評分規則判的（清單：python3 scripts/concerts.py blocked）。" % (len(rej), stale))
     if changed:
         lines += ["", "## 已列入演出的異動", "",
                   "開放資料和 concerts.json 對不上的場次。先開該筆的售票頁確認，再改 shows／note；開放資料整筆消失不等於取消，以售票頁為準。", ""]
@@ -223,10 +294,10 @@ def fetch(a):
     with open(CANDS + ".md", "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
     by = {k: sum(1 for c in cands if any(s["city"] == k for s in c["shows"])) for k in CITY_ORDER}
-    print("新候選 %d 筆（%s）；%s已看過 %d 筆；明顯不相關略過 %d 筆%s。清單：%s.md" % (
+    print("新候選 %d 筆（%s）；%s已看過 %d 筆；標題過濾擋下 %d 筆%s。清單：%s.md" % (
         len(cands), "、".join("%s %d" % kv for kv in by.items()), "還有 %d 筆留到下次；" % waiting if waiting else "",
-        known, skipped, "；已列入有異動 %d 筆（見清單末段）" % len(changed) if changed else "", CANDS))
-    return 0
+        known, len(dropped), "；已列入有異動 %d 筆（見清單末段）" % len(changed) if changed else "", CANDS))
+    return 3 if partial else 0
 
 
 def listed_changes(data, feed_shows, day, end):
@@ -306,20 +377,81 @@ def close(a):
         for u in e.get("uids", []):
             ends[u] = last_show
     keep = set(a.keep or [])
+    why = {}  # UID → reason, from --reject UID[,UID...]=理由
+    for x in a.reject or []:
+        us, _, reason = x.partition("=")
+        why.update({u.strip(): reason.strip() for u in us.split(",")})
     n = {"listed": 0, "rejected": 0}
     end = (dt.date.fromisoformat(last["date"]) + dt.timedelta(days=WINDOW)).isoformat()
+    rules, left = rules_version(), []
     for u in last["uids"]:
         if u in keep:
             continue
-        v = "listed" if u in ends else "rejected"
-        seen[u] = {"seen": last["date"], "end": ends.get(u, end), "v": v}
-        n[v] += 1
+        if u in ends:
+            seen[u] = {"seen": last["date"], "end": ends[u], "v": "listed"}
+            n["listed"] += 1
+        elif why.get(u):
+            # what it was and why (the 145 rejections of 2026-11-01..09 are bare UIDs: nobody can say what they were)
+            seen[u] = dict(last.get("info", {}).get(u, {}), seen=last["date"], end=end, v="rejected", why=why[u], rules=rules)
+            n["rejected"] += 1
+        else:
+            left.append(u)  # no verdict: not 不收 for good, it comes back with the next fetch
     save(SEEN, dict(sorted(seen.items())))
     data["checked"] = last["date"]
     for i in stamp_added(data):
         print("added 改成今天：%s" % i)
     save(FILE, data)
-    print("已記錄：列入 %d、不收 %d、留待下次 %d" % (n["listed"], n["rejected"], len(keep)))
+    print("已記錄：列入 %d、不收 %d、留待下次 %d" % (n["listed"], n["rejected"], len(keep) + len(left)))
+    if left:
+        print("其中 %d 筆沒寫理由，沒記成不收，下次 fetch 還會出現：%s" % (len(left), " ".join(left)))
+        print("不收的每一筆都要寫理由：python3 scripts/concerts.py close --reject <UID>=<分數與理由> <UID>=<分數與理由> …")
+    return 0
+
+
+def reopen(a):
+    """Takes rejections out of seen.json, so that the next fetch offers them again: those named, all, those rejected on
+    or after a date, or under rules since changed. (The only way back was to edit the file by hand: 13 shows, 2026-11-09.)"""
+    seen, rules = load(SEEN, {}), rules_version()
+    hit = [u for u, v in seen.items() if v.get("v") == "rejected" and (
+        a.all or u in a.uids or (a.since and v.get("seen", "") >= a.since) or (a.old_rules and v.get("rules") != rules))]
+    for u in hit:
+        del seen[u]
+    if hit:
+        save(SEEN, seen)
+    print("放回候選 %d 筆%s" % (len(hit), "；下次 fetch 會再列出來（一次最多 %d 筆，由近到遠）" % LIMIT if hit else "（沒有符合的不收紀錄）"))
+    return 0 if hit else 1
+
+
+def blocked(a):
+    """What was turned away and why, for the owner and the weekly audit: rated 不收 (seen.json), kept from rating by the
+    title filters (the last fetch) and seen by the last sweep but not listed."""
+    seen, rules, got, sweep = load(SEEN, {}), rules_version(), load(FETCHED, {}), load(SWEEP, {})
+    rej = sorted(((v.get("seen", ""), u, v) for u, v in seen.items() if v.get("v") == "rejected" and v.get("seen", "") >= (a.since or "")), reverse=True)
+    bare = [d for d, u, v in rej if not v.get("title")]
+    print("## 評分判不收：%d 筆（其中 %d 筆照舊的評分規則判；放回候選重評：python3 scripts/concerts.py reopen --old-rules）" % (
+        len(rej), sum(1 for d, u, v in rej if v.get("rules") != rules)))
+    for d, u, v in rej:
+        if v.get("title"):
+            print("- %s｜%s｜%s｜%s｜`%s`" % (d, v["title"], "、".join(v.get("shows", [])), v.get("why") or "舊紀錄，沒留理由", u))
+    if bare:
+        print("（另有 %d 筆舊紀錄沒有標題，%s 到 %s 判的；開放資料再給到同一筆時 fetch 會補上，演出已過的補不到。）" % (len(bare), min(bare), max(bare)))
+    drops = got.get("dropped", {})
+    print("\n## 評分前被標題過濾擋下：%d 筆（%s）" % (len(drops), "還沒有 fetch 紀錄" if not got else "%s 的 fetch；開放資料%s" % (
+        got.get("date"), "完整" if got.get("complete") else "不完整：%s" % got.get("note"))))
+    for why in sorted({v["why"] for v in drops.values()}):
+        print("- %s：%s" % (why, "；".join(sorted(v["title"] for v in drops.values() if v["why"] == why))))
+    print("\n## 補查看到但不收（%s）" % ("%s 的補查" % sweep["date"] if sweep.get("date") else "還沒有證據紀錄"))
+    raw = lambda v: v if isinstance(v, str) else json.dumps(v, ensure_ascii=False)  # noqa: E731
+    for k, s in (sweep.get("sources") or {}).items():
+        if not isinstance(s, dict):  # sweep-done keeps a source given as "連不上", null, a list… as 沒查
+            print("- %s｜（沒寫理由）｜%s" % (raw(s), k))
+            continue
+        items = s.get("seen") or []
+        for x in items if isinstance(items, list) else [items]:  # a source with error: its seen is not checked
+            if not isinstance(x, dict):
+                print("- %s｜（沒寫理由）｜%s" % (raw(x), k))
+            elif x.get("verdict") == "不收":
+                print("- %s｜%s｜%s" % (raw(x.get("title")), x.get("why") or "（沒寫理由）", k))
     return 0
 
 
@@ -483,41 +615,82 @@ def sweep_last():
 
 
 def sweep_due(a):
-    """Prints 「補查：今天要做」 or 「補查：今天不用（上次 <日期>）」; exit 0 either way (the routine reads the line)."""
+    """Prints 「補查：今天不用」, or 「補查：今天要做」 with the sources to open and the evidence sweep-done takes (the
+    routine reads it here: the list in concerts.md was cut off mid-line on 2026-11-09). Exit 3 when the sweep is
+    overdue — a morning has already gone by without finishing it — so that another program can tell; else 0."""
     today, last = tw_now().date(), sweep_last()
-    if last is None or (today - last).days >= SWEEP_EVERY:
-        print("補查：今天要做（上次 %s）" % (last or "沒有紀錄"))
-    else:
+    late = None if last is None else (today - last).days - SWEEP_EVERY
+    if late is not None and late < 0:
         print("補查：今天不用（上次 %s，每 %d 天一次）" % (last, SWEEP_EVERY))
-    return 0
+        return 0
+    path = os.path.join(TMP, "sweep.json")
+    print("補查：今天要做（上次 %s%s）" % (last or "沒有紀錄", "；已逾期 %d 天" % late if late else ""))
+    print("十個來源都要打開。看到的每一檔都評分，符合門檻的加進 concerts.json（uids 用空陣列），然後寫證據檔 %s：" % path)
+    for k, v in SWEEP_SOURCES.items():
+        print("  %s：%s" % (k, v))
+    print('格式：{"mna": {"urls": ["實際打開的網址", "…"], "seen": [{"title": "看到的演出", "verdict": "收", "id": "concerts.json 的 id"}, '
+          '{"title": "…", "verdict": "已列入", "id": "…"}, {"title": "…", "verdict": "不收", "why": "分數與理由"}]}, '
+          '"pbc": {"error": "連不上或來不及查的原因"}, …}')
+    print("寫好後：python3 scripts/concerts.py sweep-done --evidence %s（有來源沒查到也要跑：證據會存下來，算沒做完，明天再輪到）" % path)
+    return 0 if late == 0 else 3
 
 
 def sweep_done(a):
-    """Records today as the last finished sweep (state/concerts/sweep.json), and stamps today on what it added. Refuses
-    unless --checked names every source in SWEEP_SOURCES: a sweep that looked at one page is not a sweep."""
-    got = {k.strip().lower() for k in (a.checked or []) for k in k.split(",") if k.strip()}
-    unknown = sorted(got - set(SWEEP_SOURCES))
-    missing = [k for k in SWEEP_SOURCES if k not in got]
-    if unknown:
-        print("補查：不認得的來源 %s（可用：%s）" % ("、".join(unknown), " ".join(SWEEP_SOURCES)))
-        return 2
-    if missing:
-        print("補查：還沒查完，不記下。缺：")
-        for k in missing:
-            print("  - %s：%s" % (k, SWEEP_SOURCES[k]))
-        print("每一個都查過後再跑 sweep-done --checked %s" % " ".join(SWEEP_SOURCES))
+    """Takes the sweep's evidence — for every source the pages opened and each show seen there with its verdict — and
+    keeps it in state/concerts/sweep.json. Exit 0: every source was looked at; today is the last finished sweep.
+    Exit 3: kept, but a source was unreachable, not got to, or showed nothing: not finished, due again tomorrow (the
+    sweep of 2026-11-11, six sources unreachable, left its account in a run note only). Exit 2: no evidence or a
+    malformed one, nothing recorded (naming the ten sources used to do, and they can be typed without opening a page)."""
+    try:
+        with open(a.evidence or "", encoding="utf-8") as f:
+            ev = json.load(f)
+    except (OSError, ValueError) as e:
+        print("補查：沒有證據檔，不記下（%s）。只打來源代號不算查過；格式見 sweep-due 的輸出。" % (e if a.evidence else "沒給 --evidence"))
         return 2
     data = load(FILE, None)
+    ids = {e.get("id") for e in data.get("events", [])} if isinstance(data, dict) else set()
+    bad, undone, tally = [], [], []
+    if not isinstance(ev, dict):
+        bad, ev = ["證據檔要是 {來源代號: {...}}"], {}
+    bad += ["不認得的來源 %s（可用：%s）" % (k, " ".join(SWEEP_SOURCES)) for k in ev if k not in SWEEP_SOURCES]
+    for k in SWEEP_SOURCES:
+        s = ev.get(k)
+        if not isinstance(s, dict) or s.get("error"):
+            undone.append("%s（%s）" % (k, s["error"] if isinstance(s, dict) else "沒查"))
+            continue
+        urls, items = s.get("urls"), s.get("seen")
+        if not (isinstance(urls, list) and urls and all(isinstance(u, str) and re.match(r"^https?://", u) for u in urls)) or not isinstance(items, list):
+            bad.append("%s：要有 urls（實際打開的網址）與 seen（看到的每一檔），或 error（沒查到的原因）" % k)
+            continue
+        for x in items:
+            x = x if isinstance(x, dict) else {}
+            title, v = x.get("title"), x.get("verdict")
+            if not title or v not in ("收", "已列入", "不收"):
+                bad.append("%s：每一檔要有 title 與 verdict（收／已列入／不收）" % k)
+            elif v == "不收" and not x.get("why"):
+                bad.append("%s「%s」：不收要寫 why（分數與理由）" % (k, title))
+            elif v != "不收" and x.get("id") not in ids:
+                bad.append("%s「%s」：%s的要填 id，而且 concerts.json 裡要有這一筆（現在找不到 %s）" % (k, title, v, x.get("id")))
+        if not items:
+            undone.append("%s（打開了 %d 頁，一檔都沒看到）" % (k, len(urls)))  # an empty page is not a look
+        tally.append("%s %d 頁 %d 檔" % (k, len(urls), len(items)))
+    if bad:
+        print("補查：證據檔有問題，不記下：")
+        for x in bad:
+            print("  - " + x)
+        return 2
     if isinstance(data, dict):
         fixed = stamp_added(data)
         if fixed:
             save(FILE, data)
             print("added 改成今天：%s" % "、".join(fixed))
-    os.makedirs(os.path.dirname(SWEEP), exist_ok=True)
-    with open(SWEEP, "w", encoding="utf-8") as f:
-        json.dump({"last": tw_now().date().isoformat(), "checked": list(SWEEP_SOURCES)}, f, ensure_ascii=False)
-        f.write("\n")
-    print("補查：已記下 %s" % tw_now().date())
+    day, last = tw_now().date().isoformat(), sweep_last()
+    save(SWEEP, {"last": (last.isoformat() if last else None) if undone else day, "date": day, "sources": ev})
+    print("補查證據已存（%s）：%s" % (day, "；".join(tally) or "沒有一個來源查到"))
+    if undone:
+        print("補查：沒做完，不記成做完（上次做完 %s）。沒查到的：%s" % (last or "沒有紀錄", "、".join(undone)))
+        return 3
+    print("補查：已記下 %s" % day)
     return 0
 
 
@@ -527,13 +700,22 @@ def main():
     sub.add_parser("fetch")
     c = sub.add_parser("close")
     c.add_argument("--keep", nargs="*", help="這次還不能判斷、下次再看的 UID")
+    c.add_argument("--reject", nargs="*", action="extend", metavar="UID=理由", help="不收的候選與分數、理由（同一製作的幾個 UID 用逗號連起來）")
+    b = sub.add_parser("blocked", help="被擋下的清單：評分判不收、標題過濾擋下、補查看到但不收")
+    b.add_argument("--since", help="只列這一天（YYYY-MM-DD）以後判不收的")
+    r = sub.add_parser("reopen", help="把判不收的放回候選，下次 fetch 重評")
+    r.add_argument("uids", nargs="*", help="指定的 UID")
+    r.add_argument("--all", action="store_true", help="全部")
+    r.add_argument("--since", help="這一天（YYYY-MM-DD）以後判的")
+    r.add_argument("--old-rules", action="store_true", help="照舊的評分規則判的")
     sub.add_parser("prune")
     sub.add_parser("check")
-    sub.add_parser("sweep-due", help="補查（第 8 步）今天要不要做：每兩天一次")
-    sd = sub.add_parser("sweep-done", help="補查做完，記下今天（--checked 要列出每一個來源）")
-    sd.add_argument("--checked", nargs="*", help="查過的來源：%s" % " ".join(SWEEP_SOURCES))
+    sub.add_parser("sweep-due", help="補查（第 8 步）今天要不要做：每兩天一次；逾期時結束碼 3")
+    sd = sub.add_parser("sweep-done", help="交補查的證據檔；十個來源都查到才記成做完")
+    sd.add_argument("--evidence", help="證據檔（格式見 sweep-due 的輸出）")
+    sd.add_argument("--checked", nargs="*", help=argparse.SUPPRESS)  # the old call: taken so that it gets the refusal above
     a = ap.parse_args()
-    return {"fetch": fetch, "close": close, "prune": prune, "check": check,
+    return {"fetch": fetch, "close": close, "prune": prune, "check": check, "blocked": blocked, "reopen": reopen,
             "sweep-due": sweep_due, "sweep-done": sweep_done}[a.cmd](a)
 
 
