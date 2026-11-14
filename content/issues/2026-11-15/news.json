@@ -1,0 +1,209 @@
+{
+  "column": "news",
+  "date": "2026-11-15",
+  "title": "川普、習近平、普丁 19 日深圳會談，美國全國航班停飛",
+  "dek": "澤倫斯基說美方提過以頓巴斯換北約，歐盟要求以色列讓援助進加薩，台灣下週北部降到 15 度。",
+  "brief": "白宮宣布，川普、習近平與普丁將在 APEC 期間於深圳舉行首次三方會談，川普預定 19 日出席。美國 FAA 13 日下令全國航班停飛逾 4 小時，運輸部長說可能是承包商更換路由器時出錯。澤倫斯基說，美方談判代表問過烏克蘭加入北約後願不願從頓巴斯撤出。",
+  "topic_key": "news:2026-11-15",
+  "voice": "wire",
+  "updated_at": "2026-11-15T05:31:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "sources": [
+    {
+      "title": "Trump, Xi and Putin to hold first three-way summit in China",
+      "publisher": "半島電視台",
+      "date": "2026-11-14",
+      "url": "https://www.aljazeera.com/news/2026/11/14/trump-xi-and-putin-to-hold-first-three-way-summit-in-china",
+      "note": "川普重返白宮後第一次三方；拒絕俄方延長新 START 一年；克宮稱不得強加於他國"
+    },
+    {
+      "title": "Trump, Xi, Putin to hold historic meeting in China: White House",
+      "publisher": "法國 24 電視台（法新社）",
+      "date": "2026-11-14",
+      "url": "https://www.france24.com/en/live-news/20261114-trump-xi-putin-to-hold-historic-meeting-in-china-white-house",
+      "note": "白宮 13 日宣布；川普週四出席；發言人韋爾斯引述；馬斯克隨行不入場"
+    },
+    {
+      "title": "美中俄領袖APEC期間首度三方峰會　核武與伊朗戰爭成焦點",
+      "publisher": "中央社",
+      "date": "2026-11-15",
+      "url": "https://www.cna.com.tw/news/aopl/202611150003.aspx",
+      "note": "02:42 發布；新 START 2 月失效；中國外交部上月說法；APEC 11 月 18 至 19 日"
+    },
+    {
+      "title": "US blames system upgrade for longest nationwide FAA ground stop since 9/11",
+      "publisher": "半島電視台",
+      "date": "2026-11-14",
+      "url": "https://www.aljazeera.com/news/2026/11/14/us-blames-system-upgrade-for-longest-nationwide-faa-ground-stop-since-9",
+      "note": "11 月 13 日（週五）；達菲、貝德福說法；週六 41,000 航班中 4,000 至 5,000 取消；起訖時刻與時區未給"
+    },
+    {
+      "title": "全美航班暫停起飛疑因設備問題或人為失誤　15日恢復正常航班",
+      "publisher": "中央社",
+      "date": "2026-11-15",
+      "url": "https://www.cna.com.tw/news/aopl/202611150005.aspx",
+      "note": "03:54 發布；停飛逾 4 小時；日期與航班數與半島電視台有出入，日期與數字以半島為準，只取時長"
+    },
+    {
+      "title": "US suggested Ukraine cede parts of Donbas to Russia to become part of NATO",
+      "publisher": "半島電視台（路透社、美聯社）",
+      "date": "2026-11-14",
+      "url": "https://www.aljazeera.com/news/2026/11/14/us-suggested-ukraine-cede-parts-of-donbas-to-russia-to-become-part-of-nato",
+      "note": "澤倫斯基辦公室 14 日發布；拒絕割地與中立；公投條件；下一輪談判日期文中未給"
+    },
+    {
+      "title": "EU calls for immediate humanitarian access to Gaza",
+      "publisher": "半島電視台（美聯社）",
+      "date": "2026-11-14",
+      "url": "https://www.aljazeera.com/news/2026/11/14/eu-calls-for-immediate-humanitarian-access-to-gaza",
+      "note": "卡拉斯辦公室聲明；被擋的聯合國團體文中未具名；無發布時刻"
+    },
+    {
+      "title": "Six killed in Israeli airstrike on Gaza's Nasser Hospital",
+      "publisher": "聯合國新聞",
+      "date": "2026-11-12",
+      "url": "https://news.un.org/en/story/2026/11/1168796",
+      "note": "6 死 27 傷；週三夜間（半島電視台寫週四，正文不寫星期）"
+    },
+    {
+      "title": "Referendum reignites debate over Taiwan's 'non-nuclear homeland' policy",
+      "publisher": "焦點台灣（中央社英文網）",
+      "date": "2026-11-14",
+      "url": "https://focustaiwan.tw/politics/202611140014",
+      "note": "20:51 發布；陳中舜、賴建信說法；公投 11 月 28 日"
+    },
+    {
+      "title": "廢非核家園公投／陳中舜稱核電是AI用電救命丸 賴建信：核電與經濟發展無關",
+      "publisher": "公視新聞網",
+      "date": "2026-11-14",
+      "url": "https://news.pts.org.tw/article/835769",
+      "note": "20:48 發布；公投主文；5 場意見發表會 11 月 12 日至 20 日"
+    },
+    {
+      "title": "CPC to keep domestic gasoline, diesel prices steady",
+      "publisher": "焦點台灣（中央社英文網）",
+      "date": "2026-11-14",
+      "url": "https://focustaiwan.tw/business/202611140010",
+      "note": "17:55 發布；連續第 9 週；各油品價格；虧損估計"
+    },
+    {
+      "title": "鋒面通過西半部防較大雨勢 下週2波東北季風低溫探15度",
+      "publisher": "中央社",
+      "date": "2026-11-14",
+      "url": "https://www.cna.com.tw/news/ahel/202611140164.aspx",
+      "note": "17:16 發布；氣象署預報員王品翔；未提正式警特報"
+    }
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "川普、習近平與普丁確定 19 日在深圳見面。美國全國航班 13 日停飛，原因還在查。台灣 15 日鋒面通過，19 日夜間北部低溫探 15 度。"
+    },
+    {
+      "type": "news",
+      "title": "世界",
+      "items": [
+        {
+          "headline": "川習普 19 日在深圳會談",
+          "place": [
+            "US",
+            "CN",
+            "RU"
+          ],
+          "summary": "白宮 13 日宣布，川普、習近平與普丁將在 APEC 期間於深圳首次三方會談，川普預定 19 日（週四）出席。白宮說議題含削減核武；新戰略武器裁減條約 2 月到期後，川普拒絕俄方延長，要中國加入新協議，中國外交部說不公平也不現實。美方官員不預期達成協議。",
+          "source": "法國 24 電視台、半島電視台、中央社",
+          "url": "https://www.france24.com/en/live-news/20261114-trump-xi-putin-to-hold-historic-meeting-in-china-white-house",
+          "when": "11 月 13 日宣布，台灣時間 14 日報導"
+        },
+        {
+          "headline": "美國全國航班停飛逾 4 小時",
+          "place": "US",
+          "summary": "美國聯邦航空總署 13 日（週五）下令全國航班停飛，是 9/11 以來最久。運輸部長達菲說，承包商 L3Harris 在偏遠據點把路由器換成光纖，設備故障或人為失誤使路由器大量發出連線要求，干擾雷達和通訊。官方說無網路攻擊跡象，原因未定。",
+          "source": "半島電視台、中央社",
+          "url": "https://www.aljazeera.com/news/2026/11/14/us-blames-system-upgrade-for-longest-nationwide-faa-ground-stop-since-9",
+          "when": "11 月 13 日（週五），美國時間"
+        },
+        {
+          "headline": "澤倫斯基：美方問過頓巴斯換北約",
+          "place": [
+            "UA",
+            "RU"
+          ],
+          "summary": "烏克蘭總統澤倫斯基辦公室 14 日公布，美國談判代表在阿布達比與愛爾蘭的會談後問：烏克蘭若加入北約，願不願從頓巴斯撤出。他說這是第一次把北約與領土讓步連在一起，他拒絕割地與中立；要有安全保障與重建資金等整套方案，才可能交付公投。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/14/us-suggested-ukraine-cede-parts-of-donbas-to-russia-to-become-part-of-nato",
+          "when": "11 月 14 日，澤倫斯基辦公室發布"
+        },
+        {
+          "headline": "歐盟要求以色列讓援助進加薩",
+          "place": [
+            "PS",
+            "IL"
+          ],
+          "summary": "歐盟外交事務高級代表卡拉斯辦公室 14 日聲明，要求以色列重開加薩所有口岸，讓援助「立即、不受阻礙」進入。聯合國新聞報導，以軍空襲擊中加薩納賽爾醫院外科部門，6 人死亡、27 人受傷。",
+          "source": "半島電視台、聯合國新聞",
+          "url": "https://www.aljazeera.com/news/2026/11/14/eu-calls-for-immediate-humanitarian-access-to-gaza",
+          "when": "11 月 14 日，聲明發布"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "title": "台灣",
+      "items": [
+        {
+          "headline": "非核家園公投 28 日投票",
+          "place": "TW",
+          "summary": "中選會 14 日晚間舉行第 2 場公投意見發表會。公投 28 日與地方選舉同日投票，題目是否廢除「非核家園」。正方陳中舜說機組重啟約需 18 個月到三年；反方經濟部次長賴建信說核電不是萬靈丹，核二、核三約占目前發電量一成。",
+          "source": "焦點台灣、公視新聞網",
+          "url": "https://focustaiwan.tw/politics/202611140014",
+          "when": "11 月 14 日，台灣時間"
+        },
+        {
+          "headline": "中油汽柴油價連 9 週凍漲",
+          "place": "TW",
+          "summary": "中油 14 日宣布，15 日零時起到 22 日汽、柴油不調價，連續第 9 週。中油說，下週汽油每公升虧 2.3 元、柴油虧 3.7 元。",
+          "source": "焦點台灣",
+          "url": "https://focustaiwan.tw/business/202611140010",
+          "when": "11 月 14 日，台灣時間"
+        },
+        {
+          "headline": "鋒面過境，19 日夜北部探 15 度",
+          "place": "TW",
+          "summary": "氣象署預報員王品翔說，鋒面 14 日夜間到 15 日通過，西半部可能有較大雨勢。15 日到 16 日東北季風增強，18 日起另一波更強，19 日夜間到 20 日清晨最冷，北部低溫約 15 到 16 度。",
+          "source": "中央社",
+          "url": "https://www.cna.com.tw/news/ahel/202611140164.aspx",
+          "when": "11 月 14 日，台灣時間"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "中油每公升售價",
+      "head": [
+        "油品",
+        "元"
+      ],
+      "rows": [
+        [
+          "92 無鉛汽油",
+          "31.2"
+        ],
+        [
+          "95 無鉛汽油",
+          "32.7"
+        ],
+        [
+          "98 無鉛汽油",
+          "34.7"
+        ],
+        [
+          "超級柴油",
+          "29.9"
+        ]
+      ],
+      "caption": "焦點台灣，適用到 11 月 22 日。"
+    }
+  ]
+}
