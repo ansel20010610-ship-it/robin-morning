@@ -48,6 +48,21 @@ jobs:
       - uses: actions/checkout@v7
         with:
           ref: main
+      - name: Check the app's scripts
+        # The one check here that stops a deploy. On 2026-11-11 a patch script left assets/app.js at 0 bytes in the
+        # working tree; pushed, it would have gone out and the app would have opened to a blank page. An empty script, or
+        # one node reports a SyntaxError in, fails the run before anything is built, and the site keeps its last good
+        # deploy. Only that stops it: a node that is missing or fails some other way is a warning, and the deploy goes on.
+        # The app's files are modules, so each is checked under an .mjs name; sw.js is checked as the plain script it is.
+        run: |
+          for f in sw.js assets/*.js; do
+            [ -s "$f" ] || { echo "::error::$f 是空檔，這次不部署（線上維持上一版）"; exit 1; }
+            case "$f" in sw.js) c="$f" ;; *) c="$RUNNER_TEMP/check.mjs"; cp "$f" "$c" ;; esac
+            E=$(node --check "$c" 2>&1) || case "$E" in
+              *SyntaxError*) echo "$E"; echo "::error::$f 語法有錯，這次不部署（線上維持上一版）"; exit 1 ;;
+              *) echo "::warning::node --check 沒辦法檢查 $f：$E" ;;
+            esac
+          done
       - name: Build issue index
         run: python3 scripts/build_index.py
       - name: Write calendar files (加入行事曆)

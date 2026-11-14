@@ -11,7 +11,9 @@ name: Issue notification
 # (content/late.json, scripts/late.py) sends that issue's notification; one that gives it up sends the apology.
 # Touching state/push/ping (any change) sends today's notice at once, so the owner can see the day's wording on the
 # phone without waiting for 07:30. fill.yml starts a mode=filled run after a fill between 07:30 and 11:00, so a
-# reader told 「今天少一欄」 hears that the paper is whole.
+# reader told 「今天少一欄」 hears that the paper is whole. watch.yml starts a mode=alert run when the morning's check finds
+# something wrong (or fails on the way): one line to the owner's phone, once a day at most, that says only that
+# something is off — a GitHub issue is mail he may never see, and nothing else here reaches him (push.py alert).
 on:
   schedule:
     - cron: "50 22 * * *"   # 06:50 Taiwan: backup for the relay's 07:00 morning run
@@ -24,9 +26,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "test = 測試通知；issue = 立刻發今天的出刊通知；remind = 立刻發提醒；morning / noon / evening = 接力（wire.yml）用：等到 07:30 / 12:30 / 21:00 再發；filled = 補位（fill.yml）用：等補齊的刊期上線再發"
+        description: "test = 測試通知；issue = 立刻發今天的出刊通知；remind = 立刻發提醒；morning / noon / evening = 接力（wire.yml）用：等到 07:30 / 12:30 / 21:00 再發；filled = 補位（fill.yml）用：等補齊的刊期上線再發；alert = 監看（watch.yml）用：出刊有狀況，一天最多一則"
         type: choice
-        options: [test, issue, remind, morning, noon, evening, filled]
+        options: [test, issue, remind, morning, noon, evening, filled, alert]
         default: test
 
 permissions:
@@ -35,9 +37,10 @@ permissions:
 
 # GitHub keeps one pending run per group and cancels an older pending one. The morning runs (two crons and the relay's
 # mode=morning) share notify-issue, so at most one waits for 07:30 at a time and none is lost; the reminders share
-# notify-remind; a test or a manual run is in notify-adhoc and can never cancel a scheduled one (or the other way round).
+# notify-remind; a test or a manual run is in notify-adhoc and can never cancel a scheduled one (or the other way round);
+# the watch's alert has a group to itself for the same reason.
 concurrency:
-  group: notify-${{ (github.event_name == 'schedule' && (github.event.schedule == '50 22 * * *' || github.event.schedule == '12 23 * * *') || inputs.mode == 'morning') && 'issue' || (github.event_name == 'schedule' || inputs.mode == 'noon' || inputs.mode == 'evening') && 'remind' || 'adhoc' }}
+  group: notify-${{ (github.event_name == 'schedule' && (github.event.schedule == '50 22 * * *' || github.event.schedule == '12 23 * * *') || inputs.mode == 'morning') && 'issue' || (github.event_name == 'schedule' || inputs.mode == 'noon' || inputs.mode == 'evening') && 'remind' || inputs.mode == 'alert' && 'alert' || 'adhoc' }}
   cancel-in-progress: false
 
 jobs:
@@ -71,7 +74,7 @@ jobs:
         id: dedup
         # the relay's run and the backup crons must never both send: count today's earlier successful runs of the same
         # notice, by job name, whichever event started them (a manual mode=issue or test is not counted and not deduped)
-        if: github.event_name == 'schedule' || inputs.mode == 'morning' || inputs.mode == 'noon' || inputs.mode == 'evening'
+        if: github.event_name == 'schedule' || inputs.mode == 'morning' || inputs.mode == 'noon' || inputs.mode == 'evening' || inputs.mode == 'alert'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -79,6 +82,7 @@ jobs:
             issue)   PAT='^notify (50 22 \* \* \*|12 23 \* \* \*|morning)$'; FROM=06:00 ;;
             noon)    PAT='^notify (30 4 \* \* \*|noon)$'; FROM=11:30 ;;
             evening) PAT='^notify (0 13 \* \* \*|evening)$'; FROM=20:00 ;;
+            alert)   PAT='^notify alert$'; FROM=00:00 ;;   # one a day, however many checks found something
             *)       PAT='^$'; FROM=00:00 ;;
           esac
           # count only runs started near this notice's own hour, not since midnight: yesterday's 21:00 cron that GitHub
@@ -97,6 +101,7 @@ jobs:
         if: steps.dedup.outputs.sent != 'yes'
         run: python3 -m venv /tmp/push && /tmp/push/bin/pip install -q pywebpush==2.1.2
       - name: Send
+        id: send
         if: steps.dedup.outputs.sent != 'yes'
         env:
           VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
@@ -110,6 +115,7 @@ jobs:
             evening) /tmp/push/bin/python scripts/push.py remind --which evening ;;
             remind) /tmp/push/bin/python scripts/push.py remind ;;
             test) /tmp/push/bin/python scripts/push.py test ;;
+            alert) /tmp/push/bin/python scripts/push.py alert ;;
             push)
               BEFORE="${{ github.event.before }}"
               git fetch -q --depth=1 origin "$BEFORE" || true
@@ -125,6 +131,12 @@ jobs:
               esac
               exit $R ;;
           esac
+      - name: Sent
+        # The record that this run reached a device (push.py writes sent=yes only then). A green run is not that record:
+        # on 2026-11-03 the morning run ended green having sent nothing, the backup took it for sent, and the day had no
+        # notice and no word about it. watch.yml looks for this step among the morning's runs.
+        if: always() && steps.send.outputs.sent == 'yes'
+        run: echo "送到了至少一台裝置"
       - name: Drop devices that no longer take notifications
         if: always() && steps.dedup.outputs.sent != 'yes'
         # the run's success must mean "sent" (the next run's dedup counts on it), so a failed cleanup only warns

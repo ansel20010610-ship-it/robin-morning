@@ -1,8 +1,10 @@
 name: Issue watch
 
 # 07:45 Taiwan time: check that today's issue is complete — the columns, the serial installment, the watch columns'
-# check records, the shift reports (the 演出班 among them) and the live site. If not, open (or update) a GitHub issue,
-# which GitHub emails to the repository owner. GitHub's own cron ran this at 10:44 on 2026-11-08, so the reliable
+# check records, the shift reports (the 演出班 among them), the live site, the morning's notice (did it reach a device)
+# and the 演出補查 (is it overdue). If not, open (or update) a GitHub issue, which GitHub emails to the repository owner
+# — and, because nothing shows that mail has ever been read, start notify.yml mode=alert: one line to the owner's
+# phone, once a day at most. The same when this run itself fails. GitHub's own cron ran this at 10:44 on 2026-11-08, so the reliable
 # start is wire.yml's half-hour relay: at 07:00 it dispatches a run with wait_until=07:45, which sleeps to that minute
 # and then reads the newest main; the cron stays as backup and stands down when the relay's run already checked.
 # On a Sunday the relay starts a second run at 19:00 (evening=true): the 週日補刊 (15:07 and 17:07) should be done by
@@ -31,7 +33,7 @@ on:
 permissions:
   contents: read
   issues: write
-  actions: read   # to see whether a deploy (publish.yml) is still running before LIVE≠HEAD counts
+  actions: write   # to see whether a deploy (publish.yml) is still running before LIVE≠HEAD counts; to start notify.yml mode=alert
 
 # The dedup counts only successful runs, so a backup cron that fired while the relay's run was still in progress (asleep
 # to 07:45, or waiting on a deploy) saw nothing and checked, and opened or commented, a second time. Sharing a group
@@ -72,8 +74,14 @@ jobs:
             S=$(( $(TZ=Asia/Taipei date -d "$WAIT_UNTIL" +%s) - $(date +%s) )); [ "$S" -gt 0 ] || S=0
             echo "等到台灣時間 $WAIT_UNTIL 再檢查（$S 秒）……"; sleep "$S"
           fi
-          # the checkout is from when the run was queued (the relay's at 07:00); fill.yml and the shifts push until then
-          git fetch -q origin main && git reset -q --hard origin/main
+          # the checkout is from when the run was queued (the relay's at 07:00); fill.yml and the shifts push until then.
+          # A fetch that fails is tried again, and after three the check goes on with the checkout it has: one failed
+          # fetch used to skip every step below — no check, no issue, a red run nobody is shown.
+          for i in 1 2 3; do
+            if git fetch -q origin main && git reset -q --hard origin/main; then exit 0; fi
+            sleep 10
+          done
+          echo "::warning::讀不到最新的 main，用這次執行開始時的檢出繼續檢查"
       - name: Is the live site serving main?
         id: live
         # A deploy takes a few minutes, and a push (the 補位, the 連載班, a 補刊) may have started one this minute: while a
@@ -102,6 +110,7 @@ jobs:
         id: check
         if: github.event_name != 'push' && steps.dedup.outputs.done != 'yes'
         env:
+          GH_TOKEN: ${{ github.token }}
           EVENING: ${{ inputs.evening == true || github.event.schedule == '0 11 * * 0' }}
           LIVE: ${{ steps.live.outputs.live }}
           HEAD: ${{ steps.live.outputs.head }}
@@ -119,7 +128,22 @@ jobs:
           MISSING=$(grep '^缺稿：' plan.txt | sed 's/^缺稿：//' || true)
           SERIAL=$(grep '^連載缺稿：' plan.txt | sed 's/^連載缺稿：//' || true)       # today's installment due and absent: nobody else would notice (補刊 does not touch serial)
           UNCHECKED=$(grep '^觀測站未查核：' plan.txt | sed 's/^觀測站未查核：//' || true)  # watch columns with no check record for the day
-          CONFIGERR=$(grep '^設定錯誤：' plan.txt || true); [ "$P" = 2 ] && [ -z "$CONFIGERR" ] && CONFIGERR="設定錯誤：plan_day.py 以 2 結束"
+          # any failure of plan_day, not only its exit 2: a crash leaves no 缺稿 line to find, and three missing columns passed for none
+          CONFIGERR=$(grep '^設定錯誤：' plan.txt || true); [ "$P" != 0 ] && [ -z "$CONFIGERR" ] && CONFIGERR="plan_day.py 以 $P 結束"
+          # Did this morning's notice reach a device? Not "was a notify.yml run green": on 2026-11-03 the run was green and
+          # nothing went out, and from 10-30 to 11-08 the notice came two to four hours late, with nobody told either time.
+          # A run that reached a device has a successful step 「Sent」 (notify.yml). Asked three times, a failed query among them.
+          sent() {
+            for ID in $(gh run list --workflow notify.yml --created ">=$(date -u -d "$D 06:00 +0800" +%FT%TZ)" --limit 50 --json databaseId --jq '.[].databaseId'); do
+              gh run view "$ID" --json jobs --jq '.jobs[] | select(.name | test("^notify (50 22 |12 23 |morning$)")) | .steps[]? | select(.name == "Sent" and .conclusion == "success") | .name' | grep -q Sent && return 0
+            done
+            return 1
+          }
+          NONOTICE=
+          if [ "$EVENING" != true ] && [ "$NOW" \> "07:30" ]; then
+            NONOTICE=yes
+            for i in 1 2 3; do if sent; then NONOTICE=; break; fi; sleep 20; done
+          fi
           # the day's states and reports, judged by late.py's own rules so this check does not depend on fill.yml having run
           # first (the two crons each ran hours late on 11-08, in no fixed order): a Sunday with columns missing and shifts
           # that never reported is the quota, held for 週日補刊 whether or not late.json says so yet
@@ -167,8 +191,15 @@ jobs:
               todo = []
           left = (e.get("left") or unfinished) if st == "unfinished" else unfinished + todo
           print("LATE_MISSING=%s" % q(late.labels(left) or ("無（只差 late.py done）" if st in late.OPEN else "")))
+          # the 演出補查 is due every second day; four days without one is two rounds missed (on 2026-11-11 six of the ten
+          # sources could not be reached, the round was left undone, and nothing anywhere said so)
+          try:
+              swept = dt.date.fromisoformat(json.load(open("state/concerts/sweep.json", encoding="utf-8")).get("last", ""))
+          except (OSError, ValueError, TypeError, AttributeError):
+              swept = None
+          print("SWEEP_LATE=%s" % ("" if swept and (d - swept).days < 4 else q("上次 %s" % (swept or "沒有紀錄"))))
           EOF
-          LATE=; YLATE=; HELD=; NOREPORT=; SHIFT4=; LATE_MISSING=
+          LATE=; YLATE=; HELD=; NOREPORT=; SHIFT4=; LATE_MISSING=; SWEEP_LATE=
           . ./vars.sh
           # a 補刊 still running pushes a commit every so often; silence for 40 minutes means it has stopped (the routine's
           # own test); the checkout is shallow, so fetch enough history to see past this evening's other commits
@@ -179,9 +210,11 @@ jobs:
             echo
             if [ -n "$CONFIGERR" ]; then
               echo "### 設定錯誤"
-              echo "content/config.json 不一致，各班的 plan_day 會停在這裡：$CONFIGERR"
+              echo "plan_day.py 沒有跑完（content/config.json 不一致，或程式自己出錯），各班的 plan_day 會停在這裡：$CONFIGERR"
               echo
             fi
+            [ -n "$NONOTICE" ] && { echo "### 出刊通知"; echo "到 $NOW 今天早上的出刊通知沒有送到任何裝置（notify.yml 今天 06:00 以後的執行裡，沒有一個「Sent」步驟成功）。"; echo; }
+            [ -n "$SWEEP_LATE" ] && { echo "### 演出補查"; echo "近期演出的補查逾期了（$SWEEP_LATE；每兩天一次，scripts/concerts.py sweep-due）。"; echo; }
             if [ "$EVENING" = true ]; then
               echo "### 週日補刊"
               case "$LATE" in
@@ -238,6 +271,7 @@ jobs:
           } > report.md
           PROBLEM=
           [ -n "$CONFIGERR" ] && PROBLEM=yes
+          [ -n "$NONOTICE" ] && PROBLEM=yes        # a held Sunday too: its notice is 「延到下午」
           [ -n "$SERIAL" ] && PROBLEM=yes          # even on a held Sunday: the 補刊 does not touch the serial
           [ "$HZ" = 2 ] && [ "$EVENING" != true ] && PROBLEM=yes   # the morning check says it; the evening one is about the 補刊
           if [ "$EVENING" = true ]; then
@@ -252,7 +286,7 @@ jobs:
             if [ -n "$HELD" ]; then
               [ "$LIVE_OK" = yes ] || PROBLEM=yes
             else
-              if [ -n "$MISSING" ] || [ "$V" -ne 0 ] || [ "$LIVE_OK" != yes ] || [ -n "$NOREPORT" ]; then PROBLEM=yes; fi
+              if [ -n "$MISSING" ] || [ "$V" -ne 0 ] || [ "$LIVE_OK" != yes ] || [ -n "$NOREPORT" ]; then PROBLEM=yes; fi   # a late 演出補查 alone is only written into the report (owner has not asked to be told)
               # the watch stations are shift 4's (05:17): a missing check record is shift 4's fault only when shift 4
               # reported (it ran and skipped them — 11-07 obituary); a shift 4 that never ran is already in NOREPORT, and
               # on a held Sunday the 補刊 takes the stations over (late.py done refuses while one is unchecked)
@@ -267,12 +301,32 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           T="出刊異常：${{ steps.check.outputs.date }}"
-          N=$(gh issue list --state open --search "in:title $T" --json number --jq '.[0].number')
-          if [ -n "$N" ]; then gh issue comment "$N" --body-file report.md; else gh issue create --title "$T" --body-file report.md; fi
+          # three tries: one failed API call left a day with three columns missing without an issue
+          for i in 1 2 3; do
+            if N=$(gh issue list --state open --search "in:title $T" --json number --jq '.[0].number'); then
+              if [ -n "$N" ]; then gh issue comment "$N" --body-file report.md && exit 0; else gh issue create --title "$T" --body-file report.md && exit 0; fi
+            fi
+            sleep 10
+          done
+          exit 1
+      - name: Tell the owner's phone
+        # notify.yml mode=alert (push.py alert), whose dedup step keeps it to one a day. Also when a step above failed:
+        # a run started by the relay fails without GitHub telling anyone. Never on a push (the closing step only).
+        if: always() && github.event_name != 'push' && (steps.check.outputs.problem == 'yes' || failure())
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in 1 2 3; do
+            if gh workflow run notify.yml --ref main -f mode=alert; then exit 0; fi
+            sleep 10
+          done
+          exit 1
       - name: Close issues whose day is now complete
         # Every open 出刊異常 issue is judged again by its own date: no missing column or serial installment, validation
         # clean, no 補刊 pending or given up, and for today's date the live site on main. The report that opened it stays;
-        # the closing comment says what was verified. An issue this very run raised for today is left alone.
+        # the closing comment says what was verified. An issue this very run raised for today is left alone. So is one
+        # whose day has a shift (the 演出班 too) that never reported or a station nobody checked: no later push puts
+        # that right, and closing it with 「刊期現在齊備了」 said the opposite. That one is the owner's to close.
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
@@ -293,10 +347,16 @@ jobs:
             if ! python3 scripts/validate.py "$D" > /dev/null 2>&1; then echo "#$N $D：驗證未通過，不結案"; continue; fi
             ST=$(python3 -c "import json,os; print((json.load(open('content/late.json')) if os.path.exists('content/late.json') else {}).get('$D', {}).get('state', ''))" 2>/dev/null || true)
             case "$ST" in waiting|regenerating|unfinished) echo "#$N $D：週日補刊 $ST，不結案"; continue ;; esac
+            if [ "$ST" != done ]; then   # a 補刊 that finished has done the silent shifts' work, the stations included
+              # the check's own rule for who is silent; of the 演出班's three proofs, concerts.json's "checked" holds only on the day itself
+              SILENT=$(GITHUB_ACTIONS=true python3 -c "import sys, json, datetime as dt; sys.path.insert(0, 'scripts'); import late; D = '$D'; d = dt.date.fromisoformat(D); who = late.silent_shifts(d); who += [] if 'concerts' in late.runs_of(d) or D in json.load(open('content/onthisday.json', encoding='utf-8')) else ['演出']; print('、'.join(who))" 2>/dev/null || echo "？")
+              if [ -n "$SILENT" ]; then echo "#$N $D：沒有回報的班次（$SILENT），留給社長結案"; continue; fi
+              if grep -q '^觀測站未查核：' "plan-$D.txt"; then echo "#$N $D：觀測站沒有查核紀錄，留給社長結案"; continue; fi
+            fi
             {
-              echo "$D 的刊期現在齊備了：每一欄都在、驗證通過、連載到位$( [ "$ST" = done ] && echo "、週日補刊已完成" )$( [ "$D" = "$D0" ] && echo "、網站已更新到 main" )。"
+              echo "$D 的刊期現在齊備了：每一欄都在、驗證通過、連載到位$( [ "$ST" = done ] && echo "、週日補刊已完成" || echo "、各班都有回報、觀測站都查過" )$( [ "$D" = "$D0" ] && echo "、網站已更新到 main" )。"
               echo
-              echo "班次回報與觀測站查核的紀錄不會回頭補，當時的報告留在上面。由 watch.yml 自動結案（台灣時間 $(TZ=Asia/Taipei date +%F\ %H:%M)）。"
+              echo "當時的報告留在上面。由 watch.yml 自動結案（台灣時間 $(TZ=Asia/Taipei date +%F\ %H:%M)）。"
             } > "close-$D.md"
             gh issue comment "$N" --body-file "close-$D.md" && gh issue close "$N" && echo "#$N $D：已結案"
           done

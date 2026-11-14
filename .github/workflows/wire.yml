@@ -17,6 +17,10 @@ name: Wire (外電)
 # backup, and each of those workflows is written so that a second start sends or alarms nothing twice.
 # The 07:30 tick starts no deploy: publish.yml cancels a deploy still running when a new one starts, and a wire deploy
 # at 07:30 could push back the live issue the 07:30:20 notice waits for; the wires come again at 08:00.
+# A hand-on that GitHub keeps queued for ten minutes used to lose the tick it was meant for — at 06:50 that is the 07:00
+# one, and the crons behind the fill, the notice and the watch have been late every time they were needed. So a run
+# first makes up what rides on the two ticks just past (the hand-on is at :50, twenty minutes after the last tick a
+# run keeps), each only when no run of that workflow was started since the tick, so that nothing is started twice.
 on:
   push:
     branches: [main]
@@ -42,13 +46,27 @@ jobs:
     steps:
       - name: A deploy on each of the next eight half hours, and the morning and the reminders on theirs
         run: |
-          start() { gh workflow run "$1" --ref main "${@:2}" || echo "::warning::could not start $1 (tick $i)"; }
-          for i in 1 2 3 4 5 6 7 8; do
-            sleep $(( 1800 - $(date +%s) % 1800 ))   # to the next :00 or :30
-            tick="$(TZ=Asia/Taipei date +%u%H%M)"    # weekday, hour, minute in Taiwan
-            case "$tick" in
-              ?0730) echo "07:30: no wire deploy, the issue is going out" ;;
-              *) start publish.yml -f hourly=true ;;
+          start() {
+            if [ -n "$since" ]; then   # making up a past tick: not when GitHub lists a run started since, or will not say
+              n=$(gh run list --workflow "$1" --event workflow_dispatch --created ">=$since" --limit 1 --json databaseId --jq length 2>/dev/null) || n=1
+              [ "$n" = 0 ] || return 0
+              echo "making up the $tick tick: $1"
+            fi
+            gh workflow run "$1" --ref main "${@:2}" || echo "::warning::could not start $1 (tick $i)"
+          }
+          past=$(( $(date +%s) / 1800 * 1800 - 1800 ))
+          for i in past past 1 2 3 4 5 6 7 8; do
+            case "$i" in
+              past)   # the two ticks just past, the older first: what rides on them, not the deploy
+                tick="$(TZ=Asia/Taipei date -d "@$past" +%u%H%M)"; since="$(date -u -d "@$past" +%FT%TZ)"; past=$(( past + 1800 )) ;;
+              *)
+                since=
+                sleep $(( 1800 - $(date +%s) % 1800 ))   # to the next :00 or :30
+                tick="$(TZ=Asia/Taipei date +%u%H%M)"    # weekday, hour, minute in Taiwan
+                case "$tick" in
+                  ?0730) echo "07:30: no wire deploy, the issue is going out" ;;
+                  *) start publish.yml -f hourly=true ;;
+                esac ;;
             esac
             case "$tick" in
               ?0700)

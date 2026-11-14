@@ -11,6 +11,7 @@ content/config.json → push.key. The devices are listed in state/push/devices.j
   python3 scripts/push.py remind [--which noon|evening]         the 12:30 / 21:00 nudge; nothing while a Sunday issue is held
   python3 scripts/push.py test [--new-since <git rev>]          only devices added since that commit
   python3 scripts/push.py late --before <git rev>               a 週日補刊 this push finished (or gave up): tell the phone
+  python3 scripts/push.py alert                                 watch.yml found the day out of order: one line to the owner
   python3 scripts/push.py keys <private-key.pem>                a new key pair: every device must subscribe again
 
 `add` needs only the standard library; the others need pywebpush (notify.yml installs it).
@@ -107,6 +108,10 @@ def send(devs, payload):
             print("::error::%s 送不出去：%s: %s" % (d["name"], type(e).__name__, e))
     if dead:
         save_devices([d for d in load_devices() if d["subscription"]["endpoint"] not in dead])
+    if sent and os.environ.get("GITHUB_OUTPUT"):
+        # for notify.yml's step 「Sent」: the exit code cannot say this (0 also means "nothing left to retry")
+        with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+            f.write("sent=yes\n")
     return 0 if sent or not failed else 1
 
 
@@ -134,7 +139,7 @@ MOODS = {
                    "有人替你把夜裡發生的事折好了。", "把今天先翻開，再把今天過完。", "字很小，早晨很大。"],
     },
     "俏皮": {
-        "titles": ["早安兄弟，報紙到了", "印刷機剛停，你的那份在這", "知更鳥比鬧鐘準時", "出爐了，趁熱", "報童在門口，開門", "演算法還在睡，知更鳥叫了",
+        "titles": ["早安，報紙到了", "印刷機剛停，你的那份在這", "知更鳥比鬧鐘準時", "出爐了，趁熱", "報童在門口，開門", "演算法還在睡，知更鳥叫了",
                    "翻開吧，昨天的已經讀完了"],
         "bodies": ["咖啡先放著，先翻這個。", "病人進來前讀得完，別裝忙。", "三分鐘的事，別拖成一天的事。", "今天也沒有廣告，只有正事和閒事。",
                    "別存起來晚點看，晚點你不會看。", "先讀短的也行，反正不會考。", "把這期讀完，郵票才蓋得出來。"],
@@ -142,11 +147,11 @@ MOODS = {
 }
 REMIND = {  # 21:00
     "文藝": [("今天的報紙還攤在桌上", "晚上了，剩下的幾篇還亮著燈。"), ("有幾頁還沒翻", "睡前讀完，今天才算收好。"), ("知更鳥還沒回巢", "你的那一期還差一點。")],
-    "俏皮": [("兄弟，報紙還沒讀完", "郵票還沒蓋，今天不算數。"), ("還差幾篇，別裝沒看到", "讀完再睡，很快。"), ("今天的報紙在等你", "它不會自己讀完。")],
+    "俏皮": [("報紙還沒讀完", "郵票還沒蓋，今天不算數。"), ("還差幾篇，別裝沒看到", "讀完再睡，很快。"), ("今天的報紙在等你", "它不會自己讀完。")],
 }
 REMIND_NOON = {  # 12:30
     "文藝": [("午安。早上的報紙還沒看完", "吃飯的時候，正好讀一篇。"), ("半天過去了，字還在原處", "午休比想像中長，夠讀兩篇。"), ("報紙在桌角等中午", "先吃飯，再讀一段。")],
-    "俏皮": [("兄弟，午休先別滑別的", "早上那期還沒讀完，便當配一篇。"), ("中午了，報紙還熱著嗎", "再不讀，晚上會被提醒第二次。"), ("半天了，還差幾篇", "吃飯配報紙，古典的吃法。")],
+    "俏皮": [("午休先別滑別的", "早上那期還沒讀完，便當配一篇。"), ("中午了，報紙還熱著嗎", "再不讀，晚上會被提醒第二次。"), ("半天了，還差幾篇", "吃飯配報紙，古典的吃法。")],
 }
 
 
@@ -200,7 +205,7 @@ def late_state(date):
 
 def late_notice(date):
     """07:30 on a Sunday held for 週日補刊: say why the issue is not there, instead of announcing it."""
-    return {"title": "早安兄弟，今天這期延到下午", "body": "本週的 AI 額度凌晨用完了。週日不拿備稿充數：下午 3 點額度重置後整期重寫，出齊再叫你。",
+    return {"title": "早安，今天這期延到下午", "body": "本週的 AI 額度凌晨用完了。週日不拿備稿充數：下午 3 點額度重置後整期重寫，出齊再叫你。",
             "url": "./#/", "tag": "issue-" + date}
 
 
@@ -229,7 +234,7 @@ def partial_notice(cfg, date, missing):
     owner also reads it as the morning's first word that shift 5 or the fill did not get there."""
     d = dt.date.fromisoformat(date)
     names = "、".join("「%s」" % (column_meta(cfg, c, d) or {}).get("name", c) for c in missing)
-    title = "早安兄弟，今天少幾欄" if len(missing) > 1 else "早安兄弟，今天少一欄"
+    title = "早安，今天少幾欄" if len(missing) > 1 else "早安，今天少一欄"
     # The promise only when a reserve can fill every missing column: 快訊 (config.json reserve: false) is written again
     # only by the 17:37 shift, which calls no one, and while it is short fill.yml never calls either (audit c42).
     promise = all((cfg["columns"].get(c) or {}).get("reserve", True) for c in missing)
@@ -313,6 +318,13 @@ def cmd_issue(a):
         return 1
     if payload.get("kind") == "issue" and missing:
         payload = partial_notice(cfg, date, missing)
+    if payload.get("kind") == "issue":
+        # A night the shifts did not get through, filled from the reserves by fill.yml: said in front of the day's
+        # line, or the owner reads 「今天少一欄」 (or the ordinary notice) and never learns that the rest is reserve.
+        # The paper's state, not its contents (the rule of 2026-11-02). The serial is written days ahead: not counted.
+        arts = [x for x in issue["articles"] if x.get("column") != "serial"]
+        if sum(1 for x in arts if x.get("from_reserve")) * 2 > len(arts):
+            payload["body"] = "昨晚排班沒跑完，今天多數是備稿。" + payload["body"]
     print(json.dumps(payload, ensure_ascii=False, indent=1))
     return send(devs, payload)
 
@@ -409,6 +421,20 @@ def cmd_late(a):
     return send(devs, payload)
 
 
+def cmd_alert(a):
+    """notify.yml mode=alert, started by watch.yml when its check of the day finds something wrong or fails on the way:
+    one line to the owner's phone, the only channel known to reach him. It says that something is off, not what — the
+    day's GitHub issue has the report — and nothing about the paper's contents. notify.yml keeps it to one a day."""
+    devs = load_devices()
+    if not devs:
+        print("沒有登記的裝置，不發通知。")
+        return 0
+    payload = {"title": "今天出刊有狀況", "body": "流程有一步沒走完。細節記在 GitHub 的 issue，跟編輯部說一聲就會去查。",
+               "url": "./#/", "tag": "alert-" + tw_now().date().isoformat()}
+    print(json.dumps(payload, ensure_ascii=False, indent=1))
+    return send(devs, payload)
+
+
 def cmd_test(a):
     devs = load_devices()
     if a.new_since:
@@ -421,7 +447,7 @@ def cmd_test(a):
     if not devs:
         print("沒有新加入的裝置。")
         return 0
-    return send(devs, {"title": "通知開好了，兄弟", "body": "之後每天 07:30 新的一期一出爐，我就叫你。", "url": "./#/", "tag": "test"})
+    return send(devs, {"title": "通知開好了", "body": "之後每天 07:30 新的一期一出爐，我就叫你。", "url": "./#/", "tag": "test"})
 
 
 def cmd_add(a):
@@ -467,10 +493,12 @@ def main():
     s.add_argument("--new-since")
     s = sub.add_parser("late")
     s.add_argument("--before", required=True)
+    sub.add_parser("alert")
     s = sub.add_parser("keys")
     s.add_argument("out")
     a = p.parse_args()
-    return {"add": cmd_add, "issue": cmd_issue, "remind": cmd_remind, "test": cmd_test, "late": cmd_late, "keys": cmd_keys}[a.cmd](a)
+    return {"add": cmd_add, "issue": cmd_issue, "remind": cmd_remind, "test": cmd_test, "late": cmd_late, "alert": cmd_alert,
+            "keys": cmd_keys}[a.cmd](a)
 
 
 if __name__ == "__main__":
