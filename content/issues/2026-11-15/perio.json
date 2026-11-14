@@ -1,0 +1,188 @@
+{
+  "column": "perio",
+  "date": "2026-11-15",
+  "title": "按時回來維護的病人，掉牙風險少了四成多",
+  "dek": "規律回來維護的病人，掉牙風險只有不規律者的 0.56 倍；可是維護期的專業清潔和不處理相比，Trombelli 等人 2015 年的回顧沒找到隨機試驗。",
+  "brief": "規律回來做牙周維護的病人，掉牙的風險比不規律回診的人少了四成多，這是一篇統合分析合併追蹤 5 年以上的研究算出來的。歐洲牙周病學會的指引建議，維護回診依病人的風險排，間隔最長不超過 12 個月。",
+  "takeaway": "8 篇追蹤至少 5 年的研究合起來，規律回診的病人掉牙風險是不規律者的 0.56 倍。臨床上，維護間隔照風險排在每 3 到 12 個月，並設法讓病人按時回來。",
+  "chairside": "牙周病治療做完，還要定期回來檢查和清潔。研究追蹤至少 5 年，按時回來的人，掉牙的風險比常常沒來的人少了四成多，絕對差距是 5 個百分點。所以我們會依您的狀況，安排每 3 到 12 個月回來一次。",
+  "topic_key": "perio:doi:10.1177/0022034515578910",
+  "form": "timeline",
+  "voice": "colleague",
+  "updated_at": "2026-11-14T22:44:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/US_Navy_050427-N-9693B-004_Dental_Hygienist_Liza_Siwa_conducts_a_routine_cleaning.jpg/1280px-US_Navy_050427-N-9693B-004_Dental_Hygienist_Liza_Siwa_conducts_a_routine_cleaning.jpg",
+    "width": 1280,
+    "height": 1600,
+    "alt": "牙科衛生士替一位病人做牙齒清潔。",
+    "caption": "2005 年 4 月，巴林麥納瑪海軍支援基地的診所裡，衛生士替一位士官做例行的牙齒清潔。這是美國海軍的公版照片，與文中研究的受試者無關。",
+    "credit": "美國海軍（U.S. Navy photo 050427-N-9693B-004），Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:US_Navy_050427-N-9693B-004_Dental_Hygienist_Liza_Siwa_conducts_a_routine_cleaning.jpg",
+    "made": "2005 年 4 月 27 日"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "牙周炎的主動治療做完，病人還沒畢業。**歐洲牙周病學會（EFP）**是推廣牙周科學與臨床的以歐洲為核心的全球性非營利組織，它 2020 年的指引說，治療成功的病人復發或惡化的風險仍然高。這類病人要轉進**支持性牙周治療**（supportive periodontal therapy），一般叫維護期。內容是定期回來檢查、重講潔牙、專業清除菌斑，殘留的囊袋再局部清創。"
+    },
+    {
+      "type": "p",
+      "text": "那份指引是 S3 級，德國科學醫學會聯合會分級裡要求最完整的一級：先用系統性回顧整理證據，再由各方代表照固定程序表決。建議分 A、B、0 三級，A 是強建議。"
+    },
+    {
+      "type": "p",
+      "text": "規律回診和不規律回診差多少，比較直接的數字來自哈佛牙醫學院 **Lee 等人 2015 年的統合分析**，作者裡有一位來自台北的國防醫學院。統合分析是把幾篇研究的結果，用統計方法合成一個數字。他們挑出 8 篇研究，條件是分得出規律與不規律回診兩組，而且至少追蹤 5 年。"
+    },
+    {
+      "type": "timeline",
+      "title": "維護期與長期追蹤的幾個時間點",
+      "items": [
+        {
+          "when": "第 0 年",
+          "label": "主動治療結束",
+          "note": "剛進維護期，達到治療終點的只有 11%"
+        },
+        {
+          "when": "每 3–12 個月",
+          "label": "每一次維護回診",
+          "note": "EFP 指引：依風險排，最長 12 個月，A 級"
+        },
+        {
+          "when": "追蹤 ≥5 年",
+          "label": "追蹤至少 5 年的 8 篇研究合起來",
+          "note": "掉牙風險比 0.56（Lee 2015）"
+        },
+        {
+          "when": "平均 10–13 年",
+          "label": "多數人留住大部分的牙",
+          "note": "Rattu 2023 系統性回顧"
+        },
+        {
+          "when": "第 30 年",
+          "label": "瑞典一家診所，參加預防計畫的成人",
+          "note": "依年齡組不同，平均每人掉 0.4 到 1.8 顆（Axelsson 2004）"
+        }
+      ],
+      "caption": "依 EFP S3 指引（Sanz 2020）全文與 Lee 2015、Rattu 2023、Axelsson 2004 摘要整理。各時間點來自不同研究，不是同一群病人；Axelsson 的對象是參加菌斑控制預防計畫的成人，不是治療過的牙周炎病人。"
+    },
+    {
+      "type": "p",
+      "text": "多數病人進維護期時，沒有達到研究提議的穩定終點。Rattu 等人 2023 年一篇收了 15 篇研究的系統性回顧發現，剛進維護期就達到「治療終點」的只有 11%。這個終點指的是沒有超過 4 毫米又出血的囊袋，也沒有 6 毫米以上的囊袋。"
+    },
+    {
+      "type": "p",
+      "text": "接著是一次接一次的回診。EFP 建議間隔 3 到最多 12 個月，照病人的風險和治療後的狀況排，給的是 A 級。這條要連證據等級一起讀：它是專家共識型的建議，指引自己寫明，底下的系統性回顧沒有直接處理這個問題；指引的背景說明提到，所選研究多半建議每 3 到 4 個月一次。"
+    },
+    {
+      "type": "p",
+      "text": "Lee 等人合併追蹤至少 5 年的 8 篇研究，規律回診組的掉牙風險是不規律組的 **0.56 倍**，少了四成多。"
+    },
+    {
+      "type": "p",
+      "text": "95% 信賴區間是 0.38 到 0.82；換成絕對值，兩組差 5 個百分點。這是觀察性研究合併的結果，摘要沒有報告 GRADE；另外 Trombelli 等人 2015 年的系統性回顧沒找到維護期專業機械性菌斑清除和不處理相比的隨機試驗。各篇怎麼定義「規律」，和算出來的風險比明顯有關；Lee 的作者也提醒，可能還有沒找出來的因素讓各篇結果不一致。"
+    },
+    {
+      "type": "p",
+      "text": "再往後看，結果比那個 11% 讓人放心。Rattu 等人的結論是，多數牙周病人在平均 10 到 13 年的維護裡留住了大部分的牙；有 5 年資料的 1,190 人當中，掉過牙的不到三分之一。殘留囊袋和掉牙有關：病人層級，5 毫米以上的位置超過 4 個、沒達到「控制住」的病人，掉牙的風險比是 2.57（摘要沒有明寫對照組，應是有達到者）。"
+    },
+    {
+      "type": "p",
+      "text": "瑞典有一項追了 30 年的研究：一家私人診所讓 375 位成人頭兩年每 2 個月、之後每 3 到 12 個月回來一次，30 年下來依年齡組不同，平均每人掉 0.4 到 1.8 顆牙。這群人是參加菌斑控制預防計畫的成人，不是治療過的牙周炎病人；作者提醒研究全部在一家私人診所完成，和隨機抽樣的縱向研究比較時要小心。"
+    },
+    {
+      "type": "h",
+      "text": "失聯的要找回來，數字要講兩種"
+    },
+    {
+      "type": "list",
+      "items": [
+        "沒按時回來的病人值得追。EFP 對促進病人按時維護也給 A 級；2026 年另一篇統合分析（Donnermeyer 等，34 篇研究，其中 25 篇在病人層級分析掉牙）方向一致：病人層級的勝算比（OR）是 1.50，95% 信賴區間 1.11 到 2.01，由連續資料換算，只讀了摘要。",
+        "殘留囊袋要盯緊，可是多數病人正是帶著沒達標的囊袋進維護，平均 10 到 13 年的維護後，大部分的牙還在。",
+        "跟病人解釋 0.56 時，相對的「少四成多」和絕對的「差 5 個百分點」一起講，聽起來才不會比實際大。"
+      ]
+    },
+    {
+      "type": "paper",
+      "citation": "Lee CT, Huang HY, Sun TC, Karimbux N. Impact of patient compliance on tooth loss during supportive periodontal therapy: a systematic review and meta-analysis. *J Dent Res*. 2015;94(6):777–786.",
+      "doi": "10.1177/0022034515578910",
+      "pmid": "25818586",
+      "link": "https://doi.org/10.1177/0022034515578910",
+      "evidence": "系統性回顧與統合分析：8 篇分出規律與不規律回診組、追蹤至少 5 年的研究",
+      "design": "系統性回顧與統合分析（依 PRISMA；MEDLINE 等資料庫）",
+      "sample": "8 篇有規律與不規律回診兩組、追蹤至少 5 年的研究（從 710 篇篩出）",
+      "question": "維護期回診規律與否，和掉牙有沒有關係？",
+      "access": "主角論文依 PubMed 摘要；EFP 指引依全文；Rattu、Trombelli、Donnermeyer、Axelsson 四篇依摘要"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Impact of Patient Compliance on Tooth Loss during Supportive Periodontal Therapy: A Systematic Review and Meta-analysis",
+      "publisher": "Journal of Dental Research（Lee CT 等）",
+      "date": "2015-03-27",
+      "url": "https://doi.org/10.1177/0022034515578910",
+      "note": "主角文獻。J Dent Res 2015;94(6):777–786，PMID 25818586；書目依 PubMed efetch 與 Crossref（線上 2015-03-27）。全文需訂閱，依摘要：710 篇篩選、8 篇有 RC 與 EC 組且追蹤 ≥5 年；RRTL 0.56（CI 0.38–0.82）、RDTL −0.05（CI −0.08 到 −0.01）、WDTLR −0.12（CI −0.19 到 −0.05，摘要未寫單位，正文未用）；compliance 定義與 RR 顯著相關；作者提醒未辨識變數與異質性。作者單位依 PubMed（Lee：Harvard School of Dental Medicine；Huang：National Defense Medical Center, Taipei）。摘要未報告 GRADE。"
+    },
+    {
+      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Sanz M 等）",
+      "date": "2020-07-27",
+      "url": "https://doi.org/10.1111/jcpe.13290",
+      "note": "J Clin Periodontol 2020;47(Suppl 22):4–60，PMID 32383274，PMC7891343；讀 Europe PMC 全文 XML。用到：第 8 節前言（治療成功者仍為高風險、SPC 內容、45–60 分鐘）、建議 4.1（3 到最多 12 個月，依風險與治療後狀況，A↑↑，專家共識型；背景：未在底下的系統性回顧直接處理，研究多為 3–4 個月，2014 年歐洲預防研討會依 Trombelli 2015 建議每年 2–4 次）、建議 4.2（強力促進遵從，A↑↑，全體一致）、Table 4 分級（A／B／0）、方法（AWMF 與 GRADE、15 篇系統性回顧、結構化共識）。"
+    },
+    {
+      "title": "Prevalence of stable and successfully treated periodontitis subjects and incidence of subsequent tooth loss within supportive periodontal care: A systematic review with meta-analyses",
+      "publisher": "Journal of Clinical Periodontology（Rattu V 等）",
+      "date": "2023-07-04",
+      "url": "https://doi.org/10.1111/jcpe.13835",
+      "note": "J Clin Periodontol 2023;50(10):1371–1389，PMID 37402624。依 PubMed 摘要：15 篇研究、12,884 人；SPC 起點達到 endpoints of therapy 11.00%；有 5 年 SPC 資料的 1,190 人中掉牙者不到三分之一；未達 controlled periodontitis（PPD ≥5 mm 部位 ≤4 個）RR 2.57；結論：平均 平均 10–13 年 SPC 中多數病人保住大部分牙。"
+    },
+    {
+      "title": "Effect of professional mechanical plaque removal performed on a long-term, routine basis in the secondary prevention of periodontitis: a systematic review",
+      "publisher": "Journal of Clinical Periodontology（Trombelli L 等）",
+      "date": "2015-04-01",
+      "url": "https://doi.org/10.1111/jcpe.12339",
+      "note": "J Clin Periodontol 2015;42(Suppl 16):S221–S236，PMID 25495875。依 PubMed 摘要：未找到維護期 PMPR 與不治療比較的 RCT；納入 19 篇前瞻研究。"
+    },
+    {
+      "title": "Does adherence to supportive periodontal care lower the risk of caries and related tooth loss? A systematic review and meta-analysis",
+      "publisher": "Periodontology 2000（Donnermeyer D 等）",
+      "date": "2026-06-23",
+      "url": "https://doi.org/10.1111/prd.70060",
+      "note": "線上先行，PMID 42334057。依 PubMed 摘要：34 篇研究、9,685 位病人；其中 25 篇為病人層級的掉牙分析（另 13 篇牙齒層級、1 篇根面齲）；病人層級，較不按時者出現掉牙的較多，OR 1.50（95% CI 1.11–2.01）。"
+    },
+    {
+      "title": "The long-term effect of a plaque control program on tooth mortality, caries and periodontal disease in adults. Results after 30 years of maintenance",
+      "publisher": "Journal of Clinical Periodontology（Axelsson P、Nyström B、Lindhe J）",
+      "date": "2004-09-01",
+      "url": "https://doi.org/10.1111/j.1600-051X.2004.00563.x",
+      "note": "J Clin Periodontol 2004;31(9):749–757，PMID 15312097。依 PubMed 摘要：375 人試驗組；頭 2 年每 2 個月、第 3–30 年每 3–12 個月；30 年間各年齡組掉牙 0.4–1.8 顆（每人平均）；作者提醒全部在一家私人診所完成。日期以期刊出版月份填。"
+    },
+    {
+      "title": "About the EFP",
+      "publisher": "European Federation of Periodontology",
+      "date": "2026-11-14",
+      "url": "https://www.efp.org/about-the-efp/",
+      "note": "自述：global non-profit organisation with a European core that promotes periodontal science and practice。日期為查閱日。"
+    },
+    {
+      "title": "AWMF Guidance Manual and Rules for Guideline Development, Version 2.1",
+      "publisher": "德國科學醫學會聯合會（AWMF）常設指引委員會",
+      "date": "2023-09-05",
+      "url": "https://www.awmf.org/fileadmin/user_upload/dateien/downloads_regelwerk/en_20230905_AWMF-Regelwerk_2023_V2.1.pdf",
+      "note": "S 分級：S3 為證據加共識型（系統性檢索評讀文獻、代表性委員會、結構化共識），要求最完整。"
+    },
+    {
+      "title": "File:US Navy 050427-N-9693B-004 Dental Hygienist Liza Siwa conducts a routine cleaning.jpg",
+      "publisher": "Wikimedia Commons（U.S. Navy）",
+      "date": "2005-04-27",
+      "url": "https://commons.wikimedia.org/wiki/File:US_Navy_050427-N-9693B-004_Dental_Hygienist_Liza_Siwa_conducts_a_routine_cleaning.jpg",
+      "note": "美國海軍照片，公版。說明：2005 年 4 月 27 日，巴林麥納瑪海軍支援基地的海軍診所，衛生士為一位士官做例行清潔。"
+    }
+  ]
+}
