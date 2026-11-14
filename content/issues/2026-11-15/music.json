@@ -1,0 +1,238 @@
+{
+  "column": "music",
+  "date": "2026-11-15",
+  "title": "巴哈的親筆譜不見了，最早的抄本只有一份",
+  "dek": "1：巴哈這首最有名的管風琴曲，現存最早的抄本只有一份，抄的人不是他。",
+  "brief": "《D 小調觸技曲與賦格》是巴哈最有名的管風琴曲，可是他的親筆譜沒有留下來，現存最早、年代又接近他的抄本只有一份，是管風琴家林克抄的，收在柏林國家圖書館。這首曲子 1833 年才第一次印成樂譜，經手整理的人有孟德爾頌。",
+  "topic_key": "music:bach-bwv565",
+  "form": "number",
+  "voice": "listener",
+  "updated_at": "2026-11-15T00:50:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Toccata_and_Fugue_in_D_minor%2C_BWV_565_%28Johannes_Ringk_manuscript%29.jpg/1280px-Toccata_and_Fugue_in_D_minor%2C_BWV_565_%28Johannes_Ringk_manuscript%29.jpg",
+    "width": 1280,
+    "height": 1964,
+    "alt": "一頁泛黃的手抄樂譜，頁首有一行手寫標題，下面是一行行手繪的五線譜。",
+    "caption": "林克抄的《D 小調觸技曲與賦格》首頁，約 1740–1759 年，現藏柏林國家圖書館（編號 Mus.ms. Bach P 595）。這是目前年代最早的抄本；維基共享資源上的這張已由編者用軟體移除後人加上的鉛筆標記。",
+    "credit": "Johannes Ringk 抄寫；柏林國家圖書館數位化",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Toccata_and_Fugue_in_D_minor,_BWV_565_(Johannes_Ringk_manuscript).jpg",
+    "made": "約 1740–1759 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "管風琴的一個高音突然衝出來，顫一下，停住；接著一串音從高處嘩啦啦往下滑，落在一個厚重的和弦上，再停一下。這是**《D 小調觸技曲與賦格》**，傳統上算是德國人巴哈寫的管風琴曲，時間大約是他二十歲上下、在小城阿恩施塔特的教堂當管風琴手的那幾年。"
+    },
+    {
+      "type": "p",
+      "text": "電影常拿它配恐怖和壞人。1931 年的《變身怪醫》用過；1954 年的《海底兩萬哩》裡，尼莫船長在潛艇上彈這首，彈完就去攻擊一艘船；1962 年的《歌劇魅影》也用了。1940 年迪士尼的動畫《幻想曲》，開場第一首同樣是它，用的是指揮家史托考斯基改編的管弦樂版。"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子要從一個數字講起：1。巴哈自己寫的譜沒有留下來，現存最早、年代又接近他的抄本，**只有一份**。"
+    },
+    {
+      "type": "h",
+      "text": "一份別人抄的譜"
+    },
+    {
+      "type": "p",
+      "text": "抄譜的人叫林克（Johannes Ringk），1717 年生的管風琴家，1740 年起在柏林教音樂，專門抄別人的曲子，有些曲子靠他才留下來。他這份沒有標年份：柏林國家圖書館估計抄在 1740 到 1760 年之間，編巴哈全集的一位編輯估得更早，1730 到 1740 年。巴哈 1750 年過世，所以這份譜可能在他活著時就抄好了，也可能是身後才抄。"
+    },
+    {
+      "type": "p",
+      "text": "封面用義大利文寫著「Toccata con Fuga」，下面署名巴哈。觸技曲（toccata）的字面意思是「觸碰」，是管風琴手拿來開場、讓手指在鍵盤上跑給人看的曲子；賦格（fugue）是一段旋律先由一個聲部唱出來，其他聲部一個接一個追上去。"
+    },
+    {
+      "type": "timeline",
+      "title": "這首曲子的幾個年份",
+      "items": [
+        {
+          "when": "1703–1707",
+          "label": "傳統說法的寫作年代",
+          "note": "巴哈在阿恩施塔特當管風琴手；實際年代沒有定論"
+        },
+        {
+          "when": "1730–1760",
+          "label": "林克抄下它",
+          "note": "那份抄本沒標年份，各家估計落在這一段"
+        },
+        {
+          "when": "1750",
+          "label": "巴哈過世",
+          "note": ""
+        },
+        {
+          "when": "1833",
+          "label": "第一次印成樂譜",
+          "note": "孟德爾頌參與整理的一套巴哈管風琴曲"
+        },
+        {
+          "when": "1840.8.6",
+          "label": "孟德爾頌在萊比錫公開演奏",
+          "note": ""
+        },
+        {
+          "when": "1940.11.13",
+          "label": "《幻想曲》在紐約首映",
+          "note": "1942 年戲院版剪掉這段，1946 年放回"
+        }
+      ],
+      "caption": "年份依各來源整理；抄本與寫作年代都是估計。"
+    },
+    {
+      "type": "h",
+      "text": "只有一份，就有人問是不是真的"
+    },
+    {
+      "type": "p",
+      "text": "1981 年，研究巴哈的學者威廉斯（Peter Williams）出來質疑：這首也許是 1730 年以後、甚至 1750 年以後才寫的，或者是把一首失傳的小提琴獨奏曲改編成管風琴曲。1995 年又有學者從風格上否定它，還指出開頭就用了一個巴哈時代的管風琴很少有的 C♯ 音。2006 年有人用統計分析比對，結論是這首賦格不像巴哈慣有的寫法，可是也找不到更像的作者。巴哈研究的權威沃爾夫（Christoph Wolff）說，這是個假問題。巴哈作品目錄至今還是把它列在巴哈名下。"
+    },
+    {
+      "type": "p",
+      "text": "荷蘭巴哈協會的說法兩邊都占：它承認這首「其實不太像巴哈」，也說寫在阿恩施塔特可以解釋一件事，那裡的管風琴缺了一組低八度的聲音，開頭那條隔八度疊著彈的線，大概是拿來補的；可是這種寫法，巴哈後來的管風琴曲裡一首也找不到。我自己的看法是，沒有人提得出第二個名字，一份抄本加一行署名，就是我們手上的全部。拿它當巴哈聽不吃虧，先不判案，也不吃虧。"
+    },
+    {
+      "type": "h",
+      "text": "巴哈死後 83 年才印出來"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子第一次印成樂譜，是 **1833 年**，離巴哈過世已經 83 年。它收在一套三冊的「少人知道的巴哈管風琴曲」裡的第三冊，這套書是作曲家孟德爾頌（Felix Mendelssohn）構想、也參與整理的，他 1830 年前後就把這首排進自己的演奏曲目。1840 年 8 月 6 日，他在萊比錫公開演奏它。"
+    },
+    {
+      "type": "music",
+      "composer": "巴哈（Johann Sebastian Bach）",
+      "work": "D 小調觸技曲與賦格，BWV 565",
+      "work_original": "Toccata and Fugue in D minor, BWV 565",
+      "composed": "傳統說法約 1703–1707 年；寫作年代與作者都有爭議",
+      "performers": "瓦爾哈（Helmut Walcha）管風琴",
+      "recording": "Archiv Produktion，1956 年 9 月錄於荷蘭阿爾克馬爾聖勞倫斯教堂（1725 年造的施尼特格管風琴）",
+      "duration": "約 9 分鐘",
+      "movements": [
+        "Toccata",
+        "Fuga"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Bach Toccata and Fugue in D minor BWV 565 Helmut Walcha",
+        "artist_hint": "Walcha",
+        "track_filter": [
+          "565",
+          "Toccata"
+        ]
+      }
+    },
+    {
+      "type": "h",
+      "text": "現在聽到的"
+    },
+    {
+      "type": "p",
+      "text": "現在聽到的是瓦爾哈（Helmut Walcha）彈的版本。他是德國管風琴家，眼睛看不見。1956 年 9 月他在荷蘭阿爾克馬爾的聖勞倫斯教堂錄了這首，那把琴 1725 年造好，巴哈還活著的時候就在了。德意志留聲機公司說，這是他們第一次錄立體聲，挑的就是這首。"
+    },
+    {
+      "type": "p",
+      "text": "開頭先別找旋律，聽那個停頓。一條單線從高音衝出來，兩手隔八度同彈，其中一個音上顫一下，一串音往下滑，落在和弦上，然後整座教堂靜下來。這樣的衝和停接連來好幾回。這一整段就是觸技曲，不到全曲的三分之一，全曲約九分鐘。"
+    },
+    {
+      "type": "p",
+      "text": "賦格開始以後，主題是一串密密的、一刻不停的小音符，先由一個聲部說出來，其他聲部一個一個疊上去。中間有一次，主題交給腳踏板獨奏：管風琴腳下也有一排鍵盤，用腳彈低音，這時整座琴只剩腳在唱。"
+    },
+    {
+      "type": "p",
+      "text": "最後一段，譜上標著「宣敘調」，意思是像說話一樣自由地唱。速度忽快忽慢，換了五次，收在一個小調和弦上。"
+    },
+    {
+      "type": "h",
+      "text": "換成整個樂團"
+    },
+    {
+      "type": "p",
+      "text": "指揮家史托考斯基（Leopold Stokowski）1927 年和費城管弦樂團錄了自己改編的管弦樂版。1940 年《幻想曲》在紐約首映，開場用的就是他這一版：先是藍光與金光下的樂團，然後慢慢融成抽象的線條、形狀和雲。"
+    },
+    {
+      "type": "p",
+      "text": "替這段做動畫的是德國抽象動畫家費辛格（Oskar Fischinger）。他 1938 年底進迪士尼，迪士尼退了他三卷試拍，1939 年 10 月他離開，片子還沒做完。1942 年的戲院版把這一整段剪掉，1946 年重映才放回去。"
+    },
+    {
+      "type": "p",
+      "text": "想接著聽巴哈的管風琴，有《C 小調帕薩卡利亞與賦格》（BWV 582）：同樣是他的大曲，作者沒有爭議，可以拿來跟這首比。也可以回頭聽史托考斯基那一版，同一首曲子，換成整個樂團，聽哪些聲音換了樂器。"
+    },
+    {
+      "type": "p",
+      "text": "柏林國家圖書館給那份抄本的編號是 Mus.ms. Bach P 595，圖書館已經把它掃描上線。頭圖那一頁，就是掃描裡這首曲子的第一頁。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Toccata and Fugue in D minor, BWV 565",
+      "publisher": "Wikipedia",
+      "date": "2026-11-14",
+      "url": "https://en.wikipedia.org/wiki/Toccata_and_Fugue_in_D_minor,_BWV_565",
+      "note": "查閱日。親筆譜遺失、林克抄本年代各說（1740–1760／1730–1740／1730 年代中）、1981 年威廉斯、1995 年克勞斯、2006 年統計分析、沃爾夫說法、1833 年初版與孟德爾頌、1840 年 8 月 6 日萊比錫演出、史托考斯基 1927 年錄音、《幻想曲》與 1942／1946 年剪放、恐怖片使用（1931、1954、1962）、曲式與約 9 分鐘"
+    },
+    {
+      "title": "BWV 565 Toccata and fugue in D minor",
+      "publisher": "荷蘭巴哈協會（Nederlandse Bachvereniging）",
+      "date": "2026-11-14",
+      "url": "https://bachvereniging.nl/en/bwv/bwv-565",
+      "note": "「Bach's own score has not survived」；「actually not very Bach-like」；阿恩施塔特管風琴缺 16 呎音栓、八度重疊、後期管風琴曲未見此寫法；年代 1703–1707"
+    },
+    {
+      "title": "Toccata und Fuge d-Moll, BWV 565（Mus.ms. Bach P 595，林克抄本）",
+      "publisher": "德意志數位圖書館／柏林國家圖書館",
+      "date": "2026-11-14",
+      "url": "https://www.deutsche-digitale-bibliothek.de/item/EESLH4TEYATCNNCLVEI3NIXQ6YOJBOQD",
+      "note": "抄本紀錄：管風琴用抄本、1740–1760、已數位化、公版"
+    },
+    {
+      "title": "Johannes Ringk",
+      "publisher": "Wikipedia",
+      "date": "2026-11-14",
+      "url": "https://en.wikipedia.org/wiki/Johannes_Ringk",
+      "note": "1717 年生、1740 年起在柏林教音樂、管風琴家、以抄別人曲子聞名。部分學者推測 BWV 565 為林克自作，未獲證實，正文不採"
+    },
+    {
+      "title": "Fantasia (1940 film)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-14",
+      "url": "https://en.wikipedia.org/wiki/Fantasia_(1940_film)",
+      "note": "1940 年 11 月 13 日百老匯劇院首映；開場實拍樂團藍金光轉抽象；費辛格 1938 年底進迪士尼、三卷試拍遭退、1939 年 10 月離開；1942 年版剪掉此段"
+    },
+    {
+      "title": "Helmut Walcha – Organist mit Leib und Seele",
+      "publisher": "Deutsche Grammophon",
+      "date": "2026-11-14",
+      "url": "https://www.deutschegrammophon.com/de/kuenstler/diverse-kuenstler/neuigkeiten/helmut-walcha-organist-mit-leib-und-seele-263124",
+      "note": "「Und wieder war es die Toccata in d-Moll, die er 1956 für die erste Stereoaufnahme der DG auswählte」；瓦爾哈失明"
+    },
+    {
+      "title": "Helmut Walcha (1907–1991): A Centenary Tribute",
+      "publisher": "Pipedreams（美國公共廣播）",
+      "date": "2007-10-01",
+      "url": "https://www.pipedreams.org/episode/2007/10/01/helmut-walcha-1907-1991-a-centenary-tribute",
+      "note": "BWV 565 錄於 1956 年 9 月；1725 年 F. C. Schnitger 管風琴，阿爾克馬爾聖勞倫斯教堂"
+    },
+    {
+      "title": "File:Toccata and Fugue in D minor, BWV 565 (Johannes Ringk manuscript).jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-14",
+      "url": "https://commons.wikimedia.org/wiki/File:Toccata_and_Fugue_in_D_minor,_BWV_565_(Johannes_Ringk_manuscript).jpg",
+      "note": "頭圖：Mus.ms. Bach P 595 首頁；Commons 說明已用 GIMP 移除後人鉛筆標記"
+    },
+    {
+      "title": "File:BachToccataAndFugueInDMinorOpening.png",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-14",
+      "url": "https://commons.wikimedia.org/wiki/File:BachToccataAndFugueInDMinorOpening.png",
+      "note": "開頭譜例，只用來核對聽感描述（單線、顫音、下行音、停頓）；作者註明音符順序尚待整理，所以不寫 motif"
+    }
+  ]
+}
