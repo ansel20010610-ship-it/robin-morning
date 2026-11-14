@@ -38,5 +38,12 @@
       "mystery"
     ],
     "note": "先發班寫了牙周欄：按時回來維護的病人，掉牙風險少了四成多（timeline／colleague）；審稿判定修正即可、全部依意見修正，忠實度核對已修"
+  },
+  "concerts": {
+    "finished_at": "2026-11-15T05:32:39+08:00",
+    "missing": [
+      "concerts.json 未查核"
+    ],
+    "note": "新增 0、更新 0（prune 移除 2）；補查沒做完（pbc、newaspect、tanart、udn、ntch、wwy、news 未查完）；歷史上的今天 1971"
   }
 }
