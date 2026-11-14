@@ -1,1 +1,139 @@
-{"last": "2026-11-09", "checked": ["mna", "pbc", "newaspect", "tanart", "kham", "udn", "ntch", "ntt", "wwy", "news"]}
+{
+  "last": "2026-11-09",
+  "date": "2026-11-15",
+  "sources": {
+    "mna": {
+      "urls": [
+        "https://www.mna.com.tw",
+        "https://www.mna.com.tw/concerts_detail.html?id=777",
+        "https://www.mna.com.tw/concerts_detail.html?id=782"
+      ],
+      "seen": [
+        {
+          "title": "提勒曼與柏林國家歌劇院管弦樂團",
+          "verdict": "已列入",
+          "id": "thielemann-staatskapelle-berlin-2026"
+        },
+        {
+          "title": "庫倫奇斯與烏托邦管弦樂團",
+          "verdict": "已列入",
+          "id": "currentzis-utopia-2026"
+        },
+        {
+          "title": "王羽佳與馬勒室內樂團",
+          "verdict": "已列入",
+          "id": "yuja-wang-mco-2026"
+        },
+        {
+          "title": "郎朗鋼琴獨奏會",
+          "verdict": "已列入",
+          "id": "lang-lang-recital-2026"
+        },
+        {
+          "title": "Philharmonix 12/15 台北國家音樂廳",
+          "verdict": "不收",
+          "why": "3分：維也納柏林首席組成的跨界合奏，曲目混電影配樂與流行歌，台北場需4分"
+        },
+        {
+          "title": "Marc André 低音提琴與吉他 11/20 台北",
+          "verdict": "不收",
+          "why": "2–3分：跨界小品拼盤（Hallelujah、Fly Me to the Moon），非主流名作"
+        },
+        {
+          "title": "Diana Krall",
+          "verdict": "不收",
+          "why": "爵士流行，不在範圍"
+        },
+        {
+          "title": "SM Classics Live 2026",
+          "verdict": "不收",
+          "why": "韓流流行，不在範圍"
+        }
+      ]
+    },
+    "ntt": {
+      "urls": [
+        "https://www.npac-ntt.org/program"
+      ],
+      "seen": [
+        {
+          "title": "威斯培衛",
+          "verdict": "已列入",
+          "id": "wispelwey-bach-suites-2026"
+        },
+        {
+          "title": "陳必先",
+          "verdict": "已列入",
+          "id": "chen-pi-hsien-recital-2026"
+        },
+        {
+          "title": "柴一與貝九",
+          "verdict": "已列入",
+          "id": "ntt-chaikovsky1-beethoven9-2027"
+        },
+        {
+          "title": "水藍、蔣啟真與國臺交",
+          "verdict": "已列入",
+          "id": "ntso-lan-shui-chiang-2027"
+        },
+        {
+          "title": "安德烈亞・范佐 12/7",
+          "verdict": "不收",
+          "why": "先前已判不收（舊紀錄），搜尋查不到演出者資料，不判"
+        },
+        {
+          "title": "《為愛而生》11/28、《彌賽亞》12/14、歌劇《蝙蝠》11/15、《四季翱翔》",
+          "verdict": "不收",
+          "why": "頁面只有標題，查不到演出者與曲目，無法評分，明天再看"
+        },
+        {
+          "title": "狂美《璀璨經典百老匯》交響音樂會、《進擊的巨人》音樂會、星際效應電影音樂會",
+          "verdict": "不收",
+          "why": "動漫、電影配樂、拼盤，排除"
+        }
+      ]
+    },
+    "wwy": {
+      "urls": [
+        "https://www.npac-weiwuying.org/programs"
+      ],
+      "error": "頁面只載入到11/15黃瓊儀獨奏會，12月後要點載入更多，沒看到"
+    },
+    "kham": {
+      "urls": [
+        "https://www.kham.com.tw"
+      ],
+      "seen": [
+        {
+          "title": "SHOW MUSICAL《WILD WILD》",
+          "verdict": "不收",
+          "why": "流行演唱會式音樂劇，無演出者與日期資料"
+        }
+      ]
+    },
+    "ntch": {
+      "error": "npac-ntch.org 首頁只回傳瀏覽器提示，沒有節目資料"
+    },
+    "pbc": {
+      "error": "www.pbc.com.tw 憑證錯誤，連不上"
+    },
+    "newaspect": {
+      "error": "newaspect.com.tw 連線被拒"
+    },
+    "tanart": {
+      "error": "tanart.com.tw 網域解析失敗"
+    },
+    "udn": {
+      "error": "沒有打開 udnfunlife 與時藝多媒體；只讀了牛耳樂季的 udn 新聞，弗洛雷斯與馬友友已演完"
+    },
+    "news": {
+      "urls": [
+        "WebSearch：交響樂團 來台 2027",
+        "WebSearch：貝九 12月 2026 跨年 台中",
+        "WebSearch：弗洛雷斯",
+        "WebSearch：馬友友"
+      ],
+      "error": "只做了部分關鍵字，搜尋結果薄，沒查誠品、年代、KKTIX、wekengo"
+    }
+  }
+}

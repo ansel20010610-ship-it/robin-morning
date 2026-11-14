@@ -107,5 +107,13 @@
    "https://en.wikipedia.org/wiki/Apollo_12",
    "https://www.nasa.gov/mission/apollo-12/"
   ]
+ },
+ "2026-11-15": {
+  "year": 1971,
+  "text": "英特爾公司發表 4004，第一顆商用的單晶片微處理器，約 2300 個電晶體，把電腦的運算核心縮進一片晶片，個人電腦的路從這裡鋪起。",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Intel_4004",
+   "https://en.wikipedia.org/wiki/November_15"
+  ]
  }
 }

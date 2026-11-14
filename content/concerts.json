@@ -66,13 +66,6 @@
       "program": "布拉姆斯《第一號鋼琴協奏曲》、德弗札克《第八號交響曲》",
       "shows": [
         {
-          "date": "2026-11-14",
-          "time": "14:30",
-          "city": "高雄",
-          "venue": "衛武營國家藝術文化中心音樂廳",
-          "tickets": "https://www.opentix.life/event/2061379215727935489"
-        },
-        {
           "date": "2026-11-15",
           "time": "14:30",
           "city": "台中",
@@ -1467,95 +1460,6 @@
         {
           "title": "OPENTIX 售票頁",
           "url": "https://www.opentix.life/event/2079139102634627073"
-        }
-      ]
-    },
-    {
-      "id": "lin-weichi-chopin-2026",
-      "title": "林瑋祺全蕭邦鋼琴獨奏會",
-      "kind": "獨奏",
-      "rating": 3,
-      "why": "1999 年台北國際蕭邦鋼琴大賽首獎林瑋祺，整晚只彈蕭邦，壓軸是第三號鋼琴奏鳴曲，前面排了晚期的《船歌》和《幻想波蘭舞曲》。",
-      "who": "林瑋祺（鋼琴）",
-      "program": "全場蕭邦。臺中歌劇院頁面：《船歌》Op.60、夜曲 Op.62、《第二號敘事曲》、《幻想波蘭舞曲》、三首馬厝卡、《第三號鋼琴奏鳴曲》；衛武營與 OPENTIX 頁面：《船歌》Op.60、兩首夜曲 Op.27、降 A 大調圓舞曲 Op.42、《幻想波蘭舞曲》Op.61、三首馬厝卡 Op.56、《第三號鋼琴奏鳴曲》Op.58",
-      "price": "台中 NT$800；高雄 NT$500–1,200",
-      "shows": [
-        {
-          "date": "2026-11-14",
-          "time": "19:30",
-          "city": "台中",
-          "venue": "臺中國家歌劇院小劇場",
-          "tickets": "https://www.opentix.life/event/2093894064069353473"
-        },
-        {
-          "date": "2026-11-21",
-          "time": "19:30",
-          "city": "高雄",
-          "venue": "衛武營國家藝術文化中心表演廳",
-          "tickets": "https://www.opentix.life/event/2093894064069353473"
-        }
-      ],
-      "added": "2026-11-09",
-      "uids": [
-        "6a9ef12d26b324165c32e37b"
-      ],
-      "sources": [
-        {
-          "title": "臺中國家歌劇院節目頁",
-          "url": "https://www.npac-ntt.org/program/events/c-OaKFx7eXYE9"
-        },
-        {
-          "title": "衛武營節目頁",
-          "url": "https://www.npac-weiwuying.org/programs/6aa0d34086975700087e7ba5?lang=zh"
-        },
-        {
-          "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/event/2093894064069353473"
-        }
-      ]
-    },
-    {
-      "id": "mulou-choir-voices-2026",
-      "title": "木樓合唱團《人聲旅歌》",
-      "kind": "合唱",
-      "rating": 3,
-      "why": "木樓合唱團把西貝流士 Op.18 六首無伴奏男聲合唱整組排進節目，另有拉脫維亞作曲家艾森瓦茲的《北極光》，和委託臺灣作曲家寫的世界首演新作。",
-      "who": "彭孟賢（指揮）、王乃加（鋼琴）、木樓合唱團",
-      "program": "西貝流士《六首無伴奏男聲合唱歌曲》Op.18、Distler《三首無伴奏男聲合唱藝術歌曲》Op.13、Mealor《噢，至聖聖母瑪利亞》、拉烏塔瓦拉《給啤酒的小夜曲》、Dzenītis《你剛剛去哪了？》《水滴》、艾森瓦茲《永恆之光》《北極光》、委託臺灣作曲家的世界首演新作；台中場另有劉聖賢《祈禱》、林育伶《六月茉莉花》",
-      "price": "台中場 NT$400／600／900／1,200",
-      "note": "台中場 65 歲以上、身障者（含一名陪同）五折",
-      "shows": [
-        {
-          "date": "2026-11-14",
-          "time": "19:30",
-          "city": "台中",
-          "venue": "臺中國家歌劇院中劇院",
-          "tickets": "https://www.opentix.life/event/2100491251944562689"
-        },
-        {
-          "date": "2026-11-16",
-          "time": "19:30",
-          "city": "高雄",
-          "venue": "衛武營國家藝術文化中心音樂廳",
-          "tickets": "https://www.opentix.life/event/2100491251944562689"
-        }
-      ],
-      "added": "2026-11-09",
-      "uids": [
-        "6ab55ab226b324165c32e534"
-      ],
-      "sources": [
-        {
-          "title": "臺中國家歌劇院節目頁",
-          "url": "https://www.npac-ntt.org/program/events/c-SB3w2nLNhJ5"
-        },
-        {
-          "title": "衛武營節目頁",
-          "url": "https://www.npac-weiwuying.org/programs/6a59cc1e89f59900078c5613?lang=zh"
-        },
-        {
-          "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/event/2100491251944562689"
         }
       ]
     },
