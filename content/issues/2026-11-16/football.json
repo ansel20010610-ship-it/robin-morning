@@ -70,11 +70,11 @@
     },
     {
       "type": "p",
-      "text": "這是國家聯賽 A3 組的最後一輪。國家聯賽是歐洲各國國家隊之間的聯賽，四隊一組踢六場，前兩名進八強。賽前西班牙 15 分、英格蘭 12 分，兩隊都已經確定晉級，剩下的是誰拿第一。英格蘭贏球之後也是 15 分，靠淨勝球比較多排第一，西班牙第二。9 月在溫布利球場，是西班牙 3 比 2 贏英格蘭。"
+      "text": "這是國家聯賽 A3 組的最後一輪。國家聯賽是歐洲各國國家隊之間的聯賽，四隊一組踢六場，前兩名進八強。賽前西班牙 15 分、英格蘭 12 分，兩隊都已經確定晉級，剩下的是誰拿第一。打完英格蘭也是 15 分。9 月在溫布利球場，是西班牙 3 比 2 贏英格蘭，兩場各贏一場、總進球 5 比 5，歐足聯的同分規則要先比直接對戰，平了才看總淨勝球。ESPN 的積分表把英格蘭排第一（淨勝球 +13，西班牙 +8）。官方積分表我沒找到，這個名次以 ESPN 為準。"
     },
     {
       "type": "p",
-      "text": "英格蘭總教練圖赫爾賽前說，他們要的就是歐洲時間週日晚上、在西班牙的這場決賽。對手是今年夏天的世界盃冠軍。"
+      "text": "英格蘭總教練圖赫爾賽前說，他們要的就是週日在西班牙的這場「決賽」。對手是今年夏天的世界盃冠軍。"
     },
     {
       "type": "p",
@@ -260,7 +260,7 @@
       "publisher": "ESPN",
       "date": "2026-11-15",
       "url": "https://www.espn.com/soccer/match/_/gameId/401861175",
-      "note": "11 月 16 日 05:45（台灣）讀到比賽狀態已是終場，英格蘭 3 比 2；進球 Kane 45' 點球、Konsa 53'、White 57'、Oyarzabal 65' 點球、Nico Williams 75'（Yamal 助攻）；Anderson 63' 紅牌（放倒 Yamal）；Cubarsí 41' 犯規送點球、45' 被 Huijsen 換下（沒標傷退）；Pedri、Fermín 45' 上場；Yamal 58' 黃牌、沒被換下；Gordon 先發、83' 被換下；Joan García 板凳未上；賽前 A3 積分（西班牙 15、英格蘭 12）；網頁本身抓不到，內容取自 ESPN 比賽紀錄資料（site.api.espn.com/apis/site/v2/sports/soccer/uefa.nations/summary?event=401861175）；開球 11 月 15 日 19:45 UTC（台灣 11 月 16 日 03:45）；ESPN 的積分榜資料尚未更新，最終排名未見官方表"
+      "note": "11 月 16 日 05:45（台灣）讀到比賽狀態已是終場，英格蘭 3 比 2；進球 Kane 45' 點球、Konsa 53'、White 57'、Oyarzabal 65' 點球、Nico Williams 75'（Yamal 助攻）；Anderson 63' 紅牌（放倒 Yamal）；Cubarsí 41' 犯規送點球、45' 被 Huijsen 換下（沒標傷退）；Pedri、Fermín 45' 上場；Yamal 58' 黃牌、沒被換下；Gordon 先發、83' 被換下；Joan García 板凳未上；賽前 A3 積分（西班牙 15、英格蘭 12）；網頁本身抓不到，內容取自 ESPN 比賽紀錄資料（site.api.espn.com/apis/site/v2/sports/soccer/uefa.nations/summary?event=401861175）；開球 11 月 15 日 19:45 UTC（台灣 11 月 16 日 03:45）；11 月 16 日再讀 summary，積分榜已更新：英格蘭 15 分、淨勝球 +13 排第一，西班牙 15 分、+8 排第二，克羅埃西亞 6 分、捷克 0 分；未見歐足聯官方最終表；Kane 的點球標 45'（上半場補時 4 分鐘）"
     },
     {
       "title": "Two goals, a sending-off and a penalty: 10 crazy minutes set England v Spain alight",
