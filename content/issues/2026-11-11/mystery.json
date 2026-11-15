@@ -121,6 +121,11 @@
         ]
       ],
       "caption": "依論文摘要、論文片段與新聞報導整理。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-15）",
+      "text": "兩處更正。一、標題、摘要與正文說青海那顆球「約 5 公尺大」，還拿它和平均約 30 公分的球比大小。論文寫的「約 5 公尺」是視直徑，作者明說它不是球的真實直徑，比較接近發光的範圍，所以不能拿來比實際大小。二、正文與表格把 Wu 的批評寫成針對土壤矽說；Wu 說的是「許多模型」都解釋不了完全屏蔽的機艙裡出現的球狀閃電，沒有點名矽說，球穿過關著的玻璃窗是他自己要解釋的現象。依據：Cen、Yuan、Xue 2014 年《物理評論快報》全文；Wu 2016 年《科學報告》。"
     }
   ],
   "sources": [
@@ -220,6 +225,14 @@
       "date": "2025",
       "url": "https://arxiv.org/abs/2502.02653",
       "note": "讀 arXiv 版摘要；期刊 DOI 10.3390/universe11090284"
+    },
+    {
+      "title": "Observation of the Optical and Spectral Characteristics of Ball Lightning",
+      "publisher": "Physical Review Letters 112, 035001",
+      "date": "2014-01-17",
+      "url": "https://fisherp.mit.edu/wp-content/uploads/2020/04/PhysRevLett.112.035001.pdf",
+      "note": "更正依據：the apparent diameter is not the real diameter of the BL。"
     }
-  ]
+  ],
+  "corrected_at": "2026-11-15T19:31:00+08:00"
 }

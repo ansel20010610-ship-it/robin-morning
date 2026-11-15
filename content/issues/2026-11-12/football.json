@@ -256,6 +256,11 @@
         ]
       ],
       "caption": "資料：巴薩官網與 ESPN 賽程，西班牙時間加 7 小時換成台灣時間。12 月 6 日對塞爾塔的開球時間還沒定。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-15）",
+      "text": "亞馬爾那段寫「奧亞薩瓦爾因流感退出，由 Víctor Muñoz 補進」不對。Muñoz 是亞馬爾受傷後，德拉富恩特緊急徵召的替補；奧亞薩瓦爾是因流感缺席捷克一場，足協說他會回來踢英格蘭，沒有人替他補位。依據：Goal 11 月 9 日報導、ESPN 報導。"
     }
   ],
   "sources": [
@@ -454,6 +459,14 @@
       "date": "2026-05-23",
       "url": "https://commons.wikimedia.org/wiki/File:UWCL_2025-26_Final_A40.jpg",
       "note": "頭圖，CC BY 4.0，MichaelEmilio"
+    },
+    {
+      "title": "After Yamal's injury, De la Fuente calls up emergency replacement for Spain camp",
+      "publisher": "Goal",
+      "date": "2026-11-09",
+      "url": "https://www.goal.com/en-in/news/after-yamal-s-injury-de-la-fuente-calls-up-emergency-replacement-for-spain-camp/bltb0d3919f1a81b3a7",
+      "note": "更正依據：亞馬爾受傷後徵召 Víctor Muñoz；奧亞薩瓦爾只缺布拉格一場。"
     }
-  ]
+  ],
+  "corrected_at": "2026-11-15T19:31:00+08:00"
 }

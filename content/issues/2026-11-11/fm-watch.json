@@ -141,6 +141,11 @@
     {
       "type": "p",
       "text": "除 SteamDB 的人數外，以上全是官方自己的描述。發售日有沒有出狀況、Steam 上的評論往哪個方向走、資料缺得多不多，目前都還沒有可引用的資料。另外，官方 11 月 2 日說過的發售後第一個更新，到現在還沒有日期。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-15）",
+      "text": "Touch 與 Mobile 那段寫「FM24 或 FM26 的存檔可以接續」，官網沒有這樣說。原文只說「不論你是從 FM24 或 FM26 繼續你的旅程，或是開新的生涯」，另說 App Store 上的 FM26 Touch 頁面 11 月 10 日起會自動更新成 FM27 Touch；存檔能不能轉入，官方沒有說明。依據：FM27 Touch 官方介紹頁。免費期與付費期的存檔可接續，那一項不受影響。"
     }
   ],
   "sources": [
@@ -235,5 +240,6 @@
       "url": "https://www.footballmanager.com/news/football-manager-27-licences",
       "note": "頁面標 28.10.26（FM Admin），為 FM27 授權清單頁；本報 11 月 11 日確認頁面仍在。"
     }
-  ]
+  ],
+  "corrected_at": "2026-11-15T19:31:00+08:00"
 }

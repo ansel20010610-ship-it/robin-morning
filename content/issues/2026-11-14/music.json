@@ -149,6 +149,11 @@
     {
       "type": "p",
       "text": "聽完這兩個版本，可以接著聽德布西排在第一首的那首，就是薩替的第三號，總譜節錄那張圖就是它的開頭。樂團 Blood, Sweat & Tears 1968 年錄過第一、二號的搖滾版，叫〈Variations on a Theme by Erik Satie〉。找管弦樂版的錄音時看一下曲目：標著「第一號」的，可能是薩替的第三號。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-15）",
+      "text": "「三年前，德布西《牧神的午後前奏曲》首演」差了一年：那場首演在 1894 年 12 月，到 1897 年 2 月是兩年多。依據：英文維基百科〈Gustave Doret〉〈Prélude à l'après-midi d'un faune〉。"
     }
   ],
   "sources": [
@@ -235,6 +240,14 @@
       "date": "2020-08-31",
       "url": "https://commons.wikimedia.org/wiki/File:Debussy_Gymnopedie_1,_arrangement_of_Satie%E2%80%99s_Gymnopedie_3.png",
       "note": "正文圖：2020 年 8 月 31 日由使用者上傳的現代排版節錄，6 小節，內容是薩替第三號（德布西第一首）的開頭，可見 Lent et grave、con sord.、doux et expressif。Commons 頁面標的 1898 年不是這張圖的製作年，圖說與 made 不採用"
+    },
+    {
+      "title": "Prélude à l'après-midi d'un faune",
+      "publisher": "Wikipedia",
+      "date": "2026-11-15",
+      "url": "https://en.wikipedia.org/wiki/Pr%C3%A9lude_%C3%A0_l%27apr%C3%A8s-midi_d%27un_faune",
+      "note": "更正依據：1894 年 12 月 22 日首演，多雷指揮。"
     }
-  ]
+  ],
+  "corrected_at": "2026-11-15T19:31:00+08:00"
 }

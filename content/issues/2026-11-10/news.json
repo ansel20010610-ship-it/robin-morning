@@ -80,6 +80,13 @@
    "date": "2026-11-09",
    "url": "https://www.cna.com.tw/news/ahel/202611090202.aspx",
    "note": "11 月 7 日偵測、11 月 9 日公告；外洩資料範圍；已通報主管機關與警政單位"
+  },
+  {
+   "title": "Poland mourns Krakow mass shooting victims as terrorism probe continues",
+   "publisher": "CBS News／AP",
+   "date": "2026-11-09",
+   "url": "https://www.cbsnews.com/news/poland-mourns-krakow-mass-shooting-victims-terrorism-probe/",
+   "note": "更正依據：11 月 9 日檢方說找不到特定意識形態的依據，收回部長週末的說法；外籍傷者 5 名（英、葡、俄、德、奧），不是 15 名傷者都是這五國。"
   }
  ],
  "body": [
@@ -176,6 +183,12 @@
     ]
    ],
    "caption": "資料來源：德國之聲。"
+  },
+  {
+   "type": "callout",
+   "label": "更正（2026-11-15）",
+   "text": "克拉科夫槍擊那則寫內政部長基爾維斯基說嫌犯持極端民族主義觀點，沒有交代這個說法在刊出前已被收回。11 月 9 日，國家檢察署發言人說，調查沒有發現槍手受任何特定意識形態啟發，官方也沒有提出可能的動機。依據：CBS News／美聯社 11 月 9 日報導。 另外，傷亡表「受傷 15」那一列列的英國、葡萄牙、俄羅斯、德國、奧地利，是其中 5 名外籍傷者的國籍。"
   }
- ]
+ ],
+ "corrected_at": "2026-11-15T19:31:00+08:00"
 }

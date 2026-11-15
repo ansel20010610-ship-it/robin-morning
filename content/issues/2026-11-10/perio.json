@@ -150,6 +150,11 @@
    "sample": "21 篇有根分岔測量與掉牙資料、追蹤至少 3 年的縱向研究",
    "question": "初診時有根分岔病變的臼齒，在維護治療中掉牙的風險是否較高？",
    "access": "主角論文依 PubMed 摘要；臨床建議依 EFP S3 指引全文；Jepsen 與 Dommisch 兩篇依摘要"
+  },
+  {
+   "type": "callout",
+   "label": "更正（2026-11-15）",
+   "text": "「指引的總則也是這個方向」與摘要的「指引寫明根分岔不是拔牙的理由」少了範圍。那句話是 EFP S3 指引建議 3.10 的一部分，針對的是有第 II、III 度根分岔、而且有殘留囊袋的臼齒：建議這些牙接受牙周治療，並說根分岔不是拔牙的理由。它不是整份指引的總則。依據：Sanz 等人 2020 年 EFP S3 指引全文，R3.10。"
   }
  ],
  "sources": [
@@ -201,6 +206,14 @@
    "date": "2013-05-07",
    "url": "https://commons.wikimedia.org/wiki/File:Hemisection_3_lower_right_number_6_at_February_2013.JPG",
    "note": "CC BY-SA 3.0。上傳說明（德文）：Hemisektion Zahn 46；系列含半切除前後 X 光、16 年後 X 光與半顆牙口內照、Prämolarisation。拍攝年月依檔名。半切除的原因說明未提。"
+  },
+  {
+   "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+   "publisher": "Journal of Clinical Periodontology（PMC7891343）",
+   "date": "2020-07-04",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7891343/",
+   "note": "更正依據：R3.10「We recommend that molars with Class II and III furcation involvement and residual pockets receive periodontal therapy. Furcation involvement is no reason for extraction.」"
   }
- ]
+ ],
+ "corrected_at": "2026-11-15T19:31:00+08:00"
 }

@@ -244,6 +244,11 @@
     {
       "type": "p",
       "text": "西班牙對英格蘭打完，多數國腳就收工了，不過德容（荷蘭客場對德國，台灣 11 月 17 日清晨 3 點 45 分）、拉菲尼亞（巴西對新加坡，台灣 11 月 17 日下午 5 點）、坎塞洛（威爾斯對葡萄牙，台灣 11 月 18 日清晨 3 點 45 分）還要踢。西甲 11 月 22 日回來。西甲踢完 12 輪，巴薩 33 分排第一，皇馬 30 分，馬競 28 分。巴薩下一場是西甲第 13 輪，主場 Spotify Camp Nou 對比利亞雷亞爾，時間是台灣 **11 月 22 日（週日）晚上 9 點**。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-15）",
+      "text": "「接下來」寫拉菲尼亞的巴西對新加坡是台灣 11 月 17 日下午 5 點，應是 18:00（UTC 10:00，新加坡與台灣同一時區）；11 月 10 日與 12 日兩期寫的 18:00 是對的。依據：ESPN 賽程。"
     }
   ],
   "sources": [
@@ -395,6 +400,14 @@
       "date": "2026-07-19",
       "url": "https://commons.wikimedia.org/wiki/File:Lamine_Yamal_Argentina_v_Spain_19_July_2026-167.jpg",
       "note": "頭圖，CC BY-SA 4.0，Bryan Berlin"
+    },
+    {
+      "title": "Brazil at Singapore（scoreboard）",
+      "publisher": "ESPN",
+      "date": "2026-11-15",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.friendly/scoreboard?dates=20261117",
+      "note": "更正依據：開球 2026-11-17T10:00Z，台灣 18:00。"
     }
-  ]
+  ],
+  "corrected_at": "2026-11-15T19:31:00+08:00"
 }

@@ -341,6 +341,11 @@
           "when": "11 月 20 日（週五）"
         }
       ]
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-15）",
+      "text": "兩處更正。一、時間線與表格寫坎塞洛會踢 11 月 15 日的葡萄牙對丹麥；他停賽一場，沒有出賽。二、義大利 3 比 1 贏法國，報導說的是 1962 年以來第一次在本土贏法國，不是「第一次在米蘭」。依據：Goal 報導、巴薩官網國腳日誌、ESPN 報導。"
     }
   ],
   "sources": [
@@ -581,6 +586,21 @@
       "date": "2026-07-19",
       "url": "https://commons.wikimedia.org/wiki/File:Lamine_Yamal_Argentina_v_Spain_19_July_2026-214.jpg",
       "note": "頭圖，CC BY-SA 4.0，Bryan Berlin"
+    },
+    {
+      "title": "In Leao's absence, Portugal announce heir to Cristiano Ronaldo's shirt",
+      "publisher": "Goal",
+      "date": "2026-11-13",
+      "url": "https://www.goal.com/en-in/news/in-leao-s-absence-portugal-announce-heir-to-cristiano-ronaldo-s-shirt/blt87fe7e529e9b953d",
+      "note": "更正依據：Joao Cancelo, suspended for a single match。"
+    },
+    {
+      "title": "Italy vs. France 賽後報導（id 50456369）",
+      "publisher": "ESPN",
+      "date": "2026-11-13",
+      "url": "https://now.core.api.espn.com/v1/sports/news/50456369",
+      "note": "更正依據：Italy's first win over France on home soil since 1962。"
     }
-  ]
+  ],
+  "corrected_at": "2026-11-15T19:31:00+08:00"
 }

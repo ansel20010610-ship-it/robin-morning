@@ -138,6 +138,11 @@
     {
       "type": "p",
       "text": "他的判決是自己寫的，這在今天的聯邦上訴法官裡不多見。在辦公室，他要書記官叫他 Dick。退休聲明裡，他說判決應該讓人看得懂，法官要看每個案子的是非。想先讀他的人，可以翻《法律的經濟分析》，或是 2013 年的《Reflections on Judging》，那段認錯的話就在這本書裡。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-15）",
+      "text": "導言引號裡的話是節譯，出處也沒列。原話出自 2017 年 9 月《紐約時報》的訪問，完整是：「我很少理會法律規則、成文法、憲法條文。一件官司只是一場爭執。你要做的第一件事，是問自己：先別管法律，這場爭執怎麼解決才合理？」依據：《紐約時報》2017 年 9 月訪問（Leiter Reports 轉錄）。"
     }
   ],
   "sources": [
@@ -203,6 +208,14 @@
       "date": "2004-09-23",
       "url": "https://commons.wikimedia.org/wiki/File:Posneratftc.jpg",
       "note": "內文圖，Public domain。"
+    },
+    {
+      "title": "Judge Posner talks to the NY Times about his sudden retirement",
+      "publisher": "Leiter Reports（轉錄《紐約時報》2017 年 9 月訪問）",
+      "date": "2017-09-12",
+      "url": "https://leiterreports.com/2017/09/12/judge-posner-talks-to-the-ny-times-about-his-sudden-retirement/",
+      "note": "更正依據：導言引文的完整原句。"
     }
-  ]
+  ],
+  "corrected_at": "2026-11-15T19:31:00+08:00"
 }

@@ -93,6 +93,13 @@
       "date": "2026-11-12",
       "url": "https://www.cna.com.tw/news/aipl/202611120287.aspx",
       "note": "中選會首場意見發表會；牛煦庭、陳培瑜各自說法"
+    },
+    {
+      "title": "Finland detects strike on Russian warship as Zelenskyy meets US envoys",
+      "publisher": "Al Jazeera",
+      "date": "2026-11-13",
+      "url": "https://www.aljazeera.com/news/2026/11/13/finland-detects-strike-on-russian-warship-as-zelenskyy-meets-us-envoys",
+      "note": "更正依據：會面在週四（11 月 12 日），地點 Casement 機場。"
     }
   ],
   "body": [
@@ -193,6 +200,12 @@
         ]
       ],
       "caption": "中央社。2021 年同意票少於不同意票；2025 年同意票較多，但沒達四分之一門檻。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-15）",
+      "text": "普丁那則寫「特使 13 日接著在都柏林見澤倫斯基」，日期錯了。魏科夫與庫許納是 11 月 12 日（週四）在都柏林西邊的 Casement 機場見澤倫斯基，這一期刊出時會面已經發生。依據：半島電視台 11 月 13 日報導。"
     }
-  ]
+  ],
+  "corrected_at": "2026-11-15T19:31:00+08:00"
 }

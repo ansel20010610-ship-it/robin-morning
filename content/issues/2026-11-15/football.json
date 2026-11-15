@@ -160,7 +160,10 @@
           "source": "ESPN",
           "url": "https://www.espn.com/soccer/match/_/gameId/401861165",
           "when": "11 月 14 日（週六）",
-          "place": ["NO", "GB"]
+          "place": [
+            "NO",
+            "GB"
+          ]
         },
         {
           "headline": "安道爾門將被停賽 12 場",
@@ -188,6 +191,11 @@
     {
       "type": "p",
       "text": "8. 國腳們回來以後，巴薩先在 11 月 22 日（週日）晚上 9 點，主場 Spotify Camp Nou 踢西甲第 13 輪，對比利亞雷亞爾。接著去巴庫踢歐冠第 5 輪的 Sabah，歐洲時間 11 月 25 日（週三）18:45，台灣是 11 月 26 日凌晨 1 點 45 分。官網說，今年底前主場還有五場，其中對馬競是西甲第 23 輪提前補賽，12 月 2 日歐洲時間晚上 9 點半，台灣是 12 月 3 日凌晨 4 點半。12 月 8 日歐冠對曼城，台灣是 12 月 9 日凌晨 4 點。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-15）",
+      "text": "債券那段寫高盛是「唯一的承銷商」，官網原文是唯一的配售代理（sole placement agent），兩者不是同一個角色。依據：巴薩官網 3 億歐元債券公告。"
     }
   ],
   "sources": [
@@ -396,5 +404,6 @@
       "url": "https://commons.wikimedia.org/wiki/File:Raphinha_Brazil_V_Morocco_13_June_2026-208.jpg",
       "note": "攝影 Bryan Berlin，CC BY-SA 4.0，原圖 3333x5000；頁面描述為 2026 年世界盃巴西對摩洛哥（NY/NJ Stadium）"
     }
-  ]
+  ],
+  "corrected_at": "2026-11-15T19:31:00+08:00"
 }

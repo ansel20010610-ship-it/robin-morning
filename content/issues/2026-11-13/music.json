@@ -139,6 +139,11 @@
     {
       "type": "p",
       "text": "這道禁令到 1876 年才解除。那年 8 月，拜魯特節日劇院開幕，第一次把整套《指環》從頭演到尾，一共演了三輪；演完後，華格納解除了這道禁令。隔年 5 月，他在倫敦親自指揮〈女武神的騎行〉，演完又從頭再演一次，當作安可。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-15）",
+      "text": "三處更正。一、「他自己管這些作品叫『樂劇』」不對：後人常把華格納的作品叫樂劇，他本人後來否定這個稱呼，1872 年還寫文章談這個名稱的不妥。二、米利厄斯那句引文只引了半句；原句在「the terror and the horror」之後還有「and the fear of being snuffed out. The glory of it!」（還有怕被一把掐滅的恐懼。那種光榮！）。三、華格納抱怨的對象是出版商 Schott；這首曲子是在萊比錫被印出來賣，不是「萊比錫的出版社」。依據：英文維基百科〈Richard Wagner〉〈Ride of the Valkyries〉、Nautilus 訪談。"
     }
   ],
   "sources": [
@@ -212,5 +217,6 @@
       "url": "https://commons.wikimedia.org/wiki/File:Die_Walk%C3%BCre_1870_Act1_NGO4p1091.jpg",
       "note": "內文圖；Public domain；New Grove Dictionary of Opera 第 4 冊 p. 1091 掃描"
     }
-  ]
+  ],
+  "corrected_at": "2026-11-15T19:31:00+08:00"
 }
