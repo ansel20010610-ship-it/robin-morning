@@ -11,13 +11,6 @@
       "program": "台中場：拉赫曼尼諾夫《第三號交響曲》、舒伯特《第九號交響曲「偉大」》",
       "shows": [
         {
-          "date": "2026-11-15",
-          "time": "19:00",
-          "city": "高雄",
-          "venue": "衛武營國家藝術文化中心音樂廳",
-          "tickets": "https://www.opentix.life/program/2047561986406621185"
-        },
-        {
           "date": "2026-11-16",
           "time": "19:30",
           "city": "台中",
@@ -53,38 +46,6 @@
         {
           "title": "文化部藝文活動開放資料",
           "url": "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=1"
-        }
-      ]
-    },
-    {
-      "id": "ntso-vanoosten-liu-2026",
-      "title": "范努斯敦、劉孟捷與國臺交",
-      "kind": "協奏曲",
-      "rating": 4,
-      "why": "劉孟捷彈布拉姆斯第一號鋼琴協奏曲，下半場是德弗札克第八號交響曲，兩首都是主流必聽。台中本地的國臺交，下午場，大劇院。",
-      "who": "范努斯敦（指揮）、劉孟捷（鋼琴）、國立臺灣交響樂團",
-      "program": "布拉姆斯《第一號鋼琴協奏曲》、德弗札克《第八號交響曲》",
-      "shows": [
-        {
-          "date": "2026-11-15",
-          "time": "14:30",
-          "city": "台中",
-          "venue": "臺中國家歌劇院大劇院",
-          "tickets": "https://www.opentix.life/program/2078431536318390273"
-        }
-      ],
-      "added": "2026-11-01",
-      "uids": [
-        "6a6a32d326b32427d06042e4"
-      ],
-      "sources": [
-        {
-          "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/program/2078431536318390273"
-        },
-        {
-          "title": "衛武營節目頁（奇美音樂節）",
-          "url": "https://www.npac-weiwuying.org/programs/6a4480497040b10008792144?lang=zh"
         }
       ]
     },
@@ -1460,40 +1421,6 @@
         {
           "title": "OPENTIX 售票頁",
           "url": "https://www.opentix.life/event/2079139102634627073"
-        }
-      ]
-    },
-    {
-      "id": "hso-verklarte-nacht-ntt-2026",
-      "title": "新竹市立交響樂團《昇華之夜》",
-      "kind": "室內樂",
-      "rating": 3,
-      "why": "壓軸是荀貝格的《昇華之夜》，原本是寫給六把弦樂器的室內樂，這場由整個弦樂團來演。前面還有一首英國管協奏曲，由鄭亞妮獨奏。",
-      "who": "范楷西（客席指揮）、鄭亞妮（英國管）、新竹市立交響樂團",
-      "program": "柴蒙特《為弦樂團的輓歌》、史帝芬森《給弦樂團與英國管的協奏曲》、荀貝格《昇華之夜》",
-      "price": "NT$800（學生6折、65歲以上5折）",
-      "note": "14:00 開放入場，有演前導聆",
-      "shows": [
-        {
-          "date": "2026-11-15",
-          "time": "14:30",
-          "city": "台中",
-          "venue": "臺中國家歌劇院小劇場",
-          "tickets": "https://www.opentix.life/event/2074711250083479553"
-        }
-      ],
-      "added": "2026-11-09",
-      "uids": [
-        "6a68e15526b32427d06042cd"
-      ],
-      "sources": [
-        {
-          "title": "臺中國家歌劇院節目頁",
-          "url": "https://www.npac-ntt.org/program/events/c-tRACvWzUGaX"
-        },
-        {
-          "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/event/2074711250083479553"
         }
       ]
     },
