@@ -1,0 +1,233 @@
+{
+  "column": "artwork",
+  "date": "2026-11-16",
+  "title": "「只有瘋子才畫得出來」，是孟克自己寫的",
+  "dek": "《吶喊》的紅色天空裡有一行鉛筆字。1904 年就有人看見，2021 年才確定是誰寫的。",
+  "brief": "孟克《吶喊》左上角的天空裡，有一行很小的鉛筆字：「只有瘋子才畫得出來！」挪威國家博物館用紅外線和筆跡比對，2021 年公布寫字的是孟克本人。這幅畫 1895 年第一次在挪威展出時，工藝美術館的館長寫道，大家再也不能把孟克當成腦袋正常的正經人。",
+  "topic_key": "artwork:munch-the-scream",
+  "form": "scene",
+  "voice": "appraiser",
+  "updated_at": "2026-11-16T01:50:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Edvard_Munch_-_The_Scream_-_NG.M.00939_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg/1280px-Edvard_Munch_-_The_Scream_-_NG.M.00939_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Edvard_Munch_-_The_Scream_-_NG.M.00939_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg/3840px-Edvard_Munch_-_The_Scream_-_NG.M.00939_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg",
+    "width": 1280,
+    "height": 1589,
+    "alt": "直幅畫。下半部正中間站著一個光頭、身體細長彎曲的深色人形，兩手貼在頭的兩側，眼睛是圓圈，嘴是橢圓。一道欄杆從左邊遠處斜斜拉到右下角，欄杆遠端站著兩個深色人影。人後方是彎曲的深藍色峽灣，上方的天空是一條一條的紅、橙、黃，夾著幾道藍綠。畫面右邊緣有一條直的暗紅色長條，左下角有紅色簽名。",
+    "caption": "孟克，《吶喊》，1893 年，紙板上蛋彩、蠟筆與油彩，高 91、寬 73.5 公分，奧斯陸挪威國家博物館（NG.M.00939）。",
+    "credit": "Edvard Munch／挪威國家博物館（Nasjonalmuseet）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Edvard_Munch_-_The_Scream_-_NG.M.00939_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+    "made": "1893"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1895 年秋天，挪威的首都還叫克里斯蒂安尼亞，就是今天的奧斯陸。城裡的學生會辦了一晚討論會，談一位 31 歲畫家的作品。畫家叫**孟克**（Edvard Munch）。那年十月他在一家畫商的店裡辦展，其中一幅叫**《吶喊》**（Skrik）。這是這幅畫第一次給挪威觀眾看。畫裡是一個光頭的人，兩手貼著頭的兩側，眼睛是圓圈，嘴是橢圓。多數平台上那個驚恐的表情符號，畫得就像這個人。"
+    },
+    {
+      "type": "p",
+      "text": "那天晚上，詩人奧布斯費爾德（Obstfelder）稱讚孟克。一個叫夏芬伯格（Johan Scharffenberg）的醫學生，則拿孟克一幅叼著菸的自畫像當例子，說從那幅畫看得出孟克精神有問題。當時挪威工藝美術館的館長也寫道，大家再也不能把孟克當成腦袋正常的正經人。孟克可能在場。他很受傷，到 1930 年代的日記裡還在寫這件事。"
+    },
+    {
+      "type": "p",
+      "text": "這幅畫畫於 1893 年，現在在奧斯陸的挪威國家博物館。要湊得很近，才看得到左上角紅色的天空裡有一行鉛筆小字："
+    },
+    {
+      "type": "quote",
+      "text": "只有瘋子才畫得出來！",
+      "original": "Kan kun være malet af en gal Mand!",
+      "cite": "《吶喊》左上角的鉛筆字"
+    },
+    {
+      "type": "p",
+      "text": "這行字 1904 年在哥本哈根展出時就有人提到，一位丹麥藝評人以為是哪個觀眾寫上去的。到 2008 年，多數研究孟克的人也還相信是別人加的。2021 年 2 月，博物館公布了答案：**寫這行字的是孟克自己。**"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.15, 0.115, 0.25, 0.06],
+      "position": "畫面左上角的天空",
+      "caption": "鉛筆字寫在左上角的天空裡，字很小，要靠很近才看得到。"
+    },
+    {
+      "type": "h",
+      "text": "紙板、蠟筆、一把刀"
+    },
+    {
+      "type": "p",
+      "text": "孟克沒用畫布，直接畫在一塊 **3.5 公釐**厚的紙板上，高 91 公分、寬 73.5 公分。館方說，他先上蛋彩，再拿蠟筆畫，最後才上油彩。天空是一條一條的紅、橙、黃，夾著幾道藍綠。"
+    },
+    {
+      "type": "p",
+      "text": "一道欄杆從畫面左邊遠處斜斜拉過來，往右下角延伸。欄杆遠端站著兩個深色的人影。主角站在下半部正中間，身體是一條彎彎扭扭的深色長條，看不出男女。臉是淡黃的，兩個圓眼，眼睛下面有兩個小點，嘴張成直立的橢圓。他身後是藍黑色的峽灣，水上有兩三艘小船。"
+    },
+    {
+      "type": "p",
+      "text": "左下角有一行紅色的簽名，「E. Munch 1893」。右邊緣有一條直直的暗紅色長條。館方判斷，孟克本來拿刀沿這裡直直刻了一道，像是想把畫面裁窄，看來後來改變主意，把這一條留下來，塗成紅色。右下角有幾點蠟燭滴下的蠟，是孟克自己還擁有這幅畫時留下的。紙板背面還有一張《吶喊》最早的草稿，被他放棄了。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [0.62, 0.66, 0.38, 0.24],
+      "position": "畫面右下角到右邊緣",
+      "caption": "右下角的幾點蠟滴；最右邊是那條刻過刀、後來塗紅的直條。"
+    },
+    {
+      "type": "h",
+      "text": "尼斯，1892 年 1 月 22 日"
+    },
+    {
+      "type": "p",
+      "text": "1892 年 1 月 22 日，孟克人在法國南部的尼斯，在速寫本裡寫了一段散文：他和兩個朋友沿著路走，太陽下山，天空突然變得血紅。那一段的最後一句是："
+    },
+    {
+      "type": "quote",
+      "text": "朋友們繼續往前走，我站在那裡，怕得發抖，我感覺到一聲巨大、無盡的尖叫穿過大自然。",
+      "original": "Mine venner gik videre – jeg stod der skjælvende af angest – og jeg følte som et stort, uendeligt skrig gennem naturen",
+      "cite": "孟克，1892 年 1 月 22 日，尼斯的速寫本（MUNCH 美術館藏，MM T 2760）"
+    },
+    {
+      "type": "p",
+      "text": "1892 年他先畫了一幅油畫，《夕陽下的病態情緒：絕望》，現在在斯德哥爾摩的蒂爾畫廊。顏色、尺寸和風景都和《吶喊》幾乎一樣。差別在前景的人：那裡是一個戴帽子、穿大衣、清清楚楚的男人。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "artwork",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Edvard_Munch_Despair_Thielska_286.tif/lossy-page1-1280px-Edvard_Munch_Despair_Thielska_286.tif.jpg",
+      "width": 1280,
+      "height": 1761,
+      "alt": "直幅油畫。前景右下是一個戴寬邊帽、穿深色大衣的男人，低頭側臉。一道欄杆從左上方斜斜拉下，遠端站著兩個戴高帽的深色人影。後方是灰藍色的峽灣和停泊的船，上方是一大片紅色與黃色交纏的天空。左下角有簽名。",
+      "caption": "孟克，《夕陽下的病態情緒：絕望》，1892 年，油彩畫布，92 × 67 公分，斯德哥爾摩蒂爾畫廊。主角還是一個戴帽子的男人，臉沒有轉向看畫的人。",
+      "credit": "Edvard Munch／Thielska Galleriet，攝影 Tord Lund",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Edvard_Munch_Despair_Thielska_286.tif",
+      "made": "1892"
+    },
+    {
+      "type": "p",
+      "text": "到了 1893 年的《吶喊》，帽子不見了，臉面向看畫的人、看不清楚，身體成了一條分不清男女的深色長條。這一幅同年在柏林第一次展出。1910 年，一位收藏家把它捐給了當時的挪威國家美術館。"
+    },
+    {
+      "type": "h",
+      "text": "鉛筆壓在顏料上面"
+    },
+    {
+      "type": "p",
+      "text": "2021 年公布的研究，是在修復這幅畫時做的。館方用紅外線相機拍它，鉛筆字在照片裡變得清楚。修復師再拿顯微鏡看，發現鉛筆線是壓在顏料上面的，所以是畫完以後才寫的。館方研究員古倫（Mai Britt Guleng）拿孟克的日記和信比對筆跡，說毫無疑問是他的字。"
+    },
+    {
+      "type": "p",
+      "text": "古倫認為，字大概是 1895 年那次展覽期間或之後寫的，就在孟克聽了那個醫學生的話以後。別人說他瘋了，他自己在畫上寫了出來，她說這也許是想把主導權拿回來。她還說："
+    },
+    {
+      "type": "quote",
+      "text": "這行字可以讀成一句反諷，同時也是畫家脆弱的流露。",
+      "original": "The inscription can be read as an ironic comment, but at the same time as an expression of the artist's vulnerability.",
+      "cite": "古倫，挪威國家博物館研究員"
+    },
+    {
+      "type": "p",
+      "text": "我覺得畫裡那個人沒有在叫。孟克 1892 年寫的，是他聽見一聲尖叫穿過大自然；挪威大百科的條目說，除了「那個人在尖叫」的看法，也可以主張張開的嘴是對那聲尖叫的驚恐反應；條目還提到，天空血紅的線條被人比成聲波。兩隻手貼在頭的兩側，正是耳朵的位置。依我的看法，表情符號拿這張臉來表示「我在尖叫」，是把畫讀反了。在這幅畫裡，尖叫是穿過自然的，人只是聽見了。"
+    },
+    {
+      "type": "facts",
+      "items": [
+        ["作品", "《吶喊》（Skrik／The Scream）"],
+        ["作者", "孟克（Edvard Munch，1863–1944），挪威"],
+        ["年代", "1893 年"],
+        ["媒材與尺寸", "紙板上蛋彩、蠟筆與油彩，高 91 公分、寬 73.5 公分"],
+        ["現在在哪裡", "奧斯陸，挪威國家博物館（館藏號 NG.M.00939，1910 年受贈）"]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Edvard Munch, The Scream (NG.M.00939)",
+      "publisher": "Nasjonalmuseet（挪威國家博物館）",
+      "url": "https://www.nasjonalmuseet.no/en/collection/object/NG.M.00939",
+      "note": "作品頁：年代、媒材、尺寸、館藏號、1910 年 Olaf Schou 捐贈、1901 年曾議購未成、前身《絕望》的比較、埃克柏格的視角、版本、2008 年多數研究者認為字是別人加的。館方這頁寫技法為蛋彩與油脂蠟筆（Tempera og fettstift），與 NM-5 的蛋彩、酪蛋白蠟筆、油彩兩頁寫法不同，正文只寫「蛋彩、蠟筆、油彩」；主角由戴帽穿大衣的男人變成難以界定性別、轉向觀者的形象。首展標題此頁作 Verzweiflung，SNL 作 Fortvilelse，Wikipedia 作 Der Schrei der Natur，正文不寫標題。此頁將筆跡研究繫於 2020 年，正文依公布時間寫 2021 年。"
+    },
+    {
+      "title": "Five things you might not know about “The Scream”",
+      "publisher": "Nasjonalmuseet（挪威國家博物館）",
+      "url": "https://www.nasjonalmuseet.no/en/stories/explore-the-collection/five-things-you-might-not-know-about-the-scream/",
+      "note": "3.5 公釐紙板，蛋彩→酪蛋白蠟筆→油彩（此頁未具名說話者，正文作「館方說」）；背面草稿；右側直條「initially scored with a knife…appears to have decided to retain it, painting it red」，正文作「館方判斷／看來」；右下角蠟燭蠟滴；天空的鉛筆字。"
+    },
+    {
+      "title": "Munch: “Could only have been painted by a madman!”（Malet av gal mann）",
+      "publisher": "Nasjonalmuseet（挪威國家博物館）",
+      "url": "https://www.nasjonalmuseet.no/en/stories/explore-the-collection/munch-malet-av-gal-mann-engelsk/",
+      "note": "1895 年 10 月 Blomqvist 展覽、工藝美術館館長 Henrik Grosch 的評語、學生會討論會（Obstfelder、Scharffenberg）、1904 年哥本哈根丹麥藝評人、首次給挪威觀眾看、Grosch 評語（英文轉述，正文不加引號）、Scharffenberg 說自畫像顯示孟克不正常；紅外線讓字更清楚、Ford 顯微鏡（鉛筆線在顏料上）、Guleng 的判斷與引文。"
+    },
+    {
+      "title": "Who Scribbled This Cryptic Graffiti on ‘The Scream’?",
+      "publisher": "Smithsonian Magazine（Nora McGreevy）",
+      "date": "2021-02-24",
+      "url": "https://www.smithsonianmag.com/smart-news/who-wrote-cryptic-graffiti-edvard-munchs-scream-180977075/",
+      "note": "鉛筆字在左上角、字很小（Guleng：He didn't write it in big letters for everyone to see）；孟克可能在場、受傷，到 1930 年代日記仍寫此事；Guleng：maybe an act of taking control；2021 年修復期間的紅外線攝影。"
+    },
+    {
+      "title": "MM T 2760. Skissebok（速寫本，1891–1892）",
+      "publisher": "eMunch.no／MUNCH",
+      "url": "https://www.emunch.no/HYBRIDNo-MM_T2760.xhtml",
+      "note": "「Nizza 22/1 92」條。引文依謄本取定稿文字，去掉孟克自己劃掉的字（undeligt、den uendelig）與無法辨識的刪改。"
+    },
+    {
+      "title": "Munch's text about The Scream",
+      "publisher": "MUNCH",
+      "url": "https://munch.no/en/The-Scream/video-munchs-text-about-the-scream/",
+      "note": "館方英譯：I felt the great Scream in Nature；1892 年冬天寫進日記。"
+    },
+    {
+      "title": "Syk stemning ved solnedgang. Fortvilelse (PE.M.00327, Woll M 264)",
+      "publisher": "MUNCH",
+      "url": "https://www.munch.no/en/object/PE.M.00327",
+      "note": "1892 年，油彩畫布，92 × 67 公分，左下簽 E. Munch 1892，蒂爾畫廊藏。"
+    },
+    {
+      "title": "Skrik – maleri",
+      "publisher": "Store norske leksikon（Tore Kirkholt）",
+      "date": "2024-11-26",
+      "url": "https://snl.no/Skrik_-_maleri",
+      "note": "「Det kan også hevdes … at den åpne munnen er en angstfylt reaksjon på et skrik som går gjennom naturen」（SNL 是在主流「人在尖叫」的描述之後補上的另一種讀法，不是共識）；「De blodrøde linjene i himmelen har blitt lignet med lydbølger」；「Store hender dekker ørene」；1893 年秋天在柏林首展。"
+    },
+    {
+      "title": "The Scream",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Scream",
+      "note": "鉛筆字原文 Kan kun være malet af en gal Mand!；1904 年哥本哈根；「one of the most iconic images in art」；表情符號 U+1F631。"
+    },
+    {
+      "title": "Edvard Munch",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Edvard_Munch",
+      "note": "生卒（1863-12-12 至 1944-01-23）；在柏林約四年。1895 年秋天的年齡依生日自算。"
+    },
+    {
+      "title": "Oslo",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Oslo",
+      "note": "Kristiania 一名用到 1925 年 1 月 1 日。"
+    },
+    {
+      "title": "File:Edvard Munch - The Scream - NG.M.00939 - National Museum of Art, Architecture and Design.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Edvard_Munch_-_The_Scream_-_NG.M.00939_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "note": "頭圖，公有領域，原檔 6703×8322。"
+    },
+    {
+      "title": "File:Edvard Munch Despair Thielska 286.tif",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Edvard_Munch_Despair_Thielska_286.tif",
+      "note": "《絕望》圖，公有領域，Thielska Galleriet／Tord Lund。"
+    }
+  ]
+}
