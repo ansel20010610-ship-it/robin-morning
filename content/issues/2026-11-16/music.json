@@ -1,0 +1,267 @@
+{
+  "column": "music",
+  "date": "2026-11-16",
+  "title": "〈公主徹夜未眠〉的原名，是一道死命令",
+  "dek": "帕華洛帝錄過的這首男高音名曲，出自《杜蘭朵》第三幕。第三幕裡最先開口的是傳令官。",
+  "brief": "〈公主徹夜未眠〉的原名，來自杜蘭朵公主的一道命令：今夜北京城裡誰都不准睡，天亮以前查不出那位陌生王子的名字，全城的人都要處死。唱這首歌的，就是那位王子。帕華洛帝 1972 年的錄音，1990 年成了 BBC 世界盃轉播的主題曲，登上英國單曲榜第 2 名。",
+  "topic_key": "music:puccini-nessun-dorma",
+  "updated_at": "2026-11-16T01:07:00+08:00",
+  "spoiler": "本文談到《杜蘭朵》第三幕與結局",
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6c/1926-Turandot-frontespizio.jpg",
+    "width": 399,
+    "height": 578,
+    "alt": "一頁舊印刷品的扉頁：米色紙，四周一圈紅色細框，字。上方是兩位劇本作者的名字，中間是大字的「TURANDOT」，下面幾行小字，最底下是出版社的名稱。",
+    "caption": "1926 年 Ricordi 出版的《杜蘭朵》劇本扉頁。Commons 檔案頁標示這是首演（1926 年 4 月 25 日）時的版本。「Musica di Giacomo Puccini」下面有小字：最後的二重唱和終場由 F. Alfano 補完；再下面是定價 5 里拉。",
+    "credit": "G. Ricordi & C.，1926；Collezione Albertomos，影像經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:1926-Turandot-frontespizio.jpg",
+    "made": "1926"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "《杜蘭朵》第三幕的劇本，先寫一行舞台指示：夜裡，北京皇宮的花園，王子躺在亭子的台階上。四下很靜，遠遠傳來傳令官的呼喊，一路喊過整座城。他們喊的是："
+    },
+    {
+      "type": "quote",
+      "original": "Così comanda Turandot: «Questa notte nessun dorma in Pekino!» … «Pena la morte, il nome dell’ignoto sia rivelato prima del mattino!»",
+      "text": "杜蘭朵下令：「今夜北京城裡，誰都不准睡！」……「違者處死，天亮以前，要說出那個陌生人的名字！」",
+      "cite": "阿達米、西莫尼，《杜蘭朵》第三幕，Ricordi 版劇本（都靈皇家劇院網站所載）"
+    },
+    {
+      "type": "p",
+      "text": "「誰都不准睡」，義大利文是 Nessun dorma。這兩個字就是一首男高音名曲的原名，中文通常叫它**〈公主徹夜未眠〉**，下面都這樣叫。寫這齣歌劇的是義大利作曲家**普契尼**。他 1924 年過世，《杜蘭朵》還沒寫完；1926 年，它才在米蘭首演。"
+    },
+    {
+      "type": "p",
+      "text": "男高音，是男聲裡音域偏高的那一種。詠嘆調，就是歌劇裡一個角色站出來獨唱的一大段。這首是王子卡拉富的詠嘆調，唱完大約三、四分鐘。很多人是在足球轉播裡聽過它。1990 年義大利辦世界盃，英國的 BBC 拿義大利男高音**帕華洛帝** 1972 年的錄音當轉播主題曲。這首歌跟著衝上英國單曲榜，排到第 2 名。"
+    },
+    {
+      "type": "p",
+      "text": "杜蘭朵是故事裡的公主。她出三道謎語考求婚的人，答錯就處死。卡拉富是個隱姓埋名的王子，三題全答對了，她還是不肯認輸。他就反過來出一題：天亮以前，你猜得出我的名字，我就去死。他跪在她面前唱「你不知道我的名字」，這首歌的旋律，就在那裡第一次出現。"
+    },
+    {
+      "type": "music",
+      "composer": "普契尼（Giacomo Puccini）",
+      "work": "歌劇《杜蘭朵》第三幕男高音詠嘆調〈公主徹夜未眠〉",
+      "work_original": "Turandot, Act III: Nessun dorma",
+      "composed": "《杜蘭朵》1920 年動筆，1924 年 11 月 29 日普契尼過世時未完成；1926 年 4 月 25 日在米蘭史卡拉歌劇院首演",
+      "performers": "帕華洛帝（Luciano Pavarotti）男高音；梅塔（Zubin Mehta）指揮 倫敦愛樂管弦樂團（London Philharmonic Orchestra）",
+      "recording": "Decca，1972 年 8 月全劇錄音於倫敦 Kingsway Hall",
+      "duration": "約 3 到 4 分鐘",
+      "movements": [],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Puccini Turandot Nessun dorma Pavarotti Mehta London Philharmonic",
+        "artist_hint": "Pavarotti",
+        "track_filter": [
+          "Nessun dorma"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "錄音挑的就是 BBC 用的那一版：帕華洛帝唱，梅塔指揮倫敦愛樂管弦樂團，1972 年 8 月在倫敦錄下整齣歌劇。Sound on Sound 雜誌的文章說，錄的時候，帕華洛帝還沒在舞台上演過卡拉富。他第一次上台唱這個角色，是 1977 年在舊金山。"
+    },
+    {
+      "type": "h",
+      "text": "霧裡浮上來的一句"
+    },
+    {
+      "type": "p",
+      "text": "現在聽到的，是幕剛拉開的樂團。紐約大都會歌劇院的音樂總監形容這一段很暗、很悶，像一片霧，和弦聽起來都帶著懷疑。傳令官的喊聲從遠處穿過來，群眾也遠遠地應一聲「誰都不准睡」，像在哀歎。"
+    },
+    {
+      "type": "p",
+      "text": "接著卡拉富開口。他的第一句不是新詞，是把「誰都不准睡」接過來，自己再唱一遍。《華盛頓郵報》的前古典樂評說，音樂到這裡，忽然從那片焦慮裡浮上來，變成一句往上爬的、金色的旋律。他對公主唱：你也一樣，在冰冷的房間裡看著星星，那些星星因為愛和希望在發抖。然後是："
+    },
+    {
+      "type": "quote",
+      "original": "Ma il mio mistero è chiuso in me, il nome mio nessun saprà! No, no, sulla tua bocca lo dirò, quando la luce splenderà!",
+      "text": "可是我的祕密鎖在我心裡，我的名字沒有人會知道！不，不，我要在你的唇上說出它，等天光亮起的時候！",
+      "cite": "阿達米、西莫尼，《杜蘭朵》第三幕，Ricordi 版劇本（都靈皇家劇院網站所載）"
+    },
+    {
+      "type": "p",
+      "text": "接下來這段旋律，那位樂評人說它像浪，一句接著一句。旋律唱完一遍，往上挪一階再唱一遍，接著又再往上。唱完往下收的時候，法國號忽然來一個意想不到的和弦，再加一聲鑼，像是又把人拉回剛才那片霧裡。"
+    },
+    {
+      "type": "p",
+      "text": "下一句，他說：我的吻，會化開讓你屬於我的那份沉默。這時伴奏換成很高的小提琴。那位音樂總監說，像抬頭看著天空，好像已經是早上了。"
+    },
+    {
+      "type": "h",
+      "text": "場外的女人唱他的旋律"
+    },
+    {
+      "type": "p",
+      "text": "快到結尾，場外傳來女人的合唱，劇本註明她們離得有點遠。她們唱的就是卡拉富那段旋律，底下的小提琴一直在顫。詞是：他的名字沒有人會知道。這是卡拉富剛唱過的那句，只把「我的」換成「他的」，後面接的是：唉，我們都得死了。"
+    },
+    {
+      "type": "p",
+      "text": "最後那聲高音通常拉得很長，可是先聽這幾句女聲。**王子唱的是他會贏，場外的女人唱的是她們要死了。**然後他接回來，劇本標著要唱得「帶著感情」："
+    },
+    {
+      "type": "quote",
+      "original": "Dilegua, o notte!... Tramontate, stelle!... All’alba vincerò!...",
+      "text": "消失吧，夜！落下吧，星星！天亮的時候，我會贏！",
+      "cite": "阿達米、西莫尼，《杜蘭朵》第三幕，Ricordi 版劇本（都靈皇家劇院網站所載）"
+    },
+    {
+      "type": "p",
+      "text": "現在男高音和整個樂團一起往上衝，越來越大聲，衝到最後那聲 vincerò，就是「我會贏」。男高音通常把這最後的高音拉得很長。那位音樂總監說，真正爆開來的，是台下的掌聲。劇本的下一行是舞台指示：三個戴面具的人（平、彭、龐）在灌木叢裡爬過來，身後跟著一群在黑暗裡看不清的人影。他們要拿美女和財寶，換他的名字。"
+    },
+    {
+      "type": "h",
+      "text": "寫到柳兒就停了"
+    },
+    {
+      "type": "p",
+      "text": "接下來，柳兒被抓來拷問，她不肯說出名字，自殺了。普契尼的總譜完整寫到她的送葬隊伍，後面只剩零碎的筆記。1924 年 11 月 29 日，他過世了。"
+    },
+    {
+      "type": "p",
+      "text": "1926 年 4 月 25 日，《杜蘭朵》在米蘭的史卡拉歌劇院首演，指揮是**托斯卡尼尼**。演到柳兒的送葬隊伍，他停了下來。據說他轉身對觀眾說，歌劇到這裡結束，因為寫到這裡，大師過世了。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "artwork",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/41/Poster_Turandot.jpg",
+      "width": 706,
+      "height": 1001,
+      "alt": "一幅彩色宣傳海報：一位戴著龍飾金冠的女子半身像，；背景是金黃色的龍紋與珊瑚狀圖案。下方用大字印著「TURANDOT」，再下面是作曲者與劇本作者的名字和 Ricordi 出版社。",
+      "caption": "《杜蘭朵》宣傳海報，Leopoldo Metlicovitz 繪，1926 年。Commons 檔案頁標明作者與年份；海報下方印著「Musica di G. Puccini」「Libretto di G. Adami e R. Simoni」「Edizioni Ricordi」。",
+      "credit": "Leopoldo Metlicovitz，1926；影像經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Poster_Turandot.jpg",
+      "made": "1926"
+    },
+    {
+      "type": "p",
+      "text": "那段送葬歌，是群眾在場外遠遠唱的。其中一句是：柳兒，善良，柳兒，溫柔，睡吧，忘了吧！第三幕裡，「睡」這個字最後一次出現，就在這裡。第一次，是開場傳令官喊的那句。"
+    },
+    {
+      "type": "p",
+      "text": "後面的二重唱和終場，是作曲家阿爾法諾照普契尼的筆記補完的。劇本後面，卡拉富在二重唱裡把名字告訴她：「我是卡拉富，帖木兒的兒子。」到了終場，天已經亮了，這首歌的旋律最後再回來一次。杜蘭朵向她的父親皇帝宣布：「他的名字是……愛！」"
+    },
+    {
+      "type": "h",
+      "text": "等處決的畫家，善變的公爵"
+    },
+    {
+      "type": "p",
+      "text": "想再聽男高音，可以找普契尼另一齣歌劇《托斯卡》裡的〈今夜星光燦爛〉。唱的是一位畫家，他在羅馬聖天使堡的屋頂上，等著被處決；前奏是一支低沉的單簧管。另一首是威爾第歌劇《弄臣》裡的〈善變的女人〉，公爵唱的，是男高音的招牌。1851 年首演以前，排練都保密；首演後沒多久，威尼斯的船夫之間傳開了。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Turandot — libretto（Giuseppe Adami、Renato Simoni，dramma lirico in tre atti e cinque quadri；Ricordi 版）",
+      "publisher": "Teatro Regio di Torino",
+      "date": "未註明",
+      "url": "https://www.teatroregio.torino.it/sites/default/files/uploads/inline-files/Turandot%20-%20Libretto.pdf",
+      "note": "第三幕全部義大利文原句（傳令官的命令、群眾、卡拉富〈Nessun dorma〉、場外女人、舞台指示、柳兒送葬歌、二重唱與終場），逐字從 PDF 抄出核對；第二幕結尾卡拉富出的最後一題；全劇「dorm」一字的出現處以全文搜尋核對；人物表（Timur 為被廢的韃靼王、Calaf 為其子）。2026-11-15 查閱"
+    },
+    {
+      "title": "Il libretto in sintesi（Claudio Toscani）",
+      "publisher": "Teatro alla Scala（2023–24 年 Turandot 節目冊）",
+      "date": "2023",
+      "url": "https://teatroallascala.org/static/upload/lib/libretto-in-sintesi-15_turandot_2023-2024.pdf",
+      "note": "三幕劇情：答錯謎語處死、波斯王子被斬首、卡拉富答出三題並反出一題、第三幕開頭的命令、卡拉富等待天亮且有把握、三位大臣以美女財富榮耀換名字、柳兒不說名字而自殺、終場杜蘭朵宣布名字是「愛」；2026-11-15 查閱"
+    },
+    {
+      "title": "La genesi dell’opera（Claudio Toscani）",
+      "publisher": "Teatro alla Scala（2023–24 年 Turandot 節目冊）",
+      "date": "2023",
+      "url": "https://teatroallascala.org/static/upload/la-/la-genesi-dell-opera-turandot_2023-2024.pdf",
+      "note": "1920 年動筆；1924 年 11 月 29 日普契尼過世；總譜完整到柳兒的送葬隊伍、其後只有零碎筆記；阿爾法諾補完；首演時托斯卡尼尼在普契尼停筆之處中斷演出。內文一處寫首演為 4 月 26 日，同一頁圖說與其他來源為 4 月 25 日，本文採 4 月 25 日；2026-11-15 查閱"
+    },
+    {
+      "title": "Turandot",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Turandot",
+      "note": "首演 1926 年 4 月 25 日、史卡拉歌劇院、托斯卡尼尼指揮；托斯卡尼尼「turned to the audience and announced」「Qui finisce l'opera, perché a questo punto il maestro è morto」（引自 Ashbrook & Powers 1991；另有 La Stampa 記者與「Here, the Maestro laid down his pen」等不同記法，正文以「據說」帶過）；總譜完整寫到柳兒之死與送葬隊伍；阿爾法諾的終場；2026-11-15 查閱"
+    },
+    {
+      "title": "Nessun dorma",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Nessun_dorma",
+      "note": "主題第一次出現在第二幕卡拉富跪在杜蘭朵面前、唱「Il mio nome non sai!」時；杜蘭朵的命令做不到全城處死；詠嘆調開頭是傳令官呼喊的回聲；場外遠處的女聲合唱在高潮之前；演出慣例把最後「Vincerò!」的高音拉長（樂譜沒有明確規定，正文只寫「通常」）；主題在阿爾法諾補完的終場最後再現；帕華洛帝只在舞台上唱過兩次卡拉富，第一次是 1977 年舊金山歌劇院；1972 年錄音成為 BBC 1990 年世界盃轉播主題曲、登上英國單曲榜第 2 名；2026-11-16 以 wikitext 逐字核對"
+    },
+    {
+      "title": "Turandot（演出介紹）",
+      "publisher": "Royal Ballet and Opera（Royal Opera House）",
+      "date": "未註明",
+      "url": "https://www.rbo.org.uk/tickets-and-events/turandot-details",
+      "note": "「the conductor Arturo Toscanini famously laid down his baton in Act III, declaring 'at this point, the Maestro died'」；劇情：終場杜蘭朵召來皇帝與百姓，宣布陌生人的名字是愛；2026-11-16 查閱"
+    },
+    {
+      "title": "Opera Essentials: Turandot",
+      "publisher": "Royal Ballet and Opera（Royal Opera House）",
+      "date": "未註明",
+      "url": "https://www.rbo.org.uk/opera-essentials-turandot",
+      "note": "普契尼 1924 年 11 月 29 日過世；阿爾法諾根據普契尼的草稿補完最後一幕；2026-11-16 查閱"
+    },
+    {
+      "title": "Puccini's Turandot: Hope Never Sleeps（Aria Code）",
+      "publisher": "WNYC Studios／WQXR、Metropolitan Opera",
+      "date": "2021-03-10",
+      "url": "https://www.wnycstudios.org/podcasts/aria-code/episodes/aria-code-puccini-turandot-franco-corelli",
+      "note": "節目逐字稿。大都會歌劇院音樂總監 Yannick Nézet-Séguin：第三幕開頭的音樂暗、悶、像霧，和弦帶著懷疑；旋律唱一次、升一階再唱、再往上；旋律收尾時法國號的意外和弦加中國鑼，回到霧裡；第二段伴奏是很高的小提琴，像望向天空、像已是早上；場外女聲合唱唱那段旋律，底下是顫音的小提琴；男高音與樂團一路漸強到最後的高音，「爆開來的」是觀眾的掌聲。《華盛頓郵報》前古典樂評 Anne Midgette：詠嘆調一開始從焦慮的音樂裡浮出一句金色、往上爬的樂句；「沒有人知道我的名字」那段像浪。2026-11-16 查閱"
+    },
+    {
+      "title": "Classic Tracks: Luciano Pavarotti 'Nessun Dorma'（Richard Buskin）",
+      "publisher": "Sound On Sound",
+      "date": "2008-05",
+      "url": "https://www.soundonsound.com/techniques/classic-tracks-luciano-pavarotti-nessun-dorma",
+      "note": "1972 年 8 月 10 日至 25 日錄於倫敦 Kingsway Hall（內文一處誤植為 King Hall）；梅塔指揮倫敦愛樂；錄音時帕華洛帝尚未在舞台上唱過卡拉富（維基 Nessun dorma 亦載其首次在 1977 年舊金山）；BBC 電視以這版當 1990 年世界盃轉播主題曲、單曲登上英國榜第 2 名。2026-11-16 再核"
+    },
+    {
+      "title": "Official Singles Chart — 24 June 1990 – 30 June 1990",
+      "publisher": "Official Charts Company",
+      "date": "1990-06-30",
+      "url": "https://www.officialcharts.com/charts/singles-chart/19900630/7501",
+      "note": "Pavarotti〈Nessun Dorma〉本週排第 2（上週第 3，最高第 2，上榜第 3 週）；2026-11-15 查閱"
+    },
+    {
+      "title": "E lucevan le stelle",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/E_lucevan_le_stelle",
+      "note": "普契尼《托斯卡》（1900）第三幕，畫家卡瓦拉多西（男高音）在聖天使堡屋頂等待處決時所唱；以低沉的單簧管獨奏引入；2026-11-16 查閱"
+    },
+    {
+      "title": "La donna è mobile",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/La_donna_%C3%A8_mobile",
+      "note": "威爾第《弄臣》（1851）第三幕開頭曼托瓦公爵的歌，男高音的招牌曲；首演前排練嚴格保密，首演後很快在威尼斯船夫之間傳唱；2026-11-16 查閱"
+    },
+    {
+      "title": "File:1926-Turandot-frontespizio.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "1926-04-25",
+      "url": "https://commons.wikimedia.org/wiki/File:1926-Turandot-frontespizio.jpg",
+      "note": "頭圖：Ricordi 劇本扉頁，公版；扉頁上「L'ultimo duetto e il finale dell'opera sono stati completati da F. Alfano」與定價 5 里拉由圖面讀出；2026-11-15 查閱"
+    },
+    {
+      "title": "File:Poster Turandot.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "1926",
+      "url": "https://commons.wikimedia.org/wiki/File:Poster_Turandot.jpg",
+      "note": "正文圖：Leopoldo Metlicovitz 的海報，公版；2026-11-15 查閱"
+    }
+  ],
+  "form": "document",
+  "voice": "listener"
+}
