@@ -55,5 +55,10 @@
       "concerts.json 未查核"
     ],
     "note": "新增 0、更新 0（prune 移除 2）；補查沒做完（pbc、newaspect、tanart、udn、ntch、wwy、news 未查完）；歷史上的今天 1971"
+  },
+  "serial": {
+    "finished_at": "2026-11-15T16:03:20+08:00",
+    "missing": [],
+    "note": "譯到 2026-11-18（第 14 回）；已齊 3 天前置；《卡拉馬助夫兄弟們》缺 0 回，譯到 2026-11-18"
   }
 }
