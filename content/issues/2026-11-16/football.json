@@ -3,11 +3,11 @@
   "date": "2026-11-16",
   "title": "羅納迪諾踢到中場休息",
   "dek": "原本講好只踢 30 分鐘，結果他踢滿了整個上半場。",
-  "brief": "羅納迪諾隔了十一年回球場，在義大利第三級聯賽踢了上半場，沒進球。西班牙對英格蘭排在台灣時間週一凌晨 3 點 45 分，這份稿寫完時比賽還沒開踢，亞馬爾和庫巴西在先發名單上。巴薩下一場是 11 月 22 日晚上 9 點主場對比利亞雷亞爾，Goal 說德容幾乎不可能上。",
+  "brief": "羅納迪諾隔了十一年回球場，在義大利第三級聯賽踢了上半場，沒進球。西班牙在家 2 比 3 輸英格蘭，亞馬爾換來一個點球、助攻一球，庫巴西犯規送點球、中場休息被換下。巴薩下一場是 11 月 22 日晚上 9 點主場對比利亞雷亞爾，Goal 說德容幾乎不可能上。",
   "topic_key": "football:2026-11-16",
   "form": "qa",
   "voice": "fan",
-  "updated_at": "2026-11-16T03:18:00+08:00",
+  "updated_at": "2026-11-16T05:55:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "next": {
@@ -58,19 +58,31 @@
     },
     {
       "type": "h",
-      "text": "西班牙對英格蘭，巴薩的人誰排進先發？"
+      "text": "西班牙輸英格蘭，巴薩的人怎麼樣？"
     },
     {
       "type": "p",
-      "text": "這場在馬德里的大都會球場（Metropolitano），台灣時間週一凌晨 3 點 45 分開踢。這份稿寫完的時候比賽還沒開踢，賽果下一版補。西班牙時間 11 月 8 日，巴薩 2 比 1 贏了馬競。"
+      "text": "英格蘭在馬德里的大都會球場（Metropolitano）3 比 2 贏了西班牙，台灣時間週一凌晨 3 點 45 分開踢，ESPN 說終場是這個比分。上半場 45 分鐘凱恩罰進點球，下半場 53 分鐘 Konsa 頭球、57 分鐘 White 又進一球，英格蘭 3 比 0 領先。"
     },
     {
       "type": "p",
-      "text": "這是國家聯賽 A3 組的最後一輪。國家聯賽是歐洲各國國家隊之間的聯賽，四隊一組踢六場，前兩名進八強。西班牙五戰全勝拿 15 分，英格蘭 12 分，已經確定晉級。英格蘭總教練圖赫爾賽前說，他們要的就是歐洲時間週日晚上、在西班牙的這場決賽。對手是今年夏天的世界盃冠軍。"
+      "text": "63 分鐘英格蘭的 Anderson 在禁區放倒亞馬爾，吃了紅牌。西班牙 65 分鐘由奧亞薩瓦爾罰進點球，75 分鐘尼科·威廉斯再進一球，最後還是差一球。"
     },
     {
       "type": "p",
-      "text": "ESPN 的先發名單上，西班牙有**亞馬爾和庫巴西**，佩德里、費爾明、Joan García 都沒排進先發。英格蘭那邊，戈登先發，他是巴薩的人。"
+      "text": "這是國家聯賽 A3 組的最後一輪。國家聯賽是歐洲各國國家隊之間的聯賽，四隊一組踢六場，前兩名進八強。賽前西班牙 15 分、英格蘭 12 分，兩隊都已經確定晉級，剩下的是誰拿第一。英格蘭贏球之後也是 15 分，靠淨勝球比較多排第一，西班牙第二。9 月在溫布利球場，是西班牙 3 比 2 贏英格蘭。"
+    },
+    {
+      "type": "p",
+      "text": "英格蘭總教練圖赫爾賽前說，他們要的就是歐洲時間週日晚上、在西班牙的這場決賽。對手是今年夏天的世界盃冠軍。"
+    },
+    {
+      "type": "p",
+      "text": "巴薩的人這樣踢：**亞馬爾**先發，沒被換下，58 分鐘吃了黃牌。63 分鐘他在禁區被放倒，換來那個點球；75 分鐘他傳球，尼科·威廉斯進球。西班牙落後三球、最後只差一球，這兩球都跟他有關。"
+    },
+    {
+      "type": "p",
+      "text": "庫巴西也先發，41 分鐘在禁區犯規，送了凱恩那個點球，中場休息被 Huijsen 換下。佩德里和費爾明同樣在中場休息上場，Joan García 坐板凳，沒上。英格蘭那邊，戈登先發，踢到 83 分鐘被換下，沒進球。"
     },
     {
       "type": "h",
@@ -248,7 +260,42 @@
       "publisher": "ESPN",
       "date": "2026-11-15",
       "url": "https://www.espn.com/soccer/match/_/gameId/401861175",
-      "note": "開球 11 月 15 日 19:45 UTC（台灣 11 月 16 日 03:45）、先發名單（11 月 16 日 02:55 查閱）、A3 組積分"
+      "note": "11 月 16 日 05:45（台灣）讀到比賽狀態已是終場，英格蘭 3 比 2；進球 Kane 45' 點球、Konsa 53'、White 57'、Oyarzabal 65' 點球、Nico Williams 75'（Yamal 助攻）；Anderson 63' 紅牌（放倒 Yamal）；Cubarsí 41' 犯規送點球、45' 被 Huijsen 換下（沒標傷退）；Pedri、Fermín 45' 上場；Yamal 58' 黃牌、沒被換下；Gordon 先發、83' 被換下；Joan García 板凳未上；賽前 A3 積分（西班牙 15、英格蘭 12）；網頁本身抓不到，內容取自 ESPN 比賽紀錄資料（site.api.espn.com/apis/site/v2/sports/soccer/uefa.nations/summary?event=401861175）；開球 11 月 15 日 19:45 UTC（台灣 11 月 16 日 03:45）；ESPN 的積分榜資料尚未更新，最終排名未見官方表"
+    },
+    {
+      "title": "Two goals, a sending-off and a penalty: 10 crazy minutes set England v Spain alight",
+      "publisher": "Goal",
+      "date": "2026-11-15",
+      "url": "https://www.goal.com/en/news/two-goals-a-sending-off-and-a-penalty-10-crazy-minutes-set-england-v-spain-alight/blt268cd47e1152887d",
+      "note": "英格蘭 3 比 2 的五個進球與分鐘和 ESPN 一致；Cubarsí 送點球、下半場開始前被換下；Yamal 贏得點球、助攻 Nico Williams；Anderson 紅牌；稿子寫到 75 分鐘，沒有寫終場，也沒有組別排名；頁面只有相對時間"
+    },
+    {
+      "title": "Video: Harry Kane corrects Wembley's mistake on Spanish soil",
+      "publisher": "Goal",
+      "date": "2026-11-15",
+      "url": "https://www.goal.com/en/news/video-harry-kane-corrects-wembley-s-mistake-on-the-spaniards-home-turf/blt035ff7d1126a5dcc",
+      "note": "上半場 Kane 點球（Cubarsí 犯規）；英格蘭若守住會與西班牙同為 15 分、淨勝球較多而排第一；稿子寫在中場，沒有終場比分；頁面只有相對時間"
+    },
+    {
+      "title": "Spain vs. England LIVE: Nations League score, updates and commentary",
+      "publisher": "ESPN",
+      "date": "2026-11-15",
+      "url": "https://www.espn.com/soccer/story/_/id/50491576/spain-england-live-nations-league-updates",
+      "note": "賽前文字：9 月溫布利西班牙 3 比 2 贏；英格蘭贏球就因淨勝球較佳成為組冠軍；內文取自 now.core.api.espn.com，只有賽前導言，沒有比賽過程"
+    },
+    {
+      "title": "Nations League quarter-finals: Who is through? Who can join them? What is the state of play in each League A group?",
+      "publisher": "UEFA",
+      "date": "2026-11-15",
+      "url": "https://www.uefa.com/uefanationsleague/news/02ab-22096ba64f4d-f179d6d05013-1000--nations-league-quarter-finals-who-is-through-who-can-joi/",
+      "note": "賽前（11 月 14 日 23:00 CET 的狀況）西班牙、英格蘭都確定進八強；同分時看直接對戰、淨勝球等順序；UEFA 比賽頁（match/2047904）是動態頁面，抓不到比分與最終積分"
+    },
+    {
+      "title": "Spain vs England - Live match updates",
+      "publisher": "Sky Sports",
+      "date": "2026-11-15",
+      "url": "https://www.skysports.com/football/spain-vs-england/live/554117",
+      "note": "比分 England 3、Spain 2 與五個進球、Anderson 63' 紅牌和 ESPN 一致；頁面快取仍標 Live，不能單獨證明終場"
     },
     {
       "title": "Has the 'gap' closed? England's progress under Thomas Tuchel faces defining Spain test",
@@ -262,14 +309,14 @@
       "publisher": "FC Barcelona",
       "date": "2026-11-15",
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4607914/fc-barcelona-international-diary",
-      "note": "國腳賽程；頁面只有相對時間"
+      "note": "國腳賽程；頁面只有相對時間；11 月 16 日 05:4x 讀到的仍是賽前版，沒有西班牙對英格蘭的賽果，巴薩球員的賽後細節以 ESPN、Goal 為準"
     },
     {
       "title": "Blaugrana return to the Metropolitano",
       "publisher": "FC Barcelona",
       "date": "2026-11-15",
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4609338/blaugrana-return-to-the-metropolitano",
-      "note": "巴薩 11 月 8 日 2 比 1 贏馬競、西班牙對英格蘭的巴薩球員"
+      "note": "巴薩 11 月 8 日 2 比 1 贏馬競、西班牙對英格蘭的巴薩球員（賽後版正文已不再用這句）"
     },
     {
       "title": "International break storm hits Barcelona: a bizarre decision and an injury spark Flick's anger",
