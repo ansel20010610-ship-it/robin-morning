@@ -56,6 +56,11 @@
     ],
     "note": "新增 0、更新 0（prune 移除 2）；補查沒做完（pbc、newaspect、tanart、udn、ntch、wwy、news 未查完）；歷史上的今天 1971"
   },
+  "reserve": {
+    "finished_at": "2026-11-15T17:30:25+08:00",
+    "missing": [],
+    "note": "週日不補快訊；各欄庫存皆達標、無需修正，未寫稿"
+  },
   "serial": {
     "finished_at": "2026-11-15T16:03:20+08:00",
     "missing": [],
