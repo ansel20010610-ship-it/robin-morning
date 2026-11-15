@@ -1,0 +1,308 @@
+{
+  "column": "canon",
+  "date": "2026-11-16",
+  "title": "白遼士讓一段旋律演主角",
+  "dek": "1830 年的《幻想交響曲》讓同一段旋律在五個樂章換五副樣子；從此一首交響曲不必唱一個字，也能講完一個人的遭遇。",
+  "brief": "白遼士把他迷戀的女演員寫成一段旋律，讓它走完《幻想交響曲》的五個樂章：在舞會上夾進圓舞曲，在斷頭台前只剩四小節就被打斷，最後變成女巫夜宴上的粗俗舞曲。舒曼嫌節目單像江湖郎中，卻聽出這段旋律寫的正是好幾天趕不出腦袋的念頭。",
+  "topic_key": "canon:symphonie-fantastique",
+  "form": "argument",
+  "voice": "critic",
+  "updated_at": "2026-11-16T02:58:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Symphonie_Fantastique.png/1280px-Symphonie_Fantastique.png",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/2/26/Symphonie_Fantastique.png",
+    "width": 1280,
+    "height": 1487,
+    "alt": "泛黃的手寫樂譜紙，上方用花體字寫著 Episode de la vie d'un Artiste 和 Symphonie Fantastique，下一行的 en 後面有一個數字被塗黑，旁邊寫著 5 parties；左側抄著一段法文詩，中央寫著 No 1 和 Hector Berlioz，底部抄著兩行法文，蓋有紅色圓形印章。",
+    "caption": "白遼士親筆的《幻想交響曲》總譜封面，1830 年。標題寫著「一個藝術家生命中的插曲」；「5 個部分」的 5 前面，原本的 4 被塗掉了，這首曲子早先只有四個樂章。左邊抄的是雨果的詩，最後一句是「我心之書，每一頁都寫滿了」。",
+    "credit": "Hector Berlioz；影像來源：法國國家圖書館 Gallica；Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Symphonie_Fantastique.png",
+    "made": "1830"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "**交響曲可以照著一個故事走，一段旋律可以當一個角色**，這兩件事是法國作曲家**白遼士**（Hector Berlioz）的**《幻想交響曲》**做給後來的人看的。他 26 歲那年寫這首曲子，讓同一段旋律代表他愛的女人，從第一樂章跟到第五樂章，每換一個場面就換一副樣子。台上沒有人唱一個字，聽的人也認得出她又來了，還聽得出她這一次遭遇了什麼。"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子 1830 年 12 月 5 日在巴黎音樂院首演，故事是白遼士自己寫在節目單上的：一個年輕音樂家愛得沒有指望，吞了鴉片。劑量不夠，他沒死，睡著後做了一連串怪夢。他夢見舞會、夢見鄉間，夢見自己殺了她、被押上斷頭台，最後在女巫的夜宴上又看見她。"
+    },
+    {
+      "type": "p",
+      "text": "夢裡的女人有真人。1827 年，愛爾蘭女演員史密遜（Harriet Smithson）跟著英國劇團在巴黎演奧菲莉亞和茱麗葉，白遼士在台下愛上了她。他寫這首交響曲，有一部分是想讓她注意到自己。看過 1980 年電影《鬼店》的人，聽過它的一角：片頭的電子音樂，改編自它終樂章裡的〈震怒之日〉，那是天主教葬禮上唱的一首中世紀聖歌。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.36,
+        0.27,
+        0.3,
+        0.08
+      ],
+      "position": "封面中段，Symphonie Fantastique 下面那一行",
+      "caption": "「en 4 5 parties」：原本寫的 4 被塗黑，旁邊改成 5。"
+    },
+    {
+      "type": "h",
+      "text": "同一段旋律，五個處境"
+    },
+    {
+      "type": "p",
+      "text": "白遼士在 1855 年版的節目單裡寫明了："
+    },
+    {
+      "type": "quote",
+      "text": "他愛的那個女人，在他心裡變成了一段旋律，像一個甩不掉的念頭，他走到哪裡都會再遇見它、再聽見它。",
+      "original": "La femme aimée elle-même est devenue pour lui une mélodie et comme une idée fixe qu'il retrouve et qu'il entend partout.",
+      "cite": "白遼士，《幻想交響曲》節目單，1855 年版"
+    },
+    {
+      "type": "p",
+      "text": "他管這段旋律叫 idée fixe，中文多半譯作「固定樂思」。它第一次出現時熱情又羞怯；到了舞會，它夾進一首圓舞曲；到了鄉間，它在暴風般的中段冒出來。第四樂章走向斷頭台，它只回來四小節，就被一記重擊截斷。到了女巫的夜宴，它變成一首粗俗、怪誕的舞曲，由聲音尖銳的降 E 調單簧管吹出來。"
+    },
+    {
+      "type": "table",
+      "title": "那段旋律走過的五個樂章",
+      "head": [
+        "樂章",
+        "節目單裡的場面",
+        "那段旋律的樣子"
+      ],
+      "rows": [
+        [
+          "一、夢想，熱情",
+          "他第一次看見她，愛上了",
+          "在快板開頭第一次完整出現，熱情而羞怯"
+        ],
+        [
+          "二、舞會",
+          "在熱鬧的舞會上又遇見她",
+          "夾在圓舞曲裡出現兩次"
+        ],
+        [
+          "三、田野景色",
+          "夏日傍晚，兩個牧人對答，他怕她背叛",
+          "在暴風般的中段，由管樂吹出"
+        ],
+        [
+          "四、走向斷頭台",
+          "夢見殺了她，被押上刑場",
+          "只回來頭四小節，被致命的一擊打斷"
+        ],
+        [
+          "五、女巫安息日之夢",
+          "女巫的夜宴，她也來了",
+          "變成粗俗、怪誕的舞曲，降 E 調單簧管吹"
+        ]
+      ],
+      "caption": "依白遼士 1845、1855 年兩版節目單，以及 hberlioz.com 與倫敦大學皇家哈洛威學院的樂曲解說整理。"
+    },
+    {
+      "type": "p",
+      "text": "旋律始終認得出是同一段，變的是她身邊發生的事，所以聽的人聽見的是一個人的遭遇。在它之前，貝多芬的《田園交響曲》已經寫過雷聲、牧歌和鳥叫，但貝多芬自己說，那是「表達感受多於描繪」。《田園》寫的是到鄉下去的心情，沒有一個人從頭走到尾。"
+    },
+    {
+      "type": "h",
+      "text": "樂團替每個場面搭景"
+    },
+    {
+      "type": "p",
+      "text": "場面也得換得聽得出來。白遼士把原本留給歌劇院和軍樂隊的樂器搬進交響曲：英國管、降 E 調單簧管、短號、豎琴、鐘。第三樂章最後，牧笛再吹一次，另一邊不再回答，四個定音鼓在遠處滾出雷聲。終樂章裡，提琴改用弓桿敲弦，聲音像骨頭喀啦作響；低沉的鐘敲起喪鐘，〈震怒之日〉最後和女巫的舞曲疊在一起。"
+    },
+    {
+      "type": "p",
+      "text": "首演那晚，〈走向斷頭台〉征服了全場，白遼士說這個樂章是一個晚上寫完的。後來在雜誌上痛罵他的比利時樂評人費蒂斯，也承認他對樂器有本能。"
+    },
+    {
+      "type": "h",
+      "text": "我先替反方說話"
+    },
+    {
+      "type": "p",
+      "text": "一首交響曲要靠一頁說明才聽得懂，聽眾就是在讀故事，不是在聽音樂。白遼士 1845 年出版總譜時，還寫明節目單一定要發給聽眾。德國作曲家**舒曼**當時在萊比錫辦音樂雜誌，1835 年替這首曲子寫了一篇長評，他也嫌這份節目單，說這種路標總帶著幾分不體面、幾分江湖郎中的味道，五個樂章的標題就夠了。這一點我同意他。"
+    },
+    {
+      "type": "p",
+      "text": "可是白遼士自己後來退了一步。1855 年他寫道，單獨在音樂會演出時可以不發節目單，只留五個標題，他希望這首曲子本身就夠聽。他敢這樣說，是因為故事底下仍是交響曲的骨架：快板、舞曲、慢板、進行曲、終樂章。舒曼評的是一份鋼琴改編譜，他是一邊彈一邊讀的，讀到後來也是這樣聽："
+    },
+    {
+      "type": "quote",
+      "text": "一開始，節目單也壞了我所有的興致、所有自由的眺望。可是等它一點一點退到後面，我自己的想像開始動起來，我找到的不只是一切，還多得多，幾乎處處都是生動、溫暖的聲音。",
+      "original": "Im Anfange verleidete auch mir das Programm allen Genuß, alle freie Aussicht. Als dieses aber immer mehr in den Hintergrund trat und die eigne Phantasie zu schaffen anfing, fand ich nicht nur Alles, sondern viel mehr und fast überall lebendigen, warmen Ton.",
+      "cite": "舒曼，〈白遼士的交響曲〉，1835 年；據 1854 年舒曼自編文集"
+    },
+    {
+      "type": "h",
+      "text": "那段旋律本來就不該漂亮"
+    },
+    {
+      "type": "p",
+      "text": "費蒂斯 1835 年的評論說，白遼士缺乏旋律與和聲的想法。舒曼的長評有一大半是在回他。舒曼承認那段主旋律有點平板，接著寫："
+    },
+    {
+      "type": "quote",
+      "text": "可是別忘了，他根本不打算擺出一個偉大的樂思，他要的就是一個黏住不放、折磨人的念頭，像那種常常好幾天都趕不出腦袋的東西；那種單調、那種瘋勁，再也寫不得更準了。",
+      "original": "aber man bedenke, daß er ja gar keinen großen Gedanken hinstellen wollte, sondern eben eine festhängende quälende Idee in der Art, wie man sie oft tagelang nicht aus dem Kopfe bringt; das Eintönige, Irrsinnige kann aber gar nicht besser getroffen werden.",
+      "cite": "舒曼，〈白遼士的交響曲〉，1835 年"
+    },
+    {
+      "type": "p",
+      "text": "費蒂斯嫌它不夠漂亮，沒聽出它要做的是另一件事：一聽就認得，聽了甩不掉。一個角色的主題，要的就是這兩樣。太精緻的旋律，到了刑場和女巫的夜宴，反而認不出是同一個人。"
+    },
+    {
+      "type": "h",
+      "text": "李斯特自掏腰包印了鋼琴譜"
+    },
+    {
+      "type": "p",
+      "text": "首演那晚，鋼琴大師李斯特在台下鼓掌，鼓到全場都在看他，那是他認識白遼士的第二天。1833 年，他把整首交響曲改成鋼琴版，隔年在德國出版，自己花了一大筆錢。白遼士後來寫信給朋友說，他在德國的成功就是靠這份鋼琴譜。舒曼彈的，也是這一份。"
+    },
+    {
+      "type": "p",
+      "text": "倫敦大學皇家哈洛威學院的音樂學者柯倫說，李斯特後來在《浮士德交響曲》裡沿用了讓主題變形的辦法，這也許啟發了華格納的「主導動機」，也就是用一段音樂代表一個人物或一件事物。他也說，附節目單這個做法深深影響了李斯特、馬勒和理查・史特勞斯，三個人都寫了照著文學題材走的管弦樂。"
+    },
+    {
+      "type": "p",
+      "text": "我認為今天的電影配樂用的也是這一套：角色一出場，他的主題就響起來，劇情走到哪裡，主題就跟著變慢、變調、變得破碎。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "老掉的是那個故事"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子最舊的地方是故事。一個追不到女人的年輕人吞了鴉片，夢見殺了她，再把她寫成女巫夜宴上的粗俗舞曲。有學者把它和當時醫學界常談的「偏執狂」連在一起，那是對一個人、一件事放不下的病。白遼士後來真的娶了史密遜，1833 年結婚，在那之前他追了很久，家人強烈反對。今天讀那份節目單，很難不覺得寫的人執念太深。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "portrait",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/George_Clint_-_Harriet_Smithson_as_Miss_Dorillon%2C_in_%22Wives_as_They_Were%2C_and_Maids_as_They_Are%22_by_Elizabeth_Inchb..._-_Google_Art_Project.jpg/1280px-George_Clint_-_Harriet_Smithson_as_Miss_Dorillon%2C_in_%22Wives_as_They_Were%2C_and_Maids_as_They_Are%22_by_Elizabeth_Inchb..._-_Google_Art_Project.jpg",
+      "width": 1280,
+      "height": 1846,
+      "alt": "一幅直式油畫：深色背景前，一位捲髮的年輕女子站著，穿白色緞面的高腰長裙和短泡袖，右手按在胸前，戴白手套的左手拿著一把收起的扇子，身旁是一張紅絨布扶手椅。",
+      "caption": "愛爾蘭女演員史密遜扮演一齣英國喜劇裡的角色，英國畫家克林特約 1822 年畫，油彩、木板，44.5 × 31.1 公分，耶魯大學英國藝術中心收藏。白遼士 1827 年在巴黎看她演莎士比亞，愛上了她。",
+      "credit": "George Clint，耶魯大學英國藝術中心；Wikimedia Commons（Google Art Project）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:George_Clint_-_Harriet_Smithson_as_Miss_Dorillon,_in_%22Wives_as_They_Were,_and_Maids_as_They_Are%22_by_Elizabeth_Inchb..._-_Google_Art_Project.jpg",
+      "made": "約 1822"
+    },
+    {
+      "type": "p",
+      "text": "故事老了，辦法沒有。給一個人一段認得出的旋律，讓樂團替每個場面換一套聲音，旋律跟著她的處境變形，聽的人不必讀一個字也跟得上。《幻想交響曲》是經典，因為它讓後來的人看見這套辦法行得通。節目單白遼士自己都說可以不發，這套辦法卻從李斯特一路傳了下去。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "名稱",
+          "幻想交響曲（Symphonie fantastique），副題「一個藝術家生命中的插曲」"
+        ],
+        [
+          "作曲",
+          "白遼士，1830 年寫於巴黎，之後數年一再修改"
+        ],
+        [
+          "首演",
+          "1830 年 12 月 5 日，巴黎音樂院，哈貝內克指揮"
+        ],
+        [
+          "樂章",
+          "五個：夢想，熱情／舞會／田野景色／走向斷頭台／女巫安息日之夢"
+        ],
+        [
+          "總譜出版",
+          "1845 年"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Symphonie Fantastique: the symphony's programme (1845 and 1855 versions); extracts from the Memoirs",
+      "publisher": "The Hector Berlioz Website（Michel Austin 英譯）",
+      "url": "http://www.hberlioz.com/Scores/fantas.htm",
+      "note": "1845、1855 年兩版節目單；回憶錄第 4、26、31 章：首演前排練失敗、〈走向斷頭台〉一夜寫成、〈田野景色〉花三週多、首演反應；2026-11-16 查閱"
+    },
+    {
+      "title": "Symphonie fantastique : le programme de la symphonie (versions de 1845 et 1855)",
+      "publisher": "Site Hector Berlioz",
+      "url": "http://www.hberlioz.com/Scores/fantasf.htm",
+      "note": "節目單法文原文（La femme aimée… 一句、1845 年「不可或缺」、1855 年可不發節目單）；2026-11-16 查閱"
+    },
+    {
+      "title": "Berlioz Music Scores: Symphonie Fantastique (H 48)",
+      "publisher": "The Hector Berlioz Website",
+      "url": "http://www.hberlioz.com/Scores/sfantastique.htm",
+      "note": "史密遜、手稿封面由 4 改 5、各樂章固定樂思出現的小節、兩把豎琴、鐘、弓桿敲弦、總譜 1845 年出版、對李斯特史特勞斯馬勒的影響；2026-11-16 查閱"
+    },
+    {
+      "title": "Berlioz and Liszt",
+      "publisher": "The Hector Berlioz Website",
+      "url": "http://www.hberlioz.com/Predecessors/liszt.htm",
+      "note": "1830 年 12 月 4 日初識、首演時鼓掌、1833 年鋼琴改編、1834 年在德國出版、白遼士 1834 年 11 月 30 日與 1835 年 12 月 16 日致費宏信、《浮士德交響曲》題獻；2026-11-16 查閱"
+    },
+    {
+      "title": "Berlioz in Germany: Leipzig",
+      "publisher": "The Hector Berlioz Website",
+      "url": "http://www.hberlioz.com/Germany/leipzig.htm",
+      "note": "舒曼 1834 年創辦《新音樂雜誌》，隔年發表對李斯特改編版的研究；2026-11-16 查閱"
+    },
+    {
+      "title": "Berlioz: a biography",
+      "publisher": "The Hector Berlioz Website",
+      "url": "http://www.hberlioz.com/Works/biography.htm",
+      "note": "1803 年 12 月 11 日生、1827 年 9 月看史密遜演莎劇、1830 年寫作與首演、1833 年 10 月 3 日在英國大使館結婚與家人反對；2026-11-16 查閱"
+    },
+    {
+      "title": "Symphonie von H. Berlioz（Gesammelte Schriften über Musik und Musiker, Bd. 1, 1854）",
+      "publisher": "Robert Schumann；Wikisource",
+      "url": "https://de.wikisource.org/wiki/Gesammelte_Schriften_%C3%BCber_Musik_und_Musiker/Symphonie_von_H._Berlioz",
+      "note": "原刊 1835 年《新音樂雜誌》，引文據 1854 年文集版：主旋律 etwas plattes 與 festhängende quälende Idee 一段、節目單 Wegweiser… Charlatanmäßiges 與 Im Anfange verleidete 一段、費蒂斯 manquait d'idées mélodiques et harmoniques、費蒂斯也承認其配器本能；註 144、145：依據李斯特鋼琴版，Mit Entsetzen sahen und spielten wir"
+    },
+    {
+      "title": "Hector Berlioz: Symphonie fantastique, Romanticism and Programmatic Music",
+      "publisher": "Royal Holloway, University of London（David Curran）",
+      "url": "https://www.royalholloway.ac.uk/research-and-education/subjects/music/about-us/teacherhubmusic/hector-berlioz-symphonie-fantastique-romanticism-and-programmatic-music/",
+      "note": "固定樂思在各樂章變形、降 E 調單簧管、配器清單、弦樂分八部與弓桿敲弦、舞台外雙簧管、四個定音鼓、各樂章對應傳統交響曲、偏執狂、費蒂斯 1835 年的批評、李斯特《浮士德交響曲》與華格納、李斯特馬勒史特勞斯；2026-11-16 查閱"
+    },
+    {
+      "title": "Movie Music that goes Bump in the Night",
+      "publisher": "CRB Classical 99.5（Julia Marcus）",
+      "date": "2025-10-20",
+      "url": "https://www.classicalwcrb.org/blog/2025-10-20/movie-music-that-goes-bump-in-the-night",
+      "note": "《鬼店》片頭是《幻想交響曲》〈震怒之日〉的電子改編，卡洛斯與艾爾金德 1980 年"
+    },
+    {
+      "title": "How Wendy Carlos and Rachel Elkind Turned a Medieval Chant into One of Film's Most Unnerving Themes",
+      "publisher": "Berklee Online Take Note（Ben Newhouse）",
+      "date": "2024-09-28",
+      "url": "https://online.berklee.edu/takenote/horror-music-from-the-shining-main-title-explained/",
+      "note": "〈震怒之日〉是中世紀聖歌，原用於葬禮"
+    },
+    {
+      "title": "Im Freien – Beethoven und die Natur（展覽簡介）",
+      "publisher": "Beethoven-Haus Bonn",
+      "date": "2017",
+      "url": "https://internet.beethoven.de/pdf-sonderausstellung/Im-Freien-Beethoven-und-die-Natur-Kurzfuehrer.pdf",
+      "note": "貝多芬致出版商信：mehr Ausdruck der Empfindung als Malerei，亦印入初版；雷聲、牧歌、鳥鳴"
+    },
+    {
+      "title": "File:George Clint - Harriet Smithson as Miss Dorillon… - Google Art Project.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:George_Clint_-_Harriet_Smithson_as_Miss_Dorillon,_in_%22Wives_as_They_Were,_and_Maids_as_They_Are%22_by_Elizabeth_Inchb..._-_Google_Art_Project.jpg",
+      "note": "畫作年代、材質、尺寸、耶魯大學英國藝術中心收藏；2026-11-16 查閱"
+    }
+  ]
+}
