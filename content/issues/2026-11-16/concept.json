@@ -1,0 +1,198 @@
+{
+ "column": "concept",
+ "date": "2026-11-16",
+ "title": "兩道閃電同時落下，火車上的人不同意",
+ "dek": "愛因斯坦寫狹義相對論，第一節先定義「同時」。照他的定義，路堤上同時的兩道閃電，到了火車上就有先後。",
+ "brief": "照路堤上的鐘，鐵軌兩頭同時打下兩道閃電，坐在行進火車正中間的乘客卻會判定前面那道先打，而且她沒算錯。愛因斯坦 1905 年寫狹義相對論，第一節就先定義「同時」。在跟著地球轉的地面上用光訊號沿赤道往東對鐘，繞一圈回來，最後一座會慢 207.4 奈秒。",
+ "topic_key": "concept:relativity-of-simultaneity",
+ "form": "flow",
+ "voice": "tutor",
+ "updated_at": "2026-11-16T01:55:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "hero": {
+  "id": "hero",
+  "kind": "photo",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Einstein_patentoffice_full.jpg/1280px-Einstein_patentoffice_full.jpg",
+  "width": 1280,
+  "height": 1899,
+  "alt": "黑白照片。一位留著小鬍子、頭髮捲曲的年輕男子，穿格紋西裝，側坐在木椅上，右手搭在一張桌子邊緣，眼睛望向畫面右上方。",
+  "caption": "伯恩時期的愛因斯坦，攝於 1904 或 1905 年，他還在專利局上班的那幾年。拍照的是他在伯恩的一位朋友。",
+  "credit": "Lucien Chavan 攝；伯恩歷史博物館；經 Wikimedia Commons",
+  "license": "Public domain",
+  "license_url": "",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Einstein_patentoffice_full.jpg",
+  "made": "1904 或 1905"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "1905 年 6 月 30 日，物理期刊《物理年鑑》收到一篇論文，題目叫〈論動體的電動力學〉。狹義相對論就寫在這篇裡。寄稿的人在瑞士伯恩的專利局上班，職稱是三級技術專員，那年 26 歲。他是**愛因斯坦**。同一年，他另一篇論文推出了 E = mc²。論文第一節的標題就是「同時的定義」，他舉的例子是一班火車。"
+  },
+  {
+   "type": "quote",
+   "text": "比方我說：「那班火車 7 點到這裡。」意思大概是：「我錶上的短針指到 7，和火車進站，是同時發生的兩件事。」",
+   "original": "Wenn ich z. B. sage: „Jener Zug kommt hier um 7 Uhr an,“ so heißt dies etwa: „Das Zeigen des kleinen Zeigers meiner Uhr auf 7 und das Ankommen des Zuges sind gleichzeitige Ereignisse.“",
+   "cite": "愛因斯坦〈論動體的電動力學〉第 1 節，1905 年"
+  },
+  {
+   "type": "p",
+   "text": "錶和火車在同一個月台上，這種同時沒什麼好吵。愛因斯坦接著說，拿錶的短針代替時間，只在錶旁邊管用；要比較兩個隔得很遠的地方各發生的事，就不夠了。隔得很遠的兩件事「同時」是什麼意思，他得從頭講清楚。"
+  },
+  {
+   "type": "p",
+   "text": "他非講清楚不可，是因為物理學有兩條規則看起來在打架。第一條叫相對性原理：在等速前進的火車上做實驗，和在路邊做，物理定律一模一樣。第二條是光速不變：光在真空裡一秒走大約 30 萬公里，不管發光的東西怎麼動。麻煩出在速度相加。光和火車往同一個方向跑，照古典的速度相加，車上量到的光速就該是光速減掉車速，比路邊量到的少一截。這樣車上和路邊的物理就不一樣了，第一條保不住。"
+  },
+  {
+   "type": "p",
+   "text": "當時有名的理論物理學家，比較想丟掉第一條。愛因斯坦兩條都留，回頭去檢查我們平常怎麼講時間和空間。1905 年那篇論文開頭也提到，想測出地球在「傳光的介質」裡怎麼動，一直沒有成功。他把光速對誰都一樣定成假設，那個介質就用不著了。"
+  },
+  {
+   "type": "p",
+   "text": "1917 年，他出了一本寫給一般讀者的小書《狹義與廣義相對論淺說》，把這件事搬到一段鐵路上講。路堤上相隔很遠的 A、B 兩處，同時被閃電打中。他說，讀者會覺得這句話當然有意義，可是真要講清楚它的意思，並不容易。他的標準是，一個概念要能在實際情況裡查出成不成立，對物理學家來說才存在。他在這裡加了一個括號，對讀者講了一句話。"
+  },
+  {
+   "type": "quote",
+   "text": "親愛的讀者，你還沒有心服口服地同意這一點以前，不要往下讀。",
+   "original": "Bevor du mir dies mit Überzeugung zugegeben hast, lieber Leser, lies nicht weiter.",
+   "cite": "愛因斯坦《狹義與廣義相對論淺說》第 8 節，1917 年"
+  },
+  {
+   "type": "p",
+   "text": "他要讀者同意的是，遠處兩件事是不是同時，得有一套查得出來的辦法。書裡的讀者提了一個：沿著鐵軌量出 A 到 B 的距離，在正中間 M 站一個人，兩道閃光一起到他眼裡，就算同時。愛因斯坦反問。這得先知道光走 A 到 M、和走 B 到 M 一樣快；要檢查這一點，又得先有量時間的辦法，像在繞圈子。書裡的解法是把它當成一個約定：光走這兩段花一樣的時間，是我們自己訂的，拿來定義「同時」。有了這個約定，沿著鐵軌放幾座同款的鐘，都對得好；一件事發生在幾點，就看它旁邊那座鐘。1905 年那篇論文的第一節，也是這樣用光訊號來回對鐘。"
+  },
+  {
+   "type": "p",
+   "text": "現在讓一列很長的火車沿著鐵軌等速開過去，方向是從 A 往 B。車上的人也可以照同一套辦法定義同時，只是拿火車當基準。這種拿來量位置和時間的基準，物理學叫參考系，就是一套尺和鐘：路堤上那套是一個，火車上那套是另一個。閃電打下來時，火車上剛好有兩點對著 A 和 B，一位乘客坐在這兩點的正中間，叫她 M′。照路堤上的鐘，那一刻她剛好經過 M。接著火車往前開，她迎著 B 來的光過去，A 的光在後面追她，所以她先看到 B 的閃光。站在 M 的人沒動，兩道光一起到他那裡。"
+  },
+  {
+   "type": "svg",
+   "svg": "<svg viewBox=\"0 0 400 354\" role=\"img\" aria-label=\"三格示意：路堤上 A、B 兩處同時打雷，火車往 B 的方向開；車上中點的乘客先碰到 B 的光，之後兩道光才在路堤中點 M 會合\"><text x=\"8\" y=\"20\" font-size=\"14\">① 路堤上的鐘：A、B 同一刻打雷</text><rect class=\"soft\" x=\"30.0\" y=\"34\" width=\"300\" height=\"22\" rx=\"4\" stroke-width=\"1.5\"/><text x=\"180.0\" y=\"50\" font-size=\"13\" text-anchor=\"middle\" class=\"accent\">乘客 M′</text><line class=\"accent line\" x1=\"180.0\" y1=\"56\" x2=\"180.0\" y2=\"90\" stroke-width=\"2\"/><text x=\"278.0\" y=\"50\" font-size=\"13\" class=\"muted\">火車 →</text><line class=\"ink line\" x1=\"4\" y1=\"62\" x2=\"396\" y2=\"62\" stroke-width=\"1.5\"/><line class=\"ink line\" x1=\"30.0\" y1=\"58\" x2=\"30.0\" y2=\"66\" stroke-width=\"1.5\"/><text x=\"30.0\" y=\"102\" font-size=\"13\" text-anchor=\"middle\">A</text><line class=\"ink line\" x1=\"180.0\" y1=\"58\" x2=\"180.0\" y2=\"66\" stroke-width=\"1.5\"/><text x=\"180.0\" y=\"102\" font-size=\"13\" text-anchor=\"middle\">M</text><line class=\"ink line\" x1=\"330.0\" y1=\"58\" x2=\"330.0\" y2=\"66\" stroke-width=\"1.5\"/><text x=\"330.0\" y=\"102\" font-size=\"13\" text-anchor=\"middle\">B</text><polyline class=\"gold line\" points=\"26.0,26 33.0,38 27.0,44 32.0,60\" stroke-width=\"2.5\"/><polyline class=\"gold line\" points=\"326.0,26 333.0,38 327.0,44 332.0,60\" stroke-width=\"2.5\"/><text x=\"180.0\" y=\"116\" font-size=\"13\" text-anchor=\"middle\" class=\"muted\">M′ 和 M 正好對齊</text><text x=\"8\" y=\"136\" font-size=\"14\">② B 的光先碰到車上的乘客 M′</text><rect class=\"soft\" x=\"72.9\" y=\"150\" width=\"300\" height=\"22\" rx=\"4\" stroke-width=\"1.5\"/><text x=\"222.9\" y=\"166\" font-size=\"13\" text-anchor=\"middle\" class=\"accent\">乘客 M′</text><line class=\"accent line\" x1=\"222.9\" y1=\"172\" x2=\"222.9\" y2=\"206\" stroke-width=\"2\"/><line class=\"ink line\" x1=\"4\" y1=\"178\" x2=\"396\" y2=\"178\" stroke-width=\"1.5\"/><line class=\"ink line\" x1=\"30.0\" y1=\"174\" x2=\"30.0\" y2=\"182\" stroke-width=\"1.5\"/><text x=\"30.0\" y=\"218\" font-size=\"13\" text-anchor=\"middle\">A</text><line class=\"ink line\" x1=\"180.0\" y1=\"174\" x2=\"180.0\" y2=\"182\" stroke-width=\"1.5\"/><text x=\"180.0\" y=\"218\" font-size=\"13\" text-anchor=\"middle\">M</text><line class=\"ink line\" x1=\"330.0\" y1=\"174\" x2=\"330.0\" y2=\"182\" stroke-width=\"1.5\"/><text x=\"330.0\" y=\"218\" font-size=\"13\" text-anchor=\"middle\">B</text><line class=\"gold line\" x1=\"30.0\" y1=\"190\" x2=\"131.1\" y2=\"190\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><polygon class=\"gold\" points=\"137.1,190 128.1,185 128.1,195\"/><line class=\"gold line\" x1=\"330.0\" y1=\"200\" x2=\"228.9\" y2=\"200\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><polygon class=\"gold\" points=\"222.9,200 231.9,195 231.9,205\"/><text x=\"180.0\" y=\"232\" font-size=\"13\" text-anchor=\"middle\" class=\"muted\">M 還在等</text><text x=\"8\" y=\"252\" font-size=\"14\">③ 兩道光在路堤中點 M 會合</text><rect class=\"soft\" x=\"90.0\" y=\"266\" width=\"300\" height=\"22\" rx=\"4\" stroke-width=\"1.5\"/><text x=\"240.0\" y=\"282\" font-size=\"13\" text-anchor=\"middle\" class=\"accent\">乘客 M′</text><line class=\"accent line\" x1=\"240.0\" y1=\"288\" x2=\"240.0\" y2=\"322\" stroke-width=\"2\"/><line class=\"ink line\" x1=\"4\" y1=\"294\" x2=\"396\" y2=\"294\" stroke-width=\"1.5\"/><line class=\"ink line\" x1=\"30.0\" y1=\"290\" x2=\"30.0\" y2=\"298\" stroke-width=\"1.5\"/><text x=\"30.0\" y=\"334\" font-size=\"13\" text-anchor=\"middle\">A</text><line class=\"ink line\" x1=\"180.0\" y1=\"290\" x2=\"180.0\" y2=\"298\" stroke-width=\"1.5\"/><text x=\"180.0\" y=\"334\" font-size=\"13\" text-anchor=\"middle\">M</text><line class=\"ink line\" x1=\"330.0\" y1=\"290\" x2=\"330.0\" y2=\"298\" stroke-width=\"1.5\"/><text x=\"330.0\" y=\"334\" font-size=\"13\" text-anchor=\"middle\">B</text><line class=\"gold line\" x1=\"30.0\" y1=\"306\" x2=\"174.0\" y2=\"306\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><polygon class=\"gold\" points=\"180.0,306 171.0,301 171.0,311\"/><line class=\"gold line\" x1=\"330.0\" y1=\"316\" x2=\"186.0\" y2=\"316\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><polygon class=\"gold\" points=\"180.0,316 189.0,311 189.0,321\"/><text x=\"180.0\" y=\"348\" font-size=\"13\" text-anchor=\"middle\" class=\"muted\">A 的光還沒追上 M′</text></svg>",
+   "title": "路堤的鐘看這兩道閃電",
+   "caption": "示意，不按比例；為了看得清楚，火車速度畫成光速的四成。三格依路堤上的鐘由上往下排。金色虛線上面一條是 A 發出的光，下面一條是 B 發出的光；酒紅線標出車廂正中間的乘客 M′。依愛因斯坦《狹義與廣義相對論淺說》第 9 節的情境繪製。"
+  },
+  {
+   "type": "p",
+   "text": "她坐在車上那兩點的正中間，兩道光要走的路一樣長，光速對她也一樣，卻一先一後到。**照同一套定義，她只能判定 B 那道閃電先打。**路堤上的人照同一套定義，說兩道閃電同時。兩個人用的程序一字不差，得出的答案不一樣，而且誰也沒算錯。"
+  },
+  {
+   "type": "p",
+   "text": "換成聲音比較好想像，不過這個比喻有一處不準。把閃電換成鐵軌兩頭同時點燃的鞭炮，乘客一樣先聽到前面那一響。可是聲音靠空氣傳，她知道自己正穿過空氣往前衝，把這一點扣掉，就會算出兩響同時，和路邊的人一致。光不一樣，她和路邊的人量到的光速相同，鞭炮那一招在這裡用不上。",
+   "tag": "原創示範"
+  },
+  {
+   "type": "p",
+   "text": "這麼怪的事，月台上卻沒人察覺，是因為平常的速度下差得太小。依教科書的公式，路堤上同時發生的兩件事，換到速度 v 的火車上，先後大約差 v 乘上兩地距離、再除以光速的平方。拿時速 300 公里的火車，兩道閃電隔 300 公里，差出來的是 0.28 奈秒。一奈秒是十億分之一秒，光在這段時間只走 8 公分多。",
+   "tag": "原創示範"
+  },
+  {
+   "type": "p",
+   "text": "0.28 奈秒可以不理，可是手機定位用的 GPS 就躲不掉。地球在自轉，地面每一點都往東跑，像一列繞著赤道開的火車。這個比喻也有不準的地方：因為地面在繞圈，不能直接套直線火車的算法，要一小段一小段算。阿什比（Neil Ashby）寫過一篇長文，專講 GPS 裡的相對論。他算過，在跟著地球轉的地面上，用愛因斯坦那套光訊號的辦法，沿著赤道往東一座接一座對鐘，繞一圈回來，最後一座會比第一座慢 **207.4 奈秒**。光在這段時間走得了 62 公尺。他說，這個差可以看成就是火車上那件事造成的。"
+  },
+  {
+   "type": "p",
+   "text": "GPS 的做法，是設想一個以地心為原點、不跟著地球轉的參考系，鐘都在那裡照愛因斯坦的辦法對好。1984 年有人真的驗過。他們用 GPS 衛星，在美國國家標準局（博爾德）、西德聯邦物理技術研究院（布倫瑞克）和東京天文台之間做了繞地球一圈的比對。地球在轉，Sagnac 修正量是 240 到 350 奈秒。90 次獨立繞行，三段時差相加的殘差平均 5 奈秒，不到 Sagnac 總量的 2%。"
+  },
+  {
+   "type": "p",
+   "text": "有三種常見的誤會。第一，它不是光在路上耽擱造成的錯覺：乘客坐在正中間，兩段路一樣長，扣完還是有先後。第二，它不是「什麼都相對」：整套推論的出發點，偏偏是一件對誰都一樣的事，光速。第三，它不會讓因果倒過來。兩件事之間要是來得及跑一道光，或任何比光慢的東西，前一件就可能影響後一件。這樣的兩件事，先後在每個參考系都一樣。會因參考系換順序的，只有連光都來不及在中間跑一趟的那種，鐵軌兩頭同一刻的兩道閃電就是。"
+  },
+  {
+   "type": "p",
+   "text": "這件事後來叫**同時的相對性**：不同地點的兩件事是不是同時，要先講明照的是哪一個參考系的鐘；彼此等速移動的兩個參考系，可以對同一對事件給出不同答案，兩邊都對。路堤是一個參考系，火車是另一個；路邊的人說同時、乘客說 B 先打，就是同一對閃電的兩個答案。這個名稱，在那本小書裡就寫成括號裡的一句。"
+  },
+  {
+   "type": "quote",
+   "text": "對路堤來說同時的事件，對火車來說不同時，反過來也一樣（同時的相對性）。每一個參考體都有它自己的時間；講一件事的時間，要說明是對哪一個參考體講的，才有意義。",
+   "original": "Ereignisse, welche in bezug auf den Bahndamm gleichzeitig sind, sind in bezug auf den Zug nicht gleichzeitig und umgekehrt (Relativität der Gleichzeitigkeit). Jeder Bezugskörper (Koordinatensystem) hat seine besondere Zeit; eine Zeitangabe hat nur dann einen Sinn, wenn der Bezugskörper angegeben ist, auf den sich die Zeitangabe bezieht.",
+   "cite": "愛因斯坦《狹義與廣義相對論淺說》第 9 節，1917 年"
+  },
+  {
+   "type": "callout",
+   "label": "如果你真的懂了，應該答得出來",
+   "items": [
+    "同一列火車改成從 B 往 A 開，其他都不變。車廂正中間的乘客先看到哪一道閃光？她會判定哪一道先打？",
+    "兩道閃電在路堤上是同時的。路堤上有個人站得離 A 比較近，他先看到 A 的閃光。照愛因斯坦的定義，他該說 A 先打嗎？",
+    "有人在台北按下按鈕，一秒後高雄的一盞燈亮了，燈就是那個按鈕觸發的。會不會有一列跑得夠快的火車，車上的人判定燈先亮、按鈕後按？"
+   ]
+  },
+  {
+   "type": "spoiler",
+   "text": "以下是答案"
+  },
+  {
+   "type": "callout",
+   "label": "答案",
+   "items": [
+    "先看到 A 的閃光，也判定 A 先打。這回她迎著 A 的光過去；她仍坐在車廂正中間，先到的那一道就是先發生的。",
+    "不該。他不在中點，A 的光走的路短，本來就先到。照路堤上對好的鐘，兩道閃電同時。火車上那位乘客遇到的差別，是扣掉路程之後還留下來的那一種。",
+    "不會。按鈕和燈之間有訊號跑過去，最快也只能是光速。來得及傳訊號的兩件事，先後在每個參考系都一樣。"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "title": "Zur Elektrodynamik bewegter Körper",
+   "publisher": "A. Einstein，Annalen der Physik 17（1905）；德文維基文庫",
+   "date": "1905-06-30",
+   "url": "https://de.wikisource.org/wiki/Zur_Elektrodynamik_bewegter_K%C3%B6rper",
+   "note": "§1 火車 7 點進站一句（引文原文）；§2 同時沒有絕對意義的結論。日期為收稿日（Eingegangen 30. Juni 1905），文末署 Bern, Juni 1905。"
+  },
+  {
+   "title": "On the Electrodynamics of Moving Bodies",
+   "publisher": "A. Einstein，W. Perrett 與 G. B. Jeffery 英譯，The Principle of Relativity（Methuen, 1923）；Fourmilab 電子版",
+   "date": "1923",
+   "url": "https://www.fourmilab.ch/etexts/einstein/specrel/www/",
+   "note": "引言：電動力學用於運動物體的不對稱、找不到地球相對「光介質」的運動、兩條假設、光以太多餘；§1 以光訊號往返定義對鐘。"
+  },
+  {
+   "title": "Über die spezielle und die allgemeine Relativitätstheorie (Gemeinverständlich)",
+   "publisher": "A. Einstein，Vieweg（布倫瑞克，1917）；Project Gutenberg #77850",
+   "date": "1917",
+   "url": "https://www.gutenberg.org/ebooks/77850",
+   "note": "§8 閃電、中點 M 與兩面鏡子、「不要往下讀」的括號、光走兩段同時是約定；§9 火車、M′、B 先到、同時的相對性（引文原文）。電子版 2026-02-03 上架；序寫於 1916 年 12 月。"
+  },
+  {
+   "title": "Relativity: The Special and General Theory",
+   "publisher": "A. Einstein，Robert W. Lawson 英譯（Methuen, 1920）；marxists.org 轉錄",
+   "date": "1920",
+   "url": "https://www.marxists.org/reference/archive/einstein/works/1910s/relative/ch07.htm",
+   "note": "第 7 節：光速 300,000 km/sec、速度相加使光對車廂為 c − v、有名的理論物理學家較傾向放棄相對性原理。第 8、9 節對照德文本。"
+  },
+  {
+   "title": "Officer in the patent office (1900–1909)",
+   "publisher": "ETH Library, Einstein Online",
+   "date": "",
+   "url": "https://library.ethz.ch/en/collections-and-archives/platforms/einstein-online/beamter-im-patentamt-1900-1909.html",
+   "note": "1902 年 6 月 19 日任命為三級技術專員（Technical Expert, III Class）。"
+  },
+  {
+   "title": "Timeline",
+   "publisher": "einstein-website.de",
+   "date": "",
+   "url": "https://einstein-website.de/en/timeline/",
+   "note": "1879 年 3 月 14 日生（1905 年 6 月時 26 歲為依此推算）；1905 年〈論動體的電動力學〉含狹義相對論，另一篇推出 E = mc²。"
+  },
+  {
+   "title": "5.5 The Lorentz Transformation, University Physics Volume 3",
+   "publisher": "S. J. Ling, J. Sanny, W. Moebs，OpenStax",
+   "date": "2016-09-29",
+   "url": "https://openstax.org/books/university-physics-volume-3/pages/5-5-the-lorentz-transformation",
+   "note": "t′ 的洛倫茲變換式；類空間隔事件的先後依參考系而定、類時與類空的分類所有慣性系都同意。0.28 奈秒與 8 公分為依此公式自算（v = 300 km/h，距離 300 km，γ 約為 1）。"
+  },
+  {
+   "title": "Relativity in the Global Positioning System",
+   "publisher": "Neil Ashby，Living Reviews in Relativity 6:1",
+   "date": "2003-01-28",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5253894/",
+   "note": "自轉參考系中以愛因斯坦對鐘法沿赤道繞一圈差 207.4 ns；Sagnac 效應可視為同時的相對性所致；GPS 採地心非自轉局部慣性系；1984 年 NBS（博爾德）、PTB（布倫瑞克）、東京天文台以 GPS 衛星 3、4、6、8 號做繞地球一圈實驗，修正量 240–350 ns、90 次繞行、殘差平均 5 ns。62 公尺為自算。"
+  },
+  {
+   "title": "File:Einstein patentoffice full.jpg",
+   "publisher": "Wikimedia Commons",
+   "date": "",
+   "url": "https://commons.wikimedia.org/wiki/File:Einstein_patentoffice_full.jpg",
+   "note": "攝影 Lucien Chavan（1868–1942），愛因斯坦住伯恩時的朋友；年代 1904 或 1905（兩說並列）；credit：Historical Museum of Berne；公版。"
+  }
+ ]
+}
