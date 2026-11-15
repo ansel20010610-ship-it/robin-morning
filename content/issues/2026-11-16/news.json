@@ -1,0 +1,190 @@
+{
+  "column": "news",
+  "date": "2026-11-16",
+  "title": "伊朗無人機再襲巴林美軍基地；愛沙尼亞將關閉俄羅斯邊境",
+  "dek": "胡塞武裝推進到離亞丁 60 公里，剛果伊波拉疫情未受控制，中華電信發錯帳單簡訊。",
+  "brief": "巴林 15 日兩度發出威脅警報，說防空系統擊落攻擊美軍基地的伊朗無人機；這是三天內伊朗第二次無人機攻擊。愛沙尼亞宣布關閉與俄羅斯的邊境口岸，法新社說從 12 月 1 日起，起因是一家無人機廠遇襲。台灣方面，中華電信 11 月帳單簡訊金額有誤，已停止發送並將重發。",
+  "topic_key": "news:2026-11-16",
+  "voice": "wire",
+  "updated_at": "2026-11-16T05:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "sources": [
+    {
+      "title": "Bahrain says air defences destroyed several Iranian drones attacking US base",
+      "publisher": "法國 24 電視台",
+      "date": "2026-11-15",
+      "url": "https://www.france24.com/en/bahrain-says-air-defences-destroyed-several-iranian-drones-attacking-us-base",
+      "note": "15 日 14:55；巴林兩度警報；三天內第二次；傷亡與美方回應未提"
+    },
+    {
+      "title": "Iran claims drone attack on US military base in Bahrain",
+      "publisher": "法國 24 電視台",
+      "date": "2026-11-15",
+      "url": "https://www.france24.com/en/iran-claims-drone-attack-on-us-military-base-in-bahrain",
+      "note": "15 日 16:29；伊朗宣稱；戰爭近九個月、談判無突破"
+    },
+    {
+      "title": "Estonia to close Russian border crossings after 'sabotage' attempt at drone factory",
+      "publisher": "法國 24 電視台（法新社）",
+      "date": "2026-11-15",
+      "url": "https://www.france24.com/en/europe/20261115-estonia-to-close-russian-border-crossings-after-sabotage-attempt-at-drone-factory",
+      "note": "15 日 18:05；12 月 1 日起；察赫納、米夏爾、檢察長說法；與半島電視台關閉範圍寫法不同，只取法新社"
+    },
+    {
+      "title": "Estonia to close border crossings with Russia after attack on drone maker",
+      "publisher": "半島電視台",
+      "date": "2026-11-15",
+      "url": "https://www.aljazeera.com/news/2026/11/15/estonia-to-close-border-crossings-with-russia-after-attack-on-drone-maker",
+      "note": "俄外交部發言人對塔斯社的說法；未給關閉時間"
+    },
+    {
+      "title": "Yemen's Houthis advance on Aden as government forces retreat to defend their capital",
+      "publisher": "法國 24 電視台（法新社）",
+      "date": "2026-11-15",
+      "url": "https://www.france24.com/en/middle-east/20261115-yemen-houthis-advance-to-within-60-kilometres-of-aden-military-sources-say",
+      "note": "15 日 20:28；六名政府與軍方消息人士；距亞丁約 60 公里；10 月 15 日攻擊總統府 4 死為政府軍事消息人士說法"
+    },
+    {
+      "title": "Africa CDC says Ebola outbreak in DR Congo 'still not under control'",
+      "publisher": "半島電視台（路透社）",
+      "date": "2026-11-15",
+      "url": "https://www.aljazeera.com/news/2026/11/15/africa-cdc-says-ebola-outbreak-in-dr-congo-still-not-under-control",
+      "note": "卡塞亞對路透說；病例與死亡為剛果政府數據；捐款 29 億承諾、13 億撥出"
+    },
+    {
+      "title": "Nearly 2,200 migrants reach Spain's Canary Islands in two days",
+      "publisher": "法國 24 電視台",
+      "date": "2026-11-15",
+      "url": "https://www.france24.com/en/europe/20261115-nearly-2200-migrants-reach-spain-canary-islands-in-two-days",
+      "note": "15 日 22:06；兩天近 2,200；11 日緊急狀態；與半島電視台單日數字不同，不採單日數字"
+    },
+    {
+      "title": "Record number of migrants arrive in Spain's Canary Islands",
+      "publisher": "半島電視台",
+      "date": "2026-11-15",
+      "url": "https://www.aljazeera.com/news/2026/11/15/record-number-of-migrants-arrive-in-spains-canary-islands",
+      "note": "托雷斯預定 15 日訪耶羅島"
+    },
+    {
+      "title": "用戶帳單金額傳暴增 中華電：將重發正確簡訊內容",
+      "publisher": "中央社",
+      "date": "2026-11-15",
+      "url": "https://www.cna.com.tw/news/ahel/202611150126.aspx",
+      "note": "16:26 發布；第 1 週期、非轉帳代繳"
+    },
+    {
+      "title": "中華電信發送異常帳單通知 官方致歉指系統作業有誤",
+      "publisher": "公視新聞網",
+      "date": "2026-11-15",
+      "url": "https://news.pts.org.tw/article/835839",
+      "note": "19:20 發布；官網與客服一度連不上；專家提醒"
+    },
+    {
+      "title": "交通部預告修法 擬2032年起新車須裝防暴衝系統",
+      "publisher": "公視新聞網",
+      "date": "2026-11-15",
+      "url": "https://news.pts.org.tw/article/835841",
+      "note": "19:25 發布；2032、2034 年兩階段；2027 上半年定案"
+    }
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "中東戰爭近九個月，巴林 15 日再遭無人機攻擊。愛沙尼亞準備關閉俄羅斯邊境。台灣有帳單簡訊誤發。"
+    },
+    {
+      "type": "news",
+      "title": "世界",
+      "items": [
+        {
+          "headline": "伊朗無人機再襲巴林美軍基地",
+          "place": [
+            "BH",
+            "IR"
+          ],
+          "summary": "巴林 15 日（週日）兩度發出威脅警報，是 9 月以來第一次。巴林說，防空系統擊落多架攻擊美軍基地的伊朗無人機；伊朗宣稱對基地發動無人機攻擊。這是三天內第二次，結束戰事中一段長時間的平靜。",
+          "source": "法國 24 電視台",
+          "url": "https://www.france24.com/en/bahrain-says-air-defences-destroyed-several-iranian-drones-attacking-us-base",
+          "when": "11 月 15 日，台灣時間"
+        },
+        {
+          "headline": "愛沙尼亞將關閉俄羅斯邊境口岸",
+          "place": [
+            "EE",
+            "RU"
+          ],
+          "summary": "愛沙尼亞外長察赫納 15 日宣布關閉邊境口岸，法新社說從 12 月 1 日起。14 日夜間，首都塔林北邊的無人機廠 Threod Systems 遭疑似縱火。總理米夏爾說是俄羅斯軍事情報機關下令；八人被捕，檢察長說他們住在拉脫維亞。",
+          "source": "法國 24 電視台、半島電視台",
+          "url": "https://www.france24.com/en/europe/20261115-estonia-to-close-russian-border-crossings-after-sabotage-attempt-at-drone-factory",
+          "when": "11 月 15 日，台灣時間"
+        },
+        {
+          "headline": "胡塞武裝逼近葉門亞丁",
+          "place": "YE",
+          "summary": "六名葉門政府與軍方消息人士對法新社說，胡塞武裝已推進到離亞丁約 60 公里處。亞丁是獲國際承認的政府的臨時所在地。政府 15 日宣布，已從曼德海峽一帶撤軍，調去保衛亞丁。",
+          "source": "法國 24 電視台（法新社）",
+          "url": "https://www.france24.com/en/middle-east/20261115-yemen-houthis-advance-to-within-60-kilometres-of-aden-military-sources-say",
+          "when": "11 月 15 日，台灣時間"
+        },
+        {
+          "headline": "剛果伊波拉疫情仍未受控",
+          "place": "CD",
+          "summary": "非洲疾管中心總幹事卡塞亞 15 日對路透社說，剛果民主共和國的伊波拉疫情仍未受控。剛果政府數據顯示，疫情 5 月宣布以來超過 11,200 例、5,500 人死亡。卡塞亞說，捐助國承諾 29 億美元，只撥出 13 億。",
+          "source": "半島電視台（路透社）",
+          "url": "https://www.aljazeera.com/news/2026/11/15/africa-cdc-says-ebola-outbreak-in-dr-congo-still-not-under-control",
+          "when": "11 月 15 日，台灣時間"
+        },
+        {
+          "headline": "兩天近 2,200 移民抵加那利",
+          "place": "ES",
+          "summary": "西班牙海上救援單位 15 日說，兩天內近 2,200 名移民搭船抵達加那利群島。西班牙 11 日已宣布當地進入移民緊急狀態。內政部統計，1 至 10 月海路入境西班牙的人略多於 28,000，其中超過 13,000 人到加那利群島。",
+          "source": "法國 24 電視台、半島電視台",
+          "url": "https://www.france24.com/en/europe/20261115-nearly-2200-migrants-reach-spain-canary-islands-in-two-days",
+          "when": "11 月 15 日，西班牙當地"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "title": "台灣",
+      "items": [
+        {
+          "headline": "中華電信帳單簡訊金額有誤",
+          "place": "TW",
+          "summary": "中華電信 15 日說，帳務系統更版時，發現 11 月行動電話帳單簡訊內容有誤，已停止發送並道歉。用戶貼出的簡訊金額比平時高，官網與客服一度連不上。受影響的是第 1 週期、非轉帳代繳的客戶；簡訊只是通知，仍照帳單實際金額繳費，會重發正確簡訊。",
+          "source": "中央社、公視新聞網",
+          "url": "https://www.cna.com.tw/news/ahel/202611150126.aspx",
+          "when": "11 月 15 日，台灣時間"
+        },
+        {
+          "headline": "新車 2032 年起須裝防暴衝系統",
+          "place": "TW",
+          "summary": "交通部 15 日預告修法，自動檔小客車、小貨車要裝防誤踩油門的系統。低速時偵測到前方有障礙物，又疑似誤踩油門，系統會自動煞車。預定 2027 上半年定案，給車廠過渡期。",
+          "source": "公視新聞網",
+          "url": "https://news.pts.org.tw/article/835841",
+          "when": "11 月 15 日，台灣時間"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "防暴衝系統實施日",
+      "head": [
+        "車輛",
+        "起算日"
+      ],
+      "rows": [
+        [
+          "新型式的自動檔小客車、小貨車",
+          "2032 年 1 月 1 日"
+        ],
+        [
+          "已有車型的新製造車",
+          "2034 年 1 月 1 日"
+        ]
+      ],
+      "caption": "公視新聞網。"
+    }
+  ]
+}
