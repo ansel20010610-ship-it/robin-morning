@@ -1,4 +1,15 @@
 {
+  "1": {
+    "finished_at": "2026-11-16T01:07:59+08:00",
+    "missing": [
+      "football",
+      "news",
+      "artwork",
+      "canon",
+      "concept"
+    ],
+    "note": "devotion 自寫、perio 先發班已完成；music 審稿判定重寫→總編重寫1／忠實度核對後修正；devotion 不審稿"
+  },
   "column": {
     "finished_at": "2026-11-15T22:46:31+08:00",
     "missing": [
