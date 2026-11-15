@@ -1,0 +1,161 @@
+{
+  "column": "perio",
+  "date": "2026-11-16",
+  "title": "附著平均一年掉 0.1 毫米，底下差別很大",
+  "dek": "合併 16 項追蹤研究，成人牙周附著平均一年少 0.1 毫米；附著變化最多的那五分之一，平均一年少 0.45 毫米。只收特定疾病或只收治療過病人的研究不在內。",
+  "brief": "一篇合併 16 項追蹤研究的系統性回顧算出，成人牙周附著平均一年少 0.1 毫米，附著變化最多的那五分之一卻平均少 0.45 毫米。年齡和性別的影響小得出乎意料。",
+  "takeaway": "16 項追蹤研究合併，成人附著平均每年少 0.1 毫米，附著變化最多的那五分之一平均每年少 0.45 毫米；族群之間、同一族群之內，差異都很大。",
+  "chairside": "研究把成人合起來算，排除只收特定疾病或只收治療過病人的研究，牙周附著平均一年往下掉 0.1 毫米左右，不同人群之間差很多。今天量的數字和拍的 X 光片，我們會留著當紀錄。",
+  "topic_key": "perio:doi:10.1111/jcpe.12943",
+  "form": "compare",
+  "voice": "colleague",
+  "updated_at": "2026-11-15T22:46:15+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "illustration",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Severe_periodontitis.png/1280px-Severe_periodontitis.png",
+    "width": 1280,
+    "height": 1800,
+    "alt": "一顆臼齒的剖面線條圖：紅線是牙齦，棕線是齒槽骨，牙根與骨之間畫著斜線的牙周韌帶。右側牙齦和牙根之間有一個很深的囊袋，旁邊一排黑點標出深度，一支灰色探針插到囊袋底。",
+    "caption": "重度牙周炎的示意圖：右側的附著已經往根尖退了一大段，囊袋很深。這是教學用的線條圖，不是文中研究的資料，與研究受試者無關。",
+    "credit": "Ian Furst（Own work），Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Severe_periodontitis.png",
+    "made": "2019 年 2 月 23 日"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "2018 年一篇系統性回顧算出來，成人的牙周附著平均一年少 **0.1 毫米**。帶頭的是倫敦大學學院的牙周科團隊，第一作者 **Needleman**。他們把 16 項追蹤研究合在一起算，加起來超過 8,600 名成人。"
+    },
+    {
+      "type": "p",
+      "text": "背景是一次分類大改。美國和歐洲的牙周病學會 2017 年 11 月在芝加哥合辦世界研討會，要更新 1999 年的牙周病分類。牙周炎的進展速度一直被拿來設計分類，作者說，這背後的證據不清楚，之前沒有人做過系統性回顧。這篇就刊在 2018 年 6 月那期研討會增刊裡。"
+    },
+    {
+      "type": "p",
+      "text": "他們只收追蹤至少 12 個月的成人研究。只研究某種疾病族群的研究、全是治療過病人的研究不收。"
+    },
+    {
+      "type": "table",
+      "title": "慢的一邊，快的一邊",
+      "head": [
+        "比的是什麼",
+        "慢的一邊",
+        "快的一邊"
+      ],
+      "rows": [
+        [
+          "附著變化分五等份，最少與最多的兩組",
+          "每年變化極小",
+          "每年平均少 0.45 毫米"
+        ],
+        [
+          "地區",
+          "北美與歐洲：每年 0.056 毫米",
+          "斯里蘭卡與中國：每年 0.20 毫米"
+        ]
+      ],
+      "caption": "全部合併的平均是每年附著少 0.1 毫米、每年掉 0.2 顆牙。依 Needleman 等人 2018 年系統性回顧的摘要整理。"
+    },
+    {
+      "type": "h",
+      "text": "平均數底下的差別"
+    },
+    {
+      "type": "p",
+      "text": "作者把附著變化最少和最多的五分之一拉出來比。最少的那五分之一，每年變化極小；最多的那五分之一，平均每年少 **0.45 毫米**。這是觀察性分析，作者說它顯示兩組差很多。分組單位摘要沒說明。"
+    },
+    {
+      "type": "h",
+      "text": "斯里蘭卡與中國，北美與歐洲"
+    },
+    {
+      "type": "p",
+      "text": "斯里蘭卡與中國的研究，每年平均附著少得比北美與歐洲多，差了三倍多，數字在上面的表裡。另一個老研究也在斯里蘭卡，10 月 24 日這一欄寫過：Löe 等人 1970 年起追蹤兩座茶園的 480 名男性工人，約 8% 進展很快，約 11% 一直停在牙齦炎。"
+    },
+    {
+      "type": "h",
+      "text": "年齡的影響小得出乎意料"
+    },
+    {
+      "type": "p",
+      "text": "最讓我意外的是年齡。作者寫道，年齡和性別對附著變化的影響小得出乎意料。"
+    },
+    {
+      "type": "p",
+      "text": "這是 16 項觀察研究合起來的結果。研究的抽樣框架、納入年齡、分析方法等設計差異大，異質性很高，作者用分析解釋不了。不同地方的人差很多，同一群人裡也差很多。證據既不支持、也不反駁依附著喪失的進展速度來區分不同型的牙周病。同一期增刊把慢性與侵襲型併成單一的牙周炎，另外用分期與分級描述；分級用進展速度的證據估計，危險因子再修正，分 A、B、C 三級。"
+    },
+    {
+      "type": "h",
+      "text": "初診的紀錄要留好"
+    },
+    {
+      "type": "list",
+      "items": [
+        "分級的依據之一，是進展速度的證據，要有前後可比對的紀錄。所以我建議初診的全口探測和 X 光片做完整、存好，往後才有東西比。",
+        "年齡的影響小得出乎意料，這是作者的說法。",
+        "跟病人談預後，平均是每年 0.1 毫米，但族群之間、族群之內差異都很大；臨床上要看的是這位病人自己的速度。"
+      ]
+    },
+    {
+      "type": "paper",
+      "citation": "Needleman I, Garcia R, Gkranias N, Kirkwood KL, Kocher T, Iorio AD, Moreno F, Petrie A. Mean annual attachment, bone level, and tooth loss: A systematic review. *J Clin Periodontol*. 2018;45 Suppl 20:S112–S129.",
+      "doi": "10.1111/jcpe.12943",
+      "pmid": "29926483",
+      "link": "https://doi.org/10.1111/jcpe.12943",
+      "evidence": "系統性回顧與統合分析：16 項前瞻觀察研究、逾 8,600 名成人；異質性高",
+      "design": "前瞻縱向觀察研究的系統性回顧與隨機效應統合分析，2017 年世界研討會增刊",
+      "sample": "16 項原始研究（33 篇論文）、逾 8,600 名 18 歲以上成人，追蹤至少 12 個月",
+      "question": "成人的牙周炎，以附著喪失、骨喪失與掉牙來看，每年進展多少？",
+      "access": "依 PubMed 摘要整理；全文未取得"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Mean annual attachment, bone level, and tooth loss: A systematic review",
+      "publisher": "Journal of Clinical Periodontology（Needleman I 等）",
+      "date": "2018-06-20",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29926483/",
+      "note": "讀 PubMed 摘要（E-utilities efetch）與 Crossref 書目；Wiley 全文頁無法開啟。五分位分析的單位、「with periodontitis alone」的 0.6 毫米摘要未細說，正文不用 0.6。摘要未報告 GRADE。"
+    },
+    {
+      "title": "A new classification scheme for periodontal and peri-implant diseases and conditions – Introduction and key changes from the 1999 classification",
+      "publisher": "Journal of Clinical Periodontology（Caton JG 等）",
+      "date": "2018-06-20",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29926489/",
+      "note": "摘要：AAP 與 EFP 合辦，2017 年 11 月 9–11 日於芝加哥；委託 19 篇回顧與 4 份共識報告，更新 1999 年分類。"
+    },
+    {
+      "title": "Periodontitis: Consensus report of workgroup 2 of the 2017 World Workshop on the Classification of Periodontal and Peri-Implant Diseases and Conditions",
+      "publisher": "Journal of Clinical Periodontology（Papapanou PN 等）",
+      "date": "2018-06-20",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29926490/",
+      "note": "摘要：慢性與侵襲型併為單一的牙周炎，以分期與分級描述；分級含依病史分析的進展速度。"
+    },
+    {
+      "title": "Staging and grading of periodontitis: Framework and proposal of a new classification and case definition",
+      "publisher": "Journal of Clinical Periodontology（Tonetti MS, Greenwell H, Kornman KS）",
+      "date": "2018-06-20",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29926495/",
+      "note": "摘要：分級依進展速度的直接或間接證據，分慢、中、快三類（A–C 級），危險因子作為修正。"
+    },
+    {
+      "title": "Natural history of periodontal disease in man. Rapid, moderate and no loss of attachment in Sri Lankan laborers 14 to 46 years of age",
+      "publisher": "Journal of Clinical Periodontology（Löe H 等）",
+      "date": "1986-05",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3487557/",
+      "note": "摘要：兩座茶園 480 名男性工人；約 8% 快速進展、約 81% 中等、約 11% 未超過牙齦炎。"
+    },
+    {
+      "title": "File:Severe periodontitis.png",
+      "publisher": "Wikimedia Commons（Ian Furst）",
+      "date": "2019-02-23",
+      "url": "https://commons.wikimedia.org/wiki/File:Severe_periodontitis.png",
+      "note": "頭圖，CC BY-SA 4.0，教學線條圖。"
+    }
+  ]
+}
