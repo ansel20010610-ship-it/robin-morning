@@ -38,5 +38,12 @@
       "concept"
     ],
     "note": "寫了牙周欄（compare/colleague，Needleman 2018 增刊系統性回顧）；審稿判定修正即可，修正事實與推論越界並做忠實度核對"
+  },
+  "concerts": {
+    "finished_at": "2026-11-16T05:31:48+08:00",
+    "missing": [
+      "concerts.json 未查核"
+    ],
+    "note": "新增 0、更新 0（移除過期 2）；補查沒做完（pbc、newaspect、tanart、udn、ntch、wwy、news 連不上或沒查）；歷史上的今天 1945"
   }
 }
