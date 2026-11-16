@@ -9,5 +9,14 @@
       "poem"
     ],
     "note": "精簡：perio、music；devotion 自寫"
+  },
+  "2": {
+    "finished_at": "2026-11-17T02:02:50+08:00",
+    "missing": [
+      "football",
+      "news",
+      "philosophy"
+    ],
+    "note": "architecture(number/walker)、poem(compare/reader)；第9步重寫0／修正2；validate 無 WARN；第1班正刊三欄已齊，未接手"
   }
 }
