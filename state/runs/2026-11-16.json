@@ -56,6 +56,11 @@
     ],
     "note": "新增 0、更新 0（移除過期 2）；補查沒做完（pbc、newaspect、tanart、udn、ntch、wwy、news 連不上或沒查）；歷史上的今天 1945"
   },
+  "reserve": {
+    "finished_at": "2026-11-16T17:30:25+08:00",
+    "missing": [],
+    "note": "快訊已出刊；備稿各欄達標，無需修正，未寫稿"
+  },
   "serial": {
     "finished_at": "2026-11-16T16:03:32+08:00",
     "missing": [],
