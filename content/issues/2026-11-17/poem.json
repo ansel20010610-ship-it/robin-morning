@@ -1,0 +1,209 @@
+{
+  "column": "poem",
+  "date": "2026-11-17",
+  "title": "一首求平安快來，一首叫自己再等等",
+  "dek": "兩首詩都只有 8 行，同一個題目、同一頁：前一首開口求平安，後一首叫自己等。",
+  "brief": "歌德 82 歲生日前一天，回到山頂的小屋，讀到自己年輕時用鉛筆寫在木牆上的八行詩，流下眼淚，唸出最後兩行：等著吧，很快你也要歇了。這首詩還有一首同題的前作，是他 26 歲時寫的，求天上的平安快來。",
+  "topic_key": "poem:goethe-wandrers-nachtlied",
+  "form": "compare",
+  "voice": "reader",
+  "updated_at": "2026-11-17T02:00:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Die_Gartenlaube_%281872%29_b_657.jpg",
+    "width": 988,
+    "height": 930,
+    "alt": "一面直條木板拼成的牆，上半部有八行手寫的德文草體字，字的下方和右邊有幾個大大的刻劃痕跡，像兩個 W。圖下印著一行德文花體字標題。",
+    "caption": "〈又一首〉寫在基克爾漢山頂小屋木板牆上的樣子，字跡經後來描過：歌德自己 1813 年用鉛筆描過一次，1831 年字已經壞了，又重描過。1872 年《涼亭》雜誌依攝影師林德 1869 年拍的照片刻版印出，字旁看得到塗鴉和鋸痕。小屋 1870 年 8 月被借宿、生火烤衣服的採莓人燒掉，原跡沒有留下來。",
+    "credit": "August Linde 攝（1869），Die Gartenlaube 依照片刻版，1872 年第 40 期第 657 頁；經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Die_Gartenlaube_(1872)_b_657.jpg",
+    "made": "1872（照片攝於 1869）",
+    "depicts": "小屋木牆上的題字（1869 年所見）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1776 年 2 月，一個 26 歲的年輕人寫了八行詩，求平安從天上下來。四年多以後，他在一座山頂小屋的木牆上又寫了八行，詩裡的人沒有求，只對自己說等著。寫詩的是**歌德**，德語世界影響最大的作家。他 1774 年靠《少年維特的煩惱》成名，隔年搬到威瑪。威瑪是威瑪公國的首都，公爵邀他到威瑪，隔年他進了公爵的樞密院。後來出書，他把兩首排在同一頁，後一首的題目只寫「又一首」，意思是同一個題目再來一首。作曲家舒伯特把兩首都譜成了歌，聽古典樂的人可能在唱片裡碰過。"
+    },
+    {
+      "type": "quote",
+      "text": "你從天上來，\n平息一切的苦與痛，\n誰加倍地困苦，\n你就加倍地給他慰藉，\n啊，我厭倦了這奔忙！\n這些痛和歡樂，要來做什麼？\n甜美的平安，\n來吧，啊，來到我胸口！",
+      "original": "Der du von dem Himmel bist,\nAlles Leid und Schmerzen stillest,\nDen, der doppelt elend ist,\nDoppelt mit Erquickung füllest,\nAch ich bin des Treibens müde!\nWas soll all der Schmerz und Lust?\nSüßer Friede,\nKomm, ach komm in meine Brust!",
+      "cite": "歌德，〈漫遊者的夜歌〉（Wandrers Nachtlied），1776 年；依《歌德全集》最終版第一卷，1827 年"
+    },
+    {
+      "type": "quote",
+      "text": "所有的山頂上\n一片靜，\n所有的樹梢裡\n你幾乎覺不到\n一絲氣息；\n小鳥在林子裡不作聲了。\n等著吧，很快\n你也要歇了。",
+      "original": "Ueber allen Gipfeln\nIst Ruh’,\nIn allen Wipfeln\nSpürest du\nKaum einen Hauch;\nDie Vögelein schweigen im Walde.\nWarte nur, balde\nRuhest du auch.",
+      "cite": "歌德，〈又一首〉（Ein gleiches），1780 年；依《歌德全集》最終版第一卷，1827 年"
+    },
+    {
+      "type": "table",
+      "title": "同一頁上的兩首夜歌",
+      "head": [
+        "",
+        "〈漫遊者的夜歌〉",
+        "〈又一首〉"
+      ],
+      "rows": [
+        [
+          "寫的時候",
+          "1776 年 2 月 12 日，26 歲",
+          "1780 年 9 月 6 日前後，31 歲"
+        ],
+        [
+          "在哪裡",
+          "威瑪城外的艾特斯山坡",
+          "伊爾梅瑙旁的基克爾漢山頂小屋"
+        ],
+        [
+          "怎麼留下來",
+          "夾在給施泰因夫人的信件裡",
+          "鉛筆寫在木板牆上"
+        ],
+        [
+          "最後一句",
+          "來吧，啊，來到我胸口！",
+          "你也要歇了。"
+        ]
+      ],
+      "caption": "兩首都是 8 行。詩的文字依 1827 年版。"
+    },
+    {
+      "type": "p",
+      "text": "前一首寫在 1776 年 2 月 12 日。手稿夾在他寫給**施泰因夫人**的信件裡，署「在艾特斯山坡上」，那是威瑪城外的一座山。施泰因夫人是宮廷女官，已經結婚，比他大六歲多。她和歌德的關係很親近，一套德文線上文庫收的歌德 1776 年書信裡，給她的就有 108 封。詩從第一行就在對一個從天上來的對象說話，說它是平息一切苦與痛的。到第五行，說話的人才露面，說他厭倦了這一切奔忙；他問，這些痛和歡樂又有什麼用？他只求平安來到胸口。"
+    },
+    {
+      "type": "p",
+      "tag": "詮釋",
+      "text": "第一行的口氣像禱告，一開口就稱呼對方是從天上來的。可是十一天後，他又給施泰因夫人寫了一張短箋，說他睡得又安穩又輕鬆，「兩個星期以來第一次心裡輕鬆地向太陽問好」，接著寫：「我滿心感謝你，天上的天使，這是我欠你的。」我讀到這張短箋，就沒辦法只把那一行當成對神說的話了。那個從天上來、讓他終於睡著的，在信裡有一個名字。"
+    },
+    {
+      "type": "p",
+      "text": "後一首寫在 1780 年 9 月，31 歲的他已經是公爵身邊的官員，管道路和礦場。那時他在伊爾梅瑙，圖林根森林邊上的一個小鎮。9 月 6 日，他從鎮旁的**基克爾漢山**上寫信給施泰因夫人，說他在山上安頓下來，為的是躲開小鎮的雜亂、人們的抱怨和要求，還有人那種改不掉的糊塗。這座山 861 公尺，歷史上是公國境內最高的山，山頂有一間獵場看守的木板小屋。信裡一個字也沒提詩。詩是用鉛筆寫在小屋牆上的，大概就在那幾天。"
+    },
+    {
+      "type": "p",
+      "text": "兩首最不一樣的，是說話的人。前一首有個「我」，累了，開口求；後一首從頭到尾沒有「我」，他叫自己「你」。我讀的時候，覺得平安來的方向倒是一樣，都從高處下來。前一首的平安在天上，他求它降到胸口。後一首我照詩的順序讀，最遠的山頂先靜了，接著是樹梢，風幾乎停了，再來是林子裡的鳥，不出聲了。像是一層一層往下，最後才輪到「你」，而你還沒靜下來。"
+    },
+    {
+      "type": "p",
+      "tag": "詮釋",
+      "text": "我覺得後一首像是前一首的回音。四年多前他求平安快來，這一次他不求了，安靜已經走到樹林邊，他只叫自己等一下。「等著吧，很快」，口氣像大人哄一個還睡不著的孩子。一個躲上山的官員在那幾天裡對自己說這句話，我讀成是說今晚就能睡了，這是我的推測。詩裡沒說歇的是哪一種，它也可以是更長的那一種。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/De_Goethe_Werke_LH_01_099.jpg/1280px-De_Goethe_Werke_LH_01_099.jpg",
+      "width": 1280,
+      "height": 2352,
+      "alt": "一頁德文花體字印刷的書頁，頁首是頁碼 99。上半頁是標題 Wandrers Nachtlied 和八行詩，中間一條粗橫線，下半頁是疏排的標題 Ein gleiches 和另外八行詩，頁底右下角印著 7 和一個星號。",
+      "caption": "歌德生前最後審定的全集（1827 年版）第一卷第 99 頁：上面是〈漫遊者的夜歌〉，下面是〈又一首〉。1815 年他第一次把第二首印進書裡，就這樣排在第一首正下方。",
+      "credit": "Goethe’s Werke. Vollständige Ausgabe letzter Hand, 第一卷（Stuttgart und Tübingen: J. G. Cotta, 1827）；Google Books 掃描，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:De_Goethe_Werke_LH_01_099.jpg",
+      "made": "1827"
+    },
+    {
+      "type": "p",
+      "text": "1831 年 8 月 27 日，隔天就是歌德的 82 歲生日。他最後一次回到伊爾梅瑙，坐馬車上了基克爾漢山，陪他的是礦務督察馬爾。歌德跟他說，從前在這間小屋跟僕人住過八天，在牆上寫過一首小詩，想再看一次。馬爾要扶他爬那道陡樓梯，他不肯，說這還難不倒他。不到七個月後，1832 年 3 月，他在威瑪過世。"
+    },
+    {
+      "type": "p",
+      "text": "這一幕是馬爾二十多年後才寫下的。上了樓，馬爾帶他到南邊的窗子旁，鉛筆字還在牆上。歌德讀完那幾行，眼淚流下來。他慢慢從深褐色外套裡掏出一條雪白的手帕，擦乾，**用溫和而哀傷的口氣說：「對，等著吧，很快你也要歇了。」** 照馬爾的記述，牆上那兩行，他只在前面多加了一聲「對」。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wandrers Nachtlied",
+      "publisher": "Wikisource（德文）",
+      "date": "1827",
+      "url": "https://de.wikisource.org/wiki/Wandrers_Nachtlied",
+      "note": "原文依據：Goethe’s Werke. Vollständige Ausgabe letzter Hand, Bd. 1, Cotta 1827, S. 99 的轉錄，並對照 Commons 上同頁掃描。手稿版（1776）第 2、6 行作 Alle Freud und Schmerzen / all die Qual und Lust，1789 年 Göschen 版起改為今文。"
+    },
+    {
+      "title": "Ein gleiches",
+      "publisher": "Wikisource（德文）",
+      "date": "1827",
+      "url": "https://de.wikisource.org/wiki/Ein_Gleiches",
+      "note": "原文依據：同上，1827 年版第一卷第 99 頁。早期 Herder、Göchhausen 抄本第 1 行作 Gefilden、第 6 行作 Die Vögel；1800 年 Der Genius der Zeit 未經授權的首刊另有異文；1815 年《著作集》第一卷為歌德自己的第一次刊印。"
+    },
+    {
+      "title": "Wandrers Nachtlied",
+      "publisher": "Wikipedia（德文）",
+      "date": "",
+      "url": "https://de.wikipedia.org/wiki/Wandrers_Nachtlied",
+      "note": "1776 年手稿在給施泰因夫人的信件之間、署 Am Hang des Ettersberg, d. 12. Feb. 76；第二首很可能 1780 年 9 月 6 日晚上用鉛筆寫在基克爾漢山獵場看守小屋的木板牆上；1815 年兩首同排第一卷第 99 頁、題 Ein gleiches；1831 年 8 月 27 日與馬爾同上山；小屋 1870 年燒毀、1874 年重建；1869 年 August Linde 的照片刊於《涼亭》1872 年第 657 頁；舒伯特 D 224（1815 年 7 月 5 日）與 D 768（約 1823 年）；由山峰、樹梢、鳥到人的由遠而近讀法。 1831 年題字已損，由歌德本人或林務官 von Fritsch 重描。 馬爾回憶刊於 Weimarer Sonntagsblatt 1855 年 7 月 15 日第 29 期（依本條目註腳）。"
+    },
+    {
+      "title": "Goethe: Briefe 1776（An Charlotte von Stein, 3/406）",
+      "publisher": "Zeno.org",
+      "date": "",
+      "url": "https://www.zeno.org/nid/20004860349",
+      "note": "„… das erstemal seit vierzehn Tagen mit freyem Herzen, und wie voll Dancks gegen dich Engel des Himmels, dem ich das schuldig bin.“ 日期 1776 年 2 月 23 日依德文維基所引《歌德書信目錄》（Repertorium der Goethe-Briefe）。 同一冊（Briefe 1776）收錄的書信中，題給施泰因夫人（An Charlotte von Stein）的有 108 封。"
+    },
+    {
+      "title": "Goethe: Briefe 1780（An Charlotte von Stein, d. 6. Sept. 80, 4/1012）",
+      "publisher": "Zeno.org",
+      "date": "",
+      "url": "https://www.zeno.org/nid/20004860381",
+      "note": "„Auf dem Gickelhahn dem höchsten Berg des Reviers … hab ich mich gebettet, um dem Wuste des Städgens, den Klagen, den Verlangen, der Unverbesserlichen Verworrenheit der Menschen auszuweichen.“ 信裡未提那首詩。"
+    },
+    {
+      "title": "Johann Christian Mahr: Goethes letzter Aufenthalt in Ilmenau（Gespräche 1831）",
+      "publisher": "Zeno.org",
+      "date": "1855-07-15",
+      "url": "https://www.zeno.org/nid/20004867440",
+      "note": "馬爾的回憶，原刊《威瑪週日報》（Weimarer Sonntagsblatt）1855 年第 29 期，事後二十多年才寫下。隔天是 82 歲生日、拒絕攙扶上樓、與僕人住過八天、南窗左側鉛筆字（署 D. 7. September 1780）、落淚、白手帕與深褐色外套、›Ja: warte nur, balde ruhest du auch!‹、靜默半分鐘看窗外雲杉林、›Nun wollen wir wieder gehen!‹、下樓請馬爾走前面「damit ich nicht hinuntersehen kann」。"
+    },
+    {
+      "title": "Johann Wolfgang von Goethe",
+      "publisher": "Wikipedia（英文）",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe",
+      "note": "1749 年 8 月 28 日－1832 年 3 月 22 日；1774 年《少年維特的煩惱》；1775 年應卡爾・奧古斯特公爵之邀到威瑪；1776–1785 年樞密院成員，管道路、礦務，1779 年起兼戰爭委員會；1776 年起與施泰因夫人關係親密，她已婚、大他七歲。 1832 年死於威瑪。"
+    },
+    {
+      "title": "Charlotte von Stein",
+      "publisher": "Wikipedia（英文）",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Charlotte_von_Stein",
+      "note": "1742 年生，1758 年起任安娜・阿瑪莉亞公爵夫人的宮廷女官，1764 年結婚，1764–1773 年生七個孩子。 生日 1742 年 12 月 25 日，歌德 1749 年 8 月 28 日，相差六歲八個月（英文維基歌德條目寫「大七歲」，正文依生日寫六歲多）。"
+    },
+    {
+      "title": "Kickelhahn",
+      "publisher": "Wikipedia（德文）",
+      "date": "",
+      "url": "https://de.wikipedia.org/wiki/Kickelhahn",
+      "note": "861 公尺，伊爾梅瑙的家山，在圖林根森林北緣；歷史上是薩克森－威瑪－艾森納赫最高的山。"
+    },
+    {
+      "title": "Ein deutsches Heiligthum und sein Untergang（Julius Keßler）",
+      "publisher": "Die Gartenlaube, 1872, Heft 40, S. 656–658（Wikisource 德文）",
+      "date": "1872",
+      "url": "https://de.wikisource.org/wiki/Ein_deutsches_Heiligthum_und_sein_Untergang",
+      "note": "頭圖出處（第 657 頁版畫「Goethe’s Handschrift im Kickelhahn-Häuschen」）。看守人 Kilian Merten 燒毀前幾年請人拍下手跡；1870 年 8 月 12 日清晨，前一晚借宿、生火烤濕衣服的三名採莓人離開時開窗開門，餘火延燒；生火者以過失失火判刑兩個月。 第 657 頁：歌德 1813 年 8 月 29 日用鉛筆把字描過一次，並在下方寫「Ren. 29. August 1813」；他早先曾和僕人在小屋住過八天（文中未說是哪一年）。此文把寫詩年份記成 1783 年，與今日通說 1780 年不同。"
+    },
+    {
+      "title": "File:Die Gartenlaube (1872) b 657.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Die_Gartenlaube_(1872)_b_657.jpg",
+      "note": "頭圖，Public domain，988×930。"
+    },
+    {
+      "title": "File:De Goethe Werke LH 01 099.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:De_Goethe_Werke_LH_01_099.jpg",
+      "note": "正文圖，1827 年最終版第一卷第 99 頁，Google Books 掃描，Public domain。"
+    }
+  ]
+}
