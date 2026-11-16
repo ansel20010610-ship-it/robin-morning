@@ -1,0 +1,260 @@
+{
+  "column": "philosophy",
+  "date": "2026-11-17",
+  "title": "誰給了你權利，替死去的人原諒他",
+  "dek": "一個垂死的黨衛軍士兵抓著猶太囚犯的手求原諒。囚犯起身走了，二十多年後把這一幕寫成書，問讀者：換作是你呢？",
+  "brief": "垂死的黨衛軍士兵懺悔自己燒死一屋子猶太人，求猶太囚犯維森塔爾原諒，維森塔爾沉默離開。當晚一位獄友說，死去的人會來問他：誰給了你權利原諒殺我們的兇手？後來一位天主教修院學生卻認為，那人真心悔改，應當得到憐憫。",
+  "topic_key": "philosophy:wiesenthal-sunflower-forgiveness",
+  "form": "dialogue",
+  "voice": "socratic",
+  "updated_at": "2026-11-17T02:50:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Dr._Simon_Wiesenthal%2C_Bestanddeelnr_932-3671.jpg/1280px-Dr._Simon_Wiesenthal%2C_Bestanddeelnr_932-3671.jpg",
+    "width": 1280,
+    "height": 1917,
+    "alt": "一位戴眼鏡、留著小鬍子的年長男子，穿西裝打領帶，在會場裡的半身照。",
+    "caption": "維森塔爾，1982 年 10 月 18 日在阿姆斯特丹 Hilton 飯店的一場研討會上。那時他已經追查納粹戰犯三十多年。",
+    "credit": "Rob Bogaerts／Anefo；荷蘭國家檔案館",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dr._Simon_Wiesenthal,_Bestanddeelnr_932-3671.jpg",
+    "made": "1982"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "第二次世界大戰，德軍占領下的利沃夫，今天在烏克蘭西部，德國人叫它 Lemberg。一個叫**維森塔爾（Simon Wiesenthal）**的猶太囚犯，跟著一隊人被押出集中營，進城做工。路上經過一座德軍墓地，每座墳上都種了一株向日葵，排得像閱兵的士兵。他羨慕起墳裡的人：他自己將來只會被扔進亂葬坑，不會有人替他種花。這天的工地是城裡一所工學院，門口掛著「預備醫院」的牌子，一位護士把他帶上樓，帶進一間讓沒救的傷兵獨自等死的病房。"
+    },
+    {
+      "type": "p",
+      "text": "床上是一個 21 歲的黨衛軍士兵，從斯圖加特來，頭上包滿繃帶，看不見。他抓住維森塔爾的手，講自己在烏克蘭東部的聶伯羅彼得羅夫斯克做過的事：一兩百個猶太人，很多是孩子，被趕進一棟房子，他和同袍往窗裡丟手榴彈，舉著槍等跳出來的人。二樓窗口有個男人，衣服著了火，用空著的那隻手遮住懷裡孩子的眼睛，跳了下去，孩子的母親跟著跳。士兵說，等死的這些夜裡，他一直想找一個猶太人講這件事，求他原諒；「沒有你的回答，我沒辦法安心地死。」"
+    },
+    {
+      "type": "p",
+      "text": "維森塔爾站起來，看著那雙合起來的手，覺得手裡好像放著一株向日葵。然後他一句話也沒說，走出了房間。士兵當天夜裡就死了。這件事只有維森塔爾自己的記述。他後來成了追查納粹戰犯的人，洛杉磯的「西蒙・維森塔爾中心」就掛著他的名字。1969 年，他把這段經過寫成**《向日葵》（The Sunflower）**，書末請讀者在心裡跟他換個位置，問自己：「我會怎麼做？」我把它縮成一句：**一個人真心悔改，求你原諒他對別人做的事，你能原諒他嗎？**"
+    },
+    {
+      "type": "p",
+      "text": "這題要先問準。「原諒」是心裡不再恨他、不去報復，還是對他說出「我原諒你」這幾個字？士兵要的是最後一種，他要一個回答。「能」又是什麼意思？維森塔爾當然張得開嘴，問的是他有沒有這個資格。主禱文裡有一句「免我們的債，如同我們免了人的債」：債可以免，可是只有債主能免。那一屋子被燒死的人才是債主，他們一個都不在了。債主都不在，這筆債還有誰能免？"
+    },
+    {
+      "type": "h",
+      "text": "營房裡，約瑟克先開口"
+    },
+    {
+      "type": "p",
+      "text": "那天晚上回到營房，他把事情講給同屋的人聽。一個獄友只回了一句：一個自以為是超人的人，要求一個被他當成次等人的人，去做超乎人力的事；你要是原諒了他，這輩子都不會原諒自己。另一個獄友約瑟克想得更久。他是信仰虔誠的猶太人，平常最愛講經典裡的故事，這回他反問維森塔爾一句。"
+    },
+    {
+      "type": "quote",
+      "text": "你要是原諒了他，聶伯羅彼得羅夫斯克那些死去的人，難道不會來問你：「誰給了你權利，原諒殺我們的兇手？」",
+      "original": "Would not the dead people from Dnepropetrovsk come to you and ask: 'Who gave you the right to forgive our murderer?'",
+      "cite": "約瑟克，維森塔爾《向日葵》"
+    },
+    {
+      "type": "p",
+      "text": "維森塔爾不服。那個人是真心悔改，從頭到尾沒替自己找一句藉口；他找上我，是把我當成其他猶太人的代表，因為他再也找不到別人了。這樣也不算數嗎？約瑟克說不算。別人對你本人做的事，你願意的話可以原諒、可以忘，那是你自己的事；可是你沒有因為他受過苦，他對別人做的事，你沒有立場原諒。他還說，換作是他也會走，差別只是他會當面拒絕，而且良心清白。"
+    },
+    {
+      "type": "p",
+      "text": "約瑟克這條理由，最強的版本是什麼？我替他把話說滿：原諒是受害者手上僅剩的東西，旁人替他送出去，等於又從死者身上拿走一樣。今天哲學界也常有人這樣主張，只有受害者有資格原諒加害者。可是這條路走到底會碰到一堵牆：加害者害的人如果全死了，世上就再也沒有人能原諒他。這是代價，還是正義本來就該是這個樣子？"
+    },
+    {
+      "type": "h",
+      "text": "毛特豪森的通鋪上，波雷克"
+    },
+    {
+      "type": "p",
+      "text": "後來維森塔爾被轉到奧地利的毛特豪森集中營。有一天，通鋪上分來一個從奧斯威辛轉送過來的波蘭年輕人，叫波雷克。他讀神學，在華沙的修院外被捕，在奧斯威辛因為是準神父而受盡羞辱，信仰卻沒有斷。一天夜裡，維森塔爾把醫院那件事告訴他，一口氣問了四個問題：我該原諒他嗎？我到底有沒有權利原諒他？你的宗教怎麼說？換作是你，你會怎麼做？"
+    },
+    {
+      "type": "p",
+      "text": "波雷克先替士兵說話。人到了臨死不會撒謊，那個人回到了童年的信仰；你聽了他的告解，他才平安地死。在他的宗教裡，悔改是求原諒最要緊的一環，那個人確實悔改了，「那麼，他應當得到原諒的憐憫。」維森塔爾回他：可是誰來原諒他？我嗎？沒有人授權給我。波雷克接下來說的話，兩句彼此拉扯。"
+    },
+    {
+      "type": "quote",
+      "text": "有一件事是確定的：你只能原諒對你自己做的錯事。可是另一方面：那個黨衛軍還能去找誰？他害過的人，沒有一個還活著。",
+      "original": "One thing is certain: you can only forgive a wrong that has been done to yourself. Yet on the other hand: Whom had the SS man to turn to? None of those he had wronged were still alive.",
+      "cite": "波雷克，維森塔爾《向日葵》"
+    },
+    {
+      "type": "p",
+      "text": "前一句，他同意約瑟克；後一句，他又替士兵求情。一個準神父和一個猶太囚犯，為什麼會卡在同一個地方？悔改是真的，能收下這份悔改的人卻已經不在了。他們談了很久，沒有結論。到最後，波雷克對「你應該原諒他」也沒那麼有把握了，維森塔爾則越來越拿不準自己當時做得對不對。"
+    },
+    {
+      "type": "h",
+      "text": "如果窗口跳下來的是他的家人"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "先改一個條件。假設從二樓窗口跳下來的那一家，是維森塔爾自己的家人。約瑟克的理由就沒了：這下他就是債主，原不原諒是他自己的事。那他該原諒嗎？波雷克會說，悔改既然是真的，就該。維森塔爾自己在書末寫，遺忘是時間會替人處理的事，原諒卻是一種意志的行為，只有受苦的人有資格做這個決定。「決定」兩個字很要緊。要是悔改一出現，原諒就成了非給不可的東西，受苦的人就沒有什麼可以決定了，波雷克那句「應當」在這裡會碰上麻煩。"
+    },
+    {
+      "type": "p",
+      "tag": "原創假設",
+      "text": "再改一個。士兵沒有悔改，只是怕死，想找個人講完好讓自己安心。這下連波雷克的理由也沒了，一個人還剩什麼可以給一個不悔改的仇人？哲學界有一派會說，這時候還談不上原諒，要等加害者承認、道歉、悔改。"
+    },
+    {
+      "type": "h",
+      "text": "1726 年，倫敦的一篇講道"
+    },
+    {
+      "type": "p",
+      "text": "還剩一個更老的想法。英國國教的**巴特勒**（Joseph Butler）後來當到達勒姆主教，年輕時在倫敦一座禮拜堂講道，1726 年把講稿印成一本書。第九篇講「原諒別人的傷害」，經文是馬太福音第五章那句「要愛你們的仇敵」。他問的是：要人愛仇敵，是不是連怨恨都不准有？他的回答是不必。"
+    },
+    {
+      "type": "quote",
+      "text": "所以我們可以愛我們的仇敵，同時因他對我們的傷害，對他懷著怨恨。",
+      "original": "We may therefore love our enemy, and yet have resentment against him for his injurious behaviour towards us.",
+      "cite": "巴特勒，第九篇講道〈論原諒傷害〉，1726"
+    },
+    {
+      "type": "p",
+      "text": "巴特勒說，經文禁止的是怨恨的過度和濫用：恨到想報復，恨到把對那個人的善意整個毀掉。守住這條線，就是原諒。照他的說法，原諒是一個人心裡的狀態，不是嘴上交出去的一紙判決。這樣一換，問題有沒有跟著變？能不能替死者說「我原諒你」，他沒有回答；能不能不說這句話，也不讓怨恨吞掉善意，倒是誰都做得到。不過他也畫了邊界，說這些話講的是「個人與私人受到的傷害」。一屋子別人被燒死，算維森塔爾私人受的傷嗎？"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/ONL_%281887%29_1.073_-_Bishop_Butler.jpg/1280px-ONL_%281887%29_1.073_-_Bishop_Butler.jpg",
+      "width": 1280,
+      "height": 1603,
+      "alt": "一位戴白色假髮、穿主教袍的男子的橢圓形肖像版畫。",
+      "caption": "巴特勒（1692–1752）的肖像版畫，出自 19 世紀的《Old and New London, Illustrated》第 1 冊，大英圖書館藏 1887 年版的掃描。",
+      "credit": "Walter Thornbury《Old and New London, Illustrated》；大英圖書館掃描",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:ONL_(1887)_1.073_-_Bishop_Butler.jpg",
+      "made": "1873（1887 年版）"
+    },
+    {
+      "type": "table",
+      "title": "床邊那句話，三個人怎麼答",
+      "head": [
+        "誰",
+        "答案",
+        "最強的理由",
+        "要付的代價"
+      ],
+      "rows": [
+        [
+          "約瑟克",
+          "不能",
+          "原諒屬於受害者，旁人代收，等於再從死者身上拿走一樣東西",
+          "受害者都死了，加害者就永遠等不到原諒"
+        ],
+        [
+          "波雷克",
+          "他應當得到憐憫",
+          "悔改是真的，而且他已經沒有別人可找",
+          "誰來給？他自己也承認，只能原諒對自己做的錯事"
+        ],
+        [
+          "巴特勒",
+          "原諒是心裡的事",
+          "怨恨和愛仇敵可以並存；原諒是不報復、不讓善意被毀掉",
+          "給不了士兵要的那句話；他講的是私人受到的傷害"
+        ]
+      ],
+      "caption": "依《向日葵》與巴特勒第九篇講道整理。"
+    },
+    {
+      "type": "p",
+      "text": "我的答案偏向約瑟克。那句「我原諒你」，我覺得維森塔爾給不起，也不該給；士兵求的，是一張活人沒辦法替死人簽名的收據。可是這個答案我說不滿，因為維森塔爾後來又做了兩件事。"
+    },
+    {
+      "type": "h",
+      "text": "斯圖加特那位母親"
+    },
+    {
+      "type": "p",
+      "text": "隔天，那位護士又找到維森塔爾，說士兵夜裡死了，交代要把遺物都給他。他不肯碰那包東西：「我什麼都不要，全部寄給他母親。」戰後的 1946 年夏天，他在奧地利林茲附近的山坡上看到一叢向日葵，又想起了那個士兵。兩個星期後，他去了斯圖加特，在一棟幾乎被炸平的房子裡找到那位母親。她一再說兒子是個好孩子，好像在等他點頭。他沒有點頭，也沒有說出聶伯羅彼得羅夫斯克的事。他寫道，在她那時的處境下，把她最後擁有的東西也拿走，大概也是一種罪。"
+    },
+    {
+      "type": "p",
+      "tag": "推論",
+      "text": "這算不算原諒？維森塔爾沒有把它叫做原諒，他只說自己沉默了兩次，一次在床邊，一次在那位母親面前，「沉默有很多種」。照約瑟克，他兩次都沒有越權，因為他什麼都沒答應。照巴特勒，他沒有報復，也沒讓怨恨吞掉對一個喪子母親的善意。所以這題最後卡在一個地方：原諒是一張只有債主能簽的收據，還是一個人心裡的狀態？如果是收據，他在床邊做對了。如果是心裡的狀態，他在斯圖加特也許已經給了，一個字也沒說。"
+    },
+    {
+      "type": "p",
+      "text": "他在書裡說，後來每次走進醫院、看見護士，或者看見一個頭上包著繃帶的人，就會想起那個年輕的士兵。「或者看到一株向日葵的時候……」"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Sunflower: On the Possibilities and Limits of Forgiveness (revised and expanded edition)",
+      "publisher": "Simon Wiesenthal；Schocken Books（Internet Archive 文字檔）",
+      "date": "1998-04-07",
+      "url": "https://archive.org/details/the-sunflower-simon-wiesenthal-2",
+      "note": "讀前半維森塔爾自己的記述：德軍墓地的向日葵與「For me there would be no sunflower」；工學院門口的 Reserve Hospital 牌子、護士帶上樓、讓無望病人獨自等死的房間；士兵 21 歲、來自斯圖加特、頭包繃帶；聶伯羅彼得羅夫斯克的房子（士兵說 150 或 200 人，維基百科寫 300，正文照原書寫「一兩百個」）；「without your answer I cannot die in peace」；合起的手間像有一株向日葵、without a word I left the room；獄友（Arthur）的 superman/subhuman 一句；約瑟克的 Who gave you the right... 與 in no position to forgive；波雷克在毛特豪森、從奧斯威辛轉來、deserved the mercy of forgiveness、you can only forgive a wrong that has been done to yourself 一段、兩人談到最後都動搖；遺物 Send the lot to his mother；1946 年夏林茲附近的向日葵、兩週後到斯圖加特、母親「He was such a good boy」、to take from her her last possession would probably have also been a crime；There are many kinds of silence；forgiveness is an act of volition, and only the sufferer is qualified to make the decision；書末 What would I have done?；Or when I see a sunflower。書中士兵叫 Karl，正文不點名。出版日期取 Schocken 平裝本（見下一筆）。"
+    },
+    {
+      "title": "The Sunflower by Simon Wiesenthal",
+      "publisher": "Penguin Random House",
+      "date": "1998-04-07",
+      "url": "https://www.penguinrandomhouse.com/books/190370/the-sunflower-by-simon-wiesenthal/9780805210606/",
+      "note": "書介：53 位回答者，列名達賴喇嘛、Harry Wu、Cynthia Ozick、Primo Levi 等。"
+    },
+    {
+      "title": "The Sunflower (book)",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/The_Sunflower_(book)",
+      "note": "用到：1969 年由巴黎 Opera Mundi 首次出版，1970 年英譯；初版 10 篇回答，最新版 53 篇。2026-11-17 查閱。"
+    },
+    {
+      "title": "Simon Wiesenthal",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Simon_Wiesenthal",
+      "note": "用到：1908 年生於 Buczacz；1941 年底和妻子被送進雅諾夫斯卡集中營；1945-05-05 在毛特豪森獲美軍解放；戰後追查納粹，1977 年洛杉磯的 Simon Wiesenthal Center 以他命名；2005 年在維也納過世。條目也記下 Tom Segev、Guy Walters 等傳記作者認為他的自傳前後不一、有誇大，所以正文寫明醫院一事只有他自己的記述。2026-11-17 查閱。"
+    },
+    {
+      "title": "Forgiveness",
+      "publisher": "Stanford Encyclopedia of Philosophy（Luke Russell、Brandon Warmke）",
+      "date": "2026-01-16",
+      "url": "https://plato.stanford.edu/entries/forgiveness/",
+      "note": "2010-05-06 初版，2026-01-16 實質修訂。用到：It is often claimed that only the victim has the standing to forgive the wrongdoer；Griswold 等人主張加害者道歉、悔改後原諒才可能；巴特勒認為原諒和報復不相容，卻和持續、適度的怒氣相容。"
+    },
+    {
+      "title": "Fifteen Sermons Preached at the Rolls Chapel, Sermon IX: Upon Forgiveness of Injuries",
+      "publisher": "Joseph Butler；Project Canterbury（Bishop Payne Library 藏 1827 年版轉錄）",
+      "date": "1726",
+      "url": "https://anglicanhistory.org/butler/rolls/09.html",
+      "note": "經文馬太福音 5:43–44。用到：We may therefore love our enemy, and yet have resentment against him for his injurious behaviour towards us；Resentment is not inconsistent with good will；when this resentment entirely destroys our natural benevolence towards him, it is excessive；precepts...forbid only the excess and abuse of this natural feeling, in cases of personal and private injury；to forgive injuries, is the same as to love our enemies。日期填初版年份。"
+    },
+    {
+      "title": "Joseph Butler's Moral Philosophy",
+      "publisher": "Stanford Encyclopedia of Philosophy（Aaron Garrett）",
+      "date": "2023-11-27",
+      "url": "https://plato.stanford.edu/entries/butler-moral/",
+      "note": "用到：1692 年生、1752 年死；在 Rolls Chapel 講道到 1726 年，同年出版《十五篇講道》；1738 年任布里斯托主教，1750 年任達勒姆主教；原諒不要求放下對道德錯誤的怨恨。"
+    },
+    {
+      "title": "馬太福音 6:12、5:44（和合本）",
+      "publisher": "信望愛聖經工具 FHL",
+      "date": "",
+      "url": "https://bible.fhl.net/",
+      "note": "2026-11-17 以 scripts/bible.py 核對：「免我們的債，如同我們免了人的債。」「只是我告訴你們，要愛你們的仇敵，為那逼迫你們的禱告。」"
+    },
+    {
+      "title": "File:Dr. Simon Wiesenthal, Bestanddeelnr 932-3671.jpg",
+      "publisher": "Wikimedia Commons（Nationaal Archief, Fotocollectie Anefo）",
+      "date": "1982-10-18",
+      "url": "https://commons.wikimedia.org/wiki/File:Dr._Simon_Wiesenthal,_Bestanddeelnr_932-3671.jpg",
+      "note": "頭圖。CIDI 研討會 Zionisme als antwoord，阿姆斯特丹 Hilton 飯店；攝影 Rob Bogaerts／Anefo；CC0。"
+    },
+    {
+      "title": "File:ONL (1887) 1.073 - Bishop Butler.jpg",
+      "publisher": "Wikimedia Commons（British Library Mechanical Curator collection）",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:ONL_(1887)_1.073_-_Bishop_Butler.jpg",
+      "note": "正文圖。出自 Walter Thornbury《Old and New London, Illustrated》第 1 冊第 91 頁，1873 年初版，大英圖書館藏 1887 年版（HMNTS 010349.l.1.）；公版。"
+    }
+  ]
+}
