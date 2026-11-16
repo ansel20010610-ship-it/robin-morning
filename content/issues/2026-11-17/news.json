@@ -1,0 +1,186 @@
+{
+  "column": "news",
+  "date": "2026-11-17",
+  "title": "川普啟程赴亞洲，19 日在深圳與習近平、普丁會面",
+  "dek": "川普往馬尼拉、深圳，美國停飛風波未平，台股單日重挫 2,635 點。",
+  "brief": "川普從華盛頓出發，預計在深圳的 APEC 會晤習近平，並與習近平、普丁三方會談。美國全國停飛之後，取消的航班已超過 1.85 萬班。台股 16 日收盤重挫，國安基金進場護盤。",
+  "topic_key": "news:2026-11-17",
+  "voice": "wire",
+  "updated_at": "2026-11-17T05:25:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "sources": [
+    {
+      "title": "美總統川普啟程訪亞洲 登場APEC盼與習近平會談",
+      "publisher": "中央社",
+      "date": "2026-11-17",
+      "url": "https://www.cna.com.tw/news/aopl/202611170004.aspx",
+      "note": "17 日 02:56 發布；華盛頓 16 日專電；行程、美國官員『不預期能達成協議』、金正恩說法"
+    },
+    {
+      "title": "克宮：普丁與川普擬APEC期間雙邊會談　計畫籌備中",
+      "publisher": "中央社",
+      "date": "2026-11-17",
+      "url": "https://www.cna.com.tw/news/aopl/202611170005.aspx",
+      "note": "17 日 03:58 發布；莫斯科 16 日；鄂夏柯夫引美聯社說法；白宮行程未列美俄雙邊"
+    },
+    {
+      "title": "Nationwide ground stop could cost US airlines hundreds of millions",
+      "publisher": "半島電視台",
+      "date": "2026-11-16",
+      "url": "https://www.aljazeera.com/news/2026/11/16/nationwide-ground-stop-could-cost-us-airlines-hundreds-of-millions",
+      "note": "停飛 13 日、逾四小時；FlightAware 取消逾 18,500 班；達菲稱起因在阿肯色州據點、L3Harris 人員換光纖；正文未收 500 億美元要求與國會時程"
+    },
+    {
+      "title": "上週停飛令後全美航班持續大亂 創911恐攻以來最大規模紀錄",
+      "publisher": "公視新聞網",
+      "date": "2026-11-16",
+      "url": "https://news.pts.org.tw/article/836012",
+      "note": "21:08 更新；近 5 小時（半島電視台寫逾四小時，正文取『超過四小時』）；承包商更新航管通訊系統、銅線改光纖；原因調查中"
+    },
+    {
+      "title": "Saudi Arabia dismisses commander of anti-Houthi coalition as rebels advance",
+      "publisher": "法國 24 電視台（法新社、路透社）",
+      "date": "2026-11-16",
+      "url": "https://www.france24.com/en/yemen/20261116-saudi-arabia-dismisses-commander-of-anti-houthi-coalition-as-rebels-advance",
+      "note": "16 日 15:42（GMT 14:42）；沙烏地通訊社引王室命令；五名葉門軍方人士；未給免職理由。前一期寫距亞丁約 60 公里，本篇來源另寫霍爾奧邁爾在亞丁以西約 100 公里，兩個數字不同，本篇不寫對亞丁的距離"
+    },
+    {
+      "title": "Five EU countries announce plan to send rejected asylum seekers to Rwanda",
+      "publisher": "半島電視台",
+      "date": "2026-11-16",
+      "url": "https://www.aljazeera.com/news/2026/11/16/five-eu-countries-announce-plan-to-send-rejected-asylum-seekers-to-rwanda",
+      "note": "維也納移民會議場邊；最快明年；盧安達表態與英國最高法院裁定正文未收；47 個團體聯合聲明；英國最高法院裁定 2022 年協議違法"
+    },
+    {
+      "title": "台股收盤4萬1創史上第二大跌點 央行：若無國安基金波動更大",
+      "publisher": "公視新聞網",
+      "date": "2026-11-16",
+      "url": "https://news.pts.org.tw/article/835949",
+      "note": "20:57 更新；收 41,040 點、跌 2,635 點；外資賣超 701 億元；楊金龍在立法院說法；費半 13 日跌 3.43%"
+    },
+    {
+      "title": "藍推普發現金2萬拚20日三讀 張惇涵：不可拿買醋錢買醬油",
+      "publisher": "公視新聞網",
+      "date": "2026-11-16",
+      "url": "https://news.pts.org.tw/article/835894",
+      "note": "14:13 更新；17 日朝野協商、目標 20 日三讀；行政院版本 1 萬元；莊毓祥、張惇涵說法"
+    },
+    {
+      "title": "Snow possible on Taiwan's high mountains starting Thursday: CWA",
+      "publisher": "Focus Taiwan（中央社）",
+      "date": "2026-11-16",
+      "url": "https://focustaiwan.tw/society/202611160020",
+      "note": "20:21 發布；氣象署預報員黃恩鴻；3,500 公尺以上；14–15 度、低地 11 度"
+    }
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "美國總統川普 16 日啟程赴亞洲，預計 19 日在深圳出席亞太經濟合作會議。美國航空、葉門戰事、歐洲移民政策各有新進展。"
+    },
+    {
+      "type": "news",
+      "title": "世界",
+      "items": [
+        {
+          "headline": "川普訪亞洲，深圳會習近平",
+          "place": [
+            "US",
+            "PH",
+            "CN"
+          ],
+          "summary": "川普 16 日從華盛頓啟程，行程見下表。克里姆林宮顧問鄂夏柯夫說，正安排普丁與川普單獨會談，白宮公布的行程沒有這一項。美國官員說，三方會談將談核武軍備管制，但不預期達成協議。",
+          "source": "中央社",
+          "url": "https://www.cna.com.tw/news/aopl/202611170004.aspx",
+          "when": "11 月 16 日（週一），華盛頓時間"
+        },
+        {
+          "headline": "全美停飛後取消逾 1.85 萬班",
+          "place": "US",
+          "summary": "美國聯邦航空總署 13 日（週五）發布全國停飛令，航班停飛超過四小時。依 FlightAware 資料，截至 16 日取消航班超過 18,500 班。運輸部長達菲說，起因在阿肯色州的航管據點，承包商當時正把銅線換成光纖，原因仍在調查。",
+          "source": "半島電視台、公視新聞網",
+          "url": "https://www.aljazeera.com/news/2026/11/16/nationwide-ground-stop-could-cost-us-airlines-hundreds-of-millions",
+          "when": "11 月 16 日（週一），美國當地"
+        },
+        {
+          "headline": "沙烏地撤換葉門聯軍司令",
+          "place": [
+            "SA",
+            "YE"
+          ],
+          "summary": "沙烏地國家通訊社 16 日引王室命令報導，聯軍司令法赫德中將改任國防大臣顧問，由參謀長魯瓦伊利上將接任。五名葉門軍方人士說，胡塞武裝已進到南部沿海的霍爾奧邁爾；政府 15 日說，正從曼德海峽一帶撤軍，防守亞丁。",
+          "source": "法國 24 電視台（法新社、路透社）",
+          "url": "https://www.france24.com/en/yemen/20261116-saudi-arabia-dismisses-commander-of-anti-houthi-coalition-as-rebels-advance",
+          "when": "11 月 16 日（週一），當地"
+        },
+        {
+          "headline": "歐洲五國擬把遭拒難民送往盧安達",
+          "place": [
+            "AT",
+            "DK",
+            "DE",
+            "RW"
+          ],
+          "summary": "奧地利、丹麥、德國、希臘、荷蘭 16 日在維也納宣布，計畫把庇護申請被駁回的人送到盧安達的處理中心，最快 2027 年開始，細節仍在談。47 個援助與人權等團體聯合聲明，要求五國放棄。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/16/five-eu-countries-announce-plan-to-send-rejected-asylum-seekers-to-rwanda",
+          "when": "11 月 16 日（週一），維也納當地"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "title": "台灣",
+      "items": [
+        {
+          "headline": "台股重挫 2,635 點",
+          "place": "TW",
+          "summary": "台股加權指數 16 日收在 41,040 點，是史上第二大收盤跌點，外資賣超 701 億元，國安基金進場護盤。輝達執行長黃仁勳請辭後，美國費城半導體指數 13 日收跌 3.43%。央行總裁楊金龍說，沒有國安基金，波動恐怕更大。",
+          "source": "公視新聞網",
+          "url": "https://news.pts.org.tw/article/835949",
+          "when": "11 月 16 日，台灣時間"
+        },
+        {
+          "headline": "普發現金 2 萬元拚 20 日三讀",
+          "place": "TW",
+          "summary": "國民黨團推動普發現金 2 萬元，17 日邀朝野協商，目標 20 日三讀。行政院提出的是 1 萬元。民進黨團質疑是舉債發紅包，民眾黨團說還在評估。",
+          "source": "公視新聞網",
+          "url": "https://news.pts.org.tw/article/835894",
+          "when": "11 月 16 日，台灣時間"
+        },
+        {
+          "headline": "19 日起轉冷，高山恐降雪",
+          "place": "TW",
+          "summary": "氣象署預報，19 日（週四）起降溫，北部與東北部白天高溫 18 至 20 度。20、21 日最冷，北、中、東北部平均低溫 14 至 15 度，部分低地可能低到 11 度。19 日晚間起，3,500 公尺以上高山可能降雪。",
+          "source": "Focus Taiwan（中央社）",
+          "url": "https://focustaiwan.tw/society/202611160020",
+          "when": "11 月 16 日，台灣時間"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "川普亞洲行程（預定）",
+      "head": [
+        "日期",
+        "地點與行程"
+      ],
+      "rows": [
+        [
+          "17 日",
+          "馬尼拉：東協與美國特別峰會"
+        ],
+        [
+          "18 日",
+          "與菲律賓總統小馬可仕會談，下午轉往深圳"
+        ],
+        [
+          "19 日",
+          "深圳：APEC 領袖會議、習近平會談、美中俄三方會談"
+        ]
+      ],
+      "caption": "中央社；日期為當地時間。"
+    }
+  ]
+}
