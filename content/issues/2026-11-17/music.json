@@ -1,0 +1,346 @@
+{
+  "column": "music",
+  "date": "2026-11-17",
+  "title": "三星洗衣機洗完的提示音，來自舒伯特的〈鱒魚〉",
+  "dek": "曲名「鱒魚」，是因為第四樂章拿舒伯特自己的一首歌來變奏。那首歌的旋律，你家洗衣機說不定也在唱。",
+  "brief": "舒伯特的《鱒魚》是他最受歡迎的室內樂，曲名來自第四樂章拿他自己的同名歌曲做變奏。這首歌的旋律，三星洗衣機洗完時的提示音也用過電子版。按下播放，先聽第四樂章開頭弦樂輕聲奏出的主題，再聽最後一段鋼琴彈出游動的伴奏。",
+  "topic_key": "music:schubert-d667",
+  "updated_at": "2026-11-17T00:59:18+08:00",
+  "form": "list",
+  "voice": "listener",
+  "motif": "A4:0.5 D5:0.75 D5:0.25 F#5:0.5 F#5:0.5 D5:1 A4:1 A4:0.875 A4:0.125 E5:0.375 D5:0.125 C#5:0.375 B4:0.125 A4:1.5",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Steyr_Stadtplatz-6623.jpg/1280px-Steyr_Stadtplatz-6623.jpg",
+    "width": 1280,
+    "height": 853,
+    "alt": "一座石板鋪面的市鎮廣場。右邊是一座有多層水盤和人像的噴泉；正中央是一棟米白色的三層樓房，紅瓦屋頂，一樓有綠色的遮陽傘和咖啡座；左邊接著幾棟黃色、灰色立面的樓房；天空有雲。",
+    "caption": "奧地利上奧地利邦施泰爾（Steyr）的市鎮廣場（Stadtplatz），2017 年拍攝。舒伯特在 1819、1823、1825 年夏天都到過這個小城；《鱒魚》五重奏的委託人鮑姆加特納（Sylvester Paumgartner）住在這座廣場上，家裡是當地音樂活動的中心。圖中是廣場一角，不指認哪一棟是他家。",
+    "credit": "Isiwal，Own work，影像經 Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Steyr_Stadtplatz-6623.jpg",
+    "made": "2017"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "舒伯特（Franz Schubert）是奧地利作曲家，在維也納長大，只活了三十一年（1797–1828）。今天要聽的《鱒魚》五重奏，約寫於 1819 年，是他最受歡迎的室內樂。室內樂就是幾個人坐在一間房裡演奏、不需要指揮的音樂。"
+    },
+    {
+      "type": "p",
+      "text": "它的編制有點特別。一般的鋼琴五重奏是鋼琴加兩把小提琴、中提琴、大提琴；這首把一把小提琴換成低音大提琴，也就是樂團裡最大、最低的那把弦樂器。所以整體聽起來偏低、偏厚。"
+    },
+    {
+      "type": "p",
+      "text": "曲名叫「鱒魚」，是因為第四樂章拿舒伯特自己寫的一首同名歌曲來做變奏。變奏就是同一段旋律，換個樣子再來一遍。這首歌的旋律，三星洗衣機洗完時的提示音也用過電子版，所以你說不定聽過。它德文叫〈Die Forelle〉，意思就是「鱒魚」，是一個人唱、一架鋼琴伴奏的藝術歌曲，詩是德國詩人舒巴特（Christian Friedrich Daniel Schubart，1739–1791）寫的。他和舒伯特名字很像，但是兩個人。"
+    },
+    {
+      "type": "h",
+      "text": "你可能在哪裡聽過"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**三星洗衣機**：洗衣機洗完時的提示音，用的是〈鱒魚〉這首歌旋律的電子版。",
+        "電影《The Trout》：1969 年 8 月 30 日，杜普蕾、巴倫波因、帕爾曼、祖克曼、梅塔五位音樂家，在倫敦剛落成的 Queen Elizabeth Hall 現場演奏這首曲子，導演 Christopher Nupen 用五部攝影機拍成電影。"
+      ]
+    },
+    {
+      "type": "h",
+      "text": "那首歌在唱什麼"
+    },
+    {
+      "type": "p",
+      "text": "詩寫於十八世紀八〇年代初。第一節是這樣："
+    },
+    {
+      "type": "quote",
+      "original": "In einem Bächlein helle,\nDa schoß in froher Eil'\nDie launige Forelle\nVorüber wie ein Pfeil.",
+      "text": "清亮的小溪裡，\n一條淘氣的鱒魚，\n興沖沖地，\n像一支箭射了過去。",
+      "cite": "舒巴特（C. F. D. Schubart）〈Die Forelle〉第一節，Zeno.org 所載詩集版（舒伯特譜曲時個別用字略有不同）；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "接下來的情節是：岸上有個漁夫，水太清，抓不到魚，就把小溪攪渾，魚便上了鉤。詩原本還有最後一節，是教訓，叫少女提防拿著釣竿的「誘惑者」。舒伯特沒有譜這一節，只譜了前三節。"
+    },
+    {
+      "type": "p",
+      "text": "舒伯特約在 1817 年把它譜成歌曲，各來源對年份的說法略有出入。他自己手抄過好幾份，內容差別不大，主要在前奏和速度標示。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/7/73/Die_Forelle.JPG",
+      "width": 812,
+      "height": 587,
+      "alt": "一頁手寫樂譜，米色紙、棕色墨跡。上方正中是標題「Die Forelle」，右上角是簽名和日期；每個系統有三行譜，最下面兩行鋼琴部分擠滿細小密集的音符，第一行是歌唱的旋律。",
+      "caption": "舒伯特親筆手抄的〈鱒魚〉歌譜第一頁，第五版，1821 年 10 月。鋼琴那兩行裡密密的小音符，就是歌裡游動的鱒魚；五重奏的最後一段變奏，把這個伴奏搬了回來。現藏美國國會圖書館（Gertrude Clarke Whittall Foundation Collection）。",
+      "credit": "Franz Schubert 手稿；影像經 Wikimedia Commons（轉自 IMSLP）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Die_Forelle.JPG",
+      "made": "1821 年 10 月"
+    },
+    {
+      "type": "h",
+      "text": "誰請舒伯特寫的"
+    },
+    {
+      "type": "p",
+      "text": "請他寫的人是**鮑姆加特納**（Sylvester Paumgartner），住在上奧地利邦的小城施泰爾（Steyr），在鐵礦場當副經理，業餘拉大提琴，自己的水準有限。他家在鎮上的市鎮廣場，是當地音樂活動的中心。舒伯特 1819、1823、1825 年夏天都去過施泰爾。"
+    },
+    {
+      "type": "p",
+      "text": "據維基百科引 Reed 的說法，這首五重奏本身，就是這首歌在 1819 年前已經很紅的證據。鮑姆加特納除了指定編制，還建議舒伯特在曲子裡放一組這首歌的變奏。"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子的來歷，最主要的證詞來自舒伯特的童年友人施塔德勒（Albert Stadler）。1850 年代末，作家 Ferdinand Luib 在蒐集舒伯特的傳記材料，施塔德勒回信，寫到這首五重奏："
+    },
+    {
+      "type": "quote",
+      "original": "He wrote it at the special request of my friend Sylvester Paumgartner, who was completely captivated by the precious little song. It was his wish that the Quintet should maintain the form and instrumentation of Hummel's Quintet—recte Septet—which at that time was quite new.",
+      "text": "他是應我的朋友鮑姆加特納的特別請託寫的；鮑姆加特納完全被那首珍貴的小歌迷住了。他希望這首五重奏沿用胡麥爾那首五重奏的形式和編制（更正確的說法是七重奏），那首當時還很新。",
+      "cite": "阿爾貝特・施塔德勒（Albert Stadler，舒伯特的童年友人）回覆作家 Ferdinand Luib 的信，1850 年代末；英譯文引自 Hyperion CDA67527 唱片小冊（小冊未註明譯者）；中文本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "信裡提到的胡麥爾（Johann Nepomuk Hummel）寫過一首七重奏：鋼琴、長笛、雙簧管、法國號、中提琴、大提琴、低音大提琴。他自己同時也出了一版五重奏改編，編制就和《鱒魚》一樣。"
+    },
+    {
+      "type": "p",
+      "text": "《鱒魚》寫在哪一年，只能推定是 1819 年，舒伯特 22 歲。手稿已經不見了，沒人確定是哪年夏天。唱片小冊（Hyperion 出版，作者 Misha Donat）的推論是：施塔德勒說胡麥爾那首「當時還很新」，所以很可能寫在 1819 年第一次去施泰爾的時候。"
+    },
+    {
+      "type": "p",
+      "text": "舒伯特 1828 年過世，出版商 Josef Czerny 不久後買下遺稿，1829 年在維也納出版。5 月 21 日他在《Wiener allgemeine Theaterzeitung》登廣告，說這首五重奏已在好幾個圈子演過，在場的行家都說是「傑作」（masterpiece）。"
+    },
+    {
+      "type": "timeline",
+      "title": "從一首詩到一首五重奏",
+      "caption": "1819 年為推定（手稿已佚）；歌曲的完成年份各來源略有出入，取約 1817 年。",
+      "items": [
+        {
+          "when": "1780 年代初",
+          "label": "詩人舒巴特寫下〈鱒魚〉",
+          "note": "Christian Friedrich Daniel Schubart，1739–1791；和舒伯特不是同一人"
+        },
+        {
+          "when": "1817",
+          "label": "舒伯特把前三節譜成歌曲，D. 550",
+          "note": "之後他又手抄過好幾次"
+        },
+        {
+          "when": "1819",
+          "label": "夏天，舒伯特到施泰爾；鮑姆加特納請他寫五重奏（寫作時間為推定）",
+          "note": "他是鐵礦場副經理、業餘大提琴手；舒伯特這年夏天到過施泰爾（推定就是這次寫的）"
+        },
+        {
+          "when": "1821.10",
+          "label": "歌曲第五版手抄",
+          "note": "本文那頁手稿，現藏美國國會圖書館"
+        },
+        {
+          "when": "1829.5.21",
+          "label": "Czerny 登廣告推出五重奏",
+          "note": "舒伯特過世的隔年；這是第一次出版"
+        },
+        {
+          "when": "1957",
+          "label": "柯曾與維也納八重奏團錄音",
+          "note": "Decca，本文選的版本"
+        },
+        {
+          "when": "1969.8.30",
+          "label": "倫敦現場演出並拍成電影《The Trout》",
+          "note": "杜普蕾、巴倫波因、帕爾曼、祖克曼、梅塔同台"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "它為什麼這麼受歡迎"
+    },
+    {
+      "type": "p",
+      "text": "Misha Donat 說，這是舒伯特所有室內樂裡最受歡迎的一首，也稱它是「最高品質的家庭音樂」。舒伯特有四首大作品拿自己的歌曲來做變奏，另外三首是《流浪者幻想曲》、《死與少女》弦樂四重奏、C 大調小提琴與鋼琴幻想曲 D934，這首是四首裡最輕鬆、最隨和的。"
+    },
+    {
+      "type": "p",
+      "text": "聽起來有兩個特點。一是鋼琴兩隻手常在高音區彈同一條旋律，因為底下有大提琴和低音大提琴撐著，所以聲音清楚又輕盈。二是歌裡鋼琴伴奏那串往上跑的小音符，變成貫穿全曲的動機，五個樂章裡有四個用到，只有第三樂章沒有。"
+    },
+    {
+      "type": "p",
+      "text": "也有人嫌它鬆散。維基百科引 Chusid 的說法，說它結構比較鬆、重複偏長。小冊也提到，最後一個樂章前半段結束後，後半段是把前半段整段音高升高一些，再來一遍，最後回到原來的音高。"
+    },
+    {
+      "type": "h",
+      "text": "按下播放，先聽這三個地方"
+    },
+    {
+      "type": "p",
+      "text": "版本推薦克里福德・柯曾（Clifford Curzon，鋼琴）和維也納八重奏團成員合作的 Decca 錄音，1957 年錄在維也納，1958 年發行。理由只有三個：二十世紀中期的老錄音；弦樂手是維也納八重奏團的成員；Gramophone 的評語說它是「很難從寶座上拉下來的唱片經典」（轉引自賣場頁面，沒有註明刊期與作者）。這一版全曲約 35 分鐘。"
+    },
+    {
+      "type": "music",
+      "composer": "舒伯特（Franz Schubert）",
+      "work": "A 大調鋼琴五重奏《鱒魚》，D. 667",
+      "work_original": "Piano Quintet in A major, D. 667, \"Trout\" (Forellenquintett)",
+      "composed": "1819（推定）；1829 年出版",
+      "performers": "克里福德・柯曾（Clifford Curzon）鋼琴；威利・博斯可夫斯基（Willi Boskovsky）小提琴、京特・布萊騰巴赫（Günther Breitenbach）中提琴、尼古拉斯・許伯納（Nikolaus Hübner）大提琴、約翰・克魯姆普（Johann Krump）低音大提琴（維也納八重奏團成員）",
+      "recording": "Decca，1957 年錄音於維也納索菲恩廳（Sofiensaal），1958 年發行",
+      "duration": "約 35 分鐘（此版）",
+      "movements": [
+        "I. Allegro vivace",
+        "II. Andante",
+        "III. Scherzo: Presto",
+        "IV. Thema: Andantino – Variazioni I–V – Allegretto",
+        "V. Finale: Allegro giusto"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Schubert Trout Quintet Curzon Vienna Octet",
+        "artist_hint": "Curzon",
+        "track_filter": [
+          "Piano Quintet in A Major, D. 667"
+        ]
+      }
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "**第四樂章一開頭**：主題只由弦樂輕聲奏出，像從遠處傳來。歌的旋律從這裡開始。",
+        "**第四樂章的最後一段**：鋼琴終於彈出歌裡那串像魚在游的伴奏，速度也變快了。Spotify 上第四樂章是同一軌，這段在軌道的後半。",
+        "**第一樂章一開頭**：鋼琴彈出一串強而寬廣的音，一個接一個攤開。開頭幾小節像一段慢慢的引子，主旋律要等這串音第二次出現才真的登場。"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "想多聽一段，可以找第四樂章中間，大提琴獨自挑起旋律的地方。整個第四樂章的順序，大致是這樣："
+    },
+    {
+      "type": "svg",
+      "title": "第四樂章怎麼走",
+      "svg": "<svg viewBox=\"0 0 420 418\" role=\"img\" aria-label=\"《鱒魚》五重奏第四樂章的聽覺順序：主題、兩段溫和變奏、鋼琴的快速音群、小調插段、大提琴的抒情變奏、回到 D 大調的最後一段\"><text class=\"ink\" x=\"16\" y=\"26\" font-size=\"15\" font-weight=\"bold\">第四樂章：主題加六段變奏，依聽到的順序</text><rect class=\"soft\" x=\"16\" y=\"60\" width=\"388\" height=\"44\" rx=\"6\"/><text class=\"ink\" x=\"32\" y=\"87\" font-size=\"14\" font-weight=\"bold\">主題</text><text class=\"ink\" x=\"108\" y=\"87\" font-size=\"13\">只有弦樂器，輕聲，像從遠處傳來</text><rect class=\"soft\" x=\"16\" y=\"114\" width=\"388\" height=\"44\" rx=\"6\"/><text class=\"ink\" x=\"32\" y=\"141\" font-size=\"14\" font-weight=\"bold\">前兩段</text><text class=\"ink\" x=\"108\" y=\"141\" font-size=\"13\">溫和的變奏</text><rect class=\"soft\" x=\"16\" y=\"168\" width=\"388\" height=\"44\" rx=\"6\"/><text class=\"ink\" x=\"32\" y=\"195\" font-size=\"14\" font-weight=\"bold\">鋼琴</text><text class=\"ink\" x=\"108\" y=\"195\" font-size=\"13\">快速跑動的音群（三十二分音符）</text><rect class=\"soft\" x=\"16\" y=\"222\" width=\"388\" height=\"44\" rx=\"6\"/><text class=\"ink\" x=\"32\" y=\"249\" font-size=\"14\" font-weight=\"bold\">小調</text><text class=\"ink\" x=\"108\" y=\"249\" font-size=\"13\">一段強勁的插段</text><rect class=\"soft\" x=\"16\" y=\"276\" width=\"388\" height=\"58\" rx=\"6\"/><text class=\"ink\" x=\"32\" y=\"300\" font-size=\"14\" font-weight=\"bold\">大提琴</text><text class=\"ink\" x=\"108\" y=\"300\" font-size=\"13\">抒情的變奏；從降 B 大調出發，</text><text class=\"ink\" x=\"108\" y=\"320\" font-size=\"13\">一路轉到更遠的調</text><rect class=\"soft\" x=\"16\" y=\"344\" width=\"388\" height=\"58\" rx=\"6\"/><rect class=\"accent\" x=\"16\" y=\"344\" width=\"5\" height=\"58\" rx=\"2\"/><text class=\"ink\" x=\"32\" y=\"368\" font-size=\"14\" font-weight=\"bold\">最後一段</text><text class=\"ink\" x=\"108\" y=\"368\" font-size=\"13\">回到 D 大調，速度加快（Allegretto）；</text><text class=\"ink\" x=\"108\" y=\"388\" font-size=\"13\">歌裡「游動的魚」那個鋼琴伴奏，到這裡才出現</text></svg>",
+      "caption": "示意，不按比例。依 Misha Donat 的 Hyperion 唱片小冊（CDA67527）整理；各段長短、拍數不在圖中。",
+      "credit": "原創圖解，依 Hyperion CDA67527 小冊整理"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "A 大調鋼琴五重奏《鱒魚》，D. 667（後來也編為作品 114）"
+        ],
+        [
+          "樂器",
+          "鋼琴、小提琴、中提琴、大提琴、低音大提琴"
+        ],
+        [
+          "樂章",
+          "五個：Allegro vivace／Andante／Scherzo: Presto／Andantino 主題與變奏／Allegro giusto"
+        ],
+        [
+          "長度",
+          "約 35 到 43 分鐘（柯曾版 35 分 10 秒）"
+        ],
+        [
+          "寫作",
+          "1819 年夏天，施泰爾（推定；手稿已佚）"
+        ],
+        [
+          "首次出版",
+          "1829 年，維也納，Josef Czerny（舒伯特過世後一年）"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Schubert: 'Trout' Quintet（唱片小冊，作者 Misha Donat）",
+      "publisher": "Hyperion Records，CDA67527",
+      "date": "2006",
+      "url": "https://www.hyperion-records.co.uk/dc.asp?dc=D_CDA67527",
+      "note": "讀了小冊 PDF 的英文全文：施塔德勒致 Luib 信的引文、鮑姆加特納與施泰爾、1819 年推定、胡麥爾模範、五個樂章與第四樂章各變奏的描述、1829 年 Czerny 廣告；2026-11-17 查閱"
+    },
+    {
+      "title": "Trout Quintet",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Trout_Quintet",
+      "note": "編制、樂章與調性、鮑姆加特納建議寫變奏、鋼琴雙手相距八度的音色、1969 年電影與其他用途、第四樂章主題的譜例（motif 取自此譜例）；2026-11-17 查閱"
+    },
+    {
+      "title": "Piano Quintet in A major, D.667（作品頁）",
+      "publisher": "IMSLP",
+      "date": "未註明",
+      "url": "https://imslp.org/wiki/Quintet_for_Piano_and_Strings_'Trout',_D.667_(Schubert,_Franz)",
+      "note": "D.667；Op.114；五個樂章與小節數、第四樂章為主題 20 小節加 6 段變奏；1829 年維也納 Czerny 初版；獻給鮑姆加特納；施塔德勒抄的分譜；平均長度約 40 分鐘；2026-11-17 查閱"
+    },
+    {
+      "title": "Die Forelle",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Die_Forelle",
+      "note": "歌曲約 1817 年初完成、D 550；舒伯特的多份手抄；第五版（1821 年 10 月）現藏美國國會圖書館；歌曲受歡迎與五重奏的委託；2026-11-17 查閱"
+    },
+    {
+      "title": "Die Forelle（詩與歌曲資料）",
+      "publisher": "The LiederNet Archive",
+      "date": "未註明",
+      "url": "https://www.lieder.net/lieder/get_text.html?TextId=14667",
+      "note": "詩人 Schubart 1739–1791、詩作於 1782–83 年；舒伯特 D 550 標 1817?、只譜前三節；2026-11-17 查閱"
+    },
+    {
+      "title": "Die Forelle（Schubart 詩作原文）",
+      "publisher": "Zeno.org（Schubart, Gedichte）",
+      "date": "未註明",
+      "url": "http://www.zeno.org/Literatur/M/Schubart,+Christian+Friedrich+Daniel/Gedichte/Gedichte/Erz%C3%A4hlungen+und+Verwandtes/Die+Forelle",
+      "note": "第一節德文原文；該版第二行 launige，舒伯特的版本個別用字不同；2026-11-17 查閱"
+    },
+    {
+      "title": "Violinist plays a surprisingly charming duet… with her bleeping washing machine",
+      "publisher": "Classic FM（Kyle Macdonald）",
+      "date": "2023-01-19",
+      "url": "https://www.classicfm.com/discover-music/instruments/violin/schubert-duet-washing-machine/",
+      "note": "三星洗衣機用〈鱒魚〉旋律當洗完的提示音；五重奏第四樂章用這首歌的曲調；2026-11-17 查閱"
+    },
+    {
+      "title": "The Trout（Christopher Nupen 電影）",
+      "publisher": "Allegro Films",
+      "date": "未註明",
+      "url": "http://www.allegrofilms.com/films/the-trout",
+      "note": "1969 年；杜普蕾、巴倫波因、帕爾曼、祖克曼、梅塔；倫敦 Queen Elizabeth Hall，1969-08-30 現場；2026-11-17 查閱"
+    },
+    {
+      "title": "Die Forelle（舒伯特手稿，館藏紀錄）",
+      "publisher": "Library of Congress",
+      "date": "未註明",
+      "url": "https://www.loc.gov/item/87752720/",
+      "note": "1821 年 10 月的手稿、第五版、Whittall Foundation Collection；圖上日期與此紀錄相符；Commons 檔案說明寫「1817 年」，與館藏紀錄不一致，圖說採館藏紀錄；2026-11-17 查閱"
+    },
+    {
+      "title": "Schubert: Trout Quintet (Remastered) — Sir Clifford Curzon with Members of The Vienna Octet",
+      "publisher": "HIGHRESAUDIO",
+      "date": "2021-09-17",
+      "url": "https://www.highresaudio.com/en/album/view/mt2vzz/sir-clifford-curzon-with-members-of-the-vienna-octet-schubert-trout-quintet-remastered",
+      "note": "演奏者名單、1957 年錄音、1958 年原版發行、各樂章長度；Gramophone 評語為轉引，未註明刊期與作者；2026-11-17 查閱"
+    },
+    {
+      "title": "The Vienna Octet — Schubert: The Trout Quintet（Curzon，Hybrid Stereo SACD）",
+      "publisher": "Acoustic Sounds",
+      "date": "未註明",
+      "url": "https://store.acousticsounds.com/d/110599/The_Vienna_Octet-Schubert_The_Trout_Quintet_Curzon-Hybrid_Stereo_SACD",
+      "note": "錄音於 1957 年 10 月、維也納 Sofiensaal；此頁為再版 SACD 賣場，錄音月份他處另有 11 月說法，故正文只寫年份；2026-11-17 查閱"
+    }
+  ]
+}
