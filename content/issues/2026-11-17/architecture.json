@@ -1,0 +1,195 @@
+{
+  "column": "architecture",
+  "date": "2026-11-17",
+  "title": "把萬神殿想成一顆 43 公尺的球",
+  "dek": "沒有一根鋼筋的圓頂，撐了約 1,900 年；整間大廳可以想成一顆球。",
+  "brief": "羅馬萬神殿圓頂的直徑是 43.3 公尺，高度也一樣；工程師說，可以把整間大廳想成能容下一顆球。圓頂沒有鋼筋，混凝土越往上越輕，頂端最薄處只剩 1.5 公尺左右。609 年它改成教堂，才沒像許多古羅馬建築那樣被拆去取材。",
+  "topic_key": "architecture:pantheon-rome",
+  "form": "number",
+  "voice": "walker",
+  "updated_at": "2026-11-17T01:53:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Rome_Pantheon_facade.jpg/1280px-Rome_Pantheon_facade.jpg",
+    "width": 1280,
+    "height": 853,
+    "alt": "萬神殿的門廊正面：一排灰色圓柱，上方橫楣刻著拉丁文大字，三角形山牆後面露出圓頂的上緣。",
+    "caption": "萬神殿的門廊，2019 年拍攝。橫楣上是阿格里帕的銘文，後面露出圓頂。",
+    "credit": "Nicholas Hartmann",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rome_Pantheon_facade.jpg",
+    "made": "2019"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "**43.3 公尺**。這是羅馬**萬神殿**（Pantheon）圓頂的直徑，義大利文化部的官方介紹說，高度也是這個數字。"
+    },
+    {
+      "type": "p",
+      "text": "萬神殿在羅馬市中心，原本是古羅馬的神殿，名字在希臘文裡是「所有的神」的意思。現在這座是**哈德良皇帝**在 118 到 125 年之間重蓋的。它的圓頂沒有一根鋼筋，用的是羅馬混凝土，也就是石灰加火山灰拌出來的混凝土，到今天還是這種混凝土蓋出來的最大的一座。它撐了約 1,900 年，現在還是一座教堂，還在做禮拜。"
+    },
+    {
+      "type": "h",
+      "text": "進門以前，抬頭看門廊"
+    },
+    {
+      "type": "p",
+      "text": "從廣場走過來，站在門廊前，最上面有一條橫著的石梁，叫橫楣，刻著一行大字，意思是："
+    },
+    {
+      "type": "quote",
+      "text": "盧基烏斯之子馬庫斯・阿格里帕，第三度擔任執政官時所造。",
+      "original": "M·AGRIPPA·L·F·COS·TERTIVM·FECIT",
+      "cite": "萬神殿門廊橫楣上的銘文"
+    },
+    {
+      "type": "p",
+      "text": "執政官是羅馬每年選出的最高官員。阿格里帕是奧古斯都皇帝的女婿，公元前 27 年前後，他下令在這裡蓋了第一座萬神殿。那座後來損壞得太厲害，除了門廊下半和地基，幾乎都得重做。字留了下來，現在這座大部分是哈德良時期蓋的。"
+    },
+    {
+      "type": "h",
+      "text": "往南走進去"
+    },
+    {
+      "type": "p",
+      "text": "大門朝北，所以是往南走進去。站到地板正中央，四周是一圈圓形的牆。寫羅馬混凝土網站的工程師 Moore 整理的數字是：從地板到圓頂中間那個洞的邊緣，和從牆到對面的牆，都是 43 公尺出頭。**他寫道，可以把這間大廳想成能容下一顆這麼大的球。**"
+    },
+    {
+      "type": "p",
+      "text": "照他整理的數字，室內從地板到圓頂開始彎上去的地方，約 21.8 公尺；圓頂的半徑約 21.7 公尺。一半是牆，一半是圓頂，加起來差不多是那 43 公尺出頭。"
+    },
+    {
+      "type": "svg",
+      "title": "萬神殿的剖面輪廓",
+      "svg": "<svg viewBox=\"0 0 520 545\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><path class=\"ink\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" d=\"M 40 263.5 A 216.5 216.5 0 0 1 211.9 51.7\"/><path class=\"ink\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" d=\"M 301.1 51.7 A 216.5 216.5 0 0 1 473 263.5\"/><path class=\"ink\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" d=\"M 40 263.5 L 40 480\"/><path class=\"ink\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" d=\"M 473 263.5 L 473 480\"/><path class=\"ink\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" d=\"M 28 480 L 485 480\"/><path class=\"accent\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"6 5\" d=\"M 40 263.5 A 216.5 216.5 0 0 0 473 263.5\"/><path class=\"muted\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 4\" d=\"M 40 263.5 L 473 263.5\"/><path class=\"muted\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M 40 503 L 473 503 M 40 497 L 40 509 M 473 497 L 473 509\"/><text class=\"ink\" x=\"256.5\" y=\"30\" font-size=\"15\" text-anchor=\"middle\">圓洞，近 9 公尺寬</text><text class=\"ink\" x=\"256.5\" y=\"215\" font-size=\"16\" text-anchor=\"middle\">圓頂，半徑約 21.7 公尺</text><text class=\"muted\" x=\"256.5\" y=\"256\" font-size=\"13\" text-anchor=\"middle\">圓頂從這條線彎上去，離地約 21.8 公尺</text><text class=\"ink\" x=\"256.5\" y=\"330\" font-size=\"16\" text-anchor=\"middle\">圓牆</text><text class=\"accent\" x=\"256.5\" y=\"355\" font-size=\"13\" text-anchor=\"middle\">虛線是想像中那顆球的下半</text><text class=\"ink\" x=\"256.5\" y=\"528\" font-size=\"16\" text-anchor=\"middle\">牆到牆，約 43.3 公尺</text></svg>",
+      "caption": "示意圖，只畫內部輪廓，省略牆厚、圓頂厚度和方格凹陷。寬度取義大利文化部公布的 43.3 公尺對半畫；起拱高度和圓頂半徑是 Moore 整理的測量值，各家量法略有出入。",
+      "credit": "原創示意圖"
+    },
+    {
+      "type": "h",
+      "text": "越往上，混凝土越輕"
+    },
+    {
+      "type": "p",
+      "text": "繞到大廳外面，外側的牆面貼著一層層薄磚，高約 31.7 公尺。圓頂外側有七道一層層往內收的台階，到半高才變成弧線。"
+    },
+    {
+      "type": "p",
+      "text": "43 公尺寬的圓頂是混凝土做的。羅馬人的辦法是越往上，摻進去的石頭越輕。牆底下摻的是石灰華和凝灰岩的碎塊，石灰華是一種堅硬的石灰岩，凝灰岩是火山灰凝成的岩石。再往上換成凝灰岩加碎磚瓦，最上面主要是碎磚。圓頂最頂上約 9 公尺，摻的是輕的凝灰岩和多孔的火山渣。厚度也一路減下來，圓頂底部約 5.9 公尺，頂端只剩 1.5 公尺左右。"
+    },
+    {
+      "type": "p",
+      "text": "1986 年，有兩位研究者用電腦分析過這座圓頂。照他們的結果，如果當年用的是一般的混凝土，圓頂裡的應力，也就是材料內部承受的力，會高出八成。"
+    },
+    {
+      "type": "p",
+      "text": "圓頂裡沒有鋼筋，也有裂縫。1930 年，當時管古蹟的督察檢查，記下從牆底到圓頂頂端的裂縫，他認為建好沒多久就裂了。那份電腦分析說，裂開以後，圓頂等於一片一片的拱，頂端沒裂的那一圈把它們頂在一起。Moore 讀完的結論是，圓頂和牆的應力在安全範圍內。"
+    },
+    {
+      "type": "h",
+      "text": "抬頭，看那個洞"
+    },
+    {
+      "type": "p",
+      "text": "再抬頭。圓頂裡面是一圈一圈的方格凹陷，一共 140 個，分五圈，每圈 28 個。正中央的圓洞近 9 公尺寬，大約是圓頂直徑的兩成，是這座大廳唯一的自然光源。夏至那天，從洞口落進來的陽光，會在地板上照出一個和洞一樣大的圓盤。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Dome_of_Pantheon_%28Rome%29_-_interior.jpg/1280px-Dome_of_Pantheon_%28Rome%29_-_interior.jpg",
+      "width": 1280,
+      "height": 851,
+      "alt": "從地板往上拍的圓頂內側：一圈一圈方格凹陷由外往中心縮小，正中央是一個圓洞，透出藍天。",
+      "caption": "圓頂內側，2015 年拍攝。五圈方格凹陷往中央縮小，正中央是圓洞。",
+      "credit": "Livioandronico2013",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dome_of_Pantheon_(Rome)_-_interior.jpg",
+      "made": "2015"
+    },
+    {
+      "type": "p",
+      "text": "洞是開著的，下雨的時候，雨會直接落進來。洞口的邊包著一圈青銅，Moore 說這圈從最早蓋的時候就有。低頭看，地板微微外拱，雨水順著流開，地板底下有 22 個排水孔接走。"
+    },
+    {
+      "type": "h",
+      "text": "609 年，它成了教堂"
+    },
+    {
+      "type": "p",
+      "text": "609 年，拜占庭皇帝福卡斯把這座神殿送給教宗波尼法爵四世，教宗把它改成聖母與殉道者堂。中世紀的羅馬，許多古建築被人拆下石材去用，這一座因為改成了教堂，躲了過去。1625 年，教宗烏爾巴諾八世出身巴貝里尼家族，羅馬市旅遊局說，他下令拆下門廊的青銅外包，拿去做聖彼得大教堂裡的銅頂篷，和聖天使堡的幾門砲。有句諺語說：野蠻人沒做的，巴貝里尼做了。被拆的是門廊的青銅外包，大廳和圓頂留了下來。"
+    },
+    {
+      "type": "p",
+      "text": "1870 年，它成了義大利國王的紀念堂，裡面有國王的墓，也有畫家拉斐爾的墓。每年聖靈降臨節，圓頂中間那個洞會落下玫瑰花瓣。"
+    },
+    {
+      "type": "facts",
+      "title": "資料卡",
+      "items": [
+        [
+          "所在地",
+          "義大利，羅馬市中心"
+        ],
+        [
+          "建造年代",
+          "公元前 27 年前後阿格里帕首建；現存建築大部分是哈德良時期重建，118–125 年"
+        ],
+        [
+          "規模",
+          "圓頂直徑 43.3 公尺，高度相同"
+        ],
+        [
+          "結構",
+          "羅馬混凝土圓頂，無鋼筋；摻的石頭越往上越輕"
+        ],
+        [
+          "用途",
+          "原為神殿；609 年起是教堂，現在仍開放禮拜"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Pantheon e Basilica di Santa Maria ad Martyres",
+      "publisher": "義大利文化部 羅馬國立博物館局（Direzione Musei nazionali della città di Roma）",
+      "date": "2026-11-16",
+      "url": "https://direzionemuseiroma.cultura.gov.it/pantheon/",
+      "note": "義大利文。圓頂直徑 43,30 公尺、高度相同；羅馬混凝土做的最大圓頂；原建築公元前 27–25 年，現狀 118–125 年；今天仍開放禮拜。日期為查閱日。"
+    },
+    {
+      "title": "The Pantheon",
+      "publisher": "Turismo Roma（羅馬市旅遊局）",
+      "date": "2026-11-16",
+      "url": "https://www.turismoroma.it/en/places/pantheon",
+      "note": "阿格里帕公元前 27 年、哈德良 118–125 年；609 年福卡斯送給波尼法爵四世、躲過中世紀拆取；1625 年烏爾巴諾八世拆青銅做華蓋與大砲；1870 年王室紀念堂與拉斐爾；頂洞 8.92 公尺、藻井五圈每圈 28；夏至光盤；22 個排水孔；聖靈降臨節玫瑰花瓣。日期為查閱日。"
+    },
+    {
+      "title": "The Pantheon",
+      "publisher": "David Moore, P.E.（romanconcrete.com）",
+      "date": "1995",
+      "url": "http://www.romanconcrete.com/docs/chapt01/chapt01.htm",
+      "note": "工程師寫的羅馬混凝土網站，頁面註 1995 年；引 Licht、Mark & Hutchinson（Art Bulletin, 1986）等。能容下一顆球的說法與地板到洞口、牆到牆的長度、起拱高度 21.8 公尺與半徑 21.7 公尺、骨材分層、厚度 5.9→1.5 公尺、一般混凝土應力高 80%、無鋼筋與 1930 年裂縫、銘文英譯、地板外拱、洞口青銅圈、大門朝北、圓牆外高 31.7 公尺與外貼薄磚、圓頂外七道台階、Moore 的結論（應力在安全範圍）；Moore 只說可把設計想成容納一顆理論上的球（約 143 英尺）。"
+    },
+    {
+      "title": "File:Rome Pantheon facade.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2019-09-06",
+      "url": "https://commons.wikimedia.org/wiki/File:Rome_Pantheon_facade.jpg",
+      "note": "頭圖，Nicholas Hartmann，CC BY-SA 4.0"
+    },
+    {
+      "title": "File:Dome of Pantheon (Rome) - interior.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2015-05-16",
+      "url": "https://commons.wikimedia.org/wiki/File:Dome_of_Pantheon_(Rome)_-_interior.jpg",
+      "note": "圓頂內側，Livioandronico2013，CC BY-SA 4.0"
+    }
+  ]
+}
