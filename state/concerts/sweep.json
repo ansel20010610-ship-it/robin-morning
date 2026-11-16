@@ -1,130 +1,184 @@
 {
   "last": "2026-11-09",
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "sources": {
     "mna": {
       "urls": [
         "https://www.mna.com.tw",
-        "https://www.mna.com.tw/concerts.html"
+        "https://www.mna.com.tw/concerts_detail.html?id=777",
+        "https://www.mna.com.tw/concerts_detail.html?id=782"
       ],
       "seen": [
         {
-          "title": "提勒曼與柏林國家歌劇院管弦樂團",
+          "title": "Thielemann Staatskapelle Berlin",
           "verdict": "已列入",
           "id": "thielemann-staatskapelle-berlin-2026"
         },
         {
-          "title": "庫倫奇斯與烏托邦管弦樂團",
+          "title": "Currentzis Utopia",
           "verdict": "已列入",
           "id": "currentzis-utopia-2026"
         },
         {
-          "title": "王羽佳與馬勒室內樂團",
+          "title": "Yuja Wang MCO",
           "verdict": "已列入",
           "id": "yuja-wang-mco-2026"
         },
         {
-          "title": "郎朗鋼琴獨奏會",
+          "title": "Lang Lang",
           "verdict": "已列入",
           "id": "lang-lang-recital-2026"
         },
         {
-          "title": "Philharmonix",
-          "verdict": "不收",
-          "why": "2分，樂手跨界演出，且頁面查不到城市與曲目"
-        },
-        {
-          "title": "Marc André 低音提琴獨奏會",
-          "verdict": "不收",
-          "why": "2分，查不到城市、場地與曲目"
-        },
-        {
-          "title": "SM Classics Live 2026 in Taipei",
-          "verdict": "不收",
-          "why": "流行演唱會，且已演出"
-        },
-        {
           "title": "Diana Krall",
           "verdict": "不收",
-          "why": "爵士流行，非收錄範圍"
-        }
-      ]
-    },
-    "pbc": {
-      "error": "pbc.com.tw 憑證錯誤連不上"
-    },
-    "newaspect": {
-      "error": "newaspect.com.tw 連線被拒"
-    },
-    "tanart": {
-      "error": "tanart.com.tw 網域解析失敗"
-    },
-    "kham": {
-      "urls": [
-        "https://www.kham.com.tw"
-      ],
-      "seen": [
+          "why": "爵士歌手，非古典，不在收錄範圍"
+        },
         {
-          "title": "SHOW MUSICAL《WILD WILD》",
+          "title": "Philharmonix 12/15 台北國家音樂廳",
           "verdict": "不收",
-          "why": "頁面查不到演出者與日期，不判"
+          "why": "3分：維也納柏林愛樂首席組成，曲目是改編小品與電影、搖滾拼盤，台北場門檻4分"
+        },
+        {
+          "title": "Marc André 低音提琴與吉他 11/20 台北",
+          "verdict": "不收",
+          "why": "3分：曲目多為改編小品與流行歌，台北場門檻4分"
         }
       ]
-    },
-    "udn": {
-      "error": "udnfunlife 回 429"
-    },
-    "ntch": {
-      "error": "npac-ntch.org 只回瀏覽器提示頁，沒有節目資料"
     },
     "ntt": {
       "urls": [
-        "https://www.npac-ntt.org/program",
-        "https://www.opentix.life/search"
+        "https://www.npac-ntt.org/program"
       ],
       "seen": [
         {
-          "title": "威斯培衛獨奏會",
+          "title": "王羽佳與馬勒室內樂團 11/24",
+          "verdict": "已列入",
+          "id": "yuja-wang-mco-2026"
+        },
+        {
+          "title": "威斯培衛獨奏會 12/04",
           "verdict": "已列入",
           "id": "wispelwey-bach-suites-2026"
         },
         {
-          "title": "陳必先鋼琴獨奏會",
-          "verdict": "已列入",
-          "id": "chen-pi-hsien-recital-2026"
-        },
-        {
-          "title": "柴一與貝九",
-          "verdict": "已列入",
-          "id": "ntt-chaikovsky1-beethoven9-2027"
-        },
-        {
-          "title": "富爾敦室內樂團",
-          "verdict": "已列入",
-          "id": "fulton-duo-taichung-2026"
-        },
-        {
-          "title": "巴洛克獨奏家樂團《倫敦巴赫》",
+          "title": "倫敦巴赫 12/04",
           "verdict": "已列入",
           "id": "baroque-soloists-london-bach-2026"
         },
         {
-          "title": "《彌賽亞：永不止息的樂章》12/14",
-          "verdict": "不收",
-          "why": "頁面只有標題，查不到演出者與曲目，無法評分，明天再看"
+          "title": "陳必先 12/20",
+          "verdict": "已列入",
+          "id": "chen-pi-hsien-recital-2026"
         },
         {
-          "title": "狂美《璀璨經典百老匯》、《進擊的巨人》音樂會",
+          "title": "富爾敦 12/27",
+          "verdict": "已列入",
+          "id": "fulton-duo-taichung-2026"
+        },
+        {
+          "title": "柴一與貝九 1/2",
+          "verdict": "已列入",
+          "id": "ntt-chaikovsky1-beethoven9-2027"
+        },
+        {
+          "title": "水藍蔣啟真國臺交 1/9",
+          "verdict": "已列入",
+          "id": "ntso-lan-shui-chiang-2027"
+        },
+        {
+          "title": "潘朵拉的音樂盒",
+          "verdict": "已列入",
+          "id": "pandora-music-box-ntt-2026"
+        },
+        {
+          "title": "老男孩音樂劇",
+          "verdict": "已列入",
+          "id": "old-boys-musical-ntt-2027"
+        },
+        {
+          "title": "彌賽亞：永不止息的樂章 12/14 中劇院",
           "verdict": "不收",
-          "why": "拼盤與動漫配樂，排除"
+          "why": "查不到演出者與曲目，先不判（未評分）"
+        },
+        {
+          "title": "安德烈亞．范佐 鋼琴 12/07",
+          "verdict": "不收",
+          "why": "未查到曲目與演出者資歷，先不判（未評分）"
+        },
+        {
+          "title": "星際效應電影交響音樂會、狂美百老匯交響音樂會、進擊的巨人音樂會",
+          "verdict": "不收",
+          "why": "電影／動漫配樂拼盤，不收"
+        },
+        {
+          "title": "法式巨星音樂劇選粹演唱會 2/27",
+          "verdict": "不收",
+          "why": "2分：選粹演唱會，非完整製作"
+        },
+        {
+          "title": "卡奇諾夫鋼琴獨奏會 2/28、聽聽彈談巴赫、各校與地方獨奏會",
+          "verdict": "不收",
+          "why": "未查到資歷，先不判；其餘為學生或地方小型獨奏，2分以下"
         }
       ]
     },
     "wwy": {
-      "error": "衛武營節目頁 404"
+      "urls": [
+        "https://npac-weiwuying.org/"
+      ],
+      "seen": [
+        {
+          "title": "唐喬萬尼歌劇音樂會 2/19",
+          "verdict": "已列入",
+          "id": "don-giovanni-ksso-2027"
+        },
+        {
+          "title": "瘋迷24蕭邦 2/20-21 高雄",
+          "verdict": "不收",
+          "why": "3分：18位鋼琴家馬拉松形式，高雄門檻4分，名單未公布"
+        },
+        {
+          "title": "許常惠逝世25週年紀念音樂會 12/5",
+          "verdict": "不收",
+          "why": "3分：本地作曲家紀念音樂會，高雄門檻4分"
+        },
+        {
+          "title": "夢想清單（柏林雷寧廣場劇院）",
+          "verdict": "不收",
+          "why": "戲劇，非音樂劇"
+        }
+      ]
+    },
+    "ntch": {
+      "error": "npac-ntch.org 首頁導向後只有新聞與連結，npac-ntch.org/zh 要求換瀏覽器，沒看到節目"
+    },
+    "pbc": {
+      "error": "www.pbc.com.tw 憑證錯誤，連不上"
+    },
+    "newaspect": {
+      "error": "連線被拒（ECONNREFUSED）"
+    },
+    "tanart": {
+      "error": "網域解析失敗（ENOTFOUND）"
+    },
+    "kham": {
+      "urls": [
+        "https://www.kham.com.tw/"
+      ],
+      "seen": [
+        {
+          "title": "音樂劇《WILD WILD》",
+          "verdict": "不收",
+          "why": "頁面沒有日期與演出者，未評分"
+        }
+      ]
+    },
+    "udn": {
+      "error": "udnfunlife 回 HTTP 429，沒打開"
     },
     "news": {
-      "error": "來不及查新聞與售票系統關鍵字"
+      "error": "只用網路搜尋查了「交響樂團 來台 2027」與 Miss Saigon，沒找到未列入的新訪台樂團；誠品、年代、KKTIX、wekengo 與其餘關鍵字沒查"
     }
   }
 }

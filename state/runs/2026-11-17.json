@@ -25,5 +25,12 @@
       "news"
     ],
     "note": "philosophy(dialogue/socratic)、football(timeline/fan)初稿；第9步重寫0／修正2；非比賽夜；validate 無 WARN；未接第1班缺稿"
+  },
+  "concerts": {
+    "finished_at": "2026-11-17T05:31:55+08:00",
+    "missing": [
+      "concerts.json 未查核"
+    ],
+    "note": "新增 0、更新 0；補查沒做完（pbc、newaspect、tanart、udn、ntch、news 沒查到）；歷史上的今天 1869；開放資料不完整，已列入的沒比對"
   }
 }
