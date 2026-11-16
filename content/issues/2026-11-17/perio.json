@@ -1,0 +1,207 @@
+{
+  "column": "perio",
+  "date": "2026-11-17",
+  "title": "翻瓣多換到的是口袋變淺，不是附著",
+  "dek": "深口袋翻開來清，口袋確實淺得比較多。那附著呢？13 項隨機試驗給的答案，要看口袋一開始有多深。",
+  "brief": "2020 年一篇系統性回顧整理 18 項隨機試驗，其中 13 項比較翻瓣清創和不開刀的齦下清創。深口袋翻瓣讓口袋多變淺一些，附著卻沒多得；中等深度口袋是清創換到的附著較多，淺的部位翻瓣反而掉更多附著。",
+  "takeaway": "6 毫米以上的深口袋，翻瓣比齦下清創讓口袋多變淺，長期只多 0.39 毫米，附著也沒多得；中等深度清創附著較好，淺部位翻瓣掉更多附著。翻瓣留給深口袋。",
+  "chairside": "比較深的牙周囊袋，把牙齦翻開來清，囊袋會比只做深層清潔變得淺一些；比較淺的地方開刀沒有好處，牙齒周圍的支撐反而可能少一點。不管做哪一種，長期效果可能和您每天的清潔、定期回診關係更大。",
+  "topic_key": "perio:doi:10.1111/jcpe.13259",
+  "form": "qa",
+  "voice": "colleague",
+  "updated_at": "2026-11-17T01:03:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/UCLA_Periodontics_Graduate_Clinic.jpg/1280px-UCLA_Periodontics_Graduate_Clinic.jpg",
+    "width": 1280,
+    "height": 857,
+    "alt": "一間有多張牙科治療椅的長形診間，一位穿白袍的男士站在中間，右下角兩位穿藍色手術衣、戴帽子的人在一張治療椅旁替病人治療，旁邊螢幕顯示一張牙齒 X 光片。",
+    "caption": "加州大學洛杉磯分校（UCLA）牙醫學院牙周研究所的診間，2013 年 5 月拍攝。照片與本文論文的受試者無關。",
+    "credit": "Brian Lozano，Wikimedia Commons",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:UCLA_Periodontics_Graduate_Clinic.jpg",
+    "made": "2013"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "今天這篇是 **Ignacio Sanz-Sánchez** 等人 2020 年發表的系統性回顧。六位作者一半在西班牙馬德里康普頓斯大學，一半在義大利杜林大學。"
+    },
+    {
+      "type": "p",
+      "text": "它比的是兩種做法。翻瓣清創是把牙齦翻開，看著根面清乾淨，再蓋回去。齦下清創不開刀，把器械伸進囊袋裡清。"
+    },
+    {
+      "type": "p",
+      "text": "為什麼今天講它？**歐洲牙周病學會（EFP）** 2020 年的治療指引裡，「深的殘留口袋要不要翻瓣」那一條，引用的就是這篇。本欄 11 月 3 日談過那份指引，當時寫的翻瓣多減 0.67 毫米，就出自這篇。"
+    },
+    {
+      "type": "h",
+      "text": "收了哪些試驗？"
+    },
+    {
+      "type": "p",
+      "text": "只收隨機對照試驗，至少追蹤 6 個月。最後收進 18 項，起始共 503 人，追蹤最長 156 個月。其中 13 項直接比翻瓣和清創。"
+    },
+    {
+      "type": "h",
+      "text": "口袋變淺，等於附著增加嗎？"
+    },
+    {
+      "type": "p",
+      "text": "不等於。探診深度變淺，可能是牙齦往下退，也可能是附著長回來。論文說，翻瓣讓口袋變淺，兩種都有。所以要把探診深度和附著分開看。"
+    },
+    {
+      "type": "h",
+      "text": "深口袋翻瓣贏多少？"
+    },
+    {
+      "type": "p",
+      "text": "起始 6 毫米以上的深口袋，翻瓣讓探診深度多減一些。但優勢會隨時間縮小，追蹤超過 12 個月只剩 **0.39 毫米**。附著則兩組都看不出顯著差別。"
+    },
+    {
+      "type": "p",
+      "text": "作者推測，可能是翻瓣部位的牙齦退得比較多，多變淺的那部分沒有換成附著。"
+    },
+    {
+      "type": "h",
+      "text": "中等深度和淺口袋呢？"
+    },
+    {
+      "type": "p",
+      "text": "中等深度的口袋，長期探診深度已經看不出差別，附著反而是**清創組比較多**。淺口袋兩組都掉附著，但**翻瓣掉得更多**。作者提醒，翻瓣常常得把旁邊的淺部位一起翻開，清創可以只做在中等和深的口袋。"
+    },
+    {
+      "type": "table",
+      "title": "翻瓣比清創多（＋）或少（－）多少毫米：看起始口袋深度",
+      "head": [
+        "起始探診深度",
+        "探診深度多減少（12 個月內）",
+        "探診深度多減少（超過 12 個月）",
+        "附著變化（12 個月內）",
+        "附著變化（超過 12 個月）"
+      ],
+      "rows": [
+        [
+          "淺：1–3 或 1–4 毫米",
+          "+0.13",
+          "−0.02（差異不顯著）",
+          "−0.43",
+          "−0.27"
+        ],
+        [
+          "中等：4–6、5–6 或 4–5 毫米",
+          "+0.34",
+          "+0.09（差異不顯著）",
+          "−0.34",
+          "−0.12"
+        ],
+        [
+          "深：>6 或 ≥6 毫米",
+          "+0.67",
+          "+0.39",
+          "+0.19（差異不顯著）",
+          "+0.07（差異不顯著）"
+        ]
+      ],
+      "caption": "數字是翻瓣組減去齦下清創組的加權平均差：正值代表翻瓣組較好，負值代表清創組較好（附著欄的負值，是翻瓣組附著喪失較多或增加較少）。探診深度每格 4 項試驗；附著 12 個月內 7 項、超過 12 個月 6 項。依 Sanz-Sánchez 等 2020 年論文表 3 整理，非原圖轉載。"
+    },
+    {
+      "type": "h",
+      "text": "證據有多硬？"
+    },
+    {
+      "type": "p",
+      "text": "試驗多半年代久遠。逐項檢查下來，幾乎每一項都至少有一個環節有嚴重缺陷，常見的是隨機分配交代不清、檢查者沒有盲測。只有 Ribeiro 等 2011 年那一項是低偏差風險。"
+    },
+    {
+      "type": "p",
+      "text": "EFP 指引評這條證據：13 項隨機試驗、500 名病人。偏差風險中到高，指上面這類缺陷可能讓結果偏掉。結果一致性高，指各試驗的答案大致同一方向。"
+    },
+    {
+      "type": "p",
+      "text": "另外，這些試驗的維護都很嚴格，回診從每 2 週到每 6 個月一次，很多難以套到日常看診。18 項裡有 12 項先清過一輪才分組，作者認為這接近日常處理殘留口袋，但收案不限殘留口袋。"
+    },
+    {
+      "type": "quote",
+      "text": "第 III 期牙周炎病人做完第一、二步治療後，若有深的殘留口袋（探診深度 ≥6 毫米），我們建議做翻瓣手術。若是中等深度的殘留口袋（4–5 毫米），我們建議再做一次齦下器械治療。",
+      "original": "In the presence of deep residual pockets (PPD ≥ 6 mm) in patients with Stage III periodontitis after the first and second steps of periodontal therapy, we suggest performing access flap surgery. In the presence of moderately deep residual pockets (4–5 mm), we suggest repeating subgingival instrumentation.",
+      "cite": "歐洲牙周病學會（EFP）第 I–III 期牙周炎 S3 臨床指引，建議 3.1（Sanz 等，2020）；本文自譯"
+    },
+    {
+      "type": "h",
+      "text": "以前的研究怎麼說？"
+    },
+    {
+      "type": "p",
+      "text": "1982 年 Lindhe 等就發現，淺口袋開刀，附著掉得比不開刀多。2002 年 Heitz-Mayfield 等的回顧算出，4 到 6 毫米的口袋，刮除與根面整平多得 0.37 毫米附著。作者說，這篇在淺部位的發現，證實了 2002 年那篇的結果。"
+    },
+    {
+      "type": "h",
+      "text": "回到診間怎麼用？"
+    },
+    {
+      "type": "p",
+      "text": "作者認為，病人如果只有中等深度的口袋，非手術治療可以當成理想選擇。也別太早下定論：傳統上清創後 3 個月就再評估，可能低估了它；作者引 Badersten 1984 年的研究，癒合可以持續超過 9 個月。"
+    },
+    {
+      "type": "quote",
+      "text": "要讓口袋適當變淺，翻瓣用在起始就深的口袋可能比較有效。不過，在中等深度的口袋，齦下清創換到的附著增加比較多；在淺的部位，造成的附著喪失也比較少。長期結果似乎和清創方式（手術或非手術）以外的因素比較有關，例如口腔衛生措施或維護計畫，因為兩種治療之間的差距會隨時間逐漸消失。",
+      "original": "In order to attain proper pocket reduction, access flaps might be more efficacious when aimed to treat initially deep pockets. However, subgingival debridement provides higher CAL gain in moderately deep pockets and less clinical attachment loss in shallow sites. Long-term results seem to be related with other factors different than the type of debridement provided (surgical or non-surgical), such as hygiene measures or maintenance protocols, as differences between therapies tend to disappear throughout time.",
+      "cite": "Sanz-Sánchez 等，2020，〈臨床意義〉欄的「實務意涵」；本文自譯"
+    },
+    {
+      "type": "paper",
+      "citation": "Sanz-Sánchez I, Montero E, Citterio F, Romano F, Molina A, Aimetti M. Efficacy of access flap procedures compared to subgingival debridement in the treatment of periodontitis. A systematic review and meta-analysis. *J Clin Periodontol*. 2020;47 Suppl 22:282–302.",
+      "doi": "10.1111/jcpe.13259",
+      "pmid": "31970821",
+      "link": "https://doi.org/10.1111/jcpe.13259",
+      "evidence": "系統性回顧與統合分析：18 項隨機試驗、503 人；僅 1 項偏差風險低",
+      "design": "系統性回顧與統合分析（PROSPERO CRD42019123077），文獻檢索至 2019 年 2 月 8 日；EFP 第 I–III 期牙周炎 S3 指引委託的 15 篇回顧之一",
+      "sample": "18 項隨機對照試驗（36 篇論文），起始 503 人、最後分析 428 人；翻瓣對清創 13 項；15 項為同口分區設計；追蹤 6 到 156 個月",
+      "question": "牙周炎病人做翻瓣清創，比起齦下清創，探診深度能多減少多少？不同翻瓣方式之間有沒有差別？",
+      "access": "依全文整理（杜林大學機構典藏 IRIS 收錄的出版社版 PDF）"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Efficacy of access flap procedures compared to subgingival debridement in the treatment of periodontitis. A systematic review and meta-analysis",
+      "publisher": "Journal of Clinical Periodontology（Sanz-Sánchez I 等）",
+      "date": "2020-07-27",
+      "url": "https://iris.unito.it/handle/2318/1757984",
+      "note": "主角文獻。讀全文：杜林大學機構典藏 IRIS 的出版社版 PDF（Wiley 網站 403 打不開）。DOI 10.1111/jcpe.13259；PMID 31970821；卷期頁依 Crossref 與 PubMed，日期為 Crossref 線上刊出日。用到：摘要、〈Clinical Relevance〉、方法（PICOS、檢索至 2019-02-08、PROSPERO）、結果 3.1–3.6、表 1–3、討論與結論、致謝。論文本身沒有做 GRADE。"
+    },
+    {
+      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Sanz M 等）",
+      "date": "2020-07-27",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/",
+      "note": "讀全文（Europe PMC fullTextXML）。DOI 10.1111/jcpe.13290；PMID 32383274。用到：3.2.2 節 15 篇委託系統性回顧；7.1 節建議 3.1 原文、證據品質（13 項隨機試驗、500 人、偏差風險中到高、結果一致性高）、B 級、共識（1.4% 棄權）。"
+    },
+    {
+      "title": "A systematic review of the effect of surgical debridement vs non-surgical debridement for the treatment of chronic periodontitis",
+      "publisher": "Journal of Clinical Periodontology（Heitz-Mayfield LJ 等）",
+      "date": "2002-12",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12787211/",
+      "note": "讀 PubMed 摘要（E-utilities efetch）。DOI 10.1034/j.1600-051x.29.s3.5.x；J Clin Periodontol 2002;29 Suppl 3:92–102。用到：6 項隨機試驗、12 個月時各深度的加權平均差。"
+    },
+    {
+      "title": "\"Critical probing depths\" in periodontal therapy",
+      "publisher": "Journal of Clinical Periodontology（Lindhe J 等）",
+      "date": "1982-08",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/6764782/",
+      "note": "讀 PubMed 摘要（E-utilities efetch）。DOI 10.1111/j.1600-051x.1982.tb02099.x；J Clin Periodontol 1982;9(4):323–336。用到：15 人同口分區設計、臨界探測深度 2.9 與 4.2 毫米、淺口袋手術附著喪失較多、口腔衛生比初始治療方式更關鍵。"
+    },
+    {
+      "title": "File:UCLA Periodontics Graduate Clinic.jpg",
+      "publisher": "Wikimedia Commons（Brian Lozano）",
+      "date": "2014-03-26",
+      "url": "https://commons.wikimedia.org/wiki/File:UCLA_Periodontics_Graduate_Clinic.jpg",
+      "note": "頭圖。檔案描述：UCLA School of Dentistry Periodontics Graduate Clinic；原始拍攝時間 2013-05-31（EXIF DateTimeOriginal）；CC BY 3.0。"
+    }
+  ]
+}
