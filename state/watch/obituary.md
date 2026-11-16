@@ -1,6 +1,6 @@
 # 訃聞基準（obituary）
 
-最後更新：2026-11-15
+最後更新：2026-11-17
 
 ## 已寫過的人
 
@@ -16,6 +16,7 @@
 - Karl Johan Åström｜2026-11-12（週四 07:30，隆德大學自動控制系公告，未寫地點；IEEE CSS 悼文寫 11-11，維基索引列 11-13）｜2026-11-14｜content/issues/2026-11-14/obituary.json
 - Jim McDermott｜2026-11-12（週四深夜，西雅圖 Harborview 醫學中心；弟弟馬克對西雅圖時報說，家屬透過 Roll Call 宣布；死因未公布）｜2026-11-15｜content/issues/2026-11-15/obituary.json
 - Richard Sterban｜2026-11-14（週六，田納西州亨德森維爾；家屬與樂團聲明，Fox News Digital 取得）｜2026-11-16｜content/issues/2026-11-16/obituary.json
+- Dino Sani｜2026-11-15（週日，聖保羅；São Paulo FC 官方聲明、CBF 社群媒體證實，兒子向 O Globo 確認；Infobae 寫 11-16 不採）｜2026-11-17｜content/issues/2026-11-17/obituary.json
 
 ## 查核紀錄
 
@@ -32,3 +33,4 @@
 - 2026-11-14 已查（刊期 2026-11-14，第 4 班）：時間窗 11-11 至 11-13（11-14 維基無條目），英文維基百科 Deaths in November 2026 為索引。判定：有人夠格——Karl Johan Åström（瑞典控制工程學者，92，PID 自動調整與自適應控制；隆德大學工學院轉載系所公告、系所首頁公告、IEEE 控制系統學會悼文證實；瑞典媒體訃聞搜尋不到、Sydsvenskan 被擋），成稿 update，content/issues/2026-11-14/obituary.json，事實清單 /tmp/robin/2026-11-14-obituary.facts.md。窗內其他候選未寫：Jim McDermott（美國眾議員 28 年，89，11-12，Seattle Times 有報導，可留待評估）、Masaaki Yamazaki（日本前參議院議長，84，11-13，福井電視台）、Carlos Babington（足球，77，11-11）、Dan Hicks（NBC 體育主播，64）、Brian Tracy（82）、Hwang Jang-lee（81）不夠格或來源未查；Marsha Linehan、Maurice Hasson、Antonello Palombi、Arif Mirzayev 仍同 11-13 的留待狀態。
 - 2026-11-15 已查（刊期 2026-11-15，第 4 班）：時間窗 11-12 至 11-14，英文維基百科 Deaths in November 2026 為索引（窗內約 50 筆，11-14 有 8 筆，11-15 無條目）。判定：有人夠格——Jim McDermott（美國聯邦眾議員 28 年、醫師、單一支付健保倡議者，89，11-12 深夜西雅圖；Roll Call、KUOW、西雅圖時報（Yakima Herald 轉載頁）、FOX 13 證實），補寫 11-14 留待的候選，成稿 update，content/issues/2026-11-15/obituary.json，事實清單 /tmp/robin/2026-11-15-obituary.facts.md。留待（優先）：László Sáry（匈牙利作曲家，86，維基列 11-14，新音樂工作室 Új Zenei Stúdió 創辦人之一；只有 Papageno.hu 全文訃告一個來源，其餘搜尋、匈牙利新聞站首頁、BMC、Liszt 音樂院、Katona 劇院都查不到第二個獨立來源，來源不足未寫，屬讀者的古典領域，下一班先補查）。其他窗內候選未寫：Guðjón Þórðarson（冰島足球教練，71，11-13，Vísir 11-14，曾帶 Stoke City；只見維基引用的一個來源）、Wolf-Dietrich Niemeier（古典考古學家，79，11-13，搜尋無訃告）、Pierre Bellocq（賽馬漫畫家，99，11-12，搜尋無訃告）、Richard Weize（Bear Family 唱片公司創辦人，81，11-13）、Mohamed Osman al-Mirghani（蘇丹政治人物，90，11-13）、Vyacheslav Briukhovetskyi（基輔莫希拉學院校長，79，11-12）、Masaaki Yamazaki、Carlos Babington 未查；Marsha Linehan、Maurice Hasson、Antonello Palombi、Arif Mirzayev 仍同 11-14 的留待狀態。
 - 2026-11-16 已查（刊期 2026-11-16，第 4 班）：時間窗 11-13 至 11-15，英文維基百科 Deaths in November 2026 為索引。判定：有人夠格——Richard Sterban（橡樹嶺男孩貝斯歌手，83，11-14 田納西州亨德森維爾；Hendersonville Standard、Fox News、FOX 17、American Songwriter 證實，家屬與樂團聲明），成稿 update，content/issues/2026-11-16/obituary.json。留待：László Sáry（作曲家，86，11-14，仍只有一個來源，優先補查）；Miguel Ángel Félix Gallardo（查不到死訊報導、無作品）；Jesse Mashburn、Tim Holden、Michel Destot、Dvora Hacohen 等未查來源。
+- 2026-11-17 已查（刊期 2026-11-17，第 4 班）：時間窗 11-14 至 11-16，英文維基百科 Deaths in 2026（November 節）為索引（11-14 約 21 筆、11-15 約 9 筆、11-16 約 6 筆）。判定：有人夠格——Dino Sani（巴西中場，94，1958 世界盃冠軍隊員，米蘭 1961–62 義甲與 1962–63 歐洲冠軍盃先發，後來當教練；11-15 聖保羅；São Paulo FC 官方哀悼聲明、CBF 經 Itatiaia／Record／CNN Brasil、Gazeta Esportiva、O Globo／GDA 經 La Nación、Virgilio、VAVEL、Infobae 證實），成稿 update，form scene，content/issues/2026-11-17/obituary.json，事實清單 /tmp/robin/2026-11-17-obituary.facts.md。窗內其他候選未寫：László Sáry（作曲家，86，11-14；本班搜尋仍只有維基一個來源，無匈牙利媒體或 MTI 訃告，繼續留待）、Danny Rubinstein（Haaretz 記者，88，維基列 11-16）與 Mikhail Poltoranin（俄國前副總理，86，11-16）搜尋找不到死訊報導、Tim Holden（美國眾議員，69，11-15）、Michel Destot（格勒諾布爾前市長，80，11-14）、Zbigniew Kozub（波蘭作曲家，66，11-13）、Antonio Franco（教廷前大使，89，11-15）、Bob Hoskins（OneHope 創辦人，90，11-14）、Dino Sani 之外的足球人（Paddy Turner 87、Gualberto Fernández 85）未查來源或不夠格；Miguel Ángel Félix Gallardo 無作品不寫。Marsha Linehan、Maurice Hasson、Antonello Palombi、Arif Mirzayev 仍同 11-14 的留待狀態。作業備註：scripts/common.py 的 UA 帶專案網址，直接用 curl 抓維基 raw 頁被權限擋下，改用 WebFetch；Deaths_in_November_2026 是轉址到 Deaths in 2026#November。

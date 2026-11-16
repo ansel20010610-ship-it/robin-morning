@@ -1,0 +1,205 @@
+{
+  "column": "obituary",
+  "date": "2026-11-17",
+  "status": "update",
+  "form": "scene",
+  "voice": "eulogist",
+  "title": "米蘭叫他「教授」的迪諾・薩尼過世，94 歲",
+  "dek": "世界盃只踢了兩場就傷退；到了米蘭，快三十歲的他成了隊上的「爺爺」。",
+  "brief": "巴西中場迪諾・薩尼 11 月 15 日週日在聖保羅過世，94 歲，巴西足協證實。他先發了 1958 年世界盃的前兩場，因傷讓位，巴西後來拿下第一座世界盃。他轉到米蘭，在歐洲冠軍盃決賽先發，替義大利球隊贏下第一座。",
+  "topic_key": "obituary:sani-2026",
+  "updated_at": "2026-11-17T05:26:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "f0",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Dino_Sani_%28Boca%29_-_El_Gr%C3%A1fico_2202.jpg/1280px-Dino_Sani_%28Boca%29_-_El_Gr%C3%A1fico_2202.jpg",
+    "width": 1280,
+    "height": 1795,
+    "alt": "體育雜誌封面：一位額頭高、留小鬍子的年輕男子，穿藍色加黃色橫條的球衣，雙臂交叉站在球場上，背後是擠滿觀眾的看台。左上角是紅色的刊名 El Gráfico，右下角印著 Dino Sani、ex Boca Juniors。",
+    "caption": "1961 年 12 月 20 日出版的阿根廷體育週刊《El Gráfico》封面，標著「Dino Sani，前博卡青年隊球員」。那一年他剛從博卡轉到米蘭。",
+    "credit": "El Gráfico（攝影者未載）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dino_Sani_(Boca)_-_El_Gr%C3%A1fico_2202.jpg",
+    "made": "1961 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1961 年，米蘭從阿根廷的博卡青年隊買來一個巴西中場。義大利媒體 Virgilio 轉述，主教練羅科（Nereo Rocco）看了一眼就打趣，說這人像地籍處的職員，又說把他挖來的維亞尼（Gipo Viani）好像帶回了一位爺爺。隊上二十出頭的特拉帕托尼（Giovanni Trapattoni）更直接，日後在自傳裡寫下當時的念頭："
+    },
+    {
+      "type": "quote",
+      "text": "Sani，Sani……沒聽過。這人是誰？",
+      "original": "Sani, Sani … mai sentito. Ma chi è?",
+      "cite": "特拉帕托尼自傳，Virgilio 2026 年 11 月 16 日轉引"
+    },
+    {
+      "type": "p",
+      "text": "這個沒人聽過的人，是**迪諾・薩尼**（Dino Sani）。11 月 15 日週日，他在聖保羅過世，94 歲。巴西足協（CBF）在社群媒體上證實了死訊，他的兒子也向巴西《環球報》確認，死因沒有公布。他是 1958 年巴西第一座世界盃冠軍隊的中場，後來在米蘭踢到義大利聯賽冠軍和歐洲冠軍盃，退休後又當了二十多年教練。隊友札加洛（Zagallo）2024 年 1 月過世之後，他是那支冠軍隊裡最年長還在世的人。"
+    },
+    {
+      "type": "p",
+      "text": "他生在聖保羅，祖先是義大利人，家離帕梅拉斯（Palmeiras）當時的球場 Palestra Itália 只有五十公尺。12 歲進了這支球隊的青年隊，一邊在汽車零件公司上班。1950 年他踢上職業，那年球隊拿了聖保羅州冠軍。1954 年轉到聖保羅隊（São Paulo），到 1961 年初離開，踢了 324 場、進 113 球，罰任意球是他的招牌。聖保羅隊的聲明說，1957 年匈牙利來的教練古特曼（Béla Guttmann）把他從前腰往後拉，改踢後腰，那一年球隊拿下州冠軍。古特曼後來帶葡萄牙的本菲卡（Benfica）連拿兩屆歐洲冠軍盃，薩尼日後在決賽碰上的，就是本菲卡。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Dino_Sani_2008.jpg",
+      "width": 422,
+      "height": 655,
+      "alt": "一位頭髮稀疏的老先生戴著金屬細框眼鏡，穿深色條紋西裝、白襯衫，繫紅藍相間的花紋領帶，對著鏡頭微微抿嘴。",
+      "caption": "2008 年的薩尼。Christophe95 攝，拍攝地點未載。",
+      "credit": "Christophe95",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dino_Sani_2008.jpg",
+      "made": "2008 年"
+    },
+    {
+      "type": "h",
+      "text": "世界盃，兩場"
+    },
+    {
+      "type": "p",
+      "text": "1958 年世界盃在瑞典舉行。**薩尼先發踢了前兩場**，3 比 0 贏奧地利，0 比 0 逼和英格蘭。第三場對蘇聯之前，他的肌肉受了傷，位子由濟托（Zito）頂上。那場是 6 月 15 日，17 歲的貝利和加林查（Garrincha）也第一次在世界盃上場，巴西 2 比 0 贏了。薩尼在看台上看完剩下的比賽。6 月 29 日決賽，巴西 5 比 2 贏了地主瑞典，拿下這個國家的第一座世界盃，他的名字也在冠軍名單上。巴西足協主席薩米爾・夏烏德（Samir Xaud）在聲明裡說："
+    },
+    {
+      "type": "quote",
+      "text": "我們失去了第一批世界冠軍中的一位。",
+      "original": "Perdemos um dos nossos primeiros campeões do mundo.",
+      "cite": "夏烏德，巴西足協聲明（Itatiaia，2026 年 11 月 16 日）"
+    },
+    {
+      "type": "h",
+      "text": "爺爺與教授"
+    },
+    {
+      "type": "p",
+      "text": "1961 年他到米蘭時快三十歲，隊上叫他「爺爺」（nonno）。首演是在聖西羅球場 5 比 1 贏尤文圖斯，羅科和特拉帕托尼很快改了看法。後來米蘭人也叫他「教授」（professore），說的是他的踢法。"
+    },
+    {
+      "type": "p",
+      "text": "1962 年世界盃前，據《環球報》系的報導，義大利方面邀他代表義大利出賽，他沒有答應，因為不願意面對巴西。那一季米蘭拿下義大利聯賽冠軍。**1963 年 5 月 22 日，倫敦溫布利球場的歐洲冠軍盃決賽，薩尼先發，米蘭 2 比 1 贏了本菲卡**。阿爾塔菲尼（José Altafini）一個人進了兩球，本菲卡那邊進球的是葡萄牙前鋒尤西比奧（Eusébio）。這是義大利球隊第一次拿下這座獎盃。"
+    },
+    {
+      "type": "p",
+      "text": "下一個球季，一次腿傷拖住了他，米蘭只排第三。三個球季之後他離開，1965 年回到巴西，進了科林蒂安（Corinthians）。他在那裡和年輕的里維利諾（Rivelino）搭中場，1966 年拿了里約—聖保羅錦標賽的冠軍，1968 年退休，36 歲。"
+    },
+    {
+      "type": "h",
+      "text": "教練席上"
+    },
+    {
+      "type": "p",
+      "text": "1969 年他開始當教練，先帶科林蒂安，後來待得最有名的是巴西南部的國際體育會（Internacional）。1971 到 1973 年，那支球隊連拿三屆南大河州冠軍。1978、1979 年，他帶烏拉圭的佩納羅爾（Peñarol）連拿兩屆國內冠軍。1984 年他回到博卡當教練，從 5 月到 10 月。博卡那年到歐洲巡迴比賽籌款，8 月 21 日在巴塞隆納以 1 比 9 輸給巴薩，阿根廷的 Infobae 說，那是一場歷史性的敗仗。"
+    },
+    {
+      "type": "p",
+      "text": "國際體育會那幾年，他給了一個年輕人第一次職業賽的上場時間，叫法爾考（Falcão）。法爾考後來去了羅馬，也在薩尼踢過球的義大利。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Nota de pesar - Dino Sani",
+      "publisher": "São Paulo FC 官方網站",
+      "date": "2026-11-16",
+      "url": "https://www.saopaulofc.net/nota-de-pesar-dino-sani/",
+      "note": "死亡日期地點與年齡、聖保羅隊 1954–1961 的場次與進球、1957 年改踢後腰（古特曼）與州冠軍。"
+    },
+    {
+      "title": "Morre Dino Sani, campeão mundial com a Seleção Brasileira em 1958",
+      "publisher": "Gazeta Esportiva",
+      "date": "2026-11-16",
+      "url": "https://www.gazetaesportiva.com/futebol/morre-dino-sani-campeao-mundial-com-a-selecao-brasileira-em-1958/",
+      "note": "死因未公布；1950 年帕梅拉斯；科林蒂安 1965–68 與 1966 年里約—聖保羅錦標賽；教練經歷；夏烏德的話。"
+    },
+    {
+      "title": "Morre Dino Sani, ídolo de São Paulo, Milan e campeão da Copa do Mundo de 1958",
+      "publisher": "Itatiaia（Igor Varejano）",
+      "date": "2026-11-16",
+      "url": "https://www.itatiaia.com.br/esportes/futebol/selecao-brasileira/morre-dino-sani-idolo-de-sao-paulo-milan-e-campeao-da-copa-do-mundo-de-1958/",
+      "note": "CBF 在社群媒體證實；1958 年世界盃前兩場（奧地利、英格蘭）與傷退、濟托接替；遺族；夏烏德原話。"
+    },
+    {
+      "title": "Morre ex-jogador Dino Sani, campeão da Copa do Mundo de 1958",
+      "publisher": "CNN Brasil（Ludmila Candal）",
+      "date": "2026-11-15",
+      "url": "https://www.cnnbrasil.com.br/esportes/futebol/morre-ex-jogador-dino-sani-campeao-da-copa-do-mundo-de-1958/",
+      "note": "週日（15 日）過世、CBF 證實、死因未公布、札加洛過世後最年長世界冠軍。"
+    },
+    {
+      "title": "Murió Dino Sani, campeón del mundo en 1958 con Brasil y un referente de la elegancia en el centro del campo",
+      "publisher": "La Nación（O Globo／GDA，Thales Machado）",
+      "date": "2026-11-16",
+      "url": "https://www.lanacion.com.ar/deportes/futbol/boca-juniors/murio-dino-sani-campeon-del-mundo-en-1958-con-brasil-y-un-referente-de-la-elegancia-en-el-centro-del-nid16112026/",
+      "note": "兒子向 O Globo 確認；出身與帕梅拉斯青年隊；傷在對蘇聯之前、在看台看完比賽；拒絕代表義大利；米蘭為義大利球隊首次奪歐冠；科林蒂安與里維利諾；給法爾考第一次職業賽出場時間。"
+    },
+    {
+      "title": "Milan, è morto Dino Sani, il “nonno” che fece ricredere Nereo Rocco e Trapattoni",
+      "publisher": "Virgilio Sport",
+      "date": "2026-11-16",
+      "url": "https://www.virgilio.it/sport/milan-morto-dino-sani-nereo-rocco-trapattoni-brasile-pele-980366",
+      "note": "1961 年自博卡轉米蘭、羅科的玩笑、特拉帕托尼自傳引文、首演 5 比 1 尤文圖斯、外號「爺爺」與「教授」、傷與第三名。"
+    },
+    {
+      "title": "Antigo campeão mundial pelo Brasil morre aos 94 anos",
+      "publisher": "Record（葡萄牙）",
+      "date": "2026-11-16",
+      "url": "https://www.record.pt/internacional/paises/brasil/detalhe/antigo-campeao-mundial-pelo-brasil-morre-aos-94-anos",
+      "note": "CBF 聲明、世界盃出賽場數、退休年齡。該文把義大利聯賽與歐洲冠軍盃都寫成 1961/62，與其他來源不同，不採。"
+    },
+    {
+      "title": "Dino Sani, uma das últimas memórias do Brasil campeão em 1958, morre aos 94 anos",
+      "publisher": "VAVEL Brasil（Maria Fernanda Doti）",
+      "date": "2026-11-16",
+      "url": "https://www.vavel.com/br/futebol/2026/11/16/1279519-dino-sani-uma-das-ultimas-memorias-do-brasil-de-1958.html",
+      "note": "出生日期、世界盃決賽在名單內、佩納羅爾 1978–79 冠軍、國際體育會三連冠。"
+    },
+    {
+      "title": "A los 94 años, murió Dino Sani, campeón del mundo con Brasil que jugó y dirigió a Boca Juniors",
+      "publisher": "Infobae",
+      "date": "2026-11-16",
+      "url": "https://www.infobae.com/deportes/2026/11/16/a-los-94-anos-murio-dino-sani-historico-futbolista-brasileno-que-jugo-y-dirigio-a-boca-juniors/",
+      "note": "1984 年 5 至 10 月任博卡教練、歐洲籌款巡迴與 1 比 9 輸巴薩。該文把死亡日寫成 11 月 16 日，與其他來源（15 日）不同，採 15 日。"
+    },
+    {
+      "title": "European Trip of CA Boca Juniors 1984",
+      "publisher": "RSSF",
+      "date": "1984-08-21",
+      "url": "https://rsssf.org/tablesb/boca-trip84.html",
+      "note": "巡迴場次表列教練 D. Sani；巴塞隆納 1 比 9 博卡的日期為 1984 年 8 月 21 日。日期欄為比賽日。"
+    },
+    {
+      "title": "Champions League 1962-63",
+      "publisher": "AC Milan 官方網站",
+      "date": "1963-05-22",
+      "url": "https://www.acmilan.com/it/club/palmares/champions-league-1962-63",
+      "note": "溫布利決賽米蘭先發名單，薩尼在內。日期欄為比賽日。"
+    },
+    {
+      "title": "1962/63: Altafini decisive for Milan",
+      "publisher": "UEFA",
+      "date": "1963-05-22",
+      "url": "https://www.uefa.com/uefachampionsleague/news/0258-0e6a048cbca1-b065823a35de-1000--1962-63-altafini-decisive-for-milan/",
+      "note": "決賽日期、場地、2 比 1、阿爾塔菲尼兩球、尤西比奧進球。日期欄為比賽日。"
+    },
+    {
+      "title": "1958: Boy genius boosts Brazil",
+      "publisher": "UEFA",
+      "date": "1958-06-29",
+      "url": "https://www.uefa.com/european-qualifiers/news/019c-0e6adb9fdf80-0d1cf41ed13a-1000--1958-boy-genius-boosts-brazil",
+      "note": "貝利與加林查世界盃初登場、2 比 0 勝蘇聯；決賽 5 比 2 勝瑞典。日期欄為決賽日。"
+    },
+    {
+      "title": "Brazil v USSR, 15 June 1958",
+      "publisher": "11v11",
+      "date": "1958-06-15",
+      "url": "https://www.11v11.com/matches/brazil-v-ussr-15-june-1958-227133/",
+      "note": "只讀到搜尋結果的標題與摘要，用於對蘇聯一戰的日期。日期欄為比賽日。"
+    }
+  ]
+}
