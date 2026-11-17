@@ -35,6 +35,9 @@ jobs:
       SHIFT: ${{ inputs.shift }}
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
+      # Subagents and commands run in the foreground: in -p mode the run ends some minutes after the lead's last turn,
+      # and work still in the background is dropped (the column run of 2026-11-16 sent its first agent off and wrote nothing).
+      CLAUDE_CODE_DISABLE_BACKGROUND_TASKS: "1"
     steps:
       - uses: actions/checkout@v7
       - name: Decide whether to spend
