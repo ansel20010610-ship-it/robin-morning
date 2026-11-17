@@ -1,0 +1,310 @@
+{
+  "column": "music",
+  "date": "2026-11-18",
+  "title": "新人走出教堂的那首曲子，原本是一齣戲的幕間音樂",
+  "dek": "孟德爾頌寫它的時候，沒有想到婚禮。一位英國公主選了它，大家就跟著用了。",
+  "brief": "孟德爾頌的〈結婚進行曲〉，原本是莎士比亞喜劇《仲夏夜之夢》換幕時奏的音樂，1843 年隨整齣戲首演。它會變成婚禮上新人走出教堂的曲子，是 1858 年英國公主在婚禮上選了它，大家才跟著用。按下播放，先聽開頭小號一串重複的短音，再聽整個樂團大聲奏出主旋律。",
+  "topic_key": "music:mendelssohn-op61",
+  "updated_at": "2026-11-18T00:51:22+08:00",
+  "form": "timeline",
+  "voice": "listener",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2f/John_Phillip_%281817-1867%29_-_The_Marriage_of_the_Princess_Victoria_Adelaide_%281840%E2%80%931901%29%2C_Princess_Royal%2C_Later_Empress_of_Prussia_-_1530136_-_National_Trust.jpg",
+    "width": 1200,
+    "height": 632,
+    "alt": "筆觸粗略的紅褐色油畫。一座有拱形牆面的大廳，左側一位穿深色長袍、戴白帽的神職人員站在欄杆旁；中間幾位穿白色蓬裙、頭戴花環的女子坐在地上；右側一位穿紅色制服的男子，和一位戴冠冕、斜披藍色綬帶的白衣女子並排站著，旁邊有小孩，四周擠滿觀禮的人。",
+    "caption": "約翰・菲利普（John Phillip）畫的 1858 年 1 月 25 日婚禮：維多利亞女王的長女 Victoria 嫁給普魯士王子腓特烈・威廉，地點是倫敦聖詹姆士宮的皇家禮拜堂。這是一幅 26.7 × 50.2 公分的小幅布面油畫，現藏英國國民信託（National Trust）的 Hinton Ampner。孟德爾頌的〈結婚進行曲〉在這場婚禮上用於新人退場。",
+    "credit": "John Phillip；影像經 Wikimedia Commons（Art UK、National Trust, Hinton Ampner）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:John_Phillip_(1817-1867)_-_The_Marriage_of_the_Princess_Victoria_Adelaide_(1840%E2%80%931901),_Princess_Royal,_Later_Empress_of_Prussia_-_1530136_-_National_Trust.jpg",
+    "made": "1858"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "新人在婚禮結束、走出教堂的時候，現場響起的那首曲子，就是孟德爾頌（Felix Mendelssohn）的**〈結婚進行曲〉**。電視和卡通裡的婚禮場面，你大概也聽過。孟德爾頌是德國作曲家，1809 年生，1847 年過世，只活了 38 歲。"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子不是為婚禮寫的。它是莎士比亞喜劇**《仲夏夜之夢》**的配樂。這齣戲講雅典森林裡，兩對戀人被精靈的魔法搞得亂成一團，最後有情人成眷屬，還有一位公爵的婚禮。孟德爾頌替整齣戲寫了一套配樂，作品 61，一共 14 首，〈結婚進行曲〉是第 9 首。"
+    },
+    {
+      "type": "p",
+      "text": "它在戲裡放在第四幕和第五幕之間，換幕的時候由樂團演奏。洛杉磯愛樂的節目單說，這首標示的是戲裡情侶們的婚禮，還有雅典公爵忒修斯和希波呂忒這對王室新人的婚禮。"
+    },
+    {
+      "type": "timeline",
+      "title": "〈結婚進行曲〉怎麼變成婚禮曲",
+      "caption": "孟德爾頌 1847 年 11 月過世；1847 年 Tiverton 是已知最早的婚禮使用紀錄，來自 Wikipedia 引用的 1904 年報紙報導。",
+      "items": [
+        {
+          "when": "1826.8.6",
+          "label": "17 歲的孟德爾頌寫完《仲夏夜之夢》序曲",
+          "note": "作品 21，另一首曲子，不是〈結婚進行曲〉"
+        },
+        {
+          "when": "1842 年",
+          "label": "普魯士國王腓特烈・威廉四世請他為整齣戲配樂",
+          "note": "〈結婚進行曲〉寫於 1842 到 1843 年之間"
+        },
+        {
+          "when": "1843.10.14",
+          "label": "配樂隨整齣戲在波茨坦新宮首演",
+          "note": "提克導演；不是在柏林"
+        },
+        {
+          "when": "1847.6.2",
+          "label": "英國 Tiverton 的教堂，已知最早的婚禮使用",
+          "note": "管風琴手 Samuel Reay"
+        },
+        {
+          "when": "1847.11.4",
+          "label": "孟德爾頌在萊比錫過世",
+          "note": "38 歲"
+        },
+        {
+          "when": "1849–50",
+          "label": "李斯特寫鋼琴改編版",
+          "note": "〈結婚進行曲與精靈之舞〉，S. 410"
+        },
+        {
+          "when": "1858.1.25",
+          "label": "英國公主 Victoria 的婚禮，新人退場奏這首",
+          "note": "此後婚禮開始流行用它"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "1826 年：17 歲，先寫了序曲"
+    },
+    {
+      "type": "p",
+      "text": "先分清楚一件事。1826 年 8 月 6 日，17 歲的孟德爾頌寫完《仲夏夜之夢》的序曲，作品 21。那是另一首曲子，不是〈結婚進行曲〉。序曲 1827 年 2 月 20 日在斯德丁（今天波蘭的什切青）首演，指揮是卡爾・勒韋。"
+    },
+    {
+      "type": "h",
+      "text": "1842 到 1843 年：國王請他寫整齣戲"
+    },
+    {
+      "type": "p",
+      "text": "過了 16 年，1842 年，普魯士國王腓特烈・威廉四世請孟德爾頌替整齣戲配樂。普魯士是當時德國北部最大的王國。〈結婚進行曲〉就是在 1842 到 1843 年之間寫的。配樂連同整齣戲，1843 年 10 月 14 日在波茨坦的新宮首演，導演是路德維希・提克。"
+    },
+    {
+      "type": "h",
+      "text": "按下播放，聽這三個地方"
+    },
+    {
+      "type": "p",
+      "text": "速度標的是 Allegro vivace，意思是快而活潑，一小節四拍。**第一個地方是開頭。**先是**小號**吹出重複的短音，一小節一小節往上疊。小號是銅管樂器裡聲音最亮的。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/98/Mendelssohn_Wedding_March_Theme.jpg",
+      "width": 889,
+      "height": 192,
+      "alt": "兩行單旋律的樂譜。第一行標「Allegro vivace」，譜上標「Trombe」（小號），強音記號 f，是一串重複的短音，帶三連音，一小節一小節加厚；第二行是標 ff 的主旋律，開頭有高音長音，後面是附點節奏和跑動的十六分音符。",
+      "caption": "〈結婚進行曲〉開頭的樂譜摘錄：先是小號吹出重複的短音，再接主旋律。取自 Breitkopf & Härtel 出版的樂譜（IMSLP 掃描，出版年不詳）。",
+      "credit": "Felix Mendelssohn；樂譜摘錄經 Wikimedia Commons（IMSLP 掃描）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mendelssohn_Wedding_March_Theme.jpg",
+      "made": "19 世紀（版本）"
+    },
+    {
+      "type": "p",
+      "text": "**第二個地方是主旋律進來。**整個樂團用很大的音量奏出旋律，這就是婚禮上你聽到的那一段。"
+    },
+    {
+      "type": "p",
+      "text": "**第三個地方是長號。**洛杉磯愛樂的節目單說，在整部《仲夏夜之夢》的音樂裡，長號是從這一首才第一次出現。長號有一根可以推拉的管子，聲音比小號更厚。"
+    },
+    {
+      "type": "p",
+      "text": "推薦的版本，是奧托・克倫佩勒指揮愛樂管弦樂團的錄音，1960 年錄在倫敦艾比路一號錄音室，這一首約 5 分鐘。MusicWeb 網站有一篇評論，談的是收了這個錄音的十張 CD 套裝，評論者寫了一句：「for once the Wedding March is not too ponderous.」意思是難得這首〈結婚進行曲〉沒有太笨重。"
+    },
+    {
+      "type": "p",
+      "text": "還有一點。婚禮上常把中間的插段刪掉，只留主旋律。完整的版本比你在婚禮上聽到的長，中間有一些婚禮上通常聽不到的部分。"
+    },
+    {
+      "type": "music",
+      "composer": "孟德爾頌（Felix Mendelssohn）",
+      "work": "《仲夏夜之夢》劇樂，作品 61：第 9 首〈結婚進行曲〉",
+      "work_original": "A Midsummer Night's Dream, Op. 61: No. 9 Hochzeitsmarsch (Wedding March)",
+      "composed": "1842–1843",
+      "performers": "奧托・克倫佩勒（Otto Klemperer）指揮 愛樂管弦樂團（Philharmonia Orchestra）",
+      "recording": "EMI Classics，1960 年 1 月 28–29 日與 2 月 16 日錄音於倫敦艾比路一號錄音室",
+      "duration": "約 5 分鐘（此版）",
+      "movements": [
+        "No. 9 Hochzeitsmarsch: Allegro vivace"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Mendelssohn A Midsummer Night's Dream Wedding March Klemperer Philharmonia",
+        "artist_hint": "Klemperer",
+        "track_filter": [
+          "Wedding March"
+        ]
+      }
+    },
+    {
+      "type": "h",
+      "text": "1847 年：已知最早的婚禮，和孟德爾頌的最後一年"
+    },
+    {
+      "type": "p",
+      "text": "1847 年 6 月 2 日，英格蘭 Tiverton 的聖彼得教堂辦了一場婚禮，新人是 Dorothy Carew 和 Tom Daniel，管風琴手 Samuel Reay 彈了這首。這是目前已知最早的婚禮使用紀錄，根據的是 1904 年《Western Gazette》報紙的一則報導。"
+    },
+    {
+      "type": "p",
+      "text": "同一年，孟德爾頌的姊姊范妮在 5 月 14 日過世，他不到六個月後，11 月 4 日，在萊比錫也走了。〈結婚進行曲〉的第一版印刷樂譜，是他身後約 1848 年，由萊比錫的 Breitkopf & Härtel 出版社印的。"
+    },
+    {
+      "type": "h",
+      "text": "1849 到 1850 年：李斯特改成鋼琴曲"
+    },
+    {
+      "type": "p",
+      "text": "作曲家李斯特把它改成鋼琴曲，叫〈結婚進行曲與精靈之舞〉，編號 S. 410。後來鋼琴家霍洛維茲（Vladimir Horowitz）照李斯特的版本再改，改成更炫技的鋼琴曲，常被拿來當音樂會的安可曲。"
+    },
+    {
+      "type": "h",
+      "text": "1858 年：公主選了它"
+    },
+    {
+      "type": "p",
+      "text": "1858 年 1 月 25 日，維多利亞女王的長女，公主 Victoria，在倫敦聖詹姆士宮的皇家禮拜堂結婚。新郎是普魯士王子腓特烈・威廉，也就是後來的腓特烈三世皇帝。新娘 17 歲，新郎 26 歲。"
+    },
+    {
+      "type": "p",
+      "text": "新人退場的時候，奏的是孟德爾頌的〈結婚進行曲〉；整場儀式最後奏的是韓德爾的〈哈利路亞〉合唱。維基百科說，這首曲子是因為公主選它當婚禮用曲，才在婚禮上流行起來。女王喜愛孟德爾頌的音樂，他訪問英國的時候，常為她演奏。"
+    },
+    {
+      "type": "p",
+      "text": "古典音樂史學者 Robert Greenberg 在 NPR 的節目裡說：「When a royal person does something royal-sounding, everyone wants a piece of the action.」意思是王室的人做了一件聽起來很有王室派頭的事，大家都想沾一點光。他接著說，從那時候起，這首進行曲成了德語和英語世界婚禮上的常備曲。"
+    },
+    {
+      "type": "p",
+      "text": "今天最常見的搭配，是新娘入場用華格納歌劇《羅恩格林》裡的〈婚禮合唱〉，新人退場用孟德爾頌這一首。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "《仲夏夜之夢》劇樂，作品 61，共 14 首；〈結婚進行曲〉是第 9 首"
+        ],
+        [
+          "劇中位置",
+          "第四幕與第五幕之間的幕間音樂"
+        ],
+        [
+          "調性與速度",
+          "C 大調；Allegro vivace"
+        ],
+        [
+          "委託",
+          "普魯士國王腓特烈・威廉四世，1842 年"
+        ],
+        [
+          "首演",
+          "1843 年 10 月 14 日，波茨坦新宮，提克導演"
+        ],
+        [
+          "首版樂譜",
+          "萊比錫 Breitkopf & Härtel，約 1848 年"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wedding March (Mendelssohn)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Wedding_March_(Mendelssohn)",
+      "note": "C 大調；1858 年 1 月 25 日公主婚禮使它流行（引 Emmett 1996）；已知最早婚禮使用 1847 年 6 月 2 日 Tiverton（引 1904 年 Western Gazette）；常與華格納〈婚禮合唱〉搭配；常刪插段；李斯特 S. 410、霍洛維茲改編；2026-11-17 查閱"
+    },
+    {
+      "title": "A Midsummer Night's Dream (Mendelssohn)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/A_Midsummer_Night%27s_Dream_(Mendelssohn)",
+      "note": "序曲 1826 年 8 月 6 日完成、17 歲、1827 年 2 月 20 日斯德丁首演（勒韋指揮）；1842 年腓特烈・威廉四世委託；1843 年 10 月 14 日波茨坦新宮首演、提克導演；全曲 14 首；2026-11-17 查閱"
+    },
+    {
+      "title": "A Midsummer Night's Dream（Overture and Incidental Music 節目單）",
+      "publisher": "Hollywood Bowl／洛杉磯愛樂",
+      "date": "未註明",
+      "url": "https://www.hollywoodbowl.com/musicdb/pieces/893/a-midsummer-nights-dream-overture-and-incidental-music",
+      "note": "〈結婚進行曲〉在第四幕結尾、帶入第五幕；標示情侶與忒修斯、希波呂忒的婚禮；長號在這首第一次出現；序曲原為鋼琴四手；2026-11-17 查閱"
+    },
+    {
+      "title": "A Midsummer Night's Dream, Op.61（IMSLP 作品頁）",
+      "publisher": "IMSLP",
+      "date": "未註明",
+      "url": "https://imslp.org/wiki/A_Midsummer_Night%27s_Dream,_Op.61_(Mendelssohn,_Felix)",
+      "note": "〈結婚進行曲〉是 No. 9；寫作 1842–43；首版 Breitkopf & Härtel 約 1848 年（版號 7774）；2026-11-17 查閱"
+    },
+    {
+      "title": "Felix Mendelssohn",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Felix_Mendelssohn",
+      "note": "生卒（1809.2.3 漢堡；1847.11.4 萊比錫）、范妮 1847.5.14 過世；2026-11-17 查閱"
+    },
+    {
+      "title": "File:Mendelssohn Wedding March Theme.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Mendelssohn_Wedding_March_Theme.jpg",
+      "note": "Breitkopf & Härtel 版〈結婚進行曲〉開頭摘錄（IMSLP 掃描）；速度與小號音型由圖讀出；2026-11-17 查閱"
+    },
+    {
+      "title": "Klemperer: The Romantic Era（EMI 10-CD 套裝評論，Paul Corfield Godfrey）",
+      "publisher": "MusicWeb International",
+      "date": "2013-04",
+      "url": "https://www.musicweb-international.com/classrev/2013/Apr13/Klemperer_romantic_4043092.htm",
+      "note": "克倫佩勒版《仲夏夜之夢》錄音日期地點（艾比路一號錄音室，1960 年 1 月 28–29 日、2 月 16 日）、演出者、EMI Classics；評語「for once the Wedding March is not too ponderous」；2026-11-17 查閱"
+    },
+    {
+      "title": "Wedding of Victoria, Princess Royal and the future Friedrich III",
+      "publisher": "Unofficial Royalty",
+      "date": "未註明",
+      "url": "https://www.unofficialroyalty.com/wedding-of-victoria-princess-royal-and-the-future-friedrich-iii-german-emperor-king-of-prussia/",
+      "note": "1858 年 1 月 25 日、聖詹姆士宮皇家禮拜堂；新娘 17 歲、新郎 26 歲；退場奏〈結婚進行曲〉、儀式以〈哈利路亞〉結束；未提入場音樂；2026-11-17 查閱"
+    },
+    {
+      "title": "Why 'Here Comes the Bride' and the Wedding March Are Played at Weddings（Olivia B. Waxman）",
+      "publisher": "TIME",
+      "date": "2018-01-25",
+      "url": "https://time.com/5115834/wedding-march-here-comes-the-bride",
+      "note": "Elizabeth Hafkin Pleck 的說法（轉引）；該文稱入場放華格納、退場放孟德爾頌（其他來源未證實，不採）；2026-11-17 查閱"
+    },
+    {
+      "title": "Mendelssohn's Wedding March at 150",
+      "publisher": "Hawaii Public Radio（轉自 NPR）",
+      "date": "2008-02-10",
+      "url": "https://www.hawaiipublicradio.org/2008-02-10/mendelssohns-wedding-march-at-150",
+      "note": "Robert Greenberg 的話（網頁摘錄）；2026-11-17 查閱"
+    },
+    {
+      "title": "File:John Phillip (1817-1867) - The Marriage of the Princess Victoria Adelaide ... National Trust.jpg",
+      "publisher": "Wikimedia Commons／Art UK",
+      "date": "1858（畫作）",
+      "url": "https://commons.wikimedia.org/wiki/File:John_Phillip_(1817-1867)_-_The_Marriage_of_the_Princess_Victoria_Adelaide_(1840%E2%80%931901),_Princess_Royal,_Later_Empress_of_Prussia_-_1530136_-_National_Trust.jpg",
+      "note": "頭圖：菲利普 1858 年油畫，26.7 × 50.2 cm，國民信託 Hinton Ampner，館藏號 1530136；2026-11-17 查閱"
+    }
+  ]
+}
