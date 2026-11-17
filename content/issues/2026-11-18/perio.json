@@ -1,0 +1,200 @@
+{
+  "column": "perio",
+  "date": "2026-11-18",
+  "title": "流血幾點才算牙齦炎？共識報告劃在 10%",
+  "dek": "牙齦炎的盛行率，過去的調查從 6% 到 94% 都有。2017 年的世界研討會給了一條線：全口探診出血 10%。",
+  "brief": "2017 年的世界研討會給牙齦炎劃了線：全口每顆牙探六點，出血點 ≥10% 就算牙齦炎。牙周炎病人治療後，探診深度都要在 4 毫米內、4 毫米的點也不流血、出血點不到 10%，才算穩定。穩定後又出血，他還是牙周炎病人。",
+  "takeaway": "全口每顆牙探六點，出血點 <10% 且探診深度 ≤3 毫米算牙齦健康，≥10% 算牙齦炎。牙周炎病人治療後再出血，仍是牙周炎病人，要留在維護治療。",
+  "chairside": "我們每顆牙會量六個點，看有幾個點流血。全口流血的點不到 10%，牙齦溝的深度也都在 3 毫米以內，牙齦就算健康；到了 10% 就算牙齦發炎。牙齦發炎這個階段，把發炎處理好，是可以回到健康的。",
+  "topic_key": "perio:doi:10.1111/jcpe.12940",
+  "form": "document",
+  "voice": "colleague",
+  "updated_at": "2026-11-17T22:44:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Dental_explorer_and_periodontal_probe.jpg/1280px-Dental_explorer_and_periodontal_probe.jpg",
+    "width": 1280,
+    "height": 924,
+    "alt": "藍色布面上斜放兩支牙科器械：上方一支白色塑膠柄，彎曲的尖端有紅、白、綠色刻度；下方一支金屬滾花柄，兩端是細長彎鉤。",
+    "caption": "上方是牙周探針，下方是牙科探針。共識報告裡的探診出血，就是用有刻度的牙周探針輕輕探到牙齦溝底，看那一點會不會流血。照片在 Wikimedia Commons 標示的日期是 2013 年 1 月，與本文論文無關。",
+    "credit": "Coronation Dental Specialty Group，Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dental_explorer_and_periodontal_probe.jpg",
+    "made": "2013"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "今天講一條線：全口每顆牙探六個點，流血的點占 **10%**。不到算牙齦健康，到了就算牙齦炎。"
+    },
+    {
+      "type": "p",
+      "text": "這條線不是新研究，是一份**共識報告**訂的。報告來自美國和歐洲牙周病學會合辦的 **2017 年牙周病與植體周圍疾病分類世界研討會**。牙周健康和牙齦炎歸第 1 工作組管，第一作者是英國伯明罕大學的 **Iain Chapple**，2018 年刊出。"
+    },
+    {
+      "type": "p",
+      "text": "為什麼要劃線？過去沒有共用的定義，調查只看一個個點有沒有發炎，不看整個人，牙齦炎盛行率從 6% 到 94% 都有。"
+    },
+    {
+      "type": "h",
+      "text": "怎麼量"
+    },
+    {
+      "type": "p",
+      "text": "每個點只記流血或不流血，流血的點占全口的比例就是 BOP%。"
+    },
+    {
+      "type": "svg",
+      "title": "10% 和 30% 換成點數",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 330\">\n<rect class=\"paper\" x=\"0\" y=\"0\" width=\"680\" height=\"330\"/>\n<text class=\"ink\" x=\"20\" y=\"30\" font-size=\"17\" font-weight=\"bold\">一顆牙量 6 點，全口 28 顆牙共 168 點</text>\n<text class=\"muted\" x=\"20\" y=\"52\" font-size=\"12\">咬合面示意，不按比例</text>\n<text class=\"muted\" x=\"135\" y=\"82\" font-size=\"12\" text-anchor=\"middle\">頰側</text>\n<text class=\"muted\" x=\"135\" y=\"262\" font-size=\"12\" text-anchor=\"middle\">舌側</text>\n<text class=\"muted\" x=\"34\" y=\"175\" font-size=\"12\" text-anchor=\"middle\">近心</text>\n<text class=\"muted\" x=\"236\" y=\"175\" font-size=\"12\" text-anchor=\"middle\">遠心</text>\n<rect class=\"soft\" x=\"60\" y=\"100\" width=\"150\" height=\"130\" rx=\"42\"/>\n<circle class=\"accent\" cx=\"85\" cy=\"100\" r=\"7\"/>\n<circle class=\"accent\" cx=\"135\" cy=\"100\" r=\"7\"/>\n<circle class=\"accent\" cx=\"185\" cy=\"100\" r=\"7\"/>\n<circle class=\"accent\" cx=\"85\" cy=\"230\" r=\"7\"/>\n<circle class=\"accent\" cx=\"135\" cy=\"230\" r=\"7\"/>\n<circle class=\"accent\" cx=\"185\" cy=\"230\" r=\"7\"/>\n<text class=\"ink\" x=\"85\" y=\"125\" font-size=\"12\" text-anchor=\"middle\">近頰</text>\n<text class=\"ink\" x=\"135\" y=\"125\" font-size=\"12\" text-anchor=\"middle\">頰</text>\n<text class=\"ink\" x=\"185\" y=\"125\" font-size=\"12\" text-anchor=\"middle\">遠頰</text>\n<text class=\"ink\" x=\"85\" y=\"215\" font-size=\"12\" text-anchor=\"middle\">近舌</text>\n<text class=\"ink\" x=\"135\" y=\"215\" font-size=\"12\" text-anchor=\"middle\">舌</text>\n<text class=\"ink\" x=\"185\" y=\"215\" font-size=\"12\" text-anchor=\"middle\">遠舌</text>\n<text class=\"muted\" x=\"135\" y=\"292\" font-size=\"12\" text-anchor=\"middle\">輕力（約 0.25 N）探到溝底</text>\n<text class=\"muted\" x=\"135\" y=\"310\" font-size=\"12\" text-anchor=\"middle\">每點只記：出血／不出血</text>\n<text class=\"ink\" x=\"290\" y=\"100\" font-size=\"14\" font-weight=\"bold\">全口 168 點裡，出血的有幾點？</text>\n<rect class=\"soft\" x=\"290\" y=\"130\" width=\"37\" height=\"40\"/>\n<rect class=\"gold\" x=\"327\" y=\"130\" width=\"75\" height=\"40\"/>\n<rect class=\"accent\" x=\"402\" y=\"130\" width=\"258\" height=\"40\"/>\n<text class=\"muted\" x=\"290\" y=\"190\" font-size=\"11\" text-anchor=\"middle\">0</text>\n<text class=\"muted\" x=\"327\" y=\"190\" font-size=\"11\" text-anchor=\"middle\">17</text>\n<text class=\"muted\" x=\"402\" y=\"190\" font-size=\"11\" text-anchor=\"middle\">51</text>\n<text class=\"muted\" x=\"660\" y=\"190\" font-size=\"11\" text-anchor=\"middle\">168</text>\n<line class=\"ink\" x1=\"308\" y1=\"200\" x2=\"308\" y2=\"220\"/>\n<line class=\"ink\" x1=\"364\" y1=\"200\" x2=\"364\" y2=\"252\"/>\n<line class=\"ink\" x1=\"531\" y1=\"200\" x2=\"531\" y2=\"284\"/>\n<text class=\"ink\" x=\"315\" y=\"225\" font-size=\"13\">0–16 點（&lt;10%）：牙齦健康</text>\n<text class=\"ink\" x=\"371\" y=\"257\" font-size=\"13\">17–50 點（10%–30%）：局部牙齦炎</text>\n<text class=\"ink\" x=\"400\" y=\"289\" font-size=\"13\">51 點以上（&gt;30%）：廣泛牙齦炎</text>\n<text class=\"muted\" x=\"290\" y=\"318\" font-size=\"11\">前提：完整牙周組織、探診深度都在 3 毫米以內</text>\n</svg>",
+      "caption": "依 Chapple 等 2018 年共識報告的六點探診法與 10%、30% 門檻，以 28 顆牙（不含智齒）、每顆 6 點換算成點數（本文推算：168 × 10% = 16.8，168 × 30% = 50.4）。實際總點數依病人現存牙數而定。牙齒為示意，不按比例。",
+      "credit": "原創圖解；門檻依 Chapple 等 2018"
+    },
+    {
+      "type": "h",
+      "text": "健康和牙齦炎怎麼分"
+    },
+    {
+      "type": "quote",
+      "text": "為流行病學目的，完整牙周組織上的牙齦炎，以及沒有牙周炎病史者在減少的牙周組織上的牙齦炎，定義為出血點 ≥10%、探診深度 ≤3 毫米。局部牙齦炎定義為出血點 10%–30%；廣泛牙齦炎定義為出血點 >30%。",
+      "original": "For epidemiological purposes, gingivitis on an intact periodontium and gingivitis on a reduced periodontium in a patient without a history of periodontitis, is defined as ≥10% bleeding sites with probing depths ≤3 mm. Localized gingivitis is defined as 10%-30% bleeding sites; generalized gingivitis is defined as > 30% bleeding sites.",
+      "cite": "Chapple 等，2018，2017 世界研討會第 1 工作組共識報告；原文 ≥10% 後的參考文獻標號省略；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "診間裡可以寬一點。探針和手法沒有統一，健康的人也可能有一兩個點有點發炎。"
+    },
+    {
+      "type": "quote",
+      "text": "由於標準化的 ISO 探針與技術有其限制、也沒有普及，牙齦健康的各項指標本來就有測量誤差，一個牙周健康的病人可能有一兩個點出現些許臨床發炎的跡象。此外，個別點上輕微、延遲出現的探診出血到處都有，但可能仍落在「臨床健康」的範圍內。",
+      "original": "Due to limitations in, and a lack of uptake of, standardized ISO probes and techniques leading to inherent measurement variability in the parameters of gingival health, a patient with periodontal health may exhibit one or two sites with some evidence of clinical gingival inflammation. Moreover, localized mild and delayed bleeding to probe at isolated sites is ubiquitous, but may fall within the spectrum of “clinical health”.",
+      "cite": "Chapple 等，2018，2017 世界研討會第 1 工作組共識報告，〈臨床上如何定義牙齦健康〉；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "據報告，抽菸會讓微血管收縮、組織纖維化，可能遮住探診出血，底下其實還在發炎。X 光不能拿來診斷牙齦炎。"
+    },
+    {
+      "type": "h",
+      "text": "治療過的牙周炎病人"
+    },
+    {
+      "type": "p",
+      "text": "治療成功的牙周炎病人，看下表最後一列。"
+    },
+    {
+      "type": "table",
+      "title": "診間對照：健康還是牙齦炎",
+      "head": [
+        "病人",
+        "附著喪失／X 光骨喪失",
+        "算健康",
+        "算牙齦炎"
+      ],
+      "rows": [
+        [
+          "完整牙周組織（從沒掉過附著）",
+          "沒有／沒有",
+          "探診深度 ≤3 毫米，出血點 <10%",
+          "探診深度 ≤3 毫米，出血點 ≥10%"
+        ],
+        [
+          "牙周組織減少，但不是牙周炎病人（例如牙齦退縮、牙冠增長術後）",
+          "有／可能有",
+          "所有部位 ≤3 毫米，出血點 <10%",
+          "所有部位 ≤3 毫米，出血點 ≥10%"
+        ],
+        [
+          "治療成功、穩定的牙周炎病人",
+          "有／有",
+          "所有部位 ≤4 毫米，沒有任何 ≥4 毫米的部位出血，出血點 <10%",
+          "淺部位（≤3 毫米）出血，出血點 ≥10%：仍是有牙周炎病史的病人"
+        ]
+      ],
+      "caption": "假設輕探診力 0.2 到 0.25 N、沒有假性囊袋。依 Chapple 等 2018 年共識報告表 1 重製，非原圖轉載。"
+    },
+    {
+      "type": "p",
+      "text": "為什麼是 4 毫米？工作組裡有過不同意見。"
+    },
+    {
+      "type": "quote",
+      "text": "有一個合理的少數意見主張，治療成功的牙周炎病人要算臨床健康，門檻應設在 ≤3 毫米且無探診出血，以反映其復發風險較高。但反方、也是多數的意見認為，≤3 毫米的門檻很少能在 100% 治療過的部位達到，而且可能導致過度治療，因為任何不出血但超過 3 毫米的部位都不會被歸為「健康」，因而可能接受進一步的侵入性治療，而不是監測與支持性照護。因此門檻定在 ≤4 毫米，承認治療後的臨床表現需要和治療前分開看待。",
+      "original": "There was a rational minority view expressed that the threshold for defining a clinical case of health in a successfully treated periodontitis patient should be set at ≤ 3 mm with no BOP to acknowledge the elevated risk of recurrent disease. However, the counter and majority view was that the ≤ 3 mm threshold is rarely achieved at 100% of treated sites and could lead to over-treatment, since any non-bleeding site > 3 mm would not be classified as “health” and thus open to further invasive treatment, rather than monitoring and supportive care. The threshold was therefore set at ≤ 4 mm acknowledging that post-treatment clinical phenotypes need to be considered differently to pre-treatment phenotypes.",
+      "cite": "Chapple 等，2018，2017 世界研討會第 1 工作組共識報告，表 1 註 b；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "穩定之後如果又出血，報告寫得很清楚：**牙周炎病人有牙齦發炎，還是牙周炎病人**。他復發的風險比較高，要留在維護治療裡密切追蹤。"
+    },
+    {
+      "type": "h",
+      "text": "順便複習"
+    },
+    {
+      "type": "p",
+      "text": "牙齦炎的發炎消了，就能回到健康。附著喪失目前回不去。長期追蹤研究發現，後來掉附著的點，發炎一直比較多。所以報告說，**牙齦炎是牙周炎的必要前提**。"
+    },
+    {
+      "type": "h",
+      "text": "證據有多硬"
+    },
+    {
+      "type": "p",
+      "text": "這是共識報告，結論都經過共識通過。2020 年歐洲牙周病學會的第一到三期牙周炎治療指引，沿用了這些定義。不過牙齦炎分輕、中、重，報告自己說只是專業意見。"
+    },
+    {
+      "type": "paper",
+      "citation": "Chapple ILC, Mealey BL, Van Dyke TE, Bartold PM, Dommisch H, Eickholz P, et al. Periodontal health and gingival diseases and conditions on an intact and a reduced periodontium: Consensus report of workgroup 1 of the 2017 World Workshop on the Classification of Periodontal and Peri-Implant Diseases and Conditions. *J Clin Periodontol*. 2018;45 Suppl 20:S68–S77.",
+      "doi": "10.1111/jcpe.12940",
+      "pmid": "29926499",
+      "link": "https://doi.org/10.1111/jcpe.12940",
+      "evidence": "2017 世界研討會共識報告（AAP 與 EFP 合辦）：27 位作者；2020 年 EFP S3 指引沿用其定義",
+      "design": "共識報告：2017 年芝加哥世界研討會第 1 工作組，研討會共委託 19 篇回顧、4 份共識報告，結論以共識通過；同文刊於 *J Periodontol* 2018;89 Suppl 1:S74–S84",
+      "sample": "不適用（共識報告）；病例定義以全口現存牙每顆 6 點的探診出血百分比為準",
+      "question": "牙齦健康與牙齦炎的病例要怎麼定義？治療後穩定的牙周炎病人又算什麼？",
+      "access": "依全文整理（umw.edu.pl 收錄的出版社版 PDF）；研討會背景依 Caton 等 2018 摘要"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Periodontal health and gingival diseases and conditions on an intact and a reduced periodontium: Consensus report of workgroup 1 of the 2017 World Workshop on the Classification of Periodontal and Peri-Implant Diseases and Conditions",
+      "publisher": "Journal of Clinical Periodontology（Chapple ILC 等）",
+      "date": "2018-06-20",
+      "url": "https://www.umw.edu.pl/sites/default/files/2022-04/Article2.pdf",
+      "note": "主角文獻。讀全文：umw.edu.pl 收錄的出版社版 PDF（Wiley 網站 403）。DOI 10.1111/jcpe.12940；PMID 29926499（efetch 回查標題一致）；卷期頁依 PubMed，日期為 Crossref 線上刊出日。用到：摘要、病例定義各節、危險因子、嚴重度、表 1 與註、ISO 探針建議、參考文獻 3–6。同文另刊 J Periodontol 2018;89 Suppl 1:S74–S84（DOI 10.1002/jper.17-0719，PMID 29926944，依 Europe PMC）。"
+    },
+    {
+      "title": "Plaque-induced gingivitis: Case definition and diagnostic considerations",
+      "publisher": "Journal of Clinical Periodontology（Trombelli L, Farina R, Silva CO, Tatakis DN）",
+      "date": "2018-06-20",
+      "url": "https://europepmc.org/article/MED/29926492",
+      "note": "共識報告 10% 門檻引用的病例定義回顧。只讀摘要（Europe PMC）；DOI 10.1111/jcpe.12939；PMID 29926492；J Clin Periodontol 2018;45 Suppl 20:S44–S67。"
+    },
+    {
+      "title": "A new classification scheme for periodontal and peri-implant diseases and conditions – Introduction and key changes from the 1999 classification",
+      "publisher": "Journal of Clinical Periodontology（Caton JG 等）",
+      "date": "2018-06-20",
+      "url": "https://europepmc.org/article/MED/29926489",
+      "note": "研討會背景：芝加哥、2017 年 11 月 9–11 日、19 篇回顧與 4 份共識報告、以共識通過、證據不足處用較低階證據與專家意見。只讀摘要；DOI 10.1111/jcpe.12935；PMID 29926489。"
+    },
+    {
+      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Sanz M 等）",
+      "date": "2020-07-27",
+      "url": "https://europepmc.org/article/PMC/PMC7891343",
+      "note": "後續指引如何沿用病例定義與穩定病人的定義、治療終點。讀全文（PMC7891343）；DOI 10.1111/jcpe.13290；PMID 32383274。"
+    },
+    {
+      "title": "File:Dental explorer and periodontal probe.jpg",
+      "publisher": "Wikimedia Commons（Coronation Dental Specialty Group）",
+      "date": "2013-01-10",
+      "url": "https://commons.wikimedia.org/wiki/File:Dental_explorer_and_periodontal_probe.jpg",
+      "note": "頭圖；CC BY-SA 3.0。"
+    }
+  ]
+}
