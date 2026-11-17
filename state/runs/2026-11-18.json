@@ -38,5 +38,10 @@
       "mystery"
     ],
     "note": "精簡：perio、document"
+  },
+  "concerts": {
+    "finished_at": "2026-11-18T05:38:39+08:00",
+    "missing": [],
+    "note": "新增 1、更新 1；補查沒做完（pbc、tanart、udn、ntch 讀不到或未查，wwy、news 只查一部分）；歷史上的今天 1928"
   }
 }
