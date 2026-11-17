@@ -1,0 +1,136 @@
+{
+  "column": "fm-watch",
+  "date": "2026-11-18",
+  "status": "update",
+  "form": "list",
+  "voice": "watchman",
+  "title": "FM27 第一個內容更新，電腦版先上線",
+  "dek": "昨天只說「本週稍晚」，今晚 10 點多，電腦版的 27.1.0 已經能更新。主機版和 Apple Arcade 版還要等。",
+  "brief": "《足球經理 27》第一個內容更新 27.1.0，台灣時間 11 月 17 日晚上 10 點多在 Steam、Epic、Microsoft Store 上線。主機版和 Apple Arcade 版官方只說本週稍晚，Mobile 版另有更新也在本週。比賽引擎有沒有變好，官方沒有數據，要等玩家實測。",
+  "topic_key": "fm-watch:2026-11-18-update-27-1-0-out-pc",
+  "updated_at": "2026-11-18T05:30:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "timeline",
+    "title": "FM27 發售後的更新進度",
+    "caption": "依 Steam 公告整理，時間為台灣時間。主機版、Apple Arcade 版與 Mobile 版的推出日，官方只寫本週。",
+    "items": [
+      {
+        "when": "2026.11.3",
+        "label": "Minor Update 1（免費試玩期）",
+        "note": "00:22。同一則公告預告：發售後第一個更新處理玩家回報，重點含 3D 比賽引擎，沒有日期"
+      },
+      {
+        "when": "2026.11.11",
+        "label": "正式發售",
+        "note": "00:13，英國時間為 11 月 10 日"
+      },
+      {
+        "when": "2026.11.16",
+        "label": "27.1.0 更新清單公告",
+        "note": "23:04，共 146 條；電腦、主機、Apple Arcade 三個版本寫在同一句「本週稍晚」"
+      },
+      {
+        "when": "2026.11.17",
+        "label": "27.1.0 電腦版上線",
+        "note": "22:16。Steam、Epic Games Store、Microsoft Store"
+      },
+      {
+        "when": "日期待公布",
+        "label": "主機版與 Apple Arcade 版",
+        "note": "官方：本週稍晚，同等內容的更新"
+      },
+      {
+        "when": "日期待公布",
+        "label": "FM27 Mobile 更新",
+        "note": "Netflix 版；官方：本週，內容另計"
+      }
+    ]
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "台灣時間 11 月 17 日（週二）晚上 10 點 16 分，《足球經理 27》的開發商 Sports Interactive 在 Steam 貼出公告：**Update 27.1.0 已經上線**。這是這款足球經理模擬遊戲 11 月 10 日發售以後的第一個內容更新，電腦、主機、手機都有版本，這次先動的是電腦版。"
+    },
+    {
+      "type": "p",
+      "text": "1. 官方原文說，更新「now available on Steam, Epic Games Store, and Microsoft Store」，也就是電腦版的三個商店都有。昨天晚上 11 點的更新清單只說「本週稍晚」，沒給日期；今天晚上就來了，比預告快。公告沒有寫 Steam 的版本號，也沒有寫檔案大小，更新要不要重開新存檔、舊存檔能不能接著玩，同樣沒提。"
+    },
+    {
+      "type": "p",
+      "text": "2. 主機版和 Apple Arcade 版要晚一點。公告寫的是「an equivalent update will be available on FM27 Console and FM27 Touch (Apple Arcade) later this week」，意思是內容相當的更新，本週稍晚，沒有日期，也沒有分 Xbox 與 PS5。昨天的清單公告把電腦、主機、Apple Arcade 三個版本放在同一句，今天三個版本的時間分開了。在這兩個平台玩的人，今天還拿不到這批改動。"
+    },
+    {
+      "type": "p",
+      "text": "3. Netflix 的 FM27 Mobile 走另一條路，維持昨天的說法：更新「本週」推出，內容是比賽引擎的進一步平衡，特別是進球，並處理「陣容在比賽日之間改變」的回報。這部分不在 27.1.0 的清單裡。"
+    },
+    {
+      "type": "table",
+      "title": "27.1.0 各版本的更新狀態",
+      "head": [
+        "版本",
+        "11 月 16 日清單公告",
+        "11 月 17 日公告"
+      ],
+      "rows": [
+        [
+          "電腦（Steam、Epic、Microsoft Store）",
+          "本週稍晚",
+          "已上線"
+        ],
+        [
+          "Xbox 與 PS5 主機版",
+          "本週稍晚（與電腦、Apple Arcade 同一句）",
+          "內容相當的更新，本週稍晚"
+        ],
+        [
+          "Apple Arcade（Touch）",
+          "本週稍晚（同上）",
+          "內容相當的更新，本週稍晚"
+        ],
+        [
+          "Netflix（Mobile）",
+          "本週，另有內容",
+          "本週，內容同昨天"
+        ]
+      ],
+      "caption": "依兩則 Steam 公告整理。官方都沒給主機版、Touch 版與 Mobile 版的日期。"
+    },
+    {
+      "type": "p",
+      "text": "4. 今天的公告自己挑了五項重點：比賽引擎的攻擊與防守調整、電腦控制俱樂部的轉會平衡微調、可以讓屬性欄邊框變透明、資料庫與授權更新，還有資訊顯示（偏好設定裡調整畫面資訊密度的選項）開放給 1080p 以上的螢幕。這五項昨天的清單都有。我把 Steam 上那份清單現在的文字重數了一遍，11 個區塊共 146 條，區塊條數和昨天記下的一樣，沒有增減。官方說完整清單放在 Sports Interactive 的官方論壇，本報那一頁打不開，所以逐條內容以 Steam 上的清單為準。"
+    },
+    {
+      "type": "p",
+      "text": "5. 比賽引擎到底有沒有變好，現在還沒有人能回答。官方昨天的說法是，改動依據 Alpha 測試員的回饋與內部檢討，指向壓迫、球員反應、決策這幾個社群點名的痛點，沒有公開任何測試數字。更新上線才幾個小時，本報也沒有玩過，媒體上還沒找到實測。上面這幾項都是官方對自己改動的描述。像壓迫變積極、越位球變少這類說法，要等玩家打完幾場、幾個賽季，才看得出來是不是真的。"
+    },
+    {
+      "type": "p",
+      "text": "目前還沒有答案的，是主機版與 Apple Arcade 版哪一天更新、Mobile 更新的內容，還有電腦版的更新要不要開新存檔。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "FM27 Update 27.1.0 Out Now",
+      "publisher": "Steam 公告（Sports Interactive，Jimmy Wong）",
+      "date": "2026-11-17",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702693861",
+      "note": "Steam News API 時間 2026-11-17 14:16:09 UTC（台灣 22:16）。電腦版上線、主機與 Apple Arcade 版本週稍晚、Mobile 版本週。"
+    },
+    {
+      "title": "FM27 Update 27.1.0 Changelist",
+      "publisher": "Steam 公告（Sports Interactive，Kyle Brown）",
+      "date": "2026-11-16",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702689885",
+      "note": "台灣時間 11-16 23:04。11 個區塊共 146 條；本報逐區塊重數現文，條數與昨天記錄一致。"
+    },
+    {
+      "title": "FM27 Minor Update 1 rolling out now, plus more info on updates",
+      "publisher": "Steam 公告（Sports Interactive，Kyle Brown）",
+      "date": "2026-11-02",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302248809",
+      "note": "台灣時間 11-03 00:22。發售後首更新的最初預告，重點含 3D 比賽引擎，無日期。"
+    }
+  ]
+}
