@@ -161,6 +161,7 @@ def near_duplicate(key, used):
 
 BRIEF_SINCE = "2026-10-18"  # issues from this date on (and every reserve) must carry a brief
 EVIDENCE_SINCE = "2026-11-01"  # perio from here on: strong evidence only (columns/perio.md 選文), stated in paper.evidence
+CLASSIC_SINCE = "2026-11-14"  # perio from here on: a recognized classic (evidence 「公認經典…」) may lead whatever its design, and may reuse a topic first covered before this date (columns/perio.md 公認經典)
 PERIO_JOURNALS = {
     "J Clin Periodontol", "J Periodontol", "Periodontol 2000", "J Periodontal Res", "J Dent Res", "Clin Oral Implants Res",
     "Clin Implant Dent Relat Res", "Int J Oral Maxillofac Implants", "Int J Periodontics Restorative Dent", "J Dent",
@@ -571,8 +572,14 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
     tk = art.get("topic_key") if isinstance(art.get("topic_key"), str) else ""
     if tk and not tk.startswith(col + ":"):
         E("topic_key 要以「%s:」開頭" % col)
-    if tk and used_topics is not None and topic_norm(tk) in used_topics:
-        clash(used_topics[topic_norm(tk)], "topic_key 已在 %s 用過：%s" % (used_topics[topic_norm(tk)], tk))
+    # a recognized classic (columns/perio.md 公認經典): its paper card's evidence starts 公認經典
+    ev0 = next((b.get("evidence") for b in art["body"] if isinstance(b, dict) and b.get("type") == "paper"), None) \
+        if isinstance(art.get("body"), list) else None
+    classic = col == "perio" and (str(d) == "reserve" or str(d) >= CLASSIC_SINCE) and isinstance(ev0, str) and ev0.startswith("公認經典")
+    nk, late = topic_norm(tk), getattr(used_topics, "late", None)  # late: the uses a classic may not repeat
+    if tk and used_topics is not None and nk in used_topics and not (classic and late is not None and nk not in late):
+        blocker = late[nk] if classic and late is not None else used_topics[nk]
+        clash(used_topics[nk], "topic_key 已在 %s 用過：%s" % (blocker, tk))
 
     is_watch = cfg["columns"].get(col, {}).get("group") == "watch"
     undetermined = is_watch and art.get("status") == "undetermined"
@@ -845,9 +852,9 @@ def check_article(cfg, d, col, art, check_urls, used_images, used_topics, E, W):
                     E("paper 論文卡缺少 evidence：研究設計、規模與證據確定性，一行 60 字內（columns/perio.md）")
                 else:
                     weak = [w for w in WEAK_DESIGN if w in ev]
-                    if weak:
+                    if weak and not classic:  # a recognized classic leads whatever its design
                         E("evidence 顯示是%s：證據等級不夠，不當主角論文（columns/perio.md 選文）" % "、".join(weak))
-                    elif not any(k in ev for k in STRONG_DESIGN):
+                    elif not classic and not any(k in ev for k in STRONG_DESIGN):
                         W("evidence 沒寫出研究設計（指引、共識、系統性回顧、統合分析、隨機試驗、世代研究）")
                     if len(ev) > 70:
                         W("evidence %d 字，60 字內" % len(ev))
@@ -1220,10 +1227,18 @@ def ledger_rows():
     return tuple(rows)
 
 
+class TopicUses(dict):
+    """topic_key -> where it was first used; `late` maps the keys also used by a reserve or an issue dated on or
+    after CLASSIC_SINCE to the first such use (a perio classic may reuse only a key whose every other use is older)."""
+    def __init__(self):
+        super().__init__()
+        self.late = {}
+
+
 def ledgers_excluding(day, col, paths=None):
     """Images and topics used by every other article. With `paths`, exactly those files are left out
     (a reserve article, or one being promoted); otherwise the article of `day`/`col`."""
-    images, topics = {}, {}
+    images, topics = {}, TopicUses()
     skip = {os.path.abspath(p) for p in paths} if paths else None
     for d, c, p, keys, tk in ledger_rows():
         if (p in skip) if skip is not None else (d == day and c == col):
@@ -1233,6 +1248,8 @@ def ledgers_excluding(day, col, paths=None):
             images.setdefault(k, where)
         if tk and (d != day or day == "reserve"):
             topics.setdefault(tk, where)
+            if d == "reserve" or d >= CLASSIC_SINCE:
+                topics.late.setdefault(tk, where)
     return images, topics
 
 

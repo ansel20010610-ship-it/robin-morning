@@ -24,7 +24,7 @@
 }
 ```
 
-- `topic_key`：去重鍵，格式 `<欄位>:<穩定識別>`。牙周用 `perio:doi:<DOI 小寫>`；古典用 `music:<作曲者>-<作品編號>`；畫作用 `art:<收藏館>-<館藏號或題名>`；經文用 `devotion:<書卷>-<章>-<節>`。同一個鍵不得在不同日期重複出現（`scripts/ledger.py` 可查已用過的鍵；比對不分大小寫、不計多餘空白）。
+- `topic_key`：去重鍵，格式 `<欄位>:<穩定識別>`。牙周用 `perio:doi:<DOI 小寫>`；沒有 DOI 的用 `perio:pmid:<PMID>`；古典用 `music:<作曲者>-<作品編號>`；畫作用 `art:<收藏館>-<館藏號或題名>`；經文用 `devotion:<書卷>-<章>-<節>`。同一個鍵不得在不同日期重複出現（牙周欄的公認經典可用同一個鍵再寫一次，見 `columns/perio.md`）（`scripts/ledger.py` 可查已用過的鍵；比對不分大小寫、不計多餘空白）。
 - `form`：文體，`STYLE.md` 〇之四菜單裡的一個代號（`scene`、`document`、`qa`、`list`、`timeline`、`dialogue`、`flow`、`reverse`、`argument`、`walk`、`compare`、`number`），2026-11-06 起每篇必填（經文與禱告、快訊、觀測站、連載除外）；派稿時指定，同一期不重複。
 - `voice`：這欄的記者代號，照 `STYLE.md` 〇之四的記者表（每欄固定一位，例如 football 是 `fan`、perio 是 `colleague`），同上必填。
 - `chairside`：**牙周欄 2026-11-11 起必填**，其他欄不用。明天在診間對病人說的一兩句，40–100 字，App 放在文末並可存成卡片，寫法見 `columns/perio.md`。
