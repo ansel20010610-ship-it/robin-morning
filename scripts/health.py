@@ -233,8 +233,15 @@ def gate(root, asof, weeks, full_day):
         stock.append([os.path.basename(os.path.dirname(p)) + "/" + os.path.basename(p)[:-5], age])
     shallow = git(root, "rev-parse", "--is-shallow-repository").strip() != "false"   # 歷史不完整就不算「創刊以來」
     ever = None if shallow else len(set(git(root, "log", "--diff-filter=A", "-M", "--name-only", "--format=", "--", "content/reserve").split()))
+    # 近期演出的兩個來源：concerts.py fetch 在 fetch.json 的 log 每天記一筆（feed＝讀得到而且完整、opentix＝讀得到）
+    got = load(os.path.join(root, "state", "concerts", "fetch.json")) or {}
+    log = [x for x in (got.get("log") or []) if isinstance(x, dict)]
+    week = [x for x in log if str(end - dt.timedelta(days=6)) <= str(x.get("date", "")) <= asof]
+    sources = [sum(1 for x in week if not x.get("feed")), sum(1 for x in week if not x.get("opentix"))] if log else None
+    newest = ((got.get("sources") or {}).get("opentix") or {}).get("newest") if isinstance(got.get("sources"), dict) else None
     return {"weeks": rows, "by_col": by_col, "warn_kinds": kinds, "fills": fills, "fills_all": fills_all,
-            "missing": missing, "stock": stock, "reserve_ever": ever}
+            "missing": missing, "stock": stock, "reserve_ever": ever, "concert_sources": sources,
+            "concert_newest": newest if isinstance(newest, str) else None}
 
 
 # ── 輸出 ──
@@ -292,6 +299,9 @@ def report(snap, prev, history, src):
     for grp in DAILY + ["audit"]:
         if grp in g["missing"]:
             P("  　%-6s %d 天：%s" % (GROUP_ZH.get(grp, "第 %s 班" % grp), len(g["missing"][grp]), "、".join(g["missing"][grp])))
+    if g.get("concert_sources"):
+        P("  近期演出來源（近 7 天）：文化部開放資料不完整或讀不到 %d 天、OPENTIX 讀不到 %d 天%s。" % (
+            tuple(g["concert_sources"]) + ("；OPENTIX 清單最新的節目建立於 %s" % g["concert_newest"] if g.get("concert_newest") else "",)))
     ages = sorted((a for _, a in g["stock"] if a is not None), reverse=True)
     old = [(n, a) for n, a in g["stock"] if a is not None and a >= OLD_DAYS]
     P("  備稿庫：在庫 %d 篇（在庫＝寫了還沒用過）%s；放了 %d 天以上的 %d 篇。" % (

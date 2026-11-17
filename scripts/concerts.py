@@ -2,10 +2,10 @@
 """近期演出: the standing list of concerts, operas and musicals at the foot of the front page (content/concerts.json).
 It is not part of any issue; the 演出資訊 routine keeps it current (editorial/columns/concerts.md).
 
-  python3 scripts/concerts.py fetch            # new candidates from the Ministry of Culture's open data
+  python3 scripts/concerts.py fetch            # new candidates from the Ministry of Culture's open data and OPENTIX
                                                #   → /tmp/robin/concert-candidates.md (+ .json for `close`); the same
-                                               #   file ends with 「## 已列入演出的異動」 when the feed's shows for a
-                                               #   listed event differ from concerts.json (vanished, changed, new)
+                                               #   file ends with 「## 已列入演出的異動」 when the feed's or OPENTIX's
+                                               #   shows for a listed event differ from concerts.json (vanished, changed, new)
   python3 scripts/concerts.py close [--reject UID=理由 ...] [--keep UID ...]
                                                # after rating: a candidate an event names is listed, one given a reason
                                                #   is rejected (title, shows and reason kept), the rest come back
@@ -15,10 +15,11 @@ It is not part of any issue; the 演出資訊 routine keeps it current (editoria
   python3 scripts/concerts.py check            # the file's schema and voice (validate.py --concerts runs the same)
   python3 scripts/concerts.py sweep-due        # is the sweep due; when it is, the sources and the evidence format
   python3 scripts/concerts.py sweep-done --evidence FILE
+  python3 scripts/concerts.py ot-scan [--all | --days N] --out FILE   # OPENTIX pages parsed into FILE; no state touched
 
-Exit codes, for other programs: 0 done; 2 nothing recorded (fetch: no feed or an empty one; sweep-done: no evidence or a
-malformed one); 3 not finished (fetch: the feed was incomplete; sweep-done: evidence kept but a source was not looked
-at; sweep-due: the sweep is overdue).
+Exit codes, for other programs: 0 done; 2 nothing recorded (fetch: neither the feed nor OPENTIX could be read; sweep-done:
+no evidence or a malformed one); 3 not finished (fetch: one of the two sources could not be read, or the feed was
+incomplete; sweep-done: evidence kept but a source was not looked at; sweep-due: the sweep is overdue).
 
 Seen UIDs live in state/concerts/seen.json: a listed or rejected candidate is not offered again, unless a rejected one
 gets a new date or city, or `reopen` puts it back. Stdlib only.
@@ -30,13 +31,32 @@ import json
 import os
 import re
 import sys
+from time import monotonic
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import CONTENT, ROOT, http_get, tw_now  # noqa: E402
+import opentix  # noqa: E402
 
 FILE = os.path.join(CONTENT, "concerts.json")
 SEEN = os.path.join(ROOT, "state", "concerts", "seen.json")
 FETCHED = os.path.join(ROOT, "state", "concerts", "fetch.json")  # the last fetch: was the feed whole, what the filters dropped
+# OPENTIX, the second source (the owner, 2026-11-14): {"known": [ids dealt with], "pending": {id: the day it first became a
+# candidate}, "ends": {pending id: its last show}, "tries": {id: the first day its page was unreadable or without shows},
+# "later": {id: the day to read it again}, "since": day}. A new programme is an id in the sitemap in none of them; the
+# first run (no file) knows every id but those created in the last NEW_DAYS days, which the feed missed while it lacked
+# OPENTIX. Where a new or pending id goes is ot_place's alone (spec v4 一, v5 第二類), every move is ot_move's and the
+# file is written by ot_save alone (v5 第四類). A candidate stays pending, its page read again every fetch, until close
+# has put it in seen.json.
+OTSTATE = os.path.join(ROOT, "state", "concerts", "opentix.json")
+NEW_DAYS = 21
+STOP_AFTER = 3    # OPENTIX pages unreadable in a row (the host or a block, not 404/410, 「不是節目頁」 or shows unreadable): no more are asked for, and OPENTIX counts as unreadable
+ALL_AFTER = 6     # this many pages read and every one unreadable (any reason): no more are asked for either
+FETCH_SECONDS = 540  # the whole fetch (the feed and OPENTIX); no request is begun that could end past it (room)
+RETRY_WAIT = 20   # the longest common.http_get waits between two tries
+FEED_TRIES = 3    # retries of a feed request
+STALE_DAYS = 10   # the newest programme in the sitemap this old: say so (a sitemap that stopped moving)
+OT_CATEGORY = {"音樂": 1, "戲劇": 2, "音樂劇": 2}  # OPENTIX's 類別 as the feed's category; any other is not for the list
+LOG_DAYS = 14  # fetch.json keeps a line a day of which source could be read
 RULES = os.path.join(ROOT, "editorial", "columns", "concerts.md")
 # The sweep for productions the open data never carries (concerts.md step 8): every second day (the owner, 2026-11-08:
 # 每兩天跑一次; it was Mondays only, and a tour announced on a Tuesday waited six days). Kept by the date of the last
@@ -138,17 +158,287 @@ def rules_version():
     return hashlib.sha1(re.sub(r"\s+", "", m.group(0) if m else text).encode("utf-8")).hexdigest()[:8]
 
 
-def note_fetch(day, problem, dropped=None):
+def note_fetch(day, problem, dropped=None, sources=None, whole=True):
     """Writes fetch.json: `complete` (false with the reason in `note`; `incomplete_since` is the first day of a run of
-    such fetches) and `dropped`, what the title filters kept from being rated (left as it was when the feed failed)."""
+    such fetches) and `dropped`, what the title filters kept from being rated (left as it was when the feed failed);
+    `sources`, whether each source could be read today, and `log`, a line a day for the last LOG_DAYS days (feed: read
+    and whole; opentix: read)."""
     old = load(FETCHED, {})
-    save(FETCHED, {"date": day, "complete": not problem, "note": problem,
-                   "incomplete_since": (old.get("incomplete_since") or day) if problem else None,
-                   "dropped": old.get("dropped", {}) if dropped is None else dropped})
+    rec = {"date": day, "complete": not problem, "note": problem,
+           "incomplete_since": (old.get("incomplete_since") or day) if problem else None,
+           "dropped": old.get("dropped", {}) if dropped is None else dropped}
+    if sources is not None:
+        cut = (dt.date.fromisoformat(day) - dt.timedelta(days=LOG_DAYS)).isoformat()
+        log = [x for x in old.get("log") or [] if isinstance(x, dict) and cut < x.get("date", "") < day]
+        rec["sources"] = sources
+        rec["log"] = log + [{"date": day, "feed": sources["feed"]["ok"] and whole, "opentix": sources["opentix"]["ok"]}]
+    save(FETCHED, rec)
+
+
+def ot_ids(e):
+    """The OPENTIX ids a listed event is followed by: 19-digit uids and the ids in its ticket and source URLs."""
+    got = [u for u in e.get("uids") or [] if opentix.ID.match(u)]
+    for x in [s.get("tickets") for s in e.get("shows") or [] if isinstance(s, dict)] + \
+             [x.get("url") for x in e.get("sources") or [] if isinstance(x, dict)]:
+        got += opentix.ids_in(x if isinstance(x, str) else "")
+    return list(dict.fromkeys(got))
+
+
+def feed_uids(e):
+    """The Ministry feed's UIDs of a listed event (not the OPENTIX ids kept in uids)."""
+    return [u for u in e.get("uids") or [] if not opentix.ID.match(u)]
+
+
+def show_of(s):
+    """(date, time, city, venue, price) of one show as the feed gives it (OPENTIX pages are put in the same shape)."""
+    when = (s.get("time") or "").replace("/", "-")
+    date, time = when[:10], when[11:16]
+    return date, time if TIME_RE.match(time) else "", city_of(s), (s.get("locationName") or "").strip(), (s.get("price") or "").strip()
+
+
+class BadState(ValueError):
+    """state/concerts/opentix.json is there but not of its shape."""
+
+
+class ShowsUnreadable(ValueError):
+    """A programme page with shows on it, none with a date and a city that can be read (or a listed event's page with none)."""
+
+
+OT_DAYS = ("pending", "ends", "tries", "later")  # {id: a date} each; with known, the four places of 第四類 (ends goes with pending)
+
+
+def is_day(v):
+    """A YYYY-MM-DD string that date.fromisoformat reads (2026-02-30 is not one)."""
+    try:
+        return isinstance(v, str) and bool(DATE_RE.match(v)) and bool(dt.date.fromisoformat(v))
+    except ValueError:
+        return False
+
+
+def ot_shape(state):
+    """The check ot_load reads the state file with, and ot_save writes it with (v6 J2)."""
+    is_id = lambda v: isinstance(v, str) and bool(opentix.ID.match(v))  # noqa: E731 — 19 digits: int() reads it
+    return (isinstance(state, dict) and isinstance(state.get("known"), list) and all(map(is_id, state["known"]))
+            and all(isinstance(state.get(k, {}), dict) and all(is_id(i) and is_day(v) for i, v in state.get(k, {}).items())
+                    for k in OT_DAYS))
+
+
+def ot_load():
+    """state/concerts/opentix.json with every field there; None only when there is no file (the first run). A file not of
+    its shape raises BadState (v5 第一類: known missing; any id or date that int() or date.fromisoformat, which read
+    them later, would not take), one that is not JSON its own error: the caller leaves the file as it is."""
+    if not os.path.exists(OTSTATE):
+        return None
+    with open(OTSTATE, encoding="utf-8") as f:
+        state = json.load(f)
+    if not ot_shape(state):
+        raise BadState("狀態檔形狀不對")
+    for k in OT_DAYS:
+        state.setdefault(k, {})
+    return state
+
+
+def ot_move(state, i, where, day, when=None):
+    """v5 第四類, every move of an id: into `where` and out of every other place, but for the one exception — a pending
+    id that is unreadable these days is in pending and tries. when: the last show (pending) or the day to read it again (later)."""
+    if where == "pending":
+        state["pending"].setdefault(i, day)
+        state["ends"][i] = when
+    elif where == "tries":
+        state["tries"].setdefault(i, day)
+    elif where == "later":
+        state["later"][i] = when
+    keep = {"pending": ("pending", "ends"), "tries": ("pending", "ends", "tries"), "later": ("later",), "known": ()}[where]
+    for k in OT_DAYS:
+        if k not in keep:
+            state[k].pop(i, None)
+    if (where == "known") != (i in state["known"]):
+        state["known"] = state["known"] + [i] if where == "known" else [x for x in state["known"] if x != i]
+
+
+def ot_save(state, day):
+    """v5 第四類, the one normalisation before the state file is written (fetch, prune and reopen all write it here): an id
+    is in one place only — pending (with its tries), else tries, else later, else known — ends is kept for pending
+    ids alone, and no later is past today + WINDOW (a placeholder date of 9999 on a page must not keep it unread for good)."""
+    cap = (dt.date.fromisoformat(day) + dt.timedelta(days=WINDOW)).isoformat()
+    pending, tries = state["pending"], state["tries"]
+    state["later"] = {i: min(d, cap) for i, d in state["later"].items() if i not in pending and i not in tries}
+    state["ends"] = {i: d for i, d in state["ends"].items() if i in pending}
+    state["known"] = sorted(set(state["known"]) - set(pending) - set(tries) - set(state["later"]), key=int)
+    if not ot_shape(state):
+        raise BadState("要存的狀態檔形狀不對，沒有存")  # v6 J2: never a file ot_load would turn away; the old one stays
+    save(OTSTATE, state)
+
+
+def ot_place(what):
+    """v5 第二類 and v4's table, the one decision of where a new or pending id goes after what its page said today:
+    "category" (a category read and not taken; its shows not looked at), "none" (a category taken, every show read,
+    none the list could take: another city, a title filtered) and "closed" (dealt with by close, or listed) go to
+    known; "candidate" to pending; "later" to later; anything else ("no shows", "unreadable", "partly": shows not all
+    read and none to list) to tries — an id understood only in part never goes to known for good but after NEW_DAYS days (said so)."""
+    return {"category": "known", "none": "known", "closed": "known", "candidate": "pending", "later": "later"}.get(what, "tries")
+
+
+def room(start, timeout, retries=0, pause=0.0):
+    """v5 第五類: may a request of fetch begin — the time since `start`, a pause before it and the most it can take
+    (every try at its timeout, RETRY_WAIT between two) within FETCH_SECONDS."""
+    return monotonic() - start + pause + (retries + 1) * timeout + retries * RETRY_WAIT <= FETCH_SECONDS
+
+
+def ot_why(e):
+    return str(e) if isinstance(e, BadState) else "出錯：%s" % type(e).__name__
+
+
+def ot_guard(ot, step, *args):
+    """v5 第一類, the one guard of everything fetch does with OPENTIX (the sitemap, the pages, where each id goes, the
+    day to read it again, writing the state file): any exception and OPENTIX is unreadable today, the kind of error
+    the reason; what was read is dropped and the state file is not written (the caller gets None)."""
+    try:
+        return step(*args)
+    except Exception as e:  # noqa: BLE001 — a broken state file, a page of a shape nobody foresaw, a bug
+        ot.clear()
+        ot.update(ot_none(ot_why(e)))
+        return None
+
+
+def read_opentix(out, day, end, ot_listed, seen, start):
+    """OPENTIX for one fetch, into `out` (ot_none's shape): the sitemap, then the pages of listed events, pending
+    candidates, ids in tries, ids in later whose day has come and new programmes, MAX_PAGES pages in all; it stops
+    after STOP_AFTER pages in a row unreadable the way a host failing or blocking us is, once ALL_AFTER pages are read
+    and every one unreadable, or before a request that could end past FETCH_SECONDS from `start` (room). Returns the
+    state. out: ok/note/new/pages/left/newest, rows (pages of a category the list takes, in the feed's shape), read
+    {id: (what its page said, whether every show on it was read)} for ot_finish (fetch says what the rows' were),
+    shows {event id: shows in the window}, failed {event id: [ids]}, status {event id: [...]}, unread {event ids with a
+    page not asked for today: not compared}, waiting (pending ids not asked for), again (other ids in tries or later)."""
+    if not room(start, opentix.TIMEOUT, opentix.TRIES):
+        out["note"] = "sitemap：時間不夠，沒有讀"
+        return None
+    try:
+        ids = opentix.sitemap_ids()
+    except Exception as e:  # noqa: BLE001 — any failure means OPENTIX could not be read today
+        out["note"] = "sitemap：%s" % e
+        return None
+    out["newest"] = opentix.created(ids[-1]).astimezone(tw_now().tzinfo).date().isoformat()
+    state = ot_load()
+    if state is None:  # the first run
+        cut = tw_now() - dt.timedelta(days=NEW_DAYS)
+        state = {"known": [i for i in ids if opentix.created(i) < cut], "pending": {}, "ends": {}, "tries": {}, "later": {}, "since": day}
+    known, pending, tries, later = set(state["known"]), state["pending"], state["tries"], state["later"]
+    waiting = set(pending) | set(tries) | set(later)
+    for i in [i for i in waiting | {i for i in ids if i in ot_listed} if i in seen or i in ot_listed]:
+        out["read"][i] = ("closed", True)  # dealt with by close, or on the list
+    bad = run = 0  # run: unreadable pages in a row that look like the host failing or blocking us
+
+    def page(i):
+        """The page, or None: unreadable (counted), or not asked for (the page cap, the stop rule, the time)."""
+        nonlocal bad, run
+        if out["pages"] >= opentix.MAX_PAGES or run >= STOP_AFTER or out["pages"] >= ALL_AFTER and bad == out["pages"] or \
+                not room(start, opentix.PAGE_TIMEOUT, 0, opentix.PAUSE):
+            return None
+        out["pages"] += 1
+        try:
+            p = opentix.page(i)
+            if i not in ot_listed and p["category"] and not OT_CATEGORY.get(p["category"]):
+                p["what"] = "category"  # v5 第二類 1: a category read and not taken, its shows not looked at
+                return p
+            p["row"] = opentix.row(p)  # inside the try: a page of an unexpected shape is unreadable, not a crash
+            dates = [show_of(s)[0] for s in p["row"]["showInfo"]]
+            if not all(is_day(d) for d in dates if DATE_RE.match(d)):
+                raise ValueError("節目頁上有不存在的日期")  # 2027-06-31: unreadable here (v5 第一類), never a crash later
+            if p["shows"] and not p["category"] and i not in ot_listed:
+                raise ShowsUnreadable("頁上有場次、讀不出類別")  # v5 第二類: a new layout, never 「類別不收」
+            read = [bool(DATE_RE.match(d)) and bool(show_of(s)[2] or ps["city"] and i not in ot_listed)  # a listed page: a city the list follows (v3 H1)
+                    for d, s, ps in zip(dates, p["row"]["showInfo"], p["shows"])]
+            if (p["shows"] or i in ot_listed) and not any(read):
+                raise ShowsUnreadable("頁上沒有讀得出日期與城市的場次")  # 讀不到, not 消失 nor 沒有合格場次
+            p["what"], p["whole"] = "rows" if p["shows"] else "no shows", all(read)
+        except Exception as x:  # noqa: BLE001 — HTTP error, timeout, not a programme page, an unexpected shape
+            bad += 1
+            if not (isinstance(x, (opentix.NotProgramme, ShowsUnreadable)) or getattr(x, "code", None) in (404, 410)):
+                run += 1  # a page gone, not a programme page or with shows unreadable does not stop the source by itself
+            return False
+        run = 0
+        return p
+
+    for i in sorted(ot_listed, key=int):  # listed events first
+        e = ot_listed[i]
+        p = page(i)
+        if p is None:
+            out["unread"].add(e["id"])
+            continue
+        if p is False:  # 讀不到, not 消失
+            out["failed"].setdefault(e["id"], []).append(i)
+            continue
+        shows = out["shows"].setdefault(e["id"], [])
+        for s, ps in zip(p["row"]["showInfo"], p["shows"]):
+            date, hhmm, city, venue, price = show_of(s)
+            if city and DATE_RE.match(date) and day <= date <= end:
+                shows.append({"date": date, "time": hhmm, "city": city, "venue": venue, "price": price})
+                if ps["status"] and ps["status"] != "EventScheduled" and ps["status"] not in out["status"].get(e["id"], []):
+                    out["status"].setdefault(e["id"], []).append(ps["status"])
+    for x in out["unread"]:  # an event with a page not read today is not compared on half its shows
+        out["shows"].pop(x, None)
+        out["status"].pop(x, None)
+    todo = [i for i in sorted(pending, key=int) + sorted(set(tries) - set(pending), key=int) +
+            sorted((i for i in later if later[i] <= day and i not in pending and i not in tries), key=int) +
+            [i for i in ids if i not in known and i not in waiting and i not in ot_listed] if i not in out["read"]]
+    out["new"] = sum(1 for i in todo if i not in waiting)
+    for i in todo:  # what each page says goes to out["read"]; ot_place decides what that means for the id
+        p = page(i)
+        if p is None:  # not asked for: as it was
+            out["waiting" if i in pending else "again" if i in waiting else "left"] += 1
+        elif p is False:
+            out["read"][i] = ("unreadable", False)
+        elif p["what"] == "rows":
+            out["read"][i] = ("rows", p["whole"])  # fetch rates it and says which
+            out["rows"].append((OT_CATEGORY[p["category"]], p["row"], True))
+        else:
+            out["read"][i] = (p["what"], True)  # "category", or "no shows" (類別 but no show block yet)
+    if run >= STOP_AFTER:
+        out["note"] = "連續 %d 頁讀不到" % STOP_AFTER
+    elif bad >= 3 and bad * 2 > out["pages"]:
+        out["note"] = "節目頁 %d 頁裡 %d 頁讀不到" % (out["pages"], bad)
+    out["ok"] = not out["note"]
+    return state
+
+
+def ot_finish(ot, state, fate, picked, day):
+    """After the candidates are made: where every id read today goes (ot_place, by way of ot_move), the day to read a
+    later one again, and the state file written (ot_save). fate {id: ("later", its first show the list could take) |
+    ("none", None)}: what fetch made of each row; picked: the uids of the candidates. An id not read (its page not
+    asked for) stays as it was. Returns the ids let go after NEW_DAYS days of tries (printed: v5 第四類)."""
+    gave_up = []
+    for _, e, _ in ot["rows"]:
+        if e["UID"] in picked:  # row 1: with its last show, for prune
+            fate[e["UID"]] = ("candidate", max(d for d in (show_of(x)[0] for x in e["showInfo"]) if DATE_RE.match(d)))
+    for i, (what, x) in sorted(ot["read"].items(), key=lambda kv: int(kv[0])):
+        when = None
+        if what == "rows":
+            what, when = fate.get(i, ("none", None))
+            if what == "none" and not x:
+                what = "partly"  # shows not all read, none to list: not understood (v5 第二類)
+            elif what == "later":  # row 3: the day the first show it could be listed for enters the window
+                when = (dt.date.fromisoformat(when) - dt.timedelta(days=WINDOW)).isoformat()
+        where = ot_place(what)
+        if where == "tries":  # rows 4 and 5: read again every fetch, and after NEW_DAYS days from the first such day …
+            if (dt.date.fromisoformat(day) - dt.date.fromisoformat(state["tries"].get(i, day))).days < NEW_DAYS:
+                ot_move(state, i, "tries", day)
+                continue
+            where = "known"
+            gave_up.append(i)  # … row 6: let go, said so
+        ot_move(state, i, where, day, when)
+    ot_save(state, day)
+    return gave_up
+
+
+def ot_none(note):
+    """read_opentix's result when OPENTIX could not be read at all."""
+    return {"ok": False, "note": note, "new": 0, "pages": 0, "left": 0, "newest": "", "rows": [], "read": {}, "shows": {}, "failed": {},
+            "status": {}, "unread": set(), "waiting": 0, "again": 0}
 
 
 def fetch(a):
-    day = today()
+    start, day = monotonic(), today()
     end = (dt.date.fromisoformat(day) + dt.timedelta(days=WINDOW)).isoformat()
     seen = load(SEEN, {})
     data = load(FILE, {"events": []})
@@ -156,20 +446,33 @@ def fetch(a):
     feed_shows = {}  # listed event id → the feed's shows for its UIDs (a listed event is never a candidate again, but
     #                  its shows are compared: a listing was checked once, on the day it was rated, and then never —
     #                  cancellations, new dates and new cities went unnoticed, review 2026-11-08)
-    raw = []
+    raw, feed_err = [], ""
     for cat in (1, 2):
         try:
-            status, _, body = http_get(FEED % cat, timeout=60)
+            if not room(start, 60, FEED_TRIES):  # v5 第五類: not begun when it could end past FETCH_SECONDS
+                raise TimeoutError("時間不夠，沒有讀")
+            status, _, body = http_get(FEED % cat, timeout=60, retries=FEED_TRIES)
             rows = json.loads(body.decode("utf-8"))
             if not rows:  # an empty answer is not 「今天沒有新演出」
                 raise ValueError("回應是空的")
-            raw += [(cat, e) for e in rows]
-        except Exception as e:  # noqa: BLE001 — any failure means the check could not be made today
-            print("查核失敗：讀不到文化部開放資料（category %d）：%s" % (cat, e))
-            note_fetch(day, "讀不到 category %d：%s" % (cat, e))
-            return 2
-    cands, known, info, dropped, filled = [], 0, {}, {}, False
-    for cat, e in raw:
+            raw += [(cat, e, False) for e in rows]
+        except Exception as e:  # noqa: BLE001 — any failure means the feed could not be read today; OPENTIX is still tried
+            feed_err, raw = "category %d：%s" % (cat, e), []
+            break
+    ot_listed = {i: e for e in data.get("events", []) for i in ot_ids(e)}
+    ot = ot_none("")
+    ot_state = ot_guard(ot, read_opentix, ot, day, end, ot_listed, seen, start)  # v5 第一類: OPENTIX only through ot_guard
+
+    def both_down():
+        sources = {"feed": {"ok": False, "note": feed_err}, "opentix": {k: ot[k] for k in ("ok", "note", "new", "pages", "left", "newest")}}
+        print("查核失敗：兩個來源都讀不到（文化部：%s；OPENTIX：%s）" % (feed_err, ot["note"]))
+        note_fetch(day, "兩個來源都讀不到（文化部：%s；OPENTIX：%s）" % (feed_err, ot["note"]), sources=sources)
+        return 2
+    if feed_err and not ot["ok"]:
+        return both_down()
+    raw += ot["rows"]
+    cands, known, info, dropped, filled, fate = [], 0, {}, {}, False, {}
+    for cat, e, mine in raw:
         uid, title = e.get("UID") or "", (e.get("title") or "").strip()
         if not uid or not title:
             continue
@@ -182,15 +485,11 @@ def fetch(a):
             continue  # as before: a listed event is not looked up under a filtered title
         shows, in_window, sig = [], [], set()
         for s in e.get("showInfo") or []:
-            when = (s.get("time") or "").replace("/", "-")
-            date, time = when[:10], when[11:16]
-            city = city_of(s)
-            venue = (s.get("locationName") or "").strip()
+            date, time, city, venue, price = show_of(s)
             if city and DATE_RE.match(date) and day <= date and (city == "台中" or BIG_HALL.search(venue)):
                 sig.add("%s %s" % (date, city))  # every show to come, not the window's: the window slides by a day a day
             if city and DATE_RE.match(date) and day <= date <= end:
-                show = {"date": date, "time": time if TIME_RE.match(time) else "", "city": city,
-                        "venue": venue, "price": (s.get("price") or "").strip()}
+                show = {"date": date, "time": time, "city": city, "venue": venue, "price": price}
                 in_window.append(show)  # every show in the window, for the comparison with a listed event
                 if city == "台中" or BIG_HALL.search(venue):
                     shows.append(show)  # a candidate only where the trip is worth it
@@ -198,7 +497,14 @@ def fetch(a):
             known += 1
             feed_shows.setdefault(listed[uid]["id"], []).extend(in_window)
             continue
+        if not mine and any(i in ot_listed or i in seen for i in opentix.ids_in("%s %s" % (e.get("webSales"), e.get("sourceWebPromote")))):
+            known += 1  # the feed's entry for an OPENTIX programme already listed or rated: not a candidate twice
+            continue
+        if mine:
+            fate[uid] = ("none", None)  # no show the list could take (ot_finish: unless not every show was read)
         if not shows:
+            if mine and sig and not drop:  # every show it could be listed for is after the window: ot_finish says when to read it again
+                fate[uid] = ("later", min(sig)[:10])
             continue
         sig = sorted(sig)
         if drop:  # would have been a candidate: keep what was dropped and why
@@ -239,6 +545,13 @@ def fetch(a):
         else:
             merged[k] = c
     cands = list(merged.values())
+    gave_up = []
+    if ot_state is not None:  # an OPENTIX candidate (the 60 cut off included) stays pending until close
+        gave_up = ot_guard(ot, ot_finish, ot, ot_state, fate, {u for c in cands for u in c["uids"]}, day)
+        if gave_up is None:  # OPENTIX unreadable today after all and the state file as it was: every page is read again tomorrow
+            gave_up = []
+            if feed_err:
+                return both_down()
     cands.sort(key=lambda c: (c["shows"][0]["date"], min(CITY_ORDER.index(s["city"]) for s in c["shows"])))
     waiting = max(0, len(cands) - LIMIT)
     cands = cands[:LIMIT]
@@ -268,18 +581,39 @@ def fetch(a):
             lines.append("  - 可能和候選 %s 是同一製作" % "、".join("`%s`" % u for u in c["twins"]))
         if c["again"]:
             lines.append("  - " + c["again"])
-    changed = listed_changes(data, feed_shows, day, end)
+    changed = listed_changes(data, feed_shows, day, end, ot, not feed_err)
     # A feed that comes back short (2026-11-09 06:18: 23 of the 24 listed events "gone", all back by noon) is not 23
     # cancellations: when most of the listed events are missing at once, say the feed was incomplete and leave the
-    # whole-event notes out — the next fetch compares again.
+    # whole-event notes out — the next fetch compares again. Only the events the feed alone follows count (no OPENTIX id).
     gone = [x for x in changed if x[1] and x[1][0].startswith("開放資料裡已找不到")]
-    with_uids = sum(1 for e in data.get("events", []) if e.get("uids") and any(day <= s.get("date", "") <= end for s in e.get("shows", [])))
-    partial = len(gone) >= 3 and len(gone) * 2 > with_uids
+    with_uids = sum(1 for e in data.get("events", []) if feed_uids(e) and not ot_ids(e) and any(day <= s.get("date", "") <= end for s in e.get("shows", [])))
+    partial = not feed_err and len(gone) >= 3 and len(gone) * 2 > with_uids
     if partial:
-        changed = [x for x in changed if x not in gone]
+        changed = listed_changes(data, feed_shows, day, end, ot, False)  # v6 J3: as on a morning the feed is unreadable
         print("注意：開放資料這次不完整（已列入的 %d 筆裡有 %d 筆整筆不在回應裡），不當作取消，異動段落略過這些；明天再比。"
               "新候選照常評分；這次算沒查完（結束碼 3）。" % (with_uids, len(gone)))
-    note_fetch(day, "已列入的 %d 筆裡有 %d 筆整筆不在回應裡" % (with_uids, len(gone)) if partial else "", dropped)
+    if feed_err:
+        print("來源讀不到：文化部開放資料（%s）" % feed_err)
+    if not ot["ok"]:
+        print("來源讀不到：OPENTIX（%s）" % ot["note"])
+    if ot["left"]:
+        print("OPENTIX 還有 %d 個新節目留到下次" % ot["left"])
+    if ot["unread"]:
+        print("OPENTIX 已列入的演出有 %d 檔這次沒核對" % len(ot["unread"]))
+    if ot["waiting"]:
+        print("OPENTIX 待判的候選有 %d 個這次沒讀到" % ot["waiting"])
+    if ot["again"]:
+        print("OPENTIX 之前讀不到或還沒到日子的編號有 %d 個這次沒讀到" % ot["again"])
+    for i in gave_up:
+        print("OPENTIX %s 連續 %d 天讀不到（或沒有場次），不再讀" % (i, NEW_DAYS))
+    quiet = (dt.date.fromisoformat(day) - dt.date.fromisoformat(ot["newest"])).days if ot["newest"] else 0
+    if quiet >= STALE_DAYS:
+        print("OPENTIX 清單已 %d 天沒有新節目" % quiet)  # a reminder only: the exit code is not changed
+    problem = [x for x in ("讀不到文化部開放資料（%s）" % feed_err if feed_err else "", "讀不到 OPENTIX（%s）" % ot["note"] if not ot["ok"] else "",
+                           "已列入的 %d 筆裡有 %d 筆整筆不在回應裡" % (with_uids, len(gone)) if partial else "") if x]
+    sources = {"feed": {"ok": not feed_err, "note": feed_err},
+               "opentix": {k: ot[k] for k in ("ok", "note", "new", "pages", "left", "newest")}}
+    note_fetch(day, "；".join(problem), dropped, sources, whole=not partial)
     rules = rules_version()
     rej = [v for v in seen.values() if v.get("v") == "rejected"]
     stale = sum(1 for v in rej if v.get("rules") != rules)
@@ -287,48 +621,81 @@ def fetch(a):
         print("注意：判不收的 %d 筆裡有 %d 筆是照舊的評分規則判的（清單：python3 scripts/concerts.py blocked）。" % (len(rej), stale))
     if changed:
         lines += ["", "## 已列入演出的異動", "",
-                  "開放資料和 concerts.json 對不上的場次。先開該筆的售票頁確認，再改 shows／note；開放資料整筆消失不等於取消，以售票頁為準。", ""]
+                  "開放資料、OPENTIX 和 concerts.json 對不上的場次。先開該筆的售票頁確認，再改 shows／note；開放資料整筆消失不等於取消，以售票頁為準。", ""]
         for e, notes in changed:
             lines.append("- `%s`｜%s" % (e["id"], e.get("title", "")))
             lines += ["  - " + n for n in notes]
     with open(CANDS + ".md", "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
     by = {k: sum(1 for c in cands if any(s["city"] == k for s in c["shows"])) for k in CITY_ORDER}
-    print("新候選 %d 筆（%s）；%s已看過 %d 筆；標題過濾擋下 %d 筆%s。清單：%s.md" % (
+    print("新候選 %d 筆（%s）；%s已看過 %d 筆；標題過濾擋下 %d 筆%s；OPENTIX 新節目 %d 個、讀了 %d 頁、留到下次 %d 個。清單：%s.md" % (
         len(cands), "、".join("%s %d" % kv for kv in by.items()), "還有 %d 筆留到下次；" % waiting if waiting else "",
-        known, len(dropped), "；已列入有異動 %d 筆（見清單末段）" % len(changed) if changed else "", CANDS))
-    return 3 if partial else 0
+        known, len(dropped), "；已列入有異動 %d 筆（見清單末段）" % len(changed) if changed else "", ot["new"], ot["pages"], ot["left"], CANDS))
+    return 3 if partial or problem else 0
 
 
-def listed_changes(data, feed_shows, day, end):
-    """[(event, [notes])] for listed events whose upcoming shows differ from what the feed now says about their UIDs:
-    a listed show the feed no longer has (cancelled, or moved — a move shows up as one vanished and one new), a show
-    whose time or venue changed, a show the feed has and the listing does not (a new date or city). An event whose
-    UIDs have all left the feed is noted as such; events without UIDs (found by hand) are not in the feed at all."""
+def listed_changes(data, feed_shows, day, end, ot=None, feed_ok=True):
+    """[(event, [notes])] for listed events whose upcoming shows differ from what the feed says about their UIDs and
+    OPENTIX about their ids: a listed show neither has any more (cancelled, or moved — a move shows up as one vanished
+    and one new), a show whose time or venue changed, a show they have and the listing does not (a new date or city:
+    Taichung, or a main hall elsewhere for a 4 or more); on a day and city OPENTIX has a show on, its ticket page alone counts,
+    and a listed show its page lacks is gone unless a feed show of its own keeps it (one_to_one; none is said gone of an event
+    the feed follows on a day the feed is unreadable). Shows are matched by date and city, and by time too when a day
+    has more than one there (午場、晚場): a time change is said only of a day with one show on each side. An event the
+    feed alone follows whose UIDs have all left it is noted as such; an OPENTIX page that could not be read is said so,
+    never taken for a vanished show; a ticket page whose status is not 照常演出 is noted. Events with neither (found by hand, sold elsewhere) are not compared."""
+    ot = ot or {"shows": {}, "failed": {}, "status": {}}
     out = []
     squeeze = lambda v: re.sub(r"\s+", "", v or "")
     for e in data.get("events", []):
-        if not e.get("uids"):
+        oids, fuids = ot_ids(e), feed_uids(e)
+        if not oids and not fuids:
             continue
-        upcoming = {(s["date"], s["city"]): s for s in e.get("shows", []) if day <= s.get("date", "") <= end and s.get("city")}
-        if e["id"] not in feed_shows:
-            if upcoming:
-                out.append((e, ["開放資料裡已找不到這筆（UID %s）；整筆消失不等於取消，以售票頁為準" % "、".join(e["uids"])]))
+        upcoming = [s for s in e.get("shows", []) if day <= s.get("date", "") <= end and s.get("city")]
+        failed = ot["failed"].get(e["id"])
+        if failed:
+            out.append((e, ["OPENTIX 這一頁讀不到（%s）" % i for i in failed]))
             continue
-        feed = {}
-        for s in feed_shows[e["id"]]:
-            feed.setdefault((s["date"], s["city"]), s)
-        notes = []
-        for k in sorted(set(upcoming) - set(feed)):
-            s = upcoming[k]
+        if e["id"] not in feed_shows and e["id"] not in ot["shows"]:
+            if upcoming and feed_ok and not oids:
+                out.append((e, ["開放資料裡已找不到這筆（UID %s）；整筆消失不等於取消，以售票頁為準" % "、".join(fuids)]))
+            continue
+        feed, keys, sold = [], set(), {(s["date"], s["city"]) for s in ot["shows"].get(e["id"], [])}
+        for s in [s for s in feed_shows.get(e["id"], []) if (s["date"], s["city"]) not in sold] + ot["shows"].get(e["id"], []):
+            if (s["date"], s["city"], s["time"]) not in keys:  # a day and city OPENTIX has a show on: the ticket page alone
+                keys.add((s["date"], s["city"], s["time"]))
+                feed.append(s)
+        gone, new, pairs = [], [], []
+        for k in sorted({(s["date"], s["city"]) for s in upcoming + feed}):
+            a = [s for s in upcoming if (s["date"], s["city"]) == k]
+            b = [s for s in feed if (s["date"], s["city"]) == k]
+            if len(a) == 1 and len(b) == 1:
+                pairs.append((k, a.pop(), b.pop(), True))
+            for x in list(a):  # two or more that day: the same time, then one without a time with any left
+                y = next((y for y in b if x.get("time") and y["time"] == x["time"]), None) or \
+                    next((y for y in b if not (x.get("time") and y["time"])), None)
+                if y is not None:
+                    pairs.append((k, x, y, False))
+                    a.remove(x)
+                    b.remove(y)
+            gone += a
+            new += b
+        if e["id"] in ot["shows"]:  # its ticket page read: a show it lacks is gone only if the feed has a show of its own for it (v5 第五類)
+            spare = [dict(t) for t in sorted({tuple(sorted(f.items())) for f in feed_shows.get(e["id"], []) if (f["date"], f["city"]) in sold})]
+            one_to_one(ot["shows"][e["id"]], spare)  # first the feed's shows that are OPENTIX's own
+            gone = one_to_one(gone, spare)  # then one feed show keeps at most one listed show
+        if not feed_ok and fuids:
+            gone = []  # the feed unreadable today: an event it follows is not said to have lost a show (v5 第五類)
+        notes = ["售票頁狀態：%s" % x for x in ot["status"].get(e["id"], [])]
+        for s in gone:
             notes.append("消失：%s %s %s %s（可能取消或改期）" % (s["date"], s.get("time") or "", s["city"], s.get("venue") or ""))
-        for k in sorted(set(feed) - set(upcoming)):
-            s = feed[k]
+        for s in new:
+            if s["city"] != "台中" and not (BIG_HALL.search(s["venue"]) and (e.get("rating") or 0) >= 4):
+                continue  # a show the list would not take (concerts.md 收什麼)
             notes.append("新場次：%s %s %s %s%s" % (s["date"], s["time"], s["city"], s["venue"], "（%s）" % s["price"] if s["price"] else ""))
-        for k in sorted(set(feed) & set(upcoming)):
-            a, b = upcoming[k], feed[k]
+        for k, a, b, one in pairs:
             diff = []
-            if a.get("time") and b["time"] and a["time"] != b["time"]:
+            if one and a.get("time") and b["time"] and a["time"] != b["time"]:
                 diff.append("時間 %s → %s" % (a["time"], b["time"]))
             va, vb = squeeze(a.get("venue")), squeeze(b["venue"])
             if va and vb and va != vb and va not in vb and vb not in va:
@@ -338,6 +705,20 @@ def listed_changes(data, feed_shows, day, end):
         if notes:
             out.append((e, notes))
     return out
+
+
+def one_to_one(xs, pool):
+    """Pairs each show of xs with at most one show of pool on its day and in its city — the same time first, then one
+    of pool without a time (or at 00:00) — and takes it out of pool; returns the shows of xs left unpaired."""
+    rest = list(xs)
+    for loose in (False, True):
+        for x in list(rest):
+            y = next((y for y in pool if (y["date"], y["city"]) == (x["date"], x["city"])
+                      and (y["time"] in ("", "00:00") if loose else y["time"] == (x.get("time") or ""))), None)
+            if y is not None:
+                pool.remove(y)
+                rest.remove(x)
+    return rest
 
 
 def committed_ids():
@@ -408,17 +789,39 @@ def close(a):
     return 0
 
 
+def seen_end(v):
+    """The last show a seen.json record knows of: the latest date in its shows, else its end."""
+    return max([x[:10] for x in v.get("shows") or [] if isinstance(x, str)] or [v.get("end") or ""])
+
+
 def reopen(a):
     """Takes rejections out of seen.json, so that the next fetch offers them again: those named, all, those rejected on
     or after a date, or under rules since changed. (The only way back was to edit the file by hand: 13 shows, 2026-11-09.)"""
     seen, rules = load(SEEN, {}), rules_version()
     hit = [u for u, v in seen.items() if v.get("v") == "rejected" and (
         a.all or u in a.uids or (a.since and v.get("seen", "") >= a.since) or (a.old_rules and v.get("rules") != rules))]
+    back, ot, matched = [u for u in hit if opentix.ID.match(u)], None, bool(hit)
+    if back:  # an OPENTIX programme is read again only while pending: without a state file to put it in, it stays in seen.json
+        try:
+            ot = ot_load()
+            if ot is None:
+                print("OPENTIX 的狀態檔還沒建立，先跑一次 fetch 再 reopen")
+            else:
+                day, soon = today(), (tw_now().date() + dt.timedelta(days=NEW_DAYS)).isoformat()
+                for u in back:  # ends: prune clears it even if the page is gone, but not before fetch has read it a few times
+                    last = seen_end(seen[u])
+                    ot_move(ot, u, "pending", day, max(last, soon) if is_day(last) else soon)  # v6 J2: not a date, none
+                ot_save(ot, day)  # the state file first, then seen.json: an id is never in neither
+        except Exception as e:  # noqa: BLE001 — a broken state file (or record): left as it is
+            ot = None
+            print("OPENTIX 的狀態檔讀不了（%s），%d 個 OPENTIX 編號沒有放回：%s" % (ot_why(e), len(back), " ".join(back)))
+        if ot is None:
+            hit = [u for u in hit if u not in back]
     for u in hit:
-        del seen[u]
+        seen.pop(u)
     if hit:
         save(SEEN, seen)
-    print("放回候選 %d 筆%s" % (len(hit), "；下次 fetch 會再列出來（一次最多 %d 筆，由近到遠）" % LIMIT if hit else "（沒有符合的不收紀錄）"))
+    print("放回候選 %d 筆%s" % (len(hit), "；下次 fetch 會再列出來（一次最多 %d 筆，由近到遠）" % LIMIT if hit else "" if matched else "（沒有符合的不收紀錄）"))
     return 0 if hit else 1
 
 
@@ -471,6 +874,15 @@ def prune(a):
     save(FILE, data)
     if os.path.exists(SEEN) or seen:
         save(SEEN, seen)
+    try:
+        ot = ot_load()
+        over = [i for i, last in (ot["ends"].items() if ot else []) if i in ot["pending"] and last < day]
+        for i in over:  # a pending OPENTIX candidate whose last show is over: dealt with (no line: v5 第四類)
+            ot_move(ot, i, "known", day)
+        if over:
+            ot_save(ot, day)
+    except Exception as e:  # noqa: BLE001 — a broken state file: the rest of prune is done, the file left as it is
+        print("OPENTIX 的狀態檔讀不了（%s），這次沒清 OPENTIX 待判的候選" % ot_why(e))
     print("演出結束移除 %d 筆，剩 %d 筆；過期的已看過紀錄移除 %d 筆" % (before - len(data["events"]), len(data["events"]), len(gone)))
     return 0
 
@@ -694,6 +1106,34 @@ def sweep_done(a):
     return 0
 
 
+def ot_scan(a):
+    """OPENTIX programme pages parsed into a JSON file, for a full survey by hand: every id in the sitemap (--all, no
+    page limit) or those created in the last N days (at most MAX_PAGES pages). Reads no state and writes none."""
+    try:
+        ids = opentix.sitemap_ids()
+    except Exception as e:  # noqa: BLE001
+        print("讀不到 OPENTIX 的 sitemap：%s" % e)
+        return 2
+    if a.all:
+        todo = ids
+    else:
+        cut = tw_now() - dt.timedelta(days=a.days)
+        todo = [i for i in ids if opentix.created(i) >= cut][:opentix.MAX_PAGES]
+    pages, bad = [], 0
+    for i in todo:
+        try:
+            p = opentix.page(i)
+        except Exception as e:  # noqa: BLE001
+            p, bad = {"id": i, "url": opentix.PAGE % i, "error": str(e)}, bad + 1
+        p["created"] = opentix.created(i).astimezone(tw_now().tzinfo).isoformat(timespec="seconds")
+        pages.append(p)
+    with open(a.out, "w", encoding="utf-8") as f:
+        json.dump({"date": today(), "sitemap": len(ids), "pages": pages}, f, ensure_ascii=False, indent=1)
+        f.write("\n")
+    print("OPENTIX：sitemap %d 個節目；讀了 %d 頁（讀不到 %d 頁）→ %s" % (len(ids), len(pages), bad, a.out))
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -714,9 +1154,14 @@ def main():
     sd = sub.add_parser("sweep-done", help="交補查的證據檔；十個來源都查到才記成做完")
     sd.add_argument("--evidence", help="證據檔（格式見 sweep-due 的輸出）")
     sd.add_argument("--checked", nargs="*", help=argparse.SUPPRESS)  # the old call: taken so that it gets the refusal above
+    ot = sub.add_parser("ot-scan", help="把 OPENTIX 節目頁解析成 JSON 存下來；不動任何狀態檔")
+    g = ot.add_mutually_exclusive_group()
+    g.add_argument("--all", action="store_true", help="sitemap 裡每一個節目（不受每次 %d 頁的上限）" % opentix.MAX_PAGES)
+    g.add_argument("--days", type=int, default=NEW_DAYS, help="建立在 N 天內的節目（預設 %d）" % NEW_DAYS)
+    ot.add_argument("--out", required=True, help="存成這個檔")
     a = ap.parse_args()
     return {"fetch": fetch, "close": close, "prune": prune, "check": check, "blocked": blocked, "reopen": reopen,
-            "sweep-due": sweep_due, "sweep-done": sweep_done}[a.cmd](a)
+            "sweep-due": sweep_due, "sweep-done": sweep_done, "ot-scan": ot_scan}[a.cmd](a)
 
 
 if __name__ == "__main__":

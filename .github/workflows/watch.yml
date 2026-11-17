@@ -198,8 +198,18 @@ jobs:
           except (OSError, ValueError, TypeError, AttributeError):
               swept = None
           print("SWEEP_LATE=%s" % ("" if swept and (d - swept).days < 4 else q("上次 %s" % (swept or "沒有紀錄"))))
+          # 近期演出的兩個來源 (concerts.py fetch): both unreadable today is a problem (the owner, 2026-11-14); one only is
+          # written into the report; a fetch.json of another day, or one without sources, says nothing
+          try:
+              got = json.load(open("state/concerts/fetch.json", encoding="utf-8"))
+              src = got.get("sources") if got.get("date") == D else None
+              down = ["%s（%s）" % (n, (src.get(k) or {}).get("note") or "讀不到") for k, n in (("feed", "文化部開放資料"), ("opentix", "OPENTIX"))
+                      if not (src.get(k) or {}).get("ok")] if isinstance(src, dict) else []
+          except (OSError, ValueError, AttributeError):
+              down = []
+          print("CONCERT_SRC=%s" % q("、".join(down))); print("CONCERT_SRC_BOTH=%s" % ("yes" if len(down) == 2 else ""))
           EOF
-          LATE=; YLATE=; HELD=; NOREPORT=; SHIFT4=; LATE_MISSING=; SWEEP_LATE=
+          LATE=; YLATE=; HELD=; NOREPORT=; SHIFT4=; LATE_MISSING=; SWEEP_LATE=; CONCERT_SRC=; CONCERT_SRC_BOTH=
           . ./vars.sh
           # a 補刊 still running pushes a commit every so often; silence for 40 minutes means it has stopped (the routine's
           # own test); the checkout is shallow, so fetch enough history to see past this evening's other commits
@@ -215,6 +225,7 @@ jobs:
             fi
             [ -n "$NONOTICE" ] && { echo "### 出刊通知"; echo "到 $NOW 今天早上的出刊通知沒有送到任何裝置（notify.yml 今天 06:00 以後的執行裡，沒有一個「Sent」步驟成功）。"; echo; }
             [ -n "$SWEEP_LATE" ] && { echo "### 演出補查"; echo "近期演出的補查逾期了（$SWEEP_LATE；每兩天一次，scripts/concerts.py sweep-due）。"; echo; }
+            [ -n "$CONCERT_SRC" ] && { echo "### 演出來源"; echo "今天的 scripts/concerts.py fetch 讀不到：$CONCERT_SRC$([ -n "$CONCERT_SRC_BOTH" ] && echo "。兩個來源都讀不到，近期演出今天沒有查核" || echo "。另一個來源照常")（state/concerts/fetch.json）。"; echo; }
             if [ "$EVENING" = true ]; then
               echo "### 週日補刊"
               case "$LATE" in
@@ -283,6 +294,7 @@ jobs:
             esac
           else
             case "$YLATE" in waiting|regenerating|unfinished) PROBLEM=yes ;; esac
+            [ -n "$CONCERT_SRC_BOTH" ] && PROBLEM=yes   # both sources of 近期演出 unreadable; one alone is only in the report
             if [ -n "$HELD" ]; then
               [ "$LIVE_OK" = yes ] || PROBLEM=yes
             else

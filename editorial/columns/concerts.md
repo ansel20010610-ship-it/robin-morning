@@ -30,8 +30,9 @@ App 把它放在首頁最下面，另有完整頁面 `#/concerts`。演出日一
 
 ## 每天的流程（演出資訊 routine，台灣時間 06:17，要在 07:30 出刊前推完）
 1. `python3 scripts/concerts.py prune`：清掉已經演完的場次。
-2. `python3 scripts/concerts.py fetch`：從文化部藝文活動開放資料抓新候選，存成 `/tmp/robin/concert-candidates.md`。
-   - 印出「查核失敗」就跳到第 7 步。
+2. `python3 scripts/concerts.py fetch`：從文化部藝文活動開放資料與 OPENTIX 抓新候選，存成 `/tmp/robin/concert-candidates.md`。這一步會跑幾分鐘，指令的逾時設 10 分鐘。
+   - 印出「查核失敗」（兩個來源都讀不到）就跳到第 7 步。
+   - fetch 印出「來源讀不到」「沒核對」「沒讀到」「不再讀」的行，照抄進班次回報。
    - 印出「開放資料這次不完整」時，已列入的演出不必逐筆去查售票頁，照常處理新候選。
 3. 讀 `content/concerts.json` 與候選清單。逐筆判斷收不收：先刷掉明顯不收的（見上），剩下的才查。
 4. 要收的，查演出者與曲目：先用 WebFetch 讀候選清單附的 OPENTIX 或場館節目頁，必要時再查場館官網（臺中國家歌劇院 npac-ntt.org、國家兩廳院 npac-ntch.org、衛武營 npac-weiwuying.org）或樂團官網。
