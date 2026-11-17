@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "complete": true,
   "note": "",
   "incomplete_since": null,
@@ -21,15 +21,20 @@
     "opentix": {
       "ok": true,
       "note": "",
-      "new": 40,
+      "new": 42,
       "pages": 80,
-      "left": 18,
+      "left": 22,
       "newest": "2026-11-13"
     }
   },
   "log": [
     {
       "date": "2026-11-17",
+      "feed": true,
+      "opentix": true
+    },
+    {
+      "date": "2026-11-18",
       "feed": true,
       "opentix": true
     }
