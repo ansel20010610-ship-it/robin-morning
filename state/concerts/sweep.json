@@ -4,181 +4,1752 @@
   "sources": {
     "mna": {
       "urls": [
-        "https://www.mna.com.tw",
+        "https://www.mna.com.tw/concerts.html",
+        "https://www.mna.com.tw/concerts.html?page=2",
+        "https://www.mna.com.tw/concerts.html?page=3",
+        "https://www.mna.com.tw/concerts_detail.html?id=774",
+        "https://www.mna.com.tw/concerts_detail.html?id=775",
+        "https://www.mna.com.tw/concerts_detail.html?id=776",
         "https://www.mna.com.tw/concerts_detail.html?id=777",
-        "https://www.mna.com.tw/concerts_detail.html?id=782"
+        "https://www.mna.com.tw/concerts_detail.html?id=778",
+        "https://www.mna.com.tw/concerts_detail.html?id=779",
+        "https://www.mna.com.tw/concerts_detail.html?id=780",
+        "https://www.mna.com.tw/concerts_detail.html?id=781",
+        "https://www.mna.com.tw/concerts_detail.html?id=782",
+        "https://www.mna.com.tw/concerts_detail.html?id=783",
+        "https://www.mna.com.tw/concerts_detail.html?id=784"
       ],
       "seen": [
         {
-          "title": "Thielemann Staatskapelle Berlin",
+          "title": "Christian Thielemann and Staatskapelle Berlin（指揮大師提勒曼與柏林國家歌劇院管弦樂團）",
           "verdict": "已列入",
           "id": "thielemann-staatskapelle-berlin-2026"
         },
         {
-          "title": "Currentzis Utopia",
-          "verdict": "已列入",
-          "id": "currentzis-utopia-2026"
-        },
-        {
-          "title": "Yuja Wang MCO",
+          "title": "Yuja Wang and Mahler Chamber Orchestra（鋼琴天后 王羽佳 與馬勒室內樂團）",
           "verdict": "已列入",
           "id": "yuja-wang-mco-2026"
         },
         {
-          "title": "Lang Lang",
+          "title": "Teodor Currentzis and Utopia Orchestra（指揮巨星庫倫奇斯與烏托邦管弦樂團）",
+          "verdict": "已列入",
+          "id": "currentzis-utopia-2026"
+        },
+        {
+          "title": "Philharmonix（維也納柏林首席獨奏家合奏團）",
+          "verdict": "已列入",
+          "id": "philharmonix-2026"
+        },
+        {
+          "title": "Lang Lang Piano Recital（鋼琴巨星 郎朗）",
           "verdict": "已列入",
           "id": "lang-lang-recital-2026"
         },
         {
-          "title": "Diana Krall",
+          "title": "DIANA KRALL（爵士天后 戴安娜・克瑞兒）",
           "verdict": "不收",
-          "why": "爵士歌手，非古典，不在收錄範圍"
+          "why": "不在範圍：爵士歌手演唱會，屬「流行歌手與跨界演唱會」；場地臺北流行音樂中心也不是主廳"
         },
         {
-          "title": "Philharmonix 12/15 台北國家音樂廳",
+          "title": "\"Attack on Titan\" -Beyond the Walls World Tour-（《進擊的巨人》-Beyond the Walls 世界巡演-）",
           "verdict": "不收",
-          "why": "3分：維也納柏林愛樂首席組成，曲目是改編小品與電影、搖滾拼盤，台北場門檻4分"
+          "why": "不在範圍：動畫配樂、搖滾加交響，屬「動漫、電玩、電影配樂拼盤」（同一檔亦見 ntt）"
         },
         {
-          "title": "Marc André 低音提琴與吉他 11/20 台北",
+          "title": "INTERSTELLAR LIVE（《星際效應》電影交響音樂會）",
           "verdict": "不收",
-          "why": "3分：曲目多為改編小品與流行歌，台北場門檻4分"
+          "why": "2 分：大銀幕放映電影全片、國臺交現場配季默的《星際效應》配樂，曲目只有這部電影配樂；屬手冊不收的電影配樂類，不是古典節目。"
+        },
+        {
+          "title": "Marc André Double Bass Concert（馬克・安德烈 低音提琴音樂會）",
+          "verdict": "不收",
+          "why": "3 分：華納簽下的年輕低音提琴家配吉他，曲目是西班牙小品改編加〈彩虹之上〉〈哈利路亞〉等流行歌，沒有主要作品，台北場要 4 分。"
+        }
+      ]
+    },
+    "pbc": {
+      "urls": [
+        "https://bloomingarts.com.tw/",
+        "https://bloomingarts.com.tw/concerts_newest.html",
+        "https://www.opentix.life/ticketpackage/2114997862611017729",
+        "https://www.opentix.life/event/2109220205655908353",
+        "https://www.opentix.life/event/2095048717894885376",
+        "https://www.opentix.life/event/2109223228739743745",
+        "https://www.opentix.life/event/2109225538266103809",
+        "https://www.opentix.life/event/2113234294738067457",
+        "https://www.opentix.life/event/2113240665360117761",
+        "https://www.opentix.life/event/2113244668429352961",
+        "https://www.opentix.life/event/2114664554588803073"
+      ],
+      "seen": [
+        {
+          "title": "柏林愛樂中提琴首席梅第揚　全本巴赫無伴奏大提琴組曲",
+          "verdict": "已列入",
+          "id": "mei-bach-suites-2027"
+        },
+        {
+          "title": "瓦洛金2027鋼琴獨奏會",
+          "verdict": "已列入",
+          "id": "volodin-recital-2027"
+        },
+        {
+          "title": "路易沙達2027鋼琴獨奏會",
+          "verdict": "已列入",
+          "id": "luisada-recital-2027"
+        },
+        {
+          "title": "納莫拉澤2026鋼琴獨奏會",
+          "verdict": "不收",
+          "why": "4 分；只在衛武營表演廳或兩廳院演奏廳演出，台北、高雄只收主廳，不列入"
+        },
+        {
+          "title": "作品編號五十九－丹奈爾四重奏",
+          "verdict": "不收",
+          "why": "不在範圍：日期 2027-05-02 超過 2027-04-16"
+        },
+        {
+          "title": "巴佛傑2027鋼琴獨奏會",
+          "verdict": "不收",
+          "why": "不在範圍：日期 2027-05-02 超過 2027-04-16"
+        },
+        {
+          "title": "馬丁．賈西亞．賈西亞2027鋼琴獨奏會",
+          "verdict": "不收",
+          "why": "不在範圍：日期 2027-05-15 超過 2027-04-16"
+        },
+        {
+          "title": "布蘭德爾與我－周善祥2027鋼琴獨奏會",
+          "verdict": "不收",
+          "why": "不在範圍：日期 2027-06-07 超過 2027-04-16"
+        }
+      ]
+    },
+    "newaspect": {
+      "urls": [
+        "https://www.newaspect.org.tw/",
+        "https://www.newaspect.org.tw/pages-sitemap.xml",
+        "https://www.newaspect.org.tw/news-features",
+        "https://www.newaspect.org.tw/2027giltberg5beethoven",
+        "https://www.newaspect.org.tw/argerichmartha2026",
+        "https://www.newaspect.org.tw/thewhoopgroup2026",
+        "https://www.newaspect.org.tw/quintetolegrandtango",
+        "https://www.newaspect.org.tw/pianochopinproject",
+        "https://www.newaspect.org.tw/loicschneiderflute2026",
+        "https://www.newaspect.org.tw/gergelyittzesflute"
+      ],
+      "seen": [
+        {
+          "title": "向貝多芬致敬 吉爾特伯格×TSO",
+          "verdict": "已列入",
+          "id": "giltburg-beethoven-tso-2027"
+        },
+        {
+          "title": "阿格麗希音樂節在台灣",
+          "verdict": "不收",
+          "why": "不在範圍：已演完（最後一場 11/15）"
+        },
+        {
+          "title": "窩噗瘋一下 The WHOOP Group",
+          "verdict": "不收",
+          "why": "不在範圍：已演完"
+        },
+        {
+          "title": "皮亞佐拉五重奏",
+          "verdict": "不收",
+          "why": "不在範圍：已演完"
+        },
+        {
+          "title": "2026蕭邦計畫",
+          "verdict": "不收",
+          "why": "不在範圍：已演完"
+        },
+        {
+          "title": "春嬉 II 許奈德長笛演奏會",
+          "verdict": "不收",
+          "why": "不在範圍：已演完"
+        },
+        {
+          "title": "春嬉 I 伊采森長笛演奏會",
+          "verdict": "不收",
+          "why": "不在範圍：已演完"
+        }
+      ]
+    },
+    "tanart": {
+      "urls": [
+        "https://arsformosa.com.tw/",
+        "https://www.arsformosa.com.tw/h/News?key=895669656116",
+        "https://www.arsformosa.com.tw/h/NewsInfo?key=895669656116&cont=531063",
+        "https://www.arsformosa.com.tw/h/NewsInfo?key=895669656116&cont=532664",
+        "https://www.arsformosa.com.tw/h/Service?key=895669656116&set=7"
+      ],
+      "seen": [
+        {
+          "title": "于魁智、李勝素與中國戲曲學院名家匯演",
+          "verdict": "不收",
+          "why": "不在範圍：京劇屬戲曲；concerts.md 寫歌劇指西方歌劇、戲曲不算，也列在不收。頁面只寫「OPENTIX兩廳院文化生活」，沒有售票網址。"
+        },
+        {
+          "title": "玉山音樂饗宴─維也納少年合唱團 Vienna Boys’ Choir",
+          "verdict": "不收",
+          "why": "不在範圍：已演完（最後一場 2026-10-30，早於 2026-11-17）。頁面只寫 OPENTIX，沒有售票網址。"
+        }
+      ]
+    },
+    "kham": {
+      "error": "kham.com.tw 對晨報身分一律回 HTTP 200 加 1,224 位元組的「403 禁止訪問」假頁（首頁、列表頁、robots.txt、sitemap 都一樣），照規定不換身分，整個來源讀不到。"
+    },
+    "udn": {
+      "error": "這個來源的入口用晨報身分全部讀不到，一檔節目都沒看到：udnfunlife.com 回 HTTP 429 維護頁「網站維護中」；tickets.udnfunlife.com（音樂 Category=77、戲劇 Category=116）、年代 www.ticket.com.tw、寬宏 kham.com.tw 音樂劇類（CATEGORY=80）都回 HTTP 200，但內容是 1,224 位元組的「403 - 禁止訪問」假頁；KKTIX（/events、/events.json、/sitemap-index.xml）回 HTTP 403 Cloudflare「Just a moment...」驗證頁；時藝多媒體找不到官方節目頁（搜尋只看到展覽新聞）。依規定沒有換身分，也沒有繞過。"
+    },
+    "ntch": {
+      "urls": [
+        "https://npac-ntch.org/tms/graphql（programs，startFrom 2026-11-17、endOn 2027-04-16、limit 200、八種 types）",
+        "https://npac-ntch.org/tms/graphql（program id 31789、30790、29279、29281、30526、32557、29151 詳情與 performers）",
+        "https://ticket.sight-music.com/（Vue 空殼，無節目文字）"
+      ],
+      "seen": [
+        {
+          "title": "2026東京佼成管樂團音樂會_台灣站",
+          "verdict": "已列入",
+          "id": "tokyo-kosei-wind-2026"
+        },
+        {
+          "title": "2026東京佼成管樂團音樂會_台灣站",
+          "verdict": "已列入",
+          "id": "tokyo-kosei-wind-2026"
+        },
+        {
+          "title": "于魁智李勝素與中國戲曲學院名家",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：京劇（戲曲），國家戲劇院"
+        },
+        {
+          "title": "力晶2026藝文饗宴 賽門．拉圖爵士與巴伐利亞廣播交響樂團",
+          "verdict": "已列入",
+          "id": "rattle-brso-2026"
+        },
+        {
+          "title": "馬克．安德烈低音提琴音樂會",
+          "verdict": "不收",
+          "why": "3 分：華納簽下的年輕低音提琴家配吉他，曲目是西班牙小品改編加〈彩虹之上〉〈哈利路亞〉等流行歌，沒有主要作品，台北場要 4 分。"
+        },
+        {
+          "title": "指揮大師提勒曼與柏林國家歌劇院管弦樂團",
+          "verdict": "已列入",
+          "id": "thielemann-staatskapelle-berlin-2026"
+        },
+        {
+          "title": "璞永三十・雋永樂章 鋼琴天后王羽佳與馬勒室內樂團",
+          "verdict": "已列入",
+          "id": "yuja-wang-mco-2026"
+        },
+        {
+          "title": "指揮巨星庫倫奇斯與烏托邦管弦樂團 首度訪臺",
+          "verdict": "已列入",
+          "id": "currentzis-utopia-2026"
+        },
+        {
+          "title": "勇源音樂饗宴：四十週年系列 《馬勒第八，千人》",
+          "verdict": "已列入",
+          "id": "mahler8-nso-2026"
+        },
+        {
+          "title": "《星際效應》電影交響音樂會",
+          "verdict": "不收",
+          "why": "2 分：大銀幕放映電影全片、國臺交現場配季默的《星際效應》配樂，曲目只有這部電影配樂；屬手冊不收的電影配樂類，不是古典節目。"
+        },
+        {
+          "title": "絢麗系列 — 洛薩科維契小提琴獨奏會",
+          "verdict": "已列入",
+          "id": "lozakovich-bach-recital-2026"
+        },
+        {
+          "title": "威斯培衛大提琴獨奏會",
+          "verdict": "已列入",
+          "id": "wispelwey-bach-suites-2026"
+        },
+        {
+          "title": "2026廳院選 當代傳奇劇場《慾望城國》王者再臨",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：當代傳奇劇場《慾望城國》（戲曲改編劇場），國家戲劇院"
+        },
+        {
+          "title": "2026台北愛樂合唱團音樂會《戰爭與和平》",
+          "verdict": "不收",
+          "why": "3 分：台北愛樂合唱團年度音樂會，海頓《戰爭彌撒》，協演為青年管弦樂團；非台中"
+        },
+        {
+          "title": "力晶世紀美聲系列 次女高音喬伊斯・狄杜娜朵冬日音樂會",
+          "verdict": "已列入",
+          "id": "didonato-recital-2026"
+        },
+        {
+          "title": "維也納美泉宮管弦樂團",
+          "verdict": "已列入",
+          "id": "schoenbrunn-palace-orchestra-2026"
+        },
+        {
+          "title": "《少年英雄會》—2026台北愛樂少年樂團20週年慶典音樂會",
+          "verdict": "不收",
+          "why": "2 分：中小學生組成的少年樂團週年音樂會"
+        },
+        {
+          "title": "靈性之光—青韵合唱團2026年",
+          "verdict": "不收",
+          "why": "3 分：合唱團年度音樂會，宗教合唱選曲；非台中"
+        },
+        {
+          "title": "韶光八秩──臺師大音樂系創系80週年音樂會",
+          "verdict": "不收",
+          "why": "2 分：大學音樂系學生樂團與合唱團的系慶音樂會（陳美安指揮《布蘭詩歌》）"
+        },
+        {
+          "title": "2026新逸交響樂團年度公演Ⅳ 延續風沙中的愛",
+          "verdict": "不收",
+          "why": "seen.json 6a9b2dc826b324165c32e36a（同名、2026-12-09 台北）記為 rejected，但那一筆沒有分數與理由欄"
+        },
+        {
+          "title": "《光影與詩》馬利歐．凡薩戈、帕斯卡．羅傑與NSO",
+          "verdict": "已列入",
+          "id": "venzago-gugnin-nso-2026"
+        },
+        {
+          "title": "【2026 TSO 首席指揮】里柏瑞契、安德佐夫斯基與TSO",
+          "verdict": "已列入",
+          "id": "liebreich-anderszewski-tso-2026"
+        },
+        {
+          "title": "NTSO簡文彬，樫本大進與國臺交",
+          "verdict": "已列入",
+          "id": "kashimoto-ntso-2026"
+        },
+        {
+          "title": "【ESO 大師精選】烈聲與低語－梵志登與ESO",
+          "verdict": "已列入",
+          "id": "van-zweden-goerne-eso-2026"
+        },
+        {
+          "title": "光之境-吳思潔、林灝維&台北愛樂",
+          "verdict": "不收",
+          "why": "3 分：台北愛樂青年管弦樂團（青年樂團），吳思潔指揮、林灝維彈葛利格鋼琴協奏曲，另有《芬蘭頌》與尼爾森第二號；非台中"
+        },
+        {
+          "title": "維也納柏林首席獨奏家合奏團",
+          "verdict": "已列入",
+          "id": "philharmonix-2026"
+        },
+        {
+          "title": "木樓合唱團《人聲旅歌：源自史詩、火焰與聲的歸宿》",
+          "verdict": "不收",
+          "why": "3 分：國內合唱團的無伴奏男聲合唱專場；非台中"
+        },
+        {
+          "title": "陳必先2026鋼琴獨奏會─紀念曹永坤先生逝世20周年",
+          "verdict": "已列入",
+          "id": "chen-pi-hsien-recital-2026"
+        },
+        {
+          "title": "《神隱少女》舞台劇",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：舞台劇，國家戲劇院"
+        },
+        {
+          "title": "【2026 TSO 特別企劃】國王歌手與TSO的聖誕音樂會",
+          "verdict": "已列入",
+          "id": "kings-singers-tso-christmas-2026"
+        },
+        {
+          "title": "《溯音．續章》許常惠逝世二十五周年紀念音樂會",
+          "verdict": "不收",
+          "why": "3 分：簡文彬指揮許常惠作品專場（高雄高市交＋高雄國樂團、台北 NSO＋國樂團），不是主流名作；非台中"
+        },
+        {
+          "title": "立陶宛Vilnius國家合唱團-首度訪台音樂會",
+          "verdict": "已列入",
+          "id": "vilnius-state-choir-2026"
+        },
+        {
+          "title": "力晶2026藝文饗宴 — HIMARI 小提琴獨奏會",
+          "verdict": "已列入",
+          "id": "himari-recital-2026"
+        },
+        {
+          "title": "劉頡熙 麥安琪鋼琴演奏會",
+          "verdict": "不收",
+          "why": "3 分：國內年輕鋼琴家的雙鋼琴音樂會（拉赫曼尼諾夫第二號組曲、拉威爾《圓舞曲》等）；非台中"
+        },
+        {
+          "title": "《2026臺北爵士大樂隊聖誕音樂會》",
+          "verdict": "不收",
+          "why": "2 分：爵士大樂隊聖誕歌曲音樂會，不在收錄範圍"
+        },
+        {
+          "title": "富邦世紀音樂盛宴 鋼琴巨星 郎朗",
+          "verdict": "已列入",
+          "id": "lang-lang-recital-2026"
+        },
+        {
+          "title": "國北教大131週年校慶音樂會",
+          "verdict": "不收",
+          "why": "2 分：大學音樂系學生樂團的校慶音樂會（客席鋼琴薩拉托夫斯基彈布拉姆斯第二號）"
+        },
+        {
+          "title": "巔峰重逢 柴一與貝九",
+          "verdict": "已列入",
+          "id": "ntt-chaikovsky1-beethoven9-2027"
+        },
+        {
+          "title": "烏克蘭國家歌劇院管弦樂團 貝九《合唱》交響曲",
+          "verdict": "已列入",
+          "id": "ukraine-opera-beethoven9-2026"
+        },
+        {
+          "title": "合唱．音樂劇—金牌指揮徐惠君與台北愛樂少年及兒童合唱團音樂會",
+          "verdict": "不收",
+          "why": "2 分：少年及兒童合唱團的音樂會，下半場與台北愛樂青年管弦樂團唱三組音樂劇組曲，頁面沒列曲名；屬學生團體演出，又在台北。"
+        },
+        {
+          "title": "WJSO新年音樂會",
+          "verdict": "已列入",
+          "id": "wjso-new-year-2026"
+        },
+        {
+          "title": "《四季》2026台北青管系列音樂會",
+          "verdict": "不收",
+          "why": "3 分：台北青年管樂團與莫斯科薩克斯風四重奏的管樂音樂會；非台中"
+        },
+        {
+          "title": "富邦世紀音樂盛宴：NSO歲末饗宴《法蘭西群星》",
+          "verdict": "已列入",
+          "id": "hough-nso-saint-saens-2026"
+        },
+        {
+          "title": "富邦世紀音樂盛宴：NSO歲末饗宴《璀璨維也納》",
+          "verdict": "已列入",
+          "id": "nso-vienna-nye-2026"
+        },
+        {
+          "title": "狂美《璀璨經典百老匯》交響音樂會-2027震撼再現",
+          "verdict": "不收",
+          "why": "2 分：管樂團演奏九部百老匯音樂劇配樂的拼盤，商業秀"
+        },
+        {
+          "title": "蔡珂宜Chloe Chua－2027亞洲巡迴音樂會台灣首演",
+          "verdict": "已列入",
+          "id": "chloe-chua-recital-2027"
+        },
+        {
+          "title": "台灣獨奏家交響樂團－2027新年音樂會",
+          "verdict": "已列入",
+          "id": "tsso-newyear-ntt-2027"
+        },
+        {
+          "title": "向貝多芬致敬｜吉爾特伯格 × TSO",
+          "verdict": "已列入",
+          "id": "giltburg-beethoven-tso-2027"
+        },
+        {
+          "title": "NSO黃俊文與好朋友們《舞韻世代》",
+          "verdict": "已列入",
+          "id": "nso-hough-chamber-2027"
+        },
+        {
+          "title": "NSO黃俊文與好朋友們《傳承．蕭斯塔科維契透視》",
+          "verdict": "已列入",
+          "id": "nso-hough-chamber-2027"
+        },
+        {
+          "title": "NSO黃俊文與好朋友們《浪漫迴廊》",
+          "verdict": "已列入",
+          "id": "nso-hough-chamber-2027"
+        },
+        {
+          "title": "【ESO大師精選】命運迴旋——梵志登與ESO",
+          "verdict": "已列入",
+          "id": "van-zweden-eso-beethoven9-2027"
+        },
+        {
+          "title": "【ESO大師精選】命運迴旋——梵志登與ESO",
+          "verdict": "已列入",
+          "id": "van-zweden-eso-beethoven9-2027"
+        },
+        {
+          "title": "台大合唱團2027冬季音樂會《水之敘嶼》",
+          "verdict": "不收",
+          "why": "2 分：學生合唱團的冬季音樂會"
+        },
+        {
+          "title": "柏林愛樂中提琴首席梅第揚　全本巴赫無伴奏大提琴組曲",
+          "verdict": "已列入",
+          "id": "mei-bach-suites-2027"
+        },
+        {
+          "title": "《一千零一夜》博雷科、諏訪內晶子與NSO",
+          "verdict": "已列入",
+          "id": "borecco-suwanai-nso-2027"
+        },
+        {
+          "title": "瓦洛金2027鋼琴獨奏會",
+          "verdict": "已列入",
+          "id": "volodin-recital-2027"
+        },
+        {
+          "title": "路易沙達2027鋼琴獨奏會",
+          "verdict": "已列入",
+          "id": "luisada-recital-2027"
         }
       ]
     },
     "ntt": {
       "urls": [
-        "https://www.npac-ntt.org/program"
+        "https://www.npac-ntt.org/program（302 轉到 https://www.npac-ntt.org/program/events，200，222374 位元組）",
+        "https://www.npac-ntt.org/program/events/c-<id>：65 張節目卡的詳情頁全部打開，皆 HTTP 200（完整 65 個網址見各筆 page_url，也存在 /private/tmp/claude-501/-Users-wind0610--claude-spares-spare-f0FR3x/e6fc122a-47d2-4819-874b-515338e59fa6/scratchpad/sweep/read_ntt.json 的 urls）"
       ],
       "seen": [
         {
-          "title": "王羽佳與馬勒室內樂團 11/24",
-          "verdict": "已列入",
-          "id": "yuja-wang-mco-2026"
+          "title": "2026林育丞(姞馨)鋼琴獨奏會—曙光與夜鳴",
+          "verdict": "不收",
+          "why": "2 分：在中部大學與音樂班教琴的鋼琴博士開獨奏會，曲目份量足，但 OPENTIX 頁只寫學位與教職，沒有比賽、協奏、錄音或其他演出紀錄，撐不到「有份量的獨奏會」"
         },
         {
-          "title": "威斯培衛獨奏會 12/04",
-          "verdict": "已列入",
-          "id": "wispelwey-bach-suites-2026"
+          "title": "【大師工作坊】比利時莫蘇邦特跨界劇場「多重存在」肢體工作坊",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：課程/工作坊）"
         },
         {
-          "title": "倫敦巴赫 12/04",
-          "verdict": "已列入",
-          "id": "baroque-soloists-london-bach-2026"
+          "title": "NTT+不藏私講堂 謝文明《從一線條、一粒沙、一滴墨，走進動畫的異色世界》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：講座）"
         },
         {
-          "title": "陳必先 12/20",
-          "verdict": "已列入",
-          "id": "chen-pi-hsien-recital-2026"
+          "title": "國立臺南藝術大學音樂系明日之星音樂會《拾光樂紀》",
+          "verdict": "不收",
+          "why": "2 分：音樂系學生甄選後的成果發表"
         },
         {
-          "title": "富爾敦 12/27",
-          "verdict": "已列入",
-          "id": "fulton-duo-taichung-2026"
+          "title": "2026 NTT遇見巨人—比利時莫蘇邦特跨界劇場《女巫安息日》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：偶戲｜肢體劇場）"
         },
         {
-          "title": "柴一與貝九 1/2",
-          "verdict": "已列入",
-          "id": "ntt-chaikovsky1-beethoven9-2027"
+          "title": "《上下游 風的餐桌》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：活動，戶外市集與主題餐桌，附兩場草地音樂）"
         },
         {
-          "title": "水藍蔣啟真國臺交 1/9",
-          "verdict": "已列入",
-          "id": "ntso-lan-shui-chiang-2027"
+          "title": "故事工廠《婚禮上的小抄》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：戲劇）"
         },
         {
-          "title": "潘朵拉的音樂盒",
+          "title": "音樂劇《潘朵拉的音樂盒》",
           "verdict": "已列入",
           "id": "pandora-music-box-ntt-2026"
         },
         {
-          "title": "老男孩音樂劇",
+          "title": "2026臺中國際巨星音樂節 鋼琴天后王羽佳與馬勒室內樂團",
+          "verdict": "已列入",
+          "id": "yuja-wang-mco-2026"
+        },
+        {
+          "title": "《巡禮之年》陳世偉鋼琴獨奏會",
+          "verdict": "已列入",
+          "id": "chen-shih-wei-liszt-2026"
+        },
+        {
+          "title": "2026 NTT 遇見巨人—羅伯．勒帕吉╳柏林雷寧廣場劇院《信仰、金錢、戰爭與愛》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：戲劇）"
+        },
+        {
+          "title": "《星際效應》電影交響音樂會",
+          "verdict": "不收",
+          "why": "2 分：大銀幕放映電影全片、國臺交現場配季默的《星際效應》配樂，曲目只有這部電影配樂；屬手冊不收的電影配樂類，不是古典節目。"
+        },
+        {
+          "title": "《玫瑰人生》",
+          "verdict": "不收",
+          "why": "2 分：探戈樂團的法國香頌流行歌曲音樂會，不在收錄範圍"
+        },
+        {
+          "title": "《Dawn of Strings》 2026張惜晨小提琴獨奏會",
+          "verdict": "不收",
+          "why": "2 分：16 歲學生的慈善獨奏會"
+        },
+        {
+          "title": "《為愛而生》",
+          "verdict": "不收",
+          "why": "2 分：教會聖樂團的福音詩歌音樂會，下半場是聖詩改編"
+        },
+        {
+          "title": "歌劇院會員限定《緞帶・繫冬日》耶誕花藝工作坊",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：課程/工作坊，花藝）"
+        },
+        {
+          "title": "聽聽彈談ⅩⅩ～至尊巴赫：舞韻",
+          "verdict": "已列入",
+          "id": "liao-chiao-han-bach-dance-2026"
+        },
+        {
+          "title": "2026夢舞劇場《凝望山巒的眼眸》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：舞蹈）"
+        },
+        {
+          "title": "《四季翱翔》",
+          "verdict": "不收",
+          "why": "2 分：醫師與家屬組成的業餘薩克斯風重奏團"
+        },
+        {
+          "title": "《共鳴．迴響》陳舒茗與蘇筱雯鋼琴二重奏音樂會",
+          "verdict": "不收",
+          "why": "2 分：個人主辦的雙鋼琴音樂會，節目頁與搜尋都查不到兩位演出者的職業演出紀錄"
+        },
+        {
+          "title": "古典音樂台FM97.7 跨越30 致敬不朽—威斯培衛獨奏會",
+          "verdict": "已列入",
+          "id": "wispelwey-bach-suites-2026"
+        },
+        {
+          "title": "巴洛克獨奏家樂團《倫敦巴赫》",
+          "verdict": "已列入",
+          "id": "baroque-soloists-london-bach-2026"
+        },
+        {
+          "title": "2026 NTT遇見巨人—明華園戲劇總團《烏龍天下》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：戲曲）"
+        },
+        {
+          "title": "《流浪者手冊》舒伯特&江苙萁@地球",
+          "verdict": "已列入",
+          "id": "chiang-wanderer-schubert-ntt-2026"
+        },
+        {
+          "title": "東西古今．四方遊藝—大鍵琴與絲竹之藝響世界",
+          "verdict": "已列入",
+          "id": "hsiao-yun-harpsichord-sizhu-2026"
+        },
+        {
+          "title": "《從根系到繁星》",
+          "verdict": "不收",
+          "why": "2 分：合唱團年度音樂會，曲目是當代合唱小品與流行、台語歌改編，沒有大型合唱作品"
+        },
+        {
+          "title": "安德烈亞．范佐 Intimacy Vol. 2 鋼琴演奏會臺灣站",
+          "verdict": "不收",
+          "why": "seen.json 這一筆（6a4d4ecf26b32427d0604154，安德烈亞・范佐 Intimacy Vol.2 鋼琴演奏會台灣站，2026-12-07 台中）標 rejected，但沒有寫分數與理由"
+        },
+        {
+          "title": "《這一頁，寫下我們》2026 台中少年兒童合唱團音樂會",
+          "verdict": "不收",
+          "why": "2 分：少兒合唱團的年度音樂會，十二首委託創作的兒童歌曲用 Show Choir 加旁白演出，屬學生團體的發表，不在收錄範圍。"
+        },
+        {
+          "title": "《小朋友的歌劇院探索》蒔花篇",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：親子｜活動）"
+        },
+        {
+          "title": "【2026-2027 NTT+音樂劇人才培育工程】 第一階段入選作品讀劇呈現",
+          "verdict": "不收",
+          "why": "不在範圍：人才培育計畫的讀劇呈現，不是完整製作，屬「講座與工作坊」性質"
+        },
+        {
+          "title": "2026 NTT遇見巨人─當代傳奇劇場《慾望城國》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：戲曲）"
+        },
+        {
+          "title": "新老戲《孫悟空智鬥白骨精》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：戲劇｜戲曲）"
+        },
+        {
+          "title": "《南美洲列車：來到臺灣的節奏》",
+          "verdict": "不收",
+          "why": "2 分：爵士樂團的拉丁音樂結合戲劇演出，不是古典"
+        },
+        {
+          "title": "彌賽亞：永不止息的樂章",
+          "verdict": "已列入",
+          "id": "messiah-shen-hsin-chin-ntt-2026"
+        },
+        {
+          "title": "NTT+不藏私講堂 陳偉誠《循環再生術：都市林的第二人生》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：講座）"
+        },
+        {
+          "title": "米特動物樂園《Do Re Mi 喜咧兜？》",
+          "verdict": "不收",
+          "why": "不在範圍：親子劇場（演員加薩克斯風四重奏），屬「兒童劇」（同一檔亦見 wwy 12/5–12/6 衛武營戲劇院）"
+        },
+        {
+          "title": "2026 SMIMC聖誕主題營-臺中場",
+          "verdict": "不收",
+          "why": "不在範圍：不是演出（節目類型：音樂｜舞蹈｜活動，4–12 歲兒童英語聖誕營隊，需報名）"
+        },
+        {
+          "title": "《有聲之年，聽古典》古典音樂台30週年沙龍音樂會",
+          "verdict": "不收",
+          "why": "2 分：電台主持群的跨界沙龍音樂會，爵士、拉丁、福音歌與迪士尼選曲為主"
+        },
+        {
+          "title": "《意識與表象的遊樂園》薩克斯風、笙與電聲的聲響幻域",
+          "verdict": "不收",
+          "why": "2 分：薩克斯風、笙與電子聲響的當代新作實驗製作（五首世界首演，小劇場），離主流名作太遠"
+        },
+        {
+          "title": "果陀劇場《Crash, Boom Boom Love!》演唱會音樂劇",
+          "verdict": "已列入",
+          "id": "goda-crash-boom-boom-love-2026"
+        },
+        {
+          "title": "陳必先2026鋼琴獨奏會—紀念曹永坤先生逝世20周年",
+          "verdict": "已列入",
+          "id": "chen-pi-hsien-recital-2026"
+        },
+        {
+          "title": "侯傳安小號獨奏會",
+          "verdict": "已列入",
+          "id": "hou-chuan-an-trumpet-2026"
+        },
+        {
+          "title": "《琴心相映》王宥鈞╳王秉諺 鋼琴二重奏音樂會",
+          "verdict": "不收",
+          "why": "2 分：音樂系學生的鋼琴二重奏發表"
+        },
+        {
+          "title": "《鬼王鍾馗》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：戲劇｜戲曲）"
+        },
+        {
+          "title": "2026 NTT遇見巨人—唐美雲歌仔戲團《南都幽靈夜譚》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：戲曲）"
+        },
+        {
+          "title": "2026聖采琪聯合弦樂團巡迴音樂會",
+          "verdict": "不收",
+          "why": "2 分：業餘社區弦樂團（團員從小學生到退休人士）的歲末弦樂小品音樂會"
+        },
+        {
+          "title": "《弦舞歐洲》富爾敦室內樂團 2026 臺灣巡迴音樂會",
+          "verdict": "已列入",
+          "id": "fulton-duo-taichung-2026"
+        },
+        {
+          "title": "音樂方程式",
+          "verdict": "不收",
+          "why": "2 分：本地四位演奏家的室內樂，曲目是單樂章選段（舒曼鋼琴四重奏只演三、四樂章）與《胡桃鉗》、皮亞佐拉改編曲；節目頁沒有演奏者的職業經歷"
+        },
+        {
+          "title": "2026 NTT歲末音樂會《那麼派—動靜皆宜樂舞派對》",
+          "verdict": "不收",
+          "why": "2 分：原民古調、電子舞曲與街舞的跨年派對，不是古典演出"
+        },
+        {
+          "title": "《巔峰重逢 柴一與貝九》",
+          "verdict": "已列入",
+          "id": "ntt-chaikovsky1-beethoven9-2027"
+        },
+        {
+          "title": "親子公益音樂劇《部落英雄大冒險2.0》",
+          "verdict": "不收",
+          "why": "不在範圍：國小主辦的親子公益音樂劇，屬「兒童劇」與學校成果"
+        },
+        {
+          "title": "狂美《璀璨經典百老匯》交響音樂會—2027震撼再現",
+          "verdict": "不收",
+          "why": "2 分：管樂團演奏九部百老匯音樂劇配樂的拼盤，商業秀"
+        },
+        {
+          "title": "詩與歌",
+          "verdict": "不收",
+          "why": "2 分：合唱團自辦的音樂會，節目頁沒列曲目也沒寫誰指揮"
+        },
+        {
+          "title": "《老男孩》音樂劇",
           "verdict": "已列入",
           "id": "old-boys-musical-ntt-2027"
         },
         {
-          "title": "彌賽亞：永不止息的樂章 12/14 中劇院",
-          "verdict": "不收",
-          "why": "查不到演出者與曲目，先不判（未評分）"
+          "title": "水藍、蔣啟真與國臺交",
+          "verdict": "已列入",
+          "id": "ntso-lan-shui-chiang-2027"
         },
         {
-          "title": "安德烈亞．范佐 鋼琴 12/07",
-          "verdict": "不收",
-          "why": "未查到曲目與演出者資歷，先不判（未評分）"
+          "title": "台灣獨奏家交響樂團—2027新年音樂會",
+          "verdict": "已列入",
+          "id": "tsso-newyear-ntt-2027"
         },
         {
-          "title": "星際效應電影交響音樂會、狂美百老匯交響音樂會、進擊的巨人音樂會",
+          "title": "趨勢文學劇場《李商隱．無題。AI也難解》",
           "verdict": "不收",
-          "why": "電影／動漫配樂拼盤，不收"
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：戲劇）"
         },
         {
-          "title": "法式巨星音樂劇選粹演唱會 2/27",
+          "title": "《我是狗蟻你是花》臺灣作曲家林育伶作品專場音樂會",
           "verdict": "不收",
-          "why": "2分：選粹演唱會，非完整製作"
+          "why": "2 分：女聲合唱團唱本地作曲家的臺語合唱曲專場，節目頁查不到演出者的職業紀錄"
         },
         {
-          "title": "卡奇諾夫鋼琴獨奏會 2/28、聽聽彈談巴赫、各校與地方獨奏會",
+          "title": "《進擊的巨人》—Beyond the Walls世界巡演音樂會",
           "verdict": "不收",
-          "why": "未查到資歷，先不判；其餘為學生或地方小型獨奏，2分以下"
+          "why": "不在範圍：同上，與 mna 那筆是同一檔"
+        },
+        {
+          "title": "2027聽孩子在唱歌 米可吉他親子音樂會",
+          "verdict": "不收",
+          "why": "2 分：米可吉他合奏團的學習者上台、演給家人聽的親子音樂會，曲目是吉他合奏小品與流行歌改編，屬成果發表。"
+        },
+        {
+          "title": "2027安寧鋼琴獨奏會",
+          "verdict": "收",
+          "id": "ning-an-recital-2027"
+        },
+        {
+          "title": "《樂舞—貓．武藏．小次郎》",
+          "verdict": "不收",
+          "why": "2 分：八幕音樂舞劇，舞蹈為主，配七人小編制演八段樂章選段與改編曲；不是音樂會，也不是音樂劇或歌劇"
+        },
+        {
+          "title": "《法式巨星音樂劇選粹演唱會》",
+          "verdict": "已列入",
+          "id": "french-musical-stars-ntt-2027"
+        },
+        {
+          "title": "德奥靈魂與斯拉夫之春—帕維爾．卡奇諾夫鋼琴獨奏會",
+          "verdict": "已列入",
+          "id": "kachnov-recital-2027"
+        },
+        {
+          "title": "2027焦點舞團《狂花》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇（節目類型：舞蹈）"
         }
       ]
     },
     "wwy": {
       "urls": [
-        "https://npac-weiwuying.org/"
+        "https://www.npac-weiwuying.org/api/programs/list?start=1794844800&end=1807891200&catalog_type=program&page=1&size=200&chineseOnShelf=true",
+        "https://www.npac-weiwuying.org/programs/6a6b0483ef008b00072bd026",
+        "https://www.npac-weiwuying.org/programs/6a59c22889f59900078c5429",
+        "https://www.npac-weiwuying.org/programs/6a993e5ba243ae0007eb605a",
+        "https://www.npac-weiwuying.org/programs/69c3988d1e6a9400071a7f78"
       ],
       "seen": [
         {
-          "title": "唐喬萬尼歌劇音樂會 2/19",
+          "title": "《鋼琴天后王羽佳 與 馬勒室內樂團》",
+          "verdict": "已列入",
+          "id": "yuja-wang-mco-2026"
+        },
+        {
+          "title": "《天才炫技》馬丁．賈西亞．賈西亞與高市交",
+          "verdict": "已列入",
+          "id": "garcia-garcia-ksso-2026"
+        },
+        {
+          "title": "《指揮大師提勒曼 與 柏林國家歌劇院管弦樂團》",
+          "verdict": "已列入",
+          "id": "thielemann-staatskapelle-berlin-2026"
+        },
+        {
+          "title": "《東西古今．四方遊藝—大鍵琴與絲竹之藝響世界》",
+          "verdict": "已列入",
+          "id": "hsiao-yun-harpsichord-sizhu-2026"
+        },
+        {
+          "title": "《威斯培衛大提琴獨奏會》",
+          "verdict": "已列入",
+          "id": "wispelwey-bach-suites-2026"
+        },
+        {
+          "title": "《聽聽 彈談XX～至尊巴赫：舞韻》",
+          "verdict": "已列入",
+          "id": "liao-chiao-han-bach-dance-2026"
+        },
+        {
+          "title": "巴洛克獨奏家樂團《倫敦巴赫》",
+          "verdict": "已列入",
+          "id": "baroque-soloists-london-bach-2026"
+        },
+        {
+          "title": "《烈聲與低語—梵志登與ESO》",
+          "verdict": "已列入",
+          "id": "van-zweden-goerne-eso-2026"
+        },
+        {
+          "title": "《終章 Finale》2026 東京佼成管樂團音樂會台灣站",
+          "verdict": "已列入",
+          "id": "tokyo-kosei-wind-2026"
+        },
+        {
+          "title": "《絢麗系列 — HIMARI 小提琴獨奏會》",
+          "verdict": "已列入",
+          "id": "himari-recital-2026"
+        },
+        {
+          "title": "《陳必先2026鋼琴獨奏會》",
+          "verdict": "已列入",
+          "id": "chen-pi-hsien-recital-2026"
+        },
+        {
+          "title": "《彼方：春聲回流》梁喬信與高雄市交響樂團",
+          "verdict": "已列入",
+          "id": "kerson-leong-ksso-2026"
+        },
+        {
+          "title": "《台語歌劇-行出性命的光》",
+          "verdict": "已列入",
+          "id": "tsai-a-hsin-taiwanese-opera-2026"
+        },
+        {
+          "title": "《巔峰重逢 柴一與貝九 第十六屆傳愛行動慈善音樂會》",
+          "verdict": "已列入",
+          "id": "ntt-chaikovsky1-beethoven9-2027"
+        },
+        {
+          "title": "《富爾敦室內樂團 2026 臺灣巡迴音樂會》",
+          "verdict": "已列入",
+          "id": "fulton-duo-taichung-2026"
+        },
+        {
+          "title": "烏克蘭國家歌劇院管弦樂團《貝多芬第九號交響曲》",
+          "verdict": "已列入",
+          "id": "ukraine-opera-beethoven9-2026"
+        },
+        {
+          "title": "《台灣獨奏家交響樂團—2027新年音樂會》",
+          "verdict": "已列入",
+          "id": "tsso-newyear-ntt-2027"
+        },
+        {
+          "title": "《NTSO榮光與信念—水藍，蔣啟真與國臺交》",
+          "verdict": "已列入",
+          "id": "ntso-lan-shui-chiang-2027"
+        },
+        {
+          "title": "《2027國際大師鋼琴藝術節大師系列-莊雅斐鋼琴獨奏會》",
+          "verdict": "已列入",
+          "id": "chuang-ya-fei-recital-2027"
+        },
+        {
+          "title": "《萬國漫遊》－歐柏林格與柯夫勒的風羽之境",
+          "verdict": "已列入",
+          "id": "oberlinger-kofler-recorder-2027"
+        },
+        {
+          "title": "莫札特《唐‧喬萬尼》歌劇音樂會",
           "verdict": "已列入",
           "id": "don-giovanni-ksso-2027"
         },
         {
-          "title": "瘋迷24蕭邦 2/20-21 高雄",
-          "verdict": "不收",
-          "why": "3分：18位鋼琴家馬拉松形式，高雄門檻4分，名單未公布"
+          "title": "《瘋迷24蕭邦》",
+          "verdict": "已列入",
+          "id": "marathon24-chopin-weiwuying-2027"
         },
         {
-          "title": "許常惠逝世25週年紀念音樂會 12/5",
-          "verdict": "不收",
-          "why": "3分：本地作曲家紀念音樂會，高雄門檻4分"
+          "title": "《NTSO水藍，庄司紗矢香與國臺交》",
+          "verdict": "已列入",
+          "id": "shoji-ntso-planets-2027"
         },
         {
-          "title": "夢想清單（柏林雷寧廣場劇院）",
+          "title": "【衛武營小時光】紅潮劇集《當亞斯遇見人魚》讀演音樂會——B面歌單",
           "verdict": "不收",
-          "why": "戲劇，非音樂劇"
+          "why": "不在範圍：電視劇集歌曲的讀演音樂會，屬「流行歌手與跨界演唱會」"
+        },
+        {
+          "title": "柏林雷寧廣場劇院《夢想清單》",
+          "verdict": "不收",
+          "why": "3 分：柏林雷寧廣場劇院原班製作，入選 2024 柏林戲劇盛會；但這是話劇院首部音樂劇場，歌曲走爵士、探戈、流行，75 分鐘；高雄場不到專程的 4 分。"
+        },
+        {
+          "title": "《天才私語》馬丁．賈西亞．賈西亞 ╳高市交小樂集 ",
+          "verdict": "不收",
+          "why": "4 分；只在衛武營表演廳或兩廳院演奏廳演出，台北、高雄只收主廳，不列入"
+        },
+        {
+          "title": "2026《再一次！唱歌旅行去》十週年親子演唱會",
+          "verdict": "不收",
+          "why": "不在範圍：兒歌親子演唱會（哈囉歌、水果歌…），屬「兒童劇」／非古典演出"
+        },
+        {
+          "title": "《絕美蕭邦Exquisite Chopin－林瑋祺2026鋼琴獨奏會》",
+          "verdict": "不收",
+          "why": "3 分：林瑋祺是國內鋼琴家，全場蕭邦晚期作品，第三號奏鳴曲、船歌、幻想波蘭舞曲都在，曲目紮實，但屬本地獨奏會的常規水準。"
+        },
+        {
+          "title": "TCC沙龍音樂會系列 閱讀音樂2《心動莎翁》",
+          "verdict": "不收",
+          "why": "3 分：台中室內合唱團由楊宜真指揮，唱曼蒂耶爾維等當代作曲家的莎士比亞合唱曲，配鋼琴與馬林巴，有導聆；曲目冷門，屬國內團隊常規製作。"
+        },
+        {
+          "title": "《風華年代：鷲見惠理子與方圓之間的音樂盛宴》",
+          "verdict": "不收",
+          "why": "3 分：日本小提琴家鷲見惠理子拉帕格尼尼四首隨想曲與《卡門幻想曲》，另有貝多芬作品11三重奏，但中間夾台語老歌改編，曲目偏拼盤。"
+        },
+        {
+          "title": "《2026黃品潔大提琴獨奏會》",
+          "verdict": "不收",
+          "why": "2 分：黃品潔與陳育志演普羅高菲夫、米亞斯科夫斯基奏鳴曲與范伯格協奏曲（鋼琴伴奏），曲目認真，但節目頁沒有演出者的職業演出紀錄。"
+        },
+        {
+          "title": "2026國立臺南藝術大學音樂學系弦樂團音樂會《弦上的故鄉》",
+          "verdict": "不收",
+          "why": "不在範圍：大學音樂系學生樂團，屬「學生…成果發表」"
+        },
+        {
+          "title": "《聲琴樂語 VII》",
+          "verdict": "不收",
+          "why": "2 分：戴旖旎、陳沁紅等五位國內音樂家的年度聚會，曲目是格里埃爾小品、馬勒第四選段改編、月光第一樂章改編與聖誕組曲，偏輕鬆拼盤。"
+        },
+        {
+          "title": "《絲語．一瞬：一場絲竹的敘事》",
+          "verdict": "不收",
+          "why": "2 分：高雄市國樂團的絲竹小編制，七首都是當代國樂作品，附導聆；國樂不在這一欄收的類型裡，也沒有主流名作。"
+        },
+        {
+          "title": "《和鳴In Harmony》2026屏東大學音樂學系教授聯合音樂會",
+          "verdict": "不收",
+          "why": "不在範圍：大學音樂系教授聯合音樂會，屬「教師…音樂會」"
+        },
+        {
+          "title": "《璀璨62》台南應用科技大學音樂系教師校慶音樂會",
+          "verdict": "不收",
+          "why": "不在範圍：大學音樂系教師校慶音樂會，屬「教師…音樂會」"
+        },
+        {
+          "title": "《星際效應》電影音樂會",
+          "verdict": "不收",
+          "why": "2 分：大銀幕放映電影全片、國臺交現場配季默的《星際效應》配樂，曲目只有這部電影配樂；屬手冊不收的電影配樂類，不是古典節目。"
+        },
+        {
+          "title": "《2026蕾蒂合唱團年度音樂會》",
+          "verdict": "不收",
+          "why": "不在範圍：社區合唱團年度音樂會，曲目多為聖誕與流行歌，屬「社區團體…音樂會」"
+        },
+        {
+          "title": "米特動物樂園《Do Re Mi 喜咧兜？》",
+          "verdict": "不收",
+          "why": "不在範圍：同上，與 ntt 那筆是同一檔"
+        },
+        {
+          "title": "微⾏星合唱團2026年度公演 《歌世界・世界歌》",
+          "verdict": "不收",
+          "why": "2 分：合唱團自辦的年度公演，男聲、女聲兩團唱十六首合唱小品，含〈刻在我心底的名字〉等流行歌改編，沒有大型合唱作品，僅高雄一場。"
+        },
+        {
+          "title": "《再創巔峰》",
+          "verdict": "不收",
+          "why": "3 分：巔峰四重奏有聖保羅室內、巴爾的摩、美國國家交響三位單簧管首席，但曲目除孟德爾頌兩首音樂會小品外多是改編，並與本地四重奏和學生同台。"
+        },
+        {
+          "title": "【衛武營小時光】茱蒂口琴樂團《跟著口琴去旅行》",
+          "verdict": "不收",
+          "why": "2 分：口琴五重奏吹《樂來越愛你》《芝加哥》《魔女宅急便》《小美人魚》配樂組曲，是電影動畫配樂拼盤，全長六十分鐘。"
+        },
+        {
+          "title": "《高雄港合唱團、基隆港合唱團聯合音樂會》",
+          "verdict": "不收",
+          "why": "不在範圍：社區合唱團聯合音樂會，曲目為流行與台語老歌（港都夜雨、鳳飛飛組曲…），屬「社區團體…音樂會」"
+        },
+        {
+          "title": "《縱貫線嘉年華》ABO Fusion弦樂四重奏的黑白狂想",
+          "verdict": "不收",
+          "why": "2 分：跨界弦樂四重奏加導演與多媒體，曲目是《教父》《西城故事》、麥可．傑克森，後半場是〈上海灘〉等港台流行歌改編。"
+        },
+        {
+          "title": "《海象莫雷的漂流日誌》親子音樂劇",
+          "verdict": "不收",
+          "why": "不在範圍：親子音樂劇，屬「兒童劇」"
+        },
+        {
+          "title": "《納莫拉澤2026鋼琴獨奏會》",
+          "verdict": "不收",
+          "why": "4 分；只在衛武營表演廳或兩廳院演奏廳演出，台北、高雄只收主廳，不列入"
+        },
+        {
+          "title": "《鄞蔚婷2026鋼琴獨奏會》",
+          "verdict": "不收",
+          "why": "3 分：鄞蔚婷在屏東大學等校兼任，彈貝多芬《英雄變奏曲》、李斯特第一號《梅菲斯特圓舞曲》與普羅高菲夫第七號奏鳴曲，曲目紮實，但僅高雄一場。"
+        },
+        {
+          "title": "《北境追憶》謝孟軒大提琴獨奏會",
+          "verdict": "不收",
+          "why": "3 分：謝孟軒任教中山大學，旅德時待過慕尼黑交響樂團與萊比錫歌劇院，與王一幸演葛雷查尼諾夫、拉赫瑪尼諾夫兩首大提琴奏鳴曲，僅高雄一場。"
+        },
+        {
+          "title": "《一封關於歌德的長信－德國藝術歌曲劇場》",
+          "verdict": "不收",
+          "why": "3 分：男高音湯發凱自編自導，唱二十多首譜歌德詩的藝術歌曲，從貝多芬、舒伯特到沃爾夫，鋼琴謝欣容，八十分鐘的小型製作，僅高雄一場。"
+        },
+        {
+          "title": "《共振》－高雄中學與臺南女中兩校聯合展演",
+          "verdict": "不收",
+          "why": "不在範圍：高中音樂班聯合展演，屬「學生成果發表」"
+        },
+        {
+          "title": "《潘昱同鋼琴獨奏會》",
+          "verdict": "不收",
+          "why": "3 分：潘昱同彈舒曼第一號奏鳴曲、蕭邦《船歌》與梅特涅《敘事奏鳴曲》，曲目有份量，節目頁沒列國際級資歷，只有台北、高雄各一場。"
+        },
+        {
+          "title": "《2026黃詩雅小提琴獨奏會》",
+          "verdict": "不收",
+          "why": "3 分：布拉姆斯第三號與《克羅采》曲目紮實，但頁面只稱「青年小提琴家」、查不到經歷；確認到的只有高雄一場，門檻是 4 分。"
+        },
+        {
+          "title": "《銅管的魅力》",
+          "verdict": "不收",
+          "why": "2 分：高雄市管樂團的銅管重奏團首次製作，上半場是日本銅管原創曲，下半場是《杜蘭朵》選段、《情熱大陸》、〈Sing, Sing, Sing〉等改編小品，屬輕鬆拼盤。"
+        },
+        {
+          "title": "「醫聲無界」系列－跨越想像的弦樂旅程",
+          "verdict": "不收",
+          "why": "2 分：醫聲室內樂團由醫療工作者組成，是業餘樂團；楊智欽指揮、歐陽兆彥拉孟德爾頌 d 小調協奏曲，另有蘇克弦樂小夜曲，樂團本身不是職業團。"
+        },
+        {
+          "title": "《2026許志瑜鋼琴獨奏會》",
+          "verdict": "不收",
+          "why": "3 分：巴拉基列夫《伊斯拉美》、李斯特《但丁讀後》和超技練習曲排在同一晚，曲目有份量；但節目頁與售票頁都沒有演出者資歷，查不到國際紀錄。"
+        },
+        {
+          "title": "《被遺忘的浪漫：新世界》2026蔡宗言小提琴演奏會",
+          "verdict": "不收",
+          "why": "3 分：蔡宗言是高市交專任團員、曾在西德廣播交響樂團任職，整場是澤姆林斯基、康果爾德、普列文的冷門曲目，沒有主流名作。"
+        },
+        {
+          "title": "《老歌神韻風華再現音樂會》",
+          "verdict": "不收",
+          "why": "不在範圍：國語老歌演唱（月亮代表我的心等），屬流行歌曲演唱會"
+        },
+        {
+          "title": "《2026 陳品任低音提琴獨奏會》",
+          "verdict": "不收",
+          "why": "2 分：演出者現就讀臺南藝術大學音樂系，是在學學生的個人獨奏會；曲目為巴赫第三號無伴奏組曲與幾首低音提琴小品。"
+        },
+        {
+          "title": "【黃慧音老師專場 — 2027《淨世慧音》演唱會高雄站】",
+          "verdict": "不收",
+          "why": "不在範圍：佛曲歌手演唱會加舞劇，屬「流行歌手與跨界演唱會」"
+        },
+        {
+          "title": "《共響》2027-欣築樂系統 × 校際直笛合奏團聯合音樂會",
+          "verdict": "不收",
+          "why": "不在範圍：校際直笛合奏團聯合音樂會，屬「學生成果發表」"
+        },
+        {
+          "title": "《激情義大利－與李斯特同遊～黃瑋德＆黃瑟德聯合音樂會》",
+          "verdict": "不收",
+          "why": "2 分：鋼琴黃瑋德任教美國社區學院，男中音黃瑟德本業是婦產科醫師；李斯特《義大利》只彈前三首，其餘是佩脫拉克歌曲與義大利古典歌曲。"
+        },
+        {
+          "title": "《跟著琴鍵去旅行－顏竹君&顏齊慧雙鋼琴音樂會》",
+          "verdict": "不收",
+          "why": "3 分：拉赫曼尼諾夫第一號雙鋼琴組曲、普朗克雙鋼琴協奏曲和《藍色狂想曲》都是紮實的雙鋼琴曲目；兩位演奏者的資歷兩個頁面都沒寫，無從佐證。"
+        },
+        {
+          "title": "2027許凱閔室內樂音樂會之『音樂旅行』",
+          "verdict": "不收",
+          "why": "2 分：專業音樂家與學生同台，結合義大國際高中的教育計畫；曲目是四手聯彈、舒曼五重奏單一樂章加《小美人魚》選曲，屬成果發表性質。"
+        },
+        {
+          "title": "《媽咪住的地方UKE音樂會》",
+          "verdict": "不收",
+          "why": "2 分：台灣烏克麗麗樂團的烏克麗麗合奏，二十二首都是改編的通俗小品、台灣歌謠與自創曲，不是本欄收的古典音樂會類型。"
+        },
+        {
+          "title": "《2027國際大師鋼琴藝術節大師系列—海老彰子鋼琴獨奏會 》",
+          "verdict": "不收",
+          "why": "4 分；只在衛武營表演廳或兩廳院演奏廳演出，台北、高雄只收主廳，不列入"
+        },
+        {
+          "title": "《靈感　城市　探戈》",
+          "verdict": "不收",
+          "why": "3 分：南藝大副教授柯慶姿與小提琴黃宛頎、鋼琴簡美玲的室內樂，排拉威爾小提琴與大提琴二重奏、聖桑《繆思與詩人》、荀菲爾德《咖啡音樂》，屬本地常規室內樂。"
+        },
+        {
+          "title": "《林佳田男高音獻聲衛武營》",
+          "verdict": "不收",
+          "why": "3 分：林佳田是臺東大學專任助理教授、曾任紐約狄卡波歌劇院駐院歌手，與鋼琴林欣潔唱佛瑞《美好的歌》和舒曼作品24《連篇歌曲》全套，屬本地聲樂獨唱會。"
+        },
+        {
+          "title": "《紐約之聲 New York Voices 謝幕巡演》",
+          "verdict": "不收",
+          "why": "不在範圍：爵士人聲團體加臺北爵士大樂隊，曲目是皇后合唱團等流行歌，屬「流行歌手與跨界演唱會」"
+        },
+        {
+          "title": "《琴弦上的波西米亞》",
+          "verdict": "不收",
+          "why": "3 分：王牧群的吉他獨奏會，排〈戈雅的美女〉、〈塞維亞〉等西班牙曲目、《魔笛》主題與變奏、《小毛驢與我》選曲與四樂章《浪漫奏鳴曲》；節目頁沒有演出者資歷。"
+        },
+        {
+          "title": "《欣響室內管樂團『環遊世界音樂派對』》",
+          "verdict": "不收",
+          "why": "2 分：欣響室內管樂團演管樂版《布蘭詩歌》、比才〈法蘭多舞曲〉、八木澤教司長號協奏曲，再加迪士尼與《埃及王子》等曲，是通俗拼盤，查不到職業樂團紀錄。"
+        },
+        {
+          "title": "《瘋迷24蕭邦》PLUS橫山幸雄加碼場",
+          "verdict": "不收",
+          "why": "4 分；只在衛武營表演廳或兩廳院演奏廳演出，台北、高雄只收主廳，不列入"
+        },
+        {
+          "title": "《高雄市青少年交響樂團國中團／高雄市立新興高中音樂班 2027年度音樂會》",
+          "verdict": "不收",
+          "why": "不在範圍：國中團與高中音樂班年度音樂會，屬「學生成果發表」"
+        },
+        {
+          "title": "《高雄市英明國中管弦樂班年度音樂會》",
+          "verdict": "不收",
+          "why": "不在範圍：國中管弦樂班年度音樂會，屬「學生成果發表」"
+        },
+        {
+          "title": "《光與塵》",
+          "verdict": "不收",
+          "why": "2 分：成功愛樂合唱團與成大全球校友總會合辦，音樂總監戴怡音、客席指揮鮑恆毅，唱余忠元譜的台語十四行詩《人生七章》與阿內森《聖神彌撒》，屬校友合唱團音樂會。"
+        },
+        {
+          "title": "法蘭茲與朋友們《海底歷險記》沉浸式奇幻歌舞劇",
+          "verdict": "不收",
+          "why": "不在範圍：親子歌舞劇，屬「兒童劇」"
+        },
+        {
+          "title": "《管樂新風情38》",
+          "verdict": "不收",
+          "why": "2 分：海軍軍樂隊的主題音樂會（seen.json 2100127478886973440）"
+        },
+        {
+          "title": "《幻光之境-后正宇與ESO》",
+          "verdict": "不收",
+          "why": "3 分：長榮交響樂團常規音樂會，后正宇指揮德布西〈伊貝利亞〉、西貝流士《藍敏凱寧》選曲、尼爾森第四號，無獨奏家、曲目不算主流名作；非台中（seen.json 2099696972758896641）"
+        },
+        {
+          "title": "2026【探索管風琴音樂】8-12月",
+          "verdict": "不收",
+          "why": "2 分：場館推廣性質的管風琴解說音樂會（seen.json 2063941379521384448）；3 分：60 分鐘附解說的管風琴推廣場；非台中（seen.json 2063948663367925761）"
+        },
+        {
+          "title": "「節目異動」《聲界漫遊：從聖詠到當代 》",
+          "verdict": "不收",
+          "why": "2 分：地方樂團與高師大學生合唱團、管弦樂團的聯演（seen.json 2082728853642915841）"
+        },
+        {
+          "title": "極地之光管弦樂團《德意志浪漫交響》",
+          "verdict": "不收",
+          "why": "3 分：非頂尖職業樂團演布魯赫第一號小提琴協奏曲與舒伯特〈偉大〉；非台中（seen.json 2064988549014851585）"
+        },
+        {
+          "title": "對位與大師有約系列X-《離開地球90分鐘》",
+          "verdict": "不收",
+          "why": "3 分：國內室內樂團主題音樂會，客席小提琴金煐煜為比賽得獎者，主曲孟德爾頌 d 小調協奏曲；非台中（seen.json 2090423047773200384）"
+        },
+        {
+          "title": "《律動薩克斯風－從經典到無限》",
+          "verdict": "不收",
+          "why": "2 分：律師公會業餘薩克斯風重奏團，曲目多為電影與流行改編（seen.json 2112365012388167680）"
+        },
+        {
+          "title": "《璀璨星光讓愛起飛-2026星光合唱團35週年慶》",
+          "verdict": "不收",
+          "why": "seen.json 記為 rejected，沒記分數與理由（seen.json 6aa06cb626b324165c32e38f）"
+        },
+        {
+          "title": "《2026高醫聲樂社冬季音樂會》",
+          "verdict": "不收",
+          "why": "seen.json 記為 rejected，沒記分數與理由（seen.json 6aeb988a26b3245efc753790）"
+        },
+        {
+          "title": "《韶光八秩──臺師大音樂系創系80週年音樂會》",
+          "verdict": "不收",
+          "why": "2 分：大學音樂系學生樂團與合唱團的系慶音樂會（陳美安指揮《布蘭詩歌》）（seen.json 2087079903211335680）"
+        },
+        {
+          "title": "《溯音‧續章》許常惠逝世二十五週年紀念音樂會",
+          "verdict": "不收",
+          "why": "3 分：簡文彬指揮許常惠作品專場（高雄高市交＋高雄國樂團、台北 NSO＋國樂團），不是主流名作；非台中（seen.json 2084948759163445249）"
+        },
+        {
+          "title": "《創世之聲》",
+          "verdict": "不收",
+          "why": "3 分：服部百音拉布拉姆斯協奏曲、下半場布拉姆斯第一號，但樂團是楊智欽新組、第一次公演、沒有任何紀錄，不是手冊點名的頂尖樂團；非台中（seen.json 2089278164781281281）"
+        },
+        {
+          "title": "《微風往事 歲月如歌》",
+          "verdict": "不收",
+          "why": "seen.json 記為 rejected，沒記分數與理由（seen.json 6ac6859026b324165c32e5bb）"
+        },
+        {
+          "title": "《2026就是愛管：預言者的號角-戰爭和救贖的交織》",
+          "verdict": "不收",
+          "why": "2 分：國中管樂班年度成果發表（seen.json 2105249874267750401）"
+        },
+        {
+          "title": "高雄市管樂團《聲動不朽》經典音樂劇選粹",
+          "verdict": "不收",
+          "why": "2 分：管樂團的音樂劇選曲拼盤；非台中（seen.json 2083161007938134017）"
+        },
+        {
+          "title": "《人聲之書：合唱的藝術時光》",
+          "verdict": "不收",
+          "why": "2 分：高市府聲樂合唱團的綜合曲目，歌劇選段之外是藝術歌曲、台語民謠與通俗金曲（seen.json 2117526901913120769）"
+        },
+        {
+          "title": "《交響樂的天空 XII 【琴的魔手】》",
+          "verdict": "不收",
+          "why": "2 分：高雄市教師管弦樂團的音樂會（seen.json 2092559448512712705）"
+        },
+        {
+          "title": "2026 台灣絃樂團 絃樂經典《傳承》",
+          "verdict": "不收",
+          "why": "3 分：台灣絃樂團演葛利格四重奏絃樂版與威雷斯，兩場各與國小、國中弦樂團同台；非台中（seen.json 2105120623508770816）"
+        },
+        {
+          "title": "《日暮胭脂—KIM Bomi與高雄室內合唱團》",
+          "verdict": "不收",
+          "why": "3 分：本地合唱團請韓國客席指揮，唱惠特克與韓國當代合唱作品；非台中（seen.json 2113570407894147073）"
+        },
+        {
+          "title": "《意識與表象的遊樂園》薩克斯風、笙與電聲的聲響幻域",
+          "verdict": "不收",
+          "why": "2 分：薩克斯風、笙與電子聲響的當代新作實驗製作（五首世界首演，小劇場），離主流名作太遠（seen.json 2064954960502607873）"
+        },
+        {
+          "title": "2026下半年【我們的音樂探險】",
+          "verdict": "不收",
+          "why": "2 分：0–3 歲寶寶的親子音樂體驗（seen.json 2102345121869377537）"
+        },
+        {
+          "title": "《樂脈光流》一位指揮家與一個世代的臺灣國樂",
+          "verdict": "不收",
+          "why": "3 分：高雄市國樂團常任指揮退休音樂會，職業國樂團常規演出；非台中（seen.json 2087486919881486337）"
+        },
+        {
+          "title": "《為愛而生》",
+          "verdict": "不收",
+          "why": "2 分：教會聖樂團的福音詩歌音樂會，下半場是聖詩改編（seen.json 2104822363661111297）"
+        },
+        {
+          "title": "《戀戀40─陳明章現場作品四十年》新年音樂會",
+          "verdict": "不收",
+          "why": "2 分：陳明章創作歌曲音樂會，屬流行與跨界（seen.json 2085334193336229889）"
+        },
+        {
+          "title": "《高雄之音管樂團第54場音樂會-奧影流光》",
+          "verdict": "不收",
+          "why": "2 分：社區管樂團的定期音樂會（seen.json 2108036054516785153）"
+        },
+        {
+          "title": "《希望盛典・新・英雄再現》",
+          "verdict": "不收",
+          "why": "seen.json 記為 rejected，沒記分數與理由（seen.json 6aeeeff126b3245efc7537a6）"
+        },
+        {
+          "title": "《行過山河.遇見星空》",
+          "verdict": "不收",
+          "why": "2 分：地方合唱團的音樂會，韋瓦第〈榮耀頌〉加本地合唱曲與《媽媽咪呀》選曲（seen.json 2114001967207419904）"
+        },
+        {
+          "title": "《星耀百老匯》",
+          "verdict": "不收",
+          "why": "3 分：高市交與兩位百老匯歌手的音樂劇選曲音樂會，不是完整製作；非台中（seen.json 2100532931097804801）"
+        },
+        {
+          "title": "狂美《璀璨經典百老匯》交響音樂會",
+          "verdict": "不收",
+          "why": "2 分：管樂團演奏九部百老匯音樂劇配樂的拼盤，商業秀（seen.json 2099675200914427904）"
+        },
+        {
+          "title": "《2027國際大師鋼琴藝術節大師系列-帕維爾．納塞西安鋼琴獨奏會》",
+          "verdict": "不收",
+          "why": "3 分：1991 年都柏林大賽首獎、莫斯科音樂院出身、現任波士頓大學教授的俄國鋼琴家，孟德爾頌、佛瑞加《夜之加斯巴》是有份量的獨奏會，但演奏事業不到國際知名獨奏家；非台中（seen.json 2089674844780937217）"
+        },
+        {
+          "title": "《2027鑼鼓齊鳴慶豐收音樂會》",
+          "verdict": "不收",
+          "why": "2 分：國樂團的民族管弦樂音樂會，不在本欄收錄範圍（seen.json 2110924648752168960）"
+        },
+        {
+          "title": "《雙城樂章》虹韻新春音樂會",
+          "verdict": "不收",
+          "why": "2 分：史特勞斯選曲加台灣流行金曲的跨界新春音樂會；非台中（seen.json 2107728173323550721）"
+        },
+        {
+          "title": "《NTSO吳曜宇，斯特凡．席利與國臺交》",
+          "verdict": "不收",
+          "why": "3 分：國臺交常規音樂會，席利吹馬悌努雙簧管協奏曲，另有蘇克與馬悌努《捷克狂想曲》，不是主流名作；非台中（seen.json 2078508164126580737）"
+        },
+        {
+          "title": "跳出來的地圖：那些身體走過的臺灣路",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：3F樹冠大廳（西側）（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "2026臺灣作曲家系列《心繫本土 胸懷亞太》許常惠逝世二十五週年紀念特展",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：藝術迴廊（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "伊莉莎白・陶曼博士的臺灣足跡——50年的臺澳舞蹈交流之路講座",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：場館代號 5b1029cdda0322000751e9ad（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "舞境共生：伊莉莎白・陶曼博士的生態舞蹈工作坊",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：1186排練室、戶外空間（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "2026【臺灣舞蹈記憶地圖】「探索身體記憶」系列工作坊",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：衛武營1186排練室（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "2026 賦格【小小音樂大師課】高雄場",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：衛武營排練室（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "【武營來開槓】今天，你穿的是誰？  —從日常穿搭到舞台角色",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：場館代號 5b1029cdda0322000751e9ad（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "【幕後解密】探索柏林雷寧廣場劇院《夢想清單》 後台風景",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：西側營運辦公室（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "【2026 場館友善計畫】《永動城市》共融舞蹈工作坊",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：排練室（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "河志惠即興肢體工作坊",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：1186排練室（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "【2026臺灣舞蹈平台】藝術家創作提案",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：南方跳實驗空間、衛武營B313排練室 （非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "泰國傳統舞蹈工作坊 ",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：1186排練室（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "2026臺灣舞蹈記憶地圖—舞蹈書寫工作坊",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：衛武營（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "【2026臺灣舞蹈平台】身體處方 莊博翔《㒩》",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：場館代號 5b102875da0322000751e9a6（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "【2026臺灣舞蹈平台】《永動城市》滯留島舞蹈劇場＆Kinetic Light＆ONIKHO",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：舞蹈（臺灣舞蹈平台）"
+        },
+        {
+          "title": "【2026臺灣舞蹈平台】安娜琪舞蹈劇場 《Second Body》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：舞蹈（臺灣舞蹈平台）"
+        },
+        {
+          "title": "【2026臺灣舞蹈平台】孔坎•朗莎旺《茉莉•獻舞》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：舞蹈（臺灣舞蹈平台）"
+        },
+        {
+          "title": "「世界中的光環舞集」—重探編創與巡演的軌跡講座",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：場館代號 5b1029cdda0322000751e9ad（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "《永動城市》觸感導覽",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：舞蹈節目的觸感導覽"
+        },
+        {
+          "title": "【2026臺灣舞蹈平台】微光製造 王宇光《捺撇》",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：場館代號 5b102875da0322000751e9a6（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "【2026 臺灣舞蹈平台】《身體實驗場：亞洲焦點》",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：樹冠大廳東側露台（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "走過轉向－身體・歌工作坊暨講座",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：衛武營樹冠大廳西側及演講廳（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "【2026臺灣舞蹈平台】國際講座－To Dance or Not to Dance: 何謂身體？",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：場館代號 5b1029cdda0322000751e9ad（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "衛武營 K-POP Dance Party 主題導覽",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：衛武營（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "滴勾搭・滴勾搭・盪！－追尋佛朗明哥的腳步",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：衛武營樹冠大廳西露台（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "【2026 臺灣舞蹈平台】《混種對決》",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：場館代號 5be1594c77d0790006d80c56（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "新舞季-【跨】",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：大學舞蹈系舞展"
+        },
+        {
+          "title": "2026【武營來跳舞】7-12月",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：衛武營榕樹廣場西側（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "《小豬探3「小露營大驚奇」》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：兒童劇"
+        },
+        {
+          "title": "【講座】《唐・喬萬尼》的多重宇宙——帶著喜劇面具的黑暗預言",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：場館代號 5b1029cdda0322000751e9ad（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "【樹洞耳機電影院】旺卡",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：場館代號 5be1594c77d0790006d80c56（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "2026 SMIMC 聖誕主題營 高雄場",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：排練室 B313（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "《南都幽靈夜譚》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：歌仔戲（戲曲）"
+        },
+        {
+          "title": "衛武營芭蕾舞劇《遇見胡桃鉗》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：芭蕾舞劇"
+        },
+        {
+          "title": "2026 明華園總團旗艦製作《烏龍天下》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：歌仔戲（戲曲）"
+        },
+        {
+          "title": "《琴房實驗室：舞台之前》",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：排練室（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "《神韻2027台灣巡迴演出》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：神韻舞蹈演出"
+        },
+        {
+          "title": "2027維也納愛樂新年音樂會—全球衛星直播",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：衛武營戶外／其他空間（場館代號 5b8cd6c3…）的衛星直播轉播，不是現場演出"
+        },
+        {
+          "title": "《2027艾多美公益路跑》",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：場館代號 5b8cd6c3dea07500056a4200（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "2027「臺灣舞蹈記憶地圖」階段成果發表座談會",
+          "verdict": "不收",
+          "why": "不在範圍：場地不在範圍：場館代號 5b1029cdda0322000751e9ad（非四廳；講座／工作坊／展覽／舞蹈類）"
+        },
+        {
+          "title": "阿喀郎．汗舞團《祭憶：重生之夜》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：舞蹈"
+        },
+        {
+          "title": "【大師講座】林懷民 X 阿喀郎．汗—談身體、文化與創作",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：講座"
+        },
+        {
+          "title": "《職男人生3-達成激笑》",
+          "verdict": "不收",
+          "why": "不在範圍：不是音樂／歌劇／音樂劇：漫才與搞笑短劇"
         }
       ]
     },
-    "ntch": {
-      "error": "npac-ntch.org 首頁導向後只有新聞與連結，npac-ntch.org/zh 要求換瀏覽器，沒看到節目"
-    },
-    "pbc": {
-      "error": "www.pbc.com.tw 憑證錯誤，連不上"
-    },
-    "newaspect": {
-      "error": "連線被拒（ECONNREFUSED）"
-    },
-    "tanart": {
-      "error": "網域解析失敗（ENOTFOUND）"
-    },
-    "kham": {
+    "news": {
       "urls": [
-        "https://www.kham.com.tw/"
+        "https://udn.com/news/story/7270/9659928",
+        "https://udn.com/news/story/7266/9644616",
+        "https://udn.com/news/story/7270/9647651",
+        "https://news.tvbs.com.tw/life/4031649",
+        "https://www.ctee.com.tw/news/20261006701543-431207",
+        "https://www.ctee.com.tw/news/20260907700861-431207",
+        "https://n.yam.com/Article/20260728485594",
+        "https://www.mirrormedia.mg/story/20260730-197ins-121145",
+        "https://www.taiwannews.com.tw/zh/news/6280520",
+        "https://www.opentix.life/event/2058862299334565888"
       ],
       "seen": [
         {
-          "title": "音樂劇《WILD WILD》",
+          "title": "指揮大師 提勒曼 與 柏林國家歌劇院管弦樂團",
+          "verdict": "已列入",
+          "id": "thielemann-staatskapelle-berlin-2026"
+        },
+        {
+          "title": "鋼琴天后 王羽佳 與 馬勒室內樂團",
+          "verdict": "已列入",
+          "id": "yuja-wang-mco-2026"
+        },
+        {
+          "title": "指揮巨星庫倫奇斯 與 烏托邦管弦樂團",
+          "verdict": "已列入",
+          "id": "currentzis-utopia-2026"
+        },
+        {
+          "title": "Philharmonix 維也納柏林首席獨奏家合奏團《璀璨之愛》",
+          "verdict": "已列入",
+          "id": "philharmonix-2026"
+        },
+        {
+          "title": "鋼琴巨星郎朗12月再訪臺北國家音樂廳（郎朗獨奏會）",
+          "verdict": "已列入",
+          "id": "lang-lang-recital-2026"
+        },
+        {
+          "title": "烏克蘭國家歌劇院管弦樂團將訪台 唱歡樂頌祈和平",
+          "verdict": "已列入",
+          "id": "ukraine-opera-beethoven9-2026"
+        },
+        {
+          "title": "力晶世紀美聲系列 次女高音喬伊斯・狄杜娜朵冬日音樂會",
+          "verdict": "已列入",
+          "id": "didonato-recital-2026"
+        },
+        {
+          "title": "果陀劇場《Crash, Boom Boom Love!》演唱會音樂劇",
+          "verdict": "已列入",
+          "id": "goda-crash-boom-boom-love-2026"
+        },
+        {
+          "title": "高雄市管樂團《聲動不朽》－經典音樂劇選粹",
           "verdict": "不收",
-          "why": "頁面沒有日期與演出者，未評分"
+          "why": "2 分：管樂團的音樂劇選曲拼盤；非台中"
+        },
+        {
+          "title": "新逸交響樂團 2026 年度公演Ⅳ",
+          "verdict": "不收",
+          "why": "seen.json 6a9b2dc826b324165c32e36a「2026新逸交響樂團年度公演Ⅳ 延續風沙中的愛」v=rejected、seen 2026-11-02，這一筆沒有分數與理由欄"
+        },
+        {
+          "title": "黃詩雅小提琴獨奏會《走向光明》",
+          "verdict": "不收",
+          "why": "3 分：布拉姆斯第三號與《克羅采》曲目紮實，但頁面只稱「青年小提琴家」、查不到經歷；確認到的只有高雄一場，門檻是 4 分。"
+        },
+        {
+          "title": "湯志偉低音號獨奏音樂會",
+          "verdict": "不收",
+          "why": "2 分：湯志偉在高雄市音樂館演奏廳開低音號獨奏會，曲目與合作者都讀不到，場地不是高雄主廳，也查不到國際級的演出紀錄，夠不上高雄 4 分的門檻。"
+        },
+        {
+          "title": "2026音契聖誕音樂會【微光】",
+          "verdict": "不收",
+          "why": "2 分：音契合唱管絃樂團在台北浸信會懷恩堂的免費索票聖誕音樂會，王雅蕙指揮，唱聖誕合唱曲，加孟德爾頌《宗教改革》第一樂章，還排了講員，是教會的音樂聚會。"
+        },
+        {
+          "title": "嘉碧妲與柯帕琴斯卡雅絃樂二重奏 Sol & Pat Duo Recital",
+          "verdict": "不收",
+          "why": "4 分：嘉碧妲與柯帕琴斯卡雅是國際一線的大提琴與小提琴家，拉威爾奏鳴曲和柯大宜二重奏是這個編制的代表作；但節目頁的演前導聆寫 10 月 17 日，已經演完，不收。"
+        },
+        {
+          "title": "百老匯音樂劇《MJ 麥可・傑克森》",
+          "verdict": "不收",
+          "why": "4 分：拿過四座東尼獎的百老匯音樂劇，國際巡演製作首度來台，英語演出附中文字幕；但只公布「2027 年 4 月起」，場次與卡司都沒有，無法確認在 4 月 16 日前，先不收。"
+        },
+        {
+          "title": "阿格麗希音樂節在台灣",
+          "verdict": "不收",
+          "why": "不在範圍：已演完（11-10、11-12、11-15；屏東也不在範圍城市）"
+        },
+        {
+          "title": "維也納愛樂管弦樂團（索契夫、郎朗）",
+          "verdict": "不收",
+          "why": "不在範圍：已演完"
+        },
+        {
+          "title": "牛耳 2026/27 樂季九、十月其他節目（希梅諾與盧森堡愛樂、卡普松與傑洛米、TwoSet Violin、佛瑞茲演唱會、馬友友、趙成珍）",
+          "verdict": "不收",
+          "why": "不在範圍：已演完（九、十月）"
+        },
+        {
+          "title": "韓國音樂劇「或許是美好結局（Maybe Happy Ending）」",
+          "verdict": "不收",
+          "why": "不在範圍：已演完"
+        },
+        {
+          "title": "音樂劇《歌劇魅影》2026 巡演",
+          "verdict": "不收",
+          "why": "不在範圍：已演完"
+        },
+        {
+          "title": "羅德·達爾原著《巧克力冒險工廠》百老匯魔幻音樂劇",
+          "verdict": "不收",
+          "why": "不在範圍：已演完（2025 年 12 月；KKTIX 403，年份沒能親自核對）"
+        },
+        {
+          "title": "極致藝術《海象莫雷的漂流日誌》親子音樂劇",
+          "verdict": "不收",
+          "why": "不在範圍：不是範圍內的類型：兒童劇（親子音樂劇）"
+        },
+        {
+          "title": "台北愛樂少年樂團《仲夏夜之天方夜譚》",
+          "verdict": "不收",
+          "why": "不在範圍：已演完（2026 年 1 月）"
+        },
+        {
+          "title": "懷念老朋友~家駒紀念音樂會",
+          "verdict": "不收",
+          "why": "不在範圍：不是範圍內的類型：流行歌曲紀念演唱會"
+        },
+        {
+          "title": "《K21》顏社二十一週年演唱會",
+          "verdict": "不收",
+          "why": "不在範圍：不是範圍內的類型：流行（嘻哈廠牌）演唱會"
+        },
+        {
+          "title": "Atarayo ASIA TOUR 2026『夕立が去ったその後で』in TAIPEI",
+          "verdict": "不收",
+          "why": "不在範圍：不是範圍內的類型：流行演唱會"
+        },
+        {
+          "title": "Re:Dino 恐龍復活－〈龍吼哩聽〉首場阿卡貝拉演唱會",
+          "verdict": "不收",
+          "why": "不在範圍：城市或場地不在範圍（西門紅樓不是主廳），而且屬流行阿卡貝拉"
         }
       ]
-    },
-    "udn": {
-      "error": "udnfunlife 回 HTTP 429，沒打開"
-    },
-    "news": {
-      "error": "只用網路搜尋查了「交響樂團 來台 2027」與 Miss Saigon，沒找到未列入的新訪台樂團；誠品、年代、KKTIX、wekengo 與其餘關鍵字沒查"
     }
   }
 }

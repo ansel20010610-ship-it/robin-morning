@@ -2377,6 +2377,38 @@
         }
       ],
       "added": "2026-11-17"
+    },
+    {
+      "id": "ning-an-recital-2027",
+      "title": "安寧鋼琴獨奏會",
+      "kind": "獨奏",
+      "rating": 3,
+      "why": "安寧是 1999 年伊莉莎白女王大賽鋼琴組第三名，這晚彈貝多芬第 28 號奏鳴曲作品 101 和布拉姆斯第三號鋼琴奏鳴曲，另有李斯特第二號敘事曲與巴赫《E 小調觸技曲》。",
+      "who": "安寧（Ning An，鋼琴）",
+      "program": "巴赫《E 小調觸技曲》BWV 914；貝多芬《A 大調第 28 號鋼琴奏鳴曲》作品 101；李斯特《B 小調第二號敘事曲》S. 171；布拉姆斯《F 小調第三號鋼琴奏鳴曲》作品 5",
+      "price": "NT$600–2,400",
+      "note": "約 120 分鐘，含中場休息",
+      "shows": [
+        {
+          "date": "2027-02-14",
+          "time": "19:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院中劇院",
+          "tickets": "https://www.opentix.life/event/2117913779421556737"
+        }
+      ],
+      "uids": [],
+      "sources": [
+        {
+          "title": "臺中國家歌劇院節目頁",
+          "url": "https://www.npac-ntt.org/program/events/c-uSfoXA08V2R"
+        },
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2117913779421556737"
+        }
+      ],
+      "added": "2026-11-17"
     }
   ]
 }
