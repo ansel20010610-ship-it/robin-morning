@@ -1,0 +1,332 @@
+{
+  "column": "civilization",
+  "date": "2026-11-18",
+  "title": "看見火箭卻沒開過去的船長",
+  "dek": "見習生說他數到八枚白色火箭。加州人號的二副史東說他也看見了，那艘船一直停在原地。",
+  "brief": "鐵達尼號沉沒那一夜，附近的加州人號二副史東說他看見了白色火箭，照他的說法，船長洛德只叫他繼續打燈號，船沒有開過去。她唯一的報務員在求救發出前就睡了，一通電報也沒收到。58 哩（約 93 到 107 公里）外的卡帕西亞號，報務員外套脫了、耳機還戴著，船長羅斯特隆接到求救就掉頭趕去。",
+  "form": "compare",
+  "voice": "lecturer",
+  "topic_key": "civilization:north-atlantic-titanic-californian-1912",
+  "updated_at": "2026-11-18T02:12:06+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Californian.jpg",
+    "width": 1200,
+    "height": 838,
+    "alt": "黑白照片。一艘深色船身的蒸汽船停在灰色的海面上，船身中段一根煙囪冒著細煙，前後共四根桅杆，桅杆間掛著幾面小旗。",
+    "caption": "加州人號，照片日期標為 1912 年 4 月 15 日，鐵達尼號沉沒的那一天，拍攝地點來源未載明。拍攝者是 Louis Ogden，他同一天也拍了鐵達尼號的救生艇靠近卡帕西亞號的照片。",
+    "credit": "Louis Ogden；來源：maritimequest.com",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Californian.jpg",
+    "made": "1912"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1912 年 4 月 15 日凌晨，北大西洋上有兩個船長，午夜過後都準備休息。卡帕西亞號（Carpathia）的船長**亞瑟．羅斯特隆（Arthur Rostron）**剛上床，就有人把電報送到他身邊。貨輪加州人號（Californian）的船長**史丹利．洛德（Stanley Lord）**，照他自己的證詞說，12 點 15 分走進海圖室，12 點 40 分隔著傳聲管問二副那艘船是不是同一艘，並說他要去躺一下。"
+    },
+    {
+      "type": "p",
+      "text": "那是鐵達尼號沉沒的一夜。這艘新船首航，從英國開往紐約，撞上冰山後不到三小時就沉了，1490 人死去。卡麥隆 1997 年的電影，以這次沉船為底。"
+    },
+    {
+      "type": "p",
+      "text": "講鐵達尼號，常會講到救生艇不夠；比較少人講的是，旁邊有一艘船，二副說他看見了火箭，船卻沒動。卡帕西亞號在 58 哩（約 93 到 107 公里）外，接到求救就掉頭。加州人號近得多，整夜停著。"
+    },
+    {
+      "type": "p",
+      "text": "沉船後，英國成立調查庭，美國參議院也開了聽證。依這些紀錄看，兩艘船差在消息走的路：**一條直送船長床邊，一條要先經過傳聲管和一個年輕二副。**"
+    },
+    {
+      "type": "p",
+      "text": "報務員是操作船上無線電報的人。卡帕西亞號的是卡騰（Harold Cottam），加州人號的是伊凡斯（Cyril Evans），兩艘船各只有一個。"
+    },
+    {
+      "type": "table",
+      "title": "同一夜，兩艘船",
+      "head": [
+        "",
+        "卡帕西亞號",
+        "加州人號"
+      ],
+      "rows": [
+        [
+          "船長",
+          "羅斯特隆",
+          "洛德"
+        ],
+        [
+          "離鐵達尼號",
+          "58 哩（約 93 到 107 公里）",
+          "1912 年判定不超過 8 到 10 哩（約 13 到 18 公里）；1992 年副總調查員重估 17 到 20 哩（約 27 到 37 公里）"
+        ],
+        [
+          "報務員",
+          "卡騰，外套脫了，耳機還戴著",
+          "伊凡斯，11 點半掛上耳機睡了"
+        ],
+        [
+          "船長聽到",
+          "求救電報",
+          "史東說，他報告了白色火箭"
+        ],
+        [
+          "船長做的",
+          "掉頭，時速從約 26 公里拚到約 32 公里",
+          "史東說，洛德叫他繼續打燈號"
+        ]
+      ],
+      "caption": "依英美調查紀錄和英國海事事故調查處（MAIB）1992 年報告整理，時間照各船自己的鐘。距離原文寫 miles，沒分陸哩或海哩，統稱哩，1 哩約 1.6 到 1.85 公里；航速原文寫節，按 1 節約 1.852 公里／小時換算。"
+    },
+    {
+      "type": "h",
+      "text": "夜裡沒人守的電報機"
+    },
+    {
+      "type": "p",
+      "text": "卡帕西亞號的卡騰作證說，他白天守著，晚上不一定，海上大約午夜睡。他不在，系統裡也沒有東西替他收訊號或響鈴。"
+    },
+    {
+      "type": "p",
+      "text": "加州人號的伊凡斯也是一個人。那晚 10 點 20 分，船碰上大片浮冰，停了下來。11 點左右，洛德叫他通知鐵達尼號：我們停了，四周都是冰。對方回他別插進來：兩船太近，訊號蓋掉了她正在收的岸上電報。"
+    },
+    {
+      "type": "p",
+      "text": "11 點半，伊凡斯從早上 7 點做到這時，掛起耳機上床，收訊的機器也停了。午夜過後，一位剛下班的三副走進報務室叫醒他，問有哪些船，又拿起耳機聽了十五到三十秒，什麼也沒聽到。伊凡斯說他半睡半醒，不記得這件事。鐵達尼號第一次求救，照她自己的鐘，是 12 點 15 分。"
+    },
+    {
+      "type": "p",
+      "text": "卡帕西亞號那邊，卡騰外套已經脫了，耳機還戴著，在等另一艘船回話。參議員問他是不是正要就寢，他答是。他主動呼叫鐵達尼號，問對方知不知道鱈魚角有一批電報要給她。對方回他："
+    },
+    {
+      "type": "quote",
+      "text": "快來。這是求救電報，CQD。",
+      "original": "Come at once. It is a distress message; C. Q. D.",
+      "cite": "卡騰在美國參議院調查庭轉述鐵達尼號的回電，1912 年 4 月 19 日"
+    },
+    {
+      "type": "p",
+      "text": "CQD 是當時的求救電碼。卡騰去報告，羅斯特隆先下令掉頭，才回頭問他確不確定，問了兩次。"
+    },
+    {
+      "type": "h",
+      "text": "八枚白色火箭"
+    },
+    {
+      "type": "p",
+      "text": "加州人號駕駛台上，二副史東和一個見習生看著一艘停著的船。鐵達尼號約從 12 點 45 分放到 1 點 45 分，一小時裡放了大約八枚求救火箭，白色星火。史東說，約 1 點 10 分，他用傳聲管報告看見五枚白色火箭；洛德問那是不是公司的信號，他答：「我不知道，但在我看來像是白色火箭。」洛德叫他繼續打燈號。"
+    },
+    {
+      "type": "p",
+      "text": "當時船公司有自己的夜間信號，用火箭和火光。國際規則又讓求救信號什麼顏色都行，鐵達尼號的是白色，和其他火箭沒有一眼可分的差別；這條規則到 1948 年才改。"
+    },
+    {
+      "type": "p",
+      "text": "洛德的版本不同，他說史東只講了一枚。加州人號的鐘約 2 點 05 分，見習生下樓報告一共八枚，洛德只記得門開了又關上。英國調查庭認定鐵達尼號 2 點 20 分沉沒（她自己的鐘）。4 點半大副叫醒洛德；約 6 點，他從別艘船得知鐵達尼號沉了，才全速穿過浮冰趕去，約 8 點到場，羅斯特隆請他們在附近再搜一遍。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "portrait",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Capt._Rostron_of_the_Carpathia_LCCN98509212.jpg/1280px-Capt._Rostron_of_the_Carpathia_LCCN98509212.jpg",
+      "width": 1280,
+      "height": 1586,
+      "alt": "黑白照片。一位穿雙排扣制服、戴船長帽的男子，雙手插在外套口袋，倚著欄杆微笑，身後是帆布和深色木板。",
+      "caption": "卡帕西亞號船長羅斯特隆，1912 年，拍攝地點未載明。英國調查庭說他做了所能做的一切。",
+      "credit": "Bain News Service／George Grantham Bain Collection，美國國會圖書館",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Capt._Rostron_of_the_Carpathia_LCCN98509212.jpg",
+      "made": "1912"
+    },
+    {
+      "type": "h",
+      "text": "兩次調查，隔八十年"
+    },
+    {
+      "type": "p",
+      "text": "1912 年 7 月，英國的調查庭認定，加州人號看見的就是鐵達尼號，兩船相距不超過 8 到 10 哩；她看到第一枚火箭時就能開過去，也許能救起很多人，甚至全部。美國參議院的委員會則寫道："
+    },
+    {
+      "type": "quote",
+      "text": "要是當時立刻伸出援手，或是加州人號的報務員星期天晚上在崗位上多待幾分鐘，那艘船或許就能得到救起鐵達尼號乘客與船員的光榮。",
+      "original": "Had assistance been promptly proffered, or had wireless operator of the Californian remained a few minutes longer at his post on Sunday evening, that ship might have had the proud distinction of rescuing the lives of the passengers and crew of the Titanic.",
+      "cite": "美國參議院調查報告〈加州人號的責任〉"
+    },
+    {
+      "type": "p",
+      "text": "洛德要求重審，被拒；他沒被起訴，沒有上訴的門。"
+    },
+    {
+      "type": "p",
+      "text": "1985 年，有人找到鐵達尼號殘骸，位置和 1912 年調查庭採用的差了約 13 哩。1990 年起，英國海事事故調查處（MAIB，英國政府調查船難的單位）重新評估這件事。1992 年報告出來，外聘調查員認為兩船只隔 5 到 7 哩；執筆的副總調查員認為隔了 17 到 20 哩，看見的多半是另一艘船。但兩份報告都同意：火箭確實被看見了，卻沒有採取適當的行動。報告主筆認為，該做的是叫船長（沒反應就當面報告）、備車、叫醒報務員，讓船長上駕駛台，朝火箭的方向開。"
+    },
+    {
+      "type": "p",
+      "text": "副總調查員推斷，就算照做，加州人號也只會晚到，做的是卡帕西亞號做的事，救起逃出來的人；他不認為洛德任何合理可能的作為，會讓結局不同，但這不改變該嘗試的事實。他也認為洛德被叫時睡得很沉，像是應了，話卻沒進去。"
+    },
+    {
+      "type": "quote",
+      "text": "直接講，我認為駕駛台傳來的消息，就是沒有傳到。",
+      "original": "In plain language, I think the message from the Bridge simply did not get through.",
+      "cite": "英國海事事故調查處，《鐵達尼號：加州人號相關證據重新評估》，1992 年"
+    },
+    {
+      "type": "p",
+      "text": "報告結語是這個故事裡沒有壞人，只有有凡人特質的人。依這些紀錄看，我的看法接近：洛德的責任推不掉，但把這夜歸給一個壞船長，會漏掉消息走的路。卡帕西亞號的電報被送到船長床邊；加州人號的火箭要經過傳聲管、一個副總調查員推測不敢離開駕駛台的年輕二副，再到一個副總調查員認為睡得很沉的人。"
+    },
+    {
+      "type": "timeline",
+      "title": "那一夜",
+      "caption": "各船的鐘對不太齊，只看先後。",
+      "items": [
+        {
+          "when": "23:30",
+          "label": "伊凡斯掛起耳機上床",
+          "note": ""
+        },
+        {
+          "when": "0:15",
+          "label": "鐵達尼號發出求救",
+          "note": "鐵達尼號的鐘"
+        },
+        {
+          "when": "0:35",
+          "label": "羅斯特隆接報",
+          "note": "卡帕西亞號的鐘"
+        },
+        {
+          "when": "約 1:10",
+          "label": "史東說他報告看見白色火箭",
+          "note": "加州人號的鐘"
+        },
+        {
+          "when": "2:20",
+          "label": "鐵達尼號沉沒",
+          "note": "鐵達尼號的鐘"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "1912 年 7 月 23 日，美國修改船舶無線電法：離開美國港口、載 50 人以上的船，無線電要有兩個以上合格的人，航行時隨時有一個值班。10 月 1 日起適用，修法當天還沒生效。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Report: Circumstances in Connection with the SS Californian",
+      "publisher": "British Wreck Commissioner's Inquiry（Titanic Inquiry Project 轉錄）",
+      "date": "1912-07-30",
+      "url": "https://www.titanicinquiry.org/BOTInq/BOTReport/botRepCalifornian.php",
+      "note": "加州人號停船、伊凡斯與鐵達尼號的通訊、史東與見習生的證詞、洛德的版本、調查庭結論。報告日期見報告末頁簽署。"
+    },
+    {
+      "title": "Report: Account of the Saving and Rescue of those who Survived – Means taken to Procure Assistance",
+      "publisher": "British Wreck Commissioner's Inquiry（Titanic Inquiry Project 轉錄）",
+      "date": "1912-07-30",
+      "url": "https://www.titanicinquiry.org/BOTInq/BOTReport/botRepAssist.php",
+      "note": "12:15 發出 CQD、卡帕西亞號在 58 哩外、博克斯霍爾放約八枚火箭、加州人號「只有一個報務員而他睡著了」。"
+    },
+    {
+      "title": "Report: Account of the Saving and Rescue of those who Survived – Rescue by the SS Carpathia",
+      "publisher": "British Wreck Commissioner's Inquiry（Titanic Inquiry Project 轉錄）",
+      "date": "1912-07-30",
+      "url": "https://www.titanicinquiry.org/BOTInq/BOTReport/botRepRescue.php",
+      "note": "卡帕西亞號噸位與人數、4:10 第一艘救生艇、救起 712 人、調查庭對羅斯特隆的評語。"
+    },
+    {
+      "title": "Report: Findings of the Court",
+      "publisher": "British Wreck Commissioner's Inquiry（Titanic Inquiry Project 轉錄）",
+      "date": "1912-07-30",
+      "url": "https://www.titanicinquiry.org/BOTInq/BOTReport/botRepFindings.php",
+      "note": "第 23 問：鐵達尼號沉沒時間 2:20 a.m.（ship's time）。"
+    },
+    {
+      "title": "United States Senate Inquiry, Day 1: Testimony of Arthur H. Rostron",
+      "publisher": "Titanic Inquiry Project",
+      "date": "1912-04-19",
+      "url": "https://www.titanicinquiry.org/USInq/AmInq01Rostron01.php",
+      "note": "12:35 接報、問兩次、58 哩、命令清單、帆布灰袋、公司的火箭、4:10。"
+    },
+    {
+      "title": "United States Senate Inquiry, Day 1: Testimony of Harold T. Cottam",
+      "publisher": "Titanic Inquiry Project",
+      "date": "1912-04-19",
+      "url": "https://www.titanicinquiry.org/USInq/AmInq01Cottam01.php",
+      "note": "值班習慣、無警報裝置、脫外套戴耳機、主動呼叫鐵達尼號與其回電，見續頁 AmInq01Cottam02.php。"
+    },
+    {
+      "title": "British Wreck Commissioner's Inquiry, Day 8: Testimony of Cyril F. Evans",
+      "publisher": "Titanic Inquiry Project",
+      "date": "1912-05-15",
+      "url": "https://www.titanicinquiry.org/BOTInq/BOTInq08Evans01.php",
+      "note": "第 8927、8993–9045 問：11:30 上床、從早上 7 點工作、掛耳機停檢波器、「Keep out」、私人電報、半睡半醒。"
+    },
+    {
+      "title": "British Wreck Commissioner's Inquiry, Day 8: Testimony of Charles V. Groves",
+      "publisher": "Titanic Inquiry Project",
+      "date": "1912-05-15",
+      "url": "https://www.titanicinquiry.org/BOTInq/BOTInq08Groves01.php",
+      "note": "第 8272–8289 問（在續頁）：到報務室叫醒伊凡斯、戴耳機 15 到 30 秒、時間約 12:15 到 12:20。"
+    },
+    {
+      "title": "British Wreck Commissioner's Inquiry, Day 7: Testimony of Stanley Lord",
+      "publisher": "Titanic Inquiry Project",
+      "date": "1912-05-14",
+      "url": "https://www.titanicinquiry.org/BOTInq/BOTInq07Lord01.php",
+      "note": "第 6783–6790 問：12:15 走進海圖室、12:40 傳聲管問二副並說去躺下、1:15 被告知一枚白色火箭。"
+    },
+    {
+      "title": "British Wreck Commissioner's Inquiry, Day 28: Testimony of Arthur H. Rostron",
+      "publisher": "Titanic Inquiry Project",
+      "date": "1912-06-21",
+      "url": "https://www.titanicinquiry.org/BOTInq/BOTInq28Rostron01.php",
+      "note": "第 25388–25394 問：剛上床還沒睡著、平常 14 節拚到 17.5 節、綠色火光是白星公司的夜間信號。"
+    },
+    {
+      "title": "United States Senate Inquiry, Report: The Rescue",
+      "publisher": "Titanic Inquiry Project",
+      "date": "2026-11-17（讀取日）",
+      "url": "https://www.titanicinquiry.org/USInq/USReport/AmInqRep08.php",
+      "note": "委員會對羅斯特隆的評價、加州人號約 8 點到場並受託搜尋。"
+    },
+    {
+      "title": "United States Senate Inquiry, Report: Steamship Californian's Responsibility",
+      "publisher": "Titanic Inquiry Project",
+      "date": "2026-11-17（讀取日）",
+      "url": "https://www.titanicinquiry.org/USInq/USReport/AmInqRep06.php",
+      "note": "「most reprehensible」與「a few minutes longer at his post」整句。"
+    },
+    {
+      "title": "United States Senate Inquiry, Report: Recommendations",
+      "publisher": "Titanic Inquiry Project",
+      "date": "2026-11-17（讀取日）",
+      "url": "https://www.titanicinquiry.org/USInq/USReport/AmInqRep10.php",
+      "note": "建議無線電日夜都要有人值班、報務室與駕駛台直接通訊。"
+    },
+    {
+      "title": "RMS Titanic: Reappraisal of Evidence Relating to SS Californian",
+      "publisher": "Marine Accident Investigation Branch, Department of Transport（英國）",
+      "date": "1992-03-12",
+      "url": "https://assets.publishing.service.gov.uk/media/54c15bf240f0b6158d000027/MAIBReport_ReappraisalOfEvidence-SSCalifornian-Titanic-1992.pdf",
+      "note": "1490 人罹難、1912 年調查庭的答覆、洛德申請重審被拒與後來的經歷、1985 殘骸與 1990 決定重評、外聘調查員與副總調查員的分歧、應採取的行動、到場時間推算、駁斥酗酒等說法、「did not get through」、史東的責任、求救信號顏色規則到 1948 年才改。日期為序文落款。"
+    },
+    {
+      "title": "June 24, 1910 Radio Ship Act (amended July 23, 1912)",
+      "publisher": "United States Early Radio History（Thomas H. White）",
+      "date": "1912-07-23",
+      "url": "https://earlyradiohistory.us/1910act.htm",
+      "note": "條文取自 1911、1915 年版 Navigation Laws of the United States；1912 年 10 月 1 日起適用於載 50 人以上的船，貨輪另訂 1913 年 7 月 1 日。"
+    },
+    {
+      "title": "Titanic (1997 film)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-17（讀取日）",
+      "url": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "note": "卡麥隆編導，1997 年上映。"
+    }
+  ]
+}
