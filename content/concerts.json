@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-14",
+  "checked": "2026-11-17",
   "events": [
     {
       "id": "rattle-brso-2026",
@@ -369,18 +369,23 @@
           "time": "19:30",
           "city": "台北",
           "venue": "國家音樂廳",
-          "tickets": "https://www.opentix.life/program/2089260297614872577"
+          "tickets": "https://www.opentix.life/event/2089980031975464960"
         }
       ],
       "added": "2026-11-03",
       "uids": [
         "6ad10a0826b324165c32e5fb",
-        "6ad10a0826b324165c32e5fc"
+        "6ad10a0826b324165c32e5fc",
+        "2089980031975464960"
       ],
       "sources": [
         {
           "title": "OPENTIX 節目頁",
           "url": "https://www.opentix.life/program/2089260297614872577"
+        },
+        {
+          "title": "OPENTIX 節目頁（第二晚）",
+          "url": "https://www.opentix.life/event/2089980031975464960"
         }
       ]
     },
@@ -1107,17 +1112,19 @@
       "rating": 4,
       "why": "陸逸軒是 2025 年蕭邦國際鋼琴大賽冠軍，奪冠一年多後在國家音樂廳彈一整晚獨奏會。曲目還沒公布，先記下日期。",
       "who": "陸逸軒（鋼琴）",
-      "note": "主辦標示即將啟售，曲目與票價未公布",
       "shows": [
         {
           "date": "2027-01-02",
           "time": "19:30",
           "city": "台北",
-          "venue": "國家音樂廳"
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/event/2114340307123310592"
         }
       ],
       "added": "2026-11-09",
-      "uids": [],
+      "uids": [
+        "2114340307123310592"
+      ],
       "sources": [
         {
           "title": "巴哈靈感音樂文化協會 活動頁",
@@ -1126,8 +1133,13 @@
         {
           "title": "HarrisonParrott：陸逸軒獲蕭邦大賽首獎",
           "url": "https://www.harrisonparrott.com/news/2025-10-21/eric-lu-on-wins-first-prize-at-the-chopin-competition"
+        },
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2114340307123310592"
         }
-      ]
+      ],
+      "program": "布拉姆斯《D小調主題與變奏曲》Op.18b、拉赫曼尼諾夫前奏曲 Op.32-5 與 Op.23-5、《音畫練習曲》Op.33-3、蕭邦《C小調夜曲》Op.48-1、《波蘭舞曲-幻想曲》Op.61、舒曼《兒時情景》、普羅高菲夫第七號奏鳴曲"
     },
     {
       "id": "malofeev-recital-2027",
@@ -1136,17 +1148,19 @@
       "rating": 4,
       "why": "2001 年生於莫斯科，十三歲拿下柴可夫斯基國際青少年音樂比賽首獎，費城管弦樂團、波士頓交響樂團都和他同台過。",
       "who": "亞歷山大．馬洛費耶夫（鋼琴）",
-      "note": "即將啟售；開賣日、票價、曲目都還沒公布",
       "shows": [
         {
           "date": "2027-01-05",
           "time": "19:30",
           "city": "台北",
-          "venue": "國家音樂廳"
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/event/2116506394101301249"
         }
       ],
       "added": "2026-11-09",
-      "uids": [],
+      "uids": [
+        "2116506394101301249"
+      ],
       "sources": [
         {
           "title": "巴哈靈感音樂文化協會 活動頁",
@@ -1155,8 +1169,14 @@
         {
           "title": "馬洛費耶夫官網 簡歷",
           "url": "https://alexander-malofeev.com/biography/"
+        },
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2116506394101301249"
         }
-      ]
+      ],
+      "program": "舒伯特《三首鋼琴小品》D.946、葛利格《霍爾堡組曲》、西貝流士《樹木組曲》Op.75、史克里亞賓《降 A 大調圓舞曲》Op.38、盧里埃《五首脆弱的前奏曲》Op.1、拉赫曼尼諾夫《第二號鋼琴奏鳴曲》",
+      "price": "NT$800–3,000"
     },
     {
       "id": "schiff-recital-2027",
@@ -1622,6 +1642,741 @@
           "url": "https://www.npac-ntt.org/program/events/c-WlZRMgyXcGS"
         }
       ]
+    },
+    {
+      "id": "chen-shih-wei-liszt-2026",
+      "title": "陳世偉鋼琴獨奏會：巡禮之年",
+      "kind": "獨奏",
+      "rating": 3,
+      "why": "陳世偉一晚彈完李斯特《巡禮之年》第二年〈義大利〉，再接補遺〈威尼斯與那不勒斯〉。他在德國漢諾威音樂學院拿到最高演奏文憑，得過馬德里的國際鋼琴比賽首獎。",
+      "who": "陳世偉（鋼琴）",
+      "program": "李斯特：《巡禮之年》第二年〈義大利〉S.161、第二年補遺〈威尼斯與那不勒斯〉S.162",
+      "shows": [
+        {
+          "date": "2026-11-25",
+          "time": "19:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院小劇場",
+          "tickets": "https://www.opentix.life/event/2109824911699013633"
+        }
+      ],
+      "uids": [
+        "2109824911699013633"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2109824911699013633"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "liao-chiao-han-bach-dance-2026",
+      "title": "廖皎含《至尊巴赫：舞韻》",
+      "kind": "獨奏",
+      "rating": 3,
+      "why": "鋼琴家廖皎含邊彈邊解說，一整場都是舞曲：巴赫第六號法國組曲、蕭邦《英雄》波蘭舞曲、拉威爾《悼念公主的帕望舞曲》，連布魯貝克的〈Take Five〉也排了進來。",
+      "who": "廖皎含（鋼琴）",
+      "program": "巴赫《E 大調第六號法國組曲》BWV 817、莫札特《小步舞曲》K.1、貝多芬《G 大調小步舞曲》、舒伯特《十二首蘭德勒舞曲》D.366、蕭邦兩首遺作圓舞曲（A 小調、E 小調）、《馬厝卡》Op.17、《英雄》波蘭舞曲 Op.53、德布西《貝加馬斯克組曲》的小步舞曲與巴瑟比舞曲、拉威爾《悼念公主的帕望舞曲》、巴爾托克《羅馬尼亞民間舞曲》、布魯貝克〈Take Five〉",
+      "price": "NT$500",
+      "note": "全長約 110 分鐘，含中場 15 分鐘",
+      "shows": [
+        {
+          "date": "2026-11-29",
+          "time": "15:00",
+          "city": "台中",
+          "venue": "臺中國家歌劇院小劇場",
+          "tickets": "https://www.opentix.life/event/2043639453032493057"
+        }
+      ],
+      "uids": [
+        "2043639453032493057"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2043639453032493057"
+        },
+        {
+          "title": "臺中國家歌劇院節目頁",
+          "url": "https://www.npac-ntt.org/program/events/c-fcGmiq2D7pM"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "liebreich-josefowicz-tso-2026",
+      "title": "里柏瑞契、喬瑟芙維琪與北市交",
+      "kind": "協奏曲",
+      "rating": 4,
+      "why": "小提琴家喬瑟芙維琪來拉席曼諾夫斯基第二號小提琴協奏曲。北市交首席指揮里柏瑞契用理查．史特勞斯《唐璜》開場，下半場是巴爾托克《管弦樂協奏曲》。",
+      "who": "亞歷山大．里柏瑞契（指揮）、萊拉．喬瑟芙維琪（小提琴）、臺北市立交響樂團",
+      "program": "理查．史特勞斯《唐璜》、席曼諾夫斯基《第二號小提琴協奏曲》、巴爾托克《管弦樂協奏曲》",
+      "shows": [
+        {
+          "date": "2026-12-02",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "臺北市中山堂中正廳",
+          "tickets": "https://www.opentix.life/event/1992891801301155841"
+        }
+      ],
+      "uids": [
+        "1992891801301155841"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/1992891801301155841"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "chiang-wanderer-schubert-ntt-2026",
+      "title": "江苙萁鋼琴獨奏會《流浪者手冊》",
+      "kind": "獨奏",
+      "rating": 3,
+      "why": "重頭戲是舒伯特的《流浪者幻想曲》，旁邊排了兩首即興曲、李斯特改編的〈鱒魚〉〈聖母頌〉和德布西〈月光〉。江苙萁用一個星際旅人的故事把曲子串起來。",
+      "who": "江苙萁（鋼琴）",
+      "program": "舒伯特《流浪者幻想曲》D.760；拉威爾〈汪洋一孤舟〉；舒伯特《升C小調樂興之時》D.780之4、《降A大調即興曲》D.899之4、《降G大調即興曲》D.899之3；舒伯特／李斯特〈聖母頌〉〈鱒魚〉；德布西〈月光〉",
+      "price": "NT$500、1,500",
+      "note": "全長約100分鐘，含中場休息10分鐘；建議6歲以上",
+      "shows": [
+        {
+          "date": "2026-12-05",
+          "time": "14:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院小劇場",
+          "tickets": "https://www.opentix.life/event/2086719960504127489"
+        }
+      ],
+      "uids": [
+        "2086719960504127489"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2086719960504127489"
+        },
+        {
+          "title": "臺中國家歌劇院節目頁",
+          "url": "https://www.npac-ntt.org/program/events/c-MujTm0C1Sdh"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "hsiao-yun-harpsichord-sizhu-2026",
+      "title": "曉韵古樂團：大鍵琴與絲竹",
+      "kind": "室內樂",
+      "rating": 3,
+      "why": "大鍵琴和古箏、琵琶、笛簫同台，五首新作都是世界首演，其中一首出自國家文藝獎得主潘皇龍。中間穿插庫普蘭、巴赫的大鍵琴獨奏，和〈出水蓮〉〈鷓鴣飛〉幾首古曲。",
+      "who": "曉韵古樂團：蔡佳璇（大鍵琴）、郭靖沐（古箏）、黃立騰（琵琶）、熊仁岳（笛、簫）",
+      "program": "庫普蘭〈神秘的路障〉、佛可瑞〈朱彼得〉、巴赫聖詠〈醒來，聲音在呼喚著我們〉BWV 645（大鍵琴獨奏）；琵琶〈海青拿鶴〉、笛〈鷓鴣飛〉、箏〈出水蓮〉；瓦爾查克、潘皇龍、陳士惠、麥克盧爾、熊仁岳的新作（皆世界首演）",
+      "price": "NT$500、800",
+      "note": "全長約120分鐘，含中場休息15分鐘",
+      "shows": [
+        {
+          "date": "2026-12-06",
+          "time": "14:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院小劇場",
+          "tickets": "https://www.opentix.life/event/2089646348479619073"
+        }
+      ],
+      "uids": [
+        "2089646348479619073"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2089646348479619073"
+        },
+        {
+          "title": "臺中國家歌劇院節目頁",
+          "url": "https://www.npac-ntt.org/program/events/c-fB7WXuJOVnT"
+        },
+        {
+          "title": "中央社 2023-09-22 報導",
+          "url": "https://www.cna.com.tw/news/acul/202309220266.aspx"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "liebreich-anderszewski-tso-2026",
+      "title": "里柏瑞契、安德佐夫斯基與北市交",
+      "kind": "協奏曲",
+      "rating": 4,
+      "why": "波蘭鋼琴家安德佐夫斯基彈貝多芬《皇帝》，下半場里柏瑞契帶北市交演理查．史特勞斯《阿爾卑斯交響曲》。",
+      "who": "亞歷山大．里柏瑞契（指揮）、皮奧特．安德佐夫斯基（鋼琴）、臺北市立交響樂團",
+      "program": "貝多芬《第五號鋼琴協奏曲「皇帝」》；理查．史特勞斯《阿爾卑斯交響曲》",
+      "note": "演前 18:50 在一樓大廳有導聆",
+      "shows": [
+        {
+          "date": "2026-12-11",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/event/1992893712205377537"
+        }
+      ],
+      "uids": [
+        "1992893712205377537"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/1992893712205377537"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "messiah-shen-hsin-chin-ntt-2026",
+      "title": "韓德爾《彌賽亞》選粹",
+      "kind": "合唱",
+      "rating": 3,
+      "why": "年底在台中聽得到的《彌賽亞》，沈新欽指揮，林慈音、林健吉等四位獨唱，三個合唱團加室內管弦樂團，從序曲唱到〈哈利路亞〉與終曲。",
+      "who": "沈新欽（指揮）、林慈音（女高音）、翁若珮（女低音）、林健吉（男高音）、羅俊穎（男低音）、沈新欽美聲團、ICTC臺中國際合唱團、新竹新笙合唱團、新美聲室內管弦樂團、陳毓麗（鍵盤）",
+      "program": "韓德爾《彌賽亞》選粹：上半場預言與耶穌誕生，下半場受難、復活與反思，含〈哈利路亞〉",
+      "shows": [
+        {
+          "date": "2026-12-14",
+          "time": "19:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院中劇院",
+          "tickets": "https://www.opentix.life/event/2101925846912507905"
+        }
+      ],
+      "uids": [
+        "2101925846912507905"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2101925846912507905"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "kings-singers-tso-christmas-2026",
+      "title": "國王歌手與北市交聖誕音樂會",
+      "kind": "聲樂",
+      "rating": 4,
+      "why": "國王歌手是 1968 年在英國成軍的六人男聲重唱團，這次再度來台，和北市交同台唱聖誕歌與迪士尼選曲。楊智欽另帶樂團演《糖果屋》序曲和《胡桃鉗組曲》。",
+      "who": "國王歌手（The King's Singers，六人男聲重唱）、楊智欽（指揮）、臺北市立交響樂團",
+      "program": "《聖誕詼諧曲》（薩貝斯基編曲）、聖誕歌曲與人聲選曲、胡伯定克《糖果屋》序曲、迪士尼經典選曲、柴可夫斯基《胡桃鉗組曲》Op.71a",
+      "price": "NT$500–2,500",
+      "note": "約 110 分鐘含中場 20 分鐘；建議 6 歲以上",
+      "shows": [
+        {
+          "date": "2026-12-18",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/event/2080142462134394880"
+        }
+      ],
+      "uids": [
+        "2080142462134394880"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2080142462134394880"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "kerson-leong-ksso-2026",
+      "title": "梁喬信與高市交：布魯赫與布拉姆斯",
+      "kind": "協奏曲",
+      "rating": 4,
+      "why": "加拿大小提琴家梁喬信 2010 年拿下曼紐因大賽少年組首獎，這次拉布魯赫《蘇格蘭幻想曲》，下半場是布拉姆斯第二號交響曲，吳曜宇指揮高市交。",
+      "who": "梁喬信（小提琴）、吳曜宇（指揮）、高雄市交響樂團",
+      "program": "卡洛維茨《回歸的浪潮》、布魯赫《蘇格蘭幻想曲》、布拉姆斯《第二號交響曲》",
+      "shows": [
+        {
+          "date": "2026-12-20",
+          "time": "14:30",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳",
+          "tickets": "https://www.opentix.life/event/2087506535193788417"
+        }
+      ],
+      "uids": [
+        "2087506535193788417"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2087506535193788417"
+        },
+        {
+          "title": "The Strad：2010 年曼紐因大賽得獎報導",
+          "url": "https://thestrad.com/violinists-xiang-yu-and-kerson-leong-triumph-at-menuhin-competition/6400.article"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "hou-chuan-an-trumpet-2026",
+      "title": "侯傳安小號獨奏會",
+      "kind": "獨奏",
+      "rating": 3,
+      "why": "侯傳安當過國臺交小號首席，現在在臺藝大教銅管。這場獨奏會有韓德爾的組曲、亨德密特的小號奏鳴曲和溫伯格的小號協奏曲，鋼琴是賀芸。",
+      "who": "侯傳安（小號）、賀芸（鋼琴）",
+      "program": "韓德爾《D 大調組曲》、亨德密特《小號奏鳴曲》、艾乃斯可〈傳說〉、柯林斯〈音樂會快步舞曲〉、溫伯格《小號協奏曲》、德布西〈美好的黃昏〉",
+      "shows": [
+        {
+          "date": "2026-12-23",
+          "time": "19:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院小劇場",
+          "tickets": "https://www.opentix.life/event/2105498807602659329"
+        }
+      ],
+      "uids": [
+        "2105498807602659329"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2105498807602659329"
+        },
+        {
+          "title": "國立臺灣交響樂團：樂團成員",
+          "url": "https://www.ntso.gov.tw/cp.aspx?n=3032"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "tsai-a-hsin-taiwanese-opera-2026",
+      "title": "台語歌劇《行出性命的光》",
+      "kind": "歌劇",
+      "rating": 4,
+      "why": "劉聖賢作曲、王瓊玲寫劇本的新台語歌劇，講台灣第一位女醫師蔡阿信的一生，在衛武營歌劇院做全本舞台演出，女高音蕭涵唱蔡阿信。",
+      "who": "陳欣宜（指揮、共同導演）、林羣翊（共同導演）、NCCE新古典室內樂團；蕭涵（蔡阿信）、黎蓉櫻、張淳菡、張殷齊、林健吉",
+      "program": "劉聖賢作曲、王瓊玲編劇的台語歌劇全劇，台語演唱附中文字幕，約 110 分鐘含中場休息",
+      "price": "NT$500–3,000",
+      "shows": [
+        {
+          "date": "2026-12-24",
+          "time": "19:30",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心歌劇院",
+          "tickets": "https://www.opentix.life/event/2100157616404054017"
+        },
+        {
+          "date": "2026-12-25",
+          "time": "19:30",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心歌劇院",
+          "tickets": "https://www.opentix.life/event/2100157616404054017"
+        }
+      ],
+      "uids": [
+        "2100157616404054017"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2100157616404054017"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "wjso-new-year-2026",
+      "title": "維也納約翰史特勞斯管弦樂團新年音樂會",
+      "kind": "交響樂",
+      "rating": 4,
+      "why": "年底在台北聽得到維也納的樂團整首演《藍色多瑙河》《春之聲》和《維也納森林的故事》。這個團專演史特勞斯家族的圓舞曲和波卡，由維特納指揮。",
+      "who": "約翰尼斯．維特納（指揮）、維也納約翰史特勞斯管弦樂團",
+      "program": "約瑟夫．史特勞斯《暢通無阻》《來自遠方》《度假旅行》《防火！》四首波卡；小約翰．史特勞斯《春之聲》《維也納森林的故事》《美麗的藍色多瑙河》圓舞曲、《雷鳴與閃電》波卡",
+      "price": "NT$1,500–5,300",
+      "note": "節目頁說現場還有沒列出的曲目",
+      "shows": [
+        {
+          "date": "2026-12-28",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/event/2078394381216837633"
+        }
+      ],
+      "uids": [
+        "2078394381216837633"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2078394381216837633"
+        },
+        {
+          "title": "Wikipedia：Wiener Johann Strauss Orchester",
+          "url": "https://en.wikipedia.org/wiki/Wiener_Johann_Strauss_Orchester"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "nso-vienna-nye-2026",
+      "title": "吳曜宇、黃俊文與NSO：璀璨維也納",
+      "kind": "交響樂",
+      "rating": 4,
+      "why": "海頓唯一一首交響協奏曲，由黃俊文、斯特克爾、王怡靜、簡凱玉四人獨奏；最後是理查．史特勞斯《玫瑰騎士》組曲，跨年夜聽剛好。",
+      "who": "吳曜宇（指揮）、黃俊文（小提琴）、朱利安．斯特克爾（大提琴）、王怡靜（雙簧管）、簡凱玉（低音管）、國家交響樂團",
+      "program": "尼可萊《溫莎的快樂婦人們》序曲、海頓《降B大調交響協奏曲》、小約翰．史特勞斯〈撥奏波爾卡〉與《藍色多瑙河》、理查．史特勞斯《玫瑰騎士》組曲",
+      "shows": [
+        {
+          "date": "2026-12-31",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/event/2074101653195931649"
+        }
+      ],
+      "uids": [
+        "2074101653195931649"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2074101653195931649"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "chloe-chua-recital-2027",
+      "title": "蔡珂宜小提琴獨奏會",
+      "kind": "獨奏",
+      "rating": 4,
+      "why": "新加坡小提琴家蔡珂宜 2018 年拿下曼紐因國際小提琴大賽少年組首獎。這晚從塔替尼《魔鬼的顫音》拉到貝多芬第四號奏鳴曲，中間還有易沙意的無伴奏第三號。",
+      "who": "蔡珂宜（小提琴）、朱利安．康坦（鋼琴）",
+      "program": "塔替尼《魔鬼的顫音》奏鳴曲、聖桑第一號小提琴奏鳴曲、易沙意無伴奏第三號奏鳴曲〈敘事曲〉、貝多芬第四號小提琴奏鳴曲、瓦克斯曼《卡門幻想曲》",
+      "price": "NT$800–3,600",
+      "shows": [
+        {
+          "date": "2027-01-03",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://www.opentix.life/event/2108010089152028673"
+        }
+      ],
+      "uids": [
+        "2108010089152028673"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2108010089152028673"
+        },
+        {
+          "title": "Wikipedia：Chloe Chua",
+          "url": "https://en.wikipedia.org/wiki/Chloe_Chua"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "chuang-ya-fei-recital-2027",
+      "title": "莊雅斐鋼琴獨奏會",
+      "kind": "獨奏",
+      "rating": 4,
+      "why": "莊雅斐在薩爾茲堡莫札特音樂院當教授，韋爾比耶、魯爾鋼琴音樂節都上過。這晚彈莫札特K.311、舒伯特《樂興之時》，最後是出了名難彈的李斯特《唐璜的回憶》。",
+      "who": "莊雅斐（鋼琴）",
+      "program": "拉威爾《高貴而感傷的圓舞曲》、莫札特《D 大調鋼琴奏鳴曲》K. 311、拉赫曼尼諾夫《柯雷里主題變奏曲》與《音畫練習曲》Op. 39 第 9 首、舒伯特《樂興之時》D. 780、李斯特《唐璜的回憶》",
+      "price": "NT$600–3,000",
+      "shows": [
+        {
+          "date": "2027-01-25",
+          "time": "19:30",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳",
+          "tickets": "https://www.opentix.life/event/2089644197911773184"
+        }
+      ],
+      "uids": [
+        "2089644197911773184"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2089644197911773184"
+        },
+        {
+          "title": "Rayfield Allied：Ya-Fei Chuang 簡歷",
+          "url": "https://rayfieldallied.com/artists/ya-fei-chuang"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "oberlinger-kofler-recorder-2027",
+      "title": "歐柏林格與柯夫勒：木笛與大鍵琴",
+      "kind": "室內樂",
+      "rating": 4,
+      "why": "木笛名家歐柏林格和大鍵琴家柯夫勒來台中，一個下午從巴赫的c小調組曲排到韋瓦第〈福利亞〉，中間是柯瑞里、泰勒曼和兩位庫普蘭。",
+      "who": "朵洛西．歐柏林格（木笛）、彼得．柯夫勒（大鍵琴）；嘉賓魏彣澄（木笛）",
+      "program": "巴赫c小調組曲BWV 997、柯瑞里F大調奏鳴曲Op.5-10、泰勒曼a小調小奏鳴曲、路易與法蘭索瓦．庫普蘭、韋瓦第〈福利亞〉等巴洛克曲目",
+      "note": "約 95 分鐘，含中場休息",
+      "shows": [
+        {
+          "date": "2027-02-13",
+          "time": "14:30",
+          "city": "台中",
+          "venue": "臺中市中山堂",
+          "tickets": "https://www.opentix.life/event/2091786934656536577"
+        }
+      ],
+      "uids": [
+        "2091786934656536577"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2091786934656536577"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "marathon24-chopin-weiwuying-2027",
+      "title": "瘋迷24蕭邦",
+      "kind": "獨奏",
+      "rating": 4,
+      "why": "衛武營連演二十四小時蕭邦，兩首鋼琴協奏曲都排了，練習曲、前奏曲、敘事曲和詼諧曲也各有一整場。鋼琴家裡有1990年蕭邦大賽第三名的橫山幸雄。",
+      "who": "橫山幸雄、葉孟儒、胡瀞云、盧易之、汪奕聞等十多位鋼琴家；廖嘉弘、廖元宏（指揮）、國立臺灣交響樂團、對位室內樂團；焦元溥（主講）",
+      "program": "蕭邦：第一、二號鋼琴協奏曲；練習曲、前奏曲、敘事曲、詼諧曲、圓舞曲、即興曲全選；夜曲、馬厝卡、波蘭舞曲、奏鳴曲選曲；另有室內樂、波蘭歌曲與爵士午夜場",
+      "price": "音樂廳一票到底 NT$1,500、時段票 NT$500；表演廳一票到底 NT$800；雙廳套票 NT$1,800",
+      "note": "連演到 2/21 17:00；橫山幸雄加碼場另外售票",
+      "shows": [
+        {
+          "date": "2027-02-20",
+          "time": "17:00",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳",
+          "tickets": "https://www.opentix.life/event/2089992529550589953"
+        }
+      ],
+      "uids": [
+        "2089992529550589953"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2089992529550589953"
+        },
+        {
+          "title": "衛武營節目頁",
+          "url": "https://www.npac-weiwuying.org/programs/6a8560559199ab00089d55b5"
+        },
+        {
+          "title": "衛武營《瘋迷24蕭邦》節目時間表",
+          "url": "https://www.npac-weiwuying.org/links/6a8657e136422a00082ff3a9"
+        },
+        {
+          "title": "蕭邦國際鋼琴大賽第十二屆得獎名單",
+          "url": "https://www.chopincompetition.pl/en/edition/414"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "kachnov-recital-2027",
+      "title": "卡奇諾夫鋼琴獨奏會",
+      "kind": "獨奏",
+      "rating": 3,
+      "why": "基輔出身、後來到維也納唸書的卡奇諾夫，把莫札特 A 小調奏鳴曲和孟德爾頌《莊嚴變奏曲》排在前面，最後彈李斯特《唐．喬萬尼的回憶》。",
+      "who": "帕維爾．卡奇諾夫（鋼琴）",
+      "program": "莫札特《A 小調鋼琴奏鳴曲》K.310、孟德爾頌《莊嚴變奏曲》Op.54、德布西《為鋼琴》組曲、沙莫〈春雨〉〈牧羊人之舞〉、布拉姆斯《三首間奏曲》Op.117、李斯特《唐．喬萬尼的回憶》S.418",
+      "price": "NT$1,000–2,500",
+      "shows": [
+        {
+          "date": "2027-02-28",
+          "time": "19:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院小劇場",
+          "tickets": "https://www.opentix.life/event/2115286399485198336"
+        }
+      ],
+      "uids": [
+        "2115286399485198336"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2115286399485198336"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "tokyo-kosei-wind-2026",
+      "title": "東京佼成管樂團",
+      "kind": "協奏曲",
+      "rating": 4,
+      "why": "小號名家納卡里亞科夫和日本的東京佼成管樂團在高雄同台，吹小號版的《藍色狂想曲》。台北那一晚沒有他，樂團換一套節目，用管樂演《火鳥》組曲和《斯拉夫進行曲》。",
+      "who": "東京佼成管樂團；11/24：佐佐木新平（指揮）、侯傳安（小號）；12/12：飯森範親（指揮）、謝爾蓋．納卡里亞科夫（Sergei Nakariakov，小號）",
+      "program": "11/24：蕭士塔高維契《節慶序曲》、Tamberg《第一號小號協奏曲》、Jager《Sinfonia Nobilissima》、史特拉汶斯基《火鳥》組曲、柴可夫斯基《斯拉夫進行曲》、C. T. Smith《Danse Folâtre》；12/12：布蘭特《降E大調第二號音樂會小品》、天野正道《GR》選曲、蓋希文《藍色狂想曲》（小號版）、惠特克〈Sleep〉、巴恩斯《第三號交響曲》終樂章",
+      "price": "台北 NT$1,800–4,800；高雄 NT$1,800–5,800；學生席 NT$500",
+      "note": "在縱觀藝術售票系統買票；19:00 有演前專訪",
+      "shows": [
+        {
+          "date": "2026-11-24",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://ticket.sight-music.com/Event/Page/7fb112f68fba11afdb57b8446ff30ee9"
+        },
+        {
+          "date": "2026-12-12",
+          "time": "19:30",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳",
+          "tickets": "https://ticket.sight-music.com/Event/Page/c48c77db93bb5c231c66e39a50812782"
+        }
+      ],
+      "uids": [],
+      "sources": [
+        {
+          "title": "縱觀藝術售票頁：《華麗慶典》11/24",
+          "url": "https://ticket.sight-music.com/Event/Page/7fb112f68fba11afdb57b8446ff30ee9"
+        },
+        {
+          "title": "縱觀藝術售票頁：《終章》12/12",
+          "url": "https://ticket.sight-music.com/Event/Page/c48c77db93bb5c231c66e39a50812782"
+        },
+        {
+          "title": "衛武營節目頁",
+          "url": "https://www.npac-weiwuying.org/programs/6a72defdb9145f0007d60354?lang=zh"
+        },
+        {
+          "title": "東京佼成管樂團官網",
+          "url": "https://www.tkwo.jp/"
+        },
+        {
+          "title": "Wikipedia：Sergei Nakariakov",
+          "url": "https://en.wikipedia.org/wiki/Sergei_Nakariakov"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "schoenbrunn-palace-orchestra-2026",
+      "title": "維也納美泉宮管弦樂團",
+      "kind": "交響樂",
+      "rating": 4,
+      "why": "維也納美泉宮管弦樂團來演海頓《時鐘》交響曲，四個樂章都演，下半場是《春之聲》《皇帝圓舞曲》和《藍色多瑙河》。這個團平常就在維也納美泉宮的橘園演莫札特和史特勞斯。",
+      "who": "Sándor Károlyi（指揮）、維也納美泉宮管弦樂團；Yoanna Ruseva（小提琴）、Maša Prebanda（單簧管）",
+      "program": "上半場：莫札特《費加洛婚禮》序曲、海頓《第101號交響曲「時鐘」》（終樂章排在上半場最後）、莫札特《單簧管協奏曲》第二樂章、貝多芬《第二號小提琴浪漫曲》；下半場：小約翰．史特勞斯《春之聲》《皇帝圓舞曲》《藍色多瑙河》與《雷鳴與閃電》《閒聊》等波卡、克萊斯勒《愛之悲》《愛之喜》",
+      "price": "NT$1,280–7,200；青年席 NT$300",
+      "note": "約 105 分鐘，含中場休息",
+      "shows": [
+        {
+          "date": "2026-12-06",
+          "time": "15:00",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AHW7XE"
+        }
+      ],
+      "uids": [],
+      "sources": [
+        {
+          "title": "udn 售票網節目頁",
+          "url": "https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AHW7XE"
+        },
+        {
+          "title": "中央社訊息平台：主辦單位新聞稿",
+          "url": "https://www.cna.com.tw/postwrite/chi/440668"
+        },
+        {
+          "title": "Vienna Classic：美泉宮音樂會",
+          "url": "https://www.viennaclassic.com/en/vienna/schloss-sch%C3%B6nbrunn-konzerte-vienna"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "philharmonix-2026",
+      "title": "Philharmonix 維也納柏林首席獨奏家合奏團",
+      "kind": "室內樂",
+      "rating": 4,
+      "why": "七個人裡有五位是維也納愛樂和柏林愛樂的團員，曲子多半是團員自己改編或寫的。這場有德弗札克《幽默曲》和普羅高菲夫《羅密歐與茱麗葉》，也有探戈、《玫瑰人生》和電影配樂，古典和流行混著演。",
+      "who": "諾亞．班迪克斯-巴格利、塞巴斯提安．格特勒（小提琴）、堤羅．費希納（中提琴）、史蒂芬．孔茲（大提琴）、奧丹．萊茲（低音大提琴）、丹尼爾．奧登薩默（單簧管）、克里斯多福．特拉克斯勒（鋼琴）",
+      "program": "德弗札克《幽默曲》、普羅高菲夫《羅密歐與茱麗葉》組曲、皮亞佐拉《熱情探戈》、《玫瑰人生》、昆西．瓊斯《靈魂新調》，以及《艾蜜莉的異想世界》《鐵達尼號》《新龍鳳配》等電影配樂；另有團員孔茲、格特勒自己寫的曲子",
+      "price": "NT$1,280–3,280；青年席 NT$300",
+      "note": "約 90 分鐘含中場；在 MNA 牛耳售票網買票",
+      "shows": [
+        {
+          "date": "2026-12-15",
+          "time": "19:45",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://ticket.mna.com.tw/UTK0201_?PRODUCT_ID=P1G676GR"
+        }
+      ],
+      "uids": [],
+      "sources": [
+        {
+          "title": "MNA 售票頁（臺北場）",
+          "url": "https://ticket.mna.com.tw/UTK0201_?PRODUCT_ID=P1G676GR"
+        },
+        {
+          "title": "牛耳藝術節目頁",
+          "url": "https://www.mna.com.tw/concerts_detail.html?id=777"
+        },
+        {
+          "title": "鏡週刊：PHILHARMONIX 將於 12 月來台",
+          "url": "https://www.mirrormedia.mg/story/20261014-197ins-121922"
+        },
+        {
+          "title": "Opus 3 Artists：Philharmonix",
+          "url": "https://www.opus3artists.com/artists/philharmonix/"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "french-musical-stars-ntt-2027",
+      "title": "法式巨星音樂劇選粹演唱會",
+      "kind": "音樂劇",
+      "rating": 3,
+      "why": "七位歌手都演過法文音樂劇《鐘樓怪人》，這次不演戲、只唱歌，配現場管弦樂團。六部戲的歌挑著唱，〈大教堂時代〉和〈世界之王〉都在裡面。",
+      "who": "羅倫．班、席瑞爾．尼可萊、麥特．勞倫、傑荷姆．柯萊、琪拉．迪巴莉、羅迪．朱利安、娜蒂亞．貝兒（演唱）；現場管弦樂團",
+      "program": "六部音樂劇的選曲，節目頁點名《鐘樓怪人》《羅密歐與茱麗葉》《星幻》《悲慘世界》，歌曲有〈大教堂時代〉〈世界之王〉〈愛〉〈我曾有夢〉",
+      "price": "NT$1,200–3,900",
+      "shows": [
+        {
+          "date": "2027-02-27",
+          "time": "14:30",
+          "city": "台中",
+          "venue": "臺中國家歌劇院大劇院",
+          "tickets": "https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HHAV23"
+        }
+      ],
+      "uids": [],
+      "sources": [
+        {
+          "title": "udn 售票網節目頁",
+          "url": "https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1HHAV23"
+        },
+        {
+          "title": "臺中國家歌劇院節目頁",
+          "url": "https://www.npac-ntt.org/program/events/c-rcRMEd18mCH"
+        }
+      ],
+      "added": "2026-11-17"
     }
   ]
 }
