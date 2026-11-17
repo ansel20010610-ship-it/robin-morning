@@ -1,0 +1,226 @@
+{
+  "column": "mystery",
+  "date": "2026-11-18",
+  "title": "亞歷山大的墓，有紀錄的最後一次探訪在 215 年",
+  "dek": "埃及官方承認過的尋墓行動超過 140 次。要找的是古代最有名的一具屍體，它下葬的那座城，仍是埃及大城。",
+  "brief": "亞歷山大大帝葬在埃及的亞歷山卓，好幾位羅馬皇帝去看過他，有紀錄的最後一次是 215 年的卡拉卡拉。到了 400 年前後，基督教的講道者金口約翰已經說，連他自己的人都不知道墓在哪。2019 年的報導說，一位希臘考古學者在市區一座花園挖了二十多年，她說挖到了古王宮區的地基，墓還沒出現。",
+  "topic_key": "mystery:history-alexander-tomb",
+  "form": "flow",
+  "voice": "detective",
+  "updated_at": "2026-11-18T02:07:33+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "map",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Pauly-Wissowa_I1_1379-Map-Alexandria.png/1280px-Pauly-Wissowa_I1_1379-Map-Alexandria.png",
+    "src_large": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Pauly-Wissowa_I1_1379-Map-Alexandria.png",
+    "width": 1280,
+    "height": 784,
+    "alt": "黑白線條地圖：上方是海岸與港灣，中間是棋盤格狀的古城街道與城牆，圖上標著英文字母，上方與右側列著德文圖例。",
+    "caption": "1893 年一部德文古典學百科裡的亞歷山卓古城圖。圖例 U' 寫的是「馬哈茂德推定的亞歷山大墓所在」。",
+    "credit": "Otto Puchstein；Paulys Realencyclopädie der classischen Altertumswissenschaft, Bd. I,1（1893），Sp. 1379–1380",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pauly-Wissowa_I1_1379-Map-Alexandria.png",
+    "made": "1893",
+    "depicts": "古代的亞歷山卓（托勒密王朝與羅馬統治時期）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "西元前 30 年，埃及末代女王克麗奧佩脫拉死了，埃及落到羅馬的屋大維手裡，他就是後來的奧古斯都皇帝。他在亞歷山卓叫人把一口棺材抬出來，裡面躺的是**亞歷山大大帝**，已經死了快三百年。據羅馬史家狄奧記載，屋大維伸手碰了那具屍體，據說鼻子斷了一小塊。"
+    },
+    {
+      "type": "p",
+      "text": "亞歷山大是馬其頓的國王，20 歲即位，打下波斯和埃及，西元前 323 年死在巴比倫，才 32 歲。**亞歷山卓**是埃及地中海岸的大城，用他的名字命名。地理學家史特拉波寫道，他的屍體葬在這座城的王宮區裡。後來這座墓不見了。埃及文物主管機關正式承認過的尋墓行動，超過 **140 次**，至今沒有公開確認找到。"
+    },
+    {
+      "type": "p",
+      "text": "這件案子要問：墓在城裡哪裡，還在不在。第一號證物是那趟送葬。屍體本來要送回馬其頓，他手下的將領托勒密在大馬士革說服送葬隊伍轉往埃及。托勒密後來自己當了埃及國王，屍體先葬在孟菲斯，再搬進亞歷山卓。西元前 3 世紀末，托勒密四世把亞歷山大和歷代國王合葬在城裡同一座陵墓。"
+    },
+    {
+      "type": "p",
+      "text": "第二號證物是那口棺材。托勒密當初用的是金棺。到了西元前後，史特拉波寫書的時候，棺材已經是玻璃的，金棺被後來一位托勒密國王取走；克麗奧佩脫拉為了跟屋大維打仗，也從墓裡拿過金子。"
+    },
+    {
+      "type": "p",
+      "text": "回頭看西元前 30 年那次探訪，另一位羅馬史家蘇埃托尼烏斯也記了：屋大維看過屍體，在上面放了金冠、撒了花。旁人問他要不要看看托勒密家族的人，他說："
+    },
+    {
+      "type": "quote",
+      "text": "我想看的是一位國王，不是死人。",
+      "original": "regem se voluisse ait videre, non mortuos.",
+      "cite": "蘇埃托尼烏斯《羅馬十二帝王傳・奧古斯都》第 18 章"
+    },
+    {
+      "type": "p",
+      "text": "再來是一把鎖。3 世紀初，塞維魯皇帝到埃及，從幾乎每一座神廟裡，把祕傳書籍全收走，又把亞歷山大的墓鎖了起來。後來的卡拉卡拉皇帝，215 年到亞歷山卓，從神廟走到墓前，把紫袍、寶石戒指等值錢的東西脫下來放在墓上。這是有紀錄的最後一次探墓。"
+    },
+    {
+      "type": "p",
+      "text": "最後是一段空白。270 年後不久，亞歷山卓有亂事，墓大概受了損，甚至被搶；360 年起，戰爭、暴動、地震、海嘯接連來。400 年前後，以講道出名的教父**金口約翰**（早期基督教的神學家）在講保羅寫給哥林多教會的信時，拿亞歷山大來對比基督的僕人："
+    },
+    {
+      "type": "quote",
+      "text": "告訴我，亞歷山大的墓在哪裡？指給我看，再告訴我他死在哪一天。",
+      "original": "For, tell me, where is the tomb of Alexander? Show it me and tell me the day on which he died.",
+      "cite": "金口約翰《哥林多後書講道》第 26 篇第 5 節（英譯本；後文省略兩句）"
+    },
+    {
+      "type": "quote",
+      "text": "他的墓，連他自己的人都不知道；這個人的墓，連蠻族都知道。",
+      "original": "And his tomb even his own people know not, but this man's the very barbarians know.",
+      "cite": "同篇同節，接在前一段之後，中間省略兩句"
+    },
+    {
+      "type": "p",
+      "text": "可是約翰之後，還有人說自己看過。9、10 世紀的阿拉伯作者，和 16 世紀人稱「非洲人利奧」的人，都說見過墓，卻沒人說出在哪。"
+    },
+    {
+      "type": "p",
+      "text": "現在的亞歷山卓蓋在古城上面。1960 年，波蘭考古隊在市中心往下挖了 15 公尺多，挖出羅馬時代的小劇場和浴場，沒有墓。阿拉伯傳統說墓在納比・達尼亞爾清真寺一帶，1991 年那裡的開挖，因宗教官員擔心地基而被禁止。1893 年的古城圖標出了馬哈茂德推定的墓位。"
+    },
+    {
+      "type": "p",
+      "text": "1995 年，一位希臘考古學者宣布墓在埃及西部沙漠的錫瓦綠洲。希臘文化部派人去看，連那是墓還是神廟都不確定，碑文殘片也是羅馬時期的東西。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.38,
+        0.52,
+        0.14,
+        0.14
+      ],
+      "position": "地圖中央略偏左下，棋盤街道的中段",
+      "caption": "圖例 U' 的位置：19 世紀製圖師馬哈茂德推定的亞歷山大墓，落在古城街道網的中段。"
+    },
+    {
+      "type": "table",
+      "title": "三條線索，各自的證據與缺口",
+      "head": [
+        "說法",
+        "撐得住的地方",
+        "卡住的地方"
+      ],
+      "rows": [
+        [
+          "還在亞歷山卓地底",
+          "史特拉波說墓在王宮區；2019 年的報導說，有位考古學者說挖到了古王宮區的地基",
+          "140 多次尋找都落空；上面是現代城市，挖到地下水就得抽水"
+        ],
+        [
+          "古代晚期就毀了",
+          "270 年後的亂事、360 年起的戰爭與天災；400 年前後金口約翰說沒人知道墓在哪",
+          "《考古》雜誌寫墓「受到威脅，或許已被毀」，毀了沒有只能推測"
+        ],
+        [
+          "根本不在亞歷山卓（錫瓦綠洲）",
+          "1995 年有人宣布在綠洲外找到墓",
+          "希臘官方團隊看過，連是不是墓都不確定"
+        ]
+      ],
+      "caption": "依古代史家、《考古》雜誌，以及 1995 年、2019 年的報導整理。"
+    },
+    {
+      "type": "p",
+      "text": "證物並排之後，案情分成兩半。墓下葬在亞歷山卓，古代的記載幾乎沒有分歧，錫瓦那條線，希臘官方也存疑。卡住的是 215 年到 400 年之間墓怎麼了，只能從城裡一直出事去推測；而它可能在的地方，壓著一座現代大城。"
+    },
+    {
+      "type": "p",
+      "text": "要我下注，我押「還在亞歷山卓地底」這一派最有希望。幾乎所有古代記載都把墓放在這座城裡；錫瓦那一派，官方團隊看了不買帳；「古代晚期就毀了」那一派，只證明得了位置失傳，證明不了被毀。不過就算還在，我猜剩下的是地基，不是那口玻璃棺：360 年之後那一連串災難，讓我不相信地面上的建築還留得住。",
+      "tag": "推論"
+    },
+    {
+      "type": "p",
+      "text": "2019 年的報導裡，有另一位希臘考古學者**帕帕科斯塔**（Calliope Limneos-Papakosta），當時已在亞歷山卓市區的沙拉拉特花園挖了二十多年。她先挖出一尊希臘化時代（亞歷山大死後，希臘人統治近東的時期）早期的亞歷山大大理石像，又過七年，往下挖到 10 公尺多，她說碰到古王宮區和城市最早的地基，挖到地下水那一層後得靠抽水機保持乾燥。報導說用電阻層析，找到 14 處可能是地下結構的異常。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Geography, Book XVII, Chapter 1, § 8（Strabo；H. L. Jones 英譯）",
+      "publisher": "Loeb Classical Library；LacusCurtius 線上版",
+      "date": "1932",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/17A1*.html",
+      "note": "Sema 是王宮區的一部分、內有歷代國王與亞歷山大的墓；托勒密從佩爾狄卡斯手上取走屍體；金棺被綽號 Cocces、Pareisactus 的托勒密取走，現為玻璃棺"
+    },
+    {
+      "title": "The Lives of the Caesars: Augustus, § 18（Suetonius；J. C. Rolfe 英譯與拉丁原文）",
+      "publisher": "Loeb Classical Library；LacusCurtius 線上版",
+      "date": "",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Augustus*.html",
+      "note": "金冠、撒花、「regem se voluisse ait videre, non mortuos」；拉丁原文見 https://penelope.uchicago.edu/Thayer/L/Roman/Texts/Suetonius/12Caesars/Augustus*.html"
+    },
+    {
+      "title": "Roman History, Book 51, § 16.5（Cassius Dio；E. Cary 英譯）",
+      "publisher": "Loeb Classical Library；LacusCurtius 線上版",
+      "date": "",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/51*.html",
+      "note": "屋大維碰了屍體，據說鼻子斷了一小塊"
+    },
+    {
+      "title": "Roman History, Book 76, § 13.2（Cassius Dio；E. Cary 英譯）",
+      "publisher": "Loeb Classical Library；LacusCurtius 線上版",
+      "date": "",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/76*.html",
+      "note": "塞維魯收走神廟裡的祕傳書籍，鎖上亞歷山大的墓，讓以後沒人看得到屍體、讀不到那些書"
+    },
+    {
+      "title": "Herodian, Roman History 4.8",
+      "publisher": "Livius.org",
+      "date": "",
+      "url": "https://www.livius.org/sources/content/herodian-s-roman-history/herodian-4.8/",
+      "note": "4.8.9：卡拉卡拉從神廟到亞歷山大墓，脫下紫袍、寶石戒指、腰帶等放在墓上"
+    },
+    {
+      "title": "Homily 26 on Second Corinthians（John Chrysostom；NPNF 英譯）",
+      "publisher": "New Advent",
+      "date": "",
+      "url": "https://www.newadvent.org/fathers/220226.htm",
+      "note": "「For, tell me, where is the tomb of Alexander? Show it me and tell me the day on which he died.」之後隔兩句（But of the servants of Christ the very tombs are glorious…），才接「And his tomb even his own people know not, but this man's the very barbarians know.」；「this man」原文沒點名，本篇兩段分開引並標省略"
+    },
+    {
+      "title": "Hunting Alexander's Tomb（Robert S. Bianchi）",
+      "publisher": "Archaeology（美國考古學會）",
+      "date": "2004-11-11",
+      "url": "https://archive.archaeology.org/online/features/alexander/tomb.html",
+      "note": "網頁合併 1993 年與 1995 年兩篇。讀：死於巴比倫、托勒密將屍體轉往孟菲斯、再遷亞歷山卓、托勒密四世合葬；屋大維在西元前 30 年探墓；最後一次有紀錄的探墓是 215 年卡拉卡拉；奧勒良時期（270 年後不久）可能受損被搶；4 世紀教父說位置已失；阿拉伯作者與非洲人利奧說見過墓但沒說在哪；官方承認 140 次以上的尋找；1960 年波蘭隊在 Kom el-Dikka 挖到 50 英尺以下，找到羅馬小劇場與浴場；1991 年納比・達尼亞爾清真寺開挖與禁挖令；錫瓦說法受埃及學者質疑"
+    },
+    {
+      "title": "Alexander the Great, King of Macedon（Lost Tombs，Nikhil Swaminathan）",
+      "publisher": "Archaeology（美國考古學會）",
+      "date": "2013-07",
+      "url": "https://archaeology.org/issues/july-august-2013/collection/alexander-the-great-macedon-alexandria-the-soma/lost-tombs/",
+      "note": "克麗奧佩脫拉從墓裡拿金子打仗；360 年起戰爭、暴動、地震、海嘯，「threatened—or perhaps destroyed—the tomb by the time of Chrysostom's visit」；金口約翰的時代約 400 年"
+    },
+    {
+      "title": "New clues to the lost tomb of Alexander the Great discovered in Egypt（Erin Blakemore）",
+      "publisher": "National Geographic",
+      "date": "2019-02-28",
+      "url": "https://www.nationalgeographic.com/culture/article/lost-tomb-alexander-great",
+      "note": "2019-02-28 的報導，文中時間為當時的說法：帕帕科斯塔在沙拉拉特花園挖 20 多年、14 年後挖到早期希臘化亞歷山大大理石像、再七年挖到 35 英尺（約 10 公尺多）深的王宮區與城市地基、亞歷山大時代公共建築地基牆；到達 water table 後靠抽水機與水管保持乾燥；電阻層析找到 14 處可能的地下結構（原文未說位置）；「For sure, it's not easy to find it」"
+    },
+    {
+      "title": "Alexander 2.17: Death of Alexander",
+      "publisher": "Livius.org",
+      "date": "",
+      "url": "https://www.livius.org/articles/person/alexander-the-great/alexander-2.17/",
+      "note": "死於西元前 323 年 6 月 11 日；屍體原本送往馬其頓，托勒密在大馬士革說服押送者轉往埃及"
+    },
+    {
+      "title": "No evidence seen of Alexander's tomb, Greeks say",
+      "publisher": "The Baltimore Sun（New York Times News Service）",
+      "date": "1995-02-06",
+      "url": "https://www.baltimoresun.com/1995/02/06/no-evidence-seen-of-alexanders-tomb-greeks-say/",
+      "note": "蘇瓦爾齊宣布在錫瓦綠洲外找到墓，「This is Alexander's tomb. There is no doubt.」；希臘文化部秘書長帶隊查看，不確定是墓、風格非馬其頓式、碑文殘片屬亞歷山大死後約 300 年的羅馬時期；埃及古物機構首長說要等進一步研究，未正式否定"
+    },
+    {
+      "title": "Historical cartography",
+      "publisher": "Centre d'Études Alexandrines（CEAlex）",
+      "date": "",
+      "url": "https://www.cealex.org/?p=8930",
+      "note": "馬哈茂德貝伊・法拉基 1865 年的地圖與古城復原圖，後來許多地圖以它為本"
+    }
+  ]
+}
