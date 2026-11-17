@@ -43,6 +43,11 @@
     ],
     "note": "新增 0、更新 0；補查沒做完（pbc、newaspect、tanart、udn、ntch、news 沒查到）；歷史上的今天 1869；開放資料不完整，已列入的沒比對"
   },
+  "reserve": {
+    "finished_at": "2026-11-17T17:30:24+08:00",
+    "missing": [],
+    "note": "快訊已出刊；備稿都達標，沒寫"
+  },
   "serial": {
     "finished_at": "2026-11-17T16:03:16+08:00",
     "missing": [],
