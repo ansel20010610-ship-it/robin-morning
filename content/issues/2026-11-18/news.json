@@ -1,0 +1,198 @@
+{
+  "column": "news",
+  "date": "2026-11-18",
+  "title": "黃仁勳 12 月 1 日接受國會訪談，烏俄互炸橋梁",
+  "dek": "輝達風暴波及台股，波斯灣又有無人機攻擊，蒙古總統請辭。",
+  "brief": "美國眾議院三個委員會宣布，輝達創辦人黃仁勳 12 月 1 日要接受閉門訪談。烏克蘭與俄羅斯 17 日互炸重要橋梁，三國領袖預定 19 日在深圳會面。伊朗又對巴林的美軍雷達放無人機，美軍說全數攔截。",
+  "topic_key": "news:2026-11-18",
+  "voice": "wire",
+  "updated_at": "2026-11-18T05:22:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "sources": [
+    {
+      "title": "Jensen Huang agrees to testify before US House, says can resume CEO role",
+      "publisher": "半島電視台",
+      "date": "2026-11-17",
+      "url": "https://www.aljazeera.com/economy/2026/11/17/jensen-huang-to-testify-before-us-house-committees-next-month",
+      "note": "12 日辭任、12 月 1 日訪談、X 上的說法、董事會新委員會；連署人數與中央社不同，不寫"
+    },
+    {
+      "title": "美國會：黃仁勳12/1赴眾議院委員會接受約談",
+      "publisher": "中央社",
+      "date": "2026-11-18",
+      "url": "https://www.cna.com.tw/news/aopl/202611180005.aspx",
+      "note": "18 日 02:45 發布；三個委員會、閉門逐字紀錄訪談、法務長 12 月 2 日"
+    },
+    {
+      "title": "黃仁勳辭職後首發聲：若輝達董事會要求　願意回鍋任執行長",
+      "publisher": "中央社",
+      "date": "2026-11-18",
+      "url": "https://www.cna.com.tw/news/aopl/202611180003.aspx",
+      "note": "18 日 01:45 發布；婚外情報導與引文中譯"
+    },
+    {
+      "title": "Ukrainian drone attack kills two in Crimea as Kyiv targets Kerch Bridge",
+      "publisher": "半島電視台",
+      "date": "2026-11-17",
+      "url": "https://www.aljazeera.com/news/2026/11/17/ukrainian-drone-attack-kills-two-in-crimea-as-kyiv-targets-kerch-bridge",
+      "note": "克里米亞大橋、兩人死亡、澤倫斯基影片、基輔北橋南橋、深圳會面為週四"
+    },
+    {
+      "title": "Ukraine critically damages bridge linking occupied Crimea with Russia",
+      "publisher": "法國 24 電視台",
+      "date": "2026-11-17",
+      "url": "https://www.france24.com/en/europe/20261117-ukraine-critically-damages-bridge-linking-occupied-crimea-with-russia",
+      "note": "17 日 07:43 發布、16:37 更新；克宮說會修復；基輔無傷亡報告；雙方對損毀說法不一"
+    },
+    {
+      "title": "Bahrain thwarts drone attack; Iran claims targeting US military radar",
+      "publisher": "半島電視台（含法新社）",
+      "date": "2026-11-17",
+      "url": "https://www.aljazeera.com/news/2026/11/17/bahrain-thwarts-drone-attack-iran-claims-targeting-us-military-radar",
+      "note": "伊薩基地、巴林與美軍說法、13 日與 15 日先前攻擊、戰爭自 2 月 28 日起"
+    },
+    {
+      "title": "貪汙指控與彈劾威脅夾擊 蒙古國總統宣布請辭",
+      "publisher": "中央社",
+      "date": "2026-11-17",
+      "url": "https://www.cna.com.tw/news/aopl/202611170158.aspx",
+      "note": "17 日 15:05 發布；記者會引文、民主黨 16 日聲明、議長代理、4 個月內選舉；未寫生效日與金額"
+    },
+    {
+      "title": "遭控自鐵路工程案收受賄賂 蒙古總統宣布辭職",
+      "publisher": "公視新聞網",
+      "date": "2026-11-17",
+      "url": "https://news.pts.org.tw/article/836185",
+      "note": "17 日 20:46 發布；前市長指控 2,500 萬美元、總統否認；生效日未寫"
+    },
+    {
+      "title": "Taiex plunges amid AI concerns, suspected gov't intervention",
+      "publisher": "Focus Taiwan（中央社）",
+      "date": "2026-11-17",
+      "url": "https://focustaiwan.tw/business/202611170018",
+      "note": "17 日 17:58 發布；收盤 40,092.11、跌 947.97 點；分析師說法與國安基金推測"
+    },
+    {
+      "title": "黃仁勳請辭持續衝擊全球AI股 台股連兩日大跌累計逾3580點",
+      "publisher": "公視新聞網",
+      "date": "2026-11-17",
+      "url": "https://news.pts.org.tw/article/836178",
+      "note": "17 日 20:23 更新；兩天累計跌逾 3,580 點、外資兩天賣超逾 1,080 億元、新台幣收 32.85"
+    },
+    {
+      "title": "網路叫車平台納管11/19上路 開放一車加入多車隊",
+      "publisher": "公視新聞網",
+      "date": "2026-11-17",
+      "url": "https://news.pts.org.tw/article/836170",
+      "note": "17 日 20:28 更新；11 月 19 日上路、一年緩衝期、罰 10 萬至 2,500 萬元、多車隊"
+    },
+    {
+      "title": "Taiwan to impose taxi rules on app-based ride-hailing platforms",
+      "publisher": "Focus Taiwan（中央社）",
+      "date": "2026-11-17",
+      "url": "https://focustaiwan.tw/society/202611170022",
+      "note": "17 日 20:57 發布；緩衝期至 2027 年 11 月 17 日"
+    },
+    {
+      "title": "Taiwan issues Level 2 measles travel alert for entire U.S.",
+      "publisher": "Focus Taiwan（中央社）",
+      "date": "2026-11-17",
+      "url": "https://focustaiwan.tw/society/202611170021",
+      "note": "17 日 19:37 發布；疾管署發言人林明誠說法；美國病例數引美國 CDC 資料"
+    }
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "輝達創辦人黃仁勳辭職後，風波從美國國會傳到台灣股市；烏克蘭戰場則在領袖峰會前夕連炸橋梁。"
+    },
+    {
+      "type": "news",
+      "title": "世界",
+      "items": [
+        {
+          "headline": "黃仁勳 12 月 1 日受國會訪談",
+          "place": "US",
+          "summary": "輝達創辦人黃仁勳 11 月 12 日辭去執行長，據報導起因是婚外情，對象之一被懷疑是中國情報人員。美國眾議院三個委員會宣布，他 12 月 1 日要接受閉門訪談。黃仁勳在 X 上說，若董事會認為對股東和公司最好，他願意回任。",
+          "source": "半島電視台、中央社",
+          "url": "https://www.aljazeera.com/economy/2026/11/17/jensen-huang-to-testify-before-us-house-committees-next-month",
+          "when": "11 月 17 日（週二），華盛頓時間"
+        },
+        {
+          "headline": "烏俄互炸橋梁，克里米亞大橋中斷",
+          "summary": "烏克蘭 17 日連兩夜攻擊連接克里米亞與俄羅斯的大橋，通行中斷，俄方任命的克里米亞首長說兩人死亡。克里姆林宮說會修復，澤倫斯基公布的影片顯示主拱塌了。俄羅斯同一天用飛彈打基輔北橋和南橋，供水供電部分中斷。川普、習近平、普丁預定週四在深圳會面。",
+          "source": "半島電視台、法國 24 電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/17/ukrainian-drone-attack-kills-two-in-crimea-as-kyiv-targets-kerch-bridge",
+          "when": "11 月 17 日（週二），當地"
+        },
+        {
+          "headline": "伊朗無人機再攻巴林美軍雷達",
+          "summary": "伊朗革命衛隊說，17 日對巴林伊薩空軍基地的美軍雷達發動「精準行動」。巴林說防空系統攔截了無人機，美軍說裝備無損、人員無傷。美國與以色列對伊朗的戰爭 2 月 28 日開打。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/17/bahrain-thwarts-drone-attack-iran-claims-targeting-us-military-radar",
+          "when": "11 月 17 日（週二），巴林當地"
+        },
+        {
+          "headline": "蒙古總統宣布請辭",
+          "summary": "蒙古總統呼日勒蘇赫 17 日宣布請辭。反對黨前一天要他下台，否則在國會提彈劾；公視報導，烏蘭巴托前市長指控他當總理時從鐵路工程拿了高達 2,500 萬美元，他否認。卸任後依法由國會議長代理，4 個月內選新總統。",
+          "source": "中央社、公視新聞網",
+          "url": "https://www.cna.com.tw/news/aopl/202611170158.aspx",
+          "when": "11 月 17 日（週二），烏蘭巴托當地"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "title": "台灣",
+      "items": [
+        {
+          "headline": "台股再跌 948 點",
+          "place": "TW",
+          "summary": "加權指數 17 日收在 40,092 點，兩天跌逾 3,580 點。分析師說原因是輝達執行長辭職後的美股重挫，以及美國對新加坡、馬來西亞的晶片出貨新限制。券商人士推測國安基金進場守住 4 萬點。",
+          "source": "Focus Taiwan、公視新聞網",
+          "url": "https://focustaiwan.tw/business/202611170018",
+          "when": "11 月 17 日，台灣時間"
+        },
+        {
+          "headline": "網約車 19 日起納管",
+          "place": "TW",
+          "summary": "交通部 17 日公告，Uber、Bolt 這類叫車平台 19 日起和計程車行一樣受管。平台有一年緩衝期取得營業執照，否則罰 10 萬到 2,500 萬元，也可能被勒令歇業。駕駛也能同時加入多個車隊。",
+          "source": "公視新聞網、Focus Taiwan",
+          "url": "https://news.pts.org.tw/article/836170",
+          "when": "11 月 17 日，台灣時間"
+        },
+        {
+          "headline": "疾管署：美國麻疹列二級警示",
+          "place": "TW",
+          "summary": "疾管署 17 日把整個美國的旅遊疫情建議升到第二級「警示」。美國今年麻疹病例超過 5,000 例，是 35 年來最多。疾管署說在台灣大規模傳開的風險相對低，孕婦和 1 歲以下嬰兒要避開疫區。",
+          "source": "Focus Taiwan（中央社）",
+          "url": "https://focustaiwan.tw/society/202611170021",
+          "when": "11 月 17 日，台灣時間"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "伊朗攻擊巴林美軍雷達",
+      "head": [
+        "日期",
+        "革命衛隊說法與美方回應"
+      ],
+      "rows": [
+        [
+          "13 日",
+          "打預警雷達；美方否認被打中"
+        ],
+        [
+          "15 日",
+          "6 架無人機打里法基地防空雷達"
+        ],
+        [
+          "17 日",
+          "打伊薩基地雷達"
+        ]
+      ]
+    }
+  ]
+}
