@@ -6,9 +6,9 @@
   "voice": "watchman",
   "title": "FM27 首個內容更新先上電腦版，主機版排在這週稍晚",
   "dek": "146 條改動，先送到電腦上。",
-  "brief": "《足球經理 27》發售後第一個內容更新 27.1.0，11 月 17 日（週二）晚上在 Steam、Epic、Microsoft Store 上線，比賽引擎的攻守都有調整。Xbox、PS5 主機版和 Apple Arcade 版，官方只說這週稍晚。比賽引擎改得好不好，官方沒有公開數據，要等玩家實際踢過。",
+  "brief": "《足球經理 27》發售後第一個內容更新 27.1.0，11 月 17 日（週二）晚上宣布在 Steam、Epic、Microsoft Store 上線，比賽引擎的攻守都有調整。Xbox、PS5 主機版和 Apple Arcade 版，官方只說這週稍晚。比賽引擎改得好不好，官方沒有公開數據，要等玩家實際踢過。",
   "topic_key": "fm-watch:2026-11-18-update-27-1-0-out-pc",
-  "updated_at": "2026-11-18T05:24:00+08:00",
+  "updated_at": "2026-11-18T05:26:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -18,13 +18,8 @@
     "items": [
       {
         "when": "2026.11.3",
-        "label": "Minor Update 1 公告（免費試玩期）",
-        "note": "00:22 發布。同一則公告預告：發售後第一個更新處理玩家回報，重點含 3D 比賽引擎，沒有日期"
-      },
-      {
-        "when": "2026.11.11",
-        "label": "正式發售公告",
-        "note": "00:13 發布，英國時間為 11 月 10 日"
+        "label": "Minor Update 1 公告",
+        "note": "預告發售後第一個更新，重點含 3D 比賽引擎，沒有日期"
       },
       {
         "when": "2026.11.16",
@@ -44,14 +39,14 @@
       {
         "when": "日期待公布",
         "label": "FM27 Mobile 更新",
-        "note": "Netflix 版；官方：本週，內容另計"
+        "note": "Netflix 版；官方：本週；內容為比賽引擎再平衡與陣容問題"
       }
     ]
   },
   "body": [
     {
       "type": "p",
-      "text": "台灣時間 11 月 17 日（週二）晚上 10 點 16 分，開發商 Sports Interactive 在 Steam 貼出公告：**《足球經理 27》**發售後的第一個內容更新，**Update 27.1.0**，已經上線。電腦版在 Steam、Epic、Microsoft Store 三個商店都能更新。"
+      "text": "台灣時間 11 月 17 日（週二）晚上 10 點 16 分，開發商 Sports Interactive 在 Steam 貼出公告，宣布**《足球經理 27》**發售後的第一個內容更新，**Update 27.1.0**，已經上線。電腦版在 Steam、Epic、Microsoft Store 三個商店都能更新。"
     },
     {
       "type": "p",
@@ -59,11 +54,11 @@
     },
     {
       "type": "p",
-      "text": "1. 官方在公告裡自己挑了五項重點，第一項是比賽引擎，攻擊和防守都有改動。比賽引擎就是遊戲裡負責模擬一場球怎麼踢的那一塊。這件事官方早就打過招呼：11 月 3 日 Minor Update 1 的公告就說，發售後第一個更新會調整 3D 比賽引擎，只是那時沒給日期。另外四項是：電腦控制的球隊買賣球員，平衡做了微調；屬性欄的邊框可以改成透明；資料庫與授權更新；還有一個畫面設定放寬了螢幕門檻。"
+      "text": "1. 官方在公告裡自己挑了五項重點，第一項是比賽引擎，攻擊和防守都有改動。比賽引擎就是遊戲裡負責模擬一場球怎麼踢的那一塊。這件事11 月 3 日就預告過： Minor Update 1 的公告就說，發售後第一個更新會調整 3D 比賽引擎，只是那時沒給日期。另外四項是：電腦控制的球隊買賣球員，平衡做了微調；新增透明屬性邊框；資料庫與授權更新；還有一個畫面設定放寬了螢幕門檻。"
     },
     {
       "type": "p",
-      "text": "2. **主機版和 Apple Arcade 版要等到這週稍晚。**公告說這兩個版本會拿到內容相當的更新，沒給日期，也沒分 Xbox 和 PS5。11 月 16 日（週一）晚上 11 點那則更新清單公告，還把電腦、主機、Apple Arcade 三個版本寫在同一句，都說這週稍晚。現在電腦版先走了，另外兩個版本的時間才分開。"
+      "text": "2. **主機版和 Apple Arcade 版要等到這週稍晚。**公告說這兩個版本會拿到內容相當的更新，沒給日期，也沒分 Xbox 和 PS5。11 月 16 日（週一）晚上 11 點那則更新清單公告，還把電腦、主機、Apple Arcade 三個版本寫在同一句，都說這週稍晚。電腦版已上線，另外兩個版本的說法與電腦版分開了。"
     },
     {
       "type": "table",
@@ -91,7 +86,7 @@
         ],
         [
           "Netflix（Mobile）",
-          "本週，另有內容",
+          "本週",
           "本週，說法不變"
         ]
       ],
@@ -99,19 +94,19 @@
     },
     {
       "type": "p",
-      "text": "3. Netflix 上的 Mobile 版另走一條路，公告說它這週也有更新。內容是比賽引擎再做平衡，特別是進球的部分。另外，有玩家回報陣容會在兩個比賽日之間改變，這次也一併處理。"
+      "text": "3. Netflix 上的 Mobile 版另走一條路，公告說它這週也有更新。內容是比賽引擎再做平衡，特別是進球的部分。另外，有回報指陣容會在兩個比賽日之間改變，這次也一併處理。"
     },
     {
       "type": "p",
-      "text": "4. 偏好設定裡有一個 Information Display 選項，管的是畫面上的資訊排得多密。官網先前的註腳寫，螢幕要 1440p 以上才能用；27.1.0 放寬到 1080p 以上。我覺得這是五項裡最實在的一項：用 1080p 螢幕的人，不必等誰實測，打開設定就知道。"
+      "text": "4. 偏好設定裡有一個 Information Display 選項，管的是畫面上的資訊排得多密。官網先前的註腳寫，螢幕要 1440p 以上才能用；27.1.0 放寬到 1080p 以上。我覺得這是五項裡最實在的一項：照官方說法，1080p 螢幕的人可以直接在設定裡看到這個選項。"
     },
     {
       "type": "p",
-      "text": "5. 改動的清單沒有再變。Steam 上那份清單到現在還是 11 個區塊、**146 條**，各區塊的條數和週一公布時一樣。改得最多的是介面，35 條；比賽引擎的進攻 10 條、防守 12 條。"
+      "text": "5. 改動的清單沒有再變。Steam 上那份清單到現在還是 11 個區塊、**146 條**，各區塊的條數與本報週一的紀錄一致。改得最多的是介面，35 條；比賽引擎的進攻 10 條、防守 12 條。"
     },
     {
       "type": "p",
-      "text": "6. 上面這些，都是官方對自己改動的說法。照週一那則公告，比賽引擎的調整是根據測試員的回饋和內部檢討，沒有公開任何數據。踢起來是不是真的不一樣，要等玩家踢過幾場、幾個賽季才看得出來。公告也沒說舊存檔能不能接著玩。"
+      "text": "6. 上面這些，都是官方對自己改動的說法。照週一那則公告，比賽引擎的調整是根據測試員的回饋和內部檢討，沒有公開任何數據。踢起來是不是真的不一樣，要等玩家踢過幾場、幾個賽季才看得出來。週二的上線公告沒有提到舊存檔能不能接著玩。"
     }
   ],
   "sources": [
@@ -124,14 +119,14 @@
     },
     {
       "title": "FM27 Update 27.1.0 Changelist",
-      "publisher": "Steam 公告（Sports Interactive，Kyle Brown）",
+      "publisher": "Steam 公告（Sports Interactive）",
       "date": "2026-11-16",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702689885",
       "note": "台灣時間 11-16 23:04。11 個區塊共 146 條：Technical 9、Research 1、ME Attacking 10、ME Defending 12、Art and Animation 14、Gameplay 19、Interface 35、Competitions Rules Scheduling 25、Online 8、Shuffle Draft 5、IGE／Pre-Game Editor 8。11-18 清晨逐區塊重數現文，條數與 11-16 紀錄一致。比賽引擎調整依據 Alpha 測試員回饋與內部檢討，無公開數據。Information Display 先前限 1440p 以上，出自官網深度介紹的註腳（見 2026-10-16 本欄）。"
     },
     {
       "title": "FM27 Minor Update 1 rolling out now, plus more info on updates",
-      "publisher": "Steam 公告（Sports Interactive，Kyle Brown）",
+      "publisher": "Steam 公告（Sports Interactive）",
       "date": "2026-11-02",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302248809",
       "note": "台灣時間 11-03 00:22。發售後首更新的最初預告，重點含 3D 比賽引擎，無日期。"
