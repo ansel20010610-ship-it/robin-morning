@@ -797,7 +797,7 @@
       "who": "米柯拉．迪亞杜拉（指揮）、烏克蘭國家歌劇院管弦樂團；Viktoriia Chenska（女高音）、Anzhelina Shvachka（女中音）、Dmytro Kuzmin（男高音）、Sergii Magera（男低音）；拉縴人男聲、青年、藝象女聲、風雅頌合唱團",
       "program": "貝多芬《第九號交響曲「合唱」》（全曲約 65 分鐘，無中場）",
       "price": "高雄 NT$800–4,600；台北 NT$1,200–4,800；青年指定席 NT$300，另有輪椅與陪同席",
-      "note": "只在 udn 售票網賣；台北場開演時間未公布",
+      "note": "只在 udn 售票網賣",
       "shows": [
         {
           "date": "2026-12-26",
@@ -808,6 +808,7 @@
         },
         {
           "date": "2026-12-27",
+          "time": "14:30",
           "city": "台北",
           "venue": "國家音樂廳",
           "tickets": "https://tickets.udnfunlife.com/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AGQOQ6"
@@ -2406,6 +2407,75 @@
         {
           "title": "OPENTIX 節目頁",
           "url": "https://www.opentix.life/event/2117913779421556737"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "bach-st-matthew-leipzig-2027",
+      "title": "馬太受難曲三百年：萊比錫布商大廈管絃樂團與聖多馬少年合唱團",
+      "kind": "合唱",
+      "rating": 5,
+      "why": "巴赫當過樂長的萊比錫聖多馬少年合唱團，和萊比錫布商大廈管絃樂團來演《馬太受難曲》。這部作品 1727 年在聖多馬教堂首演，指揮里澤是巴赫之後第十八任樂長。",
+      "who": "安德烈亞斯．里澤（指揮）；尼古拉．希勒布蘭（女高音）、艾瑪．尼可洛芙斯卡（女低音）、朱利安．普雷加迪恩與朱利安．哈伯曼（男高音）、丁格爾．楊德爾與艾力克斯．阿什沃特（男低音）；萊比錫聖多馬少年合唱團、萊比錫布商大廈管絃樂團",
+      "program": "巴赫《馬太受難曲》，BWV 244",
+      "price": "NT$800–7,800",
+      "shows": [
+        {
+          "date": "2027-03-17",
+          "time": "19:00",
+          "city": "台北",
+          "venue": "國家音樂廳"
+        }
+      ],
+      "uids": [],
+      "sources": [
+        {
+          "title": "國家交響樂團節目頁",
+          "url": "https://npac-nso.org/concert-info/1229"
+        },
+        {
+          "title": "香港藝術節：Bach's St Matthew Passion（同一巡演）",
+          "url": "https://www.hk.artsfestival.org/en/programme/Bachs-St-Matthew-Passion"
+        }
+      ],
+      "added": "2026-11-17"
+    },
+    {
+      "id": "jdph-steinbacher-2027",
+      "title": "德意志青年交響樂團：史坦巴赫與準．馬寇爾",
+      "kind": "交響樂",
+      "rating": 4,
+      "why": "史坦巴赫拉康果爾德小提琴協奏曲，NSO 音樂總監準．馬寇爾指揮，最後一首是荀貝格改編成管絃樂的布拉姆斯第一號鋼琴四重奏。樂團由德語區音樂院挑選的學生組成。",
+      "who": "準．馬寇爾（指揮）、艾拉貝拉．史坦巴赫（小提琴）、德意志青年交響樂團",
+      "program": "梅湘《眩目之墳》、康果爾德《D 大調小提琴協奏曲》作品 35、布拉姆斯《G 小調第一號鋼琴四重奏》作品 25（荀貝格改編管絃樂版）",
+      "shows": [
+        {
+          "date": "2027-03-18",
+          "time": "19:30",
+          "city": "高雄",
+          "venue": "衛武營國家藝術文化中心音樂廳"
+        },
+        {
+          "date": "2027-03-20",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳"
+        }
+      ],
+      "uids": [],
+      "sources": [
+        {
+          "title": "國家交響樂團節目頁",
+          "url": "https://npac-nso.org/concert-info/1175"
+        },
+        {
+          "title": "德意志青年交響樂團官網：Close Encounters 巡演頁",
+          "url": "https://www.jdph.de/en/konzerte/close-encounters"
+        },
+        {
+          "title": "德意志青年交響樂團官網：About us",
+          "url": "https://www.jdph.de/en/about-us"
         }
       ],
       "added": "2026-11-17"
