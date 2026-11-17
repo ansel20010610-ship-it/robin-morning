@@ -1,0 +1,351 @@
+{
+  "column": "football",
+  "date": "2026-11-18",
+  "title": "巴薩領先三分，皇馬週日先開球",
+  "dek": "巴薩 12 場只輸過一次，領先是三分。算算看它從哪來，週日又會剩多少。",
+  "brief": "巴薩西甲領先皇馬三分，33 比 30，全季只輸過那一場國家德比。皇馬週日清晨 4 點先踢塞爾塔，贏了就追平；巴薩當晚 9 點主場踢比利亞雷亞爾，德容能上，庫巴西要看恢復。",
+  "topic_key": "football:2026-11-18",
+  "form": "number",
+  "voice": "fan",
+  "updated_at": "2026-11-18T02:50:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "next": {
+    "opponent": "比利亞雷亞爾",
+    "competition": "西甲",
+    "kickoff": "2026-11-22T21:00+08:00",
+    "venue": "Spotify Camp Nou",
+    "home": true
+  },
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Kylian_Mbappe_France_v_Spain_7.24.26-135.jpg/1280px-Kylian_Mbappe_France_v_Spain_7.24.26-135.jpg",
+    "width": 1280,
+    "height": 853,
+    "alt": "姆巴佩（Kylian Mbappé）穿著法國隊球衣，在 2026 年世界盃法國對西班牙的比賽中。",
+    "caption": "姆巴佩，2026 年 7 月世界盃法國對西班牙，Bryan Berlin 拍攝。資料照片，非當日比賽畫面。",
+    "credit": "Bryan Berlin／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kylian_Mbappe_France_v_Spain_7.24.26-135.jpg",
+    "made": "2026"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "三分，剛好是一場球的價錢。西甲踢了 12 場，**巴薩 33 分，皇馬 30 分**，第一名和第二名就隔這麼一點。馬競 28 分排第三，落後巴薩 5 分。國際賽週把聯賽停了兩個星期，下一輪要到週末才開踢，所以這個早上能談的，就是這三分。"
+    },
+    {
+      "type": "h",
+      "text": "全季只輸過一場"
+    },
+    {
+      "type": "p",
+      "text": "巴薩 12 場進 48 球、丟 13 球，只輸過一次：10 月 25 日在諾坎普，1 比 2 輸給皇馬。姆巴佩（Kylian Mbappé）41 分鐘先進，拉菲尼亞 61 分鐘扳平，結果姆巴佩 87 分鐘又進一球，比賽就這樣收了。"
+    },
+    {
+      "type": "p",
+      "text": "那場要是贏了，現在領先九分；踢平，六分；輸了，就是眼前的三分。一場球差六分，這個領先本來就是被那一晚吃掉的。"
+    },
+    {
+      "type": "p",
+      "text": "淨勝球也一樣不老實。巴薩是 +35，皇馬 +21，差 14 球，積分卻只差 3 分。9 月 16 日 7 比 2 贏 Racing Santander，拿 3 分；10 月 25 日輸皇馬，拿 0 分。積分榜不管比分多好看，只問你贏了沒有。我不把三分當本錢，一場球就能花光，週日又是皇馬搶先開踢。輸掉的那一場，要到 5 月 9 日（週六）去伯納烏，才有機會當面討回來。"
+    },
+    {
+      "type": "h",
+      "text": "皇馬排在前面開踢"
+    },
+    {
+      "type": "p",
+      "text": "11 月 22 日（週日）台灣時間清晨 4 點，皇馬在伯納烏對塞爾塔（Celta Vigo）；晚上 9 點，巴薩才在諾坎普對比利亞雷亞爾。中間隔 17 個小時，巴薩球員站上草皮之前，就已經知道自己領先幾分。馬競晚一點，週一清晨 4 點去 Getafe。塞爾塔排第 11，12 場裡有 7 場踢成平手，皇馬不一定好過。比利亞雷亞爾排第 8，只有 15 分，上一場 2 比 0 贏了 Getafe，巴薩這場該贏。"
+    },
+    {
+      "type": "p",
+      "text": "我把這一輪的九種結果都算了一遍，只算皇馬和巴薩兩隊，格子裡是週日踢完之後的分差。"
+    },
+    {
+      "type": "table",
+      "title": "週日踢完，巴薩領先皇馬幾分",
+      "head": ["皇馬對塞爾塔", "巴薩贏", "巴薩平", "巴薩輸"],
+      "rows": [
+        ["皇馬贏", "3", "1", "0"],
+        ["皇馬平", "5", "3", "2"],
+        ["皇馬輸", "6", "4", "3"]
+      ],
+      "caption": "自己算的：以目前 33 分對 30 分為底，本輪贏得 3 分、平得 1 分、輸得 0 分；馬競等其他球隊不算。積分來自 ESPN 與西甲官網。"
+    },
+    {
+      "type": "p",
+      "text": "對角線上全是 3：兩邊同時贏、同時平、同時輸，差距原封不動。最怕的是右上角的 0。**皇馬贏球，巴薩就是帶著 33 比 33 的平分，去踢比利亞雷亞爾**。巴薩平手、皇馬贏，也只剩一分。"
+    },
+    {
+      "type": "h",
+      "text": "球員一個一個回來"
+    },
+    {
+      "type": "p",
+      "text": "球團週二第二次練球，沒去國家隊的一線球員都到了，另有一位二隊球員來湊人數。週三休息，週四台灣時間下午 6 點練球，國腳這時才歸隊。德容和庫巴西的最新說法，還是週一球團那份報告：德容閉孔肌拉傷、能踢比利亞雷亞爾，庫巴西髖部肌肉發緊、要看恢復。"
+    },
+    {
+      "type": "p",
+      "text": "國家隊那邊，週二有兩件事。埃及 0 比 0 打平馬拉威，巴薩的前鋒 Hamza Abdelkarim 替補上場踢了約 15 分鐘，這個平手讓埃及確定打進非洲國家盃。拉菲尼亞上週對日本吃了紅牌，停賽，沒上場，巴西 7 比 0 贏新加坡。坎塞洛的葡萄牙在卡地夫對威爾斯，今天（週三）凌晨 3 點 45 分開踢，結果晚點補。"
+    },
+    {
+      "type": "h",
+      "text": "哈維那邊輸了五球"
+    },
+    {
+      "type": "p",
+      "text": "哈維帶的荷蘭，上週 7 比 0 贏希臘。週一晚上去柏林，被德國 5 比 0 贏了回來。維爾茨進兩球，德國教練克洛普賽後說，賽前連 5 比 0 都不敢想。德國因此拿下小組第一，荷蘭也還是進了八強。德容本來是荷蘭隊長，這場他人在巴塞隆納。"
+    },
+    {
+      "type": "news",
+      "title": "歐洲足壇速覽",
+      "items": [
+        {
+          "headline": "維尼修斯 21 分鐘內三球，巴西 7 比 0 新加坡",
+          "summary": "皇馬的維尼修斯在新加坡的友誼賽 9、15、21 分鐘連進三球，是他國家隊的第一次帽子戲法。他替巴西 59 場進了 19 球，這季替皇馬 12 場只進 1 球。他說自己暑假訓練少了，準備得不夠好。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50510724",
+          "when": "11 月 17 日（週二）",
+          "place": "SG"
+        },
+        {
+          "headline": "羅伯森出賽第 103 場，破蘇格蘭男足紀錄",
+          "summary": "蘇格蘭在聖加侖 0 比 4 輸瑞士，32 歲的羅伯森（Andy Robertson）上場，超過達格利什（Kenny Dalglish）的 102 場，成為蘇格蘭男足出賽最多的人。蘇格蘭小組排第三，沒有升級附加賽的機會。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50499443",
+          "when": "11 月 17 日（週二）凌晨，台灣時間",
+          "place": ["GB", "CH"]
+        },
+        {
+          "headline": "迪亞洛正式宣布挑戰因凡蒂諾",
+          "summary": "法國足協主席迪亞洛（Philippe Diallo）在巴黎說，他接受歐洲同行的請求，競選國際足總主席。他點出去年以來國際足總的幾個決定，包括給美國總統川普設的和平獎、世界盃上美國球員巴洛岡的紅牌，說信任已經破了。選舉在 2027 年 3 月 18 日。",
+          "source": "ESPN（美聯社稿）",
+          "url": "https://www.espn.com/soccer/story/_/id/50509967",
+          "when": "11 月 17 日（週二）",
+          "place": "FR"
+        },
+        {
+          "headline": "奧維耶多球迷辱罵姆巴佩，判 11 個月緩刑",
+          "summary": "西班牙阿斯圖里亞斯省的法院判決，一名球迷在 8 月 24 日皇馬作客奧維耶多的西甲比賽，對姆巴佩做出種族歧視的聲音和手勢，處 11 個月徒刑，緩刑條件是兩年內不得進正式比賽的球場，另有罰款。皇馬在這個案子裡是私人原告。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50509888",
+          "when": "11 月 17 日（週二）",
+          "place": "ES"
+        },
+        {
+          "headline": "波切蒂諾帶完美國隊最後一場，轉身去曼聯",
+          "summary": "波切蒂諾（Mauricio Pochettino）今天（週三）上午 8 點，台灣時間，帶美國隊對海地，這是他在美國隊的最後一場，首回合美國已經領先 6 球。賽後他搭私人飛機去曼徹斯特，接掌曼聯。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50504817",
+          "when": "11 月 17 日（週二）",
+          "place": ["US", "GB"]
+        },
+        {
+          "headline": "法蘭克回英超，接掌水晶宮",
+          "summary": "53 歲的丹麥人法蘭克（Thomas Frank）2 月被熱刺開除，閒了九個月，簽下兩年半的合約。水晶宮這季英超丟了 24 球，是全聯盟最多，他的第一場是週六作客考文垂。他說，這份工作好到不能推。",
+          "source": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50510313",
+          "when": "11 月 17 日（週二）",
+          "place": "GB"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "tag": "傳聞",
+      "text": "合約這一邊，都是 ESPN 引消息人士的說法，沒有一件簽了字。賴斯（Declan Rice）原則上談妥阿森納的新約，5 年到 2031 年，薪水大漲；曼城在跟努內斯（Matheus Nunes）談續約，他現在的約到 2028 年，談判還沒到深入階段。美國足協找接班人，報導把休假一年的瓜迪奧拉列為熱門，波切蒂諾說，瓜迪奧拉要是來問，他會勸他去。"
+    },
+    {
+      "type": "h",
+      "text": "接下來"
+    },
+    {
+      "type": "p",
+      "text": "週四台灣時間下午 6 點，國腳回到訓練場；週五晚上 7 點，歐足聯在瑞士尼翁抽國家聯賽八強的對手。"
+    },
+    {
+      "type": "p",
+      "text": "三分還要撐一段路。從 11 月 22 日到 12 月 8 日，十七天排了六場，四場在主場。**11 月 22 日（週日）晚上 9 點**先在 Spotify Camp Nou 踢比利亞雷亞爾；11 月 26 日（週四）凌晨 1 點 45 分到巴庫踢歐冠，對手是當地球隊 Sabah；11 月 29 日客場去 Deportivo。回到主場，12 月 2 日是馬競，5 日是塞爾塔，最後一場是 12 月 8 日的曼城。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Second session of the week",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-17",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4610334/second-session-of-the-week",
+      "note": "週二第二次練球、週三休息、週四 11:00 CET 國腳歸隊、週日 14:00 CET 對比利亞雷亞爾、巴薩領先皇馬 3 分；頁面只有相對時間，11 月 18 日查閱"
+    },
+    {
+      "title": "FC Barcelona international diary",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-17",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4607914/fc-barcelona-international-diary",
+      "note": "11 月 17 日：Hamza Abdelkarim 替補約 15 分鐘、馬拉威 0 比 0 埃及、埃及確定晉級非洲國家盃；拉菲尼亞停賽未上場；坎塞洛的葡萄牙對威爾斯；未報新傷；頁面只有相對時間"
+    },
+    {
+      "title": "Cubarsí and De Jong injury news",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-16",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4609902/cubarsi-and-de-jong-injury-news",
+      "note": "德容閉孔肌拉傷、能踢比利亞雷亞爾；庫巴西髂腰肌發緊、看恢復；上一期已報，本稿只當最新說法一句帶過"
+    },
+    {
+      "title": "FC Barcelona first-team schedule",
+      "publisher": "FC Barcelona",
+      "date": "2026-11-18",
+      "url": "https://www.fcbarcelona.com/en/football/first-team/schedule",
+      "note": "西班牙本土時間：比利亞雷亞爾 11 月 22 日 14:00 = 台灣 21:00、Spotify Camp Nou；Sabah 11 月 25 日 18:45 = 台灣 11 月 26 日 01:45、巴庫奧林匹克體育場；5 月 9 日（週六）皇馬對巴薩在伯納烏（第 35 輪）；11 月 29 日客場 Deportivo、12 月 2 日馬競（主）、12 月 5 日塞爾塔（主）、12 月 8 日曼城（主）共六場；11 月 18 日 02:50 查閱，11 月 22 日開球時間仍成立"
+    },
+    {
+      "title": "LaLiga standings 2026/27",
+      "publisher": "ESPN",
+      "date": "2026-11-18",
+      "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+      "note": "11 月 18 日 02:45 查閱：巴薩 12 場 11 勝 0 平 1 負 33 分 +35、皇馬 10 勝 2 負 30 分 +21、馬競 28 分、比利亞雷亞爾第 8 名 15 分、塞爾塔第 11 名 12 場 2 勝 7 平 3 負；比利亞雷亞爾 11 月 8 日 2 比 0 贏 Getafe（ESPN 球隊賽程 teams/102）"
+    },
+    {
+      "title": "LALIGA EA SPORTS standings",
+      "publisher": "LaLiga",
+      "date": "2026-11-18",
+      "url": "https://www.laliga.com/en-GB/laliga-easports/standing",
+      "note": "11 月 18 日 02:50 查閱，前八名與 ESPN 積分榜一致"
+    },
+    {
+      "title": "Barcelona 1-2 Real Madrid, LaLiga",
+      "publisher": "ESPN",
+      "date": "2026-10-25",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882832",
+      "note": "比賽紀錄 keyEvents：姆巴佩 41'、拉菲尼亞 61'、姆巴佩 87'；11 月 18 日查閱"
+    },
+    {
+      "title": "FC Barcelona 2026-27 LaLiga results",
+      "publisher": "ESPN",
+      "date": "2026-11-18",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/83/schedule",
+      "note": "12 場逐場比分：進 48、失 13，與積分榜 +35 相符；9 月 16 日 7 比 2 Racing Santander；11 月 18 日查閱"
+    },
+    {
+      "title": "LaLiga scoreboard, 21–23 November 2026",
+      "publisher": "ESPN",
+      "date": "2026-11-18",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261121-20261123",
+      "note": "皇馬對塞爾塔 11 月 21 日 20:00 UTC（台灣 11 月 22 日 04:00）、巴薩對比利亞雷亞爾 11 月 22 日 13:00 UTC、馬競作客 Getafe 11 月 22 日 20:00 UTC（台灣 11 月 23 日 04:00）；11 月 18 日查閱"
+    },
+    {
+      "title": "La Liga scores and fixtures",
+      "publisher": "Sky Sports",
+      "date": "2026-11-18",
+      "url": "https://www.skysports.com/la-liga-scores-fixtures",
+      "note": "第二來源核對時間：皇馬對塞爾塔 11 月 21 日 8:00pm、巴薩對比利亞雷亞爾 11 月 22 日 1:00pm（頁面未標時區，與 ESPN 的 UTC 時間一致）"
+    },
+    {
+      "title": "Klopp: Nobody 'questioning' Germany after group-winning rout of Dutch",
+      "publisher": "ESPN",
+      "date": "2026-11-17",
+      "url": "https://www.espn.com/soccer/story/_/id/50505834",
+      "note": "美聯社稿；德國 5 比 0 荷蘭、維爾茨兩球、克洛普賽後說法、兩隊都進八強"
+    },
+    {
+      "title": "UEFA Nations League scoreboard, 16 November 2026",
+      "publisher": "ESPN",
+      "date": "2026-11-17",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.nations/scoreboard?dates=20261116",
+      "note": "德國 5 比 0 荷蘭、瑞士 4 比 0 蘇格蘭終場；11 月 17 日開球的威爾斯對葡萄牙 19:45 UTC（台灣 11 月 18 日 03:45），查閱時仍是尚未開賽，故寫「結果晚點補」"
+    },
+    {
+      "title": "Vinícius Júnior hits Brazil hat trick, vows to take form to Real Madrid",
+      "publisher": "ESPN",
+      "date": "2026-11-17",
+      "url": "https://www.espn.com/soccer/story/_/id/50510724",
+      "note": "巴西 7 比 0 新加坡、維尼修斯 59 場 19 球、本季皇馬 12 場 1 球、暑假訓練少了的說法來自維尼修斯 11 月 16 日的談話（ESPN 50505359 轉述）"
+    },
+    {
+      "title": "Brazil vs Singapore, friendly",
+      "publisher": "ESPN",
+      "date": "2026-11-17",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.friendly/summary?event=401916335",
+      "note": "進球 9'、15'、21' 維尼修斯，Endrick 31'、Estêvão 51'、Rayan 65'、新加坡烏龍 74'；開球 10:00 UTC = 台灣 18:00"
+    },
+    {
+      "title": "Andy Robertson beats Kenny Dalglish's Scotland caps record",
+      "publisher": "ESPN",
+      "date": "2026-11-16",
+      "url": "https://www.espn.com/soccer/story/_/id/50499443",
+      "note": "第 103 場、達格利什 102 場"
+    },
+    {
+      "title": "Scotland's 4-0 defeat to Switzerland not a reflection of game - Sebastien Pocognoli",
+      "publisher": "ESPN",
+      "date": "2026-11-17",
+      "url": "https://www.espn.com/soccer/story/_/id/50505776",
+      "note": "蘇格蘭 0 比 4 瑞士、小組第三、錯過附加賽名額；BBC 稿經 ESPN 轉載"
+    },
+    {
+      "title": "France FA boss Diallo confirms bid to challenge Infantino for FIFA presidency",
+      "publisher": "ESPN",
+      "date": "2026-11-17",
+      "url": "https://www.espn.com/soccer/story/_/id/50509967",
+      "note": "美聯社稿；法國足協執委會週二通過；迪亞洛談話；選舉日期與地點沿用 ESPN 50500212（11 月 16 日）"
+    },
+    {
+      "title": "Oviedo fan handed suspended prison sentence for racist abuse toward Mbappé",
+      "publisher": "ESPN",
+      "date": "2026-11-17",
+      "url": "https://www.espn.com/soccer/story/_/id/50509888",
+      "note": "皇馬聲明；稿中把年份寫成 2025，與賽季不符，本稿只寫 8 月 24 日，不寫年份"
+    },
+    {
+      "title": "Poch offers Pep advice on USMNT job, calls it 'perfect moment to arrive'",
+      "publisher": "ESPN",
+      "date": "2026-11-17",
+      "url": "https://www.espn.com/soccer/story/_/id/50504817",
+      "note": "波切蒂諾最後一場對海地、賽後飛曼徹斯特；首回合領先 6 球；瓜迪奧拉為熱門的報導與波切蒂諾的建議；海地對美國 11 月 18 日 00:00 UTC = 台灣 08:00（ESPN 國協盃賽程）"
+    },
+    {
+      "title": "Declan Rice agrees in principle to new five-year Arsenal deal - sources",
+      "publisher": "ESPN",
+      "date": "2026-11-16",
+      "url": "https://www.espn.com/soccer/story/_/id/50505152",
+      "note": "消息人士說法，尚未簽字"
+    },
+    {
+      "title": "Matheus Nunes in talks to extend Man City deal - sources",
+      "publisher": "ESPN",
+      "date": "2026-11-17",
+      "url": "https://www.espn.com/soccer/story/_/id/50511813",
+      "note": "消息人士說法，現約到 2028 年、談判未到深入階段"
+    },
+    {
+      "title": "Thomas Frank: Crystal Palace job 'too good' to turn down",
+      "publisher": "ESPN",
+      "date": "2026-11-17",
+      "url": "https://www.espn.com/soccer/story/_/id/50510313",
+      "note": "53 歲、2 月被熱刺開除、兩年半合約、水晶宮丟 24 球全英超最多、首戰週六作客考文垂"
+    },
+    {
+      "title": "Malawi vs Egypt, AFCON qualifier",
+      "publisher": "ESPN",
+      "date": "2026-11-17",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/caf.nations_qual/scoreboard?dates=20261117",
+      "note": "馬拉威 0 比 0 埃及，與球團官網一致"
+    },
+    {
+      "title": "2026/27 UEFA Nations League knockout stage and play-off draw",
+      "publisher": "UEFA",
+      "date": "2026-11-17",
+      "url": "https://www.uefa.com/uefanationsleague/draws/",
+      "note": "抽籤 11 月 20 日（週五）12:00 CET 在瑞士尼翁 = 台灣 19:00（上一期已核對）"
+    },
+    {
+      "title": "File:Kylian Mbappe France v Spain 7.24.26-135.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-07-14",
+      "url": "https://commons.wikimedia.org/wiki/File:Kylian_Mbappe_France_v_Spain_7.24.26-135.jpg",
+      "note": "攝影 Bryan Berlin，CC BY-SA 4.0；Commons 描述為 2026 年世界盃法國對西班牙"
+    }
+  ]
+}
