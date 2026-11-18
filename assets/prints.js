@@ -3,7 +3,8 @@
 // name under it (from the article's topic_key, as a printer would set it) with the headline in small type, the number
 // and the day pencilled in the margins. #/prints is a blue leather portfolio open on the desk with the newest print on
 // top under a half-lifted tissue; a swipe or the ‹ › on the desk turns to the next print, a tap on the print opens the
-// article. Leather and wood are the bookcase's photographs (assets/shelf/, Poly Haven, CC0).
+// article; a tap on the brass plate lays every print out on the desk (a tap on one brings it back on top), the brass die
+// draws one at random. Leather and wood are the bookcase's photographs (assets/shelf/, Poly Haven, CC0).
 import { esc } from "./util.js";
 
 const ROMAN = (n) => [[1000, "m"], [900, "cm"], [500, "d"], [400, "cd"], [100, "c"], [90, "xc"], [50, "l"], [40, "xl"], [10, "x"], [9, "ix"], [5, "v"], [4, "iv"], [1, "i"]].reduce((s, [v, r]) => { while (n >= v) { s += r; n -= v; } return s; }, "");
@@ -28,7 +29,9 @@ export function printsHtml(list) {
   const i = Math.max(0, list.findIndex((p) => p.date === topDate));
   return `<div class="pr-folio"><i class="pr-gilt" aria-hidden="true"></i><i class="pr-tie l" aria-hidden="true"></i><i class="pr-tie r" aria-hidden="true"></i>
       <div class="pr-stack">${list.length > 1 ? '<i class="pr-under" aria-hidden="true"></i>' : ""}<div class="pr-top">${printHtml(list[i], i, list.length)}</div></div></div>
-    ${list.length > 1 ? `<div class="pr-nav"><button type="button" class="cr-flip sh-foil" data-flip="-1" aria-label="較新的一張"${i ? "" : " disabled"}>‹</button><span class="pr-count sh-foil">${ROMAN(list.length).toUpperCase()}</span><button type="button" class="cr-flip sh-foil" data-flip="1" aria-label="較舊的一張"${i < list.length - 1 ? "" : " disabled"}>›</button></div>` : ""}`;
+    ${list.length > 1 ? `<div class="pr-nav"><button type="button" class="cr-flip sh-foil" data-flip="-1" aria-label="較新的一張"${i ? "" : " disabled"}>‹</button><button type="button" class="sc-brass sc-plate-btn" data-all aria-label="全部攤開，${list.length} 張"><span class="sc-cut">Radierungen · ${ROMAN(list.length).toUpperCase()}</span></button><button type="button" class="cr-flip sh-foil" data-flip="1" aria-label="較舊的一張"${i < list.length - 1 ? "" : " disabled"}>›</button><button type="button" class="sc-die" data-die aria-label="隨機抽一張"><i></i><i></i><i></i></button></div>
+    <div class="pr-all" hidden>${list.map((p, k) => `<button type="button" class="pr-mini" data-pick="${k}" aria-label="${esc(buildingName(p.a) || p.a.title)}"><span class="pr-mini-e">${p.a.hero?.thumb || p.a.hero?.src ? `<img src="${esc(p.a.hero.thumb || p.a.hero.src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}</span><span class="pr-mini-n">${esc(buildingName(p.a))}</span></button>`).join("")}
+      <div class="pr-all-bar"><button type="button" class="sc-brass sc-plate-btn" data-all aria-label="收回畫夾"><span class="sc-cut">Alle · ${ROMAN(list.length).toUpperCase()}</span></button><button type="button" class="sc-die" data-die aria-label="隨機抽一張"><i></i><i></i><i></i></button></div></div>` : ""}`;
 }
 
 export function wirePrints(scene, list) {
@@ -45,6 +48,15 @@ export function wirePrints(scene, list) {
   };
   prev.addEventListener("click", () => go(-1));
   next.addEventListener("click", () => go(1));
+  // 全部攤開 and back; a print picked from the desk comes back on top; the die draws any other one
+  const all = scene.querySelector(".pr-all"), spread = (on) => { scene.classList.toggle("spread", on); all.hidden = !on; window.scrollTo(0, 0); };
+  scene.querySelectorAll("[data-all]").forEach((b) => b.addEventListener("click", () => spread(all.hidden)));
+  all.addEventListener("click", (e) => { const b = e.target.closest("[data-pick]"); if (!b) return; const k = Number(b.dataset.pick); spread(false); if (k !== i) go(k - i); });
+  scene.querySelectorAll("[data-die]").forEach((b) => b.addEventListener("click", () => {
+    let k = Math.floor(Math.random() * (list.length - 1)); if (k >= i) k++;
+    b.classList.remove("roll"); void b.offsetWidth; b.classList.add("roll");
+    spread(false); go(k - i);
+  }));
   const folio = scene.querySelector(".pr-folio");
   let x0 = 0, y0 = 0, t0 = 0, swiped = false;
   folio.addEventListener("touchstart", (e) => { const t = e.touches[0]; x0 = t.clientX; y0 = t.clientY; t0 = Date.now(); swiped = false; }, { passive: true });

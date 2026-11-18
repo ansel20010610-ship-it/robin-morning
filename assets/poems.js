@@ -2,7 +2,8 @@
 // 詩 piece read is a letter. The whole poem (the article's first quote that runs over several lines) is printed on
 // gold-flecked laid paper with a faint robin watermark — its title, the poet, the original under the translation —
 // lying on the open writing box where the earlier letters stand in their envelopes, the box's brass plate counting them.
-// #/poems shows the newest; a swipe or the ‹ › on the box turns to the next, a tap on the poet's line opens the article.
+// #/poems shows the newest; a swipe or the ‹ › on the box turns to the next, a tap on the poet's line opens the article;
+// a tap on the brass plate lays every letter out on the desk, folded, its title on it; the brass die draws one.
 // The letterpress types (Shippori Mincho B1, Old Standard TT) are only used here.
 import { esc } from "./util.js";
 
@@ -20,12 +21,12 @@ export function poemOf(art) {
 
 const flecks = (() => { let s = ""; for (let i = 0; i < 46; i++) s += `<i style="left:${((i * 73) % 92) + 3}%;top:${((i * 131) % 94) + 2}%;width:${1 + (i % 3)}px;height:${1 + ((i * 7) % 3)}px;transform:rotate(${i * 37}deg)"></i>`; return s; })();
 
-function sheetHtml(p, poem) {
+function sheetHtml(p, poem, loaded = false) {
   const head = poem ? `${poem.orig ? `<span class="po-orig">${esc(poem.orig)}</span>` : ""}<span class="po-title">${esc(poem.title || p.a.title)}</span>` : `<span class="po-title">${esc(p.a.title)}</span>`;
   return `<div class="po-sheet"><span class="po-flecks" aria-hidden="true">${flecks}</span><svg class="po-wm" viewBox="6 16 54 38" aria-hidden="true"><use href="#po-robin"/></svg>
       ${head}<i class="po-rule" aria-hidden="true"></i>
-      ${poem ? `<p class="po-text">${esc(poem.text)}</p>${poem.original ? `<p class="po-de">${esc(poem.original)}</p>` : ""}` : '<p class="po-text po-wait">……</p>'}
-      <a class="po-poet" href="#/a/${esc(p.date)}/poem">— ${esc(poem?.poet || "")}</a></div>`;
+      ${poem ? `<p class="po-text">${esc(poem.text)}</p>${poem.original ? `<p class="po-de">${esc(poem.original)}</p>` : ""}` : loaded ? `<p class="po-text">${esc(p.a.dek || "")}</p>` : '<p class="po-text po-wait">……</p>'}
+      <a class="po-poet" href="#/a/${esc(p.date)}/poem">${poem?.poet ? `— ${esc(poem.poet)}` : "讀這一篇"}</a></div>`;
 }
 
 export function poemsHtml(list) {
@@ -37,8 +38,10 @@ export function poemsHtml(list) {
     <div class="po-desk"><div class="po-top" data-date="${esc(list[i].date)}">${sheetHtml(list[i], null)}</div>
       <div class="po-box"><i class="po-well"></i>${list.slice(1, 6).map((_, k) => `<i class="po-env" style="--k:${k}"></i>`).join("")}
         <div class="po-sb">${list.length > 1 ? `<button type="button" class="cr-flip sh-foil" data-flip="-1" aria-label="較新的一封"${i ? "" : " disabled"}>‹</button>` : ""}
-          <span class="sc-brass po-plate"><span class="sc-cut">Briefe · ${ROMAN(list.length)}</span></span>
-          ${list.length > 1 ? `<button type="button" class="cr-flip sh-foil" data-flip="1" aria-label="較舊的一封"${i < list.length - 1 ? "" : " disabled"}>›</button>` : ""}</div></div></div>`;
+          ${list.length > 1 ? `<button type="button" class="sc-brass po-plate sc-plate-btn" data-all aria-label="全部攤開，${list.length} 封"><span class="sc-cut">Briefe · ${ROMAN(list.length)}</span></button>` : `<span class="sc-brass po-plate"><span class="sc-cut">Briefe · ${ROMAN(list.length)}</span></span>`}
+          ${list.length > 1 ? `<button type="button" class="cr-flip sh-foil" data-flip="1" aria-label="較舊的一封"${i < list.length - 1 ? "" : " disabled"}>›</button><button type="button" class="sc-die" data-die aria-label="隨機抽一張"><i></i><i></i><i></i></button>` : ""}</div></div></div>
+    ${list.length > 1 ? `<div class="po-all" hidden>${list.map((p, k) => `<button type="button" class="po-note" data-pick="${k}"><b>……</b><i></i><span class="po-wax" aria-hidden="true"></span></button>`).join("")}
+      <div class="pr-all-bar"><button type="button" class="sc-brass po-plate sc-plate-btn" data-all aria-label="收回信盒"><span class="sc-cut">Alle · ${ROMAN(list.length)}</span></button><button type="button" class="sc-die" data-die aria-label="隨機抽一張"><i></i><i></i><i></i></button></div></div>` : ""}`;
 }
 
 // Draws the letter once its article is in (load(date) → the article json), and wires the turning.
@@ -50,7 +53,8 @@ export function wirePoems(scene, list, load) {
     const mine = ++seq, p = list[i];
     const a = await load(p.date).catch(() => null);
     if (mine !== seq || !top.isConnected) return;
-    top.innerHTML = sheetHtml(p, poemOf(a));
+    top.innerHTML = sheetHtml(p, poemOf(a), true);
+    if (step && top.getBoundingClientRect().top < 0) window.scrollTo(0, 0); // a long poem turned from the foot of the page: start the next at its head
     if (step) { top.classList.remove("turn-l", "turn-r"); void top.offsetWidth; top.classList.add(step > 0 ? "turn-l" : "turn-r"); }
   };
   fill(0);
@@ -65,6 +69,20 @@ export function wirePoems(scene, list, load) {
   };
   prev.addEventListener("click", () => go(-1));
   next.addEventListener("click", () => go(1));
+  // 全部攤開: every letter folded on the desk with its title (the poems are read once, when the desk is first spread)
+  const all = scene.querySelector(".po-all"), desk = scene.querySelector(".po-desk");
+  let named = false;
+  const name = () => { if (named) return; named = true;
+    all.querySelectorAll("[data-pick]").forEach((b) => { const p = list[Number(b.dataset.pick)];
+      load(p.date).then((a) => { const m = poemOf(a); b.querySelector("b").textContent = m?.title || p.a.title; b.querySelector("i").textContent = m?.orig || m?.poet || ""; b.setAttribute("aria-label", m?.title || p.a.title); }).catch(() => { b.querySelector("b").textContent = p.a.title; }); }); };
+  const spread = (on) => { scene.classList.toggle("spread", on); all.hidden = !on; desk.hidden = on; if (on) name(); window.scrollTo(0, 0); };
+  scene.querySelectorAll("[data-all]").forEach((b) => b.addEventListener("click", () => spread(all.hidden)));
+  all.addEventListener("click", (e) => { const b = e.target.closest("[data-pick]"); if (!b) return; const k = Number(b.dataset.pick); spread(false); if (k !== i) go(k - i); });
+  scene.querySelectorAll("[data-die]").forEach((b) => b.addEventListener("click", () => {
+    let k = Math.floor(Math.random() * (list.length - 1)); if (k >= i) k++;
+    b.classList.remove("roll"); void b.offsetWidth; b.classList.add("roll");
+    spread(false); go(k - i);
+  }));
   let x0 = 0, y0 = 0, t0 = 0, swiped = false;
   top.addEventListener("touchstart", (e) => { const t = e.touches[0]; x0 = t.clientX; y0 = t.clientY; t0 = Date.now(); swiped = false; }, { passive: true });
   top.addEventListener("touchend", (e) => {
