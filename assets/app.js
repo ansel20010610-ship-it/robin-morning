@@ -17,7 +17,7 @@ import { worldState, drawGlobe } from "./world.js";
 import { nestBox, renderNest, renderNestSettings, renderNestAlbum, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
 import { codaHtml, codaVoices, playCoda } from "./jupiter.js";
 import { shelf, shelved, shelve, markShown, shelfHtml, bookHtml, openBook } from "./shelf.js";
-import { crateHtml, wireCrate, deckHtml, fillPlate, playRecord, boxBusy, workName } from "./records.js";
+import { crateHtml, wireCrate, deckHtml, fillPlate, playRecord, boxBusy, workName, spreadHtml, wireSpread } from "./records.js";
 import { medalMonths, medalsHtml } from "./medals.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
@@ -442,6 +442,14 @@ function viewMedals() {
 }
 // 唱片櫃 (#/records, one of 收藏's corners; the owner, 2026-11-19): every 古典音樂 piece read is a record (records.js).
 const records = () => { const read = readSet(); return publishedIssues().flatMap((i) => i.articles.filter((a) => a.column === "music" && read.has(`${i.date}/music`)).map((a) => ({ date: i.date, a }))).sort((x, y) => y.date.localeCompare(x.date)); };
+// #/records/all: every record spread out on the desk (records.js spreadHtml); a tap brings one to the front of the crate.
+function viewRecordsAll() {
+  const list = records();
+  main.innerHTML = scenePage("Schallplatten", "全部唱片", "#/records", `<div class="sc-scene sc-desk ov-scene"><i class="sc-lamp"></i>${list.length ? spreadHtml(list) : '<p class="sc-empty">讀完一篇古典音樂，就會收進一張唱片。</p>'}</div>`);
+  wireBack();
+  wireSpread(main.querySelector(".ov-scene"), () => routed);
+  document.title = `全部唱片｜${S.cfg.title}`;
+}
 function viewRecords() {
   const list = records();
   main.innerHTML = scenePage("Schallplatten", "唱片櫃", "#/saved", `<div class="sc-scene sc-wall crate-scene"><i class="sc-lamp"></i>${list.length ? "" : '<p class="sc-empty">讀完一篇古典音樂，就會收進一張唱片。</p>'}${crateHtml(list)}</div>`);
@@ -2797,6 +2805,7 @@ async function drawRoute(h, art, my) {
   else if ((m = h.match(/^#\/shelf\/([\w-]+)/))) await viewShelfBook(m[1], my);
   else if (h.startsWith("#/shelf")) await viewShelf(my);
   else if ((m = h.match(/^#\/records\/(\d{4}-\d{2}-\d{2})/))) await viewRecord(m[1], my);
+  else if (h.startsWith("#/records/all")) viewRecordsAll();
   else if (h.startsWith("#/records")) viewRecords();
   else if (h.startsWith("#/medals")) viewMedals();
   else if (h.startsWith("#/serial")) await viewSerial(my);

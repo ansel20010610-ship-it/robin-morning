@@ -4,6 +4,9 @@
 // in the panelled room (one full-bleed scene, the owner's 「對，照這樣改」 of 2026-11-19), the front record pulled up
 // with its disc half out; #/records/<date> puts that record on a turntable, and a tap on the disc spins it and plays the
 // recording through Spotify (app.js viewRecord), or without Spotify the article's melody (index.json `motif`) as a music box. Wood is the bookcase's photograph (assets/shelf/, CC0).
+// Under the sideboard's plate two drawers (the owner's pick of 2026-11-19, samples in 流程盤點/修改包/收藏品_黑膠/樣張_總覽與隨機):
+// 全部唱片 opens #/records/all, every record spread out on the desk; 隨機一張 riffles the crate and leaves one record in
+// front. Neither puts a record on the turntable: a record tapped on the desk comes back to the front of the crate.
 import { esc } from "./util.js";
 import { parseMotif, audioCtx } from "./nest.js";
 import { pluck, reverb } from "./jupiter.js";
@@ -53,20 +56,49 @@ export function crateHtml(list) {
     <i class="cr-sb-top"></i>
     <div class="cr-sb">${list.length > 1 ? `<button type="button" class="cr-flip sh-foil" data-flip="-1" aria-label="較新的一張"${i ? "" : " disabled"}>‹</button>` : ""}
       <span class="sc-brass cr-plate"><span class="sc-cut">Schallplatten</span><span class="sc-cut n">${list.length ? ROMAN(list.length) : "—"}</span></span>
-      ${list.length > 1 ? `<button type="button" class="cr-flip sh-foil" data-flip="1" aria-label="較舊的一張"${i < list.length - 1 ? "" : " disabled"}>›</button>` : ""}</div>`;
+      ${list.length > 1 ? `<button type="button" class="cr-flip sh-foil" data-flip="1" aria-label="較舊的一張"${i < list.length - 1 ? "" : " disabled"}>›</button>` : ""}
+      ${list.length > 1 ? `<div class="cr-drawers"><a class="cr-drawer" href="#/records/all"><span class="sc-brass"><span class="sc-cut">全部唱片</span></span><i></i></a><button type="button" class="cr-drawer" data-rand><span class="sc-brass"><span class="sc-cut">隨機一張</span></span><i></i></button></div>` : ""}</div>`;
+}
+// #/records/all: every record spread out on the desk under the lamp, two by two, each a little askew (the same tilt every
+// time: it follows the date). The one above lies over the top of the one below, so no name is covered. A tap brings that
+// record to the front of the crate.
+const askew = (s) => { const h = [...String(s)].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7); return { rot: ((h % 9) - 4) * .8, dx: ((h >> 4) % 13) - 6 }; };
+export function spreadHtml(list) {
+  return `<div class="ov-spread">${list.map((r, k) => { const { rot, dx } = askew(r.date);
+    return `<a class="ov-it" href="#/records" data-front="${esc(r.date)}" aria-label="${esc(workName(r.a).work)}，放到唱片箱最前面" style="transform:translateX(${dx}px) rotate(${rot.toFixed(1)}deg);z-index:${list.length - k}">${sleeveHtml(r, "calc((min(100vw, 520px) - 54px) / 2)")}</a>`; }).join("")}</div>`;
+}
+// Back the way it came (a step back in history, not a new entry), so the crate's back arrow then leads out of 唱片櫃.
+export function wireSpread(scene, inApp) {
+  scene?.addEventListener("click", (e) => {
+    const a = e.target.closest("[data-front]"); if (!a) return;
+    frontDate = a.dataset.front;
+    if (inApp()) { e.preventDefault(); history.back(); }
+  });
 }
 // Flipping through the crate: a swipe left brings the next older record to the front, right the newer; the buttons too.
 export function wireCrate(scene, list) {
   if (!scene || list.length < 2) return;
   let i = Math.max(0, list.findIndex((r) => r.date === frontDate));
   const stack = scene.querySelector(".cr-stack"), prev = scene.querySelector('[data-flip="-1"]'), next = scene.querySelector('[data-flip="1"]');
-  const go = (step) => {
-    const j = Math.min(list.length - 1, Math.max(0, i + step));
-    if (j === i) return;
+  const show = (j, dir) => {
     i = j; frontDate = list[i].date;
-    stack.innerHTML = stackHtml(list, i, step > 0 ? "l" : "r");
+    stack.innerHTML = stackHtml(list, i, dir > 0 ? "l" : "r");
     prev.disabled = i === 0; next.disabled = i === list.length - 1;
   };
+  let riffling = false;
+  const go = (step) => {
+    const j = Math.min(list.length - 1, Math.max(0, i + step));
+    if (j !== i && !riffling) show(j, step);
+  };
+  // 隨機一張: up to six records riffle past and the drawn one (never the one already in front) stays there.
+  scene.querySelector("[data-rand]")?.addEventListener("click", () => {
+    if (riffling) return;
+    let j; do j = Math.floor(Math.random() * list.length); while (j === i);
+    const from = i, dir = j > from ? 1 : -1, steps = matchMedia("(prefers-reduced-motion: reduce)").matches ? 1 : Math.min(6, Math.abs(j - from));
+    let n = 0; riffling = true;
+    const tick = () => { if (!stack.isConnected) { riffling = false; return; } n++; show(n < steps ? from + Math.round(((j - from) * n) / steps) : j, dir); if (n < steps) setTimeout(tick, 110); else riffling = false; };
+    tick();
+  });
   prev.addEventListener("click", () => go(-1));
   next.addEventListener("click", () => go(1));
   const room = scene.querySelector(".cr-room");
@@ -76,7 +108,7 @@ export function wireCrate(scene, list) {
     const t = e.changedTouches[0], dx = t.clientX - x0, dy = t.clientY - y0;
     if (x0 > 24 && Math.abs(dx) > 40 && Math.abs(dx) > 1.5 * Math.abs(dy) && Date.now() - t0 < 900) { swiped = true; go(dx < 0 ? 1 : -1); }
   }, { passive: true });
-  room.addEventListener("click", (e) => { if (swiped) { e.preventDefault(); swiped = false; } }, true); // a swipe that ended on the front sleeve is not a tap on it
+  room.addEventListener("click", (e) => { if (swiped || riffling) { e.preventDefault(); swiped = false; } }, true); // a swipe that ended on the front sleeve is not a tap on it, nor a tap while the crate riffles
 }
 
 // #/records/<date>: the record on the turntable filling the page — platter, record, tonearm, the 33/45 knobs, and the
