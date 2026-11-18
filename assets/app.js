@@ -16,7 +16,7 @@ import { feastOf } from "./feasts.js";
 import { worldState, drawGlobe } from "./world.js";
 import { nestBox, renderNest, renderNestSettings, renderNestAlbum, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
 import { codaHtml, codaVoices, playCoda } from "./jupiter.js";
-import { shelf, shelved, shelve, markShown, shelfHtml, bookHtml, openBook } from "./shelf.js";
+import { shelf, shelved, shelve, markShown, shelfHtml, bookHtml, openBook, marksHtml } from "./shelf.js";
 import { crateHtml, wireCrate, deckHtml, fillPlate, playRecord, boxBusy, workName, spreadHtml, wireSpread } from "./records.js";
 import { medalMonths, medalsHtml } from "./medals.js";
 import { printsHtml, wirePrints } from "./prints.js";
@@ -381,7 +381,12 @@ function readingBook() {
   const parts = bookParts(b.slug), read = readSet();
   if (!parts.length) return null;
   const n = Math.max(0, ...parts.filter((p) => read.has(`${p.date}/${p.a.column}`)).map((p) => Number(p.a.serial?.n) || 0));
-  return { slug: b.slug, title: String(b.title || ""), author: String(b.author || ""), start: String(b.start || parts[0].date), n, of: Number(b.of) || parts.at(-1).a.serial?.of || parts.length };
+  return { slug: b.slug, title: String(b.title || ""), author: String(b.author || ""), start: String(b.start || parts[0].date), n, of: Number(b.of) || parts.at(-1).a.serial?.of || parts.length, marks: bookMarks(b.slug) };
+}
+// 卷末書籤: every part of the book read through — its last installment (serial.ends part / book) read — in order.
+function bookMarks(slug) {
+  const read = readSet();
+  return bookParts(slug).filter((p) => (p.a.serial?.ends === "part" || p.a.serial?.ends === "book") && read.has(`${p.date}/${p.a.column}`)).map((p, i) => ({ i, part: String(p.a.serial.part || "").split("・").pop() || String(p.a.serial.part || ""), date: p.date }));
 }
 async function viewSerial(my) {
   if (S.book === undefined) { main.innerHTML = `<div class="wrap"><p class="empty">翻書中……</p></div>`; await loadBook(); if (my !== undefined && my !== routeSeq) return; }
@@ -545,6 +550,20 @@ async function viewShelfBook(slug, my) {
   if (S.book?.slug === slug) shelveIfRead();
   const list = shelf(), i = list.findIndex((e) => e.slug === slug), e = list[i];
   const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/shelf" aria-label="返回">${ICON.back}</a><div class="title">我的書架</div></div></div>`;
+  const reading = !e && S.book?.slug === slug ? readingBook() : null;
+  if (reading) { // the book still being read: open at the latest installment read, its bookmarks beside it
+    main.innerHTML = scenePage("Lesezeichen", "書籤", "#/shelf", `<div class="sc-scene sc-desk marks-scene"><i class="sc-lamp"></i>${marksHtml(reading, reading.marks)}</div>`);
+    wireBack();
+    const read = readSet(), last = bookParts(slug).filter((p) => read.has(`${p.date}/${p.a.column}`)).at(-1);
+    if (last) article(last.date, last.a.column).then((a) => {
+      const t = (a.body || []).filter((x) => x?.type === "p").map((x) => String(x.text || "").replace(/\*\*/g, "")).join(""), pg = main.querySelectorAll(".mk-text"), fo = main.querySelectorAll(".mk-folio");
+      if (!pg.length) return;
+      pg[0].textContent = t.slice(0, 430); pg[1].textContent = t.slice(430, 860);
+      const n = (Number(last.a.serial?.n) || 1) * 2; fo[0].textContent = String(n); fo[1].textContent = String(n + 1);
+    }).catch(() => {});
+    document.title = `《${reading.title}》｜${S.cfg.title}`;
+    return;
+  }
   if (!e) { main.innerHTML = `${top}<div class="wrap"><p class="empty">這本書還沒讀完，讀完最後一回，它就會收上書架。<a href="#/serial">回到連載</a></p></div>`; wireBack(); return; }
   main.innerHTML = scenePage("Bibliothek", "我的書架", "#/shelf", `<div class="sc-scene sc-desk book-scene"><i class="sc-lamp"></i>${bookHtml(e, i + 1)}</div>`);
   wireBack();

@@ -93,7 +93,7 @@ export function shelfHtml(list, reading = null) {
   const shelves = [older.slice(0, 4), older.slice(4, 14), older.slice(14, 24)];
   for (let i = 24; i < older.length; i += 10) shelves.push(older.slice(i, i + 10));
   const face = reading
-    ? `<a class="sh-book reading" href="#/serial" aria-label="《${esc(reading.title)}》，正在讀，讀到第 ${reading.n} 回，共 ${reading.of} 回"><span class="b3">
+    ? `<a class="sh-book reading" href="#/shelf/${esc(reading.slug)}" aria-label="《${esc(reading.title)}》，正在讀，讀到第 ${reading.n} 回，共 ${reading.of} 回，${(reading.marks || []).length} 條書籤"><span class="mk-tabs" aria-hidden="true">${(reading.marks || []).slice(-6).map((m, k) => `<i style="--k:${k};--c:${MARK_COLOURS[m.i % MARK_COLOURS.length][0]}"></i>`).join("")}</span><span class="b3">
         <i class="f back"></i><i class="f top"></i><i class="f pages"></i><span class="f cover">${coverSvg(last)}</span></span><i class="sh-ribbon" aria-hidden="true"></i></a>`
     : !last ? "" : `<a class="sh-book${last.shown ? "" : " new"}" href="#/shelf/${esc(last.slug)}" aria-label="《${esc(last.title)}》，${esc(volZh(list.length))}，翻開"><span class="b3">
         <i class="f back"></i><i class="f top"></i><i class="f pages"></i><span class="f cover">${coverSvg(last)}</span></span></a>`;
@@ -106,6 +106,21 @@ export function shelfHtml(list, reading = null) {
   </section>`;
 }
 
+// ——— 卷末書籤 (the owner, 2026-11-19: 夾在書架那本書裡): a silk bookmark for every part of the book read through, gilt
+// with the part's name and the day its last installment came out. The book being read opens (#/shelf/<slug>) to the
+// two pages it is open at (the latest installment read) with its bookmarks laid fanwise beside it, and 「Weiterlesen」
+// leads on to the 連載 tab.
+const MARK_COLOURS = [["#23395b", "#2e4870"], ["#6e2536", "#8e2a40"], ["#2d4a35", "#3a5c43"], ["#5a3a1a", "#7a5226"], ["#3a2a52", "#4c3a6a"]];
+const MONTHS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"];
+const markDate = (d) => { const [y, m, dd] = d.split("-").map(Number); return `${dd}. ${MONTHS[m - 1]}.<br>${roman(y)}`; };
+export function marksHtml(b, marks) {
+  const one = (m, k) => { const [c0, c1] = MARK_COLOURS[m.i % MARK_COLOURS.length];
+    return `<div class="mk-mark" style="--k:${k};--n:${Math.min(marks.length, 6)};--c0:${c0};--c1:${c1}"><i class="mk-silk"></i><i class="mk-edge"></i><b class="sh-foil mk-name">${esc(m.part)}</b><span class="mk-date">${markDate(m.date)}</span><i class="mk-cord"></i><i class="mk-tassel"></i></div>`; };
+  return `<div class="mk-desk">${DEFS}
+      <div class="mk-book" aria-label="《${esc(b.title)}》攤開在讀到的地方"><i class="mk-cover"></i><div class="mk-page l"><p class="mk-text"></p><span class="mk-folio l"></span></div><div class="mk-page r"><p class="mk-text"></p><span class="mk-folio r"></span></div><i class="mk-ribbon"></i></div>
+      <div class="mk-fan" aria-label="${marks.length} 條書籤">${marks.slice(-6).map(one).join("")}</div>
+      <a class="mk-on sh-foil" href="#/serial">Weiterlesen</a></div>`;
+}
 // The bookplate: laid paper, gold Ex Libris, the wheat ear of the book's epigraph growing over the robin in an engraved
 // oval, the title and the original, the day it was finished and how long it was read; the volume's number at the head.
 function plateSvgArt() {
