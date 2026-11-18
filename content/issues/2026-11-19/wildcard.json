@@ -1,0 +1,208 @@
+{
+  "column": "wildcard",
+  "date": "2026-11-19",
+  "title": "公斤的標準答案，一百年最多差了 50 微克",
+  "dek": "定義「1 公斤」的那顆金屬，怎麼知道自己有沒有變輕？",
+  "brief": "有一顆鉑銥圓柱在巴黎近郊當了 130 年的公斤標準。它自己不可能錯，只能跟副本比，比出最多約 50 微克的差，沒人說得出是誰變了。2019 年公斤改由普朗克常數定義，這顆圓柱第一次有了誤差範圍。",
+  "topic_key": "wildcard:metrology-kilogram-ipk-50-micrograms",
+  "form": "number",
+  "voice": "visitor",
+  "updated_at": "2026-11-19T02:08:30+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "illustration",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/27/Ruprechtsche_Waage.jpg",
+    "width": 1111,
+    "height": 600,
+    "alt": "幾個男人在一台精密天平旁，其中一人隔著一段距離用長桿操作，同時用望遠鏡讀刻度；右邊凳子上是剛從鐘形玻璃罩取出的原器，左邊凳子上是工作用砝碼的盒子，另有兩人在旁察看。",
+    "caption": "約 1900 年，用精密天平把某個公斤原器和一盒工作用砝碼比對。右邊的人用長桿遠遠操作，免得體溫讓天平周圍起氣流。1905 年德文書的插圖。",
+    "credit": "Bibliothek allgemeinen und praktischen Wissens für Militäranwärter, Band III（1905）；掃描：Kogo",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ruprechtsche_Waage.jpg",
+    "made": "1905",
+    "depicts": "約 1900"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "有一顆金屬圓柱，直徑和高都約 39 毫米，是九成鉑一成銥的合金。它收在巴黎近郊塞夫爾的國際度量衡局（BIPM，維護公制單位的國際機構）。從 1889 年到 2019 年，全世界的「1 公斤」就是它的重量。它叫**國際公斤原器**。"
+    },
+    {
+      "type": "p",
+      "text": "我原本以為公斤跟別的單位一樣，是從哪條物理定律算出來的。不是。整整 130 年，公斤的意思就是「跟這顆圓柱一樣重」，各國的砝碼一層一層往上校正，最上面比的就是它。你用到的砝碼與秤，也是這樣一層層往上校正的。"
+    },
+    {
+      "type": "p",
+      "text": "圓柱有六個官方副本，跟它收在同樣的條件下，每隔幾十年拿出來比一次。一個世紀比下來，圓柱似乎比副本輕了最多 50 微克。這是 2012 年一篇報導的說法，指一個世紀的比對裡最多出現過這麼大的差；別的檢定給過更小也更大的數字。"
+    },
+    {
+      "type": "p",
+      "text": "1 微克是百萬分之一克。50 微克放在 1 公斤旁邊，大約是兩千萬分之一。換成 20 公噸重的東西，就是多了 1 公克。"
+    },
+    {
+      "type": "h",
+      "text": "它自己不可能錯"
+    },
+    {
+      "type": "p",
+      "text": "這件事要繞一下才想得通。圓柱的定義就是 1 公斤，所以**它自己不可能錯，量得到的只有它跟別人的差**。「輕了最多 50 微克」的意思，是副本可能比它重了這麼多。到底是圓柱掉了質量，還是副本們在變重？沒有人說得準。副本跟它放在同樣的環境裡，如果一起變，比對根本看不出來。"
+    },
+    {
+      "type": "p",
+      "text": "美國的國家原器叫 K20，另有一顆核對用的標準 K4。兩顆送回巴黎重新校正，相對於巴黎那顆，各變重了約 45 微克和 53 微克。美國的國家標準機構 NIST 自己的比對沒有發現，因為兩顆一起變，彼此看不出差別。論文的作者說，在這麼短的校正間隔裡，這樣的變化在這兩件東西的歷史上前所未有。"
+    },
+    {
+      "type": "h",
+      "text": "清洗那一輪，掉了 16.8 微克"
+    },
+    {
+      "type": "p",
+      "text": "2013 年底到 2014 年初有一輪比對，這一輪比對裡，圓柱被清洗過，洗掉 16.8 微克；圓柱加六個副本，七顆平均約 15 微克。表面的髒東西還會慢慢長回去，一年接近 1 微克。國際度量衡委員會（跟上面的局是兩個單位）規定：要照指定的方法洗，洗完馬上量，那個重量才算 1 公斤。連什麼時候量，都得寫進定義裡。"
+    },
+    {
+      "type": "svg",
+      "title": "幾個微克的大小",
+      "svg": "<svg viewBox=\"0 0 700 210\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><text class=\"ink\" x=\"10\" y=\"37\" font-size=\"14\">一個世紀的差距</text><rect class=\"accent\" x=\"230\" y=\"20\" width=\"380.0\" height=\"24\" rx=\"3\"/><text class=\"ink\" x=\"618.0\" y=\"37\" font-size=\"14\">最多約 50</text><text class=\"ink\" x=\"10\" y=\"83\" font-size=\"14\">清洗那一輪</text><rect class=\"gold\" x=\"230\" y=\"66\" width=\"127.7\" height=\"24\" rx=\"3\"/><text class=\"ink\" x=\"365.7\" y=\"83\" font-size=\"14\">16.8</text><text class=\"ink\" x=\"10\" y=\"129\" font-size=\"14\">2019 年起的誤差</text><rect class=\"gold\" x=\"230\" y=\"112\" width=\"76.0\" height=\"24\" rx=\"3\"/><text class=\"ink\" x=\"314.0\" y=\"129\" font-size=\"14\">10</text><text class=\"ink\" x=\"10\" y=\"175\" font-size=\"14\">表面污染，一年</text><rect class=\"gold\" x=\"230\" y=\"158\" width=\"7.6\" height=\"24\" rx=\"3\"/><text class=\"ink\" x=\"245.6\" y=\"175\" font-size=\"14\">接近 1</text><line class=\"muted\" x1=\"230\" y1=\"14\" x2=\"230\" y2=\"190\" stroke-width=\"1\"/></svg>",
+      "caption": "單位是微克，條的長度依數值畫。一個世紀的差距是圓柱與副本比出來的相對數字，不是圓柱自己少了多少，而且這是上限說法。示意圖，數字依據 IEEE Spectrum（2012）、Metrologia（2015）、NIST 論文與國際度量衡局 2019 年的說明。"
+    },
+    {
+      "type": "p",
+      "text": "那一輪比對還有一個轉折：副本相對圓柱，從 1991 年以來平均只變了 −1 微克。論文寫的是，這沒有證實以前幾次檢定看到的、副本越拉越開的趨勢。論文沒有證實先前的分開趨勢。"
+    },
+    {
+      "type": "h",
+      "text": "把公斤釘在一個數字上"
+    },
+    {
+      "type": "p",
+      "text": "公斤到 2012 年還靠一件實物定義。重新定義還有另一層理由，前局長奎恩這樣說："
+    },
+    {
+      "type": "quote",
+      "text": "在這個年代，這有點荒謬，因為依賴那顆原器的不只是質量。",
+      "original": "It’s a bit ridiculous in this day and age, because it’s not just the mass that depends on the prototype.",
+      "cite": "奎恩（Terry Quinn），IEEE Spectrum，2012"
+    },
+    {
+      "type": "p",
+      "text": "力、能量，凡是跟公斤沾上邊的單位，底下都墊著這一顆。2018 年 11 月，約 60 個國家投票，決定改用普朗克常數來定義公斤。普朗克常數是物理學裡的一個基本常數。2019 年 5 月 20 日新定義生效，這個常數的數字改成直接規定，不再去量。"
+    },
+    {
+      "type": "p",
+      "text": "普朗克常數的單位是焦耳·秒，裡頭含著公斤、公尺和秒。公尺和秒早就各有固定的定義，一個靠光速，一個靠銫原子的固定頻率。再把這個常數的數字固定，公斤的值就跟著定下來了。"
+    },
+    {
+      "type": "p",
+      "text": "要真的秤出 1 公斤，其中一種辦法是基布爾秤。它讓通電的線圈在磁場裡產生電磁力，去頂住砝碼的重量。接著讓線圈以已知的速度穿過磁場，量它產生的電壓。電流和電壓都用量子效應做成的電學標準來量，質量就這樣連回普朗克常數。英國國家物理實驗室發展出這種秤，以基布爾命名。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/NIST-4_Kibble_balance.jpg/1280px-NIST-4_Kibble_balance.jpg",
+      "width": 1280,
+      "height": 1780,
+      "alt": "實驗室裡一台直立的大型金屬儀器，上方是圓形的磁鐵與線圈組件，周圍有管線與支架。",
+      "caption": "美國 NIST 的 NIST-4 基布爾秤，2015 年初開始全面運轉。2017 年它量出的普朗克常數，準到十億分之 13，足以協助 2019 年的重新定義。",
+      "credit": "Jennifer Lauren Lee／NIST",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:NIST-4_Kibble_balance.jpg",
+      "made": "2015"
+    },
+    {
+      "type": "h",
+      "text": "正負 10 微克"
+    },
+    {
+      "type": "p",
+      "text": "最讓我意外的是換完之後的事。2019 年 5 月 20 日以前，圓柱的質量就是 1 公斤，誤差是零，因為它就是定義。那天以後，標準換成了普朗克常數，圓柱倒成了被量的東西：國際度量衡局給它的質量是 1 公斤，誤差範圍 **10 微克**。"
+    },
+    {
+      "type": "p",
+      "text": "現在圓柱是被量的那一方，質量有誤差範圍可查。圓柱還在塞夫爾，國際度量衡局留著它，當作這套單位制歷史的一部分。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "International Prototype of the Kilogram (IPK)",
+      "publisher": "國際度量衡局（BIPM）",
+      "date": "",
+      "url": "https://www.bipm.org/en/mass-metrology/ipk",
+      "note": "合金成分、尺寸（約 39 毫米）、1889 年起存放、六個官方副本、2019 年 5 月 20 日停止定義公斤；BIPM 為維護公制單位的國際機構。"
+    },
+    {
+      "title": "kilogram（SI 歷史）",
+      "publisher": "國際度量衡局（BIPM）",
+      "date": "",
+      "url": "https://www.bipm.org/en/history-si/kilogram",
+      "note": "1889 年約 40 個原器分給會員國；第 26 屆 CGPM 決議 1（2018）。"
+    },
+    {
+      "title": "Kilogram Realization",
+      "publisher": "國際度量衡局（BIPM）",
+      "date": "",
+      "url": "https://www.bipm.org/en/physical-metrology-department/kilogram-realization",
+      "note": "普朗克常數定義、基布爾秤、BIPM 保存 IPK 作為 SI 歷史。"
+    },
+    {
+      "title": "CCM detailed note on the dissemination process after the redefinition of the kilogram",
+      "publisher": "國際度量衡局質量諮詢委員會（CCM）",
+      "date": "2019-05-17",
+      "url": "https://www.bipm.org/documents/20126/41489673/CCM_Note-on-dissemination-after-redefinition.pdf/3743d0d0-d8cc-325c-3219-547a6ea47a47",
+      "note": "表 1：2019 年 5 月 20 日以前 IPK 質量定義為 1 kg、誤差 0；之後為 1 kg、誤差 10 微克。"
+    },
+    {
+      "title": "The Kilogram, Reinvented",
+      "publisher": "IEEE Spectrum（Rachel Courtland）",
+      "date": "2012-04-30",
+      "url": "https://spectrum.ieee.org/the-kilogram-reinvented",
+      "note": "\"as much as 50 µg ... relative to its siblings\"：相對副本的「最多」說法，不是量測值；每隔幾十年取出比對；奎恩的話；公斤到 2012 年仍靠實物定義。"
+    },
+    {
+      "title": "Calibration campaign against the international prototype of the kilogram in anticipation of the redefinition of the kilogram part I: comparison of the international prototype with its official copies",
+      "publisher": "Metrologia 52(2)",
+      "date": "2015",
+      "url": "https://iopscience.iop.org/article/10.1088/0026-1394/52/2/310",
+      "note": "只讀到摘要與內文：校正活動 2013 年 12 月開始、2014 年進行；清洗掉 16.8 微克、七顆平均約 15 微克；副本相對 IPK 自 1991 年以來平均 −1 微克，未證實先前趨勢。"
+    },
+    {
+      "title": "The Dissemination of Mass in the United States: Results and Implications of Recent BIPM Calibrations of US National Prototype Kilograms",
+      "publisher": "NIST Journal of Research",
+      "date": "2015",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4487295/",
+      "note": "K20 為美國國家原器、K4 為其核對用標準（check standard）；相對 BIPM 的重新校正，變重約 0.045、0.053 毫克；表面污染每年接近 1 微克；清洗後立刻量的規定。"
+    },
+    {
+      "title": "Kilogram: Introduction",
+      "publisher": "NIST",
+      "date": "",
+      "url": "https://www.nist.gov/si-redefinition/kilogram-introduction",
+      "note": "2018 年 11 月約 60 個國家投票。"
+    },
+    {
+      "title": "SI redefinition brochure（kilogram）",
+      "publisher": "NIST",
+      "date": "2019-09-05",
+      "url": "https://www.nist.gov/system/files/documents/2019/09/05/si_k_trifold_brochure_web.pdf",
+      "note": "2019 年 5 月 20 日起 IPK 賦予 ±0.010 毫克的不確定度。"
+    },
+    {
+      "title": "kilogram (kg)",
+      "publisher": "英國國家物理實驗室（NPL）",
+      "date": "",
+      "url": "https://www.npl.co.uk/resources/the-si-units/kilogram",
+      "note": "普朗克常數的數值與單位；公尺與秒的定義；基布爾秤的原理。"
+    },
+    {
+      "title": "The Improvement of Joule Balance NIM-1 and the Design of New Joule Balance NIM-2",
+      "publisher": "arXiv:1412.6895",
+      "date": "2014",
+      "url": "https://arxiv.org/pdf/1412.6895",
+      "note": "只用於：副本與 IPK 存放條件相同，沒有絕對穩定的參照，實際漂移不可知。"
+    }
+  ]
+}
