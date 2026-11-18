@@ -2215,12 +2215,11 @@ function viewSaved() {
     return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
       <span class="t"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title)}</b>${a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}${a.corrected ? `<span class="corr"><b>更正</b>${esc(a.correction || `${md(a.corrected)} 有更正，見文末`)}</span>` : ""}</span>${th}</a></li>`;
   };
-  const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length, bk = shelf().length + (readingBook() ? 1 : 0), rc = records().length, mdl = medals().length, prl = prints().length, pol = poems().length, mul = museum().length;
+  const n = allMarks().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length, bk = shelf().length + (readingBook() ? 1 : 0), rc = records().length, mdl = medals().length, prl = prints().length, pol = poems().length, mul = museum().length;
   // 收藏 (the owner, 2026-11-06, name kept): the shelves (紀念章 and 唱片櫃 added 2026-11-19, 我的書架 11-18), each with its own picture and a line that says what is inside.
   const DRAWERS = [
     ["#/stamps", "郵票冊", "Briefmarken", st, st ? "張" : "還沒有郵票", `<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z" stroke-dasharray="2 1.6"/><rect x="7.5" y="8.5" width="9" height="7"/></svg>`],
     ["#/marks", "劃線本", "Anstreichungen", n, n ? "處劃線" : "還沒有劃線", `<svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M13 7l3 3"/><path d="M4 20l1-4"/></svg>`],
-    ["#/gallery", "畫廊", "Galerie", g, g ? "幅" : "牆上還沒有畫", `<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16"/><rect x="6" y="7" width="12" height="10"/><path d="M6 15l3-3 3 3 2-2 4 4"/></svg>`],
     ["#/world", "你讀過的世界", "Gelesene Welt", w, w ? "國" : "還沒出發", `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>`],
     ["#/museum", "美術館", "Museum", mul, mul ? "件" : "還沒有作品", `<svg viewBox="0 0 24 24"><path d="M3 9l9-5 9 5"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9"/><path d="M3 20h18"/></svg>`],
     ["#/poems", "詩箋", "Briefe", pol, pol ? "張" : "還沒有詩箋", `<svg viewBox="0 0 24 24"><path d="M5 3h11l3 3v15H5z"/><path d="M8 8h7M8 11h8M8 14h5"/><circle cx="16" cy="17.5" r="2"/></svg>`],
@@ -2461,55 +2460,6 @@ async function viewChronik() {
     <p class="meta-s today">寫到 ${esc(fmtDate(twNow().date, "short"))}，明天再續。</p></div>`;
 }
 
-// ——— 畫廊 (Galerie): the opening pictures of the art, architecture and photo columns — and any other hero that is a
-// work of art — hung newest first as a wall of framed plates (style.css .wall). A tile is a card: its picture morphs into
-// the article's opening picture (boot's click listener takes it for lastTapped), and the way back morphs it home.
-const GALLERY_COLS = new Set(["artwork", "architecture", "art", "photo"]);
-const GALLERY_F = [["all", "全部", "Alle"], ["work", "作品", "Werke"], ["site", "古蹟", "Bauten"], ["other", "其他", "Übriges"]];
-const galleryKind = (c) => (c === "artwork" || c === "art" ? "work" : c === "architecture" ? "site" : "other");
-// Every published article with a picture for the wall; viewSaved counts them for its entrance.
-const galleryItems = () => publishedIssues().flatMap((i) => i.articles.filter((a) => a.hero?.src && (GALLERY_COLS.has(a.column) || a.hero.kind === "artwork")).map((a) => ({ date: i.date, a })));
-function viewGallery() {
-  const all = galleryItems();
-  // Set like a lookbook: every plate numbered, the column and day in spaced small type above the title, the year in
-  // italic; the newest hangs alone across the page as the lead, with its dek. The thumb when there is one, as the cards;
-  // width and height so the wall keeps its shape while the pictures arrive. --i staggers the entrance (style.css).
-  const tile = ({ date, a }, i, lead = false) => {
-    const h = a.hero, size = h.width > 0 && h.height > 0 ? ` width="${Number(h.width)}" height="${Number(h.height)}"` : "";
-    return `<a class="tile${lead ? " lead" : ""}" href="#/a/${date}/${a.column}" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
-      <span class="mat"><img src="${esc(h.thumb || h.src)}" alt="${esc(h.alt || "")}"${size} loading="${lead ? "eager" : "lazy"}" decoding="async" referrerpolicy="no-referrer"></span>
-      <span class="lbl"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span></span><b>${esc(a.title)}</b>${lead && a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}${h.made ? `<i>${esc(String(h.made))}</i>` : ""}</span></a>`;
-  };
-  main.innerHTML = `<div class="wrap gallery"><header class="page-title"><h1>畫廊</h1><span class="de">Galerie</span></header>
-    <p class="col-note">走進一件作品、推開一座古蹟的門，和往期畫作的頭圖，掛成一面牆。點一張，回到那篇文章。</p>
-    <nav class="gtabs" aria-label="分類"></nav><div class="wall"></div></div>`;
-  const draw = (f) => {
-    const rows = f === "all" ? all : all.filter((x) => galleryKind(x.a.column) === f);
-    main.querySelector(".gtabs").innerHTML = GALLERY_F.map(([k, label, de]) => `<button type="button" class="gt" data-f="${k}" aria-pressed="${k === f}">${label}<i>${de}</i></button>`).join("");
-    // The plates are dealt into the columns in turn (not flowed down one column, then the next), so the numbers read
-    // across the wall like a catalogue; two columns, three from 700px.
-    const [first, ...rest] = rows, n = wide.matches ? 3 : 2, cols = Array.from({ length: n }, () => []);
-    rest.forEach((x, i) => cols[i % n].push(tile(x, i + 1)));
-    main.querySelector(".wall").innerHTML = first ? `${tile(first, 0, true)}<div class="cols">${cols.map((c) => `<div class="col">${c.join("")}</div>`).join("")}</div>` : `<p class="empty">${f === "all" ? "牆上還沒有畫。" : "這一類還沒有作品，看看別的分類。"}</p>`;
-  };
-  const wide = matchMedia("(min-width: 700px)");
-  let cur = GALLERY_F.some(([k]) => k === store.get("gallery.f")) ? store.get("gallery.f") : "all";
-  draw(cur);
-  // One listener for the page, taken down as it is left (cleanup): each visit used to leave its own behind, all of
-  // them redrawing the wall at the next turn of the phone.
-  const onWide = () => draw(cur);
-  wide.addEventListener("change", onWide);
-  cleanup = () => wide.removeEventListener("change", onWide);
-  main.querySelector(".gtabs").addEventListener("click", (e) => {
-    const b = e.target.closest("button[data-f]");
-    if (!b) return;
-    cur = b.dataset.f;
-    store.set("gallery.f", cur);
-    draw(b.dataset.f);
-    main.querySelector(`.gtabs [data-f="${b.dataset.f}"]`)?.focus();
-  });
-  document.title = `畫廊｜${S.cfg.title}`;
-}
 
 // ——— 隨手翻 (Zufallsfund): one article out of the back issues, drawn like a card ———
 // The pool is every published article but the day's perishables (football, news) and the 觀測站. An unread article
@@ -2851,7 +2801,7 @@ async function drawRoute(h, art, my) {
   else if ((m = h.match(/^#\/column\/([\w-]+)/))) viewColumn(m[1]);
   else if (h.startsWith("#/archive")) viewArchive();
   else if (h.startsWith("#/stats")) viewStamps(); // the yearbook now lives in the album
-  else if (h.startsWith("#/gallery")) viewGallery();
+  else if (h.startsWith("#/gallery")) location.replace("#/museum"); // 畫廊 was removed (the owner, 2026-11-19); its works hang in 美術館 and 版畫冊
   else if (h.startsWith("#/stamps")) viewStamps();
   else if (h.startsWith("#/stamp/")) viewStamp(h.slice(8).split("?")[0]);
   else if (h.startsWith("#/world")) viewWorld();
