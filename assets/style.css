@@ -1541,6 +1541,7 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .tl-i .st { font-family: var(--latin); font-size: 16px; font-weight: 600; line-height: 1.3; color: var(--gold-ink); white-space: nowrap; }
 .tl-i.wait .st, .tl-i.late .st { font-family: var(--sans); font-size: 12px; font-weight: 500; letter-spacing: .08em; color: var(--muted); }
 .tl-i.late .st { font-weight: 600; color: var(--red); }
+.tl-i.run .st { font-weight: 600; color: var(--gold-ink); } /* 在跑: its hour has come, no report yet */
 .tl-pub { display: flex; align-items: center; gap: 10px; margin: 16px 0 0; padding: 9px 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .tl-pub span { font-family: var(--latin); font-size: 19px; font-weight: 600; }
 .tl-pub b { font-size: 15px; letter-spacing: .5em; color: var(--robin); }

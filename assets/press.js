@@ -113,7 +113,7 @@ function morning(issue, col, now) {
   const { date } = issue;
   const head = `<div class="sec-head"><h2>今晨</h2><span class="de">Heute früh</span><span class="note">${esc(fmtDate(date, "short"))}・週${esc(issue.weekday || "")}・${esc(issueNo(issue.no))}</span></div>`;
   const rows = dayRows(issue, now);
-  const items = rows.map((x) => ({ m: x.m, part: x.part, html: `<li class="tl-i ${x.st}"><span class="dot" aria-hidden="true"></span><b class="t">${x.at}</b><div class="w"><span class="nm">${x.name}</span>${dutyHtml(x)}</div><span class="st">${stWord(x)}</span></li>` }));
+  const items = rows.map((x) => ({ m: x.m, part: x.part, html: `<li class="tl-i ${x.st}${x.word === "在跑" ? " run" : ""}"><span class="dot" aria-hidden="true"></span><b class="t">${x.at}</b><div class="w"><span class="nm">${x.name}</span>${dutyHtml(x)}</div><span class="st">${stWord(x)}</span></li>` }));
   if (date === now.date && now.minutes < OVERDUE) {
     // Where the hairline sits follows the clock: past 07:30 below the 出刊 rule, before midnight (minutes below 0) under 前一晚, after it never.
     const i = items.findIndex((x) => x.m > now.minutes);
