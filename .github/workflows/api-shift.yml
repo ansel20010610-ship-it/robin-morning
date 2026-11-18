@@ -42,7 +42,11 @@ jobs:
       - uses: actions/checkout@v7
       - name: Decide whether to spend
         id: go
-        run: python3 scripts/api_shift.py decide "$SHIFT" | tee -a "$GITHUB_OUTPUT"
+        # pipefail: a decide that crashes (state/api/spend.json unreadable) fails the job. Without it tee's exit 0 left
+        # `go` empty, every later step was skipped and the run was green — all the API shifts stopped without a word.
+        run: |
+          set -o pipefail
+          python3 scripts/api_shift.py decide "$SHIFT" | tee -a "$GITHUB_OUTPUT"
       - uses: actions/setup-node@v4
         if: steps.go.outputs.go == 'yes'
         with:
@@ -51,6 +55,7 @@ jobs:
         if: steps.go.outputs.go == 'yes'
         run: npm install -g @anthropic-ai/claude-code
       - name: Run the shift
+        id: shift
         if: steps.go.outputs.go == 'yes'
         # The result (and its cost) goes to a file outside the checkout: the first column run (2026-11-11) left no cost
         # to read — an untracked out.json in the repo root is one `git clean` away from a shift told to tidy up — and
@@ -66,14 +71,21 @@ jobs:
             --output-format json > "$RUNNER_TEMP/claude-out.json" || true
       - name: Record the cost
         if: always() && steps.go.outputs.go == 'yes'
+        env:
+          # "skipped" when Install Claude Code failed: claude never ran and nothing was spent, so 0 is booked, not the budget
+          RAN: ${{ steps.shift.outcome }}
         run: |
-          python3 scripts/api_shift.py record "$SHIFT" "$RUNNER_TEMP/claude-out.json" "${{ steps.go.outputs.budget }}" | tee -a "$GITHUB_STEP_SUMMARY"
+          set -o pipefail
+          B="${{ steps.go.outputs.budget }}"; [ "$RAN" = skipped ] && B=not-run
+          python3 scripts/api_shift.py record "$SHIFT" "$RUNNER_TEMP/claude-out.json" "$B" | tee -a "$GITHUB_STEP_SUMMARY"
           git add state/api/spend.json
           git commit -m "API 班次花費：$SHIFT" || exit 0
           for i in 1 2 3; do
-            git pull --rebase origin main && git push origin HEAD:main && break
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
             sleep 5
           done
+          echo "::error::$SHIFT 的花費推不上 main（三次都失敗），帳上少這一筆"
+          exit 1
       - name: Deploy what was pushed
         if: always() && steps.go.outputs.go == 'yes'
         run: gh workflow run publish.yml --ref main || echo "::warning::could not start publish.yml"

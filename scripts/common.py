@@ -32,6 +32,10 @@ GROUPS = {
     4: ["news", "football", "fm-watch", "cosmere-watch", "obituary"],  # news last thing at 05:17: the freshest it can be
     5: ["@all"],
 }
+# The night shifts that have to report for an issue (state/runs/<date>.json, report_run.py) — the one place that says
+# so: late.py (a silent one on a Sunday is the quota), api_shift.py (the rescue) and report_run.py read it from here.
+# Stopping a shift is taking its number out; GROUPS keeps its columns (週日補刊 runs plan_day --group 5).
+SHIFTS = ("1", "2", "3", "4", "5")
 
 
 def load_config():

@@ -6,7 +6,7 @@ a run should spend anything, and records what it cost.
   python3 scripts/api_shift.py decide <shift>         prints go=yes|no, budget= and why=; for $GITHUB_OUTPUT
   python3 scripts/api_shift.py record <shift> <out> [budget]
                                                       reads claude -p --output-format json, prints the result and the
-                                                      cost, appends it to state/api/spend.json
+                                                      cost, appends it to state/api/spend.json (budget "not-run": 0)
   python3 scripts/api_shift.py month                  this credit cycle's spend so far
   python3 scripts/api_shift.py column | mend | sweep  what that shift is to write now (its instructions run this)
 
@@ -21,11 +21,14 @@ report — the weekly quota is gone — including Sundays, the owner, 2026-11-10
   sweep (18:30)   月底清倉: on the last SWEEP_DAYS days of the month, what the credits have left goes into serial
                   installments beyond the daily shift's three days — the one thing here that keeps (the credits do not).
 Money: a "month" here is the credit cycle, the 13th to the 13th (see CYCLE_DAY), not the calendar month. Everything
-stops at MONTH_CAP; column, reserve and sweep already at SOFT_CAP, so that the end of a cycle still has room for the
-rescues, concerts and the daily serial (the sweep takes that room too on the cycle's last day). Their instructions are editorial/api-shifts/<shift>.md. The
+stops at MONTH_CAP; column and reserve already at SOFT_CAP, and the sweep too (sweep_room), so that the end of a cycle
+still has room for the rescues, concerts and the daily serial (the sweep takes that room too on the cycle's last day). Their instructions are editorial/api-shifts/<shift>.md. The
 repo is public: nothing secret is ever printed or written here.
 """
 import datetime as dt, json, os, subprocess, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from common import SHIFTS  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SPEND = os.path.join(ROOT, "state", "api", "spend.json")
@@ -45,8 +48,8 @@ FIRST_END = dt.datetime(2026, 12, 13, tzinfo=dt.timezone.utc)
 # see, and until it does a request would eat the owner's purchased balance (3.70 USD on 2026-11-11; auto-reload is off)
 # or fail. The claude.ai routines and shift 1 do that day's work on the plan, as they did before these shifts existed.
 QUIET_HOURS = 24
-SOFT_CAP = 165.0   # column, reserve and sweep stop here: the last 25 of the cap stay for concerts, serial, mend and rescue
-SOFT = ("column", "reserve", "sweep")
+SOFT_CAP = 165.0   # column and reserve stop here, the sweep too until the cycle's last day (sweep_room): the last 25 of the cap stay for concerts, serial, mend and rescue
+SOFT = ("column", "reserve")
 BUDGET = {"serial": 4, "reserve": 10, "concerts": 4, "rescue": 25, "column": 12, "mend": 25, "sweep": 25}  # per run, claude --max-budget-usd
 COLUMNS = ["perio"]     # what the column shift writes each evening (the owner, 2026-11-11: 每天一欄); one word to change
 SWEEP_DAYS = 6          # the sweep runs on the last six days of the credit cycle
@@ -221,7 +224,8 @@ def decide(shift):
     if shift == "rescue":
         day = now().strftime("%Y-%m-%d")
         runs = runs_of(day)
-        got = [g for g in ("1", "2", "3") if g in runs]
+        early = ("1", "2", "3")
+        got = [g for g in early if g in runs]
         if not got:
             return out(True, "shifts 1-3 all silent: the weekly quota looks spent")
         if len(got) == 3:
@@ -229,8 +233,10 @@ def decide(shift):
         # 救援放寬 (the owner, 2026-11-11): a quota that ran out in the middle of the night leaves some of shifts 1-3
         # reported and shifts 4 and 5 dead. Shift 4 alone being silent proves nothing at 06:30 (on a match night it
         # reported at 06:38), so it also has to have pushed nothing since it should have started.
-        if "4" in runs or "5" in runs:
+        if any(g in runs for g in SHIFTS if g not in early):
             return out(False, f"shifts {','.join(got)} and a later one reported: the quota is working")
+        if "rescue" in runs:  # it reports under its own name now, no longer as shift 5, which the line above used to catch
+            return out(False, "the rescue already ran this morning")
         act = activity(day)
         if act is None:
             return out(False, "shift 4 has not reported, but GitHub would not list the commits: leaving it to shift 5 and the reserves")
@@ -303,7 +309,11 @@ def record(shift, path, budget=None):
         r = {}
     usd = float(r.get("total_cost_usd") or 0)
     sub = r.get("subtype") or ("error" if r.get("is_error") else "")
-    if "total_cost_usd" not in r:
+    if "total_cost_usd" not in r and budget == "not-run":
+        # api-shift.yml: the Run step was skipped (Claude Code would not install), so nothing was spent
+        usd, sub = 0.0, "not run"
+        print("這一班沒有開始跑（Run the shift 被跳過）：記 0 USD")
+    elif "total_cost_usd" not in r:
         # a run that died without its JSON (a timeout, a crash) still spent something nobody can read here: count the
         # whole budget it was given, so that the caps err on the side of stopping early (audit 2026-11-11)
         try:

@@ -21,10 +21,8 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import CONTENT, ROOT, article_path, expected_columns, load_config, load_json, parse_date, tw_now  # noqa: E402
+from common import CONTENT, ROOT, SHIFTS, article_path, expected_columns, load_config, load_json, parse_date, tw_now  # noqa: E402
 import validate  # noqa: E402
-
-SHIFTS = ("1", "2", "3", "4", "5")
 
 
 def issue_missing(cfg, d):
@@ -83,7 +81,7 @@ def main():
     # the night shifts report for the coming issue; anything else (reserve, audit, 週日補刊, 演出班, 連載班) runs in the
     # afternoon or before the issue and is filed under the calendar day it ran
     d = tw_now().date() if a.group not in SHIFTS and not a.date else parse_date(a.date)
-    note = a.note
+    note, extra = a.note, ""
     if a.group == "concerts":
         missing = concerts_missing(d)
     elif a.group == "serial":
@@ -97,8 +95,20 @@ def main():
     try:
         with open(path, encoding="utf-8") as f:
             runs = json.load(f)
-    except (OSError, ValueError):
+        if not isinstance(runs, dict):
+            raise ValueError("頂層不是 JSON 物件")
+    except FileNotFoundError:
         runs = {}
+    except (OSError, ValueError) as e:
+        # a damaged file stays as it is: {this shift alone} written over it made every other shift of the day look silent
+        sys.exit("state/runs/%s.json 讀不進來（%s: %s）：這次沒有寫入，原檔留著。先修好它（git log -p -- state/runs/%s.json "
+                 "找上一個好的版本）再回報。" % (d, type(e).__name__, e, d))
+    old = runs.get(str(a.group))
+    if extra and isinstance(old, dict) and str(old.get("note", "")).endswith(extra):
+        # the day's later 連載班 (the claude.ai backup after the API run) translated nothing: serial.py's count is what the
+        # earlier record ends with. Written again, 「本班未譯新回」 replaced 「譯完第 10 回」 (2026-11-11).
+        print("連載班 %s 已回報，之後沒有新譯的回目：保留那一筆，這次不寫，也不必 commit。" % str(old.get("finished_at", ""))[11:16])
+        return
     runs[str(a.group)] = {"finished_at": tw_now().isoformat(timespec="seconds"), "missing": missing, "note": note}
     with open(path, "w", encoding="utf-8") as f:
         json.dump(runs, f, ensure_ascii=False, indent=2, sort_keys=True)

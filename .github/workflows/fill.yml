@@ -72,6 +72,8 @@ jobs:
               R=0; fill || R=$?
             fi
           fi
+          # anything else is the script itself failing (a broken config.json): a red step, not 「備稿不足」 under a green one
+          case "$R" in 0|2|3) ;; *) echo "::error::$D 補位腳本以結束碼 $R 結束（當掉了，不是備稿不足）"; exit 1 ;; esac
           if [ "$R" = 3 ]; then echo "msg=$D：週日額度不足，不用備稿，15:00 後週日補刊" >> "$GITHUB_OUTPUT"
           else
             echo "msg=$D：以備稿補上缺稿" >> "$GITHUB_OUTPUT"
@@ -114,7 +116,10 @@ jobs:
         if: steps.push.outputs.pushed == 'yes'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh workflow run publish.yml --ref main
+        # three tries: one failed dispatch left the filled columns on main until 08:00 (the 07:30 relay slot does not deploy)
+        run: |
+          for i in 1 2 3; do gh workflow run publish.yml --ref main && exit 0; sleep 10; done
+          exit 1
       - name: Tell the reader the paper is whole
         # A fill that lands after the 07:30 notice went out (which then said 「今天少一欄…補上了會再叫你」) and before the
         # morning is over: start notify.yml mode=filled, whose push.py issue --now --after-fill waits for this fill's

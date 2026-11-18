@@ -5,7 +5,8 @@ by the 週日補刊 routine (社長's rule, 2026-10-31). content/late.json recor
 and the late issue gets its own notification.
 
   python3 scripts/late.py status [--date D]   prints 需要補刊 / 不需補刊 (the 週日補刊 routine starts here), the missing
-                                              columns and the stations nobody has checked
+                                              columns and the stations nobody has checked; 只差查核 (exit code 4) when
+                                              the issue is whole and only those are left
   python3 scripts/late.py start  [--date D]   state → regenerating (the app shows 補刊中)
   python3 scripts/late.py done   [--date D]   state → done (notify.yml then sends the late issue's notification);
                                               refused while a column is missing or a station is unchecked
@@ -33,8 +34,8 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (CONTENT, ROOT, article_path, expected_columns, load_config, tw_now, watch_checked,  # noqa: E402
-                    watch_columns)
+from common import (CONTENT, ROOT, SHIFTS, article_path, expected_columns, load_config, tw_now,  # noqa: E402
+                    watch_checked, watch_columns)
 
 FILE = os.path.join(CONTENT, "late.json")
 RESET_HOUR = 15  # Taiwan time on Sunday
@@ -120,8 +121,8 @@ def silent_shifts(d):
     """Shifts with no report for the day. Shift 5 runs the reserve fill itself before it reports, so only the
     GitHub Actions fallback (fill.yml, after shift 5 should be done) counts it."""
     runs = runs_of(d)
-    shifts = "12345" if os.environ.get("GITHUB_ACTIONS") == "true" else "1234"
-    return [g for g in shifts if g not in runs]
+    own = () if os.environ.get("GITHUB_ACTIONS") == "true" else ("5",)
+    return [g for g in SHIFTS if g not in runs and g not in own]
 
 
 def hold(cfg, d, now=None):
@@ -172,14 +173,20 @@ def main():
     if a.cmd == "status":
         missing = unfinished(cfg, d)
         todo = unchecked(cfg, d)
+        code = 0
         if entry.get("state") in OPEN or (d.weekday() == 6 and missing and entry.get("state") not in ("done", "unfinished")):
             print("需要補刊：%s（狀態 %s）缺 %s" % (d, entry.get("state", "未標記"), "、".join(missing) or "無（只差 late.py done）"))
+        elif todo and not missing and entry.get("state") not in ("done", "unfinished"):
+            # every column is there (the API rescue wrote them) but what the silenced shifts were to check has no
+            # record. Not a 補刊: start/done would seal a paper that came out in the morning and announce it again.
+            print("只差查核：%s 全刊齊備，但下面幾項沒有查核紀錄。不要跑 late.py start／done，只補查這幾項、寫進紀錄後回報" % d)
+            code = 4
         else:
             print("不需補刊：%s（%s）" % (d, {"done": "已補刊完成", "unfinished": "補刊已放棄，缺 %s" % labels(entry.get("left") or [])}.get(
                 entry.get("state"), "全刊齊備" if not missing else "不是週日")))
         if todo:
             print("還沒查核：%s" % labels(todo))
-        return 0
+        return code
     if a.cmd == "start":
         entry.setdefault("missing", unfinished(cfg, d))
         entry.update(state="regenerating", started_at=now.strftime("%H:%M"))

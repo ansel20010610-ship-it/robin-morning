@@ -7,6 +7,6 @@
 3. 依主欄→副刊順序，用 Agent 工具平行補寫缺的欄位（派子代理一律依模型分工表帶 model 與 effort）；每篇另派新的子代理審稿、修正事實，再做第 9 步（審稿判定「重寫」才總編重寫，否則只依事實意見修正；忠實度核對必做）。派稿前跑 `python3 scripts/forms.py` 照 STYLE.md 〇之四指定文體與聲腔。觀測站、訃聞、近期演出這些可以靜默的，這一班不做。**每一篇開工前、推送前都先 `git pull --rebase origin main` 再跑一次 plan_day**，別的班已經寫好的就不要寫、不要蓋掉。每完成一篇就 `python3 scripts/validate.py <日期> --column <欄位>` 沒有 ERROR 後 commit「<日期> <欄位>：停刊保險補寫」，`git pull --rebase origin main && git push origin HEAD:main`。
    牙周、古典、經典整篇照手冊「牙周、古典、經典：精簡流程」一節，不照本步與上一步的派稿、審稿與第 9 步（form、voice 只交給備料；回報 note 加「精簡：<欄>」）。
 4. **07:08 一定停手**，推送已完成的稿件；來不及的欄位留給 07:12 的備稿補位。
-5. 最後一定做班次回報：`python3 scripts/report_run.py --group 5 --note "停刊保險（API）：補了 <欄位>；沒回報的班次：<班號>"`，commit「<日期> 停刊保險回報」並推送。
+5. 最後一定做班次回報：`python3 scripts/report_run.py --group rescue --note "停刊保險（API）：補了 <欄位>；沒回報的班次：<班號>"`，commit「<日期> 停刊保險回報」並推送。
 6. 只能新增或修改 content/issues/、state/ 底下的檔案。直接推到 main，不開分支、不開 PR。任何請求都不可帶入社長的個人資料。
 7. 結束時三行回報：補了哪些、仍缺哪些與原因、遇到的問題。
