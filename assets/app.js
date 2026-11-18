@@ -16,6 +16,7 @@ import { feastOf } from "./feasts.js";
 import { worldState, drawGlobe } from "./world.js";
 import { nestBox, renderNest, renderNestSettings, renderNestAlbum, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
 import { codaHtml, codaVoices, playCoda } from "./jupiter.js";
+import { shelf, shelved, shelve, markShown, shelfHtml, bookHtml, openBook } from "./shelf.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -358,10 +359,18 @@ async function lastTime(n, slot) {
   if (text.length > 170) { const tail = text.slice(-168); const cut = tail.search(/[。！？」』]/); text = `……${cut >= 0 && cut < 80 ? tail.slice(cut + 1).replace(/^[\s，、；：。！？」』）]+/, "") : tail}`; } // no stray 「；」 or 「。」 after a closing quote
   slot.innerHTML = `<aside class="vorher"><span class="lbl">上回說到</span>${text.split("\n").map((l) => `<p>${esc(l)}</p>`).join("")}<a href="#/a/${prev.date}/${prev.column}">回到第 ${n} 回 →</a></aside>`;
 }
+// The serial's installments in every published issue, oldest first, and how many of them are read.
+const serialParts = () => publishedIssues().flatMap((i) => i.articles.filter((a) => col(a.column, i.date).group === "serial").map((a) => ({ date: i.date, a }))).sort((x, y) => x.date.localeCompare(y.date));
+// The book read to its last installment goes on the shelf (shelf.js), that day; the day never moves afterwards.
+function shelveIfRead() {
+  const b = S.book, parts = serialParts(), read = readSet(), of = Number(b?.of) || parts.at(-1)?.a.serial?.of || 0;
+  if (!b?.slug || !of || parts.filter((p) => read.has(`${p.date}/${p.a.column}`)).length < of) return shelved(b?.slug || "");
+  return shelve(b, twNow().date);
+}
 async function viewSerial(my) {
   if (S.book === undefined) { main.innerHTML = `<div class="wrap"><p class="empty">翻書中……</p></div>`; await loadBook(); if (my !== undefined && my !== routeSeq) return; }
   const b = S.book || {}, read = readSet();
-  const parts = publishedIssues().flatMap((i) => i.articles.filter((a) => col(a.column, i.date).group === "serial").map((a) => ({ date: i.date, a }))).sort((x, y) => x.date.localeCompare(y.date));
+  const parts = serialParts();
   const got = parts.filter((p) => read.has(`${p.date}/${p.a.column}`)).length, of = Number(b.of) || parts.at(-1)?.a.serial?.of || 0;
   const next = parts.find((p) => !read.has(`${p.date}/${p.a.column}`));
   const pct = (n) => (of ? Math.min(100, Math.round((n / of) * 100)) : 0);
@@ -379,13 +388,8 @@ async function viewSerial(my) {
     if (groups.length < 2) return `<ol class="svl">${parts.map(row).join("")}</ol>`;
     return groups.map((g, i) => `<details class="band"${i === groups.length - 1 ? " open" : ""}><summary>${esc(g.name || "—")}<span class="n">${g.items.length} 回</span></summary><ol class="svl">${g.items.map(row).join("")}</ol></details>`).join("");
   };
-  // 藏書票 (the owner, 2026-11-06): pasted into the book the day the last installment is read; the day is kept so it
-  // never moves afterwards.
-  const exlibris = () => {
-    const done = store.get("serial.finished", {}) || {}, slug = b.slug || "book";
-    if (!done[slug]) { done[slug] = twNow().date; store.set("serial.finished", done); }
-    return `<div class="exlibris" role="img" aria-label="藏書票：${esc(fmtDate(done[slug]))}讀畢"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg><span class="ex">Ex Libris</span><span class="who">知更鳥晨間記事</span><span class="d">${esc(fmtDate(done[slug]))}讀畢</span></div>`;
-  };
+  // The bookplate of 2026-11-06 is now pasted inside the bound book on 收藏's 我的書架 (shelf.js); this page stays as it was.
+  shelveIfRead();
   // 今天的一回 (finding 36): due (serialDueOn) and past 07:30 but not in any published issue — say so, not 都讀完了;
   // past the book's last day (serialOver) — say the book is done and the next one not yet chosen.
   const today = twNow().date, hasToday = parts.some((p) => p.date === today), dueN = isPublished(today) ? serialDueOn(today) : null;
@@ -402,7 +406,6 @@ async function viewSerial(my) {
       ${frontispiece(b)}
       <div class="prog" role="img" aria-label="已刊 ${parts.length} 回，讀了 ${got} 回，共 ${of} 回"><i class="pub" style="width:${pct(parts.length)}%"></i><i class="done" style="width:${pct(got)}%"></i></div>
       <p class="nums"><span><b>${got}</b>讀了</span><span><b>${parts.length}</b>已刊</span><span><b>${of || "—"}</b>全書</span></p>
-      ${of && got >= of ? exlibris() : ""}
     </section>
     ${next ? `<div class="sec-head"><h2>接著讀</h2><span class="de">Weiterlesen</span><span class="note">第 ${esc(String(next.a.serial?.n ?? ""))} 回</span></div>${serialCard(next.date, next.a, read, { plate: false, recap: false })}` // 本回 as on the front page, not the recap (the owner, 2026-11-12)
       : parts.length ? `<p class="empty">${restNote}</p>` : `<p class="empty">${b.start ? `${esc(fmtDate(b.start, "short"))}開始，每天早上一回。` : "還沒開始。"}</p>`}
@@ -410,6 +413,29 @@ async function viewSerial(my) {
     ${parts.length ? `<div class="sec-head"><h2>回目</h2><span class="de">Folgen</span><span class="note">${parts.length} 回</span></div>${bands(row)}` : ""}
   </div>`;
   document.title = `連載｜${S.cfg.title}`;
+}
+
+// 我的書架 (#/shelf, one of 收藏's corners; the owner, 2026-11-18): the finished books, the newest facing out.
+function viewShelf() {
+  const books = shelf();
+  const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/saved" aria-label="返回">${ICON.back}</a><div class="title">我的書架</div></div></div>`;
+  main.innerHTML = `${top}<div class="wrap book-page">${books.length ? shelfHtml(books) : `<p class="empty">讀完一整本連載，它就會變成一本精裝書，收在這裡。</p>`}</div>`;
+  wireBack();
+  document.title = `我的書架｜${S.cfg.title}`;
+}
+// A book on the shelf, opened (#/shelf/<slug>): the bookplate on the endpaper under the cover. The first opening is
+// the ceremony (shelf.js openBook); a detail page with the back arrow to the shelf.
+async function viewShelfBook(slug, my) {
+  if (S.book === undefined) { main.innerHTML = `<div class="wrap"><p class="empty">翻書中……</p></div>`; await loadBook(); if (my !== undefined && my !== routeSeq) return; }
+  if (S.book?.slug === slug) shelveIfRead();
+  const list = shelf(), i = list.findIndex((e) => e.slug === slug), e = list[i];
+  const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/shelf" aria-label="返回">${ICON.back}</a><div class="title">我的書架</div></div></div>`;
+  if (!e) { main.innerHTML = `${top}<div class="wrap"><p class="empty">這本書還沒讀完，讀完最後一回，它就會收上書架。<a href="#/serial">回到連載</a></p></div>`; wireBack(); return; }
+  main.innerHTML = `${top}<div class="wrap book-page">${bookHtml(e, i + 1)}</div>`;
+  wireBack();
+  openBook(main.querySelector(".opened"), !e.shown);
+  if (!e.shown) { markShown(slug); setTimeout(() => toast(`《${e.title}》收上書架了`), 3000); }
+  document.title = `《${e.title}》｜${S.cfg.title}`;
 }
 
 function itemCard(date, a, read) {
@@ -1437,6 +1463,8 @@ async function viewArticle(date, column, my) {
       const of = Number(a.serial.of) || Number(S.book?.of) || 0;
       // The next one due today comes this morning before 07:30, and is late after it — not 明天早上 (audit 2026-11-09).
       const today = twNow().date, due = serialDueOn(today) === n + 1;
+      const fin = of && n >= of ? shelveIfRead() : null; // the last installment just read: the book goes on the shelf
+      if (fin) { box.innerHTML = `<div class="lbl"><span>全書完</span>${pv ? `<a class="prev" href="#/a/${pv.date}/${pv.a.column}">‹ 上一回</a>` : ""}</div><p class="serial-tail">《${esc(fin.title)}》讀完了，收上了書架。<a href="#/shelf/${esc(fin.slug)}">翻開這本書 →</a></p>`; return; }
       const tail = of && n >= of ? "全書完。" : serialOver(today) ? "全書完，下一本待定。" : due && isPublished(today) ? `第 ${n + 1} 回今天還沒送到，送到了會出現在連載。`
         : `第 ${n + 1} 回${due ? "今天" : "明天"}早上 ${esc(S.cfg.publish_time)} 刊出。`;
       box.innerHTML = `<div class="lbl"><span>${nx ? `下一回・第 ${nx.a.serial.n} 回` : "下一回"}</span>${pv ? `<a class="prev" href="#/a/${pv.date}/${pv.a.column}">‹ 上一回</a>` : ""}</div>`
@@ -2051,13 +2079,14 @@ function viewSaved() {
     return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
       <span class="t"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title)}</b>${a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}${a.corrected ? `<span class="corr"><b>更正</b>${esc(a.correction || `${md(a.corrected)} 有更正，見文末`)}</span>` : ""}</span>${th}</a></li>`;
   };
-  const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length;
-  // 收藏 (the owner, 2026-11-06, name kept): four shelves, each with its own picture and a line that says what is inside.
+  const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length, bk = shelf().length;
+  // 收藏 (the owner, 2026-11-06, name kept): the shelves (我的書架 the fifth, 2026-11-18), each with its own picture and a line that says what is inside.
   const DRAWERS = [
     ["#/stamps", "郵票冊", "Briefmarken", st, st ? "張" : "還沒有郵票", `<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z" stroke-dasharray="2 1.6"/><rect x="7.5" y="8.5" width="9" height="7"/></svg>`],
     ["#/marks", "劃線本", "Anstreichungen", n, n ? "處劃線" : "還沒有劃線", `<svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M13 7l3 3"/><path d="M4 20l1-4"/></svg>`],
     ["#/gallery", "畫廊", "Galerie", g, g ? "幅" : "牆上還沒有畫", `<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16"/><rect x="6" y="7" width="12" height="10"/><path d="M6 15l3-3 3 3 2-2 4 4"/></svg>`],
     ["#/world", "你讀過的世界", "Gelesene Welt", w, w ? "國" : "還沒出發", `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>`],
+    ["#/shelf", "我的書架", "Bücherregal", bk, bk ? "冊" : "還沒有讀完的書", `<svg viewBox="0 0 24 24"><path d="M5 4h3v16H5zM9 4h3v16H9z"/><path d="M13.5 5.2l2.9-.8 4 15.4-2.9.8z"/><path d="M3 20h18"/></svg>`],
   ];
   // 後院 (nest.js nestBox): on a 特供版 phone the robin's plate heads the page; what the others fed since last time
   // arrives with a sync and the plate is drawn again, and looking here is what takes the mark off the tab (nestSeen).
@@ -2589,7 +2618,7 @@ let landKey = null, landTop = null; // 接著上次: the article tapped on the f
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/serial") || h.startsWith("#/column/serial") ? "#/serial" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/chronik") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/nest") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/archive" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/serial") || h.startsWith("#/column/serial") ? "#/serial" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/chronik") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/nest") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/shelf") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/archive" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let enteredFront = false; // this draw of the front page came from another page (route), not from a redraw in place
 let cameFrom = ""; // the hash the reader left for this one
@@ -2692,6 +2721,8 @@ async function drawRoute(h, art, my) {
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/marks")) viewMarks();
+  else if ((m = h.match(/^#\/shelf\/([\w-]+)/))) await viewShelfBook(m[1], my);
+  else if (h.startsWith("#/shelf")) viewShelf();
   else if (h.startsWith("#/serial")) await viewSerial(my);
   else if (h.startsWith("#/music")) viewMusic(); // the old tab's address still opens the column
   else if (h.startsWith("#/settings")) viewSettings();
