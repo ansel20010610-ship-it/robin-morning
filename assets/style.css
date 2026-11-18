@@ -2835,3 +2835,34 @@ html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
 .pr-tissue { position: absolute; left: 0; right: 0; top: 0; height: 58%; pointer-events: none; background: linear-gradient(160deg, rgba(255, 255, 255, .45), rgba(250, 246, 236, .22)); clip-path: polygon(0 0, 100% 0, 100% 26%, 0 100%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6); }
 .pr-nav { position: relative; z-index: 6; display: flex; align-items: center; justify-content: center; gap: 22px; margin: 18px 0 24px; }
 .pr-count { font: 600 13px/1 var(--sc-caps); letter-spacing: .3em; padding-left: .3em; }
+
+/* ——— 詩箋 (poems.js; the owner's pick 2026-11-19, set in the letterpress types only here) ——— gold-flecked laid
+   paper with a robin watermark on the open writing box; the poem pressed into it with a little ink spread. */
+.poems-scene { display: flex; flex-direction: column; --po-cn: "Shippori Mincho B1", "Noto Serif TC", serif; --po-lat: "Old Standard TT", Georgia, serif; }
+.po-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.po-desk { position: relative; z-index: 2; display: flex; flex-direction: column; margin-top: 66px; }
+.po-top { position: relative; z-index: 3; margin: 0 18px; transform: rotate(-1.6deg); touch-action: pan-y; }
+@media (prefers-reduced-motion: no-preference) {
+  .po-top.turn-l { animation: po-in-l .5s cubic-bezier(.2, .8, .2, 1); } .po-top.turn-r { animation: po-in-r .5s cubic-bezier(.2, .8, .2, 1); }
+  @keyframes po-in-l { from { opacity: 0; transform: translateX(46px) rotate(2deg); } to { opacity: 1; transform: rotate(-1.6deg); } }
+  @keyframes po-in-r { from { opacity: 0; transform: translateX(-46px) rotate(-4deg); } to { opacity: 1; transform: rotate(-1.6deg); } }
+}
+.po-sheet { position: relative; overflow: hidden; padding: 34px 26px 30px; text-align: center; color: #2b2218;
+  background: radial-gradient(120% 90% at 30% 15%, #fdf9ef, #f3ead6 60%, #e8dcc0); box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 16px 28px -10px rgba(0, 0, 0, .7); }
+.po-sheet::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; background: repeating-linear-gradient(0deg, rgba(150, 125, 80, .1) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(150, 125, 80, .08) 0 1px, transparent 1px 26px); }
+.po-flecks i { position: absolute; border-radius: 1px; background: linear-gradient(135deg, #fff3c4, #c99a3c 50%, #8a6220); opacity: .85; }
+.po-wm { position: absolute; left: 50%; top: 38%; width: 46%; transform: translateX(-50%); fill: #5a4630; opacity: .07; pointer-events: none; }
+.po-orig, .po-title, .po-text, .po-de, .po-poet { position: relative; filter: url(#po-press); }
+.po-orig { display: block; font: 700 10.5px/1.3 var(--po-lat); letter-spacing: .3em; padding-left: .3em; text-transform: uppercase; color: #8a6a36; }
+.po-title { display: block; margin-top: 8px; font: 700 18px/1.4 var(--po-cn); letter-spacing: .3em; padding-left: .3em; color: #2b2218; }
+.po-rule { position: relative; display: block; width: 60px; height: 1px; margin: 14px auto 16px; background: linear-gradient(90deg, transparent, #b98a33, transparent); }
+.po-text { margin: 0; white-space: pre-line; font: 400 15px/1.95 var(--po-cn); letter-spacing: .12em; }
+.po-text.po-wait { color: rgba(43, 34, 24, .4); }
+.po-de { margin: 18px 0 0; white-space: pre-line; font: italic 400 13.5px/1.6 var(--po-lat); color: #5a4630; }
+.po-poet { display: block; margin-top: 20px; text-align: right; font: italic 400 14px/1 var(--po-lat); color: #6e5a3a; text-decoration: none; }
+.po-box { position: relative; z-index: 1; margin: -40px -30px 0; padding: 58px 40px 22px; background: linear-gradient(rgba(255, 225, 190, .14), rgba(0, 0, 0, .45)), url(shelf/cherry_v.jpg) 0 0 / 380px auto, #4a2e1c; box-shadow: 0 -10px 30px rgba(0, 0, 0, .6); }
+.po-well { position: absolute; left: 40px; right: 40px; top: 14px; height: 70px; background: #140b06; box-shadow: inset 0 10px 20px rgba(0, 0, 0, .9); }
+.po-env { position: absolute; left: calc(56px + var(--k) * 4px); right: calc(56px - var(--k) * 4px); top: calc(18px + var(--k) * 9px); height: 54px; background: linear-gradient(#efe4cc, #d9caa8); box-shadow: 0 -2px 5px rgba(0, 0, 0, .45); filter: brightness(calc(.55 + var(--k) * .08)); }
+.po-sb { position: relative; display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 46px; }
+.po-plate { position: relative; display: flex; align-items: center; justify-content: center; height: 34px; padding: 0 26px; }
+.po-plate .sc-cut { font: 700 11px/1 var(--po-lat); letter-spacing: .3em; padding-left: .3em; text-transform: uppercase; }
