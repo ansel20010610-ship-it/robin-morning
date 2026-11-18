@@ -31,6 +31,11 @@
     "missing": [],
     "note": "第4班：fm-watch 刊出（Touch 27.1.0，重寫1／核對修正）；cosmere 靜默；obituary 刊出 Zschoche（重寫1／核對修正）；news 刊出（修正1，無重寫）；football 無新消息未動（昨晚無賽）。第9步：重寫2／修正1。news 網域：可用 aljazeera、france24、cna.com.tw、focustaiwan.tw、news.pts.org.tw；rti、un.org 搜尋不報錯未開內文；dw.com、nhk.or.jp 放進 allowed_domains 回400；cwa、cdc 未測。"
   },
+  "5": {
+    "finished_at": "2026-11-19T06:27:57+08:00",
+    "missing": [],
+    "note": "全刊已齊，無缺稿；fm-watch 已刊出、cosmere-watch 靜默、obituary 已刊出（第 4 班皆已查核）；無需補位；巴薩晨報已完成未動"
+  },
   "column": {
     "finished_at": "2026-11-18T22:50:14+08:00",
     "missing": [
