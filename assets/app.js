@@ -2238,15 +2238,19 @@ function viewNest(which = "") {
 // fortnight's roster, all out of the index the app holds (its press, late and stock), so it reads the same offline.
 let shownPress = ""; // the press room as last drawn, so a tick that changes nothing leaves the page alone
 function viewPress(tick = false) {
-  // The press room turns over at midnight (the owner, 2026-11-06: 印務室每天凌晨 12 點重置): 今晨 is the issue of today's
-  // date — in the index once the first shift has pushed (unpublished until 07:30, so not in publishedIssues), before that
-  // an empty record with every shift still to report — never yesterday's paper. A Sunday held for the afternoon with not
-  // one article yet has no issue in the index: its late note comes from late.json, so the 補 row shows (audit c22).
-  const today = twNow().date, pubs = publishedIssues(), late = lateOf(today);
+  // The press room turns over at 22:30, when 先發班 starts on the next issue (the owner, 2026-11-06 at midnight; moved to
+  // 22:30 by the owner on 2026-11-18): 今晨 is the issue of today's date, from 22:30 on tomorrow's — in the index once the
+  // first shift has pushed (unpublished until 07:30, so not in publishedIssues), before that an empty record with every
+  // shift still to report — never yesterday's paper. From 22:30 the page's clock is that issue's (minutes before its
+  // midnight negative), so its night reads as not yet due. A Sunday held for the afternoon with not one article yet has
+  // no issue in the index: its late note comes from late.json, so the 補 row shows (audit c22).
+  const t = twNow(), eve = t.minutes >= 22 * 60 + 30;
+  const now = eve ? { ...t, date: new Date(Date.parse(`${t.date}T00:00:00Z`) + 86400000).toISOString().slice(0, 10), minutes: t.minutes - 24 * 60 } : t;
+  const today = now.date, pubs = publishedIssues(), late = lateOf(today);
   const mine = (S.index.issues || []).find((i) => i.date === today)
     || { date: today, no: (Number(pubs[0]?.no) || 0) + 1, weekday: "日一二三四五六"[new Date(`${today}T00:00:00Z`).getUTCDay()], articles: [], press: late ? { missing: late.missing } : null, late: late || undefined };
   const issues = [mine, ...pubs.filter((i) => i.date !== today)];
-  const html = `<div class="wrap press">${pressHtml(S.cfg, { ...S.index, issues }, col)}</div>`;
+  const html = `<div class="wrap press">${pressHtml(S.cfg, { ...S.index, issues }, col, now)}</div>`;
   if (tick && html === shownPress) return;
   // A shift's note the owner opened stays open through the minute's redraw (press.js dutyHtml: data-k).
   const open = tick ? [...main.querySelectorAll(".press details.nt[open]")].map((d) => d.dataset.k) : [];

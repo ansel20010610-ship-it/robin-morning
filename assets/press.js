@@ -32,7 +32,7 @@ const GROUP_RANK = { main: 0, verse: 1, supplement: 2 };
 // report_run.py marks a column that failed validation "perio（驗證失敗）": the column's name, then the mark kept.
 const names = (cols, date, col) => (Array.isArray(cols) ? cols : []).map((c) => { const [, k, why = ""] = /^(.*?)(（[^）]*）)?$/s.exec(c); return esc(col(k, date).name + why); });
 const mins = (hm) => { const [h, m] = hm.split(":").map(Number); return h * 60 + m; };
-const hhmm = (m) => `${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`;
+const hhmm = (m) => (m < 0 ? hhmm(m + 24 * 60) : `${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`);
 
 // generated_at (an ISO stamp, UTC) as Taiwan HH:MM, with M/D in front when it is not today's; "" when unreadable.
 export function twStamp(iso, now = twNow()) {
@@ -100,7 +100,7 @@ function verdict(issue, rows, col, now) {
   return `<div class="verdict${warn ? " warn" : ""}"><p class="big">${big}</p>${sub.length ? `<p class="sub">${sub.join("<br>")}</p>` : ""}</div>`;
 }
 
-// 今晨: the first issue handed in (app.js viewPress: the one of today's date, from midnight on, whether it exists yet or
+// 今晨: the first issue handed in (app.js viewPress: the one of today's date, from 22:30 the evening before on, whether it exists yet or
 // not). The sentence on top, then the day in its parts — 前一晚, 凌晨, 天亮前, the 07:30 出刊 rule, 白天 — each shift a
 // diamond on the line as the paper's own timelines draw them: filled once it reported, hollow while it is not yet due,
 // red once it is overdue (the state itself is the word on the right). 此刻 (the owner, 2026-11-06): on tonight's timetable a hairline where the clock stands, gone
@@ -112,10 +112,10 @@ function morning(issue, col, now) {
   const rows = dayRows(issue, now);
   const items = rows.map((x) => ({ m: x.m, part: x.part, html: `<li class="tl-i ${x.st}"><span class="dot" aria-hidden="true"></span><b class="t">${x.at}</b><div class="w"><span class="nm">${x.name}</span>${dutyHtml(x)}</div><span class="st">${stWord(x)}</span></li>` }));
   if (date === now.date && now.minutes < OVERDUE) {
-    // Where the hairline sits follows the clock: past 07:30 below the 出刊 rule, after midnight never under 前一晚.
+    // Where the hairline sits follows the clock: past 07:30 below the 出刊 rule, before midnight (minutes below 0) under 前一晚, after it never.
     const i = items.findIndex((x) => x.m > now.minutes);
     const at = i < 0 ? items.length : i, prev = items[at - 1]?.part, next = items[at]?.part;
-    items.splice(at, 0, { m: now.minutes, part: now.minutes >= 7 * 60 + 30 ? "day" : !prev || prev === "eve" ? next || prev : prev, html: `<li class="tl-now" role="img" aria-label="此刻 ${hhmm(now.minutes)}"><span>此刻 ${hhmm(now.minutes)}</span></li>` });
+    items.splice(at, 0, { m: now.minutes, part: now.minutes < 0 ? "eve" : now.minutes >= 7 * 60 + 30 ? "day" : !prev || prev === "eve" ? next || prev : prev, html: `<li class="tl-now" role="img" aria-label="此刻 ${hhmm(now.minutes)}"><span>此刻 ${hhmm(now.minutes)}</span></li>` });
   }
   const pub = `<div class="tl-pub"><span>07:30</span><b>出刊</b></div>`;
   let html = "", part = "";
@@ -187,7 +187,7 @@ function audit(issues, col) {
 
 export function pressHtml(cfg, index, col, now = twNow()) {
   const issues = Array.isArray(index?.issues) ? index.issues : [];
-  const stamp = twStamp(index?.generated_at, now);
+  const stamp = twStamp(index?.generated_at); // the wall clock's day, not the issue's
   return `<header class="page-title"><h1>印務室</h1><span class="de">Druckerei</span></header>
     <p class="col-note">今天這一期怎麼做出來：哪一班幾點交稿、有沒有缺稿、備稿還剩多少、每週稽核改了哪幾篇。資料隨每次推送更新${stamp ? `，上次更新 ${stamp}` : ""}。</p>
     ${morning(issues[0], col, now)}${stockHtml(cfg, index?.stock, col)}${fortnight(issues, now)}${audit(issues, col)}`;
