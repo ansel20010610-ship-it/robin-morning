@@ -2788,3 +2788,5 @@ html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
 .sc-brass::before { left: 7px; } .sc-brass::after { right: 7px; }
 .sc-cut { display: block; color: #4a3008; text-shadow: 0 1px 0 rgba(255, 240, 200, .55), 0 -1px 0 rgba(60, 35, 5, .45); }
 .sc-empty { position: absolute; left: 0; right: 0; top: 38%; z-index: 6; margin: 0; padding: 0 36px; text-align: center; font: 500 13px/1.9 var(--serif); letter-spacing: .12em; color: rgba(233, 205, 150, .72); }
+/* the lid's robin in gold leaf: the masthead's drawing, breast and wing picked out */
+.md-bird .e-ink { fill: #9a6e26; } .md-bird .e-robin { fill: #e3c06c; } .md-bird .e-gold { fill: #7a5418; } .md-bird .e-paper { fill: #f6eedb; } .md-bird .e-wing { fill: none; stroke: #f3d78e; } .md-bird .e-legs { fill: none; stroke: #9a6e26; }

@@ -5,6 +5,7 @@
 // it is over (or on its last day, read through). Velvet and walnut are photographs (assets/shelf/, Poly Haven, CC0).
 // Since the owner's 「對，照這樣改」 (2026-11-19) the page is one scene: each year's case lies open on the desk — the lid's
 // ivory silk with the gilt robin in its ring, Medaillen and the year, a brass hinge, the velvet tray below.
+import { ROBIN_PATHS } from "./util.js";
 
 const DE = ["JANUAR", "FEBRUAR", "MÄRZ", "APRIL", "MAI", "JUNI", "JULI", "AUGUST", "SEPTEMBER", "OKTOBER", "NOVEMBER", "DEZEMBER"];
 const ZH = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"];
@@ -53,7 +54,7 @@ export function medalsHtml(earned, first, today) {
   const y0 = Number(first.slice(0, 4)), y1 = Number(today.slice(0, 4)), years = [];
   for (let y = y1; y >= y0; y--) years.push(y);
   const box = (y) => `<section class="md-box" aria-label="${y} 年的紀念章，${earned.filter((e) => e.month.startsWith(String(y))).length} 枚">
-    <div class="md-lid"><div class="md-silk"><i class="md-ring"></i><svg class="md-bird" viewBox="6 16 54 38" aria-hidden="true"><use href="#md-robin" fill="#a87a2c" color="#a87a2c"/></svg>
+    <div class="md-lid"><div class="md-silk"><i class="md-ring"></i><svg class="md-bird" viewBox="6 16 54 40" aria-hidden="true">${ROBIN_PATHS}</svg>
       <b class="md-title sh-foil">Medaillen</b><b class="md-yr sh-foil">${ROMAN(y)}</b></div></div>
     <i class="md-hinge"></i>
     <div class="md-tray"><div class="md-velvet">
