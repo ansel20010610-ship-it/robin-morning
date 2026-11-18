@@ -61,7 +61,7 @@ const corners = (w, h, s) => corner(4 + 8 * s, 4 + 8 * s, 0, s) + corner(w - 4 -
 // The cover of the bound book: tooled frame, the robin in a rayed medallion, title, author, the years it was read.
 function coverSvg(e) {
   const rays = Array.from({ length: 48 }, (_, i) => { const a = (i * Math.PI) / 24; return `<line x1="${(Math.cos(a) * 30).toFixed(1)}" y1="${(Math.sin(a) * 30).toFixed(1)}" x2="${(Math.cos(a) * 36).toFixed(1)}" y2="${(Math.sin(a) * 36).toFixed(1)}"/>`; }).join("");
-  const y0 = Number(e.start.slice(0, 4)) || Number(e.done.slice(0, 4)), y1 = Number(e.done.slice(0, 4));
+  const y1 = Number(String(e.done || e.start || "").slice(0, 4)), y0 = Number(String(e.start || "").slice(0, 4)) || y1;
   const fs = e.title.length > 8 ? Math.max(12, Math.floor(150 / e.title.length)) : 17;
   return `<svg viewBox="0 0 206 328" aria-hidden="true">
     <image href="assets/shelf/leather.jpg" width="330" height="330" x="-60" y="0" preserveAspectRatio="xMidYMid slice"/><rect width="206" height="328" fill="#c23a5c" style="mix-blend-mode:multiply"/><rect width="206" height="328" fill="#3a0a14" opacity=".28"/><rect width="206" height="328" fill="url(#s-lsheen)"/>
@@ -82,23 +82,30 @@ function coverSvg(e) {
 // Wood and leather are photographs (assets/shelf/, Poly Haven, CC0); the brass is drawn (s-brass).
 const brass = '<svg class="bc-brass" aria-hidden="true"><rect width="100%" height="100%" fill="url(#sg-brass)" filter="url(#s-brass)"/></svg>';
 const SHELF_NO = ["I", "II", "III", "IV", "V", "VI"];
-export function shelfHtml(list) {
-  if (!list.length) return "";
-  const last = list.at(-1), older = list.slice(0, -1).reverse(); // the most recent first, next to the one facing out
+// `reading` (the owner, 2026-11-19: 正在看的書也要在書架): the serial being read, {slug, title, author, start, n, of} —
+// it stands facing out with a ribbon in it and how far the reader is, and leads to the 連載 tab; every finished book then
+// stands spine out beside it.
+export function shelfHtml(list, reading = null) {
+  if (!list.length && !reading) return "";
+  const last = reading ? { ...reading, done: "" } : list.at(-1), older = (reading ? list : list.slice(0, -1)).slice().reverse(); // the most recent first, next to the one facing out
   // A spine's title stays on one line, set smaller the longer it is (the top shelf's spines are taller than the others').
   const spine = (e, tall) => { const n = [...e.title].length || 1, fs = Math.max(8, Math.min(12, Math.floor((tall ? 112 : 84) / (n * 1.22))));
     return `<a class="sh-spine" href="#/shelf/${esc(e.slug)}" aria-label="《${esc(e.title)}》"><i></i>${tall ? "<i></i>" : ""}<b class="sh-foil" style="font-size:${fs}px">${esc(e.title)}</b>${tall ? "<i></i>" : ""}<i></i></a>`; };
   const shelves = [older.slice(0, 4), older.slice(4, 14), older.slice(14, 24)];
   for (let i = 24; i < older.length; i += 10) shelves.push(older.slice(i, i + 10));
-  const bay = (books, i) => `<div class="bc-bay${i ? "" : " first"}"><i class="bc-shade"></i><i class="bc-light"></i><div class="bc-row">${i ? "" : `<a class="sh-book${last.shown ? "" : " new"}" href="#/shelf/${esc(last.slug)}" aria-label="《${esc(last.title)}》，${esc(volZh(list.length))}，翻開"><span class="b3">
-        <i class="f back"></i><i class="f top"></i><i class="f pages"></i><span class="f cover">${coverSvg(last)}</span></span></a>`}${books.map((e) => spine(e, !i)).join("")}${i ? "" : `<i class="bc-end">${brass}</i>`}</div>
+  const face = reading
+    ? `<a class="sh-book reading" href="#/serial" aria-label="《${esc(reading.title)}》，正在讀，讀到第 ${reading.n} 回，共 ${reading.of} 回"><span class="b3">
+        <i class="f back"></i><i class="f top"></i><i class="f pages"></i><span class="f cover">${coverSvg(last)}</span></span><i class="bm" aria-hidden="true"></i><span class="bc-now">${brass}<i>讀到第 ${reading.n} 回・共 ${reading.of} 回</i></span></a>`
+    : `<a class="sh-book${last.shown ? "" : " new"}" href="#/shelf/${esc(last.slug)}" aria-label="《${esc(last.title)}》，${esc(volZh(list.length))}，翻開"><span class="b3">
+        <i class="f back"></i><i class="f top"></i><i class="f pages"></i><span class="f cover">${coverSvg(last)}</span></span></a>`;
+  const bay = (books, i) => `<div class="bc-bay${i ? "" : " first"}"><i class="bc-shade"></i><i class="bc-light"></i><div class="bc-row">${i ? "" : face}${books.map((e) => spine(e, !i)).join("")}${i ? "" : `<i class="bc-end">${brass}</i>`}</div>
       <div class="bc-board"><span class="bc-tag">${brass}<i>${SHELF_NO[i] || roman(i + 1)}</i></span></div></div>`;
-  return `<section class="bcase" aria-label="我的書架，${list.length} 冊">${DEFS}
+  return `<section class="bcase" aria-label="我的書架，讀完 ${list.length} 冊${reading ? "，一本正在讀" : ""}">${DEFS}
     <div class="bc-crown"><i class="bc-dent"></i></div><div class="bc-plate">${brass}<span>知更鳥藏書</span></div>
     <i class="bc-pil l"></i><i class="bc-pil r"></i>
     ${shelves.slice(0, Math.max(3, shelves.findLastIndex((s) => s.length) + 1)).map(bay).join("")}
   </section>
-  <p class="bc-cap">${esc(volZh(list.length))}・最近一本${esc(dateZh(last.done))}讀畢</p>`;
+  <p class="bc-cap">${list.length ? `讀完${zh(list.length)}冊・最近一本${esc(dateZh(list.at(-1).done))}讀畢` : "第一本還在讀"}</p>`;
 }
 
 // The bookplate: laid paper, gold Ex Libris, the wheat ear of the book's epigraph growing over the robin in an engraved
@@ -160,7 +167,7 @@ export function openBook(stage, first) {
   stage.classList.add(first ? "first" : "again");
   requestAnimationFrame(() => requestAnimationFrame(() => stage.classList.add("is-open")));
   if (first) {
-    setTimeout(() => navigator.vibrate?.([10, 40, 26]), 2350);
-    setTimeout(() => rain(60), 2450);
+    setTimeout(() => { if (stage.isConnected) navigator.vibrate?.([10, 40, 26]); }, 2350);
+    setTimeout(() => { if (stage.isConnected) rain(60); }, 2450);
   }
 }

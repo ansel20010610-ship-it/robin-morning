@@ -362,10 +362,21 @@ async function lastTime(n, slot) {
 // The serial's installments in every published issue, oldest first, and how many of them are read.
 const serialParts = () => publishedIssues().flatMap((i) => i.articles.filter((a) => col(a.column, i.date).group === "serial").map((a) => ({ date: i.date, a }))).sort((x, y) => x.date.localeCompare(y.date));
 // The book read to its last installment goes on the shelf (shelf.js), that day; the day never moves afterwards.
-function shelveIfRead() {
-  const b = S.book, parts = serialParts(), read = readSet(), of = Number(b?.of) || parts.at(-1)?.a.serial?.of || 0;
+// Only this book's installments count (index.json serial.slug): a new book's first day must not shelve it.
+const bookParts = (slug) => serialParts().filter((p) => (p.a.serial?.slug || S.book?.slug) === slug);
+function shelveIfRead(b = S.book) {
+  const parts = bookParts(b?.slug), read = readSet(), of = Number(b?.of) || parts.at(-1)?.a.serial?.of || 0;
   if (!b?.slug || !of || parts.filter((p) => read.has(`${p.date}/${p.a.column}`)).length < of) return shelved(b?.slug || "");
-  return shelve(b, twNow().date);
+  return shelve({ ...b, start: b.start || parts[0]?.date || "" }, twNow().date);
+}
+// The serial being read, for the shelf: serial.json's book while it is not finished, with how far the reader is.
+function readingBook() {
+  const b = S.book;
+  if (!b?.slug || shelved(b.slug)) return null;
+  const parts = bookParts(b.slug), read = readSet();
+  if (!parts.length) return null;
+  const n = Math.max(0, ...parts.filter((p) => read.has(`${p.date}/${p.a.column}`)).map((p) => Number(p.a.serial?.n) || 0));
+  return { slug: b.slug, title: String(b.title || ""), author: String(b.author || ""), start: String(b.start || parts[0].date), n, of: Number(b.of) || parts.at(-1).a.serial?.of || parts.length };
 }
 async function viewSerial(my) {
   if (S.book === undefined) { main.innerHTML = `<div class="wrap"><p class="empty">翻書中……</p></div>`; await loadBook(); if (my !== undefined && my !== routeSeq) return; }
@@ -416,10 +427,11 @@ async function viewSerial(my) {
 }
 
 // 我的書架 (#/shelf, one of 收藏's corners; the owner, 2026-11-18): the finished books, the newest facing out.
-function viewShelf() {
-  const books = shelf();
+async function viewShelf(my) {
+  if (S.book === undefined) { main.innerHTML = `<div class="wrap"><p class="empty">翻書中……</p></div>`; await loadBook(); if (my !== undefined && my !== routeSeq) return; }
+  const books = shelf(), reading = readingBook();
   const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/saved" aria-label="返回">${ICON.back}</a><div class="title">我的書架</div></div></div>`;
-  main.innerHTML = `${top}<div class="wrap book-page">${books.length ? shelfHtml(books) : `<p class="empty">讀完一整本連載，它就會變成一本精裝書，收在這裡。</p>`}</div>`;
+  main.innerHTML = `${top}<div class="wrap book-page">${books.length || reading ? shelfHtml(books, reading) : `<p class="empty">讀完一整本連載，它就會變成一本精裝書，收在這裡。</p>`}</div>`;
   wireBack();
   document.title = `我的書架｜${S.cfg.title}`;
 }
@@ -434,7 +446,7 @@ async function viewShelfBook(slug, my) {
   main.innerHTML = `${top}<div class="wrap book-page">${bookHtml(e, i + 1)}</div>`;
   wireBack();
   openBook(main.querySelector(".opened"), !e.shown);
-  if (!e.shown) { markShown(slug); setTimeout(() => toast(`《${e.title}》收上書架了`), 3000); }
+  if (!e.shown) setTimeout(() => { if (!main.querySelector(".opened")) return; markShown(slug); toast(`《${e.title}》收上書架了`); }, 3000); // left before the seal came down: the ceremony waits for next time
   document.title = `《${e.title}》｜${S.cfg.title}`;
 }
 
@@ -1463,7 +1475,8 @@ async function viewArticle(date, column, my) {
       const of = Number(a.serial.of) || Number(S.book?.of) || 0;
       // The next one due today comes this morning before 07:30, and is late after it — not 明天早上 (audit 2026-11-09).
       const today = twNow().date, due = serialDueOn(today) === n + 1;
-      const fin = of && n >= of ? shelveIfRead() : null; // the last installment just read: the book goes on the shelf
+      const own = a.serial.slug && a.serial.slug !== S.book?.slug ? { slug: a.serial.slug, title: a.serial.book, author: a.serial.author, of: a.serial.of } : S.book; // its own book, even after serial.json has moved on
+      const fin = of && n >= of ? shelveIfRead(own) : null; // the last installment just read: the book goes on the shelf
       if (fin) { box.innerHTML = `<div class="lbl"><span>全書完</span>${pv ? `<a class="prev" href="#/a/${pv.date}/${pv.a.column}">‹ 上一回</a>` : ""}</div><p class="serial-tail">《${esc(fin.title)}》讀完了，收上了書架。<a href="#/shelf/${esc(fin.slug)}">翻開這本書 →</a></p>`; return; }
       const tail = of && n >= of ? "全書完。" : serialOver(today) ? "全書完，下一本待定。" : due && isPublished(today) ? `第 ${n + 1} 回今天還沒送到，送到了會出現在連載。`
         : `第 ${n + 1} 回${due ? "今天" : "明天"}早上 ${esc(S.cfg.publish_time)} 刊出。`;
@@ -2079,7 +2092,7 @@ function viewSaved() {
     return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
       <span class="t"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title)}</b>${a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}${a.corrected ? `<span class="corr"><b>更正</b>${esc(a.correction || `${md(a.corrected)} 有更正，見文末`)}</span>` : ""}</span>${th}</a></li>`;
   };
-  const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length, bk = shelf().length;
+  const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length, bk = shelf().length + (readingBook() ? 1 : 0);
   // 收藏 (the owner, 2026-11-06, name kept): the shelves (我的書架 the fifth, 2026-11-18), each with its own picture and a line that says what is inside.
   const DRAWERS = [
     ["#/stamps", "郵票冊", "Briefmarken", st, st ? "張" : "還沒有郵票", `<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z" stroke-dasharray="2 1.6"/><rect x="7.5" y="8.5" width="9" height="7"/></svg>`],
@@ -2722,7 +2735,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/marks")) viewMarks();
   else if ((m = h.match(/^#\/shelf\/([\w-]+)/))) await viewShelfBook(m[1], my);
-  else if (h.startsWith("#/shelf")) viewShelf();
+  else if (h.startsWith("#/shelf")) await viewShelf(my);
   else if (h.startsWith("#/serial")) await viewSerial(my);
   else if (h.startsWith("#/music")) viewMusic(); // the old tab's address still opens the column
   else if (h.startsWith("#/settings")) viewSettings();
