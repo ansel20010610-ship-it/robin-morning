@@ -41,6 +41,32 @@ RELATED_MAX_DF = 0.10  # a token in more than a tenth of all articles is column 
 SAME_COLUMN = 0.85
 
 
+def music_works():
+    """topic_key → the work's name as the canon list writes it (editorial/music-canon.md, its tables' 作品 column; a
+    movement row of a 指定日期 block takes the block's work before its own name). The 唱片櫃 (assets/records.js) prints
+    it on the sleeve; an article not on the list keeps its headline there. Missing or unreadable list: no names."""
+    out, work = {}, ""
+    try:
+        lines = open(os.path.join(ROOT, "editorial", "music-canon.md"), encoding="utf-8").read().splitlines()
+    except OSError:
+        return out
+    for line in lines:
+        if line.startswith("### "):
+            m = re.match(r"###\s+(.+?》(?:（[^）]*）)?)", line)
+            work = m.group(1) if m else ""
+            continue
+        if line.startswith("## "):
+            work = ""
+        if not line.startswith("|"):
+            continue
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        for i, c in enumerate(cells):
+            if re.fullmatch(r"music:[\w-]+", c) and i > 0 and cells[i - 1]:
+                name = cells[i - 1]
+                out.setdefault(c, name if "《" in name or "〈" in name or not work else f"{work}・{name}")
+    return out
+
+
 def thumb(hero):
     if not isinstance(hero, dict):
         return None
@@ -344,6 +370,7 @@ def main():
     # weighs on index.json (1.2 KB an installment, fetched at every launch) and on the search files: it joins the index
     # on the eve of its day — a deploy runs every half hour.
     horizon = str(dt.datetime.now(TW).date() + dt.timedelta(days=1))
+    works = music_works()
     for day, col, path in iter_articles():
         if str(day) > horizon:
             continue
@@ -383,6 +410,8 @@ def main():
                 entry["from_reserve"] = True
             if col == "music" and isinstance(art.get("motif"), str) and art["motif"].strip():
                 entry["motif"] = art["motif"].strip()  # the yard's robin sings it (nest.js playMotif)
+            if col == "music" and works.get(str(art.get("topic_key") or "")):
+                entry["work"] = works[str(art["topic_key"])]  # the 唱片櫃's sleeve (assets/records.js)
             cdate, ctext = correction(art)
             if cdate:
                 entry["corrected"] = cdate

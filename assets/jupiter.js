@@ -80,14 +80,14 @@ export function codaHtml(n, done = false) {
 // iOS start it). Each note a sine plucked and left to die away, with a faint partial two octaves up for the comb's
 // shimmer, through a little room made of decaying noise. Only on a tap, never on its own; one playing at a time.
 let busy = 0, room = null, roomOf = null;
-function reverb(ctx) {
+export function reverb(ctx) { // also the 唱片櫃's music box (records.js)
   if (room && roomOf === ctx) return room;
   const L = Math.floor(ctx.sampleRate * 2.6), buf = ctx.createBuffer(2, L, ctx.sampleRate);
   for (let k = 0; k < 2; k++) { const d = buf.getChannelData(k); for (let i = 0; i < L; i++) d[i] = (Math.random() * 2 - 1) * (1 - i / L) ** 2.8; }
   room = ctx.createConvolver(); room.buffer = buf; room.connect(ctx.destination); roomOf = ctx;
   return room;
 }
-function pluck(ctx, out, f, t, d, vol) {
+export function pluck(ctx, out, f, t, d, vol) {
   const g = ctx.createGain(), a = ctx.createOscillator(), b = ctx.createOscillator(), bg = ctx.createGain();
   a.type = b.type = "sine"; a.frequency.value = f; b.frequency.value = f * 4; bg.gain.value = .12;
   g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(vol * 1.4, t + .004); g.gain.setTargetAtTime(0, t + .004, .32 + .12 * d);
