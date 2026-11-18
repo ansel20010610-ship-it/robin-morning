@@ -54,6 +54,11 @@
     "missing": [],
     "note": "新增 1、更新 1；補查沒做完（pbc、tanart、udn、ntch 讀不到或未查，wwy、news 只查一部分）；歷史上的今天 1928"
   },
+  "reserve": {
+    "finished_at": "2026-11-18T17:30:22+08:00",
+    "missing": [],
+    "note": "快訊已出刊、備稿全數達標，未寫稿"
+  },
   "serial": {
     "finished_at": "2026-11-18T16:03:44+08:00",
     "missing": [],
