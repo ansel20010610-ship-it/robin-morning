@@ -1501,19 +1501,38 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
    Each shift: its numeral in Cormorant, its hour and duty, when it reported in tabular figures — or 未回報, muted while
    the morning is still on, red once it is past 07:45 or the day is over — then the columns still missing at that
    report as small chips, and its note. */
-.shifts { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); font-variant-numeric: lining-nums tabular-nums; }
-.shift { display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; column-gap: 10px; align-items: baseline; padding: 11px 0 12px; border-top: 1px solid var(--rule); }
-.shift:first-child { border-top: 0; }
-.shift .no { font-family: var(--latin); font-size: 22px; font-weight: 600; line-height: 1; color: var(--gold-ink); }
-.shift .no.zh { font-family: inherit; font-size: 17px; letter-spacing: .06em; } /* 補: the Sunday regeneration's row */
-.shift .duty { font-family: var(--sans); font-size: 13.5px; line-height: 1.5; color: var(--ink); }
-.shift .duty b { font-weight: 500; color: var(--muted); margin-right: 8px; }
-.shift .at { font-family: var(--latin); font-size: 19px; font-weight: 600; line-height: 1; color: var(--ink); white-space: nowrap; }
-.shift.wait .at, .shift.late .at { font-family: var(--sans); font-size: 12.5px; font-weight: 500; letter-spacing: .04em; color: var(--muted); }
-.shift.late .at { color: var(--red); }
-.shift .miss, .shift .small { grid-column: 2 / -1; }
-.shift .miss { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
-.shift .miss .chip { font-size: 11px; padding: 2px 7px; letter-spacing: .02em; }
+.verdict { margin: 14px 0 6px; padding: 15px 17px 14px; border: 1px solid var(--rule); border-left: 3px solid var(--gold); background: var(--paper-2); }
+.verdict.warn { border-left-color: var(--red); }
+.verdict .big { margin: 0; font-size: 19px; font-weight: 600; line-height: 1.5; letter-spacing: .02em; }
+.verdict .sub { margin: 6px 0 0; font-family: var(--sans); font-size: 13px; line-height: 1.75; color: var(--ink-2); }
+/* the day in its parts: a hairline down the left, a diamond per shift as .timeline draws them in an article */
+.daytl { margin: 0 0 6px; font-variant-numeric: lining-nums tabular-nums; }
+.tl-h { display: flex; align-items: baseline; gap: 8px; margin: 18px 0 2px; font-size: 13px; font-weight: 600; letter-spacing: .2em; color: var(--gold-ink); }
+.tl-h i { font-family: var(--latin); font-style: italic; font-weight: 400; font-size: 13px; letter-spacing: .02em; color: var(--muted); }
+.daytl ol { list-style: none; margin: 0; padding: 0; position: relative; }
+.daytl ol::before { content: ""; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 1px; background: var(--rule); }
+.tl-i { position: relative; display: grid; grid-template-columns: 16px 50px minmax(0, 1fr) auto; column-gap: 8px; align-items: start; padding: 10px 0; }
+.tl-i + .tl-i { border-top: 1px dotted var(--rule); }
+.tl-i .dot { width: 9px; height: 9px; margin: 7px 0 0 1px; position: relative; z-index: 1; box-sizing: border-box; background: var(--paper); border: 2px solid var(--gold); transform: rotate(45deg); }
+.tl-i.done .dot { background: var(--gold); }
+.tl-i.late .dot { border-color: var(--red); }
+.tl-i .t { font-family: var(--latin); font-size: 17px; font-weight: 600; line-height: 1.25; color: var(--muted); }
+.tl-i.done .t { color: var(--ink); }
+.tl-i .w { min-width: 0; }
+.tl-i .nm { display: block; font-size: 15.5px; font-weight: 600; line-height: 1.35; }
+.tl-i .du { display: block; }
+.tl-i .du, .tl-i .nt summary { font-family: var(--sans); font-size: 12.5px; line-height: 1.5; color: var(--ink-2); }
+.tl-i .nt summary { cursor: pointer; list-style: none; }
+.tl-i .nt summary::-webkit-details-marker { display: none; }
+.tl-i .nt summary::after { content: "▾"; margin-left: 5px; font-size: 10px; color: var(--gold-ink); }
+.tl-i .nt[open] summary::after { content: "▴"; }
+.tl-i .nt p { margin: 6px 0 2px; padding: 8px 10px; font-family: var(--sans); font-size: 12px; line-height: 1.65; color: var(--ink-2); background: var(--paper-2); border-left: 2px solid var(--rule); overflow-wrap: anywhere; }
+.tl-i .st { font-family: var(--latin); font-size: 16px; font-weight: 600; line-height: 1.3; color: var(--gold-ink); white-space: nowrap; }
+.tl-i.wait .st, .tl-i.late .st { font-family: var(--sans); font-size: 12px; font-weight: 500; letter-spacing: .08em; color: var(--muted); }
+.tl-i.late .st { font-weight: 600; color: var(--red); }
+.tl-pub { display: flex; align-items: center; gap: 10px; margin: 16px 0 0; padding: 9px 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.tl-pub span { font-family: var(--latin); font-size: 19px; font-weight: 600; }
+.tl-pub b { font-size: 15px; letter-spacing: .5em; color: var(--robin); }
 .press .kv { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 14px; row-gap: 6px; margin: 12px 0 0; font-family: var(--sans); font-size: 13.5px; line-height: 1.6; }
 .press .kv dt { font-size: 12px; font-weight: 600; letter-spacing: .14em; color: var(--gold-ink); padding-top: 1px; }
 .press .kv dd { margin: 0; color: var(--ink-2); }
@@ -1530,15 +1549,13 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .press .total { font-family: var(--sans); font-size: 12.5px; letter-spacing: .04em; color: var(--muted); text-align: right; margin: 8px 0 0; }
 /* The roster: a row per issue, a mark per shift and one for the reserve shift — a gold tick, a red count, a muted dot. */
 .roster { margin: 10px 0 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); font-variant-numeric: lining-nums tabular-nums; }
-.pr { display: grid; grid-template-columns: minmax(0, 1fr) repeat(6, 30px) repeat(2, 26px); align-items: center; padding: 7px 0; border-top: 1px solid var(--rule); text-decoration: none; text-align: center; }
-.pr .x { font-size: 12px; } /* the 演出班 and 連載班 marks: smaller, since they only say reported or not */
+.pr { display: grid; grid-template-columns: minmax(0, 1fr) repeat(9, 27px); align-items: center; padding: 7px 0; border-top: 1px solid var(--rule); text-decoration: none; text-align: center; }
 .pr:first-child { border-top: 0; }
 .pr.head { padding: 6px 0 5px; font-family: var(--sans); font-size: 11px; letter-spacing: .1em; color: var(--muted); }
 .pr .d { display: flex; align-items: baseline; gap: 6px; text-align: left; font-family: var(--latin); font-size: 17px; font-weight: 600; line-height: 1.2; }
 .pr .d i { font-style: normal; font-family: var(--sans); font-size: 11px; letter-spacing: .04em; color: var(--muted); }
-.pr .c0 { color: var(--muted); }
-.pr .c1 { font-family: var(--sans); font-size: 14px; color: var(--gold-ink); }
-.pr .c2 { font-family: var(--latin); font-size: 17px; font-weight: 600; color: var(--red); }
+.pr .c0, .pr .c1 { font-family: var(--sans); font-size: 14px; line-height: 1.2; color: var(--muted); }
+.pr .c1 { color: var(--gold-ink); }
 .press .legend { font-family: var(--sans); font-size: 11.5px; letter-spacing: .03em; color: var(--muted); margin: 8px 0 0; }
 .press .audit { font-family: var(--sans); font-size: 13.5px; line-height: 1.7; color: var(--ink-2); margin: 8px 0 24px; }
 /* The articles the last audit corrected (press.js audit): a small head, then rows like the saved list's — column and
@@ -1820,10 +1837,8 @@ a.stamp:active .sp { filter: brightness(.96); }
 /* 近期演出: 今天／後天／這週六 beside the date (app.js soonLabel) */
 .gig .when .soon { align-self: flex-start; margin-top: 3px; padding: 1px 6px 2px; font-size: 11px; font-weight: 600; letter-spacing: .06em; color: var(--robin); border: 1px solid color-mix(in srgb, var(--robin) 55%, transparent); border-radius: 9px; white-space: nowrap; }
 /* 印務室 此刻: a hairline across the timetable where the clock stands (press.js morning) */
-.shifts .now { position: relative; height: 0; padding: 0; border-top: 1px solid var(--robin); }
-.shifts .now .no { display: none; }
-.shifts .now .duty { position: absolute; right: 0; top: -9px; display: flex; gap: 6px; padding: 0 0 0 8px; background: var(--paper); font-family: var(--sans); font-size: 11px; line-height: 18px; letter-spacing: .08em; color: var(--robin); }
-.shifts .now .duty b { font-weight: 600; color: var(--robin); margin: 0; }
+.tl-now { position: relative; height: 0; border-top: 1px solid var(--robin); }
+.tl-now span { position: absolute; right: 0; top: -9px; padding-left: 8px; background: var(--paper); font-family: var(--sans); font-size: 11px; line-height: 18px; letter-spacing: .08em; font-weight: 600; color: var(--robin); }
 .shifts .now + .shift { border-top-color: transparent; }
 /* Aa: the type size and day/night under the article's top bar (app.js aaMenu) */
 .topbar .in { position: relative; } /* the Aa sheet hangs off the bar's content, so it stays by its button on wide screens */

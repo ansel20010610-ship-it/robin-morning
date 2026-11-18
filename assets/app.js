@@ -2229,7 +2229,7 @@ function viewNest(which = "") {
   ({ settings: renderNestSettings, album: renderNestAlbum }[which] || renderNest)(main.querySelector(".nest-page"), S.cfg.nest?.api);
   document.title = `${{ settings: "後院設定", album: "相簿" }[which] || "後院"}｜${S.cfg.title}`;
 }
-// ——— 印務室 (Druckerei, assets/press.js): the owner's press room — this morning's five shifts, the reserve stock and a
+// ——— 印務室 (Druckerei, assets/press.js): the owner's press room — the day's shifts, the reserve stock and a
 // fortnight's roster, all out of the index the app holds (its press, late and stock), so it reads the same offline.
 let shownPress = ""; // the press room as last drawn, so a tick that changes nothing leaves the page alone
 function viewPress(tick = false) {
@@ -2243,7 +2243,10 @@ function viewPress(tick = false) {
   const issues = [mine, ...pubs.filter((i) => i.date !== today)];
   const html = `<div class="wrap press">${pressHtml(S.cfg, { ...S.index, issues }, col)}</div>`;
   if (tick && html === shownPress) return;
+  // A shift's note the owner opened stays open through the minute's redraw (press.js dutyHtml: data-k).
+  const open = tick ? [...main.querySelectorAll(".press details.nt[open]")].map((d) => d.dataset.k) : [];
   main.innerHTML = shownPress = html;
+  for (const k of open) { const d = main.querySelector(`.press details.nt[data-k="${k}"]`); if (d) d.open = true; }
   // A tick's redraw is the same page a minute on: no entrance again, or the page's fade-in and every stock bar's draw-x
   // replay each minute while 此刻 moves through the night (audit c19).
   if (tick) main.querySelectorAll(".wrap.press, .sk .bar b").forEach((el) => { el.style.animation = "none"; });
@@ -2496,7 +2499,7 @@ function viewSettings() {
       : `<p>有些功能只給拿到代碼的人。向社長請求代碼，在這裡輸入，這支手機就開了。</p>
         <input class="search" data-sonder-code autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="代碼" aria-label="特供版代碼">
         <div class="btns"><button type="button" class="btn ghost" data-sonder-on>啟用</button></div>`}</section>
-    <section class="set"><h2>印務室</h2><p>給社長看的：今晨五班的報到、補位與缺稿、備稿庫存、最近兩週的出勤。</p>
+    <section class="set"><h2>印務室</h2><p>給社長看的：今天這一期每一班幾點交稿、有沒有缺稿、備稿庫存、最近兩週各班有沒有回報。</p>
       <div class="btns"><a class="btn ghost" href="#/press">打開印務室</a></div></section>
     ${isWebKitITP() && !isStandaloneIOS() ? `<section class="set"><h2>放到主畫面</h2><p>在 Safari 按下方的「分享」按鈕，選「加入主畫面」，知更鳥晨間記事就會像 App 一樣全螢幕開啟，也能離線讀已下載的文章。</p></section>` : ""}
     <footer class="colophon"><div class="latin">${esc(S.cfg.subtitle)}</div>資料更新：${Number.isNaN(Date.parse(S.index.generated_at)) ? "—" : esc(new Date(Date.parse(S.index.generated_at) + 8 * 3600e3).toISOString().replace("T", " ").slice(0, 16))}（台灣時間）</footer></div>`;

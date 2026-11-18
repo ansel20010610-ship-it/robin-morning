@@ -278,9 +278,10 @@ def press(cfg, d):
         skip(path, "%s: %s" % (type(e).__name__, e))
         return out
     # One broken entry loses that shift alone, not the day's whole record. Besides the five shifts: "reserve" (備稿班),
-    # "audit" (週日稽核), "late" (週日補刊, scripts/late.py), "serial" (連載班) and "concerts" (06:17 演出班), all filed by
-    # report_run.py --group <name> under the day they ran; the last two so the 印務室 can see those routines ran at all.
-    for k in SHIFTS + ("reserve", "audit", "late", "serial", "concerts"):
+    # "audit" (週日稽核), "late" (週日補刊, scripts/late.py), "serial" (連載班), "concerts" (演出班), "mend" (補班),
+    # "rescue" (停刊保險) and "sweep" (清倉班), all filed by report_run.py --group <name> under the day they ran, and
+    # "column" (先發班, the evening before) under the issue's date — so the 印務室 shows every shift of the 班表.
+    for k in SHIFTS + ("reserve", "audit", "late", "serial", "concerts", "column", "mend", "rescue", "sweep"):
         if k not in runs:
             continue
         try:
