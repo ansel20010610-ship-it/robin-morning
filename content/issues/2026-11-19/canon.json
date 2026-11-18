@@ -1,0 +1,357 @@
+{
+  "column": "canon",
+  "date": "2026-11-19",
+  "title": "巴黎噓它，邁阿密退票，囚犯一看就懂",
+  "dek": "一齣兩個人在樹下等、等的人始終沒來的戲，讓見多識廣的觀眾坐不住。69 年前的今晚，一千多名囚犯卻一看就懂。",
+  "brief": "《等待果陀》是貝克特寫的戲：兩個流浪漢等一個叫果陀的人，等到戲演完，人都沒來。它證明一齣戲可以沒有情節、沒有懸念，只演「等」，觀眾照樣坐得住。它在巴黎被噓、在邁阿密被退票，1957 年 11 月 19 日在聖昆汀監獄，據艾斯林和當時的報導，台下的囚犯卻一看就懂。",
+  "topic_key": "canon:waiting-for-godot",
+  "form": "reverse",
+  "voice": "critic",
+  "updated_at": "2026-11-19T02:59:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/En_attendant_Godot%2C_Festival_d%27Avignon%2C_1978_f22.jpg/1280px-En_attendant_Godot%2C_Festival_d%27Avignon%2C_1978_f22.jpg",
+    "width": 1280,
+    "height": 933,
+    "alt": "黑白舞台劇照。全黑的背景裡只亮著兩張臉：兩個戴深色帽子、穿舊外衣的男人靠得很近，都仰著頭望向畫面右上方，嘴微張，手抬在胸前。",
+    "caption": "《等待果陀》1978 年亞維儂藝術節的演出（導演 Otomar Krejča），Rufus 演 Estragon，Georges Wilson 演 Vladimir。這不是 1957 年聖昆汀那一場；那一場沒有留下可用的授權照片。",
+    "credit": "Fernand Michaud 攝；影像來源：法國國家圖書館 Gallica；Wikimedia Commons",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En_attendant_Godot,_Festival_d%27Avignon,_1978_f22.jpg",
+    "made": "1978"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "六十九年前的今天，1957 年 11 月 19 日晚上，一家年輕的劇團「舊金山演員工坊」到加州的**聖昆汀監獄**演了一齣戲。戲叫**《等待果陀》**，演兩個人在路邊等一個人，等到戲演完，那個人都沒來。寫它的是住在巴黎的愛爾蘭作家**山繆・貝克特**，他 1969 年得了諾貝爾文學獎。台下坐的是一千多名囚犯。"
+    },
+    {
+      "type": "p",
+      "text": "這齣戲為什麼是經典，兩句話就講得完。**它證明一齣戲可以沒有情節、沒有懸念，只演「等」，台下照樣坐得住**；而據當時的報導和寫《荒謬劇場》的馬丁・艾斯林，聖昆汀的囚犯一下子就接住了它。在那之前，它在巴黎被噓過，在邁阿密第一幕一結束就走了一半到三分之二的觀眾。艾斯林是這樣寫這齣戲的："
+    },
+    {
+      "type": "quote",
+      "text": "過去讓巴黎、倫敦、紐約那些見多識廣的觀眾困惑的東西，被一群囚犯一下子就抓住了。",
+      "original": "what had bewildered the sophisticated audiences of Paris, London, and New York was immediately grasped by an audience of convicts.",
+      "cite": "馬丁・艾斯林（Martin Esslin），《荒謬劇場》導論，1961 年；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "貝克特用法文寫這齣戲，後來自己譯成英文。戲裡，兩個流浪漢在一條鄉間路上、一棵樹旁邊，等一個叫果陀的人。他們聊天，差點上吊，說要走又沒走。中途來了一對主僕，主人 Pozzo 用繩子套著僕人 Lucky 的脖子。最後一個男孩來說，果陀今天不來，明天一定到。第二幕幾乎把第一幕重演一遍。戲結束時，兩個人說要走，卻站著沒動。"
+    },
+    {
+      "type": "p",
+      "text": "1950 年代的人進劇院，要看的是好故事：情節要巧，人物要有動機，還要有懸念。這齣戲一樣都沒有。艾斯林列過劇評人對這類戲的抱怨：沒有情節、沒有發展、沒有人物刻畫、沒有懸念，連常識都沒有。他的書 1961 年出版，第一頁講的就是聖昆汀那一晚。"
+    },
+    {
+      "type": "timeline",
+      "title": "從 1961 年倒著數回去",
+      "items": [
+        {
+          "when": "1961 年",
+          "label": "艾斯林寫完《荒謬劇場》",
+          "note": "序文落款 1961 年 3 月"
+        },
+        {
+          "when": "1957.11.19",
+          "label": "聖昆汀監獄，約 1,400 名囚犯（有來源說 1,000 多）",
+          "note": "舊金山演員工坊演出"
+        },
+        {
+          "when": "1956.4.19",
+          "label": "百老匯首演",
+          "note": "約翰・高登劇院"
+        },
+        {
+          "when": "1956.1.3",
+          "label": "邁阿密，美國首演",
+          "note": "海報說是「兩大洲的爆笑劇」；邁阿密椰林劇院的觀眾第一幕後大批離場"
+        },
+        {
+          "when": "1955.8.3",
+          "label": "倫敦阿茨劇院，英語首演",
+          "note": "導演彼得・霍爾 24 歲；週日劇評翻轉了風向"
+        },
+        {
+          "when": "1953.1.5",
+          "label": "巴黎巴比倫小劇院，世界首演",
+          "note": "導演羅傑・布蘭"
+        },
+        {
+          "when": "1952 年秋",
+          "label": "午夜出版社出版法文劇本",
+          "note": "版權頁是 1952 年 9 月，10 月 17 日上市；只印 2,500 冊"
+        },
+        {
+          "when": "1948.10–1949.1",
+          "label": "貝克特寫成法文原稿",
+          "note": "1948 年 10 月 9 日開始，1949 年 1 月 29 日完成"
+        }
+      ],
+      "caption": "日期依 Wikipedia 條目（引 Ackerley 與 Gontarski 2006）、Mary Benson 訪談、Esslin 導論、American Theatre 與 Miami New Times 整理。"
+    },
+    {
+      "type": "h",
+      "text": "1957 年，聖昆汀"
+    },
+    {
+      "type": "p",
+      "text": "聖昆汀在舊金山灣邊，是加州最老的監獄，戒備等級最高。演出的地方是監獄的北餐廳，只演一晚。有囚犯問過典獄長能不能演一齣戲，劇團聽說後馬上答應。監獄只有一個條件，劇團只能派男演員。"
+    },
+    {
+      "type": "p",
+      "text": "艾斯林寫，自從 1913 年女演員莎拉・伯恩哈特去演過以後，聖昆汀四十四年沒有演過真人上台的戲。劇團挑《等待果陀》，主要就是因為劇中沒有女角。"
+    },
+    {
+      "type": "p",
+      "text": "台下有多少人，說法不一：艾斯林和 Wikipedia 寫約 1,400 人，American Theatre 雜誌寫超過 1,000 人。開演前，導演赫伯特・布勞先上台講話。據囚犯自己辦的報紙記載，他把這齣戲比成爵士樂：聽爵士要自己去聽出點什麼，看《果陀》也一樣。"
+    },
+    {
+      "type": "p",
+      "text": "結果台下很投入。做佈景和燈光的 Robin Wagner 當年 24 歲，他記得：「他們的反應，像是自己也在戲裡。」《舊金山紀事報》的記者記下兩個囚犯的話。一個說：「果陀就是社會。」另一個說：「他是外面。」"
+    },
+    {
+      "type": "quote",
+      "text": "他們懂得「等」是怎麼回事……而且他們知道，果陀就算終於來了，也只會讓人失望。",
+      "original": "They know what is meant by waiting … and they knew if Godot finally came, he would only be a disappointment.",
+      "cite": "聖昆汀監獄的一位教師，轉引自艾斯林《荒謬劇場》（原載 Theatre Arts，1958 年 7 月）；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "演出九天後，這份報紙《San Quentin News》的頭版說，舊金山來的劇團把台下這群被關著的人「握在手裡」。社論的結尾寫：「我們還在等果陀，也會繼續等下去。佈景看膩了、劇情太慢了，我們就互相罵幾句，發誓從此分道揚鑣。可是，也沒地方可去啊！」"
+    },
+    {
+      "type": "p",
+      "text": "囚犯為什麼看得懂，艾斯林提過兩個可能。一是戲裡的處境，有些地方跟他們很像。二是他們進場時沒有成見，不會像劇評人那樣，怪它沒有情節、沒有懸念。這是艾斯林的看法。當晚演男孩的 Anthony Miksak 那年 12 歲，他記得觀眾「非常熱烈」，但他覺得多半是因為有一整齣戲在眼前演，大家覺得新鮮。"
+    },
+    {
+      "type": "h",
+      "text": "那一晚之後"
+    },
+    {
+      "type": "p",
+      "text": "有個囚犯那晚沒看到。Rick Cluchey 因為搶劫被判無期徒刑，獄方認為他有安全風險，讓他留在牢房，室友回來再講給他聽。1958 年，囚犯自己成立了聖昆汀戲劇工坊，一直辦到 1965 年。American Theatre 說，這很可能是美國第一個由囚犯發起、持續經營的監獄劇場。Cluchey 說，工坊後來自己演了《果陀》。他 1966 年假釋，1975 年在柏林認識貝克特。據 Wikipedia，貝克特後來在錢和精神上支持了他很多年。"
+    },
+    {
+      "type": "p",
+      "text": "艾斯林說，《果陀》和 Ionesco、Pinter 這些人的戲能廣受好評，證明這類戲「有話要說，也能被看懂」。這類戲沒有傳統的情節，人物也不靠心理來解釋，看完卻讓人覺得說中了什麼。"
+    },
+    {
+      "type": "p",
+      "text": "Mary Benson 1978 年在《The London Magazine》寫，最先看重《果陀》的是劇作家，受它影響最深的也是劇作家，她舉了 Pinter 和 Fugard。據 Wikipedia 轉述，1998 年倫敦皇家國家劇院辦公眾票選，它被選為二十世紀最重要的英語劇作。"
+    },
+    {
+      "type": "h",
+      "text": "1956 年，邁阿密與百老匯"
+    },
+    {
+      "type": "p",
+      "text": "聖昆汀的前一年，這齣戲在美國碰了大釘子。美國巡演的主角是 Bert Lahr 和 Tom Ewell，原本要在華盛頓和費城演，預售票太差，改到邁阿密新蓋好的椰林劇院。1956 年 1 月 3 日開演，海報上寫「兩大洲的爆笑劇」。"
+    },
+    {
+      "type": "p",
+      "text": "第一幕一結束，觀眾就走了一大批，走了多少說法不一：Bert Lahr 的兒子 John Lahr 說是一半，還說隔天售票口排了一條隊，都是來退票的；Miami New Times 說是三分之二。Bert Lahr 事後開玩笑說，在邁阿密演《果陀》，就像在舞廳裡跳芭蕾名劇《吉賽兒》。"
+    },
+    {
+      "type": "p",
+      "text": "同年 4 月 19 日，戲進了紐約百老匯，《紐約時報》的評論下了一個出了名的標題：〈包在謎裡的謎〉。"
+    },
+    {
+      "type": "h",
+      "text": "1955 年，倫敦：差點收掉"
+    },
+    {
+      "type": "p",
+      "text": "再往前一年，1955 年 8 月 3 日，英語版在倫敦的阿茨劇院首演，導演彼得・霍爾才 24 歲。開演後有噓聲，有人中途離場，隔天早報的劇評很冷淡，劇團一度討論要不要收掉。"
+    },
+    {
+      "type": "p",
+      "text": "轉機在週日。8 月 7 日，《Sunday Times》的霍布森（Harold Hobson）和《Observer》的泰南（Kenneth Tynan）都寫了好評。戲因此多演了一個月，再搬到別的劇院，之後還去巡迴。"
+    },
+    {
+      "type": "quote",
+      "text": "它逼我重新檢查一直管著戲劇的那些規則；檢查之後，我得說它們還不夠有彈性。",
+      "original": "to re-examine the rules which have hitherto governed the drama; and, having done so, to pronounce them not elastic enough.",
+      "cite": "肯尼斯・泰南（Kenneth Tynan），《觀察家報》劇評，1955 年；轉引自雷丁大學《Peter Hall 與 Godot》頁面；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "罵的人也有。Ronald Barker 在《Plays and Players》說它是「一團古怪的胡說」。演員拉爾夫・理查森當初推掉了演出，後來怪自己，說它是「我這一代最偉大的戲」。"
+    },
+    {
+      "type": "p",
+      "text": "依 Wikipedia 轉引，劇評人 Vivian Mercier 說，貝克特做到了理論上不可能的事：一齣什麼事都沒發生的戲，卻讓觀眾黏在座位上。而且第二幕是第一幕換了點花樣再演一次，所以這齣戲什麼都沒發生，還來了兩遍。"
+    },
+    {
+      "type": "h",
+      "text": "1953 年，巴黎：先被噓，再靠口耳相傳"
+    },
+    {
+      "type": "p",
+      "text": "世界首演是 1953 年 1 月 5 日，在巴黎的巴比倫小劇院，導演羅傑・布蘭。據 Mary Benson 的記述，布蘭說他拿劇本去給巴黎的劇院經理看，「他們當面笑我」。他找了大約三年的劇院，最後靠一筆小補助才租到。開演前兩週還沒人演 Pozzo，他只好自己上。"
+    },
+    {
+      "type": "p",
+      "text": "首演那晚，有人拚命鼓掌，有人愣住不出聲，支持和反對的人還動了拳頭。多數劇評人把戲罵了一頓，只有少數人叫好。據 Wikipedia，首輪演出中還有一場，在 Lucky 那段長獨白之後，約 20 位衣著體面的觀眾吹口哨、起鬨嘲笑，幕只好放了下來。"
+    },
+    {
+      "type": "p",
+      "text": "戲還是撐住了。Simon Callow 2005 年在《愛爾蘭時報》寫，付錢進場的人愈來愈多，是**口耳相傳**讓它撐下來的。"
+    },
+    {
+      "type": "table",
+      "title": "同一齣戲，五個觀眾席",
+      "head": [
+        "時間、地點",
+        "台下是誰",
+        "他們怎麼接"
+      ],
+      "rows": [
+        [
+          "1953.1 巴黎巴比倫小劇院",
+          "首演前一天的彩排就來了 30 位劇評人",
+          "有人狂鼓掌，有人愣住不作聲，支持與反對的人動了拳頭；多數劇評痛批"
+        ],
+        [
+          "1955.8 倫敦阿茨劇院",
+          "英國觀眾與劇評人",
+          "隔天一早的劇評冷淡；週日兩位劇評人（霍布森與泰南）寫了好評，戲得以續演"
+        ],
+        [
+          "1956.1 邁阿密椰林劇院",
+          "邁阿密椰林劇院的觀眾",
+          "第一幕後有人離場，說法是一半到三分之二"
+        ],
+        [
+          "1956.4 紐約百老匯",
+          "紐約觀眾",
+          "《紐約時報》評論的標題：〈包在謎裡的謎〉"
+        ],
+        [
+          "1957.11 聖昆汀監獄",
+          "約 1,400 名囚犯（有來源說 1,000 多）",
+          "當場看懂；囚犯報紙說劇團把台下「握在手裡」"
+        ]
+      ],
+      "caption": "人數與反應依 Mary Benson（1978）、Wikipedia、Miami New Times（1996）、John Lahr 轉引自 Open Culture、American Theatre（2019）、Esslin 整理；邁阿密離場比例各家說法不同。"
+    },
+    {
+      "type": "h",
+      "text": "1948 年，寫來放鬆的戲"
+    },
+    {
+      "type": "p",
+      "text": "再往前，1952 年 10 月 17 日，午夜出版社出了法文劇本，只印 2,500 冊。劇本是 1948 年 10 月 9 日動筆，1949 年 1 月 29 日寫完。貝克特說，他寫這齣戲，是想從當時正在寫的那些繁重的散文裡放鬆一下。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "名稱",
+          "《等待果陀》（En attendant Godot；英文 Waiting for Godot），副題「兩幕悲喜劇」"
+        ],
+        [
+          "作者",
+          "山繆・貝克特（Samuel Beckett），愛爾蘭人，原稿用法文寫"
+        ],
+        [
+          "寫作",
+          "1948 年 10 月 9 日至 1949 年 1 月 29 日"
+        ],
+        [
+          "出版",
+          "1952 年 10 月 17 日，午夜出版社（Les Éditions de Minuit），印 2,500 冊"
+        ],
+        [
+          "首演",
+          "1953 年 1 月 5 日，巴黎巴比倫小劇院，導演羅傑・布蘭（Roger Blin）"
+        ],
+        [
+          "英語首演",
+          "1955 年 8 月 3 日，倫敦阿茨劇院，導演彼得・霍爾；貝克特自己譯的英文版"
+        ],
+        [
+          "劇情",
+          "兩個流浪漢在一棵樹下等一個叫果陀的人；果陀沒有出現，一個男孩來說他明天會到"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Nothing But Time: When 'Godot' Came to San Quentin",
+      "publisher": "Russell M. Dembin，American Theatre",
+      "date": "2019-01-22",
+      "url": "https://www.americantheatre.org/2019/01/22/nothing-but-time-when-godot-came-to-san-quentin/",
+      "note": "聖昆汀 1957-11-19 的場地、卡司、邀請經過、觀眾人數、Blau 開場白、Wagner 與 Miksak 回憶、囚犯報紙與《舊金山紀事報》標題、Cluchey 與工坊、《紐約時報》百老匯評論標題；2026-11-18 查閱"
+    },
+    {
+      "title": "The Theatre of the Absurd（Vintage 2004 版，導論 The absurdity of the Absurd）",
+      "publisher": "Martin Esslin，Vintage Books（序文 1961 年 3 月）",
+      "date": "2004",
+      "url": "https://faculty.uobasrah.edu.iq/uploads/teaching/1642439873.pdf",
+      "note": "導論前四頁：聖昆汀 1957-11-19、1,400 名囚犯、自 1913 年 Bernhardt 後沒有演出、囚犯報紙與《舊金山紀事報》記者、教師的話、Esslin 自己的兩個解釋；2026-11-18 查閱的是 Vintage 2004 版掃描檔"
+    },
+    {
+      "title": "Roger Blin and Beckett",
+      "publisher": "Mary Benson，The London Magazine（1978 年 10 月，卷 18 第 7 期）",
+      "date": "1978-10",
+      "url": "https://thelondonmagazine.org/archive-roger-blin-and-beckett-by-mary-benson/",
+      "note": "布蘭談找劇院三年、小額補助、Pozzo 臨時由他演、1953-01-05 首演反應、Salacrou 與 Anouilh 的評語、演 150 場、Pinter 與 Fugard、1969 諾貝爾；2026-11-18 查閱"
+    },
+    {
+      "title": "Waiting for Godot",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Waiting_for_Godot",
+      "note": "寫作與出版日期、巴黎彩排 30 位劇評人與 Lucky 獨白後的噓聲、倫敦阿茨劇院與霍布森／泰南、邁阿密與百老匯、Mercier 評語、1998 國家劇院票選、貝克特多年在財務與精神上支持 Cluchey；條目轉引 Ackerley & Gontarski 2006 等；2026-11-18 查閱"
+    },
+    {
+      "title": "Godot's Country",
+      "publisher": "Pamela Gordon，Miami New Times",
+      "date": "1996-03-28",
+      "url": "https://www.miaminewtimes.com/arts-culture/godots-country-6361638/",
+      "note": "1956-01-03 椰林劇院開幕、「laugh sensation of two continents」、三分之二觀眾第一幕後離場、Lahr 的 Giselle at Roseland；2026-11-18 查閱"
+    },
+    {
+      "title": "Hear Waiting for Godot, the Acclaimed 1956 Production Starring The Wizard of Oz's Bert Lahr",
+      "publisher": "Open Culture（轉引 John Lahr）",
+      "date": "2016-09",
+      "url": "https://www.openculture.com/2016/09/waiting-for-godot-the-acclaimed-1956-production.html",
+      "note": "John Lahr 說首演夜第一幕後一半觀眾離場、隔天售票口有人排隊退票；日期以網址年月為準；2026-11-18 查閱"
+    },
+    {
+      "title": "Peter Hall's production of Waiting for Godot（Staging Beckett 與 The Forum 頁面）",
+      "publisher": "University of Reading",
+      "date": "",
+      "url": "https://blogs.reading.ac.uk/the-forum/tag/godot",
+      "note": "霍爾 24 歲、Barker 與 Tynan 的評語；Tynan 原文轉引自此頁；2026-11-18 查閱"
+    },
+    {
+      "title": "Case study: Waiting for Godot, Module 1",
+      "publisher": "Staging Beckett，University of Reading",
+      "date": "",
+      "url": "https://ourresearch.reading.ac.uk/staging-beckett//case-study-waiting-for-godot/module-1/",
+      "note": "1953 與 1955 首演日期、貝克特說寫這齣戲是從「繁重的散文」中放鬆（轉引 Cronin 1997）；2026-11-18 查閱"
+    },
+    {
+      "title": "Drama that's worth waiting for（Simon Callow）",
+      "publisher": "The Irish Times",
+      "date": "2005-08-02",
+      "url": "https://www.irishtimes.com/culture/drama-that-s-worth-waiting-for-1.475322",
+      "note": "Richardson 婉拒、霍布森好評、口耳相傳；2026-11-18 查閱"
+    },
+    {
+      "title": "San Quentin and Samuel Beckett: An Interview with Rick Cluchey",
+      "publisher": "Rhys Tranter",
+      "date": "2015-05-15",
+      "url": "https://rhystranter.com/2015/05/15/rick-cluchey-san-quentin-drama-workshop-beckett-interview/",
+      "note": "Cluchey 待在牢房沒看到演出、後來的工坊、與貝克特 1975 年柏林相識、1977 年信；2026-11-18 查閱"
+    }
+  ]
+}
