@@ -2893,3 +2893,42 @@ html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
 .po-note i { display: block; min-height: 1em; margin-top: 6px; font: italic 400 10px/1.25 var(--po-lat); color: #6e5a3a; }
 .po-wax { position: absolute; right: -8px; bottom: -8px; width: 28px; height: 28px; border-radius: 50%; background: radial-gradient(circle at 38% 32%, #a83a4c, #6a1826 60%, #4a0f1a); box-shadow: 0 2px 3px rgba(0, 0, 0, .5); }
 .sc-page:has(.poems-scene) .sc-bar { position: relative; } /* long poems scroll: the gilt name stays at the head, not over the lines */
+
+/* ——— 美術館 (museum.js; the owner's pick 2026-11-19: the salon wall, a work tapped hangs alone) ——— wine silk damask
+   walls, a walnut rail, gilded frames with a linen liner, a brass picture light, the museum label. */
+.museum-scene { display: flex; flex-direction: column; min-height: calc(100svh - var(--nav-h) - env(safe-area-inset-bottom)); }
+.mu-wall { background: radial-gradient(70% 45% at 50% 30%, rgba(255, 170, 150, .1), rgba(0, 0, 0, .55) 85%), linear-gradient(#4a1020, #4a1020), url(shelf/velvet.jpg) 0 0 / 220px auto, #3a0a18; background-blend-mode: normal, multiply, normal; }
+.mu-wall::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .22; background: repeating-linear-gradient(90deg, rgba(255, 220, 200, .1) 0 1px, transparent 1px 34px), radial-gradient(circle at 17px 17px, rgba(255, 215, 190, .16) 0 4px, transparent 5px) 0 0 / 34px 34px; }
+.mu-wall > .sc-lamp { z-index: 5; background: radial-gradient(130% 90% at 50% 40%, transparent 50%, rgba(0, 0, 0, .7)); }
+.mu-rail { position: relative; display: block; flex: 0 0 auto; height: 16px; margin-top: auto; background: linear-gradient(rgba(255, 225, 190, .3), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, .5)), url(shelf/cherry.jpg) 0 0 / 420px auto; box-shadow: 0 6px 10px rgba(0, 0, 0, .55); }
+.mu-rail::after { content: ""; position: absolute; left: 0; right: 0; top: 16px; height: 70px; background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .2)), url(shelf/cherry.jpg) 0 0 / 180px auto; }
+.mu-frame { position: relative; display: block; box-sizing: border-box; padding: 9px; --mu-g: conic-gradient(from 225deg, #6e4c16, #e9c66c 12%, #8a6220 25%, #fff3c4 37%, #b98a33 50%, #6e4c16 62%, #e9c66c 75%, #8a6220 87%, #6e4c16);
+  background: radial-gradient(120% 120% at 30% 20%, rgba(255, 240, 190, .35), rgba(0, 0, 0, 0) 55%), var(--mu-g); box-shadow: 0 1px 0 rgba(255, 240, 200, .4) inset, 0 -2px 3px rgba(60, 35, 5, .6) inset, 0 14px 22px rgba(0, 0, 0, .65), 0 3px 6px rgba(0, 0, 0, .5); }
+.mu-frame::before { content: ""; position: absolute; inset: 3px; border: 1.5px solid rgba(255, 235, 170, .5); box-shadow: 0 0 0 1px rgba(80, 50, 10, .5), inset 0 0 0 1px rgba(80, 50, 10, .45); pointer-events: none; background: repeating-linear-gradient(45deg, transparent 0 3px, rgba(120, 80, 20, .18) 3px 5px); }
+.mu-frame.big, .mu-hang.lead .mu-frame { padding: 20px; }
+.mu-frame.big::before, .mu-hang.lead .mu-frame::before { inset: 6px; }
+.mu-liner { display: block; padding: 6px; background: #e9e0cc repeating-linear-gradient(0deg, rgba(120, 100, 70, .08) 0 1px, transparent 1px 2px); box-shadow: inset 3px 3px 8px rgba(60, 40, 15, .45); }
+.mu-frame.big .mu-liner, .mu-hang.lead .mu-liner { padding: 12px; }
+.mu-canvas { position: relative; display: block; overflow: hidden; background: #2a2018; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .35); }
+.sc-page .mu-canvas img { display: block; width: 100%; height: 100%; object-fit: cover; filter: none; }
+.mu-canvas::after { content: ""; position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen; background: linear-gradient(170deg, rgba(255, 240, 210, .2), rgba(255, 240, 210, 0) 40%), radial-gradient(90% 70% at 50% 0%, rgba(255, 220, 160, .16), transparent 70%); }
+.mu-light { position: absolute; left: 50%; top: 66px; z-index: 6; width: 120px; height: 11px; margin-left: -60px; border-radius: 6px; background: linear-gradient(#f3d78e, #9a6e26 60%, #5a3c10); box-shadow: 0 3px 5px rgba(0, 0, 0, .5); pointer-events: none; }
+.mu-light::before { content: ""; position: absolute; left: 50%; top: -16px; width: 3px; height: 16px; margin-left: -1.5px; background: linear-gradient(90deg, #7a5418, #e9c66c, #7a5418); }
+.mu-light::after { content: ""; position: absolute; left: -40%; right: -40%; top: 10px; height: 200px; background: radial-gradient(60% 100% at 50% 0%, rgba(255, 226, 170, .32), transparent 70%); }
+.mu-salon { position: relative; z-index: 4; display: grid; grid-template-columns: 1fr 1.9fr 1fr; grid-auto-flow: row dense; align-items: center; gap: 18px 12px; padding: 90px 16px 10px; }
+.mu-hang { display: block; border: 0; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+.mu-hang.lead { grid-column: 2; grid-row: 1 / span 2; }
+.mu-foot { position: relative; z-index: 6; display: flex; align-items: center; justify-content: center; gap: 18px; padding: 18px 0 26px; }
+.mu-plate { position: relative; display: flex; align-items: center; justify-content: center; height: 34px; padding: 0 26px; }
+.mu-plate .sc-cut { font: 600 11.5px/1 var(--sc-caps); letter-spacing: .32em; padding-left: .32em; }
+.mu-room { position: relative; z-index: 4; display: flex; flex-direction: column; align-items: center; padding: 96px 30px 6px; touch-action: pan-y; }
+.mu-room .mu-light.one { top: 70px; width: 150px; margin-left: -75px; }
+.mu-one { display: block; width: 100%; max-width: 330px; border: 0; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+.mu-one .mu-canvas { max-height: 52svh; }
+.mu-label { align-self: flex-start; margin: 24px 0 0; padding: 10px 14px 11px; min-width: 150px; background: linear-gradient(#f7f1e3, #e9dfc8); box-shadow: 0 2px 4px rgba(0, 0, 0, .5); text-align: left; }
+.mu-label b { display: block; font: 600 11px/1.3 var(--sc-caps); letter-spacing: .18em; color: #2b2218; }
+.mu-label i { display: block; margin-top: 3px; font: italic 500 14px/1.25 var(--latin); color: #2b2218; }
+.mu-label span { display: block; margin-top: 3px; font: 500 10.5px/1.2 var(--latin); letter-spacing: .06em; color: #5a4630; }
+.mu-count { font: 600 12px/1 var(--sc-caps); letter-spacing: .24em; }
+.mu-foot .cr-flip { display: inline-block; text-align: center; text-decoration: none; }
+.mu-foot .cr-flip.off { opacity: .25; pointer-events: none; }

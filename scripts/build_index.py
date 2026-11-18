@@ -410,8 +410,8 @@ def main():
                 entry["from_reserve"] = True
             if col == "music" and isinstance(art.get("motif"), str) and art["motif"].strip():
                 entry["motif"] = art["motif"].strip()  # the yard's robin sings it (nest.js playMotif)
-            if col == "architecture" and isinstance(art.get("topic_key"), str) and art["topic_key"].strip():
-                entry["topic_key"] = art["topic_key"].strip()  # the 版畫冊's caption (assets/prints.js buildingName)
+            if col in ("architecture", "artwork") and isinstance(art.get("topic_key"), str) and art["topic_key"].strip():
+                entry["topic_key"] = art["topic_key"].strip()  # the 版畫冊's and 美術館's labels (assets/prints.js buildingName, museum.js workTitle)
             if col == "music" and works.get(str(art.get("topic_key") or "")):
                 entry["work"] = works[str(art["topic_key"])]  # the 唱片櫃's sleeve (assets/records.js)
             cdate, ctext = correction(art)
