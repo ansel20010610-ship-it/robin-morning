@@ -26,6 +26,11 @@
     ],
     "note": "canon（reverse/critic，等待果陀，精簡：canon）、football（list/fan，非比賽夜，第9步重寫1／修正0，忠實度核對後小修）；未接第1班欄位（已齊）"
   },
+  "4": {
+    "finished_at": "2026-11-19T05:43:14+08:00",
+    "missing": [],
+    "note": "第4班：fm-watch 刊出（Touch 27.1.0，重寫1／核對修正）；cosmere 靜默；obituary 刊出 Zschoche（重寫1／核對修正）；news 刊出（修正1，無重寫）；football 無新消息未動（昨晚無賽）。第9步：重寫2／修正1。news 網域：可用 aljazeera、france24、cna.com.tw、focustaiwan.tw、news.pts.org.tw；rti、un.org 搜尋不報錯未開內文；dw.com、nhk.or.jp 放進 allowed_domains 回400；cwa、cdc 未測。"
+  },
   "column": {
     "finished_at": "2026-11-18T22:50:14+08:00",
     "missing": [
