@@ -13,6 +13,10 @@ const MONTH = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI"
 export const buildingName = (a) => String(a.topic_key || "").replace(/^architecture:/, "").split("-").filter(Boolean).map((w) => w[0].toUpperCase() + w.slice(1)).join(" ");
 const dateLine = (d) => { const [y, m, dd] = d.split("-").map(Number); return `${dd}. ${MONTH[m - 1]}. ${ROMAN(y).toUpperCase()}`; };
 let topDate = null; // the print left on top, kept while the reader opens its article and comes back
+// The way in is every print laid out on the desk (the owner, 2026-11-19: 入口是很多的那個); a print picked from it opens
+// the portfolio at that print, and the reader coming back from its article finds the portfolio again.
+let lastMode = "all";
+export const resetPrints = () => { lastMode = "all"; };
 
 function printHtml(p, n, total) {
   const src = p.a.hero?.thumb || p.a.hero?.src || "";
@@ -49,7 +53,8 @@ export function wirePrints(scene, list) {
   prev.addEventListener("click", () => go(-1));
   next.addEventListener("click", () => go(1));
   // 全部攤開 and back; a print picked from the desk comes back on top; the die draws any other one
-  const all = scene.querySelector(".pr-all"), spread = (on) => { scene.classList.toggle("spread", on); all.hidden = !on; window.scrollTo(0, 0); };
+  const all = scene.querySelector(".pr-all"), spread = (on) => { scene.classList.toggle("spread", on); all.hidden = !on; lastMode = on ? "all" : "one"; window.scrollTo(0, 0); };
+  if (lastMode === "all") spread(true);
   scene.querySelectorAll("[data-all]").forEach((b) => b.addEventListener("click", () => spread(all.hidden)));
   all.addEventListener("click", (e) => { const b = e.target.closest("[data-pick]"); if (!b) return; const k = Number(b.dataset.pick); spread(false); if (k !== i) go(k - i); });
   scene.querySelectorAll("[data-die]").forEach((b) => b.addEventListener("click", () => {

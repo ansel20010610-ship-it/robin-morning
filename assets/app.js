@@ -19,7 +19,7 @@ import { codaHtml, codaVoices, playCoda } from "./jupiter.js";
 import { shelf, shelved, shelve, markShown, shelfHtml, bookHtml, openBook, marksHtml } from "./shelf.js";
 import { crateHtml, wireCrate, deckHtml, fillPlate, playRecord, boxBusy, workName, spreadHtml, wireSpread } from "./records.js";
 import { medalMonths, medalsHtml } from "./medals.js";
-import { printsHtml, wirePrints } from "./prints.js";
+import { printsHtml, wirePrints, resetPrints } from "./prints.js";
 import { poemsHtml, wirePoems } from "./poems.js";
 import { salonHtml, roomHtml, wireRoom } from "./museum.js";
 
@@ -2199,6 +2199,7 @@ function viewArchive() {
 let archiveQ = "", archiveKept = null; // 往期's search as the reader left it, and its last full-text answer
 
 function viewSaved() {
+  resetPrints(); // from 收藏 the 版畫冊 opens on all the prints laid out
   // Set like the gallery (a lookbook): the shelves up top — 劃線本, 畫廊, 郵票冊, 你讀過的世界, the corners entered from
   // here only, the owner's choice of 2026-11-02 — each with its count large in Cormorant; under them the saved articles
   // as numbered rows, the column and the day in spaced small type above the title, the dek under it, the picture a square
