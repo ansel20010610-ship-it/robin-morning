@@ -353,9 +353,24 @@ function primePlayer() {
   }
   player?.activateElement?.();
 }
+// Progress: Spotify reports the position on each change; between reports it is counted on from the clock.
+let pos = 0, dur = 0, at = 0, seeking = false, tick = 0;
+const clock = (ms) => { const s = Math.max(0, Math.floor(ms / 1000)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; };
+function drawProgress() {
+  const now = playing ? Math.min(dur, pos + Date.now() - at) : pos;
+  const seek = $("#dock-seek");
+  if (!seek || seeking) return;
+  const frac = dur ? now / dur : 0;
+  seek.value = String(Math.round(frac * 1000));
+  seek.style.setProperty("--p", `${(frac * 100).toFixed(2)}%`);
+  $("#dock-pos").textContent = clock(now);
+  $("#dock-dur").textContent = clock(dur);
+}
 function onState(s) {
   if (!s) return;
   playing = !s.paused;
+  pos = s.position || 0; dur = s.duration || 0; at = Date.now();
+  drawProgress();
   showToggle();
   // Movements play on one after another: once the next one starts, the dock names it.
   const cur = s.track_window?.current_track;
@@ -412,6 +427,9 @@ function showDock(title, sdk) {
   else if (player) player.pause().catch(() => {});
   $("#dock-frame").hidden = sdk;
   $("#dock-toggle").hidden = !sdk;
+  $("#dock-prog").hidden = !sdk;
+  clearInterval(tick);
+  if (sdk) { pos = 0; dur = 0; at = Date.now(); drawProgress(); tick = setInterval(drawProgress, 500); }
   dock.classList.toggle("sdk", sdk);
   $("#dock-title").textContent = title || "正在播放";
   dock.hidden = false;
@@ -423,8 +441,23 @@ export function initDock() {
     player?.activateElement?.();
     player?.togglePlay().catch(() => {});
   });
+  const seek = $("#dock-seek");
+  // While the finger is on the dot the time follows it; letting go moves the music there.
+  seek.addEventListener("input", () => {
+    seeking = true;
+    const ms = (Number(seek.value) / 1000) * dur;
+    seek.style.setProperty("--p", `${Number(seek.value) / 10}%`);
+    $("#dock-pos").textContent = clock(ms);
+  });
+  seek.addEventListener("change", () => {
+    const ms = Math.round((Number(seek.value) / 1000) * dur);
+    pos = ms; at = Date.now(); seeking = false;
+    player?.seek(ms).catch(() => {});
+    drawProgress();
+  });
   $("#dock-close").addEventListener("click", () => {
     attempt++;
+    clearInterval(tick);
     $("#dock-frame").src = "about:blank";
     if (player) player.pause().catch(() => {});
     $("#dock").hidden = true;

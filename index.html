@@ -32,6 +32,7 @@
 <div class="dock" id="dock" hidden>
   <div class="in">
     <div class="bar"><span id="dock-title">正在播放</span><button type="button" id="dock-toggle" hidden>暫停</button><button type="button" id="dock-close" aria-label="關閉播放器">收起 ✕</button></div>
+    <div class="prog" id="dock-prog" hidden><span id="dock-pos">0:00</span><input type="range" id="dock-seek" min="0" max="1000" value="0" step="1" aria-label="播放進度"><span id="dock-dur">0:00</span></div>
     <iframe id="dock-frame" title="Spotify 播放器" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
 </div>
