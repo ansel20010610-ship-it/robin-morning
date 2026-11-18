@@ -1,0 +1,262 @@
+{
+  "column": "perio",
+  "date": "2026-11-19",
+  "title": "拔牙窩填骨粉，寬度多留約 2 毫米",
+  "dek": "拔完牙，骨頭一定會縮。當下把拔牙窩填起來，能少縮多少？植體會不會因此比較成功？",
+  "brief": "拔牙後牙槽骨一定會縮，寬度縮得比高度多。2019 年刊出、為第 15 屆歐洲牙周研討會所寫的一篇統合分析納入 22 個隨機試驗；其中拔牙窩植骨的試驗合併後，寬度比不填的平均少縮 1.99 毫米。2021 年的 Cochrane 回顧方向相同，但證據確定性非常低，也看不出植體成敗有差別。",
+  "takeaway": "拔牙當下填骨，3 到 6 個月後，頰舌寬度比不填的平均多留約 2 毫米（隨機試驗統合分析）。想保住寬度，這是有效的做法；但植體會不會因此比較成功，目前沒有證據。",
+  "chairside": "牙拔掉以後，這裡的骨頭會慢慢變窄。如果拔牙時先把洞填上骨粉，研究平均起來，幾個月後寬度可以多留約 2 毫米。不過，植牙會不會因此比較成功，目前還沒有證據。",
+  "topic_key": "perio:doi:10.1111/jcpe.13057",
+  "form": "flow",
+  "voice": "colleague",
+  "updated_at": "2026-11-18T22:49:31+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Extraction_socket_with_bone_graft_and_barrier_membrane.jpg/1280px-Extraction_socket_with_bone_graft_and_barrier_membrane.jpg",
+    "width": 1280,
+    "height": 853,
+    "alt": "口內近照，金屬拉鉤撐開嘴唇與臉頰。兩顆牙之間的空位填滿白色顆粒狀材料，混著血；空位後方立著一片印有藍色小點的白色薄片，旁邊的牙齒表面有褐色斑點。",
+    "caption": "拔牙窩填入骨移植材料、再固定一層膜（依 Wikimedia Commons 檔案說明），這是齒槽嵴保存的做法之一。Ian Furst 自行拍攝上傳，標示日期 2019 年 6 月；照片與本文討論的論文受試者無關。",
+    "credit": "Ian Furst／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Extraction_socket_with_bone_graft_and_barrier_membrane.jpg",
+    "made": "2019"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "拔掉一顆牙，那裡的骨頭一定會縮。縮多了，之後植體就放不到理想的位置。**齒槽嵴保存**就是拔牙當下把拔牙窩填上骨移植材料，常再蓋膜或膠原海綿封口，讓它長幾個月，目的是少縮一點。"
+    },
+    {
+      "type": "p",
+      "text": "主角是 2019 年刊在 *J Clin Periodontol* 的統合分析，把多個隨機試驗合起來算，第一作者是 **Gustavo Avila-Ortiz**。第 15 屆歐洲牙周研討會第 3 組討論拔牙窩處理與植牙時機，寫共識所依據的四篇系統性回顧，這篇是其一。"
+    },
+    {
+      "type": "h",
+      "text": "先複習：不填會縮多少"
+    },
+    {
+      "type": "p",
+      "text": "2012 年 Tan 等人整理人體研究：拔牙後 6 個月，寬度平均少 3.79 毫米，頰側高度少 1.24 毫米。寬度縮得比高度多，頭 3 到 6 個月縮得最快。"
+    },
+    {
+      "type": "p",
+      "text": "頰側最先垮。Araújo 和 Lindhe 2005 年的狗實驗看到，頰側骨嵴整片是束狀骨，就是貼著牙根、讓牙周韌帶纖維插進去的那層薄骨。牙一拔，這層骨被吸收，頰側就明顯變矮。"
+    },
+    {
+      "type": "facts",
+      "title": "不填的拔牙窩：6 個月縮多少",
+      "items": [
+        [
+          "寬度（水平）",
+          "平均少 3.79 毫米，約原本的 29–63%"
+        ],
+        [
+          "頰側高度（垂直）",
+          "平均少 1.24 毫米；垂直約 11–22%"
+        ],
+        [
+          "縮得最快",
+          "拔牙後頭 3 到 6 個月，之後慢慢縮"
+        ],
+        [
+          "哪一側先縮",
+          "頰側先縮，寬度縮得比高度多"
+        ],
+        [
+          "出處",
+          "Tan 等 2012 年 *Clin Oral Implants Res* 系統性回顧（人體再進入研究）；吸收順序依 Atieh 等 2021 Cochrane 回顧背景整理"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "填了，少縮多少"
+    },
+    {
+      "type": "p",
+      "text": "這篇只收隨機試驗，共 22 個，每個都拿一種齒槽嵴保存做法和「拔了不填」比，癒合 3 到 6 個月後再量。"
+    },
+    {
+      "type": "p",
+      "text": "結果是：填骨組的頰舌寬度比不填的少縮 **1.99 毫米**，95% 信賴區間 1.54 到 2.44。頰側正中的高度少縮 1.72 毫米，舌側少縮 1.16 毫米。這是兩組的差：不填的那組多縮這麼多。"
+    },
+    {
+      "type": "svg",
+      "title": "填骨比不填，少縮多少",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 380\">\n<rect class=\"paper\" x=\"0\" y=\"0\" width=\"680\" height=\"380\"/>\n<text class=\"ink\" x=\"20\" y=\"30\" font-size=\"17\" font-weight=\"bold\">拔牙窩的頰舌切面：量哪三個地方</text>\n<text class=\"muted\" x=\"20\" y=\"52\" font-size=\"12\">示意，不按比例；數字依 Avila-Ortiz 等 2019 摘要</text>\n<text class=\"ink\" x=\"70\" y=\"96\" font-size=\"13\" text-anchor=\"middle\">頰側</text>\n<text class=\"muted\" x=\"70\" y=\"113\" font-size=\"11\" text-anchor=\"middle\">（臉頰這邊）</text>\n<text class=\"ink\" x=\"420\" y=\"96\" font-size=\"13\" text-anchor=\"middle\">舌側</text>\n<path class=\"soft\" d=\"M120 350 C128 250 150 190 180 185 L330 165 C360 168 378 250 386 350 Z\"/>\n<path class=\"ink\" fill=\"none\" stroke-width=\"2.5\" d=\"M120 350 C128 250 150 190 180 185 L330 165 C360 168 378 250 386 350\"/>\n<path class=\"muted\" fill=\"none\" stroke-width=\"2\" stroke-dasharray=\"7 5\" d=\"M95 350 C100 230 112 130 135 118 L160 118 L170 300 L320 300 L330 112 L355 112 C375 125 392 230 400 350\"/>\n<line class=\"accent\" stroke-width=\"2\" x1=\"140\" y1=\"120\" x2=\"140\" y2=\"198\"/>\n<path class=\"accent\" d=\"M134 190 L140 202 L146 190 Z\"/>\n<text class=\"accent\" x=\"132\" y=\"160\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"end\">②</text>\n<line class=\"accent\" stroke-width=\"2\" x1=\"345\" y1=\"114\" x2=\"345\" y2=\"172\"/>\n<path class=\"accent\" d=\"M339 164 L345 176 L351 164 Z\"/>\n<text class=\"accent\" x=\"355\" y=\"148\" font-size=\"13\" font-weight=\"bold\">③</text>\n<line class=\"accent\" stroke-width=\"2\" x1=\"128\" y1=\"250\" x2=\"378\" y2=\"250\"/>\n<path class=\"accent\" d=\"M136 244 L124 250 L136 256 Z\"/>\n<path class=\"accent\" d=\"M370 244 L382 250 L370 256 Z\"/>\n<text class=\"accent\" x=\"253\" y=\"242\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">① 頰舌寬度</text>\n<line class=\"muted\" stroke-width=\"2\" stroke-dasharray=\"7 5\" x1=\"20\" y1=\"372\" x2=\"50\" y2=\"372\"/>\n<text class=\"muted\" x=\"56\" y=\"376\" font-size=\"11\">拔牙當下的骨輪廓</text>\n<line class=\"ink\" stroke-width=\"2.5\" x1=\"190\" y1=\"372\" x2=\"220\" y2=\"372\"/>\n<text class=\"muted\" x=\"226\" y=\"376\" font-size=\"11\">癒合幾個月後（示意）</text>\n<text class=\"ink\" x=\"455\" y=\"96\" font-size=\"14\" font-weight=\"bold\">填骨比不填，少縮</text>\n<text class=\"muted\" x=\"455\" y=\"116\" font-size=\"11\">納入 22 個隨機試驗，植骨的部分合併</text>\n<text class=\"muted\" x=\"455\" y=\"132\" font-size=\"11\">癒合 3–6 個月</text>\n<text class=\"accent\" x=\"455\" y=\"160\" font-size=\"14\" font-weight=\"bold\">① 寬度 1.99 毫米</text>\n<text class=\"muted\" x=\"475\" y=\"180\" font-size=\"11\">95% CI 1.54–2.44</text>\n<text class=\"accent\" x=\"455\" y=\"220\" font-size=\"14\" font-weight=\"bold\">② 頰側中點高度 1.72 毫米</text>\n<text class=\"muted\" x=\"475\" y=\"240\" font-size=\"11\">95% CI 0.96–2.48</text>\n<text class=\"accent\" x=\"455\" y=\"280\" font-size=\"14\" font-weight=\"bold\">③ 舌側中點高度 1.16 毫米</text>\n<text class=\"muted\" x=\"475\" y=\"300\" font-size=\"11\">95% CI 0.81–1.52</text>\n<text class=\"muted\" x=\"455\" y=\"335\" font-size=\"11\">是兩組相差的量，</text>\n<text class=\"muted\" x=\"455\" y=\"351\" font-size=\"11\">不是填骨後還縮了多少</text>\n</svg>",
+      "caption": "頰舌方向切面示意，不按比例。① 頰舌寬度、② 頰側中點高度、③ 舌側中點高度，是 Avila-Ortiz 等 2019 年統合分析報告的三個量；右側數字是拔牙窩植骨組比單純拔牙組少縮的毫米數（95% 信賴區間），依原文摘要數據重繪。",
+      "credit": "本報原創圖解"
+    },
+    {
+      "type": "quote",
+      "text": "齒槽嵴保存是一種有效的治療，能減緩拔牙後通常會發生的牙槽嵴尺寸縮減。",
+      "original": "Alveolar ridge preservation is an effective therapy to attenuate the dimensional reduction of the alveolar ridge that normally takes place after tooth extraction.",
+      "cite": "Avila-Ortiz、Chambrone、Vignoletti，2019，摘要結論；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "哪種材料、哪種封口最好，作者說判斷不出來。只看寬度，和最好結果有關的組合是顆粒狀的異種骨或同種異體骨，常見的是牛骨和人骨庫的骨，上面再蓋可吸收的膠原膜或膠原海綿。這是「有關」，不是證明最好。"
+    },
+    {
+      "type": "p",
+      "text": "頰側骨板厚度超過 1 毫米的部位，論文裡同種異體骨加封口這一組和不填的差到 **3.2 毫米**；骨板較薄的只差 1.29 毫米。這個 3.2 毫米只屬於這一組。"
+    },
+    {
+      "type": "p",
+      "text": "照這一組的數字，頰側骨板本來就厚的位置，填骨的好處可能比較大。",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "證據有多硬"
+    },
+    {
+      "type": "p",
+      "text": "方向很一致。同一位作者 2014 年只看非臼齒，算出寬度少縮 1.89 毫米。2021 年的 Cochrane 回顧裡，異種骨對單純拔牙的 6 個試驗，寬度少縮 1.18 毫米，高度少縮 1.35 毫米。"
+    },
+    {
+      "type": "p",
+      "text": "但 Cochrane 把這兩項的證據確定性評為**非常低**：各試驗的偏差風險不明，降一級；試驗之間差異很大，降兩級。"
+    },
+    {
+      "type": "p",
+      "text": "各試驗都朝「填了少縮」這個方向，只是少縮多少差很多。",
+      "tag": "推論"
+    },
+    {
+      "type": "table",
+      "title": "三篇統合分析，同一個方向",
+      "head": [
+        "回顧",
+        "比什麼",
+        "寬度少縮",
+        "高度少縮",
+        "證據確定性"
+      ],
+      "rows": [
+        [
+          "Avila-Ortiz 等 2014，*J Dent Res*",
+          "非臼齒，植骨對單純拔牙",
+          "1.89 毫米（1.41–2.36）",
+          "頰側中點 2.07（1.03–3.12）；舌側中點 1.18（0.17–2.19）",
+          "—"
+        ],
+        [
+          "Avila-Ortiz 等 2019，*J Clin Periodontol*",
+          "納入 22 個隨機試驗；植骨對單純拔牙的合併，癒合 3–6 個月",
+          "1.99 毫米（1.54–2.44）",
+          "頰側中點 1.72（0.96–2.48）；舌側中點 1.16（0.81–1.52）",
+          "—"
+        ],
+        [
+          "Atieh 等 2021，Cochrane",
+          "6 篇隨機試驗、184 人，異種骨對單純拔牙",
+          "1.18 毫米（0.54–1.82）",
+          "1.35 毫米（0.70–2.00）",
+          "GRADE 非常低（偏差風險不明、試驗間差異大）"
+        ]
+      ],
+      "caption": "括號內為 95% 信賴區間，單位毫米。Avila-Ortiz 兩篇的摘要未報告證據確定性；GRADE 評等只取自 Cochrane 回顧；三篇納入的試驗有重疊，不能相加。依各篇摘要與 Cochrane 回顧的 Summary of findings 表整理。"
+    },
+    {
+      "type": "h",
+      "text": "還沒證明的事"
+    },
+    {
+      "type": "p",
+      "text": "骨頭的尺寸有證據，植體成敗還沒有。Cochrane 看植牙時要不要再補骨，兩組看不出差別，只有 4 個試驗、154 人。植體失敗率也看不出差別，只有 2 個試驗、70 人，確定性一樣非常低。"
+    },
+    {
+      "type": "quote",
+      "text": "在理想條件下、非臼齒的四壁拔牙窩，齒槽嵴保存技術可能減少拔牙後牙槽嵴寬度與高度的喪失，但證據非常不確定。一般同意植體可以在齒槽嵴保存六個月後，以延遲植入的方式放入。然而，沒有證據顯示齒槽嵴保存會提高植體或假牙的成功率。",
+      "original": "Alveolar ridge preservation (ARP) techniques may minimise the loss of ridge width and height under ideal conditions in non‐molar four‐wall sockets, following extraction, but the evidence is very uncertain. There is a general agreement that implants can be placed six months after ARP, following a delayed placement procedure. However, there was no evidence that ARP would improve implant or prosthodontic success.",
+      "cite": "Atieh 等，2021，Cochrane 回顧〈對臨床的意涵〉；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "研討會的共識報告也提醒，這些證據多半來自單顆牙拔除，套到一次拔好幾顆要小心。"
+    },
+    {
+      "type": "paper",
+      "citation": "Avila-Ortiz G, Chambrone L, Vignoletti F. Effect of alveolar ridge preservation interventions following tooth extraction: A systematic review and meta-analysis. *J Clin Periodontol*. 2019;46 Suppl 21:195–223.",
+      "doi": "10.1111/jcpe.13057",
+      "pmid": "30623987",
+      "link": "https://doi.org/10.1111/jcpe.13057",
+      "evidence": "歐洲牙周研討會系統性回顧與統合分析：納入 22 個隨機試驗",
+      "design": "系統性回顧與隨機效應統合分析，只收隨機對照試驗；齒槽嵴保存對照拔牙後自然癒合，癒合期 3–6 個月。第 15 屆歐洲牙周研討會（2018 年 11 月）第 3 組共識報告所依據的四篇系統性回顧之一",
+      "sample": "25 篇文章、22 個隨機試驗，分出 9 種做法；能合併分析的都是拔牙窩植骨",
+      "question": "拔牙後做齒槽嵴保存，比單純拔牙少縮多少骨頭？",
+      "access": "依摘要整理（PubMed）；證據確定性依 Atieh 等 2021 Cochrane 回顧全文，研討會背景依 Tonetti 等 2019 共識報告摘要"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Effect of alveolar ridge preservation interventions following tooth extraction: A systematic review and meta-analysis",
+      "publisher": "Journal of Clinical Periodontology（Avila-Ortiz G、Chambrone L、Vignoletti F）",
+      "date": "2019-06-18",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30623987/",
+      "note": "讀摘要（PubMed E-utilities）；出版社全文未能開啟。2020 年有一則更正（J Clin Periodontol 47(1):129，DOI 10.1111/jcpe.13212），內容未讀。日期依 Crossref 線上出版日"
+    },
+    {
+      "title": "Interventions for replacing missing teeth: alveolar ridge preservation techniques for dental implant site development",
+      "publisher": "Cochrane Database of Systematic Reviews（Atieh MA 等）",
+      "date": "2021-04-26",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8092674/",
+      "note": "讀全文：摘要、背景、Summary of findings 1、對臨床的意涵；DOI 10.1002/14651858.CD010176.pub3"
+    },
+    {
+      "title": "Management of the extraction socket and timing of implant placement: Consensus report and clinical recommendations of group 3 of the XV European Workshop in Periodontology",
+      "publisher": "Journal of Clinical Periodontology（Tonetti MS 等）",
+      "date": "2019-06-18",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31215112/",
+      "note": "讀摘要；DOI 10.1111/jcpe.13131"
+    },
+    {
+      "title": "A systematic review of post-extractional alveolar hard and soft tissue dimensional changes in humans",
+      "publisher": "Clinical Oral Implants Research（Tan WL、Wong TL、Wong MC、Lang NP）",
+      "date": "2012-02-01",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22211303/",
+      "note": "讀摘要；DOI 10.1111/j.1600-0501.2011.02375.x"
+    },
+    {
+      "title": "Effect of alveolar ridge preservation after tooth extraction: a systematic review and meta-analysis",
+      "publisher": "Journal of Dental Research（Avila-Ortiz G 等）",
+      "date": "2014-06-25",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4293706/",
+      "note": "讀摘要；DOI 10.1177/0022034514541127"
+    },
+    {
+      "title": "Dimensional ridge alterations following tooth extraction. An experimental study in the dog",
+      "publisher": "Journal of Clinical Periodontology（Araújo MG、Lindhe J）",
+      "date": "2005-02-01",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15691354/",
+      "note": "讀摘要；狗實驗，只用於說明頰側骨嵴為何先縮"
+    },
+    {
+      "title": "Bone healing and soft tissue contour changes following single-tooth extraction: a clinical and radiographic 12-month prospective study",
+      "publisher": "International Journal of Periodontics & Restorative Dentistry（Schropp L 等）",
+      "date": "2003-08-01",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12956475/",
+      "note": "讀摘要；「頭三個月變化最多」等數字依 Atieh 等 2021 Cochrane 回顧背景段轉引"
+    },
+    {
+      "title": "File:Extraction socket with bone graft and barrier membrane.jpg",
+      "publisher": "Wikimedia Commons（Ian Furst，CC BY-SA 4.0）",
+      "date": "2019-06-09",
+      "url": "https://commons.wikimedia.org/wiki/File:Extraction_socket_with_bone_graft_and_barrier_membrane.jpg",
+      "note": "頭圖"
+    },
+    {
+      "title": "Perio Workshop 2018 reviewed evidence on bone regeneration",
+      "publisher": "European Federation of Periodontology",
+      "date": "2018-12-16",
+      "url": "https://efp.org/news-events/news/perio-workshop-2018-reviewed-evidence-on-bone-regeneration-30251",
+      "note": "第 15 屆歐洲牙周研討會舉行時間（2018 年 11 月）"
+    }
+  ]
+}
