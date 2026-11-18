@@ -2932,3 +2932,4 @@ html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
 .mu-count { font: 600 12px/1 var(--sc-caps); letter-spacing: .24em; }
 .mu-foot .cr-flip { display: inline-block; text-align: center; text-decoration: none; }
 .mu-foot .cr-flip.off { opacity: .25; pointer-events: none; }
+.mu-salon > .mu-hang:not(.lead) { justify-self: center; width: min(100%, 96px); } /* a work that falls in the wide middle column stays a side size, never larger than the lead */

@@ -8,7 +8,8 @@ import { esc } from "./util.js";
 const SMALL = new Set(["of", "the", "and", "de", "la", "las", "los", "del", "di", "da", "van", "von", "der", "le", "les"]);
 // artwork:velazquez-las-meninas → Las Meninas (the first word of the key is the artist)
 export const workTitle = (a) => String(a.topic_key || "").replace(/^artwork:[^-]+-?/, "").split("-").filter(Boolean).map((w, i) => (i && SMALL.has(w) ? w : w[0].toUpperCase() + w.slice(1))).join(" ");
-export const artistOf = (a) => String(a.hero?.credit || "").split("／")[0].replace(/\s*攝$/, "").trim();
+// The artist: the picture credit's first part — unless that names the photographer (「… 攝」), then the key's first word.
+export const artistOf = (a) => { const c = String(a.hero?.credit || "").split("／")[0].trim(); if (c && !/攝$/.test(c)) return c; const k = String(a.topic_key || "").match(/^artwork:([^-]+)/); return k ? k[1][0].toUpperCase() + k[1].slice(1) : ""; };
 const ratio = (a) => (a.hero?.width > 0 && a.hero?.height > 0 ? a.hero.width / a.hero.height : 0.8);
 const pic = (a) => a.hero?.thumb || a.hero?.src || "";
 const ROMAN = (n) => [[1000, "M"], [900, "CM"], [500, "D"], [400, "CD"], [100, "C"], [90, "XC"], [50, "L"], [40, "XL"], [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]].reduce((s, [v, r]) => { while (n >= v) { s += r; n -= v; } return s; }, "");
