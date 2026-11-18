@@ -49,13 +49,16 @@ export const overdue = (date, now = twNow(), limit = OVERDUE) => date < now.date
 // The day's rows in the order of the clock: each shift of DAY (the needed-only ones on a day they reported) and, on a
 // Sunday held for the afternoon, the 補刊 (the owner, 2026-11-08: 禮拜天補刊印務室也要有訊息) — its report in state/runs
 // (key "late") or where it stands (content/late.json). st: done (reported), wait (not yet due), late (past its minute).
+// A shift whose hour has come tonight but that has not reported yet is still "wait", with the word 在跑 (the owner,
+// 2026-11-19) — the page knows only the clock and the reports, so that is what 在跑 means.
 function dayRows(issue, now) {
   const { date } = issue, press = issue.press || {}, shifts = press.shifts || {};
   const rows = [];
   for (const [k, at, part, name, duty, limit, cond] of DAY) {
     const r = /^\d$/.test(k) ? shifts[k] : press[k];
     if (cond && !r) continue;
-    rows.push({ m: k === "column" ? mins(at) - 24 * 60 : mins(at), k, at, part, name, duty, r, st: r ? "done" : overdue(date, now, limit) ? "late" : "wait" });
+    const m = k === "column" ? mins(at) - 24 * 60 : mins(at), st = r ? "done" : overdue(date, now, limit) ? "late" : "wait";
+    rows.push({ m, k, at, part, name, duty, r, st, word: st === "wait" && date === now.date && m <= now.minutes ? "在跑" : "" });
   }
   const lt = issue.late, lr = press.late;
   if (lt || lr) {
@@ -90,7 +93,7 @@ function verdict(issue, rows, col, now) {
     const night = rows.filter((x) => x.part !== "day"), done = night.filter((x) => x.st === "done").length;
     next = night.find((x) => x.st !== "done");
     big = next ? `稿子正在寫，${done ? `已經交了 ${done} 班` : "還沒有人交稿"}。` : missing.length ? "各班都交了，但還缺稿。" : "稿都交了，等 07:30 出刊。";
-    if (next) sub.push(`${date === now.date && next.m <= now.minutes ? "正在等" : "下一班"}：${next.at} ${next.name}`);
+    if (next) sub.push(`${date === now.date && next.m <= now.minutes ? "正在跑" : "下一班"}：${next.at} ${next.name}`);
   } else if (!issue.press) big = "還沒收到今天這期的紀錄。"; // an index older than the issue (app.js viewPress's empty record): nothing to conclude from
   else big = missing.length ? "07:30 出刊了，但有缺稿。" : "07:30 準時出刊，每一欄都到齊。";
   if (missing.length && (out || lt || !next)) sub.push(`還缺：${missing.join("、")}`);
@@ -103,7 +106,7 @@ function verdict(issue, rows, col, now) {
 // 今晨: the first issue handed in (app.js viewPress: the one of today's date, from 22:30 the evening before on, whether it exists yet or
 // not). The sentence on top, then the day in its parts — 前一晚, 凌晨, 天亮前, the 07:30 出刊 rule, 白天 — each shift a
 // diamond on the line as the paper's own timelines draw them: filled once it reported, hollow while it is not yet due,
-// red once it is overdue (the state itself is the word on the right). 此刻 (the owner, 2026-11-06): on tonight's timetable a hairline where the clock stands, gone
+// red once it is overdue (the state itself is the word on the right: 等候 before its hour, 在跑 once its hour has come). 此刻 (the owner, 2026-11-06): on tonight's timetable a hairline where the clock stands, gone
 // once the night is over (07:45).
 function morning(issue, col, now) {
   if (!issue) return `<p class="empty">還沒有任何一期。</p>`;
@@ -153,7 +156,7 @@ function stockHtml(cfg, stock, col) {
 // 最近十四天: a row per issue, newest first, a mark per shift — ✓ reported, · not — for the six shifts of the night, the
 // 演出班, the 連載班 and the 備稿班. Left blank, not drawn as missing: a shift's days before its first report in the
 // index (it did not run yet; 先發班 began 2026-11-11), today's shifts that are not yet due (as the timetable above says
-// 等候), and 先發班 on a night it did not write. Each mark names its state for a screen reader.
+// 等候 or 在跑), and 先發班 on a night it did not write. Each mark names its state for a screen reader.
 const ROSTER = [["column", "先", "先發班"], ["1", "一", "第 1 班"], ["2", "二", "第 2 班"], ["3", "三", "第 3 班"], ["4", "四", "第 4 班"], ["5", "五", "第 5 班"], ["concerts", "演", "演出班"], ["serial", "連", "連載班"], ["reserve", "備", "備稿班"]];
 function fortnight(issues, now) {
   const rows = issues.slice(0, 14);
