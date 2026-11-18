@@ -1,0 +1,355 @@
+{
+  "column": "music",
+  "date": "2026-11-19",
+  "title": "《2001》開場的號角，原曲取材自尼采的書",
+  "dek": "貓王出場、太空電影開場都用它。這首 1896 年的曲子原本在講什麼，按下播放又該先聽哪幾個地方？",
+  "brief": "《查拉圖斯特拉如是說》是理查・史特勞斯 1896 年寫的交響詩，自由取材於尼采的書。開頭的號角被 1968 年的電影《2001：太空漫遊》用成主要音樂主題，貓王也從 1971 年起拿它當演唱會出場音樂。按下播放，先聽開頭的日出、〈關於科學〉的賦格，以及舞曲和結尾的午夜鐘聲。",
+  "topic_key": "music:strauss-r-op30",
+  "updated_at": "2026-11-19T00:55:43+08:00",
+  "form": "qa",
+  "voice": "listener",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Strauss_APZ.jpg",
+    "width": 1111,
+    "height": 396,
+    "alt": "一段橫放的總譜，由上到下的譜表標著「4 Trompeten (C)」（四支小號）、「3 Posaunen」（三支長號）、「2 Pauken」（兩個定音鼓）、「Grosse Trommel」（低音大鼓）。最下面的大鼓譜表一路是長音，標著很輕的 pp 與「mit Paukenschlägeln」（用定音鼓槌）。小號譜表前幾小節是空的，後面才出現標著「feierlich」（莊嚴地）的音，右側定音鼓出現一串密集的八分音符。",
+    "caption": "《查拉圖斯特拉如是說》總譜開頭的摘錄：前面幾小節只有低音大鼓用定音鼓槌輕輕滾奏，小號在後面才進來，譜上寫著「feierlich」，意思是莊嚴地。",
+    "credit": "Richard Strauss；樂譜摘錄經 Wikimedia Commons（IMSLP 掃描）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Strauss_APZ.jpg",
+    "made": "1896 年作曲；掃描版本的出版年未核對"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "這首曲子的開頭，你八成聽過。1968 年的電影《2001：太空漫遊》開場用它，貓王的演唱會上場時也放它。曲名叫**《查拉圖斯特拉如是說》**，是德國作曲家兼指揮**理查・史特勞斯**在 1896 年寫的。他生於 1864 年，慕尼黑人，和寫《藍色多瑙河》的小約翰・史特勞斯不是同一位。"
+    },
+    {
+      "type": "h",
+      "text": "這是一首什麼樣的曲子？"
+    },
+    {
+      "type": "p",
+      "text": "它叫交響詩：只用一個管弦樂團，不分樂章，照著一個故事或一本書的內容編成音樂。史特勞斯依據的是德國哲學家尼采的書，書名跟曲名一樣。尼采在 1883 到 1885 年分四部出版，是一部帶哲學味的虛構作品。"
+    },
+    {
+      "type": "p",
+      "text": "書裡的主角查拉圖斯特拉，名義上是歷史上的瑣羅亞斯德。他在山裡住了十年，然後下山回到人群，鼓勵大家追求更高一層的人，書裡叫「超人」。史特勞斯在樂譜上標的是「交響詩，自由取材於尼采」，意思是照他自己的想法發揮。"
+    },
+    {
+      "type": "h",
+      "text": "什麼時候寫的？"
+    },
+    {
+      "type": "p",
+      "text": "1896 年 2 月 4 日在慕尼黑動筆，8 月 24 日寫完。11 月 27 日在法蘭克福首演，史特勞斯自己指揮，那年他 32 歲。他當時在慕尼黑的巴伐利亞國家歌劇院當首席指揮，負責華格納的歌劇。前一年他寫了交響詩《提爾・奧倫史匹格》，後一年寫了《唐吉訶德》。美國首演在 1897 年 2 月 5 日，地點芝加哥。"
+    },
+    {
+      "type": "h",
+      "text": "史特勞斯自己怎麼說？"
+    },
+    {
+      "type": "p",
+      "text": "他把這首曲子介紹到柏林時，寫過一段節目說明。"
+    },
+    {
+      "type": "quote",
+      "text": "我並不打算寫哲學音樂，也不打算用音樂描寫尼采那部偉大的著作。我想用音樂傳達一個概念：人類從起源開始發展，經過宗教與科學的各個階段，一直到尼采所說的超人。",
+      "original": "I did not intend to write philosophical music or to portray in music Nietzsche's great work. I wished to convey by means of music an idea of the development of the human race from its origin, through the various phases of its development, religious and scientific, up to Nietzsche's idea of the superman.",
+      "cite": "理查・史特勞斯，把這首曲子介紹到柏林時寫的節目說明（American Symphony Orchestra 節目介紹引用的英譯；本文自譯；各英譯措辭略有出入）"
+    },
+    {
+      "type": "p",
+      "text": "他先說不是要寫哲學音樂，也不是替尼采的書配音。他想講的是人類從起源一路發展，經過宗教、科學，一直到尼采說的超人。他還說整首曲子是向尼采的才氣致敬。美國的 American Symphony Orchestra 在節目介紹裡說，這段話讀起來幾乎像《2001》前半部的劇情大綱。這是節目單作者的看法，不是史特勞斯說的。"
+    },
+    {
+      "type": "h",
+      "text": "全曲怎麼走？"
+    },
+    {
+      "type": "p",
+      "text": "全曲分成九段，演奏一次約三十多分鐘。只有三處明確停頓，其餘連續演奏。後八段的標題取自尼采書中的章名。"
+    },
+    {
+      "type": "table",
+      "title": "九段，連續演奏",
+      "head": [
+        "順序",
+        "段名（原文）",
+        "白話"
+      ],
+      "rows": [
+        [
+          "1",
+          "Sonnenaufgang",
+          "日出（全曲最有名的開頭）"
+        ],
+        [
+          "2",
+          "Von den Hinterweltlern",
+          "關於背後世界的人"
+        ],
+        [
+          "3",
+          "Von der großen Sehnsucht",
+          "關於偉大的渴望"
+        ],
+        [
+          "4",
+          "Von den Freuden und Leidenschaften",
+          "關於喜悅與熱情"
+        ],
+        [
+          "5",
+          "Das Grablied",
+          "墓歌"
+        ],
+        [
+          "6",
+          "Von der Wissenschaft",
+          "關於科學（有一段賦格）"
+        ],
+        [
+          "7",
+          "Der Genesende",
+          "病癒者"
+        ],
+        [
+          "8",
+          "Das Tanzlied",
+          "舞曲（華爾茲）"
+        ],
+        [
+          "9",
+          "Nachtwandlerlied",
+          "夜遊者之歌（午夜鐘聲，在兩個調上結束）"
+        ]
+      ],
+      "caption": "全曲只有三處明確停頓，其餘連續演奏。後八段的標題取自尼采書中的章名。中文為本欄自譯，英文譯名各家略有不同。來源：Wikipedia、American Symphony Orchestra 節目介紹、印第安納波利斯交響樂團節目單。"
+    },
+    {
+      "type": "h",
+      "text": "按下播放，先聽哪三個地方？"
+    },
+    {
+      "type": "p",
+      "text": "下面這個版本是卡拉揚指揮維也納愛樂，Decca 1959 年 3 月在維也納錄的，全長 33 分 25 秒。電影裡用的就是這個錄音。"
+    },
+    {
+      "type": "music",
+      "composer": "理查・史特勞斯（Richard Strauss）",
+      "work": "交響詩《查拉圖斯特拉如是說》，作品 30",
+      "work_original": "Also sprach Zarathustra, Op. 30",
+      "composed": "1896",
+      "performers": "赫伯特・馮・卡拉揚（Herbert von Karajan）指揮 維也納愛樂（Wiener Philharmoniker）",
+      "recording": "Decca，1959 年 3 月錄音於維也納",
+      "duration": "約 33 分鐘（此版）",
+      "movements": [
+        "Sonnenaufgang",
+        "Von den Hinterweltlern",
+        "Von der großen Sehnsucht",
+        "Von den Freuden und Leidenschaften",
+        "Das Grablied",
+        "Von der Wissenschaft",
+        "Der Genesende",
+        "Das Tanzlied",
+        "Nachtwandlerlied"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Strauss Also sprach Zarathustra Karajan Wiener Philharmoniker 1959",
+        "artist_hint": "Karajan",
+        "track_filter": [
+          "Zarathustra"
+        ]
+      }
+    },
+    {
+      "type": "h",
+      "text": "第一處：開頭的日出"
+    },
+    {
+      "type": "p",
+      "text": "全曲從一個非常低的 C 音開始，由管風琴、低音提琴和低音管一起持續奏著。接著四支小號奏出只有三個音的號角：C、G、C。樂譜上，小號那裡寫著「莊嚴地」，底下的低音大鼓則用定音鼓槌，很輕地滾奏。"
+    },
+    {
+      "type": "p",
+      "text": "這個號角只有 C 和 G 兩個音，聽起來既不像大調也不像小調。American Symphony Orchestra 的節目介紹說，這讓人有「無限空間」的感覺。印第安納波利斯交響樂團的節目單把這個動機叫做「世界之謎」，還說之後兩支法國號會引用格列高利聖歌《信經》的曲調。"
+    },
+    {
+      "type": "h",
+      "text": "第二處：〈關於科學〉裡的賦格"
+    },
+    {
+      "type": "p",
+      "text": "第六段〈關於科學〉裡，有一段不尋常的**賦格**。賦格就是同一個旋律，由一個聲部接著一個聲部輪流唱出來。這一段從第 201 小節起，由低音提琴和大提琴帶頭。"
+    },
+    {
+      "type": "p",
+      "text": "它的主題把半音階的十二個音全部用了一遍，也就是一個八度裡所有的黑鍵白鍵。印第安納波利斯的節目單說，這個主題是從開頭那個三音號角長出來的，並且把賦格和「客觀、科學的」做法連了起來。"
+    },
+    {
+      "type": "h",
+      "text": "第三處：舞曲，和午夜十二下鐘"
+    },
+    {
+      "type": "p",
+      "text": "第八段〈舞曲〉是一首華爾茲。印第安納波利斯的節目單形容它是「讓人沉醉、帶吉普賽味的華爾茲」，取材自小約翰・史特勞斯的風格，也就是前面提到寫《藍色多瑙河》的那一位。鐘琴、弦樂和豎琴加進來，聲音很歡鬧。Wikipedia 說這一段有非常突出的小提琴獨奏。"
+    },
+    {
+      "type": "p",
+      "text": "最後一段〈夜遊者之歌〉從十二下午夜鐘聲開始，American Symphony Orchestra 的節目介紹形容那是十二下陰沉的鐘聲，力度逐漸減弱。結尾時，高音長笛、短笛和小提琴奏出 B 大調和弦，低音提琴撥奏一個低音 C，跟開頭那個音呼應。"
+    },
+    {
+      "type": "p",
+      "text": "全曲沒有停在 C 大調，也沒有停在 B 大調。有評論者形容這個結尾「在兩個調上讓人猜不透」。American Symphony Orchestra 的節目介紹解釋，C 大調代表宇宙，B 大調代表人類，兩邊的對立留著沒有解決。印第安納波利斯的節目單則說，這兩個調象徵人與自然之間無法調和的關係，循環可以「重新開始」。這些都是節目單作者的解讀，不是史特勞斯寫下來的。"
+    },
+    {
+      "type": "h",
+      "text": "你可能在哪裡聽過？"
+    },
+    {
+      "type": "p",
+      "text": "最有名的是**《2001：太空漫遊》**。導演是 Stanley Kubrick，1968 年 4 月 2 日在華盛頓特區首映，4 月 3 日在美國上映。開頭的號角因為在電影裡被重複用作主要音樂主題，而廣為人知。American Symphony Orchestra 的節目介紹說，Kubrick 和他的顧問，拿這個開頭配電影裡的日出段落。"
+    },
+    {
+      "type": "p",
+      "text": "電影用的錄音，就是上面那個 1959 年卡拉揚和維也納愛樂的版本。不過電影原聲帶專輯收的不是它。Deutsche Grammophon 的說法是，Kubrick 明確要這個錄音，但 Decca 同意授權給 MGM 的條件，是不能提到錄音細節。所以 MGM 的原聲帶專輯，收的是卡爾・貝姆 1958 年指揮柏林愛樂的另一個錄音。"
+    },
+    {
+      "type": "p",
+      "text": "另一個地方是**貓王**。從 1971 年起，他的現場演唱會用這首曲子的開頭當出場音樂。"
+    },
+    {
+      "type": "h",
+      "text": "這個樂團有多大？"
+    },
+    {
+      "type": "p",
+      "text": "很大。除了常見的木管、銅管和弦樂，還有六支法國號、四支小號、三支長號、兩支低音號、一支低音大管，加上定音鼓和打擊樂、管風琴，以及兩架豎琴。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "交響詩《查拉圖斯特拉如是說》，作品 30，自由取材於尼采的同名著作"
+        ],
+        [
+          "創作",
+          "1896 年 2 月 4 日在慕尼黑動筆，8 月 24 日完成"
+        ],
+        [
+          "首演",
+          "1896 年 11 月 27 日，法蘭克福，史特勞斯親自指揮"
+        ],
+        [
+          "結構",
+          "九段，只有三處明確停頓，其餘連續演奏"
+        ],
+        [
+          "編制",
+          "大型管弦樂團，加管風琴與兩架豎琴"
+        ],
+        [
+          "長度",
+          "一般演奏約 30 多分鐘"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Also sprach Zarathustra (Strauss)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Also_sprach_Zarathustra_(Strauss)",
+      "note": "1896 年作；1896-11-27 法蘭克福首演、史特勞斯指揮；C–G–C 自然動機；開頭低音 C 由低音提琴、低音管、管風琴；九段與三處停頓；〈科學〉賦格第 201 小節起、十二個音；結尾 12 下午夜鐘聲與 B 大調；貓王 1971–1977；電影用卡拉揚／維也納愛樂 1959 錄音；2026-11-18 查閱"
+    },
+    {
+      "title": "Also Sprach Zarathustra, Op. 30 (1896)",
+      "publisher": "American Symphony Orchestra（節目介紹）",
+      "date": "未註明",
+      "url": "https://americansymphony.org/concert-notes/also-sprach-zarathustra-op-30-1896",
+      "note": "史特勞斯給柏林的節目說明（引文）；四支小號莊嚴奏出自然動機、空心五度；十二下鐘聲、多調性結尾；Kubrick 用開頭配日出畫面；2026-11-18 查閱"
+    },
+    {
+      "title": "Strauss: Also sprach Zarathustra（作品頁）",
+      "publisher": "Boston Symphony Orchestra",
+      "date": "未註明",
+      "url": "https://bso.org/works/strauss-also-sprach-zarathustra",
+      "note": "1896-02-04 慕尼黑動筆、08-24 完成；法蘭克福市立管弦樂團首演；美國首演 1897-02-05 芝加哥；編制；2026-11-18 查閱"
+    },
+    {
+      "title": "Also Sprach Zarathustra（節目單）",
+      "publisher": "Indianapolis Symphony Orchestra",
+      "date": "未註明",
+      "url": "https://www.indianapolissymphony.org/backstage/program-notes/strauss-also-sprach-zarathustra/",
+      "note": "各段說明：世界之謎主題、〈科學〉賦格用十二個音、〈舞曲〉為華爾茲、午夜十二下鐘與低音 C；詮釋為節目單作者的說法；2026-11-18 查閱"
+    },
+    {
+      "title": "50 Fakten über Herbert von Karajan（第 2 部分）",
+      "publisher": "Deutsche Grammophon",
+      "date": "未註明",
+      "url": "https://www.deutschegrammophon.com/de/kuenstler/von-karajan/neuigkeiten/50-fakten-ueber-herbert-von-karajan-die-legende-lebt-teil-25-228227",
+      "note": "Kubrick 要 1959 年維也納愛樂的錄音；Decca 以「不提錄音細節」為授權條件；MGM 原聲帶改用貝姆 1958 年柏林愛樂版；2026-11-18 查閱"
+    },
+    {
+      "title": "2001: A Space Odyssey (film)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)",
+      "note": "原聲帶專輯用貝姆／柏林愛樂的另一版；1968-04-02 首映、04-03 美國上映；2026-11-18 查閱（讀到前 10 萬字）"
+    },
+    {
+      "title": "Charting the Music of Kubrick's 2001 and Its Influence",
+      "publisher": "Chicago Symphony Orchestra",
+      "date": "未註明",
+      "url": "https://chicagosymphony.org/inside-the-music/article/26663/charting-the-music-of-kubricks-2001-and-its-i",
+      "note": "貓王自 1971-02-20 拉斯維加斯演出起以這首號角登場；2026-11-18 查閱"
+    },
+    {
+      "title": "Richard Strauss",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Richard_Strauss",
+      "note": "1864-06-11 生於慕尼黑；1894 年起任慕尼黑巴伐利亞國家歌劇院首席指揮；1895《提爾》、1896《查拉圖斯特拉》、1897《唐吉訶德》；2026-11-18 查閱（讀到前 10 萬字）"
+    },
+    {
+      "title": "Thus Spoke Zarathustra",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Thus_Spoke_Zarathustra",
+      "note": "尼采 1883–1885 年分四部出版；副標題；主角名義上是瑣羅亞斯德；2026-11-18 查閱"
+    },
+    {
+      "title": "Also sprach Zarathustra (Strauss)",
+      "publisher": "Wikipedia（德文）",
+      "date": "未註明",
+      "url": "https://de.wikipedia.org/wiki/Also_sprach_Zarathustra_(Strauss)",
+      "note": "法蘭克福市立管弦樂團、博物館音樂會；一般演奏約半小時；段名；2026-11-18 查閱"
+    },
+    {
+      "title": "File:Strauss APZ.jpg",
+      "publisher": "Wikimedia Commons（IMSLP 掃描）",
+      "date": "2009-11-15（上傳）",
+      "url": "https://commons.wikimedia.org/wiki/File:Strauss_APZ.jpg",
+      "note": "頭圖：總譜開頭摘錄，標「feierlich」「mit Paukenschlägeln」；2026-11-18 查閱"
+    },
+    {
+      "title": "Herbert von Karajan: The Legendary Decca Recordings（評論）",
+      "publisher": "MusicWeb International",
+      "date": "未註明",
+      "url": "https://www.musicweb-international.com/classRev/2008/Apr08/Karajan_4780155.htm",
+      "note": "Decca 4780155 套裝；列「Also sprach Zarathustra, Op.30 (1896) [33:25]」，Vienna Philharmonic/Karajan，rec. Vienna, March 1959；2026-11-18 查閱"
+    }
+  ]
+}
