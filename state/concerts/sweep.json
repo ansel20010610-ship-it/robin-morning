@@ -1,11 +1,10 @@
 {
   "last": "2026-11-09",
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "sources": {
     "mna": {
       "urls": [
-        "https://www.mna.com.tw",
-        "https://www.mna.com.tw/concerts_detail.html?id=782"
+        "https://www.mna.com.tw"
       ],
       "seen": [
         {
@@ -14,7 +13,7 @@
           "id": "thielemann-staatskapelle-berlin-2026"
         },
         {
-          "title": "柯倫齊斯與烏托邦",
+          "title": "庫倫奇斯與烏托邦",
           "verdict": "已列入",
           "id": "currentzis-utopia-2026"
         },
@@ -24,62 +23,25 @@
           "id": "yuja-wang-mco-2026"
         },
         {
-          "title": "Philharmonix",
-          "verdict": "已列入",
-          "id": "philharmonix-2026"
-        },
-        {
-          "title": "朗朗鋼琴獨奏會",
+          "title": "郎朗獨奏會",
           "verdict": "已列入",
           "id": "lang-lang-recital-2026"
         },
         {
-          "title": "黛安娜·克瑞兒",
+          "title": "Diana Krall",
           "verdict": "不收",
-          "why": "爵士歌手，不在收錄範圍"
-        },
-        {
-          "title": "馬克·安德烈低音提琴音樂會（11/20 台北國家音樂廳）",
-          "verdict": "不收",
-          "why": "3分：低音提琴加吉他的改編小品與流行曲，台北門檻4分"
+          "why": "爵士，不在收錄範圍"
         }
       ]
     },
     "pbc": {
-      "error": "pbcart.com.tw、pbc-art.com 皆連不上（DNS／SSL 錯誤），沒查到"
+      "error": "連不上：憑證錯誤（www.pbc.com.tw 憑證不符）"
     },
     "newaspect": {
-      "urls": [
-        "https://www.newaspect.org.tw",
-        "https://www.newaspect.org.tw/argerichmartha2026",
-        "https://www.newaspect.org.tw/pianochopinproject",
-        "https://www.newaspect.org.tw/quintetolegrandtango"
-      ],
-      "seen": [
-        {
-          "title": "阿格麗希音樂節在台灣",
-          "verdict": "不收",
-          "why": "5分但已演完：高雄11/10、台北11/12、屏東11/15"
-        },
-        {
-          "title": "2026蕭邦計畫",
-          "verdict": "不收",
-          "why": "已演完（8月）"
-        },
-        {
-          "title": "皮亞佐拉五重奏",
-          "verdict": "不收",
-          "why": "已演完（10/3）"
-        },
-        {
-          "title": "2027向貝多芬致敬-吉爾特伯格",
-          "verdict": "已列入",
-          "id": "giltburg-beethoven-tso-2027"
-        }
-      ]
+      "error": "連不上：ECONNREFUSED"
     },
     "tanart": {
-      "error": "tanart.com.tw、tanart.com 連不上（DNS／SSL 錯誤），沒查到"
+      "error": "連不上：網域解析失敗"
     },
     "kham": {
       "urls": [
@@ -87,37 +49,27 @@
       ],
       "seen": [
         {
-          "title": "WILD WILD 音樂劇",
+          "title": "音樂劇《WILD WILD》",
           "verdict": "不收",
-          "why": "頁面無日期與演出者，無法評分；西貢小姐只有周邊商品"
+          "why": "2分以下，頁面無演出者與日期，未能判斷"
         }
       ]
     },
     "udn": {
-      "error": "沒有直接打開 udnfunlife 與時藝多媒體頁面，來不及查"
+      "error": "HTTP 429"
     },
     "ntch": {
-      "error": "npac-ntch.org 只回「請使用 Edge」瀏覽器提示，讀不到節目表"
+      "error": "頁面只有瀏覽器提示，沒有節目內容"
     },
     "ntt": {
       "urls": [
-        "https://www.npac-ntt.org/program"
+        "https://www.npac-ntt.org"
       ],
       "seen": [
         {
-          "title": "水藍、蔣啟真與國臺交",
-          "verdict": "已列入",
-          "id": "ntso-lan-shui-chiang-2027"
-        },
-        {
-          "title": "陳舒茗與蘇筱雯鋼琴二重奏、王宥鈞與王秉諺鋼琴二重奏、聖采琪聯合弦樂團、安寧鋼琴獨奏會、安德烈亞．范佐",
+          "title": "2026 NTT歲末音樂會《那麼派》",
           "verdict": "不收",
-          "why": "2分：本地中小型獨奏／二重奏，或輕古典跨界"
-        },
-        {
-          "title": "狂美《璀璨經典百老匯》交響音樂會、進擊的巨人音樂會、星際效應電影音樂會",
-          "verdict": "不收",
-          "why": "動漫／電影配樂與歌曲拼盤，不在收錄範圍"
+          "why": "2分：演出者未列、動靜皆宜的舞樂派對"
         }
       ]
     },
@@ -127,36 +79,19 @@
       ],
       "seen": [
         {
-          "title": "賈西亞．賈西亞與高市交小樂集",
+          "title": "后正宇與ESO《幻光之境》11/20",
+          "verdict": "不收",
+          "why": "3分以下：高雄需4分以上"
+        },
+        {
+          "title": "賈西亞與高市交小樂集 11/20",
           "verdict": "已列入",
           "id": "garcia-garcia-ksso-2026"
-        },
-        {
-          "title": "紅潮劇集讀演音樂會",
-          "verdict": "不收",
-          "why": "2分：小型讀演"
         }
-      ],
-      "error": "列表只載入前兩檔，沒按「載入更多」"
+      ]
     },
     "news": {
-      "urls": [
-        "https://udn.com/news/story/7270/9659928",
-        "https://udn.com/news/story/7266/9644616"
-      ],
-      "seen": [
-        {
-          "title": "MJ 麥可·傑克森 原版百老匯音樂劇（2027年4月，臺北流行音樂中心）",
-          "verdict": "不收",
-          "why": "5分等級，但場次與票價尚未公布，無法寫 shows；明天再看"
-        },
-        {
-          "title": "柏林國家歌劇院、維也納愛樂、盧森堡愛樂等",
-          "verdict": "不收",
-          "why": "已列入或已演完"
-        }
-      ],
-      "error": "誠品、年代、KKTIX、wekengo 沒有直接打開，只用網路搜尋"
+      "error": "只做一次泛關鍵字搜尋，沒有開誠品、年代、KKTIX、wekengo，也沒查十月到一月的專項關鍵字"
     }
   }
 }
