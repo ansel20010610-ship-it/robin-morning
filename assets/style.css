@@ -2843,9 +2843,18 @@ html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
 .po-desk { position: relative; z-index: 2; display: flex; flex-direction: column; margin-top: 66px; }
 .po-top { position: relative; z-index: 3; margin: 0 18px; transform: rotate(-1.6deg); touch-action: pan-y; }
 @media (prefers-reduced-motion: no-preference) {
-  .po-top.turn-l { animation: po-in-l .5s cubic-bezier(.2, .8, .2, 1); } .po-top.turn-r { animation: po-in-r .5s cubic-bezier(.2, .8, .2, 1); }
-  @keyframes po-in-l { from { opacity: 0; transform: translateX(46px) rotate(2deg); } to { opacity: 1; transform: rotate(-1.6deg); } }
-  @keyframes po-in-r { from { opacity: 0; transform: translateX(-46px) rotate(-4deg); } to { opacity: 1; transform: rotate(-1.6deg); } }
+  /* 翻閱: the old letter turned over from its left edge and away (on), or the earlier letter turned back over onto it (back) */
+  .po-leaf { position: absolute; left: 0; right: 0; top: 0; pointer-events: none; transform-origin: 0 40%; }
+  .po-leaf.away { z-index: 6; animation: po-away .72s cubic-bezier(.45, .05, .25, 1) forwards; }
+  .po-leaf.under { z-index: 0; animation: po-fade .72s ease-in forwards; }
+  .po-sheet.po-back { transform-origin: 0 40%; animation: po-back .72s cubic-bezier(.45, .05, .25, 1); }
+  @keyframes po-away { 0% { transform: perspective(1500px) rotateY(0) translateZ(0); filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)); }
+    35% { transform: perspective(1500px) rotateY(-38deg) translateZ(30px); filter: drop-shadow(-18px 12px 18px rgba(0, 0, 0, .45)); }
+    100% { transform: perspective(1500px) rotateY(-112deg) translateX(-30px) translateZ(40px); filter: drop-shadow(-30px 20px 24px rgba(0, 0, 0, .0)); opacity: 0; } }
+  @keyframes po-back { 0% { transform: perspective(1500px) rotateY(-112deg) translateX(-30px) translateZ(40px); opacity: 0; filter: drop-shadow(-30px 20px 24px rgba(0, 0, 0, 0)); }
+    65% { transform: perspective(1500px) rotateY(-38deg) translateZ(30px); opacity: 1; filter: drop-shadow(-18px 12px 18px rgba(0, 0, 0, .45)); }
+    100% { transform: none; filter: none; } }
+  @keyframes po-fade { 0%, 55% { opacity: 1; } 100% { opacity: 0; } }
 }
 .po-sheet { position: relative; overflow: hidden; padding: 34px 26px 30px; text-align: center; color: #2b2218;
   background: radial-gradient(120% 90% at 30% 15%, #fdf9ef, #f3ead6 60%, #e8dcc0); box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 16px 28px -10px rgba(0, 0, 0, .7); }

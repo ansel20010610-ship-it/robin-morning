@@ -49,13 +49,25 @@ export function wirePoems(scene, list, load) {
   if (!scene || !list.length) return;
   let i = Math.max(0, list.findIndex((p) => p.date === topDate)), seq = 0;
   const top = scene.querySelector(".po-top");
+  // 翻閱 (the owner, 2026-11-19: 詩箋左右滑我要有翻閱動畫): turning on, the letter on top lifts from its left edge and is
+  // turned over and away, the next one lying under it; turning back, the earlier letter is turned back over onto it.
+  const still = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
   const fill = async (step) => {
     const mine = ++seq, p = list[i];
+    const old = step && !still() ? top.querySelector(".po-sheet")?.cloneNode(true) : null;
     const a = await load(p.date).catch(() => null);
     if (mine !== seq || !top.isConnected) return;
+    top.querySelectorAll(".po-leaf").forEach((g) => g.remove());
     top.innerHTML = sheetHtml(p, poemOf(a), true);
     if (step && top.getBoundingClientRect().top < 0) window.scrollTo(0, 0); // a long poem turned from the foot of the page: start the next at its head
-    if (step) { top.classList.remove("turn-l", "turn-r"); void top.offsetWidth; top.classList.add(step > 0 ? "turn-l" : "turn-r"); }
+    if (!old) return;
+    const leaf = document.createElement("div");
+    leaf.className = `po-leaf ${step > 0 ? "away" : "under"}`;
+    leaf.setAttribute("aria-hidden", "true");
+    leaf.append(old);
+    if (step > 0) top.append(leaf); else { top.prepend(leaf); top.querySelector(".po-sheet:not(.po-leaf .po-sheet)")?.classList.add("po-back"); }
+    leaf.addEventListener("animationend", () => leaf.remove(), { once: true });
+    setTimeout(() => leaf.remove(), 1200); // in case the animation never runs
   };
   fill(0);
   if (list.length < 2) return;
