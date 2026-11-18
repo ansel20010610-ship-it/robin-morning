@@ -180,6 +180,12 @@
    "shift": "concerts",
    "usd": 0.561,
    "status": "success"
+  },
+  {
+   "at": "2026-11-18T16:03+08:00",
+   "shift": "serial",
+   "usd": 1.078,
+   "status": "success"
   }
  ]
 }
