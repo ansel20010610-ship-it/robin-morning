@@ -48,7 +48,7 @@ def music_works():
     out, work = {}, ""
     try:
         lines = open(os.path.join(ROOT, "editorial", "music-canon.md"), encoding="utf-8").read().splitlines()
-    except OSError:
+    except (OSError, ValueError):
         return out
     for line in lines:
         if line.startswith("### "):

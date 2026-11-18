@@ -17,7 +17,7 @@ import { worldState, drawGlobe } from "./world.js";
 import { nestBox, renderNest, renderNestSettings, renderNestAlbum, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
 import { codaHtml, codaVoices, playCoda } from "./jupiter.js";
 import { shelf, shelved, shelve, markShown, shelfHtml, bookHtml, openBook } from "./shelf.js";
-import { crateHtml, deckHtml, playRecord, workName } from "./records.js";
+import { crateHtml, wireCrate, deckHtml, fillPlate, playRecord, boxBusy, workName } from "./records.js";
 import { medalMonths, medalsHtml } from "./medals.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
@@ -428,12 +428,15 @@ async function viewSerial(my) {
   document.title = `連載｜${S.cfg.title}`;
 }
 
+// 收藏's rooms (書架, 書頁, 唱片櫃, 唱盤, 紀念章; the owner, 2026-11-19: 「對，照這樣改」): one full-bleed scene from the top
+// of the page to the bottom bar, every word on an object; instead of the paper top bar, the back mark and the room's name
+// in gilt small capitals over the scene (style.css .sc-page). `scene` is the room itself (an .sc-scene).
+const scenePage = (name, zh, back, scene) => `<div class="sc-page"><div class="sc-bar"><a class="sc-back" data-back href="${back}" aria-label="返回">${ICON.back}</a><h1 class="sc-title"><span class="sh-foil" aria-hidden="true">${name}</span><span class="sc-sr">${zh}</span></h1></div>${scene}<i class="sc-grain" aria-hidden="true"></i></div>`;
 // 紀念章 (#/medals, one of 收藏's corners; the owner, 2026-11-19): a month with every issue read through (medals.js).
 const medals = () => medalMonths(publishedIssues(), digestDone(), twNow().date);
 function viewMedals() {
-  const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/saved" aria-label="返回">${ICON.back}</a><div class="title">紀念章</div></div></div>`;
   const first = publishedIssues().map((i) => i.date).sort()[0] || twNow().date;
-  main.innerHTML = `${top}<div class="wrap medals-page">${medalsHtml(medals(), first, twNow().date)}</div>`;
+  main.innerHTML = scenePage("Medaillen", "紀念章", "#/saved", `<div class="sc-scene sc-desk medals-scene"><i class="sc-lamp"></i>${medalsHtml(medals(), first, twNow().date)}</div>`);
   wireBack();
   document.title = `紀念章｜${S.cfg.title}`;
 }
@@ -441,9 +444,9 @@ function viewMedals() {
 const records = () => { const read = readSet(); return publishedIssues().flatMap((i) => i.articles.filter((a) => a.column === "music" && read.has(`${i.date}/music`)).map((a) => ({ date: i.date, a }))).sort((x, y) => y.date.localeCompare(x.date)); };
 function viewRecords() {
   const list = records();
-  const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/saved" aria-label="返回">${ICON.back}</a><div class="title">唱片櫃</div></div></div>`;
-  main.innerHTML = `${top}<div class="wrap records-page">${list.length ? crateHtml(list) : `<p class="empty">讀完一篇古典音樂，就會收進一張唱片。</p>`}</div>`;
+  main.innerHTML = scenePage("Schallplatten", "唱片櫃", "#/saved", `<div class="sc-scene sc-wall crate-scene"><i class="sc-lamp"></i>${list.length ? "" : '<p class="sc-empty">讀完一篇古典音樂，就會收進一張唱片。</p>'}${crateHtml(list)}</div>`);
   wireBack();
+  wireCrate(main.querySelector(".crate-scene"), list);
   document.title = `唱片櫃｜${S.cfg.title}`;
 }
 // The record plays through Spotify (the owner, 2026-11-19: 唱片就是連動spotify): the article's own recording (its music
@@ -455,17 +458,17 @@ async function viewRecord(date, my) {
   const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/records" aria-label="返回">${ICON.back}</a><div class="title">唱片櫃</div></div></div>`;
   if (!r) { main.innerHTML = `${top}<div class="wrap"><p class="empty">這一張還沒收進來：讀完那一篇古典音樂，它就會在唱片櫃裡。<a href="#/records">回唱片櫃</a></p></div>`; wireBack(); return; }
   const linked = isLoggedIn();
-  main.innerHTML = `${top}<div class="wrap records-page">${deckHtml(r, linked)}</div>`;
+  main.innerHTML = scenePage("Schallplatten", "唱片櫃", "#/records", deckHtml(r));
   wireBack();
   const scene = main.querySelector(".deck-scene");
-  let block = null, found = null;
-  if (linked) {
-    if (canStream()) preloadPlayer().catch(() => {});
-    article(date, "music").then((a) => {
-      block = (a.body || []).find((x) => x?.type === "music") || null;
-      return block?.spotify ? spResolve(block.spotify, { count: (block.movements || []).length }) : null;
-    }).then((s) => { found = s?.tracks?.length ? s : null; }).catch(() => {});
-  }
+  let block = null, found = null, looking = linked;
+  if (linked && canStream()) preloadPlayer().catch(() => {});
+  // The article is read for the plate (the composer's own name, the original title) and, linked, for its recording.
+  article(date, "music").then((a) => {
+    block = (a.body || []).find((x) => x?.type === "music") || null;
+    fillPlate(scene, block);
+    return linked && block?.spotify ? spResolve(block.spotify, { count: (block.movements || []).length }) : null;
+  }).then((s) => { found = s?.tracks?.length ? s : null; }).catch(() => {}).finally(() => { looking = false; });
   const spin = (ms) => { scene.classList.add("playing"); if (ms) setTimeout(() => scene.classList.remove("playing"), ms); };
   scene.querySelector(".rec")?.addEventListener("click", () => {
     if (found) { // still inside the tap, so the phone lets the player start
@@ -474,8 +477,9 @@ async function viewRecord(date, my) {
       spin(0);
       return;
     }
-    if (linked && !block) toast("唱片還在找錄音，請再點一次");
-    else if (linked) toast("Spotify 上找不到這一篇的錄音，先放旋律");
+    if (looking) { toast("唱片還在找錄音，請再點一次"); return; } // the answer is not in yet: not the music box in its place
+    if (linked) toast("Spotify 上找不到這一篇的錄音，先放旋律");
+    if (boxBusy()) return; // the music box still sounding: the disc keeps turning as long as it does
     if (r.a.motif && playRecord(scene, r.a.motif)) return;
     spin(4000);
   });
@@ -485,8 +489,7 @@ async function viewRecord(date, my) {
 async function viewShelf(my) {
   if (S.book === undefined) { main.innerHTML = `<div class="wrap"><p class="empty">翻書中……</p></div>`; await loadBook(); if (my !== undefined && my !== routeSeq) return; }
   const books = shelf(), reading = readingBook();
-  const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/saved" aria-label="返回">${ICON.back}</a><div class="title">我的書架</div></div></div>`;
-  main.innerHTML = `${top}<div class="wrap book-page">${books.length || reading ? shelfHtml(books, reading) : `<p class="empty">讀完一整本連載，它就會變成一本精裝書，收在這裡。</p>`}</div>`;
+  main.innerHTML = scenePage("Bibliothek", "我的書架", "#/saved", `<div class="sc-scene sc-wall shelf-scene"><i class="sc-lamp"></i>${shelfHtml(books, reading)}${books.length || reading ? "" : '<p class="sc-empty">讀完一整本連載，它就會變成一本精裝書，收在這裡。</p>'}</div>`);
   wireBack();
   document.title = `我的書架｜${S.cfg.title}`;
 }
@@ -498,7 +501,7 @@ async function viewShelfBook(slug, my) {
   const list = shelf(), i = list.findIndex((e) => e.slug === slug), e = list[i];
   const top = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/shelf" aria-label="返回">${ICON.back}</a><div class="title">我的書架</div></div></div>`;
   if (!e) { main.innerHTML = `${top}<div class="wrap"><p class="empty">這本書還沒讀完，讀完最後一回，它就會收上書架。<a href="#/serial">回到連載</a></p></div>`; wireBack(); return; }
-  main.innerHTML = `${top}<div class="wrap book-page">${bookHtml(e, i + 1)}</div>`;
+  main.innerHTML = scenePage("Bibliothek", "我的書架", "#/shelf", `<div class="sc-scene sc-desk book-scene"><i class="sc-lamp"></i>${bookHtml(e, i + 1)}</div>`);
   wireBack();
   openBook(main.querySelector(".opened"), !e.shown);
   if (!e.shown) setTimeout(() => { if (!main.querySelector(".opened")) return; markShown(slug); toast(`《${e.title}》收上書架了`); }, 3000); // left before the seal came down: the ceremony waits for next time
@@ -2147,14 +2150,14 @@ function viewSaved() {
     return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
       <span class="t"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title)}</b>${a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}${a.corrected ? `<span class="corr"><b>更正</b>${esc(a.correction || `${md(a.corrected)} 有更正，見文末`)}</span>` : ""}</span>${th}</a></li>`;
   };
-  const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length, bk = shelf().length + (readingBook() ? 1 : 0), rc = records().length, md = medals().length;
+  const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length, bk = shelf().length + (readingBook() ? 1 : 0), rc = records().length, mdl = medals().length;
   // 收藏 (the owner, 2026-11-06, name kept): the shelves (紀念章 and 唱片櫃 added 2026-11-19, 我的書架 11-18), each with its own picture and a line that says what is inside.
   const DRAWERS = [
     ["#/stamps", "郵票冊", "Briefmarken", st, st ? "張" : "還沒有郵票", `<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z" stroke-dasharray="2 1.6"/><rect x="7.5" y="8.5" width="9" height="7"/></svg>`],
     ["#/marks", "劃線本", "Anstreichungen", n, n ? "處劃線" : "還沒有劃線", `<svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M13 7l3 3"/><path d="M4 20l1-4"/></svg>`],
     ["#/gallery", "畫廊", "Galerie", g, g ? "幅" : "牆上還沒有畫", `<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16"/><rect x="6" y="7" width="12" height="10"/><path d="M6 15l3-3 3 3 2-2 4 4"/></svg>`],
     ["#/world", "你讀過的世界", "Gelesene Welt", w, w ? "國" : "還沒出發", `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>`],
-    ["#/medals", "紀念章", "Medaillen", md, md ? "枚" : "還沒有紀念章", `<svg viewBox="0 0 24 24"><path d="M8 3l2.5 6M16 3l-2.5 6"/><circle cx="12" cy="15" r="6"/><circle cx="12" cy="15" r="3.4"/></svg>`],
+    ["#/medals", "紀念章", "Medaillen", mdl, mdl ? "枚" : "還沒有紀念章", `<svg viewBox="0 0 24 24"><path d="M8 3l2.5 6M16 3l-2.5 6"/><circle cx="12" cy="15" r="6"/><circle cx="12" cy="15" r="3.4"/></svg>`],
     ["#/records", "唱片櫃", "Schallplatten", rc, rc ? "張" : "還沒有唱片", `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 5.5a6.5 6.5 0 0 1 6.5 6.5"/></svg>`],
     ["#/shelf", "我的書架", "Bücherregal", bk, bk ? "冊" : "還沒有讀完的書", `<svg viewBox="0 0 24 24"><path d="M5 4h3v16H5zM9 4h3v16H9z"/><path d="M13.5 5.2l2.9-.8 4 15.4-2.9.8z"/><path d="M3 20h18"/></svg>`],
   ];

@@ -1894,38 +1894,35 @@ details.band .svl { margin: 0 0 10px; }
   background: var(--foil-g) 0 0 / 220% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; }
 @media (prefers-reduced-motion: no-preference) { .sh-foil { animation: sh-sheen 6s ease-in-out infinite alternate; } }
 @keyframes sh-sheen { from { background-position: 0 0; } to { background-position: 100% 0; } }
-.bcase { position: relative; margin: 6px 0 0; padding: 66px 22px 22px; isolation: isolate;
+.shelf-scene { display: flex; flex-direction: column; padding: 70px 14px 0; }
+.bcase { position: relative; z-index: 1; flex: 1 0 auto; display: flex; flex-direction: column; margin: 0; padding: 66px 22px 22px; isolation: isolate;
   background: linear-gradient(90deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, .1) 8%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .1) 92%, rgba(0, 0, 0, .55)), url(shelf/cherry_v.jpg) 0 0 / 380px auto, #2b1a10;
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, .7), inset 0 0 0 1px rgba(0, 0, 0, .6); }
-.bc-crown { position: absolute; left: -8px; right: -8px; top: -12px; height: 46px; z-index: 2; clip-path: polygon(0 0, 100% 0, 100% 70%, 98% 100%, 2% 100%, 0 70%); box-shadow: 0 6px 10px rgba(0, 0, 0, .6);
+  box-shadow: 0 0 40px rgba(0, 0, 0, .8), inset 0 0 0 1px rgba(0, 0, 0, .6); }
+.bc-crown { position: absolute; left: -8px; right: -8px; top: -10px; height: 52px; z-index: 2; clip-path: polygon(0 0, 100% 0, 100% 70%, 98% 100%, 2% 100%, 0 70%); box-shadow: 0 6px 10px rgba(0, 0, 0, .6);
   background: linear-gradient(rgba(255, 225, 190, .22), rgba(0, 0, 0, 0) 22%, rgba(0, 0, 0, .35) 42%, rgba(255, 225, 190, .14) 52%, rgba(0, 0, 0, .45) 78%, rgba(0, 0, 0, .2)), url(shelf/cherry.jpg) 0 0 / 420px auto, #4a2e1c; }
 .bc-dent { position: absolute; left: 14px; right: 14px; bottom: 8px; height: 6px; background: repeating-linear-gradient(90deg, rgba(0, 0, 0, .65) 0 5px, rgba(255, 220, 180, .18) 5px 7px, rgba(0, 0, 0, 0) 7px 9px); }
-.bc-brass { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
-.bc-plate { position: absolute; left: 50%; top: 40px; z-index: 3; isolation: isolate; display: flex; align-items: center; justify-content: center; width: 200px; height: 34px; transform: translateX(-50%); border-radius: 3px; box-shadow: 0 1px 2px rgba(0, 0, 0, .6), inset 0 1px 0 rgba(255, 255, 255, .5); }
-.bc-plate span { font: 600 12px/1 var(--serif); letter-spacing: .42em; padding-left: .42em; color: #3a2410; text-shadow: 0 1px 0 rgba(255, 240, 200, .6); }
-.bc-plate::before, .bc-plate::after { content: ""; position: absolute; top: 50%; width: 5px; height: 5px; margin-top: -2.5px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #fff3c4, #7a5418); }
-.bc-plate::before { left: 7px; } .bc-plate::after { right: 7px; }
-.bc-pil { position: absolute; top: 30px; bottom: 0; width: 22px; z-index: 1; background: linear-gradient(90deg, rgba(0, 0, 0, .7), rgba(255, 225, 190, .16) 38%, rgba(0, 0, 0, .05) 55%, rgba(0, 0, 0, .7)), url(shelf/cherry_v.jpg) 0 0 / 300px auto, #4a2e1c; }
+.bc-plate { position: absolute; left: 50%; top: 46px; z-index: 3; width: 214px; height: 40px; transform: translateX(-50%); }
+.bc-plate .ex { font: 600 13px/1 var(--sc-caps); letter-spacing: .36em; padding-left: .36em; }
+.bc-plate .zh { margin-top: 4px; font: 600 9px/1 var(--serif); letter-spacing: .5em; padding-left: .5em; }
+.bc-pil { position: absolute; top: 30px; bottom: 0; width: 22px; z-index: 3; background: linear-gradient(90deg, rgba(0, 0, 0, .7), rgba(255, 225, 190, .16) 38%, rgba(0, 0, 0, .05) 55%, rgba(0, 0, 0, .7)), url(shelf/cherry_v.jpg) 0 0 / 300px auto, #4a2e1c; }
 .bc-pil.l { left: 0; } .bc-pil.r { right: 0; }
 .bc-pil::after { content: ""; position: absolute; left: 6px; right: 6px; top: 20px; bottom: 20px; background: repeating-linear-gradient(90deg, rgba(0, 0, 0, .45) 0 2px, rgba(255, 220, 180, .1) 2px 3px, transparent 3px 5px); }
-.bc-bay { position: relative; height: 150px; margin: 0 0 18px; isolation: isolate; background: url(shelf/veneer_v.jpg) 0 0 / 360px auto, #140b06; }
-.bc-bay.first { height: 262px; margin-top: 26px; }
+.bc-bay { position: relative; flex: 1 0 140px; margin: 0 0 18px; isolation: isolate; background: url(shelf/veneer_v.jpg) 0 0 / 360px auto, #140b06; }
+.bc-bay.first { flex: 0 0 262px; margin-top: 46px; z-index: 2; } /* over the bay below it: the ribbon hangs over the board */
+.bc-bay.first .bc-row { z-index: 4; }
 .bc-bay::before { content: ""; position: absolute; inset: 0; background: #3a2214; mix-blend-mode: multiply; }
 .bc-shade { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(85% 110% at 50% 0%, rgba(255, 200, 140, .12), rgba(8, 4, 2, .78) 80%); box-shadow: inset 0 12px 20px rgba(0, 0, 0, .8), inset 0 -3px 8px rgba(0, 0, 0, .5); }
 .bc-light { position: absolute; left: 50%; top: -10px; width: 260px; height: 150px; z-index: 1; transform: translateX(-50%); pointer-events: none; background: radial-gradient(closest-side, rgba(255, 214, 150, .26), rgba(255, 214, 150, 0)); }
 .bc-bay:not(.first) .bc-light { opacity: .45; }
 .bc-row { position: absolute; left: 14px; right: 10px; bottom: 0; z-index: 2; display: flex; align-items: flex-end; gap: 3px; }
-.bc-end { position: relative; isolation: isolate; display: block; width: 14px; height: 46px; margin-left: 4px; border-radius: 2px 2px 0 0; box-shadow: 0 1px 2px rgba(0, 0, 0, .6); }
+.bc-end { position: relative; display: block; width: 14px; height: 46px; margin-left: 4px; border-radius: 2px 2px 0 0; box-shadow: 0 1px 2px rgba(0, 0, 0, .6), inset 0 1px 1px rgba(255, 235, 190, .4); background: var(--sc-brass-bg); }
 .bc-board { position: absolute; left: -22px; right: -22px; bottom: -18px; height: 18px; z-index: 3; box-shadow: 0 7px 9px -5px rgba(0, 0, 0, .7);
   background: linear-gradient(rgba(255, 225, 190, .35), rgba(255, 225, 190, .05) 14%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .45)), url(shelf/cherry.jpg) 0 0 / 420px auto, #5b3923; }
-.bc-tag { position: absolute; left: 50%; top: 3px; isolation: isolate; display: flex; align-items: center; justify-content: center; width: 42px; height: 12px; transform: translateX(-50%); border-radius: 1px; box-shadow: 0 1px 1px rgba(0, 0, 0, .6); }
-.bc-tag i { font: 600 8px/1 var(--latin); font-style: normal; letter-spacing: .2em; padding-left: .2em; color: #3a2410; }
-.bc-cap { margin: 14px 0 0; text-align: center; font: 500 11.5px/1.6 var(--sans); letter-spacing: .12em; color: var(--muted); }
+.bc-tag { position: absolute; left: 50%; top: 3.5px; display: flex; align-items: center; justify-content: center; width: 34px; height: 11px; transform: translateX(-50%); border-radius: 1px; background: var(--sc-brass-bg); box-shadow: 0 1px 1px rgba(255, 235, 190, .35) inset, 0 -1px 1px rgba(60, 35, 5, .5) inset, 0 1px 2px rgba(0, 0, 0, .6); }
+.bc-tag i { font: 700 8px/1 var(--sc-caps); font-style: normal; letter-spacing: .16em; padding-left: .16em; color: #4a3008; text-shadow: 0 1px 0 rgba(255, 240, 200, .55), 0 -1px 0 rgba(60, 35, 5, .45); }
 .bcase .sh-book { margin-left: 0; }
-/* the book being read: a wine silk ribbon out of its top, and how far the reader is on a small brass plate */
-.sh-book.reading .bm { position: absolute; left: 112px; top: -16px; z-index: 3; width: 9px; height: 64px; background: linear-gradient(90deg, #4a0f1c, #8e2a40 45%, #5a1424); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 88%, 0 100%); box-shadow: 0 2px 3px rgba(0, 0, 0, .5); transform: rotate(2deg); }
-.bc-now { position: absolute; left: 50%; bottom: 14px; z-index: 4; isolation: isolate; display: flex; align-items: center; justify-content: center; height: 18px; padding: 0 10px; transform: translateX(-50%) translateZ(30px); border-radius: 2px; box-shadow: 0 1px 2px rgba(0, 0, 0, .6); white-space: nowrap; }
-.bc-now i { font: 600 9.5px/1 var(--serif); font-style: normal; letter-spacing: .1em; color: #3a2410; }
+/* the book being read: a wine silk ribbon out of its foot, hanging over the shelf's edge (how far: only in its label) */
+.sh-book.reading .sh-ribbon { position: absolute; left: 96px; top: 226px; z-index: -1; width: 8px; height: 44px; background: linear-gradient(90deg, #3a0a16, #8e2a40 45%, #4a0f1c); box-shadow: 1px 2px 3px rgba(0, 0, 0, .5); transform: rotate(-4deg); transform-origin: top; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 86%, 0 100%); }
 .bcase .sh-spine { height: 210px; }
 .bc-bay:not(.first) .sh-spine { height: 128px; padding: 10px 0; }
 .bcase .sh-spine b { white-space: nowrap; overflow: hidden; letter-spacing: .12em; }
@@ -1952,9 +1949,11 @@ details.band .svl { margin: 0 0 10px; }
 
 /* The opened book (#/shelf/<slug>): marbled endpaper, the bookplate pasted on it a little crooked, the wax seal
    over its corner; the cover above swings open (.is-open). Sizes inside the plate follow its width (cqw). */
-.book-page { padding-top: 14px; }
-.opened { position: relative; width: min(100%, 380px); aspect-ratio: 358 / 560; margin: 0 auto; perspective: 1400px; }
-.opened .endpaper { position: absolute; inset: 0; overflow: hidden; border-radius: 2px; background: #1b2742; box-shadow: inset 0 0 60px rgba(0, 0, 0, .55), var(--shadow); }
+.book-scene { display: flex; align-items: center; justify-content: center; padding: 72px 22px 30px; }
+.opened { position: relative; z-index: 1; width: min(100%, 380px, calc((100vh - var(--nav-h) - env(safe-area-inset-bottom) - 110px) * 358 / 560)); aspect-ratio: 358 / 560; margin: 0 auto; perspective: 1400px; }
+/* lying on the desk: the block of pages under the endpaper, its shadow on the wood */
+.opened::before { content: ""; position: absolute; left: 3px; top: 3px; right: -7px; bottom: -7px; border-radius: 2px 4px 4px 2px; background: repeating-linear-gradient(135deg, #efe4cc 0 1px, #d9c8a4 1px 2px), #e9dcc0; box-shadow: 0 30px 40px rgba(0, 0, 0, .75), 0 4px 8px rgba(0, 0, 0, .6); }
+.opened .endpaper { position: absolute; inset: 0; overflow: hidden; border-radius: 2px; background: #1b2742; box-shadow: inset 0 0 60px rgba(0, 0, 0, .55), 0 1px 2px rgba(0, 0, 0, .6); }
 .opened .ep-marble { position: absolute; inset: 0; width: 100%; height: 100%; }
 .opened .ep-gutter { position: absolute; left: 0; top: 0; bottom: 0; width: 7%; background: linear-gradient(90deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0)); }
 .opened .plate { position: absolute; left: 12%; top: 7.8%; width: 76%; aspect-ratio: 272 / 400; container-type: inline-size; transform: rotate(-1.2deg); text-align: center;
@@ -1981,9 +1980,6 @@ details.band .svl { margin: 0 0 10px; }
 .opened.first .wax-seal { opacity: 0; transform: rotate(14deg) scale(2.2); }
 .opened.first.is-open .wax-seal { opacity: 1; transform: rotate(14deg) scale(1); transition: opacity .2s 2.25s, transform .32s cubic-bezier(.5, 0, .6, 1.5) 2.25s; }
 .opened.settled .lid { display: none; }
-.opened-cap { margin: 18px 0 6px; text-align: center; }
-.opened-cap b { display: block; font: 600 14px/1 var(--serif); letter-spacing: .3em; color: var(--gold-ink); }
-.opened-cap span { display: block; margin-top: 9px; font: 500 12px/1 var(--sans); letter-spacing: .1em; color: var(--muted); }
 /* 這一週 (app.js wocheBox), Sundays on the front page */
 .woche { margin: 30px 0 0; padding: 4px 16px 14px; background: var(--paper-2); border: 1px solid var(--rule); border-top: 3px double var(--gold); }
 .woche .sec-head { margin-top: 10px; }
@@ -2658,14 +2654,14 @@ details.band .svl { margin: 0 0 10px; }
 /* ——— 唱片櫃 (records.js; the owner's pick 2026-11-19: the crate, and a record opens on the turntable) ———
    A sleeve: the article's picture as cover art, a cream band with the work, paper grain, edge and ring wear. A record:
    grooves, two light wedges, the label in wine and gold. Wood is the bookcase's photograph. */
-.records-page { padding-top: 10px; }
 .slv { position: relative; display: block; overflow: hidden; background: #e9dfc8; box-shadow: 0 1px 1px rgba(0, 0, 0, .4), 0 8px 16px -6px rgba(0, 0, 0, .6); }
-.slv img, .slv .noimg { position: absolute; left: 0; top: 0; width: 100%; height: 76%; object-fit: cover; filter: sepia(.12) contrast(1.04) saturate(.95); }
+.slv img, .slv .noimg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; filter: sepia(.15) contrast(1.05) saturate(.9); }
 .slv .noimg { background: linear-gradient(135deg, #6e2536, #23395b); }
-.slv .band { position: absolute; left: 0; right: 0; bottom: 0; height: 24%; box-sizing: border-box; padding: 5% 7% 0; background: #efe6d2; border-top: 2px solid #6e2536; }
-.slv .band b { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font: 700 calc(var(--w) * .075)/1.15 var(--serif); letter-spacing: .04em; color: #2b1d12; }
-.slv .band span { display: block; margin-top: 4%; font: 500 calc(var(--w) * .056)/1 var(--serif); letter-spacing: .06em; color: #6e2536; white-space: nowrap; overflow: hidden; }
-.slv .mark { position: absolute; right: 6%; top: 5%; padding: 2% 4%; background: rgba(239, 230, 210, .9); font: 600 calc(var(--w) * .045)/1 var(--latin); letter-spacing: .2em; color: #6e2536; }
+/* the piece in gilt at the foot of the picture, the composer in small gilt under it */
+.slv .sv-name { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; height: 52%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding: 0 6% calc(var(--w) * .055); text-align: center; background: linear-gradient(rgba(20, 10, 5, 0), rgba(20, 10, 5, .55) 55%, rgba(20, 10, 5, .88)); }
+.slv .sv-name b, .slv .sv-name span { filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .75)); }
+.slv .sv-name b { max-width: 100%; font: 700 calc(var(--w) * .075)/1.25 var(--serif); letter-spacing: .16em; padding-left: .16em; text-wrap: balance; }
+.slv .sv-name span { margin-top: calc(var(--w) * .03); font: 600 calc(var(--w) * .04)/1 var(--sc-caps); letter-spacing: .3em; padding-left: .3em; color: rgba(233, 198, 108, .8); white-space: nowrap; }
 .slv::before { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: radial-gradient(circle at 50% 46%, transparent 40%, rgba(255, 255, 255, .1) 41%, transparent 43%), linear-gradient(115deg, rgba(255, 255, 255, .18), rgba(255, 255, 255, 0) 30%); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .25), inset 0 0 14px rgba(80, 50, 20, .35); }
 .rec { position: absolute; display: block; border-radius: 50%; background: radial-gradient(circle, #111 0 17%, transparent 17.5%), repeating-radial-gradient(circle, #0c0c0c 0 1.1px, #1b1b1b 1.3px 1.9px, #0e0e0e 2.1px 2.6px), #111; box-shadow: 0 6px 14px rgba(0, 0, 0, .6), inset 0 0 0 2px #050505; }
 .rec::before { content: ""; position: absolute; inset: 0; border-radius: 50%; mix-blend-mode: screen; background: conic-gradient(from 20deg, rgba(255, 255, 255, 0) 0deg, rgba(255, 255, 255, .16) 18deg, rgba(255, 255, 255, 0) 40deg, rgba(255, 255, 255, 0) 180deg, rgba(255, 255, 255, .12) 200deg, rgba(255, 255, 255, 0) 222deg); }
@@ -2675,53 +2671,120 @@ details.band .svl { margin: 0 0 10px; }
 .rec .lab i { margin-top: 2px; font: italic 500 calc(var(--d) * .032)/1 var(--latin); color: #e9c66c; }
 .rec .lab u { position: absolute; top: 14%; text-decoration: none; font: 600 calc(var(--d) * .026)/1 var(--latin); letter-spacing: .2em; color: #d9b45a; }
 .rec .lab::after { content: ""; position: absolute; left: 47%; top: 47%; width: 6%; height: 6%; border-radius: 50%; background: #0a0a0a; box-shadow: inset 0 1px 1px rgba(255, 255, 255, .2); }
-.crate-scene { position: relative; height: 560px; margin: 0 -20px; overflow: hidden; background: radial-gradient(70% 50% at 50% 30%, #3a2a1e, #140d08 85%); }
-.cr-lamp { position: absolute; left: 50%; top: 0; width: 420px; height: 420px; transform: translateX(-50%); background: radial-gradient(closest-side, rgba(255, 214, 150, .22), transparent); }
-.crate { position: absolute; left: 24px; right: 24px; top: 300px; height: 230px; box-shadow: 0 26px 40px rgba(0, 0, 0, .7); }
+/* #/records: the crate standing on the sideboard; --s the sleeve's size, the crate's records scale with it */
+.crate-scene { display: flex; flex-direction: column; --s: min(292px, calc(100vw - 110px)); }
+.cr-room { position: relative; z-index: 2; flex: 1 0 auto; min-height: calc(var(--s) * 1.13 + 280px); touch-action: pan-y; }
+.crate { position: absolute; left: 28px; right: 28px; bottom: -10px; height: 230px; box-shadow: 0 26px 40px rgba(0, 0, 0, .75); }
+.cr-stack { position: absolute; inset: 0; }
 .cr-back, .cr-side { position: absolute; background: linear-gradient(90deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0) 12% 88%, rgba(0, 0, 0, .5)), url(shelf/cherry_v.jpg) 0 0 / 380px auto, #4a2e1c; }
-.cr-back { left: 0; right: 0; top: 0; height: 200px; filter: brightness(.45); }
+.cr-back { left: 0; right: 0; top: 0; height: 200px; filter: brightness(.4); }
 .cr-side { top: 0; bottom: 0; width: 16px; z-index: 9; } .cr-side.l { left: 0; } .cr-side.r { right: 0; }
-.cr-slot, .cr-top { position: absolute; left: calc(50% - 150px); display: block; transform: perspective(700px) rotateX(-22deg); transform-origin: 50% 100%; }
-.cr-top { z-index: 8; top: -200px; transform: none; }
-.cr-top .rec { z-index: -1; }
+.cr-slot, .cr-top { position: absolute; left: calc(50% - var(--s) / 2); display: block; }
+.cr-slot { top: calc(var(--s) * -.514 + var(--k) * 18px); transform: perspective(700px) rotateX(-22deg); transform-origin: 50% 100%; }
+.cr-top { z-index: 8; top: calc(var(--s) * -.685); -webkit-tap-highlight-color: transparent; }
+.cr-top .rec { z-index: -1; left: calc(var(--s) * .072); top: calc(var(--s) * -.445); }
+@media (prefers-reduced-motion: no-preference) {
+  .cr-top.in-l { animation: cr-in-l .5s cubic-bezier(.2, .8, .2, 1); } .cr-top.in-r { animation: cr-in-r .5s cubic-bezier(.2, .8, .2, 1); }
+}
+@keyframes cr-in-l { from { opacity: 0; transform: translate(70px, 24px) rotate(4deg); } }
+@keyframes cr-in-r { from { opacity: 0; transform: translate(-70px, 24px) rotate(-4deg); } }
 .cr-front { position: absolute; left: 0; right: 0; bottom: 0; height: 110px; z-index: 10; background: linear-gradient(rgba(255, 225, 190, .18), rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, .4)), url(shelf/cherry.jpg) 0 0 / 420px auto, #4a2e1c; }
 .cr-front::before { content: ""; position: absolute; left: 50%; top: 20px; width: 90px; height: 22px; margin-left: -45px; border-radius: 12px; background: #140b06; box-shadow: inset 0 3px 6px rgba(0, 0, 0, .9); }
-.cr-plate { position: absolute; left: 50%; bottom: 20px; width: 150px; height: 26px; margin-left: -75px; display: flex; align-items: center; justify-content: center; background: linear-gradient(160deg, #f6dc93, #b8893a 35%, #e9c66c 55%, #8a6220 80%, #c99a3c); box-shadow: 0 1px 2px rgba(0, 0, 0, .6), inset 0 1px 0 rgba(255, 255, 255, .5); }
-.cr-plate span { font: 600 11px/1 var(--serif); letter-spacing: .4em; padding-left: .4em; color: #3a2410; }
-.rec-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 10px; margin: 6px 0 10px; }
-.rec-wall a { display: block; aspect-ratio: 1; } .rec-wall .slv { width: 100% !important; height: 100% !important; }
-.deck-scene { margin: 0 -20px; padding: 18px 16px 4px; background: linear-gradient(#1a1410, #0f0c0a); }
-.deck { position: relative; height: 330px; border-radius: 4px; box-shadow: 0 20px 34px rgba(0, 0, 0, .7), inset 0 1px 0 rgba(255, 225, 190, .25); background: linear-gradient(rgba(255, 225, 190, .18), rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, .4)), url(shelf/cherry.jpg) 0 0 / 420px auto, #4a2e1c; }
-.deck .platter { position: absolute; left: 26px; top: 26px; width: 270px; height: 270px; border-radius: 50%; background: radial-gradient(circle, #3a3a3a, #1a1a1a 70%, #0a0a0a); box-shadow: 0 0 0 3px #888, 0 0 0 4px #333, 0 8px 16px rgba(0, 0, 0, .6); }
-.deck .rec { z-index: 1; cursor: pointer; }
-.deck .arm { position: absolute; right: 28px; top: 30px; z-index: 2; width: 40px; height: 250px; transform-origin: 20px 20px; transition: transform .9s cubic-bezier(.3, .7, .2, 1); }
-.deck .arm .base { position: absolute; right: 0; top: 0; width: 40px; height: 40px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #f0f0f0, #8a8a8a 50%, #3a3a3a); box-shadow: 0 3px 6px rgba(0, 0, 0, .6); }
-.deck .arm .rod { position: absolute; right: 16px; top: 18px; width: 6px; height: 210px; border-radius: 3px; background: linear-gradient(90deg, #666, #f4f4f4 40%, #999); transform-origin: 50% 0; transform: rotate(22deg); box-shadow: 2px 3px 4px rgba(0, 0, 0, .5); }
-.deck .arm .head { position: absolute; right: 86px; top: 206px; width: 16px; height: 30px; border-radius: 2px; background: linear-gradient(90deg, #222, #555); transform: rotate(22deg); }
-.deck .knob { position: absolute; bottom: 18px; width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(160deg, #f6dc93, #b8893a 35%, #e9c66c 55%, #8a6220 80%, #c99a3c); box-shadow: 0 1px 2px rgba(0, 0, 0, .6); }
-.deck-scene.playing .arm { transform: rotate(-9deg); }
+/* the sideboard: its top, and its front with the brass plate (the count in Roman figures) between the gilt ‹ › */
+.cr-sb-top { position: relative; z-index: 1; display: block; height: 30px; margin: 0 -10px; box-shadow: inset 0 -2px 0 rgba(255, 220, 180, .15), 0 18px 30px rgba(0, 0, 0, .8);
+  background: linear-gradient(rgba(255, 225, 190, .22), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, .42)), url(shelf/cherry.jpg) 0 0 / 420px auto, #4a2e1c; }
+.cr-sb { position: relative; flex: 0 0 auto; min-height: 160px; display: flex; align-items: flex-start; justify-content: center; gap: 14px; padding-top: 44px; box-sizing: border-box;
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), linear-gradient(90deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, .06) 9%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .06) 91%, rgba(0, 0, 0, .55)), url(shelf/cherry_v.jpg) 0 0 / 380px auto, #4a2e1c; }
+.cr-plate { position: relative; width: 200px; height: 38px; }
+.cr-plate .sc-cut { font: 600 12px/1 var(--sc-caps); letter-spacing: .34em; padding-left: .34em; }
+.cr-plate .n { margin-top: 4px; font: 600 9px/1 var(--latin); letter-spacing: .3em; padding-left: .3em; }
+.cr-flip { -webkit-appearance: none; appearance: none; width: 44px; height: 38px; margin: 0; padding: 0; border: 0; font: 500 30px/36px var(--latin); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.cr-flip:disabled { opacity: .25; cursor: default; }
+/* #/records/<date>: the turntable's plinth filling the page; --p the platter, everything on it follows */
+.deck-scene { display: flex; flex-direction: column; align-items: center; padding: 84px 0 44px; --p: min(354px, calc(100vw - 48px)); }
+.deck { position: relative; flex: 0 0 auto; width: var(--p); height: var(--p); }
+.deck .platter { position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(circle, #3a3a3a, #161616 70%, #080808); box-shadow: 0 0 0 3px #9a9a9a, 0 0 0 5px #2a2a2a, 0 16px 30px rgba(0, 0, 0, .7); }
+.deck .rec { z-index: 1; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+/* the tonearm turns about its pivot: off the record at rest, onto it while the record plays */
+.deck .arm { position: absolute; inset: 0; z-index: 2; pointer-events: none; transform-origin: 92.7% 3.4%; transform: rotate(-30deg); transition: transform .9s cubic-bezier(.3, .7, .2, 1); }
+.deck .arm .rod { position: absolute; left: calc(92.7% - 3.5px); top: 3.4%; width: 7px; height: 78%; border-radius: 3px; background: linear-gradient(90deg, #555, #f6f6f6 40%, #9a9a9a); transform-origin: 50% 0; transform: rotate(26deg); box-shadow: 3px 4px 5px rgba(0, 0, 0, .5); }
+.deck .arm .rod::after { content: ""; position: absolute; left: 50%; bottom: -34px; width: 20px; height: 38px; margin-left: -10px; border-radius: 2px; background: linear-gradient(90deg, #1a1a1a, #4a4a4a); box-shadow: 2px 3px 4px rgba(0, 0, 0, .6); }
+.deck .pivot { position: absolute; z-index: 3; left: calc(92.7% - 24px); top: calc(3.4% - 24px); width: 48px; height: 48px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #f4f4f4, #8a8a8a 50%, #2a2a2a); box-shadow: 0 4px 8px rgba(0, 0, 0, .6); }
+.deck-scene.playing .arm { transform: none; }
 @media (prefers-reduced-motion: no-preference) { .deck-scene.playing .rec { animation: rec-spin 1.8s linear infinite; } }
 @keyframes rec-spin { to { transform: rotate(360deg); } }
-.deck-now { margin: 18px 0 0; text-align: center; }
-.deck-now b { display: block; font: 700 15px/1.4 var(--serif); letter-spacing: .1em; color: #ecd9b0; }
-.deck-now span { display: block; margin-top: 6px; font: 400 12.5px/1.6 var(--sans); color: #a8916a; }
-.deck-hint { margin: 10px 0 0; text-align: center; font: 500 11.5px/1 var(--sans); letter-spacing: .1em; color: #8a7a5c; }
-.deck-scene .btns { display: flex; justify-content: center; margin: 16px 0 14px; }
-.deck-scene .btn.ghost { color: #e8d4a8; border-color: rgba(217, 197, 149, .5); }
+.dk-knobs { align-self: stretch; display: flex; gap: 16px; padding: 36px calc(50% - var(--p) / 2 + 10px) 0; }
+.dk-knobs span { display: flex; flex-direction: column; align-items: center; gap: 6px; font: 600 9px/1 var(--sc-caps); letter-spacing: .1em; color: rgba(233, 205, 150, .7); }
+.dk-knobs i { width: 30px; height: 30px; border-radius: 50%; background: radial-gradient(circle at 38% 30%, #fff3c4, #c99a3c 45%, #7a5418); box-shadow: 0 2px 4px rgba(0, 0, 0, .6); }
+.dk-plate { position: relative; margin-top: 44px; width: min(300px, calc(100vw - 64px)); min-height: 82px; box-sizing: border-box; padding: 14px 28px; text-align: center; }
+.dk-plate .dk-by { font: 600 10px/1.3 var(--sc-caps); letter-spacing: .36em; padding-left: .36em; }
+.dk-plate .dk-work { margin-top: 8px; font: 700 19px/1.3 var(--serif); letter-spacing: .24em; padding-left: .24em; }
+.dk-plate .dk-work.long { font-size: 15px; letter-spacing: .12em; padding-left: .12em; }
+.dk-plate .dk-orig { margin-top: 8px; min-height: 1.3em; font: italic 500 11.5px/1.3 var(--latin); letter-spacing: .06em; }
+.dk-read { position: relative; margin-top: 28px; padding: 0 0 9px .3em; font: 600 12px/1 var(--serif); letter-spacing: .3em; text-decoration: none; }
+.dk-read::after { content: ""; position: absolute; left: 50%; bottom: 0; width: 40px; height: 1px; margin-left: -20px; background: linear-gradient(90deg, transparent, rgba(233, 198, 108, .6), transparent); }
 
 /* ——— 紀念章 (medals.js; the owner's pick 2026-11-19: the velvet box) ——— a walnut box a year lined with wine velvet,
    twelve hollows; an earned month holds its gold medal. */
-.medals-page { padding-top: 14px; }
 .md-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
-.md-box { padding: 12px; border-radius: 6px; box-shadow: 0 24px 40px -12px rgba(0, 0, 0, .75); background: linear-gradient(rgba(255, 225, 190, .18), rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, .4)), url(shelf/cherry.jpg) 0 0 / 420px auto, #4a2e1c; }
-.md-velvet { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px 6px; padding: 22px 8px 18px; border-radius: 3px; box-shadow: inset 0 6px 18px rgba(0, 0, 0, .8);
+/* each year's case open on the desk: the lid's ivory silk, a brass hinge, the velvet tray */
+.medals-scene { display: flex; flex-direction: column; gap: 46px; padding: 70px 18px 44px; }
+.md-box { position: relative; z-index: 1; }
+.md-lid, .md-tray { position: relative; padding: 12px; background: linear-gradient(rgba(255, 225, 190, .16), rgba(0, 0, 0, 0) 24%, rgba(0, 0, 0, .42)), url(shelf/cherry.jpg) 0 0 / 420px auto, #4a2e1c; }
+.md-lid { height: 250px; box-sizing: border-box; border-radius: 8px 8px 2px 2px; box-shadow: 0 -6px 20px rgba(0, 0, 0, .5); }
+.md-tray { border-radius: 2px 2px 8px 8px; box-shadow: 0 30px 40px rgba(0, 0, 0, .75); }
+.md-silk { position: absolute; inset: 12px; overflow: hidden; border-radius: 4px 4px 0 0; background: radial-gradient(80% 90% at 50% 30%, #fbf4e2, #e9dcc0 70%, #d4c4a0); box-shadow: inset 0 -18px 26px rgba(80, 55, 20, .35), inset 0 6px 12px rgba(0, 0, 0, .25); }
+.md-silk::before { content: ""; position: absolute; inset: 0; opacity: .35; background: repeating-linear-gradient(100deg, rgba(255, 255, 255, .5) 0 1px, transparent 1px 5px), repeating-linear-gradient(10deg, rgba(150, 120, 70, .25) 0 1px, transparent 1px 7px); }
+.md-ring { position: absolute; left: 50%; top: 32px; width: 70px; height: 70px; margin-left: -35px; border-radius: 50%; border: 1px solid rgba(185, 138, 51, .7); box-shadow: 0 0 0 5px rgba(185, 138, 51, 0), 0 0 0 6px rgba(185, 138, 51, .5); }
+.md-bird { position: absolute; left: 50%; top: 48px; width: 44px; margin-left: -22px; }
+.md-title, .md-yr { position: absolute; left: 0; right: 0; text-align: center; filter: drop-shadow(0 1px 0 rgba(255, 255, 255, .6)) drop-shadow(0 -.5px 0 rgba(80, 50, 10, .4)); }
+.md-title { top: 126px; font: 600 20px/1 var(--sc-caps); letter-spacing: .4em; padding-left: .4em; }
+.md-yr { top: 158px; font: 600 12px/1 var(--sc-caps); letter-spacing: .5em; padding-left: .5em; }
+.md-hinge { position: relative; z-index: 2; display: block; height: 10px; margin: -4px -4px 0; background: linear-gradient(#9a6e26, #f3d78e 45%, #7a5418); box-shadow: 0 2px 3px rgba(0, 0, 0, .6); }
+.md-velvet { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px 0; padding: 24px 6px; border-radius: 0 0 4px 4px; box-shadow: inset 0 8px 20px rgba(0, 0, 0, .85);
   background: radial-gradient(70% 60% at 50% 35%, rgba(255, 160, 180, .1), rgba(0, 0, 0, .35)), linear-gradient(#3a0a18, #3a0a18), url(shelf/velvet.jpg) 0 0 / 260px auto, #3a0a18; background-blend-mode: normal, multiply, normal; }
-.md-cell { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.md-cell { display: flex; justify-content: center; }
 .md-hollow { position: relative; display: flex; align-items: center; justify-content: center; width: 88px; height: 88px; border-radius: 50%; background: rgba(0, 0, 0, .25); box-shadow: inset 0 4px 10px rgba(0, 0, 0, .85), inset 0 -1px 2px rgba(255, 180, 200, .12); }
-.md-hollow i { font: 600 11px/1 var(--latin); font-style: normal; letter-spacing: .18em; color: rgba(255, 200, 210, .28); }
+.md-hollow i { font: 600 10px/1 var(--sc-caps); font-style: normal; letter-spacing: .2em; padding-left: .2em; color: rgba(255, 200, 210, .25); }
 .md-face { position: absolute; left: -2px; top: -4px; filter: drop-shadow(0 7px 9px rgba(0, 0, 0, .6)); }
-.md-cell b { font: 600 10.5px/1 var(--serif); letter-spacing: .2em; color: rgba(232, 207, 152, .32); }
-.md-cell.got b { color: #e8cf98; }
-.md-cell.before .md-hollow { opacity: .45; } .md-cell.before b { visibility: hidden; }
-.md-year { margin: 16px 0 26px; text-align: center; } .md-year b { font: 600 14px/1 var(--serif); letter-spacing: .3em; color: var(--gold-ink); }
-.md-note { margin: 0 0 10px; text-align: center; font: 500 11.5px/1.6 var(--sans); letter-spacing: .12em; color: var(--muted); }
+.md-cell.before .md-hollow { opacity: .45; }
+
+/* ——— 收藏's rooms (app.js scenePage: 書架, 書頁, 唱片櫃, 唱盤, 紀念章; the owner, 2026-11-19: 「對，照這樣改」) ———
+   Each page is one full-bleed scene from the top to the bottom bar: the panelled walnut wall or the desk, one warm lamp,
+   a vignette, fine grain over everything; no paper shows, not even when the page is pulled past its end. Every word is
+   on an object — engraved brass, gilt on leather and sleeves. The page's name is gilt small capitals over the scene. */
+:root { --sc-caps: "Cormorant SC", "Cormorant Garamond", Georgia, serif;
+  --sc-brass-bg: repeating-linear-gradient(0deg, rgba(255, 255, 255, .07) 0 1px, rgba(0, 0, 0, .05) 1px 2px), linear-gradient(170deg, #f3d78e, #c39445 32%, #e8c56c 52%, #9a6e26 78%, #c99a3c); }
+html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
+.sc-page { position: relative; isolation: isolate; display: flex; flex-direction: column; background: #0b0705; color: #e9d6ad; line-height: 1.4;
+  min-height: calc(100vh - var(--nav-h) - var(--dock-h) - env(safe-area-inset-bottom)); }
+@supports (height: 100svh) { .sc-page { min-height: calc(100svh - var(--nav-h) - var(--dock-h) - env(safe-area-inset-bottom)); } }
+.sc-bar { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; justify-content: center; box-sizing: border-box;
+  height: calc(54px + env(safe-area-inset-top)); margin-bottom: calc(-54px - env(safe-area-inset-top)); padding-top: env(safe-area-inset-top);
+  background: linear-gradient(rgba(8, 5, 3, .72), rgba(8, 5, 3, 0)); }
+.sc-back { position: absolute; left: 4px; bottom: 5px; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: #c9a75a; -webkit-tap-highlight-color: transparent; }
+.sc-back svg { width: 22px; height: 22px; }
+.sc-title { margin: 0; font: 600 15px/1 var(--sc-caps); letter-spacing: .34em; padding-left: .34em; }
+.sc-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.sc-scene { position: relative; flex: 1 0 auto; overflow: hidden; isolation: isolate; }
+.sc-grain { position: absolute; inset: 0; z-index: 40; pointer-events: none; mix-blend-mode: overlay; opacity: .5;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+/* the room: dark panelled walnut, the frieze and a tall panel moulded into it */
+.sc-wall { background: linear-gradient(#000a, #0006), linear-gradient(#3a2214, #3a2214), url(shelf/veneer_v.jpg) 0 0 / 340px auto, #1a0f08; background-blend-mode: normal, multiply, normal; }
+.sc-wall::before, .sc-wall::after { content: ""; position: absolute; left: 16px; right: 16px; z-index: -1; pointer-events: none; border: 1px solid rgba(0, 0, 0, .55); box-shadow: inset 1px 1px 0 rgba(255, 215, 170, .10), 1px 1px 0 rgba(255, 215, 170, .08), inset 0 0 26px rgba(0, 0, 0, .5); }
+.sc-wall::before { top: 64px; height: 70px; }
+.sc-wall::after { top: 150px; bottom: 24px; }
+/* the desk: the cherry top under the lamp */
+.sc-desk { background: linear-gradient(rgba(255, 225, 190, .16), rgba(0, 0, 0, 0) 24%, rgba(0, 0, 0, .42)), url(shelf/cherry.jpg) 0 0 / 420px auto, #4a2e1c; }
+/* one warm lamp and the vignette: on the wall behind the furniture, over everything on the desk */
+.sc-lamp { position: absolute; inset: 0; pointer-events: none; }
+.sc-wall > .sc-lamp { z-index: 0; background: radial-gradient(60% 34% at 50% 14%, rgba(255, 206, 140, .30), rgba(255, 206, 140, 0) 70%), radial-gradient(120% 80% at 50% 40%, transparent 45%, rgba(0, 0, 0, .72)); }
+.sc-desk > .sc-lamp { z-index: 5; background: radial-gradient(70% 40% at 50% 18%, rgba(255, 206, 140, .22), transparent 70%), radial-gradient(130% 90% at 50% 45%, transparent 50%, rgba(0, 0, 0, .72)); }
+.deck-scene > .sc-lamp { background: radial-gradient(70% 40% at 35% 20%, rgba(255, 206, 140, .22), transparent 70%), radial-gradient(130% 90% at 50% 45%, transparent 50%, rgba(0, 0, 0, .7)); }
+/* engraved brass: brushed, bevelled, two rivets, the letters cut into it */
+.sc-brass { display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box; border-radius: 2px; background: var(--sc-brass-bg);
+  box-shadow: 0 1px 1px rgba(255, 235, 190, .35) inset, 0 -1px 1px rgba(60, 35, 5, .5) inset, 0 2px 4px rgba(0, 0, 0, .6); }
+.sc-brass::before, .sc-brass::after { content: ""; position: absolute; top: 50%; width: 5px; height: 5px; margin-top: -2.5px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff3c4, #7a5418 70%); box-shadow: inset 0 0 0 1px rgba(60, 35, 5, .35); }
+.sc-brass::before { left: 7px; } .sc-brass::after { right: 7px; }
+.sc-cut { display: block; color: #4a3008; text-shadow: 0 1px 0 rgba(255, 240, 200, .55), 0 -1px 0 rgba(60, 35, 5, .45); }
+.sc-empty { position: absolute; left: 0; right: 0; top: 38%; z-index: 6; margin: 0; padding: 0 36px; text-align: center; font: 500 13px/1.9 var(--serif); letter-spacing: .12em; color: rgba(233, 205, 150, .72); }

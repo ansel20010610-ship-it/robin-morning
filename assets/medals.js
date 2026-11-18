@@ -3,12 +3,12 @@
 // month and the year below, a beaded rim. #/medals is one walnut box a year, lined with wine velvet, twelve hollows; an
 // earned month holds its medal, the others stay empty with the month's name pressed into the velvet. A month counts once
 // it is over (or on its last day, read through). Velvet and walnut are photographs (assets/shelf/, Poly Haven, CC0).
-import { esc } from "./util.js";
+// Since the owner's 「對，照這樣改」 (2026-11-19) the page is one scene: each year's case lies open on the desk — the lid's
+// ivory silk with the gilt robin in its ring, Medaillen and the year, a brass hinge, the velvet tray below.
 
 const DE = ["JANUAR", "FEBRUAR", "MÄRZ", "APRIL", "MAI", "JUNI", "JULI", "AUGUST", "SEPTEMBER", "OKTOBER", "NOVEMBER", "DEZEMBER"];
 const ZH = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"];
 const ROMAN = (n) => [[1000, "M"], [900, "CM"], [500, "D"], [400, "CD"], [100, "C"], [90, "XC"], [50, "L"], [40, "XL"], [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]].reduce((s, [v, r]) => { while (n >= v) { s += r; n -= v; } return s; }, "");
-const yearZh = (y) => String(y).split("").map((c) => "〇一二三四五六七八九"[c]).join(" ");
 
 // The months earned: `issues` the published issues ({date}), `done` the dates read through, `today` YYYY-MM-DD.
 export function medalMonths(issues, done, today) {
@@ -32,7 +32,8 @@ const DEFS = `<svg class="md-defs" width="0" height="0" aria-hidden="true"><defs
 </defs></svg>`;
 
 function medalSvg(mo, year, px) {
-  const leaf = Array.from({ length: 16 }, (_, i) => { const d = -150 + i * 20, a = (d * Math.PI) / 180, x = (Math.cos(a) * 31).toFixed(1), y = (Math.sin(a) * 31).toFixed(1); return `<ellipse cx="${x}" cy="${y}" rx="2.2" ry="4.6" transform="rotate(${d + 90} ${x} ${y})"/>`; }).join("");
+  // the ring of leaves runs down both sides: the head stays clear for the month's name, the foot for the year
+  const leaf = Array.from({ length: 16 }, (_, i) => i).filter((i) => (i < 2 || i > 4) && (i < 11 || i > 13)).map((i) => { const d = -150 + i * 20, a = (d * Math.PI) / 180, x = (Math.cos(a) * 31).toFixed(1), y = (Math.sin(a) * 31).toFixed(1); return `<ellipse cx="${x}" cy="${y}" rx="2.2" ry="4.6" transform="rotate(${d + 90} ${x} ${y})"/>`; }).join("");
   const beads = Array.from({ length: 60 }, (_, i) => { const a = (i * 6 * Math.PI) / 180; return `<circle cx="${(Math.cos(a) * 45.5).toFixed(1)}" cy="${(Math.sin(a) * 45.5).toFixed(1)}" r=".9"/>`; }).join("");
   return `<svg class="md-face" viewBox="-50 -50 100 100" width="${px}" height="${px}" aria-hidden="true">
     <circle r="49" fill="url(#md-gold)"/><circle r="49" fill="url(#md-rim)" opacity=".35"/>
@@ -45,15 +46,19 @@ function medalSvg(mo, year, px) {
   </svg>`;
 }
 
-// #/medals: a box a year, the newest year on top. `first` the first issue's date, so the months before it stay blank.
+// #/medals: a case a year, the newest year on top, lying open on the desk. `first` the first issue's date, so the
+// months before it stay blank; an empty hollow has the month's name pressed into the velvet.
 export function medalsHtml(earned, first, today) {
   const got = new Map(earned.map((e) => [e.month, e]));
   const y0 = Number(first.slice(0, 4)), y1 = Number(today.slice(0, 4)), years = [];
   for (let y = y1; y >= y0; y--) years.push(y);
-  const box = (y) => `<section class="md-box" aria-label="${y} 年的紀念章，${earned.filter((e) => e.month.startsWith(String(y))).length} 枚"><div class="md-velvet">
+  const box = (y) => `<section class="md-box" aria-label="${y} 年的紀念章，${earned.filter((e) => e.month.startsWith(String(y))).length} 枚">
+    <div class="md-lid"><div class="md-silk"><i class="md-ring"></i><svg class="md-bird" viewBox="6 16 54 38" aria-hidden="true"><use href="#md-robin" fill="#a87a2c" color="#a87a2c"/></svg>
+      <b class="md-title sh-foil">Medaillen</b><b class="md-yr sh-foil">${ROMAN(y)}</b></div></div>
+    <i class="md-hinge"></i>
+    <div class="md-tray"><div class="md-velvet">
       ${ZH.map((z, mo) => { const m = `${y}-${String(mo + 1).padStart(2, "0")}`, e = got.get(m), before = m < first.slice(0, 7);
-        return `<div class="md-cell${e ? " got" : ""}${before ? " before" : ""}"><span class="md-hollow">${e ? medalSvg(mo, y, 92) : `<i>${before ? "" : DE[mo].slice(0, 3)}</i>`}</span><b>${z}月</b></div>`; }).join("")}
-    </div></section>
-    <p class="md-year"><b>${esc(yearZh(y))}</b></p>`;
-  return `${DEFS}${years.map(box).join("")}<p class="md-note">一個月每天都讀完，就收進一枚</p>`;
+        return `<div class="md-cell${e ? " got" : ""}${before ? " before" : ""}" role="img" aria-label="${z}月${e ? "，收進一枚" : ""}"><span class="md-hollow">${e ? medalSvg(mo, y, 92) : `<i>${before ? "" : DE[mo].slice(0, 3)}</i>`}</span></div>`; }).join("")}
+    </div></div></section>`;
+  return `${DEFS}${years.map(box).join("")}`;
 }

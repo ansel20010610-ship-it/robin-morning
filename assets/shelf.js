@@ -76,17 +76,16 @@ function coverSvg(e) {
   </svg>`;
 }
 
-// The bookcase (#/shelf; the owner's pick of 2026-11-18, sample A): a walnut-dark case with a moulded crown, fluted
-// pilasters and a brass plate, its shelves numbered on small brass labels like a library's. The newest book stands facing
-// out on the top shelf by a brass bookend; the ones before it stand spine out beside it, then on the shelves below.
-// Wood and leather are photographs (assets/shelf/, Poly Haven, CC0); the brass is drawn (s-brass).
-const brass = '<svg class="bc-brass" aria-hidden="true"><rect width="100%" height="100%" fill="url(#sg-brass)" filter="url(#s-brass)"/></svg>';
+// The bookcase (#/shelf; the owner's pick of 2026-11-18, sample A; built into the panelled wall as one full-bleed scene
+// since his 「對，照這樣改」 of 2026-11-19): a walnut-dark case with a moulded crown, fluted pilasters and an engraved brass
+// plate, its shelves numbered on small brass labels like a library's. The newest book stands facing out on the top shelf
+// by a brass bookend; the ones before it stand spine out beside it, then on the shelves below.
+// Wood and leather are photographs (assets/shelf/, Poly Haven, CC0); the brass is CSS (style.css .sc-brass).
 const SHELF_NO = ["I", "II", "III", "IV", "V", "VI"];
 // `reading` (the owner, 2026-11-19: 正在看的書也要在書架): the serial being read, {slug, title, author, start, n, of} —
-// it stands facing out with a ribbon in it and how far the reader is, and leads to the 連載 tab; every finished book then
-// stands spine out beside it.
+// it stands facing out with a wine silk ribbon hanging from it over the shelf's edge (how far the reader is: only in its
+// label), and leads to the 連載 tab; every finished book then stands spine out beside it. No book at all: the empty case.
 export function shelfHtml(list, reading = null) {
-  if (!list.length && !reading) return "";
   const last = reading ? { ...reading, done: "" } : list.at(-1), older = (reading ? list : list.slice(0, -1)).slice().reverse(); // the most recent first, next to the one facing out
   // A spine's title stays on one line, set smaller the longer it is (the top shelf's spines are taller than the others').
   const spine = (e, tall) => { const n = [...e.title].length || 1, fs = Math.max(8, Math.min(12, Math.floor((tall ? 112 : 84) / (n * 1.22))));
@@ -95,17 +94,16 @@ export function shelfHtml(list, reading = null) {
   for (let i = 24; i < older.length; i += 10) shelves.push(older.slice(i, i + 10));
   const face = reading
     ? `<a class="sh-book reading" href="#/serial" aria-label="《${esc(reading.title)}》，正在讀，讀到第 ${reading.n} 回，共 ${reading.of} 回"><span class="b3">
-        <i class="f back"></i><i class="f top"></i><i class="f pages"></i><span class="f cover">${coverSvg(last)}</span></span><i class="bm" aria-hidden="true"></i><span class="bc-now">${brass}<i>讀到第 ${reading.n} 回・共 ${reading.of} 回</i></span></a>`
-    : `<a class="sh-book${last.shown ? "" : " new"}" href="#/shelf/${esc(last.slug)}" aria-label="《${esc(last.title)}》，${esc(volZh(list.length))}，翻開"><span class="b3">
+        <i class="f back"></i><i class="f top"></i><i class="f pages"></i><span class="f cover">${coverSvg(last)}</span></span><i class="sh-ribbon" aria-hidden="true"></i></a>`
+    : !last ? "" : `<a class="sh-book${last.shown ? "" : " new"}" href="#/shelf/${esc(last.slug)}" aria-label="《${esc(last.title)}》，${esc(volZh(list.length))}，翻開"><span class="b3">
         <i class="f back"></i><i class="f top"></i><i class="f pages"></i><span class="f cover">${coverSvg(last)}</span></span></a>`;
-  const bay = (books, i) => `<div class="bc-bay${i ? "" : " first"}"><i class="bc-shade"></i><i class="bc-light"></i><div class="bc-row">${i ? "" : face}${books.map((e) => spine(e, !i)).join("")}${i ? "" : `<i class="bc-end">${brass}</i>`}</div>
-      <div class="bc-board"><span class="bc-tag">${brass}<i>${SHELF_NO[i] || roman(i + 1)}</i></span></div></div>`;
+  const bay = (books, i) => `<div class="bc-bay${i ? "" : " first"}"><i class="bc-shade"></i><i class="bc-light"></i><div class="bc-row">${i ? "" : face}${books.map((e) => spine(e, !i)).join("")}${i || !last ? "" : '<i class="bc-end"></i>'}</div>
+      <div class="bc-board"><span class="bc-tag"><i>${SHELF_NO[i] || roman(i + 1)}</i></span></div></div>`;
   return `<section class="bcase" aria-label="我的書架，讀完 ${list.length} 冊${reading ? "，一本正在讀" : ""}">${DEFS}
-    <div class="bc-crown"><i class="bc-dent"></i></div><div class="bc-plate">${brass}<span>知更鳥藏書</span></div>
+    <div class="bc-crown"><i class="bc-dent"></i></div><div class="bc-plate sc-brass"><span class="sc-cut ex">Ex Libris</span><span class="sc-cut zh">知更鳥藏書</span></div>
     <i class="bc-pil l"></i><i class="bc-pil r"></i>
     ${shelves.slice(0, Math.max(3, shelves.findLastIndex((s) => s.length) + 1)).map(bay).join("")}
-  </section>
-  <p class="bc-cap">${list.length ? `讀完${zh(list.length)}冊・最近一本${esc(dateZh(list.at(-1).done))}讀畢` : "第一本還在讀"}</p>`;
+  </section>`;
 }
 
 // The bookplate: laid paper, gold Ex Libris, the wheat ear of the book's epigraph growing over the robin in an engraved
@@ -134,11 +132,12 @@ const marble = () => {
   return `<svg class="ep-marble" viewBox="0 0 358 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g filter="url(#s-marble)"><rect width="358" height="560" fill="#1b2742"/>${r}</g></svg>`;
 };
 
-// The opened book (#/shelf/<slug>): the endpaper with the plate and the seal, under a cover that swings open.
+// The opened book (#/shelf/<slug>): the endpaper with the plate and the seal, under a cover that swings open; it lies
+// on the desk (app.js viewShelfBook, one full-bleed scene), its volume number on the plate.
 export function bookHtml(e, no) {
   const n = Number(e.of) || 0, span = e.start ? days(e.start, e.done) : 0;
   const tally = [n && `${zh(n)}回`, span > 0 && `${zh(span)}個早晨`].filter(Boolean).join("・");
-  return `<div class="opened" aria-label="《${esc(e.title)}》的藏書票：${esc(dateZh(e.done))}讀畢">${DEFS}
+  return `<div class="opened" aria-label="《${esc(e.title)}》，${esc(volZh(no))}，${esc(e.author)}；藏書票：${esc(dateZh(e.done))}讀畢">${DEFS}
     <div class="endpaper">${marble()}<i class="ep-gutter"></i>
       <div class="plate">${plateSvgArt()}
         <span class="pl-no">N<sup>o</sup> ${String(no).padStart(3, "0")}</span>
@@ -155,8 +154,7 @@ export function bookHtml(e, no) {
         <text x="52" y="85" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="7" letter-spacing="1.6" fill="#a74a5a">${roman(Number(e.done.slice(0, 4)))}</text></svg>
     </div>
     <div class="lid"><span class="cover">${coverSvg(e)}</span><i class="lid-in"></i></div>
-  </div>
-  <p class="opened-cap"><b>${esc(volZh(no))}</b><span>《${esc(e.title)}》${esc(e.author)}</span></p>`;
+  </div>`;
 }
 
 // Opening the book. The first time: the cover lifts slowly, the plate is pressed in, the seal comes down with a thud
