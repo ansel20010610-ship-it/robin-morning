@@ -1,0 +1,206 @@
+{
+ "column": "news",
+ "date": "2026-11-19",
+ "title": "以軍越過黃線進加薩中部，川普、習近平、普丁預定今天深圳會談",
+ "dek": "以軍越過黃線進加薩中部，美伊再度交火。",
+ "brief": "以軍 18 日越過停火時劃的黃線，在加薩中部展開地面行動，哈瑪斯說這違反停火。美軍 17 日打擊伊朗葛希姆島；科威特、巴林報稱遇襲，伊朗軍方稱攻擊科威特的美軍基地。川普、習近平、普丁預定今天在深圳舉行首度的三方峰會。",
+ "topic_key": "news:2026-11-19",
+ "voice": "wire",
+ "updated_at": "2026-11-19T05:29:21+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "What does Israel's new ground offensive mean for Palestinians in Gaza?",
+   "publisher": "半島電視台",
+   "date": "2026-11-18",
+   "url": "https://www.aljazeera.com/news/2026/11/18/what-does-israels-new-ground-offensive-mean-for-palestinians-in-gaza",
+   "note": "黃線、薩拉丁路封閉、以軍與哈瑪斯說法、停火後首次公開宣布的大規模地面行動"
+  },
+  {
+   "title": "Gazans flee shelters as Israeli army launches ground operation beyond Yellow Line",
+   "publisher": "法國 24 電視台（含法新社）",
+   "date": "2026-11-18",
+   "url": "https://www.france24.com/en/middle-east/20261118-gazans-flee-shelters-as-israeli-army-launches-ground-operation-beyond-yellow-line",
+   "note": "民防機構說三人死於三起無人機攻擊，是否與地面行動有關不明"
+  },
+  {
+   "title": "Kuwait, Bahrain face new Iran attacks after US strike on Qeshm Island",
+   "publisher": "半島電視台",
+   "date": "2026-11-18",
+   "url": "https://www.aljazeera.com/news/2026/11/18/kuwait-bahrain-face-new-iran-attacks-after-us-strike-on-qeshm-island",
+   "note": "17 日美軍打擊、美方稱回應巴林美軍雷達遇襲、伊朗稱回應無人機偵察與通訊塔遭襲、巴林 6 天內第 4 次遇襲、科威特防空 9 月初以來首次啟動；未提傷亡"
+  },
+  {
+   "title": "美軍空襲伊朗葛希姆島後 巴林、科威特均稱遇襲",
+   "publisher": "中央社",
+   "date": "2026-11-18",
+   "url": "https://www.cna.com.tw/news/aopl/202611180223.aspx",
+   "note": "18 日 16:18 發布；美方官員說法（飛彈發射陣地）、伊朗軍方稱攻擊賽勒姆空軍基地"
+  },
+  {
+   "title": "Trump and Putin to meet one-on-one in China Thursday",
+   "publisher": "半島電視台",
+   "date": "2026-11-18",
+   "url": "https://www.aljazeera.com/news/2026/11/18/trump-and-putin-to-meet-one-on-one-in-china-thursday",
+   "note": "美方官員說川普與普丁週四一對一；同日美國特使在柏林與烏克蘭、歐洲官員會面"
+  },
+  {
+   "title": "Three leaders, three agendas: Who wants what from Xi-Trump-Putin summit?",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-18",
+   "url": "https://www.france24.com/en/asia-pacific/20261118-three-leaders-three-agendas-who-wants-what-from-xi-trump-putin-summit",
+   "note": "週四深圳三方會談；分析人士認為重大突破不太可能"
+  },
+  {
+   "title": "Trump, Xi and Putin to hold first three-way summit in China",
+   "publisher": "半島電視台",
+   "date": "2026-11-14",
+   "url": "https://www.aljazeera.com/news/2026/11/14/trump-xi-and-putin-to-hold-first-three-way-summit-in-china",
+   "note": "首度三方會面（「前所未有」）"
+  },
+  {
+   "title": "藍力拚普發2萬20日三讀 賴清德籲在野勿強行通過",
+   "publisher": "中央社",
+   "date": "2026-11-18",
+   "url": "https://www.cna.com.tw/news/aipl/202611180211.aspx",
+   "note": "18 日 16:01 發布；中常會談話由發言人轉述、20 日院會、行政院 1 萬元方案"
+  },
+  {
+   "title": "Taiwan's president urges opposition to drop NT$20,000 cash handout proposal",
+   "publisher": "Focus Taiwan（中央社）",
+   "date": "2026-11-18",
+   "url": "https://focustaiwan.tw/politics/202611180024",
+   "note": "18 日 21:03 發布；國民黨提案以特別預算編列，稱今年稅收超徵有財源"
+  },
+  {
+   "title": "資安事件頻傳政院發函部會 促業者主動通知受影響民眾",
+   "publisher": "中央社",
+   "date": "2026-11-18",
+   "url": "https://www.cna.com.tw/news/aipl/202611180101.aspx",
+   "note": "18 日 12:14 發布；十餘家、約 800 萬筆、165 專線"
+  },
+  {
+   "title": "數發部：近期8百萬筆個資外洩 要求企業72小時內通知當事人",
+   "publisher": "公視新聞網",
+   "date": "2026-11-18",
+   "url": "https://news.pts.org.tw/article/836342",
+   "note": "18 日 20:06 發布；要求企業知悉外洩後 72 小時內個別通知當事人"
+  },
+  {
+   "title": "19日北台灣愈晚愈冷 週末清晨局部地區低溫探11度",
+   "publisher": "中央社",
+   "date": "2026-11-18",
+   "url": "https://www.cna.com.tw/news/ahel/202611180292.aspx",
+   "note": "18 日 18:00 發布、21:33 更新；氣象署預報員說法，由中央社轉述"
+  }
+ ],
+ "body": [
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "以軍越過黃線進入加薩中部",
+     "place": [
+      "IL",
+      "PS"
+     ],
+     "summary": "以軍 18 日越過去年 10 月停火時劃定的「黃線」（以軍停火後退守的界線），坦克開往努賽拉特東側。COGAT 說薩拉丁路（布雷吉一帶）封閉。以軍說是為排除威脅，哈瑪斯說違反停火。同日民防機構說三人死於三起無人機攻擊，與地面行動關係不明。",
+     "source": "半島電視台、法國 24 電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/18/what-does-israels-new-ground-offensive-mean-for-palestinians-in-gaza",
+     "when": "11 月 18 日（週三），加薩當地"
+    },
+    {
+     "headline": "美軍轟伊朗島嶼，科威特巴林遇襲",
+     "place": [
+      "IR",
+      "KW",
+      "BH",
+      "US"
+     ],
+     "summary": "美軍戰機 17 日打擊葛希姆島。中央社引美方官員說，目標是革命衛隊飛彈發射陣地；半島電視台寫，美方說是回應巴林美軍雷達遇襲。伊朗稱是回應美軍無人機偵察與通訊塔遭襲，地方官員說損害不嚴重。伊朗軍方說攻擊科威特美軍基地，巴林說攔截攻擊，未提傷亡。",
+     "source": "半島電視台、中央社",
+     "url": "https://www.aljazeera.com/news/2026/11/18/kuwait-bahrain-face-new-iran-attacks-after-us-strike-on-qeshm-island",
+     "when": "11 月 17 至 18 日，當地"
+    },
+    {
+     "headline": "川普、習近平、普丁預定今天深圳會談",
+     "place": [
+      "CN",
+      "US",
+      "RU"
+     ],
+     "summary": "川普、習近平、普丁預定今天（週四）在深圳亞太經合會場邊舉行三方會談，是首度舉行的三方峰會。據美方官員，川普與普丁另有一對一會面。分析人士認為難有重大突破。",
+     "source": "半島電視台、法國 24 電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/18/trump-and-putin-to-meet-one-on-one-in-china-thursday",
+     "when": "11 月 19 日（週四），深圳當地"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "賴清德籲在野勿強推普發 2 萬",
+     "place": "TW",
+     "summary": "賴清德 18 日在民進黨中常會上，經發言人轉述，呼籲在野黨勿強行通過普發 2 萬元條例草案。國民黨說今年稅收超徵有財源，黨團力拚 20 日（週五）三讀。行政院方案是 1 萬元，編在 116 年度預算。",
+     "source": "中央社、Focus Taiwan",
+     "url": "https://www.cna.com.tw/news/aipl/202611180211.aspx",
+     "when": "11 月 18 日，台灣時間"
+    },
+    {
+     "headline": "政院要業者通知個資外洩民眾",
+     "place": "TW",
+     "summary": "行政院 18 日發函各部會，要求督促業者依個資法通知個資被外洩的人；數發部要求企業知悉外洩後 72 小時內個別通知當事人。近期十餘家業者外洩約 800 萬筆個資。可撥 165 查證。",
+     "source": "中央社、公視新聞網",
+     "url": "https://www.cna.com.tw/news/aipl/202611180101.aspx",
+     "when": "11 月 18 日，台灣時間"
+    },
+    {
+     "headline": "冷空氣增強，高山有機會飄雪",
+     "place": "TW",
+     "summary": "氣象署預報，19 日愈晚愈冷，桃園以北與東半部有局部短暫雨；3,500 公尺以上高山 19 日晚間至 20 日，若水氣與溫度配合有機會飄雪。21 日清晨最冷，22 日起回溫，23 日升到 26、27 度，24 日鋒面又轉雨降溫。（中央社轉述）",
+     "source": "中央社",
+     "url": "https://www.cna.com.tw/news/ahel/202611180292.aspx",
+     "when": "11 月 18 日，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "氣象署預報",
+   "head": [
+    "日期",
+    "預報"
+   ],
+   "rows": [
+    [
+     "19 日（週四）",
+     "北部白天 18、19 度，晚間 15、16 度；桃園以北、東半部局部短暫雨；高山晚間起有機會飄雪"
+    ],
+    [
+     "20 日（週五）",
+     "高山仍有機會飄雪"
+    ],
+    [
+     "21 日（週六）",
+     "清晨最冷，中部以北、宜花 13–15 度，南部、台東 16–18 度；局部空曠與近山區 11–13 度"
+    ],
+    [
+     "22 日（週日）",
+     "北部、宜花白天約 21、22 度，中南部 24–26 度"
+    ],
+    [
+     "23 日（週一）",
+     "白天 26、27 度"
+    ],
+    [
+     "24 日（週二）",
+     "鋒面使中部以北、東半部轉雨降溫"
+    ]
+   ]
+  }
+ ]
+}
