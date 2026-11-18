@@ -34,7 +34,7 @@ const DEFS = `<svg class="md-defs" width="0" height="0" aria-hidden="true"><defs
 
 function medalSvg(mo, year, px) {
   // the ring of leaves runs down both sides: the head stays clear for the month's name, the foot for the year
-  const leaf = Array.from({ length: 16 }, (_, i) => i).filter((i) => (i < 2 || i > 4) && (i < 11 || i > 13)).map((i) => { const d = -150 + i * 20, a = (d * Math.PI) / 180, x = (Math.cos(a) * 31).toFixed(1), y = (Math.sin(a) * 31).toFixed(1); return `<ellipse cx="${x}" cy="${y}" rx="2.2" ry="4.6" transform="rotate(${d + 90} ${x} ${y})"/>`; }).join("");
+  const leaf = Array.from({ length: 18 }, (_, i) => i).filter((i) => (i < 2 || i > 4) && (i < 11 || i > 13)).map((i) => { const d = -150 + i * 20, a = (d * Math.PI) / 180, x = (Math.cos(a) * 31).toFixed(1), y = (Math.sin(a) * 31).toFixed(1); return `<ellipse cx="${x}" cy="${y}" rx="2.2" ry="4.6" transform="rotate(${d + 90} ${x} ${y})"/>`; }).join("");
   const beads = Array.from({ length: 60 }, (_, i) => { const a = (i * 6 * Math.PI) / 180; return `<circle cx="${(Math.cos(a) * 45.5).toFixed(1)}" cy="${(Math.sin(a) * 45.5).toFixed(1)}" r=".9"/>`; }).join("");
   return `<svg class="md-face" viewBox="-50 -50 100 100" width="${px}" height="${px}" aria-hidden="true">
     <circle r="49" fill="url(#md-gold)"/><circle r="49" fill="url(#md-rim)" opacity=".35"/>

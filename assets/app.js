@@ -478,8 +478,8 @@ async function viewRecord(date, my) {
       return;
     }
     if (looking) { toast("唱片還在找錄音，請再點一次"); return; } // the answer is not in yet: not the music box in its place
-    if (linked) toast("Spotify 上找不到這一篇的錄音，先放旋律");
     if (boxBusy()) return; // the music box still sounding: the disc keeps turning as long as it does
+    if (linked) toast(r.a.motif ? "Spotify 上找不到這一篇的錄音，先放旋律" : "Spotify 上找不到這一篇的錄音");
     if (r.a.motif && playRecord(scene, r.a.motif)) return;
     spin(4000);
   });
