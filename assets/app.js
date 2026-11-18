@@ -19,6 +19,7 @@ import { codaHtml, codaVoices, playCoda } from "./jupiter.js";
 import { shelf, shelved, shelve, markShown, shelfHtml, bookHtml, openBook } from "./shelf.js";
 import { crateHtml, wireCrate, deckHtml, fillPlate, playRecord, boxBusy, workName, spreadHtml, wireSpread } from "./records.js";
 import { medalMonths, medalsHtml } from "./medals.js";
+import { printsHtml, wirePrints } from "./prints.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -432,6 +433,15 @@ async function viewSerial(my) {
 // of the page to the bottom bar, every word on an object; instead of the paper top bar, the back mark and the room's name
 // in gilt small capitals over the scene (style.css .sc-page). `scene` is the room itself (an .sc-scene).
 const scenePage = (name, zh, back, scene) => `<div class="sc-page"><div class="sc-bar"><a class="sc-back" data-back href="${back}" aria-label="返回">${ICON.back}</a><h1 class="sc-title"><span class="sh-foil" aria-hidden="true">${name}</span><span class="sc-sr">${zh}</span></h1></div>${scene}<i class="sc-grain" aria-hidden="true"></i></div>`;
+// 版畫冊 (#/prints, one of 收藏's corners; the owner, 2026-11-19): every 建築 piece read is an etching (prints.js).
+const prints = () => { const read = readSet(); return publishedIssues().flatMap((i) => i.articles.filter((a) => a.column === "architecture" && read.has(`${i.date}/architecture`)).map((a) => ({ date: i.date, a }))).sort((x, y) => y.date.localeCompare(x.date)); };
+function viewPrints() {
+  const list = prints();
+  main.innerHTML = scenePage("Radierungen", "版畫冊", "#/saved", `<div class="sc-scene sc-desk prints-scene"><i class="sc-lamp"></i>${list.length ? printsHtml(list) : '<p class="sc-empty">讀完一篇建築，就會收進一張版畫。</p>'}</div>`);
+  wireBack();
+  wirePrints(main.querySelector(".prints-scene"), list);
+  document.title = `版畫冊｜${S.cfg.title}`;
+}
 // 紀念章 (#/medals, one of 收藏's corners; the owner, 2026-11-19): a month with every issue read through (medals.js).
 const medals = () => medalMonths(publishedIssues(), digestDone(), twNow().date);
 function viewMedals() {
@@ -2158,13 +2168,14 @@ function viewSaved() {
     return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
       <span class="t"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title)}</b>${a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}${a.corrected ? `<span class="corr"><b>更正</b>${esc(a.correction || `${md(a.corrected)} 有更正，見文末`)}</span>` : ""}</span>${th}</a></li>`;
   };
-  const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length, bk = shelf().length + (readingBook() ? 1 : 0), rc = records().length, mdl = medals().length;
+  const n = allMarks().length, g = galleryItems().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length, bk = shelf().length + (readingBook() ? 1 : 0), rc = records().length, mdl = medals().length, prl = prints().length;
   // 收藏 (the owner, 2026-11-06, name kept): the shelves (紀念章 and 唱片櫃 added 2026-11-19, 我的書架 11-18), each with its own picture and a line that says what is inside.
   const DRAWERS = [
     ["#/stamps", "郵票冊", "Briefmarken", st, st ? "張" : "還沒有郵票", `<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z" stroke-dasharray="2 1.6"/><rect x="7.5" y="8.5" width="9" height="7"/></svg>`],
     ["#/marks", "劃線本", "Anstreichungen", n, n ? "處劃線" : "還沒有劃線", `<svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M13 7l3 3"/><path d="M4 20l1-4"/></svg>`],
     ["#/gallery", "畫廊", "Galerie", g, g ? "幅" : "牆上還沒有畫", `<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16"/><rect x="6" y="7" width="12" height="10"/><path d="M6 15l3-3 3 3 2-2 4 4"/></svg>`],
     ["#/world", "你讀過的世界", "Gelesene Welt", w, w ? "國" : "還沒出發", `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>`],
+    ["#/prints", "版畫冊", "Radierungen", prl, prl ? "張" : "還沒有版畫", `<svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18"/><rect x="7" y="6" width="10" height="9"/><path d="M7 13l3-4 2 3 2-2 3 3"/><path d="M8 18h8"/></svg>`],
     ["#/medals", "紀念章", "Medaillen", mdl, mdl ? "枚" : "還沒有紀念章", `<svg viewBox="0 0 24 24"><path d="M8 3l2.5 6M16 3l-2.5 6"/><circle cx="12" cy="15" r="6"/><circle cx="12" cy="15" r="3.4"/></svg>`],
     ["#/records", "唱片櫃", "Schallplatten", rc, rc ? "張" : "還沒有唱片", `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 5.5a6.5 6.5 0 0 1 6.5 6.5"/></svg>`],
     ["#/shelf", "我的書架", "Bücherregal", bk, bk ? "冊" : "還沒有讀完的書", `<svg viewBox="0 0 24 24"><path d="M5 4h3v16H5zM9 4h3v16H9z"/><path d="M13.5 5.2l2.9-.8 4 15.4-2.9.8z"/><path d="M3 20h18"/></svg>`],
@@ -2699,7 +2710,7 @@ let landKey = null, landTop = null; // 接著上次: the article tapped on the f
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/serial") || h.startsWith("#/column/serial") ? "#/serial" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/chronik") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/nest") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/shelf") || h.startsWith("#/records") || h.startsWith("#/medals") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/archive" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/serial") || h.startsWith("#/column/serial") ? "#/serial" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/chronik") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/nest") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/shelf") || h.startsWith("#/records") || h.startsWith("#/medals") || h.startsWith("#/prints") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/archive" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let enteredFront = false; // this draw of the front page came from another page (route), not from a redraw in place
 let cameFrom = ""; // the hash the reader left for this one
@@ -2808,6 +2819,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/records/all")) viewRecordsAll();
   else if (h.startsWith("#/records")) viewRecords();
   else if (h.startsWith("#/medals")) viewMedals();
+  else if (h.startsWith("#/prints")) viewPrints();
   else if (h.startsWith("#/serial")) await viewSerial(my);
   else if (h.startsWith("#/music")) viewMusic(); // the old tab's address still opens the column
   else if (h.startsWith("#/settings")) viewSettings();
