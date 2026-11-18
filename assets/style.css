@@ -639,6 +639,8 @@ tr:first-child td { border-top: 0; }
 .dock .bar span { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; letter-spacing: .04em; }
 .dock .bar button { background: none; border: 0; cursor: pointer; color: var(--muted); font-size: 12px; font-family: var(--sans); padding: 2px 4px; }
 .dock iframe { width: 100%; height: 80px; border: 0; border-radius: 10px; display: block; background: transparent; }
+.dock iframe[hidden] { display: none; }
+.dock.sdk .bar { margin-bottom: 0; padding: 4px 0; }
 
 /* ——— Sheets & dialogs ——— */
 dialog { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; }

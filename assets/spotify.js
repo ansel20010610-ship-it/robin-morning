@@ -6,7 +6,9 @@ const AUTH = "https://accounts.spotify.com/authorize";
 const TOKEN = "https://accounts.spotify.com/api/token";
 const API = "https://api.spotify.com/v1";
 // playlist-read-collaborative: without it /me/playlists leaves collaborative playlists out (takes effect on the next login).
-const SCOPES = "playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-public";
+// streaming + user-read-email + user-read-private: the Web Playback SDK (full tracks in the page); user-modify-playback-state:
+// starting a piece on that player. A login from before they were added keeps working without them (canStream is false).
+const SCOPES = "playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-public streaming user-read-email user-read-private user-modify-playback-state";
 
 let cfg = { client_id: "", playlist_name: "知更鳥晨間記事・古典" };
 
@@ -74,7 +76,7 @@ export function logout() {
 
 function saveToken(t) {
   const old = store.get("sp.token") || {};
-  store.set("sp.token", { access: t.access_token, refresh: t.refresh_token || old.refresh, exp: Date.now() + (t.expires_in - 60) * 1000 });
+  store.set("sp.token", { access: t.access_token, refresh: t.refresh_token || old.refresh, exp: Date.now() + (t.expires_in - 60) * 1000, scope: t.scope ?? old.scope });
 }
 
 const authError = (msg) => Object.assign(new Error(msg), { code: "auth" });
@@ -156,7 +158,9 @@ async function api(path, opts = {}) {
   if (r.status === 403) throw new Error("Spotify 拒絕這個操作（開發者模式需要 Premium，且帳號須在 App 的使用者名單內）");
   if (r.status === 429) throw new Error("Spotify 請求太頻繁，請稍後再試");
   if (!r.ok) throw new Error(`Spotify 錯誤 ${r.status}`);
-  return r.status === 204 ? null : r.json();
+  if (r.status === 204) return null;
+  const text = await r.text(); // some calls (starting playback) may answer 200/202 with no body
+  return text ? JSON.parse(text) : null;
 }
 
 // The reader's own 「知更鳥晨間記事・古典」 playlist, for the music page's "open in Spotify" link: looked up once, then
@@ -303,17 +307,126 @@ export async function resolve(sp, { force = false, albumId = null, candidates = 
   return { tracks: [], candidates: cands, source: "none" };
 }
 
+// ——— Full tracks in the page (Spotify Web Playback SDK) ———
+// With the "streaming" permission and Premium the page itself becomes a Spotify device and plays whole tracks, also on
+// iPhone, where the embed only gets 30-second previews. Whatever goes wrong falls back to the embed.
+const SDK = "https://sdk.scdn.co/spotify-player.js";
+export const canStream = () => /(^|\s)streaming(\s|$)/.test(store.get("sp.token")?.scope || "");
+let streamOff = false; // this account cannot stream (not Premium, or the SDK refused): the embed for the rest of the visit
+const streamable = () => canStream() && !streamOff;
+let sdkScript = null, player = null, ready = null, deviceId = "", playing = false, startedTrack = "";
+let attempt = 0, needsTap = false; // which play request is current; iPhone refused to start without one more tap
+
+// Fetch the SDK script ahead of a tap (no device is registered yet), so the tap can create the player at once.
+export function preloadPlayer() {
+  if (!streamable()) return Promise.reject(new Error("off"));
+  return sdkScript || (sdkScript = new Promise((res, rej) => {
+    if (window.Spotify?.Player) return res();
+    window.onSpotifyWebPlaybackSDKReady = () => res();
+    const s = document.createElement("script");
+    s.src = SDK;
+    s.onerror = () => { sdkScript = null; rej(new Error("播放器載入失敗")); };
+    document.head.appendChild(s);
+  }));
+}
+function dropPlayer() { try { player?.disconnect(); } catch {} player = null; ready = null; deviceId = ""; }
+
+// Call inside the tap itself (before any await): iPhone only lets audio start from a user gesture.
+function primePlayer() {
+  if (window.Spotify?.Player && !player) {
+    player = new window.Spotify.Player({ name: "知更鳥晨間記事", volume: 0.8,
+      getOAuthToken: (cb) => { accessToken().then((t) => cb(t || "")).catch(() => cb("")); } });
+    const p = player;
+    ready = new Promise((res, rej) => {
+      const fail = (why) => { clearTimeout(timer); if (player === p) dropPlayer(); rej(new Error(why)); };
+      const timer = setTimeout(() => fail("timeout"), 15000);
+      p.addListener("ready", ({ device_id }) => { clearTimeout(timer); deviceId = device_id; res(); });
+      p.addListener("not_ready", () => { if (player === p) dropPlayer(); });
+      p.addListener("account_error", () => { streamOff = true; fail("account"); });
+      p.addListener("initialization_error", () => { streamOff = true; fail("init"); });
+      p.addListener("authentication_error", () => fail("auth"));
+      p.addListener("playback_error", () => toast("Spotify 播放出了問題，請再按一次"));
+      p.addListener("autoplay_failed", () => { needsTap = true; playing = false; showToggle(); toast("請按播放器上的「播放」"); });
+      p.addListener("player_state_changed", onState);
+      p.connect();
+    });
+  }
+  player?.activateElement?.();
+}
+function onState(s) {
+  if (!s) return;
+  playing = !s.paused;
+  showToggle();
+  // Movements play on one after another: once the next one starts, the dock names it.
+  const cur = s.track_window?.current_track;
+  if (cur?.id && cur.id !== startedTrack) { startedTrack = cur.id; $("#dock-title").textContent = cur.name; }
+}
+function showToggle() { const b = $("#dock-toggle"); if (b) b.textContent = playing ? "暫停" : "播放"; }
+
+async function streamPlay(ids, at) {
+  if (!player) { await preloadPlayer(); primePlayer(); }
+  await ready;
+  const body = JSON.stringify({ uris: ids.map((id) => `spotify:track:${id}`), offset: { position: at } });
+  try { await api(`/me/player/play?device_id=${deviceId}`, { method: "PUT", body }); }
+  catch (e) {
+    // Spotify may not list a brand-new device for a moment.
+    if (!/404/.test(e.message)) throw e;
+    await new Promise((r) => setTimeout(r, 1200));
+    await api(`/me/player/play?device_id=${deviceId}`, { method: "PUT", body });
+  }
+}
+
 // ——— Player dock (stays open while you keep reading) ———
-export function play(trackId, title) {
-  const dock = $("#dock");
+// `ids`: every movement of the piece, so the rest play on after `trackId`.
+export async function play(trackId, title, ids = [trackId]) {
+  if (streamable()) {
+    primePlayer(); // still inside the tap
+    const mine = ++attempt;
+    try {
+      startedTrack = trackId;
+      needsTap = false;
+      await streamPlay(ids, Math.max(0, ids.indexOf(trackId)));
+      showDock(title, true);
+      // Spotify can accept the request and still play nothing (reported on iPhone): if the track hasn't started moving
+      // after a few seconds, switch to the preview player rather than leave a silent bar.
+      setTimeout(async () => {
+        if (mine !== attempt || needsTap || $("#dock").hidden || !$("#dock").classList.contains("sdk")) return;
+        const s = await player?.getCurrentState().catch(() => null);
+        if (s && !s.paused && s.position > 0) return;
+        if (s?.paused && s.position > 0) return; // paused by the reader
+        toast("整首播放沒有開始，先用試聽播放器");
+        $("#dock-frame").src = `https://open.spotify.com/embed/track/${trackId}?utm_source=generator`;
+        showDock(title, false);
+      }, 6000);
+      return;
+    } catch (e) {
+      toast(e.message === "account" || /Premium/.test(e.message) ? "整首播放需要 Spotify Premium，先用試聽播放器" : "整首播放暫時不行，先用試聽播放器");
+    }
+  }
   $("#dock-frame").src = `https://open.spotify.com/embed/track/${trackId}?utm_source=generator`;
+  showDock(title, false);
+}
+function showDock(title, sdk) {
+  const dock = $("#dock");
+  if (sdk) { try { $("#dock-frame").src = "about:blank"; } catch {} playing = true; showToggle(); }
+  else if (player) player.pause().catch(() => {});
+  $("#dock-frame").hidden = sdk;
+  $("#dock-toggle").hidden = !sdk;
+  dock.classList.toggle("sdk", sdk);
   $("#dock-title").textContent = title || "正在播放";
   dock.hidden = false;
   document.documentElement.style.setProperty("--dock-h", dock.offsetHeight + "px");
 }
 export function initDock() {
+  $("#dock-toggle").addEventListener("click", () => {
+    needsTap = false;
+    player?.activateElement?.();
+    player?.togglePlay().catch(() => {});
+  });
   $("#dock-close").addEventListener("click", () => {
+    attempt++;
     $("#dock-frame").src = "about:blank";
+    if (player) player.pause().catch(() => {});
     $("#dock").hidden = true;
     document.documentElement.style.setProperty("--dock-h", "0px");
   });
@@ -515,8 +628,11 @@ export function renderMusic(b) {
   const el = document.createElement("section");
   el.className = "music";
   const mv = b.movements || [];
-  const itp = isWebKitITP();
+  // Where the page can play whole tracks itself, the in-app button is the main way to listen again.
+  const full = streamable();
+  const itp = isWebKitITP() && !full;
   let state = null, loading = null;
+  if (full) preloadPlayer().catch(() => {});
 
   const searchUrl = `https://open.spotify.com/search/${encodeURIComponent(sp.query || b.work_original || b.work)}`;
   const title = (i) => `${b.composer?.split("（")[0] || ""}・${b.work}${mv[i] ? `　${mv[i]}` : ""}`;
@@ -541,11 +657,11 @@ export function renderMusic(b) {
       ${mv.length ? `<ol class="mv">${mv.map((m, i) => `<li><button type="button" data-play="${i}" aria-label="播放 ${esc(m)}" ${ready && state.tracks[i] ? "" : "disabled"}>${ICON.play.replace("<svg", '<svg width="13" height="13"')}</button><span>${esc(m)}</span></li>`).join("")}</ol>` : ""}
       ${match}
       <div class="btns">${itp ? openBtn + addBtn + listenBtn : listenBtn + addBtn + openBtn}</div>
-      ${itp ? `<p class="match" style="margin-top:10px">這個瀏覽器會擋住內嵌播放器讀取你的 Spotify 登入，「在 App 內收聽」可能只能試聽約 30 秒；完整收聽請按「在 Spotify 開啟」。</p>` : ""}
+      ${itp ? `<p class="match" style="margin-top:10px">這個瀏覽器會擋住內嵌播放器讀取你的 Spotify 登入，「在 App 內收聽」可能只能試聽約 30 秒；完整收聽請按「在 Spotify 開啟」。${isLoggedIn() ? "到「設定」重新連結一次 Spotify（需要 Premium），之後就能在 App 內聽整首。" : ""}</p>` : ""}
       ${!isLoggedIn() && !sp.tracks?.length ? `<p class="match" style="margin-top:10px">第一次使用請先連結 Spotify，App 會依本期指定的錄音自動找到曲目。</p>` : ""}`;
     el.querySelector("[data-listen]").onclick = () => act("listen");
     el.querySelector("[data-add]").onclick = () => act("add");
-    el.querySelectorAll("[data-play]").forEach((x) => (x.onclick = () => play(state.tracks[Number(x.dataset.play)], title(Number(x.dataset.play)))));
+    el.querySelectorAll("[data-play]").forEach((x) => (x.onclick = () => play(state.tracks[Number(x.dataset.play)], title(Number(x.dataset.play)), state.tracks)));
     const ver = el.querySelector("[data-ver]");
     if (ver) ver.onclick = (e) => { e.preventDefault(); versionSheet(sp, state, pick); };
   }
@@ -575,9 +691,10 @@ export function renderMusic(b) {
   }
 
   async function act(kind) {
+    if (kind === "listen" && streamable()) primePlayer(); // inside the tap, before anything waits
     try {
       if (!(await ensure())) { if (state?.source === "none") toast("找不到相符錄音，請從搜尋結果挑選"); return; }
-      if (kind === "listen") play(state.tracks[0], title(0));
+      if (kind === "listen") await play(state.tracks[0], title(0), state.tracks);
       else {
         if (!isLoggedIn()) { await connect(); return; }
         await addToPlaylist(state.tracks.map((id) => `spotify:track:${id}`), `${b.work}｜${b.performers}`);
