@@ -968,19 +968,24 @@ async function creditBox(el) {
     // expires 12-13 00:00 UTC): the store sends the cycle as from/until. A kept copy of a cycle that has ended is not
     // this cycle's remainder. A store not yet updated sends only `month`, and is drawn as before.
     const md = (s) => `${Number(s.slice(5, 7))}/${Number(s.slice(8, 10))}`;
+    // the newest three days stay out; the older ones fold under 讀更多 (the owner, 2026-11-18: 比較前面的要可以收合), and a
+    // redraw (the kept copy, then the fresh one) keeps it open if it was opened
+    const open = Boolean(el.querySelector(".credit-more")?.open);
+    const row = (x) => `<li><span>${md(x.d)}</span><b>US$ ${x.usd.toFixed(2)}</b></li>`;
+    const dayList = (ds) => !ds.length ? "" : `<ul class="credit-days">${ds.slice(0, 3).map(row).join("")}</ul>${ds.length > 3 ? `<details class="more credit-more"${open ? " open" : ""}><summary><span class="shut">讀更多（還有 ${ds.length - 3} 天）</span><span class="opened">收起</span></summary><ul class="credit-days">${ds.slice(3).map(row).join("")}</ul></details>` : ""}`;
     if (c.until) {
       if (c.until <= new Date().toISOString().slice(0, 10)) { el.innerHTML = `${head}<p class="small">手機裡存的是上一期（到 ${md(c.until)}）的數字，那一期用了 US$ ${c.used.toFixed(2)}；這一期的還沒讀到。</p>`; return; }
       el.innerHTML = `${head}<p class="credit-left"><b>US$ ${c.left.toFixed(2)}</b>剩下</p>
       <span class="credit-bar"><i style="width:${pct.toFixed(1)}%"></i></span>
       <p class="small">這一期（${md(c.from)}–${md(c.until)}）已用 US$ ${c.used.toFixed(2)}／${c.budget} 美元；${md(c.until)} 早上八點到期，用不完不累積，下一期在訂閱扣款後發放。Anthropic 每天早上八點結算前一天，當天花的隔天才算進來。${ago > 1 ? `這是 ${age}前的數字。` : ""}</p>
-      ${days.length ? `<ul class="credit-days">${days.map((x) => `<li><span>${Number(x.d.slice(5, 7))}/${Number(x.d.slice(8))}</span><b>US$ ${x.usd.toFixed(2)}</b></li>`).join("")}</ul>` : ""}`;
+      ${dayList(days)}`;
       return;
     }
     if (c.month !== new Date().toISOString().slice(0, 7)) { el.innerHTML = `${head}<p class="small">手機裡存的是 ${esc(c.month.replace("-", " 年 "))} 月的數字（那個月用了 US$ ${c.used.toFixed(2)}）；這個月的還沒讀到。</p>`; return; }
     el.innerHTML = `${head}<p class="credit-left"><b>US$ ${c.left.toFixed(2)}</b>剩下</p>
       <span class="credit-bar"><i style="width:${pct.toFixed(1)}%"></i></span>
       <p class="small">${esc(c.month.replace("-", " 年 "))} 月已用 US$ ${c.used.toFixed(2)}／${c.budget} 美元；每月重給，用不完不累積。Anthropic 每天早上八點結算前一天，當天花的隔天才算進來。${ago > 1 ? `這是 ${age}前的數字。` : ""}</p>
-      ${days.length ? `<ul class="credit-days">${days.map((x) => `<li><span>${Number(x.d.slice(5, 7))}/${Number(x.d.slice(8))}</span><b>US$ ${x.usd.toFixed(2)}</b></li>`).join("")}</ul>` : ""}`;
+      ${dayList(days)}`;
   };
   const kept = store.get("credits"), drawn = Boolean(kept?.month && typeof kept.used === "number" && typeof kept.left === "number");
   if (drawn) draw(kept);
