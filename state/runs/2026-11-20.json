@@ -31,6 +31,11 @@
     "missing": [],
     "note": "第 9 步：fm-watch 修正1、news 修正1（不做重寫）、obituary 修正1，重寫0；巴薩無新消息未動（next 仍正確）；cosmere 靜默；補稿無；快訊網域實測可用 aljazeera.com、france24.com、cna.com.tw、focustaiwan.tw"
   },
+  "5": {
+    "finished_at": "2026-11-20T06:27:39+08:00",
+    "missing": [],
+    "note": "全刊已齊無缺稿；fm-watch 已刊出、cosmere-watch 靜默、obituary 已刊出（皆已有當日紀錄，未重查）；無需備稿補位；巴薩晨報已完成未動"
+  },
   "column": {
     "finished_at": "2026-11-19T22:46:43+08:00",
     "missing": [
