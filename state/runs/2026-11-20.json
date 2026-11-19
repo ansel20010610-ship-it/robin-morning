@@ -26,6 +26,11 @@
     ],
     "note": "concept（圖靈機，qa/tutor，第9步修正）、football 初稿（timeline/fan，非比賽夜，第9步重寫1）；審稿與忠實度核對皆做；未接第1班缺稿"
   },
+  "4": {
+    "finished_at": "2026-11-20T05:39:16+08:00",
+    "missing": [],
+    "note": "第 9 步：fm-watch 修正1、news 修正1（不做重寫）、obituary 修正1，重寫0；巴薩無新消息未動（next 仍正確）；cosmere 靜默；補稿無；快訊網域實測可用 aljazeera.com、france24.com、cna.com.tw、focustaiwan.tw"
+  },
   "column": {
     "finished_at": "2026-11-19T22:46:43+08:00",
     "missing": [
