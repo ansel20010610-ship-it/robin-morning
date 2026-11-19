@@ -619,20 +619,14 @@ const lifeLine = (st) => {
 // Under the name: the stage, and for the singer how many songs it knows.
 const stageLine = (st) => `<span class="stage">${esc(st.stage.zh)}<i>${esc(st.stage.de)}</i>${st.songs ? `<em>會唱${st.songs === 1 ? "一首歌" : `${qty(st.songs)}首歌`}</em>` : ""}</span>`;
 
-// The plate at the head of 收藏 (app.js viewSaved; the owner, 2026-11-09: 放到收藏會好一點 — the yard is the reader's own
-// thing, like the stamps): a framed card the width of the shelf, the bird on its perch at the left, the bird's name,
-// its stage, who fed it today, a hairline to the next thing; with no yard yet, the same card with the egg and one line
-// that opens the page where a yard is opened.
-export function nestBox() {
+// The bird in 收藏's room (salon.js, on the window sill; it took the place of the plate that headed 收藏, the owner,
+// 2026-11-19): the bird as it is today — its own drawing, asleep after a goodnight, away on a journey — or, with no
+// yard yet on this phone, the egg in its twigs; and the words for its link.
+export function roomBird() {
   const n = nest();
-  if (!n) return `<a class="nest plate hint" href="#/nest" aria-label="後院：還沒有後院">${inYard("plate", yardOf(), `<div class="bird s0" aria-hidden="true"><svg class="scene" viewBox="0 0 64 64">${EGG_SCENE}</svg><svg class="robin" viewBox="0 0 64 64"><g class="body">${EGG}</g></svg></div>`)}<div class="txt"><span class="k">後院<i>Hinterhof</i></span><b>還沒有後院</b><span class="say">和另一個有這份報紙的人一起養一隻知更鳥：讀完一篇就餵牠一口。</span><span class="next">開一個後院 →</span></div></a>`;
-  const st = nestState(n);
-  const gn = gnState(n), asleep = gn.asleep && st.si > 0 && !st.away && !st.hiding && !st.mood;
-  return `<a class="nest plate" href="#/nest" aria-label="後院：${esc(st.pet.name)}，${esc(st.stage.zh)}，今天吃了 ${st.fed} 口">${inYard("plate", yardOf(st), birdSvg(st), asleep ? NAP : null, yardSky(st))}<div class="txt">
-      <span class="k">後院<i>Hinterhof</i></span>
-      <b>${esc(st.pet.name)}</b>${stageLine(st)}
-      <span class="say">${st.away ? `去${esc(st.away.place)}旅行了。` : st.sick ? `生病了，在吃藥。` : st.fed ? `今天吃了 ${st.fed} 口：${st.who.join("、")}。` : st.hunger}</span>
-      ${bar(st)}</div></a>`;
+  if (!n) return { label: "後院：還沒有後院", html: `<div class="bird s0" aria-hidden="true"><svg class="scene" viewBox="0 0 64 64">${EGG_SCENE}</svg><svg class="robin" viewBox="0 0 64 64"><g class="body">${EGG}</g></svg></div>` };
+  const st = nestState(n), gn = gnState(n), asleep = gn.asleep && st.si > 0 && !st.away && !st.hiding && !st.mood, html = birdSvg(st);
+  return { label: `後院：${st.pet.name}，${st.stage.zh}，今天吃了 ${st.fed} 口`, html: asleep ? html.replace('class="bird ', `class="bird ${NAP.cls} `) : html };
 }
 // Bites by the others that this reader has not looked at yet (rm.nest.seen = how many of theirs were there when 收藏
 // was last opened): the 收藏 tab wears a small mark while there are any (app.js, like the serial's folded corner).

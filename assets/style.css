@@ -1450,18 +1450,9 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
   @keyframes fleck { from { opacity: .9; transform: scale(1); } to { opacity: 0; transform: translateY(14px) scale(.3); } }
 }
 
-/* ——— 收藏 (Sammlung; app.js viewSaved): four shelves up top, two by two — 劃線本, 畫廊, 郵票冊, 你讀過的世界, the corners
-   entered from here, each with its count large in Cormorant and a gold rule along the top — then the saved articles as
-   numbered rows in the lookbook's manner: the column and the day in spaced small type, the title, the dek, the picture a
-   square at the right. ——— */
-.shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 18px 0 8px; }
-.sh { position: relative; display: grid; gap: 2px; padding: 13px 14px 12px; border: 1px solid var(--rule); border-top: 1px solid var(--gold); text-decoration: none; color: inherit; }
-.sh .k { display: grid; font-family: var(--sans); font-size: 12px; letter-spacing: .14em; color: var(--gold-ink); font-weight: 600; }
-.sh .k i { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 13px; color: var(--gold); }
-.sh b { margin-top: 12px; font-family: var(--latin); font-size: 38px; line-height: 1; font-weight: 600; font-variant-numeric: lining-nums tabular-nums; }
-.sh .u { font-family: var(--sans); font-size: 11.5px; letter-spacing: .06em; color: var(--muted); }
-.sh::after { content: "›"; position: absolute; right: 13px; bottom: 9px; font-family: var(--latin); font-size: 22px; line-height: 1; color: var(--gold); }
-.sh:active { border-color: var(--gold); }
+/* ——— 收藏 (Sammlung; app.js viewSaved): the salon up top (salon.js, its styles with the rooms below), then the saved
+   articles as numbered rows in the lookbook's manner: the column and the day in spaced small type, the title, the dek,
+   the picture a square at the right. ——— */
 .sammlung .sec-head { margin-top: 26px; }
 .svl { list-style: none; margin: 4px 0 0; padding: 0; }
 .sv { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 0 12px; align-items: start; padding: 14px 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; }
@@ -1479,7 +1470,7 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .sv.read b { color: var(--ink-2); font-weight: 500; }
 .sv:active .th { border-bottom-color: var(--gold); }
 @media (prefers-reduced-motion: no-preference) {
-  :is(.sh, .sv, .marks .mk-head) { animation: page-in .6s both; animation-delay: calc(min(var(--i, 0), 8) * 45ms); }
+  :is(.sv, .marks .mk-head) { animation: page-in .6s both; animation-delay: calc(min(var(--i, 0), 8) * 45ms); }
 }
 
 /* ——— 印務室 (Druckerei; assets/press.js, app.js viewPress): the owner's press room ——— */
@@ -1859,11 +1850,6 @@ a.stamp:active .sp { filter: brightness(.96); }
 .aa-pop .lbl { font-family: var(--sans); font-size: 11px; letter-spacing: .14em; color: var(--gold-ink); font-weight: 600; }
 .aa-pop .seg button { padding: 7px 12px; font-size: 13.5px; }
 .icon-btn[aria-expanded="true"] { color: var(--gold-ink); }
-/* 抽屜: each drawer's picture and its line */
-.sh { padding-right: 46px; }
-.sh .ic { position: absolute; right: 12px; top: 12px; width: 26px; height: 26px; color: var(--gold); }
-.shelf .sh:last-child:nth-child(odd) { grid-column: 1 / -1; } /* an odd last corner (我的書架, the fifth) takes the whole row */
-.sh .ic svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
 /* 上回說到 (app.js lastTime) */
 /* 連載 chapter/卷/book closing line at the foot of the text: 「第一章　完」 between two thin rules. */
 .body .ende { display: flex; align-items: center; gap: 16px; margin: 2.6em 0 .4em; font-size: 14px; letter-spacing: .3em; color: var(--gold-ink); }
@@ -2974,3 +2960,59 @@ html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
 .mk-cord { position: absolute; left: 50%; top: -30px; width: 3px; height: 34px; margin-left: -1.5px; background: #c9a75a; }
 .mk-tassel { position: absolute; left: 50%; top: -58px; width: 16px; height: 30px; margin-left: -8px; border-radius: 40% 40% 20% 20%; background: repeating-linear-gradient(90deg, #e9c66c 0 1px, #9a6e26 1px 2px); box-shadow: 0 2px 3px rgba(0, 0, 0, .5); }
 .mk-on { position: absolute; left: 0; right: 0; bottom: 34px; width: max-content; margin: 0 auto; font: 600 13px/1 var(--sc-caps); letter-spacing: .34em; padding: 8px 0 8px .34em; text-decoration: none; border-bottom: 1px solid rgba(233, 198, 108, .5); }
+
+/* ——— 收藏's room (salon.js; the owner's pick, 2026-11-19: the salon, and 收藏 is the room alone): one scene drawn at
+   402 × 791, scaled (--k) into the screen less the bottom bar, a height fixed before anything loads. The wall and the
+   floor are the two photographs named here, nowhere else. Nothing in it is filtered; a tap moves the camera (.sl-cam's
+   transform) in on the thing. ——— */
+.salon { --sl-wall-tex: url(shelf/white_stucco.jpg); --sl-floor-tex: url(shelf/herringbone_parquet.jpg);
+  position: relative; width: min(100vw, 520px); margin: 0 auto; height: calc(100vh - var(--nav-h) - var(--dock-h) - env(safe-area-inset-bottom)); overflow: hidden; background: #e6dcc8; color-scheme: light; }
+@supports (height: 100svh) { .salon { height: calc(100svh - var(--nav-h) - var(--dock-h) - env(safe-area-inset-bottom)); } }
+.sl-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.sl-cam { position: absolute; inset: 0; transform-origin: 0 0; }
+.sl-stage { position: absolute; left: 0; top: 0; width: 402px; height: 791px; transform-origin: 0 0; transform: translateX(var(--dx, 0px)) scale(var(--k, 1)); }
+.sl-stage > i, .sl-deco { position: absolute; display: block; pointer-events: none; }
+.sl-deco > svg, .sl-draw > svg { position: absolute; left: 0; top: 0; }
+/* stucco, warmed: brighter by the window on the left, falling off to the right (the light itself: salon.js LIGHT) */
+.sl-wall { top: 0; bottom: 0; left: -200px; right: -200px; background: linear-gradient(90deg, rgba(255, 246, 226, .32), rgba(240, 226, 200, 0) 38%, rgba(120, 86, 48, .16)), linear-gradient(rgba(255, 240, 214, .18), rgba(255, 240, 214, .18)),
+  var(--sl-wall-tex) 200px 0 / 300px auto, #efe0c4; background-blend-mode: normal, normal, multiply; }
+/* the parquet laid back in perspective toward the wall, darker there; broad light and dark patches over it, as boards
+   differ, so the photograph's repeat does not show */
+.sl-floor { left: -220px; right: -220px; top: 615px; height: 560px; transform-origin: 50% 0; transform: perspective(330px) rotateX(52deg);
+  background: linear-gradient(rgba(25, 12, 3, .62), rgba(25, 12, 3, .25) 18%, rgba(25, 12, 3, 0) 40%),
+    radial-gradient(18% 9% at 30% 62%, rgba(255, 230, 190, .07), transparent), radial-gradient(22% 10% at 64% 48%, rgba(20, 8, 0, .12), transparent), radial-gradient(16% 8% at 46% 80%, rgba(20, 8, 0, .1), transparent),
+    radial-gradient(20% 9% at 76% 74%, rgba(255, 230, 190, .06), transparent), radial-gradient(14% 7% at 18% 38%, rgba(20, 8, 0, .1), transparent),
+    var(--sl-floor-tex) 0 0 / 210px auto, #6b4a2c; }
+.sl-vig { inset: 0; background: radial-gradient(130% 90% at 40% 40%, transparent 55%, rgba(60, 40, 20, .32)); }
+/* a thing: its link is its hit area, the drawing may reach past it and takes no taps */
+.sl-o { position: absolute; display: block; -webkit-tap-highlight-color: transparent; }
+.sl-o * { pointer-events: none; }
+.sl-draw { position: absolute; display: block; transform-origin: 50% 50%; }
+/* the yard's robin on the sill (nest.js roomBird): its own drawing, without the yard's branch, in the day colours
+   whatever the phone's theme (the room is lit by the morning) */
+.sl-bird { --paper: #F5F0E6; --ink: #1F1B16; --muted: #6F665A; --rule: #CBB98F; --gold: #A5843F; --gold-soft: #D9C595; --foil: #D29F2E; --robin: #B65A2E;
+  --nest-brown: #7B5A3E; --nest-dark: #4F3826; --nest-cream: #F3EADA; --blue: #23395B; --red: #8E2A2E; }
+.sl-bird .bird { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sl-bird .bird:not(.s0) .scene, .sl-bird .r-perch { display: none; }
+/* the globe's map (world.js drawMap), turned with the axis inside its disc of sea */
+.sl-map { position: absolute; display: block; overflow: hidden; border-radius: 50%; background: #c9cfb4; }
+.sl-mapin { position: absolute; display: block; transform: rotate(-23deg); }
+.sl-mapin svg { display: block; width: 100%; height: 100%; }
+.sl-mapin path { fill: #ebe1c2; stroke: rgba(110, 85, 45, .55); stroke-width: .4; vector-effect: non-scaling-stroke; }
+.sl-mapin path.read { fill: #8e2a3a; stroke: #5c1424; }
+.sl-mapin .home circle { fill: none; stroke: #a84e26; stroke-width: .8; vector-effect: non-scaling-stroke; }
+.sl-mapin .home .dot { fill: #a84e26; stroke: none; }
+/* the crate: #/records laid out at the page's size (the same height as .sc-page), scaled onto the floor */
+.sl-rp { position: absolute; left: 2px; bottom: 0; display: flex; flex-direction: column; width: 402px; transform-origin: 0 100%; transform: scale(.44); color: #e9d6ad; line-height: 1.4;
+  min-height: calc((100vh - var(--nav-h) - var(--dock-h) - env(safe-area-inset-bottom)) / var(--k, 1)); }
+@supports (height: 100svh) { .sl-rp { min-height: calc((100svh - var(--nav-h) - var(--dock-h) - env(safe-area-inset-bottom)) / var(--k, 1)); } }
+.sl-rp .sh-foil { animation: none; }
+.sl-rp .cr-plate { transform: scale(1.16); }
+.sl-rp .cr-plate > span { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.sl-rp .sl-de { opacity: 0; }
+.sl-rp .sl-zh .sc-cut { font: 700 17px/1 var(--serif); letter-spacing: .3em; padding-left: .3em; }
+.sl-rp .sl-zh .sc-cut.n { margin-top: 4px; font: 600 13px/1 var(--serif); letter-spacing: .2em; padding-left: .2em; }
+/* the move in: the room over the page, the rest of the page darkening behind it */
+.sl-veil { position: fixed; inset: 0; z-index: -1; background: #120c07; opacity: 0; pointer-events: none; }
+.salon.zoom { z-index: 20; overflow: visible; }
+.salon.zoom .sl-cam { will-change: transform; }

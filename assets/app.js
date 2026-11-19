@@ -14,7 +14,7 @@ import { fetchWeather, weatherHtml, keptWeather } from "./wetter.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { worldState, drawGlobe } from "./world.js";
-import { nestBox, renderNest, renderNestSettings, renderNestAlbum, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
+import { renderNest, renderNestSettings, renderNestAlbum, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
 import { codaHtml, codaVoices, playCoda } from "./jupiter.js";
 import { shelf, shelved, shelve, markShown, shelfHtml, bookHtml, openBook, marksHtml } from "./shelf.js";
 import { crateHtml, wireCrate, deckHtml, fillPlate, playRecord, boxBusy, workName, spreadHtml, wireSpread } from "./records.js";
@@ -22,6 +22,7 @@ import { medalMonths, medalsHtml } from "./medals.js";
 import { printsHtml, wirePrints, resetPrints } from "./prints.js";
 import { poemsHtml, wirePoems } from "./poems.js";
 import { salonHtml, roomHtml, wireRoom } from "./museum.js";
+import { salonRoom, wireSalon, redrawBird } from "./salon.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -1572,7 +1573,7 @@ async function viewArticle(date, column, my) {
   // going round again.
   const artOf = (k) => { if (!k) return null; const [d, c] = k.split("/"); const x = issueBy(d)?.articles.find((y) => y.column === c); return x ? { date: d, a: x } : null; };
   const listOf = () => {
-    if (fromList === "#/saved") return { name: "收藏", keys: saved().filter((k) => artOf(k) && isPublished(k.slice(0, 10))) };
+    if (fromList === "#/saved/list") return { name: "收藏", keys: saved().filter((k) => artOf(k) && isPublished(k.slice(0, 10))) };
     const m = fromList?.match(/^#\/column\/([\w-]+)/);
     if (m && S.cfg.columns[m[1]]) return { name: col(m[1], date).name, keys: publishedIssues().filter((i) => i.articles.some((x) => x.column === m[1])).map((i) => `${i.date}/${m[1]}`) };
     return null;
@@ -2198,48 +2199,59 @@ function viewArchive() {
 }
 let archiveQ = "", archiveKept = null; // 往期's search as the reader left it, and its last full-text answer
 
+// 收進來的: the articles starred, the last starred first, those in a published issue only.
+const savedRows = () => saved().map((k) => {
+  const [date, c] = k.split("/");
+  const a = issueBy(date)?.articles.find((x) => x.column === c);
+  return a && isPublished(date) ? { date, a, k } : null;
+}).filter(Boolean);
 function viewSaved() {
   resetPrints(); // from 收藏 the 版畫冊 opens on all the prints laid out
-  // Set like the gallery (a lookbook): the shelves up top — 劃線本, 畫廊, 郵票冊, 你讀過的世界, the corners entered from
-  // here only, the owner's choice of 2026-11-02 — each with its count large in Cormorant; under them the saved articles
-  // as numbered rows, the column and the day in spaced small type above the title, the dek under it, the picture a square
-  // at the right.
-  const read = readSet();
-  const rows = saved().map((k) => {
-    const [date, c] = k.split("/");
-    const a = issueBy(date)?.articles.find((x) => x.column === c);
-    return a && isPublished(date) ? { date, a, k } : null;
-  }).filter(Boolean);
+  // 收藏 is the salon and nothing else (the owner, 2026-11-19): one screen, each corner a thing in the room (salon.js) —
+  // the articles starred too, as the clippings in the letter rack (#/saved/list), and on a 特供版 phone the yard's robin.
+  const read = readSet(), sv = savedRows().length;
+  const stl = stampsEarned(), mu = museum(), rcl = records(), pml = poems(), prl0 = prints(), books = shelf(), reading = readingBook(), wd = worldState(publishedIssues(), read).read;
+  const n = allMarks().length, st = stl.length, w = wd.length, bk = books.length + (reading ? 1 : 0), rc = rcl.length, mdl = medals().length, prl = prl0.length, pol = pml.length, mul = mu.length;
+  // 收藏 (the owner, 2026-11-06, name kept): the corners (紀念章 and 唱片櫃 added 2026-11-19, 我的書架 11-18), each with what is
+  // inside and the line that says so; since 2026-11-19 (the owner's pick of the samples) each is a thing in the salon.
+  const DRAWERS = [
+    ["stamps", "郵票冊", st, st ? "張" : "還沒有郵票"],
+    ["marks", "劃線本", n, n ? "處劃線" : "還沒有劃線"],
+    ["world", "你讀過的世界", w, w ? "國" : "還沒出發"],
+    ["museum", "美術館", mul, mul ? "件" : "還沒有作品"],
+    ["poems", "詩箋", pol, pol ? "張" : "還沒有詩箋"],
+    ["prints", "版畫冊", prl, prl ? "張" : "還沒有版畫"],
+    ["medals", "紀念章", mdl, mdl ? "枚" : "還沒有紀念章"],
+    ["records", "唱片櫃", rc, rc ? "張" : "還沒有唱片"],
+    ["shelf", "我的書架", bk, bk ? "冊" : "還沒有讀完的書"],
+    ["list", "收進來的", sv, sv ? "篇" : "還沒有收藏的文章"],
+  ];
+  main.innerHTML = `<div class="sammlung"><h1 class="sc-sr">收藏</h1>
+    ${salonRoom({ drawers: DRAWERS, museum: mu, records: rcl, poems: pml, prints: prl0, books, reading, stamps: stl, bird: sonder() })}</div>`;
+  const room = main.querySelector(".salon");
+  wireSalon(room, { world: wd.map((e) => e.code), poem: pml[0] ? () => article(pml[0].date, "poem") : null });
+  // 後院 (nest.js): on a 特供版 phone the robin is in the room; what the others fed since last time arrives with a sync
+  // and the bird is drawn again, and looking here is what takes the mark off the tab (nestSeen).
+  if (sonder()) {
+    nestSeen();
+    liveBird(room.querySelector(".sl-bird"), { fly: false });
+    syncNest(S.cfg.nest?.api).then((ok) => { if (ok && room.isConnected) { redrawBird(room); nestSeen(); liveBird(room.querySelector(".sl-bird"), { fly: false }); } });
+  }
+}
+// #/saved/list (the letter rack in 收藏's room): the saved articles as numbered rows in the lookbook's manner, the column
+// and the day in spaced small type above the title, the dek under it, the picture a square at the right.
+function viewSavedList() {
+  const read = readSet(), rows = savedRows();
   const row = ({ date, a, k }, i) => {
     const h = a.hero, th = h?.src ? `<span class="th"><img src="${esc(h.thumb || h.src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span>` : "";
     return `<li><a class="sv${read.has(k) ? " read" : ""}" href="#/a/${date}/${a.column}" style="--i:${i}"><span class="no" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
       <span class="t"><span class="m"><span class="k">${esc(col(a.column, date).name)}</span><span class="d">${esc(fmtDate(date, "short"))}</span>${read.has(k) ? `<span class="tick" role="img" aria-label="讀過">✓</span>` : ""}</span><b>${esc(a.title)}</b>${a.dek ? `<span class="dek">${esc(a.dek)}</span>` : ""}${a.corrected ? `<span class="corr"><b>更正</b>${esc(a.correction || `${md(a.corrected)} 有更正，見文末`)}</span>` : ""}</span>${th}</a></li>`;
   };
-  const n = allMarks().length, st = stampsEarned().length, w = worldState(publishedIssues(), read).read.length, bk = shelf().length + (readingBook() ? 1 : 0), rc = records().length, mdl = medals().length, prl = prints().length, pol = poems().length, mul = museum().length;
-  // 收藏 (the owner, 2026-11-06, name kept): the shelves (紀念章 and 唱片櫃 added 2026-11-19, 我的書架 11-18), each with its own picture and a line that says what is inside.
-  const DRAWERS = [
-    ["#/stamps", "郵票冊", "Briefmarken", st, st ? "張" : "還沒有郵票", `<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z" stroke-dasharray="2 1.6"/><rect x="7.5" y="8.5" width="9" height="7"/></svg>`],
-    ["#/marks", "劃線本", "Anstreichungen", n, n ? "處劃線" : "還沒有劃線", `<svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M13 7l3 3"/><path d="M4 20l1-4"/></svg>`],
-    ["#/world", "你讀過的世界", "Gelesene Welt", w, w ? "國" : "還沒出發", `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>`],
-    ["#/museum", "美術館", "Museum", mul, mul ? "件" : "還沒有作品", `<svg viewBox="0 0 24 24"><path d="M3 9l9-5 9 5"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9"/><path d="M3 20h18"/></svg>`],
-    ["#/poems", "詩箋", "Briefe", pol, pol ? "張" : "還沒有詩箋", `<svg viewBox="0 0 24 24"><path d="M5 3h11l3 3v15H5z"/><path d="M8 8h7M8 11h8M8 14h5"/><circle cx="16" cy="17.5" r="2"/></svg>`],
-    ["#/prints", "版畫冊", "Radierungen", prl, prl ? "張" : "還沒有版畫", `<svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18"/><rect x="7" y="6" width="10" height="9"/><path d="M7 13l3-4 2 3 2-2 3 3"/><path d="M8 18h8"/></svg>`],
-    ["#/medals", "紀念章", "Medaillen", mdl, mdl ? "枚" : "還沒有紀念章", `<svg viewBox="0 0 24 24"><path d="M8 3l2.5 6M16 3l-2.5 6"/><circle cx="12" cy="15" r="6"/><circle cx="12" cy="15" r="3.4"/></svg>`],
-    ["#/records", "唱片櫃", "Schallplatten", rc, rc ? "張" : "還沒有唱片", `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 5.5a6.5 6.5 0 0 1 6.5 6.5"/></svg>`],
-    ["#/shelf", "我的書架", "Bücherregal", bk, bk ? "冊" : "還沒有讀完的書", `<svg viewBox="0 0 24 24"><path d="M5 4h3v16H5zM9 4h3v16H9z"/><path d="M13.5 5.2l2.9-.8 4 15.4-2.9.8z"/><path d="M3 20h18"/></svg>`],
-  ];
-  // 後院 (nest.js nestBox): on a 特供版 phone the robin's plate heads the page; what the others fed since last time
-  // arrives with a sync and the plate is drawn again, and looking here is what takes the mark off the tab (nestSeen).
-  main.innerHTML = `<div class="wrap sammlung"><header class="page-title"><h1>收藏</h1><span class="de">Sammlung</span></header>
-    ${sonder() ? nestBox() : ""}
-    <nav class="shelf" aria-label="收藏的角落">${DRAWERS.map(([href, name, de, count, unit, icon], i) => `<a class="sh" href="${href}" style="--i:${i}" aria-label="${name}：${count} ${unit}"><i class="ic" aria-hidden="true">${icon}</i><span class="k">${name}<i>${de}</i></span><b>${count}</b><span class="u">${unit}</span></a>`).join("")}</nav>
-    ${rows.length ? `<div class="sec-head"><h2>收進來的</h2><span class="de">Gesammelt</span><span class="note">${rows.length} 篇</span></div><ol class="svl">${rows.map(row).join("")}</ol>`
+  main.innerHTML = `<div class="topbar"><div class="in"><a class="icon-btn" data-back href="#/saved" aria-label="返回">${ICON.back}</a><div class="title">收藏</div></div></div>
+    <div class="wrap sammlung">${rows.length ? `<div class="sec-head"><h2>收進來的</h2><span class="de">Gesammelt</span><span class="note">${rows.length} 篇</span></div><ol class="svl">${rows.map(row).join("")}</ol>`
       : `<p class="empty">還空空的。讀到喜歡的，按右上角的星星收進來。<br><a href="#/random">或者先隨手翻一篇 →</a></p>`}</div>`;
-  if (sonder()) {
-    nestSeen();
-    liveBird(main.querySelector(".nest.plate"), { fly: false });
-    syncNest(S.cfg.nest?.api).then((ok) => { const plate = main.querySelector(".nest.plate"); if (ok && plate?.isConnected) { plate.outerHTML = nestBox(); nestSeen(); liveBird(main.querySelector(".nest.plate"), { fly: false }); } });
-  }
+  wireBack();
+  document.title = `收進來的｜${S.cfg.title}`;
 }
 
 // ——— 劃線本 (Anstreichungen): every pencil line this phone holds, by article, the one marked most recently first ———
@@ -2810,6 +2822,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/chronik")) { if (CHRONIK_OPEN) await viewChronik(); else viewArchive(); } // awaited, so a step back lands where 刊史館 was left, not on its loading line (audit c15)
   else if (h.startsWith("#/nest")) viewNest(h.startsWith("#/nest/settings") ? "settings" : h.startsWith("#/nest/album") ? "album" : ""); // 相簿: the bird's life (nest.js renderNestAlbum)
   else if ((m = h.match(/^#\/random(?:\/(\d{4}-\d{2}-\d{2})\/([\w-]+))?/))) viewRandom(m[1], m[2]);
+  else if (h.startsWith("#/saved/list")) viewSavedList();
   else if (h.startsWith("#/saved")) viewSaved();
   else if (h.startsWith("#/marks")) viewMarks();
   else if ((m = h.match(/^#\/shelf\/([\w-]+)/))) await viewShelfBook(m[1], my);
