@@ -3012,7 +3012,12 @@ html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
 .sl-rp .sl-de { opacity: 0; }
 .sl-rp .sl-zh .sc-cut { font: 700 17px/1 var(--serif); letter-spacing: .3em; padding-left: .3em; }
 .sl-rp .sl-zh .sc-cut.n { margin-top: 4px; font: 600 13px/1 var(--serif); letter-spacing: .2em; padding-left: .2em; }
-/* the move in: the room over the page, the rest of the page darkening behind it */
-.sl-veil { position: fixed; inset: 0; z-index: -1; background: #120c07; opacity: 0; pointer-events: none; }
-.salon.zoom { z-index: 20; overflow: visible; }
+/* the move in (salon.js roomMove): the room lifted off the page drawn under it, over all but the bottom bar; the way
+   back: the page's nodes lifted off into a ghost over the room, scrolled as they were, carried by the same camera */
+.salon.lift { position: fixed; z-index: 25; margin: 0; }
+html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's own overflow set, the body's is not handed on to the viewport, and the body clips the carried page */
 .salon.zoom .sl-cam { will-change: transform; }
+.salon.back .sl-o { pointer-events: none; }
+.room-ghost { position: fixed; inset: 0; z-index: 25; overflow: hidden; background: var(--paper); transform-origin: 0 0; pointer-events: none;
+  padding-bottom: calc(var(--nav-h) + var(--dock-h) + env(safe-area-inset-bottom)); }
+.room-ghost > div { translate: 0 0; }

@@ -510,38 +510,228 @@ export function salonRoom(d) {
       ${obj("museum")}${deco(12, FLOOR, 180, 12, FEET())}${obj("records")}${obj("world")}${obj("shelf")}${obj("poems")}${obj("list")}
       ${deco(281, 506, 104, 100, VITRINE_IN())}${obj("medals")}${deco(281, 506, 104, 100, VITRINE_GLASS())}${deco(22, 296, 72, 10, STAND())}${obj("stamps")}
       ${deco(4, 572, 108, 219, EASEL())}${deco(278, 626, 124, 165, ARMCHAIR())}${obj("prints")}${obj("marks")}${bird()}
-      ${deco(0, 0, W, 830, svg(W, 830, `<rect width="${W}" height="830" fill="url(#sl-aoR)" opacity=".35"/><rect y="700" width="${W}" height="130" fill="url(#sl-aoUp)" opacity=".7"/>`))}<i class="sl-vig"></i></div></div><i class="sl-veil"></i></section>`;
+      ${deco(0, 0, W, 830, svg(W, 830, `<rect width="${W}" height="830" fill="url(#sl-aoR)" opacity=".35"/><rect y="700" width="${W}" height="130" fill="url(#sl-aoUp)" opacity=".7"/>`))}<i class="sl-vig"></i></div></div></section>`;
 }
 
-// The camera: a straight move in — the scale grows geometrically about the fixed point of the final transform, so the
-// thing does not first slide sideways. Keyframes at every twentieth of the time, eased in and out, run as one animation.
+// ——— The way in and the way back (the owner, 2026-11-19: every corner's move seamless; back out the same way) ———
+// In: a tap lifts the room off the page (.lift: fixed where it stood, over all but the bottom bar) and changes the
+// address at once, so the page is drawn under the room before anything moves (app.js route → roomMove). Then one camera
+// — a scale about one fixed point that takes the thing's box in the room onto its counterpart's box on the page
+// (SUBJECT) — carries the room and the page together, the page held so that its counterpart always lies where the
+// thing is, and over the last stretch the room dissolves into it. The room stays live (sharp at any scale) and the
+// page's own entrances are finished under it, so the room's last frame is the page's first and nothing plays again.
+// Back to 收藏 from that page (its back arrow, a step back, the 收藏 tab): the same camera run backwards, the page's
+// nodes (lifted off into a ghost) shrinking into the thing and fading as the room, drawn zoomed in under them, pulls
+// back. Transform and opacity only. Reduced motion: the link opens its page, the room opens at rest.
+// SUBJECT, per corner: the thing's box in the room (`room`, default its drawing) and its counterpart on the page (the
+// union of `page`'s boxes, cut to the screen); `fit` "w" scales the one onto the other by width, else by the mean of
+// width and height; `tl` lines up the top left corners instead of the centres (the crate: the page itself in small);
+// `disc`: the globe's sphere inside its box (world.js drawGlobe: the box's square less 6 px all round).
+const SUBJECT = {
+  museum: { page: ".mu-hang, .mu-plate" },
+  records: { room: ".sl-rp", page: ".sc-page", fit: "w", tl: true },
+  world: { room: ".sl-map", page: ".welt .map", fit: "w", disc: true },
+  shelf: { page: ".bcase" },
+  poems: { page: ".po-sheet, .po-sb" }, // the letters onto the letter, the box's brass onto the brass under it
+  list: { page: ".sammlung" },
+  stamps: { page: ".album .page", fit: "w" },
+  medals: { page: ".md-box" },
+  prints: { page: ".pr-all" },
+  marks: { page: ".marks", fit: "w", tl: true }, // the notebook's title onto the page's
+  nest: { page: ".yard .bird", fit: "w" },
+};
 const ease = (t) => (t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
-function moveIn(room, a) {
-  const cam = room.querySelector(".sl-cam"), R = cam.getBoundingClientRect(), vw = document.documentElement.clientWidth;
-  const navH = document.querySelector(".nav")?.getBoundingClientRect().height || 58, vh = innerHeight - navH;
-  let S, Tx, Ty;
-  if (a.dataset.k === "records") { // the copy of the page onto the page: its top left to the screen's, its width to the screen's
-    const C = a.querySelector(".sl-rp").getBoundingClientRect();
-    S = vw / C.width; Tx = -R.left - S * (C.left - R.left); Ty = -R.top - S * (C.top - R.top);
-  } else { // the thing to the middle of the screen, as large as the screen allows, the room still filling the screen
-    const D = a.querySelector(".sl-draw").getBoundingClientRect();
-    S = Math.max(1.2, Math.min(3.4, (vw * .94) / D.width, (vh * .55) / D.height));
-    Tx = vw / 2 - R.left - S * (D.left + D.width / 2 - R.left); Ty = vh * .46 - R.top - S * (D.top + D.height / 2 - R.top);
-    Tx = Math.min(-R.left, Math.max(vw - R.left - S * R.width, Tx));
-    if (S * R.height >= vh) Ty = Math.min(-R.top, Math.max(vh - R.top - S * R.height, Ty));
+const smooth = (t) => t * t * (3 - 2 * t);
+const N = 20; // keyframes at every twentieth of the time, eased in and out, run linearly between
+const floorY = () => document.querySelector(".nav")?.getBoundingClientRect().top ?? innerHeight;
+const union = (els) => {
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  for (const el of els) { const r = el.getBoundingClientRect(); if (!r.width || !r.height) continue; x0 = Math.min(x0, r.left); y0 = Math.min(y0, r.top); x1 = Math.max(x1, r.right); y1 = Math.max(y1, r.bottom); }
+  return x1 > x0 ? { x: x0, y: y0, w: x1 - x0, h: y1 - y0 } : null;
+};
+const roomBox = (a) => union([a.querySelector(SUBJECT[a.dataset.k]?.room || ".sl-draw") || a]);
+function pageBox(k) {
+  const s = SUBJECT[k], main = document.getElementById("main");
+  let b = s && main ? union(main.querySelectorAll(s.page)) : null;
+  if (b && s.disc) { const d = Math.min(b.w, b.h) - 12; b = { x: b.x + (b.w - d) / 2, y: b.y + (b.h - d) / 2, w: d, h: d }; }
+  if (!b) return null;
+  const x0 = Math.max(0, b.x), y0 = Math.max(0, b.y), x1 = Math.min(document.documentElement.clientWidth, b.x + b.w), y1 = Math.min(floorY(), b.y + b.h);
+  return x1 - x0 > 8 && y1 - y0 > 8 ? { x: x0, y: y0, w: x1 - x0, h: y1 - y0 } : null;
+}
+// No counterpart on the page (an empty corner's line): the thing to the middle of the screen, as large as it allows.
+function middle(A) {
+  const vw = document.documentElement.clientWidth, vh = floorY(), S = Math.max(1.2, Math.min(3.4, (vw * .94) / A.w, (vh * .55) / A.h));
+  return { x: vw / 2 - S * A.w / 2, y: vh * .46 - S * A.h / 2, w: S * A.w, h: S * A.h };
+}
+// The camera taking box A onto box B (screen coordinates): at eased progress e the screen is scaled by s^e about the
+// fixed point of the whole move, as [g, dx, dy] (x → g·x + d); `rel` is the page's own move, the room's less the whole.
+function camera(A, B, k) {
+  const sp = SUBJECT[k] || {}, sw = B.w / A.w, s = sp.fit === "w" ? sw : Math.sqrt(sw * (B.h / A.h));
+  const [ax, ay, bx, by] = sp.tl ? [A.x, A.y, B.x, B.y] : [A.x + A.w / 2, A.y + A.h / 2, B.x + B.w / 2, B.y + B.h / 2];
+  const tx = bx - s * ax, ty = by - s * ay, flat = Math.abs(1 - s) < 1e-3;
+  const at = (e) => { const g = Math.pow(s, e); return flat ? [1, tx * e, ty * e] : [g, (tx / (1 - s)) * (1 - g), (ty / (1 - s)) * (1 - g)]; };
+  const rel = ([g, dx, dy]) => [g / s, dx - (g * tx) / s, dy - (g * ty) / s];
+  return { at, rel, ms: Math.round(Math.min(1050, Math.max(800, 700 + 160 * Math.log(Math.max(s, 1))))) };
+}
+// The matrix that moves an element whose box starts at (ox, oy) on the screen (transform-origin 0 0) by [g, dx, dy].
+const mat = ([g, dx, dy], ox = 0, oy = 0) => `matrix(${g.toFixed(5)}, 0, 0, ${g.toFixed(5)}, ${(g * ox + dx - ox).toFixed(2)}, ${(g * oy + dy - oy).toFixed(2)})`;
+// A page's entrances (page-in, the rises of reveal(), a scene's own) played to their end at once: under the room no one
+// sees them, and the page must be still when it is measured and when it shows. Endless ones (a glow, a bird) run on.
+function settle(main) {
+  const h = floorY();
+  main.querySelectorAll(".rv:not(.in)").forEach((el) => { if (el.getBoundingClientRect().top < h) el.classList.add("in"); });
+  for (const x of main.getAnimations({ subtree: true })) {
+    if (x.effect?.target === main || x.effect?.getComputedTiming().iterations === Infinity) continue;
+    try { x.finish(); } catch { /* not finishable */ }
   }
-  const Px = Tx / (1 - S), Py = Ty / (1 - S), N = 20, ms = a.dataset.k === "records" ? 1000 : 820;
-  const frames = Array.from({ length: N + 1 }, (_, i) => ({ transform: `translate(${Px.toFixed(2)}px, ${Py.toFixed(2)}px) scale(${Math.pow(S, ease(i / N)).toFixed(4)}) translate(${(-Px).toFixed(2)}px, ${(-Py).toFixed(2)}px)` }));
-  room.classList.add("zoom");
-  const run = cam.animate(frames, { duration: ms, fill: "forwards" });
-  room.querySelector(".sl-veil").animate([{ opacity: 0 }, { opacity: 1 }], { duration: ms * .6, easing: "ease-out", fill: "forwards" });
-  if (a.dataset.k === "records") { // the brass: the room's large 唱片櫃 gives way to the page's Schallplatten
-    const zh = a.querySelector(".sl-zh"), de = a.querySelector(".sl-de"), br = a.querySelector(".cr-plate"), o = { duration: ms, fill: "forwards" };
-    zh?.animate([{ opacity: 1 }, { opacity: 1, offset: .72 }, { opacity: 0 }], o);
-    de?.animate([{ opacity: 0 }, { opacity: 0, offset: .72 }, { opacity: 1 }], o);
-    br?.animate([{ transform: "scale(1.16)" }, { transform: "scale(1.16)", offset: .6 }, { transform: "none" }], { ...o, easing: "ease-in-out" });
+}
+
+let lift = null; // the move in under way: { k, href, room, a, A, runs }
+let door = null; // the page last entered from the room, for the way back: { k, href, i (its history stamp), area }
+// Safari's own swipe back slides the room's picture in already: then the room is simply there (best effort — the flag
+// where the browser has it, else a touch that starts at the left edge and is taken over by the browser).
+let swipeAt = 0, edgeAt = 0;
+addEventListener("popstate", (e) => { if (e.hasUAVisualTransition) swipeAt = performance.now(); });
+addEventListener("touchstart", (e) => { edgeAt = e.touches.length === 1 && e.touches[0].clientX < 20 ? performance.now() : 0; }, { passive: true, capture: true });
+addEventListener("touchcancel", () => { if (edgeAt && performance.now() - edgeAt < 1500) swipeAt = performance.now(); }, { passive: true, capture: true });
+const swiped = () => performance.now() - swipeAt < 1500;
+
+// Nodes moved to another parent: their CSS animations start over (moveBefore does not keep them either), so an
+// entrance would play again and a glow jump back — each is set again to the time it had reached.
+function move(nodes, to) {
+  const key = (x) => `${x.animationName}|${x.effect?.pseudoElement || ""}`, was = new Map();
+  for (const n of nodes) if (n.getAnimations) for (const x of n.getAnimations({ subtree: true })) if (x.animationName) was.set(x.effect.target, [...(was.get(x.effect.target) || []), [key(x), x.currentTime]]);
+  to.append(...nodes);
+  for (const n of nodes) if (n.getAnimations) for (const x of n.getAnimations({ subtree: true })) {
+    const t = (was.get(x.effect?.target) || []).find(([k]) => k === key(x))?.[1];
+    try { if (t != null) x.currentTime = t; else if (x.effect?.getComputedTiming().iterations !== Infinity) x.finish(); } catch { /* not seekable */ }
   }
-  return run.finished;
+}
+function liftRoom(room) {
+  const r = room.getBoundingClientRect();
+  Object.assign(room.style, { left: `${r.left}px`, top: `${r.top}px`, width: `${r.width}px`, height: `${r.height}px` });
+  room.classList.add("lift", "zoom");
+  move([room], document.body);
+}
+function landIn(L) {
+  const main = document.getElementById("main"), room = L.room;
+  if (!room.isConnected || !main) { lift = null; return; }
+  L.runs = [];
+  // while it is carried the page, scaled and shifted, would widen the document, and a phone zooms out to show what
+  // overflows (the bottom bar dropped off the screen): the width is clipped for the length of the move
+  document.documentElement.classList.add("room-in");
+  main.style.transformOrigin = "0 0";
+  settle(main);
+  const B = pageBox(L.k) || middle(L.A), c = camera(L.A, B, L.k), es = Array.from({ length: N + 1 }, (_, i) => c.at(ease(i / N)));
+  const R = room.getBoundingClientRect(), O = main.getBoundingClientRect(), o = { duration: c.ms, fill: "both" };
+  L.runs.push(room.querySelector(".sl-cam").animate(es.map((m) => ({ transform: mat(m, R.left, R.top) })), o),
+    main.animate(es.map((m) => ({ transform: mat(c.rel(m), O.left, O.top) })), o),
+    room.animate([{ opacity: 1 }, { opacity: 1, offset: .66, easing: "ease-in-out" }, { opacity: 0, offset: .97 }, { opacity: 0 }], o));
+  if (L.k === "records") { // the brass: the room's large 唱片櫃 gives way to the page's Schallplatten
+    const zh = L.a.querySelector(".sl-zh"), de = L.a.querySelector(".sl-de"), br = L.a.querySelector(".cr-plate");
+    if (zh) L.runs.push(zh.animate([{ opacity: 1 }, { opacity: 1, offset: .55 }, { opacity: 0, offset: .66 }], o));
+    if (de) L.runs.push(de.animate([{ opacity: 0 }, { opacity: 0, offset: .55 }, { opacity: 1, offset: .66 }], o));
+    if (br) L.runs.push(br.animate([{ transform: "scale(1.16)" }, { transform: "scale(1.16)", offset: .5 }, { transform: "none" }], { ...o, easing: "ease-in-out" }));
+  }
+  L.later = setTimeout(() => { if (lift === L) settle(main); }, c.ms * .55); // the rises reveal() set off since
+  L.runs[0].finished.then(() => {
+    if (lift !== L) return;
+    lift = null;
+    const keep = decode(pictures(L.room));
+    dropLift(L);
+    door = { k: L.k, href: L.href, i: history.state?.i, area: B.w * B.h, keep };
+  }, () => {});
+}
+function dropLift(L) {
+  clearTimeout(L.later);
+  L.runs?.forEach((x) => x.cancel());
+  L.room.remove();
+  const main = document.getElementById("main");
+  if (main) main.style.transformOrigin = "";
+  document.documentElement.classList.remove("room-in");
+}
+// A step back (or the 收藏 tab) before the move in has landed: the room, drawn afresh under the lifted one, is taken
+// back up from wherever the camera is, and the lifted one goes.
+function retreat(L) {
+  const main = document.getElementById("main"), room = L.room, cam = room.querySelector(".sl-cam");
+  clearTimeout(L.later);
+  if (main) settle(main);
+  const t = getComputedStyle(cam).transform, op = getComputedStyle(room).opacity;
+  L.runs?.forEach((x) => x.cancel());
+  if (main) main.style.transformOrigin = "";
+  document.documentElement.classList.remove("room-in");
+  const back = cam.animate([{ transform: t === "none" ? "none" : t }, { transform: "none" }], { duration: 420, easing: "cubic-bezier(.3,.6,.3,1)", fill: "both" });
+  room.animate([{ opacity: op }, { opacity: 1 }], { duration: 140, fill: "both" });
+  const end = () => room.remove();
+  back.finished.then(end, end);
+}
+// The way back: the page's nodes are lifted off into a ghost (fixed where they stood, scrolled as they were), the room
+// is drawn under them zoomed in onto the page's counterpart of the thing, and the ghost is carried by the same camera,
+// fading over the first 30% of the move, as the room pulls back. Live nodes, like the room on the way in, so the move
+// starts on the first frame that is actually painted (a picture of the page would set off before the room was painted).
+let out = null; // the way back under way: { ghost, run, room }
+// The room's pictures (its photographs of wood and stucco, the works on the wall, the record's sleeve): decoding them
+// is most of the cost of the room's first frame. Held decoded while the page entered from the room is open, and
+// awaited — briefly, the page still standing — before the way back moves, so the room shows whole when the page fades.
+function pictures(room) {
+  const u = new Set();
+  room.querySelectorAll("image").forEach((i) => { const h = i.getAttribute("href"); if (h) u.add(new URL(h, location.href).href); });
+  room.querySelectorAll("img").forEach((i) => { if (i.currentSrc) u.add(i.currentSrc); });
+  room.querySelectorAll(".sl-wall, .sl-floor").forEach((el) => { for (const m of getComputedStyle(el).backgroundImage.matchAll(/url\("?([^")]+)"?\)/g)) u.add(m[1]); });
+  return [...u];
+}
+const decode = (urls) => urls.map((src) => { const i = new Image(); i.src = src; return { i, done: i.decode().catch(() => {}) }; });
+function dropOut() {
+  if (!out) return;
+  out.ghost.remove(); out.run?.cancel(); out.room?.classList.remove("zoom", "back");
+  out = null;
+}
+async function wayBack(d, B, draw) {
+  const main = document.getElementById("main"), y = scrollY, ghost = document.createElement("div");
+  ghost.className = "room-ghost"; ghost.setAttribute("aria-hidden", "true"); ghost.inert = true;
+  ghost.innerHTML = "<div></div>"; // in place of #main: it too holds what is drawn against #main (its translate makes it the box for them)
+  main.before(ghost); // ahead of the room in the document: the page's own SVG ids (a gradient, a seal) stay the ones its url(#…) finds
+  move([...main.childNodes], ghost.firstChild);
+  ghost.scrollTop = y;
+  const O = out = { ghost };
+  await draw();
+  if (out !== O) return;
+  const room = main.querySelector(".salon"), a = room?.querySelector(`.sl-o[data-k="${d.k}"]`);
+  if (!a) { dropOut(); return; }
+  settle(main); // the room's own entrance: it is there at once, under the page
+  const c = camera(roomBox(a), B, d.k), ts = Array.from({ length: N + 1 }, (_, i) => c.at(1 - ease(i / N)));
+  const R = room.getBoundingClientRect(), F = 6, o = { duration: c.ms, fill: "both" }; // the ghost's part: the first 6 of the 20 steps
+  O.room = room;
+  room.classList.add("zoom", "back"); // no taps until it is back
+  O.run = room.querySelector(".sl-cam").animate(ts.map((m) => ({ transform: mat(m, R.left, R.top) })), o);
+  O.run.pause(); // held zoomed in, under the page, while its pictures are decoded
+  await Promise.race([Promise.all(decode(pictures(room)).map((x) => x.done)), new Promise((r) => setTimeout(r, 200))]);
+  if (out !== O) return;
+  O.run.play();
+  ghost.animate(ts.slice(0, F + 1).map((m, i) => ({ transform: mat(c.rel(m)), opacity: 1 - smooth(i / F) })), { duration: (c.ms * F) / N, fill: "both" });
+  const end = () => { if (out === O) dropOut(); };
+  O.run.finished.then(end, end);
+}
+
+// For app.js route, before it draws `h` (coming from the page `from`, whose history stamp was `left`; `ev`: a
+// navigation, not a redraw): what the room makes of it, or null. { land } after the page is drawn (the way in),
+// { run(draw) } instead of drawing (the way back), { done } after drawing, { before, keep } at the start of drawing,
+// the page's own transition kept (the move in cut short by going elsewhere: the lifted room leaves with the old page).
+export function roomMove(h, { from, left, ev }) {
+  dropOut(); // a way back cut short: the next page is drawn over the room as it stands
+  if (lift) {
+    const L = lift;
+    if (h === L.href) return L.runs ? null : { land: () => landIn(L) };
+    lift = null;
+    return h === "#/saved" ? { done: () => retreat(L) } : { before: () => dropLift(L), keep: true };
+  }
+  if (h !== "#/saved") return null;
+  const d = door; door = null; // one way back for one way in
+  if (!d || !ev || d.href !== from || d.i !== left || calm()) return null;
+  if (swiped()) return { done: () => settle(document.getElementById("main")) };
+  const B = pageBox(d.k);
+  if (!B || B.w * B.h < d.area * .5) return null; // the page scrolled away from it: the room opens as it does from anywhere
+  return { run: (draw) => wayBack(d, B, draw) };
 }
 
 // The bird again (after a sync): the same box, today's drawing and words.
@@ -579,12 +769,13 @@ export function wireSalon(room, { poem, world = [] } = {}) {
   room.addEventListener("click", (e) => {
     const a = e.target.closest("a.sl-o");
     if (!a) return;
-    if (busy) { e.preventDefault(); return; }
+    if (busy || room.classList.contains("back")) { e.preventDefault(); return; }
     if (calm() || !a.animate) return; // the link opens its page at once
     e.preventDefault();
     busy = true;
-    const go = () => { location.hash = a.getAttribute("href"); };
-    moveIn(room, a).then(go, go);
+    lift = { k: a.dataset.k, href: a.getAttribute("href"), room, a, A: roomBox(a) }; // measured at rest, before it is lifted
+    liftRoom(room);
+    location.hash = lift.href;
   });
 }
 

@@ -22,7 +22,7 @@ import { medalMonths, medalsHtml } from "./medals.js";
 import { printsHtml, wirePrints, resetPrints } from "./prints.js";
 import { poemsHtml, wirePoems } from "./poems.js";
 import { salonHtml, roomHtml, wireRoom } from "./museum.js";
-import { salonRoom, wireSalon, redrawBird } from "./salon.js";
+import { salonRoom, wireSalon, redrawBird, roomMove } from "./salon.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -2732,7 +2732,7 @@ let navIdx = 0, lastIdx = 0; // every history entry is stamped with a rising num
 // bar starts the page from the top.
 const isDetail = (x) => /^#\/(a|concert|stamp)\//.test(x || "");
 async function route(ev) {
-  const my = ++routeSeq;
+  const my = ++routeSeq, left = lastIdx; // left: the history stamp of the page being left
   if (ev) routed++;
   cleanup(); cleanup = () => {};
   if ($("#sheet")?.open) $("#sheet").close(); // the contents sheet (or any other) does not outlive the page it was raised from
@@ -2786,11 +2786,15 @@ async function route(ev) {
   // its taps dead, the loading line hidden behind it, for as long as the answer takes (audit 2026-11-11).
   if (!art && (h.startsWith("#/chronik") || (/^#\/concert/.test(h) && !S.gigs) || (h.startsWith("#/serial") && S.book === undefined))) morph = null;
   turnDir = null; turnLean = 0; turnMs = 0;
+  // 收藏's room (salon.js): into one of its corners, the room's camera instead of the cross-fade; back out, the reverse.
+  const rm = roomMove(h, { from: cameFrom, left, ev: Boolean(ev) });
+  if (rm && !rm.keep) morph = null;
   lastTapped = null;
   plateLater = Boolean(art && morph?.to);
   const draw = async () => {
     // A view that throws (a piece of content it did not expect) leaves the 印刷故障 card and a way on, not the page
     // before it under the new tab — or, at the first draw, index.html's 知更鳥正在送報…… for good (audit 2026-11-11).
+    rm?.before?.();
     try { await drawRoute(h, art, my); } catch (e) {
       console.warn("view failed", h, e);
       if (my === routeSeq) { main.innerHTML = `<div class="wrap">${errorCard({ text: "這一頁印壞了，請再試一次；還是不行的話，先回到今日。", offline: false })}</div>`; main.querySelector("[data-retry]").onclick = () => route(); }
@@ -2798,9 +2802,10 @@ async function route(ev) {
     if (my === routeSeq) window.scrollTo(0, place ?? landTop ?? 0);
     landTop = null;
   };
-  if (morph) await transition(draw, morph); else await draw();
+  if (rm?.run) await rm.run(draw); else if (morph) await transition(draw, morph); else await draw();
   if (my !== routeSeq) return;
   stopReveal = reveal(main);
+  rm?.land?.(); rm?.done?.();
   // After a navigation (not on first load) start keyboard and screen-reader users at the new view.
   if (ev) main.focus({ preventScroll: true });
 }
