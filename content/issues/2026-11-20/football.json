@@ -1,0 +1,408 @@
+{
+ "column": "football",
+ "date": "2026-11-20",
+ "title": "德科說一月可以補後衛，巴爾德不賣",
+ "dek": "德科說不賣巴爾德，可是這個球季，這位左後衛一共才踢了 124 分鐘。",
+ "brief": "巴薩體育總監德科週三在電台說，後衛傷這麼多不正常，一月可以買中後衛，但要先跟弗利克談。他說不賣巴爾德；阿勞霍若被利物浦以 5,500 萬歐元買斷，球團樂見。庫巴西、德容、孔德和奧爾莫週四練了前段，巴薩週日晚上 9 點主場踢比利亞雷亞爾。",
+ "topic_key": "football:2026-11-20",
+ "form": "timeline",
+ "voice": "fan",
+ "updated_at": "2026-11-20T02:49:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "next": {
+  "opponent": "比利亞雷亞爾",
+  "competition": "西甲",
+  "kickoff": "2026-11-22T21:00+08:00",
+  "venue": "Spotify Camp Nou",
+  "home": true
+ },
+ "hero": {
+  "id": "hero",
+  "kind": "photo",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/d/df/Deco_21dec2006.jpg",
+  "width": 500,
+  "height": 675,
+  "alt": "身穿巴薩球衣的 Deco 在場上比賽，2006 年 12 月拍攝。",
+  "caption": "德科，Darz Mol 攝於 2006 年 12 月 21 日，當時他是巴薩球員，那場比賽的對手是馬德里競技。資料照片，非當日畫面。",
+  "credit": "Darz Mol／Wikimedia Commons",
+  "license": "CC BY-SA 2.5 es",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.5/es/deed.en",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Deco_21dec2006.jpg",
+  "made": "2006"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "德科（Deco）是巴薩的體育總監，球員買進賣出歸他管。週三他上加泰隆尼亞的電台，被問到後防，他先認了一件事：傷成這樣，11 月不正常。他點了四個名字，克里斯滕森、Eric García、孔德，還有 10 月 25 日對皇馬那場傷了右腳踝的 Espart。**一月要不要買中後衛，他說什麼可能都還在桌上**，只是要先跟弗利克坐下來談，談完才知道要找哪一種人。"
+  },
+  {
+   "type": "timeline",
+   "title": "從週三到週日",
+   "items": [
+    {
+     "when": "11.18 週三",
+     "label": "德科上電台",
+     "note": "說一月補後衛的門沒關。西甲公布年度獎，巴薩五個拿三個。"
+    },
+    {
+     "when": "11.19 週四",
+     "label": "國腳回到訓練基地",
+     "note": "孔德、奧爾莫、庫巴西、德容只練了前段。"
+    },
+    {
+     "when": "11.20 週五 04:00",
+     "label": "巴薩女足主場踢 Servette",
+     "note": "晚上 7 點，歐足聯在尼翁抽國家聯賽八強。"
+    },
+    {
+     "when": "11.22 週日 21:00",
+     "label": "巴薩主場對比利亞雷亞爾",
+     "note": "皇馬 04:00 先踢塞爾塔。"
+    }
+   ],
+   "caption": "時間都是台灣時間。"
+  },
+  {
+   "type": "h",
+   "text": "週三：領了三座獎，也認了後防的帳"
+  },
+  {
+   "type": "p",
+   "text": "先說好事。西甲聯盟週三公布上個球季的年度獎，五個獎巴薩拿了三個。亞馬爾是最佳球員，那季 16 球 12 助攻；弗利克是最佳教練，帶隊聯賽連霸，94 分；門將胡安・加西亞拿最佳撲救，是對西班牙人那場德比的一撲，贏過馬競的奧布拉克和畢爾包競技的西蒙。頒獎 12 月 28 日在阿聯，跟 Globe Soccer Awards 同一場典禮。"
+  },
+  {
+   "type": "p",
+   "text": "再說電台上的事。德科沒答應要買，也沒說不買，講得很穩。"
+  },
+  {
+   "type": "quote",
+   "text": "要是一月進場，我們得清楚知道自己要找什麼。",
+   "original": "If we want to enter the transfer market in January, we have to know exactly what we are looking for.",
+   "cite": "德科，Goal 轉述的英譯"
+  },
+  {
+   "type": "p",
+   "text": "要找什麼，Goal 的說法是已經變了：巴薩補強的順序，從正中鋒換成了左腳中後衛。德科自己補了兩句，一句是球團一直在處理財務公平規則，一句是不想削弱球隊，也不想放走任何幫得上忙的人。照這個推下去，兩句講的是同一件事：想買人，先得騰出薪水的位子。"
+  },
+  {
+   "type": "p",
+   "text": "巴爾德今年 23 歲，踢左後衛，**這季 5 場、共 124 分鐘**，平均一場不到 25 分鐘。坎塞洛、Espart、傑拉德・馬丁近幾場都排在他前面。德科承認他處境不舒服，不過說球團沒有要賣他的意思，巴爾德自己也沒跟球團說過想走。不賣是一回事，不讓他上場是另一回事，這兩件事擺久了，球員自己會有想法。"
+  },
+  {
+   "type": "p",
+   "text": "阿勞霍夏天租借去了利物浦，各項賽事踢 15 場進 2 球。買斷價 5,500 萬歐元，利物浦得在期限內決定要不要付，球員自己也得點頭。德科說他為阿勞霍高興，接著又補一句："
+  },
+  {
+   "type": "quote",
+   "text": "我們希望球員成功。再說，錢進來也不是壞事。",
+   "original": "We want players to succeed. Also, the money would not hurt, either.",
+   "cite": "德科對加泰隆尼亞電台，ESPN 英譯，11 月 19 日"
+  },
+  {
+   "type": "p",
+   "text": "這句我聽得懂，球團要錢，沒說錯。可是夏天借走一個後衛，11 月就喊缺後衛，這筆帳我替球團記著。"
+  },
+  {
+   "type": "p",
+   "text": "傳聞那邊，ESPN 11 月 19 日的轉會彙整把幾條在跑的消息湊在一起。《世界體育報》說，巴薩在看國際米蘭的巴斯托尼、多特蒙德的施洛特貝克，和曼聯的利桑德羅・馬丁內斯，要補一個中後衛。巴斯托尼夏天其實談妥過，後來弗利克想先補別的位置，沒成，報導說他現在還願意來。TEAMtalk 另外說，巴薩又去找了布萊頓 19 歲的克羅埃西亞中衛 Vuskovic。同一份彙整裡，Sky Sports 說曼聯在挑後衛，可能也會回頭看巴爾德。",
+   "tag": "傳聞"
+  },
+  {
+   "type": "h",
+   "text": "週四：四個人先練了前段"
+  },
+  {
+   "type": "p",
+   "text": "週四國腳回到了訓練基地，戈登、亞馬爾、拉菲尼亞、佩德里、坎塞洛都在官網的名單上。孔德、奧爾莫、庫巴西、德容四個人，官網只寫他們跟球隊練了訓練的前段。孔德和奧爾莫是舊傷；庫巴西是髖部發緊，德容是閉孔肌拉傷，那是髖關節旁邊的小肌肉，兩個都是國際賽週帶回來的。前段能練，不等於週日能上，週五還有一次練球，那一次練不練得完，比週四這幾十分鐘有意義。"
+  },
+  {
+   "type": "p",
+   "text": "週日的對手比利亞雷亞爾，官網預告的標題是「傳統上很難打的一場比賽」。數字不客氣：前 29 次交手，巴薩 22 勝 6 平 1 敗，最近 5 場卻輸了 2 場，輸球數是前面 29 場的兩倍。主場更差，最近 5 場輸 3 場。2021/22 球季以來，到巴薩主場贏西甲場次最多的球隊是皇馬，比利亞雷亞爾追平了皇馬的數字。他們現在西甲排第 8，15 分，客場 8 場只贏 2 場，夏天換了教練 Iñigo Pérez。我不會因為第 8 名就放心。"
+  },
+  {
+   "type": "news",
+   "title": "歐洲足壇速覽",
+   "items": [
+    {
+     "headline": "波切蒂諾第一次開口：先把贏球的感覺找回來",
+     "summary": "54 歲的波切蒂諾 11 月 19 日（週四）在曼聯接受上任後第一次完整專訪，說首要的事是讓球員找回贏球的感覺，壓力要變成能量，不能壓在球員背上。他接手的曼聯聯賽排第 18，只贏過 1 場，已經 8 場沒贏。1999 年歐冠決賽曼聯在巴塞隆納贏拜仁，他當時在現場，那時他是西班牙人隊的球員。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/story/_/id/50529858/mauricio-pochettino-man-united-liverpool",
+     "when": "11 月 19 日（週四）",
+     "place": [
+      "GB"
+     ]
+    },
+    {
+     "headline": "孔帕尼病後復出，週五帶拜仁對科隆",
+     "summary": "拜仁教練孔帕尼 10 月 23 日在二隊訓練時倒下送醫，診斷是腦膜受刺激，缺席了 5 場比賽。他 11 月 19 日（週四）說身體很好，檢查結果全部正常，週五（台灣週六凌晨 3 點半）在主場對科隆復出。拜仁和多特蒙德同是 21 分，並列德甲第一。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/story/_/id/50530204/vincent-kompany-good-health-bayern-munich-collapse",
+     "when": "11 月 19 日（週四）",
+     "place": [
+      "DE"
+     ]
+    },
+    {
+     "headline": "皇馬續約 Tchouaméni 到 2032 年",
+     "summary": "皇馬 11 月 19 日（週四）宣布，26 歲的法國中場 Tchouaméni 續約到 2032 年 6 月 30 日。他 2022 年從摩納哥過去，5 個球季踢了 205 場、拿 8 座冠軍。週三才宣布居萊爾續約，兩天綁住兩個中場。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/story/_/id/50530676/real-madrid-tchouameni-agree-new-contract-2032",
+     "when": "11 月 19 日（週四）",
+     "place": [
+      "ES",
+      "FR"
+     ]
+    },
+    {
+     "headline": "FIFA 確認：因凡蒂諾有兩個對手",
+     "summary": "FIFA 11 月 19 日（週四）確認，法國足協主席迪亞洛和日本的田嶋幸三，都在截止前遞了件，要挑戰當了 11 年主席的因凡蒂諾。選舉明年 3 月 18 日在摩洛哥拉巴特，211 個會員協會投票，選舉委員會 2 月 18 日前決定誰能上選票。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/story/_/id/50529522/fifa-gianni-infantino-phillipe-diallo-kohzo-tashima",
+     "when": "11 月 19 日（週四）",
+     "place": [
+      "FR",
+      "JP",
+      "MA",
+      "CH"
+     ]
+    },
+    {
+     "headline": "歐足聯等八人去信 FIFA：文件在哪",
+     "summary": "歐足聯主席 Ceferin 等八人 11 月 19 日（週四）聯名寫信給 FIFA 秘書長，說到現在一個問題都沒得到回答。他們要看的，是因凡蒂諾想把世界盃商業權利賣給投資人、募 200 億美元那份計畫的文件。FIFA 11 月 2 日回覆，要先同意「嚴格審閱程序」，才能到蘇黎世看文件。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/story/_/id/50531740/uefa-pressures-fifa-world-cup-selloff-plan-documents",
+     "when": "11 月 19 日（週四）",
+     "place": [
+      "CH"
+     ]
+    },
+    {
+     "headline": "葡萄牙新任 7 號 Forbs，英超五隊在看",
+     "summary": "ESPN 轉會彙整引 TEAMtalk 說，Club Brugge 的 22 歲邊鋒 Forbs，接了羅納度退出國家隊後空出的葡萄牙 7 號，維拉、紐卡索、布萊頓、艾佛頓和布倫特福德都在看，想趕在轉會費漲高之前下手。他本週對威爾斯進了致勝球，葡萄牙 3 比 2 贏。",
+     "source": "ESPN（引 TEAMtalk）",
+     "url": "https://www.espn.com/soccer/story/_/id/50529152/transfer-rumors-news-cristiano-ronaldo-premier-league-carlos-forbs",
+     "when": "11 月 19 日（週四）",
+     "place": [
+      "BE",
+      "PT",
+      "GB"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "h",
+   "text": "接下來"
+  },
+  {
+   "type": "p",
+   "text": "週五凌晨 4 點，巴薩女足在主場踢歐冠聯賽階段第 5 輪，對手是瑞士的 Servette；同一時間里昂去阿森納，結果下一期報。"
+  },
+  {
+   "type": "p",
+   "text": "晚上 7 點，歐足聯在瑞士尼翁抽國家聯賽八強。西班牙是小組第二，照 ESPN 寫的規則，抽不到同組的英格蘭，法國、德國、葡萄牙三選一；八強要到明年 3 月 25 日才開踢。週六凌晨 3 點半，孔帕尼回到拜仁的球場邊。"
+  },
+  {
+   "type": "table",
+   "title": "這個週末的鬧鐘",
+   "head": [
+    "台灣時間",
+    "比賽",
+    "看點"
+   ],
+   "rows": [
+    [
+     "週六 03:30",
+     "拜仁 對 科隆（德甲）",
+     "孔帕尼病後第一場"
+    ],
+    [
+     "週六 20:30",
+     "曼城 對 富勒姆（英超）",
+     "曼城 21 分，英超第 3"
+    ],
+    [
+     "週六 22:30",
+     "門興 對 多特蒙德（德甲）",
+     "多特蒙德和拜仁同積 21 分"
+    ],
+    [
+     "週日 01:30",
+     "紐卡索 對 阿森納（英超）",
+     "阿森納 27 分，英超第 1"
+    ],
+    [
+     "週日 04:00",
+     "皇馬 對 塞爾塔（西甲）",
+     "皇馬 30 分，落後巴薩 3 分"
+    ],
+    [
+     "週日 21:00",
+     "巴薩 對 比利亞雷亞爾（西甲）",
+     "Spotify Camp Nou"
+    ],
+    [
+     "週一 00:30",
+     "利物浦 對 曼聯（英超）",
+     "波切蒂諾的首戰"
+    ]
+   ],
+   "caption": "ESPN 賽程與積分榜，11 月 20 日凌晨查閱；比賽以當地賽程換算成台灣時間。"
+  },
+  {
+   "type": "p",
+   "text": "巴薩這邊是**週日晚上 9 點**，西甲第 13 輪，Spotify Camp Nou 主場。皇馬凌晨 4 點先踢，17 個小時後才輪到巴薩，積分榜上巴薩 33 分，皇馬 30 分。再來是 11 月 26 日（週四）凌晨 1 點 45 分，去巴庫踢歐冠，對手是當地的 Sabah。睡不睡，週日打完再決定。"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Deco abre la puerta a fichar un defensa en enero y niega que se busque una salida a Balde",
+   "publisher": "Infobae（EFE 稿）",
+   "date": "2026-11-18",
+   "url": "https://www.infobae.com/espana/agencias/2026/11/18/deco-abre-la-puerta-a-fichar-un-defensa-en-enero-y-niega-que-se-busque-una-salida-a-balde",
+   "note": "德科週三（11 月 18 日）上加泰隆尼亞電台；頁面標 11 月 18 日 14:45 美東；後防補得很好、財務公平規則、巴爾德不賣、阿勞霍；11 月 20 日 02:50 查閱"
+  },
+  {
+   "title": "Barça's Deco keen for Liverpool to sign on-loan Araujo in €55m permanent deal",
+   "publisher": "ESPN",
+   "date": "2026-11-19",
+   "url": "https://www.espn.com/soccer/story/_/id/50530266/barcelona-deco-ronald-araujo-liverpool-transfer",
+   "note": "阿勞霍 27 歲 15 場 2 球、5,500 萬歐元買斷條款與期限；巴爾德 23 歲 5 場 124 分鐘；德科原話（ESPN 英譯）"
+  },
+  {
+   "title": "Deco: What is happening to Barcelona is not normal, and this is our position on strengthening the defence",
+   "publisher": "Goal",
+   "date": "2026-11-19",
+   "url": "https://www.goal.com/en/news/deco-what-is-happening-to-barcelona-is-not-normal-and-this-is-our-position-on-strengthening-the-defence/bltbe07a15f6b5620dd",
+   "note": "德科原話（Goal 英譯）：傷病、一月、財務；左腳中後衛優先是 Goal 的敘述，不是德科原話；頁面只有相對時間（約 21 小時前）"
+  },
+  {
+   "title": "Deco: Araujo's departure would not be a bad thing, and Balde has not told us he is unhappy",
+   "publisher": "Goal",
+   "date": "2026-11-19",
+   "url": "https://www.goal.com/en/news/deco-araujo-s-departure-would-not-be-a-bad-thing-and-balde-has-not-told-us-he-is-unhappy/blt07e98eb8a580d5c9",
+   "note": "阿勞霍、巴爾德；頁面只有相對時間"
+  },
+  {
+   "title": "Transfer rumors, news: Premier League clubs eye Cristiano Ronaldo successor Forbs",
+   "publisher": "ESPN",
+   "date": "2026-11-19",
+   "url": "https://www.espn.com/soccer/story/_/id/50529152/transfer-rumors-news-cristiano-ronaldo-premier-league-carlos-forbs",
+   "note": "《世界體育報》：巴斯托尼、施洛特貝克、利桑德羅・馬丁內斯；TEAMtalk：Vuskovic、Forbs；Sky Sports：曼聯與巴爾德；傳聞"
+  },
+  {
+   "title": "New faces at training",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-19",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4611329/new-faces-at-training",
+   "note": "週四國腳歸隊；孔德、奧爾莫、庫巴西、德容參加訓練前段；週五再練；頁面標 6 hrs ago，11 月 20 日 02:40 查閱"
+  },
+  {
+   "title": "Cubarsí, Koundé, Dani Olmo y De Jong hacen parte del trabajo en el Barça pensando en el Villarreal",
+   "publisher": "Infobae（歐洲通訊社稿）",
+   "date": "2026-11-19",
+   "url": "https://infobae.com/america/agencias/2026/11/19/cubarsi-kounde-dani-olmo-y-de-jong-hacen-parte-del-trabajo-en-el-barca-pensando-en-el-villarreal",
+   "note": "頁面標 11 月 19 日 08:45 美東；逐步歸隊，訓練前段"
+  },
+  {
+   "title": "A traditionally difficult fixture",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-19",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4610816/villarreal-a-traditionally-difficult-opponent",
+   "note": "前 29 場 22 勝 6 平 1 敗、最近 5 場輸 2 場、主場最近 5 場輸 3 場、2021/22 起西甲客場勝場並列皇馬；比利亞雷亞爾第 8、客場 8 場 2 勝、教練 Iñigo Pérez；頁面標 9 hrs ago"
+  },
+  {
+   "title": "Lamine Yamal, Hansi Flick, Joan Garcia, Carlos Espí and Arda Güler named winners of the 2025/26 LALIGA Awards",
+   "publisher": "LALIGA",
+   "date": "2026-11-18",
+   "url": "https://www.laliga.com/en-GB/news/lamine-yamal-hansi-flick-joan-garcia-carlos-espi-and-arda-guler-named-winners-of-the-2025-26-laliga-awards",
+   "note": "亞馬爾 16 球 12 助攻、弗利克 94 分、胡安・加西亞最佳撲救、12 月 28 日阿聯頒獎；頁面只有日期"
+  },
+  {
+   "title": "Lamine Yamal y Hansi Flick ganan los premios a mejor jugador y entrenador de LaLiga EA Sports 2025-26",
+   "publisher": "Infobae（Europa Press 稿）",
+   "date": "2026-11-18",
+   "url": "https://www.infobae.com/america/agencias/2026/11/18/lamine-yamal-y-hansi-flick-ganan-los-premios-a-mejor-jugador-y-entrenador-de-laliga-ea-sports-2025-26/",
+   "note": "撲救對手奧布拉克與西蒙、巴薩五個獎拿三個"
+  },
+  {
+   "title": "Mauricio Pochettino: Man United players must relearn 'about being winners'",
+   "publisher": "ESPN",
+   "date": "2026-11-19",
+   "url": "https://www.espn.com/soccer/story/_/id/50529858/mauricio-pochettino-man-united-liverpool",
+   "note": "上任後第一次完整專訪；聯賽第 18、1 勝、8 場不勝；1999 年歐冠決賽在巴塞隆納現場、當時是西班牙人球員"
+  },
+  {
+   "title": "Kompany in 'good health' as he returns to coach Bayern after collapse",
+   "publisher": "ESPN",
+   "date": "2026-11-19",
+   "url": "https://www.espn.com/soccer/story/_/id/50530204/vincent-kompany-good-health-bayern-munich-collapse",
+   "note": "10 月 23 日倒下、腦膜受刺激、缺席 5 場、週五對科隆復出；拜仁與多特蒙德同分"
+  },
+  {
+   "title": "Real Madrid, Tchouaméni agree new contract through 2032",
+   "publisher": "ESPN",
+   "date": "2026-11-19",
+   "url": "https://www.espn.com/soccer/story/_/id/50530676/real-madrid-tchouameni-agree-new-contract-2032",
+   "note": "皇馬聲明：2032 年 6 月 30 日、205 場 8 冠；前一天居萊爾續約"
+  },
+  {
+   "title": "FIFA confirms Infantino rivals as Diallo, Tashima for 2027 election",
+   "publisher": "ESPN（引美聯社）",
+   "date": "2026-11-19",
+   "url": "https://www.espn.com/soccer/story/_/id/50529522/fifa-gianni-infantino-phillipe-diallo-kohzo-tashima",
+   "note": "選舉 3 月 18 日拉巴特、2 月 18 日審查期限"
+  },
+  {
+   "title": "UEFA pressures FIFA for World Cup sell-off plan documents",
+   "publisher": "ESPN",
+   "date": "2026-11-19",
+   "url": "https://www.espn.com/soccer/story/_/id/50531740/uefa-pressures-fifa-world-cup-selloff-plan-documents",
+   "note": "八位簽名者、FIFA 11 月 2 日回覆、200 億美元計畫"
+  },
+  {
+   "title": "When is the Nations League quarterfinals draw?",
+   "publisher": "ESPN",
+   "date": "2026-11-18",
+   "url": "https://www.espn.com/soccer/story/_/id/50519465",
+   "note": "11 月 20 日 11:00 GMT 尼翁抽籤；八強名單；首回合 3 月 25–27 日；A 級小組第一各抽別組第二"
+  },
+  {
+   "title": "FC Barcelona first-team schedule",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-20",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/schedule",
+   "note": "11 月 22 日 14:00 西班牙時間（台灣 21:00）對比利亞雷亞爾、Spotify Camp Nou；11 月 25 日 18:45 CET 巴庫對 Sabah（台灣 26 日 01:45）；11 月 20 日 02:55 查閱，均非 TBA"
+  },
+  {
+   "title": "Servette at Barcelona, UEFA Women's Champions League",
+   "publisher": "ESPN",
+   "date": "2026-11-19",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.wchampions/scoreboard?dates=20261119",
+   "note": "巴薩女足對 Servette 2026-11-19 20:00 UTC（台灣 11 月 20 日 04:00）；里昂 20:00 UTC 去阿森納"
+  },
+  {
+   "title": "Bundesliga, Premier League and LaLiga scoreboards",
+   "publisher": "ESPN",
+   "date": "2026-11-20",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261120",
+   "note": "拜仁對科隆 11 月 20 日 19:30 UTC（台灣 21 日 03:30）；週末賽程以各聯賽 scoreboard 的 UTC 時間換算；英超與德甲積分榜同頁介面"
+  },
+  {
+   "title": "LaLiga standings 2026/27",
+   "publisher": "ESPN",
+   "date": "2026-11-20",
+   "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+   "note": "11 月 20 日 02:50 查閱：巴薩 12 場 33 分、皇馬 30 分、比利亞雷亞爾第 8 15 分"
+  },
+  {
+   "title": "File:Deco 21dec2006.jpg",
+   "publisher": "Wikimedia Commons",
+   "date": "2006-12-21",
+   "url": "https://commons.wikimedia.org/wiki/File:Deco_21dec2006.jpg",
+   "note": "Darz Mol 攝，CC BY-SA 2.5 es；描述為對馬德里競技比賽中的巴薩球員"
+  }
+ ]
+}
