@@ -1,0 +1,148 @@
+{
+ "column": "fm-watch",
+ "date": "2026-11-20",
+ "status": "update",
+ "form": "compare",
+ "voice": "watchman",
+ "title": "FM27 Mobile 版 27.1.0 已上架 iOS",
+ "dek": "Netflix 的手機版，比 Apple Arcade 上的 Touch 版晚了 32 分鐘，兩邊商店頁都沒說改了什麼。",
+ "brief": "《足球經理 27》Netflix 版的 27.1.0，週四凌晨出現在 iOS 的版本記錄，比 Touch 版晚半小時。官方先前說 Mobile 版會進一步平衡進球、處理陣容在比賽日之間改變的回報，商店說明卻只是 Netflix 的通用句。內容有沒有改到，還待玩家實測。",
+ "topic_key": "fm-watch:2026-11-20-mobile-27-1-0-app-store",
+ "updated_at": "2026-11-20T05:25:33+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "hero": {
+  "type": "timeline",
+  "title": "FM27 Mobile（Netflix）在 App Store 的版本記錄",
+  "caption": "依 Apple 台灣 App Store 頁面與 iTunes 查詢資料整理，時間為台灣時間；官方公告取自 Steam。",
+  "items": [
+   {
+    "when": "2026.11.10",
+    "label": "27.0.0",
+    "note": "11 月 10 日發售（台灣時間 11 日 00:51 上架），說明是 Netflix 的另一句通用句"
+   },
+   {
+    "when": "2026.11.12",
+    "label": "27.0.1",
+    "note": "00:45 上架，說明與日後的 27.1.0 同一句"
+   },
+   {
+    "when": "2026.11.17",
+    "label": "電腦版 27.1.0 公告",
+    "note": "22:16 發布，官方說 Mobile 版同一週會有更新"
+   },
+   {
+    "when": "2026.11.19",
+    "label": "Mobile 版 27.1.0",
+    "note": "00:31 上架，說明仍是通用句"
+   }
+  ]
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "台灣時間 11 月 19 日（週四）凌晨 0 點 31 分，**《足球經理 27》的 Netflix 版**（FM27 Mobile）在蘋果 App Store 的版本記錄多了一筆 27.1.0。《足球經理》是足球經理模擬遊戲，英國的 Sports Interactive 開發，日本的 SEGA 發行，11 月 10 日發售。Mobile 版是只在 Netflix 提供的手機版，要有 Netflix 會員才能玩。Touch 版是另一個手機版，放在蘋果的 Apple Arcade 訂閱服務裡，是不同的產品。"
+  },
+  {
+   "type": "p",
+   "text": "27.1.0 是發售後第一個內容更新。11 月 17 日（週二）晚上 10 點 16 分，電腦版先在 Steam（電腦遊戲平台）上線，開發商在公告裡另外交代了 Mobile 版：同一週會有自己的更新，內容是進一步平衡比賽引擎的進球數，並處理玩家回報陣容在比賽日之間被改變的問題。11 月 16 日那份 146 條的改動清單沒有 Mobile 的內容，官方只在開頭那段話提了這一句。"
+  },
+  {
+   "type": "p",
+   "text": "Mobile 版比 Touch 版晚了 32 分鐘上架，時間差見下表。更新說明只有一句：「我們不只修復錯誤，也做了許多改進，要為 Netflix 會員帶來最棒的遊戲體驗。」這是 Netflix 的通用句，27.0.1 用的也是同一句，沒有一個字提到進球或陣容。"
+  },
+  {
+   "type": "table",
+   "title": "27.1.0 各版本目前查得到的狀態（台灣時間 11 月 20 日清晨）",
+   "head": [
+    "版本",
+    "27.1.0 出現的時間",
+    "更新說明",
+    "比電腦版公告晚"
+   ],
+   "rows": [
+    [
+     "電腦（Steam）",
+     "11 月 17 日 22:16",
+     "官方公告（含 Mobile 版預告）",
+     "—"
+    ],
+    [
+     "Touch（Apple Arcade）",
+     "11 月 18 日 23:58",
+     "簡短的錯誤修正與改進",
+     "約 25 小時 43 分"
+    ],
+    [
+     "Mobile（Netflix，iOS）",
+     "11 月 19 日 00:31",
+     "Netflix 通用句",
+     "約 26 小時 16 分"
+    ],
+    [
+     "Mobile（Android）",
+     "沒有獨立商店頁",
+     "—",
+     "—"
+    ],
+    [
+     "Xbox、PS5 主機版",
+     "官方只說本週稍晚",
+     "—",
+     "—"
+    ]
+   ],
+   "caption": "電腦版時間取自 Steam 公告，Touch 與 Mobile 取自 App Store 版本記錄。"
+  },
+  {
+   "type": "p",
+   "text": "Mobile 版這邊能確定的只有一件事：**iOS 版的 FM27 Mobile 已經是 27.1.0**，台灣、美國、英國、日本、德國、澳洲六區的 App Store 都一樣。對 iOS 上的 Mobile 玩家來說，現在可以更新到這一版；官方預告的方向是進球平衡與陣容問題，這一版有沒有做到，商店頁看不出來，我們也還沒實測，要等玩過的人回報。"
+  },
+  {
+   "type": "p",
+   "tag": "推論",
+   "text": "這一版應該就是官方說的那次 Mobile 更新：Netflix 版這一週只有這一次版本更新，時間也落在官方說的同一週內。官方沒有宣布過 Mobile 更新已經推出。"
+  },
+  {
+   "type": "p",
+   "text": "還沒有答案的部分：Android 版沒有獨立的商店頁，查不到版本。Xbox 與 PS5 的主機版，官方 17 日說本週稍晚，到今天（週五）清晨為止，Steam、官網、YouTube 仍沒有新的公告。"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Football Manager 27 Mobile（App Store 台灣頁，版本記錄）",
+   "publisher": "Apple App Store（Netflix, Inc.）",
+   "date": "2026-11-18",
+   "url": "https://apps.apple.com/tw/app/football-manager-27-mobile/id6446123740",
+   "note": "版本記錄：27.1.0＝2026-11-18 16:31:42 UTC（台灣 11-19 00:31）；27.0.1＝2026-11-11 16:45:32 UTC，說明與 27.1.0 同句；27.0.0＝2026-11-10 16:51:39 UTC；26.4.2＝2026-06-25 15:31:04 UTC，說明與 27.1.0 同句。App 說明首句：須具備 Netflix 會員資格。台灣時間 11-20 清晨讀取。"
+  },
+  {
+   "title": "Apple iTunes 查詢資料（Mobile，id 6446123740）",
+   "publisher": "Apple",
+   "date": "2026-11-18",
+   "url": "https://itunes.apple.com/lookup?id=6446123740&country=tw",
+   "note": "tw、gb、us、jp、de、au 區 version 27.1.0、currentVersionReleaseDate 2026-11-18T16:31:42Z；檔案 2,350,327,808 bytes；最低 iOS 17.0。官方未公開 Mobile 版 27.1.0 的內容清單。"
+  },
+  {
+   "title": "FM27 Update 27.1.0 Out Now",
+   "publisher": "Steam 公告（Sports Interactive，Jimmy Wong）",
+   "date": "2026-11-17",
+   "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702693861",
+   "note": "2026-11-17 14:16:09 UTC（台灣 22:16）。原文：「An update for FM27 Mobile will also be made available this week, featuring further Match Engine balancing, particularly around goalscoring, and addressing reports of lineups changing between matchdays.」另：「An equivalent update will be available on FM27 Console and FM27 Touch (Apple Arcade) later this week.」台灣 11-20 清晨經 Steam News API 重讀，最新官方公告仍是這則。 另：Xbox 商店資料最後一次改動是 11-17 10:39 UTC，早於電腦版公告，不能當作更新的證據；PS5 商店頁讀不到版本資訊。"
+  },
+  {
+   "title": "FM27 Update 27.1.0 Changelist",
+   "publisher": "Steam 公告（Sports Interactive，Kyle Brown）",
+   "date": "2026-11-16",
+   "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702689885",
+   "note": "2026-11-16 15:04:12 UTC（台灣 23:04）。開頭段落同樣寫 Mobile 版本週有更新（進球平衡、陣容在比賽日之間改變的回報），146 條清單不含 Mobile 內容。"
+  },
+  {
+   "title": "Football Manager 27 Touch（iTunes 查詢資料，美國區）",
+   "publisher": "Apple",
+   "date": "2026-11-18",
+   "url": "https://itunes.apple.com/lookup?id=1626267810&country=us",
+   "note": "美國區 version 27.1.0、currentVersionReleaseDate 2026-11-18T15:58:53Z（台灣 11-18 23:58），與其他地區相同；台灣時間 11-19 清晨查時顯示 27.0.1，原因與變動時間無法判斷。 Touch 說明原文：「Bug fixes and improvements to Football Manager 27 Touch.」"
+  }
+ ]
+}
