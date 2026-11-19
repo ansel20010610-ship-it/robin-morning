@@ -1,10 +1,11 @@
 {
   "last": "2026-11-09",
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "sources": {
     "mna": {
       "urls": [
-        "https://www.mna.com.tw"
+        "https://www.mna.com.tw",
+        "https://www.mna.com.tw/concerts_detail.html?id=782"
       ],
       "seen": [
         {
@@ -23,53 +24,66 @@
           "id": "yuja-wang-mco-2026"
         },
         {
-          "title": "郎朗獨奏會",
+          "title": "Philharmonix",
+          "verdict": "已列入",
+          "id": "philharmonix-2026"
+        },
+        {
+          "title": "郎朗鋼琴獨奏會",
           "verdict": "已列入",
           "id": "lang-lang-recital-2026"
         },
         {
-          "title": "Diana Krall",
+          "title": "黛安娜．克瑞兒",
           "verdict": "不收",
-          "why": "爵士，不在收錄範圍"
-        }
-      ]
-    },
-    "pbc": {
-      "error": "連不上：憑證錯誤（www.pbc.com.tw 憑證不符）"
-    },
-    "newaspect": {
-      "error": "連不上：ECONNREFUSED"
-    },
-    "tanart": {
-      "error": "連不上：網域解析失敗"
-    },
-    "kham": {
-      "urls": [
-        "https://www.kham.com.tw"
-      ],
-      "seen": [
+          "why": "爵士流行，非收錄範圍"
+        },
         {
-          "title": "音樂劇《WILD WILD》",
+          "title": "馬克．安德雷低音提琴與吉他（11/20 台北）",
           "verdict": "不收",
-          "why": "2分以下，頁面無演出者與日期，未能判斷"
+          "why": "3分：曲目為跨界改編與流行歌，台北場需4分"
         }
       ]
-    },
-    "udn": {
-      "error": "HTTP 429"
-    },
-    "ntch": {
-      "error": "頁面只有瀏覽器提示，沒有節目內容"
     },
     "ntt": {
       "urls": [
-        "https://www.npac-ntt.org"
+        "https://www.npac-ntt.org/program"
       ],
       "seen": [
         {
-          "title": "2026 NTT歲末音樂會《那麼派》",
+          "title": "潘朵拉的音樂盒",
+          "verdict": "已列入",
+          "id": "pandora-music-box-ntt-2026"
+        },
+        {
+          "title": "安德烈亞．范佐 Intimacy Vol.2 鋼琴（12/7 台中）",
           "verdict": "不收",
-          "why": "2分：演出者未列、動靜皆宜的舞樂派對"
+          "why": "2分：流行跨界鋼琴，查不到古典曲目"
+        },
+        {
+          "title": "星際效應電影交響音樂會／進擊的巨人音樂會／狂美百老匯交響音樂會",
+          "verdict": "不收",
+          "why": "電影動漫配樂拼盤、商業秀"
+        },
+        {
+          "title": "柴一與貝九",
+          "verdict": "已列入",
+          "id": "ntt-chaikovsky1-beethoven9-2027"
+        },
+        {
+          "title": "陳必先",
+          "verdict": "已列入",
+          "id": "chen-pi-hsien-recital-2026"
+        },
+        {
+          "title": "威斯培衛",
+          "verdict": "已列入",
+          "id": "wispelwey-bach-suites-2026"
+        },
+        {
+          "title": "古典音樂台30週年沙龍音樂會 12/19 中劇院",
+          "verdict": "不收",
+          "why": "2分：查不到演出者曲目"
         }
       ]
     },
@@ -79,19 +93,46 @@
       ],
       "seen": [
         {
-          "title": "后正宇與ESO《幻光之境》11/20",
-          "verdict": "不收",
-          "why": "3分以下：高雄需4分以上"
-        },
-        {
-          "title": "賈西亞與高市交小樂集 11/20",
+          "title": "高市交 賈西亞",
           "verdict": "已列入",
           "id": "garcia-garcia-ksso-2026"
+        },
+        {
+          "title": "后正宇與ESO 11/20",
+          "verdict": "不收",
+          "why": "高雄場需4分；頁面只讀到部分，今天當晚演出"
         }
       ]
     },
+    "kham": {
+      "urls": [
+        "https://www.kham.com.tw"
+      ],
+      "seen": [
+        {
+          "title": "WILD WILD 音樂劇",
+          "verdict": "不收",
+          "why": "頁面無日期演出者，查不到"
+        }
+      ]
+    },
+    "newaspect": {
+      "error": "連線被拒（ECONNREFUSED）"
+    },
+    "pbc": {
+      "error": "網站憑證錯誤，打不開"
+    },
+    "tanart": {
+      "error": "網域解析失敗"
+    },
+    "udn": {
+      "error": "來不及查"
+    },
+    "ntch": {
+      "error": "頁面要求特定瀏覽器，WebFetch 讀不到節目"
+    },
     "news": {
-      "error": "只做一次泛關鍵字搜尋，沒有開誠品、年代、KKTIX、wekengo，也沒查十月到一月的專項關鍵字"
+      "error": "來不及查"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "complete": true,
   "note": "",
   "incomplete_since": null,
@@ -21,9 +21,9 @@
     "opentix": {
       "ok": true,
       "note": "",
-      "new": 29,
+      "new": 25,
       "pages": 80,
-      "left": 9,
+      "left": 5,
       "newest": "2026-11-17"
     }
   },
@@ -40,6 +40,11 @@
     },
     {
       "date": "2026-11-19",
+      "feed": true,
+      "opentix": true
+    },
+    {
+      "date": "2026-11-20",
       "feed": true,
       "opentix": true
     }
