@@ -2844,18 +2844,25 @@ html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
 .po-top { position: relative; z-index: 3; margin: 0 18px; transform: rotate(-1.6deg); touch-action: pan-y; }
 @media (prefers-reduced-motion: no-preference) {
   /* 翻閱: the old letter turned over from its left edge and away (on), or the earlier letter turned back over onto it (back) */
-  .po-leaf { position: absolute; left: 0; right: 0; top: 0; pointer-events: none; transform-origin: 0 40%; }
+  /* only transform and opacity move (詩箋翻起來很卡, 2026-11-19): the lifted shadow is the leaf's ::before, faded in and out */
+  .po-leaf { position: absolute; left: 0; right: 0; top: 0; pointer-events: none; transform-origin: 0 40%; will-change: transform, opacity; }
+  .po-leaf::before { content: ""; position: absolute; inset: 0; z-index: -1; box-shadow: -18px 12px 18px rgba(0, 0, 0, .45); opacity: 0; will-change: opacity; }
   .po-leaf.away { z-index: 6; animation: po-away .72s cubic-bezier(.45, .05, .25, 1) forwards; }
+  .po-leaf.away::before { animation: po-shade-away .72s cubic-bezier(.45, .05, .25, 1) forwards; }
+  .po-leaf.back { z-index: 6; animation: po-back .72s cubic-bezier(.45, .05, .25, 1) forwards; }
+  .po-leaf.back::before { animation: po-shade-back .72s cubic-bezier(.45, .05, .25, 1) forwards; }
   .po-leaf.under { z-index: 0; animation: po-fade .72s ease-in forwards; }
-  .po-sheet.po-back { transform-origin: 0 40%; animation: po-back .72s cubic-bezier(.45, .05, .25, 1); }
-  @keyframes po-away { 0% { transform: perspective(1500px) rotateY(0) translateZ(0); filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)); }
-    35% { transform: perspective(1500px) rotateY(-38deg) translateZ(30px); filter: drop-shadow(-18px 12px 18px rgba(0, 0, 0, .45)); }
-    100% { transform: perspective(1500px) rotateY(-112deg) translateX(-30px) translateZ(40px); filter: drop-shadow(-30px 20px 24px rgba(0, 0, 0, .0)); opacity: 0; } }
-  @keyframes po-back { 0% { transform: perspective(1500px) rotateY(-112deg) translateX(-30px) translateZ(40px); opacity: 0; filter: drop-shadow(-30px 20px 24px rgba(0, 0, 0, 0)); }
-    65% { transform: perspective(1500px) rotateY(-38deg) translateZ(30px); opacity: 1; filter: drop-shadow(-18px 12px 18px rgba(0, 0, 0, .45)); }
-    100% { transform: none; filter: none; } }
+  @keyframes po-away { 0% { transform: perspective(1500px) rotateY(0) translateZ(0); }
+    35% { transform: perspective(1500px) rotateY(-38deg) translateZ(30px); }
+    100% { transform: perspective(1500px) rotateY(-112deg) translateX(-30px) translateZ(40px); opacity: 0; } }
+  @keyframes po-back { 0% { transform: perspective(1500px) rotateY(-112deg) translateX(-30px) translateZ(40px); opacity: 0; }
+    65% { transform: perspective(1500px) rotateY(-38deg) translateZ(30px); opacity: 1; }
+    100% { transform: perspective(1500px) rotateY(0) translateZ(0); opacity: 1; } }
+  @keyframes po-shade-away { 0% { opacity: 0; } 35% { opacity: 1; } 100% { opacity: 0; } }
+  @keyframes po-shade-back { 0% { opacity: 0; } 65% { opacity: 1; } 100% { opacity: 0; } }
   @keyframes po-fade { 0%, 55% { opacity: 1; } 100% { opacity: 0; } }
 }
+.po-sheet.po-hold { visibility: hidden; } /* turning back: the real letter waits under its turning copy */
 .po-sheet { position: relative; overflow: hidden; padding: 34px 26px 30px; text-align: center; color: #2b2218;
   background: radial-gradient(120% 90% at 30% 15%, #fdf9ef, #f3ead6 60%, #e8dcc0); box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 16px 28px -10px rgba(0, 0, 0, .7); }
 .po-sheet::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; background: repeating-linear-gradient(0deg, rgba(150, 125, 80, .1) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(150, 125, 80, .08) 0 1px, transparent 1px 26px); }

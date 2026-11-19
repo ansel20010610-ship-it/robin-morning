@@ -51,23 +51,27 @@ export function wirePoems(scene, list, load) {
   const top = scene.querySelector(".po-top");
   // 翻閱 (the owner, 2026-11-19: 詩箋左右滑我要有翻閱動畫): turning on, the letter on top lifts from its left edge and is
   // turned over and away, the next one lying under it; turning back, the earlier letter is turned back over onto it.
+  // Smooth on the phone (the owner, 2026-11-19: 詩箋翻起來很卡): the letters either side are fetched ahead, so a turn never
+  // waits on the network; the turning sheet is always a copy in its own layer that only moves (transform, opacity), its
+  // shadow a layer of its own that only fades — so the pressed type is not redrawn on every frame.
   const still = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const leafOf = (sheet, cls) => { const g = document.createElement("div"); g.className = `po-leaf ${cls}`; g.setAttribute("aria-hidden", "true"); sheet.classList.remove("po-hold"); g.append(sheet); return g; };
   const fill = async (step) => {
     const mine = ++seq, p = list[i];
-    const old = step && !still() ? top.querySelector(".po-sheet")?.cloneNode(true) : null;
+    const old = step && !still() ? top.querySelector(".po-sheet:not(.po-leaf .po-sheet)")?.cloneNode(true) : null;
     const a = await load(p.date).catch(() => null);
     if (mine !== seq || !top.isConnected) return;
-    top.querySelectorAll(".po-leaf").forEach((g) => g.remove());
     top.innerHTML = sheetHtml(p, poemOf(a), true);
+    [i - 1, i + 1].forEach((k) => list[k] && load(list[k].date).catch(() => null));
     if (step && top.getBoundingClientRect().top < 0) window.scrollTo(0, 0); // a long poem turned from the foot of the page: start the next at its head
     if (!old) return;
-    const leaf = document.createElement("div");
-    leaf.className = `po-leaf ${step > 0 ? "away" : "under"}`;
-    leaf.setAttribute("aria-hidden", "true");
-    leaf.append(old);
-    if (step > 0) top.append(leaf); else { top.prepend(leaf); top.querySelector(".po-sheet:not(.po-leaf .po-sheet)")?.classList.add("po-back"); }
-    leaf.addEventListener("animationend", () => leaf.remove(), { once: true });
-    setTimeout(() => leaf.remove(), 1200); // in case the animation never runs
+    const sheet = top.querySelector(".po-sheet");
+    let moving;
+    if (step > 0) top.append(moving = leafOf(old, "away"));
+    else { top.prepend(leafOf(old, "under")); top.append(moving = leafOf(sheet.cloneNode(true), "back")); sheet.classList.add("po-hold"); }
+    const done = () => { if (mine !== seq) return; top.querySelectorAll(".po-leaf").forEach((g) => g.remove()); sheet.classList.remove("po-hold"); };
+    moving.addEventListener("animationend", (e) => { if (e.target === moving) done(); });
+    setTimeout(done, 1200); // in case the animation never runs
   };
   fill(0);
   if (list.length < 2) return;
