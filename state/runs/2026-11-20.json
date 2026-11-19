@@ -1,4 +1,15 @@
 {
+  "1": {
+    "finished_at": "2026-11-20T00:53:14+08:00",
+    "missing": [
+      "football",
+      "news",
+      "architecture",
+      "concept",
+      "poem"
+    ],
+    "note": "精簡：music（霍爾斯特《行星組曲》，walk/listener）；devotion 雅各書 1:5–6；perio 先發班已完成"
+  },
   "column": {
     "finished_at": "2026-11-19T22:46:43+08:00",
     "missing": [

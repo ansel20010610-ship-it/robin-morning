@@ -1,0 +1,323 @@
+{
+  "column": "music",
+  "date": "2026-11-20",
+  "title": "《行星組曲》：黛安娜王妃葬禮上的旋律，原來出自這裡",
+  "dek": "木星中段那條寬廣的旋律，後來配上詞成了讚美詩，黛安娜王妃的婚禮點了它，葬禮上也唱了它。一首寫給七顆行星的曲子，怎麼聽？",
+  "brief": "《行星組曲》是英國作曲家霍爾斯特寫的七個樂章，講的是占星裡每顆行星的性格，1918 年在倫敦首演。木星中段的旋律後來變成英國讚美詩，黛安娜王妃的婚禮和葬禮都用了它。按下播放，先聽火星的開頭、木星的中段、海王星的結尾。",
+  "topic_key": "music:holst-op32",
+  "updated_at": "2026-11-20T00:52:48+08:00",
+  "form": "walk",
+  "voice": "listener",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "portrait",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/01/Gustav_Holst.jpg",
+    "width": 731,
+    "height": 1025,
+    "alt": "黑白半身照：一位戴圓框眼鏡的男子，穿西裝外套與背心、打領帶，一手撐著臉頰，微微側頭看向鏡頭。",
+    "caption": "霍爾斯特（Gustav Holst，1874–1934），約 1921 年的肖像。《行星組曲》1918 年首演，這張照片拍在它首演後約三年。",
+    "credit": "Herbert Lambert；英國國家肖像館（National Portrait Gallery）NPG Ax7745，經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gustav_Holst.jpg",
+    "made": "約 1921 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "《行星組曲》是英國作曲家**霍爾斯特**（Gustav Holst）寫的管弦樂組曲，也就是幾首各自獨立的曲子排在一起。一共七個樂章，每個樂章用一顆行星當名字，全曲大約 50 分鐘，1918 年 9 月 29 日在倫敦首次演出。你可能沒聽過它的名字，卻很可能聽過它的片段：黛安娜王妃的婚禮和葬禮上都出現過一首英國讚美詩〈I Vow to Thee, My Country〉，它的旋律就是第四樂章木星的中段。"
+    },
+    {
+      "type": "p",
+      "text": "霍爾斯特 1874 年生，1934 年過世，活了 59 歲。他本行是老師，從 1905 年到過世，一直是倫敦一所女子學校（聖保羅女子學校）的音樂主任。他自己會吹長號，在劇院樂團和歌劇團當過職業長號手；右手臂的神經發炎，讓他走不了鋼琴家這條路。平常要教書，只有週末和假期能寫曲。這首曲子 1914 年動筆，1917 年完成管弦樂配器。"
+    },
+    {
+      "type": "p",
+      "text": "這七個樂章講的不是天文，是占星：每顆行星代表一種性格。霍爾斯特在西班牙度假時，Clifford Bax 把占星術介紹給他，據說他也參考了一本談星座命盤的小書。組曲裡沒有冥王星。冥王星 1930 年才被發現，那時這首曲子已經寫完十幾年了。"
+    },
+    {
+      "type": "table",
+      "title": "七個樂章，七顆行星",
+      "head": [
+        "順序",
+        "樂章（原文）",
+        "中文與聽感"
+      ],
+      "rows": [
+        [
+          "1",
+          "Mars, the Bringer of War",
+          "火星，戰爭使者：五拍一輪的節奏一直重複，越堆越強"
+        ],
+        [
+          "2",
+          "Venus, the Bringer of Peace",
+          "金星，和平使者：慢，有獨奏法國號與雙簧管"
+        ],
+        [
+          "3",
+          "Mercury, the Winged Messenger",
+          "水星，飛行使者：最短的一個，約 3 分半到 4 分鐘"
+        ],
+        [
+          "4",
+          "Jupiter, the Bringer of Jollity",
+          "木星，歡樂使者：熱鬧的音樂，中段慢下來拉出一條寬廣的旋律"
+        ],
+        [
+          "5",
+          "Saturn, the Bringer of Old Age",
+          "土星，老年使者：慢，像時鐘滴答的音型；霍爾斯特最愛的樂章"
+        ],
+        [
+          "6",
+          "Uranus, the Magician",
+          "天王星，魔術師：銅管四個音起頭，一支笨拙的舞"
+        ],
+        [
+          "7",
+          "Neptune, the Mystic",
+          "海王星，神秘主義者：很輕，舞台外有一群女聲合唱"
+        ]
+      ],
+      "caption": "中文樂章名為本欄自譯。來源：Wikipedia〈The Planets〉、波士頓交響樂團作品頁。"
+    },
+    {
+      "type": "music",
+      "composer": "霍爾斯特（Gustav Holst）",
+      "work": "《行星組曲》，作品 32",
+      "work_original": "The Planets, Op. 32",
+      "composed": "1914–1917",
+      "performers": "阿德里安・波特（Adrian Boult）指揮 倫敦愛樂（London Philharmonic Orchestra）、Geoffrey Mitchell 合唱團女聲",
+      "recording": "EMI，1978 年 5 月至 7 月錄於 Kingsway Hall 與 Abbey Road",
+      "duration": "全曲約 50 分鐘（各版本約 43 到 57 分鐘）",
+      "movements": [
+        "I. Mars, the Bringer of War",
+        "II. Venus, the Bringer of Peace",
+        "III. Mercury, the Winged Messenger",
+        "IV. Jupiter, the Bringer of Jollity",
+        "V. Saturn, the Bringer of Old Age",
+        "VI. Uranus, the Magician",
+        "VII. Neptune, the Mystic"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Holst The Planets Boult London Philharmonic Orchestra 1978",
+        "artist_hint": "Boult",
+        "track_filter": [
+          "Mars",
+          "Venus",
+          "Mercury",
+          "Jupiter",
+          "Saturn",
+          "Uranus",
+          "Neptune"
+        ]
+      }
+    },
+    {
+      "type": "h",
+      "text": "火星的開頭：像有人用木頭輕輕敲"
+    },
+    {
+      "type": "p",
+      "text": "第一個樂章是**火星**，副標是「戰爭使者」。一開始很輕：弦樂手把弓倒過來，用弓桿敲弦，加上打擊樂和豎琴，聽起來像有人用木頭輕輕敲。節奏是五拍一輪，一直重複。我們平常聽到的音樂多半是四拍或三拍，五拍一輪聽起來有點拐。然後它一路越堆越大聲，管風琴也加入，最後衝到標成最強的高潮，聲音很不和諧。"
+    },
+    {
+      "type": "p",
+      "text": "它常被當成在寫戰爭，但霍爾斯特 1914 年中動筆，這個樂章在第一次世界大戰開打前就寫完了。後來替這套曲子補寫冥王星的作曲家 Colin Matthews 說，火星是「節奏與調性互相衝撞的實驗」，它的暴力可能讓霍爾斯特自己吃了一驚，就像它震動了第一批聽眾一樣。"
+    },
+    {
+      "type": "h",
+      "text": "木星的中段：快的音樂忽然慢下來"
+    },
+    {
+      "type": "p",
+      "text": "第四個樂章是**木星**，副標是「歡樂使者」。開頭又快又熱鬧。到了中段，速度忽然慢到開頭的一半，拉出一條寬廣的長旋律。接著開頭那段熱鬧的音樂回來，寬廣的旋律再出現一次，最後全樂團用一個很強的和弦收尾。"
+    },
+    {
+      "type": "p",
+      "text": "這條旋律後來有了歌詞。詞是外交官 Cecil Spring Rice 寫的詩，原名〈Urbs Dei〉（神的城），1918 年 1 月改寫並改名。1921 年，這條旋律配上這首詩，成了英國讚美詩〈I Vow to Thee, My Country〉。霍爾斯特的女兒 Imogen 記得，父親那時工作過量，發現詞可以套進木星的旋律，鬆了一口氣。"
+    },
+    {
+      "type": "p",
+      "text": "首唱在 1921 年，地點就是霍爾斯特任教的聖保羅女子學校，後來成了學校的校歌。黛安娜王妃 1981 年和查爾斯王子結婚時點了這首，說它從學生時代起就一直是她喜歡的歌；1997 年她的葬禮上也唱了，2007 年的十週年追思禮拜也唱了。"
+    },
+    {
+      "type": "p",
+      "text": "Imogen 覺得，這段旋律後來變成讚美詩，反而讓原來的樂章打了折扣。霍爾斯特本人也討厭只演單一樂章，希望整套一起演；不過木星的旋律配上詩詞、當讚美詩發行，是他自己讓它發行的。"
+    },
+    {
+      "type": "h",
+      "text": "海王星的結尾：女聲越走越遠"
+    },
+    {
+      "type": "p",
+      "text": "最後一個樂章是**海王星**，副標是「神秘主義者」。音樂很輕，拍子搖擺不定。一群女聲合唱在舞台外隔壁的房間，不唱歌詞，只唱母音。樂團先安靜下來，只剩合唱單獨輕輕收尾。Imogen 回憶，那些女聲「越來越遠、越來越輕」。"
+    },
+    {
+      "type": "p",
+      "text": "據英文維基百科的描述，唱到最後，合唱和聽眾之間那道門會慢慢關上。結尾停在不確定的地方：兩個和弦輪流出現，最後聽到哪一個，有一部分取決於偶然。"
+    },
+    {
+      "type": "h",
+      "text": "首演：樂團只提前兩小時拿到譜"
+    },
+    {
+      "type": "p",
+      "text": "首演是 1918 年 9 月 29 日，在倫敦的女王廳（Queen's Hall），由 **Adrian Boult**（阿德里安・波特）指揮，約 250 位受邀的聽眾。樂團演奏前只拿到譜兩個小時。據 Boult 自己的回憶，霍爾斯特當時快要出國去希臘，朋友 Balfour Gardiner 送他的臨別禮物，是讓他借用女王廳和女王廳管弦樂團一個週日早上。霍爾斯特請 Boult 指揮。"
+    },
+    {
+      "type": "p",
+      "text": "水星、金星、木星這三個樂章，1919 年 11 月 22 日首次公開演出，霍爾斯特自己指揮。全曲第一次完整公開演出是 1920 年 11 月 15 日，倫敦交響樂團演奏，Albert Coates 指揮。評論有好有壞：The Globe 說它「吵而且自負」，後來 The Times 稱它是「霍爾斯特最偉大的作品」。"
+    },
+    {
+      "type": "p",
+      "text": "霍爾斯特在 Boult 那本總譜上寫過一段題字，大意如下。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/87/Holst-planets-inscription.jpg",
+      "width": 978,
+      "height": 563,
+      "alt": "白底黑字的手寫題字，分四行寫成英文，開頭是「This copy is the property of」，第二行有「Adrian Boult」，末行署名「Gustav Holst」。",
+      "caption": "霍爾斯特寫在 Adrian Boult 那本《行星組曲》總譜上的題字。影像取自 EMI CD 5 66934 2 的內頁（依 Commons 標示），題字寫於何時，來源沒說。",
+      "credit": "Gustav Holst（手寫）；影像經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Holst-planets-inscription.jpg",
+      "made": "日期不詳"
+    },
+    {
+      "type": "quote",
+      "text": "這本譜屬於 Adrian Boult，他第一個讓《行星》在公眾面前發光，也因此得到霍爾斯特的感謝。",
+      "original": "This copy is the property of Adrian Boult who first caused the Planets to shine in public and thereby earned the gratitude of Gustav Holst.",
+      "cite": "霍爾斯特，手寫題字，寫在 Boult 的《行星組曲》總譜上（影像見 Wikimedia Commons；本文自譯）"
+    },
+    {
+      "type": "h",
+      "text": "今天這個版本"
+    },
+    {
+      "type": "p",
+      "text": "今天要聽的，是 Boult 指揮倫敦愛樂（London Philharmonic Orchestra）的版本，女聲合唱是 Geoffrey Mitchell 合唱團的女聲，1978 年 5 月到 7 月錄在 Kingsway Hall 與 Abbey Road，EMI 出的。這是 Boult 第五次、也是最後一次在錄音室錄這首曲子（前四次是 1945、1953、1959、1966 年），專為他的 90 歲生日發行。那次本想用還在實驗的數位錄音，技術出了問題，EMI 最後發行的是類比版本。選它的理由很直接：指揮就是 1918 年首演的那位。"
+    },
+    {
+      "type": "p",
+      "text": "這張錄音沒有冥王星。2000 年，Colin Matthews 受哈雷管弦樂團委託，補寫了〈Pluto, the Renewer〉（冥王星，更新者），5 月 11 日在曼徹斯特由 Kent Nagano 指揮首演；他改了海王星的結尾，好讓它接得上冥王星。"
+    },
+    {
+      "type": "h",
+      "text": "後來被借去用的地方"
+    },
+    {
+      "type": "p",
+      "text": "維基百科說，不少搖滾樂團和電影配樂受過這套曲子的影響，例子包括《星際大戰》系列。搖滾圈的例子都出自火星：有樂團 1970 年的專輯收了火星的現場編曲，也有樂手 1969 年起在現場演出時穿插以火星為底的樂句。"
+    },
+    {
+      "type": "p",
+      "text": "霍爾斯特自己對這份名氣並不自在。《行星》讓他在戰後成名，他卻覺得意外又苦惱；他害羞，婉拒榮譽頭銜，不接受訪問，也不簽名。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "《行星組曲》，作品 32，七個樂章，每個樂章以一顆行星命名；取材於占星，不是天文"
+        ],
+        [
+          "創作",
+          "1914 年中動筆（火星最先寫），管弦樂配器 1917 年完成"
+        ],
+        [
+          "首演",
+          "1918 年 9 月 29 日，倫敦女王廳（Queen's Hall），Adrian Boult 指揮，約 250 位受邀聽眾"
+        ],
+        [
+          "完整公演",
+          "1920 年 11 月 15 日，倫敦交響樂團，Albert Coates 指揮"
+        ],
+        [
+          "編制",
+          "大型管弦樂團，加管風琴、鐘琴、兩架豎琴、六具定音鼓；海王星另有舞台外的女聲合唱"
+        ],
+        [
+          "長度",
+          "全曲約 50 分鐘"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Planets",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/The_Planets",
+      "note": "1914–1917 作曲；1918-09-29 女王廳首演、約 250 人；各樂章拍號與編制；Mars 開頭 col legno；Neptune 女聲合唱與門；Pluto（Matthews 2000）；評論與影響；2026-11-20 查閱"
+    },
+    {
+      "title": "The Planets",
+      "publisher": "Boston Symphony Orchestra（作品頁）",
+      "date": "未註明",
+      "url": "https://www.bso.org/works/the-planets",
+      "note": "薩克斯泰德與倫敦寫成；占星；1919-11-22 三個樂章首次公開演出；樂章排序與編制；約 50 分鐘；2026-11-20 查閱"
+    },
+    {
+      "title": "'The Planets,' the work that made Gustav Holst a rock star",
+      "publisher": "Chicago Symphony Orchestra",
+      "date": "未註明",
+      "url": "https://chicagosymphony.org/inside-the-music/article/25726/the-planets-the-work-that-helped-to-lift-gust",
+      "note": "King Crimson、Jimmy Page、Emerson, Lake & Powell 的搖滾例子；美國首演 1920；2026-11-20 查閱"
+    },
+    {
+      "title": "I Vow to Thee, My Country",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/I_Vow_to_Thee,_My_Country",
+      "note": "木星旋律與 Spring Rice 的詩；1921 年首唱；Thaxted；黛安娜王妃婚禮（1981）與葬禮（1997）；2026-11-20 查閱"
+    },
+    {
+      "title": "Gustav Holst",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Gustav_Holst",
+      "note": "生卒、聖保羅女子學校、長號、YMCA 與改姓、成名後的反應；2026-11-20 查閱"
+    },
+    {
+      "title": "Adrian Boult",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Adrian_Boult",
+      "note": "首演的指揮、Boult 回憶 Balfour Gardiner 的禮物、題字、1978 年實驗數位錄音；2026-11-20 查閱"
+    },
+    {
+      "title": "The Planets discography",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/The_Planets_discography",
+      "note": "Boult 1978 EMI 錄音資料與五次棚內錄音；Karajan 1961 Decca；霍爾斯特 1922–26 錄音；2026-11-20 查閱"
+    },
+    {
+      "title": "File:Holst-planets-inscription.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Holst-planets-inscription.jpg",
+      "note": "題字影像與原文；Public domain；2026-11-20 查閱"
+    },
+    {
+      "title": "File:Gustav Holst.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Gustav_Holst.jpg",
+      "note": "Herbert Lambert 約 1921 年肖像，NPG Ax7745；Public domain；2026-11-20 查閱"
+    }
+  ]
+}
