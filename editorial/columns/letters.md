@@ -6,7 +6,7 @@
 
 ## 每天的流程（台灣時間 04:47）
 
-1. `git pull`。`NEST_CODE=<院子代碼> python3 scripts/letters.py pending`（代碼在排程指示裡，**不寫進任何檔案、commit 或回報**）。印出 `0 封等回信`、或讀不到，就寫三行回報後結束，不讀其他檔。
+1. `git pull`。`python3 scripts/letters.py pending`（院子代碼與信箱鑰匙在排程環境的環境變數裡，**不印出、不寫進任何檔案、commit 或回報**）。印出 `0 封等回信`、或讀不到，就寫三行回報後結束，不讀其他檔。
 2. 有信，**一天最多回兩封**，先寄的先回；其餘留到明天（它們會留在信箱裡，30 天後才過期）。
 3. 每封派一個子代理（sonnet／high）回答，再派另一個新的子代理（sonnet／medium）核對事實與連結。
 
@@ -37,4 +37,4 @@
 
 ## 收尾
 
-`python3 scripts/letters.py check /tmp/answers.json` 到 0 problems，再 `NEST_CODE=<院子代碼> python3 scripts/letters.py publish /tmp/answers.json` 存進院子。不 commit、不改 repo 裡任何檔案。
+`python3 scripts/letters.py check /tmp/answers.json` 到 0 problems，再 `python3 scripts/letters.py publish /tmp/answers.json` 存進院子。不 commit、不改 repo 裡任何檔案。

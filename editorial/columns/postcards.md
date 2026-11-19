@@ -13,7 +13,7 @@
 - `python3 scripts/postcards.py build`：檢查後產生 `assets/sights.js`（所有圖與字，App 打開明信片時才下載）和 `assets/cities.js`（城市清單，nest.js 用）。**不要手改這兩個檔。**
 - `python3 scripts/postcards.py sheet <城市id>`：把那個城市六個景點的夏天、冬天各畫一張，存成 `state/postcards/sheet.svg`（有轉檔工具時另存 `.png`：`rsvg-convert`，或 `pip install cairosvg`）。**用 Read 打開 PNG 親眼看**，確認每張一眼認得出是哪個景點。
 - `python3 scripts/postcards.py list`：已有的城市與景點、各自加入的日期。
-- `python3 scripts/postcards.py demand`：社長院子的進度（院子代碼在環境變數 `NEST_CODE`，不寫進 repo）。印出「OK」就是還夠；印出「LOW」並以 3 結束就是要畫。讀不到（網路、共用儲存沒有讀取入口）就不畫，在回報裡寫原因。
+- `python3 scripts/postcards.py demand`：社長院子的進度（院子代碼在環境變數 `NEST_CODE`，不寫進 repo）。印出「OK」就是還夠；印出「LOW」並以 3 結束就是要畫。印出「FAULT」（以 2 結束）是程式自己壞了；它和讀不到（網路、共用儲存）都不畫，回報第一行寫原因。
 
 ## 一個城市檔的格式
 
@@ -44,7 +44,7 @@ var CITIES_PART = {
 
 ## 每週的流程
 
-1. `git pull`。`python3 scripts/postcards.py demand`。**印出 OK 或讀不到，就直接寫三行回報後結束**，不讀其他檔、不畫。
+1. `git pull`。`python3 scripts/postcards.py demand`。**印出 OK、FAULT 或讀不到，就直接寫三行回報後結束**，不讀其他檔、不畫。
 2. 印出 LOW 才往下做。`python3 scripts/postcards.py list` 看已有的城市。
 3. 選一個還沒有的城市：國外（**不要台灣**）、讀者會想去、有六個辨識度高的景點、和已有城市不同的地區優先（已有很多歐洲城市，就選亞洲、美洲、非洲、大洋洲）。候選例：大阪、奈良、釜山、曼谷、河內、新加坡、峇里島、吳哥窟、杜拜、耶路撒冷、佩特拉、馬拉喀什、開普敦、里約熱內盧、布宜諾斯艾利斯、馬丘比丘、墨西哥城、溫哥華、芝加哥、紐奧良、波士頓、皇后鎮、墨爾本、塞維亞、波爾圖、克拉科夫、杜布羅夫尼克、卡帕多奇亞、奧斯陸、赫爾辛基、愛丁堡以外的英國城市……一次只做一個。
 4. 用一個子代理（Opus/high；畫圖要眼力）照上面的規則畫六個景點、寫字，存成 `state/postcards/parts/<今天>-<id>.js`，`added` 寫今天的後天。

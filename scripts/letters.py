@@ -3,11 +3,13 @@
 Since 2026-11-10 (the owner: 回信改成只有院子裡的人看得到) the answers are kept in the yard's shared store, not in this
 public repo: only the yard's phones read them.
 
-  NEST_CODE=<yard> python3 scripts/letters.py pending          the letters not yet answered, as JSON
-  python3 scripts/letters.py check <answers.json>              {"answers": [...]}: shape, lengths, https sources
-  NEST_CODE=<yard> python3 scripts/letters.py publish <answers.json>   check, then save them in the yard
+  python3 scripts/letters.py pending                 the letters not yet answered, as JSON
+  python3 scripts/letters.py check <answers.json>    {"answers": [...]}: shape, lengths, https sources
+  python3 scripts/letters.py publish <answers.json>  check, then save them in the yard
 
-The yard code is the only key to the mailbox; it lives in the routine's prompt, never in a file, commit or report.
+pending and publish read two environment variables, set in the routine's cloud environment and never written in a
+prompt, file, commit or report: NEST_CODE (the owner's yard) and LETTERS_KEY (the mailbox key, the store's secret of the
+same name: the yard code alone does not open the mailbox, nest-worker.js `keyed`).
 Write the answers file outside the repo (e.g. /tmp/answers.json).
 """
 import json, os, re, sys, urllib.error, urllib.request
@@ -23,7 +25,8 @@ def api():
 
 def call(path, body=None):
     req = urllib.request.Request(f"{api()}/{path}", data=None if body is None else json.dumps(body, ensure_ascii=False).encode("utf-8"),
-                                 headers={"User-Agent": "robin-morning-letters", "Content-Type": "application/json"}, method="GET" if body is None else "POST")
+                                 headers={"User-Agent": "robin-morning-letters", "Content-Type": "application/json",
+                                          "Authorization": "Bearer " + os.environ.get("LETTERS_KEY", "").strip()}, method="GET" if body is None else "POST")
     try:
         return json.load(urllib.request.urlopen(req, timeout=30))
     except urllib.error.HTTPError as e:

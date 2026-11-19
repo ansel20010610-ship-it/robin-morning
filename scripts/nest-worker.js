@@ -4,6 +4,8 @@
 //
 //   1. cloudflare.com → Workers & Pages → Create → Worker, name it `robin-nest`, paste this file, deploy.
 //   2. Workers → robin-nest → Settings → Bindings → KV namespace: variable name NEST, create a namespace `robin-nest`.
+//      Settings → Variables and Secrets, type Secret: OWNER_YARDS (the owner's yard code) and LETTERS_KEY (a long random
+//      string, the same one the letters routine has); without them the owner's yard has no letters, asking, diary or credits.
 //   3. Its address (https://robin-nest.<account>.workers.dev) goes into content/config.json as `"nest": {"api": "…"}`
 //      and into index.html's Content-Security-Policy `connect-src`.
 //
@@ -16,18 +18,27 @@ const FEED = (f) => f && typeof f.d === "string" && /^\d{4}-\d{2}-\d{2}$/.test(f
 const MAX_FEEDS = 20000, MAX_MEMBERS = 12;
 const CORS = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "GET, POST, OPTIONS", "Access-Control-Allow-Headers": "Content-Type", "Cache-Control": "no-store" };
 // 寫信給編輯部 (the owner, 2026-11-10): POST /{code}/letters {member, text} leaves a question for the paper's letters
-// routine (editorial/columns/letters.md), GET /{code}/letters reads what is waiting. Only the yards whose code hashes to
-// one of LETTER_YARDS take letters — the owner's only (a junk test yard was dropped 2026-11-11) — so a yard code still is the whole secret and
-// no code is written here. A letter is kept 30 days; three a phone a day at most; 300 characters.
-const LETTER_YARDS = ["9c3409217fa036c19a1b6691e358025de5ebbde5b1d80d1598da07bd3704e57e"];
-const sha256 = async (t) => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)))].map((b) => b.toString(16).padStart(2, "0")).join("");
+// routine (editorial/columns/letters.md), GET /{code}/letters reads what is waiting. A letter is kept 30 days; three a
+// phone a day at most; 300 characters.
+// Letters, asking, the diary and the credits are the owner's yard's only, and which yard that is comes from the Worker
+// secret OWNER_YARDS (its code; several are separated by commas or spaces). Nothing made from a code is written in this
+// public file. Without the secret all four answer 503.
+const notOwner = (env, code, what) => { const o = String(env.OWNER_YARDS || "").toUpperCase().match(/NEST-[A-Z2-9]{4}-[A-Z2-9]{4}/g); return !o ? json({ error: "not set up" }, 503) : o.includes(code) ? null : json({ error: `no ${what} here` }, 403); };
+// The mailbox itself and the writing of answers are the letters routine's alone: it sends the Worker secret LETTERS_KEY
+// as `Authorization: Bearer …` (scripts/letters.py). The yard code is not enough, and without the secret nobody gets in.
+const keyed = (req, env) => { const k = String(env.LETTERS_KEY || "").trim(); return Boolean(k) && req.headers.get("Authorization") === `Bearer ${k}`; };
+// The answers, the diary and the credits are read by a member, named as ?member=<id>. The app before 2026-11-12 names
+// none and is let through until the Worker variable MEMBERS_ONLY is set (to anything), once every phone's app sends it.
+// It only keeps out who has the code and nothing else: the yard's feeds name its members, and the code lets anyone join.
+const reader = (req, env, code) => { const id = new URL(req.url).searchParams.get("member"); return id === null ? !env.MEMBERS_ONLY : member(env, code, id); };
 // The answers (2026-11-10, the owner: 回信改成只有院子裡的人看得到) live here too, not in the public repo: the letters
 // routine POSTs /{code}/letters/answers {answers: [{id, date, q, a, sources}]}, the yard's phones GET them.
 const ANS = (x) => x && typeof x.id === "string" && /^L[0-9A-Z]{6,16}$/.test(x.id) && /^\d{4}-\d{2}-\d{2}$/.test(x.date || "") && typeof x.q === "string" && x.q.length <= 200 && typeof x.a === "string" && x.a.length <= 3000;
 async function answers(req, env, code) {
   const key = `answers:${code}`, all = (await env.NEST.get(key, "json")) || [];
-  if (req.method === "GET") return json({ answers: all });
+  if (req.method === "GET") return keyed(req, env) || (await reader(req, env, code)) ? json({ answers: all }) : json({ error: "not in this yard" }, 403);
   if (req.method !== "POST") return json({ error: "GET or POST only" }, 405);
+  if (!keyed(req, env)) return json({ error: "letters key needed" }, 403);
   let body;
   try { body = await req.json(); } catch { return json({ error: "bad json" }, 400); }
   const add = (Array.isArray(body?.answers) ? body.answers : []).filter(ANS).map((x) => ({ id: x.id, date: x.date, q: x.q, a: x.a, sources: (Array.isArray(x.sources) ? x.sources : []).filter((u) => u && /^https:\/\//.test(u.url || "")).slice(0, 5).map((u) => ({ title: String(u.title || "").slice(0, 200), url: String(u.url).slice(0, 500) })) }));
@@ -39,11 +50,11 @@ async function answers(req, env, code) {
   return json({ saved: add.length, total: out.length });
 }
 async function letters(req, env, code, sub) {
-  if (!LETTER_YARDS.includes(await sha256(code))) return json({ error: "no letters here" }, 403);
+  const no = notOwner(env, code, "letters"); if (no) return no;
   if (sub === "answers") return answers(req, env, code);
   const key = `letters:${code}`, now = Date.now();
   const box = ((await env.NEST.get(key, "json")) || []).filter((l) => now - Date.parse(l.at) < 30 * 864e5);
-  if (req.method === "GET") return json({ letters: box });
+  if (req.method === "GET") return keyed(req, env) ? json({ letters: box }) : json({ error: "letters key needed" }, 403);
   if (req.method !== "POST") return json({ error: "GET or POST only" }, 405);
   let body;
   try { body = await req.json(); } catch { return json({ error: "bad json" }, 400); }
@@ -69,14 +80,13 @@ async function letters(req, env, code, sub) {
 // and column, so this is no free proxy), asks Claude with the key kept as this Worker's secret ANTHROPIC_API_KEY (the
 // owner's Console credits; Console holds the monthly limit), and answers {a}. Only the owner's yard; 40 questions a day
 // for the yard; the question is not kept.
-const ASK_YARDS = ["9c3409217fa036c19a1b6691e358025de5ebbde5b1d80d1598da07bd3704e57e"];
 const SITE = "https://wiener-morgen-private.duckdns.org";
 const flat = (b) => !b || typeof b !== "object" ? "" : b.type === "table" ? [b.title, (b.head || []).join(" | "), ...(b.rows || []).map((r) => r.join(" | ")), b.caption].filter(Boolean).join("\n")
   : b.type === "list" ? (b.items || []).map((i) => `- ${typeof i === "string" ? i : flat(i)}`).join("\n")
   : b.type === "paper" ? ["論文：", b.citation, b.design, b.sample, b.evidence, b.access].filter(Boolean).join(" ")
   : b.type === "figure" ? (b.caption ? `［圖］${b.caption}` : "") : [b.type === "h" ? `## ${b.text || ""}` : b.text, b.caption].filter(Boolean).join("\n") + (Array.isArray(b.blocks) ? `\n${b.blocks.map(flat).join("\n")}` : "") + (Array.isArray(b.items) ? `\n${b.items.map(flat).join("\n")}` : "");
 async function ask(req, env, code) {
-  if (!(ASK_YARDS.includes(await sha256(code)))) return json({ error: "no asking here" }, 403);
+  const no = notOwner(env, code, "asking"); if (no) return no;
   if (req.method !== "POST") return json({ error: "POST only" }, 405);
   const KEY = env.ANTHROPIC_API_KEY || env.NTHROPIC_API_KEY; // the secret was first saved as NTHROPIC_API_KEY (2026-11-10)
   if (!KEY) return json({ error: "not set up" }, 503);
@@ -149,11 +159,10 @@ async function goodnight(req, env, code) {
 // writes today's entry, once a day, in the bird's own voice, about the days from `from` (at most four back) to yesterday.
 // The phone sends what happened (its own lifeOf: who fed, what was read, the bird's day — facts, as text); the Worker
 // fixes the dates. Only the owner's yard, three tries a day, on the owner's key.
-const DIARY_YARDS = [...ASK_YARDS];
 async function diary(req, env, code) {
-  if (!DIARY_YARDS.includes(await sha256(code))) return json({ error: "no diary here" }, 403);
+  const no = notOwner(env, code, "diary"); if (no) return no;
   const key = `diary:${code}`, all = (await env.NEST.get(key, "json")) || [];
-  if (req.method === "GET") return json({ entries: all });
+  if (req.method === "GET") return (await reader(req, env, code)) ? json({ entries: all }) : json({ error: "not in this yard" }, 403);
   if (req.method !== "POST") return json({ error: "GET or POST only" }, 405);
   const KEY = env.ANTHROPIC_API_KEY || env.NTHROPIC_API_KEY;
   if (!KEY) return json({ error: "not set up" }, 503);
@@ -196,7 +205,8 @@ async function diary(req, env, code) {
 // ANTHROPIC_ADMIN_KEY (an sk-ant-admin key from the Console; it can read the organisation, not send messages). Only the
 // owner's yard; kept for ten minutes.
 async function credits(req, env, code) {
-  if (!ASK_YARDS.includes(await sha256(code))) return json({ error: "no credits here" }, 403);
+  const no = notOwner(env, code, "credits"); if (no) return no;
+  if (!(await reader(req, env, code))) return json({ error: "not in this yard" }, 403);
   const AK = env.ANTHROPIC_ADMIN_KEY;
   if (!AK) return json({ error: "not set up" }, 503);
   const ck = `credits:${code}`, kept = await env.NEST.get(ck, "json");

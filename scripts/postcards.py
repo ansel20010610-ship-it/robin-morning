@@ -16,7 +16,8 @@ trip already made (nest.js lifeOf picks cities by their `added` date).
   python3 scripts/postcards.py list             the cities and their sights, with the date each joined
   python3 scripts/postcards.py demand [code]    how many cities the yard (NEST_CODE, or the code given) has not been to
                                                 yet, computed by nest.js itself from the yard's feed log (read-only GET
-                                                to the shared store); prints LOW and exits 3 when LOW_AT or fewer are left
+                                                to the shared store); prints OK and exits 0, LOW and exits 3 when LOW_AT
+                                                or fewer are left, FAULT and exits 2 when nest.js itself does not run
 
 Needs a JavaScript engine: node, or macOS's JavaScriptCore (jsc).
 """
@@ -197,16 +198,19 @@ def demand(code):
     req = urllib.request.Request(f"{api}/{code}", headers={"User-Agent": "robin-morning-postcards"})
     data = json.load(urllib.request.urlopen(req, timeout=30))
     if not isinstance(data.get("feeds"), list):
-        sys.exit(f"postcards.py demand: no yard {code} ({data})")
+        sys.exit(f"postcards.py demand: no such yard ({data})")
     tmp = tempfile.mkdtemp()
     try:
-        for f in ("util.js", "nest.js", "cities.js"):
-            shutil.copy(os.path.join(ROOT, "assets", f), tmp)
+        for f in os.listdir(os.path.join(ROOT, "assets")):  # every module: a list of names missed nest.js's new import (wetter.js, 2026-11-11)
+            if f.endswith(".js"):
+                shutil.copy(os.path.join(ROOT, "assets", f), tmp)
+        # nest.js is the app's own module: while loading it reads location.hash and listens for hashchange
+        open(os.path.join(tmp, "_browser.js"), "w").write('globalThis.location = { hash: "" };\nglobalThis.addEventListener = () => {};\n')
         open(os.path.join(tmp, "package.json"), "w").write('{"type": "module"}')
         cmd, say = engine()
         n = {"code": code, "feeds": data["feeds"], "pet": data.get("pet") or {}, "me": "", "members": {}, "pending": []}
         open(os.path.join(tmp, "run.js"), "w", encoding="utf-8").write(
-            'import { lifeOf } from "./nest.js";\nimport { CITY_META } from "./cities.js";\n'
+            'import "./_browser.js";\nimport { lifeOf } from "./nest.js";\nimport { CITY_META } from "./cities.js";\n'
             f"const n = {json.dumps(n)};\n"
             "const life = lifeOf(n), today = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);\n"
             "const open = Object.entries(CITY_META).filter(([, c]) => (c.added || \"\") <= today).map(([id]) => id);\n"
@@ -214,8 +218,10 @@ def demand(code):
             f"{say}(JSON.stringify({{ today, cities: open.length, visited: open.length - left.length, left: left.length, trips: life.went.length, away: life.trip ? life.trip.place : null }}));\n")
         run = cmd + (["-m"] if cmd[0] == JSC else []) + [os.path.join(tmp, "run.js")]
         out = subprocess.run(run, capture_output=True, text=True, cwd=tmp)
-        if out.returncode:
-            sys.exit("postcards.py demand: nest.js did not run\n" + out.stderr[-1500:])
+        if out.returncode:  # its own word and exit code: the routine took this for 讀不到 and closed without a word (2026-11-11)
+            print("FAULT: nest.js did not run, so nobody knows how many cities are left — scripts/postcards.py or assets/ needs mending; this is not the network")
+            sys.stderr.write(out.stderr[-1500:])
+            sys.exit(2)
         res = json.loads(out.stdout.strip().splitlines()[-1])
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
