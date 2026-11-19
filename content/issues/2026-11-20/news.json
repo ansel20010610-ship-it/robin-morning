@@ -1,0 +1,208 @@
+{
+ "column": "news",
+ "date": "2026-11-20",
+ "title": "川普、習近平、普丁深圳發表和平宣言，國際法院判緬甸種族滅絕",
+ "dek": "深圳三方會談發表和平宣言，國際法院判緬甸犯下種族滅絕，志願聯盟領袖在柏林開會挺烏克蘭。",
+ "brief": "川普、習近平、普丁 19 日在深圳會談一個多小時，最後發表聯合「和平宣言」，據中俄公布的文本，三國同意核戰不可打。國際法院同日認定緬甸 2017 年對羅興亞人犯下種族滅絕。支持烏克蘭的「志願聯盟」領袖在柏林開會，德國總理梅爾茨說，若進入和談，歐洲會參與。",
+ "topic_key": "news:2026-11-20",
+ "voice": "wire",
+ "updated_at": "2026-11-20T05:36:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "'Groundbreaking' Trump-Xi-Putin summit: Five key takeaways",
+   "publisher": "半島電視台",
+   "date": "2026-11-19",
+   "url": "https://www.aljazeera.com/news/2026/11/19/groundbreaking-trump-xi-putin-summit-five-key-takeaways",
+   "note": "三方會談一個多小時、和平宣言、核風險對話、國際刑事法院一句"
+  },
+  {
+   "title": "Trump, Xi and Putin agree a nuclear war 'must never be fought' at landmark meeting",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-19",
+   "url": "https://www.france24.com/en/asia-pacific/20261119-xi-trump-putin-talks-live-china-us-russia-leaders-hold-landmark-three-way-meeting",
+   "note": "直播頁：川普對路透談核武「很難做」、會繼續努力（報導轉述）；基輔無人機攻擊（16:08 條目，一人死亡未載來源）與荷蘭、奧地利使館受損（19:47 條目，荷蘭外長、奧地利總理說法）只有這一篇有，半島柏林那篇未提"
+  },
+  {
+   "title": "美中俄領袖峰會 發布和平宣言",
+   "publisher": "中央社",
+   "date": "2026-11-19",
+   "url": "https://www.cna.com.tw/news/aopl/202611190336.aspx",
+   "note": "19 日 19:17 發布；新華社公布宣言四點與名稱「中美俄元首和平宣言」；稱「歷史性」三方領袖會談，頁面影音標題「史上首次」；塔斯社說會談約一個半小時"
+  },
+  {
+   "title": "World reacts to ICJ finding Myanmar guilty of genocide against Rohingya",
+   "publisher": "半島電視台",
+   "date": "2026-11-19",
+   "url": "https://www.aljazeera.com/news/2026/11/19/world-reacts-to-icj-finding-myanmar-guilty-of-genocide-against-rohingya",
+   "note": "判決內容、甘比亞 2019 年提告、賠償義務、英國措施"
+  },
+  {
+   "title": "Palestinians in Gaza face new displacement after Israeli army operation",
+   "publisher": "半島電視台",
+   "date": "2026-11-19",
+   "url": "https://www.aljazeera.com/news/2026/11/19/palestinians-in-gaza-face-new-displacement-after-israeli-army-operation",
+   "note": "以軍說完成行動、撤離令、約 6,000 人逃離（加薩政府媒體辦公室）"
+  },
+  {
+   "title": "Senate Republicans in US reject measure to limit Trump's war powers in Iran",
+   "publisher": "半島電視台",
+   "date": "2026-11-19",
+   "url": "https://www.aljazeera.com/news/2026/11/19/senate-republicans-in-us-reject-measure-to-limit-trumps-war-powers-in-iran",
+   "note": "51 比 48、投票名單；文中稱決議不具法律效力、主要是象徵性，6 月參院曾通過類似案"
+  },
+  {
+   "title": "European leaders unite in Berlin to reaffirm support for Ukraine",
+   "publisher": "半島電視台",
+   "date": "2026-11-19",
+   "url": "https://www.aljazeera.com/news/2026/11/19/european-leaders-unite-in-berlin-to-reaffirm-support-for-ukraine",
+   "note": "柏林會議與梅爾茨、澤倫斯基談話"
+  },
+  {
+   "title": "KMT aims for Friday passage of NT$20,000 cash handout bill",
+   "publisher": "Focus Taiwan（中央社）",
+   "date": "2026-11-19",
+   "url": "https://focustaiwan.tw/politics/202611190011",
+   "note": "19 日 16:01 發布；國民黨團目標 20 日三讀、行政院版 1 萬元已編入總預算、民眾黨疑慮；4,700 億只寫「官方」警告，未具名"
+  },
+  {
+   "title": "立院協商普發2萬特別條例 朝野無共識送院會協商",
+   "publisher": "中央社",
+   "date": "2026-11-17",
+   "url": "https://www.cna.com.tw/news/aipl/202611170152.aspx",
+   "note": "17 日 14:51 發布、15:32 更新；財政部次長阮清華說超過 4,700 億元、勢必要額外舉債；民進黨團范雲說草案匡列 4,714 億元；國民黨團許宇甄說優先用超徵稅收、不增加舉債"
+  },
+  {
+   "title": "財長：若總預算明年1/5前三讀 普發現金最快1/26入帳",
+   "publisher": "中央社",
+   "date": "2026-11-18",
+   "url": "https://www.cna.com.tw/news/afe/202611180237.aspx",
+   "note": "18 日 16:52 發布；財政部長莊翠雲在財委會說：總預算 1/5 前三讀、總統 1/20 前公布，最快 1/26 領到；1 萬元實質零舉債"
+  },
+  {
+   "title": "Taiwan unlikely to be Trump-Xi-Putin topic 'from what we know': MAC",
+   "publisher": "Focus Taiwan（中央社）",
+   "date": "2026-11-19",
+   "url": "https://focustaiwan.tw/politics/202611190018",
+   "note": "19 日 18:05 發布；陸委會例行記者會說法與新華社轉述的習近平、川普談話；發布時白宮未發布讀稿、我國政府未回應"
+  },
+  {
+   "title": "China Focus: Xi meets Trump, calling for continued efforts to steer China-U.S. relations on right course",
+   "publisher": "新華社",
+   "date": "2026-11-19",
+   "url": "https://english.news.cn/20261119/fd713c09e7d24308889e9699c838c187/c.html",
+   "note": "19 日 19:35 發布；習近平談台灣為轉述（無引號），「美國不支持台獨」為新華社寫川普所說"
+  }
+ ],
+ "body": [
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "川習普深圳發表和平宣言",
+     "place": [
+      "CN",
+      "US",
+      "RU"
+     ],
+     "summary": "川普、習近平、普丁 19 日在深圳亞太經濟合作會議（APEC）場邊舉行首度三方會談，最後發表聯合「和平宣言」。據中俄公布的宣言文本，三國同意核戰不可打；習近平說核戰打不贏。川普對路透說，這件事對總統而言「很難做」；據報導轉述，他說會繼續努力。",
+     "source": "半島電視台、法國 24 電視台、中央社",
+     "url": "https://www.aljazeera.com/news/2026/11/19/groundbreaking-trump-xi-putin-summit-five-key-takeaways",
+     "when": "11 月 19 日（週四），深圳當地"
+    },
+    {
+     "headline": "國際法院判緬甸種族滅絕",
+     "place": [
+      "MM",
+      "GM"
+     ],
+     "summary": "國際法院 19 日判決，緬甸 2017 年對羅興亞人（緬甸的穆斯林少數族群）犯下種族滅絕。報導稱這是該院首度認定國家須負種族滅絕責任。法院說緬甸有義務賠償。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/19/world-reacts-to-icj-finding-myanmar-guilty-of-genocide-against-rohingya",
+     "when": "11 月 19 日（週四），海牙當地"
+    },
+    {
+     "headline": "柏林開會挺烏克蘭，基輔遭襲",
+     "place": [
+      "DE",
+      "UA",
+      "NL",
+      "AT"
+     ],
+     "summary": "支持烏克蘭的「志願聯盟」領袖 19 日在柏林開會，德國總理梅爾茨說，若進入和談，「我們會參與」。法國 24 報導，基輔同日遭俄軍無人機襲擊，據報一人死亡。荷蘭外長說，一枚投射物落在荷蘭駐基輔使館後方；奧地利總理說，奧地利使館遭擊中。",
+     "source": "半島電視台、法國 24 電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/19/european-leaders-unite-in-berlin-to-reaffirm-support-for-ukraine",
+     "when": "11 月 19 日（週四），柏林與基輔當地"
+    },
+    {
+     "headline": "以軍說完成加薩中部行動",
+     "place": [
+      "IL",
+      "PS"
+     ],
+     "summary": "以軍 19 日說已完成加薩中部行動，重新開放薩拉丁路（貫穿加薩南北的主要幹道）。18 日以軍下令努賽拉特（加薩中部的難民營）部分街區撤離；加薩政府媒體辦公室說約 6,000 人逃離。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/19/palestinians-in-gaza-face-new-displacement-after-israeli-army-operation",
+     "when": "11 月 18 至 19 日，加薩當地"
+    },
+    {
+     "headline": "參院否決限制對伊用兵案",
+     "place": [
+      "US",
+      "IR"
+     ],
+     "summary": "美國參議院 19 日以 51 比 48 否決決議，要求川普把美軍撤出與伊朗的敵對行動。共和黨有 3 人投贊成。決議不具法律效力，主要是象徵性的；參議院 6 月曾通過類似案。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/19/senate-republicans-in-us-reject-measure-to-limit-trumps-war-powers-in-iran",
+     "when": "11 月 19 日（週四），華盛頓當地"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "國民黨團力拚今天三讀普發 2 萬",
+     "place": "TW",
+     "summary": "國民黨團提的草案，要每人發 2 萬元。他們力拚今天（週五）院會三讀。財政部次長阮清華 17 日說，發 2 萬元要超過 4,700 億元，勢必要額外舉債。民進黨團說草案匡列 4,714 億元；國民黨團立委許宇甄說，要優先運用超徵稅收、不增加舉債。",
+     "source": "Focus Taiwan、中央社",
+     "url": "https://focustaiwan.tw/politics/202611190011",
+     "when": "11 月 17 至 19 日，台灣時間"
+    },
+    {
+     "headline": "新華社：習近平談台灣",
+     "place": [
+      "TW",
+      "CN",
+      "US"
+     ],
+     "summary": "新華社報導，習近平 19 日與川普雙邊會談時說，美方在台灣問題上應做對的事，以免美中關係遭重大挫折。新華社也說，川普表示美國不支持台灣獨立。陸委會副主委梁文傑 19 日在例行記者會說，預期這次三方會談不會涉及台灣。截至 20 日清晨，未見白宮發布川習會的摘要，也未見我國政府回應新華社的說法。",
+     "source": "Focus Taiwan（中央社）、新華社",
+     "url": "https://focustaiwan.tw/politics/202611190018",
+     "when": "11 月 19 日，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "普發現金時程",
+   "head": [
+    "時間",
+    "事項"
+   ],
+   "rows": [
+    [
+     "11 月 20 日（週五）",
+     "國民黨團目標三讀 2 萬元草案"
+    ],
+    [
+     "最快 1 月 26 日",
+     "財長莊翠雲 18 日說，若總預算明年 1 月 5 日前三讀、總統 1 月 20 日前公布，最快可領到"
+    ]
+   ]
+  }
+ ]
+}
