@@ -1,0 +1,342 @@
+{
+ "column": "concept",
+ "date": "2026-11-20",
+ "title": "一次只看一格的機器，證明了有些事算不出來",
+ "dek": "一條格子紙帶、一次只看一格、一張規則表。手機能做的事，原理都在這裡；有些事怎麼算都算不出來，也是從這裡證出來的。",
+ "brief": "1936 年，23 歲的圖靈為了證明有些數學問題照步驟永遠算不出來，先把「照步驟算」拆成幾個最小的動作，拆出來的東西後來叫圖靈機。照霍奇斯的對應，它的規則表相當於今天說的程式。他證明，沒有一套方法能判斷任何一台這種機器會不會一直印下去。",
+ "topic_key": "concept:turing-machine",
+ "form": "qa",
+ "voice": "tutor",
+ "updated_at": "2026-11-20T02:56:22+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "hero": {
+  "id": "hero",
+  "kind": "photo",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Turing_Machine_Model_Davey_2012.jpg/1280px-Turing_Machine_Model_Davey_2012.jpg",
+  "width": 1280,
+  "height": 853,
+  "alt": "黑色底座上，一卷白色紙帶從左邊的大捲軸拉出，穿過中間一座透明壓克力框架裡的馬達與零件，再捲到右邊的小捲軸上。",
+  "caption": "照圖靈機的構想做出來的實體模型，2012 年攝於哈佛大學的展覽。紙帶穿過中間的讀寫頭，兩側各一個捲軸。圖靈自己並沒有打算把這種機器造出來。",
+  "credit": "Mike Davey 製作；Rocky Acosta 攝；經 Wikimedia Commons",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Turing_Machine_Model_Davey_2012.jpg",
+  "made": "2012"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "德國哥廷根的市立墓園裡，數學家**希爾伯特**（David Hilbert）的墓碑下方刻著兩行德文：「我們必須知道。我們終將知道。」"
+  },
+  {
+   "type": "p",
+   "text": "這是他 1930 年 9 月 8 日，在柯尼斯堡（今俄羅斯的加里寧格勒）退休演講的最後一句。他是在跟一句老話吵架，那句老話說，有些事我們不知道，也永遠不會知道。"
+  },
+  {
+   "type": "figure",
+   "id": "f1",
+   "kind": "photo",
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Grave_of_David_Hilbert_at_Stadtfriedhof_G%C3%B6ttingen_2017.jpg/1280px-Grave_of_David_Hilbert_at_Stadtfriedhof_G%C3%B6ttingen_2017.jpg",
+   "width": 1280,
+   "height": 1918,
+   "alt": "樹叢前一塊長方形的淺色石碑，上半刻著 DAVID HILBERT，下方底座刻著兩行字，碑前放著一盆紅橘色的花。",
+   "caption": "希爾伯特的墓，在哥廷根市立墓園，2017 年拍攝。底座兩行刻的就是那句話的德文原文。",
+   "credit": "Julian Herzog 攝；經 Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Grave_of_David_Hilbert_at_Stadtfriedhof_G%C3%B6ttingen_2017.jpg",
+   "made": "2017"
+  },
+  {
+   "type": "p",
+   "text": "六年後，一個 23 歲的英國年輕人寫了一篇論文，證明有一種數學問題，照步驟算永遠算不出答案。他是**圖靈**，電影《模仿遊戲》裡康柏拜區演的那位，二戰時替英國破解德軍的 Enigma 密碼。這篇論文寫在 1936 年，比那段戰時工作早三年，那時還沒有電子計算機。"
+  },
+  {
+   "type": "p",
+   "text": "要證明「有些東西算不出來」，他得先講清楚「照步驟算」是什麼意思。他給的答案，今天叫**圖靈機**，可以視為電腦科學的基礎。"
+  },
+  {
+   "type": "h",
+   "text": "希爾伯特到底想知道什麼？"
+  },
+  {
+   "type": "p",
+   "text": "希爾伯特有一個題目，叫「判定問題」：有沒有一套固定的方法，不管拿到哪一個數學命題，照著做下去，都能回答：能不能證明它是對的。"
+  },
+  {
+   "type": "p",
+   "text": "1935 年，圖靈剛當上劍橋國王學院的研究員，在數學家紐曼的課上聽到這個題目。難處在用詞：「固定的方法」是什麼，從來沒有人給過挑不出毛病的定義。要證明「有」，拿出一個方法就好；要證明「沒有」，得先把所有可能的方法圈起來。圖靈一個人想了一年。"
+  },
+  {
+   "type": "h",
+   "text": "那台機器長什麼樣子？"
+  },
+  {
+   "type": "p",
+   "text": "它不是一台機器，至少一開始不是。圖靈論文裡的 computer，指的是一個正在算東西的人。他從這個人手上的紙開始想："
+  },
+  {
+   "type": "quote",
+   "text": "計算通常是在紙上寫下一些符號。我們可以假設，這張紙像小孩的算術作業簿那樣，畫成一個一個格子。",
+   "original": "Computing is normally done by writing certain symbols on paper. We may suppose this paper is divided into squares like a child's arithmetic book.",
+   "cite": "圖靈〈論可計算數，及其在判定問題上的應用〉第 9 節，1936 年"
+  },
+  {
+   "type": "p",
+   "text": "接著他把用不到的東西一樣一樣拿掉。紙不必是一整頁，一長條就夠，就是一條分成格子的紙帶，要多長有多長，需要時再接長。能寫的符號只有有限幾種。到了機器上，一次只看一格，只有這一格它「看得見」。人的記憶有限，所以心裡的狀態也只有有限幾種。"
+  },
+  {
+   "type": "p",
+   "text": "剩下的動作只有四種：看眼前這一格；擦掉或寫上一個符號；往左或往右挪一格，也可以不動；換一個狀態。每一步做哪一樣，只看兩件事：現在的狀態，和眼前這格寫著什麼。把每一種組合該怎麼做列成一張表，這張表就是這台機器。換一張表，就是另一台機器。"
+  },
+  {
+   "type": "h",
+   "text": "就這樣？它真的算得出東西嗎？"
+  },
+  {
+   "type": "p",
+   "text": "我自己編一台，讓它做小學生都會的事：把紙帶上的數字加一。紙帶上寫著 1299，讀寫頭停在最左邊的 1。它只有兩個狀態，「找尾巴」和「加一」，整張表五行。",
+   "tag": "原創示範"
+  },
+  {
+   "type": "table",
+   "title": "加一機的整張表",
+   "head": [
+    "現在的狀態",
+    "眼前這格",
+    "寫下",
+    "往哪挪",
+    "接下來的狀態"
+   ],
+   "rows": [
+    [
+     "找尾巴",
+     "任何數字",
+     "不改",
+     "右",
+     "找尾巴"
+    ],
+    [
+     "找尾巴",
+     "空格",
+     "不改",
+     "左",
+     "加一"
+    ],
+    [
+     "加一",
+     "0 到 8",
+     "大一號的數字",
+     "不挪",
+     "停"
+    ],
+    [
+     "加一",
+     "9",
+     "0",
+     "左",
+     "加一"
+    ],
+    [
+     "加一",
+     "空格",
+     "1",
+     "不挪",
+     "停"
+    ]
+   ],
+   "caption": "我自擬的示範。每一行讀成一句話：在這個狀態、看到這個符號，就寫這個、往這邊挪、換成那個狀態。"
+  },
+  {
+   "type": "p",
+   "text": "照表走八步：前四步右移找到尾巴，接著兩個 9 變 0，2 變 3，停在 1300。每一步的紙帶見下圖。"
+  },
+  {
+   "type": "svg",
+   "title": "1299 變成 1300 的八步",
+   "svg": "<svg viewBox=\"0 0 400 376\" role=\"img\" aria-label=\"六列紙帶示意：紙帶上原本寫著 1299，讀寫頭先往右走到空格，再往左把兩個 9 改成 0，最後把 2 改成 3，得到 1300\"><text x=\"8\" y=\"34\" font-size=\"13\">開始，狀態：找尾巴</text><rect class=\"soft\" x=\"186\" y=\"14\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><rect class=\"soft\" x=\"220\" y=\"14\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"237\" y=\"35\" font-size=\"16\" text-anchor=\"middle\">1</text><rect class=\"soft\" x=\"254\" y=\"14\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"271\" y=\"35\" font-size=\"16\" text-anchor=\"middle\">2</text><rect class=\"soft\" x=\"288\" y=\"14\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"305\" y=\"35\" font-size=\"16\" text-anchor=\"middle\">9</text><rect class=\"soft\" x=\"322\" y=\"14\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"339\" y=\"35\" font-size=\"16\" text-anchor=\"middle\">9</text><rect class=\"soft\" x=\"356\" y=\"14\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><polygon class=\"accent\" points=\"237,48 230,60 244,60\"/><text x=\"8\" y=\"92\" font-size=\"13\">第 4 步後，走到空格</text><rect class=\"soft\" x=\"186\" y=\"72\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><rect class=\"soft\" x=\"220\" y=\"72\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"237\" y=\"93\" font-size=\"16\" text-anchor=\"middle\">1</text><rect class=\"soft\" x=\"254\" y=\"72\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"271\" y=\"93\" font-size=\"16\" text-anchor=\"middle\">2</text><rect class=\"soft\" x=\"288\" y=\"72\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"305\" y=\"93\" font-size=\"16\" text-anchor=\"middle\">9</text><rect class=\"soft\" x=\"322\" y=\"72\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"339\" y=\"93\" font-size=\"16\" text-anchor=\"middle\">9</text><rect class=\"soft\" x=\"356\" y=\"72\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><polygon class=\"accent\" points=\"373,106 366,118 380,118\"/><text x=\"8\" y=\"150\" font-size=\"13\">第 5 步，左移，改成加一</text><rect class=\"soft\" x=\"186\" y=\"130\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><rect class=\"soft\" x=\"220\" y=\"130\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"237\" y=\"151\" font-size=\"16\" text-anchor=\"middle\">1</text><rect class=\"soft\" x=\"254\" y=\"130\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"271\" y=\"151\" font-size=\"16\" text-anchor=\"middle\">2</text><rect class=\"soft\" x=\"288\" y=\"130\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"305\" y=\"151\" font-size=\"16\" text-anchor=\"middle\">9</text><rect class=\"soft\" x=\"322\" y=\"130\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"339\" y=\"151\" font-size=\"16\" text-anchor=\"middle\">9</text><rect class=\"soft\" x=\"356\" y=\"130\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><polygon class=\"accent\" points=\"339,164 332,176 346,176\"/><text x=\"8\" y=\"208\" font-size=\"13\">第 6 步，9 寫成 0，左移</text><rect class=\"soft\" x=\"186\" y=\"188\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><rect class=\"soft\" x=\"220\" y=\"188\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"237\" y=\"209\" font-size=\"16\" text-anchor=\"middle\">1</text><rect class=\"soft\" x=\"254\" y=\"188\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"271\" y=\"209\" font-size=\"16\" text-anchor=\"middle\">2</text><rect class=\"soft\" x=\"288\" y=\"188\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"305\" y=\"209\" font-size=\"16\" text-anchor=\"middle\">9</text><rect class=\"soft\" x=\"322\" y=\"188\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"339\" y=\"209\" font-size=\"16\" text-anchor=\"middle\" class=\"accent\">0</text><rect class=\"soft\" x=\"356\" y=\"188\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><polygon class=\"accent\" points=\"305,222 298,234 312,234\"/><text x=\"8\" y=\"266\" font-size=\"13\">第 7 步，9 寫成 0，左移</text><rect class=\"soft\" x=\"186\" y=\"246\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><rect class=\"soft\" x=\"220\" y=\"246\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"237\" y=\"267\" font-size=\"16\" text-anchor=\"middle\">1</text><rect class=\"soft\" x=\"254\" y=\"246\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"271\" y=\"267\" font-size=\"16\" text-anchor=\"middle\">2</text><rect class=\"soft\" x=\"288\" y=\"246\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"305\" y=\"267\" font-size=\"16\" text-anchor=\"middle\" class=\"accent\">0</text><rect class=\"soft\" x=\"322\" y=\"246\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"339\" y=\"267\" font-size=\"16\" text-anchor=\"middle\">0</text><rect class=\"soft\" x=\"356\" y=\"246\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><polygon class=\"accent\" points=\"271,280 264,292 278,292\"/><text x=\"8\" y=\"324\" font-size=\"13\">第 8 步，2 寫成 3，停</text><rect class=\"soft\" x=\"186\" y=\"304\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><rect class=\"soft\" x=\"220\" y=\"304\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"237\" y=\"325\" font-size=\"16\" text-anchor=\"middle\">1</text><rect class=\"soft\" x=\"254\" y=\"304\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"271\" y=\"325\" font-size=\"16\" text-anchor=\"middle\" class=\"accent\">3</text><rect class=\"soft\" x=\"288\" y=\"304\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"305\" y=\"325\" font-size=\"16\" text-anchor=\"middle\">0</text><rect class=\"soft\" x=\"322\" y=\"304\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><text x=\"339\" y=\"325\" font-size=\"16\" text-anchor=\"middle\">0</text><rect class=\"soft\" x=\"356\" y=\"304\" width=\"34\" height=\"30\" stroke-width=\"1.2\"/><polygon class=\"accent\" points=\"271,338 264,350 278,350\"/><text x=\"8\" y=\"366\" font-size=\"12\" class=\"muted\">三角是讀寫頭，酒紅字是剛寫下的數字</text></svg>",
+   "caption": "自擬加一機的讀寫頭位置，依上表繪製；第 1 到第 3 步一路右移，圖上省略。"
+  },
+  {
+   "type": "p",
+   "text": "機器不知道什麼叫進位，它從頭到尾只是查表。「進位」這個想法，全在表的第四行，是寫表的人放進去的。"
+  },
+  {
+   "type": "p",
+   "text": "拿樂譜來比，表像譜，機器像照譜彈琴的人，只是樂手會自己詮釋，機器表上沒寫的一概不做。"
+  },
+  {
+   "type": "h",
+   "text": "一張表只會做一件事，那我的手機呢？"
+  },
+  {
+   "type": "p",
+   "text": "這是論文裡最要緊的一步。表本身也是符號，可以抄到紙帶上。圖靈造了一台特別的機器：把另一台機器的表抄在它紙帶的開頭，它就照那張表做，算出那台機器會算出的東西。他叫它萬用機器。"
+  },
+  {
+   "type": "p",
+   "text": "研究圖靈的數學家霍奇斯（Andrew Hodges）這樣對應：一台圖靈機的表，就是今天說的程式；萬用機器，就是電腦。程式本身也是資料，可以被別的程式處理，電腦就靠這一點運作。不過說圖靈「發明了電腦」，有些研究計算史的人覺得太偏。"
+  },
+  {
+   "type": "h",
+   "text": "那有什麼事，是它算不出來的？"
+  },
+  {
+   "type": "p",
+   "text": "先交代一個前提。圖靈主張，凡是人照著固定規則就能算完的事，都能寫成這樣一張表。這叫邱奇－圖靈論題，沒辦法嚴格證明，大多數電腦科學家接受它。"
+  },
+  {
+   "type": "p",
+   "text": "課本上最常講的例子叫停機問題：拿到任何一張表和一條紙帶，能不能事先判斷機器會停，還是永遠跑下去。"
+  },
+  {
+   "type": "p",
+   "text": "假設有人做出一台判官機，叫它 H。把任何一台機器的表和紙帶交給它，它一定在有限步裡回答「會停」或「不會停」，而且從不出錯。"
+  },
+  {
+   "type": "p",
+   "text": "有了 H，就能做一台唱反調的機器 D。D 拿到一張表，就去問 H：這台機器拿自己的表當紙帶，會不會停？H 說會停，D 就故意進入永遠繞圈的迴圈；H 說不會停，D 就馬上停。"
+  },
+  {
+   "type": "p",
+   "text": "現在把 D 自己的表交給 D。H 說「D 會停」，D 就一直跑；H 說「D 不會停」，D 就停了。H 怎麼答都錯。整個推論只假設了 H 存在，錯的就是這個假設。**沒有一台機器，能替所有機器判斷它會不會停。**"
+  },
+  {
+   "type": "p",
+   "text": "圖靈原本的證法比這繞，問的也不完全是會不會停，核心卻一樣：讓機器碰上描述它自己的那張表。他先想到一個更直接的證法，卻自己說它有個毛病："
+  },
+  {
+   "type": "quote",
+   "text": "這個證法雖然完全成立，缺點是讀者可能會覺得「一定有哪裡不對」。",
+   "original": "This proof, although perfectly sound, has the disadvantage that it may leave the reader with a feeling that \"there must be something wrong\".",
+   "cite": "圖靈〈論可計算數，及其在判定問題上的應用〉第 8 節，1936 年"
+  },
+  {
+   "type": "p",
+   "text": "再往前推一步：假如有方法能判定任何命題能不能證明它是對的，就能拿它判斷「某台機器會不會印出 0」，因為這句話也能寫成一個數學命題。圖靈在論文前面已經證明，沒有機器答得出後者，所以判定問題沒有這種方法。邱奇用另一套方法，稍早得到同樣的結論，「圖靈機」這名字也是他取的。"
+  },
+  {
+   "type": "p",
+   "text": "希爾伯特那句話講的是數學問題終究都能解決，圖靈否定的只是「照步驟機械地解決」這一種。不過這個結果，加上邏輯學家哥德爾 1931 年的不完備定理，確實打掉了希爾伯特藍圖的一大塊。"
+  },
+  {
+   "type": "h",
+   "text": "這是不是說，電腦永遠不知道程式會不會當掉？"
+  },
+  {
+   "type": "p",
+   "text": "不是。很多程式一看就知道會停，上面的加一機就是：紙帶上的數字有盡頭，它一定找得到尾巴。停機問題說的是，沒有一套方法能對每一個程式都答對。"
+  },
+  {
+   "type": "p",
+   "text": "它也跟快不快無關：判官機再快一億倍，碰上 D 一樣兩頭落空。"
+  },
+  {
+   "type": "p",
+   "text": "還有一個真誤解：圖靈機不是一台真的機器，它是想像出來的計算者。它也不等於「圖靈發明了電腦」，那句話有些人覺得太偏，前面提過。"
+  },
+  {
+   "type": "p",
+   "text": "走到這裡，可以給定義了。圖靈機有一條分成格子的紙帶，一個一次只看一格的讀寫頭，有限幾個狀態。再加一張表，規定每一種「狀態加眼前符號」該寫什麼、往哪挪、換成什麼狀態。"
+  },
+  {
+   "type": "p",
+   "text": "2021 年 6 月 23 日，圖靈生日當天，英格蘭銀行發行了 50 英鎊鈔票。背面以他為主題，有 1936 年論文裡的表和公式，還有一條行情收報的紙帶，用二進位寫著他的生日。"
+  },
+  {
+   "type": "callout",
+   "label": "如果你真的懂了，應該答得出來",
+   "items": [
+    "把加一機那張表的最後一行（「加一」看到空格，寫 1，停）刪掉。紙帶上寫 1299，結果會變嗎？寫 999 呢？",
+    "唱反調的 D，為什麼一定要拿「自己的表」去問 H？只拿別台機器的表，證明會卡在哪裡？",
+    "既然沒有萬用的判官，為什麼寫程式的工具常常抓得出無窮迴圈？"
+   ]
+  },
+  {
+   "type": "spoiler",
+   "text": "以下是答案"
+  },
+  {
+   "type": "callout",
+   "label": "答案",
+   "items": [
+    "1299 不變，機器在「加一」碰到 2 就停了，用不到那一行。999 會出事：三個 9 改成 0 以後，機器在「加一」看到最左邊的空格，表上沒寫怎麼辦，只能停住，紙帶上剩 000。",
+    "矛盾來自 D 的行為剛好和 H 對同一張表的判斷相反。拿別台機器的表，D 只是做出和那台相反的事，誰也沒說錯。只有把 D 自己的表交給 D，H 判斷的和 D 正在做的才是同一件事。",
+    "那些工具只在一部分程式上答得出來，碰到別的就說「不確定」或猜錯。停機問題禁止的，是對每一個程式都一定答得出、而且答對的方法。"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "title": "On Computable Numbers, with an Application to the Entscheidungsproblem",
+   "publisher": "Proceedings of the London Mathematical Society, ser. 2, vol. 42（維吉尼亞大學 Gabriel Robins 網頁的掃描本）",
+   "date": "1936-11-12",
+   "url": "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf",
+   "note": "1936-05-28 收稿、11-12 宣讀。用到：§1 紙帶、格子、被掃描的格子是機器唯一「直接意識到」的符號、寫／擦／左右移一格／換狀態；§2 自動機器；§6 萬用機器；§8 circle-free 不可判定、印不印 0 不可判定、「there must be something wrong」原句；§9 小孩的算術作業簿原句、人的記憶有限、狀態有限；§11 判定問題無解；前言提邱奇。"
+  },
+  {
+   "title": "Turing Machines",
+   "publisher": "Stanford Encyclopedia of Philosophy（Liesbeth De Mol）",
+   "date": "2025-05-21",
+   "url": "https://plato.stanford.edu/entries/turing-machine/",
+   "note": "2018 年初版，2025-05-21 實質修訂。用到：§1.1 判定問題原始形式見 Hilbert & Ackermann 1928；「圖靈機」之名出自邱奇 1937 年書評；§1.2 今天的定義較接近 Post、加了停機狀態；§2.4 希爾伯特 1930 年那句話指一般的可解、與哥德爾結果一起打破希爾伯特的夢想；§2.4.3 停機問題與圖靈原題不完全相同、流行的證法；§3.2 論題無法嚴格證明；§5.2 儲存程式概念與「圖靈發明電腦」的爭議。"
+  },
+  {
+   "title": "Alan Turing",
+   "publisher": "Stanford Encyclopedia of Philosophy（Andrew Hodges）",
+   "date": "2013-09-30",
+   "url": "https://plato.stanford.edu/entries/turing/",
+   "note": "2002 年初版，2013-09-30 實質修訂。用到：1934 年畢業、1935 年國王學院研究員、1935 年在紐曼課上聽到判定問題、獨自做到 1936 年 4 月；從小孩作業簿的格子開始；圖靈機是理論機器；行為表等於程式、萬用機器等於電腦；邱奇略早；自我指涉是證明核心；質數與「幾乎所有」問題；1939–1945 布萊切利園；1950 年〈計算機器與智能〉。另用到：1931 哥德爾不完備證明、紙帶可視需要延長、圖靈的工作可視為電腦科學的基礎。"
+  },
+  {
+   "title": "David Hilbert",
+   "publisher": "MacTutor History of Mathematics, University of St Andrews",
+   "date": "",
+   "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Hilbert/",
+   "note": "用到：1862 年生、1943 年 2 月 14 日死於哥廷根；1930 年退休、柯尼斯堡榮譽市民、演講結尾「Wir müssen wissen, wir werden wissen」；柯尼斯堡今屬俄羅斯加里寧格勒。"
+  },
+  {
+   "title": "Translation of an Address Given by David Hilbert in Königsberg, Fall 1930",
+   "publisher": "University of California, San Diego（Ruth J. Williams 網頁）",
+   "date": "",
+   "url": "https://mathweb.ucsd.edu/~williams/motiv/hilbert.html",
+   "note": "用到：結尾英譯「We must know, we will know」。"
+  },
+  {
+   "title": "David Hilbert",
+   "publisher": "Wikipedia",
+   "date": "",
+   "url": "https://en.wikipedia.org/wiki/David_Hilbert",
+   "note": "用到：墓碑刻「Wir müssen wissen. Wir werden wissen.」、演講日期 1930-09-08、回應 ignorabimus。查閱 2026-11-20。"
+  },
+  {
+   "title": "模仿遊戲",
+   "publisher": "中文維基百科",
+   "date": "",
+   "url": "https://zh.wikipedia.org/zh-tw/%E6%A8%A1%E4%BB%BF%E9%81%8A%E6%88%B2",
+   "note": "用到：2014 年電影、台灣譯名、康柏拜區飾演圖靈、講二戰破譯 Enigma。查閱 2026-11-20。"
+  },
+  {
+   "title": "£50 note",
+   "publisher": "Bank of England",
+   "date": "",
+   "url": "https://www.bankofengland.co.uk/banknotes/polymer-50-pound-note",
+   "note": "用到：2021-06-23 發行；背面以圖靈為主題，有〈論可計算數〉的數學表格與公式、以二進位寫圖靈生日 1912-06-23 的行情收報紙帶（ticker tape）。"
+  },
+  {
+   "title": "File:Turing Machine Model Davey 2012.jpg",
+   "publisher": "Wikimedia Commons",
+   "date": "2012-10-21",
+   "url": "https://commons.wikimedia.org/wiki/File:Turing_Machine_Model_Davey_2012.jpg",
+   "note": "Mike Davey 重建的圖靈機模型，攝於哈佛大學 Go Ask ALICE 展；CC BY 3.0。"
+  },
+  {
+   "title": "File:Grave of David Hilbert at Stadtfriedhof Göttingen 2017.jpg",
+   "publisher": "Wikimedia Commons",
+   "date": "2017-06-04",
+   "url": "https://commons.wikimedia.org/wiki/File:Grave_of_David_Hilbert_at_Stadtfriedhof_G%C3%B6ttingen_2017.jpg",
+   "note": "Julian Herzog 攝；CC BY 4.0。底座刻字照片上可見。"
+  }
+ ]
+}
