@@ -1,0 +1,15 @@
+{
+  "column": {
+    "finished_at": "2026-11-19T22:46:43+08:00",
+    "missing": [
+      "football",
+      "news",
+      "music",
+      "devotion",
+      "architecture",
+      "concept",
+      "poem"
+    ],
+    "note": "精簡：perio、number"
+  }
+}
