@@ -1,0 +1,195 @@
+{
+  "column": "perio",
+  "date": "2026-11-20",
+  "title": "殘留 6 毫米：治療還沒做完的那條線",
+  "dek": "殘留 5 毫米的牙，掉牙勝算是淺囊袋的 7.7 倍；7 毫米以上是 64.2 倍。6 毫米這條線，背後有一批平均追了 11 年多的病人。",
+  "brief": "再評估探到 6 毫米就要再處理，這條線的長期根據，是瑞士伯恩大學一篇回頭翻病歷的研究。治療後殘留 6 毫米的牙，掉牙勝算是 3 毫米以下的 11.0 倍。證據量不多，但歐洲牙周病學會指引同樣把 6 毫米以上算未達標；替指引寫回顧的作者，把這篇列為里程碑論文。",
+  "takeaway": "治療後殘留 6 毫米的牙，掉牙勝算約是 3 毫米以下的 11.0 倍。EFP S3 指引把 6 毫米以上算成沒做完：第 III 期病人殘留 6 毫米以上建議翻瓣，4 到 5 毫米再清創一次。",
+  "chairside": "這幾個地方，牙齦和牙齒之間的縫還有 6 毫米深。一篇追蹤病人平均 11.3 年的研究發現，縫留這麼深，牙齒掉的機會比淺的高很多，所以這幾處還要再處理。",
+  "topic_key": "perio:doi:10.1111/j.1600-051x.2008.01245.x",
+  "form": "number",
+  "voice": "colleague",
+  "updated_at": "2026-11-19T22:46:19+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "illustration",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Moderate_periodontitis.png/1280px-Moderate_periodontitis.png",
+    "width": 1280,
+    "height": 1800,
+    "alt": "白底線圖：一顆牙的剖面，紅線是牙齦，褐線是齒槽骨，牙根和骨頭之間畫滿短斜線。右側的牙齦腫起、點滿紅點，一條灰色斜紋長條沿著牙面伸進牙齦底下；旁邊一排黑點刻度，從牙齦邊緣量到囊袋底，中間一條虛線對齊牙冠與牙根的交界。",
+    "caption": "依 Wikimedia Commons 檔案說明，這張線圖畫的是中度牙周炎：牙齦、骨頭、牙周韌帶，加上一把標出囊袋深度的刻度。Ian Furst 繪製，2019 年 2 月上傳；示意圖，與本文討論的研究病人無關。",
+    "credit": "Ian Furst／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Moderate_periodontitis.png",
+    "made": "2019"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "牙周治療做完一輪，病人回來再評估，就是等牙齦癒合以後再量一次，決定下一步。這時探針還能探到 **6 毫米**，就表示治療還沒做完。這條線背後，有 2008 年一篇瑞士研究的長期資料。"
+    },
+    {
+      "type": "p",
+      "text": "研究團隊來自瑞士伯恩大學牙醫學院，第一作者是 **Giedre Matuliene**，最後一位作者是 Niklaus P. Lang。論文刊在 *J Clin Periodontol*。"
+    },
+    {
+      "type": "p",
+      "text": "他們沒有另外招人，而是翻 172 名病人原本就有的病歷。這些病人先做完控制牙周炎的那一輪治療，之後每隔幾個月回來檢查、清潔。維護最短 3 年，最長 27 年，平均 11.3 年。"
+    },
+    {
+      "type": "p",
+      "text": "歐洲牙周病學會 2020 年出了一份治療指引，就是常說的 **EFP S3 指引**。指引判斷治療做完了沒，看的是 4 毫米和 6 毫米兩條線。這篇是 6 毫米這條線最直接的長期資料之一。"
+    },
+    {
+      "type": "h",
+      "text": "6 毫米是怎麼來的"
+    },
+    {
+      "type": "p",
+      "text": "他們問的事很直接：治療結束時還留著的深囊袋，會不會讓之後牙周炎變嚴重、牙齒保不住。比較的基準是殘留 3 毫米以下。"
+    },
+    {
+      "type": "p",
+      "text": "結果用勝算比表示，就是兩組「掉牙對沒掉牙」的比值差幾倍；掉牙的人少時，約等於風險差幾倍。以整顆牙來算，殘留 5 毫米的牙，掉牙勝算是 3 毫米以下的 7.7 倍。6 毫米是 **11.0 倍**。7 毫米以上是 64.2 倍。"
+    },
+    {
+      "type": "table",
+      "title": "殘留囊袋深度與掉牙勝算比",
+      "head": [
+        "殘留探測深度",
+        "以位點計",
+        "以牙齒計"
+      ],
+      "rows": [
+        [
+          "≤3 毫米",
+          "1（比較基準）",
+          "1（比較基準）"
+        ],
+        [
+          "5 毫米",
+          "5.8",
+          "7.7"
+        ],
+        [
+          "6 毫米",
+          "9.3",
+          "11.0"
+        ],
+        [
+          "≥7 毫米",
+          "37.9",
+          "64.2"
+        ]
+      ],
+      "caption": "勝算比：和殘留 ≤3 毫米相比，維護期間掉牙的勝算是幾倍。以位點計是把一顆牙上的每個探測點各當一個單位，以牙齒計是把整顆牙當一個單位。172 名病人、維護治療 3–27 年（平均 11.3 年），多層次邏輯迴歸。依 Matuliene 等 2008 摘要整理。"
+    },
+    {
+      "type": "p",
+      "text": "再把整個病人當單位看，殘留 6 毫米以上同時是牙周炎惡化和掉牙的危險因子。掉牙的另一個危險因子，是全口探診出血 30% 以上。作者的結論只有一句："
+    },
+    {
+      "type": "quote",
+      "text": "殘留探測深度 ≥6 毫米，代表牙周治療的結果不完整，需要進一步治療。",
+      "original": "Residual PPD>or=6 mm represent an incomplete periodontal treatment outcome and require further therapy.",
+      "cite": "Matuliene 等，2008，摘要結論；本文自譯"
+    },
+    {
+      "type": "h",
+      "text": "指引把線畫在哪"
+    },
+    {
+      "type": "p",
+      "text": "指引的共識會議 2019 年 11 月在西班牙開，依據 15 篇系統性回顧。齦下清創的目標是**囊袋閉合**：探測深度 4 毫米以內，而且探診不出血。沒做到的話，指引是這樣寫的："
+    },
+    {
+      "type": "quote",
+      "text": "如果還沒達到治療終點（沒有 >4 毫米且探診出血的囊袋，或沒有 ≥6 毫米的深囊袋），就應考慮第三步治療。",
+      "original": "If the endpoints of therapy (no periodontal pockets >4 mm with bleeding on probing or no deep periodontal pockets [≥6 mm]) have not been achieved, the third step of therapy should be considered.",
+      "cite": "Sanz 等，2020，EFP S3 臨床指引；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "第三步怎麼做，也看深淺。第 III 期病人做完前兩步，殘留 6 毫米以上，建議翻瓣手術；殘留 4 到 5 毫米，建議再做一次齦下清創。這條建議根據 13 篇隨機試驗、500 人，建議等級 B。"
+    },
+    {
+      "type": "svg",
+      "title": "4 毫米和 6 毫米：指引的兩條線",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 410\">\n<rect class=\"paper\" x=\"0\" y=\"0\" width=\"680\" height=\"410\"/>\n<text x=\"20\" y=\"30\" font-size=\"17\" font-weight=\"bold\">治療做完，探針還能探進去幾毫米</text>\n<text class=\"muted\" x=\"20\" y=\"52\" font-size=\"12\">示意，刻度按比例；上方依 EFP S3 指引（2020），下方依 Matuliene 等 2008 摘要</text>\n<line class=\"gold\" stroke-width=\"3\" x1=\"80\" y1=\"150\" x2=\"334\" y2=\"150\"/>\n<line class=\"gold\" stroke-width=\"3\" x1=\"80\" y1=\"142\" x2=\"80\" y2=\"158\"/>\n<line class=\"gold\" stroke-width=\"3\" x1=\"334\" y1=\"142\" x2=\"334\" y2=\"158\"/>\n<text x=\"207\" y=\"118\" font-size=\"13\" text-anchor=\"middle\">≤4 毫米、探診不出血</text>\n<text x=\"207\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"bold\">囊袋閉合（治療終點）</text>\n<line class=\"accent\" stroke-width=\"3\" x1=\"338\" y1=\"150\" x2=\"620\" y2=\"150\"/>\n<line class=\"accent\" stroke-width=\"3\" x1=\"338\" y1=\"142\" x2=\"338\" y2=\"158\"/>\n<line class=\"accent\" stroke-width=\"3\" x1=\"620\" y1=\"142\" x2=\"620\" y2=\"158\"/>\n<text x=\"479\" y=\"100\" font-size=\"13\" text-anchor=\"middle\">&gt;4 毫米且出血，或 ≥6 毫米</text>\n<text class=\"accent\" x=\"479\" y=\"118\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"bold\">未達終點，考慮第三步治療</text>\n<text class=\"muted\" x=\"479\" y=\"136\" font-size=\"11\" text-anchor=\"middle\">第 III 期：4–5 毫米再清創；≥6 毫米建議翻瓣</text>\n<rect class=\"soft\" x=\"80\" y=\"190\" width=\"256\" height=\"26\"/>\n<rect class=\"paper\" x=\"336\" y=\"190\" width=\"284\" height=\"26\"/>\n<rect class=\"ink line\" stroke-width=\"2\" x=\"80\" y=\"190\" width=\"540\" height=\"26\"/>\n<line class=\"ink\" stroke-width=\"1.5\" x1=\"144\" y1=\"190\" x2=\"144\" y2=\"204\"/>\n<line class=\"ink\" stroke-width=\"1.5\" x1=\"208\" y1=\"190\" x2=\"208\" y2=\"204\"/>\n<line class=\"ink\" stroke-width=\"1.5\" x1=\"272\" y1=\"190\" x2=\"272\" y2=\"204\"/>\n<line class=\"ink\" stroke-width=\"1.5\" x1=\"336\" y1=\"190\" x2=\"336\" y2=\"216\"/>\n<line class=\"ink\" stroke-width=\"1.5\" x1=\"400\" y1=\"190\" x2=\"400\" y2=\"204\"/>\n<line class=\"accent\" stroke-width=\"2.5\" stroke-dasharray=\"5 4\" x1=\"464\" y1=\"172\" x2=\"464\" y2=\"218\"/>\n<line class=\"ink\" stroke-width=\"1.5\" x1=\"528\" y1=\"190\" x2=\"528\" y2=\"204\"/>\n<line class=\"ink\" stroke-width=\"1.5\" x1=\"592\" y1=\"190\" x2=\"592\" y2=\"204\"/>\n<text class=\"muted\" x=\"80\" y=\"236\" font-size=\"12\" text-anchor=\"middle\">0</text>\n<text class=\"muted\" x=\"144\" y=\"236\" font-size=\"12\" text-anchor=\"middle\">1</text>\n<text class=\"muted\" x=\"208\" y=\"236\" font-size=\"12\" text-anchor=\"middle\">2</text>\n<text class=\"muted\" x=\"272\" y=\"236\" font-size=\"12\" text-anchor=\"middle\">3</text>\n<text x=\"336\" y=\"236\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"bold\">4</text>\n<text class=\"muted\" x=\"400\" y=\"236\" font-size=\"12\" text-anchor=\"middle\">5</text>\n<text class=\"accent\" x=\"464\" y=\"236\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"bold\">6</text>\n<text class=\"muted\" x=\"528\" y=\"236\" font-size=\"12\" text-anchor=\"middle\">7</text>\n<text class=\"muted\" x=\"592\" y=\"236\" font-size=\"12\" text-anchor=\"middle\">8</text>\n<text class=\"muted\" x=\"640\" y=\"236\" font-size=\"12\">毫米</text>\n<text x=\"20\" y=\"272\" font-size=\"13\" font-weight=\"bold\">掉牙勝算比（以牙齒計，和殘留 ≤3 毫米相比）</text>\n<text x=\"208\" y=\"314\" font-size=\"18\" text-anchor=\"middle\" font-weight=\"bold\">1</text>\n<text class=\"accent\" x=\"396\" y=\"314\" font-size=\"18\" text-anchor=\"middle\" font-weight=\"bold\">7.7</text>\n<text class=\"accent\" x=\"464\" y=\"314\" font-size=\"18\" text-anchor=\"middle\" font-weight=\"bold\">11.0</text>\n<text class=\"accent\" x=\"574\" y=\"314\" font-size=\"18\" text-anchor=\"middle\" font-weight=\"bold\">64.2</text>\n<text class=\"muted\" x=\"208\" y=\"336\" font-size=\"12\" text-anchor=\"middle\">≤3 毫米（基準）</text>\n<text class=\"muted\" x=\"396\" y=\"336\" font-size=\"12\" text-anchor=\"middle\">5 毫米</text>\n<text class=\"muted\" x=\"464\" y=\"336\" font-size=\"12\" text-anchor=\"middle\">6 毫米</text>\n<text class=\"muted\" x=\"574\" y=\"336\" font-size=\"12\" text-anchor=\"middle\">≥7 毫米</text>\n<text x=\"20\" y=\"374\" font-size=\"12\">Matuliene 等的結論：殘留 ≥6 毫米代表治療結果不完整，需要進一步治療。</text>\n<text class=\"muted\" x=\"20\" y=\"394\" font-size=\"11\">172 名病人，維護治療 3–27 年（平均 11.3 年）；摘要只列 5、6、≥7 毫米三級。</text>\n</svg>",
+      "caption": "原創圖解。上方是 EFP S3 臨床指引（Sanz 等 2020）寫的治療終點與第三步建議；下方是 Matuliene 等 2008 年摘要報告的以牙齒計掉牙勝算比，比較基準是殘留探測深度 ≤3 毫米。",
+      "credit": "知更鳥晨間記事繪製；數字依 Matuliene 等 2008 摘要與 Sanz 等 2020 指引全文"
+    },
+    {
+      "type": "h",
+      "text": "證據有多硬"
+    },
+    {
+      "type": "p",
+      "text": "這篇不是隨機試驗，是回頭翻已經有的病歷。2020 年，荷蘭的 Bruno G. Loos 和倫敦大學學院的 Ian Needleman 替這份指引寫了一篇回顧，題目就是治療要做到哪裡才算結束。他們稱 Matuliene 這篇是「里程碑論文」。"
+    },
+    {
+      "type": "p",
+      "text": "他們也提了但書。病人層級的分析裡，殘留 5 毫米以上囊袋的個數和掉牙沒有顯著相關；6 毫米以上的個數接近顯著，p = .053。"
+    },
+    {
+      "type": "p",
+      "text": "他們對這方面研究的評語是「量與強度都有限」，但還是建議指引把目標放在淺囊袋。指引最後就照這個方向定了。"
+    },
+    {
+      "type": "quote",
+      "text": "雖然研究基礎在數量與強度上都有限，對牙周治療指引的制定者來說，最合理的建議是：積極牙周治療後達到淺囊袋，附著保持穩定的機會最高，掉牙風險最低。",
+      "original": "Although the research base is limited both in quantity and strength, the most reasonable recommendation for developers of guidelines for periodontal therapy is that the achievement of shallow pockets following active periodontal therapy confers the highest chance of stability of periodontal attachment and lowest risk of tooth loss.",
+      "cite": "Loos、Needleman，2020，〈積極牙周治療的終點〉；本文自譯"
+    },
+    {
+      "type": "h",
+      "text": "順便複習：怎樣算穩定"
+    },
+    {
+      "type": "p",
+      "text": "看整個病人穩不穩，指引另有定義：探診出血的位點少於 10%，探測深度都在 4 毫米以內，而且沒有 4 毫米又出血的位點。其他都符合、只是出血超過 10% 的，叫穩定的牙周炎病人合併牙齦發炎。"
+    },
+    {
+      "type": "p",
+      "text": "指引也寫明：嚴重的第 III 期病人，不一定每顆牙都做得到這些終點。"
+    },
+    {
+      "type": "paper",
+      "citation": "Matuliene G, Pjetursson BE, Salvi GE, Schmidlin K, Brägger U, Zwahlen M, Lang NP. Influence of residual pockets on progression of periodontitis and tooth loss: results after 11 years of maintenance. *J Clin Periodontol*. 2008;35(8):685–695.",
+      "doi": "10.1111/j.1600-051X.2008.01245.x",
+      "pmid": "18549447",
+      "link": "https://doi.org/10.1111/j.1600-051X.2008.01245.x",
+      "evidence": "公認經典・回溯世代研究：172 人，維護治療平均 11.3 年",
+      "design": "回溯世代研究，瑞士伯恩大學牙醫學院。病人完成積極牙周治療後進入維護治療；以多層次邏輯迴歸，在位點、牙齒、病人三個層級分析殘留探測深度與探診出血和牙周炎惡化、掉牙的關係",
+      "sample": "172 名病人，完成積極治療後維護 3–27 年（平均 11.3 年）",
+      "question": "積極治療結束時殘留 ≥5 毫米的囊袋與探診出血，會不會讓之後的牙周炎惡化、牙齒掉落？",
+      "access": "依摘要整理（PubMed）；後續評價依 Loos 與 Needleman 2020 全文、EFP S3 臨床指引（Sanz 等 2020）全文"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Influence of residual pockets on progression of periodontitis and tooth loss: results after 11 years of maintenance",
+      "publisher": "Journal of Clinical Periodontology（Matuliene G、Pjetursson BE、Salvi GE、Schmidlin K、Brägger U、Zwahlen M、Lang NP）",
+      "date": "2008-07-23",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18549447/",
+      "note": "讀摘要（PubMed E-utilities、Europe PMC）；出版社全文未能開啟。日期依 Crossref 線上出版日"
+    },
+    {
+      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Sanz M、Herrera D、Kebschull M 等）",
+      "date": "2020-07-27",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32383274/",
+      "note": "讀全文（Europe PMC，PMC7891343）：治療步驟、終點定義、建議 1.x 齦下清創與 3.1 翻瓣、穩定病人定義。日期依 Crossref 線上出版日"
+    },
+    {
+      "title": "Endpoints of active periodontal therapy",
+      "publisher": "Journal of Clinical Periodontology（Loos BG、Needleman I）",
+      "date": "2020-07-27",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31912527/",
+      "note": "讀全文（Europe PMC，PMC7670400）。Salvi 等 2014、Matuliene 等 2010 的結果轉引自這篇。日期依 Crossref 線上出版日"
+    }
+  ]
+}
