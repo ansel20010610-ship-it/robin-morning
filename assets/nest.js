@@ -1568,7 +1568,7 @@ export function renderNestAlbum(el, api, afterSync = false) {
   const shots = [], cards = []; // every print and postcard on the page, for the enlarged views
   const cap = (p) => `${esc(md(p.date))}${p.raw ? `・第 ${p.raw} 口` : p.date === a.start ? "・開院" : ""}`; // a print from before the first bite (a season turning over the egg) is not the opening day's
   const photo = (p, big, text) => { const st = { ...a.lookAt(p.total, p.date, p.flags), pet }; const tilt = [-1.6, 1.2, -.8, 1.7, -1.2, .7][pic % 6]; shots.push({ p, text }); return `<figure class="nest-photo${big ? " big" : ""}" style="--tilt:${tilt}deg" data-shot="${pic++}" role="button" tabindex="0" aria-label="放大 ${esc(md(p.date))} 的照片">${birdSvg(st)}<figcaption>${cap(p)}</figcaption></figure>`; };
-  const body = a.list.map((d) => {
+  const body = [...a.list].reverse().map((d) => { // the newest day on top, the opening day at the bottom
     const m = d.date.slice(0, 7), head = m !== month ? `<h2 class="album-mon"><span>${Number(m.slice(5))} 月</span><i>${m.slice(0, 4)}</i></h2>` : "";
     month = m;
     const by = Object.entries(d.by).sort((x, y) => y[1] - x[1]).map(([id, c]) => `${id === n.me ? "你" : esc(n.members?.[id] || "朋友")} ${c} 口`);
