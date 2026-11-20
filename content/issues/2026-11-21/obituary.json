@@ -1,0 +1,186 @@
+{
+  "column": "obituary",
+  "date": "2026-11-21",
+  "status": "update",
+  "form": "document",
+  "voice": "eulogist",
+  "title": "為沒出版的小說坐牢兩年的作家 Ferrín 過世",
+  "dek": "警察抄走三本毛澤東和一份打字稿。法院的判決書，引的是那份稿子。",
+  "brief": "加利西亞語作家 Xosé Luís Méndez Ferrín 11 月 18 日（週三）夜裡在西班牙維哥過世，88 歲。1969 年警察從他家抄走一本還沒出版的小說，他被判兩年，在獄中繼續寫作。詩集《Con pólvora e magnolias》被加利西亞皇家學院列為當代的大經典。",
+  "topic_key": "obituary:mendez-ferrin-2026",
+  "updated_at": "2026-11-21T05:26:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "f0",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Xos%C3%A9_Lu%C3%ADs_M%C3%A9ndez_Ferr%C3%ADn_2020.jpg/1280px-Xos%C3%A9_Lu%C3%ADs_M%C3%A9ndez_Ferr%C3%ADn_2020.jpg",
+    "width": 1280,
+    "height": 1686,
+    "alt": "一位禿頭的老先生穿藍格子襯衫和吊帶，坐在藤椅上看著鏡頭，身後是排滿書的書架，面前桌上立著兩本書，封面寫著《Con pólvora e magnolias》和《Antón e os inocentes》。",
+    "caption": "Xosé Luís Méndez Ferrín，2020 年 1 月攝於加利西亞蓬特韋德拉（Pontevedra）的 Paz 書店，當時他 81 歲。",
+    "credit": "Ogalego.gal",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Xos%C3%A9_Lu%C3%ADs_M%C3%A9ndez_Ferr%C3%ADn_2020.jpg",
+    "made": "2020"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "**Xosé Luís Méndez Ferrín** 是用加利西亞語寫作的詩人、小說家，11 月 18 日（週三）夜裡在西班牙西北部的城市維哥（Vigo）過世，88 歲。守護這個語言的官方機構，加利西亞皇家學院（Real Academia Galega，下面簡稱 RAG），11 月 19 日發表哀悼聲明。死因沒有公布。"
+    },
+    {
+      "type": "p",
+      "text": "加利西亞在西班牙的西北角，緊鄰葡萄牙，有自己的語言，叫加利西亞語，和葡萄牙語很近。Ferrín 1938 年生在這裡的奧倫塞（Ourense），十幾歲就出了書，後來在維哥的一所中學教西班牙語文學，教到 2009 年退休，同時寫詩、小說和專欄。RAG 會長 Henrique Monteagudo 說，他是加利西亞「有史以來最好的作家之一」。1999 年，加利西亞的作家協會提名他角逐諾貝爾文學獎。"
+    },
+    {
+      "type": "p",
+      "text": "1969 年 1 月 25 日，警察闖進他在維哥的家。那時西班牙還在佛朗哥將軍的獨裁底下，全國剛進入緊急狀態。Ferrín 是一個地下政黨的創始人之一，那個黨結合加利西亞的民族主義和馬克思主義。警察從他家抄走的東西是這些："
+    },
+    {
+      "type": "list",
+      "items": [
+        "毛澤東的書，三本",
+        "談古巴的雜誌，兩本",
+        "談胡志明的書，一本",
+        "一位同志寫的詩",
+        "一份打字稿：他自己寫的小說，還沒出版"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "最後一項最要緊。**一本還沒出版的小說**，用加利西亞語寫成，講一個知識分子加入反佛朗哥的游擊隊，題獻給 1964 年被槍決的游擊隊領袖「飛行員」（O Piloto）。Ferrín 1 月在警局供稱，這是一本寓言，他從來沒打算出版。"
+    },
+    {
+      "type": "p",
+      "text": "專門審政治案件的法庭 Tribunal de Orden Público，以「非法宣傳」判他 **兩年**。判決書引了小說的大段內容，那本書當時沒有一個讀者。2020 年他對西班牙的 eldiario.es 回頭講這件事："
+    },
+    {
+      "type": "quote",
+      "text": "這種案例只有我一個：作家進了佛朗哥的監獄，因為寫了一本小說，甚至不是因為出版它！",
+      "original": "El mío es el único caso de un escritor que fue a la cárcel franquista por escribir una novela, ¡ni siquiera por publicarla!",
+      "cite": "Ferrín，eldiario.es 2020 年 4 月 25 日，本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "他先關在維哥的監獄，後來轉到北邊坎塔布里亞的 El Dueso 監獄，前後將近兩年。在牢裡他寫了短篇集《Antón e os inocentes》，也寫詩，用另一個名字 Heriberto Bens 發表。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Xos%C3%A9_Lu%C3%ADs_M%C3%A9ndez_Ferr%C3%ADn_e_Ant%C3%B3n_Lopo.jpg/1280px-Xos%C3%A9_Lu%C3%ADs_M%C3%A9ndez_Ferr%C3%ADn_e_Ant%C3%B3n_Lopo.jpg",
+      "width": 1280,
+      "height": 1104,
+      "alt": "書店裡，穿藍襯衫的老先生坐在藤椅上說話，右邊一位光頭、穿深色外套的男子微笑聽著，兩人之間的桌上立著兩本書。",
+      "caption": "2020 年 1 月，Ferrín 在蓬特韋德拉的 Paz 書店談《Antón e os inocentes》，這本書是他在獄中寫的。",
+      "credit": "Ogalego.gal",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Xos%C3%A9_Lu%C3%ADs_M%C3%A9ndez_Ferr%C3%ADn_e_Ant%C3%B3n_Lopo.jpg",
+      "made": "2020"
+    },
+    {
+      "type": "p",
+      "text": "佛朗哥死後，他出版了詩集《Con pólvora e magnolias》，字面是「帶著火藥與木蘭花」，1977 年拿了加利西亞的批評獎。裡面有談政治的詩，也有很私人的詩。RAG 的聲明把它列為當代加利西亞文學的大經典。批評界多半認為，1991 年的短篇集《Arraianos》是他小說的高峰，故事發生在加利西亞和葡萄牙交界的地方。"
+    },
+    {
+      "type": "p",
+      "text": "他的書主要是加利西亞語出版。Xerais 出版社的作者頁列有《Con pólvora e magnolias》《Antón e os inocentes》，和 2024 年編成的《Poesía reunida》（詩合集）。"
+    },
+    {
+      "type": "p",
+      "text": "後來的身分很多。1990 年他創辦批判思想的刊物 *A Trabe de Ouro*，主編了幾十年。2000 年進 RAG，2010 年當上會長，2013 年 2 月辭職，原因是院內的一場權力鬥爭。他每週替維哥的《Faro de Vigo》寫專欄，最後一篇寫給加利西亞的民族主義政治領袖 Xosé Manuel Beiras，Beiras 在 10 月 8 日過世。"
+    },
+    {
+      "type": "p",
+      "text": "1969 年那份小說打字稿被當成證物收進卷宗，後來下落不明。2018 年 3 月到 5 月間，薩拉曼卡（Salamanca）的歷史記憶文獻中心的技術人員，在整份四百多頁的案卷裡找到了它：兩份受潮損壞的打字稿，署名是 Ferrín 當年用的筆名 Laín Feixóo。2020 年 4 月，新冠疫情正嚴重的時候，他說他不急著出版："
+    },
+    {
+      "type": "quote",
+      "text": "它已經躲了好些年，現在又是病毒的年頭。",
+      "original": "Lleva años escondida y ahora estamos en tiempos de virus.",
+      "cite": "Ferrín，eldiario.es 2020 年 4 月 25 日，本文自譯"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Muere Xosé Luís Méndez Ferrín, el escritor que marcó los últimos 70 años de la literatura gallega con su imaginación materialista",
+      "publisher": "elDiario.es（Daniel Salgado）",
+      "date": "2026-11-19",
+      "url": "https://eldiario.es/galicia/muere-xose-luis-mendez-ferrin-escritor-marco-ultimos-70-anos-literatura-gallega-imaginacion-materialista_1_13675899.html",
+      "note": "死亡日 2026-11-18、維哥、88 歲；1969 年搜家與兩年牢、獄中作品、Arraianos、A Trabe de Ouro、RAG 任期、最後專欄寫 Beiras。頁面更新於 11-20。"
+    },
+    {
+      "title": "Adiós a Méndez Ferrín, autor totémico y referente universal de la cultura gallega",
+      "publisher": "infoLibre（Ana G. Liste，Praza.gal）",
+      "date": "2026-11-19",
+      "url": "https://www.infolibre.es/cultura/libros/adios-mendez-ferrin-autor-totemico-referente-universal-cultura-gallega_1_2240447.html",
+      "note": "「la noche de este miércoles」、維哥；未寫死因；Faro de Vigo 專欄與 A Trabe de Ouro。"
+    },
+    {
+      "title": "Morre Xosé Luís Méndez Ferrín, o escritor indomable que transformou a literatura dun país",
+      "publisher": "El Salto Galiza",
+      "date": "2026-11-19",
+      "url": "https://www.elsaltodiario.com/literatura/morre-xose-luis-mendez-ferrin-escritor-indomable-transformou-literatura-dun-pais",
+      "note": "「Wednesday night」、1969 年入獄、UPG、Con pólvora e magnolias、RAG 會長任期與 2013 年辭職、Arraianos 背景。頁面更新於 11-20。"
+    },
+    {
+      "title": "Morre Méndez Ferrín, unha das voces que renovaron a literatura galega",
+      "publisher": "Si Radio",
+      "date": "2026-11-19",
+      "url": "https://www.siradio.gal/2026/11/19/morre-mendez-ferrin/",
+      "note": "Con pólvora e magnolias 獲 1977 年批評獎；多次獲諾貝爾提名。"
+    },
+    {
+      "title": "La RAG despide con \"profundo pesar\" a Méndez Ferrín: \"Se va uno de los mejores escritores gallegos de todos los tiempos\"",
+      "publisher": "GC Diario",
+      "date": "2026-11-19",
+      "url": "https://gcdiario.com/cultura/616529-la-rag-despide-con-profundo-pesar-a-mendez-ferrin-se-va-uno-de-los-mejores-escritores-gallegos-de-todos-los-tiempos/",
+      "note": "RAG 聲明與 Henrique Monteagudo 的話；Con pólvora e magnolias 列為大經典。"
+    },
+    {
+      "title": "Morre Xosé Luís Méndez Ferrín, figura chave da cultura, a literatura e o nacionalismo galego",
+      "publisher": "El Progreso",
+      "date": "2026-11-19",
+      "url": "https://www.elprogreso.es/cultura/morre-xose-luis-mendez-ferrin/202611190651532015097.html",
+      "note": "生平、Santa Irene 中學教書到 2009、1999 年諾貝爾提名；此報寫 19 日過世，與多數來源的 18 日不同。"
+    },
+    {
+      "title": "Muere en Vigo uno de los escritores más ilustres de Galicia, de candidato al Nobel a padre de la poesía",
+      "publisher": "Metropolitano.gal",
+      "date": "2026-11-19",
+      "url": "https://metropolitano.gal/enfoque/muere-en-vigo-uno-de-los-escritores-mas-ilustres-de-galicia-de-candidato-al-nobel-a-padre-de-la-poesia/",
+      "note": "1938-08-07 生於奧倫塞；作品年份；1977 年批評獎；Beiras 與最後文章。"
+    },
+    {
+      "title": "Una novela inédita de Méndez Ferrín, la que lo mandó a las prisiones franquistas",
+      "publisher": "elDiario.es",
+      "date": "2020-04-25",
+      "url": "https://www.eldiario.es/galicia/politica/novela-inedita-mando-prisiones-franquistas_0_1019798604.html",
+      "note": "1969-01-25 搜家與清單、小說內容與題獻、兩年刑、2018 年卷宗找到、Ferrín 的兩段話。篇名在本站各報寫法不一，正文不引篇名。"
+    },
+    {
+      "title": "Recuperan unha novela inédita de Méndez Ferrín que provocou o seu encarceramento",
+      "publisher": "Vigo é（VigoÉ）",
+      "date": "2020-04-22",
+      "url": "https://vigoe.es/cultura/libros/recuperan-unha-novela-inedita-de-mendez-ferrin-que-provocou-o-seu-encarceramento",
+      "note": "警局供詞、Tribunal de Orden Público 判決、維哥與 El Dueso 的服刑、薩拉曼卡文獻中心找到手稿、Fernando Ramallo。"
+    },
+    {
+      "title": "O mundo da cultura e da política despide en Vigo o escritor, profesor e político Xosé Luis Méndez Ferrín",
+      "publisher": "Galicia Confidencial",
+      "date": "2026-11-19",
+      "url": "https://galiciaconfidencial.com/noticia/6101151-mundo-da-cultura-e-da-politica-despide-vigo-escritor-profesor-e-politico-xose-luis-mendez-ferrin",
+      "note": "守靈與到場者；此報寫 19 日過世。"
+    },
+    {
+      "title": "X. L. Méndez Ferrín",
+      "publisher": "Edicións Xerais de Galicia",
+      "date": "2026-11-21",
+      "url": "https://xerais.gal/autor/x-l-mendez-ferrin/",
+      "note": "出版社作者頁：書目與年份（Poesía reunida 2024）。頁面無發布日期，date 為查閱日。"
+    }
+  ]
+}
