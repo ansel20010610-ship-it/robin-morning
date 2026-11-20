@@ -240,6 +240,12 @@
    "shift": "reserve",
    "usd": 0.044,
    "status": "success"
+  },
+  {
+   "at": "2026-11-20T22:50+08:00",
+   "shift": "column",
+   "usd": 3.771,
+   "status": "success"
   }
  ]
 }
