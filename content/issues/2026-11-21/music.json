@@ -1,0 +1,310 @@
+{
+  "column": "music",
+  "date": "2026-11-21",
+  "title": "首演慘敗後三年寫不出曲子，他寫出了這首名曲",
+  "dek": "一首常出現在電影和流行歌裡的鋼琴曲，作曲家動筆前，每天躺在醫師的椅子上，聽同一句話：你會寫出你的協奏曲。",
+  "brief": "拉赫曼尼諾夫的《第二號鋼琴協奏曲》，是老電影《相見恨晚》的配樂，也是流行歌〈All by Myself〉主歌的來源。他先因為《第一號交響曲》首演失敗，三年幾乎寫不出東西，後來每天去看達爾醫師，接受催眠和談話，才寫出這首。按下播放，先聽第一樂章開頭的鋼琴和弦，再聽第二樂章的長笛與單簧管，最後聽第三樂章中段那條越唱越大的旋律。",
+  "topic_key": "music:rachmaninoff-op18",
+  "updated_at": "2026-11-21T00:51:55+08:00",
+  "form": "flow",
+  "voice": "listener",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "portrait",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Rachmaninoff_1900.jpg",
+    "width": 518,
+    "height": 800,
+    "alt": "黑白照片：一位短髮、留小鬍子的年輕男子穿深色西裝，坐在鋼琴旁側身向左，一手托著下巴，另一手搭在琴上，望向旁邊的樂譜；琴上有一座燭台。",
+    "caption": "拉赫曼尼諾夫（Sergei Rachmaninoff，1873–1943）在鋼琴旁。Commons 標為 1900 年代初、當時約 27 歲，攝影者不詳；《第二號鋼琴協奏曲》就寫在這幾年。",
+    "credit": "攝影者不詳；影像經 Wikimedia Commons（原出處 senar.ru）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rachmaninoff_1900.jpg",
+    "made": "1900 年代初（Commons 標示）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "如果你看過 1945 年的英國老電影**《相見恨晚》**，或聽過艾瑞克・卡門 1975 年的流行歌**〈All by Myself〉**，你其實已經聽過今天這首曲子的一部分。電影一再拿它當配樂，歌的主歌則是從它的一段旋律改過來的。"
+    },
+    {
+      "type": "p",
+      "text": "這首是**拉赫曼尼諾夫的《第二號鋼琴協奏曲》**。拉赫曼尼諾夫（Sergei Rachmaninoff）是俄國作曲家，也是鋼琴家，1873 年生，1943 年在美國加州過世。協奏曲，就是一位獨奏者加上一整個管弦樂團一起演的曲子；這首的獨奏是鋼琴，所以叫鋼琴協奏曲。全曲分三個樂章，也就是三大段，中間會停一下。"
+    },
+    {
+      "type": "p",
+      "text": "今天講它，是因為它是拉赫曼尼諾夫最常被演出的作品。猶他交響樂團說，這是他「最常被排進節目」的一首。它也是他從低潮裡走出來之後，寫的第一首大作品。"
+    },
+    {
+      "type": "h",
+      "text": "首演失敗，三年寫不出東西"
+    },
+    {
+      "type": "p",
+      "text": "1897 年 3 月 28 日，拉赫曼尼諾夫的《第一號交響曲》第一次演出，由亞歷山大・葛拉祖諾夫指揮。評論很嚴厲，居伊（César Cui）寫的評語尤其刻薄。另外據說，葛拉祖諾夫那天喝醉了，拉赫曼尼諾夫的妻子等人都這麼說。"
+    },
+    {
+      "type": "p",
+      "text": "這次打擊很大。之後約三年，他幾乎寫不出作品，還有酗酒和憂鬱的問題。"
+    },
+    {
+      "type": "h",
+      "text": "每天躺在醫師的椅子上"
+    },
+    {
+      "type": "p",
+      "text": "親友把他送去看莫斯科的**達爾醫師**（Nikolai Dahl）。達爾擅長催眠，也是他家族的朋友。1900 年 1 月到 4 月，達爾每天為他治療，用催眠加談話，而且不收費。"
+    },
+    {
+      "type": "p",
+      "text": "做法是趁他半睡半醒，一遍又一遍對他說：「你會開始寫你的協奏曲……你會寫得很順手……這首協奏曲會非常出色。」"
+    },
+    {
+      "type": "p",
+      "text": "拉赫曼尼諾夫日後回憶，他就躺在達爾書房的扶手椅上，日復一日聽著同一套話。他也說過這句話："
+    },
+    {
+      "type": "quote",
+      "text": "這聽起來也許難以置信，但這個療法真的幫了我。",
+      "original": "Although it may sound incredible, this cure really helped me.",
+      "cite": "拉赫曼尼諾夫談達爾醫師的治療，轉引自印第安納波利斯交響樂團節目單（本文自譯）"
+    },
+    {
+      "type": "p",
+      "text": "不過，也有人不把功勞全算給催眠。猶他交響樂團的作品頁認為，幫到他的可能更多是談話和正面的暗示；波士頓交響樂團也說，兩人談音樂，可能和治療本身一樣重要。達爾自己也是業餘音樂家，愛辦室內樂之夜。"
+    },
+    {
+      "type": "p",
+      "text": "治療之後，他睡得好、吃得多、酒也喝得少，重新開始作曲。"
+    },
+    {
+      "type": "h",
+      "text": "先演後兩段，再演全曲"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子不是照順序寫的。第二、三樂章先寫，1900 年夏天完成；第一樂章之後才寫完，全曲在 1901 年完成。"
+    },
+    {
+      "type": "p",
+      "text": "1900 年 12 月 15 日，第二、三樂章先在莫斯科的一場慈善音樂會上演出，這場是為婦女監獄慈善委員會辦的。拉赫曼尼諾夫自己獨奏，指揮是他的表哥亞歷山大・西羅提（Alexander Siloti），這也是西羅提第一次上台指揮。"
+    },
+    {
+      "type": "p",
+      "text": "全曲首演在 1901 年 11 月 9 日，莫斯科愛樂協會的音樂會，同樣是拉赫曼尼諾夫獨奏、西羅提指揮，反應熱烈。樂譜題獻給達爾醫師，1901 年由 Gutheil 出版社出版。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/04/Piano_Concerto_No._2_by_Rachmaninoff_%28arr._2_pianos%29_-_Score_cover.jpg",
+      "width": 697,
+      "height": 965,
+      "alt": "一份老式樂譜的封面，頁面上印著作品與出版社的文字，整體是素淨的排版，沒有插圖。",
+      "caption": "1901 年莫斯科 Gutheil 出版社出版的《第二號鋼琴協奏曲》兩架鋼琴版封面（版號 8104），改編者是拉赫曼尼諾夫本人。這是全曲首演那一年的初版。",
+      "credit": "Sergei Rachmaninoff（作曲、改編）；A. Gutheil（出版）；影像取自《俄羅斯大百科全書》，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Piano_Concerto_No._2_by_Rachmaninoff_(arr._2_pianos)_-_Score_cover.jpg",
+      "made": "1901"
+    },
+    {
+      "type": "timeline",
+      "title": "從失敗到成名",
+      "caption": "原創時間線，日期依 BSO 作品頁、維基百科〈Piano Concerto No. 2〉與〈Sergei Rachmaninoff〉、〈Brief Encounter〉、〈All by Myself〉整理（新曆）。",
+      "items": [
+        {
+          "when": "1897.3.28",
+          "label": "《第一號交響曲》首演",
+          "note": "葛拉祖諾夫指揮，反應很差；他之後約三年寫不出東西。"
+        },
+        {
+          "when": "1900.1–4",
+          "label": "每天去看達爾醫師",
+          "note": "催眠加談話；達爾反覆對他說「你會開始寫你的協奏曲」。"
+        },
+        {
+          "when": "1900.12.15",
+          "label": "第二、三樂章先演出",
+          "note": "莫斯科慈善音樂會，他獨奏，表哥西羅提指揮。"
+        },
+        {
+          "when": "1901.11.9",
+          "label": "全曲首演",
+          "note": "莫斯科愛樂協會音樂會，同一組人；反應熱烈。"
+        },
+        {
+          "when": "1945.11.13",
+          "label": "《相見恨晚》在倫敦首映",
+          "note": "電影一再用這首的片段。"
+        },
+        {
+          "when": "1975.12",
+          "label": "〈All by Myself〉發行",
+          "note": "艾瑞克・卡門的歌，主歌改編自第二樂章。"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "後來為什麼到處聽得到"
+    },
+    {
+      "type": "p",
+      "text": "電影這一頭：《相見恨晚》由大衛・連導演，諾爾・寇威爾編劇，改編自寇威爾 1936 年的獨幕劇《Still Life》，1945 年 11 月 13 日在倫敦首映。配樂用的就是這首協奏曲的片段，而且一再重複。鋼琴是艾琳・喬伊斯（Eileen Joyce）彈的，穆爾・馬修森指揮國家交響樂團。這部片拿了 1946 年坎城影展大獎，也得到三項奧斯卡提名。"
+    },
+    {
+      "type": "p",
+      "text": "流行歌這一頭：艾瑞克・卡門的〈All by Myself〉1975 年 12 月發行，在美國 Billboard 榜拿到第 2 名。主歌改編自這首的第二樂章，副歌則取自他更早的一首歌〈Let's Pretend〉。卡門原本以為這段旋律在美國已經沒有版權，後來拉赫曼尼諾夫遺產的管理方聯絡他，說在美國以外還受保護。最後雙方協議，遺產方分得這首歌 12% 的版稅。"
+    },
+    {
+      "type": "p",
+      "text": "還有別的：法蘭克・辛納屈的〈Full Moon and Empty Arms〉用了終樂章的一段旋律；1955 年的電影《七年之癢》也借過它的主題。"
+    },
+    {
+      "type": "h",
+      "text": "按下播放，聽這三個地方"
+    },
+    {
+      "type": "p",
+      "text": "先說版本。這次挑的是**斯維亞托斯拉夫・李希特**（Sviatoslav Richter）的鋼琴，斯坦尼斯瓦夫・維斯沃茨基指揮華沙愛樂，1959 年錄音。這個版本好找，Classical Music 雜誌也把它排在推薦名單的第一個。雜誌說李希特彈得「最熾烈」，重新處理過的音質「從沒這麼好過」，演奏帶著沉鬱的憂愁，也把這首從《相見恨晚》那種咬緊牙關、忍住情感的英式愛情裡帶開。"
+    },
+    {
+      "type": "music",
+      "composer": "拉赫曼尼諾夫（Sergei Rachmaninoff）",
+      "work": "C 小調第二號鋼琴協奏曲，作品 18",
+      "work_original": "Piano Concerto No. 2 in C minor, Op. 18",
+      "composed": "1900–1901",
+      "performers": "斯維亞托斯拉夫・李希特（Sviatoslav Richter）鋼琴、斯坦尼斯瓦夫・維斯沃茨基（Stanisław Wisłocki）指揮 華沙愛樂（Warsaw Philharmonic Orchestra）",
+      "recording": "Deutsche Grammophon，1959 年錄音",
+      "duration": "約 33 至 37 分鐘（各樂團節目單的估計不同）",
+      "movements": [
+        "I. Moderato",
+        "II. Adagio sostenuto",
+        "III. Allegro scherzando"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Rachmaninov Piano Concerto No. 2 Richter Wislocki Warsaw Philharmonic",
+        "artist_hint": "Richter",
+        "track_filter": [
+          "Piano Concerto No. 2"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "第一處是第一樂章的開頭。鋼琴單獨彈出一連串和弦，也就是一次按下好幾個音的聲響，像教堂的鐘聲，越彈越強，氣氛越來越緊。照樂譜數，是八個和弦，之後樂團才進來。接著第一條主題，由小提琴、中提琴和第一單簧管唱出。主題，就是一首曲子裡最容易哼出來的那條旋律。弦樂先往低處走，再一路攀到高音。"
+    },
+    {
+      "type": "p",
+      "text": "第二處是第二樂章，這一段很慢。先是弦樂拉出慢速的和弦；接著長笛吹出主題，單簧管再接一長段獨奏；然後鋼琴進來，唱一條像夜曲的旋律。夜曲是一種安靜、適合夜裡聽的小曲。最後獨奏鋼琴安靜地收尾。〈All by Myself〉的主歌，就是從這一樂章的旋律改的。"
+    },
+    {
+      "type": "p",
+      "text": "第三處是第三樂章的中段。開頭樂團先帶出不安的主題，鋼琴跟著加入。到了中段，有一條很有名的旋律，先由中提琴和雙簧管唱出，後來越唱越大聲。中提琴是比小提琴大一點、聲音低一點的弦樂器。辛納屈那首歌用的，就是這一段。結尾聲勢輝煌地收下來。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "C 小調第二號鋼琴協奏曲，作品 18；獨奏鋼琴加管弦樂團，三個樂章"
+        ],
+        [
+          "創作",
+          "1900 年夏天先寫成第二、三樂章，第一樂章稍後寫完；全曲 1901 年完成。題獻給達爾醫師"
+        ],
+        [
+          "首演",
+          "第二、三樂章 1900 年 12 月 15 日、全曲 1901 年 11 月 9 日，都在莫斯科；拉赫曼尼諾夫獨奏，西羅提（Alexander Siloti）指揮"
+        ],
+        [
+          "編制",
+          "獨奏鋼琴；長笛、雙簧管、單簧管、低音管各 2，法國號 4、小號 2、長號 3、低音號；定音鼓、大鼓、鈸；弦樂"
+        ],
+        [
+          "長度",
+          "約 33 至 37 分鐘（各樂團節目單的估計不同）"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Piano Concerto No. 2 (Rachmaninoff)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Piano_Concerto_No._2_(Rachmaninoff)",
+      "note": "創作背景與達爾治療；1900 年與 1901 年的首演；三個樂章；流行文化的使用；編制；錄音名單；2026-11-20 查閱"
+    },
+    {
+      "title": "Piano Concerto No. 2 in C minor, Op. 18",
+      "publisher": "Boston Symphony Orchestra（作品頁）",
+      "date": "未註明",
+      "url": "https://www.bso.org/works/piano-concerto-no-2-6",
+      "note": "第二、三樂章先寫；首演日期；達爾與題獻；約 37 分鐘；編制；〈Full Moon and Empty Arms〉取自終樂章；2026-11-20 查閱"
+    },
+    {
+      "title": "Rachmaninoff: Concerto No. 2 in C minor",
+      "publisher": "Indianapolis Symphony Orchestra（節目單）",
+      "date": "未註明",
+      "url": "https://www.indianapolissymphony.org/backstage/program-notes/rachmaninoff-concerto-no-2-in-c-minor/",
+      "note": "達爾的催眠話語與拉赫曼尼諾夫的回憶、「this cure really helped me」引文；各樂章的描述（該頁寫全曲首演為 10 月 14 日，與 BSO、維基不同，本文不採）；2026-11-20 查閱"
+    },
+    {
+      "title": "The best recordings of Rachmaninov's Piano Concerto No. 2",
+      "publisher": "Classical Music（雜誌）",
+      "date": "未註明",
+      "url": "https://classical-music.com/features/recordings/best-recordings-rachmaninovs-piano-concerto-no-2",
+      "note": "李希特／維斯沃茨基 1959 年 DG 錄音的評語；開頭「tolling bells」；第一號交響曲與達爾；2026-11-20 查閱"
+    },
+    {
+      "title": "Sergei Rachmaninoff",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Sergei_Rachmaninoff",
+      "note": "生卒；1897 年 3 月 28 日第一號交響曲首演；1900 年 1 至 4 月達爾治療；2026-11-20 查閱"
+    },
+    {
+      "title": "Brief Encounter",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Brief_Encounter",
+      "note": "1945 年電影；1945 年 11 月 13 日倫敦首映；配樂用這首協奏曲；演奏者；2026-11-20 查閱"
+    },
+    {
+      "title": "All by Myself",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/All_by_Myself",
+      "note": "艾瑞克・卡門 1975 年單曲；主歌改編自第二樂章；2026-11-20 查閱"
+    },
+    {
+      "title": "Rachmaninoff Piano Concerto No. 2",
+      "publisher": "Utah Symphony｜Utah Opera（作品頁）",
+      "date": "未註明",
+      "url": "https://usuo.org/explore/2022/04/rachmaninoff-piano-concerto-no-2/",
+      "note": "達爾的治療效果與對催眠的保留；最常被排進節目；約 33 分鐘；2026-11-20 查閱"
+    },
+    {
+      "title": "First measure of Piano Concerto No. 2 (Rachmaninoff)",
+      "publisher": "Wikimedia Commons（再製樂譜）",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:First_measure_of_Piano_Concerto_No._2_(Rachmaninoff).jpg",
+      "note": "照這份樂譜數開頭的鋼琴和弦；2026-11-20 查閱"
+    },
+    {
+      "title": "Richter / Prokofiev, Rachmaninov: Piano Concertos",
+      "publisher": "Deutsche Grammophon（專輯頁）",
+      "date": "未註明",
+      "url": "https://www.deutschegrammophon.com/en/catalogue/products/richter-prokofiev-rachmaninov-piano-concertos-3017",
+      "note": "李希特、華沙愛樂（Warsaw Philharmonic Orchestra）、維斯沃茨基；DG 目錄頁；2026-11-20 查閱"
+    }
+  ]
+}
