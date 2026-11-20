@@ -1,0 +1,278 @@
+{
+  "column": "civilization",
+  "date": "2026-11-21",
+  "title": "南雲的早上，魚雷拆了又裝回去",
+  "dek": "日本航艦在中途島，真的只差五分鐘就能起飛？他們自己的戰鬥報告，記下的是另一個早上。",
+  "brief": "1942 年中途島海戰那天早上，南雲忠一下令把留來打敵艦的魚雷卸下、改掛炸島的炸彈，半小時後又喊停。接著他決定先收回炸島的飛機再反擊，10 點 26 分，旗艦赤城中彈。流傳很廣的「命運的五分鐘」，日本官方戰史就和它對不上。",
+  "form": "timeline",
+  "voice": "lecturer",
+  "topic_key": "civilization:pacific-midway-nagumo-1942",
+  "updated_at": "2026-11-21T02:10:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Japanese_aircraft_carrier_Hiryu_burning_on_5_June_1942_%28NH_73064%29.jpg/1280px-Japanese_aircraft_carrier_Hiryu_burning_on_5_June_1942_%28NH_73064%29.jpg",
+    "width": 1280,
+    "height": 823,
+    "alt": "黑白空拍照片。一艘航空母艦橫在畫面下半，中段冒出大片白煙；艦橋旁邊翹著一塊板子，右側甲板塌成一堆殘骸。",
+    "caption": "飛龍號，1942 年 6 月 5 日日出後，從航艦鳳翔號起飛的日本飛機拍下。它是南雲四艘航艦裡，6 月 4 日傍晚才中彈的。艦橋旁邊翹起的，是被機庫爆炸掀起來的前升降機的一部分；幾小時後它就沉了。美國海軍照片，編號 NH 73064。",
+    "credit": "日本海軍特務少尉 Oniwa Kiyoshi 攝；U.S. Navy photo NH 73064",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Japanese_aircraft_carrier_Hiryu_burning_on_5_June_1942_(NH_73064).jpg",
+    "made": "1942 年 6 月 5 日"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "「敵人不知道我們的計畫。」這句話出自一份日本海軍的戰鬥報告，列在講開戰前形勢的「情勢判斷」那一節。這份報告是**南雲忠一（Nagumo Chūichi）**指揮的第一航空艦隊寫的。南雲是日本海軍中將，半年前偷襲珍珠港的那支航空母艦部隊，就是他帶去的。"
+    },
+    {
+      "type": "p",
+      "text": "這一次他要去的是**中途島**，太平洋中間的環礁，在歐胡島西北方大約 2,100 公里。1942 年 6 月 4 日清晨，他坐在旗艦赤城上（旗艦，就是司令坐的那艘），帶著赤城、加賀、蒼龍、飛龍四艘航艦（航空母艦的簡稱）開到附近，打算先炸掉島上的機場，再收拾趕來的美國艦隊。美國人早就破解了日本的密碼，在那裡等他。結果四艘航艦全沉，島也沒拿下。"
+    },
+    {
+      "type": "p",
+      "text": "這一仗日本那邊的最後一段，常聽到的版本說，日本飛機已經掛好彈、排滿甲板，再五分鐘就能起飛。那份報告卻逐分鐘記下了那個早上：**從南雲下令拆魚雷到旗艦中彈，隔了三個多小時**。報告用的是東京時間，鐘點比當地少 3 小時、日期多一天。以下一律換成當地時間。"
+    },
+    {
+      "type": "p",
+      "text": "報告的性質要先交代。它是戰敗之後寫的，有把敗因部分推給天氣與偵察機的地方，說法也前後不一。赤城那段，逐分紀錄把第二顆炸彈寫成 fatal hit（致命的一擊），損害敘述卻寫 Neither were fatal hits（都不是致命的）。所以鐘點當線索，不當定論。"
+    },
+    {
+      "type": "timeline",
+      "title": "1942 年 6 月 4 日，中途島當地時間",
+      "caption": "依第一航空艦隊戰鬥報告英譯本整理，東京時間已換成當地時間。7:28 與 8:20 是偵察機的發報時間，南雲何時收到，見內文。",
+      "items": [
+        {
+          "when": "04:30",
+          "label": "108 架飛機去炸中途島",
+          "note": "另一批掛魚雷的留在船上"
+        },
+        {
+          "when": "07:15",
+          "label": "下令卸魚雷、改掛炸彈",
+          "note": "要再炸一次島"
+        },
+        {
+          "when": "07:28",
+          "label": "偵察機發報：疑似看見敵艦十艘",
+          "note": "沒說是什麼船；到南雲手上的時間說法不一"
+        },
+        {
+          "when": "07:45",
+          "label": "喊停換彈",
+          "note": "還沒換的留著魚雷"
+        },
+        {
+          "when": "08:20",
+          "label": "偵察機發報：「好像有一艘航艦」",
+          "note": "到南雲手上的時間說法不一（報告敘述寫約 08:30）"
+        },
+        {
+          "when": "09:18",
+          "label": "炸島的飛機收回完畢",
+          "note": "轉向去找美國艦隊"
+        },
+        {
+          "when": "10:26",
+          "label": "赤城中彈",
+          "note": "加賀 10:24 起火，蒼龍 10:25 到 10:28 中彈三顆"
+        },
+        {
+          "when": "10:46",
+          "label": "南雲開始離開赤城",
+          "note": "報告另處寫 11:30 才轉到長良號"
+        },
+        {
+          "when": "17:03",
+          "label": "飛龍中彈起火",
+          "note": "四艘都沒保住"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "一架晚了半小時的偵察機"
+    },
+    {
+      "type": "p",
+      "text": "4 點 30 分，天還沒亮，108 架飛機起飛去炸島。另一批攻擊機掛著魚雷留在船上，那是留著打敵艦的，叫預備隊，意思是先不出手、等著打船的那一批。同時出發的偵察機裡，重巡洋艦利根號的 4 號機晚了半小時。"
+    },
+    {
+      "type": "p",
+      "text": "報告事後說，這架飛機要是在去程就看見美軍，日本會佔上風，又說天氣不是搜索機的朋友。史家批評的則是整個搜索安排單薄，飛機太少。"
+    },
+    {
+      "type": "h",
+      "text": "魚雷卸下，又裝回去"
+    },
+    {
+      "type": "p",
+      "text": "7 點左右，帶隊炸島的飛行隊長發回電報：需要第二次攻擊。從 7 點左右起，中途島起飛的美國飛機幾乎不停攻擊艦隊，報告說一直到約 10 點半。7 點 15 分，南雲下令船上那批攻擊機卸下魚雷，改掛炸陸地用的炸彈。聯合艦隊司令山本五十六交代過，預備隊要保持打船的武裝，這道命令正好反過來。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "map",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Battle_of_Midway_map_-_attacks_of_Midway_based_aircraft_on_4_June_1942.png",
+      "width": 989,
+      "height": 817,
+      "alt": "美國海軍 1943 年的示意圖，畫中途島起飛的美國飛機攻擊日本機動部隊。",
+      "caption": "美國海軍《All Hands》雜誌 1943 年 11 月號的示意圖，畫的是 6 月 4 日早上從中途島起飛的美國飛機，一波波攻擊南雲的艦隊。南雲決定再炸一次島，這幾波攻擊是原因之一。Commons 的說明註明，圖上的機數與機種不盡正確。",
+      "credit": "U.S. Navy，All Hands 1943 年 11 月號第 54 頁",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Battle_of_Midway_map_-_attacks_of_Midway_based_aircraft_on_4_June_1942.png",
+      "made": "1943 年",
+      "depicts": "1942 年 6 月 4 日"
+    },
+    {
+      "type": "p",
+      "text": "利根 4 號機在 7 點 28 分發報：看到疑似敵艦十艘。這封電報何時到南雲手上，說法不一。報告敘述裡記的是約 0500（當地約 8 點）；維基百科列的兩說是 7 點 40 分（Parshall 與 Tully）和 8 點（Isom）。報告自己的逐分紀錄，7 點 45 分就下了新命令："
+    },
+    {
+      "type": "quote",
+      "text": "準備攻擊敵艦隊。還沒改掛炸彈的攻擊機，魚雷留著。",
+      "original": "Prepare to carry out attacks on enemy fleet units. Leave torpedoes on those attack planes which have not as yet been changed to bombs.",
+      "cite": "南雲忠一致機動部隊命令，東京時間 0445（當地 07:45），見第一航空艦隊戰鬥報告英譯本"
+    },
+    {
+      "type": "p",
+      "text": "電報沒說是什麼船，他連問兩次。偵察機報告記的 8 點 09 分回答是巡洋艦五艘、驅逐艦五艘；8 點 20 分發報的那封才多一句：好像有一艘航艦同行。報告寫約 0530（當地約 8 點 30 分）才收到，並說這是第一次提到敵航艦。"
+    },
+    {
+      "type": "h",
+      "text": "先讓自己的飛機降落"
+    },
+    {
+      "type": "p",
+      "text": "在我看來，航艦的消息到手之後，才是這個早上最關鍵的決定。坐鎮飛龍號的第二航空戰隊司令山口多聞，建議馬上用手上的飛機出擊，南雲沒有照做。"
+    },
+    {
+      "type": "p",
+      "text": "要看懂這個決定，得先知道魚雷是打船的，陸用炸彈是打陸地目標的。"
+    },
+    {
+      "type": "p",
+      "text": "另一頭，炸島的機隊快回來了，不先讓它們降落就得在海上迫降。前一個小時甲板一直在收放防空戰鬥機，預備隊還沒排上去；排上甲板、起飛，至少要半小時。"
+    },
+    {
+      "type": "p",
+      "text": "要是立刻出擊，有的飛機沒有對艦的武裝，也可能沒有戰鬥機護航。他剛看著沒有護航的美國轟炸機一架架被打下來。日本海軍的習慣，也偏好攢成整支攻擊隊再出手。"
+    },
+    {
+      "type": "p",
+      "text": "這幾條攤開來，在我看來，先收飛機並不糊塗，有它的道理。報告自己寫的理由是另一句：7 點 15 分那道換彈命令，讓掛魚雷的預備隊沒法立刻起飛。"
+    },
+    {
+      "type": "p",
+      "text": "炸島的飛機全數降落後，艦隊轉向，去找美國人。報告還記著，兩個航空戰隊回報，掛魚雷的預備隊最快 10 點 30 分、最晚 11 點可以起飛。之後一個小時，美國魚雷機一波波來攻，全沒打中。"
+    },
+    {
+      "type": "h",
+      "text": "魚雷在機庫裡先炸了"
+    },
+    {
+      "type": "p",
+      "text": "10 點 22 分，赤城看見加賀被俯衝轟炸，下令戰鬥機一備好就起飛。10 點 26 分，三架俯衝轟炸機對準赤城投彈，第二顆打在艦身中段的升降機附近。三分鐘後，機庫裡存放的魚雷開始誘爆。報告說，火燒遍了赤城的機庫，是因為船上當時正在準備第二波攻擊。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "portrait",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Chuichi_Nagumo.jpg/1280px-Chuichi_Nagumo.jpg",
+      "width": 1280,
+      "height": 1612,
+      "alt": "黑白半身照。一位光頭、留短髭的男子，穿著有肩章的海軍禮服，斜披一條寬綬帶，胸前有勳章，戴白手套的手握著劍柄。",
+      "caption": "南雲忠一，約攝於 1941 到 1942 年，他擔任第一航空艦隊司令的時候。他出身魚雷與驅逐艦，不是飛行員，主要靠資歷被派去指揮這支航艦部隊。照片原屬美國海軍史家 Morison 的檔案，美國海軍歷史與遺產司令部藏，編號 NH 63423。",
+      "credit": "攝影者不詳；Naval History and Heritage Command, NH 63423",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chuichi_Nagumo.jpg",
+      "made": "約 1941–1942 年"
+    },
+    {
+      "type": "p",
+      "text": "南雲不肯離開赤城，是參謀長勸他才走的。唯一沒中彈的飛龍，山口 10 點 58 分就放出飛機反擊，傍晚也起火，山口和它一起沉了。"
+    },
+    {
+      "type": "h",
+      "text": "五分鐘是誰說的"
+    },
+    {
+      "type": "p",
+      "text": "「五分鐘」出自**淵田美津雄**，赤城的飛行隊長，珍珠港那天就是他帶隊。他剛割了盲腸不能飛，人在赤城艦橋上，爆炸把他甩在甲板上，兩個腳踝都斷了。他和奧宮正武合寫的日方戰記英譯本裡，有一節叫〈命運的五分鐘〉："
+    },
+    {
+      "type": "quote",
+      "text": "五分鐘！誰會相信，戰局就在這麼短的一段時間裡翻了過來？……我們在最脆弱的狀態下被逮個正著：甲板上裝滿了掛好彈、加滿油、準備出擊的飛機。",
+      "original": "Five minutes! Who would have believed that the tide of battle would shift in that brief interval of time? ... We had been caught flatfooted in the most vulnerable condition possible—decks loaded with planes armed and fueled for attack.",
+      "cite": "淵田美津雄、奧宮正武《Midway: The Battle that Doomed Japan》英譯本，轉引自維基百科"
+    },
+    {
+      "type": "p",
+      "text": "這段寫得太好看。1971 年日本防衛廳的官方戰史就和它對不上；2005 年的研究《Shattered Sword》依那部戰史指出，美國轟炸機到的那一刻，甲板上只有防空戰鬥機。報告也記著，那幾分鐘正在起飛的是戰鬥機。"
+    },
+    {
+      "type": "p",
+      "text": "加賀的說法又不一樣。1945 年加賀的飛行長天谷受美軍訊問，答說約 30 架飛機在機庫裡，已掛彈加油，其餘在甲板上，六架戰鬥機在空中。同一份紀錄的美方摘要另寫，中彈在轉向迎風、準備放飛之前，那是美方的話，不是天谷的原話。兩邊各說各的，一邊講全艦隊，一邊講自己那艘船；加賀這邊，本文只有這份訊問紀錄裡的單一說法。"
+    },
+    {
+      "type": "p",
+      "text": "報告最後列了這一仗學到的教訓，其中一條是：一發現敵人，自己的飛機就要迅速起飛。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Japanese Story of the Battle of Midway (OPNAV P32-1002)",
+      "publisher": "Office of Naval Intelligence（HyperWar／ibiblio 全文轉錄）",
+      "date": "1947-06",
+      "url": "https://www.ibiblio.org/hyperwar/Japan/IJN/rep/Midway/Nagumo/index.html",
+      "note": "南雲忠一第一航空艦隊戰鬥詳報第 6 號的英譯，先刊於 ONI Review 1947 年 5 月號。讀了 ONI 前言、情勢判斷、作戰經過、各艦損害、東京時間 0130 至 0750 的逐分紀錄、搜索機起飛表與結語。報告鐘點為東京時間；與美方 04:30 出擊對照，換算為當地時間＝加 3 小時、日期退一天。司令部離艦：赤城段寫 0746 開始換乘（逐分紀錄 0746 同），另處寫 0830 轉到長良號（當地 11:30），時間軸取前者並注明後者。偵察機電報：敘述寫約 0500、0530（當地約 08:00、08:30）報告到，與逐分紀錄的 0428、0520 發報時間並存。赤城第二顆炸彈，逐分紀錄 0726 寫 fatal hit，損害敘述寫 Neither were fatal hits。聯合艦隊司令山本五十六見 ONI 前言（C-in-C Combined Fleet）。美機攻擊持續時間：報告寫約 0400 第一波、至約 0730 幾乎不停（當地約 07:00 至 10:30）。"
+    },
+    {
+      "title": "Interrogation Nav No. 1 (USSBS No. 6): Captain Amagai Takahisa, IJN",
+      "publisher": "U.S. Strategic Bombing Survey（HyperWar／ibiblio 轉錄）",
+      "date": "1945-10-06",
+      "url": "https://www.ibiblio.org/hyperwar/AAF/USSBS/IJO/IJO-1.html",
+      "note": "加賀號飛行長戰後受訊。問答紀錄：約 30 架在機庫已掛彈加油，其餘在甲板，六架戰鬥機在空中（天谷的回答）。「中彈在轉向迎風、準備放出飛行隊之前」出自美方摘要，不是他的原話。原文拼作 AMAGI。"
+    },
+    {
+      "title": "Vice Admiral Chuichi Nagumo, IJN, (1886-1944)",
+      "publisher": "Naval History and Heritage Command Online Library（HyperWar／ibiblio 鏡像）",
+      "date": "2009-05-03",
+      "url": "https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/prs-for/japan/japrs-n/c-nagmo.htm",
+      "note": "魚雷專家、珍珠港、中途島後續指揮到 1942 年 11 月、1944 年 7 月 6 日在塞班島自盡；照片 NH 63423 說明。頁面日期為程式碼更新日。死亡日期另有 7 月 7 日一說（美國陸戰隊塞班史引俘虜證詞），正文用 NHHC。"
+    },
+    {
+      "title": "Battle of Midway",
+      "publisher": "Wikipedia",
+      "date": "2026-11-20（讀取日）",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Midway",
+      "note": "距歐胡島約 1,300 英里、美方破譯密碼；07:15 換彈違背山本指示；偵察電報到達時間（Parshall & Tully 2005 作 07:40，Isom 2007 作 08:00）；山口建議立即出擊（引 Bicheno 2001）；甲板未能排上預備隊、排甲板與放飛至少 30 分鐘、遇襲時甲板上只有防空戰鬥機（引 Parshall & Tully，取材戰史叢書）；日本海軍偏好完整攻擊隊；南雲不肯離艦、草鹿勸離；山口隨飛龍沉沒。；利根號為重巡洋艦；歐胡島西北約 1,300 英里。"
+    },
+    {
+      "title": "Mitsuo Fuchida",
+      "publisher": "Wikipedia",
+      "date": "2026-11-20（讀取日）",
+      "url": "https://en.wikipedia.org/wiki/Mitsuo_Fuchida",
+      "note": "割盲腸不能飛、在艦橋、爆炸把他甩在甲板上摔斷兩踝（維基原文：an explosion threw him to the deck and broke both his ankles）；1951 年合著戰記、1955 年英譯擴充版；〈Five Fateful Minutes〉引文（本文轉引自維基百科，頁碼未自行核對）；1971 年戰史叢書 pp.372–378 與其說法相左；Parshall & Tully、Isom、Symonds 等反駁；1952 年隨佈道團巡迴美國。與奧宮正武（Masatake Okumiya）合著。"
+    },
+    {
+      "title": "Chūichi Nagumo",
+      "publisher": "Wikipedia",
+      "date": "2026-11-20（讀取日）",
+      "url": "https://en.wikipedia.org/wiki/Ch%C5%AB%C5%8Dichi_Nagumo",
+      "note": "出身魚雷與驅逐艦、非飛行員；1941 年 4 月 10 日主要因資歷出任第一航空艦隊司令。"
+    },
+    {
+      "title": "File:Japanese aircraft carrier Hiryu burning on 5 June 1942 (NH 73064).jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-20（讀取日）",
+      "url": "https://commons.wikimedia.org/wiki/File:Japanese_aircraft_carrier_Hiryu_burning_on_5_June_1942_(NH_73064).jpg",
+      "note": "頭圖說明：鳳翔號飛機拍攝、甲板塌陷、前升降機一部分被掀起、數小時後沉沒；Credit 欄：U.S. Navy photo NH 73064。"
+    }
+  ]
+}
