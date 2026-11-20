@@ -19,6 +19,13 @@
     ],
     "note": "civilization（timeline/lecturer，中途島南雲）修正即可、重寫0／修正1，忠實度核對已做；精簡：canon（compare/critic，魔笛）；第1班已回報，無接手"
   },
+  "3": {
+    "finished_at": "2026-11-21T03:08:53+08:00",
+    "missing": [
+      "news"
+    ],
+    "note": "philosophy（qa/socratic，拉德福虛構悖論）、football（number/fan，非比賽夜）；兩篇修正即可、重寫0／修正2，忠實度核對已做；無接手；無機器腔 WARN"
+  },
   "column": {
     "finished_at": "2026-11-20T22:50:28+08:00",
     "missing": [
