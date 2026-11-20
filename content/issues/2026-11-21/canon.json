@@ -1,0 +1,365 @@
+{
+  "column": "canon",
+  "date": "2026-11-21",
+  "title": "同一個晚上，莫札特一部戲落幕、一部戲首演",
+  "dek": "1791 年 9 月 30 日，替皇帝加冕寫的歌劇在布拉格謝幕，替郊區戲院寫的《魔笛》在維也納開演。為什麼成為經典的是後者？",
+  "brief": "《魔笛》是莫札特 1791 年替維也納郊區一家通俗戲院寫的德語魔法戲，唱一段、說一段，舞台機關變個不停。同一個月他也替皇帝加冕寫了義大利語的正歌劇《狄托的仁慈》，十九、二十世紀大多被冷落的卻是這一部。華格納寫道，在《魔笛》之前德語歌劇幾乎不存在；樂譜出版社 Bärenreiter 說，它今天是全世界上演最多的德語歌劇。",
+  "topic_key": "canon:magic-flute",
+  "updated_at": "2026-11-21T02:17:00+08:00",
+  "form": "compare",
+  "voice": "critic",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Kupferstichkabinett_%28SMB%29_Karl_Friedrich_Schinkel_00092885-fr.jpg/1280px-Kupferstichkabinett_%28SMB%29_Karl_Friedrich_Schinkel_00092885-fr.jpg",
+    "width": 1280,
+    "height": 968,
+    "alt": "深藍色的夜空布滿一排排白色星星，排成半圓的穹頂；下方是雲層，正中央一彎新月上站著一個披黑袍、戴冠的人影。",
+    "caption": "申克爾替 1816 年柏林《魔笛》畫的布景設計〈夜后的星辰大廳〉。一部在維也納郊區戲院首演的德語魔法戲，二十多年後在柏林的王家劇院重新上演，這片星空後來成了《魔笛》的標誌。",
+    "credit": "卡爾．弗里德里希．申克爾（Karl Friedrich Schinkel），水粉、手抄紙，46.4 × 61.5 公分，柏林國家博物館版畫素描館（Kupferstichkabinett）藏，館藏號 SM 22c.121",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kupferstichkabinett_(SMB)_Karl_Friedrich_Schinkel_00092885-fr.jpg",
+    "made": "約 1815 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "**《魔笛》**是**莫札特**生命最後一年寫的德語歌劇，1791 年 9 月 30 日在維也納首演。兩個多月後，莫札特就過世了，才 35 歲。"
+    },
+    {
+      "type": "p",
+      "text": "它是經典，有兩個原因。第一，它本來是替維也納城外一家郊區戲院寫的通俗魔法戲，唱一段、說一段，舞台機關變個不停，莫札特卻把它寫成最高水準的音樂。同一個月，神聖羅馬皇帝**利奧波德二世**加冕為波希米亞國王，莫札特替這場慶典寫了**《狄托的仁慈》**。這是一部正歌劇：用義大利語唱，題材多半是古代的帝王和英雄。9 月 30 日那一晚，《狄托》在布拉格演最後一場，《魔笛》在維也納首演。十九、二十世紀大半時間被冷落的，是替皇帝寫的那一部。"
+    },
+    {
+      "type": "p",
+      "text": "第二，不少後來的人接著它做事。**華格納**寫道，在它之前，德語歌劇幾乎不存在；歌德動手寫續集，貝多芬拿它的旋律寫變奏曲。樂譜出版社 Bärenreiter 在《魔笛》樂譜的前言裡說，它今天是全世界上演最多的德語歌劇。"
+    },
+    {
+      "type": "p",
+      "text": "一週後，莫札特寫信給妻子，說起同一晚的這兩場，自己也覺得奇怪："
+    },
+    {
+      "type": "quote",
+      "text": "最奇怪的是，我的新歌劇第一次上演、得到那麼多掌聲的那個晚上，同一晚在布拉格，《狄托》最後一次上演，也得到了非比尋常的掌聲。",
+      "original": "das sonderbareste dabei ist, das den abend als meine neue Oper mit so vielen beifall zum erstenmale aufgeführt wurde, am nemlichen abend in Prag der Tito zum leztenmale auch mit ausserordentlichen beifall aufgeführet worden.",
+      "cite": "莫札特致妻子康斯坦采，維也納，1791 年 10 月 7–8 日（Bauer/Deutsch 第 1193 號）；本文自譯"
+    },
+    {
+      "type": "h",
+      "text": "郊區戲院的魔法戲"
+    },
+    {
+      "type": "p",
+      "text": "《魔笛》的劇本作者叫**席卡內德**，他同時是首演戲院的老闆。戲院在維也納城外的威登區，叫 Freihaustheater。Bärenreiter 的前言說，這是一家郊區的通俗戲院，演的戲也跟著通俗，吸引觀眾的一大原因是壯觀的舞台效果。"
+    },
+    {
+      "type": "p",
+      "text": "《魔笛》換景超過四十次，有的當著觀眾的面換，有的藏起來換。劇本裡的舞台指示寫著：夜后第一次出場前，山向兩邊分開；三個童子坐著一具蓋滿玫瑰的飛行器飄進來；夜后在雷聲中從舞台中央的活板門升起；捕鳥人帕帕基諾想喝酒，一大杯紅酒就從地底升上來。"
+    },
+    {
+      "type": "p",
+      "text": "這種戲叫 Singspiel，可以叫它德語歌唱劇：唱段和唱段之間，演員直接用說的。席卡內德自己演帕帕基諾。夜后這個角色，莫札特是替他的小姨子 Josepha Hofer 寫的。她第二幕那首就是很多人聽過的〈夜后詠嘆調〉，英國國家歌劇院說它以一連串快速的高音 C 和好幾個高音 F 出名。"
+    },
+    {
+      "type": "p",
+      "text": "莫札特在自己的作品目錄裡，管它叫「Teutsche Oper」，就是德語歌劇。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Die_Zauberfl%C3%B6te-_Eine_gro%C3%9Fe_Oper_in_zwey_Aufz%C3%BCgen_%28IA_00074489bsb%29.pdf/page2-1280px-Die_Zauberfl%C3%B6te-_Eine_gro%C3%9Fe_Oper_in_zwey_Aufz%C3%BCgen_%28IA_00074489bsb%29.pdf.jpg",
+      "width": 1280,
+      "height": 2087,
+      "alt": "泛黃破損的書名頁，德文尖角體印著《Die Zauberflöte》、劇本作者席卡內德、作曲莫札特，中間一個捧花的小天使木刻，底下是「維也納，Ignaz Alberti 印，1791」。",
+      "caption": "《魔笛》1791 年維也納初版劇本的書名頁：作者欄先寫戲院老闆席卡內德，作曲的莫札特排在下一行。",
+      "credit": "Emanuel Schikaneder 著，Ignaz Alberti 印行，維也納；巴伐利亞國家圖書館藏（Rar. 1824#Beibd.3），Internet Archive 數位化",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Die_Zauberfl%C3%B6te-_Eine_gro%C3%9Fe_Oper_in_zwey_Aufz%C3%BCgen_(IA_00074489bsb).pdf?page=2",
+      "made": "1791"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Wolfgang_Amadeus_Mozart_-_La_clemenza_di_Tito_-_title_page_of_the_libretto_-_Prague_1791.png/960px-Wolfgang_Amadeus_Mozart_-_La_clemenza_di_Tito_-_title_page_of_the_libretto_-_Prague_1791.png",
+      "width": 960,
+      "height": 1673,
+      "alt": "黑白書名頁，義大利文大寫字母印著《LA CLEMENZA DI TITO》、「在布拉格國家劇院演出，1791 年 9 月」、「慶祝皇帝陛下利奧波德二世加冕之日」。",
+      "caption": "同年 9 月布拉格《狄托的仁慈》劇本的書名頁：最醒目的是劇名，下方另有一整行大字印著皇帝利奧波德二世，莫札特的名字不在這一頁。",
+      "credit": "Pietro Metastasio 原著、Caterino Mazzolà 改編，布拉格 Schönfeld 印行；柏林國家圖書館藏",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Wolfgang_Amadeus_Mozart_-_La_clemenza_di_Tito_-_title_page_of_the_libretto_-_Prague_1791.png",
+      "made": "1791"
+    },
+    {
+      "type": "h",
+      "text": "替皇帝寫的那一部"
+    },
+    {
+      "type": "p",
+      "text": "《狄托》走的是相反的路。1791 年 7 月 8 日，布拉格的歌劇經理人 Guardasoni 和波希米亞各邦議會簽約，承辦一部加冕歌劇，也就是為君主加冕慶典寫的歌劇。Guardasoni 到維也納找人，先找作曲家薩里耶利，後來才找莫札特。"
+    },
+    {
+      "type": "p",
+      "text": "劇本是 Metastasio 的舊本子，由 Mazzolà 改編，1734 年就有人在維也納替它配過樂。合約第一條就要求，頭牌男歌手和首席女高音都得是第一流的。唱段之間用的是唱出來的宣敘調，其中一部分很可能是莫札特的學生蘇斯邁爾代寫的。"
+    },
+    {
+      "type": "p",
+      "text": "時間很趕。首演前一天，莫札特才寫完序曲和進行曲。9 月 6 日加冕當天，《狄托》在布拉格的國家劇院首演，莫札特指揮。票由官方發，沒有票的人一律不准進場；那一晚不收門票。"
+    },
+    {
+      "type": "p",
+      "text": "宮廷的反應很冷。秦岑多夫伯爵當天在日記裡說，他們被招待看了一齣最無聊的戲。隔天皇后寫信給女兒，說這部大歌劇不怎麼樣，音樂很糟，大家幾乎全睡著了。"
+    },
+    {
+      "type": "table",
+      "title": "1791 年，莫札特的兩部新歌劇",
+      "head": [
+        "",
+        "《狄托的仁慈》",
+        "《魔笛》"
+      ],
+      "rows": [
+        [
+          "為了什麼",
+          "慶祝利奧波德二世加冕為波希米亞國王",
+          "席卡內德自己戲院的新戲"
+        ],
+        [
+          "語言",
+          "義大利語",
+          "德語"
+        ],
+        [
+          "唱段之間",
+          "用唱的宣敘調",
+          "用說的台詞"
+        ],
+        [
+          "觀眾",
+          "官方發票，皇室隨員和外國貴族優先，再來是本地貴族、外國人，最後是本地名流；不收門票",
+          "莫札特 10 月 7 日信：「又和平常一樣滿座」"
+        ],
+        [
+          "當時的惡評",
+          "皇后：音樂很糟，「我們幾乎全睡著了」",
+          "柏林《音樂週報》：內容和語言「實在太差」"
+        ],
+        [
+          "後來",
+          "1794 年在布拉格重演成功；十九、二十世紀大多被冷落",
+          "全世界、包括德語區上演最多的德語歌劇"
+        ]
+      ],
+      "caption": "資料：Tatlow 與 Schneider 編《Mozart’s ‘La clemenza di Tito’: A Reappraisal》（2018）所收年表與文件；莫札特 1791 年 10 月書信（莫札特基金會數位版）；Bärenreiter 版《魔笛》鋼琴譜前言（Dietrich Berke）。"
+    },
+    {
+      "type": "h",
+      "text": "《狄托》並沒有一敗塗地"
+    },
+    {
+      "type": "p",
+      "text": "9 月 30 日布拉格那最後一場，反而大受歡迎：莫札特在信裡轉述布拉格來信說，每一首都有掌聲。1794 年它在布拉格重演成功，之後似乎每一季都演，是布拉格義大利劇團最持久的成功之一。"
+    },
+    {
+      "type": "p",
+      "text": "它到十九、二十世紀才被冷落。2018 年一本重新評價《狄托》的專書裡，學者 Hansen 寫道，原因之一是它和當年的加冕典禮綁得太緊。"
+    },
+    {
+      "type": "h",
+      "text": "維也納天天滿座"
+    },
+    {
+      "type": "p",
+      "text": "《魔笛》首演由莫札特親自指揮，第二場之後交給戲院的樂長。10 月 7 日晚上，莫札特看完戲回家，寫信給妻子："
+    },
+    {
+      "type": "quote",
+      "text": "剛看完歌劇回來，又和平常一樣滿座。……但最讓我高興的，是那安靜的讚許！看得出這部歌劇一天比一天受看重。",
+      "original": "Eben komme ich von der Oper; – Sie war eben so voll wie allzeit. – […] was mich aber am meisten freuet, ist, der Stille beifall! – man sieht recht wie sehr und immer mehr diese Oper steigt.",
+      "cite": "莫札特致妻子康斯坦采，維也納，1791 年 10 月 7–8 日（Bauer/Deutsch 第 1193 號）；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "同一封信說，有三段照例又安可了。隔天的信裡，他說週六是郵件日，對戲院來說向來是壞日子，那晚還是滿座。這封信還寫到，他跑到後台自己彈鐘琴，捉弄台上的席卡內德。席卡內德敲了一下鐘琴，說了句「閉嘴」，全場大笑。"
+    },
+    {
+      "type": "p",
+      "text": "10 月 13 日，莫札特帶薩里耶利和女高音卡瓦列里去看戲。照他隔天的信，兩人都說這部戲配得上在最偉大的君主面前演出，薩里耶利每一首都叫好。這封信只留下大約 1830 年的抄本。"
+    },
+    {
+      "type": "p",
+      "text": "《魔笛》成了席卡內德戲院有史以來最賣座的戲。但也有人不喜歡。秦岑多夫伯爵 11 月看了第 24 場，說音樂和布景很美，其他是不可思議的鬧劇。12 月，柏林的《音樂週報》說這齣「機關喜劇」布景花了大錢，卻因為內容和語言太差，沒得到預期的掌聲。到今天，劇本還是最常挨罵的部分。"
+    },
+    {
+      "type": "h",
+      "text": "後來的人怎麼接"
+    },
+    {
+      "type": "p",
+      "text": "1840 年前後，華格納在巴黎寫了一篇〈論德國音樂〉，裡面談到《魔笛》："
+    },
+    {
+      "type": "quote",
+      "text": "最關鍵的事終於發生了：莫札特自己加入了德語輕歌劇這股通俗的潮流，在它的基礎上寫出第一部偉大的德語歌劇——《魔笛》。……在那之前，德語歌劇幾乎不存在；有了這部作品，它就被創造出來了。",
+      "original": "Das Entscheidendste geschah denn endlich: Mozart selbst schloß sich dieser volksthümlichen Richtung der deutschen Operette an, und komponirte auf deren Grundlage die erste große deutsche Oper: die Zauberflöte. […] Bis dahin hatte die deutsche Oper so gut wie gar nicht existirt; mit diesem Werke war sie erschaffen.",
+      "cite": "華格納〈論德國音樂〉（Über deutsches Musikwesen，1840–41 年巴黎時期文章），《華格納文集》第一冊（1871），第 201 頁；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "他在同一篇裡點名 Winter 和 Weigl 是莫札特最直接的模仿者，又把《魔笛》和韋伯的《魔彈射手》擺在一起，當成德語音樂劇的本家。在他看來，《魔笛》一出手就是這個類型最完美的作品，後人沒辦法超越。"
+    },
+    {
+      "type": "p",
+      "text": "在威瑪，歌德當劇院總監的 1791 到 1817 年間，《魔笛》演了 82 次，是威瑪人最愛的歌劇。歌德也畫過布景草圖。他寫的續集停在第二幕開頭，可能的原因之一是找不到作曲家。"
+    },
+    {
+      "type": "p",
+      "text": "1816 年柏林上演《魔笛》，申克爾畫了夜后第一次出場那一景的布景〈夜后的星辰大廳〉，就是本文頭圖。學者 Büchel 稱它是最有名的舞台布景之一，那片星空幾乎成了《魔笛》的標誌。"
+    },
+    {
+      "type": "timeline",
+      "title": "後來的人怎麼接《魔笛》",
+      "items": [
+        {
+          "when": "1794.1.16",
+          "label": "威瑪上演",
+          "note": "歌德任威瑪劇院總監的 1791 到 1817 年間，《魔笛》在那裡演了 82 次，是威瑪人最愛的歌劇"
+        },
+        {
+          "when": "1795 年",
+          "label": "歌德動筆寫續集",
+          "note": "《魔笛第二部》只寫到第二幕開頭，1802 年以殘稿付印；1999 年才在克雷菲爾德首演"
+        },
+        {
+          "when": "約 1796 年",
+          "label": "貝多芬的變奏曲",
+          "note": "拿帕帕基諾的歌〈Ein Mädchen oder Weibchen〉寫成大提琴與鋼琴的十二段變奏，作品 66"
+        },
+        {
+          "when": "1816 年",
+          "label": "申克爾的柏林布景",
+          "note": "〈夜后的星辰大廳〉後來成了這部戲的標誌（本文頭圖）"
+        },
+        {
+          "when": "1840–41 年",
+          "label": "華格納：德語歌劇由它而生",
+          "note": "並點名 Winter、Weigl 是最直接的模仿者，把它和韋伯《魔彈射手》並列"
+        },
+        {
+          "when": "1975.10.4",
+          "label": "柏格曼電影版上映",
+          "note": "瑞典導演英格瑪．柏格曼為電視拍的《魔笛》，在斯德哥爾摩上映"
+        }
+      ],
+      "caption": "資料：威瑪古典基金會（Klassik Stiftung Weimar）導覽文字與歌德席勒檔案館手冊；Büchel〈Schinkel, Goethe und die Königin der Nacht〉；貝多芬之家作品目錄；華格納《文集》第一冊；柏格曼基金會。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wolfgang Amadé Mozart an Constanze Mozart, Wien, 7. und 8. Oktober 1791 (Bauer/Deutsch Nr. 1193)",
+      "publisher": "Internationale Stiftung Mozarteum, Digital Mozart Edition",
+      "date": "2014",
+      "url": "https://dme.mozarteum.at/DME/objs/raradocs/transcr/pdf/BD_1193.pdf",
+      "note": "Anja Morgenstern 編注；滿座、安可、「der Stille beifall」與同晚《狄托》最後一場；註 1、4、5（首演日期、Nostitz 劇院、Bedini）"
+    },
+    {
+      "title": "Wolfgang Amadé Mozart an Constanze Mozart, Wien, 8. und 9. Oktober 1791 (Bauer/Deutsch Nr. 1195)",
+      "publisher": "Internationale Stiftung Mozarteum, Digital Mozart Edition",
+      "date": "2014",
+      "url": "https://dme.mozarteum.at/DME/objs/raradocs/transcr/pdf/BD_1195.pdf",
+      "note": "週六滿座、萬事通在莊嚴場景發笑、莫札特到後台彈鐘琴"
+    },
+    {
+      "title": "Wolfgang Amadé Mozart an Constanze Mozart, Wien, 14. Oktober 1791 (Bauer/Deutsch Nr. 1196)",
+      "publisher": "Internationale Stiftung Mozarteum, Digital Mozart Edition",
+      "date": "2014",
+      "url": "https://dme.mozarteum.at/DME/objs/raradocs/transcr/pdf/BD_1196.pdf",
+      "note": "薩里耶利與卡瓦列里看戲；此信只存約 1830 年的抄本"
+    },
+    {
+      "title": "Vorwort / Preface, W. A. Mozart: Die Zauberflöte KV 620, Klavierauszug nach dem Urtext der Neuen Mozart-Ausgabe (BA 4553a)",
+      "publisher": "Bärenreiter",
+      "date": "",
+      "url": "https://www.barenreiter.co.uk/prefaces/9790006450510_Innenansicht.pdf",
+      "note": "Dietrich Berke 撰；Teutsche Oper、郊區通俗舞台、四十多次換景、票房、上演最多的德語歌劇、Zinzendorf 與柏林《音樂週報》的負評、劇本來源與「斷裂」爭議"
+    },
+    {
+      "title": "Über deutsches Musikwesen, in: Gesammelte Schriften und Dichtungen, Bd. 1",
+      "publisher": "Richard Wagner / E. W. Fritzsch, Leipzig（Internet Archive 掃描，巴伐利亞國家圖書館藏本）",
+      "date": "1871",
+      "url": "https://archive.org/details/11015432bsb",
+      "note": "第 201–203 頁：「die erste große deutsche Oper」「Bis dahin hatte die deutsche Oper so gut wie gar nicht existirt」、Winter 與 Weigl 為模仿者、與《魔彈射手》並列"
+    },
+    {
+      "title": "Mozart’s ‘La clemenza di Tito’: A Reappraisal",
+      "publisher": "Stockholm University Press（Magnus Tessing Schneider、Ruth Tatlow 編）",
+      "date": "2018-05-03",
+      "url": "https://doi.org/10.16993/ban",
+      "note": "第一章年表與文件 2、4、8、9、10（合約、發票公告、Zinzendorf 日記、皇后信、加冕日記）；Schneider 章談 1794 年重演與「porcheria tedesca」傳聞不可靠；Hansen 章談十九、二十世紀遭冷落"
+    },
+    {
+      "title": "Audioguidetext Schloss und Park Tiefurt",
+      "publisher": "Klassik Stiftung Weimar",
+      "date": "2011-11",
+      "url": "https://www.klassik-stiftung.de/assets/Audioguides/Texte/Audioguide_Tiefurt_-_Schloss_und_Park.pdf",
+      "note": "第 25 頁：1791–1817 年威瑪演出 82 次"
+    },
+    {
+      "title": "Schatzhaus der deutschen Literatur: Das Goethe- und Schiller-Archiv in Weimar",
+      "publisher": "Klassik Stiftung Weimar",
+      "date": "2015",
+      "url": "https://www.klassik-stiftung.de/assets/Dokumente/Bildung/Materialien/Themenhefte/GSA_Schatzhaus_2015_min.pdf",
+      "note": "第 17 頁：歌德《魔笛第二部》殘稿 1795 年動筆、1802 年付印、1999 年首演"
+    },
+    {
+      "title": "Zwölf Variationen über \"Ein Mädchen oder Weibchen\" aus Mozarts \"Zauberflöte\" für Klavier und Violoncello op. 66",
+      "publisher": "Beethoven-Haus Bonn",
+      "date": "",
+      "url": "https://www.beethoven.de/en/work/view/6532674608955392/?fromArchive=5145131971772416",
+      "note": "作品目錄：推測 1796 年起草"
+    },
+    {
+      "title": "Schinkel, Goethe und die Königin der Nacht",
+      "publisher": "Goethezeitportal（Wolfgang Büchel）",
+      "date": "",
+      "url": "http://www.goethezeitportal.de/fileadmin/PDF/wissen/leserbeitraege/buechel_schinkel.pdf",
+      "note": "申克爾 1816 年柏林布景、1818 年 Quaglio 慕尼黑版、威瑪 1794 年 1 月 16 日入劇目"
+    },
+    {
+      "title": "Mozart's Women: A Musical Journey",
+      "publisher": "English National Opera",
+      "date": "",
+      "url": "https://www.eno.org/discover-opera/articles/mozarts-women-a-musical-journey/",
+      "note": "夜后一角為 Josepha Hofer 而寫"
+    },
+    {
+      "title": "An Introduction to The Magic Flute",
+      "publisher": "English National Opera",
+      "date": "",
+      "url": "https://www.eno.org/discover-opera/articles/an-introduction-to-the-magic-flute/",
+      "note": "歌唱加說白的德語喜歌劇；夜后詠嘆調的高音"
+    },
+    {
+      "title": "Wolfgang Amadé Mozart",
+      "publisher": "Internationale Stiftung Mozarteum",
+      "date": "",
+      "url": "https://mozarteum.at/en/wolfgang-amade-mozart",
+      "note": "生卒年；此頁寫《狄托》9 月 5 日首演，與同基金會書信版註解及 2018 年專書的 9 月 6 日不同，本文採 9 月 6 日"
+    },
+    {
+      "title": "The Magic Flute (1975)",
+      "publisher": "Ingmar Bergman Foundation",
+      "date": "",
+      "url": "https://www.ingmarbergman.se/en/production/magic-flute",
+      "note": "1975 年 10 月 4 日斯德哥爾摩 Röda Kvarn 上映"
+    }
+  ]
+}
