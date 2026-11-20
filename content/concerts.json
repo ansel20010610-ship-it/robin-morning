@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-20",
+  "checked": "2026-11-21",
   "events": [
     {
       "id": "garcia-garcia-ksso-2026",
@@ -1254,13 +1254,6 @@
       "price": "平日 NT$1,000–4,400；週六日 NT$1,200–4,600",
       "note": "建議 6 歲以上；卡司尚未公布",
       "shows": [
-        {
-          "date": "2026-11-20",
-          "time": "19:30",
-          "city": "台北",
-          "venue": "臺北表演藝術中心大劇院",
-          "tickets": "https://tickets.udnfunlife.com/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AEBJG5"
-        },
         {
           "date": "2026-11-21",
           "time": "13:30",
