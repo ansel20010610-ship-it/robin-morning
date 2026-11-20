@@ -234,6 +234,12 @@
    "shift": "serial",
    "usd": 0.988,
    "status": "success"
+  },
+  {
+   "at": "2026-11-20T17:30+08:00",
+   "shift": "reserve",
+   "usd": 0.044,
+   "status": "success"
   }
  ]
 }
