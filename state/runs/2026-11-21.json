@@ -1,4 +1,15 @@
 {
+  "1": {
+    "finished_at": "2026-11-21T00:59:20+08:00",
+    "missing": [
+      "football",
+      "news",
+      "civilization",
+      "philosophy",
+      "canon"
+    ],
+    "note": "精簡：music（rachmaninoff-op18，flow/listener）；devotion 詩 62:5–8；perio 先發班已完成"
+  },
   "column": {
     "finished_at": "2026-11-20T22:50:28+08:00",
     "missing": [
