@@ -6,9 +6,9 @@
   "voice": "eulogist",
   "title": "為沒出版的小說被判兩年的作家 Ferrín 過世",
   "dek": "毛澤東的書三本，加上一份打字稿。法院的判決書，引的是那份稿子。",
-  "brief": "加利西亞語作家 Xosé Luís Méndez Ferrín 11 月 18 日（週三）夜裡在西班牙維哥過世，88 歲。1969 年警察從他家抄走一本還沒出版的小說，他被判兩年，在獄中繼續寫作。詩集《Con pólvora e magnolias》被加利西亞皇家學院列為當代的大經典。",
+  "brief": "加利西亞語作家 Xosé Luís Méndez Ferrín 11 月 18 日（週三）夜裡在西班牙維哥過世，88 歲。1969 年警察從他家抄走一本還沒出版的小說，他被判兩年，在獄中寫了書。詩集《Con pólvora e magnolias》被加利西亞皇家學院列為當代的大經典之一。",
   "topic_key": "obituary:mendez-ferrin-2026",
-  "updated_at": "2026-11-21T05:31:20+08:00",
+  "updated_at": "2026-11-21T05:34:02+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -17,7 +17,7 @@
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Xos%C3%A9_Lu%C3%ADs_M%C3%A9ndez_Ferr%C3%ADn_2020.jpg/1280px-Xos%C3%A9_Lu%C3%ADs_M%C3%A9ndez_Ferr%C3%ADn_2020.jpg",
     "width": 1280,
     "height": 1686,
-    "alt": "一位禿頭的老先生穿藍色襯衫和吊帶，坐在藤椅上看著鏡頭，身後是排滿書的書架，面前桌上立著兩本書，封面寫著《Con pólvora e magnolias》和《Antón e os inocentes》。",
+    "alt": "一位老先生穿藍色襯衫，坐著看向鏡頭，面前桌上立著兩本書，封面寫著《Con pólvora e magnolias》和《Antón e os inocentes》。",
     "caption": "Xosé Luís Méndez Ferrín，2020 年 1 月攝於加利西亞蓬特韋德拉（Pontevedra）的 Paz 書店，當時他 81 歲。",
     "credit": "Ogalego.gal",
     "license": "CC BY-SA 4.0",
@@ -28,19 +28,19 @@
   "body": [
     {
       "type": "p",
-      "text": "**Xosé Luís Méndez Ferrín** 是用加利西亞語寫作的詩人、小說家，11 月 18 日（週三）夜裡在西班牙西北部的城市維哥（Vigo）過世，88 歲。Nós Diario 這家媒體先報了死訊。守護加利西亞語的官方機構，叫加利西亞皇家學院，簡稱 RAG。RAG 在 11 月 19 日發表了哀悼聲明。死因沒有公布。"
+      "text": "**Xosé Luís Méndez Ferrín** 是用加利西亞語寫作的詩人、小說家，11 月 18 日（週三）夜裡在西班牙西北部的城市維哥（Vigo）過世，88 歲。Nós Diario 這家媒體先報了死訊。守護加利西亞語的官方機構，叫加利西亞皇家學院，簡稱 RAG。RAG 在 11 月 19 日發表了哀悼聲明。報導都沒有提到死因。"
     },
     {
       "type": "p",
-      "text": "加利西亞在西班牙的西北角，緊鄰葡萄牙，有自己的語言，叫加利西亞語，和葡萄牙語很近。Ferrín 1938 年生在這裡的奧倫塞（Ourense），十幾歲就出了書。"
+      "text": "加利西亞在西班牙的西北角，緊鄰葡萄牙，有自己的語言，叫加利西亞語，和葡萄牙語很近。Ferrín 1938 年生在這裡的奧倫塞（Ourense），年紀很輕就出了書。"
     },
     {
       "type": "p",
-      "text": "後來他在維哥的一所中學教西班牙語文學，教到 2009 年退休，同時寫詩、小說和專欄。RAG 現任會長說，他是加利西亞「有史以來最好的作家之一」。1999 年，加利西亞的作家協會提名他角逐諾貝爾文學獎。"
+      "text": "後來他在維哥的一所中學教西班牙語文學，教到 2009 年退休，同時寫詩、小說和專欄。RAG 的會長說，他是加利西亞「有史以來最好的作家之一」。1999 年，加利西亞的作家協會提名他角逐諾貝爾文學獎。"
     },
     {
       "type": "p",
-      "text": "1969 年 1 月 25 日，警察闖進他在維哥的家。那時西班牙還在佛朗哥將軍的獨裁底下，全國剛進入緊急狀態。Ferrín 是一個地下政黨的創始人之一，那個黨結合加利西亞的民族主義和馬克思主義。警察從他家抄走的東西是這些："
+      "text": "1969 年 1 月 25 日，警察闖進他在維哥的家。那時西班牙還在佛朗哥將軍的獨裁底下，全國進入緊急狀態。Ferrín 是一個地下政黨的創始人之一，那個黨是左翼的加利西亞民族主義政黨。警察從他家抄走的東西是這些："
     },
     {
       "type": "list",
@@ -68,7 +68,7 @@
     },
     {
       "type": "p",
-      "text": "他先關在維哥的監獄，後來轉到北邊坎塔布里亞的 El Dueso 監獄，前後將近兩年。在牢裡他寫了《Antón e os inocentes》，也寫詩，用另一個名字 Heriberto Bens 發表。"
+      "text": "他先關在維哥的監獄，後來轉到北邊坎塔布里亞的 El Dueso 監獄，實際關了將近兩年。在牢裡他寫了《Antón e os inocentes》，也寫詩，用另一個名字 Heriberto Bens 發表。"
     },
     {
       "type": "figure",
@@ -77,7 +77,7 @@
       "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Xos%C3%A9_Lu%C3%ADs_M%C3%A9ndez_Ferr%C3%ADn_e_Ant%C3%B3n_Lopo.jpg/1280px-Xos%C3%A9_Lu%C3%ADs_M%C3%A9ndez_Ferr%C3%ADn_e_Ant%C3%B3n_Lopo.jpg",
       "width": 1280,
       "height": 1104,
-      "alt": "書店裡，穿藍襯衫的老先生坐在藤椅上說話，右邊一位光頭、穿深色外套的男子微笑聽著，兩人之間的桌上立著兩本書。",
+      "alt": "書店裡，穿藍襯衫的老先生坐著說話，旁邊有另一個人在聽，兩人之間的桌上立著兩本書。",
       "caption": "2020 年 1 月，Ferrín 在蓬特韋德拉的 Paz 書店談《Antón e os inocentes》，這本書是他在獄中寫的。",
       "credit": "Ogalego.gal",
       "license": "CC BY-SA 4.0",
@@ -87,19 +87,19 @@
     },
     {
       "type": "p",
-      "text": "佛朗哥死後，他出版了詩集《Con pólvora e magnolias》，字面是「帶著火藥與木蘭花」，1977 年拿了加利西亞的批評獎。裡面有談政治的詩，也有很私人的詩。RAG 的聲明把它列為當代加利西亞文學的大經典。批評界多半認為，1991 年的短篇集《Arraianos》是他小說的高峰，故事發生在加利西亞和葡萄牙交界的地方。"
+      "text": "佛朗哥死後，他出版了詩集《Con pólvora e magnolias》，字面是「帶著火藥與木蘭花」，1977 年拿了加利西亞的批評獎。裡面有談政治的詩，也有很私人的詩。RAG 的聲明把它列為當代加利西亞文學的大經典之一。批評界多半認為，1991 年的《Arraianos》是他這類作品的高峰，故事發生在加利西亞和葡萄牙交界的地方。"
     },
     {
       "type": "p",
-      "text": "他的書主要是加利西亞語出版，2024 年又有一本《Poesía reunida》，收了他的詩。我查到的資料裡沒有提到中文或英文譯本，今天想讀他，只能找加利西亞語的原書，例如 Xerais 出版社出的那幾本。"
+      "text": "他的書主要是加利西亞語出版，2024 年有一本《Poesía reunida》，收了他的詩。我查到的資料裡沒有提到中文或英文譯本；Xerais 出版社的作者頁列了他的書，例如 2024 年的《Poesía reunida》。"
     },
     {
       "type": "p",
-      "text": "2010 年他當上 RAG 會長，2013 年 2 月辭職。他每週替維哥的《Faro de Vigo》寫專欄，最後一篇寫給加利西亞的民族主義政治領袖 Xosé Manuel Beiras，Beiras 在 10 月 8 日過世。"
+      "text": "2010 年他當上 RAG 會長，2013 年 2 月辭職。他每週替維哥的《Faro de Vigo》寫專欄，最後一篇寫的是加利西亞的民族主義政治領袖 Xosé Manuel Beiras，Beiras 在 10 月 8 日過世。"
     },
     {
       "type": "p",
-      "text": "1969 年那份小說打字稿被當成證物收進卷宗，後來被人遺忘。2018 年 3 月到 5 月間，薩拉曼卡（Salamanca）的歷史記憶文獻中心找到了整份案卷，四百多頁。裡面有兩份受潮損壞的打字稿，署名是 Ferrín 當年用的筆名 Laín Feixóo。2020 年 4 月，新冠疫情正嚴重的時候，他說他不急著出版："
+      "text": "1969 年那份小說打字稿隨案卷歸檔，後來被人遺忘。2018 年 3 月到 5 月間，薩拉曼卡（Salamanca）的歷史記憶文獻中心找到了整份案卷，四百多頁。裡面有兩份受潮損壞的打字稿；小說當年簽的是筆名 Laín Feixóo。2020 年 4 月，新冠疫情正嚴重的時候，他說他不急著出版："
     },
     {
       "type": "quote",
@@ -114,7 +114,7 @@
       "publisher": "elDiario.es（Daniel Salgado）",
       "date": "2026-11-19",
       "url": "https://eldiario.es/galicia/muere-xose-luis-mendez-ferrin-escritor-marco-ultimos-70-anos-literatura-gallega-imaginacion-materialista_1_13675899.html",
-      "note": "死亡日 2026-11-18、維哥、88 歲；1969 年搜家與兩年牢、獄中作品、Arraianos、A Trabe de Ouro、RAG 任期、最後專欄寫 Beiras。頁面更新於 11-20。"
+      "note": "死亡日 2026-11-18、維哥、88 歲；1969 年搜家與兩年牢、獄中作品、Arraianos、A Trabe de Ouro、RAG 任期、最後專欄寫 Beiras。頁面更新於 11-20。 Arraianos 此文寫 1992，稿中用 Xerais 的 1991 年。"
     },
     {
       "title": "Adiós a Méndez Ferrín, autor totémico y referente universal de la cultura gallega",
