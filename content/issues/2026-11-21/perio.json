@@ -1,0 +1,198 @@
+{
+  "column": "perio",
+  "date": "2026-11-21",
+  "title": "刮完再加一道雷射，歐洲指引說不必",
+  "dek": "牙科雷射要另外花錢，病人也常問。刮治之外多打的那道光，到底換到什麼？歐洲牙周病學會的答案是：建議不要加。",
+  "brief": "牙周炎非手術治療的核心是齦下清創，也就是把牙齦底下的牙結石和細菌膜刮乾淨。刮完要不要再加雷射或光動力療法，歐洲牙周病學會 2020 年的指引建議不要加。依據的系統性回顧裡，加光動力只多淺 0.35 毫米、差異不顯著，雷射的研究結果則各篇差很多。",
+  "takeaway": "未治療的牙周炎，刮治之外加雷射或光動力療法，目前證據看不出值得多付錢的好處；光動力只多淺 0.35 毫米且不顯著，EFP 指引因此建議兩者都不要加。",
+  "chairside": "這次治療最重要的，是把牙齦底下的牙結石和細菌膜清乾淨。常有人問要不要再加打雷射。歐洲牙周病學會看過研究後，建議不用另外加，因為目前看不出多花的錢能換到更好的效果。",
+  "topic_key": "perio:doi:10.1111/jcpe.13236",
+  "form": "argument",
+  "voice": "colleague",
+  "updated_at": "2026-11-20T22:49:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f7/LightScalpel_Dental_CO2_Laser.jpg",
+    "width": 1280,
+    "height": 1280,
+    "alt": "一台灰白色的落地式雷射機立在診間角落，正面是藍色觸控螢幕，顯示 2 Watts、20 Hz 等設定，下方印著 lightScalpel 字樣。機身上方伸出兩支銀色長臂與一條細管，黑色手機插在螢幕旁的架子上，一支長臂上掛著橘色絨毛玩偶。右側露出一張紅褐色的診療椅。",
+    "caption": "一台牙科用的二氧化碳雷射機，2019 年 7 月攝於一間兒童牙科診所。示意圖，與本文討論的研究病人無關。",
+    "credit": "Academicguru22／Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:LightScalpel_Dental_CO2_Laser.jpg",
+    "made": "2019"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "**牙周炎的非手術治療，刮乾淨就好，不必再加一道雷射或光動力療法。**這是歐洲牙周病學會在 2020 年臨床指引裡給的建議，英文簡稱 EFP。目前的研究看不出多加這一道，能換到值得病人多付錢的好處。"
+    },
+    {
+      "type": "p",
+      "text": "這裡的「刮」指的是**齦下清創**，就是把牙根表面、牙齦底下的牙結石和細菌膜清乾淨。問題是刮完再打雷射或做**光動力療法**，會不會更好。光動力療法是先讓一種感光染料黏在細菌外膜上，再用雷射光照。染料會產生活性氧，就地把那些細菌殺掉。"
+    },
+    {
+      "type": "p",
+      "text": "雷射是診間常被問到、也要花錢添購的設備，所以值得知道指引怎麼看它。這份指引處理第 I 到 III 期牙周炎，先委託 15 篇系統性回顧整理證據，2019 年 11 月在西班牙由專家逐條投票。雷射和光動力這兩條，依據的是瑞士伯恩大學與巴塞爾大學團隊的回顧，第一作者是 **Salvi**。"
+    },
+    {
+      "type": "h",
+      "text": "先看刮治本身做到多少"
+    },
+    {
+      "type": "p",
+      "text": "指引對齦下清創本身是 A 級強建議，專家全體一致同意。治療後 6 到 8 個月，探測深度平均少了 1.7 毫米，平均 74% 的囊袋閉合。原本深於 6 毫米的位置，平均少了 2.6 毫米。"
+    },
+    {
+      "type": "p",
+      "text": "囊袋閉合是指引定的治療終點：探測深度 4 毫米以下，而且探診不出血。"
+    },
+    {
+      "type": "table",
+      "title": "EFP S3 指引怎麼看刮治與加上去的兩種光",
+      "head": [
+        "問題",
+        "指引怎麼說",
+        "依據",
+        "建議等級",
+        "專家同意的程度"
+      ],
+      "rows": [
+        [
+          "齦下清創本身（建議 2.1）",
+          "建議做",
+          "1 篇隨機試驗 169 人＋11 篇前瞻研究 258 人",
+          "A 級強建議（↑↑）",
+          "全體一致（100%）"
+        ],
+        [
+          "加雷射（建議 2.4）",
+          "建議不要加",
+          "5 篇隨機試驗 147 人，單次照射，追蹤至少 6 個月",
+          "B 級建議（↓）",
+          "簡單多數（50–74%）"
+        ],
+        [
+          "加光動力療法（建議 2.5）",
+          "建議不要加",
+          "5 篇隨機試驗 121 人，單次照射，追蹤至少 6 個月",
+          "B 級建議（↓）",
+          "共識（75–95%）"
+        ]
+      ],
+      "caption": "歐洲牙周病學會（EFP）第 I–III 期牙周炎 S3 臨床指引，2020 年。「強建議」用 we recommend，「建議」用 we suggest；同意程度是投票的專家裡贊成的比例，可能有利益衝突的成員迴避不投。依 Sanz 等 2020 指引全文整理。"
+    },
+    {
+      "type": "h",
+      "text": "加光動力：多淺 0.35 毫米，說不上有差"
+    },
+    {
+      "type": "p",
+      "text": "Salvi 團隊找到雷射 10 篇、光動力 8 篇對照研究。光動力能合起來算的只有 2 篇，一共 42 人，都是同一個人的嘴分左右兩邊，一邊加、一邊不加。"
+    },
+    {
+      "type": "p",
+      "text": "加光動力的那一邊，囊袋平均多淺 0.35 毫米。95% 信賴區間是 −0.04 到 0.73，指真正的差值大概在這之間。範圍跨過 0，「其實沒差」也說得通。"
+    },
+    {
+      "type": "p",
+      "text": "指引看的 5 篇隨機試驗、121 人，都只照一次光、看 6 個月。它的說法是：加光動力，沒有看到好處，但也沒有造成傷害。"
+    },
+    {
+      "type": "p",
+      "text": "注意，1.7 毫米是同一批人治療前後的變化，0.35 毫米是兩組之間的差，不能直接比大小。"
+    },
+    {
+      "type": "svg",
+      "title": "刮治本身做到的，和加上去的",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 680 380\">\n<rect class=\"paper\" x=\"0\" y=\"0\" width=\"680\" height=\"380\"/>\n<text class=\"ink\" x=\"20\" y=\"30\" font-size=\"17\" font-weight=\"bold\">囊袋淺了幾毫米：刮治本身，和加上去的光</text>\n<text class=\"muted\" x=\"20\" y=\"52\" font-size=\"12\">示意，橫軸按比例。上兩條是治療前後的變化，下兩條是加與不加兩組之間的差，比較的東西不同</text>\n<text class=\"ink\" x=\"20\" y=\"96\" font-size=\"13\">只做齦下清創</text>\n<text class=\"muted\" x=\"20\" y=\"113\" font-size=\"11\">治療前後，6–8 個月</text>\n<rect class=\"ink\" x=\"230\" y=\"84\" width=\"238\" height=\"24\"/>\n<text class=\"ink\" x=\"476\" y=\"101\" font-size=\"14\" font-weight=\"bold\">1.7 毫米</text>\n<text class=\"ink\" x=\"20\" y=\"156\" font-size=\"13\">其中深於 6 毫米的位置</text>\n<text class=\"muted\" x=\"20\" y=\"173\" font-size=\"11\">治療前後</text>\n<rect class=\"ink\" x=\"230\" y=\"144\" width=\"364\" height=\"24\"/>\n<text class=\"ink\" x=\"602\" y=\"161\" font-size=\"14\" font-weight=\"bold\">2.6 毫米</text>\n<line class=\"muted\" stroke-width=\"1\" stroke-dasharray=\"3 3\" x1=\"230\" y1=\"70\" x2=\"230\" y2=\"320\"/>\n<text class=\"ink\" x=\"20\" y=\"216\" font-size=\"13\">加光動力療法，多淺的</text>\n<text class=\"muted\" x=\"20\" y=\"233\" font-size=\"11\">2 篇分口試驗、42 人</text>\n<rect class=\"accent\" x=\"230\" y=\"206\" width=\"49\" height=\"20\"/>\n<line class=\"accent\" stroke-width=\"2\" x1=\"224\" y1=\"236\" x2=\"332\" y2=\"236\"/>\n<line class=\"accent\" stroke-width=\"2\" x1=\"224\" y1=\"231\" x2=\"224\" y2=\"241\"/>\n<line class=\"accent\" stroke-width=\"2\" x1=\"332\" y1=\"231\" x2=\"332\" y2=\"241\"/>\n<text class=\"accent\" x=\"342\" y=\"221\" font-size=\"14\" font-weight=\"bold\">0.35 毫米</text>\n<text class=\"muted\" x=\"342\" y=\"240\" font-size=\"11\">95% 信賴區間 −0.04 到 0.73，差異不顯著</text>\n<text class=\"ink\" x=\"20\" y=\"276\" font-size=\"13\">刮治加二極體雷射，多的</text>\n<text class=\"muted\" x=\"20\" y=\"293\" font-size=\"11\">美國牙周病學會 2018 回顧</text>\n<rect class=\"soft\" x=\"230\" y=\"264\" width=\"140\" height=\"24\"/>\n<rect class=\"accent line\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\" x=\"230\" y=\"264\" width=\"140\" height=\"24\"/>\n<text class=\"accent\" x=\"380\" y=\"281\" font-size=\"14\" font-weight=\"bold\">不到 1 毫米</text>\n<line class=\"ink\" stroke-width=\"1.5\" x1=\"230\" y1=\"322\" x2=\"650\" y2=\"322\"/>\n<line class=\"ink\" stroke-width=\"1.5\" x1=\"230\" y1=\"322\" x2=\"230\" y2=\"330\"/>\n<text class=\"muted\" x=\"230\" y=\"346\" font-size=\"12\" text-anchor=\"middle\">0</text>\n<line class=\"ink\" stroke-width=\"1.5\" x1=\"370\" y1=\"322\" x2=\"370\" y2=\"330\"/>\n<text class=\"muted\" x=\"370\" y=\"346\" font-size=\"12\" text-anchor=\"middle\">1</text>\n<line class=\"ink\" stroke-width=\"1.5\" x1=\"510\" y1=\"322\" x2=\"510\" y2=\"330\"/>\n<text class=\"muted\" x=\"510\" y=\"346\" font-size=\"12\" text-anchor=\"middle\">2</text>\n<line class=\"ink\" stroke-width=\"1.5\" x1=\"650\" y1=\"322\" x2=\"650\" y2=\"330\"/>\n<text class=\"muted\" x=\"650\" y=\"346\" font-size=\"12\" text-anchor=\"middle\">3</text>\n<text class=\"muted\" x=\"620\" y=\"366\" font-size=\"12\">毫米</text>\n</svg>",
+      "caption": "示意，橫軸按比例。上兩條是只做齦下清創、治療前後探測深度的平均減少（EFP S3 指引整理 11 篇前瞻研究）；第三條是加光動力療法的一邊比只刮治的一邊多減少的深度，細線是 95% 信賴區間，跨過 0（Salvi 等 2020 摘要）；第四條只標出「不到 1 毫米」的範圍，回顧摘要沒有給單一數字（Chambrone 等 2018 摘要）。前兩條和後兩條比較的東西不同，不能直接相減。"
+    },
+    {
+      "type": "h",
+      "text": "加雷射：各篇結果差太多"
+    },
+    {
+      "type": "p",
+      "text": "雷射各篇在 6 個月時的結果差很多。指引用到 5 篇隨機試驗、147 人，用的雷射、波長、治療方式和病人都不一樣，多數研究的偏差風險也不明。"
+    },
+    {
+      "type": "p",
+      "text": "指引的結論是證據不足，不能建議加雷射，而且**多出來的費用可能不值得**。這一條專家意見比較分歧，贊成的只有 50% 到 74%。"
+    },
+    {
+      "type": "quote",
+      "text": "我們建議不要把雷射當作齦下清創的輔助。",
+      "original": "We suggest not to use lasers as adjuncts to subgingival instrumentation.",
+      "cite": "EFP S3 臨床指引，建議 2.4（Sanz 等，2020）；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "多數雷射研究沒有報告副作用。Salvi 團隊的結論是：對照研究太少，設計又彼此差很多；病人感受得到的好處，還沒被證明。"
+    },
+    {
+      "type": "h",
+      "text": "美國那邊的回顧"
+    },
+    {
+      "type": "p",
+      "text": "美國牙周病學會 2018 年也有一份紅外線雷射的回顧，由 Chambrone 等人整理 28 篇論文。它的結論比較寬：刮治加二極體雷射，探測深度和附著程度可能有統計上顯著的改善。不過兩組的差都不到 1 毫米，證據確定性低到中等。"
+    },
+    {
+      "type": "quote",
+      "text": "不過這些增益相對小（不到 1 毫米），和只做刮治與根面整平相比，臨床意義有限。",
+      "original": "However, these gains are relatively small (< 1 mm) and provide modest clinical relevance compared with SRP alone.",
+      "cite": "Chambrone 等，2018，美國牙周病學會最佳證據回顧，摘要結論；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "指引原訂有效到 2025 年，EFP 說有重大新證據會更新。"
+    },
+    {
+      "type": "paper",
+      "citation": "Salvi GE, Stähli A, Schmidt JC, Ramseier CA, Sculean A, Walter C. Adjunctive laser or antimicrobial photodynamic therapy to non-surgical mechanical instrumentation in patients with untreated periodontitis: A systematic review and meta-analysis. *J Clin Periodontol*. 2020;47(Suppl 22):176–198.",
+      "doi": "10.1111/jcpe.13236",
+      "pmid": "31859395",
+      "link": "https://doi.org/10.1111/jcpe.13236",
+      "evidence": "系統性回顧與統合分析：雷射 10 篇、光動力 8 篇對照研究；EFP 指引據此建議不加（B 級）",
+      "design": "系統性回顧與統合分析，依 PRISMA 報告；納入隨機對照試驗與非隨機對照臨床試驗，主要結果是探測深度變化。瑞士伯恩大學與巴塞爾大學。EFP S3 指引建議 2.4、2.5 的依據",
+      "sample": "1,202 筆文獻篩出雷射 10 篇、光動力療法 8 篇；能做統合分析的只有光動力 2 篇、共 42 人（分口設計）",
+      "question": "未治療的牙周炎病人，在非手術機械清創之外加雷射或抗菌光動力療法，探測深度會不會比只做清創改善更多？",
+      "access": "依摘要整理（PubMed、Europe PMC），全文未能開啟；指引建議、納入試驗數與齦下清創的效果依 EFP S3 臨床指引（Sanz 等 2020）全文"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Adjunctive laser or antimicrobial photodynamic therapy to non-surgical mechanical instrumentation in patients with untreated periodontitis: A systematic review and meta-analysis",
+      "publisher": "Journal of Clinical Periodontology（Salvi GE、Stähli A、Schmidt JC、Ramseier CA、Sculean A、Walter C）",
+      "date": "2020-07-27",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31859395/",
+      "note": "讀摘要（PubMed E-utilities、Europe PMC）；出版社全文未能開啟。日期依 Crossref 線上出版日"
+    },
+    {
+      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Sanz M、Herrera D、Kebschull M 等）",
+      "date": "2020-07-27",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32383274/",
+      "note": "讀全文（Europe PMC，PMC7891343）：方法（建議等級表 4、共識強度表 5、會議時地、有效期）、建議 2.1、2.4、2.5。日期依 Crossref 線上出版日"
+    },
+    {
+      "title": "Infrared lasers for the treatment of moderate to severe periodontitis: An American Academy of Periodontology best evidence review",
+      "publisher": "Journal of Periodontology（Chambrone L、Ramos UD、Reynolds MA）",
+      "date": "2018-07",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29682757/",
+      "note": "讀摘要（Europe PMC）。日期依 PubMed 刊期（2018 年 7 月，89 卷 7 期）"
+    },
+    {
+      "title": "File:LightScalpel Dental CO2 Laser.jpg",
+      "publisher": "Wikimedia Commons（Academicguru22）",
+      "date": "2019-07-23",
+      "url": "https://commons.wikimedia.org/wiki/File:LightScalpel_Dental_CO2_Laser.jpg",
+      "note": "頭圖；檔案說明與授權"
+    }
+  ]
+}
