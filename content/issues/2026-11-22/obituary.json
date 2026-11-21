@@ -1,214 +1,214 @@
 {
-  "column": "obituary",
-  "date": "2026-11-22",
-  "status": "update",
-  "form": "scene",
-  "voice": "eulogist",
-  "title": "電視上接到那通電話的 Augias 過世，91 歲",
-  "dek": "1988 年他對著話筒說：「請別掛！」那通電話，讓一樁事隔八年的空難重新被問起。",
-  "brief": "義大利記者、作家、電視主持人 Corrado Augias 11 月 19 日（週四）上午在羅馬過世，91 歲。他主持的調查節目，曾接到一通匿名電話，來電者說烏斯蒂卡空難那晚，雷達站的人被命令閉嘴。他生前親手編好一集告別節目，義大利的週一晚間播出。",
-  "topic_key": "obituary:augias-2026",
-  "updated_at": "2026-11-22T05:27:00+08:00",
-  "spoiler": null,
-  "disclaimer": null,
-  "hero": {
-    "id": "f0",
-    "kind": "photo",
-    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Augias_Corrado-2016.05.15.SalTo16-5600.jpg/1280px-Augias_Corrado-2016.05.15.SalTo16-5600.jpg",
-    "width": 1280,
-    "height": 853,
-    "alt": "一位頭髮灰白的老先生，穿深色格紋外套和淺藍襯衫，坐在麥克風前，看向鏡頭旁邊；背後是藍色的布幕。",
-    "caption": "Corrado Augias，2016 年 5 月 15 日攝於義大利都靈的國際書展，當時他 81 歲。",
-    "credit": "Andrea Pellegrini",
-    "license": "CC BY 3.0",
-    "license_url": "https://creativecommons.org/licenses/by/3.0",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Augias_Corrado-2016.05.15.SalTo16-5600.jpg",
-    "made": "2016"
+ "column": "obituary",
+ "date": "2026-11-22",
+ "status": "update",
+ "form": "scene",
+ "voice": "eulogist",
+ "title": "電視上接到那通電話的 Augias 過世，91 歲",
+ "dek": "1988 年他在節目上對來電的人說：「請別掛。」據來電者說，一樁事隔八年的空難，有人下令不准說。",
+ "brief": "義大利記者、作家、電視主持人 Corrado Augias 11 月 19 日（週四）上午在羅馬過世，91 歲。他主持的調查節目，曾接到一通匿名電話，來電者說烏斯蒂卡空難那晚，雷達站的人被命令閉嘴。他生前親手編好一集告別節目，義大利的週一晚間播出。",
+ "topic_key": "obituary:augias-2026",
+ "updated_at": "2026-11-22T05:31:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "hero": {
+  "id": "f0",
+  "kind": "photo",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Augias_Corrado-2016.05.15.SalTo16-5600.jpg/1280px-Augias_Corrado-2016.05.15.SalTo16-5600.jpg",
+  "width": 1280,
+  "height": 853,
+  "alt": "一位頭髮灰白的老先生，穿深色格紋外套和淺藍襯衫，坐在麥克風前，看向鏡頭旁邊；背後有藍色的螢幕。",
+  "caption": "Corrado Augias，2016 年 5 月 15 日攝於義大利都靈的國際書展，當時他 81 歲。",
+  "credit": "Andrea Pellegrini",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Augias_Corrado-2016.05.15.SalTo16-5600.jpg",
+  "made": "2016"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "**Corrado Augias**（科拉多・奧賈斯）是義大利的記者、作家、電視主持人，11 月 19 日（週四）上午在羅馬過世，91 歲。羅馬市政府當天發了公告，義大利國家通訊社 ANSA 也報了消息；《Avvenire》寫他在羅馬過世。他在義大利電視上露臉幾十年，主持過專講懸案的**《Telefono giallo》**，最後幾年在電視台 La7 主持談書的《La Torre di Babele》。死因沒有公布。"
   },
-  "body": [
+  {
+   "type": "p",
+   "text": "1988 年 5 月 6 日，義大利國家電視台 Rai 第三台的攝影棚裡，《Telefono giallo》正在播出。這個節目專門談沒破的案子，觀眾可以打電話進來。那天晚上進來的電話裡，有一通是關於烏斯蒂卡（Ustica）空難。1980 年 6 月 27 日，Itavia 航空一架從波隆那飛巴勒摩的客機，在西西里北邊海上的烏斯蒂卡附近墜海。事情已經過了將近八年。"
+  },
+  {
+   "type": "p",
+   "text": "主持人拿起話筒。另一頭的男人說，空難那天晚上他在西西里的馬薩拉（Marsala）雷達中心值勤，是空軍的人員。他說客機是在一場空戰裡被打下來的，長官下令，這件事不准說出去。"
+  },
+  {
+   "type": "quote",
+   "text": "事實就是這樣，他們叫我們閉嘴。",
+   "original": "La verità è questa, ci hanno detto di stare zitti",
+   "cite": "來電者，《Telefono giallo》，1988 年 5 月 6 日；引自 Il Resto del Carlino，2026 年 11 月 19 日"
+  },
+  {
+   "type": "p",
+   "text": "這是來電者一個人的說法。Augias 想把他留在線上，對著話筒說：請別掛。接著又勸他不要再匿名，站出來。電話斷了。"
+  },
+  {
+   "type": "h",
+   "text": "電話之後"
+  },
+  {
+   "type": "p",
+   "text": "Augias 後來在一次訪談裡說，節目播出的隔天，反黑手黨的檢察官博爾塞利諾（Paolo Borsellino）打電話給他，說烏斯蒂卡案會重新調查。這是他自己的說法。烏斯蒂卡罹難者家屬協會的會長 Daria Bonfietti，在他過世那天說，那通匿名電話讓人看見真相是被人蓋住的，他的節目也一集一集，把案子裡的矛盾和阻礙擺出來。"
+  },
+  {
+   "type": "p",
+   "text": "這種問法，他不是只用過一次。1994 年 3 月 19 日，他在另一個節目《Domino》上，問後來多次當總理的媒體大亨貝魯斯柯尼（Silvio Berlusconi），是不是 P2 的成員。P2 是共濟會的一個分會。貝魯斯柯尼說這是挑釁，是「左派在克格勃學校學來的老把戲」。同一年，Augias 以無黨籍身分，列在民主左派黨的名單上，當選歐洲議會議員，做到 1999 年。他是在這場電視衝突之後去參選的。他後來說，自己在歐洲議會像一頭闖進瓷器店的大象。"
+  },
+  {
+   "type": "h",
+   "text": "一個無神論者的耶穌"
+  },
+  {
+   "type": "p",
+   "text": "他是無神論者，宗教史卻是他寫過好幾本書的題目。2006 年他合寫**《Inchiesta su Gesù》**（對耶穌的調查），公教方面有人說這是直接攻擊信仰。天主教的《Avvenire》日報在他的訃文標題寫：他把懷疑變成了暢銷書。文裡說，他的宗教史書內容常有爭議，賣得卻一向很好。他最後一本書，是和女兒 Natalia 合寫的馬基維利傳記。"
+  },
+  {
+   "type": "timeline",
+   "title": "Augias 的幾個時間點",
+   "items": [
     {
-      "type": "p",
-      "text": "**Corrado Augias**（科拉多・奧賈斯）是義大利的記者、作家、電視主持人，11 月 19 日（週四）上午在羅馬過世，91 歲。羅馬市政府當天發了公告，義大利國家通訊社 ANSA 也報了消息。他在義大利電視上露臉幾十年，主持過專講懸案的《Telefono giallo》、談書的《Babele》，最後幾年在電視台 La7 主持《La Torre di Babele》。死因沒有公布。"
+     "when": "1935.1.26",
+     "label": "生於羅馬"
     },
     {
-      "type": "p",
-      "text": "1988 年 5 月 6 日，義大利國家電視台 Rai 第三台的攝影棚裡，**《Telefono giallo》**正在播出。這個節目專門談沒破的案子，觀眾可以打電話進來。那天晚上進來的電話裡，有一通是關於烏斯蒂卡（Ustica）空難。1980 年 6 月 27 日，Itavia 航空一架從波隆那飛巴勒摩的客機，在西西里北邊海上的烏斯蒂卡附近墜海。事情已經過了將近八年。"
+     "when": "1960 年",
+     "label": "進 Rai"
     },
     {
-      "type": "p",
-      "text": "主持人拿起話筒。另一頭的男人說，空難那天晚上他在西西里的馬薩拉（Marsala）雷達中心值勤，是空軍的人員。他說客機是在一場空戰裡被打下來的，長官下令，這件事不准說出去。"
+     "when": "1987 年",
+     "label": "Rai 第三台推出《Telefono giallo》"
     },
     {
-      "type": "quote",
-      "text": "事實就是這樣，他們叫我們閉嘴。",
-      "original": "La verità è questa, ci hanno detto di stare zitti",
-      "cite": "來電者，《Telefono giallo》，1988 年 5 月 6 日；引自 Il Resto del Carlino，2026 年 11 月 19 日"
+     "when": "1988.5.6",
+     "label": "節目上那通談烏斯蒂卡的電話"
     },
     {
-      "type": "p",
-      "text": "這是來電者一個人的說法。Augias 想把他留在線上，對著話筒說：請別掛。接著又勸他不要再匿名，站出來。電話斷了。"
+     "when": "1994 年",
+     "label": "當選歐洲議會議員，任到 1999 年"
     },
     {
-      "type": "h",
-      "text": "電話之後"
+     "when": "2001–2021",
+     "label": "主編《共和報》讀者來信專欄",
+     "note": "回了近 6,000 封"
     },
     {
-      "type": "p",
-      "text": "Augias 後來在一次訪談裡說，節目播出的隔天，反黑手黨的檢察官博爾塞利諾（Paolo Borsellino）打電話給他，說烏斯蒂卡案會重新調查。這是他自己的說法。烏斯蒂卡罹難者家屬協會的會長 Daria Bonfietti，在他過世那天說，那通匿名電話讓人看見真相是被人蓋住的，他的節目也一集一集，把案子裡的矛盾和阻礙擺出來。"
+     "when": "2006 年",
+     "label": "《Inchiesta su Gesù》出版"
     },
     {
-      "type": "p",
-      "text": "這種問法，他不是只用過一次。1994 年 3 月 19 日，他在另一個節目《Domino》上，問媒體大亨貝魯斯柯尼（Silvio Berlusconi，後來多次出任義大利總理），是不是 P2 的成員。P2 是共濟會的一個分會。貝魯斯柯尼說這是挑釁，是「左派在克格勃學校學來的老把戲」。同一年，Augias 以無黨籍身分，列在民主左派黨的名單上，當選歐洲議會議員，做到 1999 年。《Il Fatto Quotidiano》寫，他的參選接在這場電視衝突之後。他後來說，自己在歐洲議會像一頭闖進瓷器店的大象。"
+     "when": "2020.12.14",
+     "label": "預定歸還法國榮譽軍團勳章的日子"
     },
     {
-      "type": "h",
-      "text": "一個無神論者的耶穌"
+     "when": "2023.12.4",
+     "label": "La7《La Torre di Babele》開播"
     },
     {
-      "type": "p",
-      "text": "他是無神論者，受過天主教洗禮，宗教卻是他最常寫的題目之一。2006 年他和 Mauro Pesce 合寫**《Inchiesta su Gesù》**（對耶穌的調查），公教方面有人說這是直接攻擊信仰。天主教的《Avvenire》日報在他的訃文標題寫：他把懷疑變成了暢銷書。文裡說，這些書的內容常有爭議，賣得卻一向很好。他最後一本書，是和女兒 Natalia 合寫的馬基維利傳記。"
-    },
-    {
-      "type": "timeline",
-      "title": "Augias 的幾個時間點",
-      "items": [
-        {
-          "when": "1935.1.26",
-          "label": "生於羅馬"
-        },
-        {
-          "when": "1960 年",
-          "label": "進 Rai"
-        },
-        {
-          "when": "1987 年",
-          "label": "Rai 第三台推出《Telefono giallo》"
-        },
-        {
-          "when": "1988.5.6",
-          "label": "節目上那通談烏斯蒂卡的電話"
-        },
-        {
-          "when": "1994 年",
-          "label": "當選歐洲議會議員，任到 1999 年"
-        },
-        {
-          "when": "2001–2021",
-          "label": "主編《共和報》讀者來信專欄",
-          "note": "回了近 6,000 封"
-        },
-        {
-          "when": "2006 年",
-          "label": "《Inchiesta su Gesù》出版"
-        },
-        {
-          "when": "2020.12.14",
-          "label": "預定歸還法國榮譽軍團勳章的日子"
-        },
-        {
-          "when": "2023.12.4",
-          "label": "La7《La Torre di Babele》開播"
-        },
-        {
-          "when": "2026.11.19",
-          "label": "在羅馬過世"
-        }
-      ]
-    },
-    {
-      "type": "h",
-      "text": "一枚勳章"
-    },
-    {
-      "type": "p",
-      "text": "2020 年 12 月 12 日，他在《共和報》（la Repubblica）發表一封信：14 日（週一），他要把法國榮譽軍團勳章送回法國駐羅馬大使館。法國剛把同一枚勳章頒給埃及總統塞西，他說塞西實質上成了凶殘罪犯的共犯。信裡提到 Giulio Regeni，一位義大利籍的劍橋大學博士生，2016 年 1 月在開羅失蹤，後來被發現遭酷刑致死。他說這個舉動「很嚴重，但純粹是象徵性」；法國是他家族的原鄉，所以他覺得非這麼做不可。"
-    },
-    {
-      "type": "h",
-      "text": "最後一週"
-    },
-    {
-      "type": "p",
-      "text": "最後那一週的事，是他的朋友、《晚郵報》記者 Cazzullo 寫下的。11 月 16 日（週一），他為《La Torre di Babele》的最後一集交代了指示。17 日（週二）晚上，他一通一通打電話給朋友，道別，道謝。18 日（週三），他和太太 Daniela Pasti、女兒、女婿和孫子女告別。Cazzullo 記下他的話："
-    },
-    {
-      "type": "quote",
-      "text": "我不怕死，我怕的是怎麼死。我想自己選什麼時候走、怎麼走。",
-      "original": "Non mi fa paura la morte, mi fa paura il morire. Voglio scegliere io quando e come andarmene",
-      "cite": "Augias，經 Aldo Cazzullo 在《晚郵報》記下；引自 Sky TG24，2026 年 11 月 20 日"
-    },
-    {
-      "type": "p",
-      "text": "隔天上午他過世。女兒 Natalia 對《共和報》說，她父親有一個祕密：他從來沒有老過。"
-    },
-    {
-      "type": "p",
-      "text": "他的書大多是義大利文。讀者最容易遇見他的地方，是義大利的 La7 台：**11 月 23 日（週一）**義大利晚間的黃金時段，播出他生前親手編好的《Corrado Augias, Saluto di un Maestro》（一位大師的告別）。台長說，他從兩三集《La Torre di Babele》裡挑了片段，交代怎麼接，選了片頭音樂和最後一句話，還要求排在週一。"
+     "when": "2026.11.19",
+     "label": "在羅馬過世"
     }
-  ],
-  "sources": [
-    {
-      "title": "Morto Corrado Augias: addio al giornalista e divulgatore, aveva 91 anni",
-      "publisher": "Il Fatto Quotidiano",
-      "date": "2026-11-19",
-      "url": "https://www.ilfattoquotidiano.it/2026/11/19/corrado-augias-morte-giornalista-notizie/8576995/",
-      "note": "年表、1994 年與貝魯斯柯尼的衝突和歐洲議會、無神論、讀者來信專欄；未寫死亡地點與死因。"
-    },
-    {
-      "title": "Addio a Corrado Augias, giornalista, scrittore, conduttore e autore televisivo",
-      "publisher": "ANSA",
-      "date": "2026-11-19",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/19/addio-a-corrado-augias-giornalista-scrittore-conduttore-e-autore-televisivo_ec1aa297-bc9d-47f4-827a-2310ee2e3c22.html",
-      "note": "生於羅馬 1935 年 1 月 26 日、91 歲、Rai 與 La7 的節目、各方聲明；頁首顯示時間為 11-20 12:36，網址與內文是 11-19。"
-    },
-    {
-      "title": "Addio a Corrado Augias, camera ardente in Campidoglio",
-      "publisher": "Roma Capitale（羅馬市政府）",
-      "date": "2026-11-19",
-      "url": "https://www.comune.roma.it/web/it/notizia/augias-camera-ardente-in-campidoglio.page",
-      "note": "公告寫「週四 11 月 19 日上午」過世、91 歲；靈堂與市議會默哀。"
-    },
-    {
-      "title": "Quando il Telefono giallo di Corrado Augias squillò svelando i segreti di Ustica: “Non riattacchi, la prego!”",
-      "publisher": "Il Resto del Carlino",
-      "date": "2026-11-19",
-      "url": "https://www.ilrestodelcarlino.it/bologna/cronaca/augias-telefono-giallo-ustica-pev4nbu1",
-      "note": "1988 年 5 月 6 日的來電、原文引句、博爾塞利諾隔天來電（Augias 自己的說法）、Bonfietti 的話。來電者的說法報導寫成「sosteneva」「sarebbe stato abbattuto」，未經查證。"
-    },
-    {
-      "title": "Corrado Augias, oggi la camera ardente. I funerali laici saranno in forma privata",
-      "publisher": "Sky TG24",
-      "date": "2026-11-20",
-      "url": "https://tg24.sky.it/cronaca/2026/11/20/corrado-augias-camera-ardente-funerali",
-      "note": "Cazzullo 記述的最後三天與引句、女兒 Natalia 的話、告別特輯（Saluto di un Maestro）的細節。"
-    },
-    {
-      "title": "Corrado Augias, gli ultimi giorni prima di morire: il lavoro fino alla fine, le telefonate agli amici e l'addio alla famiglia",
-      "publisher": "La Voce Nuova",
-      "date": "2026-11-20",
-      "url": "https://www.vocenuova.info/cultura/corrado-augias-gli-ultimi-giorni-prima-di-morire-il-lavoro-fino-alla-fine-le-telefonate-agli-amici-e-laddio-alla-famiglia/",
-      "note": "轉述 Cazzullo，同一句引文；未指出明確的死因。"
-    },
-    {
-      "title": "Addio a Corrado Augias, che trasformò il dubbio in bestseller",
-      "publisher": "Avvenire",
-      "date": "2026-11-19",
-      "url": "https://www.avvenire.it/agora/cultura/addio-a-corrado-augias-che-trasformo-il-dubbio-in-bestseller_116028",
-      "note": "死於羅馬、宗教史書（《Inchiesta su Gesù》2006）與評語、最後一本書。"
-    },
-    {
-      "title": "Farewell to Corrado Augias. From I Segreti delle città to Babele, a life dedicated to chronicling culture",
-      "publisher": "Finestre sull'Arte",
-      "date": "2026-11-19",
-      "url": "https://www.finestresullarte.info/en/news/farewell-to-corrado-augias-from-i-segreti-delle-citta-to-babele-a-life-dedicated-to-chronicling-culture",
-      "note": "事業年表、La Torre di Babele 開播日、對《Inchiesta su Gesù》的反應。"
-    },
-    {
-      "title": "Corrado Augias restituirà la Legion d’onore",
-      "publisher": "Il Post",
-      "date": "2020-12-13",
-      "url": "https://www.ilpost.it/2020/12/13/augias-legion-donore-giulio-regeni/",
-      "note": "2020 年 12 月 12 日給《共和報》的信與引句、Regeni 案。"
-    }
-  ]
+   ]
+  },
+  {
+   "type": "h",
+   "text": "一枚勳章"
+  },
+  {
+   "type": "p",
+   "text": "2020 年 12 月 12 日，他在《共和報》（la Repubblica）發表一封信：14 日（週一），他要把法國榮譽軍團勳章送回法國駐羅馬大使館。他在信裡說的理由是這樣：法國剛把同一枚勳章頒給埃及總統塞西，他說塞西實質上成了凶殘罪犯的共犯。信裡提到 Giulio Regeni，一位義大利籍的劍橋大學博士生，2016 年 1 月在開羅失蹤，後來被發現遭酷刑致死。他說這個舉動「很嚴重，但純粹是象徵性」；法國是他家族的原鄉，所以他覺得非這麼做不可。"
+  },
+  {
+   "type": "h",
+   "text": "最後一週"
+  },
+  {
+   "type": "p",
+   "text": "最後那一週的事，是《晚郵報》記者 Cazzullo 寫下的。11 月 16 日（週一），他為《La Torre di Babele》的最後一集交代了指示。17 日（週二）晚上，他一通一通打電話給朋友，道別，道謝。18 日（週三），他和太太 Daniela Pasti、女兒、女婿和孫子女告別。Cazzullo 記下他的話："
+  },
+  {
+   "type": "quote",
+   "text": "我不怕死，我怕的是怎麼死。我想自己選什麼時候走、怎麼走。",
+   "original": "Non mi fa paura la morte, mi fa paura il morire. Voglio scegliere io quando e come andarmene",
+   "cite": "Augias，經 Aldo Cazzullo 在《晚郵報》記下；引自 Sky TG24，2026 年 11 月 20 日"
+  },
+  {
+   "type": "p",
+   "text": "報導沒有說他是怎麼走的。他在 19 日上午過世。女兒 Natalia 對《共和報》說，她父親有一個祕密：他從來沒有老過。"
+  },
+  {
+   "type": "p",
+   "text": "他的書大多是義大利文。讀者最容易遇見他的地方，是義大利的 La7 台：**11 月 23 日（週一）**義大利晚間的黃金時段，播出他生前親手編好的《Corrado Augias, Saluto di un Maestro》（一位大師的告別）。台長說，他從兩三集《La Torre di Babele》裡挑了片段，交代怎麼接，選了片頭音樂和最後一句話，還要求排在週一。"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Morto Corrado Augias: addio al giornalista e divulgatore, aveva 91 anni",
+   "publisher": "Il Fatto Quotidiano",
+   "date": "2026-11-19",
+   "url": "https://www.ilfattoquotidiano.it/2026/11/19/corrado-augias-morte-giornalista-notizie/8576995/",
+   "note": "年表、1994 年與貝魯斯柯尼的衝突和歐洲議會、無神論、讀者來信專欄；未寫死亡地點與死因。"
+  },
+  {
+   "title": "Addio a Corrado Augias, giornalista, scrittore, conduttore e autore televisivo",
+   "publisher": "ANSA",
+   "date": "2026-11-19",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/19/addio-a-corrado-augias-giornalista-scrittore-conduttore-e-autore-televisivo_ec1aa297-bc9d-47f4-827a-2310ee2e3c22.html",
+   "note": "生於羅馬 1935 年 1 月 26 日、91 歲、Rai 與 La7 的節目、各方聲明；頁首顯示時間為 11-20 12:36，網址與內文是 11-19。"
+  },
+  {
+   "title": "Addio a Corrado Augias, camera ardente in Campidoglio",
+   "publisher": "Roma Capitale（羅馬市政府）",
+   "date": "2026-11-19",
+   "url": "https://www.comune.roma.it/web/it/notizia/augias-camera-ardente-in-campidoglio.page",
+   "note": "公告寫「週四 11 月 19 日上午」過世、91 歲；靈堂與市議會默哀。"
+  },
+  {
+   "title": "Quando il Telefono giallo di Corrado Augias squillò svelando i segreti di Ustica: “Non riattacchi, la prego!”",
+   "publisher": "Il Resto del Carlino",
+   "date": "2026-11-19",
+   "url": "https://www.ilrestodelcarlino.it/bologna/cronaca/augias-telefono-giallo-ustica-pev4nbu1",
+   "note": "1988 年 5 月 6 日的來電、原文引句、博爾塞利諾隔天來電（Augias 自己的說法）、Bonfietti 的話。來電者的說法報導寫成「sosteneva」「sarebbe stato abbattuto」，未經查證。"
+  },
+  {
+   "title": "Corrado Augias, oggi la camera ardente. I funerali laici saranno in forma privata",
+   "publisher": "Sky TG24",
+   "date": "2026-11-20",
+   "url": "https://tg24.sky.it/cronaca/2026/11/20/corrado-augias-camera-ardente-funerali",
+   "note": "Cazzullo 記述的最後三天與引句、女兒 Natalia 的話、告別特輯（Saluto di un Maestro）的細節。"
+  },
+  {
+   "title": "Corrado Augias, gli ultimi giorni prima di morire: il lavoro fino alla fine, le telefonate agli amici e l'addio alla famiglia",
+   "publisher": "La Voce Nuova",
+   "date": "2026-11-20",
+   "url": "https://www.vocenuova.info/cultura/corrado-augias-gli-ultimi-giorni-prima-di-morire-il-lavoro-fino-alla-fine-le-telefonate-agli-amici-e-laddio-alla-famiglia/",
+   "note": "轉述 Cazzullo，同一句引文；未指出明確的死因。"
+  },
+  {
+   "title": "Addio a Corrado Augias, che trasformò il dubbio in bestseller",
+   "publisher": "Avvenire",
+   "date": "2026-11-19",
+   "url": "https://www.avvenire.it/agora/cultura/addio-a-corrado-augias-che-trasformo-il-dubbio-in-bestseller_116028",
+   "note": "死於羅馬、宗教史書（《Inchiesta su Gesù》2006）與評語、最後一本書。"
+  },
+  {
+   "title": "Farewell to Corrado Augias. From I Segreti delle città to Babele, a life dedicated to chronicling culture",
+   "publisher": "Finestre sull'Arte",
+   "date": "2026-11-19",
+   "url": "https://www.finestresullarte.info/en/news/farewell-to-corrado-augias-from-i-segreti-delle-citta-to-babele-a-life-dedicated-to-chronicling-culture",
+   "note": "事業年表、La Torre di Babele 開播日、對《Inchiesta su Gesù》的反應。"
+  },
+  {
+   "title": "Corrado Augias restituirà la Legion d’onore",
+   "publisher": "Il Post",
+   "date": "2020-12-13",
+   "url": "https://www.ilpost.it/2020/12/13/augias-legion-donore-giulio-regeni/",
+   "note": "2020 年 12 月 12 日給《共和報》的信與引句、Regeni 案。"
+  }
+ ]
 }
