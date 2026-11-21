@@ -1,0 +1,260 @@
+{
+  "column": "perio",
+  "date": "2026-11-22",
+  "title": "常聽到的「一成人有重度牙周炎」，出處在這",
+  "dek": "全世界每 10 個人就有 1 個重度牙周炎，排第六常見。這個比例二十年沒動，病人卻越來越多，為什麼？",
+  "brief": "2014 年一篇系統性回顧算出，全球約 11% 的人有重度牙周炎，在所有疾病裡排第六，而且二十年都沒變。新病例最多的年紀在 38 歲左右。照英國牙周病學會指引，二、三十歲的病人也應在每次例行檢查記 BPE。",
+  "takeaway": "全球約 11% 的人有重度牙周炎，排所有疾病第六；新病例在 38 歲左右最多，盛行率在 20 多歲到 30 多歲之間就陡升。二、三十歲的病人也照指引每次例行檢查都做 BPE，不要等到中年才量囊袋。",
+  "chairside": "全世界每 10 個人，就有 1 個是重度牙周病，而三十多歲正是新發病最多的年紀。所以就算您還年輕、牙齒也不痛，我們每次定期檢查都會幫您量牙周囊袋。",
+  "topic_key": "perio:doi:10.1177/0022034514552491",
+  "form": "list",
+  "voice": "colleague",
+  "updated_at": "2026-11-21T22:50:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "map",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Periodontal_disease_world_map_-_DALY_-_WHO2004.svg",
+    "width": 940,
+    "height": 415,
+    "alt": "一張世界地圖，各國依數值塗成黃、橙到深紅。北美、西歐、澳洲、中東多為淺黃或黃色；中國是很淺的黃色；拉丁美洲與非洲大多是橙色；印度、巴基斯坦、孟加拉一帶是最深的紅色。西撒哈拉等少數地區是灰色。",
+    "caption": "世界衛生組織 2004 年估計的牙周病疾病負擔：每 10 萬人的年齡標準化失能調整生命年，也就是因牙周病損失的健康年數。淺黃低於 3.5，深紅高於 8.5，灰色無資料。這是 WHO 較早一輪的估計，不是 Kassebaum 2014 年論文的數據，放在這裡看各國差多少。",
+    "credit": "Lokal_Profil／Wikimedia Commons；底圖 BlankMap-World6（Canuckguy 等），資料：WHO〈Death and DALY estimates for 2004 by cause for WHO Member States〉",
+    "license": "CC BY-SA 2.5",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Periodontal_disease_world_map_-_DALY_-_WHO2004.svg",
+    "made": "2009",
+    "depicts": "2004 年的估計"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "「全世界一成的人有重度牙周炎」，這句話我們常講。出處是美國華盛頓大學的 **Nicholas Kassebaum**、倫敦瑪麗王后大學牙醫學教授 **Wagner Marcenes** 等人，2014 年刊在《Journal of Dental Research》的論文。"
+    },
+    {
+      "type": "p",
+      "text": "它是全球疾病負擔 2010 研究的一部分。這個大研究估計了 291 種疾病與傷害各有多少人得。這篇負責重度牙周炎，比的是 1990 和 2010 兩年，後來的研究常拿它當基準。"
+    },
+    {
+      "type": "table",
+      "title": "Kassebaum 2014：重度牙周炎的五個數字",
+      "head": [
+        "數字",
+        "指的是什麼",
+        "範圍與出處"
+      ],
+      "rows": [
+        [
+          "11.2%",
+          "全球年齡標準化盛行率，1990 年與 2010 年都是這個數",
+          "95% 不確定區間：1990 年 10.4–11.9%，2010 年 10.5–12.0%（原文摘要）"
+        ],
+        [
+          "第 6 名，7.43 億人",
+          "2010 年全世界第六常見的疾病；當年實際盛行率 10.8%",
+          "10.8% 的 95% 不確定區間 10.1–11.6%（第六名見原文摘要；10.8% 與 7.43 億見 Richards 2014 摘要）"
+        ],
+        [
+          "每 10 萬人年 701 例",
+          "2010 年全球年齡標準化發生率，比 1990 年略高",
+          "95% 不確定區間 599–823；和 1990 年相比差異不顯著（原文摘要）"
+        ],
+        [
+          "約 38 歲",
+          "新病例最多的年紀；盛行率在 20 多歲到 30 多歲之間陡升",
+          "原文摘要"
+        ],
+        [
+          "72 篇、291,170 人、37 國",
+          "收進模型的研究、受檢者與國家，都是 15 歲以上",
+          "原文摘要"
+        ]
+      ],
+      "caption": "依 Kassebaum 等 2014 年 J Dent Res 論文摘要，及 Richards 2014 年在 Evidence-Based Dentistry 的結構化摘要整理。這篇的答案是 11.2%（年齡標準化）；新聞稿的 10.8% 是同一份資料換成 2010 年實際人口，別混用。重度牙周炎的定義是 CPITN 第 4 碼、附著喪失超過 6 毫米，或探測深度超過 5 毫米。"
+    },
+    {
+      "type": "h",
+      "text": "1. 11.2%：二十年沒動"
+    },
+    {
+      "type": "p",
+      "text": "全球重度牙周炎的年齡標準化盛行率，1990 和 2010 年都是 11.2%。年齡標準化是把各國換成同一套年齡結構再比，免得老人多的國家顯得病多。比例沒變，病人卻變多。學校新聞稿說，是人口在長、壽命變長，全口無牙的人也少了。"
+    },
+    {
+      "type": "h",
+      "text": "2. 第六名、7.43 億人"
+    },
+    {
+      "type": "p",
+      "text": "在 291 種疾病與傷害裡，它排**全世界第六常見**。換成 2010 年的實際人數，大約 7.43 億人，每 10 個人就有 1 個。"
+    },
+    {
+      "type": "quote",
+      "text": "一種可以預防的口腔疾病，在我們研究檢視的全部 291 種疾病與傷害裡盛行率排第 6，這相當令人不安，應該讓我們所有人加倍努力，讓決策者意識到口腔健康有多重要。",
+      "original": "The fact that a preventable oral disease is the 6th most prevalent of all 291 diseases and injuries examined in our study is quite disturbing and should cause all of us to redouble our efforts to raise awareness of the importance of oral health to policymakers.",
+      "cite": "Wagner Marcenes（倫敦瑪麗王后大學牙醫學院教授，本論文通訊作者），學校新聞稿，2014 年 10 月 2 日；本文自譯"
+    },
+    {
+      "type": "h",
+      "text": "3. 每 10 萬人年 701 例"
+    },
+    {
+      "type": "p",
+      "text": "2010 年的發生率是每 10 萬人年 701 例，也就是 10 萬人一年多出 701 個新病例。比 1990 年高一點，但不顯著。國家之間差很多，阿根廷是全球平均的兩倍。"
+    },
+    {
+      "type": "h",
+      "text": "4. 38 歲：新病例最多"
+    },
+    {
+      "type": "p",
+      "text": "盛行率在 20 多歲到 30 多歲之間陡升，背後是**大約 38 歲**的發生率高峰。38 歲是新病例最多的年紀，不是病人最多的年紀。"
+    },
+    {
+      "type": "h",
+      "text": "5. 72 篇、291,170 人、37 國"
+    },
+    {
+      "type": "p",
+      "text": "上面的數字都來自 72 篇研究、291,170 人、37 國，都是 15 歲以上的隨機樣本。重度的定義是三項之一：CPITN 第 4 碼、附著喪失超過 6 毫米、探測深度超過 5 毫米。其他國家沒有實測，是統計模型用年齡、性別、地區估的。"
+    },
+    {
+      "type": "h",
+      "text": "後來的估計更高"
+    },
+    {
+      "type": "p",
+      "text": "2023 年 Trindade 等人在《Journal of Clinical Periodontology》的系統性回顧估計，2011 到 2020 年有牙的成人裡，重度牙周炎有 23.6%。但它只算有牙的人，定義也不同，不能說十年翻倍。"
+    },
+    {
+      "type": "table",
+      "title": "三次估計，數字為什麼不一樣",
+      "head": [
+        "來源",
+        "時間與對象",
+        "重度牙周炎",
+        "附註"
+      ],
+      "rows": [
+        [
+          "Kassebaum 等 2014（J Dent Res）",
+          "1990 與 2010 年；資料：15 歲以上，72 篇研究；估計：全人口",
+          "年齡標準化 11.2%；2010 年實際 10.8%、7.43 億人",
+          "定義：CPITN 第 4 碼、附著喪失超過 6 毫米或探測深度超過 5 毫米"
+        ],
+        [
+          "Trindade 等 2023（J Clin Periodontol）",
+          "2011–2020 年，有牙的成人，55 篇研究",
+          "23.6%（牙周炎整體約 62%）",
+          "牙周炎整體：嚴謹定義 61.6%，較粗定義 38.5%；65 歲以上 79.3%"
+        ],
+        [
+          "世界衛生組織 2025 年 fact sheet",
+          "全球",
+          "超過 10 億例",
+          "只給病例數，沒給百分比"
+        ]
+      ],
+      "caption": "依三份來源的摘要或網頁整理。Trindade 只算還有牙的人，Kassebaum 估計的是全人口，分母不同，不能把 11.2% 和 23.6% 直接相減。"
+    },
+    {
+      "type": "h",
+      "text": "複習：第 4 碼"
+    },
+    {
+      "type": "p",
+      "text": "CPITN 和英國牙周病學會的基本牙周檢查，也就是 BPE，用同一支 WHO 探針。全口分六區，每區記最高的一碼。探針的黑色色帶整段沒入是**第 4 碼**，表示 6 毫米以上的囊袋。BPE 是篩檢，不是診斷。"
+    },
+    {
+      "type": "svg",
+      "title": "第 4 碼長什麼樣子",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 420\">\n<rect class=\"paper\" x=\"0\" y=\"0\" width=\"640\" height=\"420\"/>\n<text class=\"ink\" x=\"20\" y=\"30\" font-size=\"17\" font-weight=\"bold\">WHO 探針的黑色色帶：露出一截是第 3 碼，整段沒入是第 4 碼</text>\n<text class=\"muted\" x=\"20\" y=\"52\" font-size=\"12\">示意，不按比例；色帶位置與分碼依英國牙周病學會 BPE 指引（2011）</text>\n<rect class=\"soft\" x=\"60\" y=\"70\" width=\"80\" height=\"290\"/>\n<text class=\"muted\" x=\"100\" y=\"90\" font-size=\"12\" text-anchor=\"middle\">牙根</text>\n<line class=\"ink\" x1=\"140\" y1=\"70\" x2=\"140\" y2=\"360\" stroke-width=\"2\"/>\n<line class=\"ink\" x1=\"145\" y1=\"70\" x2=\"145\" y2=\"236\" stroke-width=\"2\"/>\n<rect class=\"ink\" x=\"141.5\" y=\"82\" width=\"7\" height=\"56\"/>\n<circle class=\"ink\" cx=\"145\" cy=\"236\" r=\"4\"/>\n<rect class=\"soft\" x=\"141\" y=\"110\" width=\"99\" height=\"250\" opacity=\"0.82\"/>\n<line class=\"accent\" x1=\"130\" y1=\"110\" x2=\"250\" y2=\"110\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/>\n<text class=\"accent\" x=\"252\" y=\"114\" font-size=\"12\">牙齦邊緣</text>\n<text class=\"ink\" x=\"252\" y=\"96\" font-size=\"12\">色帶露出一截</text>\n<text class=\"muted\" x=\"252\" y=\"236\" font-size=\"12\">囊袋底</text>\n<text class=\"ink\" x=\"150\" y=\"392\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">第 3 碼</text>\n<text class=\"muted\" x=\"150\" y=\"410\" font-size=\"12\" text-anchor=\"middle\">探測深度 3.5–5.5 毫米（約 4–5 毫米的囊袋）</text>\n<rect class=\"soft\" x=\"380\" y=\"70\" width=\"80\" height=\"290\"/>\n<text class=\"muted\" x=\"420\" y=\"90\" font-size=\"12\" text-anchor=\"middle\">牙根</text>\n<line class=\"ink\" x1=\"460\" y1=\"70\" x2=\"460\" y2=\"360\" stroke-width=\"2\"/>\n<line class=\"ink\" x1=\"465\" y1=\"70\" x2=\"465\" y2=\"306\" stroke-width=\"2\"/>\n<rect class=\"ink\" x=\"461.5\" y=\"152\" width=\"7\" height=\"56\"/>\n<circle class=\"ink\" cx=\"465\" cy=\"306\" r=\"4\"/>\n<rect class=\"soft\" x=\"461\" y=\"110\" width=\"99\" height=\"250\" opacity=\"0.82\"/>\n<line class=\"accent\" x1=\"450\" y1=\"110\" x2=\"570\" y2=\"110\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/>\n<text class=\"accent\" x=\"572\" y=\"114\" font-size=\"12\">牙齦邊緣</text>\n<text class=\"ink\" x=\"572\" y=\"184\" font-size=\"12\">色帶整段</text>\n<text class=\"ink\" x=\"572\" y=\"200\" font-size=\"12\">沒入牙齦</text>\n<text class=\"muted\" x=\"572\" y=\"306\" font-size=\"12\">囊袋底</text>\n<text class=\"ink\" x=\"470\" y=\"392\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">第 4 碼</text>\n<text class=\"muted\" x=\"470\" y=\"410\" font-size=\"12\" text-anchor=\"middle\">探測深度超過 5.5 毫米（6 毫米以上的囊袋）</text>\n</svg>",
+      "caption": "原創示意，不按比例。WHO 探針尖端是小圓球，黑色色帶在 3.5 到 5.5 毫米之間；左邊囊袋淺，色帶露出一截，記第 3 碼；右邊囊袋深，色帶整段沒入牙齦，記第 4 碼，表示 6 毫米以上的囊袋。Kassebaum 2014 收錄的研究，把 CPITN 第 4 碼算作重度牙周炎。分碼依英國牙周病學會 2011 年 BPE 指引重繪。",
+      "credit": "本報原創圖解"
+    },
+    {
+      "type": "h",
+      "text": "明天診間怎麼做"
+    },
+    {
+      "type": "p",
+      "text": "2019 年版的 BPE 指引寫：**所有新病人都要記 BPE**，0、1、2 碼的人每次例行檢查都記。哪一區有第 4 碼，全口每顆牙都要量六點探測深度。"
+    },
+    {
+      "type": "p",
+      "text": "新病例在 38 歲左右最多，所以二、三十歲的病人也照指引每次例行檢查都探。Kassebaum 這篇沒談篩檢，多久探一次是指引說的。",
+      "tag": "推論"
+    },
+    {
+      "type": "paper",
+      "citation": "Kassebaum NJ, Bernabé E, Dahiya M, Bhandari B, Murray CJ, Marcenes W. Global burden of severe periodontitis in 1990-2010: a systematic review and meta-regression. *J Dent Res*. 2014;93(11):1045-1053.",
+      "doi": "10.1177/0022034514552491",
+      "pmid": "25261053",
+      "link": "https://doi.org/10.1177/0022034514552491",
+      "evidence": "系統性回顧與統合迴歸：72 篇研究、291,170 人、37 國",
+      "design": "系統性回顧加貝氏統合迴歸，用全球疾病負擔 2010 研究的模型，估出所有國家、20 個年齡層、男女兩性 1990 與 2010 年的盛行率與發生率",
+      "sample": "72 篇以隨機樣本做的流行病學研究，291,170 名 15 歲以上受檢者，37 國",
+      "question": "全世界有多少人得重度牙周炎？二十年間變了沒有？幾歲開始變多？",
+      "access": "依 PubMed 摘要與 Richards 2014 年在 Evidence-Based Dentistry 的結構化摘要整理，後續估計參考 Trindade 2023 摘要"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Global burden of severe periodontitis in 1990-2010: a systematic review and meta-regression",
+      "publisher": "Journal of Dental Research 93(11):1045-1053（Kassebaum NJ, Bernabé E, Dahiya M, Bhandari B, Murray CJ, Marcenes W）",
+      "date": "2014-09-26",
+      "url": "https://doi.org/10.1177/0022034514552491",
+      "note": "讀 PubMed／Europe PMC 摘要（PMID 25261053，PMC4293771）：研究數、人數、11.2%、第六名、701 例、38 歲；PMC 與期刊全文頁無法自動讀取"
+    },
+    {
+      "title": "Review finds that severe periodontitis affects 11% of the world population",
+      "publisher": "Evidence-Based Dentistry 15(3):70-71（Richards D）",
+      "date": "2014-10-24",
+      "url": "https://doi.org/10.1038/sj.ebd.6401037",
+      "note": "對 Kassebaum 2014 的結構化摘要（PMID 25343387）：重度牙周炎定義、65 篇盛行率研究、2010 年 10.8% 與 7.43 億人、21 個地區"
+    },
+    {
+      "title": "750 million people worldwide suffering from severe gum disease",
+      "publisher": "Queen Mary University of London",
+      "date": "2014-10-02",
+      "url": "https://www.qmul.ac.uk/news/latest-news/2014/smd/750-million-people-worldwide-suffering-from-severe-gum-disease.html",
+      "note": "Marcenes 的引文、291 種疾病與傷害、阿根廷每 10 萬人 1,428 例"
+    },
+    {
+      "title": "Global burden of oral conditions in 1990-2010: a systematic analysis",
+      "publisher": "Journal of Dental Research 92(7):592-597（Marcenes W 等）",
+      "date": "2013-05-29",
+      "url": "https://doi.org/10.1177/0022034513490168",
+      "note": "讀摘要（PMID 23720570）：GBD 2010 估計 291 種疾病與傷害的負擔"
+    },
+    {
+      "title": "Prevalence of periodontitis in dentate people between 2011 and 2020: A systematic review and meta-analysis of epidemiological studies",
+      "publisher": "Journal of Clinical Periodontology 50(5):604-626（Trindade D 等）",
+      "date": "2023-01-20",
+      "url": "https://doi.org/10.1111/jcpe.13769",
+      "note": "讀摘要（PMID 36631982）：55 篇研究，牙周炎約 62%、重度 23.6%，病例定義造成的差異"
+    },
+    {
+      "title": "Oral health（fact sheet）",
+      "publisher": "World Health Organization",
+      "date": "2025-03-17",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/oral-health",
+      "note": "重度牙周病超過 10 億例；主要風險因子"
+    },
+    {
+      "title": "Basic Periodontal Examination (BPE)",
+      "publisher": "British Society of Periodontology",
+      "date": "2011-10-01",
+      "url": "https://www.bsperio.org.uk/assets/downloads/BPE_Guidelines_2011.pdf",
+      "note": "全文兩頁：WHO 探針色帶 3.5–5.5 毫米、第 3 與第 4 碼定義、記錄時機；文件刊出月份為 2011 年 10 月，日期填該月 1 日"
+    },
+    {
+      "title": "Basic Periodontal Examination (BPE)",
+      "publisher": "British Society of Periodontology",
+      "date": "2019-01-01",
+      "url": "https://www.bsperio.org.uk/assets/downloads/BSP_BPE_Guidelines_2019.pdf",
+      "note": "2019 年版，全文兩頁讀過：所有新病人都要記 BPE；0、1、2 碼的人每次例行檢查都要記；任一區第 4 碼，全口記六點囊袋圖；BPE 只做篩檢、不做診斷。文件寫刊出 2019 年 1 月、複審日期 2024 年 1 月，日期填該月 1 日"
+    }
+  ]
+}
