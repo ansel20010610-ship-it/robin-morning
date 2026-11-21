@@ -1,10 +1,11 @@
 {
   "last": "2026-11-09",
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "sources": {
     "mna": {
       "urls": [
         "https://www.mna.com.tw",
+        "https://www.mna.com.tw/concerts.html",
         "https://www.mna.com.tw/concerts_detail.html?id=782"
       ],
       "seen": [
@@ -14,7 +15,7 @@
           "id": "thielemann-staatskapelle-berlin-2026"
         },
         {
-          "title": "庫倫奇斯與烏托邦管弦樂團",
+          "title": "庫爾提斯與烏托邦管弦樂團",
           "verdict": "已列入",
           "id": "currentzis-utopia-2026"
         },
@@ -34,14 +35,19 @@
           "id": "lang-lang-recital-2026"
         },
         {
-          "title": "Diana Krall",
+          "title": "Marc André 低音提琴音樂會",
           "verdict": "不收",
-          "why": "爵士歌手，非收錄範圍"
+          "why": "2分：11/20已演完，改編小品"
         },
         {
-          "title": "馬克安德烈低音提琴音樂會",
+          "title": "Diana Krall",
           "verdict": "不收",
-          "why": "2分：11/20 已演出；曲目為西班牙小品與流行改編"
+          "why": "爵士流行演唱，不在範圍"
+        },
+        {
+          "title": "INTERSTELLAR LIVE 星際效應",
+          "verdict": "不收",
+          "why": "電影配樂音樂會，不收"
         }
       ]
     },
@@ -51,60 +57,35 @@
       ],
       "seen": [
         {
-          "title": "王羽佳與馬勒室內樂團",
-          "verdict": "已列入",
-          "id": "yuja-wang-mco-2026"
-        },
-        {
-          "title": "威斯培衛獨奏會",
-          "verdict": "已列入",
-          "id": "wispelwey-bach-suites-2026"
-        },
-        {
-          "title": "陳必先鋼琴獨奏會",
-          "verdict": "已列入",
-          "id": "chen-pi-hsien-recital-2026"
-        },
-        {
-          "title": "柴一與貝九",
-          "verdict": "已列入",
-          "id": "ntt-chaikovsky1-beethoven9-2027"
-        },
-        {
-          "title": "水藍、蔣啟真與國臺交",
-          "verdict": "已列入",
-          "id": "ntso-lan-shui-chiang-2027"
-        },
-        {
-          "title": "彌賽亞選粹",
-          "verdict": "已列入",
-          "id": "messiah-shen-hsin-chin-ntt-2026"
-        },
-        {
-          "title": "歌，正在綻放",
-          "verdict": "不收",
-          "why": "2分：原住民古謠講唱會"
-        },
-        {
           "title": "安德烈亞．范佐 Intimacy Vol.2",
           "verdict": "不收",
-          "why": "2分：新古典輕鋼琴，非主流名作"
+          "why": "2分：跨界風格鋼琴演奏會"
         },
         {
-          "title": "狂美璀璨經典百老匯交響音樂會、星際效應、進擊的巨人電影音樂會",
+          "title": "古典音樂台30週年沙龍音樂會",
           "verdict": "不收",
-          "why": "1分：電影動漫配樂拼盤"
+          "why": "2分：演出者與曲目查不到"
         },
         {
-          "title": "為愛而生、四季翱翔、玫瑰人生、從根系到繁星、詩與歌",
+          "title": "狂美《璀璨經典百老匯》交響音樂會",
           "verdict": "不收",
-          "why": "查不到演出者與曲目，無法判；明天再看"
+          "why": "2分：拼盤式商業秀"
+        },
+        {
+          "title": "《進擊的巨人》世界巡演音樂會",
+          "verdict": "不收",
+          "why": "動漫配樂，不收"
+        },
+        {
+          "title": "陳必先、水藍蔣啟真國臺交、彌賽亞、柴一與貝九、威斯培衛等",
+          "verdict": "已列入",
+          "id": "chen-pi-hsien-recital-2026"
         }
       ]
     },
     "wwy": {
       "urls": [
-        "https://www.npac-weiwuying.org/calendar"
+        "https://www.npac-weiwuying.org/programs"
       ],
       "seen": [
         {
@@ -113,25 +94,14 @@
           "id": "garcia-garcia-ksso-2026"
         },
         {
-          "title": "威斯培衛大提琴獨奏會",
-          "verdict": "已列入",
-          "id": "wispelwey-bach-suites-2026"
-        },
-        {
-          "title": "其餘至12/6：國內學校與合唱團成果、電影音樂會",
+          "title": "夢想清單（柏林雷寧廣場劇院）",
           "verdict": "不收",
-          "why": "1–2分；只讀到12/6，之後未讀"
+          "why": "戲劇，非音樂"
         }
       ]
     },
-    "pbc": {
-      "error": "pbc.com.tw 憑證錯誤連不上；改用新聞搜尋也沒找到相關新資訊"
-    },
-    "newaspect": {
-      "error": "newaspect.com.tw 連線被拒"
-    },
-    "tanart": {
-      "error": "tanart.com.tw 網域解析失敗"
+    "ntch": {
+      "error": "npac-ntch.org 只回「請使用 Edge 瀏覽器」，讀不到節目"
     },
     "kham": {
       "urls": [
@@ -139,33 +109,39 @@
       ],
       "seen": [
         {
-          "title": "WILD WILD 音樂劇",
+          "title": "首頁全是流行與韓團演唱會；音樂劇《WILD WILD》",
           "verdict": "不收",
-          "why": "2分：日期未載，查不到完整資訊"
+          "why": "2分：流行演唱會；WILD WILD 無演出者資料"
         }
-      ]
+      ],
+      "error": "節目總覽頁 404，只看到首頁"
+    },
+    "newaspect": {
+      "error": "連不上（ECONNREFUSED）"
+    },
+    "tanart": {
+      "error": "網域解析失敗"
+    },
+    "pbc": {
+      "error": "憑證錯誤，連不上"
     },
     "udn": {
-      "error": "udnfunlife.com 回 429；改用新聞：史瑞克已列入（shrek-musical-tpac-2026）"
-    },
-    "ntch": {
-      "error": "npac-ntch.org 只回瀏覽器提示頁，讀不到節目"
+      "error": "沒有直接打開 udnfunlife 與其他主辦頁，沒查"
     },
     "news": {
       "urls": [
-        "https://udn.com/news/story/7270/9647651",
-        "https://news.tvbs.com.tw/life/4031649"
+        "https://udn.com/news/story/7270/9659928"
       ],
       "seen": [
         {
-          "title": "音樂劇《MJ 麥可傑克森》2027年4月台北流行音樂中心",
-          "verdict": "不收",
-          "why": "原版百老匯但演出日期與售票未公布、無法列場次；日期出來再收"
+          "title": "牛耳 2026/27 樂季五大樂團",
+          "verdict": "已列入",
+          "id": "thielemann-staatskapelle-berlin-2026"
         },
         {
-          "title": "《或許是美好結局》",
+          "title": "紐約之聲謝幕巡演 2027/2 高雄、台北",
           "verdict": "不收",
-          "why": "已演出（7/31–8/9）"
+          "why": "2分：流行合唱性質，未查更多"
         }
       ]
     }

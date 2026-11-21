@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-21",
+  "checked": "2026-11-22",
   "events": [
     {
       "id": "garcia-garcia-ksso-2026",
@@ -667,13 +667,6 @@
       "note": "牛耳藝術售票，非 OPENTIX；11/22 票款全數捐慈善",
       "shows": [
         {
-          "date": "2026-11-21",
-          "time": "19:45",
-          "city": "台北",
-          "venue": "臺北國家音樂廳",
-          "tickets": "https://ticket.mna.com.tw/UTK0201_?PRODUCT_ID=P1ETF1DD"
-        },
-        {
           "date": "2026-11-22",
           "time": "14:00",
           "city": "台北",
@@ -712,13 +705,6 @@
       "price": "NT$2,980–7,980",
       "note": "牛耳藝術售票，非 OPENTIX",
       "shows": [
-        {
-          "date": "2026-11-21",
-          "time": "14:00",
-          "city": "高雄",
-          "venue": "衛武營音樂廳",
-          "tickets": "https://ticket.mna.com.tw/UTK0102_?TYPE=0"
-        },
         {
           "date": "2026-11-22",
           "time": "20:00",
@@ -1255,20 +1241,6 @@
       "note": "建議 6 歲以上；卡司尚未公布",
       "shows": [
         {
-          "date": "2026-11-21",
-          "time": "13:30",
-          "city": "台北",
-          "venue": "臺北表演藝術中心大劇院",
-          "tickets": "https://tickets.udnfunlife.com/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AEBJG5"
-        },
-        {
-          "date": "2026-11-21",
-          "time": "18:30",
-          "city": "台北",
-          "venue": "臺北表演藝術中心大劇院",
-          "tickets": "https://tickets.udnfunlife.com/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AEBJG5"
-        },
-        {
           "date": "2026-11-22",
           "time": "11:00",
           "city": "台北",
@@ -1401,13 +1373,6 @@
       "price": "NT$800／1,000／1,200／1,500／1,600／3,000",
       "note": "約100分鐘無中場，建議12歲以上",
       "shows": [
-        {
-          "date": "2026-11-21",
-          "time": "19:30",
-          "city": "台中",
-          "venue": "臺中國家歌劇院小劇場",
-          "tickets": "https://www.opentix.life/event/2067154457490825217"
-        },
         {
           "date": "2026-11-22",
           "time": "14:30",
