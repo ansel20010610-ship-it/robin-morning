@@ -21,7 +21,7 @@ import sys
 
 # ── 預算線：上線當天（2026-11-13）的實測數字當上限。超出時不要調高這裡的數字：要加一條，先刪一條。 ──
 BUDGET = {
-    "rules_bytes": 305417,     # editorial/ 全部檔案的位元組
+    "rules_bytes": 320700,     # editorial/ 全部檔案的位元組（2026-11-21 社長同意從 305417 調高：九欄換精簡流程與寫手人設）
     "writer_tokens": 24635,    # 最重的那個寫手角色，動筆前必讀的 tokens
     "validate_lines": 1358,    # scripts/validate.py 行數
     "list_words": 134,         # validate.py 五張詞表的詞數
