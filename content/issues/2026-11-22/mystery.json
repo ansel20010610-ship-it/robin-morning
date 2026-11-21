@@ -1,0 +1,466 @@
+{
+  "column": "mystery",
+  "date": "2026-11-22",
+  "title": "先抓到微波爐，再追到磁星：快速電波爆發還沒結案",
+  "dek": "幾千道只有幾毫秒的電波從別的星系打來。2020 年銀河系裡一顆磁星也放了一道，看似破案，偏偏有兩個會重複的源，出在只住著老恆星的地方。",
+  "brief": "快速電波爆發是從別的星系來、只有幾毫秒的一閃電波，第一道在 2001 年錄到，現在已編目幾千道。多數人押至少一部分爆發來自磁星，因為 2020 年銀河系裡一顆磁星也放出了一道。但老星團和老星系裡也有，它們怎麼生出來、電波在哪裡產生，都還沒有答案。",
+  "topic_key": "mystery:cosmos-fast-radio-bursts",
+  "form": "timeline",
+  "voice": "detective",
+  "updated_at": "2026-11-22T02:03:52+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "f0",
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Frb_1.png",
+    "width": 1280,
+    "height": 946,
+    "alt": "黑底的長方形資料圖，佈滿黑白相間的細碎雜訊點。橫軸標 Time (s)，從 1725 到 1729；縱軸標 Frequency (MHz)，上方 1250、下方 1500。畫面中央偏左有一條深色細線，從左下斜向右上。",
+    "caption": "第一道快速電波爆發的「瀑布圖」：2001 年 7 月 24 日澳洲帕克斯 64 公尺電波望遠鏡錄下的資料，2007 年才被人翻出來。橫軸是時間（秒），縱軸是頻率，上低下高。那條斜線就是爆發：高頻先到，低頻後到。上傳者說明這張畫的是訊號最強的那個波束，和 2007 年論文刊出的不是同一個。",
+    "credit": "Psr1909，依 Lorimer 等人（2007）所報告的觀測資料繪製；Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Frb_1.png",
+    "made": "2015",
+    "depicts": "2001 年 7 月 24 日"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "東西先擺上桌。2001 年 7 月 24 日，澳洲帕克斯的 64 公尺電波望遠鏡錄到一閃電波，不到 5 毫秒就沒了，肉眼看不到。這叫**快速電波爆發**。"
+    },
+    {
+      "type": "p",
+      "text": "當時沒人發現。2007 年，美國西維吉尼亞大學的羅瑞默團隊翻舊資料，學生納克維奇才把它挖出來。前後 90 小時的觀測都沒再看到它。"
+    },
+    {
+      "type": "p",
+      "text": "現在抓到最多的，是加拿大的 CHIME 電波望遠鏡。今年 3 月，它的第二本目錄就收了 4,539 道。是什麼東西放的，到今天沒人說得準。"
+    },
+    {
+      "type": "facts",
+      "title": "快速電波爆發",
+      "items": [
+        [
+          "是什麼",
+          "從天上來的一閃電波，只持續幾毫秒"
+        ],
+        [
+          "第一道",
+          "2001 年 7 月 24 日錄到，2007 年發表"
+        ],
+        [
+          "已編目",
+          "CHIME 第二目錄：4,539 道爆發，來自 3,641 個源（2018.7–2023.9）"
+        ],
+        [
+          "會重複的",
+          "上述 3,641 個源中有 83 個"
+        ],
+        [
+          "源頭",
+          "未定；磁星是頭號候選"
+        ]
+      ]
+    },
+    {
+      "type": "timeline",
+      "title": "從一道舊資料裡的訊號到幾千道",
+      "items": [
+        {
+          "when": "2001.7.24",
+          "label": "帕克斯望遠鏡錄下一道毫秒爆發",
+          "note": "當時沒有人發現，資料進了檔案庫"
+        },
+        {
+          "when": "2007.9",
+          "label": "羅瑞默團隊發表第一道快速電波爆發",
+          "note": "學生納克維奇重新搜尋麥哲倫雲巡天的舊資料找到"
+        },
+        {
+          "when": "2011 年",
+          "label": "第一道爆發的來源受到質疑",
+          "note": "帕克斯收過一種很像的訊號，叫 peryton"
+        },
+        {
+          "when": "2013.7",
+          "label": "桑頓等人再找到 4 道",
+          "note": "全部離銀河面 40 度以上，快速電波爆發成為一個族群"
+        },
+        {
+          "when": "2015 年",
+          "label": "peryton 的真兇是微波爐",
+          "note": "在帕克斯提前打開微波爐門，就能造出 peryton；第一道爆發因此洗清嫌疑"
+        },
+        {
+          "when": "2016.3",
+          "label": "FRB 121102 會重複",
+          "note": "阿雷西博望遠鏡從同一方向又收到 10 道：源頭沒有在爆發中毀掉"
+        },
+        {
+          "when": "2017.1",
+          "label": "第一次直接定位",
+          "note": "干涉陣列把 FRB 121102 定位到一角秒以內"
+        },
+        {
+          "when": "2020.4.28",
+          "label": "銀河系內的磁星放出一道電波爆發",
+          "note": "SGR 1935+2154；CHIME 與 STARE2 都收到，同時有 X 光爆發"
+        },
+        {
+          "when": "2022.2",
+          "label": "一個重複源住在球狀星團裡",
+          "note": "FRB 20200120E，M81 星系的老星團，年輕磁星說受到挑戰"
+        },
+        {
+          "when": "2025.1",
+          "label": "兩篇論文指向「磁層附近」",
+          "note": "同一道一次性爆發"
+        },
+        {
+          "when": "2025.3.16",
+          "label": "RBFLOAT：CHIME 訊號最清楚的一道",
+          "note": "定位到 NGC 4141 外圍 13 秒差距的範圍；5 月 19 日起韋伯望遠鏡去拍"
+        },
+        {
+          "when": "2026.3",
+          "label": "CHIME 第二目錄刊出",
+          "note": "4,539 道爆發、3,641 個源，會重複的 83 個"
+        }
+      ],
+      "caption": "依 Lorimer 等（2007）、Thornton 等（2013）、Petroff 等（2015）、Spitler 等（2016）、Chatterjee 等（2017）、CHIME/FRB 與 Bochenek 等（2020）、Kirsten 等（2022）、Mckinven 等與 Nimmo 等（2025）、CHIME/FRB（2025、2026）整理。"
+    },
+    {
+      "type": "h",
+      "text": "先確定它從很遠的地方來"
+    },
+    {
+      "type": "p",
+      "text": "頭圖那條斜線就是它：高頻先到，低頻後到。電波穿過宇宙裡稀薄的帶電氣體，會被這樣拉開。拖得越久，路上的電子越多，通常也越遠。這一道拖得比銀河系能解釋的長得多。"
+    },
+    {
+      "type": "p",
+      "text": "2011 年有人起疑。帕克斯等天文台還收過一種很像的訊號，叫 peryton。到 2015 年，文獻記下的 25 次全在上班時間，大多是平日。從別的星系來的訊號，不會挑週末休假。"
+    },
+    {
+      "type": "p",
+      "text": "2015 年，佩特洛夫等人做了實驗：微波爐還沒轉完就開門。員工廚房那台**微波爐**造出了 3 個 peryton。可是它造不出第一道。第一道洗清了嫌疑。"
+    },
+    {
+      "type": "h",
+      "text": "會再來，也找得到住址"
+    },
+    {
+      "type": "p",
+      "text": "2016 年，阿雷西博望遠鏡從 FRB 121102 的方向又收到 10 道。它會重複，源頭沒有毀掉。2017 年，查特吉等人把多座天線合起來當一台用，把它圈到一角秒以內，第一次認出它住在哪個星系。"
+    },
+    {
+      "type": "h",
+      "text": "頭號嫌犯"
+    },
+    {
+      "type": "p",
+      "text": "中子星是大質量恆星死後留下的極密核心。磁星是其中年輕、磁場極強的一種。磁星一直有嫌疑，只是已知的磁星電波沒那麼亮。"
+    },
+    {
+      "type": "p",
+      "text": "2020 年 4 月 28 日，銀河系裡的**磁星** SGR 1935+2154 放出一道毫秒電波爆發。CHIME 算出它比以前任何會發電波的磁星亮了大約一千倍，要是從鄰近星系打來，跟快速電波爆發分不出來。"
+    },
+    {
+      "type": "p",
+      "text": "多數人押這一邊。不過 CHIME 說的是：強力支持「至少有一部分」爆發來自磁星。至少一部分，不是全部。"
+    },
+    {
+      "type": "h",
+      "text": "出在老地方"
+    },
+    {
+      "type": "p",
+      "text": "磁星說卡在出身。一般認為年輕磁星是大質量恆星死亡時生的。偏偏有兩個會重複的源，出在**只有老恆星的地方**：一個在一大群老恆星擠成的球狀星團裡，一個在恆星平均約 110 億歲的星系裡。"
+    },
+    {
+      "type": "p",
+      "text": "於是有了第二種說法：中子星也可能晚一點才生，例如兩顆緻密的星合併。它說不通的是，爆發所在的星系大多還在生新恆星。"
+    },
+    {
+      "type": "h",
+      "text": "一次就沒了"
+    },
+    {
+      "type": "p",
+      "text": "第三種說法最早，是 2007 年那篇的猜測：一次性的大災難。證據是 CHIME 第二目錄的 3,641 個源，會重複的只有 83 個。卡住它的就是那 83 個，爆完還活著。"
+    },
+    {
+      "type": "table",
+      "title": "三種解釋，各自撐得住與卡住的地方",
+      "head": [
+        "解釋",
+        "最有力的證據",
+        "解釋不了的事"
+      ],
+      "rows": [
+        [
+          "年輕磁星（頭號候選）",
+          "2020 年銀河系內的磁星 SGR 1935+2154 放出毫秒電波爆發，能量只比最弱的銀河系外爆發低 40 倍",
+          "M81 的球狀星團、恆星平均約 110 億歲的橢圓星系裡都有重複源；那裡都是老恆星，和「大質量恆星剛死、生出年輕磁星」的路線不合"
+        ],
+        [
+          "晚生的中子星（合併或白矮星塌縮）",
+          "球狀星團與老橢圓星系的案例，正好落在老恆星之間",
+          "大多數宿主星系仍在造星，老星系是少數"
+        ],
+        [
+          "一次性的大災難（如中子星相撞）",
+          "絕大多數源只被看到一次：3,641 個源裡會重複的只有 83 個",
+          "會重複的源存在；也有綜述指出，沒被再看到的不排除其實全都會重複"
+        ]
+      ],
+      "caption": "依 CHIME/FRB（2020、2026）、Bochenek 等（2020）、Kirsten 等（2022）、Eftekhari 等（2025）、Spitler 等（2016）、Cordes 與 Chatterjee（2019）整理。"
+    },
+    {
+      "type": "h",
+      "text": "電波在哪裡發出來"
+    },
+    {
+      "type": "p",
+      "text": "一派說電波在中心天體附近產生，一派說能量先跑很遠，撞上周圍物質才變成電波。2025 年 1 月有論文推出，一道爆發的發射區寬不超過約 3 萬公里，比較像前一派。不過，這只是一道爆發的證據。"
+    },
+    {
+      "type": "h",
+      "text": "最亮的一閃"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Canadian_Hydrogen_Intensity_Mapping_Experiment_-_wire-mesh_half_pipe_reflector.jpg/1280px-Canadian_Hydrogen_Intensity_Mapping_Experiment_-_wire-mesh_half_pipe_reflector.jpg",
+      "width": 1280,
+      "height": 853,
+      "alt": "草地上幾座巨大的半圓槽形金屬網反射面並排延伸到遠方，中間一條白色鋼架步道橫跨在槽的上方，側邊有一道樓梯；背景是山丘與多雲的天空。",
+      "caption": "加拿大卑詩省彭蒂克頓附近的 CHIME 望遠鏡，2019 年 8 月拍攝。它沒有活動零件，四座 20 公尺 × 100 公尺的半圓槽形反射面每天隨地球自轉掃過整個北天，2018 年啟用後每天收到約兩三道快速電波爆發。",
+      "credit": "Z22／Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Canadian_Hydrogen_Intensity_Mapping_Experiment_-_wire-mesh_half_pipe_reflector.jpg",
+      "made": "2019"
+    },
+    {
+      "type": "p",
+      "text": "2025 年 3 月 16 日，CHIME 收到自己史上訊號最清楚的一道銀河系外的爆發，團隊暱稱 RBFLOAT，意思是「有史以來最亮的電波閃光」。註腳又說，另有大約 10 道更強。名字取得很滿，註腳先退一步。"
+    },
+    {
+      "type": "p",
+      "text": "它離我們約 1.3 億光年，這是本文換算的。韋伯太空望遠鏡去拍，在爆發位置旁邊找到一個暗點，叫 **NIR-1**。它只是碰巧在那裡的機率有三成六。論文列了三種可能："
+    },
+    {
+      "type": "list",
+      "items": [
+        "它是爆發源的伴星。",
+        "只是巧合，真正的源沒拍到。",
+        "它是回聲：爆發時外洩的能量，照亮了周圍的塵埃。"
+      ],
+      "ordered": true
+    },
+    {
+      "type": "quote",
+      "text": "這個模型有一個明確的預測：一年或更久之後再拍一次，NIR-1 會消失。",
+      "original": "A clear prediction of this model is that NIR-1 will fade away in a repeated observation ≳ year later.",
+      "cite": "Blanchard 等〈James Webb Space Telescope Observations of the Nearby and Precisely Localized FRB 20250316A〉，《The Astrophysical Journal Letters》2025；本文自譯（「這個模型」指塵埃回聲說）"
+    },
+    {
+      "type": "h",
+      "text": "還缺什麼"
+    },
+    {
+      "type": "p",
+      "text": "難在爆發只有幾毫秒，事先不知道在哪裡、什麼時候出現。2022 年的綜述數過，600 多個源只有 19 個找到所在的星系。"
+    },
+    {
+      "type": "quote",
+      "text": "目前，用來解釋快速電波爆發的理論，幾乎和觀測到的快速電波爆發一樣多。",
+      "original": "At present, we have almost as many theories to explain Fast Radio Bursts as we have Fast Radio Bursts observed.",
+      "cite": "Platts 等〈A Living Theory Catalogue for Fast Radio Bursts〉，《Physics Reports》2019，摘要首句；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "多數人押中子星，尤其是磁星，至少是一部分爆發的源頭。要結案，還缺幾樣："
+    },
+    {
+      "type": "list",
+      "items": [
+        "那些磁星怎麼來的。",
+        "只閃一次的和會重複的，是不是同一種東西。",
+        "電波在中心附近還是遠處產生。",
+        "絕大多數爆發沒有精確位置。"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "CHIME 另蓋的三座外站 2025 年已全部開始運作，論文說每年能把幾百道爆發圈到一角秒以內。NIR-1 則要在 2025 年 5 月那次之後，隔一年以上再拍一次。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "A Bright Millisecond Radio Burst of Extragalactic Origin（Lorimer, Bailes, McLaughlin, Narkevic, Crawford）",
+      "publisher": "Science 318: 777–780；DOI 10.1126/science.1147532",
+      "date": "2007-11-02",
+      "url": "https://arxiv.org/abs/0709.4301",
+      "note": "讀 arXiv 預印本全文：2001-08-24 觀測、三個波束、DM 375、30 Jy、<5 ms、<1 Gpc、90 小時無重複、1/4500 天空、每日約 225 次；Science Express 於 2007-09-27 上線"
+    },
+    {
+      "title": "Powerful Radio Burst Indicates New Astronomical Phenomenon",
+      "publisher": "National Radio Astronomy Observatory（NRAO）新聞稿",
+      "date": "2007-09-27",
+      "url": "https://www.nrao.edu/pr/2007/brightburst/",
+      "note": "納克維奇為西維吉尼亞大學大學部學生；羅瑞默、納克維奇的引言；色散的白話解釋；約 30 億光年的估計"
+    },
+    {
+      "title": "A Population of Fast Radio Bursts at Cosmological Distances（Thornton 等）",
+      "publisher": "Science 341: 53–56；DOI 10.1126/science.1236789",
+      "date": "2013-07-05",
+      "url": "https://arxiv.org/abs/1307.1628",
+      "note": "讀摘要：4 道爆發、離銀河面 40 度以上、距離可達 3 Gpc"
+    },
+    {
+      "title": "Identifying the source of perytons at the Parkes radio telescope（Petroff 等）",
+      "publisher": "Monthly Notices of the Royal Astronomical Society 451: 3933–3940；DOI 10.1093/mnras/stv1242",
+      "date": "2015-06-29",
+      "url": "https://arxiv.org/abs/1504.02165",
+      "note": "讀 arXiv 全文：25 次 peryton 只在上班時間；2015-02-27 起的微波爐測試、陶瓷馬克杯、員工廚房開門 3 次；Burke-Spolaor 等（2011）對 FRB 010724 的質疑；peryton 橫跨頻帶約 250 ms、DM 集中在約 400，與 FRB 010724 相差約一成"
+    },
+    {
+      "title": "A repeating fast radio burst（Spitler 等）",
+      "publisher": "Nature 531: 202–205；DOI 10.1038/nature17168",
+      "date": "2016-03-02",
+      "url": "https://doi.org/10.1038/nature17168",
+      "note": "依 arXiv 1603.00581 摘要：阿雷西博 305 m、10 道新爆發、源頭在爆發後仍存在"
+    },
+    {
+      "title": "A direct localization of a fast radio burst and its host（Chatterjee 等）",
+      "publisher": "Nature 541: 58–61；DOI 10.1038/nature20797",
+      "date": "2017-01-05",
+      "url": "https://doi.org/10.1038/nature20797",
+      "note": "依 arXiv 1701.01098 摘要：次角秒定位、此前單碟只到角分級、180 μJy 持續電波源與 25 星等光學對應體"
+    },
+    {
+      "title": "A bright millisecond-duration radio burst from a Galactic magnetar（CHIME/FRB Collaboration）",
+      "publisher": "Nature 587: 54–58；DOI 10.1038/s41586-020-2863-y",
+      "date": "2020-11-04",
+      "url": "https://doi.org/10.1038/s41586-020-2863-y",
+      "note": "依 arXiv 2005.10324 摘要：約 30 顆已知磁星、5 顆有電波；3×10^34 erg；「at least some FRBs」"
+    },
+    {
+      "title": "A fast radio burst associated with a Galactic magnetar（Bochenek 等）",
+      "publisher": "Nature 587: 59–62；DOI 10.1038/s41586-020-2872-x",
+      "date": "2020-11-04",
+      "url": "https://doi.org/10.1038/s41586-020-2872-x",
+      "note": "依 arXiv 2005.10828 摘要：STARE2、2020-04-28、比最弱銀河系外爆發弱 40 倍、與 X 光爆發同時；「magnetars is a leading candidate source of FRBs」"
+    },
+    {
+      "title": "A repeating fast radio burst source in a globular cluster（Kirsten 等）",
+      "publisher": "Nature 602: 585–589；DOI 10.1038/s41586-021-04354-w",
+      "date": "2022-02-23",
+      "url": "https://doi.org/10.1038/s41586-021-04354-w",
+      "note": "依 arXiv 2105.11445 摘要：FRB 20200120E、M81 球狀星團、偏離中心約 2 pc、近 40 倍、挑戰年輕磁星模型"
+    },
+    {
+      "title": "A repeating fast radio burst source in the outskirts of a quiescent galaxy（Shah 等）",
+      "publisher": "arXiv 預印本 2410.23374",
+      "date": "2024-10-30",
+      "url": "https://arxiv.org/abs/2410.23374",
+      "note": "讀摘要：FRB 20240209A、2024 年 2–7 月 22 道、偏離宿主中心 40±5 kpc"
+    },
+    {
+      "title": "The Massive and Quiescent Elliptical Host Galaxy of the Repeating Fast Radio Burst FRB 20240209A（Eftekhari 等）",
+      "publisher": "The Astrophysical Journal Letters 979: L22；DOI 10.3847/2041-8213/ad9de2",
+      "date": "2025-01-21",
+      "url": "https://arxiv.org/abs/2410.23336",
+      "note": "讀 arXiv 摘要：z=0.1384、約 110 億年、第一個橢圓宿主、宿主多為造星星系"
+    },
+    {
+      "title": "A pulsar-like polarization angle swing from a nearby fast radio burst（Mckinven 等）",
+      "publisher": "Nature 637: 43–47；DOI 10.1038/s41586-024-08184-4",
+      "date": "2025-01-01",
+      "url": "https://doi.org/10.1038/s41586-024-08184-4",
+      "note": "依 arXiv 2402.09304 摘要：FRB 20221022A、約 65 Mpc、約 2.5 ms 內偏振角轉約 130 度"
+    },
+    {
+      "title": "Magnetospheric origin of a fast radio burst constrained using scintillation（Nimmo 等）",
+      "publisher": "Nature 637: 48–51；DOI 10.1038/s41586-024-08297-w",
+      "date": "2025-01-01",
+      "url": "https://doi.org/10.1038/s41586-024-08297-w",
+      "note": "依 arXiv 2406.11053 摘要：兩類模型、發射區 ≲3×10^4 km"
+    },
+    {
+      "title": "FRB 20250316A: A Brilliant and Nearby One-off Fast Radio Burst Localized to 13 pc Precision（CHIME/FRB Collaboration）",
+      "publisher": "The Astrophysical Journal Letters 989: L48；DOI 10.3847/2041-8213/adf62f",
+      "date": "2025-08-21",
+      "url": "https://arxiv.org/abs/2506.19006",
+      "note": "讀 arXiv 全文第 1–2 節與摘要：外站 66／956／3370 km、2025-03-16、RBFLOAT 命名與註腳、68×57 mas、13 pc、每天 2–3 道、3,649 個源、2–3% 重複、190±20 pc"
+    },
+    {
+      "title": "James Webb Space Telescope Observations of the Nearby and Precisely Localized FRB 20250316A（Blanchard 等）",
+      "publisher": "The Astrophysical Journal Letters 989: L49；DOI 10.3847/2041-8213/adf29f",
+      "date": "2025-08-21",
+      "url": "https://arxiv.org/abs/2506.19007",
+      "note": "讀 arXiv 全文：2025-05-19 NIRCam、9470 s、NIR-1 距中心約 40 mas、巧合機率約 0.36、三種可能、「≳ year later」"
+    },
+    {
+      "title": "The Second CHIME/FRB Catalog of Fast Radio Bursts（CHIME/FRB Collaboration）",
+      "publisher": "The Astrophysical Journal Supplement Series 283: 34；DOI 10.3847/1538-4365/ae3828",
+      "date": "2026-03-02",
+      "url": "https://arxiv.org/abs/2601.09399",
+      "note": "讀摘要：4,539 道、3,641 個源、83 個重複源（981 道）、2018-07-25 至 2023-09-15"
+    },
+    {
+      "title": "The First CHIME/FRB Fast Radio Burst Catalog（CHIME/FRB Collaboration）",
+      "publisher": "The Astrophysical Journal Supplement Series 257: 59；DOI 10.3847/1538-4365/ac33ab",
+      "date": "2021-12-07",
+      "url": "https://arxiv.org/abs/2106.04352",
+      "note": "讀摘要：536 道"
+    },
+    {
+      "title": "Probing the maximum energy of fast radio bursts using thousands of sources from the Second CHIME/FRB Catalog（Shah 等）",
+      "publisher": "arXiv 預印本 2602.19335",
+      "date": "2026-02-22",
+      "url": "https://arxiv.org/abs/2602.19335",
+      "note": "讀摘要：2,998 道一次性爆發、最大能量下限最佳估計 1.2×10^42 erg、與磁星外部磁場能量一致"
+    },
+    {
+      "title": "A living theory catalogue for fast radio bursts（Platts, Weltman, Walters, Tendulkar 等）",
+      "publisher": "Physics Reports 821: 1–27；DOI 10.1016/j.physrep.2019.06.003",
+      "date": "2019-08",
+      "url": "https://arxiv.org/abs/1810.05836",
+      "note": "摘要首句引文"
+    },
+    {
+      "title": "Fast radio bursts at the dawn of the 2020s（Petroff, Hessels, Lorimer）",
+      "publisher": "The Astronomy and Astrophysics Review 30；DOI 10.1007/s00159-022-00139-w",
+      "date": "2022-03-29",
+      "url": "https://doi.org/10.1007/s00159-022-00139-w",
+      "note": "依 arXiv 2107.10113 摘要：600 多個源、24 個重複源、19 個宿主星系"
+    },
+    {
+      "title": "Fast Radio Bursts: An Extragalactic Enigma（Cordes, Chatterjee）",
+      "publisher": "Annual Review of Astronomy and Astrophysics 57: 417–465；DOI 10.1146/annurev-astro-091918-104501",
+      "date": "2019-08-18",
+      "url": "https://doi.org/10.1146/annurev-astro-091918-104501",
+      "note": "依 arXiv 1906.05878 摘要：模型從外星飛船到宇宙弦；不排除全部都會重複"
+    },
+    {
+      "title": "Sun Fact Sheet",
+      "publisher": "NASA Goddard Space Flight Center（NSSDCA）",
+      "date": "2024-05-09",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+      "note": "光度 382.8×10^24 J/s，用於本文自算的能量比較"
+    },
+    {
+      "title": "CHIME: The Instrument",
+      "publisher": "CHIME Collaboration",
+      "date": "",
+      "url": "https://chime-experiment.ca/en/instrument",
+      "note": "四座 20 m × 100 m 南北向半圓柱反射面、400–800 MHz、無活動零件；首頁：位於彭蒂克頓附近的 Dominion Radio Astrophysical Observatory、每天掃過整個北天"
+    }
+  ]
+}
