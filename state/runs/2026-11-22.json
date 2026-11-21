@@ -1,4 +1,15 @@
 {
+  "1": {
+    "finished_at": "2026-11-22T01:05:50+08:00",
+    "missing": [
+      "football",
+      "news",
+      "literature",
+      "wildcard",
+      "mystery"
+    ],
+    "note": "精簡：music（compare/listener）；devotion 太 11:28–30；perio 已完成"
+  },
   "column": {
     "finished_at": "2026-11-21T22:51:14+08:00",
     "missing": [

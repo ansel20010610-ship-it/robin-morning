@@ -1,0 +1,309 @@
+{
+  "column": "music",
+  "date": "2026-11-22",
+  "title": "據柴可夫斯基說，他的第一號鋼琴協奏曲被批「又壞又俗」",
+  "dek": "1874 年平安夜，據柴可夫斯基說，魯賓斯坦把他的新曲子批到只剩兩三頁能留。三年多後，魯賓斯坦自己上台彈了這首。",
+  "brief": "1874 年平安夜，柴可夫斯基說他把新寫的鋼琴協奏曲彈給老闆魯賓斯坦聽，被批得只剩兩三頁能留，他回說一個音都不改。這是他三年多後自己寫在信裡的說法。這首曲子後來成了最廣為人知的鋼琴協奏曲之一，魯賓斯坦自己也上台彈了。",
+  "topic_key": "music:tchaikovsky-op23",
+  "updated_at": "2026-11-22T01:03:53+08:00",
+  "form": "compare",
+  "voice": "listener",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/87/Gribkov-Rubinstein.jpg",
+    "width": 966,
+    "height": 1200,
+    "alt": "油畫半身像，橢圓構圖：一位男子，棕色微捲的頭髮往後梳，留小鬍子，穿深藍色絲絨外套、白襯衫，繫深藍色領結，頭微側、目光望向畫面左方，背景是暗綠灰色。",
+    "caption": "尼古拉・魯賓斯坦（Nikolai Rubinstein，1835–1881），俄國鋼琴家兼指揮、莫斯科音樂院創辦人之一。畫家 Sergei Gribkov 1870 年代的布面油畫，70 × 50 公分，Commons 標示收藏於莫斯科的格林卡全俄音樂文化博物館聯合會。1874 年平安夜聽柴可夫斯基彈這首協奏曲的就是他。",
+    "credit": "Sergei Gribkov（畫家）；影像經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gribkov-Rubinstein.jpg",
+    "made": "1870 年代（Commons 標示）",
+    "depicts": "1870 年代，魯賓斯坦約 40 歲上下"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1874 年 12 月 24 日是當年俄國的平安夜。俄國那時用的曆法（俄曆）比現在通行的晚約十二天；後面標「新曆」的，才是現在的算法。那天，**柴可夫斯基**在莫斯科音樂院的一間教室裡，彈一首剛寫的新曲子給老闆聽。他是寫《天鵝湖》《胡桃鉗》的俄國作曲家，新曲子是《第一號鋼琴協奏曲》。"
+    },
+    {
+      "type": "p",
+      "text": "協奏曲，就是一件獨奏樂器（這裡是鋼琴）和整個管弦樂團輪流對話、互相較勁的樂曲。這一首今天是所有鋼琴協奏曲裡最廣為人知的幾首之一，柴可夫斯基在自己的鋼琴作品裡也最偏愛這一首。可是照他的說法，那天教室裡的評價完全相反。"
+    },
+    {
+      "type": "p",
+      "text": "聽的人是**尼古拉・魯賓斯坦**，俄國鋼琴家兼指揮，莫斯科音樂院的創辦人之一，主持到過世。柴可夫斯基從聖彼得堡的音樂院畢業後，是魯賓斯坦請他來教書，所以魯賓斯坦既是同事，也是老闆。柴可夫斯基自己不是鋼琴家，想請鋼琴大師指出哪些地方彈起來彆扭。"
+    },
+    {
+      "type": "h",
+      "text": "平安夜那一幕，只有柴可夫斯基這一邊的說法"
+    },
+    {
+      "type": "p",
+      "text": "先講清楚，這一幕的細節出自柴可夫斯基 1878 年 2 月寫給梅克夫人的信，已是三年多以後的事。梅克夫人是出錢資助他的鐵路富商遺孀，兩人只通信、不見面。魯賓斯坦本人怎麼說，沒有查到。所以底下全是**柴可夫斯基的一面之詞**。"
+    },
+    {
+      "type": "p",
+      "text": "他說，教室裡除了魯賓斯坦，還有同事胡伯特。他只想聽鋼琴技巧上的意見。他彈完第一樂章，沒人開口，「一句話也沒有，一句評語也沒有」。他耐著性子彈完全曲，還是沉默。他站起來問：「怎麼樣？」"
+    },
+    {
+      "type": "p",
+      "text": "魯賓斯坦這才開口。柴可夫斯基轉述的內容是："
+    },
+    {
+      "type": "quote",
+      "text": "結果是：我的協奏曲不夠格、根本沒法彈；有些段落陳腐、笨拙到無法補救；作為一件作品又壞又俗；我這裡偷一段、那裡偷一段；只有兩三頁可以留，其餘不是丟掉，就是整個重寫。",
+      "original": "It turned out that my concerto was inadequate, that it was impossible to play, that there were passages so hackneyed clumsy and awkward that they were impossible to rectify, that as a composition it was bad and vulgar, that I had stolen this from here and that from there, that there were only two or three pages that could be left, while the rest had to be abandoned or completely reworked.",
+      "cite": "柴可夫斯基致梅克夫人，1878 年 2 月 2 日（新曆）轉述魯賓斯坦；依 Brett Langston 英譯，本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "柴可夫斯基說自己不只是嚇一跳，還覺得受了侮辱，一句話也沒說就走出教室。魯賓斯坦在另一個房間又講了一次，還開出條件：照他的意見改，他就在自己的音樂會上演奏。柴可夫斯基的回答是："
+    },
+    {
+      "type": "quote",
+      "text": "「我一個音都不會改，」我回答，「我要照現在這樣把它印出來！」我也真的這麼做了。",
+      "original": "\"I will not change a single note\", I replied, \"and I will have it printed it in its present form!\". And so I did.",
+      "cite": "柴可夫斯基致梅克夫人，1878 年 2 月 2 日（新曆）；依 Brett Langston 英譯，本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "信裡說，從這件事以後，魯賓斯坦把他看成叛逆的人、暗中的對手，對他冷淡了許多。"
+    },
+    {
+      "type": "h",
+      "text": "同一份樂譜，後來怎麼了"
+    },
+    {
+      "type": "p",
+      "text": "首演沒有交給魯賓斯坦。1875 年 10 月 25 日，美國波士頓的音樂廳，由德國指揮家兼鋼琴家**畢羅**獨奏、B. J. 蘭恩指揮，波士頓的聽眾反應熱烈。譜上題獻的人也是畢羅。"
+    },
+    {
+      "type": "p",
+      "text": "畢羅 1875 年 6 月回信給柴可夫斯基，說曲子裡「有這樣無可超越的原創性、這樣的高貴、這樣的力量」。1876 年 1 月他再回信，說在他看來不必修改，只想在幾處讓鋼琴的聲部更厚實。"
+    },
+    {
+      "type": "table",
+      "title": "1874 年平安夜的評語，和後來發生的事",
+      "caption": "左欄是柴可夫斯基 1878 年寫給梅克夫人的信裡轉述的魯賓斯坦評語（魯賓斯坦本人的說法沒有留在這封信裡）；右欄依 Tchaikovsky Research、BSO、美國國會圖書館整理。後來欄的日期為新曆。",
+      "head": [
+        "對照點",
+        "1874 年平安夜（俄曆 12 月 24 日）",
+        "後來"
+      ],
+      "rows": [
+        [
+          "能不能彈",
+          "「根本沒法彈」",
+          "1878 年 3 月 22 日魯賓斯坦自己在莫斯科上台彈，之後又在聖彼得堡與巴黎演出"
+        ],
+        [
+          "值不值得留",
+          "只有兩三頁可以留，其餘要丟掉或整個重寫",
+          "畢羅 1875 年 6 月寫信說曲中有「無可超越的原創性」；1958 年的錄音成為第一張賣破百萬的古典唱片"
+        ],
+        [
+          "誰來首演",
+          "魯賓斯坦開的條件：照他的意見改，他才在自己的音樂會上彈",
+          "1875 年 10 月 25 日畢羅在波士頓首演；同年 12 月 3 日莫斯科演出，塔涅耶夫獨奏、魯賓斯坦指揮"
+        ],
+        [
+          "柴可夫斯基的回答",
+          "「我一個音都不會改」",
+          "1878 年 3 月他寫信說：魯賓斯坦肯彈，「我很感謝他」"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "1878 年 3 月，柴可夫斯基寫信給梅克夫人，說出版商來信，魯賓斯坦要彈他的協奏曲。他寫道：「這是我偏愛的孩子之一。魯賓斯坦怎麼會突然想到要彈這首？他以前不是認為根本沒法演奏嗎？我不知道，但我很感謝他。」"
+    },
+    {
+      "type": "p",
+      "text": "魯賓斯坦 3 月 22 日在莫斯科親自彈了這首，之後又在聖彼得堡和巴黎演出，柴可夫斯基聽說後「非常、非常高興」。據維基百科，魯賓斯坦後來收回批評，成了這首曲子最熱心的推手之一。"
+    },
+    {
+      "type": "p",
+      "text": "至於「一個音都不改」：他當天拒絕了，但後來很可能自己還是修過鋼琴的部分。1879 年出版的總譜，第一樂章的鋼琴部分和 1875 年的兩架鋼琴版已經不同，1889 年又出了新版。"
+    },
+    {
+      "type": "h",
+      "text": "你可能在哪裡聽過"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**奧運**：2021 年 4 月 22 日，俄羅斯奧委會宣布，國際奧委會核准用這首協奏曲的一個片段取代俄羅斯國歌。原因是世界反禁藥機構的裁決（經體育仲裁法庭部分維持），俄羅斯的國歌不能在大型賽事使用。據維基百科，東京奧運和北京冬奧，俄羅斯奧委會選手拿金牌時，放的都是這個片段。"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "下面這個版本，是**范・克萊本**的錄音。1958 年，二十三歲的德州人克萊本在莫斯科的柴可夫斯基國際鋼琴大賽拿下第一名。評審和聽眾的反應太熱烈，不給他第一名說不過去，評審便請示蘇聯領導人赫魯雪夫，他也只好同意。他回美國後簽下 RCA Victor 的合約，第一個錄音就是這首。這張錄音拿了葛萊美獎，2012 年進入美國國會圖書館的國家錄音登記簿，他也成了第一位賣出百萬張唱片的古典音樂家。"
+    },
+    {
+      "type": "music",
+      "composer": "柴可夫斯基（Pyotr Ilyich Tchaikovsky）",
+      "work": "降 B 小調第一號鋼琴協奏曲，作品 23",
+      "work_original": "Piano Concerto No. 1 in B-flat minor, Op. 23",
+      "composed": "1874–1875",
+      "performers": "范・克萊本（Van Cliburn）鋼琴、基里爾・康德拉辛（Kirill Kondrashin）指揮 RCA Victor 交響樂團",
+      "recording": "RCA Victor，1958 年 5 月 30 日錄音",
+      "duration": "約 35 分鐘（全曲）",
+      "movements": [
+        "I. Allegro non troppo e molto maestoso – Allegro con spirito",
+        "II. Andantino semplice – Prestissimo – Tempo I",
+        "III. Allegro con fuoco"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Tchaikovsky Piano Concerto No. 1 Van Cliburn Kondrashin RCA Victor Symphony Orchestra",
+        "artist_hint": "Cliburn",
+        "track_filter": [
+          "Piano Concerto No. 1"
+        ]
+      }
+    },
+    {
+      "type": "h",
+      "text": "按下播放，聽這幾個地方"
+    },
+    {
+      "type": "p",
+      "text": "第一處，開頭，0 分鐘起。先是法國號吹一段短短的號角，樂團在下面托著厚厚的聲音。接著鋼琴雙手重重砸出一串好幾個音同時響的聲音，樂團在上面唱出那條大旋律。維基百科寫道，這段序奏只在開頭出現，之後再也沒有回來。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Concerto_no._1_B%E2%99%AD_minor%2C_for_the_pianoforte_with_accompaniment_of_the_orchestra_-_op._23_%28IA_concertono1bmino00tcha%29.pdf/page6-1280px-Concerto_no._1_B%E2%99%AD_minor%2C_for_the_pianoforte_with_accompaniment_of_the_orchestra_-_op._23_%28IA_concertono1bmino00tcha%29.pdf.jpg",
+      "width": 1280,
+      "height": 1704,
+      "alt": "一頁泛黃的印刷樂譜：頁首中央印著 Concerto，右上是 P. Tschaikowsky, Op. 23，上方正中印著「Herrn Dr Hans von Bülow」。下面是兩架鋼琴的譜：第一架前幾小節是休止，之後是一串粗重的和弦；第二架的譜上有 Cor.（法國號）與 Viol. Cel.（小提琴、大提琴）的小字標示。",
+      "caption": "這部協奏曲的兩架鋼琴版樂譜第一頁：頁首題獻「Herrn Dr Hans von Bülow」（畢羅博士）。下方是序奏，第二架鋼琴譜上標著 Cor.（法國號）。版本為 Breitkopf & Härtel 出版，Internet Archive 目錄記 1890 年，不是 1875 年的初版。",
+      "credit": "柴可夫斯基（作曲）；Breitkopf & Härtel（出版）；多倫多大學音樂圖書館掃描，經 Internet Archive 與 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Concerto_no._1_B%E2%99%AD_minor,_for_the_pianoforte_with_accompaniment_of_the_orchestra_-_op._23_(IA_concertono1bmino00tcha).pdf?page=6",
+      "made": "Internet Archive 目錄記 1890 年，非 1875 年初版；曲子寫於 1874–1875"
+    },
+    {
+      "type": "p",
+      "text": "第二處，第一樂章的速度快起來之後，那條跳躍的主題。BSO 的解說說，這是烏克蘭盲眼乞丐傳統上唱的歌。維基百科說柴可夫斯基是在基輔附近的市集聽到的。"
+    },
+    {
+      "type": "p",
+      "text": "第三處，第二樂章。一開始是弦樂用手指撥弦的短短引子，接著長笛吹出主題。到了中段，音樂變成快速、像舞曲的一段。BSO 的解說說，這一段本身是一首歌。"
+    },
+    {
+      "type": "p",
+      "text": "第四處，第三樂章，也就是終曲。第一條主題取自烏克蘭的春天民謠，又快又跳，像進行曲。第二條是抒情的旋律，到結尾再回來，把全曲推上高潮。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "降 B 小調第一號鋼琴協奏曲，作品 23；獨奏鋼琴加管弦樂團，三個樂章"
+        ],
+        [
+          "創作",
+          "1874 年 11 月到 1875 年 2 月；題獻給畢羅（Hans von Bülow）"
+        ],
+        [
+          "首演",
+          "1875 年 10 月 25 日，美國波士頓音樂廳；畢羅獨奏，B. J. 蘭恩指揮"
+        ],
+        [
+          "長度",
+          "全曲約 35 分鐘"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Letter 736（柴可夫斯基致梅克夫人，1878 年 2 月 2 日，新曆）",
+      "publisher": "Tchaikovsky Research（Brett Langston 英譯）",
+      "date": "未註明",
+      "url": "https://en.tchaikovsky-research.net/pages/Letter_736",
+      "note": "1874 年平安夜魯賓斯坦評這首協奏曲的經過，沉默、批評、「I will not change a single note」全出自這封信；2026-11-21 查閱"
+    },
+    {
+      "title": "Letter 780（柴可夫斯基致梅克夫人，1878 年 3 月 19 日，新曆）",
+      "publisher": "Tchaikovsky Research（Brett Langston 英譯）",
+      "date": "未註明",
+      "url": "https://en.tchaikovsky-research.net/pages/Letter_780",
+      "note": "「Rubinstein will be playing my concerto」與「very grateful to him」；2026-11-21 查閱"
+    },
+    {
+      "title": "Piano Concerto No. 1",
+      "publisher": "Tchaikovsky Research",
+      "date": "未註明",
+      "url": "https://en.tchaikovsky-research.net/pages/Piano_Concerto_No._1",
+      "note": "創作時間、樂章、編制、首演與演出名單、題獻、1879／1889 修訂、畢羅來信；2026-11-21 查閱"
+    },
+    {
+      "title": "Piano Concerto No. 1 (Tchaikovsky)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Piano_Concerto_No._1_(Tchaikovsky)",
+      "note": "開頭的法國號與和弦、烏克蘭民謠、終曲第一主題「march-like」、魯賓斯坦後來的轉變、奧運用途（俄羅斯奧委會選手領金牌時放這個片段，內文未指名東京與北京，該處為依此推定）；2026-11-21 查閱"
+    },
+    {
+      "title": "Tchaikovsky: Piano Concerto No. 1（Michael Steinberg 樂曲解說）",
+      "publisher": "Boston Symphony Orchestra",
+      "date": "未註明",
+      "url": "https://www.bso.org/works/tchaikovsky-piano-concerto-no-1",
+      "note": "1875 年 10 月 25 日波士頓首演；序奏主題成為 1940 年代初的流行歌；烏克蘭盲眼乞丐的歌；第二樂章中段；2026-11-21 查閱"
+    },
+    {
+      "title": "From the National Recording Registry: Van Cliburn, Russia, and Tchaikovsky's Piano Concerto No. 1",
+      "publisher": "Library of Congress（Now See Hear! 部落格）",
+      "date": "2022-04",
+      "url": "https://blogs.loc.gov/now-see-hear/2022/04/from-the-national-recording-registry-van-cliburn-russia-and-tchaikovskys-piano-concerto-no-1-april-11-1958/",
+      "note": "1958 年莫斯科大賽、1958 年 5 月 30 日 RCA 錄音、葛萊美、1961 金唱片與 1989 白金、2012 年進國家錄音登記簿；2026-11-21 查閱"
+    },
+    {
+      "title": "Tchaikovsky Piano Concerto No. 1 (Van Cliburn 1958 recording)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Tchaikovsky_Piano_Concerto_No._1_(Van_Cliburn_1958_recording)",
+      "note": "RCA Victor 交響樂團、康德拉辛指揮、「第一張古典白金唱片」的說法；2026-11-21 查閱"
+    },
+    {
+      "title": "Tchaikovsky Selection To Replace Banned Russian Anthem At Tokyo, Beijing Olympics",
+      "publisher": "RFE/RL",
+      "date": "2021-04-22",
+      "url": "https://www.rferl.org/a/russia-olympics-anthem-tchaikovsky-doping-ban-tokyo-beijing/31217728.html",
+      "note": "國際奧委會核准用這首協奏曲片段取代俄羅斯國歌；東京與北京；禁藥裁決的原因；2026-11-21 查閱"
+    },
+    {
+      "title": "Nikolai Rubinstein",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Nikolai_Rubinstein",
+      "note": "生卒年、身分、莫斯科音樂院、與柴可夫斯基的關係、後來成為這首曲子的支持者；2026-11-21 查閱"
+    },
+    {
+      "title": "Pyotr Ilyich Tchaikovsky",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky",
+      "note": "生卒年、魯賓斯坦聘他任教、梅克夫人是贊助人；2026-11-21 查閱"
+    },
+    {
+      "title": "Hans von Bülow",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Hans_von_B%C3%BClow",
+      "note": "畢羅的身分與生卒年；波士頓首演的獨奏者；2026-11-21 查閱"
+    }
+  ]
+}
