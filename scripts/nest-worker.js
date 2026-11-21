@@ -133,6 +133,33 @@ async function claude(KEY, system, content) {
 // Taiwan's date, `back` days ago
 const twDay = (back = 0) => new Date(Date.now() + 8 * 3600e3 - back * 864e5).toISOString().slice(0, 10);
 const member = async (env, code, id) => { if (typeof id !== "string" || !/^[A-Z2-9]{8}$/.test(id)) return false; const n = await env.NEST.get(code, "json"); return Boolean(n && id in (n.members || {})); };
+// Finished days, by push device rather than by yard (2026-11-16): the app (assets/notify.js tellDone) says whether this device's
+// reader has finished today's issue, under the short hash of its push address (scripts/push.py endpoint_hash, index.json
+// `push`); what counts as finished is app.js syncDone's alone. scripts/push.py asks before the 12:30 and 21:00 reminders
+// and leaves a finished device out. POST /done {h, d, done} (sent as text/plain: no preflight); GET /done?d=<date>&h=<h>,…
+// answers {done: [h…]}. One key a device and day, written only when it is missing, removed when the day opens again, gone after two days.
+// Nothing made from a subscription is secret: anyone can mark a device finished or not for today or yesterday, or ask
+// which it is; the worst is one reminder missed or one too many.
+const DEVICE = /^[0-9a-f]{16}$/;
+async function done(req, env) {
+  if (req.method === "GET") {
+    const q = new URL(req.url).searchParams, d = q.get("d") || "", hs = (q.get("h") || "").split(",").slice(0, 20);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(d) || !hs.every((h) => DEVICE.test(h))) return json({ error: "bad request" }, 400);
+    const got = await Promise.all(hs.map((h) => env.NEST.get(`done:${d}:${h}`)));
+    return json({ done: hs.filter((h, i) => got[i] !== null) });
+  }
+  if (req.method !== "POST") return json({ error: "GET or POST only" }, 405);
+  let b;
+  try { b = await req.json(); } catch { return json({ error: "bad json" }, 400); }
+  if (typeof b?.h !== "string" || !DEVICE.test(b.h) || ![twDay(), twDay(1)].includes(b.d) || typeof b.done !== "boolean") return json({ error: "bad request" }, 400);
+  const key = `done:${b.d}:${b.h}`;
+  // KV's free tier: 1,000 writes and 1,000 deletes a day. A read can be a cached copy up to a minute old: a finished day
+  // asks first and at worst writes again, or skips a write and one reminder too many comes; an opened day deletes
+  // without asking (it is sent only after a finished one), so a stale read never leaves a reminder out
+  if (!b.done) await env.NEST.delete(key);
+  else if ((await env.NEST.get(key)) === null) await env.NEST.put(key, "1", { expirationTtl: 2 * 864e2 });
+  return json({ ok: true });
+}
 
 // 晚安 (the owner, 2026-11-10): GET /{code}/goodnight → {goodnights: [{w, n, at}]}; POST {member} says goodnight to the
 // bird tonight. The Worker stamps the time and the night (the evening's date; before five in the morning it is still
@@ -243,6 +270,7 @@ export default {
 async function route(req, env) {
     if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
     const parts = new URL(req.url).pathname.replace(/^\/+/, "").split("/");
+    if (parts[0] === "done") return done(req, env); // a push device, not a yard: no code (below)
     let code = "";
     try { code = decodeURIComponent(parts[0] || "").toUpperCase(); } catch { /* a malformed escape: bad code below */ }
     if (!CODE.test(code)) return json({ error: "bad code" }, 400);

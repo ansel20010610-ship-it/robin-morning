@@ -5,7 +5,7 @@ import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasCl
   autoPlaylist, setAutoPlaylist, choosePlaylist, autoAdd, resolve as spResolve, play as spPlay, preloadPlayer, canStream } from "./spotify.js";
 import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
-import { renderPush, clearNotices } from "./notify.js";
+import { renderPush, clearNotices, tellDone } from "./notify.js";
 import { initPull } from "./pull.js";
 import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pressRun, ripples, flip, shine, tiltGrant } from "./motion.js";
 import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
@@ -1267,6 +1267,7 @@ function syncDone() {
     // an issue holding only the serial (written days ahead) has nothing the stamp counts: not finished, so the reminders still come
     const read = readSet(); // once, not once an issue: the list is parsed out of storage each time, and this runs as an article is finished
     for (const i of publishedIssues()) { const arts = i.articles || []; if (issueOpen(i.date) && arts.some((a) => forStamp(a, i.date)) && !unreadIn(i.date, arts, read)) done.add(i.date); }
+    const today = twNow().date; tellDone(S.cfg?.nest?.api, today, done.has(today), S.index?.push); // the reminders skip a finished device (notify.js)
     caches.open("rm-state").then((c) => c.put("state/done", new Response(JSON.stringify([...done]), { headers: { "Content-Type": "application/json" } }))).catch(() => {});
   } catch { /* no Cache API (a plain http:// preview) */ }
 }
@@ -3010,6 +3011,7 @@ async function boot() {
     // kept alive for days went on with the list it started with — a new column's pieces under their raw key (audit 2026-11-11).
     await Promise.all([loadLate(), loadDays(), loadBook(), getJSON("content/config.json", { fresh: true }).then((c) => { if (c && typeof c === "object" && c.columns && c.title) S.cfg = c; }).catch(() => {})]);
     try { S.index = await getJSON("content/index.json", { fresh: true }); fetchedAt = Date.now(); } catch { /* offline: still redraw the clock */ }
+    syncDone(); // a newer index can finish a day or open it again; a finished day the Worker has not heard of goes again
   };
   const refetch = async () => {
     await loadIndex();

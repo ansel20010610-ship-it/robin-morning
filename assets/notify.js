@@ -1,6 +1,6 @@
 // 出刊通知: the 07:30 notice that today's issue is out (Web Push). scripts/push.py sends it from notify.yml to the
 // devices in state/push/devices.json; a device joins that list when the 裝置代碼 copied here is added there.
-import { esc, toast } from "./util.js";
+import { esc, toast, store, within } from "./util.js";
 import { isWebKitITP, isStandaloneIOS } from "./spotify.js";
 
 const supported = () => "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
@@ -95,4 +95,31 @@ export async function renderPush(el, cfg, registered = []) {
 export function clearNotices() {
   navigator.clearAppBadge?.().catch(() => {});
   navigator.serviceWorker?.getRegistration().then((r) => r?.getNotifications?.() || []).then((ns) => ns.forEach((n) => n.close())).catch(() => {});
+}
+
+// A finished day, for the 12:30 and 21:00 reminders (scripts/push.py remind; 2026-11-16): iOS shows every push it gets, so the
+// phone cannot drop one, and push.py leaves out a device whose reader has finished the day. app.js syncDone decides
+// that; this tells the yard's Worker (scripts/nest-worker.js done) under the device's short hash, only for a device on
+// the paper's list (index.json `push`), and again only when it changed for the day: a finished day opens again when
+// articles are added. What failed or went unconfirmed goes again at the next syncDone. Never throws, shows nothing.
+let telling = null, wanted = null;
+export function tellDone(api, date, finished, registered) {
+  wanted = [api, date, finished, registered];
+  telling ||= (async () => { while (wanted) { const w = wanted; wanted = null; await tellOnce(...w).catch(() => {}); } telling = null; })();
+}
+async function tellOnce(api, date, finished, registered) {
+  if (!/^https:\/\//.test(api || "") || !Array.isArray(registered) || !navigator.serviceWorker) return;
+  // not currentSub(): it waits for the service worker and drops a subscription made with an older key
+  const sub = await (await navigator.serviceWorker.getRegistration())?.pushManager?.getSubscription();
+  if (!sub) return; // no notices on this device, or no service worker yet (a first visit): asked again at the next sync
+  const h = await hashOf(sub.endpoint), t = store.get("remind.told") || {};
+  // an attempt is written down before it goes and confirmed after: a request that reached the Worker but whose answer was
+  // lost (the app closed at once) leaves it pending, and a pending day is sent again whichever way it now stands
+  const same = t.d === date && t.h === h;
+  if (!registered.includes(h) || (same ? t.done === finished && !t.pending : !finished)) return;
+  store.set("remind.told", { d: date, h, done: finished, pending: true });
+  // text/plain is a simple request, no preflight: one round trip on a weak signal; keepalive: it still goes out when
+  // the app is closed right after the last article
+  const r = await fetch(`${api.replace(/\/$/, "")}/done`, { method: "POST", headers: { "Content-Type": "text/plain" }, body: JSON.stringify({ h, d: date, done: finished }), keepalive: true, ...within(15000) });
+  if (r.ok) store.set("remind.told", { d: date, h, done: finished });
 }

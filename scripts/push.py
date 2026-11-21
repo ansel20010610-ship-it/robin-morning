@@ -329,10 +329,31 @@ def cmd_issue(a):
     return send(devs, payload)
 
 
+def unfinished(devs, date):
+    """The devices whose reader has not finished `date` (2026-11-16). The app tells the yard's Worker when a day is finished or opens
+    again (app.js syncDone decides, assets/notify.js tellDone tells, scripts/nest-worker.js done keeps it); this asks it
+    by the short hashes index.json publishes. A question that cannot be asked or answered leaves every device in: a
+    nudge too many, never one missed."""
+    try:
+        hs = [endpoint_hash(d["subscription"]["endpoint"]) for d in devs]  # in here: one malformed entry in devices.json leaves every device in
+        url = "%s/done?d=%s&h=%s" % (load_config()["nest"]["api"].rstrip("/"), date, ",".join(hs))
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "robin-morning-push"}), timeout=10) as r:
+            done = json.loads(r.read().decode("utf-8"))["done"]
+        if not isinstance(done, list):
+            raise ValueError("done is %s" % type(done).__name__)
+    except Exception as e:  # noqa: BLE001 — the Worker unreachable, not updated yet (400) or answering oddly, a device entry malformed
+        print("問不到哪幾台讀完了（%s %s），每一台照常提醒。" % (type(e).__name__, getattr(e, "code", "") or ""))
+        return devs
+    for d, h in zip(devs, hs):
+        print("%s：%s" % (d.get("name"), "讀完了，不提醒" if h in done else "還沒讀完，提醒"))
+    return [d for d, h in zip(devs, hs) if h not in done]
+
+
 def cmd_remind(a):
     """notify.yml at 12:30 and 21:00 Taiwan (the relay starts the run on the hour, the schedules are backup): nudge about
-    today's issue when it is on the live site. The phone decides whether to show it (sw.js drops it when the issue was
-    finished); here we check that there is an issue to finish. Nothing while a Sunday issue is held or being written
+    today's issue when it is on the live site. On a scheduled or relay run a device whose reader has finished the day is
+    left out (unfinished: the app tells the yard's Worker; sw.js's silent copy stays for a reminder that comes anyway);
+    here we check that there is an issue to finish. Nothing while a Sunday issue is held or being written
     again (late.json waiting/regenerating): the 07:30 notice said it comes in the afternoon, the app keeps the parcel
     sealed, and cmd_late announces the finished 補刊 — a nudge in between would tell the reader to finish a paper the
     paper itself says is not out. A 補刊 given up ("unfinished") gets one apology instead of the nudge."""
@@ -368,6 +389,11 @@ def cmd_remind(a):
     if not issue or not any(x.get("title") for x in issue.get("articles", [])):
         print("網站上沒有 %s 的刊期，不提醒。" % date)
         return 0
+    if a.which:  # a scheduled or relay run; a manual one (ping file, mode=remind: a test of the nudge) goes to every device
+        devs = unfinished(devs, date)
+        if not devs:
+            print("每一台都讀完 %s 了，不提醒。" % date)
+            return 0
     payload = remind_payload(date, noon=which == "noon")
     print(json.dumps(payload, ensure_ascii=False, indent=1))
     return send(devs, payload)
