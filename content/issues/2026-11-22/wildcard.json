@@ -1,0 +1,175 @@
+{
+  "column": "wildcard",
+  "date": "2026-11-22",
+  "title": "海裡約 1,000 公尺深處，有一條聲音管子",
+  "dek": "1944 年有人在船上聽到一連串脈衝，一路累積到高潮。原來聲音在深海裡，可以不往四面八方散。",
+  "brief": "海裡約 1,000 公尺深有一層水，低頻聲音進去後會被彎回來，沿水平方向傳幾百甚至幾千英里。1944 年有人第一次在船上聽到，1991 年有人故意從南印度洋的赫德島附近發聲，讓世界各地的水下麥克風收聽。試試能不能用聲音來量海水有沒有變暖。",
+  "topic_key": "wildcard:acoustics-sofar-deep-sound-channel",
+  "form": "flow",
+  "voice": "visitor",
+  "updated_at": "2026-11-22T02:50:22+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Heard_Island_2005-08.jpg/1280px-Heard_Island_2005-08.jpg",
+    "width": 1280,
+    "height": 1024,
+    "alt": "從高空俯視的灰白色雲海，雲被吹成一個個螺旋狀的漩渦；右下角有一小塊白色的島，四周是深色的海面。",
+    "caption": "南印度洋上的赫德島（Heard Island，畫面右下的白色小塊）和它旁邊的雲。這是 2005 年 8 月由 NASA 衛星上的 MODIS 儀器拍的，不是 1991 年實驗當時的樣子。1991 年 1 月，有人把聲源掛在這座島附近的船下，聲音在世界各地的水下被收到。",
+    "credit": "NASA，MODIS",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Heard_Island_2005-08.jpg",
+    "made": "2005-08"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1944 年春天，兩個海洋學者從麻州的伍茲霍爾出發，搭一艘叫 **Saluda** 的研究船出海。他們是尤因（Maurice Ewing）和沃澤爾（Joe Worzel）。船底下掛著一支水下麥克風，另一艘船離得很遠，把 4 磅重的炸藥丟進海裡，設定在深處爆炸。最遠的一次，離麥克風 900 英里。"
+    },
+    {
+      "type": "p",
+      "text": "麥克風收到了。他們聽到的是一連串脈衝，一個接一個，累積到高潮。一次爆炸，在遠處聽到的不是一聲，而是好幾個分開的聲音，最後一個通常最大聲。後來他們在報告裡寫到那個結尾："
+    },
+    {
+      "type": "quote",
+      "text": "聲道傳輸的結尾突然得很，連最外行的觀察者都不可能漏掉。",
+      "original": "the end of the sound channel transmission was so sharp that it was impossible for the most unskilled observer to miss it.",
+      "cite": "莫里斯・尤因（Maurice Ewing）與沃澤爾（J. Lamar Worzel），尤因與沃澤爾語，轉引自 DOSITS；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "這是人類第一次聽到海裡的**一條聲音管子**。中緯度的海，在大約 800 到 1,000 公尺深的地方，有一層水會把低頻聲音留在裡面。聲音進去之後只往水平方向跑，能傳幾百甚至幾千英里。後來海軍拿它找潛艦、試過用它救人，1991 年還有人想用它量全球海水有沒有變暖。"
+    },
+    {
+      "type": "p",
+      "text": "我原本的想法很簡單：聲音從一個點往四面八方散，越遠越小聲，隔了半個海就什麼都沒了。這一層水不是這樣。"
+    },
+    {
+      "type": "p",
+      "text": "為什麼？聲音在海水裡每秒約 1,500 公尺，空氣裡約 340 公尺。海裡的聲速主要看溫度和水壓：水越暖，聲速越快；越深，水壓越大，聲速也越快。靠近海面水暖，往下越來越冷，聲速一路變慢。到了約 1,000 公尺，水溫大致不再降，約 2°C，這時水壓的影響最大，再往下聲速又變快。最慢的是中間那一層，叫**聲速最小值**，也叫 SOFAR 聲道。"
+    },
+    {
+      "type": "p",
+      "text": "聲波有個習性：會往聲速慢的地方彎。從那一層往上跑的，上面聲速快，被彎回來；往下跑的也一樣。聲音就在這一層上下來回彎，出不去。"
+    },
+    {
+      "type": "svg",
+      "title": "海裡的一條聲音管子",
+      "svg": "<svg viewBox=\"0 0 780 390\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"左圖：聲速隨深度先變慢、約一千公尺處最慢、再變快；右圖：聲音在最慢那一層上下來回彎折，沿水平方向傳得很遠\">\n<text class=\"ink\" x=\"20\" y=\"24\" font-size=\"15\" font-weight=\"bold\">聲速隨深度怎麼變</text>\n<text class=\"ink\" x=\"300\" y=\"24\" font-size=\"15\" font-weight=\"bold\">聲音被關在那一層裡</text>\n<line class=\"muted\" x1=\"60\" y1=\"46\" x2=\"60\" y2=\"346\" stroke-width=\"1.5\"/>\n<text class=\"muted\" x=\"20\" y=\"50\" font-size=\"12\">海面</text>\n<text class=\"muted\" x=\"20\" y=\"194\" font-size=\"12\">約</text>\n<text class=\"muted\" x=\"12\" y=\"210\" font-size=\"12\">1,000 m</text>\n<text class=\"muted\" x=\"20\" y=\"350\" font-size=\"12\">海底</text>\n<path class=\"accent\" d=\"M215,46 C160,80 108,170 108,196 C108,222 150,300 190,346\" fill=\"none\" stroke-width=\"3\"/>\n<line class=\"muted\" x1=\"60\" y1=\"196\" x2=\"680\" y2=\"196\" stroke-width=\"1\" stroke-dasharray=\"6 5\"/>\n<text class=\"ink\" x=\"222\" y=\"64\" font-size=\"12\">水暖，聲速快</text>\n<text class=\"ink\" x=\"122\" y=\"190\" font-size=\"12\">最慢處</text>\n<text class=\"ink\" x=\"200\" y=\"296\" font-size=\"12\">更深：水壓大</text>\n<text class=\"ink\" x=\"200\" y=\"312\" font-size=\"12\">聲速又變快</text>\n<text class=\"muted\" x=\"60\" y=\"372\" font-size=\"12\">聲速：越往右越快</text>\n<line class=\"muted\" x1=\"300\" y1=\"46\" x2=\"680\" y2=\"46\" stroke-width=\"1.5\"/>\n<line class=\"muted\" x1=\"300\" y1=\"346\" x2=\"680\" y2=\"346\" stroke-width=\"3\"/>\n<rect class=\"soft\" x=\"300\" y=\"46\" width=\"380\" height=\"300\" opacity=\"0.35\"/>\n<path class=\"accent\" d=\"M310,196 C350,116 450,116 490,196 C530,276 630,276 670,196\" fill=\"none\" stroke-width=\"2.5\"/>\n<path class=\"gold\" d=\"M310,196 C350,256 450,256 490,196 C530,136 630,136 670,196\" fill=\"none\" stroke-width=\"2.5\"/>\n<circle class=\"ink\" cx=\"310\" cy=\"196\" r=\"6\"/>\n<circle class=\"ink\" cx=\"670\" cy=\"196\" r=\"6\"/>\n<text class=\"ink\" x=\"268\" y=\"190\" font-size=\"12\">聲源</text>\n<text class=\"ink\" x=\"684\" y=\"200\" font-size=\"12\">遠處的麥克風</text>\n<text class=\"muted\" x=\"306\" y=\"64\" font-size=\"12\">海面</text>\n<text class=\"muted\" x=\"306\" y=\"338\" font-size=\"12\">海底</text>\n<text class=\"ink\" x=\"392\" y=\"372\" font-size=\"12\">低頻聲音不碰海面與海底，沿虛線那一層走</text>\n</svg>",
+      "caption": "示意圖，不按比例；曲線形狀是示意，不是實測剖面。左圖：海面附近水暖、聲速快，往下變冷變慢；約 1,000 公尺以下水溫差不多不再降，水壓成為主因，聲速又回頭變快。右圖：聲音總是往聲速較慢的深度彎，所以被留在那一層上下彎折。依據 Discovery of Sound in the Sea（羅德島大學）的〈Sound Speed Minimum〉與〈Sound Travel in the SOFAR Channel〉。"
+    },
+    {
+      "type": "p",
+      "text": "還有頻率。水吸收高頻比低頻多，所以像悶雷那種低沉的聲音，幾乎不會因為被吸收而變小，才傳得遠。"
+    },
+    {
+      "type": "p",
+      "text": "SOFAR 是 SOund Fixing And Ranging 的縮寫，意思是聲音定位與測距。這名字來自二戰結束前美國海軍的一個試驗，試驗的構想是：墜機或沉船的人丟一顆小炸藥，設定在聲道裡爆炸，岸上相隔很遠的幾個監聽站，用聲音到達的時間差算出救生筏在哪。另外，伍茲霍爾海洋研究所的雜誌記了一次戰時測試：在巴哈馬附近水下炸 1 磅 TNT，約 2,000 英里外、靠近西非的地方收到了。900 英里是 Saluda 那次的最遠距離；2,000 英里是另一則紀錄，來源沒寫是哪一年，也沒說是不是同一次。"
+    },
+    {
+      "type": "p",
+      "text": "冷戰時，美國海軍在 1950 年代有個秘密計畫，後來成了 SOSUS（聲音監視系統）：把水下麥克風排成陣列放在海底，偵測並追蹤潛艦。這些系統收到一些不明的聲響，後來查出是**藍鯨和長須鯨**的叫聲。"
+    },
+    {
+      "type": "p",
+      "text": "1991 年 1 月底到 2 月初，有人故意拿這條管子發聲。這個實驗叫赫德島可行性實驗，目的是找出遠距離聲音傳輸能用到什麼極限。聲源在南印度洋的**赫德島**附近，發的是 57 赫茲、很低的嗡聲，世界各地共 16 個地點在監聽，從北大西洋到南冰洋都有。"
+    },
+    {
+      "type": "p",
+      "text": "為什麼要這樣做？因為水越暖，聲速越快。如果固定兩點間的傳播時間變短，就表示海水在變暖。他們估計要監測大約十年，才看得出趨勢。至於信號跑了這麼遠，還能不能從吵雜的背景裡撈出來，我看不懂那套處理的細節，只知道答案是可以。論文摘要還寫了一句：沒有證據顯示當地的海洋哺乳動物因此出現不適反應。"
+    },
+    {
+      "type": "p",
+      "text": "南大西洋的阿森松島（Ascension Island）離聲源船約 9,200 公里。最早到達的信號，約在 1 小時 44 分 17 秒後抵達。直達信號結束之後，晚到的迴響至少又持續了 22 分鐘。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sound Speed Minimum",
+      "publisher": "Discovery of Sound in the Sea（DOSITS，羅德島大學海洋研究所）",
+      "date": "",
+      "url": "https://dosits.org/science/movement/sofar-channel/sound-speed-minimum/",
+      "note": "為什麼有聲速最小值：表層溫度隨深度下降使聲速變慢，約 1,000 公尺以下溫度近乎不變（約 2°C），水壓成為主因；最慢處約 1,000 公尺（中緯度）。"
+    },
+    {
+      "title": "Sound Travel in the SOFAR Channel",
+      "publisher": "Discovery of Sound in the Sea（DOSITS，羅德島大學海洋研究所）",
+      "date": "",
+      "url": "https://dosits.org/science/movement/sofar-channel/sound-travel-in-the-sofar-channel/",
+      "note": "聲道軸中緯度約 800 至 1,000 公尺；聲波不斷彎向較慢處；低頻損失小；一次爆炸會被聽成多個分開的到達，最後一個通常最大聲。只讀中緯度部分。"
+    },
+    {
+      "title": "Tutorial: Speed of Sound",
+      "publisher": "Discovery of Sound in the Sea（DOSITS）",
+      "date": "",
+      "url": "https://dosits.org/tutorials/science/tutorial-speed/",
+      "note": "海水約 1,500 公尺／秒、空氣約 340 公尺／秒；溫度 1°C 約 4 公尺／秒、深度 1 公里約 17 公尺／秒。"
+    },
+    {
+      "title": "DOSITS FAQ（問題 7）",
+      "publisher": "Discovery of Sound in the Sea（DOSITS）",
+      "date": "",
+      "url": "https://dosits.org/dosits-faq/",
+      "note": "1944 年春，尤因與沃澤爾搭 R/V Saluda 從伍茲霍爾出發；深水麥克風掛在船下；另一艘船放 4 磅炸藥、距離最遠 900 英里；他們第一次聽到 SOFAR 傳輸，「一連串脈衝，累積到高潮」。"
+    },
+    {
+      "title": "History of the SOFAR Channel",
+      "publisher": "Discovery of Sound in the Sea（DOSITS）",
+      "date": "",
+      "url": "https://dosits.org/science/movement/sofar-channel/history-of-the-sofar-channel/",
+      "note": "尤因與沃澤爾那句引文（改寫自 Ewing and Worzel, 1948）；1946 年蘇聯 Brekhovskikh 在日本海獨立發現；戰時海軍的救生筏構想；1950s 秘密計畫 Jezebel 變成 SOSUS；不明聲響追到藍鯨與長須鯨；RAFOS 是 SOFAR 倒過來拼。只讀這一頁的摘要版。"
+    },
+    {
+      "title": "World War II: 1941-1945（History of Underwater Acoustics）",
+      "publisher": "Discovery of Sound in the Sea（DOSITS）",
+      "date": "",
+      "url": "https://dosits.org/people-and-sound/history-of-underwater-acoustics/world-war-ii-1941-1945/",
+      "note": "「Even before WWII ended, the U.S. Navy experimented with the use of these long-range transmissions as a lifesaving tool.」；救生筏位置由岸上多個監聽站的到達時間算出；SOFAR 名稱由來。"
+    },
+    {
+      "title": "Ears in the Ocean",
+      "publisher": "Oceanus，伍茲霍爾海洋研究所（WHOI）",
+      "date": "",
+      "url": "https://www.whoi.edu/oceanus/feature/ears-in-the-ocean/",
+      "note": "尤因與沃澤爾的戰時研究；在巴哈馬附近炸一磅 TNT，約 2,000 英里外的西非附近收到；聲道比喻成 pipeline；Jezebel 後來成為 SOSUS。此頁沒有講這次測試的年月，也沒有講鯨。"
+    },
+    {
+      "title": "What is SOFAR?",
+      "publisher": "NOAA National Ocean Service",
+      "date": "",
+      "url": "https://oceanservice.noaa.gov/facts/sofar.html",
+      "note": "SOFAR 讓聲音傳數百甚至數千英里；研究者把水下麥克風放在聲道軸記錄鯨叫、地震與人為噪音；鯨用這一層長距離溝通。"
+    },
+    {
+      "title": "The Heard Island Feasibility Test",
+      "publisher": "The Journal of the Acoustical Society of America 96(4), 2330–2342（Munk, Spindel, Baggeroer, Birdsall）",
+      "date": "1994-10-01",
+      "url": "https://doi.org/10.1121/1.410105",
+      "note": "只讀到 Crossref 收錄的摘要：1991 年 1 月；赫德島附近的聲源；16 個接收點；相位相干處理在全球距離可行；沒有證據顯示當地海洋哺乳動物受擾；是 ATOC 的先決實驗。"
+    },
+    {
+      "title": "The Heard Island acoustic global warming feasibility test（摘要）",
+      "publisher": "The Journal of the Acoustical Society of America 90(4, Suppl.), 2328（Spindel）",
+      "date": "1991-10-01",
+      "url": "https://doi.org/10.1121/1.402234",
+      "note": "只讀到 Crossref 收錄的摘要：1991 年 1 月下旬至 2 月初、57 赫茲、設計目的是量海水是否變暖；聲速隨水溫升高；預估要約十年監測才看得出暖化趨勢。"
+    },
+    {
+      "title": "Reception at Ascension Island, South Atlantic, of the transmissions from the Heard Island Feasibility Test",
+      "publisher": "NOAA Institutional Repository（1993）",
+      "date": "1993",
+      "url": "https://repository.library.noaa.gov/view/noaa/29440",
+      "note": "只讀到摘要：離聲源船約 9,200 公里；最早到達約 1 小時 44 分 17 秒；直達信號結束後的回響至少持續 22 分鐘。"
+    },
+    {
+      "title": "Heard Island Feasibility Test (HIFT)",
+      "publisher": "Discovery of Sound in the Sea（DOSITS）",
+      "date": "",
+      "url": "https://dosits.org/glossary/heard-island-feasibility-test-hift/",
+      "note": "聲源吊在船下、對全球接收點發送；選赫德島是因為從那裡發的聲音能到北美東西兩岸；結果顯示可能用來追蹤全球海洋暖化。"
+    }
+  ]
+}
