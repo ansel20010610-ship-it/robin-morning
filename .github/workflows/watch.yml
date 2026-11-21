@@ -254,7 +254,7 @@ jobs:
             fi
             if [ -n "$SERIAL" ] || [ "$HZ" = 2 ]; then
               echo "### 連載"
-              [ -n "$SERIAL" ] && echo "今天該刊的連載缺了：$SERIAL（連載班 16:07 提前三天譯好；補刊與製刊各班都不碰它，要手動跑連載班）。"
+              [ -n "$SERIAL" ] && echo "今天該刊的連載缺了：$SERIAL（連載班 16:00 提前三天譯好；補刊與製刊各班都不碰它，要手動跑連載班）。"
               [ "$HZ" = 2 ] && { echo "書快譯完了，下一本還沒定（scripts/serial.py horizon）："; echo '```'; cat horizon.txt; echo '```'; }
               echo
             fi
