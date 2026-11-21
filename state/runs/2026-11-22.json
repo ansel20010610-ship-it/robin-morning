@@ -19,6 +19,13 @@
     ],
     "note": "精簡：literature（document/correspondent）、mystery（timeline/detective）；未接第 1 班欄位（正刊三欄已齊）"
   },
+  "3": {
+    "finished_at": "2026-11-22T03:34:58+08:00",
+    "missing": [
+      "news"
+    ],
+    "note": "wildcard 精簡（flow/visitor）；football 初稿 qa/fan，非比賽夜，第 9 步重寫 1／修正 0（football 重寫後忠實度核對已逐條修正）；未接第 1 班欄位；validate 無 WARN；巴黎對羅馬等賽果請第 4 班補皇馬對塞爾塔終場"
+  },
   "column": {
     "finished_at": "2026-11-21T22:51:14+08:00",
     "missing": [
