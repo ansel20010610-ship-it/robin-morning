@@ -26,6 +26,11 @@
     ],
     "note": "wildcard 精簡（flow/visitor）；football 初稿 qa/fan，非比賽夜，第 9 步重寫 1／修正 0（football 重寫後忠實度核對已逐條修正）；未接第 1 班欄位；validate 無 WARN；巴黎對羅馬等賽果請第 4 班補皇馬對塞爾塔終場"
   },
+  "4": {
+    "finished_at": "2026-11-22T05:33:14+08:00",
+    "missing": [],
+    "note": "巴薩無新消息未動（無比賽夜，next 維持）；FM、寰宇靜默已記錄；訃聞奧賈斯、快訊（網域：aljazeera、france24、news.pts.org.tw、focustaiwan.tw 可用；cna.com.tw、focustaiwan RSS 404、dw RSS 無日期）；第 9 步：重寫 0／修正 2（快訊、訃聞）；全刊無缺稿"
+  },
   "column": {
     "finished_at": "2026-11-21T22:51:14+08:00",
     "missing": [
