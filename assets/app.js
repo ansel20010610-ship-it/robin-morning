@@ -1445,6 +1445,8 @@ const fixtureHtml = (f) => !f ? "" : `<aside class="fixture"><span class="lbl">�
 async function viewArticle(date, column, my) {
   const wantMark = landMark; // 劃線本: the mark to land on, taken whatever this page turns out to be
   landMark = null;
+  const wantHit = landHit; // 往期's search, when a full-text hit was tapped: its words are lit below (lightHits)
+  landHit = null;
   if (!isPublished(date)) { main.innerHTML = `<div class="wrap"><p class="empty">這篇還沒出爐，別偷看。</p></div>`; return; }
   const sealed = sealedBy(date, column);
   if (sealed) {
@@ -1467,7 +1469,7 @@ async function viewArticle(date, column, my) {
     main.innerHTML = `<div class="wrap">${errorCard({ offline, text: offline ? `目前可能離線，〈${esc(name)}〉這篇還沒存下來；連上網路後再試一次。` : `〈${esc(name)}〉這篇找不到，可能被風吹走了。` })}${cards}</div>`;
     // The retry is not a route(): it places the page itself, on the place a 接著上次 card or a pencil line asked for
     // (landMark is handed back for it), and leaves no landTop behind for the next page to land on (audit 2026-11-11).
-    main.querySelector("[data-retry]").onclick = async (ev) => { ev.currentTarget.disabled = true; landMark = wantMark; await viewArticle(date, column, my); if (my === routeSeq) { window.scrollTo(0, landTop ?? 0); landTop = null; } };
+    main.querySelector("[data-retry]").onclick = async (ev) => { ev.currentTarget.disabled = true; landMark = wantMark; landHit = wantHit; await viewArticle(date, column, my); if (my === routeSeq) { window.scrollTo(0, landTop ?? 0); landTop = null; } };
     return;
   }
   if (my !== routeSeq) return;
@@ -1558,6 +1560,11 @@ async function viewArticle(date, column, my) {
   const marked = applyMarks(body, key), target = wantMark ? marked.get(wantMark) : null;
   for (let sp; target && (sp = target.closest(".spoiler-body[hidden]"));) { const b = sp.previousElementSibling?.querySelector("button"); if (!b) break; b.click(); }
   if (target) landTop = land(target);
+  // ……and the page lands on the first of them in the text, in the middle of the screen (the owner, 2026-11-21: 點進去時
+  // 自動捲到第一處出現的地方). One inside a spoiler still folded has no box, so the first one showing is taken.
+  const hitAt = wantHit ? lightHits([main.querySelector(".article-head h1"), body], wantHit).map((r) => body.contains(r.startContainer) && r.getBoundingClientRect()).find((b) => b && b.height) : null;
+  let hitHold = null; // where that landing put the page: no reading place is kept, nor the piece marked read, till the reader moves on from it (savePos)
+  if (hitAt && landTop == null) hitHold = landTop = Math.max(0, scrollY + hitAt.top - (innerHeight - hitAt.height) / 2);
   buildToc(body, main.querySelector(".toc-slot"));
   const pencilStop = pencil(body, key);
   // The top bar names the column; once the title has scrolled under it, it carries the title instead (.past).
@@ -1698,6 +1705,7 @@ async function viewArticle(date, column, my) {
   let pruned = false;
   const savePos = () => {
     if (!body.isConnected) return;
+    if (hitHold != null) { const h = document.documentElement; if (Math.abs(h.scrollTop - Math.min(hitHold, h.scrollHeight - h.clientHeight)) < innerHeight / 3) return; hitHold = null; }
     if (reachedEnd()) { finishRead(); if (readSet().has(key)) { store.del(posKey); return; } }
     const p = ratio();
     // The place kept from last time stands until the reader is past it: a flick down to look at the picture and back
@@ -1761,6 +1769,7 @@ async function viewArticle(date, column, my) {
     reader?.stop();
     turns.abort();
     pencilStop();
+    window.CSS?.highlights?.delete("search");
   };
   document.title = `${a.title}｜${S.cfg.title}`;
 }
@@ -1859,6 +1868,29 @@ function cachedJSON(key, url) {
 }
 const searchMonths = () => cachedJSON("months", "content/search/months.json");
 const searchMonth = (m) => cachedJSON(m, `content/search/${m}.json`);
+// 往期搜尋點進去 (the owner, 2026-11-21: 往期搜尋功能點進去那篇我要標示我搜尋的關鍵字): every place a searched word stands
+// in the title and the text is lit. The CSS Custom Highlight API paints over the text and leaves the DOM as it is, so
+// 劃線本 (marks.js finds its lines by text offsets) and the pencil work as before; it goes when the article does
+// (cleanup). A word may run across an inline tag, so the text is read whole and each hit mapped back to its nodes.
+// Without the API (iOS before 17.2) nothing is lit. Returns the ranges found, in the order of the text, for the landing.
+function lightHits(roots, terms) {
+  const ranges = [];
+  for (const root of roots) {
+    if (!root) continue;
+    const nodes = [], starts = [], w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let text = "";
+    for (let n; (n = w.nextNode());) { starts.push(text.length); nodes.push(n); text += n.data; }
+    const low = text.toLowerCase();
+    const at = (i) => { let lo = 0, hi = nodes.length - 1; while (lo < hi) { const m = (lo + hi + 1) >> 1; if (starts[m] <= i) lo = m; else hi = m - 1; } return lo; };
+    for (const t of terms) for (let i = low.indexOf(t); t && i >= 0; i = low.indexOf(t, i + t.length)) {
+      const a = at(i), b = at(i + t.length - 1), r = document.createRange();
+      r.setStart(nodes[a], i - starts[a]); r.setEnd(nodes[b], i + t.length - starts[b]);
+      ranges.push(r);
+    }
+  }
+  if (ranges.length && window.CSS?.highlights && typeof Highlight === "function") CSS.highlights.set("search", new Highlight(...ranges));
+  return ranges.sort((x, y) => x.compareBoundaryPoints(Range.START_TO_START, y));
+}
 function snippet(text, q) {
   const i = text.toLowerCase().indexOf(q);
   if (i < 0) return esc(text.slice(0, 60)) + "……";
@@ -2152,7 +2184,9 @@ function viewArchive() {
       ${counts.size > 1 ? `<nav class="chips hit-cols" aria-label="只看哪一欄"><button type="button" class="chip" data-hc="" aria-pressed="${!hitCol}">全部<small>${lastHits.length}</small></button>${[...counts].map(([c, n]) => `<button type="button" class="chip" data-hc="${esc(c)}" aria-pressed="${c === hitCol}">${esc(nameOf(c))}<small>${n}</small></button>`).join("")}</nav>` : ""}
       ${list.map((r) => `<a class="hit" href="#/a/${r.d}/${r.c}"><span class="meta-s">${esc(fmtDate(r.d, "short"))}・${esc(col(r.c, r.d).name)}</span><b>${esc(r.t)}</b><span class="snip">${snippet(r.x, termsOf(q).find((t) => r.x.toLowerCase().includes(t)) || q)}</span></a>`).join("")}`;
   };
-  hits.addEventListener("click", (e) => { const b = e.target.closest("button[data-hc]"); if (!b) return; hitCol = b.dataset.hc; drawHits(input.value.trim().toLowerCase()); });
+  hits.addEventListener("click", (e) => {
+    if (e.target.closest("a.hit")) { landHit = termsOf(archiveKept?.q ?? input.value.trim().toLowerCase()); return; } // the words of the hits drawn: the article lights them
+    const b = e.target.closest("button[data-hc]"); if (!b) return; hitCol = b.dataset.hc; drawHits(input.value.trim().toLowerCase()); });
   const fullText = async (q) => {
     const my = ++seq, terms = termsOf(q);
     if (terms.join("").length < 2) { hits.innerHTML = ""; archiveKept = null; return; }
@@ -2719,6 +2753,7 @@ let shownHash = null, navTap = false, fromList = null, fromHops = 0; // fromHops
 const hopsAt = new Map();
 let landKey = null, landTop = null; // 接著上次: the article tapped on the front page, and where in it to land
 let landMark = null; // 劃線本: the id of the mark tapped there, for viewArticle to land on
+let landHit = null; // 往期's search: the words of the query, when a full-text hit was tapped, for viewArticle to light
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
 const tabOf = (h) => h.startsWith("#/serial") || h.startsWith("#/column/serial") ? "#/serial" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/chronik") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/nest") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/shelf") || h.startsWith("#/records") || h.startsWith("#/medals") || h.startsWith("#/prints") || h.startsWith("#/poems") || h.startsWith("#/museum") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/archive" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";

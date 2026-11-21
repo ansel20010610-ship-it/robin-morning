@@ -788,6 +788,8 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
 .hit b { display: block; font-size: 17px; line-height: 1.5; margin: 2px 0; }
 .hit .snip { display: block; font-size: 14px; line-height: 1.7; color: var(--ink-2); }
 .hit mark { background: color-mix(in srgb, var(--gold) 30%, transparent); color: inherit; padding: 0 1px; }
+/* The searched words in the article opened from a hit (app.js lightHits): the same gold ground as the hit's snippet. */
+::highlight(search) { background-color: color-mix(in srgb, var(--gold) 30%, transparent); color: inherit; }
 
 /* ——— Motion and images ——— */
 @media (prefers-reduced-motion: no-preference) {
