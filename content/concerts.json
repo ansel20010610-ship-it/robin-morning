@@ -1,35 +1,6 @@
 {
-  "checked": "2026-11-22",
+  "checked": "2026-11-23",
   "events": [
-    {
-      "id": "garcia-garcia-ksso-2026",
-      "title": "賈西亞與高市交：李斯特與蕭士塔高維契",
-      "kind": "協奏曲",
-      "rating": 4,
-      "why": "馬丁．賈西亞．賈西亞彈李斯特第一號鋼琴協奏曲，後半場是蕭士塔高維契第十號交響曲，楊智欽指揮高市交。",
-      "who": "馬丁．賈西亞．賈西亞（鋼琴）、楊智欽（指揮）、高雄市交響樂團",
-      "program": "李斯特《死之舞》、《第一號鋼琴協奏曲》；蕭士塔高維契《第十號交響曲》",
-      "shows": [
-        {
-          "date": "2026-11-22",
-          "time": "14:30",
-          "city": "高雄",
-          "venue": "衛武營國家藝術文化中心音樂廳",
-          "tickets": "https://www.opentix.life/program/2086778741904691201"
-        }
-      ],
-      "uids": [
-        "6a8490f526b32427d0604417",
-        "wwy:6a22655a3660ba0008bf76fe"
-      ],
-      "sources": [
-        {
-          "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/program/2086778741904691201"
-        }
-      ],
-      "added": "2026-11-02"
-    },
     {
       "id": "mahler8-nso-2026",
       "title": "馬勒第八，千人",
@@ -695,13 +666,6 @@
       "note": "牛耳藝術售票，非 OPENTIX；11/22 票款全數捐慈善",
       "shows": [
         {
-          "date": "2026-11-22",
-          "time": "14:00",
-          "city": "台北",
-          "venue": "臺北國家音樂廳",
-          "tickets": "https://ticket.mna.com.tw/UTK0201_?PRODUCT_ID=P1ETF1DD"
-        },
-        {
           "date": "2026-11-24",
           "time": "19:00",
           "city": "高雄",
@@ -736,13 +700,6 @@
       "price": "NT$2,980–7,980",
       "note": "牛耳藝術售票，非 OPENTIX",
       "shows": [
-        {
-          "date": "2026-11-22",
-          "time": "20:00",
-          "city": "台北",
-          "venue": "臺北國家音樂廳",
-          "tickets": "https://ticket.mna.com.tw/UTK0102_?TYPE=0"
-        },
         {
           "date": "2026-11-24",
           "time": "19:30",
@@ -1296,20 +1253,6 @@
       "note": "建議 6 歲以上；卡司尚未公布",
       "shows": [
         {
-          "date": "2026-11-22",
-          "time": "11:00",
-          "city": "台北",
-          "venue": "臺北表演藝術中心大劇院",
-          "tickets": "https://tickets.udnfunlife.com/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AEBJG5"
-        },
-        {
-          "date": "2026-11-22",
-          "time": "16:00",
-          "city": "台北",
-          "venue": "臺北表演藝術中心大劇院",
-          "tickets": "https://tickets.udnfunlife.com/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AEBJG5"
-        },
-        {
           "date": "2026-11-24",
           "time": "19:30",
           "city": "台北",
@@ -1415,41 +1358,6 @@
         {
           "title": "OPENTIX 售票頁",
           "url": "https://www.opentix.life/event/2079139102634627073"
-        }
-      ]
-    },
-    {
-      "id": "pandora-music-box-ntt-2026",
-      "title": "潘朵拉的音樂盒",
-      "kind": "音樂劇",
-      "rating": 3,
-      "why": "從五部已經封箱的台灣音樂劇挑出十一首歌，由四位演員演出五個故事、二十個角色，串成一齣新戲。",
-      "who": "林照明、吳今馨、張雅雯、陳政光（演員）；張丹瑋（特別演出）；冉天豪、凱爾、楊易修、唐紫綸（作曲）",
-      "program": "原創音樂劇，歌曲選自《花魁嫁到》《牽紅線》《左拉的獨奏會》《夏之夢田》《紀念日》",
-      "price": "NT$800／1,000／1,200／1,500／1,600／3,000",
-      "note": "約100分鐘無中場，建議12歲以上",
-      "shows": [
-        {
-          "date": "2026-11-22",
-          "time": "14:30",
-          "city": "台中",
-          "venue": "臺中國家歌劇院小劇場",
-          "tickets": "https://www.opentix.life/event/2067154457490825217"
-        }
-      ],
-      "added": "2026-11-09",
-      "uids": [
-        "6a3eb10226b3247a14361d80",
-        "ntt:c-hBPEyMGuSqI"
-      ],
-      "sources": [
-        {
-          "title": "臺中國家歌劇院節目頁",
-          "url": "https://www.npac-ntt.org/program/events/c-hBPEyMGuSqI"
-        },
-        {
-          "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/event/2067154457490825217"
         }
       ]
     },

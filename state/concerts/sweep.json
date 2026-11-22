@@ -1,26 +1,30 @@
 {
   "last": "2026-11-09",
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "sources": {
     "mna": {
       "urls": [
         "https://www.mna.com.tw",
-        "https://www.mna.com.tw/concerts.html",
         "https://www.mna.com.tw/concerts_detail.html?id=782"
       ],
       "seen": [
         {
-          "title": "提勒曼與柏林國家歌劇院管弦樂團",
+          "title": "Thielemann Staatskapelle Berlin",
           "verdict": "已列入",
           "id": "thielemann-staatskapelle-berlin-2026"
         },
         {
-          "title": "庫爾提斯與烏托邦管弦樂團",
+          "title": "Currentzis Utopia",
           "verdict": "已列入",
           "id": "currentzis-utopia-2026"
         },
         {
-          "title": "王羽佳與馬勒室內樂團",
+          "title": "Diana Krall",
+          "verdict": "不收",
+          "why": "爵士歌手，不在範圍"
+        },
+        {
+          "title": "Yuja Wang MCO",
           "verdict": "已列入",
           "id": "yuja-wang-mco-2026"
         },
@@ -30,78 +34,25 @@
           "id": "philharmonix-2026"
         },
         {
-          "title": "郎朗鋼琴獨奏會",
+          "title": "Lang Lang",
           "verdict": "已列入",
           "id": "lang-lang-recital-2026"
         },
         {
-          "title": "Marc André 低音提琴音樂會",
+          "title": "Marc André 低音提琴與吉他",
           "verdict": "不收",
-          "why": "2分：11/20已演完，改編小品"
-        },
-        {
-          "title": "Diana Krall",
-          "verdict": "不收",
-          "why": "爵士流行演唱，不在範圍"
-        },
-        {
-          "title": "INTERSTELLAR LIVE 星際效應",
-          "verdict": "不收",
-          "why": "電影配樂音樂會，不收"
+          "why": "2分：11/20已演完，跨界小品"
         }
       ]
     },
-    "ntt": {
-      "urls": [
-        "https://www.npac-ntt.org/program"
-      ],
-      "seen": [
-        {
-          "title": "安德烈亞．范佐 Intimacy Vol.2",
-          "verdict": "不收",
-          "why": "2分：跨界風格鋼琴演奏會"
-        },
-        {
-          "title": "古典音樂台30週年沙龍音樂會",
-          "verdict": "不收",
-          "why": "2分：演出者與曲目查不到"
-        },
-        {
-          "title": "狂美《璀璨經典百老匯》交響音樂會",
-          "verdict": "不收",
-          "why": "2分：拼盤式商業秀"
-        },
-        {
-          "title": "《進擊的巨人》世界巡演音樂會",
-          "verdict": "不收",
-          "why": "動漫配樂，不收"
-        },
-        {
-          "title": "陳必先、水藍蔣啟真國臺交、彌賽亞、柴一與貝九、威斯培衛等",
-          "verdict": "已列入",
-          "id": "chen-pi-hsien-recital-2026"
-        }
-      ]
+    "pbc": {
+      "error": "來不及查"
     },
-    "wwy": {
-      "urls": [
-        "https://www.npac-weiwuying.org/programs"
-      ],
-      "seen": [
-        {
-          "title": "賈西亞與高市交",
-          "verdict": "已列入",
-          "id": "garcia-garcia-ksso-2026"
-        },
-        {
-          "title": "夢想清單（柏林雷寧廣場劇院）",
-          "verdict": "不收",
-          "why": "戲劇，非音樂"
-        }
-      ]
+    "newaspect": {
+      "error": "連不上（ECONNREFUSED）"
     },
-    "ntch": {
-      "error": "npac-ntch.org 只回「請使用 Edge 瀏覽器」，讀不到節目"
+    "tanart": {
+      "error": "連不上（網域解析失敗）"
     },
     "kham": {
       "urls": [
@@ -109,41 +60,34 @@
       ],
       "seen": [
         {
-          "title": "首頁全是流行與韓團演唱會；音樂劇《WILD WILD》",
+          "title": "SHOW MUSICAL WILD WILD",
           "verdict": "不收",
-          "why": "2分：流行演唱會；WILD WILD 無演出者資料"
-        }
-      ],
-      "error": "節目總覽頁 404，只看到首頁"
-    },
-    "newaspect": {
-      "error": "連不上（ECONNREFUSED）"
-    },
-    "tanart": {
-      "error": "網域解析失敗"
-    },
-    "pbc": {
-      "error": "憑證錯誤，連不上"
-    },
-    "udn": {
-      "error": "沒有直接打開 udnfunlife 與其他主辦頁，沒查"
-    },
-    "news": {
-      "urls": [
-        "https://udn.com/news/story/7270/9659928"
-      ],
-      "seen": [
-        {
-          "title": "牛耳 2026/27 樂季五大樂團",
-          "verdict": "已列入",
-          "id": "thielemann-staatskapelle-berlin-2026"
+          "why": "2分：非西方歌劇或主流音樂劇，演出者與日期未查到"
         },
         {
-          "title": "紐約之聲謝幕巡演 2027/2 高雄、台北",
+          "title": "西貢小姐 Miss Saigon",
           "verdict": "不收",
-          "why": "2分：流行合唱性質，未查更多"
+          "why": "頁面只有周邊商品，沒有場次，查不到；明天再查"
         }
       ]
+    },
+    "udn": {
+      "error": "來不及查"
+    },
+    "news": {
+      "error": "搜尋引擎擋下，未查"
+    },
+    "ntch": {
+      "auto": true,
+      "n": 118
+    },
+    "ntt": {
+      "auto": true,
+      "n": 47
+    },
+    "wwy": {
+      "auto": true,
+      "n": 161
     }
   }
 }
