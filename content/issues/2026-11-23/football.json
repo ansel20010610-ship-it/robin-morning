@@ -1,0 +1,436 @@
+{
+ "column": "football",
+ "date": "2026-11-23",
+ "title": "落後兩球的巴薩，下半場翻成 3 比 2",
+ "dek": "第 7 分鐘 0 比 2，點球踢中門柱，還有一張發給替補席的紅牌。巴薩照樣贏了。",
+ "brief": "巴薩週日晚上主場 0 比 2 落後比利亞雷亞爾，下半場第 57 到 67 分鐘連進三球，3 比 2 逆轉，36 分領先皇馬 3 分。亞馬爾的點球打中門柱，費爾明被換下後在板凳區吃紅牌，球團要上訴。下一場是 11 月 26 日（週四）凌晨 1 點 45 分，歐冠客場踢 Sabah。",
+ "topic_key": "football:2026-11-23",
+ "form": "scene",
+ "voice": "fan",
+ "updated_at": "2026-11-23T02:57:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "next": {
+  "opponent": "Sabah",
+  "competition": "歐冠",
+  "kickoff": "2026-11-26T01:45+08:00",
+  "venue": "巴庫奧林匹克體育場",
+  "home": false
+ },
+ "hero": {
+  "id": "hero",
+  "kind": "photo",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Pedri_France_v_Spain_7.24.26-226.jpg/1280px-Pedri_France_v_Spain_7.24.26-226.jpg",
+  "width": 1280,
+  "height": 1920,
+  "alt": "佩德里穿 20 號白底酒紅邊的西班牙隊球衣，眼睛看著前方，右腳邊帶球邊跑；背後是觀眾席和穿螢光黃背心的場邊工作人員。",
+  "caption": "佩德里，2026 年 7 月世界盃法國對西班牙，在美國達拉斯（Dallas），Bryan Berlin 拍攝。弗利克賽後說，他把這場的中場控得很好。資料照片，非當日比賽畫面。",
+  "credit": "Bryan Berlin／Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Pedri_France_v_Spain_7.24.26-226.jpg",
+  "made": "2026"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "第 5 分鐘，**費爾明**（Fermín López）在自己半場把球傳丟了。比利亞雷亞爾的布坎南（Tajon Buchanan）撿到，禁區外一腳，球進右下角。兩分鐘後，奧盧瓦塞伊（Tani Oluwaseyi）從左邊禁區角落再補一腳，打進球門高處。第 7 分鐘，巴薩 0 比 2。"
+  },
+  {
+   "type": "p",
+   "text": "這是週日晚上 9 點開踢的西甲第 13 輪，在主場諾坎普。對面的比利亞雷亞爾，在積分榜上排第 10。"
+  },
+  {
+   "type": "p",
+   "text": "開踢前，皇馬才剛贏了塞爾塔，積分追到和巴薩一樣 33 分，只是巴薩少踢一場。巴薩這場打平還是領先，輸了就會被皇馬追平。"
+  },
+  {
+   "type": "h",
+   "text": "亞馬爾那一腳"
+  },
+  {
+   "type": "p",
+   "text": "落後兩球，巴薩開始壓著打。第 19 分鐘，奧盧瓦塞伊在禁區裡放倒**亞馬爾**，裁判看了 VAR 的影像回放，改判點球。第 23 分鐘，亞馬爾左腳一射，球打在右邊門柱上。"
+  },
+  {
+   "type": "p",
+   "text": "ESPN 算過，這是他今年第三次替巴薩罰丟點球。弗利克賽後沒有一口咬定，只說誰踢是在場上決定的，他會去跟拉菲尼亞和亞馬爾談，看以後怎麼分。我覺得該談了。兩個人都踢得進，那就誰腳穩誰踢。"
+  },
+  {
+   "type": "p",
+   "text": "上半場剩下的時間，巴薩一直在對方禁區裡打轉。補時第 3 分鐘，艾瑞克・加西亞近距離補了一腳，被比利亞雷亞爾門將擋出來。點球之後，亞馬爾又打了一腳偏出左邊，第 40 分鐘前鋒阿德耶米、第 42 分鐘亞馬爾的射門也都被門將擋下。半場 0 比 2。"
+  },
+  {
+   "type": "h",
+   "text": "德容踢中後衛"
+  },
+  {
+   "type": "p",
+   "text": "德容和傑拉德・馬丁搭中衛，坎塞洛踢左邊，艾瑞克・加西亞踢右邊。庫巴西坐在板凳上，一分鐘沒踢；孔德第 84 分鐘才換上場。德容又一次被擺在不是他位置的地方，弗利克說這個位置不好踢，但他做得很好。"
+  },
+  {
+   "type": "h",
+   "text": "第 57 分鐘以後"
+  },
+  {
+   "type": "p",
+   "text": "中場休息回來，巴薩換了一個樣子。第 57 分鐘角球，佩德里傳中，傑拉德・馬丁頭球頂進，1 比 2。第 61 分鐘，亞馬爾把球傳給費爾明，費爾明左腳打進左下角，2 比 2。開場傳丟球的是他，這筆帳他自己還了。"
+  },
+  {
+   "type": "p",
+   "text": "第 67 分鐘，亞馬爾巧妙地一撥，球到艾瑞克・加西亞腳下，加西亞一腳傳中，比利亞雷亞爾的納瓦羅（Pau Navarro）伸腳要解圍，球滾進了自家球門。3 比 2。**從第 57 分鐘到第 67 分鐘，三個球。**"
+  },
+  {
+   "type": "p",
+   "text": "全場巴薩射門 30 次，比利亞雷亞爾 4 次，控球差不多 70 比 30。弗利克說，前 10 分鐘球帶太久、兩次失誤丟了兩球，下半場結構清楚，照這樣踢，對手會累。這是他接手巴薩以來第 24 次落後逆轉，其中第 6 次是落後兩球以上。"
+  },
+  {
+   "type": "p",
+   "text": "弗利克還說，佩德里這場也許是他踢過最好的幾場之一，中場是他控住的，節奏也是他提起來的。"
+  },
+  {
+   "type": "p",
+   "text": "亞馬爾在助攻之後又射了三腳：第 69 分鐘被擋，第 79 分鐘偏左，補時第 5 分鐘又被擋。進球名單上，始終沒有他的名字。"
+  },
+  {
+   "type": "h",
+   "text": "板凳上的紅牌"
+  },
+  {
+   "type": "p",
+   "text": "第 68 分鐘，弗利克把費爾明和阿德耶米換下，上來的是奧爾莫和戈登。換下後不到十分鐘，費爾明吃了紅牌，他人在場邊。"
+  },
+  {
+   "type": "p",
+   "text": "起因是戈登倒地想要點球時，費爾明對第四官員說了話。《每日體育報》（Sport）報導了裁判的報告，Goal 轉述：費爾明從板凳站起來，走向第四官員，喊了一句「別惹我」，然後就往更衣室走，裁判還來不及出示紅牌。報告記的時間是第 74 分鐘。"
+  },
+  {
+   "type": "p",
+   "text": "巴薩認為這張牌不該給，抗議沒有超出激烈比賽裡常見的程度，球團要上訴。他可能停賽 1 到 2 場，視紀律委員會怎麼看，可能趕不上 11 月 29 日對拉科魯尼亞體育，和 12 月 3 日（週四）凌晨 4 點 30 分補賽的主場對馬競。"
+  },
+  {
+   "type": "quote",
+   "text": "我對裁判們很滿意，但對這位裁判不滿意。",
+   "original": "I am really happy with the referees, but with this referee I am not.",
+   "cite": "弗利克賽後（ESPN）"
+  },
+  {
+   "type": "p",
+   "text": "弗利克去找場邊的官員問，吃了黃牌。他說第四官員一直盯著巴薩的板凳，又說他沒聽到費爾明說了什麼。看得見的是，那時巴薩已經 3 比 2 領先，板凳上用不著再有人站起來吵。"
+  },
+  {
+   "type": "p",
+   "text": "比利亞雷亞爾那邊也有人下場。踢進烏龍球的納瓦羅，補時第 3 分鐘放倒拉菲尼亞，吃第二張黃牌被罰下。"
+  },
+  {
+   "type": "p",
+   "text": "巴薩這邊，補時第 1 分鐘貝爾納爾倒地，因傷被換下，上來的是加維。"
+  },
+  {
+   "type": "h",
+   "text": "三分的差距"
+  },
+  {
+   "type": "p",
+   "text": "贏球之後，巴薩 13 場 36 分，皇馬同樣 13 場 33 分。馬競 28 分，只踢了 12 場，這是他們對赫塔費開球前的積分。"
+  },
+  {
+   "type": "table",
+   "title": "西甲積分榜前五名",
+   "head": [
+    "名次",
+    "球隊",
+    "場次",
+    "積分"
+   ],
+   "rows": [
+    [
+     "1",
+     "巴薩",
+     "13",
+     "36"
+    ],
+    [
+     "2",
+     "皇馬",
+     "13",
+     "33"
+    ],
+    [
+     "3",
+     "馬競",
+     "12",
+     "28"
+    ],
+    [
+     "4",
+     "貝蒂斯",
+     "13",
+     "27"
+    ],
+    [
+     "5",
+     "皇家社會",
+     "13",
+     "22"
+    ]
+   ],
+   "caption": "ESPN 積分榜，11 月 23 日 02:40 查閱。馬競比別隊少踢一場，積分是他們對赫塔費開球前的數字。"
+  },
+  {
+   "type": "h",
+   "text": "安菲爾德的凌晨"
+  },
+  {
+   "type": "p",
+   "text": "別的球場，今天凌晨最大的聲響在利物浦的安菲爾德。"
+  },
+  {
+   "type": "news",
+   "title": "歐洲足壇速覽",
+   "items": [
+    {
+     "headline": "利物浦 4 比 0 曼聯，波切蒂諾上任首戰",
+     "summary": "曼聯第 8 分鐘就因為約羅的紅牌少一人。利物浦第 10 分鐘索博斯萊罰自由球先進，第 13 分鐘維爾茨補第二球，下半場又進兩球。波切蒂諾接替被開除的卡里克，這是他的第一場；曼聯賽前在英超排第 19。",
+     "source": "ESPN、Sky Sports",
+     "url": "https://www.espn.com/soccer/match/_/gameId/401878755",
+     "when": "11 月 23 日（週一）凌晨",
+     "place": [
+      "GB"
+     ]
+    },
+    {
+     "headline": "皇馬 2 比 1 逆轉塞爾塔，積分追平巴薩",
+     "summary": "塞爾塔第 6 分鐘先進球。皇馬的姆巴佩第 39 分鐘罰點球踢過橫梁；第 66 分鐘貝林厄姆扳平，79 分鐘上場的 21 歲前鋒 Espí 第 85 分鐘近距離補進致勝球。穆里尼奧說，維尼修斯週二歐冠對 PSV 會先發。",
+     "source": "ESPN、LaLiga",
+     "url": "https://www.espn.com/soccer/story/_/id/50555627/real-madrid-carlos-espi-celta-vigo-rafael-nadal",
+     "when": "11 月 22 日（週日）凌晨",
+     "place": [
+      "ES"
+     ]
+    },
+    {
+     "headline": "布魯諾・費南德斯：新約談判暫停，不是錢的問題",
+     "summary": "曼聯隊長布魯諾・費南德斯對 Sky Sports 說，球團給過新約，現在沒有談判，因為球隊得先回到贏球。他的合約到本季結束，曼聯另有一年的延長選擇權。ESPN 引消息人士說，他最近拒絕了第二份報價。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/story/_/id/50560581/bruno-fernandes-manchester-united-premier-league-mauricio-pochettino",
+     "when": "11 月 22 日（週日）",
+     "place": [
+      "GB"
+     ]
+    },
+    {
+     "headline": "桑坦德競技 3 比 2 贏皇家社會，Zabiri 開賽 8 分鐘兩球",
+     "summary": "西甲週日，桑坦德競技（Racing Santander）的 Zabiri 在第 6、8 分鐘連進兩球。皇家社會追平，桑坦德競技第 68 分鐘罰進點球決勝。",
+     "source": "ESPN、LaLiga",
+     "url": "https://www.espn.com/soccer/match/_/gameId/401882800",
+     "when": "11 月 22 日（週日）",
+     "place": [
+      "ES"
+     ]
+    },
+    {
+     "headline": "尤文圖斯 4 比 0 威尼斯",
+     "summary": "尤文下半場開始連進四球，從第 53 分鐘打到第 71 分鐘，最後一球是科洛・穆阿尼的點球。",
+     "source": "ESPN、Sky Sports",
+     "url": "https://www.espn.com/soccer/match/_/gameId/401875008",
+     "when": "11 月 22 日（週日）",
+     "place": [
+      "IT"
+     ]
+    },
+    {
+     "headline": "赫爾城補時連進兩球，2 比 0 贏布萊頓",
+     "summary": "英超週日，布萊頓第 89 分鐘有人吃第二張黃牌被罰下。赫爾城的 McBurnie 補時第 2 分鐘、第 5 分鐘各進一球，把 0 比 0 的比賽拿下。",
+     "source": "ESPN、Sky Sports",
+     "url": "https://www.espn.com/soccer/match/_/gameId/401879234",
+     "when": "11 月 22 日（週日）",
+     "place": [
+      "GB"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "h",
+   "text": "接下來"
+  },
+  {
+   "type": "p",
+   "text": "下一場是歐冠聯賽階段第 5 輪，**11 月 26 日（週四）凌晨 1 點 45 分**，客場去亞塞拜然首都巴庫踢 Sabah。再後面的賽程看下面的表；費爾明的上訴結果出來前，他能不能上西甲那兩場，還不確定。"
+  },
+  {
+   "type": "table",
+   "title": "巴薩接下來的比賽",
+   "head": [
+    "台灣時間",
+    "對手",
+    "賽事",
+    "場地"
+   ],
+   "rows": [
+    [
+     "11 月 26 日（週四）01:45",
+     "Sabah",
+     "歐冠聯賽階段第 5 輪",
+     "客場 巴庫奧林匹克體育場"
+    ],
+    [
+     "11 月 29 日（週日）23:15",
+     "拉科魯尼亞體育",
+     "西甲第 14 輪",
+     "客場 里亞索球場"
+    ],
+    [
+     "12 月 3 日（週四）04:30",
+     "馬競",
+     "西甲（補賽）",
+     "主場 諾坎普"
+    ]
+   ],
+   "caption": "巴薩官網賽程（西班牙時間），換算成台灣時間。"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Barcelona fight back against Villarreal to win 3-2 and restore three-point lead at the top of LaLiga",
+   "publisher": "ESPN",
+   "date": "2026-11-22",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401882804",
+   "note": "賽報：Buchanan 5'、Oluwaseyi 7'、Martín 57'、Fermín 61'、Navarro 烏龍 67'、Navarro 補時第二黃牌；亞馬爾點球打中門柱"
+  },
+  {
+   "title": "Barcelona 3-2 Villarreal 比賽紀錄（keyEvents、commentary、boxscore）",
+   "publisher": "ESPN",
+   "date": "2026-11-22",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882804",
+   "note": "進球與紅黃牌分鐘、換人、先發名單、射門 30:4；亞馬爾 69'、79'、90+5' 三次射門；Fermín 紅牌記 75'；11 月 23 日 02:40 查閱"
+  },
+  {
+   "title": "Flick: Barcelona comeback against Villarreal 'unbelievable' but not happy with ref",
+   "publisher": "ESPN",
+   "date": "2026-11-22",
+   "url": "https://www.espn.com/soccer/story/_/id/50562953/barcelona-villarreal-la-liga-hansi-flick-refereeing",
+   "note": "弗利克賽後原話；第 24 次落後逆轉、第 6 次落後兩球以上；亞馬爾今年第三次罰丟點球；Fermín 紅牌起因；文字寫亞馬爾踢偏，與比賽紀錄（門柱）不同，採紀錄與賽報"
+  },
+  {
+   "title": "Barça 3-2 Villarreal: Heroic response",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-22",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4612696/barca-3-2-villarreal-heroic-response",
+   "note": "官網賽報：比分、Buchanan 進球起於 Fermín 傳丟球、Fermín 板凳區紅牌"
+  },
+  {
+   "title": "Hansi Flick: 'An incredible reaction'",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-22",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4612760/hansi-flick-an-incredible-reaction",
+   "note": "官網賽後談話摘要：前十分鐘沒踢好、兩次失誤丟兩球、讚佩德里"
+  },
+  {
+   "title": "Told the referee \"Don't mess with me!\": Barcelona star sent off from the bench",
+   "publisher": "Goal",
+   "date": "2026-11-22",
+   "url": "https://www.goal.com/en-za/news/told-the-referee-don-t-mess-with-me-barcelona-star-sent-off-from-the-bench/blt296a767bd06af8d1",
+   "note": "裁判報告：第 74 分鐘、向第四官員抗議（Goal 轉述《每日體育報》Sport 的報導，Sport 原文讀不到）；巴薩將上訴；可能停賽 1 至 2 場"
+  },
+  {
+   "title": "'The fourth official was only looking at our bench' - Furious Hansi Flick hits out at officials",
+   "publisher": "Goal",
+   "date": "2026-11-22",
+   "url": "https://www.goal.com/en-gb/news/hansi-flick-slams-officials-after-barcelona-comeback-win-over-villarreal/blt2fc7ad0eb5068fe9",
+   "note": "弗利克去找場邊官員問而被黃牌；第四官員一直看板凳"
+  },
+  {
+   "title": "Football scores and fixtures, 22 November 2026",
+   "publisher": "Sky Sports",
+   "date": "2026-11-22",
+   "url": "https://www.skysports.com/football-scores-fixtures/2026-11-22",
+   "note": "第二來源核對（FT）：巴薩 3:2 比利亞雷亞爾、利物浦 4:0 曼聯、赫爾城 2:0 布萊頓、尤文 4:0 威尼斯、桑坦德競技 3:2 皇家社會"
+  },
+  {
+   "title": "Results of LALIGA EA SPORTS 2026/27（第 13 輪）",
+   "publisher": "LaLiga",
+   "date": "2026-11-22",
+   "url": "https://www.laliga.com/en-GB/laliga-easports/results",
+   "note": "官方賽果：皇馬 2:1 塞爾塔、巴薩 3:2 比利亞雷亞爾、桑坦德競技 3:2 皇家社會；馬競對赫塔費 11 月 22 日 20:00（UTC）開球，稿中馬競積分為開球前數字"
+  },
+  {
+   "title": "LaLiga standings",
+   "publisher": "ESPN",
+   "date": "2026-11-23",
+   "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+   "note": "巴薩 13 場 36、皇馬 13 場 33、馬競 12 場 28、貝蒂斯 27、皇家社會 22；11 月 23 日 02:40 查閱"
+  },
+  {
+   "title": "FC Barcelona first-team schedule",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-23",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/schedule",
+   "note": "西班牙時間：11 月 25 日 18:45 巴庫對 Sabah（歐冠第 5 輪）；11 月 29 日 16:15 Riazor；12 月 2 日 21:30 對馬競（第 23 輪）；均非 TBA"
+  },
+  {
+   "title": "Bellingham, Espí rescue Madrid after Mbappé's missed penalty",
+   "publisher": "ESPN",
+   "date": "2026-11-21",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401882798",
+   "note": "皇馬 2:1 塞爾塔；Durán 6'、Mbappé 點球 39'、Bellingham 66'、Espí 85'（紀錄：右腳近距離射門，先前頭球被擋）；追平巴薩積分"
+  },
+  {
+   "title": "Carlos Espí's 'most special' goal earns Real Madrid win and Rafael Nadal praise",
+   "publisher": "ESPN",
+   "date": "2026-11-22",
+   "url": "https://www.espn.com/soccer/story/_/id/50555627/real-madrid-carlos-espi-celta-vigo-rafael-nadal",
+   "note": "Espí 21 歲、79 分鐘上場；穆里尼奧說維尼修斯週二歐冠對 PSV 先發"
+  },
+  {
+   "title": "Liverpool spoil Mauricio Pochettino's debut by crushing Man United",
+   "publisher": "ESPN",
+   "date": "2026-11-22",
+   "url": "https://www.espn.com/soccer/story/_/id/50533932/live-updates-pochettino-manchester-united-liverpool",
+   "note": "回顧：曼聯前 13 分鐘少一人、落後兩球；波切蒂諾接替被開除的卡里克"
+  },
+  {
+   "title": "Liverpool 4-0 Manchester United 比賽紀錄",
+   "publisher": "ESPN",
+   "date": "2026-11-23",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401878755",
+   "note": "Yoro 8' 紅牌；Szoboszlai 10'、Wirtz 13'、Ngumoha 66'、Víctor Muñoz 82'"
+  },
+  {
+   "title": "Bruno Fernandes confirms Manchester United contract talks on hold, 'priority is winning'",
+   "publisher": "ESPN",
+   "date": "2026-11-22",
+   "url": "https://www.espn.com/soccer/story/_/id/50560581/bruno-fernandes-manchester-united-premier-league-mauricio-pochettino",
+   "note": "Fernandes 對 Sky Sports 的話；消息人士說他拒絕第二份報價；曼聯當時英超第 19"
+  },
+  {
+   "title": "Racing Santander 3-2 Real Sociedad 比賽紀錄",
+   "publisher": "ESPN",
+   "date": "2026-11-22",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401882800",
+   "note": "Zabiri 6'、8'；Oyarzabal 45+1'；Guedes 60'；Canales 68' 點球"
+  },
+  {
+   "title": "Juventus 4-0 Venezia 比賽紀錄",
+   "publisher": "ESPN",
+   "date": "2026-11-22",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401875008",
+   "note": "Woltemade 53'、Koopmeiners 59'、Cabal 65'、Kolo Muani 71' 點球"
+  },
+  {
+   "title": "Hull break Brighton hearts late on as Oli McBurnie scores double",
+   "publisher": "ESPN",
+   "date": "2026-11-22",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401879234",
+   "note": "McBurnie 90+2'、90+5'；Costinha 89' 第二張黃牌"
+  },
+  {
+   "title": "File:Pedri France v Spain 7.24.26-226.jpg",
+   "publisher": "Wikimedia Commons",
+   "date": "2026-07-14",
+   "url": "https://commons.wikimedia.org/wiki/File:Pedri_France_v_Spain_7.24.26-226.jpg",
+   "note": "Bryan Berlin 攝，CC BY-SA 4.0；2026 年世界盃法國對西班牙"
+  }
+ ]
+}
