@@ -3,9 +3,9 @@
   "date": "2026-11-23",
   "title": "莫札特《安魂曲》：從 8 小節到 19 種補完版",
   "dek": "莫札特過世時，這首曲子只有一個樂章寫完。後來是誰把它補完的，為什麼到現在還有人在改？",
-  "brief": "莫札特的《安魂曲》是他最後的作品，1791 年 12 月他 35 歲過世時，只有開頭一個樂章寫完。這首曲子是一位伯爵匿名訂的，後來由學生蘇斯麥爾補完，現在還有至少 19 種補完版。按下播放，可以聽長號獨奏的 Tuba mirum、輕聲的 Confutatis，和莫札特停筆的 Lacrimosa。",
+  "brief": "莫札特的《安魂曲》是他最後的作品，1791 年 12 月他 35 歲過世時，只有開頭一個樂章寫完。這首曲子是一位伯爵匿名訂的，後來由學生蘇斯麥爾補完，現在還有至少 19 種補完版。按下播放，可以聽長號獨奏的 Tuba mirum、女聲輕唱「Voca me」的 Confutatis，和莫札特停筆的 Lacrimosa。",
   "topic_key": "music:mozart-k626",
-  "updated_at": "2026-11-23T00:44:00+08:00",
+  "updated_at": "2026-11-23T00:51:49+08:00",
   "form": "number",
   "voice": "listener",
   "spoiler": null,
@@ -28,7 +28,7 @@
   "body": [
     {
       "type": "p",
-      "text": "莫札特的《安魂曲》是他最後的作品，也是沒寫完的作品。安魂曲是天主教為死者做彌撒時唱的音樂，歌詞用拉丁文，由四位獨唱、合唱團和管弦樂團一起演出。K. 626 是這首曲子在莫札特作品裡的編號。"
+      "text": "莫札特的《安魂曲》是他最後的作品，也是沒寫完的作品，後來由別人補完，現在補完版至少有 19 種。安魂曲是天主教為死者做彌撒時唱的音樂，歌詞用拉丁文，由四位獨唱、合唱團和管弦樂團一起演出。K. 626 只是編號，是這首曲子在莫札特全部作品裡的號碼。"
     },
     {
       "type": "p",
@@ -90,7 +90,7 @@
     },
     {
       "type": "p",
-      "text": "最出名的停筆處是 Lacrimosa（流淚之日）。它在第 8 小節之後就中斷了，寫到第 8 小節時，合唱還是強音。本文開頭的圖就是這一頁手稿，現在收在奧地利國家圖書館。"
+      "text": "最出名的停筆處是 Lacrimosa（流淚之日）。它在第 8 小節之後就中斷了。本文開頭的圖是這段手稿，現在收在奧地利國家圖書館，但只拍到開頭幾小節，停筆處在手稿背面，圖上看不到。"
     },
     {
       "type": "figure",
@@ -100,7 +100,7 @@
       "width": 1280,
       "height": 990,
       "alt": "一頁邊緣破損、右下角缺了一塊的手寫總譜：上半部是樂器譜線，下半部是合唱五行譜，每行寫著 fac eas Domine de morte transire ad vitam；右邊頁邊寫著 quam olim da capo。",
-      "caption": "《安魂曲》手稿的 Hostias 結尾頁（folio 99/45 recto）。奧地利國家圖書館藏；頁底歌詞是 fac eas Domine de morte transire ad vitam，右側寫 quam olim da capo。Commons 說明：莫札特最後寫下的，是這一頁或 Lacrimosa 那一頁的背面，兩者難分先後；右下角寫著 quam olim da capo 的紙角，1958 年被偷走。",
+      "caption": "《安魂曲》手稿的 Hostias 結尾頁（folio 99/45 recto）。奧地利國家圖書館藏；頁底歌詞是 fac eas Domine de morte transire ad vitam，右側寫 quam olim da capo。頭圖的 Commons 說明稱，莫札特最後寫下的，是這一頁或 Lacrimosa 那一頁的背面，兩者難分先後；這一頁自己的 Commons 說明只稱它是 Arbeitspartitur 的最後一頁，兩處標示有出入。右下角寫著 quam olim da capo 的紙角，1958 年被偷走。",
       "credit": "Österreichische Nationalbibliothek（奧地利國家圖書館）；影像經 Wikimedia Commons",
       "license": "Public domain",
       "license_url": "",
@@ -109,7 +109,7 @@
     },
     {
       "type": "p",
-      "text": "Commons 的圖片說明寫，莫札特最後寫下的，是上面這頁 Hostias 的結尾，或是 Lacrimosa 那頁的背面，兩邊分不出先後。"
+      "text": "頭圖的 Commons 說明寫，莫札特最後寫下的，是上面這頁 Hostias 的結尾，或是 Lacrimosa 那頁的背面，兩邊分不出先後。"
     },
     {
       "type": "h",
@@ -121,7 +121,7 @@
     },
     {
       "type": "p",
-      "text": "蘇斯麥爾是莫札特的學生，康絲坦采說莫札特自己選了他。他大概在 1792 年初春完成。他替 Kyrie 之後的樂章配上樂器，把 Lacrimosa 寫完，Lux aeterna 則改用開頭樂章的材料。Sanctus、Benedictus、Agnus Dei 這三個樂章，他後來說是自己寫的。"
+      "text": "蘇斯麥爾是莫札特的學生，康絲坦采說莫札特自己選了他。蘇斯麥爾大概在 1792 年初春完成。他替 Kyrie 之後的樂章配上樂器，把 Lacrimosa 寫完，Lux aeterna 則改用開頭兩個樂章的材料。至於 Sanctus、Benedictus、Agnus Dei 這三個樂章，蘇斯麥爾後來聲稱是自己寫的。"
     },
     {
       "type": "p",
@@ -141,19 +141,11 @@
     },
     {
       "type": "p",
-      "text": "波士頓交響樂團（BSO）的介紹說，蘇斯麥爾寫的部分有配器和聲部寫作上的錯誤，肯定不是莫札特的手筆。這一篇推薦的貝姆錄音，用的就是蘇斯麥爾補完的版本。"
+      "text": "波士頓交響樂團（BSO）的介紹則直接指出，蘇斯麥爾補寫的部分，有些地方樂器怎麼配、各聲部怎麼接出了錯，這些錯肯定不是莫札特寫的。"
     },
     {
       "type": "p",
-      "text": "電影裡，薩里耶里是暗中訂了這首曲子、又害死莫札特的人。這是神話。它出自普希金 1830 年的劇本，後來被謝弗 1979 年的劇本《阿瑪迪斯》和電影沿用。"
-    },
-    {
-      "type": "h",
-      "text": "兩場追思會"
-    },
-    {
-      "type": "p",
-      "text": "這首曲子常在追思的場合響起。1964 年 1 月，指揮萊因斯多夫在波士頓的聖十字座堂演出它，紀念遇刺的美國總統甘迺迪。1989 年 7 月 23 日，也就是指揮家卡拉揚過世後一週，穆提指揮維也納愛樂，在薩爾茨堡大教堂演出它。卡拉揚的遺囑點了這首。"
+      "text": "電影裡，薩里耶里暗中訂了這首曲子，還自稱害死了莫札特。這是神話。它出自普希金 1830 年的劇本，後來被謝弗 1979 年的劇本《阿瑪迪斯》和電影沿用。"
     },
     {
       "type": "h",
@@ -169,16 +161,16 @@
     },
     {
       "type": "p",
-      "text": "**Lacrimosa**：前 8 小節是莫札特寫的，之後是蘇斯麥爾接著寫的。本文開頭的手稿圖，看得到他停在哪裡。"
+      "text": "**Lacrimosa**：前 8 小節是莫札特寫的，之後是蘇斯麥爾接著寫的。"
     },
     {
       "type": "music",
       "composer": "莫札特（Wolfgang Amadeus Mozart）",
-      "work": "D 小調安魂曲，K. 626（蘇斯麥爾補完版）",
+      "work": "D 小調安魂曲，K. 626",
       "work_original": "Requiem in D minor, K. 626",
       "composed": "1791（莫札特未完成，蘇斯麥爾補完）",
       "performers": "卡爾・貝姆（Karl Böhm）指揮 維也納愛樂、維也納國家歌劇院合唱團；獨唱 Edith Mathis、Julia Hamari、Wieslaw Ochman、Karl Ridderbusch",
-      "recording": "Deutsche Grammophon，1971 年發行",
+      "recording": "Deutsche Grammophon；Apple Music 標示 1971 年（℗ 1971）",
       "duration": "約 64 分鐘（此版）",
       "movements": [
         "Introitus（入祭詠）",
@@ -202,7 +194,7 @@
     },
     {
       "type": "p",
-      "text": "這個版本由貝姆指揮維也納愛樂和維也納國家歌劇院合唱團，獨唱是馬提斯、哈瑪莉、奧赫曼和里德布什。Deutsche Grammophon 1971 年發行，全長 1 小時 4 分。DG 的目錄稱貝姆是「20 世紀最好的莫札特詮釋者之一」。"
+      "text": "這個版本由貝姆指揮維也納愛樂和維也納國家歌劇院合唱團，獨唱是馬提斯、哈瑪莉、奧赫曼和里德布什。這張由 Deutsche Grammophon 出，Apple Music 標示 1971 年（℗ 1971），全長 1 小時 4 分。DG 的目錄稱貝姆是「20 世紀最好的莫札特詮釋者之一」。"
     }
   ],
   "sources": [
