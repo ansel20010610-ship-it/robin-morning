@@ -11,6 +11,11 @@ const ROMAN = (n) => [[1000, "m"], [900, "cm"], [500, "d"], [400, "cd"], [100, "
 const MONTH = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"];
 // architecture:pantheon-rome → Pantheon Rome
 export const buildingName = (a) => String(a.topic_key || "").replace(/^architecture:/, "").split("-").filter(Boolean).map((w) => w[0].toUpperCase() + w.slice(1)).join(" ");
+// The Chinese name set above the Latin one (the owner, 2026-11-22: 「我的版畫冊想要加上中文建築名」, layout 甲): the
+// article's name_zh (SCHEMA.md); a print without one keeps only its Latin name, as before.
+const nameZh = (a) => (typeof a.name_zh === "string" ? a.name_zh.trim() : "");
+const nameHtml = (a, cls) => { const zh = nameZh(a); return `<span class="${cls}${zh ? " zh" : ""}">${zh ? `<span class="pr-zh">${esc(zh)}</span><span class="pr-en">${esc(buildingName(a))}</span>` : esc(buildingName(a))}</span>`; };
+const label = (a) => [nameZh(a), buildingName(a)].filter(Boolean).join(" ") || a.title;
 const dateLine = (d) => { const [y, m, dd] = d.split("-").map(Number); return `${dd}. ${MONTH[m - 1]}. ${ROMAN(y).toUpperCase()}`; };
 let topDate = null; // the print left on top, kept while the reader opens its article and comes back
 // The way in is every print laid out on the desk (the owner, 2026-11-19: 入口是很多的那個); a print picked from it opens
@@ -20,9 +25,9 @@ export const resetPrints = () => { lastMode = "all"; };
 
 function printHtml(p, n, total) {
   const src = p.a.hero?.thumb || p.a.hero?.src || "";
-  return `<a class="pr-sheet" href="#/a/${esc(p.date)}/architecture" aria-label="${esc(buildingName(p.a) || p.a.title)}：${esc(p.a.title)}，第 ${total - n} 張">
+  return `<a class="pr-sheet" href="#/a/${esc(p.date)}/architecture" aria-label="${esc(label(p.a))}：${esc(p.a.title)}，第 ${total - n} 張">
       <span class="pr-plate"><span class="pr-etch">${src ? `<img src="${esc(src)}" alt="" decoding="async" referrerpolicy="no-referrer">` : ""}<i></i><i></i></span></span>
-      <span class="pr-name">${esc(buildingName(p.a))}</span>
+      ${nameHtml(p.a, "pr-name")}
       <span class="pr-head">${esc(p.a.title)}</span>
       <span class="pr-pencil l">N° ${ROMAN(total - n)}</span><span class="pr-pencil r">${esc(dateLine(p.date))}</span>
     </a><i class="pr-tissue" aria-hidden="true"></i>`;
@@ -34,7 +39,7 @@ export function printsHtml(list) {
   return `<div class="pr-folio"><i class="pr-gilt" aria-hidden="true"></i><i class="pr-tie l" aria-hidden="true"></i><i class="pr-tie r" aria-hidden="true"></i>
       <div class="pr-stack">${list.length > 1 ? '<i class="pr-under" aria-hidden="true"></i>' : ""}<div class="pr-top">${printHtml(list[i], i, list.length)}</div></div></div>
     ${list.length > 1 ? `<div class="pr-nav"><button type="button" class="cr-flip sh-foil" data-flip="-1" aria-label="較新的一張"${i ? "" : " disabled"}>‹</button><button type="button" class="sc-brass sc-plate-btn" data-all aria-label="全部攤開，${list.length} 張"><span class="sc-cut">Radierungen · ${ROMAN(list.length).toUpperCase()}</span></button><button type="button" class="cr-flip sh-foil" data-flip="1" aria-label="較舊的一張"${i < list.length - 1 ? "" : " disabled"}>›</button><button type="button" class="sc-die" data-die aria-label="隨機抽一張"><i></i><i></i><i></i></button></div>
-    <div class="pr-all" hidden>${list.map((p, k) => `<button type="button" class="pr-mini" data-pick="${k}" aria-label="${esc(buildingName(p.a) || p.a.title)}"><span class="pr-mini-e">${p.a.hero?.thumb || p.a.hero?.src ? `<img src="${esc(p.a.hero.thumb || p.a.hero.src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}</span><span class="pr-mini-n">${esc(buildingName(p.a))}</span></button>`).join("")}
+    <div class="pr-all" hidden>${list.map((p, k) => `<button type="button" class="pr-mini${nameZh(p.a) ? " zh" : ""}" data-pick="${k}" aria-label="${esc(label(p.a))}"><span class="pr-mini-e">${p.a.hero?.thumb || p.a.hero?.src ? `<img src="${esc(p.a.hero.thumb || p.a.hero.src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}</span>${nameHtml(p.a, "pr-mini-n")}</button>`).join("")}
       <div class="pr-all-bar"><button type="button" class="sc-brass sc-plate-btn" data-all aria-label="收回畫夾"><span class="sc-cut">Alle · ${ROMAN(list.length).toUpperCase()}</span></button><button type="button" class="sc-die" data-die aria-label="隨機抽一張"><i></i><i></i><i></i></button></div></div>` : ""}`;
 }
 
