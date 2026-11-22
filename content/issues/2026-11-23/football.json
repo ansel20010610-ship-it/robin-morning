@@ -3,11 +3,11 @@
  "date": "2026-11-23",
  "title": "落後兩球的巴薩，下半場翻成 3 比 2",
  "dek": "第 7 分鐘 0 比 2，點球踢中門柱，還有一張發給替補席的紅牌。巴薩照樣贏了。",
- "brief": "巴薩週日晚上主場 0 比 2 落後比利亞雷亞爾，下半場第 57 到 67 分鐘連進三球，3 比 2 逆轉，36 分領先皇馬 3 分。亞馬爾的點球打中門柱，費爾明被換下後在板凳區吃紅牌，球團要上訴。下一場是 11 月 26 日（週四）凌晨 1 點 45 分，歐冠客場踢 Sabah。",
+ "brief": "巴薩週日晚上主場 0 比 2 落後比利亞雷亞爾，下半場第 57 到 67 分鐘連進三球，3 比 2 逆轉，36 分領先皇馬 3 分。亞馬爾的點球打中門柱，費爾明被換下後在板凳區吃紅牌，球團要上訴，他可能停賽 1 到 2 場。別處，波切蒂諾帶曼聯的第一場，在安菲爾德 0 比 4 輸給利物浦。",
  "topic_key": "football:2026-11-23",
  "form": "scene",
  "voice": "fan",
- "updated_at": "2026-11-23T02:57:00+08:00",
+ "updated_at": "2026-11-23T05:58:00+08:00",
  "spoiler": null,
  "disclaimer": null,
  "next": {
@@ -54,7 +54,7 @@
   },
   {
    "type": "p",
-   "text": "ESPN 算過，這是他今年第三次替巴薩罰丟點球。弗利克賽後沒有一口咬定，只說誰踢是在場上決定的，他會去跟拉菲尼亞和亞馬爾談，看以後怎麼分。我覺得該談了。兩個人都踢得進，那就誰腳穩誰踢。"
+   "text": "ESPN 算過，這是他今年第三次替巴薩罰丟點球。弗利克賽後沒有一口咬定，只說誰踢是在場上決定的，他也許得想想要不要改，還不確定。他會去跟拉菲尼亞和亞馬爾談，看以後怎麼分，因為兩個人都罰得進。"
   },
   {
    "type": "p",
@@ -132,7 +132,7 @@
   },
   {
    "type": "p",
-   "text": "贏球之後，巴薩 13 場 36 分，皇馬同樣 13 場 33 分。馬競 28 分，只踢了 12 場，這是他們對赫塔費開球前的積分。"
+   "text": "贏球之後，巴薩 13 場 36 分，皇馬同樣 13 場 33 分。馬競作客赫塔費，台灣時間 04:00 開球，3 比 0 贏球：貝納（Álex Baena）第 10 分鐘、卡多索（Johnny Cardoso）第 30 分鐘進球，格里馬爾多（Alejandro Grimaldo）補時罰進點球。馬競 13 場 31 分，排第 3。"
   },
   {
    "type": "table",
@@ -159,8 +159,8 @@
     [
      "3",
      "馬競",
-     "12",
-     "28"
+     "13",
+     "31"
     ],
     [
      "4",
@@ -175,7 +175,7 @@
      "22"
     ]
    ],
-   "caption": "ESPN 積分榜，11 月 23 日 02:40 查閱。馬競比別隊少踢一場，積分是他們對赫塔費開球前的數字。"
+   "caption": "ESPN 積分榜，11 月 23 日 05:57 查閱。馬競對赫塔費的 3 比 0 還沒進榜，馬競的 13 場 31 分，是榜上原有的 12 場 28 分加上這場勝利算出來的；其他球隊照榜上數字。"
   },
   {
    "type": "h",
@@ -191,7 +191,7 @@
    "items": [
     {
      "headline": "利物浦 4 比 0 曼聯，波切蒂諾上任首戰",
-     "summary": "曼聯第 8 分鐘就因為約羅的紅牌少一人。利物浦第 10 分鐘索博斯萊罰自由球先進，第 13 分鐘維爾茨補第二球，下半場又進兩球。波切蒂諾接替被開除的卡里克，這是他的第一場；曼聯賽前在英超排第 19。",
+     "summary": "曼聯第 8 分鐘就因為約羅的紅牌少一人。利物浦第 10 分鐘索博斯萊罰自由球先進，第 13 分鐘維爾茨補第二球，下半場又進兩球。波切蒂諾接替被開除的卡里克，這是他的第一場。他賽後說，十個人在安菲爾德踢了 80 多分鐘，輸球他負責，但他不同意紅牌，也認為曼聯先前該有一個點球。曼聯仍在英超第 19 名。",
      "source": "ESPN、Sky Sports",
      "url": "https://www.espn.com/soccer/match/_/gameId/401878755",
      "when": "11 月 23 日（週一）凌晨",
@@ -247,6 +247,26 @@
      "when": "11 月 22 日（週日）",
      "place": [
       "GB"
+     ]
+    },
+    {
+     "headline": "米蘭 5 比 1 贏弗羅西諾內，升到第 4",
+     "summary": "米蘭在主場聖西羅，靠對手烏龍球和拉莫斯（Gonçalo Ramos）的進球 2 比 0 領先，弗羅西諾內在第 25 分鐘追回一球。下半場米蘭再進三球，普利西奇（Christian Pulisic）第 68 分鐘單刀進球收尾，這是阿莫林（Ruben Amorim）帶米蘭以來最大的勝場。米蘭 12 場 27 分，離榜首拉齊奧 5 分。",
+     "source": "ESPN、Sky Sports",
+     "url": "https://www.espn.com/soccer/report/_/gameId/401874989",
+     "when": "11 月 23 日（週一）凌晨",
+     "place": [
+      "IT"
+     ]
+    },
+    {
+     "headline": "亞特蘭大 4 比 4 國際米蘭，埃斯波西托進三球",
+     "summary": "國際米蘭的埃斯波西托（Francesco Pio Esposito）第 16、32、52 分鐘各進一球，國米第 76 分鐘罰進點球 4 比 2。亞特蘭大的德凱特拉雷（Charles De Ketelaere）第 72、80 分鐘兩球追到 3 比 4，補時第 1 分鐘凱西（Franck Kessie）罰進點球扳平。國米 12 場 29 分，排第 3。",
+     "source": "ESPN、Sky Sports",
+     "url": "https://www.espn.com/soccer/match/_/gameId/401875001",
+     "when": "11 月 23 日（週一）凌晨",
+     "place": [
+      "IT"
      ]
     }
    ]
@@ -311,7 +331,7 @@
    "publisher": "ESPN",
    "date": "2026-11-22",
    "url": "https://www.espn.com/soccer/story/_/id/50562953/barcelona-villarreal-la-liga-hansi-flick-refereeing",
-   "note": "弗利克賽後原話；第 24 次落後逆轉、第 6 次落後兩球以上；亞馬爾今年第三次罰丟點球；Fermín 紅牌起因；文字寫亞馬爾踢偏，與比賽紀錄（門柱）不同，採紀錄與賽報"
+   "note": "弗利克賽後原話；第 24 次落後逆轉、第 6 次落後兩球以上；亞馬爾今年第三次罰丟點球；Fermín 紅牌起因；文字寫亞馬爾踢偏，與比賽紀錄（門柱）不同，採紀錄與賽報；弗利克談罰點球由誰踢：場上決定，他也許得想想要不要改，會跟拉菲尼亞與亞馬爾談，兩人都罰得進；11 月 23 日 05:20 重讀"
   },
   {
    "title": "Barça 3-2 Villarreal: Heroic response",
@@ -346,21 +366,21 @@
    "publisher": "Sky Sports",
    "date": "2026-11-22",
    "url": "https://www.skysports.com/football-scores-fixtures/2026-11-22",
-   "note": "第二來源核對（FT）：巴薩 3:2 比利亞雷亞爾、利物浦 4:0 曼聯、赫爾城 2:0 布萊頓、尤文 4:0 威尼斯、桑坦德競技 3:2 皇家社會"
+   "note": "第二來源核對（FT）：巴薩 3:2 比利亞雷亞爾、利物浦 4:0 曼聯、赫爾城 2:0 布萊頓、尤文 4:0 威尼斯、桑坦德競技 3:2 皇家社會、米蘭 5:1 弗羅西諾內、亞特蘭大 4:4 國米；11 月 23 日 05:58 讀取時馬競對赫塔費仍顯示進行中（頁面快取較舊），終場以 ESPN 與 LaLiga 為準"
   },
   {
    "title": "Results of LALIGA EA SPORTS 2026/27（第 13 輪）",
    "publisher": "LaLiga",
    "date": "2026-11-22",
    "url": "https://www.laliga.com/en-GB/laliga-easports/results",
-   "note": "官方賽果：皇馬 2:1 塞爾塔、巴薩 3:2 比利亞雷亞爾、桑坦德競技 3:2 皇家社會；馬競對赫塔費 11 月 22 日 20:00（UTC）開球，稿中馬競積分為開球前數字"
+   "note": "官方賽果：皇馬 2:1 塞爾塔、巴薩 3:2 比利亞雷亞爾、桑坦德競技 3:2 皇家社會"
   },
   {
    "title": "LaLiga standings",
    "publisher": "ESPN",
    "date": "2026-11-23",
    "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
-   "note": "巴薩 13 場 36、皇馬 13 場 33、馬競 12 場 28、貝蒂斯 27、皇家社會 22；11 月 23 日 02:40 查閱"
+   "note": "巴薩 13 場 36、皇馬 13 場 33、貝蒂斯 27、皇家社會 22；榜上馬競仍是 12 場 28（赫塔費一戰尚未入榜，稿中 13 場 31 為自算）；11 月 23 日 05:57 查閱"
   },
   {
    "title": "FC Barcelona first-team schedule",
@@ -424,6 +444,48 @@
    "date": "2026-11-22",
    "url": "https://www.espn.com/soccer/match/_/gameId/401879234",
    "note": "McBurnie 90+2'、90+5'；Costinha 89' 第二張黃牌"
+  },
+  {
+   "title": "Poch blames 'circumstances' in painful Man United loss to Liverpool",
+   "publisher": "ESPN",
+   "date": "2026-11-22",
+   "url": "https://www.espn.com/soccer/story/_/id/50563730/pochettino-painful-man-united-loss-liverpool",
+   "note": "波切蒂諾賽後說法：十人踢 80 多分鐘、輸球他負責、不同意約羅的紅牌、認為先前該有點球；曼聯英超第 19"
+  },
+  {
+   "title": "Milan into top four as classy Pulisic solo goal caps Serie A rout",
+   "publisher": "ESPN",
+   "date": "2026-11-22",
+   "url": "https://www.espn.com/soccer/report/_/gameId/401874989",
+   "note": "米蘭 5:1 弗羅西諾內；Calvani 烏龍 4'、Ramos 19'、Masini 25'、Jashari 48'、Cissé 60'、Pulisic 68'；阿莫林任內最大勝場；ESPN 義甲積分榜 11 月 23 日 05:56 查閱：拉齊奧 32、羅馬 30、國米 29（12 場）、米蘭 27（12 場）"
+  },
+  {
+   "title": "Atalanta 4-4 Inter Milan 比賽紀錄",
+   "publisher": "ESPN",
+   "date": "2026-11-22",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401875001",
+   "note": "Esposito 16'、32'、52'；Elmas 35'；De Ketelaere 72'、80'；Sucic 點球 76'；Kessie 點球 90+1'；終場 4:4（Sky Sports 同）"
+  },
+  {
+   "title": "Getafe 0-3 Atlético Madrid 比賽紀錄",
+   "publisher": "ESPN",
+   "date": "2026-11-22",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882803",
+   "note": "Baena 10'、Cardoso 30'、Grimaldo 點球 90+2'；Djené 紅牌；終場 0:3；11 月 23 日 05:56 查閱"
+  },
+  {
+   "title": "Getafe CF vs Atlético de Madrid（第 13 輪）",
+   "publisher": "LaLiga",
+   "date": "2026-11-22",
+   "url": "https://www.laliga.com/en-GB/match/temporada-2026-2027-laliga-ea-sports-getafe-cf-atletico-de-madrid-13",
+   "note": "官方比賽頁：終場 0:3，進球者與分鐘與 ESPN 相同；11 月 23 日 05:58 查閱"
+  },
+  {
+   "title": "UEFA Champions League scoreboard, 25 November 2026",
+   "publisher": "ESPN",
+   "date": "2026-11-23",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261125",
+   "note": "Sabah 對巴薩：11 月 25 日 17:45（UTC），巴庫奧林匹克體育場，與巴薩官網的 18:45（西班牙時間）一致；11 月 23 日 05:25 查閱"
   },
   {
    "title": "File:Pedri France v Spain 7.24.26-226.jpg",
