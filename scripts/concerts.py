@@ -2,7 +2,8 @@
 """近期演出: the standing list of concerts, operas and musicals at the foot of the front page (content/concerts.json).
 It is not part of any issue; the 演出資訊 routine keeps it current (editorial/columns/concerts.md).
 
-  python3 scripts/concerts.py fetch            # new candidates from the Ministry of Culture's open data and OPENTIX
+  python3 scripts/concerts.py fetch            # new candidates from the Ministry of Culture's open data, OPENTIX and the
+                                               #   three national venues' programme lists (scripts/venues.py)
                                                #   → /tmp/robin/concert-candidates.md (+ .json for `close`); the same
                                                #   file ends with 「## 已列入演出的異動」 when the feed's or OPENTIX's
                                                #   shows for a listed event differ from concerts.json (vanished, changed, new)
@@ -18,8 +19,8 @@ It is not part of any issue; the 演出資訊 routine keeps it current (editoria
   python3 scripts/concerts.py ot-scan [--all | --days N] --out FILE   # OPENTIX pages parsed into FILE; no state touched
 
 Exit codes, for other programs: 0 done; 2 nothing recorded (fetch: neither the feed nor OPENTIX could be read; sweep-done:
-no evidence or a malformed one); 3 not finished (fetch: one of the two sources could not be read, or the feed was
-incomplete; sweep-done: evidence kept but a source was not looked at; sweep-due: the sweep is overdue).
+no evidence or a malformed one); 3 not finished (fetch: one of the two sources or a venue's list could not be read, or the
+feed was incomplete; sweep-done: evidence kept but a source was not looked at; sweep-due: the sweep is overdue).
 
 Seen UIDs live in state/concerts/seen.json: a listed or rejected candidate is not offered again, unless a rejected one
 gets a new date or city, or `reopen` puts it back. Stdlib only.
@@ -36,6 +37,7 @@ from time import monotonic
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import CONTENT, ROOT, http_get, tw_now  # noqa: E402
 import opentix  # noqa: E402
+import venues  # noqa: E402
 
 FILE = os.path.join(CONTENT, "concerts.json")
 SEEN = os.path.join(ROOT, "state", "concerts", "seen.json")
@@ -51,7 +53,7 @@ OTSTATE = os.path.join(ROOT, "state", "concerts", "opentix.json")
 NEW_DAYS = 21
 STOP_AFTER = 3    # OPENTIX pages unreadable in a row (the host or a block, not 404/410, 「不是節目頁」 or shows unreadable): no more are asked for, and OPENTIX counts as unreadable
 ALL_AFTER = 6     # this many pages read and every one unreadable (any reason): no more are asked for either
-FETCH_SECONDS = 540  # the whole fetch (the feed and OPENTIX); no request is begun that could end past it (room)
+FETCH_SECONDS = 540  # the whole fetch (the feed, OPENTIX and then the venues); no request is begun that could end past it (room)
 RETRY_WAIT = 20   # the longest common.http_get waits between two tries
 FEED_TRIES = 3    # retries of a feed request
 STALE_DAYS = 10   # the newest programme in the sitemap this old: say so (a sitemap that stopped moving)
@@ -162,7 +164,7 @@ def note_fetch(day, problem, dropped=None, sources=None, whole=True):
     """Writes fetch.json: `complete` (false with the reason in `note`; `incomplete_since` is the first day of a run of
     such fetches) and `dropped`, what the title filters kept from being rated (left as it was when the feed failed);
     `sources`, whether each source could be read today, and `log`, a line a day for the last LOG_DAYS days (feed: read
-    and whole; opentix: read)."""
+    and whole; opentix: read; venues: all three read, left out when they were not read: ok null)."""
     old = load(FETCHED, {})
     rec = {"date": day, "complete": not problem, "note": problem,
            "incomplete_since": (old.get("incomplete_since") or day) if problem else None,
@@ -171,7 +173,10 @@ def note_fetch(day, problem, dropped=None, sources=None, whole=True):
         cut = (dt.date.fromisoformat(day) - dt.timedelta(days=LOG_DAYS)).isoformat()
         log = [x for x in old.get("log") or [] if isinstance(x, dict) and cut < x.get("date", "") < day]
         rec["sources"] = sources
-        rec["log"] = log + [{"date": day, "feed": sources["feed"]["ok"] and whole, "opentix": sources["opentix"]["ok"]}]
+        line = {"date": day, "feed": sources["feed"]["ok"] and whole, "opentix": sources["opentix"]["ok"]}
+        if sources["venues"]["ok"] is not None:  # the venues not read (both sources down): no record, not 「讀不到」
+            line["venues"] = sources["venues"]["ok"]
+        rec["log"] = log + [line]
     save(FETCHED, rec)
 
 
@@ -185,8 +190,9 @@ def ot_ids(e):
 
 
 def feed_uids(e):
-    """The Ministry feed's UIDs of a listed event (not the OPENTIX ids kept in uids)."""
-    return [u for u in e.get("uids") or [] if not opentix.ID.match(u)]
+    """The Ministry feed's UIDs of a listed event (not the OPENTIX ids nor the venues' kept in uids: an event the feed
+    never carried is not 「開放資料裡已找不到」)."""
+    return [u for u in e.get("uids") or [] if not opentix.ID.match(u) and not venues.is_venue(u)]
 
 
 def show_of(s):
@@ -463,8 +469,9 @@ def fetch(a):
     ot = ot_none("")
     ot_state = ot_guard(ot, read_opentix, ot, day, end, ot_listed, seen, start)  # v5 第一類: OPENTIX only through ot_guard
 
-    def both_down():
-        sources = {"feed": {"ok": False, "note": feed_err}, "opentix": {k: ot[k] for k in ("ok", "note", "new", "pages", "left", "newest")}}
+    def both_down():  # the feed and OPENTIX; the venues are not read on such a morning and never count here (「兩個都斷才通知」)
+        sources = {"feed": {"ok": False, "note": feed_err}, "opentix": {k: ot[k] for k in ("ok", "note", "new", "pages", "left", "newest")},
+                   "venues": {"ok": None, "note": "沒有讀（文化部與 OPENTIX 都讀不到）", "read": {}}}  # not read: no record (v3)
         print("查核失敗：兩個來源都讀不到（文化部：%s；OPENTIX：%s）" % (feed_err, ot["note"]))
         note_fetch(day, "兩個來源都讀不到（文化部：%s；OPENTIX：%s）" % (feed_err, ot["note"]), sources=sources)
         return 2
@@ -472,17 +479,24 @@ def fetch(a):
         return both_down()
     raw += ot["rows"]
     cands, known, info, dropped, filled, fate = [], 0, {}, {}, False, {}
-    for cat, e, mine in raw:
+
+    def rate(cat, e, mine, handed=(), failing=(), let_go=()):
+        """One row, the feed's, OPENTIX's or a venue's, rated the one way; says what became of it: "" (no UID or title),
+        "listed", "listed, filtered" (under a filtered title), "OPENTIX" (an OPENTIX programme's entry: not a candidate
+        twice), "out" (no show the list could take), "dropped" (a title filter), "seen" or "candidate". handed, failing
+        and let_go, for a venue's row: the OPENTIX ids that source is to rate after today's fetch (pending, later), those
+        whose page it cannot read (tries) and those it no longer follows (known: judged not a candidate, or let go)."""
+        nonlocal filled
         uid, title = e.get("UID") or "", (e.get("title") or "").strip()
         if not uid or not title:
-            continue
+            return ""
         drop = ""
         if cat == 2 and not STAGE.search(title.replace("歌劇院", "").replace("歌劇團", "")):
             drop = "戲劇類，標題沒有「音樂劇」或「歌劇」"
         elif SKIP.search(title):
             drop = "標題含「%s」" % SKIP.search(title).group(0)
         if drop and uid in listed:
-            continue  # as before: a listed event is not looked up under a filtered title
+            return "listed, filtered"  # as before: a listed event is not looked up under a filtered title
         shows, in_window, sig = [], [], set()
         for s in e.get("showInfo") or []:
             date, time, city, venue, price = show_of(s)
@@ -494,22 +508,22 @@ def fetch(a):
                 if city == "台中" or BIG_HALL.search(venue):
                     shows.append(show)  # a candidate only where the trip is worth it
         if uid in listed:
-            known += 1
-            feed_shows.setdefault(listed[uid]["id"], []).extend(in_window)
-            continue
-        if not mine and any(i in ot_listed or i in seen for i in opentix.ids_in("%s %s" % (e.get("webSales"), e.get("sourceWebPromote")))):
-            known += 1  # the feed's entry for an OPENTIX programme already listed or rated: not a candidate twice
-            continue
+            if not venues.is_venue(uid):  # a venue's shows are not compared with a listed event's (no daily check by the venues)
+                feed_shows.setdefault(listed[uid]["id"], []).extend(in_window)
+            return "listed"
+        oids = [] if mine else list(dict.fromkeys(opentix.ids_in("%s %s" % (e.get("webSales"), e.get("sourceWebPromote")))))
+        if any(i in ot_listed or i in seen or i in handed for i in oids):
+            return "OPENTIX"  # the feed's (or a venue's) entry for an OPENTIX programme already listed, rated or OPENTIX's to rate
         if mine:
             fate[uid] = ("none", None)  # no show the list could take (ot_finish: unless not every show was read)
         if not shows:
             if mine and sig and not drop:  # every show it could be listed for is after the window: ot_finish says when to read it again
                 fate[uid] = ("later", min(sig)[:10])
-            continue
+            return "out"
         sig = sorted(sig)
         if drop:  # would have been a candidate: keep what was dropped and why
             dropped[uid] = {"title": title, "shows": sig, "why": drop}
-            continue
+            return "dropped"
         again = ""
         if uid in seen:
             r = seen[uid]
@@ -517,19 +531,54 @@ def fetch(a):
             if r.get("v") == "rejected" and "shows" not in r:  # a record from before titles were kept: fill it in
                 r["title"], r["shows"], filled = title, sig, True
             if r.get("v") != "rejected" or not new:
-                known += 1
-                continue
+                return "seen"
             # rejected, and now with a date or a city it did not have (a Taichung show added): rate it again
             again = "曾判不收（%s：%s）；多了場次：%s" % (r.get("seen"), r.get("why") or "沒留理由", "、".join(new))
         info[uid] = {"title": title, "shows": sig}
         shows.sort(key=lambda s: (s["date"], s["time"]))
         desc = re.sub(r"\s+", " ", e.get("descriptionFilterHtml") or "").strip()
         units = "、".join(u for u in (e.get("masterUnit") or []) + [e.get("showUnit") or ""] if u)
+        sold = []
+        if venues.is_venue(uid):  # sold on OPENTIX, and a candidate here all the same: said why
+            sold = ["OPENTIX 那一路讀不到這一頁（編號 %s）" % "、".join(x) for x in [[i for i in oids if i in failing]] if x]
+            sold += ["OPENTIX 那一路不追這一頁（編號 %s）" % "、".join(x) for x in [[i for i in oids if i in let_go]] if x]
+            sold += ["售票在 OPENTIX（編號 %s），OPENTIX 那一路還沒看過" % "、".join(x) for x in [[i for i in oids if i not in failing and i not in let_go]] if x]
         cands.append({"uids": [uid], "category": "音樂" if cat == 1 else "戲劇", "title": title, "shows": shows, "again": again,
                       "url": e.get("sourceWebPromote") or e.get("webSales") or "", "sales": e.get("webSales") or "",
-                      "source": e.get("sourceWebName") or "", "units": units, "desc": desc[:240]})
+                      "source": e.get("sourceWebName") or "", "units": units, "desc": desc[:240], "sold": sold})
+        return "candidate"
+    for cat, e, mine in raw:
+        known += rate(cat, e, mine) in ("listed", "OPENTIX", "seen")
+    filtered = len(dropped)  # the summary's two numbers are the feed's and OPENTIX's alone; the venues' are on their own lines
     if filled:
         save(SEEN, seen)
+    gave_up = []
+    if ot_state is not None:  # an OPENTIX candidate (the 60 cut off included) stays pending until close
+        gave_up = ot_guard(ot, ot_finish, ot, ot_state, fate, {u for c in cands for u in c["uids"]}, day)
+        if gave_up is None:  # OPENTIX unreadable today after all and the state file as it was: every page is read again tomorrow
+            gave_up, ot_state = [], None  # (the venues are then compared with the file as it was)
+            if feed_err:
+                return both_down()
+    # The venues after OPENTIX, whose time they never take (v2), each guarded on its own. A venue's programme sold on
+    # OPENTIX is that source's when it is to rate it after today's fetch (pending, later: the same answer on a second run
+    # the same morning); one whose page it cannot read (tries), one it let go or judged not for it (known, v3: after 21
+    # days of tries an id moves there), or an id it never saw, stays a venue candidate, said so.
+    vs = venues.read(day, end, lambda timeout, retries, pause: room(start, timeout, retries, pause))
+    vdown = ["%s節目表（%s）" % (venues.NAMES[k], v["note"]) for k, v in vs.items() if not v["ok"]]
+    vsrc = {"ok": not vdown, "note": "、".join(vdown), "read": {k: {x: v[x] for x in ("ok", "n", "note")} for k, v in vs.items()}}
+    handed, failing, let_go = set(), set(), set()
+    try:
+        st = ot_state if ot_state is not None else ot_load()
+        if st:
+            f = set(st["tries"])
+            handed, failing, let_go = set(st["pending"]).union(st["later"]) - f, f, set(st["known"]) - f - set(st["pending"]) - set(st["later"])
+    except Exception as e:  # noqa: BLE001 — a broken state file: only the listed and seen.json are compared
+        print("OPENTIX 的狀態檔讀不了（%s），場館節目的 OPENTIX 編號只和已列入、seen.json 比對" % ot_why(e))
+    tally = {k: dict.fromkeys(("candidate", "listed", "OPENTIX", "out"), 0) for k in vs}  # a, b, c, d of each venue's line
+    for k, v in vs.items():
+        for cat, e in v["rows"]:
+            what = rate(cat, e, False, handed, failing, let_go)
+            tally[k][{"listed, filtered": "listed", "seen": "listed", "dropped": "out", "": "out"}.get(what, what)] += 1
     # The same listing often comes twice (OPENTIX's program page and its event page): merge those. One production
     # touring several cities usually has a UID per city: point at likely matches and leave the merge to the editor.
     merged = {}
@@ -541,17 +590,11 @@ def fetch(a):
             m["units"] = m["units"] or c["units"]
             m["desc"] = m["desc"] or c["desc"]
             m["again"] = m["again"] or c["again"]
+            m["sold"] = m["sold"] or c["sold"]
             m["shows"] += [s for s in c["shows"] if (s["date"], s["time"], s["city"]) not in {(x["date"], x["time"], x["city"]) for x in m["shows"]}]
         else:
             merged[k] = c
     cands = list(merged.values())
-    gave_up = []
-    if ot_state is not None:  # an OPENTIX candidate (the 60 cut off included) stays pending until close
-        gave_up = ot_guard(ot, ot_finish, ot, ot_state, fate, {u for c in cands for u in c["uids"]}, day)
-        if gave_up is None:  # OPENTIX unreadable today after all and the state file as it was: every page is read again tomorrow
-            gave_up = []
-            if feed_err:
-                return both_down()
     cands.sort(key=lambda c: (c["shows"][0]["date"], min(CITY_ORDER.index(s["city"]) for s in c["shows"])))
     waiting = max(0, len(cands) - LIMIT)
     cands = cands[:LIMIT]
@@ -581,6 +624,7 @@ def fetch(a):
             lines.append("  - 可能和候選 %s 是同一製作" % "、".join("`%s`" % u for u in c["twins"]))
         if c["again"]:
             lines.append("  - " + c["again"])
+        lines += ["  - " + x for x in c["sold"]]
     changed = listed_changes(data, feed_shows, day, end, ot, not feed_err)
     # A feed that comes back short (2026-11-09 06:18: 23 of the 24 listed events "gone", all back by noon) is not 23
     # cancellations: when most of the listed events are missing at once, say the feed was incomplete and leave the
@@ -596,6 +640,23 @@ def fetch(a):
         print("來源讀不到：文化部開放資料（%s）" % feed_err)
     if not ot["ok"]:
         print("來源讀不到：OPENTIX（%s）" % ot["note"])
+    for x in vdown:
+        print("來源讀不到：" + x)
+    for k, v in vs.items():  # every venue said, read or not; a programme not understood is never silent nor 「不在範圍」
+        name, t = venues.NAMES[k], tally[k]
+        bad = {w: [x for u, x, y in v["bad"] if y == w and u not in listed and u not in seen] for w in ("讀不出場次", "廳名不認得", "類別不認得", "節目卡看不懂", "標題太長", "場次太多")}
+        t["listed"] += len(v["bad"]) - sum(map(len, bad.values()))  # not understood but listed, or rated: not said again
+        if v["ok"]:
+            print("%s節目表：讀到 %d 檔，候選 %d、已列入或已判 %d、交給 OPENTIX %d、不在範圍 %d%s%s" % (
+                name, v["n"], t["candidate"], t["listed"], t["OPENTIX"], t["out"] + v["out"], "、已取消 %d" % v["cancelled"] if v["cancelled"] else "",
+                "；類別代號不認得 %d 檔" % v["odd"] if v["odd"] else ""))
+        for w, xs in bad.items():  # 「沒讀到」: one of the words concerts.md step 2 has copied into the run's report (v3)
+            if xs:
+                print("%s節目表有 %d 檔沒讀到（%s）：%s" % (name, len(xs), w, "、".join(x or "（沒有標題）" for x in xs[:5])))
+        if v["full"]:
+            print("%s節目表：%s" % (name, v["note"]))  # 讀滿 N 檔: read, not complete for sure (v2)
+        if v["dup"]:
+            print("%s節目表有 %d 筆沒讀到（編號重複，只留第一筆）：%s" % (name, len(v["dup"]), "、".join(v["dup"][:5])))
     if ot["left"]:
         print("OPENTIX 還有 %d 個新節目留到下次" % ot["left"])
     if ot["unread"]:
@@ -610,9 +671,9 @@ def fetch(a):
     if quiet >= STALE_DAYS:
         print("OPENTIX 清單已 %d 天沒有新節目" % quiet)  # a reminder only: the exit code is not changed
     problem = [x for x in ("讀不到文化部開放資料（%s）" % feed_err if feed_err else "", "讀不到 OPENTIX（%s）" % ot["note"] if not ot["ok"] else "",
-                           "已列入的 %d 筆裡有 %d 筆整筆不在回應裡" % (with_uids, len(gone)) if partial else "") if x]
+                           "已列入的 %d 筆裡有 %d 筆整筆不在回應裡" % (with_uids, len(gone)) if partial else "") if x] + ["讀不到" + x for x in vdown]
     sources = {"feed": {"ok": not feed_err, "note": feed_err},
-               "opentix": {k: ot[k] for k in ("ok", "note", "new", "pages", "left", "newest")}}
+               "opentix": {k: ot[k] for k in ("ok", "note", "new", "pages", "left", "newest")}, "venues": vsrc}
     note_fetch(day, "；".join(problem), dropped, sources, whole=not partial)
     rules = rules_version()
     rej = [v for v in seen.values() if v.get("v") == "rejected"]
@@ -630,7 +691,7 @@ def fetch(a):
     by = {k: sum(1 for c in cands if any(s["city"] == k for s in c["shows"])) for k in CITY_ORDER}
     print("新候選 %d 筆（%s）；%s已看過 %d 筆；標題過濾擋下 %d 筆%s；OPENTIX 新節目 %d 個、讀了 %d 頁、留到下次 %d 個。清單：%s.md" % (
         len(cands), "、".join("%s %d" % kv for kv in by.items()), "還有 %d 筆留到下次；" % waiting if waiting else "",
-        known, len(dropped), "；已列入有異動 %d 筆（見清單末段）" % len(changed) if changed else "", ot["new"], ot["pages"], ot["left"], CANDS))
+        known, filtered, "；已列入有異動 %d 筆（見清單末段）" % len(changed) if changed else "", ot["new"], ot["pages"], ot["left"], CANDS))
     return 3 if partial or problem else 0
 
 
@@ -1026,6 +1087,19 @@ def sweep_last():
         return None
 
 
+def venues_read():
+    """{venue: programmes read} for the venues today's fetch read (fetch.json, in venues.NAMES order): those need no one
+    to open their pages. A fetch.json of another day, one without venues (before 2026-11-20) or with venues not read
+    (ok null: both sources down, v3), says none."""
+    try:
+        got = load(FETCHED, {})
+        v = got["sources"]["venues"]
+        read = v["read"] if got.get("date") == today() and v.get("ok") is not None else {}
+        return {k: r["n"] for k in venues.NAMES for r in [read.get(k) or {}] if r.get("ok") is True and isinstance(r.get("n"), int)}
+    except (OSError, ValueError, KeyError, TypeError, AttributeError):
+        return {}
+
+
 def sweep_due(a):
     """Prints 「補查：今天不用」, or 「補查：今天要做」 with the sources to open and the evidence sweep-done takes (the
     routine reads it here: the list in concerts.md was cut off mid-line on 2026-11-09). Exit 3 when the sweep is
@@ -1037,9 +1111,13 @@ def sweep_due(a):
         return 0
     path = os.path.join(TMP, "sweep.json")
     print("補查：今天要做（上次 %s%s）" % (last or "沒有紀錄", "；已逾期 %d 天" % late if late else ""))
-    print("十個來源都要打開。看到的每一檔都評分，符合門檻的加進 concerts.json（uids 用空陣列），然後寫證據檔 %s：" % path)
+    auto = venues_read()
+    print("下面列的來源都要打開。看到的每一檔都評分，符合門檻的加進 concerts.json（uids 用空陣列），然後寫證據檔 %s：" % path)
     for k, v in SWEEP_SOURCES.items():
-        print("  %s：%s" % (k, v))
+        if k not in auto:
+            print("  %s：%s" % (k, v))
+    if auto:
+        print("%s 由程式每天讀（今天讀到 %s 檔）" % ("、".join(auto), "、".join(map(str, auto.values()))))
     print('格式：{"mna": {"urls": ["實際打開的網址", "…"], "seen": [{"title": "看到的演出", "verdict": "收", "id": "concerts.json 的 id"}, '
           '{"title": "…", "verdict": "已列入", "id": "…"}, {"title": "…", "verdict": "不收", "why": "分數與理由"}]}, '
           '"pbc": {"error": "連不上或來不及查的原因"}, …}')
@@ -1052,7 +1130,7 @@ def sweep_done(a):
     keeps it in state/concerts/sweep.json. Exit 0: every source was looked at; today is the last finished sweep.
     Exit 3: kept, but a source was unreachable, not got to, or showed nothing: not finished, due again tomorrow (the
     sweep of 2026-11-11, six sources unreachable, left its account in a run note only). Exit 2: no evidence or a
-    malformed one, nothing recorded (naming the ten sources used to do, and they can be typed without opening a page)."""
+    malformed one, nothing recorded (naming the sources used to do, and they can be typed without opening a page)."""
     try:
         with open(a.evidence or "", encoding="utf-8") as f:
             ev = json.load(f)
@@ -1065,8 +1143,13 @@ def sweep_done(a):
     if not isinstance(ev, dict):
         bad, ev = ["證據檔要是 {來源代號: {...}}"], {}
     bad += ["不認得的來源 %s（可用：%s）" % (k, " ".join(SWEEP_SOURCES)) for k in ev if k not in SWEEP_SOURCES]
+    auto, kept = venues_read(), dict(ev)
     for k in SWEEP_SOURCES:
         s = ev.get(k)
+        if k in auto and (not isinstance(s, dict) or s.get("error")):  # no look by hand, but today's fetch read it
+            kept[k] = {"auto": True, "n": auto[k]}
+            tally.append("%s 程式讀到 %d 檔" % (k, auto[k]))
+            continue
         if not isinstance(s, dict) or s.get("error"):
             undone.append("%s（%s）" % (k, s["error"] if isinstance(s, dict) else "沒查"))
             continue
@@ -1097,7 +1180,7 @@ def sweep_done(a):
             save(FILE, data)
             print("added 改成今天：%s" % "、".join(fixed))
     day, last = tw_now().date().isoformat(), sweep_last()
-    save(SWEEP, {"last": (last.isoformat() if last else None) if undone else day, "date": day, "sources": ev})
+    save(SWEEP, {"last": (last.isoformat() if last else None) if undone else day, "date": day, "sources": kept})
     print("補查證據已存（%s）：%s" % (day, "；".join(tally) or "沒有一個來源查到"))
     if undone:
         print("補查：沒做完，不記成做完（上次做完 %s）。沒查到的：%s" % (last or "沒有紀錄", "、".join(undone)))
@@ -1151,7 +1234,7 @@ def main():
     sub.add_parser("prune")
     sub.add_parser("check")
     sub.add_parser("sweep-due", help="補查（第 8 步）今天要不要做：每兩天一次；逾期時結束碼 3")
-    sd = sub.add_parser("sweep-done", help="交補查的證據檔；十個來源都查到才記成做完")
+    sd = sub.add_parser("sweep-done", help="交補查的證據檔；每個來源都查到（或當天由程式讀到）才記成做完")
     sd.add_argument("--evidence", help="證據檔（格式見 sweep-due 的輸出）")
     sd.add_argument("--checked", nargs="*", help=argparse.SUPPRESS)  # the old call: taken so that it gets the refusal above
     ot = sub.add_parser("ot-scan", help="把 OPENTIX 節目頁解析成 JSON 存下來；不動任何狀態檔")
