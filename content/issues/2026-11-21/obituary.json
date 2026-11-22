@@ -106,6 +106,11 @@
       "text": "它已經躲了好些年，現在又是病毒的年頭。",
       "original": "Lleva años escondida y ahora estamos en tiempos de virus.",
       "cite": "Ferrín，eldiario.es 2020 年 4 月 25 日，本文自譯"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-22）",
+      "text": "兩處更正。一、小說題獻的對象「飛行員」（O Piloto），題詞寫的是「加利西亞最後一名游擊隊員，1964 年在盧戈省的 Belesar 被擊斃」，不是「被槍決的游擊隊領袖」。二、案卷裡的兩份打字稿是「損毀得很厲害，但還能復原」，來源沒有說是受潮。依據：elDiario.es 2020 年報導（Al Piloto, último guerrillero de Galicia, abatido a tiros en Belesar；Estaban muy deterioradas, pero no tanto como para impedir su reconstrucción）。"
     }
   ],
   "sources": [
@@ -186,5 +191,6 @@
       "url": "https://xerais.gal/autor/x-l-mendez-ferrin/",
       "note": "出版社作者頁：書目與年份（Poesía reunida 2024）。頁面無發布日期，date 為查閱日。"
     }
-  ]
+  ],
+  "corrected_at": "2026-11-22T19:25:00+08:00"
 }

@@ -213,6 +213,11 @@
     {
       "type": "p",
       "text": "1912 年 7 月 23 日，美國修改船舶無線電法：離開美國港口、載 50 人以上的船，無線電要有兩個以上合格的人，航行時隨時有一個值班。10 月 1 日起適用，修法當天還沒生效。"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-22）",
+      "text": "導言說「見習生說他數到八枚白色火箭」，數字歸錯了人：二副史東先看見五枚，見習生吉布森又看見三枚，是史東叫吉布森下樓報告船長「我們一共看見了八枚」；吉布森自己的證詞說的是「這三枚火箭」。標題的「看見火箭的船長」也不準：加州人號船長洛德在調查庭說他自己沒看見火箭，是二副從傳聲管向他報告的。依據：英國鐵達尼號調查庭報告〈加州人號〉一節、吉布森證詞第 7512 問、洛德證詞第 6796 問。"
     }
   ],
   "sources": [
@@ -327,6 +332,12 @@
       "date": "2026-11-17（讀取日）",
       "url": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
       "note": "卡麥隆編導，1997 年上映。"
+    },
+    {
+      "title": "British Wreck Commissioner’s Inquiry: Gibson testimony",
+      "publisher": "Titanic Inquiry Project",
+      "url": "https://www.titanicinquiry.org/BOTInq/BOTInq07Gibson01.php"
     }
-  ]
+  ],
+  "corrected_at": "2026-11-22T19:31:00+08:00"
 }

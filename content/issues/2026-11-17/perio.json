@@ -165,6 +165,11 @@
       "sample": "18 項隨機對照試驗（36 篇論文），起始 503 人、最後分析 428 人；翻瓣對清創 13 項；15 項為同口分區設計；追蹤 6 到 156 個月",
       "question": "牙周炎病人做翻瓣清創，比起齦下清創，探診深度能多減少多少？不同翻瓣方式之間有沒有差別？",
       "access": "依全文整理（杜林大學機構典藏 IRIS 收錄的出版社版 PDF）"
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-22）",
+      "text": "倒數幾段引 Heitz-Mayfield 等 2002 年的回顧時，只給了 4 到 6 毫米口袋的數字（刮治多得 0.37 毫米附著），接著說作者認為本篇在淺部位的發現證實了那篇。對得上的是淺口袋的數字：1 到 3 毫米的口袋，不開刀比開刀少掉約 0.51 毫米附著。依據：Heitz-Mayfield 等 2002 年摘要（In shallow pockets (1-3 mm) non-surgical therapy resulted in 0.5 mm less attachment loss (WMD -0.51 mm)）。"
     }
   ],
   "sources": [
@@ -203,5 +208,6 @@
       "url": "https://commons.wikimedia.org/wiki/File:UCLA_Periodontics_Graduate_Clinic.jpg",
       "note": "頭圖。檔案描述：UCLA School of Dentistry Periodontics Graduate Clinic；原始拍攝時間 2013-05-31（EXIF DateTimeOriginal）；CC BY 3.0。"
     }
-  ]
+  ],
+  "corrected_at": "2026-11-22T19:25:00+08:00"
 }

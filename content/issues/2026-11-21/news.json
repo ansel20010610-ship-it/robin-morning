@@ -1,179 +1,185 @@
 {
- "column": "news",
- "date": "2026-11-21",
- "title": "俄軍空襲烏克蘭、飛彈落波蘭，立法院三讀普發 2 萬元",
- "dek": "俄羅斯大規模空襲烏克蘭多地，波蘭說有飛彈落在境內；英國與歐盟談成重啟協議；立法院三讀通過普發現金條例。",
- "brief": "俄羅斯 20 日空襲烏克蘭多地，基輔方面說至少 7 人死亡，波蘭說有俄方飛彈落在境內。英國與歐盟同日談成三項協議。立法院三讀通過條例，規定政府得發放每人 2 萬元，行政院說有高度違憲疑慮。",
- "topic_key": "news:2026-11-21",
- "voice": "wire",
- "updated_at": "2026-11-21T05:40:00+08:00",
- "spoiler": null,
- "disclaimer": null,
- "sources": [
-  {
-   "title": "Russia pummels Ukraine after Putin vowed 'painful' attack",
-   "publisher": "法國 24 電視台",
-   "date": "2026-11-20",
-   "url": "https://www.france24.com/en/live-news/20261120-russia-pummels-ukraine-after-putin-vowed-painful-attack",
-   "note": "基輔、利維夫死亡人數、三座橋、飛彈與無人機數量（烏克蘭官員）、俄國防部說法、法國要求安理會開會"
-  },
-  {
-   "title": "Poland's Tusk denounces Russian 'provocation' after Warsaw says missile hit territory",
-   "publisher": "法國 24 電視台",
-   "date": "2026-11-20",
-   "url": "https://www.france24.com/en/europe/20261120-poland-says-russian-missile-hit-its-territory-during-attack-on-ukraine",
-   "note": "波蘭飛彈事件：Kh-101、圖斯克說法、呂特週六訪華沙"
-  },
-  {
-   "title": "'The deal is done': EU, UK agree to reset relations 10 years after Brexit",
-   "publisher": "半島電視台",
-   "date": "2026-11-20",
-   "url": "https://www.aljazeera.com/news/2026/11/20/eu-and-uk-seal-reset-deal",
-   "note": "三項協議、51 億英鎊（報導估算）、10 萬名年輕人、最長三年、各方須完成法律程序"
-  },
-  {
-   "title": "Russia complains of 'new Iron Curtain' as Estonia shuts its borders",
-   "publisher": "半島電視台",
-   "date": "2026-11-20",
-   "url": "https://www.aljazeera.com/news/2026/11/20/russia-complains-of-new-iron-curtain-as-estonia-shuts-its-borders",
-   "note": "愛沙尼亞封閉對俄公路口岸、札哈羅娃說法、縱火指控與克里姆林宮否認"
-  },
-  {
-   "title": "Trump defends Putin relationship, warns AI data centres must stay in US",
-   "publisher": "半島電視台",
-   "date": "2026-11-20",
-   "url": "https://www.aljazeera.com/news/2026/11/20/trump-defends-putin-relationship-warns-ai-data-centres-must-stay-in-us",
-   "note": "白宮記者會：AI 資料中心課稅與罰則的說法、三方會談無重大協議"
-  },
-  {
-   "title": "立院三讀普發現金2萬元 綠白聯手反對不敵藍人數優勢",
-   "publisher": "中央社",
-   "date": "2026-11-20",
-   "url": "https://www.cna.com.tw/news/aipl/202611200188.aspx",
-   "note": "20 日 15:56 發布、20:20 更新；表決 50 比 46、條例內容"
-  },
-  {
-   "title": "政院：普發2萬有違憲疑慮財政風險 遺憾立院強行通過",
-   "publisher": "中央社",
-   "date": "2026-11-20",
-   "url": "https://www.cna.com.tw/news/aipl/202611200291.aspx",
-   "note": "20 日 19:12 發布、20:23 更新；行政院發言人說法、4,714 億元、114 年度歲計賸餘 857 億元、希望總預算普發 1 萬元春節前發放"
-  },
-  {
-   "title": "TPP, DPP fail to derail KMT-backed NT$20,000 cash handout bill",
-   "publisher": "Focus Taiwan（中央社）",
-   "date": "2026-11-20",
-   "url": "https://focustaiwan.tw/politics/202611200013",
-   "note": "20 日 17:21 發布；民進黨 13 人缺席、多為 11 月 28 日選舉候選人"
-  },
-  {
-   "title": "Taiwan says China's improper treatment at APEC will not set precedent",
-   "publisher": "Focus Taiwan（中央社）",
-   "date": "2026-11-20",
-   "url": "https://focustaiwan.tw/politics/202611200020",
-   "note": "20 日 20:12 發布；未具名官員說法、17 輪協商、龔明鑫 9 月未能赴廣州、400 多人 25 個以上部會"
-  }
- ],
- "body": [
-  {
-   "type": "p",
-   "text": "昨天（11 月 20 日）最大的事在歐洲東邊：俄羅斯空襲烏克蘭多地，波蘭說飛彈落境內。台灣這邊，立法院三讀通過普發 2 萬元條例。"
-  },
-  {
-   "type": "news",
-   "title": "世界",
-   "items": [
+  "column": "news",
+  "date": "2026-11-21",
+  "title": "俄軍空襲烏克蘭、飛彈落波蘭，立法院三讀普發 2 萬元",
+  "dek": "俄羅斯大規模空襲烏克蘭多地，波蘭說有飛彈落在境內；英國與歐盟談成重啟協議；立法院三讀通過普發現金條例。",
+  "brief": "俄羅斯 20 日空襲烏克蘭多地，基輔方面說至少 7 人死亡，波蘭說有俄方飛彈落在境內。英國與歐盟同日談成三項協議。立法院三讀通過條例，規定政府得發放每人 2 萬元，行政院說有高度違憲疑慮。",
+  "topic_key": "news:2026-11-21",
+  "voice": "wire",
+  "updated_at": "2026-11-21T05:40:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "sources": [
     {
-     "headline": "俄大規模空襲，飛彈落波蘭",
-     "place": [
-      "UA",
-      "PL"
-     ],
-     "summary": "俄羅斯 20 日空襲烏克蘭多地，基輔方面說至少 7 人死亡；克里沃羅格 2 人（地方官員說是 7 歲孩童與 20 歲救難員）。俄軍方稱打擊軍工與運輸設施。波蘭東部村莊（法國 24 另稱東南角）落下一枚 Kh-101 飛彈，另一枚疑似落在別處，無人受傷；總理圖斯克說「看起來不是巧合」。北約秘書長呂特稱「明顯危險」，克里姆林宮未回應。",
-     "source": "法國 24 電視台",
-     "url": "https://www.france24.com/en/live-news/20261120-russia-pummels-ukraine-after-putin-vowed-painful-attack",
-     "when": "11 月 20 日（週五），烏克蘭與波蘭當地"
+      "title": "Russia pummels Ukraine after Putin vowed 'painful' attack",
+      "publisher": "法國 24 電視台",
+      "date": "2026-11-20",
+      "url": "https://www.france24.com/en/live-news/20261120-russia-pummels-ukraine-after-putin-vowed-painful-attack",
+      "note": "基輔、利維夫死亡人數、三座橋、飛彈與無人機數量（烏克蘭官員）、俄國防部說法、法國要求安理會開會"
     },
     {
-     "headline": "英國與歐盟談成重啟協議",
-     "place": [
-      "GB",
-      "BE"
-     ],
-     "summary": "英國首相伯恩罕與歐盟 20 日談成三項協議：減少動植物及相關產品的管制、連結碳排放交易，以及讓最多 10 萬名歐洲年輕人到英國生活工作最長三年，英國年輕人也可赴歐盟。生效時間未公布。",
-     "source": "半島電視台",
-     "url": "https://www.aljazeera.com/news/2026/11/20/eu-and-uk-seal-reset-deal",
-     "when": "11 月 20 日（週五），布魯塞爾當地"
+      "title": "Poland's Tusk denounces Russian 'provocation' after Warsaw says missile hit territory",
+      "publisher": "法國 24 電視台",
+      "date": "2026-11-20",
+      "url": "https://www.france24.com/en/europe/20261120-poland-says-russian-missile-hit-its-territory-during-attack-on-ukraine",
+      "note": "波蘭飛彈事件：Kh-101、圖斯克說法、呂特週六訪華沙"
     },
     {
-     "headline": "愛沙尼亞將封閉對俄公路口岸",
-     "place": [
-      "EE",
-      "RU"
-     ],
-     "summary": "愛沙尼亞政府 20 日正式通過（外長 15 日已宣布），12 月 1 日起封閉對俄公路口岸半年，明年再決定是否延長。俄外交部發言人札哈羅娃稱這是「新鐵幕」，將採取政治與外交行動。先前愛沙尼亞指稱俄羅斯涉入縱火未遂，克里姆林宮已否認。",
-     "source": "半島電視台",
-     "url": "https://www.aljazeera.com/news/2026/11/20/russia-complains-of-new-iron-curtain-as-estonia-shuts-its-borders",
-     "when": "11 月 20 日（週五），愛沙尼亞當地"
+      "title": "'The deal is done': EU, UK agree to reset relations 10 years after Brexit",
+      "publisher": "半島電視台",
+      "date": "2026-11-20",
+      "url": "https://www.aljazeera.com/news/2026/11/20/eu-and-uk-seal-reset-deal",
+      "note": "三項協議、51 億英鎊（報導估算）、10 萬名年輕人、最長三年、各方須完成法律程序"
     },
     {
-     "headline": "川普警告海外AI中心課重稅",
-     "place": [
-      "US"
-     ],
-     "summary": "川普 20 日在白宮記者會警告，美國科技公司若到國外蓋新的 AI 資料中心，會面臨「巨額稅金」與「重罰」。半島說他沒說明怎麼執行。",
-     "source": "半島電視台",
-     "url": "https://www.aljazeera.com/news/2026/11/20/trump-defends-putin-relationship-warns-ai-data-centres-must-stay-in-us",
-     "when": "11 月 20 日（週五），華盛頓當地"
+      "title": "Russia complains of 'new Iron Curtain' as Estonia shuts its borders",
+      "publisher": "半島電視台",
+      "date": "2026-11-20",
+      "url": "https://www.aljazeera.com/news/2026/11/20/russia-complains-of-new-iron-curtain-as-estonia-shuts-its-borders",
+      "note": "愛沙尼亞封閉對俄公路口岸、札哈羅娃說法、縱火指控與克里姆林宮否認"
+    },
+    {
+      "title": "Trump defends Putin relationship, warns AI data centres must stay in US",
+      "publisher": "半島電視台",
+      "date": "2026-11-20",
+      "url": "https://www.aljazeera.com/news/2026/11/20/trump-defends-putin-relationship-warns-ai-data-centres-must-stay-in-us",
+      "note": "白宮記者會：AI 資料中心課稅與罰則的說法、三方會談無重大協議"
+    },
+    {
+      "title": "立院三讀普發現金2萬元 綠白聯手反對不敵藍人數優勢",
+      "publisher": "中央社",
+      "date": "2026-11-20",
+      "url": "https://www.cna.com.tw/news/aipl/202611200188.aspx",
+      "note": "20 日 15:56 發布、20:20 更新；表決 50 比 46、條例內容"
+    },
+    {
+      "title": "政院：普發2萬有違憲疑慮財政風險 遺憾立院強行通過",
+      "publisher": "中央社",
+      "date": "2026-11-20",
+      "url": "https://www.cna.com.tw/news/aipl/202611200291.aspx",
+      "note": "20 日 19:12 發布、20:23 更新；行政院發言人說法、4,714 億元、114 年度歲計賸餘 857 億元、希望總預算普發 1 萬元春節前發放"
+    },
+    {
+      "title": "TPP, DPP fail to derail KMT-backed NT$20,000 cash handout bill",
+      "publisher": "Focus Taiwan（中央社）",
+      "date": "2026-11-20",
+      "url": "https://focustaiwan.tw/politics/202611200013",
+      "note": "20 日 17:21 發布；民進黨 13 人缺席、多為 11 月 28 日選舉候選人"
+    },
+    {
+      "title": "Taiwan says China's improper treatment at APEC will not set precedent",
+      "publisher": "Focus Taiwan（中央社）",
+      "date": "2026-11-20",
+      "url": "https://focustaiwan.tw/politics/202611200020",
+      "note": "20 日 20:12 發布；未具名官員說法、17 輪協商、龔明鑫 9 月未能赴廣州、400 多人 25 個以上部會"
     }
-   ]
-  },
-  {
-   "type": "news",
-   "title": "台灣",
-   "items": [
+  ],
+  "body": [
     {
-     "headline": "立法院三讀通過普發 2 萬元",
-     "place": "TW",
-     "summary": "立法院 20 日以 50 比 46 三讀通過國民黨團提的特別條例，規定政府「得」發放每人 2 萬元現金，對象為全體國民。行政院說條例「具有高度違憲疑慮以及財政風險」。接下來看行政院能否在生效後一個月內送特別預算；預算生效後三個月內須發完。",
-     "source": "中央社",
-     "url": "https://www.cna.com.tw/news/aipl/202611200188.aspx",
-     "when": "11 月 20 日（週五），台灣時間"
+      "type": "p",
+      "text": "昨天（11 月 20 日）最大的事在歐洲東邊：俄羅斯空襲烏克蘭多地，波蘭說飛彈落境內。台灣這邊，立法院三讀通過普發 2 萬元條例。"
     },
     {
-     "headline": "台稱APEC不當對待不成先例",
-     "place": [
-      "TW",
-      "CN"
-     ],
-     "summary": "一名未具名官員 20 日說，中國 2024 年 11 月獲選主辦 APEC 後，台灣與北京談了 17 輪，中方不當對待不會成為先例。其中一例是經濟部長龔明鑫 9 月無法赴廣州的部長會議（中方稱政治因素）；官員也批評領袖會議邀請函的遞送與格式。這攸關台灣能否平等參加 APEC 各項會議。",
-     "source": "Focus Taiwan（中央社）",
-     "url": "https://focustaiwan.tw/politics/202611200020",
-     "when": "11 月 20 日（週五），台灣時間"
+      "type": "news",
+      "title": "世界",
+      "items": [
+        {
+          "headline": "俄大規模空襲，飛彈落波蘭",
+          "place": [
+            "UA",
+            "PL"
+          ],
+          "summary": "俄羅斯 20 日空襲烏克蘭多地，基輔方面說至少 7 人死亡；克里沃羅格 2 人（地方官員說是 7 歲孩童與 20 歲救難員）。俄軍方稱打擊軍工與運輸設施。波蘭東部村莊（法國 24 另稱東南角）落下一枚 Kh-101 飛彈，另一枚疑似落在別處，無人受傷；總理圖斯克說「看起來不是巧合」。北約秘書長呂特稱「明顯危險」，克里姆林宮未回應。",
+          "source": "法國 24 電視台",
+          "url": "https://www.france24.com/en/live-news/20261120-russia-pummels-ukraine-after-putin-vowed-painful-attack",
+          "when": "11 月 20 日（週五），烏克蘭與波蘭當地"
+        },
+        {
+          "headline": "英國與歐盟談成重啟協議",
+          "place": [
+            "GB",
+            "BE"
+          ],
+          "summary": "英國首相伯恩罕與歐盟 20 日談成三項協議：減少動植物及相關產品的管制、連結碳排放交易，以及讓最多 10 萬名歐洲年輕人到英國生活工作最長三年，英國年輕人也可赴歐盟。生效時間未公布。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/20/eu-and-uk-seal-reset-deal",
+          "when": "11 月 20 日（週五），布魯塞爾當地"
+        },
+        {
+          "headline": "愛沙尼亞將封閉對俄公路口岸",
+          "place": [
+            "EE",
+            "RU"
+          ],
+          "summary": "愛沙尼亞政府 20 日正式通過（外長 15 日已宣布），12 月 1 日起封閉對俄公路口岸半年，明年再決定是否延長。俄外交部發言人札哈羅娃稱這是「新鐵幕」，將採取政治與外交行動。先前愛沙尼亞指稱俄羅斯涉入縱火未遂，克里姆林宮已否認。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/20/russia-complains-of-new-iron-curtain-as-estonia-shuts-its-borders",
+          "when": "11 月 20 日（週五），愛沙尼亞當地"
+        },
+        {
+          "headline": "川普警告海外AI中心課重稅",
+          "place": [
+            "US"
+          ],
+          "summary": "川普 20 日在白宮記者會警告，美國科技公司若到國外蓋新的 AI 資料中心，會面臨「巨額稅金」與「重罰」。半島說他沒說明怎麼執行。",
+          "source": "半島電視台",
+          "url": "https://www.aljazeera.com/news/2026/11/20/trump-defends-putin-relationship-warns-ai-data-centres-must-stay-in-us",
+          "when": "11 月 20 日（週五），華盛頓當地"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "title": "台灣",
+      "items": [
+        {
+          "headline": "立法院三讀通過普發 2 萬元",
+          "place": "TW",
+          "summary": "立法院 20 日以 50 比 46 三讀通過國民黨團提的特別條例，規定政府「得」發放每人 2 萬元現金，對象為全體國民。行政院說條例「具有高度違憲疑慮以及財政風險」。接下來看行政院能否在生效後一個月內送特別預算；預算生效後三個月內須發完。",
+          "source": "中央社",
+          "url": "https://www.cna.com.tw/news/aipl/202611200188.aspx",
+          "when": "11 月 20 日（週五），台灣時間"
+        },
+        {
+          "headline": "台稱APEC不當對待不成先例",
+          "place": [
+            "TW",
+            "CN"
+          ],
+          "summary": "一名未具名官員 20 日說，中國 2024 年 11 月獲選主辦 APEC 後，台灣與北京談了 17 輪，中方不當對待不會成為先例。其中一例是經濟部長龔明鑫 9 月無法赴廣州的部長會議（中方稱政治因素）；官員也批評領袖會議邀請函的遞送與格式。這攸關台灣能否平等參加 APEC 各項會議。",
+          "source": "Focus Taiwan（中央社）",
+          "url": "https://focustaiwan.tw/politics/202611200020",
+          "when": "11 月 20 日（週五），台灣時間"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "接下來的日子",
+      "head": [
+        "日期",
+        "事項"
+      ],
+      "rows": [
+        [
+          "今天（11 月 21 日，週六）",
+          "北約秘書長呂特預定訪問華沙"
+        ],
+        [
+          "11 月 28 日",
+          "台灣縣市長選舉"
+        ],
+        [
+          "12 月 1 日",
+          "愛沙尼亞預定封閉對俄公路口岸"
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "label": "更正（2026-11-22）",
+      "text": "第一則與摘要說「基輔方面說至少 7 人死亡」，這 7 人只算首都基輔市內。同一波空襲，西部的利維夫另有 2 人死亡，加上克里沃羅格 2 人，全國死亡人數不只 7 人。依據：法國 24 電視台轉發法新社 11 月 20 日報導（Kyiv saying at least seven people were killed in the capital；Two people were killed in Lviv）。"
     }
-   ]
-  },
-  {
-   "type": "table",
-   "title": "接下來的日子",
-   "head": [
-    "日期",
-    "事項"
-   ],
-   "rows": [
-    [
-     "今天（11 月 21 日，週六）",
-     "北約秘書長呂特預定訪問華沙"
-    ],
-    [
-     "11 月 28 日",
-     "台灣縣市長選舉"
-    ],
-    [
-     "12 月 1 日",
-     "愛沙尼亞預定封閉對俄公路口岸"
-    ]
-   ]
-  }
- ]
+  ],
+  "corrected_at": "2026-11-22T19:25:00+08:00"
 }
