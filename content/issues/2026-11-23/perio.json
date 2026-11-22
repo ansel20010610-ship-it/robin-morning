@@ -1,0 +1,253 @@
+{
+  "column": "perio",
+  "date": "2026-11-23",
+  "title": "半年洗一次牙，牙齦炎沒有比較少",
+  "dek": "例行洗牙到底有沒有用，Cochrane 問了十三年，前三版都說不知道。2018 年那一版終於講清楚了，答案可能跟你診間的習慣不太一樣。",
+  "brief": "Cochrane 2018 年的回顧收了英國一般診所的兩篇試驗、1,711 人：沒有重度牙周炎、固定回診的成人，排定每 6 或 12 個月洗牙，兩三年內牙齦炎和不排定洗牙幾乎沒差，證據確定性高。確定性高的指標裡，有差的只有牙結石，少一點。研究沒收牙周炎病人，這結論不能搬到牙周維護治療上。",
+  "takeaway": "沒有重度牙周炎、固定回診的成人，排定每 6 或 12 個月洗牙，兩三年內牙齦炎、探測深度和不排定洗牙幾乎沒差，證據確定性高；只少一點牙結石。牙周炎病人的支持性治療不適用。",
+  "chairside": "有研究追了三年：沒有嚴重牙周病、又固定回來檢查的人，每 6 個月排一次洗牙，牙齦發炎的情況和想洗或醫師建議時才洗的人差不多，差別只是牙結石少一點。",
+  "topic_key": "perio:doi:10.1002/14651858.cd004625.pub5",
+  "form": "reverse",
+  "voice": "colleague",
+  "updated_at": "2026-11-22T22:48:08+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/MandibularAnteriorCalculus.JPG/1280px-MandibularAnteriorCalculus.JPG",
+    "width": 1280,
+    "height": 636,
+    "alt": "從上方看下排牙齒的內側。六顆前牙靠近牙齦的地方覆著一層黃白到黃褐色的硬垢，牙縫間也塞滿，牙面上有褐色斑點；右側兩顆小臼齒比較乾淨。下方是粉紅色的口底黏膜。",
+    "caption": "下顎前牙舌側的牙結石。牙結石硬到光靠刷牙刷不掉，是例行洗牙要刮掉的東西；Cochrane 2018 年的回顧裡，證據確定性高的指標中，定期洗牙只在它身上看得出差別。臨床照片，與論文受試者無關。",
+    "credit": "DRosenbach（英文維基百科）／Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:MandibularAnteriorCalculus.JPG",
+    "made": "2007 年上傳"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "例行洗牙，就是刮掉牙結石和菌斑再拋光，我們診間到今天還天天在排。它對成人牙周有沒有幫助，**Cochrane** 口腔健康組 2018 年 12 月 27 日更新的回顧答過了。Cochrane 是國際上專做系統性回顧的組織。"
+    },
+    {
+      "type": "p",
+      "text": "結論：沒有重度牙周炎、固定回診的成人，每 6 或 12 個月排一次洗牙，和不排定洗牙比，兩三年內**牙齦炎、探測深度、生活品質幾乎沒差**。證據確定性是「高」，意思是作者很有信心，真正的效果就在估計值附近。"
+    },
+    {
+      "type": "p",
+      "text": "這件事量很大。2016/2017 年光蘇格蘭的公費醫療就做了 230 萬次洗牙，英格蘭 1,310 萬次。美國紐約州西部 2000 年發表的調查裡，86% 的牙醫會叫低風險病人半年洗一次。"
+    },
+    {
+      "type": "p",
+      "text": "表裡的 SMD 是換算成同一種分數後兩組的差，0 就是一樣。牙齦炎三列都貼著 0。"
+    },
+    {
+      "type": "table",
+      "title": "例行洗牙兩到三年後：牙齦炎沒動，牙結石少一點",
+      "head": [
+        "比較",
+        "牙齦炎 SMD（95% CI）",
+        "牙結石 SMD（95% CI）"
+      ],
+      "rows": [
+        [
+          "每 6 個月洗 vs 不排定",
+          "−0.01（−0.13 到 0.11），1,087 人",
+          "−0.32（−0.44 到 −0.20），1,088 人"
+        ],
+        [
+          "每 12 個月洗 vs 不排定",
+          "−0.04（−0.16 到 0.08），1,091 人",
+          "−0.19（−0.31 到 −0.07），1,088 人"
+        ],
+        [
+          "每 6 個月 vs 每 12 個月",
+          "0.03（−0.09 到 0.15），1,090 人",
+          "−0.13（−0.25 到 −0.01），1,086 人"
+        ]
+      ],
+      "caption": "依 Lamont 等 2018 年 Cochrane 回顧摘要的數據重繪。每一列都合併 2 篇試驗，六項的證據確定性都是「高」。SMD 是標準化平均差，負值代表前一組比較少；信賴區間跨過 0 就是看不出差別。作者說牙結石的減少幅度小，臨床重要性不明。"
+    },
+    {
+      "type": "p",
+      "text": "確定性高的結果裡只有**牙結石**有差，少一點，作者也說臨床上重不重要還不清楚。他們還寫，這類試驗看來不必再做了。"
+    },
+    {
+      "type": "quote",
+      "text": "既然本回顧主要結果的證據確定性很高，再做研究去比較固定回診的成人在基層診所接受的例行洗牙（也稱為預防性潔牙、專業機械性菌斑清除或牙周器械治療），似乎沒有必要。",
+      "original": "Further studies comparing routine S&P treatments (also known as prophylaxis, professional mechanical plaque removal or periodontal instrumentation) for regularly attending adults in primary care seem unnecessary, given the high certainty of the evidence for the review's primary outcome.",
+      "cite": "Lamont、Worthington、Clarkson、Beirne，Cochrane 回顧〈對研究的意涵〉，2018 年；本文自譯"
+    },
+    {
+      "type": "h",
+      "text": "前十三年都說不知道"
+    },
+    {
+      "type": "p",
+      "text": "這篇 2005 年第一次發表，2007、2013 年各改一次，三版都說證據不足。2018 年重找文獻，1,002 筆裡新符合的只有一個試驗，就是英國的 **IQuaD**。最後收它和 Jones 2011 兩篇，共 1,711 人，1,406 人來自它。"
+    },
+    {
+      "type": "timeline",
+      "title": "同一個問題，問了十三年",
+      "items": [
+        {
+          "when": "2005.1.25",
+          "label": "Cochrane 回顧第一次發表",
+          "note": "結論：證據品質不足，無法對例行洗牙的利弊下任何結論"
+        },
+        {
+          "when": "2007.10.17",
+          "label": "更新",
+          "note": "結論不變，仍說需要高品質臨床試驗"
+        },
+        {
+          "when": "2011.3.24",
+          "label": "IQuaD 試驗通過倫理審查",
+          "note": "英國國家健康研究院出資，在蘇格蘭與英格蘭東北部的一般診所進行"
+        },
+        {
+          "when": "2013.10.26",
+          "label": "IQuaD 研究計畫書發表",
+          "note": "刊在 BMC Oral Health"
+        },
+        {
+          "when": "2013.11.7",
+          "label": "更新",
+          "note": "仍說證據不足，要求在一般診所做、追蹤五年以上的高品質試驗"
+        },
+        {
+          "when": "2018.7",
+          "label": "IQuaD 結果發表",
+          "note": "63 家診所、1,877 人、三年：每 6 個月、每 12 個月、不排定洗牙，出血位點看不出差別"
+        },
+        {
+          "when": "2018.12.27",
+          "label": "更新",
+          "note": "收進 IQuaD 與 Jones 2011，共 1,711 人；牙齦炎幾乎沒有差別，證據確定性高"
+        }
+      ],
+      "caption": "依 Cochrane 各版摘要（PubMed）、IQuaD 健康科技評估報告摘要與 Br Dent J 2021 年全文整理。"
+    },
+    {
+      "type": "h",
+      "text": "IQuaD 怎麼做的"
+    },
+    {
+      "type": "p",
+      "text": "IQuaD 在蘇格蘭和英格蘭東北部 63 家公費診所收了 1,877 位成人。BPE 是英國的牙周篩檢分碼，4 分或已經有牙周炎的人不收。病人抽籤分三組：每 6 個月洗、每 12 個月洗、不洗，追三年。"
+    },
+    {
+      "type": "p",
+      "text": "三年時看牙齦探診出血的位點，半年洗對不洗只差 0.87%，信賴區間跨過 0。不管在哪一組，都還有約 38% 的位點在出血。"
+    },
+    {
+      "type": "p",
+      "text": "要注意，這是照實際看診做的試驗，病人要求就洗，不洗組三年平均也洗了 1 次。它比的其實是排定時間洗，和想洗或醫師建議時才洗。"
+    },
+    {
+      "type": "h",
+      "text": "哪裡還不夠"
+    },
+    {
+      "type": "list",
+      "items": [
+        "兩篇都沒有量掉牙和附著程度變化，所以不能說洗牙跟掉牙無關。",
+        "2025 年加拿大一篇快速回顧提到，有一篇保險申報資料的研究說固定洗牙減少掉牙。申報資料我不拿來當底氣，但這一題確實還空著。"
+      ]
+    },
+    {
+      "type": "h",
+      "text": "順便複習：洗牙不等於牙周維護"
+    },
+    {
+      "type": "p",
+      "text": "這兩篇都沒收牙周炎病人，結論不能拿去拉長牙周病人的回診。歐洲牙周病學會的臨床指引，對治療後的**支持性牙周照護**，建議 3 到 12 個月回診一次，看病人風險和治療後的狀況調整，一次通常要 45 到 60 分鐘。"
+    },
+    {
+      "type": "paper",
+      "citation": "Lamont T, Worthington HV, Clarkson JE, Beirne PV. Routine scale and polish for periodontal health in adults. *Cochrane Database Syst Rev*. 2018;12(12):CD004625.",
+      "doi": "10.1002/14651858.CD004625.pub5",
+      "pmid": "30590875",
+      "link": "https://doi.org/10.1002/14651858.CD004625.pub5",
+      "evidence": "Cochrane 系統性回顧：2 篇隨機試驗、1,711 人；牙齦炎證據確定性高",
+      "design": "Cochrane 系統性回顧與統合分析（2018 年更新版，前一版為 2013 年）；納入英國一般牙醫診所的隨機對照試驗，排除半口設計",
+      "sample": "2 篇試驗、1,711 人（IQuaD 1,406 人，追蹤 36 個月；Jones 2011 305 人，追蹤 24 個月）；沒有重度牙周炎、固定回診的成人",
+      "question": "沒有重度牙周炎的成人，定期洗牙（每 6 或 12 個月）比起不排定洗牙，牙周有沒有比較健康？",
+      "access": "依 PMC 開放全文（PMC6516960）；IQuaD 細節依其健康科技評估報告摘要與 Br Dent J 2021 年全文"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Routine scale and polish for periodontal health in adults（2018 年版）",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "date": "2018-12-27",
+      "url": "https://doi.org/10.1002/14651858.CD004625.pub5",
+      "note": "主角論文；讀 PMC 開放全文 PMC6516960（摘要、白話摘要、研究描述、結果、作者結論、背景）"
+    },
+    {
+      "title": "Routine scale and polish for periodontal health in adults（2013 年版）",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "date": "2013-11-07",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24197669/",
+      "note": "Worthington、Clarkson、Bryan、Beirne；讀 PubMed 摘要的作者結論"
+    },
+    {
+      "title": "Routine scale and polish for periodontal health in adults（2005 年版）",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "date": "2005-01-25",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15674957/",
+      "note": "Beirne、Forgie、Worthington、Clarkson；讀 PubMed 摘要的作者結論"
+    },
+    {
+      "title": "Routine scale and polish for periodontal health in adults（2007 年版）",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "date": "2007-10-17",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17943824/",
+      "note": "Beirne、Worthington、Clarkson；讀 PubMed 摘要的作者結論"
+    },
+    {
+      "title": "Improving the Quality of Dentistry (IQuaD): a cluster factorial randomised controlled trial…",
+      "publisher": "Health Technology Assessment 22(38)（Ramsay CR 等）",
+      "date": "2018-07",
+      "url": "https://doi.org/10.3310/hta22380",
+      "note": "讀 PubMed 摘要（PMID 29984691）：收案、設計、主要結果數字與結論"
+    },
+    {
+      "title": "Examining the impact of oral hygiene advice and/or scale and polish on periodontal disease: the IQuaD cluster factorial randomised controlled trial",
+      "publisher": "British Dental Journal 230(4):229-235（Clarkson J 等）",
+      "date": "2021-02-26",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7908958/",
+      "note": "讀 PMC 全文：收案條件、地點、倫理審查日期、38% 出血位點、限制"
+    },
+    {
+      "title": "IQuaD dental trial; improving the quality of dentistry: a multicentre randomised controlled trial…（研究計畫書）",
+      "publisher": "BMC Oral Health 13:58（Clarkson JE 等）",
+      "date": "2013-10-26",
+      "url": "https://doi.org/10.1186/1472-6831-13-58",
+      "note": "只用發表日期"
+    },
+    {
+      "title": "Treatment of stage I–III periodontitis — The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology 47(Suppl 22):4-60（Sanz M 等）",
+      "date": "2020-07-01",
+      "url": "https://doi.org/10.1111/jcpe.13290",
+      "note": "讀 PMC 全文（PMC7891343）的建議 R1.1 與 R4.1"
+    },
+    {
+      "title": "Basic Periodontal Examination (BPE)",
+      "publisher": "British Society of Periodontology",
+      "date": "2016-11-23",
+      "url": "https://www.bsperio.org.uk/assets/downloads/BPE_Guidelines_2016.pdf",
+      "note": "BPE 分碼定義；日期取自 PDF 檔案建立日期"
+    },
+    {
+      "title": "Benefits of Dental Scaling and Polishing in Adults: A Rapid Review and Evidence Synthesis",
+      "publisher": "JDR Clinical & Translational Research 10(3):269-281（Matthews DC、Al-Waeli H）",
+      "date": "2024-10-09",
+      "url": "https://doi.org/10.1177/23800844241271684",
+      "note": "2024-10-09 線上發表，刊於 2025 年 7 月第 10 卷第 3 期；讀 PubMed 摘要（PMID 39382084）；快速回顧，只作後續文獻背景"
+    }
+  ]
+}
