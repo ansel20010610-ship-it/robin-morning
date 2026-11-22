@@ -1,0 +1,190 @@
+{
+ "column": "news",
+ "date": "2026-11-23",
+ "title": "COP31 無協議散會，是 2009 年以來頭一次",
+ "dek": "氣候峰會延長兩天仍沒談成，美國期中選舉的眾院多數也底定；台灣離地方選舉剩五天，週二鋒面來。",
+ "brief": "聯合國氣候峰會 COP31 延長兩天，22 日在沒有協議下散會，是 2009 年以來第一次。美國民主黨在眾議院至少拿下 258 席，確定過半。台灣週六投票，高雄新增 4 例本土登革熱，週二起轉濕冷。",
+ "topic_key": "news:2026-11-23",
+ "voice": "wire",
+ "updated_at": "2026-11-23T05:39:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "'Disappointing': Delegates react after COP31 climate talks end without deal",
+   "publisher": "半島電視台",
+   "date": "2026-11-22",
+   "url": "https://www.aljazeera.com/news/2026/11/22/countries-react-after-cop31-climate-talks-end-in-collapse",
+   "note": "無協議收場、自 2009 年哥本哈根以來第一次、1,200 億美元適應資金目標被刪、歐盟與古特瑞斯、庫魯姆的說法"
+  },
+  {
+   "title": "COP31 ends without climate pact as UN chief warns there is 'no ambiguity in the science'",
+   "publisher": "聯合國新聞",
+   "date": "2026-11-22",
+   "url": "https://news.un.org/feed/view/en/story/2026/11/1168855",
+   "note": "會期 9–20 日、延長兩天、古特瑞斯談話、歐盟正式反對、COP32 在阿迪斯阿貝巴"
+  },
+  {
+   "title": "Democrat Hubbard wins North Carolina recount, clinching historic House majority",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-22",
+   "url": "https://www.france24.com/en/americas/20261122-democrat-hubbard-wins-north-carolina-recount-clinching-historic-house-majority",
+   "note": "休伯德勝福克斯、民主黨至少 258 席、共和黨至少 173 席、四席未定、議長投票 2027 年 1 月 3 日"
+  },
+  {
+   "title": "Russian vessel hit by suspected Ukrainian drone at Libya's Benghazi port",
+   "publisher": "半島電視台",
+   "date": "2026-11-22",
+   "url": "https://www.aljazeera.com/news/2026/11/22/suspected-drone-strike-hits-russian-vessel-in-libya",
+   "note": "Merkury 遇襲、東部政府說法與聯合調查、傷亡不明、馬爾他籍商船"
+  },
+  {
+   "title": "Russian warship hit by suspected Ukrainian drone at Benghazi naval base, Libyan officials say",
+   "publisher": "法國 24 電視台（美聯社）",
+   "date": "2026-11-22",
+   "url": "https://www.france24.com/en/africa/20261122-russian-warship-hit-by-suspected-ukrainian-drone-at-libya-s-benghazi-naval-base",
+   "note": "兩名利比亞軍官說法、四艘被攔截、兩艘擊中、俄烏未回應"
+  },
+  {
+   "title": "Israel's Eisenkot slams 'Jewish terrorism' after attacks by settlers in West Bank",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-22",
+   "url": "https://www.france24.com/en/middle-east/20261122-israel-s-eisenkot-slams-jewish-terrorism-after-attacks-by-settlers-in-west-bank",
+   "note": "定居者攻擊、四個村莊、艾森科特與薩爾的說法、警方立案、以色列組閣背景"
+  },
+  {
+   "title": "Motorcade, street festival mark Taipei mayoral rivals' 'Super Sunday' push",
+   "publisher": "Focus Taiwan（中央社）",
+   "date": "2026-11-22",
+   "url": "https://focustaiwan.tw/politics/202611220012",
+   "note": "28 日投票、11,051 名地方公職、蔣萬安與沈伯洋的最後一個週日"
+  },
+  {
+   "title": "高雄新增一起本土登革熱群聚事件",
+   "publisher": "衛福部疾病管制署",
+   "date": "2026-11-22",
+   "url": "https://www.cdc.gov.tw/Bulletin/Detail/3HzvXmt0Pa5fOyilmFN0hg?typeid=9",
+   "note": "新增 4 例、病毒型別、全年累計 258 例與本土 22 例"
+  },
+  {
+   "title": "鼓山、小港增4本土登革熱案例 高雄衛生局將設採檢站供快篩",
+   "publisher": "公視",
+   "date": "2026-11-22",
+   "url": "https://news.pts.org.tw/article/836810",
+   "note": "住處相距約 15 公尺、小港三天採檢站、白天高溫 26–29 度"
+  },
+  {
+   "title": "明起再有2波冷空氣報到 週二起先濕後乾",
+   "publisher": "公視",
+   "date": "2026-11-22",
+   "url": "https://news.pts.org.tw/article/836806",
+   "note": "22 日清晨最低溫、24 日鋒面與東北季風、27 日第二波冷空氣、28 日天氣預測"
+  }
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "聯合國氣候峰會 COP31 週日收場，沒有談成協議；美國眾議院的席次底定。台灣週六投票，高雄又有本土登革熱。"
+  },
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "COP31 無協議散會",
+     "place": [
+      "TR"
+     ],
+     "summary": "在土耳其安塔利亞舉行的聯合國氣候峰會 COP31，延長兩天，22 日（週日）散會時沒有協議。半島電視台說，這是 2009 年哥本哈根以來第一次。卡住的是化石燃料：產油國反對寫進去，歐盟說不背書連化石燃料都沒提的文件，修訂文字還刪掉 1,200 億美元的適應資金目標。主席國的庫魯姆說不會再有新文字。",
+     "source": "半島電視台、聯合國新聞",
+     "url": "https://www.aljazeera.com/news/2026/11/22/countries-react-after-cop31-climate-talks-end-in-collapse",
+     "when": "11 月 22 日（週日），土耳其"
+    },
+    {
+     "headline": "美國眾院民主黨確定過半",
+     "place": [
+      "US"
+     ],
+     "summary": "民主黨的休伯德在北卡羅來納州重新計票後，打敗共和黨的福克斯。法國 24 統計，民主黨在眾議院至少 258 席（共 435 席），共和黨至少 173 席，另有 4 席未定。總統仍是共和黨的川普，明年 1 月起國會與白宮分屬兩黨；眾議院預定 2027 年 1 月 3 日選議長，傑佛瑞斯預期出任。",
+     "source": "法國 24 電視台",
+     "url": "https://www.france24.com/en/americas/20261122-democrat-hubbard-wins-north-carolina-recount-clinching-historic-house-majority",
+     "when": "11 月 22 日（週日），美國"
+    },
+    {
+     "headline": "俄軍艦在班加西港遇襲",
+     "place": [
+      "LY",
+      "RU"
+     ],
+     "summary": "22 日清晨，利比亞東部班加西港內的俄羅斯海軍輕型護衛艦「Merkury」爆炸起火，衛星影像顯示船幾乎翻覆。美聯社引兩名利比亞軍官說，是疑似烏克蘭的無人艇所為，兩艘擊中軍艦；半島無法獨立確認。沒有人宣稱負責，俄烏都沒回應，東部政府說已和俄方展開聯合調查。",
+     "source": "半島電視台、法國 24 電視台（美聯社）",
+     "url": "https://www.aljazeera.com/news/2026/11/22/suspected-drone-strike-hits-russian-vessel-in-libya",
+     "when": "11 月 22 日（週日），利比亞"
+    },
+    {
+     "headline": "西岸村莊遭定居者攻擊",
+     "place": [
+      "IL",
+      "PS"
+     ],
+     "summary": "22 日清晨，以色列定居者攻擊約旦河西岸多個巴勒斯坦村莊，居民說有人縱火燒車、噴種族歧視字句；沒有傷亡通報。警方立案調查。受總統委託組閣的反對黨領袖艾森科特稱這是「猶太恐怖主義」，外長薩爾說是少數極端分子。",
+     "source": "法國 24 電視台",
+     "url": "https://www.france24.com/en/middle-east/20261122-israel-s-eisenkot-slams-jewish-terrorism-after-attacks-by-settlers-in-west-bank",
+     "when": "11 月 22 日（週日），以色列與約旦河西岸"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "地方選舉剩五天",
+     "place": "TW",
+     "summary": "28 日（週六）是九合一地方選舉，22 縣市要選出 11,051 名地方公職。22 日是最後一個週日，台北市長選舉的國民黨籍現任市長蔣萬安傍晚車隊掃街，台中市長盧秀燕與立法院長韓國瑜同行；民進黨的沈伯洋在忠孝東路辦活動，副總統蕭美琴到場。",
+     "source": "Focus Taiwan（中央社）",
+     "url": "https://focustaiwan.tw/politics/202611220012",
+     "when": "11 月 22 日，台灣時間"
+    },
+    {
+     "headline": "高雄新增 4 例本土登革熱",
+     "place": "TW",
+     "summary": "疾管署說，高雄 21、22 日新增 4 例本土登革熱：鼓山區 3 例、小港區 1 例，鼓山被判定是社區群聚。今年全台累計 258 例，其中本土 22 例，高雄占 17 例。小港從 22 日起設三天採檢站；白天氣溫還有 26 到 29 度，疾管署提醒轉涼不代表蚊子消失。",
+     "source": "疾管署、公視",
+     "url": "https://www.cdc.gov.tw/Bulletin/Detail/3HzvXmt0Pa5fOyilmFN0hg?typeid=9",
+     "when": "11 月 21–22 日，台灣時間"
+    },
+    {
+     "headline": "週二鋒面，北部降到 18 度",
+     "place": "TW",
+     "summary": "22 日清晨新竹關西 6.6 度，是全台最低。今天（23 日）西半部白天回到 26 到 28 度，24 日（週二）鋒面通過、東北季風增強，北部降到約 18 到 19 度，北部與東部有雨；27 日（週五）後還有第二波冷空氣。",
+     "source": "公視",
+     "url": "https://news.pts.org.tw/article/836806",
+     "when": "11 月 22 日預報，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "美國眾議院席次（法國 24，22 日）",
+   "head": [
+    "黨",
+    "席次"
+   ],
+   "rows": [
+    [
+     "民主黨",
+     "至少 258"
+    ],
+    [
+     "共和黨",
+     "至少 173"
+    ],
+    [
+     "未定",
+     "4"
+    ]
+   ]
+  }
+ ]
+}
