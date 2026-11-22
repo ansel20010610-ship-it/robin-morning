@@ -1,0 +1,396 @@
+{
+  "column": "artwork",
+  "date": "2026-11-23",
+  "title": "提香的小狗，馬奈換成了黑貓",
+  "dek": "兩幅畫裡的女人都光著身子躺在床上，直直看著你。提香那幅被未來的公爵買回家，馬奈這幅在 1865 年的巴黎挨罵，據馬奈的朋友後來回憶，主辦單位還得防著有人毀它。",
+  "brief": "馬奈的《奧林匹亞》1865 年在巴黎官方美展掛出，畫一個赤裸躺在床上、直盯著觀眾的女人，挨了一片痛罵。它的底本是提香 1538 年的《烏比諾的維納斯》，那幅裡的女子同樣躺在床上看著你。兩幅並排，先看床尾的動物、女人的左手和背景的女僕，就看得出馬奈改了什麼。",
+  "topic_key": "artwork:manet-olympia",
+  "form": "compare",
+  "voice": "appraiser",
+  "updated_at": "2026-11-23T01:48:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Edouard_Manet_-_Olympia_-_Google_Art_Project.jpg/1280px-Edouard_Manet_-_Olympia_-_Google_Art_Project.jpg",
+    "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Edouard_Manet_-_Olympia_-_Google_Art_Project.jpg/3840px-Edouard_Manet_-_Olympia_-_Google_Art_Project.jpg",
+    "width": 1280,
+    "height": 866,
+    "alt": "一個年輕女子赤裸躺在鋪著白布的床上，上身靠著兩個大枕頭，臉朝前方直視。她頭髮左側別一朵粉紅色的花，脖子繫一條細黑緞帶，撐著身體的那隻手腕上戴金手鐲，另一隻手平放在大腿上，一隻腳還穿著拖鞋。她身後右邊站著一位穿淺粉色衣服、包頭巾的黑人女子，捧著一大束用白紙包著的花。床的右端站著一隻豎起尾巴的黑貓。背景左半是褐色有花紋的屏幕，右半是深綠色的布幔。",
+    "caption": "馬奈，《奧林匹亞》，1863 年畫成，1865 年在巴黎官方年度美展「沙龍」首次展出。油彩、畫布，130.5 × 191 公分。巴黎，奧賽美術館。",
+    "credit": "Édouard Manet；數位影像 Google Arts & Culture（Wikimedia Commons）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Olympia_-_Google_Art_Project.jpg",
+    "made": "1863"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1865 年 5 月，巴黎官方每年辦的大型美展「沙龍」開幕，牆上掛著一幅叫**《奧林匹亞》**的畫。馬奈的童年朋友、記者普魯斯特後來回憶：「這幅畫之所以沒被毀掉，全是因為主辦單位事先做了防範。」這句話是從英譯轉引的。"
+    },
+    {
+      "type": "p",
+      "text": "畫的是一個年輕女人。她全身赤裸躺在床上，直直看著看畫的人。床後站著一個捧花的黑人女僕，床尾有一隻黑貓。作者馬奈是 19 世紀的法國畫家。這幅畫 1863 年就畫好了，兩年後才第一次公開。"
+    },
+    {
+      "type": "p",
+      "text": "那次公開就是在沙龍。畫家得先通過評審，畫才掛得進去。"
+    },
+    {
+      "type": "p",
+      "text": "社長，這張畫是照著另一幅畫來的，那一幅早了 325 年：**提香**的《烏比諾的維納斯》。提香是 16 世紀威尼斯的畫家。兩幅我都擺在這裡，你對著圖看三個地方，就知道馬奈動了哪裡。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "artwork",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Tiziano_-_Venere_di_Urbino_-_Google_Art_Project.jpg/1280px-Tiziano_-_Venere_di_Urbino_-_Google_Art_Project.jpg",
+      "src_large": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Tiziano_-_Venere_di_Urbino_-_Google_Art_Project.jpg",
+      "width": 1280,
+      "height": 900,
+      "alt": "一個金色長髮的年輕女子赤裸側躺在白色床單上，頭靠枕頭，臉微側看向前方。她右手拿一束紅玫瑰，左手放在腿間。床尾蜷著一隻睡著的白底褐斑小狗。畫面左半是深綠色的布幔，右半是一個明亮的房間：窗台上有一盆修剪成圓球的植物，一個穿白衣的人跪在打開的衣箱前，一個穿紅裙的女僕站在旁邊，肩上搭著衣服。",
+      "caption": "對照：提香，《烏比諾的維納斯》，1538 年，油彩、畫布，119 × 165 公分。佛羅倫斯，烏菲茲美術館。馬奈年輕時在佛羅倫斯臨摹過這幅畫。",
+      "credit": "Titian（提香）；數位影像 Google Arts & Culture（Wikimedia Commons）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tiziano_-_Venere_di_Urbino_-_Google_Art_Project.jpg",
+      "made": "1538"
+    },
+    {
+      "type": "h",
+      "text": "提香那一幅，買主只叫它「裸女」"
+    },
+    {
+      "type": "p",
+      "text": "先看提香的。它現在在佛羅倫斯的烏菲茲美術館，館方根據一封 1538 年的信說，買主是圭多巴爾多二世・德拉羅韋雷，直接向提香買的。他是烏比諾公爵的兒子。烏比諾是義大利中部的一個公國。他在信裡只叫這幅畫「裸女」。同一年他父親過世，他接下公國，這幅畫就被叫成《烏比諾的維納斯》。"
+    },
+    {
+      "type": "p",
+      "text": "畫裡的女子躺在皺起的床單上，看著你。她右手拿一束玫瑰，左手遮住下體。背後是 16 世紀威尼斯有錢人家的房間，兩個女僕在一只彩繪衣箱邊找衣服。"
+    },
+    {
+      "type": "p",
+      "text": "烏菲茲的看法是，畫的是一個準新娘，正要穿好衣服去參加威尼斯的一種婚俗：在家裡辦，女方碰一下新郎的手，表示答應這門親事。也有學者認為畫的是交際花。兩派都同意，這幅畫情色意味很重。"
+    },
+    {
+      "type": "p",
+      "text": "1880 年，馬克・吐溫寫過烏菲茲裡的這幅畫。下面這段，他說的是反話：同一章裡，他在笑當時的人給雕像加無花果葉。"
+    },
+    {
+      "type": "quote",
+      "text": "你走進全世界參觀人數最多的那間小展廳——論壇廳——就在那裡，靠著牆，沒有一塊布、一片葉子擋著，你可以盡情看那幅世界上最髒、最下流、最猥褻的畫——提香的維納斯。不是因為她光著身子躺在床上——不是，是因為她一隻手臂和手的姿勢。",
+      "original": "You enter, and proceed to that most-visited little gallery that exists in the world—the Tribune—and there, against the wall, without obstructing rag or leaf, you may look your fill upon the foulest, the vilest, the obscenest picture the world possesses—Titian's Venus. It isn't that she is naked and stretched out on a bed—no, it is the attitude of one of her arms and hand.",
+      "cite": "馬克・吐溫，《浪跡海外》（A Tramp Abroad，1880）第 50 章，本文自譯"
+    },
+    {
+      "type": "h",
+      "text": "馬奈臨摹過它"
+    },
+    {
+      "type": "p",
+      "text": "馬奈年輕時在佛羅倫斯臨摹過這幅畫。2013 年威尼斯總督宮辦馬奈展，展覽資料說，他臨摹之後一直琢磨，六年後生出了《奧林匹亞》。"
+    },
+    {
+      "type": "p",
+      "text": "畫裡的裸女由維多琳・默蘭當模特兒，她那時 19 歲，後來自己也成了畫家。女僕的模特兒叫**蘿荷**。馬奈 1862 年在筆記本裡寫下她的名字和住址：凡蒂米爾街 11 號，四樓。「奧林匹亞」這個名字，在 1860 年代的巴黎跟妓女連在一起。"
+    },
+    {
+      "type": "h",
+      "text": "第一處：床尾"
+    },
+    {
+      "type": "p",
+      "text": "提香的床尾，一隻小狗蜷成一團睡著。烏菲茲說，這隻狗代表婚姻裡的忠誠。馬奈把牠換成一隻**黑貓**，站著，尾巴豎起來。總督宮的資料說，這隻貓是惡魔的象徵。"
+    },
+    {
+      "type": "p",
+      "text": "1865 年，畫家杜米埃畫過一張諷刺沙龍的石版畫。畫裡的觀眾問：「這個穿睡衣的紅臉胖女人，為什麼叫奧林匹亞？」旁邊的人答：「親愛的，說不定那是黑貓的名字。」"
+    },
+    {
+      "type": "detail",
+      "of": "f1",
+      "region": [
+        0.78,
+        0.57,
+        0.2,
+        0.17
+      ],
+      "position": "提香畫面右側，床尾",
+      "caption": "提香的床尾：一隻小狗蜷成一團睡著。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.88,
+        0.39,
+        0.12,
+        0.36
+      ],
+      "position": "馬奈畫面最右側，床尾",
+      "caption": "馬奈的床尾：一隻黑貓豎起尾巴站著，眼睛看向畫外。"
+    },
+    {
+      "type": "h",
+      "text": "第二處：左手"
+    },
+    {
+      "type": "p",
+      "text": "兩個女人的左手，都放在腿間。提香的那隻蓋著，手指微微彎起。馬奈的那隻整個手掌壓在大腿根上。總督宮的說法是，維納斯那是「柔軟的一碰」，奧林匹亞那是「一種阻擋」。"
+    },
+    {
+      "type": "detail",
+      "of": "f1",
+      "region": [
+        0.43,
+        0.55,
+        0.14,
+        0.17
+      ],
+      "position": "提香畫面中央，維納斯的左手",
+      "caption": "維納斯的左手蓋在腿間，手指微微彎起。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.34,
+        0.46,
+        0.15,
+        0.17
+      ],
+      "position": "馬奈畫面中央偏左，奧林匹亞的左手",
+      "caption": "奧林匹亞的左手整個手掌壓在大腿根上。"
+    },
+    {
+      "type": "h",
+      "text": "第三處：床後的女僕"
+    },
+    {
+      "type": "p",
+      "text": "提香背景裡的兩個女僕，在忙著找衣服。馬奈只留一個，站在床後，捧著一大束用紙包著的花。這束花常被解讀成客人送來的禮物，奧林匹亞看都不看一眼。"
+    },
+    {
+      "type": "p",
+      "text": "兩幅畫的背景，都被一道直線切成左右兩半。提香左邊是深色布幔，右邊是明亮的房間。馬奈左邊是褐色帶花紋的屏風，右邊是深綠色的布幔，女僕和黑貓都在右邊的暗處。"
+    },
+    {
+      "type": "p",
+      "text": "奧賽美術館 2019 年辦過一個展覽，資料裡說，蘿荷是這幅畫的核心人物之一。可是研究這幅畫的書那麼多，幾乎沒有人提到她。1865 年那場風波也一樣，除了幾張很兇的諷刺畫，評論幾乎沒注意她。"
+    },
+    {
+      "type": "detail",
+      "of": "hero",
+      "region": [
+        0.52,
+        0.08,
+        0.33,
+        0.5
+      ],
+      "position": "馬奈畫面右上半，床後的女僕",
+      "caption": "馬奈的背景：一個黑人女僕捧著一大束用白紙包著的花，眼睛看向床上的女子。"
+    },
+    {
+      "type": "detail",
+      "of": "f1",
+      "region": [
+        0.62,
+        0.12,
+        0.3,
+        0.45
+      ],
+      "position": "提香畫面右上，背景的房間",
+      "caption": "提香的背景：兩個女僕，一個跪在衣箱前翻找，一個站著，肩上搭著衣服。"
+    },
+    {
+      "type": "h",
+      "text": "1865 年罵的是什麼"
+    },
+    {
+      "type": "p",
+      "text": "當時的美術學院，教畫家把裸女畫成女神或神話人物，身體要畫得光滑、完美。奧賽的說明說，這是學院傳統的根基，《奧林匹亞》褻瀆的就是這個。評論家罵她是「黃肚皮的宮女」，只有作家**左拉**帶著一小群人替它辯護。"
+    },
+    {
+      "type": "p",
+      "text": "左拉 1867 年寫過這幅畫。奧林匹亞躺在白布上，襯著黑色的背景。第一眼只看得到兩種顏色，彼此硬碰硬。嘴唇是兩條細細的粉紅線，眼睛只剩幾筆黑。花束湊近看，只是一塊塊粉紅、藍、綠。要往後退幾步，東西才各自歸位。"
+    },
+    {
+      "type": "quote",
+      "text": "我們的畫家給我們畫維納斯的時候，他們修正自然，他們說謊。愛德華・馬奈問自己：為什麼要說謊，為什麼不說真話？他讓我們認識了奧林匹亞，這個當今的姑娘，你在人行道上就碰得到她，她用一條褪了色的薄羊毛披肩，裹著瘦瘦的肩膀。",
+      "original": "Lorsque nos artistes nous donnent des Vénus, ils corrigent la nature, ils mentent. Édouard Manet s’est demandé pourquoi mentir, pourquoi ne pas dire la vérité ; il nous a fait connaître Olympia, cette fille de nos jours, que vous rencontrez sur les trottoirs et qui serre ses maigres épaules dans un mince châle de laine déteinte.",
+      "cite": "左拉，《愛德華・馬奈：傳記與評論》（1867），本文自譯"
+    },
+    {
+      "type": "table",
+      "title": "兩張床，並排看",
+      "head": [
+        "",
+        "提香《烏比諾的維納斯》",
+        "馬奈《奧林匹亞》"
+      ],
+      "rows": [
+        [
+          "年代",
+          "1538 年賣出",
+          "1863 年畫成，1865 年首展"
+        ],
+        [
+          "尺寸",
+          "119 × 165 公分",
+          "130.5 × 191 公分"
+        ],
+        [
+          "床尾",
+          "睡著的小狗",
+          "豎起尾巴的黑貓"
+        ],
+        [
+          "背景的人",
+          "兩個女僕在衣箱邊找衣服",
+          "一個黑人女僕捧著一大束花"
+        ],
+        [
+          "左手",
+          "柔軟的一碰",
+          "一種阻擋"
+        ],
+        [
+          "光",
+          "溫暖、散開",
+          "冷、生硬"
+        ],
+        [
+          "眼神",
+          "情色的慵懶",
+          "冷漠地打量觀者"
+        ],
+        [
+          "今天在哪",
+          "佛羅倫斯，烏菲茲美術館",
+          "巴黎，奧賽美術館"
+        ]
+      ],
+      "caption": "「左手」「光」「眼神」三列的說法，出自 2013 年威尼斯總督宮把兩幅畫並排展出時的展覽資料；尺寸依烏菲茲與奧賽館方。"
+    },
+    {
+      "type": "h",
+      "text": "它後來怎麼留在法國"
+    },
+    {
+      "type": "p",
+      "text": "1888 年，畫家莫內聽說馬奈的遺孀可能要賣掉這幅畫，買家也許是美國人。莫內募了一年的款。左拉是少數不肯捐的人之一。1890 年 3 月，畫以 19,415 法郎從遺孀手上買下，獻給國家。"
+    },
+    {
+      "type": "p",
+      "text": "2013 年，它到威尼斯總督宮，和提香那幅並排掛在同一間展廳。總督宮的結論是，提香的範本到了馬奈手裡，從「欲望的對象」變成了「繪畫的對象」。"
+    },
+    {
+      "type": "p",
+      "text": "我同意這個結論。女人還是躺在床上看著你，馬奈換掉的是她的手、她身邊的人，還有床尾。下次看到它，先找床尾。提香那裡睡著一隻小狗。馬奈那裡，一隻黑貓站著，尾巴豎起來。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "《奧林匹亞》（Olympia）"
+        ],
+        [
+          "作者",
+          "馬奈（Édouard Manet，1832–1883），法國"
+        ],
+        [
+          "年代",
+          "1863 年畫成，1865 年巴黎沙龍首次展出"
+        ],
+        [
+          "媒材與尺寸",
+          "油彩、畫布，130.5 × 191 公分"
+        ],
+        [
+          "在哪裡",
+          "巴黎，奧賽美術館"
+        ],
+        [
+          "對照作品",
+          "提香《烏比諾的維納斯》，1538 年，油彩、畫布，119 × 165 公分，佛羅倫斯烏菲茲美術館"
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Venus of Urbino by Titian",
+      "publisher": "Gallerie degli Uffizi",
+      "date": "2026-11-22",
+      "url": "https://www.uffizi.it/en/artworks/venus-urbino-titian",
+      "note": "查閱日期。1538 年、油彩畫布、119 × 165 公分、清冊 1890 年第 1437 號、D22 展間；準新娘與 il toccamano 儀式的讀法；左手遮掩、右手玫瑰、睡著的小狗（忠誠）、兩個女僕與衣箱、窗台香桃木；1538 年的信記載圭多巴爾多二世向提香買下這幅「裸女」；隨維多莉亞・德拉羅韋雷的嫁妝到佛羅倫斯；曾掛在論壇廳、靠近《麥地奇的維納斯》。"
+    },
+    {
+      "title": "Olympia – Edouard Manet",
+      "publisher": "Google Arts & Culture（作品說明由奧賽美術館提供）",
+      "date": "2026-11-22",
+      "url": "https://artsandculture.google.com/asset/olympia/ywFEI4rxgCSO1Q",
+      "note": "查閱日期。館方說明全文：引用提香《烏比諾的維納斯》、哥雅《裸體的瑪哈》、宮女與黑奴題材；「Venus has become a prostitute」；評論家攻擊「yellow-bellied odalisque」，以左拉為首的一小群人辯護；1890 年由莫內發起的公眾募款獻給國家。頭圖數位檔即出自此。奧賽官網作品頁擋抓取，改讀此頁。"
+    },
+    {
+      "title": "Le modèle noir de Géricault à Matisse（新聞資料袋）",
+      "publisher": "Musée d'Orsay",
+      "date": "2019-03-26",
+      "url": "https://www.musee-orsay.fr/sites/default/files/exposition/booklet/2021-07/DP_le_modele_noir_de_gericault_a_matisse.pdf",
+      "note": "日期為展覽開幕日（2019 年 3 月 26 日至 7 月 21 日）。《奧林匹亞》130.5 × 191 公分、RF 644、1865 年沙龍；「Autour d’Olympia」一節：黑人女僕在醜聞中幾乎沒人注意、評論集中在題材粗俗與裸女未理想化；年表：1862 年馬奈筆記寫下蘿荷的名字與住址；蘿荷「à peine mentionnée」。"
+    },
+    {
+      "title": "Manet. Ritorno a Venezia（新聞資料）",
+      "publisher": "Fondazione Musei Civici di Venezia／Palazzo Ducale",
+      "date": "2013-04-24",
+      "url": "https://archivio-palazzoducale.visitmuve.it/wp-content/uploads/2013/06/Manet-completo-ITA.pdf",
+      "note": "日期為展覽開幕日。與奧賽美術館合辦；「I destini di Venere」展廳兩幅並置，稱是「prima (e forse unica) volta」；馬奈在佛羅倫斯期間臨摹《烏比諾的維納斯》，六年後生出《奧林匹亞》；兩畫比較（首飾與拖鞋、姿勢、小狗／黑貓、背景垂直分割與女僕、光、左手、眼神）；「da oggetto del desiderio in oggetto di pittura」。馬奈 1853、1857 年兩次赴義大利見同館「Percorso espositivo e sezioni」頁。"
+    },
+    {
+      "title": "Édouard Manet, étude biographique et critique",
+      "publisher": "Émile Zola（1867）；Wikisource 法文全文",
+      "date": "1867-05",
+      "url": "https://fr.wikisource.org/wiki/%C3%89douard_Manet,_%C3%A9tude_biographique_et_critique/Texte_entier",
+      "note": "談 1865 年沙龍與《奧林匹亞》的段落：稱為傑作；白布與黑背景、兩種顏色、嘴唇與眼睛只剩幾筆、花束是一塊塊色片、要退後幾步看；「Lorsque nos artistes nous donnent des Vénus…」整句照原文。"
+    },
+    {
+      "title": "A Tramp Abroad, Chapter L",
+      "publisher": "Mark Twain（1880）；Wikisource",
+      "date": "1880",
+      "url": "https://en.wikisource.org/wiki/A_Tramp_Abroad/L",
+      "note": "烏菲茲論壇廳與提香維納斯的段落，引文照原文；同章嘲笑給雕像加無花果葉。"
+    },
+    {
+      "title": "Olympia (Manet)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-22",
+      "url": "https://en.wikipedia.org/wiki/Olympia_(Manet)",
+      "note": "查閱日期。默蘭 19 歲、16 歲開始當模特兒、後來進沙龍的年份；女僕模特兒蘿荷；阿斯特呂克的詩與畫名；蘭花、珍珠耳環、黑緞帶、手鐲、拖鞋；花束常被解讀為客人的禮物；普魯斯特的回憶（英譯轉引）；1888–1890 年莫內募款、2 萬法郎開價、辛格 2,000、莫內 1,000、左拉拒捐、1890 年 3 月以 19,415 法郎買下進盧森堡博物館；1907 年進羅浮宮、1947 年網球場美術館、1986 年奧賽；離開巴黎三次；貝內迪特 1897 年指出與提香相似。"
+    },
+    {
+      "title": "Olympia (Manet)",
+      "publisher": "Wikipédia",
+      "date": "2026-11-22",
+      "url": "https://fr.wikipedia.org/wiki/Olympia_(Manet)",
+      "note": "查閱日期。署名 ED.MANET 1863；1865 年沙龍 5 月 1 日至 6 月 20 日、工業宮、目錄第 1428 號；阿斯特呂克五行詩；左腳穿著拖鞋、女僕看向床上女子；馬奈臨摹《烏比諾的維納斯》（此頁作 1853 年，油畫臨摹 24 × 37 公分）；聖維克多語（轉引）。"
+    },
+    {
+      "title": "Venus of Urbino",
+      "publisher": "Wikipedia",
+      "date": "2026-11-22",
+      "url": "https://en.wikipedia.org/wiki/Venus_of_Urbino",
+      "note": "查閱日期。1534 年 12 月提香致伊波利托・德・麥地奇管家的信；圭多巴爾多 24 歲、1538 年 1 月到畫室、信裡稱「裸女」並擔心被別人買走、同年繼承烏比諾公國；交際花說與婚禮畫說兩派；小狗也出現在埃萊諾拉・貢扎加肖像；吐溫的評語。"
+    },
+    {
+      "title": "Looking at the Painting of Manet, plate 9 from Croquis Pris Au Salon par Daumier",
+      "publisher": "Art Institute of Chicago",
+      "date": "2026-11-22",
+      "url": "https://www.artic.edu/artworks/80042",
+      "note": "查閱日期。杜米埃，1865 年，石版畫；館方英譯標題含觀眾對白「Why the devil is this fat, red-faced woman in her nightdress called Olympia?…perhaps that's the name of the black cat」；正文對白中譯據館方英譯。"
+    }
+  ]
+}
