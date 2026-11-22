@@ -20,7 +20,7 @@
 - 當日稿與備稿同時在寫，偶爾會撞題或撞圖。**以當日稿為準**：`validate.py` 對當日稿只發 WARN，備稿則列為「需修正」、不計入庫存，由備稿班優先換題或換圖。
 - 巴薩晨報的備稿寫成**不受時效影響的巴薩專題**（例如某座球場、某項青訓制度、某場歷史比賽的戰術意義），不寫近況與新聞。刊出時 App 會標示「今晨新聞稿未能如期完成，先刊出備用專題；最新消息併入下一期」。
 - 今日經文與禱告（devotion）的備稿照 `columns/devotion.md`：只有經文與禱告，經文照樣核對；禱告不提特定日子。
-- 寫完一樣要經過審稿子代理與 `python3 scripts/validate.py --reserve --column <欄位> --check-urls`。
+- 寫完一樣要經過審稿子代理（十二欄是精簡流程的查事實與試讀）與 `python3 scripts/validate.py --reserve --column <欄位> --check-urls`。
 - 檔名用 topic_key 冒號後的部分（英數與連字號），例如 `content/reserve/music/schubert-d960.json`。
 
 ## 刊出規則
