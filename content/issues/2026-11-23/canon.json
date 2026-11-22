@@ -1,0 +1,428 @@
+{
+  "column": "canon",
+  "date": "2026-11-23",
+  "title": "吸血鬼不是他發明的，規矩是他湊成一套的",
+  "dek": "照不出鏡子、要人請才能進門、怕大蒜，這些規矩大多寫在 1897 年的一本小說裡。偏偏最有名的見光死，小說裡沒有。",
+  "brief": "《德古拉》是愛爾蘭作家布拉姆・斯托克 1897 年出版的吸血鬼小說。吸血鬼不是他發明的，但我認為他把零散的說法寫成一套規矩，後人一百多年來不是照著用，就是故意改掉一條。它的第一部改編是沒拿到授權的德國默片；1931 年好萊塢版大賣後，影評和觀眾把它叫作「恐怖片」，名稱沿用至今。",
+  "topic_key": "canon:dracula",
+  "updated_at": "2026-11-23T02:53:00+08:00",
+  "form": "argument",
+  "voice": "critic",
+  "spoiler": "本文談到小說《德古拉》的結局",
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Dracula-First-Edition-1897.jpg/1280px-Dracula-First-Edition-1897.jpg",
+    "width": 1280,
+    "height": 1783,
+    "alt": "一本精裝書的封面與書脊，黃色布面，上方用紅字印著大大的 DRACULA，下面是 By Bram Stoker，四周有一圈紅色細框。",
+    "caption": "1897 年英國初版《德古拉》的布面封面。黃色書布、紅字，出版社是倫敦的 Archibald Constable and Company。照片出自大英圖書館，Commons 將它標為公有領域。",
+    "credit": "影像：British Library Board（經 Wikimedia Commons）",
+    "license": "Commons 標示為 Public domain（PD-scan）；原圖是連書脊一起拍的實物照，是否屬平面翻拍仍有疑點",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dracula-First-Edition-1897.jpg",
+    "made": "1897"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "**《德古拉》**是愛爾蘭作家**布拉姆・斯托克**寫的長篇小說，1897 年在英國出版。故事講一個吸血鬼伯爵從外西凡尼亞跑到英國作亂，一群人聯手把他追殺到底。"
+    },
+    {
+      "type": "p",
+      "text": "它為什麼是經典？我的看法是兩句話。第一，吸血鬼不是斯托克發明的，但他把零散的說法寫成了一套規矩：要人請才能進門、照不出鏡子、怕大蒜和十字架、用木樁釘心。之後一百多年的吸血鬼故事，不是照著這套規矩寫，就是故意改掉其中一條。第二，它的改編從一部沒拿到授權的德國默片，一路拍到好萊塢。1931 年好萊塢那一部大賣，影評和觀眾把它叫作**「恐怖片」**，這個片種名稱就沿用到今天。"
+    },
+    {
+      "type": "p",
+      "text": "斯托克本業不是作家，他在倫敦替大演員亨利・厄文當了二十七年經理。1912 年他過世，訃聞幾乎沒提《德古拉》。如今厄文只剩研究戲劇史的人記得，伯爵的名氣卻蓋過了作者，斯托克幾乎只因為這本書留名。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "書名",
+          "《德古拉》（Dracula）"
+        ],
+        [
+          "作者",
+          "布拉姆・斯托克（Bram Stoker，1847–1912），愛爾蘭人；本業是倫敦演員亨利・厄文（Henry Irving）的經理"
+        ],
+        [
+          "出版",
+          "1897 年 5 月，Archibald Constable and Company（Westminster）"
+        ],
+        [
+          "寫法",
+          "沒有說書人：全書由日記、信件、剪報、航海日誌和留聲機日記拼成，共二十七章"
+        ],
+        [
+          "寫作",
+          "筆記與大綱約寫於 1890 至 1896 年，現藏美國費城 Rosenbach 博物館"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "吸血鬼早就有人寫過"
+    },
+    {
+      "type": "p",
+      "text": "先講反方。1819 年，拜倫的隨行醫師波里道利出版短篇〈吸血鬼〉，掛的是拜倫的名字，一出版就轟動。裡頭的魯思文勳爵是個風度翩翩、專門誘惑上流人家女兒的貴族，和德古拉很像。1872 年，愛爾蘭作家勒法努的中篇〈卡蜜拉〉出版成書。收藏斯托克筆記的費城 Rosenbach 博物館說，斯托克寫《德古拉》時深受它啟發。"
+    },
+    {
+      "type": "p",
+      "text": "連名字都是借來的。1890 年，斯托克在英國海邊小鎮惠特比的圖書館讀到一本書，寫的是今天羅馬尼亞一帶。書裡有一位十五世紀的真實王公弗拉德・采佩什，據說會把敵人釘在木樁上，當地人叫他 Dracula。小說裡的伯爵，後來就借用了這個稱呼。"
+    },
+    {
+      "type": "p",
+      "text": "書剛出來時，書評有褒有貶。同一年，馬許的小說《甲蟲》賣得明顯比它好。《曼徹斯特衛報》的書評說它怪誕多過可怕。"
+    },
+    {
+      "type": "h",
+      "text": "規矩是寫在場景裡的"
+    },
+    {
+      "type": "p",
+      "text": "我認為斯托克的本事不在發明，而在把規矩湊成一套，還把好幾條寫進場景裡。第二章，主角強納森・哈克到了伯爵的城堡，伯爵站在門內不動，要哈克自願跨過門檻。同一章，哈克在房裡刮鬍子，伯爵就站在他背後，鏡子裡卻沒有他。"
+    },
+    {
+      "type": "quote",
+      "text": "這一次不可能看錯了：那人就貼在我身邊，我從肩膀上方就看得到他。可是鏡子裡沒有他！我背後整個房間都映在鏡子裡，裡面卻沒有半個人影，只有我自己。",
+      "original": "This time there could be no error, for the man was close to me, and I could see him over my shoulder. But there was no reflection of him in the mirror! The whole room behind me was displayed; but there was no sign of a man in it, except myself.",
+      "cite": "布拉姆・斯托克《德古拉》第二章，強納森・哈克的日記；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "到了第十八章，書裡的范海辛教授把這些事整理成清單。本事有：沒有影子、鏡子照不出來、力氣大、能變成狼和蝙蝠、能化成霧。接著是限制。"
+    },
+    {
+      "type": "quote",
+      "text": "他頭一回不能隨便進任何地方，除非那戶人家有人請他進來；之後他就愛來就來。天一亮，他的力量就沒了，所有邪惡的東西都一樣。",
+      "original": "He may not enter anywhere at the first, unless there be some one of the household who bid him to come; though afterwards he can come as he please. His power ceases, as does that of all evil things, at the coming of the day.",
+      "cite": "布拉姆・斯托克《德古拉》第十八章，范海辛教授的話（西沃德醫生的日記）；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "同一段還說，大蒜讓他使不出力；有十字架在場，他會退得遠遠的；棺材上放一枝野玫瑰，能把他困在裡面；用木樁穿心或砍下頭，能讓他安息。木樁那一條，第十六章就用上了，已經變成吸血鬼的露西被一根木樁釘進心臟。"
+    },
+    {
+      "type": "p",
+      "text": "據都柏林三一學院網站轉引，那年《Pall Mall Gazette》的書評調侃，膽子大的讀者讀完，也難免有點巴不得手邊有十字架和大蒜，好擋住吸血鬼。"
+    },
+    {
+      "type": "table",
+      "title": "今天的吸血鬼規矩，1897 年的小說裡有沒有",
+      "head": [
+        "規矩",
+        "小說裡"
+      ],
+      "rows": [
+        [
+          "要屋裡的人請，才能進門",
+          "有。第十八章范海辛列成規則"
+        ],
+        [
+          "照鏡子照不出來",
+          "有。第二章哈克刮鬍子時發現"
+        ],
+        [
+          "怕大蒜、怕十字架",
+          "有。第十八章；1897 年的書評已經提到十字架和大蒜"
+        ],
+        [
+          "木樁釘進心臟",
+          "有。第十六章用在變成吸血鬼的露西身上"
+        ],
+        [
+          "陽光一照就死",
+          "沒有。天亮只會讓他失去力量，第十三章他白天在倫敦街上走；見光死是 1922 年《諾斯費拉圖》加的"
+        ],
+        [
+          "梳油頭、穿禮服的風度貴族",
+          "沒有。小說裡是留一撇白鬍子、一身黑的老人；這副打扮來自 1920、30 年代的改編"
+        ]
+      ],
+      "caption": "依小說原文（Project Gutenberg 版）、《Pall Mall Gazette》書評（Trinity College Dublin 轉引）、NPR 與美國國會圖書館資料整理。"
+    },
+    {
+      "type": "h",
+      "text": "見光死，小說裡沒有"
+    },
+    {
+      "type": "p",
+      "text": "表裡寫著「沒有」的，第一條就是陽光。小說裡的德古拉白天也會出門。第十三章，哈克和妻子米娜在倫敦街上看到他盯著一個坐馬車的女孩，那天是秋天裡很熱的一天。哈克說：「我相信那是伯爵，可是他變年輕了。」范海辛也只說天一亮他的力量就沒了，不是見光就死。"
+    },
+    {
+      "type": "p",
+      "text": "讓吸血鬼死在陽光下的，是 1922 年的德國默片**《諾斯費拉圖》**。片尾，女主角犧牲自己，讓吸血鬼吸她的血吸到日出，天一亮，吸血鬼化成一縷煙。美國公共廣播電台 NPR 說，這是第一個被陽光消滅的吸血鬼。這就是我說的「故意改一條」：連《德古拉》自己沒有的規矩，都是它的第一部改編加上去的。"
+    },
+    {
+      "type": "h",
+      "text": "第一部改編是盜版"
+    },
+    {
+      "type": "p",
+      "text": "英國電影協會稱《諾斯費拉圖》是第一部認真的《德古拉》改編，導演是穆瑙。可是這部片沒有拿到授權，所以伯爵改叫奧洛克，故事從英國搬到德國，范海辛這些角色被淡化或刪掉。主要的新情節，是吸血鬼帶著一船帶病的老鼠進城散播瘟疫。"
+    },
+    {
+      "type": "p",
+      "text": "斯托克的遺孀佛蘿倫絲拿到柏林首映的節目單，上面寫著改編自《德古拉》，她就告了侵權。丈夫死後，她幾乎全靠他留下的作品過活。官司打了好幾年，她改成要求銷毀所有拷貝和底片，德國法院判她勝訴。"
+    },
+    {
+      "type": "p",
+      "text": "可是銷毀從來沒有真的做到，英國電影協會說這是「幸好」。留下來的幾份拷貝散在德國、法國和紐約的片庫與博物館，今天看到的版本就是拼湊修復出來的。在美國，她根本告不了。斯托克沒有照美國法律把兩本書送交美國版權局存檔，所以《德古拉》在美國一直是公版，任何人都能自由使用。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "still",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Nosferatu_%281922%29_-_Count_Orlok_Standing_In_A_Wooden_Doorway.png/1280px-Nosferatu_%281922%29_-_Count_Orlok_Standing_In_A_Wooden_Doorway.png",
+      "width": 1280,
+      "height": 960,
+      "alt": "昏黃的默片畫面：一個光頭、尖耳、眼睛圓睜的瘦高男人，穿著長及膝的雙排扣黑大衣，站在尖拱形的門洞裡，兩隻手垂在身前，手指很長。",
+      "caption": "1922 年德國默片《諾斯費拉圖》，麥斯・須瑞克飾演的奧洛克伯爵。這部片沒有取得授權，角色全改了名，斯托克的遺孀告贏了官司。",
+      "credit": "F. W. 穆瑙（F. W. Murnau）導演，亨利克・加連（Henrik Galeen）編劇；影片畫面，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nosferatu_(1922)_-_Count_Orlok_Standing_In_A_Wooden_Doorway.png",
+      "made": "1922"
+    },
+    {
+      "type": "h",
+      "text": "1931 年，伯爵換了一張臉"
+    },
+    {
+      "type": "p",
+      "text": "小說裡的伯爵長這樣：一個高瘦的老人，只留一撇長長的白鬍子，從頭到腳一身黑。NPR 寫過，今天的德古拉讓人想到性感、神祕、風度翩翩的貴族，但斯托克的伯爵一樣都不是。"
+    },
+    {
+      "type": "p",
+      "text": "換臉的是舞台和電影。1927 年，《德古拉》改成舞台劇，在百老匯成了熱門戲。環球影業的電影劇本參考了《諾斯費拉圖》和小說，最主要照的是這個舞台版。1930 年 9 月開拍，**貝拉・盧戈西**演德古拉，披著他那件有名的斗篷，說話帶著獨特的口音。這是美國第一部《德古拉》電影，也是全世界第一個有聲版本。"
+    },
+    {
+      "type": "p",
+      "text": "電影 1931 年 2 月 12 日在紐約首映，票房大賣。環球的宣傳叫它「世上最奇特的激情故事」，影評和觀眾卻叫它 horror movie。美國國會圖書館的專文說，這部片大賣之後，「恐怖片」就成了這個片種沿用至今的名字。"
+    },
+    {
+      "type": "p",
+      "text": "NPR 說，那時的德古拉梳油頭、穿大衣、掛一枚徽章，這副打扮成了後來所有吸血鬼的標準。不過盧戈西不肯戴遮臉的化妝，所以他的伯爵沒有獠牙。NPR 在 2008 年寫道，他演這個角色拿不到 3,000 美元，近八十年後仍被視為最權威的德古拉。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "still",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Dracula_%281931%29_trailer_-_%27I_am_Dracula%27.png/1280px-Dracula_%281931%29_trailer_-_%27I_am_Dracula%27.png",
+      "width": 1280,
+      "height": 947,
+      "alt": "黑白畫面：一個梳著油亮後梳頭的男人，穿白領結禮服、披著立領黑斗篷，右手拿著一根點燃的蠟燭，背景是布滿蜘蛛網的牆。",
+      "caption": "1931 年環球影業《德古拉》預告片裡的貝拉・盧戈西。披斗篷、梳油頭的伯爵，是電影給的樣子，不是小說原本的樣子。",
+      "credit": "環球影業 1931 年《德古拉》預告片畫面，取自 Internet Archive，經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dracula_(1931)_trailer_-_%27I_am_Dracula%27.png",
+      "made": "1931"
+    },
+    {
+      "type": "h",
+      "text": "後來的作家照著寫"
+    },
+    {
+      "type": "p",
+      "text": "史蒂芬・金在高中教過一門奇幻與科幻課，教材之一就是《德古拉》。他發現學生和他自己都還喜歡這本書。"
+    },
+    {
+      "type": "quote",
+      "text": "有天晚飯時，我隨口問：如果德古拉回到二十世紀、來到美國，會怎麼樣？「他大概會在公園大道上被一輛黃色計程車撞死。」我太太說。",
+      "original": "One night over supper I wondered aloud what would happen if Dracula came back in the twentieth century, to America. \"He'd probably be run over by a Yellow Cab on Park Avenue and killed,\" my wife said.",
+      "cite": "史蒂芬・金談《午夜行屍》的寫作起點，stephenking.com 作品頁；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "他接著想：如果伯爵不是去紐約，而是到了一個沉睡的鄉下小鎮呢？他想知道答案，就寫了 1975 年出版的《午夜行屍》。故事講一個作家回到家鄉，發現鎮上出了吸血鬼，就找了一小群相信他的人一起對抗。這和《德古拉》的骨架一樣：一小群人聯手獵殺一個吸血鬼。"
+    },
+    {
+      "type": "p",
+      "text": "斯托克的名字後來也成了這一行的招牌。恐怖作家協會每年頒的最高榮譽，就叫布拉姆・斯托克獎。改編成電影的就更多了，從 1931 年盧戈西那部，到 1992 年柯波拉拍的版本，中間有好幾十部。"
+    },
+    {
+      "type": "timeline",
+      "title": "一個伯爵怎麼變成所有吸血鬼的底本",
+      "items": [
+        {
+          "when": "1819 年",
+          "label": "波里道利〈吸血鬼〉出版",
+          "note": "拜倫的隨行醫師所寫，出版時掛拜倫的名字"
+        },
+        {
+          "when": "1872 年",
+          "label": "勒法努〈卡蜜拉〉成書",
+          "note": "收進《In a Glass Darkly》；斯托克寫《德古拉》時深受啟發"
+        },
+        {
+          "when": "1890.8.8",
+          "label": "斯托克在惠特比讀到 Dracula 這個名字",
+          "note": "在當地公共圖書館讀到威爾金森 1820 年的書"
+        },
+        {
+          "when": "1897.5",
+          "label": "《德古拉》出版",
+          "note": "同年馬許的《甲蟲》賣得比它好"
+        },
+        {
+          "when": "1912.4.20",
+          "label": "斯托克在倫敦過世",
+          "note": "訃聞幾乎沒提《德古拉》"
+        },
+        {
+          "when": "1922 年",
+          "label": "《諾斯費拉圖》上映",
+          "note": "第一部認真的改編，沒有授權；吸血鬼第一次死在陽光下"
+        },
+        {
+          "when": "1927 年",
+          "label": "舞台劇在百老匯走紅",
+          "note": "後來是 1931 年電影劇本最主要的依據"
+        },
+        {
+          "when": "1931.2.12",
+          "label": "環球《德古拉》紐約首映",
+          "note": "盧戈西主演；「恐怖片」這個片種名稱由此沿用"
+        },
+        {
+          "when": "1975.10.17",
+          "label": "史蒂芬・金《午夜行屍》出版",
+          "note": "起點是他問：德古拉如果來到二十世紀的美國會怎樣"
+        }
+      ],
+      "caption": "依 NPR、Rosenbach 博物館、English Heritage、Trinity College Dublin、BFI、美國國會圖書館與 stephenking.com 資料整理。"
+    },
+    {
+      "type": "h",
+      "text": "一支會打字的追獵隊"
+    },
+    {
+      "type": "p",
+      "text": "《德古拉》還有一點很新：整本書沒有說書人。全書二十七章，都是角色寫的日記、信、剪報和船上的航海日誌拼起來的，這叫書信體小說。卷首說明講明了，每份紀錄都是當下寫的，只寫記錄的人當時知道的事。"
+    },
+    {
+      "type": "p",
+      "text": "這些紀錄還用上了當時的新機器。西沃德醫生的日記是對著留聲機錄的。米娜苦練速記和打字，到了第十七章，她把西沃德的錄音一卷一卷打成字，用複寫紙一次打三份，還說：「這件事，日期就是一切。」我認為這也是它的新意：追殺吸血鬼的不是一個英雄，而是一群會打字、會錄音、會按日期整理文件的人。"
+    },
+    {
+      "type": "spoiler",
+      "text": "以下談到《德古拉》的結局"
+    },
+    {
+      "type": "h",
+      "text": "結局：殺死他的是兩把刀"
+    },
+    {
+      "type": "p",
+      "text": "小說最後一章的主體是米娜的日記。地點在德古拉城堡附近的雪地，太陽快要落到山頭。"
+    },
+    {
+      "type": "p",
+      "text": "她寫道：「就在那一瞬間，強納森的大刀一揮一閃，我尖叫著看它劃開伯爵的喉嚨；同一刻，莫里斯先生的鮑伊刀刺進他的心臟。」接著伯爵的身體化成塵土，在她眼前消失。"
+    },
+    {
+      "type": "p",
+      "text": "所以在小說裡，殺死德古拉的是兩把刀。不是木樁，木樁用在第十六章的露西身上；也不是陽光，見光死要到 1922 年的《諾斯費拉圖》才出現。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Dracula, by Bram Stoker (eBook #345)",
+      "publisher": "Project Gutenberg",
+      "date": "1995-10-01",
+      "url": "https://www.gutenberg.org/ebooks/345",
+      "note": "小說全文；卷首說明、第二章（門口的邀請、白鬍子老人、鏡中無影）、第五章（留聲機日記、打字機）、第十三章（白天在皮卡迪利街）、第十六章（木樁）、第十七章（米娜按時間整理文件）、第十八章（范海辛列規則、Voivode Dracula）、第二十七章（結局）"
+    },
+    {
+      "title": "Guide to Bram Stoker holdings in the Rosenbach Museum & Library",
+      "publisher": "Rosenbach Museum & Library",
+      "date": "2019-02-15",
+      "url": "https://wpsite.rosenbach.org/wp-content/uploads/2019/02/Guide-to-Bram-Stoker-holdings-in-the-Rosenbach-Museum.pdf",
+      "note": "筆記與大綱約 1890–1896、約 119 葉、1913 年蘇富比拍賣、1970 年購入；初版版權頁 Westminster: Archibald Constable and Company, 1897"
+    },
+    {
+      "title": "New Acquisition: In a Glass Darkly & Carmilla by Joseph Sheridan Le Fanu",
+      "publisher": "Rosenbach Museum & Library（Edward G. Pettit）",
+      "date": "2026-09-08",
+      "url": "https://www.rosenbach.org/blog/acquisition-carmilla",
+      "note": "〈卡蜜拉〉1872 年成書、波里道利與 Varney 的前例、斯托克受〈卡蜜拉〉啟發、城堡原設在施蒂利亞"
+    },
+    {
+      "title": "Bram Stoker and Dracula at Whitby",
+      "publisher": "English Heritage",
+      "date": "",
+      "url": "https://www.english-heritage.org.uk/visit/places/whitby-abbey/history-and-stories/dracula/",
+      "note": "1890 年惠特比假期、Count Wampyr、8 月 8 日圖書館與威爾金森註腳、Dmitry 號、書信體的組成"
+    },
+    {
+      "title": "Bram Stoker (1847–1912)",
+      "publisher": "Trinity College Dublin, Trinity Writers（Jarlath Killeen）",
+      "date": "2016-01",
+      "url": "https://www.tcd.ie/trinitywriters/writers/bram-stoker/",
+      "note": "1897 年 5 月出版、《甲蟲》賣得更好、1897 年書評（轉引 Browning 編 2011 年書評集，未逐篇核對原刊）、訃聞幾乎沒提、生卒與替厄文工作二十七年"
+    },
+    {
+      "title": "Sacrificial Seduction: Marschner's 'The Vampire'",
+      "publisher": "NPR",
+      "date": "2009-01-30",
+      "url": "https://www.npr.org/2009/01/30/99960010/sacrificial-seduction-marschners-the-vampire",
+      "note": "波里道利〈吸血鬼〉1819 年掛拜倫名字出版、魯思文勳爵；1931 年盧戈西版到 1992 年柯波拉版"
+    },
+    {
+      "title": "Film 2: Nosferatu (1922)",
+      "publisher": "BFI, Gothic classroom",
+      "date": "",
+      "url": "https://www.bfi.org.uk/resources-events-teachers/resources-teachers/gothic-classroom/film-2-nosferatu-1922",
+      "note": "第一部認真的改編、改名與改場景、瘟疫老鼠、佛蘿倫絲勝訴、銷毀命令沒有做到"
+    },
+    {
+      "title": "Try as she might, Bram Stoker's widow couldn't kill 'Nosferatu'",
+      "publisher": "NPR（Avery Keatley）",
+      "date": "2022-03-15",
+      "url": "https://www.npr.org/2022/03/15/1086605684/try-as-she-might-bram-stokers-widow-couldnt-kill-nosferatu",
+      "note": "第一個被陽光消滅的吸血鬼（Lokke Heiss）、Prana 破產、佛蘿倫絲的官司與銷毀要求、拷貝倖存與修復"
+    },
+    {
+      "title": "Copyright Horror Stories",
+      "publisher": "Library of Congress, Copyright Creativity at Work blog（Mary Daniel）",
+      "date": "2020-10-29",
+      "url": "https://blogs.loc.gov/copyright/2020/10/copyright-horror-stories/",
+      "note": "法院下令銷毀每一份拷貝、《德古拉》在美國是公版"
+    },
+    {
+      "title": "Dracula (National Film Registry essay)",
+      "publisher": "Library of Congress, National Film Preservation Board（Gary D. Rhodes）",
+      "date": "2016-02-05",
+      "url": "https://www.loc.gov/static/programs/national-film-preservation-board/documents/dracula.pdf",
+      "note": "1927 年百老匯舞台劇、劇本最主要依據舞台版、第一個有聲版本、盧戈西的斗篷、1931 年 2 月 12 日首映、「horror movie」片種名稱；日期為 PDF 檔案建立日"
+    },
+    {
+      "title": "Defining Dracula: A Century Of Vampire Evolution",
+      "publisher": "NPR（Eric Nuzum）",
+      "date": "2008-10-30",
+      "url": "https://www.npr.org/2008/10/30/96282132/defining-dracula-a-century-of-vampire-evolution",
+      "note": "小說裡的伯爵不性感、1920–30 年代的油頭禮服成為標準、盧戈西沒有獠牙、克里斯多福・李演六次"
+    },
+    {
+      "title": "'Salem's Lot",
+      "publisher": "stephenking.com",
+      "date": "",
+      "url": "https://stephenking.com/works/novel/salems-lot.html",
+      "note": "1975 年 10 月 17 日 Doubleday 出版；「Inspiration」一節：教《德古拉》、晚餐對話、原名 Second Coming"
+    },
+    {
+      "title": "The Bram Stoker Awards",
+      "publisher": "Horror Writers Association",
+      "date": "",
+      "url": "https://www.thebramstokerawards.com/",
+      "note": "首頁：恐怖作家協會每年頒發，恐怖與黑暗奇幻作家的「premier recognition」"
+    }
+  ]
+}
