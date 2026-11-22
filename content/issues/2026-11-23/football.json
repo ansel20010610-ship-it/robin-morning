@@ -7,7 +7,7 @@
  "topic_key": "football:2026-11-23",
  "form": "scene",
  "voice": "fan",
- "updated_at": "2026-11-23T06:06:00+08:00",
+ "updated_at": "2026-11-23T06:09:00+08:00",
  "spoiler": null,
  "disclaimer": null,
  "next": {
@@ -58,7 +58,7 @@
   },
   {
    "type": "p",
-   "text": "點球打中門柱後，亞馬爾第 25 分鐘又射了一腳，偏出左邊。第 40 分鐘阿德耶米、第 42 分鐘亞馬爾的射門，都被比利亞雷亞爾門將古拉奇（Péter Gulácsi）擋下。上半場補時第 3 分鐘，艾瑞克・加西亞近距離補射，也被他擋下。半場 0 比 2。"
+   "text": "點球打中門柱後，亞馬爾第 25 分鐘又射了一腳，偏出左邊。第 40 分鐘阿德耶米、第 42 分鐘亞馬爾的射門，都被比利亞雷亞爾門將古拉奇（Péter Gulácsi）擋下。上半場補時第 3 分鐘，艾瑞克・加西亞近距離一腳，也被他擋下。半場 0 比 2。"
   },
   {
    "type": "h",
@@ -200,8 +200,8 @@
      ]
     },
     {
-     "headline": "皇馬 2 比 1 逆轉塞爾塔，積分追平巴薩",
-     "summary": "塞爾塔第 6 分鐘先進球，姆巴佩點球踢過橫梁，貝林厄姆第 66 分鐘扳平，皇馬 21 歲前鋒 Carlos Espí 第 85 分鐘進球逆轉。穆里尼奧說，維尼修斯週二歐冠對 PSV 會先發。",
+     "headline": "皇馬 2 比 1 逆轉塞爾塔，賽後積分暫平巴薩",
+     "summary": "塞爾塔第 6 分鐘先進球，姆巴佩點球踢過橫梁，貝林厄姆第 66 分鐘扳平，皇馬 21 歲的 Carlos Espí 第 85 分鐘進球逆轉。穆里尼奧說，維尼修斯週二歐冠對 PSV 會先發。",
      "source": "ESPN、LaLiga",
      "url": "https://www.espn.com/soccer/story/_/id/50555627/real-madrid-carlos-espi-celta-vigo-rafael-nadal",
      "when": "11 月 22 日（週日）凌晨",
@@ -221,7 +221,7 @@
     },
     {
      "headline": "桑坦德競技 3 比 2 贏皇家社會，Zabiri 開賽 8 分鐘兩球",
-     "summary": "西甲週日，桑坦德競技（Racing Santander）前鋒 Zabiri 在第 6、8 分鐘連進兩球。皇家社會追平，桑坦德競技第 68 分鐘罰進點球決勝。",
+     "summary": "西甲週日，桑坦德競技（Racing Santander）Zabiri 在第 6、8 分鐘連進兩球。皇家社會追平，桑坦德競技第 68 分鐘罰進點球決勝。",
      "source": "ESPN、LaLiga",
      "url": "https://www.espn.com/soccer/match/_/gameId/401882800",
      "when": "11 月 22 日（週日）",
@@ -241,7 +241,7 @@
     },
     {
      "headline": "赫爾城補時連進兩球，2 比 0 贏布萊頓",
-     "summary": "英超週日，布萊頓第 89 分鐘有人吃第二張黃牌被罰下。赫爾城前鋒 McBurnie 補時第 2 分鐘、第 5 分鐘各進一球，把 0 比 0 的比賽拿下。",
+     "summary": "英超週日，布萊頓第 89 分鐘有人吃第二張黃牌被罰下。赫爾城的 McBurnie 補時第 2 分鐘、第 5 分鐘各進一球，把 0 比 0 的比賽拿下。",
      "source": "ESPN、Sky Sports",
      "url": "https://www.espn.com/soccer/match/_/gameId/401879234",
      "when": "11 月 22 日（週日）",
@@ -251,7 +251,7 @@
     },
     {
      "headline": "米蘭 5 比 1 贏弗羅西諾內，升到第 4",
-     "summary": "米蘭在主場聖西羅，靠對手烏龍球和拉莫斯（Gonçalo Ramos）的進球 2 比 0 領先，弗羅西諾內在第 25 分鐘追回一球。下半場米蘭再進三球，普利西奇（Christian Pulisic）第 68 分鐘單刀進球收尾，這是阿莫林（Ruben Amorim）帶米蘭以來最大的勝場。米蘭 12 場 27 分，離榜首拉齊奧 5 分。",
+     "summary": "米蘭在主場聖西羅，靠對手烏龍球和拉莫斯（Gonçalo Ramos）的進球 2 比 0 領先，弗羅西諾內在第 25 分鐘追回一球。下半場米蘭再進三球，普利西奇（Christian Pulisic）第 68 分鐘帶球突破、挑射進球收尾，這是阿莫林（Ruben Amorim）帶米蘭以來最大的勝場。米蘭 12 場 27 分，離榜首拉齊奧 5 分。",
      "source": "ESPN、Sky Sports",
      "url": "https://www.espn.com/soccer/report/_/gameId/401874989",
      "when": "11 月 23 日（週一）凌晨",
