@@ -1,0 +1,287 @@
+{
+  "column": "music",
+  "date": "2026-11-23",
+  "title": "莫札特《安魂曲》：從 8 小節到 19 種補完版",
+  "dek": "莫札特過世時，這首曲子只有一個樂章寫完。後來是誰把它補完的，為什麼到現在還有人在改？",
+  "brief": "莫札特的《安魂曲》是他最後的作品，1791 年 12 月他 35 歲過世時，只有開頭一個樂章寫完。這首曲子是一位伯爵匿名訂的，後來由學生蘇斯麥爾補完，現在還有至少 19 種補完版。按下播放，可以聽長號獨奏的 Tuba mirum、輕聲的 Confutatis，和莫札特停筆的 Lacrimosa。",
+  "topic_key": "music:mozart-k626",
+  "updated_at": "2026-11-23T00:44:00+08:00",
+  "form": "number",
+  "voice": "listener",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Manuscript_of_the_last_page_of_Requiem.jpg/1280px-Manuscript_of_the_last_page_of_Requiem.jpg",
+    "width": 1280,
+    "height": 926,
+    "alt": "一頁泛黃的手寫總譜：頁頂中央寫著 Lacrymosa，上半部是幾行只寫了開頭的樂器譜線，其餘的譜線空白；下半部是合唱各聲部，只寫了三小節，歌詞是 Lacrymosa dies illa qua resurget；右上角有另一人寫的幾行德文題字。",
+    "caption": "莫札特《安魂曲》手稿裡的 Lacrimosa 開頭。奧地利國家圖書館藏，編號 Codex 17561b，folio 87/33 recto。Commons 說明：除右上角後人加的題字（Commons 稱為尼森所加）外都是莫札特筆跡；Lacrimosa 在第 8 小節後中斷；這一頁不是手稿真正的最後一頁。",
+    "credit": "Österreichische Nationalbibliothek（奧地利國家圖書館）；影像經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Manuscript_of_the_last_page_of_Requiem.jpg",
+    "made": "1791（莫札特筆跡；Commons 標「日期不詳」）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "莫札特的《安魂曲》是他最後的作品，也是沒寫完的作品。安魂曲是天主教為死者做彌撒時唱的音樂，歌詞用拉丁文，由四位獨唱、合唱團和管弦樂團一起演出。K. 626 是這首曲子在莫札特作品裡的編號。"
+    },
+    {
+      "type": "p",
+      "text": "莫札特是奧地利作曲家，1756 年 1 月 27 日生在薩爾茨堡，1791 年 12 月 5 日在維也納過世，35 歲。他花了最後約五個月寫這首，還沒寫完就走了。"
+    },
+    {
+      "type": "p",
+      "text": "你很可能已經聽過它。1984 年的電影《阿瑪迪斯》拿下 8 項奧斯卡，包括最佳影片。電影原聲帶賣了超過 650 萬張，第二張收了《安魂曲》的五個段落：Introitus、Dies irae、Rex tremendae、Confutatis 和 Lacrimosa。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "D 小調安魂曲，K. 626；四位獨唱、合唱與管弦樂團，依蘇斯麥爾補完版共八個部分"
+        ],
+        [
+          "委託",
+          "1791 年，沃爾澤格伯爵（Count Franz von Walsegg）匿名委託，為紀念 1791 年 2 月 14 日過世的妻子安娜"
+        ],
+        [
+          "莫札特過世",
+          "1791 年 12 月 5 日，35 歲"
+        ],
+        [
+          "補完",
+          "艾伯勒（Joseph Leopold Eybler）接手後放棄；蘇斯麥爾（Franz Xaver Süssmayr）大概在 1792 年 3 月初完成"
+        ],
+        [
+          "第一次完整演出",
+          "1793 年 12 月 14 日，維也納新城（Wiener Neustadt）"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "20 歲的妻子，1 通匿名委託"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子是別人訂的。1791 年 2 月 14 日，**沃爾澤格伯爵**的妻子安娜過世，才 20 歲。伯爵是奧地利貴族，也是業餘的音樂愛好者。7 月中，一位信使送字條給莫札特，請他寫一首安魂曲。信使大概是伯爵的管家萊特格普。"
+    },
+    {
+      "type": "p",
+      "text": "伯爵自己沒有出面，是匿名委託。他常常請人寫曲子，再當成自己的作品演奏給朋友聽，問大家猜是誰寫的。這首原本要在 1792 年 2 月 14 日，也就是安娜過世一週年，辦安魂彌撒。莫札特只先收到一半的酬勞。"
+    },
+    {
+      "type": "h",
+      "text": "35 歲過世，只有 1 個樂章寫完"
+    },
+    {
+      "type": "p",
+      "text": "莫札特在 12 月 5 日午夜剛過不久過世，7 日葬在維也納的聖馬克斯墓園。12 月 10 日，維登劇院的人員在聖米歇爾教堂為他辦追思，演出了這首曲子，大概只有開頭的 Introitus 和 Kyrie。那是他過世後第五天。"
+    },
+    {
+      "type": "p",
+      "text": "莫札特過世時，只有開頭的 Introitus（入祭詠，彌撒一開始唱的）在所有樂器和人聲部分都寫完。後面的 Kyrie（求主垂憐）、Sequence（續抒詠）、Offertorium（奉獻經）只寫了骨架。"
+    },
+    {
+      "type": "p",
+      "text": "最出名的停筆處是 Lacrimosa（流淚之日）。它在第 8 小節之後就中斷了，寫到第 8 小節時，合唱還是強音。本文開頭的圖就是這一頁手稿，現在收在奧地利國家圖書館。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Mozart_K626_Arbeitspartitur_last_page.jpg/1280px-Mozart_K626_Arbeitspartitur_last_page.jpg",
+      "width": 1280,
+      "height": 990,
+      "alt": "一頁邊緣破損、右下角缺了一塊的手寫總譜：上半部是樂器譜線，下半部是合唱五行譜，每行寫著 fac eas Domine de morte transire ad vitam；右邊頁邊寫著 quam olim da capo。",
+      "caption": "《安魂曲》手稿的 Hostias 結尾頁（folio 99/45 recto）。奧地利國家圖書館藏；頁底歌詞是 fac eas Domine de morte transire ad vitam，右側寫 quam olim da capo。Commons 說明：莫札特最後寫下的，是這一頁或 Lacrimosa 那一頁的背面，兩者難分先後；右下角寫著 quam olim da capo 的紙角，1958 年被偷走。",
+      "credit": "Österreichische Nationalbibliothek（奧地利國家圖書館）；影像經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mozart_K626_Arbeitspartitur_last_page.jpg",
+      "made": "1791"
+    },
+    {
+      "type": "p",
+      "text": "Commons 的圖片說明寫，莫札特最後寫下的，是上面這頁 Hostias 的結尾，或是 Lacrimosa 那頁的背面，兩邊分不出先後。"
+    },
+    {
+      "type": "h",
+      "text": "2 個人先後接手"
+    },
+    {
+      "type": "p",
+      "text": "曲子沒寫完，莫札特的妻子康絲坦采就領不到最後一筆酬勞。她把曲子沒寫完這件事瞞了下來。12 月 21 日，作曲家艾伯勒從她手上接下總譜，答應四旬期（復活節前的四十天）中完成，後來放棄了，把總譜還給她。她轉給了**蘇斯麥爾**。"
+    },
+    {
+      "type": "p",
+      "text": "蘇斯麥爾是莫札特的學生，康絲坦采說莫札特自己選了他。他大概在 1792 年初春完成。他替 Kyrie 之後的樂章配上樂器，把 Lacrimosa 寫完，Lux aeterna 則改用開頭樂章的材料。Sanctus、Benedictus、Agnus Dei 這三個樂章，他後來說是自己寫的。"
+    },
+    {
+      "type": "p",
+      "text": "完成稿送到伯爵手上時，附了一個偽造的莫札特簽名，日期寫 1792。康絲坦采還請人遮掩蘇斯麥爾的參與，讓伯爵相信全是莫札特寫的。"
+    },
+    {
+      "type": "p",
+      "text": "1793 年 1 月 2 日，范・斯威頓安排了一場演出，幫康絲坦采和兩個孩子籌錢。同年 12 月 14 日，全曲第一次完整演出，地點在維也納新城的新修道院教堂，掛的是沃爾澤格的名字。那座教堂的外牆，現在有一塊紀念牌。1799 年，Breitkopf & Härtel 出版社出版了這首曲子。"
+    },
+    {
+      "type": "h",
+      "text": "至少 19 種補完版"
+    },
+    {
+      "type": "p",
+      "text": "蘇斯麥爾的版本不是唯一的。維基百科列出至少 19 種後人補完的版本，其中 11 種是 2005 年以後做的。學者到現在還在爭，蘇斯麥爾用了多少莫札特留下的草稿和指示。康絲坦采說莫札特留了紙條，交代怎麼完成，有沒有這回事，學界還在辯。"
+    },
+    {
+      "type": "p",
+      "text": "波士頓交響樂團（BSO）的介紹說，蘇斯麥爾寫的部分有配器和聲部寫作上的錯誤，肯定不是莫札特的手筆。這一篇推薦的貝姆錄音，用的就是蘇斯麥爾補完的版本。"
+    },
+    {
+      "type": "p",
+      "text": "電影裡，薩里耶里是暗中訂了這首曲子、又害死莫札特的人。這是神話。它出自普希金 1830 年的劇本，後來被謝弗 1979 年的劇本《阿瑪迪斯》和電影沿用。"
+    },
+    {
+      "type": "h",
+      "text": "兩場追思會"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子常在追思的場合響起。1964 年 1 月，指揮萊因斯多夫在波士頓的聖十字座堂演出它，紀念遇刺的美國總統甘迺迪。1989 年 7 月 23 日，也就是指揮家卡拉揚過世後一週，穆提指揮維也納愛樂，在薩爾茨堡大教堂演出它。卡拉揚的遺囑點了這首。"
+    },
+    {
+      "type": "h",
+      "text": "按下播放，聽三個地方"
+    },
+    {
+      "type": "p",
+      "text": "**Tuba mirum**：有一段長號獨奏，代表最後審判時響起的號角。"
+    },
+    {
+      "type": "p",
+      "text": "**Confutatis**：男聲和女聲形成對比，女聲唱「Voca me」的地方是輕聲。電影裡薩里耶里聽寫莫札特口述的，就是這一段，那個情節是虛構的。"
+    },
+    {
+      "type": "p",
+      "text": "**Lacrimosa**：前 8 小節是莫札特寫的，之後是蘇斯麥爾接著寫的。本文開頭的手稿圖，看得到他停在哪裡。"
+    },
+    {
+      "type": "music",
+      "composer": "莫札特（Wolfgang Amadeus Mozart）",
+      "work": "D 小調安魂曲，K. 626（蘇斯麥爾補完版）",
+      "work_original": "Requiem in D minor, K. 626",
+      "composed": "1791（莫札特未完成，蘇斯麥爾補完）",
+      "performers": "卡爾・貝姆（Karl Böhm）指揮 維也納愛樂、維也納國家歌劇院合唱團；獨唱 Edith Mathis、Julia Hamari、Wieslaw Ochman、Karl Ridderbusch",
+      "recording": "Deutsche Grammophon，1971 年發行",
+      "duration": "約 64 分鐘（此版）",
+      "movements": [
+        "Introitus（入祭詠）",
+        "Kyrie（求主垂憐）",
+        "Sequentia（續抒詠）：Dies irae、Tuba mirum、Rex tremendae、Recordare、Confutatis、Lacrimosa",
+        "Offertorium（奉獻經）：Domine Jesu、Hostias",
+        "Sanctus",
+        "Benedictus",
+        "Agnus Dei",
+        "Communio（領主詠）：Lux aeterna"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Mozart Requiem K. 626 Böhm Wiener Philharmoniker",
+        "artist_hint": "Böhm",
+        "track_filter": [
+          "Requiem"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "這個版本由貝姆指揮維也納愛樂和維也納國家歌劇院合唱團，獨唱是馬提斯、哈瑪莉、奧赫曼和里德布什。Deutsche Grammophon 1971 年發行，全長 1 小時 4 分。DG 的目錄稱貝姆是「20 世紀最好的莫札特詮釋者之一」。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Requiem (Mozart)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Requiem_(Mozart)",
+      "note": "委託、沃爾澤格、康絲坦采、艾伯勒與蘇斯麥爾的分工、Lacrimosa 第 8 小節、Recordare 130 小節、至少 19 種補完版、莫札特死後的神話與爭議；只讀到頁面前約 100000 字；2026-11-22 查閱"
+    },
+    {
+      "title": "Timeline of Mozart's Requiem",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Timeline_of_Mozart%27s_Requiem",
+      "note": "安娜過世、信使、莫札特過世與下葬、1791 年 12 月 10 日追思、艾伯勒接稿、1793 年 1 月 2 日義助演出、1799 年出版、1838 年 50 達克特買總譜；2026-11-22 查閱"
+    },
+    {
+      "title": "Mozart Requiem（作品介紹）",
+      "publisher": "Boston Symphony Orchestra",
+      "date": "未註明",
+      "url": "https://www.bso.org/works/mozart-requiem",
+      "note": "莫札特生卒、最後五個月、Lacrimosa 8 小節、蘇斯麥爾、1791 年 12 月 10 日與 1793 年 1 月 2 日、12 月 14 日的演出、配器、Kyrie／Tuba mirum／Confutatis 的聽點、1964 年甘迺迪追思；2026-11-22 查閱"
+    },
+    {
+      "title": "Spotlight: Mozart, The Requiem",
+      "publisher": "Karajan Institut",
+      "date": "未註明",
+      "url": "https://www.karajan.org/stories/spotlight-mozart-the-requiem/",
+      "note": "1989 年 7 月 23 日卡拉揚追思會（穆提指揮維也納愛樂，薩爾茨堡大教堂）；2026-11-22 查閱"
+    },
+    {
+      "title": "Mozart: Requiem / Böhm",
+      "publisher": "Deutsche Grammophon",
+      "date": "未註明",
+      "url": "https://www.deutschegrammophon.com/en/catalogue/products/mozart-requiem-boehm-9250",
+      "note": "指揮、樂團、合唱團與獨唱名單；目錄頁未列錄音日期；2026-11-22 查閱"
+    },
+    {
+      "title": "Mozart: Requiem（Böhm, 1971）",
+      "publisher": "Apple Music",
+      "date": "未註明",
+      "url": "https://music.apple.com/us/album/1440767515",
+      "note": "發行年 1971、12 軌、全長 1 小時 4 分、廠牌 Deutsche Grammophon；2026-11-22 查閱"
+    },
+    {
+      "title": "Amadeus, Salieri and the Requiem scrolling score",
+      "publisher": "Classic FM",
+      "date": "未註明",
+      "url": "https://www.classicfm.com/composers/mozart/amadeus-salieri-requiem-scrolling-score/",
+      "note": "電影裡薩里耶里聽寫 Confutatis 的場景；2026-11-22 查閱"
+    },
+    {
+      "title": "Amadeus (film)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Amadeus_(film)",
+      "note": "首映與上映日期、奧斯卡提名與得獎數、原聲帶收錄的《安魂曲》樂章與銷量；只讀到頁面前約 100000 字；2026-11-22 查閱"
+    },
+    {
+      "title": "File:Manuscript of the last page of Requiem.jpg",
+      "publisher": "Wikimedia Commons（影像：奧地利國家圖書館）",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Manuscript_of_the_last_page_of_Requiem.jpg",
+      "note": "頭圖的館藏編號、頁面說明、授權；2026-11-22 查閱"
+    },
+    {
+      "title": "File:Mozart K626 Arbeitspartitur last page.jpg",
+      "publisher": "Wikimedia Commons（影像：奧地利國家圖書館）",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Mozart_K626_Arbeitspartitur_last_page.jpg",
+      "note": "正文圖的頁面說明、1958 年缺角、授權；2026-11-22 查閱"
+    },
+    {
+      "title": "File:14Dezember1793MozartsRequiem.10A.jpg",
+      "publisher": "Wikimedia Commons（Anton-kurt，CC0，2010）",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:14Dezember1793MozartsRequiem.10A.jpg",
+      "note": "維也納新城新修道院教堂外牆紀念牌：1793 年 12 月 14 日在沃爾澤格主持下演出；2026-11-22 查閱"
+    }
+  ]
+}
