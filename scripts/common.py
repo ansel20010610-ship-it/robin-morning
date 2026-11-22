@@ -15,10 +15,33 @@ RESERVE = os.path.join(CONTENT, "reserve")
 # of them the quota running out, and every reserve costs a full Opus rewrite — the stock now covers a bad day, not three.
 RESERVE_TARGET = {"main": 2, "verse": 2, "supplement": 1}
 TARGET_NOTE = "正刊每欄 2 篇、副刊每欄 1 篇"
+# {column: "YYYY-MM-DD"}: no new reserves for that column before this day, Taiwan time (RESERVE.md 寫法改了以後).
+# Whoever changes a column's way of writing fills it in the same commit; the entry lapses by itself on that day.
+RESERVE_PAUSE = {"artwork": "2026-11-23", "concept": "2026-11-23", "architecture": "2026-11-24", "philosophy": "2026-11-24", "poem": "2026-11-24", "civilization": "2026-11-25"}
 
 
 def reserve_target(cfg, col):
     return RESERVE_TARGET.get(cfg["columns"][col]["group"], 2)
+
+
+def reserve_pause(cfg, day=None):
+    """({column: date} paused on `day` (default: today, Taiwan time), [lines on entries it could not read]). A paused
+    column is never 不足 (reserve.py, plan_day.py); an unreadable date or an unknown column counts as no pause."""
+    day = day or tw_now().date()
+    paused, notes = {}, []
+    if not isinstance(RESERVE_PAUSE, dict):  # a typo ({"x"}, [...], None) must not stop plan_day, which every shift runs
+        return paused, ["RESERVE_PAUSE 不是 {欄位: 日期}（%r），當作沒有暫停。" % (RESERVE_PAUSE,)]
+    for col, until in RESERVE_PAUSE.items():  # each entry on its own: one it cannot read is no pause and one line
+        try:
+            until = dt.date.fromisoformat(until)
+        except Exception:  # noqa: BLE001 — a number, a list, None, "11/20": anything but "YYYY-MM-DD"
+            notes.append("RESERVE_PAUSE 的 %s 日期看不懂（%r），當作沒有暫停。" % (col, until))
+            continue
+        if not isinstance(col, str) or col not in reserve_columns(cfg):  # a tuple, a number, None
+            notes.append("RESERVE_PAUSE 的 %s 不是有備稿的欄位，當作沒有暫停。" % (col,))
+        elif day < until:
+            paused[col] = until
+    return paused, notes
 UA = "RobinMorningBot/1.0 (https://github.com/ansel20010610-ship-it/robin-morning) python-urllib"
 TW = dt.timezone(dt.timedelta(hours=8))
 WEEKDAY_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]

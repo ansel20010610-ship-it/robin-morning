@@ -17,7 +17,8 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import (GROUPS, ROOT, TARGET_NOTE, WATCH_DIR, WATCH_STATE, WEEKDAY_ZH, active, article_path,  # noqa: E402
                     columns_for_group, expected_columns, issue_number, last_watch_article, load_config, load_json,
-                    parse_date, reserve_columns, reserve_target, supplements_for, tw_now, watch_checked, watch_columns)
+                    parse_date, reserve_columns, reserve_pause, reserve_target, supplements_for, tw_now, watch_checked,
+                    watch_columns)
 import late  # noqa: E402
 import serial  # noqa: E402
 import validate  # noqa: E402
@@ -194,8 +195,12 @@ def main():
     for c, rows in validate.reserve_status(cfg).items():
         if c in stock:
             stock[c] += sum(1 for _, errs, blocking in rows if not errs and not blocking)  # 需修正 (舊規則稿) is not stock
-    short = [c for c, n in stock.items() if n < reserve_target(cfg, c)]
-    print("\n可用備稿（目標：%s）：%s" % (TARGET_NOTE, "、".join("%s %d" % (c, n) for c, n in stock.items())))
+    paused, notes = reserve_pause(cfg)  # judged on the day it runs (Taiwan time), not on --date
+    short = [c for c, n in stock.items() if n < reserve_target(cfg, c) and c not in paused]
+    print("\n可用備稿（目標：%s）：%s" % (TARGET_NOTE, "、".join("%s %d%s" % (c, n, "（暫停）" if c in paused else "")
+                                                         for c, n in stock.items())))
+    for line in notes:
+        print(line)
     if short:
         print("備稿不足：" + "、".join(short))
     return 0
