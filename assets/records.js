@@ -8,6 +8,7 @@
 // 全部唱片 opens #/records/all, every record spread out on the desk; 隨機一張 riffles the crate and leaves one record in
 // front. Neither puts a record on the turntable: a record tapped on the desk comes back to the front of the crate.
 import { esc } from "./util.js";
+import { CB_DEFS, lyre, finial, pull, keyhole, capital, base, apron, legs } from "./cabinet.js";
 import { parseMotif, audioCtx } from "./nest.js";
 import { pluck, reverb } from "./jupiter.js";
 
@@ -51,13 +52,13 @@ function stackHtml(list, i, dir = "") {
 }
 export function crateHtml(list) {
   const i = Math.max(0, list.findIndex((r) => r.date === frontDate));
-  return `<div class="cr-room" aria-label="唱片櫃，${list.length} 張">
-      <div class="crate"><i class="cr-back"></i><div class="cr-stack">${list.length ? stackHtml(list, i) : ""}</div><i class="cr-side l"></i><i class="cr-side r"></i><div class="cr-front"></div></div></div>
+  return `${CB_DEFS}<div class="cr-room" aria-label="唱片櫃，${list.length} 張">
+      <div class="crate"><i class="cr-back"></i><div class="cr-stack">${list.length ? stackHtml(list, i) : ""}</div><i class="cr-side l">${finial()}</i><i class="cr-side r">${finial()}</i><div class="cr-front"><b class="cb-field"></b>${lyre()}</div></div></div>
     <i class="cr-sb-top"></i>
-    <div class="cr-sb">${list.length > 1 ? `<button type="button" class="cr-flip sh-foil" data-flip="-1" aria-label="較新的一張"${i ? "" : " disabled"}>‹</button>` : ""}
+    <div class="cr-sb"><b class="cb-col l">${capital()}${base()}</b><b class="cb-col r">${capital()}${base()}</b>${list.length > 1 ? `<button type="button" class="cr-flip sh-foil" data-flip="-1" aria-label="較新的一張"${i ? "" : " disabled"}>‹</button>` : ""}
       <span class="sc-brass cr-plate"><span class="sc-cut">Schallplatten</span><span class="sc-cut n">${list.length ? ROMAN(list.length) : "—"}</span></span>
       ${list.length > 1 ? `<button type="button" class="cr-flip sh-foil" data-flip="1" aria-label="較舊的一張"${i < list.length - 1 ? "" : " disabled"}>›</button>` : ""}
-      ${list.length > 1 ? `<div class="cr-drawers"><a class="cr-drawer" href="#/records/all"><span class="sc-brass"><span class="sc-cut">全部唱片</span></span><i></i></a><button type="button" class="cr-drawer" data-rand><span class="sc-brass"><span class="sc-cut">隨機一張</span></span><i></i></button></div>` : ""}</div>`;
+      ${list.length > 1 ? `<div class="cr-drawers"><a class="cr-drawer" href="#/records/all">${pull()}<span class="sc-brass"><span class="sc-cut">全部唱片</span></span><i>${keyhole()}</i>${pull()}</a><button type="button" class="cr-drawer" data-rand>${pull()}<span class="sc-brass"><span class="sc-cut">隨機一張</span></span><i>${keyhole()}</i>${pull()}</button></div>` : ""}<b class="cb-apron">${apron()}</b>${legs(30, "l")}${legs(30, "r")}</div>`;
 }
 // #/records/all: every record spread out on the desk under the lamp, two by two, each a little askew (the same tilt every
 // time: it follows the date). The one above lies over the top of the one below, so no name is covered. A tap brings that

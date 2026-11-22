@@ -2964,28 +2964,28 @@ html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
 .mk-on { position: absolute; left: 0; right: 0; bottom: 34px; width: max-content; margin: 0 auto; font: 600 13px/1 var(--sc-caps); letter-spacing: .34em; padding: 8px 0 8px .34em; text-decoration: none; border-bottom: 1px solid rgba(233, 198, 108, .5); }
 
 /* ——— 收藏's room (salon.js; the owner's pick, 2026-11-19: the salon, and 收藏 is the room alone): one scene drawn at
-   402 × 791, scaled (--k) into the screen less the bottom bar, a height fixed before anything loads. The wall and the
-   floor are the two photographs named here, nowhere else. Nothing in it is filtered; a tap moves the camera (.sl-cam's
-   transform) in on the thing. ——— */
-.salon { --sl-wall-tex: url(shelf/white_stucco.jpg); --sl-floor-tex: url(shelf/herringbone_parquet.jpg);
-  position: relative; width: min(100vw, 520px); margin: 0 auto; height: calc(100vh - var(--nav-h) - var(--dock-h) - env(safe-area-inset-bottom)); overflow: hidden; background: #e6dcc8; color-scheme: light; }
+   402 × 791, scaled (--k) into the screen less the bottom bar, a height fixed before anything loads. The floor is the
+   photograph named here, nowhere else; the wall's red silk is drawn in salon.js (WALL). Nothing in it is filtered; a tap
+   moves the camera (.sl-cam's transform) in on the thing. ——— */
+.salon { --sl-floor-tex: url(shelf/herringbone_parquet.jpg);
+  position: relative; width: min(100vw, 520px); margin: 0 auto; height: calc(100vh - var(--nav-h) - var(--dock-h) - env(safe-area-inset-bottom)); overflow: hidden; background: #a88a5e; color-scheme: light; }
 @supports (height: 100svh) { .salon { height: calc(100svh - var(--nav-h) - var(--dock-h) - env(safe-area-inset-bottom)); } }
 .sl-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 .sl-cam { position: absolute; inset: 0; transform-origin: 0 0; }
 .sl-stage { position: absolute; left: 0; top: 0; width: 402px; height: 791px; transform-origin: 0 0; transform: translateX(var(--dx, 0px)) scale(var(--k, 1)); }
 .sl-stage > i, .sl-deco { position: absolute; display: block; pointer-events: none; }
 .sl-deco > svg, .sl-draw > svg { position: absolute; left: 0; top: 0; }
-/* stucco, warmed: brighter by the window on the left, falling off to the right (the light itself: salon.js LIGHT) */
-.sl-wall { top: 0; bottom: 0; left: -200px; right: -200px; background: linear-gradient(90deg, rgba(255, 246, 226, .32), rgba(240, 226, 200, 0) 38%, rgba(120, 86, 48, .16)), linear-gradient(rgba(255, 240, 214, .18), rgba(255, 240, 214, .18)),
-  var(--sl-wall-tex) 200px 0 / 300px auto, #efe0c4; background-blend-mode: normal, normal, multiply; }
+/* the wall's red under the silk (salon.js WALL); below the floor line (615px) a wood colour matched to the parquet round
+   it: a browser that leaves a corner of the turned floor undrawn (WebKit does, at the bottom right) shows floor there */
+.sl-wall { top: 0; bottom: 0; left: -200px; right: -200px; background: linear-gradient(#7a1620 0 615px, #a88a5e 615px); }
 /* the parquet laid back in perspective toward the wall, darker there; broad light and dark patches over it, as boards
-   differ, so the photograph's repeat does not show */
+   differ, so the photograph's repeat does not show; a grey veil over all of it takes it down a little (no filter) */
 .sl-floor { left: -220px; right: -220px; top: 615px; height: 560px; transform-origin: 50% 0; transform: perspective(330px) rotateX(52deg);
-  background: linear-gradient(rgba(25, 12, 3, .62), rgba(25, 12, 3, .25) 18%, rgba(25, 12, 3, 0) 40%),
+  background: linear-gradient(rgba(42, 42, 42, .17), rgba(42, 42, 42, .17)), linear-gradient(rgba(25, 12, 3, .62), rgba(25, 12, 3, .25) 18%, rgba(25, 12, 3, 0) 40%),
     radial-gradient(18% 9% at 30% 62%, rgba(255, 230, 190, .07), transparent), radial-gradient(22% 10% at 64% 48%, rgba(20, 8, 0, .12), transparent), radial-gradient(16% 8% at 46% 80%, rgba(20, 8, 0, .1), transparent),
     radial-gradient(20% 9% at 76% 74%, rgba(255, 230, 190, .06), transparent), radial-gradient(14% 7% at 18% 38%, rgba(20, 8, 0, .1), transparent),
     var(--sl-floor-tex) 0 0 / 210px auto, #6b4a2c; }
-.sl-vig { inset: 0; background: radial-gradient(130% 90% at 40% 40%, transparent 55%, rgba(60, 40, 20, .32)); }
+.sl-vig { inset: 0; background: url(shelf/gen_grain.png) 0 0 / 128px 128px, radial-gradient(130% 90% at 35% 35%, transparent 55%, rgba(30, 10, 5, .38)); }
 /* a thing: its link is its hit area, the drawing may reach past it and takes no taps */
 .sl-o { position: absolute; display: block; -webkit-tap-highlight-color: transparent; }
 .sl-o * { pointer-events: none; }
@@ -3023,3 +3023,54 @@ html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's o
 .room-ghost { position: fixed; inset: 0; z-index: 25; overflow: hidden; background: var(--paper); transform-origin: 0 0; pointer-events: none;
   padding-bottom: calc(var(--nav-h) + var(--dock-h) + env(safe-area-inset-bottom)); }
 .room-ghost > div { translate: 0 0; }
+
+/* ——— 唱片櫃畫成維也納桃花心木櫃（records.js crateHtml、cabinet.js）。這一頁和收藏房間裡縮小的那一份是同一段，
+   推進的起點和終點畫的是同一個櫃子。上面是唱片箱：四角的方柱頂著車削的小頂飾、前板是框裡一塊凸起的鑲板、中間鍍金的豎琴；
+   下面是櫃子：線腳的櫃面、兩側半圓柱配鍍金柱頭柱腳、上層是抽屜面當底的銅牌、下層兩個抽屜（拉環、鑰匙孔）、裙板中間
+   的雕花、四隻車削的腳。 ——— */
+.cb-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.cb-col, .cb-apron, .cb-legs, .cb-field, .cb-lyre, .cb-fin { pointer-events: none; }
+.cr-back, .cr-side { background: linear-gradient(90deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0) 12% 88%, rgba(0, 0, 0, .5)), url(shelf/gen_wood_v.png) 0 0 / 300px auto, #4a1c0e; }
+.cr-side { width: 18px; box-shadow: inset 2px 0 0 rgba(255, 228, 190, .2), inset 3px 0 0 rgba(0, 0, 0, .25), inset -3px 0 0 rgba(0, 0, 0, .5); }
+.cr-side .cb-fin { position: absolute; left: 1px; top: -15px; }
+.cr-front { background: linear-gradient(rgba(255, 225, 190, .16), rgba(0, 0, 0, 0) 22%, rgba(0, 0, 0, .34)), url(shelf/gen_wood.png) 0 0 / 300px auto, #4a1c0e;
+  box-shadow: inset 0 4px 0 rgba(255, 228, 190, .3), inset 0 6px 0 rgba(0, 0, 0, .45), inset 0 8px 0 rgba(255, 228, 190, .08), inset 0 -4px 0 rgba(0, 0, 0, .55); }
+.cr-front::before { content: none; }
+.cb-field { position: absolute; left: 34px; right: 34px; top: 20px; bottom: 14px; display: block;
+  background: linear-gradient(rgba(255, 225, 190, .1), rgba(0, 0, 0, .2)), url(shelf/gen_wood.png) -70px -40px / 260px auto;
+  box-shadow: 0 0 0 1.5px rgba(10, 3, 0, .7), -1px -1px 0 2.5px rgba(0, 0, 0, .35), 1px 1px 0 2.5px rgba(255, 220, 180, .16),
+    inset 7px 7px 0 -3px rgba(255, 228, 190, .22), inset -7px -7px 0 -3px rgba(0, 0, 0, .42), inset 0 0 0 9px rgba(0, 0, 0, .05); }
+.cr-front .cb-lyre { position: absolute; left: 50%; top: 50%; margin: -22px 0 0 -32px; }
+/* the cabinet's top: the lit surface, a thumbnail edge, a fillet, the cove back to the frieze */
+.cr-sb-top { margin: 0 -12px; box-shadow: 0 18px 30px rgba(0, 0, 0, .8);
+  background: linear-gradient(rgba(255, 234, 200, .4), rgba(255, 234, 200, .14) 7px, rgba(0, 0, 0, .18) 8px, rgba(255, 228, 192, .32) 9px, rgba(255, 228, 192, .08) 14px, rgba(0, 0, 0, .26) 18px, rgba(0, 0, 0, .55) 20px,
+    rgba(255, 222, 184, .22) 21px, rgba(255, 222, 184, .05) 23px, rgba(0, 0, 0, .3) 24px, rgba(0, 0, 0, .62) 30px), url(shelf/gen_wood.png) 0 0 / 300px auto, #4a1c0e; }
+/* the carcass (its legs are drawn under it, so the face stops 30 px above the floor) */
+.cr-sb { z-index: 0; background: none; padding-top: 12px; align-content: flex-start; }
+.crate-scene .cr-sb:has(.cr-drawers) { padding-top: 12px; }
+.cr-sb::before { content: ""; position: absolute; z-index: -1; left: 0; right: 0; top: 0; bottom: 30px;
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .08) 18%, rgba(0, 0, 0, .3)), url(shelf/gen_wood.png) 0 0 / 300px auto, #4a1c0e; }
+/* the frieze drawer behind the brass: cock-beaded, a grain of its own */
+.cr-sb::after { content: ""; position: absolute; z-index: -1; left: 38px; right: 38px; top: 6px; height: 48px;
+  background: linear-gradient(rgba(255, 225, 190, .1), rgba(0, 0, 0, .14)), url(shelf/gen_wood.png) -90px -60px / 300px auto, #4a1c0e;
+  box-shadow: 0 0 0 1px rgba(10, 3, 0, .75), 0 0 0 2.6px rgba(140, 62, 34, .55), -1px -1px 0 2.6px rgba(255, 222, 184, .22), 1px 1px 0 3.2px rgba(0, 0, 0, .5); }
+.cb-col { position: absolute; z-index: 1; top: 0; bottom: 30px; width: 28px; display: block;
+  background: linear-gradient(90deg, rgba(10, 3, 0, .72), rgba(255, 226, 190, .3) 22%, rgba(255, 226, 190, .05) 38%, rgba(10, 3, 0, .36) 78%, rgba(10, 3, 0, .78)), url(shelf/gen_wood_v.png) 0 0 / 200px auto, #4a1c0e; }
+.cb-col.l { left: 4px; } .cb-col.r { right: 4px; }
+.cb-col .cb-cap { position: absolute; left: 0; top: 0; } .cb-col .cb-base { position: absolute; left: 0; bottom: 0; }
+/* the rail between the frieze and the drawers, and the moulded plinth along the foot, over the carcass's wood */
+.cb-apron { position: absolute; z-index: -1; left: 0; right: 0; top: 0; bottom: 30px; display: block;
+  background: linear-gradient(rgba(255, 226, 190, .34), rgba(255, 226, 190, .06) 30%, rgba(0, 0, 0, .25) 60%, rgba(0, 0, 0, .6)) 0 56px / 100% 7px no-repeat,
+    linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0) 16%, rgba(255, 226, 190, .32) 30%, rgba(255, 226, 190, .05) 55%, rgba(0, 0, 0, .35) 80%, rgba(0, 0, 0, .7)) 0 100% / 100% 13px no-repeat; }
+.cb-apron .cb-orn { position: absolute; left: 50%; bottom: -10px; margin-left: -40px; }
+.cb-legs { position: absolute; bottom: -4px; } .cb-legs.l { left: 9px; } .cb-legs.r { right: 9px; }
+/* the two drawers: each a front cock-beaded into the carcass, its brass label holder, a ring pull either side, the keyhole */
+.cr-drawers { margin-top: 6px; padding: 0 38px; gap: 8px; border-top: 0; box-shadow: none; box-sizing: border-box; }
+.cr-drawer { position: relative; flex: 1 1 0; height: 46px; flex-direction: row; justify-content: center; align-items: flex-start; gap: 0; padding-top: 5px; box-sizing: border-box;
+  background: linear-gradient(rgba(255, 225, 190, .12), rgba(0, 0, 0, .16)), url(shelf/gen_wood.png) 0 -20px / 260px auto, #4a1c0e;
+  box-shadow: 0 0 0 1px rgba(10, 3, 0, .78), 0 0 0 2.6px rgba(140, 62, 34, .5), -1px -1px 0 2.6px rgba(255, 222, 184, .2), 1px 1px 0 3.2px rgba(0, 0, 0, .5); }
+.cr-drawer + .cr-drawer { background-position: 0 0, -150px -110px, 0 0; }
+.cr-drawer .sc-brass { width: 86px; height: 24px; }
+.cr-drawer i { position: absolute; left: 50%; bottom: 3px; width: 12px; height: 16px; margin-left: -6px; border-radius: 0; background: none; box-shadow: none; }
+.cr-drawer i svg { display: block; transform: scale(.85); transform-origin: 50% 100%; }
+.cr-drawer .cb-pull { position: absolute; top: 9px; } .cr-drawer .cb-pull:first-child { left: 8px; } .cr-drawer .cb-pull:last-of-type { right: 8px; }

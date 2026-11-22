@@ -14,9 +14,11 @@
 // picture arrives: iPhone Safari has no scroll anchoring). One light, the window's morning light from the upper left:
 // every shadow falls right and down, each piece stands on a contact shadow, the window's panes lie on the parquet.
 // No SVG filter and no blend mode inside: the shadows and the light are gradients and translucent shapes.
-// Wood, leather, velvet, parquet and stucco are photographs (assets/shelf/, Poly Haven, CC0).
+// Leather, velvet and the parquet are photographs (assets/shelf/, Poly Haven, CC0); the wood's grain, the gilt's wear, the
+// silk and the grain over the room are drawn by program (assets/shelf/gen_*.png).
 import { esc, ROBIN_PATHS } from "./util.js";
 import { crateHtml } from "./records.js";
+import { fuseGilt } from "./cabinet.js";
 import { stampPicture } from "./stamps.js";
 import { drawMap } from "./world.js";
 import { poemOf } from "./poems.js";
@@ -29,10 +31,126 @@ const pic = (a) => a?.hero?.thumb || a?.hero?.src || "";
 let uidN = 0;
 const uid = (p) => `sl-${p}${++uidN}`;
 const svg = (w, h, inner) => `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" overflow="visible" aria-hidden="true">${inner}</svg>`;
-const GOLD = "#c7a04a";
 
+const TH = {"paint": "#f3ede0", "goldMid": "#bf9a52", "woodMid": "#6a2a14", "varnish": "rgba(130,90,30,.14)", "panel": {"mat": "paint", "paint": "#f4eee2", "k": 0.6, "fillet": true, "orn": "gold"}, "wallIn": "url(#sl-damask)", "wallFill": "url(#sl-damask)", "cornice": "paint", "cornOrn": "gold", "dado": "paint", "velvet": "#5a0a14", "easelOrn": "gold", "crest": "gold"};
+// ——— 真材質的工具。一盞光在左上：凸的線腳上緣亮、下緣暗，凹的反過來；雕花是三層——右下的影、
+// 左上的受光、本體——再疊一層金箔的磨損與接縫。木紋跟著料走：橫料橫紋、直料直紋、斜腳順著斜。 ———
+const P2 = (pts) => pts.map((p) => `${p[0].toFixed(2)} ${p[1].toFixed(2)}`).join(" L");
+const lightOf = (v) => (v >= 0 ? `rgba(255,246,222,${v.toFixed(3)})` : `rgba(18,9,2,${(-v).toFixed(3)})`);
+const SHADE = { v: { t: .34, l: .2, r: -.26, b: -.44 }, c: { t: -.34, l: -.24, r: .1, b: .2 }, f: { t: .1, l: .06, r: -.1, b: -.18 }, b: { t: -.3, l: -.25, r: -.35, b: -.4 } };
+// A moulded frame round a rectangle: bands from the outside in, each [width, kind] — v convex, c cove, f flat, b beads.
+// The four sides are mitred; a wood frame's rails run their grain across, its stiles up and down.
+function mould(x, y, w, h, prof, mat, o = {}) {
+  let s = "", o0 = 0;
+  const fillOf = (sd) => (mat === "gold" ? "url(#sl-goldd)" : mat === "wood" ? (sd === "t" || sd === "b" ? "url(#sl-wdh)" : "url(#sl-wdv)") : o.paint || TH.paint);
+  for (const [bw, k] of prof) {
+    const o1 = o0 + bw, sides = { t: `M${o0} ${o0}H${w - o0}L${w - o1} ${o1}H${o1}Z`, b: `M${o0} ${h - o0}H${w - o0}L${w - o1} ${h - o1}H${o1}Z`, l: `M${o0} ${o0}V${h - o0}L${o1} ${h - o1}V${o1}Z`, r: `M${w - o0} ${o0}V${h - o0}L${w - o1} ${h - o1}V${o1}Z` };
+    for (const sd of "tblr") s += `<path d="${sides[sd]}" fill="${fillOf(sd)}"/><path d="${sides[sd]}" fill="${lightOf(SHADE[k][sd] * (o.k ?? 1))}"/>`;
+    if (k === "v" && bw > 1) { const m = o0 + bw * .36, m2 = o0 + bw * .72, sw = Math.min(.9, bw * .22);
+      s += `<path d="M${w - m} ${m}H${m}V${h - m}" fill="none" stroke="rgba(255,250,230,${mat === "gold" ? .75 : .3})" stroke-width="${sw}"/><path d="M${m2} ${h - m2}H${w - m2}V${m2}" fill="none" stroke="rgba(20,10,0,.32)" stroke-width="${sw}"/>`; }
+    if (k === "b") { const m = o0 + bw / 2, r = bw * .44, st = Math.max(1.6, bw * 1.2), d = `M${m} ${m}H${w - m}V${h - m}H${m}Z`, c = mat === "gold" ? TH.goldMid : mat === "wood" ? TH.woodMid : o.paint || TH.paint;
+      s += `<path d="${d}" fill="none" stroke="rgba(15,7,0,.55)" stroke-width="${r * 2}" stroke-dasharray="0 ${st}" stroke-linecap="round" transform="translate(${r * .35} ${r * .45})"/><path d="${d}" fill="none" stroke="${c}" stroke-width="${r * 2}" stroke-dasharray="0 ${st}" stroke-linecap="round"/>
+        <path d="${d}" fill="none" stroke="rgba(255,250,228,.85)" stroke-width="${r * .8}" stroke-dasharray="0 ${st}" stroke-linecap="round" transform="translate(${-r * .32} ${-r * .34})"/>`; }
+    o0 = o1;
+  }
+  if (mat === "gold") s += `<path fill-rule="evenodd" d="M0 0H${w}V${h}H0Z M${o0} ${o0}V${h - o0}H${w - o0}V${o0}Z" fill="url(#sl-giltx)"/>`;
+  return `<g transform="translate(${x} ${y})">${s}</g>`;
+}
+// The carver's two shapes: a scroll (a tapering band rolled up), an acanthus blade (lobed, bent, a groove down its middle).
+function spiralPts(r0, w0, turns, dir, rot) {
+  const n = 46, L = [], R = [], k = Math.log(4.5) / (turns * 2 * Math.PI);
+  for (let i = 0; i <= n; i++) { const th = (i / n) * turns * 2 * Math.PI, r = r0 * Math.exp(-k * th), a = rot + dir * th, ww = (w0 * Math.pow(r / r0, .75)) / 2;
+    L.push([r * Math.cos(a) + Math.cos(a) * ww, r * Math.sin(a) + Math.sin(a) * ww]); R.push([r * Math.cos(a) - Math.cos(a) * ww, r * Math.sin(a) - Math.sin(a) * ww]); }
+  return [...L, ...R.reverse()];
+}
+function leafPts(x0, y0, x1, y1, W, bend = .25, lobes = 3) {
+  const dx = x1 - x0, dy = y1 - y0, len = Math.hypot(dx, dy) || 1, nx = -dy / len, ny = dx / len, n = W < 1.6 ? 16 : 34, A = [], B = [];
+  for (let i = 0; i <= n; i++) { const t = i / n, c = Math.sin(Math.PI * t) * bend * len, w = W * Math.pow(Math.sin(Math.PI * Math.min(1, t * 1.05 + .02)), .65) * (1 - .45 * Math.abs(Math.sin(t * Math.PI * lobes))) * (1 - t * .25);
+    const px = x0 + dx * t + nx * c, py = y0 + dy * t + ny * c; A.push([px + nx * w, py + ny * w]); B.push([px - nx * w * .85, py - ny * w * .85]); }
+  return [...A, ...B.reverse()];
+}
+const ptsD = (pts, f = (p) => p) => `M${P2(pts.map(f))}Z`;
+// relief, the depth a carver cuts: the cast shadow farther off and soft, the undercut close and dark, the lit
+// rim above left, the body, and a light across the body (bright upper left, dark lower right) so each piece has volume;
+// the gilt's wear of the pieces in one group is joined into one path when the room is done (cabinet.js fuseGilt)
+function carve(d, mat = "gold", k = 1) {
+  const body = mat === "gold" ? "url(#sl-goldd)" : mat === "wood" ? "url(#sl-wdh)" : TH.paint, hi = mat === "gold" ? "rgba(255,246,212,.95)" : mat === "wood" ? "rgba(255,225,185,.4)" : "rgba(255,255,250,.95)";
+  const rel = mat === "gold" ? "url(#sl-relg)" : mat === "wood" ? "url(#sl-relw)" : "url(#sl-relp)", sh = mat === "paint" ? [.12, .28] : [.26, .6];
+  return `<path d="${d}" fill="rgba(15,7,0,${sh[0]})" transform="translate(${(1.5 * k).toFixed(2)} ${(1.9 * k).toFixed(2)})"/><path d="${d}" fill="rgba(15,7,0,${sh[1]})" transform="translate(${(.72 * k).toFixed(2)} ${(.9 * k).toFixed(2)})"/><path d="${d}" fill="${hi}" transform="translate(${(-.45 * k).toFixed(2)} ${(-.5 * k).toFixed(2)})"/><path d="${d}" fill="${body}"/>${mat === "gold" ? `<path d="${d}" fill="url(#sl-giltx)"/>` : mat === "paint" ? `<path d="${d}" fill="rgba(120,100,70,.06)"/>` : ""}<path d="${d}" fill="${rel}"/>`;
+}
+// a leaf with its midrib cut in: a dark groove and its lit lip
+function leaf(x0, y0, x1, y1, W, bend, lobes, mat, k, f = (p) => p) {
+  let g = carve(ptsD(leafPts(x0, y0, x1, y1, W, bend, lobes), f), mat, k);
+  if (W < .9) return g;
+  const dx = x1 - x0, dy = y1 - y0, len = Math.hypot(dx, dy) || 1, nx = -dy / len, ny = dx / len, P = [];
+  for (let i = 3; i <= 27; i++) { const t = i / 30, c = Math.sin(Math.PI * t) * bend * len; P.push(f([x0 + dx * t + nx * c, y0 + dy * t + ny * c])); }
+  const d = `M${P2(P)}`, sw = Math.max(.22, W * .2);
+  return g + `<path d="${d}" fill="none" stroke="rgba(30,12,0,${mat === "paint" ? .22 : .52})" stroke-width="${sw.toFixed(2)}" stroke-linecap="round"/><path d="${d}" fill="none" stroke="${mat === "paint" ? "rgba(255,255,252,.85)" : "rgba(255,246,212,.5)"}" stroke-width="${(sw * .45).toFixed(2)}" stroke-linecap="round" transform="translate(${(-sw * .5).toFixed(2)} ${(-sw * .55).toFixed(2)})"/>`;
+}
+// a scroll with the channel cut along it
+function scroll(r0, w0, turns, dir, rot, f, mat, k) {
+  let g = carve(ptsD(spiralPts(r0, w0, turns, dir, rot), f), mat, k);
+  const n = 40, kk = Math.log(4.5) / (turns * 2 * Math.PI), P = [];
+  for (let i = 2; i <= n - 4; i++) { const th = (i / n) * turns * 2 * Math.PI, r = r0 * Math.exp(-kk * th), a = rot + dir * th; P.push(f([r * Math.cos(a), r * Math.sin(a)])); }
+  const sw = Math.max(.22, w0 * .16);
+  return g + `<path d="M${P2(P)}" fill="none" stroke="rgba(30,12,0,${mat === "paint" ? .2 : .45})" stroke-width="${sw.toFixed(2)}" stroke-linecap="round"/>`;
+}
+// A rocaille crest: two C-scrolls back to back, a shell fanned between them, a leaf falling from each side.
+function cartouche(cx, cy, s, mat = "gold") {
+  const at = (sx) => (p) => [cx + sx * p[0], cy + p[1]], K = s / 18;
+  let g = "";
+  for (const sx of [-1, 1]) {
+    g += leaf(s * .18, s * .12, s * .95, s * .5, s * .13, -.25, 3, mat, K, at(sx));
+    g += leaf(s * .3, s * .2, s * .72, s * .74, s * .07, .2, 2, mat, K * .8, at(sx));
+    g += scroll(s * .26, s * .14, 1.15, sx > 0 ? -1 : 1, Math.PI * .1, (p) => at(sx)([p[0] + s * .42, p[1] + s * .05]), mat, K);
+  }
+  // the shell: ribs fanned out of the boss, each with its groove
+  for (let i = 0; i < 7; i++) { const a = Math.PI * (1.12 + (i / 6) * .76); g += leaf(0, s * .1, Math.cos(a) * s * .55, s * .1 + Math.sin(a) * s * .55, s * .085, 0, 1, mat, K, (p) => [cx + p[0], cy + p[1]]); }
+  g += carve(`M${cx - s * .12} ${cy + s * .14} a${s * .12} ${s * .1} 0 1 0 ${s * .24} 0 a${s * .12} ${s * .1} 0 1 0 ${-s * .24} 0Z`, mat, K);
+  return g;
+}
+// A frame's corner: a small shell turned out of the corner, a leaf running along each side.
+function corner(cx, cy, s, sx, sy, mat = "gold") {
+  const f = (p) => [cx + sx * p[0], cy + sy * p[1]], K = s / 14;
+  let g = leaf(s * .1, s * .12, s * 1.05, s * .2, s * .14, .15, 3, mat, K, f) + leaf(s * .12, s * .1, s * .2, s * 1.05, s * .14, -.15, 3, mat, K, f);
+  for (let i = 0; i < 5; i++) { const a = Math.PI * (1.02 + (i / 4) * .46); g += leaf(s * .1, s * .1, s * .1 + Math.cos(a) * s * .45, s * .1 + Math.sin(a) * s * .45, s * .07, 0, 1, mat, K, f); }
+  return g + carve(`M${cx + sx * s * .02} ${cy + sy * s * .1} a${s * .1} ${s * .1} 0 1 0 ${sx * s * .2} 0 a${s * .1} ${s * .1} 0 1 0 ${-sx * s * .2} 0Z`, mat, K);
+}
+// a rosette: petals round a boss
+function rosette(cx, cy, r, mat = "gold") {
+  let g = "";
+  for (let i = 0; i < 8; i++) { const a = (i / 8) * 2 * Math.PI; g += leaf(cx, cy, cx + Math.cos(a) * r, cy + Math.sin(a) * r, r * .26, 0, 1, mat, r / 8); }
+  return g + carve(`M${cx - r * .3} ${cy} a${r * .3} ${r * .3} 0 1 0 ${r * .6} 0 a${r * .3} ${r * .3} 0 1 0 ${-r * .6} 0Z`, mat, r / 8);
+}
+// wood cut along a slant: a polygon filled with the grain turned to its run (its own pattern, so the grain follows the leg)
+function woodPoly(pts, ang, img = "gen_wood.png", sz = 120) {
+  const id = uid("wp");
+  return `<defs><pattern id="${id}" patternUnits="userSpaceOnUse" width="${sz}" height="${sz}" patternTransform="rotate(${ang.toFixed(1)})"><image href="${TEX}${img}" width="${sz}" height="${sz}" preserveAspectRatio="none"/></pattern></defs><path d="${ptsD(pts)}" fill="url(#${id})"/>`;
+}
+// a turned or squared leg from (x0,y0) to (x1,y1), w0 wide at the top and w1 at the foot, the grain along it, lit on its left
+function leg(x0, y0, x1, y1, w0, w1, mat = "wood", flutes = 0) {
+  const dx = x1 - x0, dy = y1 - y0, len = Math.hypot(dx, dy), nx = -dy / len, ny = dx / len, ang = (Math.atan2(dy, dx) * 180) / Math.PI;
+  const pts = [[x0 + nx * w0 / 2, y0 + ny * w0 / 2], [x1 + nx * w1 / 2, y1 + ny * w1 / 2], [x1 - nx * w1 / 2, y1 - ny * w1 / 2], [x0 - nx * w0 / 2, y0 - ny * w0 / 2]];
+  const id = uid("lg"), d = ptsD(pts);
+  let s = `<path d="${d}" fill="rgba(15,7,0,.45)" transform="translate(.9 .9)"/>${mat === "wood" ? woodPoly(pts, ang) : `<path d="${d}" fill="url(#sl-goldd)"/><path d="${d}" fill="url(#sl-giltx)"/>`}
+    <linearGradient id="${id}" gradientUnits="userSpaceOnUse" x1="${x0 + nx * w0 / 2}" y1="${y0 + ny * w0 / 2}" x2="${x0 - nx * w0 / 2}" y2="${y0 - ny * w0 / 2}"><stop offset="0" stop-color="rgba(10,5,0,.55)"/><stop offset=".3" stop-color="rgba(255,240,210,${mat === "gold" ? .45 : .22})"/><stop offset=".55" stop-color="rgba(255,240,210,0)"/><stop offset="1" stop-color="rgba(10,5,0,.6)"/></linearGradient><path d="${d}" fill="url(#${id})"/>`;
+  for (let i = 1; i <= flutes; i++) { const t = i / (flutes + 1) - .5; s += `<path d="M${x0 + nx * w0 * t * .8} ${y0 + ny * w0 * t * .8 + 3} L${x1 + nx * w1 * t * .8} ${y1 + ny * w1 * t * .8 - 3}" stroke="rgba(30,15,0,.5)" stroke-width="${Math.max(.35, w1 * .09)}" stroke-linecap="round"/><path d="M${x0 + nx * w0 * t * .8 - .4} ${y0 + ny * w0 * t * .8 + 3} L${x1 + nx * w1 * t * .8 - .4} ${y1 + ny * w1 * t * .8 - 3}" stroke="rgba(255,245,210,.4)" stroke-width=".3"/>`; }
+  return s;
+}
+
+// the damask's flower: a palmette between two scrolls, leaves above and below, mirrored about its stem
+function damaskMotif(x, y) {
+  const m = (sx) => (p) => [x + sx * p[0], y + p[1]], sat = "rgba(255,160,150,.085)", dk = "rgba(40,0,6,.12)";
+  let g = "";
+  for (const sx of [-1, 1]) {
+    g += `<path d="${ptsD(leafPts(0, 2, 9, -10, 2.6, -.3, 3), m(sx))}" fill="${sat}"/><path d="${ptsD(leafPts(0, 4, 8, 13, 2.4, .3, 3), m(sx))}" fill="${sat}"/>`;
+    g += `<path d="${ptsD(spiralPts(4.4, 2.2, 1.1, sx > 0 ? 1 : -1, 0).map((p) => [p[0] + 7, p[1] + 2]), m(sx))}" fill="${sat}"/>`;
+    g += `<path d="${ptsD(leafPts(1, -12, 4, -19, 1.4, 0, 1), m(sx))}" fill="${sat}"/>`;
+  }
+  return g + `<path d="${ptsD(leafPts(0, 8, 0, -18, 2.2, 0, 4))}" fill="${sat}" transform="translate(${x} ${y})"/><circle cx="${x}" cy="${y + 2}" r="2.2" fill="${dk}"/>`;
+}
 // ——— the gradients and photographs every piece shares ———
-const FOIL = [["0", "#7a5418"], [".14", "#c99a3c"], [".26", "#fbe7a6"], [".38", "#d4a443"], [".52", "#8a6220"], [".66", "#e9c66c"], [".74", "#fff3c4"], [".86", "#b98a33"], ["1", "#6e4c16"]];
+const FOIL = [["0", "#7a5418"], [".14", "#c99a3c"], [".26", "#ecd394"], [".38", "#d4a443"], [".52", "#8a6220"], [".66", "#e9c66c"], [".74", "#f6e6b4"], [".86", "#b98a33"], ["1", "#6e4c16"]];
 const stops = (a) => a.map(([o, c]) => `<stop offset="${o}" stop-color="${c}"/>`).join("");
 const lin = (id, a, x2 = 0, y2 = 1) => `<linearGradient id="${id}" x1="0" y1="0" x2="${x2}" y2="${y2}">${stops(a)}</linearGradient>`;
 const rad = (id, a, cx = ".5", cy = ".5", r = ".5") => `<radialGradient id="${id}" cx="${cx}" cy="${cy}" r="${r}">${stops(a)}</radialGradient>`;
@@ -41,10 +159,10 @@ const robin = ROBIN_PATHS.replace(/class="e-ink"/g, 'fill="var(--rb-ink,#9a6e26)
   .replace(/class="e-paper"/g, 'fill="var(--rb-eye,#5c1d2c)"').replace(/class="e-wing"/g, 'fill="none" stroke="var(--rb-wing,#7a5418)"').replace(/class="e-legs"/g, 'fill="none" stroke="var(--rb-wing,#7a5418)"');
 const DEFS = `<svg class="sl-defs" width="0" height="0" aria-hidden="true"><defs>
   ${lin("sl-foil", FOIL, 1, .5)}
-  ${lin("sl-gold", [["0", "#fbe9b0"], [".25", "#d9ab4d"], [".5", "#8f6522"], [".75", "#e5c06a"], ["1", "#7a5418"]])}
-  ${lin("sl-goldd", [["0", "#f6dc93"], [".2", "#b98a33"], [".42", "#f3d78e"], [".6", "#9a6e26"], [".8", "#e2bb62"], ["1", "#7a5418"]], 1, 1)}
+  ${lin("sl-gold", [["0", "#ecd49a"], [".25", "#d9ab4d"], [".5", "#8f6522"], [".75", "#e5c06a"], ["1", "#7a5418"]])}
+  ${lin("sl-goldd", [["0", "#e6cb88"], [".2", "#b98a33"], [".42", "#f3d78e"], [".6", "#9a6e26"], [".8", "#e2bb62"], ["1", "#7a5418"]], 1, 1)}
   ${lin("sl-brass", [["0", "#f3d78e"], [".32", "#c39445"], [".52", "#e8c56c"], [".78", "#9a6e26"], ["1", "#c99a3c"]], .2, 1)}
-  ${rad("sl-rivet", [["0", "#fff3c4"], [".7", "#7a5418"]], ".35", ".3", ".8")}
+  ${rad("sl-rivet", [["0", "#f6e6b4"], [".7", "#7a5418"]], ".35", ".3", ".8")}
   ${rad("sl-coin", [["0", "#fff6cf"], [".35", "#e9c66c"], [".7", "#b98a33"], ["1", "#6e4c16"]], ".38", ".32", ".75")}
   ${rad("sl-sphere", [["0", "rgba(255,250,232,.55)"], [".3", "rgba(255,250,232,0)"], [".72", "rgba(20,10,0,.18)"], ["1", "rgba(20,10,0,.7)"]], ".36", ".3", ".78")}
   ${rad("sl-drop", [["0", "rgba(0,0,0,.5)"], [".55", "rgba(0,0,0,.22)"], ["1", "rgba(0,0,0,0)"]])}
@@ -57,9 +175,8 @@ const DEFS = `<svg class="sl-defs" width="0" height="0" aria-hidden="true"><defs
   ${lin("sl-baylit", [["0", "rgba(255,206,140,0)"], [".7", "rgba(255,206,140,.07)"], ["1", "rgba(255,206,140,.12)"]])}
   ${lin("sl-paper", [["0", "#f7f0de"], ["1", "#e4d7b8"]], 1, 1)}
   ${lin("sl-pencil", [["0", "#3f7a5a"], [".35", "#1f4a35"], [".36", "#2c5e45"], [".7", "#163826"], ["1", "#0d2418"]])}
-  ${lin("sl-silk", [["0", "#d9c38f"], [".3", "#f3e4bd"], [".55", "#c9ae72"], [".8", "#efdcae"], ["1", "#bfa36a"]], 1, 0)}
   ${lin("sl-plaster", [["0", "#faf6ee"], [".6", "#ebe2d1"], ["1", "#d6c9b0"]])}
-  ${lin("sl-skyr", [["0", "#cdd6da"], [".45", "#eae6da"], [".72", "#f8eed8"], ["1", "#f3e6cc"]])}
+  ${lin("sl-skyr", [["0", "#c4d0d8"], [".45", "#e6e2d6"], [".72", "#f8ead0"], ["1", "#f3e0c0"]])}
   ${rad("sl-glowv", [["0", "rgba(255,248,228,.7)"], [".6", "rgba(255,248,228,.25)"], ["1", "rgba(255,248,228,0)"]])}
   ${lin("sl-aoDown", [["0", "rgba(40,22,6,.32)"], ["1", "rgba(40,22,6,0)"]])}
   ${lin("sl-aoUp", [["0", "rgba(40,22,6,0)"], ["1", "rgba(40,22,6,.34)"]])}
@@ -73,8 +190,24 @@ const DEFS = `<svg class="sl-defs" width="0" height="0" aria-hidden="true"><defs
   ${rad("sl-contact", [["0", "rgba(15,6,0,.9)"], [".55", "rgba(15,6,0,.42)"], ["1", "rgba(15,6,0,0)"]])}
   ${rad("sl-vel", [["0", "rgba(30,0,8,.5)"], [".62", "rgba(30,0,8,.05)"], [".86", "rgba(255,170,190,.16)"], ["1", "rgba(255,190,205,.28)"]])}
   <pattern id="sl-brush" patternUnits="userSpaceOnUse" width="4" height="2"><rect width="4" height="1" fill="rgba(255,255,255,.08)"/><rect y="1" width="4" height="1" fill="rgba(0,0,0,.05)"/></pattern>
-  ${pat("sl-cherry", "cherry.jpg", 220)}${pat("sl-cherryv", "cherry_v.jpg", 220)}${pat("sl-veneer", "veneer_v.jpg", 200)}${pat("sl-velvet", "velvet.jpg", 110)}
-  ${pat("sl-cherrys", "cherry.jpg", 120)}${pat("sl-cherryvs", "cherry_v.jpg", 120)}${pat("sl-leather", "leather.jpg", 90)}
+  ${pat("sl-cherryv", "gen_wood_v.png", 200)}${pat("sl-veneer", "gen_woodd_v.png", 200)}${pat("sl-velvet", "velvet.jpg", 110)}
+  ${pat("sl-cherrys", "gen_wood.png", 130)}${pat("sl-cherryvs", "gen_wood_v.png", 130)}${pat("sl-leather", "leather.jpg", 90)}
+  ${pat("sl-wdh", "gen_wood.png", 130)}${pat("sl-wdv", "gen_wood_v.png", 130)}
+  <pattern id="sl-giltx" patternUnits="userSpaceOnUse" width="70" height="70"><image href="${TEX}gen_gilt.png" width="70" height="70"/></pattern>
+  <pattern id="sl-silkx" patternUnits="userSpaceOnUse" width="60" height="60"><rect width="60" height="60" fill="#e2cfa4"/><image href="${TEX}gen_silk.png" width="60" height="60" opacity=".55" preserveAspectRatio="none"/></pattern>
+  <pattern id="sl-weave" patternUnits="userSpaceOnUse" width="1.6" height="1.6"><rect width="1.6" height=".5" fill="rgba(255,250,235,.12)"/><rect width=".5" height="1.6" fill="rgba(0,0,0,.08)"/></pattern>
+  <linearGradient id="sl-foldg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="rgba(20,10,0,.42)"/><stop offset=".22" stop-color="rgba(20,10,0,.05)"/><stop offset=".45" stop-color="rgba(255,248,225,.34)"/><stop offset=".62" stop-color="rgba(255,248,225,.08)"/><stop offset="1" stop-color="rgba(20,10,0,.46)"/></linearGradient>
+  <radialGradient id="sl-tuft" cx=".42" cy=".38" r=".62"><stop offset="0" stop-color="rgba(255,190,205,.26)"/><stop offset=".55" stop-color="rgba(255,190,205,.05)"/><stop offset="1" stop-color="rgba(10,0,3,.5)"/></radialGradient>
+  <linearGradient id="sl-seat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(255,195,205,.26)"/><stop offset=".35" stop-color="rgba(255,195,205,.04)"/><stop offset="1" stop-color="rgba(10,0,3,.4)"/></linearGradient>
+  <pattern id="sl-damask" patternUnits="userSpaceOnUse" width="36" height="52"><rect width="36" height="52" fill="#7c1622"/><image href="${TEX}gen_silk.png" width="36" height="52" opacity=".14" preserveAspectRatio="none"/>
+    ${[[18, 26], [0, 0], [36, 0], [0, 52], [36, 52]].map(([x, y]) => damaskMotif(x, y)).join("")}</pattern>
+  <radialGradient id="sl-relg" cx=".34" cy=".3" r=".9"><stop offset="0" stop-color="rgba(255,250,222,.6)"/><stop offset=".38" stop-color="rgba(255,250,222,.07)"/><stop offset=".7" stop-color="rgba(60,30,0,.14)"/><stop offset="1" stop-color="rgba(40,18,0,.58)"/></radialGradient>
+  <radialGradient id="sl-relw" cx=".34" cy=".3" r=".9"><stop offset="0" stop-color="rgba(255,225,185,.32)"/><stop offset=".45" stop-color="rgba(255,225,185,0)"/><stop offset="1" stop-color="rgba(20,6,0,.6)"/></radialGradient>
+  <radialGradient id="sl-relp" cx=".34" cy=".3" r=".9"><stop offset="0" stop-color="rgba(255,255,252,.7)"/><stop offset=".45" stop-color="rgba(255,255,252,0)"/><stop offset="1" stop-color="rgba(110,85,50,.4)"/></radialGradient>
+  <linearGradient id="sl-shelfedge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(255,232,196,.5)"/><stop offset=".2" stop-color="rgba(255,232,196,.12)"/><stop offset=".42" stop-color="rgba(0,0,0,.2)"/><stop offset=".52" stop-color="rgba(0,0,0,.5)"/><stop offset=".6" stop-color="rgba(255,225,190,.3)"/><stop offset=".8" stop-color="rgba(0,0,0,.1)"/><stop offset="1" stop-color="rgba(0,0,0,.6)"/></linearGradient>
+  <linearGradient id="sl-turn" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="rgba(10,3,0,.7)"/><stop offset=".22" stop-color="rgba(255,226,190,.34)"/><stop offset=".4" stop-color="rgba(255,226,190,.05)"/><stop offset=".78" stop-color="rgba(10,3,0,.38)"/><stop offset="1" stop-color="rgba(10,3,0,.75)"/></linearGradient>
+  <linearGradient id="sl-gutter" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="rgba(60,40,15,0)"/><stop offset=".7" stop-color="rgba(60,40,15,.16)"/><stop offset=".93" stop-color="rgba(40,25,5,.42)"/><stop offset="1" stop-color="rgba(30,18,4,.55)"/></linearGradient>
+  <linearGradient id="sl-glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="rgba(255,255,255,.22)"/><stop offset=".3" stop-color="rgba(255,255,255,.03)"/><stop offset=".55" stop-color="rgba(255,255,255,0)"/><stop offset=".62" stop-color="rgba(255,255,255,.12)"/><stop offset=".7" stop-color="rgba(255,255,255,.02)"/><stop offset="1" stop-color="rgba(200,230,220,.06)"/></linearGradient>
   <symbol id="sl-robin" viewBox="6 16 54 38">${robin}</symbol>
 </defs></svg>`;
 
@@ -98,18 +231,23 @@ function plate(x, y, w, h, l1, l2, o = {}) {
     ${o.rivets === false ? "" : `<circle cx="4.4" cy="${h / 2}" r="1.5" fill="url(#sl-rivet)"/><circle cx="${w - 4.4}" cy="${h / 2}" r="1.5" fill="url(#sl-rivet)"/>`}${txt}</g>`;
 }
 
-// ——— a picture: gilt frame, the bevel, a beaded moulding, varnish; wine velvet behind it while (or if never) it loads ———
+// ——— a picture: a carved gilt frame (a torus, a row of beads, a deep cove, the ogee, a sight edge), shells and leaves at
+// the corners, a crest on the big one; the canvas under old varnish (wine velvet behind it while, or if never, it loads),
+// the frame's shadow on its top and left ———
 function frame(x, y, w, h, img, b) {
-  return `<g transform="translate(${x} ${y})">${shade(0, 1, w, h, 1, .55)}<rect width="${w}" height="${h}" fill="url(#sl-goldd)"/>
-    <path d="M0 0H${w}L${w - b} ${b}H${b}V${h - b}L0 ${h}Z" fill="rgba(255,245,210,.26)"/><path d="M${w} 0V${h}H0L${b} ${h - b}H${w - b}V${b}Z" fill="rgba(60,35,5,.32)"/>
-    <rect x="${b * .42}" y="${b * .42}" width="${w - b * .84}" height="${h - b * .84}" fill="none" stroke="#f8e3a2" stroke-width="${(b * .2).toFixed(2)}" stroke-dasharray="${(b * .16).toFixed(2)} ${(b * .14).toFixed(2)}" opacity=".85"/>
-    <rect x=".4" y=".4" width="${w - .8}" height="${h - .8}" fill="none" stroke="rgba(70,45,10,.75)" stroke-width=".8"/>
-    <rect x="${b - 1.2}" y="${b - 1.2}" width="${w - 2 * b + 2.4}" height="${h - 2 * b + 2.4}" fill="#3a2610"/>
-    <rect x="${b}" y="${b}" width="${w - 2 * b}" height="${h - 2 * b}" fill="url(#sl-velvet)"/><rect x="${b}" y="${b}" width="${w - 2 * b}" height="${h - 2 * b}" fill="#5a1424" opacity=".55"/>
-    ${img ? `<image href="${esc(img)}" x="${b}" y="${b}" width="${w - 2 * b}" height="${h - 2 * b}" preserveAspectRatio="xMidYMid slice"/>` : ""}
-    <rect x="${b}" y="${b}" width="${w - 2 * b}" height="${h - 2 * b}" fill="url(#sl-varnish)"/><rect x="${b}" y="${b}" width="${w - 2 * b}" height="${h - 2 * b}" fill="url(#sl-topshade)" opacity=".7"/>
-    <path d="M.8 .8 H${w * .7} L${w * .7 - 1.6} 2.4 H2.4 V${h * .6} L.8 ${h * .6 + 1.6}Z" fill="rgba(255,250,222,.7)"/><path d="M${w - .6} .6 V${h - .6} H.6 L2.2 ${h - 2.2} H${w - 2.2} V2.2Z" fill="rgba(45,24,0,.5)"/>
-      <path d="M${b} ${b + (h - 2 * b) * .55} L${b + (w - 2 * b) * .5} ${b} H${b + (w - 2 * b) * .62} L${b} ${b + (h - 2 * b) * .68}Z" fill="rgba(255,255,255,.07)"/><ellipse cx="${w * .22}" cy="${b * .5}" rx="${w * .12}" ry="${b * .35}" fill="url(#sl-shine)" opacity=".8"/></g>`;
+  const big = w > 70, B = b * (big ? 1.25 : 1.12);
+  const prof = [[B * .14, "v"], [B * .12, "b"], [B * .24, "c"], [B * .3, "v"], [B * .08, "f"], [B * .12, "c"]];
+  let s = `${shade(0, 1, w, h, 1, .6)}${mould(0, 0, w, h, prof, "gold")}`;
+  const ix = B, iw = w - 2 * B, ih = h - 2 * B;
+  s += `<rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="#3a2610"/>
+    ${img ? `<image href="${esc(img)}" x="${ix}" y="${ix}" width="${iw}" height="${ih}" preserveAspectRatio="xMidYMid slice"/>` : `<rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="url(#sl-velvet)"/>`}
+    <rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="${TH.varnish}"/><rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="url(#sl-weave)" opacity=".2"/>
+    <rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="url(#sl-varnish)"/>
+    <path d="M${ix} ${ix}H${ix + iw}V${ix + 2.4}H${ix + 2.4}V${ix + ih}H${ix}Z" fill="rgba(20,10,0,.45)"/><path d="M${ix} ${ix}H${ix + iw}V${ix + 5}H${ix + 5}V${ix + ih}H${ix}Z" fill="rgba(20,10,0,.16)"/>`;
+  const cs = B * 1.45;
+  s += corner(B * .15, B * .15, cs, 1, 1) + corner(w - B * .15, B * .15, cs, -1, 1) + corner(w - B * .15, h - B * .15, cs, -1, -1) + corner(B * .15, h - B * .15, cs, 1, -1);
+  if (big) s += cartouche(w / 2, B * .2, B * 1.9) + cartouche(w / 2, h - B * .1, B * 1.2);
+  return `<g transform="translate(${x} ${y})">${s}</g>`;
 }
 const pictureLight = (cx, y, w) => `<ellipse cx="${cx}" cy="${y + w * .7}" rx="${w * 1.05}" ry="${w * .95}" fill="url(#sl-glow)"/>
   <rect x="${cx - 1}" y="${y - 10}" width="2" height="12" fill="url(#sl-gold)"/><rect x="${cx - w / 2}" y="${y}" width="${w}" height="5" rx="2.5" fill="url(#sl-gold)"/><rect x="${cx - w / 2}" y="${y + 3.5}" width="${w}" height="1.5" fill="rgba(255,240,190,.9)"/>`;
@@ -148,9 +286,12 @@ const spine = (x, y, w, h, k) => { const c = ["#7a1f2e", "#23395b", "#2d4a35", "
     <rect y="${h * .84}" width="${w}" height=".5" fill="url(#sl-gold)"/><rect y="${h * .88}" width="${w}" height="1" fill="url(#sl-gold)"/></g>`; };
 function bookcase(w, h, face, older, count, unit) {
   const cor = 18, pl = 14, side = 9, sh = 2, cup = 112, bx = side, by = cor + 2, bw = w - 2 * side, bh = h - cor - pl - 2 - cup, step = bh / sh;
+  // the carcass; the back is boards of dark mahogany standing on end, a groove at each joint, darker in the corners
   let s = `<ellipse cx="${w / 2}" cy="${h}" rx="${w * .6}" ry="7" fill="url(#sl-drop)"/>
     <rect width="${w}" height="${h}" fill="url(#sl-cherryv)"/><rect width="${w}" height="${h}" fill="#1c0d05" opacity=".25"/>
-    <rect x="${bx}" y="${by}" width="${bw}" height="${bh}" fill="url(#sl-veneer)"/><rect x="${bx}" y="${by}" width="${bw}" height="${bh}" fill="#160a04" opacity=".78"/>`;
+    <rect x="${bx}" y="${by}" width="${bw}" height="${bh}" fill="url(#sl-veneer)"/><rect x="${bx}" y="${by}" width="${bw}" height="${bh}" fill="#1a0904" opacity=".5"/>`;
+  for (let j = 1; j < 4; j++) { const x = bx + (bw * j) / 4; s += `<rect x="${x - .5}" y="${by}" width=".9" height="${bh}" fill="rgba(8,3,0,.6)"/><rect x="${x + .4}" y="${by}" width=".5" height="${bh}" fill="rgba(255,215,170,.1)"/>`; }
+  s += `<rect x="${bx}" y="${by}" width="7" height="${bh}" fill="url(#sl-aoL)"/><rect x="${bx}" y="${by}" width="4" height="${bh}" fill="url(#sl-aoL)"/><rect x="${bx + bw - 9}" y="${by}" width="9" height="${bh}" fill="url(#sl-aoR)"/>`;
   for (let i = 0; i < sh; i++) { const y0 = by + step * i; s += `<rect x="${bx}" y="${y0}" width="${bw}" height="${step}" fill="url(#sl-topshade)"/><rect x="${bx}" y="${y0 + step * .2}" width="${bw}" height="${step * .8}" fill="url(#sl-baylit)"/>`; }
   const fl = by + step - 5;
   if (face) { // the book facing out, its ribbon hanging, a brass bookend; the older ones spine out beside it
@@ -162,46 +303,86 @@ function bookcase(w, h, face, older, count, unit) {
     s += `<rect x="${x + 2}" y="${fl - vh * .42}" width="${Math.max(3, bw * .05)}" height="${vh * .42}" rx="1" fill="url(#sl-brass)"/>`;
     if (older.length > 5) { let x2 = bx + 6; const yb = by + 2 * step - 5; for (const k of older.slice(5, 16).keys()) { const sh2 = step * (.6 + (k % 3) * .05); s += spine(x2, yb - sh2, 5, sh2, k + 5); x2 += 5.6; } }
   }
+  // a shelf: a board seen a little from above — its top lit, its front a moulded lip (a small ovolo over a bead), its
+  // shadow on the back below it, the ends let into the sides
+  const board = (y, t) => `<rect x="${bx}" y="${y + t}" width="${bw}" height="10" fill="url(#sl-aoDown)"/><rect x="${bx}" y="${y + t}" width="${bw}" height="4" fill="url(#sl-aoDown)"/>
+    <rect x="${bx - 1}" y="${y - 1.8}" width="${bw + 2}" height="1.8" fill="url(#sl-wdh)"/><rect x="${bx - 1}" y="${y - 1.8}" width="${bw + 2}" height="1.8" fill="rgba(255,228,190,.34)"/>
+    <rect x="${bx - 1}" y="${y}" width="${bw + 2}" height="${t}" fill="url(#sl-wdh)"/><rect x="${bx - 1}" y="${y}" width="${bw + 2}" height="${t}" fill="url(#sl-shelfedge)"/>
+    <rect x="${bx - 1}" y="${y + t - .6}" width="${bw + 2}" height=".6" fill="rgba(5,2,0,.75)"/><rect x="${bx - 1}" y="${y - 1.8}" width="2.4" height="${t + 1.8}" fill="rgba(5,2,0,.4)"/><rect x="${bx + bw - 1.4}" y="${y - 1.8}" width="2.4" height="${t + 1.8}" fill="rgba(5,2,0,.5)"/>`;
   for (let i = 1; i <= sh - 1; i++) { const y = by + step * i - 5;
-    s += `<rect x="${bx}" y="${y + 5}" width="${bw}" height="8" fill="rgba(0,0,0,.35)"/><rect x="${bx - 1}" y="${y}" width="${bw + 2}" height="6" fill="url(#sl-cherrys)"/><rect x="${bx - 1}" y="${y}" width="${bw + 2}" height="6" fill="url(#sl-boardlit)"/>
-      ${plate(w / 2 - 8, y + .8, 16, 4.6, "", "", { rivets: false })}${cut(w / 2, y + 4.4, ["I", "II", "III"][i - 1], { fam: "Cormorant SC", size: 4, w: 700, ls: .3 })}`; }
-  const cy = by + bh + 2, dw = (bw - 4) / 2; // the cupboard: two panelled doors, brass knobs
-  s += `<rect x="${bx - 1}" y="${by + bh - 1}" width="${bw + 2}" height="9" fill="url(#sl-cherrys)"/><rect x="${bx - 1}" y="${by + bh - 1}" width="${bw + 2}" height="9" fill="url(#sl-boardlit)"/>`;
+    s += `${board(y, 6.5)}${plate(w / 2 - 8, y + 1, 16, 4.6, "", "", { rivets: false })}${cut(w / 2, y + 4.6, ["I", "II", "III"][i - 1], { fam: "Cormorant SC", size: 4, w: 700, ls: .3 })}`; }
+  const cy = by + bh + 2, dw = (bw - 4) / 2; // the waist over the cupboard: a deeper board with a gilt bead; the cupboard: two panelled doors, brass knobs
+  s += `${board(by + bh - 1, 9)}<path d="M${bx} ${by + bh + 5.4} H${bx + bw}" stroke="${TH.goldMid}" stroke-width="1.2" stroke-dasharray="0 2" stroke-linecap="round"/><path d="M${bx} ${by + bh + 5} H${bx + bw}" stroke="rgba(255,248,220,.6)" stroke-width=".45" stroke-dasharray="0 2" stroke-linecap="round"/>`;
   for (const d of [0, 1]) { const dx = bx + 1 + d * (dw + 2);
     s += `<rect x="${dx}" y="${cy + 8}" width="${dw}" height="${cup - 10}" fill="url(#sl-cherryvs)"/><rect x="${dx}" y="${cy + 8}" width="${dw}" height="${cup - 10}" fill="rgba(0,0,0,.28)"/>
       <rect x="${dx + 7}" y="${cy + 16}" width="${dw - 14}" height="${cup - 26}" fill="none" stroke="rgba(0,0,0,.55)" stroke-width="1.2"/><rect x="${dx + 8}" y="${cy + 17}" width="${dw - 16}" height="${cup - 28}" fill="none" stroke="rgba(255,215,170,.1)"/>`; }
-  s += `<circle cx="${w / 2 - 6}" cy="${cy + 8 + cup * .32}" r="2.2" fill="url(#sl-rivet)"/><circle cx="${w / 2 + 6}" cy="${cy + 8 + cup * .32}" r="2.2" fill="url(#sl-rivet)"/>
-    <rect width="${side}" height="${h}" fill="url(#sl-side)"/><rect x="${w - side}" width="${side}" height="${h}" fill="url(#sl-side)"/>
-    <rect x="-4" y="0" width="${w + 8}" height="${cor}" fill="url(#sl-cherrys)"/><rect x="-4" y="0" width="${w + 8}" height="${cor}" fill="url(#sl-boardlit)"/>
-    <rect x="-4" y="-4" width="${w + 8}" height="5" fill="url(#sl-cherrys)"/><rect x="-4" y="-4" width="${w + 8}" height="5" fill="rgba(255,225,190,.18)"/>
-    <line x1="-2" y1="${cor - 3}" x2="${w + 2}" y2="${cor - 3}" stroke="url(#sl-gold)" stroke-width="1.3" stroke-dasharray="1.4 1"/>
-    <rect x="0" y="${h - pl}" width="${w}" height="${pl}" fill="url(#sl-cherrys)"/><rect x="0" y="${h - pl}" width="${w}" height="${pl}" fill="url(#sl-boardlit)"/>
+  s += `<circle cx="${w / 2 - 6}" cy="${cy + 8 + cup * .32}" r="2.2" fill="url(#sl-rivet)"/><circle cx="${w / 2 + 6}" cy="${cy + 8 + cup * .32}" r="2.2" fill="url(#sl-rivet)"/>`;
+  // the pilasters: fluted, the grain up them, gilt capitals and bases
+  for (const px of [0, w - side]) { s += `<rect x="${px}" width="${side}" height="${h}" fill="url(#sl-wdv)"/><rect x="${px}" width="${side}" height="${h}" fill="url(#sl-side)" opacity=".75"/>`;
+    for (let i = 1; i <= 2; i++) s += `<rect x="${px + side * i / 3 - .5}" y="${cor + 10}" width="1" height="${h - cor - pl - 22}" rx=".5" fill="rgba(10,5,0,.55)"/><rect x="${px + side * i / 3 - 1}" y="${cor + 10}" width=".5" height="${h - cor - pl - 22}" fill="rgba(255,230,190,.18)"/>`;
+    s += carve(`M${px - .5} ${cor} h${side + 1} v5 h${-side - 1}Z`, "gold", .6) + leaf(px + side / 2, cor + 9, px + side / 2, cor + 2, side * .34, 0, 2, "gold", .5) + carve(`M${px - .5} ${h - pl - 6} h${side + 1} v5 h${-side - 1}Z`, "gold", .6); }
+  // the cornice: a cove, dentils, a bead, a projecting cyma; a carved crest standing on it
+  s += `<rect x="-5" y="-6" width="${w + 10}" height="${cor + 6}" fill="url(#sl-wdh)"/>
+    <rect x="-5" y="-6" width="${w + 10}" height="4" fill="rgba(255,235,200,.28)"/><rect x="-5" y="-2" width="${w + 10}" height="3" fill="rgba(10,5,0,.4)"/>
+    ${Array.from({ length: Math.floor((w + 10) / 4.4) }, (_, i) => `<rect x="${-4 + i * 4.4}" y="1.4" width="2.8" height="3.4" fill="url(#sl-wdh)"/><rect x="${-4 + i * 4.4}" y="1.4" width="2.8" height=".7" fill="rgba(255,235,200,.3)"/><rect x="${-4 + i * 4.4 + 2.8}" y="1.4" width="1" height="3.4" fill="rgba(10,5,0,.55)"/>`).join("")}
+    <rect x="-4" y="${cor - 4}" width="${w + 8}" height="4" fill="url(#sl-wdh)"/><rect x="-4" y="${cor - 4}" width="${w + 8}" height="1" fill="rgba(255,235,200,.25)"/><rect x="-4" y="${cor - 1}" width="${w + 8}" height="2" fill="rgba(10,5,0,.5)"/>
+    <path d="M-2 ${cor - 2.4} H${w + 2}" stroke="${TH.goldMid}" stroke-width="1.4" stroke-dasharray="0 2.2" stroke-linecap="round"/>
+    ${cartouche(w / 2, -7, 16, TH.crest)}
+    <rect x="0" y="${h - pl}" width="${w}" height="${pl}" fill="url(#sl-wdh)"/><rect x="0" y="${h - pl}" width="${w}" height="${pl}" fill="url(#sl-boardlit)"/>
+    ${mould(-2, h - pl, w + 4, 5, [[1.2, "v"], [1.4, "c"]], "wood")}
     ${plate(w / 2 - 47, 3, 94, 14, `我的書架${count ? `　${count} ${unit}` : ""}`, "", { s1: 8.4, ls1: 1 })}`;
   return svg(w, h, s);
 }
 
-// ——— 你讀過的世界: the floor globe; the map is assets/world.svg (world.js drawMap), the countries read in wine ———
+// ——— 你讀過的世界: a library globe on its stand — the brass meridian ring graduated round the sphere, the
+// hour circle at the pole, the broad horizon ring printed with its scales and borne on two braces; under it a turned
+// column, three cabriole legs carved at the knee, shod in brass, and a compass on the stretchers between them ———
 function globeHtml(count, unit) {
-  const w = 70, h = 200, r = 28, cx = w / 2, cy = 40, fy = h - 4, lx = r * 1.05, leg = (sx) => `M${cx + sx * lx} ${cy + 4} C${cx + sx * lx * 1.1} ${cy + r * 1.2}, ${cx + sx * lx * .5} ${fy - r * .6}, ${cx + sx * lx * 1.05} ${fy}`;
-  const ring = (back) => { const rx = r * 1.22, ry = r * .26, d = back ? `M${cx - rx} ${cy} A${rx} ${ry} 0 0 1 ${cx + rx} ${cy}` : `M${cx - rx} ${cy} A${rx} ${ry} 0 0 0 ${cx + rx} ${cy}`;
-    return `<path d="${d}" fill="none" stroke="#3b2312" stroke-width="${r * .17}"/><path d="${d}" fill="none" stroke="url(#sl-cherrys)" stroke-width="${r * .15}"/><path d="${d}" fill="none" stroke="#eadfc0" stroke-width="${r * .085}"/>
-      <path d="${d}" fill="none" stroke="#7a6644" stroke-width="${r * .07}" stroke-dasharray=".5 2.2"/>${back ? `<path d="${d}" fill="none" stroke="rgba(0,0,0,.35)" stroke-width="${r * .17}"/>` : ""}`; };
-  const back = `<ellipse cx="${cx}" cy="${fy}" rx="${r * 1.3}" ry="6" fill="url(#sl-drop)"/>
-    ${[-1, 1].map((sx) => `<path d="${leg(sx)}" fill="none" stroke="#2a1608" stroke-width="5.4"/><path d="${leg(sx)}" fill="none" stroke="url(#sl-cherryvs)" stroke-width="4"/>`).join("")}
-    <path d="M${cx} ${cy + r * .3} V${fy - 2}" stroke="#2a1608" stroke-width="5"/><path d="M${cx} ${cy + r * .3} V${fy - 2}" stroke="url(#sl-cherryvs)" stroke-width="3.6"/>
-    <path d="M${cx - lx * .78} ${fy - r * .55} H${cx + lx * .78}" stroke="#2a1608" stroke-width="4"/><path d="M${cx - lx * .78} ${fy - r * .55} H${cx + lx * .78}" stroke="url(#sl-cherrys)" stroke-width="2.8"/>
-    <circle cx="${cx}" cy="${fy - r * .55}" r="3.4" fill="url(#sl-rivet)"/>${ring(true)}
-    <g transform="rotate(-23 ${cx} ${cy})"><circle cx="${cx}" cy="${cy}" r="${r + 3.4}" fill="none" stroke="#5a3c12" stroke-width="4.2"/><circle cx="${cx}" cy="${cy}" r="${r + 3.4}" fill="none" stroke="url(#sl-goldd)" stroke-width="3.2"/><circle cx="${cx}" cy="${cy}" r="${r + 3.4}" fill="none" stroke="#5a3c12" stroke-width=".5" stroke-dasharray=".4 2.2"/></g>`;
+  const w = 70, h = 200, r = 28, cx = w / 2, cy = 40, fy = h - 4, rx = r * 1.27, ry = r * .3, rx2 = r * 1.02, ry2 = r * .2;
+  const turned = (prof, top) => { const L = [], R = []; for (const [y, hw] of prof) { L.push([cx - hw, top + y]); R.push([cx + hw, top + y]); } return ptsD([...L, ...R.reverse()]); };
+  const col = turned([[0, 2.4], [3, 3.6], [5, 2.2], [12, 2.4], [20, 4.6], [30, 5.4], [38, 4.2], [46, 2.4], [52, 2.4], [55, 4], [60, 4.4], [64, 3]], cy + r * .78);
+  const hub = cy + r * .78 + 64;
+  const cabr = (sx) => { const f = (x, y) => `${(cx + sx * x).toFixed(1)} ${y.toFixed(1)}`;
+    return `M${f(2, hub - 2)} C${f(16, hub)} ${f(25, hub + 10)} ${f(24, hub + 22)} C${f(23, hub + 30)} ${f(27, fy - 6)} ${f(32, fy - 1)} L${f(26, fy)} C${f(20, fy - 6)} ${f(17, hub + 28)} ${f(17, hub + 20)} C${f(17, hub + 10)} ${f(10, hub + 6)} ${f(1, hub + 5)}Z`; };
+  const front = `M${cx - 3.4} ${hub + 2} C${cx - 7} ${hub + 12} ${cx - 2} ${hub + 22} ${cx - 3} ${hub + 30} L${cx - 4.6} ${fy + 1} H${cx + 4.6} L${cx + 3} ${hub + 30} C${cx + 2} ${hub + 22} ${cx + 7} ${hub + 12} ${cx + 3.4} ${hub + 2}Z`;
+  const wd = (d, grain = "url(#sl-wdv)", k = 1) => `<path d="${d}" fill="rgba(15,6,0,.5)" transform="translate(${.9 * k} ${.9 * k})"/><path d="${d}" fill="${grain}"/><path d="${d}" fill="url(#sl-relw)"/>`;
+  // the horizon ring, its far half or its near half: the paper band on top (degrees and the months between two rules), the
+  // wooden rim below it
+  const band = (back) => { const s1 = back ? 1 : 0, s2 = back ? 0 : 1, d = `M${cx - rx} ${cy} A${rx} ${ry} 0 0 ${s1} ${cx + rx} ${cy} L${cx + rx2} ${cy} A${rx2} ${ry2} 0 0 ${s2} ${cx - rx2} ${cy}Z`;
+    let t = "";
+    for (let i = 0; i <= 36; i++) { const a = Math.PI * (back ? 1 + i / 36 : i / 36), c = Math.cos(a), sn = Math.sin(a), l = i % 3 ? .45 : .8;
+      t += `<path d="M${(cx + rx2 * c).toFixed(2)} ${(cy + ry2 * sn).toFixed(2)} L${(cx + (rx2 + (rx - rx2) * l) * c).toFixed(2)} ${(cy + (ry2 + (ry - ry2) * l) * sn).toFixed(2)}" stroke="rgba(70,50,25,.55)" stroke-width=".3"/>`; }
+    const mid = (k) => `<path d="M${cx - (rx2 + (rx - rx2) * k)} ${cy} A${rx2 + (rx - rx2) * k} ${ry2 + (ry - ry2) * k} 0 0 ${s1} ${cx + rx2 + (rx - rx2) * k} ${cy}" fill="none" stroke="rgba(120,30,30,.5)" stroke-width=".35"/>`;
+    const rim = back ? "" : `<path d="M${cx - rx} ${cy} A${rx} ${ry} 0 0 0 ${cx + rx} ${cy} v3.4 A${rx} ${ry} 0 0 1 ${cx - rx} ${cy + 3.4}Z" fill="url(#sl-wdh)"/><path d="M${cx - rx} ${cy} A${rx} ${ry} 0 0 0 ${cx + rx} ${cy} v3.4 A${rx} ${ry} 0 0 1 ${cx - rx} ${cy + 3.4}Z" fill="url(#sl-turn)" opacity=".6"/><path d="M${cx - rx} ${cy + .2} A${rx} ${ry} 0 0 0 ${cx + rx} ${cy + .2}" fill="none" stroke="rgba(255,230,190,.4)" stroke-width=".5"/>`;
+    return `<path d="${d}" fill="#efe4c6"/><path d="${d}" fill="url(#sl-paper)" opacity=".5"/>${t}${mid(.55)}${mid(.75)}<path d="${d}" fill="none" stroke="rgba(60,35,10,.6)" stroke-width=".5"/>${back ? `<path d="${d}" fill="rgba(30,15,0,.22)"/>` : ""}${rim}`; };
+  // the meridian: a flat brass ring round the sphere, turned with the axis, graduated every five degrees
+  const R0 = r + 1.6, R1 = r + 5.4;
+  let mer = `<circle cx="${cx + .8}" cy="${cy + 1}" r="${(R0 + R1) / 2}" fill="none" stroke="rgba(20,10,0,.5)" stroke-width="${R1 - R0}"/><circle cx="${cx}" cy="${cy}" r="${(R0 + R1) / 2}" fill="none" stroke="url(#sl-brass)" stroke-width="${R1 - R0}"/>
+    <circle cx="${cx}" cy="${cy}" r="${R1}" fill="none" stroke="rgba(60,35,5,.7)" stroke-width=".4"/><circle cx="${cx}" cy="${cy}" r="${R0}" fill="none" stroke="rgba(60,35,5,.7)" stroke-width=".4"/><circle cx="${cx}" cy="${cy}" r="${R1 - .5}" fill="none" stroke="rgba(255,248,215,.5)" stroke-width=".3"/>`;
+  for (let i = 0; i < 72; i++) { const a = (i / 72) * 2 * Math.PI, l = i % 2 ? .4 : .62; mer += `<path d="M${(cx + R0 * Math.cos(a)).toFixed(2)} ${(cy + R0 * Math.sin(a)).toFixed(2)} L${(cx + (R0 + (R1 - R0) * l) * Math.cos(a)).toFixed(2)} ${(cy + (R0 + (R1 - R0) * l) * Math.sin(a)).toFixed(2)}" stroke="rgba(60,35,5,.6)" stroke-width=".25"/>`; }
+  mer += `${carve(`M${cx - 2.4} ${cy - R1 - 2.4} h4.8 v2.6 h-4.8Z`, "gold", .4)}${carve(`M${cx - 2.4} ${cy + R1 - .2} h4.8 v2.6 h-4.8Z`, "gold", .4)}
+    <circle cx="${cx}" cy="${cy - R1 - 6.4}" r="4" fill="url(#sl-brass)"/><circle cx="${cx}" cy="${cy - R1 - 6.4}" r="3.2" fill="#efe4c6"/>${Array.from({ length: 12 }, (_, i) => { const a = (i / 12) * 2 * Math.PI; return `<path d="M${(cx + 2.2 * Math.cos(a)).toFixed(2)} ${(cy - R1 - 6.4 + 2.2 * Math.sin(a)).toFixed(2)} L${(cx + 3 * Math.cos(a)).toFixed(2)} ${(cy - R1 - 6.4 + 3 * Math.sin(a)).toFixed(2)}" stroke="rgba(60,40,20,.7)" stroke-width=".25"/>`; }).join("")}<path d="M${cx} ${cy - R1 - 6.4} l1.6 -2" stroke="#3a2a14" stroke-width=".4"/>`;
+  const back = `<ellipse cx="${cx}" cy="${fy}" rx="${r * 1.35}" ry="6" fill="url(#sl-drop)"/>
+    ${wd(cabr(-1))}${wd(cabr(1))}${leaf(cx - 22, hub + 12, cx - 18, hub + 24, 2.4, .2, 2, "gold", .45)}${leaf(cx + 22, hub + 12, cx + 18, hub + 24, 2.4, -.2, 2, "gold", .45)}
+    ${carve(`M${cx - 33.4} ${fy - 2} h7.8 l.6 2.6 h-9Z`, "gold", .4)}${carve(`M${cx + 25.6} ${fy - 2} h7.8 l.6 2.6 h-9Z`, "gold", .4)}
+    <path d="M${cx - 21} ${fy - 18} L${cx} ${fy - 15} L${cx + 21} ${fy - 18}" fill="none" stroke="#2a1006" stroke-width="2.6"/><path d="M${cx - 21} ${fy - 18} L${cx} ${fy - 15} L${cx + 21} ${fy - 18}" fill="none" stroke="url(#sl-wdh)" stroke-width="1.8"/>
+    <ellipse cx="${cx}" cy="${fy - 14.6}" rx="7.4" ry="2.8" fill="url(#sl-brass)"/><ellipse cx="${cx}" cy="${fy - 14.9}" rx="6" ry="2.1" fill="#f1e8d0"/><path d="M${cx - 4.6} ${fy - 14.6} L${cx + 4.6} ${fy - 15.2}" stroke="#7a1f2e" stroke-width=".6"/><path d="M${cx} ${fy - 16.6} V${fy - 13.2}" stroke="rgba(60,40,20,.5)" stroke-width=".3"/>
+    ${wd(front)}${carve(`M${cx - 5.2} ${fy - 1.2} h10.4 l.8 2.6 h-12Z`, "gold", .4)}
+    ${wd(col, "url(#sl-wdv)")}<path d="${col}" fill="url(#sl-turn)" opacity=".8"/>
+    ${wd(`M${cx - 6} ${hub - 2} h12 l1 6 h-14Z`, "url(#sl-wdh)")}
+    ${[-1, 1].map((sx) => wd(`M${cx + sx * 3} ${cy + r * .82} C${cx + sx * 12} ${cy + r * .82} ${cx + sx * (rx - 4)} ${cy + 14} ${cx + sx * (rx - 1.4)} ${cy + 3} L${cx + sx * (rx + 1.2)} ${cy + 3.6} C${cx + sx * (rx - 1)} ${cy + 17} ${cx + sx * 12} ${cy + r * .82 + 3.4} ${cx + sx * 3} ${cy + r * .82 + 3.4}Z`, "url(#sl-wdh)")).join("")}
+    <path d="M${cx - 4} ${cy + R1 + 2} Q${cx} ${cy + R1 + 9} ${cx + 4} ${cy + R1 + 2}" fill="none" stroke="url(#sl-brass)" stroke-width="2.2"/>
+    ${band(true)}<g transform="rotate(-23 ${cx} ${cy})">${mer}</g>`;
   const cl = uid("gc"), MW = 4 * r, MH = MW * 504 / 990;
-  const front = `<clipPath id="${cl}"><circle cx="${cx}" cy="${cy}" r="${r}"/></clipPath><g clip-path="url(#${cl})"><g transform="rotate(-23 ${cx} ${cy})">
+  const fr = `<clipPath id="${cl}"><circle cx="${cx}" cy="${cy}" r="${r}"/></clipPath><g clip-path="url(#${cl})"><g transform="rotate(-23 ${cx} ${cy})">
       ${[-.6, -.3, 0, .3, .6].map((k) => `<ellipse cx="${cx}" cy="${cy + k * r}" rx="${r * Math.sqrt(1 - k * k)}" ry="${r * .12 * Math.sqrt(1 - k * k)}" fill="none" stroke="rgba(90,70,40,.35)" stroke-width=".4"/>`).join("")}
       ${[.35, .75].map((k) => `<ellipse cx="${cx}" cy="${cy}" rx="${r * k}" ry="${r}" fill="none" stroke="rgba(90,70,40,.3)" stroke-width=".4"/>`).join("")}</g>
-      <circle cx="${cx}" cy="${cy}" r="${r}" fill="rgba(170,130,60,.12)"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="url(#sl-sphere)"/>
+      <circle cx="${cx}" cy="${cy}" r="${r}" fill="rgba(170,130,60,.14)"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="url(#sl-sphere)"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="url(#sl-varnish)"/>
       <ellipse cx="${cx - r * .38}" cy="${cy - r * .45}" rx="${r * .3}" ry="${r * .2}" transform="rotate(-30 ${cx - r * .38} ${cy - r * .45})" fill="url(#sl-shine)"/></g>
-    <g transform="rotate(-23 ${cx} ${cy})"><path d="M${cx - 2.2} ${cy - r - 6} h4.4 M${cx - 2.2} ${cy + r + 6} h4.4" stroke="url(#sl-gold)" stroke-width="3"/></g>${ring(false)}
+    <g transform="rotate(-23 ${cx} ${cy})"><circle cx="${cx}" cy="${cy - r}" r="1.4" fill="url(#sl-rivet)"/></g>${band(false)}
     ${plate(cx - 32, 112, 64, count ? 24 : 15, "你讀過的世界", count ? `${count} ${unit}` : "", { s1: 7.6, s2: 7.4, ls1: .5 })}`;
   // the map between the two drawings: a disc of sea, the map turned with the axis, centred near Vienna
-  return `${svg(w, h, back)}<span class="sl-map" style="left:${cx - r}px;top:${cy - r}px;width:${2 * r}px;height:${2 * r}px"><span class="sl-mapin" style="left:${r - .545 * MW}px;top:${r - .3 * MH}px;width:${MW}px;height:${MH}px;transform-origin:${.545 * MW}px ${.3 * MH}px"></span></span>${svg(w, h, front)}`;
+  return `${svg(w, h, back)}<span class="sl-map" style="left:${cx - r}px;top:${cy - r}px;width:${2 * r}px;height:${2 * r}px"><span class="sl-mapin" style="left:${r - .545 * MW}px;top:${r - .3 * MH}px;width:${MW}px;height:${MH}px;transform-origin:${.545 * MW}px ${.3 * MH}px"></span></span>${svg(w, h, fr)}`;
 }
 
 // ——— 郵票冊: open, green leather, the newest stamps on its pages (the day's picture, stamps.js stampPicture), the count
@@ -216,24 +397,36 @@ function stamp(x, y, w, h, img, rot) {
 const leatherOf = (w, h, c, a = .8) => `<rect width="${w}" height="${h}" rx="3" fill="url(#sl-leather)"/><rect width="${w}" height="${h}" rx="3" fill="${c}" opacity="${a}"/>`;
 function album(w, h, imgs, count, unit) {
   const m = 5, pw = (w - 2 * m) / 2, ph = h - 2 * m;
-  let s = `${shade(0, 0, w, h, 3)}${leatherOf(w, h, "#173a29", .82)}<rect x="1.5" y="1.5" width="${w - 3}" height="${h - 3}" rx="2" fill="none" stroke="url(#sl-gold)" stroke-width=".7"/>`;
+  // the boards: green leather, a gilt roll round them, the corners worn lighter; the spine's raised bands at head and tail
+  let s = `${shade(0, 0, w, h, 3)}${leatherOf(w, h, "#173a29", .82)}<rect x="1.5" y="1.5" width="${w - 3}" height="${h - 3}" rx="2" fill="none" stroke="url(#sl-gold)" stroke-width=".7"/>
+    <rect x="2.6" y="2.6" width="${w - 5.2}" height="${h - 5.2}" rx="1.6" fill="none" stroke="url(#sl-gold)" stroke-width=".5" stroke-dasharray=".6 .8"/>
+    ${[[0, 0], [w, 0], [0, h], [w, h]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="3.4" fill="rgba(200,220,190,.12)"/>`).join("")}
+    ${[-1, 1].map((sy) => [-3, 0, 3].map((dx) => `<rect x="${w / 2 + dx - .7}" y="${sy < 0 ? .4 : h - 2.4}" width="1.4" height="2" rx=".6" fill="#0f2a1c"/><rect x="${w / 2 + dx - .7}" y="${sy < 0 ? .4 : h - 2.4}" width=".5" height="2" fill="rgba(200,230,200,.25)"/>`).join("")).join("")}`;
   for (const side of [0, 1]) {
     const px = m + side * pw;
-    s += `<rect x="${px}" y="${m}" width="${pw}" height="${ph}" fill="#efe6cf"/><rect x="${px}" y="${m}" width="${pw}" height="${ph}" fill="url(#sl-paper)" opacity=".6"/>
-      <rect x="${px + (side ? 0 : pw - 10)}" y="${m}" width="10" height="${ph}" fill="url(#sl-side)" opacity="${side ? .35 : .25}"/>`;
+    // the page block under the open page: a few leaves' edges at the fore-edge
+    s += [3, 2, 1].map((k) => `<rect x="${side ? px + k * .5 : px - k * .5}" y="${m + k * .45}" width="${pw}" height="${ph}" fill="${k % 2 ? "#e2d6b8" : "#efe5cc"}"/>`).join("");
+    s += `<rect x="${px}" y="${m}" width="${pw}" height="${ph}" fill="#efe6cf"/><rect x="${px}" y="${m}" width="${pw}" height="${ph}" fill="url(#sl-paper)" opacity=".6"/>`;
     // a small album (the one on the sill) keeps room for its words: three rows of stamps, the head and the foot wider
     const small = w < 90, cols = 3, rows = small ? 3 : 4, gx = pw * .1, gy = ph * (small ? .22 : .16), foot = ph * (small ? .2 : .1), cw = (pw - 2 * gx) / cols, rh = (ph - gy - foot) / rows;
-    for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
-      const k = side * cols * rows + r * cols + c, sx = px + gx + c * cw + cw * .12, sy = m + gy + r * rh + rh * .08, sw = cw * .76, shh = rh * .84;
-      s += `<rect x="${sx}" y="${sy}" width="${sw}" height="${shh}" fill="none" stroke="rgba(120,100,70,.35)" stroke-width=".4"/>`;
-      if (k < imgs.length) s += stamp(sx, sy, sw, shh, imgs[k], ((k * 7) % 5 - 2) * .6);
+    for (let r = 0; r < rows; r++) { // the glassine strip each row of stamps is slipped into
+      const sy = m + gy + r * rh + rh * .08, shh = rh * .84;
+      s += `<rect x="${px + gx * .6}" y="${sy + shh * .45}" width="${pw - gx * 1.2}" height="${shh * .55}" fill="rgba(255,255,250,.28)"/><rect x="${px + gx * .6}" y="${sy + shh * .45}" width="${pw - gx * 1.2}" height=".35" fill="rgba(120,110,90,.4)"/>`;
+      for (let c = 0; c < cols; c++) {
+        const k = side * cols * rows + r * cols + c, sx = px + gx + c * cw + cw * .12, sw = cw * .76;
+        s += `<rect x="${sx}" y="${sy}" width="${sw}" height="${shh}" fill="none" stroke="rgba(120,100,70,.3)" stroke-width=".35"/>`;
+        if (k < imgs.length) s += stamp(sx, sy, sw, shh, imgs[k], ((k * 7) % 5 - 2) * .6);
+      }
+      s += `<rect x="${px + gx * .6}" y="${sy + shh * .45}" width="${pw - gx * 1.2}" height="${shh * .55}" fill="rgba(255,255,250,.1)"/><rect x="${px + gx * .6}" y="${sy + shh * .45 + .3}" width="${pw - gx * 1.2}" height=".3" fill="rgba(255,255,255,.55)"/>`;
     }
     // each page's head set to fit the page: 郵票冊 on the right, BRIEFMARKEN on the left
     const fit = (len, em, max) => Math.min(max, (pw * .82) / (len * em));
     s += side ? ink(px + pw / 2, m + gy * .72, "郵票冊", { size: fit(3, 1.5, 6), w: 600, ls: fit(3, 1.5, 6) * .4 }, "#6b5a40")
       : ink(px + pw / 2, m + gy * .72, "BRIEFMARKEN", { fam: "Cormorant SC", size: fit(11, .86, 5.2), w: 600, ls: fit(11, .86, 5.2) * .2 }, "#6b5a40");
+    // the page curving down into the gutter
+    s += `<rect x="${side ? px : px + pw * .55}" y="${m}" width="${pw * .45}" height="${ph}" fill="url(#sl-gutter)" ${side ? `transform="rotate(180 ${px + pw * .225} ${m + ph / 2})"` : ""}/>`;
   }
-  s += `<rect x="${w / 2 - 1}" y="${m}" width="2" height="${ph}" fill="rgba(60,40,20,.35)"/>${ink(w - m - pw * .1, h - m - (w < 90 ? ph * .05 : 4), `${count} ${unit}`, { size: w < 90 ? 5.4 : 6.4, w: 600, ls: .3, anchor: "end" }, "#4e4a44")}`;
+  s += `<rect x="${w / 2 - .6}" y="${m}" width="1.2" height="${ph}" fill="rgba(40,25,10,.45)"/>${ink(w - m - pw * .1, h - m - (w < 90 ? ph * .05 : 4), `${count} ${unit}`, { size: w < 90 ? 5.4 : 6.4, w: 600, ls: .3, anchor: "end" }, "#4e4a44")}`;
   return svg(w, h, s);
 }
 function albumClosed(w, h) {
@@ -250,28 +443,36 @@ function pencil(len, rot, x, y) {
     <path d="M${len * .84} 0 L${len} 2.5 L${len * .84} 5Z" fill="#e8c9a0"/><path d="M${len * .94} 1.6 L${len} 2.5 L${len * .94} 3.4Z" fill="#2a2a2a"/>
     <rect x="${len * .1}" y="1.4" width="${len * .22}" height="1" fill="url(#sl-foil)" opacity=".85"/></g>`;
 }
+// ——— 劃線本: the notebook open — its leather boards showing round the page block, a blind rule tooled on
+// them, the leaves' edges at the fore-edge and the foot, the pages curving into the gutter, a headband at the spine; pencil
+// under some of its lines, the green pencil on it, the count pencilled ———
 function notebook(w, h, count, unit) {
   const m = 4, pw = (w - 2 * m) / 2, ph = h - 2 * m, marked = Math.min(count, 8);
-  let s = `${shade(0, 0, w, h, 3)}<rect width="${w}" height="${h}" rx="3" fill="#1d1410"/><rect width="${w}" height="${h}" rx="3" fill="url(#sl-leather)" opacity=".45"/>
-    <rect x="${w * .62}" y="${h - 2}" width="3" height="${h * .18}" fill="#7a1f2e"/>`;
+  let s = `${shade(0, 0, w, h, 3)}<rect width="${w}" height="${h}" rx="3" fill="#1d1410"/><rect width="${w}" height="${h}" rx="3" fill="url(#sl-leather)" opacity=".5"/>
+    <rect x="1.4" y="1.4" width="${w - 2.8}" height="${h - 2.8}" rx="2.2" fill="none" stroke="rgba(0,0,0,.45)" stroke-width=".5"/><rect x="1.8" y="1.8" width="${w - 2.8}" height="${h - 2.8}" rx="2.2" fill="none" stroke="rgba(255,220,180,.12)" stroke-width=".4"/>
+    <rect x="${w * .62}" y="${h - 2}" width="3" height="${h * .18}" fill="#7a1f2e"/><rect x="${w * .62}" y="${h - 2}" width="1" height="${h * .18}" fill="rgba(255,200,200,.2)"/>`;
   let k = 0;
   for (const side of [0, 1]) {
     const px = m + side * pw, lines = Math.floor(ph / 6.2) - 3;
-    s += `<rect x="${px}" y="${m}" width="${pw}" height="${ph}" fill="#f6efdf"/><rect x="${px + (side ? 0 : pw - 9)}" y="${m}" width="9" height="${ph}" fill="url(#sl-side)" opacity=".22"/>`;
+    s += [2.4, 1.6, .8].map((d) => `<rect x="${side ? px + d * .6 : px - d * .6}" y="${m + d * .5}" width="${pw}" height="${ph}" fill="${d > 2 ? "#d8cbad" : d > 1 ? "#ebe1c8" : "#e2d6ba"}"/>`).join("");
+    s += `<rect x="${px}" y="${m}" width="${pw}" height="${ph}" fill="#f6efdf"/><rect x="${px}" y="${m}" width="${pw}" height="${ph}" fill="url(#sl-paper)" opacity=".35"/>`;
     for (let i = 0; i < lines; i++) {
       const y = m + ph * .2 + i * 6.2, len = pw * (.62 + ((i * 37 + side * 11) % 30) / 100);
       s += count ? `<rect x="${px + pw * .1}" y="${y}" width="${len * .9}" height="1.5" fill="rgba(70,62,50,.32)"/>` : `<rect x="${px + pw * .08}" y="${y + 1}" width="${pw * .84}" height=".5" fill="rgba(90,110,140,.3)"/>`;
       if (count && (i + side * 2) % 3 === 1 && k++ < marked) s += `<path d="M${px + pw * .1} ${y + 2.6} q${len * .2} -.7 ${len * .44} .2 t${len * .4} -.2" fill="none" stroke="rgba(55,55,58,.75)" stroke-width=".8" stroke-linecap="round"/>`;
     }
+    s += `<rect x="${side ? px : px + pw * .5}" y="${m}" width="${pw * .5}" height="${ph}" fill="url(#sl-gutter)" ${side ? `transform="rotate(180 ${px + pw * .25} ${m + ph / 2})"` : ""}/>`;
   }
-  s += `<rect x="${w / 2 - .8}" y="${m}" width="1.6" height="${ph}" fill="rgba(60,40,20,.3)"/>${ink(m + pw / 2, m + ph * .12, "劃線本", { size: 7.6, w: 600, ls: 2 }, "#4b4a47")}`;
+  s += `<rect x="${w / 2 - .7}" y="${m}" width="1.4" height="${ph}" fill="rgba(50,30,15,.4)"/>
+    ${[0, 1, 2, 3].map((i) => `<rect x="${w / 2 - 2 + i}" y="${m - 1.4}" width="1" height="1.6" fill="${i % 2 ? "#7a1f2e" : "#e9d6ad"}"/>`).join("")}
+    ${ink(m + pw / 2, m + ph * .12, "劃線本", { size: 7.6, w: 600, ls: 2 }, "#4b4a47")}`;
   if (count) s += ink(w - m - 5, h - m - 4, `${count} ${unit}`, { size: 6.4, w: 400, ls: .3, anchor: "end" }, "#56544f");
   return svg(w, h, s + pencil(w * .78, -16, w * .2, h * .78));
 }
 
 // ——— 紀念章: the case open, ivory silk in the lid, the medals earned in the wine velvet; empty, shut ———
 const medalCoin = (cx, cy, r) => `<circle cx="${cx + .8}" cy="${cy + 1.6}" r="${r}" fill="rgba(0,0,0,.45)"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="url(#sl-coin)"/>
-  <circle cx="${cx}" cy="${cy}" r="${r * .86}" fill="none" stroke="#8a6220" stroke-width=".6"/><circle cx="${cx}" cy="${cy}" r="${r * .78}" fill="none" stroke="#fff3c4" stroke-width=".4" stroke-dasharray=".6 1.1"/>
+  <circle cx="${cx}" cy="${cy}" r="${r * .86}" fill="none" stroke="#8a6220" stroke-width=".6"/><circle cx="${cx}" cy="${cy}" r="${r * .78}" fill="none" stroke="#f6e6b4" stroke-width=".4" stroke-dasharray=".6 1.1"/>
   <use href="#sl-robin" x="${cx - r * .5}" y="${cy - r * .36}" width="${r}" height="${r * .7}" style="--rb-ink:#9a6e26;--rb-breast:#f3d78e;--rb-wing:#7a5418;--rb-eye:#6e4c16"/>`;
 function medalCase(w, h, count, unit) {
   const lidH = h * .42, tray = h - lidH, cols = 3, rows = 2;
@@ -298,67 +499,112 @@ const medalCaseClosed = (w, h) => svg(w, h, `${shade(0, 0, w, h, 2)}<rect width=
   <circle cx="${w / 2}" cy="${h * .3}" r="${h * .17}" fill="none" stroke="url(#sl-gold)" stroke-width="1"/><use href="#sl-robin" x="${w / 2 - h * .12}" y="${h * .3 - h * .08}" width="${h * .24}" height="${h * .16}" style="--rb-ink:#d9ab4d;--rb-breast:#f6d06a;--rb-wing:#7a5418"/>
   ${gilt(w / 2, h * .64, "紀念章", { size: 8, ls: 2 })}`);
 
-// ——— 詩箋: the cherry writing box, the letters standing in it, the newest in front with its poem's title (filled in once
-// the article is read, wireSalon) and three printed lines; empty, the box alone ———
+// ——— 詩箋: the mahogany writing box — its rim moulded, a line of pale stringing let in round the front, brass
+// angles at its corners, two small bracket feet; the letters standing in it, the newest in front with its poem's title
+// (filled in once the article is read, wireSalon) and three printed lines; empty, the box alone ———
 function writingBox(w, h, count, unit) {
   const front = h * .42, top = h - front, n = Math.min(count, 6);
-  let s = `${shade(0, 0, w, h, 2)}<rect x="2" y="${top * .55}" width="${w - 4}" height="${top * .5}" fill="#1a0e07"/>`;
+  let s = `${shade(0, 0, w, h, 2)}<rect x="2" y="${top * .55}" width="${w - 4}" height="${top * .5}" fill="#1a0e07"/><rect x="2" y="${top * .55}" width="${w - 4}" height="${top * .5}" fill="url(#sl-velvet)" opacity=".25"/>`;
   for (let i = 0; i < n; i++) {
     const sx = 6 + i * 1.6, sy = top * .02 + (n - 1 - i) * 2.2, sw = w - 12 - i * 1.4, rot = (i - n / 2) * .7, last = i === n - 1;
-    s += `<g transform="rotate(${rot} ${w / 2} ${top})"><rect x="${sx}" y="${sy}" width="${sw}" height="${top + 4}" fill="${last ? "#f7f0de" : "#ebe1c8"}" stroke="rgba(120,100,70,.35)" stroke-width=".4"/>
+    s += `<g transform="rotate(${rot} ${w / 2} ${top})"><rect x="${sx}" y="${sy}" width="${sw}" height="${top + 4}" fill="${last ? "#f7f0de" : "#ebe1c8"}" stroke="rgba(120,100,70,.35)" stroke-width=".4"/><rect x="${sx}" y="${sy}" width="${sw}" height="${top + 4}" fill="url(#sl-paper)" opacity=".3"/>
       ${last ? `<text class="sl-poem" x="${w / 2}" y="${sy + 9}" text-anchor="middle" font-family="Cormorant SC" font-weight="600" font-size="4.6" letter-spacing=".6" fill="#7a6a50"></text>${[0, 1, 2].map((k) => `<rect x="${w / 2 - sw * (.3 - k * .03)}" y="${sy + 14 + k * 4.4}" width="${sw * (.6 - k * .06)}" height="1.2" fill="rgba(60,50,40,.45)"/>`).join("")}` : ""}</g>`;
   }
-  const pw = Math.min(w - 14, 58);
-  s += `<rect y="${top}" width="${w}" height="${front}" rx="2" fill="url(#sl-cherryvs)"/><rect y="${top}" width="${w}" height="${front}" rx="2" fill="url(#sl-boardlit)"/>
-    <rect x="-1" y="${top - 2}" width="${w + 2}" height="3.4" fill="url(#sl-cherrys)"/><rect x="-1" y="${top - 2}" width="${w + 2}" height="1.2" fill="rgba(255,225,190,.3)"/>
+  const pw = Math.min(w - 14, 58), ang = (x, y, sx, sy) => carve(`M${x} ${y} h${sx * 5} v${sy * 1.4} h${-sx * 3.6} v${sy * 3.6} h${-sx * 1.4}Z`, "gold", .35);
+  s += `<rect y="${top}" width="${w}" height="${front}" rx="1" fill="url(#sl-wdh)"/><rect y="${top}" width="${w}" height="${front}" rx="1" fill="url(#sl-boardlit)"/>
+    <rect x="2.6" y="${top + 3.2}" width="${w - 5.2}" height="${front - 6}" fill="none" stroke="rgba(236,206,150,.55)" stroke-width=".5"/><rect x="2.6" y="${top + 3.7}" width="${w - 5.2}" height="${front - 6}" fill="none" stroke="rgba(10,3,0,.3)" stroke-width=".3"/>
+    <rect x="-1" y="${top - 2.4}" width="${w + 2}" height="3.6" fill="url(#sl-wdh)"/><rect x="-1" y="${top - 2.4}" width="${w + 2}" height="1.2" fill="rgba(255,228,190,.4)"/><rect x="-1" y="${top + .6}" width="${w + 2}" height=".6" fill="rgba(10,3,0,.6)"/>
+    ${ang(0, top, 1, 1)}${ang(w, top, -1, 1)}${ang(0, h, 1, -1)}${ang(w, h, -1, -1)}
+    <path d="M2 ${h} h6 l-1 2.2 h-4Z M${w - 2} ${h} h-6 l1 2.2 h4Z" fill="#2a1006"/>
     ${plate(w / 2 - pw / 2, top + front / 2 - 8, pw, 16, count ? `詩箋　${count} ${unit}` : "詩箋", "", { s1: 8, ls1: .8 })}`;
   return svg(w, h, s);
 }
 
-// ——— 版畫冊: the blue leather portfolio, gilt title, wine ribbons; the newest print peeping out of it, brown as an etching ———
+// ——— 版畫冊: the portfolio, half-bound — blue cloth boards, the spine and the corners in darker leather, a gilt
+// roll round the panel with a small fleuron at each corner, gilt title, wine ribbons; the boards' edges showing their
+// thickness; the newest print peeping out of it, brown as an etching ———
 function portfolio(w, h, img, count, unit) {
   let s = shade(0, 0, w, h, 2);
   if (count) s += `<rect x="${w * .06}" y="${-h * .1}" width="${w * .84}" height="${h * .5}" fill="#ddd0b2" stroke="rgba(120,100,70,.4)" stroke-width=".4" transform="rotate(3 ${w / 2} ${h / 2})"/>
-    <g transform="rotate(-5 ${w / 2} ${h / 2})"><rect x="${w * .12}" y="${-h * .3}" width="${w * .72}" height="${h * .7}" fill="#efe5cc" stroke="rgba(120,100,70,.4)" stroke-width=".4"/>
+    <g transform="rotate(-5 ${w / 2} ${h / 2})"><rect x="${w * .12}" y="${-h * .3}" width="${w * .72}" height="${h * .7}" fill="#efe5cc" stroke="rgba(120,100,70,.4)" stroke-width=".4"/><rect x="${w * .12}" y="${-h * .3}" width="${w * .72}" height="${h * .7}" fill="url(#sl-paper)" opacity=".4"/>
     <rect x="${w * .18}" y="${-h * .25}" width="${w * .6}" height="${h * .4}" fill="#cbb48a"/>
     ${img ? `<image href="${esc(img)}" x="${w * .18}" y="${-h * .25}" width="${w * .6}" height="${h * .4}" preserveAspectRatio="xMidYMid slice" opacity=".62"/>` : ""}
     <rect x="${w * .18}" y="${-h * .25}" width="${w * .6}" height="${h * .4}" fill="#7a5226" opacity=".32"/>
+    <rect x="${w * .18 - 1.4}" y="${-h * .25 - 1.4}" width="${w * .6 + 2.8}" height="${h * .4 + 2.8}" fill="none" stroke="rgba(120,100,70,.35)" stroke-width=".5"/>
     <rect x="${w * .18}" y="${-h * .25}" width="${w * .6}" height="${h * .4}" fill="none" stroke="rgba(90,70,40,.5)" stroke-width=".5"/></g>`;
-  s += `${leatherOf(w, h, "#1b2a44", .8).replace(/rx="3"/g, 'rx="2"')}
-    <rect width="${w * .14}" height="${h}" fill="rgba(0,0,0,.28)"/><rect x="${w * .14}" width="1" height="${h}" fill="rgba(255,255,255,.08)"/>
-    <rect x="${w * .2}" y="${h * .08}" width="${w * .72}" height="${h * .84}" fill="none" stroke="url(#sl-gold)" stroke-width=".9"/><rect x="${w * .23}" y="${h * .1}" width="${w * .66}" height="${h * .8}" fill="none" stroke="url(#sl-gold)" stroke-width=".35"/>
+  const corner = (x, y, sx, sy) => `<path d="M${x} ${y} h${sx * 13} L${x} ${y + sy * 13}Z" fill="url(#sl-leather)"/><path d="M${x} ${y} h${sx * 13} L${x} ${y + sy * 13}Z" fill="#0e1626" opacity=".72"/><path d="M${x + sx * 13} ${y} L${x} ${y + sy * 13}" stroke="rgba(170,190,220,.25)" stroke-width=".6"/>`;
+  s += `<rect x="1.4" y="1.6" width="${w}" height="${h}" rx="2" fill="#cdbf9e"/><rect x="1.4" y="${h - .2}" width="${w}" height="1.8" fill="rgba(0,0,0,.25)"/>
+    ${leatherOf(w, h, "#1b2a44", .8).replace(/rx="3"/g, 'rx="2"')}<rect width="${w}" height="${h}" rx="2" fill="url(#sl-weave)" opacity=".5"/>
+    <rect width="${w * .16}" height="${h}" fill="url(#sl-leather)"/><rect width="${w * .16}" height="${h}" fill="#0e1626" opacity=".72"/><rect x="${w * .16}" width="1" height="${h}" fill="rgba(255,255,255,.1)"/><rect x="${w * .16 + 1}" width="1" height="${h}" fill="rgba(0,0,0,.3)"/>
+    ${[.2, .4, .6, .8].map((t) => `<rect x="0" y="${h * t - .8}" width="${w * .16}" height="1.6" fill="rgba(255,255,255,.06)"/><rect x="0" y="${h * t + .6}" width="${w * .16}" height=".6" fill="rgba(0,0,0,.35)"/>`).join("")}
+    ${corner(w, 0, -1, 1)}${corner(w, h, -1, -1)}
+    <rect x="${w * .22}" y="${h * .09}" width="${w * .66}" height="${h * .82}" fill="none" stroke="url(#sl-gold)" stroke-width=".9"/><rect x="${w * .245}" y="${h * .115}" width="${w * .61}" height="${h * .77}" fill="none" stroke="url(#sl-gold)" stroke-width=".35" stroke-dasharray=".7 .7"/>
+    ${[[w * .22, h * .09], [w * .88, h * .09], [w * .22, h * .91], [w * .88, h * .91]].map(([x, y]) => `<path d="M${x} ${y - 2.2} l1.4 2.2 l-1.4 2.2 l-1.4 -2.2Z" fill="url(#sl-foil)"/>`).join("")}
     ${gilt(w * .56, h * .47, "版畫冊", { size: Math.min(12, w * .13), ls: 3 })}${gilt(w * .56, h * .47 + 10, "RADIERUNGEN", { fam: "Cormorant SC", size: 5.4, w: 600, ls: 1 })}${count ? gilt(w * .56, h * .8, `${count} ${unit}`, { size: 7.4, w: 600, ls: 1 }) : ""}
     <rect x="${w - 3}" y="${h * .46}" width="${w * .16}" height="3.4" fill="#7a1f2e" transform="rotate(8 ${w} ${h * .46})"/><rect x="${w - 3}" y="${h * .5}" width="${w * .12}" height="3" fill="#5a1424" transform="rotate(-10 ${w} ${h * .5})"/>`;
   return svg(w, h, s);
 }
 
 
-// ——— 收進來的: a letter rack on the wall — cherry back, a carved crest, a brass-railed pocket — the clippings starred
-// standing in it, a wine ribbon round them, the count cut in its brass; empty, the rack alone ———
+// ——— 收進來的: a letter rack hung on the wall by a brass ring — a mahogany back board shaped to an arch between
+// two ogee shoulders, a bead run round its edge, a carved shell on the arch; a pocket of a fielded panel with a brass
+// gallery along its top; the clippings starred standing in it, a wine ribbon round them, the count cut in its brass ———
 function rack(w, h, count, unit) {
-  const n = Math.min(count, 5);
-  let s = `${shade(4, 8, w - 8, h - 10, 2, .4)}<path d="M6 14 Q${w / 2} -4 ${w - 6} 14 V${h - 6} H6Z" fill="url(#sl-cherryv)"/><path d="M6 14 Q${w / 2} -4 ${w - 6} 14 V${h - 6} H6Z" fill="rgba(0,0,0,.2)"/>
-    <path d="M10 16 Q${w / 2} 2 ${w - 10} 16" fill="none" stroke="url(#sl-gold)" stroke-width=".9"/><circle cx="${w / 2}" cy="7" r="2.4" fill="url(#sl-gold)"/>`;
+  const n = Math.min(count, 5), c = w / 2;
+  const back = `M5 ${h - 6} V24 Q5 17 11 16 Q${c - 14} 14 ${c - 10} 8 Q${c} -1 ${c + 10} 8 Q${c + 14} 14 ${w - 11} 16 Q${w - 5} 17 ${w - 5} 24 V${h - 6}Z`;
+  let s = `<path d="M${c} -6 L${c - 3} 2 M${c} -6 L${c + 3} 2" stroke="rgba(30,15,5,.18)" stroke-width=".6" transform="translate(1.5 1.5)"/>
+    <circle cx="${c}" cy="-6.6" r="1.2" fill="url(#sl-rivet)"/><circle cx="${c}" cy="-2.6" r="3.4" fill="none" stroke="rgba(25,10,0,.4)" stroke-width="1.2" transform="translate(.8 1)"/><circle cx="${c}" cy="-2.6" r="3.4" fill="none" stroke="url(#sl-brass)" stroke-width="1.1"/>
+    <path d="${back}" fill="rgba(30,10,4,.35)" transform="translate(2.6 3.4)"/><path d="${back}" fill="rgba(30,10,4,.2)" transform="translate(4.4 5.4)"/>
+    <path d="${back}" fill="url(#sl-wdv)"/><path d="${back}" fill="rgba(20,6,0,.18)"/><path d="${back}" fill="url(#sl-relw)" opacity=".7"/>
+    <path d="${back}" fill="none" stroke="rgba(10,3,0,.55)" stroke-width="1.6" transform="scale(.94) translate(${w * .032} ${h * .032})"/><path d="${back}" fill="none" stroke="rgba(255,226,190,.28)" stroke-width=".6" transform="scale(.94) translate(${w * .032 - .5} ${h * .032 - .5})"/>
+    ${cartouche(c, 7, 8.6, TH.crest)}`;
   for (let i = 0; i < n; i++) { // the clippings, folded once, leaning a little this way and that
-    const cx = w / 2 + (i - (n - 1) / 2) * 7, rot = (i - (n - 1) / 2) * 5, top = 18 + (i % 2) * 4;
+    const cx = c + (i - (n - 1) / 2) * 7, rot = (i - (n - 1) / 2) * 5, top = 20 + (i % 2) * 4;
     s += `<g transform="rotate(${rot} ${cx} ${h - 30})"><rect x="${cx - 13}" y="${top}" width="26" height="${h - 34 - top}" fill="${i % 2 ? "#efe6d0" : "#f7f0de"}" stroke="rgba(120,100,70,.4)" stroke-width=".4"/>
-      <rect x="${cx - 10}" y="${top + 4}" width="20" height="2.2" fill="rgba(40,30,20,.55)"/>${[0, 1, 2, 3].map((k) => `<rect x="${cx - 10}" y="${top + 9 + k * 3.2}" width="${k === 3 ? 12 : 20}" height=".9" fill="rgba(60,50,40,.35)"/>`).join("")}</g>`;
+      <rect x="${cx - 13}" y="${top}" width="26" height="${h - 34 - top}" fill="url(#sl-paper)" opacity=".35"/><path d="M${cx - 13} ${top + 9} h26" stroke="rgba(120,100,70,.18)" stroke-width=".5"/>
+      <rect x="${cx - 10}" y="${top + 4}" width="20" height="2.2" fill="rgba(40,30,20,.55)"/>${[0, 1, 2, 3].map((k) => `<rect x="${cx - 10}" y="${top + 11 + k * 3.2}" width="${k === 3 ? 12 : 20}" height=".9" fill="rgba(60,50,40,.35)"/>`).join("")}</g>`;
   }
-  if (n) s += `<path d="M${w / 2 - 16} ${h - 36} Q${w / 2} ${h - 32} ${w / 2 + 16} ${h - 36}" stroke="#7a1f2e" stroke-width="2.4" fill="none"/><path d="M${w / 2} ${h - 34} l-4 9 M${w / 2} ${h - 34} l4 8" stroke="#7a1f2e" stroke-width="1.8"/>`;
-  s += `<rect x="4" y="${h - 34}" width="${w - 8}" height="28" rx="2" fill="url(#sl-leather)"/><rect x="4" y="${h - 34}" width="${w - 8}" height="28" rx="2" fill="#4a1a10" opacity=".55"/>
-    <rect x="3" y="${h - 35}" width="${w - 6}" height="3" fill="url(#sl-gold)"/><rect x="3" y="${h - 7}" width="${w - 6}" height="3" fill="url(#sl-gold)"/>
-    ${plate(w / 2 - 26, h - 30, 52, count ? 20 : 13, "收進來的", count ? `${count} ${unit}` : "", { s1: 7, s2: 6.6, ls1: .6 })}`;
+  if (n) s += `<path d="M${c - 16} ${h - 36} Q${c} ${h - 32} ${c + 16} ${h - 36}" stroke="#7a1f2e" stroke-width="2.4" fill="none"/><path d="M${c} ${h - 34} l-4 9 M${c} ${h - 34} l4 8" stroke="#7a1f2e" stroke-width="1.8"/>`;
+  // the pocket: its two sides, the fielded front, the gallery
+  const py = h - 33, ph = 27;
+  s += `<rect x="3" y="${py}" width="${w - 6}" height="${ph}" fill="rgba(20,6,0,.45)" transform="translate(1.6 2)"/>
+    <rect x="3" y="${py}" width="${w - 6}" height="${ph}" fill="url(#sl-wdh)"/><rect x="3" y="${py}" width="${w - 6}" height="${ph}" fill="url(#sl-boardlit)"/>
+    <rect x="7.5" y="${py + 4}" width="${w - 15}" height="${ph - 8}" fill="url(#sl-cherrys)"/><rect x="7.5" y="${py + 4}" width="${w - 15}" height="${ph - 8}" fill="none" stroke="rgba(10,3,0,.6)" stroke-width="1"/>
+    <path d="M8.5 ${py + ph - 4.5} V${py + 5} H${w - 8.5}" fill="none" stroke="rgba(255,228,190,.3)" stroke-width="1.2"/><path d="M8.5 ${py + ph - 4.5} H${w - 8.5} V${py + 5}" fill="none" stroke="rgba(0,0,0,.4)" stroke-width="1.2"/>
+    <rect x="3" y="${py}" width="${w - 6}" height="1.2" fill="rgba(255,232,196,.4)"/><rect x="3" y="${py + ph - 1}" width="${w - 6}" height="1" fill="rgba(0,0,0,.6)"/>
+    <path d="M4 ${py - 6.4} H${w - 4}" stroke="rgba(20,8,0,.5)" stroke-width="1.6" transform="translate(.6 .8)"/><path d="M4 ${py - 6.4} H${w - 4}" stroke="url(#sl-brass)" stroke-width="1.4"/>
+    ${Array.from({ length: 9 }, (_, i) => { const x = 6 + i * (w - 12) / 8; return `<path d="M${x.toFixed(2)} ${py - 6} V${py}" stroke="rgba(20,8,0,.5)" stroke-width="1" transform="translate(.5 .4)"/><path d="M${x.toFixed(2)} ${py - 6} V${py}" stroke="url(#sl-brass)" stroke-width=".8"/><circle cx="${x.toFixed(2)}" cy="${py - 3}" r=".9" fill="url(#sl-rivet)"/>`; }).join("")}
+    <circle cx="4" cy="${py - 6.6}" r="1.8" fill="url(#sl-rivet)"/><circle cx="${w - 4}" cy="${py - 6.6}" r="1.8" fill="url(#sl-rivet)"/>
+    ${plate(c - 26, h - 30, 52, count ? 20 : 13, "收進來的", count ? `${count} ${unit}` : "", { s1: 7, s2: 6.6, ls1: .6 })}`;
   return svg(w, h, s);
 }
 
 // ——— the room itself: stucco wall with gilt panelling and a cornice, the tall window onto Viennese roofs between silk
 // curtains held back by gilt cords, the parquet ———
-const boiserie = (x, y, w, h) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="rgba(255,255,255,.16)" stroke="rgba(150,125,90,.35)" stroke-width="1"/>
-  <rect x="${x + 5}" y="${y + 5}" width="${w - 10}" height="${h - 10}" fill="none" stroke="${GOLD}" stroke-width="1.1"/><rect x="${x + 8}" y="${y + 8}" width="${w - 16}" height="${h - 16}" fill="none" stroke="${GOLD}" stroke-width=".45"/>
-  ${[[x + 5, y + 5], [x + w - 5, y + 5], [x + 5, y + h - 5], [x + w - 5, y + h - 5]].map(([a, b]) => `<circle cx="${a}" cy="${b}" r="2.4" fill="url(#sl-gold)"/>`).join("")}`;
-const cornice = `<rect width="${W}" height="36" fill="url(#sl-plaster)" opacity=".9"/><rect y="36" width="${W}" height="6" fill="rgba(90,70,40,.18)"/>
-  ${Array.from({ length: 41 }, (_, i) => `<ellipse cx="${i * 10 + 5}" cy="26" rx="3" ry="4" fill="url(#sl-gold)"/><path d="M${i * 10 + 10} 22 v8" stroke="${GOLD}" stroke-width=".8"/>`).join("")}
-  ${Array.from({ length: 81 }, (_, i) => `<rect x="${i * 5}" y="10" width="3" height="5" fill="rgba(120,95,60,.22)"/>`).join("")}<rect y="33" width="${W}" height="1.5" fill="url(#sl-gold)"/>`;
+// ——— the room: a moulded panel on the wall (its frame by TH.panel: gilt, painted with a gilt fillet, or wood) ———
+function boiserie(x, y, w, h) {
+  const m = TH.panel, inner = TH.wallIn ? `<rect x="${x + 9}" y="${y + 9}" width="${w - 18}" height="${h - 18}" fill="${TH.wallIn}"/>` : "";
+  const prof = [[2.2, "v"], [1.6, "c"], [1.4, "b"], [1.2, "v"]];
+  let s = inner + mould(x + 3, y + 3, w - 6, h - 6, prof, m.mat, { paint: m.paint, k: m.k });
+  if (m.fillet) s += mould(x + 3 + 6.4, y + 3 + 6.4, w - 18.8, h - 18.8, [[.9, "v"]], "gold");
+  const cs = 13;
+  s += corner(x + 5, y + 5, cs, 1, 1, m.orn) + corner(x + w - 5, y + 5, cs, -1, 1, m.orn) + corner(x + w - 5, y + h - 5, cs, -1, -1, m.orn) + corner(x + 5, y + h - 5, cs, 1, -1, m.orn);
+  if (h > 200) s += cartouche(x + w / 2, y + 6, 15, m.orn);
+  return s;
+}
+// the crown moulding: a cyma lit from above, egg-and-dart, dentils, a bead, a cove into the wall
+const cornice = (() => {
+  const mt = TH.cornice, fill = mt === "gold" ? "url(#sl-goldd)" : mt === "wood" ? "url(#sl-wdh)" : TH.paint, band = (y, h, L) => `<rect y="${y}" width="${W}" height="${h}" fill="${fill}"/><rect y="${y}" width="${W}" height="${h}" fill="${lightOf(L)}"/>`;
+  let s = `${band(0, 6, .3)}${band(6, 3, -.25)}${band(9, 2, .2)}`;
+  for (let i = 0; i < 81; i++) s += `<rect x="${i * 5 + .6}" y="11" width="3.2" height="5" fill="${fill}"/><rect x="${i * 5 + .6}" y="11" width="3.2" height="5" fill="rgba(255,246,222,.18)"/><rect x="${i * 5 + 3.8}" y="11" width="1.2" height="5" fill="rgba(15,7,0,.45)"/>`;
+  s += `${band(16, 2.2, -.3)}${band(18.2, 10, -.08)}`;
+  const eggM = TH.cornOrn;
+  for (let i = 0; i < 41; i++) { const cx = i * 10 + 5; s += carve(`M${cx - 3} 22 a3 4.2 0 1 0 6 0 a3 4.2 0 1 0 -6 0Z`, eggM, .6) + carve(ptsD(leafPts(cx + 5, 18.6, cx + 5, 27.8, 1.1, 0, 1)), eggM, .5); }
+  s += `${band(28.2, 2, .35)}${band(30.2, 3.6, -.2)}`;
+  s += `<path d="M0 32 H${W}" stroke="${TH.goldMid}" stroke-width="1.6" stroke-dasharray="0 2.6" stroke-linecap="round"/><path d="M0 31.6 H${W}" stroke="rgba(255,250,225,.7)" stroke-width=".6" stroke-dasharray="0 2.6" stroke-linecap="round"/>`;
+  s += `${band(33.8, 4, -.35)}<rect y="37.8" width="${W}" height="6" fill="url(#sl-aoDown)"/>`;
+  return s;
+})();
 function cityReal(gx, gy, gw, gh) { // three layers of roofs in the morning haze, paler and warmer the farther off; brighter than the room
   let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
   const hz = gy + gh * .66, layer = (base, hmin, hmax, wmin, wmax, fill, extra = "") => {
@@ -369,11 +615,11 @@ function cityReal(gx, gy, gw, gh) { // three layers of roofs in the morning haze
       else d += ` L${x} ${base - hh} H${x + ww * .3} V${base - hh - 4} H${x + ww * .38} V${base - hh} H${x + ww}`; // a chimney
       x += ww; }
     return `<path d="${d} L${gx + gw + 4} ${base} V${gy + gh}Z" fill="${fill}"/>${extra}`; };
-  const fog = (y0, y1, a) => `<rect x="${gx}" y="${y0}" width="${gw}" height="${y1 - y0}" fill="rgba(250,242,226,${a})"/>`;
+  const fog = (y0, y1, a) => `<rect x="${gx}" y="${y0}" width="${gw}" height="${y1 - y0}" fill="rgba(250,240,222,${a})"/>`;
   const spire = `<path d="M${gx + gw * .3} ${hz - 2} L${gx + gw * .3 + 2.2} ${hz - 46} L${gx + gw * .3 + 4.4} ${hz - 2}Z" fill="#d9d2c6"/><path d="M${gx + gw * .66} ${hz - 4} q8 -15 16 0Z" fill="#d6cfc4"/><rect x="${gx + gw * .66 + 7.4}" y="${hz - 25}" width="1.2" height="8" fill="#d6cfc4"/>`;
   return `<rect x="${gx}" y="${gy}" width="${gw}" height="${gh}" fill="url(#sl-skyr)"/><rect x="${gx}" y="${hz - 50}" width="${gw}" height="60" fill="url(#sl-haze)"/>
-    ${spire}${layer(hz + 2, 2, 9, 8, 15, "#dbd2c4")}${fog(hz - 6, hz + 14, .45)}${layer(hz + 22, 4, 12, 10, 18, "#c3b29a")}${fog(hz + 12, hz + 32, .34)}
-    ${layer(hz + 46, 6, 16, 12, 22, "#9d8a72")}${fog(hz + 38, hz + 58, .2)}<rect x="${gx}" y="${hz + 56}" width="${gw}" height="${gy + gh - hz - 56}" fill="#8f7c64"/>
+    ${spire}${layer(hz + 2, 2, 9, 8, 15, "#d8cfc0")}${fog(hz - 6, hz + 14, .45)}${layer(hz + 22, 4, 12, 10, 18, "#c0ae96")}${fog(hz + 12, hz + 32, .34)}
+    ${layer(hz + 46, 6, 16, 12, 22, "#9c8670")}${fog(hz + 38, hz + 58, .2)}<rect x="${gx}" y="${hz + 56}" width="${gw}" height="${gy + gh - hz - 56}" fill="#8a7660"/>
     ${Array.from({ length: 4 }, (_, i) => `<rect x="${gx}" y="${hz + 60 + i * 8}" width="${gw}" height=".8" fill="rgba(240,228,205,.35)"/>`).join("")}`;
 }
 function windowSvg(x, y, w, h) {
@@ -387,28 +633,46 @@ function windowSvg(x, y, w, h) {
     <rect x="${gx}" y="${gy}" width="${gw}" height="4" fill="rgba(60,40,20,.16)"/><rect x="${gx}" y="${gy}" width="3" height="${gh}" fill="rgba(60,40,20,.1)"/>
     <rect x="${x - 7}" y="${y + h}" width="${w + 14}" height="9" fill="url(#sl-plaster)"/><rect x="${x - 7}" y="${y + h}" width="${w + 14}" height="1" fill="rgba(255,255,255,.9)"/><rect x="${x - 7}" y="${y + h + 9}" width="${w + 14}" height="4" fill="url(#sl-aoDown)"/>`;
 }
-// A curtain gathered at its waist by a gilt cord. The cord goes round the gathered silk — it bows down across the front
-// as a band round a column does seen from a little above — and runs to a rosette on the wall, its tassel hanging there.
+// A curtain of heavy silk gathered at its waist: the folds are strips that leave the rod evenly, crowd together at the
+// cord and spread again to the floor; each strip lit in its middle and dark in its valleys, the silk's own weave over it.
 function drape(x, y, w, h, flip) {
-  const tie = y + h * .58, waist = flip ? x + w * .62 : x + w * .38, out = flip ? x + w : x, f = flip ? -1 : 1;
-  const folds = Array.from({ length: 5 }, (_, i) => { const fx = x + (i + .5) * w / 5; return `<path d="M${fx} ${y} Q${fx + f * 4} ${tie - 30} ${flip ? x + w * .7 : x + w * .3} ${tie} Q${fx - f * 3} ${tie + 60} ${fx} ${y + h}" fill="none" stroke="rgba(120,90,40,.28)" stroke-width="2.4"/>`; }).join("");
+  const tie = y + h * .58, waist = flip ? x + w * .62 : x + w * .38, out = flip ? x + w : x, f = flip ? -1 : 1, N = 7;
   const d = flip ? `M${x} ${y} H${x + w} V${y + h} H${x + 4} Q${x + w * .55} ${tie + 40} ${waist} ${tie} Q${x + w * .2} ${tie - 70} ${x} ${y + 40}Z`
-    : `M${x} ${y} H${x + w} V${y + 40} Q${x + w * .8} ${tie - 70} ${waist} ${tie} Q${x + w * .45} ${tie + 40} ${x + w - 4} ${y + h} H${x}Z`;
+    : `M${x} ${y} H${x + w} V${y + h} H${x}Z`;
   const id = uid("dr"), band = `M${out - f * 1} ${tie - 3} Q${(out + waist) / 2} ${tie + 5.5} ${waist + f * 1.5} ${tie - 1.5}`;
+  const xs = (i, yy) => { // fold line i at height yy
+    const t = i / N, top = x + w * t, mid = waist - f * w * .14 + f * w * .28 * t, bot = x + w * (.08 + t * .92) + (flip ? -w * .04 : w * .04);
+    if (yy <= tie) { const k = (yy - y) / (tie - y), e = k * k; return top + (mid - top) * e; }
+    const k = (yy - tie) / (y + h - tie), e = Math.sqrt(k); return mid + (bot - mid) * e;
+  };
+  let strips = "";
+  const ys = Array.from({ length: 25 }, (_, j) => y + (h * j) / 24);
+  for (let i = 0; i < N; i++) { const L = ys.map((yy) => [xs(i, yy), yy]), R = ys.map((yy) => [xs(i + 1, yy), yy]).reverse(); strips += `<path d="M${P2([...L, ...R])}Z" fill="url(#sl-foldg)"/>`; }
   const ros = out - f * 2, tx = (out + waist) / 2 - f * 3;
-  return `<path d="${d}" fill="url(#sl-silk)"/><clipPath id="${id}"><path d="${d}"/></clipPath><g clip-path="url(#${id})">${folds}<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#sl-side)" opacity=".25"/>
-      <path d="M${x} ${tie - 7} H${x + w}" stroke="rgba(90,60,20,.18)" stroke-width="6"/></g>
-    <path d="${band}" stroke="rgba(70,45,10,.55)" stroke-width="4.2" fill="none" stroke-linecap="round"/><path d="${band}" stroke="url(#sl-gold)" stroke-width="2.8" fill="none" stroke-linecap="round"/>
-    <path d="${band}" stroke="rgba(255,240,190,.55)" stroke-width=".7" fill="none" stroke-dasharray="1.2 1.4" transform="translate(0 -.6)"/>
-    <circle cx="${ros}" cy="${tie - 3}" r="3.6" fill="url(#sl-gold)"/><circle cx="${ros}" cy="${tie - 3}" r="1.6" fill="url(#sl-rivet)"/>
-    <path d="M${tx} ${tie + 3} q${f * .6} 6 0 11" stroke="url(#sl-gold)" stroke-width="1.1" fill="none"/>
-    <path d="M${tx - 2.4} ${tie + 16} q2.4 -3.6 4.8 0 l1.2 12 h-7.2z" fill="url(#sl-gold)"/><path d="M${tx - 3.2} ${tie + 28} h6.4" stroke="#8f6522" stroke-width="1.4" stroke-dasharray=".8 .6"/>`;
+  const shape = flip ? d : `M${x} ${y} H${x + w} V${y + 40} Q${x + w * .8} ${tie - 70} ${waist} ${tie} Q${x + w * .45} ${tie + 40} ${x + w - 4} ${y + h} H${x}Z`;
+  return `<clipPath id="${id}"><path d="${shape}"/></clipPath><g clip-path="url(#${id})"><rect x="${x - 2}" y="${y}" width="${w + 4}" height="${h}" fill="url(#sl-silkx)"/>${strips}
+      <rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#sl-side)" opacity=".22"/><path d="M${x} ${tie - 7} H${x + w}" stroke="rgba(40,20,5,.22)" stroke-width="8"/>
+      <rect x="${x}" y="${y + h - 10}" width="${w}" height="10" fill="rgba(20,10,0,.25)"/></g>
+    <path d="${band}" stroke="rgba(40,25,5,.6)" stroke-width="4.6" fill="none" stroke-linecap="round" transform="translate(.6 .8)"/><path d="${band}" stroke="${TH.goldMid}" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+    <path d="${band}" stroke="rgba(60,35,5,.7)" stroke-width="3.4" fill="none" stroke-dasharray=".7 1.3"/><path d="${band}" stroke="rgba(255,240,190,.6)" stroke-width=".8" fill="none" stroke-dasharray="1.2 1.4" transform="translate(-.3 -.9)"/>
+    ${rosette(ros, tie - 3, 4.4)}
+    <path d="M${tx} ${tie + 3} q${f * .6} 6 0 11" stroke="${TH.goldMid}" stroke-width="1.2" fill="none"/>
+    ${carve(`M${tx - 2.6} ${tie + 14} q2.6 -4 5.2 0 q1.4 1.6 0 3 h-5.2 q-1.4 -1.4 0 -3Z`, "gold", .5)}
+    <g>${Array.from({ length: 9 }, (_, i) => `<path d="M${tx - 3.4 + i * .85} ${tie + 17} l${(i - 4) * .25} 12" stroke="${i % 2 ? TH.goldMid : "rgba(110,75,20,.9)"}" stroke-width=".8"/>`).join("")}</g>
+    <path d="M${tx - 3.8} ${tie + 18.5} h7.6" stroke="rgba(60,35,5,.6)" stroke-width="1.2"/>`;
 }
-const WALL = (wh = 400) => svg(W, H, `${cornice}${boiserie(150, 48, 244, 262)}${boiserie(150, 322, 244, 120)}
-  <rect y="598" width="${W}" height="14" fill="url(#sl-plaster)"/><rect y="598" width="${W}" height="1.2" fill="url(#sl-gold)"/><rect y="612" width="${W}" height="3" fill="rgba(60,40,20,.3)"/>
+// the pelmet: a carved gilt board, its crest in the middle; under it a swag of the same silk, folded
+function pelmet() {
+  let s = `<path d="M4 60 Q74 92 144 60 V58 H4Z" fill="url(#sl-silkx)"/>`;
+  for (let i = 0; i < 5; i++) s += `<path d="M${4 + i * 3} ${60 + i * 2.6} Q74 ${70 + i * 5.4} ${144 - i * 3} ${60 + i * 2.6}" fill="none" stroke="rgba(30,15,0,${.18 + i * .03})" stroke-width="2.2"/><path d="M${4 + i * 3} ${61.6 + i * 2.6} Q74 ${71.6 + i * 5.4} ${144 - i * 3} ${61.6 + i * 2.6}" fill="none" stroke="rgba(255,245,220,.22)" stroke-width="1.4"/>`;
+  s += mould(2, 42, 144, 18, [[2, "v"], [1.6, "b"], [2.2, "c"], [3, "v"]], "gold");
+  s += `<rect x="10.8" y="50.8" width="126.4" height=".4" fill="rgba(0,0,0,.2)"/>${cartouche(74, 43, 13)}`;
+  return s;
+}
+const WALL = (wh = 400) => svg(W, H, `${TH.wallFill ? `<rect width="${W}" height="615" fill="${TH.wallFill}"/>` : ""}${cornice}${boiserie(150, 48, 244, 262)}${boiserie(150, 322, 244, 120)}
+  ${mould(0, 594, W, 22, [[2, "v"], [1.4, "b"], [2, "c"], [16.6, "f"]], TH.dado, { paint: TH.paint })}<rect y="612" width="${W}" height="3" fill="rgba(30,15,5,.35)"/>
   ${windowSvg(24, 58, 98, wh)}
-  <rect x="4" y="44" width="140" height="16" fill="url(#sl-gold)"/><rect x="4" y="44" width="140" height="16" fill="url(#sl-brush)"/><path d="M4 60 Q74 84 144 60" fill="url(#sl-silk)"/><path d="M4 60 Q74 84 144 60" fill="none" stroke="${GOLD}" stroke-width="1.2"/>
-  ${drape(4, 60, 30, 548, false)}${drape(114, 60, 30, 548, true)}`);
+  ${drape(4, 60, 30, 548, false)}${drape(114, 60, 30, 548, true)}${pelmet()}`);
 // The morning light from the window: a pale band across the wall and a patch on the parquet (no blend modes).
 // The realistic pass: one light, the window at the upper left. The wall is brightest by it and falls off to the right;
 // the window lays its panes on the parquet and a streak of reflection; every piece casts its shadow right and down,
@@ -425,47 +689,119 @@ const LIGHT = () => {
     <rect y="584" width="${W}" height="14" fill="url(#sl-aoUp)" opacity=".6"/>
     <path d="M193 330 L214 352 V614 H193Z" fill="url(#sl-aoL)" opacity=".9"/><path d="M144 80 L160 96 V606 H144Z" fill="url(#sl-aoL)" opacity=".7"/><path d="M394 312 L402 320 V620 H394Z" fill="url(#sl-aoL)" opacity=".8"/><rect y="615" width="${W}" height="34" fill="url(#sl-aoDown)"/><rect y="615" width="${W}" height="2" fill="rgba(20,10,2,.45)"/>
     <path d="M${quad(patch, -.06, 1.06, -.04, 1)}Z" fill="url(#sl-bloom)"/>${panes}<path d="M44 645 H118 L150 830 H40Z" fill="url(#sl-streak)"/>
-    ${cast("197 618 L197 640 L240 662 L232 636", .9)}${cast("12 640 L197 640 L232 660 L46 660", .8)}${contact(105, 641, 98, 3.2)}
+    ${cast("197 618 L197 640 L240 662 L232 636", .9)}${cast("12 640 L197 640 L232 660 L46 660", .8)}${contact(23.5, 640.4, 5, 1.8)}${contact(30, 639.6, 4, 1.5)}${contact(185.4, 640.4, 5, 1.8)}${contact(178.8, 639.6, 4, 1.5)}
     ${cast("396 620 L402 620 L402 652 L410 652", 1)}${cast("270 620 L394 620 L420 640 L300 640", .8)}${contact(332, 621, 64, 3)}
     ${cast("200 648 L262 648 L318 690 L236 690", .55)}${contact(200, 648, 6, 3)}${contact(262, 648, 6, 3)}${contact(231, 646, 5, 2.6)}<ellipse cx="300" cy="704" rx="22" ry="5" fill="rgba(30,14,4,.16)"/>
     ${cast("16 788 L100 788 L190 816 L76 822", .7)}${contact(16, 788, 7, 3)}${contact(100, 788, 7, 3)}${contact(62, 782, 5, 2.6)}<path d="M18 730 L100 726 L176 790 L80 800Z" fill="rgba(30,14,4,.12)"/>
     ${cast("290 784 L402 784 L402 822 L330 822", .7)}${contact(291, 786, 7, 3)}${contact(389, 786, 7, 3)}${contact(310, 776, 5)}${contact(370, 776, 5)}`);
 };
-const FEET = () => svg(180, 12, `<ellipse cx="90" cy="9" rx="96" ry="4" fill="url(#sl-drop)"/><rect x="8" y="0" width="12" height="9" rx="3" fill="url(#sl-cherrys)"/><rect x="160" y="0" width="12" height="9" rx="3" fill="url(#sl-cherrys)"/>`);
+// the record cabinet stands on its own four legs now (records.js, cabinet.js): here only its shadow on the parquet
+const FEET = () => svg(180, 12, `<ellipse cx="92" cy="1.4" rx="84" ry="3.2" fill="url(#sl-drop)" opacity=".8"/>`);
 
 // ——— the crate: #/records itself (records.js crateHtml), its links made plain, scaled down onto the floor. In the room the
 // brass reads 唱片櫃 and the count in large letters; as the camera arrives they give way to the page's own Latin. ———
 function crateCopy(list, count, unit) {
   const zh = `<span class="sl-zh"><span class="sc-cut">唱片櫃</span>${count ? `<span class="sc-cut n">${count} ${unit}</span>` : ""}</span>`;
-  const html = crateHtml(list).replace(/<(\/?)(?:a|button)\b/g, "<$1span")
+  // its SVG ids made its own: the page's crate (#/records) is in the document with it while the camera moves in or out
+  const html = crateHtml(list).replace(/(id="|url\(#)cb-/g, "$1cbr-").replace(/<(\/?)(?:a|button)\b/g, "<$1span")
     .replace(/(<span class="sc-brass cr-plate">)(<span class="sc-cut">[^<]*<\/span><span class="sc-cut n">[^<]*<\/span>)(<\/span>)/, `$1${zh}<span class="sl-de">$2</span>$3`);
   return `<span class="sl-rp" aria-hidden="true" inert><span class="sc-scene crate-scene">${html}</span></span>`;
 }
 
 // ——— the furniture the four on the floor and in the case stand on: the easel, the bergère, the glazed lower part of
 // the bookcase, the little stand on the sill ———
-const wood = (d, wdt, dark = "#2a1608") => `<path d="${d}" fill="none" stroke="${dark}" stroke-width="${wdt + 1.4}" stroke-linecap="round"/><path d="${d}" fill="none" stroke="url(#sl-cherryvs)" stroke-width="${wdt}" stroke-linecap="round"/>`;
-function EASEL() { // box 4..112 × 572..791
-  return svg(108, 219, `<ellipse cx="54" cy="215" rx="54" ry="5" fill="url(#sl-drop)"/>${wood("M54 72 L58 210", 3.2)}${wood("M54 70 L12 216", 4.4)}${wood("M54 70 L96 216", 4.4)}
-    ${wood("M22 186 H86", 2.6)}<rect x="4" y="150" width="100" height="7" fill="url(#sl-cherrys)"/><rect x="4" y="150" width="100" height="7" fill="url(#sl-boardlit)"/><rect x="4" y="157" width="100" height="3" fill="rgba(0,0,0,.35)"/>
-    <rect x="48" y="64" width="12" height="9" rx="2" fill="url(#sl-cherrys)"/><circle cx="54" cy="200" r="2" fill="url(#sl-rivet)"/>`);
+const wood = (d, wdt, dark = "#2a1608") => `<path d="${d}" fill="none" stroke="${dark}" stroke-width="${wdt + .8}" stroke-linecap="round"/><path d="${d}" fill="none" stroke="url(#sl-wdv)" stroke-width="${wdt}" stroke-linecap="round"/><path d="${d}" fill="none" stroke="rgba(255,235,200,.18)" stroke-width="${wdt * .3}" stroke-linecap="round" transform="translate(-${wdt * .2} 0)"/>`;
+// the easel: two front legs and a back leg, each a square stick with its arrises chamfered and the grain along it;
+// a shaped head block pegged through the legs, a carved finial on it, the back leg hung from it on a brass hinge; a row
+// of holes up the front legs for the pegs the ledge rests on; a stretcher tenoned through the legs and pegged
+function EASEL() {
+  const at = (x0, y0, x1, y1, t) => [x0 + (x1 - x0) * t, y0 + (y1 - y0) * t];
+  const L = [52, 64, 12, 216], R = [56, 64, 96, 216];
+  const edge = ([x0, y0, x1, y1], w0, w1, sx) => { const dx = x1 - x0, dy = y1 - y0, len = Math.hypot(dx, dy), nx = -dy / len, ny = dx / len;
+    return `M${(x0 + sx * nx * (w0 / 2 - .7)).toFixed(2)} ${(y0 + sx * ny * (w0 / 2 - .7) + 6).toFixed(2)} L${(x1 + sx * nx * (w1 / 2 - .7)).toFixed(2)} ${(y1 + sx * ny * (w1 / 2 - .7)).toFixed(2)}`; };
+  let s = `<ellipse cx="54" cy="215" rx="54" ry="5" fill="url(#sl-drop)"/>
+    ${leg(54, 74, 60, 210, 4.4, 3.6)}<path d="M51.8 74 L56.2 74 L61.8 210 L58.2 210Z" fill="rgba(8,3,0,.45)"/>`;
+  for (const [g, sx] of [[L, 1], [R, -1]]) { s += leg(g[0], g[1], g[2], g[3], 6.4, 4.8);
+    s += `<path d="${edge(g, 6.4, 4.8, sx)}" stroke="rgba(255,230,190,.4)" stroke-width=".55"/><path d="${edge(g, 6.4, 4.8, -sx)}" stroke="rgba(10,4,0,.6)" stroke-width=".7"/>`;
+    for (const t of [.38, .46, .54, .7, .78]) { const [hx, hy] = at(...g, t); s += `<ellipse cx="${hx.toFixed(2)}" cy="${hy.toFixed(2)}" rx="1.1" ry="1.3" fill="#140803"/><path d="M${(hx - 1).toFixed(2)} ${(hy + .7).toFixed(2)} q1 .9 2 0" fill="none" stroke="rgba(255,225,185,.35)" stroke-width=".35"/>`; }
+    const [jx, jy] = at(...g, (186 - g[1]) / (g[3] - g[1])); // the stretcher's tenon through the leg: end grain and a peg
+    s += `<rect x="${(jx - 2).toFixed(2)}" y="${(jy - 1.8).toFixed(2)}" width="4" height="3.6" fill="#3a1608"/><path d="M${(jx - 1.4).toFixed(2)} ${(jy - 1).toFixed(2)} q1.4 1 2.8 0 M${(jx - 1.4).toFixed(2)} ${(jy + .4).toFixed(2)} q1.4 1 2.8 0" fill="none" stroke="rgba(10,3,0,.6)" stroke-width=".3"/><circle cx="${jx.toFixed(2)}" cy="${(jy - 4.4).toFixed(2)}" r=".9" fill="#2a1006"/><circle cx="${(jx - .2).toFixed(2)}" cy="${(jy - 4.6).toFixed(2)}" r=".4" fill="rgba(255,225,185,.4)"/>`; }
+  s += leg(22, 186, 86, 186, 3.2, 3.2);
+  // the ledge: a moulded tray with a raised lip, on two brass pegs, its ends showing end grain
+  const [lx] = at(...L, .58), [rx] = at(...R, .58);
+  s += `${carve(`M${lx - 1.6} 157 h3.2 v3 h-3.2Z`, "gold", .4)}${carve(`M${rx - 1.6} 157 h3.2 v3 h-3.2Z`, "gold", .4)}
+    ${mould(3, 148, 102, 9, [[1.4, "v"], [1.2, "c"], [6.4, "f"]], "wood")}<rect x="4" y="157" width="100" height="3" fill="rgba(0,0,0,.4)"/>
+    <rect x="3" y="145.4" width="102" height="3" fill="url(#sl-wdh)"/><rect x="3" y="145.4" width="102" height="1" fill="rgba(255,232,196,.4)"/><rect x="3" y="147.8" width="102" height=".6" fill="rgba(10,3,0,.5)"/>
+    <rect x="2" y="145.4" width="2.4" height="11.6" fill="#3a1608"/><rect x="103.6" y="145.4" width="2.4" height="11.6" fill="#2a1006"/>`;
+  // the head: a shaped block over the joint, pegged through, a brass hinge for the back leg, a carved finial
+  s += `${wd2(`M45 60 h18 l-1.4 14 h-15.2Z`)}<path d="M45 60 h18" stroke="rgba(255,232,196,.4)" stroke-width=".6"/>
+    <circle cx="49.6" cy="68" r="1.1" fill="#2a1006"/><circle cx="49.4" cy="67.8" r=".45" fill="rgba(255,225,185,.4)"/><circle cx="58.4" cy="68" r="1.1" fill="#2a1006"/><circle cx="58.2" cy="67.8" r=".45" fill="rgba(255,225,185,.4)"/>
+    ${carve(`M51 72.4 h6 v3.4 h-6Z`, "gold", .4)}<path d="M54 72.4 V75.8" stroke="rgba(40,20,0,.6)" stroke-width=".35"/>
+    ${carve(`M47.6 60 h12.8 l-2 -2.4 h-8.8Z`, TH.easelOrn, .5)}${leaf(54, 59.4, 48.4, 57, 1.8, -.3, 2, TH.easelOrn, .4)}${leaf(54, 59.4, 59.6, 57, 1.8, .3, 2, TH.easelOrn, .4)}`;
+  return svg(108, 219, s);
 }
-function ARMCHAIR() { // box 278..402 × 626..791
-  const gd = (d, w) => `<path d="${d}" fill="none" stroke="#6e4c16" stroke-width="${w + 1.2}" stroke-linecap="round"/><path d="${d}" fill="none" stroke="url(#sl-goldd)" stroke-width="${w}" stroke-linecap="round"/>`;
-  return svg(124, 165, `<ellipse cx="62" cy="160" rx="64" ry="6" fill="url(#sl-drop)"/>
-    <ellipse cx="62" cy="44" rx="42" ry="40" fill="url(#sl-goldd)"/><ellipse cx="62" cy="45" rx="36" ry="34" fill="url(#sl-velvet)"/><ellipse cx="62" cy="45" rx="36" ry="34" fill="#6e1a2c" opacity=".6"/>
-    <ellipse cx="62" cy="45" rx="36" ry="34" fill="url(#sl-topshade)" opacity=".6"/><ellipse cx="54" cy="32" rx="16" ry="12" fill="url(#sl-shine)" opacity=".15"/><ellipse cx="62" cy="45" rx="36" ry="34" fill="url(#sl-vel)"/>${[[50, 30], [74, 30], [62, 44], [44, 50], [80, 50], [62, 60]].map(([x, y]) => `<path d="M${x} ${y} q3 3 6 7 M${x} ${y} q-3 3 -6 7" fill="none" stroke="rgba(20,0,6,.13)" stroke-width="1.6"/><circle cx="${x}" cy="${y}" r="1.3" fill="#3a0a16"/><circle cx="${x - .4}" cy="${y - .5}" r=".6" fill="rgba(255,190,205,.5)"/>`).join("")}
-    <path d="M52 4 q10 -8 20 0" fill="none" stroke="url(#sl-gold)" stroke-width="2.6"/><circle cx="62" cy="3" r="3" fill="url(#sl-gold)"/>
-    <path d="M18 92 L106 92 L120 120 L4 120 Z" fill="url(#sl-velvet)"/><path d="M18 92 L106 92 L120 120 L4 120 Z" fill="#7a2034" opacity=".55"/><path d="M18 92 L106 92 L120 120 L4 120 Z" fill="url(#sl-boardlit)" opacity=".5"/><path d="M18 92 L106 92 L120 120 L4 120 Z" fill="url(#sl-vel)"/><path d="M4 120 L120 120" stroke="rgba(255,190,205,.35)" stroke-width="1.2"/>
-    <path d="M4 120 L120 120 L118 134 L6 134 Z" fill="#5a1424"/><path d="M4 120 L120 120 L118 134 L6 134 Z" fill="url(#sl-velvet)" opacity=".5"/><rect x="5" y="133" width="114" height="5" rx="2" fill="url(#sl-goldd)"/>
-    ${gd("M22 70 Q4 74 6 98 L4 120", 5)}${gd("M102 70 Q120 74 118 98 L120 120", 5)}<ellipse cx="7" cy="96" rx="5" ry="3.4" fill="#7a2034"/><ellipse cx="117" cy="96" rx="5" ry="3.4" fill="#7a2034"/>
-    ${gd("M12 138 Q9 150 13 160", 4.6)}${gd("M112 138 Q115 150 111 160", 4.6)}${gd("M30 136 L32 150", 3)}${gd("M94 136 L92 150", 3)}`);
+const wd2 = (d) => `<path d="${d}" fill="rgba(15,6,0,.5)" transform="translate(.9 .9)"/><path d="${d}" fill="url(#sl-wdh)"/><path d="${d}" fill="url(#sl-relw)"/>`;
+function ARMCHAIR() { // box 278..402 × 626..791 — a Louis-Seize bergère: carved gilt medallion back with a ribbon bow, buttoned velvet, fluted legs
+  const vel = TH.velvet, tuft = [];
+  const cx = 62, cy = 45, rx = 34.5, ry = 33;
+  for (let r = -3; r <= 3; r++) for (let c = -3; c <= 3; c++) { const x = cx + c * 10 + (r % 2 ? 5 : 0), y = cy + r * 9.4; tuft.push([x, y]); }
+  const cl = uid("ab");
+  let s = `<ellipse cx="62" cy="160" rx="64" ry="6" fill="url(#sl-drop)"/>
+    <clipPath id="${cl}"><ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}"/></clipPath>
+    <g clip-path="url(#${cl})"><rect x="20" y="8" width="84" height="76" fill="url(#sl-velvet)"/><rect x="20" y="8" width="84" height="76" fill="${vel}" opacity=".62"/>
+      ${tuft.map(([x, y]) => `<path d="M${x} ${y - 9.4} L${x + 5} ${y} L${x} ${y + 9.4} L${x - 5} ${y}Z" fill="url(#sl-tuft)"/>`).join("")}
+      ${tuft.map(([x, y]) => `<path d="M${x} ${y} L${x + 5} ${y + 9.4} M${x} ${y} L${x - 5} ${y + 9.4}" stroke="rgba(15,0,4,.45)" stroke-width=".9"/><path d="M${x - .3} ${y - .4} L${x + 4.7} ${y + 9}" stroke="rgba(255,190,200,.16)" stroke-width=".5"/>`).join("")}
+      ${tuft.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.25" fill="#1e0308"/><circle cx="${x - .35}" cy="${y - .4}" r=".5" fill="rgba(255,200,210,.5)"/>`).join("")}
+      <ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="url(#sl-vel)"/><ellipse cx="${cx}" cy="${cy + 6}" rx="${rx}" ry="${ry}" fill="none" stroke="rgba(10,0,3,.5)" stroke-width="8"/></g>`;
+  // the carved oval frame: a torus, beads, a cove, a ribbon twisted round the outer edge
+  s += `<ellipse cx="${cx + .8}" cy="${cy + 1.2}" rx="${rx + 4}" ry="${ry + 4}" fill="none" stroke="rgba(15,6,0,.55)" stroke-width="6"/>
+    <ellipse cx="${cx}" cy="${cy}" rx="${rx + 4}" ry="${ry + 4}" fill="none" stroke="url(#sl-goldd)" stroke-width="6.4"/><ellipse cx="${cx}" cy="${cy}" rx="${rx + 4}" ry="${ry + 4}" fill="none" stroke="url(#sl-giltx)" stroke-width="6.4"/>
+    <ellipse cx="${cx}" cy="${cy}" rx="${rx + .6}" ry="${ry + .6}" fill="none" stroke="${TH.goldMid}" stroke-width="1.6" stroke-dasharray="0 2.4" stroke-linecap="round"/>
+    <ellipse cx="${cx - .3}" cy="${cy - .3}" rx="${rx + .6}" ry="${ry + .6}" fill="none" stroke="rgba(255,248,220,.8)" stroke-width=".6" stroke-dasharray="0 2.4" stroke-linecap="round"/>
+    ${Array.from({ length: 34 }, (_, i) => { const a = (i / 34) * 2 * Math.PI, a2 = a + .16, p = [cx + (rx + 4) * Math.cos(a), cy + (ry + 4) * Math.sin(a)], q = [cx + (rx + 4) * Math.cos(a2), cy + (ry + 4) * Math.sin(a2)];
+      return carve(ptsD(leafPts(p[0], p[1], q[0], q[1], 1.7, .12, 1)), "gold", .5); }).join("")}
+    <path d="M${cx - rx - 6} ${cy} A${rx + 6} ${ry + 6} 0 0 1 ${cx + 10} ${cy - ry - 6}" fill="none" stroke="rgba(255,248,215,.7)" stroke-width="1.1"/><path d="M${cx + rx + 6} ${cy + 4} A${rx + 6} ${ry + 6} 0 0 1 ${cx - 10} ${cy + ry + 6}" fill="none" stroke="rgba(15,6,0,.45)" stroke-width="1.4"/>`;
+  // the bow on the crest: two loops, two tails, the knot
+  s += carve(`M62 6 c-4 -9 -15 -9 -15 -2 c0 5 9 5 15 2Z`, "gold", .8) + carve(`M62 6 c4 -9 15 -9 15 -2 c0 5 -9 5 -15 2Z`, "gold", .8) + carve(`M60 7 c-3 5 -8 9 -11 16 l2 1 c3 -6 8 -10 11 -14Z`, "gold", .7) + carve(`M64 7 c3 5 8 9 11 16 l-2 1 c-3 -6 -8 -10 -11 -14Z`, "gold", .7) + carve(`M58.6 2.6 h6.8 v6.4 h-6.8Z`, "gold", .7);
+  // arms: the gilt supports with an acanthus at the front, a padded velvet manchette
+  for (const sx of [-1, 1]) { const f = (p) => [sx < 0 ? p[0] : 124 - p[0], p[1]];
+    const arm = sx < 0 ? "M24 68 C12 66 5 74 5 86 C5 98 3 108 5 120 L10 120 C9 108 10 98 10 88 C10 78 14 73 24 72Z" : "M100 68 C112 66 119 74 119 86 C119 98 121 108 119 120 L114 120 C115 108 114 98 114 88 C114 78 110 73 100 72Z";
+    s += carve(arm, "gold", .9);
+    s += carve(ptsD(leafPts(6, 92, 8, 116, 3.4, .1, 3), f), "gold", .7) + carve(ptsD(spiralPts(4, 2.6, 1, sx < 0 ? 1 : -1, 0).map((p) => [p[0] + 7, p[1] + 90]), f), "gold", .6);
+    const [mx] = f([7, 0]); s += `<ellipse cx="${mx}" cy="90.5" rx="6" ry="3.4" fill="url(#sl-velvet)"/><ellipse cx="${mx}" cy="90.5" rx="6" ry="3.4" fill="${vel}" opacity=".6"/><ellipse cx="${mx - 1}" cy="89.4" rx="3.6" ry="1.4" fill="rgba(255,200,210,.22)"/>`; }
+  // the seat: a deep cushion, lit on its top, its front edge rolled; a welt round it; the apron carved
+  s += `<path d="M18 92 L106 92 L120 118 L4 118 Z" fill="url(#sl-velvet)"/><path d="M18 92 L106 92 L120 118 L4 118 Z" fill="${vel}" opacity=".55"/><path d="M18 92 L106 92 L120 118 L4 118 Z" fill="url(#sl-seat)"/>
+    <path d="M30 100 q12 3 24 -1 M66 104 q14 3 30 -2 M20 110 q20 4 40 0" fill="none" stroke="rgba(10,0,3,.28)" stroke-width="1.6"/><path d="M30 99 q12 3 24 -1 M66 103 q14 3 30 -2" fill="none" stroke="rgba(255,200,210,.14)" stroke-width=".8"/>
+    <path d="M4 118 Q62 124 120 118 L119 126 Q62 132 5 126Z" fill="url(#sl-velvet)"/><path d="M4 118 Q62 124 120 118 L119 126 Q62 132 5 126Z" fill="${vel}" opacity=".7"/><path d="M4 118 Q62 124 120 118 L119 126 Q62 132 5 126Z" fill="rgba(10,0,3,.35)"/>
+    <path d="M4 118 Q62 124 120 118" stroke="rgba(255,195,205,.4)" stroke-width="1" fill="none"/>`;
+  s += mould(4, 127, 116, 10, [[1.4, "v"], [1.4, "b"], [1.6, "c"], [5.6, "f"]], "gold") + rosette(62, 132, 4.4) + rosette(9, 132, 3.6) + rosette(115, 132, 3.6);
+  // the legs: tapered, fluted, a ring at the top, a toupie at the foot
+  s += leg(11, 137, 13, 159, 7, 4.2, "gold", 3) + leg(113, 137, 111, 159, 7, 4.2, "gold", 3) + leg(32, 137, 33, 150, 4.6, 3, "gold", 2) + leg(92, 137, 91, 150, 4.6, 3, "gold", 2);
+  s += `${carve("M10 158 h6 l-1 4 h-4Z", "gold", .5)}${carve("M108 158 h6 l-1 4 h-4Z", "gold", .5)}`;
+  return svg(124, 165, s);
 }
-// the little brass book stand the album leans on, on the sill
-const STAND = () => svg(72, 10, `<rect x="2" y="2" width="68" height="3" rx="1" fill="url(#sl-brass)"/><rect x="2" y="2" width="68" height=".7" fill="rgba(255,250,225,.9)"/><rect x="2" y="5" width="68" height="3" fill="rgba(40,25,5,.3)"/>`);
+// the little brass book stand the album leans on, on the sill: a ledge with a raised lip, two small feet
+const STAND = () => svg(72, 10, `<rect x="3" y="6.4" width="66" height="2.6" fill="rgba(30,15,5,.3)" transform="translate(1 1)"/><rect x="2" y="1" width="68" height="1.6" rx=".6" fill="url(#sl-brass)"/><rect x="2" y="1" width="68" height=".5" fill="rgba(255,250,225,.9)"/>
+  <rect x="2" y="2.6" width="68" height="3" fill="url(#sl-brass)"/><rect x="2" y="2.6" width="68" height="3" fill="rgba(60,35,5,.25)"/><rect x="2" y="5.4" width="68" height=".7" fill="rgba(40,25,5,.6)"/>
+  <rect x="6" y="5.6" width="4" height="2.6" rx=".8" fill="url(#sl-brass)"/><rect x="62" y="5.6" width="4" height="2.6" rx=".8" fill="url(#sl-brass)"/>`);
 const VITRINE_IN = () => svg(104, 100, `<rect width="104" height="100" fill="url(#sl-veneer)"/><rect width="104" height="100" fill="#120804" opacity=".7"/><rect width="104" height="100" fill="url(#sl-topshade)"/><rect x="0" y="90" width="104" height="10" fill="url(#sl-cherrys)"/>`);
-const VITRINE_GLASS = () => svg(104, 100, `<rect x="2" y="2" width="100" height="96" fill="none" stroke="url(#sl-cherrys)" stroke-width="5"/><rect x="2" y="2" width="100" height="96" fill="none" stroke="url(#sl-gold)" stroke-width=".7"/>
-  <path d="M6 6 L44 6 L6 52Z" fill="rgba(255,255,255,.12)"/><path d="M30 6 L52 6 L6 64 V40Z" fill="rgba(255,255,255,.1)"/><path d="M70 6 L78 6 L6 96 V86Z" fill="rgba(255,255,255,.08)"/><path d="M60 94 L98 40 L98 60 L76 94Z" fill="rgba(255,255,255,.07)"/><rect x="92" y="46" width="4" height="10" rx="1" fill="url(#sl-brass)"/>`);
+// the glazed door: a moulded frame, a transom and a fanlight of lead cames over it, the one big pane clear; the glass
+// picks up the window (a broad diagonal sheen, a narrow one) and is a little green at its edge
+const VITRINE_GLASS = () => {
+  const x0 = 6.2, y0 = 6.2, gw = 91.6, gh = 87.6, ty = 28, cx = 52;
+  const came = (d, wd = 1) => `<path d="${d}" fill="none" stroke="rgba(15,10,5,.8)" stroke-width="${wd + .6}" stroke-linejoin="round"/><path d="${d}" fill="none" stroke="#5e574c" stroke-width="${wd}" stroke-linejoin="round"/><path d="${d}" fill="none" stroke="rgba(235,228,210,.5)" stroke-width="${(wd * .35).toFixed(2)}" transform="translate(-.3 -.35)"/>`;
+  let fan = `<path d="M${x0} ${y0} H${x0 + gw} V${ty} H${x0}Z" fill="rgba(210,225,215,.07)"/>`;
+  fan += came(`M${cx - 40} ${ty} A40 19 0 0 1 ${cx + 40} ${ty}`) + came(`M${cx - 15} ${ty} A15 8 0 0 1 ${cx + 15} ${ty}`);
+  for (let i = 1; i < 6; i++) { const a = Math.PI * (1 + i / 6); fan += came(`M${(cx + 15 * Math.cos(a)).toFixed(2)} ${(ty + 8 * Math.sin(a)).toFixed(2)} L${(cx + 40 * Math.cos(a)).toFixed(2)} ${(ty + 19 * Math.sin(a)).toFixed(2)}`, .8); }
+  fan += came(`M${x0} ${y0 + 3} L${cx - 40 * .7} ${ty - 19 * .71}`, .7) + came(`M${x0 + gw} ${y0 + 3} L${cx + 40 * .7} ${ty - 19 * .71}`, .7);
+  return svg(104, 100, `<rect x="${x0}" y="${y0}" width="${gw}" height="${gh}" fill="url(#sl-glass)"/>
+  <path d="M${x0} ${ty + 4} L${x0 + 30} ${ty + 4} L${x0} ${ty + 46}Z" fill="rgba(255,255,255,.13)"/><path d="M${x0 + 44} ${ty + 4} L${x0 + 52} ${ty + 4} L${x0} ${y0 + gh - 4} V${y0 + gh - 14}Z" fill="rgba(255,255,255,.1)"/><path d="M${x0 + 2} ${y0 + 2} V${y0 + gh - 2}" stroke="rgba(255,255,255,.22)" stroke-width=".8"/><path d="M${x0 + gw} ${ty + 30} V${ty + 44} L${x0 + 70} ${y0 + gh} H${x0 + 58}Z" fill="rgba(255,255,255,.05)"/>
+  ${fan}${came(`M${x0} ${ty} H${x0 + gw}`, 2)}
+  <rect x="${x0 + .5}" y="${y0 + .5}" width="${gw - 1}" height="${gh - 1}" fill="none" stroke="rgba(150,195,175,.35)" stroke-width="1"/>
+  ${mould(0, 0, 104, 100, [[1.6, "v"], [1.4, "c"], [2.2, "v"], [1, "b"]], "wood")}<rect x="6.2" y="6.2" width="91.6" height="87.6" fill="none" stroke="url(#sl-goldd)" stroke-width=".8"/>
+  ${carve("M89.4 43 h6 v14 h-6Z", "gold", .6)}<path d="M92.4 47.4 a1.1 1.1 0 1 0 .01 0Z M91.9 49 h1 l.4 3.4 h-1.8Z" fill="#1a0e04"/>`);
+};
+
 
 // The hit areas (x, y, w, h in the room's units) stand apart by 8 px or more, so a tap never lands on the neighbour;
 // the drawing of a thing may reach past its area (a frame over the rail, a curtain's tassel). The crate's area is its
@@ -505,12 +841,12 @@ export function salonRoom(d) {
   const bird = () => { if (!d.bird) return ""; const rb = roomBird(), [bx, bt, bs] = BIRD; // its shadow on the sill, then the bird (nest.js roomBird)
     return deco(100, 292, 40, 10, svg(40, 10, `<ellipse cx="20" cy="5" rx="12" ry="2.2" fill="url(#sl-contact)"/><ellipse cx="27" cy="5.5" rx="13" ry="2.4" fill="rgba(30,14,4,.18)"/>`))
       + link("nest", "#/nest", rb.label, box("nest", [bx, bt, bs, bs, rb.html])); };
-  return `<section class="salon" aria-label="收藏的角落">${DEFS}<div class="sl-cam"><div class="sl-stage">
+  return fuseGilt(`<section class="salon" aria-label="收藏的角落">${DEFS}<div class="sl-cam"><div class="sl-stage">
       <i class="sl-wall"></i><i class="sl-floor"></i>${deco(0, 0, W, H, WALL(238))}${deco(0, 0, W, H, LIGHT())}
       ${obj("museum")}${deco(12, FLOOR, 180, 12, FEET())}${obj("records")}${obj("world")}${obj("shelf")}${obj("poems")}${obj("list")}
       ${deco(281, 506, 104, 100, VITRINE_IN())}${obj("medals")}${deco(281, 506, 104, 100, VITRINE_GLASS())}${deco(22, 296, 72, 10, STAND())}${obj("stamps")}
       ${deco(4, 572, 108, 219, EASEL())}${deco(278, 626, 124, 165, ARMCHAIR())}${obj("prints")}${obj("marks")}${bird()}
-      ${deco(0, 0, W, 830, svg(W, 830, `<rect width="${W}" height="830" fill="url(#sl-aoR)" opacity=".35"/><rect y="700" width="${W}" height="130" fill="url(#sl-aoUp)" opacity=".7"/>`))}<i class="sl-vig"></i></div></div></section>`;
+      ${deco(0, 0, W, 830, svg(W, 830, `<rect width="${W}" height="830" fill="url(#sl-aoR)" opacity=".35"/><rect y="700" width="${W}" height="130" fill="url(#sl-aoUp)" opacity=".7"/>`))}<i class="sl-vig"></i></div></div></section>`);
 }
 
 // ——— The way in and the way back (the owner, 2026-11-19: every corner's move seamless; back out the same way) ———
