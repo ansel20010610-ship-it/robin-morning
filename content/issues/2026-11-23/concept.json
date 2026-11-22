@@ -1,0 +1,393 @@
+{
+  "column": "concept",
+  "date": "2026-11-23",
+  "title": "兩家診所一起降價，誰也不想先漲回去",
+  "dek": "兩家都定高價，明明各賺 50 萬，為什麼最後會停在各賺 30 萬？一位 21 歲的研究生用兩頁短文，說清楚這種局面會停在哪裡。",
+  "brief": "納許均衡是一組選擇：別人都不改的時候，沒有人能靠自己單獨改變而多得。1949 年，21 歲的普林斯頓研究生納許用兩頁短文提出它，1994 年因此得到諾貝爾經濟學獎。今天用同一條街上兩家診所的定價，一格一格算給你看。",
+  "topic_key": "concept:nash-equilibrium",
+  "form": "timeline",
+  "voice": "tutor",
+  "updated_at": "2026-11-23T01:49:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b4/John_f_nash_20061102_2.jpg",
+    "width": 1000,
+    "height": 798,
+    "alt": "黑白照片。一位白髮、穿西裝打領帶的年長男子坐在講台後，右手伸向前方，面前有麥克風、兩瓶水和寫著「Prof. Dr. John F. Nash Jr.」的名牌。",
+    "caption": "約翰・納許 2006 年 11 月在德國科隆大學一場賽局理論研討會上。他在 1949 年、21 歲時寫下兩頁短文，提出後來以他命名的均衡。",
+    "credit": "Elke Wetzig（Elya）攝；經 Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "source_url": "https://commons.wikimedia.org/wiki/File:John_f_nash_20061102_2.jpg",
+    "made": "2006"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "社長，你列過想弄懂的概念裡有「賽局均衡」。今天講的是其中最核心的**納許均衡**。名字來自美國數學家**約翰・納許**，電影《美麗境界》裡羅素・克洛演的就是他。"
+    },
+    {
+      "type": "p",
+      "text": "它要解決的是這種局面：你怎麼做最好，要看別人怎麼做，別人又要看你。這叫「賽局」，象棋、撲克是，兩家店搶客人也是。這種局面最後會停在哪裡？很長一段時間沒有通用的答案。"
+    },
+    {
+      "type": "p",
+      "text": "1949 年底，21 歲的普林斯頓數學系研究生納許給了答案。1994 年，他因此得到諾貝爾經濟學獎。"
+    },
+    {
+      "type": "h",
+      "text": "先算一個例子"
+    },
+    {
+      "type": "p",
+      "text": "定義先不講，先看例子。同一條街上有兩家診所 A 和 B，每個月各自決定自費項目定高價還是低價，不能事先講好。數字是我編的。",
+      "tag": "原創示範"
+    },
+    {
+      "type": "table",
+      "title": "同一條街上的兩家診所",
+      "head": [
+        "",
+        "B 定高價",
+        "B 定低價"
+      ],
+      "rows": [
+        [
+          "A 定高價",
+          "A 50 萬，B 50 萬",
+          "A 20 萬，B 70 萬"
+        ],
+        [
+          "A 定低價",
+          "A 70 萬，B 20 萬",
+          "A 30 萬，B 30 萬"
+        ]
+      ],
+      "caption": "原創示範：兩家診所各自決定自費項目的價錢，不能事先講好。格子裡是每月利潤，數字為說明而自擬。"
+    },
+    {
+      "type": "p",
+      "text": "兩家都高價，各賺 50 萬。一高一低，低價的賺 70 萬，高價的剩 20 萬。兩家都低價，各賺 30 萬。"
+    },
+    {
+      "type": "p",
+      "text": "每一格都問同一句：對方不動，只有我改，我會不會多賺？"
+    },
+    {
+      "type": "list",
+      "items": [
+        "兩家都高價：A 改成低價，從 50 萬變 70 萬。A 想改，B 也一樣。",
+        "A 高價、B 低價：A 改成低價，從 20 萬變 30 萬。A 想改。",
+        "A 低價、B 高價：B 改成低價，從 20 萬變 30 萬。B 想改。",
+        "兩家都低價：任何一家改回高價，從 30 萬掉到 20 萬。誰都不想改。"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "只有最後一格沒有人想換，它就是納許均衡。先停一下，記住「單獨」兩個字：別人不動，只有你動，你動了也不會更好。"
+    },
+    {
+      "type": "svg",
+      "title": "哪一格沒有人想走",
+      "svg": "<svg viewBox=\"0 0 400 332\" role=\"img\" aria-label=\"兩家診所定價的四格圖：每一格寫著兩家的月利潤，四支箭頭標出哪一家單獨改價會多賺；兩家都低價那一格沒有箭頭往外，被框起來\"><text x=\"260\" y=\"20\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"700\">B 診所</text><text x=\"195\" y=\"46\" font-size=\"13\" text-anchor=\"middle\">定高價</text><text x=\"325\" y=\"46\" font-size=\"13\" text-anchor=\"middle\">定低價</text><text x=\"64\" y=\"46\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"700\">A 診所</text><text x=\"64\" y=\"120\" font-size=\"13\" text-anchor=\"middle\">定高價</text><text x=\"64\" y=\"230\" font-size=\"13\" text-anchor=\"middle\">定低價</text><rect class=\"soft\" x=\"130\" y=\"60\" width=\"130\" height=\"110\" stroke-width=\"1\"/><text x=\"195\" y=\"98\" font-size=\"15\" text-anchor=\"middle\">A 50 萬</text><text x=\"195\" y=\"120\" font-size=\"15\" text-anchor=\"middle\" class=\"muted\">B 50 萬</text><rect class=\"soft\" x=\"260\" y=\"60\" width=\"130\" height=\"110\" stroke-width=\"1\"/><text x=\"325\" y=\"98\" font-size=\"15\" text-anchor=\"middle\">A 20 萬</text><text x=\"325\" y=\"120\" font-size=\"15\" text-anchor=\"middle\" class=\"muted\">B 70 萬</text><rect class=\"soft\" x=\"130\" y=\"170\" width=\"130\" height=\"110\" stroke-width=\"1\"/><text x=\"195\" y=\"208\" font-size=\"15\" text-anchor=\"middle\">A 70 萬</text><text x=\"195\" y=\"230\" font-size=\"15\" text-anchor=\"middle\" class=\"muted\">B 20 萬</text><rect class=\"paper\" x=\"260\" y=\"170\" width=\"130\" height=\"110\" stroke-width=\"1\"/><text x=\"325\" y=\"208\" font-size=\"15\" text-anchor=\"middle\">A 30 萬</text><text x=\"325\" y=\"230\" font-size=\"15\" text-anchor=\"middle\" class=\"muted\">B 30 萬</text><rect class=\"accent line\" x=\"263\" y=\"173\" width=\"124\" height=\"104\" stroke-width=\"3\"/><text x=\"325\" y=\"266\" font-size=\"12\" text-anchor=\"middle\" class=\"accent\" font-weight=\"700\">均衡</text><line class=\"ink line\" x1=\"195\" y1=\"132\" x2=\"195\" y2=\"180\" stroke-width=\"2\"/><polygon class=\"ink\" points=\"195,188 189,176 201,176\"/><text x=\"203\" y=\"160\" font-size=\"11\">A 改</text><line class=\"ink line\" x1=\"325\" y1=\"132\" x2=\"325\" y2=\"180\" stroke-width=\"2\"/><polygon class=\"ink\" points=\"325,188 319,176 331,176\"/><text x=\"333\" y=\"160\" font-size=\"11\">A 改</text><line class=\"ink line\" x1=\"236\" y1=\"146\" x2=\"278\" y2=\"146\" stroke-width=\"2\"/><polygon class=\"ink\" points=\"286,146 274,140 274,152\"/><text x=\"260\" y=\"138\" font-size=\"11\" text-anchor=\"middle\">B 改</text><line class=\"ink line\" x1=\"236\" y1=\"256\" x2=\"278\" y2=\"256\" stroke-width=\"2\"/><polygon class=\"ink\" points=\"286,256 274,250 274,262\"/><text x=\"260\" y=\"248\" font-size=\"11\" text-anchor=\"middle\">B 改</text><text x=\"200\" y=\"302\" font-size=\"12\" text-anchor=\"middle\" class=\"muted\">箭頭：那一家單獨換個價錢，利潤會變多</text><text x=\"200\" y=\"322\" font-size=\"12\" text-anchor=\"middle\" class=\"muted\">示意，數字為本文自擬（單位：每月萬元）</text></svg>",
+      "caption": "同一張表畫成箭頭：只要有一家單獨換個價錢能多賺，就畫一支箭頭離開那一格。兩家都低價那一格沒有箭頭往外，它就是納許均衡；兩家都高價對雙方更好，卻留不住。原創示意。"
+    },
+    {
+      "type": "p",
+      "text": "你會覺得怪：兩家都高價各 50 萬，明明更好。可是只要對方還是高價，你改低價就多賺 20 萬。兩家都這樣想，就一起掉到 30 萬。這種結構叫**囚犯困境**。"
+    },
+    {
+      "type": "h",
+      "text": "1838 到 1944 年：都只解出特例"
+    },
+    {
+      "type": "timeline",
+      "title": "從古諾到納許",
+      "items": [
+        {
+          "when": "1838 年",
+          "label": "古諾分析兩家廠商的競爭",
+          "note": "法國數學家古諾出書，討論獨占、雙占與完全競爭的均衡。"
+        },
+        {
+          "when": "1928 年",
+          "label": "馮紐曼證明極小極大定理",
+          "note": "兩人零和、允許隨機出招時一定有解。"
+        },
+        {
+          "when": "1944 年",
+          "label": "《賽局理論與經濟行為》",
+          "note": "馮紐曼與摩根斯特恩合著，賽局理論第一個一般的數學表述。"
+        },
+        {
+          "when": "1948.9",
+          "label": "納許進普林斯頓",
+          "note": "數學研究所新生，20 歲。"
+        },
+        {
+          "when": "1949.11.16",
+          "label": "兩頁短文寄到 PNAS",
+          "note": "〈n 人賽局的均衡點〉，1950 年 1 月刊出。"
+        },
+        {
+          "when": "1950 年初",
+          "label": "蘭德公司連玩一百次",
+          "note": "弗勒德與德雷希爾請兩位同事重複玩。"
+        },
+        {
+          "when": "1950.5",
+          "label": "塔克講囚犯的故事",
+          "note": "對史丹佛的心理學家講，用刑期當報酬。"
+        },
+        {
+          "when": "1950 年",
+          "label": "博士論文〈非合作賽局〉",
+          "note": "1951 年 9 月以同名論文刊於《數學年刊》。"
+        },
+        {
+          "when": "1994.10.11",
+          "label": "諾貝爾經濟學獎",
+          "note": "與海薩尼、澤爾騰共得。"
+        },
+        {
+          "when": "2001 年",
+          "label": "電影《美麗境界》",
+          "note": "羅素・克洛飾演納許。"
+        },
+        {
+          "when": "2015.5.23",
+          "label": "納許過世",
+          "note": "領取阿貝爾獎後幾天，死於車禍。"
+        }
+      ],
+      "caption": "依諾貝爾新聞稿、麥爾森 1999 年的論文、史丹佛哲學百科與 MacTutor 整理。"
+    },
+    {
+      "type": "p",
+      "text": "1838 年，法國數學家古諾分析過兩家廠商的競爭。麥爾森 1999 年寫過一篇回顧經濟理論史的論文，他說古諾用的就是納許均衡的方法，但他只把它用在自己的幾個模型上，沒有說出一般的做法。"
+    },
+    {
+      "type": "p",
+      "text": "1928 年，數學家馮紐曼證明：兩個人的「零和」賽局一定有解。零和是一方多得多少，另一方就少多少，像井字遊戲。"
+    },
+    {
+      "type": "p",
+      "text": "診所不是零和：兩家都高價合計 100 萬，都低價只有 60 萬。馮紐曼的寫法推不到這種情況；三人以上，他假設玩家會結盟。"
+    },
+    {
+      "type": "h",
+      "text": "1949 年：兩頁短文"
+    },
+    {
+      "type": "p",
+      "text": "1948 年 9 月，20 歲的納許進普林斯頓數學研究所。他自己說，他的想法有點偏離馮紐曼和摩根斯特恩那本書的「路線」。"
+    },
+    {
+      "type": "p",
+      "text": "1949 年 11 月 16 日，《美國國家科學院院刊》收到他兩頁的稿子。他給了一般的定義，並證明任何有限的賽局，只要允許隨機出招，一定有均衡。"
+    },
+    {
+      "type": "p",
+      "text": "原文裡的 n 是玩家人數，診所的例子 n 是 2。「反制」是說：別人照後一組出招時，前一組裡每個人的選擇都已經最好。"
+    },
+    {
+      "type": "quote",
+      "text": "如果一組策略裡，每位玩家的策略，面對另一組策略裡其他 n－1 位玩家的策略，都能為他拿到最高的期望報酬，我們就說前一組「反制」後一組。能反制自己的那一組，叫做均衡點。",
+      "original": "One such n-tuple counters another if the strategy of each player in the countering n-tuple yields the highest obtainable expectation for its player against the n - 1 strategies of the other players in the countered n-tuple. A self-countering n-tuple is called an equilibrium point.",
+      "cite": "納許〈n 人賽局的均衡點〉，《美國國家科學院院刊》，1950 年；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "換成診所：「一組策略」就是表裡的一格。「反制自己」是說，拿這一格當別人的選擇，每個人回頭看，自己原本的選擇已經最好。兩家都低價就是這樣。"
+    },
+    {
+      "type": "p",
+      "text": "隨機出招，是按某個機率在幾招裡抽一招。有些賽局每一格都有人想換，允許這樣出招，才一定找得到均衡。"
+    },
+    {
+      "type": "h",
+      "text": "1950 年：一百回合的實驗"
+    },
+    {
+      "type": "p",
+      "text": "**蘭德公司**在二戰後找數學家研究軍事戰略，弗勒德和德雷希爾是其中兩位。1950 年初，他們找兩位同事，把一個和診所同樣結構的賽局連玩一百次，看人會不會走到均衡。"
+    },
+    {
+      "type": "p",
+      "text": "老練的受試者沒有一直照均衡出招。納許對初稿寫了書面意見，說重複玩時沒有一直選低價那一招，不代表只玩一次時選它不理性；而且人沒辦法從一百回合一路往回推算。"
+    },
+    {
+      "type": "p",
+      "text": "均衡有點像碗底的彈珠。不準的地方是：彈珠一定滾到碗底，人不一定走到均衡。"
+    },
+    {
+      "type": "p",
+      "text": "同年 5 月，納許的導師塔克對史丹佛的心理學家講這個賽局，用兩名囚犯的刑期當報酬：不論對方怎樣，認罪都比沉默好，但兩人都認罪比都沉默更糟。認罪換成低價，就是診所。"
+    },
+    {
+      "type": "p",
+      "text": "1950 年，納許以〈非合作賽局〉拿到博士。「非合作」是指玩家不能訂有約束力的協議。"
+    },
+    {
+      "type": "quote",
+      "text": "相對地，我們的理論建立在沒有聯盟的前提上：假設每個參與者各自行動，不和任何其他人合作或溝通。",
+      "original": "Our theory, in contradistinction, is based on the absence of coalitions in that it is assumed that each participant acts independently, without collaboration or communication with any of the others.",
+      "cite": "納許〈非合作賽局〉，《數學年刊》，1951 年；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "當時這沒被看成特別重要。1994 年的諾貝爾獎，他和海薩尼、澤爾騰共得，理由是「對非合作賽局理論中均衡的開創性分析」。"
+    },
+    {
+      "type": "quote",
+      "text": "納許均衡的提出，對經濟學與社會科學的影響根本而無所不在，可以和 DNA 雙螺旋的發現對生命科學的影響相比。",
+      "original": "The formulation of Nash equilibrium has had a fundamental and pervasive impact in economics and the social sciences which is comparable to that of the discovery of the DNA double helix in the biological sciences.",
+      "cite": "麥爾森〈納許均衡與經濟理論史〉，《經濟文獻期刊》，1999 年；本文自譯"
+    },
+    {
+      "type": "h",
+      "text": "三個常見誤解"
+    },
+    {
+      "type": "list",
+      "items": [
+        "「均衡就是最好的」：兩家都低價是唯一的均衡，卻比都高價差。",
+        "「一個局面只有一個均衡」：可以有好幾個，這時光看均衡條件，猜不出最後停在哪一格。",
+        "「人一定會走到均衡」：蘭德的受試者連玩一百次，也沒有一直照均衡出招。"
+      ]
+    },
+    {
+      "type": "h",
+      "text": "最後，一句話的定義"
+    },
+    {
+      "type": "p",
+      "text": "**納許均衡是一組選擇：在其他人都不改的情況下，沒有任何一個人能靠自己單獨改變而得到更多。**"
+    },
+    {
+      "type": "callout",
+      "label": "如果你真的懂了，應該答得出來",
+      "items": [
+        "把表裡「兩家都低價」那一格改成各 15 萬，其他三格不變。現在哪幾格是納許均衡？",
+        "十二碼罰球：射門的人選左或右，門將撲左或右；撲對了守住，撲錯了進球。四格裡有沒有一格，兩個人都不想單獨改？如果沒有，納許證明的「一定有均衡」指的是什麼？",
+        "如果 A、B 兩家其實是同一個老闆，利潤合起來算，他會怎麼定價？這還是納許談的那種賽局嗎？"
+      ]
+    },
+    {
+      "type": "spoiler",
+      "text": "以下是答案"
+    },
+    {
+      "type": "callout",
+      "label": "答案",
+      "items": [
+        "兩格：A 低價、B 高價，以及 A 高價、B 低價。兩家都低價時，任何一家改回高價就從 15 萬變 20 萬，所以那一格留不住了。在 A 低價、B 高價那一格，A 改高價會從 70 掉到 50，B 改低價會從 20 掉到 15，誰都不動。均衡可以不只一個，光看定義猜不出最後會停在哪一格。",
+        "沒有。每一格都有人想改：球被撲出，射門的人想換邊；球進了，門將想換邊。納許證明的是：允許每個人按某個機率出招以後，一定至少有一個均衡。在這個簡化的版本裡，雙方都是左右各一半，對方怎麼猜都佔不到便宜。",
+        "他只看合計：兩家都高價 100 萬，一高一低 90 萬，兩家都低價 60 萬，所以兩家都定高價。這時已經不是兩個人各自決定，不算非合作賽局；納許的理論前提就是每個人各自行動、沒有有約束力的協議。現實裡，廠商之間限制交易的協議，一般而言違反貿易法規，簽了也不具約束力。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Equilibrium Points in N-Person Games",
+      "publisher": "Proceedings of the National Academy of Sciences 36(1):48–49（PubMed Central）",
+      "date": "1950-01-15",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1063129/",
+      "note": "John F. Nash Jr.；1949-11-16 由 Lefschetz 推薦收稿。讀的是期刊掃描全文。用到：混合策略是純策略上的機率分配；counters 與 equilibrium point 的定義原句；用角谷不動點定理證明均衡存在、「Hence there is an equilibrium point」；兩人零和時任兩個均衡期望值相同、一般情況不一定；註腳感謝 David Gale 建議用角谷定理。"
+    },
+    {
+      "title": "Non-Cooperative Games",
+      "publisher": "Annals of Mathematics 54(2):286–295（Vassar College 教學網頁的掃描本）",
+      "date": "1951-09-01",
+      "url": "https://irving.vassar.edu/faculty/gj/FTU/io/literature/Nash51.pdf",
+      "note": "John Nash；1950-10-11 收稿。用到：引言稱馮紐曼與摩根斯特恩的多人賽局理論是合作式、以聯盟為基礎；「Our theory, in contradistinction…」原句；equilibrium point 是基本成分；有限非合作賽局至少有一個均衡點；致謝 Tucker、Gale、Kuhn。"
+    },
+    {
+      "title": "Nash Equilibrium and the History of Economic Theory",
+      "publisher": "Journal of Economic Literature 37(3):1067–1082（UCLA 網頁的掃描本）",
+      "date": "1999-09-01",
+      "url": "https://competitionandappropriation.econ.ucla.edu/wp-content/uploads/sites/95/2017/08/MyersonJEL.pdf",
+      "note": "Roger B. Myerson。用到：DNA 雙螺旋原句、a few short papers by a young mathematician；1999-11-16 為 PNAS 收稿五十週年；第 3 節古諾是納許均衡第一次清楚用在精確數學模型、反對「古諾—納許均衡」稱呼、貝特朗等人的批評；馮紐曼 1928 年〈Zur Theorie der Gesellschaftsspiele〉的策略定義與德文原句、極小極大定理等同兩人零和的均衡存在、三人以上假設結盟、可轉移報酬與零和的限制；第 4 節 two-page note、Kakutani、1951 年論文的例子（囚犯困境型、多重均衡）與「完整一般方法」的主張。"
+    },
+    {
+      "title": "Prisoner's Dilemma",
+      "publisher": "Stanford Encyclopedia of Philosophy（Steven Kuhn）",
+      "date": "2025-10-24",
+      "url": "https://plato.stanford.edu/entries/prisoner-dilemma/",
+      "note": "1997 年初版，2025-10-24 實質修訂。用到：開頭困境的描述原句；Flood 與 Dresher 在蘭德、1950 年初連玩一百次、Flood 1952 報告；Tucker 的囚犯故事是講給史丹佛心理學家、名稱最早印刷用法是 Luce & Raiffa 1957；納許論文六個例子的第二個；納許對報告初稿的十句意見；兩人都背叛是唯一嚴格納許均衡；Flood 與 Dresher 視之為反例。"
+    },
+    {
+      "title": "Game Theory",
+      "publisher": "Stanford Encyclopedia of Philosophy（Don Ross）",
+      "date": "2023-09-03",
+      "url": "https://plato.stanford.edu/entries/game-theory/",
+      "note": "1997 年初版，2023-09-03 實質修訂。用到：馮紐曼與摩根斯特恩 1944 年首次給出一般數學表述、框架起初只適用有限條件；NE 的定義（沒有玩家能在其他人策略不變下改策略而得更多）；零和與井字遊戲的例子；嚴格優勢策略與 NE 的關係。"
+    },
+    {
+      "title": "The Prize in Economics 1994 – Press release",
+      "publisher": "NobelPrize.org",
+      "date": "1994-10-11",
+      "url": "https://www.nobelprize.org/prizes/economic-sciences/1994/press-release/",
+      "note": "用到：得獎者與得獎理由原句；1944 年那本書；從 1838 年古諾起沒有通用方法；納許區分合作與非合作賽局、通用解的概念、「all of the players’ expectations are fulfilled」與「no incentives for anyone to change」原句；理性與統計族群兩種詮釋（後者用於演化賽局）；有限玩家必有混合策略均衡；廠商限制交易協議違反法規原句；多重均衡無法直接預測原句；三人分工。"
+    },
+    {
+      "title": "John F. Nash Jr. – Biographical",
+      "publisher": "NobelPrize.org",
+      "date": "",
+      "url": "https://www.nobelprize.org/prizes/economic-sciences/1994/nash/biographical/",
+      "note": "納許 1994 年自述，文末補記 2015-05-23 過世。用到：1928-06-13 生於布盧菲爾德；卡內基先讀化工後轉數學、學士加碩士；塔克來信鼓勵讀普林斯頓；國際經濟學選修課與議價問題；擔心賽局論文不被接受、另備流形結果；偏離馮紐曼與摩根斯特恩「路線」原句。"
+    },
+    {
+      "title": "John F Nash",
+      "publisher": "MacTutor History of Mathematics, University of St Andrews",
+      "date": "",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Nash/",
+      "note": "最後更新 2015 年 5 月。用到：1948 年學士與碩士、1948 年 9 月入普林斯頓；1949 年寫下後來得諾貝爾獎的論文；1950 年博士論文〈Non-cooperative Games〉、同年夏天到蘭德；成果當時未被視為特別重要；1994 年諾貝爾獎；2015 年與 Nirenberg 共獲阿貝爾獎（非線性偏微分方程）、領獎後幾天與妻子在紐澤西收費公路計程車車禍身亡；因電影《美麗境界》廣為人知。"
+    },
+    {
+      "title": "Antoine Augustin Cournot",
+      "publisher": "MacTutor History of Mathematics, University of St Andrews",
+      "date": "",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Cournot/",
+      "note": "用到：1838 年出版《Recherches sur les principes mathématiques de la théorie des richesses》，討論獨占、雙占與完全競爭的均衡條件。"
+    },
+    {
+      "title": "Albert Tucker, “A Two-Person Dilemma,” unpublished notes (May 1950)",
+      "publisher": "Eric Rasmusen, Games and Information 讀本筆記",
+      "date": "2005-06-05",
+      "url": "https://rasmusen.org/GI/reader/notes/01.Tucker.1950.htm",
+      "note": "用到：塔克那份史丹佛講義的日期為 1950 年 5 月。"
+    },
+    {
+      "title": "Some Experimental Games",
+      "publisher": "RAND Corporation, RM-789-1",
+      "date": "1952",
+      "url": "https://www.rand.org/pubs/research_memoranda/RM789-1.html",
+      "note": "Merrill M. Flood。只讀了 RAND 的書目頁，實驗內容依 SEP〈Prisoner's Dilemma〉的轉述。"
+    },
+    {
+      "title": "美麗境界",
+      "publisher": "中文維基百科",
+      "date": "",
+      "url": "https://zh.wikipedia.org/zh-tw/%E7%BE%8E%E9%BA%97%E5%A2%83%E7%95%8C",
+      "note": "用到：2001 年美國電影、台灣譯名、中國大陸譯《美麗心靈》、改編自娜薩的傳記、主角是納許。查閱 2026-11-23。"
+    },
+    {
+      "title": "A Beautiful Mind (film)",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/A_Beautiful_Mind_(film)",
+      "note": "用到：羅素・克洛飾演納許、朗・霍華導演、改編自 Sylvia Nasar 1998 年傳記、四座奧斯卡含最佳影片。查閱 2026-11-23。"
+    },
+    {
+      "title": "File:John f nash 20061102 2.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2006-11-02",
+      "url": "https://commons.wikimedia.org/wiki/File:John_f_nash_20061102_2.jpg",
+      "note": "Elke Wetzig（Elya）攝於科隆大學賽局理論研討會；CC BY-SA 3.0。"
+    }
+  ]
+}
