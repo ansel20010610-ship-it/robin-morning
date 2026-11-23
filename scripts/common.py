@@ -17,7 +17,7 @@ RESERVE_TARGET = {"main": 2, "verse": 2, "supplement": 1}
 TARGET_NOTE = "正刊每欄 2 篇、副刊每欄 1 篇"
 # {column: "YYYY-MM-DD"}: no new reserves for that column before this day, Taiwan time (RESERVE.md 寫法改了以後).
 # Whoever changes a column's way of writing fills it in the same commit; the entry lapses by itself on that day.
-RESERVE_PAUSE = {"artwork": "2026-11-23", "concept": "2026-11-23", "architecture": "2026-11-24", "philosophy": "2026-11-24", "poem": "2026-11-24", "civilization": "2026-11-25"}
+RESERVE_PAUSE = {"artwork": "2026-11-23", "concept": "2026-11-27", "architecture": "2026-11-24", "philosophy": "2026-11-24", "poem": "2026-11-24", "civilization": "2026-11-25"}
 
 
 def reserve_target(cfg, col):
