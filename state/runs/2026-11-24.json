@@ -31,6 +31,11 @@
     "missing": [],
     "note": "football 無新消息未動（前晚無賽）；news、obituary（Catherine Clément）刊出；FM、寰宇靜默；第9步：訃聞修正1（審稿修正即可＋忠實度核對）、快訊修正1（無重寫）；news 可用網域 aljazeera、france24、focustaiwan，dw.com 在 allowed_domains 致 400"
   },
+  "5": {
+    "finished_at": "2026-11-24T06:27:50+08:00",
+    "missing": [],
+    "note": "全刊齊備，無缺稿、無補寫、無補位；觀測站第4班已留紀錄：fm-watch 靜默、cosmere-watch 靜默、obituary 已刊出；巴薩晨報無需接手"
+  },
   "column": {
     "finished_at": "2026-11-23T23:01:33+08:00",
     "missing": [
