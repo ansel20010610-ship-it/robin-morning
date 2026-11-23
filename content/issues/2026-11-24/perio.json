@@ -1,0 +1,340 @@
+{
+  "column": "perio",
+  "date": "2026-11-24",
+  "title": "孕婦的牙齦炎產後會回落，但不必等生完",
+  "dek": "懷孕時牙齦比平常紅、比平常容易流血，第幾個月最明顯、生完多久退？牙菌斑沒變多，清牙菌斑還有沒有用？",
+  "brief": "一篇統合 33 個觀察性研究的系統性回顧：孕婦的牙齦指數在第二、第三孕期比第一孕期高，產後回落，牙菌斑量卻沒有跟著增加。但孕期把牙菌斑清掉，發炎照樣退：一組孕婦清掉牙結石、學會清潔，牙齦指數從 1.01 降到 0.37。統合分析能用的研究不多，高峰在哪一期也還沒定論。",
+  "takeaway": "33 個研究的統合：孕婦牙齦指數在第二、第三孕期升高、產後回落，牙菌斑量沒跟著變多。孕期做菌斑控制，發炎和出血照樣降得下來，孕婦刷牙流血不必等生完才處理。",
+  "chairside": "懷孕時牙齦本來就比較容易腫、刷牙流血，生完大約三個月，多半會退回懷孕初期的程度。不過不用等：把牙齒邊緣的牙菌斑清乾淨，懷孕期間發炎一樣會消；有報告這一項的研究裡，孕期洗牙和清潔都沒有看到不良反應。",
+  "topic_key": "perio:doi:10.1111/jcpe.12053",
+  "form": "timeline",
+  "voice": "colleague",
+  "updated_at": "2026-11-23T23:01:08+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Gingivitis.jpg/1280px-Gingivitis.jpg",
+    "width": 1280,
+    "height": 960,
+    "alt": "張口側面近照：上下排前牙咬合。下排前牙的牙齦邊緣發紅、略微腫起，牙間乳頭圓鈍；下排牙齒頰側靠近牙齦處有黃褐色的牙結石與染色，左側一顆下牙的牙齦邊緣有一小段鮮紅。上排牙齒較乾淨。",
+    "caption": "牙菌斑引起的牙齦炎：牙齦邊緣發紅、腫起，牙面靠近牙齦處有牙結石與外來染色。孕期牙齦炎在臨床上和這種一般牙齦炎看起來沒有不同，差在同樣的牙菌斑量下發炎得更厲害。照片為 2025 年上傳的臨床攝影，拍的是一名 20 歲男性，與文中研究的受試者無關。",
+    "credit": "Roquex 攝，Wikimedia Commons",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gingivitis.jpg",
+    "made": "2025"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "孕婦說刷牙流血，常聽到兩種回法：「荷爾蒙啦，生完就好」，或「先別碰，等生完」。證據說「生完就好」大致對，「等生完」不對。"
+    },
+    {
+      "type": "p",
+      "text": "主角是 2013 年刊在 *J Clin Periodontol* 的系統性回顧，第一作者是馬德里的牙周研究者 **Elena Figuero**。它收了 33 個觀察性研究：牙齦指數（GI）在第二、第三孕期比第一孕期高，產後降下來，**牙菌斑量卻沒有跟著增加**。她後來替歐洲牙周病學會寫的報告說，產後約三個月，通常退回懷孕初期的程度。"
+    },
+    {
+      "type": "h",
+      "text": "一個月一個月看"
+    },
+    {
+      "type": "p",
+      "text": "月份細節來自北歐兩位牙醫學者 **Löe** 和 **Silness** 1963 年在奧斯陸的研究，Löe 就是做停止刷牙實驗的那位。121 名孕婦、61 名產後婦女各看一次，每個月是不同的人。"
+    },
+    {
+      "type": "timeline",
+      "title": "從懷孕第 2 個月到產後：牙齦發炎怎麼走",
+      "items": [
+        {
+          "when": "孕 2 月",
+          "label": "已經看得出來",
+          "note": "Löe 與 Silness 1963 年：平均 GI 0.89；作者說懷孕對牙齦的影響在第 2 個月就看得出來"
+        },
+        {
+          "when": "孕 3 月",
+          "label": "第一個小高峰",
+          "note": "GI 1.04，第 4 個月回落到 0.91。統合分析：第一孕期的 GI 低於第二、第三孕期"
+        },
+        {
+          "when": "孕 4–7 月",
+          "label": "一路往上",
+          "note": "GI 0.91、0.97、1.05、1.06。深圳 30 名清潔極好的孕婦：23–25 週 GI 1.357（12–14 週 1.205），牙菌斑指數幾乎不動"
+        },
+        {
+          "when": "孕 7 月",
+          "label": "清乾淨的那一組",
+          "note": "Silness 與 Löe 1966 年：33 名孕婦去牙結石、學清潔，GI 從 1.01 到 2 週後 0.70，到第 7 個月 0.37"
+        },
+        {
+          "when": "孕 8 月",
+          "label": "最高點",
+          "note": "1963 年 GI 1.26，全程最高。深圳組 33–36 週 GI 1.485，牙菌斑指數 0.610（起點 0.598）"
+        },
+        {
+          "when": "孕 9 月",
+          "label": "突然掉下來",
+          "note": "GI 0.91，回到第 2 個月的水準"
+        },
+        {
+          "when": "產後",
+          "label": "退回去",
+          "note": "1963 年產後各月 GI 0.82–0.91。統合分析：產後比第二孕期低 0.143、比第三孕期低 0.256；約三個月退回第一孕期的程度"
+        }
+      ],
+      "caption": "1963 年的數字是 121 名孕婦與 61 名產後婦女各檢查一次，每個月份是不同的人（每月 10–22 人），不是追蹤同一群人。依 Löe 與 Silness（1963）表 III、Silness 與 Löe（1966）表 IV、Wu 等（2016）表 3、Figuero 等（2013）摘要與 Figuero、Sanz 的 EFP 報告（2017）整理。GI 是牙齦指數，0 到 3 分。"
+    },
+    {
+      "type": "svg",
+      "title": "1963 年的月份曲線（依原文表 III 重繪）",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 270\">\n<text x=\"180.0\" y=\"18\" font-size=\"12\" text-anchor=\"middle\">1963 年奧斯陸：各月份孕婦與產後婦女的平均牙齦指數</text>\n<line class=\"muted line\" x1=\"36\" y1=\"200.0\" x2=\"348\" y2=\"200.0\" stroke-width=\"0.5\" stroke-dasharray=\"2 3\"/>\n<text class=\"muted\" x=\"32\" y=\"204.0\" font-size=\"10\" text-anchor=\"end\">0.6</text>\n<line class=\"muted line\" x1=\"36\" y1=\"160.0\" x2=\"348\" y2=\"160.0\" stroke-width=\"0.5\" stroke-dasharray=\"2 3\"/>\n<text class=\"muted\" x=\"32\" y=\"164.0\" font-size=\"10\" text-anchor=\"end\">0.8</text>\n<line class=\"muted line\" x1=\"36\" y1=\"120.0\" x2=\"348\" y2=\"120.0\" stroke-width=\"0.5\" stroke-dasharray=\"2 3\"/>\n<text class=\"muted\" x=\"32\" y=\"124.0\" font-size=\"10\" text-anchor=\"end\">1.0</text>\n<line class=\"muted line\" x1=\"36\" y1=\"80.0\" x2=\"348\" y2=\"80.0\" stroke-width=\"0.5\" stroke-dasharray=\"2 3\"/>\n<text class=\"muted\" x=\"32\" y=\"84.0\" font-size=\"10\" text-anchor=\"end\">1.2</text>\n<line class=\"muted line\" x1=\"36\" y1=\"40.0\" x2=\"348\" y2=\"40.0\" stroke-width=\"0.5\" stroke-dasharray=\"2 3\"/>\n<text class=\"muted\" x=\"32\" y=\"44.0\" font-size=\"10\" text-anchor=\"end\">1.4</text>\n<line class=\"accent\" x1=\"239.0\" y1=\"34\" x2=\"239.0\" y2=\"204\" stroke-width=\"1.2\"/>\n<text class=\"accent\" x=\"239.0\" y=\"30\" font-size=\"10\" text-anchor=\"middle\">生產</text>\n<polyline class=\"ink line\" points=\"44,142.0 68,112.0 92,138.0 116,126.0 140,110.0 164,108.0 188,68.0 212,138.0\" stroke-width=\"2\"/>\n<polyline class=\"ink line\" points=\"266,138.0 290,156.0 314,150.0 338,150.0\" stroke-width=\"2\"/>\n<circle class=\"ink\" cx=\"44\" cy=\"142.0\" r=\"3.5\"/>\n<text x=\"44\" y=\"134.0\" font-size=\"9.5\" text-anchor=\"middle\">0.89</text>\n<text x=\"44\" y=\"218\" font-size=\"10\" text-anchor=\"middle\">2</text>\n<text class=\"muted\" x=\"44\" y=\"232\" font-size=\"8.5\" text-anchor=\"middle\">10人</text>\n<circle class=\"ink\" cx=\"68\" cy=\"112.0\" r=\"3.5\"/>\n<text x=\"68\" y=\"104.0\" font-size=\"9.5\" text-anchor=\"middle\">1.04</text>\n<text x=\"68\" y=\"218\" font-size=\"10\" text-anchor=\"middle\">3</text>\n<text class=\"muted\" x=\"68\" y=\"232\" font-size=\"8.5\" text-anchor=\"middle\">11人</text>\n<circle class=\"ink\" cx=\"92\" cy=\"138.0\" r=\"3.5\"/>\n<text x=\"92\" y=\"130.0\" font-size=\"9.5\" text-anchor=\"middle\">0.91</text>\n<text x=\"92\" y=\"218\" font-size=\"10\" text-anchor=\"middle\">4</text>\n<text class=\"muted\" x=\"92\" y=\"232\" font-size=\"8.5\" text-anchor=\"middle\">13人</text>\n<circle class=\"ink\" cx=\"116\" cy=\"126.0\" r=\"3.5\"/>\n<text x=\"116\" y=\"118.0\" font-size=\"9.5\" text-anchor=\"middle\">0.97</text>\n<text x=\"116\" y=\"218\" font-size=\"10\" text-anchor=\"middle\">5</text>\n<text class=\"muted\" x=\"116\" y=\"232\" font-size=\"8.5\" text-anchor=\"middle\">14人</text>\n<circle class=\"ink\" cx=\"140\" cy=\"110.0\" r=\"3.5\"/>\n<text x=\"140\" y=\"102.0\" font-size=\"9.5\" text-anchor=\"middle\">1.05</text>\n<text x=\"140\" y=\"218\" font-size=\"10\" text-anchor=\"middle\">6</text>\n<text class=\"muted\" x=\"140\" y=\"232\" font-size=\"8.5\" text-anchor=\"middle\">20人</text>\n<circle class=\"ink\" cx=\"164\" cy=\"108.0\" r=\"3.5\"/>\n<text x=\"164\" y=\"100.0\" font-size=\"9.5\" text-anchor=\"middle\">1.06</text>\n<text x=\"164\" y=\"218\" font-size=\"10\" text-anchor=\"middle\">7</text>\n<text class=\"muted\" x=\"164\" y=\"232\" font-size=\"8.5\" text-anchor=\"middle\">21人</text>\n<circle class=\"accent\" cx=\"188\" cy=\"68.0\" r=\"3.5\"/>\n<text class=\"accent\" x=\"188\" y=\"60.0\" font-size=\"9.5\" text-anchor=\"middle\">1.26</text>\n<text x=\"188\" y=\"218\" font-size=\"10\" text-anchor=\"middle\">8</text>\n<text class=\"muted\" x=\"188\" y=\"232\" font-size=\"8.5\" text-anchor=\"middle\">17人</text>\n<circle class=\"ink\" cx=\"212\" cy=\"138.0\" r=\"3.5\"/>\n<text x=\"212\" y=\"130.0\" font-size=\"9.5\" text-anchor=\"middle\">0.91</text>\n<text x=\"212\" y=\"218\" font-size=\"10\" text-anchor=\"middle\">9</text>\n<text class=\"muted\" x=\"212\" y=\"232\" font-size=\"8.5\" text-anchor=\"middle\">15人</text>\n<circle class=\"ink\" cx=\"266\" cy=\"138.0\" r=\"3.5\"/>\n<text x=\"266\" y=\"130.0\" font-size=\"9.5\" text-anchor=\"middle\">0.91</text>\n<text x=\"266\" y=\"218\" font-size=\"10\" text-anchor=\"middle\">2</text>\n<text class=\"muted\" x=\"266\" y=\"232\" font-size=\"8.5\" text-anchor=\"middle\">13人</text>\n<circle class=\"ink\" cx=\"290\" cy=\"156.0\" r=\"3.5\"/>\n<text x=\"290\" y=\"148.0\" font-size=\"9.5\" text-anchor=\"middle\">0.82</text>\n<text x=\"290\" y=\"218\" font-size=\"10\" text-anchor=\"middle\">3</text>\n<text class=\"muted\" x=\"290\" y=\"232\" font-size=\"8.5\" text-anchor=\"middle\">12人</text>\n<circle class=\"ink\" cx=\"314\" cy=\"150.0\" r=\"3.5\"/>\n<text x=\"314\" y=\"142.0\" font-size=\"9.5\" text-anchor=\"middle\">0.85</text>\n<text x=\"314\" y=\"218\" font-size=\"10\" text-anchor=\"middle\">4</text>\n<text class=\"muted\" x=\"314\" y=\"232\" font-size=\"8.5\" text-anchor=\"middle\">14人</text>\n<circle class=\"ink\" cx=\"338\" cy=\"150.0\" r=\"3.5\"/>\n<text x=\"338\" y=\"142.0\" font-size=\"9.5\" text-anchor=\"middle\">0.85</text>\n<text x=\"338\" y=\"218\" font-size=\"10\" text-anchor=\"middle\">5+</text>\n<text class=\"muted\" x=\"338\" y=\"232\" font-size=\"8.5\" text-anchor=\"middle\">22人</text>\n<text class=\"muted\" x=\"128.0\" y=\"250\" font-size=\"10.5\" text-anchor=\"middle\">懷孕第幾個月</text>\n<text class=\"muted\" x=\"302.0\" y=\"250\" font-size=\"10.5\" text-anchor=\"middle\">產後第幾個月</text>\n<text class=\"muted\" x=\"10\" y=\"26\" font-size=\"10\">GI</text>\n</svg>",
+      "caption": "依 Löe 與 Silness（1963）表 III 的平均 GI 重繪；橫軸下方是該月份的受試人數。每個點是不同的婦女，各只檢查一次。GI 每面牙齦評 0 到 3 分：0 無發炎，1 輕度，2 中度（壓迫會出血），3 重度。",
+      "credit": "本報依原文數據重繪"
+    },
+    {
+      "type": "p",
+      "text": "第 8 個月最高只是 1963 年這篇。其他研究多說是第三孕期，也有說第二孕期。"
+    },
+    {
+      "type": "h",
+      "text": "證據有多硬"
+    },
+    {
+      "type": "p",
+      "text": "WMD 是把各研究的差合成一個數。產後比第三孕期低 0.256，滿分 3 分，大約差四分之一分。"
+    },
+    {
+      "type": "table",
+      "title": "統合分析：GI 差多少（Figuero 等 2013）",
+      "head": [
+        "比較",
+        "GI 加權平均差（WMD）",
+        "哪些研究"
+      ],
+      "rows": [
+        [
+          "第一孕期 vs 第二、第三孕期",
+          "第一孕期較低：0.140–0.415",
+          "世代研究"
+        ],
+        [
+          "第一孕期 vs 第二、第三孕期",
+          "第一孕期較低：0.242–0.320",
+          "橫斷研究"
+        ],
+        [
+          "產後 vs 第二孕期",
+          "產後較低：0.143（95% CI 0.031–0.255）",
+          "世代研究"
+        ],
+        [
+          "產後 vs 第三孕期",
+          "產後較低：0.256（95% CI 0.151–0.360）",
+          "世代研究"
+        ],
+        [
+          "未懷孕 vs 任一孕期",
+          "未懷孕較低：0.385–0.741",
+          "世代與橫斷研究"
+        ],
+        [
+          "牙菌斑指數：各孕期之間",
+          "0.001–0.027，無顯著差別",
+          "世代研究"
+        ],
+        [
+          "牙菌斑指數：各孕期之間",
+          "差別小但顯著：0.048–0.109",
+          "橫斷研究"
+        ]
+      ],
+      "caption": "產後與孕期的兩列附 95% 信賴區間，出自回顧摘要；其餘範圍數字出自第一作者 Figuero 與 Sanz 為 EFP 撰寫的 2017 年報告。範圍是各組比較分別算出的 WMD，不是信賴區間。GI 滿分 3 分。"
+    },
+    {
+      "type": "quote",
+      "text": "儘管統合分析納入的研究有限，本系統性回顧確認懷孕期間 GI 顯著上升，孕婦也高於產後或未懷孕的婦女，而牙菌斑量並沒有跟著增加。",
+      "original": "Despite the limited number of studies included in the meta-analyses, the present systematic review confirms the existence of a significant increase in GI throughout pregnancy and between pregnant versus post-partum or non-pregnant women, without a concomitant increase in plaque levels.",
+      "cite": "Figuero 等，*J Clin Periodontol* 2013 摘要結論；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "弱點作者自己寫了：能進統合分析的研究不多；產後較低，只在同一群人追著看的世代研究裡成立。深圳 2016 年追了 30 名清潔極好的孕婦，GI 一路升，牙菌斑指數幾乎沒動；人少、期刊不夠格，只當旁證。"
+    },
+    {
+      "type": "h",
+      "text": "孕期把牙菌斑清掉"
+    },
+    {
+      "type": "p",
+      "text": "1966 年 Silness 和 Löe 替 60 名孕婦去牙結石、教清潔，分析 33 名，到第 7 個月 GI 從 1.01 降到 0.37。但**只清牙結石，發炎幾乎不動**。"
+    },
+    {
+      "type": "table",
+      "title": "孕期裡把牙菌斑清掉（Silness 與 Löe 1966，33 名孕婦）",
+      "head": [
+        "評估時間",
+        "牙齦指數 GI",
+        "牙菌斑指數 PlI",
+        "探測深度"
+      ],
+      "rows": [
+        [
+          "開始",
+          "1.01",
+          "0.79",
+          "3.2 mm"
+        ],
+        [
+          "2 週後",
+          "0.70",
+          "0.50",
+          "2.9 mm"
+        ],
+        [
+          "懷孕第 7 個月",
+          "0.37",
+          "0.35",
+          "2.6 mm"
+        ]
+      ],
+      "caption": "依原文表 I、表 IV 重繪。治療是去除牙結石、修整突出的補綴邊緣，加上一次牙刷與牙間木籤的清潔指導；同一位操作者治療與檢查。沒有不治療的對照組。"
+    },
+    {
+      "type": "quote",
+      "text": "只要牙齒保持沒有牙菌斑，原本的牙齦發炎就會在懷孕期間完全消退——而這段時期，牙齦的發炎反應與荷爾蒙活動都可能升高。",
+      "original": "The essential finding in this investigation is that provided the teeth are kept free of plaque complete resolution of preexisting gingival inflammation takes place during a period of pregnancy when the gingival inflammatory response (Loe & Silness, 1963) and hormonal activity (see Loe, 1965) are likely to be increased.",
+      "cite": "Silness 與 Löe，〈Periodontal disease in pregnancy. III〉，1966；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "這篇沒有對照組，比較硬的是 2005 年智利 870 名孕婦的隨機試驗：治療組做菌斑控制，探診出血從 55.09% 降到 15.09%，產後才治療的對照組從 51.42% 升到 56.52%。Cochrane 2017 年的回顧也說，有報告的試驗都沒出現治療不良反應。"
+    },
+    {
+      "type": "h",
+      "text": "順便複習：GI 的出身"
+    },
+    {
+      "type": "p",
+      "text": "GI 就是 1963 年這篇提出的。2 分才有壓迫出血，孕婦平均才 1.03。2017 年新分類也寫：菌斑性牙齦炎清掉生物膜就會退，荷爾蒙會改變嚴重度。"
+    },
+    {
+      "type": "facts",
+      "title": "牙齦指數（GI）的出生證明",
+      "items": [
+        [
+          "提出者",
+          "Harald Löe（丹麥奧胡斯皇家牙醫學院牙周科）、John Silness（挪威卑爾根大學牙醫學院）"
+        ],
+        [
+          "首次使用",
+          "〈Periodontal disease in pregnancy. I〉，*Acta Odontol Scand* 1963;21:533–551"
+        ],
+        [
+          "受檢者",
+          "奧斯陸 Sagene 母嬰保健中心，1961 年 9 月到 1962 年 7 月；孕婦 121 人、產後婦女 61 人，各檢查一次"
+        ],
+        [
+          "評分",
+          "每顆牙頰、舌、近心、遠心四面各 0–3 分：0 無發炎；1 顏色稍變、質地少變；2 光亮、發紅、水腫、肥大，壓迫出血；3 明顯紅腫，自發出血傾向、潰瘍"
+        ],
+        [
+          "算法",
+          "四面平均成一顆牙，1963 年只評代表六個區段的六顆牙，再平均成個人分數；個人 0.1–1.0 輕度、1.1–2.0 中度、2.1–3.0 重度"
+        ],
+        [
+          "評一個人要多久",
+          "30 秒到 1 分鐘"
+        ],
+        [
+          "系列",
+          "第 II 篇（1964）提出牙菌斑指數 PlI；第 III 篇（1966）看孕期局部治療"
+        ]
+      ]
+    },
+    {
+      "type": "paper",
+      "citation": "Figuero E, Carrillo-de-Albornoz A, Martín C, Tobías A, Herrera D. Effect of pregnancy on gingival inflammation in systemically healthy women: a systematic review. *J Clin Periodontol*. 2013;40(5):457–473.",
+      "doi": "10.1111/jcpe.12053",
+      "pmid": "23557432",
+      "link": "https://doi.org/10.1111/jcpe.12053",
+      "evidence": "系統性回顧與統合分析：33 個觀察性研究；統合分析只納入少數研究",
+      "design": "系統性回顧與統合分析；Medline、EMBASE 檢索到 2011 年 8 月；收前瞻世代研究與橫斷研究，以 GI 或探診出血評估牙齦發炎",
+      "sample": "44 篇文章、33 個研究（14 個世代研究：1,353 名孕婦、197 名未懷孕者；19 個橫斷研究：4,824 名孕婦、205 名產後、8,324 名未懷孕者）",
+      "question": "全身健康的婦女，懷孕會不會讓牙齦發炎加重？各孕期、產後與未懷孕者差多少？",
+      "access": "依 PubMed 摘要；研究規模與各組 WMD 範圍依第一作者 Figuero 與 Sanz 為 EFP 撰寫的 2017 年報告。孕期月份數據依 Löe 與 Silness 1963、1966 年原文全文（掃描本）"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Figuero E, Carrillo-de-Albornoz A, Martín C, Tobías A, Herrera D. Effect of pregnancy on gingival inflammation in systemically healthy women: a systematic review. J Clin Periodontol 2013;40(5):457–473",
+      "publisher": "Journal of Clinical Periodontology（Wiley）",
+      "date": "2013-04-05",
+      "url": "https://doi.org/10.1111/jcpe.12053",
+      "note": "主角論文；讀 PubMed 摘要（PMID 23557432），全文需訂閱。線上刊出日期依 Crossref"
+    },
+    {
+      "title": "Women's oral health during pregnancy（Figuero E、Sanz M 撰，EFP Oral Health and Pregnancy 計畫報告）",
+      "publisher": "European Federation of Periodontology（與 Oral-B 合作）",
+      "date": "2017-07",
+      "url": "https://www.efp.org/publications/projects/oralhealthandpregnancy/reports/womens-oral-health.pdf",
+      "note": "讀第 3–15 頁：孕期牙齦炎定義、Figuero 2013 回顧的規模與 WMD、產後三個月回到第一孕期水準、黃體素機轉、妊娠瘤、孕期菌斑控制試驗。日期依 PDF 建立日期"
+    },
+    {
+      "title": "Löe H, Silness J. Periodontal disease in pregnancy. I. Prevalence and severity. Acta Odontol Scand 1963;21(6):533–551",
+      "publisher": "Acta Odontologica Scandinavica（Medical Journals Sweden，CC BY 4.0 開放）",
+      "date": "1963-12",
+      "url": "https://medicaljournalssweden.se/actaodontologica/article/view/36350",
+      "note": "讀全文掃描本；表 I、II、III 對照掃描影像核對。GI 在此篇提出。DOI 10.3109/00016356309011240，PMID 14121956"
+    },
+    {
+      "title": "Silness J, Löe H. Periodontal disease in pregnancy. II. Correlation between oral hygiene and periodontal condition. Acta Odontol Scand 1964;22:121–135",
+      "publisher": "Acta Odontologica Scandinavica（Medical Journals Sweden）",
+      "date": "1964-02",
+      "url": "https://medicaljournalssweden.se/actaodontologica/article/view/36127",
+      "note": "牙菌斑指數 PlI 出處；全文未讀，內容依第 III 篇引言的轉述。PMID 14158464"
+    },
+    {
+      "title": "Silness J, Löe H. Periodontal disease in pregnancy. III. Response to local treatment. Acta Odontol Scand 1966;24(6):747–759",
+      "publisher": "Acta Odontologica Scandinavica（Medical Journals Sweden，CC BY 4.0 開放）",
+      "date": "1966-12",
+      "url": "https://medicaljournalssweden.se/actaodontologica/article/view/36673",
+      "note": "讀全文掃描本；表 IV 對照掃描影像核對。DOI 10.3109/00016356609028739，PMID 5228803"
+    },
+    {
+      "title": "Wu M, Chen SW, Su WL, et al. Sex hormones enhance gingival inflammation without affecting IL-1β and TNF-α in periodontally healthy women during pregnancy. Mediators Inflamm 2016;2016:4897890",
+      "publisher": "Mediators of Inflammation（Wiley，CC BY）",
+      "date": "2016-03-01",
+      "url": "https://doi.org/10.1155/2016/4897890",
+      "note": "讀 PMC 全文（PMC4791509）：方法、表 2、表 3、結論。期刊不在本欄白名單，只當佐證"
+    },
+    {
+      "title": "López NJ, Da Silva I, Ipinza J, Gutiérrez J. Periodontal therapy reduces the rate of preterm low birth weight in women with pregnancy-associated gingivitis. J Periodontol 2005;76(11 Suppl):2144–2153",
+      "publisher": "Journal of Periodontology",
+      "date": "2005-11",
+      "url": "https://doi.org/10.1902/jop.2005.76.11-S.2144",
+      "note": "讀 PubMed 摘要（PMID 16277587）；探診出血數字依 EFP 2017 報告第 13–14 頁的摘述"
+    },
+    {
+      "title": "Murakami S, Mealey BL, Mariotti A, Chapple ILC. Dental plaque-induced gingival conditions. J Periodontol 2018;89(Suppl 1):S17–S27",
+      "publisher": "Journal of Periodontology（AAP／EFP 2017 World Workshop）",
+      "date": "2018-06",
+      "url": "https://doi.org/10.1002/JPER.17-0095",
+      "note": "讀 PubMed 摘要（PMID 29926958）：牙菌斑性牙齦發炎的特徵（移除生物膜可逆、荷爾蒙等全身因素修飾嚴重度）"
+    },
+    {
+      "title": "Iheozor-Ejiofor Z, Middleton P, Esposito M, Glenny AM. Treating periodontal disease for preventing adverse birth outcomes in pregnant women. Cochrane Database Syst Rev 2017;6:CD005297",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "date": "2017-06-12",
+      "url": "https://doi.org/10.1002/14651858.CD005297.pub3",
+      "note": "讀 PubMed 摘要（PMID 28605006）：有報告的試驗都沒有孕婦死亡或治療不良反應；本欄 11-05 的主角"
+    },
+    {
+      "title": "File:Gingivitis.jpg",
+      "publisher": "Wikimedia Commons（Roquex，CC0）",
+      "date": "2025-07-15",
+      "url": "https://commons.wikimedia.org/wiki/File:Gingivitis.jpg",
+      "note": "頭圖；檔案描述：20 歲男性模特兒，牙齦炎、頰側牙結石與外來染色"
+    }
+  ]
+}
