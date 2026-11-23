@@ -26,6 +26,11 @@
     ],
     "note": "精簡：philosophy（compare，電車難題）；football 初稿（list，非比賽夜，已走第 8、9 步：修正即可、忠實度核對修正）；第 1 班已回報、正刊齊，無接手"
   },
+  "4": {
+    "finished_at": "2026-11-24T05:42:48+08:00",
+    "missing": [],
+    "note": "football 無新消息未動（前晚無賽）；news、obituary（Catherine Clément）刊出；FM、寰宇靜默；第9步：訃聞修正1（審稿修正即可＋忠實度核對）、快訊修正1（無重寫）；news 可用網域 aljazeera、france24、focustaiwan，dw.com 在 allowed_domains 致 400"
+  },
   "column": {
     "finished_at": "2026-11-23T23:01:33+08:00",
     "missing": [
