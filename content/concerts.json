@@ -2130,12 +2130,19 @@
       "title": "東京佼成管樂團",
       "kind": "協奏曲",
       "rating": 4,
-      "why": "小號名家納卡里亞科夫和日本的東京佼成管樂團在高雄同台，吹小號版的《藍色狂想曲》。台北那一晚沒有他，樂團換一套節目，用管樂演《火鳥》組曲和《斯拉夫進行曲》。",
-      "who": "東京佼成管樂團；11/24：佐佐木新平（指揮）、侯傳安（小號）；12/12：飯森範親（指揮）、謝爾蓋．納卡里亞科夫（Sergei Nakariakov，小號）",
-      "program": "11/24：蕭士塔高維契《節慶序曲》、Tamberg《第一號小號協奏曲》、Jager《Sinfonia Nobilissima》、史特拉汶斯基《火鳥》組曲、柴可夫斯基《斯拉夫進行曲》、C. T. Smith《Danse Folâtre》；12/12：布蘭特《降E大調第二號音樂會小品》、天野正道《GR》選曲、蓋希文《藍色狂想曲》（小號版）、惠特克〈Sleep〉、巴恩斯《第三號交響曲》終樂章",
+      "why": "小號名家納卡里亞科夫和日本的東京佼成管樂團在高雄同台，吹小號版的《藍色狂想曲》。台北兩晚都沒有他，11/24 那晚樂團換一套節目，用管樂演《火鳥》組曲和《斯拉夫進行曲》。",
+      "who": "東京佼成管樂團；11/23：清水大輔（指揮）、Nikita Zimin（薩克斯風）；11/24：佐佐木新平（指揮）、侯傳安（小號）；12/12：飯森範親（指揮）、謝爾蓋．納卡里亞科夫（Sergei Nakariakov，小號）",
+      "program": "11/23：清水大輔作品《Welcome to the Imagination World》、《Sea of Wisdom》、《Next Angels》、《SMILE...is to create a music》、《The Skyscrapers》、《Fanfare》（世界首演）、《Nature and Life》、《All Wishes》、《Song of Gaia》；11/24：蕭士塔高維契《節慶序曲》、Tamberg《第一號小號協奏曲》、Jager《Sinfonia Nobilissima》、史特拉汶斯基《火鳥》組曲、柴可夫斯基《斯拉夫進行曲》、C. T. Smith《Danse Folâtre》；12/12：布蘭特《降E大調第二號音樂會小品》、天野正道《GR》選曲、蓋希文《藍色狂想曲》（小號版）、惠特克〈Sleep〉、巴恩斯《第三號交響曲》終樂章",
       "price": "台北 NT$1,800–4,800；高雄 NT$1,800–5,800；學生席 NT$500",
       "note": "在縱觀藝術售票系統買票；19:00 有演前專訪",
       "shows": [
+        {
+          "date": "2026-11-23",
+          "time": "19:30",
+          "city": "台北",
+          "venue": "國家音樂廳",
+          "tickets": "https://ticket.sight-music.com/Event/Page/0cf741c180d59c28b638c3569ca823e4"
+        },
         {
           "date": "2026-11-24",
           "time": "19:30",
@@ -2152,10 +2159,19 @@
         }
       ],
       "uids": [
+        "ntch:29279",
         "ntch:29281",
         "wwy:6a72defdb9145f0007d60354"
       ],
       "sources": [
+        {
+          "title": "縱觀藝術售票頁：《席》11/23",
+          "url": "https://ticket.sight-music.com/Event/Page/0cf741c180d59c28b638c3569ca823e4"
+        },
+        {
+          "title": "東京佼成管樂團官網：台灣公演《席》11/23",
+          "url": "https://www.tkwo.jp/concert/others/20261123-taiwan.html"
+        },
         {
           "title": "縱觀藝術售票頁：《華麗慶典》11/24",
           "url": "https://ticket.sight-music.com/Event/Page/7fb112f68fba11afdb57b8446ff30ee9"
