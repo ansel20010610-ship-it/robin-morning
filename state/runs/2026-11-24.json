@@ -38,5 +38,10 @@
       "poem"
     ],
     "note": "精簡：perio、timeline 文體"
+  },
+  "concerts": {
+    "finished_at": "2026-11-24T05:35:03+08:00",
+    "missing": [],
+    "note": "新增 0、更新 0；補查沒做完（pbc、newaspect、tanart 連不上，udn 沒查）；歷史上的今天 1859"
   }
 }
