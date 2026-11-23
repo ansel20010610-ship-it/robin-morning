@@ -1,0 +1,15 @@
+{
+  "column": {
+    "finished_at": "2026-11-23T23:01:33+08:00",
+    "missing": [
+      "football",
+      "news",
+      "music",
+      "devotion",
+      "architecture",
+      "philosophy",
+      "poem"
+    ],
+    "note": "精簡：perio、timeline 文體"
+  }
+}
