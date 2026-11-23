@@ -7,7 +7,7 @@
 寫法只看 `editorial/briefs/common.md` 與 `editorial/briefs/music.md`。
 
 ## 選曲
-- **先看 `editorial/music-canon.md` 開頭的「指定日期」**：今天在指定的日子裡，就寫那裡指定的那篇（topic_key、motif 照表），不照清單順序。
+- **先看 `editorial/music-canon.md` 開頭的「指定日期」**：今天在指定的日子裡，就寫那裡指定的那篇（topic_key、motif 照表），不照清單順序，表格下的寫法指示照抄在事實清單最前面。
 - **照 `editorial/music-canon.md` 的必聽清單由上往下，挑第一首還沒介紹過的。** 先跑 `python3 scripts/ledger.py --column music`，比對清單裡的 `topic_key`；清單裡的 topic_key 就是這篇要用的 topic_key。
 - 清單全部寫完以前，不選清單以外的曲子。清單分三輪，第三輪（第 61 首起）是「音樂廳的常客」，例如馬勒《復活》；社長 2026-11-02 說可以慢慢拓寬但不要太冷門。
 
