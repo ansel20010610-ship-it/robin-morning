@@ -1,6 +1,6 @@
 {
   "last": "2026-11-09",
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "sources": {
     "mna": {
       "urls": [
@@ -9,22 +9,17 @@
       ],
       "seen": [
         {
-          "title": "Thielemann Staatskapelle Berlin",
+          "title": "提勒曼與柏林國家歌劇院管弦樂團",
           "verdict": "已列入",
           "id": "thielemann-staatskapelle-berlin-2026"
         },
         {
-          "title": "Currentzis Utopia",
+          "title": "庫倫奇斯與烏托邦管弦樂團",
           "verdict": "已列入",
           "id": "currentzis-utopia-2026"
         },
         {
-          "title": "Diana Krall",
-          "verdict": "不收",
-          "why": "爵士歌手，不在範圍"
-        },
-        {
-          "title": "Yuja Wang MCO",
+          "title": "王羽佳與馬勒室內樂團",
           "verdict": "已列入",
           "id": "yuja-wang-mco-2026"
         },
@@ -34,25 +29,30 @@
           "id": "philharmonix-2026"
         },
         {
-          "title": "Lang Lang",
+          "title": "郎朗鋼琴獨奏會",
           "verdict": "已列入",
           "id": "lang-lang-recital-2026"
         },
         {
-          "title": "Marc André 低音提琴與吉他",
+          "title": "Diana Krall",
           "verdict": "不收",
-          "why": "2分：11/20已演完，跨界小品"
+          "why": "爵士，不在範圍"
+        },
+        {
+          "title": "馬克安德烈低音提琴與吉他",
+          "verdict": "不收",
+          "why": "11/20 已演完"
         }
       ]
     },
     "pbc": {
-      "error": "來不及查"
+      "error": "網站憑證錯誤，WebFetch 連不上"
     },
     "newaspect": {
-      "error": "連不上（ECONNREFUSED）"
+      "error": "連線被拒（ECONNREFUSED）"
     },
     "tanart": {
-      "error": "連不上（網域解析失敗）"
+      "error": "網域解析失敗"
     },
     "kham": {
       "urls": [
@@ -60,26 +60,32 @@
       ],
       "seen": [
         {
-          "title": "SHOW MUSICAL WILD WILD",
+          "title": "音樂劇《WILD WILD》",
           "verdict": "不收",
-          "why": "2分：非西方歌劇或主流音樂劇，演出者與日期未查到"
-        },
-        {
-          "title": "西貢小姐 Miss Saigon",
-          "verdict": "不收",
-          "why": "頁面只有周邊商品，沒有場次，查不到；明天再查"
+          "why": "2 分，首頁看不到演出者與製作內容，非西方歌劇或完整原版製作"
         }
       ]
     },
     "udn": {
-      "error": "來不及查"
+      "error": "來不及逐站查，未打開"
     },
     "news": {
-      "error": "搜尋引擎擋下，未查"
+      "urls": [
+        "https://udn.com/news/story/7270/9659928",
+        "https://www.cna.com.tw/news/acul/202608060334.aspx",
+        "https://udn.com/news/story/7266/9390254"
+      ],
+      "seen": [
+        {
+          "title": "NSO 呂紹嘉與黃亞中貝九（3/29 台北）",
+          "verdict": "不收",
+          "why": "疑為 2026 年 3 月已演完，文章無年份，未收"
+        }
+      ]
     },
     "ntch": {
       "auto": true,
-      "n": 118
+      "n": 116
     },
     "ntt": {
       "auto": true,
@@ -87,7 +93,7 @@
     },
     "wwy": {
       "auto": true,
-      "n": 161
+      "n": 163
     }
   }
 }

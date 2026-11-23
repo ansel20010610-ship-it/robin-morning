@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "complete": true,
   "note": "",
   "incomplete_since": null,
@@ -166,8 +166,8 @@
     "opentix": {
       "ok": true,
       "note": "",
-      "new": 1,
-      "pages": 60,
+      "new": 4,
+      "pages": 62,
       "left": 0,
       "newest": "2026-11-19"
     },
@@ -177,12 +177,12 @@
       "read": {
         "ntch": {
           "ok": true,
-          "n": 118,
+          "n": 116,
           "note": ""
         },
         "wwy": {
           "ok": true,
-          "n": 161,
+          "n": 163,
           "note": ""
         },
         "ntt": {
@@ -226,6 +226,12 @@
     },
     {
       "date": "2026-11-23",
+      "feed": true,
+      "opentix": true,
+      "venues": true
+    },
+    {
+      "date": "2026-11-24",
       "feed": true,
       "opentix": true,
       "venues": true

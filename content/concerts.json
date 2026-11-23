@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-23",
+  "checked": "2026-11-24",
   "events": [
     {
       "id": "mahler8-nso-2026",
@@ -2136,13 +2136,6 @@
       "price": "台北 NT$1,800–4,800；高雄 NT$1,800–5,800；學生席 NT$500",
       "note": "在縱觀藝術售票系統買票；19:00 有演前專訪",
       "shows": [
-        {
-          "date": "2026-11-23",
-          "time": "19:30",
-          "city": "台北",
-          "venue": "國家音樂廳",
-          "tickets": "https://ticket.sight-music.com/Event/Page/0cf741c180d59c28b638c3569ca823e4"
-        },
         {
           "date": "2026-11-24",
           "time": "19:30",
