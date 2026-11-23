@@ -1,0 +1,288 @@
+{
+  "column": "architecture",
+  "date": "2026-11-24",
+  "title": "十一座從上往下挖出來的教堂",
+  "dek": "拉利貝拉的教堂是從山頂往下鑿出來的。後來罩在上面的鋼架屋頂，說好是暫時的，2024 年初已經超過 15 年。",
+  "brief": "衣索比亞的拉利貝拉有 11 座教堂，全是用鎚子和鑿子，先在山岩上挖出壕溝，再從頂面往下鑿出來的。它們到現在還有人做禮拜。其中 5 座頭上的鋼架棚架原本只是暫時遮雨，2024 年初的報導說已經超過 15 年。",
+  "topic_key": "architecture:lalibela-rock-hewn-churches",
+  "name_zh": "拉利貝拉岩石教堂",
+  "form": "walk",
+  "voice": "walker",
+  "updated_at": "2026-11-24T02:00:37+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Bete_Giyorgis_01.jpg/1280px-Bete_Giyorgis_01.jpg",
+    "width": 1280,
+    "height": 903,
+    "alt": "從岩面上往下拍：一塊十字形的石頭建築沉在方形的深坑裡，頂面和坑邊的地面差不多一樣高。坑壁是整面的岩石，遠處有樹和山坡上的房子。",
+    "caption": "聖喬治教堂（Biete Giyorgis），2012 年 11 月拍攝。從坑邊往下看，屋頂是一個十字；整座教堂在坑底，頂面和四周的岩面差不多齊平。",
+    "credit": "Bernard Gagnon",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bete_Giyorgis_01.jpg",
+    "made": "2012"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "拉利貝拉的聖喬治教堂，照片是從坑邊往下拍的。屋頂是一個十字，頂面和四周的岩面差不多一樣高。這座教堂不是蓋的，是從岩石裡挖出來的。"
+    },
+    {
+      "type": "p",
+      "text": "**拉利貝拉**是衣索比亞北部高原上的小鎮，在首都以北好幾百公里。鎮上有 11 座這樣的教堂，每一座都是從整塊岩石鑿出來的，至今仍由衣索比亞正教會使用。衣索比亞 4 世紀就把基督教定為國教，這裡是朝聖地。1978 年列入聯合國教科文組織的世界遺產。"
+    },
+    {
+      "type": "p",
+      "text": "傳統上，這些教堂歸在國王拉利貝拉名下。他是薩格王朝的國王，在位大約 1181 到 1221 年，這個地方原來叫羅哈，後來才改用他的名字。學者對年代另有看法。其中 5 座教堂頭上，2008 年起罩上一片鋼架屋頂，說好是暫時的。我挑五站，照下面示意圖的號碼走一遍。"
+    },
+    {
+      "type": "facts",
+      "title": "資料卡",
+      "items": [
+        [
+          "所在地",
+          "衣索比亞，阿姆哈拉區拉利貝拉，海拔約 2,500 公尺"
+        ],
+        [
+          "教堂數",
+          "11 座，都是從山岩鑿出來的；4 座四面獨立，7 座有一面連著山壁"
+        ],
+        [
+          "年代",
+          "傳統歸於薩格王朝國王拉利貝拉（約 1181–1221 年在位）；學者認為有幾期工程，部分可能更早"
+        ],
+        [
+          "材料",
+          "紅褐色的火山岩（凝灰岩、多孔玄武岩兩種說法），用鎚子與鑿子由上往下鑿"
+        ],
+        [
+          "世界遺產",
+          "1978 年登錄"
+        ]
+      ]
+    },
+    {
+      "type": "svg",
+      "title": "本文走的順序",
+      "svg": "<svg viewBox=\"0 0 640 420\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"拉利貝拉教堂群的分組與走法示意圖\">\n<rect x=\"0\" y=\"0\" width=\"640\" height=\"420\" class=\"paper\"/>\n<rect x=\"150\" y=\"20\" width=\"470\" height=\"150\" rx=\"10\" class=\"soft\"/>\n<text x=\"165\" y=\"44\" class=\"ink\" font-size=\"15\" font-weight=\"bold\">北群（5 座）</text>\n<circle cx=\"200\" cy=\"100\" r=\"15\" class=\"accent\"/><text x=\"200\" y=\"106\" class=\"paper\" font-size=\"15\" text-anchor=\"middle\" font-weight=\"bold\">1</text>\n<text x=\"200\" y=\"136\" class=\"ink\" font-size=\"13\" text-anchor=\"middle\">Medhane Alem</text>\n<circle cx=\"340\" cy=\"100\" r=\"15\" class=\"accent\"/><text x=\"340\" y=\"106\" class=\"paper\" font-size=\"15\" text-anchor=\"middle\" font-weight=\"bold\">2</text>\n<text x=\"340\" y=\"136\" class=\"ink\" font-size=\"13\" text-anchor=\"middle\">Maryam</text>\n<circle cx=\"500\" cy=\"100\" r=\"15\" class=\"accent\"/><text x=\"500\" y=\"106\" class=\"paper\" font-size=\"15\" text-anchor=\"middle\" font-weight=\"bold\">3</text>\n<text x=\"500\" y=\"136\" class=\"ink\" font-size=\"13\" text-anchor=\"middle\">Golgotha Mikael</text>\n<line x1=\"216\" y1=\"100\" x2=\"323\" y2=\"100\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2.5\"/>\n<line x1=\"356\" y1=\"100\" x2=\"483\" y2=\"100\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2.5\"/>\n<path d=\"M20 205 Q80 190 140 205 T260 205 T380 205 T500 205 T620 205\" fill=\"none\" class=\"gold\" stroke=\"currentColor\" stroke-width=\"4\"/>\n<text x=\"320\" y=\"196\" class=\"muted\" font-size=\"13\" text-anchor=\"middle\">約旦河（乾河谷）</text>\n<rect x=\"260\" y=\"240\" width=\"360\" height=\"130\" rx=\"10\" class=\"soft\"/>\n<text x=\"275\" y=\"264\" class=\"ink\" font-size=\"15\" font-weight=\"bold\">東（南）群（5 座）</text>\n<circle cx=\"360\" cy=\"320\" r=\"15\" class=\"accent\"/><text x=\"360\" y=\"326\" class=\"paper\" font-size=\"15\" text-anchor=\"middle\" font-weight=\"bold\">4</text>\n<text x=\"360\" y=\"352\" class=\"ink\" font-size=\"13\" text-anchor=\"middle\">Merkorios</text>\n<text x=\"520\" y=\"320\" class=\"muted\" font-size=\"13\" text-anchor=\"middle\">另外四座：Amanuel、</text>\n<text x=\"520\" y=\"338\" class=\"muted\" font-size=\"13\" text-anchor=\"middle\">Abba Libanos、Lehem、</text>\n<text x=\"520\" y=\"356\" class=\"muted\" font-size=\"13\" text-anchor=\"middle\">Gabriel-Rufael</text>\n<path d=\"M500 116 C 500 160 420 190 380 235 C 365 252 362 270 360 303\" fill=\"none\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 5\"/>\n<text x=\"412\" y=\"232\" class=\"accent\" font-size=\"13\">跨過河谷</text>\n<rect x=\"20\" y=\"260\" width=\"200\" height=\"110\" rx=\"10\" class=\"paper\" stroke=\"currentColor\" stroke-width=\"2\"/>\n<text x=\"120\" y=\"284\" class=\"ink\" font-size=\"15\" text-anchor=\"middle\" font-weight=\"bold\">獨立的一座</text>\n<circle cx=\"70\" cy=\"326\" r=\"15\" class=\"accent\"/><text x=\"70\" y=\"332\" class=\"paper\" font-size=\"15\" text-anchor=\"middle\" font-weight=\"bold\">5</text>\n<text x=\"150\" y=\"331\" class=\"ink\" font-size=\"13\" text-anchor=\"middle\">Giyorgis</text>\n<path d=\"M345 330 C 300 345 270 345 224 330\" fill=\"none\" class=\"accent\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 5\"/>\n<text x=\"290\" y=\"392\" class=\"muted\" font-size=\"12\" text-anchor=\"middle\">虛線：本文走的路；5 號與其他教堂以壕溝相連</text>\n</svg>",
+      "caption": "示意，不按比例，也不代表實際方位與距離。分組依 Wikipedia〈Rock-Hewn Churches, Lalibela〉的 5＋5＋1，約旦河依 Stephan Faris 2008 年的文章；圓圈數字是本文走的順序。",
+      "credit": "本報依上述資料繪製"
+    },
+    {
+      "type": "h",
+      "text": "據說是世界上最大的一塊石頭"
+    },
+    {
+      "type": "p",
+      "text": "第一站是北群的救世主之家（Biete Medhane Alem）。阿姆哈拉語的「Biete」是「……之家」，這裡的教堂都這樣取名。一般相信它是世界上最大的整塊岩石教堂。整塊的意思是，整座教堂就是一塊石頭，不是一塊塊疊起來的，底下還連著基岩，也就是山裡本來就在的那一大塊岩石。"
+    },
+    {
+      "type": "p",
+      "text": "一般的說法是，這些教堂都是**從頂面往下鑿出來的**。這一帶的山岩是軟的、帶紅色的火山岩，工匠只用鎚子和鑿子。照這個順序，屋頂是最先成形的部分。11 座裡，4 座四面都和山分開，另外 7 座有一面還連著山壁。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lalibela%2C_chiesa_di_bete_medhane_alem%2C_esterno_02.jpg/1280px-Lalibela%2C_chiesa_di_bete_medhane_alem%2C_esterno_02.jpg",
+      "width": 1280,
+      "height": 853,
+      "alt": "紅褐色的岩壁上整排方柱和拱形的凹槽，教堂頂上罩著一整片淺色的大屋頂，下面撐著銀色鋼架。左邊有一道石階往下，前景有木樁。",
+      "caption": "Biete Medhane Alem 的一側，2018 年 11 月拍攝。教堂上方的大屋頂是遮雨用的鋼架棚架。",
+      "credit": "Sailko",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lalibela,_chiesa_di_bete_medhane_alem,_esterno_02.jpg",
+      "made": "2018"
+    },
+    {
+      "type": "p",
+      "text": "照片裡，紅褐色的岩壁上有一整排方柱和拱形的凹槽，左邊有一道石階往下。最上面那片淺色的大屋頂不是原來的，是 2008 年蓋的鋼架棚架。"
+    },
+    {
+      "type": "h",
+      "text": "可能是最老的一座"
+    },
+    {
+      "type": "p",
+      "text": "第二站是聖母之家（Maryam）。有說法認為，它可能是這些教堂裡最古老的一座。裡面的天花板畫著聖經的場景。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Bete_Maryam_01.jpg/1280px-Bete_Maryam_01.jpg",
+      "width": 1280,
+      "height": 961,
+      "alt": "一棟紅褐色、方方正正的石造建築，外牆有幾道橫向的線條，牆面上有大大小小的方窗和幾個刻成方框圖案的窗飾。右下角有一小段有拱洞的突出部分，左下是石階，頂上可以看到棚架的鋼架。",
+      "caption": "Biete Maryam 的外觀，2012 年 11 月拍攝。整棟都是從山岩裡鑿出來的，上方可見棚架的鋼架。",
+      "credit": "Bernard Gagnon",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bete_Maryam_01.jpg",
+      "made": "2012"
+    },
+    {
+      "type": "p",
+      "text": "照片上它方方正正，大大小小的方窗之間，有幾個刻成方框圖案的窗飾。這裡每一個窗，都是在實心的岩石上鑿進去的。"
+    },
+    {
+      "type": "h",
+      "text": "各各他，和一條沒有水的約旦河"
+    },
+    {
+      "type": "p",
+      "text": "第三站是各各他教堂（Golgotha Mikael）。裡面有基督墳墓、亞當墳墓和誕生馬槽的複製品。相傳國王拉利貝拉的墓也在這裡，衣索比亞教會把他當作聖人。"
+    },
+    {
+      "type": "p",
+      "text": "2008 年有位旅遊作家寫過這座教堂裡面：光從十字形的窗透進來，柱子也是十字形，被多年的香燻出一層蠟質，地面被幾百年的赤腳磨得像河裡的石頭。"
+    },
+    {
+      "type": "p",
+      "text": "北群和東群之間，隔著一道乾河谷，國王把它取名叫約旦河。各各他、約旦河，都是耶路撒冷一帶的地名，不少人把整個布局看成是在模仿那座聖城。傳說國王曾去過耶路撒冷，正是它剛被穆斯林將領薩拉丁攻下之後，回來就要在衣索比亞建一座新的耶路撒冷。部分專家把施工放在 1187 年耶路撒冷失守以後。"
+    },
+    {
+      "type": "h",
+      "text": "一條全黑的隧道"
+    },
+    {
+      "type": "p",
+      "text": "過了河谷是東群。這裡有一條又長又全黑的隧道，通到 Merkorios。"
+    },
+    {
+      "type": "p",
+      "text": "至於這些教堂怎麼來的，傳說是這樣：國王被哥哥下毒，昏迷三天，上帝在天上要他「挖」教堂，不要「蓋」。11 座花了 24 年，夜裡工匠睡了，天使接著挖。這是民間傳說，不是史料。"
+    },
+    {
+      "type": "p",
+      "text": "考古學者看的是岩石和風格。**菲利普森**是劍橋大學的非洲考古學教授，2004 年《Archaeology》報導他的新調查認為，Merkorios 和 Gabriel 這兩座，最初是挖在岩石裡的某種精英宮殿或要塞，位置很容易防守。他把 Gabriel 的年代改到西元 600 到 800 年。"
+    },
+    {
+      "type": "p",
+      "text": "他推測的背景是阿克蘇姆帝國的瓦解。那是衣索比亞北部更早的大帝國，最盛在 3 到 6 世紀，7 世紀中葉前後垮掉。照他的說法，至少 4 座在 10 或 11 世紀就是專為禮拜而建，到 13 世紀中又增加 3 到 4 座。後來的那一段才是這地方宗教地位最高的時期，不是它的起點。"
+    },
+    {
+      "type": "quote",
+      "text": "這個發現會徹底改變歷史學家看待非洲最有名的本土基督教聖地起源的方式。",
+      "original": "The discovery will completely change the way historians perceive the origins of Africa's most famous indigenous Christian site",
+      "cite": "David Phillipson（劍橋大學非洲考古學教授），引自 David Keys，《Archaeology》2004 年 11/12 月號；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "教堂的年代，傳統說法是約 1200 年。2010 年《Antiquity》期刊有一篇論文，想用岩石上的切痕與開口、碎石堆和泥沙，排出這些教堂先後鑿成的順序。論文一開頭就說：「因為教堂是切在活岩裡的，考古上用來判斷先後的一般記號很難找。」"
+    },
+    {
+      "type": "h",
+      "text": "坑底的十字"
+    },
+    {
+      "type": "p",
+      "text": "最後一站是聖喬治教堂（Giyorgis），離其他教堂有一段距離，平面是十字形。一份資料把它定在 12 世紀末或 13 世紀初，是這裡年代較晚的一座。"
+    },
+    {
+      "type": "p",
+      "text": "它坐在一個約 22 公尺見方、深約 11 公尺的院子裡。原本只能從西邊進去：一條近 30 公尺長的斜坡通道，從下面的乾河谷往上接。站在和教堂同一個高度，看不出它是十字，要從上面往下看，才看得出屋頂上刻的十字。"
+    },
+    {
+      "type": "p",
+      "text": "那位旅遊作家站在對面的另一側，寫它「深深在洞裡，完全看不見」。我最喜歡的是屋頂。它和四周的岩石齊平，讓人想得到，工匠動手之前，這裡是一整片平坦的基岩。它也是這裡保存得最好的一座。"
+    },
+    {
+      "type": "h",
+      "text": "石頭是原來的，屋頂不是"
+    },
+    {
+      "type": "p",
+      "text": "這些教堂是原來的整塊岩石，不是複製，也不是重建。屋頂不是。2008 年，歐盟出錢蓋了 4 座**鋼架棚架**，罩住其中 5 座教堂，當時說是暫時的保護，附 10 年保固。到 2024 年初，它們已經撐了超過 15 年。"
+    },
+    {
+      "type": "p",
+      "text": "我看修復，最怕這一種：臨時的東西留下來，沒人說得出什麼時候拆、拆了接什麼。棚架很重，留得又比預期久太多。據維基百科，衣索比亞文化遺產研究保存局的局長說必須拆，可是怎麼拆、拆了以後怎麼辦，還沒有明確的方案。2019 年，神父和信眾抱怨棚架粗重的支柱，讓地下的三一禮拜堂屋頂開裂，那間禮拜堂已經不對外開放。官員否認，說沒有立即的危險。"
+    },
+    {
+      "type": "quote",
+      "text": "我們要永久的修復，也要把這個棚架拆掉。",
+      "original": "We want a permanent restoration, and we want the shelter to be removed",
+      "cite": "Tsigieselassie Mazgebu（拉利貝拉教區神父），引自 AFP 2019 年 3 月 11 日報導；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "2023 年 11 月鎮上打過仗，棚架的鐵腳挨了子彈。2024 年初的報導說，教科文組織認為多數建築處在危急狀況；法國政府從 2019 年起出錢做大規模修復，計畫蓋一座更大的永久屋頂，舊的金屬棚架不會早於 2025 年拆，之後不明。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Rock-Hewn Churches, Lalibela",
+      "publisher": "Wikipedia",
+      "date": "2026-11-23",
+      "url": "https://en.wikipedia.org/wiki/Rock-Hewn_Churches,_Lalibela",
+      "note": "英文。11 座教堂的分組與名稱、由上往下的施工、4 座獨立與 7 座連山壁、國王在位年代、2008 年歐盟出資的 4 座棚架與 ARCCH 局長的說法；日期為查閱日。"
+    },
+    {
+      "title": "Lalibela",
+      "publisher": "Wikipedia",
+      "date": "2026-11-23",
+      "url": "https://en.wikipedia.org/wiki/Lalibela",
+      "note": "英文。Biete Maryam「可能是最古老」、1978 年登錄、部分專家把施工放在 1187 年（耶路撒冷被薩拉丁攻下）之後；日期為查閱日。"
+    },
+    {
+      "title": "Bete Giyorgis",
+      "publisher": "Wikipedia",
+      "date": "2026-11-23",
+      "url": "https://en.wikipedia.org/wiki/Bete_Giyorgis",
+      "note": "英文。國王見異象受命建堂，指示者說法不一（聖喬治或上帝）；日期為查閱日。"
+    },
+    {
+      "title": "The Rock-Hewn Churches of Lalibela",
+      "publisher": "Biblical Archaeology Society Library",
+      "date": "2026-11-23",
+      "url": "https://library.biblicalarchaeology.org/sidebar/the-rock-hewn-churches-of-lalibela",
+      "note": "英文。聖喬治教堂 72×72 英尺、深 36 英尺的院子、原本只從西邊進入的近 100 英尺通道、3 門 12 窗、保存最好；其他教堂的 10–13 世紀估計；日期為查閱日。"
+    },
+    {
+      "title": "Medieval Houses of God, or Ancient Fortresses?",
+      "publisher": "Archaeology（美國考古學會）",
+      "date": "2004-11-01",
+      "url": "https://archive.archaeology.org/0411/newsbriefs/ethiopia.html",
+      "note": "英文，David Keys 撰，57 卷 6 期（2004 年 11/12 月）。菲利普森對 Merkurios、Gabriel、Danagel 的重新斷代與推測；date 取該期起始月。"
+    },
+    {
+      "title": "Rock-cut stratigraphy: sequencing the Lalibela churches",
+      "publisher": "Antiquity",
+      "date": "2010-11-25",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/rockcut-stratigraphy-sequencing-the-lalibela-churches/B53C45E7808B62840E6C5BF3F6380B88",
+      "note": "英文，Fauvelle-Aymar 等六位作者，84 卷 326 期。只讀到摘要，只用它提出的問題與一句引文。"
+    },
+    {
+      "title": "Sacred Africa: You don't have to be a believer",
+      "publisher": "NBC News（轉載 Frommer's Budget Travel）",
+      "date": "2008-01-07",
+      "url": "https://www.nbcnews.com/news/amp/wbna22245406",
+      "note": "英文，Stephan Faris 撰。約旦河命名、傳說（蜜蜂、下毒、天使、24 年）、壕溝與隧道的描述、國王據傳在耶路撒冷剛被薩拉丁攻下後去過、聖喬治教堂「深在洞裡」；傳說部分只當傳說。"
+    },
+    {
+      "title": "Macron Ethiopia visit raises hopes for ancient stone-carved churches",
+      "publisher": "The Citizen（AFP 稿）",
+      "date": "2019-03-11",
+      "url": "https://www.citizen.co.za/news/news-world/news-africa/macron-ethiopia-visit-raises-hopes-for-ancient-stone-carved-churches",
+      "note": "英文。棚架 10 年保固、地下三一禮拜堂開裂的說法與官員否認、神父引文。"
+    },
+    {
+      "title": "Rocks in a hard place: Lalibela priests raise fears amid war and weather",
+      "publisher": "African Arguments",
+      "date": "2024-02-07",
+      "url": "https://africanarguments.org/2024/02/rocks-in-a-hard-place-lalibela-priests-raise-fears-amid-war-and-weather/",
+      "note": "英文。棚架超過 15 年、法國出資計畫、教科文組織「critical condition」之說；日期依網址月份與轉載日推定，查核時請開頁確認。"
+    },
+    {
+      "title": "Did angels build these amazing churches?",
+      "publisher": "Aleteia",
+      "date": "2019-12-06",
+      "url": "https://aleteia.org/2019/12/06/did-angels-build-these-amazing-churches/",
+      "note": "英文。衣索比亞 4 世紀在艾扎納王時代以基督教為國教、新耶路撒冷的說法、「信徒相信有天使幫忙」的說法與國王被視為聖人。"
+    }
+  ]
+}
