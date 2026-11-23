@@ -1,6 +1,8 @@
 // 唱片櫃的五金與雕花：records.js crateHtml 用它把方盒子畫成一個維也納桃花心木櫃——
-// 抽屜的黃銅拉環與鑰匙孔、柱子的鍍金柱頭與柱腳、裙板中間的雕花、四隻車削的腳；櫃面上那台唱片機（phono.js）也用這裡的刀。
-// 這一頁（#/records）和收藏房間裡縮小的那一份用的是同一段，所以推進的起點和終點畫的是同一個櫃子。
+// 唱片箱前板的鍍金豎琴飾、抽屜的黃銅拉環與鑰匙孔、柱子的鍍金柱頭與柱腳、裙板中間的雕花、四隻車削的腳；
+// 收藏房間那一份櫃面上的唱片機（phono.js）也用這裡的刀。
+// 這一頁（#/records）和收藏房間裡縮小的那一份用的是同一段櫃子（records.js cabinetHtml），所以推進的起點和終點畫的是
+// 同一個櫃子；櫃面上，這一頁是唱片箱，房間裡是唱片機。
 // 光從左上來：凸的上緣亮、下緣暗；雕花三層——右下的影、左上的受光、本體——再疊一層受光的漸層。
 // 線腳（mould）是房間（salon.js）和唱片機共用的同一把刨刀。
 const TEX = "assets/shelf/";
@@ -47,7 +49,7 @@ const SHADE = { v: { t: .34, l: .2, r: -.26, b: -.44 }, c: { t: -.34, l: -.24, r
 // A moulded frame round a rectangle: bands from the outside in, each [width, kind] — v convex, c cove, f flat, b beads.
 // The four sides are mitred; a wood frame's rails run their grain across, its stiles up and down. `o.ink` is what it is
 // cut in — gold, wood across (wh) and up (wv), the gilt's wear (giltx), the beads' gold and wood (goldMid, woodMid),
-// paint — so the room (salon.js, its sl- fills) and the gramophone on #/records (phono.js, cb-) share the one plane;
+// paint — so the room (salon.js, its sl- fills) and the gramophone on its record cabinet (phono.js, cb-) share the one plane;
 // `o.paint` a painted frame's own colour, `o.k` how strong its light.
 export function mould(x, y, w, h, prof, mat, o) {
   const ink = o.ink;
@@ -86,6 +88,25 @@ function rosette(cx, cy, r, n = 8) {
   return g + carve(disc(cx, cy, r * .3), r / 9);
 }
 
+// the lyre on the crate's front: two horns curling out, the strings, a leaf at its foot, a rosette at its yoke
+export function lyre() {
+  const w = 64, h = 50, c = w / 2;
+  let g = "";
+  for (const sx of [-1, 1]) {
+    const f = (p) => [c + sx * p[0], p[1]];
+    const horn = [[3, 44], [9, 40], [13, 30], [12, 18], [16, 9], [22, 6], [25, 9], [21, 12], [17, 16], [18, 28], [15, 40], [8, 46]];
+    g += carve(`M${P2(horn.map(f))}Z`, .9);
+    g += carve(disc(c + sx * 23.2, 7.6, 2.4), .5);
+  }
+  g += carve(`M${c - 15} 13.5 h30 v2.6 h-30Z`, .6); // the yoke
+  for (let i = -2; i <= 2; i++) g += `<path d="M${c + i * 2.4} 16 V40" stroke="rgba(255,240,200,.75)" stroke-width=".45"/><path d="M${c + i * 2.4 + .5} 16 V40" stroke="rgba(30,12,0,.4)" stroke-width=".3"/>`;
+  g += carve(`M${c - 9} 40 h18 l-2 4 h-14Z`, .6);
+  g += leaf(c, 44, c - 13, 49, 2.6, .2, 2, .5) + leaf(c, 44, c + 13, 49, 2.6, -.2, 2, .5) + leaf(c, 44, c, 33, 2.2, 0, 2, .5);
+  g += rosette(c, 14.8, 3.6, 7);
+  return svg(w, h, g, "cb-lyre");
+}
+// a turned finial on the crate's corner post
+export const finial = () => svg(16, 16, `${carve("M3 16 h10 v-2 h-10Z", .5)}${carve(disc(8, 9, 4.2), .55)}${carve("M6.4 5 h3.2 v-2.4 h-3.2Z", .4)}${carve(disc(8, 1.8, 1.6), .35)}`, "cb-fin");
 // the drawer's pull: a rosette backplate and a ring hanging from it
 export const pull = () => svg(26, 26, `<ellipse cx="13.6" cy="21.6" rx="9" ry="3.6" fill="rgba(10,3,0,.35)"/>${rosette(13, 7, 6.2, 10)}
   <path d="M13 9 m-8 7 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0" fill="none" stroke="rgba(10,3,0,.55)" stroke-width="2.6" transform="translate(.8 1.2)"/>

@@ -1,8 +1,9 @@
 // The gramophone on the record cabinet (the owner, 2026-11-23: 「收藏裡唱片我想要是唱片機的模樣」; of the three samples in
-// 流程盤點/修改包/收藏品_黑膠/樣張_唱片機_1123 he took 甲, the horn gramophone). It stands on the cabinet's top where the crate
-// stood: records.js crateHtml puts it on #/records, and the room's copy of that page (salon.js crateCopy, at .44) is the
-// same drawing, so the camera's move lands on it. On the platter the record in front — the newest read, or the one laid
-// on since (records.js wireCrate) — its label as on the turntable inside (#/records/<date>, records.js discHtml):
+// 流程盤點/修改包/收藏品_黑膠/樣張_唱片機_1123 he took 甲, the horn gramophone). It stands on the top of the record cabinet
+// in 收藏's room (records.js phonoCabinetHtml, put in the room at .44 by salon.js crateCopy) where #/records has its crate:
+// that page stays as it was (the owner, 2026-11-23: 「唱片點進去是要和原本的一樣」), and the camera's move in dissolves the
+// one into the other. On the platter the crate's front record — the newest read, or the one brought to the front since
+// (records.js wireCrate) — its label as on the turntable inside (#/records/<date>, records.js discHtml):
 // ROTKEHLCHEN, the piece, the composer. None read yet, the bare felt and the spindle.
 // One light, the window at the upper left; the shadows fall right and down, a contact shadow under each foot; no SVG
 // filter, no blend mode. Wood, felt and the gilt's wear are assets/shelf/'s pictures; the gilt bronze is cut with
@@ -134,9 +135,8 @@ function record(x, y, R, lab) {
 }
 // the platter: its centre at the foot of its rim, its radius, the record's on it
 const PLATTER = [-20, 112, 2], PR = 92, PREC = 88;
-// The record on the platter, a group of its own so that another can be laid on in its place (records.js wireCrate).
-// `lab`: { name, by } — the piece and the composer, as the turntable's label has them.
-export function phonoDisc(lab) {
+// The record on the platter. `lab`: { name, by } — the piece and the composer, as the turntable's label has them.
+function phonoDisc(lab) {
   const [x, y] = P([PLATTER[0], PLATTER[1] + 5, PLATTER[2]]);
   return `<g class="ph-rec">${record(x, y - .8, PREC, lab)}</g>`;
 }

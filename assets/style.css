@@ -2659,17 +2659,30 @@ details.band .svl { margin: 0 0 10px; }
 .rec .lab i { margin-top: 2px; font: italic 500 calc(var(--d) * .032)/1 var(--latin); color: #e9c66c; }
 .rec .lab u { position: absolute; top: 14%; text-decoration: none; font: 600 calc(var(--d) * .026)/1 var(--latin); letter-spacing: .2em; color: #d9b45a; }
 .rec .lab::after { content: ""; position: absolute; left: 47%; top: 47%; width: 6%; height: 6%; border-radius: 50%; background: #0a0a0a; box-shadow: inset 0 1px 1px rgba(255, 255, 255, .2); }
-/* #/records: the gramophone standing on the sideboard (phono.js, one picture, its feet 10 px into the top's band; the
-   room's copy, salon.js crateCopy, is this at .44); --s, once the crate's sleeve, still sets the room's height */
+/* #/records: the crate standing on the sideboard; --s the sleeve's size, the crate's records scale with it */
 .crate-scene { display: flex; flex-direction: column; --s: min(292px, calc(100vw - 110px)); }
 .cr-room { position: relative; z-index: 2; flex: 1 0 auto; min-height: calc(var(--s) * 1.13 + 280px); touch-action: pan-y; }
-/* only inside the room: .ph is also the lead's and the random card's photo (app.js thumb) */
-.cr-room > .ph { position: absolute; left: calc(50% - 201px); bottom: -10px; display: block; width: 402px; height: 560px; -webkit-tap-highlight-color: transparent; }
+.crate { position: absolute; left: 28px; right: 28px; bottom: -10px; height: 230px; box-shadow: 0 26px 40px rgba(0, 0, 0, .75); }
+.cr-stack { position: absolute; inset: 0; }
+.cr-back, .cr-side { position: absolute; background: linear-gradient(90deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0) 12% 88%, rgba(0, 0, 0, .5)), url(shelf/cherry_v.jpg) 0 0 / 380px auto, #4a2e1c; }
+.cr-back { left: 0; right: 0; top: 0; height: 200px; filter: brightness(.4); }
+.cr-side { top: 0; bottom: 0; width: 16px; z-index: 9; } .cr-side.l { left: 0; } .cr-side.r { right: 0; }
+.cr-slot, .cr-top { position: absolute; left: calc(50% - var(--s) / 2); display: block; }
+.cr-slot { top: calc(var(--s) * -.514 + var(--k) * 18px); transform: perspective(700px) rotateX(-22deg); transform-origin: 50% 100%; }
+.cr-top { z-index: 8; top: calc(var(--s) * -.685); -webkit-tap-highlight-color: transparent; }
+.cr-top .rec { z-index: -1; left: calc(var(--s) * .072); top: calc(var(--s) * -.445); }
+@media (prefers-reduced-motion: no-preference) {
+  .cr-top.in-l { animation: cr-in-l .5s cubic-bezier(.2, .8, .2, 1); } .cr-top.in-r { animation: cr-in-r .5s cubic-bezier(.2, .8, .2, 1); }
+}
+@keyframes cr-in-l { from { opacity: 0; transform: translate(70px, 24px) rotate(4deg); } }
+@keyframes cr-in-r { from { opacity: 0; transform: translate(-70px, 24px) rotate(-4deg); } }
+.cr-front { position: absolute; left: 0; right: 0; bottom: 0; height: 110px; z-index: 10; background: linear-gradient(rgba(255, 225, 190, .18), rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, .4)), url(shelf/cherry.jpg) 0 0 / 420px auto, #4a2e1c; }
+.cr-front::before { content: ""; position: absolute; left: 50%; top: 20px; width: 90px; height: 22px; margin-left: -45px; border-radius: 12px; background: #140b06; box-shadow: inset 0 3px 6px rgba(0, 0, 0, .9); }
+/* 收藏's room: its copy of this cabinet has the gramophone on it in the crate's place (records.js phonoCabinetHtml,
+   phono.js: one picture, its feet 10 px into the top's band; salon.js crateCopy puts it in the room at .44). Only inside
+   the cabinet: .ph is also the lead's and the random card's photo (app.js thumb) */
+.cr-room > .ph { position: absolute; left: calc(50% - 201px); bottom: -10px; display: block; width: 402px; height: 560px; }
 .ph-svg { display: block; overflow: visible; }
-.cr-room > a.ph { pointer-events: none; } .cr-room > a.ph .ph-svg > g, .cr-room > a.ph .ph-svg > path, .cr-room > a.ph .ph-svg > ellipse, .cr-room > a.ph .ph-svg > rect { pointer-events: visiblePainted; } /* a tap on the machine, not on the wall round it */
-/* none read yet: the line on the frieze panel, clear of the horn — whose top stands 482 px above the room's foot, so at
-   the room's least height (1.13 × --s + 280) 1.13 × --s − 202 from the top, less the line and a gap */
-.crate-scene > .sc-empty { top: min(86px, calc(var(--s) * 1.13 - 235px)); }
 /* the sideboard: its top, and its front with the brass plate (the count in Roman figures) between the gilt ‹ › */
 .cr-sb-top { position: relative; z-index: 1; display: block; height: 30px; margin: 0 -10px; box-shadow: inset 0 -2px 0 rgba(255, 220, 180, .15), 0 18px 30px rgba(0, 0, 0, .8);
   background: linear-gradient(rgba(255, 225, 190, .22), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, .42)), url(shelf/cherry.jpg) 0 0 / 420px auto, #4a2e1c; }
@@ -3022,11 +3035,23 @@ html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's o
 .room-ghost > div { translate: 0 0; }
 
 /* ——— 唱片櫃畫成維也納桃花心木櫃（records.js crateHtml、cabinet.js）。這一頁和收藏房間裡縮小的那一份是同一段，
-   推進的起點和終點畫的是同一個櫃子。上面站著一台喇叭留聲機（phono.js，樣式在 #/records 那一段）；
+   推進的起點和終點畫的是同一個櫃子。上面是唱片箱：四角的方柱頂著車削的小頂飾、前板是框裡一塊凸起的鑲板、中間鍍金的豎琴
+   （收藏房間那一份的櫃面上是一台喇叭留聲機：phono.js，樣式在 #/records 那一段）；
    下面是櫃子：線腳的櫃面、兩側半圓柱配鍍金柱頭柱腳、上層是抽屜面當底的銅牌、下層兩個抽屜（拉環、鑰匙孔）、裙板中間
    的雕花、四隻車削的腳。 ——— */
 .cb-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
-.cb-col, .cb-apron, .cb-legs { pointer-events: none; }
+.cb-col, .cb-apron, .cb-legs, .cb-field, .cb-lyre, .cb-fin { pointer-events: none; }
+.cr-back, .cr-side { background: linear-gradient(90deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0) 12% 88%, rgba(0, 0, 0, .5)), url(shelf/gen_wood_v.png) 0 0 / 300px auto, #4a1c0e; }
+.cr-side { width: 18px; box-shadow: inset 2px 0 0 rgba(255, 228, 190, .2), inset 3px 0 0 rgba(0, 0, 0, .25), inset -3px 0 0 rgba(0, 0, 0, .5); }
+.cr-side .cb-fin { position: absolute; left: 1px; top: -15px; }
+.cr-front { background: linear-gradient(rgba(255, 225, 190, .16), rgba(0, 0, 0, 0) 22%, rgba(0, 0, 0, .34)), url(shelf/gen_wood.png) 0 0 / 300px auto, #4a1c0e;
+  box-shadow: inset 0 4px 0 rgba(255, 228, 190, .3), inset 0 6px 0 rgba(0, 0, 0, .45), inset 0 8px 0 rgba(255, 228, 190, .08), inset 0 -4px 0 rgba(0, 0, 0, .55); }
+.cr-front::before { content: none; }
+.cb-field { position: absolute; left: 34px; right: 34px; top: 20px; bottom: 14px; display: block;
+  background: linear-gradient(rgba(255, 225, 190, .1), rgba(0, 0, 0, .2)), url(shelf/gen_wood.png) -70px -40px / 260px auto;
+  box-shadow: 0 0 0 1.5px rgba(10, 3, 0, .7), -1px -1px 0 2.5px rgba(0, 0, 0, .35), 1px 1px 0 2.5px rgba(255, 220, 180, .16),
+    inset 7px 7px 0 -3px rgba(255, 228, 190, .22), inset -7px -7px 0 -3px rgba(0, 0, 0, .42), inset 0 0 0 9px rgba(0, 0, 0, .05); }
+.cr-front .cb-lyre { position: absolute; left: 50%; top: 50%; margin: -22px 0 0 -32px; }
 /* the cabinet's top: the lit surface, a thumbnail edge, a fillet, the cove back to the frieze */
 .cr-sb-top { margin: 0 -12px; box-shadow: 0 18px 30px rgba(0, 0, 0, .8);
   background: linear-gradient(rgba(255, 234, 200, .4), rgba(255, 234, 200, .14) 7px, rgba(0, 0, 0, .18) 8px, rgba(255, 228, 192, .32) 9px, rgba(255, 228, 192, .08) 14px, rgba(0, 0, 0, .26) 18px, rgba(0, 0, 0, .55) 20px,

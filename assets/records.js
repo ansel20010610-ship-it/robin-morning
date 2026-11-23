@@ -1,17 +1,18 @@
 // 唱片櫃 (the owner's pick, 2026-11-19: the record crate, and a record tapped opens on the turntable): every 古典音樂
 // piece read is a record. Its sleeve is the article's picture with the work in gilt — as the canon list names it
-// (index.json `work`, scripts/build_index.py music_works) or else the headline. #/records is the cabinet in the
-// panelled room (one full-bleed scene, the owner's 「對，照這樣改」 of 2026-11-19) with a horn gramophone on it (the
-// owner, 2026-11-23: 「收藏裡唱片我想要是唱片機的模樣」; phono.js), the record in front on its platter; #/records/<date>
-// puts that record on a turntable, and a tap on the disc spins it and plays the recording through Spotify (app.js
-// viewRecord), or without Spotify the article's melody (index.json `motif`) as a music box. Wood is the bookcase's photograph (assets/shelf/, CC0).
+// (index.json `work`, scripts/build_index.py music_works) or else the headline. #/records is the crate on a sideboard
+// in the panelled room (one full-bleed scene, the owner's 「對，照這樣改」 of 2026-11-19), the front record pulled up
+// with its disc half out; #/records/<date> puts that record on a turntable, and a tap on the disc spins it and plays the
+// recording through Spotify (app.js viewRecord), or without Spotify the article's melody (index.json `motif`) as a music box. Wood is the bookcase's photograph (assets/shelf/, CC0).
 // Under the sideboard's plate two drawers (the owner's pick of 2026-11-19, samples in 流程盤點/修改包/收藏品_黑膠/樣張_總覽與隨機):
-// 全部唱片 opens #/records/all, every record spread out on the desk; 隨機一張 lays another record on the gramophone.
-// Neither puts a record on the turntable: a record tapped on the desk comes back onto the gramophone.
+// 全部唱片 opens #/records/all, every record spread out on the desk; 隨機一張 riffles the crate and leaves one record in
+// front. Neither puts a record on the turntable: a record tapped on the desk comes back to the front of the crate.
+// In 收藏's room the same cabinet has a horn gramophone on it in the crate's place, the crate's front record on its
+// platter (the owner, 2026-11-23: 「收藏裡唱片我想要是唱片機的模樣」; phono.js, phonoCabinetHtml below); tapped, it
+// opens this page as it was (the owner, 2026-11-23: 「唱片點進去是要和原本的一樣」).
 import { esc } from "./util.js";
-import { CB_DEFS, pull, keyhole, capital, base, apron, legs } from "./cabinet.js";
-import { phonoSvg, phonoDisc } from "./phono.js";
-import { calm } from "./motion.js";
+import { CB_DEFS, lyre, finial, pull, keyhole, capital, base, apron, legs } from "./cabinet.js";
+import { phonoSvg } from "./phono.js";
 import { parseMotif, audioCtx } from "./nest.js";
 import { pluck, reverb } from "./jupiter.js";
 
@@ -42,16 +43,31 @@ export function discHtml(r, size, extra = "") {
   return `<span class="rec" style="--d:${d};width:${d};height:${d};${extra}"><span class="lab"><u>ROTKEHLCHEN</u><b>${esc(bare(piece(n)))}</b><i>${esc(n.by)}</i></span></span>`;
 }
 
-// #/records: the gramophone on the cabinet, the record in front on its platter — the newest first, or the one laid on
-// since. A tap on the machine puts that record on the turntable; ‹ › on the cabinet (or a swipe) lay the next newer or
-// older on the platter in its place, 隨機一張 any other. The count is cut in the cabinet's brass in Roman figures.
-let frontDate = ""; // the record left in front, so the way back from the turntable finds the gramophone as it was left
-const label = (r) => { const n = workName(r.a); return { name: bare(piece(n)), by: n.by }; }; // as the turntable's label has it
-const deckLink = (list, i) => [`#/records/${list[i].date}`, `${workName(list[i].a).work}，第 ${i + 1} 張，共 ${list.length} 張，放上唱盤`]; // href, aria-label
+// #/records: the crate on the sideboard. The front record (the newest first) is pulled up with its disc half out; a
+// tap on it puts it on the turntable, a swipe (or the ‹ › on the sideboard) flips through the crate. The count is cut
+// in the sideboard's brass in Roman figures.
+let frontDate = ""; // the record left in front, so the way back from the turntable finds the crate as it was left
+const SLEEVE = "min(292px, calc(100vw - 110px))";
+function stackHtml(list, i, dir = "") {
+  const top = list[i], back = list.slice(i + 1, i + 6).reverse();
+  const k0 = 5 - back.length; // the furthest back stands lowest and darkest
+  return back.map((r, j) => { const k = k0 + j; return `<span class="cr-slot" aria-hidden="true" style="z-index:${k + 1};--k:${k};filter:brightness(${(0.5 + k * 0.07).toFixed(2)})">${sleeveHtml(r, SLEEVE)}</span>`; }).join("")
+    + `<a class="cr-top${dir ? ` in-${dir}` : ""}" href="#/records/${esc(top.date)}" aria-label="${esc(workName(top.a).work)}，第 ${i + 1} 張，共 ${list.length} 張，放上唱盤">${discHtml(top, "calc(var(--s) * .856)", "")}${sleeveHtml(top, SLEEVE, "transform:rotate(-2.5deg)")}</a>`;
+}
 export function crateHtml(list) {
-  const i = Math.max(0, list.findIndex((r) => r.date === frontDate)), [href, aria] = list.length ? deckLink(list, i) : [];
+  const i = Math.max(0, list.findIndex((r) => r.date === frontDate));
+  return cabinetHtml(list, i, `<div class="crate"><i class="cr-back"></i><div class="cr-stack">${list.length ? stackHtml(list, i) : ""}</div><i class="cr-side l">${finial()}</i><i class="cr-side r">${finial()}</i><div class="cr-front"><b class="cb-field"></b>${lyre()}</div></div>`);
+}
+// 收藏's room (salon.js crateCopy, which makes its links plain): the same cabinet with the gramophone on it in the
+// crate's place, the crate's front record on its platter, its label as the turntable's has it — the piece, the composer.
+export function phonoCabinetHtml(list) {
+  const i = Math.max(0, list.findIndex((r) => r.date === frontDate)), r = list[i], n = r && workName(r.a);
+  return cabinetHtml(list, i, r ? `<a class="ph" href="#/records/${esc(r.date)}" aria-label="${esc(n.work)}，第 ${i + 1} 張，共 ${list.length} 張，放上唱盤">${phonoSvg({ name: bare(piece(n)), by: n.by })}</a>` : `<div class="ph">${phonoSvg(null)}</div>`);
+}
+// the cabinet with `top` standing on it: the room above its top, the brass with the count between the ‹ ›, the drawers
+function cabinetHtml(list, i, top) {
   return `${CB_DEFS}<div class="cr-room" aria-label="唱片櫃，${list.length} 張">
-      ${list.length ? `<a class="ph" href="${esc(href)}" aria-label="${esc(aria)}">${phonoSvg(label(list[i]))}</a>` : `<div class="ph">${phonoSvg(null)}</div>`}</div>
+      ${top}</div>
     <i class="cr-sb-top"></i>
     <div class="cr-sb"><b class="cb-col l">${capital()}${base()}</b><b class="cb-col r">${capital()}${base()}</b>${list.length > 1 ? `<button type="button" class="cr-flip sh-foil" data-flip="-1" aria-label="較新的一張"${i ? "" : " disabled"}>‹</button>` : ""}
       <span class="sc-brass cr-plate"><span class="sc-cut">Schallplatten</span><span class="sc-cut n">${list.length ? ROMAN(list.length) : "—"}</span></span>
@@ -74,22 +90,30 @@ export function wireSpread(scene, inApp) {
     if (inApp()) { e.preventDefault(); history.back(); }
   });
 }
-// Another record on the platter: ‹ and a swipe right the next newer, › and a swipe left the next older, 隨機一張 any
-// other at random (the owner, 2026-11-23, of these: 「可以」). It stays on the page; a tap on the machine then puts that
-// record on the turntable.
+// Flipping through the crate: a swipe left brings the next older record to the front, right the newer; the buttons too.
 export function wireCrate(scene, list) {
   if (!scene || list.length < 2) return;
   let i = Math.max(0, list.findIndex((r) => r.date === frontDate));
-  const ph = scene.querySelector("a.ph"), prev = scene.querySelector('[data-flip="-1"]'), next = scene.querySelector('[data-flip="1"]');
+  const stack = scene.querySelector(".cr-stack"), prev = scene.querySelector('[data-flip="-1"]'), next = scene.querySelector('[data-flip="1"]');
   const show = (j, dir) => {
     i = j; frontDate = list[i].date;
-    const [href, aria] = deckLink(list, i);
-    ph.setAttribute("href", href); ph.setAttribute("aria-label", aria);
-    layOn(ph, label(list[i]), dir);
+    stack.innerHTML = stackHtml(list, i, dir > 0 ? "l" : "r");
     prev.disabled = i === 0; next.disabled = i === list.length - 1;
   };
-  const go = (step) => { const j = Math.min(list.length - 1, Math.max(0, i + step)); if (j !== i) show(j, step); };
-  scene.querySelector("[data-rand]")?.addEventListener("click", () => { let j; do j = Math.floor(Math.random() * list.length); while (j === i); show(j, j > i ? 1 : -1); });
+  let riffling = false;
+  const go = (step) => {
+    const j = Math.min(list.length - 1, Math.max(0, i + step));
+    if (j !== i && !riffling) show(j, step);
+  };
+  // 隨機一張: up to six records riffle past and the drawn one (never the one already in front) stays there.
+  scene.querySelector("[data-rand]")?.addEventListener("click", () => {
+    if (riffling) return;
+    let j; do j = Math.floor(Math.random() * list.length); while (j === i);
+    const from = i, dir = j > from ? 1 : -1, steps = matchMedia("(prefers-reduced-motion: reduce)").matches ? 1 : Math.min(6, Math.abs(j - from));
+    let n = 0; riffling = true;
+    const tick = () => { if (!stack.isConnected) { riffling = false; return; } n++; show(n < steps ? from + Math.round(((j - from) * n) / steps) : j, dir); if (n < steps) setTimeout(tick, 110); else riffling = false; };
+    tick();
+  });
   prev.addEventListener("click", () => go(-1));
   next.addEventListener("click", () => go(1));
   const room = scene.querySelector(".cr-room");
@@ -99,20 +123,7 @@ export function wireCrate(scene, list) {
     const t = e.changedTouches[0], dx = t.clientX - x0, dy = t.clientY - y0;
     if (x0 > 24 && Math.abs(dx) > 40 && Math.abs(dx) > 1.5 * Math.abs(dy) && Date.now() - t0 < 900) { swiped = true; go(dx < 0 ? 1 : -1); }
   }, { passive: true });
-  room.addEventListener("click", (e) => { if (swiped) { e.preventDefault(); swiped = false; } }, true); // a swipe that ended on the machine is not a tap on it
-}
-// The record taken off and the next laid on: the old one slides away the way the records turn and fades, the new one
-// comes in from the other side (transform and opacity only, a third of a second); with reduced motion it is simply there.
-function layOn(ph, lab, dir) {
-  const was = ph.querySelector(".ph-rec:not(.off)");
-  if (!was) return;
-  was.insertAdjacentHTML("afterend", phonoDisc(lab));
-  const now = was.nextElementSibling;
-  if (calm() || !now.animate) { was.remove(); return; }
-  const o = { duration: 340, easing: "cubic-bezier(.2, .8, .2, 1)" }, dx = 30 * dir, gone = () => was.remove();
-  was.classList.add("off");
-  was.animate([{ opacity: 0, transform: `translate(${-dx}px, 0)` }], { ...o, fill: "forwards" }).finished.then(gone, gone);
-  now.animate([{ opacity: 0, transform: `translate(${dx}px, 0)` }, { opacity: 1, transform: "none" }], o);
+  room.addEventListener("click", (e) => { if (swiped || riffling) { e.preventDefault(); swiped = false; } }, true); // a swipe that ended on the front sleeve is not a tap on it, nor a tap while the crate riffles
 }
 
 // #/records/<date>: the record on the turntable filling the page — platter, record, tonearm, the 33/45 knobs, and the

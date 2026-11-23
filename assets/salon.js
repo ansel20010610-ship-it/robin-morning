@@ -8,8 +8,9 @@
 // reader's own — the newest works on the wall, the newest record in front, the countries read in wine on the globe —
 // drawn only so far (the newest few), the count cut in the brass. An empty corner is the thing waiting: the cords with no
 // picture, the crate with no record, the album shut, the brass with the name alone.
-// A tap: the camera moves in on the thing (one transform on .sl-cam, run by the compositor) and its page opens; the crate
-// is #/records itself, laid out at the page's size and scaled down (records.js crateHtml), so the move lands on that page.
+// A tap: the camera moves in on the thing (one transform on .sl-cam, run by the compositor) and its page opens; the record
+// cabinet is #/records's own, laid out at the page's size and scaled down (records.js phonoCabinetHtml: a gramophone on it
+// where the page has its crate), so the move lands on that page.
 // The room is drawn at 402 × 791 and scaled to the screen (the screen's height less the bottom bar, fixed before any
 // picture arrives: iPhone Safari has no scroll anchoring). One light, the window's from the upper left, and it is the
 // hour's (lightAt: the morning as drawn, noon, the evening, the night): every shadow falls right and down, each piece
@@ -18,7 +19,7 @@
 // Leather, velvet and the parquet are photographs (assets/shelf/, Poly Haven, CC0); the wood's grain, the gilt's wear, the
 // silk and the grain over the room are drawn by program (assets/shelf/gen_*.png).
 import { esc, ROBIN_PATHS, twNow } from "./util.js";
-import { crateHtml } from "./records.js";
+import { phonoCabinetHtml } from "./records.js";
 import { fuseGilt, mould as cutMould, lightOf } from "./cabinet.js";
 import { stampPicture } from "./stamps.js";
 import { drawMap, globe, paintGlobe, GLOBE_DPR } from "./world.js";
@@ -38,8 +39,8 @@ const TH = {"paint": "#f3ede0", "goldMid": "#bf9a52", "woodMid": "#6a2a14", "var
 // ——— 真材質的工具。一盞光在左上：凸的線腳上緣亮、下緣暗，凹的反過來；雕花是三層——右下的影、
 // 左上的受光、本體——再疊一層金箔的磨損與接縫。木紋跟著料走：橫料橫紋、直料直紋、斜腳順著斜。 ———
 const P2 = (pts) => pts.map((p) => `${p[0].toFixed(2)} ${p[1].toFixed(2)}`).join(" L");
-// A moulded frame round a rectangle (cabinet.js mould, the plane the gramophone on #/records is cut with too), in the
-// room's gold, wood and paint.
+// A moulded frame round a rectangle (cabinet.js mould, the plane the gramophone on the record cabinet is cut with too), in
+// the room's gold, wood and paint.
 const INK = { gold: "url(#sl-goldd)", wh: "url(#sl-wdh)", wv: "url(#sl-wdv)", giltx: "url(#sl-giltx)", goldMid: TH.goldMid, woodMid: TH.woodMid, paint: TH.paint };
 const mould = (x, y, w, h, prof, mat, o = {}) => cutMould(x, y, w, h, prof, mat, { ...o, ink: INK });
 // The carver's two shapes: a scroll (a tapering band rolled up), an acanthus blade (lobed, bent, a groove down its middle).
@@ -850,13 +851,14 @@ function paintLight(room, was, now) {
 // the record cabinet stands on its own four legs now (records.js, cabinet.js): here only its shadow on the parquet
 const FEET = () => svg(180, 12, `<ellipse cx="92" cy="1.4" rx="84" ry="3.2" fill="url(#sl-drop)" opacity=".8"/>`);
 
-// ——— the crate: #/records itself (records.js crateHtml), its links made plain, scaled down onto the floor. In the room the
-// brass reads 唱片櫃 and the count in large letters; as the camera arrives they give way to the page's own Latin. ———
+// ——— the record cabinet: #/records's own with the gramophone on it (records.js phonoCabinetHtml), its links made plain,
+// scaled down onto the floor; the camera's move in dissolves it into the page's crate. In the room the brass reads 唱片櫃
+// and the count in large letters; as the camera arrives they give way to the page's own Latin. ———
 function crateCopy(list, count, unit) {
   const zh = `<span class="sl-zh"><span class="sc-cut">唱片櫃</span>${count ? `<span class="sc-cut n">${count} ${unit}</span>` : ""}</span>`;
-  // its SVG ids made its own (and what points at them: url(#…), a <use>'s href): the page's crate (#/records) is in the
+  // its SVG ids made its own (and what points at them: url(#…), a <use>'s href): the page's cabinet (#/records) is in the
   // document with it while the camera moves in or out
-  const html = crateHtml(list).replace(/(id="|url\(#|href="#)cb-/g, "$1cbr-").replace(/<(\/?)(?:a|button)\b/g, "<$1span")
+  const html = phonoCabinetHtml(list).replace(/(id="|url\(#|href="#)cb-/g, "$1cbr-").replace(/<(\/?)(?:a|button)\b/g, "<$1span")
     .replace(/(<span class="sc-brass cr-plate">)(<span class="sc-cut">[^<]*<\/span><span class="sc-cut n">[^<]*<\/span>)(<\/span>)/, `$1${zh}<span class="sl-de">$2</span>$3`);
   return `<span class="sl-rp" aria-hidden="true" inert><span class="sc-scene crate-scene">${html}</span></span>`;
 }
@@ -1016,7 +1018,7 @@ export function salonRoom(d) {
 // back. Transform and opacity only. Reduced motion: the link opens its page, the room opens at rest.
 // SUBJECT, per corner: the thing's box in the room (`room`, default its drawing) and its counterpart on the page (the
 // union of `page`'s boxes, cut to the screen); `fit` "w" scales the one onto the other by width, else by the mean of
-// width and height; `tl` lines up the top left corners instead of the centres (the crate: the page itself in small);
+// width and height; `tl` lines up the top left corners instead of the centres (the record cabinet: the page's own in small);
 // `disc`: the globe's sphere inside its box (world.js drawGlobe: the box's square less 6 px all round).
 const SUBJECT = {
   museum: { page: ".mu-hang, .mu-plate" },
