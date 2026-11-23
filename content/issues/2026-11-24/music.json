@@ -1,0 +1,323 @@
+{
+  "column": "music",
+  "date": "2026-11-24",
+  "title": "中間樂章只有兩個和弦：巴哈第三號布蘭登堡協奏曲",
+  "dek": "這首曲子沒有管樂，只有弦樂加大鍵琴墊低音，中間的樂章在手稿上只有兩個和弦。演奏的人拿這兩個和弦怎麼辦？",
+  "brief": "巴哈的《第三號布蘭登堡協奏曲》全曲約 11 分鐘，只用弦樂：三把小提琴、三把中提琴、三把大提琴，加上低音。第二樂章在手稿上只有兩個和弦，學者推測是留給演奏者即興的位置。這首曲子被 Wendy Carlos 用合成器重錄過，也收在 Windows 98 的內建音樂檔裡。",
+  "topic_key": "music:bach-bwv1048",
+  "updated_at": "2026-11-24T01:11:17+08:00",
+  "form": "flow",
+  "voice": "listener",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Third_Brandenburg_Concerto.jpg/960px-Third_Brandenburg_Concerto.jpg",
+    "width": 960,
+    "height": 547,
+    "alt": "一頁黑白翻拍的手寫總譜。頁頂用花體字寫著「Concerto 3zo à tre Violini, tre Viole, è tre Violoncelli, col Basso per il Cembalo」。下面是十行譜，左邊依序標著三把小提琴、三把中提琴、三把大提琴和一行低音。",
+    "caption": "巴哈《第三號布蘭登堡協奏曲》手稿的第一頁，頁頂的標題把配器寫得很清楚：三把小提琴、三把中提琴、三把大提琴，加上大鍵琴的低音。柏林國家圖書館藏（Am. B. 78）。Commons 說明只寫「巴哈手稿」，對照館方數位影像後，確認是這份手稿的同一頁。",
+    "credit": "J. S. Bach 手稿；Staatsbibliothek zu Berlin（Am. B. 78）；影像經 Wikimedia Commons（上傳者轉自 catabach.com）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Third_Brandenburg_Concerto.jpg",
+    "made": "1721"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "這一首是德國作曲家巴哈的《**第三號布蘭登堡協奏曲**》，1721 年呈獻給一位侯爵，全曲約 11 分鐘，是同一套六首裡最短的一首。協奏曲是一種曲式，通常讓一個樂器或一小組樂器，和整個樂團一來一往。這首比較特別：沒有任何管樂，只有弦樂，再加一台古時候的鍵盤樂器大鍵琴墊低音。更特別的是中間的樂章：手稿上只有兩個和弦。"
+    },
+    {
+      "type": "p",
+      "text": "你可能已經聽過它，只是不知道名字。1968 年，Wendy Carlos 用一台叫 Moog 的電子合成器，錄了一張巴哈專輯《Switched-On Bach》，這首的三個樂章都收在裡面。同一年，Audio Engineering Society 的大會上，Robert Moog 放了其中第三樂章的錄音帶，據他自己回憶，全場起立鼓掌。這張專輯 1970 年拿了三座葛萊美獎。"
+    },
+    {
+      "type": "p",
+      "text": "另外，Windows 98 隨附的 MIDI 音樂檔裡也有它。2001 年澳洲 ABC 的「Classic 100 Original」排行，它排第 22 名。這一欄的必聽清單，輪到的就是這一首。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "G 大調第三號布蘭登堡協奏曲，BWV 1048；三把小提琴、三把中提琴、三把大提琴與低音（大鍵琴、低音提琴），沒有管樂"
+        ],
+        [
+          "呈獻",
+          "1721 年 3 月 24 日，獻給勃蘭登堡－施韋特侯爵克里斯蒂安・路德維希（Christian Ludwig）；整套六首，法文題為 Six Concerts avec plusieurs instruments"
+        ],
+        [
+          "寫作年份",
+          "整套 1721 年編成呈獻，多數曲子何時寫的不確定"
+        ],
+        [
+          "樂章",
+          "三個：第一樂章（手稿沒標速度，通常奏成 Allegro）；第二樂章 Adagio，只有一小節兩個和弦；第三樂章 Allegro，12/8 拍"
+        ],
+        [
+          "長度",
+          "約 11 分鐘"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "「布蘭登堡」不是巴哈取的名字"
+    },
+    {
+      "type": "p",
+      "text": "寫這套曲子的時候，巴哈在德國的柯騰（Köthen）宮廷當樂長，也就是管宮廷樂隊的人，替當地的親王雷奧波德做事。六首曲子是獻給另一個人的：勃蘭登堡－施韋特侯爵**克里斯蒂安・路德維希**（Christian Ludwig）。他是普魯士軍官，也是大選侯腓特烈・威廉的么子，1677 年生，1734 年過世。"
+    },
+    {
+      "type": "p",
+      "text": "「布蘭登堡」這個叫法，是後人加的。1873 年，有位傳記作家寫巴哈傳的時候用了這個名字，後來大家就跟著叫。"
+    },
+    {
+      "type": "p",
+      "text": "巴哈和侯爵見過面。1719 年，巴哈到柏林去取一台新的大鍵琴（一種比鋼琴更早的鍵盤樂器），在那裡見到了侯爵。獻詞裡，巴哈自己說：幾年前有幸在殿下面前演奏，侯爵對他的音樂才能有些喜歡，臨別時請他寄幾首作品過去。那次演奏，大概就發生在 1719 年的柏林行。"
+    },
+    {
+      "type": "p",
+      "text": "**1721 年 3 月 24 日**，巴哈把六首曲子獻給侯爵。獻詞是法文。這份呈獻本，巴哈幾乎全用自己的手抄，沒有交給抄譜員。這套曲子的法文題目 *Six Concerts avec plusieurs instruments*，意思是「六首給多種樂器的協奏曲」。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Dedication_of_Brandenburg_Concerto.png/1280px-Dedication_of_Brandenburg_Concerto.png",
+      "width": 1280,
+      "height": 794,
+      "alt": "一頁泛黃的手寫信。頁頂用大字寫著法文抬頭，收信人是 Monseigneur Crétien Louis, Marggraf de Brandenbourg；下面是十幾行小字的內文，左下角寫著「Coethen d. 24 Mar 1721」，右下角是巴哈的簽名。",
+      "caption": "巴哈給侯爵的獻詞，法文，左下角寫著「Coethen d. 24 Mar 1721」（柯騰，1721 年 3 月 24 日）。柏林國家圖書館藏（Am. B. 78）。Commons 說明未寫館藏，本頁對照館方數位影像第 2 張確認。",
+      "credit": "J. S. Bach 手稿；Staatsbibliothek zu Berlin（Am. B. 78）；影像經 Wikimedia Commons（上傳者轉自 Pinterest；Commons 標示 CC0）",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dedication_of_Brandenburg_Concerto.png",
+      "made": "1721"
+    },
+    {
+      "type": "p",
+      "text": "獻詞快結束時，巴哈請侯爵手下留情。"
+    },
+    {
+      "type": "quote",
+      "text": "懇請殿下，不要用那種人人都知道您對音樂作品有的精細、敏銳的品味，來苛責它們的不完美；請寬厚地看待我藉此獻上的深深敬意與恭順。",
+      "cite": "巴哈給克里斯蒂安・路德維希的獻詞（1721 年 3 月 24 日，法文原件），本文據 Wikipedia 引用的英譯自譯"
+    },
+    {
+      "type": "h",
+      "text": "三把、三把、三把：沒有管樂的編制"
+    },
+    {
+      "type": "p",
+      "text": "文章最上面那張手稿，頁頂就把編制寫明了：三把小提琴、三把中提琴、三把大提琴，再加低音。低音由大鍵琴和低音提琴擔任，在底下墊著和聲。"
+    },
+    {
+      "type": "p",
+      "text": "Christoph Wolff 替林肯中心室內樂協會（Chamber Music Society of Lincoln Center）寫這套曲子的解說。他說，這個編制「沒有獨立的伴奏樂團」，「偏離巴洛克的所有慣例」，還稱它是「非常規的十聲部弦樂總譜」。他說的伴奏樂團（ripieno），是協奏曲裡整個樂團一起上的那一組。巴洛克則是巴哈那個年代的音樂風格。"
+    },
+    {
+      "type": "p",
+      "text": "韓德爾與海頓協會的解說者 Teresa Neff 也有類似的感覺：「以現代的耳朵聽，第三號可能是這一套裡最不像協奏曲的。」"
+    },
+    {
+      "type": "h",
+      "text": "第一樂章：三個音的短動機，在各組之間傳來傳去"
+    },
+    {
+      "type": "p",
+      "text": "第一樂章在手稿上沒有標速度，演奏時通常奏成 Allegro，也就是輕快的速度。開頭是一個很有特色的短旋律，只有三個音，音樂上叫動機。它會在各組樂器之間傳遞。Neff 說，這個樂章「眼睛和耳朵都是享受」。"
+    },
+    {
+      "type": "p",
+      "text": "聽的時候，可以留意開頭那三個音換了哪一組樂器在拉。Wolff 的描述是這樣：樂團全體上場的段落，是三把小提琴一起拉同一條旋律，三把中提琴、三把大提琴也各自一起拉同一條，這叫齊奏。中間穿插的段落，分成三小組，每組有小提琴、中提琴、大提琴各一把，彼此呼應，這叫三重奏。他說這樣織出了「異常豐富複雜的質地」。"
+    },
+    {
+      "type": "p",
+      "text": "1729 年，巴哈把這個樂章加上三支雙簧管和兩支法國號，改成一首教堂用的清唱劇（BWV 174，聖靈降臨節後星期一演出）的開場曲。"
+    },
+    {
+      "type": "h",
+      "text": "第二樂章：手稿上只有兩個和弦"
+    },
+    {
+      "type": "p",
+      "text": "第二樂章標著 Adagio，也就是慢板，E 小調。手稿上這個樂章只有一小節、**兩個和弦**。和弦是幾個音同時響起來。"
+    },
+    {
+      "type": "p",
+      "text": "一個樂章只有兩個和弦，是怎麼演奏的？學者的說法是推測，沒有直接證據。Wolff 認為，這一小節很可能是一段即興 E 小調裝飾奏的結尾，由弦樂手或大鍵琴手奏。即興就是演奏者當場自己編。Wikipedia 的說法也是「可能」，這兩個和弦框住一段即興。有些演奏者乾脆換上 BWV 1021 或 BWV 1019 這兩首別的作品的慢樂章。Neff 則說，這兩個和弦可以照譜奏，也可以當骨架，讓一個人即興一小段。"
+    },
+    {
+      "type": "p",
+      "text": "所以不同錄音的處理不一樣。Chamber Music Society 頁面上列的那一份錄音，三個樂章分別是 5 分 41 秒、14 秒、5 分 54 秒，第二樂章只有 14 秒。"
+    },
+    {
+      "type": "h",
+      "text": "第三樂章：旋轉的舞曲"
+    },
+    {
+      "type": "p",
+      "text": "第三樂章也是 Allegro，G 大調，12/8 拍。12/8 拍是舞曲的節奏，一小節分四組，每組三個八分音符。Neff 說這是個「旋轉的舞曲」。開頭是一個花句，先由小提琴奏出來，再由中提琴和大提琴模仿。"
+    },
+    {
+      "type": "p",
+      "text": "Wolff 說，這個樂章讓三把大提琴也加入低音；第一部分由三把小提琴領頭，第二部分要每個人都有炫技的地方。第一小提琴在最後一小節有 23 個快音。"
+    },
+    {
+      "type": "h",
+      "text": "那份手稿後來去了哪裡"
+    },
+    {
+      "type": "p",
+      "text": "手稿後來先到巴哈的學生手上，再傳給一位公主，又遺贈給一所中學。1914 年，它轉入柏林皇家圖書館，也就是今天的柏林國家圖書館。"
+    },
+    {
+      "type": "p",
+      "text": "1849 年，有人在公主的藏書裡找到它。1850 年，樂譜出版，那年正好是巴哈逝世一百週年。"
+    },
+    {
+      "type": "h",
+      "text": "這次選的錄音"
+    },
+    {
+      "type": "p",
+      "text": "錄音選的是 **Trevor Pinnock** 指揮 The English Concert，Archiv Produktion（Deutsche Grammophon）出版，圖書館目錄標示 1982 年。選它的理由有兩個：用古樂器演奏，而且是主流版本，好找。第三號約 11 分鐘。"
+    },
+    {
+      "type": "music",
+      "composer": "巴哈（Johann Sebastian Bach）",
+      "work": "G 大調第三號布蘭登堡協奏曲，BWV 1048",
+      "work_original": "Brandenburg Concerto No. 3 in G major, BWV 1048",
+      "composed": "1721 年呈獻（曲子可能更早，確切年份不明）",
+      "performers": "崔佛・平諾克（Trevor Pinnock）指揮 英國協奏團（The English Concert）",
+      "recording": "Archiv Produktion（Deutsche Grammophon）；圖書館目錄標示 1982 年，確切錄音日期未查到",
+      "duration": "約 11 分鐘",
+      "movements": [
+        "I. （手稿未標速度，通常奏成 Allegro）",
+        "II. Adagio（兩個和弦）",
+        "III. Allegro"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Bach Brandenburg Concerto No. 3 BWV 1048 Pinnock English Concert",
+        "artist_hint": "Pinnock",
+        "track_filter": [
+          "Brandenburg Concerto No. 3"
+        ]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "title": "Brandenburg Concertos",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Brandenburg_Concertos",
+      "note": "獻詞日期與英譯、第三號配器與樂章、兩和弦樂章、手稿傳承（Kirnberger、Amalia、1849）、Windows 98 與 Classic 100；2026-11-23 查閱"
+    },
+    {
+      "title": "Bach: Brandenburg Concertos, BWV 1046–51（Christoph Wolff 執筆）",
+      "publisher": "Chamber Music Society of Lincoln Center",
+      "date": "未註明",
+      "url": "https://www.chambermusicsociety.org/about-the-music/compositions/bach-brandenburg-concertos",
+      "note": "第三號十聲部配器、第一樂章齊奏與三重奏、兩和弦、第三樂章 12/8、1729 年改作清唱劇 BWV 174、「Brandenburg」名稱出自 Spitta 1873；2026-11-23 查閱"
+    },
+    {
+      "title": "The Complete Bach Brandenburg Concertos（Teresa M. Neff 節目解說）",
+      "publisher": "Handel and Haydn Society",
+      "date": "2018",
+      "url": "https://handelandhaydn.org/enhanced-program-notes-the-complete-bach-brandenburg-concertos/",
+      "note": "第三號最不像協奏曲、第一樂章三音動機、第二樂章兩和弦的演奏法、第三樂章開頭；2018；2026-11-23 查閱"
+    },
+    {
+      "title": "Brandenburg Concerto No.3 in G major, BWV 1048",
+      "publisher": "IMSLP",
+      "date": "未註明",
+      "url": "https://imslp.org/wiki/Brandenburg_Concerto_No.3,_BWV_1048_(Bach,_Johann_Sebastian)",
+      "note": "樂章、拍號與調性、配器、手稿 Am. B. 78；資訊欄寫 1718 年但本文不採；2026-11-23 查閱"
+    },
+    {
+      "title": "Switched-On Bach",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Switched-On_Bach",
+      "note": "Wendy Carlos 1968 年專輯收錄第三號三個樂章、葛萊美、銷量；2026-11-23 查閱"
+    },
+    {
+      "title": "Les concertos brandebourgeois de Bach: une dédicace qui fête ses 300 ans",
+      "publisher": "RTBF",
+      "date": "未註明",
+      "url": "https://www.rtbf.be/article/les-concertos-brandebourgeois-de-bach-une-dedicace-qui-fete-ses-300-ans-10726275",
+      "note": "1719 年柏林行、獻詞日期、「Brandenburg」名稱出自 Spitta 1873；2026-11-23 查閱"
+    },
+    {
+      "title": "The Brandenburg Concertos: why Bach's masterpiece was so nearly lost forever",
+      "publisher": "Classical Music（雜誌網站）",
+      "date": "未註明",
+      "url": "https://www.classical-music.com/features/works/bach-brandenburg-concertos-lost",
+      "note": "1719 年 3 月柏林行取 Mietke 大鍵琴、與侯爵見面；只用這一點；2026-11-23 查閱"
+    },
+    {
+      "title": "Margrave Christian Ludwig of Brandenburg-Schwedt",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Margrave_Christian_Ludwig_of_Brandenburg-Schwedt",
+      "note": "侯爵生卒、身分；該頁「售出、閣樓」說法與 Boyd 不一致，不採；2026-11-23 查閱"
+    },
+    {
+      "title": "Bach, Johann Sebastian: 6 Brandenburgische Konzerte（Am. B. 78 數位影像，PPN779869885）",
+      "publisher": "Staatsbibliothek zu Berlin",
+      "date": "未註明",
+      "url": "https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN779869885",
+      "note": "手稿第 2 張獻詞頁、第 3 張第一號開頭、第 52 張第三號開頭；用來確認兩張 Commons 圖是這份手稿的哪一頁；2026-11-23 查閱"
+    },
+    {
+      "title": "File:Third Brandenburg Concerto.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Third_Brandenburg_Concerto.jpg",
+      "note": "頭圖的授權與說明；Commons 標 Public domain，來源 catabach.com；2026-11-23 查閱"
+    },
+    {
+      "title": "File:Dedication of Brandenburg Concerto.png",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Dedication_of_Brandenburg_Concerto.png",
+      "note": "獻詞頁的授權與說明；Commons 標 CC0，來源 Pinterest；2026-11-23 查閱"
+    },
+    {
+      "title": "Brandenburgische Konzerte 1, 2, 3, BWV 1046, 1047, 1048（Pinnock）",
+      "publisher": "Texas A&M University Libraries 館藏目錄",
+      "date": "未註明",
+      "url": "https://libcat.library.tamu.edu/Record/in00002359949",
+      "note": "Pinnock 與 The English Concert、Archiv Produktion [1982]、第三號 11:03（頁面本身只讀到搜尋摘要）；2026-11-23 查閱"
+    },
+    {
+      "title": "BACH Brandenburg Concerto No. 3 / Pinnock",
+      "publisher": "Deutsche Grammophon",
+      "date": "未註明",
+      "url": "https://www.deutschegrammophon.com/en/catalogue/products/bach-brandenburg-concerto-no-3-pinnock-3446",
+      "note": "The English Concert、Trevor Pinnock、Archiv Produktion 單獨第三號頁面；目錄頁未列錄音日期；2026-11-23 查閱"
+    },
+    {
+      "title": "Bach: Brandenburg Concertos, Orchestral Suites（Archiv 重發版評論）",
+      "publisher": "MusicWeb International",
+      "date": "未註明",
+      "url": "https://musicwebinternational.com/2023/04/bach-brandenburg-concertos-dg-archiv/",
+      "note": "整套錄於 1982–84、倫敦 Henry Wood Hall；本欄不採用其日期；2026-11-23 查閱"
+    },
+    {
+      "title": "Brandenburg Concerto No. 3 in G major BWV 1048",
+      "publisher": "Breitkopf & Härtel",
+      "date": "未註明",
+      "url": "https://www.breitkopf.com/en/work/348/brandenburg-concerto-no.-3-in-g-major-bwv-1048",
+      "note": "演出約 11 分鐘；2026-11-23 查閱"
+    }
+  ]
+}

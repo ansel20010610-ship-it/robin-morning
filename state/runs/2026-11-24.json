@@ -1,4 +1,15 @@
 {
+  "1": {
+    "finished_at": "2026-11-24T01:11:36+08:00",
+    "missing": [
+      "football",
+      "news",
+      "architecture",
+      "philosophy",
+      "poem"
+    ],
+    "note": "精簡：music；devotion 自寫（詩篇 130:1–6）；perio 已完成"
+  },
   "column": {
     "finished_at": "2026-11-23T23:01:33+08:00",
     "missing": [
