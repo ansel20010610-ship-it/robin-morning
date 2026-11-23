@@ -1,0 +1,179 @@
+{
+  "column": "obituary",
+  "date": "2026-11-24",
+  "status": "update",
+  "form": "qa",
+  "voice": "eulogist",
+  "title": "《歌劇，或女人的敗北》作者 Clément 過世，87 歲",
+  "dek": "1979 年，她把歌劇的女主角排成一排：誰死了，誰被逼著放棄愛人，誰被逼著嫁人。",
+  "brief": "法國哲學家、小說家 Catherine Clément 11 月 23 日（週一）在巴黎過世，87 歲，弟弟向法新社宣布。她 1979 年寫了一本書，讀《卡門》《蝴蝶夫人》這些名作，說歌劇的女主角都死在慢慢編好的劇情裡。1989 年《紐約時報》的書評說她誇大了，但抓到了東西。",
+  "topic_key": "obituary:clement-2026",
+  "updated_at": "2026-11-24T05:26:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "f0",
+    "kind": "portrait",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/P1070995_-_Catherine_CLEMENT.JPG/1280px-P1070995_-_Catherine_CLEMENT.JPG",
+    "width": 1280,
+    "height": 960,
+    "alt": "一位戴細框圓眼鏡的年長女士，棕灰色的捲短髮，嘴唇塗紅，穿深色印花上衣、圍米灰色披肩，坐在書展的攤位前，背後是一疊疊書和紅色桌布。",
+    "caption": "Catherine Clément，2009 年 5 月 22 日攝於法國蒙彼利埃的「書的喜劇」（Comédie du Livre）書展。這是 17 年前的照片，不是近照。",
+    "credit": "Esby",
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5",
+    "source_url": "https://commons.wikimedia.org/wiki/File:P1070995_-_Catherine_CLEMENT.JPG",
+    "made": "2009"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "「她是個很獨特的女人，一位全才。」弟弟 Jérôme Clément 這樣對法新社說。他說的是姊姊 **Catherine Clément**（凱薩琳・克萊蒙），法國的哲學家、小說家。她 11 月 23 日（週一）在巴黎過世，87 歲，弟弟說她過世時很平靜，離她最新一本小說出版沒多久。Jérôme 是電視台 Arte 的創辦人，也當過總裁。"
+    },
+    {
+      "type": "p",
+      "text": "她一輩子寫了約六十本書，小說、論文、傳記都有，很多寫印度。聽歌劇的人最該記得的是 1979 年那一本：她把名作裡女主角的下場一部一部讀過去，得到一個叫人坐不住的結論。"
+    },
+    {
+      "type": "h",
+      "text": "她說歌劇裡的女人怎麼了？"
+    },
+    {
+      "type": "p",
+      "text": "書的法文名是《L'Opéra ou la Défaite des femmes》。défaite 是戰敗、潰敗的意思。英文版 1988 年由明尼蘇達大學出版社出版，Betsy Wing 翻譯，書名成了《Opera, or the Undoing of Women》。書裡有這麼一句："
+    },
+    {
+      "type": "quote",
+      "text": "歌劇裡所有的女人，都死在為她們預備好的一種死法裡。那是一個慢慢編成的劇情，編的是鬼祟、一閃而過的男主角們，一直編到她們光榮的那一刻：唱出來的死。",
+      "original": "All the women in opera die a death prepared for them by a slow plot, woven by furtive, fleeting heros, up to their glorious moment: a sung death.",
+      "cite": "Catherine Clément，《Opera, or the Undoing of Women》，Betsy Wing 英譯，University of Minnesota Press，1988；引自 Paul Robinson 的書評，《紐約時報》1989 年 1 月 1 日；中文由英文轉譯"
+    },
+    {
+      "type": "p",
+      "text": "替她歸納的，是在史丹佛大學教歐洲思想史的 Paul Robinson，他 1989 年 1 月在《紐約時報》評了這本書。照他的整理，著名的歌劇裡，女人的下場分三種："
+    },
+    {
+      "type": "table",
+      "title": "Clément 論點的三種下場",
+      "head": [
+        "下場",
+        "女主角（歌劇）"
+      ],
+      "rows": [
+        [
+          "被殺，或被逼到自殺",
+          "Cio-Cio-San（《蝴蝶夫人》）、卡門（《卡門》）、伊索德（《崔斯坦與伊索德》）、托斯卡（《托斯卡》）、苔絲狄蒙娜（《奧泰羅》）"
+        ],
+        [
+          "被逼著放棄愛人",
+          "薇奧麗塔（《茶花女》）、塔蒂亞娜（《尤金・奧涅金》）、元帥夫人（《玫瑰騎士》）"
+        ],
+        [
+          "被逼著嫁給不愛的人",
+          "露琪亞（《拉美莫爾的露琪亞》）、梅麗桑（《佩利亞斯與梅麗桑》）、杜蘭朵（《杜蘭朵》）"
+        ]
+      ],
+      "caption": "依 Robinson 1989 年書評對 Clément 論點的轉述整理，是他的歸納，不是書的目錄。"
+    },
+    {
+      "type": "p",
+      "text": "Robinson 說，懂歌劇的人馬上會想到例外，多半在喜歌劇，貝多芬的《費黛里奧》也對不上。可是這種書要先讓它講下去，才讀得到她許多有見地的地方。他舉的例子是《茶花女》：她把這部歌劇和恩格斯對現代家庭的分析並讀，那份分析說，家庭是一種私有財產，通姦與賣淫是它免不了的附屬品。"
+    },
+    {
+      "type": "h",
+      "text": "她討厭歌劇嗎？"
+    },
+    {
+      "type": "p",
+      "text": "Robinson 在書評裡說，這本書的魅力在於她一再承認：自己很尷尬地愛著這些她批評的歌劇，而且最愛的，是殺意最不遮掩的那幾部。她寫《蝴蝶夫人》和《卡門》，語氣特別有感情。她抱怨的是音樂："
+    },
+    {
+      "type": "quote",
+      "text": "噢，聲音，崇高的聲音，又高又清澈的聲音，你們怎麼讓人忘了你們唱的是什麼詞！",
+      "original": "Oh voices, sublime voices, high, clear voices, how you make one forget the words you sing!",
+      "cite": "Catherine Clément，《Opera, or the Undoing of Women》，Betsy Wing 英譯，University of Minnesota Press，1988；引自 Paul Robinson 的書評，《紐約時報》1989 年 1 月 1 日；中文由英文轉譯"
+    },
+    {
+      "type": "h",
+      "text": "懂音樂的人怎麼回她？"
+    },
+    {
+      "type": "p",
+      "text": "Robinson 認為這本書最大的缺口，就是音樂：她幾乎沒談音樂，控訴的對象是劇本，可是歌劇主要靠音樂說服人。他拿聲音當反證：歌劇裡的女人唱起來，和男人一樣有力。Cio-Cio-San 的決心，是用一串反覆唱到音域頂端的樂句寫出來的；威爾第筆下的苔絲狄蒙娜，在第三幕的重唱之上，聲音高高飛揚。"
+    },
+    {
+      "type": "p",
+      "text": "他的結論是，同一部歌劇，劇本講女人的敗北，音樂講的是反過來的故事，是她的力量。Clément 也許誇大了，他寫，但她抓到了東西，這本書是一次**「有用的挑釁」**。"
+    },
+    {
+      "type": "h",
+      "text": "除了歌劇，她寫過什麼？"
+    },
+    {
+      "type": "p",
+      "text": "她考上法國的哲學教師資格，法國媒體說她的三位老師是人類學家 Lévi-Strauss、精神分析師 Lacan 和哲學家 Jankélévitch。她替 Lévi-Strauss 寫過一本 Que sais-je? 系列的小冊子，在索邦大學當過 Jankélévitch 的助理，也做過《Le Matin de Paris》報社的記者、法國文化廣播電台 France Culture 的節目製作人，還當過巴黎 quai Branly 博物館人民大學的主席。"
+    },
+    {
+      "type": "p",
+      "text": "更多人是從小說認識她。1990 年代的《Le Voyage de Théo》翻成許多語言，英文版叫 *Theo's Odyssey*：14 歲的巴黎男孩 Théo 突然生病，有錢的姑姑 Martha 帶他去世界各地的聖地，一路認識各個宗教。英文版的簡介說，它替宗教做的事，像《蘇菲的世界》替哲學做的事。她也寫印度，因為她跟當大使的丈夫在那裡住過好幾年。最後一本小說《Sabbataï ou la doublure de Dieu》，書商 Eyrolles 的書目寫 11 月 6 日出版。"
+    },
+    {
+      "type": "h",
+      "text": "現在去哪裡讀她？"
+    },
+    {
+      "type": "p",
+      "text": "英文版《Opera, or the Undoing of Women》，1988 年版共 201 頁。Robinson 的書評在《紐約時報》網站上找得到，文末附了書裡的一段：三個女人用三種方式死，一把日本的刀，一把西班牙的刀，還有愛情；三個都是外國人。她也寫過她心裡那一版《魔笛》：台上嗓音莊嚴的好祭司，會照他們真正的作為去做，把帕米娜硬推進薩拉斯特羅鎖她的小隔間，打夜后，踢帕帕基諾。接著是這一句："
+    },
+    {
+      "type": "quote",
+      "text": "音樂不會少一分神聖，只是這樣一來，它服務的是一個更公道的理由。",
+      "original": "The music would be no less divine; but it would then serve a more just cause.",
+      "cite": "Catherine Clément，《Opera, or the Undoing of Women》，Betsy Wing 英譯，University of Minnesota Press，1988；引自 Paul Robinson 的書評，《紐約時報》1989 年 1 月 1 日；中文由英文轉譯"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Catherine Clément, romancière, essayiste et philosophe, est morte à 87 ans, quelques jours seulement après la parution de son dernier livre",
+      "publisher": "franceinfo（Culture，署名 avec AFP）",
+      "date": "2026-11-23",
+      "url": "https://www.franceinfo.fr/culture/livres/catherine-clement-romanciere-essayiste-et-philosophe-est-morte-a-87-ans-quelques-jours-seulement-apres-la-parution-de-son-dernier-livre_8296326.html",
+      "note": "死亡日期（週一 11 月 23 日）、地點巴黎、87 歲、生日 1939 年 2 月 10 日、弟弟 Jérôme Clément 向法新社宣布的內容、約六十本書、1990 年代作品、學歷與職歷。未寫時刻、死因、葬禮。與 Télérama 同出法新社稿。"
+    },
+    {
+      "title": "Mort de Catherine Clément, philosophe passionnée de l'Inde",
+      "publisher": "Télérama（署名 avec AFP）",
+      "date": "2026-11-23",
+      "url": "https://www.telerama.fr/livre/mort-de-catherine-clement-philosophe-passionnee-de-l-inde-7034000.php",
+      "note": "同一則法新社稿的 Télérama 版，印證日期、地點、年齡、弟弟的話與老師名單；圖說寫「trois maîtres」。"
+    },
+    {
+      "title": "Catherine Clément, philosophe passionnée de l'Inde, est morte à 87 ans",
+      "publisher": "Le Monde",
+      "date": "2026-11-23",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/11/23/catherine-clement-philosophe-passionnee-de-l-inde-est-morte-a-87-ans_6814414_3382.html",
+      "note": "內文被驗證頁擋住，只從 Titres Presse 轉列的標題與摘要確認 Le Monde 也報了死訊（87 歲、1990 年代與印度）；正文細節不出自這一篇。"
+    },
+    {
+      "title": "Catherine Clément：Sabbataï ou la doublure de Dieu（作者書目）",
+      "publisher": "Librairie Eyrolles",
+      "date": "2026-11-06",
+      "url": "https://www.eyrolles.com/Accueil/Auteur/catherine-clement-103135/",
+      "note": "書目列 Seuil 版《Sabbataï ou la doublure de Dieu》出版日期 06/11/2026；日期為出版日，不是頁面發布日。"
+    },
+    {
+      "title": "It's Not Over Until the Soprano Dies（Opera, or the Undoing of Women 書評）",
+      "publisher": "The New York Times（Paul Robinson）",
+      "date": "1989-01-01",
+      "url": "https://www.nytimes.com/books/99/10/03/nnp/clement-undoing.html",
+      "note": "全文讀過。書的論點、三種下場的歸納、《茶花女》與恩格斯、她愛歌劇的自白、Robinson 對音樂的批評與結論，以及三段書中原句（Betsy Wing 英譯）；法文 1979 年出版、英文版 Betsy Wing 譯、明尼蘇達大學出版社、201 頁。"
+    },
+    {
+      "title": "Theo's Odyssey（Le Voyage de Théo 英文版簡介）",
+      "publisher": "Goodreads",
+      "date": "2026-11-24",
+      "url": "https://www.goodreads.com/book/show/1197756.Theo_s_Odyssey",
+      "note": "只用出版社簡介的故事大綱與「《蘇菲的世界》」比喻；頁面上的首版年份（1977）有誤，不採，原書年份稿中只寫 1990 年代（franceinfo）。日期為查閱日。"
+    }
+  ]
+}
