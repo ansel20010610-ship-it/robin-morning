@@ -1,0 +1,212 @@
+{
+ "column": "news",
+ "date": "2026-11-24",
+ "title": "烏克蘭認下利比亞外海擊沉俄艦，輝達黃仁勳復職",
+ "dek": "輝達董事會讓黃仁勳回任，台灣證交所週二起調降融資維持率；伊朗與美國在海灣的衝突仍在持續。",
+ "brief": "烏克蘭總統澤倫斯基說，烏軍 22 日在利比亞班加西擊沉俄國護衛艦。輝達董事會 23 日讓黃仁勳回任執行長，川普說他直接介入，民主黨誓言調查。台灣證交所 24 日起把融資維持率最低標準降到 120%。",
+ "topic_key": "news:2026-11-24",
+ "voice": "wire",
+ "updated_at": "2026-11-24T05:22:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "Russia warns Ukraine of 'dangerous trend' after Libya and Baltic attacks",
+   "publisher": "半島電視台",
+   "date": "2026-11-23",
+   "url": "https://www.aljazeera.com/news/2026/11/23/russia-warns-ukraine-of-dangerous-trend-after-libya-and-baltic-attacks",
+   "note": "澤倫斯基認下班加西襲擊、利比亞東部政府投訴、Sparta II、芬蘭軍方與佩斯科夫的說法"
+  },
+  {
+   "title": "Libya's east seeks UN probe into claims Ukrainian military present in west",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-23",
+   "url": "https://www.france24.com/en/libya-s-east-seeks-un-probe-into-claims-ukrainian-military-present-in-west",
+   "note": "利比亞東部當局 23 日向聯合國要求調查"
+  },
+  {
+   "title": "Nvidia board reinstates Jensen Huang as CEO",
+   "publisher": "半島電視台",
+   "date": "2026-11-23",
+   "url": "https://www.aljazeera.com/economy/2026/11/23/nvidia-board-reinstates-jensen-huang-as-ceo",
+   "note": "復職、11 月 12 日辭職、臨時執行長克雷斯續任財務長"
+  },
+  {
+   "title": "Democrats vow probe after Trump pushes Huang's return as Nvidia CEO",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-23",
+   "url": "https://www.france24.com/en/americas/20261123-nvidia-board-reinstates-disgraced-jensen-huang-as-ceo-president-says",
+   "note": "川普介入與司法部長說法、舒默與傑夫瑞斯、12 月 1 日與 3 日聽證"
+  },
+  {
+   "title": "Iran strike wounds two in Bahrain, Saudi condemns 'criminal' attacks",
+   "publisher": "法國 24 電視台（法新社）",
+   "date": "2026-11-22",
+   "url": "https://france24.com/en/live-news/20261122-iran-strike-wounds-two-in-bahrain-saudi-condemns-criminal-attacks",
+   "note": "兩人受傷、革命衛隊說法、油輪觸雷、沙烏地譴責、11 月 13 日恢復"
+  },
+  {
+   "title": "Bahrain says Iranian attack causes fire at industrial facility",
+   "publisher": "半島電視台",
+   "date": "2026-11-21",
+   "url": "https://www.aljazeera.com/news/2026/11/21/bahrain-says-iranian-attack-causes-fire-at-industrial-facility",
+   "note": "革命衛隊聲明內容與未獨立查證"
+  },
+  {
+   "title": "Anti-austerity strike spurs transport chaos across Belgium",
+   "publisher": "半島電視台",
+   "date": "2026-11-23",
+   "url": "https://www.aljazeera.com/news/2026/11/23/anti-austerity-strike-spurs-transport-chaos-across-belgium",
+   "note": "航班與列車取消、布魯塞爾機場停飛時段、12 月 31 日期限、辭呈"
+  },
+  {
+   "title": "New Belgium protests as embattled govt sets budget deadline",
+   "publisher": "法國 24 電視台（法新社）",
+   "date": "2026-11-23",
+   "url": "https://www.france24.com/en/live-news/20261123-new-belgium-protests-as-embattled-govt-sets-budget-deadline",
+   "note": "警方說 50,000 人遊行、至少一人被捕"
+  },
+  {
+   "title": "Russia threatens 'hostile' Estonia with 'open war'",
+   "publisher": "半島電視台",
+   "date": "2026-11-23",
+   "url": "https://www.aljazeera.com/news/2026/11/23/russia-threatens-hostile-estonia-with-open-war",
+   "note": "俄方召見代辦、愛沙尼亞 12 月 1 日起關閉口岸、愛方回應、呂特"
+  },
+  {
+   "title": "TWSE cuts minimum margin maintenance ratio to ease market volatility",
+   "publisher": "Focus Taiwan（中央社）",
+   "date": "2026-11-23",
+   "url": "https://focustaiwan.tw/business/202611230015",
+   "note": "融資維持率 130% 降至 120%、上週跌幅、國安基金"
+  },
+  {
+   "title": "Taiwan shares close up 2.16%",
+   "publisher": "Focus Taiwan（中央社）",
+   "date": "2026-11-23",
+   "url": "https://focustaiwan.tw/business/202611230008",
+   "note": "收盤 36,811.89 點、漲 2.16%"
+  },
+  {
+   "title": "MAC sends warning about China election interference",
+   "publisher": "Focus Taiwan（中央社）",
+   "date": "2026-11-23",
+   "url": "https://focustaiwan.tw/politics/202611230016",
+   "note": "沈有忠說法、周曉雲起訴內容與她的回應"
+  },
+  {
+   "title": "Taiwan's unemployment rate lowest in 26 years for October",
+   "publisher": "Focus Taiwan（中央社）",
+   "date": "2026-11-23",
+   "url": "https://focustaiwan.tw/business/202611230019",
+   "note": "主計總處 10 月人力資源調查"
+  }
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "烏克蘭認下利比亞外海的襲擊；輝達黃仁勳回任，台灣證交所週二起放寬融資維持率。"
+  },
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "烏克蘭認下班加西襲擊",
+     "place": [
+      "LY",
+      "UA",
+      "RU"
+     ],
+     "summary": "烏克蘭總統澤倫斯基 23 日說，烏軍 22 日在利比亞班加西的海軍基地擊沉俄國護衛艦 Merkury，另擊中一艘貨輪。利比亞東部政府向聯合國投訴侵犯主權。波羅的海另有俄國貨輪 21 日遭無人機攻擊起火，芬蘭軍方說很可能是烏克蘭所為；克里姆林宮稱這是「非常危險的趨勢」。",
+     "source": "半島電視台、法國 24 電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/23/russia-warns-ukraine-of-dangerous-trend-after-libya-and-baltic-attacks",
+     "when": "11 月 22–23 日，利比亞與波羅的海"
+    },
+    {
+     "headline": "黃仁勳回任輝達執行長",
+     "place": "US",
+     "summary": "輝達 23 日宣布，董事會立即恢復黃仁勳的執行長職務。他 11 月 12 日辭職，起因是婚外情報導，其中一名女子被懷疑是中國間諜。川普說他直接向董事會介入；民主黨議員誓言調查，黃仁勳 12 月 1 日要在眾議院三個委員會閉門答詢。",
+     "source": "法國 24 電視台、半島電視台",
+     "url": "https://www.france24.com/en/americas/20261123-nvidia-board-reinstates-disgraced-jensen-huang-as-ceo-president-says",
+     "when": "11 月 23 日，美國"
+    },
+    {
+     "headline": "伊朗攻擊巴林工業設施",
+     "place": [
+      "BH",
+      "IR"
+     ],
+     "summary": "巴林說，21 日（週六）伊朗攻擊西特拉島一處民用工業設施，兩人受傷，其中一人傷勢危急。伊朗革命衛隊說打的是巴林兩處基地的美軍防空系統，這項說法未獲獨立查證。22 日兩艘油輪在荷莫茲海峽觸雷起火；沙烏地阿拉伯譴責這是「犯罪」攻擊。",
+     "source": "法國 24 電視台、半島電視台",
+     "url": "https://france24.com/en/live-news/20261122-iran-strike-wounds-two-in-bahrain-saudi-condemns-criminal-attacks",
+     "when": "11 月 21–22 日，巴林與荷莫茲海峽"
+    },
+    {
+     "headline": "比利時全國罷工",
+     "place": "BE",
+     "summary": "比利時 23 日全國罷工，反對政府削減開支的預算案，布魯塞爾機場當地 07:00 至 21:00 的起降全部取消，警方說有 50,000 人在布魯塞爾遊行。首相德韋弗把預算協議的期限訂在 12 月 31 日，沒有協議政府將無法施政。",
+     "source": "半島電視台、法國 24 電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/23/anti-austerity-strike-spurs-transport-chaos-across-belgium",
+     "when": "11 月 23 日，比利時"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "證交所下調融資維持率",
+     "place": "TW",
+     "summary": "證交所 23 日宣布，融資維持率最低標準由 130% 降到 120%，24 日（週二）起生效。起因是近期科技股重挫，上週加權指數創史上最大單週點數跌幅，市場疑慮包括美國出口限制與輝達的不確定性。數字見下表。",
+     "source": "Focus Taiwan（中央社）",
+     "url": "https://focustaiwan.tw/business/202611230015",
+     "when": "11 月 23 日，台灣時間"
+    },
+    {
+     "headline": "陸委會警告選舉干預",
+     "place": "TW",
+     "summary": "陸委會副主委沈有忠 23 日說，中國干預台灣選舉的手法愈來愈精密；地方選舉 28 日（週六）投票。新北地檢署 20 日起訴民眾黨桃園市議員候選人周曉雲，指控她接受自稱中共官員者安排的網路操作團隊；周曉雲說起訴不等於有罪。",
+     "source": "Focus Taiwan（中央社）",
+     "url": "https://focustaiwan.tw/politics/202611230016",
+     "when": "11 月 20–23 日，台灣時間"
+    },
+    {
+     "headline": "10 月失業率 3.35%",
+     "place": "TW",
+     "summary": "主計總處 23 日公布，10 月失業率 3.35%，是 26 年來同月最低，連續第二個月下降。",
+     "source": "Focus Taiwan（中央社）",
+     "url": "https://focustaiwan.tw/business/202611230019",
+     "when": "11 月 23 日，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "台股與融資維持率（Focus Taiwan，23 日）",
+   "head": [
+    "項目",
+    "數字"
+   ],
+   "rows": [
+    [
+     "融資維持率最低標準",
+     "130% → 120%"
+    ],
+    [
+     "10 月 6 日盤中高點",
+     "49,968.92"
+    ],
+    [
+     "20 日盤中低點",
+     "35,738.68"
+    ],
+    [
+     "23 日收盤",
+     "36,811.89"
+    ]
+   ]
+  }
+ ]
+}
