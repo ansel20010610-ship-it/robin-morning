@@ -21,7 +21,7 @@ import { crateHtml, wireCrate, deckHtml, fillPlate, playRecord, boxBusy, workNam
 import { medalMonths, medalsHtml } from "./medals.js";
 import { printsHtml, wirePrints, resetPrints } from "./prints.js";
 import { poemsHtml, wirePoems } from "./poems.js";
-import { salonHtml, roomHtml, wireRoom } from "./museum.js";
+import { salonHtml, roomHtml, wireRoom, wallSilk } from "./museum.js";
 import { salonRoom, wireSalon, redrawBird, roomMove } from "./salon.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
@@ -445,14 +445,14 @@ const scenePage = (name, zh, back, scene) => `<div class="sc-page"><div class="s
 const museum = () => { const read = readSet(); return publishedIssues().flatMap((i) => i.articles.filter((a) => a.column === "artwork" && read.has(`${i.date}/artwork`)).map((a) => ({ date: i.date, a }))).sort((x, y) => y.date.localeCompare(x.date)); };
 function viewMuseum() {
   const list = museum();
-  main.innerHTML = scenePage("Museum", "美術館", "#/saved", `<div class="sc-scene mu-wall museum-scene"><i class="sc-lamp"></i>${list.length ? salonHtml(list) : '<p class="sc-empty">讀完一篇藝術，就會掛上一幅。</p>'}<i class="mu-rail" aria-hidden="true"></i></div>`);
+  main.innerHTML = scenePage("Museum", "美術館", "#/saved", `<div class="sc-scene mu-wall museum-scene">${wallSilk}<i class="sc-lamp"></i>${list.length ? salonHtml(list) : '<p class="sc-empty">讀完一篇藝術，就會掛上一幅。</p>'}<i class="mu-rail" aria-hidden="true"></i></div>`);
   wireBack();
   document.title = `美術館｜${S.cfg.title}`;
 }
 function viewMuseumWork(date) {
   const list = museum(), i = list.findIndex((w) => w.date === date);
   if (i < 0) { location.replace("#/museum"); return; }
-  main.innerHTML = scenePage("Museum", "美術館", "#/museum", `<div class="sc-scene mu-wall museum-scene one"><i class="sc-lamp"></i>${roomHtml(list, i)}<i class="mu-rail" aria-hidden="true"></i></div>`);
+  main.innerHTML = scenePage("Museum", "美術館", "#/museum", `<div class="sc-scene mu-wall museum-scene one">${wallSilk}<i class="sc-lamp"></i>${roomHtml(list, i)}<i class="mu-rail" aria-hidden="true"></i></div>`);
   wireBack();
   wireRoom(main.querySelector(".museum-scene"), list, i);
   document.title = `${list[i].a.title}｜${S.cfg.title}`;

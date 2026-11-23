@@ -11,7 +11,7 @@
 // posts what this phone fed (and the bird's name when it changed here) and takes back the yard's members, every feed
 // and the name; without it the yard is this phone alone and says so. The bird never dies.
 import { esc, store, twNow, fmtDate, toast, paragraphs, within } from "./util.js";
-import { wmoWord } from "./wetter.js"; // the real sky over the yard: Taichung's, as the front page's 今日氣象 keeps it (rm.wx)
+import { wmoWord, sunTimes } from "./wetter.js"; // the real sky over the yard: Taichung's, as the front page's 今日氣象 keeps it (rm.wx)
 import { CITY_META } from "./cities.js"; // the 30 cities abroad, their sights' names and souvenirs (the drawings: postcard.js, loaded when shown)
 
 const ALPHA = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"; // no I, L, O, 0, 1: a code read aloud or typed from a photo stays right
@@ -574,8 +574,7 @@ const inYard = (kind, sea, bird, m = null, sky = null) => { const L = YARD[kind]
 function realSky() {
   const now = twNow(), kept = store.get("wx"), d = kept?.date === now.date ? kept.data : null;
   const two = (x) => String(x).padStart(2, "0"), hm = `${two(Math.floor(now.minutes / 60))}:${two(now.minutes % 60)}`;
-  const t = (x, f) => (/T\d{2}:\d{2}/.test(x || "") ? x.slice(11, 16) : f);
-  const rise = t(d?.daily?.sunrise?.[0], "06:10"), set = t(d?.daily?.sunset?.[0], "17:20");
+  const { rise, set } = sunTimes(d);
   const h = Math.floor(now.minutes / 60), code = d?.hourly?.weather_code?.[h], temp = d?.hourly?.temperature_2m?.[h];
   const c = typeof code === "number" ? code : -1;
   const kind = c >= 95 ? "storm" : (c >= 51 && c <= 67) || (c >= 80 && c <= 82) ? "rain" : c >= 45 && c <= 48 ? "fog" : c === 3 ? "cloud" : c >= 0 ? "clear" : "";

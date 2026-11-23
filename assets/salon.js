@@ -11,19 +11,21 @@
 // A tap: the camera moves in on the thing (one transform on .sl-cam, run by the compositor) and its page opens; the crate
 // is #/records itself, laid out at the page's size and scaled down (records.js crateHtml), so the move lands on that page.
 // The room is drawn at 402 × 791 and scaled to the screen (the screen's height less the bottom bar, fixed before any
-// picture arrives: iPhone Safari has no scroll anchoring). One light, the window's morning light from the upper left:
-// every shadow falls right and down, each piece stands on a contact shadow, the window's panes lie on the parquet.
+// picture arrives: iPhone Safari has no scroll anchoring). One light, the window's from the upper left, and it is the
+// hour's (lightAt: the morning as drawn, noon, the evening, the night): every shadow falls right and down, each piece
+// stands on a contact shadow, the window's panes lie on the parquet while the sun is up.
 // No SVG filter and no blend mode inside: the shadows and the light are gradients and translucent shapes.
 // Leather, velvet and the parquet are photographs (assets/shelf/, Poly Haven, CC0); the wood's grain, the gilt's wear, the
 // silk and the grain over the room are drawn by program (assets/shelf/gen_*.png).
-import { esc, ROBIN_PATHS } from "./util.js";
+import { esc, ROBIN_PATHS, twNow } from "./util.js";
 import { crateHtml } from "./records.js";
-import { fuseGilt } from "./cabinet.js";
+import { fuseGilt, mould as cutMould, lightOf } from "./cabinet.js";
 import { stampPicture } from "./stamps.js";
-import { drawMap } from "./world.js";
+import { drawMap, globe, paintGlobe, GLOBE_DPR } from "./world.js";
 import { poemOf } from "./poems.js";
 import { calm } from "./motion.js";
 import { roomBird } from "./nest.js";
+import { sunTimes } from "./wetter.js";
 
 const W = 402, H = 791, FLOOR = 640, REC = 0.44; // the room's size, the line the furniture stands on, the crate's scale
 const TEX = "assets/shelf/";
@@ -36,26 +38,10 @@ const TH = {"paint": "#f3ede0", "goldMid": "#bf9a52", "woodMid": "#6a2a14", "var
 // ——— 真材質的工具。一盞光在左上：凸的線腳上緣亮、下緣暗，凹的反過來；雕花是三層——右下的影、
 // 左上的受光、本體——再疊一層金箔的磨損與接縫。木紋跟著料走：橫料橫紋、直料直紋、斜腳順著斜。 ———
 const P2 = (pts) => pts.map((p) => `${p[0].toFixed(2)} ${p[1].toFixed(2)}`).join(" L");
-const lightOf = (v) => (v >= 0 ? `rgba(255,246,222,${v.toFixed(3)})` : `rgba(18,9,2,${(-v).toFixed(3)})`);
-const SHADE = { v: { t: .34, l: .2, r: -.26, b: -.44 }, c: { t: -.34, l: -.24, r: .1, b: .2 }, f: { t: .1, l: .06, r: -.1, b: -.18 }, b: { t: -.3, l: -.25, r: -.35, b: -.4 } };
-// A moulded frame round a rectangle: bands from the outside in, each [width, kind] — v convex, c cove, f flat, b beads.
-// The four sides are mitred; a wood frame's rails run their grain across, its stiles up and down.
-function mould(x, y, w, h, prof, mat, o = {}) {
-  let s = "", o0 = 0;
-  const fillOf = (sd) => (mat === "gold" ? "url(#sl-goldd)" : mat === "wood" ? (sd === "t" || sd === "b" ? "url(#sl-wdh)" : "url(#sl-wdv)") : o.paint || TH.paint);
-  for (const [bw, k] of prof) {
-    const o1 = o0 + bw, sides = { t: `M${o0} ${o0}H${w - o0}L${w - o1} ${o1}H${o1}Z`, b: `M${o0} ${h - o0}H${w - o0}L${w - o1} ${h - o1}H${o1}Z`, l: `M${o0} ${o0}V${h - o0}L${o1} ${h - o1}V${o1}Z`, r: `M${w - o0} ${o0}V${h - o0}L${w - o1} ${h - o1}V${o1}Z` };
-    for (const sd of "tblr") s += `<path d="${sides[sd]}" fill="${fillOf(sd)}"/><path d="${sides[sd]}" fill="${lightOf(SHADE[k][sd] * (o.k ?? 1))}"/>`;
-    if (k === "v" && bw > 1) { const m = o0 + bw * .36, m2 = o0 + bw * .72, sw = Math.min(.9, bw * .22);
-      s += `<path d="M${w - m} ${m}H${m}V${h - m}" fill="none" stroke="rgba(255,250,230,${mat === "gold" ? .75 : .3})" stroke-width="${sw}"/><path d="M${m2} ${h - m2}H${w - m2}V${m2}" fill="none" stroke="rgba(20,10,0,.32)" stroke-width="${sw}"/>`; }
-    if (k === "b") { const m = o0 + bw / 2, r = bw * .44, st = Math.max(1.6, bw * 1.2), d = `M${m} ${m}H${w - m}V${h - m}H${m}Z`, c = mat === "gold" ? TH.goldMid : mat === "wood" ? TH.woodMid : o.paint || TH.paint;
-      s += `<path d="${d}" fill="none" stroke="rgba(15,7,0,.55)" stroke-width="${r * 2}" stroke-dasharray="0 ${st}" stroke-linecap="round" transform="translate(${r * .35} ${r * .45})"/><path d="${d}" fill="none" stroke="${c}" stroke-width="${r * 2}" stroke-dasharray="0 ${st}" stroke-linecap="round"/>
-        <path d="${d}" fill="none" stroke="rgba(255,250,228,.85)" stroke-width="${r * .8}" stroke-dasharray="0 ${st}" stroke-linecap="round" transform="translate(${-r * .32} ${-r * .34})"/>`; }
-    o0 = o1;
-  }
-  if (mat === "gold") s += `<path fill-rule="evenodd" d="M0 0H${w}V${h}H0Z M${o0} ${o0}V${h - o0}H${w - o0}V${o0}Z" fill="url(#sl-giltx)"/>`;
-  return `<g transform="translate(${x} ${y})">${s}</g>`;
-}
+// A moulded frame round a rectangle (cabinet.js mould, the plane the gramophone on #/records is cut with too), in the
+// room's gold, wood and paint.
+const INK = { gold: "url(#sl-goldd)", wh: "url(#sl-wdh)", wv: "url(#sl-wdv)", giltx: "url(#sl-giltx)", goldMid: TH.goldMid, woodMid: TH.woodMid, paint: TH.paint };
+const mould = (x, y, w, h, prof, mat, o = {}) => cutMould(x, y, w, h, prof, mat, { ...o, ink: INK });
 // The carver's two shapes: a scroll (a tapering band rolled up), an acanthus blade (lobed, bent, a groove down its middle).
 function spiralPts(r0, w0, turns, dir, rot) {
   const n = 46, L = [], R = [], k = Math.log(4.5) / (turns * 2 * Math.PI);
@@ -176,16 +162,10 @@ const DEFS = `<svg class="sl-defs" width="0" height="0" aria-hidden="true"><defs
   ${lin("sl-paper", [["0", "#f7f0de"], ["1", "#e4d7b8"]], 1, 1)}
   ${lin("sl-pencil", [["0", "#3f7a5a"], [".35", "#1f4a35"], [".36", "#2c5e45"], [".7", "#163826"], ["1", "#0d2418"]])}
   ${lin("sl-plaster", [["0", "#faf6ee"], [".6", "#ebe2d1"], ["1", "#d6c9b0"]])}
-  ${lin("sl-skyr", [["0", "#c4d0d8"], [".45", "#e6e2d6"], [".72", "#f8ead0"], ["1", "#f3e0c0"]])}
-  ${rad("sl-glowv", [["0", "rgba(255,248,228,.7)"], [".6", "rgba(255,248,228,.25)"], ["1", "rgba(255,248,228,0)"]])}
   ${lin("sl-aoDown", [["0", "rgba(40,22,6,.32)"], ["1", "rgba(40,22,6,0)"]])}
   ${lin("sl-aoUp", [["0", "rgba(40,22,6,0)"], ["1", "rgba(40,22,6,.34)"]])}
   ${lin("sl-aoL", [["0", "rgba(40,22,6,.3)"], ["1", "rgba(40,22,6,0)"]], 1, 0)}
   ${lin("sl-aoR", [["0", "rgba(40,22,6,0)"], ["1", "rgba(40,22,6,.4)"]], 1, 0)}
-  ${lin("sl-patch", [["0", "rgba(255,236,190,.2)"], ["1", "rgba(255,236,190,.07)"]], .3, 1)}
-  ${lin("sl-haze", [["0", "rgba(255,247,228,0)"], [".6", "rgba(255,247,228,.55)"], ["1", "rgba(255,247,228,.2)"]])}
-  ${lin("sl-bloom", [["0", "rgba(255,236,190,.12)"], ["1", "rgba(255,236,190,0)"]], .3, 1)}
-  ${lin("sl-streak", [["0", "rgba(255,244,220,.26)"], ["1", "rgba(255,244,220,0)"]])}
   ${lin("sl-cast", [["0", "rgba(30,14,4,.42)"], ["1", "rgba(30,14,4,0)"]], .6, 1)}
   ${rad("sl-contact", [["0", "rgba(15,6,0,.9)"], [".55", "rgba(15,6,0,.42)"], ["1", "rgba(15,6,0,0)"]])}
   ${rad("sl-vel", [["0", "rgba(30,0,8,.5)"], [".62", "rgba(30,0,8,.05)"], [".86", "rgba(255,170,190,.16)"], ["1", "rgba(255,190,205,.28)"]])}
@@ -234,26 +214,41 @@ function plate(x, y, w, h, l1, l2, o = {}) {
 // ——— a picture: a carved gilt frame (a torus, a row of beads, a deep cove, the ogee, a sight edge), shells and leaves at
 // the corners, a crest on the big one; the canvas under old varnish (wine velvet behind it while, or if never, it loads),
 // the frame's shadow on its top and left ———
-function frame(x, y, w, h, img, b) {
+function frame(x, y, w, h, img, b, hole = false) { // hole: the sight left open, the picture lies under the frame (美術館)
   const big = w > 70, B = b * (big ? 1.25 : 1.12);
   const prof = [[B * .14, "v"], [B * .12, "b"], [B * .24, "c"], [B * .3, "v"], [B * .08, "f"], [B * .12, "c"]];
-  let s = `${shade(0, 1, w, h, 1, .6)}${mould(0, 0, w, h, prof, "gold")}`;
-  const ix = B, iw = w - 2 * B, ih = h - 2 * B;
-  s += `<rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="#3a2610"/>
-    ${img ? `<image href="${esc(img)}" x="${ix}" y="${ix}" width="${iw}" height="${ih}" preserveAspectRatio="xMidYMid slice"/>` : `<rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="url(#sl-velvet)"/>`}
-    <rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="${TH.varnish}"/><rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="url(#sl-weave)" opacity=".2"/>
+  const ix = B, iw = w - 2 * B, ih = h - 2 * B, cid = hole && uid("sight"); // open, the shadow on the wall must not fall over the sight
+  let s = `${hole ? `<clipPath id="${cid}"><path clip-rule="evenodd" d="M-12 -12H${w + 14}V${h + 14}H-12Z M${ix} ${ix}V${ix + ih}H${ix + iw}V${ix}Z"/></clipPath><g clip-path="url(#${cid})">${shade(0, 1, w, h, 1, .6)}</g>` : shade(0, 1, w, h, 1, .6)}${mould(0, 0, w, h, prof, "gold")}`;
+  s += `${hole ? "" : `<rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="#3a2610"/>
+    ${img ? `<image href="${esc(img)}" x="${ix}" y="${ix}" width="${iw}" height="${ih}" preserveAspectRatio="xMidYMid slice"/>` : `<rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="url(#sl-velvet)"/>`}`}
+    <rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="${TH.varnish}"/>${hole ? "" : `<rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="url(#sl-weave)" opacity=".2"/>`}
     <rect x="${ix}" y="${ix}" width="${iw}" height="${ih}" fill="url(#sl-varnish)"/>
     <path d="M${ix} ${ix}H${ix + iw}V${ix + 2.4}H${ix + 2.4}V${ix + ih}H${ix}Z" fill="rgba(20,10,0,.45)"/><path d="M${ix} ${ix}H${ix + iw}V${ix + 5}H${ix + 5}V${ix + ih}H${ix}Z" fill="rgba(20,10,0,.16)"/>`;
   const cs = B * 1.45;
-  s += corner(B * .15, B * .15, cs, 1, 1) + corner(w - B * .15, B * .15, cs, -1, 1) + corner(w - B * .15, h - B * .15, cs, -1, -1) + corner(B * .15, h - B * .15, cs, 1, -1);
+  // open (美術館, a wall that grows by every work read): each size's four corners carved once and used by every frame of it
+  const cn = hole ? (cx, cy, sx, sy) => { const k = `corner${Math.round(cs * 100)}${sx > 0 ? "r" : "l"}${sy > 0 ? "d" : "u"}`;
+    if (!CORNERS.has(k)) CORNERS.set(k, corner(0, 0, cs, sx, sy)); return `<use href="#sl-${k}" x="${cx}" y="${cy}"/>`; } : (cx, cy, sx, sy) => corner(cx, cy, cs, sx, sy);
+  s += cn(B * .15, B * .15, 1, 1) + cn(w - B * .15, B * .15, -1, 1) + cn(w - B * .15, h - B * .15, -1, -1) + cn(B * .15, h - B * .15, 1, -1);
   if (big) s += cartouche(w / 2, B * .2, B * 1.9) + cartouche(w / 2, h - B * .1, B * 1.2);
   return `<g transform="translate(${x} ${y})">${s}</g>`;
+}
+// 美術館's frames are this same frame (the owner, 2026-11-23: 「美術館點進去畫框要和外面一樣」), drawn in the room's units
+// — w wide on border b, as on the wall — and scaled up whole; its height from the work's own shape.
+// Its ids are the page's own (mf-): the lifted room is in the document with the page while the camera moves.
+const MF = (s) => s.replace(/(id="|url\(#|href="#)sl-/g, "$1mf-");
+export const FRAME_DEFS = MF(DEFS);
+const CORNERS = new Map(); // the carved corners each size of open frame uses (frame, hole), drawn by frameCorners
+export const frameCorners = () => MF(fuseGilt(`<svg class="sl-defs" width="0" height="0" aria-hidden="true"><defs>${[...CORNERS].map(([k, g]) => `<g id="sl-${k}">${g}</g>`).join("")}</defs></svg>`));
+export function museumFrame(ratio, w, b) {
+  const B = b * (w > 70 ? 1.25 : 1.12), h = +((w - 2 * B) / ratio + 2 * B).toFixed(2);
+  return { w, h, B, svg: MF(fuseGilt(`<svg viewBox="0 0 ${w} ${h}" overflow="visible" aria-hidden="true">${frame(0, 0, w, h, "", b, true)}</svg>`)) };
 }
 const pictureLight = (cx, y, w) => `<ellipse cx="${cx}" cy="${y + w * .7}" rx="${w * 1.05}" ry="${w * .95}" fill="url(#sl-glow)"/>
   <rect x="${cx - 1}" y="${y - 10}" width="2" height="12" fill="url(#sl-gold)"/><rect x="${cx - w / 2}" y="${y}" width="${w}" height="5" rx="2.5" fill="url(#sl-gold)"/><rect x="${cx - w / 2}" y="${y + 3.5}" width="${w}" height="1.5" fill="rgba(255,240,190,.9)"/>`;
 
 // ——— 美術館: the newest work in the middle under the light, the five before it round it; empty, the rail, two cords and hooks ———
 const cord = (x1, x2, y) => `<path d="M${x1} 0 L${(x1 + x2) / 2} ${y}" stroke="rgba(150,120,70,.6)" stroke-width=".5"/>`;
+const LAMP = [126, 34, 56], HANG_AT = [146, 50]; // the picture light in the drawing (its middle, its top, its width); where the drawing hangs in the room
 const HANG = [[76, 44, 100, 118, 9, 126, 38], [8, 22, 50, 64, 5, 30, 20], [194, 18, 50, 76, 5, 222, 16], [8, 100, 50, 68, 5, 0, 0], [194, 108, 50, 58, 5, 0, 0], [86, 176, 80, 58, 6, 0, 0]]; // x y w h border, cord x and drop
 function hang(list, count, unit) {
   const rail = `<rect x="0" y="0" width="252" height="3" fill="url(#sl-gold)"/>`;
@@ -262,7 +257,7 @@ function hang(list, count, unit) {
   const n = Math.min(HANG.length, list.length);
   let s = rail;
   for (let i = 0; i < n; i++) if (HANG[i][6]) s += cord(HANG[i][5], HANG[i][5], HANG[i][6]);
-  s += pictureLight(126, 34, 56);
+  s += pictureLight(...LAMP);
   for (let i = 0; i < n; i++) { const [x, y, w, h, b] = HANG[i]; s += frame(x, y, w, h, pic(list[i].a), b); }
   return svg(252, 250, s + plate(192, 196, 50, 26, "美術館", `${count} ${unit}`, { s1: 8.6, s2: 7.6, ls1: 1.2 }));
 }
@@ -372,17 +367,76 @@ function globeHtml(count, unit) {
     ${wd(`M${cx - 6} ${hub - 2} h12 l1 6 h-14Z`, "url(#sl-wdh)")}
     ${[-1, 1].map((sx) => wd(`M${cx + sx * 3} ${cy + r * .82} C${cx + sx * 12} ${cy + r * .82} ${cx + sx * (rx - 4)} ${cy + 14} ${cx + sx * (rx - 1.4)} ${cy + 3} L${cx + sx * (rx + 1.2)} ${cy + 3.6} C${cx + sx * (rx - 1)} ${cy + 17} ${cx + sx * 12} ${cy + r * .82 + 3.4} ${cx + sx * 3} ${cy + r * .82 + 3.4}Z`, "url(#sl-wdh)")).join("")}
     <path d="M${cx - 4} ${cy + R1 + 2} Q${cx} ${cy + R1 + 9} ${cx + 4} ${cy + R1 + 2}" fill="none" stroke="url(#sl-brass)" stroke-width="2.2"/>
-    ${band(true)}<g transform="rotate(-23 ${cx} ${cy})">${mer}</g>`;
+    ${band(true)}<g transform="rotate(${AXIS} ${cx} ${cy})">${mer}</g>`;
   const cl = uid("gc"), MW = 4 * r, MH = MW * 504 / 990;
-  const fr = `<clipPath id="${cl}"><circle cx="${cx}" cy="${cy}" r="${r}"/></clipPath><g clip-path="url(#${cl})"><g transform="rotate(-23 ${cx} ${cy})">
-      ${[-.6, -.3, 0, .3, .6].map((k) => `<ellipse cx="${cx}" cy="${cy + k * r}" rx="${r * Math.sqrt(1 - k * k)}" ry="${r * .12 * Math.sqrt(1 - k * k)}" fill="none" stroke="rgba(90,70,40,.35)" stroke-width=".4"/>`).join("")}
+  const fr = `<clipPath id="${cl}"><circle cx="${cx}" cy="${cy}" r="${r}"/></clipPath><g clip-path="url(#${cl})"><g class="sl-net" transform="rotate(${AXIS} ${cx} ${cy})">
+      ${[-.6, -.3, 0, .3, .6].map((k) => `<ellipse cx="${cx}" cy="${cy + k * r}" rx="${r * Math.sqrt(1 - k * k)}" ry="${r * .12 * Math.sqrt(1 - k * k)}" fill="none" stroke="${NET}" stroke-width=".4"/>`).join("")}
       ${[.35, .75].map((k) => `<ellipse cx="${cx}" cy="${cy}" rx="${r * k}" ry="${r}" fill="none" stroke="rgba(90,70,40,.3)" stroke-width=".4"/>`).join("")}</g>
       <circle cx="${cx}" cy="${cy}" r="${r}" fill="rgba(170,130,60,.14)"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="url(#sl-sphere)"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="url(#sl-varnish)"/>
       <ellipse cx="${cx - r * .38}" cy="${cy - r * .45}" rx="${r * .3}" ry="${r * .2}" transform="rotate(-30 ${cx - r * .38} ${cy - r * .45})" fill="url(#sl-shine)"/></g>
-    <g transform="rotate(-23 ${cx} ${cy})"><circle cx="${cx}" cy="${cy - r}" r="1.4" fill="url(#sl-rivet)"/></g>${band(false)}
+    <g transform="rotate(${AXIS} ${cx} ${cy})"><circle cx="${cx}" cy="${cy - r}" r="1.4" fill="url(#sl-rivet)"/></g>${band(false)}
     ${plate(cx - 32, 112, 64, count ? 24 : 15, "你讀過的世界", count ? `${count} ${unit}` : "", { s1: 7.6, s2: 7.4, ls1: .5 })}`;
-  // the map between the two drawings: a disc of sea, the map turned with the axis, centred near Vienna
-  return `${svg(w, h, back)}<span class="sl-map" style="left:${cx - r}px;top:${cy - r}px;width:${2 * r}px;height:${2 * r}px"><span class="sl-mapin" style="left:${r - .545 * MW}px;top:${r - .3 * MH}px;width:${MW}px;height:${MH}px;transform-origin:${.545 * MW}px ${.3 * MH}px"></span></span>${svg(w, h, fr)}`;
+  // between the two drawings, a disc of sea: the turning globe (turnGlobe), or the flat map turned with the axis, centred
+  // near Vienna
+  return `${svg(w, h, back)}<span class="sl-map" style="left:${cx - r}px;top:${cy - r}px;width:${2 * r}px;height:${2 * r}px"><span class="sl-mapin" style="left:${r - .545 * MW}px;top:${r - .3 * MH}px;width:${MW}px;height:${MH}px;transform-origin:${.545 * MW}px ${.3 * MH}px;transform:rotate(${AXIS}deg)"></span></span>${svg(w, h, fr)}`;
+}
+
+// ——— The globe turns by itself, slowly (the owner, 2026-11-23: 「我想要房間裡的地球儀會自己慢慢轉」) ———
+// Between the two drawings above, the sphere itself: world.js's globe drawn by its own frame (paintGlobe) on a canvas,
+// in the room's colours (style.css .sl-map), its axis leaning with the meridian ring, the net of meridians and parallels
+// turning with it (the drawn net, which could not, is taken off). It opens on the eastern Mediterranean, Vienna near the
+// middle, as the flat map did, and turns eastward, one turn in TURN seconds, at most FPS frames a second: at 60 s a turn
+// a point on the equator moves 2π·28/(60·15) ≈ 0.2 px a frame. It is held still while the page is out of sight, while
+// the camera moves in or back (.zoom), and with reduced motion (one still frame); it stops when the room is left.
+// Without assets/globe.json the flat map (world.js drawMap) is drawn in the disc instead.
+const AXIS = -23, NET = "rgba(90,70,40,.35)", FACE = [28, 32]; // the axis's lean; the net's ink; the longitude and latitude it opens on
+const TURN = 60, FPS = 15;
+function turnGlobe(room, map, read) {
+  globe().then((g) => {
+    if (!map.isConnected) return;
+    const cv = document.createElement("canvas"), ctx = cv.getContext("2d"), s = getComputedStyle(map), v = (n) => s.getPropertyValue(n).trim();
+    const look = { sea: v("--sl-sea"), land: v("--sl-land"), coast: v("--sl-coast"), coastW: .4, net: NET, netA: 1, netW: .4,
+      read: v("--sl-wine"), ink: v("--sl-wine-edge"), readW: .4, robin: v("--sl-home"), dots: [.5, 1, 1], mark: [3.2, 1, .6] };
+    const done = new Set(read.map((c) => String(c).toLowerCase())), open = new Set();
+    let lon = FACE[0], last = 0, timer = 0, raf = 0;
+    // a frame at the size the globe is seen at, in the screen's own pixels (three to a point on a phone: the disc is
+    // small, and fewer leave its coasts soft); or `scale` times it, the camera's move in onto #/world's globe, in that
+    // page's pixels (GLOBE_DPR), so the one lands on the other as it is
+    const draw = (scale = 1, at = lon) => {
+      const d = map.clientWidth;
+      if (!d) return;
+      const px = Math.round(map.getBoundingClientRect().width * Math.min(window.devicePixelRatio || 1, scale > 1 ? GLOBE_DPR : 3) * scale);
+      lon = at;
+      if (cv.width !== px) cv.width = cv.height = px;
+      ctx.setTransform(px / d, 0, 0, px / d, 0, 0);
+      ctx.clearRect(0, 0, d, d);
+      paintGlobe(ctx, g, { cx: d / 2, cy: d / 2, R: d / 2, lon, lat: FACE[1], roll: AXIS, done, open }, look);
+    };
+    cv.setAttribute("aria-hidden", "true");
+    map.replaceChildren(cv);
+    map.nextElementSibling?.querySelector(".sl-net")?.remove();
+    map.globe = { draw }; // for the camera's move (landIn, wayBack), and a look at a fixed angle
+    draw();
+    if (calm()) return;
+    const end = () => { clearTimeout(timer); cancelAnimationFrame(raf); document.removeEventListener("visibilitychange", wake); };
+    const step = (now) => {
+      raf = 0;
+      if (!cv.isConnected || calm()) return end();
+      if (document.hidden) { last = 0; return; } // visibilitychange wakes it
+      const held = room.classList.contains("zoom"); // the camera moving: looked at again in a moment
+      if (held) last = 0;
+      else if (!last) last = now; // starting, or going on after a pause: the frame shown stands until the next
+      else { lon -= (360 * Math.min(now - last, 200)) / (TURN * 1000); last = now; draw(); }
+      // the screen's frame after the wait: on a 60 or 120 Hz screen the fourth or eighth, FPS a second
+      timer = setTimeout(() => { timer = 0; raf = requestAnimationFrame(step); }, held ? 250 : 1000 / FPS - 5);
+    };
+    function wake() { if (!timer && !raf) raf = requestAnimationFrame(step); }
+    document.addEventListener("visibilitychange", wake);
+    wake();
+  }, () => { // no outlines to be had: the flat map, or the plain sea
+    const flat = map.querySelector(".sl-mapin");
+    if (flat) drawMap(flat, { read }).then(() => flat.querySelector("p")?.remove()).catch(() => {});
+  });
 }
 
 // ——— 郵票冊: open, green leather, the newest stamps on its pages (the day's picture, stamps.js stampPicture), the count
@@ -605,30 +659,100 @@ const cornice = (() => {
   s += `${band(33.8, 4, -.35)}<rect y="37.8" width="${W}" height="6" fill="url(#sl-aoDown)"/>`;
   return s;
 })();
-function cityReal(gx, gy, gw, gh) { // three layers of roofs in the morning haze, paler and warmer the farther off; brighter than the room
-  let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
-  const hz = gy + gh * .66, layer = (base, hmin, hmax, wmin, wmax, fill, extra = "") => {
-    let x = gx - 4, d = `M${gx - 4} ${gy + gh} V${base}`;
+// ——— The hour's light (the owner, 2026-11-23: 窗外和光影要隨時間有變化) ———
+// The room is lit by Taichung's day as it is now (twNow): the sky and the roofs in the window, the window's light on the
+// wall and the parquet, the shadows, the brightness and warmth of the whole room. lightAt is the hour's light — a pure
+// function of the minute and today's sunrise and sunset (wetter.js sunTimes) — run smoothly through key frames hung on
+// the sunrise, noon and the sunset. The sun climbs the day's arc to a winter noon's 45° whatever the season (an
+// editorial choice: the hour only, not the season): its height sets how far from the wall the panes lie on the parquet
+// and how long the shadows are; the panes slant right in the morning and less after noon, always away from the window. Before dawn
+// and after dusk no sun comes in: the room has only the light drawn in it, the picture light over the newest work.
+// Colour and opacity in layers, no filter and no blend mode; nothing moves and no box changes its size.
+// A frame: `sky` its four stops top to bottom; `haze` over the roofs; `roofs` far, middle, near, the street, the spires;
+// `mist` between them; `lit` the windows lit in the town; `halo` the window's light on the wall and its gleam on the
+// parquet; `sun` the panes on the parquet; `shade` the shadows cast; `sheen` the glass; `dark` and `tint` over the whole
+// room; `lamp` the picture light on. A pair is a colour and its strength. `morning` is the room as it was drawn
+// (2026-11-19), at about nine. The room's dark lies over the window too, so the town after dusk is drawn brighter
+// than it is seen.
+const hexes = (v) => (typeof v === "string" ? [1, 3, 5].map((i) => parseInt(v.slice(i, i + 2), 16)) : Array.isArray(v) ? v.map(hexes)
+  : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, hexes(x)])) : v);
+const mix = (a, b, t) => (typeof a === "number" ? a + (b - a) * t : Array.isArray(a) ? a.map((x, i) => mix(x, b[i], t)) : Object.fromEntries(Object.keys(a).map((k) => [k, mix(a[k], b[k], t)])));
+const rgb = (c) => `rgb(${c.map(Math.round).join(",")})`, rgba = (c, a) => `rgba(${c.map(Math.round).join(",")},${Math.max(0, a).toFixed(3)})`;
+const FRAMES = hexes({
+  night: { sky: ["#040a34", "#000e3e", "#0a1a48", "#323354"], haze: ["#3a3456", .3], roofs: ["#0a142f", "#050b1d", "#02050d", "#04060a", "#101735"], mist: ["#26243c", .5],
+    lit: 1, halo: ["#96aadc", 0], sun: ["#ffecbe", 0], shade: 0, sheen: .45, dark: ["#2a1206", .3], tint: ["#ffaa50", .07], lamp: 1 },
+  dawn: { sky: ["#3a4670", "#6a6a8e", "#b8929c", "#e4b09a"], haze: ["#e6beb4", .35], roofs: ["#867c8c", "#685e6c", "#4c444c", "#3e383e", "#9a90a0"], mist: ["#c8b4be", .9],
+    lit: .55, halo: ["#c8bedc", .15], sun: ["#ffc48c", 0], shade: 0, sheen: .5, dark: ["#0e0e1e", .4], tint: ["#ffaa78", 0], lamp: .4 },
+  sunrise: { sky: ["#94a6c6", "#d8c2c8", "#f8c8aa", "#ffbe94"], haze: ["#ffd2be", .6], roofs: ["#c8aeaa", "#a88c88", "#806864", "#705c58", "#d8beba"], mist: ["#ffded6", 1.15],
+    lit: .12, halo: ["#ffd2b4", .5], sun: ["#ffc08c", .35], shade: .35, sheen: .8, dark: ["#1a1e30", .27], tint: ["#ffaa78", .03], lamp: 0 },
+  morning: { sky: ["#c4d0d8", "#e6e2d6", "#f8ead0", "#f3e0c0"], haze: ["#fff7e4", .55], roofs: ["#d8cfc0", "#c0ae96", "#9c8670", "#8a7660", "#d9d2c6"], mist: ["#faf0de", 1],
+    lit: 0, halo: ["#fff8e4", 1], sun: ["#ffecbe", 1], shade: 1, sheen: 1, dark: ["#140c08", 0], tint: ["#ffc878", 0], lamp: 0 },
+  noon: { sky: ["#9cbcd8", "#d2e0e6", "#eceee6", "#f0ece0"], haze: ["#fafaf6", .5], roofs: ["#d8d4cc", "#beb4a4", "#988a78", "#887a68", "#e0dcd4"], mist: ["#f6f6f0", .9],
+    lit: 0, halo: ["#fffcf2", 1], sun: ["#fffaea", 1], shade: .9, sheen: 1, dark: ["#140c08", 0], tint: ["#fffcf4", .035], lamp: 0 },
+  afternoon: { sky: ["#b0bccc", "#e4d8c0", "#f8dcae", "#f6cc92"], haze: ["#ffe6b8", .62], roofs: ["#dcc6a8", "#c6a882", "#9e7e5a", "#8c6e50", "#e4ccac"], mist: ["#fde6c4", 1],
+    lit: 0, halo: ["#ffe2b0", 1.05], sun: ["#ffd890", 1.2], shade: 1, sheen: 1, dark: ["#140c08", 0], tint: ["#ffb860", .07], lamp: 0 },
+  golden: { sky: ["#a0a0b0", "#e8bea0", "#fcba78", "#faa864"], haze: ["#ffc896", .65], roofs: ["#d6aa8c", "#b48668", "#825e48", "#705240", "#e6b492"], mist: ["#ffd6b0", 1],
+    lit: .05, halo: ["#ffc88c", .9], sun: ["#ffb46e", .8], shade: .85, sheen: .9, dark: ["#281414", .08], tint: ["#ffa050", .1], lamp: .1 },
+  sunset: { sky: ["#60688c", "#be8c8c", "#f4a06e", "#f08c5a"], haze: ["#faaa82", .55], roofs: ["#966e6e", "#745454", "#523a3a", "#443030", "#aa7874"], mist: ["#f0aa96", .9],
+    lit: .35, halo: ["#faaa8c", .45], sun: ["#ff9a64", 0], shade: .15, sheen: .7, dark: ["#1e101a", .25], tint: ["#ff9664", .05], lamp: .6 },
+  dusk: { sky: ["#2e3c64", "#545a80", "#9e7684", "#c8826c"], haze: ["#b47878", .4], roofs: ["#5a5060", "#423a48", "#2e2830", "#262028", "#685e6e"], mist: ["#96788c", .7],
+    lit: .8, halo: ["#b496be", .15], sun: ["#ff9a64", 0], shade: 0, sheen: .5, dark: ["#0e0a16", .42], tint: ["#ff9664", 0], lamp: 1 },
+});
+// the frames hung on the day: [R sunrise, N noon, S sunset, minutes from it, the frame]; before the first and after the last, night
+const DAY = [["R", -80, "night"], ["R", -25, "dawn"], ["R", 15, "sunrise"], ["R", 160, "morning"], ["N", 0, "noon"], ["S", -95, "afternoon"], ["S", -30, "golden"],
+  ["S", 8, "sunset"], ["S", 30, "dusk"], ["S", 75, "night"]];
+const minutesOf = (s) => Number(s.slice(0, 2)) * 60 + Number(s.slice(3, 5));
+// The light at minute `m` of a day whose sun rises at `rise` and sets at `set` ("HH:MM"): the frame, and drawn from the
+// sun's height, `patch` (the corners of the window's light on the parquet, as quad takes them; at about nine the
+// patch as it was drawn, 37 and 215 below the foot of the wall) and `reach` (the shadows' length, 1 at about nine).
+// The panes (`sun`) and the shadows cast (`shade`) go with the sun over the horizon, fading in its first 3°: below it
+// neither, only the contact shadows under the feet.
+function lightAt(m, rise, set) {
+  let [R, S] = [minutesOf(rise), minutesOf(set)];
+  if (!(R + 240 < S)) { const f = sunTimes(null); [R, S] = [minutesOf(f.rise), minutesOf(f.set)]; } // a day that cannot be: the times sunTimes falls back on
+  const noon = (R + S) / 2, at = { R, N: noon, S }, K = DAY.map(([a, dt, k]) => [at[a] + dt, FRAMES[k]]), j = K.findIndex(([t]) => t > m);
+  const f = j < 1 ? FRAMES.night : mix(K[j - 1][1], K[j][1], smooth((m - K[j - 1][0]) / (K[j][0] - K[j - 1][0])));
+  const u = (m - R) / (S - R), e = u > 0 && u < 1 ? 45 * Math.sin(Math.PI * u) : 0; // the sun's height in degrees
+  const cot = (deg) => 1 / Math.tan((deg * Math.PI) / 180), r = cot(Math.max(6, e)) / cot(32), off = Math.min(2.6, r ** .8);
+  const slant = .48 - (.35 * (m - noon)) / ((S - R) / 2), edge = (y) => { const c = 84 + slant * (y - 615), w = 32.6 + .2528 * (y - 615); return [[c - w, y], [c + w, y]]; };
+  const up = smooth(Math.min(1, e / 3)); // the sun over the horizon
+  return { ...f, sun: [f.sun[0], f.sun[1] * up], shade: f.shade * up, patch: [...edge(615 + 37 * off), ...edge(615 + 215 * off)], reach: Math.min(2.2, Math.max(.55, r ** .6)) };
+}
+const hourLight = () => { const { rise, set } = sunTimes(); return lightAt(twNow().minutes, rise, set); };
+// Three layers of roofs in the haze, paler the farther off; by day brighter than the room, at night dark, a few windows lit.
+function cityReal(gx, gy, gw, gh, L) {
+  let seed = 7, seed2 = 11; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647), rnd2 = () => ((seed2 = (seed2 * 16807) % 2147483647) / 2147483647);
+  const [far, mid, near, street, spireC] = L.roofs.map(rgb), [mc, ma] = L.mist, [hc, ha] = L.haze;
+  const hz = gy + gh * .66, layer = (base, hmin, hmax, wmin, wmax, fill, n) => {
+    let x = gx - 4, d = `M${gx - 4} ${gy + gh} V${base}`, lit = "";
     while (x < gx + gw + 4) { const ww = wmin + rnd() * (wmax - wmin), hh = hmin + rnd() * (hmax - hmin), kind = rnd();
       if (kind < .4) d += ` L${x} ${base - hh} L${x + ww / 2} ${base - hh - ww * .35} L${x + ww} ${base - hh}`; // a gable
       else if (kind < .7) d += ` L${x} ${base - hh} L${x + ww * .15} ${base - hh - 3} H${x + ww * .85} L${x + ww} ${base - hh}`; // a mansard
       else d += ` L${x} ${base - hh} H${x + ww * .3} V${base - hh - 4} H${x + ww * .38} V${base - hh} H${x + ww}`; // a chimney
+      const on = rnd2() < .34, lx = x + ww * (.2 + .6 * rnd2()), ly = base - hh + 2 + rnd2() * (hh + 6), s = [1.2, 1.6, 2][n]; // a window lit in the house, or none
+      if (on && L.lit > .01) lit += `<rect x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" width="${s}" height="${(s * 1.4).toFixed(1)}" fill="${rgba([255, 212, 140], L.lit * [.7, .85, 1][n])}"/>`;
       x += ww; }
-    return `<path d="${d} L${gx + gw + 4} ${base} V${gy + gh}Z" fill="${fill}"/>${extra}`; };
-  const fog = (y0, y1, a) => `<rect x="${gx}" y="${y0}" width="${gw}" height="${y1 - y0}" fill="rgba(250,240,222,${a})"/>`;
-  const spire = `<path d="M${gx + gw * .3} ${hz - 2} L${gx + gw * .3 + 2.2} ${hz - 46} L${gx + gw * .3 + 4.4} ${hz - 2}Z" fill="#d9d2c6"/><path d="M${gx + gw * .66} ${hz - 4} q8 -15 16 0Z" fill="#d6cfc4"/><rect x="${gx + gw * .66 + 7.4}" y="${hz - 25}" width="1.2" height="8" fill="#d6cfc4"/>`;
-  return `<rect x="${gx}" y="${gy}" width="${gw}" height="${gh}" fill="url(#sl-skyr)"/><rect x="${gx}" y="${hz - 50}" width="${gw}" height="60" fill="url(#sl-haze)"/>
-    ${spire}${layer(hz + 2, 2, 9, 8, 15, "#d8cfc0")}${fog(hz - 6, hz + 14, .45)}${layer(hz + 22, 4, 12, 10, 18, "#c0ae96")}${fog(hz + 12, hz + 32, .34)}
-    ${layer(hz + 46, 6, 16, 12, 22, "#9c8670")}${fog(hz + 38, hz + 58, .2)}<rect x="${gx}" y="${hz + 56}" width="${gw}" height="${gy + gh - hz - 56}" fill="#8a7660"/>
-    ${Array.from({ length: 4 }, (_, i) => `<rect x="${gx}" y="${hz + 60 + i * 8}" width="${gw}" height=".8" fill="rgba(240,228,205,.35)"/>`).join("")}`;
+    return `<path d="${d} L${gx + gw + 4} ${base} V${gy + gh}Z" fill="${fill}"/>${lit}`; };
+  const fog = (y0, y1, a) => `<rect x="${gx}" y="${y0}" width="${gw}" height="${y1 - y0}" fill="${rgba(mc, a * ma)}"/>`;
+  const spire = `<path d="M${gx + gw * .3} ${hz - 2} L${gx + gw * .3 + 2.2} ${hz - 46} L${gx + gw * .3 + 4.4} ${hz - 2}Z" fill="${spireC}"/><path d="M${gx + gw * .66} ${hz - 4} q8 -15 16 0Z" fill="${spireC}"/><rect x="${gx + gw * .66 + 7.4}" y="${hz - 25}" width="1.2" height="8" fill="${spireC}"/>`;
+  return `${lin("sl-skyr", L.sky.map((c, i) => [["0", ".45", ".72", "1"][i], rgb(c)]))}${lin("sl-haze", [["0", rgba(hc, 0)], [".6", rgba(hc, ha)], ["1", rgba(hc, ha * .364)]])}
+    <rect x="${gx}" y="${gy}" width="${gw}" height="${gh}" fill="url(#sl-skyr)"/><rect x="${gx}" y="${hz - 50}" width="${gw}" height="60" fill="url(#sl-haze)"/>
+    ${spire}${layer(hz + 2, 2, 9, 8, 15, far, 0)}${fog(hz - 6, hz + 14, .45)}${layer(hz + 22, 4, 12, 10, 18, mid, 1)}${fog(hz + 12, hz + 32, .34)}
+    ${layer(hz + 46, 6, 16, 12, 22, near, 2)}${fog(hz + 38, hz + 58, .2)}<rect x="${gx}" y="${hz + 56}" width="${gw}" height="${gy + gh - hz - 56}" fill="${street}"/>
+    ${Array.from({ length: 4 }, (_, i) => `<rect x="${gx}" y="${hz + 60 + i * 8}" width="${gw}" height=".8" fill="${rgba(mc, .35 * Math.min(1, ma))}"/>`).join("")}`;
 }
-function windowSvg(x, y, w, h) {
-  const gx = x + 8, gy = y + 8, gw = w - 16, gh = h - 16, mid = gx + gw / 2;
-  const glare = `<path d="M${gx} ${gy + gh * .55} L${gx + gw * .7} ${gy} H${gx + gw * .86} L${gx} ${gy + gh * .72}Z" fill="rgba(255,255,255,.12)"/><path d="M${gx + gw * .2} ${gy + gh} L${gx + gw} ${gy + gh * .3} V${gy + gh * .38} L${gx + gw * .3} ${gy + gh}Z" fill="rgba(255,255,255,.06)"/>`;
+const WIN = [24, 58, 98, 238], GLASS = [WIN[0] + 8, WIN[1] + 8, WIN[2] - 16, WIN[3] - 16]; // the window, and its glass: x, y, w, h
+// what is seen through the glass and the glass's sheen, the hour's (paintLight draws it again)
+function view(L) {
+  const [gx, gy, gw, gh] = GLASS, a = L.sheen;
+  return `${cityReal(gx, gy, gw, gh, L)}<path d="M${gx} ${gy + gh * .55} L${gx + gw * .7} ${gy} H${gx + gw * .86} L${gx} ${gy + gh * .72}Z" fill="rgba(255,255,255,${(.12 * a).toFixed(3)})"/><path d="M${gx + gw * .2} ${gy + gh} L${gx + gw} ${gy + gh * .3} V${gy + gh * .38} L${gx + gw * .3} ${gy + gh}Z" fill="rgba(255,255,255,${(.06 * a).toFixed(3)})"/>`;
+}
+function windowSvg(v) {
+  const [x, y, w, h] = WIN, [gx, gy, gw, gh] = GLASS, mid = gx + gw / 2;
   const bar = (bx, by, bw, bh) => `<rect x="${bx}" y="${by}" width="${bw}" height="${bh}" fill="#f2ece0"/><rect x="${bx}" y="${by + bh - .8}" width="${bw}" height=".8" fill="rgba(80,60,30,.25)"/><rect x="${bx}" y="${by}" width="${bw}" height=".6" fill="rgba(255,255,255,.8)"/>`;
-  return `<rect x="${x - 6}" y="${y - 6}" width="${w + 12}" height="${h + 12}" fill="url(#sl-glowv)"/><rect x="${x - 4}" y="${y - 4}" width="${w + 8}" height="${h + 8}" fill="#d9cdb8"/><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#f4eee2"/>
+  return `<rect x="${x - 6}" y="${y - 6}" width="${w + 12}" height="${h + 12}" fill="url(#sl-halo)"/><rect x="${x - 4}" y="${y - 4}" width="${w + 8}" height="${h + 8}" fill="#d9cdb8"/><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#f4eee2"/>
     <rect x="${x + w - 3}" y="${y}" width="3" height="${h}" fill="rgba(90,70,40,.18)"/>
-    ${cityReal(gx, gy, gw, gh)}${glare}
+    <g class="sl-view">${v}</g>
     ${bar(mid - 2, gy, 4, gh)}${[.24, .46, .69].map((k) => bar(gx, gy + gh * k - 1.5, gw, 3)).join("")}
     <rect x="${gx}" y="${gy}" width="${gw}" height="4" fill="rgba(60,40,20,.16)"/><rect x="${gx}" y="${gy}" width="3" height="${gh}" fill="rgba(60,40,20,.1)"/>
     <rect x="${x - 7}" y="${y + h}" width="${w + 14}" height="9" fill="url(#sl-plaster)"/><rect x="${x - 7}" y="${y + h}" width="${w + 14}" height="1" fill="rgba(255,255,255,.9)"/><rect x="${x - 7}" y="${y + h + 9}" width="${w + 14}" height="4" fill="url(#sl-aoDown)"/>`;
@@ -669,32 +793,60 @@ function pelmet() {
   s += `<rect x="10.8" y="50.8" width="126.4" height=".4" fill="rgba(0,0,0,.2)"/>${cartouche(74, 43, 13)}`;
   return s;
 }
-const WALL = (wh = 400) => svg(W, H, `${TH.wallFill ? `<rect width="${W}" height="615" fill="${TH.wallFill}"/>` : ""}${cornice}${boiserie(150, 48, 244, 262)}${boiserie(150, 322, 244, 120)}
+const WALL = (v) => svg(W, H, `${TH.wallFill ? `<rect width="${W}" height="615" fill="${TH.wallFill}"/>` : ""}${cornice}${boiserie(150, 48, 244, 262)}${boiserie(150, 322, 244, 120)}
   ${mould(0, 594, W, 22, [[2, "v"], [1.4, "b"], [2, "c"], [16.6, "f"]], TH.dado, { paint: TH.paint })}<rect y="612" width="${W}" height="3" fill="rgba(30,15,5,.35)"/>
-  ${windowSvg(24, 58, 98, wh)}
+  ${windowSvg(v)}
   ${drape(4, 60, 30, 548, false)}${drape(114, 60, 30, 548, true)}${pelmet()}`);
-// The morning light from the window: a pale band across the wall and a patch on the parquet (no blend modes).
+// The window's light: a pale band across the wall and a patch on the parquet (no blend modes), the hour's (lightAt).
 // The realistic pass: one light, the window at the upper left. The wall is brightest by it and falls off to the right;
 // the window lays its panes on the parquet and a streak of reflection; every piece casts its shadow right and down,
 // and stands on a dark contact shadow; the corners, the cornice and the foot of the wall are a little darker.
 function quad(P, u0, u1, v0, v1) { const at = (u, v) => [P[0][0] + (P[1][0] - P[0][0]) * u + (P[2][0] + (P[3][0] - P[2][0]) * u - P[0][0] - (P[1][0] - P[0][0]) * u) * v, P[0][1] + (P[2][1] - P[0][1]) * v];
   return [at(u0, v0), at(u1, v0), at(u1, v1), at(u0, v1)].map((p) => p.map((n) => n.toFixed(1)).join(" ")).join(" L"); }
 const contact = (x, y, rx, ry = 2.6) => `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="url(#sl-contact)"/>`;
-const cast = (pts, a = 1) => `<path d="M${pts}Z" fill="url(#sl-cast)" opacity="${Math.min(1, a * 1.25)}"/>`;
-const LIGHT = () => {
-  const patch = [[66, 652], [150, 652], [138, 830], [312, 830]]; // the window's light on the floor: top left, top right, bottom left, bottom right
-  const panes = [[0, .47], [.53, 1]].flatMap(([u0, u1]) => [[0, .22], [.27, .45], [.5, .67], [.72, 1]].map(([v0, v1]) => `<path d="M${quad(patch, u0, u1, v0, v1)}Z" fill="url(#sl-patch)"/>`)).join("");
-  return svg(W, H, `<rect width="${W}" height="615" fill="url(#sl-aoR)" opacity=".55"/><ellipse cx="76" cy="190" rx="170" ry="270" fill="url(#sl-glowv)" opacity=".55"/>
+// a shadow cast: its foot [b0, b1] where the piece stands, its far edge [f1, f0] drawn at about nine, laid `reach` as far
+const cast = (L, [b0, b1, f1, f0], a = 1) => { const o = a * 1.25 * L.shade, to = (b, f) => [b[0] + (f[0] - b[0]) * L.reach, b[1] + (f[1] - b[1]) * L.reach];
+  return o > .004 ? `<path d="M${P2([b0, b1, to(b1, f1), to(b0, f0)])}Z" fill="url(#sl-cast)" opacity="${Math.min(1, o).toFixed(3)}"/>` : ""; };
+const LIGHT = (L) => {
+  const [sc, sa] = L.sun, [hc, ha] = L.halo, P = L.patch, sh = (a) => (a * L.shade).toFixed(3);
+  const panes = sa > .004 ? `${lin("sl-patch", [["0", rgba(sc, .2 * sa)], ["1", rgba(sc, .07 * sa)]], .3, 1)}${lin("sl-bloom", [["0", rgba(sc, .12 * sa)], ["1", rgba(sc, 0)]], .3, 1)}<path d="M${quad(P, -.06, 1.06, -.04, 1)}Z" fill="url(#sl-bloom)"/>`
+    + [[0, .47], [.53, 1]].flatMap(([u0, u1]) => [[0, .22], [.27, .45], [.5, .67], [.72, 1]].map(([v0, v1]) => `<path d="M${quad(P, u0, u1, v0, v1)}Z" fill="url(#sl-patch)"/>`)).join("") : "";
+  // the window's light on the wall, the hour's: round the window frame (windowSvg) and spread over the wall here
+  const halo = `${rad("sl-halo", [["0", rgba(hc, .7 * ha)], [".6", rgba(hc, .25 * ha)], ["1", rgba(hc, 0)]])}${ha > .004 ? '<ellipse cx="76" cy="190" rx="170" ry="270" fill="url(#sl-halo)" opacity=".55"/>' : ""}`;
+  const streak = ha > .004 ? `${lin("sl-streak", [["0", rgba(hc, .26 * ha)], ["1", rgba(hc, 0)]])}<path d="M44 645 H118 L150 830 H40Z" fill="url(#sl-streak)"/>` : "";
+  return svg(W, H, `<rect width="${W}" height="615" fill="url(#sl-aoR)" opacity=".55"/>${halo}
     <rect y="42" width="${W}" height="22" fill="url(#sl-aoDown)"/><rect width="16" height="615" fill="url(#sl-aoL)"/><rect x="380" width="22" height="830" fill="url(#sl-aoR)"/>
     <rect y="584" width="${W}" height="14" fill="url(#sl-aoUp)" opacity=".6"/>
     <path d="M193 330 L214 352 V614 H193Z" fill="url(#sl-aoL)" opacity=".9"/><path d="M144 80 L160 96 V606 H144Z" fill="url(#sl-aoL)" opacity=".7"/><path d="M394 312 L402 320 V620 H394Z" fill="url(#sl-aoL)" opacity=".8"/><rect y="615" width="${W}" height="34" fill="url(#sl-aoDown)"/><rect y="615" width="${W}" height="2" fill="rgba(20,10,2,.45)"/>
-    <path d="M${quad(patch, -.06, 1.06, -.04, 1)}Z" fill="url(#sl-bloom)"/>${panes}<path d="M44 645 H118 L150 830 H40Z" fill="url(#sl-streak)"/>
-    ${cast("197 618 L197 640 L240 662 L232 636", .9)}${cast("12 640 L197 640 L232 660 L46 660", .8)}${contact(23.5, 640.4, 5, 1.8)}${contact(30, 639.6, 4, 1.5)}${contact(185.4, 640.4, 5, 1.8)}${contact(178.8, 639.6, 4, 1.5)}
-    ${cast("396 620 L402 620 L402 652 L410 652", 1)}${cast("270 620 L394 620 L420 640 L300 640", .8)}${contact(332, 621, 64, 3)}
-    ${cast("200 648 L262 648 L318 690 L236 690", .55)}${contact(200, 648, 6, 3)}${contact(262, 648, 6, 3)}${contact(231, 646, 5, 2.6)}<ellipse cx="300" cy="704" rx="22" ry="5" fill="rgba(30,14,4,.16)"/>
-    ${cast("16 788 L100 788 L190 816 L76 822", .7)}${contact(16, 788, 7, 3)}${contact(100, 788, 7, 3)}${contact(62, 782, 5, 2.6)}<path d="M18 730 L100 726 L176 790 L80 800Z" fill="rgba(30,14,4,.12)"/>
-    ${cast("290 784 L402 784 L402 822 L330 822", .7)}${contact(291, 786, 7, 3)}${contact(389, 786, 7, 3)}${contact(310, 776, 5)}${contact(370, 776, 5)}`);
+    ${panes}${streak}
+    ${cast(L, [[197, 618], [197, 640], [240, 662], [232, 636]], .9)}${cast(L, [[12, 640], [197, 640], [232, 660], [46, 660]], .8)}${contact(23.5, 640.4, 5, 1.8)}${contact(30, 639.6, 4, 1.5)}${contact(185.4, 640.4, 5, 1.8)}${contact(178.8, 639.6, 4, 1.5)}
+    ${cast(L, [[396, 620], [402, 620], [402, 652], [410, 652]], 1)}${cast(L, [[270, 620], [394, 620], [420, 640], [300, 640]], .8)}${contact(332, 621, 64, 3)}
+    ${cast(L, [[200, 648], [262, 648], [318, 690], [236, 690]], .55)}${contact(200, 648, 6, 3)}${contact(262, 648, 6, 3)}${contact(231, 646, 5, 2.6)}<ellipse cx="300" cy="704" rx="22" ry="5" fill="rgba(30,14,4,${sh(.16)})"/>
+    ${cast(L, [[16, 788], [100, 788], [190, 816], [76, 822]], .7)}${contact(16, 788, 7, 3)}${contact(100, 788, 7, 3)}${contact(62, 782, 5, 2.6)}<path d="M18 730 L100 726 L176 790 L80 800Z" fill="rgba(30,14,4,${sh(.12)})"/>
+    ${cast(L, [[290, 784], [402, 784], [402, 822], [330, 822]], .7)}${contact(291, 786, 7, 3)}${contact(389, 786, 7, 3)}${contact(310, 776, 5)}${contact(370, 776, 5)}`);
 };
+// Over the whole room, and the wall and the floor round it on a wider screen: its darkness and its warmth; with the
+// picture light on, the dark keeps off its pool on the newest work, and the pool is warm. The lamp shines down: the
+// pool opens from its bar (the focus just under it, the top edge just over it) over the work and below, and the wall
+// above the lamp, up to the rail and the cornice, stays in the dark.
+function TONE(L, lamp) {
+  const [dc, da] = L.dark, [tc, ta] = L.tint, on = lamp ? L.lamp : 0, bar = HANG_AT[1] + LAMP[1];
+  const box = (fill) => `<rect x="-220" y="-20" width="${W + 440}" height="${H + 440}" fill="${fill}"/>`;
+  const pool = (id, a) => `<radialGradient id="${id}" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" fx="0" fy="-.9" gradientTransform="translate(${HANG_AT[0] + LAMP[0]} ${bar + 104}) scale(112 108)">${stops(a)}</radialGradient>${box(`url(#${id})`)}`;
+  let s = da * (1 - on) > .004 ? box(rgba(dc, da * (1 - on))) : "";
+  if (da * on > .004) s += pool("sl-pool", [["0", rgba(dc, 0)], [".5", rgba(dc, da * on * .28)], ["1", rgba(dc, da * on)]]);
+  if (ta > .004) s += box(rgba(tc, ta));
+  if (on > .01) s += pool("sl-poolw", [["0", rgba([255, 214, 150], .16 * on)], [".5", rgba([255, 214, 150], .06 * on)], ["1", rgba([255, 214, 150], 0)]]);
+  return svg(W, H, s);
+}
+// the hour's light as drawn in its three places in the room (.sl-view, .sl-light, .sl-tone); salonRoom keeps the set it
+// drew for the room wireSalon is given next
+const lightParts = (L, lamp) => ({ view: view(L), light: LIGHT(L), tone: TONE(L, lamp) });
+let drawnLight = null;
+// the hour's light again on the room that is open (wireSalon): only the places whose drawing is not what is shown
+function paintLight(room, was, now) {
+  for (const k in now) if (now[k] !== was?.[k]) { const el = room.querySelector(`.sl-${k}`); if (el) el.innerHTML = now[k]; }
+}
 // the record cabinet stands on its own four legs now (records.js, cabinet.js): here only its shadow on the parquet
 const FEET = () => svg(180, 12, `<ellipse cx="92" cy="1.4" rx="84" ry="3.2" fill="url(#sl-drop)" opacity=".8"/>`);
 
@@ -702,8 +854,9 @@ const FEET = () => svg(180, 12, `<ellipse cx="92" cy="1.4" rx="84" ry="3.2" fill
 // brass reads 唱片櫃 and the count in large letters; as the camera arrives they give way to the page's own Latin. ———
 function crateCopy(list, count, unit) {
   const zh = `<span class="sl-zh"><span class="sc-cut">唱片櫃</span>${count ? `<span class="sc-cut n">${count} ${unit}</span>` : ""}</span>`;
-  // its SVG ids made its own: the page's crate (#/records) is in the document with it while the camera moves in or out
-  const html = crateHtml(list).replace(/(id="|url\(#)cb-/g, "$1cbr-").replace(/<(\/?)(?:a|button)\b/g, "<$1span")
+  // its SVG ids made its own (and what points at them: url(#…), a <use>'s href): the page's crate (#/records) is in the
+  // document with it while the camera moves in or out
+  const html = crateHtml(list).replace(/(id="|url\(#|href="#)cb-/g, "$1cbr-").replace(/<(\/?)(?:a|button)\b/g, "<$1span")
     .replace(/(<span class="sc-brass cr-plate">)(<span class="sc-cut">[^<]*<\/span><span class="sc-cut n">[^<]*<\/span>)(<\/span>)/, `$1${zh}<span class="sl-de">$2</span>$3`);
   return `<span class="sl-rp" aria-hidden="true" inert><span class="sc-scene crate-scene">${html}</span></span>`;
 }
@@ -820,10 +973,11 @@ export function salonRoom(d) {
   const face = d.reading ? { title: d.reading.title, reading: true } : d.books.length ? { title: d.books.at(-1).title } : null;
   const older = (d.reading ? d.books : d.books.slice(0, -1)).slice().reverse();
   const stampImgs = d.stamps.slice(0, 18).map((i) => pic(stampPicture(i)));
+  const lamp = d.museum.length > 0, lit = drawnLight = lightParts(hourLight(), lamp); // the hour's light; the picture light hangs over the newest work (hang)
   // x, y, w, h of each drawing, the drawing, and how it is turned to the eye of someone standing in the room: the
   // portfolio leans back on the easel, the album on its stand, the notebook lies on the seat
   const draw = {
-    museum: [146, 50, 252, 250, hang(d.museum, n("museum"), u("museum"))],
+    museum: [...HANG_AT, 252, 250, hang(d.museum, n("museum"), u("museum"))],
     world: [196, 452, 70, 200, globeHtml(n("world"), u("world"))],
     shelf: [270, 316, 124, 304, bookcase(124, 304, face, older, n("shelf"), u("shelf"))],
     poems: [300, 432, 66, 54, writingBox(66, 54, n("poems"), u("poems"))],
@@ -837,16 +991,17 @@ export function salonRoom(d) {
     return `<a class="sl-o${k === "records" ? " sl-rec" : k === "nest" ? " sl-bird nest" : ""}" data-k="${k}" href="${href}" style="left:${hx}px;top:${hy}px;width:${hw}px;height:${hh}px" aria-label="${esc(label)}">${inner}</a>`; };
   const box = (k, [x, y, w, h, html, turn]) => { const [hx, hy] = SPOTS[k]; return `<span class="sl-draw" style="left:${x - hx}px;top:${y - hy}px;width:${w}px;height:${h}px${turn ? `;transform:${turn}` : ""}">${html}</span>`; };
   const obj = (k) => link(k, k === "list" ? "#/saved/list" : `#/${k}`, `${by[k]?.name || k}：${n(k)} ${u(k)}`, k === "records" ? crateCopy(d.records, n("records"), u("records")) : box(k, draw[k]));
-  const deco = (x, y, w, h, html) => `<b class="sl-deco" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px">${html}</b>`;
+  const deco = (x, y, w, h, html, cls = "") => `<b class="sl-deco${cls ? ` ${cls}` : ""}" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px">${html}</b>`;
   const bird = () => { if (!d.bird) return ""; const rb = roomBird(), [bx, bt, bs] = BIRD; // its shadow on the sill, then the bird (nest.js roomBird)
     return deco(100, 292, 40, 10, svg(40, 10, `<ellipse cx="20" cy="5" rx="12" ry="2.2" fill="url(#sl-contact)"/><ellipse cx="27" cy="5.5" rx="13" ry="2.4" fill="rgba(30,14,4,.18)"/>`))
       + link("nest", "#/nest", rb.label, box("nest", [bx, bt, bs, bs, rb.html])); };
   return fuseGilt(`<section class="salon" aria-label="收藏的角落">${DEFS}<div class="sl-cam"><div class="sl-stage">
-      <i class="sl-wall"></i><i class="sl-floor"></i>${deco(0, 0, W, H, WALL(238))}${deco(0, 0, W, H, LIGHT())}
+      <i class="sl-wall"></i><i class="sl-floor"></i>${deco(0, 0, W, H, WALL(lit.view))}${deco(0, 0, W, H, lit.light, "sl-light")}
       ${obj("museum")}${deco(12, FLOOR, 180, 12, FEET())}${obj("records")}${obj("world")}${obj("shelf")}${obj("poems")}${obj("list")}
       ${deco(281, 506, 104, 100, VITRINE_IN())}${obj("medals")}${deco(281, 506, 104, 100, VITRINE_GLASS())}${deco(22, 296, 72, 10, STAND())}${obj("stamps")}
       ${deco(4, 572, 108, 219, EASEL())}${deco(278, 626, 124, 165, ARMCHAIR())}${obj("prints")}${obj("marks")}${bird()}
-      ${deco(0, 0, W, 830, svg(W, 830, `<rect width="${W}" height="830" fill="url(#sl-aoR)" opacity=".35"/><rect y="700" width="${W}" height="130" fill="url(#sl-aoUp)" opacity=".7"/>`))}<i class="sl-vig"></i></div></div></section>`);
+      ${deco(0, 0, W, 830, svg(W, 830, `<rect width="${W}" height="830" fill="url(#sl-aoR)" opacity=".35"/><rect y="700" width="${W}" height="130" fill="url(#sl-aoUp)" opacity=".7"/>`))}
+      ${deco(0, 0, W, H, lit.tone, `sl-tone${lamp ? " lamp" : ""}`)}<i class="sl-vig"></i></div></div></section>`);
 }
 
 // ——— The way in and the way back (the owner, 2026-11-19: every corner's move seamless; back out the same way) ———
@@ -959,10 +1114,14 @@ function landIn(L) {
   main.style.transformOrigin = "0 0";
   settle(main);
   const B = pageBox(L.k) || middle(L.A), c = camera(L.A, B, L.k), es = Array.from({ length: N + 1 }, (_, i) => c.at(ease(i / N)));
+  if (L.k === "world") L.a.querySelector(".sl-map")?.globe?.draw(B.w / L.A.w); // the turning globe, painted for the size it lands at
   const R = room.getBoundingClientRect(), O = main.getBoundingClientRect(), o = { duration: c.ms, fill: "both" };
+  // the hour's dark and warmth (TONE) lift as the camera nears the thing, so the room the page comes up out of is lit
+  // as the page is: by night a dark room would dissolve into a bright page
   L.runs.push(room.querySelector(".sl-cam").animate(es.map((m) => ({ transform: mat(m, R.left, R.top) })), o),
     main.animate(es.map((m) => ({ transform: mat(c.rel(m), O.left, O.top) })), o),
-    room.animate([{ opacity: 1 }, { opacity: 1, offset: .66, easing: "ease-in-out" }, { opacity: 0, offset: .97 }, { opacity: 0 }], o));
+    room.animate([{ opacity: 1 }, { opacity: 1, offset: .66, easing: "ease-in-out" }, { opacity: 0, offset: .97 }, { opacity: 0 }], o),
+    room.querySelector(".sl-tone").animate([{ opacity: 1, easing: "ease-in-out" }, { opacity: 0, offset: .66 }, { opacity: 0 }], o));
   if (L.k === "records") { // the brass: the room's large 唱片櫃 gives way to the page's Schallplatten
     const zh = L.a.querySelector(".sl-zh"), de = L.a.querySelector(".sl-de"), br = L.a.querySelector(".cr-plate");
     if (zh) L.runs.push(zh.animate([{ opacity: 1 }, { opacity: 1, offset: .55 }, { opacity: 0, offset: .66 }], o));
@@ -992,20 +1151,23 @@ function retreat(L) {
   const main = document.getElementById("main"), room = L.room, cam = room.querySelector(".sl-cam");
   clearTimeout(L.later);
   if (main) settle(main);
-  const t = getComputedStyle(cam).transform, op = getComputedStyle(room).opacity;
+  const t = getComputedStyle(cam).transform, op = getComputedStyle(room).opacity, tone = room.querySelector(".sl-tone"), dim = getComputedStyle(tone).opacity;
   L.runs?.forEach((x) => x.cancel());
   if (main) main.style.transformOrigin = "";
   document.documentElement.classList.remove("room-in");
-  const back = cam.animate([{ transform: t === "none" ? "none" : t }, { transform: "none" }], { duration: 420, easing: "cubic-bezier(.3,.6,.3,1)", fill: "both" });
+  const up = { duration: 420, easing: "cubic-bezier(.3,.6,.3,1)", fill: "both" }, back = cam.animate([{ transform: t === "none" ? "none" : t }, { transform: "none" }], up);
+  tone.animate([{ opacity: dim }, { opacity: 1 }], up); // the hour's dark back as the camera is
   room.animate([{ opacity: op }, { opacity: 1 }], { duration: 140, fill: "both" });
   const end = () => room.remove();
   back.finished.then(end, end);
 }
 // The way back: the page's nodes are lifted off into a ghost (fixed where they stood, scrolled as they were), the room
 // is drawn under them zoomed in onto the page's counterpart of the thing, and the ghost is carried by the same camera,
-// fading over the first 30% of the move, as the room pulls back. Live nodes, like the room on the way in, so the move
-// starts on the first frame that is actually painted (a picture of the page would set off before the room was painted).
-let out = null; // the way back under way: { ghost, run, room }
+// fading over the first 30% of the move, as the room pulls back; the room without the hour's dark and warmth (TONE)
+// until the page has gone, then they come back as it pulls back (the way in, the other way round). Live nodes, like the
+// room on the way in, so the move starts on the first frame that is actually painted (a picture of the page would set
+// off before the room was painted).
+let out = null; // the way back under way: { ghost, run, tone, room }
 // The room's pictures (its photographs of wood and stucco, the works on the wall, the record's sleeve): decoding them
 // is most of the cost of the room's first frame. Held decoded while the page entered from the room is open, and
 // awaited — briefly, the page still standing — before the way back moves, so the room shows whole when the page fades.
@@ -1019,7 +1181,7 @@ function pictures(room) {
 const decode = (urls) => urls.map((src) => { const i = new Image(); i.src = src; return { i, done: i.decode().catch(() => {}) }; });
 function dropOut() {
   if (!out) return;
-  out.ghost.remove(); out.run?.cancel(); out.room?.classList.remove("zoom", "back");
+  out.ghost.remove(); out.run?.cancel(); out.tone?.cancel(); out.room?.classList.remove("zoom", "back");
   out = null;
 }
 async function wayBack(d, B, draw) {
@@ -1035,15 +1197,17 @@ async function wayBack(d, B, draw) {
   const room = main.querySelector(".salon"), a = room?.querySelector(`.sl-o[data-k="${d.k}"]`);
   if (!a) { dropOut(); return; }
   settle(main); // the room's own entrance: it is there at once, under the page
-  const c = camera(roomBox(a), B, d.k), ts = Array.from({ length: N + 1 }, (_, i) => c.at(1 - ease(i / N)));
+  const A = roomBox(a), c = camera(A, B, d.k), ts = Array.from({ length: N + 1 }, (_, i) => c.at(1 - ease(i / N)));
   const R = room.getBoundingClientRect(), F = 6, o = { duration: c.ms, fill: "both" }; // the ghost's part: the first 6 of the 20 steps
   O.room = room;
   room.classList.add("zoom", "back"); // no taps until it is back
+  if (d.k === "world") a.querySelector(".sl-map")?.globe?.draw(B.w / A.w); // the globe painted for the size it starts at
   O.run = room.querySelector(".sl-cam").animate(ts.map((m) => ({ transform: mat(m, R.left, R.top) })), o);
   O.run.pause(); // held zoomed in, under the page, while its pictures are decoded
   await Promise.race([Promise.all(decode(pictures(room)).map((x) => x.done)), new Promise((r) => setTimeout(r, 200))]);
   if (out !== O) return;
   O.run.play();
+  O.tone = room.querySelector(".sl-tone").animate([{ opacity: 0 }, { opacity: 0, offset: F / N, easing: "ease-in-out" }, { opacity: 1 }], o);
   ghost.animate(ts.slice(0, F + 1).map((m, i) => ({ transform: mat(c.rel(m)), opacity: 1 - smooth(i / F) })), { duration: (c.ms * F) / N, fill: "both" });
   const end = () => { if (out === O) dropOut(); };
   O.run.finished.then(end, end);
@@ -1089,8 +1253,21 @@ export function wireSalon(room, { poem, world = [] } = {}) {
   };
   fit();
   addEventListener("resize", fit);
-  const map = room.querySelector(".sl-mapin");
-  if (map) drawMap(map, { read: world }).then(() => map.querySelector("p")?.remove()).catch(() => {}); // no map to be had: the plain sea
+  // the hour's light: drawn for the hour the room opened at (salonRoom), again every two minutes while it is open (a
+  // step too small to see, even at dusk) and when the app comes back to the front, only where the drawing has changed;
+  // never in the middle of a move
+  let shown = drawnLight; drawnLight = null;
+  const lamp = Boolean(room.querySelector(".sl-tone.lamp"));
+  const relight = () => {
+    if (!room.isConnected) { clearInterval(tick); document.removeEventListener("visibilitychange", relight); return; }
+    if (document.hidden || room.matches(".lift, .zoom, .back")) return;
+    const now = lightParts(hourLight(), lamp);
+    paintLight(room, shown, now); shown = now;
+  };
+  const tick = setInterval(relight, 2 * 60 * 1000);
+  document.addEventListener("visibilitychange", relight);
+  const map = room.querySelector(".sl-map");
+  if (map) turnGlobe(room, map, world);
   const t = room.querySelector(".sl-poem");
   if (t && poem) poem().then((art) => {
     const p = poemOf(art); if (!t.isConnected || !p) return;

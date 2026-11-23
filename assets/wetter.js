@@ -9,6 +9,14 @@ import { esc, store, twNow, within } from "./util.js";
 // under the reader (the iPhone has no scroll anchoring; audit 2026-11-11).
 export const keptWeather = () => { const k = store.get("wx"); return k?.date === twNow().date && k.data ? k.data : null; };
 
+// Today's sunrise and sunset in Taichung, "HH:MM", out of today's kept forecast `d` (as keptWeather gives it); while
+// there is none, the pair written here (sunTimes(null) answers it: the only place it is written). The yard's night
+// (nest.js realSky) and the room's light (salon.js) both go by it.
+export function sunTimes(d = keptWeather()) {
+  const t = (x, f) => (/T\d{2}:\d{2}/.test(x || "") ? x.slice(11, 16) : f);
+  return { rise: t(d?.daily?.sunrise?.[0], "06:10"), set: t(d?.daily?.sunset?.[0], "17:20") };
+}
+
 const API ="https://api.open-meteo.com/v1/forecast?latitude=24.1477&longitude=120.6736&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&hourly=temperature_2m,precipitation_probability,weather_code&timezone=Asia%2FTaipei&forecast_days=1";
 const MAX_AGE = 3 * 3600 * 1000;
 

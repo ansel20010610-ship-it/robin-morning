@@ -84,10 +84,12 @@ export async function drawMap(box, { read = [], today = [] } = {}) {
 // foil's band slides as the globe turns), one in today's unread 快訊 a gold outline, Taiwan ringed in the robin's
 // colour. It opens on Taiwan and turns to the country read last; a finger across it turns it (sideways only — up and
 // down still scrolls the page) and it runs on a little after the finger lifts. Nothing is drawn while it rests.
-// Without the file the flat map above is drawn instead.
+// Without the file the flat map above is drawn instead. The globe in 收藏's room (salon.js) is drawn from the same
+// data by the same frame (paintGlobe).
 let globeData = null, globeLoading = null;
 const RAD = Math.PI / 180;
-function globe() {
+export const GLOBE_DPR = 2; // the globe's canvas here: at most two pixels to a point (the room's, moving in, the same)
+export function globe() {
   if (globeData) return Promise.resolve(globeData);
   if (!globeLoading) {
     globeLoading = fetch("assets/globe.json").then(async (r) => {
@@ -110,10 +112,84 @@ function globe() {
         }
       }
       const dots = Object.entries(j.p || {}).map(([c, at]) => { if (!centre[c]) centre[c] = at; return { c, v: vec(at[0], at[1]) }; });
-      return (globeData = { lands, dots, centre, most: Math.max(...lands.map((l) => l.v.length / 3)) });
+      const most = Math.max(...lands.map((l) => l.v.length / 3));
+      return (globeData = { lands, dots, centre, home: centre.tw || [121, 23.7], buf: new Float32Array(most * 2) }); // buf: a ring's points on the disc, scratch for a frame
     }).finally(() => { globeLoading = null; });
   }
   return globeLoading;
+}
+
+// One frame of the globe (`g`, from globe()) on `ctx`, whose transform is set to CSS pixels: the sphere of radius R about
+// (cx, cy), seen from above (lon, lat) and its picture turned `roll` degrees (the room's globe leans on its stand) —
+// the sea, the net of meridians and parallels every 30°, the land not read, the land read (`done`), today's unread
+// outlined (`open`), the states too small to draw as dots, home ringed; the light on it is the caller's. `look`: the
+// colours (read: a flat fill, else gold leaf from foil and hi; ink: the read land's edge) and, unless given, the page's
+// line widths and mark sizes (dots: plain, read, today's; mark: home's ring, its dot, the ring's width).
+export function paintGlobe(ctx, g, { cx, cy, R, lon, lat, roll = 0, done, open }, look) {
+  const { sea, land, coast, net = coast, netA = .45, netW = .5, coastW = .6, read, foil, hi, ink, readW = .8, gold, todayW = 1.5, robin } = look;
+  const { dots = [1.2, 2.6, 2.4], mark = [8, 2.2, 1.4] } = look, buf = g.buf;
+  const co = Math.cos(lon * RAD), so = Math.sin(lon * RAD), cl = Math.cos(lat * RAD), sl = Math.sin(lat * RAD);
+  // a point's place on the disc, and whether it faces us; one hidden is pushed out to the rim, so a shape half
+  // round the back is closed along the edge of the globe
+  const put = (x, y, z, o, i) => {
+    const x1 = x * co + y * so, d = x1 * cl + z * sl;
+    let u = -x * so + y * co, w = z * cl - x1 * sl;
+    if (d < 0) { const m = Math.hypot(u, w) || 1; u /= m; w /= m; }
+    o[i] = cx + R * u; o[i + 1] = cy - R * w;
+    return d >= 0;
+  };
+  const ring = (v) => { // adds the ring to the current path if any of it shows
+    const n = v.length / 3; let any = false;
+    for (let i = 0; i < n; i++) if (put(v[3 * i], v[3 * i + 1], v[3 * i + 2], buf, 2 * i)) any = true;
+    if (!any) return;
+    ctx.moveTo(buf[0], buf[1]);
+    for (let i = 1; i < n; i++) ctx.lineTo(buf[2 * i], buf[2 * i + 1]);
+    ctx.closePath();
+  };
+  ctx.lineJoin = "round";
+  ctx.beginPath(); ctx.arc(cx, cy, R, 0, 7); ctx.fillStyle = sea; ctx.fill();
+  ctx.save();
+  ctx.beginPath(); ctx.arc(cx, cy, R, 0, 7); ctx.clip();
+  if (roll) { ctx.translate(cx, cy); ctx.rotate(roll * RAD); ctx.translate(-cx, -cy); }
+  // the net of meridians and parallels, every 30°
+  const pt = [0, 0];
+  ctx.beginPath();
+  const line = (f) => { let on = false; for (let t = 0; t <= 360; t += 5) { const [a, b] = f(t), k = Math.cos(b * RAD); const see = put(k * Math.cos(a * RAD), k * Math.sin(a * RAD), Math.sin(b * RAD), pt, 0); if (see) { on ? ctx.lineTo(pt[0], pt[1]) : ctx.moveTo(pt[0], pt[1]); } on = see; } };
+  for (let a = 0; a < 180; a += 30) line((t) => [t < 180 ? a : a + 180, t < 180 ? t - 90 : 270 - t]);
+  for (let b = -60; b <= 60; b += 30) line((t) => [t, b]);
+  ctx.strokeStyle = net; ctx.globalAlpha = netA; ctx.lineWidth = netW; ctx.stroke(); ctx.globalAlpha = 1;
+  // the land not read, then the land read, then today's outlines
+  ctx.beginPath();
+  for (const l of g.lands) if (!done.has(l.c)) ring(l.v);
+  ctx.fillStyle = land; ctx.fill(); ctx.strokeStyle = coast; ctx.lineWidth = coastW; ctx.stroke();
+  if (done.size) {
+    let fill = read;
+    if (!fill) { // gold leaf: its band slides as the globe turns
+      const k = (((lon % 90) + 90) % 90) / 90;
+      fill = ctx.createLinearGradient(cx - 2 * R + 2 * R * k, cy - R, cx + 2 * R * k, cy + R);
+      fill.addColorStop(0, foil); fill.addColorStop(.25, hi); fill.addColorStop(.5, foil); fill.addColorStop(.75, hi); fill.addColorStop(1, foil);
+    }
+    ctx.beginPath();
+    for (const l of g.lands) if (done.has(l.c)) ring(l.v);
+    ctx.fillStyle = fill; ctx.fill(); ctx.strokeStyle = ink; ctx.lineWidth = readW; ctx.stroke();
+  }
+  if (open.size) {
+    ctx.beginPath();
+    for (const l of g.lands) if (open.has(l.c)) ring(l.v);
+    ctx.strokeStyle = gold; ctx.lineWidth = todayW; ctx.stroke();
+  }
+  for (const d of g.dots) {
+    if (!put(d.v[0], d.v[1], d.v[2], pt, 0)) continue;
+    const got = done.has(d.c), due = open.has(d.c);
+    ctx.beginPath(); ctx.arc(pt[0], pt[1], got ? dots[1] : due ? dots[2] : dots[0], 0, 7);
+    if (due) { ctx.strokeStyle = gold; ctx.lineWidth = 1.3; ctx.stroke(); } else { ctx.fillStyle = got ? read || foil : coast; ctx.fill(); }
+  }
+  const tw = [0, 0], h = g.home.map((x) => x * RAD), hk = Math.cos(h[1]);
+  if (put(hk * Math.cos(h[0]), hk * Math.sin(h[0]), Math.sin(h[1]), tw, 0)) { // home
+    ctx.beginPath(); ctx.arc(tw[0], tw[1], mark[0], 0, 7); ctx.strokeStyle = robin; ctx.lineWidth = mark[2]; ctx.stroke();
+    ctx.beginPath(); ctx.arc(tw[0], tw[1], mark[1], 0, 7); ctx.fillStyle = robin; ctx.fill();
+  }
+  ctx.restore();
 }
 
 export async function drawGlobe(box, { read = [], today = [] } = {}) {
@@ -127,9 +203,8 @@ export async function drawGlobe(box, { read = [], today = [] } = {}) {
   box.replaceChildren(cv);
   const lc = (c) => String(c).toLowerCase();
   const done = new Set(read.map(lc)), open = new Set(today.map(lc).filter((c) => !done.has(c)));
-  const home = g.centre.tw || [121, 23.7], last = read.length ? g.centre[lc(read[0])] : null;
+  const home = g.home, last = read.length ? g.centre[lc(read[0])] : null;
   const tilt = (la) => Math.max(-32, Math.min(42, la * .75)); // the globe leans toward the place, never onto a pole
-  const buf = new Float32Array(g.most * 2);
   let lon = home[0], lat = tilt(home[1]), R = 0, raf = 0, vel = 0, drag = null, fly = null;
 
   const colours = () => {
@@ -137,70 +212,14 @@ export async function drawGlobe(box, { read = [], today = [] } = {}) {
     return { dark, sea: v(dark ? "--paper-2" : "--paper-3"), land: v(dark ? "--paper-3" : "--paper"), coast: v("--rule"), gold: v("--gold"), ink: v("--gold-ink"), foil: v("--foil"), hi: v("--foil-hi"), robin: v("--robin") };
   };
   const render = () => {
-    const size = Math.round(cv.clientWidth), dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const size = Math.round(cv.clientWidth), dpr = Math.min(window.devicePixelRatio || 1, GLOBE_DPR);
     if (!size) return;
     if (cv.width !== Math.round(size * dpr)) cv.width = cv.height = Math.round(size * dpr);
     R = size / 2 - 6;
     const c = colours(), cx = size / 2, cy = size / 2;
-    const co = Math.cos(lon * RAD), so = Math.sin(lon * RAD), cl = Math.cos(lat * RAD), sl = Math.sin(lat * RAD);
-    // a point's place on the disc, and whether it faces us; one hidden is pushed out to the rim, so a shape half
-    // round the back is closed along the edge of the globe
-    const put = (x, y, z, o, i) => {
-      const x1 = x * co + y * so, d = x1 * cl + z * sl;
-      let u = -x * so + y * co, w = z * cl - x1 * sl;
-      if (d < 0) { const m = Math.hypot(u, w) || 1; u /= m; w /= m; }
-      o[i] = cx + R * u; o[i + 1] = cy - R * w;
-      return d >= 0;
-    };
-    const ring = (v) => { // adds the ring to the current path if any of it shows
-      const n = v.length / 3; let any = false;
-      for (let i = 0; i < n; i++) if (put(v[3 * i], v[3 * i + 1], v[3 * i + 2], buf, 2 * i)) any = true;
-      if (!any) return;
-      ctx.moveTo(buf[0], buf[1]);
-      for (let i = 1; i < n; i++) ctx.lineTo(buf[2 * i], buf[2 * i + 1]);
-      ctx.closePath();
-    };
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, size, size);
-    ctx.lineJoin = "round";
-    ctx.beginPath(); ctx.arc(cx, cy, R, 0, 7); ctx.fillStyle = c.sea; ctx.fill();
-    ctx.save();
-    ctx.beginPath(); ctx.arc(cx, cy, R, 0, 7); ctx.clip();
-    // the net of meridians and parallels, every 30°
-    const pt = [0, 0];
-    ctx.beginPath();
-    const line = (f) => { let on = false; for (let t = 0; t <= 360; t += 5) { const [a, b] = f(t), k = Math.cos(b * RAD); const see = put(k * Math.cos(a * RAD), k * Math.sin(a * RAD), Math.sin(b * RAD), pt, 0); if (see) { on ? ctx.lineTo(pt[0], pt[1]) : ctx.moveTo(pt[0], pt[1]); } on = see; } };
-    for (let a = 0; a < 180; a += 30) line((t) => [t < 180 ? a : a + 180, t < 180 ? t - 90 : 270 - t]);
-    for (let b = -60; b <= 60; b += 30) line((t) => [t, b]);
-    ctx.strokeStyle = c.coast; ctx.globalAlpha = .45; ctx.lineWidth = .5; ctx.stroke(); ctx.globalAlpha = 1;
-    // the land not read, then the land read in gold leaf, then today's outlines
-    ctx.beginPath();
-    for (const l of g.lands) if (!done.has(l.c)) ring(l.v);
-    ctx.fillStyle = c.land; ctx.fill(); ctx.strokeStyle = c.coast; ctx.lineWidth = .6; ctx.stroke();
-    if (done.size) {
-      const k = (((lon % 90) + 90) % 90) / 90, leaf = ctx.createLinearGradient(cx - 2 * R + 2 * R * k, cy - R, cx + 2 * R * k, cy + R);
-      leaf.addColorStop(0, c.foil); leaf.addColorStop(.25, c.hi); leaf.addColorStop(.5, c.foil); leaf.addColorStop(.75, c.hi); leaf.addColorStop(1, c.foil);
-      ctx.beginPath();
-      for (const l of g.lands) if (done.has(l.c)) ring(l.v);
-      ctx.fillStyle = leaf; ctx.fill(); ctx.strokeStyle = c.ink; ctx.lineWidth = .8; ctx.stroke();
-    }
-    if (open.size) {
-      ctx.beginPath();
-      for (const l of g.lands) if (open.has(l.c)) ring(l.v);
-      ctx.strokeStyle = c.gold; ctx.lineWidth = 1.5; ctx.stroke();
-    }
-    for (const d of g.dots) {
-      if (!put(d.v[0], d.v[1], d.v[2], pt, 0)) continue;
-      const got = done.has(d.c), due = open.has(d.c);
-      ctx.beginPath(); ctx.arc(pt[0], pt[1], got ? 2.6 : due ? 2.4 : 1.2, 0, 7);
-      if (due) { ctx.strokeStyle = c.gold; ctx.lineWidth = 1.3; ctx.stroke(); } else { ctx.fillStyle = got ? c.foil : c.coast; ctx.fill(); }
-    }
-    const tw = [0, 0], h = home.map((x) => x * RAD), hk = Math.cos(h[1]);
-    if (put(hk * Math.cos(h[0]), hk * Math.sin(h[0]), Math.sin(h[1]), tw, 0)) { // home
-      ctx.beginPath(); ctx.arc(tw[0], tw[1], 8, 0, 7); ctx.strokeStyle = c.robin; ctx.lineWidth = 1.4; ctx.stroke();
-      ctx.beginPath(); ctx.arc(tw[0], tw[1], 2.2, 0, 7); ctx.fillStyle = c.robin; ctx.fill();
-    }
-    ctx.restore();
+    paintGlobe(ctx, g, { cx, cy, R, lon, lat, done, open }, c);
     // the roundness: light from the upper left, shade toward the lower right, and a gold rim
     const round = ctx.createRadialGradient(cx - R * .42, cy - R * .46, R * .05, cx, cy, R * 1.02);
     round.addColorStop(0, c.dark ? "rgba(255,240,205,.12)" : "rgba(255,255,255,.42)");
