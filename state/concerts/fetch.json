@@ -1,9 +1,26 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "complete": true,
   "note": "",
   "incomplete_since": null,
   "dropped": {
+    "2119987265943801857": {
+      "title": "2027 NTT Arts NOVA 愛爾蘭跨界藝術家路克．墨菲《焦土之下》",
+      "shows": [
+        "2027-04-16 台中",
+        "2027-04-17 台中",
+        "2027-04-18 台中"
+      ],
+      "why": "戲劇類，標題沒有「音樂劇」或「歌劇」"
+    },
+    "2123221098614030337": {
+      "title": "奇巧劇團Reload：十年迴聲《鞍馬天狗》特別演出",
+      "shows": [
+        "2027-03-13 高雄",
+        "2027-03-14 高雄"
+      ],
+      "why": "戲劇類，標題沒有「音樂劇」或「歌劇」"
+    },
     "ntch:27656": {
       "title": "2026廳院選 當代傳奇劇場《慾望城國》王者再臨",
       "shows": [
@@ -166,10 +183,10 @@
     "opentix": {
       "ok": true,
       "note": "",
-      "new": 4,
-      "pages": 62,
+      "new": 15,
+      "pages": 74,
       "left": 0,
-      "newest": "2026-11-19"
+      "newest": "2026-11-23"
     },
     "venues": {
       "ok": true,
@@ -177,17 +194,22 @@
       "read": {
         "ntch": {
           "ok": true,
-          "n": 116,
+          "n": 114,
           "note": ""
         },
         "wwy": {
           "ok": true,
-          "n": 163,
+          "n": 161,
           "note": ""
         },
         "ntt": {
           "ok": true,
-          "n": 47,
+          "n": 48,
+          "note": ""
+        },
+        "bach": {
+          "ok": true,
+          "n": 11,
           "note": ""
         }
       }
@@ -232,6 +254,12 @@
     },
     {
       "date": "2026-11-24",
+      "feed": true,
+      "opentix": true,
+      "venues": true
+    },
+    {
+      "date": "2026-11-25",
       "feed": true,
       "opentix": true,
       "venues": true

@@ -1,99 +1,125 @@
 {
   "last": "2026-11-09",
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "sources": {
     "mna": {
       "urls": [
-        "https://www.mna.com.tw",
-        "https://www.mna.com.tw/concerts_detail.html?id=782"
+        "https://www.mna.com.tw/concerts.html",
+        "https://www.mna.com.tw/concerts.html?page=2"
       ],
       "seen": [
-        {
-          "title": "提勒曼與柏林國家歌劇院管弦樂團",
-          "verdict": "已列入",
-          "id": "thielemann-staatskapelle-berlin-2026"
-        },
-        {
-          "title": "庫倫奇斯與烏托邦管弦樂團",
-          "verdict": "已列入",
-          "id": "currentzis-utopia-2026"
-        },
-        {
-          "title": "王羽佳與馬勒室內樂團",
-          "verdict": "已列入",
-          "id": "yuja-wang-mco-2026"
-        },
         {
           "title": "Philharmonix",
           "verdict": "已列入",
           "id": "philharmonix-2026"
         },
         {
-          "title": "郎朗鋼琴獨奏會",
+          "title": "Teodor Currentzis and Utopia Orchestra",
+          "verdict": "已列入",
+          "id": "currentzis-utopia-2026"
+        },
+        {
+          "title": "Lang Lang Piano Recital",
           "verdict": "已列入",
           "id": "lang-lang-recital-2026"
         },
         {
-          "title": "Diana Krall",
+          "title": "INTERSTELLAR LIVE",
           "verdict": "不收",
-          "why": "爵士，不在範圍"
+          "why": "1分：電影配樂演出"
         },
         {
-          "title": "馬克安德烈低音提琴與吉他",
+          "title": "Yuja Wang and Mahler Chamber Orchestra",
           "verdict": "不收",
-          "why": "11/20 已演完"
+          "why": "演出日 11/21 已過"
+        },
+        {
+          "title": "Attack on Titan World Tour",
+          "verdict": "不收",
+          "why": "1分：動漫配樂"
+        },
+        {
+          "title": "Diana Krall",
+          "verdict": "不收",
+          "why": "爵士流行，非收錄範圍"
+        },
+        {
+          "title": "Christian Thielemann and Staatskapelle Berlin",
+          "verdict": "不收",
+          "why": "演出日 11/21 已過"
+        }
+      ]
+    },
+    "newaspect": {
+      "urls": [
+        "https://www.newaspect.org.tw",
+        "https://www.newaspect.org.tw/quintetolegrandtango",
+        "https://www.newaspect.org.tw/thewhoopgroup2026",
+        "https://www.opentix.life/event/2062364642343882753"
+      ],
+      "seen": [
+        {
+          "title": "2026蕭邦計畫",
+          "verdict": "不收",
+          "why": "8月已演完"
+        },
+        {
+          "title": "2026阿格麗希音樂節在台灣",
+          "verdict": "不收",
+          "why": "11/10、11/12、11/15 已演完"
+        },
+        {
+          "title": "2026皮亞佐拉五重奏",
+          "verdict": "不收",
+          "why": "OPENTIX 已下架、查不到場次日期，無法評分"
+        },
+        {
+          "title": "2026 窩噗瘋一下",
+          "verdict": "不收",
+          "why": "2分：流行團體，非古典"
+        },
+        {
+          "title": "2027向貝多芬致敬-吉爾特伯格",
+          "verdict": "已列入",
+          "id": "giltburg-beethoven-tso-2027"
         }
       ]
     },
     "pbc": {
-      "error": "網站憑證錯誤，WebFetch 連不上"
-    },
-    "newaspect": {
-      "error": "連線被拒（ECONNREFUSED）"
+      "error": "www.pbc.com.tw 憑證不符，打不開"
     },
     "tanart": {
-      "error": "網域解析失敗"
+      "error": "arsformosa.com.tw 連線被拒（ECONNREFUSED）"
     },
     "kham": {
       "urls": [
-        "https://www.kham.com.tw"
+        "https://kham.com.tw"
       ],
       "seen": [
         {
-          "title": "音樂劇《WILD WILD》",
+          "title": "SHOW MUSICAL WILD WILD",
           "verdict": "不收",
-          "why": "2 分，首頁看不到演出者與製作內容，非西方歌劇或完整原版製作"
+          "why": "2分：流行音樂劇秀，查不到場次與製作內容"
         }
       ]
     },
     "udn": {
-      "error": "來不及逐站查，未打開"
+      "error": "沒有逐一打開 udnfunlife 與時藝多媒體；只用搜尋看到 MJ 麥可傑克森音樂劇 2027 年 4 月台北流行音樂中心，尚無場次日期，待售票公布再評"
     },
     "news": {
-      "urls": [
-        "https://udn.com/news/story/7270/9659928",
-        "https://www.cna.com.tw/news/acul/202608060334.aspx",
-        "https://udn.com/news/story/7266/9390254"
-      ],
-      "seen": [
-        {
-          "title": "NSO 呂紹嘉與黃亞中貝九（3/29 台北）",
-          "verdict": "不收",
-          "why": "疑為 2026 年 3 月已演完，文章無年份，未收"
-        }
-      ]
+      "error": "只做了網路搜尋（原版音樂劇、2027 訪台樂團／歌劇／鋼琴家），沒有逐一打開誠品、年代、KKTIX、wekengo；搜尋沒有找到新的未列入演出"
     },
     "ntch": {
       "auto": true,
-      "n": 116
+      "n": 114
     },
     "ntt": {
       "auto": true,
-      "n": 47
+      "n": 48
     },
     "wwy": {
       "auto": true,
-      "n": 163
+      "n": 161
     }
   }
 }

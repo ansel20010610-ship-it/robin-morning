@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-24",
+  "checked": "2026-11-25",
   "events": [
     {
       "id": "mahler8-nso-2026",
@@ -656,75 +656,6 @@
       ]
     },
     {
-      "id": "thielemann-staatskapelle-berlin-2026",
-      "title": "提勒曼與柏林國家歌劇院管弦樂團",
-      "kind": "交響樂",
-      "rating": 5,
-      "why": "提勒曼睽違十四年再來台，帶著首度訪台的柏林國家歌劇院管弦樂團：台北首晚是他最拿手的布魯克納《浪漫》，另兩場是理查．史特勞斯的《最後四首歌》與《阿爾卑斯交響曲》。",
-      "who": "克里斯提安．提勒曼（指揮）、柏林國家歌劇院管弦樂團；魯道夫．布赫賓德（鋼琴，11/21）、卡蜜拉．尼倫德（女高音，11/22、11/24）",
-      "program": "11/21：莫札特《第二十一號鋼琴協奏曲》、布魯克納《第四號交響曲「浪漫」》；11/22、11/24：理查．史特勞斯《最後四首歌》《阿爾卑斯交響曲》",
-      "note": "牛耳藝術售票，非 OPENTIX；11/22 票款全數捐慈善",
-      "shows": [
-        {
-          "date": "2026-11-24",
-          "time": "19:00",
-          "city": "高雄",
-          "venue": "衛武營音樂廳",
-          "tickets": "https://ticket.mna.com.tw/UTK0201_?PRODUCT_ID=P1ETF1DD"
-        }
-      ],
-      "added": "2026-11-07",
-      "uids": [
-        "ntch:29274",
-        "wwy:6a6b0483ef008b00072bd026"
-      ],
-      "sources": [
-        {
-          "title": "牛耳藝術節目頁",
-          "url": "https://www.mna.com.tw/concerts_detail.html?id=774"
-        },
-        {
-          "title": "鏡週刊：提勒曼率柏林國家歌劇院管弦樂團來台",
-          "url": "https://www.mirrormedia.mg/story/20260907-197ins-122335"
-        }
-      ]
-    },
-    {
-      "id": "yuja-wang-mco-2026",
-      "title": "王羽佳與馬勒室內樂團：布拉姆斯雙鋼琴協奏曲",
-      "kind": "協奏曲",
-      "rating": 4,
-      "why": "王羽佳首度在台灣邊彈邊指揮，一個晚上把布拉姆斯兩首鋼琴協奏曲連著彈完；台中場是這個組合的全本，台北場則換成較輕巧的曲目。",
-      "who": "王羽佳（鋼琴、領奏）、馬勒室內樂團",
-      "program": "台中、高雄場：布拉姆斯《第一號鋼琴協奏曲》《第二號鋼琴協奏曲》；台北場：史特拉汶斯基《丹巴頓橡樹園》、普羅高菲夫《古典交響曲》、卡普斯汀《第四號鋼琴協奏曲》、莫札特《第二十九號交響曲》",
-      "price": "NT$2,980–7,980",
-      "note": "牛耳藝術售票，非 OPENTIX",
-      "shows": [
-        {
-          "date": "2026-11-24",
-          "time": "19:30",
-          "city": "台中",
-          "venue": "臺中國家歌劇院大劇院",
-          "tickets": "https://ticket.mna.com.tw/UTK0102_?TYPE=0"
-        }
-      ],
-      "added": "2026-11-09",
-      "uids": [
-        "ntch:29272",
-        "ntt:c-RLGQw4XN2Op"
-      ],
-      "sources": [
-        {
-          "title": "牛耳藝術節目頁",
-          "url": "https://www.mna.com.tw/concerts_detail.html?id=775"
-        },
-        {
-          "title": "經濟日報：5 大歐陸交響樂團將訪台",
-          "url": "https://udn.com/news/story/7270/9659928"
-        }
-      ]
-    },
-    {
       "id": "ukraine-opera-beethoven9-2026",
       "title": "烏克蘭國家歌劇院管弦樂團的貝多芬《第九》",
       "kind": "交響樂",
@@ -1260,13 +1191,6 @@
       "price": "平日 NT$1,000–4,400；週六日 NT$1,200–4,600",
       "note": "建議 6 歲以上；卡司尚未公布",
       "shows": [
-        {
-          "date": "2026-11-24",
-          "time": "19:30",
-          "city": "台北",
-          "venue": "臺北表演藝術中心大劇院",
-          "tickets": "https://tickets.udnfunlife.com/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AEBJG5"
-        },
         {
           "date": "2026-11-25",
           "time": "19:30",
@@ -2144,13 +2068,6 @@
       "price": "台北 NT$1,800–4,800；高雄 NT$1,800–5,800；學生席 NT$500",
       "note": "在縱觀藝術售票系統買票；19:00 有演前專訪",
       "shows": [
-        {
-          "date": "2026-11-24",
-          "time": "19:30",
-          "city": "台北",
-          "venue": "國家音樂廳",
-          "tickets": "https://ticket.sight-music.com/Event/Page/7fb112f68fba11afdb57b8446ff30ee9"
-        },
         {
           "date": "2026-12-12",
           "time": "19:30",
