@@ -1,4 +1,15 @@
 {
+  "1": {
+    "finished_at": "2026-11-25T00:58:13+08:00",
+    "missing": [
+      "football",
+      "news",
+      "civilization",
+      "literature",
+      "mystery"
+    ],
+    "note": "精簡：music（walk/listener）；devotion 羅馬書 8:37–39；perio 先發班已完成"
+  },
   "column": {
     "finished_at": "2026-11-24T22:48:48+08:00",
     "missing": [

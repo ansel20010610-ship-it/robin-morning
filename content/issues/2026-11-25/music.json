@@ -1,0 +1,327 @@
+{
+  "column": "music",
+  "date": "2026-11-25",
+  "title": "一把大提琴的巴哈，大提琴手的聖母峰",
+  "dek": "沒有伴奏，連巴哈親筆稿都不見了，這套曲子怎麼成了大提琴手的成年禮？",
+  "brief": "這是巴哈寫給一把大提琴獨奏的組曲第一號，開頭的前奏曲是整套裡最有名的一段，電視和電影裡常常聽到。按下播放，聽開頭一圈一圈的流動、中間的一次停頓，還有最後回來的寬大和弦。在卡薩爾斯找到譜的年代，這套曲子幾乎沒人知道，後來成了大提琴手心目中的聖母峰。",
+  "topic_key": "music:bach-bwv1007",
+  "updated_at": "2026-11-25T00:58:00+08:00",
+  "form": "walk",
+  "voice": "listener",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "document",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Bach_-_Suites_pour_violoncelle_-_Manuscript_Anna_Magdalena_Bach.pdf/page2-960px-Bach_-_Suites_pour_violoncelle_-_Manuscript_Anna_Magdalena_Bach.pdf.jpg",
+    "width": 960,
+    "height": 1273,
+    "alt": "一頁黑白翻拍的手寫樂譜。頁頂左側用花體字寫著「Suitte 1re」，下面是「Prelude」，接著是十二行低音譜表，每一行都擠滿成串的十六分音符。",
+    "caption": "第一號組曲前奏曲的第一頁，出自安娜・瑪格達蕾娜・巴哈（巴哈的第二任妻子）約 1727–1731 年的抄本，現藏柏林國家圖書館（Mus.ms. Bach P 269）。巴哈自己的手稿已經遺失，現在讀到的都是別人的抄本。這張是 IMSLP 的黑白翻拍，經 Commons 上傳。",
+    "credit": "安娜・瑪格達蕾娜・巴哈抄本；Staatsbibliothek zu Berlin（Mus.ms. Bach P 269）；影像經 IMSLP 與 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bach_-_Suites_pour_violoncelle_-_Manuscript_Anna_Magdalena_Bach.pdf?page=2",
+    "made": "約 1727–1731"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "社長，今天聽的是巴哈的**《第一號無伴奏大提琴組曲》**。巴哈是德國作曲家，1685 年生，1750 年過世，屬於巴洛克時期，也就是大約 1600 到 1750 年的歐洲音樂。這套曲子是他在德國小城柯騰的宮廷當樂長時寫的，樂長就是管宮廷樂團的人。時間多半認為是 1717 到 1723 年之間。"
+    },
+    {
+      "type": "p",
+      "text": "「無伴奏」是字面的意思：沒有鋼琴，沒有樂團，從頭到尾只有一把大提琴，旋律和墊在底下的聲音都要這一把琴自己撐。「組曲」是一串舞曲，每一首用一段前奏曲開頭，後面接幾首舊時代的舞曲。第一號整首約 19 分鐘。"
+    },
+    {
+      "type": "p",
+      "text": "它最有名的是開頭那段前奏曲。維基百科說，這是整套組曲裡最出名的一段，電視和電影裡常常聽得到。能對上的一個例子，是 2003 年彼得・威爾導演的電影**《怒海爭鋒：極地征伐》**（Master and Commander）：它的原聲帶專輯收了這段前奏曲，演奏的是大提琴家馬友友（Yo-Yo Ma）。這是必聽名單上的一首，所以先從它開始。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "G 大調第一號無伴奏大提琴組曲，BWV 1007；一把大提琴，沒有伴奏"
+        ],
+        [
+          "寫作年代",
+          "多半認為 1717–1723 年之間，巴哈在柯騰（Köthen）宮廷任樂長期間；確切年份不明"
+        ],
+        [
+          "樂章",
+          "前奏曲、阿勒曼舞曲、庫朗舞曲、薩拉邦舞曲、小步舞曲 I／II、基格舞曲"
+        ],
+        [
+          "長度",
+          "整首約 19 分鐘（依演奏版本不同）"
+        ],
+        [
+          "手稿",
+          "巴哈親筆稿已遺失；現存四份抄本之一是安娜・瑪格達蕾娜・巴哈（約 1727–1731）的抄本"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "先挑一個版本"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子錄過很多版本，聽起來差得很遠。原因是巴哈沒有留下任何演奏記號，快慢、強弱、琴弓怎麼拉，都由拉琴的人自己決定。"
+    },
+    {
+      "type": "p",
+      "text": "今天挑**馬友友 1983 年的錄音**，那是整套六首的專輯。他後來憑巴哈無伴奏大提琴組曲的錄音拿過葛萊美獎。電影原聲帶裡拉的也是他，但不一定是這一次的錄音。"
+    },
+    {
+      "type": "music",
+      "composer": "巴哈（Johann Sebastian Bach）",
+      "work": "G 大調第一號無伴奏大提琴組曲，BWV 1007",
+      "work_original": "Cello Suite No. 1 in G major, BWV 1007",
+      "composed": "約 1717–1723（柯騰；確切年份不明）",
+      "performers": "馬友友（Yo-Yo Ma）大提琴",
+      "recording": "CBS Masterworks，1983 年（錄音日期與場地未查到）",
+      "duration": "整首約 19 分鐘（前奏曲約 2 至 3 分鐘）",
+      "movements": [
+        "I. Prélude",
+        "II. Allemande",
+        "III. Courante",
+        "IV. Sarabande",
+        "V. Menuett I／II",
+        "VI. Gigue"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Bach Cello Suite No. 1 G major BWV 1007 Yo-Yo Ma 1983",
+        "artist_hint": "Yo-Yo Ma",
+        "track_filter": [
+          "Suite No. 1",
+          "BWV 1007"
+        ]
+      }
+    },
+    {
+      "type": "h",
+      "text": "前奏曲：聽三個地方"
+    },
+    {
+      "type": "p",
+      "text": "前奏曲很短，兩三分鐘。先講一個詞，琶音：平常的和弦是幾個音一起響，琶音是把這幾個音拆開，一個接一個拉。這段前奏曲主要就是這樣構成的。"
+    },
+    {
+      "type": "p",
+      "text": "第一個地方是開頭。一個音接著一個音，一圈一圈地轉，聽起來是流動的，中間不斷。整首只有一把琴，沒有別的聲音墊著。"
+    },
+    {
+      "type": "p",
+      "text": "第二個地方在中段。注意有一次停頓，停下來之後，流動的樣子突然變了，跟前面不一樣。接下來它一路往上堆，推向高潮。"
+    },
+    {
+      "type": "p",
+      "text": "第三個地方是結尾。開頭那個流動的樣子又回來，不過這次是間隔很寬的大和弦，落在大提琴音域的最高處，聽起來像凱旋。"
+    },
+    {
+      "type": "h",
+      "text": "為什麼成了大提琴手的聖母峰"
+    },
+    {
+      "type": "p",
+      "text": "美國國會圖書館的網站上，有一篇 Eric Siblin 寫的文章。他說，對大提琴手來說，這六首組曲永遠是起點也是終點，是成年禮，是曲目裡的聖母峰。"
+    },
+    {
+      "type": "p",
+      "text": "但巴哈親筆寫的稿子已經不見了，現在讀的是別人的抄本。頁面最上方的圖，就是巴哈第二任妻子安娜・瑪格達蕾娜約 1727 到 1731 年抄的第一號開頭。"
+    },
+    {
+      "type": "p",
+      "text": "把它搬上大舞台的是**卡薩爾斯**。他是 1876 年生在加泰隆尼亞的大提琴家，十三歲那年在巴塞隆納的樂譜店找到這套譜。Siblin 寫，當時這套曲子幾乎沒人知道。他接著花了十幾年練，二十世紀初開始在大型音樂會上單獨拉一首組曲，Siblin 說這在當時是很激進的做法：無伴奏的大提琴，被認為不夠炫，撐不起一整場音樂會。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Pablo_Casals_in_1917.jpg",
+      "width": 705,
+      "height": 1024,
+      "alt": "一張黑白人像照：一位頭髮稀疏的男子穿淺色西裝站在室內，一手扶著立在身前的大提琴，另一手垂著，拿著琴弓，看向鏡頭。照片上方印著「PABLO CASALS」。",
+      "caption": "卡薩爾斯（Pablo Casals，1876–1973）1917 年的照片。他十三歲在巴塞隆納的樂譜店找到這套組曲的譜，後來成為第一個把完整六首錄成唱片的人。照片由 Bain News Service 拍攝，Commons 標示來源為美國國會圖書館。",
+      "credit": "Bain News Service；Library of Congress；影像經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pablo_Casals_in_1917.jpg",
+      "made": "1917"
+    },
+    {
+      "type": "p",
+      "text": "1936 年秋天，唱片公司 EMI 的主管 Fred Gaisberg 說服了當時快 60 歲的卡薩爾斯，到倫敦的 Abbey Road 錄音室錄音，先錄第二號和第三號。兩年後他在巴黎錄第一號和第六號，再隔一年錄第四、五號。依美國國會圖書館的文章，唱片分三批發行，第一號和第六號是 1941 年出的。這是**第一套完整的錄音室全集**，美國國會圖書館後來把它選進國家錄音登錄，也就是挑出值得保存的錄音的名單。"
+    },
+    {
+      "type": "p",
+      "text": "Siblin 在文章裡引了卡薩爾斯的一句話，文章沒有註明原話的出處："
+    },
+    {
+      "type": "quote",
+      "text": "怎麼會有人覺得巴哈冷冰冰？這些組曲閃著最耀眼的詩意！",
+      "cite": "卡薩爾斯，據 Eric Siblin 為美國國會圖書館寫的文章引述；本文自譯",
+      "original": "How could anyone think of Bach as cold, when these Suites shine with the most glittering kind of poetry!"
+    },
+    {
+      "type": "timeline",
+      "title": "從失傳的手稿到唱片",
+      "items": [
+        {
+          "when": "1717–23",
+          "label": "巴哈在柯騰任樂長，多半認為組曲寫於這段時間",
+          "note": ""
+        },
+        {
+          "when": "1726",
+          "label": "Johann Peter Kellner 的抄本",
+          "note": "現存四份抄本中最早的一份"
+        },
+        {
+          "when": "約 1727–31",
+          "label": "安娜・瑪格達蕾娜・巴哈的抄本",
+          "note": "頁面見本文頭圖"
+        },
+        {
+          "when": "1824",
+          "label": "巴黎出版第一版",
+          "note": ""
+        },
+        {
+          "when": "1890",
+          "label": "十三歲的卡薩爾斯在巴塞隆納找到譜",
+          "note": "維基百科寫 1889 年，美國國會圖書館寫 1890 年"
+        },
+        {
+          "when": "1936–39",
+          "label": "卡薩爾斯錄下整套",
+          "note": "第一號在 1938 年於巴黎錄製，唱片 1941 年發行"
+        },
+        {
+          "when": "1983",
+          "label": "馬友友錄下整套（CBS Masterworks）",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "後來錄的人越來越多。Siblin 說，到二十世紀末，這套曲子已經有很多錄音，給大提琴手的演奏版本有 75 種以上；長笛、鋼琴、吉他、小號、低音號、薩克斯風、斑鳩琴，也都有人改編來演奏。"
+    },
+    {
+      "type": "h",
+      "text": "還在哪裡聽得到"
+    },
+    {
+      "type": "p",
+      "text": "1997 年，馬友友有一個系列紀錄片叫《Inspired by Bach》，第一號對應的那一集叫《The Music Garden》。馬友友找了設計師 Julie Moir Messervy，一起設計一座以這首組曲為藍本的花園，後來多倫多表示有興趣接手。馬友友說，第一號讓他聯想到大自然的畫面。"
+    },
+    {
+      "type": "p",
+      "text": "2019 年 11 月，馬友友在紐西蘭基督城的埃文河畔辦了一場不拘形式的演奏，拉的就是第一號前奏曲，是為 2011 年地震之後的那座城市拉的。Classic FM 摘了他當時的一句話：「這首曲子也包含了重建，包含重新想像出一個比最初那個更好的版本。」"
+    },
+    {
+      "type": "p",
+      "text": "整套組曲也常在追思的場合演奏。Siblin 舉的例子有 9/11 受難者的追思會，和參議員愛德華・甘迺迪的喪禮。他沒說當時拉的是哪一首。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cello Suites (Bach)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Cello_Suites_(Bach)",
+      "note": "1717–1723 柯騰、抄本封面、第一號前奏曲最有名且為琶音和弦、卡薩爾斯找到譜（1889）、1936 年起錄音、錄音表（Ma 1983 CBS Masterworks）、國家錄音登錄 2019；2026-11-24 查閱"
+    },
+    {
+      "title": "“Bach Six Cello Suites”—Pablo Casals (c. 1939)（Eric Siblin 執筆）",
+      "publisher": "Library of Congress（National Recording Registry）",
+      "date": "未註明",
+      "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Bach-Six-Cello-Suites_Casals.pdf",
+      "note": "1890 找到譜、十幾年練習、單獨一首上台、錄音經過與發行批次、卡薩爾斯引文、組曲結構、手稿遺失、追思場合；PDF 全文讀過；2026-11-24 查閱"
+    },
+    {
+      "title": "Master and Commander: The Far Side of the World (soundtrack)",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Master_and_Commander:_The_Far_Side_of_the_World_(soundtrack)",
+      "note": "原聲帶第 9 軌為第一號前奏曲（2:28），背景段註明由 Yo-Yo Ma 演奏；只證明專輯收錄，未查片中場景；2026-11-24 查閱"
+    },
+    {
+      "title": "Master and Commander: The Far Side of the World",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Master_and_Commander:_The_Far_Side_of_the_World",
+      "note": "導演 Peter Weir、2003-11-14 上映、1805 年 HMS Surprise；該頁音樂段未提 Bach；2026-11-24 查閱"
+    },
+    {
+      "title": "Yo-Yo Ma on how Bach’s Cello Suite No. 1 gives us all the code to rebuild after disruption and tragedy",
+      "publisher": "Classic FM（Kyle Macdonald）",
+      "date": "2020-05-11",
+      "url": "https://www.classicfm.com/composers/bach/yo-yo-ma-cello-suite-1-message/",
+      "note": "前奏曲四個時刻（流動的開頭、停頓與突變、堆高、寬和弦凱旋回來）、2019-11 基督城河畔演出與 Ma 引文；以網頁摘要讀取，非全文；2026-11-24 查閱"
+    },
+    {
+      "title": "Bach: 6 Suites for Unaccompanied Cellos（Yo-Yo Ma, 1983）",
+      "publisher": "yo-yoma.com",
+      "date": "未註明",
+      "url": "https://www.yo-yoma.com/audio/bach-6-suites-for-unaccompanied-cellos/",
+      "note": "1983、第一號六個曲目名；頁面沒寫廠牌與錄音日期；2026-11-24 查閱"
+    },
+    {
+      "title": "Cello Suite No.1 in G major, BWV 1007",
+      "publisher": "IMSLP",
+      "date": "未註明",
+      "url": "https://imslp.org/wiki/Cello_Suite_No.1_in_G_major,_BWV_1007_(Bach,_Johann_Sebastian)",
+      "note": "寫作年份 1717–23、七個曲目（含兩首小步舞曲）、Anna Magdalena 抄本 ca.1727–31（Mus.ms. Bach P 269）、兩份完整錄音約 18:42 與 18:57；只讀到頁面前半；2026-11-24 查閱"
+    },
+    {
+      "title": "Bach Cello Suites Editor’s Notes BWV 1007–1012（Yokoyama Shin-Itchiro）",
+      "publisher": "IMSLP（PDF）",
+      "date": "2015-02-19",
+      "url": "https://s9.imslp.org/files/imglnks/usimg/e/ea/IMSLP268084-PMLP04291-Bach_6_Cello_Suites_without_slurs_Yokoyama_2013_Notes.pdf",
+      "note": "親筆稿遺失、四份抄本（Kellner 1726、Anna Magdalena 1727–1731、兩份匿名）、巴黎第一版 1824；一位編訂者的看法，只取抄本年份；2026-11-24 查閱"
+    },
+    {
+      "title": "Berlin, Staatsbibliothek zu Berlin（Mus.ms. Bach P 269）",
+      "publisher": "Bach Digital",
+      "date": "未註明",
+      "url": "https://www.bach-digital.de/receive/BachDigitalSource_source_00001200",
+      "note": "安娜・瑪格達蕾娜抄本的館藏記錄；只讀到搜尋摘要（頁面本身 503），標題頁主要是 Schwanberg 筆跡、約 1727–1731；2026-11-24 查閱"
+    },
+    {
+      "title": "Inspired by Bach",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Inspired_by_Bach",
+      "note": "1997 年系列紀錄片、第一號對應《The Music Garden》（Kevin McMahon 導演）、花園設計；2026-11-24 查閱"
+    },
+    {
+      "title": "File:Bach - Suites pour violoncelle - Manuscript Anna Magdalena Bach.pdf",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Bach_-_Suites_pour_violoncelle_-_Manuscript_Anna_Magdalena_Bach.pdf",
+      "note": "頭圖（第 2 頁）的授權與說明；Commons 標 Public domain，來源 IMSLP；未與館方數位影像對照；2026-11-24 查閱"
+    },
+    {
+      "title": "Yo-Yo Ma",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Yo-Yo_Ma",
+      "note": "1985 年葛萊美（Bach: The Unaccompanied Cello Suites）；2002-09-11 世貿中心原址演奏第五號薩拉邦舞曲；2026-11-24 查閱"
+    },
+    {
+      "title": "File:Pablo Casals in 1917.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:Pablo_Casals_in_1917.jpg",
+      "note": "卡薩爾斯照片的授權與說明；Commons 標 PD-US，作者 Bain，來源 Library of Congress；2026-11-24 查閱"
+    }
+  ]
+}
