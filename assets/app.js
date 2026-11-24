@@ -1539,6 +1539,7 @@ async function viewArticle(date, column, my) {
   // 更正 (findings 32, 42): the header points at the correction itself, not at a generic 更新於 — and when updated_at is
   // only the old audit's stamp of that same day, it is not shown as an update of the news.
   const corr = correctionOf(a);
+  const ruler = yearRuler(me, column, date); // 年代尺, in place of the meta line's hairline
   main.innerHTML = `
     <div class="topbar"><div class="in">
       <a class="icon-btn" data-back href="${fromList || (issue && date !== publishedIssues()[0]?.date ? `#/issue/${date}` : "#/")}" aria-label="${fromList ? "返回" : "回到本期"}">${ICON.back}</a>
@@ -1551,7 +1552,7 @@ async function viewArticle(date, column, my) {
       <header class="article-head">${kicker(column, true, date)}${a.serial ? serialPlate(a.serial) : ""}<h1>${esc(a.title)}</h1>
         ${a.takeaway ? `<aside class="takeaway"><span class="lbl">帶得走的結論</span><p>${inline(a.takeaway)}</p>${evidenceOf(a) ? `<p class="ev"><b>證據力</b>${inline(evidenceOf(a))}</p>` : ""}</aside>` : ""}
         <p class="dek">${esc(a.dek)}</p>
-        <div class="meta"><div class="row"><span>${esc(fmtDate(date))}</span>${issue ? `<span>${esc(issueNo(issue.no))}</span>` : ""}${minutes ? `<span>閱讀約 ${minutes} 分鐘</span>` : ""}${corr ? `<span class="corr"><button type="button" data-corr aria-label="跳到文末的更正">本篇有更正（${md(corr)}）→</button></span>` : ""}${corr && String(a.updated_at || "").slice(0, 10) === corr ? "" : updatedNote(date, a)}${bylineOf(column) ? `<span class="by">${esc(bylineOf(column))}</span>` : ""}</div></div>
+        <div class="meta${ruler ? " has-zl" : ""}"><div class="row"><span>${esc(fmtDate(date))}</span>${issue ? `<span>${esc(issueNo(issue.no))}</span>` : ""}${minutes ? `<span>閱讀約 ${minutes} 分鐘</span>` : ""}${corr ? `<span class="corr"><button type="button" data-corr aria-label="跳到文末的更正">本篇有更正（${md(corr)}）→</button></span>` : ""}${corr && String(a.updated_at || "").slice(0, 10) === corr ? "" : updatedNote(date, a)}${bylineOf(column) ? `<span class="by">${esc(bylineOf(column))}</span>` : ""}</div>${ruler}</div>
         ${fixtureHtml(fix)}
         ${a.from_reserve && column === "football" ? `<div class="banner">今晨新聞稿未能如期完成，先刊出這篇備用專題；最新消息併入下一期。</div>` : ""}
         ${a.status === "undetermined" ? `<div class="banner">本期查核未完成，無法判定是否有新進展；這不代表沒有新消息。</div>` : ""}
@@ -2463,6 +2464,42 @@ function viewWorld() {
 // 這則帶你去了: under a 快訊, the countries its items named, as the one way from an article into 你讀過的世界.
 const placesLine = (entry, column) => column === "news" && Array.isArray(entry?.places) && entry.places.length
   ? `<p class="small places">這則帶你去了：<a href="#/world">${esc(entry.places.map(placeName).join("、"))}</a></p>` : "";
+
+// 年代尺 (Zeitleiste): the hairline under an article's meta line becomes a scale of years — a tick a century, a gray dot
+// for each article of the same column this phone has read, the gold one for this article and its year under it. The
+// years are worked out at deploy (build_index.py article_year: "year", before Christ negative, and "century" when only
+// that is known, drawn hollow); an article without one gets no ruler, and the meta line keeps its plain hairline.
+// It is drawn with the page, in the same innerHTML, at a fixed 24px: nothing below it ever moves on its account.
+// Each column has its own span, from YEAR_FROM to this year; anything earlier stands in one dot at the left end, set
+// apart from the scale by a gap. One dot per hundredth of the scale, so a year of reading stays at most a hundred dots.
+const YEAR_FROM = { music: 1500, canon: 1500, literature: 1500, artwork: 1400, art: 1400, photo: 1800, civilization: 1000, architecture: 1000, city: 1000 };
+const yearText = (y, century) => century ? (y < 0 ? `西元前 ${Math.round((50 - y) / 100)} 世紀` : `${Math.floor(y / 100) + 1} 世紀`) : y < 0 ? `西元前 ${-y}` : String(y);
+function yearRuler(entry, column, date) {
+  if (!Number.isInteger(entry?.year)) return "";
+  const y0 = YEAR_FROM[column] ?? 1000, y1 = Number(twNow().date.slice(0, 4)), read = readSet();
+  const p = (y) => Math.min(1, (y - y0) / (y1 - y0));
+  const dots = new Map(); // a hundredth of the scale ("e": before it) → hollow?; a solid dot wins its place
+  for (const i of publishedIssues()) {
+    const x = i.date === date ? null : i.articles.find((a) => a.column === column);
+    if (!x || !Number.isInteger(x.year) || !read.has(`${i.date}/${column}`)) continue;
+    const k = x.year < y0 ? "e" : Math.round(p(x.year) * 100);
+    dots.set(k, (dots.get(k) ?? true) && Boolean(x.century));
+  }
+  const me = entry.year < y0 ? null : p(entry.year); // null: this article is earlier than the scale, at the left end
+  const early = me === null || dots.has("e");
+  const at = (q) => `style="--zp:${q.toFixed(4)}"`;
+  const gray = [...dots].filter(([k]) => !(k === "e" && me === null)) // the gold dot covers the left end's gray one
+    .map(([k, hollow]) => `<i class="g${hollow ? " c" : ""}${k === "e" ? " e" : ""}" ${k === "e" ? "" : at(k / 100)}></i>`).join("");
+  let ticks = "";
+  for (let y = Math.ceil(y0 / 100) * 100; y <= y1; y += 100) ticks += `<i class="tk" ${at(p(y))}></i>`;
+  // the two ends' years give way where this article's own would touch them (「16 世紀」 is wider than a year)
+  const last = Math.floor(y1 / 100) * 100, near = (q) => me === null ? q < 0.2 : Math.abs(q - me) < (entry.century ? 0.14 : 0.11);
+  const ends = (near(0) ? "" : `<span class="yr l" ${at(0)}>${y0}</span>`) + (near(p(last)) ? "" : `<span class="yr${p(last) > 0.96 ? " r" : ""}" ${at(p(last))}>${last}</span>`);
+  const side = me === null || me < 0.08 ? " l" : me > 0.92 ? " r" : "";
+  const gold = `<i class="me${entry.century ? " c" : ""}${me === null ? " e" : ""}" ${me === null ? "" : at(me)}></i>`
+    + `<span class="yr me-y${side}${me === null ? " e" : ""}" ${me === null ? "" : at(me)}>${esc(yearText(entry.year, entry.century))}</span>`;
+  return `<div class="zl${early ? " early" : ""}" aria-hidden="true"><i class="ax"></i>${ticks}${gray}${ends}${gold}</div>`;
+}
 
 // ——— 閱讀年鑑 (Lesekalender): the reading record this phone holds, drawn as a calendar ———
 // Everything here is read out of localStorage (read, digest.done, saved) and the issue index, so it works offline and

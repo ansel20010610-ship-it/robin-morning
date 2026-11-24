@@ -6,9 +6,9 @@ Besides the article cards, index.json carries what the app cannot work out on it
 (up to three articles that read on from it), football's "next" fixture, a news issue's "places" (the countries its
 items name, for the 讀過的世界 map; scripts/places.py), a corrected article's "corrected" date and one-line
 "correction" (from the 更正 callouts the weekly audit adds at the end of body, so the card can say so without the
-reader scrolling to the last block) and its "corrected_at", each issue's "press" record (the shift reports in
-state/runs/, for the owner's 印務室 page) and "late" note, and the top-level "stock" of reserve articles and
-"places" names.
+reader scrolling to the last block) and its "corrected_at", the "year" (and "century") of the 年代尺 under the article's
+meta line (article_year), each issue's "press" record (the shift reports in state/runs/, for the owner's 印務室 page)
+and "late" note, and the top-level "stock" of reserve articles and "places" names.
 
 A malformed article is skipped with a ::warning:: annotation; it must never fail the deploy, or every
 later issue would stay offline until someone fixes the file by hand. The same goes for a malformed runs file.
@@ -244,6 +244,126 @@ def correction(art):
     return date, first
 
 
+# 年代尺 (app.js yearRuler, the hairline under an article's meta line): the year each article is about, worked out here
+# from what the columns already write — no writing rule asks for it. Music, literature and canon take the year the work
+# first went out: its first performance, screening or release, else its first print (the music block has no field for
+# either, so music reads them off the facts card and its composed line, and falls back on the year it was written).
+# A building or a city's place takes the year it was first built, a picture or a photograph the year it was made, and
+# civilization the tail of its topic_key (rome-…-1c, …-1586, …-5c-bce, …-490-bce; a span takes its first part: -15c-16c
+# the 15th century, -5c-4c-bce the 5th century before Christ). Each column's sources are tried in turn, the
+# first that gives a year wins: (year, only the century is known), before Christ negative and a century its middle
+# year; or None, and the page draws no ruler.
+YEAR_COLUMNS = ("music", "civilization", "literature", "canon", "artwork", "architecture", "art", "photo", "city")
+# The two articles whose own fields give no year or the wrong one: the 三橋's 年代 line opens with a bridge on record in
+# 1280, but the oldest part standing is the stone bridge of 1842; 《唐吉訶德》 has no facts card at all.
+YEAR_FIX = {("2026-10-19", "city"): (1842, False), ("2026-11-07", "canon"): (1605, False)}
+STAGED = ("首演", "首映", "首播", "上映", "發售")  # a first performance, screening or release: before a first print
+PRINTED = ("初刊", "首次出版", "首次發表", "首次刊出", "首版", "出版", "發表")
+WRITTEN = ("創作", "寫作", "作曲", "完成")
+BUILT = ("年代", "建造", "現存主體", "建立", "形成", "動工", "天守")
+# facts lines whose years belong to someone or something else (a life, a listing, a purchase, the conductor or cast of a
+# premiere: 「首演指揮」 is a person's line, not the premiere's) never stand for the work
+NOT_THE_WORK = ("作者", "作家", "設計者", "攝影", "世界遺產", "保護", "目前用途", "權利", "收藏", "館藏", "尺寸", "規模",
+                "古蹟身分", "翻拍", "獎項", "譯", "對照", "影像", "數位檔", "底片", "登錄", "取得", "現藏", "現在在哪裡",
+                "指揮", "卡司", "演員", "導演", "編舞")
+BCE_YEAR = re.compile(r"(公元|西元)?前\s*(\d{1,4})\s*(世紀|年)?")  # 「前 3 名」 is not one: 西元／公元 before it or 年／世紀 after it
+CE_YEAR = re.compile(r"(?<!\d)(\d{3,4})(?!\d)")
+CENTURY = re.compile(r"(?<!\d)(\d{1,2})(?:\s*[–—-]\s*\d{1,2})?\s*世紀")
+
+
+def year_in(text, strict=False):
+    """The first year written in text, as (year, century_only), or None. A three-digit number counts only with 年 after
+    it (第 580 號 is not a year), a four-digit one only up to this year (2,500 公尺). strict (a title, dek or brief): only
+    「N 年」 and 「前 N 年」, no centuries."""
+    if not isinstance(text, str):
+        return None
+    found = []  # (position, year, century_only)
+    for m in BCE_YEAR.finditer(text):
+        if m.group(3) == "世紀" and not strict:
+            found.append((m.start(), -int(m.group(2)) * 100 + 50, True))
+            break
+        if m.group(3) == "年" or (m.group(1) and not strict):
+            found.append((m.start(), -int(m.group(2)), False))
+            break
+    for m in CE_YEAR.finditer(text):
+        y, nian = int(m.group(1)), re.match(r"\s*(?:[–—-]\s*\d{3,4}\s*)?年", text[m.end():m.end() + 10])  # 「約 780–833 年」 too
+        if (strict or y < 1000) and not nian or y > dt.date.today().year:
+            continue
+        if any(y0 < 0 and 0 <= m.start() - p <= 6 for p, y0, _ in found):  # the number of 「前 27 年」 itself
+            continue
+        found.append((m.start(), y, False))
+        break
+    if not strict:
+        for m in CENTURY.finditer(text):
+            if not any(abs(m.start() - p) <= 6 for p, _, _ in found):  # 「前 8 世紀」 is already in
+                found.append((m.start(), (int(m.group(1)) - 1) * 100 + 50, True))
+            break
+    return min(found)[1:] if found else None
+
+
+def article_year(art, col, day):
+    """(year, century_only) for the 年代尺, or None (see YEAR_COLUMNS above)."""
+    if (day, col) in YEAR_FIX:
+        return YEAR_FIX[(day, col)]
+    if col not in YEAR_COLUMNS:
+        return None
+    blocks = ([art["hero"]] if isinstance(art.get("hero"), dict) else []) + [b for b in art.get("body") or [] if isinstance(b, dict)]
+    facts = [(str(r[0]), str(r[1])) for b in blocks if b.get("type") == "facts" and isinstance(b.get("items"), list)
+             for r in b["items"] if isinstance(r, (list, tuple)) and len(r) >= 2]
+    work = [(k, v) for k, v in facts if not any(w in k for w in NOT_THE_WORK)]
+
+    def labelled(words, rows=facts):  # every year on a facts line whose label holds one of the words
+        return [y for k, v in rows if any(w in k for w in words) for y in [year_in(v)] if y]
+
+    def first(*words):
+        got = labelled(words)
+        return got[0] if got else None
+
+    def any_line():
+        return next((y for k, v in work for y in [year_in(v)] if y), None)
+
+    def text():
+        return next((y for f in ("title", "dek", "brief") for y in [year_in(art.get(f), strict=True)] if y), None)
+
+    def made():
+        return year_in(art["hero"].get("made")) if isinstance(art.get("hero"), dict) else None
+
+    if col == "civilization":
+        tail = str(art.get("topic_key") or "").rsplit(":", 1)[-1]
+        if not re.search(r"-\d{1,2}c-bce-\d{1,2}c$", tail):  # a span across the turn of the era (2c-bce-1c) has no one year
+            m = re.search(r"-(\d{1,2})c(?:-\d{1,2}c)?-bce$", tail)
+            if m:
+                return -int(m.group(1)) * 100 + 50, True
+            m = re.search(r"-(\d{1,4})(?:-\d{1,4})?-bce$", tail)
+            if m:
+                return -int(m.group(1)), False
+            m = re.search(r"-(\d{1,2})c(?:-\d{1,2}c)?$", tail)
+            if m:
+                return (int(m.group(1)) - 1) * 100 + 50, True
+            m = re.search(r"-(\d{3,4})(?:-\d{3,4})?$", tail)
+            if m:
+                return int(m.group(1)), False
+        return text()
+    if col in ("music", "literature", "canon"):
+        # out first: the earliest premiere (or release), else the earliest print — from the facts card and, in music, from
+        # the clauses of the music block's composed that say 首演 or 出版 (「…；1836 年出版」)
+        composed = [b.get("composed") for b in blocks if b.get("type") == "music" and isinstance(b.get("composed"), str)]
+        clauses = [(c, c) for s in composed for c in re.split(r"[；;，,。（）()]", s)]
+        for words in (STAGED, PRINTED):
+            got = labelled(words, work) + labelled(words, clauses)
+            if got:
+                return min(got)
+        if composed and year_in(composed[0]):
+            return year_in(composed[0])
+        return first(*WRITTEN) or first("作品", "名稱", "片名") or any_line() or text()
+    if col in ("architecture", "city"):
+        got = labelled(BUILT)
+        return min(got) if got else any_line() or text()
+    if col == "photo":
+        return first("拍攝", "年代") or made() or text()
+    return first("年代", "創作") or made() or text()  # artwork, art
+
+
 def plain_text(art):
     parts = [art.get("title", ""), art.get("dek", "")]
     for b in art.get("body") or []:
@@ -447,6 +567,15 @@ def main():
                 entry["serial"] = art["serial"]
             if isinstance(art.get("takeaway"), str) and art["takeaway"].strip():  # perio: shown on the saved and column lists
                 entry["takeaway"] = art["takeaway"].strip()
+            try:
+                year = article_year(art, col, day)
+            except Exception as e:  # noqa: BLE001 — a year is never worth the article: it goes out without its ruler
+                print("::warning file=%s::build_index 算不出年代尺的年份：%s: %s" % (os.path.relpath(path, ROOT), type(e).__name__, e))
+                year = None
+            if year:  # the article page's 年代尺 (app.js yearRuler); before Christ negative
+                entry["year"] = year[0]
+                if year[1]:
+                    entry["century"] = True  # only the century is known: the year is its middle and the dot is hollow
             nxt = next_match(art.get("next"))
             if nxt:
                 entry["next"] = nxt

@@ -345,6 +345,26 @@ button { font: inherit; color: inherit; }
 .article-head .meta { font-family: var(--sans); font-size: 12.5px; color: var(--muted); letter-spacing: .04em; padding-bottom: 12px; border-bottom: 1px solid var(--rule); overflow: hidden; font-variant-numeric: tabular-nums; }
 :is(.article-head, .random .card) .meta .row { display: flex; flex-wrap: wrap; row-gap: 3px; margin-left: -11px; }
 :is(.article-head, .random .card) .meta .row > span { white-space: nowrap; padding: 0 10px; border-left: 1px solid var(--gold-soft); line-height: 1.5; }
+/* 年代尺 (app.js yearRuler) takes the hairline's place, at its width and 20px taller: a tick a century, the gray dots of
+   the column's articles read here (one opaque colour, so two at one place do not read darker), the gold one of this
+   article. 5px stay clear at either end, where the meta's overflow would cut a dot in half; .early opens a gap after the
+   left end's dot, which stands for everything before the scale. */
+.article-head .meta.has-zl { padding-bottom: 0; border-bottom: 0; }
+.zl { --e: 0px; position: relative; height: 24px; margin: 9px 0 0; }
+.zl.early { --e: 14px; }
+.zl > * { position: absolute; left: calc(5px + var(--e) + (100% - 10px - var(--e)) * var(--zp, 0)); }
+.zl .ax { left: 0; right: 0; top: 5px; height: 1px; background: var(--rule); }
+.zl.early .ax { left: var(--e); }
+.zl .tk { top: 5px; width: 1px; height: 4px; margin-left: -.5px; background: var(--rule); }
+.zl .g { top: 5px; width: 5px; height: 5px; margin: -2.5px 0 0 -2.5px; border-radius: 50%; background: color-mix(in srgb, var(--muted) 42%, var(--paper)); }
+.zl .g.c { background: var(--paper); border: 1px solid color-mix(in srgb, var(--muted) 70%, var(--paper)); }
+.zl .me { top: 5px; width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 2px var(--paper); }
+.zl .me.c { background: var(--paper); border: 1.5px solid var(--gold); }
+.zl .e { left: 5px; }
+.zl .yr { top: 10px; transform: translateX(-50%); font-family: var(--sans); font-size: 11px; line-height: 14px; letter-spacing: .03em; color: var(--muted); white-space: nowrap; }
+.zl .yr.l { transform: translateX(-5px); }
+.zl .yr.r { transform: translateX(calc(5px - 100%)); }
+.zl .yr.me-y { color: var(--gold-ink); font-weight: 600; }
 .banner { font-family: var(--sans); font-size: 13.5px; line-height: 1.6; padding: 10px 12px; margin: 14px 0 0; border-left: 3px solid var(--wine); background: var(--paper-2); color: var(--ink-2); }
 .banner.gold { border-left-color: var(--gold); }
 
