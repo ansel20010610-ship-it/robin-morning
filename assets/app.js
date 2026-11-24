@@ -13,6 +13,7 @@ import { pressHtml } from "./press.js";
 import { fetchWeather, weatherHtml, keptWeather } from "./wetter.js";
 import { skyLine, skyRow, eveningRain, ferienLine } from "./almanac.js";
 import { boerseBox, fillBoerse } from "./boerse.js";
+import { outdoorFront, closeOutdoor } from "./outdoor-card.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { adventHtml, wireAdvent } from "./advent.js";
@@ -672,10 +673,11 @@ function weatherBox(issue) {
 // midnight does not look the table up for another day. A later forecast never adds the row to a box drawn without it.
 const skyState = (d, day) => (skyLine(day) && !eveningRain(d) ? "on" : "off");
 const skyHtml = (sky, day) => (sky === "on" || sky === "blank" ? skyRow(skyLine(day), sky === "blank") : "");
+// The forecast it was filled with (null for none), for the 出門前 card (outdoor-card.js).
 function fillWeather() {
   const box = main.querySelector(".wrap > .wetter");
-  if (!box) return;
-  fetchWeather().then((d) => {
+  if (!box) return Promise.resolve(null);
+  return fetchWeather().then((d) => {
     const html = d ? weatherHtml(d) : "";
     if (html && box.isConnected) {
       const day = box.dataset.day, was = box.dataset.sky, sky = !was ? skyState(d, day) : was === "on" && eveningRain(d) ? "blank" : was;
@@ -685,6 +687,7 @@ function fillWeather() {
       else fc.innerHTML = html + skyHtml(sky, day);
       box.hidden = false;
     }
+    return d;
   });
 }
 // 外電 (Telegramme; scripts/wire.py, the owner 2026-11-07: the paper should not be finished once read): a thin bar under
@@ -992,9 +995,11 @@ function viewFront(dateParam) {
   fillReveal();
   fillWire();
   fillBoerse(main); // 市場行情 under the wires (assets/boerse.js): drawn already, from the kept figures or empty; filled in place
-  fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
+  const wx = fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
   if (evening) letterForm(main.querySelector(".night-letter-slot"), true);
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
+  // 出門前 (outdoor-card.js): today's paper only; it comes up by itself once per issue, not from 往期 nor under ?preview
+  if (todays(issue)) outdoorFront({ box: main.querySelector(".wrap > .wetter"), head: main.querySelector(".masthead"), issue, weather: wx, pop: !dateParam && !isPreview() });
   if (erst) setTimeout(() => goldRain(main.querySelector(".masthead.erst .crest")), fresh ? 2200 : 700);
 }
 
@@ -2861,6 +2866,7 @@ async function route(ev) {
   cleanup(); cleanup = () => {};
   if ($("#sheet")?.open) $("#sheet").close(); // the contents sheet (or any other) does not outlive the page it was raised from
   if ($("#viewer")?.open) $("#viewer").close(); // nor a picture opened large (blocks.js openViewer): a step back left it standing over the page before
+  closeOutdoor(); // nor the 出門前 card
   document.title = S.cfg.title;
   const h = location.hash || "#/";
   enteredFront = shownHash !== h;

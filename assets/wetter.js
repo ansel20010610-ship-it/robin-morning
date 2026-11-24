@@ -55,31 +55,41 @@ const GLYPH = {
 };
 const GLYPH_OF = { 晴: "sun", 大致晴: "sunCloud", 多雲時晴: "sunCloud", 多雲: "cloud", 有霧: "fog", 毛毛雨: "rain", 有雨: "rain", 陣雨: "rain", 下雪: "snow", 雷雨: "storm" };
 
-// The two lines: the glyph, 台中 and the day's range, the condition — the daily code's word, or 「早轉午」 when the 08:00
-// and 14:00 hourly codes give different words — the chance of rain and the sunrise; under them the 08, 14 and 20 o'clock
-// readings. A reading that is not a number is left out; with no range at all there is no line. "" on anything malformed.
-export function weatherHtml(d) {
+// The day's figures, for the two lines below and for the 出門前 card (outdoor-card.js): the glyph, the range, the
+// condition — the daily code's word, or 「早轉午」 when the 08:00 and 14:00 hourly codes give different words — the
+// chance of rain (NaN when not a number), the sunrise ("" when none) and the 08, 14 and 20 o'clock readings ([] unless
+// all three are numbers). null with no range at all, or on anything malformed.
+export function weatherFacts(d) {
   try {
     const day = d.daily, h = d.hourly;
     const num = (v) => (typeof v === "number" && Number.isFinite(v) ? v : NaN);
     const at = (hh) => { const i = h.time.findIndex((t) => typeof t === "string" && t.endsWith(`T${hh}:00`)); return i < 0 ? Number(hh) : i; };
     const [am, pm, eve] = ["08", "14", "20"].map(at);
     const lo = num(day.temperature_2m_min?.[0]), hi = num(day.temperature_2m_max?.[0]);
-    if (Number.isNaN(lo) || Number.isNaN(hi)) return "";
+    if (Number.isNaN(lo) || Number.isNaN(hi)) return null;
     const codes = Array.isArray(h.weather_code) ? h.weather_code : [];
     const word = wmoWord(day.weather_code?.[0]), w1 = codes[am] == null ? word : wmoWord(codes[am]), w2 = codes[pm] == null ? word : wmoWord(codes[pm]);
     const cond = w1 !== w2 ? `${w1}轉${w2}` : word;
     const rain = num(day.precipitation_probability_max?.[0]);
     const rise = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(day.sunrise?.[0] || "") ? day.sunrise[0].slice(11, 16) : "";
-    const n = (x) => `<b>${esc(x)}</b>`, deg = (t) => `${Math.round(t)}°`;
     const temps = Array.isArray(h.temperature_2m) ? [am, pm, eve].map((i) => num(h.temperature_2m[i])) : [];
-    // Each reading is one unbreakable segment ending in its separator, so a narrow screen wraps the line between
-    // readings — never inside one, and never with the glyph alone on a line (U+30FB may not start a line anyway).
-    const segs = [`台中 ${n(`${Math.round(lo)}–${Math.round(hi)}°`)}`, esc(cond)];
-    if (!Number.isNaN(rain)) segs.push(`降雨 ${n(`${Math.round(rain)}%`)}`);
-    if (rise) segs.push(`日出 ${n(rise)}`);
-    const seg = (s, i, arr) => `<span class="w">${s}${i < arr.length - 1 ? "・" : ""}</span>`;
-    const row2 = temps.length === 3 && !temps.some(Number.isNaN) ? `<div class="row two"><span class="w">早 ${n(deg(temps[0]))}・午 ${n(deg(temps[1]))}・晚 ${n(deg(temps[2]))}</span></div>` : "";
-    return `<div class="row"><span class="w">${GLYPH[GLYPH_OF[word]] || GLYPH.cloud}</span>${segs.map(seg).join("")}</div>${row2}`;
-  } catch { return ""; }
+    return { glyph: GLYPH[GLYPH_OF[word]] || GLYPH.cloud, lo, hi, cond, rain, rise, temps: temps.length === 3 && !temps.some(Number.isNaN) ? temps : [] };
+  } catch { return null; }
+}
+
+// The two lines: the glyph, 台中 and the day's range, the condition, the chance of rain and the sunrise; under them the
+// 08, 14 and 20 o'clock readings. A reading that is not a number is left out; with no range at all there is no line.
+// "" on anything malformed.
+export function weatherHtml(d) {
+  const f = weatherFacts(d);
+  if (!f) return "";
+  const n = (x) => `<b>${esc(x)}</b>`, deg = (t) => `${Math.round(t)}°`;
+  // Each reading is one unbreakable segment ending in its separator, so a narrow screen wraps the line between
+  // readings — never inside one, and never with the glyph alone on a line (U+30FB may not start a line anyway).
+  const segs = [`台中 ${n(`${Math.round(f.lo)}–${Math.round(f.hi)}°`)}`, esc(f.cond)];
+  if (!Number.isNaN(f.rain)) segs.push(`降雨 ${n(`${Math.round(f.rain)}%`)}`);
+  if (f.rise) segs.push(`日出 ${n(f.rise)}`);
+  const seg = (s, i, arr) => `<span class="w">${s}${i < arr.length - 1 ? "・" : ""}</span>`;
+  const row2 = f.temps.length ? `<div class="row two"><span class="w">早 ${n(deg(f.temps[0]))}・午 ${n(deg(f.temps[1]))}・晚 ${n(deg(f.temps[2]))}</span></div>` : "";
+  return `<div class="row"><span class="w">${f.glyph}</span>${segs.map(seg).join("")}</div>${row2}`;
 }

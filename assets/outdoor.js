@@ -1,7 +1,7 @@
 // 出門前 (Vor dem Ausgehen): Taichung's air, weather warnings and closures, out of content/outdoor.json — written at every
-// deploy, so every half hour, by scripts/outdoor.py from the agencies' own public files (no key, no AI). Not drawn
-// anywhere yet: the card's look is still to be chosen, and so is the air station it shows, so the file carries all six
-// Taichung stations and outdoorLines takes the station's name.
+// deploy, so every half hour, by scripts/outdoor.py from the agencies' own public files (no key, no AI). Drawn by
+// outdoor-card.js (the card on today's front page); the file carries all six Taichung stations and outdoorLines takes
+// the station's name, so the one the card reads is a constant there (AIR_STATION).
 import { getJSON } from "./util.js";
 
 // The file as it is, or null: no file (a preview, offline on a first run), a failed fetch, or something that is not one.
@@ -59,6 +59,8 @@ function airPart(s, site, now) {
 
 function alertsPart(s, now) {
   if (!usable(s, now) || !Array.isArray(s.items)) return { state: "fail", stale: false, items: [] };
+  // entries and not one of them with a name: a file gone wrong, which must not read as a day without warnings
+  if (s.items.length && !s.items.some((x) => x && typeof x.name === "string" && x.name)) return { state: "fail", stale: false, items: [] };
   // a kept copy can hold a warning that has run out since: gone by its own end time
   const items = s.items.filter((x) => x && typeof x.name === "string" && x.name && !(ms(x.validto) < now)).map((x) => {
     const where = wherePhrase(x.areas, x.whole);
@@ -69,8 +71,9 @@ function alertsPart(s, now) {
 }
 
 // A line of the page: the day it speaks of, read at its start after any 臺中市和平區: in front, and what it stops.
-// A part of the day counts (今天下午停止上班…); 今天照常上班、停止上課 stops school only.
-function closureLine(x) {
+// A part of the day counts (今天下午停止上班…); 今天照常上班、停止上課 stops school only. outdoor-card.js reads tomorrow's
+// lines with it too (the heading row's 明天停班停課).
+export function closureLine(x) {
   const m = x.match(/^([^:：]*)[:：](.*)$/);
   const say = (m && !/今天|明天/.test(m[1]) ? m[2] : x).replace(/^[臺台]中市/, "").trim();
   return { when: /^今天/.test(say) ? "今天" : /^明天/.test(say) ? "明天" : "",
