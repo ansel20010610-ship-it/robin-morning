@@ -30,7 +30,7 @@ App 把它放在首頁最下面，另有完整頁面 `#/concerts`。演出日一
 
 ## 每天的流程（演出班，台灣時間 05:30，API；06:47 雲端排程後備；要在 07:30 出刊前推完）
 1. `python3 scripts/concerts.py prune`：清掉已經演完的場次。
-2. `python3 scripts/concerts.py fetch`：從文化部、OPENTIX 與三個國家場館的節目表抓新候選，存成 `/tmp/robin/concert-candidates.md`。這一步會跑幾分鐘，指令的逾時設 10 分鐘。
+2. `python3 scripts/concerts.py fetch`：從文化部、OPENTIX、三個國家場館與巴赫靈感的節目表抓新候選，存成 `/tmp/robin/concert-candidates.md`。這一步會跑幾分鐘，指令的逾時設 10 分鐘。
    - 印出「查核失敗」（兩個來源都讀不到）就跳到第 7 步。
    - fetch 印出「來源讀不到」「沒核對」「沒讀到」「不再讀」的行，照抄進班次回報。
    - 印出「開放資料這次不完整」時，已列入的演出不必逐筆去查售票頁，照常處理新候選。

@@ -2,8 +2,8 @@
 """近期演出: the standing list of concerts, operas and musicals at the foot of the front page (content/concerts.json).
 It is not part of any issue; the 演出資訊 routine keeps it current (editorial/columns/concerts.md).
 
-  python3 scripts/concerts.py fetch            # new candidates from the Ministry of Culture's open data, OPENTIX and the
-                                               #   three national venues' programme lists (scripts/venues.py)
+  python3 scripts/concerts.py fetch            # new candidates from the Ministry of Culture's open data, OPENTIX, the
+                                               #   three national venues' programme lists and 巴赫靈感's (scripts/venues.py)
                                                #   → /tmp/robin/concert-candidates.md (+ .json for `close`); the same
                                                #   file ends with 「## 已列入演出的異動」 when the feed's or OPENTIX's
                                                #   shows for a listed event differ from concerts.json (vanished, changed, new)
@@ -19,8 +19,8 @@ It is not part of any issue; the 演出資訊 routine keeps it current (editoria
   python3 scripts/concerts.py ot-scan [--all | --days N] --out FILE   # OPENTIX pages parsed into FILE; no state touched
 
 Exit codes, for other programs: 0 done; 2 nothing recorded (fetch: neither the feed nor OPENTIX could be read; sweep-done:
-no evidence or a malformed one); 3 not finished (fetch: one of the two sources or a venue's list could not be read, or the
-feed was incomplete; sweep-done: evidence kept but a source was not looked at; sweep-due: the sweep is overdue).
+no evidence or a malformed one); 3 not finished (fetch: one of the two sources, a venue's list or 巴赫靈感's page could not
+be read, or the feed was incomplete; sweep-done: evidence kept but a source was not looked at; sweep-due: the sweep is overdue).
 
 Seen UIDs live in state/concerts/seen.json: a listed or rejected candidate is not offered again, unless a rejected one
 gets a new date or city, or `reopen` puts it back. Stdlib only.
@@ -71,10 +71,11 @@ SWEEP_EVERY = 2  # days
 # looked at the others or at the three venues, and was recorded as finished all the same; the Ukrainian National Opera
 # orchestra's 貝九 (12/26 衛武營, 12/27 國家音樂廳, sold outside OPENTIX) was on none of the pages it opened.
 SWEEP_SOURCES = {
-    "mna": "牛耳藝術（mna.com.tw，逐一打開每一檔的詳情頁）",
-    "pbc": "鵬博藝術的節目頁",
-    "newaspect": "新象的節目頁",
-    "tanart": "傳大藝術的節目頁",
+    "mna": "牛耳藝術（https://www.mna.com.tw/concerts.html，共 2 頁，逐一打開每一檔的詳情頁；日期沒有年份，看詳情頁）",
+    "pbc": "鵬博藝術（https://bloomingarts.com.tw 停在 2020 年、https://www.pbc.com.tw 憑證不符；打得開就看，打不開照實寫進證據檔）",
+    "newaspect": "新象（https://www.newaspect.org.tw 首頁的節目選單；沒有清單頁）",
+    "tanart": "傳大藝術（https://www.arsformosa.com.tw/h/News?key=895669656116；清單的日期是發文日，演出日在內頁；"
+              "robots.txt 寫 Crawl-delay: 50，兩次請求之間至少隔 50 秒）",
     "kham": "寬宏藝術（kham.com.tw）",
     "udn": "聯合數位文創（udnfunlife）與其他音樂劇、歌劇主辦（時藝多媒體等；售票在 KKTIX、年代、寬宏）",
     "ntch": "國家兩廳院節目頁（npac-ntch.org，含 TIFA 與 NSO 樂季；場館自售的不一定進開放資料）",
@@ -164,7 +165,7 @@ def note_fetch(day, problem, dropped=None, sources=None, whole=True):
     """Writes fetch.json: `complete` (false with the reason in `note`; `incomplete_since` is the first day of a run of
     such fetches) and `dropped`, what the title filters kept from being rated (left as it was when the feed failed);
     `sources`, whether each source could be read today, and `log`, a line a day for the last LOG_DAYS days (feed: read
-    and whole; opentix: read; venues: all three read, left out when they were not read: ok null)."""
+    and whole; opentix: read; venues: all three and 巴赫靈感 read, left out when they were not read: ok null)."""
     old = load(FETCHED, {})
     rec = {"date": day, "complete": not problem, "note": problem,
            "incomplete_since": (old.get("incomplete_since") or day) if problem else None,
@@ -512,8 +513,11 @@ def fetch(a):
                 feed_shows.setdefault(listed[uid]["id"], []).extend(in_window)
             return "listed"
         oids = [] if mine else list(dict.fromkeys(opentix.ids_in("%s %s" % (e.get("webSales"), e.get("sourceWebPromote")))))
-        if any(i in ot_listed or i in seen or i in handed for i in oids):
+        done = [i for i in oids if i in ot_listed or i in seen or i in handed]
+        if done and (len(done) == len(oids) or not venues.is_venue(uid)):
             return "OPENTIX"  # the feed's (or a venue's) entry for an OPENTIX programme already listed, rated or OPENTIX's to rate
+        #                   (v3: a venue's only when every id is: 巴赫靈感 has a link a show, and the show of an id OPENTIX
+        #                   cannot read, let go or never saw would be nobody's; one id, as the three venues have, is as before)
         if mine:
             fate[uid] = ("none", None)  # no show the list could take (ot_finish: unless not every show was read)
         if not shows:
@@ -540,9 +544,11 @@ def fetch(a):
         units = "、".join(u for u in (e.get("masterUnit") or []) + [e.get("showUnit") or ""] if u)
         sold = []
         if venues.is_venue(uid):  # sold on OPENTIX, and a candidate here all the same: said why
-            sold = ["OPENTIX 那一路讀不到這一頁（編號 %s）" % "、".join(x) for x in [[i for i in oids if i in failing]] if x]
-            sold += ["OPENTIX 那一路不追這一頁（編號 %s）" % "、".join(x) for x in [[i for i in oids if i in let_go]] if x]
-            sold += ["售票在 OPENTIX（編號 %s），OPENTIX 那一路還沒看過" % "、".join(x) for x in [[i for i in oids if i not in failing and i not in let_go]] if x]
+            rest = [i for i in oids if i not in done]
+            sold = ["OPENTIX 那一路讀不到這一頁（編號 %s）" % "、".join(x) for x in [[i for i in rest if i in failing]] if x]
+            sold += ["OPENTIX 那一路不追這一頁（編號 %s）" % "、".join(x) for x in [[i for i in rest if i in let_go]] if x]
+            sold += ["售票在 OPENTIX（編號 %s），OPENTIX 那一路還沒看過" % "、".join(x) for x in [[i for i in rest if i not in failing and i not in let_go]] if x]
+            sold += ["其中編號 %s 已在 OPENTIX 那一路（已列入、判過或待判）" % "、".join(done)] if done else []  # v3
         cands.append({"uids": [uid], "category": "音樂" if cat == 1 else "戲劇", "title": title, "shows": shows, "again": again,
                       "url": e.get("sourceWebPromote") or e.get("webSales") or "", "sales": e.get("webSales") or "",
                       "source": e.get("sourceWebName") or "", "units": units, "desc": desc[:240], "sold": sold})
@@ -564,7 +570,7 @@ def fetch(a):
     # the same morning); one whose page it cannot read (tries), one it let go or judged not for it (known, v3: after 21
     # days of tries an id moves there), or an id it never saw, stays a venue candidate, said so.
     vs = venues.read(day, end, lambda timeout, retries, pause: room(start, timeout, retries, pause))
-    vdown = ["%s節目表（%s）" % (venues.NAMES[k], v["note"]) for k, v in vs.items() if not v["ok"]]
+    vdown = ["%s（%s）" % (venues.LABEL[k], v["note"]) for k, v in vs.items() if not v["ok"]]
     vsrc = {"ok": not vdown, "note": "、".join(vdown), "read": {k: {x: v[x] for x in ("ok", "n", "note")} for k, v in vs.items()}}
     handed, failing, let_go = set(), set(), set()
     try:
@@ -642,21 +648,23 @@ def fetch(a):
         print("來源讀不到：OPENTIX（%s）" % ot["note"])
     for x in vdown:
         print("來源讀不到：" + x)
+    def rejected_bach(u):  # v4: a 巴赫靈感 programme rejected before and not understood now is said all the same (a show added
+        return venues.of(u) == "bach" and (seen.get(u) or {}).get("v") == "rejected"  # in a way not read); the three as before
     for k, v in vs.items():  # every venue said, read or not; a programme not understood is never silent nor 「不在範圍」
-        name, t = venues.NAMES[k], tally[k]
-        bad = {w: [x for u, x, y in v["bad"] if y == w and u not in listed and u not in seen] for w in ("讀不出場次", "廳名不認得", "類別不認得", "節目卡看不懂", "標題太長", "場次太多")}
+        name, t = venues.LABEL[k], tally[k]
+        bad = {w: [x for u, x, y in v["bad"] if y == w and u not in listed and (u not in seen or rejected_bach(u))] for w in ("讀不出場次", "廳名不認得", "類別不認得", "節目卡看不懂", "標題太長", "場次太多")}
         t["listed"] += len(v["bad"]) - sum(map(len, bad.values()))  # not understood but listed, or rated: not said again
         if v["ok"]:
-            print("%s節目表：讀到 %d 檔，候選 %d、已列入或已判 %d、交給 OPENTIX %d、不在範圍 %d%s%s" % (
+            print("%s：讀到 %d 檔，候選 %d、已列入或已判 %d、交給 OPENTIX %d、不在範圍 %d%s%s" % (
                 name, v["n"], t["candidate"], t["listed"], t["OPENTIX"], t["out"] + v["out"], "、已取消 %d" % v["cancelled"] if v["cancelled"] else "",
                 "；類別代號不認得 %d 檔" % v["odd"] if v["odd"] else ""))
         for w, xs in bad.items():  # 「沒讀到」: one of the words concerts.md step 2 has copied into the run's report (v3)
             if xs:
-                print("%s節目表有 %d 檔沒讀到（%s）：%s" % (name, len(xs), w, "、".join(x or "（沒有標題）" for x in xs[:5])))
+                print("%s有 %d 檔沒讀到（%s）：%s" % (name, len(xs), w, "、".join(x or "（沒有標題）" for x in xs[:5])))
         if v["full"]:
-            print("%s節目表：%s" % (name, v["note"]))  # 讀滿 N 檔: read, not complete for sure (v2)
+            print("%s：%s" % (name, v["note"]))  # 讀滿 N 檔: read, not complete for sure (v2)
         if v["dup"]:
-            print("%s節目表有 %d 筆沒讀到（編號重複，只留第一筆）：%s" % (name, len(v["dup"]), "、".join(v["dup"][:5])))
+            print("%s有 %d 筆沒讀到（編號重複，只留第一筆）：%s" % (name, len(v["dup"]), "、".join(v["dup"][:5])))
     if ot["left"]:
         print("OPENTIX 還有 %d 個新節目留到下次" % ot["left"])
     if ot["unread"]:

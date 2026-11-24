@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """The three national venues' own programme lists, the third source of 近期演出 (spec 補查改由程式先讀 v1, v2): 國家兩廳院
 (ntch), 衛武營 (wwy) and 臺中國家歌劇院 (ntt). Reading and parsing only; scripts/concerts.py fetch rates what comes back,
-after OPENTIX (v2: the venues never take OPENTIX's time).
+after OPENTIX (v2: the venues never take OPENTIX's time). After the three, one presenter's page read the same way (乙第二步):
+巴赫靈感 (bach), https://bachinspiration.org/events, every programme on one page.
 
   read(day, end, room, get)   one list request a venue (衛武營: a second or third page only when its count says so);
                               {venue: {"ok", "n", "note", "rows": [(category, row in the feed's shape)], "out": known and
                               not for the list, "cancelled", "bad": [(uid, title, why)] not understood (never rated),
                               "odd": 衛武營 catalogue codes not known, "full": programmes read when the list came back as
                               long as asked for (there may be more), "dup": uids that came twice (the first kept)}}
-  is_venue(uid), of(uid)      a venue's uid (ntch:<id>, wwy:<_id>, ntt:<c-code>), and which venue
+                              (bach among them, after ntt)
+  is_venue(uid), of(uid)      a venue's uid (ntch:<id>, wwy:<_id>, ntt:<c-code>, bach:<gallery item id>), and which venue
 
 No detail pages, no short links: each venue is read whole every day and nothing is kept between days (like the feed).
 The paper's own User-Agent (common.http_get), no cookies, no retry; PAUSE between two requests. Stdlib only.
@@ -25,8 +27,9 @@ import urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import TW, http_get  # noqa: E402
 
-NAMES = {"ntch": "國家兩廳院", "wwy": "衛武營", "ntt": "臺中國家歌劇院"}
-PREFIX = tuple(k + ":" for k in NAMES)
+NAMES = {"ntch": "國家兩廳院", "wwy": "衛武營", "ntt": "臺中國家歌劇院"}  # the three venues (also sources of the sweep)
+LABEL = dict({k: v + "節目表" for k, v in NAMES.items()}, bach="巴赫靈感")  # every source read here, as fetch names it
+PREFIX = tuple(k + ":" for k in LABEL)
 PAUSE = 1.5
 TIMEOUT = 30
 TRIES = 0  # no retry (v2): a venue that hangs costs one timeout
@@ -72,6 +75,44 @@ NTT_PLACE = re.compile(r'class="events-place">(?:<i[^>]*></i>)?([^<]*)<')
 NTT_DAY = re.compile(r"(\d{4})/(\d{1,2})/(\d{1,2})")
 NTT_BUY = re.compile(r'btn-buy-ticket"\s+href="([^"]*)"')
 TRACKING = re.compile(r"^(utm_\w*|gclid|gbraid|wbraid|gad_source|gad_campaignid|fbclid|srsltid|msclkid|dclid|_gl)$", re.I)  # ad tracking
+# 巴赫靈感 (乙第二步): a Squarespace gallery, as the page of 2026-11-22 is written. Each programme begins at BACH_ITEM, with
+# its own id right after (the uid: the gallery has no page of its own for a programme), then the title in BACH_TITLE and
+# the text in BACH_DESC, one show a line: 「🎫 2026/12/18 （五）19:30 高雄 衛武營音樂廳」, written inside the <a> of its
+# OPENTIX page once on sale, and until then as plain text ending 「（即將啟售）」. Only 🎫 followed by a digit is a show (「🎫 套票85折
+# 優惠」 is not). Read with str.find and one pattern match per line on collapsed spaces: no input makes it slow.
+BACH = "https://bachinspiration.org/events"  # this page only: no item page, no ?format=json or ?format=ical (robots.txt)
+BACH_ITEM = '<div class="image-wrapper"'
+BACH_ID = re.compile(r'\s+id="([A-Za-z0-9_-]+)"')
+BACH_TITLE = ('<h3 class="meta-title">', "</h3>")
+BACH_DESC = ('<div class="meta-description">', "</div>")
+BACH_BREAK = ("br", "p", "/p", "div", "/div", "li", "/li")  # what ends a line of the text
+BACH_HREF = re.compile(r'\shref="')  # the link is up to the next " (str.find)
+BACH_SHOW = re.compile(r"(\d{4}) ?/ ?(\d{1,2}) ?/ ?(\d{1,2}) ?(?:[（(]([^（）()]{0,8})[）)])? ?(?:(\d{1,2}) ?[:：] ?(\d{2}))? ?(.*)$")
+BACH_WEEKDAY = "一二三四五六日天"  # v4: the brackets after the date hold the day of the week and nothing else (取消, 加演…: 讀不出場次)
+BACH_NOTE = re.compile(r"[（(]([^（）()]*)[）)]$")  # a note in brackets after the hall
+# v3: the notes taken off as saying nothing about the show (the only one on the page of 2026-11-22). Any other (取消, 延期,
+# 改期, 已售完, …) and the programme is not read at all, said as 讀不出場次: never read as an ordinary show.
+BACH_NOTE_OK = ("即將啟售", "已售完", "售完", "完售", "售罄")  # v4: sold out, the show goes on (as the three venues read it); spaces never count
+BACH_DATE = re.compile(r"\d{4} ?[/.-] ?\d{1,2} ?[/.-] ?\d{1,2}|(?:\d{4} ?年 ?)?\d{1,2} ?月 ?\d{1,2} ?日|\d{1,2} ?/ ?\d{1,2}")
+# v3: a date anywhere in a 🎫 line (「🎫 加演 2026/12/27…」); v4 also 12/27, 2026-12-27, 2026.12.27, 2026年12月27日 (and 12月27日).
+# A month and a day with . or - and no year is not one (「套票8.5折」).
+HOST = re.compile(r"^[A-Za-z0-9.-]+(:\d+)?$")
+# The places as the page may write them, spaces taken out and 台 read as 臺, a city before the hall or not (v2: every hall
+# concerts.py tells a city and a main hall by, not only the two written there on 2026-11-22); any other is not understood
+# (the programme is not read at all), never guessed. Each is written as the venues' own lists and concerts.json write it,
+# so that VENUE_CITY or the city, and BIG_HALL, in concerts.py take it as they take theirs (演奏廳, 表演廳, 藍盒子: 不在範圍).
+BACH_CITY = {"臺北市": "臺北市", "高雄市": "高雄市", "臺中市": "臺中市", "臺北": "臺北市", "高雄": "高雄市", "臺中": "臺中市"}  # longest first
+_TPE, _KHH, _TXG, _WWY, _NTT, _TPAC = "臺北市", "高雄市", "臺中市", "衛武營國家藝術文化中心", "臺中國家歌劇院", "臺北表演藝術中心"
+BACH_HALL = dict(
+    [(k, ("國家音樂廳", _TPE)) for k in ("國家音樂廳", "國家兩廳院國家音樂廳")]
+    + [(k, ("國家戲劇院", _TPE)) for k in ("國家戲劇院", "國家兩廳院國家戲劇院")]
+    + [(k, ("兩廳院演奏廳", _TPE)) for k in ("兩廳院演奏廳", "國家兩廳院演奏廳", "國家音樂廳演奏廳")]
+    + [(k + h, (_WWY + h, _KHH)) for h in ("音樂廳", "歌劇院", "戲劇院", "表演廳") for k in ("衛武營", _WWY)]
+    + [(_NTT + h, (_NTT + h, _TXG)) for h in ("大劇院", "中劇院", "小劇場")]
+    + [(_TPAC + h, (_TPAC + h, _TPE)) for h in ("大劇院", "球劇場", "藍盒子")]
+    + [("臺北國際會議中心", ("臺北國際會議中心", _TPE)), ("臺北國際會議中心大會堂", ("臺北國際會議中心大會堂", _TPE))]
+    + [(k, ("臺北市中山堂中正廳", _TPE)) for k in ("中山堂中正廳", "臺北市中山堂中正廳")]
+    + [(k, ("高雄市文化中心至德堂", _KHH)) for k in ("至德堂", "高雄市文化中心至德堂")])
 
 
 class Unreadable(ValueError):
@@ -112,7 +153,7 @@ def clean(url):
 def row(uid, title, shows, sales, page, venue):
     """A programme in the shape of one open-data entry (opentix.row's): shows are (date, HH:MM or "", hall, city)."""
     sales = clean(sales)
-    return {"UID": uid, "title": title, "webSales": sales, "sourceWebPromote": sales or page or "", "sourceWebName": NAMES[venue] + "節目表",
+    return {"UID": uid, "title": title, "webSales": sales, "sourceWebPromote": sales or page or "", "sourceWebName": LABEL[venue],
             "masterUnit": [], "showUnit": "", "descriptionFilterHtml": "",
             "showInfo": [{"time": d.replace("-", "/") + (" %s:00" % t if t else ""), "location": city, "locationName": hall, "price": ""}
                          for d, t, hall, city in shows]}
@@ -266,6 +307,141 @@ def ntt(got, day, end, ask):
         got["rows"].append((1, row(uid, title, shows, html.unescape(buy.group(1)).strip() if buy else "", NTT_PAGE % link.group(1), "ntt")))
 
 
+def bach_link(href):
+    """A link as written, or "" for none: one with a space inside (「https:// https://…」), not http(s) or without a
+    host is broken, and never mended."""
+    u = html.unescape(href or "").strip()
+    if not u or any(c.isspace() for c in u):
+        return ""
+    p = urllib.parse.urlsplit(u)
+    return u if p.scheme in ("http", "https") and HOST.match(p.netloc) else ""
+
+
+def bach_lines(text):
+    """[(the text after a 🎫, its link)] of one programme's text, a 🎫 to the end of its line (a <br>, <p>, </p>…) or
+    to the next 🎫. Its link: the <a> the 🎫 is written inside, or else the first <a> around text after it on the line
+    (「🎫 <a …>2026/12/18…</a>」); a broken one is none. Tags are found with str.find (a < never closed: the rest is text)."""
+    got, cur, href, in_a, i = [], None, "", False, 0
+    while i < len(text):
+        j = text.find(">", i) if text[i] == "<" else -1
+        if j >= 0:
+            tag = text[i:j + 1]
+            name = (tag[1:-1].split() or [""])[0].lower().rstrip("/")
+            if name in BACH_BREAK:
+                if cur is not None and cur[3]:  # v4: a flag, not the line read again at every break (a page of empty lines stays quick)
+                    cur[0] += "⏎"  # v3: a 🎫 with nothing after it on its line goes on to the next, marked (its date: not understood)
+                else:
+                    cur = None
+            elif name == "a":
+                m = BACH_HREF.search(tag)
+                k = tag.find('"', m.end()) if m else -1
+                href, in_a = bach_link(tag[m.end():k]) if k >= 0 else "", True
+            elif name == "/a":
+                href, in_a = "", False
+            i = j + 1
+            continue
+        j = len(text) if text[i] == "<" else text.find("<", i + 1)  # no > after this <: the rest is text
+        j = len(text) if j < 0 else j
+        parts = html.unescape(text[i:j]).split("🎫")
+        if cur is not None:
+            cur[0] += parts[0]
+            cur[3] = cur[3] and bach_blank(parts[0])
+            if not cur[2] and in_a and parts[0].strip():
+                cur[1], cur[2] = href, True
+        for x in parts[1:]:
+            cur = [x, href, in_a, bach_blank(x)]  # [text, link, link settled, nothing but spaces so far]
+            got.append(cur)
+        i = j
+    return [(x, link) for x, link, _, _ in got]
+
+
+def bach_blank(x):
+    """Nothing but spaces (U+FE0F, the variation selector of 🎫️, counted as one: v4)."""
+    return not x.replace("\ufe0f", "").strip()
+
+
+def bach_show_like(x):
+    """True for a 🎫 line (spaces collapsed) that is a show: one beginning with a digit, or (v3) with a date after other
+    words, which bach() takes as not understood."""
+    return x[:1].isdigit() or bool(BACH_DATE.search(x))
+
+
+def bach_place(text):
+    """(hall, city) of the place written after a show's time; "讀不出場次" when a note in brackets after it is not one of
+    BACH_NOTE_OK (v3); None when the place is not one of BACH_HALL."""
+    p = text.strip()
+    for _ in range(3):  # 「（即將啟售）」 and the like
+        m = BACH_NOTE.search(p)
+        if not m:
+            break
+        if re.sub(r"\s+", "", m.group(1)) not in BACH_NOTE_OK:  # v4: no space counts (「（即將 啟售）」)
+            return "讀不出場次"
+        p = p[:m.start()].strip()
+    p = re.sub(r"\s+", "", p).replace("台", "臺")
+    if p in BACH_HALL:
+        return BACH_HALL[p]
+    city = next((c for c in BACH_CITY if p.startswith(c)), "")  # 臺北市 before 臺北
+    hall = BACH_HALL.get(p[len(city):]) if city else None
+    return hall if hall and hall[1] == BACH_CITY[city] else None
+
+
+def bach(got, day, end, ask):
+    text = ask(BACH).decode("utf-8", "replace")
+    items = text.split(BACH_ITEM)[1:]
+    if not items:
+        raise Unreadable("沒有節目")
+    ids = set()
+    for item in items:
+        item = item[:CARD_CHARS]
+        m = BACH_ID.match(item)
+        uid = "bach:%s" % m.group(1) if m else "bach:?"
+        if m and not first(got, uid, ids):
+            continue
+        got["n"] += 1
+        i = item.find(BACH_TITLE[0])
+        j = item.find(BACH_TITLE[1], i) if i >= 0 else -1
+        title = " ".join(html.unescape(re.sub(r"<[^<>]*>", "", item[i + len(BACH_TITLE[0]):j])).split()) if j >= 0 else ""
+        if not m or not title:
+            got["bad"].append((uid, title, "節目卡看不懂"))  # no id or no title in this item
+            continue
+        k = item.find(BACH_DESC[0], j)
+        e = item.find(BACH_DESC[1], k) if k >= 0 else -1
+        lines = [(" ".join(x.split()), link) for x, link in bach_lines(item[k + len(BACH_DESC[0]):e])] if e >= 0 else []
+        odd = any(bach_show_like(x) and not x[:1].isdigit() for x, _ in lines)  # v3: a date after other words: not understood
+        lines = [(x, link) for x, link in lines if x[:1].isdigit()]  # a show: 🎫 and then its date
+        # v2: a show after the text's first </div> (a <div> inside it) is not read, and so the programme is not read at
+        # all: said as not understood, never left out in silence
+        hidden = e >= 0 and any(bach_show_like(" ".join(x.split())) for x, _ in bach_lines(item[e:]))
+        if too_long(got, uid, title, len(lines)):
+            continue
+        shows, links, bad = [], [], "" if lines and not hidden and not odd else "讀不出場次"
+        for x, link in lines:
+            s = BACH_SHOW.match(x)
+            d = "%s-%02d-%02d" % (s.group(1), int(s.group(2)), int(s.group(3))) if s else ""
+            h, mi = (s.group(5), s.group(6)) if s else (None, None)
+            wd = re.sub(r"\s+", "", s.group(4)) if s and s.group(4) is not None else ""
+            if not is_day(d) or (h is not None and (int(h) > 23 or int(mi) > 59)) or (s.group(4) is not None and (len(wd) != 1 or wd not in BACH_WEEKDAY)):
+                bad = "讀不出場次"  # v4: 「（取消）」「（加演）」 where the day of the week goes, too
+                break
+            place = bach_place(s.group(7))
+            if place == "讀不出場次":  # v3: 「（取消）」「（延期…）」 or a note nobody has seen
+                bad = place
+                break
+            if not place:
+                bad = "廳名不認得"  # never guessed, never 「不在範圍」 (as at 兩廳院)
+                break
+            shows.append((d, "%02d:%02d" % (int(h), int(mi)) if h is not None else "", place[0], place[1]))
+            if link and clean(link) not in links:
+                links.append(clean(link))
+        if bad:
+            got["bad"].append((uid, title, bad))
+            continue
+        r = row(uid, title, shows, "", BACH, "bach")
+        if links:  # every show's own link, the OPENTIX ids among them seen by fetch; the page itself when there are several
+            r["webSales"], r["sourceWebPromote"] = "、".join(links), links[0] if len(links) == 1 else BACH
+        got["rows"].append((1, r))
+
+
 def loads(body):
     try:
         return json.loads(body.decode("utf-8"))
@@ -298,7 +474,7 @@ def read(day, end, room=lambda timeout, retries, pause: True, get=http_get):
         return body
 
     out = {}
-    for k, step in (("ntch", ntch), ("wwy", wwy), ("ntt", ntt)):
+    for k, step in (("ntch", ntch), ("wwy", wwy), ("ntt", ntt), ("bach", bach)):
         got = blank()
         try:
             step(got, day, end, ask)
