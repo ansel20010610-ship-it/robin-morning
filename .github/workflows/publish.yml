@@ -86,6 +86,17 @@ jobs:
           python3 -m venv /tmp/wire && /tmp/wire/bin/pip install -q opencc-python-reimplemented==0.1.7 || echo "::warning::opencc not installed; DW stays in simplified wording"
           PY=/tmp/wire/bin/python; [ -x "$PY" ] || PY=python3   # the system python only when the venv itself failed, not on wire.py's own exit 1
           WIRE_ON_THE_HOUR="${{ github.event.inputs.hourly }}" "$PY" scripts/wire.py || echo "::warning::wire.py produced nothing this time"
+      - name: Outdoor (出門前)
+        # content/outdoor.json — Taichung's air, weather warnings and closures (scripts/outdoor.py, no AI, no key) — is
+        # not in the repository either: each build reads the agencies' files afresh, starting from the live file so a
+        # source that cannot be read this time keeps what it gave last time, and the script says so in a ::warning:: of
+        # its own. It stops itself after about 90 s, and timeout makes sure of it (a file half written when it is cut
+        # off is left behind as .tmp: removed so it is not deployed). Nothing here can stop a deploy.
+        continue-on-error: true
+        run: |
+          curl -sf -A "robin-morning/1.0" --max-time 20 https://wiener-morgen-private.duckdns.org/content/outdoor.json -o content/outdoor.json || rm -f content/outdoor.json
+          timeout 120 python3 scripts/outdoor.py || echo "::warning::outdoor.py 失敗或逾時"
+          rm -f content/outdoor.json.tmp
       - name: Assemble site
         run: |
           mkdir _site
