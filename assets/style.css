@@ -268,6 +268,7 @@ button { font: inherit; color: inherit; }
 .issue-row li .corr-tag { font-style: normal; font-family: var(--sans); font-size: 10.5px; letter-spacing: .1em; color: var(--red); margin-left: 6px; }
 .article-head .meta .corr button { background: none; border: 0; padding: 0; margin: 0; font: inherit; color: var(--red); font-weight: 600; cursor: pointer; }
 .article-head .meta .corr button:focus-visible { outline: 1px solid var(--red); outline-offset: 2px; }
+.article-head .meta .row > span.by { color: var(--ink-2); }
 
 .feuilleton { display: grid; gap: 0; }
 @media (min-width: 720px) {
@@ -1434,6 +1435,7 @@ mark.pencil { color: inherit; background: url("data:image/svg+xml,<svg xmlns='ht
 .bird-note { display: flex; align-items: center; gap: 7px; margin: 16px 0 -6px; font-family: var(--sans); font-size: 12.5px; letter-spacing: .06em; color: var(--muted); }
 .bird-note svg { width: 18px; height: 18px; flex: none; }
 .bird-note :is(.e-ink, .e-gold) { fill: var(--muted); } .bird-note .e-robin { fill: var(--robin); } .bird-note .e-paper { fill: var(--paper); } .bird-note :is(.e-wing, .e-legs) { stroke: var(--muted); fill: none; } .bird-note .e-frame { display: none; }
+.bird-note a { color: inherit; text-decoration: none; }
 .bird-note.got { color: var(--gold-ink); }
 @media (prefers-reduced-motion: no-preference) {
   /* Found: two hops on the spot (.55s), then 2s along a swooping path up and across the page — a dip, a long climb,
@@ -2631,6 +2633,9 @@ details.band .svl { margin: 0 0 10px; }
 .ask-box .lbl b { font-size: 12.5px; letter-spacing: .14em; color: var(--gold-ink); }
 .ask-box .lbl .de { font-family: var(--latin); font-style: italic; font-size: 13px; color: var(--gold); }
 .ask-box .small { font-size: 13px; line-height: 1.6; color: var(--ink-2); margin: 6px 0 0; }
+.ask-box .ask-pick { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }
+.ask-box .ask-pick button { appearance: none; margin: 0; font-family: var(--sans); font-size: 12.5px; line-height: 1.5; letter-spacing: .04em; padding: 5px 10px; border: 1px solid var(--rule); border-radius: 0; color: var(--ink-2); background: var(--paper-2); cursor: pointer; }
+.ask-box .ask-pick button:hover { border-color: var(--gold); color: var(--ink); }
 .ask-box textarea { width: 100%; box-sizing: border-box; margin: 10px 0 8px; padding: 10px 12px; font: inherit; font-size: 16px; line-height: 1.6; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 2px; resize: vertical; }
 .ask-box .btns { display: flex; align-items: center; gap: 12px; }
 .ask-box .ask-qa { margin: 14px 0 0; padding-top: 12px; border-top: 1px dashed var(--rule); }

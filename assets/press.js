@@ -56,9 +56,19 @@ function dayRows(issue, now) {
   const rows = [];
   for (const [k, at, part, name, duty, limit, cond] of DAY) {
     const r = /^\d$/.test(k) ? shifts[k] : press[k];
-    if (cond && !r) continue;
+    // 先發班 without a report is drawn only while it can still be told from the record itself: this issue's night, the
+    // record there (press.advance: scripts/api_shift.py COLUMNS, as build_index.py sends it) expecting a column, and the
+    // shift not known to stay off (press.advance_off: spend at SOFT_CAP, or the credit cycle's quiet first day). Before
+    // 第 1 班's hour it also needs that column still missing, and reads 在跑; from then on it reads 第 1 班補 to the morning
+    // whether or not the column has since been written (by 第 1 班, whose 後備 takes it, or by a 先發班 whose report did
+    // not come in), plainly, not as a fault. Anything the page cannot judge is not drawn.
+    const first = mins(DAY.find((d) => d[0] === "1")[1]);
+    const handed = k === "column" && !r && now.minutes >= first;
+    const ahead = k === "column" && !r && date === now.date && now.minutes < OVERDUE && press.advance?.length > 0 && !press.advance_off
+      && (handed || press.advance.some((c) => press.missing?.includes(c)));
+    if (cond && !r && !ahead) continue;
     const m = k === "column" ? mins(at) - 24 * 60 : mins(at), st = r ? "done" : overdue(date, now, limit) ? "late" : "wait";
-    rows.push({ m, k, at, part, name, duty, r, st, word: st === "wait" && date === now.date && m <= now.minutes ? "在跑" : "" });
+    rows.push({ m, k, at, part, name, duty, r, st, handed, word: ahead && handed ? "第 1 班補" : st === "wait" && date === now.date && m <= now.minutes ? "在跑" : "" });
   }
   const lt = issue.late, lr = press.late;
   if (lt || lr) {
@@ -91,7 +101,7 @@ function verdict(issue, rows, col, now) {
     if (clock) sub.push(clock);
   } else if (!out) {
     const night = rows.filter((x) => x.part !== "day"), done = night.filter((x) => x.st === "done").length;
-    next = night.find((x) => x.st !== "done");
+    next = night.find((x) => x.st !== "done" && !x.handed); // the 先發班 row that 第 1 班 took over is not the one running
     big = next ? `稿子正在寫，${done ? `已經交了 ${done} 班` : "還沒有人交稿"}。` : missing.length ? "各班都交了，但還缺稿。" : "稿都交了，等 07:30 出刊。";
     if (next) sub.push(`${date === now.date && next.m <= now.minutes ? "正在跑" : "下一班"}：${next.at} ${next.name}`);
   } else if (!issue.press) big = "還沒收到今天這期的紀錄。"; // an index older than the issue (app.js viewPress's empty record): nothing to conclude from

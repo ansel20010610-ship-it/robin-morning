@@ -98,6 +98,17 @@ const issueBy = (date) => (S.index.issues || []).find((i) => i.date === date);
 // config.json's entry for a column as it stood on `date`: a column that changed meaning keeps the old entry under "was"
 // up to its "until" (devotion: an essay until 2026-10-31, the verse and prayer since). A retired column stays in config
 // with "until", so its past issues keep their name and place.
+// 本欄記者署名 (the owner picked 甲, 2026-11-24): the line after the date and number under each article's title, written
+// out whole ("文／…"). One table, one place — change a name here and every article of the column follows. No entry, no
+// line: 經文禱告 has no persona; the serial is Dostoevsky's, translated by the desk.
+const BYLINES = {
+  football: "文／看台上的老球迷", news: "文／電報員", perio: "文／愛挑論文的人", music: "文／坐你旁邊的樂迷",
+  civilization: "文／電台說書人", literature: "文／拿鉛筆讀書的人", philosophy: "文／街角咖啡館老闆", artwork: "文／拍賣行的鑑定師",
+  architecture: "文／修古蹟的師傅", canon: "文／寫副刊的評論人", wildcard: "文／愛串門子的外行", concept: "文／家教老師",
+  poem: "文／讀了一輩子詩的人", mystery: "文／退休刑警", obituary: "文／寫訃聞的老編輯",
+  "fm-watch": "文／守望員", "cosmere-watch": "文／守望員", serial: "譯／編輯部",
+};
+const bylineOf = (c) => BYLINES[c] || "";
 const col = (c, date) => { const k = S.cfg.columns[c] || { name: c, group: "supplement" }; return k.was && date && date <= k.was.until ? k.was : k; };
 
 // The copy in memory is the current one (opening it needs no network). A correction (corrected_at: the Sunday audit's
@@ -248,6 +259,15 @@ function birdSpot(issue) {
   if (!pool.length) return null;
   const h = Array.from(issue.date).reduce((x, ch) => (x * 33 + ch.charCodeAt(0)) >>> 0, 5381);
   return { column: pool[h % pool.length].column, p: (h >>> 7) % 7 }; // the p-th paragraph, folded into the article's count
+}
+// The front page's bird line: once the whole issue is read and the stamp is down, a bird still unfound is named by its
+// column (a tap opens that article, no paragraph given); found, or before that, the plain old lines.
+function birdNote(issue, arts) {
+  const date = issue.date;
+  if (birdsFound().has(date)) return "今天的知更鳥找到了。";
+  const spot = birdSpot(issue);
+  const whole = spot && arts.some((a) => forStamp(a, date) && a.brief) && issueOpen(date) && !unreadIn(date, arts) && digestDone().has(date);
+  return whole ? `<a href="#/a/${esc(date)}/${esc(spot.column)}">找找看〈${esc(col(spot.column, date).name)}〉，牠在那裡。</a>` : "今天有一隻知更鳥藏在某一篇裡。";
 }
 function hideBird(body, date, column) {
   const spot = birdSpot(issueBy(date));
@@ -930,7 +950,7 @@ function viewFront(dateParam) {
       <div class="feuilleton">${supps.map((a) => itemCard(issue.date, a, read)).join("")}</div>` : ""}
     ${serial.length ? serialBox(issue.date, serial[0], read) : todays(issue) && serialDueOn(issue.date) ? serialWaitBox(issue.date) : ""}
     ${watch.length ? `<div class="sec-head"><h2>遠方有動靜</h2><span class="de">In der Ferne</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
-    ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdsFound().has(issue.date) ? "今天的知更鳥找到了。" : "今天有一隻知更鳥藏在某一篇裡。"}</p>` : ""}
+    ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdNote(issue, arts)}</p>` : ""}
     ${!arts.some((a) => forStamp(a, issue.date) && a.brief) ? "" : !issueOpen(issue.date) ? `<div class="finish left"><b>今天這一份還沒出齊</b><span class="note">下午補刊到齊以後，包裹和郵票才會開。</span></div>`
       : unreadIn(issue.date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${digestDone().has(issue.date) ? "早上的郵票已經蓋好了；後來補上的這幾篇也讀完，今天這一份才算讀到最後一行。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的${feastOf(issue.date) ? `${esc(feastOf(issue.date).zh)}紀念郵票` : "郵票"}才蓋得下去。`}</span>${codaFor(issue.date, arts)}</div>`
       : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
@@ -1168,6 +1188,7 @@ async function creditBox(el) {
 // 2026-11-11: 要讓「問這篇」也能回答文章以外的問題). Marked as not checked by the editors; the medical columns add the paper's disclaimer. The phone
 // keeps the last few questions of each article (rm.ask), nothing is kept anywhere else. 清除問答 (the owner, 2026-11-11:
 // 刪除答案，類似重置) takes this article's questions off the phone, on a second press within three seconds.
+const ASK_PICKS = ["這篇在講什麼？", "跟我有什麼關係？", "再白話一點"]; // 輸入框上方三顆現成問題：點了只填字，不送出
 function askBox(el, date, column) {
   const n = nest(), api = S.cfg.nest?.api;
   if (!el || !n || !api) return;
@@ -1177,11 +1198,15 @@ function askBox(el, date, column) {
   el.innerHTML = `<div class="lbl"><b>問這篇</b><span class="de">Fragen</span></div>
     <p class="small">讀到不懂、想多知道一點，直接問，幾秒就好。先看這篇怎麼寫；文章沒寫到的也會回答，會說明那是文章以外的。</p>
     <div class="ask-list">${mine.map(qa).join("")}</div>
+    <div class="ask-pick">${ASK_PICKS.map((q) => `<button type="button">${esc(q)}</button>`).join("")}</div>
     <textarea maxlength="300" rows="2" placeholder="例如：這個數字是怎麼算出來的？"></textarea>
     <div class="btns"><button class="btn" type="button" data-ask>問</button><span class="small ask-wait" hidden>編輯想一下……</span><button class="btn ghost ask-clear" type="button" data-ask-clear${mine.length ? "" : " hidden"}>清除問答</button></div>
     <p class="ask-note">即時回答，未經編輯部查核；文章以外的部分沒有上網查證${med ? "；醫學教學導讀，非個別診療建議" : ""}。</p>`;
   const ta = el.querySelector("textarea"), btn = el.querySelector("[data-ask]"), wait = el.querySelector(".ask-wait"), list = el.querySelector(".ask-list");
   const clear = el.querySelector("[data-ask-clear]");
+  el.querySelectorAll(".ask-pick button").forEach((b) => b.addEventListener("click", () => { // only fills the box (no focus: the keyboard would pop up and scroll the page); the cursor waits at the end
+    ta.value = b.textContent; ta.setSelectionRange(ta.value.length, ta.value.length);
+  }));
   let unsure;
   clear.addEventListener("click", () => {
     if (!clear.dataset.sure) {
@@ -1295,6 +1320,9 @@ function wireDigest(issue) {
     ring.complete();
     main.querySelector(".digest")?.classList.add("done", "full");
     main.querySelector(".digest .streak")?.remove();
+    // The bird line changes on the spot once the stamp is down (a bird still unfound gets its column named); same height, so nothing moves.
+    const bn = main.querySelector(".bird-note:not(.got)");
+    if (bn && !birdsFound().has(issue.date)) { [...bn.childNodes].forEach((n) => { if (n.nodeName.toLowerCase() !== "svg") n.remove(); }); bn.insertAdjacentHTML("beforeend", birdNote(issue, sortArticles(issue.articles || [], issue.date))); }
     if (!fin || fin.classList.contains("done")) return;
     fin.classList.add("done");
     if (!was) { const f = feastOf(issue.date); celebrate(fin); setTimeout(() => toast(f ? `${f.zh}紀念郵票蓋好了，收在郵票冊` : "郵票蓋好了，收在郵票冊"), 1200); } // the day's stamp (viewStamps), once the seal is down
@@ -1503,7 +1531,7 @@ async function viewArticle(date, column, my) {
       <header class="article-head">${kicker(column, true, date)}${a.serial ? serialPlate(a.serial) : ""}<h1>${esc(a.title)}</h1>
         ${a.takeaway ? `<aside class="takeaway"><span class="lbl">帶得走的結論</span><p>${inline(a.takeaway)}</p>${evidenceOf(a) ? `<p class="ev"><b>證據力</b>${inline(evidenceOf(a))}</p>` : ""}</aside>` : ""}
         <p class="dek">${esc(a.dek)}</p>
-        <div class="meta"><div class="row"><span>${esc(fmtDate(date))}</span>${issue ? `<span>${esc(issueNo(issue.no))}</span>` : ""}${minutes ? `<span>閱讀約 ${minutes} 分鐘</span>` : ""}${corr ? `<span class="corr"><button type="button" data-corr aria-label="跳到文末的更正">本篇有更正（${md(corr)}）→</button></span>` : ""}${corr && String(a.updated_at || "").slice(0, 10) === corr ? "" : updatedNote(date, a)}</div></div>
+        <div class="meta"><div class="row"><span>${esc(fmtDate(date))}</span>${issue ? `<span>${esc(issueNo(issue.no))}</span>` : ""}${minutes ? `<span>閱讀約 ${minutes} 分鐘</span>` : ""}${corr ? `<span class="corr"><button type="button" data-corr aria-label="跳到文末的更正">本篇有更正（${md(corr)}）→</button></span>` : ""}${corr && String(a.updated_at || "").slice(0, 10) === corr ? "" : updatedNote(date, a)}${bylineOf(column) ? `<span class="by">${esc(bylineOf(column))}</span>` : ""}</div></div>
         ${fixtureHtml(fix)}
         ${a.from_reserve && column === "football" ? `<div class="banner">今晨新聞稿未能如期完成，先刊出這篇備用專題；最新消息併入下一期。</div>` : ""}
         ${a.status === "undetermined" ? `<div class="banner">本期查核未完成，無法判定是否有新進展；這不代表沒有新消息。</div>` : ""}

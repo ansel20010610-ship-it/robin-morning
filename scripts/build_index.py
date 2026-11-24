@@ -287,12 +287,32 @@ def report(r):
             "note": r["note"] if isinstance(r.get("note"), str) else ""}
 
 
+def advance_of(d, expected):
+    """(the columns the 先發班 writes for issue d, whether it will not start that night) for the 印務室 page. It will not
+    start when scripts/api_shift.py decide() would say no for a reason the page cannot see: this cycle's spend has reached
+    SOFT_CAP, or its first QUIET_HOURS hours are not over at 22:30 the evening before. The key (ANTHROPIC_API_KEY) is a
+    secret the page cannot judge; it is set. If the rule cannot be read here, off: the page then draws no 在跑."""
+    try:
+        import api_shift
+        cols = [c for c in api_shift.COLUMNS if c in expected]
+        eve = dt.datetime.combine((d if isinstance(d, dt.date) else dt.date.fromisoformat(str(d))) - dt.timedelta(days=1), dt.time(22, 30), tzinfo=TW)
+        start, _ = api_shift.cycle(eve.astimezone(dt.timezone.utc))
+        quiet = start != api_shift.FIRST_GRANT and eve.astimezone(dt.timezone.utc) - start < dt.timedelta(hours=api_shift.QUIET_HOURS)
+        return cols, bool(quiet or api_shift.month_total() >= api_shift.SOFT_CAP)
+    except Exception as e:  # noqa: BLE001
+        skip("api_shift", "%s: %s" % (type(e).__name__, e))
+        return [], True
+
+
 def press(cfg, d):
     """The day's production record for the owner's 印務室 page: the shift reports in state/runs/<date>.json
     (editorial/README.md), what the issue needs and which of that is still not on disk."""
     expected = expected_columns(cfg, d)
     out = {"shifts": {}, "expected": expected,
            "missing": [c for c in expected if not os.path.exists(article_path(d, c))]}
+    out["advance"], off = advance_of(d, expected)
+    if off and str(d) >= dt.datetime.now(TW).strftime("%Y-%m-%d"):  # an old issue never needs the flag
+        out["advance_off"] = True
     path = os.path.join(RUNS, "%s.json" % d)
     if not os.path.exists(path):
         return out
