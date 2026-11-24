@@ -188,6 +188,12 @@ button { font: inherit; color: inherit; }
   .masthead.ostern h1 { background-image: linear-gradient(105deg, var(--ink) 0 31%, var(--foil) 40%, var(--foil-hi) 50%, var(--foil) 60%, var(--ink) 69% 100%); }
   .masthead.ostern h1::after { inset: -45% -12%; background: radial-gradient(ellipse at 50% 55%, color-mix(in srgb, var(--halo) 40%, transparent), transparent 64%); }
 }
+/* 報耳: the church season in the middle of the lower band (app.js earHtml/fitEar). The anchor has no height; the paper box,
+   18 pt high, centred on the 8 pt band (5 pt over it above and below), breaks it; its width and left edge are set in 4 pt cells.
+   On the 連假 line's level (z-index 3) and after it, so it is drawn over that line's empty lower padding. */
+.masthead .ear-at { position: relative; height: 0; z-index: 3; }
+.masthead .ear { position: absolute; left: 0; top: -13px; height: 18px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;
+  width: max-content; white-space: nowrap; background: var(--paper); font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-indent: .16em; line-height: 1; color: var(--gold-ink); }
 /* 今日氣象 (app.js weatherBox/fillWeather, assets/wetter.js): the forecast on the front page, in the row 接著上次 used to
    hold above 正刊 — its label set like that row's, then a hairline glyph, the range, the condition, the rain and the
    sunrise, and under them the morning, noon and evening readings, the figures in Cormorant. Hidden until the forecast
@@ -220,6 +226,9 @@ button { font: inherit; color: inherit; }
 .wire li b { font-size: 14px; line-height: 1.5; font-weight: 500; color: var(--ink); }
 .wire li .ld { font-size: 12.5px; line-height: 1.6; color: var(--muted); }
 .wire li a:active b { color: var(--gold-ink); }
+.wire li.since { position: relative; } /* 上次看到這: the row's own top rule turned gold, the words sitting on it at the right on the strip's paper; no height added */
+.wire li.since > a { border-top-color: var(--gold); }
+.wire li.since::before { content: attr(data-since); position: absolute; right: 0; top: 0; transform: translateY(-52%); padding: 0 0 0 8px; background: var(--paper-2); font-family: var(--sans); font-size: 11px; line-height: 1; letter-spacing: .06em; color: var(--gold-ink); font-variant-numeric: tabular-nums; }
 .wire .at { margin: 0; padding: 0 12px 8px; font-family: var(--sans); font-size: 11px; letter-spacing: .04em; color: var(--muted); font-variant-numeric: tabular-nums; } /* under the strip's name when open: when the wires were last read, and whose they are */
 /* 市場行情 (assets/boerse.js): a quote board 6 pt under the wires — a fine double gold frame, a faint guilloché like an
    old share certificate's (fixed, over the tape), the BÖRSE plate held at the left, the figures in Cormorant's
@@ -1352,6 +1361,8 @@ img.img-off { visibility: hidden; }
   @keyframes title-in { from { opacity: 0; letter-spacing: .75em; filter: blur(14px); transform: scale(1.18); } to { opacity: 1; letter-spacing: .16em; filter: none; transform: none; } }
   .masthead .checker { animation: band 1s .15s cubic-bezier(.2,.7,.2,1) both; }
   .masthead .checker ~ .checker { animation-name: band-r; }
+  .masthead .ear { animation: ear-in .5s 1.15s both; } /* once the lower band has come to rest */
+  @keyframes ear-in { from { opacity: 0; } }
   @keyframes band { from { transform: translateX(-60%) scaleY(0); opacity: 0; } 60% { transform: translateX(4%) scaleY(1.6); opacity: 1; } to { transform: none; opacity: .9; } }
   @keyframes band-r { from { transform: translateX(60%) scaleY(0); opacity: 0; } 60% { transform: translateX(-4%) scaleY(1.6); opacity: 1; } to { transform: none; opacity: .9; } }
   .masthead :is(.topline, .dateline, .ferien) { animation: page-in .8s both; }
@@ -1415,7 +1426,7 @@ img.img-off { visibility: hidden; }
   .masthead.fresh .roller { animation: line-run 1.1s .1s cubic-bezier(.3,.7,.2,1) both; }
   .masthead .stamp-date { animation: stamp .55s 1s cubic-bezier(.2,1.5,.4,1) both; }
   .masthead .stamp-date .echo { animation: wave 1.2s 1.3s cubic-bezier(.15,.7,.3,1) both; }
-  .masthead.fresh :is(.crest, h1, .latin, .dateline, .ferien, .checker, .epigraph), .masthead.fresh :is(.crest, h1, .epigraph) *, .masthead.fresh h1::after, .masthead.fresh .epigraph span::after { animation-play-state: paused; }
+  .masthead.fresh :is(.crest, h1, .latin, .dateline, .ferien, .checker, .epigraph, .ear), .masthead.fresh :is(.crest, h1, .epigraph) *, .masthead.fresh h1::after, .masthead.fresh .epigraph span::after { animation-play-state: paused; }
 
   /* The seal comes down when you reach the end — from large and turned to flat — and the card dips once under the
      blow (thump, timed for the moment the stamp lands); a gold square ripples out from under it. */
@@ -3019,6 +3030,8 @@ details.band .svl { margin: 0 0 10px; }
 #credit-set .credit-left b { font-family: var(--latin); font-size: 30px; font-weight: 500; color: var(--ink); margin-right: 8px; }
 #credit-set .credit-bar { display: block; height: 3px; margin: 0 0 8px; background: var(--rule); }
 #credit-set .credit-bar i { display: block; height: 100%; background: var(--gold); }
+#credit-set .credit-by { margin: -2px 0 8px; font-family: var(--sans); font-size: 12.5px; line-height: 1.6; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+#credit-set .credit-by span { white-space: nowrap; } /* a narrow phone breaks the line at a 「・」, never inside one */
 #credit-set .credit-days { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 4px; font-size: 13px; color: var(--ink-2); }
 #credit-set .credit-days li { display: flex; justify-content: space-between; border-bottom: 1px dotted var(--rule); padding: 2px 0; }
 #credit-set .credit-more:not([open]) .opened, #credit-set .credit-more[open] .shut { display: none; }

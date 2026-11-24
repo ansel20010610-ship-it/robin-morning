@@ -41,7 +41,7 @@ const DRAGON = ["2027-06-09", "2028-05-28", "2029-06-16", "2030-06-05", "2031-06
 const MOON = ["2026-09-25", "2027-09-15", "2028-10-03", "2029-09-22", "2030-09-12", "2031-10-01", "2032-09-19", "2033-09-08", "2034-09-27", "2035-09-16"];
 
 // Easter Sunday (Western), the anonymous Gregorian algorithm (Meeus/Jones/Butcher). Also the masthead's church days
-// (churchDay, holyWeek below; masthead.js).
+// (churchDay, holyWeek below; masthead.js) and its church season (churchSeason below; app.js earHtml).
 export function easter(y) {
   const a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4;
   const f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30;
@@ -70,6 +70,22 @@ export function holyWeek(date) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) return false;
   const e = easter(Number(date.slice(0, 4)));
   return date >= plusDays(e, -7) && date <= plusDays(e, -2);
+}
+// 教會時節 (the masthead's 報耳, app.js masthead; the owner, 2026-11-25): the church season a date falls in,
+// or "" in Ordinary Time. 降臨期 from Advent Sunday to 24 December (counted in weeks), 聖誕期 25 December to 5 January,
+// 大齋期 from Ash Wednesday (46 days before Easter) to the Saturday before Holy Week, 受難週 Palm Sunday to Holy Saturday,
+// 復活期 Easter to the day before Pentecost, 五旬節 the day itself. Written here only; advent() and easter() are the ones above.
+export function churchSeason(date) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) return "";
+  const y = Number(date.slice(0, 4)), md = date.slice(5), e = easter(y);
+  if (date >= plusDays(e, -7) && date < e) return "受難週";
+  if (date >= plusDays(e, -46) && date < plusDays(e, -7)) return "大齋期";
+  if (date === plusDays(e, 49)) return "五旬節";
+  if (date >= e && date < plusDays(e, 49)) return "復活期";
+  const adv = advent(y);
+  if (date >= adv && md <= "12-24") return `降臨期第${ZH_NUM[Math.floor((Date.parse(`${date}T00:00:00Z`) - Date.parse(`${adv}T00:00:00Z`)) / (7 * 864e5)) + 1]}週`;
+  if (md >= "12-25" || md <= "01-05") return "聖誕期";
+  return "";
 }
 const FOUNDED = 2026; // the first issue, 2026-10-11
 const ZH_NUM = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];

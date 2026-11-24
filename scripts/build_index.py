@@ -375,6 +375,36 @@ def plain_text(art):
     return re.sub(r"\s+", " ", " ".join(p for p in parts if isinstance(p, str)))
 
 
+def api_spend():
+    """What each shift spent in the credit cycles (scripts/api_shift.py cycle(): the 13th 00:00 UTC to the next 13th), from
+    state/api/spend.json, for the settings page's 「API 額度」 line (app.js creditBox): [{from, until, days: {UTC day: {shift: USD}}}], the
+    last three cycles. The app takes the one that holds the store's own cycle start. Unreadable: none (the line is left off).
+    The amounts are kept per UTC day ({day: {shift: USD}}): the store counts a day only after it has ended, so the app adds
+    up just the days the store has already settled, and the line never runs ahead of the 「已用」 under it."""
+    try:
+        import api_shift
+        runs = api_shift.load().get("runs", [])
+        out = {}
+        for r in runs:
+            try:
+                at = dt.datetime.fromisoformat(str(r.get("at", "")))
+                usd = float(r.get("usd", 0))
+            except (ValueError, TypeError):
+                continue
+            if not math.isfinite(usd):
+                continue
+            if at.tzinfo is None:
+                at = at.replace(tzinfo=api_shift.TW)
+            start, end = api_shift.cycle(at.astimezone(dt.timezone.utc))
+            cyc = out.setdefault(str(start.date()), {"from": str(start.date()), "until": str(end.date()), "days": {}})
+            k = str(r.get("shift", ""))
+            day = cyc["days"].setdefault(str(at.astimezone(dt.timezone.utc).date()), {})
+            day[k] = round(day.get(k, 0) + usd, 3)
+        return [out[k] for k in sorted(out)][-3:]
+    except Exception:  # noqa: BLE001
+        return []
+
+
 def push_devices():
     """Short hashes of the devices that get the 07:30 notice (scripts/push.py), so the app's settings page can tell
     whether this phone is on the list. The subscriptions themselves stay in state/, which is not published."""
@@ -615,7 +645,7 @@ def main():
         issues.append(issue)
     seen = sorted({c for a in flat for c in a.get("places", ())})  # a code the table cannot name is left off the map
     out = {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "issues": issues,
-           "push": push_devices(), "stock": stock(cfg), "places": {c: PLACE_NAMES[c] for c in seen if c in PLACE_NAMES}}
+           "push": push_devices(), "api_spend": api_spend(), "stock": stock(cfg), "places": {c: PLACE_NAMES[c] for c in seen if c in PLACE_NAMES}}
     with open(os.path.join(CONTENT, "index.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, allow_nan=False, separators=(",", ":"))
     sdir = os.path.join(CONTENT, "search")

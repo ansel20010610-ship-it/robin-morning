@@ -15,7 +15,7 @@ import { skyLine, skyRow, eveningRain, ferienLine } from "./almanac.js";
 import { boerseBox, fillBoerse } from "./boerse.js";
 import { outdoorFront, closeOutdoor } from "./outdoor-card.js";
 import { stampHtml } from "./stamps.js";
-import { feastOf } from "./feasts.js";
+import { feastOf, churchSeason } from "./feasts.js";
 import { redDay, weekendDay, dayPart, carryOf, carried, goldOf, moonPhase, moonSvg, windowSun, lightWindow, creaseHtml, paperAge, tintPaper, paperTone } from "./masthead.js";
 import { adventHtml, wireAdvent } from "./advent.js";
 import { yuelingHtml } from "./yueling.js";
@@ -629,6 +629,22 @@ function goldRain(el) {
   setTimeout(() => burst.remove(), 2600);
 }
 
+// 報耳 (the owner, 2026-11-25): the church season (feasts.js churchSeason) set in the middle of the lower
+// checker band, the band broken either side of the words. A zero-height anchor under the band, so the masthead does not
+// grow; fitEar sets its width and left edge in whole cells as the masthead is drawn (viewFront), so the band picks up on a
+// cell edge. Ordinary Time shows nothing.
+function earHtml(date) {
+  const t = churchSeason(date);
+  return t ? `<div class="ear-at"><span class="ear">${esc(t)}</span></div>` : "";
+}
+function fitEar(root) {
+  const ear = root?.querySelector(".masthead .ear"), band = ear?.parentElement.previousElementSibling;
+  if (!ear || !band) return;
+  ear.style.width = ""; ear.style.left = "";
+  const cs = getComputedStyle(ear), sp = parseFloat(cs.letterSpacing) || 0, w = Math.ceil((ear.offsetWidth - sp * 2 + 16) / 4) * 4, W = band.offsetWidth; // 8 pt of band-free paper beside the words, rounded up to a 4 pt cell
+  ear.style.width = `${w}px`; ear.style.left = `${Math.max(0, Math.round((W - w) / 8) * 4)}px`;
+}
+
 // `fresh` (viewFront, Druckfrisch): the issue is opened for the first time on this device — the masthead carries the
 // press roller's ink line and the wine date stamp, and holds its own entrance (.fresh, style.css) until motion.js
 // pressRun lets it go. The stamp is decoration: the topline already says the number and the day.
@@ -657,7 +673,7 @@ function masthead(issue, fresh = false, front = false, ferien = "") {
     <h1>${esc(S.cfg.title)}</h1>
     <div class="latin">${esc(S.cfg.subtitle)}</div>
     <div class="dateline${redDay(date) ? " rot" : ""}${ferien ? " has-fe" : ""}">${esc(fmtDate(date))}${issue ? `・${esc(issueNo(issue.no))}` : ""}・${esc(S.cfg.publish_time)} 出刊</div>${ferien ? `<div class="ferien">${esc(ferien)}</div>` : ""}
-    <div class="checker" aria-hidden="true"></div>
+    <div class="checker" aria-hidden="true"></div>${issue ? earHtml(date) : ""}
     ${issue?.epigraph ? `<p class="epigraph"${verseVars(issue.epigraph.text)}>${verseHtml(issue.epigraph.text)}<span>${esc(issue.epigraph.ref)}（和合本）</span></p>` : ""}
   </div></header>`;
 }
@@ -721,6 +737,20 @@ function wireTime(iso) {
 // the reader a moment after the scroll was restored — a jump on a phone without scroll anchoring (iOS Safari; the owner,
 // 2026-11-10: 滑動會亂跳). The fetch then refreshes it in place, and only the time changes when the wires are the same.
 let lastWire = null;
+// 外電接著看 (the owner, 2026-11-25): opening the strip is remembered (rm.wire.seen: the wire then on top, and when); the
+// next opening draws a fine gold line over that wire, 「上次看到這・07:42」, so what came since is above it. Nothing is drawn
+// with no earlier opening, when that wire is gone from the list, or when it is still the top one (nothing came since). The
+// mark adds no height (style.css .wire li.since), so opening the strip moves nothing.
+let wireSince = null;
+function markWireSince(box) {
+  box.querySelectorAll("ol li.since").forEach((li) => { li.classList.remove("since"); delete li.dataset.since; });
+  const s = wireSince;
+  if (!s) return;
+  const i = [...box.querySelectorAll("ol li")].findIndex((li) => li.querySelector("a")?.getAttribute("href") === s.url);
+  if (i < 1) return;
+  const li = box.querySelectorAll("ol li")[i];
+  li.classList.add("since"); li.dataset.since = `上次看到這・${wireTime(new Date(s.at + 8 * 3600e3).toISOString().slice(0, 16))}`;
+}
 function fillWire() {
   const box = main.querySelector(".wrap > .wire");
   if (!box) return;
@@ -747,6 +777,16 @@ function drawWire(box, w) {
   const sig = items.map((i) => i.url).join("\n");
   if (box.dataset.sig === sig) { box.hidden = false; return; }
   box.dataset.sig = sig;
+  if (!box.dataset.sinceOn) { // once per drawing of the front page
+    box.dataset.sinceOn = "1";
+    tk.addEventListener("toggle", () => {
+      if (!tk.open) { wireSince = null; markWireSince(box); return; }
+      const prev = store.get("wire.seen"), top = (Array.isArray(lastWire?.items) ? lastWire.items : []).find((i) => i?.title && /^https:\/\//.test(i.url || ""));
+      wireSince = prev && typeof prev.url === "string" && Number.isFinite(prev.at) ? prev : null;
+      if (top) store.set("wire.seen", { url: top.url, at: Date.now() });
+      markWireSince(box);
+    });
+  }
   const rows = () => [...ol.querySelectorAll("li")];
   const at = tk.open ? rows().find((li) => li.getBoundingClientRect().bottom > 0) : null;
   const keep = at && { url: at.querySelector("a").getAttribute("href"), top: at.getBoundingClientRect().top };
@@ -754,6 +794,7 @@ function drawWire(box, w) {
   box.querySelector("summary").innerHTML = `<span class="wtag">外電</span><span class="de">Telegramme</span><span class="t">${esc(wireTime(first.time))}</span><span class="src">${esc(first.src)}</span><span class="h">${esc(first.title)}</span><span class="more">${items.length} 則</span><span class="less">收起</span>`;
   ol.innerHTML = items.map((i) => `<li><a href="${esc(i.url)}" target="_blank" rel="noopener noreferrer"><span class="meta"><span class="t">${esc(wireTime(i.time))}</span><span class="src">${esc(i.src)}</span></span><b>${esc(i.title)}</b>${i.lead ? `<span class="ld">${esc(i.lead)}</span>` : ""}</a></li>`).join("");
   box.hidden = false;
+  markWireSince(box);
   const same = (url) => rows().find((li) => li.querySelector("a").getAttribute("href") === url);
   if (keep) { const li = same(keep.url); if (li) window.scrollBy(0, li.getBoundingClientRect().top - keep.top); }
   if (focus) same(focus)?.querySelector("a").focus({ preventScroll: true });
@@ -1022,6 +1063,7 @@ function viewFront(dateParam) {
   fillBoerse(main); // 市場行情 under the wires (assets/boerse.js): drawn already, from the kept figures or empty; filled in place
   const wx = fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
   if (evening) letterForm(main.querySelector(".night-letter-slot"), true);
+  fitEar(main);
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
   // 出門前 (outdoor-card.js): today's paper only; it comes up by itself once per issue, not from 往期 nor under ?preview
   if (todays(issue)) outdoorFront({ box: main.querySelector(".wrap > .wetter"), head: main.querySelector(".masthead"), issue, weather: wx, pop: !dateParam && !isPreview() });
@@ -1191,6 +1233,25 @@ function sentLetters(open = false) {
 // Console API credits (the 200 USD a month that does not carry over) and what is left, out of the yard's store
 // (nest-worker.js /{code}/credits, the Admin API's cost report, ten minutes old at most). Another yard has none: the
 // section goes. The last copy (rm.credits) shows at once, and offline.
+// 這一期花在哪 (the owner, 2026-11-25): one line under the bar, what each shift spent this cycle, from the index's
+// api_spend (scripts/build_index.py, state/api/spend.json, kept per UTC day); only the days before the one the store's figure
+// was read on are added up, since the store counts a day once it has ended, so the shifts never add up to more than 「已用」;
+// 其餘 is the store's own total less those, so
+// 「約」, and is left off when it comes out negative or rounds to nothing. The index is already in hand, so the kept copy and
+// the fresh one draw the same line and nothing moves.
+const SPEND_NAMES = { column: "先發班", serial: "連載", concerts: "演出", reserve: "備稿" };
+function creditBy(c) {
+  const cyc = (S.index?.api_spend || []).find((x) => x.from <= c.from && c.from < x.until), settled = new Date(c.at).toISOString().slice(0, 10);
+  const by = {};
+  for (const [d, m] of Object.entries(cyc?.days || {})) if (d >= c.from && d < settled) for (const k in m) by[k] = (by[k] || 0) + (Number(m[k]) || 0);
+  const parts = Object.entries(SPEND_NAMES).map(([k, n]) => [n, by[k] || 0]).filter(([, v]) => v >= 0.05).sort((a, b) => b[1] - a[1]);
+  if (!parts.length) return "";
+  const rest = Math.round(c.used - parts.reduce((t, [, v]) => t + v, 0));
+  const items = parts.map(([n, v]) => `${n} ${v.toFixed(1)}`);
+  if (rest >= 1) items.push(`其餘約 ${rest}`);
+  items[items.length - 1] += " 美元";
+  return `<p class="credit-by">${items.map((x) => `<span>${esc(x)}</span>`).join("・")}</p>`;
+}
 async function creditBox(el) {
   const n = nest(), api = S.cfg.nest?.api;
   if (!el || !n || !api) return;
@@ -1210,7 +1271,7 @@ async function creditBox(el) {
     if (c.until) {
       if (c.until <= new Date().toISOString().slice(0, 10)) { el.innerHTML = `${head}<p class="small">手機裡存的是上一期（到 ${md(c.until)}）的數字，那一期用了 US$ ${c.used.toFixed(2)}；這一期的還沒讀到。</p>`; return; }
       el.innerHTML = `${head}<p class="credit-left"><b>US$ ${c.left.toFixed(2)}</b>剩下</p>
-      <span class="credit-bar"><i style="width:${pct.toFixed(1)}%"></i></span>
+      <span class="credit-bar"><i style="width:${pct.toFixed(1)}%"></i></span>${creditBy(c)}
       <p class="small">這一期（${md(c.from)}–${md(c.until)}）已用 US$ ${c.used.toFixed(2)}／${c.budget} 美元；${md(c.until)} 早上八點到期，用不完不累積，下一期在訂閱扣款後發放。Anthropic 每天早上八點結算前一天，當天花的隔天才算進來。${ago > 1 ? `這是 ${age}前的數字。` : ""}</p>
       ${dayList(days)}`;
       return;
