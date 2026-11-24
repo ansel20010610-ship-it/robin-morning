@@ -197,6 +197,139 @@ def verse(art):
     return out
 
 
+# ——— 藏品標出處 (the owner's pick of the samples, 2026-11-25): where a piece in 收藏 comes from, out of its article's
+# 資料表 (body blocks of type "facts"; a 詩 article that sets two poems side by side writes it in a "table" instead) —
+# the work's size and where it hangs on the 美術館 label, the building's years in the 版畫's pencil, the year a poem was
+# written on its 詩箋's postmark. The rows are named a little differently from article to article; a row not found,
+# or not read with confidence, leaves that part off.
+def fact_rows(art, tables=False):
+    """(name, value) of each row of the article's facts — and of its tables (name, first column) when `tables`."""
+    out = []
+    for b in art.get("body") or []:
+        if not isinstance(b, dict):
+            continue
+        rows = b.get("items") if b.get("type") == "facts" else b.get("rows") if tables and b.get("type") == "table" else None
+        for r in rows or []:
+            if isinstance(r, list) and len(r) >= 2 and isinstance(r[0], str) and isinstance(r[1], str):
+                out.append((r[0].strip(), r[1].strip()))
+    return out
+
+
+def fact(art, names, tables=False):
+    rows = dict(reversed(fact_rows(art, tables)))  # the first row of a name wins
+    return next((rows[n] for n in names if rows.get(n)), "")
+
+
+NUM = r"(\d+(?:\.\d+)?)"
+
+
+def work_size(v):
+    """The work itself, height by width (as the articles give it): 「油彩、畫布，130.5 × 191 公分」 → 130.5 × 191 公分,
+    「高 45.5 公分、寬 41 公分」 → 45.5 × 41 公分, 「高 517 公分（…）」 → 高 517 公分. A size given for one cast or copy
+    among several (「大都會博物館那座高 209.6…」) is not the work's own: left off."""
+    v = re.split(r"[（(]", v)[0]
+    for seg in re.split(r"[；;]", v):
+        m = (re.search(NUM + r"\s*[×xX]\s*" + NUM + r"(?:\s*[×xX]\s*" + NUM + r")?\s*公分", seg)
+             or re.search(r"高\s*" + NUM + r"\s*(?:公分)?\s*[、，,]\s*寬\s*" + NUM + r"\s*公分", seg)
+             or re.search(r"高\s*" + NUM + r"\s*公分", seg))
+        if not m:
+            continue
+        if re.search(r"[那這]座|[那這]件|鑄件", seg[:m.start()]):
+            return None
+        nums = [g for g in m.groups() if g]
+        return ("高 %s 公分" % nums[0]) if len(nums) == 1 else " × ".join(nums) + " 公分"
+    return None
+
+
+def work_held(v):
+    """Where it is: 「巴黎，奧賽美術館」 → 巴黎・奧賽美術館; what follows in brackets or after 「；」 (an inventory number,
+    the year it came in, the other casts) is left off, and so is a part with a figure in it."""
+    v = re.split(r"[（(；;]", v)[0]
+    parts = [p.strip() for p in re.split(r"[，,]", v) if p.strip() and not re.search(r"\d", p)][:2]
+    return "・".join(parts) or None
+
+
+# How a year is given, from the text before its figures and after its 年: before the common era (西元前 447, 公元前 27,
+# 前447, 約西元前 600) — these pages would print it as a year of ours, a thousand years off; before or after it (以前,
+# 之後); about it (約, 左右, 前後); or as it is (""). The first two are left off; about is written so.
+BCE_BEFORE = re.compile(r"前\s*(?:(?:西元|公元|紀元)\s*)?(?:約\s*)?$")
+ABOUT_BEFORE = re.compile(r"約\s*(?:(?:西元|公元|紀元)\s*)?$")
+ABOUT_AFTER = re.compile(r"\s*(?:左右|前後)")
+BOUND_AFTER = re.compile(r"\s*(?:以前|之前|以後|之後)")
+
+
+def year_kind(head, tail):
+    if BCE_BEFORE.search(head):
+        return "bce"
+    if BOUND_AFTER.match(tail):
+        return "bound"
+    return "about" if ABOUT_BEFORE.search(head) or ABOUT_AFTER.match(tail) else ""
+
+
+def built_years(v):
+    """The years the building went up: the last span the row gives (the Pantheon's 「…首建；現存建築…重建，118–125 年」
+    → 118–125; 「約 780–833 年」 → 約 780–833), or else the first and the last year of its first clause (「1959 年 3 月
+    動工，1973 年 10 月 20 日啟用」 → 1959–1973). A king's reign is not the building's: left out. One year alone, no years;
+    a year before the common era, or before or after one, no years (year_kind). Run the examples: python3 -m doctest
+    scripts/build_index.py
+
+    >>> built_years("公元前 27 年前後阿格里帕首建；現存建築大部分是哈德良時期重建，118–125 年")
+    '118–125'
+    >>> built_years("約 780–833 年，分五個階段（學者估計）"), built_years("1959 年 3 月動工，1973 年 10 月 20 日啟用")
+    ('約 780–833', '1959–1973')
+    >>> built_years("1194 年大火後重建，約 1221 年結構完工，1260 年祝聖"), built_years("1150 年左右動工，1220 年完工")
+    ('1194–1260', '約 1150–1220')
+    >>> [built_years(v) for v in ("西元前 447–432 年", "前447–432年", "公元前 447 年動工，前 432 年完工", "約西元前 600 年起，西元 1200 年重修")]
+    [None, None, None, None]
+    >>> built_years("傳統歸於薩格王朝國王拉利貝拉（約 1181–1221 年在位）；學者認為有幾期工程")
+    """
+    v = re.sub(r"（[^）]*在位[^）]*）", "", v)
+    spans = list(re.finditer(r"(?<!\d)(\d{2,4})\s*[–—-]\s*(\d{2,4})\s*年(?!\s*在位)", v))
+    if spans:
+        m = spans[-1]
+        kind = year_kind(v[:m.start()], v[m.end():])
+        return None if kind in ("bce", "bound") else "%s%s–%s" % ("約 " if kind else "", m.group(1), m.group(2))
+    first = re.split(r"[；;]", v)[0]
+    years = list(re.finditer(r"(?<!\d)(\d{3,4})\s*年", first))
+    kinds = [year_kind(first[:m.start()], first[m.end():]) for m in years]
+    if len(years) < 2 or "bce" in kinds or "bound" in (kinds[0], kinds[-1]):
+        return None
+    return "%s%s–%s" % ("約 " if "about" in (kinds[0], kinds[-1]) else "", years[0].group(1), years[-1].group(1))
+
+
+def written_year(v):
+    """The year the poem was written, the first the row gives: 「1075 年（熙寧八年）正月二十日夜…」 → 1075. The postmark
+    has room for the year alone, so a year before the common era, about a year, or before or after one: none.
+
+    >>> written_year("1075 年（熙寧八年）正月二十日夜，密州（今山東諸城）"), written_year("1819 年，雷卡納蒂")
+    ('1075', '1819')
+    >>> [written_year(v) for v in ("西元前 1046 年左右", "約西元前 600 年", "前600年", "唐朝（約 755 年）", "755 年前後", "1820 年以前")]
+    [None, None, None, None, None, None]
+    """
+    m = re.search(r"(?<!\d)(\d{3,4})\s*年", v)
+    return m.group(1) if m and not year_kind(v[:m.start()], v[m.end():]) else None
+
+
+def provenance(col, art):
+    """The fields the 收藏's pages print from the 資料表 (see above), for the article's index entry."""
+    out = {}
+    if col == "artwork":
+        size, held = work_size(fact(art, ("媒材與尺寸", "尺寸", "媒材"))), work_held(fact(art, ("現藏", "現在在哪裡", "在哪裡", "收藏", "所在", "今天在哪")))
+        if size:
+            out["size"] = size  # the 美術館 label (assets/museum.js)
+        if held:
+            out["held"] = held
+    elif col == "architecture":
+        yrs = built_years(fact(art, ("建造年代", "建造", "建成", "年代", "現存主體")))
+        if yrs:
+            out["built"] = yrs  # the 版畫's pencil (assets/prints.js)
+    elif col == "poem":
+        yr = written_year(fact(art, ("寫作", "寫的時候", "寫成"), tables=True))
+        if yr:
+            out["written"] = yr  # the 詩箋's postmark (assets/poems.js)
+    return out
+
+
 CORRECTION_LABEL = re.compile(r"^更正（(\d{4}-\d{2}-\d{2})）")
 CORRECTION_MAX = 80
 
@@ -582,8 +715,9 @@ def main():
                 entry["motif"] = art["motif"].strip()  # the yard's robin sings it (nest.js playMotif)
             if col in ("architecture", "artwork") and isinstance(art.get("topic_key"), str) and art["topic_key"].strip():
                 entry["topic_key"] = art["topic_key"].strip()  # the 版畫冊's and 美術館's labels (assets/prints.js buildingName, museum.js workTitle)
-            if col == "architecture" and isinstance(art.get("name_zh"), str) and art["name_zh"].strip():
-                entry["name_zh"] = art["name_zh"].strip()  # the 版畫冊's Chinese name above the Latin one (assets/prints.js)
+            if col in ("architecture", "artwork") and isinstance(art.get("name_zh"), str) and art["name_zh"].strip():
+                entry["name_zh"] = art["name_zh"].strip()  # the Chinese name above the Latin one (the 版畫冊, assets/prints.js; the 美術館 label, museum.js)
+            entry.update(provenance(col, art))
             if col == "music" and works.get(str(art.get("topic_key") or "")):
                 entry["work"] = works[str(art["topic_key"])]  # the 唱片櫃's sleeve (assets/records.js)
             cdate, ctext = correction(art)

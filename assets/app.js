@@ -23,12 +23,12 @@ import { worldState, drawGlobe } from "./world.js";
 import { renderNest, renderNestSettings, renderNestAlbum, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
 import { codaHtml, codaVoices, playCoda } from "./jupiter.js";
 import { shelf, shelved, shelve, markShown, shelfHtml, bookHtml, openBook, marksHtml } from "./shelf.js";
-import { crateHtml, wireCrate, deckHtml, fillPlate, playRecord, boxBusy, workName, spreadHtml, wireSpread } from "./records.js";
+import { crateHtml, wireCrate, deckHtml, fillPlate, playRecord, boxBusy, workName, spreadHtml, wireSpread, toFront } from "./records.js";
 import { medalMonths, medalsHtml } from "./medals.js";
-import { printsHtml, wirePrints, resetPrints } from "./prints.js";
-import { poemsHtml, wirePoems } from "./poems.js";
+import { printsHtml, wirePrints, resetPrints, toTop as printOnTop } from "./prints.js";
+import { poemsHtml, wirePoems, toTop as letterOnTop } from "./poems.js";
 import { salonHtml, roomHtml, wireRoom, wallSilk } from "./museum.js";
-import { salonRoom, wireSalon, redrawBird, roomMove } from "./salon.js";
+import { salonRoom, wireSalon, redrawBird, roomMove, arrive } from "./salon.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
 const main = $("#main");
@@ -470,9 +470,10 @@ const scenePage = (name, zh, back, scene) => `<div class="sc-page"><div class="s
 // 美術館 (#/museum, one of 收藏's corners; the owner, 2026-11-19): every 藝術 piece read hangs on the wall (museum.js).
 const museum = () => { const read = readSet(); return publishedIssues().flatMap((i) => i.articles.filter((a) => a.column === "artwork" && read.has(`${i.date}/artwork`)).map((a) => ({ date: i.date, a }))).sort((x, y) => y.date.localeCompare(x.date)); };
 function viewMuseum() {
-  const list = museum();
+  const list = museum(), fresh = freshIn("museum", list);
   main.innerHTML = scenePage("Museum", "美術館", "#/saved", `<div class="sc-scene mu-wall museum-scene">${wallSilk}<i class="sc-lamp"></i>${list.length ? salonHtml(list) : '<p class="sc-empty">讀完一篇藝術，就會掛上一幅。</p>'}<i class="mu-rail" aria-hidden="true"></i></div>`);
   wireBack();
+  if (fresh) arrive(main.querySelector(`.mu-hang[href="#/museum/${fresh}"] .mu-frame`), { hook: true, seen: saw("museum", list) }); // hung on its hook
   document.title = `美術館｜${S.cfg.title}`;
 }
 function viewMuseumWork(date) {
@@ -486,19 +487,24 @@ function viewMuseumWork(date) {
 // 詩箋 (#/poems, one of 收藏's corners; the owner, 2026-11-19): every 詩 piece read is a letter (poems.js).
 const poems = () => { const read = readSet(); return publishedIssues().flatMap((i) => i.articles.filter((a) => a.column === "poem" && read.has(`${i.date}/poem`)).map((a) => ({ date: i.date, a }))).sort((x, y) => y.date.localeCompare(x.date)); };
 function viewPoems() {
-  const list = poems();
+  const list = poems(), fresh = freshIn("poems", list);
+  if (fresh) letterOnTop(fresh);
   main.innerHTML = scenePage("Briefe", "詩箋", "#/saved", `<div class="sc-scene sc-desk poems-scene"><i class="sc-lamp"></i>${list.length ? poemsHtml(list) : '<p class="sc-empty">讀完一首詩，就會收進一張詩箋。</p>'}</div>`);
   wireBack();
   wirePoems(main.querySelector(".poems-scene"), list, (date) => article(date, "poem"));
+  if (fresh) arrive(main.querySelector(".po-top"), { rise: 18, seen: saw("poems", list) }); // laid on the desk
   document.title = `詩箋｜${S.cfg.title}`;
 }
 // 版畫冊 (#/prints, one of 收藏's corners; the owner, 2026-11-19): every 建築 piece read is an etching (prints.js).
 const prints = () => { const read = readSet(); return publishedIssues().flatMap((i) => i.articles.filter((a) => a.column === "architecture" && read.has(`${i.date}/architecture`)).map((a) => ({ date: i.date, a }))).sort((x, y) => y.date.localeCompare(x.date)); };
 function viewPrints() {
-  const list = prints();
+  const list = prints(), fresh = freshIn("prints", list);
+  if (fresh) printOnTop(fresh);
   main.innerHTML = scenePage("Radierungen", "版畫冊", "#/saved", `<div class="sc-scene sc-desk prints-scene"><i class="sc-lamp"></i>${list.length ? printsHtml(list) : '<p class="sc-empty">讀完一篇建築，就會收進一張版畫。</p>'}</div>`);
   wireBack();
   wirePrints(main.querySelector(".prints-scene"), list);
+  const sc = main.querySelector(".prints-scene"); // laid on the desk among the others, or on top in the portfolio
+  if (fresh) arrive(sc && (sc.classList.contains("spread") ? sc.querySelector(`.pr-mini[data-pick="${list.findIndex((p) => p.date === fresh)}"]`) : sc.querySelector(".pr-top")), { seen: saw("prints", list) });
   document.title = `版畫冊｜${S.cfg.title}`;
 }
 // 紀念章 (#/medals, one of 收藏's corners; the owner, 2026-11-19): a month with every issue read through (medals.js).
@@ -511,6 +517,23 @@ function viewMedals() {
 }
 // 唱片櫃 (#/records, one of 收藏's corners; the owner, 2026-11-19): every 古典音樂 piece read is a record (records.js).
 const records = () => { const read = readSet(); return publishedIssues().flatMap((i) => i.articles.filter((a) => a.column === "music" && read.has(`${i.date}/music`)).map((a) => ({ date: i.date, a }))).sort((x, y) => y.date.localeCompare(x.date)); };
+// 新藏品入館 (the owner's pick of the samples, 2026-11-25): a corner of 收藏 — 美術館, 唱片櫃, 版畫冊, 詩箋 —
+// holding a piece not yet seen there (read since the corner was last opened, an old issue's too) lights a gold dot on its
+// brass in the room (salon.js newDot), and opening it sets the newest such piece in its place once (salon.js arrive). The
+// phone keeps the dates each corner has shown (rm.salon.seen); the first time, all that is there already counts as seen,
+// so the corners do not all light at once.
+const CORNERS = { museum: () => museum(), records: () => records(), prints: () => prints(), poems: () => poems() };
+function seenIn() {
+  const kept = store.get("salon.seen", null), s = kept && typeof kept === "object" && !Array.isArray(kept) ? kept : {};
+  let added = false;
+  for (const [k, list] of Object.entries(CORNERS)) if (!Array.isArray(s[k])) { s[k] = list().map((x) => x.date); added = true; }
+  if (added) store.set("salon.seen", s);
+  return s;
+}
+// the newest piece not yet seen in the corner ("" if none); and what marks all it holds seen, called by arrive as that
+// piece starts to come in (or at once, when it is simply there), so a camera turned back on the way in leaves it for next time
+const freshIn = (k, list) => { const got = new Set(seenIn()[k]); return list.find((x) => !got.has(x.date))?.date || ""; };
+const saw = (k, list) => () => { const s = seenIn(); s[k] = list.map((x) => x.date); store.set("salon.seen", s); };
 // #/records/all: every record spread out on the desk (records.js spreadHtml); a tap brings one to the front of the crate.
 function viewRecordsAll() {
   const list = records();
@@ -520,10 +543,12 @@ function viewRecordsAll() {
   document.title = `全部唱片｜${S.cfg.title}`;
 }
 function viewRecords() {
-  const list = records();
+  const list = records(), fresh = freshIn("records", list);
+  if (fresh) toFront(fresh);
   main.innerHTML = scenePage("Schallplatten", "唱片櫃", "#/saved", `<div class="sc-scene sc-wall crate-scene"><i class="sc-lamp"></i>${list.length ? "" : '<p class="sc-empty">讀完一篇古典音樂，就會收進一張唱片。</p>'}${crateHtml(list)}</div>`);
   wireBack();
   wireCrate(main.querySelector(".crate-scene"), list);
+  if (fresh) arrive(main.querySelector(".cr-top"), { seen: saw("records", list) }); // lowered into the crate, in front
   document.title = `唱片櫃｜${S.cfg.title}`;
 }
 // The record plays through Spotify (the owner, 2026-11-19: 唱片就是連動spotify): the article's own recording (its music
@@ -2405,7 +2430,7 @@ function viewSaved() {
     ["list", "收進來的", sv, sv ? "篇" : "還沒有收藏的文章"],
   ];
   main.innerHTML = `<div class="sammlung"><h1 class="sc-sr">收藏</h1>
-    ${salonRoom({ drawers: DRAWERS, museum: mu, records: rcl, poems: pml, prints: prl0, books, reading, stamps: stl, bird: sonder() })}</div>`;
+    ${salonRoom({ drawers: DRAWERS, museum: mu, records: rcl, poems: pml, prints: prl0, books, reading, stamps: stl, bird: sonder(), fresh: { museum: Boolean(freshIn("museum", mu)), records: Boolean(freshIn("records", rcl)), prints: Boolean(freshIn("prints", prl0)), poems: Boolean(freshIn("poems", pml)) } })}</div>`;
   const room = main.querySelector(".salon");
   wireSalon(room, { world: wd.map((e) => e.code), poem: pml[0] ? () => article(pml[0].date, "poem") : null });
   // 後院 (nest.js): on a 特供版 phone the robin is in the room; what the others fed since last time arrives with a sync

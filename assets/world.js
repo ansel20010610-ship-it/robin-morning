@@ -119,13 +119,75 @@ export function globe() {
   return globeLoading;
 }
 
+// ——— 地球儀的晝夜 (the owner's pick of the samples, 2026-11-25, for the globe in 收藏's room) ———
+// Where the sun stands overhead at `ms` (the low-precision formulas of the Astronomical Almanac / NOAA: well under a
+// degree): { lon, lat } in degrees. It moves a quarter of a degree a minute; the room asks again every ten minutes.
+export function subsolar(ms) {
+  const d = (ms - 946728000000) / 864e5; // days from J2000.0
+  const g = (357.529 + .98560028 * d) * RAD, q = 280.459 + .98564736 * d;
+  const L = (q + 1.915 * Math.sin(g) + .02 * Math.sin(2 * g)) * RAD, e = (23.439 - .00000036 * d) * RAD;
+  const ra = Math.atan2(Math.cos(e) * Math.sin(L), Math.cos(L)) / RAD, gmst = ((18.697374558 + 24.06570982441908 * d) % 24 + 24) % 24;
+  return { lon: ((ra - gmst * 15 + 540) % 360 + 360) % 360 - 180, lat: Math.asin(Math.sin(e) * Math.sin(L)) / RAD };
+}
+// The night half, over the frame: the sun's height drawn as caps of the sphere — where it is below asin(k) — each a
+// shape on the disc (the arc where that circle of the sphere faces us, closed along the rim on the night's side), filled
+// one over another in warm dark ink, so the line between day and night is a soft band from about +3° down to −7° and
+// the deep night NIGHT[1] dark; the lit half a shade warmer. Then the countries read are painted over the night again
+// at READ_NIGHT of their own colour, so the wine still shows there. Shapes, not pixels: a frame costs a few hundred
+// points, whatever the turn.
+const NIGHT = ["26,15,6", .4], DAYWARM = ["255,238,196", .14], READ_NIGHT = .8;
+const EDGE = .05, SOFT = .17, LAYERS = 6, WARM = 3;
+const ssInv = (y) => .5 - Math.sin(Math.asin(1 - 2 * y) / 3); // where smoothstep reaches y
+// the cap where the sun is below asin(k), on the disc of radius R about (cx, cy): its outline added to path `p`; false if
+// none of it faces us. (us, ws, ds): the sun's direction seen from the view (across, up, toward us).
+function cap(p, k, [us, ws, ds], cx, cy, R) {
+  const rho = Math.hypot(us, ws), r = Math.sqrt(1 - k * k), ea = rho > 1e-9 ? [us / rho, ws / rho] : [1, 0];
+  const at = (a, b) => [cx + R * (a * ea[0] - b * ea[1]), cy - R * (a * ea[1] + b * ea[0])];
+  const pts = [];
+  const c0 = rho > 1e-9 ? (k * ds) / (r * rho) : (k * ds >= 0 ? Infinity : -Infinity);
+  if (c0 <= -1) { if (ds >= k) return false; p.moveTo(cx + R, cy); p.arc(cx, cy, R, 0, 2 * Math.PI); p.closePath(); return true; } // the circle all round the back: all night, or none
+  const ring = (t0, t1, n) => { for (let i = 0; i <= n; i++) { const t = t0 + ((t1 - t0) * i) / n; pts.push(at(k * rho + r * ds * Math.cos(t), r * Math.sin(t))); } };
+  if (c0 >= 1) { // all of the circle faces us: the night inside it, or round it
+    ring(0, 2 * Math.PI, 48);
+    if (ds > 0) { p.moveTo(cx + R, cy); p.arc(cx, cy, R, 0, 2 * Math.PI); p.closePath(); } // the day inside: the disc less it (evenodd)
+  } else {
+    const t0 = Math.acos(c0);
+    ring(t0, 2 * Math.PI - t0, 40);
+    const th = Math.atan2(r * Math.sin(t0), k / rho); // the rim back round the far side from the sun
+    for (let i = 0; i <= 24; i++) { const a = -th - ((2 * Math.PI - 2 * th) * i) / 24; pts.push(at(Math.cos(a), Math.sin(a))); }
+  }
+  p.moveTo(pts[0][0], pts[0][1]);
+  for (let i = 1; i < pts.length; i++) p.lineTo(pts[i][0], pts[i][1]);
+  p.closePath();
+  return true;
+}
+function paintNight(ctx, sunView, { cx, cy, R }, again) {
+  // the lit half a shade warmer, fading in from the line
+  for (let i = 0; i < WARM; i++) {
+    const k = EDGE + SOFT * ssInv((i + .5) / WARM), p = new Path2D();
+    p.moveTo(cx + R, cy); p.arc(cx, cy, R, 0, 2 * Math.PI); p.closePath();
+    cap(p, k, sunView, cx, cy, R);
+    ctx.fillStyle = `rgba(${DAYWARM[0]},${(1 - Math.pow(1 - DAYWARM[1], 1 / WARM)).toFixed(4)})`; ctx.fill(p, "evenodd");
+  }
+  const a = (1 - Math.pow(1 - NIGHT[1], 1 / LAYERS)).toFixed(4);
+  let outer = null;
+  for (let i = 0; i < LAYERS; i++) {
+    const k = EDGE - SOFT * ssInv((i + .5) / LAYERS), p = new Path2D();
+    if (!cap(p, k, sunView, cx, cy, R)) continue;
+    if (!outer) outer = p;
+    ctx.fillStyle = `rgba(${NIGHT[0]},${a})`; ctx.fill(p, "evenodd");
+  }
+  if (outer && again) { ctx.save(); ctx.clip(outer, "evenodd"); ctx.globalAlpha = READ_NIGHT; again(); ctx.restore(); }
+}
+
 // One frame of the globe (`g`, from globe()) on `ctx`, whose transform is set to CSS pixels: the sphere of radius R about
 // (cx, cy), seen from above (lon, lat) and its picture turned `roll` degrees (the room's globe leans on its stand) —
 // the sea, the net of meridians and parallels every 30°, the land not read, the land read (`done`), today's unread
 // outlined (`open`), the states too small to draw as dots, home ringed; the light on it is the caller's. `look`: the
 // colours (read: a flat fill, else gold leaf from foil and hi; ink: the read land's edge) and, unless given, the page's
-// line widths and mark sizes (dots: plain, read, today's; mark: home's ring, its dot, the ring's width).
-export function paintGlobe(ctx, g, { cx, cy, R, lon, lat, roll = 0, done, open }, look) {
+// line widths and mark sizes (dots: plain, read, today's; mark: home's ring, its dot, the ring's width). `sun` (the
+// room's globe only; subsolar): the night half drawn over it (paintNight).
+export function paintGlobe(ctx, g, { cx, cy, R, lon, lat, roll = 0, done, open, sun }, look) {
   const { sea, land, coast, net = coast, netA = .45, netW = .5, coastW = .6, read, foil, hi, ink, readW = .8, gold, todayW = 1.5, robin } = look;
   const { dots = [1.2, 2.6, 2.4], mark = [8, 2.2, 1.4] } = look, buf = g.buf;
   const co = Math.cos(lon * RAD), so = Math.sin(lon * RAD), cl = Math.cos(lat * RAD), sl = Math.sin(lat * RAD);
@@ -138,15 +200,16 @@ export function paintGlobe(ctx, g, { cx, cy, R, lon, lat, roll = 0, done, open }
     o[i] = cx + R * u; o[i + 1] = cy - R * w;
     return d >= 0;
   };
-  const ring = (v) => { // adds the ring to the current path if any of it shows
+  const ring = (v, p = ctx) => { // adds the ring to the current path (or to `p`) if any of it shows
     const n = v.length / 3; let any = false;
     for (let i = 0; i < n; i++) if (put(v[3 * i], v[3 * i + 1], v[3 * i + 2], buf, 2 * i)) any = true;
     if (!any) return;
-    ctx.moveTo(buf[0], buf[1]);
-    for (let i = 1; i < n; i++) ctx.lineTo(buf[2 * i], buf[2 * i + 1]);
-    ctx.closePath();
+    p.moveTo(buf[0], buf[1]);
+    for (let i = 1; i < n; i++) p.lineTo(buf[2 * i], buf[2 * i + 1]);
+    p.closePath();
   };
   ctx.lineJoin = "round";
+  const readAgain = []; // with the night: what is painted over it again (the countries read, their dots)
   ctx.beginPath(); ctx.arc(cx, cy, R, 0, 7); ctx.fillStyle = sea; ctx.fill();
   ctx.save();
   ctx.beginPath(); ctx.arc(cx, cy, R, 0, 7); ctx.clip();
@@ -169,9 +232,16 @@ export function paintGlobe(ctx, g, { cx, cy, R, lon, lat, roll = 0, done, open }
       fill = ctx.createLinearGradient(cx - 2 * R + 2 * R * k, cy - R, cx + 2 * R * k, cy + R);
       fill.addColorStop(0, foil); fill.addColorStop(.25, hi); fill.addColorStop(.5, foil); fill.addColorStop(.75, hi); fill.addColorStop(1, foil);
     }
-    ctx.beginPath();
-    for (const l of g.lands) if (done.has(l.c)) ring(l.v);
-    ctx.fillStyle = fill; ctx.fill(); ctx.strokeStyle = ink; ctx.lineWidth = readW; ctx.stroke();
+    if (sun) { // kept, to be painted again over the night
+      const P = new Path2D();
+      for (const l of g.lands) if (done.has(l.c)) ring(l.v, P);
+      readAgain.push(() => { ctx.fillStyle = fill; ctx.fill(P); ctx.strokeStyle = ink; ctx.lineWidth = readW; ctx.stroke(P); });
+      readAgain[0]();
+    } else {
+      ctx.beginPath();
+      for (const l of g.lands) if (done.has(l.c)) ring(l.v);
+      ctx.fillStyle = fill; ctx.fill(); ctx.strokeStyle = ink; ctx.lineWidth = readW; ctx.stroke();
+    }
   }
   if (open.size) {
     ctx.beginPath();
@@ -183,11 +253,16 @@ export function paintGlobe(ctx, g, { cx, cy, R, lon, lat, roll = 0, done, open }
     const got = done.has(d.c), due = open.has(d.c);
     ctx.beginPath(); ctx.arc(pt[0], pt[1], got ? dots[1] : due ? dots[2] : dots[0], 0, 7);
     if (due) { ctx.strokeStyle = gold; ctx.lineWidth = 1.3; ctx.stroke(); } else { ctx.fillStyle = got ? read || foil : coast; ctx.fill(); }
+    if (sun && got && !due) { const [x, y] = pt; readAgain.push(() => { ctx.beginPath(); ctx.arc(x, y, dots[1], 0, 7); ctx.fillStyle = read || foil; ctx.fill(); }); }
   }
   const tw = [0, 0], h = g.home.map((x) => x * RAD), hk = Math.cos(h[1]);
   if (put(hk * Math.cos(h[0]), hk * Math.sin(h[0]), Math.sin(h[1]), tw, 0)) { // home
     ctx.beginPath(); ctx.arc(tw[0], tw[1], mark[0], 0, 7); ctx.strokeStyle = robin; ctx.lineWidth = mark[2]; ctx.stroke();
     ctx.beginPath(); ctx.arc(tw[0], tw[1], mark[1], 0, 7); ctx.fillStyle = robin; ctx.fill();
+  }
+  if (sun) { // the sun's direction as the view sees it, by the same turn as put()
+    const sa = sun.lon * RAD, sb = sun.lat * RAD, x = Math.cos(sb) * Math.cos(sa), y = Math.cos(sb) * Math.sin(sa), z = Math.sin(sb), x1 = x * co + y * so;
+    paintNight(ctx, [-x * so + y * co, z * cl - x1 * sl, x1 * cl + z * sl], { cx, cy, R }, readAgain.length ? () => readAgain.forEach((f) => f()) : null);
   }
   ctx.restore();
 }

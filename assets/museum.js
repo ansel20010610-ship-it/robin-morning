@@ -1,8 +1,9 @@
 // 美術館 (the owner's pick, 2026-11-19: 「先Ｂ點進去Ａ」): every 藝術 piece read hangs in a gallery with wine silk walls.
 // #/museum is the salon hang — every work on one wall in gilded frames, the newest the largest, under the picture light;
 // a tap on a work opens #/museum/<date>: that work alone on the wall under its light, the museum label beside it
-// (artist from the picture's credit, the work's name from its topic_key, the year), ‹ › to the next, a tap on the
-// painting opens the article. Walls, rail and floor are the bookcase's photographs (assets/shelf/, Poly Haven, CC0).
+// (artist from the picture's credit; the work's Chinese name, then its own from its topic_key, with the year; under a
+// short rule its size and where it is, from the article's 資料表 — build_index.py provenance), ‹ › to the next, a tap
+// on the painting opens the article. Walls, rail and floor are the bookcase's photographs (assets/shelf/, Poly Haven, CC0).
 import { esc } from "./util.js";
 import { museumFrame, frameCorners, FRAME_DEFS } from "./salon.js";
 
@@ -12,6 +13,14 @@ export const workTitle = (a) => String(a.topic_key || "").replace(/^artwork:[^-]
 // The artist: the picture credit's first part, up to 「／」 or 「；」 (「Édouard Manet；數位影像 …」) — unless that names
 // the photographer (「… 攝」, also with the source after it: 「Alvesgaspar 攝（Wikimedia Commons）」), then the key's first word.
 export const artistOf = (a) => { const c = String(a.hero?.credit || "").split(/[／；;]/)[0].trim(); if (c && !/攝\s*(?:$|[（(，,])/.test(c)) return c; const k = String(a.topic_key || "").match(/^artwork:([^-]+)/); return k ? k[1][0].toUpperCase() + k[1].slice(1) : ""; };
+// The Chinese name above the work's own (藏品標出處, the owner's pick of the samples, 2026-11-25): the article's name_zh,
+// or for the works hung before 藝術 articles carried one, as each article calls it.
+const NAME_ZH = {
+  "artwork:velazquez-las-meninas": "侍女", "artwork:michelangelo-david": "大衛", "artwork:vermeer-the-milkmaid": "倒牛奶的女僕",
+  "artwork:rodin-the-burghers-of-calais": "加萊義民", "artwork:munch-the-scream": "吶喊", "artwork:bernini-ecstasy-of-saint-teresa": "聖德蘭的狂喜",
+  "artwork:manet-olympia": "奧林匹亞",
+};
+const nameZh = (a) => (typeof a.name_zh === "string" && a.name_zh.trim()) || NAME_ZH[a.topic_key] || "";
 const ratio = (a) => (a.hero?.width > 0 && a.hero?.height > 0 ? a.hero.width / a.hero.height : 0.8);
 const pic = (a) => a.hero?.thumb || a.hero?.src || "";
 const ROMAN = (n) => [[1000, "M"], [900, "CM"], [500, "D"], [400, "CD"], [100, "C"], [90, "XC"], [50, "L"], [40, "XL"], [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]].reduce((s, [v, r]) => { while (n >= v) { s += r; n -= v; } return s; }, "");
@@ -25,7 +34,11 @@ const pc = (v) => `${(v * 100).toFixed(3)}%`;
 const SIZE = { lead: [100, 9], side: [50, 5], one: [150, 9] };
 const frame = (w, k) => { const f = museumFrame(ratio(w.a), ...SIZE[k]);
   return `<span class="mu-frame" style="aspect-ratio:${f.w}/${f.h};--r:${(f.w / f.h).toFixed(4)}"><span class="mu-canvas" style="inset:${pc(f.B / f.h)} ${pc(f.B / f.w)}">${pic(w.a) ? `<img src="${esc(pic(w.a))}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}</span>${f.svg}</span>`; };
-const label = (w) => `<span class="mu-label"><b>${esc(artistOf(w.a))}</b><i>${esc(workTitle(w.a) || w.a.title)}</i>${w.a.hero?.made ? `<span>${esc(w.a.hero.made)}</span>` : ""}</span>`;
+// The label: the artist; the Chinese name, the work's own name small under it with the year; under a short rule the
+// size (its figures in the Latin type) and where it is — each line only where the article gives it.
+const figures = (s) => esc(s).replace(/\d[\d.]*(?:\s*×\s*\d[\d.]*)*/g, (m) => `<span class="n">${m}</span>`);
+const label = (w) => { const zh = nameZh(w.a), at = [w.a.size && figures(w.a.size), w.a.held && esc(w.a.held)].filter(Boolean);
+  return `<span class="mu-label"><b>${esc(artistOf(w.a))}</b>${zh ? `<span class="zh">${esc(zh)}</span>` : ""}<i>${esc(workTitle(w.a) || w.a.title)}${w.a.hero?.made ? `<span class="yr">${esc(w.a.hero.made)}</span>` : ""}</i>${at.length ? `<span class="rule"></span>${at.map((x) => `<span class="pv">${x}</span>`).join("")}` : ""}</span>`; };
 
 // The wall is hung with the room's red damask (the owner, 2026-11-23: 「跟著換成房間的紅花緞」), at the room's size;
 // the frames' and the silk's patterns come with it (salon.js FRAME_DEFS).
@@ -43,7 +56,7 @@ export function salonHtml(list) {
 export function roomHtml(list, i) {
   const w = list[i];
   const f = frame(w, "one");
-  return `<div class="mu-room"><i class="mu-light one" aria-hidden="true"></i>
+  return `<div class="mu-room${w.a.held ? " held" : ""}"><i class="mu-light one" aria-hidden="true"></i>
       <a class="mu-one" href="#/a/${esc(w.date)}/${esc(w.a.column)}" style="${f.match(/--r:[\d.]+/)[0]}" aria-label="${esc(artistOf(w.a))}：${esc(workTitle(w.a) || w.a.title)}，打開這一篇">${f}</a>
       ${label(w)}</div>
     ${list.length > 1 ? `<div class="mu-foot"><a class="cr-flip sh-foil${i ? "" : " off"}" ${i ? `href="#/museum/${esc(list[i - 1].date)}"` : 'aria-disabled="true"'} aria-label="較新的一件">‹</a>

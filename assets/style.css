@@ -3242,8 +3242,11 @@ html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
 .pr-name .pr-zh { font: 600 19px/1.3 var(--serif); letter-spacing: .32em; padding-left: .32em; color: #2e2214; text-wrap: balance; }
 .pr-name .pr-en { margin-top: 5px; font-size: 13px; letter-spacing: .08em; color: #5a4630; }
 .pr-head { display: block; margin: 9px auto 0; max-width: 86%; text-align: center; font: 500 12px/1.6 var(--serif); letter-spacing: .14em; color: #4a3420; text-wrap: balance; }
-.pr-pencil { position: absolute; bottom: 20px; font: italic 500 12px/1 var(--latin); letter-spacing: .05em; color: rgba(70, 62, 55, .78); }
-.pr-pencil.l { left: 28px; } .pr-pencil.r { right: 28px; }
+/* the margin's pencil: the number at the left, the day at the right, and between them (藏品標出處) the city and the
+   years — in the middle of the sheet, or as far from the middle as a long line needs to keep clear of the day */
+.pr-pencils { position: absolute; left: 28px; right: 28px; bottom: 20px; display: flex; align-items: baseline; }
+.pr-pencil { flex: 1 1 0; white-space: nowrap; font: italic 500 12px/1 var(--latin); letter-spacing: .05em; color: rgba(70, 62, 55, .78); }
+.pr-pencil.r { text-align: right; } .pr-pencil.c { flex: 0 1 auto; margin: 0 14px; overflow: hidden; text-overflow: ellipsis; }
 .pr-tissue { position: absolute; left: 0; right: 0; top: 0; height: 58%; pointer-events: none; background: linear-gradient(160deg, rgba(255, 255, 255, .45), rgba(250, 246, 236, .22)); clip-path: polygon(0 0, 100% 0, 100% 26%, 0 100%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6); }
 .pr-nav { position: relative; z-index: 6; display: flex; align-items: center; justify-content: center; gap: 10px; margin: 18px 0 24px; }
 .pr-count { font: 600 13px/1 var(--sc-caps); letter-spacing: .3em; padding-left: .3em; }
@@ -3327,6 +3330,13 @@ html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
 .po-note b { display: block; font: 700 13px/1.45 var(--po-cn); letter-spacing: .2em; color: #2b2218; }
 .po-note i { display: block; min-height: 1em; margin-top: 6px; font: italic 400 10px/1.25 var(--po-lat); color: #6e5a3a; }
 .po-wax { position: absolute; right: -8px; bottom: -8px; width: 28px; height: 28px; border-radius: 50%; background: radial-gradient(circle at 38% 32%, #a83a4c, #6a1826 60%, #4a0f1a); box-shadow: 0 2px 3px rgba(0, 0, 0, .5); }
+/* 藏品標出處: the postmark, in ink under the type — on a folded letter pushed out over its lower left corner, its year under
+   the line of the title in the original (what falls off the paper is lost on the dark desk); on the envelope in front in
+   the box at its right */
+.po-pm { position: absolute; z-index: 0; left: 0; bottom: -9px; width: 40px; height: 40px; color: rgba(44, 30, 24, .38); transform: rotate(-8deg); pointer-events: none; overflow: visible; }
+.po-note > b, .po-note > i { position: relative; z-index: 1; }
+.po-env.pm { overflow: hidden; }
+.po-env .po-pm { left: auto; right: 26px; bottom: 7px; }
 .sc-page:has(.poems-scene) .sc-bar { position: relative; } /* long poems scroll: the gilt name stays at the head, not over the lines */
 
 /* ——— 美術館 (museum.js; the owner's pick 2026-11-19: the salon wall, a work tapped hangs alone) ——— wine silk damask
@@ -3354,10 +3364,19 @@ html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
 .mu-room { position: relative; z-index: 4; display: flex; flex-direction: column; align-items: center; padding: 96px 30px 6px; touch-action: pan-y; }
 .mu-room .mu-light.one { top: 70px; width: 150px; margin-left: -75px; }
 .mu-one { display: block; width: min(100%, 330px, calc(54svh * var(--r, .8))); border: 0; text-decoration: none; -webkit-tap-highlight-color: transparent; }
-.mu-label { align-self: flex-start; margin: 34px 0 0; padding: 10px 14px 11px; min-width: 150px; background: linear-gradient(#f7f1e3, #e9dfc8); box-shadow: 0 2px 4px rgba(0, 0, 0, .5); text-align: left; }
-.mu-label b { display: block; font: 600 11px/1.3 var(--sc-caps); letter-spacing: .18em; color: #2b2218; }
-.mu-label i { display: block; margin-top: 3px; font: italic 500 14px/1.25 var(--latin); color: #2b2218; }
-.mu-label span { display: block; margin-top: 3px; font: 500 10.5px/1.2 var(--latin); letter-spacing: .06em; color: #5a4630; }
+/* a work with a place to name (the label's last lines): the picture is drawn smaller so the label and the ‹ n / VII › row both clear the bottom bar and its safe area */
+.mu-room.held .mu-one { width: min(100%, 330px, calc(54svh * var(--r, .8)), calc((100svh - 398px - env(safe-area-inset-bottom)) * var(--r, .8))); }
+/* the label (藏品標出處, the owner's pick of the samples, 2026-11-25): the artist; the Chinese name, the work's own name small
+   under it with the year; a short rule; the size and where it is */
+.mu-label { align-self: flex-start; margin: 34px 0 0; padding: 11px 15px 12px; min-width: 150px; background: linear-gradient(#f7f1e3, #e9dfc8); box-shadow: 0 2px 4px rgba(0, 0, 0, .5); text-align: left; }
+.mu-label b { display: block; margin-bottom: 6px; font: 600 11px/1.3 var(--sc-caps); letter-spacing: .18em; color: #2b2218; }
+.mu-label .zh { display: block; font: 600 17px/1.3 var(--serif); letter-spacing: .22em; color: #2b2218; }
+.mu-label i { display: block; margin-top: 2px; font: italic 500 14px/1.25 var(--latin); color: #2b2218; }
+.mu-label .zh + i { font-size: 12.5px; color: #4a3826; }
+.mu-label .yr { margin-left: .5em; font: normal 500 11px/1 var(--latin); letter-spacing: .06em; color: #5a4630; }
+.mu-label .rule { display: block; width: 22px; height: 1px; margin: 9px 0 7px; background: rgba(90, 70, 48, .38); }
+.mu-label .pv { display: block; margin-top: 2px; font: 500 11px/1.5 var(--serif); letter-spacing: .1em; color: #4a3826; white-space: nowrap; }
+.mu-label .pv .n { font: 500 12px/1 var(--latin); letter-spacing: .02em; font-variant-numeric: lining-nums; }
 .mu-count { font: 600 12px/1 var(--sc-caps); letter-spacing: .24em; }
 .mu-foot .cr-flip { display: inline-block; text-align: center; text-decoration: none; }
 .mu-foot .cr-flip.off { opacity: .25; pointer-events: none; }
@@ -3438,6 +3457,9 @@ html:has(.sc-page), html:has(.sc-page) body { background: #0b0705; }
 @supports (height: 100svh) { .sl-rp { min-height: calc((100svh - var(--nav-h) - var(--dock-h) - env(safe-area-inset-bottom)) / var(--k, 1)); } }
 .sl-rp .sh-foil { animation: none; }
 .sl-rp .cr-plate { transform: scale(1.16); }
+.sl-rp .sl-new { position: absolute; left: 50%; top: 28px; width: 56.8px; height: 56.8px; margin: -28.4px 0 0 -28.4px; overflow: visible; pointer-events: none; } /* 新藏品入館: 25 room units across (.sl-rp's .44 undone), sitting on the brass's upper edge: its two lines fill the brass to the top, so the dot stands just above it, clear of 唱片櫃's type */
+/* 新藏品入館: a frame still off the wall casts its shadow farther and softer; it fades as the frame comes onto its hook (salon.js arrive) */
+.hang-air { position: absolute; inset: 0; z-index: -1; display: block; box-shadow: 9px 24px 15px rgba(30, 6, 0, .5); pointer-events: none; }
 .sl-rp .cr-plate > span { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .sl-rp .sl-de { opacity: 0; }
 .sl-rp .sl-zh .sc-cut { font: 700 17px/1 var(--serif); letter-spacing: .3em; padding-left: .3em; }

@@ -47,6 +47,7 @@ export function discHtml(r, size, extra = "") {
 // tap on it puts it on the turntable, a swipe (or the ‹ › on the sideboard) flips through the crate. The count is cut
 // in the sideboard's brass in Roman figures.
 let frontDate = ""; // the record left in front, so the way back from the turntable finds the crate as it was left
+export const toFront = (date) => { frontDate = date; }; // 新藏品入館: the record just come in goes in front
 const SLEEVE = "min(292px, calc(100vw - 110px))";
 function stackHtml(list, i, dir = "") {
   const top = list[i], back = list.slice(i + 1, i + 6).reverse();

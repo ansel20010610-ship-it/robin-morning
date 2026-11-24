@@ -4,11 +4,19 @@
 // lying on the open writing box where the earlier letters stand in their envelopes, the box's brass plate counting them.
 // #/poems shows the newest; a swipe or the ‹ › on the box turns to the next, a tap on the poet's line opens the article;
 // a tap on the brass plate lays every letter out on the desk, folded, its title on it; the brass die draws one.
+// 藏品標出處 (the owner's pick of the samples, 2026-11-25: the year alone): each folded letter, and the newest letter's
+// envelope in front in the box, carries a round postmark with the year the poem was written (index.json `written`, from
+// the article's 資料表 — build_index.py provenance); a poem whose year is not given has none. Drawn once, in ink under
+// the type, never on the letter that turns.
 // The letterpress types (Shippori Mincho B1, Old Standard TT) are only used here.
 import { esc } from "./util.js";
 
 const ROMAN = (n) => [[1000, "M"], [900, "CM"], [500, "D"], [400, "CD"], [100, "C"], [90, "XC"], [50, "L"], [40, "XL"], [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]].reduce((s, [v, r]) => { while (n >= v) { s += r; n -= v; } return s; }, "");
 let topDate = null;
+export const toTop = (date) => { topDate = date; }; // 新藏品入館: the letter just come in is the one on the desk
+
+// the postmark: a ring, the year between two rules, the ink a little uneven (#po-ink)
+const postmark = (y) => (/^\d{3,4}$/.test(String(y || "")) ? `<svg class="po-pm" viewBox="0 0 60 60" aria-hidden="true"><g filter="url(#po-ink)"><circle cx="30" cy="30" r="27.4" fill="none" stroke="currentColor" stroke-width="1.6"/><text x="30" y="36" font-size="16.5" fill="currentColor" font-family="Old Standard TT, serif" font-weight="700" text-anchor="middle" letter-spacing=".2">${y}</text><path d="M16 41.5h28M16 20.5h28" stroke="currentColor" stroke-width=".7"/></g></svg>` : "");
 
 // The poem of an article: its first quote of four lines or more; the cite gives the poet, 〈title〉 and (original title).
 export function poemOf(art) {
@@ -34,13 +42,14 @@ export function poemsHtml(list) {
   const i = Math.max(0, list.findIndex((p) => p.date === topDate));
   return `<svg class="po-defs" width="0" height="0" aria-hidden="true"><defs>
       <filter id="po-press" x="-2%" y="-2%" width="104%" height="104%"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="2" seed="5" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="1.6" result="d"/><feGaussianBlur in="d" stdDeviation=".25"/></filter>
+      <filter id="po-ink" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="9" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.4 1.25" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in"/></filter>
       <symbol id="po-robin" viewBox="6 16 54 38"><path d="M44.5 37.5 L55 30.5 L56.5 34 L46.5 41.5 Z"/><ellipse cx="33" cy="37" rx="15" ry="11.5" transform="rotate(-18 33 37)"/><circle cx="23" cy="25.5" r="8"/><path d="M15.4 24.2 L9.5 25.8 L15.6 27.4 Z"/></symbol></defs></svg>
     <div class="po-desk"><div class="po-top" data-date="${esc(list[i].date)}"><div class="po-leaf cur">${sheetHtml(list[i], null)}</div></div>
-      <div class="po-box"><i class="po-well"></i>${list.slice(1, 6).map((_, k) => `<i class="po-env" style="--k:${k}"></i>`).join("")}
+      <div class="po-box"><i class="po-well"></i>${list.slice(1, 6).map((_, k, e) => (k < e.length - 1 || !postmark(list[0].a.written) ? `<i class="po-env" style="--k:${k}"></i>` : `<i class="po-env pm" style="--k:${k}">${postmark(list[0].a.written)}</i>`)).join("")}
         <div class="po-sb">${list.length > 1 ? `<button type="button" class="cr-flip sh-foil" data-flip="-1" aria-label="較新的一封"${i ? "" : " disabled"}>‹</button>` : ""}
           ${list.length > 1 ? `<button type="button" class="sc-brass po-plate sc-plate-btn" data-all aria-label="全部攤開，${list.length} 封"><span class="sc-cut">Briefe · ${ROMAN(list.length)}</span></button>` : `<span class="sc-brass po-plate"><span class="sc-cut">Briefe · ${ROMAN(list.length)}</span></span>`}
           ${list.length > 1 ? `<button type="button" class="cr-flip sh-foil" data-flip="1" aria-label="較舊的一封"${i < list.length - 1 ? "" : " disabled"}>›</button><button type="button" class="sc-die" data-die aria-label="隨機抽一張"><i></i><i></i><i></i></button>` : ""}</div></div></div>
-    ${list.length > 1 ? `<div class="po-all" hidden>${list.map((p, k) => `<button type="button" class="po-note" data-pick="${k}"><b>……</b><i></i><span class="po-wax" aria-hidden="true"></span></button>`).join("")}
+    ${list.length > 1 ? `<div class="po-all" hidden>${list.map((p, k) => `<button type="button" class="po-note" data-pick="${k}">${postmark(p.a.written)}<b>……</b><i></i><span class="po-wax" aria-hidden="true"></span></button>`).join("")}
       <div class="pr-all-bar"><button type="button" class="sc-brass po-plate sc-plate-btn" data-all aria-label="收回信盒"><span class="sc-cut">Alle · ${ROMAN(list.length)}</span></button><button type="button" class="sc-die" data-die aria-label="隨機抽一張"><i></i><i></i><i></i></button></div></div>` : ""}`;
 }
 

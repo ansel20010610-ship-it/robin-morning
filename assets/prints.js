@@ -1,7 +1,7 @@
 // 版畫冊 (the owner's pick, 2026-11-19: the leather portfolio of scene 5): every 建築 piece read is an etching — the
 // article's picture bitten into cotton paper (sepia ink, cross-hatching, the plate mark pressed round it), the building's
 // name under it (from the article's topic_key, as a printer would set it) with the headline in small type, the number
-// and the day pencilled in the margins. #/prints is a blue leather portfolio open on the desk with the newest print on
+// and the day pencilled in the margins, and between them the city and the years the building went up (藏品標出處). #/prints is a blue leather portfolio open on the desk with the newest print on
 // top under a half-lifted tissue; a swipe or the ‹ › on the desk turns to the next print, a tap on the print opens the
 // article; a tap on the brass plate lays every print out on the desk (a tap on one brings it back on top), the brass die
 // draws one at random. Leather and wood are the bookcase's photographs (assets/shelf/, Poly Haven, CC0).
@@ -16,8 +16,18 @@ export const buildingName = (a) => String(a.topic_key || "").replace(/^architect
 const nameZh = (a) => (typeof a.name_zh === "string" ? a.name_zh.trim() : "");
 const nameHtml = (a, cls) => { const zh = nameZh(a); return `<span class="${cls}${zh ? " zh" : ""}">${zh ? `<span class="pr-zh">${esc(zh)}</span><span class="pr-en">${esc(buildingName(a))}</span>` : esc(buildingName(a))}</span>`; };
 const label = (a) => [nameZh(a), buildingName(a)].filter(Boolean).join(" ") || a.title;
+// 藏品標出處 (the owner's pick of the samples, 2026-11-25): pencilled in the margin between the number and the day, the
+// city in its own language and the years the building went up (index.json `built`, from the article's 資料表 —
+// build_index.py provenance; 「約」 written c.). A print with neither keeps its margin as before.
+const CITY = {
+  "architecture:chartres-cathedral": "Chartres", "architecture:sydney-opera-house": "Sydney", "architecture:borobudur": "Magelang",
+  "architecture:cologne-cathedral": "Köln", "architecture:pantheon-rome": "Roma", "architecture:alhambra": "Granada",
+  "architecture:lalibela-rock-hewn-churches": "Lalibela",
+};
+const whereLine = (a) => [CITY[a.topic_key], typeof a.built === "string" ? a.built.replace(/^約\s*/, "c. ") : ""].filter(Boolean).join(", ");
 const dateLine = (d) => { const [y, m, dd] = d.split("-").map(Number); return `${dd}. ${MONTH[m - 1]}. ${ROMAN(y).toUpperCase()}`; };
 let topDate = null; // the print left on top, kept while the reader opens its article and comes back
+export const toTop = (date) => { topDate = date; }; // 新藏品入館: the print just come in is the one on top
 // The way in is every print laid out on the desk (the owner, 2026-11-19: 入口是很多的那個); a print picked from it opens
 // the portfolio at that print, and the reader coming back from its article finds the portfolio again.
 let lastMode = "all";
@@ -29,7 +39,7 @@ function printHtml(p, n, total) {
       <span class="pr-plate"><span class="pr-etch">${src ? `<img src="${esc(src)}" alt="" decoding="async" referrerpolicy="no-referrer">` : ""}<i></i><i></i></span></span>
       ${nameHtml(p.a, "pr-name")}
       <span class="pr-head">${esc(p.a.title)}</span>
-      <span class="pr-pencil l">N° ${ROMAN(total - n)}</span><span class="pr-pencil r">${esc(dateLine(p.date))}</span>
+      <span class="pr-pencils"><span class="pr-pencil l">N° ${ROMAN(total - n)}</span>${whereLine(p.a) ? `<span class="pr-pencil c">${esc(whereLine(p.a))}</span>` : ""}<span class="pr-pencil r">${esc(dateLine(p.date))}</span></span>
     </a><i class="pr-tissue" aria-hidden="true"></i>`;
 }
 

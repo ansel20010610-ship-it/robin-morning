@@ -22,7 +22,7 @@ import { esc, ROBIN_PATHS, twNow } from "./util.js";
 import { phonoCabinetHtml } from "./records.js";
 import { fuseGilt, mould as cutMould, lightOf } from "./cabinet.js";
 import { stampPicture } from "./stamps.js";
-import { drawMap, globe, paintGlobe, GLOBE_DPR } from "./world.js";
+import { drawMap, globe, paintGlobe, subsolar, GLOBE_DPR } from "./world.js";
 import { poemOf } from "./poems.js";
 import { calm } from "./motion.js";
 import { roomBird } from "./nest.js";
@@ -170,6 +170,8 @@ const DEFS = `<svg class="sl-defs" width="0" height="0" aria-hidden="true"><defs
   ${lin("sl-cast", [["0", "rgba(30,14,4,.42)"], ["1", "rgba(30,14,4,0)"]], .6, 1)}
   ${rad("sl-contact", [["0", "rgba(15,6,0,.9)"], [".55", "rgba(15,6,0,.42)"], ["1", "rgba(15,6,0,0)"]])}
   ${rad("sl-vel", [["0", "rgba(30,0,8,.5)"], [".62", "rgba(30,0,8,.05)"], [".86", "rgba(255,170,190,.16)"], ["1", "rgba(255,190,205,.28)"]])}
+  ${rad("sl-ndh", [["0", "rgba(255,226,150,.85)"], [".45", "rgba(255,206,110,.35)"], ["1", "rgba(255,200,100,0)"]])}
+  ${rad("sl-ndc", [["0", "#fffbe8"], [".35", "#f6d36a"], [".8", "#c08a1e"], ["1", "#7a520c"]], ".38", ".34", ".7")}
   <pattern id="sl-brush" patternUnits="userSpaceOnUse" width="4" height="2"><rect width="4" height="1" fill="rgba(255,255,255,.08)"/><rect y="1" width="4" height="1" fill="rgba(0,0,0,.05)"/></pattern>
   ${pat("sl-cherryv", "gen_wood_v.png", 200)}${pat("sl-veneer", "gen_woodd_v.png", 200)}${pat("sl-velvet", "velvet.jpg", 110)}
   ${pat("sl-cherrys", "gen_wood.png", 130)}${pat("sl-cherryvs", "gen_wood_v.png", 130)}${pat("sl-leather", "leather.jpg", 90)}
@@ -212,6 +214,13 @@ function plate(x, y, w, h, l1, l2, o = {}) {
     ${o.rivets === false ? "" : `<circle cx="4.4" cy="${h / 2}" r="1.5" fill="url(#sl-rivet)"/><circle cx="${w - 4.4}" cy="${h / 2}" r="1.5" fill="url(#sl-rivet)"/>`}${txt}</g>`;
 }
 
+// 新藏品入館 (the owner's pick of the samples, 2026-11-25): on a corner holding a piece not yet seen there, a small gold
+// dot on its brass — at the plate's upper edge, in the middle — with a faint warm glow round it: about 8.5 pt across on
+// the phone. Drawn with the room, nothing moves for it. Its glow and its ball: DEFS sl-ndh, sl-ndc.
+const ND_R = 4.3;
+const newDot = (cx, cy) => { const k = ND_R / 3.1;
+  return `<g class="sl-nd"><circle cx="${cx}" cy="${cy}" r="${(9 * k).toFixed(2)}" fill="url(#sl-ndh)"/><circle cx="${(cx + .3 * k).toFixed(2)}" cy="${(cy + .55 * k).toFixed(2)}" r="${ND_R + .1}" fill="rgba(40,20,0,.45)"/><circle cx="${cx}" cy="${cy}" r="${ND_R}" fill="url(#sl-ndc)"/></g>`; };
+
 // ——— a picture: a carved gilt frame (a torus, a row of beads, a deep cove, the ogee, a sight edge), shells and leaves at
 // the corners, a crest on the big one; the canvas under old varnish (wine velvet behind it while, or if never, it loads),
 // the frame's shadow on its top and left ———
@@ -251,7 +260,7 @@ const pictureLight = (cx, y, w) => `<ellipse cx="${cx}" cy="${y + w * .7}" rx="$
 const cord = (x1, x2, y) => `<path d="M${x1} 0 L${(x1 + x2) / 2} ${y}" stroke="rgba(150,120,70,.6)" stroke-width=".5"/>`;
 const LAMP = [126, 34, 56], HANG_AT = [146, 50]; // the picture light in the drawing (its middle, its top, its width); where the drawing hangs in the room
 const HANG = [[76, 44, 100, 118, 9, 126, 38], [8, 22, 50, 64, 5, 30, 20], [194, 18, 50, 76, 5, 222, 16], [8, 100, 50, 68, 5, 0, 0], [194, 108, 50, 58, 5, 0, 0], [86, 176, 80, 58, 6, 0, 0]]; // x y w h border, cord x and drop
-function hang(list, count, unit) {
+function hang(list, count, unit, fresh) {
   const rail = `<rect x="0" y="0" width="252" height="3" fill="url(#sl-gold)"/>`;
   if (!list.length) return svg(252, 250, `${rail}${cord(70, 70, 70)}${cord(182, 182, 70)}<path d="M68 70 q2 4 4 0" stroke="url(#sl-gold)" stroke-width="1.4" fill="none"/><path d="M180 70 q2 4 4 0" stroke="url(#sl-gold)" stroke-width="1.4" fill="none"/>
     ${plate(96, 200, 60, 15, "美術館", "", { s1: 8.6, ls1: 2 })}`);
@@ -260,7 +269,7 @@ function hang(list, count, unit) {
   for (let i = 0; i < n; i++) if (HANG[i][6]) s += cord(HANG[i][5], HANG[i][5], HANG[i][6]);
   s += pictureLight(...LAMP);
   for (let i = 0; i < n; i++) { const [x, y, w, h, b] = HANG[i]; s += frame(x, y, w, h, pic(list[i].a), b); }
-  return svg(252, 250, s + plate(192, 196, 50, 26, "美術館", `${count} ${unit}`, { s1: 8.6, s2: 7.6, ls1: 1.2 }));
+  return svg(252, 250, s + plate(192, 196, 50, 26, "美術館", `${count} ${unit}`, { s1: 8.6, s2: 7.6, ls1: 1.2 }) + (fresh ? newDot(217, 196) : ""));
 }
 
 // ——— 我的書架: the case of the shelf page; the book being read (or the last finished) faces out, the others spine out ———
@@ -390,8 +399,11 @@ function globeHtml(count, unit) {
 // a point on the equator moves 2π·28/(60·15) ≈ 0.2 px a frame. It is held still while the page is out of sight, while
 // the camera moves in or back (.zoom), and with reduced motion (one still frame); it stops when the room is left.
 // Without assets/globe.json the flat map (world.js drawMap) is drawn in the disc instead.
+// 地球儀的晝夜 (the owner's pick of the samples, 2026-11-25): half of it lit and half in the night, as the sun stands
+// now (world.js subsolar, paintNight) — the sun's place found when the globe is drawn and again once it is ten minutes
+// old (SUN_EVERY), not every frame; held still (reduced motion), the globe is drawn again every ten minutes.
 const AXIS = -23, NET = "rgba(90,70,40,.35)", FACE = [28, 32]; // the axis's lean; the net's ink; the longitude and latitude it opens on
-const TURN = 60, FPS = 15;
+const TURN = 60, FPS = 15, SUN_EVERY = 10 * 60 * 1000;
 function turnGlobe(room, map, read) {
   globe().then((g) => {
     if (!map.isConnected) return;
@@ -399,7 +411,8 @@ function turnGlobe(room, map, read) {
     const look = { sea: v("--sl-sea"), land: v("--sl-land"), coast: v("--sl-coast"), coastW: .4, net: NET, netA: 1, netW: .4,
       read: v("--sl-wine"), ink: v("--sl-wine-edge"), readW: .4, robin: v("--sl-home"), dots: [.5, 1, 1], mark: [3.2, 1, .6] };
     const done = new Set(read.map((c) => String(c).toLowerCase())), open = new Set();
-    let lon = FACE[0], last = 0, timer = 0, raf = 0;
+    let lon = FACE[0], last = 0, timer = 0, raf = 0, sun = null, sunAt = 0;
+    const sunNow = () => { const t = Date.now(); if (!sun || t - sunAt >= SUN_EVERY) { sun = subsolar(t); sunAt = t; } return sun; };
     // a frame at the size the globe is seen at, in the screen's own pixels (three to a point on a phone: the disc is
     // small, and fewer leave its coasts soft); or `scale` times it, the camera's move in onto #/world's globe, in that
     // page's pixels (GLOBE_DPR), so the one lands on the other as it is
@@ -411,14 +424,14 @@ function turnGlobe(room, map, read) {
       if (cv.width !== px) cv.width = cv.height = px;
       ctx.setTransform(px / d, 0, 0, px / d, 0, 0);
       ctx.clearRect(0, 0, d, d);
-      paintGlobe(ctx, g, { cx: d / 2, cy: d / 2, R: d / 2, lon, lat: FACE[1], roll: AXIS, done, open }, look);
+      paintGlobe(ctx, g, { cx: d / 2, cy: d / 2, R: d / 2, lon, lat: FACE[1], roll: AXIS, done, open, sun: sunNow() }, look);
     };
     cv.setAttribute("aria-hidden", "true");
     map.replaceChildren(cv);
     map.nextElementSibling?.querySelector(".sl-net")?.remove();
     map.globe = { draw }; // for the camera's move (landIn, wayBack), and a look at a fixed angle
     draw();
-    if (calm()) return;
+    if (calm()) { const still = setInterval(() => { if (!cv.isConnected) clearInterval(still); else if (!document.hidden) draw(); }, SUN_EVERY); return; }
     const end = () => { clearTimeout(timer); cancelAnimationFrame(raf); document.removeEventListener("visibilitychange", wake); };
     const step = (now) => {
       raf = 0;
@@ -557,7 +570,7 @@ const medalCaseClosed = (w, h) => svg(w, h, `${shade(0, 0, w, h, 2)}<rect width=
 // ——— 詩箋: the mahogany writing box — its rim moulded, a line of pale stringing let in round the front, brass
 // angles at its corners, two small bracket feet; the letters standing in it, the newest in front with its poem's title
 // (filled in once the article is read, wireSalon) and three printed lines; empty, the box alone ———
-function writingBox(w, h, count, unit) {
+function writingBox(w, h, count, unit, fresh) {
   const front = h * .42, top = h - front, n = Math.min(count, 6);
   let s = `${shade(0, 0, w, h, 2)}<rect x="2" y="${top * .55}" width="${w - 4}" height="${top * .5}" fill="#1a0e07"/><rect x="2" y="${top * .55}" width="${w - 4}" height="${top * .5}" fill="url(#sl-velvet)" opacity=".25"/>`;
   for (let i = 0; i < n; i++) {
@@ -571,14 +584,14 @@ function writingBox(w, h, count, unit) {
     <rect x="-1" y="${top - 2.4}" width="${w + 2}" height="3.6" fill="url(#sl-wdh)"/><rect x="-1" y="${top - 2.4}" width="${w + 2}" height="1.2" fill="rgba(255,228,190,.4)"/><rect x="-1" y="${top + .6}" width="${w + 2}" height=".6" fill="rgba(10,3,0,.6)"/>
     ${ang(0, top, 1, 1)}${ang(w, top, -1, 1)}${ang(0, h, 1, -1)}${ang(w, h, -1, -1)}
     <path d="M2 ${h} h6 l-1 2.2 h-4Z M${w - 2} ${h} h-6 l1 2.2 h4Z" fill="#2a1006"/>
-    ${plate(w / 2 - pw / 2, top + front / 2 - 8, pw, 16, count ? `詩箋　${count} ${unit}` : "詩箋", "", { s1: 8, ls1: .8 })}`;
+    ${plate(w / 2 - pw / 2, top + front / 2 - 8, pw, 16, count ? `詩箋　${count} ${unit}` : "詩箋", "", { s1: 8, ls1: .8 })}${fresh ? newDot(w / 2, top + front / 2 - 8) : ""}`;
   return svg(w, h, s);
 }
 
 // ——— 版畫冊: the portfolio, half-bound — blue cloth boards, the spine and the corners in darker leather, a gilt
 // roll round the panel with a small fleuron at each corner, gilt title, wine ribbons; the boards' edges showing their
 // thickness; the newest print peeping out of it, brown as an etching ———
-function portfolio(w, h, img, count, unit) {
+function portfolio(w, h, img, count, unit, fresh) {
   let s = shade(0, 0, w, h, 2);
   if (count) s += `<rect x="${w * .06}" y="${-h * .1}" width="${w * .84}" height="${h * .5}" fill="#ddd0b2" stroke="rgba(120,100,70,.4)" stroke-width=".4" transform="rotate(3 ${w / 2} ${h / 2})"/>
     <g transform="rotate(-5 ${w / 2} ${h / 2})"><rect x="${w * .12}" y="${-h * .3}" width="${w * .72}" height="${h * .7}" fill="#efe5cc" stroke="rgba(120,100,70,.4)" stroke-width=".4"/><rect x="${w * .12}" y="${-h * .3}" width="${w * .72}" height="${h * .7}" fill="url(#sl-paper)" opacity=".4"/>
@@ -596,7 +609,7 @@ function portfolio(w, h, img, count, unit) {
     <rect x="${w * .22}" y="${h * .09}" width="${w * .66}" height="${h * .82}" fill="none" stroke="url(#sl-gold)" stroke-width=".9"/><rect x="${w * .245}" y="${h * .115}" width="${w * .61}" height="${h * .77}" fill="none" stroke="url(#sl-gold)" stroke-width=".35" stroke-dasharray=".7 .7"/>
     ${[[w * .22, h * .09], [w * .88, h * .09], [w * .22, h * .91], [w * .88, h * .91]].map(([x, y]) => `<path d="M${x} ${y - 2.2} l1.4 2.2 l-1.4 2.2 l-1.4 -2.2Z" fill="url(#sl-foil)"/>`).join("")}
     ${gilt(w * .56, h * .47, "版畫冊", { size: Math.min(12, w * .13), ls: 3 })}${gilt(w * .56, h * .47 + 10, "RADIERUNGEN", { fam: "Cormorant SC", size: 5.4, w: 600, ls: 1 })}${count ? gilt(w * .56, h * .8, `${count} ${unit}`, { size: 7.4, w: 600, ls: 1 }) : ""}
-    <rect x="${w - 3}" y="${h * .46}" width="${w * .16}" height="3.4" fill="#7a1f2e" transform="rotate(8 ${w} ${h * .46})"/><rect x="${w - 3}" y="${h * .5}" width="${w * .12}" height="3" fill="#5a1424" transform="rotate(-10 ${w} ${h * .5})"/>`;
+    <rect x="${w - 3}" y="${h * .46}" width="${w * .16}" height="3.4" fill="#7a1f2e" transform="rotate(8 ${w} ${h * .46})"/><rect x="${w - 3}" y="${h * .5}" width="${w * .12}" height="3" fill="#5a1424" transform="rotate(-10 ${w} ${h * .5})"/>${fresh ? newDot(w - 4, 4) : ""}`;
   return svg(w, h, s);
 }
 
@@ -854,12 +867,15 @@ const FEET = () => svg(180, 12, `<ellipse cx="92" cy="1.4" rx="84" ry="3.2" fill
 // ——— the record cabinet: #/records's own with the gramophone on it (records.js phonoCabinetHtml), its links made plain,
 // scaled down onto the floor; the camera's move in dissolves it into the page's crate. In the room the brass reads 唱片櫃
 // and the count in large letters; as the camera arrives they give way to the page's own Latin. ———
-function crateCopy(list, count, unit) {
+function crateCopy(list, count, unit, fresh) {
   const zh = `<span class="sl-zh"><span class="sc-cut">唱片櫃</span>${count ? `<span class="sc-cut n">${count} ${unit}</span>` : ""}</span>`;
+  // 新藏品入館: the dot on the brass's upper edge, in the room's units (.sl-rp's scale undone). The cabinet's top carries
+  // it: drawn with the brass, it would lie under the shadow the top casts on it, dimmed.
+  const dot = fresh ? `<svg class="sl-new" viewBox="-12.5 -12.5 25 25" aria-hidden="true">${newDot(0, 0)}</svg>` : "";
   // its SVG ids made its own (and what points at them: url(#…), a <use>'s href): the page's cabinet (#/records) is in the
   // document with it while the camera moves in or out
   const html = phonoCabinetHtml(list).replace(/(id="|url\(#|href="#)cb-/g, "$1cbr-").replace(/<(\/?)(?:a|button)\b/g, "<$1span")
-    .replace(/(<span class="sc-brass cr-plate">)(<span class="sc-cut">[^<]*<\/span><span class="sc-cut n">[^<]*<\/span>)(<\/span>)/, `$1${zh}<span class="sl-de">$2</span>$3`);
+    .replace(/(<span class="sc-brass cr-plate">)(<span class="sc-cut">[^<]*<\/span><span class="sc-cut n">[^<]*<\/span>)(<\/span>)/, `$1${zh}<span class="sl-de">$2</span>$3`).replace('<i class="cr-sb-top"></i>', `<i class="cr-sb-top">${dot}</i>`);
   return `<span class="sl-rp" aria-hidden="true" inert><span class="sc-scene crate-scene">${html}</span></span>`;
 }
 
@@ -968,7 +984,8 @@ const SPOTS = {
 const BIRD = [94, 254, 52]; // the bird's box on the sill: x, y, size
 // `d`: { drawers: [[key, name, count, unit]] in DRAWERS' order, and what each corner holds — museum, records, poems,
 // prints (newest first), books (shelf()), reading (readingBook()), stamps (the issues stamped, newest first) — and
-// `bird`: whether this phone has the yard's robin (a 特供版 phone).
+// `bird`: whether this phone has the yard's robin (a 特供版 phone); `fresh`: { corner: true } for each holding a piece
+// not yet seen there.
 export function salonRoom(d) {
   const by = Object.fromEntries(d.drawers.map(([k, name, count, unit]) => [k, { name, count, unit }]));
   const n = (k) => by[k]?.count || 0, u = (k) => by[k]?.unit || "";
@@ -976,23 +993,24 @@ export function salonRoom(d) {
   const older = (d.reading ? d.books : d.books.slice(0, -1)).slice().reverse();
   const stampImgs = d.stamps.slice(0, 18).map((i) => pic(stampPicture(i)));
   const lamp = d.museum.length > 0, lit = drawnLight = lightParts(hourLight(), lamp); // the hour's light; the picture light hangs over the newest work (hang)
+  const fresh = d.fresh || {}; // the corners holding a piece not yet seen there (新藏品入館: newDot)
   // x, y, w, h of each drawing, the drawing, and how it is turned to the eye of someone standing in the room: the
   // portfolio leans back on the easel, the album on its stand, the notebook lies on the seat
   const draw = {
-    museum: [...HANG_AT, 252, 250, hang(d.museum, n("museum"), u("museum"))],
+    museum: [...HANG_AT, 252, 250, hang(d.museum, n("museum"), u("museum"), fresh.museum)],
     world: [196, 452, 70, 200, globeHtml(n("world"), u("world"))],
     shelf: [270, 316, 124, 304, bookcase(124, 304, face, older, n("shelf"), u("shelf"))],
-    poems: [300, 432, 66, 54, writingBox(66, 54, n("poems"), u("poems"))],
+    poems: [300, 432, 66, 54, writingBox(66, 54, n("poems"), u("poems"), fresh.poems)],
     list: [198, 360, 68, 86, rack(68, 86, n("list"), u("list"))],
     stamps: n("stamps") ? [22, 254, 72, 46, album(72, 46, stampImgs, n("stamps"), u("stamps")), "perspective(220px) rotateX(14deg)"] : [34, 256, 50, 44, albumClosed(50, 44), "perspective(220px) rotateX(14deg)"],
     medals: n("medals") ? [298, 545, 70, 70, medalCase(70, 70, n("medals"), u("medals"))] : [298, 547, 70, 49, medalCaseClosed(70, 49)],
-    prints: [14, 652, 86, 72, portfolio(86, 72, pic(d.prints[0]?.a), n("prints"), u("prints")), "perspective(300px) rotateX(6deg) rotate(-2deg)"],
+    prints: [14, 652, 86, 72, portfolio(86, 72, pic(d.prints[0]?.a), n("prints"), u("prints"), fresh.prints), "perspective(300px) rotateX(6deg) rotate(-2deg)"],
     marks: [298, 694, 84, 58, notebook(84, 58, n("marks"), u("marks")), "perspective(260px) rotateX(40deg) rotate(-5deg)"],
   };
   const link = (k, href, label, inner) => { const [hx, hy, hw, hh] = SPOTS[k];
     return `<a class="sl-o${k === "records" ? " sl-rec" : k === "nest" ? " sl-bird nest" : ""}" data-k="${k}" href="${href}" style="left:${hx}px;top:${hy}px;width:${hw}px;height:${hh}px" aria-label="${esc(label)}">${inner}</a>`; };
   const box = (k, [x, y, w, h, html, turn]) => { const [hx, hy] = SPOTS[k]; return `<span class="sl-draw" style="left:${x - hx}px;top:${y - hy}px;width:${w}px;height:${h}px${turn ? `;transform:${turn}` : ""}">${html}</span>`; };
-  const obj = (k) => link(k, k === "list" ? "#/saved/list" : `#/${k}`, `${by[k]?.name || k}：${n(k)} ${u(k)}`, k === "records" ? crateCopy(d.records, n("records"), u("records")) : box(k, draw[k]));
+  const obj = (k) => link(k, k === "list" ? "#/saved/list" : `#/${k}`, `${by[k]?.name || k}：${n(k)} ${u(k)}`, k === "records" ? crateCopy(d.records, n("records"), u("records"), fresh.records) : box(k, draw[k]));
   const deco = (x, y, w, h, html, cls = "") => `<b class="sl-deco${cls ? ` ${cls}` : ""}" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px">${html}</b>`;
   const bird = () => { if (!d.bird) return ""; const rb = roomBird(), [bx, bt, bs] = BIRD; // its shadow on the sill, then the bird (nest.js roomBird)
     return deco(100, 292, 40, 10, svg(40, 10, `<ellipse cx="20" cy="5" rx="12" ry="2.2" fill="url(#sl-contact)"/><ellipse cx="27" cy="5.5" rx="13" ry="2.4" fill="rgba(30,14,4,.18)"/>`))
@@ -1089,6 +1107,42 @@ addEventListener("touchstart", (e) => { edgeAt = e.touches.length === 1 && e.tou
 addEventListener("touchcancel", () => { if (edgeAt && performance.now() - edgeAt < 1500) swipeAt = performance.now(); }, { passive: true, capture: true });
 const swiped = () => performance.now() - swipeAt < 1500;
 
+// ——— 新藏品入館 (the owner's pick of the samples, 2026-11-25) ———
+// Opened from its corner (or any other way), a page whose corner held a piece not yet seen there (app.js keeps what each
+// has shown; the room's gold dot, newDot) sets that piece in its place once: hung on its hook, lowered into the crate,
+// laid on the desk — from `rise` px above (30; the letter 18, its corner clear of the page's name), leaning 1.5°, down in
+// 0.7 s and settling in 0.6 s (+1°, −0.4°, 0); a frame's farther, softer shadow on the wall draws in as it comes (the
+// samples' second round). Transform and opacity only. Through the room's camera it waits lifted until the camera has
+// landed — posed by landIn once the page is measured, so the camera lands on the page as it will stand — and then comes
+// down; with reduced motion it is simply there. `seen` (app.js) marks the corner seen as the piece starts to come in —
+// or at once when it is simply there — so a camera turned back on the way in leaves it to come in the next time.
+let due = null; // the piece waiting for the camera: { pose, play, undo }
+export function arrive(el, { hook = false, rise = 30, seen = () => {} } = {}) {
+  if (!el || !el.animate || calm()) { seen(); return; }
+  const b = getComputedStyle(el).transform, base = b && b !== "none" ? ` ${b}` : ""; // its own lean on the desk kept under the move
+  const at = (y, r) => `translateY(${y}px) rotate(${r}deg)${base}`;
+  const air = hook ? document.createElement("i") : null;
+  const pose = () => {
+    if (hook && !base) el.style.transformOrigin = "50% 0"; // a frame swings from its hook
+    el.style.transform = at(-rise, -1.5);
+    if (air) { air.className = "hang-air"; air.setAttribute("aria-hidden", "true"); el.prepend(air); }
+  };
+  const undo = () => { el.style.transform = ""; el.style.transformOrigin = ""; air?.remove(); };
+  const play = () => {
+    if (!el.isConnected) return;
+    seen();
+    const o = { duration: 1300, fill: "backwards" };
+    const run = el.animate([{ transform: at(-rise, -1.5), easing: "cubic-bezier(.25, .6, .3, 1)" }, { transform: at(0, 0), offset: .54, easing: "ease-in-out" },
+      { transform: at(0, 1), offset: .69, easing: "ease-in-out" }, { transform: at(0, -.4), offset: .85, easing: "ease-in-out" }, { transform: at(0, 0) }], o);
+    el.style.transform = "";
+    air?.animate([{ opacity: 1, transform: "none", easing: "cubic-bezier(.25, .6, .3, 1)" }, { opacity: 0, transform: "translate(-9px, -24px)", offset: .54 }, { opacity: 0, transform: "translate(-9px, -24px)" }], o);
+    run.finished.then(undo, undo);
+  };
+  if (lift) { due = { pose, play, undo }; return; }
+  pose();
+  setTimeout(play, 200);
+}
+
 // Nodes moved to another parent: their CSS animations start over (moveBefore does not keep them either), so an
 // entrance would play again and a glow jump back — each is set again to the time it had reached.
 function move(nodes, to) {
@@ -1116,6 +1170,7 @@ function landIn(L) {
   main.style.transformOrigin = "0 0";
   settle(main);
   const B = pageBox(L.k) || middle(L.A), c = camera(L.A, B, L.k), es = Array.from({ length: N + 1 }, (_, i) => c.at(ease(i / N)));
+  due?.pose(); // the piece just come in, lifted off its place until the camera has landed (arrive)
   if (L.k === "world") L.a.querySelector(".sl-map")?.globe?.draw(B.w / L.A.w); // the turning globe, painted for the size it lands at
   const R = room.getBoundingClientRect(), O = main.getBoundingClientRect(), o = { duration: c.ms, fill: "both" };
   // the hour's dark and warmth (TONE) lift as the camera nears the thing, so the room the page comes up out of is lit
@@ -1134,12 +1189,15 @@ function landIn(L) {
   L.runs[0].finished.then(() => {
     if (lift !== L) return;
     lift = null;
-    const keep = decode(pictures(L.room));
+    const keep = decode(pictures(L.room)), d = due;
+    due = null;
     dropLift(L);
+    d?.play();
     door = { k: L.k, href: L.href, i: history.state?.i, area: B.w * B.h, keep };
   }, () => {});
 }
 function dropLift(L) {
+  if (due) { due.undo(); due = null; }
   clearTimeout(L.later);
   L.runs?.forEach((x) => x.cancel());
   L.room.remove();
@@ -1151,6 +1209,7 @@ function dropLift(L) {
 // back up from wherever the camera is, and the lifted one goes.
 function retreat(L) {
   const main = document.getElementById("main"), room = L.room, cam = room.querySelector(".sl-cam");
+  if (due) { due.undo(); due = null; }
   clearTimeout(L.later);
   if (main) settle(main);
   const t = getComputedStyle(cam).transform, op = getComputedStyle(room).opacity, tone = room.querySelector(".sl-tone"), dim = getComputedStyle(tone).opacity;
