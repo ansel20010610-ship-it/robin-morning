@@ -72,7 +72,7 @@ export function twNow() {
 
 const WD = ["日", "一", "二", "三", "四", "五", "六"];
 const WD_DE = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
-const MON_DE = ["Jänner", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+export const MON_DE = ["Jänner", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
 
 export function fmtDate(iso, style = "zh") {
   const [y, m, d] = iso.split("-").map(Number);

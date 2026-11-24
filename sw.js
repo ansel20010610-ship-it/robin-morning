@@ -11,7 +11,7 @@ const LIMIT = { [IMAGES]: 400, [FONTS]: 400 }; // entries; the oldest go first
 const BYTES = { [IMAGES]: 60 * 1024 * 1024 }; // and a byte budget for the pictures: 400 heroes ran to ~180 MB (audit 2026-11-08), Safari's quota is the real limit
 const IMAGE_HOSTS = new Set(["upload.wikimedia.org", "thumb.wikimedia.org", "tile.loc.gov"]);
 const SHELL = ["index.html", "assets/style.css", "assets/app.js", "assets/util.js", "assets/blocks.js", "assets/stamps.js", "assets/feasts.js", "assets/advent.js", "assets/masthead.js",
-  "assets/pitch.js", "assets/pull.js", "assets/spotify.js", "assets/speak.js", "assets/notify.js", "assets/motion.js", "assets/marks.js", "assets/press.js", "assets/wetter.js", "assets/outdoor.js", "assets/outdoor-card.js", "assets/almanac.js", "assets/market.js", "assets/boerse.js", "assets/world.js", "assets/nest.js", "assets/jupiter.js", "assets/shelf.js", "assets/records.js", "assets/cabinet.js", "assets/phono.js", "assets/medals.js", "assets/prints.js", "assets/poems.js", "assets/museum.js", "assets/salon.js", "assets/cities.js", "assets/robin.svg", "assets/world.svg", "assets/globe.json", "manifest.webmanifest"];
+  "assets/pitch.js", "assets/pull.js", "assets/spotify.js", "assets/speak.js", "assets/notify.js", "assets/motion.js", "assets/marks.js", "assets/press.js", "assets/wetter.js", "assets/outdoor.js", "assets/outdoor-card.js", "assets/almanac.js", "assets/market.js", "assets/boerse.js", "assets/world.js", "assets/nest.js", "assets/jupiter.js", "assets/shelf.js", "assets/records.js", "assets/cabinet.js", "assets/phono.js", "assets/medals.js", "assets/prints.js", "assets/poems.js", "assets/museum.js", "assets/salon.js", "assets/cities.js", "assets/yueling.js", "assets/robin.svg", "assets/world.svg", "assets/globe.json", "manifest.webmanifest"];
 const DATA = ["content/config.json", "content/index.json", "content/onthisday.json"];
 const TIMEOUT = 4000; // ms to wait for the network before answering content from the cache
 const ROOT = new URL(self.registration.scope).pathname;
@@ -38,7 +38,8 @@ async function appPage(req) {
 async function cacheFirst(req) {
   const c = await caches.open(CACHE);
   // A page answered in place of a script or a picture (a captive portal's 200 text/html) is not kept: it would stand
-  // for that file until the next deploy (the postcard drawings are fetched here on first use, not precached).
+  // for that file until the next deploy (the postcard drawings and the month pictures, assets/yueling/, are fetched here
+  // on first use, not precached).
   const page = (r) => /text\/html/.test(r.headers.get("content-type") || "") && !/\.html(\?|$)/.test(req.url);
   return (await c.match(req, { ignoreSearch: true })) || fetch(req).then((r) => { if (r.ok && !page(r)) c.put(req, r.clone()); return r; });
 }

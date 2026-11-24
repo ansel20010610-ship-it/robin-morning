@@ -18,6 +18,7 @@ import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { redDay, weekendDay, dayPart, carryOf, carried, goldOf, moonPhase, moonSvg, windowSun, lightWindow, creaseHtml, paperAge, tintPaper, paperTone } from "./masthead.js";
 import { adventHtml, wireAdvent } from "./advent.js";
+import { yuelingHtml } from "./yueling.js";
 import { worldState, drawGlobe } from "./world.js";
 import { renderNest, renderNestSettings, renderNestAlbum, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
 import { codaHtml, codaVoices, playCoda } from "./jupiter.js";
@@ -981,6 +982,7 @@ function viewFront(dateParam) {
     ${status ? `<div class="status">${status}</div>` : ""}
     ${dateParam ? `<div class="status">你正在讀 ${esc(fmtDate(issue.date))} 的${esc(issueNo(issue.no))}・<a href="#/">回到最新一期</a></div>` : ""}
     ${lateNote(issue.date)}
+    ${yuelingHtml(issue.date)}
     ${festBox(issue)}
     ${prayerBox(issue)}
     ${adventHtml(issue.date)}

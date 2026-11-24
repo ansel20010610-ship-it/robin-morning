@@ -1579,6 +1579,29 @@ button.chip { cursor: pointer; font-family: var(--sans); }
 .chips.grade .chip[disabled] { opacity: .4; cursor: default; }
 .chips.grade .chip .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
+/* ——— 月令扉頁 (assets/yueling.js): the month's picture on the 1st, under the verse. The crest's frame round it (app.js
+   EMBLEM: a gold rule, a hairline inside it, a square stud on each corner), the month's name on a paper slip let into its
+   top-left corner, the line and the credit centred under it. The picture's box keeps its 944 : 402 shape before the
+   picture comes, in paper-3, and if it never does. Every class is yl-: .mon, .tag and figcaption are taken. ——— */
+.yl-fig { margin: 14px 0 0; }
+.yl-frm { position: relative; display: block; padding: 7px;
+  background: linear-gradient(var(--gold), var(--gold)) 0 0 / 5px 5px no-repeat, linear-gradient(var(--gold), var(--gold)) 100% 0 / 5px 5px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) 0 100% / 5px 5px no-repeat, linear-gradient(var(--gold), var(--gold)) 100% 100% / 5px 5px no-repeat, var(--paper);
+  box-shadow: 0 7px 14px -12px rgba(60, 45, 20, .6); }
+.yl-frm::before { content: ""; position: absolute; inset: 1.9px; border: 1.2px solid var(--gold); pointer-events: none; }
+.yl-frm::after { content: ""; position: absolute; inset: 4.6px; border: .6px solid var(--gold); pointer-events: none; }
+.yl-pic { position: relative; display: block; aspect-ratio: 944 / 402; overflow: hidden; background: var(--paper-3); }
+.yl-pic img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.yl-slip { position: absolute; left: 0; top: 0; z-index: 1; display: flex; align-items: baseline; gap: 8px; padding: 5px 11px 6px 9px; line-height: 1;
+  background: var(--paper); border-right: .6px solid var(--gold); border-bottom: .6px solid var(--gold); }
+.yl-zh { font-family: var(--serif); font-weight: 700; font-size: 13px; letter-spacing: .2em; margin-right: -.2em; color: var(--ink); }
+.yl-de { font-family: var(--latin); font-style: italic; font-weight: 500; font-size: 15.5px; letter-spacing: .01em; color: var(--gold-ink); }
+.yl-cap { margin: 8px 4px 0; text-align: center; }
+.yl-ln { display: block; font-family: var(--serif); font-size: 14.5px; line-height: 1.55; color: var(--ink-2); word-break: keep-all; overflow-wrap: anywhere; }
+.yl-cr { display: block; margin-top: 1px; font-family: var(--sans); font-size: 11px; line-height: 1.5; letter-spacing: .02em; color: var(--muted); word-break: keep-all; overflow-wrap: anywhere; }
+.yl-cr span { white-space: nowrap; }
+.yl-cr .yl-bk { margin: 0 .4em; }
+
 /* ——— 今日禱告: the day's passage and prayer, folded under the masthead ——— */
 .prayer-box { margin: 18px 0 0; border: 1px solid var(--rule); background: var(--paper-2); }
 .prayer-box summary { display: flex; align-items: baseline; gap: 10px; padding: 11px 14px; cursor: pointer; list-style: none; font-family: var(--sans); }
