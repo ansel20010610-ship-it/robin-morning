@@ -1,0 +1,253 @@
+{
+  "column": "perio",
+  "date": "2026-11-25",
+  "title": "刮治器還是超音波？口袋只差 0.08 毫米",
+  "dek": "有人說手刮比較乾淨，有人說機器比較快。四項隨機試驗放在一起看，兩種說法站得住嗎？",
+  "brief": "一篇系統性回顧統合 4 項隨機試驗：手動刮治器和音波／超音波做齦下清創，口袋變淺只差 0.08 毫米，看不出差別。歐洲牙周病學會據此給強建議，兩種都可以，單用或合用。至於「機器比較快」，較早的回顧說機器省時，2020 年指引則說它評估的研究裡沒有證據顯示哪種較省時。",
+  "takeaway": "4 項隨機試驗統合：6 到 8 個月時，手動刮治器和音波／超音波讓口袋變淺只差 0.08 毫米，看不出差別。指引給強建議：兩種都行，單用或合用，看你的手感和病人的偏好選。",
+  "chairside": "清牙齦底下的牙結石，可以用手工的刮器，也可以用會震動、會噴水的超音波機器。研究比較過，幾個月後牙齦縫變淺的程度差不多，所以我也會參考您的感受來選，兩種也常常一起用。",
+  "topic_key": "perio:doi:10.1111/jcpe.13245",
+  "form": "compare",
+  "voice": "colleague",
+  "updated_at": "2026-11-24T22:48:23+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/28th_MDOS_dental_clinic_120207-F-YG608-011.jpg/1280px-28th_MDOS_dental_clinic_120207-F-YG608-011.jpg",
+    "width": 1280,
+    "height": 852,
+    "alt": "張口的男性病人仰躺，從病人頭部上方斜拍。一隻戴淺紫色手套的手握著綠色握柄、印有 CAVITRON 字樣的器械，細長彎曲的金屬工作尖伸進病人嘴裡、靠在下排前牙；另一隻戴手套的手拿著口鏡撐開嘴角。背景很暗。",
+    "caption": "超音波洗牙機的工作尖：2012 年 2 月 7 日，美國南達科他州埃爾斯沃思空軍基地牙科診所，牙科助理在年度洗牙時用 Cavitron 超音波洗牙機清潔牙齒，Commons 說明寫它用空氣和水去除硬的沉積物、沖走牙菌斑。這是例行洗牙，不是牙周炎的齦下清創；照片與本文論文的受試者無關。",
+    "credit": "Airman 1st Class Kate Maurer（美國空軍）／Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:28th_MDOS_dental_clinic_120207-F-YG608-011.jpg",
+    "made": "2012"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "看診天天在選：拿刮治器，還是開超音波。有人說手刮得比較乾淨，有人說機器比較快。歐洲牙周病學會 2020 年的第 I–III 期牙周炎臨床指引，對這件事給了 A 級，也就是強建議：**手動或音波／超音波都可以，單用或合用。**"
+    },
+    {
+      "type": "p",
+      "text": "撐著這條建議的是今天的主角，**Suvan** 等人 2020 年刊在 *J Clin Periodontol* 的系統性回顧，是指引委託的 15 篇回顧之一。它只收隨機試驗，追蹤至少 3 個月，有加抗生素或消毒劑的組別都排除。手動對音波／超音波的試驗有 6 項，4 項有 6 到 8 個月的資料能合起來算。"
+    },
+    {
+      "type": "p",
+      "text": "順便對一下名詞。指引把齦下刮除、根面整平這些叫法，統一成齦下清創：把牙根表面的菌斑和牙結石清掉，刮治器和機器都算。指引定的終點是**口袋閉合**，探診 4 毫米以內、不出血。"
+    },
+    {
+      "type": "table",
+      "title": "手動刮治器 vs 音波／超音波：七個對照點",
+      "head": [
+        "對照點",
+        "手動刮治器 vs 音波／超音波",
+        "根據"
+      ],
+      "rows": [
+        [
+          "口袋變淺（探診深度減少，6–8 個月）",
+          "加權平均差 0.08 毫米，數值偏手動，但差異不顯著（95% CI −0.22 到 0.38）",
+          "Suvan 等 2020：4 項隨機試驗統合"
+        ],
+        [
+          "附著增加（6–8 個月）",
+          "加權平均差 0.04 毫米，差異不顯著（95% CI −0.23 到 0.30）",
+          "Suvan 等 2020：4 項隨機試驗統合"
+        ],
+        [
+          "淺口袋、深口袋分開看",
+          "各時間點、各起始深度都看不出顯著差別",
+          "Suvan 等 2020：6 項隨機試驗"
+        ],
+        [
+          "探診出血",
+          "只有 1 項試驗分部位報告，兩組沒有顯著差別",
+          "Wennström 等 2005（Suvan 等 2020 轉述）"
+        ],
+        [
+          "治療時間",
+          "2002 年回顧：音波／超音波少花 36.6% 時間；2020 年指引：沒有證據顯示哪一種比較省時。重新清創時每閉合一個口袋，超音波 11.5 分鐘、手動 12.6 分鐘，差異不顯著",
+          "Tunkel 等 2002；EFP S3 指引 2020；Wennström 等 2005"
+        ],
+        [
+          "術後敏感、病人感受",
+          "各研究報告不一致；有報告的，術後敏感看不出明顯差別",
+          "EFP S3 指引 2020"
+        ],
+        [
+          "根面與軟組織（早期研究的說法）",
+          "超音波磨掉較少根面、軟組織創傷較少，但根面可能較粗糙；手動可能留下較光滑的根面、刮掉較多牙結石",
+          "Suvan 等 2020 前言引述的早期研究，非本篇統合結果"
+        ]
+      ],
+      "caption": "加權平均差是把幾項試驗「兩組差幾毫米」依各試驗的精確度加權後的平均，正值代表手動組多、負值代表音波／超音波組多；信賴區間跨過 0 就是看不出差別。2020 年 EFP 指引據此給 A 級強建議：手動或音波／超音波都可以，單用或合用，依操作者的經驗、技術與偏好，加上病人的偏好來選。依各篇原文整理，非原圖轉載。"
+    },
+    {
+      "type": "h",
+      "text": "口袋和附著：差不到十分之一毫米"
+    },
+    {
+      "type": "p",
+      "text": "6 到 8 個月時，探診深度減少，手動組平均多 0.08 毫米，信賴區間 −0.22 到 0.38；附著增加多 0.04 毫米，信賴區間也跨過 0。加權平均差就是把幾項試驗「兩組差幾毫米」合成一個數，跨過 0 就是看不出差別。"
+    },
+    {
+      "type": "p",
+      "text": "四項裡只有希臘的 Ioannou 2009 偏手動，差 0.40 毫米。不過它的作者自己說，兩種方式臨床結果相當。"
+    },
+    {
+      "type": "h",
+      "text": "出血和病人感受：資料太少"
+    },
+    {
+      "type": "p",
+      "text": "探診出血只有一項試驗分部位報告，兩組沒差。術後敏感這些，各研究報得不一致，沒法合併；有報告的，術後敏感看不出明顯差別。"
+    },
+    {
+      "type": "h",
+      "text": "時間：說法不一"
+    },
+    {
+      "type": "p",
+      "text": "2002 年 **Tunkel** 等人的回顧支持「機器比較快」：音波／超音波少花 36.6% 的時間。可是 2020 年的指引寫得很直：沒有證據顯示哪一種比較省時。瑞典和義大利的 Wennström 2005 在三個月後重新清創，閉合一個口袋，超音波 11.5 分鐘、手動 12.6 分鐘，差異不顯著。"
+    },
+    {
+      "type": "h",
+      "text": "根面：早期研究的說法"
+    },
+    {
+      "type": "p",
+      "text": "回顧的前言引了早期研究：超音波磨掉的根面較少，但根面可能比較粗；手動可能比較光滑。原文用的是「有人認為」「可能」，不是這篇統合算出來的，聽聽就好。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Curetas-gracey.JPG/1280px-Curetas-gracey.JPG",
+      "width": 1280,
+      "height": 960,
+      "alt": "三支金屬器械橫放在藍色點狀布巾上，上下平行排列。每支都是雙頭，握柄有防滑壓紋，兩端各有一段彎曲的細小刀刃；最上面那支握柄中段是金色。",
+      "caption": "三支格雷西刮治器（Gracey curette），雙頭，兩端是彎曲的刀刃，靠醫師的手一下一下刮除牙根表面的牙結石與菌斑。2007 年 10 月 27 日拍攝。",
+      "credit": "Leandro Martinez／Wikimedia Commons",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Curetas-gracey.JPG",
+      "made": "2007"
+    },
+    {
+      "type": "h",
+      "text": "證據有多硬"
+    },
+    {
+      "type": "p",
+      "text": "指引的評語：**4 項隨機試驗、132 人**，追蹤至少 6 個月，都是低偏差風險，結果一致，A 級，投票全體一致。"
+    },
+    {
+      "type": "p",
+      "text": "但書也要講。試驗之間的不一致用 I² 表示，越高越不一致，探診深度那項是 75.9%。有的是分口設計，同一個人左右各用一種，可能有偏差。有幾項研究做得比現在常用的細工作尖、迷你刮治器還早。多數在大學裡、打麻藥做，不等於一般診所的實際效果。"
+    },
+    {
+      "type": "table",
+      "title": "四項試驗，6–8 個月：手動減音波／超音波差多少",
+      "head": [
+        "試驗",
+        "設計與人數",
+        "探診深度減少差（毫米，95% CI）",
+        "附著增加差（毫米，95% CI）"
+      ],
+      "rows": [
+        [
+          "Ioannou 等 2009（希臘）",
+          "平行分組，33 人；分象限 3–4 次，不限時",
+          "0.40（0.22 到 0.58）",
+          "0.40（0.05 到 0.75）"
+        ],
+        [
+          "Obeid 等 2004（比利時）",
+          "分口設計，20 人；超音波每顆牙 2 分鐘、手動 3 分鐘",
+          "−0.10（−0.57 到 0.37）",
+          "−0.10（−0.78 到 0.58）"
+        ],
+        [
+          "Petelin 等 2015（斯洛維尼亞）",
+          "平行分組，表列 18 人；每 3 個月重新治療",
+          "−0.10（−0.38 到 0.18）",
+          "−0.10（−0.47 到 0.27）"
+        ],
+        [
+          "Wennström 等 2005（瑞典、義大利）",
+          "平行分組，41 人；超音波組全口一次限時 1 小時，手動組分象限不限時",
+          "0.00（−0.34 到 0.34）",
+          "−0.10（−0.38 到 0.18）"
+        ],
+        [
+          "統合",
+          "4 項隨機試驗",
+          "0.08（−0.22 到 0.38）；I² 75.9%",
+          "0.04（−0.23 到 0.30）；I² 47.9%"
+        ]
+      ],
+      "caption": "正值偏手動、負值偏音波／超音波。分口設計是同一個病人嘴裡左右各用一種器械。I² 是試驗之間結果不一致的程度，越高越不一致。另有 2 項試驗（Laurell 1988、Malali 2012）只有 3 個月資料，沒進這張表。依 Suvan 等 2020 年接受稿圖 4 與表 5 的數據重繪，非原圖轉載。"
+    },
+    {
+      "type": "h",
+      "text": "那要怎麼選"
+    },
+    {
+      "type": "p",
+      "text": "指引寫：看操作者的經驗、技術和偏好，加上**病人的偏好**。兩種都很吃技術，都要練過。回顧作者也提到，臨床上常常兩種一起用。"
+    },
+    {
+      "type": "paper",
+      "citation": "Suvan J, Leira Y, Moreno Sancho FM, Graziani F, Derks J, Tomasi C. Subgingival instrumentation for treatment of periodontitis. A systematic review. *J Clin Periodontol*. 2020;47 Suppl 22:155–175.",
+      "doi": "10.1111/jcpe.13245",
+      "pmid": "31889320",
+      "link": "https://doi.org/10.1111/jcpe.13245",
+      "evidence": "系統性回顧與統合分析：19 項隨機試驗；手動對音波／超音波 6 項，4 項統合",
+      "design": "系統性回顧與統合分析（PROSPERO CRD42019124887），只收隨機對照試驗，文獻檢索至 2019 年 3 月 19 日；EFP 第 I–III 期牙周炎 S3 指引委託的 15 篇回顧之一",
+      "sample": "19 項隨機試驗（1988–2015 年發表）；手動對音波／超音波 6 項，其中 4 項有 6–8 個月資料可統合；追蹤多在 6 個月內",
+      "question": "牙周炎病人做齦下清創，用音波／超音波器械和用手動刮治器，口袋變淺與附著增加有沒有差別？",
+      "access": "依全文整理：倫敦大學學院典藏 UCL Discovery 的接受稿 PDF（Accepted Article，出版社網頁打不開）；手動對音波／超音波的統合數字讀自接受稿圖 4。建議強度與治療時間依 EFP S3 指引全文"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Subgingival instrumentation for treatment of periodontitis. A systematic review",
+      "publisher": "Journal of Clinical Periodontology（Suvan J 等）",
+      "date": "2020-07-27",
+      "url": "https://discovery.ucl.ac.uk/10089149/1/Suvan_et_al-2019-Journal_of_Clinical_Periodontology.pdf",
+      "note": "主角論文。讀全文：UCL Discovery 典藏的接受稿 PDF（未經排版校對的版本；Wiley 網站 403 打不開）。DOI 10.1111/jcpe.13245；PMID 31889320；卷期頁依 Crossref 與 PubMed，日期為 Crossref 線上刊出日。用到：摘要、前言、方法、PICOS 2 結果、討論、Clinical Relevance、表 5、表 6、圖 4。接受稿摘要的 PICOS 1 探診深度減少（1.7 毫米、11 項）與 PubMed 出版版摘要（1.4 毫米、9 項）不同，本文不採用該數字；手動對機械的結論兩版相同。"
+    },
+    {
+      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Sanz M 等）",
+      "date": "2020-07-27",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/",
+      "note": "讀全文（Europe PMC fullTextXML）。DOI 10.1111/jcpe.13290；PMID 32383274。用到：3.2.2 節 15 篇委託系統性回顧、表 4 建議等級、表 5 共識強度、第 6 節齦下清創的定義、建議 R2.2 全文（4 項隨機試驗 132 人、A 級、全體一致、時間與病人感受、適用性）。"
+    },
+    {
+      "title": "A systematic review of efficacy of machine-driven and manual subgingival debridement in the treatment of chronic periodontitis",
+      "publisher": "Journal of Clinical Periodontology（Tunkel J、Heinecke A、Flemmig TF）",
+      "date": "2002-12",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12787208/",
+      "note": "讀 PubMed 摘要（E-utilities efetch）。DOI 10.1034/j.1600-051x.29.s3.4.x；J Clin Periodontol 2002;29 Suppl 3:72–81。用到：27 篇文章、臨床指標看不出差別但無法統合、超音波／音波少花 36.6% 時間、不良反應無大差別、作者說證據不很強。"
+    },
+    {
+      "title": "Full-mouth ultrasonic debridement versus quadrant scaling and root planing as an initial approach in the treatment of chronic periodontitis",
+      "publisher": "Journal of Clinical Periodontology（Wennström JL 等）",
+      "date": "2005-06-30",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15998268/",
+      "note": "讀 PubMed 摘要（E-utilities efetch）。DOI 10.1111/j.1600-051X.2005.00776.x；J Clin Periodontol 2005;32(8):851–859；日期為 Crossref 線上刊出日。用到：41 人、壓電超音波器械、3 個月重新清創時每閉合一個口袋超音波 11.5 分鐘對手動 12.6 分鐘（p>0.05）。"
+    },
+    {
+      "title": "Hand instrumentation versus ultrasonic debridement in the treatment of chronic periodontitis: a randomized clinical and microbiological trial",
+      "publisher": "Journal of Clinical Periodontology（Ioannou I 等）",
+      "date": "2009-01-22",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19207889/",
+      "note": "讀 PubMed 摘要（E-utilities efetch）。DOI 10.1111/j.1600-051X.2008.01347.x；J Clin Periodontol 2009;36(2):132–141。用到：33 人、作者結論兩種方式臨床結果相當、6 個月兩種細菌偏手動。"
+    }
+  ]
+}
