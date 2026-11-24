@@ -43,5 +43,10 @@
       "mystery"
     ],
     "note": "精簡：perio、compare 比較（刮治器 vs 超音波）"
+  },
+  "concerts": {
+    "finished_at": "2026-11-25T05:38:58+08:00",
+    "missing": [],
+    "note": "新增 0、更新 0；候選 7 筆全不收；補查沒做完（pbc、tanart 連不上，udn、news 只做搜尋）；歷史上的今天 1915"
   }
 }
