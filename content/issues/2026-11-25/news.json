@@ -1,0 +1,154 @@
+{
+ "column": "news",
+ "date": "2026-11-25",
+ "title": "中共宣布查辦上海市委書記陳吉寧，普亭說報復「無可避免」",
+ "dek": "陳吉寧是本屆第四位被查的政治局委員；葉門政府軍說胡塞武裝離亞丁約 60 公里；台灣延長剛果民主共和國邊境管制。",
+ "brief": "中共官方 24 日晚間宣布，政治局委員、上海市委書記陳吉寧被查。普亭說，烏克蘭攻擊俄國煉油廠，報復「無可避免」。葉門軍方發言人說，胡塞武裝離南部城市亞丁約 60 公里。",
+ "topic_key": "news:2026-11-25",
+ "voice": "wire",
+ "updated_at": "2026-11-25T05:23:26+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "China probes Shanghai party chief Chen Jining over corruption",
+   "publisher": "半島電視台",
+   "date": "2026-11-24",
+   "url": "https://www.aljazeera.com/news/2026/11/24/xis-anti-corruption-campaign-targets-shanghai-party-chief-chen-jining",
+   "note": "監察機關通報用語、陳吉寧經歷與年齡、第四位被查的政治局委員、Eurasia Group 分析師說法"
+  },
+  {
+   "title": "曾被列中國政壇新星 陳吉寧被查落馬引震撼",
+   "publisher": "中央社",
+   "date": "2026-11-24",
+   "url": "https://cna.com.tw/news/acn/202611240308.aspx",
+   "note": "24 日晚間宣布、原因未明、前三位落馬者、二十一大預計明年下半年"
+  },
+  {
+   "title": "Putin says retaliation 'inevitable' after Ukraine hit Russian oil plants",
+   "publisher": "半島電視台（路透社）",
+   "date": "2026-11-24",
+   "url": "https://www.aljazeera.com/news/2026/11/24/putin-says-kyiv-hit-russian-oil-plants-despite-trump-plea-vows-retaliation",
+   "note": "普亭在克里姆林宮會議的談話、10 月中旬能源停火、路透引兩名業界人士說煉油廠加工量降 45%、烏克蘭的立場"
+  },
+  {
+   "title": "Yemen's army says Houthi fighters closing in on government stronghold of Aden",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-24",
+   "url": "https://www.france24.com/en/middle-east/20261124-yemen-army-houthi-attack-aden",
+   "note": "軍方發言人說法、11 月 15 日法新社消息、10 月 15 日總統府遇襲、7 月停火破裂、聯合國傷亡數字"
+  },
+  {
+   "title": "UN slams Iran after it flogs singer for performing without veil",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-24",
+   "url": "https://www.france24.com/en/asia-pacific/20261124-un-condemns-iran-flogging-singer-parastoo-ahmadi",
+   "note": "5 人各 74 下、律師說法、6 月判決、聯合國人權事務高級專員在 X 的發言"
+  },
+  {
+   "title": "Taiwan extends border controls on DR Congo over Ebola outbreak",
+   "publisher": "Focus Taiwan（中央社）",
+   "date": "2026-11-24",
+   "url": "https://focustaiwan.tw/society/202611240021",
+   "note": "疾管署延長 90 天、疫情數字、5 月 27 日起入境旅客數"
+  },
+  {
+   "title": "Nearly 19.6 million eligible to vote in Taiwan's local elections",
+   "publisher": "Focus Taiwan（中央社）",
+   "date": "2026-11-24",
+   "url": "https://focustaiwan.tw/politics/202611240024",
+   "note": "中選會公布的選舉人數、投票日、公投與選務人員數"
+  }
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "中共宣布查辦上海市委書記陳吉寧；普亭說對烏克蘭報復無可避免；台灣 28 日投票，邊境管制延長。"
+  },
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "中共宣布查辦陳吉寧",
+     "place": "CN",
+     "summary": "中共官方 24 日晚間宣布，政治局委員、上海市委書記陳吉寧被查，新華社說他涉嫌「嚴重違紀違法」，原因未明。他 62 歲，曾任北京市長。他是本屆第四位被查的政治局委員，前三位是何衛東、張又俠、馬興瑞。二十一大預計明年下半年召開。",
+     "source": "半島電視台、中央社",
+     "url": "https://www.aljazeera.com/news/2026/11/24/xis-anti-corruption-campaign-targets-shanghai-party-chief-chen-jining",
+     "when": "11 月 24 日晚間，台灣時間"
+    },
+    {
+     "headline": "普亭：報復無可避免",
+     "place": [
+      "RU",
+      "UA"
+     ],
+     "summary": "普亭 24 日在克里姆林宮說，基輔不理會川普的要求，仍攻擊煉油廠，俄方「採取報復措施無可避免」。基輔的立場是，只有莫斯科也停止攻擊能源設施，才會停手。路透社引兩名業界人士的估計，10 月下旬以來，俄國煉油廠的原油加工量總共減少 45%。",
+     "source": "半島電視台（路透社）",
+     "url": "https://www.aljazeera.com/news/2026/11/24/putin-says-kyiv-hit-russian-oil-plants-despite-trump-plea-vows-retaliation",
+     "when": "11 月 24 日，俄羅斯"
+    },
+    {
+     "headline": "胡塞武裝逼近亞丁",
+     "place": "YE",
+     "summary": "葉門軍方發言人 24 日說，胡塞武裝離南部城市亞丁約 60 公里，軍方「認真看待，也已準備好」。六名葉門消息人士對法新社說，胡塞武裝 11 月 15 日奪下兩個區。軍方發言人說，政府軍已從紅海沿岸撤出部分兵力，調往需要的地方增援。聯合國最新統計，7 月停火破裂以來的衝突已造成逾 1,600 人死亡。",
+     "source": "法國 24 電視台",
+     "url": "https://www.france24.com/en/middle-east/20261124-yemen-army-houthi-attack-aden",
+     "when": "11 月 24 日，葉門"
+    },
+    {
+     "headline": "伊朗鞭刑歌手，聯合國譴責",
+     "place": "IR",
+     "summary": "據當地媒體引述律師的說法，伊朗歌手帕拉斯圖・艾哈邁迪 29 歲，因未戴頭巾的演唱會（2024 年 12 月上網），23 日與四名男性工作人員各被鞭打 74 下，判決是 6 月下的。聯合國人權事務高級專員突爾克在 X 上說，鞭刑是「酷刑或其他殘忍、不人道或有辱人格的處罰」，並要求伊朗從法律中根除這種做法。",
+     "source": "法國 24 電視台",
+     "url": "https://www.france24.com/en/asia-pacific/20261124-un-condemns-iran-flogging-singer-parastoo-ahmadi",
+     "when": "11 月 23–24 日，伊朗"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "剛果民主共和國邊境管制延 90 天",
+     "place": "TW",
+     "summary": "疾管署署長羅一鈞 24 日說，對剛果民主共和國的邊境管制再延 90 天，到 2027 年 2 月 26 日，對當地居民的簽證繼續暫停核發。當地伊波拉疫情累計逾 11,000 例，致死率接近五成，每週新增 400 至 500 例。5 月 27 日以來有 7 名旅客自當地入境，都不是當地居民（5 名台灣人、2 名外國人），自主健康管理期滿後都沒有症狀。",
+     "source": "Focus Taiwan（中央社）",
+     "url": "https://focustaiwan.tw/society/202611240021",
+     "when": "11 月 24 日，台灣時間"
+    },
+    {
+     "headline": "九合一選舉 28 日投票",
+     "place": "TW",
+     "summary": "中選會 24 日公布，28 日（週六）九合一地方選舉的市長與縣長選舉人有 19,576,028 人，同日核能公投（題目是政府是否應推動核能發電）選舉人 20,003,835 人。",
+     "source": "Focus Taiwan（中央社）",
+     "url": "https://focustaiwan.tw/politics/202611240024",
+     "when": "11 月 24 日，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "九合一選舉人數（中選會，24 日）",
+   "head": [
+    "選舉",
+    "選舉人數"
+   ],
+   "rows": [
+    [
+     "市長、縣長",
+     "19,576,028"
+    ],
+    [
+     "縣市議員",
+     "19,486,232"
+    ],
+    [
+     "核能公投",
+     "20,003,835"
+    ]
+   ]
+  }
+ ]
+}
