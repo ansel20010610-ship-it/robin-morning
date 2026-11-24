@@ -1,0 +1,427 @@
+{
+  "column": "mystery",
+  "date": "2026-11-25",
+  "title": "連沒腦的水母都要睡，睡覺到底在忙什麼",
+  "dek": "完全不睡的大鼠，11 到 32 天內全死了，解剖卻找不到死因。動物非睡不可，但睡覺時到底在做哪件非做不可的事，三派到今天還說服不了彼此。",
+  "brief": "動物非睡不可：完全不睡的大鼠幾週內全死，連沒有腦的水母都有類似睡眠的狀態。但睡覺到底在替身體做什麼，是替腦子倒垃圾、替突觸減重，還是挑對時間不動，三派各有硬證據，也各有一件解釋不了的事。倒垃圾說的主要證據來自小鼠，兩組人量出相反方向，到今天還沒結案。",
+  "topic_key": "mystery:science-sleep-function",
+  "form": "argument",
+  "voice": "detective",
+  "updated_at": "2026-11-25T02:10:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "f0",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Cassiopea_andromeda_K%C3%B6ln_zoo_31122014_1.jpg/1280px-Cassiopea_andromeda_K%C3%B6ln_zoo_31122014_1.jpg",
+    "width": 1280,
+    "height": 934,
+    "alt": "從上方俯拍水族缸底的一隻水母：深色圓盤狀的傘貼在長滿綠褐色藻類的底上，傘面朝下，中央向上伸出一大叢白色、分岔的口腕，上面佈滿細小的顆粒。",
+    "caption": "倒立水母（*Cassiopea andromeda*），2014 年 12 月 31 日攝於德國科隆動物園。這類水母沒有集中的腦，神經散成一張網；2017 年的研究在同屬的倒立水母身上看到夜裡的類睡眠狀態。",
+    "credit": "Vassil／Wikimedia Commons",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cassiopea_andromeda_K%C3%B6ln_zoo_31122014_1.jpg",
+    "made": "2014"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "先講結論：動物非睡不可，這點證據很硬。可是睡覺到底在做哪件非做不可的事，到今天沒有一個說法被多數人接受。主要說法有三種：替腦子倒垃圾、替神經接頭減重、挑對時間不動，各有硬證據，也各有破綻。"
+    },
+    {
+      "type": "p",
+      "text": "先看最怪的證物：**倒立水母**。牠沒有腦，神經細胞散成一張網。2017 年 9 月，Nath 等人幾天幾夜盯著牠的傘緣一縮一放，發現牠夜裡會安靜下來，但很快就能叫醒。夜裡不讓牠安靜，隔天牠就動得少、反應差。作者說，這支持一個假說：睡眠在動物長出腦之前就有了。"
+    },
+    {
+      "type": "p",
+      "text": "今天講這題，是因為倒垃圾這一派還在吵：2024 年被另一組人量出相反結果；2025 年 3 月，兩組人在同一本期刊正式交手；今年 1 月又有新的人體試驗。"
+    },
+    {
+      "type": "timeline",
+      "title": "從不睡會死的大鼠，到清除說的爭論",
+      "items": [
+        {
+          "when": "1989.2",
+          "label": "10 隻大鼠完全不睡，11 到 32 天內全死",
+          "note": "Everson、Bergmann、Rechtschaffen；解剖找不到死因"
+        },
+        {
+          "when": "2003.12",
+          "label": "Tononi 與 Cirelli 提出突觸恆定假說",
+          "note": "清醒時突觸變強，睡眠時等比例縮小"
+        },
+        {
+          "when": "2008.8",
+          "label": "Cirelli 與 Tononi：找不到不睡的物種",
+          "note": "也找不到少睡而不補、不付代價的動物"
+        },
+        {
+          "when": "2009.8",
+          "label": "Siegel 提出適應性不動說",
+          "note": "睡多久主要由生態決定"
+        },
+        {
+          "when": "2013.10",
+          "label": "小鼠睡著時腦細胞間的空隙大了 60%",
+          "note": "Xie 等；β-類澱粉蛋白清除加快"
+        },
+        {
+          "when": "2014.6",
+          "label": "學習後的睡眠長出新的樹突棘",
+          "note": "Yang 等；和「睡眠讓突觸縮小」方向相反"
+        },
+        {
+          "when": "2016.8",
+          "label": "大軍艦鳥飛行中每天只睡 0.69 小時",
+          "note": "Rattenborg 等"
+        },
+        {
+          "when": "2017.2",
+          "label": "睡後突觸接觸面約小 18%",
+          "note": "de Vivo 等量了 6,920 個突觸"
+        },
+        {
+          "when": "2017.3",
+          "label": "野生非洲象每天約睡 2 小時",
+          "note": "兩頭母象；46 小時沒睡後也沒補眠"
+        },
+        {
+          "when": "2017.9",
+          "label": "沒有腦的倒立水母也有類睡眠狀態",
+          "note": "Nath 等"
+        },
+        {
+          "when": "2020.6",
+          "label": "果蠅缺睡致死，可以由腸道氧化壓力造成",
+          "note": "Vaccaro 等；中和後幾乎不睡也活到正常壽命"
+        },
+        {
+          "when": "2024.5",
+          "label": "另一組人量到：睡眠時腦清除反而減少",
+          "note": "Miao 等，Franks 與 Wisden 團隊"
+        },
+        {
+          "when": "2025.1",
+          "label": "正腎上腺素起伏帶動血管舒縮，像幫浦推動清除（小鼠）",
+          "note": "Hauglund 等；安眠藥 zolpidem 壓低它"
+        },
+        {
+          "when": "2025.3",
+          "label": "兩派在《Nature Neuroscience》正式交鋒",
+          "note": "Plá 等的回應與 Franks、Wisden 的答覆同日刊出"
+        },
+        {
+          "when": "2026.1",
+          "label": "39 人的睡／不睡交叉試驗",
+          "note": "Dagum 等；用血漿標記與研究用裝置間接量"
+        }
+      ],
+      "caption": "依 Everson 等（1989）、Tononi 與 Cirelli（2003）、Cirelli 與 Tononi（2008）、Siegel（2009）、Xie 等（2013）、Yang 等（2014）、Rattenborg 等（2016）、de Vivo 等（2017）、Gravett 等（2017）、Nath 等（2017）、Vaccaro 等（2020）、Miao 等（2024）、Hauglund 等（2025）、Plá 等（2025）、Dagum 等（2026）整理。"
+    },
+    {
+      "type": "h",
+      "text": "確定的部分：不睡會死"
+    },
+    {
+      "type": "p",
+      "text": "1989 年 2 月，芝加哥大學的研究者讓 **10 隻大鼠**完全不睡。牠們的地板是一塊懸在淺水上的圓盤，一睡著圓盤就轉，不走就會被帶進水裡。10 隻全在 11 到 32 天內死了，或在快死時被安樂死。解剖卻找不到死因。"
+    },
+    {
+      "type": "p",
+      "text": "隔壁一隻對照鼠跟著受一樣的折騰，但圓盤停下時可以照睡，牠保持健康。"
+    },
+    {
+      "type": "p",
+      "text": "2008 年，研究睡眠的 Cirelli 和 Tononi 整理證據後寫：找不到確定不睡的物種，也找不到真的不睡、卻不付高代價的動物。海豚可以一次只讓半邊大腦睡。兩人認為，海豚寧可演化出這種本事也不乾脆不睡，正說明睡眠有省不掉的功能。"
+    },
+    {
+      "type": "p",
+      "text": "這一點，多數人同意。吵的是那個功能到底是什麼。"
+    },
+    {
+      "type": "h",
+      "text": "第一種說法：替腦子倒垃圾"
+    },
+    {
+      "type": "p",
+      "text": "2013 年 10 月，羅徹斯特大學的 Nedergaard 團隊發表：小鼠睡著時，腦細胞之間充滿液體的縫隙大了 60%。泡著腦的腦脊髓液，和縫隙裡的液體交換得更多。β-類澱粉蛋白也清得更快，這是一種和阿茲海默症有關、會在腦裡堆積的蛋白質。他們把這套沖洗叫做**膠淋巴系統**，推論睡眠的恢復作用，可能就來自把廢物帶走，這叫「清除」。"
+    },
+    {
+      "type": "p",
+      "text": "解釋不了的那件事，出在 2024 年 5 月。倫敦帝國學院 Franks 與 Wisden 的團隊，把螢光染料直接注進小鼠的腦組織，再用光纖在另一處量。結果睡眠和麻醉時，腦的清除反而明顯變少。Nedergaard 這一派先前是把染料打進腦脊髓液。"
+    },
+    {
+      "type": "p",
+      "text": "2025 年 3 月，Nedergaard 等人在同一本期刊的正式回應欄反駁：對方量的只是染料從腦的一處移到另一處，等於把搬家當成清除。同一天，Franks 與 Wisden 的答覆也刊出了。"
+    },
+    {
+      "type": "quote",
+      "text": "把垃圾在家裡搬來搬去，解決不了垃圾問題。廢物要被沖出腦外，才算清除。",
+      "original": "Moving garbage around your home will not eliminate your waste problem. Waste must be flushed out of the brain to be cleared.",
+      "cite": "Plá 等〈A curious concept of CNS clearance〉，《Nature Neuroscience》2025，回應 Miao 等（2024）；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "人身上只能間接量：瑞典 12 人、今年 1 月 39 人的兩篇試驗，抽腦脊髓液或抽血，比睡與不睡，方向一致，但樣本都小。瑞典那篇作者也說，資料不支持廢物被整批沖走。"
+    },
+    {
+      "type": "h",
+      "text": "第二種說法：替突觸減重"
+    },
+    {
+      "type": "p",
+      "text": "突觸是神經細胞之間的接頭，學習會讓它變大、變強。2003 年，威斯康辛大學的 Tononi 與 Cirelli 提出**突觸恆定假說**：白天學東西，許多突觸變強；睡著時，等比例縮回去。"
+    },
+    {
+      "type": "p",
+      "text": "最有力的證據在 2017 年 2 月。他們的團隊用電子顯微鏡量了小鼠 6,920 個突觸，睡過之後比醒著之後，接觸面積小了約 18%。"
+    },
+    {
+      "type": "p",
+      "text": "解釋不了的那件事，在 2014 年。紐約大學 Gan 團隊讓小鼠學一個動作，接下來的睡眠裡，神經細胞長出了新的樹突棘，這是神經細胞上長突觸的小芽。學習時用到的神經細胞，睡著後會再活化一次；把這一次打斷，新芽就長不出來。這和「睡覺讓突觸縮小」方向相反。賓州大學的 Frank 在 2012 年下過這樣的評語："
+    },
+    {
+      "type": "quote",
+      "text": "我的結論是：SHY 仍然是個優雅的想法，但它底下的機制成謎，功能上的意義也還不知道。",
+      "original": "I conclude that while SHY remains an elegant idea, the underlying mechanisms are mysterious and its functional significance unknown.",
+      "cite": "Frank〈Erasing synapses in sleep: is it time to be SHY?〉，《Neural Plasticity》2012，摘要末句；本文自譯"
+    },
+    {
+      "type": "h",
+      "text": "第三種說法：挑對時間不動"
+    },
+    {
+      "type": "p",
+      "text": "睡眠研究者 Siegel 在 2009 年提出**適應性不動**：睡眠是一種休眠，好處是把「不動」排在最合適的時段；一個物種睡多久、睡多深，主要看牠的生態。他在摘要裡，先擺出他要反駁的主流看法："
+    },
+    {
+      "type": "quote",
+      "text": "這讓人提出一個假說：睡眠能存活下來，是因為它負擔著某種普遍、但至今仍不知道是什麼的關鍵功能。",
+      "original": "This has led to the hypothesis that sleep has survived because it fulfills some universal, but as yet unknown, vital function.",
+      "cite": "Siegel〈Sleep viewed as a state of adaptive inactivity〉，《Nature Reviews Neuroscience》2009，摘要；Siegel 在這裡描述的是他要反駁的看法；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "他這邊的證據來自野外。2016 年，研究者替加拉巴哥群島的大軍艦鳥戴上記錄腦波的儀器。牠們在海上飛的時候，每天只睡 0.69 小時，是在陸上的 7.4%。2017 年，兩頭野生非洲母象平均每天只睡 2 小時，有五次牠們最長 46 小時沒睡，事後也沒多睡回來。只是象只有兩頭，而且是用象鼻裡的活動記錄器推算，不是腦波。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Starr_990518-0805_Fregata_minor.jpg/1280px-Starr_990518-0805_Fregata_minor.jpg",
+      "width": 1280,
+      "height": 853,
+      "alt": "灰藍色陰天的天空中，一隻黑色大鳥張開細長尖翅滑翔，從下方仰拍，可見白色的頭頸與胸口和分叉的長尾。",
+      "caption": "大軍艦鳥（*Fregata minor*），1999 年 5 月 18 日攝於美國中途島環礁的東島。2016 年的研究記錄的是同一種鳥，地點在加拉巴哥群島：牠們在海上連飛多天，飛行中每天只睡 0.69 小時，約是在陸上的 7.4%。",
+      "credit": "Forest & Kim Starr／Wikimedia Commons",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Starr_990518-0805_Fregata_minor.jpg",
+      "made": "1999"
+    },
+    {
+      "type": "p",
+      "text": "這一派解釋不了的，就是那批大鼠：如果睡眠只是挑時間不動，不睡為什麼會死？Cirelli 和 Tononi 把這種想法叫做「虛無假說」，並說它能解釋為什麼到現在還找不到核心功能。不過他們自己押的，是睡眠有省不掉的功能。"
+    },
+    {
+      "type": "h",
+      "text": "為什麼到今天還沒結案"
+    },
+    {
+      "type": "p",
+      "text": "免疫、荷爾蒙、代謝、體溫，幾乎每個系統都跟睡眠有關。Cirelli 和 Tononi 認為，最簡單的假說是一個核心功能，加上一些順便利用睡眠的附帶功能。偏偏剝奪睡眠的實驗免不了折騰動物，結果難解讀。"
+    },
+    {
+      "type": "table",
+      "title": "三種解釋，各自撐得住與卡住的地方",
+      "head": [
+        "解釋",
+        "最有力的證據",
+        "解釋不了的事",
+        "卡在哪裡"
+      ],
+      "rows": [
+        [
+          "清除廢物：睡覺時腦脊髓液沖洗腦細胞間的縫隙",
+          "小鼠睡著時細胞間空隙大 60%，β-類澱粉蛋白清得更快（Xie 等 2013）；NREM 睡眠中正腎上腺素起伏帶動血管像幫浦（Hauglund 等 2025）",
+          "直接把染料打進腦組織量，睡眠時清除反而少（Miao 等 2024）",
+          "和另一項證據矛盾：兩邊對「清除」怎麼量意見相反；主要證據在小鼠"
+        ],
+        [
+          "突觸減重：清醒時變強的突觸，睡覺時等比例縮回去",
+          "6,920 個突觸，睡後接觸面約小 18%（de Vivo 等 2017）",
+          "學習後的睡眠反而長出新的樹突棘（Yang 等 2014）",
+          "和另一項證據矛盾，機制也不明（Frank 2012）"
+        ],
+        [
+          "適應性不動：睡眠是把「不動」安排在最划算的時段",
+          "睡多久跟著生態走：大軍艦鳥飛行中每天 0.69 小時（Rattenborg 等 2016）；野生象每天約 2 小時且不補眠（Gravett 等 2017）",
+          "完全不睡的大鼠 11 到 32 天內全死（Everson 等 1989）；找不到不睡也不付代價的動物（Cirelli 與 Tononi 2008）",
+          "和另一項證據矛盾：如果睡眠可有可無，缺睡為什麼致命"
+        ]
+      ],
+      "caption": "依各列所註論文的摘要或全文整理；象的資料只有兩頭。"
+    },
+    {
+      "type": "p",
+      "text": "要結案，還缺工具。聖路易華盛頓大學的 Kipnis 在 2024 年說，要分勝負，得有一種能在特定時間、特定腦區產生追蹤標記的基因改造小鼠。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sleep deprivation in the rat: III. Total sleep deprivation（Everson, Bergmann, Rechtschaffen）",
+      "publisher": "Sleep 12(1): 13–21；DOI 10.1093/sleep/12.1.13",
+      "date": "1989-02-01",
+      "url": "https://doi.org/10.1093/sleep/12.1.13",
+      "note": "依 PubMed 摘要（PMID 2928622）：10 隻、11–32 天內死亡或瀕死時犧牲、找不到解剖死因、能量消耗平均超過基線兩倍；期刊僅標 1989 年 2 月"
+    },
+    {
+      "title": "Sleep deprivation in the rat by the disk-over-water method（Rechtschaffen, Bergmann）",
+      "publisher": "Behavioural Brain Research 69(1–2): 55–63；DOI 10.1016/0166-4328(95)00020-t",
+      "date": "1995-07-01",
+      "url": "https://doi.org/10.1016/0166-4328(95)00020-t",
+      "note": "依 PubMed 摘要（PMID 7546318）；期刊標 1995 年 7–8 月"
+    },
+    {
+      "title": "Increases in amino-cupric-silver staining of the supraoptic nucleus after sleep deprivation（Eiland 等，含 Rechtschaffen、Siegel）",
+      "publisher": "Brain Research 945(1): 1–8；DOI 10.1016/s0006-8993(02)02448-4",
+      "date": "2002-07-26",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8842515/",
+      "note": "只讀引言對水上圓盤法的描述（相鄰籠子、共用懸在淺水上的圓盤、轉動時兩鼠都得逆向走、對照鼠在圓盤不轉時可睡）；本文其餘結果未用"
+    },
+    {
+      "title": "Is Sleep Essential?（Cirelli, Tononi）",
+      "publisher": "PLoS Biology 6(8): e216；DOI 10.1371/journal.pbio.0060216",
+      "date": "2008-08-26",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0060216",
+      "note": "讀全文：虛無假說三推論、6–24 小時剝奪仍留 5%–10% 睡眠、海豚單半球睡眠、結論段與末句"
+    },
+    {
+      "title": "Sleep viewed as a state of adaptive inactivity（Siegel）",
+      "publisher": "Nature Reviews Neuroscience 10: 747–753；DOI 10.1038/nrn2697",
+      "date": "2009-08-05",
+      "url": "https://doi.org/10.1038/nrn2697",
+      "note": "依摘要（PMID 19654581）"
+    },
+    {
+      "title": "Sleep and synaptic homeostasis: a hypothesis（Tononi, Cirelli）",
+      "publisher": "Brain Research Bulletin 62(2): 143–150；DOI 10.1016/j.brainresbull.2003.09.004",
+      "date": "2003-12-15",
+      "url": "https://doi.org/10.1016/j.brainresbull.2003.09.004",
+      "note": "依摘要（PMID 14638388）：假說四點、慢波 0.5–4.5 Hz"
+    },
+    {
+      "title": "Sleep and the price of plasticity: from synaptic and cellular homeostasis to memory consolidation and integration（Tononi, Cirelli）",
+      "publisher": "Neuron 81(1): 12–34；DOI 10.1016/j.neuron.2013.12.025",
+      "date": "2014-01-08",
+      "url": "https://doi.org/10.1016/j.neuron.2013.12.025",
+      "note": "依摘要（PMID 24411729）"
+    },
+    {
+      "title": "Ultrastructural evidence for synaptic scaling across the wake/sleep cycle（de Vivo 等）",
+      "publisher": "Science 355(6324): 507–510；DOI 10.1126/science.aah5982",
+      "date": "2017-02-03",
+      "url": "https://doi.org/10.1126/science.aah5982",
+      "note": "依摘要（PMID 28154076）：6,920 個突觸、軸突—棘突接觸面約 −18%、約 80% 為較弱突觸"
+    },
+    {
+      "title": "Sleep promotes branch-specific formation of dendritic spines after learning（Yang 等）",
+      "publisher": "Science 344(6188): 1173–1178；DOI 10.1126/science.1249098",
+      "date": "2014-06-06",
+      "url": "https://doi.org/10.1126/science.1249098",
+      "note": "依摘要（PMID 24904169）"
+    },
+    {
+      "title": "Erasing synapses in sleep: is it time to be SHY?（Frank）",
+      "publisher": "Neural Plasticity 2012: 264378；DOI 10.1155/2012/264378",
+      "date": "2012-02-28",
+      "url": "https://doi.org/10.1155/2012/264378",
+      "note": "依摘要（PMID 22530156）；引文為摘要末句"
+    },
+    {
+      "title": "Sleep drives metabolite clearance from the adult brain（Xie 等，通訊作者 Nedergaard）",
+      "publisher": "Science 342(6156): 373–377；DOI 10.1126/science.1241224",
+      "date": "2013-10-18",
+      "url": "https://doi.org/10.1126/science.1241224",
+      "note": "依摘要（PMID 24136970）：間質空間增加 60%、β-類澱粉蛋白清除加快；小鼠"
+    },
+    {
+      "title": "Brain clearance is reduced during sleep and anesthesia（Miao 等，Franks、Wisden）",
+      "publisher": "Nature Neuroscience 27: 1046–1050；DOI 10.1038/s41593-024-01638-y",
+      "date": "2024-05-13",
+      "url": "https://doi.org/10.1038/s41593-024-01638-y",
+      "note": "依摘要（PMID 38741022）：雄性小鼠、螢光分子；注射位置與量測方式依 S13 與 S22 的描述"
+    },
+    {
+      "title": "A curious concept of CNS clearance（Plá 等，含 Nedergaard）",
+      "publisher": "Nature Neuroscience 28: 731–733（Matters Arising）；DOI 10.1038/s41593-025-01897-3",
+      "date": "2025-03-11",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12340669/",
+      "note": "讀 PMC 作者稿全文：開頭段、第 1 點（尾核殼核→前額葉光纖、垃圾比喻）、結論段"
+    },
+    {
+      "title": "Reply to: A curious concept of CNS clearance（Franks, Wisden）",
+      "publisher": "Nature Neuroscience 28: 734–736；DOI 10.1038/s41593-025-01898-2",
+      "date": "2025-03-11",
+      "url": "https://spiral.imperial.ac.uk/entities/publication/38039a05-ee39-4932-a299-562f6a81b3bd",
+      "note": "只讀到帝國學院典藏頁的書目，未讀答覆內容"
+    },
+    {
+      "title": "Norepinephrine-mediated slow vasomotion drives glymphatic clearance during sleep（Hauglund 等，通訊作者 Nedergaard）",
+      "publisher": "Cell 188(3): 606–622.e17；DOI 10.1016/j.cell.2024.11.027",
+      "date": "2025-01-08",
+      "url": "https://doi.org/10.1016/j.cell.2024.11.027",
+      "note": "依摘要（PMID 39788123）；小鼠"
+    },
+    {
+      "title": "The glymphatic system clears amyloid beta and tau from brain to plasma in humans（Dagum 等，含 Iliff）",
+      "publisher": "Nature Communications 17: 715；DOI 10.1038/s41467-026-68374-8",
+      "date": "2026-01-27",
+      "url": "https://doi.org/10.1038/s41467-026-68374-8",
+      "note": "依摘要與利益衝突聲明（PMID 41593094）：39 人隨機交叉、研究用裝置、多位作者申報財務利益"
+    },
+    {
+      "title": "Sleep reduces CSF concentrations of beta-amyloid and tau: a randomized crossover study in healthy adults（Lyckenvik 等）",
+      "publisher": "Fluids and Barriers of the CNS 22: 84；DOI 10.1186/s12987-025-00698-x",
+      "date": "2025-08-19",
+      "url": "https://doi.org/10.1186/s12987-025-00698-x",
+      "note": "依摘要（PMID 40830882）：12 人、20–40 歲、三種情境"
+    },
+    {
+      "title": "Evidence that birds sleep in mid-flight（Rattenborg 等）",
+      "publisher": "Nature Communications 7: 12468；DOI 10.1038/ncomms12468",
+      "date": "2016-08-03",
+      "url": "https://doi.org/10.1038/ncomms12468",
+      "note": "讀全文：飛行組 14 隻、巢中 9 隻、Genovesa 島、最長 10 天、每天 0.69 小時、片段長度"
+    },
+    {
+      "title": "Inactivity/sleep in two wild free-roaming African elephant matriarchs（Gravett 等，含 Siegel）",
+      "publisher": "PLoS One 12(3): e0171903；DOI 10.1371/journal.pone.0171903",
+      "date": "2017-03-01",
+      "url": "https://doi.org/10.1371/journal.pone.0171903",
+      "note": "依摘要（PMID 28249035）：兩頭、每天 2 小時、最長 46 小時沒睡且無補眠"
+    },
+    {
+      "title": "The Jellyfish Cassiopea Exhibits a Sleep-like State（Nath 等）",
+      "publisher": "Current Biology 27(19): 2984–2990.e3；DOI 10.1016/j.cub.2017.08.014",
+      "date": "2017-09-21",
+      "url": "https://doi.org/10.1016/j.cub.2017.08.014",
+      "note": "依摘要（PMID 28943083）；期刊卷期日為 2017-10-09"
+    },
+    {
+      "title": "Sleep Loss Can Cause Death through Accumulation of Reactive Oxygen Species in the Gut（Vaccaro 等）",
+      "publisher": "Cell 181(6): 1307–1328.e15；DOI 10.1016/j.cell.2020.04.049",
+      "date": "2020-06-04",
+      "url": "https://doi.org/10.1016/j.cell.2020.04.049",
+      "note": "依摘要（PMID 32502393）"
+    },
+    {
+      "title": "New method reignites controversy over brain clearance during sleep（Elissa Welle）",
+      "publisher": "The Transmitter",
+      "date": "2024-05-22",
+      "url": "https://www.thetransmitter.org/glymphatic-system/new-method-reignites-controversy-over-brain-clearance-during-sleep/",
+      "note": "新聞報導，只用於 Nedergaard、Kipnis 的引言與注射方式的差別；2025 年更新註記 Matters Arising 刊出"
+    }
+  ]
+}
