@@ -1,0 +1,199 @@
+{
+  "column": "obituary",
+  "date": "2026-11-25",
+  "status": "update",
+  "form": "reverse",
+  "voice": "eulogist",
+  "title": "莎士比亞學者 Stanley Wells 過世，96 歲",
+  "dek": "他是牛津版莎士比亞的總編，當了二十年莎士比亞出生地信託的主席。據一位合編者說，書被書評罵，他寄去一盒巧克力。",
+  "brief": "英國莎士比亞學者 Stanley Wells 11 月 23 日過世，96 歲。他是牛津版莎士比亞的總編，也長年擔任莎士比亞出生地信託的主席。他晚年錄的一套線上講座，談莎士比亞是個怎樣的人，信託網站上現在還能免費聽。",
+  "topic_key": "obituary:wells-2026",
+  "updated_at": "2026-11-25T05:35:03+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "f0",
+    "kind": "portrait",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Stanleywells.jpg/1280px-Stanleywells.jpg",
+    "width": 1280,
+    "height": 1920,
+    "alt": "黑白近照：一位白髮、留灰白鬍鬚的老先生，一手托著臉頰，笑著，領口露出有花紋的衣料。",
+    "caption": "Stanley Wells。Shakespeare Birthplace Trust 在 Flickr 發布，Commons 標示日期 2007 年 6 月 12 日。",
+    "credit": "Shakespeare Birthplace Trust",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Stanleywells.jpg",
+    "made": "2007"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "**Stanley Wells** 是英國的莎士比亞學者，11 月 23 日（週一）過世，96 歲。地方報《Stratford Herald》說，他是那天晚上在史特拉福德的醫院走的。史特拉福德是莎士比亞的故鄉，莎士比亞的老家就在那裡。"
+    },
+    {
+      "type": "p",
+      "text": "《每日電訊報》的訃聞說，他是英國最重要的莎士比亞學者，也是學院裡少數寫的書連一般讀者也會讀的人。牛津大學出版社出了一套莎士比亞，叫牛津版莎士比亞，他是這套書的總編。1986 年出版的《莎士比亞全集》（William Shakespeare: The Complete Works）也由他主編，2005 年修訂過。"
+    },
+    {
+      "type": "p",
+      "text": "有人主張，莎士比亞的劇本其實是別人寫的。《每日電訊報》說，Wells 對這些人特別不客氣。據《每日電訊報》，至少有 77 個人被提出當作者；Wells 則指出，這些作品印成書以後，初版和重印本加起來，有 **37 張扉頁**印著莎士比亞的名字。扉頁就是書一翻開、印著書名和作者的那一頁。1609 年出版的十四行詩集，扉頁上就寫著「莎士比亞的十四行詩，前所未印」。他說，一個人寫出最偉大的劇本，卻讓別人拿走功勞，這太荒謬了。"
+    },
+    {
+      "type": "timeline",
+      "title": "Wells 的幾個年份",
+      "items": [
+        {
+          "when": "1930.5.21",
+          "label": "生於赫爾",
+          "note": "英國東北的港城"
+        },
+        {
+          "when": "1962 年",
+          "label": "成為伯明翰大學莎士比亞研究所的 Fellow",
+          "note": "他讀博士的地方"
+        },
+        {
+          "when": "1986 年",
+          "label": "《William Shakespeare: The Complete Works》出版",
+          "note": "牛津版全集，2005 年修訂"
+        },
+        {
+          "when": "2002 年",
+          "label": "《Shakespeare: For All Time》出版",
+          "note": "Telegraph 說有人稱它是一個世代來最好的莎士比亞書"
+        },
+        {
+          "when": "2016 年",
+          "label": "受封爵士",
+          "note": "2007 年已獲頒 CBE"
+        },
+        {
+          "when": "2020 年",
+          "label": "90 歲，錄四講線上講座",
+          "note": "莎士比亞出生地信託請他錄的"
+        },
+        {
+          "when": "2026.11.23",
+          "label": "過世，96 歲",
+          "note": "據地方報，在史特拉福德的醫院"
+        }
+      ],
+      "caption": "年份出自《每日電訊報》訃聞，以及信託、地方報的報導。"
+    },
+    {
+      "type": "h",
+      "text": "桑樹下的生日"
+    },
+    {
+      "type": "p",
+      "text": "今年他過 96 歲生日，地點在莎士比亞女兒住過的老房子，花園裡的桑樹下。那天意外地熱，蛋糕都融化了。講這件事的，是莎士比亞出生地信託的主席。這個信託是一個獨立的慈善機構，管莎士比亞在史特拉福德的老家和檔案。"
+    },
+    {
+      "type": "h",
+      "text": "九十歲錄的四講"
+    },
+    {
+      "type": "p",
+      "text": "2020 年他 90 歲，信託請他錄了四講線上講座，題目是〈**What Was Shakespeare Really Like?**〉，意思是「莎士比亞到底是個怎樣的人」。講座放在信託的網站上，免費聽。2023 年，他出了同名的書。"
+    },
+    {
+      "type": "p",
+      "text": "替第四講開場的，是他的一位合編者。對方講了一件事：兩人合編的一本參考書，有一次被一篇刻薄的書評罵，編輯問要不要回應。Wells 回答："
+    },
+    {
+      "type": "quote",
+      "text": "噢，我已經回了。我寄了一盒巧克力給那位書評人。",
+      "original": "O, I already have, I sent the reviewer a box of chocolates.",
+      "cite": "Stanley Wells，轉述自 Michael Dobson，2020 年第四講的開場"
+    },
+    {
+      "type": "h",
+      "text": "二十年的主席"
+    },
+    {
+      "type": "p",
+      "text": "2011 年，他做滿二十年的信託主席，信託請人替他畫了一幅肖像。畫裡他坐在書房的舊皮椅上，穿淡藍外套、粉紅襯衫，膝上放著一本書。他從 1975 年起就是信託的理事，卸下主席以後，成了信託第一位名譽會長。信託的聲明說，幾十年來，學者、演員、導演都受他影響。"
+    },
+    {
+      "type": "p",
+      "text": "劇場那邊，他當過皇家莎士比亞劇團的副主席，後來是劇團的名譽理事。莎士比亞對他是什麼，他自己說過一句。"
+    },
+    {
+      "type": "quote",
+      "text": "在我的生活裡是中心，工作如此，享受也如此。",
+      "original": "central to my life both for work, and for pleasure",
+      "cite": "Stanley Wells 談莎士比亞，引自 Stratford Herald"
+    },
+    {
+      "type": "h",
+      "text": "他說《馬克白》不只一個作者"
+    },
+    {
+      "type": "p",
+      "text": "《每日電訊報》列了他幾個大膽的主張：他說《馬克白》是莎士比亞和另一位劇作家合寫的；他說《維洛那二紳士》是莎士比亞的第一部劇本；牛津全集出第二版時，他收進了兩部劇本，《湯瑪斯・摩爾爵士》和《愛德華三世》，把它們算進莎士比亞的作品。批評他的人說，他要別人不要讓常識壓過證據，自己卻在證據不多的時候就下了結論。"
+    },
+    {
+      "type": "p",
+      "text": "他寫了四十本左右的書。2002 年的《**Shakespeare: For All Time**》，《每日電訊報》說有人稱它是一個世代以來最好的莎士比亞書。可是他從來沒寫過一本完整的莎士比亞傳記，被問起，他是這樣說的。"
+    },
+    {
+      "type": "quote",
+      "text": "當然，也許是因為沒有人請我寫。",
+      "original": "Of course, it could be because no one has asked me",
+      "cite": "Stanley Wells，引自《每日電訊報》訃聞，2026 年 11 月 24 日"
+    },
+    {
+      "type": "h",
+      "text": "一封自願謄寫的信"
+    },
+    {
+      "type": "p",
+      "text": "他 1930 年生在赫爾，英國東北的港城，父親是公車公司的交通主管。中學老師帶他讀十四行詩，他也看過巡迴演出的《奧賽羅》和《李爾王》。後來他進了倫敦大學學院，1951 年因病退出皇家空軍的兵役。"
+    },
+    {
+      "type": "p",
+      "text": "他上過一門課，學讀伊莉莎白時代的手寫字。後來他寫信到伯明翰大學的莎士比亞研究所，說願意幫忙謄寫文件。兩個星期後，研究所的所長請他申請研究獎學金，他就在那裡開始讀博士。1962 年起他在研究所教書，後來是那裡的名譽教授。"
+    },
+    {
+      "type": "p",
+      "text": "有一回，他看完奧立佛演的《科利奧蘭納斯》，一個人在史特拉福德的街上走。他不想開口，怕一說話，就破壞了那種感覺。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sir Stanley Wells, Britain's foremost Shakespeare scholar who made radical suggestions about the Bard",
+      "publisher": "The Telegraph（Yahoo 轉載）",
+      "date": "2026-11-24",
+      "url": "https://www.yahoo.com/entertainment/celebrity/deaths-obituaries/articles/sir-stanley-wells-britain-foremost-113650240.html",
+      "note": "死亡日期（11 月 23 日）、生平、著作、37 張扉頁與 77 位候選作者、Oldcastle／Macbeth／Two Gentlemen 等主張、批評者的看法；未寫死因。37 與 77 兩個數字是這篇訃聞轉述 Wells 的說法。"
+    },
+    {
+      "title": "Professor Sir Stanley Wells, the great Shakespeare scholar and Stratfordian, sadly died last night aged 96",
+      "publisher": "Stratford Herald",
+      "date": "2026-11-24",
+      "url": "https://www.stratford-herald.com/news/now-cracks-a-noble-heart-9492600/",
+      "note": "「昨晚」過世、在史特拉福德醫院（單一來源，以「地方報說」寫）；莎士比亞出生地信託聲明、2026 年夏天的生日、2011 年 Doran 談肖像；未採其中的病因說法。"
+    },
+    {
+      "title": "Tributes paid to great Shakespeare scholar Professor Stanley Wells",
+      "publisher": "Stratford Observer",
+      "date": "2026-11-24",
+      "url": "https://stratfordobserver.co.uk/news/tributes-paid-to-great-shakespeare-scholar-professor-stanley-wells-66274/",
+      "note": "信託主席與執行長的聯合聲明（理事 1975 年、主席 1991 年起、2011 年名譽會長）、Wells 自述「central to my life both for work, and for pleasure」；Dobson 90 歲賀詞。"
+    },
+    {
+      "title": "RSC's touching tributes to 'distinguished Shakespeare scholar, editor and writer'",
+      "publisher": "Coventry Telegraph",
+      "date": "2026-11-24",
+      "url": "https://www.coventrytelegraph.net/news/local-news/rscs-touching-tributes-distinguished-shakespeare-34957504",
+      "note": "皇家莎士比亞劇團的聲明：Wells 為名譽理事、當過副主席。"
+    },
+    {
+      "title": "What Made Shakespeare Laugh?（What Was Shakespeare Really Like? 第四講與 Michael Dobson 的開場介紹）",
+      "publisher": "Shakespeare Birthplace Trust",
+      "date": "2020-05-01",
+      "url": "https://shakespeare.org.uk/explore-shakespeare/podcasts/what-was-shakespeare-really/what-made-shakespeare-laugh",
+      "note": "Dobson 講的巧克力故事；系列頁（https://www.shakespeare.org.uk/explore-shakespeare/podcasts/what-was-shakespeare-really/）說明講座為慶祝 Wells 90 歲生日而錄、免費。頁面未標日期，約 2020 年。"
+    }
+  ]
+}
