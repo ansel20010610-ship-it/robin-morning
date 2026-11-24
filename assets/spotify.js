@@ -739,3 +739,48 @@ export function renderMusic(b) {
   if (sp.tracks?.length || isLoggedIn()) load().then((s) => { state = s; draw(); }).catch(() => {});
   return el;
 }
+
+// ——— One piece outside the music column (the 降臨節月曆's window, advent.js) ———
+// The article's 「在 App 內收聽」 for a piece with no card of its own: the same lookup (query, artist_hint, track_filter),
+// the same player and the same ways out — not linked: Spotify's search page (no client ID) or the sign-in; another
+// performer's recording: said so; nothing found: the version sheet. Nothing here adds to a playlist (autoAdd takes the
+// music column's pieces only). `max`: play no more of the matched tracks than this (0: all of them).
+// lookUp: the one lookup that opening the door (advent.js looks ahead) and 播放 share. One search at a time, and a
+// search that found nothing is kept for this visit, so the next tap opens the version sheet at once instead of
+// searching again; what is found, and a recording picked in the sheet, resolve keeps itself, as in the column.
+const lookups = new Map();
+export function lookUp(sp) {
+  const key = cacheKey(sp);
+  if (!lookups.has(key)) lookups.set(key, resolve(sp, { count: 1 }).then(
+    (s) => { if (!s?.candidates || s.tracks?.length) lookups.delete(key); return s; },
+    (e) => { lookups.delete(key); throw e; }));
+  return lookups.get(key);
+}
+export async function listen(sp, title, { max = 0 } = {}) {
+  if (streamable()) primePlayer(); // inside the tap, before anything waits
+  if (!isLoggedIn()) {
+    if (!hasClient()) window.open(`https://open.spotify.com/search/${encodeURIComponent(sp.query)}`, "_blank", "noopener");
+    else await connect();
+    return;
+  }
+  const go = (s) => {
+    // A picked album none of whose track titles passed the filter: its first track, and the reader told so (the
+    // column's card says 「曲名未能逐一核對」 under the same circumstances).
+    if (s.loose) toast("曲名未能逐一核對，先放這張專輯的第一軌");
+    return play(s.tracks[0], title, max ? s.tracks.slice(0, max) : s.tracks);
+  };
+  try {
+    const s = await lookUp(sp);
+    if (s?.tracks?.length) {
+      if (s.substitute) toast(`指定的錄音（${sp.artist_hint}）在 Spotify 上找不到，先放另一個版本`);
+      await go(s);
+      return;
+    }
+    versionSheet(sp, s, async (id) => {
+      try {
+        const p = await resolve(sp, { albumId: id, candidates: s?.candidates, count: 1 });
+        if (p?.tracks?.length) { lookups.delete(cacheKey(sp)); await go(p); } else toast("這個版本找不到對應曲目，請換一個");
+      } catch (e) { report(e); }
+    });
+  } catch (e) { report(e); }
+}

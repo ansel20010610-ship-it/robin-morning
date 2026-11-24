@@ -802,9 +802,9 @@ a.kicker:hover { text-decoration: underline; text-decoration-color: var(--gold-s
 /* At night a paper-2 block gets a dark-gold hairline along its top edge, the way a card catches the lamp. :where() keeps
    the ancestor out of the specificity, so .finish.done's own frame still wins. */
 @media (prefers-color-scheme: dark) {
-  :where(:root:not([data-theme="light"])) :is(.status, .prayer-box, .finish, .music, .scripture, .paper-card, .gig-key, .takeaway, .random .card) { box-shadow: inset 0 1px 0 color-mix(in srgb, var(--gold) 35%, transparent); }
+  :where(:root:not([data-theme="light"])) :is(.status, .prayer-box, .advent, .finish, .music, .scripture, .paper-card, .gig-key, .takeaway, .random .card) { box-shadow: inset 0 1px 0 color-mix(in srgb, var(--gold) 35%, transparent); }
 }
-:where(:root[data-theme="dark"]) :is(.status, .prayer-box, .finish, .music, .scripture, .paper-card, .gig-key, .takeaway, .random .card) { box-shadow: inset 0 1px 0 color-mix(in srgb, var(--gold) 35%, transparent); }
+:where(:root[data-theme="dark"]) :is(.status, .prayer-box, .advent, .finish, .music, .scripture, .paper-card, .gig-key, .takeaway, .random .card) { box-shadow: inset 0 1px 0 color-mix(in srgb, var(--gold) 35%, transparent); }
 @media print {
   .nav, .dock, .topbar, .resume, .share, .next, .related, .toc { display: none !important; }
   body { padding: 0; background: #fff; color: #000; }
@@ -1279,6 +1279,54 @@ button.chip { cursor: pointer; font-family: var(--sans); }
 .prayer-box .verses sup:first-child { margin-left: 0; }
 .prayer-box .verses cite { display: block; margin-top: 4px; font-family: var(--sans); font-style: normal; font-size: 11.5px; letter-spacing: .1em; color: var(--gold-ink); }
 .prayer-box .prayer { margin: 4px 14px 14px; font-size: 16px; color: var(--ink); }
+
+/* ——— 降臨節月曆 (advent.js): 1–24 December, under 今日禱告 — a card of the prayer box's family, one row of 40 px
+   shut (the door, the name, the four candles); opened, the day's piece with the music card's own type ——— */
+.advent { margin: 14px 0 0; border: 1px solid var(--rule); background: var(--paper-2); }
+.advent > summary { display: block; padding: 6px 14px 6px 16px; list-style: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.advent > summary::-webkit-details-marker { display: none; }
+.advent > summary .row { display: grid; grid-template-columns: 32px minmax(0, 1fr) 56px; align-items: center; column-gap: 14px; }
+.advent svg { display: block; overflow: visible; }
+.advent .adv-door { width: 32px; height: 40px; }
+.advent .candles { width: 56px; height: 40px; }
+.advent .t b { display: block; font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: .16em; line-height: 1.5; color: var(--ink); }
+.advent .t .de { display: block; margin-top: 1px; font-family: var(--latin); font-style: italic; font-size: 15.5px; line-height: 1.2; letter-spacing: .01em; color: var(--gold-ink); }
+/* the door: gold hairlines, the crest's double frame and corner studs */
+.advent .adv-door .fr { fill: none; stroke: var(--gold); }
+.advent .adv-door :is(.stud, .knob, .hinge) { fill: var(--gold); }
+.advent .adv-door .leaf { fill: var(--paper-3); stroke: var(--gold); stroke-width: .9; stroke-linejoin: round; }
+.advent .adv-door .mould { fill: none; stroke: var(--gold); stroke-width: .55; opacity: .8; }
+.advent .adv-door .grain { fill: none; stroke: var(--gold); stroke-width: .4; opacity: .35; }
+.advent .adv-door .no { font-family: var(--latin); font-size: 18px; font-weight: 600; font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; fill: var(--gold-ink); }
+.advent .adv-door .sill { stroke: var(--gold); stroke-width: .9; }
+.advent .adv-door .hole { fill: var(--paper); stroke: var(--gold); stroke-width: .9; }
+.advent .adv-door .glow0 { stop-color: var(--foil-hi); stop-opacity: .95; }
+.advent .adv-door .glow1 { stop-color: var(--foil); stop-opacity: .18; }
+/* the scrap of score behind the door, lit from behind: ink on gold in both themes */
+.advent .adv-door .staff { stroke: var(--ink-on-gold); stroke-width: .5; opacity: .38; }
+.advent .adv-door :is(.nh, .beam) { fill: var(--ink-on-gold); opacity: .82; }
+.advent .adv-door .stem { stroke: var(--ink-on-gold); stroke-width: .6; opacity: .82; }
+.advent .adv-door .ajar .leaf { fill: var(--paper-2); }
+.advent:not([open]) .adv-door :is(.ajar, .in), .advent[open] .adv-door .shut { display: none; }
+/* the four candles: one more lit on each Sunday of Advent */
+.advent .candles .base { stroke: var(--gold); stroke-width: .9; }
+.advent .candles .base.thin { stroke-width: .45; }
+.advent .candles .foot { fill: var(--gold); }
+.advent .candles .wax { fill: var(--paper); stroke: var(--gold); stroke-width: .75; }
+.advent .candles .drip { stroke-width: .55; }
+.advent .candles .shade { stroke: var(--gold); stroke-width: .35; opacity: .5; }
+.advent .candles .wick { stroke: var(--ink-2); stroke-width: .7; stroke-linecap: round; fill: none; }
+.advent .candles .halo0 { stop-color: var(--foil-hi); stop-opacity: .55; }
+.advent .candles .halo1 { stop-color: var(--foil-hi); stop-opacity: 0; }
+.advent .candles .fl0 { stop-color: var(--foil); }
+.advent .candles .fl1 { stop-color: var(--foil-hi); }
+.advent .candles .core { fill: var(--foil-hi); }
+/* behind the door: the music card's composer, title and original title (.music), and its 播放 button (.btn) */
+.advent .inside { margin: 0 14px; padding: 12px 0 14px; border-top: 1px solid var(--rule); }
+.advent .inside .composer { font-family: var(--sans); font-size: 12.5px; letter-spacing: .14em; color: var(--gold-ink); font-weight: 600; line-height: 1.5; }
+.advent .inside .work { font-size: 18.5px; font-weight: 700; line-height: 1.5; margin: 3px 0 0; color: var(--ink); }
+.advent .inside .orig { font-family: var(--latin); font-style: italic; font-size: 16px; color: var(--ink-2); line-height: 1.4; }
+.advent .inside p { margin: 8px 0 12px; font-size: 15.5px; line-height: 1.8; color: var(--ink-2); }
 
 /* ——— 隨手翻 (Zufallsfund, app.js viewRandom): a round stamp on the archive's title row, and the card it turns up ——— */
 .page-title { position: relative; }

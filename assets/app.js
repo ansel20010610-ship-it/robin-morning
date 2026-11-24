@@ -13,6 +13,7 @@ import { pressHtml } from "./press.js";
 import { fetchWeather, weatherHtml, keptWeather } from "./wetter.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
+import { adventHtml, wireAdvent } from "./advent.js";
 import { worldState, drawGlobe } from "./world.js";
 import { renderNest, renderNestSettings, renderNestAlbum, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
 import { codaHtml, codaVoices, playCoda } from "./jupiter.js";
@@ -939,6 +940,7 @@ function viewFront(dateParam) {
     ${lateNote(issue.date)}
     ${festBox(issue)}
     ${prayerBox(issue)}
+    ${adventHtml(issue.date)}
     ${erst ? inhaltBox(issue, arts) : ""}
     ${weatherBox(issue)}
     ${dateParam ? "" : wireBox()}
@@ -967,6 +969,7 @@ function viewFront(dateParam) {
   </div>`;
   prefetch(issue);
   wireDigest(issue);
+  wireAdvent(main); // 降臨節月曆 (advent.js): 1–24 December, drawn above with the page, under 今日禱告
   fillReveal();
   fillWire();
   fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box

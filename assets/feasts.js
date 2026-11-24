@@ -51,7 +51,8 @@ function easter(y) {
 
 const plusDays = (iso, n) => new Date(Date.parse(`${iso}T00:00:00Z`) + n * 864e5).toISOString().slice(0, 10);
 // 降臨節第一主日 (Protestant usage, as the paper's 和合本 verses): the fourth Sunday before Christmas, between 27 November and 3 December.
-function advent(y) {
+// Also the 降臨節月曆's candles (advent.js).
+export function advent(y) {
   const xmas = new Date(Date.UTC(y, 11, 25)), back = xmas.getUTCDay() || 7; // Christmas on a Sunday: the Sunday before
   return plusDays(`${y}-12-25`, -(back + 21));
 }
