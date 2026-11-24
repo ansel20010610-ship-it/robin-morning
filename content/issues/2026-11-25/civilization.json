@@ -1,0 +1,330 @@
+{
+  "column": "civilization",
+  "date": "2026-11-25",
+  "title": "國王半路被攔下來的那一夜",
+  "dek": "1791 年夏天，路易十六帶全家半夜逃出巴黎，離目的地只差約 50 公里，卻在小鎮被攔下。他沒被打敗，只是被送回去；為什麼法國人從此不想要國王了？",
+  "brief": "1791 年 6 月，法國國王路易十六扮成管家，帶全家逃出巴黎，第二天晚上在小鎮瓦雷訥被一位驛站站長追上攔下。他在床上留了一份親筆聲明，說自己在巴黎像個囚犯。這一趟讓法國人不再相信國王會守憲法，一年多後君主制被廢，他也上了斷頭臺。",
+  "form": "flow",
+  "voice": "lecturer",
+  "topic_key": "civilization:france-louis-xvi-varennes-1791",
+  "updated_at": "2026-11-25T02:10:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Arrestation_de_Louis_XVI_%C3%A0_Varennes%2C_21-22_juin_1791._D.9095.jpg/1280px-Arrestation_de_Louis_XVI_%C3%A0_Varennes%2C_21-22_juin_1791._D.9095.jpg",
+    "width": 1280,
+    "height": 912,
+    "alt": "淡藍底色前的一排人物。左邊一名女子坐著扶額，旁邊一名戴草帽、穿白長裙的女子護著兩個小孩；中間一個穿紅外套、戴三角帽的男子伸手向右；右邊一個披紅白藍肩帶的男子指著他，身後站著扛長槍的士兵。",
+    "caption": "〈在瓦雷訥逮捕路易十六，1791 年 6 月 21–22 日〉，勒敘厄（Jean-Baptiste Lesueur）畫。他把人物用水粉畫在卡紙上、剪下來貼在紙上，是一套 83 張大革命水粉畫裡的一張，事件過後不久畫成，像一本圖畫日記；這套畫現存 73 張在巴黎卡納瓦雷博物館。高 36 公分、寬 53.5 公分，館藏號 D.9095。",
+    "credit": "Jean-Baptiste Lesueur；Musée Carnavalet – Histoire de Paris（Paris Musées）",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Arrestation_de_Louis_XVI_%C3%A0_Varennes,_21-22_juin_1791._D.9095.jpg",
+    "made": "1791–1792",
+    "depicts": "1791 年 6 月 21–22 日"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "這個故事的主角是**路易十六**，法國國王，《凡爾賽玫瑰》裡瑪麗・安東妮的丈夫。1791 年 6 月 20 日深夜，他扮成管家，帶著王后、孩子和妹妹，偷偷溜出巴黎的王宮，往東北邊境跑。那時候法國大革命已經進入第三年。"
+    },
+    {
+      "type": "p",
+      "text": "他沒跑成。第二天晚上十一點多，馬車在小鎮**瓦雷訥**被攔下來，離目的地只剩大約 50 公里，一家人被押回巴黎。出門前，他在床上留了一份親筆聲明，說明他為什麼要走。一年多以後，法國廢了國王；再過四個月，他上了斷頭臺。"
+    },
+    {
+      "type": "p",
+      "text": "這件事為什麼要緊？1789 年革命以後，法國人要的是照憲法做事的國王：國王還在，權力受議會管，像今天的英國。國王自己跑了，等於告訴大家，他不要這套安排。所以這篇想問：**國王只是想離開巴黎，為什麼這一趟讓法國人不再需要國王？**"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "map",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Louis_XVI_Flight_to_Varennes.gif/1280px-Louis_XVI_Flight_to_Varennes.gif",
+      "width": 1280,
+      "height": 455,
+      "alt": "黑白手繪地圖。左邊是巴黎，一條路線往東經過莫城、蒙米拉伊、沙隆、聖默努爾德到瓦雷訥；右上角標著蒙梅迪、布耶的東方軍和奧屬尼德蘭邊界，下方有英里比例尺。",
+      "caption": "1921 年威爾斯（H. G. Wells）《世界史綱》裡的路線圖，霍拉賓（J. F. Horrabin）繪。國王一家從巴黎往東北走，目的地是邊境要塞蒙梅迪（Montmédy），布耶將軍的部隊在那一帶接應；他們在瓦雷訥被攔下，離蒙梅迪大約還有 50 公里。",
+      "credit": "J. F. Horrabin 繪，H. G. Wells, The Outline of History（Macmillan，1921），頁 867",
+      "license": "Public domain（美國，PD-1923）",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Louis_XVI_Flight_to_Varennes.gif",
+      "made": "1921",
+      "depicts": "1791 年 6 月 20–22 日"
+    },
+    {
+      "type": "p",
+      "text": "先講他為什麼想走。革命以後，法國真正做主的是國民議會，這個議會由平民代表帶頭組起來，正在寫憲法。國王這時住在巴黎的杜樂麗宮，由市民組成的國民衛隊看守。那年 4 月，他要去巴黎近郊過復活節，馬車一出來就被群眾攔住，耗了一個半小時，只好回宮。"
+    },
+    {
+      "type": "p",
+      "text": "逃走的計畫前一年秋天就有了，主要安排的人是費爾森，一位瑞典軍官，也是王后的密友。目的地是邊境要塞蒙梅迪，東部的部隊在那裡接應。"
+    },
+    {
+      "type": "p",
+      "text": "出發那晚就不順。國民衛隊司令和巴黎市長當晚來宮裡，把出發時間拖晚了，國王十一點半以後才溜出來。費爾森建議全家分坐兩輛輕便馬車；國王夫婦不想分開，沒答應，結果坐的是一輛六匹馬拉的大馬車。一路上馬具要修，時間又算錯，到沙隆時已經晚了三個多小時。沿路接應的騎兵，有好幾隊因為當地人起疑，撤走或被拖住了。"
+    },
+    {
+      "type": "p",
+      "text": "真正出事是在聖默努爾德的驛站。驛站是大路上的換馬站，站長看得到每一輛經過的車。站長 **Drouet** 說，他覺得車上一位女士很像王后，車裡那個男人的臉，又很像他身上一張指券印的國王像。指券是革命政府印的紙鈔，上面印著國王的側臉。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Assignat_de_500_livres%2C_6_E_-_n%C2%B0_40401%2C_29_septembre_1790%2C_GB130.jpg/1280px-Assignat_de_500_livres%2C_6_E_-_n%C2%B0_40401%2C_29_septembre_1790%2C_GB130.jpg",
+      "src_large": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Assignat_de_500_livres%2C_6_E_-_n%C2%B0_40401%2C_29_septembre_1790%2C_GB130.jpg",
+      "width": 1280,
+      "height": 912,
+      "alt": "一張印刷的紙鈔，四邊有花紋框。左上角圓形徽章裡是一個男子的側臉，圓周寫著 LOUIS XVI. ROI DES FRANÇOIS；右上角圓形裡是三朵百合花，寫著 LA LOI ET LE ROI；中間大字 DOMAINES NATIONAUX 與 ASSIGNAT DE Cinq Cents liv.。",
+      "caption": "1790 年 9 月 29 日發行的 500 里弗爾指券（assignat），革命政府以沒收的教會土地作擔保印的紙鈔。左上角的圓章是路易十六的側臉，寫著「路易十六，法國人的國王」。Drouet 說他就是拿手上一張指券的國王像，對出了馬車裡那張臉；這張只示範當時指券上的國王像。高 14.2 公分、寬 20.1 公分，巴黎卡納瓦雷博物館藏，館藏號 GB130。",
+      "credit": "Caisse de l'Extraordinaire 發行，Gatteaux、Lorthior 雕版；Musée Carnavalet – Histoire de Paris（Paris Musées）",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Assignat_de_500_livres,_6_E_-_n%C2%B0_40401,_29_septembre_1790,_GB130.jpg",
+      "made": "1790 年 9 月 29 日（發行）"
+    },
+    {
+      "type": "detail",
+      "of": "f2",
+      "region": [
+        0.08,
+        0.1,
+        0.2,
+        0.27
+      ],
+      "position": "紙鈔左上角的圓形徽章，約佔寬度五分之一",
+      "caption": "徽章放大：國王的側臉，圓周文字是 LOUIS XVI. ROI DES FRANÇOIS。"
+    },
+    {
+      "type": "quote",
+      "text": "他的臉和我當時帶在身上的一張指券上印的國王像很像，讓我吃了一驚。",
+      "original": "I was struck by the resemblance of his face to the likeness of the King printed on an assignat which I had with me at the time.",
+      "cite": "聖默努爾德驛站站長 Jean-Baptiste Drouet 事後的陳述；英譯見 Pernoud & Flaissier, The French Revolution（1970），轉引自 Liberty, Equality, Fraternity 網站。本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "他當下讓車走了，之後才報告，鎮上派他去追。晚上九點左右，他和一個朋友抄小路出發，十一點多趕到瓦雷訥。他們叫醒鎮上的官員，用一輛搬家用的車把城裡唯一的橋堵住。代理市長的是一個雜貨商，他查了護照，請一家人到他家裡等，好拖時間。後來一位在凡爾賽住過的法官認出國王，國王承認了。照 Drouet 的記法，國王說：「這是我的妻子，這是我的孩子。」"
+    },
+    {
+      "type": "p",
+      "text": "半夜和清晨，先後有兩批接應的騎兵趕到，國王不肯硬闖。天亮後，議會派的人帶著逮捕令到了，一家人在幾千名國民衛隊護送下掉頭回巴黎。"
+    },
+    {
+      "type": "p",
+      "text": "其實前一天（21 日）早上，侍從就在國王床上找到那份 16 頁的聲明。在這之前，巴黎普遍以為國王是被人綁架的，議會馬上自己接手了政府。聲明在議會一宣讀，議場就吵成一團。一位議員問這是不是國王親筆簽名，秘書說是。這位議員接著說：「這是有人給你們設的圈套，你們一個圈套接一個圈套地往裡掉。」"
+    },
+    {
+      "type": "p",
+      "text": "國王在聲明裡說，他在巴黎被這樣看守，衛隊只聽市政府的，等於在自己國家裡坐牢。他問：國王想找回自由，有什麼好奇怪的？不過他沒有推翻 1789 年夏天的主要改革，取消貴族平民的等級、人人平等，他都接受。"
+    },
+    {
+      "type": "quote",
+      "text": "國王被這樣看守著，等於成了自己國土裡的囚犯。",
+      "original": "Le roi, gardé ainsi, s’est vu par là prisonnier dans ses propres Etats",
+      "cite": "路易十六〈國王出走巴黎時致全體法國人聲明〉，1791 年 6 月 20 日，21 日在國民議會宣讀；據《議會檔案》第 27 卷。本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "議會後來決定，對外還是說國王是被綁走的，好讓國王照憲法做事的安排撐下去。**拉法葉**還自己把聲明刪改過。他是打過美國獨立戰爭的法國將軍，帶領看守國王的市民武裝，也就是巴黎國民衛隊。可是巴黎的報紙大多罵國王是叛徒，有一份寫：「路易十六不再是國王，也不能再當國王。」6 月 25 日，馬車回到巴黎，街上的群眾一反常態地安靜，男人戴著帽子不脫，故意不行禮。"
+    },
+    {
+      "type": "figure",
+      "id": "f3",
+      "kind": "illustration",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Retour_de_Varennes._Arriv%C3%A9e_de_Louis_Capet_%C3%A0_Paris._le_25_Juin_1791._G.28388.jpg/1280px-Retour_de_Varennes._Arriv%C3%A9e_de_Louis_Capet_%C3%A0_Paris._le_25_Juin_1791._G.28388.jpg",
+      "width": 1280,
+      "height": 1069,
+      "alt": "黑白版畫。一輛大馬車在人群中間前進，車頂坐著人；兩旁是排成長列、扛著長槍的士兵和大片群眾；右後方是一座方形、有圓頂的石造建築，屋頂與台階上也站滿了人。",
+      "caption": "〈從瓦雷訥回來：路易・卡佩抵達巴黎，1791 年 6 月 25 日〉，普里厄（Jean-Louis Prieur）原畫、貝爾托（Pierre-Gabriel Berthault）蝕刻，《法國大革命歷史畫》系列第 54 圖。畫面背景是巴黎城牆上的魯勒稅關（barrière du Roule）。題目裡的「路易・卡佩」，是革命派對國王的稱呼，用他祖先的姓，不再叫他國王。巴黎卡納瓦雷博物館藏，館藏號 G.28388。",
+      "credit": "Jean-Louis Prieur 原畫，Pierre-Gabriel Berthault 雕版；Musée Carnavalet – Histoire de Paris（Paris Musées）",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Retour_de_Varennes._Arriv%C3%A9e_de_Louis_Capet_%C3%A0_Paris._le_25_Juin_1791._G.28388.jpg",
+      "made": "館方定年 1791",
+      "depicts": "1791 年 6 月 25 日"
+    },
+    {
+      "type": "p",
+      "text": "代價很快就來了。議會決議，等憲法寫完、國王簽了字，他才能復位。7 月 17 日，群眾到巴黎的**戰神廣場**連署，要議會不要再承認路易十六。巴黎市長宣布戒嚴，國民衛隊對群眾開槍，死了十幾到五十人。這位市長兩年後被處決，罪名之一就是這場屠殺；拉法葉的名聲從此沒再恢復。"
+    },
+    {
+      "type": "p",
+      "text": "9 月，國王接受憲法，又當回國王，可是撐不到一年。1792 年 8 月，群眾攻進杜樂麗宮，他被抓；9 月，法國廢除君主制。1793 年 1 月，他以叛國罪上了斷頭臺；同年 10 月，王后也是。Drouet 後來當上議員，投票判國王死刑。"
+    },
+    {
+      "type": "timeline",
+      "title": "從出走到上斷頭臺",
+      "caption": "鐘點依法文維基百科〈瓦雷訥出逃〉整理；攔下的時間各家記載差幾十分鐘，Drouet 自己說他趕到瓦雷訥約 23 時 30 分。",
+      "items": [
+        {
+          "when": "1791.4.18",
+          "label": "想去聖克盧過復活節，被群眾攔下",
+          "note": "馬車困了約一個半小時，只好回宮"
+        },
+        {
+          "when": "1791.6.20",
+          "label": "深夜扮成管家，離開杜樂麗宮",
+          "note": "國王 23 時 30 分後才脫身"
+        },
+        {
+          "when": "1791.6.21",
+          "label": "早上 7 時，侍從發現床上留著 16 頁聲明",
+          "note": "下午 2 時在國民議會宣讀"
+        },
+        {
+          "when": "1791.6.21",
+          "label": "傍晚在聖默努爾德被 Drouet 認出",
+          "note": "他約 21 時抄小路追去"
+        },
+        {
+          "when": "1791.6.21",
+          "label": "約 23 時，在瓦雷訥被攔下",
+          "note": "離蒙梅迪約 50 公里"
+        },
+        {
+          "when": "1791.6.22",
+          "label": "7 時 30 分押回巴黎",
+          "note": "數千名國民衛隊護送"
+        },
+        {
+          "when": "1791.6.25",
+          "label": "回到巴黎",
+          "note": "群眾一反常態地安靜，男人不脫帽"
+        },
+        {
+          "when": "1791.7.17",
+          "label": "戰神廣場槍擊",
+          "note": "請願要求廢黜國王，死者十幾人到 50 人"
+        },
+        {
+          "when": "1791.9",
+          "label": "國王接受憲法，恢復王權",
+          "note": ""
+        },
+        {
+          "when": "1792.8.10",
+          "label": "群眾攻進杜樂麗宮，王權停止",
+          "note": "9 月宣布共和"
+        },
+        {
+          "when": "1793.1.21",
+          "label": "路易十六上斷頭臺",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "最後老實講，哪些地方說不準。攔下的鐘點各家差幾十分鐘。靠指券認出國王，是 Drouet 事後的說法，英文維基百科講到這段加了「也許」。公布的聲明刪改過，手稿 2009 年才在美國重新出現。英文維基百科轉述歷史學者 Tackett 2003 年的專書，說國王完全看錯了局勢。書評轉述，這一趟讓原本喜歡國王的平民翻臉。乾脆不要國王的共和派變強，想留國王守憲法的溫和派變弱，議會分成幾派，到處猜疑。短期內溫和派還是贏了，國王也復位了。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Flight to Varennes (21–23 June 1791)［Jean-Baptiste Drouet 的陳述］",
+      "publisher": "Liberty, Equality, Fraternity: Exploring the French Revolution（Roy Rosenzweig Center for History and New Media／American Social History Project）",
+      "date": "",
+      "url": "https://revolution.chnm.org/d/313",
+      "note": "原出處 Georges Pernoud & Sabine Flaissier, The French Revolution, Richard Graves 英譯（1970），頁 87–90。讀了網站導言與 Drouet 陳述：在聖默努爾德看見兩輛車、覺得其中一位女士是王后、拿指券上的國王像對出國王的臉；與同伴抄小路，約晚上 11 點半到瓦雷訥，夜很黑；叫醒官員、用一輛搬家車等堵住唯一的橋；檢察官（district attorney）問旅客身分，他們自稱德國男爵夫人一行；國王說「這是我的妻子，這是我的孩子」；約 150 名驃騎兵趕到，被國民衛隊的兩處砲位夾住後向國民衛隊投降。導言稱原定接應的部隊不在、Drouet 讓當地檢察官 Sauce 搜車。"
+    },
+    {
+      "title": "The King Flees Paris (20 June 1791)［國王聲明與議會逮捕令英譯］",
+      "publisher": "Liberty, Equality, Fraternity: Exploring the French Revolution（Roy Rosenzweig Center for History and New Media／American Social History Project）",
+      "date": "",
+      "url": "https://revolution.chnm.org/d/312",
+      "note": "原出處 Frank Maloy Anderson, The Constitutions and Other Select Documents Illustrative of the History of France, 1789–1907, 2d ed.（1908），頁 46–50。聲明英譯：「is it astonishing that the King has sought to recover his liberty」；「The spirit of the clubs dominates and invades everything」；結尾「return to your King; he will always be your father, your best friend」。網頁上議會逮捕令標題寫 17 June 1791，與國王 20 日出走的日期矛盾，本稿不用該日期。"
+    },
+    {
+      "title": "Lecture de la déclaration du roi adressée à tous les Français à sa sortie de Paris, interrompue par des interventions des députés, lors de la séance du 21 juin 1791",
+      "publisher": "Archives parlementaires, 1re série, t. XXVII（Librairie Administrative P. Dupont，1887），頁 378–383；Persée",
+      "date": "1887",
+      "url": "https://www.persee.fr/doc/arcpa_0000-0000_1887_num_27_1_11375_t1_0378_0000_2",
+      "note": "讀了頁 378 的法文原文：宣讀標題後「(Bruit.)」；議員 Gaultier-Biauzat 問「ce mémoire est-il signé de la main du roi ?」，秘書 Régnier 答「Oui !」，Gaultier-Biauzat：「C’est un piège que l’on vous tend. Vous tombez de piège en piège.」；聲明開頭「Tant que le roi a pu espérer voir renaître l’ordre et le bonheur du royaume…」；「Le roi, gardé ainsi, s’est vu par là prisonnier dans ses propres Etats」；搬進杜樂麗宮一段。編者註：《箴言報》只登了摘錄。"
+    },
+    {
+      "title": "Press Reports of the King’s Flight: Révolutions de Paris (25 June 1791) and Père Duchesne (1791)",
+      "publisher": "Liberty, Equality, Fraternity: Exploring the French Revolution（Roy Rosenzweig Center for History and New Media／American Social History Project）",
+      "date": "",
+      "url": "https://revolution.chnm.org/d/316",
+      "note": "原出處 Les Révolutions de Paris 第 102 期（1791 年 6 月 18–25 日）頁 525–526；Le Père Duchêsne 第 61 期（1791 年 6 月）頁 1–8。英譯：「Louis XVI is no longer King and can no longer be King」（Révolutions de Paris）；「You, King? You are not even a citizen.」（Père Duchêsne）。網站說明：多數報刊罵國王是叛徒，並質疑國民議會接受他「被綁架」的說法。"
+    },
+    {
+      "title": "Flight to Varennes",
+      "publisher": "Wikipedia",
+      "date": "2026-11-24（讀取日）",
+      "url": "https://en.wikipedia.org/wiki/Flight_to_Varennes",
+      "note": "約午夜離開杜樂麗宮；杜塞爾夫人扮俄國男爵夫人、國王扮僕人；一輛六匹馬拉的重型馬車，費爾森建議分乘兩輛輕車被拒；目的地蒙梅迪，布耶集結約一萬名正規軍；在瓦雷訥被攔下，距蒙梅迪 50 公里；Drouet「perhaps from his portrait printed on an assignat」；6 月 25 日回巴黎，群眾「with uncharacteristic silence」，男人不脫帽；國王的聲明接受 1789 年夏天的改革、廢除等級與公民平等；聲望重挫；戰神廣場屠殺 1791 年 7 月 17 日。"
+    },
+    {
+      "title": "Fuite de Varennes",
+      "publisher": "Wikipédia",
+      "date": "2026-11-24（讀取日）",
+      "url": "https://fr.wikipedia.org/wiki/Fuite_de_Varennes",
+      "note": "讀前 10 萬字元：1791 年 4 月 18 日聖克盧事件（群眾在卡魯塞勒廣場攔車，拉法葉提議戒嚴，國王拒絕：「Je ne veux pas qu'on verse du sang pour moi.」，一個半小時後回宮）；計畫可溯至 1790 年 9 月；拉法葉與巴伊來訪延誤，國王 23 時 30 分後離宮、王后 0 時 30 分；化名：國王 M. Durand（管家）、王后 Mme Rochet、杜塞爾夫人 baronne de Korff；21 日 7 時侍從發現 16 頁手寫聲明；約 9 時議會得知，14 時宣讀前普遍相信「綁架說」，議會接手行政權；車隊在沙隆時已延誤三小時以上；Drouet 遲一個半小時出發，與 Guillaume 同行；約 23 時到瓦雷訥；Sauce 是雜貨商、代理市長職務的 procureur-syndic，堵橋、查護照、讓旅客進他家；法官 Destez 認出國王；約 1 時驃騎兵衝進城後與居民和解；約 5 時 30 分 Deslon 帶 65 名驃騎兵到，國王拒絕強行突圍；約一小時後 Bayon 與 Romeuf 帶逮捕令到；7 時 30 分在數千名國民衛隊護送下返回；布耶的團 9 時 30 分才到；22 日夜議會派 Barnave、Pétion、La Tour-Maubourg 三名特派員；25 日經香榭麗舍進巴黎；7 月 15–16 日議會決議（國王須完成並簽署憲法才復位）；9 月 3 日憲法完成，十天後國王接受。"
+    },
+    {
+      "title": "Jean-Baptiste Drouet (revolutionary)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-24（讀取日）",
+      "url": "https://en.wikipedia.org/wiki/Jean-Baptiste_Drouet_(revolutionary)",
+      "note": "1763 年生於聖默努爾德，1824 年卒於馬孔；當過龍騎兵，1791 年已是聖默努爾德驛站站長；約 21 時與友人 Guillaume 出發，王室約 23 時 10 分被扣；議會 1791 年 7 月提供 30,000 里弗爾賞金，他婉拒；1792 年 9 月當選國民公會議員，1793 年投票判國王死刑、不得上訴；同年被奧軍俘虜，1795 年 12 月與路易十六之女交換回國。"
+    },
+    {
+      "title": "Louis XVI",
+      "publisher": "Wikipedia",
+      "date": "2026-11-24（讀取日）",
+      "url": "https://en.wikipedia.org/wiki/Louis_XVI",
+      "note": "1754 年 8 月 23 日生於凡爾賽；1774 年 5 月 10 日即位；1770 年與瑪麗・安東妮結婚；留下 16 頁聲明，俗稱「路易十六的政治遺囑」，手稿 2009 年在美國重新發現；議會選擇公布「綁架說」；憲法 1791 年 9 月 3 日完成、國王 9 月 14 日批准；1792 年 8 月 10 日被捕；1793 年 1 月 21 日上斷頭臺；文中稱 Drouet 憑 50 里弗爾指券上的側像認出國王（本稿不採面額）；轉述 Tackett：國王「totally misunderstood the political situation」。"
+    },
+    {
+      "title": "Champ de Mars massacre",
+      "publisher": "Wikipedia",
+      "date": "2026-11-24（讀取日）",
+      "url": "https://en.wikipedia.org/wiki/Champ_de_Mars_massacre",
+      "note": "1791 年 7 月 17 日；巴伊宣布戒嚴（升紅旗）；請願要求廢黜路易十六；國民衛隊向群眾開槍；死傷人數不明，估計十幾人到 50 人（引 David Andress 2004，頁 151）；拉法葉聲望自此不振；巴伊 1793 年被處決，罪名之一是煽動這場屠殺。"
+    },
+    {
+      "title": "When the King Took Flight（Timothy Tackett，Harvard University Press，2003）書評",
+      "publisher": "Publishers Weekly",
+      "date": "",
+      "url": "https://www.publishersweekly.com/9780674010543",
+      "note": "書評轉述 Tackett 的論點：出逃強化了共和主張、削弱了主張君主立憲的溫和派，造成議會派系分裂，預示了恐怖統治；短期內溫和派勝出，國王復位為立憲君主。"
+    },
+    {
+      "title": "When the King Took Flight（Timothy Tackett）書評",
+      "publisher": "Kirkus Reviews",
+      "date": "",
+      "url": "https://www.kirkusreviews.com/book-reviews/timothy-tackett/when-the-king-took-flight/print",
+      "note": "書評轉述：出逃讓平民轉而反對仍受歡迎的國王；引發猜疑與恐慌，「mail was opened, strangers were imprisoned without due process, hard-won rights were suspended」；費爾森與布耶籌畫；國王選了一輛招搖的馬車；拉法葉傍晚來訪差點壞事。"
+    },
+    {
+      "title": "Arrestation de Louis XVI à Varennes, 21-22 juin 1791（D.9095）",
+      "publisher": "Paris Musées／Musée Carnavalet",
+      "date": "2026-11-24（讀取日）",
+      "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/arrestation-de-louis-xvi-a-varennes-21-22-juin-1791",
+      "note": "頭圖：Lesueur 繪，1791–1792；水粉、卡紙剪下貼於紙上；36 × 53.5 公分；83 張已知革命水粉畫之一，73 張藏卡納瓦雷；館方稱這套畫像「journal en images」，事件後不久畫成。"
+    },
+    {
+      "title": "Assignat de 500 livres, 6 E - n° 40401, 29 septembre 1790（GB130）",
+      "publisher": "Paris Musées／Musée Carnavalet",
+      "date": "2026-11-24（讀取日）",
+      "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/assignat-de-500-livres-6-e-ndeg-40401-29-septembre-1790",
+      "note": "正文圖：Caisse de l'Extraordinaire 發行；Gatteaux、Lorthior 雕版；簽署人 Poupet；14.2 × 20.1 公分；浮水印「LA LOI ET LE ROI」。票面文字（自圖上讀）：DOMAINES NATIONAUX、hypothéqués au remboursement des assignats、LOUIS XVI. ROI DES FRANÇOIS。"
+    },
+    {
+      "title": "Retour de Varennes. Arrivée de Louis Capet à Paris. le 25 Juin 1791（G.28388）",
+      "publisher": "Paris Musées／Musée Carnavalet",
+      "date": "2026-11-24（讀取日）",
+      "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/retour-de-varennes-arrivee-de-louis-capet-a-paris-le-25-juin-1791",
+      "note": "正文圖：Prieur 原畫、Berthault 雕版，蝕刻與雕刻；館方定年 1791；屬《Tableaux historiques de la Révolution française》（1791–1817，144 幅），第 54 圖；Commons 說明場景在魯勒稅關。"
+    },
+    {
+      "title": "File:Louis XVI Flight to Varennes.gif",
+      "publisher": "Wikimedia Commons",
+      "date": "2026-11-24（讀取日）",
+      "url": "https://commons.wikimedia.org/wiki/File:Louis_XVI_Flight_to_Varennes.gif",
+      "note": "正文地圖：H. G. Wells, The Outline of History（Macmillan，1921）頁 867；圖上署名 J.F.H.（J. F. Horrabin）。"
+    }
+  ]
+}
