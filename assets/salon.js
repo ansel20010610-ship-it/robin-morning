@@ -1025,7 +1025,7 @@ const SUBJECT = {
   records: { room: ".sl-rp", page: ".sc-page", fit: "w", tl: true },
   world: { room: ".sl-map", page: ".welt .map", fit: "w", disc: true },
   shelf: { page: ".bcase" },
-  poems: { page: ".po-sheet, .po-sb" }, // the letters onto the letter, the box's brass onto the brass under it
+  poems: { page: ".po-leaf.cur .po-sheet, .po-sb" }, // the letters onto the letter read (not the unseen ones under it), the box's brass onto the brass under it
   list: { page: ".sammlung" },
   stamps: { page: ".album .page", fit: "w" },
   medals: { page: ".md-box" },

@@ -35,7 +35,7 @@ export function poemsHtml(list) {
   return `<svg class="po-defs" width="0" height="0" aria-hidden="true"><defs>
       <filter id="po-press" x="-2%" y="-2%" width="104%" height="104%"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="2" seed="5" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="1.6" result="d"/><feGaussianBlur in="d" stdDeviation=".25"/></filter>
       <symbol id="po-robin" viewBox="6 16 54 38"><path d="M44.5 37.5 L55 30.5 L56.5 34 L46.5 41.5 Z"/><ellipse cx="33" cy="37" rx="15" ry="11.5" transform="rotate(-18 33 37)"/><circle cx="23" cy="25.5" r="8"/><path d="M15.4 24.2 L9.5 25.8 L15.6 27.4 Z"/></symbol></defs></svg>
-    <div class="po-desk"><div class="po-top" data-date="${esc(list[i].date)}">${sheetHtml(list[i], null)}</div>
+    <div class="po-desk"><div class="po-top" data-date="${esc(list[i].date)}"><div class="po-leaf cur">${sheetHtml(list[i], null)}</div></div>
       <div class="po-box"><i class="po-well"></i>${list.slice(1, 6).map((_, k) => `<i class="po-env" style="--k:${k}"></i>`).join("")}
         <div class="po-sb">${list.length > 1 ? `<button type="button" class="cr-flip sh-foil" data-flip="-1" aria-label="較新的一封"${i ? "" : " disabled"}>‹</button>` : ""}
           ${list.length > 1 ? `<button type="button" class="sc-brass po-plate sc-plate-btn" data-all aria-label="全部攤開，${list.length} 封"><span class="sc-cut">Briefe · ${ROMAN(list.length)}</span></button>` : `<span class="sc-brass po-plate"><span class="sc-cut">Briefe · ${ROMAN(list.length)}</span></span>`}
@@ -47,41 +47,57 @@ export function poemsHtml(list) {
 // Draws the letter once its article is in (load(date) → the article json), and wires the turning.
 export function wirePoems(scene, list, load) {
   if (!scene || !list.length) return;
-  let i = Math.max(0, list.findIndex((p) => p.date === topDate)), seq = 0;
+  let i = Math.max(0, list.findIndex((p) => p.date === topDate)), seq = 0, moving = null;
   const top = scene.querySelector(".po-top");
   // 翻閱 (the owner, 2026-11-19: 詩箋左右滑我要有翻閱動畫): turning on, the letter on top lifts from its left edge and is
   // turned over and away, the next one lying under it; turning back, the earlier letter is turned back over onto it.
-  // Smooth on the phone (the owner, 2026-11-19: 詩箋翻起來很卡): the letters either side are fetched ahead, so a turn never
-  // waits on the network; the turning sheet is always a copy in its own layer that only moves (transform, opacity), its
-  // shadow a layer of its own that only fades — so the pressed type is not redrawn on every frame.
+  // Smooth on the phone (the owner, 2026-11-19: 詩箋翻起來很卡; again 2026-11-24): drawing a letter — its pressed type above
+  // all — is what holds a turn back. The old turn drew two or three (a copy turned, the new letter, the held one at the
+  // end): 65–190 ms in WebKit before the leaf moved, median 105 (2026-11-24). Now every letter is a leaf of its own: the one
+  // read lies in the flow, the letters either side wait under it unseen, laid out with their type loaded (after the turn),
+  // and a turn only moves leaves (transform, opacity) and changes which one is read: 26–99 ms, median about 72. WebKit still draws a leaf again as it comes into
+  // view (~55 ms with the pressed type, ~21 without), and, inferred from one run, as it starts to turn; that much is left.
   const still = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const leafOf = (sheet, cls) => { const g = document.createElement("div"); g.className = `po-leaf ${cls}`; g.setAttribute("aria-hidden", "true"); sheet.classList.remove("po-hold"); g.append(sheet); return g; };
-  const fill = async (step) => {
-    const mine = ++seq, p = list[i];
-    const old = step && !still() ? top.querySelector(".po-sheet:not(.po-leaf .po-sheet)")?.cloneNode(true) : null;
-    const a = await load(p.date).catch(() => null);
-    if (mine !== seq || !top.isConnected) return;
-    top.innerHTML = sheetHtml(p, poemOf(a), true);
-    [i - 1, i + 1].forEach((k) => list[k] && load(list[k].date).catch(() => null));
-    if (step && top.getBoundingClientRect().top < 0) window.scrollTo(0, 0); // a long poem turned from the foot of the page: start the next at its head
-    if (!old) return;
-    const sheet = top.querySelector(".po-sheet");
-    let moving;
-    if (step > 0) top.append(moving = leafOf(old, "away"));
-    else { top.prepend(leafOf(old, "under")); top.append(moving = leafOf(sheet.cloneNode(true), "back")); sheet.classList.add("po-hold"); }
-    const done = () => { if (mine !== seq) return; top.querySelectorAll(".po-leaf").forEach((g) => g.remove()); sheet.classList.remove("po-hold"); };
-    moving.addEventListener("animationend", (e) => { if (e.target === moving) done(); });
-    setTimeout(done, 1200); // in case the animation never runs
+  const leaves = new Map([[i, top.querySelector(".po-leaf")]]), drawn = new Set();
+  const show = () => leaves.forEach((g, k) => { g.classList.toggle("cur", k === i); g.inert = k !== i; if (k === i) g.removeAttribute("aria-hidden"); else g.setAttribute("aria-hidden", "true"); });
+  const settle = () => { top.querySelectorAll(".po-leaf.away, .po-leaf.back, .po-leaf.under").forEach((g) => g.classList.remove("away", "back", "under")); moving = null; };
+  const put = (k, html) => {
+    let g = leaves.get(k);
+    if (!g) { g = document.createElement("div"); g.className = "po-leaf"; leaves.set(k, g); top.append(g); }
+    g.innerHTML = html; show();
+    return g;
   };
-  fill(0);
+  // a letter's leaf, drawn once its article is in (load(date) → the article json); only near the one read, or the one turned to
+  const ready = (k, to = false) => drawn.has(k) ? Promise.resolve() : load(list[k].date).catch(() => null).then((a) => {
+    if (drawn.has(k) || !top.isConnected || (!to && Math.abs(k - i) > 1)) return;
+    if (a) drawn.add(k); // not in: the opening lines for now, fetched again when it is turned to
+    put(k, sheetHtml(list[k], poemOf(a), true));
+  });
+  // after a turn: the letters either side drawn, the ones further off put away
+  const around = () => {
+    leaves.forEach((g, k) => { if (Math.abs(k - i) > 1 && !g.matches(".away, .back, .under")) { g.remove(); leaves.delete(k); drawn.delete(k); } });
+    [i - 1, i + 1].forEach((k) => list[k] && ready(k));
+  };
+  ready(i).then(() => list.length > 1 && around());
   if (list.length < 2) return;
+  top.addEventListener("animationend", (e) => { if (e.target === moving && !e.pseudoElement) { settle(); around(); } });
   const prev = scene.querySelector('[data-flip="-1"]'), next = scene.querySelector('[data-flip="1"]');
-  const go = (step) => {
+  const go = async (step) => {
     const j = Math.min(list.length - 1, Math.max(0, i + step));
     if (j === i) return;
+    const mine = ++seq;
+    if (!drawn.has(j)) { await ready(j, true); if (mine !== seq || !top.isConnected) return; } // a draw of the die, a pick from the desk, a tap while a turn is on: the letter first, as before
+    settle();
+    const from = leaves.get(i), to = leaves.get(j);
     i = j; topDate = list[i].date;
     prev.disabled = i === 0; next.disabled = i === list.length - 1;
-    fill(step);
+    [i - 1, i + 1].forEach((k) => list[k] && load(list[k].date).catch(() => null)); // fetched now, drawn once the turn is over
+    show();
+    if (top.getBoundingClientRect().top < 0) window.scrollTo(0, 0); // a long poem turned from the foot of the page: start the next at its head
+    if (still() || !from || !to) return around();
+    if (step > 0) { from.classList.add("away"); moving = from; } else { to.classList.add("back"); from.classList.add("under"); moving = to; }
+    const m = moving;
+    setTimeout(() => { if (mine === seq && moving === m) { settle(); around(); } }, 1200); // in case the animation never runs (not a later turn's: a leaf turned on and straight back is the same leaf)
   };
   prev.addEventListener("click", () => go(-1));
   next.addEventListener("click", () => go(1));
