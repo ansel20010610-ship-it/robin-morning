@@ -1,0 +1,137 @@
+{
+  "column": "fm-watch",
+  "date": "2026-11-25",
+  "status": "update",
+  "form": "compare",
+  "voice": "watchman",
+  "title": "FM27 小更新 27.1.1：四項修正，十二月再來",
+  "dek": "上週的 27.1.0 動了 146 條，這次只有四條，其中一條要讓比賽少出幾張黃牌。",
+  "brief": "《足球經理 27》電腦版昨晚出了 27.1.1，官方稱小更新，只列四項：減少比賽黃牌、積分榜不再在進球畫面前先更新名次、修正微軟商店罕見的技術問題（影響部分用戶）、處理 Steam 工坊後台問題。官方預告十二月再更新，打算加員工能力值的顯示選項。黃牌少多少，官方沒給。",
+  "topic_key": "fm-watch:2026-11-25-update-27-1-1",
+  "updated_at": "2026-11-25T05:23:30+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "table",
+    "title": "27.1.0 與 27.1.1 差在哪",
+    "head": [
+      "",
+      "27.1.0",
+      "27.1.1"
+    ],
+    "rows": [
+      [
+        "Steam 公告發布（台灣時間）",
+        "11 月 17 日 22:16",
+        "11 月 24 日 22:22"
+      ],
+      [
+        "官方列出的改動",
+        "146 條，11 個區塊",
+        "4 條"
+      ],
+      [
+        "官方怎麼稱呼",
+        "發售後第一個內容更新",
+        "another small update（又一次小更新）"
+      ],
+      [
+        "iOS 手機版（Touch、Mobile）",
+        "兩個 iOS 版都已出現 27.1.0",
+        "公告沒提，商店仍是 27.1.0"
+      ]
+    ],
+    "caption": "取自 Steam 公告與 Apple iTunes 查詢資料；台灣時間 11 月 25 日清晨核對。"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "台灣時間 11 月 24 日（週二）晚上 10 點 22 分，開發商在電腦遊戲平台 Steam 上貼出公告，《足球經理 27》電腦版出了 **27.1.1**。《足球經理》是足球經理模擬遊戲，英國的 Sports Interactive 開發，日本的 SEGA 發行，11 月 10 日發售。官方說這是「another small update」，也就是又一次小更新，在 Steam、Epic 和 Microsoft Store 這三個平台推出。只有四項，但有一項動到比賽裡的黃牌，還有一項預告：十二月的更新，可能讓玩家選擇把員工能力值顯示成數字或文字，員工指的是教練、球探這些人，能力值就是他們的能力數字。"
+    },
+    {
+      "type": "p",
+      "text": "工坊是玩家在 Steam 上分享自製內容的地方，像臉部、標誌、戰術包，官方提醒可能要重開 Steam 才會生效。即時積分榜是比賽進行時一直在更新的聯賽排名，這次改成不再在進球畫面前先更新名次。微軟商店是 Windows 的官方商店，這次修的是罕見的技術問題，影響部分用戶。"
+    },
+    {
+      "type": "p",
+      "text": "四項裡，黃牌這條最值得留意，官方稱為平衡調整，目的是**減少比賽裡出現的黃牌數量**，但沒講原本多高、調到多少。黃牌減少是否影響紅牌，公告沒說。"
+    },
+    {
+      "type": "table",
+      "title": "27.1.1 的四項改動",
+      "head": [
+        "項目",
+        "官方說法",
+        "玩家要知道的"
+      ],
+      "rows": [
+        [
+          "Steam 工坊",
+          "修正後台問題",
+          "可能要重開 Steam 才生效"
+        ],
+        [
+          "黃牌",
+          "平衡調整，減少比賽裡出現的黃牌",
+          "官方沒給數字"
+        ],
+        [
+          "即時積分榜",
+          "進球精華畫面出現前，不再先更新名次",
+          "不再在進球畫面前先更新名次"
+        ],
+        [
+          "微軟商店",
+          "修正罕見的技術問題，影響部分用戶",
+          "影響部分用戶"
+        ]
+      ],
+      "caption": "整理自 Steam 公告原文。"
+    },
+    {
+      "type": "p",
+      "text": "這則公告只提到 Steam、Epic 和 Microsoft Store。主機版，還有 Touch 版和 Mobile 版，公告一個字也沒寫。Touch 版是 Apple Arcade 上的版本，Mobile 版是 Netflix 上的版本。我們查了 App Store，**Touch 和 Mobile 在台灣、英國、美國、日本四區仍是 27.1.0**，沒有新版本。主機版的版本，我們沒有管道核對，Mac 版是否同步，公告沒有講。"
+    },
+    {
+      "type": "p",
+      "text": "公告的結尾是預告：**十二月會有下一次更新**，內容包括改進、採納玩家建議和一般優化。其中打算加一個偏好設定，讓玩家在「數字」和「文字描述」之間切換員工能力值的顯示，官方註明這項還要經過品質測試，不保證一定放進去。更新清單會在更接近日期時先公布，十二月的確切日子還沒有。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "FM27 Update 27.1.1 Out Now",
+      "publisher": "Steam 公告（Sports Interactive，Jimmy Wong）",
+      "date": "2026-11-24",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849827110446366",
+      "note": "2026-11-24 14:22:12 UTC（台灣 22:22）。經 Steam News API 與 Steam 活動頁讀過全文，四項修正與十二月更新預告皆照原文。"
+    },
+    {
+      "title": "FM27 Update 27.1.0 Out Now",
+      "publisher": "Steam 公告（Sports Interactive，Jimmy Wong）",
+      "date": "2026-11-17",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702693861",
+      "note": "2026-11-17 14:16:09 UTC（台灣 22:16）。27.1.0 電腦版上線，對照用。"
+    },
+    {
+      "title": "FM27 Update 27.1.0 Changelist",
+      "publisher": "Steam 公告（Sports Interactive，Kyle Brown）",
+      "date": "2026-11-16",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702689885",
+      "note": "2026-11-16 15:04:12 UTC。146 條、11 個區塊，對照用。"
+    },
+    {
+      "title": "Football Manager 27 Touch（iTunes 查詢資料）",
+      "publisher": "Apple",
+      "date": "2026-11-18",
+      "url": "https://itunes.apple.com/lookup?id=1626267810&country=tw",
+      "note": "tw、gb、us、jp 區 version 27.1.0，currentVersionReleaseDate 2026-11-18T15:58:53Z；台灣時間 11-25 清晨讀取，無新版。"
+    },
+    {
+      "title": "Football Manager 27 Mobile（iTunes 查詢資料）",
+      "publisher": "Apple（Netflix, Inc.）",
+      "date": "2026-11-18",
+      "url": "https://itunes.apple.com/lookup?id=6446123740&country=tw",
+      "note": "tw、gb、us、jp 區 version 27.1.0，currentVersionReleaseDate 2026-11-18T16:31:42Z；台灣時間 11-25 清晨讀取，無新版。"
+    }
+  ]
+}
