@@ -16,6 +16,7 @@ import { boerseBox, fillBoerse } from "./boerse.js";
 import { outdoorFront, closeOutdoor } from "./outdoor-card.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
+import { redDay, weekendDay, dayPart, carryOf, carried, goldOf, moonPhase, moonSvg, windowSun, lightWindow, creaseHtml, paperAge, tintPaper, paperTone } from "./masthead.js";
 import { adventHtml, wireAdvent } from "./advent.js";
 import { worldState, drawGlobe } from "./world.js";
 import { renderNest, renderNestSettings, renderNestAlbum, feedNest, syncNest, nestUnseen, nestSeen, liveBird, scrollFlyer, nest, setLookup, nestState, feedNotice } from "./nest.js";
@@ -630,22 +631,31 @@ function goldRain(el) {
 // `fresh` (viewFront, Druckfrisch): the issue is opened for the first time on this device — the masthead carries the
 // press roller's ink line and the wine date stamp, and holds its own entrance (.fresh, style.css) until motion.js
 // pressRun lets it go. The stamp is decoration: the topline already says the number and the day.
-// `moon`: the latest issue's front page from nine in the evening until five in the morning hangs a small moon beside the
-// crest (the owner, 2026-11-10, when the night paper went: 晚上還是可以有月亮).
-function masthead(issue, fresh = false, moon = false, ferien = "") {
+// `front`: the latest issue's front page. From nine in the evening until five in the morning it hangs a small moon beside
+// the crest (the owner, 2026-11-10, when the night paper went: 晚上還是可以有月亮), tonight's phase (masthead.js moonSvg).
+// The day's dress (masthead.js) goes by the paper's date on any masthead: the red dateline, the weekend band, the robin's
+// seasonal thing, the Holy Week and Easter gold. The front page adds what goes by the hour: the time word after the day
+// (today's paper only — before 07:30 it is yesterday's, and an archive issue says the day alone), the morning's window
+// light and the creases of a paper lying out all day. All of it is in the markup as drawn; lightWindow (viewFront) only
+// paints the window at the masthead's size before the first frame.
+// `ferien`: today's paper only — the next long weekend's line under the dateline (almanac.js ferienLine; style.css .ferien).
+function masthead(issue, fresh = false, front = false, ferien = "") {
   const date = issue?.date || twNow().date;
   const [y, m, d] = date.split("-").map(Number);
   const erst = Number(issue?.no) === 1; // 創刊號 wears its own dress (the owner, 2026-11-08; style.css .masthead.erst)
-  return `<header class="masthead${fresh ? " fresh" : ""}${erst ? " erst" : ""}"><div class="wrap">
+  const now = twNow(), gold = goldOf(date, now), sun = front ? windowSun(now) : null;
+  const day = fmtDate(date, "de").split(",")[0] + (front && todays(issue) ? dayPart(now.minutes) : "");
+  return `<header class="masthead${fresh ? " fresh" : ""}${erst ? " erst" : ""}${gold ? ` ${gold}` : ""}">${sun ? `<i class="sunwin" data-el="${sun.el.toFixed(1)}" aria-hidden="true"></i>` : ""}${front && !erst ? creaseHtml(date) : ""}<div class="wrap">
     ${fresh ? `<i class="roller" aria-hidden="true"></i>` : ""}
-    ${erst ? `<i class="esun" aria-hidden="true"></i><div class="erst-band">${LAUREL}<span>創刊號</span>${LAUREL.replace('class="laurel"', 'class="laurel r"')}<i>Erstausgabe · Nummer 1 · MMXXVI</i></div><i class="ecorn tl"></i><i class="ecorn tr"></i><i class="ecorn bl"></i><i class="ecorn br"></i>` : `<hr class="rule-double">`}
-    <div class="topline"><span>Wien · Taipei</span><span>${issue ? esc(issueNr(issue.no)) : ""}</span><span>${esc(fmtDate(date, "de").split(",")[0])}</span></div>
+    ${erst ? `<i class="esun" aria-hidden="true"></i><div class="erst-band">${LAUREL}<span>創刊號</span>${LAUREL.replace('class="laurel"', 'class="laurel r"')}<i>Erstausgabe · Nummer 1 · MMXXVI</i></div><i class="ecorn tl"></i><i class="ecorn tr"></i><i class="ecorn bl"></i><i class="ecorn br"></i>`
+      : weekendDay(date) ? `<div class="wkend"><span>Wochenendausgabe</span></div>` : `<hr class="rule-double">`}
+    <div class="topline"><span>Wien · Taipei</span><span>${issue ? esc(issueNr(issue.no)) : ""}</span><span>${esc(day)}</span></div>
     ${fresh ? `<i class="stamp-date" aria-hidden="true"><b>Druckfrisch</b><span>No. ${esc(issue.no)}</span><span>${d}. ${roman(m)}. ${y}</span><i class="echo"></i></i>` : ""}
     <div class="checker" aria-hidden="true"></div>
-    <div class="crest">${EMBLEM}${moon ? MOON.replace('class="moon"', 'class="moon night-moon"') : ""}<i class="burst" aria-hidden="true"></i><i class="wave" aria-hidden="true"></i><i class="wave w2" aria-hidden="true"></i></div>
+    <div class="crest">${carried(EMBLEM, carryOf(date))}${front && nightHours() ? moonSvg(moonPhase(now.ms)) : ""}<i class="burst" aria-hidden="true"></i><i class="wave" aria-hidden="true"></i><i class="wave w2" aria-hidden="true"></i></div>
     <h1>${esc(S.cfg.title)}</h1>
     <div class="latin">${esc(S.cfg.subtitle)}</div>
-    <div class="dateline${ferien ? " has-fe" : ""}">${esc(fmtDate(date))}${issue ? `・${esc(issueNo(issue.no))}` : ""}・${esc(S.cfg.publish_time)} 出刊</div>${ferien ? `<div class="ferien">${esc(ferien)}</div>` : ""}
+    <div class="dateline${redDay(date) ? " rot" : ""}${ferien ? " has-fe" : ""}">${esc(fmtDate(date))}${issue ? `・${esc(issueNo(issue.no))}` : ""}・${esc(S.cfg.publish_time)} 出刊</div>${ferien ? `<div class="ferien">${esc(ferien)}</div>` : ""}
     <div class="checker" aria-hidden="true"></div>
     ${issue?.epigraph ? `<p class="epigraph"${verseVars(issue.epigraph.text)}>${verseHtml(issue.epigraph.text)}<span>${esc(issue.epigraph.ref)}（和合本）</span></p>` : ""}
   </div></header>`;
@@ -887,6 +897,17 @@ const nightHours = () => {
 };
 const frontKey = (issue) => JSON.stringify([twNow().date, Boolean(issue) && issueOpen(issue.date), issue || null, nightHours()]);
 const frontState = () => [frontKey(publishedIssues()[0]), frontStatus()];
+// The masthead drawn at 11:59 holds until noon only. On the minute tick (refreshFront) what goes by the hour is put right
+// in place, none of it moving anything: the time word after the day (at 12:00 and 18:00), the window light (it only ever
+// goes — a window that was not there at the draw never comes), Easter morning's bright gold (gone at noon).
+function retouchHead() {
+  const head = main.querySelector(".masthead"), issue = publishedIssues()[0], now = twNow();
+  if (!head || !issue) return;
+  const word = head.querySelector(".topline span:last-child"), day = fmtDate(issue.date, "de").split(",")[0] + (todays(issue) ? dayPart(now.minutes) : "");
+  if (word && word.textContent !== day) word.textContent = day;
+  if (!windowSun(now)) head.querySelector(".sunwin")?.remove();
+  if (head.classList.contains("ostern") && goldOf(issue.date, now) !== "ostern") head.classList.remove("ostern");
+}
 let shownFront = [];
 
 // 印刷故障: the one card for anything that fails to load — the paper's data at boot, an article that is not there or not
@@ -919,6 +940,7 @@ function viewFront(dateParam) {
   // A redraw in place (refreshFront, 下拉更新) does not pass through route(): take down the last draw's
   // seal watcher and ring first, or each redraw leaves one more watcher behind (audit c1).
   cleanup(); cleanup = () => {};
+  agePaper(); // 紙放一天: the day's new paper on the front page is a new sheet now, not on the next ten-minute tick
   const pubs = publishedIssues();
   const issue = dateParam ? issueBy(dateParam) : pubs[0];
   if (dateParam && (!issue || !isPublished(issue.date))) { main.innerHTML = `${masthead(null)}<div class="wrap"><p class="empty">這期還沒出爐，別急。</p></div>`; return; }
@@ -953,7 +975,7 @@ function viewFront(dateParam) {
   if (fresh) store.set("opened", [...store.get("opened", []), issue.date].slice(-60));
   const evening = !dateParam && nightHours() && Boolean(letterYard()); // 晚上寫信: the folded letter at the top
   const erst = Number(issue.no) === 1; // 創刊號: its own contents page and gold hairlines (inhaltBox, style.css .erst-issue)
-  main.innerHTML = `${masthead(issue, fresh, !dateParam && nightHours(), todays(issue) ? ferienLine(twNow().date) : "")}
+  main.innerHTML = `${masthead(issue, fresh, !dateParam, todays(issue) ? ferienLine(twNow().date) : "")}
   <div class="wrap${erst ? " erst-issue" : ""}">
     ${evening ? `<div class="night-letter-slot"></div>` : ""}
     ${status ? `<div class="status">${status}</div>` : ""}
@@ -989,6 +1011,7 @@ function viewFront(dateParam) {
       每日台灣時間 ${esc(S.cfg.publish_time)} 出刊・稿件由排程編輯撰寫並逐篇核對來源<br>圖片皆為公版、開放授權或本報原創圖解，授權見各篇文末
     </footer>
   </div>`;
+  lightWindow(main.querySelector(".masthead")); // 窗光, painted at the masthead's size before the first frame
   prefetch(issue);
   wireDigest(issue);
   wireAdvent(main); // 降臨節月曆 (advent.js): 1–24 December, drawn above with the page, under 今日禱告
@@ -1043,7 +1066,7 @@ async function chairCard(a, date) {
   const url = URL.createObjectURL(blob), link = document.createElement("a");
   link.href = url; link.download = file.name; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 4000);
 }
-// The evening moon: beside the masthead's crest (masthead) and on the folded evening letter (letterForm).
+// The evening moon on the folded evening letter (letterForm). The masthead's is tonight's phase (masthead.js moonSvg).
 const MOON = `<svg class="moon" viewBox="0 0 64 64" aria-hidden="true"><path d="M40 8a24 24 0 1 0 16 38A20 20 0 0 1 40 8z"/><circle class="st" cx="14" cy="14" r="1.4"/><circle class="st" cx="24" cy="6" r=".9"/><circle class="st" cx="8" cy="30" r=".9"/></svg>`;
 // ——— 寫信給編輯部 (Leserbriefe; the owner, 2026-11-10, from my list of ideas: 1) ———
 // A question written at night (folded at the top of the front page) goes to the shared store of the reader's yard (nest-worker.js
@@ -2997,10 +3020,18 @@ function watchUpdates() {
 }
 
 // The browser's toolbar colour (index.html's theme-color metas) follows the system scheme; a theme forced in 設定 paints it too.
-const BAR = { light: "#F5F0E6", dark: "#15120E" };
+// The light one is the paper's colour of the hour (masthead.js 紙放一天), so the bar warms with the page.
 function themeBar(v) {
-  document.querySelectorAll('meta[name="theme-color"]').forEach((m) => { m.content = BAR[v] || BAR[/dark/.test(m.media) ? "dark" : "light"]; });
+  const bar = { light: paperTone(paperNow()), dark: "#15120E" };
+  document.querySelectorAll('meta[name="theme-color"]').forEach((m) => { m.content = bar[v] || bar[/dark/.test(m.media) ? "dark" : "light"]; });
 }
+// 紙放一天: the paper's tone of the hour on the root and the status bar — at the start, once the index is in, whenever the
+// front page is drawn (a new paper there is a new sheet at once), every ten minutes while the app stays open, and on
+// coming back to it. Custom properties only: nothing is drawn again. The sheet is the front page's paper: new once
+// today's is out (publish_time); before then, and while a late paper has not come, yesterday's, as old as it got.
+// Before the index is in, by the clock (as index.html did).
+const paperNow = () => { const m = twNow().minutes; return S.cfg && S.index ? paperAge(m, todays(publishedIssues()[0]), publishMin()) : paperAge(m); };
+const agePaper = () => { tintPaper(paperNow()); themeBar(curTheme()); };
 
 // Once on each phone: what features that are gone left in its storage (the reading lock, the perio cards, the darkroom
 // picture, the night edition's mark, the first Spotify lookup cache) — nothing reads them any more, and the storage is
@@ -3017,7 +3048,7 @@ function tidyStorage() {
 async function boot() {
   watchUpdates();
   tidyStorage();
-  themeBar(document.documentElement.dataset.theme || "auto");
+  agePaper();
   // No paper at all (config.json unreachable and not kept yet): the 印刷故障 card, and another try on the button or as
   // soon as the connection is back. There is no page to go back to yet, so no 回到今日.
   for (;;) {
@@ -3030,6 +3061,7 @@ async function boot() {
       });
     }
   }
+  agePaper(); // the front page's paper, now that the index is in
   initDock();
   const back = await handleCallback();
   if (back) location.hash = back;
@@ -3072,6 +3104,7 @@ async function boot() {
     // 印務室 is drawn as of one moment too (今晨's date, 此刻, which shift is overdue): kept current on the same ticks (audit c19)
     if ((location.hash || "#/").startsWith("#/press")) { viewPress(true); return; }
     if ((location.hash || "#/") !== "#/") return;
+    retouchHead();
     const [issue, status] = frontState();
     if (issue === shownFront[0] && status === shownFront[1]) return;
     const line = main.querySelector(".status");
@@ -3115,6 +3148,7 @@ async function boot() {
     runAutoAdd();
   };
   setInterval(refreshFront, 60 * 1000);
+  setInterval(agePaper, 10 * 60 * 1000);
   setInterval(refetch, 5 * 60 * 1000);
   // 下拉更新 (pull.js): the index again, then the page shown drawn afresh (an article changed since is refetched, as
   // its updated_at no longer matches); the service worker is asked to look for a newer shell too, which, found,
@@ -3138,6 +3172,7 @@ async function boot() {
   // back on the front page after a while, still near the top, it is drawn afresh so the masthead and the cards play again.
   document.addEventListener("visibilitychange", async () => {
     if (document.hidden) { hiddenAt = Date.now(); return; }
+    agePaper();
     clearNotices();
     const replay = hiddenAt && Date.now() - hiddenAt > 30 * 1000 && (location.hash || "#/") === "#/" && scrollY < 400 && !typing();
     const stale = Date.now() - fetchedAt > 60 * 1000;

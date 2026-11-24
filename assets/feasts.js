@@ -40,8 +40,9 @@ const LUNAR = ["2026-02-17", "2027-02-06", "2028-01-26", "2029-02-13", "2030-02-
 const DRAGON = ["2027-06-09", "2028-05-28", "2029-06-16", "2030-06-05", "2031-06-24", "2032-06-12", "2033-06-01", "2034-06-20", "2035-06-10"];
 const MOON = ["2026-09-25", "2027-09-15", "2028-10-03", "2029-09-22", "2030-09-12", "2031-10-01", "2032-09-19", "2033-09-08", "2034-09-27", "2035-09-16"];
 
-// Easter Sunday (Western), the anonymous Gregorian algorithm (Meeus/Jones/Butcher).
-function easter(y) {
+// Easter Sunday (Western), the anonymous Gregorian algorithm (Meeus/Jones/Butcher). Also the masthead's church days
+// (churchDay, holyWeek below; masthead.js).
+export function easter(y) {
   const a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4;
   const f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30;
   const i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451);
@@ -55,6 +56,20 @@ const plusDays = (iso, n) => new Date(Date.parse(`${iso}T00:00:00Z`) + n * 864e5
 export function advent(y) {
   const xmas = new Date(Date.UTC(y, 11, 25)), back = xmas.getUTCDay() || 7; // Christmas on a Sunday: the Sunday before
   return plusDays(`${y}-12-25`, -(back + 21));
+}
+// The church year's great days among the feasts above — Christmas, Easter, Pentecost and Advent Sunday — on which the
+// masthead's dateline is printed in red, as on a Sunday (masthead.js redDay). All but Christmas are Sundays anyway.
+export function churchDay(date) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) return false;
+  const y = Number(date.slice(0, 4)), e = easter(y);
+  return date.slice(5) === "12-25" || date === e || date === plusDays(e, 49) || date === advent(y);
+}
+// Holy Week as the masthead keeps it (masthead.js goldOf): Palm Sunday to Good Friday, both included. Holy Saturday is
+// an ordinary day again.
+export function holyWeek(date) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) return false;
+  const e = easter(Number(date.slice(0, 4)));
+  return date >= plusDays(e, -7) && date <= plusDays(e, -2);
 }
 const FOUNDED = 2026; // the first issue, 2026-10-11
 const ZH_NUM = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
