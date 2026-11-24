@@ -97,6 +97,15 @@ jobs:
           curl -sf -A "robin-morning/1.0" --max-time 20 https://wiener-morgen-private.duckdns.org/content/outdoor.json -o content/outdoor.json || rm -f content/outdoor.json
           timeout 120 python3 scripts/outdoor.py || echo "::warning::outdoor.py 失敗或逾時"
           rm -f content/outdoor.json.tmp
+      - name: Market (市場)
+        # content/market.json is not in the repository either: each build reads the figures afresh (no AI, under a
+        # minute), starting from the live file so a source that cannot be read this time keeps its last figure
+        # (marked stale) and the rate is asked only once its next update is due. Nothing here can stop a deploy.
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          curl -sf -A "robin-morning/1.0" --max-time 20 https://wiener-morgen-private.duckdns.org/content/market.json -o content/market.json || rm -f content/market.json
+          python3 scripts/market.py || echo "::warning::market.py stopped with an error or read nothing (see above); the deploy goes on"
       - name: Assemble site
         run: |
           mkdir _site
