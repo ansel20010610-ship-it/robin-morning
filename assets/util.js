@@ -30,17 +30,17 @@ export function paragraphs(s) {
 export const store = {
   get(k, d = null) { try { const v = localStorage.getItem("rm." + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
   // true when it was written. A full storage (QuotaExceededError) first gives up what can be fetched or rebuilt again —
-  // the places to come back to in articles, the Spotify lookups, the cached weather, letters, credits, concert marks — and tries once more.
+  // the places to come back to in articles, the Spotify lookups, the cached weather, the wires and market figures, letters, credits, concert marks — and tries once more.
   set(k, v) {
     const s = JSON.stringify(v), put = () => { localStorage.setItem("rm." + k, s); return true; };
     try { return put(); } catch (e) {
       if (!/quota/i.test(`${e?.name} ${e?.message}`)) return false; // private mode or storage off
       try {
-        const spare = /^rm\.(pos\.|sp\.resolve|wx$|wire\.last$|letters\.cache$|credits$|gigs\.(seen|fresh)$|random\.recent$|reveal\.seen$)/;
-        // Only for something worth it: a cheap copy that does not fit (the wires and the letters are written every five
-        // minutes) gives up rather than clear anything; a place in an article or a concert mark may clear only the cheap
-        // copies; anything else clears every rebuildable key.
-        const cheap = /^rm\.(sp\.resolve|wx$|wire\.last$|letters\.cache$|credits$|random\.recent$|reveal\.seen$)/;
+        const spare = /^rm\.(pos\.|sp\.resolve|wx$|wire\.last$|market\.last$|letters\.cache$|credits$|gigs\.(seen|fresh)$|random\.recent$|reveal\.seen$)/;
+        // Only for something worth it: a cheap copy that does not fit (the wires, the market figures and the letters are
+        // written every five minutes) gives up rather than clear anything; a place in an article or a concert mark may
+        // clear only the cheap copies; anything else clears every rebuildable key.
+        const cheap = /^rm\.(sp\.resolve|wx$|wire\.last$|market\.last$|letters\.cache$|credits$|random\.recent$|reveal\.seen$)/;
         if (cheap.test("rm." + k)) return false;
         const drop = spare.test("rm." + k) ? cheap : spare;
         for (const key of Object.keys(localStorage)) if (drop.test(key) && key !== "rm." + k) localStorage.removeItem(key);

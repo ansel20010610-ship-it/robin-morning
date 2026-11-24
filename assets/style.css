@@ -17,6 +17,7 @@
   --robin: #B65A2E;
   --nest-brown: #7B5A3E; --nest-dark: #4F3826; --nest-cream: #F3EADA;
   --blue: #23395B;
+  --slate: #4E5D70; /* a fall on the quote board (.mk), as wine is a rise: blue-grey, never green */
   --red: #8E2A2E;
   --shadow: 0 1px 0 rgba(60, 45, 20, .06), 0 8px 24px -16px rgba(60, 45, 20, .35);
   --fs: 18.5px;
@@ -36,7 +37,7 @@
     --paper: #15120E; --paper-2: #201B14; --paper-3: #2C261C;
     --ink: #EDE4D3; --ink-2: #CDC2AF; --muted: #998F7E;
     --rule: #564A33; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36; --foil: #E3B957; --foil-hi: #FFF0BF;
-    --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82; --nest-brown: #A98A6A; --nest-dark: #6D5440; --nest-cream: #E6DAC4;
+    --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --slate: #A3AFC0; --red: #E08A82; --nest-brown: #A98A6A; --nest-dark: #6D5440; --nest-cream: #E6DAC4;
     --shadow: 0 1px 0 rgba(0,0,0,.4), 0 10px 28px -18px rgba(0,0,0,.9);
     color-scheme: dark;
   }
@@ -45,7 +46,7 @@
   --paper: #15120E; --paper-2: #201B14; --paper-3: #2C261C;
   --ink: #EDE4D3; --ink-2: #CDC2AF; --muted: #998F7E;
   --rule: #564A33; --gold: #CDAE68; --gold-ink: #CDAE68; --gold-soft: #6E5C36; --foil: #E3B957; --foil-hi: #FFF0BF;
-  --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --red: #E08A82; --nest-brown: #A98A6A; --nest-dark: #6D5440; --nest-cream: #E6DAC4;
+  --wine: #D88C9A; --robin: #DB7C4E; --blue: #8FB0E0; --slate: #A3AFC0; --red: #E08A82; --nest-brown: #A98A6A; --nest-dark: #6D5440; --nest-cream: #E6DAC4;
   --shadow: 0 1px 0 rgba(0,0,0,.4), 0 10px 28px -18px rgba(0,0,0,.9);
   color-scheme: dark;
 }
@@ -162,6 +163,76 @@ button { font: inherit; color: inherit; }
 .wire li .ld { font-size: 12.5px; line-height: 1.6; color: var(--muted); }
 .wire li a:active b { color: var(--gold-ink); }
 .wire .at { margin: 0; padding: 0 12px 8px; font-family: var(--sans); font-size: 11px; letter-spacing: .04em; color: var(--muted); font-variant-numeric: tabular-nums; } /* under the strip's name when open: when the wires were last read, and whose they are */
+/* 市場行情 (assets/boerse.js): a quote board 6 pt under the wires — a fine double gold frame, a faint guilloché like an
+   old share certificate's (fixed, over the tape), the BÖRSE plate held at the left, the figures in Cormorant's
+   lining, tabular digits running past at 20 pt a second (transform only); a rise in wine, a fall in slate, a drawn
+   triangle (never a glyph that could turn emoji), small gold lozenges between. 38 pt high (36 + the frame) with or
+   without figures, so nothing under it moves when they come. Opened, the tape steps aside for a small table. */
+.mk { margin: 14px 0 -8px; --mk-up: var(--wine); --mk-dn: var(--slate);
+  --mk-gui: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'18'%20height%3D'8'%3E%3Cg%20fill%3D'none'%20stroke%3D'%238A6A2C'%20stroke-opacity%3D'.17'%20stroke-width%3D'.55'%3E%3Cpath%20d%3D'M0%204C4.5%200%204.5%200%209%204S13.5%208%2018%204'%2F%3E%3Cpath%20d%3D'M0%204C4.5%208%204.5%208%209%204S13.5%200%2018%204'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .mk { --mk-gui: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'18'%20height%3D'8'%3E%3Cg%20fill%3D'none'%20stroke%3D'%23CDAE68'%20stroke-opacity%3D'.12'%20stroke-width%3D'.55'%3E%3Cpath%20d%3D'M0%204C4.5%200%204.5%200%209%204S13.5%208%2018%204'%2F%3E%3Cpath%20d%3D'M0%204C4.5%208%204.5%208%209%204S13.5%200%2018%204'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); } }
+:root[data-theme="dark"] .mk { --mk-gui: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'18'%20height%3D'8'%3E%3Cg%20fill%3D'none'%20stroke%3D'%23CDAE68'%20stroke-opacity%3D'.12'%20stroke-width%3D'.55'%3E%3Cpath%20d%3D'M0%204C4.5%200%204.5%200%209%204S13.5%208%2018%204'%2F%3E%3Cpath%20d%3D'M0%204C4.5%208%204.5%208%209%204S13.5%200%2018%204'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
+.wire[hidden] + .mk { margin-top: 22px; } /* no wires yet: the board keeps the wires' distance from what is above */
+.mk .quotes { position: relative; background: var(--paper-2); border: 1px solid var(--gold); }
+.mk .quotes::after { content: ""; position: absolute; inset: 2px; border: 1px solid color-mix(in srgb, var(--gold) 50%, transparent); pointer-events: none; z-index: 3; }
+.mk summary { position: relative; display: flex; align-items: center; height: 36px; padding: 0; cursor: pointer; list-style: none; overflow: hidden; }
+.mk summary::-webkit-details-marker { display: none; }
+.mk[data-empty] summary { cursor: default; }
+.mk summary::before { content: ""; position: absolute; inset: 0; background-image: var(--mk-gui); background-position: 0 1px; pointer-events: none; z-index: 2; }
+/* the plate is 72 pt, so the tape starts on a whole point and the two copies meet on the same pixels */
+.mk .ktag { flex: 0 0 72px; align-self: stretch; display: flex; align-items: center; justify-content: center; padding: 0 0 0 1px; background: var(--paper-3); border-right: 3px double var(--gold); }
+.mk .ktag .sc { font-family: "Cormorant SC", var(--latin); font-weight: 600; font-size: 15px; letter-spacing: .1em; color: var(--gold-ink); position: relative; top: -.5px; }
+.mk .win { position: relative; flex: 1 1 auto; min-width: 0; align-self: stretch; }
+.mk .vp { position: absolute; inset: 0; overflow: hidden; display: flex; align-items: center; }
+/* two copies side by side, moved by half the belt (one copy) a lap; boerse.js sets the lap's time to the copy's width / 20 */
+.mk .belt { display: flex; flex: none; width: max-content; animation: mk-run 60s linear infinite; will-change: transform; }
+:root.mk-away .mk .belt { animation-play-state: paused; } /* the app not on screen: the tape waits where it is */
+@keyframes mk-run { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+.mk .run { display: flex; flex: none; align-items: baseline; white-space: nowrap; }
+.mk .it { display: inline-flex; align-items: baseline; flex: none; }
+.mk .n { font-family: var(--serif); font-size: 12.5px; color: var(--ink-2); letter-spacing: .06em; margin-right: 7px; }
+.mk :is(.v, .c, .d) { font-family: var(--latin); font-weight: 600; font-variant-numeric: lining-nums tabular-nums; }
+.mk .v { font-size: 18.5px; color: var(--ink); }
+.mk .c { font-size: 15.5px; margin-left: 6px; color: var(--muted); }
+.mk .pc { margin-left: 3px; }
+.mk .d { font-size: 13.5px; margin-left: 6px; color: var(--muted); } /* the figure's own date, when it is older than its market's last trading day */
+.mk .tri { display: inline-block; width: 0; height: 0; border-left: 3.5px solid transparent; border-right: 3.5px solid transparent; margin-right: 3px; position: relative; top: -1.5px; }
+.mk .up .tri { border-bottom: 6px solid currentColor; }
+.mk .dn .tri { border-top: 6px solid currentColor; }
+.mk .up { color: var(--mk-up); }
+.mk .dn { color: var(--mk-dn); }
+.mk .sep { flex: none; width: 30px; align-self: center; display: flex; justify-content: center; }
+.mk .sep::after { content: ""; width: 5px; height: 5px; transform: rotate(45deg); background: var(--gold); }
+/* the soft ends: the board's colour over the tape's two ends, fixed */
+.mk .win::before, .mk .win::after { content: ""; position: absolute; top: 0; bottom: 0; width: 10px; z-index: 1; pointer-events: none; }
+.mk .win::before { left: 0; background: linear-gradient(to right, var(--paper-2), color-mix(in srgb, var(--paper-2) 0%, transparent)); }
+.mk .win::after { right: 0; width: 24px; background: linear-gradient(to left, var(--paper-2), color-mix(in srgb, var(--paper-2) 0%, transparent)); }
+.mk summary .less { display: none; flex: 0 0 auto; margin-left: auto; font-family: var(--sans); font-size: 11.5px; color: var(--muted); }
+.mk summary .less::after { content: "▴"; margin-left: 4px; }
+/* opened, like the wires: the tape stops and steps aside, 收起 on the right, the table under the plate */
+.mk .quotes[open] .win { display: none; }
+.mk .quotes[open] summary { padding-right: 12px; }
+.mk .quotes[open] summary .less { display: inline; }
+.mk .mk-fold { padding: 0 12px 6px; }
+.mk .mkt { width: 100%; margin: 0; border-collapse: collapse; font-family: var(--sans); font-size: 14px; line-height: 1.5; font-variant-numeric: lining-nums tabular-nums; }
+.mk .mkt th, .mk .mkt td { padding: 6px 0 5px; vertical-align: baseline; border: 0; border-top: 1px solid var(--rule); white-space: nowrap; background: none; }
+.mk .mkt th { text-align: left; font-weight: 400; color: var(--ink-2); letter-spacing: .04em; }
+.mk .mkt th small { display: inline; margin-left: 6px; font-family: var(--latin); font-weight: 600; font-size: 13px; line-height: 1; letter-spacing: 0; color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
+.mk .mkt td { min-width: 0; text-align: right; padding-left: 12px; color: var(--ink); font-family: var(--latin); font-weight: 600; }
+.mk .mkt td.v { font-size: 18px; }
+.mk .mkt td.c, .mk .mkt td.p { font-size: 15.5px; }
+.mk .mkt td.up { color: var(--mk-up); }
+.mk .mkt td.dn { color: var(--mk-dn); }
+.mk .src { margin: 0; padding: 7px 0 2px; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 11px; line-height: 1.6; letter-spacing: .04em; color: var(--muted); }
+.mk .src a { text-decoration-color: var(--rule); }
+/* 減少動態: the tape stands still and the finger moves it (one copy, so it ends where it ends) */
+@media (prefers-reduced-motion: reduce) {
+  .mk .belt { animation: none; will-change: auto; }
+  .mk .vp { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; }
+  .mk .vp::-webkit-scrollbar { display: none; }
+  .mk .run[aria-hidden] { display: none; }
+  .mk .run { padding-left: 14px; } /* the first name clear of the soft end */
+}
 :is(.wetter, .reveal, .nest) .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; color: var(--gold-ink); font-weight: 600; padding-bottom: 5px; border-bottom: 1px solid var(--ink); }
 :is(.wetter, .reveal, .nest) .lbl .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 14px; margin-left: 8px; color: var(--gold); }
 .wetter .fc { font-family: var(--sans); font-size: 15px; line-height: 1.7; color: var(--ink); letter-spacing: .03em; padding: 10px 0 11px; border-bottom: 1px solid var(--rule); }

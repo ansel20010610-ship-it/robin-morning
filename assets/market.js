@@ -1,7 +1,7 @@
 // 市場 (Markets): the figures scripts/market.py writes to content/market.json at every deploy — 台股加權指數 (臺灣證券交易所),
 // 美元兌新台幣 (Exchange Rate API, a reference mid rate once a day; its terms ask for the link in `url` beside it), the
 // three American indices and two oils (FRED, the St. Louis Fed, a day or more behind: an item it did not give is simply not there).
-// Data only: nothing here draws, and no page imports it yet. Numbers only, nothing said about them.
+// Data only: nothing here draws (assets/boerse.js draws the quote board). Numbers only, nothing said about them.
 import { within } from "./util.js";
 
 // The file as market.py wrote it, or null (no file yet, offline, a shape it does not know). Never throws.

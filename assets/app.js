@@ -12,6 +12,7 @@ import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
 import { pressHtml } from "./press.js";
 import { fetchWeather, weatherHtml, keptWeather } from "./wetter.js";
 import { skyLine, skyRow, eveningRain, ferienLine } from "./almanac.js";
+import { boerseBox, fillBoerse } from "./boerse.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { adventHtml, wireAdvent } from "./advent.js";
@@ -961,6 +962,7 @@ function viewFront(dateParam) {
     ${erst ? inhaltBox(issue, arts) : ""}
     ${weatherBox(issue)}
     ${dateParam ? "" : wireBox()}
+    ${dateParam ? "" : boerseBox()}
     ${revealBox(issue, arts, read)}
     ${mains.length ? `<div class="sec-head"><h2>攤開第一頁</h2><span class="de">Erste Seite</span><span class="note">${mains.length} 篇</span></div>` : ""}
     ${lead ? `<a class="lead${posMark(issue.date, lead, read).cls}"${posMark(issue.date, lead, read).st} href="#/a/${issue.date}/${lead.column}">${thumb(lead, "ph")}${kicker(lead.column, false, issue.date)}<h3>${esc(lead.title)}</h3>${summary(lead)}${metaLine(issue.date, lead, read)}</a>` : ""}
@@ -989,6 +991,7 @@ function viewFront(dateParam) {
   wireAdvent(main); // 降臨節月曆 (advent.js): 1–24 December, drawn above with the page, under 今日禱告
   fillReveal();
   fillWire();
+  fillBoerse(main); // 市場行情 under the wires (assets/boerse.js): drawn already, from the kept figures or empty; filled in place
   fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
   if (evening) letterForm(main.querySelector(".night-letter-slot"), true);
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
@@ -3102,6 +3105,7 @@ async function boot() {
     await loadIndex();
     refreshFront();
     fillWire(); // the wire changes every half hour whether or not the issue did
+    fillBoerse(main); // and the market figures with every deploy
     runAutoAdd();
   };
   setInterval(refreshFront, 60 * 1000);
