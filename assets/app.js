@@ -11,6 +11,7 @@ import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pr
 import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
 import { pressHtml } from "./press.js";
 import { fetchWeather, weatherHtml, keptWeather } from "./wetter.js";
+import { skyLine, skyRow, eveningRain, ferienLine } from "./almanac.js";
 import { stampHtml } from "./stamps.js";
 import { feastOf } from "./feasts.js";
 import { adventHtml, wireAdvent } from "./advent.js";
@@ -629,7 +630,7 @@ function goldRain(el) {
 // pressRun lets it go. The stamp is decoration: the topline already says the number and the day.
 // `moon`: the latest issue's front page from nine in the evening until five in the morning hangs a small moon beside the
 // crest (the owner, 2026-11-10, when the night paper went: 晚上還是可以有月亮).
-function masthead(issue, fresh = false, moon = false) {
+function masthead(issue, fresh = false, moon = false, ferien = "") {
   const date = issue?.date || twNow().date;
   const [y, m, d] = date.split("-").map(Number);
   const erst = Number(issue?.no) === 1; // 創刊號 wears its own dress (the owner, 2026-11-08; style.css .masthead.erst)
@@ -642,7 +643,7 @@ function masthead(issue, fresh = false, moon = false) {
     <div class="crest">${EMBLEM}${moon ? MOON.replace('class="moon"', 'class="moon night-moon"') : ""}<i class="burst" aria-hidden="true"></i><i class="wave" aria-hidden="true"></i><i class="wave w2" aria-hidden="true"></i></div>
     <h1>${esc(S.cfg.title)}</h1>
     <div class="latin">${esc(S.cfg.subtitle)}</div>
-    <div class="dateline">${esc(fmtDate(date))}${issue ? `・${esc(issueNo(issue.no))}` : ""}・${esc(S.cfg.publish_time)} 出刊</div>
+    <div class="dateline${ferien ? " has-fe" : ""}">${esc(fmtDate(date))}${issue ? `・${esc(issueNo(issue.no))}` : ""}・${esc(S.cfg.publish_time)} 出刊</div>${ferien ? `<div class="ferien">${esc(ferien)}</div>` : ""}
     <div class="checker" aria-hidden="true"></div>
     ${issue?.epigraph ? `<p class="epigraph"${verseVars(issue.epigraph.text)}>${verseHtml(issue.epigraph.text)}<span>${esc(issue.epigraph.ref)}（和合本）</span></p>` : ""}
   </div></header>`;
@@ -658,15 +659,31 @@ function weatherBox(issue) {
   if (!todays(issue)) return "";
   // drawn at once from today's kept copy (wetter.js keptWeather), so the box holds its place while fillWeather asks
   // again; only the day's first look, with nothing kept, starts without it
-  const kept = keptWeather(), html = kept ? weatherHtml(kept) : "";
-  return `<section class="wetter"${html ? "" : " hidden"} aria-label="今日氣象"><div class="lbl">今日氣象<span class="de">Wetter</span></div><div class="fc">${html}</div></section>`;
+  const kept = keptWeather(), html = kept ? weatherHtml(kept) : "", day = twNow().date;
+  // 今晚 on a day with a sight is drawn at once, forecast or not: with no kept forecast the box stands with that one row
+  // and the readings are written above it when they come; with a kept one the rain decides now
+  const sky = html ? skyState(kept, day) : skyLine(day) ? "on" : "";
+  return `<section class="wetter"${html || sky ? "" : " hidden"}${sky ? ` data-sky="${sky}"` : ""} data-day="${day}" aria-label="今日氣象"><div class="lbl">今日氣象<span class="de">Wetter</span></div><div class="fc">${html}${skyHtml(sky, day)}</div></section>`;
 }
+// 今晚 (assets/almanac.js): the row under the readings, kept in the box's data-sky: "on" (printed), "off" (none: no sight
+// tonight, or rain), "blank" (printed first, then the forecast that came late said rain: the line keeps its height, empty,
+// until the front page is drawn again). The date is the one the box was drawn on (data-day), so a forecast that comes after
+// midnight does not look the table up for another day. A later forecast never adds the row to a box drawn without it.
+const skyState = (d, day) => (skyLine(day) && !eveningRain(d) ? "on" : "off");
+const skyHtml = (sky, day) => (sky === "on" || sky === "blank" ? skyRow(skyLine(day), sky === "blank") : "");
 function fillWeather() {
   const box = main.querySelector(".wrap > .wetter");
   if (!box) return;
   fetchWeather().then((d) => {
     const html = d ? weatherHtml(d) : "";
-    if (html && box.isConnected) { box.querySelector(".fc").innerHTML = html; box.hidden = false; }
+    if (html && box.isConnected) {
+      const day = box.dataset.day, was = box.dataset.sky, sky = !was ? skyState(d, day) : was === "on" && eveningRain(d) ? "blank" : was;
+      box.dataset.sky = sky;
+      const fc = box.querySelector(".fc"), row = fc.querySelector(".row.sky");
+      if (row && sky === "on") { fc.innerHTML = html; fc.append(row); } // the row already drawn stays as it is (no second fade-in)
+      else fc.innerHTML = html + skyHtml(sky, day);
+      box.hidden = false;
+    }
   });
 }
 // 外電 (Telegramme; scripts/wire.py, the owner 2026-11-07: the paper should not be finished once read): a thin bar under
@@ -932,7 +949,7 @@ function viewFront(dateParam) {
   if (fresh) store.set("opened", [...store.get("opened", []), issue.date].slice(-60));
   const evening = !dateParam && nightHours() && Boolean(letterYard()); // 晚上寫信: the folded letter at the top
   const erst = Number(issue.no) === 1; // 創刊號: its own contents page and gold hairlines (inhaltBox, style.css .erst-issue)
-  main.innerHTML = `${masthead(issue, fresh, !dateParam && nightHours())}
+  main.innerHTML = `${masthead(issue, fresh, !dateParam && nightHours(), todays(issue) ? ferienLine(twNow().date) : "")}
   <div class="wrap${erst ? " erst-issue" : ""}">
     ${evening ? `<div class="night-letter-slot"></div>` : ""}
     ${status ? `<div class="status">${status}</div>` : ""}
