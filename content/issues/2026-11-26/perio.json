@@ -1,0 +1,271 @@
+{
+  "column": "perio",
+  "date": "2026-11-26",
+  "title": "有牙周炎病史的人做植體牙橋，掉植體的機會約兩倍",
+  "dek": "追蹤不到五年的研究看不出兩組差別，五年以上才分得出來。風險高一倍，那還植不植？歐洲指引有答案。",
+  "brief": "歐洲牙周病學會為 2022 年指引委託的一篇系統性回顧，整理 17 篇研究：有牙周炎病史的人做植體牙橋，掉植體的風險約是沒病史者的 2 倍。差別要追蹤 5 年以上才看得出來。指引參考這篇等文獻，強建議植牙前要先把較高的風險告訴病人。",
+  "takeaway": "有牙周炎病史的人做植體支持的牙橋，掉植體的風險約是沒病史者的 2 倍（HR 2.06），植體周圍炎約 3.3 倍；植牙前要把風險講清楚，植好後替他排固定的牙周追蹤。",
+  "chairside": "您以前有牙周病。研究發現，像您這樣的人做植牙牙橋，大多數植體還是留得住，但掉植體的機會大約是沒有牙周病的人的兩倍，植體周圍發炎也比較常見。所以植好以後要固定回來檢查，早點抓到發炎。",
+  "topic_key": "perio:doi:10.1111/jcpe.13481",
+  "form": "qa",
+  "voice": "colleague",
+  "updated_at": "2026-11-25T22:52:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Implant_retained_bridge_model.jpg/1280px-Implant_retained_bridge_model.jpg",
+    "width": 1280,
+    "height": 1090,
+    "alt": "牙科教學模型的特寫，背景是藍色布。透明的淺藍色塑膠牙床裡埋著兩支金屬植體，螺紋清楚可見；兩支植體上方接著一座三顆連在一起的白色假牙，中間那顆底下沒有植體。左右兩側各有幾顆模型牙。",
+    "caption": "植體支持的固定局部假牙長這樣：兩支植體撐起一座三單位牙橋，中間那顆是懸空的橋體。這是教學模型，與本文論文的受試者無關。",
+    "credit": "Ian Furst／Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Implant_retained_bridge_model.jpg",
+    "made": "2013"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "今天這篇是 **Carra 等人 2022 年**的系統性回顧，由巴黎大學牙周科和比利時魯汶大學的贗復團隊合寫。它問的是：有牙周炎病史的人植牙，結果會不會比較差？"
+    },
+    {
+      "type": "p",
+      "text": "它只看植體支持的固定局部假牙，就是兩支以上植體撐住、病人拿不下來的牙橋。這篇是歐洲牙周病學會為 2022 年第 IV 期牙周炎指引委託的回顧，指引直接拿它寫建議。第 IV 期是 2017 年分類裡最重的一期，除了骨頭流失，還有掉牙、咬合塌陷。這群人正是最常來談植牙的人。"
+    },
+    {
+      "type": "h",
+      "text": "掉植體的機會高多少？"
+    },
+    {
+      "type": "p",
+      "text": "**大約兩倍**。把各研究合起來算，這叫統合。算出的倍數叫危險比：2.06。"
+    },
+    {
+      "type": "quote",
+      "text": "整體存活率 95.1% 對 97.9%，有牙周炎病史的病人隨時間失去植體的風險，約是沒有病史者的 2 倍。",
+      "original": "With an overall survival rate of 95.1% vs. 97.9%, HP patients have approximately 2 times the risk of losing their implants compared to NHP patients over time.",
+      "cite": "Carra 等 2022，討論節；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "指引轉述這篇時，數字和論文本身略有出入。指引寫的是裝上假牙 5 年後危險比 2.11，有病史組至少 5 年的平均存活率 94.7%。論文摘要是 2.06，討論寫的是 95.1%。引用時兩邊要分開。"
+    },
+    {
+      "type": "p",
+      "text": "有交代原因的研究裡，掉植體最常見的原因就是植體周圍炎。"
+    },
+    {
+      "type": "table",
+      "title": "有牙周炎病史 vs 沒有：植體支持的固定局部假牙",
+      "head": [
+        "結果",
+        "有病史組比無病史組",
+        "根據"
+      ],
+      "rows": [
+        [
+          "植體存活（全部可統合的研究）",
+          "危險比 HR 2.06（95% CI 1.37–3.09），有病史組較差；I² 0%",
+          "Carra 等 2022 統合分析"
+        ],
+        [
+          "只看前瞻研究",
+          "HR 2.42（95% CI 1.19–4.94）",
+          "6 篇前瞻研究：740 支 vs 458 支植體"
+        ],
+        [
+          "只看回溯研究",
+          "HR 1.91（95% CI 1.16–3.12）",
+          "6 篇回溯研究：612 支 vs 2,230 支植體"
+        ],
+        [
+          "追蹤不到 5 年的研究",
+          "存活率看不出兩組差別",
+          "Carra 等 2022 圖 2"
+        ],
+        [
+          "植體周圍炎（以病人計）",
+          "風險比 RR 3.3（95% CI 1.31–8.3）；I² 0%",
+          "Carra 等 2022 統合分析"
+        ],
+        [
+          "植體周圍炎（以植體計）",
+          "也較高，但研究之間不一致（I² 85%）",
+          "Carra 等 2022 圖 3"
+        ],
+        [
+          "邊緣骨流失",
+          "標準化平均差 −0.16 毫米（95% CI −1.04 到 0.73），看不出差別；I² 98%",
+          "6 篇以毫米報告的研究"
+        ],
+        [
+          "重度 vs 中度牙周炎病史",
+          "植體存活 HR 1.31（95% CI 0.58–2.96），看不出差別",
+          "3 篇研究：321 支 vs 217 支植體，追蹤 5–10 年"
+        ],
+        [
+          "成功率、機械併發症、病人感受",
+          "資料太少，作者說無法下結論",
+          "Carra 等 2022 討論"
+        ]
+      ],
+      "caption": "危險比（HR）與風險比（RR）是「有病史組是無病史組的幾倍」，1 代表沒差，信賴區間不跨過 1 才算有差；I² 是研究之間結果不一致的程度，越高越不一致。依 Carra 等 2022 年全文的摘要、結果節與圖 2–4 數據重繪，非原圖轉載。"
+    },
+    {
+      "type": "h",
+      "text": "為什麼短期研究看不出來？"
+    },
+    {
+      "type": "p",
+      "text": "存活率的差別只在追蹤 **5 年以上**的研究出現。作者說，不到 5 年的追蹤不夠看出差別。"
+    },
+    {
+      "type": "h",
+      "text": "證據有多硬？"
+    },
+    {
+      "type": "p",
+      "text": "17 篇全是觀察性研究，7 篇前瞻、10 篇回溯，沒有隨機試驗。好在兩種研究的方向一致。論文沒有自己評證據確定性，指引替依據它的建議評為「低」。要打折的地方還有這些："
+    },
+    {
+      "type": "list",
+      "items": [
+        "「牙周炎病史」各篇的定義不一樣。",
+        "抽菸的影響分不開，有 7 篇沒交代病人抽不抽菸。",
+        "作者說可能有發表偏差，結果不明顯的研究也許沒被發表。",
+        "重度和中度病史相比，植體存活看不出差別，不能說病史越重越危險。"
+      ]
+    },
+    {
+      "type": "h",
+      "text": "那還植不植？"
+    },
+    {
+      "type": "p",
+      "text": "指引的看法是可以。它認為有病史者的植體牙橋，存活率夠好，足以抵銷風險。但它強建議，植牙前先把較高的風險告訴病人。"
+    },
+    {
+      "type": "quote",
+      "text": "在第 IV 期牙周炎病人的重建中考慮植牙時，我們建議應告知病人：植體周圍炎與植體喪失的風險較高。",
+      "original": "When dental implants are considered in the rehabilitation of stage IV periodontitis patients, we recommend that information on the increased risk for peri-implantitis and implant loss should be provided.",
+      "cite": "歐洲牙周病學會第 IV 期牙周炎 S3 臨床指引，建議 R8.5（Herrera 等 2022）；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "指引也講得很白：以為治療好、維護好的第 IV 期病人，植體壽命會跟一般人一樣，大概太樂觀。現有證據**不能排除治療後還殘留一部分風險**。"
+    },
+    {
+      "type": "table",
+      "title": "2022 年歐洲第 IV 期牙周炎指引：和植牙有關的五條建議",
+      "head": [
+        "建議",
+        "內容",
+        "證據品質／建議等級"
+      ],
+      "rows": [
+        [
+          "R8.4",
+          "考慮植牙時，先確認沒有手術禁忌、軟硬組織尺寸夠不夠、要不要做軟硬組織增補",
+          "不適用；強建議（A）"
+        ],
+        [
+          "R8.5",
+          "考慮植牙時，要告訴病人植體周圍炎與掉植體的風險較高",
+          "低；強建議（A）"
+        ],
+        [
+          "R8.6",
+          "有其他選擇時，避免牙齒和植體混合支持的固定假牙",
+          "低（專家共識）；建議（B）"
+        ],
+        [
+          "R9.1",
+          "缺牙兩側有牙時，牙支持牙橋、植體支持牙橋、活動假牙或不做假牙都可考慮",
+          "低；開放（0）"
+        ],
+        [
+          "R9.3",
+          "鄰牙在牙周上無法維持、無法修復時，建議用植體支持的固定假牙",
+          "低；建議（B）"
+        ]
+      ],
+      "caption": "建議等級依德國醫學會 AWMF 的分法：A 是強建議（we recommend），B 是建議（we suggest），0 是開放、可以考慮。R8.5、R9.3 的依據包括 Carra 等 2022。整理自 Herrera 等 2022 年 EFP S3 指引全文。"
+    },
+    {
+      "type": "p",
+      "text": "Carra 他們的建議是，植好以後替這些病人排個人化的牙周追蹤，植體周圍一發炎就能早點發現。"
+    },
+    {
+      "type": "h",
+      "text": "順便複習：黏膜炎和植體周圍炎"
+    },
+    {
+      "type": "p",
+      "text": "照 2017 年世界研討會的共識，植體周圍黏膜炎最主要的表現是輕探就流血，病因是牙菌斑。植體周圍炎則是發炎之外，支持植體的骨頭還一路流失。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Periimplantitis_progression_over_5_years_in_heavy_smoker.gif",
+      "width": 400,
+      "height": 344,
+      "alt": "兩張交替播放的牙科 X 光片，拍的是同一處下顎後牙區的兩支並排植體，上面各有一顆白色牙冠，左側邊緣可見一顆天然牙的牙根。第一張裡兩支植體周圍的骨頭高度接近植體頸部；第二張裡植體周圍的骨頭明顯變低，植體上段的螺紋露在骨頭外面。",
+      "caption": "植體周圍炎是發炎加上支持植體的骨頭一路流失。Commons 檔案說明：一位重度吸菸者植入後 2 年的 X 光，與之後再拍的一張，顯示植體周圍炎的進展（檔名寫「5 年間」）。這是單一個案，與本文論文的受試者無關。",
+      "credit": "Coronation Dental Specialty Group／Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Periimplantitis_progression_over_5_years_in_heavy_smoker.gif",
+      "made": "2013 年上傳"
+    },
+    {
+      "type": "p",
+      "text": "共識也建議，上部結構裝好時，就拍一張**基準 X 光**、做一次探測紀錄。"
+    },
+    {
+      "type": "paper",
+      "citation": "Carra MC, Rangé H, Swerts PJ, Tuand K, Vandamme K, Bouchard P. Effectiveness of implant-supported fixed partial denture in patients with history of periodontitis: A systematic review and meta-analysis. *J Clin Periodontol*. 2022;49 Suppl 24:208–223.",
+      "doi": "10.1111/jcpe.13481",
+      "pmid": "34775625",
+      "link": "https://doi.org/10.1111/jcpe.13481",
+      "evidence": "系統性回顧與統合分析：17 篇觀察性研究（7 篇前瞻、10 篇回溯），無隨機試驗",
+      "design": "系統性回顧與統合分析（PROSPERO CRD42020179376），隨機效應模型；文獻檢索至 2020 年 7 月；EFP 第 IV 期牙周炎 S3 指引委託的回顧之一",
+      "sample": "17 篇研究，來自 8 個國家（義大利 6 篇）；指引轉述為有病史者 1,718 支、無病史者 2,879 支植體；裝上假牙後至少追蹤 1 年",
+      "question": "部分缺牙、做植體支持固定局部假牙的病人，有牙周炎病史和沒有的比，植體存活與併發症有沒有差別？",
+      "access": "依全文整理：義大利費拉拉大學典藏 IRIS 的出版版 PDF（Wiley 網站打不開）；建議等級與證據品質依 EFP 第 IV 期 S3 指引全文"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Effectiveness of implant-supported fixed partial denture in patients with history of periodontitis: A systematic review and meta-analysis",
+      "publisher": "Journal of Clinical Periodontology（Carra MC 等）",
+      "date": "2021-11-14",
+      "url": "https://iris.unife.it/retrieve/4992397b-3e19-4e12-8219-cea3aa3c6030/J%20Clinic%20Periodontology%20-%202021%20-%20Carra%20-%20Effectiveness%20of%20implant%e2%80%90supported%20fixed%20partial%20denture%20in%20patients%20with%20history.pdf",
+      "note": "主角論文。讀全文：義大利費拉拉大學典藏 IRIS 的出版版 PDF（Wiley 網站 403）。DOI 10.1111/jcpe.13481；PMID 34775625；J Clin Periodontol 2022;49 Suppl 24:208–223，卷期頁依 PubMed 與 Crossref，日期為線上刊出日。用到：摘要、Clinical Relevance、方法、結果 3.1–3.4、討論、第 6 節臨床實務含意、結論、表 1。"
+    },
+    {
+      "title": "Treatment of stage IV periodontitis: The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Herrera D 等）",
+      "date": "2022-06-10",
+      "url": "https://orbi.uliege.be/bitstream/2268/341346/1/J%20Clinic%20Periodontology%20-%202022%20-%20Herrera%20-%20Treatment%20of%20stage%20IV%20periodontitis%20%20The%20EFP%20S3%20level%20clinical%20practice%27.pdf",
+      "note": "讀全文：比利時列日大學典藏 ORBi 的出版版 PDF。DOI 10.1111/jcpe.13639；PMID 35688447；J Clin Periodontol 2022;49 Suppl 24:4–71。用到：摘要、3.4 節與表 5（建議等級）、R8.4、R8.5、R8.6、R9.1、R9.3 及其背景與證據節。"
+    },
+    {
+      "title": "Peri-implant health and disease. A systematic review of current epidemiology",
+      "publisher": "Journal of Clinical Periodontology（Derks J、Tomasi C）",
+      "date": "2015-03-31",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25495683/",
+      "note": "讀 PubMed 摘要（E-utilities efetch）。DOI 10.1111/jcpe.12334；J Clin Periodontol 2015;42 Suppl 16:S158–S171。用到：11 項研究、黏膜炎 43%、植體周圍炎 22% 的加權平均盛行率、與使用時間的關係。"
+    },
+    {
+      "title": "Peri-implant diseases and conditions: Consensus report of workgroup 4 of the 2017 World Workshop on the Classification of Periodontal and Peri-Implant Diseases and Conditions",
+      "publisher": "Journal of Clinical Periodontology（Berglundh T 等）",
+      "date": "2018-06-20",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29926491/",
+      "note": "讀 PubMed 摘要（E-utilities efetch）。DOI 10.1111/jcpe.12957；J Clin Periodontol 2018;45 Suppl 20:S286–S291。用到：植體周圍健康、黏膜炎、植體周圍炎的描述，以及上部結構完成後取得基準 X 光與探測紀錄的建議。"
+    }
+  ]
+}
