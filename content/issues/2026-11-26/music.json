@@ -1,0 +1,304 @@
+{
+  "column": "music",
+  "date": "2026-11-26",
+  "title": "金唱片上唯一的莫札特，是母親逼女兒殺人",
+  "dek": "旅行者 1 號剛飛到離地球一光日。船上那首莫札特，據他的熟人事後說，是他臨終前一晚腦子裡還在響的一段。",
+  "brief": "11 月 18 日，旅行者 1 號飛到離地球一光日，船上金唱片裡的莫札特只有一首：《魔笛》裡夜后的詠嘆調，1972 年由莫澤錄音。往前倒回去，賽弗里德事後轉述，莫札特臨終前一晚念的就是它；再往前是 1791 年的首演。陪你聽它的三個地方：高音的跳音、變大的樂團、三個「聽啊」。",
+  "topic_key": "music:mozart-k620",
+  "updated_at": "2026-11-26T00:51:23+08:00",
+  "form": "reverse",
+  "voice": "listener",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/The_Sounds_of_Earth_-_GPN-2000-001976.jpg/1280px-The_Sounds_of_Earth_-_GPN-2000-001976.jpg",
+    "width": 1280,
+    "height": 1279,
+    "alt": "一張鍍金圓盤唱片的照片，黑色背景。唱片外圈是細密的金色紋路並反光，中央的標籤上印著「THE SOUNDS OF EARTH」，下面是「Side 1」、NASA 標誌和「UNITED STATES OF AMERICA　PLANET EARTH」。",
+    "caption": "旅行者號（Voyager）的「地球之聲」金唱片，12 吋鍍金銅盤，兩艘探測船各帶一張相同的。〈夜后詠嘆調〉是收在上面的音樂之一。NASA 的影像，Commons 標註日期 1977 年 9 月 5 日；這張照片拍的是哪一張唱片、現在在哪裡，來源沒寫。",
+    "credit": "NASA；影像經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Sounds_of_Earth_-_GPN-2000-001976.jpg",
+    "made": "1977"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "2026 年 11 月 18 日，美國太空總署 NASA 說，**旅行者 1 號**到了離地球一光日的地方。一光日是光走一天的距離，地球發出的無線電訊號，現在要整整一天才到得了它。這艘探測船 1977 年 9 月 5 日發射，飛了 49 年多，離地球超過 160 億英里。"
+    },
+    {
+      "type": "p",
+      "text": "船上有一張 **金唱片**：12 吋的鍍金銅盤，裝著聲音、影像，和來自不同文化、不同年代的音樂。旅行者 2 號早半個月發射，兩艘各帶一張一模一樣的。清單上的莫札特只有一首，是他 1791 年寫的歌劇《魔笛》第二幕裡，反派 **夜后** 的 詠嘆調。詠嘆調就是歌劇裡一個角色站出來，獨自唱心情的一段。莫札特是奧地利作曲家，《魔笛》是他過世前最後一年寫的歌劇。"
+    },
+    {
+      "type": "p",
+      "text": "NASA 清單寫的演唱者是德國女高音 **艾妲・莫澤（Edda Moser）**，指揮薩瓦利希（Wolfgang Sawallisch），樂團是慕尼黑的巴伐利亞國家歌劇院管弦樂團，長 2 分 55 秒。莫澤 1938 年生在柏林，在大都會歌劇院唱了九個樂季。Karajan Artists 的頁面寫她這首的錄音是 1972 年，她也說自己是金唱片上少數幾位藝術家之一。電影《阿瑪迪斯》裡也有這一首，那一版是 June Anderson 唱的。"
+    },
+    {
+      "type": "timeline",
+      "title": "倒著數回去：這首詠嘆調的路",
+      "items": [
+        {
+          "when": "2026.11.18",
+          "label": "旅行者 1 號到達離地球一光日的距離",
+          "note": "NASA：無線電訊號現在要一整天才到得了它"
+        },
+        {
+          "when": "2018.11.25",
+          "label": "旅行者 2 號進入星際空間",
+          "note": "NASA 該頁的「關鍵日期」寫法"
+        },
+        {
+          "when": "2012.8",
+          "label": "旅行者 1 號進入星際空間",
+          "note": "NASA 頁面只寫月份"
+        },
+        {
+          "when": "1977.9.5",
+          "label": "旅行者 1 號發射",
+          "note": "旅行者 2 號 1977 年 8 月 20 日先發射"
+        },
+        {
+          "when": "1972",
+          "label": "莫澤與薩瓦利希錄下這首詠嘆調",
+          "note": "Karajan Artists 頁面的年份；日期與場地的細節只在轉引 Discogs 的二手資料出現，未核對"
+        },
+        {
+          "when": "1840.末–1841.初",
+          "label": "賽弗里德寫信給特萊奇克，提到莫札特臨終前一晚的事",
+          "note": "距離 1791 年約 49 年，是轉述"
+        },
+        {
+          "when": "1791.12.5",
+          "label": "莫札特過世（凌晨 12 點 55 分，35 歲）",
+          "note": "首演後 66 天（本稿自算）"
+        },
+        {
+          "when": "1791.12.4",
+          "label": "賽弗里德說：莫札特夜裡昏沉，以為自己在劇院聽《魔笛》，對妻子低聲說「現在霍弗在唱高 F」",
+          "note": "事後轉述，不是當場記錄"
+        },
+        {
+          "when": "1791.10.7",
+          "label": "莫札特寫信給妻子，說剛從劇院回來，場子「還是和以前一樣滿」",
+          "note": "據 Wikipedia 的英譯"
+        },
+        {
+          "when": "1791.9.30",
+          "label": "《魔笛》在維登劇院首演，莫札特指揮",
+          "note": "夜后由他的大姨子霍弗（Josepha Hofer）唱"
+        },
+        {
+          "when": "1791.9.28",
+          "label": "莫札特寫完序曲與祭司進行曲",
+          "note": "首演前兩天；賽弗里德說序曲的分譜到總排練時墨跡還沒乾"
+        }
+      ]
+    },
+    {
+      "type": "music",
+      "composer": "莫札特（Wolfgang Amadeus Mozart）",
+      "work": "歌劇《魔笛》第二幕 第 14 號：夜后詠嘆調〈地獄的復仇在我心中沸騰〉，K. 620",
+      "work_original": "Die Zauberflöte, K. 620, Act II, No. 14: Der Hölle Rache kocht in meinem Herzen",
+      "composed": "1791（數位莫札特全集的稿本資料：總譜註明 1791 年 7 月，序曲與祭司進行曲 9 月 28 日）",
+      "performers": "艾妲・莫澤（Edda Moser）女高音；沃夫岡・薩瓦利希（Wolfgang Sawallisch）指揮 巴伐利亞國家歌劇院管弦樂團",
+      "recording": "EMI，1972 年錄音（Karajan Artists 頁面）；演出者與 NASA 列在旅行者金唱片上的相同。專輯發行年與廠牌依 Wikipedia 引 Discogs：《Virtuose Arien von W.A. Mozart》，EMI Electrola，1973 年；金唱片收的是不是這張專輯裡的錄音，查到的來源沒有明說",
+      "duration": "約 3 分鐘（NASA 金唱片清單：2:55）",
+      "movements": [
+        "第二幕第 14 號：Der Hölle Rache kocht in meinem Herzen（夜后詠嘆調）"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Mozart Der Hölle Rache Edda Moser Sawallisch Bavarian State Opera",
+        "artist_hint": "Edda Moser",
+        "track_filter": [
+          "Hölle Rache",
+          "Queen of the Night"
+        ]
+      }
+    },
+    {
+      "type": "h",
+      "text": "倒回 1840：賽弗里德的一封信"
+    },
+    {
+      "type": "p",
+      "text": "再往前倒，要倒到 1840 年底或 1841 年初。**賽弗里德（Ignaz von Seyfried）** 寫信給劇作家特萊奇克（Georg Friedrich Treitschke）。賽弗里德在信裡說，自己常在席卡內德的庭園木屋出入、在那裡排練。席卡內德（Emanuel Schikaneder）是《魔笛》的劇本作者，也是首演那個劇團的老闆，賽弗里德算是這一圈人。"
+    },
+    {
+      "type": "p",
+      "text": "信裡寫到莫札特過世前一晚。賽弗里德說，12 月 4 日晚上，莫札特已經昏沉，以為自己在維登劇院看《魔笛》，對太太低聲說了幾乎是最後的幾句話。他口中的霍弗，是首演唱夜后的女高音，也是莫札特太太的姊姊，所以信裡叫她大姨子。"
+    },
+    {
+      "type": "quote",
+      "text": "安靜！安靜！現在霍弗要唱那個高 F 了；現在我的大姨子在唱她的第二首詠嘆調〈地獄的復仇〉；聽她把那個 B 打得多有力、撐得多久：「聽啊！聽啊！聽啊！母親的誓言！」",
+      "cite": "賽弗里德致特萊奇克的信，1840 年底或 1841 年初；我自己翻的",
+      "original": "Still! still! jetzt nimmt die Hofer das hohe F; – jetzt singt die Schwägerinn ihre zweyte Arie: „Der Hölle Rache;\" wie kräftig sie das B anschlagt, u: aushält: „Hört! hört! hört! der Mutter Schwur!\""
+    },
+    {
+      "type": "p",
+      "text": "這是事情過了約 49 年的轉述，不是當場記錄，信裡也沒說賽弗里德那晚在不在場，所以我只能說「賽弗里德說」。可以確定的是，莫札特 12 月 5 日凌晨 12 點 55 分在維也納家中過世，35 歲。"
+    },
+    {
+      "type": "h",
+      "text": "再倒回 1791：首演"
+    },
+    {
+      "type": "p",
+      "text": "《魔笛》是 1791 年 9 月 30 日，星期五，在維也納城郊的維登劇院（Theater auf der Wieden）首演的，由席卡內德的劇團演出。這是有唱也有說白的歌劇，德文叫 Singspiel。席卡內德自己演捕鳥人帕帕基諾。莫札特親自指揮，只指揮了前兩場，之後換別人接手。"
+    },
+    {
+      "type": "p",
+      "text": "序曲（開演前樂團先奏的一段）和祭司進行曲，9 月 28 日才寫完，離首演兩天。賽弗里德說，序曲的分譜（樂手手上那份譜）到總排練時墨跡還沒乾。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/63/Zauberfl%C3%B6te-Theaterzettel1791.jpg",
+      "width": 736,
+      "height": 1336,
+      "alt": "一張十八世紀的黑白印刷海報，四周是花環邊框，頂端有老鷹徽章和兩個吹號的小天使，寫著「Wiedner Theater」。標題用大號哥德體寫「Die Zauberflöte」，下方是兩欄的角色與演員表，再下面是三段小字啟事。",
+      "caption": "1791 年 9 月 30 日《魔笛》首演的海報，維也納維登劇院（Theater auf der Wieden）。角色表裡「Königin der Nacht」（夜后）對的演員印作「Mad. Hofr.」（Madame Hofer）；下方啟事寫作曲者莫札特當天親自指揮樂團。Commons 的檔案頁只標「首演海報」，沒有寫原件收藏處，作者與年代以海報上的印刷日期為準。",
+      "credit": "不詳（1791 年劇院印刷品）；影像經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Zauberfl%C3%B6te-Theaterzettel1791.jpg",
+      "made": "1791"
+    },
+    {
+      "type": "p",
+      "text": "首唱夜后的 霍弗（Josepha Hofer） 是這個劇團的首席女高音，一直唱這個角色到 1801 年。有一種說法是，這首是莫札特為了讓她的高音亮相寫的。同年 10 月 7 日，莫札特寫信給太太，據 Wikipedia 引的英譯，他說剛從劇院回來，場子「還是和以前一樣滿」，又說最讓他高興的是「靜靜的認同」（我自己翻的）。1792 年 11 月，《魔笛》演到第 100 場，莫札特沒有看到。"
+    },
+    {
+      "type": "h",
+      "text": "這首在劇裡做什麼"
+    },
+    {
+      "type": "p",
+      "text": "夜后是帕米娜（Pamina）的母親。她要的是女兒去殺沙拉斯妥（Sarastro），他是領導祭司團的人，也是夜后的對頭。第二幕她對女兒說：「你看見這把鋼刀嗎？它是為沙拉斯妥磨的。你要殺了他，把強大的太陽圈交給我。」太陽圈是沙拉斯妥戴在胸前的圈，夜后說她丈夫把它交給了祭司團，沒有給她。帕米娜想說「可是最親愛的母親」，夜后只回一句「一個字都別說」，然後唱起這首。"
+    },
+    {
+      "type": "p",
+      "text": "歌詞大意是：地獄的復仇在我心裡沸騰，死亡與絕望在我四周燃燒；如果沙拉斯妥不是死在你手上，你就不再是我的女兒；永遠被逐出、被拋棄，所有血緣的聯繫都砸碎。復仇之神啊，聽見母親的誓言（我自己翻的）。唱完，舞台指示寫她沉入地下。帕米娜獨自留下，說：「我要殺人？眾神啊，我做不到。」"
+    },
+    {
+      "type": "h",
+      "text": "放來聽，三個地方"
+    },
+    {
+      "type": "p",
+      "text": "這個角色要由 花腔女高音 來唱，意思是能唱得很高、很快、很多跳音的女高音。整首是 D 小調，小調聽起來偏暗，節奏走得快，氣勢帶著威脅。"
+    },
+    {
+      "type": "p",
+      "text": "第一個，高音區的跳音。跳音是每個音唱得短而彈，像一顆一顆彈出來。夜后大部分時間都在很高的音區，最高的音是 F6，比人們常說的「高音 C」還要再高一截。"
+    },
+    {
+      "type": "p",
+      "text": "第二個，樂團比她的第一首大。夜后第一幕還有一首〈O zittre nicht〉，編制比較小；這首加了小號和定音鼓，全劇用到的樂手，除了單簧管和長號，都上場了。"
+    },
+    {
+      "type": "p",
+      "text": "第三個，三個「聽啊」。歌詞的尾段，她唱「Hört」（聽啊）連唱三次。Thomas Bauman 在 1995 年的書裡寫，前兩個音讓人期待第三個落在 A，她唱的卻是降 B，一個可怕的音。同一處，樂團裡所有小提琴拉同一條線，擠在最低那根弦的高音區，我聽起來是繃得很緊的。注意聽，就是這裡。賽弗里德信裡那句「聽她把那個 B 打得多有力、撐得多久」，說的就是這一處。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ignaz von Seyfried an Georg Friedrich Treitschke in Wien, Ende 1840/Anfang 1841（Fragment）",
+      "publisher": "Internationale Stiftung Mozarteum（Digitale Mozart-Edition）",
+      "date": "2009",
+      "url": "https://dme.mozarteum.at/DME/briefe/letter.php?mid=358",
+      "note": "賽弗里德信的轉錄全文讀過（約 1840 末／1841 初；2009 年由 Anja Morgenstern 為 Mozarteum 轉錄）：莫札特 12 月 4 日夜的「Still! still! jetzt nimmt die Hofer das hohe F」、序曲 9 月 28 日完成；2026-11-26 查閱"
+    },
+    {
+      "title": "Die Zauberflöte KV 620：Kritische Edition des vertonten Textes（Diplomatische Übertragung der autographen Partitur）",
+      "publisher": "Internationale Stiftung Mozarteum（Digitale Mozart-Edition）",
+      "date": "2016",
+      "url": "https://dme.mozarteum.at/dmedata/libredition/pdf/LV_420_422_0.pdf",
+      "note": "第一次演出 1791 年 9 月 30 日；詠嘆調前夜后對帕米娜的台詞、詠嘆調全文、「Sie versinkt」舞台指示；PDF 讀過相關頁；2026-11-26 查閱"
+    },
+    {
+      "title": "Golden Record Sounds and Music",
+      "publisher": "NASA Science",
+      "date": "未註明",
+      "url": "https://science.nasa.gov/mission/voyager/golden-record-contents/sounds/",
+      "note": "「Mozart, The Magic Flute, Queen of the Night aria, no. 14｜Edda Moser, soprano. Bavarian State Opera, Munich, Wolfgang Sawallisch, conductor｜2:55」；西洋古典八首的清單，莫札特只此一首；2026-11-26 查閱"
+    },
+    {
+      "title": "Voyager 1",
+      "publisher": "NASA Science",
+      "date": "2026-11-24",
+      "url": "https://science.nasa.gov/mission/voyager/voyager-1/",
+      "note": "發射 1977-09-05、2012 年 8 月進入星際空間、2026-11-18 到達一光日、「more than 16 billion miles」；頁面更新日 2026-11-24；2026-11-26 查閱"
+    },
+    {
+      "title": "Voyager 2",
+      "publisher": "NASA Science",
+      "date": "未註明",
+      "url": "https://science.nasa.gov/mission/voyager/voyager-2/",
+      "note": "發射 1977-08-20；關鍵日期寫 2018-11-25 進入星際空間，內文另寫 12 月 10 日；2026-11-26 查閱"
+    },
+    {
+      "title": "Golden Record Overview",
+      "publisher": "NASA Science",
+      "date": "未註明",
+      "url": "https://science.nasa.gov/mission/voyager/voyager-golden-record-overview/",
+      "note": "12 吋鍍金銅盤、聲音與影像、「musical selections from different cultures and eras」；2026-11-26 查閱"
+    },
+    {
+      "title": "Voyager at 30: Looking Beyond and Within - The Golden Record",
+      "publisher": "NASA Science",
+      "date": "2007-08-20",
+      "url": "https://science.nasa.gov/missions/voyager-program/voyager-at-30-the-golden-record/",
+      "note": "Casani 請 Sagan 帶委員會、「less than six weeks」；頁面未談音樂怎麼選；2026-11-26 查閱"
+    },
+    {
+      "title": "Queen of the Night aria",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Queen_of_the_Night_aria",
+      "note": "D 小調、F4 到 F6、音域 A4–C6、霍弗首唱、配器、Bauman 談三個「Hört」與 B♭、《阿瑪迪斯》與金唱片；頁面沒寫速度記號與高 F 的小節數；2026-11-26 查閱"
+    },
+    {
+      "title": "The Magic Flute",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/The_Magic_Flute",
+      "note": "首演 1791-09-30、Schikaneder 演 Papageno 並寫劇本、莫札特只指揮前兩場、第 100 場 1792 年 11 月、莫札特 12-05 過世、1791-10-07 給妻子的信（英譯）、結尾夜后被打入永夜；全頁約前 100,000 字讀過；2026-11-26 查閱"
+    },
+    {
+      "title": "Josepha Hofer（Josepha Weber）",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Josepha_Hofer",
+      "note": "1758–1819、康絲坦采的姊姊、1791 年首演夜后並唱到 1801 年、角色音域 F4–F6、賽弗里德的「高 F」軼事（1840 年轉述）；2026-11-26 查閱"
+    },
+    {
+      "title": "Death of Wolfgang Amadeus Mozart",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Death_of_Wolfgang_Amadeus_Mozart",
+      "note": "1791-12-05 凌晨 12:55、35 歲；賽弗里德 1840 年信的轉述與「各人回憶常互相矛盾」的說明；2026-11-26 查閱"
+    },
+    {
+      "title": "Edda Moser",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Edda_Moser",
+      "note": "德國女高音、1938-10-27 生於柏林、金唱片收錄、《Virtuose Arien von W.A. Mozart》（EMI Electrola，1973，引 Discogs）；2026-11-26 查閱"
+    },
+    {
+      "title": "Karajan Artists: Edda Moser",
+      "publisher": "Karajan.org",
+      "date": "2023-02-03",
+      "url": "https://karajan.org/stories/karajan-artists-edda-moser/",
+      "note": "「Der Hölle Rache」錄音年份 1972、她是金唱片上少數的藝術家之一；2026-11-26 查閱"
+    }
+  ]
+}
