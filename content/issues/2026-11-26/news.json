@@ -1,0 +1,195 @@
+{
+ "column": "news",
+ "date": "2026-11-26",
+ "title": "美國擬對 14 個經濟體加徵關稅，台灣建議稅率 15%",
+ "dek": "美國提議對 14 個經濟體加徵關稅；以色列法官建議了結總理弊案；伊拉克裁定中央可接管庫德區邊境。",
+ "brief": "美國提議對 14 個經濟體加徵關稅，台灣的建議稅率是 15%，尚未定案。以色列法官建議了結看守總理內唐亞胡的貪腐案。伊拉克最高法院裁定聯邦政府可接管庫德區邊境。",
+ "topic_key": "news:2026-11-26",
+ "voice": "wire",
+ "updated_at": "2026-11-26T05:28:03+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "World reacts to Trump's new tariffs as US stocks tumble",
+   "publisher": "半島電視台（路透社）",
+   "date": "2026-11-25",
+   "url": "https://www.aljazeera.com/economy/2026/11/25/world-reacts-to-trumps-new-tariffs-as-us-stocks-tumble",
+   "note": "14 個經濟體名單、中國 20%、301 條款調查、歐盟與中國外交部發言人說法"
+  },
+  {
+   "title": "美擬對14經濟體加徵關稅 中國20%最高、台韓日歐盟15%",
+   "publisher": "中央社",
+   "date": "2026-11-25",
+   "url": "https://www.cna.com.tw/news/aopl/202611250342.aspx",
+   "note": "各經濟體提議稅率（引美方與外電）"
+  },
+  {
+   "title": "美301調查出爐 擬對台稅率最高15%、特定商品可豁免",
+   "publisher": "中央社",
+   "date": "2026-11-26",
+   "url": "https://www.cna.com.tw/news/aipl/202611260002.aspx",
+   "note": "對台提議稅率、擬議豁免商品"
+  },
+  {
+   "title": "Netanyahu says corruption trial 'must end' as court suggests dropping case",
+   "publisher": "半島電視台",
+   "date": "2026-11-25",
+   "url": "https://www.aljazeera.com/news/2026/11/25/netanyahu-says-corruption-trial-must-end-as-court-suggests-dropping-case",
+   "note": "三件案的建議、內唐亞胡談話、檢察長回應、組閣期限"
+  },
+  {
+   "title": "In boost for Netanyahu, judges question corruption trial charges",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-25",
+   "url": "https://www.france24.com/en/in-boost-for-netanyahu-judges-question-corruption-trial-charges",
+   "note": "法官建議檢方撤銷其中一案（第二來源）"
+  },
+  {
+   "title": "Iraq's top court rules government can take over Kurdish borders, oil fields",
+   "publisher": "半島電視台",
+   "date": "2026-11-25",
+   "url": "https://www.aljazeera.com/news/2026/11/25/iraqs-top-court-rules-government-can-take-over-kurdish-borders-oil-fields",
+   "note": "裁定內容（據國營電視台）、庫德區政府反應、24 日總理命令"
+  },
+  {
+   "title": "At least 30 killed in Egypt vehicle fire, health ministry says",
+   "publisher": "半島電視台",
+   "date": "2026-11-25",
+   "url": "https://www.aljazeera.com/news/2026/11/25/at-least-30-killed-in-egypt-vehicle-fire-health-ministry-says",
+   "note": "地點、死亡人數、地方媒體說法、27 輛車、檢察官調查"
+  },
+  {
+   "title": "Egypt says 30 dead in Cairo fire after fuel truck overturns",
+   "publisher": "法國 24 電視台（法新社）",
+   "date": "2026-11-25",
+   "url": "https://www.france24.com/en/live-news/20261125-egypt-says-30-dead-in-cairo-fire-after-fuel-truck-overturns",
+   "note": "至少 30 死、15 人送醫、39 輛救護車"
+  },
+  {
+   "title": "美301調查 政院：台灣建議稅率15%不疊加級別最低",
+   "publisher": "中央社",
+   "date": "2026-11-26",
+   "url": "https://www.cna.com.tw/news/aipl/202611260005.aspx",
+   "note": "行政院說明、意見提出期限與聽證、過渡期稅率、鄭麗君記者會"
+  },
+  {
+   "title": "高雄市新增5例本土登革熱病例 其中4例同為鼓山區群聚事件",
+   "publisher": "衛福部疾病管制署",
+   "date": "2026-11-25",
+   "url": "https://www.cdc.gov.tw/Bulletin/Detail/cwOyjAuMqWO6c6V1x98ImA?typeid=9",
+   "note": "病例數、群聚、今年累計、防治建議"
+  },
+  {
+   "title": "投票勿穿政黨、候選人標誌衣物 中選會：週五22時後禁競選助選",
+   "publisher": "公視新聞網",
+   "date": "2026-11-25",
+   "url": "https://news.pts.org.tw/article/837410",
+   "note": "中選會說明、蘭嶼綠島選票運送"
+  }
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "美國提議對 14 個經濟體加徵關稅，台灣建議稅率 15%；以色列法官建議了結總理弊案，伊拉克裁定中央可接管庫德區邊境；台灣週六投票。"
+  },
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "美擬對 14 個經濟體加徵關稅",
+     "place": [
+      "US",
+      "CN",
+      "TW"
+     ],
+     "summary": "美國貿易代表署 25 日（華盛頓時間）依 1974 年貿易法 301 條款，提議對 14 個經濟體加徵關稅，稱過剩產能造成不公平優勢。歐盟說，不接受「歐洲是產能過剩來源」這個說法；中國外交部說「產能過剩」是假議題。",
+     "source": "半島電視台、中央社",
+     "url": "https://www.aljazeera.com/economy/2026/11/25/world-reacts-to-trumps-new-tariffs-as-us-stocks-tumble",
+     "when": "11 月 25 日，華盛頓時間"
+    },
+    {
+     "headline": "以色列法官建議了結內唐亞胡弊案",
+     "place": "IL",
+     "summary": "法官 25 日對看守總理內唐亞胡的三件貪腐案提出建議：法官建議檢方撤銷一件、重新考慮一件，另一件以協議了結。內唐亞胡說審判「必須立刻結束」。艾森科特受命組閣，期限到 12 月 6 日。",
+     "source": "半島電視台、法國 24 電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/25/netanyahu-says-corruption-trial-must-end-as-court-suggests-dropping-case",
+     "when": "11 月 25 日，以色列"
+    },
+    {
+     "headline": "伊拉克裁定中央可接管庫德區邊境",
+     "place": "IQ",
+     "summary": "伊拉克最高法院 25 日裁定（據國營電視台），聯邦政府可在包括庫德自治區在內的國際邊境駐軍；口岸關務要與地方協調，油氣田由聯邦石油部查核，產出由巴格達與地方政府共同管理。政府未說明何時、如何接管。庫德區政府說這是對「憲法權利」的攻擊。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/25/iraqs-top-court-rules-government-can-take-over-kurdish-borders-oil-fields",
+     "when": "11 月 25 日，伊拉克"
+    },
+    {
+     "headline": "開羅環路油料車起火，至少 30 死",
+     "place": "EG",
+     "summary": "埃及衛生部說，25 日開羅瓦拉克區的環路上，一輛載運石油產品的車輛翻覆起火，至少 30 人死亡，15 人送醫。檢察官已展開調查。",
+     "source": "半島電視台、法國 24 電視台（法新社）",
+     "url": "https://www.aljazeera.com/news/2026/11/25/at-least-30-killed-in-egypt-vehicle-fire-health-ministry-says",
+     "when": "11 月 25 日，埃及"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "政院：美提議對台稅率 15%",
+     "place": "TW",
+     "summary": "行政院 26 日表示，美方提議對台 15%，不再另外加上最惠國稅率和強迫勞動 301 關稅，和日本、南韓、歐盟、瑞士同一檔。這是建議、非定案，意見要在 2027 年 1 月 5 日前提出；定案前，台灣傳統工業與農產品對美出口仍適用 10%，也不另外加上最惠國稅率。",
+     "source": "中央社",
+     "url": "https://www.cna.com.tw/news/aipl/202611260005.aspx",
+     "when": "11 月 26 日，台灣時間"
+    },
+    {
+     "headline": "高雄再增 5 例本土登革熱",
+     "place": "TW",
+     "summary": "疾管署 25 日說，高雄 23 至 25 日新增 5 例本土登革熱，都是 50 多歲；其中 4 例屬鼓山區群聚，群聚累計 7 例，另 1 例在前鎮區，感染源調查中。今年本土病例累計 27 例，高雄占 22 例。",
+     "source": "衛福部疾病管制署",
+     "url": "https://www.cdc.gov.tw/Bulletin/Detail/cwOyjAuMqWO6c6V1x98ImA?typeid=9",
+     "when": "11 月 25 日，台灣時間"
+    },
+    {
+     "headline": "週五晚 10 時起禁止競選",
+     "place": "TW",
+     "summary": "中選會說，這週六是九合一選舉與公投的投票日，週五（27 日）晚上 10 時後不得再有競選和助選行為。蘭嶼、綠島選票因季風影響客輪，目標今天送達；客輪不開就由海巡艦艇運送。",
+     "source": "公視新聞網",
+     "url": "https://news.pts.org.tw/article/837410",
+     "when": "11 月 25 日，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "美方提議稅率，部分經濟體（中央社，25 日）",
+   "head": [
+    "經濟體",
+    "提議稅率"
+   ],
+   "rows": [
+    [
+     "中國",
+     "20%"
+    ],
+    [
+     "柬埔寨、印尼、馬來西亞、泰國、孟加拉",
+     "18%"
+    ],
+    [
+     "台灣、南韓、日本、歐盟",
+     "15%"
+    ],
+    [
+     "新加坡",
+     "10%"
+    ]
+   ]
+  }
+ ]
+}
