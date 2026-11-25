@@ -1,13 +1,13 @@
 {
  "column": "football",
  "date": "2026-11-26",
- "title": "戈登在巴庫梅開二度，馬德里調解庭十分鐘散場",
- "dek": "西甲差 3 分，歐冠差得更多；場外，巴薩告佩雷斯的調解庭，十分鐘就散了。",
- "brief": "戈登在巴庫對 Sabah 梅開二度，台灣時間 02:55 巴薩 2 比 0 領先，下半場進行中。費爾明吃兩場停賽，消息人士說球團打算上訴；調解庭不到十分鐘就散了，佩雷斯沒到。下一場 11 月 29 日（週日）晚上 11 點 15 分客場拉科魯尼亞。",
+ "title": "戈登在巴庫梅開二度，巴薩 4 比 1 贏 Sabah",
+ "dek": "戈登進的兩球，都是 Sabah 的門將把球撥到他腳前。",
+ "brief": "戈登在巴庫梅開二度，巴薩 4 比 1 贏 Sabah，歐冠聯賽階段 5 場 12 分，升到第 4。巴爾德腳踝受傷下場，弗利克說是輕微扭傷，檢查結果還沒公布。下一場 11 月 29 日（週日）晚上 11 點 15 分客場拉科魯尼亞，費爾明停賽。",
  "topic_key": "football:2026-11-26",
  "form": "compare",
  "voice": "fan",
- "updated_at": "2026-11-26T02:56:00+08:00",
+ "updated_at": "2026-11-26T05:59:00+08:00",
  "spoiler": null,
  "disclaimer": null,
  "next": {
@@ -34,11 +34,51 @@
  "body": [
   {
    "type": "p",
-   "text": "巴薩今晨在巴庫踢歐冠聯賽階段第 5 輪，對手是亞塞拜然的 Sabah。**戈登第 31、51 分鐘各進一球**，巴薩 2 比 0 領先。台灣時間凌晨 1 點 45 分開球，這是 2 點 55 分的比分，下半場踢到第 53 分鐘，比賽還在進行中。Sabah 的主場在首都巴庫。巴薩這趟飛了 3,970 公里，是球團去歐洲賽事最遠的一趟。"
+   "text": "台灣時間今天（11 月 26 日，週四）凌晨 1 點 45 分，巴薩在亞塞拜然首都巴庫踢歐冠聯賽階段第 5 輪，對手是當地的 Sabah。**戈登進了兩球**，阿德耶米和熱蘇斯各進一球，巴薩 4 比 1 贏球。戈登是英格蘭球員，今年從紐卡索轉來巴薩；Sabah 是亞塞拜然聯賽冠軍，前 4 場歐冠只贏過 1 場。"
   },
   {
    "type": "p",
-   "text": "巴薩先發排 4-3-3：前面是熱蘇斯、戈登和阿德耶米，中場有加維、佩德里和費爾明。後防這邊德容又被擺在中後衛，旁邊是傑拉德・馬丁，孔德和巴爾德守兩邊。上半場巴薩幾乎壓著打，控球 75% 比 25%，射門 11 比 3，射正 5 比 1，可是只領先一球。下半場一開始奧爾莫換下佩德里，戈登沒幾分鐘就補上第二球。亞馬爾留在巴塞隆納，拉菲尼亞和庫巴西坐板凳。"
+   "text": "這趟路遠，巴薩從巴塞隆納飛了大約 3,970 公里，是球團去歐洲賽事最遠的一趟。總教練弗利克趁機大換人：亞馬爾右腳踝不適，留在巴塞隆納；拉菲尼亞、坎塞洛和 Eric García 坐板凳。前鋒線是戈登、熱蘇斯和阿德耶米，中場是加維、佩德里和費爾明，德容照樣踢中後衛，旁邊是傑拉德・馬丁，孔德守右邊，左後衛是巴爾德。"
+  },
+  {
+   "type": "h",
+   "text": "九分鐘三球"
+  },
+  {
+   "type": "p",
+   "text": "上半場巴薩壓著打，領先得卻不輕鬆。Sabah 前鋒 Aliyev 第 9 分鐘就逼得門將 Joan García 出手，Du Queiroz 在 12 碼處的凌空射門打高了。第 27 分鐘一次定位球，García 站出了位置，Lepinjica 的吊射打在橫梁下緣彈回來。我覺得上半場巴薩被橫梁救了一次。"
+  },
+  {
+   "type": "p",
+   "text": "第 31 分鐘，阿德耶米從邊路突破傳中，Sabah 門將 Pokatilov 沒抓住，把球撥到戈登腳邊，戈登在 7 碼處推進。中場休息奧爾莫換下佩德里；弗利克賽後說佩德里沒事，本來就只排 45 分鐘。"
+  },
+  {
+   "type": "p",
+   "text": "下半場才開始 6 分鐘，比分就拉開了。第 51 分鐘，阿德耶米切入後回傳熱蘇斯，射門被門將撥出，球又落在戈登腳下，他補進第二球。第 55 分鐘，巴爾德低傳到遠門柱，阿德耶米滑著把球送進。第 60 分鐘，孔德頭槌被擋，熱蘇斯在門前推進。這三球加起來，只花了 9 分鐘。"
+  },
+  {
+   "type": "p",
+   "text": "Sabah 沒有垮。第 63 分鐘，中場休息才上場的 Mickels 在禁區中間左腳射進，是他們這晚唯一的進球。第 64 分鐘前後，18 歲的 Àlex Campos 上場換下德容，這是他的一線隊首秀。他是萊里達省出身的中後衛，2021 年夏天從 Atlètic Segre 加入巴薩青訓，現在是巴薩 B 隊的隊長之一。"
+  },
+  {
+   "type": "p",
+   "text": "數字很一面倒：射門 25 比 8，射正 14 比 3，控球 71.4%。戈登第 76 分鐘被拉菲尼亞換下，Goal 的評分稿把他選為全場最佳。他賽後說，自己本來可以進三球，有一次左腳沒踢好。他今年稍早穿著紐卡索球衣來過巴庫，打卡拉巴赫進了 4 球；加上今晚的 2 球，Goal 引統計帳號說，他成了歐冠史上同一年、在同一個國家客場進球最多的人。"
+  },
+  {
+   "type": "p",
+   "text": "熱蘇斯是難得先發，賽後說對自己的表現不太滿意，很想多踢，也承認前面還有拉菲尼亞。弗利克說他喜歡熱蘇斯練習時的品質，和那股一直正面的態度。阿德耶米說亞馬爾很重要，可是球隊有能力補上任何一個人。"
+  },
+  {
+   "type": "h",
+   "text": "巴爾德的右腳踝"
+  },
+  {
+   "type": "p",
+   "text": "贏球的夜裡有一件壞事。第 58 分鐘比賽因為巴爾德受傷暫停了兩分鐘；第 64 分鐘，坎塞洛上場換下他。三分鐘前，他才傳出給阿德耶米進球的那一腳。"
+  },
+  {
+   "type": "p",
+   "text": "俱樂部的賽後報導只寫他腳踝不適，被換下。弗利克賽後說是輕微扭傷，確切情況要等到 11 月 26 日（週四）才知道，他希望沒事，也說巴爾德踢得很好。Goal 轉述西班牙《阿斯報》，說他是射門時右腳落地不穩扭到，回巴塞隆納後會做檢查，包括核磁共振。傷勢多重，以俱樂部的醫療公告為準，目前還沒有。"
   },
   {
    "type": "h",
@@ -65,7 +105,7 @@
     ],
     [
      "歐冠聯賽階段",
-     "賽前 4 場 9 分，第 8；今晨這場進行中（2 比 0）",
+     "5 場 12 分，第 4（賽前第 8）",
      "5 場全勝 15 分，第 1"
     ],
     [
@@ -79,27 +119,31 @@
      "主席佩雷斯沒出庭"
     ]
    ],
-   "caption": "ESPN 西甲與歐冠積分榜（11 月 26 日凌晨查閱，今晨比賽尚未計入）、ESPN 賽程賽果；皇馬下一場取自 ESPN 報導。"
+   "caption": "ESPN 西甲與歐冠積分榜（11 月 26 日凌晨查閱）；歐冠名次依 ESPN 昨晚各場賽果加總，同分以淨勝球排序；巴薩下一場取自官網，皇馬下一場取自 ESPN 報導。"
   },
   {
    "type": "p",
-   "text": "先看西甲。巴薩 36 分，皇馬 33 分，差 3 分，馬競 31 分排第 3。兩邊上個週末都沒掉分：巴薩 11 月 22 日在諾坎普 0 比 2 落後，下半場追回來贏 3 比 2；皇馬前一天 2 比 1 贏塞爾塔。"
+   "text": "先看西甲。巴薩 36 分，皇馬 33 分，差 3 分，馬競 31 分排第 3。今晨沒有西甲比賽，三隊都踢了 13 場。"
   },
   {
    "type": "p",
-   "text": "歐冠這邊，**皇馬 5 場全勝**，15 分排第 1，台灣時間週三凌晨在自己的球場 5 比 1 贏 PSV。巴薩賽前 4 場 9 分排第 8，輸過 PSG 一場。排名前 8 的隊直接進下一階段。"
+   "text": "歐冠這邊，巴薩賽前 4 場 9 分排第 8，今晨 5 場 12 分，4 勝 1 敗，進 18 球、失 7 球，升到第 4。前面是皇馬（5 場全勝，15 分）、PSG（13 分），還有義大利的科莫（Como，12 分，淨勝球比巴薩多 3 個）；利物浦和貝蒂斯同樣 12 分，排在巴薩後面。前 8 名直接進 16 強，現在第 8 名是曼城，10 分，比巴薩少 2 分。聯賽階段 8 輪踢了 5 輪，還剩 3 場。"
   },
   {
    "type": "h",
-   "text": "弗利克的最後一排"
+   "text": "最後一排的下場"
   },
   {
    "type": "p",
-   "text": "**費爾明停賽兩場**，ESPN 週三報的。他是 11 月 22 日贏比利亞雷亞爾那場被罰下的：下場後坐在板凳，看到戈登在禁區倒地沒判點球，站起來去找第四官員，罵了一句粗話，轉身鑽進球員通道。主裁沒來得及出牌，賽後報告還是寫他被罰下。這處分讓他缺席 11 月 29 日去拉科魯尼亞、12 月 2 日主場對馬競兩場西甲。消息人士說球團打算上訴。"
+   "text": "**費爾明停賽兩場**，西班牙足協的紀律委員會 11 月 25 日（週三）公布，另有罰款，理由是向裁判抗議。他是 11 月 22 日贏比利亞雷亞爾那場被罰下的：下場後坐在板凳，看到戈登在禁區倒地沒判點球，站起來去找第四官員抗議，轉身鑽進球員通道。主裁沒來得及出牌，賽後報告還是寫他被罰下。他會缺席 11 月 29 日客場拉科魯尼亞，和 12 月 3 日（週四）凌晨 4 點 30 分主場對馬競，兩場西甲。"
   },
   {
    "type": "p",
-   "text": "弗利克賽前在巴庫拿這件事開了玩笑，說板凳有兩排，下次得想想「很情緒化」的球員像費爾明，要坐哪裡："
+   "text": "要不要上訴，兩邊說法不一樣。ESPN 引消息人士說，球團打算上訴；Goal 在處分公布後寫，球團對紅牌的申訴被駁回，這次罰的是規定的最低兩場，再上訴的空間不大。上訴有沒有結果，現在還沒有消息。"
+  },
+  {
+   "type": "p",
+   "text": "弗利克賽前在巴庫就拿這件事開了玩笑，說板凳有兩排，下次得想想「很情緒化」的球員像費爾明，要坐哪裡："
   },
   {
    "type": "quote",
@@ -109,7 +153,7 @@
   },
   {
    "type": "p",
-   "text": "穆里尼奧那邊是另一種幽默。皇馬中場休息 0 比 1 落後，記者問他中場休息時更衣室裡的事，他沒說有沒有發火，只說更衣室像拉斯維加斯，在拉斯維加斯發生的事，就留在拉斯維加斯。他換了三個人，貝林厄姆上場 15 分鐘後踢進一球，下半場皇馬進 5 球。我比較愛聽弗利克這種：起碼他承認自己的球員會失控。"
+   "text": "穆里尼奧那邊是另一種幽默。皇馬中場休息 0 比 1 落後，記者問他更衣室裡的事，他沒說有沒有發火，只說更衣室像拉斯維加斯，在拉斯維加斯發生的事，就留在拉斯維加斯。"
   },
   {
    "type": "h",
@@ -117,15 +161,15 @@
   },
   {
    "type": "p",
-   "text": "台灣時間週三下午 4 點 40 分，馬德里的法院開了調解庭，一邊是巴薩，一邊是皇馬主席佩雷斯，案子是巴薩對佩雷斯個人提的。**佩雷斯沒到**。Goal 說兩邊只有律師出席，前後不超過十分鐘，沒談成，散場後雙方都沒公開說話。EFE 的說法是兩家俱樂部的法律代表之間沒有達成調解，接下來巴薩要決定走民事還是刑事。佩雷斯本來就不必到場，派代理人就行；Goal 提到他前一晚還在伯納烏的主席包廂，看皇馬 5 比 1 贏球。"
+   "text": "11 月 25 日（週三）台灣時間下午 4 點 40 分，馬德里的法院開了調解庭，一邊是巴薩，一邊是皇馬主席佩雷斯，案子是巴薩對佩雷斯個人提的。**佩雷斯沒到**。Goal 說兩邊只有律師出席，前後不超過十分鐘，沒談成，散場後雙方都沒公開說話。EFE 的說法是兩家俱樂部的法律代表之間沒有達成調解，接下來巴薩要決定走民事還是刑事。佩雷斯本來就不必到場，派代理人就行。"
   },
   {
    "type": "p",
-   "text": "這場調解的起點是佩雷斯 5 月 12 日的公開談話。巴薩說他指巴薩「腐敗」、「讓裁判致富」，講的是內格雷拉案：巴薩多年付錢給前裁判委員會副主席內格雷拉相關的公司，球團說那是技術報告和諮詢費。巴薩 6 月中提出調解，要他收回說法。"
+   "text": "起點是佩雷斯 5 月 12 日的公開談話。巴薩說他指巴薩「腐敗」、「讓裁判致富」，講的是內格雷拉案：巴薩多年付錢給前裁判委員會副主席內格雷拉相關的公司，球團說那是技術報告和諮詢費。巴薩 6 月 12 日提出調解，要他收回說法。"
   },
   {
    "type": "p",
-   "text": "巴薩主席拉波爾塔人在巴庫，Goal 說他在調解庭開庭差不多同一時間對記者說，調解是提刑事告訴前的前置步驟，目的是逼對方更正；對方不理，巴薩就會繼續走法律途徑。他還說佩雷斯那邊老是談巴薩，最後該向他們要版稅，因為他們拿巴薩替自己宣傳形象。"
+   "text": "巴薩主席拉波爾塔當時人在巴庫。Goal 說他在調解庭開庭差不多同一時間對記者說，要的是對方更正，不更正，巴薩就繼續走法律途徑。他還說佩雷斯那邊老是談巴薩，最後該向他們要版稅，因為他們拿巴薩替自己宣傳形象。EFE 說，調解是提出告訴之前要走的一步。"
   },
   {
    "type": "h",
@@ -136,6 +180,27 @@
    "title": "歐洲足壇速覽",
    "items": [
     {
+     "headline": "馬競 2 比 0 贏 Viking，12 月 3 日來諾坎普",
+     "summary": "Sørloth 第 19 分鐘先進球，Julián Álvarez 第 24 分鐘直接任意球再進一球，Viking 的 Falchener 在補時吃紅牌。馬競歐冠 5 場 7 分。他們 12 月 3 日（週四）凌晨去諾坎普踢西甲。",
+     "source": "ESPN",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary?event=401915291",
+     "when": "11 月 26 日（週四）凌晨",
+     "place": "ES"
+    },
+    {
+     "headline": "利物浦 3 比 0 贏布魯日，PSG 與曼聯都踢成 2 比 2",
+     "summary": "利物浦客場靠 Isak 兩球（第 13、82 分鐘）和 Wirtz 一球，3 比 0 贏布魯日。PSG 2 比 2 羅馬，羅馬第 78 分鐘靠 Malen 的點球追平。曼聯在葡萄牙 2 比 2 Sporting，Bruno Fernandes 進兩球，Tielemans 補時吃第二黃被罰下。",
+     "source": "ESPN",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261125",
+     "when": "11 月 26 日（週四）凌晨",
+     "place": [
+      "BE",
+      "FR",
+      "PT",
+      "GB"
+     ]
+    },
+    {
      "headline": "皇馬中場換三人，5 比 1 翻盤 PSV",
      "summary": "皇馬半場 0 比 1 落後，中場休息換上貝林厄姆等三個人，下半場一口氣進 5 球。貝林厄姆自己第 60 分鐘進球，姆巴佩進兩球，維尼修斯進了他這季歐冠第一球。皇馬 5 戰全勝、15 分排第 1，12 月 9 日去阿森納。",
      "source": "ESPN",
@@ -145,7 +210,7 @@
     },
     {
      "headline": "阿森納 1 比 1 多特蒙德，又是領先後被追平",
-     "summary": "Gyökeres 第 10 分鐘在 25 碼外進球，那是他在主場 206 天來的第一球。多特蒙德第 55 分鐘扳平，另有一球因越位無效，阿森納則是打中一次門框。阿森納 5 場 11 分，排第 5。",
+     "summary": "Gyökeres 第 10 分鐘在 25 碼外進球，那是他在主場 206 天來的第一球。多特蒙德第 55 分鐘扳平，另有一球因越位無效，阿森納則是打中一次門框。阿森納 5 場 11 分。",
      "source": "ESPN",
      "url": "https://www.espn.com/soccer/story/_/id/50557446",
      "when": "11 月 25 日（週三）凌晨",
@@ -153,7 +218,7 @@
     },
     {
      "headline": "曼城 2 比 2 拿坡里，第 86 分鐘才追平",
-     "summary": "拿坡里兩度領先，曼城兩度追上，最後一球在第 86 分鐘。曼城最近 7 場各項賽事只贏 1 場，歐冠排第 6（10 分）。德布勞內穿著拿坡里球衣回到伊蒂哈德。",
+     "summary": "拿坡里兩度領先，曼城兩度追上，最後一球在第 86 分鐘。曼城最近 7 場各項賽事只贏 1 場，歐冠 5 場 10 分。德布勞內穿著拿坡里球衣回到伊蒂哈德。",
      "source": "ESPN",
      "url": "https://www.espn.com/soccer/story/_/id/50557453",
      "when": "11 月 25 日（週三）凌晨",
@@ -161,7 +226,7 @@
     },
     {
      "headline": "貝蒂斯客場 2 比 0 贏布拉提斯拉瓦斯洛凡",
-     "summary": "Cucho Hernández 在第 43、57 分鐘各進一個頭球，貝蒂斯客場就這樣帶走三分。他們歐冠 12 分排第 4，西甲也是第 4。",
+     "summary": "Cucho Hernández 在第 43、57 分鐘各進一個頭球，貝蒂斯客場就這樣帶走三分。他們歐冠 5 場 12 分，西甲排第 4。",
      "source": "ESPN",
      "url": "https://www.espn.com/soccer/match/_/gameId/401915297/real-betis-slovan-bratislava",
      "when": "11 月 25 日（週三）凌晨",
@@ -187,7 +252,7 @@
   },
   {
    "type": "p",
-   "text": "歐冠這份積分榜現在擠得很。阿森納 11 分、曼城和多特蒙德各 10 分、巴薩賽前 9 分，第 5 名到第 8 名只差兩分。巴薩如果在巴庫收下三分，是 12 分，比阿森納還多一分。"
+   "text": "歐冠這份積分榜擠得很。第 3 到第 6 名都是 12 分（科莫、巴薩、利物浦、貝蒂斯），阿森納 11 分，曼城、Sporting 和多特蒙德各 10 分。還有 3 輪，兩三分隨時追得回來，12 月 9 日（週三）凌晨 4 點巴薩主場對的是曼城。"
   },
   {
    "type": "h",
@@ -195,7 +260,7 @@
   },
   {
    "type": "p",
-   "text": "巴庫打完，巴薩 11 月 29 日（週日）晚上 11 點 15 分去拉科魯尼亞，那場沒有費爾明。亞馬爾能不能回來踢這場，弗利克 11 月 24 日只說希望，目前沒有新消息。馬競在歐冠踢 Viking，開球是週四凌晨 4 點，再過幾天就輪到他們來諾坎普。"
+   "text": "巴薩週日（11 月 29 日）晚上 11 點 15 分去拉科魯尼亞，這場沒有費爾明。亞馬爾那邊，俱樂部 11 月 23 日的公告說，他只是右腳踝輕微不適，為預防才不踢 Sabah，預計趕得上這場。巴爾德去不去得了，要看他回巴塞隆納後的檢查。再來是兩場主場西甲，12 月 3 日（週四）凌晨 4 點 30 分對馬競，12 月 6 日（週日）凌晨 4 點對塞爾塔，然後才是曼城。"
   },
   {
    "type": "table",
@@ -208,12 +273,6 @@
    ],
    "rows": [
     [
-     "11 月 26 日（週四）01:45",
-     "Sabah",
-     "歐冠聯賽階段第 5 輪（進行中，2 比 0）",
-     "客場 巴庫奧林匹克體育場"
-    ],
-    [
      "11 月 29 日（週日）23:15",
      "拉科魯尼亞",
      "西甲第 14 輪",
@@ -224,13 +283,21 @@
      "馬競",
      "西甲",
      "主場 Spotify Camp Nou"
+    ],
+    [
+     "12 月 6 日（週日）04:00",
+     "塞爾塔",
+     "西甲第 15 輪",
+     "主場 Spotify Camp Nou"
+    ],
+    [
+     "12 月 9 日（週三）04:00",
+     "曼城",
+     "歐冠聯賽階段第 6 輪",
+     "主場 Spotify Camp Nou"
     ]
    ],
    "caption": "巴薩官網賽程（西班牙時間），換算成台灣時間。"
-  },
-  {
-   "type": "p",
-   "text": "ESPN 說費爾明的停賽涵蓋這兩場西甲，上訴有沒有結果，現在沒有消息。馬競來的那一晚是 12 月 3 日（週四）凌晨 4 點 30 分。"
   }
  ],
  "sources": [
@@ -239,42 +306,161 @@
    "publisher": "ESPN",
    "date": "2026-11-25",
    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary?event=401915378",
-   "note": "戈登第 31、51 分鐘；半場數據；先發名單 4-3-3；奧爾莫換下佩德里；11 月 26 日 02:55 讀取（第 53 分鐘 2 比 0，比賽進行中；第二球目前只有 ESPN）"
+   "note": "終場 1 比 4；戈登 31'、51'，阿德耶米 55'，熱蘇斯 60'，Mickels 63'；先發名單與換人（奧爾莫 45'、坎塞洛換巴爾德 64'、Campos 換德容 64'、拉菲尼亞換戈登 76'）；巴爾德 58' 倒地暫停；射門 25 比 8、射正 14 比 3、控球 71.4%；入場 66,321；11 月 26 日 05:18 讀取"
   },
   {
-   "title": "UEFA Champions League scoreboard, 25 November 2026",
-   "publisher": "ESPN",
+   "title": "Gordon scores twice as Barcelona cruise in Azerbaijan",
+   "publisher": "ESPN（PA 稿）",
    "date": "2026-11-25",
-   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261125",
-   "note": "Sabah 對巴薩狀態與比分；開球 17:45Z；同日其他場次"
+   "url": "https://www.espn.com/soccer/story/_/id/50557484",
+   "note": "賽後報導：進球經過、27 分鐘橫梁、亞馬爾右腳踝、拉菲尼亞等三人坐板凳、戈登上次來巴庫是穿紐卡索球衣對卡拉巴赫進 4 球（ESPN 稿寫在 2 月）、Sabah 前 4 場 1 勝；以 now.core.api.espn.com 讀取全文"
   },
   {
-   "title": "Sabah vs Barcelona Live: UEFA Champions League 2026/27 League phase",
-   "publisher": "UEFA",
+   "title": "Sabah 1-4 FC Barcelona: Gordon strikes again in Baku",
+   "publisher": "FC Barcelona",
    "date": "2026-11-25",
-   "url": "https://www.uefa.com/uefachampionsleague/match/2049642/",
-   "note": "即時頁（內文動態載入，只用搜尋摘要核對戈登第 31 分鐘進球）"
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4614625/sabah-1-4-fc-barcelona-gordon-strikes-again-in-baku",
+   "note": "俱樂部賽後報導，第二個來源核對 1 比 4、戈登 31'、Mickels 63'、巴爾德因腳踝不適被換下、巴薩 12 分暫居第 4、歐洲賽事最遠的一趟"
+  },
+  {
+   "title": "Àlex Campos makes his FC Barcelona first-team debut",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-25",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4614680/alex-campos-makes-his-fc-barcelona-first-team-debut",
+   "note": "2008 年 2 月 2 日生、萊里達省 Aitona、2021 年夏天從 Atlètic Segre 加入、巴薩 B 隊隊長之一；一線隊首秀（俱樂部寫第 65 分鐘，ESPN 紀錄第 64 分鐘）"
+  },
+  {
+   "title": "Barcelona player ratings vs Sabah FK: Anthony Gordon and Gabriel Jesus dazzle in Baku rout",
+   "publisher": "Goal",
+   "date": "2026-11-25",
+   "url": "https://www.goal.com/en-gb/news/barcelona-player-ratings-vs-sabah-anthony-gordon-gabriel-jesus-shine/blta8bc31bc7a593390",
+   "note": "進球者與分鐘一致；戈登全場最佳、第 76 分鐘離場；Goal 統計 24 射、控球 72%（與 ESPN 差一兩個數，正文用 ESPN）"
+  },
+  {
+   "title": "Flick pits Jesus against Raphinha and reveals details of Balde injury",
+   "publisher": "Goal",
+   "date": "2026-11-25",
+   "url": "https://www.goal.com/en-za/news/flick-pits-jesus-against-raphinha-and-reveals-details-of-balde-injury/blt293dcdb0e2b69f91",
+   "note": "弗利克賽後：巴爾德輕微扭傷、隔天才知道；佩德里沒事、原本排 45 分鐘；稱讚熱蘇斯練習的品質與心態（轉述，不加引號）"
+  },
+  {
+   "title": "Bad luck: Barcelona star spoils four-goal Champions League night",
+   "publisher": "Goal（轉述 AS）",
+   "date": "2026-11-25",
+   "url": "https://www.goal.com/en/news/bad-luck-barcelona-star-spoils-four-goal-champions-league-night/bltd039ec559c8ba22e",
+   "note": "二手轉述西班牙《阿斯報》：巴爾德射門時右腳落地不穩扭到、可能腳踝扭傷、回巴塞隆納後做核磁共振；Goal 稱為本季首次先發、一月離隊的說法未獨立核對，不採用"
+  },
+  {
+   "title": "\"I could have scored a hat-trick\": Gordon responds to \"King of Baku\" tag",
+   "publisher": "Goal",
+   "date": "2026-11-25",
+   "url": "https://www.goal.com/en/news/i-could-have-scored-a-hat-trick-gordon-responds-to-king-of-baku-tag-after-barcelona-s-four-goal-win/bltd1bdea55ebb0cf6c",
+   "note": "戈登賽後：左腳沒把握住一次機會；旅行辛苦（轉述）"
+  },
+  {
+   "title": "From Turkey to Azerbaijan: Gordon takes Ronaldo and Benzema's crown in the Champions League",
+   "publisher": "Goal",
+   "date": "2026-11-25",
+   "url": "https://www.goal.com/en/news/from-turkey-to-azerbaijan-gordon-takes-ronaldo-and-benzema-s-crown-in-the-champions-league/bltdbbce892b2c53436",
+   "note": "統計帳號 MisterChip 與 Opta：同一年、同一國家歐冠客場進球最多（6 球）；Goal 稿把年份寫成 2025，與 ESPN 的『今年 2 月』不一致，正文不寫月份與年份"
+  },
+  {
+   "title": "Adeyemi after four-goal win over Sabah: \"We have the ability to replace any player, even Lamine Yamal\"",
+   "publisher": "Goal",
+   "date": "2026-11-25",
+   "url": "https://www.goal.com/en/news/adeyemi-after-four-goal-win-over-sabah-we-have-the-ability-to-replace-any-player-even-lamine-yamal/blt441df67978c9920f",
+   "note": "阿德耶米賽後談亞馬爾缺陣（轉述）"
+  },
+  {
+   "title": "Jesus opens up after four-goal win over Sabah: \"I'm not satisfied with myself!\"",
+   "publisher": "Goal",
+   "date": "2026-11-25",
+   "url": "https://www.goal.com/en/news/jesus-opens-up-after-four-goal-win-over-sabah-i-m-not-satisfied-with-myself/blt8739917cbf5b47cc",
+   "note": "熱蘇斯賽後：不太滿意、想多踢、在拉菲尼亞後面（轉述）"
+  },
+  {
+   "title": "Lamine Yamal availability news",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-23",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4613043/lamine-yamal-availability-news",
+   "note": "右腳踝輕微不適，為預防不踢 Sabah，預計趕得上下週日對拉科魯尼亞"
   },
   {
    "title": "PREVIEW | Sabah v Barça",
    "publisher": "FC Barcelona",
    "date": "2026-11-25",
    "url": "https://www.fcbarcelona.com/en/football/first-team/news/4613170/preview-sabah-v-fc-barcelona",
-   "note": "首次去亞塞拜然、3,970 公里、巴薩 4 場 9 分、亞馬爾留在巴塞隆納"
+   "note": "首次去亞塞拜然、3,970 公里、歐洲賽事最遠的一趟"
   },
   {
-   "title": "Deportivo de La Coruña - FC Barcelona",
-   "publisher": "FC Barcelona",
+   "title": "Sabah vs Barcelona Live: UEFA Champions League 2026/27 League phase",
+   "publisher": "UEFA",
    "date": "2026-11-25",
-   "url": "https://www.fcbarcelona.com/en/matches/138412/deportivo-de-la-coruna-fc-barcelona-la-liga-2026-2027",
-   "note": "西甲第 14 輪，ABANCA-Riazor，11 月 29 日 16:15（西班牙時間）；官網賽程頁同；頂層 next 依此填寫"
+   "url": "https://www.uefa.com/uefachampionsleague/match/2049642/",
+   "note": "比賽頁；內文動態載入，網頁讀取只見標題，比分以 ESPN 與俱樂部官網核對"
+  },
+  {
+   "title": "UEFA Champions League scoreboard, 25 November 2026",
+   "publisher": "ESPN",
+   "date": "2026-11-25",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261125",
+   "note": "當晚各場終場比分與進球、紅牌（01:45 與 04:00 兩批）；11 月 26 日 05:56 讀取，全部 FT"
+  },
+  {
+   "title": "Atlético Madrid v Viking, match summary",
+   "publisher": "ESPN",
+   "date": "2026-11-25",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary?event=401915291",
+   "note": "2 比 0；Sørloth 19'、Álvarez 24' 任意球；Falchener 補時紅牌"
+  },
+  {
+   "title": "Sporting CP v Manchester United, match summary",
+   "publisher": "ESPN",
+   "date": "2026-11-25",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary?event=401915373",
+   "note": "2 比 2；Bruno Fernandes 48'（點球）、50'；Suárez 33'（點球）、80'；Tielemans 補時第二黃"
+  },
+  {
+   "title": "Paris Saint-Germain v AS Roma, match summary",
+   "publisher": "ESPN",
+   "date": "2026-11-25",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary?event=401915374",
+   "note": "2 比 2；Hermoso 5'、Zabarnyi 31'、Dembélé 62'（點球）、Malen 78'（點球）"
+  },
+  {
+   "title": "Club Brugge vs Liverpool live",
+   "publisher": "Sky Sports",
+   "date": "2026-11-25",
+   "url": "https://www.skysports.com/football/live-blog/13616495/club-brugge-vs-liverpool-live-champions-league-lineups-match-updates-news-score-and-analysis",
+   "note": "利物浦 3 比 0 的第二來源（讀到的是賽中版本，Isak 第 82/83 分鐘；終場比分以 ESPN 為準）"
+  },
+  {
+   "title": "UEFA Champions League standings",
+   "publisher": "ESPN",
+   "date": "2026-11-26",
+   "url": "https://site.api.espn.com/apis/v2/sports/soccer/uefa.champions/standings",
+   "note": "05:20 與 05:58 兩次讀取，晚場全部終場後的表：皇馬 15、PSG 13、科莫 12（+14）、巴薩 12（+11，18 進 7 失，4 勝 1 敗）第 4、利物浦 12（+7）、貝蒂斯 12（+4）、阿森納 11、曼城 10（+5）第 8、Sporting 10（+4）、多特蒙德 10（+2）；05:20 的表曾只更新一部分，當時由終場比分自行加總，與 05:58 的表一致；前 8 名直接晉級依 ESPN 標註"
+  },
+  {
+   "title": "Spanish LaLiga standings",
+   "publisher": "ESPN",
+   "date": "2026-11-26",
+   "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+   "note": "巴薩 36、皇馬 33、馬競 31；13 場；11 月 26 日 05:20 讀取"
   },
   {
    "title": "FC Barcelona first-team schedule",
    "publisher": "FC Barcelona",
-   "date": "2026-11-25",
+   "date": "2026-11-26",
    "url": "https://www.fcbarcelona.com/en/football/first-team/schedule",
-   "note": "11 月 29 日 16:15 Riazor；12 月 2 日 21:30 馬競；11 月 26 日凌晨讀取"
+   "note": "11 月 29 日 16:15 拉科魯尼亞；12 月 2 日 21:30 馬競；12 月 5 日 21:00 塞爾塔；12 月 8 日 21:00 曼城（主場）；頁面註明皆為西班牙時間；11 月 26 日 05:20 讀取"
+  },
+  {
+   "title": "Deportivo de La Coruña - FC Barcelona",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-26",
+   "url": "https://www.fcbarcelona.com/en/matches/138412/deportivo-de-la-coruna-fc-barcelona-la-liga-2026-2027",
+   "note": "西甲第 14 輪，ABANCA-Riazor，11 月 29 日 16:15（西班牙時間）；頂層 next 依此填寫，11 月 26 日官網賽程頁核對無變動"
   },
   {
    "title": "Barcelona to appeal Fermín López's two-match ban - sources",
@@ -282,6 +468,27 @@
    "date": "2026-11-25",
    "url": "https://www.espn.com/soccer/story/_/id/50591588",
    "note": "停賽兩場；缺拉科魯尼亞與馬競；一位消息人士說球團打算上訴；紅牌經過；弗利克的玩笑；費爾明 16 場 9 球 7 助攻"
+  },
+  {
+   "title": "Dos partidos de suspensión a Fermín (Barcelona)",
+   "publisher": "EFE（Infobae 轉載）",
+   "date": "2026-11-25",
+   "url": "https://www.infobae.com/america/agencias/2026/11/25/dos-partidos-de-suspension-a-fermin-barcelona/",
+   "note": "西班牙足協紀律委員會 11 月 25 日判停賽兩場並罰款，規則第 127 條（向裁判抗議）；稿中沒寫能否上訴"
+  },
+  {
+   "title": "Major blow for Flick: Fermín López suspension officially confirmed after Villarreal red card",
+   "publisher": "Goal",
+   "date": "2026-11-25",
+   "url": "https://www.goal.com/en/news/major-blow-for-flick-fermin-lopez-suspension-officially-confirmed-after-villarreal-red-card/bltb7f7d6d834578aae",
+   "note": "處分公布後的稿子：球團對紅牌的申訴被駁回、罰最低兩場、再上訴空間不大；與 ESPN『球團打算上訴』並寫"
+  },
+  {
+   "title": "After \"don't mess with me\" row, Barcelona take legal action to protect Fermín",
+   "publisher": "Goal",
+   "date": "2026-11-24",
+   "url": "https://www.goal.com/en-in/news/after-don-t-mess-with-me-row-barcelona-take-legal-action-to-protect-fermin/blt5a687f944bcdb28d",
+   "note": "處分前的稿子；紅牌時間 74'；ESPN 寫他的原話是粗話、Goal 寫裁判報告的原話是『別惹我』，兩邊不同，正文只寫抗議"
   },
   {
    "title": "Real Madrid and Barcelona reconciliation fails: 10 minutes ignite legal battle over Negreira case",
@@ -302,28 +509,21 @@
    "publisher": "EFE（Infobae 轉載）",
    "date": "2026-11-24",
    "url": "https://infobae.com/espana/agencias/2026/11/24/barca-y-florentino-perez-citados-manana-en-acto-de-conciliacion-por-demanda-por-calumnias",
-   "note": "5 月 12 日公開談話；調解是提告前的步驟；案子是巴薩對佩雷斯個人；佩雷斯可派代理人"
+   "note": "調解是提告前的步驟；案子是巴薩對佩雷斯個人；佩雷斯可派代理人"
   },
   {
    "title": "Laporta opens fire on Perez: Obsessed with Barcelona, we will demand royalties from him!",
    "publisher": "Goal",
    "date": "2026-11-25",
    "url": "https://www.goal.com/en/news/laporta-opens-fire-on-perez-obsessed-with-barcelona-we-will-demand-royalties-from-him/blt70d7b85030690a31",
-   "note": "拉波爾塔在巴庫的談話（英文轉述）：調解是提刑事告訴前的前置步驟；版稅"
+   "note": "拉波爾塔在巴庫的談話（英文轉述）：要求更正、不更正就繼續走法律途徑；版稅。另一篇 Goal 稿沒提刑事，故『調解是刑事告訴前的一步』只歸給 EFE"
   },
   {
-   "title": "Spanish LaLiga standings",
-   "publisher": "ESPN",
-   "date": "2026-11-26",
-   "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
-   "note": "巴薩 36、皇馬 33、馬競 31；11 月 26 日凌晨讀取"
-  },
-  {
-   "title": "UEFA Champions League standings",
-   "publisher": "ESPN",
-   "date": "2026-11-26",
-   "url": "https://site.api.espn.com/apis/v2/sports/soccer/uefa.champions/standings",
-   "note": "皇馬 15 分第 1；阿森納 11、曼城與多特 10、巴薩 9（賽前）；11 月 26 日凌晨讀取"
+   "title": "New legal escalation between Barcelona and Real Madrid: will Perez back down?",
+   "publisher": "Goal（轉述 Mundo Deportivo）",
+   "date": "2026-11-24",
+   "url": "https://www.goal.com/en/news/new-legal-escalation-between-barcelona-and-real-madrid-will-perez-back-down/bltc7ccd79288ffe861",
+   "note": "巴薩 6 月 12 日提出調解；佩雷斯 5 月 12 日記者會與隔天電視訪談"
   },
   {
    "title": "Bellingham credits Mourinho 'full stop' for stellar form after Madrid stunner",
@@ -380,13 +580,6 @@
    "date": "2026-11-24",
    "url": "https://www.espn.com/soccer/match/_/gameId/401915297/real-betis-slovan-bratislava",
    "note": "貝蒂斯 2 比 0；Cucho Hernández 第 43、57 分鐘頭球（比賽紀錄取自 summary API event=401915297）"
-  },
-  {
-   "title": "Champions League live updates",
-   "publisher": "ESPN",
-   "date": "2026-11-25",
-   "url": "https://www.espn.com/soccer/story/_/id/50574274",
-   "note": "11 月 25 日當日歐冠場次"
   },
   {
    "title": "File:Anthony Gordon 18 England v Ghana at 2026 Fifa World Cup by YantsImages 01.jpg",
