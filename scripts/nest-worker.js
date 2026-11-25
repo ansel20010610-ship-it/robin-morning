@@ -6,11 +6,12 @@
 //   2. Workers → robin-nest → Settings → Bindings → KV namespace: variable name NEST, create a namespace `robin-nest`.
 //      Settings → Variables and Secrets, type Secret: OWNER_YARDS (the owner's yard code) and LETTERS_KEY (a long random
 //      string, the same one the letters routine has); without them the owner's yard has no letters, asking, diary or credits.
+//      TOGETHER (a date, YYYY-MM-DD): the day the owner's yard counts 在一起第幾天 from; without it the 後院 page shows no count.
 //   3. Its address (https://robin-nest.<account>.workers.dev) goes into content/config.json as `"nest": {"api": "…"}`
 //      and into index.html's Content-Security-Policy `connect-src`.
 //
 // One nest is one key (its invite code). POST /{code} with {member: {id, name}, feeds: [{d, w, k}], pet?: {name, p}} merges
-// the member, the feeds (one bite per member per article) and the bird's name, and answers the whole nest {members, feeds, pet}. Nothing personal is
+// the member, the feeds (one bite per member per article) and the bird's name, and answers the whole nest {members, feeds, pet} (the owner's yard also `together`, see route). Nothing personal is
 // kept: a nest's members are the names its readers chose, their ids random strings. Anyone holding the code can read
 // and feed the nest — the code is the whole secret, which is what an invite code is for.
 const CODE = /^NEST-[A-Z2-9]{4}-[A-Z2-9]{4}$/;
@@ -382,5 +383,8 @@ async function route(req, env) {
     }
     if (nest.feeds.length > MAX_FEEDS) nest.feeds = nest.feeds.slice(-MAX_FEEDS);
     if (changed) await env.NEST.put(code, JSON.stringify(nest));
-    return json(nest);
+    // 在一起第幾天 (2026-11-25): the day comes from the Worker secret TOGETHER, never from this public file, and goes to the
+    // owner's yards only, in this answer — not kept in the nest, and the read-only GET above never carries it
+    const t = String(env.TOGETHER || "").trim(), together = /^\d{4}-\d{2}-\d{2}$/.test(t) && !Number.isNaN(Date.parse(t)) && !notOwner(env, code, "") ? t : "";
+    return json(together ? { ...nest, together } : nest);
 }

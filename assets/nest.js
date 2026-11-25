@@ -5,7 +5,7 @@
 // 發邀請碼，讀一篇就可以餵知更鳥; the same evening it was 巢, then 後院 (「巢這個名字改一下」).
 //
 // State lives in rm.nest: { code, me, name, members: {id: name}, feeds: [{d, w, k}], pending: [...], pet: {name, p},
-// petDirty, seen, since, synced } — d the day (Taiwan), w the member who fed, k the article (date/column). The bird's
+// petDirty, seen, since, synced, together } — d the day (Taiwan), w the member who fed, k the article (date/column). The bird's
 // whole condition is computed from `feeds`, nothing else is stored. Sharing needs a tiny store the phones can both
 // reach (scripts/nest-worker.js, a Cloudflare Worker on the free tier): with config.json `nest.api` set, syncNest()
 // posts what this phone fed (and the bird's name when it changed here) and takes back the yard's members, every feed
@@ -1078,8 +1078,11 @@ const keepVisit = (m) => { try { sessionStorage.setItem(VISIT_KEY, m ? m.id : "-
 export function renderNest(el, api, afterSync = false) {
   const n = nest();
   if (!n) { renderNestSettings(el, api); return; }
-  const head = `<header class="page-title"><h1>後院</h1><span class="de">Hinterhof</span></header>`;
   const st = nestState(n), today = twNow().date, pet = st.pet, sea = yardOf(st), sky = yardSky(st), gn = gnState(n);
+  // 在一起第幾天 (2026-11-25): the day the store hands the owner's yard (nest-worker.js TOGETHER), counted in Taiwan days with
+  // that day itself the first; at the head's right, out of the flow, so the page is as tall with it as without
+  const days = /^\d{4}-\d{2}-\d{2}$/.test(n.together || "") && n.together <= today ? Math.round((Date.parse(today) - Date.parse(n.together)) / 864e5) + 1 : 0;
+  const head = `<header class="page-title"><h1>後院</h1><span class="de">Hinterhof</span>${days ? `<p class="nest-together"><span>在一起</span><b><small>第</small>${days}<small>天</small></b></p>` : ""}</header>`;
   const mc = { si: st.si, sea, sick: Boolean(st.sick), away: Boolean(st.away), hiding: st.hiding || "", mood: st.mood || "", night: sky.night, wet: ["rain", "storm", "fog"].includes(sky.kind) };
   if (!inVisit) { // a new visit — unless the page was reloaded right here, on #/nest
     const kept = bootKeep && bootHash === "#/nest" ? keptVisit() : undefined;
@@ -1736,6 +1739,7 @@ export function syncNest(api) {
       for (const f of cur.feeds) if (/^\d{4}-\d{2}-\d{2}$/.test(f.d) && (!cur.since || f.d < cur.since)) cur.since = f.d; // a joining phone's since is its join day; the yard opened by its first bite at the latest
       if (body.pet && cur.petDirty && JSON.stringify(cur.pet) === JSON.stringify(body.pet)) cur.petDirty = false; // unless renamed again meanwhile
       if (!cur.petDirty && data.pet && typeof data.pet === "object") cur.pet = { name: String(data.pet.name || "").slice(0, 12), p: PRONOUNS.includes(data.pet.p) ? data.pet.p : "牠" };
+      if (typeof data.together === "string" && /^\d{4}-\d{2}-\d{2}$/.test(data.together)) cur.together = data.together; else delete cur.together; // 在一起第幾天: the store's word, set or gone
       cur.synced = Date.now();
       save(cur);
       return true;

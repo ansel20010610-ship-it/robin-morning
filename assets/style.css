@@ -2897,6 +2897,13 @@ details.band .svl { margin: 0 0 10px; }
 .nest-page .nest-to-set { margin: 22px 0 0; text-align: right; font-family: var(--sans); font-size: 12px; letter-spacing: .12em; font-weight: 600; }
 .nest-page .nest-to-set a { color: var(--gold-ink); text-decoration: none; }
 .nest-page .nest-to-set .de { font-family: var(--latin); font-style: italic; font-weight: 500; letter-spacing: .02em; font-size: 13px; color: var(--gold); margin-left: 6px; }
+/* 在一起第幾天 (nest.js renderNest): at the right of the 後院 head, out of the flow (.page-title is position: relative), so
+   the head is as tall with it as without — a small gold 在一起 over a large count */
+.nest-page .nest-together { position: absolute; right: 0; bottom: 6px; margin: 0; text-align: right; line-height: 1; }
+.nest-page .nest-together span { display: block; margin: 0 -.2em 6px 0; font: 500 12px/1 var(--sans); letter-spacing: .2em; color: var(--gold-ink); }
+.nest-page .nest-together b { font: 700 34px/1 var(--serif); color: var(--ink); font-variant-numeric: lining-nums; }
+.nest-page .nest-together small { font: 500 14px/1 var(--serif); color: var(--ink-2); margin: 0 4px; }
+.nest-page .nest-together small:last-child { margin-right: 0; }
 
 /* 餵食通知 (nest.js feedNotice): a card above the nav when a piece just read fed the bird — the robin hopping in at the
    left, the name, one line, what the next bite is for. Paper-2 on a hairline, a gold rule on top like the shelf cards;
