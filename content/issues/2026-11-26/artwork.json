@@ -8,7 +8,7 @@
   "name_zh": "死蔭的幽谷",
   "form": "timeline",
   "voice": "appraiser",
-  "updated_at": "2026-11-26T01:59:00+08:00",
+  "updated_at": "2026-11-26T02:10:00+08:00",
   "spoiler": null,
   "disclaimer": null,
   "hero": {
@@ -18,7 +18,7 @@
     "src_large": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/The_valley_of_the_shadow_of_death%2C_35546u.tif/lossy-page1-3840px-The_valley_of_the_shadow_of_death%2C_35546u.tif.jpg",
     "width": 1280,
     "height": 1039,
-    "alt": "一張泛黃的老照片，裱在灰白卡紙上。畫面沒有任何人：一條土路從前景往遠方彎上山脊，兩側是布滿碎石的山坡，天空灰白，佔了上方將近一半。路左邊有一道溝，溝裡從前景到中景堆滿圓形砲彈；畫面右半的路面上也散著幾十顆砲彈，越遠越小。卡紙左緣有手寫的館藏編號。",
+    "alt": "一張泛黃的老照片，裱在灰白卡紙上。畫面沒有任何人：一條土路從前景往遠方彎上山脊，兩側是布滿碎石的山坡，天空灰白，佔了上方將近一半。路左邊有一道溝，溝裡從前景到中景堆滿圓形砲彈；畫面右半的路面上也散著一顆一顆的砲彈，越遠越小。卡紙左緣有手寫的館藏編號。",
     "caption": "羅傑・芬頓，《死蔭的幽谷》，1855 年 4 月 23 日下午攝於克里米亞塞瓦斯托波爾城外英軍陣地後方的山溝。路面上散著砲彈的這一版是後來最常被複製的一張。鹽紙相片，28 × 36 公分，美國國會圖書館藏（1944 年購入）。",
     "credit": "Roger Fenton；美國國會圖書館 LC-DIG-ppmsca-35546（Wikimedia Commons）",
     "license": "Public domain",
@@ -29,11 +29,11 @@
   "body": [
     {
       "type": "p",
-      "text": "社長，這張照片有兩個版本。1855 年 4 月 23 日下午，英國攝影師**羅傑・芬頓**把相機架在同一個位置，拍了兩次。兩張的山、路、天空都一樣，只差在路面：一張空著，一張散著幾十顆砲彈。"
+      "text": "這張照片有兩個版本。1855 年 4 月 23 日下午，英國攝影師**羅傑・芬頓**把相機架在同一個位置，拍了兩次。兩張的山、路、天空都一樣，最大的差別在路面：一張空著，一張散著砲彈。"
     },
     {
       "type": "p",
-      "text": "所以它常被叫作最早的「擺拍」照片之一。擺拍，指拍照的人先動過現場再拍。"
+      "text": "所以它常被叫作最早的「擺拍」照片之一。擺拍，指拍照的人先動過現場再拍。攝影才剛用來拍戰爭，現場就可能被動過。"
     },
     {
       "type": "p",
@@ -63,9 +63,9 @@
           "note": "出版商阿格紐出錢；他在克里米亞待不到四個月，拍了 360 張。"
         },
         {
-          "when": "1855.4.4",
-          "label": "第一次走進「死亡之谷」",
-          "note": "4 月 4–5 日的信：砲彈多到走路一定會踩到；一顆砲彈砸在前方岩石上，兩人沒再往前。"
+          "when": "1855.4.4–5",
+          "label": "走進「死亡之谷」",
+          "note": "4 月 4–5 日的信：砲彈多到走路一定會踩到；一顆砲彈砸在前方岩石上，兩人不再往那個方向走。"
         },
         {
           "when": "1855.4.21",
@@ -85,7 +85,7 @@
         {
           "when": "1855.4.23",
           "label": "一個半小時，兩張照片",
-          "note": "信裡寫「got 2 good pictures」。一張路面空著，一張路上有砲彈。"
+          "note": "信裡寫「got 2 good pictures」。同一機位的兩個版本都記為這天下午拍的。"
         },
         {
           "when": "1855.4.24",
@@ -95,7 +95,7 @@
         {
           "when": "1855.9.20",
           "label": "倫敦開展",
-          "note": "芬頓 312 張克里米亞照片在倫敦展出；塞瓦斯托波爾 11 天前已陷落。"
+          "note": "芬頓的克里米亞照片在倫敦展出；塞瓦斯托波爾 11 天前已陷落。"
         },
         {
           "when": "1856.1.1",
@@ -215,7 +215,7 @@
         0.16
       ],
       "position": "畫面右半，中景的路面",
-      "caption": "有砲彈的這一版：右邊路面上散著幾十顆砲彈，一顆一顆分開，越往遠處越小。"
+      "caption": "有砲彈的這一版：右邊路面上的砲彈一顆一顆分開，越往遠處越小。"
     },
     {
       "type": "figure",
@@ -257,7 +257,7 @@
       "type": "quote",
       "text": "……芬頓在同一個三腳架位置拍了兩次：這張名作的第一版裡，砲彈密密落在路左邊的地上；但在拍第二張——總是被複製的那張——之前，他監督人把砲彈撒到路面上。",
       "original": "Fenton made two exposures from the same tripod position: in the first version of the celebrated photo he was to call “The Valley of the Shadow of Death”(despite the title it was not across this landscape that the Light Brigade made its doomed charge), the cannonballs are thick on the ground to the left of the road, but before taking the second picture — the one that is always reproduced — he oversaw the scattering of the cannonballs on the road itself.",
-      "cite": "蘇珊・桑塔格，《旁觀他人之痛苦》（Regarding the Pain of Others，2003），轉引自 The Public Domain Review；中文為本文自譯，譯文省略原文括號內「這裡不是輕騎兵衝鋒的地方」一句"
+      "cite": "蘇珊・桑塔格，《旁觀他人之痛苦》（Regarding the Pain of Others，2003），轉引自 The Public Domain Review；中文為本文自譯，譯文省略「後來他把它稱作《死蔭的幽谷》」及括號內「這裡不是輕騎兵衝鋒的地方」"
     },
     {
       "type": "p",
@@ -265,11 +265,11 @@
     },
     {
       "type": "p",
-      "text": "解開的是他的朋友、光學工程師珀賽爾。他把兩張來回切換，發現左邊山坡上有五顆小石頭換了位置，還給它們取了名字：Fred、George、Oswald、Lionel、Marmaduke。空路那張，石頭高一點；有砲彈那張，石頭往下移了大約八、九英寸。石頭只會往下滾，所以**有砲彈的那張是後拍的**。"
+      "text": "解開的是他的朋友、光學工程師珀賽爾。他把兩張來回切換，發現左邊山坡上有五顆小石頭換了位置，還給它們取了名字：Fred、George、Oswald、Lionel、Marmaduke。空路那張，石頭高一點；有砲彈那張，石頭往下移了大約八、九英寸。照莫里斯和珀賽爾的推論，坡上的石頭被碰動只會往下掉，不會自己爬回去，所以**有砲彈的那張是後拍的**。"
     },
     {
       "type": "p",
-      "text": "石頭只說明先後。砲彈是誰搬的、為什麼搬，莫里斯自己也說不知道。他說桑塔格是對的，只是「For the wrong reasons」。"
+      "text": "石頭只說明先後。為什麼搬，莫里斯說他不知道芬頓怎麼想。他說桑塔格是對的，只是「For the wrong reasons」。"
     },
     {
       "type": "h",
@@ -282,7 +282,7 @@
     },
     {
       "type": "p",
-      "text": "下次看到它，先看右半邊路上的砲彈，再看左邊山坡的碎石。在有砲彈的那張裡，那五顆小石頭低了大約八、九英寸。"
+      "text": "社長下次看到它，先看右半邊路上的砲彈，再看左邊山坡的碎石。在有砲彈的那張裡，那五顆小石頭低了大約八、九英寸。"
     },
     {
       "type": "facts",
@@ -342,7 +342,7 @@
       "publisher": "Library of Congress",
       "date": "2026-11-25",
       "url": "https://www.loc.gov/collections/fenton-crimean-war-photographs/about-this-collection/",
-      "note": "查閱日期。酒商舊貨車改暗房；搭 Hecla；1855 年 3 月 8 日到 6 月 26 日、360 張；不拍戰鬥；9 月 9 日塞城陷落；9 月 20 日倫敦展 312 張；1855 年 11 月至 1856 年 4 月 5 日發行 337 張；1856 年 12 月拍賣庫存；1944 年購入 263 張；1862 年放棄攝影。"
+      "note": "查閱日期。酒商舊貨車改暗房；搭 Hecla；1855 年 3 月 8 日到 6 月 26 日、360 張；不拍戰鬥；9 月 9 日塞城陷落；9 月 20 日倫敦展；1855 年 11 月至 1856 年 4 月 5 日發行 337 張；1856 年 12 月拍賣庫存；1944 年購入 263 張；1862 年放棄攝影。"
     },
     {
       "title": "The Valley of the Shadow of Death（1959.611.17）",
