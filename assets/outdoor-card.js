@@ -2,15 +2,17 @@
 // the middle of the screen (丙車票, chosen 2026-11-24; style.css .vor-t). Today's paper only — the latest issue, dated
 // today, from 07:30 — and neither an issue opened from 往期 nor ?preview: it comes up by itself once per issue on each
 // device (rm.outdoor.shown, the last 60 dates, as rm.opened), when the masthead's entrance, or the first opening's press
-// run, has played. Closed, a tap on the whole 今日氣象 box brings it back (丙保高): the box's heading row carries a gold
-// › at its right, after a short red word on a day with a warning or a closure (強風特報 ›, 停班停課 ›), and the box keeps
-// its height to the point. The card is a <dialog> in the top layer, so neither opening nor closing it moves the front
+// run, has played — on a rainy morning's first opening, once the bag is off and the stamp has come down (rainbag.js).
+// Closed, a tap on the whole 今日氣象 box brings it back (丙保高): the box's heading row carries a gold › at its right,
+// after a short red word on a day with a warning or a closure (強風特報 ›, 停班停課 ›), and the box keeps its height to
+// the point. The card is a <dialog> in the top layer, so neither opening nor closing it moves the front
 // page (the iPhone has no scroll anchoring). Whatever is malformed — the data, a field, this code — there is no card
 // and the weather box stays as it always was.
 import { esc, store, roman, ROBIN_PATHS } from "./util.js";
 import { calm } from "./motion.js";
 import { weatherFacts, keptWeather } from "./wetter.js";
 import { fetchOutdoor, outdoorLines, closureLine } from "./outdoor.js";
+import { bagGone } from "./rainbag.js";
 
 // The air station the card reads, by its name in content/outdoor.json (chosen 2026-11-24): 臺灣大道, the traffic station
 // nearest the paper's weather point (2.1 km), whose numbers run higher than the general stations'.
@@ -220,10 +222,12 @@ export function outdoorFront({ box, head, issue, weather, pop }) {
     const wx = Promise.resolve(weather).then((d) => { lastWx = d || null; }, () => {});
     const both = Promise.all([data, wx]).then(() => { if (my === seq && box.isConnected) draw(); });
     if (!pop || shownFor(issue.date)) return;
-    Promise.all([both, entrance(head)]).then(() => {
-      // the page has moved on (a redraw, another page), the app is in the background, a sheet or a picture is open, or
-      // the evening letter has the keyboard: not now — the next draw of the front page tries again
-      if (my !== seq || !box.isConnected || document.hidden || document.querySelector("dialog[open]") || shownFor(issue.date)) return;
+    // On a rainy morning's first opening the paper comes in a bag (rainbag.js): the card waits until the bag is off,
+    // and then for the masthead as on any other morning — the Druckfrisch stamp, let down as the bag came off, first.
+    Promise.all([both, bagGone().then(() => entrance(head))]).then(() => {
+      // the page has moved on (a redraw, another page), the app is in the background, a sheet or a picture is open, the
+      // rain bag is on, or the evening letter has the keyboard: not now — the next draw of the front page tries again
+      if (my !== seq || !box.isConnected || document.hidden || document.querySelector("dialog[open], .rbag") || shownFor(issue.date)) return;
       if (/^(INPUT|TEXTAREA)$/.test(document.activeElement?.tagName || "")) return;
       if (openCard(issue)) markShown(issue.date);
     }).catch(() => { /* no card */ });

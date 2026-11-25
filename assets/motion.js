@@ -164,6 +164,7 @@ export function pressRun(head) {
     page?.classList.remove("press"); // the sheet is flat again: sticky bars work as before
     head.querySelector(".roller")?.remove();
     if (!head.isConnected) return; // the reader has already gone elsewhere
+    if (!head.classList.contains("fresh")) return; // let go already: the rain bag (rainbag.js) played the entrance under it
     head.classList.remove("fresh");
     mastheadShow(head);
   }, 1500);

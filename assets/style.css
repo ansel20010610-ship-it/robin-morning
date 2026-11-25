@@ -519,6 +519,59 @@ dialog.vor-t[open] .lift { animation: vt-in .35s cubic-bezier(.2,.7,.2,1) both; 
 .masthead .roller { position: absolute; left: 0; right: 0; top: -1px; height: 3px; background: var(--ink); transform-origin: 0 50%; transform: scaleX(0); z-index: 3; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .masthead .stamp-date { mix-blend-mode: normal; } }
 :root[data-theme="dark"] .masthead .stamp-date { mix-blend-mode: normal; }
+/* 雨天套袋 (rainbag.js): while the bag is on the stamp waits (.bagged); taken off, .unbag lets it come down (the delays
+   are with the press run's motion below) */
+.masthead.bagged .stamp-date { visibility: hidden; }
+.masthead.bagged .stamp-date, .masthead.bagged .stamp-date .echo { animation: none; }
+
+/* 雨天套袋 (rainbag.js): a fixed layer under the tab bar (30), so the page under it keeps its height and its place. The
+   film, the fold and the drops are painted once; the pull moves them by transform (and the fold by --open, 0 → 1). */
+.rbag { --rb-film: 1; position: fixed; inset: 0; z-index: 28; overflow: hidden; touch-action: none; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; outline: none; }
+/* reduced motion only (rainbag.js): a keyframe fade, since the reduced-motion rule further down stops every transition */
+.rbag.fade { animation: rb-fade .2s ease both; }
+@keyframes rb-fade { to { opacity: 0; } }
+.rbag .rb-body { position: absolute; inset: 0; will-change: transform; }
+.rbag .rb-drops { position: absolute; left: 0; top: 0; z-index: 2; }
+/* the film: a little cooler and whiter than the paper; the bag's folded sides catch the light; a glossy streak with a
+   faint rainbow at its edge and a broad soft sheen run across it; two long creases */
+.rbag .rb-film { position: absolute; inset: 0; opacity: var(--rb-film); background:
+  linear-gradient(90deg, rgba(70,58,40,.16) 0, rgba(255,255,255,.85) 1.5px, rgba(255,255,255,.3) 4px, rgba(255,255,255,0) 16px, rgba(255,255,255,0) calc(100% - 16px), rgba(255,255,255,.3) calc(100% - 4px), rgba(255,255,255,.85) calc(100% - 1.5px), rgba(70,58,40,.16) 100%),
+  linear-gradient(116deg, rgba(255,255,255,0) 9%, rgba(255,255,255,.16) 13%, rgba(255,255,255,.5) 15.2%, rgba(255,255,255,.2) 16.4%, rgba(255,255,255,.07) 21%, rgba(255,255,255,0) 26%),
+  linear-gradient(116deg, rgba(0,0,0,0) 15.5%, rgba(160,195,255,.13) 17.5%, rgba(255,205,170,.1) 20%, rgba(0,0,0,0) 23%),
+  linear-gradient(116deg, rgba(255,255,255,0) 50%, rgba(255,255,255,.18) 58%, rgba(255,255,255,.26) 60%, rgba(255,255,255,0) 67%),
+  linear-gradient(97deg, rgba(0,0,0,0) 71%, rgba(255,255,255,.3) 71.5%, rgba(110,92,64,.09) 72.3%, rgba(0,0,0,0) 73.4%),
+  linear-gradient(84deg, rgba(0,0,0,0) 30%, rgba(110,92,64,.07) 30.6%, rgba(255,255,255,.24) 31.3%, rgba(0,0,0,0) 32.2%),
+  linear-gradient(180deg, rgba(240,246,255,.1), rgba(240,246,255,.04) 45%, rgba(240,246,255,.08)); }
+/* the mouth folded over the front, its free edge shut with the sticker on the right; both as far down as the masthead
+   stands under the phone's status bar (.masthead padding-top) */
+.rbag .rb-flap { position: absolute; left: 0; right: 0; top: 0; height: calc(70px + env(safe-area-inset-top)); z-index: 1; transform-origin: 50% 0;
+  opacity: calc((1 - var(--open, 0)) * var(--rb-film)); transform: translateY(calc(var(--open, 0) * -30px)) scaleY(calc(1 - var(--open, 0) * .6));
+  background: linear-gradient(180deg, rgba(255,255,255,.9) 0 1.5px, rgba(255,255,255,.46) 3px, rgba(244,248,255,.42) 40%, rgba(244,248,255,.5) 86%, rgba(255,255,255,.85) calc(100% - 2px), #fff);
+  box-shadow: 0 1px 0 rgba(96,80,56,.18), 0 2px 4px rgba(70,54,32,.16); }
+.rbag .rb-flap::after { content: ""; position: absolute; inset: 0; background: linear-gradient(104deg, rgba(255,255,255,0) 16%, rgba(255,255,255,.4) 22%, rgba(255,255,255,0) 28%, rgba(255,255,255,0) 60%, rgba(255,255,255,.26) 65%, rgba(255,255,255,0) 70%); }
+/* the open mouth: the front edge of the film and the back layer a little above it, shown as the fold lifts */
+.rbag .rb-mouth { position: absolute; left: 0; right: 0; top: -9px; height: 10px; opacity: calc(var(--open, 0) * var(--rb-film));
+  background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.8) 1px, rgba(240,246,255,.24) 2px, rgba(240,246,255,.24) 7px, rgba(70,54,32,.12) 8px, rgba(255,255,255,.95) 9px, rgba(255,255,255,.45) 10px); }
+/* the paper's round sticker, the same wine and gold in both themes, with its cream tongue to pull by */
+.rbag .rb-sticker { position: absolute; right: 34px; top: calc(41px + env(safe-area-inset-top)); z-index: 3; width: 58px; height: 58px; border-radius: 50%; transform-origin: 50% 20%; box-shadow: 0 1.5px 2px rgba(50,14,22,.3); }
+.rbag .rb-sticker svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-7deg); }
+.rbag .rb-sticker .disc { fill: #6E2536; }
+.rbag .rb-sticker .ring { fill: none; stroke: #C9A65A; stroke-width: 1; }
+.rbag .rb-sticker .ring.thin { stroke-width: .5; stroke-opacity: .8; }
+.rbag .rb-sticker .arc { font: 600 5.6px var(--sans); letter-spacing: .24em; fill: #E9D2A6; text-anchor: middle; }
+.rbag .rb-sticker .no { font: 600 5.6px "Cormorant Garamond", serif; letter-spacing: .08em; fill: #E9D2A6; text-anchor: middle; }
+.rbag .rb-sticker .bird :is(.e-ink, .e-robin, .e-gold) { fill: #F4E6D0; }
+.rbag .rb-sticker .bird .e-paper { fill: #6E2536; }
+.rbag .rb-sticker .bird :is(.e-wing, .e-legs) { fill: none; stroke: #6E2536; }
+.rbag .rb-sticker::after { content: ""; position: absolute; inset: 3px 9px 26px 7px; border-radius: 50%; background: linear-gradient(160deg, rgba(255,255,255,.34), rgba(255,255,255,0) 60%); pointer-events: none; }
+.rbag .rb-sticker .tongue { position: absolute; left: 50%; top: 53px; width: 22px; height: 16px; margin-left: -9px; border-radius: 0 0 6px 6px; transform: rotate(-7deg); transform-origin: 50% -26px;
+  background: linear-gradient(180deg, #e3d2b5, #F3E7D2 40%, #efe1c8); box-shadow: 0 1.5px 2px rgba(50,30,14,.22); font: 700 10px/16px var(--serif); text-align: center; color: #6E2536; }
+.rbag.nudge .rb-sticker { animation: rb-nudge .6s cubic-bezier(.3,.7,.3,1); }
+@keyframes rb-nudge { 30% { translate: 0 8px; } 60% { translate: 0 -2px; } }
+/* dark: the same bag, its white film and fold at half strength so they read as clear plastic on the dark paper, not as a
+   milky veil (the drops take their dark inks in rainbag.js) */
+:root[data-theme="dark"] .rbag { --rb-film: .5; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .rbag { --rb-film: .5; } }
 
 .status {
   margin: 18px 0 0; padding: 12px 14px; border: 1px solid var(--rule); background: var(--paper-2);
@@ -1426,6 +1479,8 @@ img.img-off { visibility: hidden; }
   .masthead.fresh .roller { animation: line-run 1.1s .1s cubic-bezier(.3,.7,.2,1) both; }
   .masthead .stamp-date { animation: stamp .55s 1s cubic-bezier(.2,1.5,.4,1) both; }
   .masthead .stamp-date .echo { animation: wave 1.2s 1.3s cubic-bezier(.15,.7,.3,1) both; }
+  .masthead.unbag .stamp-date { animation-delay: .1s; } /* 雨天套袋: the bag just taken off, the stamp comes down at once */
+  .masthead.unbag .stamp-date .echo { animation-delay: .4s; }
   .masthead.fresh :is(.crest, h1, .latin, .dateline, .ferien, .checker, .epigraph, .ear), .masthead.fresh :is(.crest, h1, .epigraph) *, .masthead.fresh h1::after, .masthead.fresh .epigraph span::after { animation-play-state: paused; }
 
   /* The seal comes down when you reach the end — from large and turned to flat — and the card dips once under the

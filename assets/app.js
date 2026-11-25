@@ -14,6 +14,7 @@ import { fetchWeather, weatherHtml, keptWeather } from "./wetter.js";
 import { skyLine, skyRow, eveningRain, ferienLine } from "./almanac.js";
 import { boerseBox, fillBoerse } from "./boerse.js";
 import { outdoorFront, closeOutdoor } from "./outdoor-card.js";
+import { rainBag, dropBag } from "./rainbag.js";
 import { stampHtml, milestoneOf, keepsakeOf } from "./stamps.js";
 import { feastOf, churchSeason } from "./feasts.js";
 import { redDay, weekendDay, dayPart, carryOf, carried, goldOf, moonPhase, moonSvg, windowSun, lightWindow, creaseHtml, paperAge, tintPaper, paperTone } from "./masthead.js";
@@ -1096,6 +1097,9 @@ function viewFront(dateParam) {
   if (evening) letterForm(main.querySelector(".night-letter-slot"), true);
   fitEar(main);
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
+  // 雨天套袋 (rainbag.js): today's paper, opened for the first time on a rainy morning, comes in a plastic bag; asked
+  // here with the forecast fillWeather is already fetching, and before the 出門前 card, which waits for the bag
+  if (fresh && todays(issue)) rainBag({ head: main.querySelector(".masthead"), weather: wx, no: issue.no });
   // 出門前 (outdoor-card.js): today's paper only; it comes up by itself once per issue, not from 往期 nor under ?preview
   if (todays(issue)) outdoorFront({ box: main.querySelector(".wrap > .wetter"), head: main.querySelector(".masthead"), issue, weather: wx, pop: !dateParam && !isPreview() });
   if (erst) setTimeout(() => goldRain(main.querySelector(".masthead.erst .crest")), fresh ? 2200 : 700);
@@ -2994,6 +2998,7 @@ async function route(ev) {
   closeOutdoor(); // nor the 出門前 card
   document.title = S.cfg.title;
   const h = location.hash || "#/";
+  if (h !== "#/") dropBag(); // nor the rain bag (rainbag.js) on another page: the tab bar is above it, and a bag left unopened is gone for the day (the front page drawn again keeps it)
   enteredFront = shownHash !== h;
   cameFrom = shownHash || "";
   const leaving = isDetail(shownHash); // coming out of an article or an event
@@ -3273,7 +3278,7 @@ async function boot() {
   // iOS keeps a home-screen app's page alive in the background, so opening it again shows the page as it was left;
   // back on the front page after a while, still near the top, it is drawn afresh so the masthead and the cards play again.
   document.addEventListener("visibilitychange", async () => {
-    if (document.hidden) { hiddenAt = Date.now(); return; }
+    if (document.hidden) { hiddenAt = Date.now(); dropBag(); return; } // a rain bag left unopened is not there when the reader comes back (rainbag.js)
     agePaper();
     clearNotices();
     const replay = hiddenAt && Date.now() - hiddenAt > 30 * 1000 && (location.hash || "#/") === "#/" && scrollY < 400 && !typing();
