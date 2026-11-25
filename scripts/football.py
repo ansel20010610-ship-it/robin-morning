@@ -4,7 +4,7 @@ reads 外電｜足球 and the title tapped is the list shown). Run at every depl
 
 Two feeds, each giving at most its share of its newest items from the last 26 hours (as wire.py): BBC Sport's football
 page and Mundo Deportivo's FC Barcelona page. Live-text pages are left out (a title with the word en directo, en vivo,
-minuto a minuto or live, or /live/ in the address). Each title, and the first sentence of its description, is put into
+minuto a minuto or live, or /live/, directo, en-vivo or minuto-a-minuto in the address). Each title, and the first sentence of its description, is put into
 Taiwan Traditional Chinese by Claude Sonnet 5.5 (PROMPT below), the newest PER_RUN at a time, and only when may_spend()
 finds no reason against it. The previous file is where translations are kept (publish.yml restores it from the Actions
 cache, where each deploy leaves it, and only without one fetches the live copy): an item whose address is already in it
@@ -53,6 +53,9 @@ SOURCES = [
 MAX_ITEMS = 12
 WINDOW = dt.timedelta(hours=26)  # as wire.py: the night's football is still news at 07:30
 LIVE = re.compile(r"\b(?:en directo|en vivo|minuto a minuto|live)\b", re.I)  # whole words: Liverpool is not live
+# The address too: a live page keeps its address when its title changes at the whistle (2026-11-26 02:30: the Sabah
+# match page, retitled, went through on its title alone).
+LIVE_URL = re.compile(r"/live/|[/-](?:directo|en-vivo|minuto-a-minuto)(?=[/.-]|$)", re.I)
 PER_RUN = 8         # items sent in one run at most, the newest first; the rest wait for the next half hour
 GIVE_UP = 2         # failed tries after which an item is not sent again
 T0 = time.monotonic()   # when this run began
@@ -73,7 +76,7 @@ PROMPT = """你是台灣一份私人晨報的外電編譯，把英文、西班�
 - title：一行，最多 28 字，直述「誰、怎麼了」。原標題故弄玄虛（只說「下一步」「表態」「預感成真」之類）時，用 desc 裡的事實寫成直述句。不加原文沒有的事實、評語或驚嘆號。
 - lead：desc 第一句的意思，最多 60 字；desc 空白就給空字串。desc 若在句中被截斷，只寫確定的部分，不要猜後面。
 - 不寫相對時間（今天、今晚、明天、昨天、本週、下週末、今天下午等）：原文的時間是西班牙或英國當地說法，讀者在台灣。原文有明確日期才寫「11 月 29 日」這種寫法，否則省略。
-- 用台灣體育媒體的通行寫法：巴薩、皇馬、馬競、曼聯、曼城、利物浦、兵工廠、切爾西、熱刺、拜仁；歐冠、西甲、英超、德甲、義甲、青年歐冠；紅牌說「紅牌罰下」。人名用台灣常見譯法（Flick 弗里克、Fermín López 費爾明、Lamine Yamal 亞馬爾、Lewandowski 萊萬多夫斯基、Pedri 佩德里、Joan Garcia 霍安·加西亞、Bellingham 貝林漢、Raheem Sterling 斯特林）；冷門人名拿不準就保留原文拼法。
+- 用台灣體育媒體的通行寫法：巴薩、皇馬、馬競、曼聯、曼城、利物浦、兵工廠、切爾西、熱刺、拜仁；歐冠、西甲、英超、德甲、義甲、青年歐冠；紅牌說「紅牌罰下」。人名用台灣常見譯法（Flick 弗里克、Fermín López 費爾明、Lamine Yamal 亞馬爾、Lewandowski 萊萬多夫斯基、Pedri 佩德里、Joan Garcia 霍安·加西亞、Bellingham 貝林漢、Raheem Sterling 斯特林）；冷門人名拿不準就保留原文拼法。球隊也一樣：沒有台灣通行中文名的球隊（尤其冷門的外國球隊）保留原文拼法，不要意譯或自己音譯（例如 Sabah 不要寫成「巴庫海洋」）。
 - 比分寫成「3:2」。"""
 SCHEMA = {
     "type": "object",
@@ -96,7 +99,7 @@ def read(name, url, now):
         t, d, link = clean(title), when(date), (link or "").strip()
         if not t or not link.startswith("https://") or not d or now - d > WINDOW or d - now > dt.timedelta(hours=1):
             continue
-        if LIVE.search(t) or "/live/" in link or link in seen:
+        if LIVE.search(t) or LIVE_URL.search(link) or link in seen:
             continue
         seen.add(link)
         got.append({"src": name, "title": t, "desc": clean(desc), "url": link,
