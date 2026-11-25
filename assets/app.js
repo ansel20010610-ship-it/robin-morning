@@ -14,7 +14,7 @@ import { fetchWeather, weatherHtml, keptWeather } from "./wetter.js";
 import { skyLine, skyRow, eveningRain, ferienLine } from "./almanac.js";
 import { boerseBox, fillBoerse } from "./boerse.js";
 import { outdoorFront, closeOutdoor } from "./outdoor-card.js";
-import { stampHtml } from "./stamps.js";
+import { stampHtml, milestoneOf, keepsakeOf } from "./stamps.js";
 import { feastOf, churchSeason } from "./feasts.js";
 import { redDay, weekendDay, dayPart, carryOf, carried, goldOf, moonPhase, moonSvg, windowSun, lightWindow, creaseHtml, paperAge, tintPaper, paperTone } from "./masthead.js";
 import { adventHtml, wireAdvent } from "./advent.js";
@@ -681,23 +681,29 @@ function fitEar(root) {
 // light and the creases of a paper lying out all day. All of it is in the markup as drawn; lightWindow (viewFront) only
 // paints the window at the masthead's size before the first frame.
 // `ferien`: today's paper only — the next long weekend's line under the dateline (almanac.js ferienLine; style.css .ferien).
+// 期數紀念 (stamps.js milestoneOf; No. 100, 500, 1000): the everyday masthead with the top rule a wine band broken by
+// Jubiläumsausgabe (in place of the weekend's, the same 4px), the number in wine in the topline and the dateline, and the
+// number large in gold between two laurel branches under the subtitle — in the markup as drawn, so the masthead has its
+// full height from the first frame (style.css .masthead.ms).
 function masthead(issue, fresh = false, front = false, ferien = "") {
   const date = issue?.date || twNow().date;
   const [y, m, d] = date.split("-").map(Number);
   const erst = Number(issue?.no) === 1; // 創刊號 wears its own dress (the owner, 2026-11-08; style.css .masthead.erst)
+  const ms = milestoneOf(issue?.no);
   const now = twNow(), gold = goldOf(date, now), sun = front ? windowSun(now) : null;
   const day = fmtDate(date, "de").split(",")[0] + (front && todays(issue) ? dayPart(now.minutes) : "");
-  return `<header class="masthead${fresh ? " fresh" : ""}${erst ? " erst" : ""}${gold ? ` ${gold}` : ""}">${sun ? `<i class="sunwin" data-el="${sun.el.toFixed(1)}" aria-hidden="true"></i>` : ""}${front && !erst ? creaseHtml(date) : ""}<div class="wrap">
+  return `<header class="masthead${fresh ? " fresh" : ""}${erst ? " erst" : ""}${ms ? " ms" : ""}${gold ? ` ${gold}` : ""}">${sun ? `<i class="sunwin" data-el="${sun.el.toFixed(1)}" aria-hidden="true"></i>` : ""}${front && !erst ? creaseHtml(date) : ""}<div class="wrap">
     ${fresh ? `<i class="roller" aria-hidden="true"></i>` : ""}
     ${erst ? `<i class="esun" aria-hidden="true"></i><div class="erst-band">${LAUREL}<span>創刊號</span>${LAUREL.replace('class="laurel"', 'class="laurel r"')}<i>Erstausgabe · Nummer 1 · MMXXVI</i></div><i class="ecorn tl"></i><i class="ecorn tr"></i><i class="ecorn bl"></i><i class="ecorn br"></i>`
+      : ms ? `<div class="wkend ms-band"><span>Jubiläumsausgabe</span></div>`
       : weekendDay(date) ? `<div class="wkend"><span>Wochenendausgabe</span></div>` : `<hr class="rule-double">`}
     <div class="topline"><span>Wien · Taipei</span><span>${issue ? esc(issueNr(issue.no)) : ""}</span><span>${esc(day)}</span></div>
     ${fresh ? `<i class="stamp-date" aria-hidden="true"><b>Druckfrisch</b><span>No. ${esc(issue.no)}</span><span>${d}. ${roman(m)}. ${y}</span><i class="echo"></i></i>` : ""}
     <div class="checker" aria-hidden="true"></div>
     <div class="crest">${carried(EMBLEM, carryOf(date))}${front && nightHours() ? moonSvg(moonPhase(now.ms)) : ""}<i class="burst" aria-hidden="true"></i><i class="wave" aria-hidden="true"></i><i class="wave w2" aria-hidden="true"></i></div>
     <h1>${esc(S.cfg.title)}</h1>
-    <div class="latin">${esc(S.cfg.subtitle)}</div>
-    <div class="dateline${redDay(date) ? " rot" : ""}${ferien ? " has-fe" : ""}">${esc(fmtDate(date))}${issue ? `・${esc(issueNo(issue.no))}` : ""}・${esc(S.cfg.publish_time)} 出刊</div>${ferien ? `<div class="ferien">${esc(ferien)}</div>` : ""}
+    <div class="latin">${esc(S.cfg.subtitle)}</div>${ms ? `<div class="ms-big" aria-hidden="true">${LAUREL}<b>${ms.no}</b>${LAUREL.replace('class="laurel"', 'class="laurel r"')}</div>` : ""}
+    <div class="dateline${redDay(date) ? " rot" : ""}${ferien ? " has-fe" : ""}">${esc(fmtDate(date))}${issue ? `・${ms ? `<b class="ms-no">${esc(issueNo(issue.no))}</b>` : esc(issueNo(issue.no))}` : ""}・${esc(S.cfg.publish_time)} 出刊</div>${ferien ? `<div class="ferien">${esc(ferien)}</div>` : ""}
     <div class="checker" aria-hidden="true"></div>${issue ? earHtml(date) : ""}
     ${issue?.epigraph ? `<p class="epigraph"${verseVars(issue.epigraph.text)}>${verseHtml(issue.epigraph.text)}<span>${esc(issue.epigraph.ref)}（和合本）</span></p>` : ""}
   </div></header>`;
@@ -1066,7 +1072,7 @@ function viewFront(dateParam) {
     ${watch.length ? `<div class="sec-head"><h2>遠方有動靜</h2><span class="de">In der Ferne</span></div>${watch.map((a) => itemCard(issue.date, a, read)).join("")}` : ""}
     ${birdSpot(issue) ? `<p class="bird-note${birdsFound().has(issue.date) ? " got" : ""}"><svg viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>${birdNote(issue, arts)}</p>` : ""}
     ${!arts.some((a) => forStamp(a, issue.date) && a.brief) ? "" : !issueOpen(issue.date) ? `<div class="finish left"><b>今天這一份還沒出齊</b><span class="note">下午補刊到齊以後，包裹和郵票才會開。</span></div>`
-      : unreadIn(issue.date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${digestDone().has(issue.date) ? "早上的郵票已經蓋好了；後來補上的這幾篇也讀完，今天這一份才算讀到最後一行。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的${feastOf(issue.date) ? `${esc(feastOf(issue.date).zh)}紀念郵票` : "郵票"}才蓋得下去。`}</span>${codaFor(issue.date, arts)}</div>`
+      : unreadIn(issue.date, arts) ? `<div class="finish left"><b>還有 ${unreadIn(issue.date, arts)} 篇沒讀</b><span class="note">${digestDone().has(issue.date) ? "早上的郵票已經蓋好了；後來補上的這幾篇也讀完，今天這一份才算讀到最後一行。" : `每一篇都讀完${revealPick(issue, arts) ? "，包裹那篇也算" : ""}，今天的${keepsakeOf(issue) ? `${esc(keepsakeOf(issue).zh)}紀念郵票` : "郵票"}才蓋得下去。`}</span>${codaFor(issue.date, arts)}</div>`
       : digestDone().has(issue.date) ? `<div class="finish done">${finishInner(issue.date)}</div>`
       : `<div class="finish">${finishInner(issue.date)}</div>`}
     ${dateParam ? "" : wocheBox()}
@@ -1470,7 +1476,7 @@ function wireDigest(issue) {
     if (bn && !birdsFound().has(issue.date)) { [...bn.childNodes].forEach((n) => { if (n.nodeName.toLowerCase() !== "svg") n.remove(); }); bn.insertAdjacentHTML("beforeend", birdNote(issue, sortArticles(issue.articles || [], issue.date))); }
     if (!fin || fin.classList.contains("done")) return;
     fin.classList.add("done");
-    if (!was) { const f = feastOf(issue.date); celebrate(fin); setTimeout(() => toast(f ? `${f.zh}紀念郵票蓋好了，收在郵票冊` : "郵票蓋好了，收在郵票冊"), 1200); } // the day's stamp (viewStamps), once the seal is down
+    if (!was) { const f = keepsakeOf(issue); celebrate(fin); setTimeout(() => toast(f ? `${f.zh}紀念郵票蓋好了，收在郵票冊` : "郵票蓋好了，收在郵票冊"), 1200); } // the day's stamp (viewStamps), once the seal is down
   }
   if (fin && "IntersectionObserver" in window) {
     finishSeen = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) finish(); }, { threshold: 0.8 });
@@ -1502,9 +1508,10 @@ function markDigestDone(date) {
 // 紀念郵票 on the front page (the owner, 2026-11-08: 那天在主頁可以提示有紀念郵票): on a feast day (feasts.js) today's
 // paper opens with a small card — the commemorative stamp itself, faded until it is earned (a blank slot is unreadable at
 // this size), beside a line saying which stamp this paper will earn; once earned, in full colour and linking to it in
-// the album. Only on today's paper, not on an archive issue.
+// the album. Only on today's paper, not on an archive issue. No. 100, 500 and 1000 get the same card for their stamp
+// (stamps.js milestoneOf: 今天是第一百期), ahead of a feast on the same day.
 function festBox(issue) {
-  const fest = feastOf(issue.date);
+  const fest = keepsakeOf(issue);
   if (!fest || !todays(issue)) return "";
   const got = digestDone().has(issue.date);
   const stamp = stampHtml({ ...issue, articles: sortArticles(issue.articles || [], issue.date) }, { earned: true, size: 58, href: got ? `#/stamp/${issue.date}` : null });
@@ -2551,9 +2558,10 @@ function viewStamp(date) {
   // 創刊紀念郵票 opens with a show (the owner, 2026-11-08: 點開來個特效): it turns in out of the dark like a coin, a glint
   // runs across it, a ring of light goes out, a sunburst wakes behind it and keeps turning, gold flakes fall (style.css
   // .stamp-page.erst-page, goldRain).
-  const erst = Number(issue.no) === 1, fest = erst ? null : feastOf(date), gala = erst || Boolean(fest); // 紀念郵票 open with the same show
+  // 期數紀念郵票 (stamps.js milestoneOf) open with it too, and outrank a feast on their day, as on the stamp itself.
+  const erst = Number(issue.no) === 1, ms = milestoneOf(issue.no), fest = erst || ms ? null : feastOf(date), gala = erst || Boolean(fest || ms); // 紀念郵票 open with the same show
   main.innerHTML = `${top}<div class="wrap stamp-page${gala ? " gala" : ""}${fest ? ` fest-${esc(fest.key)}` : ""}"><div class="big">${gala ? `<i class="esun" aria-hidden="true"></i><i class="ring" aria-hidden="true"></i>` : ""}${stampHtml({ ...issue, articles: sortArticles(issue.articles || [], date) }, { earned: true, bird: birdsFound().has(date) })}</div>
-    <p class="line"><b>${esc(issueNr(issue.no))}</b><span>${esc(fmtDate(date))}${fest ? `・${esc(fest.zh)}紀念郵票` : ""}</span><i>${esc(fmtDate(date, "de"))}</i></p>${fest?.pic ? `<p class="credit">${esc(fest.pic.credit)}</p>` : ""}
+    <p class="line"><b>${esc(issueNr(issue.no))}</b><span>${esc(fmtDate(date))}${fest || ms ? `・${esc((ms || fest).zh)}紀念郵票` : ""}</span><i>${esc(fmtDate(date, "de"))}</i></p>${fest?.pic ? `<p class="credit">${esc(fest.pic.credit)}</p>` : ""}
     <p class="btns"><a class="btn ghost" href="#/issue/${esc(date)}">看這一期</a></p></div>`;
   if (gala) setTimeout(() => goldRain(main.querySelector(".stamp-page .big")), 1050);
   wireBack();

@@ -3525,3 +3525,32 @@ html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's o
 .cr-drawer i { position: absolute; left: 50%; bottom: 3px; width: 12px; height: 16px; margin-left: -6px; border-radius: 0; background: none; box-shadow: none; }
 .cr-drawer i svg { display: block; transform: scale(.85); transform-origin: 50% 100%; }
 .cr-drawer .cb-pull { position: absolute; top: 9px; } .cr-drawer .cb-pull:first-child { left: 8px; } .cr-drawer .cb-pull:last-of-type { right: 8px; }
+
+/* ——— 期數紀念 (Jubiläumsausgabe; stamps.js milestoneOf, app.js masthead/festBox/viewStamp): No. 100, 500, 1000 ———
+   The masthead: the top rule a wine band broken by Jubiläumsausgabe (the weekend band's build, the same 4px), the number
+   in wine in the topline and the dateline, the number large in gold between two laurel branches under the subtitle. It
+   is in the markup as drawn: the masthead is 80px taller that day from its first frame, and never grows after it. */
+.masthead.ms .wkend.ms-band::before, .masthead.ms .wkend.ms-band::after { border-color: var(--gold); background: var(--wine); }
+.masthead.ms .wkend.ms-band span { color: var(--wine); font-weight: 600; font-size: 15px; }
+.masthead.ms .topline span:nth-child(2) { color: var(--wine); font-weight: 700; font-variant-numeric: lining-nums; }
+.masthead .dateline .ms-no { color: var(--wine); font-weight: 700; }
+.masthead .ms-big { display: flex; align-items: center; justify-content: center; gap: 12px; margin: -4px 0 2px; }
+.masthead .ms-big b { font-family: var(--latin); font-weight: 600; font-size: 92px; line-height: .9; letter-spacing: .01em; font-variant-numeric: lining-nums;
+  background: linear-gradient(165deg, var(--foil-hi), var(--foil) 45%, #8A6420 85%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.masthead .ms-big .laurel { width: 70px; height: 29px; }
+.fest-note.fest-ms { border-left-color: var(--wine); }
+/* The stamp: the day's own (its frame and paper by the date, as every day), standing straight and glowing like the
+   創刊紀念郵票, the milestone's name in wine on the ribbon, a gold seal pressed on the picture's lower right corner */
+.stamp.ms.earned { filter: drop-shadow(0 2px 3px rgba(60, 45, 20, .35)) drop-shadow(0 0 14px rgba(214, 165, 66, .55)); }
+.stamp.ms .name { color: #6E2536; }
+.stamp.ms .foot i { font-style: normal; font-size: 3.4cqw; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; overflow: visible; }
+.stamp.ms .foot b { font-size: 7cqw; }
+.stamp.ms .ms-seal { position: absolute; right: 4cqw; top: 61cqw; width: 30cqw; height: 30cqw; border-radius: 50%; z-index: 2; box-sizing: border-box;
+  display: grid; place-content: center; justify-items: center; rotate: -12deg;
+  background: radial-gradient(circle at 34% 28%, #FFF4C8 0, #F1CF6E 24%, #C9962E 62%, #8A6420 100%);
+  box-shadow: inset 0 0 0 .9cqw #F7E6AE, inset 0 0 0 1.4cqw #8A6420, inset 0 0 0 2.4cqw transparent, 0 1cqw 2.2cqw rgba(40, 25, 5, .45); }
+.stamp.ms .ms-seal b { font-family: var(--latin); font-weight: 700; font-size: 12.5cqw; line-height: .9; color: #5A1222; letter-spacing: -.01em; font-variant-numeric: lining-nums; }
+.stamp.ms .ms-seal i { font-family: var(--latin); font-style: italic; font-weight: 600; font-size: 4.2cqw; line-height: 1; color: #5A1222; margin-top: .6cqw; letter-spacing: .03em; }
+/* 找知更鳥 (.perch): on a jubilee stamp the found robin stands on the seal's upper rim, above it, instead of under it */
+.stamp.ms .perch { right: 11cqw; bottom: 55cqw; z-index: 3; }
+.fest-note:not(.got) .stamp.ms { filter: grayscale(.7) opacity(.55); } /* the card's stamp faded until earned, as on a feast day */

@@ -64,6 +64,20 @@ const FRAMES = [
   () => rect(.5) + rect(2.6, "band"), // chequer: the Secession checker as a dashed band
 ];
 
+// 期數紀念 (Jubiläumsausgabe): No. 100, 500 and 1000 each get a jubilee masthead (app.js masthead) and a commemorative
+// stamp — the day's own stamp with a gold seal pressed on its corner (stampHtml). Keyed by the issue number, which is
+// scripts/common.py issue_number (days since config.json launch_date 2026-10-11, plus one), so the days follow from it:
+// No. 100 is 2027-01-18, No. 500 2028-02-22, No. 1000 2029-07-06. As with No. 1, the milestone outranks a feast that
+// falls on its day: one stamp a day. `line` opens the front page's card (app.js festBox), as a feast's does.
+const MILESTONES = { 100: ["第一百期", "Hundertste Ausgabe"], 500: ["第五百期", "Fünfhundertste Ausgabe"], 1000: ["第一千期", "Tausendste Ausgabe"] };
+export function milestoneOf(no) {
+  const m = MILESTONES[Number(no)];
+  return m ? { key: "ms", no: Number(no), zh: m[0], name: m[1], line: `今天是${m[0]}` } : null;
+}
+// The commemorative stamp a day's paper earns, by name (the front page's card, the finish line, the toast): the
+// milestone first, else the day's feast.
+export const keepsakeOf = (issue) => milestoneOf(issue?.no) || feastOf(issue?.date);
+
 // `earned`: the stamp in colour; otherwise the empty slot, which `open` marks as today's (still to be read). `href`
 // makes the tile a link; without it the slot is a plain span. `i` staggers the entrance (style.css), `size` a width
 // in px for a stamp outside the album's grid.
@@ -73,14 +87,18 @@ export function stampHtml(issue, { earned = false, open = false, href = null, i 
   // faint 1 behind the picture, band and laurel round it, ERSTAUSGABE on a wine ribbon under the picture and the
   // issuer's name along the foot; it stands straight and glows, at the album's ordinary size (style.css .stamp.erst).
   const erst = Number(issue?.no) === 1;
+  // 期數紀念郵票 (milestoneOf): the day's ordinary stamp — its frame and paper by the date, as every day — standing straight
+  // and glowing, a gold seal with the number and Jubiläum pressed on the picture's corner, the milestone's name on the
+  // ribbon and the issuer's along the foot (style.css .stamp.ms).
+  const ms = milestoneOf(issue?.no);
   // 紀念郵票 (feasts.js; the owner, 2026-11-08): Christmas, New Year, Easter and the other days carry the painting chosen for
   // the day, their own paper and ribbon (style.css .stamp.fest-<key>), the day's German name on the ribbon; they stand
   // straight like the first issue's.
-  const fest = erst ? null : feastOf(date);
+  const fest = erst || ms ? null : feastOf(date);
   const gala = erst || Boolean(fest);
-  const h = hash(date), frame = gala ? 4 : h % 6, tint = erst ? 5 : fest ? 0 : (h >>> 8) % 5, tilt = gala ? 0 : (((h >>> 16) % 5) - 2) * .6;
+  const h = hash(date), frame = gala ? 4 : h % 6, tint = erst ? 5 : fest ? 0 : (h >>> 8) % 5, tilt = gala || ms ? 0 : (((h >>> 16) % 5) - 2) * .6;
   const day = Number.isFinite(d) ? `${d}. ${roman(m)}.` : "", wd = date ? fmtDate(date, "de").split(",")[0] : "";
-  const label = [date && fmtDate(date, "short"), issue?.no && `第 ${issue.no} 期`, fest && `${fest.zh}紀念郵票`, earned ? "已蓋郵票" : open ? "今天還沒讀完" : "錯過，留白"].filter(Boolean).join("・");
+  const label = [date && fmtDate(date, "short"), issue?.no && `第 ${issue.no} 期`, fest && `${fest.zh}紀念郵票`, ms && `${ms.zh}紀念郵票`, earned ? "已蓋郵票" : open ? "今天還沒讀完" : "錯過，留白"].filter(Boolean).join("・");
   const style = `--i:${i}${earned ? `;--tilt:${tilt}deg` : ""}${size > 0 ? `;width:${size}px` : ""}`;
   const tag = href ? `a href="${esc(href)}"` : `span role="img"`; // a role, or the span's aria-label is not read out
   let inner;
@@ -89,12 +107,13 @@ export function stampHtml(issue, { earned = false, open = false, href = null, i 
     const pos = fest?.pic?.position ? ` style="object-position:${esc(fest.pic.position)}"` : "";
     const art = hero?.src ? `<img src="${esc(hero.thumb || hero.src)}" alt=""${pos} loading="lazy" decoding="async" referrerpolicy="no-referrer">`
       : `<svg class="bird" viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>`;
+    const seal = ms ? `<span class="ms-seal" aria-hidden="true"><b>${ms.no}</b><i>Jubiläum</i></span>` : "";
     inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="yr">${esc(Number.isFinite(y) ? y : "")}</span>
-      <span class="fr">${art}<svg class="bd" viewBox="0 0 ${W} ${H}" aria-hidden="true">${gala ? ERST_FRAME() : FRAMES[frame]()}</svg></span>
-      <span class="name">${erst ? "Erstausgabe" : fest ? esc(fest.name) : "Rotkehlchens Morgenblatt"}</span>
-      <span class="foot"><i>${gala ? "Rotkehlchens Morgenblatt" : esc(wd)}</i><b>${esc(day)}</b></span>${bird ? `<svg class="perch" viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>` : ""}`;
+      <span class="fr">${art}<svg class="bd" viewBox="0 0 ${W} ${H}" aria-hidden="true">${gala ? ERST_FRAME() : FRAMES[frame]()}</svg></span>${seal}
+      <span class="name">${erst ? "Erstausgabe" : ms ? esc(ms.name) : fest ? esc(fest.name) : "Rotkehlchens Morgenblatt"}</span>
+      <span class="foot"><i>${gala || ms ? "Rotkehlchens Morgenblatt" : esc(wd)}</i><b>${esc(day)}</b></span>${bird ? `<svg class="perch" viewBox="0 0 64 64" aria-hidden="true">${ROBIN_PATHS}</svg>` : ""}`;
   } else {
-    inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="miss"><b>${esc(day)}</b>${fest ? `<small>${esc(fest.name)}</small>` : open ? "<small>Heute</small>" : erst ? "<small>Erstausgabe</small>" : ""}</span>`;
+    inner = `<span class="no">No. ${esc(issue?.no ?? "")}</span><span class="miss"><b>${esc(day)}</b>${fest ? `<small>${esc(fest.name)}</small>` : ms ? "<small>Jubiläum</small>" : open ? "<small>Heute</small>" : erst ? "<small>Erstausgabe</small>" : ""}</span>`;
   }
-  return `<${tag} class="stamp ${earned ? `earned f${frame} t${tint}` : `slot${open ? " open" : ""}`}${erst ? " erst" : ""}${fest ? ` fest fest-${fest.key}` : ""}" style="${style}" aria-label="${esc(label)}${erst ? "・創刊紀念郵票" : ""}"><span class="sp">${inner}</span></${href ? "a" : "span"}>`;
+  return `<${tag} class="stamp ${earned ? `earned f${frame} t${tint}` : `slot${open ? " open" : ""}`}${erst ? " erst" : ""}${ms ? " ms" : ""}${fest ? ` fest fest-${fest.key}` : ""}" style="${style}" aria-label="${esc(label)}${erst ? "・創刊紀念郵票" : ""}"><span class="sp">${inner}</span></${href ? "a" : "span"}>`;
 }
