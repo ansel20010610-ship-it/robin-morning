@@ -14,6 +14,19 @@ export async function fetchMarket() {
   } catch { return null; }
 }
 
+// The four stock figures as they stand now (2026-11-25): the yard Worker's GET /market (scripts/nest-worker.js), in the
+// file's own shape, each item "ok" or not. null when it cannot be read (no Worker address, offline, a Worker not yet
+// given the route, which answers 400). Never throws.
+export async function fetchLive(api) {
+  if (!/^https:\/\//.test(api || "")) return null;
+  try {
+    const r = await fetch(`${api}/market`, { cache: "no-store", ...within(8000) });
+    if (!r.ok) return null;
+    const d = await r.json();
+    return Array.isArray(d?.items) ? d : null;
+  } catch { return null; }
+}
+
 const MINUS = "−";
 const finite = (x) => typeof x === "number" && Number.isFinite(x);
 // 36811.89 → "36,811.89": two decimals and thousands grouped — an index, the rate and a price alike.

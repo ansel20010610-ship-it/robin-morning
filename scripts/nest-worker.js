@@ -258,6 +258,73 @@ async function credits(req, env, code) {
   await env.NEST.put(ck, JSON.stringify(out), { expirationTtl: 3600 });
   return json(out);
 }
+// 市場行情, live (2026-11-25): GET /market answers the four stock figures as they stand now, in content/market.json's own
+// shape (scripts/market.py), for the quote board on the front page (assets/boerse.js), which asks every half minute while
+// it is on screen and puts what it gets over the file's figures. 台股加權指數 from the exchange's own quote service
+// (mis.twse.com.tw: about five seconds behind; "y" is the index's previous close); S&P 500, 道瓊 and 那斯達克 from Yahoo
+// Finance's chart service (not an official API, no contract: it may refuse one day, and then the board keeps the file's
+// figures). Nothing is written to KV (its free tier takes 1,000 writes a day): an answer is kept in this instance's
+// memory for MARKET_S seconds, so phones asking side by side cost the sources one reading. A source that cannot be read
+// this time gives its item "ok": false and nothing more; nothing here throws. The whole reading has MARKET_MS (each
+// request at most REQ_MS of it), well inside the 8 seconds the phone waits (market.js fetchLive): a source that hangs
+// costs only its own figures.
+const MARKET_S = 20, MARKET_MS = 6000, REQ_MS = 3500, MARKET_UA = "RobinMorningBot/1.0 (https://github.com/ansel20010610-ship-it/robin-morning)";
+const YAHOO = [["spx", "S&P 500", "%5EGSPC"], ["dji", "道瓊工業指數", "%5EDJI"], ["ixic", "那斯達克綜合指數", "%5EIXIC"]];
+let marketMemo = null;
+const fin = (x) => typeof x === "number" && Number.isFinite(x);
+const r2 = (x) => Math.round(x * 100) / 100;
+// a moment in a market's own time, as market.py writes "asof": 2026-11-25T12:40+08:00
+const local = (ms, offS) => {
+  const a = Math.abs(offS), hh = String(Math.floor(a / 3600)).padStart(2, "0"), mm = String(Math.floor((a % 3600) / 60)).padStart(2, "0");
+  return `${new Date(ms + offS * 1000).toISOString().slice(0, 16)}${offS < 0 ? "-" : "+"}${hh}:${mm}`;
+};
+const quote = (key, name, value, prev, asof, source, url) => (fin(value) && value > 0 && fin(prev) && prev > 0
+  ? { key, name, value: r2(value), change: r2(value - prev), change_pct: r2(((value - prev) / prev) * 100), asof, source, url, ok: true, live: true }
+  : { key, name, ok: false });
+// One GET as JSON, given what is left of the reading (to `until`, at most REQ_MS); past it, the answer is not waited for.
+async function getJSON(url, until) {
+  const ms = Math.min(REQ_MS, until - Date.now());
+  if (ms < 300) throw new Error("no time left");
+  const ctl = new AbortController();
+  let timer;
+  const late = new Promise((_, no) => { timer = setTimeout(() => { ctl.abort(); no(new Error(`over ${ms} ms`)); }, ms); });
+  try {
+    const read = fetch(url, { headers: { "User-Agent": MARKET_UA, Accept: "application/json" }, signal: ctl.signal }).then((r) => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json(); // a robot-check page (200 text/html) throws here
+    });
+    return await Promise.race([read, late]);
+  } finally { clearTimeout(timer); }
+}
+async function taiex(until) {
+  try {
+    const m = (await getJSON("https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0", until))?.msgArray?.[0];
+    const d = /^(\d{4})(\d\d)(\d\d)$/.exec(m?.d || ""), t = /^(\d\d):(\d\d)/.exec(m?.t || "");
+    if (m?.c !== "t00" || !d || !t) throw new Error("no index row");
+    // before the day's first figure ("z" is "-"), not ok: the board keeps the last close it has
+    return quote("taiex", "台股加權指數", Number(m.z), Number(m.y), `${d[1]}-${d[2]}-${d[3]}T${t[1]}:${t[2]}+08:00`, "臺灣證券交易所", "https://www.twse.com.tw/");
+  } catch (e) { console.error("market taiex", String(e)); return { key: "taiex", name: "台股加權指數", ok: false }; }
+}
+async function yahoo([key, name, sym], until) {
+  for (const host of ["query1", "query2"]) {
+    try {
+      // one day's chart: its chartPreviousClose is the close of the trading day before
+      const m = (await getJSON(`https://${host}.finance.yahoo.com/v8/finance/chart/${sym}?interval=1d&range=1d`, until))?.chart?.result?.[0]?.meta;
+      if (!m || !fin(m.regularMarketTime)) throw new Error("no meta");
+      return quote(key, name, m.regularMarketPrice, m.chartPreviousClose, local(m.regularMarketTime * 1000, fin(m.gmtoffset) ? m.gmtoffset : 0), "Yahoo 財經", `https://finance.yahoo.com/quote/${sym}`);
+    } catch (e) { console.error("market", key, host, String(e)); }
+  }
+  return { key, name, ok: false };
+}
+async function market(req) {
+  if (req.method !== "GET") return json({ error: "GET only" }, 405);
+  if (!marketMemo || Date.now() - marketMemo.at > MARKET_S * 1000) {
+    const until = Date.now() + MARKET_MS;
+    const items = await Promise.all([taiex(until), ...YAHOO.map((y) => yahoo(y, until))]);
+    marketMemo = { at: Date.now(), body: { updated: local(Date.now(), 8 * 3600), items } };
+  }
+  return json(marketMemo.body);
+}
 const json = (body, status = 200) => new Response(JSON.stringify(body), { status, headers: { ...CORS, "Content-Type": "application/json" } });
 
 // Anything that throws (a KV hiccup, Anthropic's API unreachable, a malformed %-escape in the address) answers as JSON
@@ -271,6 +338,7 @@ async function route(req, env) {
     if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
     const parts = new URL(req.url).pathname.replace(/^\/+/, "").split("/");
     if (parts[0] === "done") return done(req, env); // a push device, not a yard: no code (below)
+    if (parts[0] === "market") return market(req); // the quote board's live figures: no code, nothing kept
     let code = "";
     try { code = decodeURIComponent(parts[0] || "").toUpperCase(); } catch { /* a malformed escape: bad code below */ }
     if (!CODE.test(code)) return json({ error: "bad code" }, 400);

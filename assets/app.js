@@ -1085,7 +1085,7 @@ function viewFront(dateParam) {
   wireAdvent(main); // 降臨節月曆 (advent.js): 1–24 December, drawn above with the page, under 今日禱告
   fillReveal();
   fillWire();
-  fillBoerse(main); // 市場行情 under the wires (assets/boerse.js): drawn already, from the kept figures or empty; filled in place
+  fillBoerse(main, S.cfg?.nest?.api); // 市場行情 under the wires (assets/boerse.js): drawn already, from the kept figures or empty; filled in place
   const wx = fillWeather(); // also on every redraw of the front page (refreshFront at 07:30, a visibility replay), which redraws the box
   if (evening) letterForm(main.querySelector(".night-letter-slot"), true);
   fitEar(main);
@@ -3238,7 +3238,7 @@ async function boot() {
     await loadIndex();
     refreshFront();
     fillWire(); // the wire changes every half hour whether or not the issue did
-    fillBoerse(main); // and the market figures with every deploy
+    fillBoerse(main, S.cfg?.nest?.api); // and the market figures with every deploy (the live ones each minute: boerse.js)
     runAutoAdd();
   };
   setInterval(refreshFront, 60 * 1000);
