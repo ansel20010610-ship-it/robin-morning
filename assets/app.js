@@ -1237,10 +1237,10 @@ function letterForm(el, night = false, open = false) {
 const sentKept = () => { const kept = store.get("letters.sent", []); return (Array.isArray(kept) ? kept : []).filter((x) => x && x.id && typeof x.text === "string").reverse(); };
 function sentRow(x) {
   const t = new Date(new Date(x.at).getTime() + 8 * 3600e3), at = Number.isNaN(t.getTime()) ? "" : `${t.getUTCMonth() + 1}/${t.getUTCDate()} ${String(t.getUTCHours()).padStart(2, "0")}:${String(t.getUTCMinutes()).padStart(2, "0")}`;
-  // A letter two dawns old with no answer is not coming (the editors answer questions only, two a morning at most): it
+  // A letter two dawns old with no answer is not coming (two a morning at most; one asking the editors to do things gets none): it
   // says so (the owner, 2026-11-11: 我昨天寄的信怎麼沒回). An answer that still comes takes its line over.
   const a = letterAnswered(x.id), passed = Date.now() - Date.parse(x.at) > 36 * 3600e3;
-  return `<li><p class="t">${esc(x.text)}</p><p class="st">寄出 ${esc(at)}${a ? `<a href="#/letters/${esc(x.id)}">刊在 ${esc(fmtDate(a.date, "short"))} →</a>` : passed ? "・這封沒有回信（編輯部只回問題）" : ""}</p></li>`;
+  return `<li><p class="t">${esc(x.text)}</p><p class="st">寄出 ${esc(at)}${a ? `<a href="#/letters/${esc(x.id)}">刊在 ${esc(fmtDate(a.date, "short"))} →</a>` : passed ? "・這封沒有回信" : ""}</p></li>`;
 }
 // 寄過的信 (設定; the owner, 2026-11-11: 把過去寫的放在設定的一個地方，每天晚上首頁的不要有過去的信，如果沒有回信也不要寫在
 // 等回信): what this phone sent (rm.letters.sent, the last twenty), each in full with when it went; an answered one

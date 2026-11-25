@@ -73,8 +73,10 @@ def problems(path):
         if not ID.match(str(l.get("id", ""))): probs.append(f"{w}：id 要照抄信的 id（L 開頭）")
         if not re.match(r"^\d{4}-\d{2}-\d{2}$", str(l.get("date", ""))): probs.append(f"{w}：date 要是刊出那期的日期 YYYY-MM-DD")
         q, a = str(l.get("q", "")), str(l.get("a", ""))
-        if not 6 <= len(CJK.findall(q)) <= 80: probs.append(f"{w}：q（改寫過的問題）{len(CJK.findall(q))} 字，要 6–80 字")
-        if not 80 <= len(CJK.findall(a)) <= 600: probs.append(f"{w}：a（回信）{len(CJK.findall(a))} 字，要 80–600 字")
+        if not 6 <= len(CJK.findall(q)) <= 80: probs.append(f"{w}：q（改寫過的那一句）{len(CJK.findall(q))} 字，要 6–80 字")
+        # 回答問題的列 sources、80–600 字；沒有 sources 的是不是問題的信的短箋（letters.md「怎麼回」）、20–80 字
+        lo, hi = (80, 600) if l.get("sources") else (20, 80)
+        if not lo <= len(CJK.findall(a)) <= hi: probs.append(f"{w}：a {len(CJK.findall(a))} 字，要 {lo}–{hi} 字（回答問題列 sources、80–600 字；短箋不列 sources、20–80 字）")
         # the store's own limits, counted in characters with the links and Latin in (nest-worker.js ANS): past them it drops the answer without a word
         if len(q) > 200: probs.append(f"{w}：q 連標點共 {len(q)} 個字元，院子的儲存最多收 200")
         if len(a) > 3000: probs.append(f"{w}：a 連網址共 {len(a)} 個字元，院子的儲存最多收 3000；把長網址移到 sources")

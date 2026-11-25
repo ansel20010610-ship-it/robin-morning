@@ -216,7 +216,7 @@
   - 骨架（就是稿件檔）：非文字的都填好（`form`、`voice`、`hero`、`sources`，body 裡的圖、表、引文、資料卡、論文卡、音樂卡）。
     `title`、`dek`、`brief`（牙周另有 `takeaway`、`chairside`）留空，body 不放段落與小標。骨架不推。
   - 交件前自己跑 `validate.py <日期> --column <欄> --check-urls`（備稿用 `--reserve`）：只准剩缺 title／dek／brief（牙周另有 takeaway）與「正文字數遠低於下限」這幾條 ERROR。
-- **寫手**：只讀 `briefs/common.md`、`briefs/<欄>.md`、事實清單與骨架（備稿另讀 `RESERVE.md`「寫法」一節，牙周另讀 `columns/perio.md` 第 0、1b 條；該欄有 `briefs/persona/<欄>.md` 就也讀）；欄位格式可查 `SCHEMA.md`。指示裡不帶 form、voice、粗體數。有人設的欄位，指示照錄：這一篇你就是人設裡的那個人：用他的身分、脾氣和說話的樣子，直接寫給社長。他是演出來的，他的身世、去過哪裡、教過誰、見過誰，都不能寫進文章；文章裡的事實只來自事實清單。
+- **寫手**：只讀 `briefs/common.md`、`briefs/<欄>.md`、事實清單與骨架（備稿另讀 `RESERVE.md`「寫法」一節，牙周另讀 `columns/perio.md` 第 0、1b 條；該欄有 `briefs/persona/<欄>.md` 就也讀）；欄位格式可查 `SCHEMA.md`。指示裡不帶 form、voice、粗體數。有人設的欄位，指示照錄：這一篇你就是人設裡的那個人：用他的身分、脾氣和說話的樣子，直接寫給社長。他是演出來的，他的身世、去過哪裡、教過誰、見過誰，都不能寫進稿件；文章裡的事實只來自事實清單。
   - 填 `title`、`dek`、`brief`（牙周另填 `takeaway`、`chairside`）。body 加段落 `{"type":"p","text":"…"}`、小標 `{"type":"h","text":"…"}`，需要時 `{"type":"list","items":[…]}`。粗體用 `**…**`。
   - 既有的非文字區塊原樣保留，位置可以調整；不新增、不刪除、不改內容。其他欄位不動。
   - 寫完自己從頭讀一遍，把不像平常說話的句子改掉，跑 validate（備稿加 `--reserve`）到沒有 ERROR；不是自己的欄位與段落造成的 ERROR 不自己改，回報主控交回備料修。
