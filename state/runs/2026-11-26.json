@@ -38,5 +38,10 @@
       "wildcard"
     ],
     "note": "精簡：perio、qa 文體；查事實改了 R8.4 證據品質欄、dek、brief、chairside 四處"
+  },
+  "concerts": {
+    "finished_at": "2026-11-26T05:37:33+08:00",
+    "missing": [],
+    "note": "新增 1、更新 0；補查沒做完（mna、newaspect 查完，tanart 連線被拒，pbc/kham/udn/news 來不及）；歷史上的今天 1949"
   }
 }
