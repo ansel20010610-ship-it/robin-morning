@@ -926,12 +926,7 @@ function fillReveal() {
 const verseHtml = (text) => Array.from(text).map((c, i) => `<i class="ch" style="--i:${i}">${esc(c)}</i>`).join("");
 const verseVars = (text) => { const n = Array.from(text).length; return ` style="--n:${n};--step:${Math.min(45, Math.round(700 / Math.max(1, n - 1)))}ms"`; };
 
-function untilText(mins) {
-  const h = Math.floor(mins / 60), m = mins % 60;
-  return h ? `${h} 小時 ${m} 分` : `${m} 分鐘`;
-}
-
-// The front page's status line: countdown before 07:30, then what has arrived today.
+// The front page's status line: nothing before 07:30 (the countdown box was taken off, the owner 2026-11-26), then what has arrived today.
 function frontStatus() {
   if (isPreview()) return "預覽模式：顯示尚未在 07:30 出刊的稿件。";
   // Offline (「可能」: iOS's navigator.onLine is sometimes wrong), the front page is the issue the service worker kept.
@@ -941,7 +936,7 @@ function frontStatus() {
   const late = lateOf(now.date);
   const got = todays ? todays.articles.filter((a) => !["watch", "serial"].includes(col(a.column, now.date).group)).length : 0; // the serial is written weeks ahead: not a sign the issue is in
   if (late && late.state !== "done") return lateText(late, got);
-  if (now.minutes < publishMin()) return `今天這期 <b>${esc(S.cfg.publish_time)}</b> 才出爐（還有 ${untilText(publishMin() - now.minutes)}），先翻上一期墊墊胃。`;
+  if (now.minutes < publishMin()) return "";
   if (!todays) return "今天這期還在印，好了會自己跳出來。先翻上一期撐一下。";
   const on = (c) => { const k = S.cfg.columns[c] || {}; return now.date >= (k.since || "") && now.date <= (k.until || "9999"); }; // between a column's start and its last day
   const expected = [...Object.keys(S.cfg.columns).filter((c) => S.cfg.columns[c].group === "main"), ...(S.cfg.rotation_by_weekday?.[weekdayKey(now.date)] || [])].filter(on);
