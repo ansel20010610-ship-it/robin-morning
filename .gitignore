@@ -7,6 +7,7 @@ ics/
 content/wire.json
 content/outdoor.json
 content/market.json
+content/football.json
 
 # the desktop app's preview launcher (local only)
 .claude/

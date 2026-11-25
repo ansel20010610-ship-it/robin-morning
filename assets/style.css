@@ -281,6 +281,16 @@ button { font: inherit; color: inherit; }
 .wire .tk[open] summary .less { display: inline; }
 .wire summary .de { display: none; font-family: var(--latin); font-style: italic; font-weight: 500; font-size: 14px; letter-spacing: .02em; color: var(--gold); }
 .wire .tk[open] summary .de { display: inline; } /* opened, the strip names itself like the sections around it */
+/* 足球 (app.js drawWire; the owner, 2026-11-26): with football to show, the opened head is two titles side by side —
+   外電 Telegramme | 足球 Fußball — the one whose list is shown in gold with its German, the other grey without it, a
+   hairline between. Closed, the strip is named 電訊 instead, football or not (the owner, 2026-11-26: 還沒點進去的標題不要是外電). The second title is a line as
+   tall as the German (14px × 1.5), so the hairline is 21 or 21.5px whichever list is shown (16.5 or 21.5 without it). */
+.wire summary .tab { flex: 0 0 auto; display: inline-flex; align-items: baseline; gap: 8px; }
+.wire .tk:not([open]) summary :is(.tab, .wtag:not(.nm)) { display: none; }
+.wire .tk[open] summary .nm { display: none; }
+.wire summary .tab[data-tab="fb"] { margin-left: 6px; padding-left: 14px; border-left: 1px solid var(--rule); line-height: 21px; }
+.wire .tk[open] summary .tab:not(.on) .wtag { color: var(--muted); }
+.wire .tk[open] summary .tab:not(.on) .de { display: none; }
 .wire ol { list-style: none; margin: 0; padding: 0 12px; }
 .wire li a { display: grid; gap: 2px; padding: 9px 0 10px; border-top: 1px solid var(--rule); text-decoration: none; color: inherit; font-family: var(--sans); }
 .wire li .meta { display: flex; gap: 8px; align-items: baseline; }

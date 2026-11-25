@@ -86,6 +86,60 @@ jobs:
           python3 -m venv /tmp/wire && /tmp/wire/bin/pip install -q opencc-python-reimplemented==0.1.7 || echo "::warning::opencc not installed; DW stays in simplified wording"
           PY=/tmp/wire/bin/python; [ -x "$PY" ] || PY=python3   # the system python only when the venv itself failed, not on wire.py's own exit 1
           WIRE_ON_THE_HOUR="${{ github.event.inputs.hourly }}" "$PY" scripts/wire.py || echo "::warning::wire.py produced nothing this time"
+      - name: Football's last file, from the cache (足球)
+        # content/football.json carries football.py's translations, what they have cost this credit cycle and the failed
+        # tries; a deploy commits nothing, so it goes from one deploy to the next through the Actions cache (every run
+        # saves its own copy below; this takes the newest). The live file is fetched only when there is no copy that reads.
+        continue-on-error: true
+        timeout-minutes: 1   # a stuck download (actions/cache waits 10 min by default) must not hold the 07:12/07:22 deploys
+        uses: actions/cache/restore@v6
+        with:
+          path: content/football.json
+          key: football-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: football-
+      - name: Football (足球)
+        # content/football.json (scripts/football.py; the owner, 2026-11-26: 足球 beside 外電 in the opened strip) is not in
+        # the repository either. The cache's copy is the one to start from; without one that reads, the live file, fetched
+        # with retries: 200 ok, 404 missing, anything else error (nothing is translated then: the script could not tell
+        # what was already done or spent). Claude translates only on the half-hourly deploys (FOOTBALL_TRANSLATE), so
+        # only those install the SDK; any other deploy with a good copy sends it out as it is, without reading the feeds.
+        # Nothing here can stop a deploy.
+        continue-on-error: true
+        timeout-minutes: 5
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FOOTBALL_TRANSLATE: ${{ github.event.inputs.hourly == 'true' && '1' || '' }}
+        run: |
+          PY=/tmp/wire/bin/python; [ -x "$PY" ] || PY=python3
+          if [ -s content/football.json ] && "$PY" -c 'import json, sys; d = json.load(open(sys.argv[1], encoding="utf-8")); sys.exit(not (isinstance(d, dict) and isinstance(d.get("items", []), list)))' content/football.json 2>/dev/null; then
+            export FOOTBALL_PREV=ok
+            echo "football.json: the cache's copy"
+          else
+            if [ -e content/football.json ]; then echo "football.json: the cache's copy does not read"; fi
+            rm -f content/football.json
+            code=$(curl -s --retry 3 --retry-all-errors -A "robin-morning/1.0" --max-time 20 -o content/football.json -w '%{http_code}' "https://wiener-morgen-private.duckdns.org/content/football.json?t=$(date +%s)") || code=000
+            case "$code" in
+              200) export FOOTBALL_PREV=ok ;;
+              404) export FOOTBALL_PREV=missing; rm -f content/football.json ;;
+              *) export FOOTBALL_PREV=error; rm -f content/football.json ;;
+            esac
+            echo "football.json on the site: HTTP $code ($FOOTBALL_PREV)"
+          fi
+          if [ "$FOOTBALL_TRANSLATE" != 1 ] && [ "$FOOTBALL_PREV" = ok ]; then
+            echo "not a half-hourly deploy: football.json goes out as it is"
+          else
+            if [ "$FOOTBALL_TRANSLATE" = 1 ]; then timeout 45 "$PY" -m pip install -q anthropic==2.14.0 || echo "::warning::anthropic 沒裝成，這次不翻"; fi
+            timeout 150 "$PY" scripts/football.py || echo "::warning::football.py 失敗或逾時（部署照常）"
+          fi
+          rm -f content/football.json.tmp
+      - name: Football's file, into the cache
+        if: hashFiles('content/football.json') != ''
+        continue-on-error: true
+        timeout-minutes: 1
+        uses: actions/cache/save@v6
+        with:
+          path: content/football.json
+          key: football-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Outdoor (出門前)
         # content/outdoor.json — Taichung's air, weather warnings and closures (scripts/outdoor.py, no AI, no key) — is
         # not in the repository either: each build reads the agencies' files afresh, starting from the live file so a

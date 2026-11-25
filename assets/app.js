@@ -795,13 +795,32 @@ function markWireSince(box) {
   const li = box.querySelectorAll("ol li")[i];
   li.classList.add("since"); li.dataset.since = `上次看到這・${wireTime(new Date(s.at + 8 * 3600e3).toISOString().slice(0, 16))}`;
 }
+// 足球 (Fußball; scripts/football.py, the owner 2026-11-26: 點開外電後可以點標題換成足球): the strip carries the football
+// too — BBC Sport's football page and Mundo Deportivo's Barça page, put into Taiwan Chinese by Sonnet at the half-hourly
+// deploy. Closed, the strip is as it was: the newest wire, never the football. Opened, its head is two titles side by
+// side, 外電 Telegramme | 足球 Fußball: the list shown is the gold title's, with its German; the other is grey, without it,
+// a hairline between. A tap on a title changes the list and leaves the strip open (收起 still closes it). Closing it goes
+// back to 外電, and so does coming to the front page from another page; the five-minute refetch and a redraw in place
+// (refreshFront, which opens the strip again) leave a reader on 足球 where they are.
+// With no football (no file, an empty one, none kept) the strip has its one title and is exactly as before.
+// content/football.json is fetched with the wires and kept like them (lastFb, rm.fb.last); 上次看到這 is the wires' alone.
+let lastFb = null;
+const wireRows = (w) => (Array.isArray(w?.items) ? w.items : []).filter((i) => i?.title && /^https:\/\//.test(i.url || ""));
 function fillWire() {
   const box = main.querySelector(".wrap > .wire");
   if (!box) return;
   // A cold start has nothing in memory: the copy kept on the phone (rm.wire.last, rebuildable) stands in, so the strip
-  // is in its place when the page lands on the day's first open too (audit 2026-11-11).
+  // is in its place when the page lands on the day's first open too (audit 2026-11-11). The football's the same.
   lastWire ||= store.get("wire.last");
+  lastFb ||= store.get("fb.last");
   if (lastWire) drawWire(box, lastWire);
+  getJSON("content/football.json", { fresh: true }).then((f) => {
+    const items = wireRows(f);
+    lastFb = items.length ? f : null; // a file with nothing in it takes the title away; one that cannot be read leaves it
+    if (items.length) store.set("fb.last", { updated: f.updated, items: items.slice(0, 14) });
+    else store.del("fb.last");
+    if (box.isConnected && lastWire) drawWire(box, lastWire);
+  }).catch(() => {});
   getJSON("content/wire.json", { fresh: true }).then((w) => {
     const items = (Array.isArray(w?.items) ? w.items : []).filter((i) => i?.title && /^https:\/\//.test(i.url || ""));
     if (!items.length) return;
@@ -810,35 +829,64 @@ function fillWire() {
     if (box.isConnected) drawWire(box, w);
   }).catch(() => {});
 }
+// The strip as the wires w and the football (lastFb) have it, showing the list box.dataset.view names ("fb": 足球,
+// none: 外電). The closed line is always the wires', under the name 電訊 (the owner, 2026-11-26: 還沒點進去的標題不要是外電).
 function drawWire(box, w) {
-  const items = (Array.isArray(w?.items) ? w.items : []).filter((i) => i?.title && /^https:\/\//.test(i.url || ""));
+  const items = wireRows(w);
   if (!items.length) return;
-  const first = items[0], tk = box.querySelector(".tk"), ol = box.querySelector("ol");
-  box.querySelector(".at").textContent = w.updated ? `${wireTime(w.updated)} 更新・中央社、德國之聲、BBC 中文、法廣` : "";
+  const fb = wireRows(lastFb), first = items[0], tk = box.querySelector(".tk"), ol = box.querySelector("ol");
+  if (!fb.length) delete box.dataset.view; // the football gone while it was shown: the wires again
+  const onFb = box.dataset.view === "fb", list = onFb ? fb : items;
+  box.querySelector(".at").textContent = onFb ? (lastFb.updated ? `${wireTime(lastFb.updated)} 更新・BBC 足球、世界體育報（巴薩）` : "")
+    : w.updated ? `${wireTime(w.updated)} 更新・中央社、德國之聲、BBC 中文、法廣` : "";
+  box.querySelectorAll("summary .tab").forEach((t) => t.classList.toggle("on", (t.dataset.tab === "fb") === onFb));
   // The five-minute refetch mostly brings the same wires: then only the time above changes, and the list — with its
   // focus and the row under the reader's finger — is left alone. When wires did change while the list is open, the
-  // row the reader is at is kept where it is on the screen (and keyboard focus on the same link).
-  const sig = items.map((i) => i.url).join("\n");
-  if (box.dataset.sig === sig) { box.hidden = false; return; }
-  box.dataset.sig = sig;
+  // row the reader is at is kept where it is on the screen (and keyboard focus on the same link). The same holds for
+  // the football while it is the list shown; the line closed (sig) and the list (rows) are each drawn only when changed.
+  const sig = items.map((i) => i.url).join("\n") + (fb.length ? "\n足球" : ""), rowsSig = `${onFb ? "fb" : "wire"}\n${list.map((i) => i.url).join("\n")}`;
+  if (box.dataset.sig === sig && box.dataset.rows === rowsSig) { box.hidden = false; return; }
   if (!box.dataset.sinceOn) { // once per drawing of the front page
     box.dataset.sinceOn = "1";
     tk.addEventListener("toggle", () => {
-      if (!tk.open) { wireSince = null; markWireSince(box); return; }
+      if (!tk.open) {
+        wireSince = null;
+        if (box.dataset.view) { delete box.dataset.view; drawWire(box, lastWire); } // closed, the strip goes back to 外電
+        markWireSince(box); return;
+      }
       const prev = store.get("wire.seen"), top = (Array.isArray(lastWire?.items) ? lastWire.items : []).find((i) => i?.title && /^https:\/\//.test(i.url || ""));
       wireSince = prev && typeof prev.url === "string" && Number.isFinite(prev.at) ? prev : null;
       if (top) store.set("wire.seen", { url: top.url, at: Date.now() });
-      markWireSince(box);
+      if (box.dataset.view !== "fb") markWireSince(box); // opened again on 足球 by a redraw (refreshFront): the mark waits for 外電
+    });
+    // 外電｜足球: a tap on a title in the opened head changes the list and leaves the strip open; anywhere else on the
+    // line (收起) closes it as before
+    box.querySelector("summary").addEventListener("click", (e) => {
+      const tab = tk.open && e.target.closest?.(".tab");
+      if (!tab) return;
+      e.preventDefault();
+      if ((tab.dataset.tab === "fb") === (box.dataset.view === "fb")) return;
+      if (tab.dataset.tab === "fb") box.dataset.view = "fb";
+      else delete box.dataset.view;
+      drawWire(box, lastWire);
     });
   }
   const rows = () => [...ol.querySelectorAll("li")];
   const at = tk.open ? rows().find((li) => li.getBoundingClientRect().bottom > 0) : null;
   const keep = at && { url: at.querySelector("a").getAttribute("href"), top: at.getBoundingClientRect().top };
   const focus = document.activeElement?.closest?.(".wire a")?.getAttribute("href");
-  box.querySelector("summary").innerHTML = `<span class="wtag">外電</span><span class="de">Telegramme</span><span class="t">${esc(wireTime(first.time))}</span><span class="src">${esc(first.src)}</span><span class="h">${esc(first.title)}</span><span class="more">${items.length} 則</span><span class="less">收起</span>`;
-  ol.innerHTML = items.map((i) => `<li><a href="${esc(i.url)}" target="_blank" rel="noopener noreferrer"><span class="meta"><span class="t">${esc(wireTime(i.time))}</span><span class="src">${esc(i.src)}</span></span><b>${esc(i.title)}</b>${i.lead ? `<span class="ld">${esc(i.lead)}</span>` : ""}</a></li>`).join("");
+  if (box.dataset.sig !== sig) {
+    box.dataset.sig = sig;
+    const tab = (v, zh, de) => `<span class="tab${(v === "fb") === onFb ? " on" : ""}" data-tab="${v}"><span class="wtag">${zh}</span><span class="de">${de}</span></span>`;
+    const head = fb.length ? tab("wire", "外電", "Telegramme") + tab("fb", "足球", "Fußball") : `<span class="wtag">外電</span><span class="de">Telegramme</span>`;
+    box.querySelector("summary").innerHTML = `<span class="wtag nm">電訊</span>${head}<span class="t">${esc(wireTime(first.time))}</span><span class="src">${esc(first.src)}</span><span class="h">${esc(first.title)}</span><span class="more">${items.length} 則</span><span class="less">收起</span>`;
+  }
+  if (box.dataset.rows !== rowsSig) {
+    box.dataset.rows = rowsSig;
+    ol.innerHTML = list.map((i) => `<li><a href="${esc(i.url)}" target="_blank" rel="noopener noreferrer"><span class="meta"><span class="t">${esc(wireTime(i.time))}</span><span class="src">${esc(i.src)}</span></span><b>${esc(i.title)}</b>${i.lead ? `<span class="ld">${esc(i.lead)}</span>` : ""}</a></li>`).join("");
+  }
   box.hidden = false;
-  markWireSince(box);
+  if (!onFb) markWireSince(box); // 上次看到這 marks the wires only
   const same = (url) => rows().find((li) => li.querySelector("a").getAttribute("href") === url);
   if (keep) { const li = same(keep.url); if (li) window.scrollBy(0, li.getBoundingClientRect().top - keep.top); }
   if (focus) same(focus)?.querySelector("a").focus({ preventScroll: true });
@@ -3350,8 +3398,13 @@ async function boot() {
       const a = scrollY > 0 ? [...main.querySelectorAll('a[href^="#/a/"]')].find((el) => el.getBoundingClientRect().bottom > 0) : null, href = a?.getAttribute("href"), y0 = a?.getBoundingClientRect().top;
       const same = (h) => [...main.querySelectorAll(`a[href="${h}"]`)], nth = href ? same(href).indexOf(a) : -1; // the opened parcel has two links to one article
       const opened = [...main.querySelectorAll("details[open]")].map((d) => d.className).filter(Boolean); // 今日禱告, the wires, the letter fold: what the reader opened stays open
+      // and the opened strip stays on 足球 if that is what it showed (only closing it goes back to 外電), before the place
+      // below is put back, so the redraw does not move the page on the iPhone
+      const fbView = main.querySelector(".wrap > .wire .tk[open]") ? main.querySelector(".wrap > .wire").dataset.view : "";
       enteredFront = false; viewFront();
       for (const cls of opened) { const d = [...main.querySelectorAll("details")].find((x) => x.className === cls); if (d) d.open = true; }
+      const wire = fbView && main.querySelector(".wrap > .wire");
+      if (wire?.querySelector(".tk").open) { wire.dataset.view = fbView; drawWire(wire, lastWire); }
       const b = href ? same(href)[nth] || same(href)[0] : null;
       if (b) window.scrollBy(0, b.getBoundingClientRect().top - y0);
     }
