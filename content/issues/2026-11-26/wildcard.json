@@ -1,0 +1,203 @@
+{
+  "column": "wildcard",
+  "date": "2026-11-26",
+  "title": "地球上約一半人的飯，是工廠用空氣做出來的",
+  "dek": "空氣有七成八是氮，植物卻一口都吸不到。1908 年有人想出辦法，現在約一半的人靠它吃飯。",
+  "brief": "現在地球上約一半的人，飯裡的氮是工廠用空氣和氫合成的，靠的是 1908 年申請專利的哈伯–博施法。這個數字是研究者反推出來的，不是數出來的。同一個反應在一次大戰也供應了炸藥，投進田裡的氮最後只有一小部分被人吃進肚子。",
+  "topic_key": "wildcard:agriculture-haber-bosch-half-of-humanity",
+  "form": "argument",
+  "voice": "visitor",
+  "updated_at": "2026-11-26T01:49:48+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Ammoniak-Reaktor_1913_Oppau.jpg/1280px-Ammoniak-Reaktor_1913_Oppau.jpg",
+    "width": 1280,
+    "height": 1920,
+    "alt": "黑白照片：一座工廠廠房裡，一根粗長的圓柱形鋼製高壓爐被吊車直直吊在半空，頂端是一圈螺栓鎖緊的圓蓋；廠房兩側是磚牆和鐵架，遠處有一個人站在地上。",
+    "caption": "BASF 檔案編號 1795-alt：奧堡（Oppau）氨合成廠一號廠房裡，一座高壓爐正在吊裝組立。BASF 的歷史年表記載，世界第一座氨合成廠 1913 年在奧堡開工；這張照片 Commons 的日期欄寫 1920，檔名與早期說明寫 1913，拍攝年份不確定。",
+    "credit": "BASF Corporate History",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ammoniak-Reaktor_1913_Oppau.jpg",
+    "made": "1913–1920（Commons 紀錄不一）"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "有一件事我最近才知道，想講給你聽：**地球上大約一半的人，吃的飯裡的氮，是工廠用空氣和氫做出來的。**我原本以為，食物靠的是陽光和土地，肥料不過是從土裡、從礦裡挖來的。這個直覺漏掉了一整個工業。"
+    },
+    {
+      "type": "p",
+      "text": "先講氮是什麼。氮是植物長葉子、長穀粒要用的元素，可以想成蛋白質的原料。空氣裡有超過 78% 都是氮，但那是兩個氮原子緊緊綁在一起的氣體，植物吸不了。把這種氮變成植物能吃的形式，叫固氮。自然界只有少數細菌和閃電做得到。"
+    },
+    {
+      "type": "p",
+      "text": "**哈伯–博施法**做的就是固氮：在高壓、高溫、有鐵當催化劑的條件下，讓空氣中的氮和氫合成氨。氨是做氮肥的原料。"
+    },
+    {
+      "type": "h",
+      "text": "1898 年，有人說英國會吃不飽"
+    },
+    {
+      "type": "p",
+      "text": "這件事的起點是一場演講。1898 年，英國化學家**克魯克斯**（William Crookes）擔任英國科學促進會的主席，也就是英國科學界一年一度大會的會長。他在布里斯托的演說講的是「小麥問題」。他說小麥特別需要氮肥，又算出多出來的麥田，只夠讓吃麵包的人口增加到 1931 年左右。"
+    },
+    {
+      "type": "quote",
+      "text": "他們（指各項數字）顯示，英國和所有文明國家都處在吃不飽的重大危險裡。",
+      "original": "They show that England and all civilized nations stand in deadly peril of not having enough to eat.",
+      "cite": "威廉・克魯克斯（William Crookes），英國科學促進會主席演說，布里斯托，1898 年；刊於 Science 1898 年 10 月 28 日；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "他的出路是化學。他說，要來救這些受威脅的社群的，是化學家，飢荒最後可能經由實驗室變成富足。不過他也承認，當時已有幾種方法能固定一點氮，成本卻遠高於固定氮的市價。"
+    },
+    {
+      "type": "h",
+      "text": "十年後的一件專利"
+    },
+    {
+      "type": "p",
+      "text": "**1908 年 10 月 13 日，Fritz Haber 申請了「由元素合成氨」的專利。**他後來因此得 1918 年的諾貝爾化學獎。把它做成工廠規模的是 Carl Bosch，他在 1931 年得獎。1913 年，世界第一座氨合成廠在奧堡（Oppau）開工，廠是 BASF 的。"
+    },
+    {
+      "type": "p",
+      "text": "在那之前，氮肥的來源很有限：祕魯的鳥糞、智利的硝石、從煤取得的硫酸銨。鳥糞是海鳥長年堆積的糞便，硝石是智利北部沙漠的礦，兩樣都要靠船運。哈伯–博施法耗的能量比早期的固氮嘗試低，所以便宜。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "illustration",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/65/Chincha_muelle.JPG",
+      "width": 1184,
+      "height": 728,
+      "alt": "黑白版畫：一條長長的木架棧橋從左前方伸進海裡，橋身是交叉的木架；遠處海面上停著許多帆船，前景岩岸上站著兩個人，海上有一條小艇。",
+      "caption": "《倫敦畫報》（The Illustrated London News）1863 年 2 月 21 日第 200 頁的插畫，題為「欽查（鳥糞）群島：主碼頭」，畫的是祕魯外海的欽查群島。鳥糞是 19 世紀氮肥的來源之一，Erisman 等把它列在哈伯–博施法之前的天然氮來源裡。",
+      "credit": "ILN Staff（《倫敦畫報》特派畫家原作之版畫）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chincha_muelle.JPG",
+      "made": "1863"
+    },
+    {
+      "type": "h",
+      "text": "「一半」是怎麼估出來的"
+    },
+    {
+      "type": "p",
+      "text": "我最想知道的是這個數字從哪來。答案是沒有人數過，是反推。"
+    },
+    {
+      "type": "p",
+      "text": "**Erisman** 等人 2008 年在《自然地球科學》（Nature Geoscience）發表的論文，是我讀到講得最清楚的一篇。他們假設，沒有額外的氮，其他改良（新品種、機械這些）在 1950 到 2000 年之間只會讓產量增加 20%，再從這個缺口反推多少人吃不到飯。算出來 2000 年是 44%，2008 年是 48%。他們的說法是，約有一半人類的生命是靠哈伯–博施的氮才成立的。"
+    },
+    {
+      "type": "p",
+      "text": "其他人用別的路走到差不多的地方。Smil 假設沒有氮肥，全球收成大約只剩現在的一半，再從人吃的蛋白質裡的氮來源推算，結論是 20 世紀末約 40% 的人靠肥料吃飯。Stewart 等人看長期田間試驗和各國統計，結論是作物增產有 30% 到 50% 來自氮肥。"
+    },
+    {
+      "type": "table",
+      "title": "「約一半人靠它」是怎麼估出來的",
+      "head": [
+        "誰估的",
+        "估的是什麼",
+        "數字",
+        "做法（依來源的說法）"
+      ],
+      "rows": [
+        [
+          "Smil（Erisman 等引用）",
+          "20 世紀末，靠肥料才有飯吃的世界人口",
+          "約 40%",
+          "假設沒有氮肥，全球收成約剩一半；再從食物蛋白質的氮來源推算（Our World in Data 轉述）"
+        ],
+        [
+          "Stewart 等，2005",
+          "作物增產中，歸功於氮肥的部分",
+          "約 30–50%",
+          "根據長期田間試驗與各國統計"
+        ],
+        [
+          "Erisman 等，2008",
+          "靠哈伯–博施氮養活的世界人口",
+          "2000 年 44%；2008 年 48%",
+          "假設沒有額外的氮，其他改良 1950–2000 年只會增產 20%，由此反推"
+        ],
+        [
+          "Erisman 等，2008",
+          "整個 20 世紀（1908–2008 年）",
+          "約 27%，約 40 億人出生",
+          "同上"
+        ]
+      ],
+      "caption": "都是模型估算，不是直接點人數；Erisman 等自己寫明，全球平均會掩蓋地區差異。資料：Erisman 等（2008）、Ritchie（2017）。"
+    },
+    {
+      "type": "p",
+      "text": "但 Erisman 自己也寫，這個數字很難精確算，因為耕作方法、機械、育種都在變。全球平均也會藏住地區差異：歐洲和北美的增產，伴隨著吃更多肉和乳品、用更多氮肥。另外要分清楚：48% 是 2008 年當年的數字；整個 20 世紀，他們估計氮肥支持了約 27% 的人口，大約 40 億個出生的人。"
+    },
+    {
+      "type": "h",
+      "text": "同一個反應，也做炸藥"
+    },
+    {
+      "type": "p",
+      "text": "氨再氧化可以做成硝酸，硝酸可以做硝酸銨、硝化甘油和 TNT。第一次世界大戰時，智利硝石被封鎖，德國靠哈伯–博施法自己造氨。Erisman 等人寫，哈伯的發現「助長了第一次世界大戰」，也諷刺地讓協約國沒能很快獲勝。"
+    },
+    {
+      "type": "p",
+      "text": "哈伯是德國愛國者，想發展炸藥和其他化學武器，因為在他看來這些東西「會縮短戰爭」。這句話是 Erisman 等人轉引自一本哈伯傳記。"
+    },
+    {
+      "type": "h",
+      "text": "代價"
+    },
+    {
+      "type": "p",
+      "text": "哈伯沒預見到的，是氨的用量暴增之後的水污染、空氣污染、溫室氣體濃度被擾動，和生物多樣性流失。Erisman 等人的結論很直接：「整體來說，這些後果有多少算得上有益，仍然是個問號。」他們也提醒，糧食問題沒有消失，聯合國糧農組織的報告說，仍有約 8.5 億人營養不良。"
+    },
+    {
+      "type": "p",
+      "text": "還有一組數字。2005 年，約 100 Tg 的哈伯–博施氮用在全球農業（Tg 是百萬噸，100 Tg 就是一億噸）。同一年，人類實際吃進作物、乳品和肉品裡的氮，只有 17 Tg。全球穀物的氮使用效率，從 1960 年約 80%，掉到 2000 年約 30%。"
+    },
+    {
+      "type": "svg",
+      "title": "投進田裡的氮，人實際吃到多少",
+      "svg": "<svg viewBox=\"0 0 780 330\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"上圖：2005 年約 100 Tg 氮用在農業，人只吃進 17 Tg；下圖：穀物的氮使用效率從 1960 年約 80% 降到 2000 年約 30%\">\n<text class=\"ink\" x=\"20\" y=\"26\" font-size=\"15\" font-weight=\"bold\">投進田裡的氮，人實際吃到多少（2005 年，單位 Tg N）</text>\n<text class=\"ink\" x=\"20\" y=\"62\" font-size=\"13\">用在農業的哈伯–博施氮</text>\n<rect class=\"accent\" x=\"20\" y=\"72\" width=\"560\" height=\"26\"/>\n<text class=\"ink\" x=\"590\" y=\"91\" font-size=\"14\" font-weight=\"bold\">約 100</text>\n<text class=\"ink\" x=\"20\" y=\"130\" font-size=\"13\">人吃進的作物、乳品、肉品裡的氮</text>\n<rect class=\"gold\" x=\"20\" y=\"140\" width=\"95\" height=\"26\"/>\n<text class=\"ink\" x=\"125\" y=\"159\" font-size=\"14\" font-weight=\"bold\">17</text>\n<line class=\"muted\" x1=\"20\" y1=\"192\" x2=\"760\" y2=\"192\" stroke-width=\"1\" stroke-dasharray=\"6 5\"/>\n<text class=\"ink\" x=\"20\" y=\"222\" font-size=\"15\" font-weight=\"bold\">穀物的氮使用效率（收進食物的氮 ÷ 施下去的氮）</text>\n<text class=\"ink\" x=\"20\" y=\"256\" font-size=\"13\">1960 年</text>\n<rect class=\"soft\" x=\"100\" y=\"242\" width=\"480\" height=\"20\"/>\n<rect class=\"accent\" x=\"100\" y=\"242\" width=\"384\" height=\"20\"/>\n<text class=\"ink\" x=\"590\" y=\"258\" font-size=\"14\" font-weight=\"bold\">約 80%</text>\n<text class=\"ink\" x=\"20\" y=\"292\" font-size=\"13\">2000 年</text>\n<rect class=\"soft\" x=\"100\" y=\"278\" width=\"480\" height=\"20\"/>\n<rect class=\"accent\" x=\"100\" y=\"278\" width=\"144\" height=\"20\"/>\n<text class=\"ink\" x=\"590\" y=\"294\" font-size=\"14\" font-weight=\"bold\">約 30%</text>\n<text class=\"muted\" x=\"20\" y=\"322\" font-size=\"11\">長度依數字比例；上圖 100＝560 單位寬，下圖 100%＝480 單位寬。</text>\n</svg>",
+      "caption": "資料：Erisman 等（2008，引用聯合國環境署等 2007 年報告與國際肥料協會）。100 Tg N 是 2005 年用在全球農業的哈伯–博施氮，17 Tg N 是同年人類吃進肚子的作物、乳品與肉品裡的氮；穀物效率指收進食物的氮占施下去的氮的比例。原創示意圖，依文獻數字作成，Tg 是百萬噸。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "How a century of ammonia synthesis changed the world",
+      "publisher": "Nature Geoscience 1, 636–639（Erisman、Sutton、Galloway、Klimont、Winiwarter）",
+      "date": "2008-09-28",
+      "url": "https://www.nature.com/articles/ngeo325",
+      "note": "讀的是全文 PDF 的 IAI 代管版本；1908 年專利、1918 與 1931 年諾貝爾獎、44%／48%／27%、1.9→4.3 人／公頃、100 Tg 對 17 Tg、效率 80%→30%、炸藥與戰爭、哈伯 1920 年諾貝爾演說引文（轉引）都出自這篇。"
+    },
+    {
+      "title": "Address of the President before the British Association for the Advancement of Science, Bristol, 1898（Crookes）",
+      "publisher": "Science, N.S. vol. 8, no. 200",
+      "date": "1898-10-28",
+      "url": "https://zenodo.org/record/1448301/files/article.pdf",
+      "note": "讀 Science 刊出的全文掃描；三段引文（deadly peril、the chemist who must come to the rescue、fixation of atmospheric nitrogen）與 1931 年的小麥缺口預測出自這篇。"
+    },
+    {
+      "title": "How many people does synthetic fertilizer feed?",
+      "publisher": "Our World in Data（Hannah Ritchie）",
+      "date": "2017-11-07",
+      "url": "https://ourworldindata.org/how-many-people-does-synthetic-fertilizer-feed",
+      "note": "Smil 的算法（收成約剩一半、85% 的食物蛋白質氮來自農田）、Stewart 等的 362 個作物季、全球估計藏著不均。"
+    },
+    {
+      "title": "1913 / First Ammonia Synthesis Plant",
+      "publisher": "BASF（公司歷史年表）",
+      "date": "",
+      "url": "https://www.basf.com/global/en/who-we-are/history/chronology/1902-1924/1913",
+      "note": "1913 年奧堡（Oppau）開工世界第一座氨合成廠；博施領導 BASF 團隊把哈伯的實驗室方法工業化。"
+    }
+  ]
+}
