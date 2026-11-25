@@ -1856,6 +1856,7 @@ async function viewArticle(date, column, my) {
   // (The sideways swipe that turned pages here was taken out on 2026-11-01 at the owner's request.)
   const turns = new AbortController(), { signal } = turns;
   main.querySelector("[data-contents]")?.addEventListener("click", () => openContents(date, order, idx), { signal });
+  main.querySelector("[data-zl]")?.addEventListener("click", (e) => openTimeline(column, date, e.currentTarget), { signal }); // 年代尺 → 年代線
   // Opened from 連載 (perhaps a few installments on): step back to that page, where it was left, as the 連載 tab does.
   main.querySelector("[data-to-serial]")?.addEventListener("click", (e) => { if (fromList === "#/serial") { e.preventDefault(); history.go(-fromHops); } }, { signal });
 
@@ -2647,7 +2648,126 @@ function yearRuler(entry, column, date) {
   const side = me === null || me < 0.08 ? " l" : me > 0.92 ? " r" : "";
   const gold = `<i class="me${entry.century ? " c" : ""}${me === null ? " e" : ""}" ${me === null ? "" : at(me)}></i>`
     + `<span class="yr me-y${side}${me === null ? " e" : ""}" ${me === null ? "" : at(me)}>${esc(yearText(entry.year, entry.century))}</span>`;
-  return `<div class="zl${early ? " early" : ""}" aria-hidden="true"><i class="ax"></i>${ticks}${gray}${ends}${gold}</div>`;
+  return `<button class="zl${early ? " early" : ""}" type="button" data-zl aria-label="年代尺：${esc(yearText(entry.year, entry.century))}，打開年代線"><i class="ax"></i>${ticks}${gray}${ends}${gold}</button>`;
+}
+
+// 年代線 (Zeitleiste): a tap on the 年代尺 opens the column's published articles on one gold line of years, a stop an
+// article, oldest at the left, opened on this one; a century's mark stands where the line crosses into it, and a stop
+// opens its article. The ruler's hairline flies out to become the line and the cards spring up out of it; as the line
+// is swiped the cards turn like a fanned hand, and the one that lands in the middle hops, a gold light sweeps over it and
+// sparks fly from its dot. The page is see-through, the article blurred behind it. (Picked by the owner from samples on
+// 2026-11-25: the ruler lifting out, the article seen through, the line gold, the world's big years on it.)
+// 大事記: the world's big years, each a place of its own on the line between the cards that fall either side of it (a
+// gold diamond, the year and the event hung under it; not a stop the line settles on), so an article's year sits among
+// them; only those within the column's own span of years show. Before Christ negative; "c" when the year is only approximate; "\n" where a long name breaks. 編輯部自訂, one list for every column.
+const ERA_EVENTS = [
+  { y: -2560, t: "吉薩大金字塔\n完工", c: true }, { y: -776, t: "第一屆\n古代奧運" }, { y: -221, t: "秦統一中國" },
+  { y: -27, t: "羅馬帝國開始" }, { y: 476, t: "西羅馬帝國\n滅亡" }, { y: 618, t: "唐朝建立" }, { y: 1206, t: "成吉思汗\n建立蒙古帝國" },
+  { y: 1347, t: "黑死病\n傳入歐洲" }, { y: 1368, t: "明朝建立" }, { y: 1453, t: "君士坦丁堡\n陷落" }, { y: 1455, t: "古騰堡\n印出聖經", c: true },
+  { y: 1492, t: "哥倫布\n抵達美洲" }, { y: 1517, t: "宗教改革開始" }, { y: 1543, t: "哥白尼\n提出日心說" }, { y: 1618, t: "三十年戰爭\n開打" },
+  { y: 1644, t: "明朝滅亡" }, { y: 1683, t: "鄂圖曼大軍\n圍攻維也納" }, { y: 1687, t: "牛頓發表\n萬有引力" }, { y: 1756, t: "七年戰爭開打" },
+  { y: 1776, t: "美國獨立" }, { y: 1789, t: "法國大革命" }, { y: 1804, t: "拿破崙稱帝" }, { y: 1815, t: "維也納會議" },
+  { y: 1825, t: "第一條公共\n鐵路通車" }, { y: 1839, t: "攝影術公開" }, { y: 1840, t: "鴉片戰爭" }, { y: 1848, t: "歐洲革命之年" },
+  { y: 1861, t: "美國南北戰爭" }, { y: 1868, t: "明治維新" }, { y: 1871, t: "德意志帝國\n成立" }, { y: 1895, t: "第一場\n電影放映" },
+  { y: 1903, t: "萊特兄弟\n首次飛行" }, { y: 1911, t: "辛亥革命" }, { y: 1914, t: "第一次\n世界大戰" }, { y: 1918, t: "一戰結束" },
+  { y: 1929, t: "經濟大恐慌" }, { y: 1939, t: "第二次\n世界大戰" }, { y: 1945, t: "二戰結束" }, { y: 1969, t: "人類登陸月球" },
+  { y: 1989, t: "柏林圍牆倒下" }, { y: 1991, t: "蘇聯解體" }, { y: 2001, t: "九一一事件" }, { y: 2007, t: "第一支 iPhone" },
+];
+const centuryText = (y) => y < 0 ? `西元前 ${Math.floor(-y / 100) + 1} 世紀` : `${Math.floor(y / 100) + 1} 世紀`;
+function sparks(ln) {
+  if (!ln || calm()) return;
+  const b = document.createElement("span");
+  b.className = "zt-sp";
+  for (let i = 0; i < 22; i++) {
+    const a = (i / 22) * Math.PI * 2 + Math.random() * 0.4, r = 26 + Math.random() * 44;
+    b.insertAdjacentHTML("beforeend", `<i style="--x:${(Math.cos(a) * r).toFixed(1)}px;--y:${(Math.sin(a) * r * 0.8).toFixed(1)}px;--s:${(0.7 + Math.random() * 1).toFixed(2)};--t:${Math.round(480 + Math.random() * 320)}ms"></i>`);
+  }
+  ln.append(b);
+  setTimeout(() => b.remove(), 1000);
+}
+function openTimeline(column, date, from) {
+  const read = readSet(), items = [];
+  for (const i of publishedIssues()) { // not today's sealed parcel: no title, no way in
+    const x = i.articles.find((a) => a.column === column);
+    if (x && Number.isInteger(x.year) && !sealedBy(i.date, column)) items.push({ d: i.date, a: x });
+  }
+  if (!items.length) return;
+  items.sort((p, q) => p.a.year - q.a.year || (p.d < q.d ? -1 : 1));
+  const at = Math.max(0, items.findIndex((x) => x.d === date));
+  // a big year stands before the first card later than it: between the cards either side of it
+  const lo = items[0].a.year, hi = items[items.length - 1].a.year;
+  const evs = ERA_EVENTS.filter((e) => e.y >= lo && e.y < hi).map((e) => ({ ...e, g: items.filter((x) => x.a.year <= e.y).length }));
+  const marks = (n) => evs.filter((e) => e.g === n).map((e) => `<span class="evs" style="--i:${Math.abs(n - at)}"><span class="ln"><span class="evm"><i></i><span class="evl"><em>${e.c ? "約 " : ""}${esc(yearText(e.y, false))}</em>${esc(e.t).replace(/\n/g, "<br>")}</span></span></span><span class="y">&nbsp;</span></span>`).join("");
+  const stops = items.map(({ d, a }, n) => {
+    const cen = centuryText(a.year), turn = !a.century && (n === 0 || centuryText(items[n - 1].a.year) !== cen); // a century-only stop says it already
+    const img = a.hero?.src ? `<span class="im"><img src="${esc(a.hero.thumb || a.hero.src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span>` : `<span class="im none"></span>`;
+    return `${marks(n)}<a class="st${n === at ? " me" : ""}${n === 0 ? " first" : ""}${n === items.length - 1 ? " last" : ""}" href="#/a/${esc(d)}/${esc(column)}" data-n="${n}" style="--i:${Math.abs(n - at)}">
+      <span class="cd">${img}<span class="tx"><b>${esc(a.title)}</b><small>${esc(fmtDate(d, "short"))}${read.has(`${d}/${column}`) ? "・讀過" : ""}</small></span></span><span class="ln"><i class="dot"></i>${turn ? `<span class="cm">${esc(cen)}</span>` : ""}</span><span class="y">${esc(yearText(a.year, a.century))}</span></a>`;
+  }).join("");
+  document.querySelectorAll("dialog.zt").forEach((x) => x.remove()); // one closed a moment ago may still be waiting for its close event
+  const dlg = document.createElement("dialog");
+  dlg.className = "zt";
+  dlg.setAttribute("aria-label", "年代線");
+  dlg.innerHTML = `<div class="zt-box"><div class="zt-h"><span class="k">${esc(col(column, date).name)}・年代線<span class="de">Zeitleiste</span></span><button class="x" type="button" data-close aria-label="關上">×</button></div>
+    <div class="zt-track">${stops}</div><p class="zt-n"></p></div><i class="zt-fly" aria-hidden="true"></i>`;
+  document.body.append(dlg);
+  const track = dlg.querySelector(".zt-track"), all = [...track.querySelectorAll("a.st")], note = dlg.querySelector(".zt-n");
+  const left = (n) => all[n].offsetLeft - (track.clientWidth - all[n].offsetWidth) / 2;
+  let cur = -1, raf = 0, settle = 0;
+  const shut = () => dlg.close();
+  dlg.querySelector("[data-close]").onclick = shut;
+  dlg.addEventListener("click", (e) => {
+    if (e.target === dlg || e.target.classList.contains("zt-box")) { shut(); return; } // the empty page around the line
+    const s = e.target.closest("a.st");
+    if (!s) return;
+    const n = Number(s.dataset.n);
+    if (n !== cur) { e.preventDefault(); track.scrollTo({ left: left(n), behavior: calm() ? "auto" : "smooth" }); return; } // a side card comes to the middle first
+    if (n === at) e.preventDefault(); // this article: back to it
+    shut();
+  });
+  // Any change of page closes it too (the back swipe, a card's link): it never stays over the page it was not opened on.
+  window.addEventListener("hashchange", shut, { once: true });
+  dlg.addEventListener("close", () => { window.removeEventListener("hashchange", shut); dlg.remove(); }, { once: true });
+  // Each card's place against the middle: --sd signed (-1.4 … 1.4, a card and a half to one), --d its size; the cards'
+  // turn, size and shade follow it (style.css .zt .cd).
+  const shade = () => {
+    raf = 0;
+    const c = track.scrollLeft + track.clientWidth / 2;
+    for (const s of all) {
+      const sd = Math.max(-1.4, Math.min(1.4, (s.offsetLeft + s.offsetWidth / 2 - c) / (s.offsetWidth * 1.5)));
+      s.style.setProperty("--sd", sd.toFixed(3)); s.style.setProperty("--d", Math.abs(sd).toFixed(3));
+    }
+  };
+  // The card nearest the middle once the swipe has settled: it is marked, counted, and (but at the opening) hops.
+  const land = (first = false) => {
+    const c = track.scrollLeft + track.clientWidth / 2;
+    let n = 0, best = Infinity;
+    all.forEach((s, i) => { const d = Math.abs(s.offsetLeft + s.offsetWidth / 2 - c); if (d < best) { best = d; n = i; } });
+    if (n === cur) return;
+    cur = n;
+    all.forEach((s, i) => s.classList.toggle("on", i === n));
+    note.textContent = `第 ${n + 1}／${items.length} 篇${n === at ? "・就是這一篇" : ""}`;
+    if (first) return;
+    const s = all[n];
+    s.classList.remove("pop"); void s.offsetWidth; s.classList.add("pop");
+    sparks(s.querySelector(".ln"));
+  };
+  track.addEventListener("scroll", () => {
+    if (!raf) raf = requestAnimationFrame(shade);
+    clearTimeout(settle); settle = setTimeout(land, 90);
+  }, { passive: true });
+  dlg.showModal();
+  track.scrollLeft = left(at);
+  shade(); land(true);
+  if (from && !calm()) { // the ruler's hairline flies to the line's place and fades into it
+    const r = from.getBoundingClientRect(), fly = dlg.querySelector(".zt-fly");
+    fly.style.cssText = `left:${r.left}px;top:${r.top + 5}px;width:${r.width}px`;
+    requestAnimationFrame(() => {
+      const dot = all[at].querySelector(".dot").getBoundingClientRect(), y = dot.top + dot.height / 2, tr = track.getBoundingClientRect();
+      fly.animate([{ left: `${r.left}px`, top: `${r.top + 5}px`, width: `${r.width}px`, opacity: 1 }, { left: `${tr.left}px`, top: `${y}px`, width: `${tr.width}px`, opacity: 1, offset: .75 }, { left: `${tr.left}px`, top: `${y}px`, width: `${tr.width}px`, opacity: 0 }],
+        { duration: 520, easing: "cubic-bezier(.2,.7,.2,1)", fill: "forwards" });
+    });
+  }
 }
 
 // ——— 閱讀年鑑 (Lesekalender): the reading record this phone holds, drawn as a calendar ———
