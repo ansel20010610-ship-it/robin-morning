@@ -1,5 +1,60 @@
 /* 知更鳥晨間記事 — Wiener Secession × Kaffeehaus */
 
+/* ——— Before the web fonts arrive ———
+   The first frames are set in local faces that take the room the web fonts will take, so that no line breaks
+   differently and no line box changes height when Cormorant Garamond and Noto Serif TC come in (an iPhone keeps no
+   scroll anchor: the weather box's first line wrapped in Georgia and unwrapped 25 pt later under the reader's thumb).
+   - The line's metrics: WebKit takes them from the face that has the space (U+0020), and Safari has no ascent-override,
+     so the space comes from a face whose ascent and descent, scaled by size-adjust, round to the web font's at every
+     size: Didot Italic for Cormorant Garamond (924/287 per mille), Noteworthy Light for Noto Serif TC (1151/286), each
+     also within a hair of the web font's space.
+   - The glyphs: faces scaled to the web fonts' advances. Figures come from Menlo, which kerns none of them: Cormorant
+     600's old-style figures one by one (the 日曆's year, the No.), its lining tabular ones and – ° % : for the weather
+     box (style.css .wetter b; Figures Fallback) to the unit, Noto's within a hair; the letters within a few per cent.
+   - Noto Serif TC's stands in for its Latin only, and for the name dot ・, which WebKit takes from the family's last
+     face whatever its range (so it comes last, at Noto's 1 em; it was a system font scaled with the space face, 8%
+     narrower); the Han characters fall through to the system's, as wide as Noto's.
+   Later rules win where ranges overlap. A face the phone lacks is skipped; the web fonts never use these, except for a
+   character they do not have. Measured against the web fonts in WebKit, 2026-11-25. */
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 500; src: local("Times New Roman"), local("TimesNewRomanPSMT"); size-adjust: 97.5%; unicode-range: U+21-7E, U+A1-FF, U+131, U+152-153, U+2000-206F, U+20AC, U+2122; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 500; src: local("Menlo Regular"), local("Menlo-Regular"); size-adjust: 71.61%; unicode-range: U+30-39; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 500; src: local("Didot Italic"), local("Didot-Italic"); size-adjust: 98.09%; unicode-range: U+20, U+A0; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 600; src: local("Palatino Bold"), local("Palatino-Bold"); size-adjust: 88.9%; unicode-range: U+21-7E, U+A1-FF, U+131, U+152-153, U+2000-206F, U+20AC, U+2122; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 600; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 79.23%; unicode-range: U+30; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 600; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 55.14%; unicode-range: U+31; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 600; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 66.77%; unicode-range: U+32; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 600; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 65.17%; unicode-range: U+33; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 600; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 75.47%; unicode-range: U+34; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 600; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 67.93%; unicode-range: U+35; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 600; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 77.24%; unicode-range: U+36, U+39; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 600; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 71.26%; unicode-range: U+37; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 600; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 81.22%; unicode-range: U+38; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: normal; font-weight: 600; src: local("Didot Italic"), local("Didot-Italic"); size-adjust: 98.09%; unicode-range: U+20, U+A0; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: italic; font-weight: 500; src: local("Iowan Old Style Italic"), local("IowanOldStyle-Italic"); size-adjust: 89.9%; unicode-range: U+21-7E, U+A1-FF, U+131, U+152-153, U+2000-206F, U+20AC, U+2122; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: italic; font-weight: 500; src: local("Menlo Italic"), local("Menlo-Italic"); size-adjust: 65.06%; unicode-range: U+30-39; }
+@font-face { font-family: "Cormorant Garamond Fallback"; font-style: italic; font-weight: 500; src: local("Didot Italic"), local("Didot-Italic"); size-adjust: 98.09%; unicode-range: U+20, U+A0; }
+@font-face { font-family: "Cormorant Garamond Figures Fallback"; font-style: normal; font-weight: 600; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 81.55%; unicode-range: U+30-39; }
+@font-face { font-family: "Cormorant Garamond Figures Fallback"; font-style: normal; font-weight: 600; src: local("Times New Roman Bold"), local("TimesNewRomanPS-BoldMT"); size-adjust: 103%; unicode-range: U+2013; }
+@font-face { font-family: "Cormorant Garamond Figures Fallback"; font-style: normal; font-weight: 600; src: local("Times New Roman Bold"), local("TimesNewRomanPS-BoldMT"); size-adjust: 83.02%; unicode-range: U+B0; }
+@font-face { font-family: "Cormorant Garamond Figures Fallback"; font-style: normal; font-weight: 600; src: local("Times New Roman Bold"), local("TimesNewRomanPS-BoldMT"); size-adjust: 57.4%; unicode-range: U+25; }
+@font-face { font-family: "Cormorant Garamond Figures Fallback"; font-style: normal; font-weight: 600; src: local("Times New Roman Bold"), local("TimesNewRomanPS-BoldMT"); size-adjust: 62.16%; unicode-range: U+3A; }
+@font-face { font-family: "Cormorant Garamond Figures Fallback"; font-style: normal; font-weight: 600; src: local("Didot Italic"), local("Didot-Italic"); size-adjust: 98.09%; unicode-range: U+20, U+A0; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 400; src: local("Charter Roman"), local("Charter-Roman"); size-adjust: 112.9%; unicode-range: U+21-7E, U+A1-B6, U+B8-FF; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 400; src: local("Menlo Regular"), local("Menlo-Regular"); size-adjust: 92.52%; unicode-range: U+30, U+32-39; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 400; src: local("Menlo Regular"), local("Menlo-Regular"); size-adjust: 78.22%; unicode-range: U+31; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 400; src: local("Noteworthy Light"), local("Noteworthy-Light"); size-adjust: 89.92%; unicode-range: U+20, U+A0; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 400; src: local("PingFang TC Regular"), local("PingFangTC-Regular"), local("Hiragino Mincho ProN W3"), local("HiraMinProN-W3"); unicode-range: U+30FB; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 600; src: local("Charter Bold"), local("Charter-Bold"); size-adjust: 109.6%; unicode-range: U+21-7E, U+A1-B6, U+B8-FF; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 600; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 96%; unicode-range: U+30, U+32-39; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 600; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 77.72%; unicode-range: U+31; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 600; src: local("Noteworthy Light"), local("Noteworthy-Light"); size-adjust: 89.92%; unicode-range: U+20, U+A0; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 600; src: local("PingFang TC Semibold"), local("PingFangTC-Semibold"), local("Hiragino Mincho ProN W6"), local("HiraMinProN-W6"); unicode-range: U+30FB; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 700; src: local("Charter Bold"), local("Charter-Bold"); size-adjust: 111.6%; unicode-range: U+21-7E, U+A1-B6, U+B8-FF; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 700; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 98.55%; unicode-range: U+30, U+32-39; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 700; src: local("Menlo Bold"), local("Menlo-Bold"); size-adjust: 77.35%; unicode-range: U+31; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 700; src: local("Noteworthy Light"), local("Noteworthy-Light"); size-adjust: 89.92%; unicode-range: U+20, U+A0; }
+@font-face { font-family: "Noto Serif TC Fallback"; font-style: normal; font-weight: 700; src: local("PingFang TC Semibold"), local("PingFangTC-Semibold"), local("Hiragino Mincho ProN W6"), local("HiraMinProN-W6"); unicode-range: U+30FB; }
+
 :root {
   /* 紙放一天 (masthead.js tintPaper): the light paper warms through the day; the -aged tones are set on the root and
      the dark theme below does not read them */
@@ -24,8 +79,9 @@
   --red: #8E2A2E;
   --shadow: 0 1px 0 rgba(60, 45, 20, .06), 0 8px 24px -16px rgba(60, 45, 20, .35);
   --fs: 18.5px;
-  --serif: "Noto Serif TC", "Songti TC", "Source Han Serif TC", "PMingLiU", serif;
-  --latin: "Cormorant Garamond", "Cormorant", Georgia, serif;
+  --serif: "Noto Serif TC", "Noto Serif TC Fallback", "Songti TC", "Source Han Serif TC", "PMingLiU", serif;
+  --latin: "Cormorant Garamond", "Cormorant Garamond Fallback", "Cormorant", Georgia, serif;
+  --figures: "Cormorant Garamond", "Cormorant Garamond Figures Fallback", "Cormorant Garamond Fallback", "Cormorant", Georgia, serif; /* lining tabular figures (.wetter b) */
   --sans: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Helvetica Neue", sans-serif;
   --measure: 34rem;
   --gutter: 20px;
@@ -351,7 +407,7 @@ button { font: inherit; color: inherit; }
 .wetter .row.sky .tx { min-width: 0; }
 .wetter .row.sky.off { visibility: hidden; }
 .wetter .wx { width: 18px; height: 18px; flex: none; margin-right: 6px; }
-.wetter b { font-family: var(--latin); font-weight: 600; font-size: 17px; line-height: 1; letter-spacing: 0; font-variant-numeric: lining-nums tabular-nums; }
+.wetter b { font-family: var(--figures); font-weight: 600; font-size: 17px; line-height: 1; letter-spacing: 0; font-variant-numeric: lining-nums tabular-nums; }
 /* 週末氣象 (wetter.js weekendHtml, a Friday evening): Saturday and Sunday, a line each in the first line's type, each held
    to 23.5px, so the two together are exactly as tall as today's two lines (25 + 22) and the box keeps its height. */
 .wetter .row.wk { height: 23.5px; line-height: 23.5px; }
