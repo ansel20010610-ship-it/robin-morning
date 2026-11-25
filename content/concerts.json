@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-25",
+  "checked": "2026-11-26",
   "events": [
     {
       "id": "mahler8-nso-2026",
@@ -702,40 +702,6 @@
       ]
     },
     {
-      "id": "currentzis-utopia-2026",
-      "title": "庫倫奇斯與烏托邦管弦樂團",
-      "kind": "交響樂",
-      "rating": 5,
-      "why": "庫倫奇斯 2022 年從近 30 國樂團召集首席與獨奏家組成烏托邦管弦樂團，這是首度訪台。曲目是馬勒《巨人》，加上梅尼可夫彈蕭士塔高維契第二號鋼琴協奏曲。",
-      "who": "提奧多．庫倫奇斯（指揮）、烏托邦管弦樂團、亞歷山大．梅尼可夫（鋼琴）",
-      "program": "蕭士塔高維契《F大調第二號鋼琴協奏曲》、馬勒《D大調第一號交響曲「巨人」》",
-      "price": "NT$2,980–7,280",
-      "note": "由信義側 1 號門驗證進場",
-      "shows": [
-        {
-          "date": "2026-11-25",
-          "time": "19:45",
-          "city": "台北",
-          "venue": "國家音樂廳",
-          "tickets": "https://ticket.mna.com.tw/UTK0201_?PRODUCT_ID=P1GIAJDO"
-        }
-      ],
-      "added": "2026-11-09",
-      "uids": [
-        "ntch:29273"
-      ],
-      "sources": [
-        {
-          "title": "牛耳藝術節目頁",
-          "url": "https://www.mna.com.tw/concerts_detail.html?id=776"
-        },
-        {
-          "title": "MNA 售票頁",
-          "url": "https://ticket.mna.com.tw/UTK0201_?PRODUCT_ID=P1GIAJDO"
-        }
-      ]
-    },
-    {
       "id": "lang-lang-recital-2026",
       "title": "郎朗鋼琴獨奏會",
       "kind": "獨奏",
@@ -1192,13 +1158,6 @@
       "note": "建議 6 歲以上；卡司尚未公布",
       "shows": [
         {
-          "date": "2026-11-25",
-          "time": "19:30",
-          "city": "台北",
-          "venue": "臺北表演藝術中心大劇院",
-          "tickets": "https://tickets.udnfunlife.com/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1AEBJG5"
-        },
-        {
           "date": "2026-11-26",
           "time": "19:30",
           "city": "台北",
@@ -1463,35 +1422,6 @@
           "url": "https://www.npac-ntt.org/program/events/c-WlZRMgyXcGS"
         }
       ]
-    },
-    {
-      "id": "chen-shih-wei-liszt-2026",
-      "title": "陳世偉鋼琴獨奏會：巡禮之年",
-      "kind": "獨奏",
-      "rating": 3,
-      "why": "陳世偉一晚彈完李斯特《巡禮之年》第二年〈義大利〉，再接補遺〈威尼斯與那不勒斯〉。他在德國漢諾威音樂學院拿到最高演奏文憑，得過馬德里的國際鋼琴比賽首獎。",
-      "who": "陳世偉（鋼琴）",
-      "program": "李斯特：《巡禮之年》第二年〈義大利〉S.161、第二年補遺〈威尼斯與那不勒斯〉S.162",
-      "shows": [
-        {
-          "date": "2026-11-25",
-          "time": "19:30",
-          "city": "台中",
-          "venue": "臺中國家歌劇院小劇場",
-          "tickets": "https://www.opentix.life/event/2109824911699013633"
-        }
-      ],
-      "uids": [
-        "2109824911699013633",
-        "ntt:c-bc58iOQRzKn"
-      ],
-      "sources": [
-        {
-          "title": "OPENTIX 節目頁",
-          "url": "https://www.opentix.life/event/2109824911699013633"
-        }
-      ],
-      "added": "2026-11-17"
     },
     {
       "id": "liao-chiao-han-bach-dance-2026",
@@ -2530,6 +2460,35 @@
         {
           "title": "OPENTIX 節目頁",
           "url": "https://www.opentix.life/event/2120001954041536512"
+        }
+      ]
+    },
+    {
+      "id": "ntso-dragan-liu-2027",
+      "title": "德拉根、劉恩廷與國臺交",
+      "kind": "交響樂",
+      "rating": 3,
+      "why": "國臺交首席小號劉恩廷吹內魯達《降 E 大調小號協奏曲》，前後是海頓與拉威爾、史特拉汶斯基的新古典作品。",
+      "who": "芭芭拉．德拉根（指揮）、劉恩廷（小號）、國立臺灣交響樂團",
+      "program": "海頓《第八十三號交響曲「母雞」》、內魯達《小號協奏曲》、拉威爾《庫普蘭之墓》、史特拉汶斯基《普欽奈拉》組曲",
+      "price": "台中 NT$300–1,000",
+      "shows": [
+        {
+          "date": "2027-04-25",
+          "time": "14:30",
+          "city": "台中",
+          "venue": "國立臺灣交響樂團演奏廳",
+          "tickets": "https://www.opentix.life/event/2079221127184650241"
+        }
+      ],
+      "added": "2026-11-26",
+      "uids": [
+        "2079221127184650241"
+      ],
+      "sources": [
+        {
+          "title": "OPENTIX 節目頁",
+          "url": "https://www.opentix.life/event/2079221127184650241"
         }
       ]
     }

@@ -1,63 +1,67 @@
 {
   "last": "2026-11-09",
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "sources": {
     "mna": {
       "urls": [
         "https://www.mna.com.tw/concerts.html",
-        "https://www.mna.com.tw/concerts.html?page=2"
+        "https://www.mna.com.tw/concerts.html?page=2",
+        "https://www.mna.com.tw/concerts_detail.html?id=778",
+        "https://www.mna.com.tw/concerts_detail.html?id=777"
       ],
       "seen": [
-        {
-          "title": "Philharmonix",
-          "verdict": "已列入",
-          "id": "philharmonix-2026"
-        },
-        {
-          "title": "Teodor Currentzis and Utopia Orchestra",
-          "verdict": "已列入",
-          "id": "currentzis-utopia-2026"
-        },
         {
           "title": "Lang Lang Piano Recital",
           "verdict": "已列入",
           "id": "lang-lang-recital-2026"
         },
         {
-          "title": "INTERSTELLAR LIVE",
+          "title": "Philharmonix",
+          "verdict": "已列入",
+          "id": "philharmonix-2026"
+        },
+        {
+          "title": "Currentzis and Utopia Orchestra",
           "verdict": "不收",
-          "why": "1分：電影配樂演出"
+          "why": "11/25 已演完"
         },
         {
           "title": "Yuja Wang and Mahler Chamber Orchestra",
           "verdict": "不收",
-          "why": "演出日 11/21 已過"
+          "why": "11/21 已演完"
         },
         {
-          "title": "Attack on Titan World Tour",
+          "title": "Thielemann and Staatskapelle Berlin",
           "verdict": "不收",
-          "why": "1分：動漫配樂"
+          "why": "11/21 已演完"
         },
         {
-          "title": "Diana Krall",
+          "title": "DIANA KRALL",
           "verdict": "不收",
-          "why": "爵士流行，非收錄範圍"
+          "why": "爵士演唱，不在範圍"
         },
         {
-          "title": "Christian Thielemann and Staatskapelle Berlin",
+          "title": "INTERSTELLAR LIVE",
           "verdict": "不收",
-          "why": "演出日 11/21 已過"
+          "why": "電影配樂"
+        },
+        {
+          "title": "Attack on Titan 世界巡演",
+          "verdict": "不收",
+          "why": "動漫配樂"
         }
       ]
     },
     "newaspect": {
       "urls": [
-        "https://www.newaspect.org.tw",
-        "https://www.newaspect.org.tw/quintetolegrandtango",
-        "https://www.newaspect.org.tw/thewhoopgroup2026",
-        "https://www.opentix.life/event/2062364642343882753"
+        "https://www.newaspect.org.tw"
       ],
       "seen": [
+        {
+          "title": "2027向貝多芬致敬-吉爾特伯格",
+          "verdict": "已列入",
+          "id": "giltburg-beethoven-tso-2027"
+        },
         {
           "title": "2026蕭邦計畫",
           "verdict": "不收",
@@ -66,60 +70,41 @@
         {
           "title": "2026阿格麗希音樂節在台灣",
           "verdict": "不收",
-          "why": "11/10、11/12、11/15 已演完"
+          "why": "已演完"
         },
         {
           "title": "2026皮亞佐拉五重奏",
           "verdict": "不收",
-          "why": "OPENTIX 已下架、查不到場次日期，無法評分"
-        },
-        {
-          "title": "2026 窩噗瘋一下",
-          "verdict": "不收",
-          "why": "2分：流行團體，非古典"
-        },
-        {
-          "title": "2027向貝多芬致敬-吉爾特伯格",
-          "verdict": "已列入",
-          "id": "giltburg-beethoven-tso-2027"
+          "why": "查不到場次，無法評分"
         }
       ]
-    },
-    "pbc": {
-      "error": "www.pbc.com.tw 憑證不符，打不開"
     },
     "tanart": {
-      "error": "arsformosa.com.tw 連線被拒（ECONNREFUSED）"
+      "error": "連線被拒（ECONNREFUSED）"
+    },
+    "pbc": {
+      "error": "來不及查"
     },
     "kham": {
-      "urls": [
-        "https://kham.com.tw"
-      ],
-      "seen": [
-        {
-          "title": "SHOW MUSICAL WILD WILD",
-          "verdict": "不收",
-          "why": "2分：流行音樂劇秀，查不到場次與製作內容"
-        }
-      ]
+      "error": "來不及查"
     },
     "udn": {
-      "error": "沒有逐一打開 udnfunlife 與時藝多媒體；只用搜尋看到 MJ 麥可傑克森音樂劇 2027 年 4 月台北流行音樂中心，尚無場次日期，待售票公布再評"
+      "error": "來不及查"
     },
     "news": {
-      "error": "只做了網路搜尋（原版音樂劇、2027 訪台樂團／歌劇／鋼琴家），沒有逐一打開誠品、年代、KKTIX、wekengo；搜尋沒有找到新的未列入演出"
+      "error": "來不及查"
     },
     "ntch": {
       "auto": true,
-      "n": 114
+      "n": 118
     },
     "ntt": {
       "auto": true,
-      "n": 48
+      "n": 49
     },
     "wwy": {
       "auto": true,
-      "n": 161
+      "n": 160
     }
   }
 }
