@@ -10,7 +10,7 @@ import { initPull } from "./pull.js";
 import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pressRun, ripples, flip, shine, tiltGrant } from "./motion.js";
 import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
 import { pressHtml } from "./press.js";
-import { fetchWeather, weatherHtml, keptWeather } from "./wetter.js";
+import { fetchWeather, keptWeather, shownDays, shownHtml } from "./wetter.js";
 import { skyLine, skyRow, eveningRain, ferienLine } from "./almanac.js";
 import { boerseBox, fillBoerse } from "./boerse.js";
 import { outdoorFront, closeOutdoor } from "./outdoor-card.js";
@@ -714,32 +714,44 @@ function masthead(issue, fresh = false, front = false, ferien = "") {
 // paper); an archive issue, or yesterday's paper before 07:30, has none. The box is drawn hidden with its label and
 // filled once the forecast is in, if it is still on the page (fetchWeather answers from its cache at once on every
 // redraw after the first, and never rejects); with no forecast it stays hidden rather than showing a bare label.
+// From 20:00 the same box shows tomorrow, and on a Friday evening the weekend (wetter.js shownDays), decided when the
+// page is drawn and kept on the box (data-show, data-days) for fillWeather: the box only changes when the front page is
+// drawn again (opened, a visibility replay, a redraw for another reason such as the 21:00 letter fold), never by the clock alone.
 // Today's paper: the latest issue, dated today — not an archive issue, nor yesterday's paper before 07:30.
 const todays = (issue) => Boolean(issue) && issue.date === twNow().date && issue.date === publishedIssues()[0]?.date;
+const WX_LABEL = { today: ["今日氣象", "Wetter"], tomorrow: ["明日氣象", "Wetter morgen"], weekend: ["週末氣象", "Wochenende"] };
 function weatherBox(issue) {
   if (!todays(issue)) return "";
-  // drawn at once from today's kept copy (wetter.js keptWeather), so the box holds its place while fillWeather asks
-  // again; only the day's first look, with nothing kept, starts without it
-  const kept = keptWeather(), html = kept ? weatherHtml(kept) : "", day = twNow().date;
+  // drawn at once from today's kept copy (wetter.js keptWeather) — the shown day's lines out of it — so the box holds its
+  // place while fillWeather asks again; only the day's first look, with nothing kept, starts without it
+  const kept = keptWeather(), day = twNow().date;
+  let shown = shownDays(), html = kept ? shownHtml(kept, shown) : "";
+  // a copy kept while the answer was a single day has no tomorrow: the box is then drawn as today out of it, as it was
+  // before, so it stands at once at its height rather than hidden until the answer comes; fillWeather asks for the
+  // clock's days as well, so the three days are kept, and the next drawing shows tomorrow
+  if (kept && !html && shown.kind !== "today") { shown = { kind: "today", days: [day] }; html = shownHtml(kept, shown); }
   // 今晚 on a day with a sight is drawn at once, forecast or not: with no kept forecast the box stands with that one row
   // and the readings are written above it when they come; with a kept one the rain decides now
   const sky = html ? skyState(kept, day) : skyLine(day) ? "on" : "";
-  return `<section class="wetter"${html || sky ? "" : " hidden"}${sky ? ` data-sky="${sky}"` : ""} data-day="${day}" aria-label="今日氣象"><div class="lbl">今日氣象<span class="de">Wetter</span></div><div class="fc">${html}${skyHtml(sky, day)}</div></section>`;
+  const [zh, de] = WX_LABEL[shown.kind];
+  return `<section class="wetter"${html || sky ? "" : " hidden"}${sky ? ` data-sky="${sky}"` : ""} data-day="${day}" data-show="${shown.kind}" data-days="${shown.days.join(" ")}" aria-label="${zh}"><div class="lbl">${zh}<span class="de">${de}</span></div><div class="fc">${html}${skyHtml(sky, day)}</div></section>`;
 }
 // 今晚 (assets/almanac.js): the row under the readings, kept in the box's data-sky: "on" (printed), "off" (none: no sight
 // tonight, or rain), "blank" (printed first, then the forecast that came late said rain: the line keeps its height, empty,
 // until the front page is drawn again). The date is the one the box was drawn on (data-day), so a forecast that comes after
 // midnight does not look the table up for another day. A later forecast never adds the row to a box drawn without it.
-const skyState = (d, day) => (skyLine(day) && !eveningRain(d) ? "on" : "off");
+const skyState = (d, day) => (skyLine(day) && !eveningRain(d, day) ? "on" : "off");
 const skyHtml = (sky, day) => (sky === "on" || sky === "blank" ? skyRow(skyLine(day), sky === "blank") : "");
 // The forecast it was filled with (null for none), for the 出門前 card (outdoor-card.js).
 function fillWeather() {
   const box = main.querySelector(".wrap > .wetter");
   if (!box) return Promise.resolve(null);
-  return fetchWeather().then((d) => {
-    const html = d ? weatherHtml(d) : "";
+  const shown = { kind: box.dataset.show, days: box.dataset.days.split(" ") }; // as the box was drawn, whatever the clock says now
+  // the forecast asked for the clock's days too (a box drawn as today out of a one-day copy after 20:00), the box filled by its own
+  return fetchWeather([...new Set([...shown.days, ...shownDays().days])]).then((d) => {
+    const html = d ? shownHtml(d, shown) : "";
     if (html && box.isConnected) {
-      const day = box.dataset.day, was = box.dataset.sky, sky = !was ? skyState(d, day) : was === "on" && eveningRain(d) ? "blank" : was;
+      const day = box.dataset.day, was = box.dataset.sky, sky = !was ? skyState(d, day) : was === "on" && eveningRain(d, day) ? "blank" : was;
       box.dataset.sky = sky;
       const fc = box.querySelector(".fc"), row = fc.querySelector(".row.sky");
       if (row && sky === "on") { fc.innerHTML = html; fc.append(row); } // the row already drawn stays as it is (no second fade-in)

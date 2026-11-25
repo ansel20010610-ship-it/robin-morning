@@ -1,7 +1,9 @@
 // 今日氣象 (Wetter): Taichung's day on the front page, in the row 接著上次 once held (app.js weatherBox, fillWeather), out of Open-Meteo —
 // free, no key, and nothing of the reader's goes out but the city's coordinates. One answer serves the morning: it is
 // kept in localStorage (rm.wx) and reused while it is today's and under three hours old; when the network fails, today's
-// kept copy still serves, and with none the masthead simply has no line.
+// kept copy still serves, and with none the masthead simply has no line. The answer runs over three days, today first:
+// from 20:00 the box shows tomorrow (明日氣象), and on a Friday evening the weekend (週末氣象), out of the same copy
+// (shownDays); every other reader of it (the masthead's window, the yard's sky, the sunrise, the 出門前 card) takes today.
 import { esc, store, twNow, within } from "./util.js";
 
 // Today's kept copy whatever its age, or null: the front page draws the box out of it at once and lets the fresh answer
@@ -17,14 +19,20 @@ export function sunTimes(d = keptWeather()) {
   return { rise: t(d?.daily?.sunrise?.[0], "06:10"), set: t(d?.daily?.sunset?.[0], "17:20") };
 }
 
-const API ="https://api.open-meteo.com/v1/forecast?latitude=24.1477&longitude=120.6736&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&hourly=temperature_2m,precipitation_probability,weather_code&timezone=Asia%2FTaipei&forecast_days=1";
+const API ="https://api.open-meteo.com/v1/forecast?latitude=24.1477&longitude=120.6736&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&hourly=temperature_2m,precipitation_probability,weather_code&timezone=Asia%2FTaipei&forecast_days=3";
 const MAX_AGE = 3 * 3600 * 1000;
 
-// The day's forecast as Open-Meteo sends it (daily.* one value each, hourly.* twenty-four), or null. Never throws.
-export async function fetchWeather() {
+// Whether forecast `d` has every one of `days` ("YYYY-MM-DD") among its days.
+const covers = (d, days) => Array.isArray(d?.daily?.time) && days.every((x) => d.daily.time.includes(x));
+
+// The forecast as Open-Meteo sends it (daily.* one value a day, hourly.* twenty-four a day, today first), or null.
+// `days` are the dates the caller reads out of it: a kept copy that lacks one of them (one kept while the answer was a
+// single day) is asked for again, never taken for them. Offline, today's kept copy is still the answer, as it is; a day
+// it lacks then simply has no figures (weatherFacts). Never throws.
+export async function fetchWeather(days = [twNow().date]) {
   const now = twNow(), kept = store.get("wx");
   const todays = kept?.date === now.date && kept.data ? kept : null;
-  if (todays && now.ms - Number(todays.at) < MAX_AGE) return todays.data;
+  if (todays && now.ms - Number(todays.at) < MAX_AGE && covers(todays.data, days)) return todays.data;
   try {
     const r = await fetch(API, { cache: "no-cache", ...within(8000) });
     if (!r.ok) throw new Error(String(r.status));
@@ -58,38 +66,73 @@ const GLYPH_OF = { 晴: "sun", 大致晴: "sunCloud", 多雲時晴: "sunCloud", 
 // The day's figures, for the two lines below and for the 出門前 card (outdoor-card.js): the glyph, the range, the
 // condition — the daily code's word, or 「早轉午」 when the 08:00 and 14:00 hourly codes give different words — the
 // chance of rain (NaN when not a number), the sunrise ("" when none) and the 08, 14 and 20 o'clock readings ([] unless
-// all three are numbers). null with no range at all, or on anything malformed.
-export function weatherFacts(d) {
+// all three are numbers). `date` ("YYYY-MM-DD") picks the day out of the answer's three — the first, today, when none
+// is given — and its readings are that day's own hours. null when the answer has no such day (a copy kept while it was
+// a single day: a box for tomorrow is never filled with today's figures), with no range at all, or on anything malformed.
+export function weatherFacts(d, date) {
   try {
     const day = d.daily, h = d.hourly;
+    const k = date == null ? 0 : day.time.indexOf(date);
+    if (k < 0) return null;
+    const ymd = Array.isArray(day.time) ? day.time[k] : "";
     const num = (v) => (typeof v === "number" && Number.isFinite(v) ? v : NaN);
-    const at = (hh) => { const i = h.time.findIndex((t) => typeof t === "string" && t.endsWith(`T${hh}:00`)); return i < 0 ? Number(hh) : i; };
+    // the shown day's own 08:00, not the first T08:00 of the three days (that is always today's)
+    const at = (hh) => { const i = h.time.findIndex((t) => typeof t === "string" && (ymd ? t === `${ymd}T${hh}:00` : t.endsWith(`T${hh}:00`))); return i < 0 ? 24 * k + Number(hh) : i; };
     const [am, pm, eve] = ["08", "14", "20"].map(at);
-    const lo = num(day.temperature_2m_min?.[0]), hi = num(day.temperature_2m_max?.[0]);
+    const lo = num(day.temperature_2m_min?.[k]), hi = num(day.temperature_2m_max?.[k]);
     if (Number.isNaN(lo) || Number.isNaN(hi)) return null;
     const codes = Array.isArray(h.weather_code) ? h.weather_code : [];
-    const word = wmoWord(day.weather_code?.[0]), w1 = codes[am] == null ? word : wmoWord(codes[am]), w2 = codes[pm] == null ? word : wmoWord(codes[pm]);
+    const word = wmoWord(day.weather_code?.[k]), w1 = codes[am] == null ? word : wmoWord(codes[am]), w2 = codes[pm] == null ? word : wmoWord(codes[pm]);
     const cond = w1 !== w2 ? `${w1}轉${w2}` : word;
-    const rain = num(day.precipitation_probability_max?.[0]);
-    const rise = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(day.sunrise?.[0] || "") ? day.sunrise[0].slice(11, 16) : "";
+    const rain = num(day.precipitation_probability_max?.[k]);
+    const rise = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(day.sunrise?.[k] || "") ? day.sunrise[k].slice(11, 16) : "";
     const temps = Array.isArray(h.temperature_2m) ? [am, pm, eve].map((i) => num(h.temperature_2m[i])) : [];
     return { glyph: GLYPH[GLYPH_OF[word]] || GLYPH.cloud, lo, hi, cond, rain, rise, temps: temps.length === 3 && !temps.some(Number.isNaN) ? temps : [] };
   } catch { return null; }
 }
 
+const n = (x) => `<b>${esc(x)}</b>`;
+// Each reading is one unbreakable segment ending in its separator, so a narrow screen wraps the line between
+// readings — never inside one, and never with the glyph alone on a line (U+30FB may not start a line anyway).
+const seg = (s, i, arr) => `<span class="w">${s}${i < arr.length - 1 ? "・" : ""}</span>`;
+
 // The two lines: the glyph, 台中 and the day's range, the condition, the chance of rain and the sunrise; under them the
-// 08, 14 and 20 o'clock readings. A reading that is not a number is left out; with no range at all there is no line.
-// "" on anything malformed.
-export function weatherHtml(d) {
-  const f = weatherFacts(d);
+// 08, 14 and 20 o'clock readings — of `date`, today when none is given (weatherFacts). A reading that is not a number is
+// left out; with no range at all there is no line. "" on anything malformed.
+export function weatherHtml(d, date) {
+  const f = weatherFacts(d, date);
   if (!f) return "";
-  const n = (x) => `<b>${esc(x)}</b>`, deg = (t) => `${Math.round(t)}°`;
-  // Each reading is one unbreakable segment ending in its separator, so a narrow screen wraps the line between
-  // readings — never inside one, and never with the glyph alone on a line (U+30FB may not start a line anyway).
+  const deg = (t) => `${Math.round(t)}°`;
   const segs = [`台中 ${n(`${Math.round(f.lo)}–${Math.round(f.hi)}°`)}`, esc(f.cond)];
   if (!Number.isNaN(f.rain)) segs.push(`降雨 ${n(`${Math.round(f.rain)}%`)}`);
   if (f.rise) segs.push(`日出 ${n(f.rise)}`);
-  const seg = (s, i, arr) => `<span class="w">${s}${i < arr.length - 1 ? "・" : ""}</span>`;
   const row2 = f.temps.length ? `<div class="row two"><span class="w">早 ${n(deg(f.temps[0]))}・午 ${n(deg(f.temps[1]))}・晚 ${n(deg(f.temps[2]))}</span></div>` : "";
   return `<div class="row"><span class="w">${f.glyph}</span>${segs.map(seg).join("")}</div>${row2}`;
 }
+
+// The weekend's two lines (週末氣象, a Friday evening): one a day, Saturday's and Sunday's, both in the first line's
+// type — the day's name, the glyph, the range, the condition and the chance of rain; no 台中, no sunrise and no hourly
+// readings, so each day keeps to its one line. Both days or nothing: "" when either is missing from the answer.
+const WEEKDAY = "日一二三四五六";
+export function weekendHtml(d, days) {
+  const rows = days.map((date) => {
+    const f = weatherFacts(d, date);
+    if (!f) return "";
+    const segs = [n(`${Math.round(f.lo)}–${Math.round(f.hi)}°`), esc(f.cond)];
+    if (!Number.isNaN(f.rain)) segs.push(`降雨 ${n(`${Math.round(f.rain)}%`)}`);
+    const name = `週${WEEKDAY[new Date(`${date}T00:00:00Z`).getUTCDay()]}`;
+    return `<div class="row wk"><span class="w dn">${name}</span><span class="w">${f.glyph}</span>${segs.map(seg).join("")}</div>`;
+  });
+  return rows.length && rows.every(Boolean) ? rows.join("") : "";
+}
+
+// What the front page's box shows, by the clock when the page is drawn (app.js weatherBox; the box keeps it until it is
+// drawn again, so nothing changes under the reader's eye): today until 20:00; from then tomorrow — on Saturday evening
+// Sunday, on Sunday evening Monday — and on a Friday evening the weekend. { kind: "today" | "tomorrow" | "weekend", days }.
+export function shownDays(now = twNow()) {
+  if (now.minutes < 20 * 60) return { kind: "today", days: [now.date] };
+  const t0 = Date.parse(`${now.date}T00:00:00Z`), after = (k) => new Date(t0 + k * 864e5).toISOString().slice(0, 10);
+  return new Date(t0).getUTCDay() === 5 ? { kind: "weekend", days: [after(1), after(2)] } : { kind: "tomorrow", days: [after(1)] };
+}
+// The box's lines for what `shownDays` gave, out of forecast `d`; "" when `d` does not have the day(s).
+export const shownHtml = (d, shown) => (shown.kind === "weekend" ? weekendHtml(d, shown.days) : weatherHtml(d, shown.days[0]));

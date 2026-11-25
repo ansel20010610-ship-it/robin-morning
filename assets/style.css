@@ -352,6 +352,10 @@ button { font: inherit; color: inherit; }
 .wetter .row.sky.off { visibility: hidden; }
 .wetter .wx { width: 18px; height: 18px; flex: none; margin-right: 6px; }
 .wetter b { font-family: var(--latin); font-weight: 600; font-size: 17px; line-height: 1; letter-spacing: 0; font-variant-numeric: lining-nums tabular-nums; }
+/* 週末氣象 (wetter.js weekendHtml, a Friday evening): Saturday and Sunday, a line each in the first line's type, each held
+   to 23.5px, so the two together are exactly as tall as today's two lines (25 + 22) and the box keeps its height. */
+.wetter .row.wk { height: 23.5px; line-height: 23.5px; }
+.wetter .row.wk .dn { margin-right: 9px; letter-spacing: .08em; }
 /* ——— 出門前 (assets/outdoor-card.js) ———
    The way back to the card (丙保高): the whole 今日氣象 box is a button, and its heading row carries a gold › at the
    right, after a short red word on a day with a warning or a closure. Floated into the row the label already has, so

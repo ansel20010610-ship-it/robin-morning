@@ -28,12 +28,13 @@ export const SKY = {
 // forecast wetter.js keeps) at or over this, and there is no use looking up: the row is not printed.
 export const SKY_RAIN = 70;
 export const skyLine = (date) => SKY[date] || "";
-// true when the evening is rainy by `d`, the day's forecast; false with no evening figures (the row then stands by the table)
-export function eveningRain(d) {
+// true when the evening is rainy by `d`, the day's forecast — of `date` only, when given (the forecast runs over three
+// days); false with no evening figures (the row then stands by the table)
+export function eveningRain(d, date) {
   try {
     const t = d.hourly.time, p = d.hourly.precipitation_probability;
     let m = -1;
-    t.forEach((s, i) => { const h = typeof s === "string" ? Number(s.slice(11, 13)) : NaN; if (h >= 18 && h <= 23 && typeof p[i] === "number" && p[i] > m) m = p[i]; });
+    t.forEach((s, i) => { const h = typeof s === "string" && (!date || s.startsWith(`${date}T`)) ? Number(s.slice(11, 13)) : NaN; if (h >= 18 && h <= 23 && typeof p[i] === "number" && p[i] > m) m = p[i]; });
     return m >= SKY_RAIN;
   } catch { return false; }
 }
