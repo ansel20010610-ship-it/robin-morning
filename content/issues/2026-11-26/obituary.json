@@ -1,0 +1,236 @@
+{
+  "column": "obituary",
+  "date": "2026-11-26",
+  "status": "update",
+  "form": "list",
+  "voice": "eulogist",
+  "title": "King Crimson 第一任鼓手 Giles 過世",
+  "dek": "Giles 和弟弟登報找會唱歌的鍵盤手，來的吉他手偏偏不會唱。那是 1967 年，King Crimson 還要再等一年。",
+  "brief": "King Crimson 的第一任鼓手 Michael Giles 11 月 23 日過世，84 歲。樂團的第一張專輯《In the Court of the Crimson King》是他打的鼓，後來宣布要走，之後長期是錄音室鼓手。今年春天，他發行了《Shadows / Solo》，收的是他多年來沒人聽過的錄音。",
+  "topic_key": "obituary:giles-2026",
+  "updated_at": "2026-11-26T05:42:34+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "timeline",
+    "title": "Giles 的幾個年份",
+    "items": [
+      {
+        "when": "1942.3.1",
+        "label": "生於伯恩茅斯",
+        "note": ""
+      },
+      {
+        "when": "1967 年",
+        "label": "和弟弟、Fripp 組成 Giles, Giles and Fripp",
+        "note": "登報找會唱歌的鍵盤手，來的吉他手不會唱"
+      },
+      {
+        "when": "1968 年",
+        "label": "共同創立 King Crimson",
+        "note": "創團五人之一"
+      },
+      {
+        "when": "1969 年",
+        "label": "第一張專輯出版",
+        "note": "英國專輯榜最高第 5 名"
+      },
+      {
+        "when": "1970 年",
+        "label": "和 Ian McDonald 一起離團",
+        "note": "第二張專輯仍由他回來錄鼓"
+      },
+      {
+        "when": "2001 年",
+        "label": "第一張個人專輯《Progress》",
+        "note": ""
+      },
+      {
+        "when": "2002 年",
+        "label": "共同創辦 21st Century Schizoid Band",
+        "note": "演奏樂團早期的曲子"
+      },
+      {
+        "when": "2026.4.3",
+        "label": "發行《Shadows / Solo》",
+        "note": "睽違 25 年，收多年來沒人聽過的錄音"
+      },
+      {
+        "when": "2026.11.23",
+        "label": "過世，84 歲",
+        "note": "11 月 25 日公布"
+      }
+    ],
+    "caption": "年份出自唱片公司 DGM 的公告、Louder、Stereogum、The Strange Brew 與英國官方排行榜。"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "**Michael Giles** 是英國樂團 **King Crimson** 的第一任鼓手，也是創團的五個人之一。他在 11 月 23 日週一過世，84 歲。消息是樂團的唱片公司 DGM 在 11 月 25 日公布的。"
+    },
+    {
+      "type": "p",
+      "text": "King Crimson 1968 年在英國成軍，歸在前衛搖滾這一派，就是把搖滾寫成長曲子、結構拆得很複雜的那一種。DGM 的悼文說，這是前衛音樂史上最有創意、影響最大的樂團之一，而這個團開創出來的聲音，根本就建在 Giles 的節奏想像力和他打鼓的方式上。悼文總是說好話。這一句我願意當真，因為它講的東西有榜位和錄音可查。"
+    },
+    {
+      "type": "p",
+      "text": "那張唱片是樂團 1969 年的第一張專輯《**In the Court of the Crimson King**》，在英國專輯榜最高排到第 5 名。要聽 Giles，從這張開始最直接。唱片公司的年表還記著，專輯上榜前的那年 7 月，他們在倫敦海德公園，是替滾石樂團暖場的團之一。"
+    },
+    {
+      "type": "p",
+      "text": "1. 故事要從更早一點講起。1967 年，Giles 和弟弟 Peter 登報，想找一個會唱歌的鍵盤手。來應徵的是吉他手 Robert Fripp，偏偏不會唱。三個人還是組了團，叫 Giles, Giles and Fripp，1968 年出了一張專輯《The Cheerful Insanity of Giles, Giles and Fripp》。同一年，Giles 和 Fripp 又跟另外三個人組了 King Crimson。"
+    },
+    {
+      "type": "p",
+      "text": "2. 那個團到底特別在哪裡，Giles 自己今年 9 月接受雜誌訪問時講過。他說是對各路點子都開放，也敢在音樂上冒險，而且大家很看重彼此聽、彼此回應。一個鼓手回頭講自己的樂團，最後落在互相聽上。"
+    },
+    {
+      "type": "music",
+      "composer": "King Crimson",
+      "work": "〈21st Century Schizoid Man〉，收在專輯《In the Court of the Crimson King》",
+      "work_original": "21st Century Schizoid Man (from In the Court of the Crimson King)",
+      "composed": "1969",
+      "performers": "King Crimson 創團成員（Robert Fripp、Ian McDonald、Greg Lake、Michael Giles）",
+      "recording": "專輯 1969 年出版",
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "King Crimson 21st Century Schizoid Man In the Court of the Crimson King 1969",
+        "artist_hint": "King Crimson",
+        "track_filter": [
+          "21st Century Schizoid Man"
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "3. 可是他沒有留下來。他對樂團迅速成名和音樂走向不自在，宣布要走。1970 年，他和同團的 Ian McDonald 一起離開，兩個人合錄了一張《McDonald and Giles》。樂團的第二張專輯《In the Wake of Poseidon》同一年出版，鼓還是他打的，只是這一回，他是請回來幫忙的樂手。"
+    },
+    {
+      "type": "table",
+      "title": "從哪裡聽到他",
+      "head": [
+        "年份",
+        "唱片",
+        "他在裡面"
+      ],
+      "rows": [
+        [
+          "1968",
+          "《The Cheerful Insanity of Giles, Giles and Fripp》",
+          "三人組的專輯，有他和 Fripp"
+        ],
+        [
+          "1969",
+          "《In the Court of the Crimson King》",
+          "King Crimson 第一任鼓手"
+        ],
+        [
+          "1970",
+          "《In the Wake of Poseidon》",
+          "樂團第二張專輯，他以請來的樂手身分回來錄鼓"
+        ],
+        [
+          "2001",
+          "《Progress》",
+          "第一張個人專輯"
+        ],
+        [
+          "2026",
+          "《Shadows / Solo》",
+          "雙 CD，收多年來沒人聽過的錄音"
+        ]
+      ],
+      "caption": "出自 DGM 的公告、Stereogum、Louder 與 The Strange Brew。"
+    },
+    {
+      "type": "p",
+      "text": "4. **他是 King Crimson 的第一任鼓手。之後的幾十年，他多在錄音室和自己的錄音帶裡度過。**那些年他長期是錄音室鼓手，合作過的人包括老隊友 Greg Lake；自己私下也一直在錄。今年 4 月他在一篇訪談裡說，1969 年他整個人埋在 King Crimson 的鼓裡，別的樂團的鼓手一個也沒聽進去。"
+    },
+    {
+      "type": "quote",
+      "text": "大約五十年後，我才懂得 Led Zeppelin 的 John Bonham 有多了不起。",
+      "original": "It's only some 50 years later that I came to appreciate how brilliant John Bonham was in Led Zeppelin.",
+      "cite": "Michael Giles，The Strange Brew 2026 年 4 月訪談"
+    },
+    {
+      "type": "p",
+      "text": "5. 2001 年，他出了第一張個人專輯《Progress》。第二年，他和幾位 King Crimson 的老團員組了 21st Century Schizoid Band，專門演樂團早期的曲子。他 4 月說，約兩年前他開始重聽自己的舊錄音帶，很驚訝它們這麼好聽，就決定不再讓這些音樂擱在架上。今年 4 月 3 日出的雙 CD《**Shadows / Solo**》，是《Progress》之後 25 年來的第一張，收的是多年來沒人聽過的錄音。他那時說，下一批已經在準備，還有紀念他做音樂 60 年的再版。"
+    },
+    {
+      "type": "p",
+      "text": "6. 他還收集廚房、花園和車庫裡找得到的東西，拿來當打擊樂器。他說這些東西不用錢，連加值稅都不必繳。他也說："
+    },
+    {
+      "type": "quote",
+      "text": "每一件廢物打擊樂器都有自己獨一無二的聲音和核心音，所以完全是原創的，也不可能被複製。",
+      "original": "Each piece of junk percussion has a unique sound and core note which makes it totally original and impossible to copy.",
+      "cite": "Michael Giles，The Strange Brew 2026 年 4 月訪談"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Michael Giles 1942-2026",
+      "publisher": "DGM Live（Discipline Global Mobile）",
+      "date": "2026-11-25",
+      "url": "https://dgmlive.com/news/michael-giles-1942-2026",
+      "note": "官方公告：11 月 23 日（週一）過世、84 歲、樂團與 Giles 鼓藝的悼文、合作名單、2026 年發行。頁面側欄的 DGM 年表另記 1969 年 7 月 5 日海德公園替滾石樂團暖場（正文標明出自唱片公司年表）。年表寫第一張專輯「英美兩邊前十」，第三方只核到英國榜第 5 名，正文採英國官方排行榜。年表的 1969 年 1 月排練、海德公園人數、Fripp 日記、《Top of the Pops》、第二張專輯時的成員狀況，第三方查不到，正文不寫。公告未寫地點與死因。"
+    },
+    {
+      "title": "King Crimson drummer and co-founder Michael Giles dead at 84",
+      "publisher": "Louder",
+      "date": "2026-11-25",
+      "url": "https://www.loudersound.com/bands-artists/biographies/king-crimson-drummer-and-co-founder-michael-giles-dead-at-84",
+      "note": "引樂團網站聲明；1968 年組成 King Crimson；生於伯恩茅斯 1942 年 3 月 1 日；Giles 對 Prog 雜誌（2026 年 9 月）的話。頁面日期為估計。出生地：DGM 公告與 The Strange Brew 寫伯恩茅斯的 Winton，Louder 寫伯恩茅斯，Ultimate Classic Rock 寫 Waterlooville，正文與時間線採伯恩茅斯。"
+    },
+    {
+      "title": "Original King Crimson Drummer Michael Giles Dead At 84",
+      "publisher": "Stereogum",
+      "date": "2026-11-25",
+      "url": "https://stereogum.com/2521598/original-king-crimson-drummer-michael-giles-dead-at-84/news",
+      "note": "DGM 於 11 月 25 日公布、11 月 23 日過世；兄弟登報找會唱歌的鍵盤手、來了不會唱的 Fripp；1968 年三人組專輯；2001 與 2002 年。"
+    },
+    {
+      "title": "Michael Giles, King Crimson's Founding Drummer, Dead at 84",
+      "publisher": "Ultimate Classic Rock",
+      "date": "2026-11-25",
+      "url": "https://ultimateclassicrock.com/michael-giles-king-crimson-drummer-dead/",
+      "note": "唱片公司悼文原文（rhythmic imagination、前衛音樂史上最有創意與影響力的樂團之一）；1968 年共同創立；1970 年與 McDonald 一起離開、錄《McDonald and Giles》。"
+    },
+    {
+      "title": "Michael Giles, King Crimson's Founding Drummer, Dead at 84",
+      "publisher": "Consequence",
+      "date": "2026-11-25",
+      "url": "https://consequence.net/2026/11/michael-giles-king-crimson-founding-drummer-dead/",
+      "note": "他對樂團迅速成名與音樂走向不自在、宣布離開（原文：unease with the band's rapid rise to fame and musical direction）。頁面日期為估計。"
+    },
+    {
+      "title": "Michael Giles on leaving King Crimson and opening his archives",
+      "publisher": "The Strange Brew",
+      "date": "2026-04-15",
+      "url": "https://thestrangebrew.co.uk/michael-giles/",
+      "note": "Giles 的書面訪談原話：Bonham、廢物打擊樂器、重聽舊錄音帶、下一批發行與「60 years of making music」再版；《Shadows / Solo》2026 年 4 月 3 日發行；他私下錄音幾十年。"
+    },
+    {
+      "title": "Michael Giles, King Crimson's founding drummer, has died aged 84",
+      "publisher": "The Strange Brew",
+      "date": "2026-11-25",
+      "url": "https://thestrangebrew.co.uk/michael-giles-king-crimson-founding-drummer-has-died/",
+      "note": "11 月 23 日過世、生於 1942 年 3 月 1 日伯恩茅斯 Winton；1967 年組成 Giles, Giles and Fripp；離團後以特約樂手身分回來錄第二張專輯；合作名單。"
+    },
+    {
+      "title": "Former King Crimson drummer Michael Giles returns with Shadows/Solo, his first album for 25 years",
+      "publisher": "Louder",
+      "date": "2026-04-06",
+      "url": "https://www.loudersound.com/music/albums/king-crimson-drummer-michael-giles-returns-with-shadows-solo-his-first-album-for-25-years",
+      "note": "《Shadows / Solo》是 25 年來第一批發行、《Progress》之後的第一張，雙 CD，收多年來沒人聽過的錄音（不是新錄的）。"
+    },
+    {
+      "title": "In The Court Of The Crimson King",
+      "publisher": "Official Charts（英國官方排行榜）",
+      "date": "2026-11-26",
+      "url": "https://www.officialcharts.com/albums/king-crimson-in-the-court-of-the-crimson-king/",
+      "note": "英國專輯榜最高第 5 名，1969 年 11 月 1 日首次上榜。頁面沒標發布日期，date 為查閱日。"
+    }
+  ]
+}
