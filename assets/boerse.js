@@ -105,18 +105,22 @@ const pick = (items) => (Array.isArray(items) ? items : []).filter((i) => i && K
 // One read at or after the close (its own time, 13:30 in Taipei, 16:00 in New York) is that day's close and stays.
 const KEEP_MS = 10 * 60e3;
 const SHUT = { taiex: "13:30", spx: "16:00", dji: "16:00", ixic: "16:00" };
-const fresh = (i, now) => (/T(\d\d:\d\d)/.exec(i.asof || "")?.[1] || "") >= SHUT[i.key] || (Number.isFinite(i.got) && now - i.got >= 0 && now - i.got < KEEP_MS);
+const settled = (i) => (/T(\d\d:\d\d)/.exec(i.asof || "")?.[1] || "") >= SHUT[i.key];
+const fresh = (i, now) => settled(i) || (Number.isFinite(i.got) && now - i.got >= 0 && now - i.got < KEEP_MS);
 // A new answer put together with the figures kept from the last, figure by figure: the new one, unless it is of an
 // earlier moment than the one kept (the Worker may answer from the exchange one time and from Yahoo 奇摩, a minute
-// behind, the next: the board must not step back; in the same minute the exchange's figure, seconds behind, stands
-// over Yahoo 奇摩's); not read this time, the kept one while it stands.
+// behind, the next: the board must not step back. In the same minute of the session the exchange's figure, seconds
+// behind, stands over Yahoo 奇摩's; in the minute of the close the other way round, since the exchange's figure stamped
+// 13:30 is not yet the final one (38,141.53; the close, stamped 13:33, was 38,195.43, which Yahoo 奇摩 stamps 13:30,
+// 2026-11-25), so neither steps back nor flips between the two. Not read this time, the kept one while it stands.
 const EXCHANGE = "臺灣證券交易所";
 function mergeLive(got, had, now) {
   const items = [];
   for (const k of LIVE) {
     const n = got.find((i) => i.key === k), o = had.find((i) => i.key === k), keep = o?.ok === true && fresh(o, now);
     const mo = keep ? moment(k, o.asof) : 0, mn = n?.ok === true ? moment(k, n.asof) : 0;
-    const older = keep && (mo > mn || (mo === mn && o.source === EXCHANGE && n.source !== EXCHANGE));
+    const ex = (i) => i?.source === EXCHANGE;
+    const older = keep && (mo > mn || (mo === mn && (settled(o) ? !ex(o) && ex(n) : ex(o) && !ex(n))));
     if (n?.ok === true && !older) items.push({ ...n, got: now });
     else if (keep) items.push(o);
   }
