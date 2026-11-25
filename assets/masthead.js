@@ -10,7 +10,7 @@
 //   紙放一天    the paper warms from 07:30 to 22:00 and its two top corners crease; the next morning's paper is new
 //   金光守節    the title's gold sweep is dark and slow in Holy Week, and brighter on Easter morning
 //   真的月亮    the evening moon beside the crest is tonight's phase
-import { twNow } from "./util.js";
+import { twNow, esc } from "./util.js";
 import { churchDay, holyWeek, easter } from "./feasts.js";
 import { keptWeather } from "./wetter.js";
 
@@ -31,6 +31,21 @@ export const weekendDay = (date) => weekday(date) === 0 || weekday(date) === 6 |
 
 // ——— 報頭時辰: what follows the day's name in the topline (minutes since midnight, Taiwan time) ———
 export const dayPart = (minutes) => (minutes < 12 * 60 ? "morgen" : minutes >= 18 * 60 ? "abend" : "");
+
+// ——— The topline's two sides: Wien · Taipei and the day's word, each fitted to its side (style.css .topline .fit) ———
+// Every one of them as wide as Cormorant Garamond 500 sets it in capitals at 13px with its tracking taken off, in em,
+// rounded up (WebKit, 2026-11-25; any tracking drops the TT ligature, so MITTWOCH's are as tracked): the CSS takes the
+// tracking and, for the longest words, the size from these and the side's own width, so it is settled as the masthead is
+// drawn, whichever font is in yet, and follows the phone's width. A word not here is set as it comes.
+const TOP_EM = {
+  "WIEN · TAIPEI": 6.226, SONNTAG: 4.705, MONTAG: 4.319, DIENSTAG: 4.782, MITTWOCH: 5.563, DONNERSTAG: 6.605, FREITAG: 4.052, SAMSTAG: 4.526,
+  SONNTAGMORGEN: 8.937, MONTAGMORGEN: 8.551, DIENSTAGMORGEN: 9.014, MITTWOCHMORGEN: 9.795, DONNERSTAGMORGEN: 10.837, FREITAGMORGEN: 8.284, SAMSTAGMORGEN: 8.759,
+  SONNTAGABEND: 7.948, MONTAGABEND: 7.562, DIENSTAGABEND: 8.025, MITTWOCHABEND: 8.805, DONNERSTAGABEND: 9.847, FREITAGABEND: 7.295, SAMSTAGABEND: 7.769,
+};
+export function topFit(text) {
+  const t = String(text), w = TOP_EM[t.toUpperCase()];
+  return w ? `<span class="fit" style="--w:${w};--n:${[...t].length}">${esc(t)}</span>` : esc(t);
+}
 
 // ——— 鳥換季: the robin's thing for the paper of `date`, hung under the beak inside the crest's frame ———
 export function carryOf(date) {

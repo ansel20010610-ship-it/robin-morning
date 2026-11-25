@@ -17,7 +17,7 @@ import { outdoorFront, closeOutdoor } from "./outdoor-card.js";
 import { rainBag, dropBag } from "./rainbag.js";
 import { stampHtml, milestoneOf, keepsakeOf } from "./stamps.js";
 import { feastOf, churchSeason } from "./feasts.js";
-import { redDay, weekendDay, dayPart, carryOf, carried, goldOf, moonPhase, moonSvg, windowSun, lightWindow, creaseHtml, paperAge, tintPaper, paperTone } from "./masthead.js";
+import { redDay, weekendDay, dayPart, topFit, carryOf, carried, goldOf, moonPhase, moonSvg, windowSun, lightWindow, creaseHtml, paperAge, tintPaper, paperTone } from "./masthead.js";
 import { adventHtml, wireAdvent } from "./advent.js";
 import { yuelingHtml } from "./yueling.js";
 import { worldState, drawGlobe } from "./world.js";
@@ -698,7 +698,7 @@ function masthead(issue, fresh = false, front = false, ferien = "") {
     ${erst ? `<i class="esun" aria-hidden="true"></i><div class="erst-band">${LAUREL}<span>創刊號</span>${LAUREL.replace('class="laurel"', 'class="laurel r"')}<i>Erstausgabe · Nummer 1 · MMXXVI</i></div><i class="ecorn tl"></i><i class="ecorn tr"></i><i class="ecorn bl"></i><i class="ecorn br"></i>`
       : ms ? `<div class="wkend ms-band"><span>Jubiläumsausgabe</span></div>`
       : weekendDay(date) ? `<div class="wkend"><span>Wochenendausgabe</span></div>` : `<hr class="rule-double">`}
-    <div class="topline"><span>Wien · Taipei</span><span>${issue ? esc(issueNr(issue.no)) : ""}</span><span>${esc(day)}</span></div>
+    <div class="topline"><span>${topFit("Wien · Taipei")}</span><span>${issue ? esc(issueNr(issue.no)) : ""}</span><span>${topFit(day)}</span></div>
     ${fresh ? `<i class="stamp-date" aria-hidden="true"><b>Druckfrisch</b><span>No. ${esc(issue.no)}</span><span>${d}. ${roman(m)}. ${y}</span><i class="echo"></i></i>` : ""}
     <div class="checker" aria-hidden="true"></div>
     <div class="crest">${carried(EMBLEM, carryOf(date))}${front && nightHours() ? moonSvg(moonPhase(now.ms)) : ""}<i class="burst" aria-hidden="true"></i><i class="wave" aria-hidden="true"></i><i class="wave w2" aria-hidden="true"></i></div>
@@ -989,8 +989,8 @@ const frontState = () => [frontKey(publishedIssues()[0]), frontStatus()];
 function retouchHead() {
   const head = main.querySelector(".masthead"), issue = publishedIssues()[0], now = twNow();
   if (!head || !issue) return;
-  const word = head.querySelector(".topline span:last-child"), day = fmtDate(issue.date, "de").split(",")[0] + (todays(issue) ? dayPart(now.minutes) : "");
-  if (word && word.textContent !== day) word.textContent = day;
+  const word = head.querySelector(".topline > span:last-child"), day = fmtDate(issue.date, "de").split(",")[0] + (todays(issue) ? dayPart(now.minutes) : "");
+  if (word && word.textContent !== day) word.innerHTML = topFit(day);
   if (!windowSun(now)) head.querySelector(".sunwin")?.remove();
   if (head.classList.contains("ostern") && goldOf(issue.date, now) !== "ostern") head.classList.remove("ostern");
 }
