@@ -64,12 +64,12 @@ export function churchDay(date) {
   const y = Number(date.slice(0, 4)), e = easter(y);
   return date.slice(5) === "12-25" || date === e || date === plusDays(e, 49) || date === advent(y);
 }
-// Holy Week as the masthead keeps it (masthead.js goldOf): Palm Sunday to Good Friday, both included. Holy Saturday is
-// an ordinary day again.
+// Holy Week as the masthead keeps it (masthead.js goldOf): Palm Sunday to Holy Saturday, both included — the days the
+// 報耳 names 受難週 (churchSeason below), so the dark gold and the ear always agree.
 export function holyWeek(date) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) return false;
   const e = easter(Number(date.slice(0, 4)));
-  return date >= plusDays(e, -7) && date <= plusDays(e, -2);
+  return date >= plusDays(e, -7) && date <= plusDays(e, -1);
 }
 // 教會時節 (the masthead's 報耳, app.js masthead; the owner, 2026-11-25): the church season a date falls in,
 // or "" in Ordinary Time. 降臨期 from Advent Sunday to 24 December (counted in weeks), 聖誕期 25 December to 5 January,

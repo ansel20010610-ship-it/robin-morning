@@ -172,7 +172,7 @@ button { font: inherit; color: inherit; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .masthead :is(.sunwin, .crease) { display: none; } }
 :root[data-theme="dark"] .masthead :is(.sunwin, .crease) { display: none; }
 /* 金光守節: the masthead's own gold tokens, so the title's sweep and its glow, the crest's burst and waves and the settled
-   tesserae all follow, and nothing outside the masthead. Holy Week (Palm Sunday to Good Friday): ink-gold, the sweep
+   tesserae all follow, and nothing outside the masthead. Holy Week (Palm Sunday to Holy Saturday): ink-gold, the sweep
    slower, hardly any glow. Easter morning: --foil raised (--foil-hi as every day), a wider band, a larger, brighter glow. */
 .masthead.holy { --foil: #6F5628; --foil-hi: #9A7C43; }
 .masthead.ostern { --foil: #E3A51E; --halo: #FFE28A; }

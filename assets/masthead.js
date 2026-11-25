@@ -57,8 +57,9 @@ const CARRY = {
 const BEAK = '<path class="e-gold" d="M15.4 24.2';
 export const carried = (emblem, kind) => (CARRY[kind] && emblem.includes(BEAK) ? emblem.replace(BEAK, CARRY[kind] + BEAK) : emblem);
 
-// ——— 金光守節: "holy" for a paper of Palm Sunday to Good Friday; "ostern" for Easter's own paper until noon. By the
-// paper's date as well as the clock: before 07:30 on Easter morning the front page still carries Saturday's paper. ———
+// ——— 金光守節: "holy" for a paper of Palm Sunday to Holy Saturday (feasts.js holyWeek); "ostern" for Easter's own paper
+// until noon. By the paper's date as well as the clock: before 07:30 on Easter morning the front page still carries
+// Saturday's paper, and so the dark gold, until Easter's paper comes. ———
 export function goldOf(date, now = twNow()) {
   if (holyWeek(date)) return "holy";
   return date === easter(Number(date.slice(0, 4))) && now.date === date && now.minutes < 12 * 60 ? "ostern" : "";
