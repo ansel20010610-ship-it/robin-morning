@@ -1433,6 +1433,12 @@ function syncDone() {
     for (const i of publishedIssues()) { const arts = i.articles || []; if (issueOpen(i.date) && arts.some((a) => forStamp(a, i.date)) && !unreadIn(i.date, arts, read)) done.add(i.date); }
     const today = twNow().date; tellDone(S.cfg?.nest?.api, today, done.has(today), S.index?.push); // the reminders skip a finished device (notify.js)
     caches.open("rm-state").then((c) => c.put("state/done", new Response(JSON.stringify([...done]), { headers: { "Content-Type": "application/json" } }))).catch(() => {});
+    // How far today's reading has got, for the wording of the 12:30 / 21:00 reminder: sw.js picks its line by it, while
+    // whether a reminder comes at all is still state/done's and the Worker's alone. Two counts, kept on the phone only.
+    // A record of an earlier day means nothing of today is read. Today's issue in but not open (a held Sunday), or with
+    // nothing the stamp counts, leaves no record, and the reminder keeps the day's line.
+    const ti = publishedIssues().find((i) => i.date === today), arts = ti?.articles || [], n = arts.filter((a) => forStamp(a, today)).length;
+    if (ti) caches.open("rm-state").then((c) => (n && issueOpen(today) ? c.put("state/left", new Response(JSON.stringify({ d: today, n, left: unreadIn(today, arts, read) }), { headers: { "Content-Type": "application/json" } })) : c.delete("state/left"))).catch(() => {});
   } catch { /* no Cache API (a plain http:// preview) */ }
 }
 let finishSeen = null;

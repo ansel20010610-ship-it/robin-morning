@@ -153,6 +153,20 @@ REMIND_NOON = {  # 12:30
     "文藝": [("午安。早上的報紙還沒看完", "吃飯的時候，正好讀一篇。"), ("半天過去了，字還在原處", "午休比想像中長，夠讀兩篇。"), ("報紙在桌角等中午", "先吃飯，再讀一段。")],
     "俏皮": [("午休先別滑別的", "早上那期還沒讀完，便當配一篇。"), ("中午了，報紙還熱著嗎", "再不讀，晚上會被提醒第二次。"), ("半天了，還差幾篇", "吃飯配報紙，古典的吃法。")],
 }
+# The reminders' lines by how far the day's reading has got, sent along with the day's line (remind_payload's "alt"):
+# start = nothing of the day read yet, last = one article left. The phone picks one (sw.js, by what app.js syncDone keeps
+# in its rm-state cache), so nothing about the reading leaves it: the payload, and this run's log, carry only these
+# candidates. Some read, or a phone that cannot tell, keeps the day's line from REMIND / REMIND_NOON. Moods as there.
+REMIND_BY = {
+    "noon": {
+        "start": {"文藝": [("午安。今天的報紙還沒翻開", "整份都還在，挑一篇配午飯。")], "俏皮": [("早上那份，一頁都還沒動", "便當打開的時候，報紙也打開。")]},
+        "last": {"文藝": [("只差最後一篇", "午休剩下的幾分鐘，剛好讀完。")], "俏皮": [("只差最後一篇了", "吃完這口飯，順手收尾。")]},
+    },
+    "evening": {
+        "start": {"文藝": [("今天的報紙還摺著", "從第一篇讀起，讀到哪算哪。")], "俏皮": [("今天的報紙還沒打開過", "它等了一整天，翻一頁也好。")]},
+        "last": {"文藝": [("只差最後一篇", "讀完它，今天才算收好。")], "俏皮": [("只差最後一篇，郵票在等", "讀完再睡，這次是真的很快。")]},
+    },
+}
 
 
 def _day(date):
@@ -177,7 +191,9 @@ def remind_payload(date, noon=False):
     # By d // 2 the index moved by three each time — the same line of each mood all month, four of the six never said
     # (audit 2026-11-11).
     title, body = pool[(d // 6) % len(pool)]
-    return {"kind": "remind", "date": date, "title": title, "body": body, "url": "./#/", "tag": "remind-" + date}
+    mood = "俏皮" if d % 2 else "文藝"
+    alt = {k: dict(zip(("title", "body"), v[mood][(d // 6) % len(v[mood])])) for k, v in REMIND_BY["noon" if noon else "evening"].items()}
+    return {"kind": "remind", "date": date, "title": title, "body": body, "url": "./#/", "tag": "remind-" + date, "alt": alt}
 
 
 def live_late():

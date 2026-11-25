@@ -129,6 +129,19 @@ self.addEventListener("push", (e) => {
     if (d.kind === "remind" && d.date) {
       try { finished = ((await (await caches.open("rm-state")).match("state/done"))?.json ? await (await (await caches.open("rm-state")).match("state/done")).json() : []).includes(d.date); } catch { finished = false; }
     }
+    // How far the day's reading has got (app.js syncDone keeps it in rm-state state/left): push.py sends the day's line
+    // and, in d.alt, one for nothing read yet (start) and one for a single article left (last). Anything else (some
+    // read, no record, a record that does not parse or has an odd shape, a line missing) keeps the day's line as sent.
+    // Whatever happens here a notification is still shown below (iOS drops a web app that shows none).
+    if (d.kind === "remind" && d.date && d.alt && !finished) {
+      try {
+        const r = await (await caches.open("rm-state")).match("state/left"), p = r ? await r.json() : null;
+        const ok = p && typeof p.d === "string" && /^\d{4}-\d\d-\d\d$/.test(p.d) && Number.isInteger(p.n) && Number.isInteger(p.left) && p.n > 0 && p.left >= 0 && p.left <= p.n;
+        const k = !ok ? "" : p.d < d.date || (p.d === d.date && p.left === p.n) ? "start" : p.d === d.date && p.left === 1 ? "last" : "";
+        const v = k && d.alt[k];
+        if (v && typeof v.title === "string" && v.title && typeof v.body === "string") { d.title = v.title; d.body = v.body; }
+      } catch { /* the day's line */ }
+    }
     await self.registration.showNotification(d.title || "知更鳥晨間記事", {
       body: d.body || "", tag: d.tag || "issue", lang: "zh-Hant-TW", icon: inScope("assets/icon-192.png"), data: { url: inScope(d.url) }, silent: finished,
     });
