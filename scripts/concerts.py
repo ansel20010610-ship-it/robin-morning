@@ -98,6 +98,10 @@ VENUE_CITY = [("臺中國家歌劇院", "台中"), ("台中國家歌劇院", "�
               ("衛武營", "高雄"), ("高雄市文化中心", "高雄"), ("新北市藝文中心", "新北")]
 # outside Taichung a show is worth the trip only in a main hall (editorial/columns/concerts.md); smaller rooms are skipped
 BIG_HALL = re.compile(r"國家音樂廳|國家戲劇院|臺北表演藝術中心.*(大劇院|球劇場)|中山堂中正廳|國際會議中心|衛武營.*(音樂廳|歌劇院|戲劇院)|至德堂")
+# a candidate's show and a listed event's are in one hall when the last of these in each name is the same (hall_ok); a reason
+# that begins 「已列入 <id>」 names a listed event (named_event: fetch's line under a candidate, close's check)
+HALL = re.compile(r"國家音樂廳|國家戲劇院|演奏廳|實驗劇場|音樂廳|歌劇院|戲劇院|大劇院|中劇院|小劇場|表演廳|球劇場|中正廳|至德堂")
+NAMED = re.compile(r"已列入\s*`?([a-z0-9]+(?:-[a-z0-9]+)*)")
 LIMIT = 60  # candidates per run, nearest first; the rest wait for the next run
 # clearly not what the list is for; anything doubtful is left to the editor (比賽／大賽 were here, and took a
 # competition winner's recital with them); what this drops is kept in fetch.json and shown by `blocked`
@@ -498,9 +502,11 @@ def fetch(a):
             drop = "標題含「%s」" % SKIP.search(title).group(0)
         if drop and uid in listed:
             return "listed, filtered"  # as before: a listed event is not looked up under a filtered title
-        shows, in_window, sig = [], [], set()
+        shows, in_window, sig, days = [], [], set(), set()
         for s in e.get("showInfo") or []:
             date, time, city, venue, price = show_of(s)
+            if city and DATE_RE.match(date) and day <= date:
+                days.add((date, city))  # every show to come, in any hall: which of a listed event's shows it would keep (listed_hints)
             if city and DATE_RE.match(date) and day <= date and (city == "台中" or BIG_HALL.search(venue)):
                 sig.add("%s %s" % (date, city))  # every show to come, not the window's: the window slides by a day a day
             if city and DATE_RE.match(date) and day <= date <= end:
@@ -551,7 +557,7 @@ def fetch(a):
             sold += ["其中編號 %s 已在 OPENTIX 那一路（已列入、判過或待判）" % "、".join(done)] if done else []  # v3
         cands.append({"uids": [uid], "category": "音樂" if cat == 1 else "戲劇", "title": title, "shows": shows, "again": again,
                       "url": e.get("sourceWebPromote") or e.get("webSales") or "", "sales": e.get("webSales") or "",
-                      "source": e.get("sourceWebName") or "", "units": units, "desc": desc[:240], "sold": sold})
+                      "source": e.get("sourceWebName") or "", "units": units, "desc": desc[:240], "sold": sold, "days": days})
         return "candidate"
     for cat, e, mine in raw:
         known += rate(cat, e, mine) in ("listed", "OPENTIX", "seen")
@@ -597,6 +603,7 @@ def fetch(a):
             m["desc"] = m["desc"] or c["desc"]
             m["again"] = m["again"] or c["again"]
             m["sold"] = m["sold"] or c["sold"]
+            m["days"] |= c["days"]
             m["shows"] += [s for s in c["shows"] if (s["date"], s["time"], s["city"]) not in {(x["date"], x["time"], x["city"]) for x in m["shows"]}]
         else:
             merged[k] = c
@@ -605,10 +612,18 @@ def fetch(a):
     waiting = max(0, len(cands) - LIMIT)
     cands = cands[:LIMIT]
     titles = [(e["id"], norm_title(e["title"])) for e in data.get("events", [])]
+    # kept: the shows the feed and OPENTIX read today for each listed event; unread: a listed event its own source was not
+    # read for today (whose shows a merge would leave without a source is not known: said the usual way)
+    kept = {i: {(s["date"], s["city"]) for s in feed_shows.get(i, []) + ot["shows"].get(i, [])} for i in set(feed_shows) | set(ot["shows"])}
+    unread = {e["id"] for e in data.get("events", []) if feed_uids(e) and e["id"] not in feed_shows or ot_ids(e) and e["id"] not in ot["shows"]}
     for c in cands:
         n = norm_title(c["title"])
-        c["maybe"] = [i for i, t in titles if t and n and difflib.SequenceMatcher(None, n, t).ratio() >= 0.6]
+        c["ratio"] = {i: difflib.SequenceMatcher(None, n, t).ratio() for i, t in titles if t and n}
+        c["maybe"] = [i for i, r in c["ratio"].items() if r >= 0.6]
         c["twins"] = [o["uids"][0] for o in cands if o is not c and difflib.SequenceMatcher(None, n, norm_title(o["title"])).ratio() >= 0.75]
+        c["same"] = same_ids(c, data.get("events", []), day, c["maybe"], c["ratio"])
+    for c in cands:  # second round: every candidate's same is known (a candidate also matching the event is merged with it)
+        c["hint"] = listed_hints(c, data.get("events", []), day, c["maybe"], c["ratio"], kept, seen, cands, end, unread)
     os.makedirs(TMP, exist_ok=True)
     save(CANDS + ".json", {"date": day, "uids": [u for c in cands for u in c["uids"]],
                            "info": {u: info[u] for c in cands for u in c["uids"]}})
@@ -626,6 +641,7 @@ def fetch(a):
             lines.append("  - 簡介：%s" % c["desc"])
         if c["maybe"]:
             lines.append("  - 可能和已列入的 %s 是同一製作" % "、".join("`%s`" % i for i in c["maybe"]))
+        lines += ["  - " + x for x in c["hint"]]
         if c["twins"]:
             lines.append("  - 可能和候選 %s 是同一製作" % "、".join("`%s`" % u for u in c["twins"]))
         if c["again"]:
@@ -764,8 +780,8 @@ def listed_changes(data, feed_shows, day, end, ot=None, feed_ok=True):
             notes.append("新場次：%s %s %s %s%s" % (s["date"], s["time"], s["city"], s["venue"], "（%s）" % s["price"] if s["price"] else ""))
         for k, a, b, one in pairs:
             diff = []
-            if one and a.get("time") and b["time"] and a["time"] != b["time"]:
-                diff.append("時間 %s → %s" % (a["time"], b["time"]))
+            if one and b["time"] and ((a.get("time") and a["time"] != b["time"]) or (not a.get("time") and b["time"] != "00:00")):
+                diff.append("時間 %s → %s" % (a.get("time") or "未填", b["time"]))  # a listed show without a time: 「未填 → HH:MM」
             va, vb = squeeze(a.get("venue")), squeeze(b["venue"])
             if va and vb and va != vb and va not in vb and vb not in va:
                 diff.append("場地 %s → %s" % (a["venue"], b["venue"]))
@@ -788,6 +804,154 @@ def one_to_one(xs, pool):
                 pool.remove(y)
                 rest.remove(x)
     return rest
+
+
+def hall_ok(a, b):
+    """One hall: spaces and marks dropped, 臺 read as 台; when both names have a hall word (HALL) the last ones are the
+    same (衛武營音樂廳 is 衛武營國家藝術文化中心音樂廳, 國家音樂廳演奏廳 is not 國家音樂廳); a name not given is any hall."""
+    a, b = (re.sub(r"[^\w]", "", (v or "").replace("臺", "台")) for v in (a, b))
+    if not a or not b:
+        return True
+    ha, hb = HALL.findall(a), HALL.findall(b)
+    if ha and hb:
+        return ha[-1] == hb[-1]
+    return a in b or b in a
+
+
+def few(xs):
+    xs = list(dict.fromkeys(xs))
+    return "、".join(xs[:6]) + ("等 %d 場" % len(xs) if len(xs) > 6 else "")
+
+
+def hhmm(s):
+    t = s.get("time") or ""
+    return "" if t == "00:00" else t
+
+
+def named_event(why, events):
+    """The listed event a reason names at its head (「已列入 <id>」, the id on the list), else None."""
+    m = NAMED.match((why or "").strip())
+    return next((e for e in events if e.get("id") == m.group(1)), None) if m else None
+
+
+def hint_pairs(cshows, xshows, near):
+    """A candidate's shows against a listed event's, by day and city and in one hall: the same time first, then one side
+    without a time (00:00 is none). near (the title very like): a day with one show left on each side, at other times, is
+    retimed. Returns (pairs [(listed, candidate, same time)], the candidate's shows unpaired, retimed)."""
+    pairs, missing, retimed = [], [], []
+    for k in sorted({(s["date"], s["city"]) for s in cshows}):
+        a = [s for s in xshows if (s.get("date"), s.get("city")) == k]
+        b = [s for s in cshows if (s["date"], s["city"]) == k]
+        for loose in (False, True):
+            for y in list(b):
+                x = next((x for x in a if hall_ok(x.get("venue"), y["venue"]) and
+                          ((not hhmm(x) or not hhmm(y)) if loose else hhmm(x) and hhmm(x) == hhmm(y))), None)
+                if x is not None:
+                    pairs.append((x, y, not loose))
+                    a.remove(x)
+                    b.remove(y)
+        if near and len(a) == 1 and len(b) == 1 and hall_ok(a[0].get("venue"), b[0]["venue"]):
+            retimed.append((a[0], b.pop()))
+        missing += b
+    return pairs, missing, retimed
+
+
+def listed_hints(c, events, day, maybe, ratio, kept=None, seen=None, others=(), end="9999", unread=()):
+    """The lines under a candidate that is a listed event's show (fetch): what to merge into it and what to fill in, or
+    why not to merge (its other shows would be said gone every day: listed_changes). The same show: a show on one day,
+    in one city and hall at one time; or the title very like (alone the likest, 0.75 or more) and any show paired or
+    retimed; or the title like (maybe) and the show paired one this candidate gives no time for. None: the very like
+    event's shows it lacks (format B). kept: {listed id: {(date, city)}} the feed and OPENTIX read today; seen: seen.json;
+    others: today's candidates (uids, days, same); unread: listed events whose own source was not read today."""
+    kept, seen = kept or {}, seen or {}
+    out, strong = [], []
+    top = max(ratio.values(), default=0)
+    best = [i for i, r in ratio.items() if r == top]
+    near_id = best[0] if len(best) == 1 and top >= 0.75 else None
+    follows = any(not venues.is_venue(u) for u in c.get("uids", []))  # the feed's or OPENTIX's: merged, compared every day
+    sells = bool(opentix.ids_in(c.get("sales")))
+    days = set(c.get("days") or [(s["date"], s["city"]) for s in c["shows"]])
+    for e in events:
+        xs = [s for s in e.get("shows", []) if s.get("date", "") >= day]
+        near = e["id"] == near_id
+        pairs, missing, retimed = hint_pairs(c["shows"], xs, near)
+        like = e["id"] in maybe
+        if not near and not any(p[2] for p in pairs):  # no show at the same time: only a very like title, or a like one for a show without a time here
+            pairs = [p for p in pairs if like and not hhmm(p[1])]
+        if pairs or near and retimed:
+            strong.append((e, pairs, missing, retimed))
+    show = lambda s: " ".join(x for x in (s["date"], s["time"], s["city"], s["venue"]) if x)  # noqa: E731
+    takes = lambda e, s: s["city"] == "台中" or (e.get("rating") or 0) >= 4  # noqa: E731 — as listed_changes' 新場次
+
+    def guard(e):
+        """(bare, also): the event's shows in the window a merge would leave without a source, and the 「一起併」 note."""
+        tied = sorted(u for u, v in seen.items() if v.get("v") == "rejected" and not venues.is_venue(u) and u not in e.get("uids", [])
+                      and u not in c.get("uids", []) and named_event(v.get("why"), events) is e)
+        mates = [o for o in others if o is not c and e["id"] in o.get("same", ()) and any(not venues.is_venue(u) for u in o["uids"])]
+        cover = days | kept.get(e["id"], set()) | {tuple(k.split(" ", 1)) for u in tied for k in seen[u].get("shows", [])} | {k for o in mates for k in o["days"]}
+        bare = sorted({(s["date"], s["city"]) for s in e.get("shows", []) if day <= s.get("date", "") <= end and s.get("city")} - cover) \
+            if (follows or sells) and e["id"] not in unread else []  # its own source not read today: which shows it keeps is not known
+        also = "".join("（%s %s 也一起併進去）" % (w, "、".join("`%s`" % u for u in us)) for w, us in
+                       (("之前判「已列入」的", tied), ("候選", [o["uids"][0] for o in mates])) if us) if (follows or sells) and not bare else ""
+        return bare, also
+    for e, pairs, missing, retimed in strong:
+        like = e["id"] in maybe
+        missing = [y for y in missing if takes(e, y)]
+        same = few("%s %s" % (y["date"], y["city"]) for _, y, *_ in pairs + [(x, y) for x, y in retimed])
+        notes, fill = [], []
+        untimed = [y for x, y, _ in pairs if not hhmm(x) and hhmm(y)]
+        if untimed:
+            notes.append("那一筆沒有開演時間，這一筆是 %s" % few("%s %s %s" % (y["date"], y["city"], hhmm(y)) for y in untimed))
+            fill.append("time")
+        if missing and like:
+            notes.append("那一筆沒有 %s" % few(show(y) for y in missing))
+            fill.insert(0, "這幾場")
+        elif missing:
+            notes.append("這一筆另有 %d 場那一筆沒有" % len(missing))
+        for x, y in retimed:
+            notes.append("時間對不上：%s %s 那一筆 %s、這一筆 %s" % (y["date"], y["city"], hhmm(x), hhmm(y)))
+        bare, also = guard(e)
+        if bare:
+            notes.append("那一筆的 %s 不在這一筆裡，也沒有別的來源" % few("%s %s" % k for k in bare))
+        elif c.get("sales") and any(not x.get("tickets") for x, *_ in pairs):
+            fill.append("tickets")
+        filled = ("，補上" + (" " if fill[0].isascii() else "") + "、".join(fill)) if fill else ""
+        check = "，時間先開售票頁確認" if retimed else ""
+        # a title not like it, known by the hall and the time alone: sure only in a main hall on both sides (two 演奏廳 in Taichung
+        # are two houses, and a name not given is any hall) and with no other show here; else the page is opened first
+        ask = "" if like or not missing and all(BIG_HALL.search(x.get("venue") or "") and BIG_HALL.search(y["venue"]) for x, y, *_ in pairs) \
+            else "先開網頁確認是同一製作，是就"
+        # ot_ids reads tickets and sources: either one makes that event followed by this page, and its other shows gone
+        if bare and follows:
+            act = "%s先不要併進 uids，也不要把這一頁填進 tickets 或 sources（併了那幾場會天天被報消失）%s%s；判不收的理由寫「已列入 %s」" % (
+                ask, "；" + "、".join(fill) + " 照這一筆補上" if fill else "", check, e["id"])
+        else:
+            act = "%s把 UID 併進那一筆的 uids%s%s%s%s，不要判不收" % (
+                ask, also, filled, check,
+                "，tickets 和 sources 先不要填 OPENTIX 的網址（填了那幾場會天天被報消失）" if bare else "")
+        out.append("已列入的 `%s`（%s）也有這一筆的 %s%s：%s" % (e["id"], e.get("title", ""), same, "".join("；" + n for n in notes), act))
+    if not strong and near_id:
+        e = next(e for e in events if e["id"] == near_id)
+        xs = [s for s in e.get("shows", []) if s.get("date", "") >= day]
+        _, missing, _ = hint_pairs(c["shows"], xs, False)
+        missing = [y for y in missing if takes(e, y)]
+        if missing:
+            bare, also = guard(e)  # the same as format A: a merge that would leave its other shows without a source is not asked for
+            # format A's ask: near_id is in maybe (0.75 ≥ 0.6), so the title is like and 「是同一製作就」 is all the check it needs
+            if bare and follows:
+                act = "是同一製作就先不要併進 uids，也不要把這一頁填進 tickets 或 sources（併了那幾場會天天被報消失）；這幾場照這一筆補上，判不收的理由寫「已列入 %s」" % e["id"]
+            else:
+                act = "是同一製作就把 UID 併進那一筆的 uids%s，補上這幾場%s，不要判不收" % (
+                    also, "，tickets 和 sources 先不要填 OPENTIX 的網址（填了那幾場會天天被報消失）" if bare else "")
+            out.append("已列入的 `%s`（%s）沒有這一筆的 %s%s：%s" % (
+                e["id"], e.get("title", ""), few(show(y) for y in missing),
+                "；那一筆的 %s 不在這一筆裡，也沒有別的來源" % few("%s %s" % k for k in bare) if bare else "", act))
+    return out
+
+
+def same_ids(c, events, day, maybe, ratio):
+    """First round: the listed events a candidate is surely the same show as (listed_hints' format A, not one whose page is to be opened first)."""
+    return [re.search(r"`([^`]+)`", x).group(1) for x in listed_hints(c, events, day, maybe, ratio) if "也有這一筆的" in x and "先開網頁確認" not in x]
 
 
 def committed_ids():
@@ -833,7 +997,7 @@ def close(a):
         why.update({u.strip(): reason.strip() for u in us.split(",")})
     n = {"listed": 0, "rejected": 0}
     end = (dt.date.fromisoformat(last["date"]) + dt.timedelta(days=WINDOW)).isoformat()
-    rules, left = rules_version(), []
+    rules, left, back = rules_version(), [], []
     for u in last["uids"]:
         if u in keep:
             continue
@@ -841,6 +1005,20 @@ def close(a):
             seen[u] = {"seen": last["date"], "end": ends[u], "v": "listed"}
             n["listed"] += 1
         elif why.get(u):
+            # 編輯部自訂 (11-23: 佼成 ntch:29279 judged 「已列入」, X without its 11-23): 「已列入 X」 with X lacking a show of it
+            # the list would take (Taichung, or a 4 or more) is not recorded; it comes back with the next fetch
+            x = named_event(why[u], data.get("events", []))
+            have = {"%s %s" % (s.get("date"), s.get("city")) for s in (x or {}).get("shows", [])}
+            miss = [k for k in last.get("info", {}).get(u, {}).get("shows", []) if x and k not in have
+                    and (k.endswith(" 台中") or (x.get("rating") or 0) >= 4)]
+            if miss:
+                # no line under it: X followed (a feed UID or an OPENTIX id) keeps only the shows its sources read, so the UID goes in
+                # with them; X followed by nothing would be followed by this page alone (listed_hints' guard), so it does not
+                fb = "把 UID 併進那一筆的 uids、補上這幾場" if ot_ids(x) or feed_uids(x) else "補上這幾場、UID 先不併，也不要把這一頁填進 tickets 或 sources"
+                print("`%s` 判「已列入 %s」，但那一筆沒有 %s：是同一製作就照候選檔這一筆底下「已列入的 `%s`」那一行做（沒有那一行就%s，"
+                      "再判一次），不是就改寫分數與理由；這次沒記成不收，下次 fetch 還會出現" % (u, x["id"], "、".join(miss), x["id"], fb))
+                back.append(u)
+                continue
             # what it was and why (the 145 rejections of 2026-11-01..09 are bare UIDs: nobody can say what they were)
             seen[u] = dict(last.get("info", {}).get(u, {}), seen=last["date"], end=end, v="rejected", why=why[u], rules=rules)
             n["rejected"] += 1
@@ -851,7 +1029,7 @@ def close(a):
     for i in stamp_added(data):
         print("added 改成今天：%s" % i)
     save(FILE, data)
-    print("已記錄：列入 %d、不收 %d、留待下次 %d" % (n["listed"], n["rejected"], len(keep) + len(left)))
+    print("已記錄：列入 %d、不收 %d、留待下次 %d" % (n["listed"], n["rejected"], len(keep) + len(left) + len(back)))
     if left:
         print("其中 %d 筆沒寫理由，沒記成不收，下次 fetch 還會出現：%s" % (len(left), " ".join(left)))
         print("不收的每一筆都要寫理由：python3 scripts/concerts.py close --reject <UID>=<分數與理由> <UID>=<分數與理由> …")
