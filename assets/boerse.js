@@ -126,14 +126,16 @@ function mergeLive(got, had, now) {
   }
   return items;
 }
-// The figures to show: the file's, each stock figure the Worker gave put over it unless the file's is of a later moment.
+// The figures to show: the file's, each stock figure the Worker gave put over it unless the file's is of the same or a
+// later moment (the file's close is the final one; a live figure stamped the same minute may not be: the exchange's
+// 13:30 figure, 2026-11-25).
 function current() {
   const items = pick(kept()?.items), now = Date.now();
   for (const l of pick(keptLive()?.items)) {
     if (l.ok !== true || !LIVE.has(l.key) || !fresh(l, now)) continue;
     const i = items.findIndex((x) => x.key === l.key);
     if (i < 0) items.push(l);
-    else if (!(items[i].ok === true && moment(l.key, items[i].asof) > moment(l.key, l.asof))) items[i] = l;
+    else if (!(items[i].ok === true && moment(l.key, items[i].asof) >= moment(l.key, l.asof))) items[i] = l;
   }
   return list({ items });
 }
