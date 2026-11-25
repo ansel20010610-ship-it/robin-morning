@@ -106,6 +106,22 @@ const pick = (items) => (Array.isArray(items) ? items : []).filter((i) => i && K
 const KEEP_MS = 10 * 60e3;
 const SHUT = { taiex: "13:30", spx: "16:00", dji: "16:00", ixic: "16:00" };
 const fresh = (i, now) => (/T(\d\d:\d\d)/.exec(i.asof || "")?.[1] || "") >= SHUT[i.key] || (Number.isFinite(i.got) && now - i.got >= 0 && now - i.got < KEEP_MS);
+// A new answer put together with the figures kept from the last, figure by figure: the new one, unless it is of an
+// earlier moment than the one kept (the Worker may answer from the exchange one time and from Yahoo 奇摩, a minute
+// behind, the next: the board must not step back; in the same minute the exchange's figure, seconds behind, stands
+// over Yahoo 奇摩's); not read this time, the kept one while it stands.
+const EXCHANGE = "臺灣證券交易所";
+function mergeLive(got, had, now) {
+  const items = [];
+  for (const k of LIVE) {
+    const n = got.find((i) => i.key === k), o = had.find((i) => i.key === k), keep = o?.ok === true && fresh(o, now);
+    const mo = keep ? moment(k, o.asof) : 0, mn = n?.ok === true ? moment(k, n.asof) : 0;
+    const older = keep && (mo > mn || (mo === mn && o.source === EXCHANGE && n.source !== EXCHANGE));
+    if (n?.ok === true && !older) items.push({ ...n, got: now });
+    else if (keep) items.push(o);
+  }
+  return items;
+}
 // The figures to show: the file's, each stock figure the Worker gave put over it unless the file's is of a later moment.
 function current() {
   const items = pick(kept()?.items), now = Date.now();
@@ -266,13 +282,7 @@ function askLive() {
   if (!box?.isConnected || !liveApi || document.hidden) return;
   fetchLive(liveApi).then((d) => {
     if (!d) return; // no answer: the board keeps what it shows
-    const now = Date.now(), got = pick(d.items), had = pick(keptLive()?.items), items = [];
-    for (const k of LIVE) {
-      const n = got.find((i) => i.key === k), o = had.find((i) => i.key === k);
-      if (n?.ok === true) items.push({ ...n, got: now });
-      else if (o?.ok === true && fresh(o, now)) items.push(o); // not read this time: the last one, while it stands
-    }
-    live = { updated: d.updated, items };
+    live = { updated: d.updated, items: mergeLive(pick(d.items), pick(keptLive()?.items), Date.now()) };
     store.set("market.live", live);
     if (box.isConnected) draw(box, current());
   }).catch(() => {}).finally(() => {
