@@ -22,8 +22,10 @@ const FRED = new Set(["spx", "dji", "ixic", "wti", "brent"]);
 const SPEED = 20; // pt a second
 const LEAD = 12; // pt: where the first name stands in the window when the tape starts, clear of the 10 pt soft end
 const SOURCES = `資料：<a href="https://www.twse.com.tw/" target="_blank" rel="noopener noreferrer">臺灣證券交易所</a>、<a href="https://fred.stlouisfed.org/" target="_blank" rel="noopener noreferrer">FRED</a>（聖路易聯準銀行）、<a href="https://www.exchangerate-api.com" target="_blank" rel="noopener noreferrer">ExchangeRate-API</a>`;
-const YAHOO = `、<a href="https://finance.yahoo.com/" target="_blank" rel="noopener noreferrer">Yahoo 財經</a>`;
-const sourcesOf = (items) => (items.some((m) => m.source === "Yahoo 財經") ? SOURCES.replace("（聖路易聯準銀行）", `（聖路易聯準銀行）${YAHOO}`) : SOURCES);
+// the live figures' own sources, named when a figure shown is from them
+const MORE = [["Yahoo 財經", "https://finance.yahoo.com/"], ["Yahoo 奇摩股市", "https://tw.stock.yahoo.com/"]];
+const sourcesOf = (items) => SOURCES.replace("（聖路易聯準銀行）", `（聖路易聯準銀行）${MORE.filter(([n]) => items.some((m) => m.source === n))
+  .map(([n, u]) => `、<a href="${u}" target="_blank" rel="noopener noreferrer">${n}</a>`).join("")}`);
 const LIVE_MS = 30e3; // how often the live figures are asked for while the board is on screen (the Worker keeps an answer 20 s: none shown is over a minute old)
 const LIVE = new Set(["taiex", "spx", "dji", "ixic"]);
 // The moment a figure is of: a time as it stands; a bare date (a close, from the file) as that market's close that day.

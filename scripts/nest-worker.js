@@ -261,7 +261,9 @@ async function credits(req, env, code) {
 // 市場行情, live (2026-11-25): GET /market answers the four stock figures as they stand now, in content/market.json's own
 // shape (scripts/market.py), for the quote board on the front page (assets/boerse.js), which asks every half minute while
 // it is on screen and puts what it gets over the file's figures. 台股加權指數 from the exchange's own quote service
-// (mis.twse.com.tw: about five seconds behind; "y" is the index's previous close); S&P 500, 道瓊 and 那斯達克 from Yahoo
+// (mis.twse.com.tw: about five seconds behind; "y" is the index's previous close), and when that cannot be read (from
+// Cloudflare it answered HTTP 520, 2026-11-25) from Yahoo 奇摩股市's chart service (tw.stock.yahoo.com: a figure a
+// minute, its previous close the exchange's; not an official API either); S&P 500, 道瓊 and 那斯達克 from Yahoo
 // Finance's chart service (not an official API, no contract: it may refuse one day, and then the board keeps the file's
 // figures). Nothing is written to KV (its free tier takes 1,000 writes a day): an answer is kept in this instance's
 // memory for MARKET_S seconds, so phones asking side by side cost the sources one reading. A source that cannot be read
@@ -269,6 +271,7 @@ async function credits(req, env, code) {
 // request at most REQ_MS of it), well inside the 8 seconds the phone waits (market.js fetchLive): a source that hangs
 // costs only its own figures.
 const MARKET_S = 20, MARKET_MS = 6000, REQ_MS = 3500, MARKET_UA = "RobinMorningBot/1.0 (https://github.com/ansel20010610-ship-it/robin-morning)";
+/** @type {[string, string, string][]} */
 const YAHOO = [["spx", "S&P 500", "%5EGSPC"], ["dji", "道瓊工業指數", "%5EDJI"], ["ixic", "那斯達克綜合指數", "%5EIXIC"]];
 let marketMemo = null;
 const fin = (x) => typeof x === "number" && Number.isFinite(x);
@@ -296,14 +299,21 @@ async function getJSON(url, until) {
     return await Promise.race([read, late]);
   } finally { clearTimeout(timer); }
 }
+const YAHOO_TW = "https://tw.stock.yahoo.com/_td-stock/api/resource/FinanceChartService.ApacLibraCharts;symbols=%5B%22%5ETWII%22%5D;type=tick";
 async function taiex(until) {
   try {
     const m = (await getJSON("https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0", until))?.msgArray?.[0];
     const d = /^(\d{4})(\d\d)(\d\d)$/.exec(m?.d || ""), t = /^(\d\d):(\d\d)/.exec(m?.t || "");
     if (m?.c !== "t00" || !d || !t) throw new Error("no index row");
-    // before the day's first figure ("z" is "-"), not ok: the board keeps the last close it has
-    return quote("taiex", "台股加權指數", Number(m.z), Number(m.y), `${d[1]}-${d[2]}-${d[3]}T${t[1]}:${t[2]}+08:00`, "臺灣證券交易所", "https://www.twse.com.tw/");
-  } catch (e) { console.error("market taiex", String(e)); return { key: "taiex", name: "台股加權指數", ok: false }; }
+    // before the day's first figure ("z" is "-") it is not ok, and Yahoo 奇摩 is asked below
+    const q = quote("taiex", "台股加權指數", Number(m.z), Number(m.y), `${d[1]}-${d[2]}-${d[3]}T${t[1]}:${t[2]}+08:00`, "臺灣證券交易所", "https://www.twse.com.tw/");
+    if (q.ok) return q;
+  } catch (e) { console.error("market taiex twse", String(e)); }
+  try {
+    const m = (await getJSON(YAHOO_TW, until))?.[0]?.chart?.meta;
+    if (m?.symbol !== "^TWII" || !fin(m.regularMarketTime)) throw new Error("no meta");
+    return quote("taiex", "台股加權指數", m.regularMarketPrice, m.previousClose ?? m.chartPreviousClose, local(m.regularMarketTime * 1000, fin(m.gmtoffset) ? m.gmtoffset : 8 * 3600), "Yahoo 奇摩股市", "https://tw.stock.yahoo.com/quote/%5ETWII");
+  } catch (e) { console.error("market taiex yahoo-tw", String(e)); return { key: "taiex", name: "台股加權指數", ok: false }; }
 }
 async function yahoo([key, name, sym], until) {
   for (const host of ["query1", "query2"]) {
