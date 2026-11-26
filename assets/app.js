@@ -793,8 +793,10 @@ let lastWire = null;
 // remembers in rm.wire.seen ({ wire, fb }) the item on top when the reader last looked at it (top, at) and where its gold
 // line stands (since, sinceAt). Looking at a list whose top has changed moves the line to the old top, 「上次看到這・07:42」
 // over it and the news above; looking again with nothing new leaves the line where it is, so it stays until the next news.
-// Nothing is drawn before news has come between two looks, or when the marked item is gone from the list. The mark adds
-// no height (style.css .wire li.since), so opening the strip moves nothing.
+// Nothing is drawn before news has come between two looks. When the marked item has gone from the list (twelve items are
+// some four hours), everything in it came since: the line is drawn under the last one, 「上次看到 07:42・以上都是新的」
+// (the owner's pick 甲, 2026-11-26). The mark adds no height (style.css .wire li.since, li.since-end), so opening the
+// strip moves nothing.
 const wireLooked = new Set(); // the lists looked at in this opening of the strip
 function wireSeen() {
   const s = store.get("wire.seen", null);
@@ -811,12 +813,14 @@ function noteWireLook(kind, rows) {
   store.set("wire.seen", all);
 }
 function markWireSince(box, kind) {
-  box.querySelectorAll("ol li.since").forEach((li) => { li.classList.remove("since"); delete li.dataset.since; });
+  box.querySelectorAll("ol li.since, ol li.since-end").forEach((li) => { li.classList.remove("since", "since-end"); delete li.dataset.since; });
   const s = kind ? wireSeen()[kind] : null;
   if (!s?.since || !Number.isFinite(s.sinceAt)) return;
   const lis = [...box.querySelectorAll("ol li")], i = lis.findIndex((li) => li.querySelector("a")?.getAttribute("href") === s.since);
+  const at = wireTime(new Date(s.sinceAt + 8 * 3600e3).toISOString().slice(0, 16));
+  if (i < 0 && lis.length) { const last = lis[lis.length - 1]; last.classList.add("since-end"); last.dataset.since = `上次看到 ${at}・以上都是新的`; return; }
   if (i < 1) return;
-  lis[i].classList.add("since"); lis[i].dataset.since = `上次看到這・${wireTime(new Date(s.sinceAt + 8 * 3600e3).toISOString().slice(0, 16))}`;
+  lis[i].classList.add("since"); lis[i].dataset.since = `上次看到這・${at}`;
 }
 // 足球 (Fußball; scripts/football.py, the owner 2026-11-26: 點開外電後可以點標題換成足球): the strip carries the football
 // too — BBC Sport's football page and Mundo Deportivo's Barça page, put into Taiwan Chinese by Sonnet at the half-hourly
