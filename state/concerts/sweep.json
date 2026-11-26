@@ -1,54 +1,52 @@
 {
   "last": "2026-11-09",
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "sources": {
     "mna": {
       "urls": [
         "https://www.mna.com.tw/concerts.html",
-        "https://www.mna.com.tw/concerts.html?page=2",
-        "https://www.mna.com.tw/concerts_detail.html?id=778",
-        "https://www.mna.com.tw/concerts_detail.html?id=777"
+        "https://www.mna.com.tw/concerts.html?page=2"
       ],
       "seen": [
-        {
-          "title": "Lang Lang Piano Recital",
-          "verdict": "已列入",
-          "id": "lang-lang-recital-2026"
-        },
         {
           "title": "Philharmonix",
           "verdict": "已列入",
           "id": "philharmonix-2026"
         },
         {
-          "title": "Currentzis and Utopia Orchestra",
-          "verdict": "不收",
-          "why": "11/25 已演完"
+          "title": "Lang Lang Piano Recital",
+          "verdict": "已列入",
+          "id": "lang-lang-recital-2026"
         },
         {
-          "title": "Yuja Wang and Mahler Chamber Orchestra",
+          "title": "Currentzis and Utopia Orchestra 11/25",
           "verdict": "不收",
-          "why": "11/21 已演完"
+          "why": "已演出（11/25）"
         },
         {
-          "title": "Thielemann and Staatskapelle Berlin",
+          "title": "Yuja Wang and Mahler Chamber Orchestra 11/21",
           "verdict": "不收",
-          "why": "11/21 已演完"
+          "why": "已演出（11/21）"
         },
         {
-          "title": "DIANA KRALL",
+          "title": "Thielemann and Staatskapelle Berlin 11/21",
           "verdict": "不收",
-          "why": "爵士演唱，不在範圍"
+          "why": "已演出（11/21）"
         },
         {
           "title": "INTERSTELLAR LIVE",
           "verdict": "不收",
-          "why": "電影配樂"
+          "why": "電影配樂拼盤，不在收錄範圍"
         },
         {
-          "title": "Attack on Titan 世界巡演",
+          "title": "Attack on Titan World Tour",
           "verdict": "不收",
-          "why": "動漫配樂"
+          "why": "動漫配樂，不在收錄範圍"
+        },
+        {
+          "title": "Diana Krall",
+          "verdict": "不收",
+          "why": "爵士歌手，不在收錄範圍"
         }
       ]
     },
@@ -61,29 +59,15 @@
           "title": "2027向貝多芬致敬-吉爾特伯格",
           "verdict": "已列入",
           "id": "giltburg-beethoven-tso-2027"
-        },
-        {
-          "title": "2026蕭邦計畫",
-          "verdict": "不收",
-          "why": "8月已演完"
-        },
-        {
-          "title": "2026阿格麗希音樂節在台灣",
-          "verdict": "不收",
-          "why": "已演完"
-        },
-        {
-          "title": "2026皮亞佐拉五重奏",
-          "verdict": "不收",
-          "why": "查不到場次，無法評分"
         }
-      ]
-    },
-    "tanart": {
-      "error": "連線被拒（ECONNREFUSED）"
+      ],
+      "error": "首頁選單只有標題，沒開各節目頁；2026阿格麗希音樂節、蕭邦計畫、皮亞佐拉五重奏的日期未查到，來不及評分"
     },
     "pbc": {
-      "error": "來不及查"
+      "error": "來不及查（07:15 前先處理候選與其他工作）"
+    },
+    "tanart": {
+      "error": "來不及查（Crawl-delay 50 秒）"
     },
     "kham": {
       "error": "來不及查"
@@ -92,11 +76,13 @@
       "error": "來不及查"
     },
     "news": {
-      "error": "來不及查"
+      "urls": [],
+      "seen": [],
+      "error": "只做一次泛搜尋（交響樂團來台），沒有新發現；其餘關鍵字來不及查"
     },
     "ntch": {
       "auto": true,
-      "n": 118
+      "n": 134
     },
     "ntt": {
       "auto": true,
@@ -104,7 +90,7 @@
     },
     "wwy": {
       "auto": true,
-      "n": 160
+      "n": 156
     }
   }
 }
