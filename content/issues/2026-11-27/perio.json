@@ -1,0 +1,263 @@
+{
+  "column": "perio",
+  "date": "2026-11-27",
+  "title": "刮完再塞藥，平均多減 0.365 毫米",
+  "dek": "摘要說好處在統計上顯著；同一篇的全文結論卻說，換個場景可能沒差，幅度也許沒有臨床意義。",
+  "brief": "替歐洲牙周病學會指引做的統合分析，合併 50 個隨機試驗：刮治後在口袋裡加局部緩釋抗菌藥，半年多後探測深度平均多減 0.365 毫米。換到新場景，真實效果可能是 0，多數試驗偏差風險高，作者自己說幅度可能沒有臨床意義。歐洲 S3 指引也只給「可以考慮」。",
+  "takeaway": "刮治後加局部緩釋抗菌藥，6–9 個月探測深度平均只多減 0.365 毫米，換個診所可能完全沒差；歐洲 S3 指引只給「可以考慮」。要用就當小幅加分，刮治還是主角。",
+  "chairside": "刮完牙根後放進牙齦縫裡的藥，研究平均只讓縫多淺不到半毫米，換一群人可能就沒差。它只是在把牙根清乾淨之外的小小加分；研究裡，用藥的人副作用沒有比較多。",
+  "topic_key": "perio:doi:10.1111/jcpe.13230",
+  "form": "document",
+  "voice": "colleague",
+  "updated_at": "2026-11-26T22:46:00+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "document",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Clinical_Update_Vol._32%2C_No._1_%28IA_2010001PeriodontalChemotherapeuticsSystemicAndLocalAntibiotics%29.pdf/page1-960px-Clinical_Update_Vol._32%2C_No._1_%28IA_2010001PeriodontalChemotherapeuticsSystemicAndLocalAntibiotics%29.pdf.jpg",
+    "width": 960,
+    "height": 1242,
+    "alt": "一頁黑白掃描的英文刊物，左上角有一枚校徽，大字標題是「Clinical Update」，右上角寫著 Naval Postgraduate Dental School 與馬里蘭州貝塞斯達。下面是兩欄密密的內文，小標有 Introduction、Systemic antibiotics、Local delivery antimicrobial agents (LDAs)。",
+    "caption": "美國海軍研究所牙科學校 2010 年的《Clinical Update》第 32 卷第 1 期第 1 頁，題目是牙周治療的全身與局部抗生素。右欄「局部給藥抗菌劑」一節列出當時美國 FDA 核准的三種產品：多西環素凝膠 Atridox、氯己定晶片 PerioChip、米諾環素微球 Arestin。這份文件不是本文論文的一部分，用來讓讀者看這類產品是什麼。",
+    "credit": "Joyce Y. Turner、Thu Getka／美國海軍研究所牙科學校（Naval Postgraduate Dental School），經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Clinical_Update_Vol._32,_No._1_(IA_2010001PeriodontalChemotherapeuticsSystemicAndLocalAntibiotics).pdf",
+    "made": "2010"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "刮完牙根，總有幾個口袋不收，很多人會想再放點藥進去。這篇就是在算，放了到底多換到什麼。"
+    },
+    {
+      "type": "p",
+      "text": "作者是馬德里康普頓斯大學的 **David Herrera** 團隊。他們 2019 年替歐洲牙周病學會的治療指引做這篇系統性回顧，2020 年刊在 *J Clin Periodontol*。今天還挑這篇 2020 年的論文，是因為歐洲指引對局部藥的建議，依據就是它。"
+    },
+    {
+      "type": "p",
+      "text": "**局部緩釋抗菌藥**指的是刮完放進口袋、能慢慢釋放至少 24 小時的藥，像氯己定晶片 PerioChip、米諾環素微球 Arestin。"
+    },
+    {
+      "type": "quote",
+      "text": "在牙周炎治療中輔助使用局部給藥的抗菌藥物，臨床結果有統計上顯著的好處，且沒有相關的副作用。",
+      "original": "The use adjunctive locally delivered antimicrobials in periodontitis therapy results in statistically significant benefits in clinical outcomes, without relevant side effects.",
+      "cite": "Herrera 等 2020，摘要的結論（原文如此，少一個 of）；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "只看摘要，這是一句沒有但書的好消息。"
+    },
+    {
+      "type": "h",
+      "text": "50 個試驗，47 個偏差風險高"
+    },
+    {
+      "type": "p",
+      "text": "他們只收追蹤至少 6 個月的隨機試驗，對照組是只刮治，或刮治加安慰劑，主要看探測深度。"
+    },
+    {
+      "type": "p",
+      "text": "最後收到 50 個試驗，小的只有 10 人。除了三個，其餘都是高偏差風險，意思是做法上有不少可挑剔的地方。作者也說，多數研究有廠商參與。"
+    },
+    {
+      "type": "h",
+      "text": "平均多減 0.365 毫米"
+    },
+    {
+      "type": "p",
+      "text": "追蹤 6 到 9 個月，加藥組的探測深度平均多減 **0.365 毫米**，附著多得 0.263 毫米。追到 12 到 60 個月，探測深度還多減 0.190 毫米，附著就看不出差別了。探診出血和副作用也看不出差別。"
+    },
+    {
+      "type": "p",
+      "text": "圖裡粗線是 95% 信賴區間，是平均效果的範圍，沒碰到 0。細線是**預測區間**，是換一家新診所、一群新病人時，真實效果可能的範圍：−0.29 到 1.01 毫米，跨過 0。所以到了某個新場景，可能完全沒多換到。"
+    },
+    {
+      "type": "svg",
+      "title": "平均有好處，換個場景就不一定",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 330\"><rect class=\"paper\" x=\"0\" y=\"0\" width=\"640\" height=\"330\"/><text class=\"ink\" x=\"20\" y=\"26\" font-size=\"15\" font-weight=\"bold\">加了局部藥，比只刮治多減／多得幾毫米</text><line class=\"accent\" x1=\"20\" y1=\"48\" x2=\"50\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"7\"/><text class=\"ink\" x=\"56\" y=\"52\" font-size=\"12\">95% 信賴區間：平均效果的範圍</text><line class=\"muted\" x1=\"260\" y1=\"48\" x2=\"290\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"2\"/><text class=\"ink\" x=\"296\" y=\"52\" font-size=\"12\">預測區間：換一個新場景，真實效果的範圍</text><line class=\"muted\" x1=\"392.5\" y1=\"72\" x2=\"392.5\" y2=\"290\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text class=\"ink\" x=\"20\" y=\"97\" font-size=\"13\">6–9 個月</text><text class=\"muted\" x=\"20\" y=\"113\" font-size=\"12\">探測深度</text><line class=\"muted\" x1=\"341.8\" y1=\"100\" x2=\"569.2\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><line class=\"muted\" x1=\"341.8\" y1=\"94\" x2=\"341.8\" y2=\"106\" stroke=\"currentColor\" stroke-width=\"2\"/><line class=\"muted\" x1=\"569.2\" y1=\"94\" x2=\"569.2\" y2=\"106\" stroke=\"currentColor\" stroke-width=\"2\"/><line class=\"accent\" x1=\"438.4\" y1=\"100\" x2=\"474.4\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"7\"/><circle class=\"ink\" cx=\"456.4\" cy=\"100\" r=\"4.5\" fill=\"currentColor\"/><text class=\"ink\" x=\"456.4\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">0.365</text><text class=\"ink\" x=\"20\" y=\"147\" font-size=\"13\">6–9 個月</text><text class=\"muted\" x=\"20\" y=\"163\" font-size=\"12\">附著</text><line class=\"muted\" x1=\"317.2\" y1=\"150\" x2=\"560.5\" y2=\"150\" stroke=\"currentColor\" stroke-width=\"2\"/><line class=\"muted\" x1=\"317.2\" y1=\"144\" x2=\"317.2\" y2=\"156\" stroke=\"currentColor\" stroke-width=\"2\"/><line class=\"muted\" x1=\"560.5\" y1=\"144\" x2=\"560.5\" y2=\"156\" stroke=\"currentColor\" stroke-width=\"2\"/><line class=\"accent\" x1=\"414.0\" y1=\"150\" x2=\"463.0\" y2=\"150\" stroke=\"currentColor\" stroke-width=\"7\"/><circle class=\"ink\" cx=\"438.5\" cy=\"150\" r=\"4.5\" fill=\"currentColor\"/><text class=\"ink\" x=\"438.5\" y=\"140\" font-size=\"11\" text-anchor=\"middle\">0.263</text><text class=\"ink\" x=\"20\" y=\"197\" font-size=\"13\">12–60 個月</text><text class=\"muted\" x=\"20\" y=\"213\" font-size=\"12\">探測深度</text><line class=\"accent\" x1=\"402.8\" y1=\"200\" x2=\"448.7\" y2=\"200\" stroke=\"currentColor\" stroke-width=\"7\"/><circle class=\"ink\" cx=\"425.8\" cy=\"200\" r=\"4.5\" fill=\"currentColor\"/><text class=\"ink\" x=\"425.8\" y=\"190\" font-size=\"11\" text-anchor=\"middle\">0.190</text><text class=\"ink\" x=\"20\" y=\"247\" font-size=\"13\">12–60 個月</text><text class=\"muted\" x=\"20\" y=\"263\" font-size=\"12\">附著</text><line class=\"muted\" x1=\"215.8\" y1=\"250\" x2=\"600.8\" y2=\"250\" stroke=\"currentColor\" stroke-width=\"2\"/><line class=\"muted\" x1=\"215.8\" y1=\"244\" x2=\"215.8\" y2=\"256\" stroke=\"currentColor\" stroke-width=\"2\"/><line class=\"muted\" x1=\"600.8\" y1=\"244\" x2=\"600.8\" y2=\"256\" stroke=\"currentColor\" stroke-width=\"2\"/><line class=\"accent\" x1=\"348.2\" y1=\"250\" x2=\"468.3\" y2=\"250\" stroke=\"currentColor\" stroke-width=\"7\"/><circle class=\"ink\" cx=\"408.2\" cy=\"250\" r=\"4.5\" fill=\"currentColor\"/><text class=\"ink\" x=\"408.2\" y=\"240\" font-size=\"11\" text-anchor=\"middle\">0.090</text><line class=\"ink\" x1=\"200.0\" y1=\"290\" x2=\"620.0\" y2=\"290\" stroke=\"currentColor\" stroke-width=\"1\"/><line class=\"ink\" x1=\"217.5\" y1=\"290\" x2=\"217.5\" y2=\"295\" stroke=\"currentColor\" stroke-width=\"1\"/><text class=\"ink\" x=\"217.5\" y=\"309\" font-size=\"11\" text-anchor=\"middle\">-1</text><line class=\"ink\" x1=\"305.0\" y1=\"290\" x2=\"305.0\" y2=\"295\" stroke=\"currentColor\" stroke-width=\"1\"/><text class=\"ink\" x=\"305.0\" y=\"309\" font-size=\"11\" text-anchor=\"middle\">-0.5</text><line class=\"ink\" x1=\"392.5\" y1=\"290\" x2=\"392.5\" y2=\"295\" stroke=\"currentColor\" stroke-width=\"1\"/><text class=\"ink\" x=\"392.5\" y=\"309\" font-size=\"11\" text-anchor=\"middle\">0</text><line class=\"ink\" x1=\"480.0\" y1=\"290\" x2=\"480.0\" y2=\"295\" stroke=\"currentColor\" stroke-width=\"1\"/><text class=\"ink\" x=\"480.0\" y=\"309\" font-size=\"11\" text-anchor=\"middle\">0.5</text><line class=\"ink\" x1=\"567.5\" y1=\"290\" x2=\"567.5\" y2=\"295\" stroke=\"currentColor\" stroke-width=\"1\"/><text class=\"ink\" x=\"567.5\" y=\"309\" font-size=\"11\" text-anchor=\"middle\">1</text><text class=\"muted\" x=\"200.0\" y=\"324\" font-size=\"11\">← 對照組較好</text><text class=\"muted\" x=\"620.0\" y=\"324\" font-size=\"11\" text-anchor=\"end\">加藥組較好 →（毫米）</text><text class=\"muted\" x=\"396.5\" y=\"74\" font-size=\"11\">0＝沒差</text></svg>",
+      "caption": "圓點是加權平均差：加了局部藥的那組，比只刮治（或刮治加安慰劑）多減的探測深度、多得的附著，單位毫米。粗線是 95% 信賴區間，細線是預測區間。短期的平均效果都不跨過 0，預測區間卻都跨過 0；長期的附著連平均效果都跨過 0。長期探測深度的研究間差異小，論文沒有算預測區間。依 Herrera 等 2020 年摘要與結果節數字重繪，非原圖轉載。"
+    },
+    {
+      "type": "p",
+      "text": "各試驗的結果很不一致，一部分跟研究設計有關。同一張嘴一邊用藥、一邊不用的半口對照試驗，多減 0.521 毫米；分兩組人來比的，只有 0.231 毫米。作者提醒，半口對照的藥可能漏到另一邊。"
+    },
+    {
+      "type": "p",
+      "text": "產品之間也差很多。四環素類的 Atridox、Actisite、Ligosan 多減最多。作者認為，兩種氯己定看來比前三種小。甲硝唑的 Elyzol 跟只刮治沒差。排第一的 Atridox 只有兩個試驗，合起來每組 19 人。"
+    },
+    {
+      "type": "table",
+      "title": "短期（6–9 個月）探測深度：各產品多減幾毫米",
+      "head": [
+        "產品",
+        "成分",
+        "試驗數",
+        "比只刮治多減（毫米，95% CI）",
+        "統計上"
+      ],
+      "rows": [
+        [
+          "Atridox",
+          "多西環素",
+          "2",
+          "0.80（0.08–1.52）",
+          "顯著"
+        ],
+        [
+          "Actisite",
+          "四環素",
+          "7",
+          "0.73（0.70–0.76）",
+          "顯著"
+        ],
+        [
+          "Ligosan",
+          "多西環素",
+          "3",
+          "0.53（0.28–0.77）",
+          "顯著"
+        ],
+        [
+          "Arestin",
+          "米諾環素",
+          "6",
+          "0.28（0.20–0.36）",
+          "顯著"
+        ],
+        [
+          "PerioChip",
+          "氯己定（晶片）",
+          "9",
+          "0.23（0.12–0.34）",
+          "顯著，但研究間很不一致"
+        ],
+        [
+          "Chlosite",
+          "氯己定（凝膠）",
+          "2",
+          "0.49（−0.24–1.21）",
+          "看不出差別"
+        ],
+        [
+          "Dentomycin",
+          "米諾環素",
+          "2",
+          "0.38（−0.04–0.79）",
+          "看不出差別"
+        ],
+        [
+          "Elyzol",
+          "甲硝唑",
+          "5",
+          "0.14（−0.04–0.32）",
+          "看不出差別"
+        ],
+        [
+          "Aureomycin",
+          "四環素",
+          "1",
+          "0.60（−0.34–1.54）",
+          "看不出差別"
+        ],
+        [
+          "Periofilm",
+          "哌拉西林加他唑巴坦",
+          "1",
+          "−0.10（−1.05–0.85）",
+          "看不出差別"
+        ]
+      ],
+      "caption": "數字取到小數第二位。Atridox 的兩個試驗合起來，對照組與試驗組各只有 19 人。信賴區間跨過 0 就是看不出差別。依 Herrera 等 2020 年接受稿表 3a 整理，非原表轉載。"
+    },
+    {
+      "type": "h",
+      "text": "同一篇的全文結論"
+    },
+    {
+      "type": "quote",
+      "text": "多數分析都有顯著的異質性，因為合併了不同活性成分的不同產品，也受研究設計影響（半口對照與只量部分位置的研究，效果較大）。預測區間沒有顯示顯著的好處，好處的幅度可能沒有臨床意義。",
+      "original": "Significant heterogeneity was observed in most of the analyses, since they combined different products with different active agents, and also influenced by the study design (larger benefits for split-mouth studies and for partial-mouth assessments). Prediction intervals did not demonstrate significant benefits, and the magnitude of the benefits may not be clinically relevant.",
+      "cite": "Herrera 等 2020，全文的結論第二點；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "作者也寫，證據品質有限，很難訂出一套有實證的使用流程。"
+    },
+    {
+      "type": "h",
+      "text": "歐洲指引：可以考慮"
+    },
+    {
+      "type": "p",
+      "text": "2019 年 11 月，歐洲牙周病學會在西班牙開研討會，拿 15 篇系統性回顧討論、投票，做出 **S3 臨床指引**，這是最高層級的臨床指引。局部氯己定和特定局部抗生素，都只拿到等級 0 的「可以考慮」。"
+    },
+    {
+      "type": "table",
+      "title": "2020 年歐洲 S3 指引：刮治時要不要加抗菌藥",
+      "head": [
+        "建議",
+        "內容",
+        "證據／等級"
+      ],
+      "rows": [
+        [
+          "R2.14",
+          "局部緩釋氯己定，可以考慮當刮治的輔助",
+          "9 個隨機試驗、718／719 人，高偏差風險；開放建議（0，↔）"
+        ],
+        [
+          "R2.15",
+          "特定的局部緩釋抗生素，可以考慮當刮治的輔助",
+          "Atridox 2 個、Ligosan 3 個、Arestin 6 個試驗，多數高偏差風險；開放建議（0，↔）"
+        ],
+        [
+          "R2.16",
+          "全身性抗生素不建議常規使用；特定病人（例如年輕成人的廣泛型第 III 期）可以考慮",
+          "28 個隨機試驗；常規使用為強建議不要（A，↓↓），特定病人為開放建議（0，↔）"
+        ]
+      ],
+      "caption": "等級依德國醫學會 AWMF 的分法：A 是強建議（we recommend），B 是建議（we suggest），0 是開放建議，意思是「可以考慮」（may be considered）。表裡的 ↔ 就是 0 級；↓↓ 是 A 級的「強建議不要」。R2.14、R2.15 的依據就是 Herrera 等 2020。整理自 Sanz 等 2020 年 EFP S3 指引全文。"
+    },
+    {
+      "type": "p",
+      "text": "順手複習指引的第三步：第 III 期病人做完前兩步，殘留 4 到 5 毫米的口袋建議再刮一次，6 毫米以上建議翻瓣手術。作者在討論裡認為，治療後沒反應、或維護期復發的零星位置，也許適合用局部藥；這是他們的看法，統合分析沒有算過。"
+    },
+    {
+      "type": "paper",
+      "citation": "Herrera D, Matesanz P, Martín C, Oud V, Feres M, Teughels W. Adjunctive effect of locally delivered antimicrobials in periodontitis therapy: A systematic review and meta-analysis. *J Clin Periodontol*. 2020;47 Suppl 22:239–256.",
+      "doi": "10.1111/jcpe.13230",
+      "pmid": "31912531",
+      "link": "https://doi.org/10.1111/jcpe.13230",
+      "evidence": "系統性回顧與統合分析：50 個隨機試驗（59 篇論文），47 個高偏差風險",
+      "design": "系統性回顧與統合分析（PROSPERO CRD42019142370），固定與隨機效應模型（異質性顯著時報隨機效應），異質性顯著時另報預測區間；第十六屆歐洲牙周病研討會為 EFP S3 指引委託的回顧之一",
+      "sample": "50 個隨機試驗，16 個國家；短期探測深度分析 38 組比較（對照 2,137 人、試驗 2,111 人）；追蹤 6–60 個月",
+      "question": "成人牙周炎病人，刮治後加局部緩釋抗菌藥，比只刮治或刮治加安慰劑，探測深度多減多少？",
+      "access": "依全文整理：KU Leuven 典藏 Lirias 的作者接受稿 PDF；摘要與書目另以 PubMed、Crossref 核對；建議等級依 EFP S3 指引全文"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Adjunctive effect of locally delivered antimicrobials in periodontitis therapy: A systematic review and meta-analysis",
+      "publisher": "Journal of Clinical Periodontology（Herrera D、Matesanz P、Martín C、Oud V、Feres M、Teughels W）",
+      "date": "2020-01-08",
+      "url": "https://lirias.kuleuven.be/handle/123456789/676599",
+      "note": "主角論文。讀全文：KU Leuven 典藏 Lirias 的作者接受稿 PDF（43 頁；出版社全文需訂閱）。摘要以 PubMed E-utilities 核對，與接受稿逐字相同。DOI 10.1111/jcpe.13230；PMID 31912531；卷期頁 47 Suppl 22:239–256 依 PubMed 與 Crossref；日期為 Crossref 記錄建立日（線上先行），正式刊期 2020 年 7 月。用到：摘要全文；第 4 頁 Clinical Relevance；方法（PICOS、24 小時緩釋、三資料庫、只收英文、預測區間）；結果（2,184／97／59／50、16 國、10–100+ 人、偏差風險、表 3a、3b、CAL、BOP、副作用、Egger）；討論（0.3–0.6 mm、半口對照、產品差異、復發位置）；限制與結論三點。內文表 3a 的短期 PPD 信賴區間（0.236–0.491）與摘要（0.262–0.468）不同，正文以摘要為準。"
+    },
+    {
+      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Sanz M、Herrera D、Kebschull M 等）",
+      "date": "2020-07-27",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/",
+      "note": "讀全文（Europe PMC fullTextXML，PMC7891343）。DOI 10.1111/jcpe.13290；PMID 32383274。用到：第 3 節塞哥維亞會議（2019 年 11 月 10–13 日、15 篇系統性回顧）；表 4 建議等級；第 4、7 節治療步驟；R2.14、R2.15、R2.16 原文、證據品質、等級、共識與迴避比例、效果估計 10% 與 10–30%、經濟考量；R3.1。日期依 Crossref 線上出版日。"
+    },
+    {
+      "title": "Periodontal chemotherapeutics: systemic and local antibiotics（Clinical Update Vol. 32, No. 1）",
+      "publisher": "美國海軍研究所牙科學校（Naval Postgraduate Dental School）；Wikimedia Commons",
+      "date": "2010",
+      "url": "https://commons.wikimedia.org/wiki/File:Clinical_Update_Vol._32,_No._1_(IA_2010001PeriodontalChemotherapeuticsSystemicAndLocalAntibiotics).pdf",
+      "note": "頭圖（第 1 頁）。公版。讀兩頁全文：三種 FDA 核准局部藥的成分與釋放天數；轉引 AAP 2006 年聲明（J Periodontol 2006;77:1458，原聲明未讀）；頁末免責聲明。"
+    }
+  ]
+}
