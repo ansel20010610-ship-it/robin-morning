@@ -951,6 +951,41 @@ function ARMCHAIR() { // box 278..402 × 626..791 — a Louis-Seize bergère: ca
   s += `${carve("M10 158 h6 l-1 4 h-4Z", "gold", .5)}${carve("M108 158 h6 l-1 4 h-4Z", "gold", .5)}`;
   return svg(124, 165, s);
 }
+// ——— 遊戲桌 (#/games; the owner's pick 2026-11-26, sample 甲 「牆角遊戲桌」): a side table on the floor between the globe
+// and the armchair, a go board, two lidded bowls of stones and the 開獎 slip on it, its name in brass on the apron.
+// Box 136..266 × 662..762. Louis-Seize like the armchair (the owner's pick of three samples, 2026-11-26: 甲).
+const GW = 130, GH = 100;
+function onTable(cx, ty) { // what lies on the top, `ty` its front line
+  const lerp = (a, b, t) => a + (b - a) * t, bx0 = cx - 34, bx1 = cx + 16, fx0 = bx0 - 4, fx1 = bx1 + 2, by = ty - 16, fy = ty - 3;
+  let g = `<path d="M${fx0 + 1} ${fy + 4}L${fx1 + 3} ${fy + 4}L${bx1 + 3} ${by + 2}Z" fill="rgba(20,8,0,.35)"/>
+    <path d="M${fx0} ${fy}H${fx1}V${fy + 3}H${fx0}Z" fill="#8a6230"/><path d="M${fx0} ${fy}L${bx0} ${by}H${bx1}L${fx1} ${fy}Z" fill="#d6ad68"/><path d="M${fx0} ${fy}L${bx0} ${by}H${bx1}L${fx1} ${fy}Z" fill="url(#sl-wdh)" opacity=".18"/>`;
+  for (let i = 1; i < 8; i++) { const t = i / 8, y = lerp(by + 1.2, fy - 1, t), x0 = lerp(bx0 + 1.5, fx0 + 2, t), x1 = lerp(bx1 - 1.5, fx1 - 2, t); g += `<path d="M${x0.toFixed(1)} ${y.toFixed(1)}H${x1.toFixed(1)}" stroke="rgba(70,40,10,.55)" stroke-width=".35"/>`; }
+  for (let i = 1; i < 8; i++) { const t = i / 8; g += `<path d="M${lerp(bx0 + 1.5, bx1 - 1.5, t).toFixed(1)} ${by + 1.2}L${lerp(fx0 + 2, fx1 - 2, t).toFixed(1)} ${fy - 1}" stroke="rgba(70,40,10,.55)" stroke-width=".35"/>`; }
+  const st = (x, y, c) => `<ellipse cx="${x}" cy="${y + .6}" rx="2.1" ry="1.1" fill="rgba(0,0,0,.35)"/><ellipse cx="${x}" cy="${y}" rx="2" ry="1.15" fill="${c ? "#131010" : "#f2ece0"}"/><ellipse cx="${x - .6}" cy="${y - .35}" rx=".7" ry=".3" fill="rgba(255,255,255,${c ? .35 : .9})"/>`;
+  g += st(cx - 14, ty - 9, 1) + st(cx - 9, ty - 9.5, 0) + st(cx - 11, ty - 6.5, 1) + st(cx - 6, ty - 7, 0) + st(cx - 16, ty - 12, 0);
+  const bowl = (x, y, c) => `<ellipse cx="${x + .8}" cy="${y + 4.2}" rx="7" ry="2.2" fill="rgba(20,8,0,.4)"/><path d="M${x - 6.4} ${y}C${x - 6} ${y + 4.6} ${x + 6} ${y + 4.6} ${x + 6.4} ${y}Z" fill="url(#sl-wdh)"/><path d="M${x - 6.4} ${y}C${x - 6} ${y + 4.6} ${x + 6} ${y + 4.6} ${x + 6.4} ${y}Z" fill="#5a2410" opacity=".55"/>
+    <ellipse cx="${x}" cy="${y}" rx="6.4" ry="2" fill="#3a1508"/><ellipse cx="${x}" cy="${y - .2}" rx="5.4" ry="1.5" fill="${c}"/><ellipse cx="${x - 1.6}" cy="${y - .6}" rx="1.6" ry=".5" fill="rgba(255,255,255,.35)"/>
+    <path d="M${x - 6.2} ${y + .4}C${x - 5} ${y + 3} ${x - 3} ${y + 3.6} ${x} ${y + 3.8}" stroke="rgba(255,220,180,.35)" stroke-width=".5" fill="none"/>`;
+  g += bowl(cx + 26, ty - 10, "#1a1614") + bowl(cx + 38, ty - 6, "#ece5d8");
+  g += `<g transform="translate(${cx + 18} ${ty - 4}) rotate(-7)"><rect x=".8" y="1" width="17" height="10" fill="rgba(20,8,0,.3)"/><rect width="17" height="10" fill="url(#sl-paper)"/><rect width="17" height="10" fill="#f6efdc" opacity=".6"/>
+    <path d="M0 1.2H17" stroke="#a5843f" stroke-width=".5"/><path d="M3 4.4h11M3 6.6h8" stroke="#8a1c1c" stroke-width=".55"/><path d="M3 8.4h6" stroke="#4a3a2a" stroke-width=".4"/></g>`;
+  return g;
+}
+function gameTable() {
+  let s = `<ellipse cx="${GW / 2 + 3}" cy="${GH - 4}" rx="${GW * .47}" ry="5" fill="url(#sl-drop)"/>`;
+  const plateAt = (y) => plate(GW / 2 - 25, y, 50, 12, "遊戲桌", "", { s1: 7.6, ls1: 1.4 });
+  { // Louis-Seize: a straight top with a gilt edge, a panelled apron with rosettes, four fluted gilt legs
+    const ty = 36;
+    s += leg(14, ty + 18, 16, GH - 8, 7, 4, "gold", 3) + leg(116, ty + 18, 114, GH - 8, 7, 4, "gold", 3) + leg(34, ty + 16, 35, GH - 16, 4.6, 3, "gold", 2) + leg(96, ty + 16, 95, GH - 16, 4.6, 3, "gold", 2);
+    s += carve(`M12.4 ${GH - 9}h7l-1.2 5h-4.6Z`, "gold", .5) + carve(`M110.6 ${GH - 9}h7l-1.2 5h-4.6Z`, "gold", .5);
+    s += `<path d="M6 ${ty + 4}H124V${ty + 20}H6Z" fill="url(#sl-wdh)"/><path d="M6 ${ty + 4}H124V${ty + 20}H6Z" fill="${TH.woodMid}" opacity=".45"/><path d="M6 ${ty + 4}H124V${ty + 8}H6Z" fill="rgba(10,3,0,.35)"/>`;
+    s += mould(22, ty + 8, 86, 10, [[1, "b"], [1.2, "c"], [5.6, "f"]], "gold") + rosette(12, ty + 13, 3.6) + rosette(118, ty + 13, 3.6);
+    s += `<path d="M2 ${ty}L12 ${ty - 22}H118L128 ${ty}Z" fill="url(#sl-wdh)"/><path d="M2 ${ty}L12 ${ty - 22}H118L128 ${ty}Z" fill="${TH.woodMid}" opacity=".35"/><path d="M2 ${ty}L12 ${ty - 22}H118L128 ${ty}Z" fill="url(#sl-varnish)"/>
+      <path d="M12 ${ty - 22}H118" stroke="rgba(255,225,185,.35)" stroke-width=".6"/>`;
+    s += mould(1, ty, 128, 5, [[1, "v"], [1.4, "b"], [2.6, "c"]], "gold") + onTable(GW / 2, ty - 1) + plateAt(ty + 7);
+  }
+  return svg(GW, GH, s);
+}
 // the little brass book stand the album leans on, on the sill: a ledge with a raised lip, two small feet
 const STAND = () => svg(72, 10, `<rect x="3" y="6.4" width="66" height="2.6" fill="rgba(30,15,5,.3)" transform="translate(1 1)"/><rect x="2" y="1" width="68" height="1.6" rx=".6" fill="url(#sl-brass)"/><rect x="2" y="1" width="68" height=".5" fill="rgba(255,250,225,.9)"/>
   <rect x="2" y="2.6" width="68" height="3" fill="url(#sl-brass)"/><rect x="2" y="2.6" width="68" height="3" fill="rgba(60,35,5,.25)"/><rect x="2" y="5.4" width="68" height=".7" fill="rgba(40,25,5,.6)"/>
@@ -979,7 +1014,7 @@ const VITRINE_GLASS = () => {
 // copy's crate and sideboard. The bird stands on the window sill, by the stamp album.
 const SPOTS = {
   museum: [150, 50, 248, 250], records: [14, 312, 176, 328], world: [200, 452, 62, 200], shelf: [270, 316, 124, 104], poems: [278, 428, 108, 72],
-  list: [200, 366, 62, 78], stamps: [24, 254, 66, 50], medals: [281, 508, 104, 98], prints: [12, 648, 90, 76], marks: [296, 690, 90, 64], nest: [98, 254, 44, 50],
+  list: [200, 366, 62, 78], stamps: [24, 254, 66, 50], medals: [281, 508, 104, 98], prints: [12, 648, 90, 76], marks: [296, 690, 90, 64], nest: [98, 254, 44, 50], games: [138, 664, 126, 96],
 };
 const BIRD = [94, 254, 52]; // the bird's box on the sill: x, y, size
 // `d`: { drawers: [[key, name, count, unit]] in DRAWERS' order, and what each corner holds — museum, records, poems,
@@ -1019,7 +1054,7 @@ export function salonRoom(d) {
       <i class="sl-wall"></i><i class="sl-floor"></i>${deco(0, 0, W, H, WALL(lit.view))}${deco(0, 0, W, H, lit.light, "sl-light")}
       ${obj("museum")}${deco(12, FLOOR, 180, 12, FEET())}${obj("records")}${obj("world")}${obj("shelf")}${obj("poems")}${obj("list")}
       ${deco(281, 506, 104, 100, VITRINE_IN())}${obj("medals")}${deco(281, 506, 104, 100, VITRINE_GLASS())}${deco(22, 296, 72, 10, STAND())}${obj("stamps")}
-      ${deco(4, 572, 108, 219, EASEL())}${deco(278, 626, 124, 165, ARMCHAIR())}${obj("prints")}${obj("marks")}${bird()}
+      ${deco(4, 572, 108, 219, EASEL())}${deco(278, 626, 124, 165, ARMCHAIR())}${obj("prints")}${obj("marks")}${link("games", "#/games", "遊戲桌：明早開獎、五子棋", box("games", [136, 662, GW, GH, gameTable()]))}${bird()}
       ${deco(0, 0, W, 830, svg(W, 830, `<rect width="${W}" height="830" fill="url(#sl-aoR)" opacity=".35"/><rect y="700" width="${W}" height="130" fill="url(#sl-aoUp)" opacity=".7"/>`))}
       ${deco(0, 0, W, H, lit.tone, `sl-tone${lamp ? " lamp" : ""}`)}<i class="sl-vig"></i></div></div></section>`);
 }
@@ -1050,6 +1085,7 @@ const SUBJECT = {
   prints: { page: ".pr-all" },
   marks: { page: ".marks", fit: "w", tl: true }, // the notebook's title onto the page's
   nest: { page: ".yard .bird", fit: "w" },
+  games: { page: ".gm-board" },
 };
 const ease = (t) => (t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 const smooth = (t) => t * t * (3 - 2 * t);

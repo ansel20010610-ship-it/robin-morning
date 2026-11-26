@@ -29,6 +29,7 @@ import { medalMonths, medalsHtml } from "./medals.js";
 import { printsHtml, wirePrints, resetPrints, toTop as printOnTop } from "./prints.js";
 import { poemsHtml, wirePoems, toTop as letterOnTop } from "./poems.js";
 import { salonHtml, roomHtml, wireRoom, wallSilk } from "./museum.js";
+import { gamesHtml, wireGames } from "./games.js";
 import { salonRoom, wireSalon, redrawBird, roomMove, arrive } from "./salon.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
@@ -515,6 +516,13 @@ function viewMedals() {
   main.innerHTML = scenePage("Medaillen", "紀念章", "#/saved", `<div class="sc-scene sc-desk medals-scene"><i class="sc-lamp"></i>${medalsHtml(medals(), first, twNow().date)}</div>`);
   wireBack();
   document.title = `紀念章｜${S.cfg.title}`;
+}
+// 遊戲桌 (#/games, a corner of 收藏; the owner's pick 2026-11-26): 明早開獎 and 五子棋 (games.js).
+function viewGames() {
+  main.innerHTML = scenePage("Spiele", "遊戲桌", "#/saved", `<div class="sc-scene sc-desk games-scene"><i class="sc-lamp"></i>${gamesHtml()}</div>`);
+  wireBack();
+  wireGames(main.querySelector(".gm-table"));
+  document.title = `遊戲桌｜${S.cfg.title}`;
 }
 // 唱片櫃 (#/records, one of 收藏's corners; the owner, 2026-11-19): every 古典音樂 piece read is a record (records.js).
 const records = () => { const read = readSet(); return publishedIssues().flatMap((i) => i.articles.filter((a) => a.column === "music" && read.has(`${i.date}/music`)).map((a) => ({ date: i.date, a }))).sort((x, y) => y.date.localeCompare(x.date)); };
@@ -3161,7 +3169,7 @@ let landMark = null; // 劃線本: the id of the mark tapped there, for viewArti
 let landHit = null; // 往期's search: the words of the query, when a full-text hit was tapped, for viewArticle to light
 let turnDir = null, turnLean = 0, turnMs = 0; // 翻頁: the way the page turns on the route about to fire (turnTo, openContents), how far the finger carried it, how long the slide takes
 // The bottom-bar tab a page belongs to.
-const tabOf = (h) => h.startsWith("#/serial") || h.startsWith("#/column/serial") ? "#/serial" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/chronik") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/nest") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/shelf") || h.startsWith("#/records") || h.startsWith("#/medals") || h.startsWith("#/prints") || h.startsWith("#/poems") || h.startsWith("#/museum") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/archive" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
+const tabOf = (h) => h.startsWith("#/serial") || h.startsWith("#/column/serial") ? "#/serial" : h.startsWith("#/archive") || h.startsWith("#/issue") || h.startsWith("#/column") || h.startsWith("#/random") || h.startsWith("#/chronik") ? "#/archive" : h.startsWith("#/saved") || h.startsWith("#/nest") || h.startsWith("#/marks") || h.startsWith("#/gallery") || h.startsWith("#/stamp") || h.startsWith("#/shelf") || h.startsWith("#/records") || h.startsWith("#/medals") || h.startsWith("#/games") || h.startsWith("#/prints") || h.startsWith("#/poems") || h.startsWith("#/museum") || h.startsWith("#/stats") || h.startsWith("#/world") || h.startsWith("#/stamps") || h.startsWith("#/world") ? "#/saved" : h.startsWith("#/music") ? "#/archive" : h.startsWith("#/settings") || h.startsWith("#/press") ? "#/settings" : "#/";
 
 let enteredFront = false; // this draw of the front page came from another page (route), not from a redraw in place
 let cameFrom = ""; // the hash the reader left for this one
@@ -3278,6 +3286,7 @@ async function drawRoute(h, art, my) {
   else if (h.startsWith("#/records/all")) viewRecordsAll();
   else if (h.startsWith("#/records")) viewRecords();
   else if (h.startsWith("#/medals")) viewMedals();
+  else if (h.startsWith("#/games")) viewGames();
   else if (h.startsWith("#/prints")) viewPrints();
   else if (h.startsWith("#/poems")) viewPoems();
   else if ((m = h.match(/^#\/museum\/(\d{4}-\d{2}-\d{2})/))) viewMuseumWork(m[1]);

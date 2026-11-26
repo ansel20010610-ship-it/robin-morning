@@ -3765,3 +3765,35 @@ html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's o
 /* 找知更鳥 (.perch): on a jubilee stamp the found robin stands on the seal's upper rim, above it, instead of under it */
 .stamp.ms .perch { right: 11cqw; bottom: 55cqw; z-index: 3; }
 .fest-note:not(.got) .stamp.ms { filter: grayscale(.7) opacity(.55); } /* the card's stamp faded until earned, as on a feast day */
+
+/* ——— 遊戲桌 (#/games, games.js): an ivory slip and a wooden board on the desk ——— */
+.games-scene { padding: 70px 16px 120px; }
+.gm-table { position: relative; z-index: 6; display: flex; flex-direction: column; gap: 22px; max-width: 420px; margin: 0 auto; }
+.gm-slip { background: linear-gradient(#fbf6ea, #efe5cf); color: var(--ink); border-radius: 3px; padding: 16px 18px 14px; --ink: #2a2118; --ink-2: #5a4c3c; box-shadow: 0 1px 0 rgba(255,255,255,.6) inset, 0 10px 22px rgba(0,0,0,.45); transform: rotate(-1deg); border-top: 3px double #a5843f; font-family: "Noto Serif TC", serif; }
+.gm-slip p { margin: 0; color: var(--ink); }
+.gm-head { font-size: 13px; letter-spacing: .4em; color: #8a1c1c; text-align: center; }
+.gm-q { font-size: 18px; text-align: center; margin: 6px 0 12px !important; }
+.gm-picks { display: flex; gap: 12px; justify-content: center; }
+.gm-pick { font: inherit; font-size: 17px; padding: 8px 22px; border-radius: 2px; border: 1px solid #a5843f; background: transparent; color: var(--ink-2); }
+.gm-pick.up[aria-pressed="true"] { background: #b3261e; color: #fff8ec; border-color: #b3261e; }
+.gm-pick.down[aria-pressed="true"] { background: #2e6b3a; color: #fff8ec; border-color: #2e6b3a; }
+.gm-shut { font-size: 12px; color: var(--ink-2); text-align: center; margin-top: 8px !important; }
+.gm-last { font-size: 14px; margin-top: 12px !important; padding-top: 10px; border-top: 1px dashed rgba(165,132,63,.6); }
+.gm-last.win b { color: #b3261e; } .gm-last.lose b { color: #2e6b3a; }
+.gm-tally { font-size: 13px; color: var(--ink-2); margin-top: 6px !important; }
+.gm-go { text-align: center; }
+.gm-levels { display: inline-flex; gap: 6px; margin-bottom: 10px; }
+.gm-levels button, .gm-acts button { font: 14px "Noto Serif TC", serif; padding: 6px 14px; border-radius: 2px; border: 1px solid rgba(191,154,82,.8); background: rgba(20,8,2,.35); color: #f1e4c4; }
+.gm-levels button[aria-pressed="true"] { background: #bf9a52; color: #2a1206; }
+.gm-acts button:disabled { opacity: .4; }
+.gm-bwrap { padding: 8px; background: linear-gradient(135deg, #6e2a14, #3a1206); border-radius: 6px; box-shadow: 0 14px 28px rgba(0,0,0,.5); }
+.gm-board { display: block; width: 100%; height: auto; touch-action: manipulation; }
+.gm-wood { fill: #d9b06a; }
+.gm-grid path { stroke: #5a3a18; stroke-width: .7; fill: none; }
+.gm-star { fill: #5a3a18; }
+.gm-st { filter: drop-shadow(0 1px 1px rgba(0,0,0,.45)); }
+.gm-lastm { fill: #b3261e; }
+.gm-five { stroke: #b3261e; stroke-width: 2.2; fill: none; stroke-linecap: round; opacity: .85; }
+.gm-word { margin: 12px 0 10px; color: #f1e4c4; font: 15px "Noto Serif TC", serif; display: flex; justify-content: space-between; }
+.gm-rec { opacity: .75; font-size: 13px; }
+.gm-acts { display: flex; gap: 10px; justify-content: center; }

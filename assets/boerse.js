@@ -14,6 +14,7 @@
 // (one more or fewer, a date), and moves once when the copy grows past its width. Without the Worker's answer the file's figures stay.
 import { esc, store, twNow } from "./util.js";
 import { fetchLive, fetchMarket, marketItems } from "./market.js";
+import { noteTaiex } from "./games.js";
 
 const KEYS = ["taiex", "usdtwd", "spx", "dji", "ixic", "wti", "brent"];
 // on the tape, and in the opened table where it says more
@@ -273,6 +274,7 @@ export function fillBoerse(root, api) {
     if (!d) return; // offline, or no file: the board keeps what it shows
     last = { updated: d.updated, items: pick(d.items) };
     store.set("market.last", last);
+    noteTaiex(d.items); // 遊戲桌's 明早開獎 is settled by this close
     if (box.isConnected) draw(box, current());
   }).catch(() => {});
   liveBox = box; liveApi = api || "";
