@@ -40,6 +40,31 @@ jobs:
       CLAUDE_CODE_DISABLE_BACKGROUND_TASKS: "1"
     steps:
       - uses: actions/checkout@v7
+      # The football (scripts/football.py) spends the same credits; its total rides on content/football.json, which
+      # publish.yml leaves in the Actions cache at every deploy. Read only here (restore, never save; a cache another
+      # workflow saved can be restored because both run on main), so that the caps count it too (api_shift.py
+      # cycle_total). No copy: the live file. Neither: api_shift.py counts an estimate. Nothing here stops the run.
+      - name: Football's spend, from the cache (足球)
+        continue-on-error: true
+        timeout-minutes: 1
+        uses: actions/cache/restore@v6
+        with:
+          path: content/football.json   # as publish.yml: the cache matches on the path too
+          key: football-read-${{ github.run_id }}
+          restore-keys: football-
+      - name: Football's spend, else from the site
+        continue-on-error: true
+        timeout-minutes: 1
+        run: |
+          f="$RUNNER_TEMP/football.json"   # outside the checkout, out of every shift's way
+          echo "FOOTBALL_JSON=$f" >> "$GITHUB_ENV"
+          if [ -s content/football.json ]; then
+            mv content/football.json "$f"; echo "football.json: the cache's copy"
+          else
+            code=$(curl -s --retry 2 --retry-all-errors -A "robin-morning/1.0" --max-time 15 -o "$f" -w '%{http_code}' "https://wiener-morgen-private.duckdns.org/content/football.json?t=$(date +%s)") || code=000
+            [ "$code" = 200 ] || rm -f "$f"
+            echo "football.json on the site: HTTP $code"
+          fi
       - name: Decide whether to spend
         id: go
         # pipefail: a decide that crashes (state/api/spend.json unreadable) fails the job. Without it tee's exit 0 left

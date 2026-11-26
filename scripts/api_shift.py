@@ -7,7 +7,7 @@ a run should spend anything, and records what it cost.
   python3 scripts/api_shift.py record <shift> <out> [budget]
                                                       reads claude -p --output-format json, prints the result and the
                                                       cost, appends it to state/api/spend.json (budget "not-run": 0)
-  python3 scripts/api_shift.py month                  this credit cycle's spend so far
+  python3 scripts/api_shift.py month                  this cycle's spend so far (the shifts' own, no football)
   python3 scripts/api_shift.py column | mend | sweep  what that shift is to write now (its instructions run this)
 
 Shifts: serial (16:00), reserve (17:30), concerts (05:30), rescue (06:30; when shifts 1-3 of the night all failed to
@@ -22,10 +22,11 @@ report — the weekly quota is gone — including Sundays, the owner, 2026-11-10
                   installments beyond the daily shift's three days — the one thing here that keeps (the credits do not).
 Money: a "month" here is the credit cycle, the 13th to the 13th (see CYCLE_DAY), not the calendar month. Everything
 stops at MONTH_CAP; column and reserve already at SOFT_CAP, and the sweep too (sweep_room), so that the end of a cycle
-still has room for the rescues, concerts and the daily serial (the sweep takes that room too on the cycle's last day). Their instructions are editorial/api-shifts/<shift>.md. The
-repo is public: nothing secret is ever printed or written here.
+still has room for the rescues, concerts and the daily serial (the sweep takes that room too on the cycle's last day). The
+caps count the football's translations too (scripts/football.py; cycle_total). Their instructions are
+editorial/api-shifts/<shift>.md. The repo is public: nothing secret is ever printed or written here.
 """
-import datetime as dt, json, os, subprocess, sys
+import datetime as dt, json, math, os, subprocess, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import SHIFTS  # noqa: E402
@@ -57,6 +58,13 @@ HOLD_PER_DAY = 6.0      # USD the sweep leaves for each day still to come (the c
 PER_INSTALLMENT = 1.2   # USD a serial installment costs (0.94 measured on 2026-11-11), with a margin
 SWEEP_MAX = 20          # installments in one sweep run: four batches of five inside the job's two hours
 TW = dt.timezone(dt.timedelta(hours=8))
+# The football (scripts/football.py, from 2026-11-26) spends the same credits. Its running total is not in spend.json but
+# in content/football.json ("spend": {"cycle", "usd"}), which api-shift.yml fetches read only and names in FOOTBALL_JSON.
+# What that file cannot show (no file, unreadable; since it was written) is counted at FOOTBALL_PER_DAY, the top of
+# football.py's normal range (11 USD a cycle of 33 days): the caps err on the side of stopping a little early, not by days.
+FOOTBALL_FROM = dt.datetime(2026, 11, 25, 18, tzinfo=dt.timezone.utc)  # 02:00 Taiwan time, before its first run
+FOOTBALL_PER_DAY = 0.35
+FOOTBALL_SANE = 30.0    # a total above this (football.py stops at its CYCLE_MAX, 20) is a broken file: counted as this
 
 
 def now():
@@ -83,7 +91,8 @@ def cycle(t=None):
 
 
 def month_total(d=None, t=None):
-    """What the shifts spent in the credit cycle of t (default: now) — the name is from when it was a calendar month."""
+    """What the shifts spent in the credit cycle of t (default: now) — the name is from when it was a calendar month. The
+    shifts only: football.py adds its own total to this; the caps here use cycle_total."""
     start, end = cycle(t)
     total = 0.0
     for r in (d or load())["runs"]:
@@ -96,6 +105,50 @@ def month_total(d=None, t=None):
         if start <= at < end:
             total += r.get("usd", 0)
     return round(total, 2)
+
+
+def football_spent(t=None):
+    """(USD the football spent in the credit cycle of t (default: now), "" when its file says so, else why it is an
+    estimate). An older cycle's total is not this cycle's: what was spent since this one began is estimated. Never raises."""
+    t = (t or dt.datetime.now(dt.timezone.utc)).astimezone(dt.timezone.utc)  # cycle() needs UTC to find the 13th
+    start = cycle(t)[0]
+    since = max(start, FOOTBALL_FROM)
+
+    def guess(why, usd=0.0, at=since):
+        return round(usd + FOOTBALL_PER_DAY * max(0.0, (t - max(at, since)).total_seconds() / 86400), 2), why
+    try:
+        with open(os.environ.get("FOOTBALL_JSON") or os.path.join(ROOT, "content", "football.json"), encoding="utf-8") as f:
+            doc = json.load(f)
+        usd, c = float(doc["spend"].get("usd") or 0), dt.datetime.fromisoformat(str(doc["spend"].get("cycle")))
+    except FileNotFoundError:
+        return guess("no file")
+    except Exception:  # noqa: BLE001 — not JSON, no "spend", a bad number or date
+        return guess("unreadable")
+    if not math.isfinite(usd) or usd < 0 or c.tzinfo is None or c > start:
+        return guess("unreadable")
+    if c < start:
+        return guess("an older cycle's file")
+    if usd > FOOTBALL_SANE:
+        return FOOTBALL_SANE, "over %.0f" % FOOTBALL_SANE
+    try:
+        at = dt.datetime.fromisoformat(str(doc.get("updated")))
+        at = at if at.tzinfo else at.replace(tzinfo=TW)
+        v = guess("", usd, at)[0]  # what it may have spent since the file was written (half an hour in the usual case)
+        return v, "" if v - usd < 0.05 else "the file is from %s" % at.astimezone(TW).strftime("%m-%d %H:%M")
+    except (ValueError, OverflowError):
+        return guess("no time in the file", usd)
+
+
+def cycle_total(d=None, t=None):
+    """(shifts + football, the shifts, the football, "" or why the football's part is an estimate) for the cycle of t:
+    what the caps are checked against."""
+    fb, why = football_spent(t)
+    shifts = month_total(d, t)
+    return round(shifts + fb, 2), shifts, fb, why
+
+
+def spent_line(total, shifts, fb, why):
+    return "%s USD (shifts %s + football %s%s)" % (total, shifts, fb, ", estimated: " + why if why else "")
 
 
 def missing_of(cols, d):
@@ -171,7 +224,7 @@ def sweep_room(spent=None, t=None):
     left = (cycle(t)[1].date() - t.date()).days - 1
     if left >= SWEEP_DAYS:
         return 0.0, left
-    spent = month_total(t=t) if spent is None else spent
+    spent = cycle_total(t=t)[0] if spent is None else spent
     return max(0.0, round((SOFT_CAP if left else MONTH_CAP) - spent - HOLD_PER_DAY * (left + 1), 2)), left
 
 
@@ -214,13 +267,14 @@ def decide(shift):
         return out(False, f"unknown shift {shift}")
     if not os.environ.get("ANTHROPIC_API_KEY"):
         return out(False, "no ANTHROPIC_API_KEY secret yet")
-    spent = month_total()
+    spent, *parts = cycle_total()
+    so_far = spent_line(spent, *parts)
     cap = SOFT_CAP if shift in SOFT else MONTH_CAP
     start, end = cycle()
     if start != FIRST_GRANT and dt.datetime.now(dt.timezone.utc) - start < dt.timedelta(hours=QUIET_HOURS):
         return out(False, f"the cycle began {start:%m-%d %H:%M} UTC: its first {QUIET_HOURS} hours spend nothing, the new credits may not be there yet")
     if spent >= cap:
-        return out(False, f"this cycle's spend {spent} USD has reached {cap} (the credits expire {end:%m-%d} 00:00 UTC)")
+        return out(False, f"this cycle's spend {so_far} has reached {cap} (the credits expire {end:%m-%d} 00:00 UTC)")
     if shift == "rescue":
         day = now().strftime("%Y-%m-%d")
         runs = runs_of(day)
@@ -249,7 +303,7 @@ def decide(shift):
             return out(False, "after 00:20 the coming issue belongs to the night shifts")
         if not cols:
             return out(False, f"{d}: {', '.join(COLUMNS)} already written or not due")
-        return out(True, f"{d}: {', '.join(cols)}; cycle so far {spent} USD")
+        return out(True, f"{d}: {', '.join(cols)}; cycle so far {so_far}")
     if shift == "mend":
         d, cols = mend_work()
         if d is None:
@@ -265,8 +319,8 @@ def decide(shift):
         n = len(sweep_list(sweep_count(budget)))
         if not n:
             return out(False, f"nothing to sweep: {room} USD free of the soft cap, or no installment left to translate")
-        return out(True, f"{n} installments; cycle so far {spent} USD, {room} free with {left} days left", round(budget, 2))
-    return out(True, f"cycle so far {spent} USD (to {end:%m-%d})")
+        return out(True, f"{n} installments; cycle so far {so_far}, {room} free with {left} days left", round(budget, 2))
+    return out(True, f"cycle so far {so_far} (to {end:%m-%d})")
 
 
 def work(shift):
@@ -331,7 +385,8 @@ def record(shift, path, budget=None):
     with open(SPEND, "w", encoding="utf-8") as f:
         json.dump(d, f, ensure_ascii=False, indent=1)
         f.write("\n")
-    print(f"本期累計 {month_total(d)} USD（這期額度 {cycle()[1]:%m-%d} 00:00 UTC 到期）")
+    total, shifts, fb, est = cycle_total(d)
+    print(f"本期累計 {total} USD：班次 {shifts}＋足球 {fb}{'（足球是估計：' + est + '）' if est else ''}（這期額度 {cycle()[1]:%m-%d} 00:00 UTC 到期）")
 
 
 if __name__ == "__main__":
