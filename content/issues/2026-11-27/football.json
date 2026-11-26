@@ -1,0 +1,389 @@
+{
+ "column": "football",
+ "date": "2026-11-27",
+ "title": "巴爾德輕度扭傷，週日還沒判出局",
+ "dek": "球團昨天的醫療報告很短，卻沒把週日的門關上。",
+ "brief": "巴爾德檢查出來是右腳踝輕度扭傷，球團說沒排除他週日去拉科魯尼亞。亞馬爾預計能上，羅德里和克里斯滕森據報也接近放行，要看今天起的團練。西甲巴薩 36 分，領先皇馬 3 分。",
+ "topic_key": "football:2026-11-27",
+ "form": "list",
+ "voice": "fan",
+ "updated_at": "2026-11-27T02:54:17+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "next": {
+  "opponent": "拉科魯尼亞",
+  "competition": "西甲",
+  "kickoff": "2026-11-29T23:15+08:00",
+  "venue": "里亞索球場",
+  "home": false
+ },
+ "hero": {
+  "id": "hero",
+  "kind": "photo",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Rodri_France_v_Spain_7.24.26-096.jpg/1280px-Rodri_France_v_Spain_7.24.26-096.jpg",
+  "width": 1280,
+  "height": 1920,
+  "alt": "一名穿白色西班牙球衣（酒紅金滾邊、背號 16）、左臂戴隊長臂章的球員胸像，頭轉向側面，嘴微張。",
+  "caption": "羅德里，Bryan Berlin 攝於 2026 年 7 月世界盃法國對西班牙。他的右大腿後側小傷據報已接近痊癒，週日有機會回來。資料照片，非當日比賽畫面。",
+  "credit": "Bryan Berlin／Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Rodri_France_v_Spain_7.24.26-096.jpg",
+  "made": "2026"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "1. 巴爾德的腳踝檢查出來了：**右腳踝輕度扭傷**。球團昨天（11 月 26 日）在官網發了醫療報告，報告很短：週日去拉科魯尼亞，他沒有被排除，要看恢復得怎麼樣。他是週四凌晨（台灣時間）對歐冠對手 Sabah 踢到第 64 分鐘下場的，九分鐘前才剛傳球讓阿德耶米進了第三球。"
+  },
+  {
+   "type": "p",
+   "text": "西班牙《Sport》報說，要是週日趕不上，最可能的復出日是 12 月 3 日凌晨 4 點 30 分主場對馬競，之後的 塞爾塔和曼城兩場看來不受嚴重威脅，除非傷勢反覆。我覺得週日沒有逼他上場的理由。坎塞洛頂得住；馬競那場才是要緊的。"
+  },
+  {
+   "type": "p",
+   "text": "2. **週日的名單，要看今天起的團練。** 球隊從亞塞拜然飛回來，今天恢復全隊訓練。亞馬爾沒去巴庫，球團 11 月 23 日的公告說他右腳踝不適，只是預防，預計週日趕得上。《世界體育報》（Mundo Deportivo，Goal 轉述）說他機會看好。"
+  },
+  {
+   "type": "p",
+   "text": "中場羅德里（Rodri）11 月初對阿斯頓維拉時右大腿後側受傷，當時估計要休四週左右。Goal 另一篇報導說他恢復得比預期快；《世界體育報》說他接近放行，他自己也樂觀。中後衛克里斯滕森左小腿不舒服，缺了比利亞雷亞爾和 Sabah 兩場，今天要做最後測試。"
+  },
+  {
+   "type": "table",
+   "title": "週日去拉科魯尼亞，名單上的人",
+   "head": [
+    "球員",
+    "現況",
+    "說法出自"
+   ],
+   "rows": [
+    [
+     "巴爾德",
+     "右腳踝輕度扭傷，沒排除",
+     "球團官網 11 月 26 日"
+    ],
+    [
+     "亞馬爾",
+     "右腳踝不適，預計能上",
+     "球團官網 11 月 23 日"
+    ],
+    [
+     "羅德里",
+     "右大腿後側小傷，接近放行",
+     "《世界體育報》"
+    ],
+    [
+     "克里斯滕森",
+     "左小腿不適，週五最後測試",
+     "同上"
+    ],
+    [
+     "費爾明",
+     "停賽",
+     "EFE，11 月 25 日"
+    ],
+    [
+     "巴德吉",
+     "還沒回團練，缺陣",
+     "《世界體育報》"
+    ]
+   ],
+   "caption": "名單以賽前球團公布的為準。"
+  },
+  {
+   "type": "p",
+   "text": "3. 戈登被選為歐冠本週最佳球員，是網路投票，他贏過皇馬的姆巴佩。Sabah 那兩球上一期講過了。我比較愛聽他自己怎麼說：他被叫成「巴庫之王」，他說巴庫對他是個很特別的地方。去年他穿紐卡索球衣，在同一座城市對卡拉巴赫進過 4 球。他還笑說希望很快再回去。"
+  },
+  {
+   "type": "p",
+   "text": "4. 弗利克對 TNT Sports 說，他跟安切洛蒂（巴西國家隊總教練）沒有聯絡，談的是拉菲尼亞在兩邊的出賽量。他還說：各人有各人的做法，這不是批評。他自己當過國家隊教練，那時會跟俱樂部交換球員狀況，現在很懷念。"
+  },
+  {
+   "type": "p",
+   "text": "5. **法布雷加斯**被問到哪天會不會回巴薩接弗利克。他現在是義大利科莫（Como）的教練，39 歲，在巴薩長大。ESPN 說，他在科莫週三 1 比 0 贏 AEK Athens 之後，對 TNT Sports Mexico 說，他是那裡的人，認識每個人，但他一天過一天，每次想太遠都不順。合約到 2028 年 6 月。這句話說得很穩，我也不覺得他非得講得更清楚。科莫的歐冠 5 場拿了 4 勝，排第 3。1 月 27 日（台灣時間 1 月 28 日凌晨 4 點），他帶科莫來諾坎普踢歐冠聯賽階段第 8 輪。"
+  },
+  {
+   "type": "p",
+   "text": "6. **哈蘭德**的名字又出來了。TEAMtalk 說巴薩和皇馬都透過中間人，在背後運作 2027 年簽下曼城這位 26 歲的挪威前鋒。報導說利物浦、拜仁、PSG 也有興趣，但曼城高層清楚，球員想去西甲試試。另一則是《太陽報》說的：巴薩對曼聯 20 歲的中後衛 Ayden Heaven 有興趣，他願意被外租，在波切蒂諾上任後兩場比賽都坐板凳。兩則都沒有任何一方證實。",
+   "tag": "傳聞"
+  },
+  {
+   "type": "news",
+   "title": "歐洲足壇速覽",
+   "items": [
+    {
+     "headline": "里爾 2 比 1 拜仁，拜仁歐冠首敗",
+     "summary": "拜仁先靠 Upamecano 第 15 分鐘的頭球領先，里爾的 Ueda 第 62 分鐘扳平，第 65 分鐘 Pavlovic 又擊出烏龍球。拜仁歐冠 5 場 8 分，排第 15。",
+     "source": "ESPN",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary?event=401915377",
+     "when": "11 月 26 日（週四）凌晨",
+     "place": [
+      "FR",
+      "DE"
+     ]
+    },
+    {
+     "headline": "基米希批拜仁對待穆西亞拉：不是拜仁的作風",
+     "summary": "穆西亞拉患有會發作癲癇的神經疾病，拜仁高層最近公開質疑他的表現與合約。基米希說：「俱樂部比球員大，但不比一個人大。」拜仁說，他 2025 年 4 月才第一次為這類症狀就醫，是在 2 月續約之後。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/story/_/id/50602935/bayern-munich-jamal-musiala-health-issues-kimmich",
+     "when": "11 月 27 日（週五）凌晨",
+     "place": "DE"
+    },
+    {
+     "headline": "皇馬連贏 10 場，姆巴佩連 7 場歐冠進球",
+     "summary": "ESPN 的數據文說，皇馬各項賽事連贏 10 場，是 2022 年以來最長。姆巴佩連續 7 場歐冠都進球，皇馬隊史只有 C 羅的連續紀錄比他長。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/story/_/id/50600844/uefa-champions-league-2026-27-ucl-stats-kylian-mbappe-scoring-streak-real-madrid-next-ronaldo-bruno-fernandes-second-messi-bayern-munich-psg-streaks-snapped",
+     "when": "11 月 26 日（週四）",
+     "place": "ES"
+    },
+    {
+     "headline": "曼聯約羅的紅牌，FA 說是主審的明顯錯誤",
+     "summary": "曼聯後衛約羅對利物浦被罰下，一場禁賽週二已撤銷。FA 獨立委員會的書面理由週四公布，委員會一致認為伊薩克的觸球太重，門將搶得到球，主審的紅牌判罰是「明顯錯誤」。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/story/_/id/50604016/leny-yoro-manchester-united-red-card",
+     "when": "11 月 26 日（週四）",
+     "place": "GB"
+    },
+    {
+     "headline": "FIFA 遭網路攻擊，駭客冒充員工入侵",
+     "summary": "FIFA 證實遭到「刑事網路攻擊」，個人與業務資料被取得，正與執法單位合作。ESPN 的消息人士說，被取走的不到 FIFA 資料的 0.1%。",
+     "source": "ESPN",
+     "url": "https://www.espn.com/soccer/story/_/id/50603612/fifa-cyber-attack",
+     "when": "11 月 26 日（週四）",
+     "place": "CH"
+    },
+    {
+     "headline": "國際米蘭、費內巴切、比利亞雷亞爾都贏",
+     "summary": "歐冠週三另外三場：國際米蘭 2 比 0 斯圖加特，Shakhtar 0 比 1 費內巴切，Slavia Prague 0 比 1 比利亞雷亞爾。",
+     "source": "ESPN",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261125",
+     "when": "11 月 26 日（週四）凌晨"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "text": "7. 拉科魯尼亞今年西甲排第 12，13 場 3 勝 6 和 4 敗，15 分。他們的前鋒是奧巴梅揚，穿過巴薩球衣的那一位。他對《世界體育報》說了一段佩德里的好話："
+  },
+  {
+   "type": "quote",
+   "text": "好球員很多，不過我很喜歡佩德里：他會給你傳球、給你節奏……他是最讓我印象深刻的球員。",
+   "original": "There are many good ones, but I like Pedri a lot: he gives you passes, rhythm... He is the player who most impresses me.",
+   "cite": "奧巴梅揚對《世界體育報》"
+  },
+  {
+   "type": "p",
+   "text": "西甲週末，馬競去 Elche，台灣時間週日凌晨 1 點 30 分開踢；皇馬對阿拉維斯，凌晨 4 點。現在巴薩 36 分，皇馬 33 分，馬競 31 分。巴薩要到**週日晚上 11 點 15 分**才在里亞索開球，睡一覺起來，兩個對手的分數都已經擺在那兒了。"
+  },
+  {
+   "type": "table",
+   "title": "巴薩接下來四場（台灣時間）",
+   "head": [
+    "時間",
+    "賽事",
+    "對手",
+    "場地"
+   ],
+   "rows": [
+    [
+     "11 月 29 日（週日）23:15",
+     "西甲第 14 輪",
+     "拉科魯尼亞",
+     "客場 里亞索"
+    ],
+    [
+     "12 月 3 日（週四）04:30",
+     "西甲",
+     "馬競",
+     "主場 Spotify Camp Nou"
+    ],
+    [
+     "12 月 6 日（週日）04:00",
+     "西甲",
+     "塞爾塔",
+     "主場 Spotify Camp Nou"
+    ],
+    [
+     "12 月 9 日（週三）04:00",
+     "歐冠聯賽階段第 6 輪",
+     "曼城",
+     "主場 Spotify Camp Nou"
+    ]
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "title": "Medical update on Balde",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-26",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4615012/medical-update-on-balde",
+   "note": "頁面只顯示相對時間；以 EFE 22:15（台灣）為準"
+  },
+  {
+   "title": "Balde sufre un esguince leve en el tobillo derecho y no está descartado para Riazor",
+   "publisher": "Infobae（EFE）",
+   "date": "2026-11-26",
+   "url": "https://www.infobae.com/espana/agencias/2026/11/26/balde-sufre-un-esguince-leve-en-el-tobillo-derecho-y-no-esta-descartado-para-riazor/"
+  },
+  {
+   "title": "Good news: Barcelona issue official statement on star's condition",
+   "publisher": "Goal",
+   "date": "2026-11-26",
+   "url": "https://www.goal.com/en/news/good-news-barcelona-issue-official-statement-on-star-s-condition/bltf7b6dfd57c9b130b",
+   "note": "轉述 Sport 的復出時間"
+  },
+  {
+   "title": "Optimism over Rodri and Christensen, with Yamal's status for Deportivo La Coruna clash decided",
+   "publisher": "Goal",
+   "date": "2026-11-26",
+   "url": "https://www.goal.com/en-in/news/optimism-over-rodri-and-christensen-with-yamal-s-status-for-deportivo-la-coruna-clash-decided/blte0e3d5824bfb5c92",
+   "note": "轉述 Mundo Deportivo；單一來源"
+  },
+  {
+   "title": "Surprise change to Rodri's plan for return from injury",
+   "publisher": "Goal",
+   "date": "2026-11-25",
+   "url": "https://www.goal.com/en/news/surprise-change-to-rodri-s-plan-for-return-from-injury/blt19fa8fa088b54865",
+   "note": "阿斯頓維拉一役後預估休約四週、恢復比預期快；頁面只顯示「2 天前」，單一來源"
+  },
+  {
+   "title": "Lamine Yamal availability news",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-23",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4613043/lamine-yamal-availability-news"
+  },
+  {
+   "title": "Dos partidos de suspensión a Fermín (Barcelona)",
+   "publisher": "Infobae（EFE）",
+   "date": "2026-11-25",
+   "url": "https://www.infobae.com/america/agencias/2026/11/25/dos-partidos-de-suspension-a-fermin-barcelona/",
+   "note": "沿用 11 月 26 日稿查證"
+  },
+  {
+   "title": "Barcelona star beats Mbappe to UCL award",
+   "publisher": "Goal",
+   "date": "2026-11-26",
+   "url": "https://www.goal.com/en-us/news/-kylian-mbappe-anthony-gordon-barcelona-forward-champions-league-player-week-/bltd45916aefd538401",
+   "note": "單一來源"
+  },
+  {
+   "title": "\"I could have scored a hat-trick\": Gordon responds to \"King of Baku\" tag",
+   "publisher": "Goal",
+   "date": "2026-11-25",
+   "url": "https://www.goal.com/en/news/i-could-have-scored-a-hat-trick-gordon-responds-to-king-of-baku-tag-after-barcelona-s-four-goal-win/bltd1bdea55ebb0cf6c"
+  },
+  {
+   "title": "Gordon rules in Baku",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-26",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4614985/gordon-rules-in-baku",
+   "note": "紐卡索對卡拉巴赫 4 球"
+  },
+  {
+   "title": "Flick reveals no contact with Ancelotti over Raphinha's workload",
+   "publisher": "Goal",
+   "date": "2026-11-26",
+   "url": "https://www.goal.com/en-us/news/hansi-flick-carlo-ancelotti-no-contact-raphinha-barcelona-brazil/bltbf8bd7e9281e8c58",
+   "note": "轉述 TNT Sports；單一來源，頁面無絕對時間"
+  },
+  {
+   "title": "Cesc Fàbregas plays down Barcelona links, pledges immediate future to Como",
+   "publisher": "ESPN",
+   "date": "2026-11-26",
+   "url": "https://www.espn.com/soccer/story/_/id/50603870/cesc-fabregas-barcelona-como-hansi-flick"
+  },
+  {
+   "title": "FC Barcelona first-team schedule",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-27",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/schedule",
+   "note": "西班牙時間換算台灣時間"
+  },
+  {
+   "title": "Transfer rumors, news: Barça, Madrid jockey for position in Erling Haaland chase",
+   "publisher": "ESPN",
+   "date": "2026-11-26",
+   "url": "https://www.espn.com/soccer/story/_/id/50602698/transfer-rumors-news-manchester-united-barcelona-heaven",
+   "note": "TEAMtalk、The Sun 的說法"
+  },
+  {
+   "title": "Lille v Bayern Munich, match summary",
+   "publisher": "ESPN",
+   "date": "2026-11-25",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary?event=401915377"
+  },
+  {
+   "title": "Joshua Kimmich blasts Bayern Munich over Jamal Musiala treatment: 'Absolute no-go'",
+   "publisher": "ESPN",
+   "date": "2026-11-26",
+   "url": "https://www.espn.com/soccer/story/_/id/50602935/bayern-munich-jamal-musiala-health-issues-kimmich"
+  },
+  {
+   "title": "UEFA Champions League stats: Mbappe's scoring streak for Real Madrid next to Ronaldo",
+   "publisher": "ESPN",
+   "date": "2026-11-26",
+   "url": "https://www.espn.com/soccer/story/_/id/50600844/uefa-champions-league-2026-27-ucl-stats-kylian-mbappe-scoring-streak-real-madrid-next-ronaldo-bruno-fernandes-second-messi-bayern-munich-psg-streaks-snapped"
+  },
+  {
+   "title": "FA panel details 'obvious error' in Leny Yoro red card against Liverpool",
+   "publisher": "ESPN",
+   "date": "2026-11-26",
+   "url": "https://www.espn.com/soccer/story/_/id/50604016/leny-yoro-manchester-united-red-card"
+  },
+  {
+   "title": "FIFA hit by cyberattack as hackers gain access to personal and business data",
+   "publisher": "ESPN",
+   "date": "2026-11-26",
+   "url": "https://www.espn.com/soccer/story/_/id/50603612/fifa-cyber-attack"
+  },
+  {
+   "title": "UEFA Champions League scoreboard, 25 November 2026",
+   "publisher": "ESPN",
+   "date": "2026-11-25",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261125"
+  },
+  {
+   "title": "UEFA Champions League standings",
+   "publisher": "ESPN",
+   "date": "2026-11-27",
+   "url": "https://site.api.espn.com/apis/v2/sports/soccer/uefa.champions/standings"
+  },
+  {
+   "title": "Spanish LaLiga standings",
+   "publisher": "ESPN",
+   "date": "2026-11-27",
+   "url": "https://site.api.espn.com/apis/v2/sports/soccer/esp.1/standings"
+  },
+  {
+   "title": "Spanish LaLiga scoreboard, 28 November 2026",
+   "publisher": "ESPN",
+   "date": "2026-11-27",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261128",
+   "note": "皇馬、馬競開球時間（UTC 換算台灣）"
+  },
+  {
+   "title": "Deportivo de La Coruña - FC Barcelona",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-27",
+   "url": "https://www.fcbarcelona.com/en/matches/138412/deportivo-de-la-coruna-fc-barcelona-la-liga-2026-2027",
+   "note": "開球 16:15（西班牙時間）"
+  },
+  {
+   "title": "Aubameyang lauds Pedri ahead of Barca clash",
+   "publisher": "Goal",
+   "date": "2026-11-26",
+   "url": "https://www.goal.com/en-us/news/pierre-emerick-aubameyang-pedri-barcelona-deportivo/blt19ef00072016c394",
+   "note": "轉述 Mundo Deportivo；單一來源，頁面無絕對時間"
+  },
+  {
+   "title": "File:Rodri France v Spain 7.24.26-096.jpg",
+   "publisher": "Wikimedia Commons",
+   "date": "2026-07-14",
+   "url": "https://commons.wikimedia.org/wiki/File:Rodri_France_v_Spain_7.24.26-096.jpg",
+   "note": "Bryan Berlin，CC BY-SA 4.0"
+  }
+ ]
+}
