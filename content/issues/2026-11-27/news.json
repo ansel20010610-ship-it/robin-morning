@@ -1,0 +1,205 @@
+{
+ "column": "news",
+ "date": "2026-11-27",
+ "title": "科威特稱兩名義大利人死於無人機碎片，歐洲央行總裁人選出爐",
+ "dek": "科威特說兩名義大利技術人員死於攔截伊朗無人機時的碎片，伊朗否認涉入，歐元區同時推舉德科斯接任歐洲央行總裁。",
+ "brief": "科威特說，兩名義大利技術人員死於被攔截的伊朗無人機碎片，伊朗否認涉入。歐元區領導人同意推舉西班牙的德科斯接任歐洲央行總裁，還要歐洲議會與央行理事會確認。氣象署預報，週六投票日各地大致晴朗，清晨偏涼。",
+ "topic_key": "news:2026-11-27",
+ "voice": "wire",
+ "updated_at": "2026-11-27T05:36:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "Two Italians killed by 'drone strike debris' in Kuwait",
+   "publisher": "半島電視台",
+   "date": "2026-11-26",
+   "url": "https://www.aljazeera.com/news/2026/11/26/two-italians-killed-after-iranian-drones-strike-facility-says-kuwait",
+   "note": "死者身分、科威特與義大利說法、伊朗否認、戰爭背景"
+  },
+  {
+   "title": "科威特無人機攻擊 2義大利人喪命 伊朗否認涉入",
+   "publisher": "中央社",
+   "date": "2026-11-27",
+   "url": "https://www.cna.com.tw/news/aopl/202611270008.aspx",
+   "note": "塔亞尼說明、傷者、伊朗軍方發言人否認（第二來源）"
+  },
+  {
+   "title": "Attack on Saudi's Jazan refinery kills one person, disrupts operations",
+   "publisher": "半島電視台",
+   "date": "2026-11-26",
+   "url": "https://www.aljazeera.com/news/2026/11/26/attack-on-saudi-aramcos-jazan-refinery-kills-worker-disrupts-operations",
+   "note": "能源部說法、聯軍指稱胡塞武裝、日產能"
+  },
+  {
+   "title": "沙烏地煉油廠遭攻擊 1人死亡部分設施停止運作",
+   "publisher": "中央社",
+   "date": "2026-11-27",
+   "url": "https://www.cna.com.tw/news/aopl/202611270010.aspx",
+   "note": "吉贊煉油廠遇襲經過（第二來源）"
+  },
+  {
+   "title": "Spanish economist to become new European Central Bank chief",
+   "publisher": "半島電視台",
+   "date": "2026-11-26",
+   "url": "https://www.aljazeera.com/news/2026/11/26/spanish-economist-to-become-new-european-central-bank-chief",
+   "note": "人選、科斯塔說明、尚待確認的程序、拉加德任期"
+  },
+  {
+   "title": "Spanish economist de Cos to succeed Lagarde as head of ECB",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-26",
+   "url": "https://www.france24.com/en/europe/20261126-spanish-economist-de-cos-succeed-lagarde-head-ecb",
+   "note": "21 國領導人同意、馬克宏證實、通膨 4%、12 月升息看法"
+  },
+  {
+   "title": "EU leaders struggle to agree on long-term budget, $49bn Ukraine loan",
+   "publisher": "半島電視台",
+   "date": "2026-11-26",
+   "url": "https://www.aljazeera.com/economy/2026/11/26/eu-leaders-struggle-to-agree-on-long-term-budget-more-money-for-ukraine",
+   "note": "預算規模、烏克蘭貸款、各國立場"
+  },
+  {
+   "title": "Fighting in eastern Congo forces Ebola workers to evacuate, disrupts outbreak response",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-26",
+   "url": "https://www.france24.com/en/video/20261126-fighting-in-eastern-congo-forces-ebola-workers-to-evacuate-disrupts-outbreak-response",
+   "note": "防疫人員撤離、疫情感染與死亡人數"
+  },
+  {
+   "title": "DR Congo: Peacekepers step up civilian protection amid fighting in Ituri",
+   "publisher": "聯合國新聞",
+   "date": "2026-11-26",
+   "url": "https://news.un.org/feed/view/en/story/2026/11/1168883",
+   "note": "伊圖里省交火、維和部隊接出 10 名醫護人員"
+  },
+  {
+   "title": "氣象署：28日投票日天氣大致晴朗 北部清晨低溫16度",
+   "publisher": "中央社",
+   "date": "2026-11-26",
+   "url": "https://www.cna.com.tw/news/ahel/202611260061.aspx",
+   "note": "27 至 30 日預報、清晨低溫"
+  },
+  {
+   "title": "8 banks report NT$1.82 million in unauthorized transfers: FSC",
+   "publisher": "中央社英文網 Focus Taiwan",
+   "date": "2026-11-26",
+   "url": "https://focustaiwan.tw/society/202611260021",
+   "note": "金管會記者會數字、刑事局報案統計、金管會要求與提醒"
+  },
+  {
+   "title": "秋季降雨日24天創同期新低 預估冬季偏暖、雨量偏多",
+   "publisher": "中央社",
+   "date": "2026-11-26",
+   "url": "https://www.cna.com.tw/news/ahel/202611260059.aspx",
+   "note": "冬季展望記者會：聖嬰、冬季氣溫雨量、秋季紀錄、節水與春季濃霧"
+  }
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "科威特說，它攔截伊朗無人機時，碎片擊中重要設施，造成兩名義大利技術人員死亡，伊朗否認涉入。台灣今天（週五）是投票前最後一天。"
+  },
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "波灣兩地遇襲，科威特與沙烏地",
+     "place": [
+      "KW",
+      "SA",
+      "IR",
+      "IT"
+     ],
+     "summary": "科威特說，26 日它攔截伊朗無人機時，碎片擊中一處重要設施，兩名義大利技術人員死亡。伊朗外長說伊朗沒有涉入，願意聯合調查。同一天，沙烏地的吉贊煉油廠遇襲起火，一名尼泊爾工人死亡，沙烏地領軍的聯軍說是胡塞武裝所為。",
+     "source": "半島電視台、中央社",
+     "url": "https://www.aljazeera.com/news/2026/11/26/two-italians-killed-after-iranian-drones-strike-facility-says-kuwait",
+     "when": "11 月 26 日，科威特與沙烏地"
+    },
+    {
+     "headline": "歐元區推舉德科斯接掌歐洲央行",
+     "place": [
+      "ES"
+     ],
+     "summary": "歐元區領導人 26 日同意推舉西班牙經濟學家德科斯接任歐洲央行總裁，他 55 歲，現任國際清算銀行總經理。現任總裁拉加德將在 2027 年 2 月提前卸任。歐洲議會與央行理事會還要確認，正式任命預計在 12 月。",
+     "source": "半島電視台、法國 24 電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/26/spanish-economist-to-become-new-european-central-bank-chief",
+     "when": "11 月 26 日，布魯塞爾"
+    },
+    {
+     "headline": "歐盟預算與援烏貸款談不攏",
+     "place": [
+      "UA"
+     ],
+     "summary": "歐盟 27 國領導人 26 日在布魯塞爾談 2028 至 2034 年預算，提案近 1.76 兆美元，要全體同意才過；另有 490 億美元的烏克蘭新貸款。德國總理梅爾茨本月稍早要求全體成員對烏克蘭做出集體承諾，否則可能卡住預算談判。峰會可能延到週五，報導時還沒有結論。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/economy/2026/11/26/eu-leaders-struggle-to-agree-on-long-term-budget-more-money-for-ukraine",
+     "when": "11 月 26 日，布魯塞爾"
+    },
+    {
+     "headline": "剛果戰事迫使伊波拉防疫撤離",
+     "place": [
+      "CD"
+     ],
+     "summary": "剛果民主共和國東部交火，伊波拉防疫人員被迫撤離部分疫區。疫情 5 月宣布，政府最新數字是超過 11,700 人感染、超過 5,700 人死亡。聯合國維和部隊 24 日從醫院接出 10 名躲了三天以上的醫護。",
+     "source": "法國 24 電視台、聯合國新聞",
+     "url": "https://www.france24.com/en/video/20261126-fighting-in-eastern-congo-forces-ebola-workers-to-evacuate-disrupts-outbreak-response",
+     "when": "11 月 24 至 26 日，剛果民主共和國"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "28 日投票日天氣大致晴朗",
+     "place": "TW",
+     "summary": "氣象署預報，28 日週六投票日各地大致晴朗，只有東半部有零星短暫雨，東北季風增強，清晨偏涼。今天氣溫回升；30 日到 12 月 2 日也晴穩。",
+     "source": "中央社",
+     "url": "https://www.cna.com.tw/news/ahel/202611260061.aspx",
+     "when": "11 月 26 日，台灣時間"
+    },
+    {
+     "headline": "八家銀行通報網銀遭盜轉",
+     "place": "TW",
+     "summary": "金管會 26 日說，8 家銀行通報 10 名客戶的網銀被未經授權轉走共 182 萬元（這是銀行自行通報的重大事故）。刑事局收到超過 100 件民眾報案，9 月到 11 月 11 日損失 1,742 萬元，兩者算法不同，懷疑歹徒用偽裝成短影音的安卓應用程式控制手機。",
+     "source": "中央社英文網 Focus Taiwan",
+     "url": "https://focustaiwan.tw/society/202611260021",
+     "when": "11 月 26 日，台灣時間"
+    },
+    {
+     "headline": "氣象署：今冬正常到偏暖、雨量正常到偏多",
+     "place": "TW",
+     "summary": "氣象署 26 日說，今年聖嬰預估強度創歷史新高，冬季達到最強。12 月到 2 月氣溫正常到偏高、雨量正常到偏多，12 月明顯偏暖。這個秋天降雨日 24 天，是 1951 年來同期最少，仍要節水。",
+     "source": "中央社",
+     "url": "https://www.cna.com.tw/news/ahel/202611260059.aspx",
+     "when": "11 月 26 日，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "28 日清晨低溫預報（氣象署）",
+   "head": [
+    "地區",
+    "低溫"
+   ],
+   "rows": [
+    [
+     "北部",
+     "約 16 度"
+    ],
+    [
+     "花蓮",
+     "約 17 度"
+    ],
+    [
+     "中南部",
+     "18 至 19 度"
+    ]
+   ]
+  }
+ ]
+}
