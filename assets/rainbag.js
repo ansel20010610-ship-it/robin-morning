@@ -13,7 +13,7 @@
 // Under the bag the masthead stands as printed: the press roller's line is gone and the masthead's entrance plays at
 // once, while the Druckfrisch stamp waits and comes down once the bag is off (.bagged / .unbag, style.css); the 出門前
 // card (outdoor-card.js) waits for the bag too (bagGone).
-import { twNow, ROBIN_PATHS } from "./util.js";
+import { twNow, ROBIN_PATHS, store } from "./util.js";
 import { calm, mastheadShow } from "./motion.js";
 import { keptWeather } from "./wetter.js";
 
@@ -152,7 +152,23 @@ function pose(el, y) {
 }
 
 let token = 0; // the latest ask or take-down: an older ask still waiting for the forecast gives way
-let asked = ""; // the day a bag was last decided for in this session (also where storage cannot keep rm.opened)
+let asked = ""; // the day a bag was last decided for in this session (also where storage cannot keep rm.done)
+let waiting = ""; // the day an ask is still waiting for the forecast: a redraw meanwhile does not ask again
+// The days a bag was decided for on this device (rm.rainbag, the last 60 dates): the bag taken off, or a visible front page
+// found the hour dry. Not rm.opened (app.js fresh): that is spent by any draw — one in the background at 07:00, the
+// reload a new shell asks for — before the bag could be decided; on 2026-11-26 the 出門前 card came and the bag did not.
+const DONE = "rainbag";
+// The page being unloaded (a reload for a new shell, app.js watchUpdates): pagehide comes before the hidden page's
+// visibilitychange (app.js dropBag), and a bag taken off for that is not decided — the page loaded next asks again.
+let leaving = false;
+addEventListener("pagehide", () => { leaving = true; });
+addEventListener("pageshow", () => { leaving = false; });
+const doneFor = (date) => { const s = store.get(DONE, []); return asked === date || (Array.isArray(s) && s.includes(date)); };
+function markDone(date) {
+  asked = date;
+  const s = store.get(DONE, []), list = Array.isArray(s) ? s : [];
+  if (!list.includes(date)) store.set(DONE, [...list, date].slice(-60));
+}
 let takeDown = null; // takes the bag on now off at once
 let gone = Promise.resolve(); // settles once no bag is on or still to be decided
 
@@ -167,23 +183,28 @@ export function dropBag() {
   takeDown?.();
 }
 
-// The first opening of today's paper (app.js viewFront, a `fresh` draw): `head` the masthead, `weather` the promise of
-// the day's forecast the front page is already fetching (fillWeather), `no` the issue's number for the sticker. Never
-// throws; on anything that goes wrong there is no bag.
+// Each draw of today's front page (app.js viewFront) until the bag is decided for the day (doneFor): `head` the masthead,
+// `weather` the promise of the day's forecast the front page is already fetching (fillWeather), `no` the issue's number
+// for the sticker. Before 07:30, with the page hidden or gone, or with no forecast, nothing is decided and the next draw
+// asks again. Never throws; on anything that goes wrong there is no bag.
 export function rainBag({ head, weather, no }) {
   try {
     const now = twNow();
-    if (!head || asked === now.date || now.minutes < 450 || now.minutes >= 720) return;
-    asked = now.date;
+    if (!head || doneFor(now.date) || waiting === now.date || now.minutes < 450 || now.minutes >= 720) return;
+    waiting = now.date;
     const my = ++token, t0 = performance.now();
     let settle;
     gone = new Promise((r) => { settle = r; });
     const decide = (d) => {
+      if (waiting === now.date) waiting = "";
       try {
         // the front page drawn again in place while the forecast was on its way (a refetch, the app brought back): the
         // bag goes on the masthead on the page now
         const cur = head.isConnected ? head : (location.hash || "#/") === "#/" ? document.querySelector("#main .masthead") : null;
-        if (my === token && cur && !document.hidden && rainyMorning(d, now)) { put(cur, no, settle); return; }
+        if (my === token && cur && !document.hidden && d) {
+          if (rainyMorning(d, now)) { put(cur, no, settle, now.date); return; }
+          markDone(now.date); // seen, and the hour is dry: no bag today
+        }
       } catch { takeDown?.(); } // no bag: one already on the page comes off again
       settle();
     };
@@ -193,7 +214,7 @@ export function rainBag({ head, weather, no }) {
   } catch { /* no bag */ }
 }
 
-function put(head, no, settle) {
+function put(head, no, settle, date) {
   const quiet = calm(), w = innerWidth, h = innerHeight;
   const el = document.createElement("div");
   el.className = "rbag";
@@ -207,6 +228,7 @@ function put(head, no, settle) {
   const end = () => {
     if (off) return;
     off = true;
+    if (!leaving) markDone(date); // taken off — pulled open, or the page or the app put away: not again today
     cancelAnimationFrame(anim);
     el.remove();
     takeDown = null;

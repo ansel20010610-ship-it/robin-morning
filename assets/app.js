@@ -1152,9 +1152,10 @@ function viewFront(dateParam) {
   if (evening) letterForm(main.querySelector(".night-letter-slot"), true);
   fitEar(main);
   if (fresh) pressRun(main.querySelector(".masthead")); else mastheadShow(main.querySelector(".masthead"));
-  // 雨天套袋 (rainbag.js): today's paper, opened for the first time on a rainy morning, comes in a plastic bag; asked
-  // here with the forecast fillWeather is already fetching, and before the 出門前 card, which waits for the bag
-  if (fresh && todays(issue)) rainBag({ head: main.querySelector(".masthead"), weather: wx, no: issue.no });
+  // 雨天套袋 (rainbag.js): today's paper, on a rainy morning, comes in a plastic bag once a day; asked here on each draw
+  // with the forecast fillWeather is already fetching (rainbag.js keeps its own mark, not `fresh`), and before the 出門前
+  // card, which waits for the bag
+  if (!dateParam && !isPreview() && todays(issue)) rainBag({ head: main.querySelector(".masthead"), weather: wx, no: issue.no });
   // 出門前 (outdoor-card.js): today's paper only; it comes up by itself once per issue, not from 往期 nor under ?preview
   if (todays(issue)) outdoorFront({ box: main.querySelector(".wrap > .wetter"), head: main.querySelector(".masthead"), issue, weather: wx, pop: !dateParam && !isPreview() });
   if (erst) setTimeout(() => goldRain(main.querySelector(".masthead.erst .crest")), fresh ? 2200 : 700);
