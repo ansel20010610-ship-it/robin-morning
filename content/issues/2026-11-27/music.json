@@ -1,0 +1,305 @@
+{
+  "column": "music",
+  "date": "2026-11-27",
+  "title": "《茶花女》：威爾第自己說首演失敗的歌劇",
+  "dek": "首演隔天，威爾第在信裡寫下「失敗」。一年多後重演，場面完全不同。",
+  "brief": "威爾第的《茶花女》1853 年 3 月在威尼斯首演，隔天他寫信給朋友說「失敗」；一年多後重演，大獲成功。故事從一位真實的巴黎名妓說起，電影《麻雀變鳳凰》裡男女主角去看的就是這齣。今天講它的來歷，也講按下播放後可以聽的三個地方。",
+  "topic_key": "music:verdi-la-traviata",
+  "updated_at": "2026-11-27T00:47:00+08:00",
+  "form": "timeline",
+  "voice": "listener",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "portrait",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/%C3%89douard_Vi%C3%A9not_-_Portrait_de_Marie_Duplessis%2C_dite_la_dame_aux_cam%C3%A9lias.jpg/1280px-%C3%89douard_Vi%C3%A9not_-_Portrait_de_Marie_Duplessis%2C_dite_la_dame_aux_cam%C3%A9lias.jpg",
+    "width": 1280,
+    "height": 1531,
+    "alt": "橢圓畫框裡的年輕女子半身油畫像：黑色長髮從中分線垂到肩上，頭頂一圈細細的金冠，白色皮草披肩，胸前別著一朵白色茶花，背景是深褐色，右側有畫家簽名。",
+    "caption": "愛德華・維耶諾（Édouard Viénot）畫的瑪麗・杜普萊西（Marie Duplessis）肖像，油畫，畫於巴黎，1845 至 1847 年之間；Commons 標註為私人收藏，影像取自 Gallica 上的書頁掃描。她 1847 年 2 月 3 日病逝，是小仲馬《茶花女》女主角的原型。",
+    "credit": "愛德華・維耶諾（Édouard Viénot）；影像經 Wikimedia Commons（來源：Gallica）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:%C3%89douard_Vi%C3%A9not_-_Portrait_de_Marie_Duplessis,_dite_la_dame_aux_cam%C3%A9lias.jpg",
+    "made": "1845–1847"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "《茶花女》是一齣三幕歌劇，義大利作曲家**威爾第**（Giuseppe Verdi）寫的，1853 年 3 月在威尼斯首演，全劇用義大利文唱。講的是巴黎的高級名妓 Violetta，愛上一個年輕人，後來病死。名妓不是一般的妓女，是靠有錢男人供養、自己辦沙龍交際的女性，但社會看不起她。"
+    },
+    {
+      "type": "p",
+      "text": "劇名 *La traviata* 是義大利文，字面的意思是「走偏了路的女人」。維基百科說，它是史上最常上演的歌劇之一。今天講它，不是什麼紀念日，是這個欄的必聽清單數到了第 36 首。"
+    },
+    {
+      "type": "p",
+      "text": "你很可能聽過它，只是沒注意。電影**《麻雀變鳳凰》**（1990 年）裡，男主角愛德華帶薇薇安搭私人飛機去舊金山歌劇院，看的就是《茶花女》，那是薇薇安第一次看歌劇。維基百科說，這齣歌劇也是那部電影劇情的靈感。"
+    },
+    {
+      "type": "timeline",
+      "title": "從一位巴黎女子的死，到一個威尼斯的晚上",
+      "items": [
+        {
+          "when": "1847.2.3",
+          "label": "瑪麗・杜普萊西在巴黎病逝，23 歲，死因肺結核",
+          "note": "她是巴黎的名妓，也是小仲馬 1844 年 9 月到 1845 年 8 月的情人"
+        },
+        {
+          "when": "1848",
+          "label": "小仲馬出版小說《茶花女》",
+          "note": "女主角以她為原型，男主角是小仲馬自己"
+        },
+        {
+          "when": "1852.2.2",
+          "label": "《茶花女》話劇在巴黎 Théâtre du Vaudeville 首演",
+          "note": "小仲馬自己改編"
+        },
+        {
+          "when": "1852 秋",
+          "label": "威爾第寫信給朋友：「為威尼斯，我在做《茶花女》，可能叫 La traviata。一個我們這個時代的題材。」",
+          "note": "本文自譯，信的英譯引自維基百科"
+        },
+        {
+          "when": "1853.2.21",
+          "label": "威爾第抵達威尼斯排練",
+          "note": "合約要他在 1853 年 3 月的第一個星期六前準備好"
+        },
+        {
+          "when": "1853.3.6",
+          "label": "《茶花女》在威尼斯鳳凰劇院首演",
+          "note": "Violetta 由 38 歲的 Fanny Salvini-Donatelli 唱，被嫌太老太胖"
+        },
+        {
+          "when": "1853.3.7",
+          "label": "威爾第寫信給 Muzio：「昨晚，失敗。」"
+        },
+        {
+          "when": "1854.5.6",
+          "label": "威尼斯聖貝內代托劇院重演，大獲成功",
+          "note": "1853 到 1854 年 5 月之間改過一些段落，Violetta 換成 Maria Spezia-Aldighieri"
+        },
+        {
+          "when": "1856",
+          "label": "倫敦（5 月 24 日）、紐約（12 月 3 日）、巴黎（12 月 6 日）先後首演",
+          "note": "倫敦那次被認為在道德上有問題"
+        },
+        {
+          "when": "1990.3.23",
+          "label": "電影《麻雀變鳳凰》上映，男女主角在片中去看的歌劇就是《茶花女》"
+        }
+      ]
+    },
+    {
+      "type": "h",
+      "text": "一位真人，一本小說"
+    },
+    {
+      "type": "p",
+      "text": "故事有真人原型：巴黎的名妓瑪麗・杜普萊西（Marie Duplessis），有自己的沙龍，被形容為謹慎又機智的情人。她和法國作家小仲馬交往過，1847 年因肺結核過世，只有 23 歲。數百人參加她的葬禮，她葬在蒙馬特墓園，墓現在還能參觀。她的遺物後來被拿去拍賣還債。"
+    },
+    {
+      "type": "p",
+      "text": "她過世不到一年，小仲馬出版小說《茶花女》，女主角以她為原型，男主角是小仲馬自己。1852 年 2 月 2 日，他又把小說改成話劇，在巴黎首演。"
+    },
+    {
+      "type": "h",
+      "text": "威爾第接下這個題材"
+    },
+    {
+      "type": "p",
+      "text": "威爾第 1851 年 3 月在威尼斯首演《利哥列托》，很成功。威尼斯的鳳凰劇院（La Fenice）接著又來邀他寫新作。劇本由 Piave 寫，他是威爾第長期合作的詞作家。"
+    },
+    {
+      "type": "p",
+      "text": "威爾第怎麼知道這個題材，傳記作家說法不一。Phillips-Matz 說，1852 年 2 月他人在巴黎，去看了這齣話劇，看完就開始寫音樂；另一位傳記作家 Budden 認為，他更早就讀過小說。那年秋天，他寫信給朋友，說他正在為威尼斯做《茶花女》，可能會叫 La traviata，是「一個我們這個時代的題材」。"
+    },
+    {
+      "type": "p",
+      "text": "他原本想用當代的服裝和布景，劇院堅持要改到過去。他也試過說服劇院換一位更年輕的女高音，同樣沒成功。1853 年 2 月 21 日他到威尼斯排練，維基百科說，他那時心裡已經有不祥的預感。"
+    },
+    {
+      "type": "h",
+      "text": "1853 年 3 月 6 日：首演"
+    },
+    {
+      "type": "p",
+      "text": "首演是星期日晚上，在鳳凰劇院。Violetta 由 Fanny Salvini-Donatelli 唱，她當時 38 歲，觀眾覺得她太老太胖，演不出垂死的年輕女子。第一幕結束時有掌聲和喝采；到了第二幕，觀眾開始倒向反對，尤其是 Felice Varesi 和 Lodovico Graziani 唱完之後，這兩位唱的是 Alfredo 的父親和 Alfredo。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Traviata.jpg/1280px-Traviata.jpg",
+      "width": 1280,
+      "height": 868,
+      "alt": "一張泛黃紙面的黑字印刷海報。頂端是「GRAN TEATRO LA FENICE」，下一行寫「Per la sera di Domenica 6 Marzo 1853」，右側有「Recita XLI」；中央最大的字是「LA TRAVIATA」，下方是角色與演員的兩欄名單；再下方另一個大標題「LA LUCERNA MARAVIGLIOSA」，也列著名單，底部是票價等小字。",
+      "caption": "1853 年 3 月 6 日（星期日）晚上，威尼斯鳳凰劇院《茶花女》首演的海報。海報印著「新歌劇首次演出」，劇本 F. M. Piave，音樂 G. Verdi；Violetta 一欄是 Fanny Salvini-Donatelli，Alfredo 是 Lodovico Graziani，Germont 是 Felice Varesi。歌劇之後接著演芭蕾《La lucerna maravigliosa》。Commons 只標「首演海報，1853」，原件收藏處未註明；這張影像偏模糊。",
+      "credit": "不詳（1853 年劇院印刷品）；影像經 Wikimedia Commons",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Traviata.jpg",
+      "made": "1853"
+    },
+    {
+      "type": "p",
+      "text": "第二天，威爾第寫信給朋友 Emanuele Muzio。"
+    },
+    {
+      "type": "quote",
+      "text": "《茶花女》昨晚，失敗。錯在我，還是歌手？時間會說話。",
+      "cite": "威爾第寫給友人 Emanuele Muzio，1853 年 3 月 7 日（本文自譯；義大利原文轉引自 Il Foglio，2016）",
+      "original": "La traviata ieri sera, fiasco. La colpa è mia o dei cantanti? Il tempo giudicherà."
+    },
+    {
+      "type": "h",
+      "text": "一年後：重演成功"
+    },
+    {
+      "type": "p",
+      "text": "首演失敗後，各城市的劇院經理想演，威爾第不放心歌手夠不夠強，拒絕了。1854 年 5 月 6 日，威尼斯的聖貝內代托劇院再演，這次大獲成功。維基百科說，主要是 Maria Spezia-Aldighieri 演的 Violetta；作品也改過一些地方，多半在第二、三幕。那次製作由 Piave 負責，威爾第不在場。Piave 寫道：「那時是失敗，現在是轟動。你自己下結論吧！」"
+    },
+    {
+      "type": "p",
+      "text": "接下來它一城一城傳開，1856 年到了倫敦、紐約、巴黎。倫敦那次被認為在道德上有問題，維基百科引述「王后沒去劇院」。紐約《晚郵報》的評論是：那些安安靜靜看完《唐喬凡尼》那些明目張膽不檢點的人，看《茶花女》也不會臉紅皺眉。據大英百科，威爾第在世時，《茶花女》就成了演出最頻繁的歌劇之一。"
+    },
+    {
+      "type": "h",
+      "text": "按下播放，聽這三個地方"
+    },
+    {
+      "type": "p",
+      "text": "先講故事的大概：第一幕是 Violetta 在家辦舞會，Alfredo 向她告白，她給他一朵花，花謝了再還她。第二幕，Alfredo 的父親來訪，為了家族要 Violetta 離開他兒子，她答應了。第三幕，Violetta 病重，死在 Alfredo 懷裡。"
+    },
+    {
+      "type": "p",
+      "text": "推薦的版本是克萊伯（Carlos Kleiber）指揮巴伐利亞國家管弦樂團與合唱團，Deutsche Grammophon 發行。維基百科的唱片目錄列為 1976 年，DG 自己的文章說這套錄音 1977 年先以黑膠發行。"
+    },
+    {
+      "type": "p",
+      "text": "**一、開頭的前奏曲。**一開始是非常輕、非常高的弦樂，寫的是病弱的女主角。接著較低的弦樂奏出主要的愛情旋律，高音樂器在上面裝飾。"
+    },
+    {
+      "type": "p",
+      "text": "**二、第一幕的飲酒歌〈Libiamo ne' lieti calici〉，意思是「讓我們舉起歡樂的杯子」。**派對上，Douphol 男爵被請求祝酒卻拒絕，大家轉向 Alfredo，他同意唱。這首是三拍子，聽起來像華爾滋。唱完之後，台下的樂隊接著奏一連串華爾滋，這個節奏貫穿整個第一幕，營造出巴黎的氣氛。"
+    },
+    {
+      "type": "p",
+      "text": "**三、第一幕結尾 Violetta 的獨唱〈Sempre libera〉，意思是「永遠自由」。**最後一段全是裝飾音，維基百科形容是「狂熱」的華彩，她在這裡發誓要保持自由。維基百科還說，這種炫技到第一幕之後就不再需要，第三幕她臨終時，音樂有一種靈性。"
+    },
+    {
+      "type": "music",
+      "composer": "威爾第（Giuseppe Verdi）",
+      "work": "歌劇《茶花女》（三幕）",
+      "work_original": "La traviata",
+      "composed": "1852–1853（1853 年 3 月 6 日首演）",
+      "performers": "卡洛斯・克萊伯（Carlos Kleiber）指揮 巴伐利亞國家管弦樂團與合唱團；伊蓮娜・柯特魯巴絲（Ileana Cotrubaș）飾 Violetta、普拉西多・多明哥（Plácido Domingo）飾 Alfredo、雪羅・米爾恩斯（Sherrill Milnes）飾 Giorgio Germont",
+      "recording": "Deutsche Grammophon，目錄號 415 132；維基百科的唱片目錄列為 1976 年，DG 自家文章說這套錄音 1977 年首次以黑膠發行",
+      "movements": [
+        "第一幕（含前奏曲、〈Libiamo ne' lieti calici〉飲酒歌、〈Sempre libera〉）",
+        "第二幕",
+        "第三幕"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Verdi La traviata Kleiber Cotrubas Domingo Milnes Bayerisches Staatsorchester",
+        "artist_hint": "Kleiber",
+        "track_filter": [
+          "Traviata",
+          "Libiamo",
+          "Sempre libera",
+          "Preludio"
+        ]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "title": "La traviata",
+      "publisher": "Wikipedia（英文版）",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/La_traviata",
+      "note": "全文讀過（API 全文）：創作經過、合約、2 月 21 日抵威尼斯、設定年代之爭、首演卡司與反應、Muzio 信英譯、1854-05-06 重演與 Piave 的話、各城首演日、音樂與劇情段；2026-11-26 查閱"
+    },
+    {
+      "title": "Marie Duplessis",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Marie_Duplessis",
+      "note": "生卒日期、與小仲馬的時間、死因、葬地；2026-11-26 查閱"
+    },
+    {
+      "title": "La Dame aux Camélias",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/La_Dame_aux_Cam%C3%A9lias",
+      "note": "小說 1848、話劇 1852-02-02 在 Théâtre du Vaudeville；2026-11-26 查閱"
+    },
+    {
+      "title": "Pretty Woman",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Pretty_Woman",
+      "note": "讀到前 100000 字：劇情與音樂段（片中歌劇是《茶花女》）、上映日 1990-03-23；2026-11-26 查閱"
+    },
+    {
+      "title": "La traviata in pop culture",
+      "publisher": "English National Opera",
+      "date": "未註明",
+      "url": "https://www.eno.org/discover-opera/articles/la-traviata-in-pop-culture/",
+      "note": "《麻雀變鳳凰》與《紅磨坊》與《茶花女》的關係；2026-11-26 查閱"
+    },
+    {
+      "title": "From page to stage: La traviata",
+      "publisher": "Los Angeles Opera",
+      "date": "未註明",
+      "url": "https://www.laopera.org/Discover-LA-Opera/Explore/blog/from-page-to-stage-la-traviata",
+      "note": "杜普萊西生平、遺物拍賣、首演反應與 Muzio 信的英譯；2026-11-26 查閱"
+    },
+    {
+      "title": "Perché ci serve la Traviata",
+      "publisher": "Il Foglio（Mario Leone）",
+      "date": "2016-05-24",
+      "url": "https://www.ilfoglio.it/cultura/2016/05/24/news/perche-ci-serve-la-traviata--259274",
+      "note": "Verdi 致 Muzio 信的義大利文引文（轉引，非信的原件）；2026-11-26 查閱"
+    },
+    {
+      "title": "La traviata discography",
+      "publisher": "Wikipedia",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/La_traviata_discography",
+      "note": "Kleiber 1976 DG 415132；Callas／Giulini 1955-05-28 EMI 66450；2026-11-26 查閱"
+    },
+    {
+      "title": "Fallgruben der Liebe",
+      "publisher": "Deutsche Grammophon",
+      "date": "2003-02-21",
+      "url": "https://www.deutschegrammophon.com/de/kuenstler/carloskleiber/pressestimmen/fallgruben-der-liebe-66337",
+      "note": "Kleiber 錄音「1977 年先以黑膠發行」、FonoForum 評語；讀到的是文章，沒有錄音日期與地點；2026-11-26 查閱"
+    },
+    {
+      "title": "La traviata",
+      "publisher": "Wikipedia（義大利文版）",
+      "date": "未註明",
+      "url": "https://it.wikipedia.org/wiki/La_traviata",
+      "note": "讀到前 100000 字：Fenice 首演卡司、設定年代說法、1854 重演、前奏曲的調性詮釋；2026-11-26 查閱"
+    },
+    {
+      "title": "File:Traviata.jpg（1853 年首演海報）",
+      "publisher": "Wikimedia Commons",
+      "date": "1853",
+      "url": "https://commons.wikimedia.org/wiki/File:Traviata.jpg",
+      "note": "海報影像、授權 Public domain（PD-old）；海報文字自己讀圖；2026-11-26 查閱"
+    },
+    {
+      "title": "File:Édouard Viénot - Portrait de Marie Duplessis, dite la dame aux camélias.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "未註明",
+      "url": "https://commons.wikimedia.org/wiki/File:%C3%89douard_Vi%C3%A9not_-_Portrait_de_Marie_Duplessis,_dite_la_dame_aux_cam%C3%A9lias.jpg",
+      "note": "肖像資料：油畫、1845–1847、私人收藏；影像取自 Gallica；2026-11-26 查閱"
+    }
+  ]
+}
