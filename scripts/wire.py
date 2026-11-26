@@ -8,7 +8,9 @@ becomes 義大利, 软件 軟體) and curly quotes become 「」. The result is 
 
   {"updated": "...+08:00", "items": [{"src": "中央社", "title": "...", "lead": "...", "url": "...", "time": "...+08:00"}]}
 
-newest first; "updated" is the half hour of the last read (always :00 or :30), written on every run. A source that
+newest first; "came" on each item is the half hour of the read that first brought it ("" for one already there before
+items carried it), kept from the previous file, so the front page can draw its gold line under the latest read's news.
+"updated" is the half hour of the last read (always :00 or :30), written on every run. A source that
 cannot be read this time keeps the items it gave last time (from the previous file), so one broken feed never empties
 the bar. With nothing at
 all to show, the old file is left as it is.
@@ -202,6 +204,8 @@ def main():
     # the bar reads "01:00 更新" until 01:30 (the owner, 2026-11-08: 整點, then 每半小時; a push at 06:20 used to write 06:20).
     t = now.astimezone(TW)
     stamp = t.replace(minute=t.minute // 30 * 30)
+    was = {i.get("url"): i.get("came") or "" for i in before.get("items", []) if isinstance(i, dict)}
+    out = [dict(i, came=was[i["url"]] if i["url"] in was else stamp.isoformat(timespec="minutes")) for i in out]
     data = {"updated": stamp.isoformat(timespec="minutes"), "items": out}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)

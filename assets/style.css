@@ -297,12 +297,9 @@ button { font: inherit; color: inherit; }
 .wire li b { font-size: 14px; line-height: 1.5; font-weight: 500; color: var(--ink); }
 .wire li .ld { font-size: 12.5px; line-height: 1.6; color: var(--muted); }
 .wire li a:active b { color: var(--gold-ink); }
-.wire li.since { position: relative; } /* 上次看到這: the row's own top rule turned gold, the words sitting on it at the right on the strip's paper; no height added */
+.wire li.since { position: relative; } /* 以上 23:00 新進 (app.js markWireSince): the row's own top rule turned gold, the words sitting on it at the right on the strip's paper; no height added */
 .wire li.since > a { border-top-color: var(--gold); }
 .wire li.since::before { content: attr(data-since); position: absolute; right: 0; top: 0; transform: translateY(-52%); padding: 0 0 0 8px; background: var(--paper-2); font-family: var(--sans); font-size: 11px; line-height: 1; letter-spacing: .06em; color: var(--gold-ink); font-variant-numeric: tabular-nums; }
-.wire li.since-end { position: relative; padding-bottom: 14px; } /* 以上都是新的: the item marked last time has left the list, so the gold rule runs under the last row; the room under it keeps the words on the strip, clear of the board below (the last row, so nothing above the reader moves) */
-.wire li.since-end > a { box-shadow: inset 0 -1px 0 var(--gold); }
-.wire li.since-end::after { content: attr(data-since); position: absolute; right: 0; bottom: 14px; transform: translateY(48%); padding: 0 0 0 8px; background: var(--paper-2); font-family: var(--sans); font-size: 11px; line-height: 1; letter-spacing: .06em; color: var(--gold-ink); font-variant-numeric: tabular-nums; }
 .wire .at { margin: 0; padding: 0 12px 8px; font-family: var(--sans); font-size: 11px; letter-spacing: .04em; color: var(--muted); font-variant-numeric: tabular-nums; } /* under the strip's name when open: when the wires were last read, and whose they are */
 /* 市場行情 (assets/boerse.js): a quote board 6 pt under the wires — a fine double gold frame, a faint guilloché like an
    old share certificate's (fixed, over the tape), the BÖRSE plate held at the left, the figures in Cormorant's

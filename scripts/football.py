@@ -330,9 +330,12 @@ def main():
     if not out and state == "none" and not spend["calls"] and not tried:
         print("足球：沒有可放的稿，content/football.json 不寫")
         return 1 if len(failed) == len(SOURCES) else 0
-    # "updated" is the half hour of this read, whichever deploy ran it, as in wire.json
+    # "updated" is the half hour of this read, whichever deploy ran it, as in wire.json; "came", as there, the half hour
+    # of the read that first showed an item ("" for one shown before items carried it)
     t = now.astimezone(TW)
-    data = {"updated": t.replace(minute=t.minute // 30 * 30).isoformat(timespec="minutes"), "items": out, "spend": spend,
+    half = t.replace(minute=t.minute // 30 * 30).isoformat(timespec="minutes")
+    out = [dict(i, came=(known[i["url"]].get("came") or "") if i["url"] in known else half) for i in out]
+    data = {"updated": half, "items": out, "spend": spend,
             "tried": tried}
     tmp = OUT + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
