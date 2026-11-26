@@ -3767,7 +3767,7 @@ html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's o
 .fest-note:not(.got) .stamp.ms { filter: grayscale(.7) opacity(.55); } /* the card's stamp faded until earned, as on a feast day */
 
 /* ——— 遊戲桌 (#/games, games.js): an ivory slip and a wooden board on the desk ——— */
-.games-scene { padding: 70px 16px 120px; }
+.games-scene { padding: 70px 16px calc(150px + env(safe-area-inset-bottom)); }
 .gm-table { position: relative; z-index: 6; display: flex; flex-direction: column; gap: 22px; max-width: 420px; margin: 0 auto; }
 .gm-slip { background: linear-gradient(#fbf6ea, #efe5cf); color: var(--ink); border-radius: 3px; padding: 16px 18px 14px; --ink: #2a2118; --ink-2: #5a4c3c; box-shadow: 0 1px 0 rgba(255,255,255,.6) inset, 0 10px 22px rgba(0,0,0,.45); transform: rotate(-1deg); border-top: 3px double #a5843f; font-family: "Noto Serif TC", serif; }
 .gm-slip p { margin: 0; color: var(--ink); }
@@ -3797,3 +3797,81 @@ html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's o
 .gm-word { margin: 12px 0 10px; color: #f1e4c4; font: 15px "Noto Serif TC", serif; display: flex; justify-content: space-between; }
 .gm-rec { opacity: .75; font-size: 13px; }
 .gm-acts { display: flex; gap: 10px; justify-content: center; }
+.gm-barca { transform: rotate(.8deg); }
+.gm-score { display: flex; align-items: flex-end; justify-content: center; gap: 10px; margin-bottom: 12px; }
+.gm-side { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 104px; }
+.gm-team { font-size: 15px; color: var(--ink); }
+.gm-step { display: flex; align-items: center; gap: 8px; }
+.gm-step b { font-size: 26px; min-width: 22px; text-align: center; color: var(--ink); font-family: "Cormorant Garamond", serif; font-variant-numeric: lining-nums; font-weight: 600; }
+.gm-step button { font: 18px "Noto Serif TC", serif; width: 32px; height: 32px; border-radius: 50%; border: 1px solid #a5843f; background: transparent; color: var(--ink-2); }
+.gm-colon { font-size: 24px; color: var(--ink-2); padding-bottom: 2px; }
+/* the 遊戲桌 page (the owner's pick 2026-11-26: 甲 書房桌面): the cherry desk with a gilt inlay, slips under brass clips, a thick board with its edge and shadow */
+.games-scene::before { content: ""; position: absolute; inset: 58px 8px 96px; border: 1.5px solid rgba(191,154,82,.75); outline: 1px solid rgba(191,154,82,.35); outline-offset: 4px; border-radius: 3px; pointer-events: none; z-index: 5; }
+.games-scene .gm-slip { background: url(shelf/gen_grain.png) 0 0 / 200px, linear-gradient(#fbf6ea, #ece0c6); background-blend-mode: multiply; border-top: 0; box-shadow: 0 1px 0 rgba(255,255,255,.7) inset, 0 2px 2px rgba(0,0,0,.25), 0 14px 26px rgba(0,0,0,.5); }
+.games-scene .gm-slip::before { content: ""; position: absolute; left: 50%; top: -9px; width: 54px; height: 16px; margin-left: -27px; border-radius: 3px 3px 6px 6px; background: linear-gradient(#f3dc9c, #bf9a52 45%, #7c5a22); box-shadow: 0 2px 3px rgba(0,0,0,.45); }
+.games-scene .gm-slip { position: relative; }
+.games-scene .gm-bwrap { background: linear-gradient(135deg, #7a301a, #3a1206); padding: 10px; box-shadow: 0 0 0 1.5px #bf9a52 inset, 0 6px 0 #2a0c04, 0 18px 30px rgba(0,0,0,.6); }
+.games-scene .gm-wood { fill: url(#gm-black); }
+.games-scene .gm-board { background: url(shelf/gen_wood.png) 0 0 / 260px; background-blend-mode: multiply; border-radius: 3px; }
+.games-scene .gm-wood { fill: rgba(226,186,118,.86); }
+.games-scene .gm-levels button, .games-scene .gm-acts button { background: linear-gradient(#f3dc9c, #bf9a52 55%, #8a6428); color: #2a1206; border-color: #6e4c18; box-shadow: 0 2px 3px rgba(0,0,0,.4); }
+.games-scene .gm-levels button[aria-pressed="false"] { background: linear-gradient(#5a2410, #3a1206); color: #f1e4c4; border-color: #bf9a52; }
+/* each box its own thing (the owner, 2026-11-26: 「每格要有他的特色」) */
+/* 台股: a quote slip — a punched paper-tape edge, a faint candle chart behind */
+.gm-tw { position: relative; overflow: hidden; }
+.gm-tw::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 9px; background: radial-gradient(circle at 7px 4.5px, rgba(60,40,20,.38) 2.2px, transparent 2.6px) 0 0 / 14px 9px; border-bottom: 1px solid rgba(165,132,63,.5); pointer-events: none; }
+.gm-tw .gm-head { margin-top: 4px !important; }
+.gm-tw > * { position: relative; z-index: 1; }
+.gm-tw { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='120' viewBox='0 0 360 120'%3E%3Cg opacity='.10' stroke-width='1.2'%3E%3Cpath d='M0 90 L40 78 L80 84 L120 60 L160 66 L200 44 L240 52 L280 30 L320 38 L360 20' fill='none' stroke='%23b3261e'/%3E%3Cg fill='%23b3261e' stroke='%23b3261e'%3E%3Crect x='36' y='70' width='8' height='14'/%3E%3Crect x='116' y='52' width='8' height='16'/%3E%3Crect x='196' y='36' width='8' height='14'/%3E%3Crect x='276' y='22' width='8' height='14'/%3E%3C/g%3E%3Cg fill='%232e6b3a' stroke='%232e6b3a'%3E%3Crect x='76' y='76' width='8' height='12'/%3E%3Crect x='156' y='60' width='8' height='12'/%3E%3Crect x='236' y='46' width='8' height='12'/%3E%3Crect x='316' y='32' width='8' height='10'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(#fbf6ea, #efe5cf) !important; background-position: center 60%, 0 0; background-repeat: no-repeat; background-size: 100% auto, auto; }
+/* 巴薩: a match ticket — a blaugrana stub, a torn line with its notches */
+.gm-barca { position: relative; padding-left: 40px !important; overflow: visible; }
+.gm-barca::before { content: "" !important; position: absolute; left: 0 !important; top: 0 !important; bottom: 0; width: 24px !important; height: auto !important; margin: 0 !important; border-radius: 3px 0 0 3px !important; background: repeating-linear-gradient(90deg, #a50044 0 6px, #004d98 6px 12px) !important; box-shadow: none !important; }
+.gm-barca::after { content: ""; position: absolute; left: 30px; top: 6px; bottom: 6px; border-left: 1.5px dashed rgba(90,70,50,.45); }
+.gm-barca .gm-notch { display: none; }
+.gm-barca { -webkit-mask: radial-gradient(circle 7px at 30px 0, transparent 6.5px, #000 7px) top / 100% 51% no-repeat, radial-gradient(circle 7px at 30px 100%, transparent 6.5px, #000 7px) bottom / 100% 51% no-repeat; mask: radial-gradient(circle 7px at 30px 0, transparent 6.5px, #000 7px) top / 100% 51% no-repeat, radial-gradient(circle 7px at 30px 100%, transparent 6.5px, #000 7px) bottom / 100% 51% no-repeat; }
+.gm-barca .gm-head { color: #004d98; }
+.gm-comp { margin-left: .6em; padding: 1px 6px; font-size: 11px; letter-spacing: .1em; color: #fff; background: #a50044; border-radius: 2px; }
+.gm-barca .gm-pick.up { color: #004d98; border-color: #004d98; }
+.gm-barca .gm-pick.up[aria-pressed="true"] { background: #004d98; border-color: #004d98; color: #fff8ec; }
+/* 五子棋: the board with its two lidded bowls of stones */
+.gm-bwrap { position: relative; }
+.gm-bowl { position: absolute; top: -26px; width: 48px; height: 30px; border-radius: 50% 50% 46% 46% / 40% 40% 60% 60%; background: radial-gradient(60% 40% at 40% 30%, rgba(255,225,180,.5), transparent 70%), url(shelf/gen_wood.png) 0 0 / 120px, #6e2a14; background-blend-mode: normal, multiply, normal; box-shadow: 0 6px 8px rgba(0,0,0,.5), inset 0 -4px 6px rgba(0,0,0,.45); z-index: 2; }
+.gm-bowl::before { content: ""; position: absolute; left: 7px; right: 7px; top: 4px; height: 12px; border-radius: 50%; background: radial-gradient(circle at 30% 40%, var(--st1) 0 3px, transparent 3.5px), radial-gradient(circle at 60% 55%, var(--st1) 0 3px, transparent 3.5px), radial-gradient(circle at 45% 30%, var(--st2) 0 3px, transparent 3.5px), var(--st0); box-shadow: inset 0 1px 3px rgba(0,0,0,.6); }
+.gm-bowl.black { left: -6px; --st0: #1a1614; --st1: #3a3430; --st2: #0c0a09; }
+.gm-bowl.white { right: -6px; --st0: #e9e2d4; --st1: #ffffff; --st2: #cfc6b4; }
+.gm-levels { margin-bottom: 30px !important; }
+/* 再美一點 (2026-11-26): paper, type, seals, brass */
+.gm-slip { background-color: #f8f1e1; box-shadow: inset 0 0 22px rgba(150,110,50,.18), inset 0 0 2px rgba(120,80,30,.35), 0 2px 2px rgba(0,0,0,.25), 0 16px 28px -6px rgba(0,0,0,.55) !important; }
+.gm-head { font: 600 12px/1 "Noto Serif TC", serif; letter-spacing: .5em; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.gm-head::before, .gm-head::after { content: ""; width: 34px; height: 5px; background: linear-gradient(currentColor, currentColor) center / 100% 1px no-repeat, radial-gradient(circle, currentColor 1.4px, transparent 1.8px) center / 5px 5px no-repeat; opacity: .55; }
+.gm-q { font: 600 19px "Noto Serif TC", serif; letter-spacing: .04em; font-variant-numeric: lining-nums; }
+.gm-last b, .gm-tally b { font-family: "Cormorant Garamond", serif; font-variant-numeric: lining-nums; font-size: 1.15em; }
+/* 收紅／收黑 as ink seals: a double rule, the pressed one inked in and set a little askew */
+.gm-pick { position: relative; padding: 9px 22px; letter-spacing: .12em; border-width: 1.5px; box-shadow: inset 0 0 0 3px #f8f1e1, inset 0 0 0 4px currentColor; background: transparent; transition: transform .2s; }
+.gm-pick.up { color: #b3261e; border-color: #b3261e; } .gm-pick.down { color: #2e6b3a; border-color: #2e6b3a; }
+.gm-pick[aria-pressed="true"] { transform: rotate(-2.5deg); box-shadow: inset 0 0 0 3px currentColor, inset 0 0 0 4px rgba(255,248,236,.7), 0 0 0 0 transparent; }
+.gm-pick.up[aria-pressed="true"] { background: #b3261e radial-gradient(circle at 30% 30%, rgba(255,255,255,.12), transparent 60%); color: #fff8ec; }
+.gm-pick.down[aria-pressed="true"] { background: #2e6b3a radial-gradient(circle at 30% 30%, rgba(255,255,255,.12), transparent 60%); color: #fff8ec; }
+/* the ticket: BARÇA up the stub, the score in big figures */
+.gm-stub { position: absolute; left: 0; top: 0; bottom: 0; width: 24px; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; transform: rotate(180deg); font: 700 11px "Cormorant SC", serif; letter-spacing: .5em; color: #f6d77a; text-shadow: 0 1px 1px rgba(0,0,0,.5); z-index: 2; font-style: normal; }
+.gm-step b { font-size: 34px !important; min-width: 28px !important; }
+.gm-step button { box-shadow: inset 0 0 0 2px #f8f1e1, inset 0 0 0 2.6px rgba(165,132,63,.6); }
+.gm-barca .gm-pick.up[aria-pressed="true"] { color: #fff8ec; background: #004d98 radial-gradient(circle at 30% 30%, rgba(255,255,255,.14), transparent 60%); }
+/* brass plaques for the level and action buttons, cut letters */
+.gm-levels button, .gm-acts button { background: linear-gradient(#f6e3a6, #c9a456 45%, #94702c 100%) !important; color: #3a2408 !important; border: 1px solid #5a3e10 !important; text-shadow: 0 1px 0 rgba(255,240,200,.6); box-shadow: inset 0 1px 0 rgba(255,250,225,.9), inset 0 -1px 0 rgba(70,40,5,.5), 0 2px 3px rgba(0,0,0,.45) !important; border-radius: 2px !important; letter-spacing: .1em; }
+.gm-levels button[aria-pressed="false"] { filter: saturate(.55) brightness(.72); }
+.gm-levels button[aria-pressed="true"] { filter: none; }
+.gm-acts button:disabled { filter: saturate(.3) brightness(.6); opacity: 1 !important; }
+/* the board: deeper grain, a gilt line round the playing field */
+.gm-bwrap { box-shadow: 0 0 0 1px rgba(255,230,170,.35) inset, 0 0 0 2px #bf9a52, 0 7px 0 #2a0c04, 0 20px 34px rgba(0,0,0,.6) !important; }
+.gm-board { background: url(shelf/gen_wood.png) 0 0 / 300px; background-blend-mode: multiply; border-radius: 3px; }
+.gm-wood { fill: rgba(222,180,108,.84) !important; }
+.gm-word { align-items: center; }
+.gm-state { display: inline-flex; align-items: center; gap: 8px; }
+.gm-dot { width: 13px; height: 13px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #5a5550, #1a1714 50%, #050404); box-shadow: 0 1px 2px rgba(0,0,0,.6); }
+/* 押好之後 (the owner's pick 2026-11-26: 甲 朱印) — the button steps aside once the guess is in; a step on the score brings it back */
+.gm-barca .gm-picks { position: relative; min-height: 46px; align-items: center; }
+.gm-seal { display: none; }
+.gm-betted .gm-pick { display: none; }
+/* a round vermilion seal pressed under the score */
+.gm-betted .gm-seal { display: flex; align-items: center; justify-content: center; width: 58px; height: 58px; border-radius: 50%; border: 2.5px solid #b3261e; box-shadow: inset 0 0 0 2px #f8f1e1, inset 0 0 0 3.5px #b3261e; color: #b3261e; font: 700 17px "Noto Serif TC", serif; letter-spacing: .08em; transform: rotate(-12deg); opacity: .88; background: radial-gradient(circle at 40% 35%, transparent 55%, rgba(179,38,30,.08)); }

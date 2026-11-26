@@ -50,10 +50,10 @@ function slipHtml() {
     ? `<p class="gm-last">${md(last.date)}${last.closed ? "休市，這張不算" : "平盤，這張不算"}</p>`
     : `<p class="gm-last ${last.win ? "win" : "lose"}">${md(last.date)}　猜${last.pick > 0 ? "收紅" : "收黑"}，開出 <b>${signed(last.change)}</b>　${last.win ? "猜中" : "沒中"}</p>`;
   const btn = (v, label) => `<button type="button" class="gm-pick${v > 0 ? " up" : " down"}" data-pick="${v}" aria-pressed="${mine?.pick === v}">${label}</button>`;
-  return `<div class="gm-slip" role="group" aria-label="明早開獎">
+  return `<div class="gm-slip gm-tw" role="group" aria-label="明早開獎">
     <p class="gm-head">明早開獎</p>
     <p class="gm-q">${md(t)}　台股收盤</p>
-    <div class="gm-picks">${btn(1, "收紅")}${btn(-1, "收黑")}</div>
+    <div class="gm-picks">${btn(1, "▲ 收紅")}${btn(-1, "▼ 收黑")}</div>
     <p class="gm-shut">${mine ? "已押好，" : ""}開盤前都能改</p>
     ${lastLine}
     <p class="gm-tally">連勝 <b>${streak}</b>　共猜中 <b>${hits}</b> / ${done.length}</p>
@@ -68,6 +68,92 @@ function wireSlip(root) {
     store.set("games.picks", picks.sort((a, b) => a.date.localeCompare(b.date)).slice(-120));
     const slip = root.querySelector(".gm-slip"); slip.outerHTML = slipHtml(); wireSlip(root);
   });
+}
+
+// ——— 巴薩 (the owner, 2026-11-26: 「比賽猜巴薩就好」, 「用 ESPN 那份公開資料」) ———
+// The next Barça match from ESPN's public site API (CORS open, not an official service: it may change its shape one day,
+// the owner was told); a score guessed before kick-off, settled from that league's scoreboard on the match's date.
+// 全中 = the exact score; 猜中勝負 = the right winner (or a draw); the streak counts the right 勝負.
+const ESPN = "https://site.api.espn.com/apis/site/v2/sports/soccer";
+const BAR = "83";
+const ZH = { "Real Madrid": "皇馬", "Atlético Madrid": "馬競", "Atletico Madrid": "馬競", "Athletic Club": "畢爾包", "Real Sociedad": "皇家社會", "Villarreal": "比利亞雷亞爾",
+  "Real Betis": "貝提斯", "Sevilla": "塞維亞", "Valencia": "瓦倫西亞", "Celta Vigo": "塞爾塔", "Getafe": "赫塔費", "Osasuna": "奧薩蘇納", "Girona": "赫羅納",
+  "Rayo Vallecano": "巴列卡諾", "Mallorca": "馬略卡", "Alavés": "阿拉維斯", "Espanyol": "西班牙人", "Elche": "埃爾切", "Levante": "萊萬特", "Deportivo": "拉科魯尼亞",
+  "Real Oviedo": "奧維耶多", "Manchester City": "曼城", "Sporting CP": "葡萄牙體育", "Como": "科莫", "Bayern Munich": "拜仁", "Paris Saint-Germain": "巴黎聖日耳曼", "Internazionale": "國際米蘭", "Liverpool": "利物浦", "Arsenal": "兵工廠", "Chelsea": "切爾西", "Juventus": "尤文圖斯", "Borussia Dortmund": "多特蒙德", "AC Milan": "AC 米蘭", "Benfica": "本菲卡", "Napoli": "拿坡里", "Manchester United": "曼聯", "Tottenham Hotspur": "熱刺", "Atalanta": "亞特蘭大", "Bayer Leverkusen": "勒沃庫森", "Newcastle United": "紐卡索", "Aston Villa": "阿斯頓維拉", "Porto": "波爾圖", "Club Brugge": "布魯日", "Racing Santander": "桑坦德競技", "Las Palmas": "拉斯帕爾馬斯", "Leganés": "雷加內斯", "Valladolid": "瓦拉多利德" };
+const zh = (n) => ZH[n] || n;
+const COMP = { "esp.1": "西甲", "uefa.champions": "歐冠", "esp.super_cup": "超級盃", "esp.copa_del_rey": "國王盃", "club.friendly": "友誼賽" };
+const twTime = (iso) => { const d = new Date(Date.parse(iso) + 8 * 36e5); return { date: d.toISOString().slice(0, 10), hm: d.toISOString().slice(11, 16) }; };
+const getJ = async (u) => { try { const r = await fetch(u, { cache: "no-store" }); return r.ok ? await r.json() : null; } catch { return null; } };
+function matchOf(e) {
+  const c = e?.competitions?.[0], t = c?.competitors || [], me = t.find((x) => x.team?.id === BAR), them = t.find((x) => x.team?.id !== BAR);
+  if (!me || !them || !e.date) return null;
+  return { id: String(e.id), at: e.date, slug: e.league?.slug || "esp.1", comp: COMP[e.league?.slug] || "", home: me.homeAway === "home", name: zh(them.team.displayName || them.team.name || "") };
+}
+async function nextMatch() {
+  const d = await getJ(`${ESPN}/all/teams/${BAR}/schedule?fixture=true`);
+  const list = (d?.events || []).map(matchOf).filter((m) => m && Date.parse(m.at) > Date.now()).sort((a, b) => a.at.localeCompare(b.at));
+  if (list[0]) store.set("games.barca.next", list[0]);
+  return list[0] || null;
+}
+async function settleBarca() { // each guess past its kick-off and not yet settled: its league's scoreboard on the day (UTC, then the day before)
+  const picks = store.get("games.barca.picks", []); let changed = false;
+  for (const p of picks) {
+    if (p.done || Date.parse(p.at) + 2 * 36e5 > Date.now()) continue;
+    for (const day of [p.at.slice(0, 10), new Date(Date.parse(p.at) - 864e5).toISOString().slice(0, 10)]) {
+      const d = await getJ(`${ESPN}/${p.slug}/scoreboard?dates=${day.replace(/-/g, "")}`), e = (d?.events || []).find((x) => String(x.id) === p.id);
+      if (!e) continue;
+      const c = e.competitions?.[0];
+      if (c?.status?.type?.completed) {
+        const t = c.competitors || [], me = t.find((x) => x.team?.id === BAR), them = t.find((x) => x.team?.id !== BAR);
+        const a = Number(me?.score), b = Number(them?.score);
+        if (Number.isFinite(a) && Number.isFinite(b)) { p.done = { bar: a, opp: b }; changed = true; }
+      } else if (/POSTPONED|CANCELED/.test(c?.status?.type?.name || "")) { p.done = { void: true }; changed = true; }
+      break;
+    }
+  }
+  if (changed) store.set("games.barca.picks", picks);
+  return changed;
+}
+const sgn = (x) => Math.sign(x);
+function barcaHtml() {
+  const m = store.get("games.barca.next", null), picks = store.get("games.barca.picks", []);
+  const done = picks.filter((p) => p.done && !p.done.void);
+  const hit = (p) => sgn(p.bar - p.opp) === sgn(p.done.bar - p.done.opp), exact = (p) => p.bar === p.done.bar && p.opp === p.done.opp;
+  let streak = 0; for (let k = done.length - 1; k >= 0 && hit(done[k]); k--) streak++;
+  const last = picks.filter((p) => p.done).at(-1);
+  const vs = (x, a, b) => x.home ? `巴薩 <b>${a}</b> : <b>${b}</b> ${x.name}` : `${x.name} <b>${b}</b> : <b>${a}</b> 巴薩`;
+  const lastLine = !last ? "" : last.done.void ? `<p class="gm-last">${last.name} 那場延期，這張不算</p>`
+    : `<p class="gm-last ${hit(last) ? "win" : "lose"}">${vs(last, last.done.bar, last.done.opp)}　你猜 ${last.home ? `${last.bar}:${last.opp}` : `${last.opp}:${last.bar}`}　${exact(last) ? "全中" : hit(last) ? "猜中勝負" : "沒中"}</p>`;
+  const tally = `<p class="gm-tally">連勝 <b>${streak}</b>　全中 <b>${done.filter(exact).length}</b>　猜中勝負 <b>${done.filter(hit).length}</b> / ${done.length}</p>`;
+  if (!m || Date.parse(m.at) <= Date.now()) return `<div class="gm-slip gm-barca" role="group" aria-label="巴薩"><i class="gm-stub" aria-hidden="true">BARÇA</i><p class="gm-head">巴薩</p><p class="gm-shut">${m ? "比賽踢著，結束後開獎" : "賽程還沒讀到"}</p>${lastLine}${tally}</div>`;
+  const mine = picks.find((p) => p.id === m.id), t = twTime(m.at), g = mine || { bar: 1, opp: 1 };
+  const side = (k, label, v) => `<span class="gm-side"><span class="gm-team">${label}</span><span class="gm-step"><button type="button" data-step="${k}" data-d="-1" aria-label="${label}少一球">−</button><b data-v="${k}">${v}</b><button type="button" data-step="${k}" data-d="1" aria-label="${label}多一球">+</button></span></span>`;
+  const sides = m.home ? side("bar", "巴薩", g.bar) + `<span class="gm-colon">:</span>` + side("opp", m.name, g.opp) : side("opp", m.name, g.opp) + `<span class="gm-colon">:</span>` + side("bar", "巴薩", g.bar);
+  return `<div class="gm-slip gm-barca" role="group" aria-label="巴薩" data-id="${m.id}">
+    <i class="gm-stub" aria-hidden="true">BARÇA</i><p class="gm-head">巴薩${m.comp ? `<span class="gm-comp">${m.comp}</span>` : ""}</p>
+    <p class="gm-q">${md(t.date)} ${t.hm}　${m.home ? "主場" : "客場"}</p>
+    <div class="gm-score">${sides}</div>
+    <div class="gm-picks${mine ? " gm-betted" : ""}"><button type="button" class="gm-pick up" data-bet aria-pressed="${Boolean(mine)}">押這個比分</button><span class="gm-seal" aria-hidden="true">已押</span></div>
+    <p class="gm-shut">開賽前都能改</p>
+    ${lastLine}${tally}
+  </div>`;
+}
+function wireBarca(root) {
+  const box = root.querySelector(".gm-barca"); if (!box) return;
+  const redraw = () => { box.outerHTML = barcaHtml(); wireBarca(root); };
+  box.onclick = (ev) => {
+    const m = store.get("games.barca.next", null); if (!m || Date.parse(m.at) <= Date.now()) return;
+    const st = ev.target.closest("[data-step]"), bet = ev.target.closest("[data-bet]");
+    if (st) { const v = box.querySelector(`[data-v="${st.dataset.step}"]`); v.textContent = Math.max(0, Math.min(9, Number(v.textContent) + Number(st.dataset.d)));
+      box.querySelector("[data-bet]").setAttribute("aria-pressed", "false"); box.querySelector(".gm-picks").classList.remove("gm-betted"); return; }
+    if (!bet) return;
+    const picks = store.get("games.barca.picks", []).filter((p) => p.id !== m.id);
+    picks.push({ ...m, bar: Number(box.querySelector('[data-v="bar"]').textContent), opp: Number(box.querySelector('[data-v="opp"]').textContent) });
+    store.set("games.barca.picks", picks.sort((a, b) => a.at.localeCompare(b.at)).slice(-80)); redraw();
+  };
+  if (!root.dataset.asked) { root.dataset.asked = "1"; // once per page: the schedule, then any result due
+    Promise.all([nextMatch(), settleBarca()]).then(() => { const b = root.isConnected && root.querySelector(".gm-barca"); if (b) { b.outerHTML = barcaHtml(); wireBarca(root); } }).catch(() => {});
+  }
 }
 
 // ——— 五子棋 ———
@@ -164,12 +250,12 @@ function boardSvg() {
 function wordOf() {
   const w = store.get("games.gomoku.tally", {}), t = w[G.level] || [0, 0];
   const state = G.over ? (G.over.who === 1 ? "你贏了" : G.over.who === 2 ? "電腦贏了" : "和棋") : G.busy ? "電腦想一下……" : "輪到你（黑）";
-  return `<span class="gm-state">${state}</span><span class="gm-rec">這一段 ${t[0]} 勝 ${t[1]} 敗</span>`;
+  return `<span class="gm-state">${G.over ? "" : '<i class="gm-dot" aria-hidden="true"></i>'}${state}</span><span class="gm-rec">這一段 ${t[0]} 勝 ${t[1]} 敗</span>`;
 }
 function goHtml() {
   return `<div class="gm-go">
     <div class="gm-levels" role="group" aria-label="難度">${LEVELS.map(([k, n]) => `<button type="button" data-level="${k}" aria-pressed="${G.level === k}">${n}</button>`).join("")}</div>
-    <div class="gm-bwrap">${boardSvg()}</div>
+    <div class="gm-bwrap"><i class="gm-bowl black" aria-hidden="true"></i>${boardSvg()}<i class="gm-bowl white" aria-hidden="true"></i></div>
     <p class="gm-word">${wordOf()}</p>
     <div class="gm-acts"><button type="button" data-act="undo"${G.moves.length < 2 || G.busy ? " disabled" : ""}>悔棋</button><button type="button" data-act="new">新的一局</button></div>
   </div>`;
@@ -219,12 +305,12 @@ export function gamesHtml() {
   if (!G) { const k = store.get("games.gomoku", null); G = k && Array.isArray(k.moves) ? { level: k.level || "mid", moves: k.moves, over: k.over || null } : fresh(); }
   G.busy = false;
   if (!G.over && G.moves.length % 2) { const [mx, my] = think(G.moves, G.level); G.moves.push([mx, my]); finish(mx, my); save(); } // left while the phone was thinking
-  return `<div class="gm-table">${slipHtml()}${goHtml()}</div>`;
+  return `<div class="gm-table">${slipHtml()}${barcaHtml()}${goHtml()}</div>`;
 }
 export function wireGames(root) {
   if (!root) return;
   noteTaiex(store.get("market.last", null)?.items);
-  wireSlip(root); wireGo(root);
+  wireSlip(root); wireBarca(root); wireGo(root);
   fetchMarket().then((d) => { // the file as it stands now: a close that came in since the front page was read settles here too
     if (!d || !root.isConnected) return;
     noteTaiex(d.items);
