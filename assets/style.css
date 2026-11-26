@@ -3894,3 +3894,18 @@ html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's o
 .gd-c svg { display: block; width: 100%; height: 100%; }
 .gd-c1 { left: 4px; top: 4px; } .gd-c2 { right: 4px; top: 4px; transform: scaleX(-1); } .gd-c3 { left: 4px; bottom: 4px; transform: scaleY(-1); } .gd-c4 { right: 4px; bottom: 4px; transform: scale(-1); }
 .games-scene::before { display: none; }
+/* 西洋棋：開局名稱與勢力條（2026-11-27，勢力條社長選甲） */
+.ge-open { margin: 10px 0 2px; min-height: 22px; color: #f1e4c4; font: 600 15px/22px "Noto Serif TC", serif; letter-spacing: .06em; text-shadow: 0 1px 2px rgba(0,0,0,.6); }
+.ge-open span { display: inline-block; margin-right: 8px; padding: 0 6px; font-size: 11px; line-height: 18px; color: #2a1806; background: linear-gradient(#f3dc9a, #c9a456); border-radius: 2px; vertical-align: 2px; letter-spacing: .2em; text-shadow: none; }
+.ge-row { display: flex; align-items: stretch; gap: 6px; }
+.ge-row .gm-bwrap { flex: 1; min-width: 0; }
+.ge-vbar { position: relative; flex: 0 0 20px; border-radius: 3px; overflow: hidden; background: linear-gradient(90deg, #2a1f18, #080504); box-shadow: 0 0 0 1.5px #bf9a52, 0 6px 14px rgba(0,0,0,.5); }
+.ge-vbar .ge-fill { position: absolute; left: 0; right: 0; bottom: 0; transition: height .5s ease; }
+.ge-vbar .ge-fill.w { background: linear-gradient(90deg, #fffdf6, #e6d3a8); }
+.ge-vbar .ge-fill.b { background: linear-gradient(90deg, #4a3c30, #0c0806); }
+.ge-vbar:has(.ge-fill.b) { background: linear-gradient(90deg, #fffdf6, #e6d3a8); }
+.ge-vbar .ge-num { position: absolute; left: 0; right: 0; font: 700 10px "Cormorant Garamond", serif; text-align: center; writing-mode: horizontal-tb; letter-spacing: -.02em; }
+.ge-vbar .ge-num.lo { bottom: 4px; } .ge-vbar .ge-num.hi { top: 4px; }
+.ge-vbar:has(.ge-fill.w) .ge-num.lo, .ge-vbar:has(.ge-fill.b) .ge-num.hi { color: #3a2a18; }
+.ge-vbar:has(.ge-fill.w) .ge-num.hi, .ge-vbar:has(.ge-fill.b) .ge-num.lo { color: #e9d5a2; }
+.ge-num { font-family: "Noto Serif TC", serif !important; font-variant-numeric: lining-nums tabular-nums; }

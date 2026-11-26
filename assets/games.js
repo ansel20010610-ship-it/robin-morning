@@ -268,6 +268,52 @@ function think(moves, level) {
   if (level === "easy" && rated.length > 1 && Math.random() < .3) return rated[1][0];
   return rated[0][0];
 }
+// 招數 (the owner 2026-11-27 「西洋棋可以加上招數嗎（開局或防禦之類的）」): the mainstream openings, each named once its line is on the board. Matched by
+// position, so a line reached in another order still counts, and the name stays after play leaves the book.
+const BOOK = [
+  ["e2e4", "王兵開局"], ["d2d4", "后兵開局"], ["c2c4", "英國式開局"], ["g1f3", "雷蒂開局"], ["f2f4", "伯德開局"],
+  ["e2e4 e7e5", "開放式開局"], ["e2e4 e7e5 g1f3 b8c6 f1c4", "義大利開局"], ["e2e4 e7e5 g1f3 b8c6 f1c4 g8f6", "雙馬防禦"],
+  ["e2e4 e7e5 g1f3 b8c6 f1b5", "西班牙開局"], ["e2e4 e7e5 g1f3 b8c6 f1b5 a7a6", "西班牙開局・莫菲防禦"], ["e2e4 e7e5 g1f3 b8c6 f1b5 g8f6", "西班牙開局・柏林防禦"],
+  ["e2e4 e7e5 g1f3 b8c6 d2d4", "蘇格蘭開局"], ["e2e4 e7e5 g1f3 b8c6 b1c3 g8f6", "四馬開局"], ["e2e4 e7e5 g1f3 g8f6", "俄羅斯防禦"],
+  ["e2e4 e7e5 g1f3 d7d6", "菲利道爾防禦"], ["e2e4 e7e5 f2f4", "王翼棄兵"], ["e2e4 e7e5 b1c3", "維也納開局"],
+  ["e2e4 c7c5", "西西里防禦"], ["e2e4 c7c5 c2c3", "西西里防禦・阿拉平變例"], ["e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6", "西西里防禦・納道夫變例"],
+  ["e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6", "西西里防禦・龍式變例"],
+  ["e2e4 e7e6", "法蘭西防禦"], ["e2e4 c7c6", "卡羅－康防禦"], ["e2e4 d7d5", "斯堪地那維亞防禦"], ["e2e4 g8f6", "阿廖欣防禦"],
+  ["e2e4 g7g6", "現代防禦"], ["e2e4 d7d6 d2d4 g8f6 b1c3 g7g6", "皮爾茨防禦"],
+  ["d2d4 d7d5 c2c4", "后翼棄兵"], ["d2d4 d7d5 c2c4 e7e6", "后翼棄兵・拒絕"], ["d2d4 d7d5 c2c4 d5c4", "后翼棄兵・接受"], ["d2d4 d7d5 c2c4 c7c6", "斯拉夫防禦"],
+  ["d2d4 d7d5 c1f4", "倫敦系統"], ["d2d4 g8f6 c1f4", "倫敦系統"], ["d2d4 g8f6", "印度防禦"], ["d2d4 f7f5", "荷蘭防禦"],
+  ["d2d4 g8f6 c2c4 g7g6 b1c3 f8g7", "古印度防禦"], ["d2d4 g8f6 c2c4 g7g6 b1c3 d7d5", "格林菲爾德防禦"],
+  ["d2d4 g8f6 c2c4 e7e6 b1c3 f8b4", "尼姆佐維奇印度防禦"], ["d2d4 g8f6 c2c4 e7e6 g1f3 b7b6", "后翼印度防禦"],
+];
+const uciSq = (u) => (8 - Number(u[1])) * 8 + u.charCodeAt(0) - 97;
+const bookKey = (P) => P.b.join("") + P.turn + P.castle; // no en passant square: e2e4 sets one whether or not it can be used
+let OPENINGS = null;
+function openingOf(moves) { // the name of the last position on the board that a book line reaches
+  if (!OPENINGS) {
+    OPENINGS = new Map();
+    for (const [line, name] of BOOK) {
+      let P = startPos();
+      for (const u of line.split(" ")) { const m = legal(P).find((x) => x[0] === uciSq(u) && x[1] === uciSq(u.slice(2))); if (!m) throw new Error(`book: ${line}`); P = play(P, m); }
+      OPENINGS.set(bookKey(P), name);
+    }
+  }
+  let P = startPos(), name = "";
+  for (const m of moves.slice(0, 24)) { P = play(P, m); name = OPENINGS.get(bookKey(P)) || name; }
+  return name;
+}
+// 勢力 (the same day: 「會變動的勢力就是+-那個」): who stands better, in pawns, from white's side — a two-move look with the captures played out, worked
+// once per position (never on a tap) and kept.
+let EVAL = { at: "", v: 0 };
+function standing(moves) {
+  const at = moves.map((m) => m.join(",")).join(";");
+  if (EVAL.at === at) return EVAL.v;
+  const P = replay(moves), o = verdict(P);
+  let v;
+  if (o) v = o.who === "w" ? 1e5 : o.who === "b" ? -1e5 : 0;
+  else { const s = search(P, 2, -1e6, 1e6, true); v = P.turn === "w" ? s : -s; }
+  EVAL = { at, v };
+  return v;
+}
 const SQ = 40, PAD = 16, SIZE = PAD * 2 + SQ * 8;
 const GLYPH = { k: "♚", q: "♛", r: "♜", b: "♝", n: "♞", p: "♟" };
 const NAME = { k: "王", q: "后", r: "車", b: "象", n: "馬", p: "兵" };
@@ -313,10 +359,19 @@ function wordOf() {
   const state = o ? (o.who === G.you ? `你贏了（${o.how}）` : o.who ? `電腦贏了（${o.how}）` : `和棋（${o.how}）`) : G.busy || compTurn() ? `這局你執${ZHC(G.you)}，電腦想一下……` : `${inCheck(replay(G.moves)) ? "將軍！" : ""}輪到你（${ZHC(G.you)}）`;
   return `<span class="gm-state">${o ? "" : `<i class="gc-turn ${G.you}" aria-hidden="true"></i>`}${state}</span><span class="gm-rec">這一段 ${t[0]} 勝 ${t[1]} 敗 ${t[2]} 和</span>`;
 }
+// The standing (the owner's pick 2026-11-27: 甲): a bar beside the board, your side at the bottom and filling up as you stand better, the number from your side.
+const pawns = (v) => (Math.abs(v) >= 5e4 ? "勝勢" : Math.abs(v) < 5 ? "0.0" : `${v > 0 ? "+" : "−"}${(Math.abs(v) / 100).toFixed(1)}`);
+function standHtml() {
+  const w = standing(G.moves), mineV = G.you === "w" ? w : -w, part = (v) => 50 + 50 * Math.tanh(v / 450); // share of the bar, 0..100
+  const who = (v) => (Math.abs(v) < 30 ? "均勢" : v > 0 ? "你優" : "電腦優");
+  return `<div class="ge-vbar" role="img" aria-label="勢力 ${pawns(mineV)}，${who(mineV)}"><i class="ge-fill ${G.you}" style="height:${part(mineV).toFixed(1)}%"></i><b class="ge-num ${mineV >= 0 ? "lo" : "hi"}">${pawns(mineV).replace(/[+−]/, "")}</b></div>`;
+}
 function goHtml() {
+  const op = openingOf(G.moves);
   return `<div class="gm-go gc">
     <div class="gm-levels" role="group" aria-label="難度">${LEVELS.map(([k, n]) => `<button type="button" data-level="${k}" aria-pressed="${G.level === k}">${n}</button>`).join("")}</div>
-    ${takenHtml(G.you === "w" ? "b" : "w")}<div class="gm-bwrap">${boardSvg()}</div>${takenHtml(G.you)}
+    <p class="ge-open">${op ? `<span>開局</span>${op}` : `<span>開局</span>—`}</p>
+    ${takenHtml(G.you === "w" ? "b" : "w")}<div class="ge-row">${standHtml()}<div class="gm-bwrap">${boardSvg()}</div></div>${takenHtml(G.you)}
     <p class="gm-word">${wordOf()}</p>
     <div class="gm-acts"><button type="button" data-act="undo"${!mine() || G.busy ? " disabled" : ""}>悔棋</button><button type="button" data-act="new">新的一局</button></div>
   </div>`;
@@ -379,7 +434,7 @@ export function gamesHtml() {
   if (!G) { const k = store.get("games.chess", null); G = k && Array.isArray(k.moves) ? { level: k.level || "mid", moves: k.moves, over: k.over || null, you: k.you === "b" ? "b" : "w" } : fresh(); save(); }
   G.busy = false; SEL = -1;
   if (!G.over && compTurn()) { G.moves.push(think(G.moves, G.level)); finish(); save(); } // the phone's turn: left while it was thinking, or it opens as white
-  return `<div class="gm-table">${slipHtml()}${barcaHtml()}${goHtml()}</div>`;
+  return `<div class="gm-table">${goHtml()}${slipHtml()}${barcaHtml()}</div>`; // 西洋棋在最上面（社長 2026-11-27）
 }
 export function wireGames(root) {
   if (!root) return;
