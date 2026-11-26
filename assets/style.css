@@ -3790,13 +3790,6 @@ html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's o
 .gm-levels button[aria-pressed="true"] { background: #bf9a52; color: #2a1206; }
 .gm-acts button:disabled { opacity: .4; }
 .gm-bwrap { padding: 8px; background: linear-gradient(135deg, #6e2a14, #3a1206); border-radius: 6px; box-shadow: 0 14px 28px rgba(0,0,0,.5); }
-.gm-board { display: block; width: 100%; height: auto; touch-action: manipulation; }
-.gm-wood { fill: #d9b06a; }
-.gm-grid path { stroke: #5a3a18; stroke-width: .7; fill: none; }
-.gm-star { fill: #5a3a18; }
-.gm-st { filter: drop-shadow(0 1px 1px rgba(0,0,0,.45)); }
-.gm-lastm { fill: #b3261e; }
-.gm-five { stroke: #b3261e; stroke-width: 2.2; fill: none; stroke-linecap: round; opacity: .85; }
 .gm-word { margin: 12px 0 10px; color: #f1e4c4; font: 15px "Noto Serif TC", serif; display: flex; justify-content: space-between; }
 .gm-rec { opacity: .75; font-size: 13px; }
 .gm-acts { display: flex; gap: 10px; justify-content: center; }
@@ -3814,9 +3807,6 @@ html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's o
 .games-scene .gm-slip::before { content: ""; position: absolute; left: 50%; top: -9px; width: 54px; height: 16px; margin-left: -27px; border-radius: 3px 3px 6px 6px; background: linear-gradient(#f3dc9c, #bf9a52 45%, #7c5a22); box-shadow: 0 2px 3px rgba(0,0,0,.45); }
 .games-scene .gm-slip { position: relative; }
 .games-scene .gm-bwrap { background: linear-gradient(135deg, #7a301a, #3a1206); padding: 10px; box-shadow: 0 0 0 1.5px #bf9a52 inset, 0 6px 0 #2a0c04, 0 18px 30px rgba(0,0,0,.6); }
-.games-scene .gm-wood { fill: url(#gm-black); }
-.games-scene .gm-board { background: url(shelf/gen_wood.png) 0 0 / 260px; background-blend-mode: multiply; border-radius: 3px; }
-.games-scene .gm-wood { fill: rgba(226,186,118,.86); }
 .games-scene .gm-levels button, .games-scene .gm-acts button { background: linear-gradient(#f3dc9c, #bf9a52 55%, #8a6428); color: #2a1206; border-color: #6e4c18; box-shadow: 0 2px 3px rgba(0,0,0,.4); }
 .games-scene .gm-levels button[aria-pressed="false"] { background: linear-gradient(#5a2410, #3a1206); color: #f1e4c4; border-color: #bf9a52; }
 /* each box its own thing (the owner, 2026-11-26: 「每格要有他的特色」) */
@@ -3838,10 +3828,6 @@ html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's o
 .gm-barca .gm-pick.up[aria-pressed="true"] { background: #004d98; border-color: #004d98; color: #fff8ec; }
 /* 五子棋: the board with its two lidded bowls of stones */
 .gm-bwrap { position: relative; }
-.gm-bowl { position: absolute; top: -26px; width: 48px; height: 30px; border-radius: 50% 50% 46% 46% / 40% 40% 60% 60%; background: radial-gradient(60% 40% at 40% 30%, rgba(255,225,180,.5), transparent 70%), url(shelf/gen_wood.png) 0 0 / 120px, #6e2a14; background-blend-mode: normal, multiply, normal; box-shadow: 0 6px 8px rgba(0,0,0,.5), inset 0 -4px 6px rgba(0,0,0,.45); z-index: 2; }
-.gm-bowl::before { content: ""; position: absolute; left: 7px; right: 7px; top: 4px; height: 12px; border-radius: 50%; background: radial-gradient(circle at 30% 40%, var(--st1) 0 3px, transparent 3.5px), radial-gradient(circle at 60% 55%, var(--st1) 0 3px, transparent 3.5px), radial-gradient(circle at 45% 30%, var(--st2) 0 3px, transparent 3.5px), var(--st0); box-shadow: inset 0 1px 3px rgba(0,0,0,.6); }
-.gm-bowl.black { left: -6px; --st0: #1a1614; --st1: #3a3430; --st2: #0c0a09; }
-.gm-bowl.white { right: -6px; --st0: #e9e2d4; --st1: #ffffff; --st2: #cfc6b4; }
 .gm-levels { margin-bottom: 30px !important; }
 /* 再美一點 (2026-11-26): paper, type, seals, brass */
 .gm-slip { background-color: #f8f1e1; box-shadow: inset 0 0 22px rgba(150,110,50,.18), inset 0 0 2px rgba(120,80,30,.35), 0 2px 2px rgba(0,0,0,.25), 0 16px 28px -6px rgba(0,0,0,.55) !important; }
@@ -3867,14 +3853,47 @@ html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's o
 .gm-acts button:disabled { filter: saturate(.3) brightness(.6); opacity: 1 !important; }
 /* the board: deeper grain, a gilt line round the playing field */
 .gm-bwrap { box-shadow: 0 0 0 1px rgba(255,230,170,.35) inset, 0 0 0 2px #bf9a52, 0 7px 0 #2a0c04, 0 20px 34px rgba(0,0,0,.6) !important; }
-.gm-board { background: url(shelf/gen_wood.png) 0 0 / 300px; background-blend-mode: multiply; border-radius: 3px; }
-.gm-wood { fill: rgba(222,180,108,.84) !important; }
 .gm-word { align-items: center; }
 .gm-state { display: inline-flex; align-items: center; gap: 8px; }
-.gm-dot { width: 13px; height: 13px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #5a5550, #1a1714 50%, #050404); box-shadow: 0 1px 2px rgba(0,0,0,.6); }
 /* 押好之後 (the owner's pick 2026-11-26: 甲 朱印) — the button steps aside once the guess is in; a step on the score brings it back */
 .gm-barca .gm-picks { position: relative; min-height: 46px; align-items: center; }
 .gm-seal { display: none; }
 .gm-betted .gm-pick { display: none; }
 /* a round vermilion seal pressed under the score */
 .gm-betted .gm-seal { display: flex; align-items: center; justify-content: center; width: 58px; height: 58px; border-radius: 50%; border: 2.5px solid #b3261e; box-shadow: inset 0 0 0 2px #f8f1e1, inset 0 0 0 3.5px #b3261e; color: #b3261e; font: 700 17px "Noto Serif TC", serif; letter-spacing: .08em; transform: rotate(-12deg); opacity: .88; background: radial-gradient(circle at 40% 35%, transparent 55%, rgba(179,38,30,.08)); }
+/* 西洋棋 (replaces 五子棋, owner 2026-11-26; board 甲 書房木) */
+.gc-board { display: block; width: 100%; height: auto; touch-action: manipulation; border-radius: 3px; background: url(shelf/gen_wood.png) 0 0 / 300px; }
+.gc-pc { font-family: "Apple Symbols", "Segoe UI Symbol", "Noto Sans Symbols 2", "DejaVu Sans", serif; font-size: 34px; text-anchor: middle; paint-order: stroke; stroke-linejoin: round; }
+.gc-pcs .gc-pc { filter: drop-shadow(0 1.5px 1px rgba(0,0,0,.5)); }
+.gc-pc.w { fill: #f7efdc; stroke: #3a2a18; stroke-width: 1.1px; }
+.gc-pc.b { fill: #1c1612; stroke: #a8916a; stroke-width: .6px; }
+.gc-co { font: 600 9px "Cormorant Garamond", serif; text-anchor: middle; fill: #e9d5a2; letter-spacing: .05em; }
+.gc-last { fill: rgba(232,196,92,.42); }
+.gc-sel { fill: none; stroke: #f3d77a; stroke-width: 3; }
+.gc-dot { fill: rgba(40,24,8,.45); }
+.gc-take { fill: none; stroke: rgba(40,24,8,.5); stroke-width: 3.5; }
+.gc-check { fill: rgba(179,38,30,.55); filter: blur(3px); }
+.gc-turn { width: 13px; height: 13px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #ece6da 60%, #b9b0a0); box-shadow: 0 1px 2px rgba(0,0,0,.6); }
+.gc-taken { min-height: 24px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0 1px; margin: 4px 0; }
+.gc-taken .gc-pc { font-size: 19px; line-height: 1; filter: drop-shadow(0 1px 1px rgba(0,0,0,.6)); }
+.gc-taken .gc-pc.w { color: #f7efdc; -webkit-text-stroke: .6px #3a2a18; }
+.gc-taken .gc-pc.b { color: #1c1612; -webkit-text-stroke: .4px #a8916a; }
+/* maple and walnut over the grain, a walnut rim */
+.gc-rim { fill: rgba(58,30,12,.9); }
+.gc-light { fill: rgba(238,210,158,.78); }
+.gc-dark { fill: rgba(122,72,32,.86); }
+.gc-turn.b { background: radial-gradient(circle at 35% 30%, #5a5550, #1a1714 50%, #050404); }
+/* 棋子 (the owner's pick 2026-11-26: 甲 象牙烏木雕) */
+.gc-pcs .gc-pc { filter: url(#gc-carve) !important; font-size: 36px; }
+.gc-pcs .gc-pc.w { fill: url(#gc-ivory); stroke: #5a4020; stroke-width: .7px; }
+.gc-pcs .gc-pc.b { fill: url(#gc-ebony); stroke: #c9b08a; stroke-width: .45px; }
+/* 遊戲頁的桌面 (the owner's pick 2026-11-26: 乙 鑲嵌木框): a band of light maple and a black stringing let into the cherry, gilt corners */
+.gd-panel { display: block; position: absolute; inset: 50px 6px 88px; z-index: 1; pointer-events: none; border-radius: 4px;
+  background: radial-gradient(90% 60% at 50% 35%, rgba(255,225,180,.12), transparent 70%);
+  box-shadow: inset 0 0 0 2px #120804, inset 0 0 0 9px #d9b276, inset 0 0 0 10px #120804, inset 0 0 0 12px #7a3e1c, inset 0 0 0 13px #120804, 0 0 0 1px rgba(255,220,170,.2); }
+.gd-panel::before { content: ""; position: absolute; inset: 2px; border-radius: 3px; background: url(shelf/gen_wood.png) 0 0 / 160px; mix-blend-mode: multiply; opacity: .5;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; padding: 7px; }
+.gd-c { position: absolute; width: 44px; height: 44px; z-index: 6; filter: drop-shadow(0 1px 1px rgba(0,0,0,.6)); }
+.gd-c svg { display: block; width: 100%; height: 100%; }
+.gd-c1 { left: 4px; top: 4px; } .gd-c2 { right: 4px; top: 4px; transform: scaleX(-1); } .gd-c3 { left: 4px; bottom: 4px; transform: scaleY(-1); } .gd-c4 { right: 4px; bottom: 4px; transform: scale(-1); }
+.games-scene::before { display: none; }

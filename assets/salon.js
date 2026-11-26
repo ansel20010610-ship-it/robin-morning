@@ -952,23 +952,45 @@ function ARMCHAIR() { // box 278..402 × 626..791 — a Louis-Seize bergère: ca
   return svg(124, 165, s);
 }
 // ——— 遊戲桌 (#/games; the owner's pick 2026-11-26, sample 甲 「牆角遊戲桌」): a side table on the floor between the globe
-// and the armchair, a go board, two lidded bowls of stones and the 開獎 slip on it, its name in brass on the apron.
+// and the armchair, a chessboard (and what lies by it) and the 開獎 slip on it, its name in brass on the apron.
 // Box 136..266 × 662..762. Louis-Seize like the armchair (the owner's pick of three samples, 2026-11-26: 甲).
 const GW = 130, GH = 100;
-function onTable(cx, ty) { // what lies on the top, `ty` its front line
-  const lerp = (a, b, t) => a + (b - a) * t, bx0 = cx - 34, bx1 = cx + 16, fx0 = bx0 - 4, fx1 = bx1 + 2, by = ty - 16, fy = ty - 3;
-  let g = `<path d="M${fx0 + 1} ${fy + 4}L${fx1 + 3} ${fy + 4}L${bx1 + 3} ${by + 2}Z" fill="rgba(20,8,0,.35)"/>
-    <path d="M${fx0} ${fy}H${fx1}V${fy + 3}H${fx0}Z" fill="#8a6230"/><path d="M${fx0} ${fy}L${bx0} ${by}H${bx1}L${fx1} ${fy}Z" fill="#d6ad68"/><path d="M${fx0} ${fy}L${bx0} ${by}H${bx1}L${fx1} ${fy}Z" fill="url(#sl-wdh)" opacity=".18"/>`;
-  for (let i = 1; i < 8; i++) { const t = i / 8, y = lerp(by + 1.2, fy - 1, t), x0 = lerp(bx0 + 1.5, fx0 + 2, t), x1 = lerp(bx1 - 1.5, fx1 - 2, t); g += `<path d="M${x0.toFixed(1)} ${y.toFixed(1)}H${x1.toFixed(1)}" stroke="rgba(70,40,10,.55)" stroke-width=".35"/>`; }
-  for (let i = 1; i < 8; i++) { const t = i / 8; g += `<path d="M${lerp(bx0 + 1.5, bx1 - 1.5, t).toFixed(1)} ${by + 1.2}L${lerp(fx0 + 2, fx1 - 2, t).toFixed(1)} ${fy - 1}" stroke="rgba(70,40,10,.55)" stroke-width=".35"/>`; }
-  const st = (x, y, c) => `<ellipse cx="${x}" cy="${y + .6}" rx="2.1" ry="1.1" fill="rgba(0,0,0,.35)"/><ellipse cx="${x}" cy="${y}" rx="2" ry="1.15" fill="${c ? "#131010" : "#f2ece0"}"/><ellipse cx="${x - .6}" cy="${y - .35}" rx=".7" ry=".3" fill="rgba(255,255,255,${c ? .35 : .9})"/>`;
-  g += st(cx - 14, ty - 9, 1) + st(cx - 9, ty - 9.5, 0) + st(cx - 11, ty - 6.5, 1) + st(cx - 6, ty - 7, 0) + st(cx - 16, ty - 12, 0);
-  const bowl = (x, y, c) => `<ellipse cx="${x + .8}" cy="${y + 4.2}" rx="7" ry="2.2" fill="rgba(20,8,0,.4)"/><path d="M${x - 6.4} ${y}C${x - 6} ${y + 4.6} ${x + 6} ${y + 4.6} ${x + 6.4} ${y}Z" fill="url(#sl-wdh)"/><path d="M${x - 6.4} ${y}C${x - 6} ${y + 4.6} ${x + 6} ${y + 4.6} ${x + 6.4} ${y}Z" fill="#5a2410" opacity=".55"/>
-    <ellipse cx="${x}" cy="${y}" rx="6.4" ry="2" fill="#3a1508"/><ellipse cx="${x}" cy="${y - .2}" rx="5.4" ry="1.5" fill="${c}"/><ellipse cx="${x - 1.6}" cy="${y - .6}" rx="1.6" ry=".5" fill="rgba(255,255,255,.35)"/>
-    <path d="M${x - 6.2} ${y + .4}C${x - 5} ${y + 3} ${x - 3} ${y + 3.6} ${x} ${y + 3.8}" stroke="rgba(255,220,180,.35)" stroke-width=".5" fill="none"/>`;
-  g += bowl(cx + 26, ty - 10, "#1a1614") + bowl(cx + 38, ty - 6, "#ece5d8");
-  g += `<g transform="translate(${cx + 18} ${ty - 4}) rotate(-7)"><rect x=".8" y="1" width="17" height="10" fill="rgba(20,8,0,.3)"/><rect width="17" height="10" fill="url(#sl-paper)"/><rect width="17" height="10" fill="#f6efdc" opacity=".6"/>
+function onTable(cx, ty) { // what lies on the top, `ty` its front line: a game of chess half played, a chess clock and the 開獎 slip (五子棋 gave way to 西洋棋 2026-11-26; the owner's pick of three: 乙)
+  const lerp = (a, b, t) => a + (b - a) * t, bx0 = cx - 34, bx1 = cx + 14, fx0 = bx0 - 5, fx1 = bx1 + 3, by = ty - 17, fy = ty - 3;
+  const P = (u, v) => [lerp(lerp(bx0, bx1, u), lerp(fx0, fx1, u), v), lerp(by, fy, v)]; // u across, v back→front
+  const f1 = (n) => n.toFixed(2);
+  let g = `<path d="M${fx0 + 1} ${fy + 4}L${fx1 + 4} ${fy + 4}L${bx1 + 4} ${by + 2}Z" fill="rgba(20,8,0,.35)"/>
+    <path d="M${fx0 - 1.2} ${fy + 1}H${fx1 + 1.2}V${fy + 3.6}H${fx0 - 1.2}Z" fill="#4a2410"/><path d="M${fx0 - 1.2} ${fy + 1}L${bx0 - 1} ${by - 1}H${bx1 + 1}L${fx1 + 1.2} ${fy + 1}Z" fill="#5a2c12"/>
+    <path d="M${fx0 - 1.2} ${fy + 1}L${bx0 - 1} ${by - 1}H${bx1 + 1}L${fx1 + 1.2} ${fy + 1}Z" fill="none" stroke="#c9a456" stroke-width=".45"/>`;
+  for (let j = 0; j < 8; j++) for (let i = 0; i < 8; i++) {
+    const q = [P(i / 8, j / 8), P((i + 1) / 8, j / 8), P((i + 1) / 8, (j + 1) / 8), P(i / 8, (j + 1) / 8)];
+    g += `<path d="M${q.map(([x, y]) => `${f1(x)} ${f1(y)}`).join("L")}Z" fill="${(i + j) % 2 ? "#7a4820" : "#ecd3a0"}"/>`;
+  }
+  g += `<path d="M${fx0} ${fy}L${bx0} ${by}H${bx1}L${fx1} ${fy}Z" fill="url(#sl-varnish)" opacity=".5"/>`;
+  // a man standing on square (i, j): base, body, head; taller and crowned for a king, a little ball for a pawn
+  const man = (i, j, white, kind = "p") => {
+    const [x, y] = P((i + .5) / 8, (j + .55) / 8), k = .78 + .22 * (j / 8), h = { p: 3.4, k: 6, q: 5.4, r: 4, b: 4.8, n: 4.6 }[kind] * k, w = 1.25 * k;
+    const c = white ? "#f4ead2" : "#1c140e", e = white ? "#8a6a3a" : "#000", hi = white ? "rgba(255,255,255,.9)" : "rgba(255,240,220,.35)";
+    let m = `<ellipse cx="${f1(x + .5)}" cy="${f1(y + .3)}" rx="${f1(w * 1.3)}" ry="${f1(w * .45)}" fill="rgba(0,0,0,.35)"/>
+      <path d="M${f1(x - w)} ${f1(y)}h${f1(2 * w)}l${f1(-w * .45)} ${f1(-h * .78)}h${f1(-w * 1.1)}Z" fill="${c}" stroke="${e}" stroke-width=".18"/>
+      <ellipse cx="${f1(x)}" cy="${f1(y)}" rx="${f1(w * 1.05)}" ry="${f1(w * .35)}" fill="${c}" stroke="${e}" stroke-width=".18"/>`;
+    m += kind === "r" ? `<rect x="${f1(x - w * .7)}" y="${f1(y - h)}" width="${f1(w * 1.4)}" height="${f1(h * .26)}" fill="${c}" stroke="${e}" stroke-width=".18"/>`
+      : `<circle cx="${f1(x)}" cy="${f1(y - h * .86)}" r="${f1(w * (kind === "p" ? .62 : .55))}" fill="${c}" stroke="${e}" stroke-width=".18"/>`;
+    if (kind === "k") m += `<path d="M${f1(x)} ${f1(y - h * 1.18)}v${f1(h * .2)}M${f1(x - w * .32)} ${f1(y - h * 1.1)}h${f1(w * .64)}" stroke="${white ? "#8a6a3a" : "#d9c39a"}" stroke-width=".35"/>`;
+    if (kind === "n") m += `<path d="M${f1(x - w * .1)} ${f1(y - h * .7)}l${f1(w * .9)} ${f1(-h * .1)}l${f1(-w * .2)} ${f1(h * .2)}Z" fill="${c}" stroke="${e}" stroke-width=".18"/>`;
+    return m + `<path d="M${f1(x - w * .55)} ${f1(y - h * .2)}v${f1(-h * .45)}" stroke="${hi}" stroke-width=".3"/>`;
+  };
+  const men = (list) => list.sort((a, b) => a[1] - b[1]).map((m) => man(...m)).join(""); // back rows first
+  g += men([[4, 1, false, "k"], [2, 2, false, "n"], [5, 2, false, "p"], [3, 3, false, "p"], [4, 4, true, "p"], [5, 5, true, "n"], [2, 4, true, "b"], [6, 6, true, "k"], [1, 5, true, "p"], [0, 1, false, "r"]]);
+  const slip = (x, y, r) => `<g transform="translate(${x} ${y}) rotate(${r})"><rect x=".8" y="1" width="17" height="10" fill="rgba(20,8,0,.3)"/><rect width="17" height="10" fill="url(#sl-paper)"/><rect width="17" height="10" fill="#f6efdc" opacity=".6"/>
     <path d="M0 1.2H17" stroke="#a5843f" stroke-width=".5"/><path d="M3 4.4h11M3 6.6h8" stroke="#8a1c1c" stroke-width=".55"/><path d="M3 8.4h6" stroke="#4a3a2a" stroke-width=".4"/></g>`;
+  { // a chess clock: a walnut case, two white faces, two brass buttons
+    const x = cx + 22, y = ty - 15;
+    g += `<ellipse cx="${x + 11}" cy="${y + 13}" rx="13" ry="2" fill="rgba(20,8,0,.4)"/><path d="M${x} ${y + 12}L${x + 2} ${y}H${x + 20}L${x + 22} ${y + 12}Z" fill="url(#sl-wdh)"/><path d="M${x} ${y + 12}L${x + 2} ${y}H${x + 20}L${x + 22} ${y + 12}Z" fill="#5a2410" opacity=".5"/>
+      <rect x="${x + 5}" y="${y - 2.2}" width="3" height="2.2" rx=".6" fill="url(#sl-brass)"/><rect x="${x + 14}" y="${y - 1.2}" width="3" height="1.2" rx=".5" fill="url(#sl-brass)"/>`;
+    for (const [ox, a] of [[6.3, -40], [15.7, 70]]) g += `<circle cx="${x + ox}" cy="${y + 6.4}" r="3.6" fill="#c9a456"/><circle cx="${x + ox}" cy="${y + 6.4}" r="3" fill="#faf5e8"/><path d="M${x + ox} ${y + 6.4}l${f1(2.2 * Math.sin(a * Math.PI / 180))} ${f1(-2.2 * Math.cos(a * Math.PI / 180))}M${x + ox} ${y + 6.4}l1.3 .7" stroke="#1a1208" stroke-width=".4"/>`;
+    g += slip(cx + 24, ty - 2, -5);
+  }
   return g;
 }
 function gameTable() {
@@ -1054,7 +1076,7 @@ export function salonRoom(d) {
       <i class="sl-wall"></i><i class="sl-floor"></i>${deco(0, 0, W, H, WALL(lit.view))}${deco(0, 0, W, H, lit.light, "sl-light")}
       ${obj("museum")}${deco(12, FLOOR, 180, 12, FEET())}${obj("records")}${obj("world")}${obj("shelf")}${obj("poems")}${obj("list")}
       ${deco(281, 506, 104, 100, VITRINE_IN())}${obj("medals")}${deco(281, 506, 104, 100, VITRINE_GLASS())}${deco(22, 296, 72, 10, STAND())}${obj("stamps")}
-      ${deco(4, 572, 108, 219, EASEL())}${deco(278, 626, 124, 165, ARMCHAIR())}${obj("prints")}${obj("marks")}${link("games", "#/games", "遊戲桌：明早開獎、五子棋", box("games", [136, 662, GW, GH, gameTable()]))}${bird()}
+      ${deco(4, 572, 108, 219, EASEL())}${deco(278, 626, 124, 165, ARMCHAIR())}${obj("prints")}${obj("marks")}${link("games", "#/games", "遊戲桌：明早開獎、西洋棋", box("games", [136, 662, GW, GH, gameTable()]))}${bird()}
       ${deco(0, 0, W, 830, svg(W, 830, `<rect width="${W}" height="830" fill="url(#sl-aoR)" opacity=".35"/><rect y="700" width="${W}" height="130" fill="url(#sl-aoUp)" opacity=".7"/>`))}
       ${deco(0, 0, W, H, lit.tone, `sl-tone${lamp ? " lamp" : ""}`)}<i class="sl-vig"></i></div></div></section>`);
 }
@@ -1085,7 +1107,7 @@ const SUBJECT = {
   prints: { page: ".pr-all" },
   marks: { page: ".marks", fit: "w", tl: true }, // the notebook's title onto the page's
   nest: { page: ".yard .bird", fit: "w" },
-  games: { page: ".gm-board" },
+  games: { page: ".gc-board" },
 };
 const ease = (t) => (t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 const smooth = (t) => t * t * (3 - 2 * t);

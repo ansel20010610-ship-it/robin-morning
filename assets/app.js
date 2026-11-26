@@ -29,7 +29,7 @@ import { medalMonths, medalsHtml } from "./medals.js";
 import { printsHtml, wirePrints, resetPrints, toTop as printOnTop } from "./prints.js";
 import { poemsHtml, wirePoems, toTop as letterOnTop } from "./poems.js";
 import { salonHtml, roomHtml, wireRoom, wallSilk } from "./museum.js";
-import { gamesHtml, wireGames } from "./games.js";
+import { gamesHtml, wireGames, deskHtml } from "./games.js";
 import { salonRoom, wireSalon, redrawBird, roomMove, arrive } from "./salon.js";
 
 const S = { cfg: null, index: null, articles: new Map() };
@@ -517,9 +517,9 @@ function viewMedals() {
   wireBack();
   document.title = `紀念章｜${S.cfg.title}`;
 }
-// 遊戲桌 (#/games, a corner of 收藏; the owner's pick 2026-11-26): 明早開獎 and 五子棋 (games.js).
+// 遊戲桌 (#/games, a corner of 收藏; the owner's pick 2026-11-26): 明早開獎, 巴薩 and 西洋棋 (games.js).
 function viewGames() {
-  main.innerHTML = scenePage("Spiele", "遊戲桌", "#/saved", `<div class="sc-scene sc-desk games-scene"><i class="sc-lamp"></i>${gamesHtml()}</div>`);
+  main.innerHTML = scenePage("Spiele", "遊戲桌", "#/saved", `<div class="sc-scene sc-desk games-scene"><i class="sc-lamp"></i>${deskHtml()}${gamesHtml()}</div>`);
   wireBack();
   wireGames(main.querySelector(".gm-table"));
   document.title = `遊戲桌｜${S.cfg.title}`;
