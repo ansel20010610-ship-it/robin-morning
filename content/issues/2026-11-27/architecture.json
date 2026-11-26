@@ -1,0 +1,260 @@
+{
+ "column": "architecture",
+ "date": "2026-11-27",
+ "title": "加爾橋：50 公里只降 12 公尺，水還是溢了",
+ "dek": "羅馬人把水送過 50 公里，中間只准它降 12.27 公尺。第一次通水，水就在最平的那一段溢了出來。",
+ "brief": "加爾橋是羅馬人約公元 50 年蓋的水道橋，只是尼姆水道 50 公里裡最顯眼的一段。整條水道一共只降 12.27 公尺，平均每公里 25 公分；第一次通水，水就在坡度最小的那一段溢出，渠道因此墊高了 60 公分。",
+ "topic_key": "architecture:pont-du-gard",
+ "name_zh": "加爾橋",
+ "form": "number",
+ "voice": "walker",
+ "updated_at": "2026-11-27T01:54:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "hero": {
+  "kind": "photo",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Pont_du_Gard_%2802%29.jpg/1280px-Pont_du_Gard_%2802%29.jpg",
+  "width": 1280,
+  "height": 839,
+  "alt": "灰雲壓著的天空下，一座三層石拱橋橫過河谷：下兩層是大拱，最上層是一排小拱。前景是草地和灰白色的石灰岩塊，河灘是乾的，兩側有樹林和山坡。",
+  "caption": "加爾橋（Pont du Gard），2019 年 2 月拍攝。三層拱的最上層是水渠，整條水道約 50 公里，一共只降 12.27 公尺。",
+  "credit": "Krzysztof Golik",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Pont_du_Gard_(02).jpg",
+  "made": "2019"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "今天的古蹟是 **加爾橋**（Pont du Gard）。它在法國南部，橫過加爾東河，是三層石拱橋，高 48.77 公尺，是現存最高的羅馬水道橋。水道橋就是讓水不走地面，改走橋最上層的渠道，跨過山谷。"
+  },
+  {
+   "type": "p",
+   "text": "它大約是公元 50 年蓋的，當時在位的羅馬皇帝是克勞狄或尼祿，來源只說到這兩位。決定要蓋的是 **尼姆** 的市政官，尼姆當時是羅馬在高盧南部的城市。設計的人是誰不知道，古代文獻也沒有任何一處提到這項工程。"
+  },
+  {
+   "type": "p",
+   "text": "尼姆在 1 世紀長得很快，估計住了兩萬到兩萬五千人，想要噴泉和公共浴場，過得像羅馬。城裡本來有泉水，水量夠，可是水位太低，送不上那些建築。所以他們把烏澤斯（Uzès）附近的厄爾泉（Eure）引過來。水沒有泵，全靠往下流，兩頭只差 12 公尺多，卻要走 50 公里，這就是 **尼姆水道**。加爾橋只是這 50 公里裡最顯眼的一小段。"
+  },
+  {
+   "type": "p",
+   "text": "這條水道的平均坡度是 **每公里 25 公分**：水走 1 公里，只往下降 25 公分，比一把 30 公分的直尺還短。官網說這是當時做到的最小坡度之一。"
+  },
+  {
+   "type": "facts",
+   "title": "加爾橋與尼姆水道",
+   "items": [
+    [
+     "位置",
+     "法國南部加爾省（Gard）Vers-Pont-du-Gard，橫過加爾東河（Gardon）"
+    ],
+    [
+     "建造年代",
+     "約公元 50 年（克勞狄或尼祿時期；較新的發掘認為在公元 40–60 年之間）"
+    ],
+    [
+     "設計者",
+     "不詳；沒有任何古代文獻提到這項工程"
+    ],
+    [
+     "規模",
+     "橋高 48.77 公尺，三層拱；整條水道約 50 公里，總落差 12.27 公尺"
+    ],
+    [
+     "世界遺產",
+     "1985 年登錄"
+    ]
+   ]
+  },
+  {
+   "type": "h",
+   "text": "25 公分是兩頭的高度差攤出來的"
+  },
+  {
+   "type": "p",
+   "text": "水沒有泵，全靠重力往下流。起點多高、終點多高一定了，中間能「花」的高度就一定了。教學文件給的數字：最上游的渠底海拔 71.25 公尺，尼姆配水池的渠底海拔 58.94 公尺，總落差 **12.27 公尺**。兩個海拔直接相減約 12.30，教學文件列 12.27，差約 3 公分，本文照它列。所以 25 公分不是設計者愛挑的數，是這 12 公尺多的高度分給整段路的結果。",
+   "tag": "推論"
+  },
+  {
+   "type": "p",
+   "text": "路也不是直的。烏澤斯到尼姆直線只有約 20 公里，水道卻繞成約 50 公里，因為要繞開尼姆那片海拔 200 公尺的荒地（法文叫 garrigue），沿著丘陵走。如果真能走直線，12.27 公尺分給 20 公里，每公里約 61 公分，是實際的兩倍多。這是本文自己算的，來源沒有這樣寫。"
+  },
+  {
+   "type": "svg",
+   "title": "50 公里，只降 12.27 公尺",
+   "svg": "<svg viewBox=\"0 0 700 340\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"尼姆水道的高度剖面：照真實比例幾乎是一條水平線，縱向放大後才看得出一路微微向下\"><text class=\"ink\" x=\"40\" y=\"26\" font-size=\"15\" font-weight=\"700\">照真實比例：約 50 公里長，只降 12.27 公尺</text><line class=\"ink\" x1=\"40\" y1=\"84\" x2=\"580\" y2=\"84\" stroke-width=\"2\"/><circle class=\"accent\" cx=\"40\" cy=\"84\" r=\"4\"/><circle class=\"accent\" cx=\"580\" cy=\"84\" r=\"4\"/><text class=\"ink\" x=\"40\" y=\"62\" font-size=\"13\">烏澤斯　渠底 71.25 公尺</text><text class=\"ink\" x=\"580\" y=\"62\" font-size=\"13\" text-anchor=\"end\">尼姆配水池　渠底 58.94 公尺</text><text class=\"muted\" x=\"310\" y=\"112\" font-size=\"13\" text-anchor=\"middle\">落差在這個比例下小到畫不出來</text><line class=\"muted\" x1=\"40\" y1=\"130\" x2=\"580\" y2=\"130\" stroke-width=\"1\"/><text class=\"ink\" x=\"40\" y=\"166\" font-size=\"15\" font-weight=\"700\">縱向放大後的示意（平均線，實際坡度不均勻）</text><line class=\"ink\" x1=\"40\" y1=\"200\" x2=\"580\" y2=\"290\" stroke-width=\"2\"/><circle class=\"accent\" cx=\"40\" cy=\"200\" r=\"4\"/><circle class=\"accent\" cx=\"580\" cy=\"290\" r=\"4\"/><line class=\"muted\" x1=\"580\" y1=\"200\" x2=\"610\" y2=\"200\" stroke-width=\"1\"/><line class=\"muted\" x1=\"602\" y1=\"200\" x2=\"602\" y2=\"290\" stroke-width=\"1\"/><line class=\"muted\" x1=\"580\" y1=\"290\" x2=\"610\" y2=\"290\" stroke-width=\"1\"/><text class=\"accent\" x=\"614\" y=\"249\" font-size=\"13\">落差</text><text class=\"accent\" x=\"614\" y=\"267\" font-size=\"13\">12.27 m</text><text class=\"muted\" x=\"40\" y=\"224\" font-size=\"13\">起點</text><text class=\"muted\" x=\"580\" y=\"314\" font-size=\"13\" text-anchor=\"end\">終點</text><text class=\"muted\" x=\"310\" y=\"330\" font-size=\"13\" text-anchor=\"middle\">平均每公里降約 25 公分</text></svg>",
+   "caption": "上圖照比例，下圖只把垂直方向放大，並把坡度畫成一條平均直線；實際坡度並不均勻。示意，不按比例。依據：CNRS 研究團隊（Fiches、Paillet 等）的 Pont du Gard 教學文件。",
+   "credit": "原創示意"
+  },
+  {
+   "type": "table",
+   "title": "這個數字是怎麼接起來的",
+   "head": [
+    "項目",
+    "數值",
+    "備註"
+   ],
+   "rows": [
+    [
+     "起點（烏澤斯）渠底海拔",
+     "71.25 公尺",
+     "水道最上游的渠底"
+    ],
+    [
+     "終點（尼姆配水池）渠底海拔",
+     "58.94 公尺",
+     "教學文件另處寫 58.947"
+    ],
+    [
+     "總落差",
+     "12.27 公尺",
+     "教學文件的「一般落差」欄"
+    ],
+    [
+     "水道全長",
+     "50.01 公里",
+     "直線距離只有約 20 公里"
+    ],
+    [
+     "平均坡度",
+     "約 25 公分／公里",
+     "教學文件 24.8，官網 25；約每 100 公尺 2.5 公分"
+    ]
+   ],
+   "caption": "數字依 CNRS 教學文件與 Pont du Gard 官網整理。"
+  },
+  {
+   "type": "p",
+   "text": "教學文件換成比較好懂的說法：平均每 100 公尺，不到 2.5 公分。"
+  },
+  {
+   "type": "quote",
+   "text": "這是一項技術上的壯舉：烏澤斯（71.25 公尺）到尼姆（58.94 公尺）之間，高低不一的落差只有 12.27 公尺，幾乎等於沒有。",
+   "original": "le dénivelé, irrégulier entre Uzès (71,25 m) et Nîmes (58,94 m), n’est que de 12,27 mètres, soit presque nul",
+   "cite": "Jean-Christophe Galant，Pont du Gard 教學文件（Uzès 教育服務處撰寫的一節），本文自譯"
+  },
+  {
+   "type": "h",
+   "text": "平均是平均，實際不一樣"
+  },
+  {
+   "type": "p",
+   "text": "25 公分只是平均。教學文件說，設計者沒有給整條水道同一個坡度。烏澤斯到橋所在的 Vers-Pont-du-Gard 之間，坡度大；過了橋，到 Clausone 池一帶，還有 Sernhac 到 Lédenon 之間，坡度很小；Lédenon 到尼姆又稍微大一點。為什麼這樣分，教學文件沒說。維基百科的整理是：如果坡度一致，加爾橋會高到沒辦法蓋。"
+  },
+  {
+   "type": "h",
+   "text": "第一次通水，水就溢出來"
+  },
+  {
+   "type": "p",
+   "text": "坡度最小的那一段先出了事。教學文件的導論只用了一句話交代："
+  },
+  {
+   "type": "quote",
+   "text": "第一次通水，水就在坡度最小的那一段溢了出來。",
+   "original": "Dès la première mise en service, l’eau a débordé dans la zone de plus faible pente.",
+   "cite": "Jean-Luc Fiches、Jean-Louis Paillet（CNRS），Pont du Gard 教學文件導論，本文自譯"
+  },
+  {
+   "type": "p",
+   "text": "為了不讓水衝到加爾橋，上游調節池的閘門先打開，大量的水排進加爾東河。然後橋上的蓋板拆下來，渠道墊高 60 公分，蓋板再放回去。橋下游一路到 combe Gilles 橋的各個工程，都找得到同樣的墊高，可能還更遠。下游的小型跨谷工程，外側另外加了 90 公分厚的牆，撐住被墊高、側壓更大的渠壁。"
+  },
+  {
+   "type": "p",
+   "text": "研究者的看法是，古代設計者事先不知道通水後水位會多高，所以在橋的上游先建了第二座調節池，可以調流量。第一座在烏澤斯的厄爾谷。",
+   "tag": "推論"
+  },
+  {
+   "type": "h",
+   "text": "橋本身，和它現在剩多少"
+  },
+  {
+   "type": "p",
+   "text": "橋用了約 21,000 立方公尺的石灰岩，估計 50,400 噸，取自附近的 Estel 採石場，單塊最重約 6 噸。整座橋大致沒有用灰漿或夾具。橋身上有幾處石塊伸出來，是當年搭鷹架用的。工期各說各的：官網說近一千人、5 年，教學文件說可能一千人、三到五年。"
+  },
+  {
+   "type": "p",
+   "text": "看現在剩多少，要分開數。第一、第二層基本上還是羅馬的石材。第三層原來有 47 個拱，缺了 12 個，現在 35 個。1743 到 1747 年，有人在下層拱旁邊加蓋了一座公路橋。1840 年，首任歷史古蹟督察梅里美（Prosper Mérimée）記下大拱有幾塊拱心石鬆脫，橋也在這一年列為歷史古蹟。1855 年起由國務部出資、建築師 Charles Laisné 負責修復，做到 1858 或 1859 年（維基百科與官網各寫一個）。1936 年起又灌了 310 噸水泥補強。2000 年遊客中心啟用，橋上的車輛和建物才移走。原件占幾成，我讀到的來源都沒給數字，我不猜。"
+  },
+  {
+   "type": "p",
+   "text": "渠道裡面也不是原樣了。泉水是喀斯特泉，水裡溶了很多碳酸鈣，水流越慢、水溫越高，沉得越快。加爾橋一帶，每一側渠壁的鈣質沉積厚到近 50 公分。至於整條水道，教學文件說約九成在地下，維基百科寫約 35 公里。運作多久，教學文件一處寫全盛只有約 140 年，另一處寫約五個世紀，官網也說約五個世紀。3 世紀末，田地的主人開始在渠底鑿洞取水灌溉，6 世紀初廢棄。公元一千年以後，這條水道變成採石場，石料和鈣質沉積被拿去蓋城堡、羅曼式教堂、民房和墓園的牆。"
+  },
+  {
+   "type": "h",
+   "text": "終點：尼姆的配水池"
+  },
+  {
+   "type": "p",
+   "text": "水道的終點在尼姆的 Lampèze 街，是一座 **配水池**，作用像水塔，把水分往各區。"
+  },
+  {
+   "type": "figure",
+   "id": "f1",
+   "kind": "photo",
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Castellum_divisorium_of_Nemausus%2C_N%C3%AEmes_%2814955260956%29.jpg/1280px-Castellum_divisorium_of_Nemausus%2C_N%C3%AEmes_%2814955260956%29.jpg",
+   "width": 1280,
+   "height": 848,
+   "alt": "一個圓形的石砌淺池，池緣圍著一圈石板，池後是一面石塊砌的牆，上方有灌木和泥土坡。前景是幾塊切出圓孔與缺口的大石塊，右邊有石階和花叢。",
+   "caption": "尼姆的配水池（castellum divisorium），2014 年 7 月拍攝。50 公里水道的終點，水在這裡分往城裡各處。",
+   "credit": "Carole Raddato",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Castellum_divisorium_of_Nemausus,_N%C3%AEmes_(14955260956).jpg",
+   "made": "2014"
+  },
+  {
+   "type": "p",
+   "text": "它是圓形的淺池，鑿在岩石裡，直徑約 5.60 公尺、深 1.40 公尺，容量約 34.5 立方公尺。進水口是方的，邊長 1 公尺，裝了六根鐵條的格柵。池壁有 10 個直徑 40 公分的出水孔，接鉛管送到城裡各處。教學文件估計，最佳流量約每天 35,000 立方公尺，供約 25,000 人用。水從烏澤斯流到尼姆要多久，教學文件一處寫滿載時平均 24 到 30 小時，另一處寫平均一天半。"
+  },
+  {
+   "type": "p",
+   "text": "1688 年蓋要塞時，這座池被填平。1844 年重新發現，1856 年清理修復，1875 年列為歷史古蹟。教學文件說，這種配水池保存得這麼好的很少見，它舉的另一座是龐貝的。"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Pont du Gard：Uzès、Pont du Gard、Nîmes 三處教學文件（Document pédagogique）",
+   "publisher": "Pont du Gard 官方網站（導論由 CNRS 的 Jean-Luc Fiches、Jean-Louis Paillet 撰寫，各節另有 Uzès、Pont du Gard、Nîmes 教育服務處的作者）",
+   "date": "2023-05-01",
+   "url": "https://pontdugard.fr/sites/default/files/2023-05/parcoursbd.pdf",
+   "note": "法文，全文已讀。高程 71.25 與 58.947 公尺、落差 12.27 公尺、全長 50.01 公里、平均坡度 24.8 公分／公里、第一次通水溢流與渠道墊高 60 公分、橋與配水池的尺寸、年表；date 取檔案上傳月（檔案本身未標日期）。"
+  },
+  {
+   "title": "The monument",
+   "publisher": "Pont du Gard 官方網站",
+   "date": "2026-11-26",
+   "url": "https://pontdugard.fr/en/discover/monument",
+   "note": "英文。平均坡度 25 公分／公里、橋高 48.77／49 公尺、拱數、流量；日期為查閱日。"
+  },
+  {
+   "title": "40 centuries of history",
+   "publisher": "Pont du Gard 官方網站",
+   "date": "2026-11-26",
+   "url": "https://www.pontdugard.fr/en/discover/history",
+   "note": "英文。25 公分／公里、羅馬尼姆擴張、皮托橋、19 世紀拱心石鬆脫、1936 年起灌漿 310 噸水泥；日期為查閱日。"
+  },
+  {
+   "title": "Pont du Gard",
+   "publisher": "Wikipedia",
+   "date": "2026-11-26",
+   "url": "https://en.wikipedia.org/wiki/Pont_du_Gard",
+   "note": "英文。建造年代 40–60 年與阿格里帕舊說、1743–47 皮托橋、1855–58 修復、1985 年世界遺產、2000 年遊客中心、無灰漿與突出石塊；日期為查閱日。"
+  },
+  {
+   "title": "Nîmes aqueduct",
+   "publisher": "Wikipedia",
+   "date": "2026-11-26",
+   "url": "https://en.wikipedia.org/wiki/Nîmes_aqueduct",
+   "note": "英文。直線距離約 20 公里、不均勻坡度與橋高的關係（「infeasibly high」）；其「落差 17 公尺」用的是泉水海拔 76 公尺，與 CNRS 的 12.27 公尺不同，本文不用；日期為查閱日。"
+  },
+  {
+   "title": "L'aqueduc romain de Nîmes : défi et prouesse technique",
+   "publisher": "Paperblog（Raymond Matabosch）",
+   "date": "2010-10-26",
+   "url": "https://www.paperblog.fr/3882818/l-aqueduc-romain-de-nimes-defi-et-prouesse-technique/amp",
+   "note": "法文，二手部落格文章。只用來交叉核對 71.13 與 58.95 公尺、12.18 公尺落差、坡度約 0.25 公尺／公里；其最大／最小坡度未用。"
+  }
+ ]
+}
