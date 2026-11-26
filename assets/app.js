@@ -859,10 +859,16 @@ function drawWire(box, w) {
       if (top) store.set("wire.seen", { url: top.url, at: Date.now() });
       if (box.dataset.view !== "fb") markWireSince(box); // opened again on 足球 by a redraw (refreshFront): the mark waits for 外電
     });
-    // 外電｜足球: a tap on a title in the opened head changes the list and leaves the strip open; anywhere else on the
-    // line (收起) closes it as before
+    // 外電｜足球: a tap anywhere left of 收起 in the opened head picks a title — the one it is on, else the nearer one —
+    // changes the list and leaves the strip open (2026-11-26: switching sometimes closed the strip — a tap just beside
+    // the small titles, which move when the German changes sides); 收起 and right of it, and the keyboard, as before
     box.querySelector("summary").addEventListener("click", (e) => {
-      const tab = tk.open && e.target.closest?.(".tab");
+      const tabs = tk.open ? [...box.querySelectorAll("summary .tab")] : [];
+      if (tabs.length < 2) return;
+      const less = box.querySelector("summary .less"), x = e.clientX;
+      if (e.target.closest?.(".less") || (e.detail && less && x >= less.getBoundingClientRect().left - 6)) return;
+      const mid = (t) => { const r = t.getBoundingClientRect(); return (r.left + r.right) / 2; };
+      const tab = e.target.closest?.(".tab") || (e.detail ? tabs.reduce((a, b) => (Math.abs(mid(b) - x) < Math.abs(mid(a) - x) ? b : a)) : null);
       if (!tab) return;
       e.preventDefault();
       if ((tab.dataset.tab === "fb") === (box.dataset.view === "fb")) return;
