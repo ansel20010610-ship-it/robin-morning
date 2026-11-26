@@ -1,4 +1,15 @@
 {
+  "1": {
+    "finished_at": "2026-11-27T00:55:24+08:00",
+    "missing": [
+      "football",
+      "news",
+      "architecture",
+      "concept",
+      "poem"
+    ],
+    "note": "精簡：music；devotion 約翰福音 1:1–5；perio 先發班已完成"
+  },
   "column": {
     "finished_at": "2026-11-26T22:47:03+08:00",
     "missing": [
