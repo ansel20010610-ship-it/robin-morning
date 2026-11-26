@@ -1,0 +1,213 @@
+{
+  "column": "obituary",
+  "date": "2026-11-27",
+  "status": "update",
+  "form": "scene",
+  "voice": "eulogist",
+  "title": "前副國務卿 Talbott 過世，柯林頓的牛津室友",
+  "dek": "他在《時代》寫了 21 年蘇美關係，再被牛津時的室友柯林頓找進國務院，換他自己去跟俄國打交道。",
+  "brief": "美國前副國務卿 Strobe Talbott 11 月 26 日在紐約州東漢普頓家中過世，80 歲，兒子說他病了很久。他年輕時在牛津和柯林頓同住，替《時代》翻譯赫魯雪夫的回憶錄。柯林頓當選總統後找他進國務院，美聯社稱他是那屆政府對俄政策的設計者。",
+  "topic_key": "obituary:talbott-2026",
+  "updated_at": "2026-11-27T05:41:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "f0",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/55/Dmitry_Medvedev_in_the_United_States_14_April_2010-9.jpeg",
+    "width": 1100,
+    "height": 678,
+    "alt": "藍色背景牆上寫著 BROOKINGS。左邊一位戴眼鏡、頭頂微禿的老先生，穿深灰條紋外套、橘色領帶，正伸出雙手說話；右邊穿藍西裝的俄國總統梅德韋傑夫站在講台後，笑著看他。",
+    "caption": "2010 年 4 月 14 日，布魯金斯研究所。左邊是當時的所長 Talbott，右邊是來訪的俄國總統梅德韋傑夫。",
+    "credit": "Presidential Press and Information Office（kremlin.ru）",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dmitry_Medvedev_in_the_United_States_14_April_2010-9.jpeg",
+    "made": "2010-04-14"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "1999 年 6 月初，美國副國務卿 **Strobe Talbott** 在德國波昂慢跑。同一個時候，一份兩頁的文件正在貝爾格勒送到南斯拉夫總統米洛塞維奇面前，上面寫著北約停止空襲的條件。起草這份文件，Talbott 出了很大的力。27 年後，美國時間 11 月 26 日，他在紐約州東漢普頓的家中過世，80 歲，那天是美國的感恩節。他的兒子 Devin 證實，他病了很久，走得很安詳。"
+    },
+    {
+      "type": "p",
+      "text": "那時北約一直在空襲南斯拉夫，要逼米洛塞維奇從科索沃撤軍。俄國是米洛塞維奇的老盟友，所以俄國特使站在哪一邊很要緊。Talbott 和俄國、歐盟的兩位特使為這份最後通牒談了很久，5 月底在莫斯科那一次，已經是三個人十天裡第三次碰面。米洛塞維奇最後突然讓步，當時的觀察者認為，大半是因為他發現再也不能指望俄國。去見米洛塞維奇的是那兩位特使。《愛爾蘭時報》當時寫，美國的副國務卿不可能去見一個被起訴的戰犯、跟他握手。"
+    },
+    {
+      "type": "p",
+      "text": "Talbott 先是記者。他在《時代》雜誌待了 21 年，寫的多半是蘇聯和美國的關係，做到華盛頓分社社長。柯林頓當選總統，就把這位牛津時的老室友找進國務院。他先負責蘇聯解體後新獨立的那些國家，1994 年當上副國務卿，一做七年。副國務卿是國務院的二號人物，只在國務卿之下。**美聯社稱他是柯林頓政府對俄羅斯和前蘇聯各國政策的設計者。**2002 年起，他主持華府的老牌智庫布魯金斯研究所 15 年，那是一家做政策研究的機構。"
+    },
+    {
+      "type": "timeline",
+      "title": "Talbott 的幾個年份",
+      "items": [
+        {
+          "when": "1946 年",
+          "label": "生於俄亥俄州 Dayton",
+          "note": ""
+        },
+        {
+          "when": "1970 年",
+          "label": "《Khrushchev Remembers》出版",
+          "note": "他是翻譯與編者"
+        },
+        {
+          "when": "1971 年",
+          "label": "牛津畢業，進《時代》當東歐特派員",
+          "note": "在《時代》前後 21 年"
+        },
+        {
+          "when": "1993 年",
+          "label": "進柯林頓政府的國務院",
+          "note": "1994 年起任副國務卿，到 2001 年"
+        },
+        {
+          "when": "1998.6",
+          "label": "開始和印度外長 Jaswant Singh 談判",
+          "note": "到 2000 年 9 月共 14 次"
+        },
+        {
+          "when": "1999.6",
+          "label": "科索沃和平文件",
+          "note": "參與起草兩頁條件"
+        },
+        {
+          "when": "2002 年",
+          "label": "出任布魯金斯研究所所長",
+          "note": "做到 2017 年"
+        },
+        {
+          "when": "2020 年",
+          "label": "最後一本書出版",
+          "note": "《Our Founders' Warning》"
+        },
+        {
+          "when": "2026.11.26",
+          "label": "過世",
+          "note": "東漢普頓家中，80 歲"
+        }
+      ],
+      "caption": "年份依布魯金斯研究所個人頁、美聯社與《愛爾蘭時報》整理；赫魯雪夫回憶錄的出版年依 Open Library。"
+    },
+    {
+      "type": "h",
+      "text": "早餐是柯林頓做的"
+    },
+    {
+      "type": "p",
+      "text": "Talbott 1946 年生在俄亥俄州代頓，在學時迷上俄國，學了俄文。他念完耶魯，拿獎學金去英國牛津，和拿同一份獎學金的柯林頓住在一起。早餐的蛋是柯林頓做的，Talbott 則在翻譯赫魯雪夫的回憶錄。"
+    },
+    {
+      "type": "p",
+      "text": "赫魯雪夫是蘇聯共產黨的第一書記，1964 年被趕下台。他的回憶錄流了出來，《時代》就找上 Talbott 幫忙翻，他先前在莫斯科替這家雜誌實習過。1970 年，《**Khrushchev Remembers**》出版，他是譯者，也是編者，四年後又出了第二冊。這本書讓他年紀輕輕就出了名，也讓他進了《時代》。據《愛爾蘭時報》，他被派往莫斯科時，蘇聯當局不給簽證，就是在報復這本書。"
+    },
+    {
+      "type": "p",
+      "text": "他和柯林頓都反對越戰。Talbott 因為健康的理由免了兵役。1992 年他自己說，那隻不好的膝蓋讓他不必上越南的戰場，卻沒擋住他上牛津的壁球場和運動場；想到這件事，他有一種「近乎罪惡感的道德不安」。"
+    },
+    {
+      "type": "h",
+      "text": "「俄國優先」的那張臉"
+    },
+    {
+      "type": "p",
+      "text": "北約的刊物《NATO Review》2003 年評他的回憶錄《**The Russia Hand**》，說他常被當成柯林頓政府「俄國優先」政策的化身，挨了不少重批。這本 2002 年出版的書，寫的是柯林頓和當時的俄國總統葉爾欽打交道的那八年。書評說，他在書裡把自己在大事上的份量寫輕了。書評也提到，1993 年葉爾欽動用武力解散國會，柯林頓毫無保留地支持他，看起來並沒有照 Talbott 的建議。"
+    },
+    {
+      "type": "p",
+      "text": "同一篇書評的結論，卻是這套對俄政策整體算成功。它舉的例子是，俄國沒有把火箭零件賣給印度，烏克蘭境內蘇聯時代的核飛彈也撤走了。"
+    },
+    {
+      "type": "p",
+      "text": "2001 年，波蘭總統頒了一枚勳章給他，謝謝他推動北約往東擴大、接納波蘭。"
+    },
+    {
+      "type": "quote",
+      "text": "美國最傑出的東歐問題專家之一。",
+      "original": "jednym z najwybitniejszych amerykańskich znawców problematyki Europy Wschodniej",
+      "cite": "波蘭總統克瓦希涅夫斯基，2001 年頒勳時；據 PAP 2026 年 11 月 26 日的死訊報導轉述"
+    },
+    {
+      "type": "h",
+      "text": "七個國家，十四次"
+    },
+    {
+      "type": "p",
+      "text": "1998 年 5 月，印度試爆核武，兩週後巴基斯坦也跟著試爆。下個月起，Talbott 開始和印度的外交部長談，兩年多裡在三大洲的七個國家見了 14 次。他把這段寫成《Engaging India》，2004 年出版。出版社的書介說，這些談話幫忙避開了 1999 年夏天印度和巴基斯坦可能為喀什米爾打起來的核戰。"
+    },
+    {
+      "type": "h",
+      "text": "代頓的那頓晚飯"
+    },
+    {
+      "type": "p",
+      "text": "科索沃那份文件送去貝爾格勒的四年前，Talbott 請米洛塞維奇吃過晚飯。1995 年，米洛塞維奇和波士尼亞的領導人來到美國，參加最後談成波士尼亞和平協議的那場談判。那時他是為了和平談判來到美國；四年後，他已經是被起訴的戰犯。那頓晚飯在 Talbott 的家鄉代頓。席間，他跟他們交換巴爾幹的笑話。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Strobe Talbott, former Time magazine reporter and deputy secretary of state, has died",
+      "publisher": "The Associated Press（WTOP 轉載）",
+      "date": "2026-11-26",
+      "url": "https://wtop.com/national/2026/11/strobe-talbott-former-time-magazine-reporter-and-deputy-secretary-of-state-has-died",
+      "note": "死亡日期（週四）、80 歲、東漢普頓家中、兒子 Devin 證實、長期生病；《時代》21 年、1994 年進國務院、布魯金斯 2002–2017、赫魯雪夫回憶錄的來由、著作與遺族。AP 未寫病名。AP 寫 1994 年進國務院，Brookings 與 PAP 為 1993 年。"
+    },
+    {
+      "title": "Zmarł Strobe Talbott. Wspierał rozszerzenie NATO o Polskę",
+      "publisher": "PAP（WP Wiadomości 轉載）",
+      "date": "2026-11-26",
+      "url": "https://wiadomosci.wp.pl/zmarl-strobe-talbott-wspieral-rozszerzenie-nato-o-polske-7355285131172000a",
+      "note": "獨立於 AP 的第二個死訊來源，註明據《紐約時報》，週四在紐約州家中過世，兒子證實，80 歲；1993–2001 國務院任職、2001 年波蘭勳章與克瓦希涅夫斯基的評語。《紐約時報》本文讀不到。"
+    },
+    {
+      "title": "Strobe Talbott（個人頁）",
+      "publisher": "Brookings Institution",
+      "date": "2026-11-26",
+      "url": "https://www.brookings.edu/people/strobe-talbott/",
+      "note": "機構官網個人頁，頁面未標發布日期（日期欄為查閱日）：《時代》各職務與年份、國務院職務、所長任期、外交政策委員會、13 本書、翻譯與編輯赫魯雪夫回憶錄兩冊。"
+    },
+    {
+      "title": "Key Player - Strobe Talbott",
+      "publisher": "The Irish Times",
+      "date": "1999-06-05",
+      "url": "https://www.irishtimes.com/news/key-player-strobe-talbott-1.192649",
+      "note": "波昂慢跑、兩頁科索沃文件、1995 年 Dayton 晚宴與荷爾布魯克的話、牛津室友與煎蛋、蘇聯拒發簽證。該報寫《時代》22 年，與官方 21 年不同，正文採 21 年；同篇對慢跑是週三或週四前後不一，正文只寫 6 月初。"
+    },
+    {
+      "title": "Marathon Kosovo Talks in Moscow",
+      "publisher": "Jamestown Foundation",
+      "date": "1999-05-27",
+      "url": "https://jamestown.org/marathon-kosovo-talks-in-moscow",
+      "note": "切爾諾梅爾金、Talbott、阿赫蒂薩里在 1999 年 5 月的頭銜（俄國巴爾幹特使、美國副國務卿、歐盟特使兼芬蘭總統）。"
+    },
+    {
+      "title": "Engaging India: Diplomacy, Democracy, and the Bomb",
+      "publisher": "Brookings Institution Press",
+      "date": "2004-08-05",
+      "url": "https://www.brookings.edu/books/engaging-india",
+      "note": "出版社書頁：14 次會談、七國、1998 年 6 月至 2000 年 9 月；「避開 1999 年夏天可能的核戰」是書介的說法，正文已標明。"
+    },
+    {
+      "title": "The limits of personal diplomacy（評 The Russia Hand）",
+      "publisher": "NATO Review",
+      "date": "2003-07-01",
+      "url": "https://www.nato.int/en/news-and-events/events/transcripts/2003/07/01/limits-of-personal-diplomacy",
+      "note": "書評作者 Petr Lunak：Talbott 常被批評為「俄國優先」的化身、在回憶錄裡淡化自己的角色、1993 年柯林頓似乎違背其建議；書評整體肯定對俄政策。"
+    },
+    {
+      "title": "Khrushchev Remembers（作品列表）",
+      "publisher": "Open Library",
+      "date": "2026-11-26",
+      "url": "https://openlibrary.org/works/OL29337551W",
+      "note": "《Khrushchev Remembers》作者列 Khrushchev、Crankshaw、S. Talbott，首版年 1970；1974 年的《The Last Testament》依同站搜尋結果。頁面無發布日期，日期欄為查閱日。"
+    },
+    {
+      "title": "File: Dmitry Medvedev in the United States 14 April 2010-9.jpeg",
+      "publisher": "Wikimedia Commons（Presidential Press and Information Office）",
+      "date": "2010-04-14",
+      "url": "https://commons.wikimedia.org/wiki/File:Dmitry_Medvedev_in_the_United_States_14_April_2010-9.jpeg",
+      "note": "頭圖：CC BY 4.0，說明寫與布魯金斯研究所所長 Talbott 同場。"
+    }
+  ]
+}
