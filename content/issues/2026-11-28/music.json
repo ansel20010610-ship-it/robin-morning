@@ -1,0 +1,344 @@
+{
+  "column": "music",
+  "date": "2026-11-28",
+  "title": "卓別林刮鬍子配的那首，旋律不是布拉姆斯寫的",
+  "dek": "《匈牙利舞曲》第五號，布拉姆斯在標題上寫的是「編」。旋律的原作者，還特地在報紙上出面聲明過。",
+  "brief": "《匈牙利舞曲》第五號，就是卓別林《大獨裁者》裡理髮師刮鬍子配的那首。旋律出自匈牙利樂隊指揮凱勒，布拉姆斯在標題上寫的是「編」。這篇先講你在哪裡聽過，再講按下播放可以注意的三個地方。",
+  "topic_key": "music:brahms-hungarian-dance-5",
+  "updated_at": "2026-11-28T00:58:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "form": "qa",
+  "voice": "listener",
+  "hero": {
+    "type": "figure",
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/23/E_Remenyi_and_J_Brahms.jpg",
+    "width": 500,
+    "height": 666,
+    "alt": "黑白舊照：一位穿深色外套的年輕男子坐在前景，身體微側、望向畫面右方；另一位更年輕、頭髮蓬鬆的男子站在他身後，一手搭在他肩上，打著蝴蝶領結，直視鏡頭。背景是畫出來的樹葉布景。",
+    "caption": "小提琴家雷梅尼（Ede Reményi，左，坐）與布拉姆斯（站）的合照，作者不詳，Commons 標為 1852／1853 年。兩人 1853 年春天一起巡迴演出，布拉姆斯替雷梅尼的匈牙利歌曲與舞曲鋼琴伴奏。",
+    "credit": "作者不詳；掃描 Density；影像經 Wikimedia Commons",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:E_Remenyi_and_J_Brahms.jpg",
+    "made": "1852／1853"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "今天聽的是布拉姆斯的**《匈牙利舞曲》第五號**。布拉姆斯是 19 世紀的德國作曲家（1833–1897），在漢堡長大。這套舞曲一共 21 首，最早的十首 1869 年出版，每首大約一到五分鐘，第五號是其中被拿去配電影、也配過卡通的一首。"
+    },
+    {
+      "type": "p",
+      "text": "它的旋律不是布拉姆斯自己想的，原作者是匈牙利出身、帶樂隊也寫曲子的**凱勒**（Béla Kéler）。布拉姆斯 1869 年出版時，標題寫的是「編」，不是「作」：「編」是拿現成的旋律改成鋼琴譜，「作」才是自己寫的。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "作品",
+          "《匈牙利舞曲》（Ungarische Tänze）第 5 首；全套的編號 WoO 1，意思是「沒有作品號」"
+        ],
+        [
+          "編者",
+          "布拉姆斯；原版標題寫的德文是「gesetzt」，就是「編寫」，所以沒有編作品號"
+        ],
+        [
+          "原版",
+          "鋼琴四手聯彈（兩個人彈一台琴），升 F 小調，速度 Allegro – Vivace（快板到活潑的快板）；1869 年 3 月前後由柏林的 Simrock 出版社出版"
+        ],
+        [
+          "旋律來源",
+          "Béla Kéler《Bártfai emlék》（Op. 31，1858 年作，約 1858–59 年出版）"
+        ],
+        [
+          "樂團版",
+          "Albert Parlow 配器，1876 年，G 小調；布拉姆斯自己只配了第 1、3、10 首"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "我在哪裡聽過這首？"
+    },
+    {
+      "type": "p",
+      "text": "最常被提起的一例，是卓別林 1940 年的電影《大獨裁者》。片裡有一場，卓別林替客人刮鬍子，動作整場跟著第五號走。TCM 介紹這部片時，把這一場列為兩大經典橋段之一。"
+    },
+    {
+      "type": "p",
+      "text": "這場戲的音樂怎麼配上去，有一段回憶。參與這部片配樂的 Meredith Willson，1948 年出了回憶錄，維基百科轉引了其中幾句，下面都是轉引的內容，我沒讀到原書。照 Willson 的說法，這場戲在他到場前就拍好了，拍的時候是放唱片對拍子。他的工作，是用整個片廠的管弦樂團，照著動作把音樂重錄一次。原本打算一次只錄八小節以內，卓別林決定先整場跑一遍，錄下來備用。Willson 寫道：「碰巧每個動作我們都抓到了，那是這場戲的第一次、也是唯一一次錄音，後來就用在成片裡。」（我自己翻的）不過卓別林官方網站的配樂介紹寫的是，新錄音只花了兩次就和畫面對上，跟 Willson 這句「唯一一次」對不起來。"
+    },
+    {
+      "type": "p",
+      "text": "另一個是華納卡通《Pigs in a Polka》，1943 年 2 月 6 日上映，Friz Freleng 導演。演的是三隻小豬的故事，配的全是布拉姆斯的匈牙利舞曲，依序是第 5、7、6、17 首。"
+    },
+    {
+      "type": "h",
+      "text": "布拉姆斯怎麼會去寫匈牙利舞曲？"
+    },
+    {
+      "type": "p",
+      "text": "1848、49 年匈牙利革命之後，大批匈牙利難民湧進漢堡，裡面有小提琴家雷梅尼（Ede Reményi）。1853 年春天，布拉姆斯和雷梅尼開了他的第一次巡迴音樂會，在台上替雷梅尼的匈牙利歌曲與舞曲彈鋼琴伴奏。小提琴家約阿希姆（Joseph Joachim）1897 年在信裡回憶，那年布拉姆斯和雷梅尼「一起迷上匈牙利音樂（也迷所有民歌）」。"
+    },
+    {
+      "type": "p",
+      "text": "這套舞曲 1869 年 3 月初由柏林的 Simrock 出版社出版，先出的是第 1 到 10 首。原版是四手聯彈，也就是兩個人坐在同一台鋼琴前一起彈。"
+    },
+    {
+      "type": "p",
+      "text": "這些舞曲其實不是匈牙利民歌。專出樂譜的 Henle 出版社，在它的版本前言裡第一句就說：它不出於匈牙利民歌傳統。這類舞曲 18 世紀才在匈牙利出現，是寫出來的、節奏很鮮明的器樂曲。傳到歐洲各地，靠的主要是在樂團和咖啡館演奏的「吉普賽」樂手，所以後來常被誤會成羅姆人的音樂，或匈牙利民間音樂。"
+    },
+    {
+      "type": "h",
+      "text": "按下播放，要聽哪幾個地方？"
+    },
+    {
+      "type": "p",
+      "text": "先說整首的氣氛。英文導聆網站 8notes 有一篇文章（我讀到的是摘要，不是全文），形容第五號「火爆、節奏銳利、充滿戲劇性的對比」，還說它成了「匈牙利舞曲」風格的象徵。這是那篇文章的評語，不是我的。"
+    },
+    {
+      "type": "p",
+      "text": "**第一，開頭。** 一按下去就是快板，直接開跳。凱勒的原曲是從慢的開始的，布拉姆斯這版一開頭就是快的。"
+    },
+    {
+      "type": "p",
+      "text": "**第二，重音和突然的變化。** 這種快舞，匈牙利叫 friss，8notes 說它的特色是強烈的重音、切分音，還有突然的力度變化。切分音，就是重音落在平常不重的拍上。這是整類舞的共通特色，不是第五號哪一個小節。聽的時候留意哪裡突然大聲、哪裡突然小聲。"
+    },
+    {
+      "type": "p",
+      "text": "**第三，中段換成更快的 Vivace。** 速度標記是「Allegro – Vivace」，也就是快板裡，中間有一段換成活潑的快板。Henle 的樂譜說明把這一段標在第 49 到 76 小節。"
+    },
+    {
+      "type": "p",
+      "text": "如果你先看過《大獨裁者》那一場，可以拿來當節奏的教材：刀的動作，是對著樂句拍的。"
+    },
+    {
+      "type": "p",
+      "text": "底下的錄音，是阿巴多（Claudio Abbado）指揮維也納愛樂的全套 21 首，Apple Music 標約 48 分鐘，第五首要自己找。布拉姆斯自己只替第 1、3、10 首配了管弦樂，所以第五號的樂團版不是他配的。1876 年有一版是 Albert Parlow 配的，阿巴多這張用的是誰的配器，我找不到資料。"
+    },
+    {
+      "type": "music",
+      "composer": "布拉姆斯（Johannes Brahms）",
+      "work": "《匈牙利舞曲》全 21 首（本文談第 5 首）",
+      "work_original": "Hungarian Dances Nos. 1–21, WoO 1（No. 5 in F-sharp minor, piano four hands; orchestral version in G minor）",
+      "composed": "四手聯彈版 1869 年前後出版（第 1–10 首）；第 5 首樂團版 Albert Parlow 配器，1876 年",
+      "performers": "克勞迪奧・阿巴多（Claudio Abbado）指揮 維也納愛樂",
+      "recording": "Deutsche Grammophon；Apple Music 說這套 1983 年首次發行、為紀念布拉姆斯 150 歲冥誕（維基百科列為 1982 年錄音，該句標「需要出處」）；沒查到錄音地點與日期，也沒查到第 5 首用的是誰的配器",
+      "duration": "全套 21 首約 48 分鐘（Apple Music）",
+      "movements": [
+        "第 5 首（本文導聽）"
+      ],
+      "spotify": {
+        "album": "",
+        "tracks": [],
+        "query": "Brahms 21 Hungarian Dances Abbado Wiener Philharmoniker",
+        "artist_hint": "Abbado",
+        "track_filter": [
+          "Hungarian Dance No. 5"
+        ]
+      }
+    },
+    {
+      "type": "h",
+      "text": "旋律到底是誰寫的？"
+    },
+    {
+      "type": "p",
+      "text": "第五號的旋律，出自凱勒的一首 csárdás（恰爾達什，匈牙利的一種舞，有慢的段落 lassú，也有快的段落 friss）。曲名是《Bártfai emlék》，意思是「Bártfa 的回憶」。凱勒 1820 年生在 Bártfa（今天斯洛伐克的 Bardejov），1882 年在德國威斯巴登過世。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "portrait",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/1/1f/K%C3%A9ler_B%C3%A9la_%281820%E2%80%931882%29.jpg",
+      "width": 804,
+      "height": 1023,
+      "alt": "黑白肖像：一位留著濃密鬍鬚的中年男子半身像，穿深色外套與領結，目光看向鏡頭一側。",
+      "caption": "匈牙利出身的樂隊指揮、作曲家貝拉・凱勒（Béla Kéler，1820–1882），《Bártfai emlék》的作者。肖像拍攝者不詳，早於 1882 年；影像取自約 1910 年柏林出版的《Sang und Klang im XIX./XX. Jahrhundert》第 3 冊。",
+      "credit": "作者不詳；影像經 Wikimedia Commons（出處：Hollaender 編《Sang und Klang》，Berlin，約 1910）",
+      "license": "Public domain",
+      "license_url": "",
+      "source_url": "https://commons.wikimedia.org/wiki/File:K%C3%A9ler_B%C3%A9la_(1820%E2%80%931882).jpg",
+      "made": "早於 1882"
+    },
+    {
+      "type": "p",
+      "text": "這首曲子 1858 年寫成，由 Pest（今天布達佩斯的一部分）的 Rózsavölgyi 出版社出版，出版年 IMSLP 標 1859，凱勒自己說是 1858。原曲是給管弦樂隊的，約 5 分鐘，分五段，第一段是慢板（Andante）。"
+    },
+    {
+      "type": "table",
+      "title": "同一段旋律的三個樣子",
+      "head": [
+        "版本",
+        "年份",
+        "誰做的",
+        "形式與調性"
+      ],
+      "rows": [
+        [
+          "《Bártfai emlék》Op. 31",
+          "1858 年作、約 1858–59 年出版",
+          "Béla Kéler",
+          "給管弦樂隊的 csárdás，約 5 分鐘、五段，第一段是 Andante（慢板）"
+        ],
+        [
+          "《匈牙利舞曲》第 5 首",
+          "1869 年 3 月前後出版",
+          "布拉姆斯（標題寫「編」）",
+          "鋼琴四手聯彈，升 F 小調，開頭直接進 Allegro（快板）"
+        ],
+        [
+          "第 5 首樂團版",
+          "1876 年",
+          "Albert Parlow",
+          "管弦樂，移成 G 小調"
+        ]
+      ],
+      "caption": "依 IMSLP、Henle 前言與維基百科整理；Parlow 的年份與調性出自維基百科引用的 1876 年 Hofmeister 月報。"
+    },
+    {
+      "type": "p",
+      "text": "1879 年，凱勒在漢堡的報紙上刊了一則聲明，說這首是他 1858 年作的，同年在 Debrecen 首演，同年以他的鋼琴作品 Op. 31 出版。8notes 和維基百科轉述他的話：「我不得不聲明，這首匈牙利舞曲是我 1858 年作的。」8notes 的摘要還說，他不高興的是自己演奏這首時，常有人問他，為什麼作曲者掛的是布拉姆斯。這幾句都是二手轉述，我沒看到 1879 年報紙的原文。"
+    },
+    {
+      "type": "p",
+      "text": "通行的說法是，布拉姆斯當時「以為」這是民歌，維基百科和 8notes 都這樣寫。Henle 的前言沒有這樣寫。它只說，這套舞曲裡有幾首是誰寫的，出現過爭執：雷梅尼（前面和布拉姆斯一起巡迴的那位小提琴家）、凱勒，還有出版凱勒原曲的 Rózsavölgyi 出版社，都出面主張過。維基百科還引了 Alan Walker 的書：凱勒指控布拉姆斯，把第 5、6 兩首用自己的名字出版。"
+    },
+    {
+      "type": "h",
+      "text": "布拉姆斯自己怎麼說？"
+    },
+    {
+      "type": "p",
+      "text": "他寫給出版商的信留下來了，Henle 前言有引。1868 年 12 月 6 日，他寫信給 Simrock，說的是下面這段。"
+    },
+    {
+      "type": "quote",
+      "text": "它們其實是道地的草原與吉普賽的孩子。不是我生的，我只是用牛奶和麵包把它們養大。",
+      "cite": "布拉姆斯寫給出版商 Fritz Simrock，1868 年 12 月 6 日（本文自譯；德文轉引自 Henle 版前言，Camilla Cai，2015）",
+      "original": "Es sind übrigens echte Pußta- und Zigeunerkinder. Also nicht von mir gezeugt, sondern nur mit Milch und Brot aufgezogen"
+    },
+    {
+      "type": "p",
+      "text": "1869 年 1 月 2 日，他再寫信給 Simrock，說標題是「給鋼琴四手的匈牙利舞曲，J. B. 編寫」。1 月 19 日，他寫給另一位出版商 Rieter-Biedermann：「那些新的是匈牙利民族旋律，我只是『編』。」因為標明是「編」，這套舞曲出版時沒有編作品號。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Brahms: Ungarische Tänze WoO 1 — Vorwort／Preface（Camilla Cai）",
+      "publisher": "G. Henle Verlag",
+      "date": "2015",
+      "url": "https://www.henle.de/media/92/64/b5/1697725863/0560-1697725863-sync.pdf",
+      "note": "Urtext 版前言全文（德英對照）：舞曲不出於民歌傳統、1853 年與 Reményi 巡迴、布拉姆斯 1868–69 年給出版商的信（「gesetzt」）、1869 年 3 月出版、Kéler 等人的作者身分主張；2026-11-28 查閱"
+    },
+    {
+      "title": "Bártfai Emlék Csárdás, Op.31 (Kéler, Béla)",
+      "publisher": "IMSLP",
+      "date": "未註明",
+      "url": "https://imslp.org/wiki/B%C3%A1rtfai_Eml%C3%A9k_Cs%C3%A1rd%C3%A1s,_Op.31_(K%C3%A9ler,_B%C3%A9la)",
+      "note": "作於 1858、1859 年 Pest Rózsavölgyi 出版、五段結構、約 5 分鐘、與布拉姆斯第五號的關係；2026-11-28 查閱"
+    },
+    {
+      "title": "21 Hungarian Dances (Piano), WoO 1 (Brahms, Johannes)",
+      "publisher": "IMSLP",
+      "date": "未註明",
+      "url": "https://imslp.org/wiki/21_Hungarian_Dances_(Piano),_WoO_1_(Brahms,_Johannes)",
+      "note": "讀到前 100000 字：Simrock 初版資訊、第五號調性（升 F 小調）、與 Kéler Op. 31 的關係；2026-11-28 查閱"
+    },
+    {
+      "title": "Hungarian Dances (Brahms)",
+      "publisher": "Wikipedia（英文版）",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Hungarian_Dances_(Brahms)",
+      "note": "API 原始碼全文：速度與調性、Parlow 1876 配器、Walker 引文、1889 年錄音、Stokowski 1917 與 Abbado 錄音；2026-11-28 查閱"
+    },
+    {
+      "title": "Béla Kéler",
+      "publisher": "Wikipedia（英文版）",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/B%C3%A9la_K%C3%A9ler",
+      "note": "生卒、《Bártfai emlék》與 1879 年聲明；2026-11-28 查閱"
+    },
+    {
+      "title": "Brahms: Hungarian Dance No. 5（Discover Music）",
+      "publisher": "8notes（Dominic Nicholas）",
+      "date": "2026-01-12",
+      "url": "https://www.8notes.com/discover/brahms_hungarian_dance_5.asp",
+      "note": "二手導聆文章：Allegro／Vivace、lassú／friss、Kéler 1879 年的話；讀到的是摘要式回覆，不是逐字全文；2026-11-28 查閱"
+    },
+    {
+      "title": "The Great Dictator",
+      "publisher": "Wikipedia（英文版）",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/The_Great_Dictator",
+      "note": "Music 段：Willson 回憶錄對刮鬍子那場戲的記述（轉引，未讀原書）、1940-10-15 首映；2026-11-28 查閱"
+    },
+    {
+      "title": "The Great Dictator",
+      "publisher": "Timothy Brock（Manuel Maggio）",
+      "date": "未註明",
+      "url": "https://www.timothybrock.com/scores/the-great-dictator",
+      "note": "樂譜說明：「Brahms's Hungarian Dance No. 5 provides the barber with some very animated accompaniment」；2026-11-28 查閱"
+    },
+    {
+      "title": "Some Memorable Hungarian Dances",
+      "publisher": "California Symphony",
+      "date": "未註明",
+      "url": "https://www.californiasymphony.org/?p=3583",
+      "note": "導聆頁：卓別林刮鬍子、Pigs in a Polka 用第五號；2026-11-28 查閱"
+    },
+    {
+      "title": "Pigs in a Polka",
+      "publisher": "Wikipedia（英文版）",
+      "date": "未註明",
+      "url": "https://en.wikipedia.org/wiki/Pigs_in_a_Polka",
+      "note": "1943-02-06 上映、使用第 5、7、6、17 首；2026-11-28 查閱"
+    },
+    {
+      "title": "Brahms: 21 Hungarian Dances（Vienna Philharmonic／Claudio Abbado）",
+      "publisher": "Apple Music",
+      "date": "未註明",
+      "url": "https://music.apple.com/us/album/1452218585",
+      "note": "1983 年首發、紀念布拉姆斯 150 歲冥誕、共 48 分鐘；沒有逐首時間與錄音日期；2026-11-28 查閱"
+    },
+    {
+      "title": "File:E Remenyi and J Brahms.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "1852/1853",
+      "url": "https://commons.wikimedia.org/wiki/File:E_Remenyi_and_J_Brahms.jpg",
+      "note": "合照資料與授權 Public domain；作者不詳；2026-11-28 查閱"
+    },
+    {
+      "title": "File:Kéler Béla (1820–1882).jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "1910",
+      "url": "https://commons.wikimedia.org/wiki/File:K%C3%A9ler_B%C3%A9la_(1820%E2%80%931882).jpg",
+      "note": "肖像資料與授權 Public domain；出處為 Hollaender 編《Sang und Klang》約 1910 年；2026-11-28 查閱"
+    },
+    {
+      "title": "The Great Dictator",
+      "publisher": "Turner Classic Movies",
+      "date": "未註明",
+      "url": "https://www.tcm.com/articles/297/the-great-dictator",
+      "note": "把刮鬍子那段列為影片兩大經典橋段之一；2026-11-28 查閱"
+    },
+    {
+      "title": "Zur Wiedergabe des Vivace-Mittelteils aus dem Ungarischen Tanz Nr. 5",
+      "publisher": "G. Henle Verlag",
+      "date": "未註明",
+      "url": "https://www.henle.de/media/5b/48/77/1697725851/0068-1697725850-sync.pdf",
+      "note": "樂譜說明：Vivace 是 Allegro 的中段，第 49–76 小節；2026-11-28 查閱"
+    },
+    {
+      "title": "The Score of The Great Dictator",
+      "publisher": "charliechaplin.com（卓別林官方網站）",
+      "date": "未註明",
+      "url": "https://www.charliechaplin.com/en/films/7-The-Great-Dictator/articles/331-The-Score-of-The-Great-Dictator",
+      "note": "轉述 Willson 回憶：刮鬍子那段新錄音「只花了兩次」就對上畫面；2026-11-28 查閱"
+    }
+  ]
+}
