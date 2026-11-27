@@ -1,0 +1,404 @@
+{
+  "column": "civilization",
+  "date": "2026-11-28",
+  "title": "陪三百壯士死的那七百人",
+  "dek": "電影只記得斯巴達的三百人。可是溫泉關最後那天早上，留下來的還有七百個泰斯匹亞人，和四百個據說被扣住的底比斯人。",
+  "brief": "公元前 480 年，斯巴達國王李奧尼達守溫泉關，得知波斯軍從山路繞到背後，就把大部分盟軍送走，自己帶三百個斯巴達人留下。陪他留下的還有七百個泰斯匹亞人，那是他們城裡全部的重裝步兵，人全死了，城後來也被燒。另外四百個底比斯人投降，多數被烙上波斯國王的印記。",
+  "form": "number",
+  "voice": "lecturer",
+  "topic_key": "civilization:greece-thermopylae-leonidas-480-bce",
+  "updated_at": "2026-11-28T02:06:00+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "kind": "artwork",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Jacques-Louis_David_-_Leonidas_at_Thermopylae_-_WGA6095.jpg/1280px-Jacques-Louis_David_-_Leonidas_at_Thermopylae_-_WGA6095.jpg",
+    "width": 1280,
+    "height": 938,
+    "alt": "一幅擠滿人物的大油畫。山谷岩壁之間，中央一個戴白羽頭盔、裸身披紅袍的男子坐在石上，手握劍、身旁靠著圓盾，眼睛往上看；四周的士兵有的舉起花環、有的吹號、有的擁抱告別、有的蹲下綁鞋帶；左上角一名士兵攀在岩壁上，舉劍在石面刻字；背景有一座希臘神廟和遠山。",
+    "caption": "法國畫家大衛（Jacques-Louis David）的〈李奧尼達在溫泉關〉，油彩畫布，395 × 531 公分，巴黎羅浮宮藏（INV 3690）。他 1799–1803 年畫了一段，1813–1814 年才畫完，畫的是開戰之前；中央光線最亮、坐著不動的人一般認為是李奧尼達，左上角攀在岩壁上的士兵正用劍刻下斯巴達人的墓誌。這是兩千多年後的想像，不是現場紀錄。",
+    "credit": "Jacques-Louis David；Musée du Louvre；影像取自 Web Gallery of Art",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_Leonidas_at_Thermopylae_-_WGA6095.jpg",
+    "made": "1799–1803、1813–1814",
+    "depicts": "公元前 480 年"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "2006 年有部電影《300 壯士：斯巴達的逆襲》，講斯巴達國王**李奧尼達**帶三百個人，擋住三十萬以上的波斯大軍。這件事發生在公元前 480 年夏末的**溫泉關**。那是希臘中部一條靠海的窄路，是大軍南下的必經之路。"
+    },
+    {
+      "type": "p",
+      "text": "那年波斯國王薛西斯帶大軍打過來，想拿下整個希臘。希臘那時是一堆各管各的城邦，結盟的那幾個派兵去堵這條路，由李奧尼達帶頭。波斯人連攻兩天都攻不進來。後來有個當地人為了討賞，告訴薛西斯一條翻山繞到後面的小路。李奧尼達得知後，把大部分盟軍送走，自己帶三百個斯巴達人留下，當天上午就戰死了。"
+    },
+    {
+      "type": "p",
+      "text": "可是那天早上沒走的，不只斯巴達人。陪他留下來的還有誰？他們為什麼不走？"
+    },
+    {
+      "type": "p",
+      "text": "還有**七百個泰斯匹亞人**，是自己要留的，這是他們城裡全部的重裝步兵，就是拿盾牌和長矛的主力。另外有四百個底比斯人，照古書說是被扣住的。"
+    },
+    {
+      "type": "facts",
+      "title": "同一場仗，各家算的人數",
+      "items": [
+        [
+          "電影《300》裡的波斯大軍",
+          "30 萬以上"
+        ],
+        [
+          "希羅多德算的薛西斯大軍",
+          "5,283,220 人（作戰人員 2,641,610，再假設後勤與船員一樣多）"
+        ],
+        [
+          "現代學者估的波斯軍",
+          "12 萬到 30 萬"
+        ],
+        [
+          "希羅多德列的希臘聯軍",
+          "約 5,200 人，另有人數不明的洛克里斯人"
+        ],
+        [
+          "最後一天留下",
+          "斯巴達 300、泰斯匹亞 700、底比斯 400，可能還有最多 900 名黑勞士"
+        ],
+        [
+          "希羅多德記的陣亡",
+          "波斯約 2 萬；希臘 4,000（現代估計約 2,000）"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "三百：斯巴達先派來的人"
+    },
+    {
+      "type": "p",
+      "text": "這三百人是李奧尼達挑的，每個家裡都有兒子。斯巴達只派這些人，是因為正逢祭阿波羅的大節，照規矩不能出兵。他們打算過完節再全軍出發，先派這三百人，是要讓盟邦看到斯巴達真的來了，別倒向波斯。"
+    },
+    {
+      "type": "h",
+      "text": "那天早上，他把盟軍送走"
+    },
+    {
+      "type": "p",
+      "text": "溫泉關的希臘兵其實有好幾千，照古書的名單大約五千二百人。"
+    },
+    {
+      "type": "table",
+      "title": "到溫泉關的希臘人，最後一天去了哪裡",
+      "head": [
+        "城邦或隊伍",
+        "希羅多德給的人數",
+        "最後一天"
+      ],
+      "rows": [
+        [
+          "斯巴達",
+          "300",
+          "留下，戰死；只有兩人因眼疾或送信不在場而活下來"
+        ],
+        [
+          "鐵該亞、曼丁尼亞",
+          "各 500",
+          "遣散離開"
+        ],
+        [
+          "阿卡迪亞的奧爾霍邁諾斯",
+          "120",
+          "遣散離開"
+        ],
+        [
+          "阿卡迪亞其他城",
+          "1,000",
+          "遣散離開"
+        ],
+        [
+          "科林斯",
+          "400",
+          "遣散離開"
+        ],
+        [
+          "弗利烏斯",
+          "200",
+          "遣散離開"
+        ],
+        [
+          "邁錫尼",
+          "80",
+          "遣散離開"
+        ],
+        [
+          "泰斯匹亞",
+          "700",
+          "自願留下，戰死"
+        ],
+        [
+          "底比斯",
+          "400",
+          "留下（希羅多德說是被扣作人質）；最後投降，多數被烙上波斯國王的印記"
+        ],
+        [
+          "佛西斯",
+          "1,000",
+          "在山上守小路；波斯兵繞過他們直接下山"
+        ],
+        [
+          "奧普斯的洛克里斯",
+          "全軍出動，人數不明",
+          "遣散離開"
+        ],
+        [
+          "黑勞士",
+          "人數不明",
+          "死者之中有黑勞士"
+        ]
+      ],
+      "caption": "人數依希羅多德《歷史》7.202–7.203；伯羅奔尼撒各城合計 3,100 人，全部（不含洛克里斯人）合計 5,200 人，本文自算。去向依《歷史》7.218–7.233、8.25。"
+    },
+    {
+      "type": "p",
+      "text": "開打第三天清晨，消息接連進來：波斯兵繞過山路，就要到背後了。希臘人開會吵成兩派，最後大部分人回自己的城去了。"
+    },
+    {
+      "type": "p",
+      "text": "李奧尼達為什麼不走？寫下這段歷史的希臘史家**希羅多德**記了兩種說法。一種是他怕盟軍送命，叫他們先走，自己則覺得斯巴達人不該離開崗位。另一種是希羅多德自己比較相信的：李奧尼達看出盟軍不想陪他冒險，乾脆叫他們走；他自己留下，能留下名聲，斯巴達也不會被毀。因為開戰時斯巴達人求過神，神諭說，要嘛斯巴達城被毀，要嘛斯巴達要為一位國王的死哀悼。所以希羅多德認為，李奧尼達是想把榮耀留給斯巴達人自己。"
+    },
+    {
+      "type": "p",
+      "text": "現代學者另有一種解釋，古書裡沒有：全軍一起撤，出了窄路會被波斯騎兵追殺；留一支人馬在後頭擋住追兵，其他三千多個盟軍才走得掉。"
+    },
+    {
+      "type": "h",
+      "text": "七百和四百"
+    },
+    {
+      "type": "p",
+      "text": "盟軍一走，只剩兩支留在斯巴達人身邊。"
+    },
+    {
+      "type": "quote",
+      "text": "這兩支裡，底比斯人留下是不情願、不甘心的，因為李奧尼達把他們當人質扣著；泰斯匹亞人卻是心甘情願，他們說不肯丟下李奧尼達和他身邊的人自己走，就留下來，和他們一起死了。",
+      "original": "τούτων δὲ Θηβαῖοι μὲν ἀέκοντες ἔμενον καὶ οὐ βουλόμενοι· κατεῖχε γὰρ σφέας Λεωνίδης ἐν ὁμήρων λόγῳ ποιεύμενος· Θεσπιέες δὲ ἑκόντες μάλιστα, οἳ οὐκ ἔφασαν ἀπολιπόντες Λεωνίδην καὶ τοὺς μετ᾽ αὐτοῦ ἀπαλλάξεσθαι, ἀλλὰ καταμείναντες συναπέθανον.",
+      "cite": "希羅多德《歷史》7.222；希臘原文據 A. D. Godley 編本（1920）。本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "泰斯匹亞和底比斯在同一個地區，兩座城本來就是對頭。死者裡還有黑勞士，就是被斯巴達征服、替斯巴達人種田的人，古書沒說有多少。"
+    },
+    {
+      "type": "p",
+      "text": "那天上午，希臘人知道自己要死了，不再守在最窄的地方，往前推到寬處去打。矛斷了就用劍，李奧尼達倒在這場混戰裡。繞山路的波斯兵從背後趕到，他們退上一座小山丘，有劍用劍，沒劍就用手和牙齒，最後被四面射來的箭淹沒。底比斯人沒有跟上去。"
+    },
+    {
+      "type": "h",
+      "text": "城被燒，人被烙印"
+    },
+    {
+      "type": "p",
+      "text": "底比斯人走向波斯人，伸出雙手，說他們早就向波斯國王臣服，是被逼來的。有些人一走近就被殺，活下來的多數被烙上波斯國王的印記。"
+    },
+    {
+      "type": "p",
+      "text": "波斯軍往南走時，又燒了泰斯匹亞城，城裡的人已經先逃了。薛西斯還下令把李奧尼達的頭割下來，插在木樁上。"
+    },
+    {
+      "type": "timeline",
+      "title": "從馬拉松到普拉提亞",
+      "caption": "溫泉關的日數依希羅多德《歷史》7.210–7.225，從薛西斯抵達隘口算起。確切月日不詳：英文維基百科說波斯軍約在公元前 480 年 8 月底或 9 月初抵達，戰役本身則有 7 月下旬、8 月 20 日、9 月上旬等不同推算。其餘依英文維基百科〈溫泉關戰役〉與《歷史》9.71。",
+      "items": [
+        {
+          "when": "前 490 年",
+          "label": "馬拉松之戰",
+          "note": "波斯第一次入侵，被雅典為首的希臘人擊退"
+        },
+        {
+          "when": "前 480 年",
+          "label": "薛西斯的大軍從亞洲渡海進入歐洲",
+          "note": "前一年起，許多希臘城邦向他獻上土和水，表示臣服"
+        },
+        {
+          "when": "前 480 年夏",
+          "label": "斯巴達先派李奧尼達帶三百人北上",
+          "note": "主力要等卡尼亞節過完；奧林匹亞賽會也在同時"
+        },
+        {
+          "when": "第 1–4 天",
+          "label": "薛西斯紮營等待",
+          "note": "他以為希臘人隨時會逃"
+        },
+        {
+          "when": "第 5 天",
+          "label": "米底人、不死軍輪番進攻",
+          "note": "在窄道裡都被打退"
+        },
+        {
+          "when": "第 6 天",
+          "label": "再攻仍無進展；入夜後厄菲阿爾特替波斯兵帶路走山路",
+          "note": "走了一整夜，天亮到山頂"
+        },
+        {
+          "when": "第 7 天清晨",
+          "label": "山上的佛西斯人被繞過；李奧尼達遣散盟軍",
+          "note": "留下斯巴達人、泰斯匹亞人、底比斯人"
+        },
+        {
+          "when": "第 7 天上午",
+          "label": "最後一戰",
+          "note": "李奧尼達戰死；底比斯人投降；其餘的人死在山丘上"
+        },
+        {
+          "when": "前 480 年秋",
+          "label": "薩拉米斯海戰",
+          "note": "希臘艦隊擊敗波斯艦隊"
+        },
+        {
+          "when": "前 479 年",
+          "label": "普拉提亞之戰",
+          "note": "波斯陸軍戰敗，第二次入侵結束；當年活下來的阿里斯托德摩斯在這一戰戰死"
+        },
+        {
+          "when": "1997 年",
+          "label": "泰斯匹亞人紀念碑落成",
+          "note": "立在斯巴達人紀念碑旁"
+        }
+      ]
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Thespians_monument.jpg/1280px-Thespians_monument.jpg",
+      "width": 1280,
+      "height": 960,
+      "alt": "晴天下的白色大理石方碑，四周是柏樹和一座高壓電塔。碑頂是一尊深色金屬雕像：沒有頭的男性軀幹，背後一隻翅膀大大張開，另一隻是斷的。碑座正面刻著三行希臘大寫字母，下方嵌著一塊刻字的牌子。",
+      "caption": "溫泉關的泰斯匹亞人紀念碑，1997 年由希臘政府揭幕，立在斯巴達人紀念碑旁。碑頂是泰斯匹亞人敬拜的愛神厄洛斯，沒有頭，象徵這七百人沒留下名字的犧牲；碑座刻著「七百名泰斯匹亞人的紀念」。2018 年攝。",
+      "credit": "Dmpexr／Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Thespians_monument.jpg",
+      "made": "2018 年 8 月 31 日攝（紀念碑 1997 年落成）"
+    },
+    {
+      "type": "h",
+      "text": "這些事幾乎都是一個人講的"
+    },
+    {
+      "type": "p",
+      "text": "溫泉關的事幾乎全靠希羅多德。可是他的數字常常誇大，他算出薛西斯帶了五百多萬人，現代學者估十二萬到三十萬。他抄下的墓誌寫南部伯羅奔尼撒來的四千人，跟他自己列的三千一百人也對不上。"
+    },
+    {
+      "type": "quote",
+      "text": "四千名伯羅奔尼撒人，曾在這裡迎戰三百萬人。",
+      "original": "μυριάσιν ποτὲ τῇδε τριηκοσίαις ἐμάχοντο ἐκ Πελοποννάσου χιλιάδες τέτορες.",
+      "cite": "溫泉關戰死者墓誌，希羅多德《歷史》7.228 所錄；希臘原文據 A. D. Godley 編本（1920）。「三百萬」原文是「三百個萬」。本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "底比斯人是不是人質，也有人不同意。公元一、二世紀的希臘作家普魯塔克專門寫文章駁他，說三百個前後受敵的斯巴達人，扣不住四百個帶武器的底比斯人。現在也有一種看法，認為這些底比斯人是反對波斯的少數人，自己要來的，老家一被占就回不去，所以留到最後。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Herodotus, The Histories, Book 7（7.132、7.185–7.186、7.202–7.238）",
+      "publisher": "A. D. Godley 英譯，Harvard University Press；Perseus Digital Library（Tufts University）",
+      "date": "1920",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0126:book=7:chapter=202",
+      "note": "逐章讀了 7.132、7.185、7.186、7.202–7.208、7.210–7.213、7.215–7.234、7.238 的英譯與 Godley 註（7.205 註：三百是王室親衛的固定人數；7.224 註：前 440 年李奧尼達遺骨葬回斯巴達、立柱刻三百人名；7.228 註：三則墓誌都是西蒙尼德斯所作）。"
+    },
+    {
+      "title": "Herodotus, Historiae, Book 7（希臘原文 7.202、7.222、7.228）",
+      "publisher": "A. D. Godley 編，Harvard University Press；Perseus Digital Library（Tufts University）",
+      "date": "1920",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0125:book=7:chapter=228",
+      "note": "引文希臘原文取自 7.222、7.228；兵力數字對照 7.202 原文。"
+    },
+    {
+      "title": "Herodotus, The Histories, Book 8（8.24、8.25、8.50）",
+      "publisher": "A. D. Godley 英譯，Harvard University Press；Perseus Digital Library（Tufts University）",
+      "date": "1920",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0126:book=8:chapter=24",
+      "note": "8.24–8.25：薛西斯把約兩萬名波斯死者埋掉、只留約一千具，請艦隊來看；希臘死者四千具，其中有黑勞士。8.50：波斯軍燒掉泰斯匹亞與普拉提亞。"
+    },
+    {
+      "title": "Herodotus, The Histories, Book 9（9.71）",
+      "publisher": "A. D. Godley 英譯，Harvard University Press；Perseus Digital Library（Tufts University）",
+      "date": "1920",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0126:book=9:chapter=71",
+      "note": "普拉提亞之戰：希羅多德認為阿里斯托德摩斯最勇敢，斯巴達人卻因他一心求死而不給他榮譽。"
+    },
+    {
+      "title": "Plutarch, De Herodoti malignitate（On the Malice of Herodotus），sections 31、33",
+      "publisher": "William W. Goodwin 編英譯，Plutarch's Morals（Little, Brown，1874）；Perseus Digital Library（Tufts University）",
+      "date": "1874",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A2008.01.0352%3Asection%3D31",
+      "note": "§31：普魯塔克駁希羅多德的「人質」說，認為三百人扣不住四百名武裝的底比斯人；§33：說溫泉關的底比斯將領是 Anaxander 而非 Leontiades，並說在希羅多德之前沒人聽過烙印一事。"
+    },
+    {
+      "title": "Battle of Thermopylae",
+      "publisher": "English Wikipedia",
+      "date": "2026-11-22",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Thermopylae",
+      "note": "讀取 2026-11-22 修訂版全文：日期推定、現代學者估的波斯軍 12–30 萬、希臘聯軍約 7,000、希羅多德表列 5,200 與墓誌 4,000 的差距、可能最多 900 名黑勞士、殿後說、底比斯「忠誠派」說、泰斯匹亞七百人是全城重裝步兵、希臘死者約 2,000 的估計、卡特里奇的話、1955 年新刻墓誌石、1997 年泰斯匹亞人紀念碑。"
+    },
+    {
+      "title": "Leonidas at Thermopylae",
+      "publisher": "English Wikipedia",
+      "date": "2026-11-18",
+      "url": "https://en.wikipedia.org/wiki/Leonidas_at_Thermopylae",
+      "note": "畫作尺寸、創作年代（1799–1803、1813–1814）、羅浮宮收藏、畫的是開戰之前、中央人物推定是李奧尼達、左邊士兵刻墓誌；館藏號 INV 3690 依 Wikidata Q972295。"
+    },
+    {
+      "title": "300 (film)",
+      "publisher": "English Wikipedia",
+      "date": "2026-11-21",
+      "url": "https://en.wikipedia.org/wiki/300_(film)",
+      "note": "2006 年，Zack Snyder 導演，改編自 Frank Miller 與 Lynn Varley 1998 年的漫畫；片中波斯大軍「more than 300,000」。"
+    },
+    {
+      "title": "Herodotus",
+      "publisher": "English Wikipedia",
+      "date": "2026-11-07",
+      "url": "https://en.wikipedia.org/wiki/Herodotus",
+      "note": "生卒約前 484–約前 425 年、出身波斯治下的哈利卡納蘇斯、「歷史之父」、修昔底德的批評。"
+    },
+    {
+      "title": "Thespiae",
+      "publisher": "English Wikipedia",
+      "date": "2026-11-03",
+      "url": "https://en.wikipedia.org/wiki/Thespiae",
+      "note": "泰斯匹亞是波奧提亞的城邦，與底比斯為敵手；七百名重裝步兵在溫泉關與斯巴達人一起留下。"
+    },
+    {
+      "title": "Medism",
+      "publisher": "English Wikipedia",
+      "date": "2026-08-03",
+      "url": "https://en.wikipedia.org/wiki/Medism",
+      "note": "「親米底」指同情、合作或投靠波斯。"
+    },
+    {
+      "title": "Helots",
+      "publisher": "English Wikipedia",
+      "date": "2026-11-12",
+      "url": "https://en.wikipedia.org/wiki/Helots",
+      "note": "黑勞士是拉科尼亞與美塞尼亞人口的多數，綁在土地上替斯巴達公民耕作。"
+    },
+    {
+      "title": "File:Jacques-Louis David - Leonidas at Thermopylae - WGA6095.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_Leonidas_at_Thermopylae_-_WGA6095.jpg",
+      "note": "頭圖；影像來源 Web Gallery of Art，PD-Art。"
+    },
+    {
+      "title": "File:Thespians monument.jpg",
+      "publisher": "Wikimedia Commons",
+      "date": "2018-09-10",
+      "url": "https://commons.wikimedia.org/wiki/File:Thespians_monument.jpg",
+      "note": "正文圖 f1；Dmpexr 2018-08-31 攝，Wiki Loves Monuments 2018，CC BY-SA 4.0。"
+    }
+  ]
+}
