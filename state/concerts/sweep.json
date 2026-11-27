@@ -1,6 +1,6 @@
 {
   "last": "2026-11-09",
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "sources": {
     "mna": {
       "urls": [
@@ -19,34 +19,34 @@
           "id": "lang-lang-recital-2026"
         },
         {
-          "title": "Currentzis and Utopia Orchestra 11/25",
+          "title": "Currentzis and Utopia Orchestra",
           "verdict": "不收",
           "why": "已演出（11/25）"
         },
         {
-          "title": "Yuja Wang and Mahler Chamber Orchestra 11/21",
+          "title": "Yuja Wang and Mahler Chamber Orchestra",
           "verdict": "不收",
           "why": "已演出（11/21）"
         },
         {
-          "title": "Thielemann and Staatskapelle Berlin 11/21",
+          "title": "Thielemann and Staatskapelle Berlin",
           "verdict": "不收",
           "why": "已演出（11/21）"
         },
         {
           "title": "INTERSTELLAR LIVE",
           "verdict": "不收",
-          "why": "電影配樂拼盤，不在收錄範圍"
+          "why": "2分：電影配樂"
         },
         {
-          "title": "Attack on Titan World Tour",
+          "title": "Attack on Titan world tour",
           "verdict": "不收",
-          "why": "動漫配樂，不在收錄範圍"
+          "why": "2分：動漫"
         },
         {
           "title": "Diana Krall",
           "verdict": "不收",
-          "why": "爵士歌手，不在收錄範圍"
+          "why": "爵士流行"
         }
       ]
     },
@@ -59,12 +59,26 @@
           "title": "2027向貝多芬致敬-吉爾特伯格",
           "verdict": "已列入",
           "id": "giltburg-beethoven-tso-2027"
+        },
+        {
+          "title": "2026阿格麗希音樂節在台灣",
+          "verdict": "不收",
+          "why": "11月檔期，已演出"
+        },
+        {
+          "title": "2026皮亞佐拉五重奏",
+          "verdict": "不收",
+          "why": "沒查到日期與場地，來不及判"
+        },
+        {
+          "title": "2026蕭邦計畫",
+          "verdict": "不收",
+          "why": "沒查到演出者，來不及判"
         }
-      ],
-      "error": "首頁選單只有標題，沒開各節目頁；2026阿格麗希音樂節、蕭邦計畫、皮亞佐拉五重奏的日期未查到，來不及評分"
+      ]
     },
     "pbc": {
-      "error": "來不及查（07:15 前先處理候選與其他工作）"
+      "error": "來不及查"
     },
     "tanart": {
       "error": "來不及查（Crawl-delay 50 秒）"
@@ -76,21 +90,19 @@
       "error": "來不及查"
     },
     "news": {
-      "urls": [],
-      "seen": [],
-      "error": "只做一次泛搜尋（交響樂團來台），沒有新發現；其餘關鍵字來不及查"
+      "error": "來不及查"
     },
     "ntch": {
       "auto": true,
-      "n": 134
+      "n": 133
     },
     "ntt": {
       "auto": true,
-      "n": 49
+      "n": 47
     },
     "wwy": {
       "auto": true,
-      "n": 156
+      "n": 154
     }
   }
 }

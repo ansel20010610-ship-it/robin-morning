@@ -1,17 +1,9 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "complete": true,
   "note": "",
   "incomplete_since": null,
   "dropped": {
-    "2102718089729351681": {
-      "title": "2027TIFA 莎士比亞的妹妹們的劇團《委託創作》",
-      "shows": [
-        "2027-04-17 台北",
-        "2027-04-18 台北"
-      ],
-      "why": "戲劇類，標題沒有「音樂劇」或「歌劇」"
-    },
     "ntch:27656": {
       "title": "2026廳院選 當代傳奇劇場《慾望城國》王者再臨",
       "shows": [
@@ -182,10 +174,10 @@
     "opentix": {
       "ok": true,
       "note": "",
-      "new": 24,
+      "new": 14,
       "pages": 80,
-      "left": 6,
-      "newest": "2026-11-25"
+      "left": 0,
+      "newest": "2026-11-26"
     },
     "venues": {
       "ok": true,
@@ -193,17 +185,17 @@
       "read": {
         "ntch": {
           "ok": true,
-          "n": 134,
+          "n": 133,
           "note": ""
         },
         "wwy": {
           "ok": true,
-          "n": 156,
+          "n": 154,
           "note": ""
         },
         "ntt": {
           "ok": true,
-          "n": 49,
+          "n": 47,
           "note": ""
         },
         "bach": {
@@ -271,6 +263,12 @@
     },
     {
       "date": "2026-11-27",
+      "feed": true,
+      "opentix": true,
+      "venues": true
+    },
+    {
+      "date": "2026-11-28",
       "feed": true,
       "opentix": true,
       "venues": true
