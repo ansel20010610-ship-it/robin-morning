@@ -1,0 +1,202 @@
+{
+ "column": "news",
+ "date": "2026-11-28",
+ "title": "九合一選舉與核電公投今天投開票，烏克蘭提出黑海停火",
+ "dek": "台灣投票所上午 8 時開門；黑海的糧食航道等著俄羅斯回覆，西班牙週日大選。",
+ "brief": "烏克蘭外長說，黑海停火方案已經提出，糧食出口等著俄羅斯回覆。加拿大最高法院大致維持魁北克禁止公部門人員配戴宗教象徵的法律。台灣今天上午 8 時到下午 4 時投票，同日表決一項核電公投。",
+ "topic_key": "news:2026-11-28",
+ "voice": "wire",
+ "updated_at": "2026-11-28T05:22:00+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "sources": [
+  {
+   "title": "Kyiv offers Black Sea ceasefire to protect grain exports",
+   "publisher": "半島電視台",
+   "date": "2026-11-27",
+   "url": "https://www.aljazeera.com/news/2026/11/27/kyiv-offers-black-sea-ceasefire-as-putin-expands-russias-navy",
+   "note": "西比哈說明、俄方要求納入石油、糧食出口、普廷在深圳的說法"
+  },
+  {
+   "title": "Ukraine submits Black Sea ceasefire offer, awaits Russian response",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-27",
+   "url": "https://www.france24.com/en/europe/20261127-ukraine-submits-black-sea-ceasefire-offer-awaits-russian-response",
+   "note": "第二來源：兩艘貨輪遇襲、糧食出口 7 月底以來幾乎停擺、俄方提議"
+  },
+  {
+   "title": "Canada's top court largely upholds Quebec's religious symbols ban",
+   "publisher": "半島電視台",
+   "date": "2026-11-27",
+   "url": "https://www.aljazeera.com/news/2026/11/27/canadas-top-court-largely-upholds-quebecs-religious-symbols-ban",
+   "note": "判決內容、法案適用對象、大法官意見、各方反應"
+  },
+  {
+   "title": "Mecca pact allies condemn 'heinous' Houthi attacks on Saudi Arabia",
+   "publisher": "半島電視台",
+   "date": "2026-11-27",
+   "url": "https://www.aljazeera.com/news/2026/11/27/mecca-pact-allies-condemn-heinous-houthi-attacks-on-saudi-arabia",
+   "note": "伊斯蘭馬巴德會議、沙方死亡數字、巴基斯坦與土耳其對葉門派兵的說法"
+  },
+  {
+   "title": "Spain's Pedro Sanchez bets on left-wing voting surge to defy election polls",
+   "publisher": "半島電視台",
+   "date": "2026-11-27",
+   "url": "https://www.aljazeera.com/news/2026/11/27/spains-pedro-sanchez-bets-on-left-wing-voting-surge-to-defy-election-polls",
+   "note": "週日投票、冷靜日、投票前民調禁令與民調走向、桑切斯說法"
+  },
+  {
+   "title": "With Spain's far right on the cusp of power, can women bail Sanchez out once again?",
+   "publisher": "法國 24 電視台",
+   "date": "2026-11-27",
+   "url": "https://www.france24.com/en/europe/20261127-spain-far-right-vox-at-the-gates-can-women-bail-out-sanchez-once-again",
+   "note": "第二來源：投票日 11 月 29 日、桑切斯 10 月 5 日宣布提前大選的原因"
+  },
+  {
+   "title": "九合一選舉11/28登場 中選會提醒28日零時起禁助選",
+   "publisher": "中央社",
+   "date": "2026-11-27",
+   "url": "https://www.cna.com.tw/news/aipl/202611270090.aspx",
+   "note": "投票時間、選民總數、公職人數、投票所數、投票所規定"
+  },
+  {
+   "title": "11/28「廢除非核家園」公投案 通過門檻、怎麼投一次看",
+   "publisher": "中央社",
+   "date": "2026-11-12",
+   "url": "https://www.cna.com.tw/news/aipl/202611120231.aspx",
+   "note": "第 22 案主文與通過門檻"
+  },
+  {
+   "title": "Candidates across Taiwan make final push on eve of local elections",
+   "publisher": "中央社英文網 Focus Taiwan",
+   "date": "2026-11-27",
+   "url": "https://focustaiwan.tw/politics/202611270020",
+   "note": "選前之夜、22 縣市、全國性公投人數"
+  },
+  {
+   "title": "主計總處上修全年經濟成長13.28% 創近半世紀高點",
+   "publisher": "中央社",
+   "date": "2026-11-27",
+   "url": "https://www.cna.com.tw/news/afe/202611270148.aspx",
+   "note": "13.28%、增加 2.23 個百分點、2027 年 6.51%"
+  },
+  {
+   "title": "Taiwan's 2026 GDP growth forecast raised to 13.28%, highest since 1978",
+   "publisher": "中央社英文網 Focus Taiwan",
+   "date": "2026-11-27",
+   "url": "https://focustaiwan.tw/business/202611270017",
+   "note": "1978 年 13.56%、出口與投資、風險"
+  },
+  {
+   "title": "主計總處：明年經濟成長估6.51% AI發展腳步不會停",
+   "publisher": "中央社",
+   "date": "2026-11-27",
+   "url": "https://www.cna.com.tw/news/afe/202611270234.aspx",
+   "note": "AI 需求帶動出口與投資、風險（美國出口管制、台股波動）"
+  }
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "台灣今天是九合一選舉投票日，同日有一項核電公投。國外，烏克蘭提出黑海停火，波灣、加拿大與西班牙也各有新進展。"
+  },
+  {
+   "type": "news",
+   "title": "世界",
+   "items": [
+    {
+     "headline": "烏克蘭提出黑海停火，等俄方回覆",
+     "place": [
+      "UA",
+      "RU"
+     ],
+     "summary": "烏克蘭外長西比哈 27 日說，黑海停火方案已經提出，正等俄羅斯回覆。俄方要把石油運輸也列入，烏方說石油要放進更大範圍的能源停火談。烏克蘭黑海港口的糧食出貨 7 月底以來幾乎停擺，烏克蘭總理說 26 日有兩艘外國貨輪在敖德薩附近遇襲。",
+     "source": "半島電視台、法國 24 電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/27/kyiv-offers-black-sea-ceasefire-as-putin-expands-russias-navy",
+     "when": "11 月 27 日，烏克蘭"
+    },
+    {
+     "headline": "魁北克宗教象徵禁令獲維持",
+     "place": [
+      "CA"
+     ],
+     "summary": "加拿大最高法院 27 日大致維持魁北克省 2019 年通過的世俗法，法律禁止教師、警察等公部門人員執勤時戴頭巾、包頭巾、小圓帽。首席大法官瓦格納執筆的意見說，魁北克援引憲章中讓法律不受宗教自由等條文約束的條款，程序合法。兩位大法官部分不同意。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/27/canadas-top-court-largely-upholds-quebecs-religious-symbols-ban",
+     "when": "11 月 27 日，加拿大"
+    },
+    {
+     "headline": "三國在伊斯蘭馬巴德譴責胡塞攻擊",
+     "place": [
+      "PK",
+      "SA",
+      "TR",
+      "YE"
+     ],
+     "summary": "巴基斯坦、沙烏地阿拉伯、土耳其的部長與軍方首長 27 日在伊斯蘭馬巴德開會，譴責胡塞武裝攻擊沙烏地平民與民用設施。沙方說，9 月 23 日以來疑似胡塞的攻擊至少造成 26 人死亡。土耳其外長說，派兵葉門還沒有決定。",
+     "source": "半島電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/27/mecca-pact-allies-condemn-heinous-houthi-attacks-on-saudi-arabia",
+     "when": "11 月 27 日，巴基斯坦"
+    },
+    {
+     "headline": "西班牙 29 日投票",
+     "place": [
+      "ES"
+     ],
+     "summary": "西班牙 29 日（週日）舉行提前大選。總理桑切斯 10 月 5 日宣布提前，起因是右派政黨在國會否決政府處理住房危機的緊急措施。依法投票前五天不得公布民調；在那之前的民調，幾乎都顯示人民黨與極右的呼聲黨組成的聯盟領先。28 日是競選冷靜日。",
+     "source": "半島電視台、法國 24 電視台",
+     "url": "https://www.aljazeera.com/news/2026/11/27/spains-pedro-sanchez-bets-on-left-wing-voting-surge-to-defy-election-polls",
+     "when": "11 月 27 日，西班牙"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "title": "台灣",
+   "items": [
+    {
+     "headline": "九合一選舉與核電公投今天投開票",
+     "place": "TW",
+     "summary": "28 日投票，同日表決第 22 案公投，題目是「你是否支持政府使用『核電』振興經濟，以廢除『非核家園』的能源政策？」。同意票要多於不同意票，並達投票權人總額四分之一以上。要帶身分證、印章與投票通知單；手機與攝影器材不得帶進投票所，已關機的除外。",
+     "source": "中央社、中央社英文網 Focus Taiwan",
+     "url": "https://www.cna.com.tw/news/aipl/202611270090.aspx",
+     "when": "11 月 28 日，台灣時間"
+    },
+    {
+     "headline": "今年經濟成長預測上修到 13.28%",
+     "place": "TW",
+     "summary": "主計總處 27 日把今年經濟成長率預測上修到 13.28%，比 8 月的預測多 2.23 個百分點，是 1978 年以來最高。官員說，出口是上修的主因，AI 需求也帶動民間投資。明年預測 6.51%。風險有美國擴大先進半導體出口管制，以及近期台股劇烈波動。",
+     "source": "中央社、中央社英文網 Focus Taiwan",
+     "url": "https://www.cna.com.tw/news/afe/202611270148.aspx",
+     "when": "11 月 27 日，台灣時間"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "28 日投票數字（中央社）",
+   "head": [
+    "項目",
+    "數字"
+   ],
+   "rows": [
+    [
+     "投票時間",
+     "上午 8 時至下午 4 時"
+    ],
+    [
+     "選民總數",
+     "1957 萬 6028 人"
+    ],
+    [
+     "選出公職",
+     "1 萬 1051 位"
+    ],
+    [
+     "投票所",
+     "1 萬 8248 個"
+    ]
+   ]
+  }
+ ]
+}
