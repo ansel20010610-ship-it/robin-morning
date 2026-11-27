@@ -1,0 +1,231 @@
+{
+  "column": "perio",
+  "date": "2026-11-28",
+  "title": "牙齦還在流血：牙間刷打底，抗菌劑再加一層",
+  "dek": "病人常問漱口水、抗牙齦炎牙膏該買哪一種。歐洲指引對要不要加，只說「可以考慮」；對加哪一種，倒是點了名。",
+  "brief": "西班牙 Figuero 等人 2020 年整理 70 篇至少半年的隨機試驗：刷牙之外再加含抗菌成分的牙膏或漱口水，牙齦發炎和菌斑都降得更多。歐洲牙周病學會的指引主要依據這篇，說維護期病人可以考慮加，也點名了該挑哪些成分。打底的仍是刷牙加牙間刷。",
+  "takeaway": "維護期病人牙齦還在流血，先把刷牙和牙間刷做好；要再加一層，含抗菌成分的牙膏或漱口水能讓牙齦發炎降得更多，指引點名氯己定、精油、西吡氯銨等成分。",
+  "chairside": "您牙齦還有一點流血，最要緊的還是每天刷牙、用牙間刷。想多加一層的話，可以挑含抗菌成分的牙膏或漱口水，研究看到牙齦發炎會再少一些。有些會讓牙齒染色，用了覺得不對再跟我說。",
+  "topic_key": "perio:doi:10.1111/jcpe.13244",
+  "form": "flow",
+  "voice": "colleague",
+  "updated_at": "2026-11-27T22:42:56+08:00",
+  "spoiler": null,
+  "disclaimer": "醫學教學導讀，非個別診療建議。",
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Fertiges_Mundwasser_dosiert_in_zugeh%C3%B6riger_Verschlusskappe.jpg/1280px-Fertiges_Mundwasser_dosiert_in_zugeh%C3%B6riger_Verschlusskappe.jpg",
+    "width": 1280,
+    "height": 960,
+    "alt": "從斜上方拍的一個白色塑膠瓶蓋，蓋子側面有細直紋，裡面倒了大半蓋藍色液體，放在灰白色的桌面上。",
+    "caption": "倒在瓶蓋裡、準備含漱的一份漱口水。照片不標品牌與成分，與本文論文的受試者和試驗產品無關；用來提醒：漱口水是加在刷牙之上的那一層。",
+    "credit": "Erschaffung（德文維基百科使用者），經 Wikimedia Commons",
+    "license": "CC BY-SA 3.0 de",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fertiges_Mundwasser_dosiert_in_zugeh%C3%B6riger_Verschlusskappe.jpg",
+    "made": "2011"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "做完牙周治療、進入維護期，牙齦卻還在流血，病人常會問：漱口水、抗牙齦炎牙膏，要買哪一種？歐洲牙周病學會 2020 年的治療指引，對這件事給過答案。"
+    },
+    {
+      "type": "p",
+      "text": "答案主要靠一篇系統性回顧。作者是 **Elena Figuero** 等六人，其中五人來自西班牙馬德里康普頓斯大學。論文 2020 年刊出。它是為 2019 年 11 月在塞哥維亞開的歐洲牙周病研討會做的，那次會議定出了第 I 到 III 期牙周炎的治療指引。指引自己寫，有效到 2025 年。"
+    },
+    {
+      "type": "p",
+      "text": "回顧問的是：刷牙照做，再加**含抗菌成分的牙膏或漱口水**，牙齦發炎會不會少更多。只收追蹤至少 6 個月的隨機試驗。對象是牙齦炎病人，或治療過、牙齦仍在發炎的牙周炎病人。抗菌劑的研究共 70 篇。"
+    },
+    {
+      "type": "h",
+      "text": "加了差多少"
+    },
+    {
+      "type": "p",
+      "text": "有差。牙齦指數的標準化平均差是 −1.268（95% CI −1.489 至 −1.047），出血的比例多降 14.62 個百分點。只看治療過的牙周炎病人，是 −1.564。作者說，兩類病人效果差不多。"
+    },
+    {
+      "type": "p",
+      "text": "標準化平均差，是把各研究不同的牙齦指數換成「差幾個標準差」，才能合起來算。做系統性回顧常用的 Cochrane 手冊說，0.8 以上算大，所以 1.268 算大。但手冊也說，這套通則主要來自社會科學；有方法學者認為，對病人重不重要要看情境。"
+    },
+    {
+      "type": "p",
+      "text": "弱點是各研究的結果差很多，而且**大多數研究由廠商資助，偏差風險高**。追蹤 1.5 到 3 年的 4 篇研究，牙齦指數看不出顯著差別。值得一提的副作用只有染色。"
+    },
+    {
+      "type": "h",
+      "text": "指引怎麼寫"
+    },
+    {
+      "type": "quote",
+      "text": "處理牙齦發炎的根本，是病人自己用機械方式清除牙菌斑。包括抗菌劑在內的輔助手段，可以在特定情況下考慮，作為個人化治療的一部分。",
+      "original": "The basis of the management of gingival inflammation is self‐performed mechanical removal of biofilm. Adjunctive measures, including antiseptic, may be considered in specific cases, as part of a personalized treatment approach.",
+      "cite": "Sanz 等 2020，EFP S3 臨床指引建議 4.10（專家共識，0 級「可以考慮」）；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "所以要不要加，指引只給 0 級「可以考慮」，而且限特定情況。B 級「建議」給的是加哪一種：**牙膏挑氯己定、三氯沙加共聚物、氟化亞錫加六偏磷酸鈉，漱口水挑氯己定、精油、西吡氯銨**。"
+    },
+    {
+      "type": "table",
+      "title": "牙膏和漱口水裡加哪種抗菌成分：牙齦指數多降多少",
+      "head": [
+        "劑型",
+        "成分",
+        "研究數",
+        "標準化平均差（牙齦指數）",
+        "指引怎麼說"
+      ],
+      "rows": [
+        [
+          "牙膏",
+          "氟化亞錫加六偏磷酸鈉",
+          "2",
+          "−1.503",
+          "建議（B 級）"
+        ],
+        [
+          "牙膏",
+          "三氯沙加共聚物",
+          "18",
+          "−1.313",
+          "建議（B 級）"
+        ],
+        [
+          "牙膏",
+          "氯己定",
+          "2",
+          "−1.278（未達統計顯著）",
+          "建議（B 級）"
+        ],
+        [
+          "漱口水",
+          "精油",
+          "10",
+          "−2.248",
+          "建議（B 級）"
+        ],
+        [
+          "漱口水",
+          "西吡氯銨（CPC）",
+          "5",
+          "−1.499",
+          "建議（B 級）"
+        ],
+        [
+          "漱口水",
+          "高濃度氯己定",
+          "5",
+          "−1.144",
+          "建議（B 級）"
+        ],
+        [
+          "全部抗菌劑合併",
+          "—",
+          "72 組比較",
+          "−1.268（95% CI −1.489 至 −1.047）",
+          "整體只是「可以考慮」（0 級）"
+        ],
+        [
+          "其中：治療過的牙周炎病人",
+          "—",
+          "16 組比較",
+          "−1.564（95% CI −2.197 至 −0.931）",
+          "同上"
+        ]
+      ],
+      "caption": "負數代表加了抗菌成分的那組，牙齦指數比只刷牙的那組降得多；標準化平均差是把不同量表換成「差幾個標準差」，不是指數的分數。只列研究數多於一篇的成分。指引特別註明成分之間互比不是這篇回顧的目的，各研究結果也差很多，多數由廠商資助、偏差風險高。B 級是「建議」（we suggest），0 級是「可以考慮」（may be considered）。依 Sanz 等 2020 年 EFP S3 指引建議 4.10–4.13 的正文與 Figuero 等 2020 年摘要整理，非原表轉載。"
+    },
+    {
+      "type": "p",
+      "text": "精油漱口水的數字最大，但指引說，成分互比不是這篇回顧的目的。漱口水是不是勝過牙膏，證據互相矛盾。牙膏本來就要用；漱口水多一道手續，也多一筆錢。"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Toothpasteonbrush.jpg/1280px-Toothpasteonbrush.jpg",
+      "width": 1280,
+      "height": 853,
+      "alt": "近拍一支藍綠色把手的牙刷，白色與藍綠色刷毛上，一條牙膏正從白色管口擠出，膏體白色帶紅色小點；背景模糊，有幾個圓形光斑。",
+      "caption": "擠在牙刷上的一份氟化亞錫牙膏。依 Commons 檔案說明，這是 Crest Pro-Health Clean Cinnamon，含 0.454% 氟化亞錫；說明沒寫是否含六偏磷酸鈉。照片 2008 年攝，與本文論文的受試者和試驗產品無關。",
+      "credit": "Thegreenj，經 Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Toothpasteonbrush.jpg",
+      "made": "2008"
+    },
+    {
+      "type": "p",
+      "text": "指引也提醒，有些研究用的產品可能已經買不到。像三氯沙，Colgate 網頁寫，自家產品 2019 年 1 月起已不再用它。"
+    },
+    {
+      "type": "h",
+      "text": "順便複習：維護期的牙間清潔"
+    },
+    {
+      "type": "p",
+      "text": "支持性牙周照護就是維護期，是牙周炎治療的第四步。治療完照病人的需要定期回診，讓牙周維持穩定。病人自己把牙齒清乾淨，也算在裡面。"
+    },
+    {
+      "type": "p",
+      "text": "這一步的機械清潔，指引給的等級比抗菌劑高。解剖上做得到，刷牙之外**要加牙間刷**，是 A 級強建議。牙線則不建議當牙間清潔的第一選擇。牙間刷用錯有中等的創傷風險，要個別教。所有病人都要用含氟牙膏刷牙。"
+    },
+    {
+      "type": "p",
+      "text": "要給誰加抗菌劑，指引說看菌斑多少、刷不刷得到、牙齒解剖，也看全身健康和手靈不靈活。有人說抗菌劑該給清不乾淨的人用，指引直說，這沒有直接證據。"
+    },
+    {
+      "type": "paper",
+      "citation": "Figuero E, Roldán S, Serrano J, Escribano M, Martín C, Preshaw PM. Efficacy of adjunctive therapies in patients with gingival inflammation: A systematic review and meta-analysis. *J Clin Periodontol*. 2020;47 Suppl 22:125–143.",
+      "doi": "10.1111/jcpe.13244",
+      "pmid": "31869441",
+      "link": "https://doi.org/10.1111/jcpe.13244",
+      "evidence": "系統性回顧與統合分析：70 篇至少 6 個月的隨機試驗；多數廠商資助、偏差風險高",
+      "design": "隨機試驗的系統性回顧與統合分析，效果以標準化平均差與加權平均差表示；第十六屆歐洲牙周病研討會為 EFP S3 指引委託的回顧之一",
+      "sample": "抗菌劑研究 70 篇；牙齦指數主分析 72 組比較（依指引：試驗組 5,376 人、對照組 3,693 人），其中治療過的牙周炎病人 16 組比較（試驗組 1,125 人、對照組 838 人）；追蹤至少 6 個月",
+      "question": "牙齦發炎的人（牙齦炎，或治療過的牙周炎仍有發炎），在刷牙等機械清潔之外加用含抗菌成分的牙膏或漱口水，牙齦炎與菌斑會不會少得更多？",
+      "access": "依 PubMed 摘要（含效果量與 95% 信賴區間）與 EFP S3 指引全文對本篇的轉述整理；各成分的數字取自指引正文；出版社全文需訂閱，未讀"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Efficacy of adjunctive therapies in patients with gingival inflammation: A systematic review and meta-analysis",
+      "publisher": "Journal of Clinical Periodontology（Figuero E、Roldán S、Serrano J、Escribano M、Martín C、Preshaw PM）",
+      "date": "2020-07-27",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31869441/",
+      "note": "主角論文。讀 PubMed 摘要（E-utilities efetch 取得）；出版社全文需訂閱，未讀。DOI 10.1111/jcpe.13244；PMID 31869441（用 DOI 查得後回查標題相符）；卷期頁 47 Suppl 22:125–143 依 PubMed 與 Crossref；日期為 Crossref 線上出版日，正式刊期 2020 年 7 月。用到：目的、納入條件（至少 6 個月的隨機試驗）、70 篇、牙齦指數、出血、菌斑指數、菌斑百分比的效果量與信賴區間、異質性、漱口水與牙膏的統合迴歸、兩類病人效果相近、結論。"
+    },
+    {
+      "title": "Treatment of stage I–III periodontitis—The EFP S3 level clinical practice guideline",
+      "publisher": "Journal of Clinical Periodontology（Sanz M、Herrera D、Kebschull M 等）",
+      "date": "2020-07-27",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/",
+      "note": "讀全文（Europe PMC fullTextXML，PMC7891343）。DOI 10.1111/jcpe.13290；PMID 32383274。用到：第 3 節塞哥維亞會議（2019 年 11 月 10–13 日、15 篇系統性回顧）、效期到 2025 年；表 4 建議等級；第四步支持性牙周照護的定義；R4.6、R4.7 牙間清潔；R4.10–R4.13 的建議原文、等級、對 Figuero 等的轉述（研究與人數、治療過牙周炎病人的分組、長期研究、各成分數字、偏差、染色、成本、產品可能已停售、血壓、局部與全身因素、氟化物牙膏、轉引 Chapple 等 2015）。指引引用 Figuero 等時寫作 2019。日期依 Crossref 線上出版日。"
+    },
+    {
+      "title": "Cochrane Handbook for Systematic Reviews of Interventions, Chapter 6: Choosing effect measures and computing estimates of effect（6.5.1.2 The standardized mean difference）",
+      "publisher": "Cochrane",
+      "date": "",
+      "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-06",
+      "note": "標準化平均差的定義與用途。網頁未標發布日期，2026-11-27 查閱現行版。"
+    },
+    {
+      "title": "Cochrane Handbook for Systematic Reviews of Interventions, Chapter 15: Interpreting results and drawing conclusions（15.5.3.1）",
+      "publisher": "Cochrane",
+      "date": "",
+      "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-15",
+      "note": "標準化平均差 0.2／0.5／0.8 的經驗法則（Cohen 1988）與方法學者的但書。網頁未標發布日期，2026-11-27 查閱現行版。"
+    },
+    {
+      "title": "Our Policy on Ingredient Safety",
+      "publisher": "Colgate-Palmolive",
+      "date": "",
+      "url": "https://www.colgatepalmolive.com/en-us/core-values/our-policies/ingredient-safety",
+      "note": "三氯沙一段：2018 年底推出新配方 Colgate Total，2019 年 1 月起不再使用三氯沙。網頁未標日期，2026-11-27 查閱。"
+    }
+  ]
+}
