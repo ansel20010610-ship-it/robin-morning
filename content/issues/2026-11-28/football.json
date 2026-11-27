@@ -1,0 +1,477 @@
+{
+ "column": "football",
+ "date": "2026-11-28",
+ "title": "巴薩去里亞索，對面教練是自家青訓長大的",
+ "dek": "36 分對 15 分，51 球對 16 球。週日台灣晚上 11 點 15 分，巴薩作客拉科魯尼亞。",
+ "brief": "週日台灣時間 23:15，巴薩西甲作客拉科魯尼亞，對面教練伊達爾戈 12 歲到 21 歲都在巴薩青訓。羅德里週五回來練了一部分；貝納爾、巴爾德、克里斯滕森沒練，據《Sport》，貝納爾是訓練量累積造成的輕微不適。",
+ "topic_key": "football:2026-11-28",
+ "form": "compare",
+ "voice": "fan",
+ "updated_at": "2026-11-28T03:05:39+08:00",
+ "spoiler": null,
+ "disclaimer": null,
+ "next": {
+  "opponent": "拉科魯尼亞",
+  "competition": "西甲",
+  "kickoff": "2026-11-29T23:15+08:00",
+  "venue": "里亞索球場",
+  "home": false
+ },
+ "hero": {
+  "id": "hero",
+  "kind": "photo",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Estadio_de_Riazor_-_2.jpg/1280px-Estadio_de_Riazor_-_2.jpg",
+  "width": 1280,
+  "height": 720,
+  "alt": "里亞索球場內景。",
+  "caption": "拉科魯尼亞的主場里亞索球場，HausOf_Diegoo 攝於 2014 年 8 月。巴薩週日就在這裡踢。資料照片，非當日比賽畫面。",
+  "credit": "HausOf_Diegoo／Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Estadio_de_Riazor_-_2.jpg",
+  "made": "2014"
+ },
+ "body": [
+  {
+   "type": "p",
+   "text": "週日巴薩要去踢的那支球隊，教練**伊達爾戈**是巴薩青訓帶大的。他 12 歲進來，一待待到 21 歲。這場對他很特別，他自己說的。"
+  },
+  {
+   "type": "p",
+   "text": "對手是**拉科魯尼亞**。週日（11 月 29 日）西甲第 14 輪，巴薩去他們的主場里亞索踢客場，西班牙時間下午 4 點 15 分，台灣是晚上 11 點 15 分，不必熬夜。拉科魯尼亞在西班牙西北角的加利西亞，球場就在海邊。2018 年降級以後，他們一度掉到第三級，這一季才剛升上西甲，現在排第 12。"
+  },
+  {
+   "type": "p",
+   "text": "巴薩排第 1，比第 2 的皇馬多 3 分。週三在歐冠遠征巴庫，4 比 1 贏了主隊 Sabah，休息一天，週五回到訓練場。"
+  },
+  {
+   "type": "table",
+   "title": "週日在里亞索，兩邊並排",
+   "head": [
+    "項目",
+    "巴薩",
+    "拉科魯尼亞"
+   ],
+   "rows": [
+    [
+     "西甲名次與積分",
+     "第 1，36 分",
+     "第 12，15 分"
+    ],
+    [
+     "13 場戰績",
+     "12 勝 0 和 1 敗",
+     "3 勝 6 和 4 敗"
+    ],
+    [
+     "進球／失球",
+     "51／15",
+     "16／17"
+    ],
+    [
+     "教練",
+     "弗利克",
+     "伊達爾戈，12 到 21 歲在巴薩青訓"
+    ],
+    [
+     "這週的意外",
+     "貝納爾週五沒練",
+     "奧巴梅揚週四出小車禍，沒受傷（《馬卡報》）"
+    ],
+    [
+     "中場",
+     "羅德里回來練球，第三個位置未定（據《Sport》）",
+     "卡薩多，巴薩租出去的"
+    ],
+    [
+     "一老一少",
+     "坎波斯，18 歲，11 月 25 日一線隊初登場",
+     "奧巴梅揚，37 歲，今年夏天加盟"
+    ]
+   ],
+   "caption": "積分與戰績取自西甲官網（第 13 輪賽後）；其餘取自巴薩官網、EFE 與 Goal。"
+  },
+  {
+   "type": "h",
+   "text": "一場快四球，對面準備吃苦"
+  },
+  {
+   "type": "p",
+   "text": "巴薩一場平均快進四球，拉科魯尼亞整季進的球，還不到巴薩的三分之一。伊達爾戈說，他們得準備好吃苦，防守要非常紮實。"
+  },
+  {
+   "type": "quote",
+   "text": "我們知道巴薩沒球的時候有多凶，會把你逼得很難受。",
+   "original": "Sabemos la agresividad que tiene el Barça sin balón, te pone en muchísima dificultad",
+   "cite": "伊達爾戈，EFE 11 月 27 日"
+  },
+  {
+   "type": "p",
+   "text": "他也說，弗利克把這支球隊帶到很高的競爭力，每個星期都在證明。週日那天大家別太沉不住氣，因為來的是世界上最好的球隊之一。他還跟《世界體育報》說，他們有一樣祕密武器（Goal 轉述；Goal 的歸納是指里亞索的球迷）。"
+  },
+  {
+   "type": "h",
+   "text": "兩邊的小意外"
+  },
+  {
+   "type": "p",
+   "text": "週五巴薩練球，貝納爾、巴爾德、克里斯滕森沒練。Espart 和 Bardghji 也在傷兵之列，Bardghji 傷得久。巴爾德右腳踝輕度扭傷，克里斯滕森是左小腿比目魚肌不舒服。貝納爾這個，西班牙通訊社 EFE 說是意外，因為他去了巴庫，但沒上場。"
+  },
+  {
+   "type": "p",
+   "text": "據《Sport》（Goal 轉述），是輕微不適，訓練量累積造成的。週四在訓練基地做了檢查，球團決定讓他休息，免得越來越痛。同樣據《Sport》，球團和他本人都樂觀，計畫是週六照常練，跟球隊一起去加利西亞。"
+  },
+  {
+   "type": "p",
+   "text": "對面也有一件。拉科魯尼亞的奧巴梅揚週四早上去訓練基地的路上，在高速公路上出了小車禍。西班牙《馬卡報》（Goal 轉述）說，他人沒受傷，照常練球。伊達爾戈說是小事，沒影響準備。"
+  },
+  {
+   "type": "h",
+   "text": "巴薩的中場擠，巴薩的人在對面"
+  },
+  {
+   "type": "p",
+   "text": "**羅德里**回來了。他 11 月 3 日對阿斯頓維拉傷了右大腿後側，週五回到團隊訓練，跟大家練了一部分。週日他有機會進名單。"
+  },
+  {
+   "type": "p",
+   "text": "Goal 轉述《Sport》的說法，羅德里想用最好的狀態趕上下週對馬競。可是他圈在行事曆上的，是對曼城那場歐冠，台灣時間 12 月 9 日週三清晨 4 點。週日弗利克可能給他一點時間。我覺得一小段就夠了，曼城那場才是他要的。"
+  },
+  {
+   "type": "p",
+   "text": "同一篇報導也排了中場的位子。羅德里和佩德里是穩的先發；費爾明停賽兩場，第三個位置還沒定。貝納爾本來是常用的防守中場，羅德里一回來，他的分量可能就往下掉。德容被弗利克拿去踢過中後衛和邊後衛，他自己說，他是中場。"
+  },
+  {
+   "type": "p",
+   "text": "對面也站著一個巴薩的人。**卡薩多**還是巴薩的球員，租給拉科魯尼亞到 2027 年 6 月。週五他上《Sport》的節目，談到亞馬爾。有人批評亞馬爾想做太多事，他說他看了覺得好笑，那些人一邊這樣罵，一邊又在懷念街頭足球。內馬爾和梅西，以前也被這樣說過。這段我站卡薩多。"
+  },
+  {
+   "type": "p",
+   "text": "亞馬爾本人週五有訓練。他沒踢巴庫那場，是右腳踝有點不舒服，球團說只是預防。"
+  },
+  {
+   "type": "p",
+   "text": "九月卡薩多參觀拉科魯尼亞的訓練中心，看完更衣室，說這裡比巴薩還好。這回他說，那句話很不幸（unfortunate），很遺憾被誤會，也祝巴薩好。以上據 Goal 轉述《Sport》。"
+  },
+  {
+   "type": "h",
+   "text": "一個 18 歲，一個 37 歲"
+  },
+  {
+   "type": "p",
+   "text": "巴薩週五的訓練場上，多了一張年輕的臉。坎波斯 18 歲，踢中後衛，是巴薩二隊 Barça Atlètic 的隊長。11 月 25 日在巴庫，他第 65 分鐘換下德容，踢了一線隊的第一場。"
+  },
+  {
+   "type": "quote",
+   "text": "首度登場這件事，過了好幾天才讓我回過神來。我很高興，童年的夢想成真了。",
+   "original": "It took a few days for my first team debut to sink in; I'm happy that my childhood dream has come true",
+   "cite": "坎波斯，巴薩官網（英文稿）"
+  },
+  {
+   "type": "p",
+   "text": "他說剛進來的時候，一線隊看起來很遠，可是大家知道巴薩真的信任拉瑪西亞。接下來他會低頭做事，他的時間才剛開始。"
+  },
+  {
+   "type": "p",
+   "text": "對面的奧巴梅揚 37 歲了。他踢過阿森納、巴薩和多特蒙德，今年夏天才來拉科魯尼亞。Goal 9 月說，他西甲頭五場連續進球，追平伊布拉希莫維奇 2009 年的紀錄。"
+  },
+  {
+   "type": "p",
+   "text": "阿達馬・特拉奧雷也待過巴薩，8 月簽約加盟拉科魯尼亞，合約到 2028 年。他說是跟奧巴梅揚聊過，聽他講這個計畫有多好，才決定來的。兩人以前在巴薩就當過隊友。巴薩官網自己點了名，週日對面的名單上，可能有三個人帶著藍紅色的過去：奧巴梅揚、卡薩多、特拉奧雷。"
+  },
+  {
+   "type": "p",
+   "text": "兩隊上一次在西甲碰面，是 2018 年 4 月 29 日，也在里亞索。梅西帽子戲法，巴薩 4 比 2 贏，提前四輪拿下冠軍；拉科魯尼亞同一天降級。據 Goal，兩隊自那之後沒在西甲碰過面。"
+  },
+  {
+   "type": "news",
+   "title": "歐洲足壇速覽",
+   "items": [
+    {
+     "headline": "米蘭先落後兩球，到希臘 4 比 2 逆轉奧林匹亞科斯",
+     "summary": "歐霸第 5 輪，米蘭上半場先丟一個烏龍球，下半場一開始又丟一球，之後連進四球。UEFA 說，這是米蘭隊史第一次在希臘客場贏球。同一晚，伯恩茅斯少一人還是 2 比 1 逆轉塞爾塔，歐洲賽事 5 連勝；本菲卡 0 比 4 輸給比爾森，全勝戰績沒了。",
+     "source": "UEFA",
+     "url": "https://www.uefa.com/uefaeuropaleague/news/02ab-222a8b7281ee-613f6f283146-1000--europa-league-matchday-5-highlights-and-round-up-bournemou/",
+     "when": "11 月 26 日（週四）",
+     "place": [
+      "IT",
+      "GR",
+      "GB",
+      "PT"
+     ]
+    },
+    {
+     "headline": "曼聯動用選擇權，布魯諾・費爾南德斯的約延到 2028 年",
+     "summary": "曼聯啟動了布魯諾・費爾南德斯合約裡的 12 個月選擇權，原本到本季結束的約，延到 2028 年夏天。Sky Sports 說，他先前拒絕過兩份續約報價，雙方同意以後再談。",
+     "source": "Sky Sports",
+     "url": "https://www.skysports.com/football/news/13617215/bruno-fernandes-man-utd-activate-captains-12-month-option-to-extend-contract-which-now-ends-in-2028",
+     "when": "11 月 27 日（週五）",
+     "place": "GB"
+    },
+    {
+     "headline": "阿森納週日主場對曼城，贏了就領先 9 分",
+     "summary": "這場英超在台灣週一凌晨 0 點 30 分開踢。Sky Sports 11 月 24 日算過，阿森納贏球就領先曼城 9 分，曼城贏則只差 3 分。另據 Goal，阿爾特塔週五被問到曼城的場外麻煩，說這問題該去問曼城；他也說，阿森納的拉亞肩傷後已經回到訓練，薩利巴也快回來了。",
+     "source": "Sky Sports",
+     "url": "https://www.skysports.com/football/news/13616234/arsenal-and-manchester-citys-problems-analysed-as-both-set-to-meet-in-bumper-premier-league-clash-this-weekend",
+     "when": "11 月 24 日（週二）",
+     "place": "GB"
+    },
+    {
+     "headline": "孔帕尼不談基米希，只談週六對漢堡",
+     "summary": "拜仁教練孔帕尼週五被問到隊上的基米希批評球團高層，他說這些事他幫不上忙。他說他的優先是週六對漢堡那場。",
+     "source": "Goal",
+     "url": "https://www.goal.com/en/news/kimmich-crisis-and-neuer-controversy-kompany-refuses-to-address-bayern-s-thorny-issues/bltbe0b6dfa463d59e6",
+     "when": "11 月 27 日（週五）",
+     "place": "DE"
+    }
+   ]
+  },
+  {
+   "type": "h",
+   "text": "週日 23:15 開球"
+  },
+  {
+   "type": "p",
+   "text": "弗利克的賽前記者會在今天，西班牙時間中午 1 點，台灣晚上 8 點，Barça Play 有直播。"
+  },
+  {
+   "type": "p",
+   "text": "今晚過了午夜，追在後面的兩隊先踢。台灣週日凌晨 1 點 30 分，馬競踢埃爾切；凌晨 4 點，皇馬踢阿拉維斯。巴薩週日晚上開球的時候，兩邊的結果都知道了。現在巴薩 36 分，皇馬 33 分，馬競 31 分。"
+  },
+  {
+   "type": "p",
+   "text": "貝納爾週六練不練得了、跟不跟球隊去加利西亞，今天就看得到。"
+  },
+  {
+   "type": "table",
+   "title": "巴薩接下來四場（台灣時間）",
+   "head": [
+    "時間",
+    "賽事",
+    "對手",
+    "場地"
+   ],
+   "rows": [
+    [
+     "11 月 29 日（週日）23:15",
+     "西甲第 14 輪",
+     "拉科魯尼亞",
+     "客場 里亞索"
+    ],
+    [
+     "12 月 3 日（週四）04:30",
+     "西甲",
+     "馬競",
+     "主場"
+    ],
+    [
+     "12 月 6 日（週日）04:00",
+     "西甲",
+     "塞爾塔",
+     "主場"
+    ],
+    [
+     "12 月 9 日（週三）04:00",
+     "歐冠聯賽階段第 6 輪",
+     "曼城",
+     "主場"
+    ]
+   ],
+   "caption": "官網以西班牙時間公布，已換算成台灣時間。"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Rodri back with the group as Barça return to work",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-27",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4615404/rodri-back-with-the-group-as-barca-return-to-work",
+   "note": "頁面只顯示相對時間（6 小時前）；羅德里部分訓練、坎波斯跟隊、記者會直播、拉科魯尼亞三名有巴薩過去的球員"
+  },
+  {
+   "title": "Rodri empieza a trabajar con el grupo en un entrenamiento sin Bernal, Balde y Christensen",
+   "publisher": "Infobae（EFE）",
+   "date": "2026-11-27",
+   "url": "https://www.infobae.com/america/agencias/2026/11/27/rodri-empieza-a-trabajar-con-el-grupo-en-un-entrenamiento-sin-bernal-balde-y-christensen/"
+  },
+  {
+   "title": "Rodri vuelve a ejercitarse parcialmente en el Barça antes de visitar al Deportivo",
+   "publisher": "Infobae（EFE）",
+   "date": "2026-11-27",
+   "url": "https://www.infobae.com/america/agencias/2026/11/27/rodri-vuelve-a-ejercitarse-parcialmente-en-el-barca-antes-de-visitar-al-deportivo/",
+   "note": "記者會 13:00 起，未標時區，依西班牙時間換算"
+  },
+  {
+   "title": "New injury worry for Barcelona ahead of Deportivo La Coruña clash",
+   "publisher": "Goal",
+   "date": "2026-11-27",
+   "url": "https://www.goal.com/en/news/new-injury-worry-for-barcelona-ahead-of-deportivo-la-coruna-clash/blt6ce34391c5d0f0b5",
+   "note": "轉述 Sport 的貝納爾說法；頁面最後更新 11 月 27 日 06:21；單一來源"
+  },
+  {
+   "title": "New headache: Rodri's return sparks battle for places at Barcelona",
+   "publisher": "Goal",
+   "date": "2026-11-27",
+   "url": "https://www.goal.com/en-in/news/new-headache-rodri-s-return-sparks-battle-for-places-at-barcelona/blt5b3f551384a30fb3",
+   "note": "轉述 Sport；頁面無絕對時間；單一來源"
+  },
+  {
+   "title": "Àlex Campos: 'My childhood dream has come true'",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-27",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4615398/alex-campos-my-childhood-dream-has-come-true",
+   "note": "頁面只顯示相對時間；引文為官網英文稿"
+  },
+  {
+   "title": "Àlex Campos makes his Barça first team debut",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-25",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/news/4614680/alex-campos-makes-his-fc-barcelona-first-team-debut",
+   "note": "第 65 分鐘替德容上場"
+  },
+  {
+   "title": "Hidalgo: \"Hansi Flick ha llevado al Barcelona a un nivel de competitividad muy grande\"",
+   "publisher": "Infobae（EFE）",
+   "date": "2026-11-27",
+   "url": "https://www.infobae.com/espana/agencias/2026/11/27/hidalgo-hansi-flick-ha-llevado-al-barcelona-a-un-nivel-de-competitividad-muy-grande/"
+  },
+  {
+   "title": "Deportivo La Coruña coach challenges Barcelona with a secret weapon and reassures fans over Aubameyang",
+   "publisher": "Goal",
+   "date": "2026-11-27",
+   "url": "https://www.goal.com/en-za/news/deportivo-la-coruna-coach-challenges-barcelona-with-a-secret-weapon-and-reassures-fans-over-aubameyang/bltfa127d12fb1f470f",
+   "note": "轉述 Mundo Deportivo；頁面只顯示相對時間；單一來源"
+  },
+  {
+   "title": "Barcelona loanee invokes Messi: 'Criticism of Yamal makes me laugh'",
+   "publisher": "Goal",
+   "date": "2026-11-27",
+   "url": "https://www.goal.com/en-in/news/barcelona-loanee-invokes-messi-criticism-of-yamal-makes-me-laugh/bltc5d36c1b047e378a",
+   "note": "轉述 Sport 的節目 Gigantes；頁面只顯示相對時間；單一來源"
+  },
+  {
+   "title": "Aubameyang involved in car accident ahead of Barcelona clash",
+   "publisher": "Goal",
+   "date": "2026-11-26",
+   "url": "https://goal.com/en/news/aubameyang-involved-in-car-accident-ahead-of-barcelona-clash/bltc364fcb2e02e25e1",
+   "note": "轉述 Marca；頁面只顯示「昨天」；單一來源"
+  },
+  {
+   "title": "This Aubameyang is devastating! Five goals in five matches for Depor, surprise package in La Liga",
+   "publisher": "Goal",
+   "date": "2026-09-14",
+   "url": "https://www.goal.com/en-za/lists/this-aubameyang-is-devastating-five-goals-in-five-matches-for-depor-surprise-package-in-la-liga/blt43ed8181a676bbd3",
+   "note": "37 歲、前東家、頭五場進球與伊布紀錄、新升班馬"
+  },
+  {
+   "title": "El Deportivo ficha a Adama Traoré hasta junio de 2028",
+   "publisher": "Infobae（EFE）",
+   "date": "2026-08-26",
+   "url": "https://www.infobae.com/america/agencias/2026/08/26/el-deportivo-ficha-a-adama-traore-hasta-junio-de-2028/",
+   "note": "簽約兩年到 2028 年 6 月，8 月 26 日公布"
+  },
+  {
+   "title": "Adama Traoré: “Aubameyang y el proyecto me convencieron de venir al Dépor”",
+   "publisher": "Infobae（EFE）",
+   "date": "2026-09-02",
+   "url": "https://www.infobae.com/espana/agencias/2026/09/02/adama-traore-aubameyang-y-el-proyecto-me-convencieron-de-venir-al-depor/",
+   "note": "他和奧巴梅揚以前在巴薩重疊過"
+  },
+  {
+   "title": "Marc Casadó loaned to Deportivo A Coruña",
+   "publisher": "FC Barcelona",
+   "date": "2026-09-01",
+   "url": "https://www.fcbarcelona.com/en/news/4570290/marc-casado-loaned-to-deportivo-a-coruna",
+   "note": "租借到 2027 年 6 月 30 日"
+  },
+  {
+   "title": "'Better than Barcelona!' - Marc Casado takes shock swipe at La Masia as midfielder stunned by Deportivo La Coruna facilities after summer exit",
+   "publisher": "Goal",
+   "date": "2026-09-05",
+   "url": "https://www.goal.com/en/lists/barcelona-marc-casado-deportivo-la-coruna-facilities/blt859a5d0dc1916eb1"
+  },
+  {
+   "title": "Deportivo La Coruna 2-4 Barcelona: Lionel Messi hat-trick seals La Liga title",
+   "publisher": "Sky Sports",
+   "date": "2018-04-30",
+   "url": "https://www.skysports.com/football/news/11352979/deportivo-la-coruna-2-4-barcelona-lionel-messi-hat-trick-seals-la-liga-title",
+   "note": "比賽日 2018 年 4 月 29 日"
+  },
+  {
+   "title": "How to get Deportivo de A Coruna vs Barcelona tickets",
+   "publisher": "Goal",
+   "date": "2026-11-27",
+   "url": "https://www.goal.com/en-ae/tickets-travel/match/deportivo-de-a-coruna-barcelona-tickets/A~bltf1b0b0d118dca7cd",
+   "note": "票務頁，寫兩隊自 2018 年 4 月起沒在西甲碰面；頁面日期不明，單一來源"
+  },
+  {
+   "title": "Standing of LALIGA EA SPORTS 2026/27",
+   "publisher": "LaLiga",
+   "date": "2026-11-27",
+   "url": "https://www.laliga.com/en-GB/laliga-easports/standing",
+   "note": "第 13 輪賽後積分榜"
+  },
+  {
+   "title": "Results of Matchday 14 of LALIGA EA SPORTS 2026/27",
+   "publisher": "LaLiga",
+   "date": "2026-11-27",
+   "url": "https://www.laliga.com/en-GB/laliga-easports/results/2026-27/gameweek-14",
+   "note": "馬競、皇馬開球時間（UTC 換算台灣）"
+  },
+  {
+   "title": "Deportivo de La Coruña - FC Barcelona",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-27",
+   "url": "https://www.fcbarcelona.com/en/matches/138412/deportivo-de-la-coruna-fc-barcelona-la-liga-2026-2027",
+   "note": "開球 16:15（西班牙時間）"
+  },
+  {
+   "title": "FC Barcelona first-team schedule",
+   "publisher": "FC Barcelona",
+   "date": "2026-11-27",
+   "url": "https://www.fcbarcelona.com/en/football/first-team/schedule",
+   "note": "西班牙時間換算台灣時間"
+  },
+  {
+   "title": "Europa League Matchday 5 highlights and round-up",
+   "publisher": "UEFA",
+   "date": "2026-11-26",
+   "url": "https://www.uefa.com/uefaeuropaleague/news/02ab-222a8b7281ee-613f6f283146-1000--europa-league-matchday-5-highlights-and-round-up-bournemou/",
+   "note": "頁面最後更新 11 月 27 日；Milan、Bournemouth、Plzeň 三場"
+  },
+  {
+   "title": "Bruno Fernandes: Man Utd activate captain's 12-month option to extend contract which now ends in 2028",
+   "publisher": "Sky Sports",
+   "date": "2026-11-27",
+   "url": "https://www.skysports.com/football/news/13617215/bruno-fernandes-man-utd-activate-captains-12-month-option-to-extend-contract-which-now-ends-in-2028"
+  },
+  {
+   "title": "Arteta: that question should be put to City, and what they have achieved is unmatched",
+   "publisher": "Goal",
+   "date": "2026-11-27",
+   "url": "https://www.goal.com/en/news/arteta-that-question-should-be-put-to-city-and-what-they-have-achieved-is-unmatched/bltf688124b4c765eb0",
+   "note": "頁面只顯示相對時間；單一來源"
+  },
+  {
+   "title": "Arsenal and Manchester City's problems analysed as both set to meet in bumper Premier League clash this weekend",
+   "publisher": "Sky Sports",
+   "date": "2026-11-24",
+   "url": "https://www.skysports.com/football/news/13616234/arsenal-and-manchester-citys-problems-analysed-as-both-set-to-meet-in-bumper-premier-league-clash-this-weekend",
+   "note": "週日英國時間 16:30 開球；贏球領先 9 分"
+  },
+  {
+   "title": "Kimmich crisis and Neuer controversy: Kompany refuses to address Bayern's thorny issues",
+   "publisher": "Goal",
+   "date": "2026-11-27",
+   "url": "https://www.goal.com/en/news/kimmich-crisis-and-neuer-controversy-kompany-refuses-to-address-bayern-s-thorny-issues/bltbe0b6dfa463d59e6",
+   "note": "頁面只顯示相對時間；單一來源"
+  },
+  {
+   "title": "File:Estadio de Riazor - 2.jpg",
+   "publisher": "Wikimedia Commons",
+   "date": "2014-08-12",
+   "url": "https://commons.wikimedia.org/wiki/File:Estadio_de_Riazor_-_2.jpg",
+   "note": "HausOf_Diegoo，CC BY 2.0"
+  }
+ ]
+}
