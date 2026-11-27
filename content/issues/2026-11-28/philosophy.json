@@ -1,0 +1,423 @@
+{
+  "column": "philosophy",
+  "date": "2026-11-28",
+  "title": "里斯本大地震之後，一切還是最好的安排嗎",
+  "dek": "里斯本大地震死了好幾萬人。伏爾泰寫詩說，今天說「一切都好」是幻覺；盧梭寫信回他：加一個冠詞，這句話似乎會準確一點。差的那個字，差在哪裡？",
+  "brief": "1755 年里斯本大地震後，伏爾泰寫詩問：孩子被壓死在母親懷裡，還能說「一切都好」嗎？盧梭回信說，每個人受苦沒人否認，要問的是整體好不好，可是這件事誰也證明不了。一場地震死了好幾萬人之後，還能說「一切都是最好的安排」嗎？",
+  "topic_key": "philosophy:voltaire-rousseau-lisbon-earthquake",
+  "form": "dialogue",
+  "voice": "socratic",
+  "updated_at": "2026-11-28T03:11:45+08:00",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "illustration",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/ce/1755_Lisbon_earthquake.jpg",
+    "width": 998,
+    "height": 593,
+    "alt": "一幅黑白銅版畫：遠處是一整排城市建築，到處冒著火和濃煙；前景的港口浪頭翻滾，十幾艘帆船東倒西歪，有的已經翻覆；左下角一艘小船上擠著幾個人，其中一人舉起手臂。畫面上方的飄帶寫著 Destruction de Lisbon。",
+    "caption": "1755 年 11 月 1 日里斯本大地震，同一年刻成的銅版畫：城裡著火，海嘯湧進港口，船被打翻。原件藏在里斯本市立博物館。",
+    "credit": "作者不詳；Jan Kozak 地震工程典藏（KZ128）",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:1755_Lisbon_earthquake.jpg",
+    "made": "1755"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "社長，先坐，咖啡替你倒好了。剛才吧台那頭有位熟客，手機一直拿在手上。他朋友家裡出了意外，失去了很重要的東西。群組裡有人回了一句「一切都是最好的安排」。熟客也打了幾個字，又刪掉，抬頭問我：這句話，我能不能也這樣回他？",
+      "tag": "原創假設"
+    },
+    {
+      "type": "p",
+      "text": "我沒馬上回答，先跟他講了一個老故事。1755 年 11 月 1 日早上九點多，里斯本發生大地震。那天是諸聖節，天主教紀念所有聖人的日子，家裡和教堂裡都點著蠟燭。地震過後大約四十分鐘，海嘯湧進港口和市中心。震倒的蠟燭引起大火，延燒多日。里斯本當時是歐洲第四大城，大約二十萬人。經濟史學者估計，城裡死了 3 萬到 4 萬人。"
+    },
+    {
+      "type": "p",
+      "text": "地震之後，法國作家**伏爾泰**和日內瓦作家**盧梭**，為了一句話通過信。那句話法文寫成「一切都好」，意思跟我們常講的「一切都是最好的安排」差不多。所以今天我想問你的，就是熟客那個問題，只是放大一點：**一場地震死了好幾萬人，還能說「一切都是最好的安排」嗎？**你可以先不回答。我把兩個人的話一句一句講給你聽。"
+    },
+    {
+      "type": "timeline",
+      "title": "一場地震，兩封信，一本小說",
+      "items": [
+        {
+          "when": "1755.11.1",
+          "label": "里斯本大地震",
+          "note": "諸聖節早上九點多；約四十分鐘後海嘯湧進港口，震倒的蠟燭引起大火"
+        },
+        {
+          "when": "1756.3",
+          "label": "伏爾泰的〈里斯本災難詩〉在日內瓦出版",
+          "note": "副標題是「檢查這條格言：一切都好」"
+        },
+        {
+          "when": "1756.8.18",
+          "label": "盧梭寫長信回應",
+          "note": "寄給伏爾泰的醫生"
+        },
+        {
+          "when": "1756.9.12",
+          "label": "伏爾泰短信回覆",
+          "note": "說自己病了又在照顧病人，討論改天再說"
+        },
+        {
+          "when": "1759 年",
+          "label": "《憨第德》出版",
+          "note": "主角一進里斯本城就遇上地震"
+        }
+      ],
+      "caption": "依伏爾泰、盧梭書信（Garnier 版伏爾泰全集第 39 冊第 3219、3233 號）、Dynes 1999 年論文、SEP〈Voltaire〉、Wikipedia〈1755 Lisbon earthquake〉整理。"
+    },
+    {
+      "type": "h",
+      "text": "伏爾泰：今天說一切都好，是幻覺"
+    },
+    {
+      "type": "p",
+      "text": "伏爾泰是法國作家，筆名比本名有名得多。地震那年，他住在日內瓦一棟叫「歡樂居」的宅子裡。他寫了一首〈里斯本災難詩〉，1756 年 3 月在日內瓦出版。詩的副標題就寫著：「或檢查這條格言：一切都好」。"
+    },
+    {
+      "type": "p",
+      "text": "詩一開頭，他就叫那些喊「一切都好」的人「受了騙的哲學家」，要他們快來看看廢墟。他寫「十萬個不幸的人被大地吞沒」。這是詩人的寫法，現在的估計少得多。接著他一句一句問：你們會說，這是永恆法則的結果，神只能這樣選嗎？你們會說，神報了仇，他們的死是罪的代價嗎？再來就是這幾行："
+    },
+    {
+      "type": "quote",
+      "text": "這些在母親懷裡被壓碎、渾身是血的孩子，犯了什麼罪、什麼錯？已經不在了的里斯本，罪惡難道比沉溺享樂的倫敦、巴黎還多？里斯本陷落了，巴黎還在跳舞。",
+      "original": "Quel crime, quelle faute ont commis ces enfants / Sur le sein maternel écrasés et sanglants ? / Lisbonne, qui n’est plus, eut-elle plus de vices / Que Londres, que Paris, plongés dans les délices : / Lisbonne est abîmée, et l’on danse à Paris.",
+      "cite": "伏爾泰，〈里斯本災難詩〉，1756（本文自譯）"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "document",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Po%C3%A8me_sur_le_d%C3%A9sastre_de_Lisbonne_%28Voltaire%29.jpg",
+      "width": 933,
+      "height": 1566,
+      "alt": "一頁舊印刷書，頂端是一條花飾橫框，下面大字印著 POEME SUR LE DESASTRE DE LISBONNE, OU EXAMEN DE CET AXIOME, TOUT EST BIEN，接著是十八行法文詩，第一個字母 O 印得特別大。右下角印著下一頁的第一個字 Quel。",
+      "caption": "1756 年印行的〈里斯本災難詩〉第一頁。標題下面寫著「或檢查這條格言：一切都好」；第四行就是「受了騙的哲學家，你們喊著『一切都好』」。法國國家圖書館 Gallica 掃描。",
+      "credit": "伏爾泰；法國國家圖書館 Gallica 掃描（bpt6k5727289v）",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Po%C3%A8me_sur_le_d%C3%A9sastre_de_Lisbonne_(Voltaire).jpg",
+      "made": "1756"
+    },
+    {
+      "type": "p",
+      "text": "讀到這裡，很容易以為寫這首詩的人不信神。其實不是。詩快結束時，他寫「那些智者騙了我，只有神是對的」，還說自己受苦時順服，「不起來反抗天意」。他反對的只有一句話。他寫：「有一天一切都會好，這是我們的希望；今天一切都好，這是幻覺。」"
+    },
+    {
+      "type": "h",
+      "text": "他反駁的那一邊"
+    },
+    {
+      "type": "p",
+      "text": "伏爾泰在詩的序言裡說，英國詩人波普的長詩《人論》，發揮了德國哲學家萊布尼茲等人的體系。可是他聲明，自己不是反駁波普，反對的是這條格言被濫用。萊布尼茲就是和牛頓各自發展出微積分的那一位。"
+    },
+    {
+      "type": "p",
+      "text": "這一派的主張叫**樂觀論**。這裡的樂觀不是個性開朗，是一個說法：這個世界是所有可能的世界裡最好的一個。打個比方，就像說「這是菜單上所有套餐裡最好的一份」，並不等於說每一道菜都好吃。"
+    },
+    {
+      "type": "p",
+      "text": "萊布尼茲的推理大概是這樣：神是完美的，所以一定選最好的那一個；要是沒有最好的世界，神就一個都不會造。惡免不了，可是這些惡讓整體更豐富，拿掉它們，整體也不會更好。波普把這個意思寫成一句詩：「一切局部的惡，都是普遍的善。」"
+    },
+    {
+      "type": "h",
+      "text": "盧梭的長信"
+    },
+    {
+      "type": "p",
+      "text": "盧梭 1712 年生在日內瓦，比伏爾泰晚將近十八年出生。你可能聽過他那句「人生而自由，卻無處不在枷鎖之中」。1756 年 4 月，他搬出巴黎，住進巴黎北邊鄉下一間叫「隱廬」的小屋。那年夏天，伏爾泰的詩寄到了他手上。"
+    },
+    {
+      "type": "p",
+      "text": "他以為是伏爾泰本人寄來的，覺得非回信不可。8 月 18 日，他寫了一封很長的信，寄給伏爾泰的醫生，由他決定轉不轉交。"
+    },
+    {
+      "type": "p",
+      "text": "信裡他說：您責備波普和萊布尼茲，說他們主張一切都好，是在羞辱我們的苦難；可是您把我們的不幸畫得這麼重，反而讓人更難受。「我盼著安慰，您只讓我更痛苦。」他說，波普的詩讓他的苦變輕，讓他能忍；伏爾泰的詩只留下一個搖搖欲墜的希望，把他推到絕望。"
+    },
+    {
+      "type": "h",
+      "text": "換一個條件：樓是人蓋的"
+    },
+    {
+      "type": "p",
+      "text": "接著盧梭做了一件我很喜歡的事：把地震裡的一個條件換掉。他說，把兩萬棟六、七層高的房子聚在里斯本的，不是大自然。居民要是住得分散一點、房子輕一點，損害會小得多，說不定根本沒有。第一下搖晃，大家本來可以跑掉。可是很多人偏偏留下來，回頭拿東西：有人拿衣服，有人拿文件，有人拿錢。"
+    },
+    {
+      "type": "p",
+      "text": "社長，你想想看。如果壓死人的，是人自己蓋的樓，那句「最好的安排」，是比較說得出口，還是更說不出口？"
+    },
+    {
+      "type": "p",
+      "text": "他又換了一個條件：地震要是發生在沙漠深處呢？盧梭說，沙漠裡也有地震，只是傷不到「城裡的先生們」，我們就不提了。沒人看見的苦，算不算在「一切」裡面？"
+    },
+    {
+      "type": "h",
+      "text": "差一個冠詞"
+    },
+    {
+      "type": "p",
+      "text": "然後盧梭把問題問得更準。他說要分開兩種惡：個別的惡，就是你我各自受的苦，沒有哪個哲學家否認過；樂觀論者否認的，是整體的惡。問題不在每個人受不受苦，而在宇宙存在好不好。所以他建議："
+    },
+    {
+      "type": "quote",
+      "text": "所以加一個冠詞，這句話似乎會準確一點：與其說「一切都好」，也許不如說「整體是好的」，或者「一切對整體來說都好」。",
+      "original": "Ainsi l’addition d’un article rendrait, ce semble, la proposition plus exacte ; et au lieu de Tout est bien, il vaudrait peut-être mieux dire : Le tout est bien, ou Tout est bien pour le tout",
+      "cite": "盧梭致伏爾泰，1756 年 8 月 18 日（本文自譯）"
+    },
+    {
+      "type": "p",
+      "text": "法文原句是 tout est bien，意思是「每一件都好」。盧梭要在前面加一個 le，變成 le tout est bien，意思就成了**「那個整體是好的」**。沒有 le，是一件一件算；加了 le，是把全部當成一整個。"
+    },
+    {
+      "type": "p",
+      "text": "可是他也承認，這件事沒有人能拿出直接的證據，支持或反對。那得完全了解世界的構造和造物主的目的，超出了人的智力。"
+    },
+    {
+      "type": "h",
+      "text": "再換一個條件：說這句話的人是誰"
+    },
+    {
+      "type": "p",
+      "text": "信的最後，盧梭把兩個人擺在一起。他寫伏爾泰飽享榮耀，在富足中自由地生活，生病有醫生照顧，卻只在世上看到惡。「而我，一個沒沒無聞、貧窮、被一種治不好的病折磨的人，在我的隱居處愉快地沉思，覺得一切都好。」他還寫：「您在享受；我卻在盼望，而盼望讓一切變美。」"
+    },
+    {
+      "type": "p",
+      "text": "同樣一句「一切都好」，從受苦的人自己嘴裡說出來，和從旁邊的人嘴裡說出來，分量一樣嗎？"
+    },
+    {
+      "type": "h",
+      "text": "伏爾泰的回信只有幾行"
+    },
+    {
+      "type": "p",
+      "text": "9 月 12 日，隔了 25 天，伏爾泰從歡樂居回信。信很短，很客氣。他說：「我親愛的哲學家，您和我，可以在病痛的空檔，用詩、用散文來講道理；不過眼下，請原諒我把這些哲學討論都擱在一邊，它們不過是消遣。」他說一個姪女這三個星期病得很危險，「我在當看護，自己也病得很重」，等病好了，再來和盧梭一起想。"
+    },
+    {
+      "type": "p",
+      "text": "盧梭後來在《懺悔錄》裡說，伏爾泰只回了寥寥幾行，「關於那個問題一個字也沒提」。"
+    },
+    {
+      "type": "h",
+      "text": "三年後的《憨第德》"
+    },
+    {
+      "type": "p",
+      "text": "1759 年，伏爾泰出版了一本短篇小說，叫《憨第德，或樂觀主義》。主角憨第德的老師潘格羅斯一直教他：一切都是最好的。然後他一路遇上戰爭、地震、火刑。"
+    },
+    {
+      "type": "p",
+      "text": "第 5 章，師徒倆一進里斯本城，就地震了。憨第德被石塊打傷，躺在街上討一點酒和油，潘格羅斯卻在講地底下一定有一條硫磺帶。後來有倖存的人在哭，他去安慰人家：這一切都是最好的；里斯本要是有一座火山，它就不可能在別處；因為一切都好。"
+    },
+    {
+      "type": "p",
+      "text": "第 6 章，葡萄牙科英布拉大學判定，用文火慢慢燒幾個人，是防止地震的不二法門。潘格羅斯被吊死，憨第德被鞭打。同一天，地又震了一次。憨第德自言自語："
+    },
+    {
+      "type": "quote",
+      "text": "如果這裡是所有可能的世界裡最好的一個，那其他的又是什麼樣子？",
+      "original": "Si c’est ici le meilleur des mondes possibles, que sont donc les autres ?",
+      "cite": "伏爾泰，《憨第德》第 6 章，1759（本文自譯）"
+    },
+    {
+      "type": "p",
+      "text": "到了全書最後，潘格羅斯又把一路的遭遇串成一條，說在這個最好的世界裡，所有事情都環環相扣。憨第德回他：「說得好，可是我們得種我們的園子。」"
+    },
+    {
+      "type": "p",
+      "text": "盧梭後來在《懺悔錄》裡說，這本小說就是伏爾泰答應給他、卻沒寄給他的那份答覆。接著他補了一句：「我沒辦法談它，因為我沒讀過。」"
+    },
+    {
+      "type": "h",
+      "text": "三種讀法"
+    },
+    {
+      "type": "p",
+      "text": "有一位研究災難的社會學家說，盧梭這封信是第一個從社會科學看災難的說法：損失多大，要看人怎麼蓋城、怎麼住。他也提到，伏爾泰最後給的「種園子」，在別人看來是個弱的替代辦法。"
+    },
+    {
+      "type": "table",
+      "title": "「一切都好」的三種讀法",
+      "head": [
+        "誰",
+        "怎麼說",
+        "最強的理由",
+        "這樣看要承擔什麼"
+      ],
+      "rows": [
+        [
+          "萊布尼茲、波普",
+          "這是所有可能的世界裡最好的一個；局部的惡，是整體的善",
+          "完美的神只會選最好的；拿掉這些惡，整體不會更好",
+          "得對壓在瓦礫下的孩子說，他的死在整體裡是對的"
+        ],
+        [
+          "伏爾泰",
+          "今天說一切都好是幻覺；有一天一切都會好，才是希望",
+          "在母親懷裡被壓死的孩子沒有犯罪，里斯本的罪不比巴黎多",
+          "盧梭說，它只留下一個搖搖欲墜的希望，讓受苦的人更絕望"
+        ],
+        [
+          "盧梭",
+          "不是每一件都好，是整體好；多數的苦是人自己造成的",
+          "兩萬棟六七層的樓不是大自然蓋的；很多人是回頭拿衣服、文件、錢才死的",
+          "整體好不好，他承認沒有人能證明；他靠的是相信有善意的天意"
+        ]
+      ],
+      "caption": "依萊布尼茲（SEP〈Leibniz on the Problem of Evil〉）、波普《人論》第一封書信、伏爾泰〈里斯本災難詩〉、盧梭 1756 年 8 月 18 日的信整理。「這樣看要承擔什麼」第一列是本文的推論；第二列是盧梭對伏爾泰的批評；第三列是盧梭自己承認的。"
+    },
+    {
+      "type": "p",
+      "text": "我讀下來，兩個人在回答不同的問題。伏爾泰看的是一個一個被壓死的人：每一件都好嗎？盧梭和萊布尼茲看的是整體：整體好不好？中間差一個冠詞。而整體好不好，盧梭自己說了，沒有人能證明。所以這題最後卡在這裡：沒有證據的時候，你要先站在那個被壓住的孩子旁邊，還是先站在整體那一邊？",
+      "tag": "推論"
+    },
+    {
+      "type": "h",
+      "text": "回到吧台"
+    },
+    {
+      "type": "p",
+      "text": "熟客聽我講完，咖啡已經涼了。他朋友不在瓦礫下，可是那句話一樣，是旁邊的人說的。他問我，那到底能不能回。我說，我自己也還沒想通。社長，你會怎麼回他？他的手機還擱在吧台上，那行字停在輸入框裡，沒有送出。",
+      "tag": "原創假設"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Poème sur le désastre de Lisbonne（Œuvres complètes de Voltaire, Garnier, tome 9, pp. 470–479）",
+      "publisher": "Voltaire；Wikisource（法文）",
+      "date": "1877",
+      "url": "https://fr.wikisource.org/wiki/Po%C3%A8me_sur_le_d%C3%A9sastre_de_Lisbonne/%C3%89dition_Garnier",
+      "note": "讀全詩。用到：副標題 ou examen de cet axiome : TOUT EST BIEN；第 4–8 行 Philosophes trompés qui criez « Tout est bien »…ces membres dispersés；Cent mille infortunés que la terre dévore；兩處 Direz-vous（永恆法則、神報仇）；Quel crime, quelle faute ont commis ces enfants…Lisbonne est abîmée, et l’on danse à Paris（Garnier 版 délices 後為冒號）；結尾 Un jour tout sera bien, voilà notre espérance ; Tout est bien aujourd’hui, voilà l’illusion，下接 Les sages me trompaient, et Dieu seul a raison 與 Je ne m’élève point contre la Providence。日期填 Garnier 版年份；初版 1756。"
+    },
+    {
+      "title": "Correspondance de Voltaire/1756/Lettre 3219：De M. J.-J. Rousseau, le 18 août 1756（Garnier, tome 39, pp. 87–99）",
+      "publisher": "Jean-Jacques Rousseau；Wikisource（法文）",
+      "date": "1756-08-18",
+      "url": "https://fr.wikisource.org/wiki/Correspondance_de_Voltaire/1756/Lettre_3219",
+      "note": "讀全信。用到：Vos deux derniers poëmes…dans ma solitude；Vous reprochez à Pope et à Leibnitz d’insulter à nos maux…vous ne faites que m’affliger；Le poëme de Pope adoucit mes maux…il me réduit au désespoir；« Homme, prends patience, me disent Pope et Leibnitz…»；la plupart de nos maux physiques sont encore notre ouvrage；vingt mille maisons de six à sept étages…peut-être nul；Tout eût fui au premier ébranlement；l’un ses habits, l’autre ses papiers, l’autre son argent；沙漠裡的地震與 les messieurs des villes；ruines de Lisbonne 下有人也許躲過更大的不幸；mal particulier／mal général；Le tout est bien, ou Tout est bien pour le tout；aucun homme ne saurait donner de preuves directes ni pour ni contre；homme obscur, pauvre et tourmenté d’un mal sans remède（Wikisource 此處 OCR 作「ma !」，依 1782 年版為 mal）；vous jouissez ; mais j’espère, et l’espérance embellit tout；j’ai trop souffert en cette vie pour n’en pas attendre une autre；Je la sens, je la crois, je la veux, je l’espère。另對照 1782 年《盧梭全集》第 12 冊版本（https://fr.wikisource.org/wiki/Lettre_%C3%A0_Voltaire_sur_la_Providence ，pp. 91–114）：該版作 vous chargez tellement le tableau；同頁附伏爾泰回信，信後有註 Il ne m’a plus écrit depuis ce tems-là。"
+    },
+    {
+      "title": "Correspondance de Voltaire/1756/Lettre 3233：À M. J.-J. Rousseau, aux Délices, 12 septembre（Garnier, tome 39, pp. 108–109）",
+      "publisher": "Voltaire；Wikisource（法文）",
+      "date": "1756-09-12",
+      "url": "https://fr.wikisource.org/wiki/Correspondance_de_Voltaire/1756/Lettre_3233",
+      "note": "讀全信。用到：Mon cher philosophe…qui ne sont que des amusements；姪女病危三週、je suis garde-malade, et très-malade moi-même；pour oser penser avec vous。編者註：依 Clogenson 定為 9 月 12 日，更早的版本作 21 日。"
+    },
+    {
+      "title": "Candide, ou l’Optimisme, chapitres V, VI, XXX（Garnier 1877, tome 21）",
+      "publisher": "Voltaire；Wikisource（法文）",
+      "date": "1877",
+      "url": "https://fr.wikisource.org/wiki/Candide,_ou_l%E2%80%99Optimisme/Garnier_1877/Chapitre_5",
+      "note": "第 5 章：一進里斯本城就地震（À peine ont-ils mis le pied dans la ville）、trente mille habitants…écrasés sous des ruines、利馬到里斯本的硫磺帶、Car, dit-il, tout ceci est ce qu’il y a de mieux…car tout est bien；Garnier 編者註記地震日期 1755-11-01 與「死了一萬五千到兩萬人」。第 6 章（…/Chapitre_6）：科英布拉大學與 auto-da-fé、Si c’est ici le meilleur des mondes possibles, que sont donc les autres ?。第 30 章（…/Chapitre_30）：Travaillons sans raisonner, dit Martin；Cela est bien dit, répondit Candide, mais il faut cultiver notre jardin。日期填 Garnier 版年份；初版 1759。"
+    },
+    {
+      "title": "Les Confessions, Livre IX（Launette, 1889, tome 2, pp. 125–211）",
+      "publisher": "Jean-Jacques Rousseau；Wikisource（法文）",
+      "date": "1889",
+      "url": "https://fr.wikisource.org/wiki/Les_Confessions_(Rousseau)/Livre_IX",
+      "note": "用到：1756 年 4 月 9 日搬出巴黎、住進隱廬（l’Ermitage），離巴黎四法里、旁邊是蒙莫朗西森林；收到詩以為是作者寄的；l’insensé projet…lui prouver que tout était bien；信寄給特隆香、由他決定轉不轉；伏爾泰 en peu de lignes 回覆、ne dit pas un mot sur la question；Depuis lors, Voltaire a publié cette réponse…parce que je ne l’ai pas lu。日期填此版年份；《懺悔錄》為盧梭身後出版。"
+    },
+    {
+      "title": "An Essay on Man: Epistle I",
+      "publisher": "Alexander Pope；Representative Poetry Online（University of Toronto Libraries，D. F. Theall 編）",
+      "date": "1733",
+      "url": "https://rpo.library.utoronto.ca/poems/essay-man-epistle-i",
+      "note": "用到：第 289–294 行 All nature is but art…All partial evil, universal good…One truth is clear, Whatever is, is right；編者註：前三封書信 1733 年 2 至 5 月間出版。日期填初版年份。"
+    },
+    {
+      "title": "Leibniz on the Problem of Evil",
+      "publisher": "Stanford Encyclopedia of Philosophy（Thomas Feeney）",
+      "date": "2026-01-12",
+      "url": "https://plato.stanford.edu/entries/leibniz-evil/",
+      "note": "2026-01-12 首次發表（取代 Murray、Greenberg 的舊條目）。用到：《神義論》1710 年；完美的神必選最好的、若無最好的世界神就不造；惡免不了但讓整體更完美，拿掉也不會更好；惡只作為更大的善裡的局部缺陷存在；《憨第德》（1759）的潘格羅斯看起來是在諷刺萊布尼茲的樂觀論。"
+    },
+    {
+      "title": "Gottfried Wilhelm Leibniz",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "date": "2013-07-24",
+      "url": "https://plato.stanford.edu/entries/leibniz/",
+      "note": "2007-12-22 初版，2013-07-24 實質修訂。用到：1646–1716；十七、十八世紀最偉大的思想家之一；Life 一節：他和牛頓各自發展出微積分，晚年陷入優先權之爭。"
+    },
+    {
+      "title": "Voltaire",
+      "publisher": "Stanford Encyclopedia of Philosophy（J. B. Shank）",
+      "date": "2024-08-21",
+      "url": "https://plato.stanford.edu/entries/voltaire/",
+      "note": "2009-08-31 初版，2024-08-21 實質修訂。用到：本名 François-Marie d’Arouet，1694–1778，筆名 Voltaire；離開普魯士宮廷後定居日內瓦；《憨第德》1759 年初版，裡面有對萊布尼茲哲學的嚴肅攻擊。條目沒有談里斯本地震與這首詩。"
+    },
+    {
+      "title": "Jean Jacques Rousseau",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "date": "2023-04-21",
+      "url": "https://plato.stanford.edu/entries/rousseau/",
+      "note": "2010-09-27 初版，2023-04-21 實質修訂。用到：1712 年生於獨立的喀爾文派城邦日內瓦，1778 年去世；《愛彌兒》《社會契約論》都在 1762 年出版；Man is born free, but is everywhere in chains。"
+    },
+    {
+      "title": "The Dialogue between Voltaire and Rousseau on the Lisbon Earthquake: The Emergence of a Social Science View",
+      "publisher": "Russell R. Dynes；University of Delaware Disaster Research Center Preliminary Paper 293（UDSpace）；刊於 International Journal of Mass Emergencies and Disasters 18(1): 97–115",
+      "date": "1999",
+      "url": "https://udspace.udel.edu/handle/19716/435",
+      "note": "讀全文（UDSpace PDF，PP 293）。用到：稱里斯本地震為第一場現代災難；當時歐洲第四大城（倫敦、巴黎、拿坡里之後）；早上 9 點 30 分、多數居民在望彌撒；死亡估計差很多，有的高到 7 萬；兩萬戶住宅只剩三千戶能住；詩大概在 1755 年底前寫完、先匿名流傳、1756 年 3 月在日內瓦出版、夏天連同〈自然法詩〉寄到盧梭手上；初版結尾（轉引 Masters & Kelly，原文未核）；盧梭的信是第一個真正屬於社會科學的災難觀點；《憨第德》第一年賣出三萬多冊（轉引 Holmes 1995）；盧梭 1764 年致符騰堡親王信（轉引 Cranston 1991，原文未核）；「種園子」在別人看來是弱的替代方案。UDSpace 記錄年份 1999，期刊版 2000。"
+    },
+    {
+      "title": "1755 Lisbon earthquake",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/1755_Lisbon_earthquake",
+      "note": "2026-11-28 查閱。用到：1755-11-01 星期六早上、諸聖節、當地時間約 9 點 40 分；約 40 分鐘後海嘯湧進港口與市中心；為諸聖節點的蠟燭被震倒引起大火（條目寫 burned for hours；正文「延燒多日」依 Scientific American 那篇）；經濟史學者 Álvaro Pereira 估計里斯本約 20 萬人中死了 3 萬到 4 萬，葡萄牙、西班牙、摩洛哥合計 4 萬到 5 萬。"
+    },
+    {
+      "title": "Les Délices",
+      "publisher": "Wikipedia（法文）",
+      "date": "",
+      "url": "https://fr.wikipedia.org/wiki/Les_D%C3%A9lices",
+      "note": "2026-11-28 查閱。用到：日內瓦的宅子 Les Délices，伏爾泰 1755 年 3 月到 1760 年 10 月住在那裡；1929 年日內瓦市買下，現為日內瓦圖書館的伏爾泰館。"
+    },
+    {
+      "title": "Préface du Poème sur le désastre de Lisbonne（Garnier, tome 9, pp. 465–469）",
+      "publisher": "Voltaire；Wikisource（法文）",
+      "date": "1877",
+      "url": "https://fr.wikisource.org/wiki/Po%C3%A8me_sur_le_d%C3%A9sastre_de_Lisbonne:pr%C3%A9face",
+      "note": "讀前半。用到：L’axiome Tout est bien paraît un peu étrange à ceux qui sont les témoins de ces désastres；Tout est arrangé, tout est ordonné, sans doute, par la Providence ; mais…n’est pas arrangé pour notre bien-être présent；波普在《人論》裡發揮萊布尼茲、沙夫茨伯里、博林布羅克的體系；L’auteur du poème…ne combat point l’illustre Pope, qu’il a toujours admiré et aimé…il s’élève contre les abus qu’on peut faire de cet ancien axiome Tout est bien。"
+    },
+    {
+      "title": "File:1755 Lisbon earthquake.jpg",
+      "publisher": "Wikimedia Commons（The Earthquake Engineering Online Archive – Jan Kozak Collection: KZ128）",
+      "date": "",
+      "url": "https://commons.wikimedia.org/wiki/File:1755_Lisbon_earthquake.jpg",
+      "note": "頭圖。檔案說明：1755 年刻成的銅版畫，畫地震時的里斯本，城市成了廢墟並著火、海嘯沖上岸、港口的船沉沒；Original in: Museu da Cidade, Lisbon；公版。畫面上方飄帶字樣 Destruction de Lisbon 是看圖所見。"
+    },
+    {
+      "title": "File:Poème sur le désastre de Lisbonne (Voltaire).jpg",
+      "publisher": "Wikimedia Commons（法國國家圖書館 Gallica，ark:/12148/bpt6k5727289v，f9）",
+      "date": "1756",
+      "url": "https://commons.wikimedia.org/wiki/File:Po%C3%A8me_sur_le_d%C3%A9sastre_de_Lisbonne_(Voltaire).jpg",
+      "note": "正文圖。檔案說明：Poème sur le désastre de Lisbonne (Voltaire)，1756，CC0，來源 Gallica bpt6k5727289v 第 9 幅。圖上是詩的第一頁（標題、副標題 OU EXAMEN DE CET AXIOME, TOUT EST BIEN 與開頭 18 行），頁面浮水印 Source gallica.bnf.fr / Bibliothèque nationale de France；是哪一家印的、哪一個 1756 年版本，Commons 沒有寫，圖說只寫 1756 年印行。此版第 2 行作 O de tous les fléaux assemblage effroyable，Garnier 版作 mortels。"
+    },
+    {
+      "title": "November 1, 1755: The Earthquake of Lisbon: Wrath of God or Natural Disaster?",
+      "publisher": "Scientific American（History of Geology 部落格，David Bressan）",
+      "date": "2011-11-01",
+      "url": "https://www.scientificamerican.com/blog/history-of-geology/november-1-1755-the-earthquake-of-lisbon-wraith-of-god-or-natural-disaster/",
+      "note": "用到：地震和海嘯之後爆發大火，燒了五天（raging for five days）。正文寫「延燒多日」。"
+    },
+    {
+      "title": "Voltaire",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Voltaire",
+      "note": "2026-11-28 查閱。用到：生日 1694 年 11 月 21 日；和盧梭的生日相減，正文寫「晚將近十八年出生」。"
+    },
+    {
+      "title": "Jean-Jacques Rousseau",
+      "publisher": "Wikipedia",
+      "date": "",
+      "url": "https://en.wikipedia.org/wiki/Jean-Jacques_Rousseau",
+      "note": "2026-11-28 查閱。用到：生日 1712 年 6 月 28 日。"
+    }
+  ]
+}
