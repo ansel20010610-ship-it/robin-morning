@@ -40,10 +40,8 @@
     "note": "精簡：perio、flow 文體"
   },
   "concerts": {
-    "finished_at": "2026-11-28T05:35:50+08:00",
-    "missing": [
-      "歷史上的今天 空白"
-    ],
+    "finished_at": "2026-11-28T05:35:55+08:00",
+    "missing": [],
     "note": "新增 0、更新 0；補查沒做完（mna、newaspect 做完，pbc/tanart/kham/udn/news 沒查）；歷史上的今天 1943"
   }
 }
