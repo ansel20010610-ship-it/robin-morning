@@ -1,4 +1,15 @@
 {
+  "1": {
+    "finished_at": "2026-11-28T00:57:08+08:00",
+    "missing": [
+      "football",
+      "news",
+      "civilization",
+      "philosophy",
+      "canon"
+    ],
+    "note": "精簡：music；devotion 已寫；perio 先發班已完成"
+  },
   "column": {
     "finished_at": "2026-11-27T22:43:27+08:00",
     "missing": [
