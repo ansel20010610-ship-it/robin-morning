@@ -1,0 +1,365 @@
+{
+  "column": "canon",
+  "date": "2026-11-28",
+  "title": "只有七種形狀，《俄羅斯方塊》憑什麼成了經典",
+  "dek": "沒有角色，沒有故事，只有幾何。一個蘇聯研究員下班寫的小遊戲，怎麼讓從不玩遊戲的人跑去買遊戲機？",
+  "brief": "《俄羅斯方塊》把遊戲削到只剩七種四格方塊和一條規則：排滿一行就消掉。沒有角色和故事，所以兩百多個版本裝進至少 70 種機器，誰看一眼都會玩。1989 年它跟著 Game Boy 一起賣，讓不玩遊戲的人也去買了遊戲機。",
+  "topic_key": "canon:tetris",
+  "updated_at": "2026-11-28T02:07:00+08:00",
+  "form": "timeline",
+  "voice": "critic",
+  "spoiler": null,
+  "disclaimer": null,
+  "hero": {
+    "id": "hero",
+    "kind": "photo",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Game_Boy_with_Tetris_cartridge.jpg/1280px-Game_Boy_with_Tetris_cartridge.jpg",
+    "width": 1280,
+    "height": 959,
+    "alt": "白底上斜放一台灰色的直立長方形掌上遊戲機，上半部是一塊黃綠色的方形螢幕，螢幕框有些斑駁，下方印著 Nintendo GAME BOY，左邊是黑色十字鍵，右邊兩顆紫紅色圓鈕標著 B 和 A。右下角平放一片灰色卡匣，標籤上的圖案被打成馬賽克，只看得出紅藍色塊。",
+    "caption": "初代 Game Boy 和一片《俄羅斯方塊》卡匣。1989 年任天堂在美國賣 Game Boy，盒子裡附送的就是這款遊戲。",
+    "credit": "Studio Alijn（Flickr，編號 2013-055-001），經 Wikimedia Commons；Commons 現行版本已將卡匣標籤模糊處理",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Game_Boy_with_Tetris_cartridge.jpg",
+    "made": "2014"
+  },
+  "body": [
+    {
+      "type": "p",
+      "text": "**《俄羅斯方塊》**是蘇聯研究員**阿列克謝・帕基特諾夫**在 1980 年代寫的電子遊戲。它是經典，因為它把遊戲削到只剩一條規則：七種由四個小方塊拼成的形狀從上面掉下來，你把它們排滿一整橫行，那一行就消掉，堆到頂就輸。裡面沒有角色，沒有故事，所以什麼機器都裝得進，什麼人看一眼都會玩。它還證明了一件事：1989 年任天堂把它和掌上遊戲機 **Game Boy** 裝進同一個盒子賣，很多人，連平常不玩遊戲的人在內，就為了它去買了一台。後來一整串掉落式的益智遊戲，都從它算起。"
+    },
+    {
+      "type": "p",
+      "text": "帕基特諾夫當時在莫斯科的蘇聯科學院電腦中心當研究員，做語音辨識和人工智慧，遊戲是下班時間寫的。時間是 1984 或 1985 年，各方說法不一。"
+    },
+    {
+      "type": "p",
+      "text": "2026 年 9 月它還上了新聞：美國政府的網站上放了一款照抄《俄羅斯方塊》的山寨小遊戲。專管這款遊戲授權的**俄羅斯方塊公司**公開抗議，那款遊戲在 9 月 8 日撤下。四十多年前寫的遊戲，還有人抄，也還有人管。"
+    },
+    {
+      "type": "facts",
+      "title": "作品資料",
+      "items": [
+        [
+          "名稱",
+          "《俄羅斯方塊》（Tetris，俄文 Тетрис）"
+        ],
+        [
+          "設計者",
+          "阿列克謝・帕基特諾夫（Alexey Pajitnov），當時是莫斯科蘇聯科學院多羅德尼岑計算中心的研究員"
+        ],
+        [
+          "第一版",
+          "1984 或 1985 年，Elektronika 60 電腦，用 Pascal 寫成，約三週（各方說法不一）"
+        ],
+        [
+          "玩法",
+          "七種由四個方塊拼成的形狀從上方掉落，排滿一橫行就消掉；堆到頂就結束"
+        ],
+        [
+          "名字",
+          "tetra（希臘文「四」）加上帕基特諾夫最愛的網球（tennis）"
+        ],
+        [
+          "西方首發",
+          "1988 年 1 月，IBM PC 版（英國 Mirrorsoft、美國 Spectrum HoloByte）"
+        ],
+        [
+          "Game Boy 版",
+          "1989 年 6 月 14 日日本發售；7 月 31 日在美國隨主機附贈；銷量超過 3,500 萬套"
+        ],
+        [
+          "版本",
+          "兩百多個官方版本，至少 70 種機器（金氏世界紀錄：移植最多的電子遊戲）"
+        ]
+      ]
+    },
+    {
+      "type": "h",
+      "text": "第一版：十二種形狀砍成七種"
+    },
+    {
+      "type": "p",
+      "text": "第一版跑在一台叫 Elektronika 60 的蘇聯電腦上，沒有圖形畫面，方塊是用括號和空白字元排出來的。沒有計分，也沒有關卡，同事還是迷上了。帕基特諾夫自己也停不下來，1994 年他跟《Wired》雜誌這樣說："
+    },
+    {
+      "type": "quote",
+      "text": "你想像不到。我連原型都寫不完！我一開始玩，就再也沒時間把程式寫完。大家一直玩、一直玩、一直玩。我最好的朋友說：「你的俄羅斯方塊，我再也受不了了。」",
+      "original": "You can't imagine. I couldn't finish the prototype! I started to play and never had time to finish the code. People kept playing, playing, playing. My best friend said, 'I can't live with your Tetris anymore.'",
+      "cite": "帕基特諾夫談第一版，Jeffrey Goldsmith〈This Is Your Brain on Tetris〉，《Wired》1994 年 5 月；本文自譯"
+    },
+    {
+      "type": "figure",
+      "id": "f1",
+      "kind": "photo",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/00/E60M.JPG",
+      "width": 900,
+      "height": 357,
+      "alt": "一台扁平的長方形電腦主機，米白色面板、黑色頂蓋，面板左側用紅色草寫俄文印著 Электроника 60М，右側一個深色小窗裡有一盞紅色指示燈和三個白色扳鍵。",
+      "caption": "蘇聯的 Электроника 60М（Elektronika 60M）電腦主機，同系列的 Elektronika 60 是仿美國 PDP-11 的機器。帕基特諾夫在 Elektronika 60 上寫出第一版《俄羅斯方塊》，那台機器沒有圖形介面，方塊是用括號和空白字元排出來的。照片裡是收藏家的 60M 型，不是他用的那一台。",
+      "credit": "Sergei Frolov（蘇聯計算機收藏），Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:E60M.JPG",
+      "made": "2008"
+    },
+    {
+      "type": "p",
+      "text": "關鍵在他砍掉的那一刀。帕基特諾夫原本玩的是一盒五格骨牌拼圖，每一塊由五個正方形拼成，一共十二種形狀。他嫌十二種太複雜，改成四個一塊，**形狀就只剩七種**。就這樣，沒有別的了。"
+    },
+    {
+      "type": "p",
+      "text": "這一刀砍得對不對，他自己後來證明過。1990 到 1991 年他又做了 Welltris、Hatris 幾款續作，評價和銷量都不差，可是沒有一款追上《俄羅斯方塊》。研究這段歷史的法學教授 Julien Mailland 在書裡說，原因是它們比較複雜。"
+    },
+    {
+      "type": "h",
+      "text": "1988 年：紅色包裝裡沒有蘇聯"
+    },
+    {
+      "type": "p",
+      "text": "1988 年 1 月，它先後在英國、美國上市。美國的發行商 Spectrum HoloByte 打的口號是「第一個在北美販售的蘇聯產品」，紅色包裝，配上蘇聯民謠和聖巴索大教堂的插圖。"
+    },
+    {
+      "type": "p",
+      "text": "可是遊戲本身，一點蘇聯也沒有。**亨克・羅傑斯**當時開一家公司，專門到各地找遊戲拿回日本發行，後來和帕基特諾夫合組俄羅斯方塊公司。他 2023 年受訪時說，這款遊戲裡沒有任何東西會把它綁在某個年代、某種文化上，他們也刻意不讓這種東西進來。他說，裡面沒有角色，就只是幾何。遊戲公司 Capcom 曾經在一個版本裡加了米老鼠，他的評語是：俄羅斯方塊不需要米老鼠。"
+    },
+    {
+      "type": "p",
+      "text": "沒有東西屬於哪個國家，它就能搬到任何一台機器上。把同一款遊戲改寫到另一種機器上跑，業界叫移植。金氏世界紀錄說它是移植最多的電子遊戲：兩百多個官方版本，至少 70 種機器。連掛在鑰匙圈上的液晶遊戲機、飛機上的娛樂系統、文書處理機都裝過。"
+    },
+    {
+      "type": "h",
+      "text": "1989 年：Game Boy 盒子裡附的那一片"
+    },
+    {
+      "type": "p",
+      "text": "1989 年 2 月，羅傑斯拿著觀光簽證跑到莫斯科，翻譯攔他，他還是闖進了 Elorg 的辦公室。Elorg 是蘇聯負責軟體對外授權的國營機構。談完，任天堂拿到掌上型和家用遊戲機的版權。"
+    },
+    {
+      "type": "p",
+      "text": "任天堂美國總裁荒川實原本打算在盒子裡附《超級瑪利歐大陸》。照羅傑斯事後的回憶，他是這樣勸的："
+    },
+    {
+      "type": "quote",
+      "text": "如果你想讓小男孩買你的 Game Boy，就附《瑪利歐》。可是如果你想讓每個人都買你的 Game Boy，就附《俄羅斯方塊》，因為每個人都玩《俄羅斯方塊》：老的、小的，男的、女的。",
+      "original": "If you want little boys to buy your Game Boy, pack in Mario. But if you want everyone to buy your Game Boy, pack in Tetris, because everybody plays Tetris – young, old and male, female.",
+      "cite": "亨克・羅傑斯回憶他對任天堂美國總裁荒川實說的話；IGN Japan 日文訪談，英文引句由該文作者 Daniel Robson 公布，轉引自 Ryan Craddock，Nintendo Life，2018 年 11 月 14 日；本文自譯"
+    },
+    {
+      "type": "p",
+      "text": "那年 7 月 31 日，美國的 Game Boy 盒子裡附的就是這片卡匣。首批一百萬組很快賣完。很多人，包括平常不玩遊戲的人，就是為了它去買 Game Boy。單是這一版就賣了超過 3,500 萬套，任天堂在掌上遊戲機市場的龍頭地位，也是這一次站穩的。"
+    },
+    {
+      "type": "p",
+      "text": "《Wired》雜誌認為它在那個年代很少見，不分男女老少都吸引。帕基特諾夫講得更大膽：在它之前，這一行男女是 95 比 5，它剛好一半一半。這數字是他自己說的，沒講從哪來，聽聽就好，不過方向和《Wired》一樣。"
+    },
+    {
+      "type": "figure",
+      "id": "f2",
+      "kind": "portrait",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Alexey_Pajitnov_January_2008.jpg",
+      "width": 1280,
+      "height": 960,
+      "alt": "一個灰白落腮鬍、深棕色頭髮的男人坐在白色沙發旁，穿淺藍襯衫和棕色麂皮外套，對著鏡頭微笑；背後是黑色層架，上面擺著幾疊書和兩個裝白色液體的玻璃杯。",
+      "caption": "阿列克謝・帕基特諾夫，2008 年 1 月。1991 年他在羅傑斯幫忙下帶全家移居美國西雅圖。",
+      "credit": "Jordi Sabaté（Flickr），Wikimedia Commons",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Alexey_Pajitnov_January_2008.jpg",
+      "made": "2008"
+    },
+    {
+      "type": "h",
+      "text": "1990 年以後：照著它做的人"
+    },
+    {
+      "type": "p",
+      "text": "它開了一種玩法：畫面不動，形狀一直來，你一直應付。任天堂 1990 年的《Dr. Mario》、Sega 同年的《Columns》、1991 年的《魔法氣泡》，都被列為受它影響的作品。評論者也把它看成「休閒遊戲」的早期例子，就是規則簡單、不必花大把時間學的那一種。"
+    },
+    {
+      "type": "p",
+      "text": "後來連圖書館和博物館都點了它的名：提給美國國會圖書館的十款「遊戲經典」、紐約現代藝術博物館的第一批遊戲館藏、史壯遊戲博物館的第一屆電子遊戲名人堂，都有它。"
+    },
+    {
+      "type": "timeline",
+      "title": "七種形狀走過的四十年",
+      "items": [
+        {
+          "when": "1984 年",
+          "label": "莫斯科，Elektronika 60",
+          "note": "帕基特諾夫下班時間把五格骨牌拼圖縮成四格、七種形狀，約三週寫好第一版，沒有計分也沒有關卡。俄羅斯方塊公司以 1984 年 6 月 6 日為生日，多數說法則是 1985 年。"
+        },
+        {
+          "when": "第一版之後",
+          "label": "移植到 IBM PC",
+          "note": "同事 Pavlovsky 與 16 歲的 Gerasimov 幫忙，兩個月改到 IBM PC，加上顏色、下落計時和計分板；磁片在莫斯科免費流傳。"
+        },
+        {
+          "when": "1986 年",
+          "label": "布達佩斯",
+          "note": "主管把一份拷貝寄到匈牙利，英國商人 Robert Stein 在那裡看到，還沒談妥授權就把權利轉賣給英美兩家公司。"
+        },
+        {
+          "when": "1988.1",
+          "label": "在英美上市",
+          "note": "1 月 27 日英國、1 月 29 日美國發行 IBM PC 版，美國包裝打「第一個在北美販售的蘇聯產品」。"
+        },
+        {
+          "when": "1989.2",
+          "label": "羅傑斯闖進莫斯科",
+          "note": "亨克・羅傑斯到蘇聯國營授權機構 Elorg 不請自來；談完，任天堂拿到掌機與家用主機的版權。"
+        },
+        {
+          "when": "1989.7.31",
+          "label": "跟著 Game Boy 賣",
+          "note": "日本 6 月 14 日先發售；美國的 Game Boy 盒子裡附送這片卡匣，它成了讓人買下整台機器的那款遊戲。"
+        },
+        {
+          "when": "1994.5",
+          "label": "「俄羅斯方塊效應」",
+          "note": "記者 Jeffrey Goldsmith 在《Wired》用了這個詞，拿來比喻好奇、發明、創造的衝動；他也懷疑這遊戲是一種「電子藥物」。"
+        },
+        {
+          "when": "2007.3",
+          "label": "列入「遊戲經典」十款",
+          "note": "史丹佛的 Henry Lowood 等人挑出史上最重要的十款遊戲，提給美國國會圖書館考慮保存，它在其中。"
+        },
+        {
+          "when": "2009.1",
+          "label": "研究者拿它做創傷實驗",
+          "note": "Holmes 等人在 *PLoS ONE* 發表：受試者看完一段令人不安的影片後玩 10 分鐘，一週內畫面自己跑回腦海的次數，比不玩的人少。這是模擬實驗，還不是療法。"
+        },
+        {
+          "when": "2012.11",
+          "label": "紐約現代藝術博物館",
+          "note": "MoMA 收進第一批 14 款電子遊戲，歸在互動設計，它是其中之一。"
+        },
+        {
+          "when": "2015 年",
+          "label": "世界電子遊戲名人堂",
+          "note": "第一屆入選。"
+        },
+        {
+          "when": "2023.12.21",
+          "label": "13 歲少年玩到當機",
+          "note": "Willis Gibson 在原版任天堂紅白機（NES）版玩到第 157 關，程式撐不住卡死，花不到 39 分鐘；在他之前，沒有人在原版上做到過。"
+        }
+      ],
+      "caption": "依維基百科〈Tetris〉、史壯博物館、Engadget、The Next Web、NPR 與 *PLoS ONE* 論文整理。第一版的年份各方說法不一。"
+    },
+    {
+      "type": "h",
+      "text": "2023 年：13 歲的孩子玩到程式卡死"
+    },
+    {
+      "type": "p",
+      "text": "簡單不代表淺。2023 年 12 月，美國奧克拉荷馬州 13 歲的 Willis Gibson 在原版的任天堂紅白機《俄羅斯方塊》上玩到第 157 關，程式撐不住，當場卡死。在他之前，沒有人在原版上做到過。"
+    },
+    {
+      "type": "p",
+      "text": "NPR 引他的話，吸引他的主要是簡單：容易上手，很難精通。史壯遊戲博物館的入選說明講的是同一件事：規則簡單，可以玩出來的變化沒有盡頭。"
+    },
+    {
+      "type": "h",
+      "text": "5.2 億這個數字要打折"
+    },
+    {
+      "type": "p",
+      "text": "反對的人也有好理由，我替他們講一次。常聽到它全球賣了超過 5.2 億套，是史上最暢銷的遊戲。這是俄羅斯方塊公司的數字，把很多版本加在一起，大部分是付費的手機下載。英國廣播公司 BBC 認為它該算成一個系列，單一遊戲賣最多的是《Minecraft》。"
+    },
+    {
+      "type": "p",
+      "text": "故事也有人挑。帕基特諾夫說兩週內莫斯科每台電腦上都有它，Mailland 指出當時蘇聯電腦很少，玩到的人其實不多。他也說，多數講這段歷史的書，偏向帕基特諾夫和羅傑斯自己的說法。反方大可以說：它的名氣，一半是冷戰傳奇和加總的數字撐起來的。"
+    },
+    {
+      "type": "p",
+      "text": "這些我都認，可是我還是站在原來那一邊。Game Boy 那一版單獨就賣了超過 3,500 萬套，不必和誰合併。帕基特諾夫自己後來做的那幾款續作，就是沒有一款追上它，研究者說是輸在比較複雜。帕基特諾夫 2023 年是這麼說的："
+    },
+    {
+      "type": "quote",
+      "text": "你就是把秩序放進一堆亂掉的方塊裡，在遊戲裡做一件很有創造性的事，一行一行往上蓋，而不是去破壞什麼。這是不分國界的。",
+      "original": "You kind of put the order into chaos of [the] falling blocks, and you are doing something really creative in the game, kind of building line by line rather than destroying anything. It's universal.",
+      "cite": "帕基特諾夫回答「建造而不是破壞」的提問，Christopher Cruz〈Original 'Tetris' Creators Reveal the Game's Wild Espionage Origin Story〉，《Rolling Stone》2023 年 4 月 1 日；本文自譯"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tetris",
+      "publisher": "Wikipedia",
+      "date": "2026-11-27",
+      "url": "https://en.wikipedia.org/wiki/Tetris",
+      "note": "日期為讀取日的最新修訂；導言、Creation（五格骨牌、Elektronika 60、括號字元、名字由來、第一版年份的註腳、IBM PC 移植、Mailland 的反駁）、Spread beyond the Soviet Union、International negotiations、Legal battles（Game Boy 日美發售日、killer app、移居西雅圖、續作）、The Tetris Company、Sales（5.2 億與 BBC 的異議）、Accolades（game canon、MoMA、名人堂）、Legacy（Game Boy、休閒遊戲、受影響的遊戲、Tetris effect、Willis Gibson）、Scientific research、Historical coverage"
+    },
+    {
+      "title": "Tetris (Game Boy video game)",
+      "publisher": "Wikipedia",
+      "date": "2026-11-27",
+      "url": "https://en.wikipedia.org/wiki/Tetris_(Game_Boy_video_game)",
+      "note": "日期為讀取日的最新修訂；發售日、同捆、荒川原本打算附《超級瑪利歐大陸》、Reception 的銷量"
+    },
+    {
+      "title": "Tetris（World Video Game Hall of Fame 入選作品頁）",
+      "publisher": "The Strong National Museum of Play",
+      "date": "2026-11-27",
+      "url": "https://www.museumofplay.org/games/tetris/",
+      "note": "頁面未標日期，日期為讀取日；2015 年入選、入選說明、〈Korobeiniki〉"
+    },
+    {
+      "title": "Most ported videogame",
+      "publisher": "Guinness World Records",
+      "date": "2026-11-27",
+      "url": "https://www.guinnessworldrecords.com/world-records/most-ported-computer-game",
+      "note": "頁面未標日期，日期為讀取日；200 多個官方版本、至少 70 種系統"
+    },
+    {
+      "title": "This Is Your Brain on Tetris",
+      "publisher": "Wired（Jeffrey Goldsmith）",
+      "date": "1994-05-01",
+      "url": "https://www.wired.com/1994/05/tetris-2/",
+      "note": "帕基特諾夫「寫不完原型」與「像音樂」兩段話、Pokhilko 的回憶、「電子藥物」"
+    },
+    {
+      "title": "Original 'Tetris' Creators Reveal the Game's Wild Espionage Origin Story",
+      "publisher": "Rolling Stone（Christopher Cruz）",
+      "date": "2023-04-01",
+      "url": "https://www.rollingstone.com/tv-movies/tv-movie-features/tetris-interview-gaming-alexey-pajitnov-henk-rogers-russia-espionage-nintendo-taron-egerton-1234704767/",
+      "note": "帕基特諾夫與羅傑斯聯合訪談：「完美的遊戲」、只有幾何、建造而不是破壞、男女比例、觀光簽證闖 Elorg"
+    },
+    {
+      "title": "Henk Rogers On His First Impressions Of Tetris And Persuading Nintendo To Bundle It With The Game Boy",
+      "publisher": "Nintendo Life（Ryan Craddock）",
+      "date": "2018-11-14",
+      "url": "https://www.nintendolife.com/news/2018/11/henk_rogers_on_his_first_impressions_of_tetris_and_persuading_nintendo_to_bundle_it_with_the_game_boy",
+      "note": "轉述 IGN Japan（Daniel Robson）的羅傑斯訪談；附《瑪利歐》或附《俄羅斯方塊》那段話"
+    },
+    {
+      "title": "10 most important video games of all time, as judged by 2 designers, 2 academics, and 1 lowly blogger",
+      "publisher": "Engadget（James Ransom-Wiley）",
+      "date": "2007-03-12",
+      "url": "https://www.engadget.com/2007/03/12/10-most-important-video-games-of-all-time-as-judged-by-2-design/",
+      "note": "Henry Lowood 的 game canon：十款名單、委員、仿照國家電影保存委員會"
+    },
+    {
+      "title": "Bam! Pac-Man, Tetris and 12 others land in The Museum of Modern Art's new Video Game collection",
+      "publisher": "The Next Web（Harrison Weber）",
+      "date": "2012-11-29",
+      "url": "https://thenextweb.com/news/pac-man-tetris-simcity-and-11-other-games-land-in-the-museum-of-modern-arts-new-collection",
+      "note": "MoMA 首批 14 款名單、互動設計、2013 年 3 月展出；MoMA 原頁本次讀不到"
+    },
+    {
+      "title": "A 13-year-old in Oklahoma may have just become the 1st person to ever beat Tetris",
+      "publisher": "NPR（Diba Mohtasham）",
+      "date": "2024-01-03",
+      "url": "https://www.npr.org/2024/01/03/1222737191/beat-tetris-willis-gibson-oklahoma-kill-screen",
+      "note": "Willis Gibson 第 157 關、不到 39 分鐘、之前只有 AI 做到、他談簡單與難精通、5.2 億套"
+    },
+    {
+      "title": "Can Playing the Computer Game \"Tetris\" Reduce the Build-Up of Flashbacks for Trauma? A Proposal from Cognitive Science",
+      "publisher": "PLoS ONE（Holmes, James, Coode-Bate, Deeprose）",
+      "date": "2009-01-07",
+      "url": "https://doi.org/10.1371/journal.pone.0004153",
+      "note": "只讀摘要（Europe PMC，PMID 19127289）：創傷影片模擬、看完 30 分鐘後玩 10 分鐘、一週內閃回較少"
+    }
+  ]
+}
