@@ -107,7 +107,7 @@
    | 寫稿：牙周（perio）、文明（civilization）、哲學（philosophy）、文學（literature）、走進一件作品（artwork）、經典何以不朽（canon）、從零理解一個概念（concept）、詩（poem）、謎題（mystery） | `opus` | `high` |
    | 寫稿：巴薩晨報、古典、古蹟、不在計畫裡的知識、三個觀測站（FM、寰宇片場、訃聞） | `sonnet` | `high` |
    | 連載翻譯（serial，連載班）：譯者 `opus`／`high`，雙語核對 `sonnet`／`high` | — | — |
-   | 世界與台灣快訊（news：審稿要做，不做第 9 步；沒有備稿） | `sonnet` | `high` |
+   | 世界與台灣快訊（news：審稿與忠實度核對要做，不做總編重寫；沒有備稿） | `sonnet` | `high` |
    | 今日經文與禱告（devotion，只有經文與禱告，不審稿、不做第 9 步） | `sonnet` | `medium` |
    | 審稿（第 8 步） | `sonnet` | `high` |
    | 總編重寫（第 9 步；**只在審稿判定「重寫」時**） | `opus` | `high` |
