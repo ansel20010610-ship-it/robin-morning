@@ -479,6 +479,9 @@ function fromFen(fen) {
   return P;
 }
 export const LESSON_ENGINE = { fromFen, legal, play, inCheck, uci, sqName }; // for scripts/check_lessons.js and scripts/pick_puzzles.js
+// Not open yet (the owner 2026-11-28 15:3x 「明天做完再放第一課」, then 「分頁留著、只把內容換成『明天開課』」): the tab stays and says only that.
+// When it opens it starts from lesson 1 — what was done on the phone before that does not count.
+const LESSON_OPEN = false;
 const lessonOf = (n) => LESSONS.find((x) => x.n === n);
 const puzzleOf = (n, i) => { const k = lessonOf(n); return i ? k.practice[i - 1] : k; }; // 0 = the lesson's own, 1–2 = from real games
 const PER = 3;
@@ -502,6 +505,7 @@ const moveWord = (P, m) => `${NAME[P.b[m[0]].toLowerCase()]}走到 ${sqName(m[1]
 const goalOf = (q) => q.goal || (q.mate ? "一步將死" : "找出那一招");
 function dots(st, n) { const got = st.got[n] || [], peek = st.peek[n] || []; return [0, 1, 2].map((i) => `<i class="${got.includes(i) ? "on" : peek.includes(i) ? "peek" : ""}${!L.again && L.n === n && L.i === i && !["solved", "learned"].includes(L.kind) ? " now" : ""}"></i>`).join(""); }
 function lessonHtml() {
+  if (!LESSON_OPEN) return `<div class="gm-slip gl-lesson" role="group" aria-label="今日一課"><p class="gm-head">今日一課</p><p class="gl-wait">明天開課</p></div>`;
   const st = lessonState(), k = lessonOf(st.n);
   if (!k) return `<div class="gm-slip gl-lesson"><p class="gm-head">今日一課</p><p class="gl-wait">第 ${st.n} 課還在寫，明天見。</p></div>`;
   if (!L || (!L.again && L.n !== st.n)) L = { ...pickTask(st), moves: [], sel: -1, say: "" };
