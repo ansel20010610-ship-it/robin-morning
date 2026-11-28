@@ -14,7 +14,7 @@
 
 ## 怎麼查
 - 只用一手或通訊社等級的來源，每一則至少一個可信來源，數字、人名、日期都要在來源裡。查不到就不寫那一則。
-- WebSearch 一律加 `allowed_domains`；雲端環境實測可用的有 aljazeera.com、espn.com、goal.com；bbc.com、theguardian.com、reuters.com、apnews.com 讀不到（2026-10-11 實測，見 football.md），不要放進清單。**本欄第一週請實測**這些候選網域，可用的記在班次回報裡，社長會更新這份清單：cna.com.tw（中央社）、focustaiwan.tw、news.pts.org.tw（公視）、rti.org.tw、dw.com、france24.com、nhk.or.jp、un.org、cwa.gov.tw（氣象署）、cdc.gov.tw。RSS 也可以用 WebFetch 直接讀（例 `https://www.aljazeera.com/xml/rss/all.xml`）。
+- WebSearch 一律加 `allowed_domains`；雲端環境實測可用的有 aljazeera.com、france24.com、cna.com.tw（中央社）、focustaiwan.tw、news.pts.org.tw（公視）、un.org、cdc.gov.tw、cwa.gov.tw（氣象署，常只讀得到首頁）、espn.com、goal.com；bbc.com、theguardian.com、reuters.com、apnews.com、dw.com、nhk.or.jp、rti.org.tw 讀不到或常被擋（2026-10-11 與 11-02 起第 4 班每天實測），不要放進清單；dw.com 放進去會讓整次搜尋回 400。RSS 也可以用 WebFetch 直接讀（例 `https://www.aljazeera.com/xml/rss/all.xml`）。
 - 相對時間從讀者的角度寫：刊出日是「今天」；時間一律寫台灣時間，外國事件加當地日期。
 
 ## 格式
