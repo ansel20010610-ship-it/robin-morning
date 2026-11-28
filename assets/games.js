@@ -466,8 +466,10 @@ function wireGo(root) {
   };
 }
 
-// ——— 每日一課 ——— (the owner 2026-11-28; his picks: 乙 讀一段＋走一題, 照自己的進度, 365 課 — lessons.js). One new lesson a day: the next one opens on
-// the first day after the last was finished, so a day away skips nothing. The move is judged here, on the phone.
+// ——— 每日一課 ——— (the owner 2026-11-28; his picks: 乙 讀一段＋走一題, 照自己的進度, 365 課, 甲 老師口吻 — lessons.js; then 「我要循序漸進 真的要學會」:
+// 一課三題 — the lesson's own position and two from real games, all three found by yourself before the lesson counts as learned). One new lesson a day:
+// the next opens on the first day after the last was finished, so a day away skips nothing. A puzzle whose answer you looked at comes back the next day,
+// before that day's new lesson. The move is judged here, on the phone.
 const sqName = (s) => "abcdefgh"[s & 7] + (8 - (s >> 3));
 const uci = (m) => sqName(m[0]) + sqName(m[1]);
 function fromFen(fen) {
@@ -476,75 +478,97 @@ function fromFen(fen) {
   const P = { b, turn, castle: castle === "-" ? "" : castle, ep: -1, half: 0 }; P.seen = [keyOf(P)];
   return P;
 }
-export const LESSON_ENGINE = { fromFen, legal, play, inCheck, uci, sqName }; // for scripts/check_lessons.js
-let L = null; // { n, moves, sel, say, kind } while the page is open
+export const LESSON_ENGINE = { fromFen, legal, play, inCheck, uci, sqName }; // for scripts/check_lessons.js and scripts/pick_puzzles.js
+const lessonOf = (n) => LESSONS.find((x) => x.n === n);
+const puzzleOf = (n, i) => { const k = lessonOf(n); return i ? k.practice[i - 1] : k; }; // 0 = the lesson's own, 1–2 = from real games
+const PER = 3;
+// Kept on the phone: { n: today's lesson, got: { n: [i found by yourself] }, peek: { n: [i looked at] }, done: { n: { on: date } }, again: [[n, i, day looked]] }.
+// A puzzle in `again` comes back on any day after the day it was looked at, before that day's lesson; looked at once more, it moves on a day.
 function lessonState() {
-  const st = store.get("games.lesson", { n: 1, done: {} }), today = twNow().date, d = st.done[st.n];
-  if (d && d.on < today && st.n < TOTAL && LESSONS.some((x) => x.n === st.n + 1)) { st.n++; store.set("games.lesson", st); }
+  const st = { n: 1, got: {}, peek: {}, done: {}, again: [], ...store.get("games.lesson", {}) }, d = st.done[st.n];
+  if (d && d.on < twNow().date && st.n < TOTAL && lessonOf(st.n + 1)) { st.n++; store.set("games.lesson", st); }
   return st;
 }
-const lessonPos = () => { const k = LESSONS.find((x) => x.n === L.n); let P = fromFen(k.fen); for (const u of L.moves) P = play(P, legal(P).find((m) => uci(m) === u)); return P; };
+const dueAgain = (st) => st.again.find(([, , on]) => on < twNow().date);
+let L = null; // the puzzle on the sheet: { n, i, again, moves, sel, last, say, kind, busy }
+function pickTask(st) {
+  const a = dueAgain(st); if (a) return { n: a[0], i: a[1], again: true, kind: "" };
+  if (st.done[st.n]) return { n: st.n, i: 0, again: false, kind: "learned" };
+  const got = [...(st.got[st.n] || []), ...(st.peek[st.n] || [])];
+  return { n: st.n, i: [0, 1, 2].find((i) => !got.includes(i)), again: false, kind: "" };
+}
+const lessonPos = () => { const k = puzzleOf(L.n, L.i); let P = fromFen(k.fen); for (const u of L.moves) P = play(P, legal(P).find((m) => uci(m) === u)); return P; };
 const moveWord = (P, m) => `${NAME[P.b[m[0]].toLowerCase()]}走到 ${sqName(m[1])}`;
+const goalOf = (q) => q.goal || (q.mate ? "一步將死" : "找出那一招");
+function dots(st, n) { const got = st.got[n] || [], peek = st.peek[n] || []; return [0, 1, 2].map((i) => `<i class="${got.includes(i) ? "on" : peek.includes(i) ? "peek" : ""}${!L.again && L.n === n && L.i === i && !["solved", "learned"].includes(L.kind) ? " now" : ""}"></i>`).join(""); }
 function lessonHtml() {
-  const st = lessonState(), k = LESSONS.find((x) => x.n === st.n);
-  if (!L || L.n !== st.n) L = { n: st.n, moves: [], sel: -1, say: "", kind: st.done[st.n] ? "done" : "" };
+  const st = lessonState(), k = lessonOf(st.n);
   if (!k) return `<div class="gm-slip gl-lesson"><p class="gm-head">今日一課</p><p class="gl-wait">第 ${st.n} 課還在寫，明天見。</p></div>`;
-  const [stage, i, len] = stageOf(k.n), T = k.say, P = lessonPos(), side = fromFen(k.fen).turn, done = L.kind === "done";
-  const says = done ? `<p class="gl-say ok">${L.say || ""}${T.done}</p>${k.n < TOTAL ? `<p class="gl-next">明天開第 ${k.n + 1} 課</p>` : ""}`
-    : L.say ? `<p class="gl-say ${L.kind}">${L.say}</p>` : "";
+  if (!L || (!L.again && L.n !== st.n)) L = { ...pickTask(st), moves: [], sel: -1, say: "" };
+  const K = lessonOf(L.n), q = puzzleOf(L.n, L.i), T = K.say, P = lessonPos(), side = fromFen(q.fen).turn, [stage, si, len] = stageOf(K.n);
+  const solved = L.kind === "solved" || L.kind === "learned", lastOne = !L.again && !!st.done[st.n];
+  const head = L.again ? `<p class="gl-no">再考一次　<span>第 ${K.n} 課 ${K.title}　第 ${L.i + 1} 題</span></p><p class="gl-text gl-again">昨天這一題看了答案，今天自己走走看。</p>`
+    : `<p class="gl-no">第 ${K.n} 課　<span>${stage} ${si}／${len}</span></p><h3 class="gl-title">${K.title}</h3>${T.text.map((t) => `<p class="gl-text">${t}</p>`).join("")}
+      <p class="gl-step"><b>${L.kind === "learned" ? "三題都做完了" : `第 ${L.i + 1} 題／${PER}`}</b><span class="gl-dots" aria-hidden="true">${dots(st, K.n)}</span>${L.i && L.kind !== "learned" ? `<em>真實對局</em>` : ""}</p>`;
+  let says = L.say ? `<p class="gl-say ${L.kind === "learned" ? "solved" : L.kind}">${L.say}</p>` : "";
+  if (L.kind === "learned") {
+    const pk = (st.peek[st.n] || []).filter((i) => !(st.got[st.n] || []).includes(i));
+    says = `<p class="gl-say solved">${T.done}</p><p class="gl-next">${pk.length ? `第 ${pk.map((i) => i + 1).join("、")} 題看了答案，明天先再考一次。<br>` : ""}${st.n < TOTAL ? `明天開第 ${st.n + 1} 課` : ""}</p>`;
+  }
+  const acts = solved ? (L.kind === "learned" ? "" : `<div class="gm-acts gl-acts"><button type="button" data-l="next">${L.again ? (dueAgain(st) ? "下一題" : "開始今天的課") : lastOne ? "這一課學完了" : "下一題"}</button></div>`)
+    : `<div class="gm-acts gl-acts"><button type="button" data-l="hint">提示</button><button type="button" data-l="show">看答案</button></div>`;
   return `<div class="gm-slip gl-lesson" role="group" aria-label="今日一課">
-    <p class="gm-head">今日一課</p>
-    <p class="gl-no">第 ${k.n} 課　<span>${stage} ${i}／${len}</span></p>
-    <h3 class="gl-title">${k.title}</h3>
-    ${T.text.map((t) => `<p class="gl-text">${t}</p>`).join("")}
-    <div class="gm-bwrap gl-bwrap">${drawBoard(P, L.last, L.sel, side === "b", `${k.title}的棋盤`)}</div>
-    ${done ? "" : `<p class="gl-goal"><i class="gc-turn ${side}" aria-hidden="true"></i>${L.busy ? `${ZHC(side === "w" ? "b" : "w")}方想一下……` : `輪到你（${ZHC(side)}）：${k.goal}`}</p>`}
-    ${says}
-    ${done ? "" : `<div class="gm-acts gl-acts"><button type="button" data-l="hint">提示</button><button type="button" data-l="show">看答案</button></div>`}
+    <p class="gm-head">今日一課</p>${head}
+    <div class="gm-bwrap gl-bwrap">${drawBoard(P, L.last, L.sel, side === "b", `${K.title}，第 ${L.i + 1} 題的棋盤`)}</div>
+    ${solved ? "" : `<p class="gl-goal"><i class="gc-turn ${side}" aria-hidden="true"></i>${L.busy ? `${ZHC(side === "w" ? "b" : "w")}方想一下……` : `輪到你（${ZHC(side)}）：${goalOf(q)}`}</p>`}
+    ${says}${acts}
   </div>`;
 }
-function lessonDone(peek) {
-  const st = store.get("games.lesson", { n: 1, done: {} });
-  st.done[L.n] = { on: twNow().date, peek }; store.set("games.lesson", st);
-  L.kind = "done";
+function settle(peeked) { // the puzzle on the sheet is finished: by yourself, or by looking
+  const st = lessonState(), { n, i } = L, today = twNow().date, add = (o) => { o[n] = [...new Set([...(o[n] || []), i])]; };
+  st.again = st.again.filter(([a, b]) => !(a === n && b === i));
+  if (peeked) st.again.push([n, i, today]); // comes back tomorrow
+  if (!L.again) { add(peeked ? st.peek : st.got); if ([0, 1, 2].every((j) => [...(st.got[n] || []), ...(st.peek[n] || [])].includes(j))) st.done[n] = { on: today }; }
+  store.set("games.lesson", st); L.kind = "solved";
 }
 function wireLesson(root) {
-  const box = root.querySelector(".gl-lesson"), k = box && LESSONS.find((x) => x.n === L?.n);
-  if (!k) return;
-  const redraw = () => { box.outerHTML = lessonHtml(); wireLesson(root); }, T = k.say;
+  const box = root.querySelector(".gl-lesson"); if (!box || !L || !lessonOf(L.n)) return;
+  const K = lessonOf(L.n), q = puzzleOf(L.n, L.i), T = K.say, redraw = () => { box.outerHTML = lessonHtml(); wireLesson(root); };
   box.querySelector(".gl-acts")?.addEventListener("click", (ev) => {
-    const a = ev.target.closest("[data-l]")?.dataset.l; if (!a || L.kind === "done" || L.busy) return;
-    if (a === "hint") { L.kind = "hint"; L.say = `提示：${T.hint}`; }
+    const a = ev.target.closest("[data-l]")?.dataset.l; if (!a || L.busy) return;
+    if (a === "next") { L = null; redraw(); return; }
+    if (L.kind === "solved") return;
+    if (a === "hint") { L.kind = "hint"; L.say = `提示：${L.i || L.again ? T.tip : T.hint}`; }
     else { // 看答案: play out what is left
-      let P = lessonPos(), words = [];
-      if (k.mate) { const m = legal(P).find((x) => { const n = play(P, x); return inCheck(n) && !legal(n).length; }); words.push(moveWord(P, m)); L.moves.push(uci(m)); L.last = m; }
-      else for (let j = L.moves.length; j < k.line.length; j++) { const m = legal(P).find((x) => uci(x) === k.line[j]); if (j % 2 === 0) words.push(moveWord(P, m)); P = play(P, m); L.moves.push(k.line[j]); L.last = m; }
-      L.say = `答案：${words.join("，再")}。`; L.sel = -1; lessonDone(true);
+      let P = lessonPos(); const words = [];
+      if (q.mate) { const m = legal(P).find((x) => { const n = play(P, x); return inCheck(n) && !legal(n).length; }); words.push(moveWord(P, m)); L.moves.push(uci(m)); L.last = m; }
+      else for (let j = L.moves.length; j < q.line.length; j++) { const m = legal(P).find((x) => uci(x) === q.line[j]); if (j % 2 === 0) words.push(moveWord(P, m)); P = play(P, m); L.moves.push(q.line[j]); L.last = m; }
+      L.sel = -1; settle(true); L.say = `答案：${words.join("，再")}。這題明天再考一次。`;
     }
     redraw();
   });
   box.querySelector(".gc-board").onclick = (ev) => {
-    if (L.kind === "done" || L.busy) return;
-    const P = lessonPos(), flip = fromFen(k.fen).turn === "b", r = ev.currentTarget.getBoundingClientRect(), z = SIZE / r.width;
+    if (L.kind === "solved" || L.kind === "learned" || L.busy) return;
+    const P = lessonPos(), flip = fromFen(q.fen).turn === "b", r = ev.currentTarget.getBoundingClientRect(), z = SIZE / r.width;
     const f = Math.floor(((ev.clientX - r.left) * z - PAD) / SQ), rk = Math.floor(((ev.clientY - r.top) * z - PAD) / SQ);
     if (f < 0 || rk < 0 || f > 7 || rk > 7) return;
     const s = flip ? 63 - (rk * 8 + f) : rk * 8 + f, m = L.sel >= 0 && legal(P).find((x) => x[0] === L.sel && x[1] === s);
     if (!m) { L.sel = sideOf(P.b[s]) === P.turn && s !== L.sel ? s : -1; redraw(); return; }
     L.sel = -1;
-    const n = play(P, m), foe = n.turn === "w" ? "白王" : "黑王";
-    if (k.mate) {
-      if (inCheck(n) && !legal(n).length) { L.moves.push(uci(m)); L.last = m; L.say = ""; lessonDone(false); }
+    const n = play(P, m), foe = n.turn === "w" ? "白王" : "黑王", good = () => (L.i === 0 && !L.again ? T.done : L.again ? "對！這次自己找到了。" : L.i === 2 ? "對！三題都走完了。" : "對！同一招，換了局面也找得到。");
+    if (q.mate) {
+      if (inCheck(n) && !legal(n).length) { L.moves.push(uci(m)); L.last = m; settle(false); L.say = good(); }
       else { L.kind = "wrong"; const run = legal(n).filter((x) => x[0] === kingAt(n.b, n.turn)).map((x) => sqName(x[1]));
-        L.say = inCheck(n) ? `將軍了，可是${foe}還能逃到 ${run.join("、") || "別處"}。再想想。` : `${moveWord(P, m)}，還沒有將軍，${foe}很安全。再想想。`; }
+        L.say = inCheck(n) ? `將軍了，可是${foe}還能${run.length ? `逃到 ${run.join("、")}` : "擋住或吃掉這一子"}。再想想。` : `${moveWord(P, m)}，還沒有將軍，${foe}很安全。再想想。`; }
       redraw(); return;
     }
-    if (uci(m) !== k.line[L.moves.length]) { L.kind = "wrong"; L.say = `不是這一步。再想想，或按「提示」。`; redraw(); return; }
+    if (uci(m) !== q.line[L.moves.length]) { L.kind = "wrong"; L.say = `不是這一步。再想想，或按「提示」。`; redraw(); return; }
     L.moves.push(uci(m)); L.last = m; L.say = "";
-    if (L.moves.length >= k.line.length) { lessonDone(false); redraw(); return; }
+    if (L.moves.length >= q.line.length) { settle(false); L.say = good(); redraw(); return; }
     L.kind = ""; L.busy = true; redraw(); // the other side answers, then it is your move again
     setTimeout(() => {
-      const Q = lessonPos(), r2 = legal(Q).find((x) => uci(x) === k.line[L.moves.length]);
-      L.moves.push(k.line[L.moves.length]); L.last = r2; L.busy = false; L.kind = "go"; L.say = `${ZHC(Q.turn)}${moveWord(Q, r2)}。好，換你。`;
+      const Q = lessonPos(), r2 = legal(Q).find((x) => uci(x) === q.line[L.moves.length]);
+      L.moves.push(q.line[L.moves.length]); L.last = r2; L.busy = false; L.kind = "go"; L.say = `${ZHC(Q.turn)}${moveWord(Q, r2)}。好，換你。`;
       if (root.isConnected && root.querySelector(".gl-lesson")) { root.querySelector(".gl-lesson").outerHTML = lessonHtml(); wireLesson(root); }
     }, 600);
   };

@@ -3919,8 +3919,16 @@ html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's o
 .gl-lesson .gl-goal { display: flex; align-items: center; gap: 8px; justify-content: center; font: 600 15px/1.5 "Noto Serif TC", serif; }
 .gl-lesson .gl-say { margin: 10px 0 2px !important; padding: 8px 10px; border-left: 3px solid #bf9a52; background: rgba(191,154,82,.12); font: 14.5px/1.75 "Noto Serif TC", serif; }
 .gl-lesson .gl-say.wrong { border-left-color: #8a1c1c; background: rgba(138,28,28,.07); }
-.gl-lesson .gl-say.ok { border-left-color: #2f6b3a; background: rgba(47,107,58,.08); }
 .gl-lesson .gl-next { margin: 10px 0 0 !important; text-align: center; font: 13px "Noto Serif TC", serif; letter-spacing: .2em; color: var(--ink-2) !important; }
 .gl-lesson .gl-acts { margin-top: 12px; }
+.gl-lesson .gl-step { margin: 12px 0 0 !important; display: flex; align-items: center; justify-content: center; gap: 10px; font: 600 13px/1 "Noto Serif TC", serif; letter-spacing: .12em; color: var(--ink-2) !important; }
+.gl-lesson .gl-step em { font-style: normal; font-size: 11px; padding: 2px 6px; border-radius: 2px; color: #f6ead0; background: #6e4c18; letter-spacing: .15em; }
+.gl-lesson .gl-dots { display: inline-flex; gap: 6px; }
+.gl-lesson .gl-dots i { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid #a5843f; box-sizing: border-box; }
+.gl-lesson .gl-dots i.on { background: #2f6b3a; border-color: #2f6b3a; }
+.gl-lesson .gl-dots i.peek { background: #c9a456; }
+.gl-lesson .gl-dots i.now { box-shadow: 0 0 0 2px rgba(138,28,28,.35); }
+.gl-lesson .gl-again { text-align: center !important; }
+.gl-lesson .gl-say.solved { border-left-color: #2f6b3a; background: rgba(47,107,58,.08); }
 .gl-lesson .gl-goal .gc-turn { display: inline-block; flex: none; }
 .gl-lesson .gl-wait { margin: 14px 0 4px !important; text-align: center; font: 15px "Noto Serif TC", serif; }
