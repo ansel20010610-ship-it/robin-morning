@@ -9,6 +9,7 @@ content/config.json → push.key. The devices are listed in state/push/devices.j
   python3 scripts/push.py add <裝置代碼> [--name iPhone]
   python3 scripts/push.py issue [--date YYYY-MM-DD] [--now]   waits for 07:30, then for the live site; --now skips the 07:30 wait
   python3 scripts/push.py remind [--which noon|evening]         the 12:30 / 21:00 nudge; nothing while a Sunday issue is held
+  python3 scripts/push.py goodnight [--now]                     23:00: the yard's readers who have not said goodnight tonight
   python3 scripts/push.py test [--new-since <git rev>]          only devices added since that commit
   python3 scripts/push.py late --before <git rev>               a 週日補刊 this push finished (or gave up): tell the phone
   python3 scripts/push.py alert                                 watch.yml found the day out of order: one line to the owner
@@ -38,6 +39,10 @@ OPEN_LATE = ("waiting", "regenerating")  # late.json states of a Sunday issue st
 # The reminders' hours (Taiwan): the relay starts a run on the hour and the run waits for the half hour; a run that
 # GitHub's own schedule brings hours late says nothing after the window (a nudge at 23:40 is noise, not a reminder).
 REMIND_WINDOW = {"noon": ((12, 30), (17, 0)), "evening": ((21, 0), (23, 30))}
+# 晚安提醒 (2026-11-28): at 23:00 Taiwan, to each device whose reader is in a yard and has not said goodnight tonight; the
+# wording is the one the owner picked from three samples. A run GitHub starts after midnight says nothing.
+GOODNIGHT_AT = (23, 0)
+GOODNIGHT = ("小瓜還醒著", "睡前跟牠說聲晚安。")
 WAIT_SITE = 45 * 60    # seconds to wait for the live site to carry today's issue
 WAIT_DEPLOY = 10 * 60  # seconds to wait for a deploy still running at 07:30 (e.g. a late reserve fill)
 TTL = 4 * 3600         # a phone that is switched off still gets the notice within this time
@@ -78,7 +83,7 @@ def decode_code(code):
     return {"endpoint": ep, "keys": {"p256dh": keys["p256dh"], "auth": keys["auth"]}}
 
 
-def send(devs, payload):
+def send(devs, payload, ttl=TTL):
     """Send to every device. Returns 0 when it reached one, or when nothing is left to retry."""
     from py_vapid import Vapid
     from pywebpush import WebPushException, webpush
@@ -92,7 +97,7 @@ def send(devs, payload):
         try:
             # a fresh claims dict each time: webpush() writes this endpoint's origin into it as "aud"
             webpush(d["subscription"], data, vapid_private_key=key, vapid_claims={"sub": SITE.rstrip("/")},
-                    ttl=TTL, headers={"Urgency": "high"}, timeout=30)
+                    ttl=ttl, headers={"Urgency": "high"}, timeout=30)
             sent += 1
             print("已送出：%s" % d["name"])
         except WebPushException as e:
@@ -415,6 +420,58 @@ def cmd_remind(a):
     return send(devs, payload)
 
 
+def awake(devs, night):
+    """The devices whose reader is in a yard and has not said goodnight on `night` (2026-11-28). The app tells the yard's
+    Worker which member each device is (assets/notify.js tellYard); the Worker answers from the yard's own goodnights
+    (scripts/nest-worker.js gnh), by the short hashes index.json publishes. Unlike unfinished(), a question that cannot be
+    asked or answered leaves every device out (None): a reader with no yard must never be told to say goodnight, and only
+    the Worker knows who has one."""
+    try:
+        hs = [endpoint_hash(d["subscription"]["endpoint"]) for d in devs]
+        url = "%s/gnh?n=%s&h=%s" % (load_config()["nest"]["api"].rstrip("/"), night, ",".join(hs))
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "robin-morning-push"}), timeout=10) as r:
+            got = json.loads(r.read().decode("utf-8"))
+        yard, said = got["yard"], got["said"]
+        if not isinstance(yard, list) or not isinstance(said, list):
+            raise ValueError("yard/said are %s/%s" % (type(yard).__name__, type(said).__name__))
+    except Exception as e:  # noqa: BLE001 — the Worker unreachable, not updated yet (400) or answering oddly, a device entry malformed
+        print("問不到誰說了晚安（%s %s），今晚不提醒。" % (type(e).__name__, getattr(e, "code", "") or ""))
+        return None
+    for d, h in zip(devs, hs):
+        print("%s：%s" % (d.get("name"), "不在後院，不提醒" if h not in yard else "說過晚安了，不提醒" if h in said else "還沒說晚安，提醒"))
+    return [d for d, h in zip(devs, hs) if h in yard and h not in said]
+
+
+def cmd_goodnight(a):
+    """notify.yml at 23:00 Taiwan (the relay starts the run on the hour, the schedule is backup): 「小瓜還醒著」 to each reader
+    who is in a yard and has not said goodnight tonight (awake). A relay or schedule run that starts more than an hour early
+    waits no longer and says nothing, as does one GitHub starts after midnight; --now (the ping file) asks at once, whatever the hour. When the Worker cannot be asked nobody is told
+    and the run fails, so it is seen (and the backup schedule tries again within the hour)."""
+    devs = load_devices()
+    if not devs:
+        print("沒有登記的裝置，不發通知。")
+        return 0
+    now = tw_now()
+    night = a.date or now.date().isoformat()
+    if not a.now:
+        at = now.replace(hour=GOODNIGHT_AT[0], minute=GOODNIGHT_AT[1], second=0, microsecond=0)
+        if now < at and (at - now) <= dt.timedelta(hours=1):
+            print("等到 %s 再提醒……" % at.strftime("%H:%M"), flush=True)
+            time.sleep((at - now).total_seconds())
+        elif now < at:
+            print("現在 %s，不在晚安提醒的時段（%02d:%02d–24:00），不提醒。" % (now.strftime("%H:%M"), *GOODNIGHT_AT))
+            return 0
+    devs = awake(devs, night)
+    if devs is None:
+        return 1
+    if not devs:
+        print("每一台不是說過晚安了，就是不在後院：不提醒。")
+        return 0
+    payload = {"kind": "goodnight", "date": night, "title": GOODNIGHT[0], "body": GOODNIGHT[1], "url": "./#/nest", "tag": "goodnight-" + night}
+    print(json.dumps(payload, ensure_ascii=False, indent=1))
+    return send(devs, payload, ttl=3600)  # a phone switched off hears nothing after about midnight
+
+
 def cmd_late(a):
     """notify.yml on a push that changed content/late.json: if it finished a 週日補刊, announce that issue; if it gave
     one up (late.py giveup → "unfinished"), send the apology at once rather than at 21:00 — the owner learns the same
@@ -531,6 +588,9 @@ def main():
     s = sub.add_parser("remind")
     s.add_argument("--date")
     s.add_argument("--which", choices=sorted(REMIND_WINDOW), help="noon (12:30) or evening (21:00); omitted: by the clock, at once")
+    s = sub.add_parser("goodnight")
+    s.add_argument("--date", help="the night (its evening's date); default today")
+    s.add_argument("--now", action="store_true", help="ask at once, whatever the hour (the ping file: a test of the reminder)")
     s = sub.add_parser("test")
     s.add_argument("--new-since")
     s = sub.add_parser("late")
@@ -539,7 +599,7 @@ def main():
     s = sub.add_parser("keys")
     s.add_argument("out")
     a = p.parse_args()
-    return {"add": cmd_add, "issue": cmd_issue, "remind": cmd_remind, "test": cmd_test, "late": cmd_late, "alert": cmd_alert,
+    return {"add": cmd_add, "issue": cmd_issue, "remind": cmd_remind, "goodnight": cmd_goodnight, "test": cmd_test, "late": cmd_late, "alert": cmd_alert,
             "keys": cmd_keys}[a.cmd](a)
 
 

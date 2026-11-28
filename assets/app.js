@@ -5,7 +5,7 @@ import { initSpotify, handleCallback, initDock, login, logout, isLoggedIn, hasCl
   autoPlaylist, setAutoPlaylist, choosePlaylist, autoAdd, resolve as spResolve, play as spPlay, preloadPlayer, canStream } from "./spotify.js";
 import { pitchThumb } from "./pitch.js";
 import { canSpeak, createReader, RATES, getRate, setRate } from "./speak.js";
-import { renderPush, clearNotices, tellDone } from "./notify.js";
+import { renderPush, clearNotices, tellDone, tellYard } from "./notify.js";
 import { initPull } from "./pull.js";
 import { calm, reveal, transition, celebrate, seal, digestRing, mastheadShow, pressRun, ripples, flip, shine, tiltGrant } from "./motion.js";
 import { allMarks, removeMark, applyMarks, pencil, land } from "./marks.js";
@@ -1515,6 +1515,7 @@ function syncDone() {
     const ti = publishedIssues().find((i) => i.date === today), arts = ti?.articles || [], n = arts.filter((a) => forStamp(a, today)).length;
     if (ti) caches.open("rm-state").then((c) => (n && issueOpen(today) ? c.put("state/left", new Response(JSON.stringify({ d: today, n, left: unreadIn(today, arts, read) }), { headers: { "Content-Type": "application/json" } })) : c.delete("state/left"))).catch(() => {});
   } catch { /* no Cache API (a plain http:// preview) */ }
+  tellYard(S.cfg?.nest?.api, nest(), S.index?.push); // the 23:00 goodnight reminder knows whose device this is (notify.js); never throws
 }
 let finishSeen = null;
 // A silent 觀測站 entry (no brief: nothing new that day) has no page to read and does not count.

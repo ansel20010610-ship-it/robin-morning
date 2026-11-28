@@ -162,6 +162,36 @@ async function done(req, env) {
   return json({ ok: true });
 }
 
+// 晚安提醒 (2026-11-28): which yard member a push device's reader is, so that scripts/push.py can leave out at 23:00 the
+// devices whose reader has said goodnight, without knowing any yard's code. The app says it (assets/notify.js tellYard):
+// POST /gnh {h, code, member} (text/plain), kept only for a real member of that yard, or {h} alone when the phone has left
+// its yard. GET /gnh?n=<night>&h=<h>,… answers {yard: [h…], said: [h…]}: the devices that belong to a yard, and of those
+// the ones whose member said goodnight that night by the yard's own list (gn:<code>, so a goodnight a phone without
+// signal sent late counts too). Nothing about the yard or the member is answered. Anyone can ask this for a device, or
+// change it (accepted, 2026-11-28): the worst is one goodnight reminder missed or one too many.
+async function gnh(req, env) {
+  if (req.method === "GET") {
+    const q = new URL(req.url).searchParams, n = q.get("n") || "", hs = (q.get("h") || "").split(",").slice(0, 20);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(n) || !hs.every((h) => DEVICE.test(h))) return json({ error: "bad request" }, 400);
+    const who = (await Promise.all(hs.map((h) => env.NEST.get(`gnh:${h}`, "json")))).map((w) => (typeof w?.c === "string" && typeof w?.w === "string" ? w : null));
+    const lists = {};
+    for (const w of who) if (w && !(w.c in lists)) lists[w.c] = (await env.NEST.get(`gn:${w.c}`, "json")) || [];
+    const yard = hs.filter((h, i) => who[i]), said = hs.filter((h, i) => who[i] && lists[who[i].c].some((g) => g.w === who[i].w && g.n === n));
+    return json({ yard, said });
+  }
+  if (req.method !== "POST") return json({ error: "GET or POST only" }, 405);
+  let b;
+  try { b = await req.json(); } catch { return json({ error: "bad json" }, 400); }
+  if (typeof b?.h !== "string" || !DEVICE.test(b.h)) return json({ error: "bad request" }, 400);
+  const key = `gnh:${b.h}`;
+  if (b.code === undefined || b.code === null) { await env.NEST.delete(key); return json({ ok: true }); }
+  const code = typeof b.code === "string" ? b.code.toUpperCase() : "";
+  if (!CODE.test(code) || !(await member(env, code, b.member))) return json({ error: "not in this yard" }, 403);
+  const cur = await env.NEST.get(key, "json"); // written only when it changed: KV's free tier has 1,000 writes a day
+  if (cur?.c !== code || cur?.w !== b.member) await env.NEST.put(key, JSON.stringify({ c: code, w: b.member }));
+  return json({ ok: true });
+}
+
 // 晚安 (the owner, 2026-11-10): GET /{code}/goodnight → {goodnights: [{w, n, at}]}; POST {member} says goodnight to the
 // bird tonight. The Worker stamps the time and the night (the evening's date; before five in the morning it is still
 // the night before) and keeps one per member and night, the last 400. Any yard. A goodnight that could not be sent at
@@ -349,6 +379,7 @@ async function route(req, env) {
     if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
     const parts = new URL(req.url).pathname.replace(/^\/+/, "").split("/");
     if (parts[0] === "done") return done(req, env); // a push device, not a yard: no code (below)
+    if (parts[0] === "gnh") return gnh(req, env); // a push device too: which yard member it is, for the 23:00 goodnight reminder
     if (parts[0] === "market") return market(req); // the quote board's live figures: no code, nothing kept
     let code = "";
     try { code = decodeURIComponent(parts[0] || "").toUpperCase(); } catch { /* a malformed escape: bad code below */ }

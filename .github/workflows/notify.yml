@@ -6,7 +6,8 @@ name: Issue notification
 # run with mode=morning, which waits for 07:30:20 and for the live site exactly as a scheduled run does; the two
 # morning crons stay as backup, and whichever run is first sends — the others see it (the dedup step) and stop. The
 # same for the noon (12:30) and evening (21:00) reminders: the relay starts mode=noon at 12:00 and mode=evening at
-# 21:00, the crons are backup, and push.py keeps each to its own window.
+# 21:00, the crons are backup, and push.py keeps each to its own window. And for the goodnight reminder (23:00, push.py
+# goodnight: only to a reader in a yard who has not said goodnight tonight): mode=goodnight at 23:00, its cron as backup.
 # Adding a device to state/push/devices.json sends that device a test notification. A push that finishes a 週日補刊
 # (content/late.json, scripts/late.py) sends that issue's notification; one that gives it up sends the apology.
 # Touching state/push/ping (any change) sends today's notice at once, so the owner can see the day's wording on the
@@ -20,15 +21,16 @@ on:
     - cron: "12 23 * * *"   # 07:12 Taiwan: second backup
     - cron: "30 4 * * *"    # 12:30 Taiwan: backup for the noon reminder (push.py remind --which noon; the phone drops it when the issue is read, push.py when the issue is held)
     - cron: "0 13 * * *"    # 21:00 Taiwan: backup for the evening reminder (push.py remind --which evening)
+    - cron: "0 15 * * *"    # 23:00 Taiwan: backup for the goodnight reminder (push.py goodnight)
   push:
     branches: [main]
     paths: ["state/push/devices.json", "content/late.json", "state/push/ping"]
   workflow_dispatch:
     inputs:
       mode:
-        description: "test = 測試通知；issue = 立刻發今天的出刊通知；remind = 立刻發提醒；morning / noon / evening = 接力（wire.yml）用：等到 07:30 / 12:30 / 21:00 再發；filled = 補位（fill.yml）用：等補齊的刊期上線再發；alert = 監看（watch.yml）用：出刊有狀況，一天最多一則"
+        description: "test = 測試通知；issue = 立刻發今天的出刊通知；remind = 立刻發提醒；morning / noon / evening = 接力（wire.yml）用：等到 07:30 / 12:30 / 21:00 再發；filled = 補位（fill.yml）用：等補齊的刊期上線再發；goodnight = 接力用：23:00 提醒還沒跟小瓜說晚安的人；alert = 監看（watch.yml）用：出刊有狀況，一天最多一則"
         type: choice
-        options: [test, issue, remind, morning, noon, evening, filled, alert]
+        options: [test, issue, remind, morning, noon, evening, goodnight, filled, alert]
         default: test
 
 permissions:
@@ -37,10 +39,10 @@ permissions:
 
 # GitHub keeps one pending run per group and cancels an older pending one. The morning runs (two crons and the relay's
 # mode=morning) share notify-issue, so at most one waits for 07:30 at a time and none is lost; the reminders share
-# notify-remind; a test or a manual run is in notify-adhoc and can never cancel a scheduled one (or the other way round);
+# notify-remind; the goodnight reminder has notify-goodnight, so a late 21:00 backup still waiting cannot cancel it; a test or a manual run is in notify-adhoc and can never cancel a scheduled one (or the other way round);
 # the watch's alert has a group to itself for the same reason.
 concurrency:
-  group: notify-${{ (github.event_name == 'schedule' && (github.event.schedule == '50 22 * * *' || github.event.schedule == '12 23 * * *') || inputs.mode == 'morning') && 'issue' || (github.event_name == 'schedule' || inputs.mode == 'noon' || inputs.mode == 'evening') && 'remind' || inputs.mode == 'alert' && 'alert' || 'adhoc' }}
+  group: notify-${{ (github.event_name == 'schedule' && (github.event.schedule == '50 22 * * *' || github.event.schedule == '12 23 * * *') || inputs.mode == 'morning') && 'issue' || (github.event_name == 'schedule' && github.event.schedule == '0 15 * * *' || inputs.mode == 'goodnight') && 'goodnight' || (github.event_name == 'schedule' || inputs.mode == 'noon' || inputs.mode == 'evening') && 'remind' || inputs.mode == 'alert' && 'alert' || 'adhoc' }}
   cancel-in-progress: false
 
 jobs:
@@ -62,6 +64,7 @@ jobs:
             case "${{ github.event.schedule }}" in
               "50 22 * * *"|"12 23 * * *") echo "kind=issue" >> "$GITHUB_OUTPUT" ;;
               "30 4 * * *") echo "kind=noon" >> "$GITHUB_OUTPUT" ;;
+              "0 15 * * *") echo "kind=goodnight" >> "$GITHUB_OUTPUT" ;;
               *) echo "kind=evening" >> "$GITHUB_OUTPUT" ;;
             esac
           elif [ "${{ github.event_name }}" = workflow_dispatch ]; then
@@ -74,7 +77,7 @@ jobs:
         id: dedup
         # the relay's run and the backup crons must never both send: count today's earlier successful runs of the same
         # notice, by job name, whichever event started them (a manual mode=issue or test is not counted and not deduped)
-        if: github.event_name == 'schedule' || inputs.mode == 'morning' || inputs.mode == 'noon' || inputs.mode == 'evening' || inputs.mode == 'alert'
+        if: github.event_name == 'schedule' || inputs.mode == 'morning' || inputs.mode == 'noon' || inputs.mode == 'evening' || inputs.mode == 'goodnight' || inputs.mode == 'alert'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -82,6 +85,7 @@ jobs:
             issue)   PAT='^notify (50 22 \* \* \*|12 23 \* \* \*|morning)$'; FROM=06:00 ;;
             noon)    PAT='^notify (30 4 \* \* \*|noon)$'; FROM=11:30 ;;
             evening) PAT='^notify (0 13 \* \* \*|evening)$'; FROM=20:00 ;;
+            goodnight) PAT='^notify (0 15 \* \* \*|goodnight)$'; FROM=22:00 ;;
             alert)   PAT='^notify alert$'; FROM=00:00 ;;   # one a day, however many checks found something
             *)       PAT='^$'; FROM=00:00 ;;
           esac
@@ -113,6 +117,7 @@ jobs:
             filled) /tmp/push/bin/python scripts/push.py issue --now --after-fill ;;
             noon) /tmp/push/bin/python scripts/push.py remind --which noon ;;
             evening) /tmp/push/bin/python scripts/push.py remind --which evening ;;
+            goodnight) /tmp/push/bin/python scripts/push.py goodnight ;;
             remind) /tmp/push/bin/python scripts/push.py remind ;;
             test) /tmp/push/bin/python scripts/push.py test ;;
             alert) /tmp/push/bin/python scripts/push.py alert ;;
@@ -124,9 +129,11 @@ jobs:
               R=0
               case "$CHANGED" in *devices.json*) /tmp/push/bin/python scripts/push.py test --new-since "$BEFORE" || R=1 ;; esac
               case "$CHANGED" in *late.json*) /tmp/push/bin/python scripts/push.py late --before "$BEFORE" || R=1 ;; esac
-              # the ping file's last line says which notice to try: "remind" for the nudge, anything else the morning one
+              # the ping file's last line says which notice to try: "remind" for the nudge, "goodnight" for the goodnight
+              # reminder (at once, whatever the hour), anything else the morning one
               case "$CHANGED" in *push/ping*)
                 if tail -n 1 state/push/ping | grep -q '^remind'; then /tmp/push/bin/python scripts/push.py remind || R=1
+                elif tail -n 1 state/push/ping | grep -q '^goodnight'; then /tmp/push/bin/python scripts/push.py goodnight --now || R=1
                 else /tmp/push/bin/python scripts/push.py issue --now || R=1; fi ;;
               esac
               exit $R ;;

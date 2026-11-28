@@ -97,6 +97,22 @@ export function clearNotices() {
   navigator.serviceWorker?.getRegistration().then((r) => r?.getNotifications?.() || []).then((ns) => ns.forEach((n) => n.close())).catch(() => {});
 }
 
+// 晚安提醒 (2026-11-28): tell the yard's Worker which yard member this device's reader is (nest-worker.js gnh), so the
+// 23:00 goodnight reminder (scripts/push.py goodnight) comes only to a reader in a yard who has not said goodnight; the
+// goodnight itself the Worker reads from the yard's own list. Sent only from a device on the notice list, and only when
+// it changed since the Worker last took it (rm.gn.told); a device that leaves its yard says so once. Asked again at the next sync.
+export async function tellYard(api, yard, registered) {
+  try {
+    if (!/^https:\/\//.test(api || "") || !Array.isArray(registered) || !navigator.serviceWorker) return;
+    const sub = await (await navigator.serviceWorker.getRegistration())?.pushManager?.getSubscription();
+    if (!sub) return;
+    const h = await hashOf(sub.endpoint), c = yard?.code || null, w = c ? yard.me : null, t = store.get("gn.told");
+    if (!registered.includes(h) || (t ? t.h === h && t.c === c && t.w === w : !c)) return;
+    const r = await fetch(`${api.replace(/\/$/, "")}/gnh`, { method: "POST", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(c ? { h, code: c, member: w } : { h }), keepalive: true, ...within(15000) });
+    if (r.ok) store.set("gn.told", { h, c, w });
+  } catch { /* no signal, or the Worker not updated yet: the next sync asks again */ }
+}
+
 // A finished day, for the 12:30 and 21:00 reminders (scripts/push.py remind; 2026-11-16): iOS shows every push it gets, so the
 // phone cannot drop one, and push.py leaves out a device whose reader has finished the day. app.js syncDone decides
 // that; this tells the yard's Worker (scripts/nest-worker.js done) under the device's short hash, only for a device on

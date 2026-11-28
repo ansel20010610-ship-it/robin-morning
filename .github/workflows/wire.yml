@@ -13,7 +13,7 @@ name: Wire (外電)
 # The morning rides on the same ticks (2026-11-08: the 07:12 fill, the 07:30 notice and the 07:45 watch all ran around
 # 10:30, started by their own crons three hours late). At the 07:00 tick the relay also starts fill.yml (which waits to
 # 07:12 and, if need be, 07:22), notify.yml mode=morning (which waits to 07:30:20) and watch.yml (which waits to 07:45);
-# at 12:00 and 21:00 the two reminders; on a Sunday at 19:00 the evening check on the 週日補刊. Their own crons stay as
+# at 12:00 and 21:00 the two reminders, at 23:00 the goodnight one; on a Sunday at 19:00 the evening check on the 週日補刊. Their own crons stay as
 # backup, and each of those workflows is written so that a second start sends or alarms nothing twice.
 # The 07:30 tick starts no deploy: publish.yml cancels a deploy still running when a new one starts, and a wire deploy
 # at 07:30 could push back the live issue the 07:30:20 notice waits for; the wires come again at 08:00.
@@ -83,6 +83,7 @@ jobs:
               ?1200) start notify.yml -f mode=noon ;;
               71900) start watch.yml -f evening=true ;;
               ?2100) start notify.yml -f mode=evening ;;
+              ?2300) start notify.yml -f mode=goodnight ;;
             esac
           done
       - name: Hand on to the next run at ten to the hour
