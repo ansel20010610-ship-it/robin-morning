@@ -63,13 +63,13 @@ function slipHtml() {
   </div>`;
 }
 function wireSlip(root) {
-  root.querySelector(".gm-picks")?.addEventListener("click", (ev) => {
+  root.querySelector(".gm-tw .gm-picks")?.addEventListener("click", (ev) => { // .gm-tw, not the first slip: 今日一課 and 巴薩 are slips too
     const b = ev.target.closest("[data-pick]"); if (!b) return;
     const t = target(), v = Number(b.dataset.pick);
     const picks = store.get("games.picks", []).filter((p) => p.date !== t);
     picks.push({ date: t, pick: v });
     store.set("games.picks", picks.sort((a, b) => a.date.localeCompare(b.date)).slice(-120));
-    const slip = root.querySelector(".gm-slip"); slip.outerHTML = slipHtml(); wireSlip(root);
+    const slip = root.querySelector(".gm-tw"); slip.outerHTML = slipHtml(); wireSlip(root);
   });
 }
 
@@ -609,6 +609,6 @@ export function wireGames(root) {
   fetchMarket().then((d) => { // the file as it stands now: a close that came in since the front page was read settles here too
     if (!d || !root.isConnected) return;
     noteTaiex(d.items);
-    const slip = root.querySelector(".gm-slip"); if (slip) { slip.outerHTML = slipHtml(); wireSlip(root); }
+    const slip = root.querySelector(".gm-tw"); if (slip) { slip.outerHTML = slipHtml(); wireSlip(root); } // the 台股 slip only (11-28: 「今日一課有台股」 — the first .gm-slip is the lesson sheet)
   }).catch(() => {});
 }
