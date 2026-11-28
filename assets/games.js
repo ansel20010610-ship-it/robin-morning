@@ -524,6 +524,11 @@ function lessonHtml() {
     ${says}${acts}
   </div>`;
 }
+function lessonSummary() { // 丙: the folded lesson card
+  const st = lessonState(), k = lessonOf(st.n); if (!k) return `<b>今日一課</b><span>第 ${st.n} 課還在寫</span>`;
+  const got = st.got[st.n] || [], peek = st.peek[st.n] || [], due = dueAgain(st);
+  return `<b>今日一課</b><span>${due ? "先再考昨天那一題" : `第 ${k.n} 課・${k.title}`}</span><i class="gp-dots">${[0, 1, 2].map((i) => `<i class="${got.includes(i) ? "on" : peek.includes(i) ? "peek" : ""}"></i>`).join("")}</i><em>${st.done[st.n] && !due ? "學完了" : "上課"}</em>`;
+}
 function settle(peeked) { // the puzzle on the sheet is finished: by yourself, or by looking
   const st = lessonState(), { n, i } = L, today = twNow().date, add = (o) => { o[n] = [...new Set([...(o[n] || []), i])]; };
   st.again = st.again.filter(([a, b]) => !(a === n && b === i));
@@ -587,12 +592,32 @@ export function gamesHtml() {
   if (!G) { const k = store.get("games.chess", null); G = k && Array.isArray(k.moves) ? { level: k.level || "mid", moves: k.moves, over: k.over || null, you: k.you === "b" ? "b" : "w" } : fresh(); save(); }
   G.busy = false; SEL = -1;
   if (!G.over && compTurn()) { G.moves.push(think(G.moves, G.level)); finish(); save(); } // the phone's turn: left while it was thinking, or it opens as white
-  return `<div class="gm-table">${goHtml()}${lessonHtml()}${slipHtml()}${barcaHtml()}</div>`; // 西洋棋在最上面（社長 2026-11-27）
+  // SAMPLE ONLY (the owner 2026-11-28 「美化編排一下整個遊戲頁面」): 甲 目錄籤 / 乙 分頁 / 丙 今日一課收合 — localStorage gpl.sample; one stays, the switch goes before go-live.
+  const look = ["a", "b", "c"].includes(store.get("gpl.sample", "a")) ? store.get("gpl.sample", "a") : "a";
+  // The men's gradients and light, once and never hidden: a board inside a hidden box (乙's other tabs) would otherwise hold the first copy, and
+  // url(#gc-ivory) on the shown board would find that one and paint nothing.
+  const defs = `<svg class="gc-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>${PIECE_DEFS}</defs></svg>`;
+  const plate = `<p class="gp-plate"><span>對局</span></p>`, sec = (k, html) => `<section class="gp-sec" id="gp-${k}" data-sec="${k}">${html}</section>`;
+  if (look === "b") {
+    const tab = store.get("games.tab", "go"), tabs = [["go", "對局"], ["lesson", "今日一課"], ["bet", "開獎・巴薩"]];
+    return `${defs}<nav class="gp-tabs" role="tablist">${tabs.map(([k, n]) => `<button type="button" role="tab" data-tab="${k}" aria-selected="${tab === k}">${n}</button>`).join("")}</nav>
+      <div class="gm-table gp-b" data-tab="${tab}">${sec("go", goHtml())}${sec("lesson", lessonHtml())}${sec("bet", slipHtml() + barcaHtml())}</div>`;
+  }
+  if (look === "c") return `${defs}<div class="gm-table gp-c">${sec("go", plate + goHtml())}<details class="gp-fold"><summary>${lessonSummary()}</summary>${lessonHtml()}</details>${slipHtml()}${barcaHtml()}</div>`;
+  const idx = [["go", "對局"], ["lesson", "今日一課"], ["tw", "開獎"], ["barca", "巴薩"]];
+  return `${defs}<nav class="gp-index">${idx.map(([k, n]) => `<button type="button" data-go="${k}">${n}</button>`).join("")}</nav>
+    <div class="gm-table gp-a">${sec("go", plate + goHtml())}${sec("lesson", lessonHtml())}${sec("tw", slipHtml())}${sec("barca", barcaHtml())}</div>`; // 西洋棋在最上面（社長 2026-11-27）
 }
 export function wireGames(root) {
   if (!root) return;
   noteTaiex(store.get("market.last", null)?.items);
   wireSlip(root); wireBarca(root); wireGo(root); wireLesson(root);
+  const scene = root.parentElement;
+  scene.querySelector(".gp-index")?.addEventListener("click", (ev) => { const k = ev.target.closest("[data-go]")?.dataset.go; const el = k && root.querySelector(`#gp-${k}`); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); });
+  scene.querySelector(".gp-tabs")?.addEventListener("click", (ev) => {
+    const b = ev.target.closest("[data-tab]"); if (!b) return; store.set("games.tab", b.dataset.tab);
+    root.dataset.tab = b.dataset.tab; scene.querySelectorAll(".gp-tabs [data-tab]").forEach((x) => x.setAttribute("aria-selected", String(x === b)));
+  });
   fetchMarket().then((d) => { // the file as it stands now: a close that came in since the front page was read settles here too
     if (!d || !root.isConnected) return;
     noteTaiex(d.items);
