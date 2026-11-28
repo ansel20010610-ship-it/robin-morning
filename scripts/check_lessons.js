@@ -1,5 +1,5 @@
 // Checks every 每日一課 lesson (assets/lessons.js) with the phone's own engine: the position is legal for the side to move, the answer works,
-// no other first move also works, and both wordings are there. Run: bun scripts/check_lessons.js
+// no other first move also works, and the words are there. Run: bun scripts/check_lessons.js
 globalThis.localStorage ??= { getItem: () => null, setItem: () => {}, removeItem: () => {} };
 const { LESSONS, TOTAL } = await import("../assets/lessons.js");
 const { LESSON_ENGINE: E } = await import("../assets/games.js");
@@ -10,7 +10,7 @@ const seen = new Set();
 for (const k of LESSONS) {
   if (seen.has(k.n)) fail(k, "課號重複"); seen.add(k.n);
   if (k.n < 1 || k.n > TOTAL) fail(k, "課號超出範圍");
-  for (const v of ["a", "b"]) { const T = k[v]; if (!T || !T.text?.length || !T.hint || !T.done) fail(k, `${v} 版缺字`); }
+  { const T = k.say; if (!T || !T.text?.length || !T.hint || !T.done) fail(k, "課文缺字"); }
   const P = E.fromFen(k.fen), foe = P.turn === "w" ? "b" : "w";
   if (P.b.filter((p) => p === "K").length !== 1 || P.b.filter((p) => p === "k").length !== 1) { fail(k, "王的數目不對"); continue; }
   if (E.inCheck({ ...P, turn: foe })) fail(k, "不該走的一方正被將軍");

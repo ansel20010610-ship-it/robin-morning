@@ -477,7 +477,6 @@ function fromFen(fen) {
   return P;
 }
 export const LESSON_ENGINE = { fromFen, legal, play, inCheck, uci, sqName }; // for scripts/check_lessons.js
-const VOICE = () => (store.get("gl.sample", "a") === "b" ? "b" : "a"); // SAMPLE ONLY: 甲 / 乙 wording — remove before go-live
 let L = null; // { n, moves, sel, say, kind } while the page is open
 function lessonState() {
   const st = store.get("games.lesson", { n: 1, done: {} }), today = twNow().date, d = st.done[st.n];
@@ -487,10 +486,10 @@ function lessonState() {
 const lessonPos = () => { const k = LESSONS.find((x) => x.n === L.n); let P = fromFen(k.fen); for (const u of L.moves) P = play(P, legal(P).find((m) => uci(m) === u)); return P; };
 const moveWord = (P, m) => `${NAME[P.b[m[0]].toLowerCase()]}走到 ${sqName(m[1])}`;
 function lessonHtml() {
-  const st = lessonState(), k = LESSONS.find((x) => x.n === st.n), v = VOICE();
+  const st = lessonState(), k = LESSONS.find((x) => x.n === st.n);
   if (!L || L.n !== st.n) L = { n: st.n, moves: [], sel: -1, say: "", kind: st.done[st.n] ? "done" : "" };
   if (!k) return `<div class="gm-slip gl-lesson"><p class="gm-head">今日一課</p><p class="gl-wait">第 ${st.n} 課還在寫，明天見。</p></div>`;
-  const [stage, i, len] = stageOf(k.n), T = k[v], P = lessonPos(), side = fromFen(k.fen).turn, done = L.kind === "done";
+  const [stage, i, len] = stageOf(k.n), T = k.say, P = lessonPos(), side = fromFen(k.fen).turn, done = L.kind === "done";
   const says = done ? `<p class="gl-say ok">${L.say || ""}${T.done}</p>${k.n < TOTAL ? `<p class="gl-next">明天開第 ${k.n + 1} 課</p>` : ""}`
     : L.say ? `<p class="gl-say ${L.kind}">${L.say}</p>` : "";
   return `<div class="gm-slip gl-lesson" role="group" aria-label="今日一課">
@@ -512,7 +511,7 @@ function lessonDone(peek) {
 function wireLesson(root) {
   const box = root.querySelector(".gl-lesson"), k = box && LESSONS.find((x) => x.n === L?.n);
   if (!k) return;
-  const redraw = () => { box.outerHTML = lessonHtml(); wireLesson(root); }, T = k[VOICE()];
+  const redraw = () => { box.outerHTML = lessonHtml(); wireLesson(root); }, T = k.say;
   box.querySelector(".gl-acts")?.addEventListener("click", (ev) => {
     const a = ev.target.closest("[data-l]")?.dataset.l; if (!a || L.kind === "done" || L.busy) return;
     if (a === "hint") { L.kind = "hint"; L.say = `提示：${T.hint}`; }
