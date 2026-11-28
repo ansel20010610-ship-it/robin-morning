@@ -3931,26 +3931,14 @@ html.room-in, html.room-in body { overflow-x: clip; } /* both: with the root's o
 .gl-lesson .gl-again { text-align: center !important; }
 .gl-lesson .gl-say.solved { border-left-color: #2f6b3a; background: rgba(47,107,58,.08); }
 .gc-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
-/* 遊戲頁編排 SAMPLE (2026-11-28, gpl.sample 甲乙丙) — one stays. */
-.gp-index, .gp-tabs { position: relative; z-index: 8; display: flex; justify-content: center; gap: 8px; max-width: 420px; margin: 0 auto 18px; padding: 8px 6px; }
-.gp-index button, .gp-tabs button { flex: 1; font: 600 13.5px/1 "Noto Serif TC", serif; letter-spacing: .14em; padding: 9px 0 8px; border-radius: 3px 3px 1px 1px; border: 1px solid #5a3e10; color: #3a2408; background: linear-gradient(#f6e3a6, #c9a456 50%, #94702c); box-shadow: inset 0 1px 0 rgba(255,250,225,.9), 0 3px 5px rgba(0,0,0,.45); text-shadow: 0 1px 0 rgba(255,240,200,.6); }
-.gp-index { background: linear-gradient(rgba(30,14,4,.0), rgba(30,14,4,.0)); }
-.gp-index button { border-radius: 2px 2px 10px 10px; }
+/* 遊戲頁分頁 (2026-11-28, the owner's pick 乙): three tabs on a dark bar, the open one gilt. */
+.gp-tabs { position: relative; z-index: 8; display: flex; justify-content: center; gap: 8px; max-width: 420px; margin: 0 auto 18px; padding: 8px 6px; }
+.gp-tabs button { flex: 1; font: 600 13.5px/1 "Noto Serif TC", serif; letter-spacing: .14em; padding: 9px 0 8px; border-radius: 3px 3px 1px 1px; border: 1px solid #5a3e10; color: #3a2408; background: linear-gradient(#f6e3a6, #c9a456 50%, #94702c); box-shadow: inset 0 1px 0 rgba(255,250,225,.9), 0 3px 5px rgba(0,0,0,.45); text-shadow: 0 1px 0 rgba(255,240,200,.6); }
 .gp-tabs { background: linear-gradient(#3a1a08, #2a1206); border-radius: 4px; box-shadow: 0 0 0 1px #bf9a52 inset, 0 8px 18px rgba(0,0,0,.5); }
 .gp-tabs button { background: transparent; color: #e9d5a2; border-color: transparent; box-shadow: none; text-shadow: none; }
 .gp-tabs button[aria-selected="true"] { background: linear-gradient(#f6e3a6, #c9a456 50%, #94702c); color: #3a2408; border-color: #5a3e10; box-shadow: inset 0 1px 0 rgba(255,250,225,.9), 0 2px 3px rgba(0,0,0,.4); }
 .gp-b[data-tab="go"] .gp-sec:not([data-sec="go"]), .gp-b[data-tab="lesson"] .gp-sec:not([data-sec="lesson"]), .gp-b[data-tab="bet"] .gp-sec:not([data-sec="bet"]) { display: none; }
 .gp-b .gp-sec[data-sec="bet"] { display: flex; flex-direction: column; gap: 22px; }
 .gp-sec { scroll-margin-top: 112px; }
-.gp-plate { margin: 0 0 10px !important; text-align: center; }
-.gp-plate span { display: inline-block; padding: 6px 26px 5px; font: 700 15px/1 "Noto Serif TC", serif; letter-spacing: .6em; text-indent: .6em; color: #3a2408; background: linear-gradient(#f6e3a6, #c9a456 50%, #94702c); border: 1px solid #5a3e10; border-radius: 2px; box-shadow: inset 0 1px 0 rgba(255,250,225,.9), inset 0 0 0 3px rgba(90,62,16,.25), 0 3px 6px rgba(0,0,0,.5); }
-.gp-fold { position: relative; }
-.gp-fold > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px; padding: 16px 18px; border-radius: 3px; color: #2a2118; background: url(shelf/gen_grain.png) 0 0 / 200px, linear-gradient(#fbf6ea, #ece0c6); background-blend-mode: multiply; box-shadow: inset 0 0 22px rgba(150,110,50,.18), 0 2px 2px rgba(0,0,0,.25), 0 14px 26px rgba(0,0,0,.5); font-family: "Noto Serif TC", serif; transform: rotate(-.4deg); }
-.gp-fold > summary::-webkit-details-marker { display: none; }
-.gp-fold > summary b { font: 600 12px/1 "Noto Serif TC", serif; letter-spacing: .4em; color: #8a1c1c; padding-right: 10px; border-right: 1px solid rgba(138,28,28,.35); }
-.gp-fold > summary span { flex: 1; font: 700 16px/1.3 "Noto Serif TC", serif; letter-spacing: .06em; }
-.gp-fold > summary em { font: 600 13px/1 "Noto Serif TC", serif; font-style: normal; letter-spacing: .2em; padding: 7px 10px 6px; color: #3a2408; background: linear-gradient(#f6e3a6, #c9a456 50%, #94702c); border: 1px solid #5a3e10; border-radius: 2px; }
-.gp-fold[open] > summary { display: none; }
-.gp-dots { display: inline-flex; gap: 5px; } .gp-dots i { width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid #a5843f; box-sizing: border-box; } .gp-dots i.on { background: #2f6b3a; border-color: #2f6b3a; } .gp-dots i.peek { background: #c9a456; }
 .gl-lesson .gl-goal .gc-turn { display: inline-block; flex: none; }
 .gl-lesson .gl-wait { margin: 14px 0 4px !important; text-align: center; font: 15px "Noto Serif TC", serif; }

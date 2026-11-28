@@ -1107,7 +1107,7 @@ const SUBJECT = {
   prints: { page: ".pr-all" },
   marks: { page: ".marks", fit: "w", tl: true }, // the notebook's title onto the page's
   nest: { page: ".yard .bird", fit: "w" },
-  games: { page: ".gc-board" },
+  games: { page: ".gc-board, .gp-sec[data-sec=\"bet\"] .gm-slip" }, // whichever tab is open: its board, or the two slips (hidden ones have no box and are left out)
 };
 const ease = (t) => (t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 const smooth = (t) => t * t * (3 - 2 * t);
