@@ -1,0 +1,49 @@
+// 每日一課 (the owner 2026-11-28 「我想在遊戲桌加入每日西洋棋教學從入門到大師」; his picks the same day: 乙 讀一段＋走一題, 照自己的進度, 一年 365 課 —
+// 入門 40、初級 80、中級 100、高級 85、大師 60). Each lesson: a short reading, a position (FEN), and the move(s) to find, judged on the phone by games.js.
+// `mate: 1` takes any move that mates; `line` is the moves to find with the other side's replies between them (UCI). Every lesson is checked by
+// scripts/check_lessons.js (legal, the answer works, nothing else does).
+// SAMPLE: two ways of writing each lesson — 甲 a teacher talking to you, 乙 plain like the paper (localStorage gl.sample) — one goes before go-live.
+export const STAGES = [["入門", 40], ["初級", 80], ["中級", 100], ["高級", 85], ["大師", 60]];
+export const LESSONS = [
+  {
+    n: 1, title: "底線將死", fen: "7k/8/6K1/8/8/8/8/R7 w - - 0 1", mate: 1, goal: "一步將死",
+    a: {
+      text: ["車（也叫城堡）只走直線，可是一走就能走到底。今天先看它最拿手的一招。", "你看黑王縮在角落，g7、h7 兩格都被你的王看住了。這時只要把車送上最後一排，從旁邊照過去，它就沒地方躲。"],
+      hint: "車要上最後一排，從哪一格上去？",
+      done: "對！這就是底線將死。反過來，你自己的王也要留一格透氣的地方，免得被人這樣將死。",
+    },
+    b: {
+      text: ["車（也叫城堡）沿直線走，一步可以走到底。王退到棋盤最邊上那一排、前面的格子又被封住時，一個車就能將死它，這叫底線將死。", "圖中黑王在 h8，g7、h7 兩格都在白王的控制下。白方只差一步。"],
+      hint: "讓車走上第 8 排。",
+      done: "答對，這叫底線將死。自己這邊也一樣：王前面的兵都不動，就可能被這樣將死，所以常要留一格讓王透氣。",
+    },
+  },
+  {
+    n: 2, title: "親吻將死", fen: "r6k/2Q5/6K1/8/8/8/8/8 w - - 0 1", mate: 1, goal: "一步將死",
+    a: {
+      text: ["后是最強的子，可是它一個人將不死王，得有人撐腰。", "這次黑車守著最後一排，上一課那招行不通了。試試讓后直接走到黑王身邊、貼著它。黑王想吃后？后旁邊站著你的王，吃了就是自己走進被將的格子。"],
+      hint: "找一格緊貼黑王、又有你的王保護的格子。",
+      done: "對！后有人撐腰，就能貼上去將死，這叫親吻將死。",
+    },
+    b: {
+      text: ["后單獨貼近對方的王，會被王吃掉；有自己的子保護時，王就吃不得。后走到對方王的正旁邊、由自己的王保護，叫親吻將死。", "圖中黑車守著第 8 排，走底線會被車吃掉。"],
+      hint: "g7 和 h7 兩格都有白王保護。",
+      done: "答對。g7、h7 都可以，兩步都是親吻將死。",
+    },
+  },
+  {
+    n: 3, title: "馬的雙擊", fen: "r3k3/5ppp/8/3N4/8/8/5PPP/6K1 w - - 0 1", line: ["d5c7", "e8e7", "c7a8"], goal: "用馬一跳打兩個，再把車吃掉",
+    a: {
+      text: ["馬走「日」字，還能跳過中間的子。它最可怕的地方，是一跳能同時打到兩個目標。", "這一課找一步：馬跳過去將軍，同時瞄準黑車。黑王只能先逃，車就保不住了。"],
+      hint: "哪一格離 e8 和 a8 都剛好是一個「日」字？",
+      done: "對！一跳兩得，這就是雙擊。將軍的雙擊最狠，因為對方一定得先顧王。",
+    },
+    b: {
+      text: ["一個子同時攻擊對方兩個子，叫雙擊。馬的雙擊最難防，因為馬的攻擊擋不住；其中一個目標是王的時候，對方必須先應將，另一個子就丟了。", "圖中黑王在 e8，黑車在 a8。"],
+      hint: "找一格，離 e8 和 a8 都是一個「日」字。",
+      done: "答對。馬在 c7 將軍又打車，黑王一走，車就是白方的了。",
+    },
+  },
+];
+export const TOTAL = STAGES.reduce((s, [, n]) => s + n, 0);
+export function stageOf(n) { let k = n; for (const [name, len] of STAGES) { if (k <= len) return [name, k, len]; k -= len; } return STAGES.at(-1); }

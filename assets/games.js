@@ -4,6 +4,7 @@
 // three levels, worked out here on the phone (no API, no Worker). Everything is kept on this phone (localStorage).
 import { store, twNow } from "./util.js";
 import { fetchMarket } from "./market.js";
+import { LESSONS, TOTAL, stageOf } from "./lessons.js";
 
 const DAY = 864e5;
 const iso = (t) => new Date(t).toISOString().slice(0, 10);
@@ -373,12 +374,13 @@ const PIECE_DEFS = `
     <feComposite in="SourceGraphic" in2="lit" operator="arithmetic" k2="1" k3=".75" result="body"/>
     <feDropShadow dx=".8" dy="1.8" stdDeviation="1.1" flood-opacity=".55"/>
   </filter>`;
-function boardSvg() {
-  const P = replay(G.moves), last = G.moves.at(-1), targets = SEL >= 0 ? legal(P).filter((m) => m[0] === SEL).map((m) => m[1]) : [];
+function boardSvg() { return drawBoard(replay(G.moves), G.moves.at(-1), SEL, G.you === "b", `西洋棋盤，第 ${Math.ceil(G.moves.length / 2) + (G.moves.length % 2 ? 0 : 1)} 回合`); }
+function drawBoard(P, last, SEL, flip, label) { // the lesson board (每日一課) is drawn the same way
+  const targets = SEL >= 0 ? legal(P).filter((m) => m[0] === SEL).map((m) => m[1]) : [];
   const check = inCheck(P) ? kingAt(P.b, P.turn) : -1;
   let sq = "", pcs = "", marks = "", coords = "";
   for (let s = 0; s < 64; s++) {
-    const v = G.you === "b" ? 63 - s : s, [f, r] = fr(v), x = PAD + f * SQ, y = PAD + r * SQ;
+    const v = flip ? 63 - s : s, [f, r] = fr(v), x = PAD + f * SQ, y = PAD + r * SQ;
     sq += `<rect x="${x}" y="${y}" width="${SQ}" height="${SQ}" class="gc-${(f + r) % 2 ? "dark" : "light"}"/>`;
     if (last && (s === last[0] || s === last[1])) marks += `<rect x="${x}" y="${y}" width="${SQ}" height="${SQ}" class="gc-last"/>`;
     if (s === SEL) marks += `<rect x="${x + 1.5}" y="${y + 1.5}" width="${SQ - 3}" height="${SQ - 3}" class="gc-sel"/>`;
@@ -387,9 +389,8 @@ function boardSvg() {
     if (p !== ".") pcs += `<text x="${x + SQ / 2}" y="${y + SQ * .8}" class="gc-pc ${white(p) ? "w" : "b"}">${GLYPH[p.toLowerCase()]}︎</text>`;
     if (targets.includes(s)) marks += p !== "." ? `<circle cx="${x + SQ / 2}" cy="${y + SQ / 2}" r="${SQ * .44}" class="gc-take"/>` : `<circle cx="${x + SQ / 2}" cy="${y + SQ / 2}" r="${SQ * .14}" class="gc-dot"/>`;
   }
-  const flip = G.you === "b";
   for (let i = 0; i < 8; i++) coords += `<text x="${PAD + i * SQ + SQ / 2}" y="${SIZE - 4}" class="gc-co">${"abcdefgh"[flip ? 7 - i : i]}</text><text x="${PAD / 2}" y="${PAD + i * SQ + SQ / 2 + 3.5}" class="gc-co">${flip ? i + 1 : 8 - i}</text>`;
-  return `<svg class="gc-board" viewBox="0 0 ${SIZE} ${SIZE}" role="img" aria-label="西洋棋盤，第 ${Math.ceil(G.moves.length / 2) + (G.moves.length % 2 ? 0 : 1)} 回合">
+  return `<svg class="gc-board" viewBox="0 0 ${SIZE} ${SIZE}" role="img" aria-label="${label}">
     <defs>${PIECE_DEFS}</defs><rect width="${SIZE}" height="${SIZE}" class="gc-rim"/><g>${sq}</g><g>${marks.replace(/class="gc-(dot|take)"/g, (m) => m)}</g><g class="gc-pcs">${pcs}</g>${coords}</svg>`;
 }
 function takenHtml(side) { // what `side` has captured from the other
@@ -465,6 +466,91 @@ function wireGo(root) {
   };
 }
 
+// ——— 每日一課 ——— (the owner 2026-11-28; his picks: 乙 讀一段＋走一題, 照自己的進度, 365 課 — lessons.js). One new lesson a day: the next one opens on
+// the first day after the last was finished, so a day away skips nothing. The move is judged here, on the phone.
+const sqName = (s) => "abcdefgh"[s & 7] + (8 - (s >> 3));
+const uci = (m) => sqName(m[0]) + sqName(m[1]);
+function fromFen(fen) {
+  const [rows, turn, castle] = fen.split(" "), b = [];
+  for (const ch of rows.replace(/\//g, "")) /\d/.test(ch) ? b.push(...".".repeat(Number(ch))) : b.push(ch);
+  const P = { b, turn, castle: castle === "-" ? "" : castle, ep: -1, half: 0 }; P.seen = [keyOf(P)];
+  return P;
+}
+export const LESSON_ENGINE = { fromFen, legal, play, inCheck, uci, sqName }; // for scripts/check_lessons.js
+const VOICE = () => (store.get("gl.sample", "a") === "b" ? "b" : "a"); // SAMPLE ONLY: 甲 / 乙 wording — remove before go-live
+let L = null; // { n, moves, sel, say, kind } while the page is open
+function lessonState() {
+  const st = store.get("games.lesson", { n: 1, done: {} }), today = twNow().date, d = st.done[st.n];
+  if (d && d.on < today && st.n < TOTAL && LESSONS.some((x) => x.n === st.n + 1)) { st.n++; store.set("games.lesson", st); }
+  return st;
+}
+const lessonPos = () => { const k = LESSONS.find((x) => x.n === L.n); let P = fromFen(k.fen); for (const u of L.moves) P = play(P, legal(P).find((m) => uci(m) === u)); return P; };
+const moveWord = (P, m) => `${NAME[P.b[m[0]].toLowerCase()]}走到 ${sqName(m[1])}`;
+function lessonHtml() {
+  const st = lessonState(), k = LESSONS.find((x) => x.n === st.n), v = VOICE();
+  if (!L || L.n !== st.n) L = { n: st.n, moves: [], sel: -1, say: "", kind: st.done[st.n] ? "done" : "" };
+  if (!k) return `<div class="gm-slip gl-lesson"><p class="gm-head">今日一課</p><p class="gl-wait">第 ${st.n} 課還在寫，明天見。</p></div>`;
+  const [stage, i, len] = stageOf(k.n), T = k[v], P = lessonPos(), side = fromFen(k.fen).turn, done = L.kind === "done";
+  const says = done ? `<p class="gl-say ok">${L.say || ""}${T.done}</p>${k.n < TOTAL ? `<p class="gl-next">明天開第 ${k.n + 1} 課</p>` : ""}`
+    : L.say ? `<p class="gl-say ${L.kind}">${L.say}</p>` : "";
+  return `<div class="gm-slip gl-lesson" role="group" aria-label="今日一課">
+    <p class="gm-head">今日一課</p>
+    <p class="gl-no">第 ${k.n} 課　<span>${stage} ${i}／${len}</span></p>
+    <h3 class="gl-title">${k.title}</h3>
+    ${T.text.map((t) => `<p class="gl-text">${t}</p>`).join("")}
+    <div class="gm-bwrap gl-bwrap">${drawBoard(P, L.last, L.sel, side === "b", `${k.title}的棋盤`)}</div>
+    ${done ? "" : `<p class="gl-goal"><i class="gc-turn ${side}" aria-hidden="true"></i>${L.busy ? `${ZHC(side === "w" ? "b" : "w")}方想一下……` : `輪到你（${ZHC(side)}）：${k.goal}`}</p>`}
+    ${says}
+    ${done ? "" : `<div class="gm-acts gl-acts"><button type="button" data-l="hint">提示</button><button type="button" data-l="show">看答案</button></div>`}
+  </div>`;
+}
+function lessonDone(peek) {
+  const st = store.get("games.lesson", { n: 1, done: {} });
+  st.done[L.n] = { on: twNow().date, peek }; store.set("games.lesson", st);
+  L.kind = "done";
+}
+function wireLesson(root) {
+  const box = root.querySelector(".gl-lesson"), k = box && LESSONS.find((x) => x.n === L?.n);
+  if (!k) return;
+  const redraw = () => { box.outerHTML = lessonHtml(); wireLesson(root); }, T = k[VOICE()];
+  box.querySelector(".gl-acts")?.addEventListener("click", (ev) => {
+    const a = ev.target.closest("[data-l]")?.dataset.l; if (!a || L.kind === "done" || L.busy) return;
+    if (a === "hint") { L.kind = "hint"; L.say = `提示：${T.hint}`; }
+    else { // 看答案: play out what is left
+      let P = lessonPos(), words = [];
+      if (k.mate) { const m = legal(P).find((x) => { const n = play(P, x); return inCheck(n) && !legal(n).length; }); words.push(moveWord(P, m)); L.moves.push(uci(m)); L.last = m; }
+      else for (let j = L.moves.length; j < k.line.length; j++) { const m = legal(P).find((x) => uci(x) === k.line[j]); if (j % 2 === 0) words.push(moveWord(P, m)); P = play(P, m); L.moves.push(k.line[j]); L.last = m; }
+      L.say = `答案：${words.join("，再")}。`; L.sel = -1; lessonDone(true);
+    }
+    redraw();
+  });
+  box.querySelector(".gc-board").onclick = (ev) => {
+    if (L.kind === "done" || L.busy) return;
+    const P = lessonPos(), flip = fromFen(k.fen).turn === "b", r = ev.currentTarget.getBoundingClientRect(), z = SIZE / r.width;
+    const f = Math.floor(((ev.clientX - r.left) * z - PAD) / SQ), rk = Math.floor(((ev.clientY - r.top) * z - PAD) / SQ);
+    if (f < 0 || rk < 0 || f > 7 || rk > 7) return;
+    const s = flip ? 63 - (rk * 8 + f) : rk * 8 + f, m = L.sel >= 0 && legal(P).find((x) => x[0] === L.sel && x[1] === s);
+    if (!m) { L.sel = sideOf(P.b[s]) === P.turn && s !== L.sel ? s : -1; redraw(); return; }
+    L.sel = -1;
+    const n = play(P, m), foe = n.turn === "w" ? "白王" : "黑王";
+    if (k.mate) {
+      if (inCheck(n) && !legal(n).length) { L.moves.push(uci(m)); L.last = m; L.say = ""; lessonDone(false); }
+      else { L.kind = "wrong"; const run = legal(n).filter((x) => x[0] === kingAt(n.b, n.turn)).map((x) => sqName(x[1]));
+        L.say = inCheck(n) ? `將軍了，可是${foe}還能逃到 ${run.join("、") || "別處"}。再想想。` : `${moveWord(P, m)}，還沒有將軍，${foe}很安全。再想想。`; }
+      redraw(); return;
+    }
+    if (uci(m) !== k.line[L.moves.length]) { L.kind = "wrong"; L.say = `不是這一步。再想想，或按「提示」。`; redraw(); return; }
+    L.moves.push(uci(m)); L.last = m; L.say = "";
+    if (L.moves.length >= k.line.length) { lessonDone(false); redraw(); return; }
+    L.kind = ""; L.busy = true; redraw(); // the other side answers, then it is your move again
+    setTimeout(() => {
+      const Q = lessonPos(), r2 = legal(Q).find((x) => uci(x) === k.line[L.moves.length]);
+      L.moves.push(k.line[L.moves.length]); L.last = r2; L.busy = false; L.kind = "go"; L.say = `${ZHC(Q.turn)}${moveWord(Q, r2)}。好，換你。`;
+      if (root.isConnected && root.querySelector(".gl-lesson")) { root.querySelector(".gl-lesson").outerHTML = lessonHtml(); wireLesson(root); }
+    }, 600);
+  };
+}
+
 // The desk under the three boxes (the owner's pick 2026-11-26: 乙 鑲嵌木框): a marquetry band let into the cherry, four gilt corner pieces.
 const CORNER = `<svg viewBox="0 0 44 44" aria-hidden="true"><defs><linearGradient id="gd-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbe9b0"/><stop offset=".5" stop-color="#c9a456"/><stop offset="1" stop-color="#7a5a1e"/></linearGradient></defs>
   <g fill="none" stroke="url(#gd-g)" stroke-linecap="round"><path d="M2 42V2H42" stroke-width="1.6"/><path d="M6 42V6H42" stroke-width=".7"/>
@@ -478,12 +564,12 @@ export function gamesHtml() {
   if (!G) { const k = store.get("games.chess", null); G = k && Array.isArray(k.moves) ? { level: k.level || "mid", moves: k.moves, over: k.over || null, you: k.you === "b" ? "b" : "w" } : fresh(); save(); }
   G.busy = false; SEL = -1;
   if (!G.over && compTurn()) { G.moves.push(think(G.moves, G.level)); finish(); save(); } // the phone's turn: left while it was thinking, or it opens as white
-  return `<div class="gm-table">${goHtml()}${slipHtml()}${barcaHtml()}</div>`; // 西洋棋在最上面（社長 2026-11-27）
+  return `<div class="gm-table">${goHtml()}${lessonHtml()}${slipHtml()}${barcaHtml()}</div>`; // 西洋棋在最上面（社長 2026-11-27）
 }
 export function wireGames(root) {
   if (!root) return;
   noteTaiex(store.get("market.last", null)?.items);
-  wireSlip(root); wireBarca(root); wireGo(root);
+  wireSlip(root); wireBarca(root); wireGo(root); wireLesson(root);
   fetchMarket().then((d) => { // the file as it stands now: a close that came in since the front page was read settles here too
     if (!d || !root.isConnected) return;
     noteTaiex(d.items);
